@@ -1,0 +1,1470 @@
+{
+ "schema": "class2-lane-warm-multiband2-certificates-v1",
+ "generated_utc": "2026-11-14T20:00:00Z",
+ "lane": "class2-lane (11x11 class-2 long-term lane, warm multiband batch 2, 2026-11-15)",
+ "baseline_frontier": "class-frontier-warm-multiband-recompute-20261115.json (1109 / 6738 / 531295 / 5008 / 395018)",
+ "candidate_ranking": "class2-lane-warm-candidate-ranking2-20261115.json (coordinator v2: marginal_in_manifest greedy over uncertified WIN7 roots of the own-lane bands against the 1109 chain head)",
+ "extraction": "warm_rebuild_pipeline2_20261115.py, two disjoint-target workers (repo-verbatim class4_child1_cert_extractor_exact.ts, blind extraction, FBS=1<<20, fbt_drops=0, rows LC_ALL=C sorted-unique)",
+ "independent_verification": "scripts/verify_win7_certificate_bigint_independent.mjs re-run 2026-11-14 UTC on every certificate after extraction; all asserts passed (root stones/mobility vs legal_candidates.py, sub_roots==mobility all PASS, strategy/consumed union 0/0 both directions, terminal range within 13..17, rows sorted strictly ascending unique)",
+ "selection_note": "the greedy total in-manifest gain over own-lane uncertified roots against 1109 is 37; this batch takes the 31 non-cost-70c gain-1 candidates (cost-70c is a parallel-lane band; its six gain-1 candidates and all gain-0 candidates are deferred). Includes the cost-71b remaining WIN7 bits 74/94/117 (bit 1 = cost-61d bit-22 root has zero in-manifest marginal against 1109 and is deferred). No 65h/67b/68c/65j candidates were touched",
+ "records": [
+  {
+   "band": "class2-lane-cost65e",
+   "child_hex": "00000000000000809102000000800000",
+   "bit": 120,
+   "root_hex": "01000000000000809102000000800000",
+   "verdict": "WIN7",
+   "rows": 57951,
+   "extraction_nodes": 19945972,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm multiband 2 rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 59,
+    "independent_enumeration_legal": 59,
+    "match": true
+   },
+   "sub_roots_verified": 59,
+   "sub_roots_pass": 59,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 121917,
+   "winner_states": 78749,
+   "loser_states": 23434,
+   "loser_reply_edges": 109779,
+   "terminal_count": 19734,
+   "md5": "9573d02d42e4f22fad5eee69555b7710",
+   "sha256": "83e75e69f06dc707beafbe740433aebac67cafb6cdea7ec0754349d4671e1d6d",
+   "bytes": 2094155,
+   "extraction_ms": 70108,
+   "file": null,
+   "storage": {
+    "layout": "part1of2/part2of2 (line-boundary split; repo convention for >1.75 MB certificates)",
+    "part1": {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-certificates/bit120-root-01000000000000809102000000800000.cert.part1of2",
+     "bytes": 1047091,
+     "md5": "8325a78a1fab1dc8c70bf83bbed0f2ba"
+    },
+    "part2": {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-certificates/bit120-root-01000000000000809102000000800000.cert.part2of2",
+     "bytes": 1047064,
+     "md5": "1cd5df3cf7010ddd2535f46039a7d695"
+    },
+    "concat_md5_equals_whole": true
+   },
+   "root_absence_check": {
+    "method": "local full-repo rg -F scan of the 3631e7ba main tree (research/ + results/ + docs/ + root README + Kyouen/rust/cpp/scripts) for each quoted root hex before extraction (2026-11-14 UTC), cross-checked against the record-based certified-root set of rank_warm_candidates2_20261115.py",
+    "repo_scan_hits": "sweep/inflight/ranking record JSONs only (root listings)",
+    "prior_certificate_hits": 0,
+    "note": "no certificate file or certificate record predating this batch contained any of these 31 root hexes; the 31 roots and their marginal manifest parents were also cross-checked against the published LOSS7 evidence (loss7 certificate manifests, loss7 JSON manifests, 274-key central49 terminal LOSS7 parent-lift manifest): zero hits, zero WIN/LOSS conflicts"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost61e",
+   "child_hex": "00000000000000803202000040000000",
+   "bit": 120,
+   "root_hex": "01000000000000803202000040000000",
+   "verdict": "WIN7",
+   "rows": 31699,
+   "extraction_nodes": 3941854,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm multiband 2 rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 51,
+    "independent_enumeration_legal": 51,
+    "match": true
+   },
+   "sub_roots_verified": 51,
+   "sub_roots_pass": 51,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 67215,
+   "winner_states": 43507,
+   "loser_states": 13709,
+   "loser_reply_edges": 61423,
+   "terminal_count": 9999,
+   "md5": "6a93d8237ee69ac3eab2d7d8bf12d114",
+   "sha256": "6a944a000feae59c02807c1db734377437bdc54daa32da8dc25e6240c226ef92",
+   "bytes": 1142542,
+   "extraction_ms": 18197,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61e-certificates/bit120-root-01000000000000803202000040000000.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "local full-repo rg -F scan of the 3631e7ba main tree (research/ + results/ + docs/ + root README + Kyouen/rust/cpp/scripts) for each quoted root hex before extraction (2026-11-14 UTC), cross-checked against the record-based certified-root set of rank_warm_candidates2_20261115.py",
+    "repo_scan_hits": "sweep/inflight/ranking record JSONs only (root listings)",
+    "prior_certificate_hits": 0,
+    "note": "no certificate file or certificate record predating this batch contained any of these 31 root hexes; the 31 roots and their marginal manifest parents were also cross-checked against the published LOSS7 evidence (loss7 certificate manifests, loss7 JSON manifests, 274-key central49 terminal LOSS7 parent-lift manifest): zero hits, zero WIN/LOSS conflicts"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost71b",
+   "child_hex": "00000000000000803202000000400000",
+   "bit": 117,
+   "root_hex": "00200000000000803202000000400000",
+   "verdict": "WIN7",
+   "rows": 44860,
+   "extraction_nodes": 10424480,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm multiband 2 rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 55,
+    "independent_enumeration_legal": 55,
+    "match": true
+   },
+   "sub_roots_verified": 55,
+   "sub_roots_pass": 55,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 92820,
+   "winner_states": 60109,
+   "loser_states": 19193,
+   "loser_reply_edges": 85881,
+   "terminal_count": 13518,
+   "md5": "5c5e2fc07716138929d4087372b2d6a5",
+   "sha256": "3f2a5e0888c42cc5962f01969e2f836a29933ff231ed694376adebcee3ac7a4d",
+   "bytes": 1615736,
+   "extraction_ms": 39437,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71b-certificates/bit117-root-00200000000000803202000000400000.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "local full-repo rg -F scan of the 3631e7ba main tree (research/ + results/ + docs/ + root README + Kyouen/rust/cpp/scripts) for each quoted root hex before extraction (2026-11-14 UTC), cross-checked against the record-based certified-root set of rank_warm_candidates2_20261115.py",
+    "repo_scan_hits": "sweep/inflight/ranking record JSONs only (root listings)",
+    "prior_certificate_hits": 0,
+    "note": "no certificate file or certificate record predating this batch contained any of these 31 root hexes; the 31 roots and their marginal manifest parents were also cross-checked against the published LOSS7 evidence (loss7 certificate manifests, loss7 JSON manifests, 274-key central49 terminal LOSS7 parent-lift manifest): zero hits, zero WIN/LOSS conflicts"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost64b",
+   "child_hex": "00000000000000803202000000100000",
+   "bit": 117,
+   "root_hex": "00200000000000803202000000100000",
+   "verdict": "WIN7",
+   "rows": 29035,
+   "extraction_nodes": 6895530,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm multiband 2 rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 48,
+    "independent_enumeration_legal": 48,
+    "match": true
+   },
+   "sub_roots_verified": 48,
+   "sub_roots_pass": 48,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 65755,
+   "winner_states": 42489,
+   "loser_states": 13259,
+   "loser_reply_edges": 59332,
+   "terminal_count": 10007,
+   "md5": "9eb1f63ba361672394962ad3ad29b6a9",
+   "sha256": "f2ab2eaa5df04562f66d5d759f47c3a976e2ebf3b131c5d4033a62543239352b",
+   "bytes": 1044462,
+   "extraction_ms": 25108,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64b-certificates/bit117-root-00200000000000803202000000100000.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "local full-repo rg -F scan of the 3631e7ba main tree (research/ + results/ + docs/ + root README + Kyouen/rust/cpp/scripts) for each quoted root hex before extraction (2026-11-14 UTC), cross-checked against the record-based certified-root set of rank_warm_candidates2_20261115.py",
+    "repo_scan_hits": "sweep/inflight/ranking record JSONs only (root listings)",
+    "prior_certificate_hits": 0,
+    "note": "no certificate file or certificate record predating this batch contained any of these 31 root hexes; the 31 roots and their marginal manifest parents were also cross-checked against the published LOSS7 evidence (loss7 certificate manifests, loss7 JSON manifests, 274-key central49 terminal LOSS7 parent-lift manifest): zero hits, zero WIN/LOSS conflicts"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost64b",
+   "child_hex": "00000000000000803202000000100000",
+   "bit": 116,
+   "root_hex": "00100000000000803202000000100000",
+   "verdict": "WIN7",
+   "rows": 43997,
+   "extraction_nodes": 8187475,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm multiband 2 rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 54,
+    "independent_enumeration_legal": 54,
+    "match": true
+   },
+   "sub_roots_verified": 54,
+   "sub_roots_pass": 54,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 97009,
+   "winner_states": 62869,
+   "loser_states": 19288,
+   "loser_reply_edges": 88682,
+   "terminal_count": 14852,
+   "md5": "2980f16166dee6ee8618a112a9512f80",
+   "sha256": "e09d795863d02f956e42a1a6f96d65713489898595fe487108636d15299b19bf",
+   "bytes": 1583424,
+   "extraction_ms": 32176,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64b-certificates/bit116-root-00100000000000803202000000100000.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "local full-repo rg -F scan of the 3631e7ba main tree (research/ + results/ + docs/ + root README + Kyouen/rust/cpp/scripts) for each quoted root hex before extraction (2026-11-14 UTC), cross-checked against the record-based certified-root set of rank_warm_candidates2_20261115.py",
+    "repo_scan_hits": "sweep/inflight/ranking record JSONs only (root listings)",
+    "prior_certificate_hits": 0,
+    "note": "no certificate file or certificate record predating this batch contained any of these 31 root hexes; the 31 roots and their marginal manifest parents were also cross-checked against the published LOSS7 evidence (loss7 certificate manifests, loss7 JSON manifests, 274-key central49 terminal LOSS7 parent-lift manifest): zero hits, zero WIN/LOSS conflicts"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost61d",
+   "child_hex": "00000000000000803202000000000002",
+   "bit": 116,
+   "root_hex": "00100000000000803202000000000002",
+   "verdict": "WIN7",
+   "rows": 39990,
+   "extraction_nodes": 8472616,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm multiband 2 rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 54,
+    "independent_enumeration_legal": 54,
+    "match": true
+   },
+   "sub_roots_verified": 54,
+   "sub_roots_pass": 54,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 84362,
+   "winner_states": 54467,
+   "loser_states": 16762,
+   "loser_reply_edges": 75896,
+   "terminal_count": 13133,
+   "md5": "5282eafe79bda2131248827d768ca7f6",
+   "sha256": "9f40a3d364ed91b1fbdb7b4abd7ef620eef6f87d8a67556fab35bacc86c45811",
+   "bytes": 1444577,
+   "extraction_ms": 30362,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61d-certificates/bit116-root-00100000000000803202000000000002.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "local full-repo rg -F scan of the 3631e7ba main tree (research/ + results/ + docs/ + root README + Kyouen/rust/cpp/scripts) for each quoted root hex before extraction (2026-11-14 UTC), cross-checked against the record-based certified-root set of rank_warm_candidates2_20261115.py",
+    "repo_scan_hits": "sweep/inflight/ranking record JSONs only (root listings)",
+    "prior_certificate_hits": 0,
+    "note": "no certificate file or certificate record predating this batch contained any of these 31 root hexes; the 31 roots and their marginal manifest parents were also cross-checked against the published LOSS7 evidence (loss7 certificate manifests, loss7 JSON manifests, 274-key central49 terminal LOSS7 parent-lift manifest): zero hits, zero WIN/LOSS conflicts"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost61d",
+   "child_hex": "00000000000000803202000000000002",
+   "bit": 114,
+   "root_hex": "00040000000000803202000000000002",
+   "verdict": "WIN7",
+   "rows": 48125,
+   "extraction_nodes": 13117413,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm multiband 2 rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 54,
+    "independent_enumeration_legal": 54,
+    "match": true
+   },
+   "sub_roots_verified": 54,
+   "sub_roots_pass": 54,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 101368,
+   "winner_states": 65482,
+   "loser_states": 19942,
+   "loser_reply_edges": 91103,
+   "terminal_count": 15944,
+   "md5": "68515e21749ebc3026d96b5c755efcc7",
+   "sha256": "4af57aa15d65abf615cdefa6c3de5f195770903273e5b1dd753e0a54d31901d7",
+   "bytes": 1738924,
+   "extraction_ms": 44829,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61d-certificates/bit114-root-00040000000000803202000000000002.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "local full-repo rg -F scan of the 3631e7ba main tree (research/ + results/ + docs/ + root README + Kyouen/rust/cpp/scripts) for each quoted root hex before extraction (2026-11-14 UTC), cross-checked against the record-based certified-root set of rank_warm_candidates2_20261115.py",
+    "repo_scan_hits": "sweep/inflight/ranking record JSONs only (root listings)",
+    "prior_certificate_hits": 0,
+    "note": "no certificate file or certificate record predating this batch contained any of these 31 root hexes; the 31 roots and their marginal manifest parents were also cross-checked against the published LOSS7 evidence (loss7 certificate manifests, loss7 JSON manifests, 274-key central49 terminal LOSS7 parent-lift manifest): zero hits, zero WIN/LOSS conflicts"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost61e",
+   "child_hex": "00000000000000803202000040000000",
+   "bit": 105,
+   "root_hex": "00000200000000803202000040000000",
+   "verdict": "WIN7",
+   "rows": 27882,
+   "extraction_nodes": 4305596,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm multiband 2 rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 45,
+    "independent_enumeration_legal": 45,
+    "match": true
+   },
+   "sub_roots_verified": 45,
+   "sub_roots_pass": 45,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 65820,
+   "winner_states": 42855,
+   "loser_states": 13742,
+   "loser_reply_edges": 61473,
+   "terminal_count": 9223,
+   "md5": "fee6a14834eb7ebc7bfd41357de7a347",
+   "sha256": "cfc0b249d6949d3910207b38b6b45ae76e93faa18725b7aa8610803db5976fc7",
+   "bytes": 1008619,
+   "extraction_ms": 18605,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61e-certificates/bit105-root-00000200000000803202000040000000.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "local full-repo rg -F scan of the 3631e7ba main tree (research/ + results/ + docs/ + root README + Kyouen/rust/cpp/scripts) for each quoted root hex before extraction (2026-11-14 UTC), cross-checked against the record-based certified-root set of rank_warm_candidates2_20261115.py",
+    "repo_scan_hits": "sweep/inflight/ranking record JSONs only (root listings)",
+    "prior_certificate_hits": 0,
+    "note": "no certificate file or certificate record predating this batch contained any of these 31 root hexes; the 31 roots and their marginal manifest parents were also cross-checked against the published LOSS7 evidence (loss7 certificate manifests, loss7 JSON manifests, 274-key central49 terminal LOSS7 parent-lift manifest): zero hits, zero WIN/LOSS conflicts"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost63a",
+   "child_hex": "00000000000000809102000800000000",
+   "bit": 97,
+   "root_hex": "00000002000000809102000800000000",
+   "verdict": "WIN7",
+   "rows": 39159,
+   "extraction_nodes": 16932038,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm multiband 2 rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 49,
+    "independent_enumeration_legal": 49,
+    "match": true
+   },
+   "sub_roots_verified": 49,
+   "sub_roots_pass": 49,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 88265,
+   "winner_states": 57201,
+   "loser_states": 17914,
+   "loser_reply_edges": 82167,
+   "terminal_count": 13150,
+   "md5": "8560baefc0644bf8fd670bbb569b47f8",
+   "sha256": "521173cef030d17912fb562cc48e7505eb436d47739165fe2c7afe63fb0774cd",
+   "bytes": 1414720,
+   "extraction_ms": 59305,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost63a-certificates/bit97-root-00000002000000809102000800000000.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "local full-repo rg -F scan of the 3631e7ba main tree (research/ + results/ + docs/ + root README + Kyouen/rust/cpp/scripts) for each quoted root hex before extraction (2026-11-14 UTC), cross-checked against the record-based certified-root set of rank_warm_candidates2_20261115.py",
+    "repo_scan_hits": "sweep/inflight/ranking record JSONs only (root listings)",
+    "prior_certificate_hits": 0,
+    "note": "no certificate file or certificate record predating this batch contained any of these 31 root hexes; the 31 roots and their marginal manifest parents were also cross-checked against the published LOSS7 evidence (loss7 certificate manifests, loss7 JSON manifests, 274-key central49 terminal LOSS7 parent-lift manifest): zero hits, zero WIN/LOSS conflicts"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost63a",
+   "child_hex": "00000000000000809102000800000000",
+   "bit": 96,
+   "root_hex": "00000001000000809102000800000000",
+   "verdict": "WIN7",
+   "rows": 37547,
+   "extraction_nodes": 13187435,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm multiband 2 rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 50,
+    "independent_enumeration_legal": 50,
+    "match": true
+   },
+   "sub_roots_verified": 50,
+   "sub_roots_pass": 50,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 77311,
+   "winner_states": 50168,
+   "loser_states": 15928,
+   "loser_reply_edges": 71669,
+   "terminal_count": 11215,
+   "md5": "436469fd549a2f12f5cd5a9baea35cb6",
+   "sha256": "462a5b02876f525e83224db0921f62e65d11e8a42be88e0287bf05e64af38aa0",
+   "bytes": 1357279,
+   "extraction_ms": 46236,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost63a-certificates/bit96-root-00000001000000809102000800000000.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "local full-repo rg -F scan of the 3631e7ba main tree (research/ + results/ + docs/ + root README + Kyouen/rust/cpp/scripts) for each quoted root hex before extraction (2026-11-14 UTC), cross-checked against the record-based certified-root set of rank_warm_candidates2_20261115.py",
+    "repo_scan_hits": "sweep/inflight/ranking record JSONs only (root listings)",
+    "prior_certificate_hits": 0,
+    "note": "no certificate file or certificate record predating this batch contained any of these 31 root hexes; the 31 roots and their marginal manifest parents were also cross-checked against the published LOSS7 evidence (loss7 certificate manifests, loss7 JSON manifests, 274-key central49 terminal LOSS7 parent-lift manifest): zero hits, zero WIN/LOSS conflicts"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost71b",
+   "child_hex": "00000000000000803202000000400000",
+   "bit": 94,
+   "root_hex": "00000000400000803202000000400000",
+   "verdict": "WIN7",
+   "rows": 52969,
+   "extraction_nodes": 10690408,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm multiband 2 rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 54,
+    "independent_enumeration_legal": 54,
+    "match": true
+   },
+   "sub_roots_verified": 54,
+   "sub_roots_pass": 54,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 107728,
+   "winner_states": 70132,
+   "loser_states": 23064,
+   "loser_reply_edges": 101384,
+   "terminal_count": 14532,
+   "md5": "560d06829c8910ba0271e939abadf8a1",
+   "sha256": "0287cea9c37bcda146046e3ca1528cc1cb72e16bdae5d691db5bdcbff0cd4cf3",
+   "bytes": 1908937,
+   "extraction_ms": 40390,
+   "file": null,
+   "storage": {
+    "layout": "part1of2/part2of2 (line-boundary split; repo convention for >1.75 MB certificates)",
+    "part1": {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71b-certificates/bit94-root-00000000400000803202000000400000.cert.part1of2",
+     "bytes": 954500,
+     "md5": "f2f6e370a0e970ae3d6ae40d140b8179"
+    },
+    "part2": {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71b-certificates/bit94-root-00000000400000803202000000400000.cert.part2of2",
+     "bytes": 954437,
+     "md5": "25329c91160e28a1a3311306381af44b"
+    },
+    "concat_md5_equals_whole": true
+   },
+   "root_absence_check": {
+    "method": "local full-repo rg -F scan of the 3631e7ba main tree (research/ + results/ + docs/ + root README + Kyouen/rust/cpp/scripts) for each quoted root hex before extraction (2026-11-14 UTC), cross-checked against the record-based certified-root set of rank_warm_candidates2_20261115.py",
+    "repo_scan_hits": "sweep/inflight/ranking record JSONs only (root listings)",
+    "prior_certificate_hits": 0,
+    "note": "no certificate file or certificate record predating this batch contained any of these 31 root hexes; the 31 roots and their marginal manifest parents were also cross-checked against the published LOSS7 evidence (loss7 certificate manifests, loss7 JSON manifests, 274-key central49 terminal LOSS7 parent-lift manifest): zero hits, zero WIN/LOSS conflicts"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost64b",
+   "child_hex": "00000000000000803202000000100000",
+   "bit": 94,
+   "root_hex": "00000000400000803202000000100000",
+   "verdict": "WIN7",
+   "rows": 36444,
+   "extraction_nodes": 3814231,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm multiband 2 rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 49,
+    "independent_enumeration_legal": 49,
+    "match": true
+   },
+   "sub_roots_verified": 49,
+   "sub_roots_pass": 49,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 78617,
+   "winner_states": 51038,
+   "loser_states": 16284,
+   "loser_reply_edges": 72766,
+   "terminal_count": 11295,
+   "md5": "2731f2f916282d48cbdc500fd9ab7e6b",
+   "sha256": "a5c56482060a675439ad503f377d5572dcd73344b0c21cbd9aa60f0e3df4aded",
+   "bytes": 1311902,
+   "extraction_ms": 17481,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64b-certificates/bit94-root-00000000400000803202000000100000.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "local full-repo rg -F scan of the 3631e7ba main tree (research/ + results/ + docs/ + root README + Kyouen/rust/cpp/scripts) for each quoted root hex before extraction (2026-11-14 UTC), cross-checked against the record-based certified-root set of rank_warm_candidates2_20261115.py",
+    "repo_scan_hits": "sweep/inflight/ranking record JSONs only (root listings)",
+    "prior_certificate_hits": 0,
+    "note": "no certificate file or certificate record predating this batch contained any of these 31 root hexes; the 31 roots and their marginal manifest parents were also cross-checked against the published LOSS7 evidence (loss7 certificate manifests, loss7 JSON manifests, 274-key central49 terminal LOSS7 parent-lift manifest): zero hits, zero WIN/LOSS conflicts"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost61e",
+   "child_hex": "00000000000000803202000040000000",
+   "bit": 92,
+   "root_hex": "00000000100000803202000040000000",
+   "verdict": "WIN7",
+   "rows": 37840,
+   "extraction_nodes": 4395204,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm multiband 2 rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 51,
+    "independent_enumeration_legal": 51,
+    "match": true
+   },
+   "sub_roots_verified": 51,
+   "sub_roots_pass": 51,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 82494,
+   "winner_states": 53605,
+   "loser_states": 16759,
+   "loser_reply_edges": 75670,
+   "terminal_count": 12130,
+   "md5": "44fa0ea9f0048dcbff5686c2df963911",
+   "sha256": "849c9f01551952c5e81fcfbf970fffb6dbfee8931be86e7d2d3cb209f0ea81e7",
+   "bytes": 1365252,
+   "extraction_ms": 19326,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61e-certificates/bit92-root-00000000100000803202000040000000.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "local full-repo rg -F scan of the 3631e7ba main tree (research/ + results/ + docs/ + root README + Kyouen/rust/cpp/scripts) for each quoted root hex before extraction (2026-11-14 UTC), cross-checked against the record-based certified-root set of rank_warm_candidates2_20261115.py",
+    "repo_scan_hits": "sweep/inflight/ranking record JSONs only (root listings)",
+    "prior_certificate_hits": 0,
+    "note": "no certificate file or certificate record predating this batch contained any of these 31 root hexes; the 31 roots and their marginal manifest parents were also cross-checked against the published LOSS7 evidence (loss7 certificate manifests, loss7 JSON manifests, 274-key central49 terminal LOSS7 parent-lift manifest): zero hits, zero WIN/LOSS conflicts"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost64b",
+   "child_hex": "00000000000000803202000000100000",
+   "bit": 92,
+   "root_hex": "00000000100000803202000000100000",
+   "verdict": "WIN7",
+   "rows": 51742,
+   "extraction_nodes": 7978621,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm multiband 2 rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 57,
+    "independent_enumeration_legal": 57,
+    "match": true
+   },
+   "sub_roots_verified": 57,
+   "sub_roots_pass": 57,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 109149,
+   "winner_states": 70460,
+   "loser_states": 21926,
+   "loser_reply_edges": 98537,
+   "terminal_count": 16763,
+   "md5": "4d29194e78a5f15bf3d3c65a50bbaac5",
+   "sha256": "08aebdb09fa807e7a6b83bdad689f6c32f93c4d38f90886b700c3c0bbcf1e7d4",
+   "bytes": 1867337,
+   "extraction_ms": 26622,
+   "file": null,
+   "storage": {
+    "layout": "part1of2/part2of2 (line-boundary split; repo convention for >1.75 MB certificates)",
+    "part1": {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64b-certificates/bit92-root-00000000100000803202000000100000.cert.part1of2",
+     "bytes": 933685,
+     "md5": "e301d9f1d3bce32340c75fbbd3943680"
+    },
+    "part2": {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64b-certificates/bit92-root-00000000100000803202000000100000.cert.part2of2",
+     "bytes": 933652,
+     "md5": "d76536d064f294af6f6a538e6b090aaf"
+    },
+    "concat_md5_equals_whole": true
+   },
+   "root_absence_check": {
+    "method": "local full-repo rg -F scan of the 3631e7ba main tree (research/ + results/ + docs/ + root README + Kyouen/rust/cpp/scripts) for each quoted root hex before extraction (2026-11-14 UTC), cross-checked against the record-based certified-root set of rank_warm_candidates2_20261115.py",
+    "repo_scan_hits": "sweep/inflight/ranking record JSONs only (root listings)",
+    "prior_certificate_hits": 0,
+    "note": "no certificate file or certificate record predating this batch contained any of these 31 root hexes; the 31 roots and their marginal manifest parents were also cross-checked against the published LOSS7 evidence (loss7 certificate manifests, loss7 JSON manifests, 274-key central49 terminal LOSS7 parent-lift manifest): zero hits, zero WIN/LOSS conflicts"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost61e",
+   "child_hex": "00000000000000803202000040000000",
+   "bit": 89,
+   "root_hex": "00000000020000803202000040000000",
+   "verdict": "WIN7",
+   "rows": 30208,
+   "extraction_nodes": 3342491,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm multiband 2 rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 47,
+    "independent_enumeration_legal": 47,
+    "match": true
+   },
+   "sub_roots_verified": 47,
+   "sub_roots_pass": 47,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 62841,
+   "winner_states": 40744,
+   "loser_states": 12706,
+   "loser_reply_edges": 58071,
+   "terminal_count": 9391,
+   "md5": "e60611a3f8584bfe89ca055f73e4a7c6",
+   "sha256": "f8eb325047b510e685840b24eeb7573e8ba9d801e36d854f9042a998bc441ac8",
+   "bytes": 1090932,
+   "extraction_ms": 7182,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61e-certificates/bit89-root-00000000020000803202000040000000.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "local full-repo rg -F scan of the 3631e7ba main tree (research/ + results/ + docs/ + root README + Kyouen/rust/cpp/scripts) for each quoted root hex before extraction (2026-11-14 UTC), cross-checked against the record-based certified-root set of rank_warm_candidates2_20261115.py",
+    "repo_scan_hits": "sweep/inflight/ranking record JSONs only (root listings)",
+    "prior_certificate_hits": 0,
+    "note": "no certificate file or certificate record predating this batch contained any of these 31 root hexes; the 31 roots and their marginal manifest parents were also cross-checked against the published LOSS7 evidence (loss7 certificate manifests, loss7 JSON manifests, 274-key central49 terminal LOSS7 parent-lift manifest): zero hits, zero WIN/LOSS conflicts"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost61e",
+   "child_hex": "00000000000000803202000040000000",
+   "bit": 87,
+   "root_hex": "00000000008000803202000040000000",
+   "verdict": "WIN7",
+   "rows": 31864,
+   "extraction_nodes": 5492004,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm multiband 2 rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 55,
+    "independent_enumeration_legal": 55,
+    "match": true
+   },
+   "sub_roots_verified": 55,
+   "sub_roots_pass": 55,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 76299,
+   "winner_states": 49278,
+   "loser_states": 14482,
+   "loser_reply_edges": 69069,
+   "terminal_count": 12539,
+   "md5": "7bdcbf5fdfb932dfbf8f2af64cc78609",
+   "sha256": "d937697551d4b67fad9047bb094017d9b7080033dd7f410eeb5e3c3e3396bb0f",
+   "bytes": 1152351,
+   "extraction_ms": 10300,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61e-certificates/bit87-root-00000000008000803202000040000000.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "local full-repo rg -F scan of the 3631e7ba main tree (research/ + results/ + docs/ + root README + Kyouen/rust/cpp/scripts) for each quoted root hex before extraction (2026-11-14 UTC), cross-checked against the record-based certified-root set of rank_warm_candidates2_20261115.py",
+    "repo_scan_hits": "sweep/inflight/ranking record JSONs only (root listings)",
+    "prior_certificate_hits": 0,
+    "note": "no certificate file or certificate record predating this batch contained any of these 31 root hexes; the 31 roots and their marginal manifest parents were also cross-checked against the published LOSS7 evidence (loss7 certificate manifests, loss7 JSON manifests, 274-key central49 terminal LOSS7 parent-lift manifest): zero hits, zero WIN/LOSS conflicts"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost61f",
+   "child_hex": "00000000000000803202000080000000",
+   "bit": 84,
+   "root_hex": "00000000001000803202000080000000",
+   "verdict": "WIN7",
+   "rows": 31438,
+   "extraction_nodes": 9074946,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm multiband 2 rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 47,
+    "independent_enumeration_legal": 47,
+    "match": true
+   },
+   "sub_roots_verified": 47,
+   "sub_roots_pass": 47,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 74183,
+   "winner_states": 48287,
+   "loser_states": 14552,
+   "loser_reply_edges": 68022,
+   "terminal_count": 11344,
+   "md5": "62a6c3fad0549eae25451b8255db5a32",
+   "sha256": "241c1b17b122219ff5f9d06f0714481fff84a7ea5b7f7b206c1b99d711108974",
+   "bytes": 1136493,
+   "extraction_ms": 32311,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61f-certificates/bit84-root-00000000001000803202000080000000.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "local full-repo rg -F scan of the 3631e7ba main tree (research/ + results/ + docs/ + root README + Kyouen/rust/cpp/scripts) for each quoted root hex before extraction (2026-11-14 UTC), cross-checked against the record-based certified-root set of rank_warm_candidates2_20261115.py",
+    "repo_scan_hits": "sweep/inflight/ranking record JSONs only (root listings)",
+    "prior_certificate_hits": 0,
+    "note": "no certificate file or certificate record predating this batch contained any of these 31 root hexes; the 31 roots and their marginal manifest parents were also cross-checked against the published LOSS7 evidence (loss7 certificate manifests, loss7 JSON manifests, 274-key central49 terminal LOSS7 parent-lift manifest): zero hits, zero WIN/LOSS conflicts"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost64b",
+   "child_hex": "00000000000000803202000000100000",
+   "bit": 84,
+   "root_hex": "00000000001000803202000000100000",
+   "verdict": "WIN7",
+   "rows": 27997,
+   "extraction_nodes": 3277024,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm multiband 2 rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 48,
+    "independent_enumeration_legal": 48,
+    "match": true
+   },
+   "sub_roots_verified": 48,
+   "sub_roots_pass": 48,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 60645,
+   "winner_states": 39363,
+   "loser_states": 12555,
+   "loser_reply_edges": 55817,
+   "terminal_count": 8727,
+   "md5": "5dab082575338d21be4d9359f2320fd6",
+   "sha256": "ba12463b7dc8a1f8ccfe275cacf2c68327d4735fb6836112c32c07190d281c63",
+   "bytes": 1010443,
+   "extraction_ms": 14407,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64b-certificates/bit84-root-00000000001000803202000000100000.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "local full-repo rg -F scan of the 3631e7ba main tree (research/ + results/ + docs/ + root README + Kyouen/rust/cpp/scripts) for each quoted root hex before extraction (2026-11-14 UTC), cross-checked against the record-based certified-root set of rank_warm_candidates2_20261115.py",
+    "repo_scan_hits": "sweep/inflight/ranking record JSONs only (root listings)",
+    "prior_certificate_hits": 0,
+    "note": "no certificate file or certificate record predating this batch contained any of these 31 root hexes; the 31 roots and their marginal manifest parents were also cross-checked against the published LOSS7 evidence (loss7 certificate manifests, loss7 JSON manifests, 274-key central49 terminal LOSS7 parent-lift manifest): zero hits, zero WIN/LOSS conflicts"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost61d",
+   "child_hex": "00000000000000803202000000000002",
+   "bit": 84,
+   "root_hex": "00000000001000803202000000000002",
+   "verdict": "WIN7",
+   "rows": 31542,
+   "extraction_nodes": 5939144,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm multiband 2 rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 49,
+    "independent_enumeration_legal": 49,
+    "match": true
+   },
+   "sub_roots_verified": 49,
+   "sub_roots_pass": 49,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 68209,
+   "winner_states": 44258,
+   "loser_states": 14313,
+   "loser_reply_edges": 63387,
+   "terminal_count": 9638,
+   "md5": "13f4e9f99571662ceeb7032e2eba3e92",
+   "sha256": "ec85ec16667ec3f78495cb3b6e7e354d956ffdc8e9fcb738e571eb596a815219",
+   "bytes": 1141508,
+   "extraction_ms": 22860,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61d-certificates/bit84-root-00000000001000803202000000000002.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "local full-repo rg -F scan of the 3631e7ba main tree (research/ + results/ + docs/ + root README + Kyouen/rust/cpp/scripts) for each quoted root hex before extraction (2026-11-14 UTC), cross-checked against the record-based certified-root set of rank_warm_candidates2_20261115.py",
+    "repo_scan_hits": "sweep/inflight/ranking record JSONs only (root listings)",
+    "prior_certificate_hits": 0,
+    "note": "no certificate file or certificate record predating this batch contained any of these 31 root hexes; the 31 roots and their marginal manifest parents were also cross-checked against the published LOSS7 evidence (loss7 certificate manifests, loss7 JSON manifests, 274-key central49 terminal LOSS7 parent-lift manifest): zero hits, zero WIN/LOSS conflicts"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost61f",
+   "child_hex": "00000000000000803202000080000000",
+   "bit": 77,
+   "root_hex": "00000000000020803202000080000000",
+   "verdict": "WIN7",
+   "rows": 43629,
+   "extraction_nodes": 14788956,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm multiband 2 rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 50,
+    "independent_enumeration_legal": 50,
+    "match": true
+   },
+   "sub_roots_verified": 50,
+   "sub_roots_pass": 50,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 95515,
+   "winner_states": 62047,
+   "loser_states": 19604,
+   "loser_reply_edges": 88799,
+   "terminal_count": 13864,
+   "md5": "c221c6447b65a478652bcabade5e5a4c",
+   "sha256": "3b1304366172303704360ed70037ef66cfeb0f1911faecce2c6f376967c4b717",
+   "bytes": 1574812,
+   "extraction_ms": 53020,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61f-certificates/bit77-root-00000000000020803202000080000000.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "local full-repo rg -F scan of the 3631e7ba main tree (research/ + results/ + docs/ + root README + Kyouen/rust/cpp/scripts) for each quoted root hex before extraction (2026-11-14 UTC), cross-checked against the record-based certified-root set of rank_warm_candidates2_20261115.py",
+    "repo_scan_hits": "sweep/inflight/ranking record JSONs only (root listings)",
+    "prior_certificate_hits": 0,
+    "note": "no certificate file or certificate record predating this batch contained any of these 31 root hexes; the 31 roots and their marginal manifest parents were also cross-checked against the published LOSS7 evidence (loss7 certificate manifests, loss7 JSON manifests, 274-key central49 terminal LOSS7 parent-lift manifest): zero hits, zero WIN/LOSS conflicts"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost61f",
+   "child_hex": "00000000000000803202000080000000",
+   "bit": 75,
+   "root_hex": "00000000000008803202000080000000",
+   "verdict": "WIN7",
+   "rows": 40612,
+   "extraction_nodes": 15613836,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm multiband 2 rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 48,
+    "independent_enumeration_legal": 48,
+    "match": true
+   },
+   "sub_roots_verified": 48,
+   "sub_roots_pass": 48,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 101005,
+   "winner_states": 66044,
+   "loser_states": 20772,
+   "loser_reply_edges": 95629,
+   "terminal_count": 14189,
+   "md5": "1264f35a1a092ca6a3a93177a7ce5bef",
+   "sha256": "3b4543ee778b19b14a6991c9905274ef4ae83211a027b292610e2b1f9d544059",
+   "bytes": 1467042,
+   "extraction_ms": 56552,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61f-certificates/bit75-root-00000000000008803202000080000000.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "local full-repo rg -F scan of the 3631e7ba main tree (research/ + results/ + docs/ + root README + Kyouen/rust/cpp/scripts) for each quoted root hex before extraction (2026-11-14 UTC), cross-checked against the record-based certified-root set of rank_warm_candidates2_20261115.py",
+    "repo_scan_hits": "sweep/inflight/ranking record JSONs only (root listings)",
+    "prior_certificate_hits": 0,
+    "note": "no certificate file or certificate record predating this batch contained any of these 31 root hexes; the 31 roots and their marginal manifest parents were also cross-checked against the published LOSS7 evidence (loss7 certificate manifests, loss7 JSON manifests, 274-key central49 terminal LOSS7 parent-lift manifest): zero hits, zero WIN/LOSS conflicts"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost61d",
+   "child_hex": "00000000000000803202000000000002",
+   "bit": 75,
+   "root_hex": "00000000000008803202000000000002",
+   "verdict": "WIN7",
+   "rows": 46232,
+   "extraction_nodes": 9460291,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm multiband 2 rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 53,
+    "independent_enumeration_legal": 53,
+    "match": true
+   },
+   "sub_roots_verified": 53,
+   "sub_roots_pass": 53,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 102717,
+   "winner_states": 66584,
+   "loser_states": 21197,
+   "loser_reply_edges": 95397,
+   "terminal_count": 14936,
+   "md5": "e7ab2b0a7dda83a6f0295b5164b7b573",
+   "sha256": "ae72eec81e7c258111f5438cf08c7785362d9286cd899fab62e4ebc715ff161e",
+   "bytes": 1671243,
+   "extraction_ms": 36432,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61d-certificates/bit75-root-00000000000008803202000000000002.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "local full-repo rg -F scan of the 3631e7ba main tree (research/ + results/ + docs/ + root README + Kyouen/rust/cpp/scripts) for each quoted root hex before extraction (2026-11-14 UTC), cross-checked against the record-based certified-root set of rank_warm_candidates2_20261115.py",
+    "repo_scan_hits": "sweep/inflight/ranking record JSONs only (root listings)",
+    "prior_certificate_hits": 0,
+    "note": "no certificate file or certificate record predating this batch contained any of these 31 root hexes; the 31 roots and their marginal manifest parents were also cross-checked against the published LOSS7 evidence (loss7 certificate manifests, loss7 JSON manifests, 274-key central49 terminal LOSS7 parent-lift manifest): zero hits, zero WIN/LOSS conflicts"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost61e",
+   "child_hex": "00000000000000803202000040000000",
+   "bit": 74,
+   "root_hex": "00000000000004803202000040000000",
+   "verdict": "WIN7",
+   "rows": 30836,
+   "extraction_nodes": 3802674,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm multiband 2 rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 50,
+    "independent_enumeration_legal": 50,
+    "match": true
+   },
+   "sub_roots_verified": 50,
+   "sub_roots_pass": 50,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 69449,
+   "winner_states": 45009,
+   "loser_states": 13795,
+   "loser_reply_edges": 63230,
+   "terminal_count": 10645,
+   "md5": "a6b6f6a7f68921851b3cf0a9dded61fd",
+   "sha256": "f1442c84fce60308c7dfbe6274ac7cc35922af2769270ed36ad9f8c4deada908",
+   "bytes": 1113211,
+   "extraction_ms": 15821,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61e-certificates/bit74-root-00000000000004803202000040000000.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "local full-repo rg -F scan of the 3631e7ba main tree (research/ + results/ + docs/ + root README + Kyouen/rust/cpp/scripts) for each quoted root hex before extraction (2026-11-14 UTC), cross-checked against the record-based certified-root set of rank_warm_candidates2_20261115.py",
+    "repo_scan_hits": "sweep/inflight/ranking record JSONs only (root listings)",
+    "prior_certificate_hits": 0,
+    "note": "no certificate file or certificate record predating this batch contained any of these 31 root hexes; the 31 roots and their marginal manifest parents were also cross-checked against the published LOSS7 evidence (loss7 certificate manifests, loss7 JSON manifests, 274-key central49 terminal LOSS7 parent-lift manifest): zero hits, zero WIN/LOSS conflicts"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost71b",
+   "child_hex": "00000000000000803202000000400000",
+   "bit": 74,
+   "root_hex": "00000000000004803202000000400000",
+   "verdict": "WIN7",
+   "rows": 50498,
+   "extraction_nodes": 11514341,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm multiband 2 rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 56,
+    "independent_enumeration_legal": 56,
+    "match": true
+   },
+   "sub_roots_verified": 56,
+   "sub_roots_pass": 56,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 105063,
+   "winner_states": 68207,
+   "loser_states": 21812,
+   "loser_reply_edges": 97536,
+   "terminal_count": 15044,
+   "md5": "4cc6139b53282dfb7cec9500c2486c48",
+   "sha256": "e8ff3d21e8ae8dd87cb2c662c435b97edf0d4fca3f271afd56fd157221ec2967",
+   "bytes": 1823744,
+   "extraction_ms": 41222,
+   "file": null,
+   "storage": {
+    "layout": "part1of2/part2of2 (line-boundary split; repo convention for >1.75 MB certificates)",
+    "part1": {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71b-certificates/bit74-root-00000000000004803202000000400000.cert.part1of2",
+     "bytes": 911874,
+     "md5": "5cba9b2a7153c0e2efc0e83fd2883678"
+    },
+    "part2": {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71b-certificates/bit74-root-00000000000004803202000000400000.cert.part2of2",
+     "bytes": 911870,
+     "md5": "bc883ce2bbe8460ce68528e3b34bf380"
+    },
+    "concat_md5_equals_whole": true
+   },
+   "root_absence_check": {
+    "method": "local full-repo rg -F scan of the 3631e7ba main tree (research/ + results/ + docs/ + root README + Kyouen/rust/cpp/scripts) for each quoted root hex before extraction (2026-11-14 UTC), cross-checked against the record-based certified-root set of rank_warm_candidates2_20261115.py",
+    "repo_scan_hits": "sweep/inflight/ranking record JSONs only (root listings)",
+    "prior_certificate_hits": 0,
+    "note": "no certificate file or certificate record predating this batch contained any of these 31 root hexes; the 31 roots and their marginal manifest parents were also cross-checked against the published LOSS7 evidence (loss7 certificate manifests, loss7 JSON manifests, 274-key central49 terminal LOSS7 parent-lift manifest): zero hits, zero WIN/LOSS conflicts"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost61f",
+   "child_hex": "00000000000000803202000080000000",
+   "bit": 66,
+   "root_hex": "00000000000000843202000080000000",
+   "verdict": "WIN7",
+   "rows": 40272,
+   "extraction_nodes": 14224041,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm multiband 2 rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 51,
+    "independent_enumeration_legal": 51,
+    "match": true
+   },
+   "sub_roots_verified": 51,
+   "sub_roots_pass": 51,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 90341,
+   "winner_states": 58411,
+   "loser_states": 17734,
+   "loser_reply_edges": 82304,
+   "terminal_count": 14196,
+   "md5": "675ed95c8d5e881c45185a71357e8115",
+   "sha256": "9d92da2bfdfbb8e2d31da91e65c945c04337218febefcb93775172e736af4532",
+   "bytes": 1455272,
+   "extraction_ms": 47786,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61f-certificates/bit66-root-00000000000000843202000080000000.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "local full-repo rg -F scan of the 3631e7ba main tree (research/ + results/ + docs/ + root README + Kyouen/rust/cpp/scripts) for each quoted root hex before extraction (2026-11-14 UTC), cross-checked against the record-based certified-root set of rank_warm_candidates2_20261115.py",
+    "repo_scan_hits": "sweep/inflight/ranking record JSONs only (root listings)",
+    "prior_certificate_hits": 0,
+    "note": "no certificate file or certificate record predating this batch contained any of these 31 root hexes; the 31 roots and their marginal manifest parents were also cross-checked against the published LOSS7 evidence (loss7 certificate manifests, loss7 JSON manifests, 274-key central49 terminal LOSS7 parent-lift manifest): zero hits, zero WIN/LOSS conflicts"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost65e",
+   "child_hex": "00000000000000809102000000800000",
+   "bit": 46,
+   "root_hex": "00000000000000809102400000800000",
+   "verdict": "WIN7",
+   "rows": 33632,
+   "extraction_nodes": 8385656,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm multiband 2 rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 53,
+    "independent_enumeration_legal": 53,
+    "match": true
+   },
+   "sub_roots_verified": 53,
+   "sub_roots_pass": 53,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 74197,
+   "winner_states": 47987,
+   "loser_states": 14802,
+   "loser_reply_edges": 66657,
+   "terminal_count": 11408,
+   "md5": "49fcd7ebb8f119b7199d5842bf16259f",
+   "sha256": "b0251b9ebbe2c90bc7099eed3926233abe40c38cb60455e729648216feadfdc9",
+   "bytes": 1217832,
+   "extraction_ms": 30756,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-certificates/bit46-root-00000000000000809102400000800000.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "local full-repo rg -F scan of the 3631e7ba main tree (research/ + results/ + docs/ + root README + Kyouen/rust/cpp/scripts) for each quoted root hex before extraction (2026-11-14 UTC), cross-checked against the record-based certified-root set of rank_warm_candidates2_20261115.py",
+    "repo_scan_hits": "sweep/inflight/ranking record JSONs only (root listings)",
+    "prior_certificate_hits": 0,
+    "note": "no certificate file or certificate record predating this batch contained any of these 31 root hexes; the 31 roots and their marginal manifest parents were also cross-checked against the published LOSS7 evidence (loss7 certificate manifests, loss7 JSON manifests, 274-key central49 terminal LOSS7 parent-lift manifest): zero hits, zero WIN/LOSS conflicts"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost65e",
+   "child_hex": "00000000000000809102000000800000",
+   "bit": 36,
+   "root_hex": "00000000000000809102001000800000",
+   "verdict": "WIN7",
+   "rows": 32406,
+   "extraction_nodes": 8199734,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm multiband 2 rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 50,
+    "independent_enumeration_legal": 50,
+    "match": true
+   },
+   "sub_roots_verified": 50,
+   "sub_roots_pass": 50,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 70122,
+   "winner_states": 45291,
+   "loser_states": 13945,
+   "loser_reply_edges": 63609,
+   "terminal_count": 10886,
+   "md5": "18d76141423dde1137ff580bc90fa675",
+   "sha256": "21c52892b2327a55d2b98a35c07a117ab853ed0303614ef2a62821c61cae724d",
+   "bytes": 1171399,
+   "extraction_ms": 28703,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-certificates/bit36-root-00000000000000809102001000800000.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "local full-repo rg -F scan of the 3631e7ba main tree (research/ + results/ + docs/ + root README + Kyouen/rust/cpp/scripts) for each quoted root hex before extraction (2026-11-14 UTC), cross-checked against the record-based certified-root set of rank_warm_candidates2_20261115.py",
+    "repo_scan_hits": "sweep/inflight/ranking record JSONs only (root listings)",
+    "prior_certificate_hits": 0,
+    "note": "no certificate file or certificate record predating this batch contained any of these 31 root hexes; the 31 roots and their marginal manifest parents were also cross-checked against the published LOSS7 evidence (loss7 certificate manifests, loss7 JSON manifests, 274-key central49 terminal LOSS7 parent-lift manifest): zero hits, zero WIN/LOSS conflicts"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost64b",
+   "child_hex": "00000000000000803202000000100000",
+   "bit": 53,
+   "root_hex": "00000000000000803222000000100000",
+   "verdict": "WIN7",
+   "rows": 40428,
+   "extraction_nodes": 6378538,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm multiband 2 rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 50,
+    "independent_enumeration_legal": 50,
+    "match": true
+   },
+   "sub_roots_verified": 50,
+   "sub_roots_pass": 50,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 83803,
+   "winner_states": 54355,
+   "loser_states": 17284,
+   "loser_reply_edges": 77768,
+   "terminal_count": 12164,
+   "md5": "348f1bfec15dfb33d00d9e2592ab2bed",
+   "sha256": "a5518786c8fb44dbaf004c3251416396cf9d3f2e2c0a9a936d5efdd3bc3ec53e",
+   "bytes": 1461085,
+   "extraction_ms": 26705,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64b-certificates/bit53-root-00000000000000803222000000100000.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "local full-repo rg -F scan of the 3631e7ba main tree (research/ + results/ + docs/ + root README + Kyouen/rust/cpp/scripts) for each quoted root hex before extraction (2026-11-14 UTC), cross-checked against the record-based certified-root set of rank_warm_candidates2_20261115.py",
+    "repo_scan_hits": "sweep/inflight/ranking record JSONs only (root listings)",
+    "prior_certificate_hits": 0,
+    "note": "no certificate file or certificate record predating this batch contained any of these 31 root hexes; the 31 roots and their marginal manifest parents were also cross-checked against the published LOSS7 evidence (loss7 certificate manifests, loss7 JSON manifests, 274-key central49 terminal LOSS7 parent-lift manifest): zero hits, zero WIN/LOSS conflicts"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost64b",
+   "child_hex": "00000000000000803202000000100000",
+   "bit": 43,
+   "root_hex": "00000000000000803202080000100000",
+   "verdict": "WIN7",
+   "rows": 49013,
+   "extraction_nodes": 11307410,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm multiband 2 rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 55,
+    "independent_enumeration_legal": 55,
+    "match": true
+   },
+   "sub_roots_verified": 55,
+   "sub_roots_pass": 55,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 110658,
+   "winner_states": 71650,
+   "loser_states": 22809,
+   "loser_reply_edges": 103003,
+   "terminal_count": 16199,
+   "md5": "220b9f957eaba67267e76a28635187f1",
+   "sha256": "319278c75a1d3a61db9a52883f11c1505136211408e4d75975c452b3668de1f9",
+   "bytes": 1768470,
+   "extraction_ms": 42217,
+   "file": null,
+   "storage": {
+    "layout": "part1of2/part2of2 (line-boundary split; repo convention for >1.75 MB certificates)",
+    "part1": {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64b-certificates/bit43-root-00000000000000803202080000100000.cert.part1of2",
+     "bytes": 884247,
+     "md5": "bf2ea3ece02f49a33bb9bb3d0cb18e82"
+    },
+    "part2": {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64b-certificates/bit43-root-00000000000000803202080000100000.cert.part2of2",
+     "bytes": 884223,
+     "md5": "b1fce63514630eb342a126dbc248acf1"
+    },
+    "concat_md5_equals_whole": true
+   },
+   "root_absence_check": {
+    "method": "local full-repo rg -F scan of the 3631e7ba main tree (research/ + results/ + docs/ + root README + Kyouen/rust/cpp/scripts) for each quoted root hex before extraction (2026-11-14 UTC), cross-checked against the record-based certified-root set of rank_warm_candidates2_20261115.py",
+    "repo_scan_hits": "sweep/inflight/ranking record JSONs only (root listings)",
+    "prior_certificate_hits": 0,
+    "note": "no certificate file or certificate record predating this batch contained any of these 31 root hexes; the 31 roots and their marginal manifest parents were also cross-checked against the published LOSS7 evidence (loss7 certificate manifests, loss7 JSON manifests, 274-key central49 terminal LOSS7 parent-lift manifest): zero hits, zero WIN/LOSS conflicts"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost64b",
+   "child_hex": "00000000000000803202000000100000",
+   "bit": 40,
+   "root_hex": "00000000000000803202010000100000",
+   "verdict": "WIN7",
+   "rows": 31226,
+   "extraction_nodes": 3039707,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm multiband 2 rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 50,
+    "independent_enumeration_legal": 50,
+    "match": true
+   },
+   "sub_roots_verified": 50,
+   "sub_roots_pass": 50,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 68506,
+   "winner_states": 44272,
+   "loser_states": 13902,
+   "loser_reply_edges": 63345,
+   "terminal_count": 10332,
+   "md5": "da5715c9044295d4d88a23d3ce03b21a",
+   "sha256": "5da50a71afb6ee70683a7f8ac14a5b52236f01737c116051f975e30dced11e8a",
+   "bytes": 1126251,
+   "extraction_ms": 13875,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64b-certificates/bit40-root-00000000000000803202010000100000.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "local full-repo rg -F scan of the 3631e7ba main tree (research/ + results/ + docs/ + root README + Kyouen/rust/cpp/scripts) for each quoted root hex before extraction (2026-11-14 UTC), cross-checked against the record-based certified-root set of rank_warm_candidates2_20261115.py",
+    "repo_scan_hits": "sweep/inflight/ranking record JSONs only (root listings)",
+    "prior_certificate_hits": 0,
+    "note": "no certificate file or certificate record predating this batch contained any of these 31 root hexes; the 31 roots and their marginal manifest parents were also cross-checked against the published LOSS7 evidence (loss7 certificate manifests, loss7 JSON manifests, 274-key central49 terminal LOSS7 parent-lift manifest): zero hits, zero WIN/LOSS conflicts"
+   },
+   "pushed": "2026-11-15"
+  },
+  {
+   "band": "class2-lane-cost61d",
+   "child_hex": "00000000000000803202000000000002",
+   "bit": 23,
+   "root_hex": "00000000000000803202000000800002",
+   "verdict": "WIN7",
+   "rows": 29185,
+   "extraction_nodes": 4180609,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm multiband 2 rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 44,
+    "independent_enumeration_legal": 44,
+    "match": true
+   },
+   "sub_roots_verified": 44,
+   "sub_roots_pass": 44,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 66257,
+   "winner_states": 42857,
+   "loser_states": 12790,
+   "loser_reply_edges": 60422,
+   "terminal_count": 10610,
+   "md5": "27528b96a0968bb61ede41b5d6107fe3",
+   "sha256": "e7b38d1297cc9cf65c1227e2c73a244af76b43eb4391b78b8e574d94d4b05cf4",
+   "bytes": 1056049,
+   "extraction_ms": 16926,
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61d-certificates/bit23-root-00000000000000803202000000800002.cert",
+   "storage": {
+    "layout": "single file"
+   },
+   "root_absence_check": {
+    "method": "local full-repo rg -F scan of the 3631e7ba main tree (research/ + results/ + docs/ + root README + Kyouen/rust/cpp/scripts) for each quoted root hex before extraction (2026-11-14 UTC), cross-checked against the record-based certified-root set of rank_warm_candidates2_20261115.py",
+    "repo_scan_hits": "sweep/inflight/ranking record JSONs only (root listings)",
+    "prior_certificate_hits": 0,
+    "note": "no certificate file or certificate record predating this batch contained any of these 31 root hexes; the 31 roots and their marginal manifest parents were also cross-checked against the published LOSS7 evidence (loss7 certificate manifests, loss7 JSON manifests, 274-key central49 terminal LOSS7 parent-lift manifest): zero hits, zero WIN/LOSS conflicts"
+   },
+   "pushed": "2026-11-15"
+  }
+ ],
+ "publication_and_duplicate_crosscheck": {
+  "status": "all 31 roots published on main; 54/54 remote entries byte-exact vs the locally BigInt-verified certificates (git blob sha / split-boundary reproduction / direct cmp); 0 WIN/LOSS conflicts",
+  "artifact": "class2-lane-warm-multiband2-duplicate-crosscheck-20261115.json",
+  "first_pushed_by": {
+   "this-lane": 18,
+   "concurrent-batch2-lane": 13
+  }
+ }
+}
