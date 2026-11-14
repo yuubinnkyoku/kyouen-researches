@@ -2,47 +2,16 @@
  "schema": "n11-class-frontier-cost68b-recompute-20261114-v1",
  "date": "2026-11-14",
  "baseline_main": "class-frontier-cost67-recompute-20261114 (solved 898 / unique remaining 6949 / sum 546687 / open 5202/409163)",
- "method": "direct extension of recompute_frontier_merged_20261114.py: every staged control reproduces the published after-merged frontier exactly (asserted), then the class2-lane cost-67 receipt (4 WIN7 roots: bits 18/34/101/118 of S6 child 00000000000000809082020000000000, all fully verified certificates) is added; sterile sweeps (class4 80c/81/82, class2 66a/66b) are control-confirmed",
+ "method": "direct extension of recompute_frontier_cost67_20261114.py: every staged control reproduces the published after-cost67 frontier exactly (asserted), then the class2-lane cost-68b receipt (2 WIN7 roots: bits 23/118 of S6 child 00000000000000809082000040000000, both fully verified certificates) is added",
  "controls": {
-  "after_merged": {
-   "solved_in_manifest": 887,
-   "unique_remaining": 6960,
-   "sum_cost": 547472,
-   "open_s6": 5206,
-   "open_cost": 409451,
+  "after_cost67": {
+   "solved_in_manifest": 898,
+   "unique_remaining": 6949,
+   "sum_cost": 546687,
+   "open_s6": 5202,
+   "open_cost": 409163,
    "reproduced": true
-  },
-  "sterile_sweeps_confirmed": [
-   "class4-lane cost-80c",
-   "class4-lane cost-81",
-   "class4-lane cost-82",
-   "class2-lane cost-66a",
-   "class2-lane cost-66b"
-  ]
- },
- "cost67_addition": {
-  "roots": [
-   "00000000000000809082020000040000",
-   "00000000000000809082020400000000",
-   "00000020000000809082020000000000",
-   "00400000000000809082020000000000"
-  ],
-  "covers": 25,
-  "marginal": 23,
-  "marginal_in_manifest": 11,
-  "marginal_manifest_hexes": [
-   "00000000000000003800000028400000",
-   "0000000000000000380000040a000000",
-   "00000000000000801082020000040000",
-   "00000000000000801082020400000000",
-   "00000000000000801202040800000000",
-   "00000000000000809082000000040000",
-   "00000000000000809082000400000000",
-   "00000000000000809082020000000000",
-   "00000000000080801202000000080000",
-   "00000000000080821002000000000004",
-   "00000000000080821002000000080000"
-  ]
+  }
  },
  "cost68b_addition": {
   "roots": [
@@ -74,7 +43,7 @@
    "c2=1,c4=0": 255,
    "c2=1,c4=1": 65,
    "c2=1,c4=2": 9,
-   "c2=2,c4=0": 1242,
+   "c2=2,c4=0": 1241,
    "c2=2,c4=1": 6,
    "c2=2,c4=2": 59
   },

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Full manifest-level class-2/4 frontier recomputation over ALL published
-WIN7 receipts as of main (class4-lane cost-78b session, 2026-11-14).
+WIN7 receipts as of main (class2-lane cost-68b session, 2026-11-14).
 
 Extension of recompute_frontier_cost63cd.py: after reproducing every published
 staged control through after-cost63d (solved 855 / unique remaining 6992 /
@@ -667,7 +667,7 @@ json66b = json.loads((OUT / 'class2-lane-cost66b-sweep-20261114.json').read_text
 assert json66b['win7_d10'] == 0 and json66b['capped'] == 0 and json66b['candidates'] == 66
 print('CONTROL sterile sweeps cost-80c/81/82 (class4) and cost-66a/66b (class2): OK')
 
-# ---------- class2-lane cost-67 additions (4 WIN7, this session) ----------
+# ---------- class2-lane cost-67 additions (4 WIN7 receipts on main) ----------
 json67 = json.loads((OUT / 'class2-lane-cost67-win7-certificates-20261114.json').read_text())
 cost67 = [int(c['root'], 16) for c in json67['certificates']]
 assert len(cost67) == 4
@@ -683,7 +683,6 @@ per['cost67'] = {
 s23 = s22 | marg67
 st23, rem23, uniq23, dem23 = summary_state(s23)
 print('AFTER cost67:', json.dumps(st23, indent=1))
-
 
 # ---------- CONTROL after-cost67 published frontier ----------
 assert st23['solved_s6_in_manifest'] == 898, st23
@@ -709,6 +708,7 @@ per['cost68b'] = {
 s24 = s23 | marg68b
 st24, rem24, uniq24, dem24 = summary_state(s24)
 print('AFTER cost68b:', json.dumps(st24, indent=1))
+
 def best(rem, bit):
     return sorted(
         ({'s5_hex': k, 'classes': classes.get(k, 0),
@@ -728,16 +728,13 @@ result = {
     'schema': 'n11-class-frontier-cost68b-recompute-20261114-v1',
     'date': '2026-11-14',
     'baseline_main': 'class-frontier-cost67-recompute-20261114 (solved 898 / unique remaining 6949 / sum 546687 / open 5202/409163)',
-    'method': 'direct extension of recompute_frontier_merged_20261114.py: every staged control '
-              'reproduces the published after-merged frontier exactly (asserted), then the '
-              'class2-lane cost-67 receipt (4 WIN7 roots: bits 18/34/101/118 of S6 child '
-              '00000000000000809082020000000000, all fully verified certificates) is added; '
-              'sterile sweeps (class4 80c/81/82, class2 66a/66b) are control-confirmed',
+    'method': 'direct extension of recompute_frontier_cost67_20261114.py: every staged control '
+              'reproduces the published after-cost67 frontier exactly (asserted), then the '
+              'class2-lane cost-68b receipt (2 WIN7 roots: bits 23/118 of S6 child '
+              '00000000000000809082000040000000, both fully verified certificates) is added',
     'controls': {
-        'after_merged': {'solved_in_manifest': 887, 'unique_remaining': 6960, 'sum_cost': 547472, 'open_s6': 5206, 'open_cost': 409451, 'reproduced': True},
-        'sterile_sweeps_confirmed': ['class4-lane cost-80c', 'class4-lane cost-81', 'class4-lane cost-82', 'class2-lane cost-66a', 'class2-lane cost-66b'],
+        'after_cost67': {'solved_in_manifest': 898, 'unique_remaining': 6949, 'sum_cost': 546687, 'open_s6': 5202, 'open_cost': 409163, 'reproduced': True},
     },
-    'cost67_addition': per['cost67'],
     'cost68b_addition': per['cost68b'],
     'frontier_after_cost68b': {
         'solved_s6_in_manifest': st24['solved_s6_in_manifest'],
@@ -746,7 +743,7 @@ result = {
         'sum_remaining_cost': st24['sum_remaining_cost'],
         's6_needed_by_open_classes': st24['s6_needed_by_open_classes'],
         'cost_needed_by_open_classes': st24['cost_needed_by_open_classes'],
-        'demand_histogram_open_only': st23['hist'],
+        'demand_histogram_open_only': st24['hist'],
         'best_class2': class2[0],
         'next_class2': class2[1:4],
         'best_class4': class4[0],
