@@ -51,7 +51,12 @@
       "interpretation": "published category-1 candidate rows; not treated as independent LOSS7 certificates"
     },
     "combined_unique_d4_orbits": 870,
-    "cross_source_d4_overlaps": 0
+    "cross_source_d4_overlaps": {
+      "prior_win7_vs_prior_loss7": 0,
+      "prior_loss7_vs_central_parent_lift": 0,
+      "prior_loss7_vs_knownloss_candidates": 0,
+      "central_parent_lift_vs_knownloss_candidates": 0
+    }
   },
   "conflicts": {
     "warm_vs_prior_win7_d4": 0,
