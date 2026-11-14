@@ -84,6 +84,8 @@ jobs:
         run: python research/experiments/cycle-terminal-run-formula-20261103/verify.py
       - name: Audit K0664 path terminal real-rootedness and weighted tilings
         run: python research/experiments/path-terminal-real-roots-20261103/verify.py
+      - name: Audit circle-strip P(w) subadditivity table
+        run: uv run --locked python research/experiments/circle-strip-subadditivity-20261114/verify.py
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python tools/knowledge/build.py
@@ -274,3 +276,5 @@ jobs:
 # Refresh trigger for K0663 n11 terminal-certified 274 LOSS7 parent closure (2026-11-03).
 
 # Refresh trigger for K0664 path terminal real-rootedness (2026-11-03).
+
+# Refresh generated views for K0817 circle-strip subadditivity and K0813 P(17)/P(18) correction (2026-11-14).
