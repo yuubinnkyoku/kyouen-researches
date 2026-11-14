@@ -20,10 +20,10 @@ relations:
 - type: depends_on
   target: K0784
   note: P(22..35) の全称値と650円S* witness が σ(17..24) を確定
-- type: related
+- type: supports
   target: K0785
   note: E族中心窓bestK(K=13..17)が側窓σ(2k)と完全一致。旧「側窓σ₁₃はopen・全体σ₁₃∈[36,43]」注記は本項目で解消（σ₁₃=43）
-- type: related
+- type: supports
   target: K0791
   note: レジューム2「σ₁₇の直接決定」は掃引延長なしで閉じた（σ₁₇=83）。34点最小幅83がR′≤10⁸掃引スコープから全称に昇格
 artifacts:
