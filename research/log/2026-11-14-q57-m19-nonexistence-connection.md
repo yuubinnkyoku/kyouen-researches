@@ -45,6 +45,14 @@ DIMACS 変数順列シャッフル（xorshift・節順/リテラル順もシャ�
 決定列が難度の主因と推定する。単発予算での決着は見込めず、
 符号化改良（counter の局所化・対称性破り）か予算延長が次の一手。
 
+## 追加: 6×30/31/32 近傍の除去+追加拡張列挙（0 witness・限定非不在）
+
+既知 6×26..6×29 witness プールから 6×30/6×31/6×32 への除去（r≤2・dm=1はr≤3）
++新規列追加の決定的列挙（枝刈り厳密・unblocked>12のみ除外）で計 310,154 候補を
+判定し witness 0。6×30 witness は既知 witness の近傍には存在しない
+（構造的に新しい配置が必要）。詳細は frontier-portfolio-20261114/report.md と
+output/extension_enumeration.json。
+
 ## 反映
 
 実験 research/experiments/frontier-portfolio-20261114/（scripts 3・output 1・
