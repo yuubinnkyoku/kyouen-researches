@@ -1,0 +1,164 @@
+{
+  "schema": "n11-class2-frontier-union-cost65e-bit107-audit-20261115-v1",
+  "date": "2026-11-15",
+  "inspected_main_head": "8a0f072e9c2afc8b805fd95df5557765149f44a4",
+  "frontier_union": {
+    "baseline": {
+      "solved_in_manifest": 951,
+      "unique_remaining": 6896,
+      "sum_cost": 542952,
+      "open_s6": 5166,
+      "open_cost": 406675
+    },
+    "marginal_counts_by_lane": {
+      "cost63a": 2,
+      "cost61e": 3,
+      "cost61f": 5
+    },
+    "marginal_cost_sum": 660,
+    "combined": {
+      "solved_s6_in_manifest": 961,
+      "unique_remaining_s6": 6886,
+      "sum_remaining_cost": 542292,
+      "s6_needed_by_open_classes": 5156,
+      "cost_needed_by_open_classes": 406015
+    },
+    "note": "Three published frontier recomputations have disjoint marginal S6 keys; all ten keys are in the 7,867-row manifest and their costs sum to 660."
+  },
+  "sweeps": {
+    "cost65e": {
+      "candidates": 65,
+      "win7_d10": 21,
+      "refuted_d10": 44,
+      "capped": 0,
+      "total_nodes": 308092253,
+      "pilot": "9/9 loss=false at 5949 nodes",
+      "engine": "v15"
+    },
+    "cost61f": {
+      "candidates": 61,
+      "win7_d10": 11,
+      "refuted_d10": 50,
+      "capped": 0,
+      "total_nodes": 45925702,
+      "pilot": "8/8 loss=false at 3402 nodes",
+      "engine": "v16"
+    }
+  },
+  "certificates": {
+    "cost61f": [
+      {
+        "bit": 23,
+        "root_hex": "00000000000000803202000080800000",
+        "rows": 26256,
+        "legal_moves_independent": 47,
+        "sub_roots_pass": 47,
+        "union_missing": 0,
+        "union_extra": 0
+      },
+      {
+        "bit": 26,
+        "root_hex": "00000000000000803202000084000000",
+        "rows": 30764,
+        "legal_moves_independent": 49,
+        "sub_roots_pass": 49,
+        "union_missing": 0,
+        "union_extra": 0
+      },
+      {
+        "bit": 99,
+        "root_hex": "00000008000000803202000080000000",
+        "rows": 26575,
+        "legal_moves_independent": 45,
+        "sub_roots_pass": 45,
+        "union_missing": 0,
+        "union_extra": 0
+      }
+    ],
+    "cost65e_bit107": {
+      "root_hex": "00000800000000809102000000800000",
+      "rows": 18930,
+      "legal_moves_independent": 44,
+      "sub_roots_pass": 44,
+      "union_missing": 0,
+      "union_extra": 0,
+      "fbt_drops": 0,
+      "sha256": "ac656690280ef9f2162936fcc48504902840ac1f24315aa3a9323c84a778c2e9"
+    }
+  },
+  "cost65e_bit107_parent_lift": [
+    {
+      "removed_bit": 23,
+      "canonical_s6": "00000000000000809102000000080000",
+      "in_manifest": true,
+      "cost": 68,
+      "classes": 6,
+      "in_three_lane_union": false,
+      "counted_new": false
+    },
+    {
+      "removed_bit": 49,
+      "canonical_s6": "00000000020000009102000000080000",
+      "in_manifest": false,
+      "counted_new": false
+    },
+    {
+      "removed_bit": 56,
+      "canonical_s6": "00000000020000809002000000080000",
+      "in_manifest": true,
+      "cost": 68,
+      "classes": 6,
+      "in_three_lane_union": false,
+      "counted_new": false
+    },
+    {
+      "removed_bit": 60,
+      "canonical_s6": "00000000020000808102000000080000",
+      "in_manifest": false,
+      "counted_new": false
+    },
+    {
+      "removed_bit": 63,
+      "canonical_s6": "00000000020000003800000000090000",
+      "in_manifest": true,
+      "cost": 71,
+      "classes": 4,
+      "in_three_lane_union": false,
+      "counted_new": false
+    },
+    {
+      "removed_bit": 71,
+      "canonical_s6": "00000000020000809100000000080000",
+      "in_manifest": false,
+      "counted_new": false
+    },
+    {
+      "removed_bit": 107,
+      "canonical_s6": "00000000000000809102000000800000",
+      "in_manifest": true,
+      "cost": 65,
+      "classes": 2,
+      "in_three_lane_union": false,
+      "counted_new": true
+    }
+  ],
+  "local_s5_809102": {
+    "after_cost63a": {
+      "remaining_s6_orbits": 37,
+      "remaining_s7_edge_cost": 2658
+    },
+    "after_bit107": {
+      "remaining_s6_orbits": 36,
+      "remaining_s7_edge_cost": 2593
+    }
+  },
+  "global_lower_bound_after_bit107": {
+    "solved_s6_in_manifest_at_least": 962,
+    "unique_remaining_s6_at_most": 6885,
+    "sum_remaining_cost_at_most": 542227,
+    "s6_needed_by_open_classes_at_most": 5155,
+    "cost_needed_by_open_classes_at_most": 405950
+  },
+  "exact_global_frontier_after_bit107": "not recomputed; the other three manifest parents of bit107 were not reconciled against the baseline solved set",
+  "interpretation_guard": "Only the one confirmed new S6 parent is counted. WIN7-D10 is not a certificate, REFUTED-D10 is not a LOSS proof. Standard 11x11 empty root, {49,60}, S2 {59,60}, class 2 and class 4 remain UNKNOWN."
+}
