@@ -1,7 +1,7 @@
 // Counts and lists the circuits (inclusion-minimal affinely dependent
-// subsets) of the binary 6-cube of sizes 4..7.  Non-minimal dependent
-// subsets are implied by smaller circuits, so a CNF banning only circuits
-// is equivalent to the full dependent-set CNF and much smaller.
+// subsets) of the binary 6-cube of sizes 4..7. For an exactly-K set with
+// K>=7, banning these circuits is equivalent to banning every dependent
+// 7-set. This does not encode legality of positions with fewer than 7 points.
 //
 // Dependency of a size-s subset (s <= 7): the s x 7 augmented matrix with
 // rows (1, x) has rank < s mod p = 2^61-1.  Hadamard bound 7^3.5 < p makes
@@ -14,10 +14,8 @@
 // Modes:
 //   --count                  print circuit counts per size
 //   --cnf K out.cnf [fix0]   exactly-K CNF banning circuits of sizes 4..7;
-//                            'fix0' adds the unit clause x_0, justified by
-//                            the transitivity of the affine symmetry group
-//                            of the cube: if any 10-point general-position
-//                            set exists, one containing vertex 0 exists.
+//                            valid only for K>=7; 'fix0' adds x_0=1 by
+//                            vertex transitivity of the affine cube group.
 #include <cstdint>
 #include <cstdio>
 #include <cstdlib>
@@ -134,6 +132,10 @@ void for_all_size(int n, int s, F&& body) {
 void at_most_k_clauses(const std::vector<int>& lits, int k, int* next_var,
                        std::vector<std::vector<int>>& out) {
     const int n = (int)lits.size();
+    if (k == 0) {
+        for (int lit : lits) out.push_back({-lit});
+        return;
+    }
     if (k >= n) return;
     std::vector<std::vector<int>> s(n, std::vector<int>(k, 0));
     for (int i = 0; i < n; ++i)
@@ -155,6 +157,23 @@ void at_most_k_clauses(const std::vector<int>& lits, int k, int* next_var,
 
 int main(int argc, char** argv) {
     const int n = 64;
+    // Circuit clauses encode the q=7 condition only at fixed cardinality K>=7.
+    // Reject unsupported K before the expensive exhaustive enumeration.
+    if (argc >= 2 && std::string(argv[1]) == "--cnf") {
+        if (argc < 4 || argc > 5) {
+            fprintf(stderr, "usage: build_k6_circuits --cnf K out.cnf [fix0] (K>=7)\\n");
+            return 2;
+        }
+        const int requested = atoi(argv[2]);
+        if (requested < 7 || requested > n) {
+            fprintf(stderr, "circuit CNF requires 7 <= K <= 64\\n");
+            return 2;
+        }
+        if (argc == 5 && std::string(argv[4]) != "fix0") {
+            fprintf(stderr, "bad extra args\\n");
+            return 2;
+        }
+    }
     // Pass 1: dependent sets of sizes 4 and 5 (small enough to hash).
     std::unordered_set<u64> dep4, dep5;
     long long cnt_dep4 = 0, cnt_dep5 = 0, cnt_dep6 = 0;

@@ -1,8 +1,8 @@
 ---
 id: K0568
-title: 二値六次元立方体の共七点禁止版の最大安全石数はK_6=9である
+title: "二値六次元立方体の共七点禁止版は K_6≥9、上界未確定"
 kind: proposition
-status: scope-unclear
+status: open
 topics: [variants, geometry, maximum-safe]
 aliases: []
 relations:
@@ -31,11 +31,20 @@ artifacts:
 - path: research/experiments/binary-cube-hyperplane-k6-exact-20261025/results.json
   role: data
   note: 機械可読な主張・CNF統計・検証計画
+- path: research/experiments/binary-cube-hyperplane-k6-exact-20261025/verify_small_dimension_circuits.py
+  role: verifier
+  note: d=3..5の全部分集合サイズ4..qを二素数・列順反転rankで完全列挙し、circuitの上下閉包を検査
+- path: research/experiments/binary-cube-hyperplane-k6-exact-20261025/small_dimension_circuit_audit.md
+  role: proof
+  note: 小次元の有限完全監査とexactly-K同値性の適用境界
+- path: research/log/2026-11-14-k6-small-d-circuit-audit.md
+  role: log
+  note: 独立監査・READMEの古い評価の訂正・次のd=6監査課題
 scope: 二値六次元超立方体 V_6={0,1}^6 上で、相異なる7点が一つの実アフィン超平面に載ること（退化を含む）を禁止するゲームの最大安全石数。Grundy値・misère版・d≠6は対象外。
-evidence: 下界9点はK0553の証人（二検証器で完全検証済み）。上界は未確定：完全版CNF（依存7点組全部255,036,992節）のUNSAT実行はメモリ19GB環境で未完。circuit削減CNFはexactly-10存在判定には論理的に同値だが、列挙器の完全性とUNSAT証明書は未検証。そのkissat実行も8h10mでSIGTERM終了し判定は得られていない。サイズ7未満の局面の合法性には同値性を適用できない。9点証人の極大性とexactly-9 SAT制御は確定済み。
+evidence: "下界9点はK0553の証人で二検証器により確定。上界は未確定。2026-11-14の補題によりexactly-10制約下のcircuit縮約は全依存7点組禁止と論理同値。d=3..5の全有限列挙でcircuit列挙法を独立監査した。ただしd=6 circuit生成器の完全性とCNFのUNSATは未検証。"
 ---
 
-# 二値六次元立方体の共七点禁止版の最大安全石数は9（上界未確定）
+# 二値六次元立方体の共七点禁止版は K_6≥9、K_6≤9 は未確定
 
 $V_6=\{0,1\}^6$ の64頂点上で、相異なる7点が一つの実アフィン超平面に載ること
 （退化を含む）を禁止するゲームの最大安全石数 $K_6$ について、
@@ -80,3 +89,16 @@ mod $2^{61}-1$ 掃き出しの両検証器で完全検証済み。
 有限点集合の10点部分集合がすべての7点部分集合でアフィン独立であることと、サイズ7以下の包含極小アフィン依存集合を含まないことは同値である。前者に反する7点集合は内部に極小依存集合を持ち、後者に反する極小依存集合は10点集合内で7点まで拡張できるためである。証明の詳細は `research/log/2026-11-14-k6-exact-cardinality-circuit-equivalence.md` を参照。
 
 したがってcircuit縮約そのものを10点不存在判定に対して無効とする旧評価を訂正する。ただし、既存生成器が**すべて**のサイズ7以下のcircuitを正しく列挙したか、exactly-10符号化が正しいか、SAT solverがUNSATを証明できるかは別問題であり、いずれも本項目では新たに確定しない。ゲーム全局面（7点未満を含む）の合法性やGrundy値にはこの同値性を流用できない。
+
+
+## 2026-11-14：小次元circuit列挙の独立監査
+
+verify_small_dimension_circuits.py により d=3,4,5（q=d+1）のサイズ4..qの全部分集合を列挙した。二つの素数 1,000,003 / 1,000,033 と列順を反転した消去を照合し、Hadamard限界216未満から有理数階数と一致することを保証した。
+
+| d | 依存集合数（サイズ4..q） | circuit数（サイズ4..q） | 依存q集合の被覆 |
+|---:|---:|---:|---:|
+| 3 | 12 | 12 | 12/12 |
+| 4 | 100, 1,360 | 100, 160 | 1,360/1,360 |
+| 5 | 720, 22,240, 350,000 | 720, 2,080, 41,760 | 350,000/350,000 |
+
+生成circuitのq点拡張370,080件も全て依存q集合に含まれた。これはd=3..5の有限完全監査であり、d=6の列挙完全性はまだ証明していない。K_6≥9は確定、K_6≤9とK_6=9は未確定のままである。

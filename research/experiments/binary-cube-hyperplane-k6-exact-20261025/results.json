@@ -1,7 +1,7 @@
 {
   "game": "binary 6-cube V_6={0,1}^6, forbidding 7 points on a common real affine hyperplane (degenerate cases included)",
   "date": "2026-10-25",
-  "updated": "2026-10-30",
+  "updated": "2026-11-14",
   "claim": "K_6 >= 9 (certified witness); upper bound K_6 <= 9 is OPEN",
   "status": "upper-bound-unproven",
   "lower_bound": {
@@ -22,32 +22,55 @@
       },
       "state": "raw 6.9 GB CNF generated in /tmp; CaDiCaL 1.7.4 OOM on a 19 GB machine; no UNSAT verdict"
     },
-    "invalid_circuit_encoding": {
-      "why_invalid": "inclusion-minimal dependent sets (circuits) include dependent 4/5/6-subsets that are legal in the game; banning circuits instead of all dependent 7-subsets is not equivalent (see K0591 lesson 1)",
-      "kissat_run": "kissat 4.0.4 on certificates/k6_k10_fix0.cnf (4160 vars, 19484943 clauses) terminated by SIGTERM after 8h10m21s; no verdict; partial DRAT is not a proof"
-    },
     "dependent_subset_counts": {
       "size_4": 4816,
       "size_5": 311360,
       "size_6": 10663520,
       "size_7": 255036992,
       "cross_check": "every predicate call evaluated modulo 2^61-1 and modulo 1000000007 with independent eliminations; all 621216192 seven-subsets agree"
+    },
+    "circuit_encoding": {
+      "validity": "For exactly-K subsets with K>=7, banning every inclusion-minimal dependent subset of sizes 4..7 is equivalent, on the original point variables, to banning every dependent 7-subset.",
+      "scope_limit": "This is only a fixed-cardinality existence equivalence. It does not encode legal positions of size below 7, legal moves, or Grundy values.",
+      "d6_generator": "The d=6 circuit generator has not yet been independently audited for completeness.",
+      "solver_run": "kissat 4.0.4 on the existing exactly-10 circuit CNF was terminated by SIGTERM after 8h10m21s; no SAT/UNSAT verdict.",
+      "small_dimension_audit": {
+        "path": "research/experiments/binary-cube-hyperplane-k6-exact-20261025/verify_small_dimension_circuits.py",
+        "dimensions": [
+          3,
+          4,
+          5
+        ],
+        "result": "PASS",
+        "note": "Complete finite enumeration of all subsets of sizes 4..d+1; two modular rank implementations and both directions of the circuit/upward-closure correspondence checked."
+      }
     }
   },
   "sat_control_exactly_9": {
     "cnf": "certificates/k6_k9.cnf (circuit clause set, exactly-9 counters)",
     "result": "SATISFIABLE (kissat 4.0.4, 23 seconds, exit 10)",
-    "witness": [11, 22, 28, 37, 42, 49, 57, 58, 63],
+    "witness": [
+      11,
+      22,
+      28,
+      37,
+      42,
+      49,
+      57,
+      58,
+      63
+    ],
     "geometric_check": "verify_k9_witness.py: all C(9,7)=36 seven-subset determinants nonzero (|det| 1..9)",
     "meaning": "control only; does not validate the circuit reduction"
   },
   "lessons": [
-    "circuit reduction is invalid for this stone-addition game: minimal forbidden sets are exactly the dependent 7-subsets, because dependencies of fewer points are legal",
-    "full-enumeration game solvers must recompute children from the position (any unused safe vertex), never reuse the enumeration path"
+    "Circuit-only clauses do not describe arbitrary game positions: a dependent set of fewer than 7 points is still a legal position.",
+    "Under an exactly-K constraint with K>=7, all dependent 7-subsets are forbidden iff all circuits of sizes 4..7 are forbidden.",
+    "The fixed-cardinality equivalence does not certify that the d=6 circuit enumerator is complete and does not provide an UNSAT result."
   ],
   "verification_plan": [
-    "regenerate the full 255036992-clause CNF and run kissat/CaDiCaL with enough memory",
-    "or find a 10-point general-position set (refuting K_6 <= 9)",
-    "or use coordinate-permutation symmetry / a hyperplane-cardinality encoding / a combinatorial proof"
+    "Independently audit the d=6 circuit enumeration against the complete dependent-7-set list or a second circuit enumerator.",
+    "Verify the exactly-10 cardinality encoding and generate an UNSAT proof for the complete or circuit-reduced CNF.",
+    "Alternatively, find and geometrically verify a 10-point general-position set."
   ]
 }

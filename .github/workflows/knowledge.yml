@@ -15,6 +15,15 @@ jobs:
       - run: python research/experiments/graph-star-second-terminal-degree-20261103/verify.py
       - run: uv run --locked python research/experiments/path-run-coefficients-20261103/verify.py
       - run: uv run --locked python research/experiments/path-terminal-real-roots-20261103/verify.py
+      - name: Audit K0568 circuit reduction boundaries
+        run: |
+          uv run --locked python research/experiments/binary-cube-hyperplane-k6-exact-20261025/verify_small_dimension_circuits.py
+          c++ -std=c++17 -O2 -Wall -Wextra research/experiments/binary-cube-hyperplane-k6-exact-20261025/build_k6_circuits.cpp -o /tmp/build_k6_circuits
+          if /tmp/build_k6_circuits --cnf 6 /tmp/k6-invalid.cnf; then
+            echo "circuit CNF must reject K<7" >&2
+            exit 1
+          fi
+          test ! -e /tmp/k6-invalid.cnf
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python research/experiments/graph-star-fixed-q-count-complexity-20261102/verify.py
