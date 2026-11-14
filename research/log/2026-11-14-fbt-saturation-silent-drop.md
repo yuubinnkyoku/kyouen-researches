@@ -34,3 +34,12 @@ The forbidden-bit-table (fbt) used by the extractor/runner is a fixed-size (1<<1
 - cost-75 sweep (19 WIN7-D10 + 56 REFUTED): all 19 certificates re-extracted with extractor_exact with fbt_drops = 0 asserted; the two heaviest candidates (118, 31) and bit77/88/32 re-run node-exact. No verdict change observed anywhere.
 
 11x11 empty root / {49,60} / S2 {59,60} / class 2 / class 4 remain UNKNOWN.
+
+## Follow-up (same day): engine-variant node-count behaviour on cost-75 candidates
+
+Re-running heavy cost-75 candidates with runner_exact (FBS 1<<20, probe 96, fbt_drops counted, all runs drops=0):
+
+- WIN7 candidates bit118 (13,410,130) and bit31 (10,896,245): verdicts AND node counts bit-exact identical to the published v15 sweep.
+- REFUTED candidates: verdicts identical (loss=false); node counts differ from v15 by up to ~5% (bit77 10,818,989 vs 10,819,142; bit88 8,076,183 vs 7,674,311; bit106 6,997,033 vs 7,072,440; bit120 6,891,590 vs 6,816,101).
+
+Interpretation: WIN7 searches terminate on the winning line and are node-exact across engine variants; REFUTED searches traverse the full d<=10 tree, where the traversal shape depends on table geometry (FBS/probe) and memo occupancy, so cross-variant node counts are not comparable even at fbt_drops=0 (consistent with the repo rule that extractor node counts are process-history dependent). The invariant that matters for soundness is the verdict, and all 6 heavy candidates agree with the published v15 sweep. The published sweep records were produced by deterministic single-engine runs and stand unchanged.
