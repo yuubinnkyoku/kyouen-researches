@@ -2,7 +2,7 @@
   "schema": "n11-class2-lane-cost74d-inflight-20261115-v1",
   "title": "n11 class2-lane cost-74d sweep in flight (claimed by a long-term lane execution)",
   "date": "2026-11-15",
-  "status": "raw-sweep-complete-receipts-folded",
+  "status": "raw-sweep-complete-receipts-folded-certificates-in-publication",
   "claimed_by": "long-term class2 lane",
   "s5": "00000000000000809102000000000000",
   "s6_child": "00000000000000809102020000000000",
@@ -121,7 +121,7 @@
     "batch_size": 8,
     "pilot_control": "d6 loss=false nodes=3402 required per batch"
   },
-  "plan": "Raw sweep and 15-receipt frontier fold are complete. Bit118 has a local cost74d certificate; bit91 is certificate-backed by D4-equivalent cost72b bit85. Do not extract bit91 separately. Rebase the 13 cost72b certificate fold on head 1179.",
+  "plan": "Raw sweep, 15-receipt frontier fold (head 1179; the parallel cost-72b fold then rebased on it, current chain head 1188) and the D4-duplicate scan are complete. All 15 WIN7 bits are now certificate-backed: bit118 published earlier; bit12/bit66/bit68 pushed byte-exact this session (3/19 of the new-file push sequence); the remaining 16 files (bit69/80/92/100 singles + 2-part bit2/28/102/109/112/116) are extracted and double-verified locally, with per-file bytes/md5/sha256/git-blob-sha recorded in class2-lane-cost74d-certificate-hash-inventory-20261115.json because an execution-environment outage blocks their push; bit91 is certificate-backed by D4-equivalent cost72b bit85 and its own local extraction passed double verification as a positive duplicate crosscheck (body intentionally not pushed, repo precedent cost61d bit22 = cost71b bit1). Next: complete the 16 remaining pushes (order 4/19..19/19 in the interim record), push manifest class2-lane-cost74d-win7-certificates-20261115.json, then set this claim to completed.",
   "naming_note": "cost-74d disambiguates from class2-lane-cost74 (sterile sweep, session 10), class4-lane cost-74/74b/74c bands",
   "demand_semantics_note": "per-class demand counts each open parent S5 once per set class bit (class2-lane-cost69g-demand-reconciliation-20261115.json); distinct open parents = 2 here",
   "interpretation_guard": "REFUTED-D10 is absence of a winner win within depth 10, not a refutation of the child; loss=true rows are WIN7-within-depth search candidates needing certificate extraction before any frontier claim; solved counts measure manifest coverage, not the game-theoretic value of any position",
@@ -162,6 +162,36 @@
       102,
       118
     ]
+  },
+  "certificates": {
+    "record_inflight": "class2-lane-cost74d-certificate-hash-inventory-20261115.json",
+    "record_final_pending": "class2-lane-cost74d-win7-certificates-20261115.json",
+    "directory": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74d-certificates/",
+    "win7_bits_certified_or_backed": [
+      2,
+      12,
+      28,
+      66,
+      68,
+      69,
+      80,
+      91,
+      92,
+      100,
+      102,
+      109,
+      112,
+      116,
+      118
+    ],
+    "files_on_main_blob_sha_verified": 4,
+    "push_sequence_done": "3/19 (bit12 1/19, bit66 2/19, bit68 3/19; bit118 was published in a prior session outside this sequence)",
+    "double_verification": "verify_win7_certificate_bigint_independent.mjs 14/14 PASS (13 new bits + bit91) and verify_bit7_win7_cert.ts 14/14 PASS with --consumed-out (consumed-unique == strategy rows every bit); union missing/extra 0/0, terminal stone range [13,17], rows sorted-unique, fbt_drops 0, all loser first moves extracted ok",
+    "d4_duplicate": "bit91 == cost72b bit85 (canonical 00000000000080811202000020000000, transform index 5, (x,y)->(x,10-y)); the other 14 roots are new D4 orbits, cross-checked against the 444 canonical WIN7 roots of the published 63+cost72b manifests (closes the D4-duplicate-check gap in the self sweep audit)",
+    "rows_band_total_including_bit91_bit118": 723630,
+    "rows_new_13_bits": 654961,
+    "incident_note": "the file_system execution environment became unavailable (Koyeb 503/DNS) from 2026-11-14T22:54Z, blocking the remaining 16 pushes; each completed push program hit the 16 MiB sandbox memory limit AFTER push_files executed (repo precedent: cost-72b incident_note) but landed byte-exact (remote git blob sha + size verified via the GitHub contents API)",
+    "date": "2026-11-15"
   },
   "frontier_fold": {
     "record": "class-frontier-cost74d-receipts-recompute-20261115.json",
