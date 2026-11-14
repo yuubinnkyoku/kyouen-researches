@@ -110,6 +110,26 @@ push前のcollision確認listが7aaa7d83より古かったため、本pushは同
 cost-70c warm6独立検証JSONを追加で含む）。詳細と教訓はK0783の
 2026-11-15 collision記録節に記載。
 
+## 次回fold予測（69f・70c残り、1154 headに対する事前測定）
+
+[predict_next_fold_marginals_20261115.py](../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/predict_next_fold_marginals_20261115.py)
+が、chain head 1154に対して未fold群のmanifest内marginalをcovers()から再導出
+（記録: [class2-lane-next-fold-marginal-prediction-20261115.json](../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-next-fold-marginal-prediction-20261115.json)）:
+
+- **cost-70c残り bits 3/42/86/103: すべてmanifest内marginal 0**（bits 3/103は
+  完全被覆済み・bits 42/86は非manifest軌道のみ）。抽出してもfrontierは
+  進まない（band認証 13/13 完成の帳簿価値のみ）— gain-0 warm候補。
+- **cost-69f 9 bits: growing-union fold順（bit順）のシミュレーションで
+  distinct manifest 9 hex、bit20はchild既被覆でmarginal 0（正の重複）**。
+  予測: 証明書全件公開・独立検証後にfoldされれば
+  **1154 → 1,163/6,684/527,280/4,954/391,003**。
+  第三class-2ターゲット S5 `00000000000000809102000000000000` は
+  **8軌道・588 → 7軌道・519**（sweep済みchild `…0008` がremainingから離脱し、
+  次の最安未sweep子は `00000000000000809102000000002000` cost 69・
+  c1=0,c2=2,c4=2）。audit-blocked（10/698）とbest class4（18/1,460）は不変。
+- 予測は69f証明書の公開・独立検証を条件とする帳簿算術であり、勝敗の主張を
+  含まない。
+
 ## 勝敗に関する明記
 
 **標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class 2、class 4

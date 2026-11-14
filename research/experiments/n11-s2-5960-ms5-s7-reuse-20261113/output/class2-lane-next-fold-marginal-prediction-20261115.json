@@ -1,0 +1,292 @@
+{
+ "schema": "class2-lane-next-fold-marginal-prediction-20261115-v2",
+ "date": "2026-11-15",
+ "baseline": "class-frontier-unified-merge-recompute-20261115 (chain head 1154 / 6693 / 527949 / 4963 / 391672)",
+ "method": "marginal-in-manifest re-derivation from the chain covers() against the unified 1154 solved set; root identity root == child | 1<<bit asserted; bookkeeping over published WIN7-D10 verdicts only - certificates for the 69f group are pending with that lane and must pass independent verification before the fold; the prediction folds the 69f receipts in bit order with per-record marginals re-derived from the growing union (the fold convention), so the predicted increment is the DISTINCT union of manifest marginals, not the per-record sum against the static baseline; root_in_published_receipts flags cross-child duplicates (positive cross-checks, never re-folded)",
+ "cost70c_uncertified_bits": [
+  {
+   "band": "class2-lane-cost70c",
+   "bit": 3,
+   "child_hex": "00000000000000803242000000000000",
+   "root_hex": "00000000000000803242000000000008",
+   "covers": 7,
+   "marginal": 0,
+   "marginal_in_manifest": 0,
+   "marginal_manifest_hexes": [],
+   "root_in_published_receipts": false
+  },
+  {
+   "band": "class2-lane-cost70c",
+   "bit": 42,
+   "child_hex": "00000000000000803242000000000000",
+   "root_hex": "00000000000000803242040000000000",
+   "covers": 7,
+   "marginal": 4,
+   "marginal_in_manifest": 0,
+   "marginal_manifest_hexes": [],
+   "root_in_published_receipts": false
+  },
+  {
+   "band": "class2-lane-cost70c",
+   "bit": 86,
+   "child_hex": "00000000000000803242000000000000",
+   "root_hex": "00000000004000803242000000000000",
+   "covers": 7,
+   "marginal": 4,
+   "marginal_in_manifest": 0,
+   "marginal_manifest_hexes": [],
+   "root_in_published_receipts": false
+  },
+  {
+   "band": "class2-lane-cost70c",
+   "bit": 103,
+   "child_hex": "00000000000000803242000000000000",
+   "root_hex": "00000080000000803242000000000000",
+   "covers": 7,
+   "marginal": 0,
+   "marginal_in_manifest": 0,
+   "marginal_manifest_hexes": [],
+   "root_in_published_receipts": false
+  }
+ ],
+ "cost70c_finding": "all four remaining WIN7-D10 bits (3/42/86/103) have marginal 0 against the 1154 head (bits 3/103 fully pre-covered, bits 42/86 cover only non-manifest orbits): extracting them completes the cost-70c band certification (13/13) but advances NO manifest orbit - gain-0 warm candidates under the current head",
+ "cost69f_swept_bits": [
+  {
+   "band": "class2-lane-cost69f",
+   "bit": 2,
+   "child_hex": "00000000000000809102000000000008",
+   "root_hex": "0000000000000080910200000000000c",
+   "covers": 7,
+   "marginal": 6,
+   "marginal_in_manifest": 2,
+   "marginal_manifest_hexes": [
+    "00000000000000801202000000000180",
+    "00000000000000809102000000000008"
+   ],
+   "root_in_published_receipts": false
+  },
+  {
+   "band": "class2-lane-cost69f",
+   "bit": 20,
+   "child_hex": "00000000000000809102000000000008",
+   "root_hex": "00000000000000809102000000100008",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000809102000000000008"
+   ],
+   "root_in_published_receipts": false
+  },
+  {
+   "band": "class2-lane-cost69f",
+   "bit": 44,
+   "child_hex": "00000000000000809102000000000008",
+   "root_hex": "00000000000000809102100000000008",
+   "covers": 7,
+   "marginal": 6,
+   "marginal_in_manifest": 2,
+   "marginal_manifest_hexes": [
+    "00000000000000801242000000000080",
+    "00000000000000809102000000000008"
+   ],
+   "root_in_published_receipts": false
+  },
+  {
+   "band": "class2-lane-cost69f",
+   "bit": 68,
+   "child_hex": "00000000000000809102000000000008",
+   "root_hex": "00000000000000909102000000000008",
+   "covers": 7,
+   "marginal": 6,
+   "marginal_in_manifest": 2,
+   "marginal_manifest_hexes": [
+    "00000000000000809102000000000008",
+    "00000000000000909002000000000008"
+   ],
+   "root_in_published_receipts": false
+  },
+  {
+   "band": "class2-lane-cost69f",
+   "bit": 69,
+   "child_hex": "00000000000000809102000000000008",
+   "root_hex": "00000000000000a09102000000000008",
+   "covers": 7,
+   "marginal": 6,
+   "marginal_in_manifest": 2,
+   "marginal_manifest_hexes": [
+    "00000000000000809102000000000008",
+    "00000000000000a09002000000000008"
+   ],
+   "root_in_published_receipts": false
+  },
+  {
+   "band": "class2-lane-cost69f",
+   "bit": 94,
+   "child_hex": "00000000000000809102000000000008",
+   "root_hex": "00000000400000809102000000000008",
+   "covers": 7,
+   "marginal": 6,
+   "marginal_in_manifest": 2,
+   "marginal_manifest_hexes": [
+    "00000000000000809102000000000008",
+    "00000000000020003810000008000000"
+   ],
+   "root_in_published_receipts": false
+  },
+  {
+   "band": "class2-lane-cost69f",
+   "bit": 109,
+   "child_hex": "00000000000000809102000000000008",
+   "root_hex": "00002000000000809102000000000008",
+   "covers": 7,
+   "marginal": 6,
+   "marginal_in_manifest": 2,
+   "marginal_manifest_hexes": [
+    "00000000000000809102000000000008",
+    "00000000000020003800000008000200"
+   ],
+   "root_in_published_receipts": false
+  },
+  {
+   "band": "class2-lane-cost69f",
+   "bit": 118,
+   "child_hex": "00000000000000809102000000000008",
+   "root_hex": "00400000000000809102000000000008",
+   "covers": 7,
+   "marginal": 6,
+   "marginal_in_manifest": 2,
+   "marginal_manifest_hexes": [
+    "00000000000000809102000000000008",
+    "00000000000020003800000108000000"
+   ],
+   "root_in_published_receipts": false
+  },
+  {
+   "band": "class2-lane-cost69f",
+   "bit": 119,
+   "child_hex": "00000000000000809102000000000008",
+   "root_hex": "00800000000000809102000000000008",
+   "covers": 7,
+   "marginal": 6,
+   "marginal_in_manifest": 2,
+   "marginal_manifest_hexes": [
+    "00000000000000809102000000000008",
+    "00000000000020003800000008200000"
+   ],
+   "root_in_published_receipts": false
+  }
+ ],
+ "cost69f_fold_simulation": {
+  "per_record_growing_union_marginals": [
+   {
+    "bit": 2,
+    "marginal_in_manifest_at_fold": 2,
+    "marginal_manifest_hexes": [
+     "00000000000000801202000000000180",
+     "00000000000000809102000000000008"
+    ]
+   },
+   {
+    "bit": 20,
+    "marginal_in_manifest_at_fold": 0,
+    "marginal_manifest_hexes": []
+   },
+   {
+    "bit": 44,
+    "marginal_in_manifest_at_fold": 1,
+    "marginal_manifest_hexes": [
+     "00000000000000801242000000000080"
+    ]
+   },
+   {
+    "bit": 68,
+    "marginal_in_manifest_at_fold": 1,
+    "marginal_manifest_hexes": [
+     "00000000000000909002000000000008"
+    ]
+   },
+   {
+    "bit": 69,
+    "marginal_in_manifest_at_fold": 1,
+    "marginal_manifest_hexes": [
+     "00000000000000a09002000000000008"
+    ]
+   },
+   {
+    "bit": 94,
+    "marginal_in_manifest_at_fold": 1,
+    "marginal_manifest_hexes": [
+     "00000000000020003810000008000000"
+    ]
+   },
+   {
+    "bit": 109,
+    "marginal_in_manifest_at_fold": 1,
+    "marginal_manifest_hexes": [
+     "00000000000020003800000008000200"
+    ]
+   },
+   {
+    "bit": 118,
+    "marginal_in_manifest_at_fold": 1,
+    "marginal_manifest_hexes": [
+     "00000000000020003800000108000000"
+    ]
+   },
+   {
+    "bit": 119,
+    "marginal_in_manifest_at_fold": 1,
+    "marginal_manifest_hexes": [
+     "00000000000020003800000008200000"
+    ]
+   }
+  ],
+  "distinct_manifest_hexes": [
+   "00000000000000801202000000000180",
+   "00000000000000801242000000000080",
+   "00000000000000809102000000000008",
+   "00000000000000909002000000000008",
+   "00000000000000a09002000000000008",
+   "00000000000020003800000008000200",
+   "00000000000020003800000008200000",
+   "00000000000020003800000108000000",
+   "00000000000020003810000008000000"
+  ],
+  "predicted_solved_increment": 9,
+  "predicted_next_head_if_published_and_verified": {
+   "solved_s6_in_manifest": 1163,
+   "unique_remaining_s6": 6684,
+   "sum_remaining_cost": 527280,
+   "s6_needed_by_open_classes": 4954,
+   "cost_needed_by_open_classes": 391003
+  },
+  "third_class2_target_effect": {
+   "before": {
+    "s5_hex": "00000000000000809102000000000000",
+    "remaining_s6_orbits": 8,
+    "remaining_s7_edge_cost": 588
+   },
+   "after_predicted": {
+    "s5_hex": "00000000000000809102000000000000",
+    "classes": 2,
+    "remaining_s6_orbits": 7,
+    "remaining_s7_edge_cost": 519
+   },
+   "note": "the swept child 00000000000000809102000000000008 leaves remaining membership; the cheapest remaining unswept child of the third target becomes 00000000000000809102000000002000 (cost 69, c1=0,c2=2,c4=2)"
+  },
+  "audit_blocked_class2_predicted": {
+   "s5_hex": "00000000000000809082000000000000",
+   "classes": 3,
+   "remaining_s6_orbits": 10,
+   "remaining_s7_edge_cost": 698
+  },
+  "best_class4_predicted": {
+   "s5_hex": "00000000020000003800000080000000",
+   "classes": 4,
+   "remaining_s6_orbits": 18,
+   "remaining_s7_edge_cost": 1460
+  }
+ },
+ "interpretation_guard": "solved counts measure manifest coverage, not the game-theoretic value of the 11x11 empty board; WIN7-D10 proves only a win within depth 10 from the 7-stone root; the prediction is conditional on publication and independent verification of the pending 69f certificates; 11x11 empty root / {49,60} / S2 {59,60} / class 2 / class 4 remain UNKNOWN"
+}
