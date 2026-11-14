@@ -915,3 +915,30 @@ c rephased:                                36            76771    interval
 c restarts:                             85432               32    interval
 c strengthened:                          2252                0 %  checks
 c substituted:                            356                4 %  variables
+c subsumed:                              1308                0 %  checks
+c switched:                                50            55275    interval
+c vivified:                            108056               39 %  checks
+c walks:                                   12           230314    interval
+c
+c ---- [ glue usage ] --------------------------------------------------------
+c
+c focused glue 1   used 5492500 clauses 53.01% accumulated 53.01% tier1
+c focused glue 2   used 2158439 clauses 20.83% accumulated 73.84%
+c focused glue 3-5 used 1453474 clauses 14.03% accumulated 87.87%
+c focused glue 6   used  212831 clauses  2.05% accumulated 89.93%
+c focused glue 7   used  183455 clauses  1.77% accumulated 91.70% tier2
+c
+c stable glue 2   used 2883753 clauses 18.62% accumulated 66.09% tier1
+c stable glue 3   used 1079806 clauses  6.97% accumulated 73.06%
+c stable glue 4-9 used 2274945 clauses 14.69% accumulated 87.75%
+c stable glue 10  used  278198 clauses  1.80% accumulated 89.55%
+c stable glue 11  used  266148 clauses  1.72% accumulated 91.26% tier2
+c
+c ---- [ resources ] ---------------------------------------------------------
+c
+c maximum-resident-set-size:         21925888 bytes         21 MB
+c process-time:                          2m 9s             128.90 seconds
+c
+c ---- [ shutting down ] -----------------------------------------------------
+c
+c exit 20
