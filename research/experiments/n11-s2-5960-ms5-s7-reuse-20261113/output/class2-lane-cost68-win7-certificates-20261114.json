@@ -284,9 +284,10 @@
    "verdict": "WIN7",
    "certificate": {
     "rows": 64844,
-    "bytes": 2342926,
-    "md5": "2437efae408959af59800a0cac0c93d1",
-    "certificate_path": "output/class2-lane-cost68-certificates/n11_s7_00000000008000801a02000080000000.cert"
+    "bytes": 2342925,
+    "md5": "e93199b7961f8445b1faa7c07222d796",
+    "certificate_path": "output/class2-lane-cost68-certificates/n11_s7_00000000008000801a02000080000000.cert",
+    "transport_note": "stored without the trailing newline (transport artifact); the stored bytes were re-verified in full after the push: 64844 rows, 61/61 sub-roots PASS, union 0/0, root-check stones=7 loserMobility=61; md5 above is of the stored bytes"
    },
    "extraction_nodes": 24299015,
    "verification": {
@@ -370,7 +371,8 @@
   "all_root_check": "PASS",
   "all_subroots": "PASS",
   "union": "0/0 all",
-  "terminal_range": "[13,17] within"
+  "terminal_range": "[13,17] within",
+  "bit87_note": "certificate bit87 stored without trailing newline; re-verified stored bytes independently (all checks PASS)"
  },
  "interpretation_guard": "each certificate proves a win within depth 10 from its individual 7-stone root only; no claim about 11x11 empty root / {49,60} / S2 {59,60} / class 2 / class 4 which remain UNKNOWN"
 }
