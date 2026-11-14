@@ -39,7 +39,7 @@ artifacts:
   note: "7 records m=15..21 all SAT dual-verified 0 conflicts: 16..18 stones, deficiency 6..3, [3,3,3,3,3,2,1]-type at m=20,21; M_{7,4} >= 22 (band extended constructively to m=35 in seven-row-q4-extension-band-20261114)"
 - path: research/experiments/seven-row-q7-witness-search-20261114/output/ts-verify-cross-family.json
   role: data
-  note: "third-system (pure TS/BigInt) cross-family record; q4/q5/q6 entries: (7,6) m=26 (33 stones rows 5/5/5/5/5/3/5, 5073 circles), (7,5) m=31 (27 stones rows 3/4/4/4/4/4/4, 2742 circles), (7,4) m=21 (18 stones rows 3/3/3,3,3,2,1, 799 circles) all PASS safe+maximal+row-deficient — triple-verified"
+  note: "third-system (pure TS/BigInt) cross-family record; q4/q5/q6 entries: (7,6) m=26 (33 stones rows 5/5/5/5/5/3/5, 5073 circles), (7,5) m=31 (27 stones rows 3/4/4/4/4/4/4, 2742 circles), (7,4) m=21 (18 stones rows 3/3/3/3/3/2/1, 799 circles) all PASS safe+maximal+row-deficient — triple-verified"
 - path: research/experiments/seven-row-q4-extension-band-20261114/report.md
   role: proof
   note: "blocking-coverage extension lemma, constructive extension of the q=4 band to m=22..35 without SAT (free empty-column extension of the m=21 witness to 22; greedy adds + deterministic hill-climb to 23..35), exact per-width verification, honest scope (heuristic search; widths >= 36 unswept; M in [36,1929])"
