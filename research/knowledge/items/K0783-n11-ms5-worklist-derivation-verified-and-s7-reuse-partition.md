@@ -588,6 +588,15 @@ evidence: 公開manifestの辞書順md5は0e95a438dbcb486368393de9c73fc21e。94�
 - path: research/log/2026-11-15-n11-class2-lane-cost74d-certificate-publication-completion.md
   role: log
   note: cost74d証明書の再抽出・二重独立検査・全part公開・remote hash照合を完了した記録
+- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost74d_win_loss_conflicts_20261115.mjs
+  role: verifier
+  note: cost74dの15 WIN7-D10 rootを既存WIN7/LOSS7 manifest・中央49 LOSS7 parent-lift・category-1候補とD4照合。入力Git blob SHAを固定
+- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/cost74d-win-loss-conflict-audit-20261115.json
+  role: data
+  note: 公開済み範囲のD4衝突監査。既存LOSS7との交差0、cost72b bit85との意図した再利用1件
+- path: research/log/2026-11-15-n11-class2-cost74d-win-loss-conflict-audit.md
+  role: log
+  note: cost74d WIN7/LOSS7の範囲限定D4衝突監査と証拠境界
 
 ---
 
@@ -1105,3 +1114,16 @@ mainではcost74e child `00000000000000809142000000000000`（cost 74）がin-fli
 運用記録: push_files実行**後**に16 MiB sandbox memory limitでプログラム中断が6回（bit69/80/92/100/102 part1/part2）あったが、いずれもremote blob sha照合で着地を確認してから継続し、欠損・truncationはなし。four-six-row lane（並走）とのfast-forward競合2回は同一内容retryで解決、read_file pagingとpushを同一ブロックにしない運用を確立した。
 
 詳細: [出版完了log](../../log/2026-11-15-n11-class2-lane-cost74d-certificate-publication-completion.md)、[最終マニフェスト](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74d-win7-certificates-20261115.json)、[interim目録](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74d-certificate-hash-inventory-20261115.json)、[claim](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74d-inflight-20261115.json)。証明書14本体は同output/`class2-lane-cost74d-certificates/`（bit91は`class2-lane-cost72b-certificates/bit85-root-00000000002000809102000002000000.cert`）。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class2・class4は引き続き **UNKNOWN**。
+
+
+## 2026-11-15: cost74d WIN7/LOSS7 のD4衝突監査
+
+cost74dの15 WIN7-D10 rootを、既存17 verified manifest（WIN7 77・LOSS7 200）、中央49 LOSS7 parent-lift 274軌道、category-1候補396軌道とD4照合した。既存WIN7・LOSS7・parent-lift・category-1候補との交差は全て0。category-1の396行は独立LOSS7証明書とは数えない。
+
+cost72b WIN7証明書との交差は1件のみで、cost74d bit91 = cost72b bit85（正準形 00000000000080811202000020000000）。これは矛盾ではなく、既存証明書の意図した再利用。cost72bとの和集合に対する新規D4軌道は14。公開済み範囲のWIN/LOSS衝突は0件。
+
+再現器は入力21ファイルのGit blob SHAを固定する。監査範囲は公開manifest・parent-lift・候補表であり、全raw cache・非公開worker cacheを走査したものではない。S6 frontierは変更していない。
+
+詳細: [監査ログ](../../log/2026-11-15-n11-class2-cost74d-win-loss-conflict-audit.md)、[監査JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/cost74d-win-loss-conflict-audit-20261115.json)、[再現スクリプト](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost74d_win_loss_conflicts_20261115.mjs)。
+
+標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class2・class4は引き続き **UNKNOWN**。
