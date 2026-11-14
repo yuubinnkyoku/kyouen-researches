@@ -18,10 +18,7 @@
    "subroots_pass": 49,
    "union_missing": 0,
    "union_extra": 0,
-   "terminal_stone_range": [
-    13,
-    17
-   ],
+   "terminal_stone_range": [13, 17],
    "loser_mobility": 49,
    "file": "n11_s7_00000000000000809082000040800000.cert",
    "md5": "8abe922a2f07eb3dd464227985028811",
@@ -40,16 +37,13 @@
    "subroots_pass": 52,
    "union_missing": 0,
    "union_extra": 0,
-   "terminal_stone_range": [
-    13,
-    17
-   ],
+   "terminal_stone_range": [13, 17],
    "loser_mobility": 52,
    "file": "n11_s7_00400000000000809082000040000000.cert",
    "md5": "9400ac2d9ac6750fa86ea2eb5f5d8c74",
    "sha256": "435f05da3dae14247161c4925d84149ac05966a549c81e9df4fc6f357cd9bc0e"
   }
  ],
- "method": "blind extraction via cert_driver68.ts (repo-verbatim class4_child1_cert_extractor_exact.ts, FBS=1<<20, probe96, empty kill table); verification via repo-verbatim verify_bit7_win7_cert.ts: root-check (7 stones, no 4 cocircular, loser mobility = legal_candidates.py count), all sub-roots independently verified with exact Bareiss determinants, consumed-union vs certificate row set both directions empty",
- "interpretation_guard": "WIN7 certificates prove a first-player win within depth 10 from the 7-stone root only; 11x11 empty board, two-stone root {49,60}, S2 {59,60}, class 2 and class 4 remain UNKNOWN"
+ "method": "blind extraction with class4_child1_cert_extractor_exact.ts (FBS=1<<20, probe96, empty kill table via cert_driver67.ts import), rows sorted -u before write, fbt_drops=0 on both; independent verification with verify_bit7_win7_cert.ts (Bareiss 4x4, engine-free): root-check loser mobility equals independent legal_candidates.py enumeration (49/52), all sub-roots PASS, union 0/0 both directions",
+ "note": "both roots are new (absent from all 149 roots in published WIN7 records on main; no cross-child reuse)"
 }
