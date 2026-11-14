@@ -1,0 +1,187 @@
+{
+  "schema": "n11-cost74d-published-certificate-replay-20261115-v1",
+  "date": "2026-11-15",
+  "source_main_head": "5a8977f13090f2beddd05353072db652153371bf",
+  "verifier": "verify_win7_certificate_bigint_independent.mjs; BigInt 3x3 cofactor expansion; no solver, verdict cache, or repository verifier import",
+  "certificates_verified": 5,
+  "certificates": [
+    {
+      "lane": "cost72b",
+      "bit": 85,
+      "root_hex": "00000000002000809102000002000000",
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72b-certificates/bit85-root-00000000002000809102000002000000.cert",
+      "bytes": 1456837,
+      "git_blob_sha": "c99ef87964f4770e7dab365ea42ad070b8c6495d",
+      "rows": 40352,
+      "root_mobility": 55,
+      "visited_states_across_subroots": 87936,
+      "winner_states": 56808,
+      "loser_states": 17304,
+      "loser_reply_edges": 80254,
+      "terminal_count": 13824,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "rows_sorted_unique": true,
+      "union_missing": 0,
+      "union_extra": 0,
+      "root_safe": true,
+      "marginal_manifest_parents": [
+        "00000000000000809102000002000000",
+        "00000000000000809102020000000000",
+        "00000000000080003800000028000000"
+      ]
+    },
+    {
+      "lane": "cost74d",
+      "bit": 12,
+      "root_hex": "00000000000000809102020000001000",
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74d-certificates/bit12-root-00000000000000809102020000001000.cert",
+      "bytes": 1683615,
+      "git_blob_sha": "a5df9d1184b9a70a33debae0d9dde79980935f77",
+      "rows": 46622,
+      "root_mobility": 58,
+      "visited_states_across_subroots": 99790,
+      "winner_states": 64246,
+      "loser_states": 19661,
+      "loser_reply_edges": 89820,
+      "terminal_count": 15883,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "rows_sorted_unique": true,
+      "union_missing": 0,
+      "union_extra": 0,
+      "root_safe": true,
+      "marginal_manifest_parents": [
+        "00000000000000801202000800100000",
+        "00000000000000809102020000000000"
+      ]
+    },
+    {
+      "lane": "cost74d",
+      "bit": 66,
+      "root_hex": "00000000000000849102020000000000",
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74d-certificates/bit66-root-00000000000000849102020000000000.cert",
+      "bytes": 1561079,
+      "git_blob_sha": "50ef217aa1ffc2103942b3867ceea497d8b8a1bb",
+      "rows": 43271,
+      "root_mobility": 59,
+      "visited_states_across_subroots": 95826,
+      "winner_states": 61994,
+      "loser_states": 19454,
+      "loser_reply_edges": 88195,
+      "terminal_count": 14378,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "rows_sorted_unique": true,
+      "union_missing": 0,
+      "union_extra": 0,
+      "root_safe": true,
+      "marginal_manifest_parents": [
+        "00000000000000809102020000000000",
+        "00000000000000849002020000000000"
+      ]
+    },
+    {
+      "lane": "cost74d",
+      "bit": 68,
+      "root_hex": "00000000000000909102020000000000",
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74d-certificates/bit68-root-00000000000000909102020000000000.cert",
+      "bytes": 1539991,
+      "git_blob_sha": "8c7c29082adb75e986a1fd1fed90da0c184a49bf",
+      "rows": 42571,
+      "root_mobility": 58,
+      "visited_states_across_subroots": 94976,
+      "winner_states": 61256,
+      "loser_states": 18431,
+      "loser_reply_edges": 84977,
+      "terminal_count": 15289,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "rows_sorted_unique": true,
+      "union_missing": 0,
+      "union_extra": 0,
+      "root_safe": true,
+      "marginal_manifest_parents": [
+        "00000000000000809102020000000000",
+        "00000000000000909002020000000000"
+      ]
+    },
+    {
+      "lane": "cost74d",
+      "bit": 118,
+      "root_hex": "00400000000000809102020000000000",
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74d-certificates/bit118-root-00400000000000809102020000000000.cert",
+      "bytes": 1034744,
+      "git_blob_sha": "b96de16ac906721d9f7cdf82fed45bb032d57c1a",
+      "rows": 28719,
+      "root_mobility": 50,
+      "visited_states_across_subroots": 62292,
+      "winner_states": 40119,
+      "loser_states": 12154,
+      "loser_reply_edges": 55636,
+      "terminal_count": 10019,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "rows_sorted_unique": true,
+      "union_missing": 0,
+      "union_extra": 0,
+      "root_safe": true,
+      "marginal_manifest_parents": [
+        "00000000000000809102020000000000"
+      ]
+    }
+  ],
+  "totals": {
+    "strategy_rows_sum": 201535,
+    "visited_states_sum_across_certificates_not_deduplicated": 440820,
+    "terminal_count_sum_across_certificates_not_deduplicated": 69393
+  },
+  "d4_cross_cover": {
+    "cost72b_bit85_root": "00000000002000809102000002000000",
+    "cost74d_bit91_root": "00000000080000809102020000000000",
+    "transform_index": 5,
+    "coordinate_map": "(x,y)->(x,10-y)",
+    "canonical_root_hex": "00000000000080811202000020000000",
+    "same_parent_orbits": true,
+    "bit91_body_published": false
+  },
+  "frontier": {
+    "baseline_s6_manifest_orbits": 1163,
+    "cost74d_receipt_frontier_s6": 1179,
+    "cost74d_new_manifest_orbits": 16,
+    "certificate_backed_new_s6_orbits": 6,
+    "cost74d_public_certificates_additional_orbits_beyond_bit85": 3,
+    "certificate_backed_lower_bound": 1169,
+    "certificate_backed_new_orbit_hexes": [
+      "00000000000000801202000800100000",
+      "00000000000000809102000002000000",
+      "00000000000000809102020000000000",
+      "00000000000000849002020000000000",
+      "00000000000000909002020000000000",
+      "00000000000080003800000028000000"
+    ],
+    "cost74d_additional_orbit_hexes": [
+      "00000000000000801202000800100000",
+      "00000000000000849002020000000000",
+      "00000000000000909002020000000000"
+    ]
+  },
+  "unknown_status": {
+    "empty_11x11": "UNKNOWN",
+    "two_stone_roots_49_60_and_59_60": "UNKNOWN",
+    "s2_59_60": "UNKNOWN",
+    "class2": "UNKNOWN",
+    "class4": "UNKNOWN"
+  },
+  "interpretation_guard": "The receipt frontier 1179 is not a count of independently certificate-backed S6 orbits. This audit establishes a certificate-backed lower bound of 1169 from the prior 1163 baseline. It does not solve the empty 11x11 board or any two-stone root."
+}
