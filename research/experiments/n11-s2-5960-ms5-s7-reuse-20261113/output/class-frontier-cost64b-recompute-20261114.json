@@ -1,0 +1,160 @@
+{
+ "schema": "n11-class-frontier-cost64b-recompute-20261114-v1",
+ "date": "2026-11-14",
+ "baseline_main": "class-frontier-cost63e-recompute-20261114 (solved 970 / unique remaining 6877 / sum 541680 / open 5147/405403)",
+ "method": "direct extension of recompute_frontier_cost63e_20261114.py: every staged control reproduces the published after-cost-63e frontier exactly (asserted: 970/6877/541680/5147/405403), the completed cost-64b sweep (20 WIN7-D10 - the second most WIN7-rich class-2 child after cost-60b, 44 REFUTED, 0 capped, 50,655,645 v16 nodes; v15 cross-engine anchors on WIN7 bits 73/43/92 plus REFUTED bit 77, v16 determinism re-run node-exact on bits 43/77/92) is asserted and its three fully verified receipts (bits 73/7/99; rows 28,046/21,382/26,812; sub-roots 49/48/48 PASS; union 0/0 each) are added; per the cost-61e correction lesson the child remaining-membership and demand (c1=0,c2=2,c4=0) are re-derived from the frontier and asserted; the 17 remaining WIN7-D10 bits stay warm certificate-rebuild candidates and change no frontier number",
+ "controls": {
+  "after_cost63e": {
+   "solved_in_manifest": 970,
+   "unique_remaining": 6877,
+   "sum_cost": 541680,
+   "open_s6": 5147,
+   "open_cost": 405403,
+   "reproduced": true
+  },
+  "cost64b_sweep": {
+   "win7_d10": 20,
+   "capped": 0,
+   "refuted_d10": 44,
+   "roots_asserted": true,
+   "engine": "v16 (agreement-gated in cost-56a)"
+  },
+  "cost64b_claim": {
+   "status": "completed",
+   "reproduced": true
+  },
+  "cost64b_demand": {
+   "c1": 0,
+   "c2": 2,
+   "c4": 0,
+   "remaining_membership_reproduced": true,
+   "reproduced": true
+  },
+  "cost64b_receipts": {
+   "rows": {
+    "73": 28046,
+    "7": 21382,
+    "99": 26812
+   },
+   "sub_roots_pass": {
+    "73": 49,
+    "7": 48,
+    "99": 48
+   },
+   "union_missing": 0,
+   "union_extra": 0,
+   "reproduced": true
+  }
+ },
+ "cost64b_addition": {
+  "73": {
+   "root_hex": "00000000000002803202000000100000",
+   "covers": 7,
+   "marginal": 6,
+   "marginal_in_manifest": 2,
+   "marginal_manifest_hexes": [
+    "00000000000000803202000000100000",
+    "00000000000000a09002000000001000"
+   ]
+  },
+  "7": {
+   "root_hex": "00000000000000803202000000100080",
+   "covers": 7,
+   "marginal": 6,
+   "marginal_in_manifest": 2,
+   "marginal_manifest_hexes": [
+    "00000000000000801202000000100080",
+    "00000000000000803202000000100000"
+   ]
+  },
+  "99": {
+   "root_hex": "00000008000000803202000000100000",
+   "covers": 7,
+   "marginal": 6,
+   "marginal_in_manifest": 2,
+   "marginal_manifest_hexes": [
+    "00000000000000803202000000100000",
+    "00000008000000801202000000100000"
+   ]
+  }
+ },
+ "frontier_after_cost64b": {
+  "solved_s6_in_manifest": 974,
+  "remaining_s5_orbits": 176,
+  "unique_remaining_s6": 6873,
+  "sum_remaining_cost": 541401,
+  "s6_needed_by_open_classes": 5143,
+  "cost_needed_by_open_classes": 405124,
+  "demand_histogram_open_only": {
+   "c2=0,c4=1": 527,
+   "c2=0,c4=2": 3024,
+   "c2=0,c4=3": 12,
+   "c2=1,c4=0": 253,
+   "c2=1,c4=1": 60,
+   "c2=1,c4=2": 9,
+   "c2=2,c4=0": 1193,
+   "c2=2,c4=1": 6,
+   "c2=2,c4=2": 59
+  },
+  "best_class2": {
+   "s5_hex": "00000000000000809082000000000000",
+   "classes": 3,
+   "remaining_s6_orbits": 10,
+   "remaining_s7_edge_cost": 698
+  },
+  "best_class2_note": "receipt-unclosable per class-frontier-uncoverability-audit-20261114.json (all 10 remaining children sterile-swept); shown for reference only",
+  "best_coverable_class2": {
+   "s5_hex": "00000000000000803202000000000000",
+   "classes": 2,
+   "remaining_s6_orbits": 20,
+   "remaining_s7_edge_cost": 1418
+  },
+  "next_class2": [
+   {
+    "s5_hex": "00000000000000803202000000000000",
+    "classes": 2,
+    "remaining_s6_orbits": 20,
+    "remaining_s7_edge_cost": 1418
+   },
+   {
+    "s5_hex": "00000000000000809102000000000000",
+    "classes": 2,
+    "remaining_s6_orbits": 35,
+    "remaining_s7_edge_cost": 2525
+   },
+   {
+    "s5_hex": "0000000000000080120a000000000000",
+    "classes": 2,
+    "remaining_s6_orbits": 54,
+    "remaining_s7_edge_cost": 3930
+   }
+  ],
+  "best_class4": {
+   "s5_hex": "00000000020000003800000080000000",
+   "classes": 4,
+   "remaining_s6_orbits": 18,
+   "remaining_s7_edge_cost": 1460
+  },
+  "next_class4": [
+   {
+    "s5_hex": "00000000000000003800002000800000",
+    "classes": 4,
+    "remaining_s6_orbits": 60,
+    "remaining_s7_edge_cost": 4216
+   },
+   {
+    "s5_hex": "00000000000000801802000000080000",
+    "classes": 4,
+    "remaining_s6_orbits": 64,
+    "remaining_s7_edge_cost": 4390
+   },
+   {
+    "s5_hex": "00000000020000003800000000080000",
+    "classes": 4,
+    "remaining_s6_orbits": 64,
+    "remaining_s7_edge_cost": 4570
+   }
+  ]
+ },
+ "interpretation_guard": "bookkeeping over published receipts; REFUTED-D10 sweeps prove only absence of WIN7-D10; WIN7 certificates prove a win within depth 10 from the 7-stone root only; 11x11 empty root / {49,60} / S2 {59,60} / class 2 / class 4 remain UNKNOWN"
+}
