@@ -1,0 +1,239 @@
+{
+ "session": "class2-lane cost-75b WIN7 certificates (long-term lane execution, 2026-11-15 JST)",
+ "child_hex": "00000000000000803202000000000008",
+ "certificates": [
+  {
+   "bit": 7,
+   "root_hex": "00000000000000803202000000000088",
+   "verdict": "WIN7",
+   "rows": 47257,
+   "extraction_nodes": 8706242,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table), FBS=1<<20: fbt_drops=0, all per-move extractions ok and uncapped",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 57,
+    "independent_enumeration_legal": 57,
+    "match": true
+   },
+   "sub_roots_verified": 57,
+   "sub_roots_pass": 57,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 102194,
+   "loser_reply_edges": 92350,
+   "md5": "2e20e75c305962b4bc46045185778d14",
+   "sha256": "147deee766da5cedee0b7d031d9c45d8c4e444964a019876c2a86558d553c8e8",
+   "file": "class2-lane-cost75b-certificates/bit7-root-00000000000000803202000000000088.cert.part1of2 + .part2of2 (2-part split; rejoin with cat)",
+   "v15_crosscheck_verdict": "loss=true at 5462984 nodes (v15 anchor)",
+   "v16_search_nodes": 2971923,
+   "root_absence_check": "GitHub code search over yuubinnkyoku/kyouen-researches for the root hex: 0 hits",
+   "bigint_independent_audit": "WIN7 certificate independently verified by BigInt 3x3 cofactor expansion (no solver/cache/repo-verifier import): root stones=7, rows sorted unique, all sub-roots passed, union 0/0; re-run PASS on the remote-rejoined bytes after landing",
+   "push_note": "2-part split push; remote-rejoined bytes md5/sha256 verified, BigInt re-verification PASS on the remote bytes"
+  },
+  {
+   "bit": 51,
+   "root_hex": "0000000000000080320a000000000008",
+   "verdict": "WIN7",
+   "rows": 32508,
+   "extraction_nodes": 4703026,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table), FBS=1<<20: fbt_drops=0, all per-move extractions ok and uncapped",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 51,
+    "independent_enumeration_legal": 51,
+    "match": true
+   },
+   "sub_roots_verified": 51,
+   "sub_roots_pass": 51,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 69579,
+   "loser_reply_edges": 62703,
+   "md5": "6b78713f6af3b72817fca15194623873",
+   "sha256": "6555809ffc99afea71ad5a03e1704dee64d869d939fc07907eba1146e2a648e5",
+   "file": "class2-lane-cost75b-certificates/bit51-root-0000000000000080320a000000000008.cert (single file, 1,175,778 bytes)",
+   "v15_crosscheck_verdict": "loss=true at 3050228 nodes (v15 anchor)",
+   "v16_search_nodes": 969327,
+   "root_absence_check": "GitHub code search over yuubinnkyoku/kyouen-researches for the root hex: 0 hits",
+   "bigint_independent_audit": "WIN7 certificate independently verified by BigInt 3x3 cofactor expansion (no solver/cache/repo-verifier import): root stones=7, rows sorted unique, all sub-roots passed, union 0/0; re-run PASS on the remote-rejoined bytes after landing",
+   "push_note": "single-file push (commit 6ced1714); remote md5 verified byte-exact after landing"
+  },
+  {
+   "bit": 54,
+   "root_hex": "00000000000000803242000000000008",
+   "verdict": "WIN7",
+   "rows": 50955,
+   "extraction_nodes": 11537642,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table), FBS=1<<20: fbt_drops=0, all per-move extractions ok and uncapped",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 63,
+    "independent_enumeration_legal": 63,
+    "match": true
+   },
+   "sub_roots_verified": 63,
+   "sub_roots_pass": 63,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 116180,
+   "loser_reply_edges": 107551,
+   "md5": "ae02f4b95be3e50518ce7830d2083434",
+   "sha256": "cf71a53fb6e2e9a06a6dd7c385e55c9ca297f41dd96672f72f8fa56ebe2dc423",
+   "file": "class2-lane-cost75b-certificates/bit54-root-00000000000000803242000000000008.cert.part1of2 + .part2of2 (2-part split; rejoin with cat)",
+   "v15_crosscheck_verdict": "loss=true at 8568846 nodes (v15 anchor)",
+   "v16_search_nodes": 3904141,
+   "root_absence_check": "cross-child duplicate of the cost-70c bit-3 win7_roots listing (no prior published certificate; cost-70c certified bits 94/20/23 only), so this certificate is new coverage and also closes the cost-70c bit-3 warm entry",
+   "bigint_independent_audit": "WIN7 certificate independently verified by BigInt 3x3 cofactor expansion (no solver/cache/repo-verifier import): root stones=7, rows sorted unique, all sub-roots passed, union 0/0; re-run PASS on the remote-rejoined bytes after landing",
+   "push_note": "2-part split push; remote-rejoined bytes md5/sha256 verified, BigInt re-verification PASS on the remote bytes"
+  },
+  {
+   "bit": 84,
+   "root_hex": "00000000001000803202000000000008",
+   "verdict": "WIN7",
+   "rows": 55484,
+   "extraction_nodes": 13021801,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table), FBS=1<<20: fbt_drops=0, all per-move extractions ok and uncapped",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 61,
+    "independent_enumeration_legal": 61,
+    "match": true
+   },
+   "sub_roots_verified": 61,
+   "sub_roots_pass": 61,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 114239,
+   "loser_reply_edges": 104928,
+   "md5": "cdfbd1bede75265c774af02cba1c7e9f",
+   "sha256": "0752a6d56c5be37eb983ed6f5b932ef3e33eaee9d35fb6403401d61f05cadd16",
+   "file": "class2-lane-cost75b-certificates/bit84-root-00000000001000803202000000000008.cert.part1of2 + .part2of2 (2-part split; rejoin with cat)",
+   "v15_crosscheck_verdict": "loss=true at 9025519 nodes (v15 anchor)",
+   "v16_search_nodes": 3484970,
+   "root_absence_check": "GitHub code search over yuubinnkyoku/kyouen-researches for the root hex: 0 hits",
+   "bigint_independent_audit": "WIN7 certificate independently verified by BigInt 3x3 cofactor expansion (no solver/cache/repo-verifier import): root stones=7, rows sorted unique, all sub-roots passed, union 0/0; re-run PASS on the remote-rejoined bytes after landing",
+   "push_note": "2-part split push; remote-rejoined bytes md5/sha256 verified, BigInt re-verification PASS on the remote bytes"
+  },
+  {
+   "bit": 89,
+   "root_hex": "00000000020000803202000000000008",
+   "verdict": "WIN7",
+   "rows": 45501,
+   "extraction_nodes": 8793296,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table), FBS=1<<20: fbt_drops=0, all per-move extractions ok and uncapped",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 55,
+    "independent_enumeration_legal": 55,
+    "match": true
+   },
+   "sub_roots_verified": 55,
+   "sub_roots_pass": 55,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 94011,
+   "loser_reply_edges": 85340,
+   "md5": "bc52efa62fe7794ad121f3d295e627a8",
+   "sha256": "50415ced65d6c0933938c5a9cfed850fcaaacac617585b10125deaf60f600b88",
+   "file": "class2-lane-cost75b-certificates/bit89-root-00000000020000803202000000000008.cert.part1of2 + .part2of2 (2-part split; rejoin with cat)",
+   "v15_crosscheck_verdict": "loss=true at 5605094 nodes (v15 anchor)",
+   "v16_search_nodes": 2505987,
+   "root_absence_check": "GitHub code search over yuubinnkyoku/kyouen-researches for the root hex: 0 hits",
+   "bigint_independent_audit": "WIN7 certificate independently verified by BigInt 3x3 cofactor expansion (no solver/cache/repo-verifier import): root stones=7, rows sorted unique, all sub-roots passed, union 0/0; re-run PASS on the remote-rejoined bytes after landing",
+   "push_note": "2-part split push; remote-rejoined bytes md5/sha256 verified, BigInt re-verification PASS on the remote bytes"
+  },
+  {
+   "bit": 99,
+   "root_hex": "00000008000000803202000000000008",
+   "verdict": "WIN7",
+   "rows": 40056,
+   "extraction_nodes": 6172262,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table), FBS=1<<20: fbt_drops=0, all per-move extractions ok and uncapped",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 55,
+    "independent_enumeration_legal": 55,
+    "match": true
+   },
+   "sub_roots_verified": 55,
+   "sub_roots_pass": 55,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 83949,
+   "loser_reply_edges": 75279,
+   "md5": "84e8444599ab0ba7d71989a88a9412bc",
+   "sha256": "0c65065ba4bd49e9166931ebffc0a914babd05b3d7099830afedc14bf42eb90d",
+   "file": "class2-lane-cost75b-certificates/bit99-root-00000008000000803202000000000008.cert.part1of2 + .part2of2 (2-part split; rejoin with cat)",
+   "v15_crosscheck_verdict": "loss=true at 3953206 nodes (v15 anchor)",
+   "v16_search_nodes": 1848113,
+   "root_absence_check": "GitHub code search over yuubinnkyoku/kyouen-researches for the root hex: 0 hits",
+   "bigint_independent_audit": "WIN7 certificate independently verified by BigInt 3x3 cofactor expansion (no solver/cache/repo-verifier import): root stones=7, rows sorted unique, all sub-roots passed, union 0/0; re-run PASS on the remote-rejoined bytes after landing",
+   "push_note": "2-part split push; remote-rejoined bytes md5/sha256 verified, BigInt re-verification PASS on the remote bytes"
+  },
+  {
+   "bit": 116,
+   "root_hex": "00100000000000803202000000000008",
+   "verdict": "WIN7",
+   "rows": 80911,
+   "extraction_nodes": 27980913,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table), FBS=1<<20: fbt_drops=0, all per-move extractions ok and uncapped",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 64,
+    "independent_enumeration_legal": 64,
+    "match": true
+   },
+   "sub_roots_verified": 64,
+   "sub_roots_pass": 64,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 160779,
+   "loser_reply_edges": 146857,
+   "md5": "85f01799e61b1f1fb402861924c4b2af",
+   "sha256": "9102ac41316ac5c8d5678c2bca4230982f8f04b6c45a3b2a017147727ba12a45",
+   "file": "class2-lane-cost75b-certificates/bit116-root-00100000000000803202000000000008.cert.part1of2 + .part2of2 (2-part split; rejoin with cat)",
+   "v15_crosscheck_verdict": "loss=true at 18631277 nodes (v15 anchor)",
+   "v16_search_nodes": 10699729,
+   "root_absence_check": "GitHub code search over yuubinnkyoku/kyouen-researches for the root hex: 0 hits",
+   "bigint_independent_audit": "WIN7 certificate independently verified by BigInt 3x3 cofactor expansion (no solver/cache/repo-verifier import): root stones=7, rows sorted unique, all sub-roots passed, union 0/0; re-run PASS on the remote-rejoined bytes after landing",
+   "push_note": "2-part split push; remote-rejoined bytes md5/sha256 verified, BigInt re-verification PASS on the remote bytes"
+  }
+ ],
+ "unverified_win7_bits": [],
+ "unknown_status": "11x11 empty board: UNKNOWN. All WIN7 certificates prove only individual 7-stone roots within depth 10."
+}
