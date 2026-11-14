@@ -75,5 +75,45 @@
  "batch_plan": "61 candidates in 8 batches (8,8,8,8,8,8,8,5), raw JSONL pushed per batch as completed",
  "unknown_status": "11x11 empty board: UNKNOWN. All WIN7 certificates prove only individual 7-stone roots.",
  "session": "long-term lane session 12 (2026-11-14)",
- "status": "in flight (session 12)"
+ "status": "completed (session 12)",
+ "result": {
+  "win7_d10": 13,
+  "win7_bits": [
+   1,
+   4,
+   17,
+   40,
+   74,
+   87,
+   89,
+   92,
+   102,
+   105,
+   109,
+   114,
+   120
+  ],
+  "win7_roots": [
+   "00000000000000803202000040000002",
+   "00000000000000803202000040000010",
+   "00000000000000803202000040020000",
+   "00000000000000803202010040000000",
+   "00000000000004803202000040000000",
+   "00000000008000803202000040000000",
+   "00000000020000803202000040000000",
+   "00000000100000803202000040000000",
+   "00000040000000803202000040000000",
+   "00000200000000803202000040000000",
+   "00002000000000803202000040000000",
+   "00040000000000803202000040000000",
+   "01000000000000803202000040000000"
+  ],
+  "refuted_d10": 48,
+  "capped": 0,
+  "total_nodes": 32935423,
+  "pilot_d6_controls": "8/8 batch invocations loss=false at exactly 3,402 nodes",
+  "certificates": "3 fully verified (bits 109/17/40: 43/47/44 sub-roots PASS, union 0/0 each, fbt_drops=0) pushed under class2-lane-cost61e-certificates/; bit 1 is a duplicate of the published cost-61d bit-30 certificate (identical root 00000000000000803202000040000002, extraction reproduced md5 93bc0a6a bit-exact, not re-pushed); 9 further WIN7 bits remain warm certificate-rebuild candidates (bits 102/4 carry v15 loss=true anchors)",
+  "v15_crosscheck": "bits 102/4/109 all loss=true, bit 3 loss=false (verdicts identical to v16), pilot 5,949 PASS",
+  "determinism": "bits 102/3/4 re-solved fresh: node-exact"
+ }
 }
