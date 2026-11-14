@@ -4612,7 +4612,7 @@
 
 - → depends_on [K0707](../items/K0707-incremental-drat-deletion-unsoundness.md): 削除で代入を失効させないと偽UNSATを受理する不具合と、その修正方針（reason単位の失効）
 
-## [K0781](../items/K0781-p2531-no-size-h1-set.md) 剰余放物線Q_2531はサイズh+1=1266の集合を持たず、上界はh=1265に下がる（ソルバ主張、証明書未検査）
+## [K0781](../items/K0781-p2531-no-size-h1-set.md) 剰余放物線Q_2531はサイズh+1=1266の集合を持たず、上界はh=1265に下がる（DRAT証明書を検査済み）
 
 - → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 上界A(p)<=(p+3)/2と、サイズh+1の集合が(x,c,e)で3形状に尽きること
 - → depends_on [K0702](../items/K0702-p2531-no-parabola-equality-witness.md): サイズh+2=1267の不存在（単一CNF・監査済み）からA(2531)<=1266、本項はそこから1下げる

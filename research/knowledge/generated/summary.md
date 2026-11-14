@@ -18,9 +18,8 @@ K項目: 800 / alias: 269 / artifactファイル: 4428
 | 値 | 件数 |
 |---|---:|
 | active | 12 |
-| computed | 207 |
+| computed | 208 |
 | conjectured | 2 |
-| needs-review | 1 |
 | observed | 26 |
 | open | 38 |
 | proved | 405 |
@@ -99,7 +98,6 @@ K項目: 800 / alias: 269 / artifactファイル: 4428
 - [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md) [conjectured] 任意の固定rank3残余核に長道を付けたGrundy列は最終的に34周期になるか
 - [K0685](../items/K0685-n11-chain-audit-wall.md) [open] 11x11空盤勝敗は領域機械の壁で留まる（S2 120件全て未証明、最良S3でも遠方ブロッカー60+）
 - [K0737](../items/K0737-assumption-unsat-drat-gap.md) [open] 候補B の assumption-UNSAT を単体の DRAT 証明へ落とす手続きは未取得である
-- [K0781](../items/K0781-p2531-no-size-h1-set.md) [needs-review] 剰余放物線Q_2531はサイズh+1=1266の集合を持たず、上界はh=1265に下がる（ソルバ主張、証明書未検査）
 
 ## 警告
 

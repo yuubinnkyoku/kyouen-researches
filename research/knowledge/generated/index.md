@@ -764,7 +764,7 @@
 | [K0778](../items/K0778-width17-20-circle-point-bounds.md) | 幅17・18の円点数 P(17)=P(18)=16 確定・幅19・20 は P≤18 で候補点行集合を完全分類（並走 K0776 の P(w)≤2⌈w/2⌉ を独立に再現・P(19),P(20) は更に 18 へ鋭化） | proposition | proved | rectangles, geometry, variants |
 | [K0779](../items/K0779-c4-saturation-n-plus-four-bound.md) | C4飽和グラフはn>=13でn+4辺以上、重み2層の14次元最小値は18 | proposition | proved | variants, geometry, maximal-safe |
 | [K0780](../items/K0780-drat-checker-fast-reason-local-invalidation.md) | DRAT検査器の高速版（削除時はreasonのみ失効・節検索をhash化）は既存4証明書で同一判定のまま3〜11倍速い | method | active | verification, search-methods, maximum-safe |
-| [K0781](../items/K0781-p2531-no-size-h1-set.md) | 剰余放物線Q_2531はサイズh+1=1266の集合を持たず、上界はh=1265に下がる（ソルバ主張、証明書未検査） | proposition | needs-review | maximum-safe, geometry, search-methods |
+| [K0781](../items/K0781-p2531-no-size-h1-set.md) | 剰余放物線Q_2531はサイズh+1=1266の集合を持たず、上界はh=1265に下がる（DRAT証明書を検査済み） | proposition | computed | maximum-safe, geometry, search-methods |
 | [K0782](../items/K0782-width21-26-point-row-sharpened-bounds.md) | 幅21..26の円点数 P(w) ≤ 2⌈w/2⌉−2（k=⌈w/2⌉ 候補点行集合がmod 19で全滅）・w=19,20候補の実現可能性は e∈Z・R'≤2×10⁷ で否定・A=0は厳密不可能 | proposition | proved | rectangles, geometry, variants |
 | [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) | n11 S2{59,60} milestone-5のS7候補監査とblocker類1・2の条件付き閉鎖 | proposition | computed | verification, certificates, provenance, search-methods |
 | [K0784](../items/K0784-width21-35-pw-exact-universal-bound.md) | 幅21..35の円点数の完全決定 P(22)=18・P(23)=P(24)=20・P(25)=22・P(26)=…=P(35)=24・24点witness円650 — 全称上界 P(w) ≤ 2⌈w/2⌉−4（全w≥21・w≠26）・行分離公式 M_{w,w+1}=w（全奇数w≥21） | proposition | proved | rectangles, geometry, variants |

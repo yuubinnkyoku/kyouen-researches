@@ -3,14 +3,25 @@
   "h": 1265,
   "size": 1266,
   "shape": "c",
-  "class": [1, 1, 1],
-  "cnf": "a2531_1266.cnf",
-  "cnf_sha256": "896a4efa25a0a73666ca63cf584c4c87685f290b92182aa66fc91a91699bd233",
+  "class": [
+    1,
+    1,
+    1
+  ],
   "vars": 10118,
   "clauses": 62189,
   "kept_edges": 38160,
   "trapezoid_edges_dropped": 799480,
-  "status": "open; four cadical runs (default, --sat -L1000, --sat -L2000 with seeds 7919 and 104729) started 2026-11-13 with 7200 s limits",
-  "note_2207": "the same encoding is satisfiable at p=2207 (1104-point witness, K0722), so a non-result is not evidence for UNSAT",
-  "created": "2026-11-13"
+  "cnf_sha256": "896a4efa25a0a73666ca63cf584c4c87685f290b92182aa66fc91a91699bd233",
+  "proof_sha256": "4d1e574e56c94711a459eebb72c91e7a89e92e9b9ceadb8c27fed5add6a32977",
+  "proof_lines": 21110359,
+  "proof_bytes": 5262609307,
+  "checker_source_sha256": "dfb84dacd8cfe1424ebd60e8e9ead27a8a93e16dad13eaa3f09f11437a41e100",
+  "checker_exe": "D:\\tmp\\fastchk\\drat_fast.exe",
+  "checker_rc": 0,
+  "checker_last_line": "VERIFIED",
+  "verified": true,
+  "check_seconds": 52811.9,
+  "solver": "cadical 1.7.3 (WSL), default configuration, --no-binary text DRAT",
+  "conclusion": "A(2531) <= 1265"
 }

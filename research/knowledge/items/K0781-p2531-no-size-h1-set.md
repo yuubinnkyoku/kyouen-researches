@@ -1,8 +1,8 @@
 ---
 id: K0781
-title: 剰余放物線Q_2531はサイズh+1=1266の集合を持たず、上界はh=1265に下がる（ソルバ主張、証明書未検査）
+title: 剰余放物線Q_2531はサイズh+1=1266の集合を持たず、上界はh=1265に下がる（DRAT証明書を検査済み）
 kind: proposition
-status: needs-review
+status: computed
 topics: [maximum-safe, geometry, search-methods]
 aliases: []
 relations:
@@ -29,7 +29,7 @@ artifacts:
   role: log
   note: 発見の経緯と当時の検証状態、4素数を並べた表
 scope: p=2531のみ。形状(a)(b)は既存記録のUNSAT、形状(c)はcadical 1.7.3の既定設定によるUNSAT主張。
-evidence: 形状(a)(b)はshape_class_2531_1266.json。形状(c)はCNFのsha256固定済みで cadical が約5,920秒で`s UNSATISFIABLE`。DRAT証明書は再生成中で未検査。
+evidence: 形状(a)(b)はshape_class_2531_1266.json。形状(c)はCNFのsha256固定済みで cadical が約5,920秒で`s UNSATISFIABLE`、そのDRAT（5.26GB）を高速検査器でVERIFIED（52,812秒）。
 ---
 
 ## 主張
@@ -68,9 +68,9 @@ A(2531) <= 1265 = h
 
 ## 限界
 
-- 証明書の検査を実行中（5.26 GB のテキスト DRAT）。先頭 400 MB を別プロセスで検査して
-  790,809 step すべて RUP・削除の取りこぼし 0 を確認済み（1,925 秒 = 218 KB/s）。
-  この速度なら全体は約 6.7 時間。完了まで status は `needs-review` のまま。
+- 5.26 GB のテキスト DRAT を `drat_check_fast.cpp` で検査し **VERIFIED**（52,812 秒 = 14.7 時間、
+  `checker_rc=0`）。先頭 400 MB の予備検査（790,809 step・削除の取りこぼし 0）も通過していた。
+  証明書は repo に入れず、CNF と receipt（全 hash）だけを管理する。
 - 下界は K0787 が与える: `A(2531) >= 1262`（独立整数幾何監査済み）。よって
   `1262 <= A(2531) <= 1265`。サイズ `h=1265` の4形状のうち (0,0,0) と (1,0,1) は UNSAT、
   (0,1,1) と (1,1,2) は走行中。
