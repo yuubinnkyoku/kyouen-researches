@@ -1,0 +1,277 @@
+{
+ "schema": "n11-class-frontier-merged-recompute-after-multiband2-68dhyg-20261115-v1",
+ "date": "2026-11-15",
+ "baseline_main": "class-frontier-warm-multiband2-recompute-20261115.json (solved 1140 / unique remaining 6707 / sum 528979 / open 4977/392702)",
+ "method": "merged fold of the two divergent published forks of the 1109 after-warm-multiband chain head: this lane's cost-68d + warm band hygiene fold (class-frontier-cost68d-recompute-20261115.json, solved 1117) and the concurrent lane's warm multiband 2 fold (class-frontier-warm-multiband2-recompute-20261115.json, solved 1140). The receipt sets are pairwise disjoint (published duplicate crosscheck: 31 batch-2 roots vs the 13 cost-68d/hygiene roots, intersection empty, zero WIN/LOSS conflicts; the batch-2 selection explicitly deferred the hygiene bits 62a 1/89, 63a 11/109 and 61d bit-22 = 71b bit-1 and never touched the cost-68d band). This script reproduces the published 1140 chain head by runpy (asserted 1140/6707/528979/4977/392702, byte-identical output), re-derives the cost-68d child membership at the 1140 state with string keys (genuinely still remaining, demand c1=0,c2=2,c4=0), re-sums the completed cost-68d sweep from the 9 published raw batches (68 candidates, 61,325,518 v16 nodes, 7 WIN7-D10 + 61 REFUTED + 0 capped) with the node-exact determinism rerun and the v15 cross-engine anchors asserted, then folds the 13 receipts in the published record order, re-deriving every per-record marginal from the growing union that already contains the 31 batch-2 receipts. Each certificate was extracted with the repo-verbatim blind extractor (FBS=1<<20, fbt_drops=0) and independently verified with verify_win7_certificate_bigint_independent.mjs; remote bytes were verified byte-exact by git blob sha after landing. No sweep claims are made here beyond the published cost-68d sweep record - receipts only",
+ "controls": {
+  "after_warm_multiband2_baseline": {
+   "solved_in_manifest": 1140,
+   "unique_remaining": 6707,
+   "sum_cost": 528979,
+   "open_s6": 4977,
+   "open_cost": 392702,
+   "reproduced_byte_identical": true
+  },
+  "fork_disjointness": "the 31 warm-multiband-2 roots and the 13 cost-68d/hygiene roots are disjoint; the fold order (batch-2 first, this lane's 13 second) cannot create double coverage because every marginal is re-derived from the growing union",
+  "cost68d_child_membership_at_1140": {
+   "child_hex": "00000000000000809122000000000000",
+   "claimed_as": "cheapest remaining unswept child of the third class-2 coverable target S5 (claim at the 1109 state, commit 6175d233; swept by this lane as the cost-68d sweep)",
+   "still_in_parent_remaining_children_at_1140": true,
+   "demand_at_1140": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "note": "the 31 batch-2 receipts never covered this child; it is genuinely still remaining at the 1140 state, and the 7 cost-68d WIN7 receipts folded below close it"
+  },
+  "cost68d_sweep_resummed_from_raw": true,
+  "determinism_rerun_node_exact": true,
+  "v15_anchors": "7 WIN7 loss=true + refuted anchors 0/120/13 loss=false",
+  "records_folded_in_published_record_order": true,
+  "extends_after_warm_multiband2_baseline": true
+ },
+ "merged_addition": {
+  "cost68d": [
+   {
+    "band": "class2-lane-cost68d",
+    "bit": 18,
+    "root_hex": "00000000000000809122000000040000",
+    "covers": 7,
+    "marginal": 6,
+    "marginal_in_manifest": 2,
+    "marginal_manifest_hexes": [
+     "00000000000000003800000408008000",
+     "00000000000000809122000000000000"
+    ]
+   },
+   {
+    "band": "class2-lane-cost68d",
+    "bit": 26,
+    "root_hex": "00000000000000809122000004000000",
+    "covers": 7,
+    "marginal": 4,
+    "marginal_in_manifest": 0,
+    "marginal_manifest_hexes": []
+   },
+   {
+    "band": "class2-lane-cost68d",
+    "bit": 29,
+    "root_hex": "00000000000000809122000020000000",
+    "covers": 7,
+    "marginal": 5,
+    "marginal_in_manifest": 1,
+    "marginal_manifest_hexes": [
+     "00000000000000003800000808008000"
+    ]
+   },
+   {
+    "band": "class2-lane-cost68d",
+    "bit": 34,
+    "root_hex": "00000000000000809122000400000000",
+    "covers": 7,
+    "marginal": 5,
+    "marginal_in_manifest": 1,
+    "marginal_manifest_hexes": [
+     "00000000000000809102000400000000"
+    ]
+   },
+   {
+    "band": "class2-lane-cost68d",
+    "bit": 47,
+    "root_hex": "00000000000000809122800000000000",
+    "covers": 7,
+    "marginal": 6,
+    "marginal_in_manifest": 2,
+    "marginal_manifest_hexes": [
+     "0000000000000080120a200000000000",
+     "00000000000000809102800000000000"
+    ]
+   },
+   {
+    "band": "class2-lane-cost68d",
+    "bit": 103,
+    "root_hex": "00000080000000809122000000000000",
+    "covers": 7,
+    "marginal": 5,
+    "marginal_in_manifest": 1,
+    "marginal_manifest_hexes": [
+     "00000000000000083800000008020000"
+    ]
+   },
+   {
+    "band": "class2-lane-cost68d",
+    "bit": 108,
+    "root_hex": "00001000000000809122000000000000",
+    "covers": 7,
+    "marginal": 5,
+    "marginal_in_manifest": 1,
+    "marginal_manifest_hexes": [
+     "00000000000000809102000000100000"
+    ]
+   }
+  ],
+  "hygiene": [
+   {
+    "band": "class2-lane-cost62a",
+    "bit": 1,
+    "root_hex": "00000000000000809102000001000002",
+    "covers": 7,
+    "marginal": 4,
+    "marginal_in_manifest": 0,
+    "marginal_manifest_hexes": []
+   },
+   {
+    "band": "class2-lane-cost62a",
+    "bit": 89,
+    "root_hex": "00000000020000809102000001000000",
+    "covers": 7,
+    "marginal": 4,
+    "marginal_in_manifest": 0,
+    "marginal_manifest_hexes": []
+   },
+   {
+    "band": "class2-lane-cost63a",
+    "bit": 11,
+    "root_hex": "00000000000000809102000800000800",
+    "covers": 7,
+    "marginal": 4,
+    "marginal_in_manifest": 0,
+    "marginal_manifest_hexes": []
+   },
+   {
+    "band": "class2-lane-cost63a",
+    "bit": 109,
+    "root_hex": "00002000000000809102000800000000",
+    "covers": 7,
+    "marginal": 4,
+    "marginal_in_manifest": 0,
+    "marginal_manifest_hexes": []
+   },
+   {
+    "band": "class2-lane-cost71b",
+    "bit": 1,
+    "root_hex": "00000000000000803202000000400002",
+    "covers": 7,
+    "marginal": 4,
+    "marginal_in_manifest": 0,
+    "marginal_manifest_hexes": []
+   },
+   {
+    "band": "class2-lane-cost61d",
+    "bit": 22,
+    "root_hex": "00000000000000803202000000400002",
+    "covers": 7,
+    "marginal": 0,
+    "marginal_in_manifest": 0,
+    "marginal_manifest_hexes": []
+   }
+  ]
+ },
+ "totals": {
+  "receipts": 13,
+  "total_marginal": 56,
+  "total_marginal_in_manifest": 8,
+  "zero_marginal_in_manifest": [
+   "class2-lane-cost68d-bit26",
+   "class2-lane-cost62a-bit1",
+   "class2-lane-cost62a-bit89",
+   "class2-lane-cost63a-bit11",
+   "class2-lane-cost63a-bit109",
+   "class2-lane-cost71b-bit1",
+   "class2-lane-cost61d-bit22"
+  ],
+  "cost68d_rows": 268572,
+  "cost68d_extraction_nodes": 82180565,
+  "hygiene_rows": 236012,
+  "hygiene_extraction_nodes": 59734815
+ },
+ "frontier_after_merged": {
+  "solved_s6_in_manifest": 1148,
+  "remaining_s5_orbits": 175,
+  "unique_remaining_s6": 6699,
+  "sum_remaining_cost": 528423,
+  "s6_needed_by_open_classes": 4969,
+  "cost_needed_by_open_classes": 392146,
+  "demand_histogram_open_only": {
+   "c2=0,c4=1": 527,
+   "c2=0,c4=2": 3021,
+   "c2=0,c4=3": 12,
+   "c2=1,c4=0": 239,
+   "c2=1,c4=1": 60,
+   "c2=1,c4=2": 9,
+   "c2=2,c4=0": 1040,
+   "c2=2,c4=1": 6,
+   "c2=2,c4=2": 55
+  },
+  "best_class2": {
+   "s5_hex": "00000000000000809102000000000000",
+   "classes": 2,
+   "remaining_s6_orbits": 8,
+   "remaining_s7_edge_cost": 588
+  },
+  "audit_blocked_class2": {
+   "s5_hex": "00000000000000809082000000000000",
+   "classes": 3,
+   "remaining_s6_orbits": 10,
+   "remaining_s7_edge_cost": 698
+  },
+  "best_coverable_class2": {
+   "s5_hex": "00000000000000809102000000000000",
+   "classes": 2,
+   "remaining_s6_orbits": 8,
+   "remaining_s7_edge_cost": 588
+  },
+  "next_class2": [
+   {
+    "s5_hex": "00000000000000809082000000000000",
+    "classes": 3,
+    "remaining_s6_orbits": 10,
+    "remaining_s7_edge_cost": 698
+   },
+   {
+    "s5_hex": "00000000000000801202000000200000",
+    "classes": 2,
+    "remaining_s6_orbits": 41,
+    "remaining_s7_edge_cost": 3058
+   },
+   {
+    "s5_hex": "00000000000000801202000080000000",
+    "classes": 2,
+    "remaining_s6_orbits": 43,
+    "remaining_s7_edge_cost": 3268
+   }
+  ],
+  "best_class4": {
+   "s5_hex": "00000000020000003800000080000000",
+   "classes": 4,
+   "remaining_s6_orbits": 18,
+   "remaining_s7_edge_cost": 1460
+  },
+  "next_class4": [
+   {
+    "s5_hex": "00000000000000003800002000800000",
+    "classes": 4,
+    "remaining_s6_orbits": 60,
+    "remaining_s7_edge_cost": 4216
+   },
+   {
+    "s5_hex": "00000000000000801802000000080000",
+    "classes": 4,
+    "remaining_s6_orbits": 64,
+    "remaining_s7_edge_cost": 4390
+   },
+   {
+    "s5_hex": "00000000020000003800000000080000",
+    "classes": 4,
+    "remaining_s6_orbits": 64,
+    "remaining_s7_edge_cost": 4570
+   }
+  ]
+ },
+ "outstanding_not_folded": {
+  "parallel_lane_bands": "cost-65h/67b/68c warm candidates and the in-flight cost-65j sweep stay with the parallel lane, as do the six gain-1 cost-70c warm candidates (parallel-lane band)",
+  "warm_candidates_without_records": "gain-0-in-manifest own-lane warm candidates deferred by the batch-2 selection (incl. cost-61d bit-8 and others); they advance no manifest orbit until the solved set changes",
+  "note": "the six gain-1 cost-70c warm candidates may now have non-zero marginal against this merged head; their fold belongs to the parallel lane (its band) or a later canonical recompute"
+ },
+ "interpretation_guard": "bookkeeping over published receipts; REFUTED-D10 sweeps prove only absence of WIN7-D10; WIN7 certificates prove a win within depth 10 from the 7-stone root only; solved counts measure manifest coverage, not the game-theoretic value of the 11x11 empty board; 11x11 empty root / {49,60} / S2 {59,60} / class 2 / class 4 remain UNKNOWN"
+}
