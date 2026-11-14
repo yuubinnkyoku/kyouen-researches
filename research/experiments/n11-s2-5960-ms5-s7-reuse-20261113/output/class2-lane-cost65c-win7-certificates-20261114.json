@@ -1,0 +1,77 @@
+{
+ "schema": "n11-class2-lane-cost65c-win7-certificates-20261114-v1",
+ "date": "2026-11-14",
+ "s6_child_hex": "00000000000000809082000000200000",
+ "s5_parent_hex": "00000000000000809082000000000000",
+ "s6_s7_edge_cost": 65,
+ "certificates": [
+  {
+   "bit": 9,
+   "root": "00000000000000809082000000200200",
+   "verdict": "WIN7",
+   "depth": 10,
+   "rows": 38363,
+   "extraction_nodes": 6339815,
+   "fbt_drops": 0,
+   "fatal": null,
+   "subroots": 57,
+   "subroots_pass": 57,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_stone_range": [
+    13,
+    17
+   ],
+   "loser_mobility": 57,
+   "file": "n11_s7_00000000000000809082000000200200.cert",
+   "md5": "3ec653ea35098245ad8c6b6a6d70b1ab",
+   "sha256": "99f45000eca6cf60eb7e956e6ba68e95adbc1c4e385d2426c9863cf2050cc780"
+  },
+  {
+   "bit": 48,
+   "root": "00000000000000809083000000200000",
+   "verdict": "WIN7",
+   "depth": 10,
+   "rows": 36237,
+   "extraction_nodes": 10365300,
+   "fbt_drops": 0,
+   "fatal": null,
+   "subroots": 49,
+   "subroots_pass": 49,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_stone_range": [
+    13,
+    17
+   ],
+   "loser_mobility": 49,
+   "file": "n11_s7_00000000000000809083000000200000.cert",
+   "md5": "7405181dc026c0eecdb565015b1e816d",
+   "sha256": "37d0cc161242b5aad73a35ea6a4b8cc6a34ae085db9ec40aeecf7f716c67ce74"
+  },
+  {
+   "bit": 70,
+   "root": "00000000000000c09082000000200000",
+   "verdict": "WIN7",
+   "depth": 10,
+   "rows": 31979,
+   "extraction_nodes": 6987638,
+   "fbt_drops": 0,
+   "fatal": null,
+   "subroots": 52,
+   "subroots_pass": 52,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_stone_range": [
+    13,
+    17
+   ],
+   "loser_mobility": 52,
+   "file": "n11_s7_00000000000000c09082000000200000.cert",
+   "md5": "38e26d780c1395e1d5e26eeb21db21f2",
+   "sha256": "857c617737d55c05f92790040fd3ba00bfbe0bd37c07ed660f9b6ba6a159d811"
+  }
+ ],
+ "method": "blind extraction with class4_child1_cert_extractor_exact.ts (FBS=1<<20, probe96, empty kill table), all fbt_drops=0; independent verification with verify_bit7_win7_cert.ts (Bareiss 4x4, engine-free): root-check, every loser first-move sub-root, consumed-union equality both directions",
+ "note": "all 3 roots are new (not in win7-reuse-hits, no cross-child reuse)"
+}
