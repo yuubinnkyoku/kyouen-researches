@@ -17,7 +17,7 @@ M=22/17/12/16 を反証するwitnessを発見・独立検証した。
 | (5,6) | 25 | 24石@5×16・5×17 | 16 | **18** | 249 |
 
 追加: 6×12・q=8 には 40石の極大安全配置も存在する（cap=40 SAT・独立検証 PASS）。
-**さらに cap=39 も SAT（39石・行構成 7,7,7,7,5,6 を含む rows [5,7,7,7,6,7]・独立検証 PASS・
+**さらに cap=39 も SAT（39石・行構成 5,7,7,7,6,7・独立検証 PASS・
 別プロセス再検証 PASS）であり、6×12 q=8 の最小極大サイズは ≤39 に更新される**
 （cap=38 は2回試行して timeout・不在証明ではない。下界は未確定のまま）。
 (5,7) m=19 と (6,7) m=20 は本バジェットでは未解決（timeout・非不在）。
@@ -93,7 +93,7 @@ node scripts/row_deficient_sat.js brute 2 8 4
 node scripts/row_deficient_sat.js sat 6 12 8 --cap=40                       # total-cap mode
 ```
 
-出力: `output/sat_results.json`（全15実行・witness座標・独立検証詳細・
+出力: `output/sat_results.json`（全16実行・witness座標・独立検証詳細・
 fuzz/制御記録・timeout記録）。
 
 ## 関連
