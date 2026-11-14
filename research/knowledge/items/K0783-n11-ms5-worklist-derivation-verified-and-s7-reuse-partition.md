@@ -426,7 +426,12 @@ evidence: 公開manifestの辞書順md5は0e95a438dbcb486368393de9c73fc21e。94�
   note: cost69e 10 receipt・schema v2の独立再計算（merged baseline 1012から1023）
 - path: research/log/2026-11-15-class2-lane-cost69e-win7.md
   role: log
-  note: cost69e全11 WIN7候補の証明書化と10 receipt後のfrontier記録
+  note: cost69e全11 WIN7候補の証明書化と10 receipt後のfrontier記録- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72-batches1-9-audit-20261115.json
+  role: data
+  note: cost72全9 batch・72候補のraw記録監査。WIN7-D10候補bit52/111、未証明
+- path: research/log/2026-11-15-n11-class2-cost72-batches1-9-audit.md
+  role: log
+  note: cost72の全72候補記録整合性、2つのWIN7-D10候補、未完了扱いの理由
 ---
 
 ## 主張
@@ -611,3 +616,11 @@ cost72は五石親 `00000000000000803202000000000000` の六石子 `000000000000
 bit52はまだ探索候補であり、証明書抽出・独立検証前。batch 6–9の32候補も未回収なのでcost72 sweepはin-flight、frontierへの寄与は0として扱う。次は残りbatchを回収し、bit52の交差検査と証明書化の有無を確認する。
 
 標準11×11空盤、二石root `{49,60}`、S2 `{59,60}`、class2・class4はいずれも **UNKNOWN**。
+
+## 2026-11-15: cost72 raw batch 1–9の全件記録確認
+
+cost72の9 raw batchすべてが公開され、72/72候補のbit列はinflight claimの計画と完全一致。重複・欠落・計画外bitは0、候補節点69,563,014、WIN7-D10候補2件（bit52: 7,498,054節点、bit111: 1,872,720節点）、REFUTED-D10 70件、打切り0。pilot control 9件も全て3,402節点で一致した。
+
+ただしinflight claimはまだ `status=in-flight`。v15交差検査、証明書抽出・独立検証、完了記録は未確認。bit52/111は探索候補であり、S6 closure・frontier改善には算入しない。詳細はcost72全件監査logとJSONを参照。
+
+標準11×11空盤、二石root `{49,60}`、S2 `{59,60}`、class2・class4は **UNKNOWN**。
