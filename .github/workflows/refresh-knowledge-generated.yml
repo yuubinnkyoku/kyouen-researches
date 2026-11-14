@@ -109,7 +109,8 @@ jobs:
           ]
           for key in checks:
               assert generated["checks"][key] == saved["checks"][key], key
-          assert generated["checks"]["new_win7_roots_exact_safe_geometry"] == saved["checks"]["new_win7_roots_all_exact_safe"]
+          assert generated["checks"]["new_win7_roots_exact_safe_geometry"] == 23
+          assert saved["checks"]["new_win7_roots_all_exact_safe"] is True
           assert generated["source_manifest_counts"] == saved["source_manifest_counts"]
           assert generated["new_roots"] == saved["new_roots"]
           generated_parents = generated["new_parent_records"]
@@ -315,3 +316,4 @@ jobs:
 # Refresh generated views for K0783 n11 S2 incremental reuse reproducibility audit (2026-11-14).
 # Refresh generated views for K0783 corrected K0675 baseline and incremental reuse audit (2026-11-14).
 # Refresh generated views after N11 S2 incremental WIN7 reuse audit wiring (2026-11-14).
+# Refresh generated views after correcting N11 S2 safety-count comparator (2026-11-14).

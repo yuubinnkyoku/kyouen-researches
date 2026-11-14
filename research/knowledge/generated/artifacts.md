@@ -14062,6 +14062,12 @@
 ## [research/log/2026-11-14-circle-strip-subadditivity.md](../../../research/log/2026-11-14-circle-strip-subadditivity.md)
 
 - [K0817](../items/K0817-circle-strip-subadditivity-and-density-bound.md) (log): 発見経緯・有限表検査・証拠境界・次の未解決課題
+## [research/log/2026-11-14-n11-class2-lane-cost73c-raw-audit.md](../../../research/log/2026-11-14-n11-class2-lane-cost73c-raw-audit.md)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): cost-73cの73候補・11 raw batch・388,889,991 nodesを独立再集計。73 REFUTED-D10のみでfrontier変更なし
+## [research/log/2026-11-14-n11-s2-incremental-reuse-source-audit.md](../../../research/log/2026-11-14-n11-s2-incremental-reuse-source-audit.md)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): 23新規WIN7 rootの幾何・親子対応とK0675 baselineを独立再計算。43件の増分・cost3,275を再現。証明書本体は未再実行
 ## [research/log/2026-11-14-new-exceptional-primes-3719-3727.md](../../../research/log/2026-11-14-new-exceptional-primes-3719-3727.md)
 
 - [K0812](../items/K0812-new-exceptional-primes-3719-3727.md) (log): 発見の経緯（d走査の候補→単一CNF→証明書）と範囲の注意

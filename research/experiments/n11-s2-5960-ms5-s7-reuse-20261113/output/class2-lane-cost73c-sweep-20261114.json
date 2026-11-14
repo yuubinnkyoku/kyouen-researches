@@ -1,0 +1,57 @@
+{
+  "schema": "n11-class2-lane-cost73c-sweep-20261114-v1",
+  "date": "2026-11-14",
+  "session": "long-term lane session 9 (2026-11-14)",
+  "s5_parent_hex": "00000000000000809082000000000000",
+  "s6_child_hex": "00000000000000809082000000000080",
+  "s6_s7_edge_cost": 73,
+  "demand_classes": {
+    "c1": 2,
+    "c2": 2,
+    "c4": 0
+  },
+  "candidate_enumeration": "legal_candidates.py independent Bareiss 4x4 enumeration: 73 legal candidates, bit-exact with the published edge cost 73; candidate list recorded in class2-lane-cost73c-inflight-20261114.json",
+  "win7_d10": 0,
+  "win7_bits": [],
+  "refuted_d10": 73,
+  "capped": 0,
+  "total_nodes": 388889991,
+  "pilot_d6_controls": "loss=false at exactly 5,949 nodes in all 11 batch invocations (identical control lines)",
+  "terminal_stone_range_all": [
+    [
+      13,
+      17
+    ]
+  ],
+  "heaviest_bits": [
+    {
+      "bit": 120,
+      "nodes": 26150087
+    },
+    {
+      "bit": 32,
+      "nodes": 19876385
+    },
+    {
+      "bit": 67,
+      "nodes": 14451598
+    },
+    {
+      "bit": 81,
+      "nodes": 12241450
+    },
+    {
+      "bit": 20,
+      "nodes": 12226967
+    },
+    {
+      "bit": 41,
+      "nodes": 11011119
+    }
+  ],
+  "heaviest_fresh_rerun_node_exact": "bits 120 (26,150,087), 32 (19,876,385), 67 (14,451,598) re-solved fresh in a separate process after the sweep: node counts identical",
+  "raw_batches": "class2-lane-cost73c-raw-batch1..11-20261114.jsonl (73 candidate lines + pilot control per batch)",
+  "notes": "16th sterile child overall; second sterile child in the cost-73 band. All 73 REFUTED-D10 with cap 1e9.",
+  "interpretation_guard": "REFUTED-D10 is the absence of a winner-win-within-depth-10 in each 7-stone subtree; it is NOT a refutation of the child, and this record is not a claim about the 11x11 empty root / {49,60} / S2 {59,60} / class 2 / class 4 which remain UNKNOWN",
+  "unknown_status": "11x11 empty board, two-stone root {49,60}, S2 {59,60}, class 2, class 4: UNKNOWN"
+}
