@@ -1,6 +1,6 @@
 ---
 id: K0820
-title: "7xm q=9 / q=10 row-deficient witness bands — (7,9) witnesses 9..23 and witness-free 24..60 (M_{7,9} = 24 or >= 61), (7,10) witness-free band 19..40 confirmed by kissat and extended to 60 (M_{7,10} = 19 or >= 61)"
+title: "7xm q=9 / q=10 row-deficient witness bands — (7,9) witnesses 9..23 and witness-free 24..100 (M_{7,9} = 24 or >= 101), (7,10) witness-free band 19..40 confirmed by kissat and extended to 100 (M_{7,10} = 19 or >= 101)"
 kind: proposition
 status: computed
 topics: [rectangles, maximal-safe]
@@ -21,13 +21,13 @@ artifacts:
   note: "claims, method (def-mode completeness, lex soundness on the (7,10) band), verification protocol (controls, bit-exact fastsat calibration, dual witness verification, lex cross-encoding, determinism across env resets), results, scope and limits"
 - path: research/experiments/seven-row-q9-q10-bands-20261114/output/q9-witness-search/records.jsonl
   role: data
-  note: "50 records: SAT m=15..23 (witnesses dual-verified) + UNSAT m=24..60 (kissat def-no-lex, complete encoding; m=34..45 lean1.sh/sat2.js, m=46..60 lean2.sh/genfast.js) + def+lex cross-checks at m=24/33/52/60"
+  note: "91 records: SAT m=15..23 (witnesses dual-verified) + UNSAT m=24..100 (kissat def-no-lex, complete encoding; m=34..45 lean1.sh/sat2.js, m=46..100 lean2.sh/genfast.js) + def+lex cross-checks at m=24/33/52/60/100"
 - path: research/experiments/seven-row-q9-q10-bands-20261114/output/q9-witness-search/s7x23q9_none.witness.json
   role: data
   note: "largest-width (7,9) witness (55 stones at 7x23, rows 8,8,8,7,8,8,8); all 9 witnesses s7x15..23q9_none.witness.json dual-verified (sat.js verifyConfig + Python Fraction)"
 - path: research/experiments/seven-row-q9-q10-bands-20261114/output/q10-band/records.jsonl
   role: data
-  note: "44 records m=19..60 all UNSAT: fastsat calibration (bit-exact with seven-row-inband results.jsonl for m=19..40) + kissat 4.0.4 for m=19..51 (band1.sh, both solvers); m=52..60 kissat-only lean extension (lean2.sh/genfast.js) with def+lex cross-checks at 52/60"
+  note: "85 records m=19..100 all UNSAT: fastsat calibration (bit-exact with seven-row-inband results.jsonl for m=19..40) + kissat 4.0.4 for m=19..51 (band1.sh, both solvers); m=52..100 kissat-only lean extension (lean2.sh/genfast.js) with def+lex cross-checks at 52/60/100"
 - path: research/experiments/seven-row-q9-q10-bands-20261114/output/q10-band/summary.json
   role: data
   note: "aggregate: all 44 UNSAT, per-width conflicts of both solvers (m=19..51) and lean extension rows (m=52..60)"
@@ -55,20 +55,20 @@ evidence: "complete-encoding UNSAT instances (def mode is exactly 'exists row-de
    **m=15..23 に存在する**（満容量56石に対し55石・m=15のみ54石・すべて2系統独立検証
    PASS）。`seven-row-inband-families-20261114` の m=9..14 witness と合わせて
    witness 幅集合は **{9..23}** を含む。
-2. **(7,9)**: **m=24..60 の各行で行欠損極大配置は存在しない**（def単一節符号化・
+2. **(7,9)**: **m=24..100 の各行で行欠損極大配置は存在しない**（def単一節符号化・
    lexなし = 「ある行が≤7石の極大安全配置が存在」の完全符号化・kissat 4.0.4 が
-   全幅 UNSAT・m=24/33/52/60 は def+lex=H,V,HV の別符号化でも UNSAT。
-   m=34..45 は sat2.js (lean1.sh)、m=46..60 は genfast.js (lean2.sh・CNFは
+   全幅 UNSAT・m=24/33/52/60/100 は def+lex=H,V,HV の別符号化でも UNSAT。
+   m=34..45 は sat2.js (lean1.sh)、m=46..100 は genfast.js (lean2.sh・CNFは
    sat2.js と12サンプルでバイト一致) で生成）。よって witness-free 帯は
-   **{24..60}** を含み **M_{7,9} = 24 または M_{7,9} ≥ 61**
-   （M ∈ {24} ∪ [61, 613]・上界613はK0318代入）。
+   **{24..100}** を含み **M_{7,9} = 24 または M_{7,9} ≥ 101**
+   （M ∈ {24} ∪ [101, 613]・上界613はK0318代入）。
 3. **(7,10)**: `seven-row-inband-families-20261114` の fastsat UNSAT 帯 m=19..40
    （def+lex=H,V,HV）を **kissat 4.0.4 で独立確認**した（再生成CNFの fastsat
    conflicts が全22幅で bit-exact 一致により同一インスタンス性を保証）上で、
-   **帯を m=60 まで延長**した（41..51 は fastsat・kissat 両UNSAT、52..60 は
-   kissat 単独 (lean2.sh/genfast.js)・52/60 は lex 別符号化でも UNSAT）。
+   **帯を m=100 まで延長**した（41..51 は fastsat・kissat 両UNSAT、52..100 は
+   kissat 単独 (lean2.sh/genfast.js)・52/60/100 は lex 別符号化でも UNSAT）。
    witness 幅集合 {10..18}（同実験・2系統検証済み）と合わせ
-   **M_{7,10} = 19 または M_{7,10} ≥ 61**（M ∈ {19} ∪ [61, 587]・上界587はK0318代入）。
+   **M_{7,10} = 19 または M_{7,10} ≥ 101**（M ∈ {19} ∪ [101, 587]・上界587はK0318代入）。
 4. **genfast.js（censusメモリ壁の解消）**: sat2.js の全三つ組円censusは
    7×52 (n=364・C(n,3)≈800万) でコンテナメモリ上限を超え OOM (rc 137) する
    （7×51 は通過・CNF自体は8k vars/29k節と微小）。**q ≥ w+1 のもとで全 q点円の
@@ -99,9 +99,9 @@ conflicts が元実験 results.jsonl と全幅 bit-exact 一致。
 
 有限機械検証（census 完全性 — m≤45 は sat2.js、m≥46 は12サンプルでバイト一致
 検証済みの genfast.js — とソルバ正確性まで）。数論的証明ではない。
-M_{7,9}=24 の確定には m=61..612 の持続性（または K0342 型 tail 評価）が残り、
-M_{7,10}=19 の確定には m=61..586 が残る。witness 探索前線は **7×61 (q=9)** と
-**7×61 (q=10)** に移動。上界 613/587（K0318 代入）は不変。
+M_{7,9}=24 の確定には m=101..612 の持続性（または K0342 型 tail 評価）が残り、
+M_{7,10}=19 の確定には m=101..586 が残る。witness 探索前線は **7×101 (q=9)** と
+**7×101 (q=10)** に移動。上界 613/587（K0318 代入）は不変。
 
 ## 関連する未統合の源実験
 
@@ -128,3 +128,16 @@ q ≥ w+1 なら全 q点円の中心x座標が半整数（同一行ペアの垂�
 lex有無・w=5,6,7）。7×52 生成 2.7 秒・メモリ O(n²)。
 限界: q < w+1 では半整数中心保証が崩れるため assert で拒否（sat2.js を使う）。
 m=61..612 / 61..586 の持続性または K0342 型 tail 評価が exact M 決着の残課題。
+
+## 追記2 (2026-11-14 同日 第3ラウンド: 帯延長 24..100 / 19..100)
+
+第2ラウンド (24..60 / 19..60) からさらに **m=100 まで延長**（全幅 kissat UNSAT・
+q9 は13,260〜25,979・q10 は888〜3,727 conflicts・m=100 は両qとも def+lex=H,V,HV
+別符号化でも UNSAT（15,637 / 2,657））。**M_{7,9} ∈ {24} ∪ [101,613]**・
+**M_{7,10} ∈ {19} ∪ [101,587]**。q9 m=61..70 と q10 m=61..90 は実行環境リセット
+（3回目・290秒コマンドタイムアウト）を挟んでおり、**再生成の conflicts が
+リセット前の実行と全幅 bit-exact 一致**（cross-reset決定性の追加証拠・
+q10 83..90 は 2195/2214/2217/2422/2351/2415/2404/2326 が双方で一致）。
+統合コミット: 83553d21 (m=61..90) + 本ラウンド (m=91..100・summary/report/K0820/CSV/README/log)。
+教訓（再確認）: **バッチ実行が終わったら即 push**（リセットで m=61..90 の
+ローカル成果を一度喪失・決定性により復元）。

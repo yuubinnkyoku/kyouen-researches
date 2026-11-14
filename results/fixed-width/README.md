@@ -28,12 +28,12 @@
     {0},{1} は k×minpos 完全分解32点・合計 28,617,104 conflicts・lex=H 交差確認・陽性対照 5×18 SAT）。
     最小witness幅は 18（K0332・29石）。よって M∈{19,20,21} または ≥23。
     残るは 22..157 の持続性で、witness 探索の前線は 5×22。
-    (7,9)={24},61..613・(7,10)={19},61..587 は K0820（witness 7×9..7×23 / 7×10..7×18、
-    witness-free 帯 24..60（kissat・m=24/33/52/60 は lex 別符号化でも UNSAT・fastsat は 60s TIMEOUT の負記録あり）/
+    (7,9)={24},101..613・(7,10)={19},101..587 は K0820（witness 7×9..7×23 / 7×10..7×18、
+    witness-free 帯 24..100（kissat・m=24/33/52/60/100 は lex 別符号化でも UNSAT・fastsat は 60s TIMEOUT の負記録あり）/
     19
-..40 を fastsat較正 bit-exact + kissat で交叉確認し 41..51 を両ソルバで・52..60 を kissat 単独
+..40 を fastsat較正 bit-exact + kissat で交叉確認し 41..51 を両ソルバで・52..100 を kissat 単独
     （genfast.js・CNF は sat2.js と12サンプルでバイト一致・sat2.js の全三つ組censusは7×52でOOM）で延長・上界は K0318 代入 613/587）。
-    witness 探索の前線は 7×61 (q=9)・7×61 (q=10)。
+    witness 探索の前線は 7×101 (q=9)・7×101 (q=10)。
   - `separation-band`: 行分離公式 M_{w,q}=q−1 が全 m≥1 で成立する合成分離帯
     `q ≥ max(P(w), w)+1`（w=6..83・P(w) 確定幅。K0767 の系、K0776、K0784 と P(w) 確定値の合成。w=83 は q=84 を K0784、q≥85 を K0776 が覆う）。
     全安全局面で g(S)=(w·min(m,q−1)−|S|) mod2。
