@@ -12,11 +12,11 @@ Run in parallel with another lane on the same resume item. Results agree bit-exa
 - Controls: pilot d6 5,949 in every batch; heaviest bit16 re-run fresh
   node-exact (17,995,012); both WIN7 bits re-run fresh node-exact
   (9,877,894 / 6,388,802).
-- Raw JSONL batches pushed to `output/class4-lane-cost78b-raw-batch1..4-20261114.jsonl`
-  (note: at the repo `output/` root, whereas the other lane's identical raw
-  batches and sweep record live under
-  `research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/` — redundant
-  but consistent copies; the experiment-dir copies are canonical).
+- Raw JSONL batches were first pushed to the repo `output/` root, then removed
+  in a cleanup commit after verifying bit/loss/nodes field-by-field identical
+  to the parallel lane's canonical copies under
+  `research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/`
+  (experiment-dir copies are canonical; only `ms` timing fields differ).
 
 ## WIN7 certificates (independently extracted and verified here)
 
