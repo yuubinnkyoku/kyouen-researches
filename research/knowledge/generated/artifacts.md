@@ -13551,9 +13551,24 @@
 ## [research/experiments/witness-extension-kissat-20261114/output/kissat_runs.json](../../../research/experiments/witness-extension-kissat-20261114/output/kissat_runs.json)
 
 - [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) (data): kissat実行記録（制御・timeout記録込み）
+## [research/experiments/witness-extension-kissat-20261114/output/kissat_runs2.json](../../../research/experiments/witness-extension-kissat-20261114/output/kissat_runs2.json)
+
+- [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) (data): 第2弾kissat実行記録（M_{5,6}/M_{6,7}/M_{6,8}下界更新3件・timeout記録）
 ## [research/experiments/witness-extension-kissat-20261114/output/w37.json](../../../research/experiments/witness-extension-kissat-20261114/output/w37.json)
 
 - [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) (data): 6×12 q=8 37石witness（行構成 7,7,7,2,7,7）・2系統検証PASS
+## [research/experiments/witness-extension-kissat-20261114/output/w56_20.json](../../../research/experiments/witness-extension-kissat-20261114/output/w56_20.json)
+
+- [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) (data): 5×20 q=6 24石witness（行構成 4,5,5,5,5）・2系統検証PASS → M_{5,6} ≥ 21
+## [research/experiments/witness-extension-kissat-20261114/output/w56_21.json](../../../research/experiments/witness-extension-kissat-20261114/output/w56_21.json)
+
+- [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) (data): 5×21 q=6 24石witness（行構成 4,5,5,5,5）・2系統検証PASS → M_{5,6} ≥ 22
+## [research/experiments/witness-extension-kissat-20261114/output/w67_20.json](../../../research/experiments/witness-extension-kissat-20261114/output/w67_20.json)
+
+- [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) (data): 6×20 q=7 35石witness（行構成 6,6,5,6,6,6）・2系統検証PASS → M_{6,7} ≥ 21
+## [research/experiments/witness-extension-kissat-20261114/output/w68_18.json](../../../research/experiments/witness-extension-kissat-20261114/output/w68_18.json)
+
+- [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) (data): 6×18 q=8 41石witness（行構成 7,6,7,7,7,7）・2系統検証PASS → M_{6,8} ≥ 19
 ## [research/experiments/witness-extension-kissat-20261114/report.md](../../../research/experiments/witness-extension-kissat-20261114/report.md)
 
 - [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) (proof): 手法・拡張列挙の完全性根拠・制御・未解決の記録

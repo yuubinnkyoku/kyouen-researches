@@ -798,4 +798,4 @@
 | [K0812](../items/K0812-new-exceptional-primes-3719-3727.md) | p=3719・3727・3967・4211は等号A(p)=(p+3)/2を達成せず、単一CNFのDRAT証明書で監査済み（既知4素数の外側で新発見） | proposition | computed | maximum-safe, geometry, search-methods |
 | [K0813](../items/K0813-width2-5-circle-point-max-and-q9-q10-row-formula.md) | 幅2..5の円格子点数P(w)完全決定（4,6,8,8）・系としてw=5・q≥9の行分離 M_{5,q}=q−1 | proposition | proved | rectangles, geometry, variants |
 | [K0814](../items/K0814-attained-equality-3793-3803-3863.md) | p=3793・3803・3863は等号A(p)=(p+3)/2を達成する（サイズh+2の証人を独立整数幾何で監査） | proposition | computed | maximum-safe, geometry, search-methods |
-| [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) | 列追加拡張と外部SATソルバによる下界更新 — M_{6,5}≥30・M_{6,6}≥23・6×12 q=8最小極大≤37 | proposition | proved | rectangles, variants |
+| [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) | 列追加拡張と外部SATソルバによる下界更新 — M_{6,5}≥30・M_{6,6}≥23・M_{5,6}≥22・M_{6,7}≥21・M_{6,8}≥19・6×12 q=8最小極大≤37 | proposition | proved | rectangles, variants |
