@@ -1,0 +1,104 @@
+[
+ {
+  "band": "class2-lane-cost68d",
+  "child_hex": "00000000000000809122000000000000",
+  "bit": 26,
+  "root_hex": "00000000000000809122000004000000",
+  "verdict": "WIN7",
+  "rows": 40031,
+  "extraction_nodes": 17544277,
+  "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+  "rows_sorted_unique": true,
+  "root_check": {
+   "stones": 7,
+   "loser_mobility": 51,
+   "independent_enumeration_legal": 51,
+   "match": true
+  },
+  "sub_roots_verified": 51,
+  "sub_roots_pass": 51,
+  "union_missing": 0,
+  "union_extra": 0,
+  "terminal_range": [
+   13,
+   17
+  ],
+  "visited_states_across_subroots": 83984,
+  "winner_states": 54546,
+  "loser_states": 17480,
+  "loser_reply_edges": 78654,
+  "terminal_count": 11958,
+  "md5": "a97730c92710501c1b27a1d091ec38ef",
+  "sha256": "2b44dafdc0949c71375cd27e5893282ad88f27bb8d8161cb0f283700d65669fc",
+  "bytes": 1447768,
+  "extraction_ms": 51766
+ },
+ {
+  "band": "class2-lane-cost68d",
+  "child_hex": "00000000000000809122000000000000",
+  "bit": 34,
+  "root_hex": "00000000000000809122000400000000",
+  "verdict": "WIN7",
+  "rows": 49328,
+  "extraction_nodes": 15777994,
+  "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+  "rows_sorted_unique": true,
+  "root_check": {
+   "stones": 7,
+   "loser_mobility": 61,
+   "independent_enumeration_legal": 61,
+   "match": true
+  },
+  "sub_roots_verified": 61,
+  "sub_roots_pass": 61,
+  "union_missing": 0,
+  "union_extra": 0,
+  "terminal_range": [
+   13,
+   17
+  ],
+  "visited_states_across_subroots": 112010,
+  "winner_states": 71949,
+  "loser_states": 21088,
+  "loser_reply_edges": 99693,
+  "terminal_count": 18973,
+  "md5": "6c53c71e7b3922ca72cca3eb2135c59e",
+  "sha256": "826de9a833e89216c8d82503ece893ca4d9daf048c16199f8603def643f8c82b",
+  "bytes": 1784674,
+  "extraction_ms": 32496
+ },
+ {
+  "band": "class2-lane-cost68d",
+  "child_hex": "00000000000000809122000000000000",
+  "bit": 18,
+  "root_hex": "00000000000000809122000000040000",
+  "verdict": "WIN7",
+  "rows": 56442,
+  "extraction_nodes": 22442960,
+  "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+  "rows_sorted_unique": true,
+  "root_check": {
+   "stones": 7,
+   "loser_mobility": 60,
+   "independent_enumeration_legal": 60,
+   "match": true
+  },
+  "sub_roots_verified": 60,
+  "sub_roots_pass": 60,
+  "union_missing": 0,
+  "union_extra": 0,
+  "terminal_range": [
+   13,
+   17
+  ],
+  "visited_states_across_subroots": 122509,
+  "winner_states": 79043,
+  "loser_states": 23815,
+  "loser_reply_edges": 110385,
+  "terminal_count": 19651,
+  "md5": "8aeaf2b687bc033bbbdab2781d91471c",
+  "sha256": "3f1a618ebbcbe0f16116c7a44ae8fc5726758f72c6187dc32f17475e074316c5",
+  "bytes": 2038499,
+  "extraction_ms": 39663
+ }
+]

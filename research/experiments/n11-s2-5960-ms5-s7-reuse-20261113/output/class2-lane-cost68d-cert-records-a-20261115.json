@@ -1,0 +1,138 @@
+[
+ {
+  "band": "class2-lane-cost68d",
+  "child_hex": "00000000000000809122000000000000",
+  "bit": 108,
+  "root_hex": "00001000000000809122000000000000",
+  "verdict": "WIN7",
+  "rows": 27614,
+  "extraction_nodes": 4426756,
+  "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+  "rows_sorted_unique": true,
+  "root_check": {
+   "stones": 7,
+   "loser_mobility": 53,
+   "independent_enumeration_legal": 53,
+   "match": true
+  },
+  "sub_roots_verified": 53,
+  "sub_roots_pass": 53,
+  "union_missing": 0,
+  "union_extra": 0,
+  "terminal_range": [
+   13,
+   17
+  ],
+  "visited_states_across_subroots": 57536,
+  "winner_states": 37186,
+  "loser_states": 11866,
+  "loser_reply_edges": 52279,
+  "terminal_count": 8484,
+  "md5": "a4f5c370ba7513f7133eb3b471415863",
+  "sha256": "83ae1f3684a7a0ce39f34e24ff164d4080779cd4ff2609ccc02a1a03722ac789",
+  "bytes": 996144,
+  "extraction_ms": 8537
+ },
+ {
+  "band": "class2-lane-cost68d",
+  "child_hex": "00000000000000809122000000000000",
+  "bit": 47,
+  "root_hex": "00000000000000809122800000000000",
+  "verdict": "WIN7",
+  "rows": 29618,
+  "extraction_nodes": 6423355,
+  "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+  "rows_sorted_unique": true,
+  "root_check": {
+   "stones": 7,
+   "loser_mobility": 51,
+   "independent_enumeration_legal": 51,
+   "match": true
+  },
+  "sub_roots_verified": 51,
+  "sub_roots_pass": 51,
+  "union_missing": 0,
+  "union_extra": 0,
+  "terminal_range": [
+   13,
+   17
+  ],
+  "visited_states_across_subroots": 63071,
+  "winner_states": 40811,
+  "loser_states": 12351,
+  "loser_reply_edges": 57093,
+  "terminal_count": 9909,
+  "md5": "7e57eed9cbd93f8e966ec0756988db6b",
+  "sha256": "edec618c3a8cf6b3cdd8fed9d1a7961a0a8b067ccc8297cea71eb8b6edcd1190",
+  "bytes": 1071545,
+  "extraction_ms": 11852
+ },
+ {
+  "band": "class2-lane-cost68d",
+  "child_hex": "00000000000000809122000000000000",
+  "bit": 103,
+  "root_hex": "00000080000000809122000000000000",
+  "verdict": "WIN7",
+  "rows": 31183,
+  "extraction_nodes": 6704119,
+  "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+  "rows_sorted_unique": true,
+  "root_check": {
+   "stones": 7,
+   "loser_mobility": 53,
+   "independent_enumeration_legal": 53,
+   "match": true
+  },
+  "sub_roots_verified": 53,
+  "sub_roots_pass": 53,
+  "union_missing": 0,
+  "union_extra": 0,
+  "terminal_range": [
+   13,
+   17
+  ],
+  "visited_states_across_subroots": 65815,
+  "winner_states": 42480,
+  "loser_states": 13589,
+  "loser_reply_edges": 59788,
+  "terminal_count": 9746,
+  "md5": "f426b3f2a5783526b8bf168106ceb196",
+  "sha256": "dcb2585ae67fb2cf6268647ee6371548c281674228c7e8bc2bc3c1cfc944a692",
+  "bytes": 1127281,
+  "extraction_ms": 12990
+ },
+ {
+  "band": "class2-lane-cost68d",
+  "child_hex": "00000000000000809122000000000000",
+  "bit": 29,
+  "root_hex": "00000000000000809122000020000000",
+  "verdict": "WIN7",
+  "rows": 34356,
+  "extraction_nodes": 8861104,
+  "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+  "rows_sorted_unique": true,
+  "root_check": {
+   "stones": 7,
+   "loser_mobility": 52,
+   "independent_enumeration_legal": 52,
+   "match": true
+  },
+  "sub_roots_verified": 52,
+  "sub_roots_pass": 52,
+  "union_missing": 0,
+  "union_extra": 0,
+  "terminal_range": [
+   13,
+   17
+  ],
+  "visited_states_across_subroots": 77304,
+  "winner_states": 49821,
+  "loser_states": 14985,
+  "loser_reply_edges": 69929,
+  "terminal_count": 12498,
+  "md5": "8001143a085f84717de9d42bdea8b168",
+  "sha256": "33c33bd3cb997c900df28ac49243726c755233faa470d6206d33d6bbe5f5db3e",
+  "bytes": 1242315,
+  "extraction_ms": 34404
+ }
+]
