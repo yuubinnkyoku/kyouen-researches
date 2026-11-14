@@ -2730,6 +2730,30 @@
 ## [research/experiments/four-q4-residual-grundy-20261018/verify.py](../../../research/experiments/four-q4-residual-grundy-20261018/verify.py)
 
 - [K0443](../items/K0443-four-residual-edges-rank4-nimber-five.md) (verifier): Pythonの点集合ビットマスクによる完全再帰
+## [research/experiments/four-six-row-q4-q5-witness-search-20261114/output/controls/records.jsonl](../../../research/experiments/four-six-row-q4-q5-witness-search-20261114/output/controls/records.jsonl)
+
+- [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (data): 較正11 records: 既知の確定閾値6件を全て再現（(3,5) 11SAT/12UNSAT, (3,6) 8/9, (4,6) 15/16, (4,7) 12/13, (4,8) 10/11, (3,4) m=23 SAT 8石 rows[3,2,3]）
+## [research/experiments/four-six-row-q4-q5-witness-search-20261114/output/q4-w4-def-search/records.jsonl](../../../research/experiments/four-six-row-q4-q5-witness-search-20261114/output/q4-w4-def-search/records.jsonl)
+
+- [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (data): 30 records: m=4..28 sat2+kissat SAT (m=8以降は単一欠損11石, conflicts 0..12,475 非単調), m=29/31/33/34 constructive SAT (空列追加/シフト, m=33 off=0, m=34 off=1, m=32ベース), m=30 SAT 105.1s/119,905, m=32 SAT 134.5s/122,164; m=29 60s INDET 38,235 は構成的SATで解決
+## [research/experiments/four-six-row-q4-q5-witness-search-20261114/output/q4-w5-def-search/records.jsonl](../../../research/experiments/four-six-row-q4-q5-witness-search-20261114/output/q4-w5-def-search/records.jsonl)
+
+- [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (data): 34 records m=5..36 all SAT dual-verified: 石数8..14（m=14以降 cap 14=w(q-1)-1）, m=25..33 は lex なし符号化でも SAT（witness としては等価に有効）, m=34 19.1s/2,623, m=35 72.6s/8,521, m=36 104.9s/10,644; m>=37 は sat2.js census CNF生成 OOM（rc=1 行は枝刈り済み）
+## [research/experiments/four-six-row-q4-q5-witness-search-20261114/output/q4-w6-def-search/records.jsonl](../../../research/experiments/four-six-row-q4-q5-witness-search-20261114/output/q4-w6-def-search/records.jsonl)
+
+- [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (data): 26 records m=6..31 all SAT dual-verified: m=23以降単一欠損17石, m=31 4.1s/131 conflicts, 全インスタンス <7s; m>=32 census OOM
+## [research/experiments/four-six-row-q4-q5-witness-search-20261114/output/q5-w4-def-search/records.jsonl](../../../research/experiments/four-six-row-q4-q5-witness-search-20261114/output/q5-w4-def-search/records.jsonl)
+
+- [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (data): 16 records: m=5..19 all SAT dual-verified (m=12以降単一欠損15石, m=19 14.2s/262,918), m=20 INDET 210s/3,296,257（未解決前線・不在主張ではない）; genfast.js PAIRTHRESH=12 は (4,5) で不正確なため sat2.js 全三つ組census を使用
+## [research/experiments/four-six-row-q4-q5-witness-search-20261114/output/q5-w5-def-search/records.jsonl](../../../research/experiments/four-six-row-q4-q5-witness-search-20261114/output/q5-w5-def-search/records.jsonl)
+
+- [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (data): 20 records: m=5..23 all SAT dual-verified (m=10以降単一欠損19石, m=23 62.9s/508,466), m=24 INDET 90s/698,672（前線）
+## [research/experiments/four-six-row-q4-q5-witness-search-20261114/output/ts-verify-cross-family.json](../../../research/experiments/four-six-row-q4-q5-witness-search-20261114/output/ts-verify-cross-family.json)
+
+- [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (data): 第3系統（純TS/BigInt, verify_independent.ts verbatim）で5前線 witness 全て PASS safe+maximal+row-deficient: (4,4) m=34 構成, (5,4) m=36, (6,4) m=31, (4,5) m=19, (5,5) m=23 — 3系統検証
+## [research/experiments/four-six-row-q4-q5-witness-search-20261114/report.md](../../../research/experiments/four-six-row-q4-q5-witness-search-20261114/report.md)
+
+- [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (proof): claims・手法・較正・honest negatives（OOM壁・INDET前線）・構造観察・次課題
 ## [research/experiments/frontier-geometry-2026-10-05/density-probe-independent-audit.json](../../../research/experiments/frontier-geometry-2026-10-05/density-probe-independent-audit.json)
 
 - [K0097](../items/K0097-integer-residue-parabola-bounds.md) (data): 証明済み必要合同式と直接整数行列式で全選択四点を検査
@@ -8782,6 +8806,9 @@
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 6証明書反映後frontier 1,019/6,828/538,143と別個のreceipt-unclosable S5を記録
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): cost69e 10 receipt・schema v2の独立再計算（merged baseline 1012から1023）
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost69f-certificate-backed-recompute-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost69f-certificate-backed-recompute-20261115.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): cost69fの9 receiptすべてを証明書済みとして反映したfrontier派生出力
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost71b-recompute-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost71b-recompute-20261115.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): cost-70c後からcost-71bの3 receiptを追加したmanifest-level frontier再計算
@@ -8872,6 +8899,9 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-win7-certificates-20261114.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-win7-certificates-20261114.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): cost65eのbit107・bit7のWIN7証明書receiptを統合。bit7は独立検証済みで、未証明候補一覧から除外
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost69f-9cert-python-independent-audit-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost69f-9cert-python-independent-audit-20261115.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): 9/9 PASS。495,585戦略行・509 sub-root・union 0/0・終局石数13..17・records全フィールド一致
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost69f-inflight-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost69f-inflight-20261115.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (manifest): 費用69のS6 childと69合法候補の当初claim。歴史的なin-flight記録
@@ -8905,6 +8935,12 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost69f-sweep-audit-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost69f-sweep-audit-20261115.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 2026-11-15 cost69fの69候補raw sweep完了。WIN7-D10 9、REFUTED-D10 60、打切り0、112752229節点。9 WIN rootはD4軌道9個。証明書未抽出のためS6 frontierへの寄与0。 cost69f 69候補の全raw batch監査。9 WIN7-D10・60 REFUTED-D10・打切り0、D4 root照合
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost69f-win7-certificates-2-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost69f-win7-certificates-2-20261115.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (manifest): cost69fの9 WIN7-D10証明書を統合した現行記録。uncertified_bits_afterは空
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost69g-demand-reconciliation-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost69g-demand-reconciliation-20261115.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): 両側とも誤りなし。distinct open parents=3 と per-class demand c1=0,c2=2,c4=2 の意味論的和解とコントロール照合
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70c-raw-sweep-audit-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70c-raw-sweep-audit-20261115.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): cost70cの13候補・節点100,935,666・mobility・既存証明書照合・mid-flight閉鎖
@@ -8998,6 +9034,9 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/cost69e-bit21-bigint-independent-verification-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/cost69e-bit21-bigint-independent-verification-20261115.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 22,261行・45/45部分木・欠落/余分0・終局石数13〜17
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/cost69f-second-independent-verification-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/cost69f-second-independent-verification-20261115.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): bits2/94/109/119の第二独立検査結果と保存hashを記録
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/ms5_s7_reuse_candidates_part1.csv](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/ms5_s7_reuse_candidates_part1.csv)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 候補S7表 s7_hex,s6_hex,move,cat（1=既知LOSS子、2=プール候補）。part1..3で計8,763行
@@ -9094,6 +9133,12 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_class2_third_counterexample.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_class2_third_counterexample.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): 64証明書による六石LOSSと3つの五石SECOND_WIN、残作業を2幾何判定で照合
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost69f_second_independent_verification_20261115.mjs](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost69f_second_independent_verification_20261115.mjs)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): split証明書の再検査、hash、4x4整数行列式、D4親被覆、証明書済みfrontierを再現
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost69f_win7_certs_20261115.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost69f_win7_certs_20261115.py)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): 全9 cost69f WIN7証明書のPython第三完全独立監査。整数Bareiss 4x4行列式・repo検証器不使用・敵全合法手展開・v15 anchor照合込み
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost70c_raw_sweep.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost70c_raw_sweep.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): cost70cの70候補をBareiss整数行列式で再列挙し、13 WIN7-D10 rootの合法手数と既存記録を照合
@@ -9124,6 +9169,9 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost69e_20261115.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost69e_20261115.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (source): S5親keyを文字列で一貫して扱うよう修正。receipt-unclosable S5とbest coverable S5を分離
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/reconcile_cost69g_demand_20261115.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/reconcile_cost69g_demand_20261115.py)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): cost69g子の需要不整合をmanifest+rankingからD4幾何再導出で解消。classesはbitmaskで二重役割S5(classes=6)がc2とc4の両方に需要を作る
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/verify_bit7_win7_cert.ts](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/verify_bit7_win7_cert.ts)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): --certと--rootを指定して任意のWIN7証明書を独立再検査できる汎用整数Bareiss検証器
@@ -13130,21 +13178,51 @@
 ## [research/experiments/seven-row-q10-band-closure-201-586-20261115/output/q10-band/records.jsonl](../../../research/experiments/seven-row-q10-band-closure-201-586-20261115/output/q10-band/records.jsonl)
 
 - [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md) (data): 386 records m=201..586 all UNSAT (genfast3 chord-pair census + kissat 4.0.4 def-mode, conflicts 1,324..4,623, INDET 0, 200s cap): completes the (7,10) witness-free band 19..586; per-width raw kissat logs in output/q10-band/raw-logs/
+## [research/experiments/seven-row-q4-band-41-20261115/output/records.jsonl](../../../research/experiments/seven-row-q4-band-41-20261115/output/records.jsonl)
+
+- [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (data): 3 records: (7,4) m=41 SAT dual-verified (281 conflicts, 8.7M clauses, 20-stone witness rows [3,3,3,3,3,3,2]) - M_{7,4} lower bound 41 -> 42, frontier 7x42; m=42 and m=50 honest kissat OOM negatives (solver RAM wall ~9M clauses in the 2026-11-15 container, generation succeeded - not absence claims); includes the sat3 >=q-only dedup fix (output-invariant, byte-identity re-validated incl. preserved m=28/m=40 CNFs)
+## [research/experiments/seven-row-q4-band-42-56-20261115/README.md](../../../research/experiments/seven-row-q4-band-42-56-20261115/README.md)
+
+- [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (proof): 7x42..7x56 の20石行欠損極大安全配置、M_{7,4}>=57 の有限証拠と探索限界
+## [research/experiments/seven-row-q4-band-42-56-20261115/output/records.jsonl](../../../research/experiments/seven-row-q4-band-42-56-20261115/output/records.jsonl)
+
+- [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (data): m=42..56 の15幅の配置再利用関係と検証状態
+## [research/experiments/seven-row-q4-band-42-56-20261115/output/search_runs.json](../../../research/experiments/seven-row-q4-band-42-56-20261115/output/search_runs.json)
+
+- [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (data): 6つのseeded SA探索とm=57の未発見試行
+## [research/experiments/seven-row-q4-band-42-56-20261115/output/verification.json](../../../research/experiments/seven-row-q4-band-42-56-20261115/output/verification.json)
+
+- [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (data): 全15幅の安全性・極大性・行欠損を整数演算で独立検査
+## [research/experiments/seven-row-q4-band-42-56-20261115/output/witnesses.json](../../../research/experiments/seven-row-q4-band-42-56-20261115/output/witnesses.json)
+
+- [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (data): m=42,44,45,47,50,53 の6基礎配置
+## [research/experiments/seven-row-q4-band-42-56-20261115/scripts/search_seeded.js](../../../research/experiments/seven-row-q4-band-42-56-20261115/scripts/search_seeded.js)
+
+- [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (source): 既存witnessを種にした決定的な貪欲極大化・焼きなまし探索
+## [research/experiments/seven-row-q4-band-42-56-20261115/scripts/verify_witnesses.py](../../../research/experiments/seven-row-q4-band-42-56-20261115/scripts/verify_witnesses.py)
+
+- [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (verifier): 探索censusを使わないPython任意精度整数による安全性・極大性検証
 ## [research/experiments/seven-row-q4-extension-band-20261114/output/verification.json](../../../research/experiments/seven-row-q4-extension-band-20261114/output/verification.json)
 
 - [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (data): per-width exact verification records m=22..35 (safe + maximal + row-deficient PASS, uncovered 0, maxCirc/maxLine 3), configs C22/CA/CB with contiguous coverage 22/31/35, curve counts, negative control (4-collinear correctly unsafe), provenance
 ## [research/experiments/seven-row-q4-extension-band-20261114/output/witnesses/s7x22q4_none.witness.json](../../../research/experiments/seven-row-q4-extension-band-20261114/output/witnesses/s7x22q4_none.witness.json)
 
-- [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (data): width-22 witness = the m=21 witness stones (free empty-column extension); s7x23..31q4_none.witness.json = 20-stone config CA (maxX=22, coverage 31, rows [3,3,3,3,3,3,2]); s7x32..35q4_none.witness.json = 20-stone config CB (maxX=26, coverage 35); all third-system verified (tsVerify), jsVerify/pyVerify re-verification pending
+- [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (data): width-22 witness = the m=21 witness stones (free empty-column extension); s7x23..31q4_none.witness.json = 20-stone config CA (maxX=22, coverage 31, rows [3,3,3,3,3,3,2]); s7x32..35q4_none.witness.json = 20-stone config CB (maxX=26, coverage 35); all third-system verified (tsVerify); jsVerify/pyVerify re-verification complete (m=22..27 frontier-20261115 stone-identical, m=28..35 sat3-20261115 independent witnesses, constructive files themselves js+py re-verified 14/14 by seven-row-q5-q6-frontier-row-split-20261115)
 ## [research/experiments/seven-row-q4-extension-band-20261114/report.md](../../../research/experiments/seven-row-q4-extension-band-20261114/report.md)
 
 - [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (proof): blocking-coverage extension lemma, constructive extension of the q=4 band to m=22..35 without SAT (free empty-column extension of the m=21 witness to 22; greedy adds + deterministic hill-climb to 23..35), exact per-width verification, honest scope (heuristic search; widths >= 36 unswept; M in [36,1929])
 ## [research/experiments/seven-row-q4-extension-band-20261114/scripts/extend_band.ts](../../../research/experiments/seven-row-q4-extension-band-20261114/scripts/extend_band.ts)
 
 - [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (verifier): pure TS/BigInt constructive extension + exact verification script (third independent system, no repo code, no SAT); regenerates and re-verifies the whole band 22..35 from the three configs
+## [research/experiments/seven-row-q4-extension-band-sat3-20261115/output/records.jsonl](../../../research/experiments/seven-row-q4-extension-band-sat3-20261115/output/records.jsonl)
+
+- [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (data): 9 records: (7,4) m=28..35 all SAT (kissat 36-537 conflicts), decoded 20-stone witnesses dual-verified (js+py), row multiset {3,3,3,3,3,3,2} same as the constructive band but independently placed; m=35 lex=H,V,HV cross-encoding SAT (314 conflicts) dual-verified; sat3.js streaming census resolves the sat2.js 7x28 census OOM wall; output/calibration.jsonl: m=22..27 q4 reproduction (0 conflicts, witness stones 6/6 identical to the published records) + (7,5) m=23 kissat calibration 1,200 conflicts bit-exact
+## [research/experiments/seven-row-q4-extension-band-sat3-20261115/scripts/sat3.js](../../../research/experiments/seven-row-q4-extension-band-sat3-20261115/scripts/sat3.js)
+
+- [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (verifier): streaming all-triples census generator, DIMACS byte-identical to sat2.js (K0810 encode core verbatim: counter/totalizer/lexLeader/CLI): clause streaming to disk + first-encounter circle emission + O(w) row-quadratic point scan; unblocks q<=w SAT search at 7x28+ (gen ~3-5s per width at m=28..35, CNF 103MB at m=35); 9/9 control cmp MATCH vs sat2.js
 ## [research/experiments/seven-row-q4-q6-witness-frontier-20261115/output/records.jsonl](../../../research/experiments/seven-row-q4-q6-witness-frontier-20261115/output/records.jsonl)
 
-- [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (data): 9 records: (7,4) m=22..27 all SAT 0 conflicts dual-verified (18 stones [3,3,3,3,3,2,1] at 22; 20 stones [3,3,3,3,3,3,2] at 23..27, matching the constructive free-extension and config CA) - completes the jsVerify/pyVerify re-verification of the constructive band for m=22..27; (7,5) m=23 SAT 1,200 conflicts bit-exact with the published record (calibration); (7,5) 7x32 INDET 329,844 conflicts / 200s and (7,6) 7x27 INDET 744,027 conflicts / 200s honest frontier negatives (not absence claims); sat2.js all-triples census OOM (rc 137, 2560MB heap) at 7x28 q=4 - SAT-based q4 extension blocked at m=28
+- [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (data): 9 records: (7,4) m=22..27 all SAT 0 conflicts dual-verified (18 stones [3,3,3,3,3,2,1] at 22; 20 stones [3,3,3,3,3,3,2] at 23..27, matching the constructive free-extension and config CA) - completes the jsVerify/pyVerify re-verification of the constructive band for m=22..27; (7,5) m=23 SAT 1,200 conflicts bit-exact with the published record (calibration); (7,5) 7x32 INDET 329,844 conflicts / 200s and (7,6) 7x27 INDET 744,027 conflicts / 200s honest frontier negatives (not absence claims; both resolved SAT by seven-row-q5-q6-frontier-row-split-20261115 row-splits); sat2.js all-triples census OOM (rc 137, 2560MB heap) at 7x28 q=4 - SAT-based q4 extension blocked at m=28
 ## [research/experiments/seven-row-q4-q6-witness-search-20261114/output/q4-def-search/records.jsonl](../../../research/experiments/seven-row-q4-q6-witness-search-20261114/output/q4-def-search/records.jsonl)
 
 - [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (data): 11 records m=4..14 all SAT dual-verified 0 conflicts: 8..15 stones, deficiency 13..6, [3,3,3,3,1,1,1]-type at m=12..14; raw kissat output for m=14 included
@@ -13163,6 +13241,18 @@
 ## [research/experiments/seven-row-q4-q6-witness-search-20261114/report.md](../../../research/experiments/seven-row-q4-q6-witness-search-20261114/report.md)
 
 - [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (proof): claims, per-family results tables, method (sat2.js all-triples census at q<=w, m>=q minimum width), dual verification protocol, honest unswept frontiers, scope and limits
+## [research/experiments/seven-row-q4-witness-band-36-40-20261115/output/records.jsonl](../../../research/experiments/seven-row-q4-witness-band-36-40-20261115/output/records.jsonl)
+
+- [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (data): 5 records: (7,4) m=36..40 all SAT (kissat 117..402 conflicts, 200s cap, sat3-generated CNFs), decoded 20-stone witnesses dual-verified (js+py), row multiset {3,3,3,3,3,3,2}; extends the witness band beyond the constructive limit m=35; M_{7,4} lower bound 36 -> 41 (M in [41,1929]); frontier now 7x41 (untested, not an absence claim); sat3 dedup Set OOMs at m=50 generation (>=q-only key registration is the next fix, output-invariant)
+## [research/experiments/seven-row-q5-q6-frontier-row-split-20261115/output/q4band-witness-dual-verification/records.jsonl](../../../research/experiments/seven-row-q5-q6-frontier-row-split-20261115/output/q4band-witness-dual-verification/records.jsonl)
+
+- [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (data): jsVerify (sat.js verifyConfig) + pyVerify (Python Fraction) on the published constructive witness files s7x22..35q4_none.witness.json of seven-row-q4-extension-band-20261114: 14/14 PASS (m=22 18 stones [3,3,3,3,3,2,1], m=23..35 20 stones [3,3,3,3,3,3,2]) - completes the four-way verification of the constructive files themselves (independent of the sat3-20261115 SAT witnesses)
+## [research/experiments/seven-row-q5-q6-frontier-row-split-20261115/output/q5-m32-row-split/records.jsonl](../../../research/experiments/seven-row-q5-q6-frontier-row-split-20261115/output/q5-m32-row-split/records.jsonl)
+
+- [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (data): (7,5) m=32 rowY=0 rowfixed SAT 129,923 conflicts (250s cap), 27-stone single-deficiency witness rows [3,4,4,4,4,4,4] js+py dual-verified; resolves the 7x32 frontier negative (frontier-20261115: 200s OR INDET 329,844); M_{7,5} >= 33, frontier moves to 7x33
+## [research/experiments/seven-row-q5-q6-frontier-row-split-20261115/output/q6-m27-row-split/records.jsonl](../../../research/experiments/seven-row-q5-q6-frontier-row-split-20261115/output/q6-m27-row-split/records.jsonl)
+
+- [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (data): (7,6) m=27: def-mode OR INDET 175s (703,590 conflicts), rowY=0/1/2 INDET 250s (989,735 / 1,078,304 / 1,074,595), rowY=3 SAT 230,973 conflicts - 34-stone single-deficiency witness rows [5,5,5,4,5,5,5] js+py dual-verified; resolves the 7x27 frontier negative (frontier-20261115: 200s OR INDET 744,027); M_{7,6} >= 28, frontier moves to 7x28; INDET entries are honest negatives (not absence claims)
 ## [research/experiments/seven-row-q7-witness-search-20261114/output/def-search/records.jsonl](../../../research/experiments/seven-row-q7-witness-search-20261114/output/def-search/records.jsonl)
 
 - [K0826](../items/K0826-seven-row-q7-deficient-witness-lower-bound.md) (data): 19 records: SAT m=7..25 witnesses dual-verified (m=7..14 deep deficiency 30..41 stones, m=15..24 single-deficiency 41 stones) + m=25 OR-instance INDET (2,478,476 conflicts at 240s cap — honest negative)
@@ -14541,6 +14631,9 @@
 ## [research/log/2026-11-15-n11-class2-cost69e-bit21-bigint-independent-verification.md](../../../research/log/2026-11-15-n11-class2-cost69e-bit21-bigint-independent-verification.md)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): bit21 WIN7証明書の独立BigInt検査記録
+## [research/log/2026-11-15-n11-class2-cost69f-second-independent-verification.md](../../../research/log/2026-11-15-n11-class2-cost69f-second-independent-verification.md)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): 4証明書の第二検査、根合法手数の別方式照合、frontier証拠等級更新
 ## [research/log/2026-11-15-n11-class2-cost69f-sweep-complete-raw-audit.md](../../../research/log/2026-11-15-n11-class2-cost69f-sweep-complete-raw-audit.md)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): cost69f 69候補完了の集計、D4重複監査、証明境界
@@ -14556,6 +14649,12 @@
 ## [research/log/2026-11-15-n11-class2-cost72-partial-batches1-5-audit.md](../../../research/log/2026-11-15-n11-class2-cost72-partial-batches1-5-audit.md)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): cost69e v2とcost70c/71bのfrontier基準差、およびcost72部分監査を記録
+## [research/log/2026-11-15-n11-class2-lane-cost69f-python-independent-audit-and-69g-demand-reconciliation.md](../../../research/log/2026-11-15-n11-class2-lane-cost69f-python-independent-audit-and-69g-demand-reconciliation.md)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): Python第三監査と69g需要和解の実行記録
+## [research/log/2026-11-15-n11-class2-lane-cost69f-remaining-certificates.md](../../../research/log/2026-11-15-n11-class2-lane-cost69f-remaining-certificates.md)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): cost69f残り4証明書の抽出・独立検証と9/9完了の記録
 ## [research/log/2026-11-15-n11-class2-warm-multiband-loss-conflict-audit.md](../../../research/log/2026-11-15-n11-class2-warm-multiband-loss-conflict-audit.md)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): 2026-11-15 warm multiband証明書の範囲限定WIN/LOSS衝突監査

@@ -515,7 +515,7 @@ artifacts:
   role: verifier
   note: split証明書の再検査、hash、4x4整数行列式、D4親被覆、証明書済みfrontierを再現
 - path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/cost69f-second-independent-verification-20261115.json
-  role: audit
+  role: verifier
   note: bits2/94/109/119の第二独立検査結果と保存hashを記録
 - path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost69f-certificate-backed-recompute-20261115.json
   role: data
@@ -527,13 +527,13 @@ artifacts:
   role: verifier
   note: 全9 cost69f WIN7証明書のPython第三完全独立監査。整数Bareiss 4x4行列式・repo検証器不使用・敵全合法手展開・v15 anchor照合込み
 - path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost69f-9cert-python-independent-audit-20261115.json
-  role: audit
+  role: verifier
   note: 9/9 PASS。495,585戦略行・509 sub-root・union 0/0・終局石数13..17・records全フィールド一致
 - path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/reconcile_cost69g_demand_20261115.py
   role: verifier
   note: cost69g子の需要不整合をmanifest+rankingからD4幾何再導出で解消。classesはbitmaskで二重役割S5(classes=6)がc2とc4の両方に需要を作る
 - path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost69g-demand-reconciliation-20261115.json
-  role: audit
+  role: verifier
   note: 両側とも誤りなし。distinct open parents=3 と per-class demand c1=0,c2=2,c4=2 の意味論的和解とコントロール照合
 - path: research/log/2026-11-15-n11-class2-lane-cost69f-python-independent-audit-and-69g-demand-reconciliation.md
   role: log

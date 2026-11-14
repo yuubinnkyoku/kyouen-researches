@@ -674,6 +674,7 @@
 - ← depends_on [K0069](../items/K0069-two-row-all-lengths-strong-solution.md)
 - ← supports [K0796](../items/K0796-two-row-m24-stabilization-nine.md): 十分長さT_2=9が最小であることを確定（真の安定化長と一致）
 - ← depends_on [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md): (7,4) upper bound T_7 = 3+2{C(19,3)-6} = 1929 by the general q=4 parity theorem (all maximals 3w stones, g=(3w-|S|) mod2 for m >= T_w); matches K0318 substitution U=1929
+- ← depends_on [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md): q=4 の上界 T_4=237, T_5=567, T_6=1113（全局面偶奇式の一般上界; K0318 curve-packing 代入でも同一値）
 
 ## [K0069](../items/K0069-two-row-all-lengths-strong-solution.md) 標準二行盤は全mで強解決、m≥6の空盤は後手勝ち
 
@@ -1724,6 +1725,7 @@
 - ← depends_on [K0825](../items/K0825-seven-row-q8-deficient-witness-lower-bound.md): upper bound U_{7,8}=651 by curve-packing substitution (w7_upper_bounds.json of seven-row-inband-families-20261114)
 - ← depends_on [K0826](../items/K0826-seven-row-q7-deficient-witness-lower-bound.md): upper bound U_{7,7}=708 by curve-packing substitution (w7_upper_bounds.json of seven-row-inband-families-20261114)
 - ← depends_on [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md): upper bounds U_{7,6}=862, U_{7,5}=1142 by curve-packing substitution (w7_upper_bounds.json of seven-row-inband-families-20261114)
+- ← depends_on [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md): q=5 の上界 U_{4,5}=140, U_{5,5}=336（curve-packing 代入上界; curve_packing_fixed_width.py bound() で本レーンで再計算・一致確認済み: w4q5 packing_U=140, w5q5 packing_U=336）
 
 ## [K0319](../items/K0319-misere-direct-sum-normal-grundy-rule.md) swap則が全後続局面で成り立つ部品のmisère直和は通常Grundy値だけで解ける
 
@@ -4913,6 +4915,7 @@
 - ← depends_on [K0826](../items/K0826-seven-row-q7-deficient-witness-lower-bound.md): census + sequential-counter/maximality core used verbatim (sat.js/sat2.js); def-mode single clause is the complete encoding of 'total < 42 iff some row <= 5'
 - ← depends_on [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md): census + sequential-counter/maximality core used verbatim (sat.js/sat2.js); def-mode single clause is the complete encoding of 'total < 7(q-1) iff some row <= q-2'
 - ← depends_on [K0829](../items/K0829-six-row-q8-m21-deficient-nonexistence.md): census (circleABC integer triples, line pairs) and the sequential-counter/maximality core used verbatim (sat.js / sat2.js); the rowfixed unit clause is the only addition
+- ← depends_on [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md): sat2.js def-mode 完全符号化を verbatim 使用（全三つ組census・逐次カウンタ・極大性・lex=H,V,HVHV）; witness の検証にも sat.js verifyConfig（census不使用）を使用
 
 ## [K0811](../items/K0811-sa-row-deficient-witnesses.md) SA探索による行欠損極大witness — M_{6,5}≥29・M_{6,6}≥22・M_{5,6}≥19（K0810の下界を更新・第2弾/第3弾で延長）
 
@@ -5048,12 +5051,13 @@
 - → depends_on [K0825](../items/K0825-seven-row-q8-deficient-witness-lower-bound.md): same machinery and runner as the (7,8) search; rowY fixed-row split re-validated at q=7 (cracked the m=25 OR-instance wall); sat2.js is the only generator here since genfast.js requires q >= w+1
 - ← depends_on [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md): same machinery and runner as the (7,7) search (same session, same binary); q <= w families confirmed to have continuous witness bands from m=q
 
-## [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) 7xm q=4,5,6 row-deficient witness bands — witnesses 7x4..7x35 (q=4; 4..21 SAT, 22..35 constructive extension), 7x5..7x31 (q=5), 7x6..7x26 (q=6); M_{7,4} >= 36, M_{7,5} >= 32, M_{7,6} >= 27; first results for the three families
+## [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) 7xm q=4,5,6 row-deficient witness bands — q=4: 7x4..7x56, q=5: 7x5..7x32, q=6: 7x6..7x27; M_{7,4} >= 57, M_{7,5} >= 33, M_{7,6} >= 28
 
 - → depends_on [K0810](../items/K0810-sat-row-deficient-witnesses.md): census + sequential-counter/maximality core used verbatim (sat.js/sat2.js); def-mode single clause is the complete encoding of 'total < 7(q-1) iff some row <= q-2'
 - → depends_on [K0068](../items/K0068-standard-fixed-width-parity-threshold.md): (7,4) upper bound T_7 = 3+2{C(19,3)-6} = 1929 by the general q=4 parity theorem (all maximals 3w stones, g=(3w-|S|) mod2 for m >= T_w); matches K0318 substitution U=1929
 - → depends_on [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md): upper bounds U_{7,6}=862, U_{7,5}=1142 by curve-packing substitution (w7_upper_bounds.json of seven-row-inband-families-20261114)
 - → depends_on [K0826](../items/K0826-seven-row-q7-deficient-witness-lower-bound.md): same machinery and runner as the (7,7) search (same session, same binary); q <= w families confirmed to have continuous witness bands from m=q
+- ← depends_on [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md): 7行 q<=w 3ファミリーと同じ手法・同じ観察（m=q から連続帯・単一欠損 w(q-1)-1 石・構成的延伸は前線を一部だけ越える）; verify_independent.ts（第3系統）を verbatim 使用
 
 ## [K0829](../items/K0829-six-row-q8-m21-deficient-nonexistence.md) 6x21 q=8 row-deficient maximal nonexistence (all 3 row-mirror rowY classes UNSAT) — witness-free width set of (6,8) extends to {19,20,21}, M_{6,8} ∈ {19,20,21} or >= 23
 
@@ -5080,3 +5084,10 @@
 
 - → generalizes [K0824](../items/K0824-higher-dimensional-fiber-trace-reduction.md): K0824の超平面・球面に対するq>2|B|縮約を、各ファイバー上の次数が高々tである多項式超曲面へ一般化する。K0824のq=2|B|境界反例や超平面跡列挙補題を置き換えるものではない
 - → supports [K0504](../items/K0504-geometric-rule-variant-comparison.md): 多項式超曲面変種のq>t|B|領域を解決する。q≤t|B|、特に補間が効くq≤|B|領域は未解決のまま
+
+## [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) 4〜6行 q=4,5 行欠損witness帯 — (4,4) m=4..34, (5,4) m=5..36, (6,4) m=6..31, (4,5) m=5..19, (5,5) m=5..23 全幅SAT・5前線とも3系統検証; M_{4,4}>=35, M_{5,4}>=37, M_{6,4}>=32, M_{4,5}>=20, M_{5,5}>=24; 5ファミリー初の結果
+
+- → depends_on [K0810](../items/K0810-sat-row-deficient-witnesses.md): sat2.js def-mode 完全符号化を verbatim 使用（全三つ組census・逐次カウンタ・極大性・lex=H,V,HVHV）; witness の検証にも sat.js verifyConfig（census不使用）を使用
+- → depends_on [K0068](../items/K0068-standard-fixed-width-parity-threshold.md): q=4 の上界 T_4=237, T_5=567, T_6=1113（全局面偶奇式の一般上界; K0318 curve-packing 代入でも同一値）
+- → depends_on [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md): q=5 の上界 U_{4,5}=140, U_{5,5}=336（curve-packing 代入上界; curve_packing_fixed_width.py bound() で本レーンで再計算・一致確認済み: w4q5 packing_U=140, w5q5 packing_U=336）
+- → depends_on [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md): 7行 q<=w 3ファミリーと同じ手法・同じ観察（m=q から連続帯・単一欠損 w(q-1)-1 石・構成的延伸は前線を一部だけ越える）; verify_independent.ts（第3系統）を verbatim 使用
