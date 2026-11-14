@@ -1,0 +1,260 @@
+{
+  "schema": 1,
+  "tool": "research/experiments/fixed-width/scripts/curve_packing_fixed_width.py (main ef039092) bound()",
+  "note": "U_{w,q} = packing_U is the K0318 curve-packing substitution upper bound on the stabilization length M_{w,q}",
+  "controls_passed": 7,
+  "rows": [
+    {
+      "w": 7,
+      "q": 4,
+      "packing_U": 1929,
+      "combined": 1929,
+      "Q": 810,
+      "Y": 306,
+      "d0": 1,
+      "d1": 0,
+      "optimizer": [
+        810,
+        306
+      ]
+    },
+    {
+      "w": 8,
+      "q": 4,
+      "packing_U": 3069,
+      "combined": 3069,
+      "Q": 1323,
+      "Y": 420,
+      "d0": 1,
+      "d1": 0,
+      "optimizer": [
+        1323,
+        420
+      ]
+    },
+    {
+      "w": 7,
+      "q": 5,
+      "packing_U": 1142,
+      "combined": 1142,
+      "Q": 2000,
+      "Y": 276,
+      "d0": 4,
+      "d1": 1,
+      "optimizer": [
+        431,
+        276
+      ]
+    },
+    {
+      "w": 8,
+      "q": 5,
+      "packing_U": 1816,
+      "combined": 1816,
+      "Q": 3248,
+      "Y": 378,
+      "d0": 4,
+      "d1": 1,
+      "optimizer": [
+        718,
+        376
+      ]
+    },
+    {
+      "w": 7,
+      "q": 6,
+      "packing_U": 862,
+      "combined": 862,
+      "Q": 4000,
+      "Y": 288,
+      "d0": 10,
+      "d1": 4,
+      "optimizer": [
+        286,
+        285
+      ]
+    },
+    {
+      "w": 8,
+      "q": 6,
+      "packing_U": 1379,
+      "combined": 1379,
+      "Q": 6475,
+      "Y": 396,
+      "d0": 10,
+      "d1": 4,
+      "optimizer": [
+        489,
+        396
+      ]
+    },
+    {
+      "w": 7,
+      "q": 7,
+      "packing_U": 708,
+      "combined": 708,
+      "Q": 7020,
+      "Y": 315,
+      "d0": 20,
+      "d1": 10,
+      "optimizer": [
+        351,
+        0
+      ]
+    },
+    {
+      "w": 8,
+      "q": 7,
+      "packing_U": 1140,
+      "combined": 1140,
+      "Q": 11340,
+      "Y": 430,
+      "d0": 20,
+      "d1": 10,
+      "optimizer": [
+        567,
+        0
+      ]
+    },
+    {
+      "w": 7,
+      "q": 8,
+      "packing_U": 651,
+      "combined": 651,
+      "Q": 11270,
+      "Y": 342,
+      "d0": 35,
+      "d1": 20,
+      "optimizer": [
+        322,
+        0
+      ]
+    },
+    {
+      "w": 8,
+      "q": 8,
+      "packing_U": 1045,
+      "combined": 1045,
+      "Q": 18179,
+      "Y": 468,
+      "d0": 35,
+      "d1": 20,
+      "optimizer": [
+        519,
+        0
+      ]
+    },
+    {
+      "w": 7,
+      "q": 9,
+      "packing_U": 613,
+      "combined": 613,
+      "Q": 16960,
+      "Y": 371,
+      "d0": 56,
+      "d1": 35,
+      "optimizer": [
+        302,
+        1
+      ]
+    },
+    {
+      "w": 8,
+      "q": 9,
+      "packing_U": 984,
+      "combined": 984,
+      "Q": 27328,
+      "Y": 511,
+      "d0": 56,
+      "d1": 35,
+      "optimizer": [
+        488,
+        0
+      ]
+    },
+    {
+      "w": 7,
+      "q": 10,
+      "packing_U": 587,
+      "combined": 587,
+      "Q": 24300,
+      "Y": 400,
+      "d0": 84,
+      "d1": 56,
+      "optimizer": [
+        289,
+        0
+      ]
+    },
+    {
+      "w": 8,
+      "q": 10,
+      "packing_U": 940,
+      "combined": 940,
+      "Q": 39123,
+      "Y": 552,
+      "d0": 84,
+      "d1": 56,
+      "optimizer": [
+        465,
+        1
+      ]
+    },
+    {
+      "w": 7,
+      "q": 11,
+      "packing_U": 568,
+      "combined": 568,
+      "Q": 33500,
+      "Y": 414,
+      "d0": 120,
+      "d1": 84,
+      "optimizer": [
+        279,
+        0
+      ]
+    },
+    {
+      "w": 8,
+      "q": 11,
+      "packing_U": 908,
+      "combined": 908,
+      "Q": 53900,
+      "Y": 585,
+      "d0": 120,
+      "d1": 84,
+      "optimizer": [
+        449,
+        0
+      ]
+    },
+    {
+      "w": 7,
+      "q": 12,
+      "packing_U": 553,
+      "combined": 553,
+      "Q": 44770,
+      "Y": 450,
+      "d0": 165,
+      "d1": 120,
+      "optimizer": [
+        271,
+        0
+      ]
+    },
+    {
+      "w": 8,
+      "q": 12,
+      "packing_U": 883,
+      "combined": 883,
+      "Q": 71995,
+      "Y": 630,
+      "d0": 165,
+      "d1": 120,
+      "optimizer": [
+        436,
+        0
+      ]
+    }
+  ]
+}
