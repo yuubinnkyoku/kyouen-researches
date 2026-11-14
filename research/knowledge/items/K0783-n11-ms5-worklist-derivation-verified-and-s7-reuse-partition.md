@@ -818,3 +818,19 @@ unified chain headは **解消S6 1,154・残り6,693・費用527,949・open需�
 **batch-2 lane-takeover crosscheck log**を出版（[2026-11-15-n11-class2-warm-multiband2-lane-takeover-crosscheck.md](../../log/2026-11-15-n11-class2-warm-multiband2-lane-takeover-crosscheck.md)）: 31証明書出版（自レーン18/並走13）、54/54 remote byte-exact、WIN/LOSS衝突0、chain break（cost65e in-place拡張、bit-107のみfold・bit-7既知重複）の独立発見・修理、frontier 1,109→1,140。
 
 解消計数はmanifest被覆の前進であり、盤全体の勝敗ではない。標準11×11空盤、二石root `{49,60}`・`{59,60}`、S2 `{59,60}`、class2・class4は引き続き **UNKNOWN**。
+
+## 2026-11-15: unified merge 1154 endpointの第三の独立検証（solved set不要の帳簿法）とcost-70c warm6 marginalの親・需要構造
+
+unified merge chain head 1,154（7aaa7d83 + 625b0e0c の二重独立実行済み）に対し、本レーンは**第三の手法**による独立検証を完了した。従来の2実装はrunpyでsolved setを再構成してfoldを再実行するが、本検証はsolved setの再構成を一切行わない帳簿法である。入力は (a) 6分割S6 manifest 7,867行、(b) merged-1148 ranking CSVの175 open S5（per-S5残数・残費用）、(c) merged-1148 top-candidates CSV（77行の子+cost+需要文字列）、(d) 和解監査の6 marginal hex のみ。175 S5×121手の子incidenceをBigInt D4正規化（8変換、bit index 11*b+a、計21,175回のcanon）で再生成した。鍵定理: 6 C hexはmerged-1148時点で未解決ゆえ h ∈ rem(X) ⟺ h ∈ children(X) が成り立ち、closing S5の残り子は全てCに含まれるため非C軌道の需要は不変、C hexのfold効果はper-S5帳簿差分で厳密に計算できる。
+
+制御は全て通過: manifest 7,867行は検証器実装のD4 canonで全行不変・重複0、175 S5も全行canon不変、top-candidates 77行（4対象S5: 18+10+8+41行）の子hex・manifest cost・需要文字列c1/c2/c4が再生成結果と完全一致、|children(X)|>=rem(X)は175/175、closing⟺cost差分0の整合は175/175、再生child edges 14,896。
+
+**endpoint検証結果**: 解消1,154・残りS5 175・unique 6,693・費用527,949・open需要4,963/391,672の6数値が権威unified merge JSON（625b0e0c版）と完全一致。需要ヒストグラム9バケットも完全一致（c2=2,c4=0が1,040→1,034、他不変、総和4,963）。best/next class2・class4候補ランキングも一致（best coverable 8/588・audit-blocked 10/698・best class4 18/1,460不変）。runpy fold再現とは別手法による正の交叉検証である。
+
+**marginal 6 hexの親・需要構造**（新規の厳密な成果）: 全6 hexがmanifest所属・cost 76/80/75/80/78/85（和474）・需要すべて **c1=0,c2=2,c4=0**（open_only、バケットc2=2,c4=0）。各hexはちょうど2個のclass-2 S5に共有され、親は7個: S5 `00000000000000801242000000000000` が**全6 hexの共通親**（rem 70→64、cost 5,517→5,043、−474）。他6親は各1個減: `00000000000003800000008000002` 51→50・3,837→3,759（bit11）、`00000000000083800000008000000` 57→56・4,257→4,181（bit105）、`00000000000003800000009000000` 63→62・4,778→4,698（bit24）、`00000000000000801202010000000000` 65→64・4,708→4,633（bit40）、`00000000000000403800000080000000` 69→68・5,590→5,510（bit92）、`00000000000000801202000000000100` 71→70・5,796→5,711（bit8）。**closersなし**（remaining_s5は175のまま）、best/next候補の行は全て不変。
+
+限界: 証明書本体の再実行ではなく公開receiptの帳簿検証であり、6 marginal hexは和解監査（BigInt独立検証済み）から引用した。需要構造はmerged-1148公開per-S5集計から導出するため、ranking CSVとfoldの両方に同種の誤りがあれば検出できない。帳簿法はsolved setを要求しないため、今後のfold予測・endpoint検証にも再利用可能。
+
+なお、push時点で並走レーンが cost-70c warm batch-3完了（残りbits 3/42/86/103の4証明書・claim closure・gain-0予測 6751e21e）と cost-69f証明書5/9（bits 20/44/68/69/118）を公開済みであることを確認した。次回unified merge foldの材料である。解消計数はmanifest被覆の前進であり、盤全体の勝敗ではない。標準11×11空盤、二石root `{49,60}`・`{59,60}`、S2 `{59,60}`、class2・class4は引き続き **UNKNOWN**。
+
+成果物: [検証記録JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-unified-merge-endpoint-third-verification-20261115.json)、[log](../../log/2026-11-15-n11-class2-unified-merge-third-independent-verification.md)。
