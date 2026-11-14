@@ -1,612 +1,455 @@
 {
  "schema": "n11-class-frontier-unified-merge-recompute-20261115-v1",
  "date": "2026-11-15",
- "baseline_main": "class-frontier-warm-multiband-recompute-20261115.json (solved 1109 / unique remaining 6738 / sum 531295 / open 5008/395018) - the common baseline of all three folds",
- "method": "authoritative unified fold specified by class2-lane-unified-fold-reconciliation-20261115.json: the 1109 baseline, the 1117 endpoint (recompute_frontier_cost68d_20261115.py) and the 1140 endpoint (recompute_frontier_warm_multiband2_20261115.py) are reproduced byte-identically by runpy, the 50 receipts (7 cost-68d WIN7 + 6 hygiene + 31 warm multiband 2 + 6 cost-70c warm batch-2) are asserted root-disjoint three ways, the reconciliation per-group marginal-in-manifest unions are independently re-derived from covers and the manifest and matched against the published hex lists (union 45, pairwise intersections empty), then all 50 receipts are folded from the 1109 baseline in the reconciliation fold order (13 in published order, 31 in published order, 6 cost-70c in greedy order 105/92/40/24/11/8) with every per-record marginal re-derived from the growing union. The 6 cost-70c receipts are the warm batch-2 certificates published under class2-lane-cost70c-certificates/ (bit105 single file, 92/40/24/11/8 part1of2/part2of2), extracted with the repo-verbatim blind extractor (FBS=1<<20, fbt_drops=0) and BigInt-independently verified per the reconciliation; no sweep claims are made here beyond the published records - receipts only",
+ "baseline_main": "class-frontier-warm-multiband-recompute-20261115 (common baseline 1109 / 6738 / 531295 / 5008 / 395018) with the three published folds: class-frontier-cost68d-recompute-20261115 (1117), class-frontier-warm-multiband2-recompute-20261115 (1140), class-frontier-merged-recompute-after-multiband2-68dhyg-20261115 (1148)",
+ "method": "execution of the published unified-fold specification (class2-lane-unified-fold-reconciliation-20261115.json): runpy recompute_frontier_cost68d_20261115.py reproduces the 1109 baseline byte-identically and the 1117 endpoint with the 13 cost-68d/hygiene receipts folded in published order; runpy recompute_frontier_warm_multiband2_20261115.py reproduces the 1140 endpoint; runpy recompute_frontier_merged_after_multiband2_68dhyg_20261115.py reproduces the published merged 1148 head byte-identically (regenerated frontier JSON md5-checked against main; endpoint 1148/6699/528423/4969/392146) with the union identity s_1148 == s_1117 | s_1140 asserted; three-way root disjointness of the 50 receipts is asserted (12 distinct cost-68d-group roots after the canonical cross-child duplicate 71b-bit1 == 61d-bit22, 31 multiband2, 6 cost-70c); the 31 multiband2 receipts are folded in published record order onto 1117 with every per-record marginal-in-manifest hex set asserted equal to the published multiband2 addition; the 6 cost-70c warm receipts (greedy order 105, 92, 40, 24, 11, 8) are asserted against the published reconciliation JSON and the independent BigInt verification record (rows, sub-roots, union 0/0, md5, sha256, bytes, local certificate bytes, git blob shas) and folded; the pre-covered manifest certificates 94/20/23 are asserted marginal-0; set-equality control s_merged == s_1117 | s_1140 | covers(6) asserted; solved 1154 = 1109 + 8 + 31 + 6. Receipts only - no sweep claims",
  "controls": {
-  "baseline_1109_reproduced": {
-   "solved_in_manifest": 1109,
-   "unique_remaining": 6738,
-   "sum_cost": 531295,
-   "open_s6": 5008,
-   "open_cost": 395018
-  },
-  "endpoint_1117_reproduced": {
-   "solved_in_manifest": 1117,
-   "unique_remaining": 6730,
-   "sum_cost": 530739,
-   "open_s6": 5000,
-   "open_cost": 394462
-  },
-  "endpoint_1140_reproduced": {
-   "solved_in_manifest": 1140,
-   "unique_remaining": 6707,
-   "sum_cost": 528979,
-   "open_s6": 4977,
-   "open_cost": 392702
-  },
-  "common_baseline_set": "s_1109 == the multiband2 lane baseline set (asserted)",
-  "three_way_root_disjointness": "12 distinct roots (71b bit-1 == 61d bit-22 share one canonical root) + 31 + 6, pairwise intersections empty",
-  "reconciliation_arithmetic_rederived": {
-   "g13_size": 8,
-   "g31_size": 31,
-   "g6_size": 6,
-   "union_size": 45,
-   "pairwise_intersections_empty": true,
-   "matches_published_hex_lists": true
-  },
-  "set_equality_after_13": "s == s_1117",
-  "set_equality_after_44": "s == s_1117 UNION s_1140 (published merged head 1148/6699/528423/4969/392146)",
-  "set_equality_after_50": "s == s_1117 UNION s_1140 UNION covers(6 cost-70c)",
-  "expected_solved_1154": true,
-  "fold_order": "13 cost-68d-lane receipts in published order (7 WIN7 then 6 hygiene), then 31 multiband2 receipts in published order, then the 6 cost-70c receipts in greedy order 105/92/40/24/11/8"
+  "baseline_1109_reproduced_byte_identical": true,
+  "endpoint_1117_reproduced": true,
+  "endpoint_1140_reproduced": true,
+  "endpoint_1148_merged_head_reproduced_byte_identical": true,
+  "merged_head_union_identity_s1117_union_s1140": true,
+  "three_way_root_disjointness": true,
+  "multiband2_per_record_marginal_hexes_equal_published": true,
+  "cost70c_receipts_reconciliation_x_bigint_x_local_bytes": true,
+  "pre_covered_manifest_certificates_marginal_zero": true,
+  "set_equality_s1117_union_s1140_union_covers6": true,
+  "set_equality_s1148_union_covers6": true,
+  "expected_solved_1154": true
  },
  "unified_addition": {
-  "cost68d_win7": [
-   {
-    "band": "class2-lane-cost68d",
-    "bit": 18,
-    "root_hex": "00000000000000809122000000040000",
-    "covers": 7,
-    "marginal": 6,
-    "marginal_in_manifest": 2,
-    "marginal_manifest_hexes": [
-     "00000000000000003800000408008000",
-     "00000000000000809122000000000000"
-    ]
-   },
-   {
-    "band": "class2-lane-cost68d",
-    "bit": 26,
-    "root_hex": "00000000000000809122000004000000",
-    "covers": 7,
-    "marginal": 4,
-    "marginal_in_manifest": 0,
-    "marginal_manifest_hexes": []
-   },
-   {
-    "band": "class2-lane-cost68d",
-    "bit": 29,
-    "root_hex": "00000000000000809122000020000000",
-    "covers": 7,
-    "marginal": 5,
-    "marginal_in_manifest": 1,
-    "marginal_manifest_hexes": [
-     "00000000000000003800000808008000"
-    ]
-   },
-   {
-    "band": "class2-lane-cost68d",
-    "bit": 34,
-    "root_hex": "00000000000000809122000400000000",
-    "covers": 7,
-    "marginal": 5,
-    "marginal_in_manifest": 1,
-    "marginal_manifest_hexes": [
-     "00000000000000809102000400000000"
-    ]
-   },
-   {
-    "band": "class2-lane-cost68d",
-    "bit": 47,
-    "root_hex": "00000000000000809122800000000000",
-    "covers": 7,
-    "marginal": 6,
-    "marginal_in_manifest": 2,
-    "marginal_manifest_hexes": [
-     "0000000000000080120a200000000000",
-     "00000000000000809102800000000000"
-    ]
-   },
-   {
-    "band": "class2-lane-cost68d",
-    "bit": 103,
-    "root_hex": "00000080000000809122000000000000",
-    "covers": 7,
-    "marginal": 5,
-    "marginal_in_manifest": 1,
-    "marginal_manifest_hexes": [
-     "00000000000000083800000008020000"
-    ]
-   },
-   {
-    "band": "class2-lane-cost68d",
-    "bit": 108,
-    "root_hex": "00001000000000809122000000000000",
-    "covers": 7,
-    "marginal": 5,
-    "marginal_in_manifest": 1,
-    "marginal_manifest_hexes": [
-     "00000000000000809102000000100000"
-    ]
-   }
-  ],
-  "hygiene": [
-   {
-    "band": "class2-lane-cost62a",
-    "bit": 1,
-    "root_hex": "00000000000000809102000001000002",
-    "covers": 7,
-    "marginal": 4,
-    "marginal_in_manifest": 0,
-    "marginal_manifest_hexes": []
-   },
-   {
-    "band": "class2-lane-cost62a",
-    "bit": 89,
-    "root_hex": "00000000020000809102000001000000",
-    "covers": 7,
-    "marginal": 4,
-    "marginal_in_manifest": 0,
-    "marginal_manifest_hexes": []
-   },
-   {
-    "band": "class2-lane-cost63a",
-    "bit": 11,
-    "root_hex": "00000000000000809102000800000800",
-    "covers": 7,
-    "marginal": 4,
-    "marginal_in_manifest": 0,
-    "marginal_manifest_hexes": []
-   },
-   {
-    "band": "class2-lane-cost63a",
-    "bit": 109,
-    "root_hex": "00002000000000809102000800000000",
-    "covers": 7,
-    "marginal": 4,
-    "marginal_in_manifest": 0,
-    "marginal_manifest_hexes": []
-   },
-   {
-    "band": "class2-lane-cost71b",
-    "bit": 1,
-    "root_hex": "00000000000000803202000000400002",
-    "covers": 7,
-    "marginal": 4,
-    "marginal_in_manifest": 0,
-    "marginal_manifest_hexes": []
-   },
-   {
-    "band": "class2-lane-cost61d",
-    "bit": 22,
-    "root_hex": "00000000000000803202000000400002",
-    "covers": 7,
-    "marginal": 0,
-    "marginal_in_manifest": 0,
-    "marginal_manifest_hexes": []
-   }
-  ],
-  "warm_multiband2": [
-   {
-    "band": "class2-lane-cost65e",
-    "bit": 120,
-    "root_hex": "01000000000000809102000000800000",
-    "covers": 7,
-    "marginal": 5,
-    "marginal_in_manifest": 1,
-    "marginal_manifest_hexes": [
-     "00000000000000809102000000000400"
-    ]
-   },
-   {
-    "band": "class2-lane-cost61e",
-    "bit": 120,
-    "root_hex": "01000000000000803202000040000000",
-    "covers": 7,
-    "marginal": 5,
-    "marginal_in_manifest": 1,
-    "marginal_manifest_hexes": [
-     "00000000040000809002000000000001"
-    ]
-   },
-   {
-    "band": "class2-lane-cost71b",
-    "bit": 117,
-    "root_hex": "00200000000000803202000000400000",
-    "covers": 7,
-    "marginal": 5,
-    "marginal_in_manifest": 1,
-    "marginal_manifest_hexes": [
-     "00000000000020003800000008000100"
-    ]
-   },
-   {
-    "band": "class2-lane-cost64b",
-    "bit": 117,
-    "root_hex": "00200000000000803202000000100000",
-    "covers": 7,
-    "marginal": 5,
-    "marginal_in_manifest": 1,
-    "marginal_manifest_hexes": [
-     "00000000200000003800000200100000"
-    ]
-   },
-   {
-    "band": "class2-lane-cost64b",
-    "bit": 116,
-    "root_hex": "00100000000000803202000000100000",
-    "covers": 7,
-    "marginal": 5,
-    "marginal_in_manifest": 1,
-    "marginal_manifest_hexes": [
-     "00000000200000003800100000100000"
-    ]
-   },
-   {
-    "band": "class2-lane-cost61d",
-    "bit": 116,
-    "root_hex": "00100000000000803202000000000002",
-    "covers": 7,
-    "marginal": 5,
-    "marginal_in_manifest": 1,
-    "marginal_manifest_hexes": [
-     "00000000000000043800000008200000"
-    ]
-   },
-   {
-    "band": "class2-lane-cost61d",
-    "bit": 114,
-    "root_hex": "00040000000000803202000000000002",
-    "covers": 7,
-    "marginal": 5,
-    "marginal_in_manifest": 1,
-    "marginal_manifest_hexes": [
-     "00000000000000003800100008200000"
-    ]
-   },
-   {
-    "band": "class2-lane-cost61e",
-    "bit": 105,
-    "root_hex": "00000200000000803202000040000000",
-    "covers": 7,
-    "marginal": 5,
-    "marginal_in_manifest": 1,
-    "marginal_manifest_hexes": [
-     "00000000040000809002000000008000"
-    ]
-   },
-   {
-    "band": "class2-lane-cost63a",
-    "bit": 97,
-    "root_hex": "00000002000000809102000800000000",
-    "covers": 7,
-    "marginal": 5,
-    "marginal_in_manifest": 1,
-    "marginal_manifest_hexes": [
-     "00000000000000809102000080000000"
-    ]
-   },
-   {
-    "band": "class2-lane-cost63a",
-    "bit": 96,
-    "root_hex": "00000001000000809102000800000000",
-    "covers": 7,
-    "marginal": 5,
-    "marginal_in_manifest": 1,
-    "marginal_manifest_hexes": [
-     "00000000000000809102000040000000"
-    ]
-   },
-   {
-    "band": "class2-lane-cost71b",
-    "bit": 94,
-    "root_hex": "00000000400000803202000000400000",
-    "covers": 7,
-    "marginal": 5,
-    "marginal_in_manifest": 1,
-    "marginal_manifest_hexes": [
-     "00000000000000103800000008000100"
-    ]
-   },
-   {
-    "band": "class2-lane-cost64b",
-    "bit": 94,
-    "root_hex": "00000000400000803202000000100000",
-    "covers": 7,
-    "marginal": 5,
-    "marginal_in_manifest": 1,
-    "marginal_manifest_hexes": [
-     "00000000100000809002000000001000"
-    ]
-   },
-   {
-    "band": "class2-lane-cost61e",
-    "bit": 92,
-    "root_hex": "00000000100000803202000040000000",
-    "covers": 7,
-    "marginal": 5,
-    "marginal_in_manifest": 1,
-    "marginal_manifest_hexes": [
-     "00000000040000003810000008000000"
-    ]
-   },
-   {
-    "band": "class2-lane-cost64b",
-    "bit": 92,
-    "root_hex": "00000000100000803202000000100000",
-    "covers": 7,
-    "marginal": 5,
-    "marginal_in_manifest": 1,
-    "marginal_manifest_hexes": [
-     "00000000100000801202000000100000"
-    ]
-   },
-   {
-    "band": "class2-lane-cost61e",
-    "bit": 89,
-    "root_hex": "00000000020000803202000040000000",
-    "covers": 7,
-    "marginal": 5,
-    "marginal_in_manifest": 1,
-    "marginal_manifest_hexes": [
-     "00000000020000801202000040000000"
-    ]
-   },
-   {
-    "band": "class2-lane-cost61e",
-    "bit": 87,
-    "root_hex": "00000000008000803202000040000000",
-    "covers": 7,
-    "marginal": 5,
-    "marginal_in_manifest": 1,
-    "marginal_manifest_hexes": [
-     "00000000000020809002000001000000"
-    ]
-   },
-   {
-    "band": "class2-lane-cost61f",
-    "bit": 84,
-    "root_hex": "00000000001000803202000080000000",
-    "covers": 7,
-    "marginal": 5,
-    "marginal_in_manifest": 1,
-    "marginal_manifest_hexes": [
-     "00000000000100809002000000800000"
-    ]
-   },
-   {
-    "band": "class2-lane-cost64b",
-    "bit": 84,
-    "root_hex": "00000000001000803202000000100000",
-    "covers": 7,
-    "marginal": 5,
-    "marginal_in_manifest": 1,
-    "marginal_manifest_hexes": [
-     "00000000000100809002000000001000"
-    ]
-   },
-   {
-    "band": "class2-lane-cost61d",
-    "bit": 84,
-    "root_hex": "00000000001000803202000000000002",
-    "covers": 7,
-    "marginal": 5,
-    "marginal_in_manifest": 1,
-    "marginal_manifest_hexes": [
-     "00000000000100003800000008200000"
-    ]
-   },
-   {
-    "band": "class2-lane-cost61f",
-    "bit": 77,
-    "root_hex": "00000000000020803202000080000000",
-    "covers": 7,
-    "marginal": 5,
-    "marginal_in_manifest": 1,
-    "marginal_manifest_hexes": [
-     "00000000000020801202000080000000"
-    ]
-   },
-   {
-    "band": "class2-lane-cost61f",
-    "bit": 75,
-    "root_hex": "00000000000008803202000080000000",
-    "covers": 7,
-    "marginal": 5,
-    "marginal_in_manifest": 1,
-    "marginal_manifest_hexes": [
-     "00000000000000889002000000800000"
-    ]
-   },
-   {
-    "band": "class2-lane-cost61d",
-    "bit": 75,
-    "root_hex": "00000000000008803202000000000002",
-    "covers": 7,
-    "marginal": 5,
-    "marginal_in_manifest": 1,
-    "marginal_manifest_hexes": [
-     "00000000000000889002000000000200"
-    ]
-   },
-   {
-    "band": "class2-lane-cost61e",
-    "bit": 74,
-    "root_hex": "00000000000004803202000040000000",
-    "covers": 7,
-    "marginal": 5,
-    "marginal_in_manifest": 1,
-    "marginal_manifest_hexes": [
-     "00000000000000909002000001000000"
-    ]
-   },
-   {
-    "band": "class2-lane-cost71b",
-    "bit": 74,
-    "root_hex": "00000000000004803202000000400000",
-    "covers": 7,
-    "marginal": 5,
-    "marginal_in_manifest": 1,
-    "marginal_manifest_hexes": [
-     "00000000000000909002000100000000"
-    ]
-   },
-   {
-    "band": "class2-lane-cost61f",
-    "bit": 66,
-    "root_hex": "00000000000000843202000080000000",
-    "covers": 7,
-    "marginal": 5,
-    "marginal_in_manifest": 1,
-    "marginal_manifest_hexes": [
-     "00000000000000841202000080000000"
-    ]
-   },
-   {
-    "band": "class2-lane-cost65e",
-    "bit": 46,
-    "root_hex": "00000000000000809102400000800000",
-    "covers": 7,
-    "marginal": 5,
-    "marginal_in_manifest": 1,
-    "marginal_manifest_hexes": [
-     "00000000000000809102400000000000"
-    ]
-   },
-   {
-    "band": "class2-lane-cost65e",
-    "bit": 36,
-    "root_hex": "00000000000000809102001000800000",
-    "covers": 7,
-    "marginal": 5,
-    "marginal_in_manifest": 1,
-    "marginal_manifest_hexes": [
-     "00000000000000809102001000000000"
-    ]
-   },
-   {
-    "band": "class2-lane-cost64b",
-    "bit": 53,
-    "root_hex": "00000000000000803222000000100000",
-    "covers": 7,
-    "marginal": 5,
-    "marginal_in_manifest": 1,
-    "marginal_manifest_hexes": [
-     "00000000000000801222000000100000"
-    ]
-   },
-   {
-    "band": "class2-lane-cost64b",
-    "bit": 43,
-    "root_hex": "00000000000000803202080000100000",
-    "covers": 7,
-    "marginal": 5,
-    "marginal_in_manifest": 1,
-    "marginal_manifest_hexes": [
-     "00000000000000801202080000100000"
-    ]
-   },
-   {
-    "band": "class2-lane-cost64b",
-    "bit": 40,
-    "root_hex": "00000000000000803202010000100000",
-    "covers": 7,
-    "marginal": 5,
-    "marginal_in_manifest": 1,
-    "marginal_manifest_hexes": [
-     "00000000000000801202010000100000"
-    ]
-   },
-   {
-    "band": "class2-lane-cost61d",
-    "bit": 23,
-    "root_hex": "00000000000000803202000000800002",
-    "covers": 7,
-    "marginal": 4,
-    "marginal_in_manifest": 1,
-    "marginal_manifest_hexes": [
-     "00000000000000003800000008002800"
-    ]
-   }
-  ],
-  "cost70c_warm_batch2": [
-   {
-    "band": "class2-lane-cost70c",
-    "bit": 105,
-    "root_hex": "00000200000000803242000000000000",
-    "covers": 7,
-    "marginal": 5,
-    "marginal_in_manifest": 1,
-    "marginal_manifest_hexes": [
-     "00000000000000849002000000008000"
-    ]
-   },
-   {
-    "band": "class2-lane-cost70c",
-    "bit": 92,
-    "root_hex": "00000000100000803242000000000000",
-    "covers": 7,
-    "marginal": 5,
-    "marginal_in_manifest": 1,
-    "marginal_manifest_hexes": [
-     "00000000000000849002000010000000"
-    ]
-   },
-   {
-    "band": "class2-lane-cost70c",
-    "bit": 40,
-    "root_hex": "00000000000000803242010000000000",
-    "covers": 7,
-    "marginal": 5,
-    "marginal_in_manifest": 1,
-    "marginal_manifest_hexes": [
-     "00000000000000801242010000000000"
-    ]
-   },
-   {
-    "band": "class2-lane-cost70c",
-    "bit": 24,
-    "root_hex": "00000000000000803242000001000000",
-    "covers": 7,
-    "marginal": 4,
-    "marginal_in_manifest": 1,
-    "marginal_manifest_hexes": [
-     "00000000000000801242000001000000"
-    ]
-   },
-   {
-    "band": "class2-lane-cost70c",
-    "bit": 11,
-    "root_hex": "00000000000000803242000000000800",
-    "covers": 7,
-    "marginal": 5,
-    "marginal_in_manifest": 1,
-    "marginal_manifest_hexes": [
-     "00000000000000801242000000000800"
-    ]
-   },
-   {
-    "band": "class2-lane-cost70c",
-    "bit": 8,
-    "root_hex": "00000000000000803242000000000100",
-    "covers": 7,
-    "marginal": 5,
-    "marginal_in_manifest": 1,
-    "marginal_manifest_hexes": [
-     "00000000000000801242000000000100"
-    ]
-   }
-  ]
+  "cost68d_lane_receipts": 13,
+  "cost68d_lane_marginal_in_manifest": 8,
+  "multiband2_receipts": 31,
+  "multiband2_marginal_in_manifest": 31,
+  "cost70c_warm_receipts": 6,
+  "cost70c_warm_marginal_in_manifest": 6,
+  "total_receipts": 50,
+  "total_marginal_in_manifest": 45
  },
- "totals": {
-  "receipts": 50,
-  "total_marginal": 239,
-  "total_marginal_in_manifest": 45,
-  "zero_marginal_in_manifest": [
-   "class2-lane-cost68d-bit26",
-   "class2-lane-cost62a-bit1",
-   "class2-lane-cost62a-bit89",
-   "class2-lane-cost63a-bit11",
-   "class2-lane-cost63a-bit109",
-   "class2-lane-cost71b-bit1",
-   "class2-lane-cost61d-bit22"
-  ],
-  "cost68d_rows": 268572,
-  "hygiene_rows": 236012,
-  "multiband2_rows": 1200258,
-  "cost70c_rows": 253196
- },
+ "multiband2_addition": [
+  {
+   "band": "class2-lane-cost65e",
+   "bit": 120,
+   "root_hex": "01000000000000809102000000800000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000809102000000000400"
+   ]
+  },
+  {
+   "band": "class2-lane-cost61e",
+   "bit": 120,
+   "root_hex": "01000000000000803202000040000000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000040000809002000000000001"
+   ]
+  },
+  {
+   "band": "class2-lane-cost71b",
+   "bit": 117,
+   "root_hex": "00200000000000803202000000400000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000020003800000008000100"
+   ]
+  },
+  {
+   "band": "class2-lane-cost64b",
+   "bit": 117,
+   "root_hex": "00200000000000803202000000100000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000200000003800000200100000"
+   ]
+  },
+  {
+   "band": "class2-lane-cost64b",
+   "bit": 116,
+   "root_hex": "00100000000000803202000000100000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000200000003800100000100000"
+   ]
+  },
+  {
+   "band": "class2-lane-cost61d",
+   "bit": 116,
+   "root_hex": "00100000000000803202000000000002",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000043800000008200000"
+   ]
+  },
+  {
+   "band": "class2-lane-cost61d",
+   "bit": 114,
+   "root_hex": "00040000000000803202000000000002",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000003800100008200000"
+   ]
+  },
+  {
+   "band": "class2-lane-cost61e",
+   "bit": 105,
+   "root_hex": "00000200000000803202000040000000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000040000809002000000008000"
+   ]
+  },
+  {
+   "band": "class2-lane-cost63a",
+   "bit": 97,
+   "root_hex": "00000002000000809102000800000000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000809102000080000000"
+   ]
+  },
+  {
+   "band": "class2-lane-cost63a",
+   "bit": 96,
+   "root_hex": "00000001000000809102000800000000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000809102000040000000"
+   ]
+  },
+  {
+   "band": "class2-lane-cost71b",
+   "bit": 94,
+   "root_hex": "00000000400000803202000000400000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000103800000008000100"
+   ]
+  },
+  {
+   "band": "class2-lane-cost64b",
+   "bit": 94,
+   "root_hex": "00000000400000803202000000100000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000100000809002000000001000"
+   ]
+  },
+  {
+   "band": "class2-lane-cost61e",
+   "bit": 92,
+   "root_hex": "00000000100000803202000040000000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000040000003810000008000000"
+   ]
+  },
+  {
+   "band": "class2-lane-cost64b",
+   "bit": 92,
+   "root_hex": "00000000100000803202000000100000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000100000801202000000100000"
+   ]
+  },
+  {
+   "band": "class2-lane-cost61e",
+   "bit": 89,
+   "root_hex": "00000000020000803202000040000000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000020000801202000040000000"
+   ]
+  },
+  {
+   "band": "class2-lane-cost61e",
+   "bit": 87,
+   "root_hex": "00000000008000803202000040000000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000020809002000001000000"
+   ]
+  },
+  {
+   "band": "class2-lane-cost61f",
+   "bit": 84,
+   "root_hex": "00000000001000803202000080000000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000100809002000000800000"
+   ]
+  },
+  {
+   "band": "class2-lane-cost64b",
+   "bit": 84,
+   "root_hex": "00000000001000803202000000100000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000100809002000000001000"
+   ]
+  },
+  {
+   "band": "class2-lane-cost61d",
+   "bit": 84,
+   "root_hex": "00000000001000803202000000000002",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000100003800000008200000"
+   ]
+  },
+  {
+   "band": "class2-lane-cost61f",
+   "bit": 77,
+   "root_hex": "00000000000020803202000080000000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000020801202000080000000"
+   ]
+  },
+  {
+   "band": "class2-lane-cost61f",
+   "bit": 75,
+   "root_hex": "00000000000008803202000080000000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000889002000000800000"
+   ]
+  },
+  {
+   "band": "class2-lane-cost61d",
+   "bit": 75,
+   "root_hex": "00000000000008803202000000000002",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000889002000000000200"
+   ]
+  },
+  {
+   "band": "class2-lane-cost61e",
+   "bit": 74,
+   "root_hex": "00000000000004803202000040000000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000909002000001000000"
+   ]
+  },
+  {
+   "band": "class2-lane-cost71b",
+   "bit": 74,
+   "root_hex": "00000000000004803202000000400000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000909002000100000000"
+   ]
+  },
+  {
+   "band": "class2-lane-cost61f",
+   "bit": 66,
+   "root_hex": "00000000000000843202000080000000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000841202000080000000"
+   ]
+  },
+  {
+   "band": "class2-lane-cost65e",
+   "bit": 46,
+   "root_hex": "00000000000000809102400000800000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000809102400000000000"
+   ]
+  },
+  {
+   "band": "class2-lane-cost65e",
+   "bit": 36,
+   "root_hex": "00000000000000809102001000800000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000809102001000000000"
+   ]
+  },
+  {
+   "band": "class2-lane-cost64b",
+   "bit": 53,
+   "root_hex": "00000000000000803222000000100000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000801222000000100000"
+   ]
+  },
+  {
+   "band": "class2-lane-cost64b",
+   "bit": 43,
+   "root_hex": "00000000000000803202080000100000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000801202080000100000"
+   ]
+  },
+  {
+   "band": "class2-lane-cost64b",
+   "bit": 40,
+   "root_hex": "00000000000000803202010000100000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000801202010000100000"
+   ]
+  },
+  {
+   "band": "class2-lane-cost61d",
+   "bit": 23,
+   "root_hex": "00000000000000803202000000800002",
+   "covers": 7,
+   "marginal": 4,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000003800000008002800"
+   ]
+  }
+ ],
+ "cost70c_warm_addition": [
+  {
+   "band": "class2-lane-cost70c",
+   "bit": 105,
+   "root_hex": "00000200000000803242000000000000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000849002000000008000"
+   ],
+   "rows": 33992,
+   "md5": "d6f56e07bf79d21cbc836928883a613a"
+  },
+  {
+   "band": "class2-lane-cost70c",
+   "bit": 92,
+   "root_hex": "00000000100000803242000000000000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000849002000010000000"
+   ],
+   "rows": 52755,
+   "md5": "38d60e00f28b6ff96b6cb4080f564036"
+  },
+  {
+   "band": "class2-lane-cost70c",
+   "bit": 40,
+   "root_hex": "00000000000000803242010000000000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000801242010000000000"
+   ],
+   "rows": 36406,
+   "md5": "59e4dd070bbf0fd6dd7e4d3bbb2e3ec3"
+  },
+  {
+   "band": "class2-lane-cost70c",
+   "bit": 24,
+   "root_hex": "00000000000000803242000001000000",
+   "covers": 7,
+   "marginal": 4,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000801242000001000000"
+   ],
+   "rows": 43005,
+   "md5": "db30f4dc370b0109a09c2b15c3573231"
+  },
+  {
+   "band": "class2-lane-cost70c",
+   "bit": 11,
+   "root_hex": "00000000000000803242000000000800",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000801242000000000800"
+   ],
+   "rows": 39873,
+   "md5": "a79bf70cafbed3a86d93002c564cad3e"
+  },
+  {
+   "band": "class2-lane-cost70c",
+   "bit": 8,
+   "root_hex": "00000000000000803242000000000100",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000801242000000000100"
+   ],
+   "rows": 47165,
+   "md5": "30db912028d24c74d0b9dc9d2cec61e1"
+  }
+ ],
  "frontier_after_unified_merge": {
   "solved_s6_in_manifest": 1154,
   "remaining_s5_orbits": 175,
@@ -691,9 +534,10 @@
   ]
  },
  "outstanding_not_folded": {
-  "cost69f": "sweep complete on the parallel lane (9 WIN7-D10 bits 2/20/44/68/69/94/109/118/119, controls published: determinism rerun node-exact, v15 crosscheck loss=true 9/9); certificates and fold pending with that lane",
+  "cost69f_sweep": "completed on the parallel lane (9 WIN7-D10 bits 2/20/44/68/69/94/109/118/119, raw batches published); certificates and fold pending with that lane - the next unified merge must fold its receipts once published",
   "cost70c_remaining": "WIN7 bits 3/42/86/103 uncertified (warm rebuild candidates)",
-  "parallel_bands": "cost-65h/67b/68c warm candidates and the in-flight cost-65j sweep stay with the parallel lane (in-manifest marginals listed in class2-lane-warm-candidate-ranking2-20261115.json)"
+  "parallel_bands": "cost-65h/67b/68c warm candidates and the in-flight cost-65j sweep stay with the parallel lane (their in-manifest marginals are listed in class2-lane-warm-candidate-ranking2-20261115.json)",
+  "gain0_candidates": "gain-0-in-manifest warm candidates advance no manifest orbit until the solved set changes"
  },
- "interpretation_guard": "bookkeeping over published receipts; solved counts measure manifest coverage, not the game-theoretic value of any position; REFUTED-D10 sweeps prove only absence of WIN7-D10; WIN7 certificates prove a win within depth 10 from the individual 7-stone roots only; 11x11 empty root / two-stone root {49,60} / S2 {59,60} / class 2 / class 4 remain UNKNOWN"
+ "interpretation_guard": "bookkeeping over published receipts; REFUTED-D10 sweeps prove only absence of WIN7-D10; WIN7 certificates prove a win within depth 10 from the 7-stone root only; solved counts measure manifest coverage, not the game-theoretic value of the 11x11 empty board; 11x11 empty root / {49,60} / S2 {59,60} / class 2 / class 4 remain UNKNOWN"
 }

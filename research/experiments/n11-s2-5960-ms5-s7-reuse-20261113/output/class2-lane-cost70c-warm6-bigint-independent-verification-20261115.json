@@ -1,0 +1,319 @@
+{
+ "schema": "class2-lane-cost70c-warm6-bigint-independent-verification-20261115-v1",
+ "date": "2026-11-15",
+ "lane": "class2-lane long-term lane execution (warm multiband batch-2 lane continuation, unified-merge session)",
+ "subject": "the six cost-70c warm batch-2 WIN7 certificates (bits 105/92/40/24/11/8; greedy fold order) plus the three pre-covered manifest certificates (bits 94/20/23) as cross-checks",
+ "method": "certificate bytes taken from the published main tree (codeload tarball of main + per-file raw fetch cross-check), part concatenation on asserted line boundaries, then full independent verification with scripts/verify_win7_certificate_bigint_independent.mjs (BigInt 3x3 cofactor expansion, no solver/cache/floating point): root stones/safety, rows sorted strictly ascending unique, all sub-roots PASS (== independent mobility enumeration), strategy/consumed union 0/0 both directions, terminal stone range within 13..17; remote bytes verified by git blob sha1 against the GitHub directory listing (14/14 entries byte-exact, including all 11 part files and the 3 single-file certificates)",
+ "verification_cross_check": "rows/sub_roots_pass/md5/bytes equal the published class2-lane-unified-fold-reconciliation-20261115.json records for all six warm receipts",
+ "records": [
+  {
+   "band": "class2-lane-cost70c",
+   "child_hex": "00000000000000803242000000000000",
+   "bit": 105,
+   "root_hex": "00000200000000803242000000000000",
+   "verdict": "WIN7",
+   "rows": 33992,
+   "root_check": {
+    "stones": 7,
+    "safe": true,
+    "loser_mobility": 51,
+    "independent_enumeration_legal": 51,
+    "match": true
+   },
+   "rows_sorted_unique": true,
+   "sub_roots_verified": 51,
+   "sub_roots_pass": 51,
+   "union_missing": 0,
+   "union_extra": 0,
+   "visited_states_across_subroots": 74703,
+   "winner_states": 48508,
+   "loser_states": 15926,
+   "loser_reply_edges": 69803,
+   "terminal_count": 10269,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "d6f56e07bf79d21cbc836928883a613a",
+   "sha256": "fd5829666617ad2d99f3a5f75c6faebb59e3291ed70aeb691e9468c26c2500e1",
+   "bytes": 1226997,
+   "storage": {
+    "layout": "single file",
+    "file": "class2-lane-cost70c-certificates/bit105-root-00000200000000803242000000000000.cert",
+    "bytes": 1226997,
+    "git_blob_sha": "f642368039ea196bc6deac1f525dc58f423381c2",
+    "git_blob_sha_verified": true
+   }
+  },
+  {
+   "band": "class2-lane-cost70c",
+   "child_hex": "00000000000000803242000000000000",
+   "bit": 92,
+   "root_hex": "00000000100000803242000000000000",
+   "verdict": "WIN7",
+   "rows": 52755,
+   "root_check": {
+    "stones": 7,
+    "safe": true,
+    "loser_mobility": 58,
+    "independent_enumeration_legal": 58,
+    "match": true
+   },
+   "rows_sorted_unique": true,
+   "sub_roots_verified": 58,
+   "sub_roots_pass": 58,
+   "union_missing": 0,
+   "union_extra": 0,
+   "visited_states_across_subroots": 108134,
+   "winner_states": 70007,
+   "loser_states": 22151,
+   "loser_reply_edges": 99418,
+   "terminal_count": 15976,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "38d60e00f28b6ff96b6cb4080f564036",
+   "sha256": "a70d06d4f5017531aa23e137fa22d5850304242c159846d31c85ff85e7f54b95",
+   "bytes": 1905923,
+   "storage": {
+    "layout": "two parts (push constraint)",
+    "part1": {
+     "path": "class2-lane-cost70c-certificates/bit92-root-00000000100000803242000000000000.cert.part1of2",
+     "bytes": 952985,
+     "git_blob_sha": "1f0daa13e2648d2d946a3a28ad6d4f8d1849aee3"
+    },
+    "part2": {
+     "path": "class2-lane-cost70c-certificates/bit92-root-00000000100000803242000000000000.cert.part2of2",
+     "bytes": 952938,
+     "git_blob_sha": "6a393ab3b4b6fdd00ef4e076f9f61c405b6172b3"
+    },
+    "part1_ends_on_line_boundary": true,
+    "concat_md5_equals_whole": true,
+    "git_blob_shas_verified": true
+   }
+  },
+  {
+   "band": "class2-lane-cost70c",
+   "child_hex": "00000000000000803242000000000000",
+   "bit": 40,
+   "root_hex": "00000000000000803242010000000000",
+   "verdict": "WIN7",
+   "rows": 36406,
+   "root_check": {
+    "stones": 7,
+    "safe": true,
+    "loser_mobility": 53,
+    "independent_enumeration_legal": 53,
+    "match": true
+   },
+   "rows_sorted_unique": true,
+   "sub_roots_verified": 53,
+   "sub_roots_pass": 53,
+   "union_missing": 0,
+   "union_extra": 0,
+   "visited_states_across_subroots": 83661,
+   "winner_states": 54112,
+   "loser_states": 17290,
+   "loser_reply_edges": 77346,
+   "terminal_count": 12259,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "59e4dd070bbf0fd6dd7e4d3bbb2e3ec3",
+   "sha256": "84d1ce3e1f24bacb9b0005bd7defc45f57f4da66cc9cb48fe192bab11bf890c7",
+   "bytes": 1315377,
+   "storage": {
+    "layout": "two parts (push constraint)",
+    "part1": {
+     "path": "class2-lane-cost70c-certificates/bit40-root-00000000000000803242010000000000.cert.part1of2",
+     "bytes": 657706,
+     "git_blob_sha": "5dd9fb4235adc4522b038124f8af7982228fe1ac"
+    },
+    "part2": {
+     "path": "class2-lane-cost70c-certificates/bit40-root-00000000000000803242010000000000.cert.part2of2",
+     "bytes": 657671,
+     "git_blob_sha": "599132fcfa11a64555fcd6df775d1223f3f9d999"
+    },
+    "part1_ends_on_line_boundary": true,
+    "concat_md5_equals_whole": true,
+    "git_blob_shas_verified": true
+   }
+  },
+  {
+   "band": "class2-lane-cost70c",
+   "child_hex": "00000000000000803242000000000000",
+   "bit": 24,
+   "root_hex": "00000000000000803242000001000000",
+   "verdict": "WIN7",
+   "rows": 43005,
+   "root_check": {
+    "stones": 7,
+    "safe": true,
+    "loser_mobility": 55,
+    "independent_enumeration_legal": 55,
+    "match": true
+   },
+   "rows_sorted_unique": true,
+   "sub_roots_verified": 55,
+   "sub_roots_pass": 55,
+   "union_missing": 0,
+   "union_extra": 0,
+   "visited_states_across_subroots": 95796,
+   "winner_states": 62184,
+   "loser_states": 20623,
+   "loser_reply_edges": 91430,
+   "terminal_count": 12989,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "db30f4dc370b0109a09c2b15c3573231",
+   "sha256": "d0906826d485d7c4741de8b2dddede90be5f15c6282135e4169dee2f0df574b1",
+   "bytes": 1551853,
+   "storage": {
+    "layout": "two parts (push constraint)",
+    "part1": {
+     "path": "class2-lane-cost70c-certificates/bit24-root-00000000000000803242000001000000.cert.part1of2",
+     "bytes": 775957,
+     "git_blob_sha": "62c8b6228ab3544f1f3f58bb8da2ec7facf34b31"
+    },
+    "part2": {
+     "path": "class2-lane-cost70c-certificates/bit24-root-00000000000000803242000001000000.cert.part2of2",
+     "bytes": 775896,
+     "git_blob_sha": "303ae2d55cae1774acddd02b6b6196fa3e866e53"
+    },
+    "part1_ends_on_line_boundary": true,
+    "concat_md5_equals_whole": true,
+    "git_blob_shas_verified": true
+   }
+  },
+  {
+   "band": "class2-lane-cost70c",
+   "child_hex": "00000000000000803242000000000000",
+   "bit": 11,
+   "root_hex": "00000000000000803242000000000800",
+   "verdict": "WIN7",
+   "rows": 39873,
+   "root_check": {
+    "stones": 7,
+    "safe": true,
+    "loser_mobility": 54,
+    "independent_enumeration_legal": 54,
+    "match": true
+   },
+   "rows_sorted_unique": true,
+   "sub_roots_verified": 54,
+   "sub_roots_pass": 54,
+   "union_missing": 0,
+   "union_extra": 0,
+   "visited_states_across_subroots": 87612,
+   "winner_states": 56693,
+   "loser_states": 17571,
+   "loser_reply_edges": 80154,
+   "terminal_count": 13348,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "a79bf70cafbed3a86d93002c564cad3e",
+   "sha256": "dda9ed4878df17fa4d61f307b0be8d37646cbf80cf14e6ef9427d50a84068c30",
+   "bytes": 1439745,
+   "storage": {
+    "layout": "two parts (push constraint)",
+    "part1": {
+     "path": "class2-lane-cost70c-certificates/bit11-root-00000000000000803242000000000800.cert.part1of2",
+     "bytes": 719881,
+     "git_blob_sha": "09607e603f2bf07102982fa9523035c9d82f74c6"
+    },
+    "part2": {
+     "path": "class2-lane-cost70c-certificates/bit11-root-00000000000000803242000000000800.cert.part2of2",
+     "bytes": 719864,
+     "git_blob_sha": "d52de0b7322bc84dcf6ddf615e0c7357dc65023d"
+    },
+    "part1_ends_on_line_boundary": true,
+    "concat_md5_equals_whole": true,
+    "git_blob_shas_verified": true
+   }
+  },
+  {
+   "band": "class2-lane-cost70c",
+   "child_hex": "00000000000000803242000000000000",
+   "bit": 8,
+   "root_hex": "00000000000000803242000000000100",
+   "verdict": "WIN7",
+   "rows": 47165,
+   "root_check": {
+    "stones": 7,
+    "safe": true,
+    "loser_mobility": 60,
+    "independent_enumeration_legal": 60,
+    "match": true
+   },
+   "rows_sorted_unique": true,
+   "sub_roots_verified": 60,
+   "sub_roots_pass": 60,
+   "union_missing": 0,
+   "union_extra": 0,
+   "visited_states_across_subroots": 100760,
+   "winner_states": 65187,
+   "loser_states": 20219,
+   "loser_reply_edges": 92440,
+   "terminal_count": 15354,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "30db912028d24c74d0b9dc9d2cec61e1",
+   "sha256": "f252e572cd56cd9422a9ad41761552081a66ecd6623cde5a7b682187b334b609",
+   "bytes": 1707377,
+   "storage": {
+    "layout": "two parts (push constraint)",
+    "part1": {
+     "path": "class2-lane-cost70c-certificates/bit8-root-00000000000000803242000000000100.cert.part1of2",
+     "bytes": 853696,
+     "git_blob_sha": "e062e20af6c69ae2484acfc7c721dbca189d00f8"
+    },
+    "part2": {
+     "path": "class2-lane-cost70c-certificates/bit8-root-00000000000000803242000000000100.cert.part2of2",
+     "bytes": 853681,
+     "git_blob_sha": "42068191450bed7b8e71b65589b8341695f9e553"
+    },
+    "part1_ends_on_line_boundary": true,
+    "concat_md5_equals_whole": true,
+    "git_blob_shas_verified": true
+   }
+  }
+ ],
+ "pre_covered_manifest_certificates_crosscheck": [
+  {
+   "bit": 94,
+   "root_hex": "00000000400000803242000000000000",
+   "rows": 20527,
+   "md5": "c5d3232b9c9acd5e788b72b8e4d10c34",
+   "published_manifest_md5": "c5d3232b9c9acd5e788b72b8e4d10c34",
+   "marginal_against_chain_baseline": 0,
+   "note": "already folded in the published chain baseline (verified marginal 0 against the reproduced 1140 chain head; positive duplicate cross-check, not re-folded)"
+  },
+  {
+   "bit": 20,
+   "root_hex": "00000000000000803242000000100000",
+   "rows": 32576,
+   "md5": "4365967e4fc10d7643b7707296398096",
+   "published_manifest_md5": "4365967e4fc10d7643b7707296398096",
+   "marginal_against_chain_baseline": 0,
+   "note": "already folded in the published chain baseline (verified marginal 0 against the reproduced 1140 chain head; positive duplicate cross-check, not re-folded)"
+  },
+  {
+   "bit": 23,
+   "root_hex": "00000000000000803242000000800000",
+   "rows": 33954,
+   "md5": "84c0d9ee69aa372b2c6bb349fd431e3b",
+   "published_manifest_md5": "84c0d9ee69aa372b2c6bb349fd431e3b",
+   "marginal_against_chain_baseline": 0,
+   "note": "already folded in the published chain baseline (verified marginal 0 against the reproduced 1140 chain head; positive duplicate cross-check, not re-folded)"
+  }
+ ],
+ "unknown_status": "11x11 empty board: UNKNOWN. All WIN7 certificates prove only individual 7-stone roots within depth 10."
+}
