@@ -1,3 +1,5 @@
+// Seeded variant of research/experiments/sa-row-deficient-witnesses-20261114/scripts/sa_machine.js.
+// Heuristic search only; witness validity is established by the separate exact Python verifier.
 'use strict';
 const fs = require('fs');
 function gcdN(a,b){a=Math.abs(a);b=Math.abs(b);while(b){const t=a%b;a=b;b=t;}return a||1;}
