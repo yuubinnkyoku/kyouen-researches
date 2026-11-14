@@ -1,6 +1,6 @@
 ---
 id: K0827
-title: "7xm q=4,5,6 row-deficient witness bands — witnesses 7x4..7x14 (q=4), 7x5..7x22 (q=5), 7x6..7x26 (q=6); M_{7,4} >= 15, M_{7,5} >= 23, M_{7,6} >= 27; first results for the three families"
+title: "7xm q=4,5,6 row-deficient witness bands — witnesses 7x4..7x21 (q=4), 7x5..7x31 (q=5), 7x6..7x26 (q=6); M_{7,4} >= 22, M_{7,5} >= 32, M_{7,6} >= 27; first results for the three families"
 kind: proposition
 status: computed
 topics: [rectangles, maximal-safe]
@@ -31,11 +31,17 @@ artifacts:
 - path: research/experiments/seven-row-q4-q6-witness-search-20261114/output/q4-def-search/records.jsonl
   role: data
   note: "11 records m=4..14 all SAT dual-verified 0 conflicts: 8..15 stones, deficiency 13..6, [3,3,3,3,1,1,1]-type at m=12..14; raw kissat output for m=14 included"
+- path: research/experiments/seven-row-q4-q6-witness-search-20261114/output/q5-frontier-extension/records.jsonl
+  role: data
+  note: "9 records m=23..31 all SAT dual-verified single-deficiency 27 stones (except 25-stone 1-stone-row witnesses at m=25 and previously m=20); conflicts 1,200 / 2,029 / 7,730 / 3,257 / 23,195 / 48,433 / 116,669 / 220,814 / 31,000 (non-monotone dip at m=31); M_{7,5} >= 32"
+- path: research/experiments/seven-row-q4-q6-witness-search-20261114/output/q4-frontier-extension/records.jsonl
+  role: data
+  note: "7 records m=15..21 all SAT dual-verified 0 conflicts: 16..18 stones, deficiency 6..3, [3,3,3,3,3,2,1]-type at m=20,21; M_{7,4} >= 22"
 scope: "finite machine verification: kissat 4.0.4 (all instances); widths stated per family only; up to census completeness and solver correctness"
-evidence: "complete-encoding SAT instances (def mode is exactly 'exists row-deficient maximal safe config') + constructive dual-verified witnesses (census-free sat.js verifyConfig + Python Fraction, all records jsVerify/pyVerify true) + deterministic CNF regeneration from the calibrated sat2.js. See report.md."
+evidence: "complete-encoding SAT instances (def mode is exactly 'exists row-deficient maximal safe config') + constructive dual-verified witnesses (census-free sat.js verifyConfig + Python Fraction, all records jsVerify/pyVerify true) + deterministic CNF regeneration from the calibrated sat2.js + cross-environment-reset bit-exact reproduction of the frontier records ((7,5) m=23..26 and (7,4) m=15 re-run after an environment reset with identical conflicts 1,200/2,029/7,730/3,257 and 0). See report.md."
 ---
 
-# 7×m q=4,5,6 行欠損witness帯 — 3ファミリー初の結果（M_{7,4} ≥ 15・M_{7,5} ≥ 23・M_{7,6} ≥ 27）
+# 7×m q=4,5,6 行欠損witness帯 — 3ファミリー初の結果（M_{7,4} ≥ 22・M_{7,5} ≥ 32・M_{7,6} ≥ 27）
 
 ## 主張
 
@@ -43,12 +49,13 @@ evidence: "complete-encoding SAT instances (def mode is exactly 'exists row-defi
    （m=6..15 深欠損 20..33石・m=16..25 単一欠損34石・m=26 は33石
    rows 5/5/5/5/5/3/5・441,809 conflicts）。
    **M_{7,6} ≥ 27**（上界 862・K0318 代入）。
-2. **(7,5)**: **m=5..22 の全幅で存在**（m=16..22 は単一欠損27石を含む。
-   m=20 は25石・1石行 4/1/4/4/4/4/4 の深欠損例）。
-   **M_{7,5} ≥ 23**（上界 1142・K0318 代入）。
-3. **(7,4)**: **m=4..14 の全幅で存在**（8..15石・deficiency 13..6。
-   m=12..14 は [3,3,3,3,1,1,1] 型15石）。
-   **M_{7,4} ≥ 15**。上界は **K0068 の一般 q=4 偶奇定理 T_7=1929**
+2. **(7,5)**: **m=5..31 の全幅で存在**（m=16..31 は単一欠損27石を含む。
+   m=20 と m=25 は25石・1石行の深欠損例。conflicts は 1,200..220,814 で
+   単調ではなく m=31 は 31,000 と急落する）。
+   **M_{7,5} ≥ 32**（上界 1142・K0318 代入）。
+3. **(7,4)**: **m=4..21 の全幅で存在**（8..18石・deficiency 13..3。
+   全幅 conflicts 0。m=20,21 は [3,3,3,3,3,2,1] 型18石）。
+   **M_{7,4} ≥ 22**。上界は **K0068 の一般 q=4 偶奇定理 T_7=1929**
    （K0318 代入 U=1929 と一致）。
 4. すべて 2系統検証（census 不使用 sat.js verifyConfig + Python Fraction）
    で safe + maximal + 行欠損 PASS。
@@ -68,7 +75,7 @@ q ≤ w の 7行族（q=4,5,6,7）は m=q から継続的な witness 帯を持�
 
 ## 範囲と限界
 
-有限機械検証。前線は 7×27 (q=6)・7×23 (q=5)・7×15 (q=4)。
+有限機械検証。前線は 7×27 (q=6)・7×32 (q=5)・7×22 (q=4)。
 sat2.js census の実用範囲（n=7m ≈ 200）を超える延長には
 帯状censusの一般化（genfast の q ≤ w 版）が必要。M の確定には
 前線評価と上界改善（K0342 型 tail 評価）が残る。
