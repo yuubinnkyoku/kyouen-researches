@@ -11257,6 +11257,15 @@
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3251-1627/receipt.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3251-1627/receipt.json)
 
 - [K0708](../items/K0708-p3251-no-parabola-equality-witness.md) (certificate): サイズ1627（クラス(1,1,0)）の単一CNFがUNSAT、DRAT証明229,866行を修正版検証器でVERIFIED（185.6秒）
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3719-1860-x0c1e0/receipt.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3719-1860-x0c1e0/receipt.json)
+
+- [K0812](../items/K0812-new-exceptional-primes-3719-3727.md) (manifest): サイズ1860クラス(0,1,0)のUNSAT証明書（86,491行・VERIFIED 165秒）
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3719-1860-x1c0e0/receipt.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3719-1860-x1c0e0/receipt.json)
+
+- [K0812](../items/K0812-new-exceptional-primes-3719-3727.md) (manifest): サイズ1860クラス(1,0,0)のUNSAT証明書（32,354行・VERIFIED 23秒）
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3719-1860-x1c1e1/receipt.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3719-1860-x1c1e1/receipt.json)
+
+- [K0812](../items/K0812-new-exceptional-primes-3719-3727.md) (manifest): サイズ1860クラス(1,1,1)のUNSAT証明書（472,650行・VERIFIED 1,245秒）
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3719-1861/a3719_1861.cnf](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3719-1861/a3719_1861.cnf)
 
 - [K0812](../items/K0812-new-exceptional-primes-3719-3727.md) (data): 形状(1,1,0)の単一CNF（sha256はreceipt参照）
