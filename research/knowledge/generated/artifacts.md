@@ -13054,6 +13054,30 @@
 ## [research/experiments/six-row-q8-m19-class-split-20261114/scripts/sweep1.sh](../../../research/experiments/six-row-q8-m19-class-split-20261114/scripts/sweep1.sh)
 
 - [K0818](../items/K0818-six-row-q8-m19-deficient-nonexistence.md) (source): one-class driver: deterministic DIMACS, kissat 4.0.4 with 275s cap, JSONL record with exit code and conflicts
+## [research/experiments/six-row-q8-m20-class-split-20261114/output/r6x20q8_c2.txt](../../../research/experiments/six-row-q8-m20-class-split-20261114/output/r6x20q8_c2.txt)
+
+- [K0819](../items/K0819-six-row-q8-m20-deficient-nonexistence.md) (data): hardest class raw kissat log ({2}: 2,763,766 conflicts UNSAT); all 35 raw logs r6x20q8_c*.txt + lexH cross-checks
+## [research/experiments/six-row-q8-m20-class-split-20261114/output/r_ctrl_6x18_c1.txt](../../../research/experiments/six-row-q8-m20-class-split-20261114/output/r_ctrl_6x18_c1.txt)
+
+- [K0819](../items/K0819-six-row-q8-m20-deficient-nonexistence.md) (data): positive control log: 6x18 class {1} SAT 511,895 conflicts (bit-exact with K0818), decoded model 41 stones rows (7,6,7,7,7,7), census-free verifyConfig PASS
+## [research/experiments/six-row-q8-m20-class-split-20261114/output/records.jsonl](../../../research/experiments/six-row-q8-m20-class-split-20261114/output/records.jsonl)
+
+- [K0819](../items/K0819-six-row-q8-m20-deficient-nonexistence.md) (data): all 35 canonical class records (result UNSAT, rc=20, conflicts, seconds; sum 16,446,081 conflicts) + 2 lex=H cross-checks + 1 positive control
+## [research/experiments/six-row-q8-m20-class-split-20261114/output/summary.json](../../../research/experiments/six-row-q8-m20-class-split-20261114/output/summary.json)
+
+- [K0819](../items/K0819-six-row-q8-m20-deficient-nonexistence.md) (data): aggregate: 35 UNSAT / 0 SAT / 0 INDET, hardest class {2} 2,763,766 conflicts, controls, claim
+## [research/experiments/six-row-q8-m20-class-split-20261114/report.md](../../../research/experiments/six-row-q8-m20-class-split-20261114/report.md)
+
+- [K0819](../items/K0819-six-row-q8-m20-deficient-nonexistence.md) (proof): claim, coverage argument (exact deficiency set partitions deficient configurations; row-mirror soundness), verification protocol, per-class table, scope and limits
+## [research/experiments/six-row-q8-m20-class-split-20261114/scripts/mkrecords.js](../../../research/experiments/six-row-q8-m20-class-split-20261114/scripts/mkrecords.js)
+
+- [K0819](../items/K0819-six-row-q8-m20-deficient-nonexistence.md) (source): records.jsonl / summary.json builder from raw kissat logs (conflicts and process-time extracted per log)
+## [research/experiments/six-row-q8-m20-class-split-20261114/scripts/runall.sh](../../../research/experiments/six-row-q8-m20-class-split-20261114/scripts/runall.sh)
+
+- [K0819](../items/K0819-six-row-q8-m20-deficient-nonexistence.md) (source): deterministic 35-class sweep driver (encode + kissat 4.0.4 timeout 285 + lex=H cross-checks + 6x18 positive control)
+## [research/experiments/six-row-q8-m20-class-split-20261114/scripts/sat3.js](../../../research/experiments/six-row-q8-m20-class-split-20261114/scripts/sat3.js)
+
+- [K0819](../items/K0819-six-row-q8-m20-deficient-nonexistence.md) (solver): class-split / exact-count (--krow) / minpos / lex encoder on the K0810 sat.js census + sat2.js counter core (verbatim from the K0818 lane), plus kissat model decoding with census-free verifyConfig
 ## [research/experiments/solver-benchmarks/output/8x8-o-primary-summary.json](../../../research/experiments/solver-benchmarks/output/8x8-o-primary-summary.json)
 
 - [K0089](../items/K0089-n8-replication-of-n9-o-strata.md) (data): 凍結primary endpoint

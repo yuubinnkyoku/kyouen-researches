@@ -4762,6 +4762,7 @@
 - ← depends_on [K0808](../items/K0808-six-row-deficient-witnesses-q568.md): 2×8 q=4 の5石witness再発見制御
 - ← depends_on [K0815](../items/K0815-witness-column-extension-kissat-bounds.md): 2×8 q=4 5石witnessの制御再現
 - ← depends_on [K0818](../items/K0818-six-row-q8-m19-deficient-nonexistence.md): 2x8 q=4 5-stone control (SAT rediscovered); 2x9 q=4 UNSAT control consistent with M_{2,4}=9
+- ← depends_on [K0819](../items/K0819-six-row-q8-m20-deficient-nonexistence.md): 2x8 q=4 5-stone control (SAT rediscovered); 2x9 q=4 UNSAT control consistent with M_{2,4}=9
 
 ## [K0797](../items/K0797-g0-accounting-valid-through-w84.md) convention B g0会計の有効範囲は拡張法でw≤84に延長 — g4形は壁でなく真の壁はg3形（類サイズ29）— P(65)..P(84)の決定に必要な非標準形前提が復活点下界83をちょうどカバー
 
@@ -4885,6 +4886,7 @@
 - ← depends_on [K0815](../items/K0815-witness-column-extension-kissat-bounds.md): encode()/toDimacs 符号化をverbatim使用しDIMACSをkissat 4.0.4に投入。6×12 q=8 cap=38/37（自作CDCLのtimeout×2帯）がSAT
 - ← depends_on [K0816](../items/K0816-five-row-m20-deficient-nonexistence.md): SAT交叉確認はK0810 sat.jsのcensus（circleABC整数三元組・runnerの外心形式と独立）を使用
 - ← depends_on [K0818](../items/K0818-six-row-q8-m19-deficient-nonexistence.md): census (circleABC integer triples, line pairs) and the sequential-counter/maximality core are used verbatim (sat.js / sat2.js); the class-split unit clauses are the only addition
+- ← depends_on [K0819](../items/K0819-six-row-q8-m20-deficient-nonexistence.md): census (circleABC integer triples, line pairs) and the sequential-counter/maximality core are used verbatim (sat.js / sat2.js / sat3.js); the class-split unit clauses are the only addition
 
 ## [K0811](../items/K0811-sa-row-deficient-witnesses.md) SA探索による行欠損極大witness — M_{6,5}≥29・M_{6,6}≥22・M_{5,6}≥19（K0810の下界を更新・第2弾/第3弾で延長）
 
@@ -4928,6 +4930,7 @@
 - → depends_on [K0806](../items/K0806-six-row-q7-stabilization-bounds.md): 上界（K0318代入）は不変
 - ← depends_on [K0816](../items/K0816-five-row-m20-deficient-nonexistence.md): 5×20はkissat/貪欲/SA/portfolio全てで未決着だった前線（K0815 note・frontier-portfolio-20261114）。今回完全列挙で不在確定
 - ← depends_on [K0818](../items/K0818-six-row-q8-m19-deficient-nonexistence.md): 41-stone deficient-maximal witness at 6x18 (rows 7,6,7,7,7,7) is the lower bound M_{6,8}>=19 and the positive-control board; the 6x19 'unresolved' instance (kissat 255s, 4.52M conflicts single some-deficient clause) is settled by the class split
+- ← depends_on [K0819](../items/K0819-six-row-q8-m20-deficient-nonexistence.md): 41-stone deficient-maximal witness at 6x18 (rows 7,6,7,7,7,7) is the lower bound M_{6,8}>=19 and the positive-control board (rediscovered SAT, conflicts bit-exact with K0818)
 
 ## [K0816](../items/K0816-five-row-m20-deficient-nonexistence.md) 5x20 q=7 row-deficient maximal nonexistence (all 19 classes) — witness-free widths extend to 20, M_{5,7} ∈ {19,20} or ≥22
 
@@ -4949,3 +4952,11 @@
 - → depends_on [K0815](../items/K0815-witness-column-extension-kissat-bounds.md): 41-stone deficient-maximal witness at 6x18 (rows 7,6,7,7,7,7) is the lower bound M_{6,8}>=19 and the positive-control board; the 6x19 'unresolved' instance (kissat 255s, 4.52M conflicts single some-deficient clause) is settled by the class split
 - → depends_on [K0796](../items/K0796-two-row-m24-stabilization-nine.md): 2x8 q=4 5-stone control (SAT rediscovered); 2x9 q=4 UNSAT control consistent with M_{2,4}=9
 - → generalizes [K0816](../items/K0816-five-row-m20-deficient-nonexistence.md): same class-split methodology as the 5x20 q=7 nonexistence, applied at w=6 without the runner system: pure per-class UNSAT sweep with lex cross-checks and small-board ground-truth validation
+- ← generalizes [K0819](../items/K0819-six-row-q8-m20-deficient-nonexistence.md): the m=19 class-split sweep extended to m=20 with the identical machinery; 6x20 was the witness-search frontier opened by K0818
+
+## [K0819](../items/K0819-six-row-q8-m20-deficient-nonexistence.md) 6x20 q=8 row-deficient maximal nonexistence (all 35 canonical classes UNSAT) — witness-free width set of (6,8) extends to {19,20}, M_{6,8} ∈ {19,20} or >= 22
+
+- → depends_on [K0810](../items/K0810-sat-row-deficient-witnesses.md): census (circleABC integer triples, line pairs) and the sequential-counter/maximality core are used verbatim (sat.js / sat2.js / sat3.js); the class-split unit clauses are the only addition
+- → depends_on [K0815](../items/K0815-witness-column-extension-kissat-bounds.md): 41-stone deficient-maximal witness at 6x18 (rows 7,6,7,7,7,7) is the lower bound M_{6,8}>=19 and the positive-control board (rediscovered SAT, conflicts bit-exact with K0818)
+- → depends_on [K0796](../items/K0796-two-row-m24-stabilization-nine.md): 2x8 q=4 5-stone control (SAT rediscovered); 2x9 q=4 UNSAT control consistent with M_{2,4}=9
+- → generalizes [K0818](../items/K0818-six-row-q8-m19-deficient-nonexistence.md): the m=19 class-split sweep extended to m=20 with the identical machinery; 6x20 was the witness-search frontier opened by K0818

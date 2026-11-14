@@ -802,3 +802,4 @@
 | [K0816](../items/K0816-five-row-m20-deficient-nonexistence.md) | 5x20 q=7 row-deficient maximal nonexistence (all 19 classes) — witness-free widths extend to 20, M_{5,7} ∈ {19,20} or ≥22 | proposition | computed | rectangles, maximal-safe |
 | [K0817](../items/K0817-circle-strip-subadditivity-and-density-bound.md) | 円の連続行窓点数 P(w) の劣加法性・漸近密度上界・P(83)=34 | proposition | proved | geometry, rectangles |
 | [K0818](../items/K0818-six-row-q8-m19-deficient-nonexistence.md) | 6x19 q=8 row-deficient maximal nonexistence (all 35 canonical classes UNSAT) — witness-free width set of (6,8) gains 19, M_{6,8} = 19 or >= 21 | proposition | computed | rectangles, maximal-safe |
+| [K0819](../items/K0819-six-row-q8-m20-deficient-nonexistence.md) | 6x20 q=8 row-deficient maximal nonexistence (all 35 canonical classes UNSAT) — witness-free width set of (6,8) extends to {19,20}, M_{6,8} ∈ {19,20} or >= 22 | proposition | computed | rectangles, maximal-safe |
