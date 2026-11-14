@@ -352,6 +352,9 @@ artifacts:
 - path: research/log/2026-11-13-n11-ms5-worklist-derivation-and-s7-reuse-partition.md
   role: log
   note: 経緯と再現上の注意（メモリ上限・実装上の修正点）
+- path: research/log/2026-11-14-n11-s2-incremental-reuse-source-audit.md
+  role: log
+  note: 23新規WIN7 rootの幾何・親子対応を独立再計算。baseline receipt欠落により43件の増分分類は部分再現に留まる
 scope: n11 S2 {59,60} milestone-5のワークリストとS7証明書再利用。局所S6と三石位置のblocker類1・2の条件付き勝敗を含むが、二石rootや空盤の勝敗は含まない。
 evidence: 公開manifestの辞書順md5は0e95a438dbcb486368393de9c73fc21e。94オラクルの全744対称像を使い補完候補15072件を独立列挙。類1の新規WIN7戦略証明書13件・LOSS7証明書2件、類2のWIN7証明書54件と3六石位置の全62子・全72子・全64子のLOSS7証明書を独立検査。類1の五石位置の40六石軌道は既存記録と合わせて全て先手WIN。既存の一部証明書本体は別保管であり、公開監査記録に依存する。
 ---
@@ -403,3 +406,11 @@ The worklist contains 615,497 legal seventh-move candidates in total. After the 
 The audit rechecks D4 normalization, seven-stone occupancy, exact safety of the new roots, parent inclusion, and conflicts against the baseline LOSS7 receipts. It does **not** re-run the certificate bodies; it reuses the already-published verification receipts and logs. Reproduction: [audit script](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_incremental_class2_win7_reuse.py), [machine-readable result](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-win7-reuse-incremental-20261114.json), [run log](../../log/2026-11-14-n11-s2-class2-win7-incremental-reuse.md).
 
 The S2 `{59,60}` root, two-stone root `{49,60}`, and empty 11×11 root remain **UNKNOWN**. These 43 S6 parent lifts do not close the 1,447-orbit S5 worklist.
+
+### 2026-11-14 independent reproducibility audit
+
+The 23 new WIN7 roots and their 70 parent-child incidences over 48 worklist S6 parents were independently reconstructed from the current manifests and six S6 CSV parts. All 23 roots are distinct after D4 normalization and pass exact integer-geometry safety checks; the 48 parent rows and their child-root sets match the saved incremental JSON exactly. The 43 rows marked as incremental also match `incremental_parent_hex`, sum to cost 3,275, and have class histogram 1:3 / 2:35 / 3:5. No duplicate or LOSS7 conflict was found against the two available baseline receipt files (2,463 keys total).
+
+**However, the full baseline comparison is not currently reproducible from a clean checkout.** `s6sweep/verified.json` is a zero-byte blob, while the incremental audit script attempts to parse it as JSON. The other two baseline receipts contain only 2,463 keys, not the recorded baseline of 4,052 WIN7 and 2,699 LOSS7 roots. In addition, the checked-in script writes top-level `inputs` and omits `checks.worklist_unique`, whereas the saved JSON has `input` and includes `worklist_unique`. Thus the 5 baseline-overlap flags and the resulting 541 covered parents / 7,326 remaining rows / cost 573,835 are retained as recorded results, but were **not independently re-established** in this audit. The 43-row incremental classification depends on those saved flags.
+
+The audit does not re-run the 23 certificate bodies. See [the audit log](../../log/2026-11-14-n11-s2-incremental-reuse-source-audit.md). This is a provenance/reproducibility qualification, not a refutation of the certificates or a game verdict.
