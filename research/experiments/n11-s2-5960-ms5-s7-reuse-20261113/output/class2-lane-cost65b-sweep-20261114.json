@@ -1,0 +1,39 @@
+{
+ "session": "class2-lane cost-65b sweep (long-term lane, 2026-11-14)",
+ "s6_child_hex": "00000000000000809082000000020000",
+ "s5_parent_hex": "00000000000000809082000000000000",
+ "s6_s7_edge_cost": 65,
+ "demand_classes": {
+  "c1": 1,
+  "c2": 2,
+  "c4": 0
+ },
+ "candidates": 65,
+ "win7_d10": 0,
+ "refuted_d10": 65,
+ "capped": 0,
+ "total_nodes": 245459068,
+ "terminal_stone_range_all": [
+  13,
+  17
+ ],
+ "heaviest_bits": [
+  103,
+  101,
+  98
+ ],
+ "heaviest_fresh_rerun_node_exact": true,
+ "pilot_d6_controls": 6,
+ "pilot_d6_nodes": 5949,
+ "engine": "class4_child1_runner.ts (v15 exact rules, close-first AND at d>=8, cap 1e9)",
+ "candidate_enumerator": "legal_candidates.py (Bareiss 4x4), 65 legal candidates, bit-exact with s6_s7_edge_cost",
+ "raw_batches": [
+  "class2-lane-cost65b-raw-batch1-20261114.jsonl",
+  "class2-lane-cost65b-raw-batch2-20261114.jsonl",
+  "class2-lane-cost65b-raw-batch3-20261114.jsonl",
+  "class2-lane-cost65b-raw-batch4-20261114.jsonl",
+  "class2-lane-cost65b-raw-batch5-20261114.jsonl",
+  "class2-lane-cost65b-raw-batch6-20261114.jsonl"
+ ],
+ "result": "STERILE: no WIN7-D10 candidate in this child (8th sterile child overall)"
+}
