@@ -335,9 +335,16 @@ for(const [hex,move] of [
 const bit109Root=BigInt("0x00002000000000803202000020000000");
 const secondParent=canonicalD4(bit109Root^(1n<<61n));
 assert(secondParent==="00000000080000809002000000000800","cost67b second parent lift mismatch");
+assert(keysB.includes(parentHex)&&keysB.includes(secondParent),"cost67b parent lifts are not both in its marginal manifest-key set");
 const frontier63Csv=fs.readFileSync(p63,"utf8");
 assert(frontier63Csv.includes(s5+","+parentHex+",67,"),"cost67b parent missing from post-cost63e-warm frontier");
 const parent65g="00000000000000803202000000000004";
+const parent65gMask=BigInt("0x"+parent65g);
+const root65g=BigInt("0x00000000000000803202100000000004");
+assert(canonicalD4(parent65gMask)===parent65g,"cost65g parent is not in canonical D4 form");
+assert(root65g===(parent65gMask|(1n<<44n)),"cost65g root is not parent plus bit 44");
+isSafe(pointsOf(parent65gMask));
+assert((legalMask(pointsOf(parent65gMask))&(1n<<44n))!==0n,"cost65g bit 44 is not a legal parent move");
 assert(!childrenBase.has(parent65g),"cost65g bit44 parent unexpectedly remains in the S5 baseline");
 
 // Independently parse the complete 68-candidate cost-68c raw sweep.
