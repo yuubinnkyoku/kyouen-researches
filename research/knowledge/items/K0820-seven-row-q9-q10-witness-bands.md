@@ -1,6 +1,6 @@
 ---
 id: K0820
-title: "7xm q=9 / q=10 row-deficient witness bands — (7,9) witnesses 9..23 and witness-free 24..100 (M_{7,9} = 24 or >= 101), (7,10) witness-free band 19..40 confirmed by kissat and extended to 100 (M_{7,10} = 19 or >= 101)"
+title: "7xm q=9 / q=10 row-deficient witness bands — (7,9) witnesses 9..23 / witness-free 24..200 (M_{7,9} = 24 or >= 201), (7,10) witness-free band 19..40 confirmed by kissat and extended to 200 (M_{7,10} = 19 or >= 201)"
 kind: proposition
 status: computed
 topics: [rectangles, maximal-safe]
@@ -43,6 +43,15 @@ artifacts:
 - path: research/experiments/seven-row-inband-families-20261114/output/w7_upper_bounds.json
   role: data
   note: "K0318 curve-packing substitution upper bounds U_{7,9}=613, U_{7,10}=587 (7 controls passed)"
+- path: research/experiments/seven-row-q9-q10-band-extension-101-200-20261114/output/q9-band/records.jsonl
+  role: data
+  note: "100 records m=101..200 all UNSAT (m=101..118 genfast.js, m=119..200 genfast2.js; conflicts 6.9k..29.8k, 200s cap, INDET 0): completes the (7,9) witness-free band 24..200; (7,100,10) regen calibration bit-exact"
+- path: research/experiments/seven-row-q9-q10-band-extension-101-200-20261114/output/q10-band/records.jsonl
+  role: data
+  note: "100 records m=101..200 all UNSAT (m=101..110 genfast.js lane-1, m=111..200 genfast2.js continuation lane; conflicts 1.3k..3.3k, INDET 0): completes the (7,10) witness-free band 19..200; lane-2 calibration m=100/110 bit-exact and def+lex cross-checks at m=111/200 UNSAT in output/controls-lane2/"
+- path: research/experiments/seven-row-q9-q10-band-extension-101-200-20261114/scripts/genfast2.js
+  role: verifier
+  note: "integer-keyed fast census variant (canonical (N480,RHO) keys, typed-array open addressing, sat2.js encode reused via the genfast.js monkey-patch); CNF byte-identical to genfast.js on 4 samples incl. w=8 (controls_byteid.json); ~10.7x faster (m=101: 21.4s -> 2.0s), q>=w+1 only"
 scope: "finite machine verification: kissat 4.0.4 (all instances) + fastsat calibration/cross-check (the (7,10) band); widths stated per family only; up to census completeness and solver correctness"
 evidence: "complete-encoding UNSAT instances (def mode is exactly 'exists row-deficient maximal safe config' since safety caps every row at q-1) + constructive dual-verified witnesses + bit-exact instance-identity calibration + second-encoding (def+lex) cross-checks at (7,9) 24/33 + determinism across environment resets. See report.md."
 ---
@@ -141,3 +150,23 @@ q10 83..90 は 2195/2214/2217/2422/2351/2415/2404/2326 が双方で一致）。
 統合コミット: 83553d21 (m=61..90) + 本ラウンド (m=91..100・summary/report/K0820/CSV/README/log)。
 教訓（再確認）: **バッチ実行が終わったら即 push**（リセットで m=61..90 の
 ローカル成果を一度喪失・決定性により復元）。
+
+## 追記3 (2026-11-15 m=101..200 延長: 帯 24..200 / 19..200)
+
+`seven-row-q9-q10-band-extension-101-200-20261114`（本項目の後続レーン）が両帯を m=200 まで延長した。
+
+- **(7,9)**: **m=101..200 全幅 UNSAT**（m=101..118 genfast.js・m=119..200 genfast2.js・
+  conflicts 6.9k..29.8k・200s cap 内完走・INDET 0・較正 (7,100,10) 再生成 2,388 conflicts bit-exact）。
+  **witness-free 帯 {24..200}** を得て **M_{7,9} ∈ {24} ∪ [201,613]**。
+- **(7,10)**: m=101..110（後続レーン第1弾）に続き **m=111..200 を継続レーン（第2弾）が完走**
+  （全 90 幅 UNSAT・conflicts 1.3k..3.3k・INDET 0・較正 m=100=2,388 / m=110=1,468 conflicts が
+  vars/clauses/curves まで bit-exact・def+lex=H,V,HV 別符号化交差確認 m=111 (2,452) / m=200 (7,934)
+  とも UNSAT）。**witness-free 帯 {19..200}** を得て **M_{7,10} ∈ {19} ∪ [201,587]**。
+- **genfast2.js**: genfast.js の (v,ρ) 正規化を gcd なしの正準整数キー
+  (N480,RHO)=(480v,921600ρ²)・typed-array open addressing に置換した高速版
+  （~10.7x・m=101 で 21.4s→2.0s）。**4サンプル（7×25 q8 --rowY=2 / 7×101 q9 /
+  7×110 q10 --lex / 8×26 q9）で genfast.js と CNF バイト一致検証**
+  （`scripts/controls_byteid.json`）。q≥w+1 限定は不変。
+- 帰結: exact M の残課題は (7,9) m=201..612・(7,10) m=201..586 の持続性
+  （または K0342 型 tail 評価）。witness 探索前線は **7×201 (q=9)** と
+  **7×201 (q=10)** に移動。上界 613/587（K0318 代入）は不変。

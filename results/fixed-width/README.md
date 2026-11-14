@@ -28,11 +28,14 @@
     {0},{1} は k×minpos 完全分解32点・合計 28,617,104 conflicts・lex=H 交差確認・陽性対照 5×18 SAT）。
     最小witness幅は 18（K0332・29石）。よって M∈{19,20,21} または ≥23。
     残るは 22..157 の持続性で、witness 探索の前線は 5×22。
-    (7,9)={24},101..613・(7,10)={19},101..587 は K0820（witness 7×9..7×23 / 7×10..7×18、
-    witness-free 帯 24..100（kissat・m=24/33/52/60/100 は lex 別符号化でも UNSAT・fastsat は 60s TIMEOUT の負記録あり）/
-    19..40 を fastsat較正 bit-exact + kissat で交叉確認し 41..51 を両ソルバで・52..100 を kissat 単独
-    （genfast.js・CNF は sat2.js と12サンプルでバイト一致・sat2.js の全三つ組censusは7×52でOOM）で延長・上界は K0318 代入 613/587）。
-    witness 探索の前線は 7×101 (q=9)・7×101 (q=10)。
+    (7,9)={24},201..613・(7,10)={19},201..587 は K0820（witness 7×9..7×23 / 7×10..7×18、
+    witness-free 帯 24..200 / 19..200（kissat・m=24/33/52/60/100 は lex 別符号化でも UNSAT・fastsat は 60s TIMEOUT の負記録あり・
+    19..40 は fastsat較正 bit-exact + kissat で交叉確認し 41..51 を両ソルバで・52..100 を kissat 単独
+    （genfast.js・CNF は sat2.js と12サンプルでバイト一致・sat2.js の全三つ組censusは7×52でOOM）・
+    m=101..200 は seven-row-q9-q10-band-extension-101-200-20261114（q9 は genfast/genfast2 で全幅 UNSAT・conflicts 6.9k..29.8k、
+    q10 は m=111..200 を継続レーンが完走・conflicts 1.4k..3.7k・較正 m=100/110 bit-exact・lex交差確認 m=111/200 UNSAT・
+    genfast2.js は genfast.js と4サンプル（w=8含む）でCNFバイト一致）で延長・上界は K0318 代入 613/587）。
+    witness 探索の前線は 7×201 (q=9)・7×201 (q=10)。
     (7,8)=25..651 は K0825（新ファミリー。48石行欠損witness 7×8..7×24 — m=8,9 は38石の深欠損、
     m=13..24 は単一欠損48石・m=24 は def OR 実例が 240s INDET（3.8M conflicts）のため rowY=3 行固定分解で SAT、
     すべて2系統検証。7×25 rowY=3 は 250s INDET（3.5M conflicts・他3行クラス未走査・不在の主張ではない）。

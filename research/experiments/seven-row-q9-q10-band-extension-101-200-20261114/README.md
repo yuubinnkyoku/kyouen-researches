@@ -36,3 +36,17 @@ def 単一節（∃行欠損極大）完全符号化インスタンスを各幅�
 
 有限機検証（census 完全性と kissat 正確性まで）。各幅の UNSAT はその幅の非存在の完全証明（符号化完全性に依存）。
 m の未掃引区間の持続性は主張しない。**M_{7,9} ∈ {24} ∪ [201,613]** / M_{7,10} ∈ {19} ∪ [111,587] が本コミット時点の帰結。
+
+## 追記 (2026-11-15 継続レーン: (7,10) m=111..200 完走・帯 19..200 確定)
+
+- 較正: (7,100,10) 再生成 UNSAT **2,388 conflicts**（source q10-band record と bit-exact・
+  lane-1 の較正と同一）・(7,110,10) 再生成 UNSAT **1,468 conflicts**
+  （本実験 q10-band record m=110 と bit-exact・vars 19485 / clauses 70884 / curves 213 一致）。
+- **(7,10): m=111..200 全 90 幅 UNSAT**（genfast2.js def 単一節完全符号化・kissat 4.0.4・
+  200s cap・conflicts 1.3k..3.3k・INDET 0）。def+lex=H,V,HV 別符号化交差確認:
+  m=111 UNSAT 2,452 / m=200 UNSAT 7,934 conflicts。
+- 記録: `output/q10-band/records.jsonl` は m=101..200 の 100 行に統合（lane-1 の 101..110 は変更なし）。
+  lane-2 の較正・lex交差確認は `output/controls-lane2/`。生ログは `output/q10-band/s7x{111..200}q10_none.kissat.txt`。
+- 帰結: **witness-free 帯 {19..200}** が確定し **M_{7,10} ∈ {19} ∪ [201,587]**
+  （上界 587 は K0318 代入・不変）。K0820・mwq CSV・fixed-width README への反映は同日の
+  統合コミットで実施。m=201 以降の延長は後続レーン。
