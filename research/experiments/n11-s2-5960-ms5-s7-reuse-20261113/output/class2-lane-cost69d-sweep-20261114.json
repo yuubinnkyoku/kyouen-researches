@@ -1,0 +1,44 @@
+{
+ "session": "class2-lane cost-69d sweep (long-term lane, 2026-11-14)",
+ "s6_child_hex": "000000000000008090c2000000000000",
+ "s5_parent_hex": "00000000000000809082000000000000",
+ "s6_s7_edge_cost": 69,
+ "demand_classes": {
+  "c1": 2,
+  "c2": 2,
+  "c4": 0
+ },
+ "win7_d10": 0,
+ "win7_bits": [],
+ "refuted_d10": 69,
+ "capped": 0,
+ "total_nodes": 296122077,
+ "terminal_stone_range_all": [
+  13,
+  17
+ ],
+ "heaviest_bits": [
+  114,
+  20,
+  34
+ ],
+ "heaviest_fresh_rerun_node_exact": true,
+ "pilot_d6_controls": 1,
+ "pilot_d6_nodes": 5949,
+ "engine": "class4_child1_runner.ts (v15 exact rules, close-first AND at d>=8, cap 1e9)",
+ "candidate_enumerator": "legal_candidates.py (Bareiss 4x4), 69 legal candidates, bit-exact with s6_s7_edge_cost",
+ "raw_batches": [
+  "class2-lane-cost69d-raw-batch1-20261114.jsonl",
+  "class2-lane-cost69d-raw-batch2-20261114.jsonl",
+  "class2-lane-cost69d-raw-batch3-20261114.jsonl",
+  "class2-lane-cost69d-raw-batch4-20261114.jsonl",
+  "class2-lane-cost69d-raw-batch5-20261114.jsonl",
+  "class2-lane-cost69d-raw-batch6-20261114.jsonl",
+  "class2-lane-cost69d-raw-batch7-20261114.jsonl",
+  "class2-lane-cost69d-raw-batch8-20261114.jsonl",
+  "class2-lane-cost69d-raw-batch9-20261114.jsonl"
+ ],
+ "determinism_control_file": "class2-lane-cost69d-determinism-rerun-20261114.jsonl",
+ "result": "0 WIN7-D10, 69 REFUTED-D10, 0 capped - sterile child",
+ "note": "fourth (last-swept) child of the cost-69 band of the class-2 target S5; the last-listed child was chosen this session to stay clear of the parallel class2-lane's declared next pick (00000000000000809082000000400000)"
+}
