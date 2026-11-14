@@ -109,6 +109,23 @@ node-exact / verdict-exact against the published raw batches.
   verdict flips, 0 WIN7 rows affected.** No published verdict, frontier number, or
   certificate changes.
 
+
+## Follow-up 2 (same day): cost-73a rows from the parallel-lane record
+
+The parallel lane completed the cost-73a sweep (1 WIN7-D10 bit81 + 72 REFUTED, 0 capped, 383,290,602 nodes; sweep record first published at c6d4aa78 and re-pushed with the bit81 certificate at ff417b0f). This follow-up re-solved the record's two heaviest REFUTED rows and the WIN7 row with the instrumented runner; all three rows are node-exact / verdict-exact against the record:
+
+| sweep | bit | verdict | nodes (record = run) | fbtDrops | inserts+35 (occ.) | fbtMaxProbe |
+|-------|-----|---------|----------------------|----------|--------------------|-------------|
+| cost-73a | 92 | REFUTED-D10 | 20,603,022 exact | **1,384** | 87,984 (67.1%) | 43 |
+| cost-73a | 23 | REFUTED-D10 | 18,497,705 exact | **1,761** | 97,145 (74.1%) | 47 |
+| cost-73a | 81 | WIN7-D10 | 5,530,773 exact | 0 | 55,402 | 16 |
+
+- **Two new saturated rows** (11 rows with observed drops across the audit; 9 previously confirmed drop-free, these 2 not yet). The FBS=1<<20 drop-free re-solve of bits 92/23 was interrupted by an execution-environment outage and is **pending** — until it runs, both rows count as saturated-but-unconfirmed under the operational rule. Both canonical verdicts stand on the parallel lane's published raw batches (which include node-exact determinism reruns); this audit adds drop counters only and changes no verdict.
+- **Onset bracket tightened to [87,159 clean; 87,984 saturated]** (66.5%-67.1% of 131,072 slots): cost-73a bit92 saturates at 67.1% occupancy, below the previous least-occupied saturated row (cost-74 bit70 at 69.1%).
+- **Correction to the first-pass reading of fbtMaxProbe**: it is *not* a saturation indicator. The counter records only probe walks that end in a find-or-insert; a dropped query stops at the 48-step limit without updating the counter, so bit92 shows maxProbe=43 while dropping 1,384 queries. The 47/48 ceiling on earlier saturated rows was a successful-walk artifact.
+- WIN7 coverage: cost-73a bit81 re-confirmed clean — a third independent node-exact reproduction (session-9 inflight, parallel-lane fresh rerun, this audit). Distinct class2-lane WIN7 rows audited remain 19/19, all fbtDrops=0.
+- v15 context: the parallel lane's v16 runner repairs signed TT keys and the negative-bound sentinel that v15 stores ineffectively. The instrumented and drop-free variants here are deliberately v15-derived for raw comparability (node counts reproduce v15 exactly). Under v16 the memo actually hits, which changes search-time fbt insert patterns — the occupancy-onset figures above are v15-specific and must be re-measured before reuse for v16 sweeps.
+
 ## Files
 
 - `scripts/runner_instr.ts` — instrumented canonical (FBS=1<<17 + counters)
@@ -118,6 +135,8 @@ node-exact / verdict-exact against the published raw batches.
 - `output/instrumented-runs-followup.jsonl` — 17 follow-up rows (>=19M + remaining WIN7)
 - `output/drop-free-reresolve-followup.jsonl` — 3 follow-up saturated rows re-solved drop-free
 - `output/runs-manifest.json` — structured summary, cross-checks, conclusions (both phases)
+- `output/instrumented-runs-followup2.jsonl` — 3 cost-73a rows (2 heaviest REFUTED + WIN7 re-check)
+- `output/runs-manifest-followup2.json` — structured follow-up-2 data
 
 ## Interpretation guard
 

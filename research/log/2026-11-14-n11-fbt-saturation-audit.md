@@ -84,3 +84,17 @@ published raw batches) and re-solved the 3 newly found saturated rows drop-free.
 
 Artifacts: `output/instrumented-runs-followup.jsonl`,
 `output/drop-free-reresolve-followup.jsonl`, updated `output/runs-manifest.json`.
+
+## Follow-up 2 (same session): cost-73a rows
+
+The parallel lane's cost-73a sweep record (1 WIN7 bit81 + 72 REFUTED, 0 capped, 383,290,602 nodes; frontier recompute after cost-73a: solved 921) was audited row-wise with the instrumented runner. The two heaviest REFUTED rows and the WIN7 row all reproduced node-exact against the record.
+
+- cost-73a bit92 (20,603,022 nodes): **1,384 fbtDrops at 87,984 total inserts (67.1%)** — new saturated row; tightens the onset bracket to [87,159 clean; 87,984 saturated] of 131,072 slots.
+- cost-73a bit23 (18,497,705 nodes): **1,761 drops at 97,145 (74.1%)** — new saturated row.
+- cost-73a bit81 WIN7 (5,530,773 nodes): fbtDrops=0 (55,402 occupancy, maxProbe 16) — third independent node-exact reproduction of the WIN7 row; distinct class2-lane WIN7 rows stay 19/19 clean.
+- Correction: fbtMaxProbe is not a saturation indicator — dropped 48-step probe walks never update the counter (bit92 saturates with recorded maxProbe=43).
+- The FBS=1<<20 drop-free re-solves of bits 92/23 are **pending** (interrupted by an execution-environment outage); both rows stay saturated-but-unconfirmed until then. No published verdict, frontier number, or certificate changes. The certificate layer stays drop-guarded (extractor FBS=1<<20, fbt_drops=0 required; the bit81 certificate was extracted drop-free by the parallel lane).
+- v15 context: the parallel lane's v16 memo-key repair means v15 search-time fbt insert patterns (hence the onset bracket) are v15-specific; the audit variants stay v15-derived for comparability and must be re-measured under v16 before reuse.
+
+Artifacts: `output/instrumented-runs-followup2.jsonl`,
+`output/runs-manifest-followup2.json`. 11x11 remains UNKNOWN.
