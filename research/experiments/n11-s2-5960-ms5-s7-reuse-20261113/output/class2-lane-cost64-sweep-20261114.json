@@ -1,0 +1,692 @@
+{
+ "schema": "n11-class2-lane-cost64-sweep-20261114-v1",
+ "date": "2026-11-14",
+ "s6_child": "00000000000000801a0a000000000000",
+ "child_cost": 64,
+ "candidate_count": 64,
+ "engine": "v15 verbatim (repo class4_child1_runner.ts @ f0a9819a, local --enum patch only; close-first AND d>=8, cap 50M, depth 10 single-shot, 4 parallel workers)",
+ "candidates": [
+  {
+   "bit": 0,
+   "verdict": "WIN7-D10",
+   "nodes": 2368167,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 1,
+   "verdict": "REFUTED-D10",
+   "nodes": 2750301,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 2,
+   "verdict": "REFUTED-D10",
+   "nodes": 4061076,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 3,
+   "verdict": "REFUTED-D10",
+   "nodes": 849571,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 4,
+   "verdict": "WIN7-D10",
+   "nodes": 3009651,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 6,
+   "verdict": "REFUTED-D10",
+   "nodes": 760118,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 7,
+   "verdict": "REFUTED-D10",
+   "nodes": 1207064,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 8,
+   "verdict": "REFUTED-D10",
+   "nodes": 5101548,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 9,
+   "verdict": "REFUTED-D10",
+   "nodes": 748501,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 10,
+   "verdict": "WIN7-D10",
+   "nodes": 3859235,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 11,
+   "verdict": "REFUTED-D10",
+   "nodes": 762675,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 14,
+   "verdict": "WIN7-D10",
+   "nodes": 10225960,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 18,
+   "verdict": "REFUTED-D10",
+   "nodes": 3714751,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 22,
+   "verdict": "WIN7-D10",
+   "nodes": 5042095,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 24,
+   "verdict": "WIN7-D10",
+   "nodes": 2184246,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 25,
+   "verdict": "REFUTED-D10",
+   "nodes": 1878995,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 26,
+   "verdict": "REFUTED-D10",
+   "nodes": 1971264,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 28,
+   "verdict": "REFUTED-D10",
+   "nodes": 985757,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 29,
+   "verdict": "REFUTED-D10",
+   "nodes": 765779,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 31,
+   "verdict": "REFUTED-D10",
+   "nodes": 6315628,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 32,
+   "verdict": "REFUTED-D10",
+   "nodes": 3463290,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 33,
+   "verdict": "WIN7-D10",
+   "nodes": 5622261,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 34,
+   "verdict": "REFUTED-D10",
+   "nodes": 2026394,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 35,
+   "verdict": "WIN7-D10",
+   "nodes": 3343473,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 40,
+   "verdict": "WIN7-D10",
+   "nodes": 3489833,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 42,
+   "verdict": "REFUTED-D10",
+   "nodes": 3056085,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 43,
+   "verdict": "WIN7-D10",
+   "nodes": 8539022,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 52,
+   "verdict": "WIN7-D10",
+   "nodes": 2328012,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 53,
+   "verdict": "WIN7-D10",
+   "nodes": 5425129,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 54,
+   "verdict": "WIN7-D10",
+   "nodes": 5214596,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 66,
+   "verdict": "REFUTED-D10",
+   "nodes": 3122588,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 75,
+   "verdict": "REFUTED-D10",
+   "nodes": 1599027,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 76,
+   "verdict": "REFUTED-D10",
+   "nodes": 1058388,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 77,
+   "verdict": "REFUTED-D10",
+   "nodes": 2386809,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 78,
+   "verdict": "WIN7-D10",
+   "nodes": 2546140,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 79,
+   "verdict": "WIN7-D10",
+   "nodes": 5608618,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 86,
+   "verdict": "REFUTED-D10",
+   "nodes": 930110,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 87,
+   "verdict": "REFUTED-D10",
+   "nodes": 1215798,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 88,
+   "verdict": "WIN7-D10",
+   "nodes": 6360916,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 90,
+   "verdict": "WIN7-D10",
+   "nodes": 7751287,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 91,
+   "verdict": "REFUTED-D10",
+   "nodes": 406757,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 92,
+   "verdict": "REFUTED-D10",
+   "nodes": 367692,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 94,
+   "verdict": "REFUTED-D10",
+   "nodes": 3912113,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 96,
+   "verdict": "REFUTED-D10",
+   "nodes": 266413,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 97,
+   "verdict": "REFUTED-D10",
+   "nodes": 546103,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 98,
+   "verdict": "REFUTED-D10",
+   "nodes": 3033211,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 99,
+   "verdict": "WIN7-D10",
+   "nodes": 809968,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 100,
+   "verdict": "REFUTED-D10",
+   "nodes": 7995476,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 102,
+   "verdict": "REFUTED-D10",
+   "nodes": 8545788,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 105,
+   "verdict": "WIN7-D10",
+   "nodes": 2375937,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 106,
+   "verdict": "WIN7-D10",
+   "nodes": 2566766,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 107,
+   "verdict": "REFUTED-D10",
+   "nodes": 2276435,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 108,
+   "verdict": "REFUTED-D10",
+   "nodes": 694167,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 109,
+   "verdict": "WIN7-D10",
+   "nodes": 4453482,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 110,
+   "verdict": "REFUTED-D10",
+   "nodes": 2196239,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 111,
+   "verdict": "REFUTED-D10",
+   "nodes": 482819,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 112,
+   "verdict": "REFUTED-D10",
+   "nodes": 2145615,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 113,
+   "verdict": "WIN7-D10",
+   "nodes": 4784541,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 114,
+   "verdict": "WIN7-D10",
+   "nodes": 1446680,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 116,
+   "verdict": "REFUTED-D10",
+   "nodes": 6553905,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 117,
+   "verdict": "REFUTED-D10",
+   "nodes": 1039077,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 118,
+   "verdict": "REFUTED-D10",
+   "nodes": 1705284,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 119,
+   "verdict": "WIN7-D10",
+   "nodes": 1262673,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "bit": 120,
+   "verdict": "REFUTED-D10",
+   "nodes": 1904607,
+   "capped": false,
+   "terminal_range": [
+    13,
+    17
+   ]
+  }
+ ],
+ "summary": {
+  "win7_d10": 24,
+  "win7_bits": [
+   0,
+   4,
+   10,
+   14,
+   22,
+   24,
+   33,
+   35,
+   40,
+   43,
+   52,
+   53,
+   54,
+   78,
+   79,
+   88,
+   90,
+   99,
+   105,
+   106,
+   109,
+   113,
+   114,
+   119
+  ],
+  "refuted_d10": 40,
+  "capped": 0,
+  "total_nodes": 195421906,
+  "terminal_range_all": [
+   13,
+   17
+  ]
+ },
+ "controls": {
+  "pilot_d6_runs": 5,
+  "all_5949": true,
+  "determinism": "fresh re-run of heaviest bits 14/88/33 node-exact (10225960/6360916/5622261)"
+ },
+ "interpretation_guard": "REFUTED-D10 proves only absence of WIN7 within depth 10 from the 7-stone root; deeper wins are not excluded; 11x11 empty root / two-stone root {49,60} / S2 {59,60} / class 2 / class 4 remain UNKNOWN"
+}
