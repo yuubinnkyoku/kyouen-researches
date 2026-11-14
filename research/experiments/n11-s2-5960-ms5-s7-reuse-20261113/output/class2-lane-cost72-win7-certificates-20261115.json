@@ -1,0 +1,324 @@
+{
+  "schema": "n11-class2-lane-partial-win7-receipt-v1",
+  "date": "2026-11-15",
+  "status": "partial_receipt",
+  "session": "cost72 bit111 certificate; cost72 sweep remains in-flight because bit52 has no certificate",
+  "child_s6_hex": "00000000000000803202000000000200",
+  "child_edge_cost": 72,
+  "s5_parent_hex": "00000000000000803202000000000000",
+  "demand_classes": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+  },
+  "certificate": {
+    "bit": 111,
+    "root_hex": "00008000000000803202000000000200",
+    "verdict": "WIN7",
+    "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72-certificates/bit111-root-00008000000000803202000000000200.cert",
+    "git_blob_sha": "b0fee80a9a2c906bccf20983ef97279309f95367",
+    "bytes": 1664895,
+    "strategy_rows": 46160,
+    "root_stones": 7,
+    "root_safe": true,
+    "root_mobility": 54,
+    "parent_s6_hex": "00000000000000803202000000000200",
+    "parent_stones": 6,
+    "parent_safe": true,
+    "added_move": 111,
+    "added_move_legal": true,
+    "subroots_verified": 54,
+    "subroots_pass": 54,
+    "visited_states": 100342,
+    "winner_states": 65266,
+    "loser_states": 21039,
+    "loser_reply_edges": 94344,
+    "terminal_positions": 14037,
+    "terminal_stone_range": [
+      13,
+      17
+    ],
+    "strategy_rows_sorted_unique": true,
+    "union_missing": 0,
+    "union_extra": 0,
+    "verification": "BigInt 3x3 cofactor exact-integer geometry; all opponent first moves and all strategy continuations checked; no solver/cache/repository verifier imported"
+  },
+  "raw_sweep": {
+    "claim_file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72-inflight-20261115.json",
+    "claim_blob_sha": "2f0bae9df6e5a657c2c49d7be9a274a218c5d8f1",
+    "raw_batches": 9,
+    "candidate_rows": 72,
+    "unique_bits": 72,
+    "candidate_set_matches_claim": true,
+    "missing_bits": [],
+    "extra_bits": [],
+    "duplicates": [],
+    "win7_d10_bits": [
+      52,
+      111
+    ],
+    "refuted_d10": 70,
+    "capped": 0,
+    "total_nodes": 69563014,
+    "pilot_controls": 9,
+    "pilot_nodes_each": 3402,
+    "batches": [
+      {
+        "batch": 1,
+        "nodes": 5609463,
+        "wins": [],
+        "refuted": 8,
+        "sha": "67e4c1f6bfd6b222375631228e5235e6260a3d72"
+      },
+      {
+        "batch": 2,
+        "nodes": 7088702,
+        "wins": [],
+        "refuted": 8,
+        "sha": "4d18c97eea17f11d4cc4e8629cde7d07ea91a34e"
+      },
+      {
+        "batch": 3,
+        "nodes": 4299396,
+        "wins": [],
+        "refuted": 8,
+        "sha": "7960550515e0ac9a6a28f712b657d726204aeb18"
+      },
+      {
+        "batch": 4,
+        "nodes": 10633305,
+        "wins": [],
+        "refuted": 8,
+        "sha": "a38eccf950e751ef339ad3dc7d9cc3d6b0e63bf3"
+      },
+      {
+        "batch": 5,
+        "nodes": 16244653,
+        "wins": [
+          52
+        ],
+        "refuted": 7,
+        "sha": "2212cc3e94fba3004fd940a49f53e6f5652f5b3f"
+      },
+      {
+        "batch": 6,
+        "nodes": 5470216,
+        "wins": [],
+        "refuted": 8,
+        "sha": "32d4847db3d4238e45dda5f7dfa4f48278995d6f"
+      },
+      {
+        "batch": 7,
+        "nodes": 7258345,
+        "wins": [],
+        "refuted": 8,
+        "sha": "87543ab80c720e679f92d8d2048b31308b20c529"
+      },
+      {
+        "batch": 8,
+        "nodes": 3939222,
+        "wins": [],
+        "refuted": 8,
+        "sha": "bb40062399f54da76cd0c58cbc3e571334e47b07"
+      },
+      {
+        "batch": 9,
+        "nodes": 9019712,
+        "wins": [
+          111
+        ],
+        "refuted": 7,
+        "sha": "fefb537754b87de1280d03f6de05a98ff1b72836"
+      }
+    ]
+  },
+  "unverified_win7_bits": [
+    52
+  ],
+  "sweep_status": "in-flight; raw 72/72 rows are present, but bit52 remains a WIN7-D10 search candidate without a certificate and no completed sweep record/v15 cross-check/determinism rerun is published",
+  "parent_lift": {
+    "all_canonical_s6_parent_orbits": [
+      "00000000000000803202000000000002",
+      "00000008000000803000000008200000",
+      "00000008000000003802000000200000",
+      "00000008000000802800000008200000",
+      "00000008000000003800000008200000",
+      "00000008000000801800000008200000",
+      "00000000000000803202000000000200"
+    ],
+    "manifest_parent_orbits": 3,
+    "manifest_parent_keys": [
+      "00000000000000803202000000000002",
+      "00000008000000003800000008200000",
+      "00000000000000803202000000000200"
+    ],
+    "current_remaining_parent": "00000000000000803202000000000200",
+    "other_manifest_parents_unreconciled": [
+      "00000000000000803202000000000002",
+      "00000008000000003800000008200000"
+    ],
+    "note": "Only the target child is confirmed still remaining in the after-cost75b top-candidates file. The other two manifest parents are not counted until compared with the current solved set."
+  },
+  "frontier_delta": {
+    "source_after_cost75b": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost75b-recompute-20261115.json",
+    "source_blob_sha": "1252731811b82603dbb7bfce1405a9213c3845cc",
+    "global_baseline_after_cost75b": {
+      "solved_s6": 1049,
+      "unique_remaining_s6": 6798,
+      "sum_remaining_cost": 535812,
+      "s6_needed_by_open_classes": 5068,
+      "cost_needed_by_open_classes": 399535
+    },
+    "local_s5_before_bit111": {
+      "s5_hex": "00000000000000803202000000000000",
+      "remaining_s6_orbits": 2,
+      "remaining_s7_edge_cost": 147,
+      "remaining_children": [
+        {
+          "s6_hex": "00000000000000803202000000000200",
+          "cost": 72
+        },
+        {
+          "s6_hex": "00000000000000803202000000004000",
+          "cost": 75
+        }
+      ]
+    },
+    "local_s5_after_bit111": {
+      "remaining_s6_orbits": 1,
+      "remaining_s7_edge_cost": 75,
+      "remaining_children": [
+        {
+          "s6_hex": "00000000000000803202000000004000",
+          "cost": 75
+        }
+      ]
+    },
+    "global_frontier_after_bit111": "not recomputed; do not update global totals from this local receipt alone"
+  },
+  "cost75b_already_folded": {
+    "sweep_file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost75b-sweep-20261115.json",
+    "sweep_blob_sha": "32727991aa8eb79bd76e793beca25d188bf94a2b",
+    "certificate_record": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost75b-win7-certificates-20261115.json",
+    "certificate_record_blob_sha": "8ef022b8127112ee3aebcb1481b8a749fc467777",
+    "frontier_file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost75b-recompute-20261115.json",
+    "complete": true,
+    "win7_bits": [
+      7,
+      51,
+      54,
+      84,
+      89,
+      99,
+      116
+    ],
+    "refuted_d10": 68,
+    "capped": 0,
+    "nodes": 139705045,
+    "determinism_reruns_node_exact": [
+      7,
+      86,
+      116
+    ],
+    "v15_cross_engine_anchors": 7,
+    "certificates_all_verified": true,
+    "certificate_rows": 352672,
+    "certificate_subroots": 406,
+    "certificate_visited_states": 740931,
+    "certificate_terminals": 113286,
+    "parent_orbits": 43,
+    "manifest_parent_orbits": 15,
+    "marginal_manifest_parent_orbits": 4,
+    "frontier_after": {
+      "solved_s6": 1049,
+      "unique_remaining_s6": 6798,
+      "sum_remaining_cost": 535812,
+      "s6_needed_by_open_classes": 5068,
+      "cost_needed_by_open_classes": 399535
+    },
+    "s5_target_after": {
+      "remaining_s6_orbits": 2,
+      "remaining_s7_edge_cost": 147
+    }
+  },
+  "combined_verification": {
+    "independently_verified_certificates": 8,
+    "strategy_rows": 398832,
+    "subroots": 460,
+    "visited_states": 841273,
+    "terminal_positions": 127323,
+    "unique_parent_orbits": 50,
+    "manifest_parent_orbits": 18,
+    "known_current_remaining_children": [
+      "00000000000000803202000000000008",
+      "00000000000000803202000000000200"
+    ],
+    "note": "cost75b's seven receipts are already folded into 1049; cost72 bit111 is the new partial receipt. The other two cost72 manifest parents remain unreconciled."
+  },
+  "conflict_check": {
+    "exact_root_plus_LOSS7_code_search_hits": 0,
+    "scope": "GitHub code search only; not a complete LOSS7 cache merge. Full WIN/LOSS conflict check remains pending."
+  },
+  "sources": {
+    "cost72_raw_batch_paths": [
+      {
+        "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72-raw-batch1-20261115.jsonl",
+        "blob_sha": "67e4c1f6bfd6b222375631228e5235e6260a3d72"
+      },
+      {
+        "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72-raw-batch2-20261115.jsonl",
+        "blob_sha": "4d18c97eea17f11d4cc4e8629cde7d07ea91a34e"
+      },
+      {
+        "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72-raw-batch3-20261115.jsonl",
+        "blob_sha": "7960550515e0ac9a6a28f712b657d726204aeb18"
+      },
+      {
+        "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72-raw-batch4-20261115.jsonl",
+        "blob_sha": "a38eccf950e751ef339ad3dc7d9cc3d6b0e63bf3"
+      },
+      {
+        "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72-raw-batch5-20261115.jsonl",
+        "blob_sha": "2212cc3e94fba3004fd940a49f53e6f5652f5b3f"
+      },
+      {
+        "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72-raw-batch6-20261115.jsonl",
+        "blob_sha": "32d4847db3d4238e45dda5f7dfa4f48278995d6f"
+      },
+      {
+        "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72-raw-batch7-20261115.jsonl",
+        "blob_sha": "87543ab80c720e679f92d8d2048b31308b20c529"
+      },
+      {
+        "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72-raw-batch8-20261115.jsonl",
+        "blob_sha": "bb40062399f54da76cd0c58cbc3e571334e47b07"
+      },
+      {
+        "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72-raw-batch9-20261115.jsonl",
+        "blob_sha": "fefb537754b87de1280d03f6de05a98ff1b72836"
+      }
+    ],
+    "cost72_certificate_file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72-certificates/bit111-root-00008000000000803202000000000200.cert",
+    "cost72_top_candidates": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-top-candidates-s6-after-cost75b-20261115.csv",
+    "cost72_top_candidates_blob_sha": "bf9104dcfc45acab8fa308525ff05a0e2b4d3155",
+    "cost75b_parent_lift_source": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost75b-win7-certificates-20261115.json",
+    "verifier_script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/verify_win7_certificate_bigint_independent.mjs",
+    "verifier_script_blob_sha": "62b5d9413daafb172f6e10249976ee6808f7b454",
+    "manifest_parts": [
+      "research/experiments/n11-s2-5960-milestone5-20261112/output/ms5_s6_manifest_part1.csv",
+      "research/experiments/n11-s2-5960-milestone5-20261112/output/ms5_s6_manifest_part2.csv",
+      "research/experiments/n11-s2-5960-milestone5-20261112/output/ms5_s6_manifest_part3.csv",
+      "research/experiments/n11-s2-5960-milestone5-20261112/output/ms5_s6_manifest_part4.csv",
+      "research/experiments/n11-s2-5960-milestone5-20261112/output/ms5_s6_manifest_part5.csv",
+      "research/experiments/n11-s2-5960-milestone5-20261112/output/ms5_s6_manifest_part6.csv"
+    ]
+  },
+  "limitations": [
+    "The cost72 sweep is still partial because bit52 has no certificate; the receipt proves only the bit111 seven-stone root.",
+    "The cost72 bit111 receipt is not yet folded into a global frontier recomputation; global counts remain the cost75b baseline 1049/6798/535812/5068/399535.",
+    "Two other cost72 manifest parent lifts are not reconciled with the current solved set and are not counted.",
+    "No complete WIN/LOSS cache merge was run; exact-root LOSS7 code search had no hit but is not exhaustive.",
+    "Local git clone failed due GitHub DNS resolution, so uv sync, knowledge checks, unit tests, and generated build were not run locally; the repository refresh workflow will be triggered by this commit."
+  ],
+  "interpretation_guard": "This partial receipt proves the S6 parent 00000000000000803202000000000200 is WIN. The five-stone parent remains open with one S6 child 00000000000000803202000000004000 (cost 75). S2 {59,60}, two-stone roots {49,60}/{59,60}, and the standard 11x11 empty root remain UNKNOWN."
+}
