@@ -1816,6 +1816,7 @@
 - ← depends_on [K0788](../items/K0788-width36-48-exact-circle-point-counts.md): 固定幅盤の枠組みと円点数P(w)の定義
 - ← supports [K0795](../items/K0795-fixed-width-pw-mwq-results-table.md): 安定化長M_{w,q}の定義と枠組み。本項目で確定値・境界・分離帯が機械可読化された
 - ← supports [K0813](../items/K0813-width2-5-circle-point-max-and-q9-q10-row-formula.md): w=5の低q側帯の上界会計にP(5)=8を供給
+- ← depends_on [K0816](../items/K0816-five-row-m20-deficient-nonexistence.md): 5x18 29石witnessが下界（M≥19）と5x18陽性対照の由来
 
 ## [K0333](../items/K0333-modular-polynomial-curve-q-point-bound.md) 次数k≥2の剰余多項式グラフは直線高々k点・円高々2k点でq≥2k+1版が全点安全
 
@@ -4430,6 +4431,7 @@
 - → depends_on [K0758](../items/K0758-three-row-m19-class024-nonexistence.md)
 - ← depends_on [K0761](../items/K0761-six-row-one-deficient-class-witnesses.md): 5×19では同クラスが不在（全極大安全配置が満容量30石）— 本項目はその幅6版が6×19では在ることを示す対比
 - ← depends_on [K0808](../items/K0808-six-row-deficient-witnesses-q568.md): 5×19 q=7 の全極大30石との一致制御
+- ← depends_on [K0816](../items/K0816-five-row-m20-deficient-nonexistence.md): 同一runner機械（multi_deficient_runner.ts）の 5x20 移植。occupancy分類・blocker割当DFS・fillRows全列挙をM=20で完走
 
 ## [K0760](../items/K0760-six-row-q7-width6-census-full-capacity-witnesses.md) 6×m（q=7）危険曲線censusと満容量36石witness — 幅6 occupancyプログラムのseed
 
@@ -4877,6 +4879,7 @@
 - → depends_on [K0806](../items/K0806-six-row-q7-stabilization-bounds.md): 上界（K0318代入）は不変
 - ← generalizes [K0811](../items/K0811-sa-row-deficient-witnesses.md): SATで解けた m 帯の先の witness を SA で発見し (6,5)/(6,6)/(5,6) 下界を更新
 - ← depends_on [K0815](../items/K0815-witness-column-extension-kissat-bounds.md): encode()/toDimacs 符号化をverbatim使用しDIMACSをkissat 4.0.4に投入。6×12 q=8 cap=38/37（自作CDCLのtimeout×2帯）がSAT
+- ← depends_on [K0816](../items/K0816-five-row-m20-deficient-nonexistence.md): SAT交叉確認はK0810 sat.jsのcensus（circleABC整数三元組・runnerの外心形式と独立）を使用
 
 ## [K0811](../items/K0811-sa-row-deficient-witnesses.md) SA探索による行欠損極大witness — M_{6,5}≥29・M_{6,6}≥22・M_{5,6}≥19（K0810の下界を更新・第2弾/第3弾で延長）
 
@@ -4916,3 +4919,11 @@
 - → depends_on [K0810](../items/K0810-sat-row-deficient-witnesses.md): encode()/toDimacs 符号化をverbatim使用しDIMACSをkissat 4.0.4に投入。6×12 q=8 cap=38/37（自作CDCLのtimeout×2帯）がSAT
 - → depends_on [K0796](../items/K0796-two-row-m24-stabilization-nine.md): 2×8 q=4 5石witnessの制御再現
 - → depends_on [K0806](../items/K0806-six-row-q7-stabilization-bounds.md): 上界（K0318代入）は不変
+- ← depends_on [K0816](../items/K0816-five-row-m20-deficient-nonexistence.md): 5×20はkissat/貪欲/SA/portfolio全てで未決着だった前線（K0815 note・frontier-portfolio-20261114）。今回完全列挙で不在確定
+
+## [K0816](../items/K0816-five-row-m20-deficient-nonexistence.md) 5x20 q=7 row-deficient maximal nonexistence (all 19 classes) — witness-free widths extend to 20, M_{5,7} ∈ {19,20} or ≥22
+
+- → depends_on [K0759](../items/K0759-three-row-m19-class123-nonexistence-occupancy-complete.md): 同一runner機械（multi_deficient_runner.ts）の 5x20 移植。occupancy分類・blocker割当DFS・fillRows全列挙をM=20で完走
+- → depends_on [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 5x18 29石witnessが下界（M≥19）と5x18陽性対照の由来
+- → depends_on [K0815](../items/K0815-witness-column-extension-kissat-bounds.md): 5×20はkissat/貪欲/SA/portfolio全てで未決着だった前線（K0815 note・frontier-portfolio-20261114）。今回完全列挙で不在確定
+- → depends_on [K0810](../items/K0810-sat-row-deficient-witnesses.md): SAT交叉確認はK0810 sat.jsのcensus（circleABC整数三元組・runnerの外心形式と独立）を使用

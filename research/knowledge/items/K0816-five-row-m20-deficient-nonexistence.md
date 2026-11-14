@@ -8,49 +8,49 @@ aliases: []
 relations:
 - type: depends_on
   target: K0759
-  note: 同一runner機械（multi_deficient_runner.ts）の 5x20 移植。occupancy分類・blocker割当DFS・fillRows全列挙をM=20で完走
+  note: "同一runner機械（multi_deficient_runner.ts）の 5x20 移植。occupancy分類・blocker割当DFS・fillRows全列挙をM=20で完走"
 - type: depends_on
   target: K0332
-  note: 5x18 29石witnessが下界（M≥19）と5x18陽性対照の由来
+  note: "5x18 29石witnessが下界（M≥19）と5x18陽性対照の由来"
 - type: depends_on
   target: K0815
-  note: 5×20はkissat/貪欲/SA/portfolio全てで未決着だった前線（K0815 note・frontier-portfolio-20261114）。今回完全列挙で不在確定
+  note: "5×20はkissat/貪欲/SA/portfolio全てで未決着だった前線（K0815 note・frontier-portfolio-20261114）。今回完全列挙で不在確定"
 - type: depends_on
   target: K0810
-  note: SAT交叉確認はK0810 sat.jsのcensus（circleABC整数三元組・runnerの外心形式と独立）を使用
+  note: "SAT交叉確認はK0810 sat.jsのcensus（circleABC整数三元組・runnerの外心形式と独立）を使用"
 artifacts:
 - path: research/experiments/five-row-q7-m20-20261114/scripts/m20_runner.ts
   role: solver
-  note: K0738-K0759 runnerの5x20移植（W=5,M=20・スライス駆動・制御: 5x19 [0,1] slice A1と完全一致 done=117, maxCase 28,488 @ idx 39, nC=95）
+  note: "K0738-K0759 runnerの5x20移植（W=5,M=20・スライス駆動・制御: 5x19 [0,1] slice A1と完全一致 done=117, maxCase 28,488 @ idx 39, nC=95）"
 - path: research/experiments/five-row-q7-m20-20261114/scripts/run_class.sh
   role: source
-  note: クラス単位のスライス再開ドライバ（JSONL永続化・witness検出時停止）
+  note: "クラス単位のスライス再開ドライバ（JSONL永続化・witness検出時停止）"
 - path: research/experiments/five-row-q7-m20-20261114/scripts/census_check.js
   role: source
-  note: 5x18/19/20円census長ヒストグラム（5x19=95でK0759公表値と一致・5x20=104・最大長8）
+  note: "5x18/19/20円census長ヒストグラム（5x19=95でK0759公表値と一致・5x20=104・最大長8）"
 - path: research/experiments/five-row-q7-m20-20261114/output/class_01234.jsonl
   role: data
-  note: 5行欠損クラス [0,1,2,3,4] 完全走査（10,878代表・witnesses 0・leaves 0）— 他18クラスの class_*.jsonl も同形式
+  note: "5行欠損クラス [0,1,2,3,4] 完全走査（10,878代表・witnesses 0・leaves 0）— 他18クラスの class_*.jsonl も同形式"
 - path: research/experiments/five-row-q7-m20-20261114/output/summary.json
   role: data
-  note: 全19クラス集計（206,682代表・witnesses 0・leaves 0・census 104円・クラス別最大case nodes）
+  note: "全19クラス集計（206,682代表・witnesses 0・leaves 0・census 104円・クラス別最大case nodes）"
 - path: research/experiments/five-row-q7-m20-20261114/output/census.json
   role: data
-  note: 5x18/19/20の円census（nC 84/95/104・長は7と8のみ）
+  note: "5x18/19/20の円census（nC 84/95/104・長は7と8のみ）"
 - path: research/experiments/five-row-q7-m20-20261114/sat-crosscheck/class_sat.js
   role: source
-  note: クラス分割SAT符号化（K0810 counter流用・rows∈D ≤5 / rows∉D ==6・k/minpos分割option）
+  note: "クラス分割SAT符号化（K0810 counter流用・rows∈D ≤5 / rows∉D ==6・k/minpos分割option）"
 - path: research/experiments/five-row-q7-m20-20261114/sat-crosscheck/records_final.jsonl
   role: data
-  note: kissat 4.0.4による全19クラスUNSAT記録50件（17クラス直接・[0]/[1]はk×minpos分解・conflictsとwall time込み）
+  note: "kissat 4.0.4による全19クラスUNSAT記録50件（17クラス直接・[0]/[1]はk×minpos分解・conflictsとwall time込み）"
 - path: research/experiments/five-row-q7-m20-20261114/sat-crosscheck/control_5x18_sat.json
   role: data
-  note: 陽性対照 5x18 [0] SAT→29石 rows (5,6,6,6,6) census不使用検証PASS（符号化のend-to-end検証）
+  note: "陽性対照 5x18 [0] SAT→29石 rows (5,6,6,6,6) census不使用検証PASS（符号化のend-to-end検証）"
 - path: research/experiments/five-row-q7-m20-20261114/report.md
   role: proof
-  note: 手法・完全性根拠（L≥9円不在・行鏡映19類・列鏡映代表）・両系統の制御と限界の記録
-scope: '有限完全列挙（DFS機）+ 独立SAT交叉確認（CDCL）の2系統。5x20のみ。'
-evidence: 'complete-enumeration（verification: deterministic-machine + independent-sat-cross-check）。本文の記述を参照。'
+  note: "手法・完全性根拠（L≥9円不在・行鏡映19類・列鏡映代表）・両系統の制御と限界の記録"
+scope: "'有限完全列挙（DFS機）+ 独立SAT交叉確認（CDCL）の2系統。5x20のみ。'"
+evidence: "'complete-enumeration（verification: deterministic-machine + independent-sat-cross-check）。本文の記述を参照。'"
 ---
 
 # 5x20 q=7 row-deficient maximal nonexistence — all 19 canonical classes

@@ -1880,6 +1880,36 @@
 ## [research/experiments/five-row-q7-m19-20261110/two-deficient-5x8-pairs-audit.json](../../../research/experiments/five-row-q7-m19-20261110/two-deficient-5x8-pairs-audit.json)
 
 - [K0740](../items/K0740-two-deficient-blocker-fill-machine.md) (data): 6組合計28844928候補・45840証人の照合結果
+## [research/experiments/five-row-q7-m20-20261114/output/census.json](../../../research/experiments/five-row-q7-m20-20261114/output/census.json)
+
+- [K0816](../items/K0816-five-row-m20-deficient-nonexistence.md) (data): 5x18/19/20の円census（nC 84/95/104・長は7と8のみ）
+## [research/experiments/five-row-q7-m20-20261114/output/class_01234.jsonl](../../../research/experiments/five-row-q7-m20-20261114/output/class_01234.jsonl)
+
+- [K0816](../items/K0816-five-row-m20-deficient-nonexistence.md) (data): 5行欠損クラス [0,1,2,3,4] 完全走査（10,878代表・witnesses 0・leaves 0）— 他18クラスの class_*.jsonl も同形式
+## [research/experiments/five-row-q7-m20-20261114/output/summary.json](../../../research/experiments/five-row-q7-m20-20261114/output/summary.json)
+
+- [K0816](../items/K0816-five-row-m20-deficient-nonexistence.md) (data): 全19クラス集計（206,682代表・witnesses 0・leaves 0・census 104円・クラス別最大case nodes）
+## [research/experiments/five-row-q7-m20-20261114/report.md](../../../research/experiments/five-row-q7-m20-20261114/report.md)
+
+- [K0816](../items/K0816-five-row-m20-deficient-nonexistence.md) (proof): 手法・完全性根拠（L≥9円不在・行鏡映19類・列鏡映代表）・両系統の制御と限界の記録
+## [research/experiments/five-row-q7-m20-20261114/sat-crosscheck/class_sat.js](../../../research/experiments/five-row-q7-m20-20261114/sat-crosscheck/class_sat.js)
+
+- [K0816](../items/K0816-five-row-m20-deficient-nonexistence.md) (source): クラス分割SAT符号化（K0810 counter流用・rows∈D ≤5 / rows∉D ==6・k/minpos分割option）
+## [research/experiments/five-row-q7-m20-20261114/sat-crosscheck/control_5x18_sat.json](../../../research/experiments/five-row-q7-m20-20261114/sat-crosscheck/control_5x18_sat.json)
+
+- [K0816](../items/K0816-five-row-m20-deficient-nonexistence.md) (data): 陽性対照 5x18 [0] SAT→29石 rows (5,6,6,6,6) census不使用検証PASS（符号化のend-to-end検証）
+## [research/experiments/five-row-q7-m20-20261114/sat-crosscheck/records_final.jsonl](../../../research/experiments/five-row-q7-m20-20261114/sat-crosscheck/records_final.jsonl)
+
+- [K0816](../items/K0816-five-row-m20-deficient-nonexistence.md) (data): kissat 4.0.4による全19クラスUNSAT記録50件（17クラス直接・[0]/[1]はk×minpos分解・conflictsとwall time込み）
+## [research/experiments/five-row-q7-m20-20261114/scripts/census_check.js](../../../research/experiments/five-row-q7-m20-20261114/scripts/census_check.js)
+
+- [K0816](../items/K0816-five-row-m20-deficient-nonexistence.md) (source): 5x18/19/20円census長ヒストグラム（5x19=95でK0759公表値と一致・5x20=104・最大長8）
+## [research/experiments/five-row-q7-m20-20261114/scripts/m20_runner.ts](../../../research/experiments/five-row-q7-m20-20261114/scripts/m20_runner.ts)
+
+- [K0816](../items/K0816-five-row-m20-deficient-nonexistence.md) (solver): K0738-K0759 runnerの5x20移植（W=5,M=20・スライス駆動・制御: 5x19 [0,1] slice A1と完全一致 done=117, maxCase 28,488 @ idx 39, nC=95）
+## [research/experiments/five-row-q7-m20-20261114/scripts/run_class.sh](../../../research/experiments/five-row-q7-m20-20261114/scripts/run_class.sh)
+
+- [K0816](../items/K0816-five-row-m20-deficient-nonexistence.md) (source): クラス単位のスライス再開ドライバ（JSONL永続化・witness検出時停止）
 ## [research/experiments/fixed-width-frontier-20261005/output/q57_independent_witness.json](../../../research/experiments/fixed-width-frontier-20261005/output/q57_independent_witness.json)
 
 - [K0332](../items/K0332-width-five-q7-stabilization-bounds.md) (data): 5×18の29石安全極大証人と全61空点のblocker
