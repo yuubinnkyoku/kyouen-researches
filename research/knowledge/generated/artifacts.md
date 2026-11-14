@@ -1717,6 +1717,24 @@
 ## [research/experiments/drat-deletion-soundness-20261109/sat.cnf](../../../research/experiments/drat-deletion-soundness-20261109/sat.cnf)
 
 - [K0707](../items/K0707-incremental-drat-deletion-unsoundness.md) (data): 単位節1のみの充足可能な最小入力
+## [research/experiments/encoding-symmetry-kissat-20261114/output/L1_c612_cap36_tot_lex.json](../../../research/experiments/encoding-symmetry-kissat-20261114/output/L1_c612_cap36_tot_lex.json)
+
+- [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) (data): 6×12 q=8 cap=36 UNSAT（totalizer+lex・10,225,097 conflicts・環境リセット後にL1reでconflicts bit-exact再現）
+## [research/experiments/encoding-symmetry-kissat-20261114/output/X1_c612_cap36_seq_orig.json](../../../research/experiments/encoding-symmetry-kissat-20261114/output/X1_c612_cap36_seq_orig.json)
+
+- [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) (data): 同 cap=36 をK0810元符号化（sequential counter・lex無し）でUNSAT（20,469,242 conflicts） — 独立符号化での交叉確認
+## [research/experiments/encoding-symmetry-kissat-20261114/output/ctrl_c618_def_nolex.json](../../../research/experiments/encoding-symmetry-kissat-20261114/output/ctrl_c618_def_nolex.json)
+
+- [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) (data): 6×18 q=8 欠損極大witness（41石）を欠損行単一節モードで15.9秒再発見・2系統検証PASS — 一方lex付きでは240秒非発見（符号化の非対称効果）
+## [research/experiments/encoding-symmetry-kissat-20261114/report.md](../../../research/experiments/encoding-symmetry-kissat-20261114/report.md)
+
+- [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) (proof): 第4弾の手法・検証プロトコル・決定的再現・符号化の非対称効果の記録
+## [research/experiments/encoding-symmetry-kissat-20261114/scripts/sat2.js](../../../research/experiments/encoding-symmetry-kissat-20261114/scripts/sat2.js)
+
+- [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) (source): K0810符号化コアへの拡張 — totalizer（Bailleux–Boufkhad）・lex-leader対称性打破（H/V/HV・orbit-min健全性）・欠損行単一節モード。--deficient はK0810デフォルトとDIMACSバイト一致
+## [research/experiments/encoding-symmetry-kissat-20261114/scripts/validate.js](../../../research/experiments/encoding-symmetry-kissat-20261114/scripts/validate.js)
+
+- [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) (source): 小盤面6種の全列挙 ground truth との全符号化変種照合（ALL OK）
 ## [research/experiments/even-sunflower-grundy-20261101/proof.md](../../../research/experiments/even-sunflower-grundy-20261101/proof.md)
 
 - [K0590](../items/K0590-even-sunflower-quota-grundy.md) (proof): 全局面の閉形式と8分類16行のmex恒等式による無界の全称証明
