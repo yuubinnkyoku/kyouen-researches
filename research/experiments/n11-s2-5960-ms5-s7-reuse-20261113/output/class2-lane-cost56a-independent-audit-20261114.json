@@ -1,0 +1,105 @@
+{
+  "schema": "n11-cost56a-win7-independent-bigint-audit-v1",
+  "date": "2026-11-14",
+  "audit_base_main": "ea5061d6fd33574345927451c05ea64f08890bed",
+  "certificate": {
+    "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost56a-certificates/bit89-root-00000000020000803202020000000000.cert",
+    "git_blob_sha1": "74d0b7dcbdc10bd01cbb3f069602de0be3bb07ab",
+    "bytes": 1004863,
+    "nonempty_lines": 27819,
+    "strategy_rows": 27817,
+    "header": "n11-terminal-strategy-v1 original_first_WIN7 second_to_move_LOSS"
+  },
+  "root": {
+    "hex": "00000000020000803202020000000000",
+    "stones": 7,
+    "safe": true,
+    "legal_loser_moves": 43,
+    "added_seventh_stone_bit": 89
+  },
+  "verification": {
+    "status": "PASS",
+    "independent_method": "BigInt 3x3-minor Laplace expansion for det([x^2+y^2,x,y,1]); no solver/verifier imports, no floating point, no verdict cache",
+    "subroots_passed": 43,
+    "total_seen_across_subroots": 68320,
+    "consumed_winner_state_visits": 44609,
+    "unique_consumed_winner_states": 27817,
+    "terminals": 9142,
+    "opponent_edges": 65546,
+    "terminal_stone_range": [
+      13,
+      17
+    ],
+    "row_union_missing": 0,
+    "row_union_extra": 0,
+    "distinct_triples_cached": 12812,
+    "exact_determinant_evaluations": 1511816
+  },
+  "s6_parent_lifts": [
+    {
+      "winning_move": 41,
+      "parent_hex": "00000000000000803202000000800000",
+      "worklist": {
+        "cost": 63,
+        "classes": 2
+      }
+    },
+    {
+      "winning_move": 49,
+      "parent_hex": "00000000000080009802000080000000",
+      "worklist": null
+    },
+    {
+      "winning_move": 57,
+      "parent_hex": "00000000000080801802000080000000",
+      "worklist": null
+    },
+    {
+      "winning_move": 60,
+      "parent_hex": "00000000000080808802000080000000",
+      "worklist": null
+    },
+    {
+      "winning_move": 61,
+      "parent_hex": "00000000000080809002000080000000",
+      "worklist": {
+        "cost": 63,
+        "classes": 2
+      }
+    },
+    {
+      "winning_move": 71,
+      "parent_hex": "00000000000080809800000080000000",
+      "worklist": null
+    },
+    {
+      "winning_move": 89,
+      "parent_hex": "00000000000000803202020000000000",
+      "worklist": {
+        "cost": 56,
+        "classes": 2
+      }
+    }
+  ],
+  "frontier_context": {
+    "baseline": "class-frontier-cost62a-recompute-20261114.json",
+    "baseline_solved_s6_in_manifest": 924,
+    "baseline_unique_remaining_s6": 6923,
+    "baseline_sum_remaining_cost": 544799,
+    "target_s5_hex": "00000000000000803202000000000000",
+    "target_s5_class": 2,
+    "target_before": {
+      "remaining_s6_orbits": 41,
+      "remaining_s7_edge_cost": 2776
+    },
+    "newly_proved_s6_parent": "00000000000000803202020000000000",
+    "newly_proved_s6_parent_cost": 56,
+    "local_target_after": {
+      "remaining_s6_orbits": 40,
+      "remaining_s7_edge_cost": 2720
+    },
+    "local_effect_only": true,
+    "note": "The cost-56 child was the cheapest unswept child for this S5 in the after-cost-73a uncoverability audit and the S5 target remains at 41/2776 in the after-cost-62a frontier. The new certificate proves this S6 parent WIN via bit 89. A full global frontier recomputation is still required; the two cost-63 parent lifts are not counted as marginal until compared against the complete existing receipt union."
+  },
+  "interpretation_guard": "This is a WIN7 certificate for one seven-stone root and a winning move from its matched six-stone parents. It does not settle the five-stone S5 target, S2 {59,60}, two-stone root {49,60}, or the empty 11x11 board; all remain UNKNOWN."
+}
