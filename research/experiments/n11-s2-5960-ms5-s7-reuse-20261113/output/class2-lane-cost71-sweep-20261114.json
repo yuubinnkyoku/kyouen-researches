@@ -1,0 +1,33 @@
+{
+ "session": "class2-lane cost-71 sweep (long-term lane, 2026-11-14)",
+ "s6_child_hex": "00000000000000809082000000000004",
+ "s5_parent_hex": "00000000000000809082000000000000",
+ "s6_s7_edge_cost": 71,
+ "demand_classes": { "c1": 2, "c2": 2, "c4": 0 },
+ "win7_d10": 2,
+ "win7_bits": [9, 70],
+ "win7_roots": ["00000000000000809082000000000204", "00000000000000c09082000000000004"],
+ "refuted_d10": 69,
+ "capped": 0,
+ "total_nodes": 385100613,
+ "terminal_stone_range_all": [13, 17],
+ "heaviest_bits": [100, 110, 94],
+ "heaviest_fresh_rerun_node_exact": true,
+ "win7_fresh_rerun_node_exact": true,
+ "pilot_d6_controls": 9,
+ "pilot_d6_nodes": 5949,
+ "candidate_enumeration": "legal_candidates.py independent enumeration: 71 legal candidates, matches published edge cost 71",
+ "notes": "Cheapest unswept child per after-cost70b ranking; claimed in the batch-1 commit to avoid collision with the hourly parallel lane. Heaviest bits 100/110/94 fresh rerun node-exact (22,237,485 / 21,014,908 / 18,530,205 nodes); both WIN7 bits 9/70 fresh rerun node-exact (10,991,185 / 5,834,303). Certificates: blind extraction (empty kill table, FBS=1<<20), fbt_drops=0, fatal=null, all per-move extractions ok and uncapped; full verification of both (see cert record).",
+ "raw_batches": [
+  "class2-lane-cost71-raw-batch1-20261114.jsonl",
+  "class2-lane-cost71-raw-batch2-20261114.jsonl",
+  "class2-lane-cost71-raw-batch3-20261114.jsonl",
+  "class2-lane-cost71-raw-batch4-20261114.jsonl",
+  "class2-lane-cost71-raw-batch5-20261114.jsonl",
+  "class2-lane-cost71-raw-batch6-20261114.jsonl",
+  "class2-lane-cost71-raw-batch7-20261114.jsonl",
+  "class2-lane-cost71-raw-batch8-20261114.jsonl",
+  "class2-lane-cost71-raw-batch9-20261114.jsonl",
+  "class2-lane-cost71-determinism-rerun-20261114.jsonl"
+ ]
+}

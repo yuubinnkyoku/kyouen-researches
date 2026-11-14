@@ -1,0 +1,43 @@
+{
+ "w": 2,
+ "m": 8,
+ "q": 4,
+ "encArgs": "--deficient",
+ "result": "SAT",
+ "conflicts": 65,
+ "seconds": 0.024,
+ "stones": [
+  [
+   2,
+   0
+  ],
+  [
+   4,
+   0
+  ],
+  [
+   5,
+   0
+  ],
+  [
+   2,
+   1
+  ],
+  [
+   6,
+   1
+  ]
+ ],
+ "size": 5,
+ "rows": {
+  "0": 3,
+  "1": 2
+ },
+ "verify_js": {
+  "ok": true,
+  "size": 5,
+  "minRow": 2
+ },
+ "note": "K0796 5-stone 2x8 q=4 control reproduced",
+ "date": "2026-11-14T09:55:00Z"
+}

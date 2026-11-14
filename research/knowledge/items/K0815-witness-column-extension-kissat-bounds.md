@@ -1,6 +1,6 @@
 ---
 id: K0815
-title: 列追加拡張と外部SATソルバによる下界更新 — M_{6,5}≥30・M_{6,6}≥23・M_{5,6}≥22・M_{6,7}≥21・M_{6,8}≥19・6×12 q=8最小極大≤37
+title: 列追加拡張と外部SATソルバによる下界更新 — M_{6,5}≥30・M_{6,6}≥23・M_{5,6}≥22・M_{6,7}≥21・M_{6,8}≥19・6×12 q=8最小極大=37
 kind: proposition
 status: proved
 topics: [rectangles, variants]
@@ -55,6 +55,24 @@ artifacts:
 - path: research/experiments/witness-extension-kissat-20261114/report.md
   role: proof
   note: 手法・拡張列挙の完全性根拠・制御・未解決の記録
+- path: research/experiments/encoding-symmetry-kissat-20261114/scripts/sat2.js
+  role: source
+  note: K0810符号化コアへの拡張 — totalizer（Bailleux–Boufkhad）・lex-leader対称性打破（H/V/HV・orbit-min健全性）・欠損行単一節モード。--deficient はK0810デフォルトとDIMACSバイト一致
+- path: research/experiments/encoding-symmetry-kissat-20261114/scripts/validate.js
+  role: source
+  note: 小盤面6種の全列挙 ground truth との全符号化変種照合（ALL OK）
+- path: research/experiments/encoding-symmetry-kissat-20261114/output/L1_c612_cap36_tot_lex.json
+  role: data
+  note: 6×12 q=8 cap=36 UNSAT（totalizer+lex・10,225,097 conflicts・環境リセット後にL1reでconflicts bit-exact再現）
+- path: research/experiments/encoding-symmetry-kissat-20261114/output/X1_c612_cap36_seq_orig.json
+  role: data
+  note: 同 cap=36 をK0810元符号化（sequential counter・lex無し）でUNSAT（20,469,242 conflicts） — 独立符号化での交叉確認
+- path: research/experiments/encoding-symmetry-kissat-20261114/output/ctrl_c618_def_nolex.json
+  role: data
+  note: 6×18 q=8 欠損極大witness（41石）を欠損行単一節モードで15.9秒再発見・2系統検証PASS — 一方lex付きでは240秒非発見（符号化の非対称効果）
+- path: research/experiments/encoding-symmetry-kissat-20261114/report.md
+  role: proof
+  note: 第4弾の手法・検証プロトコル・決定的再現・符号化の非対称効果の記録
 solution:
   board: 6×m（q=5,6,7,8）・5×m（q=6,7）・6×12（q=8）
   level: weak
@@ -65,7 +83,7 @@ solution:
   verification: [independent-enumeration]
   certificate: witness座標（全witnessがJS census不使用独立検証器とPython別実装検証器の2系統で safe+maximal PASS）
   independent_check: 別言語・別アルゴリズム（石ペア直線・石3点組円の全列挙・Fraction厳密演算）による直接判定の一致
-  note: 下界更新のみ。6×30 (q=5)・6×23 (q=6)・5×22 (q=6)・6×19 (q=8)・6×21 (q=7)・5×20 (q=7)・6×12 q=8 cap=36 は未決着であり不在証明ではない。5×19 (q=7) は K0738–K0759 の occupancy 完全列挙で不在が確定済み（第3弾参照）
+  note: 下界更新のみ（第1〜3弾）。第4弾で6×12 q=8 cap=36 が UNSAT（totalizer+lex 符号化 10,225,097 conflicts・K0810元符号化 20,469,242 conflicts の2符号化で一致）に決着し、6×12 q=8 最小極大サイズ=37 が確定。6×30 (q=5)・6×23 (q=6)・5×22 (q=6)・6×19 (q=8)・6×21 (q=7)・5×20 (q=7) は未決着であり不在証明ではない。5×19 (q=7) は K0738–K0759 の occupancy 完全列挙で不在が確定済み（第3弾参照）
 ---
 
 # 列追加拡張とkissatによる下界更新（2026-11-14）
@@ -143,3 +161,33 @@ K0332 の 5×18 29石証人と合わせて「欠損極大が存在しない最�
 現在の境界（不変）: M_{6,5} ∈ [30,658]・M_{6,6} ∈ [23,495]・M_{6,8} ∈ [19,371]・
 M_{5,6} ∈ [22,249]・M_{6,7} ∈ [21,402]。M_{5,7} は下界19が最終確定し
 [19,158] の内部構造が確定（m=19 不在・m≥20 未解決）。
+
+## 第4弾: 拡張符号化（totalizer・lex対称性打破）と長時間実行 — 6×12 q=8 最小極大サイズ=37確定
+
+K0810符号化コアをそのまま使い、3点を追加した符号化 sat2.js
+（research/experiments/encoding-symmetry-kissat-20261114/）を開発した:
+(1) maxStones 全体石数上限の sequential counter を totalizer に置換、
+(2) 盤面の等距変換（列反射H・行反射V・180°回転HV）に対する lex-leader
+対称性打破（orbit-minが全制約を満たすことによる健全性）、
+(3) 欠損行単一節モード（K0810デフォルトとDIMACSバイト一致・m≥qが必要）。
+検証は小盤面6種の全列挙 ground truth との全変種照合（ALL OK）・
+2×9 q=4 UNSAT / 2×8 q=4 SAT 制御・SAT witness の2系統独立検証。
+
+- **6×12 q=8 cap=36 は UNSAT**: totalizer+lex で 10,225,097 conflicts（408秒・
+  実行環境リセット後の再実行で conflicts bit-exact 再現）、
+  **K0810元符号化（sequential counter・lex無し）でも UNSAT（20,469,242 conflicts・
+  1155秒）** — 2つの独立符号化で一致。
+  cap=37 SAT（37石 witness・本実験のtot+lexでも383,522 conflictsで再現・2系統検証PASS）
+  と合わせて **6×12 q=8 の最小極大サイズは 37 に確定**（第1弾の残項目を決着）。
+- 符号化の効果（UNSAT側）: 元符号化 20.5M conflicts/1155s → totalizer+lex
+  10.2M conflicts/408s。単発275秒（旧: 4.92M conflicts で未決着）を超える
+  バックグラウンド長時間実行（setsid・コマンド境界越え生存を確認）と合わせて
+  決着の主因。
+- **符号化の非対称効果（負の結果・教訓）**: 6×18 q=8 の既知41石witnessは
+  欠損行単一節モード（lex無し）では15.9秒/492,432 conflictsで発見するが、
+  **lex付きでは240秒/5,084,165 conflictsでも非発見**。lex対称性打破は
+  UNSAT証明には効くが witness 探索（SAT側）は探索順を悪化させうる。
+  SAT側探索には「欠損行単一節・lex無し」、UNSAT側証明には
+  「totalizer+lex」のポートフォリオを推奨。
+- 275秒単発では 6×19 q=8 def+lex 5.86M・6×21 q=7 def+lex 4.55M でも未決着
+  （旧拡張符号化との比較で conflict/秒は改善・決着には長時間予算が必要）。
