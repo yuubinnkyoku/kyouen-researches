@@ -86,6 +86,39 @@ jobs:
         run: python research/experiments/path-terminal-real-roots-20261103/verify.py
       - name: Audit circle-strip P(w) subadditivity table
         run: uv run --locked python research/experiments/circle-strip-subadditivity-20261114/verify.py
+      - name: Audit N11 S2 incremental WIN7 reuse against saved result
+        run: |
+          uv run --locked python research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_incremental_class2_win7_reuse.py --output /tmp/n11-s2-incremental-reuse.json
+          python - <<'PY'
+          import json
+          generated = json.load(open("/tmp/n11-s2-incremental-reuse.json"))
+          saved = json.load(open("research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-win7-reuse-incremental-20261114.json"))
+          assert saved["checks"]["worklist_unique"] is True
+          checks = [
+              "worklist_rows", "total_legal_child_cost", "baseline_win7_roots",
+              "baseline_loss7_roots", "baseline_win_loss_conflicts", "new_win7_roots",
+              "new_roots_already_in_baseline_win7",
+              "new_roots_conflicting_with_baseline_loss7", "new_parent_child_pairs",
+              "new_unique_worklist_parents", "new_parents_already_covered_by_baseline",
+              "baseline_worklist_parent_hits", "incremental_new_worklist_parents",
+              "total_worklist_parent_hits_after_union",
+              "remaining_worklist_parents_not_closed_by_win7_reuse",
+              "baseline_remaining_legal_child_cost", "incremental_legal_child_cost_removed",
+              "remaining_legal_child_cost_after_union", "incremental_class_histogram",
+              "total_class_histogram_after_union",
+          ]
+          for key in checks:
+              assert generated["checks"][key] == saved["checks"][key], key
+          assert generated["checks"]["new_win7_roots_exact_safe_geometry"] == saved["checks"]["new_win7_roots_all_exact_safe"]
+          assert generated["source_manifest_counts"] == saved["source_manifest_counts"]
+          assert generated["new_roots"] == saved["new_roots"]
+          generated_parents = generated["new_parent_records"]
+          for row in generated_parents:
+              row["already_in_baseline"] = row.pop("already_covered_by_baseline")
+          assert generated_parents == saved["new_parent_records"]
+          assert generated["incremental_parent_hex"] == saved["incremental_parent_hex"]
+          print("N11_S2_INCREMENTAL_WIN7_REUSE_MATCH")
+          PY
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python tools/knowledge/build.py
@@ -281,3 +314,4 @@ jobs:
 # Refresh generated views for K0817 exact P(83)=34 (2026-11-14).
 # Refresh generated views for K0783 n11 S2 incremental reuse reproducibility audit (2026-11-14).
 # Refresh generated views for K0783 corrected K0675 baseline and incremental reuse audit (2026-11-14).
+# Refresh generated views after N11 S2 incremental WIN7 reuse audit wiring (2026-11-14).
