@@ -83,5 +83,43 @@
  "batch_plan": "69 candidates in 9 batches (8x8 + 5), raw JSONL pushed per batch as completed",
  "unknown_status": "11x11 empty board: UNKNOWN. All WIN7 certificates prove only individual 7-stone roots.",
  "session": "long-term lane (2026-11-14), running in parallel with other lane executions (session-11-lane cost-65f, class4-lane cost-87, bit107 audit lane)",
- "status": "in-flight"
+ "status": "completed",
+ "result": {
+  "win7_d10": 11,
+  "win7_bits": [
+   2,
+   21,
+   76,
+   84,
+   87,
+   89,
+   90,
+   94,
+   99,
+   108,
+   116
+  ],
+  "refuted_d10": 58,
+  "capped": 0,
+  "total_nodes": 80172332,
+  "certificates": [
+   21,
+   99,
+   87
+  ],
+  "unverified_win7_bits": [
+   2,
+   76,
+   84,
+   89,
+   90,
+   94,
+   108,
+   116
+  ],
+  "records": "class2-lane-cost69e-sweep-20261114.json + class2-lane-cost69e-win7-certificates-20261114.json",
+  "log": "research/log/2026-11-15-class2-lane-cost69e-win7.md",
+  "midflight_manifest_closure": "while the sweep was in flight the parallel warm-merged recompute (commit a7f3fc97) closed this child in the manifest via the cost-65g-warm bit-15 receipt; the sweep's certificates are pure new-coverage additions"
+ },
+ "sweep": "completed in 9 batches (8x8 + 5); all raw batches + v16 determinism rerun (node-exact bits 116/44) + v15 crosscheck (all 11 WIN7 bits loss=true) published; all 11 WIN7 roots code-searched (bit-2 root duplicates the parallel cost-65g-warm bit-15 certificate - cross-lane reproduction; bit-21 root is a cross-child duplicate of the cost-60b bit-15 listing, no prior certificate, its certificate also closes the cost-60b bit-15 warm entry); 3 certificates extracted blind (fbt_drops=0), fully verified (root-check mobility match, all sub-roots PASS, union 0/0) and pushed with remote md5 verification"
 }
