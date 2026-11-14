@@ -1,0 +1,47 @@
+{
+ "session": "class2-lane cost-69a sweep (long-term lane, 2026-11-14)",
+ "s6_child_hex": "00000000000000809082000000000400",
+ "s5_parent_hex": "00000000000000809082000000000000",
+ "s6_s7_edge_cost": 69,
+ "demand_classes": {
+  "c1": 2,
+  "c2": 2,
+  "c4": 0
+ },
+ "candidates": 69,
+ "win7_d10": 3,
+ "win7_bits": [
+  48,
+  70,
+  103
+ ],
+ "refuted_d10": 66,
+ "capped": 0,
+ "total_nodes": 360149635,
+ "terminal_stone_range_all": [
+  13,
+  17
+ ],
+ "heaviest_bits": [
+  68,
+  53,
+  117
+ ],
+ "heaviest_fresh_rerun_node_exact": true,
+ "win7_bits_fresh_rerun_node_exact": true,
+ "pilot_d6_controls": 8,
+ "pilot_d6_nodes": 5949,
+ "engine": "class4_child1_runner.ts (v15 exact rules, close-first AND at d>=8, cap 1e9)",
+ "candidate_enumerator": "legal_candidates.py (Bareiss 4x4), 69 legal candidates, bit-exact with s6_s7_edge_cost",
+ "raw_batches": [
+  "class2-lane-cost69a-raw-batch1-20261114.jsonl",
+  "class2-lane-cost69a-raw-batch2-20261114.jsonl",
+  "class2-lane-cost69a-raw-batch3-20261114.jsonl",
+  "class2-lane-cost69a-raw-batch4-20261114.jsonl",
+  "class2-lane-cost69a-raw-batch5-20261114.jsonl",
+  "class2-lane-cost69a-raw-batch6-20261114.jsonl",
+  "class2-lane-cost69a-raw-batch7-20261114.jsonl",
+  "class2-lane-cost69a-raw-batch8-20261114.jsonl"
+ ],
+ "result": "3 WIN7-D10 (bits 48,70,103), 66 REFUTED-D10, 0 capped"
+}
