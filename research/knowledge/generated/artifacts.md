@@ -12981,19 +12981,22 @@
 - [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md) (data): 2x8/2x9 q=4 controls (fastsat 121/535 conflicts bit-exact; kissat SAT 37 / UNSAT 316)
 ## [research/experiments/seven-row-q9-q10-bands-20261114/output/q10-band/records.jsonl](../../../research/experiments/seven-row-q9-q10-bands-20261114/output/q10-band/records.jsonl)
 
-- [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md) (data): 33 records m=19..51: fastsat calibration (bit-exact with seven-row-inband results.jsonl for m=19..40) + kissat 4.0.4 UNSAT for every width; m=41..51 is the band extension
+- [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md) (data): 44 records m=19..60 all UNSAT: fastsat calibration (bit-exact with seven-row-inband results.jsonl for m=19..40) + kissat 4.0.4 for m=19..51 (band1.sh, both solvers); m=52..60 kissat-only lean extension (lean2.sh/genfast.js) with def+lex cross-checks at 52/60
 ## [research/experiments/seven-row-q9-q10-bands-20261114/output/q10-band/summary.json](../../../research/experiments/seven-row-q9-q10-bands-20261114/output/q10-band/summary.json)
 
-- [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md) (data): aggregate: all 33 UNSAT, both solvers agree, per-width conflicts of both solvers
+- [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md) (data): aggregate: all 44 UNSAT, per-width conflicts of both solvers (m=19..51) and lean extension rows (m=52..60)
 ## [research/experiments/seven-row-q9-q10-bands-20261114/output/q9-witness-search/records.jsonl](../../../research/experiments/seven-row-q9-q10-bands-20261114/output/q9-witness-search/records.jsonl)
 
-- [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md) (data): 21 records: SAT m=15..23 (witnesses dual-verified) + UNSAT m=24..33 (kissat def-no-lex, complete encoding) + def+lex cross-checks at m=24/33 (81,997 / 38,424 conflicts)
+- [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md) (data): 50 records: SAT m=15..23 (witnesses dual-verified) + UNSAT m=24..60 (kissat def-no-lex, complete encoding; m=34..45 lean1.sh/sat2.js, m=46..60 lean2.sh/genfast.js) + def+lex cross-checks at m=24/33/52/60
 ## [research/experiments/seven-row-q9-q10-bands-20261114/output/q9-witness-search/s7x23q9_none.witness.json](../../../research/experiments/seven-row-q9-q10-bands-20261114/output/q9-witness-search/s7x23q9_none.witness.json)
 
 - [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md) (data): largest-width (7,9) witness (55 stones at 7x23, rows 8,8,8,7,8,8,8); all 9 witnesses s7x15..23q9_none.witness.json dual-verified (sat.js verifyConfig + Python Fraction)
 ## [research/experiments/seven-row-q9-q10-bands-20261114/report.md](../../../research/experiments/seven-row-q9-q10-bands-20261114/report.md)
 
 - [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md) (proof): claims, method (def-mode completeness, lex soundness on the (7,10) band), verification protocol (controls, bit-exact fastsat calibration, dual witness verification, lex cross-encoding, determinism across env resets), results, scope and limits
+## [research/experiments/seven-row-q9-q10-bands-20261114/scripts/genfast.js](../../../research/experiments/seven-row-q9-q10-bands-20261114/scripts/genfast.js)
+
+- [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md) (verifier): memory-bounded CNF generator (half-integer-center census, monkey-patches S.buildCensus and reuses sat2.js verbatim); byte-identical to sat2.js on 12 validation samples; required for 7xm at m>=52 where the all-triples census OOMs
 ## [research/experiments/short-board-2q-20261031/proof.md](../../../research/experiments/short-board-2q-20261031/proof.md)
 
 - [K0582](../items/K0582-short-board-2q-two-carriers.md) (proof): 担い手の七型分類、整数格子実現、四変数再帰の全称正当性、極大配置計数とq=6の反例

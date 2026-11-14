@@ -32,7 +32,7 @@ artifacts:
   role: data
   note: "aggregate: all 44 UNSAT, per-width conflicts of both solvers (m=19..51) and lean extension rows (m=52..60)"
 - path: research/experiments/seven-row-q9-q10-bands-20261114/scripts/genfast.js
-  role: code
+  role: verifier
   note: "memory-bounded CNF generator (half-integer-center census, monkey-patches S.buildCensus and reuses sat2.js verbatim); byte-identical to sat2.js on 12 validation samples; required for 7xm at m>=52 where the all-triples census OOMs"
 - path: research/experiments/seven-row-q9-q10-bands-20261114/output/controls/records.jsonl
   role: data

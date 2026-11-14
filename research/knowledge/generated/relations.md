@@ -4964,7 +4964,7 @@
 - → depends_on [K0796](../items/K0796-two-row-m24-stabilization-nine.md): 2x8 q=4 5-stone control (SAT rediscovered); 2x9 q=4 UNSAT control consistent with M_{2,4}=9
 - → generalizes [K0818](../items/K0818-six-row-q8-m19-deficient-nonexistence.md): the m=19 class-split sweep extended to m=20 with the identical machinery; 6x20 was the witness-search frontier opened by K0818
 
-## [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md) 7xm q=9 / q=10 row-deficient witness bands — (7,9) witnesses 9..23 and witness-free 24..33 (M_{7,9} = 24 or >= 34), (7,10) witness-free band 19..40 confirmed by kissat and extended to 51 (M_{7,10} = 19 or >= 52)
+## [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md) 7xm q=9 / q=10 row-deficient witness bands — (7,9) witnesses 9..23 and witness-free 24..60 (M_{7,9} = 24 or >= 61), (7,10) witness-free band 19..40 confirmed by kissat and extended to 60 (M_{7,10} = 19 or >= 61)
 
 - → depends_on [K0810](../items/K0810-sat-row-deficient-witnesses.md): census (circleABC integer triples, line pairs) + sequential-counter/maximality core used verbatim (sat.js/sat2.js); the def-mode single clause and lex-leader constraints are the source experiment's sat2.js additions
 - → depends_on [K0796](../items/K0796-two-row-m24-stabilization-nine.md): 2x8 q=4 5-stone SAT control and 2x9 q=4 UNSAT control (fastsat conflicts bit-exact with the source experiment; kissat agrees) — consistent with M_{2,4}=9
