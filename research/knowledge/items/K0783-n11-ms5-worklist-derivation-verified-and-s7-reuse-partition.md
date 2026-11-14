@@ -523,8 +523,23 @@ artifacts:
 - path: research/log/2026-11-15-n11-class2-cost69f-second-independent-verification.md
   role: log
   note: 4証明書の第二検査、根合法手数の別方式照合、frontier証拠等級更新
+- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost69f_win7_certs_20261115.py
+  role: verifier
+  note: 全9 cost69f WIN7証明書のPython第三完全独立監査。整数Bareiss 4x4行列式・repo検証器不使用・敵全合法手展開・v15 anchor照合込み
+- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost69f-9cert-python-independent-audit-20261115.json
+  role: audit
+  note: 9/9 PASS。495,585戦略行・509 sub-root・union 0/0・終局石数13..17・records全フィールド一致
+- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/reconcile_cost69g_demand_20261115.py
+  role: verifier
+  note: cost69g子の需要不整合をmanifest+rankingからD4幾何再導出で解消。classesはbitmaskで二重役割S5(classes=6)がc2とc4の両方に需要を作る
+- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost69g-demand-reconciliation-20261115.json
+  role: audit
+  note: 両側とも誤りなし。distinct open parents=3 と per-class demand c1=0,c2=2,c4=2 の意味論的和解とコントロール照合
+- path: research/log/2026-11-15-n11-class2-lane-cost69f-python-independent-audit-and-69g-demand-reconciliation.md
+  role: log
+  note: Python第三監査と69g需要和解の実行記録
 scope: n11 S2 {59,60} milestone-5のワークリストとS7証明書再利用。局所S6と三石位置のblocker類1・2の条件付き勝敗を含むが、二石rootや空盤の勝敗は含まない。
-evidence: 公開manifestの辞書順md5は0e95a438dbcb486368393de9c73fc21e。94オラクルの全744対称像を使い補完候補15072件を独立列挙。類1の新規WIN7戦略証明書13件・LOSS7証明書2件、類2のWIN7証明書54件と3六石位置の全62子・全72子・全64子のLOSS7証明書を独立検査。類1の五石位置の40六石軌道は既存記録と合わせて全て先手WIN。既存の一部証明書本体は別保管であり、公開監査記録に依存する。 2026-11-15 cost72 bit111 WIN7証明書を独立検査し、cost75b統合後の対象S5親を局所的に2軌道・費用147から1軌道・費用75へ縮小した。global frontierは未再計算。2026-11-15 warm multiband 35 WIN7 receipt後の公開frontierは解消S6 1,109・残り6,738・費用531,295・open需要5,008/395,018。35 rootを同実験の17 verified manifest（WIN7 77・LOSS7 200）、central LOSS7 parent-lift 274鍵、category-1候補396行とD4照合し、衝突0（category-1行は証明書とは数えない）。; 2026-11-15 cost69f残り4証明書(bits2/94/109/119)を別V8実行で再検査し全PASS。262,236行、検証訪問560,273局面、union 0/0、4×4行列式による根合法手数一致、8 partのGit blob SHA1・MD5/SHA256一致。cost69fの+9 S6軌道が全て証明書済み
+evidence: 公開manifestの辞書順md5は0e95a438dbcb486368393de9c73fc21e。94オラクルの全744対称像を使い補完候補15072件を独立列挙。類1の新規WIN7戦略証明書13件・LOSS7証明書2件、類2のWIN7証明書54件と3六石位置の全62子・全72子・全64子のLOSS7証明書を独立検査。類1の五石位置の40六石軌道は既存記録と合わせて全て先手WIN。既存の一部証明書本体は別保管であり、公開監査記録に依存する。 2026-11-15 cost72 bit111 WIN7証明書を独立検査し、cost75b統合後の対象S5親を局所的に2軌道・費用147から1軌道・費用75へ縮小した。global frontierは未再計算。2026-11-15 warm multiband 35 WIN7 receipt後の公開frontierは解消S6 1,109・残り6,738・費用531,295・open需要5,008/395,018。35 rootを同実験の17 verified manifest（WIN7 77・LOSS7 200）、central LOSS7 parent-lift 274鍵、category-1候補396行とD4照合し、衝突0（category-1行は証明書とは数えない）。; 2026-11-15 cost69f残り4証明書(bits2/94/109/119)を別V8実行で再検査し全PASS。262,236行、検証訪問560,273局面、union 0/0、4×4行列式による根合法手数一致、8 partのGit blob SHA1・MD5/SHA256一致。cost69fの+9 S6軌道が全て証明書済み 2026-11-15 cost69f全9証明書をPython/Bareiss第三実装で再検査し9/9 PASS（第二検証のV8/BigInt 4件と共通フィールド全一致）。cost69g子の需要は二重役割S5(classes=6)のper-class計数と確定（distinct open parents=3、c1=0,c2=2,c4=2）
 ---
 
 ## 主張
@@ -934,5 +949,20 @@ cost65j bit113の7石rootはcost69f bit2と同じS6親軌道を1件共有する�
 - [証明書済みfrontier](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost69f-certificate-backed-recompute-20261115.json)
 - [再現スクリプト](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost69f_second_independent_verification_20261115.mjs)
 - [監査ログ](../../log/2026-11-15-n11-class2-cost69f-second-independent-verification.md)
+
+標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class2・class4は引き続き **UNKNOWN**。
+
+
+## 2026-11-15: cost69f全9証明書のPython第三完全独立監査とcost69g需要不整合の解消
+
+第二独立検証（別V8実行・BigInt 3x3余因子・未検証だった4証明書）に対し、本レーンは**言語も幾何実装も異なる第三の実装（Python、多倍長整数Bareiss 4x4行列式、浮動小数点なし）で、最初に公開された5証明書を含む全9件**を完全独立監査した。repoの検証器・engine・verdict cache・solverは一切importせず、禁止手（三石共円トリプル）マスクも盤面定義から再計算した。敵の全合法手を各局面で展開する完全な戦略リプレイを行い、sub-root分解・消費行union（0/0）・終局石数13〜17・records全フィールド照合（winner/loser states・loser reply edges・visited・terminal count・fbt_drops 0・v15 anchorのloss=trueと節点数）を確認した。
+
+**9/9 PASS。** 合計495,585戦略行・509 sub-root・訪問1,073,872局面・終局180,983。保存照合（単一5件・2-part 4件のbytes/md5/sha256/git blob sha・行境界分割・連結ハッシュのrecords一致）も全件通過。第二検証と共通するbits 2/94/109/119の4件は全フィールドで一致した。これでcost69fは「元のBigInt検証器 → 第二独立（V8, 4件）→ 第三独立（Python/Bareiss, 9件）」の三重検証体制となった。
+
+あわせて、第三方法監査が指摘したcost69g子の需要不整合（distinct open parents=3 vs chain需要c1=0,c2=2,c4=2の和4）を**両側とも誤りなし**と和解した。chainのclasses列はbitmask（bit0=class1, bit1=class2, bit2=class4）で、per-child需要は各open親S5をclass bitごとに数える。open親3軌道のうち00000000000000801202000000080000がclasses=6の二重役用S5でc2とc4の両方に+1するため和が4になる。claims/auditsは両方の数を併記すべき旨を再発防止として記録した。副産物として、audit-blocked S5 00000000000000809082000000000000（classes=3）の子は全てc1>=1となりopen_classes帳簿から外れることが、receipt-unclosableの構造的理由と確定した。コントロール（72子・69f子・65j子）でも幾何再導出によるper-class需要がchain公開値と全件一致。
+
+frontier計数は不変（解消S6 1,163・残り6,684・費用527,280・open需要4,954/391,003・残りS5軌道175）。本作業は証拠確度の向上と帳簿意味論の確定であり、新規軌道解消ではない。
+
+成果物: [Python第三監査スクリプト](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost69f_win7_certs_20261115.py)、[監査JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost69f-9cert-python-independent-audit-20261115.json)、[和解スクリプト](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/reconcile_cost69g_demand_20261115.py)、[和解JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost69g-demand-reconciliation-20261115.json)、[log](../../log/2026-11-15-n11-class2-lane-cost69f-python-independent-audit-and-69g-demand-reconciliation.md)。
 
 標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class2・class4は引き続き **UNKNOWN**。
