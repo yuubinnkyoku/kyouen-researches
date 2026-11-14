@@ -1,0 +1,105 @@
+{
+ "session": "class2-lane cost-68c WIN7 certificates (long-term lane parallel execution, 2026-11-14)",
+ "child_hex": "00000000000000803202000400000000",
+ "certificates": [
+  {
+   "bit": 21,
+   "root_hex": "00000000000000803202000400200000",
+   "verdict": "WIN7",
+   "rows": 23096,
+   "extraction_nodes": 2955284,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table), FBS=1<<20: fbt_drops=0, all per-move extractions ok and uncapped",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 47,
+    "independent_enumeration_legal": 47,
+    "match": true
+   },
+   "sub_roots_verified": 47,
+   "sub_roots_pass": 47,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "933f5b5a08f23159a447848d54409d91",
+   "sha256": "bffc186adaa313c6d33b21fc953bb77fca8d13755a9fc73ef1e7c234f3bd0d2c",
+   "file": "class2-lane-cost68c-certificates/bit21-root-00000000000000803202000400200000.cert",
+   "v15_crosscheck_verdict": "loss=true at 1,662,130 nodes (v15 anchor)",
+   "v16_search_nodes": 531367,
+   "root_not_among_existing": false,
+   "root_absence_check": "cross-child duplicate of the cost-60b bit-34 win7_roots listing (no prior published certificate; this certificate is new coverage and also closes the cost-60b bit-34 warm entry)",
+   "push_note": "full paged-read push; remote md5 verified byte-exact after landing"
+  },
+  {
+   "bit": 11,
+   "root_hex": "00000000000000803202000400000800",
+   "verdict": "WIN7",
+   "rows": 40600,
+   "extraction_nodes": 8468317,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table), FBS=1<<20: fbt_drops=0, all per-move extractions ok and uncapped",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 50,
+    "independent_enumeration_legal": 50,
+    "match": true
+   },
+   "sub_roots_verified": 50,
+   "sub_roots_pass": 50,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "70bf8e0578bd31321fd1b5e6640eb540",
+   "sha256": "66c8a8465acf178d9981a85949c12bdfc8fad92b851b45a768a2380b64987aaa",
+   "file": "class2-lane-cost68c-certificates/bit11-root-00000000000000803202000400000800.cert",
+   "v15_crosscheck_verdict": "loss=true at 4,310,842 nodes (v15 anchor)",
+   "v16_search_nodes": 1560186,
+   "root_not_among_existing": true,
+   "root_absence_check": "GitHub code search over yuubinnkyoku/kyouen-researches for the root hex: 0 hits",
+   "push_note": "full paged-read push; remote md5 verified byte-exact after landing"
+  },
+  {
+   "bit": 118,
+   "root_hex": "00400000000000803202000400000000",
+   "verdict": "WIN7",
+   "rows": 31576,
+   "extraction_nodes": 4236453,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table), FBS=1<<20: fbt_drops=0, all per-move extractions ok and uncapped",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 56,
+    "independent_enumeration_legal": 56,
+    "match": true
+   },
+   "sub_roots_verified": 56,
+   "sub_roots_pass": 56,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "70ce9f70f613923402d74454aa87062f",
+   "sha256": "65aca8a0d54eddca66531e30d71ea4ffbd75a07eca65ba1a84c945caebb249b6",
+   "file": "class2-lane-cost68c-certificates/bit118-root-00400000000000803202000400000000.cert",
+   "v15_crosscheck_verdict": "loss=true at 2,163,356 nodes (v15 anchor)",
+   "v16_search_nodes": 939549,
+   "root_not_among_existing": true,
+   "root_absence_check": "GitHub code search over yuubinnkyoku/kyouen-researches for the root hex: 0 hits",
+   "push_note": "full paged-read push; remote md5 verified byte-exact after landing"
+  }
+ ],
+ "unverified_win7_bits": [
+  24,
+  53
+ ],
+ "duplicate_root_note": "the bit-21 WIN7 root 00000000000000803202000400200000 is a cross-child duplicate of the cost-60b bit-34 win7_roots listing (root reachable from both S6 children 00000000000000803202000000200000 and 00000000000000803202000400000000); no prior published certificate exists for it, so this certificate is new coverage and also closes the cost-60b bit-34 warm entry (cost-61e bit-1 pattern)",
+ "unknown_status": "11x11 empty board: UNKNOWN. Certificates prove only individual 7-stone roots within depth 10."
+}
