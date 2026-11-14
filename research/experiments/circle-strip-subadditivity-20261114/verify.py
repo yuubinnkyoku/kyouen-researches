@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Finite checks for the certified P(w) table and the P(83) witness.
+"""Finite checks for the certified P(w) table and circle witnesses.
 
-The all-width subadditivity proof is in report.md; this script checks the
-published finite table and the explicit 34-point lower-bound witness.
+The all-width subadditivity and remainder arguments are in report.md.
+This script checks the published finite table, the P(83) witness, and the
+sharp remainder constant for slope 16/41.
 """
 from collections import Counter
 from csv import DictReader
@@ -54,14 +55,26 @@ def main() -> None:
     )
     assert (best_ratio, best_width) == (Fraction(16, 41), 82)
 
+    # The global bound uses only remainders r=0..81 after division by 82.
+    remainder_errors = {
+        r: 41 * p[r] - 16 * r
+        for r in range(82)
+    }
+    best_error = max(remainder_errors.values())
+    best_remainder = min(
+        r for r, error in remainder_errors.items() if error == best_error
+    )
+    assert (best_error, best_remainder, p[best_remainder]) == (568, 26, 24)
+
+    # Finite table values also satisfy the resulting affine inequality.
     for w in range(84):
-        k, r = divmod(w, 82)
-        assert p[w] <= 32 * k + 2 * r
+        assert 41 * p[w] - 16 * w <= 568
 
     print(
-        "PASS: rows=82, P(82)=32, P(83)=34, witness_points=34, "
+        "PASS: P(82)=32, P(83)=34, witness_points=34, "
         f"subadditivity_table_pairs={checks}, "
-        f"minimum_known_ratio={best_ratio} at w={best_width}"
+        f"minimum_known_ratio={best_ratio} at w={best_width}, "
+        "sharp_additive_error=568/41 at remainder=26"
     )
 
 
