@@ -1718,6 +1718,7 @@
 - ← depends_on [K0723](../items/K0723-width-five-q6-stabilization-bounds.md): 曲線充填上界への(5,6)代入による一般上界249
 - ← depends_on [K0806](../items/K0806-six-row-q7-stabilization-bounds.md): 曲線充填上界U_{w,q}への(6,7)代入による初の明示的上界402
 - ← depends_on [K0808](../items/K0808-six-row-deficient-witnesses-q568.md): 上界は K0318 代入（U=658/495/371・K0024 の T 値に基づく）
+- ← depends_on [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md): upper bounds U_{7,9}=613 and U_{7,10}=587 by curve-packing substitution (w7_upper_bounds.json of the source experiment)
 
 ## [K0319](../items/K0319-misere-direct-sum-normal-grundy-rule.md) swap則が全後続局面で成り立つ部品のmisère直和は通常Grundy値だけで解ける
 
@@ -4763,6 +4764,7 @@
 - ← depends_on [K0815](../items/K0815-witness-column-extension-kissat-bounds.md): 2×8 q=4 5石witnessの制御再現
 - ← depends_on [K0818](../items/K0818-six-row-q8-m19-deficient-nonexistence.md): 2x8 q=4 5-stone control (SAT rediscovered); 2x9 q=4 UNSAT control consistent with M_{2,4}=9
 - ← depends_on [K0819](../items/K0819-six-row-q8-m20-deficient-nonexistence.md): 2x8 q=4 5-stone control (SAT rediscovered); 2x9 q=4 UNSAT control consistent with M_{2,4}=9
+- ← depends_on [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md): 2x8 q=4 5-stone SAT control and 2x9 q=4 UNSAT control (fastsat conflicts bit-exact with the source experiment; kissat agrees) — consistent with M_{2,4}=9
 
 ## [K0797](../items/K0797-g0-accounting-valid-through-w84.md) convention B g0会計の有効範囲は拡張法でw≤84に延長 — g4形は壁でなく真の壁はg3形（類サイズ29）— P(65)..P(84)の決定に必要な非標準形前提が復活点下界83をちょうどカバー
 
@@ -4887,6 +4889,7 @@
 - ← depends_on [K0816](../items/K0816-five-row-m20-deficient-nonexistence.md): SAT交叉確認はK0810 sat.jsのcensus（circleABC整数三元組・runnerの外心形式と独立）を使用
 - ← depends_on [K0818](../items/K0818-six-row-q8-m19-deficient-nonexistence.md): census (circleABC integer triples, line pairs) and the sequential-counter/maximality core are used verbatim (sat.js / sat2.js); the class-split unit clauses are the only addition
 - ← depends_on [K0819](../items/K0819-six-row-q8-m20-deficient-nonexistence.md): census (circleABC integer triples, line pairs) and the sequential-counter/maximality core are used verbatim (sat.js / sat2.js / sat3.js); the class-split unit clauses are the only addition
+- ← depends_on [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md): census (circleABC integer triples, line pairs) + sequential-counter/maximality core used verbatim (sat.js/sat2.js); the def-mode single clause and lex-leader constraints are the source experiment's sat2.js additions
 
 ## [K0811](../items/K0811-sa-row-deficient-witnesses.md) SA探索による行欠損極大witness — M_{6,5}≥29・M_{6,6}≥22・M_{5,6}≥19（K0810の下界を更新・第2弾/第3弾で延長）
 
@@ -4960,3 +4963,9 @@
 - → depends_on [K0815](../items/K0815-witness-column-extension-kissat-bounds.md): 41-stone deficient-maximal witness at 6x18 (rows 7,6,7,7,7,7) is the lower bound M_{6,8}>=19 and the positive-control board (rediscovered SAT, conflicts bit-exact with K0818)
 - → depends_on [K0796](../items/K0796-two-row-m24-stabilization-nine.md): 2x8 q=4 5-stone control (SAT rediscovered); 2x9 q=4 UNSAT control consistent with M_{2,4}=9
 - → generalizes [K0818](../items/K0818-six-row-q8-m19-deficient-nonexistence.md): the m=19 class-split sweep extended to m=20 with the identical machinery; 6x20 was the witness-search frontier opened by K0818
+
+## [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md) 7xm q=9 / q=10 row-deficient witness bands — (7,9) witnesses 9..23 and witness-free 24..33 (M_{7,9} = 24 or >= 34), (7,10) witness-free band 19..40 confirmed by kissat and extended to 51 (M_{7,10} = 19 or >= 52)
+
+- → depends_on [K0810](../items/K0810-sat-row-deficient-witnesses.md): census (circleABC integer triples, line pairs) + sequential-counter/maximality core used verbatim (sat.js/sat2.js); the def-mode single clause and lex-leader constraints are the source experiment's sat2.js additions
+- → depends_on [K0796](../items/K0796-two-row-m24-stabilization-nine.md): 2x8 q=4 5-stone SAT control and 2x9 q=4 UNSAT control (fastsat conflicts bit-exact with the source experiment; kissat agrees) — consistent with M_{2,4}=9
+- → depends_on [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md): upper bounds U_{7,9}=613 and U_{7,10}=587 by curve-packing substitution (w7_upper_bounds.json of the source experiment)

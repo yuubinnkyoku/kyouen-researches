@@ -12970,6 +12970,30 @@
 ## [research/experiments/saturation/scripts/saturation_20261003_verify.py](../../../research/experiments/saturation/scripts/saturation_20261003_verify.py)
 
 - [K0312](../items/K0312-n11-minimum-maximal-bounds.md) (verifier): 証人と幾何の独立検査
+## [research/experiments/seven-row-inband-families-20261114/output/results.jsonl](../../../research/experiments/seven-row-inband-families-20261114/output/results.jsonl)
+
+- [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md) (data): source experiment (unintegrated): (7,9) witnesses m=9..14 and (7,10) witnesses m=10..18 (dual-verified there) + fastsat def+lex UNSAT band m=19..40 that this K confirms and extends
+## [research/experiments/seven-row-inband-families-20261114/output/w7_upper_bounds.json](../../../research/experiments/seven-row-inband-families-20261114/output/w7_upper_bounds.json)
+
+- [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md) (data): K0318 curve-packing substitution upper bounds U_{7,9}=613, U_{7,10}=587 (7 controls passed)
+## [research/experiments/seven-row-q9-q10-bands-20261114/output/controls/records.jsonl](../../../research/experiments/seven-row-q9-q10-bands-20261114/output/controls/records.jsonl)
+
+- [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md) (data): 2x8/2x9 q=4 controls (fastsat 121/535 conflicts bit-exact; kissat SAT 37 / UNSAT 316)
+## [research/experiments/seven-row-q9-q10-bands-20261114/output/q10-band/records.jsonl](../../../research/experiments/seven-row-q9-q10-bands-20261114/output/q10-band/records.jsonl)
+
+- [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md) (data): 33 records m=19..51: fastsat calibration (bit-exact with seven-row-inband results.jsonl for m=19..40) + kissat 4.0.4 UNSAT for every width; m=41..51 is the band extension
+## [research/experiments/seven-row-q9-q10-bands-20261114/output/q10-band/summary.json](../../../research/experiments/seven-row-q9-q10-bands-20261114/output/q10-band/summary.json)
+
+- [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md) (data): aggregate: all 33 UNSAT, both solvers agree, per-width conflicts of both solvers
+## [research/experiments/seven-row-q9-q10-bands-20261114/output/q9-witness-search/records.jsonl](../../../research/experiments/seven-row-q9-q10-bands-20261114/output/q9-witness-search/records.jsonl)
+
+- [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md) (data): 21 records: SAT m=15..23 (witnesses dual-verified) + UNSAT m=24..33 (kissat def-no-lex, complete encoding) + def+lex cross-checks at m=24/33 (81,997 / 38,424 conflicts)
+## [research/experiments/seven-row-q9-q10-bands-20261114/output/q9-witness-search/s7x23q9_none.witness.json](../../../research/experiments/seven-row-q9-q10-bands-20261114/output/q9-witness-search/s7x23q9_none.witness.json)
+
+- [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md) (data): largest-width (7,9) witness (55 stones at 7x23, rows 8,8,8,7,8,8,8); all 9 witnesses s7x15..23q9_none.witness.json dual-verified (sat.js verifyConfig + Python Fraction)
+## [research/experiments/seven-row-q9-q10-bands-20261114/report.md](../../../research/experiments/seven-row-q9-q10-bands-20261114/report.md)
+
+- [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md) (proof): claims, method (def-mode completeness, lex soundness on the (7,10) band), verification protocol (controls, bit-exact fastsat calibration, dual witness verification, lex cross-encoding, determinism across env resets), results, scope and limits
 ## [research/experiments/short-board-2q-20261031/proof.md](../../../research/experiments/short-board-2q-20261031/proof.md)
 
 - [K0582](../items/K0582-short-board-2q-two-carriers.md) (proof): 担い手の七型分類、整数格子実現、四変数再帰の全称正当性、極大配置計数とq=6の反例
