@@ -83,23 +83,42 @@
   ],
   "frontier_context": {
     "baseline": "class-frontier-cost62a-recompute-20261114.json",
-    "baseline_solved_s6_in_manifest": 924,
-    "baseline_unique_remaining_s6": 6923,
-    "baseline_sum_remaining_cost": 544799,
+    "baseline_after_cost62a": {
+      "solved_s6_in_manifest": 924,
+      "unique_remaining_s6": 6923,
+      "sum_remaining_cost": 544799,
+      "s6_needed_by_open_classes": 5193,
+      "cost_needed_by_open_classes": 408522
+    },
+    "cost56a_addition": {
+      "covers": 7,
+      "marginal": 7,
+      "marginal_in_manifest": 3,
+      "marginal_manifest_hexes": [
+        "00000000000000803202000000800000",
+        "00000000000000803202020000000000",
+        "00000000000080809002000080000000"
+      ]
+    },
+    "after_cost56a": {
+      "solved_s6_in_manifest": 927,
+      "unique_remaining_s6": 6920,
+      "sum_remaining_cost": 544617,
+      "s6_needed_by_open_classes": 5190,
+      "cost_needed_by_open_classes": 408340
+    },
     "target_s5_hex": "00000000000000803202000000000000",
     "target_s5_class": 2,
     "target_before": {
       "remaining_s6_orbits": 41,
       "remaining_s7_edge_cost": 2776
     },
-    "newly_proved_s6_parent": "00000000000000803202020000000000",
-    "newly_proved_s6_parent_cost": 56,
-    "local_target_after": {
-      "remaining_s6_orbits": 40,
-      "remaining_s7_edge_cost": 2720
+    "target_after": {
+      "remaining_s6_orbits": 39,
+      "remaining_s7_edge_cost": 2657
     },
-    "local_effect_only": true,
-    "note": "The cost-56 child was the cheapest unswept child for this S5 in the after-cost-73a uncoverability audit and the S5 target remains at 41/2776 in the after-cost-62a frontier. The new certificate proves this S6 parent WIN via bit 89. A full global frontier recomputation is still required; the two cost-63 parent lifts are not counted as marginal until compared against the complete existing receipt union."
+    "global_recomputed": true,
+    "note": "The published cost-56a frontier recomputation adds the root's three D4-canonical S6 worklist parents as 3/3 marginal. Two parents (cost 56 and 63) belong to the named S5 target, reducing it by 2 orbits and 119 edge-cost; the third cost-63 parent contributes elsewhere. Global totals are taken from class-frontier-cost56a-recompute-20261114.json."
   },
   "interpretation_guard": "This is a WIN7 certificate for one seven-stone root and a winning move from its matched six-stone parents. It does not settle the five-stone S5 target, S2 {59,60}, two-stone root {49,60}, or the empty 11x11 board; all remain UNKNOWN."
 }
