@@ -552,7 +552,7 @@
 | [K0565](../items/K0565-binary-cube-six-high-pattern-coefficients.md) | 二値超立方体の六点切片の高次座標型係数と四項指数補正 | proposition | proved | geometry, variants, statistics |
 | [K0566](../items/K0566-binary-cube-universal-third-sparse-section-term.md) | 二値超立方体の任意q点切片における第三指数項の全称公式 | proposition | proved | geometry, variants, statistics |
 | [K0567](../items/K0567-binary-cube-section-xor-divisibility.md) | 二値超立方体の座標反転軌道による切片数の2進可除性と3・5点切片の厳密合同則 | proposition | proved | geometry, variants, statistics |
-| [K0568](../items/K0568-binary-cube-k6-exact-upper-bound.md) | 二値六次元立方体の共七点禁止版の最大安全石数はK_6=9である | proposition | scope-unclear | variants, geometry, maximum-safe |
+| [K0568](../items/K0568-binary-cube-k6-exact-upper-bound.md) | 二値六次元立方体の共七点禁止版は K_6≥9、上界未確定 | proposition | open | variants, geometry, maximum-safe |
 | [K0569](../items/K0569-coplanar-3x3x4-strong-solution.md) | 3×3×4・4点共面禁止版は全局面強解決され空盤Grundy値は3 | proposition | computed | variants, geometry, grundy, maximal-safe, maximum-safe, strategy-length |
 | [K0570](../items/K0570-coplanar-3x3x5-strong-solution.md) | 3×3×5・4点共面禁止版は全局面強解決され全45初手が勝ち手 | proposition | computed | variants, geometry, grundy, maximal-safe, maximum-safe, strategy-length |
 | [K0571](../items/K0571-coplanar-3x3x6-strong-solution.md) | 3×3×6・4点共面禁止版は全局面強解決され全54初手が勝ち手、最大nimberは7 | proposition | computed | variants, geometry, grundy, maximal-safe, maximum-safe, strategy-length |
