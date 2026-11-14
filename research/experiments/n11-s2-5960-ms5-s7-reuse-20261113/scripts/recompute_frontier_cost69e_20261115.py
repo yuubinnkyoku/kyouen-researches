@@ -210,9 +210,10 @@ result = {
               'cross-child duplicate of the cost-60b bit-15 win7_roots listing with no prior published '
               'certificate, so that receipt is new coverage and also closes the cost-60b bit-15 warm '
               'entry; the bit-2 WIN7 root duplicates the cost-65g-warm bit-15 certificate (cross-lane '
-              'reproduction, no new certificate needed); the 8 remaining WIN7-D10 bits '
-              '(2/76/84/89/90/94/108/116) stay warm certificate-rebuild candidates and change no '
-              'frontier number',
+              'reproduction, no new certificate needed); the remaining WIN7-D10 bits '
+              '(89/94/108/116; bit 2 already certified by the parallel cost-65g-warm bit-15 '
+              'rebuild; bits 84/76/90 rebuilt as warm certificates) stay warm certificate-rebuild '
+              'candidates and change no frontier number',
     'controls': {
         'merged_baseline': {'solved_in_manifest': 1012, 'unique_remaining': 6835,
                             'sum_cost': 538670, 'open_s6': 5105, 'open_cost': 402393,
