@@ -21,7 +21,7 @@ artifacts:
   note: census完全列挙・SAT符号化（sequential counter）・自作CDCL/DPLL・census不使用独立検証器
 - path: research/experiments/row-deficient-sat-witnesses-20261114/output/sat_results.json
   role: data
-  note: 全15実行・witness座標・独立検証詳細・制御・fuzz記録
+  note: 全16実行・witness座標・独立検証詳細・制御・fuzz記録
 - path: research/experiments/row-deficient-sat-witnesses-20261114/report.md
   role: proof
   note: 手法・制御・捕捉した実装バグ4件・未解決の区別
