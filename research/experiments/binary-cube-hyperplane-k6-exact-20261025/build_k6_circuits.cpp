@@ -161,16 +161,16 @@ int main(int argc, char** argv) {
     // Reject unsupported K before the expensive exhaustive enumeration.
     if (argc >= 2 && std::string(argv[1]) == "--cnf") {
         if (argc < 4 || argc > 5) {
-            fprintf(stderr, "usage: build_k6_circuits --cnf K out.cnf [fix0] (K>=7)\\n");
+            fprintf(stderr, "usage: build_k6_circuits --cnf K out.cnf [fix0] (K>=7)\n");
             return 2;
         }
         const int requested = atoi(argv[2]);
         if (requested < 7 || requested > n) {
-            fprintf(stderr, "circuit CNF requires 7 <= K <= 64\\n");
+            fprintf(stderr, "circuit CNF requires 7 <= K <= 64\n");
             return 2;
         }
         if (argc == 5 && std::string(argv[4]) != "fix0") {
-            fprintf(stderr, "bad extra args\\n");
+            fprintf(stderr, "bad extra args\n");
             return 2;
         }
     }
