@@ -3468,6 +3468,14 @@
 ## [research/experiments/macroscopic-spider-arm-20261102/verify.py](../../../research/experiments/macroscopic-spider-arm-20261102/verify.py)
 
 - [K0618](../items/K0618-one-macroscopic-arm-gaussian-coalescence.md) (verifier): 独立二値語・グラフ削除全列挙・漸化式と長枝モーメントの照合
+## [research/experiments/mask-census-closed-form-20261114/audit/audit_plateau_boundaries.py](../../../research/experiments/mask-census-closed-form-20261114/audit/audit_plateau_boundaries.py)
+
+- [K0803](../items/K0803-maximal-mask-plateau-universal.md) (verifier): 合同式の直接列挙とビット集合によるunique境界の独立監査
+- [K0805](../items/K0805-mask-census-closed-form.md) (verifier): 合同式の直接列挙とビット集合によるunique境界の独立監査
+## [research/experiments/mask-census-closed-form-20261114/audit/plateau-boundaries.json](../../../research/experiments/mask-census-closed-form-20261114/audit/plateau-boundaries.json)
+
+- [K0803](../items/K0803-maximal-mask-plateau-universal.md) (data): 幅95・96・197・198・264・265のunique件数
+- [K0805](../items/K0805-mask-census-closed-form.md) (data): 幅95・96・197・198・264・265のunique件数
 ## [research/experiments/mask-census-closed-form-20261114/output/mask_census_closed_form_output.json](../../../research/experiments/mask-census-closed-form-20261114/output/mask_census_closed_form_output.json)
 
 - [K0805](../items/K0805-mask-census-closed-form.md) (data): 完全表 w=17..98・changePoints（交叉統計の増分表）・s17 ヒストグラム・小パターン参入窓・制御照合結果
@@ -3494,7 +3502,7 @@
 - [K0803](../items/K0803-maximal-mask-plateau-universal.md) (data): 検査結果・サンプル幅・広幅プローブの機械出力（maximal 全幅 3,300・w=396 unique 会計一致）
 ## [research/experiments/maximal-mask-plateau-universal-20261113/report.md](../../../research/experiments/maximal-mask-plateau-universal-20261113/report.md)
 
-- [K0803](../items/K0803-maximal-mask-plateau-universal.md) (proof): 定理・証明・制御・限定の本文（全 w≧99 拡張版）
+- [K0803](../items/K0803-maximal-mask-plateau-universal.md) (proof): maximal部分の証明。uniqueの「ちょうど99≦w<198」は誤りで後続監査により訂正
 ## [research/experiments/maximal-mask-plateau-universal-20261113/scripts/maximal_mask_plateau_universal.ts](../../../research/experiments/maximal-mask-plateau-universal-20261113/scripts/maximal_mask_plateau_universal.ts)
 
 - [K0803](../items/K0803-maximal-mask-plateau-universal.md) (verifier): 周期性・CRT・popcount ギャップ・支配補題の機械検査 + sampled/広幅の exhaustive 再現 + 境界プローブ

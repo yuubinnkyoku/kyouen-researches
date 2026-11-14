@@ -1,11 +1,11 @@
 ---
 id: K0803
-title: "maximal mask 3,300 プラトーの全称化 — 窓マスク掃引の maximal=3,300 が全幅 w≧99で成立（周期性+順序同型+popcountギャップ+支配補題の全称証明・unique=3,630は99≦w<198に限定・level 17 掃引ワークロードはw=66以降不変）"
+title: "maximal mask 3,300 プラトーの全称化 — 窓マスク掃引の maximal=3,300 が全幅 w≧99で成立（unique=3,630の範囲は後続監査で訂正）"
 kind: proposition
 status: proved
 topics: [rectangles, geometry, variants]
 aliases: []
-scope: "level 17 標準形掃引 harness（mod 9×11・(a,u) 全列挙窓マスク・L=17）の mask 構造: (1) 任意の幅 w≧99で maximal=3,300（全称・等号付き・上限なし）・(2) unique=3,630 はちょうど 99≦w<198（w≧198 では小パターン参入で増加: w=296→3,663・w=396→3,960）。帰結: level 17 掃引の mask ワークロード数は w=66 以降常に 3,300（66..98 は有限測定・99 以上は本定理）"
+scope: "level 17 標準形掃引 harness（mod 9×11・(a,u) 全列挙窓マスク・L=17）の mask 構造: (1) 任意の幅 w≧99で maximal=3,300（全称・等号付き・上限なし）・(2) unique=3,630 は K0805 と独立境界監査によりちょうど 96≦w≦264。w=265 で小パターンが初めて参入し増加する。帰結: level 17 掃引の mask ワークロード数は w=66 以降常に 3,300（66..98 はK0805で全幅確認）"
 evidence: "数学的証明（有限計算からの全称昇格）。骨子: (1) 窓条件 cond(i)=m9[x][i mod 9]∧m11[y][i mod 11] は 99 周期（全 (x,y)・i<99 機械確認）、(2) w≧99 で T(w)∩[0,99)=P によりパターン→T(w) は単射かつ T1(w)⊆T2(w)⟺P1⊆P2 の順序同型（w によらない）、(3) CRT により |P|=c9·c11（全 81×121 対で不一致 0）、(4) c9∈{0,3,5,6}・c11∈{1,6,7} の完全列挙→|P|∈{0,3,5,6,18,21,30,35,36,42} で相違パターン 3,994 個のヒストグラムは [7,17] に空き、(5) |P|≧18 は全 w≧99 でフィルタ通過、(6) 支配補題: 非空小パターン（|P|≦6）はすべて点順序上位の big パターン（|P|≧18）に支配される（完全判定・例外 0）→ 小パターンは w 依存で参入しても常に非 maximal、(7) ゆえに maximal は全 w≧99 で w=99 の値 3,300 と一致。unique=3,630 は 99≦w<198 では |T|≦2|P|≦12<17 で小パターン不参入により成立。制御: sampled 9 幅（99..197）の直接 exhaustive が全て 3,630/3,300・広幅プローブ w=296→3,663/3,300・w=396→3,960/3,300・**w=396 の unique 3,960=3,994−1（空）−33（|P|=3・4周期で不通過）と理論値完全一致**"
 solution:
   board: level 17 標準形掃引 harness（mod 9×11・(a,u) 全列挙窓マスク）
@@ -37,7 +37,13 @@ artifacts:
   note: 検査結果・サンプル幅・広幅プローブの機械出力（maximal 全幅 3,300・w=396 unique 会計一致）
 - path: research/experiments/maximal-mask-plateau-universal-20261113/report.md
   role: proof
-  note: 定理・証明・制御・限定の本文（全 w≧99 拡張版）
+  note: maximal部分の証明。uniqueの「ちょうど99≦w<198」は誤りで後続監査により訂正
+- path: research/experiments/mask-census-closed-form-20261114/audit/audit_plateau_boundaries.py
+  role: verifier
+  note: 合同式の直接列挙とビット集合によるunique境界の独立監査
+- path: research/experiments/mask-census-closed-form-20261114/audit/plateau-boundaries.json
+  role: data
+  note: 幅95・96・197・198・264・265のunique件数
 - path: research/log/2026-11-13-maximal-mask-plateau-universal.md
   role: log
   note: 判断・経緯・レジューム
@@ -47,8 +53,8 @@ artifacts:
 
 1. **任意の幅 w ≥ 99 に対し、level 17 窓マスク掃引の maximal = 3,300 が
    ちょうど成り立つ**（上限なし・全称・等号付き）。
-2. **unique = 3,630 が成り立つのはちょうど 99 ≤ w < 198**。
-   w ≥ 198 では小パターン（|P| ∈ {5,6}・十分な周期数で |P|=3 も）が
+2. **unique = 3,630 が成り立つのはちょうど 96 ≤ w ≤ 264**（K0805）。
+   w=265 から小パターン（|P| ∈ {5,6}・十分な周期数で |P|=3 も）が
    フィルタに参入し unique は増加する（w=296: 3,663・w=396: 3,960）が、
    maximal は 3,300 のまま。
 3. **帰結**: level 17 掃引キャンペーンの mask ワークロード数（maximal）は
@@ -66,7 +72,10 @@ artifacts:
   すべて点順序上位の big パターンに支配される（完全判定・例外 0）** →
   参入しても常に非 maximal → maximal は全 w ≥ 99 で w=99 の値 3,300。
 - 99 ≤ w < 198 では |T| ≤ 2|P| ≤ 12 < 17 で小パターンが不参入 →
-  unique も 3,630。
+  unique も 3,630。ただしこれは十分条件であり、元の報告にあった「この範囲に限る」は誤り。
+  幅95・96・264・265での独立直接列挙はそれぞれ3615・3630・3630・3632。
+  幅を広げると異なる通過マスクの制限先は元の異なるマスクを保つため、unique は非減少である。
+  したがってこの境界検査も、ちょうど96以上264以下という範囲を裏付ける。
 
 ## 制御と限定
 

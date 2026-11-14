@@ -4810,7 +4810,7 @@
 - → supports [K0785](../items/K0785-circle-26-points-min-row-span.md): level 17復活点を (67,83] から (68,83] に狭窄
 - ← depends_on [K0804](../items/K0804-width69-82-pw32-plateau.md): 完走機（REST6 2フェーズ）のパラメータ化版。32プラトーを w=68 から w=82 まで一括延長
 
-## [K0803](../items/K0803-maximal-mask-plateau-universal.md) maximal mask 3,300 プラトーの全称化 — 窓マスク掃引の maximal=3,300 が全幅 w≧99で成立（周期性+順序同型+popcountギャップ+支配補題の全称証明・unique=3,630は99≦w<198に限定・level 17 掃引ワークロードはw=66以降不変）
+## [K0803](../items/K0803-maximal-mask-plateau-universal.md) maximal mask 3,300 プラトーの全称化 — 窓マスク掃引の maximal=3,300 が全幅 w≧99で成立（unique=3,630の範囲は後続監査で訂正）
 
 - → depends_on [K0799](../items/K0799-width66-pw32-plateau-completion.md): w=66 完走（unique=maximal 3,300）・harness の窓マスク生成の直接の源泉
 - → depends_on [K0801](../items/K0801-width67-pw32-plateau-completion.md): w=67 完走（3,300）・saturation 実験の制御値の供給源
