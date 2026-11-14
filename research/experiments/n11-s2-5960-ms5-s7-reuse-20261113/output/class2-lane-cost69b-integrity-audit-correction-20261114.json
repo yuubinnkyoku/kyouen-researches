@@ -1,0 +1,9 @@
+{
+  "title": "n11 class2-lane cost-69b raw-batch integrity audit - CORRECTION (supersedes class2-lane-cost69b-integrity-repair-20261114.json)",
+  "date": "2026-11-14",
+  "auditor": "long-term lane session 9",
+  "correction": "The earlier record class2-lane-cost69b-integrity-repair-20261114.json claimed raw batches B/C/D contained line-wrapped broken JSON rows (bits 32/86/110). This was WRONG: the wraps were an artifact of the web-page text extraction tool used to fetch the raw files (it soft-wraps long lines when extracting text). Fetching the same blobs through the GitHub Contents API shows every stored row intact on a single line, both before and after the 'repair' commit. The 'repair' re-push was byte-equivalent to the original content - no data changed, and no corruption ever existed in the repository. The lesson generalizes: remote integrity checks of pushed JSONL must fetch via the Contents API (or strict per-line JSON.parse over API bytes), never over extracted web text.",
+  "api_based_audit_result": "PASS: batches A-D fetched via GitHub Contents API at commit 26ca437b: 69 candidate rows, 69 unique bits, 0 JSON parse failures, node sum exactly 305,754,861 == sweep record total_nodes, 0 capped, WIN7 none (13th sterile child confirmed), 4/4 pilot d6 controls at exactly 5,949 nodes.",
+  "unchanged_valid_results": "The same-session remote accounting audits of cost-69c (69 rows / 440,238,688), cost-69d (69 / 296,122,077), cost-70 (70 / 380,930,330), cost-70b (70 / 404,797,576, plus cross-lane node-exact reproduction of bits 12/13/110/37), and cost-71 (71 / 385,100,613) remain valid: those files parsed with exact sums, so no extraction wraps affected them.",
+  "unknown_status": "11x11 empty board: UNKNOWN. Two-stone root {49,60}: UNKNOWN. S2 {59,60}: UNKNOWN. class 2 / class 4 blockers: UNKNOWN."
+}
