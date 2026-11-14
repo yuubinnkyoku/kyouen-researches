@@ -108,7 +108,7 @@
     "fbt_drops": 0,
     "fatal": null,
     "verification": "verify_bit7_win7_cert.ts: root-check PASS (stones=7, loserMobility=44); 44/44 sub-roots PASS (all seen>0, terminals>0); union of consumed winner states equals the 18,930-row set exactly (0 missing / 0 extra); terminal stone ranges per sub-root within [13,17]",
-    "md5_joined": "89fe2214aa925b12100d9e924752924752924c",
+    "md5_joined": "89fe2214aa925b12100d9e924752924c",
     "sha256": "ac656690280ef9f2162936fcc48504902840ac1f24315aa3a9323c84a778c2e9",
     "split": "certificate pushed as part1of2 (9,466 lines, 342,116 bytes, md5 ce977d981e640766bd7d7b741531b7d9) + part2of2 (9,466 lines, 341,299 bytes, md5 016661db22bc261f8243b05a7ad57a96); cat part1of2 part2of2 > bit107.sorted.cert (concat md5 = 89fe2214aa925b12100d9e924752924c, verified JOIN-IDENTICAL locally and by commit-SHA raw md5 after landing)",
     "root_not_among_existing": "root hex grepped against all 36 published win7-certificates manifests on main: 0 hits"
