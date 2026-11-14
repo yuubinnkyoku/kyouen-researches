@@ -64,3 +64,42 @@ m=26..939 の def-mode UNSAT 掃引（全幅 UNSAT なら M=26・w=8 で初の�
    クラス分割符号化で攻略。m=26 は (6,8) m=22 と同型の最難関候補。
 4. 全幅閉包後: M_{8,10} exact 決着として K 項目 + CSV exact-threshold 行化
    （その際に最新 main から K 番号・CSV を再取得して統合）。
+
+## 追記（第2ラウンド・2026-11-15）
+
+bash 実行環境が前夜 23:05Z 以降復帰せず（"temporarily unavailable" 継続）、
+kissat 掃引は今ラウンド実行不可。run_typescript（GitHub API）のみで完結する
+整備・検証作業を実施:
+
+1. **CSV 着地検証**: main の `results/fixed-width/mwq_stabilization.csv`
+   （677665eb 統合 push・get_file_contents で確認）で (8,9) bounds 行
+   27..984 と (8,10) bounds 行 26..940 が separation-band 行の直前に正しく
+   挿入されていること・既存行に破壊がないことを確認。
+2. **hardzone.sh / hardbatch.sh push**（ec241252）: README scripts セクションで
+   言及済みだが未 push だった2段階難所掃引スクリプト（def cap1 → INDET 時
+   def+lex=H,V,HV cap2 の2段実行・両段の records.jsonl append・SAT 時
+   decode + dual-verify・hardbatch は直前幅の実測時間を使う適応的
+   wall-clock guard）。次回 bash 復帰時に陽性対照（8x20 SAT）で smoke して
+   から難所帯 26..42 へ。
+3. **records-chunks 完全監査 + manifest 再構築**: 全7 chunk
+   （c0001..c0004・h0001..h0003・計98行）を main から取得し md5 を独立計算
+   （TS 内自作 MD5・self-test: ""=d41d8cd9… / "abc"=90015098… PASS）。
+   c0004 = 2807ad7f…・h0003 = fa6498fe… は push 済み manifest 記録値と
+   bit-exact 一致（chunk バイト列の完全性を確認）。監査結果:
+   重複 m なし（二重 push なし）・UNSAT 区間は **[55,138] 連続（84幅）**
+   + [501,513]（13幅）・INDET は m=31 のみ。一方で manifest.jsonl 自体は
+   直近 push 分（c0004/h0003 の2エントリ）しか残っていなかった（chunk push
+   時に manifest 全体を書き換え、過去エントリを落としたことが原因）ため、
+   全7 chunk 分の完全版に再構築して push（今回の commit）。
+   - c0001 md5 a59c5f76…（26行・m=31 INDET + UNSAT 25行）
+   - c0002 md5 6e548893…（17行）・c0003 md5 c9726bf0…（19行）
+   - h0001 md5 2da3a3e0…（5行）・h0002 md5 6b9941a9…（6行）
+4. **m=55..60 対側 bit-exact クロス検証の再確認**: h0002/h0003 の conflicts
+   （60: 1,529,015・59: 1,520,195・58: 1,532,572・57: 1,661,215・
+   56: 1,755,311・55: 1,979,190）が対側 records.jsonl（95caa5e7 時点）と
+   完全一致。
+
+掃引再開条件は不変: laneA m=139..500・laneB m=514..939（batchband3.sh・
+GUARD 230s・chunk 即時 push）。**manifest への追記は既存エントリを含む
+全体を push すること**（今回の欠落は全体書き換えで過去エントリを落とした
+ことで発生）。
