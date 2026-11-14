@@ -233,8 +233,16 @@ result = {
         'cost_needed_by_open_classes': st69['cost_needed_by_open_classes'],
         'demand_histogram_open_only': st69['hist'],
         'best_class2': class2[0],
-        'best_class2_note': 'receipt-unclosable per class-frontier-uncoverability-audit-20261114.json '
-                            '(all 10 remaining children sterile-swept); shown for reference only',
+        'best_class2_note': 'best_class2 and best_coverable_class2 are the same coverable S5; '
+                            'the separate receipt-unclosable S5 is recorded in receipt_unclosable_class2.',
+        'receipt_unclosable_class2': {
+            's5_hex': '00000000000000809082000000000000',
+            'classes': classes.get('00000000000000809082000000000000', 0),
+            'remaining_s6_orbits': len(rem69.get('00000000000000809082000000000000', [])),
+            'remaining_s7_edge_cost': sum(int(r['s6_s7_edge_cost']) for r in rem69.get('00000000000000809082000000000000', [])),
+            'all_remaining_children_sterile_swept': True,
+            'status': 'unresolved; no WIN7-D10 was found in the recorded sweeps',
+        },
         'best_coverable_class2': next(c for c in class2 if c['s5_hex'] != '00000000000000809082000000000000'),
         'next_class2': class2[1:4],
         'best_class4': class4[0],
@@ -264,14 +272,17 @@ with (OUT / 'class-frontier-s5-ranking-after-cost69e-20261115.csv').open('w', ne
                     r['remaining_s7_edge_cost']))
 
 b2 = '00000000000000809082000000000000'
+assert all(isinstance(k, str) for k in rem69), 'summary_state S5 keys must be hex strings'
+assert b2 in rem69 and len(rem69[b2]) == 10, 'receipt-unclosable S5 must retain its 10 children'
+assert PARENT in rem69 and len(rem69[PARENT]) == 6, 'cost-69e parent must retain six children'
 with (OUT / 'class-frontier-top-candidates-s6-after-cost69e-20261115.csv').open('w', newline='') as f:
     w = csv.writer(f, lineterminator=chr(10))
     for label, cand in (('best class-4 blocker-candidate S5', class4[0]),
                         ('best class-2 blocker-candidate S5 (receipt-unclosable, audit-blocked)',
                          {'s5_hex': b2, 'classes': classes.get(b2, 0),
-                          'remaining_s6_orbits': len(rem69.get(int(b2, 16), [])),
+                          'remaining_s6_orbits': len(rem69.get(b2, [])),
                           'remaining_s7_edge_cost':
-                              sum(int(r['s6_s7_edge_cost']) for r in rem69.get(int(b2, 16), []))}),
+                              sum(int(r['s6_s7_edge_cost']) for r in rem69.get(b2, []))}),
                         ('best coverable class-2 blocker-candidate S5',
                          next(c for c in class2 if c['s5_hex'] != b2)),
                         ('cost-69e parent S5 (second class-2 target)',
@@ -279,7 +290,7 @@ with (OUT / 'class-frontier-top-candidates-s6-after-cost69e-20261115.csv').open(
         w.writerow([f"# {label}: s5={cand['s5_hex']} classes={cand['classes']} "
                     f"remaining={cand['remaining_s6_orbits']} cost={cand['remaining_s7_edge_cost']}"])
         w.writerow(('s5_hex', 's6_hex', 's6_s7_edge_cost', 'demand'))
-        for row in sorted(rem69[int(cand['s5_hex'], 16)], key=lambda r: int(r['s6_s7_edge_cost'])):
+        for row in sorted(rem69[cand['s5_hex']], key=lambda r: int(r['s6_s7_edge_cost'])):
             d = dem69[row['s6_hex']]
             w.writerow((cand['s5_hex'], row['s6_hex'], row['s6_s7_edge_cost'],
                         f"c1={d['c1']},c2={d['c2']},c4={d['c4']}"))
