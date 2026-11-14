@@ -123,9 +123,29 @@
     "batch_size": 8,
     "pilot_control": "d6 loss=false nodes=3402 required per batch; local copy byte-exact with the repo blob (git blob sha 0a4a86f6828dc010c89ff17596054336a6b6091f computed locally and equal to the 74d claim record) and control passed at session start"
   },
-  "plan": "Sweep the 76 legal candidates at depth 10, cap 1e9, andclose 1, batch size 8 (10 batches: 8x9+4) with the pilot d6 control required per batch; push each raw batch JSONL to output as it completes (environment-reset safety); WIN7 bits (if any) go to v15 crosscheck, determinism rerun, and certificate extraction as in cost-74d; fold receipts into the frontier chain at head 1188 asserting the head state; keep 11x11 UNKNOWN.",
+  "plan": "Sweep complete (76/76, 6 WIN7-D10 bits, 0 capped, 10 raw batches + audit published on main). Next: v15 anchor crosscheck, certificate extraction for bits 11,29,66,80,92,96 (lowest-nodes first: bit96), double independent verification, then receipt fold into the chain at head 1188 asserting the head state; keep 11x11 UNKNOWN.",
   "naming_note": "cost-76a disambiguates from the sibling cost-76 child 00000000000000809102000000004000 (closed by the cost-74d bit102 lift, unswept, unnamed) and from any future cost-76 band; no cost-76 name is used by other experiment scripts (verified on 2026-11-15)",
   "demand_semantics_note": "per-class demand counts each open parent S5 once per set class bit (class2-lane-cost69g-demand-reconciliation-20261115.json); distinct open parents = 2 here",
   "interpretation_guard": "REFUTED-D10 is absence of a winner win within depth 10, not a refutation of the child; loss=true rows are WIN7-within-depth search candidates needing certificate extraction before any frontier claim; solved counts measure manifest coverage, not the game-theoretic value of any position",
-  "unknown_status": "standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, class 2, class 4 remain UNKNOWN. A completed sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 7-stone roots of this child."
+  "unknown_status": "standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, class 2, class 4 remain UNKNOWN. A completed sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 7-stone roots of this child.",
+  "sweep_result": {
+    "audit": "class2-lane-cost76a-sweep-audit-20261115.json",
+    "raw_batches": 10,
+    "candidates": 76,
+    "win7_d10": 6,
+    "win7_bits": [
+      11,
+      29,
+      66,
+      80,
+      92,
+      96
+    ],
+    "refuted_d10": 70,
+    "capped": 0,
+    "candidate_nodes": 131329581,
+    "pilots_3402": 10,
+    "d4_duplicates_vs_published_manifests": 0,
+    "determinism_note": "batch2 bits 13-21 node-exact across two runs"
+  }
 }
