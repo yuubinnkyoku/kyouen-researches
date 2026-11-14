@@ -25,12 +25,12 @@
     最小witness幅は 18（K0332・29石）。よって M∈{19,20} または ≥22。
     残るは 21..157 の持続性で、witness 探索の前線は 5×21。
   - `separation-band`: 行分離公式 M_{w,q}=q−1 が全 m≥1 で成立する合成分離帯
-    `q ≥ max(P(w), w)+1`（w=6..82・P(w) 確定幅。K0767 の系と P(w) 確定値の合成）。
+    `q ≥ max(P(w), w)+1`（w=6..83・P(w) 確定幅。K0767 の系、K0776、K0784 と P(w) 確定値の合成。w=83 は q=84 を K0784、q≥85 を K0776 が覆う）。
     全安全局面で g(S)=(w·min(m,q−1)−|S|) mod2。
   - w=5 の行分離帯 q≥9（M_{5,9}=8・M_{5,10}=9 が新規）は K0813（P(5)=8 を K0767 の系に代入）。
-  - `parametric`: P(w) が未確定の幅（w≥83 を含む）に効く既証明の無限族
+  - `parametric`: P(w) が未確定の幅（w≥84）に効く既証明の無限族
     （K0025・K0072・K0776・K0784）。
-- 整合性検証（289点の文書化済み (w,q) が全て合成分離帯に包含・P(w) 単調）:
+- 整合性検証（300点の文書化済み (w,q) が全て合成分離帯に包含・P(w) 単調）:
   [mwq_results_check.ts](../../research/experiments/mwq-results-integration-20261113/scripts/mwq_results_check.ts) /
   [output](../../research/experiments/mwq-results-integration-20261113/output/mwq_results_check.json)。
 
