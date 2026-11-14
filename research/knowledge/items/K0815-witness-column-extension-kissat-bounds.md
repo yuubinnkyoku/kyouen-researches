@@ -226,6 +226,10 @@ K0810符号化コアをそのまま使い、3点を追加した符号化 sat2.js
 - 陰性（pool相対・uOverflow スキップが支配的で証拠力は限定的）:
   6×31 q=5 r≤5 ← 30base（44,552 leaves・uOverflow ≈99.8%）・
   6×24 q=6 r≤4 ← 23base（27,841 leaves・uOverflow ≈99%）は 0件。
+  第2ラウンド（dm=1 前線の直接拡張）: 6×21 q=7 r≤3 ← 20base（7,176 leaves/off・
+  uOverflow 88%・subsets 1,118,211）・5×22 q=6 r≤3 ← 21base（2,325 leaves/off・
+  uOverflow 90%）・6×19 q=8 r≤2 ← 18base（862 leaves/off・uOverflow 57%・r=3 未走査）
+  も 0件 — いずれも限定非不在。
 
 現在の境界: M_{6,5} ∈ [31,658]・M_{6,6} ∈ [24,495]（上界は不変）。
 witness 前線は 6×31・6×24 に移動。
