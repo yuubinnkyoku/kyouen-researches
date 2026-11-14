@@ -424,6 +424,17 @@ artifacts:
 - path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost75b-win7-certificates-20261115.json
   role: manifest
   note: cost75bの7 WIN7証明書。352,672行・406部分木、全件検証済み
+
+- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-bit7-independent-audit-20261115.json
+  role: data
+  note: cost65e bit7証明書のBigInt独立検査、D4親被覆、重複・衝突監査とfrontier差分
+- path: research/log/2026-11-15-n11-class2-cost65e-bit7-independent-audit.md
+  role: log
+  note: bit7証明書の全56部分木検査と2つの新規S6親解消
+- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/verify_bit7_win7_cert.ts
+  role: verifier
+  note: --certと--rootを指定して任意のWIN7証明書を独立再検査できる汎用整数Bareiss検証器
+
 scope: n11 S2 {59,60} milestone-5のワークリストとS7証明書再利用。局所S6と三石位置のblocker類1・2の条件付き勝敗を含むが、二石rootや空盤の勝敗は含まない。
 evidence: 公開manifestの辞書順md5は0e95a438dbcb486368393de9c73fc21e。94オラクルの全744対称像を使い補完候補15072件を独立列挙。類1の新規WIN7戦略証明書13件・LOSS7証明書2件、類2のWIN7証明書54件と3六石位置の全62子・全72子・全64子のLOSS7証明書を独立検査。類1の五石位置の40六石軌道は既存記録と合わせて全て先手WIN。既存の一部証明書本体は別保管であり、公開監査記録に依存する。 2026-11-15 cost72 bit111 WIN7証明書を独立検査し、cost75b統合後の対象S5親を局所的に2軌道・費用147から1軌道・費用75へ縮小した。global frontierは未再計算。
 - path: research/log/2026-11-15-n11-class2-cost60b-warm17-bigint-audit-and-cost71b-frontier.md
@@ -651,3 +662,23 @@ cost72 raw batch 1–9の72候補はclaimと完全一致。WIN7-D10はbit52/111�
 cost72 bit111の7親lift中manifest親は3軌道で、対象の1軌道だけが現行top-candidates表で未解消と確認できた。他2軌道は現在の解消状態を照合しておらず数えない。cost75bの7証明書も再検査し全件PASSを確認したが、既存frontierの計数を変更しない。
 
 cost72 bit52は未証明。標準11×11空盤、二石root `{49,60}`・`{59,60}`、S2 `{59,60}` は引き続き **UNKNOWN**。
+
+
+## 2026-11-15: cost65e bit7証明書と追加2つのS6親解消
+
+7石root `00000000000000809102000000800080` のWIN7証明書を、BigInt 3×3小行列式による別実装で独立検査した。44,561戦略行、相手の合法初手56、56/56 sub-root PASS、行集合差0/0、終局石数13〜17。探索器・勝敗cache・浮動小数点は使っていない。
+
+7通りの1石除去とD4正規化を6分割S6 manifest（7,867行）に照合した結果、manifest親は3軌道だった。除去bit7の親 `00000000000000809102000000800000` はcost65e bit107証明書で既に閉じている。新たに閉じるのは次の2軌道である。
+
+- `00000000000000809102000000000080`（費用79）
+- `00000000000000801202000080000008`（費用75）
+
+公開WIN7 manifest 66件、K0675/focus2154/frontier2140の検証済みroot 6,751件、K0675のS6 sweep 3,868件、class2 LOSS7 manifest 3系列、central49 terminal LOSS7 parent-lift 274鍵を照合し、新規2親の既存被覆・WIN/LOSS衝突は見つからなかった。監査は公開receipt/cacheの照合であり、全raw証明書のbyte走査ではない。
+
+cost75b再計算（1,049解消、残り6,798、費用535,812、open需要5,068/399,535）に2親・費用154を反映すると、解消S6は **1,051**、残り **6,796**、費用 **535,658**、open需要 **5,066/399,381**。影響するS5親は3軌道で、35/2,525→34/2,446、59/4,521→58/4,446、74/6,059→72/5,905となる。いずれも未解消のまま。
+
+cost72 bit111の1/75という局所receiptは引き続きglobal frontierに未統合であり、今回の数値には含めない。最良class2 `00000000000000803202000000000000` はcost75b基準で2軌道・費用147のまま。S5 blockerやS2を閉じたわけではない。
+
+詳細: [cost65e bit7監査JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-bit7-independent-audit-20261115.json)、[監査log](../../log/2026-11-15-n11-class2-cost65e-bit7-independent-audit.md)。
+
+標準11×11空盤、二石root `{49,60}`・`{59,60}`、S2 `{59,60}` は引き続き **UNKNOWN**。
