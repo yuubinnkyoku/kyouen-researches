@@ -25,7 +25,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT / "research/experiments/parabola-equality-extension-2143-2500-20261107"))
-from probe_driver import run_gen  # noqa: E402
+from edges_gen import run_edges  # noqa: E402
 from search_shape_class import build  # noqa: E402
 from pysat.solvers import Cadical195  # noqa: E402
 
@@ -49,7 +49,7 @@ def main() -> int:
     if not checker.exists():
         subprocess.run(["g++", "-O2", "-std=c++17", str(CHECKER_SOURCE), "-o", str(checker)],
                        check=True)
-    edges = run_gen(str(TMP / "forbidden_edges.exe"), p)
+    edges = run_edges(p)
     clauses, nv, kept = build(p, edges, 1, 1, 0)
     print(f"p={p} h={h} size={size} vars={nv} clauses={len(clauses)} kept={kept}", flush=True)
     cnf = dest / f"a{p}_{size}.cnf"

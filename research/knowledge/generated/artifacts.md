@@ -11088,6 +11088,9 @@
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/cardenc_verify.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/cardenc_verify.py)
 
 - [K0772](../items/K0772-pysat-seqcounter-equals-small-verification.md) (verifier): 全主割当の拡張可能性を自前 DPLL と Cadical assumption の2系統で判定する照合器
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/census_h2_single_cnf.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/census_h2_single_cnf.py)
+
+- [K0811](../items/K0811-new-exceptional-primes-3719-3727.md) (solver): 等号判定を1素数1CNFで行う国勢調査器（サイズh+2は(1,1,0)の一クラスだけ）
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/check_scaling_invariance.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/check_scaling_invariance.py)
 
 - [K0774](../items/K0774-no-scaling-symmetry-for-parabola-safety.md) (verifier): 証人を単元倍し、辺リストとの包含と独立なgeneric整数4x4行列式で共円性を再計算する
@@ -11129,6 +11132,15 @@
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3251-1627/receipt.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3251-1627/receipt.json)
 
 - [K0708](../items/K0708-p3251-no-parabola-equality-witness.md) (certificate): サイズ1627（クラス(1,1,0)）の単一CNFがUNSAT、DRAT証明229,866行を修正版検証器でVERIFIED（185.6秒）
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3719-1861/a3719_1861.cnf](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3719-1861/a3719_1861.cnf)
+
+- [K0811](../items/K0811-new-exceptional-primes-3719-3727.md) (data): 形状(1,1,0)の単一CNF（sha256はreceipt参照）
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3719-1861/receipt.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3719-1861/receipt.json)
+
+- [K0811](../items/K0811-new-exceptional-primes-3719-3727.md) (manifest): 13,012変数・105,940節・23,750行DRAT・VERIFIED（31.6秒）
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3727-1865/receipt.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3727-1865/receipt.json)
+
+- [K0811](../items/K0811-new-exceptional-primes-3719-3727.md) (manifest): 13,040変数・100,592節・334,667行DRAT・VERIFIED（929秒）
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full.json)
 
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (data): 旧チェッカーの標本21 dの受理記録。K0707の偽受理発見により独立証拠への採用を保留
@@ -11172,6 +11184,9 @@
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/greedy-lower-bounds/witness_2531_1261.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/greedy-lower-bounds/witness_2531_1261.json)
 
 - [K0787](../items/K0787-greedy-lower-bounds-2531-3251.md) (certificate): 1261点（形状(1,1,6)、辺0件）。温暖開始SATの反復による最新形
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/greedy-lower-bounds/witness_2531_1262.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/greedy-lower-bounds/witness_2531_1262.json)
+
+- [K0787](../items/K0787-greedy-lower-bounds-2531-3251.md) (certificate): 1262点（辺0件）。温暖開始SATの反復による最新形
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/greedy-lower-bounds/witness_2531_extended.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/greedy-lower-bounds/witness_2531_extended.json)
 
 - [K0787](../items/K0787-greedy-lower-bounds-2531-3251.md) (certificate): 1256点（形状(1,1,11)、辺0件）。貪欲1246を温暖開始SATで10点伸ばした最終形
@@ -13787,6 +13802,9 @@
 ## [research/log/2026-11-13-width68-level-classification.md](../../../research/log/2026-11-13-width68-level-classification.md)
 
 - [K0802](../items/K0802-width68-pw32-plateau-completion.md) (log): 判断・教訓・レジューム
+## [research/log/2026-11-14-new-exceptional-primes-3719-3727.md](../../../research/log/2026-11-14-new-exceptional-primes-3719-3727.md)
+
+- [K0811](../items/K0811-new-exceptional-primes-3719-3727.md) (log): 発見の経緯（d走査の候補→単一CNF→証明書）と範囲の注意
 ## [research/log/2026-11-14-width69-82-dual-run-integration.md](../../../research/log/2026-11-14-width69-82-dual-run-integration.md)
 
 - [K0804](../items/K0804-width69-82-pw32-plateau.md) (log): 判断・教訓・レジューム

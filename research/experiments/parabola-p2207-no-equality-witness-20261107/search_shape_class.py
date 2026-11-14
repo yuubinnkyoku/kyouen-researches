@@ -23,7 +23,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT / "research/experiments/parabola-equality-extension-2143-2500-20261107"))
-from probe_driver import run_gen  # noqa: E402
+from edges_gen import run_edges  # noqa: E402
 from pysat.card import CardEnc, EncType  # noqa: E402
 from pysat.solvers import Cadical195  # noqa: E402
 
@@ -109,7 +109,7 @@ def main() -> int:
         print("no admissible class", flush=True)
         return 1
     OUT.mkdir(exist_ok=True)
-    edges = run_gen(str(Path(__import__("os").environ["TEMP"]) / "forbidden_edges.exe"), p)
+    edges = run_edges(p)
     warm_states = None
     if args.warm:
         import json as _json

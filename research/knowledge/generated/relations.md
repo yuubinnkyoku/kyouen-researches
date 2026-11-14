@@ -833,6 +833,7 @@
 - ← depends_on [K0774](../items/K0774-no-scaling-symmetry-for-parabola-safety.md): 完全対{t,p−t}の数え上げが使う反射t↦p−tの正当化との対比
 - ← depends_on [K0775](../items/K0775-p3251-no-size-h1-set.md): 上界A(p)<=(p+3)/2と、サイズh+1の集合が(x,c,e)で3形状に尽きること
 - ← depends_on [K0781](../items/K0781-p2531-no-size-h1-set.md): 上界A(p)<=(p+3)/2と、サイズh+1の集合が(x,c,e)で3形状に尽きること
+- ← depends_on [K0811](../items/K0811-new-exceptional-primes-3719-3727.md): 上界A(p)<=(p+3)/2と、サイズh+2の集合が(1,1,0)の一クラスに限られること
 
 ## [K0098](../items/K0098-p23-half-interval-counterexample.md) 剰余放物線の前半区間安全説はp=23で反例
 
@@ -855,6 +856,7 @@
 - ← supports [K0702](../items/K0702-p2531-no-parabola-equality-witness.md): 単一CNFの独立監査により全奇素数での等号を否定する2番目の反例
 - ← refutes [K0706](../items/K0706-p2647-no-parabola-equality-witness.md): 修正版で全dのUNSAT証明を検査した反例により、全奇素数での等号を否定する
 - ← supports [K0708](../items/K0708-p3251-no-parabola-equality-witness.md): 単一CNFの独立監査により全奇素数での等号を否定する4番目の反例
+- ← supports [K0811](../items/K0811-new-exceptional-primes-3719-3727.md): 「全奇素数で等号」の反例が4個から6個に増えた
 
 ## [K0102](../items/K0102-concrete-lean-certificate-checker-open.md) 具体巨大証明書をLean核のみで検査する実装は未完成
 
@@ -3972,6 +3974,7 @@
 
 - ← depends_on [K0708](../items/K0708-p3251-no-parabola-equality-witness.md): 旧d別監査では削除時代入失効の修正版を使用。別経路の単一CNFはRUP限定検査と空節処理修正版LRATで再検査
 - ← depends_on [K0780](../items/K0780-drat-checker-fast-reason-local-invalidation.md): 削除で代入を失効させないと偽UNSATを受理する不具合と、その修正方針（reason単位の失効）
+- ← depends_on [K0811](../items/K0811-new-exceptional-primes-3719-3727.md): 削除時に代入を失効させる修正版の増分DRAT検査器で証明書を検査
 
 ## [K0708](../items/K0708-p3251-no-parabola-equality-witness.md) p=3251でも剰余放物線の等号A(p)=(p+3)/2を達成できない（単一CNF独立schema・RUP/LRAT監査済み）
 
@@ -4526,6 +4529,7 @@
 - → supports [K0769](../items/K0769-candidate-b-assumption-partition.md): 前提(1)（辺リスト完全性）
 - ← depends_on [K0769](../items/K0769-candidate-b-assumption-partition.md): 辺リスト完全性（前提(1)）
 - ← depends_on [K0787](../items/K0787-greedy-lower-bounds-2531-3251.md): 禁止四点リストが健全・完全・重複なしであることを前提に、辺の非包含で安全性を判定
+- ← depends_on [K0811](../items/K0811-new-exceptional-primes-3719-3727.md): 禁止四点リストの健全・完全・重複なし（CNFの幾何節の根拠）
 
 ## [K0772](../items/K0772-pysat-seqcounter-equals-small-verification.md) pysat の seqcounter による CardEnc.equals は build と同一の呼び出し形で小規模全件「ちょうど bound 個」を満たす
 
@@ -4598,7 +4602,7 @@
 - → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 上界A(p)<=(p+3)/2と、サイズh+1の集合が(x,c,e)で3形状に尽きること
 - → depends_on [K0702](../items/K0702-p2531-no-parabola-equality-witness.md): サイズh+2=1267の不存在（単一CNF・監査済み）からA(2531)<=1266、本項はそこから1下げる
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 安全集合の定義（整数平面で共円・共線の四点を含まない）
-- ← supports [K0787](../items/K0787-greedy-lower-bounds-2531-3251.md): A(2531)<=1265 と合わせて 1261 <= A(2531) <= 1265（残り 4）
+- ← supports [K0787](../items/K0787-greedy-lower-bounds-2531-3251.md): A(2531)<=1265 と合わせて 1262 <= A(2531) <= 1265（残り 3）
 
 ## [K0782](../items/K0782-width21-26-point-row-sharpened-bounds.md) 幅21..26の円点数 P(w) ≤ 2⌈w/2⌉−2（k=⌈w/2⌉ 候補点行集合がmod 19で全滅）・w=19,20候補の実現可能性は e∈Z・R'≤2×10⁷ で否定・A=0は厳密不可能
 
@@ -4651,11 +4655,11 @@
 - → depends_on [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 固定幅盤の枠組みと円点数P(w)の定義（K0784と同一の依存）
 - ← depends_on [K0788](../items/K0788-width36-48-exact-circle-point-counts.md): witness下界（650円・2210円strip）。本項目の等号の下界側
 
-## [K0787](../items/K0787-greedy-lower-bounds-2531-3251.md) 貪欲＋破壊再構成と温暖開始の反復でQ_2531は1261点以上、Q_3251は1611点以上の安全集合を持つ（独立整数幾何監査済み）
+## [K0787](../items/K0787-greedy-lower-bounds-2531-3251.md) 貪欲＋破壊再構成と温暖開始の反復でQ_2531は1262点以上、Q_3251は1611点以上の安全集合を持つ（独立整数幾何監査済み）
 
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 共線・共円四点を含まない安全集合の定義
 - → depends_on [K0771](../items/K0771-forbidden-edge-generator-completeness.md): 禁止四点リストが健全・完全・重複なしであることを前提に、辺の非包含で安全性を判定
-- → supports [K0781](../items/K0781-p2531-no-size-h1-set.md): A(2531)<=1265 と合わせて 1261 <= A(2531) <= 1265（残り 4）
+- → supports [K0781](../items/K0781-p2531-no-size-h1-set.md): A(2531)<=1265 と合わせて 1262 <= A(2531) <= 1265（残り 3）
 - → supports [K0775](../items/K0775-p3251-no-size-h1-set.md): A(3251)<=1625 と合わせて 1611 <= A(3251) <= 1625
 
 ## [K0788](../items/K0788-width36-48-exact-circle-point-counts.md) 幅36..48の円点数の完全決定 P(36)..P(42)=24・P(43)=26・P(44)=P(45)=28・P(46)=P(47)=30・P(48)=32 — level分類のstreaming bitset DFS完了・g0証明書のconvention B厳密化（既存定理は不変）
@@ -4855,3 +4859,10 @@
 - → generalizes [K0808](../items/K0808-six-row-deficient-witnesses-q568.md): 貪欲では発見できなかったm帯のwitnessをSATで発見し(6,5)/(6,6)/(6,8)下界を更新
 - → generalizes [K0809](../items/K0809-handicap-deficient-witnesses-6x5-6x6.md): 行capハンディキャップ貪欲の候補予想 M=22/17/12/16 を4件とも反証
 - → depends_on [K0806](../items/K0806-six-row-q7-stabilization-bounds.md): 上界（K0318代入）は不変
+
+## [K0811](../items/K0811-new-exceptional-primes-3719-3727.md) p=3719とp=3727は等号A(p)=(p+3)/2を達成せず、単一CNFのDRAT証明書で監査済み（既知4素数の外側で新発見）
+
+- → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 上界A(p)<=(p+3)/2と、サイズh+2の集合が(1,1,0)の一クラスに限られること
+- → depends_on [K0771](../items/K0771-forbidden-edge-generator-completeness.md): 禁止四点リストの健全・完全・重複なし（CNFの幾何節の根拠）
+- → supports [K0101](../items/K0101-prime-parabola-equality-open.md): 「全奇素数で等号」の反例が4個から6個に増えた
+- → depends_on [K0707](../items/K0707-incremental-drat-deletion-unsoundness.md): 削除時に代入を失効させる修正版の増分DRAT検査器で証明書を検査

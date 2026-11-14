@@ -770,7 +770,7 @@
 | [K0784](../items/K0784-width21-35-pw-exact-universal-bound.md) | 幅21..35の円点数の完全決定 P(22)=18・P(23)=P(24)=20・P(25)=22・P(26)=…=P(35)=24・24点witness円650 — 全称上界 P(w) ≤ 2⌈w/2⌉−4（全w≥21・w≠26）・行分離公式 M_{w,w+1}=w（全奇数w≥21） | proposition | proved | rectangles, geometry, variants |
 | [K0785](../items/K0785-circle-26-points-min-row-span.md) | 26点円の中心窓最小幅43（E族・R=2210一意）とZ族58 — 全称証明、bestK表（E K=13..24・Z K=13..18 全称） | proposition | proved | rectangles, geometry, variants |
 | [K0786](../items/K0786-width36-48-circle-strip-witnesses.md) | 幅36..48の円点数の新規下界 P(43)≧26・P(44),P(45)≧28・P(46),P(47)≧30・P(48)≧32 — witness円2210（初の26点超）・P(36)..P(42)≧24・族スキャン制御は既知P(w)と完全一致（w=6..35） | proposition | computed | rectangles, geometry, variants |
-| [K0787](../items/K0787-greedy-lower-bounds-2531-3251.md) | 貪欲＋破壊再構成と温暖開始の反復でQ_2531は1261点以上、Q_3251は1611点以上の安全集合を持つ（独立整数幾何監査済み） | proposition | computed | maximum-safe, geometry, search-methods |
+| [K0787](../items/K0787-greedy-lower-bounds-2531-3251.md) | 貪欲＋破壊再構成と温暖開始の反復でQ_2531は1262点以上、Q_3251は1611点以上の安全集合を持つ（独立整数幾何監査済み） | proposition | computed | maximum-safe, geometry, search-methods |
 | [K0788](../items/K0788-width36-48-exact-circle-point-counts.md) | 幅36..48の円点数の完全決定 P(36)..P(42)=24・P(43)=26・P(44)=P(45)=28・P(46)=P(47)=30・P(48)=32 — level分類のstreaming bitset DFS完了・g0証明書のconvention B厳密化（既存定理は不変） | proposition | computed | rectangles, geometry, variants |
 | [K0789](../items/K0789-width19-21-pw16-certificate.md) | 幅19..21の円点数の完全決定 P(19)=P(20)=P(21)=16 — 基底18法生残16集合が素数冪（11²・7³）のみで全滅 — K0778の条件付き上界を無条件等号に強化・P(w)は全幅6..48で決定済みに | proposition | proved | rectangles, geometry, variants |
 | [K0790](../items/K0790-width49-55-pw32-plateau.md) | 幅49..55の円点数の完全決定 P(49)=…=P(55)=32 — 32点プラトーがw=55まで平らに継続 — P(w)は全幅6..55で決定済み・level 17の復活点は(55,83]に特定 | proposition | proved | rectangles, geometry, variants |
@@ -794,3 +794,4 @@
 | [K0808](../items/K0808-six-row-deficient-witnesses-q568.md) | 6×m q=5/6/8 の欠損極大witness — M_{6,5}≥20・M_{6,6}≥16・M_{6,8}≥12（下界の初記録） | computation | computed | rectangles, maximal-safe, verification, geometry |
 | [K0809](../items/K0809-handicap-deficient-witnesses-6x5-6x6.md) | 行capハンディキャップ貪欲による欠損witness — M_{6,5}≥22・M_{6,6}≥17（下界更新） | computation | computed | rectangles, maximal-safe, verification, geometry |
 | [K0810](../items/K0810-sat-row-deficient-witnesses.md) | SAT探索による行欠損極大witness — M_{6,5}≥23・M_{6,6}≥20・M_{6,8}≥18・M_{5,6}≥18（K0809候補予想4件の反証） | proposition | proved | rectangles, variants |
+| [K0811](../items/K0811-new-exceptional-primes-3719-3727.md) | p=3719とp=3727は等号A(p)=(p+3)/2を達成せず、単一CNFのDRAT証明書で監査済み（既知4素数の外側で新発見） | proposition | computed | maximum-safe, geometry, search-methods |
