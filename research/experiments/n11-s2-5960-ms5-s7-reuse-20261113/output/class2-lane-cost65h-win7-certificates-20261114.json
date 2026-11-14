@@ -1,0 +1,100 @@
+{
+ "session": "class2-lane cost-65h WIN7 certificates (long-term lane parallel execution, 2026-11-14)",
+ "child_hex": "00000000000000803202000000001000",
+ "certificates": [
+  {
+   "bit": 7,
+   "root_hex": "00000000000000803202000000001080",
+   "verdict": "WIN7",
+   "rows": 28375,
+   "extraction_nodes": 4165959,
+   "extraction": "blind extractBatch (empty kill table, FBS=1<<20): fbt_drops=0, all 51 per-move extractions ok and uncapped",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 51,
+    "independent_enumeration_legal": 51,
+    "match": true
+   },
+   "sub_roots_verified": 51,
+   "sub_roots_pass": 51,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "db2f1980229cd95c3d46d9722f65b84a",
+   "sha256": "f3b21f78a95379a93e354ab92b6a84899b110024d577a2f56924e22063245be7",
+   "file": "class2-lane-cost65h-certificates/bit7-root-00000000000000803202000000001080.cert",
+   "root_not_among_existing": true,
+   "root_absence_check": "GitHub code search over yuubinnkyoku/kyouen-researches for the root hex: 0 hits",
+   "v16_search_nodes": 899476,
+   "v15_crosscheck_verdict": "loss=true at 2,354,374 nodes (v15 anchor)",
+   "push_note": "full paged-read push; remote md5 verified byte-exact after landing"
+  },
+  {
+   "bit": 109,
+   "root_hex": "00002000000000803202000000001000",
+   "verdict": "WIN7",
+   "rows": 26774,
+   "extraction_nodes": 5149589,
+   "extraction": "blind extractBatch (empty kill table, FBS=1<<20): fbt_drops=0, all 50 per-move extractions ok and uncapped",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 50,
+    "independent_enumeration_legal": 50,
+    "match": true
+   },
+   "sub_roots_verified": 50,
+   "sub_roots_pass": 50,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "74bbb79c486ae249606ce3b04096c422",
+   "sha256": "67b8f7c4f58ffe8ae58bf6fa4e456d1397f67933a1e2650487b49b2144a6cbf2",
+   "file": "class2-lane-cost65h-certificates/bit109-root-00002000000000803202000000001000.cert",
+   "root_not_among_existing": true,
+   "root_absence_check": "GitHub code search over yuubinnkyoku/kyouen-researches for the root hex: 0 hits",
+   "v16_search_nodes": 992255,
+   "v15_crosscheck_verdict": "loss=true at 3,048,755 nodes (v15 anchor)",
+   "push_note": "full paged-read push; remote md5 verified byte-exact after landing"
+  },
+  {
+   "bit": 24,
+   "root_hex": "00000000000000803202000001001000",
+   "verdict": "WIN7",
+   "rows": 38440,
+   "extraction_nodes": 6109915,
+   "extraction": "blind extractBatch (empty kill table, FBS=1<<20): fbt_drops=0, all 50 per-move extractions ok and uncapped",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 50,
+    "independent_enumeration_legal": 50,
+    "match": true
+   },
+   "sub_roots_verified": 50,
+   "sub_roots_pass": 50,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "e8ade711a7867b01255db657697af731",
+   "sha256": "2a311775de0ebffcacb9c723c58c08d8c9a9cf722c02541848a613bf08c37eff",
+   "file": "class2-lane-cost65h-certificates/bit24-root-00000000000000803202000001001000.cert",
+   "root_not_among_existing": true,
+   "root_absence_check": "GitHub code search over yuubinnkyoku/kyouen-researches for the root hex: 0 hits",
+   "v16_search_nodes": 1094954,
+   "v15_crosscheck_verdict": "loss=true at 4,038,657 nodes (v15 anchor)",
+   "push_note": "full paged-read push; remote md5 verified byte-exact after landing (landed despite a run_typescript MemoryLimitError after 22 paged reads, per the known push-lands-after-MemoryLimit behavior)"
+  }
+ ],
+ "unknown_status": "11x11 empty board, two-stone root {49,60}, S2 {59,60}, class 2, class 4: UNKNOWN"
+}

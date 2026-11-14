@@ -1,0 +1,40 @@
+{
+ "title": "n11 class2-lane cost-65h sweep in flight (claimed by a long-term lane execution running in parallel with session 12)",
+ "date": "2026-11-14",
+ "s5": "00000000000000803202000000000000",
+ "s6_child": "00000000000000803202000000001000",
+ "s6_s7_edge_cost": 65,
+ "demand_classes": "c1=0,c2=2,c4=0 (after-cost65g frontier, re-derived and VERIFIED from class-frontier-top-candidates-s6-after-cost65g-20261114.csv: this child was the cheapest remaining unswept child of the parent's 18 remaining children at claim time (cost-65 band pair with sibling 00000000000000803202000000080000, c1=0,c2=2,c4=2), demand non-empty; membership in the remaining-children set re-verified before this claim per the cost-61e correction lesson)",
+ "legal_candidates_total": 65,
+ "legal_candidates_source": "legal_candidates.py independent enumeration (Bareiss 4x4): 65 legal candidates, bit-exact with the published edge cost 65",
+ "candidate_bits": [
+  0, 3, 4, 6, 7, 8, 9, 14, 15, 19, 20, 22, 23, 24, 28, 29,
+  30, 31, 32, 33, 34, 40, 41, 42, 43, 44, 51, 52, 53, 54, 66, 67,
+  73, 74, 75, 76, 77, 78, 84, 85, 86, 87, 88, 92, 94, 95, 96, 97,
+  98, 99, 101, 102, 103, 105, 106, 107, 109, 112, 113, 114, 116, 117, 118, 119, 120
+ ],
+ "motivation": "tenth sweep of the second class-2 target S5 00000000000000803202000000000000: after cost-56a/58b/60b/61d/61e/61f/63e/64b/65g (frontier 927/935/946/951/954/959/970/974/979) the cost-65 band pair was the cheapest REMAINING unswept band (18 orbits / 1,277 after cost-65g); this child is the first of the pair; named cost-65h (cost-65/-65b(sterile)/-65c/-65d/-65e/-65f/-65g occupied)",
+ "engine": "class4_child1_runner_v16.ts (published repo-verbatim v16 runner), depth 10, andclose=1, cap 1e9, pilot d6 control (loss=false at exactly 3,402 nodes) per batch; v16 agreement-gated in cost-56a and used for cost-58b/60b/61d/61e/61f/63e/64b/65g; v15 cross-engine anchors on the heaviest candidates and any WIN7 candidate",
+ "batch_plan": "65 candidates in 9 batches (8x8 + 1), raw JSONL pushed per batch as completed",
+ "unknown_status": "11x11 empty board: UNKNOWN. All WIN7 certificates prove only individual 7-stone roots.",
+ "session": "long-term lane (2026-11-14), running in parallel with session 12 (cost-65g completed) and the session-11-lane cost-65f (first class-2 target)",
+ "status": "completed",
+ "result": {
+  "win7_d10": 13,
+  "win7_bits": [
+   4, 7, 14, 24, 33, 40, 43, 67, 99, 102, 109, 117, 118
+  ],
+  "refuted_d10": 52,
+  "capped": 0,
+  "total_nodes": 57639642,
+  "certificates": [
+   7, 109, 24
+  ],
+  "unverified_win7_bits": [
+   4, 14, 33, 40, 43, 67, 99, 102, 117, 118
+  ],
+  "records": "class2-lane-cost65h-sweep-20261114.json + class2-lane-cost65h-win7-certificates-20261114.json",
+  "log": "research/log/2026-11-14-class2-lane-cost65h-win7.md"
+ },
+ "sweep": "completed in 9 batches (8x8 + 1); all raw batches + v16 determinism rerun (node-exact) + v15 crosscheck (verdicts identical) published; all 13 WIN7 roots code-searched with 0 hits (no cross-child duplicates); 3 certificates extracted blind (fbt_drops=0), fully verified (root-check mobility match, all sub-roots PASS, union 0/0) and pushed with remote md5 verification"
+}
