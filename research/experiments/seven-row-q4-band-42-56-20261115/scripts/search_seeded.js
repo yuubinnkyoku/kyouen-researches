@@ -1,6 +1,6 @@
 'use strict';
 const fs = require('fs');
-function gcdN(a,b){a=Math.abs(a);while(b){const t=a%b;a=b;b=t;}return a||1;}
+function gcdN(a,b){a=Math.abs(a);b=Math.abs(b);while(b){const t=a%b;a=b;b=t;}return a||1;}
 function isqrt(n){if(n<0)return -1;let r=Math.floor(Math.sqrt(n));while(r*r>n)r--;while((r+1)*(r+1)<=n)r++;return r;}
 function buildCurves(w,m,q){
  const N=w*m,px=new Int32Array(N),py=new Int32Array(N);
