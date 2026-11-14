@@ -50,7 +50,7 @@ artifacts:
   role: data
   note: "width-22 witness = the m=21 witness stones (free empty-column extension); s7x23..31q4_none.witness.json = 20-stone config CA (maxX=22, coverage 31, rows [3,3,3,3,3,3,2]); s7x32..35q4_none.witness.json = 20-stone config CB (maxX=26, coverage 35); all third-system verified (tsVerify), jsVerify/pyVerify re-verification pending"
 - path: research/experiments/seven-row-q4-extension-band-20261114/scripts/extend_band.ts
-  role: code
+  role: verifier
   note: "pure TS/BigInt constructive extension + exact verification script (third independent system, no repo code, no SAT); regenerates and re-verifies the whole band 22..35 from the three configs"
 - path: research/experiments/seven-row-q4-q6-witness-frontier-20261115/output/records.jsonl
   role: data

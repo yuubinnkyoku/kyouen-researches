@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Extract stones from a saved kissat raw log (SAT), dual-verify
-(census-free JS sat.js verifyConfig + verify_witness.py Python Fraction),
+(census-free JS sat.js verifyConfig + the verify_witness.py Python Fraction checker),
 save witness JSON, and append a record line to output/results.jsonl.
 
 Usage: extract_verify.py w m q tag rawlog.kissat.txt --mode=deficient|rowfixed --rowY=Y [--conflicts=N]
@@ -41,7 +41,7 @@ js = subprocess.run(['node', '-e',
     f'console.log(JSON.stringify(S.verifyConfig({a.w},{a.m},{a.q},st)));'],
     input=json.dumps(stones), capture_output=True, text=True)
 jsv = json.loads(js.stdout)
-py = subprocess.run(['python3', str(DIR / 'scripts/verify_witness.py'), str(a.w), str(a.m), str(a.q)],
+py = subprocess.run(['python3', str(DIR / 'verify_witness.py'), str(a.w), str(a.m), str(a.q)],
                     input=json.dumps(stones), capture_output=True, text=True)
 pyv = json.loads(py.stdout)
 ok = (jsv.get('ok') is True) and (pyv.get('ok') is True)

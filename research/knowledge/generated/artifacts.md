@@ -1825,6 +1825,12 @@
 ## [research/experiments/fastlane-four-edge-geometry-20261019/verify.py](../../../research/experiments/fastlane-four-edge-geometry-20261019/verify.py)
 
 - [K0453](../items/K0453-geometric-four-q4-grundy-five.md) (verifier): 全330組の整数行列式と全2048集合のmex検査
+## [research/experiments/fiber-trace-boundary-sharpness-20261115/report.md](../../../research/experiments/fiber-trace-boundary-sharpness-20261115/report.md)
+
+- [K0824](../items/K0824-higher-dimensional-fiber-trace-reduction.md) (proof): 全次元でq=2|B|における占有数縮約の失敗を示す標準単体底面の明示反例
+## [research/experiments/fiber-trace-boundary-sharpness-20261115/verify_boundary.py](../../../research/experiments/fiber-trace-boundary-sharpness-20261115/verify_boundary.py)
+
+- [K0824](../items/K0824-higher-dimensional-fiber-trace-reduction.md) (verifier): 有理数階数と整数球面方程式で境界反例を検査する標準ライブラリのみの検証器
 ## [research/experiments/five-edge-terminal-spectrum-20261101/proof.md](../../../research/experiments/five-edge-terminal-spectrum-20261101/proof.md)
 
 - [K0597](../items/K0597-five-forbidden-sets-terminal-spectrum.md) (proof): 五辺の五つの極小横断集合サイズの必要十分条件、16種類実現、全極大配置多項式、整数格子14点と任意qの構成
@@ -3441,7 +3447,16 @@
 - [K0824](../items/K0824-higher-dimensional-fiber-trace-reduction.md) (proof): ファイバー交点数による全称縮約定理・2次元/3次元系・適用限界
 ## [research/experiments/higher-dimensional-fiber-trace-reduction-20261115/verify_small_instance.py](../../../research/experiments/higher-dimensional-fiber-trace-reduction-20261115/verify_small_instance.py)
 
-- [K0824](../items/K0824-higher-dimensional-fiber-trace-reduction.md) (verifier): 共線三点を持つ非一般位置底面の全4096局面を直接幾何・Grundy再帰と照合
+- [K0824](../items/K0824-higher-dimensional-fiber-trace-reduction.md) (verifier): 共線な底面点を持つ2例で全セル配置を直接幾何・Grundy再帰と照合
+## [research/experiments/hyperplane-trace-enumeration-20261115/audit.json](../../../research/experiments/hyperplane-trace-enumeration-20261115/audit.json)
+
+- [K0824](../items/K0824-higher-dimensional-fiber-trace-reduction.md) (data): 3次元までの776個の底面集合に対する有限監査集計
+## [research/experiments/hyperplane-trace-enumeration-20261115/report.md](../../../research/experiments/hyperplane-trace-enumeration-20261115/report.md)
+
+- [K0824](../items/K0824-higher-dimensional-fiber-trace-reduction.md) (proof): 任意有限底面の超平面跡が高々d−1点のアフィン基底から列挙でき、個数がO(w^(d−1))となる全称補題
+## [research/experiments/hyperplane-trace-enumeration-20261115/verify_trace_count.py](../../../research/experiments/hyperplane-trace-enumeration-20261115/verify_trace_count.py)
+
+- [K0824](../items/K0824-higher-dimensional-fiber-trace-reduction.md) (verifier): 有理数階数と有界整数法線列挙を用いた小規模全底面監査
 ## [research/experiments/incidence-weighted-grundy-bound-20261107/output/audit.json](../../../research/experiments/incidence-weighted-grundy-bound-20261107/output/audit.json)
 
 - [K0688](../items/K0688-incidence-weighted-grundy-upper-bound.md) (data): 非自明51244安全状態での上界・xor監査と、局所重みによる改善件数
@@ -8763,12 +8778,28 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/candidate-completeness-audit.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/candidate-completeness-audit.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 全15072件と公開表に欠ける6309件の集計
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost69e-recompute-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost69e-recompute-20261115.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 6証明書反映後frontier 1,019/6,828/538,143と別個のreceipt-unclosable S5を記録
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): cost69e 10 receipt・schema v2の独立再計算（merged baseline 1012から1023）
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost71b-recompute-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost71b-recompute-20261115.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): cost-70c後からcost-71bの3 receiptを追加したmanifest-level frontier再計算
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost73d-recompute-20261114.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost73d-recompute-20261114.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): cost-73d証明書を反映した公開frontier再計算
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost75b-recompute-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost75b-recompute-20261115.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): cost75b統合後のglobal frontier 1,049/6,798/535,812/5,068/399,535。対象S5は2/147
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-merged-recompute-20261114.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-merged-recompute-20261114.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 並行レーンの公開監査記録を統合した残作業のスナップショット
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-top-candidates-s6-after-cost69e-20261115.csv](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-top-candidates-s6-after-cost69e-20261115.csv)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): cost69eの7 marginal S6を除いた正しい候補表。best coverable class2は6軌道・費用443
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-top-candidates-s6-after-cost75b-20261115.csv](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-top-candidates-s6-after-cost75b-20261115.csv)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): cost72 child 000...0200とcost75 child 000...4000が対象S5の残り2子であることを確認
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class1-closure-audit.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class1-closure-audit.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 五石位置の40六石軌道とblocker 5・115への手の照合
@@ -8835,12 +8866,36 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-counterexample-audit.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-counterexample-audit.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 次の追加証明前の集計。六石LOSS・3つの五石SECOND_WIN・残六石7297件
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-bit7-independent-audit-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-bit7-independent-audit-20261115.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): cost65e bit7証明書のBigInt独立検査、D4親被覆、重複・衝突監査とfrontier差分
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-win7-certificates-20261114.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-win7-certificates-20261114.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): cost65eのbit107・bit7のWIN7証明書receiptを統合。bit7は独立検証済みで、未証明候補一覧から除外
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70c-raw-sweep-audit-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70c-raw-sweep-audit-20261115.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): cost70cの13候補・節点100,935,666・mobility・既存証明書照合・mid-flight閉鎖
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71b-bigint-independent-audit-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71b-bigint-independent-audit-20261115.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): cost-71b bits 109/21/105の独立BigInt検証結果
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72-certificates/bit111-root-00008000000000803202000000000200.cert](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72-certificates/bit111-root-00008000000000803202000000000200.cert)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (certificate): bit111 WIN7証明書。46,160戦略行・54/54部分木・集合差0/0
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72-win7-certificates-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72-win7-certificates-20261115.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (manifest): cost72 bit111のpartial WIN7 receipt。bit52は未証明として明示
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73d-certificates/README.md](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73d-certificates/README.md)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (certificate): cost-73dのbit48 WIN7 root。2分割66,680行の戦略証明書と検査範囲
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73d-sweep-20261114.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73d-sweep-20261114.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 73候補のsweep記録。bit48 WIN7-D10、残72 REFUTED-D10
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost75b-sweep-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost75b-sweep-20261115.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): cost75b全75候補完了、7 WIN7証明書、v15 cross-engine 7/7、決定性再実行3/3
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost75b-win7-certificates-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost75b-win7-certificates-20261115.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (manifest): cost75bの7 WIN7証明書。352,672行・406部分木、全件検証済み
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-last-loss-certificates/00000000000000809202000400000001-loss7.cert.gz](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-last-loss-certificates/00000000000000809202000400000001-loss7.cert.gz)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (certificate): LOSS7証明書62件の一例。全ファイルとハッシュはmanifestに列挙
@@ -8907,6 +8962,9 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/classified-candidates.csv.gz](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/classified-candidates.csv.gz)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 全候補の照合結果。possible_first_winは証明済み勝利ではない
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/cost69e-bit21-bigint-independent-verification-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/cost69e-bit21-bigint-independent-verification-20261115.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 22,261行・45/45部分木・欠落/余分0・終局石数13〜17
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/ms5_s7_reuse_candidates_part1.csv](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/ms5_s7_reuse_candidates_part1.csv)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 候補S7表 s7_hex,s6_hex,move,cat（1=既知LOSS子、2=プール候補）。part1..3で計8,763行
@@ -9000,6 +9058,9 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_class2_third_counterexample.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_class2_third_counterexample.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): 64証明書による六石LOSSと3つの五石SECOND_WIN、残作業を2幾何判定で照合
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost70c_raw_sweep.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost70c_raw_sweep.py)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): cost70cの70候補をBareiss整数行列式で再列挙し、13 WIN7-D10 rootの合法手数と既存記録を照合
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_new_certificate_reuse.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_new_certificate_reuse.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): 新規証明書のワークリスト全体への再利用と残件数を集計
@@ -9021,6 +9082,12 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/ms5_s7_reuse_analysis.ts](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/ms5_s7_reuse_analysis.ts)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (source): コメントのみで実行本体は未公開。再導出・再分類の再現器としては使用できない
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost69e_20261115.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost69e_20261115.py)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (source): S5親keyを文字列で一貫して扱うよう修正。receipt-unclosable S5とbest coverable S5を分離
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/verify_bit7_win7_cert.ts](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/verify_bit7_win7_cert.ts)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): --certと--rootを指定して任意のWIN7証明書を独立再検査できる汎用整数Bareiss検証器
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/verify_class2_batch1.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/verify_class2_batch1.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): 次の類2候補から得たWIN7証明書を独立検査
@@ -9069,6 +9136,9 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/verify_priority_certificates.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/verify_priority_certificates.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): 保存した15件のWIN7・LOSS7戦略証明書を独立検査器で再検証
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/verify_win7_certificate_bigint_independent.mjs](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/verify_win7_certificate_bigint_independent.mjs)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): cost69e bit21 WIN7証明書をBigInt余因子展開で独立検査。既存のNumber Bareiss検証器とは別実装
 ## [research/experiments/n11-s2-5960-worklist-20261110/scripts/s2_worklist.ts](../../../research/experiments/n11-s2-5960-worklist-20261110/scripts/s2_worklist.ts)
 
 - [K0725](../items/K0725-s2-5960-closure-worklist.md) (source): 純TS再現（BigInt盤、Bareiss幾何、D4 canon）。 単独実行で分布・13,244・classA 32件・worklist 1,447・鏡映同一性まで全数値を再現
@@ -13015,6 +13085,82 @@
 ## [research/experiments/seven-row-inband-families-20261114/output/w7_upper_bounds.json](../../../research/experiments/seven-row-inband-families-20261114/output/w7_upper_bounds.json)
 
 - [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md) (data): K0318 curve-packing substitution upper bounds U_{7,9}=613, U_{7,10}=587 (7 controls passed)
+## [research/experiments/seven-row-q4-extension-band-20261114/output/verification.json](../../../research/experiments/seven-row-q4-extension-band-20261114/output/verification.json)
+
+- [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (data): per-width exact verification records m=22..35 (safe + maximal + row-deficient PASS, uncovered 0, maxCirc/maxLine 3), configs C22/CA/CB with contiguous coverage 22/31/35, curve counts, negative control (4-collinear correctly unsafe), provenance
+## [research/experiments/seven-row-q4-extension-band-20261114/output/witnesses/s7x22q4_none.witness.json](../../../research/experiments/seven-row-q4-extension-band-20261114/output/witnesses/s7x22q4_none.witness.json)
+
+- [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (data): width-22 witness = the m=21 witness stones (free empty-column extension); s7x23..31q4_none.witness.json = 20-stone config CA (maxX=22, coverage 31, rows [3,3,3,3,3,3,2]); s7x32..35q4_none.witness.json = 20-stone config CB (maxX=26, coverage 35); all third-system verified (tsVerify), jsVerify/pyVerify re-verification pending
+## [research/experiments/seven-row-q4-extension-band-20261114/report.md](../../../research/experiments/seven-row-q4-extension-band-20261114/report.md)
+
+- [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (proof): blocking-coverage extension lemma, constructive extension of the q=4 band to m=22..35 without SAT (free empty-column extension of the m=21 witness to 22; greedy adds + deterministic hill-climb to 23..35), exact per-width verification, honest scope (heuristic search; widths >= 36 unswept; M in [36,1929])
+## [research/experiments/seven-row-q4-extension-band-20261114/scripts/extend_band.ts](../../../research/experiments/seven-row-q4-extension-band-20261114/scripts/extend_band.ts)
+
+- [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (verifier): pure TS/BigInt constructive extension + exact verification script (third independent system, no repo code, no SAT); regenerates and re-verifies the whole band 22..35 from the three configs
+## [research/experiments/seven-row-q4-q6-witness-search-20261114/output/q4-def-search/records.jsonl](../../../research/experiments/seven-row-q4-q6-witness-search-20261114/output/q4-def-search/records.jsonl)
+
+- [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (data): 11 records m=4..14 all SAT dual-verified 0 conflicts: 8..15 stones, deficiency 13..6, [3,3,3,3,1,1,1]-type at m=12..14; raw kissat output for m=14 included
+## [research/experiments/seven-row-q4-q6-witness-search-20261114/output/q4-frontier-extension/records.jsonl](../../../research/experiments/seven-row-q4-q6-witness-search-20261114/output/q4-frontier-extension/records.jsonl)
+
+- [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (data): 7 records m=15..21 all SAT dual-verified 0 conflicts: 16..18 stones, deficiency 6..3, [3,3,3,3,3,2,1]-type at m=20,21; M_{7,4} >= 22 (band extended constructively to m=35 in seven-row-q4-extension-band-20261114)
+## [research/experiments/seven-row-q4-q6-witness-search-20261114/output/q5-def-search/records.jsonl](../../../research/experiments/seven-row-q4-q6-witness-search-20261114/output/q5-def-search/records.jsonl)
+
+- [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (data): 18 records m=5..22 all SAT dual-verified: deep deficiency 14..26 stones then single-deficiency 27 stones (m=20 has a 25-stone witness with a 1-stone row 4/1/4/4/4/4/4); raw kissat output for m=22 included
+## [research/experiments/seven-row-q4-q6-witness-search-20261114/output/q5-frontier-extension/records.jsonl](../../../research/experiments/seven-row-q4-q6-witness-search-20261114/output/q5-frontier-extension/records.jsonl)
+
+- [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (data): 9 records m=23..31 all SAT dual-verified single-deficiency 27 stones (except 25-stone 1-stone-row witnesses at m=25 and previously m=20); conflicts 1,200 / 2,029 / 7,730 / 3,257 / 23,195 / 48,433 / 116,669 / 220,814 / 31,000 (non-monotone dip at m=31); M_{7,5} >= 32
+## [research/experiments/seven-row-q4-q6-witness-search-20261114/output/q6-def-search/records.jsonl](../../../research/experiments/seven-row-q4-q6-witness-search-20261114/output/q6-def-search/records.jsonl)
+
+- [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (data): 21 records m=6..26 all SAT dual-verified: m=6..15 deep deficiency 20..33 stones, m=16..25 single-deficiency 34 stones, m=26 33 stones rows 5/5/5/5/5/3/5 (441,809 conflicts); raw kissat output for m=26 included
+## [research/experiments/seven-row-q4-q6-witness-search-20261114/report.md](../../../research/experiments/seven-row-q4-q6-witness-search-20261114/report.md)
+
+- [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (proof): claims, per-family results tables, method (sat2.js all-triples census at q<=w, m>=q minimum width), dual verification protocol, honest unswept frontiers, scope and limits
+## [research/experiments/seven-row-q7-witness-search-20261114/output/def-search/records.jsonl](../../../research/experiments/seven-row-q7-witness-search-20261114/output/def-search/records.jsonl)
+
+- [K0826](../items/K0826-seven-row-q7-deficient-witness-lower-bound.md) (data): 19 records: SAT m=7..25 witnesses dual-verified (m=7..14 deep deficiency 30..41 stones, m=15..24 single-deficiency 41 stones) + m=25 OR-instance INDET (2,478,476 conflicts at 240s cap — honest negative)
+## [research/experiments/seven-row-q7-witness-search-20261114/output/results.jsonl](../../../research/experiments/seven-row-q7-witness-search-20261114/output/results.jsonl)
+
+- [K0826](../items/K0826-seven-row-q7-deficient-witness-lower-bound.md) (data): parallel-lane independent-run records: SAT m=8..26 with raw kissat logs m=8..21; conflicts bit-exact with the def-search/row-split records on shared instances (m=24 def OR 2,105,329; m=25 rowY=3 756,785); m=26 record: rowY=3 SAT, 1,951,966 conflicts, 41 stones rows 6,6,6,5,6,6,6, dual-verified
+## [research/experiments/seven-row-q7-witness-search-20261114/output/row-split/records.jsonl](../../../research/experiments/seven-row-q7-witness-search-20261114/output/row-split/records.jsonl)
+
+- [K0826](../items/K0826-seven-row-q7-deficient-witness-lower-bound.md) (data): m=25 rowY=0..3 fixed-row split: rowY=3 (central row) SAT at 756,785 conflicts (41-stone witness rows 6,6,6,5,6,6,6 dual-verified); rowY=0/1/2 INDET at 200s caps (961,944 / 970,708 / 1,130,645 conflicts — not absence claims)
+## [research/experiments/seven-row-q7-witness-search-20261114/output/row-split/s7x25q7_rowY3.witness.json](../../../research/experiments/seven-row-q7-witness-search-20261114/output/row-split/s7x25q7_rowY3.witness.json)
+
+- [K0826](../items/K0826-seven-row-q7-deficient-witness-lower-bound.md) (data): largest-width (7,7) witness (41 stones at 7x25, rows 6,6,6,5,6,6,6, found via the rowY=3 split); m=7..24 witnesses at output/def-search/s7xMq7_none.witness.json, all dual-verified (sat.js verifyConfig + Python Fraction)
+## [research/experiments/seven-row-q7-witness-search-20261114/output/ts-verify-cross-family.json](../../../research/experiments/seven-row-q7-witness-search-20261114/output/ts-verify-cross-family.json)
+
+- [K0825](../items/K0825-seven-row-q8-deficient-witness-lower-bound.md) (data): third-system (pure TS/BigInt) cross-family record; (7,8) entry: m=24 rowY3 witness PASS (48 stones, rows 7,7,7,6,7,7,7, 14804 circles, all curves and lines <= 7, 0 uncovered cells) — triple-verified
+- [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (data): third-system (pure TS/BigInt) cross-family record; q4/q5/q6 entries: (7,6) m=26 (33 stones rows 5/5/5/5/5/3/5, 5073 circles), (7,5) m=31 (27 stones rows 3/4/4/4/4/4/4, 2742 circles), (7,4) m=21 (18 stones rows 3/3/3/3/3/2/1, 799 circles) all PASS safe+maximal+row-deficient — triple-verified
+## [research/experiments/seven-row-q7-witness-search-20261114/output/ts-verify.json](../../../research/experiments/seven-row-q7-witness-search-20261114/output/ts-verify.json)
+
+- [K0826](../items/K0826-seven-row-q7-deficient-witness-lower-bound.md) (data): third-system records: m=25/m=26 rowY=3 witnesses both safe (9,477/9,407 circles, all curves and lines <= 6 stones), maximal (0 uncovered cells), row-deficient (rows 6,6,6,5,6,6,6); 7-collinear negative control correctly unsafe; m=26 hence triple-verified
+## [research/experiments/seven-row-q7-witness-search-20261114/output/w7q7_7x26q7_rowY3.witness.json](../../../research/experiments/seven-row-q7-witness-search-20261114/output/w7q7_7x26q7_rowY3.witness.json)
+
+- [K0826](../items/K0826-seven-row-q7-deficient-witness-lower-bound.md) (data): m=26 witness (41 stones, rows 6,6,6,5,6,6,6) extends the band to 7x26: M_{7,7} >= 27, frontier 7x27; raw log at output/w7q7_7x26q7_rowY3.kissat.txt; m=27 rowY=3 262s-cap INDET log at output/w7q7_7x27q7_rowY3.kissat.txt (2,242,940 conflicts, honest negative)
+## [research/experiments/seven-row-q7-witness-search-20261114/report.md](../../../research/experiments/seven-row-q7-witness-search-20261114/report.md)
+
+- [K0826](../items/K0826-seven-row-q7-deficient-witness-lower-bound.md) (proof): claims, method (sat2.js all-triples census at q=w, rowY split), verification protocol (dual witness verification + third-system pure-TS/BigInt confirmation, m=24 bit-exact determinism re-run), results table, honest negatives, scope and limits
+## [research/experiments/seven-row-q7-witness-search-20261114/scripts/verify_independent.ts](../../../research/experiments/seven-row-q7-witness-search-20261114/scripts/verify_independent.ts)
+
+- [K0826](../items/K0826-seven-row-q7-deficient-witness-lower-bound.md) (verifier): third verification system, independent of all repo code: pure TypeScript + BigInt exact arithmetic; circle identity by exact rational keys from stone triples (bijective reparameterization of the center), membership re-tested by the 4x4 cocircularity determinant; lines by canonical (a,b,c)
+## [research/experiments/seven-row-q8-witness-search-20261114/output/controls/genfast_q8_byteidentity.json](../../../research/experiments/seven-row-q8-witness-search-20261114/output/controls/genfast_q8_byteidentity.json)
+
+- [K0825](../items/K0825-seven-row-q8-deficient-witness-lower-bound.md) (data): genfast.js vs sat2.js CNF md5-identical on 4 samples at q=8 (m=9,12, lex on/off)
+## [research/experiments/seven-row-q8-witness-search-20261114/output/controls/records.jsonl](../../../research/experiments/seven-row-q8-witness-search-20261114/output/controls/records.jsonl)
+
+- [K0825](../items/K0825-seven-row-q8-deficient-witness-lower-bound.md) (data): 2x8/2x9 q=4 def+lex controls (fastsat 121/535 bit-exact with K0820) + def-only variants (fastsat 81/2002, kissat 65/1268 agree) + (7,10) m=46 instance-identity calibration (kissat 861 conflicts bit-exact)
+## [research/experiments/seven-row-q8-witness-search-20261114/output/def-search/records.jsonl](../../../research/experiments/seven-row-q8-witness-search-20261114/output/def-search/records.jsonl)
+
+- [K0825](../items/K0825-seven-row-q8-deficient-witness-lower-bound.md) (data): 17 records: SAT m=8..23 (witnesses dual-verified) + m=24 INDET (def OR 3,829,302 conflicts and def+lex 3,710,480 conflicts at 240s caps — honest negatives)
+## [research/experiments/seven-row-q8-witness-search-20261114/output/row-split/records.jsonl](../../../research/experiments/seven-row-q8-witness-search-20261114/output/row-split/records.jsonl)
+
+- [K0825](../items/K0825-seven-row-q8-deficient-witness-lower-bound.md) (data): rowY=3 fixed-row split: m=24 SAT (641,005 conflicts, 48-stone witness rows 7,7,7,6,7,7,7 dual-verified) + m=25 INDET (3,534,747 conflicts at 250s, 3 other mirror row classes unswept)
+## [research/experiments/seven-row-q8-witness-search-20261114/output/row-split/s7x24q8_rowY3.witness.json](../../../research/experiments/seven-row-q8-witness-search-20261114/output/row-split/s7x24q8_rowY3.witness.json)
+
+- [K0825](../items/K0825-seven-row-q8-deficient-witness-lower-bound.md) (data): largest-width (7,8) witness (48 stones at 7x24, rows 7,7,7,6,7,7,7, found via the rowY=3 split); m=8..23 witnesses at output/def-search/s7xMq8_none.witness.json, all dual-verified (sat.js verifyConfig + Python Fraction)
+## [research/experiments/seven-row-q8-witness-search-20261114/report.md](../../../research/experiments/seven-row-q8-witness-search-20261114/report.md)
+
+- [K0825](../items/K0825-seven-row-q8-deficient-witness-lower-bound.md) (proof): claims, method (def-mode completeness, genfast q=8 byte-identity, rowY split at the OR-instance wall), verification protocol (controls bit-exact, dual witness verification, instance-identity calibration, cross-reset determinism), results, honest negatives, scope and limits
 ## [research/experiments/seven-row-q9-q10-bands-20261114/output/controls/records.jsonl](../../../research/experiments/seven-row-q9-q10-bands-20261114/output/controls/records.jsonl)
 
 - [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md) (data): 2x8/2x9 q=4 controls (fastsat 121/535 conflicts bit-exact; kissat SAT 37 / UNSAT 316)
@@ -13036,6 +13182,31 @@
 ## [research/experiments/seven-row-q9-q10-bands-20261114/scripts/genfast.js](../../../research/experiments/seven-row-q9-q10-bands-20261114/scripts/genfast.js)
 
 - [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md) (verifier): memory-bounded CNF generator (half-integer-center census, monkey-patches S.buildCensus and reuses sat2.js verbatim); byte-identical to sat2.js on 12 validation samples; required for 7xm at m>=52 where the all-triples census OOMs
+## [research/experiments/seven-row-ten-point-circle-classification-20261114/README.md](../../../research/experiments/seven-row-ten-point-circle-classification-20261114/README.md)
+
+- [K0830](../items/K0830-seven-row-ten-point-circle-classification.md) (proof): 定理A/B・系・補題 L1-L3 の証明骨子・検証表・スコープ
+- [K0831](../items/K0831-circle-row-window-denominator-lemma.md) (proof): 補題 L2 としての証明（7行版・一般 w 行版の記述を含む）
+## [research/experiments/seven-row-ten-point-circle-classification-20261114/output/exception_R2353705250_reps.txt](../../../research/experiments/seven-row-ten-point-circle-classification-20261114/output/exception_R2353705250_reps.txt)
+
+- [K0830](../items/K0830-seven-row-ten-point-circle-classification.md) (data): 例外円の 192 表現の直接全走査（三重検証）
+## [research/experiments/seven-row-ten-point-circle-classification-20261114/output/stripsearch_R1e15.json](../../../research/experiments/seven-row-ten-point-circle-classification-20261114/output/stripsearch_R1e15.json)
+
+- [K0830](../items/K0830-seven-row-ten-point-circle-classification.md) (data): R ≤ 10¹⁵ で2構成のみ
+## [research/experiments/seven-row-ten-point-circle-classification-20261114/output/stripsearch_u1078.json](../../../research/experiments/seven-row-ten-point-circle-classification-20261114/output/stripsearch_u1078.json)
+
+- [K0830](../items/K0830-seven-row-ten-point-circle-classification.md) (data): 定理A の直接根拠（m ≤ 1079: R=50 のみ）
+## [research/experiments/seven-row-ten-point-circle-classification-20261114/output/stripsearch_u15000.json](../../../research/experiments/seven-row-ten-point-circle-classification-20261114/output/stripsearch_u15000.json)
+
+- [K0830](../items/K0830-seven-row-ten-point-circle-classification.md) (data): m ≤ 15001 の分類根拠（例外 含む）
+## [research/experiments/seven-row-ten-point-circle-classification-20261114/scripts/crosscheck.js](../../../research/experiments/seven-row-ten-point-circle-classification-20261114/scripts/crosscheck.js)
+
+- [K0830](../items/K0830-seven-row-ten-point-circle-classification.md) (verifier): 独立実装（表現ペアバケット化・因子対論理不使用）
+## [research/experiments/seven-row-ten-point-circle-classification-20261114/scripts/stripsearch.js](../../../research/experiments/seven-row-ten-point-circle-classification-20261114/scripts/stripsearch.js)
+
+- [K0830](../items/K0830-seven-row-ten-point-circle-classification.md) (verifier): R 上界版全列挙（R ≤ 10¹⁵）
+## [research/experiments/seven-row-ten-point-circle-classification-20261114/scripts/stripsearch_u.js](../../../research/experiments/seven-row-ten-point-circle-classification-20261114/scripts/stripsearch_u.js)
+
+- [K0830](../items/K0830-seven-row-ten-point-circle-classification.md) (verifier): 弦上界全列挙（|Z| ≤ UMAX²/4・因子対全列挙・q=1 前提は L2/L3 で証明済み）
 ## [research/experiments/short-board-2q-20261031/proof.md](../../../research/experiments/short-board-2q-20261031/proof.md)
 
 - [K0582](../items/K0582-short-board-2q-two-carriers.md) (proof): 担い手の七型分類、整数格子実現、四変数再帰の全称正当性、極大配置計数とq=6の反例
@@ -13072,6 +13243,15 @@
 ## [research/experiments/short-board-unique-carrier-20261031/verify.py](../../../research/experiments/short-board-unique-carrier-20261031/verify.py)
 
 - [K0578](../items/K0578-short-board-unique-curve-strong-solution.md) (verifier): 4×4格子31616盤の禁止辺全列挙、160盤の全安全局面再帰、q=4とq=5の鋭い境界反例
+## [research/experiments/sidon-height-boundary-20261115/audit.json](../../../research/experiments/sidon-height-boundary-20261115/audit.json)
+
+- [K0828](../items/K0828-sidon-height-boundary-reduction.md) (data): 21基底・高さ例の31,929部分集合監査と非一意高さ反例
+## [research/experiments/sidon-height-boundary-20261115/report.md](../../../research/experiments/sidon-height-boundary-20261115/report.md)
+
+- [K0828](../items/K0828-sidon-height-boundary-reduction.md) (proof): 高さ対の和の一意性を使ったq=2|B|境界の必要十分条件と、非一意高さの反例
+## [research/experiments/sidon-height-boundary-20261115/verify_boundary.py](../../../research/experiments/sidon-height-boundary-20261115/verify_boundary.py)
+
+- [K0828](../items/K0828-sidon-height-boundary-reduction.md) (verifier): Fractionによる階数・共球判定と全q点部分集合の直接監査
 ## [research/experiments/sigma-side-window-p-inverse-20261114/output/sigma_table.json](../../../research/experiments/sigma-side-window-p-inverse-20261114/output/sigma_table.json)
 
 - [K0823](../items/K0823-sigma-side-window-p-inverse.md) (data): σ表・witness計数照合・U(84..90)の機械出力（all_census_match=true）
@@ -13166,6 +13346,21 @@
 
 - [K0819](../items/K0819-six-row-q8-m20-deficient-nonexistence.md) (solver): class-split / exact-count (--krow) / minpos / lex encoder on the K0810 sat.js census + sat2.js counter core (verbatim from the K0818 lane), plus kissat model decoding with census-free verifyConfig
 - [K0822](../items/K0822-row-mirror-canonical-class-count.md) (solver): the class-split encoder whose --class=D semantics (rows in D <= q-2 stones, rows outside exactly q-1) and mirror-canonical sweep protocol define the classes counted
+## [research/experiments/six-row-q8-m21-row-split-20261114/output/r6x21q8_defOR.txt](../../../research/experiments/six-row-q8-m21-row-split-20261114/output/r6x21q8_defOR.txt)
+
+- [K0829](../items/K0829-six-row-q8-m21-deficient-nonexistence.md) (data): def-mode OR instance raw log: INDET at the 240s cap (5,011,833 conflicts) — the honest negative that motivated the row split
+## [research/experiments/six-row-q8-m21-row-split-20261114/output/r6x21q8_rowY1.txt](../../../research/experiments/six-row-q8-m21-row-split-20261114/output/r6x21q8_rowY1.txt)
+
+- [K0829](../items/K0829-six-row-q8-m21-deficient-nonexistence.md) (data): hardest class raw kissat log (rowY=1: 2,862,649 conflicts UNSAT, 180.5s); sibling logs r6x21q8_rowY0.txt / r6x21q8_rowY2.txt / r6x21q8_rowY1_lexH.txt / r6x21q8_defOR.txt / r_ctrl_6x18_def.txt
+## [research/experiments/six-row-q8-m21-row-split-20261114/output/r_ctrl_6x18_def.witness.json](../../../research/experiments/six-row-q8-m21-row-split-20261114/output/r_ctrl_6x18_def.witness.json)
+
+- [K0829](../items/K0829-six-row-q8-m21-deficient-nonexistence.md) (data): positive-control decoded model: 41 stones rows (7,7,7,7,6,7), sat.js census-free verifyConfig PASS and verify_witness.py (Python Fraction) PASS
+## [research/experiments/six-row-q8-m21-row-split-20261114/output/records.jsonl](../../../research/experiments/six-row-q8-m21-row-split-20261114/output/records.jsonl)
+
+- [K0829](../items/K0829-six-row-q8-m21-deficient-nonexistence.md) (data): 6 records: def-OR INDET (240s cap, 5,011,833 conflicts, honest negative), rowY 0/1/2 UNSAT (327,636 / 2,862,649 / 1,767,690 conflicts), rowY=1 lex=H cross-encoding UNSAT (2,337,998 conflicts), 6x18 positive control SAT (492,432 conflicts) with js+py dual verification
+## [research/experiments/six-row-q8-m21-row-split-20261114/report.md](../../../research/experiments/six-row-q8-m21-row-split-20261114/report.md)
+
+- [K0829](../items/K0829-six-row-q8-m21-deficient-nonexistence.md) (proof): claim, coverage argument (deficient config has a deficient row y in a rowfixed(y) instance; row-mirror soundness y<->5-y reduces 6 rows to 3 classes), verification protocol, honest negatives, scope and limits
 ## [research/experiments/solver-benchmarks/output/8x8-o-primary-summary.json](../../../research/experiments/solver-benchmarks/output/8x8-o-primary-summary.json)
 
 - [K0089](../items/K0089-n8-replication-of-n9-o-strata.md) (data): 凍結primary endpoint
@@ -14262,6 +14457,33 @@
 ## [research/log/2026-11-14-width86-positive-control.md](../../../research/log/2026-11-14-width86-positive-control.md)
 
 - [K0807](../items/K0807-width83-positive-control-revival-point.md) (log): w86実行記録・予測的中判定・w87..91の36点窓censusに基づく次回予測
+## [research/log/2026-11-15-class2-lane-cost69e-win7.md](../../../research/log/2026-11-15-class2-lane-cost69e-win7.md)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): cost69e全11 WIN7候補の証明書化と10 receipt後のfrontier記録
+## [research/log/2026-11-15-n11-class2-cost60b-warm17-bigint-audit-and-cost71b-frontier.md](../../../research/log/2026-11-15-n11-class2-cost60b-warm17-bigint-audit-and-cost71b-frontier.md)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): 17 warm証明書の独立検査、cost-71b frontier 1,026解消、bit22重複と未統合範囲
+## [research/log/2026-11-15-n11-class2-cost65e-bit7-independent-audit.md](../../../research/log/2026-11-15-n11-class2-cost65e-bit7-independent-audit.md)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): bit7証明書の全56部分木検査と2つの新規S6親解消
+## [research/log/2026-11-15-n11-class2-cost69e-bit21-bigint-independent-verification.md](../../../research/log/2026-11-15-n11-class2-cost69e-bit21-bigint-independent-verification.md)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): bit21 WIN7証明書の独立BigInt検査記録
+## [research/log/2026-11-15-n11-class2-cost70c-raw-sweep-audit.md](../../../research/log/2026-11-15-n11-class2-cost70c-raw-sweep-audit.md)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): cost70c raw sweepの独立監査とcost69e bit76による途中閉鎖
+## [research/log/2026-11-15-n11-class2-cost72-batches1-9-audit.md](../../../research/log/2026-11-15-n11-class2-cost72-batches1-9-audit.md)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): cost72の全72候補記録整合性、2つのWIN7-D10候補、未完了扱いの理由
+## [research/log/2026-11-15-n11-class2-cost72-bit111-independent-audit.md](../../../research/log/2026-11-15-n11-class2-cost72-bit111-independent-audit.md)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): cost72 bit111証明書の独立検査とS5親の残り2子から1子への局所縮小
+## [research/log/2026-11-15-n11-class2-cost72-partial-batches1-5-audit.md](../../../research/log/2026-11-15-n11-class2-cost72-partial-batches1-5-audit.md)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): cost69e v2とcost70c/71bのfrontier基準差、およびcost72部分監査を記録
+## [research/log/2026-11-15-sidon-height-boundary-reduction.md](../../../research/log/2026-11-15-sidon-height-boundary-reduction.md)
+
+- [K0828](../items/K0828-sidon-height-boundary-reduction.md) (log): 発見経緯と標準連続高さm=2,3への適用範囲
 ## [research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md](../../../research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md)
 
 - [K0092](../items/K0092-n11-dfpn-search-status.md) (source): 命題・対象範囲・根拠を記した出典

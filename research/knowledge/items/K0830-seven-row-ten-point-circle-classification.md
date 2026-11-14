@@ -12,47 +12,47 @@ solution:
   level: strong
   outcome: conditional
   classification: [all-safe-grundy]
-  coverage: ≥10点円の分類は 7×m・m ≤ 15001 で完備（弦 ≤ 15000・R ≤ 10¹⁵）
-  conditions: 真円（a≠0）・連続整数行 7 本・弦上界と R 上界の両検証範囲内
-  verification: [mathematical-proof, independent-enumeration, exhaustive-search]
+  coverage: "≥10点円の分類は 7×m・m ≤ 15001 で完備（弦 ≤ 15000・R ≤ 10¹⁵）"
+  conditions: "真円（a≠0）・連続整数行 7 本・弦上界と R 上界の両検証範囲内"
+  verification: [mathematical-proof, independent-enumeration, exhaustive-enumeration]
   certificate: "定理A: m ≤ 1079 は 50 族のみ（stripsearch_u 1078）。定理B: 例外は弦 1079・R=2353705250 のみ（stripsearch_u 15000・stripsearch R ≤ 10¹⁵ 一致）。50 族の位置数 m−7/族は代数的に厳密（α ∈ [3.5, m−4.5] の半整数）。"
-  independent_check: crosscheck.js（独立実装・R ≤ 10⁶）と例外表現直接全走査の一致
+  independent_check: "crosscheck.js（独立実装・R ≤ 10⁶）と例外表現直接全走査の一致"
   note: "弦 > 15000 かつ R > 10¹⁵ の追加例外の不在は主張しない。例外が無限族か sporadic かは open。"
 relations:
 - type: depends_on
   target: K0764
-  note: P(7) = 10（上界）と 10点円プロファイル（5二重行+2空行）の全称証明。本項目は等号ケースの分類
+  note: "P(7) = 10（上界）と 10点円プロファイル（5二重行+2空行）の全称証明。本項目は等号ケースの分類"
 - type: depends_on
   target: K0831
-  note: 分母補題 q | 4δ′（L2）と parity 排除（L3）が探索の有限性を与える
+  note: "分母補題 q | 4δ′（L2）と parity 排除（L3）が探索の有限性を与える"
 - type: supports
   target: K0820
-  note: (7,10) 帯の ≥10 点危険円は m ≤ 587 では 50 族のみ（2m−14 本・行 0,3,6 強制通過）
+  note: "(7,10) 帯の ≥10 点危険円は m ≤ 587 では 50 族のみ（2m−14 本・行 0,3,6 強制通過）"
 artifacts:
 - path: research/experiments/seven-row-ten-point-circle-classification-20261114/README.md
-  role: report
-  note: 定理A/B・系・補題 L1-L3 の証明骨子・検証表・スコープ
+  role: proof
+  note: "定理A/B・系・補題 L1-L3 の証明骨子・検証表・スコープ"
 - path: research/experiments/seven-row-ten-point-circle-classification-20261114/scripts/stripsearch_u.js
   role: verifier
-  note: 弦上界全列挙（|Z| ≤ UMAX²/4・因子対全列挙・q=1 前提は L2/L3 で証明済み）
+  note: "弦上界全列挙（|Z| ≤ UMAX²/4・因子対全列挙・q=1 前提は L2/L3 で証明済み）"
 - path: research/experiments/seven-row-ten-point-circle-classification-20261114/scripts/stripsearch.js
   role: verifier
-  note: R 上界版全列挙（R ≤ 10¹⁵）
+  note: "R 上界版全列挙（R ≤ 10¹⁵）"
 - path: research/experiments/seven-row-ten-point-circle-classification-20261114/scripts/crosscheck.js
   role: verifier
-  note: 独立実装（表現ペアバケット化・因子対論理不使用）
+  note: "独立実装（表現ペアバケット化・因子対論理不使用）"
 - path: research/experiments/seven-row-ten-point-circle-classification-20261114/output/stripsearch_u1078.json
   role: data
-  note: 定理A の直接根拠（m ≤ 1079: R=50 のみ）
+  note: "定理A の直接根拠（m ≤ 1079: R=50 のみ）"
 - path: research/experiments/seven-row-ten-point-circle-classification-20261114/output/stripsearch_u15000.json
   role: data
-  note: m ≤ 15001 の分類根拠（例外 含む）
+  note: "m ≤ 15001 の分類根拠（例外 含む）"
 - path: research/experiments/seven-row-ten-point-circle-classification-20261114/output/stripsearch_R1e15.json
   role: data
-  note: R ≤ 10¹⁵ で2構成のみ
+  note: "R ≤ 10¹⁵ で2構成のみ"
 - path: research/experiments/seven-row-ten-point-circle-classification-20261114/output/exception_R2353705250_reps.txt
   role: data
-  note: 例外円の 192 表現の直接全走査（三重検証）
+  note: "例外円の 192 表現の直接全走査（三重検証）"
 ---
 
 ## 命題（有限範囲完備・機械検証）

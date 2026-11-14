@@ -673,6 +673,7 @@
 - ← generalizes [K0024](../items/K0024-fixed-width-q-point-threshold.md): q≥4の一般定理は標準q4定理を含む
 - ← depends_on [K0069](../items/K0069-two-row-all-lengths-strong-solution.md)
 - ← supports [K0796](../items/K0796-two-row-m24-stabilization-nine.md): 十分長さT_2=9が最小であることを確定（真の安定化長と一致）
+- ← depends_on [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md): (7,4) upper bound T_7 = 3+2{C(19,3)-6} = 1929 by the general q=4 parity theorem (all maximals 3w stones, g=(3w-|S|) mod2 for m >= T_w); matches K0318 substitution U=1929
 
 ## [K0069](../items/K0069-two-row-all-lengths-strong-solution.md) 標準二行盤は全mで強解決、m≥6の空盤は後手勝ち
 
@@ -1720,6 +1721,9 @@
 - ← depends_on [K0806](../items/K0806-six-row-q7-stabilization-bounds.md): 曲線充填上界U_{w,q}への(6,7)代入による初の明示的上界402
 - ← depends_on [K0808](../items/K0808-six-row-deficient-witnesses-q568.md): 上界は K0318 代入（U=658/495/371・K0024 の T 値に基づく）
 - ← depends_on [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md): upper bounds U_{7,9}=613 and U_{7,10}=587 by curve-packing substitution (w7_upper_bounds.json of the source experiment)
+- ← depends_on [K0825](../items/K0825-seven-row-q8-deficient-witness-lower-bound.md): upper bound U_{7,8}=651 by curve-packing substitution (w7_upper_bounds.json of seven-row-inband-families-20261114)
+- ← depends_on [K0826](../items/K0826-seven-row-q7-deficient-witness-lower-bound.md): upper bound U_{7,7}=708 by curve-packing substitution (w7_upper_bounds.json of seven-row-inband-families-20261114)
+- ← depends_on [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md): upper bounds U_{7,6}=862, U_{7,5}=1142 by curve-packing substitution (w7_upper_bounds.json of seven-row-inband-families-20261114)
 
 ## [K0319](../items/K0319-misere-direct-sum-normal-grundy-rule.md) swap則が全後続局面で成り立つ部品のmisère直和は通常Grundy値だけで解ける
 
@@ -4473,6 +4477,7 @@
 - ← depends_on [K0765](../items/K0765-width8-circle-twelve-point-sizes-and-q13-q16-row-formula.md): 接点補題（f|t・符号論）の原形
 - ← depends_on [K0767](../items/K0767-width9-18-circle-point-max-row-formulas.md): P=2d+s・接点行s≤2の会計枠組み
 - ← depends_on [K0813](../items/K0813-width2-5-circle-point-max-and-q9-q10-row-formula.md): P(6)=8（単調性によるP(5)≤8）とwitness円(2x−7)²+(2y−7)²=50の原形
+- ← depends_on [K0831](../items/K0831-circle-row-window-denominator-lemma.md): 接点・判別式の行ごとの構造解析の枠組み（本補題は中心座標の可直接的な分母制御を与える）
 
 ## [K0764](../items/K0764-width7-circle-ten-point-sizes-and-q11-q12-row-formula.md) 幅7整数格子の円は全mでP(7)=10・可能サイズ{7,8,10} — 9・11・12点円の全称不在とq=11..12の行分離公式
 
@@ -4483,6 +4488,7 @@
 - → generalizes [K0025](../items/K0025-q-above-two-width-all-lengths.md): q>2w（w=7ではq≥15）をq=11..14まで拡張
 - ← depends_on [K0765](../items/K0765-width8-circle-twelve-point-sizes-and-q13-q16-row-formula.md): w=7 の非両立ペア排除((1,3),(2,3),(3,4),(3,5),(1,4),(5,6))をt∈{1..6}に再利用
 - ← depends_on [K0767](../items/K0767-width9-18-circle-point-max-row-formulas.md): witness円(2x−7)²+(2y−7)²=50の原形（w=9,10 witnessと同一円）
+- ← depends_on [K0830](../items/K0830-seven-row-ten-point-circle-classification.md): P(7) = 10（上界）と 10点円プロファイル（5二重行+2空行）の全称証明。本項目は等号ケースの分類
 
 ## [K0765](../items/K0765-width8-circle-twelve-point-sizes-and-q13-q16-row-formula.md) 幅8整数格子の円は全mでP(8)=12・可能サイズ{7,8,10,12}・9以上は偶数のみ — 素数オフセット補題とq=13..16の行分離公式
 
@@ -4773,6 +4779,7 @@
 - ← depends_on [K0818](../items/K0818-six-row-q8-m19-deficient-nonexistence.md): 2x8 q=4 5-stone control (SAT rediscovered); 2x9 q=4 UNSAT control consistent with M_{2,4}=9
 - ← depends_on [K0819](../items/K0819-six-row-q8-m20-deficient-nonexistence.md): 2x8 q=4 5-stone control (SAT rediscovered); 2x9 q=4 UNSAT control consistent with M_{2,4}=9
 - ← depends_on [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md): 2x8 q=4 5-stone SAT control and 2x9 q=4 UNSAT control (fastsat conflicts bit-exact with the source experiment; kissat agrees) — consistent with M_{2,4}=9
+- ← depends_on [K0825](../items/K0825-seven-row-q8-deficient-witness-lower-bound.md): 2x8 q=4 SAT / 2x9 q=4 UNSAT def+lex controls (fastsat 121/535 conflicts bit-exact with the K0820 controls record; kissat agrees) — consistent with M_{2,4}=9
 
 ## [K0797](../items/K0797-g0-accounting-valid-through-w84.md) convention B g0会計の有効範囲は拡張法でw≤84に延長 — g4形は壁でなく真の壁はg3形（類サイズ29）— P(65)..P(84)の決定に必要な非標準形前提が復活点下界83をちょうどカバー
 
@@ -4901,6 +4908,10 @@
 - ← depends_on [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md): census (circleABC integer triples, line pairs) + sequential-counter/maximality core used verbatim (sat.js/sat2.js); the def-mode single clause and lex-leader constraints are the source experiment's sat2.js additions
 - ← depends_on [K0821](../items/K0821-five-row-q7-m21-deficient-nonexistence.md): census (circleABC integer triples, line pairs) and the sequential-counter/maximality core are used verbatim (sat.js / sat2.js / sat3.js); the class-split unit clauses and the k/minpos splits are the only additions
 - ← depends_on [K0822](../items/K0822-row-mirror-canonical-class-count.md): the --class=D row constraints are unit clauses on the K0810 rowGe/row-chain core; the objects counted (non-empty exact deficiency sets of rows, modulo the row mirror) are defined by that machinery (sat3.js)
+- ← depends_on [K0825](../items/K0825-seven-row-q8-deficient-witness-lower-bound.md): census + sequential-counter/maximality core used verbatim (sat.js/sat2.js); def-mode single clause is the source experiment's sat2.js addition
+- ← depends_on [K0826](../items/K0826-seven-row-q7-deficient-witness-lower-bound.md): census + sequential-counter/maximality core used verbatim (sat.js/sat2.js); def-mode single clause is the complete encoding of 'total < 42 iff some row <= 5'
+- ← depends_on [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md): census + sequential-counter/maximality core used verbatim (sat.js/sat2.js); def-mode single clause is the complete encoding of 'total < 7(q-1) iff some row <= q-2'
+- ← depends_on [K0829](../items/K0829-six-row-q8-m21-deficient-nonexistence.md): census (circleABC integer triples, line pairs) and the sequential-counter/maximality core used verbatim (sat.js / sat2.js); the rowfixed unit clause is the only addition
 
 ## [K0811](../items/K0811-sa-row-deficient-witnesses.md) SA探索による行欠損極大witness — M_{6,5}≥29・M_{6,6}≥22・M_{5,6}≥19（K0810の下界を更新・第2弾/第3弾で延長）
 
@@ -4945,6 +4956,7 @@
 - ← depends_on [K0816](../items/K0816-five-row-m20-deficient-nonexistence.md): 5×20はkissat/貪欲/SA/portfolio全てで未決着だった前線（K0815 note・frontier-portfolio-20261114）。今回完全列挙で不在確定
 - ← depends_on [K0818](../items/K0818-six-row-q8-m19-deficient-nonexistence.md): 41-stone deficient-maximal witness at 6x18 (rows 7,6,7,7,7,7) is the lower bound M_{6,8}>=19 and the positive-control board; the 6x19 'unresolved' instance (kissat 255s, 4.52M conflicts single some-deficient clause) is settled by the class split
 - ← depends_on [K0819](../items/K0819-six-row-q8-m20-deficient-nonexistence.md): 41-stone deficient-maximal witness at 6x18 (rows 7,6,7,7,7,7) is the lower bound M_{6,8}>=19 and the positive-control board (rediscovered SAT, conflicts bit-exact with K0818)
+- ← depends_on [K0829](../items/K0829-six-row-q8-m21-deficient-nonexistence.md): 41-stone deficient-maximal witness at 6x18 (rows 7,6,7,7,7,7) is the lower bound M_{6,8}>=19 and the positive-control board (row-mirror rows 7,7,7,7,6,7 rediscovered by the def-OR control here)
 
 ## [K0816](../items/K0816-five-row-m20-deficient-nonexistence.md) 5x20 q=7 row-deficient maximal nonexistence (all 19 classes) — witness-free widths extend to 20, M_{5,7} ∈ {19,20} or ≥22
 
@@ -4979,12 +4991,15 @@
 - → depends_on [K0815](../items/K0815-witness-column-extension-kissat-bounds.md): 41-stone deficient-maximal witness at 6x18 (rows 7,6,7,7,7,7) is the lower bound M_{6,8}>=19 and the positive-control board (rediscovered SAT, conflicts bit-exact with K0818)
 - → depends_on [K0796](../items/K0796-two-row-m24-stabilization-nine.md): 2x8 q=4 5-stone control (SAT rediscovered); 2x9 q=4 UNSAT control consistent with M_{2,4}=9
 - → generalizes [K0818](../items/K0818-six-row-q8-m19-deficient-nonexistence.md): the m=19 class-split sweep extended to m=20 with the identical machinery; 6x20 was the witness-search frontier opened by K0818
+- ← depends_on [K0829](../items/K0829-six-row-q8-m21-deficient-nonexistence.md): 6x19/6x20 witness-free by the 35-class deficiency split; K0819 opened the 6x21 frontier and stated exactly this extension branch
 
 ## [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md) 7xm q=9 / q=10 row-deficient witness bands — (7,9) witnesses 9..23 and witness-free 24..100 (M_{7,9} = 24 or >= 101), (7,10) witness-free band 19..40 confirmed by kissat and extended to 100 (M_{7,10} = 19 or >= 101)
 
 - → depends_on [K0810](../items/K0810-sat-row-deficient-witnesses.md): census (circleABC integer triples, line pairs) + sequential-counter/maximality core used verbatim (sat.js/sat2.js); the def-mode single clause and lex-leader constraints are the source experiment's sat2.js additions
 - → depends_on [K0796](../items/K0796-two-row-m24-stabilization-nine.md): 2x8 q=4 5-stone SAT control and 2x9 q=4 UNSAT control (fastsat conflicts bit-exact with the source experiment; kissat agrees) — consistent with M_{2,4}=9
 - → depends_on [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md): upper bounds U_{7,9}=613 and U_{7,10}=587 by curve-packing substitution (w7_upper_bounds.json of the source experiment)
+- ← depends_on [K0825](../items/K0825-seven-row-q8-deficient-witness-lower-bound.md): genfast.js (memory-bounded CNF generator) reused; instance-identity calibration (7,10) m=46 def+lex regenerated, kissat 861 conflicts bit-exact with the q10-band record; genfast byte-identity to sat2.js re-validated for q=8 on 4 samples
+- ← supports [K0830](../items/K0830-seven-row-ten-point-circle-classification.md): (7,10) 帯の ≥10 点危険円は m ≤ 587 では 50 族のみ（2m−14 本・行 0,3,6 強制通過）
 
 ## [K0821](../items/K0821-five-row-q7-m21-deficient-nonexistence.md) 5x21 q=7 row-deficient maximal nonexistence (all 19 canonical classes UNSAT) — witness-free width set of (5,7) extends to {19,20,21}, M_{5,7} ∈ {19,20,21} or >= 23
 
@@ -4999,6 +5014,7 @@
 - → depends_on [K0810](../items/K0810-sat-row-deficient-witnesses.md): the --class=D row constraints are unit clauses on the K0810 rowGe/row-chain core; the objects counted (non-empty exact deficiency sets of rows, modulo the row mirror) are defined by that machinery (sat3.js)
 - → generalizes [K0816](../items/K0816-five-row-m20-deficient-nonexistence.md): the 19 row-mirror-canonical classes swept at 5x20 equal C(5) = 19 (the first recorded use of the w=5 count)
 - → generalizes [K0818](../items/K0818-six-row-q8-m19-deficient-nonexistence.md): the 35 row-mirror-canonical classes swept at 6x19 equal C(6) = 35 (K0819 at 6x20 and K0821 at 5x21 reuse the same counts)
+- ← depends_on [K0829](../items/K0829-six-row-q8-m21-deficient-nonexistence.md): row-mirror canonical class logic (y -> 5-y pairs the 6 rows into 3 mirror classes), brute-force-validated in K0818
 
 ## [K0823](../items/K0823-sigma-side-window-p-inverse.md) 円格子点の最小行窓幅 σ(n)=min{w:P(w)≥n} — n≤34の全称決定（σ₁₃=43・σ₁₇=83）・中心窓版n=26..34の同値・K0791レジューム2と旧側窓σ₁₃注記の解消
 
@@ -5013,3 +5029,47 @@
 
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 安全な追加だけを合法手とする通常プレイの規則
 - → generalizes [K0352](../items/K0352-general-dimensional-parallel-columns.md): K0352の一般位置底面に限らず任意の有限底面で占有ベクトル縮約が成立する。K0352の閉形式分類までは一般化しない
+
+## [K0825](../items/K0825-seven-row-q8-deficient-witness-lower-bound.md) 7xm q=8 row-deficient witness band — witnesses 7x8..7x24 (M_{7,8} >= 25, upper 651 by K0318 substitution); first (7,8) family results
+
+- → depends_on [K0810](../items/K0810-sat-row-deficient-witnesses.md): census + sequential-counter/maximality core used verbatim (sat.js/sat2.js); def-mode single clause is the source experiment's sat2.js addition
+- → depends_on [K0796](../items/K0796-two-row-m24-stabilization-nine.md): 2x8 q=4 SAT / 2x9 q=4 UNSAT def+lex controls (fastsat 121/535 conflicts bit-exact with the K0820 controls record; kissat agrees) — consistent with M_{2,4}=9
+- → depends_on [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md): upper bound U_{7,8}=651 by curve-packing substitution (w7_upper_bounds.json of seven-row-inband-families-20261114)
+- → depends_on [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md): genfast.js (memory-bounded CNF generator) reused; instance-identity calibration (7,10) m=46 def+lex regenerated, kissat 861 conflicts bit-exact with the q10-band record; genfast byte-identity to sat2.js re-validated for q=8 on 4 samples
+- ← depends_on [K0826](../items/K0826-seven-row-q7-deficient-witness-lower-bound.md): same machinery and runner as the (7,8) search; rowY fixed-row split re-validated at q=7 (cracked the m=25 OR-instance wall); sat2.js is the only generator here since genfast.js requires q >= w+1
+- ← depends_on [K0829](../items/K0829-six-row-q8-m21-deficient-nonexistence.md): rowY fixed-row split technique (used there on the SAT side for seven-row witnesses), applied here on the UNSAT side with all mirror classes swept
+
+## [K0826](../items/K0826-seven-row-q7-deficient-witness-lower-bound.md) 7xm q=7 row-deficient witness band — witnesses 7x7..7x26 (M_{7,7} >= 27, upper 708 by K0318 substitution); first (7,7) family results (q=w diagonal)
+
+- → depends_on [K0810](../items/K0810-sat-row-deficient-witnesses.md): census + sequential-counter/maximality core used verbatim (sat.js/sat2.js); def-mode single clause is the complete encoding of 'total < 42 iff some row <= 5'
+- → depends_on [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md): upper bound U_{7,7}=708 by curve-packing substitution (w7_upper_bounds.json of seven-row-inband-families-20261114)
+- → depends_on [K0825](../items/K0825-seven-row-q8-deficient-witness-lower-bound.md): same machinery and runner as the (7,8) search; rowY fixed-row split re-validated at q=7 (cracked the m=25 OR-instance wall); sat2.js is the only generator here since genfast.js requires q >= w+1
+- ← depends_on [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md): same machinery and runner as the (7,7) search (same session, same binary); q <= w families confirmed to have continuous witness bands from m=q
+
+## [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) 7xm q=4,5,6 row-deficient witness bands — witnesses 7x4..7x35 (q=4; 4..21 SAT, 22..35 constructive extension), 7x5..7x31 (q=5), 7x6..7x26 (q=6); M_{7,4} >= 36, M_{7,5} >= 32, M_{7,6} >= 27; first results for the three families
+
+- → depends_on [K0810](../items/K0810-sat-row-deficient-witnesses.md): census + sequential-counter/maximality core used verbatim (sat.js/sat2.js); def-mode single clause is the complete encoding of 'total < 7(q-1) iff some row <= q-2'
+- → depends_on [K0068](../items/K0068-standard-fixed-width-parity-threshold.md): (7,4) upper bound T_7 = 3+2{C(19,3)-6} = 1929 by the general q=4 parity theorem (all maximals 3w stones, g=(3w-|S|) mod2 for m >= T_w); matches K0318 substitution U=1929
+- → depends_on [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md): upper bounds U_{7,6}=862, U_{7,5}=1142 by curve-packing substitution (w7_upper_bounds.json of seven-row-inband-families-20261114)
+- → depends_on [K0826](../items/K0826-seven-row-q7-deficient-witness-lower-bound.md): same machinery and runner as the (7,7) search (same session, same binary); q <= w families confirmed to have continuous witness bands from m=q
+
+## [K0829](../items/K0829-six-row-q8-m21-deficient-nonexistence.md) 6x21 q=8 row-deficient maximal nonexistence (all 3 row-mirror rowY classes UNSAT) — witness-free width set of (6,8) extends to {19,20,21}, M_{6,8} ∈ {19,20,21} or >= 23
+
+- → depends_on [K0810](../items/K0810-sat-row-deficient-witnesses.md): census (circleABC integer triples, line pairs) and the sequential-counter/maximality core used verbatim (sat.js / sat2.js); the rowfixed unit clause is the only addition
+- → depends_on [K0815](../items/K0815-witness-column-extension-kissat-bounds.md): 41-stone deficient-maximal witness at 6x18 (rows 7,6,7,7,7,7) is the lower bound M_{6,8}>=19 and the positive-control board (row-mirror rows 7,7,7,7,6,7 rediscovered by the def-OR control here)
+- → depends_on [K0819](../items/K0819-six-row-q8-m20-deficient-nonexistence.md): 6x19/6x20 witness-free by the 35-class deficiency split; K0819 opened the 6x21 frontier and stated exactly this extension branch
+- → depends_on [K0822](../items/K0822-row-mirror-canonical-class-count.md): row-mirror canonical class logic (y -> 5-y pairs the 6 rows into 3 mirror classes), brute-force-validated in K0818
+- → depends_on [K0825](../items/K0825-seven-row-q8-deficient-witness-lower-bound.md): rowY fixed-row split technique (used there on the SAT side for seven-row witnesses), applied here on the UNSAT side with all mirror classes swept
+
+## [K0830](../items/K0830-seven-row-ten-point-circle-classification.md) 7行窓の≥10点円の完全分類（m ≤ 15001）: 50族 2m−14 本＋例外 R=4ρ²=2353705250・全て行 0,3,6 通過
+
+- → depends_on [K0764](../items/K0764-width7-circle-ten-point-sizes-and-q11-q12-row-formula.md): P(7) = 10（上界）と 10点円プロファイル（5二重行+2空行）の全称証明。本項目は等号ケースの分類
+- → depends_on [K0831](../items/K0831-circle-row-window-denominator-lemma.md): 分母補題 q | 4δ′（L2）と parity 排除（L3）が探索の有限性を与える
+- → supports [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md): (7,10) 帯の ≥10 点危険円は m ≤ 587 では 50 族のみ（2m−14 本・行 0,3,6 強制通過）
+- ← proves [K0831](../items/K0831-circle-row-window-denominator-lemma.md): K0830 の探索有限性（q ∈ {1,2,4,8}・q=1 への絞り込み L2/L3）の根拠
+
+## [K0831](../items/K0831-circle-row-window-denominator-lemma.md) 円の行窓二重行に対する分母補題: 2β=p/q 既約なら q | 4δ′（δ′は二重行対の行間隔）・w行d二重行なら q | 4⌈(w−1)/(d−1)⌉
+
+- → proves [K0830](../items/K0830-seven-row-ten-point-circle-classification.md): K0830 の探索有限性（q ∈ {1,2,4,8}・q=1 への絞り込み L2/L3）の根拠
+- → depends_on [K0763](../items/K0763-width6-circle-eight-point-max-and-q9-q12-row-formula.md): 接点・判別式の行ごとの構造解析の枠組み（本補題は中心座標の可直接的な分母制御を与える）
+- ← depends_on [K0830](../items/K0830-seven-row-ten-point-circle-classification.md): 分母補題 q | 4δ′（L2）と parity 排除（L3）が探索の有限性を与える
