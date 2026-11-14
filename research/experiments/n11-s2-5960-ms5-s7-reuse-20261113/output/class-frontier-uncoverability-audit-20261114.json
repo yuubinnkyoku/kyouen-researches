@@ -1,0 +1,297 @@
+{
+ "schema": "n11-class-frontier-uncoverability-audit-20261114-v1",
+ "date": "2026-11-14",
+ "method": "classification of every remaining S6 child of the best class-2 / class-4 blocker-candidate S5s at the after-cost-73a frontier against all published class2/class4-lane sweep records; the after-cost-73a frontier (solved 921 / unique remaining 6,926 / sum 544,995 / open 5,196/408,718) is reproduced first with every staged control asserted (runpy of recompute_frontier_cost73a_20261114.py)",
+ "sweep_map_size": 49,
+ "best_class2": {
+  "s5_hex": "00000000000000809082000000000000",
+  "remaining": 10,
+  "receipt_unclosable_children": 10,
+  "unclosable_cost": 698,
+  "unswept_children": 0,
+  "sterile_swept": [
+   {
+    "s6_hex": "00000000000000809082000000000001",
+    "cost": 70,
+    "record": "class2-lane-cost70-sweep-20261114.json"
+   },
+   {
+    "s6_hex": "00000000000000809082000000000040",
+    "cost": 73,
+    "record": "class2-lane-cost73b-sweep-20261114.json"
+   },
+   {
+    "s6_hex": "00000000000000809082000000000080",
+    "cost": 73,
+    "record": "class2-lane-cost73c-sweep-20261114.json"
+   },
+   {
+    "s6_hex": "00000000000000809082000000020000",
+    "cost": 65,
+    "record": "class2-lane-cost65b-sweep-20261114.json"
+   },
+   {
+    "s6_hex": "00000000000000809082000000400000",
+    "cost": 69,
+    "record": "class2-lane-cost69b-sweep-20261114.json"
+   },
+   {
+    "s6_hex": "00000000000000809082000004000000",
+    "cost": 66,
+    "record": "class2-lane-cost66a-sweep-20261114.json"
+   },
+   {
+    "s6_hex": "00000000000000809082000020000000",
+    "cost": 66,
+    "record": "class2-lane-cost66b-sweep-20261114.json"
+   },
+   {
+    "s6_hex": "00000000000000809082000100000000",
+    "cost": 74,
+    "record": "class2-lane-cost74-sweep-20261114.json"
+   },
+   {
+    "s6_hex": "00000000000000809082000200000000",
+    "cost": 73,
+    "record": "class2-lane-cost73e-sweep-20261114.json"
+   },
+   {
+    "s6_hex": "000000000000008090c2000000000000",
+    "cost": 69,
+    "record": "class2-lane-cost69d-sweep-20261114.json"
+   }
+  ],
+  "unswept": []
+ },
+ "best_class4": {
+  "s5_hex": "00000000020000003800000080000000",
+  "remaining": 18,
+  "receipt_unclosable_children": 12,
+  "unclosable_cost": 958,
+  "unswept_children": 6,
+  "sterile_swept": [
+   {
+    "s6_hex": "00000000020000003800000080000020",
+    "cost": 74,
+    "record": "class4-lane-cost74-sweep-20261114.json"
+   },
+   {
+    "s6_hex": "00000000020000003800000080000100",
+    "cost": 86,
+    "record": "class4-lane-cost86a-sweep-20261114.json"
+   },
+   {
+    "s6_hex": "00000000020000003800000080000800",
+    "cost": 82,
+    "record": "class4-lane-cost82-sweep-20261114.json"
+   },
+   {
+    "s6_hex": "00000000020000003800000080004000",
+    "cost": 86,
+    "record": "class4-lane-cost86b-sweep-20261114.json"
+   },
+   {
+    "s6_hex": "00000000020000003800000080008000",
+    "cost": 81,
+    "record": "class4-lane-cost81-sweep-20261114.json"
+   },
+   {
+    "s6_hex": "00000000020000003800000088000000",
+    "cost": 74,
+    "record": "class4-lane-cost74c-sweep-20261114.json"
+   },
+   {
+    "s6_hex": "00000000020000003800000090000000",
+    "cost": 82,
+    "record": "class4-lane-cost82b-sweep-20261114.json"
+   },
+   {
+    "s6_hex": "00000000020000003800000180000000",
+    "cost": 80,
+    "record": "class4-lane-cost80-sweep-20261114.json"
+   },
+   {
+    "s6_hex": "00000000020000003800000880000000",
+    "cost": 79,
+    "record": "class4-lane-cost79-sweep-20261114.json"
+   },
+   {
+    "s6_hex": "00000000020000003800020080000000",
+    "cost": 75,
+    "record": "class4-lane-cost75-sweep-20261114.json"
+   },
+   {
+    "s6_hex": "00000000020000003800200080000000",
+    "cost": 80,
+    "record": "class4-lane-cost80c-sweep-20261114.json"
+   },
+   {
+    "s6_hex": "00000000020000003800400080000000",
+    "cost": 79,
+    "record": "class4-lane-cost79b-sweep-20261114.json"
+   }
+  ],
+  "unswept": [
+   {
+    "s6_hex": "00000000020000003800000080000004",
+    "cost": 87
+   },
+   {
+    "s6_hex": "00000000020000003800000080000400",
+    "cost": 84
+   },
+   {
+    "s6_hex": "000000000200000038000000c0000000",
+    "cost": 73
+   },
+   {
+    "s6_hex": "00000000020000003800000280000000",
+    "cost": 86
+   },
+   {
+    "s6_hex": "00000000020000003800100080000000",
+    "cost": 86
+   },
+   {
+    "s6_hex": "00000000020000003840000080000000",
+    "cost": 86
+   }
+  ]
+ },
+ "next_class2_targets": [
+  {
+   "s5_hex": "00000000000000809102000000000000",
+   "remaining_s6_orbits": 40,
+   "remaining_s7_edge_cost": 2850,
+   "sterile_swept_children": 0,
+   "unswept_children": 40,
+   "cheapest_unswept": [
+    62,
+    "00000000000000809102000001000000"
+   ]
+  },
+  {
+   "s5_hex": "00000000000000803202000000000000",
+   "remaining_s6_orbits": 41,
+   "remaining_s7_edge_cost": 2776,
+   "sterile_swept_children": 0,
+   "unswept_children": 41,
+   "cheapest_unswept": [
+    56,
+    "00000000000000803202020000000000"
+   ]
+  },
+  {
+   "s5_hex": "0000000000000080120a000000000000",
+   "remaining_s6_orbits": 56,
+   "remaining_s7_edge_cost": 4066,
+   "sterile_swept_children": 0,
+   "unswept_children": 56,
+   "cheapest_unswept": [
+    61,
+    "00000000000000a09002000000080000"
+   ]
+  },
+  {
+   "s5_hex": "00000000000000403800000008000000",
+   "remaining_s6_orbits": 58,
+   "remaining_s7_edge_cost": 4162,
+   "sterile_swept_children": 0,
+   "unswept_children": 58,
+   "cheapest_unswept": [
+    58,
+    "00000000000000801206000040000000"
+   ]
+  },
+  {
+   "s5_hex": "00000000000000003800000008000002",
+   "remaining_s6_orbits": 59,
+   "remaining_s7_edge_cost": 4403,
+   "sterile_swept_children": 0,
+   "unswept_children": 59,
+   "cheapest_unswept": [
+    63,
+    "00000000000000803202000000000800"
+   ]
+  },
+  {
+   "s5_hex": "00000000000000003800000008000001",
+   "remaining_s6_orbits": 59,
+   "remaining_s7_edge_cost": 4718,
+   "sterile_swept_children": 0,
+   "unswept_children": 59,
+   "cheapest_unswept": [
+    67,
+    "00000000040000003800000008000400"
+   ]
+  },
+  {
+   "s5_hex": "00000000000000801202000020000000",
+   "remaining_s6_orbits": 60,
+   "remaining_s7_edge_cost": 4481,
+   "sterile_swept_children": 0,
+   "unswept_children": 60,
+   "cheapest_unswept": [
+    61,
+    "00000000000000805202000020000000"
+   ]
+  },
+  {
+   "s5_hex": "00000000000000801202020000000000",
+   "remaining_s6_orbits": 61,
+   "remaining_s7_edge_cost": 4135,
+   "sterile_swept_children": 0,
+   "unswept_children": 61,
+   "cheapest_unswept": [
+    56,
+    "00000000000000803202020000000000"
+   ]
+  },
+  {
+   "s5_hex": "00000000000000003800000008400000",
+   "remaining_s6_orbits": 62,
+   "remaining_s7_edge_cost": 4551,
+   "sterile_swept_children": 0,
+   "unswept_children": 62,
+   "cheapest_unswept": [
+    64,
+    "00000000000000003800000008400020"
+   ]
+  },
+  {
+   "s5_hex": "00000000000000083800000008000000",
+   "remaining_s6_orbits": 65,
+   "remaining_s7_edge_cost": 4802,
+   "sterile_swept_children": 0,
+   "unswept_children": 65,
+   "cheapest_unswept": [
+    62,
+    "00000000000000805202000000020000"
+   ]
+  },
+  {
+   "s5_hex": "00000000000000801202000080000000",
+   "remaining_s6_orbits": 65,
+   "remaining_s7_edge_cost": 4927,
+   "sterile_swept_children": 0,
+   "unswept_children": 65,
+   "cheapest_unswept": [
+    61,
+    "00000000000000803202000080000000"
+   ]
+  },
+  {
+   "s5_hex": "00000000000000003800000008002000",
+   "remaining_s6_orbits": 66,
+   "remaining_s7_edge_cost": 4575,
+   "sterile_swept_children": 0,
+   "unswept_children": 66,
+   "cheapest_unswept": [
+    61,
+    "00000000000080003800000008080000"
+   ]
+  }
+ ],
+ "conclusion": "A completed sweep of an S6 child with 0 WIN7-D10 and 0 capped enumerates ALL legal S7 roots of that child and refutes each at depth 10, so no WIN7-D10 receipt can ever cover that S6 orbit. The best class-2 S5 00000000000000809082000000000000 now has ALL of its remaining children in this state: it can never reach 0 remaining within the WIN7-D10 receipt framework and is therefore exhausted as a sweep target - the frontier ranking should treat it as blocked. Progress on class 2 must come from (a) other class-2 S5 candidates whose remaining children are unswept (receipt-coverable), or (b) a direct refutation of the S5 candidate itself (SECOND_WIN route), which is outside the receipt framework. The same audit is reported for the best class-4 S5 (the class4-lane parallel still has unswept coverable children there).",
+ "interpretation_guard": "bookkeeping over published receipts and sweep records; REFUTED-D10 is the absence of a winner win within depth 10 in that subtree only and decides nothing about the 11x11 empty root / {49,60} / S2 {59,60} / class 2 / class 4, which remain UNKNOWN"
+}
