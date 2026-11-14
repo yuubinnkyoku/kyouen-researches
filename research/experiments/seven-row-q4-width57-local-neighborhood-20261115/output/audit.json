@@ -1,0 +1,26 @@
+{
+  "scope": "finite local-neighborhood audit only; not a nonexistence proof for 7x57",
+  "board": {"width": 57, "height": 7, "q": 4},
+  "translation_audit": {
+    "base_witnesses": [42, 44, 45, 47, 50, 53],
+    "total_fitting_translations": 134,
+    "results": {
+      "42": {"fitting_translations": 22, "best": {"shift": 0, "uncovered_count": 8, "uncovered": [43,45,47,49,52,54,55,56]}, "any_full_extension": false},
+      "44": {"fitting_translations": 25, "best": {"shift": 10, "uncovered_count": 6, "uncovered": [4,6,7,9,54,56]}, "any_full_extension": false},
+      "45": {"fitting_translations": 18, "best": {"shift": 0, "uncovered_count": 6, "uncovered": [46,48,49,51,53,56]}, "any_full_extension": false},
+      "47": {"fitting_translations": 23, "best": {"shift": 2, "uncovered_count": 5, "uncovered": [1,51,52,54,56]}, "any_full_extension": false},
+      "50": {"fitting_translations": 22, "best": {"shift": 5, "uncovered_count": 3, "uncovered": [2,3,4]}, "any_full_extension": false},
+      "53": {"fitting_translations": 24, "best": {"shift": 0, "uncovered_count": 1, "uncovered": [56]}, "any_full_extension": false}
+    }
+  },
+  "single_relocation_audit": {
+    "base_width": 53,
+    "candidate_moves": 2072,
+    "successful_safe_maximal_row_deficient_moves": [],
+    "by_move_type": {
+      "within-row": {"candidates": 1082, "safe": 234, "safe_maximal": 0, "best_uncovered": 0, "best_uncovered_safe": 1},
+      "full-to-deficient": {"candidates": 990, "safe": 69, "safe_maximal": 0, "best_uncovered": 5, "best_uncovered_safe": 6}
+    },
+    "all_candidates_exhausted": true
+  }
+}
