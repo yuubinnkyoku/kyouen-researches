@@ -8,7 +8,6 @@
   "c2": 2,
   "c4": 0
  },
- "candidates": 69,
  "win7_d10": 3,
  "win7_bits": [
   48,
@@ -29,7 +28,7 @@
  ],
  "heaviest_fresh_rerun_node_exact": true,
  "win7_bits_fresh_rerun_node_exact": true,
- "pilot_d6_controls": 8,
+ "pilot_d6_controls": 1,
  "pilot_d6_nodes": 5949,
  "engine": "class4_child1_runner.ts (v15 exact rules, close-first AND at d>=8, cap 1e9)",
  "candidate_enumerator": "legal_candidates.py (Bareiss 4x4), 69 legal candidates, bit-exact with s6_s7_edge_cost",
@@ -41,7 +40,12 @@
   "class2-lane-cost69a-raw-batch5-20261114.jsonl",
   "class2-lane-cost69a-raw-batch6-20261114.jsonl",
   "class2-lane-cost69a-raw-batch7-20261114.jsonl",
-  "class2-lane-cost69a-raw-batch8-20261114.jsonl"
+  "class2-lane-cost69a-raw-batch8-20261114.jsonl",
+  "class2-lane-cost69a-raw-batch9-20261114.jsonl",
+  "class2-lane-cost69a-raw-batch10-20261114.jsonl"
  ],
- "result": "3 WIN7-D10 (bits 48,70,103), 66 REFUTED-D10, 0 capped"
+ "determinism_control_file": "class2-lane-cost69a-determinism-rerun-20261114.jsonl",
+ "batch1_note": "raw-batch1 was started with hardcoded bits 0,1,2,3 before the enumerated list was regenerated after an environment reset; bit 3 is NOT a legal candidate of this child (REFUTED-D10, 4,172,283 nodes, reported in the raw file only and excluded from the record); bits 0,1,2 are legal and counted once (duplicate raw0/chunk1 lines deduplicated by first occurrence)",
+ "result": "3 WIN7-D10 (bits 48,70,103), 66 REFUTED-D10, 0 capped",
+ "note": "first cost-69 child of the class-2 target S5; named cost-69a"
 }
