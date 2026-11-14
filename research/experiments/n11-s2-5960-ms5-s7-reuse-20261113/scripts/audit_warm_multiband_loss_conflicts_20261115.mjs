@@ -53,7 +53,7 @@ const priorLosses = manifests.flatMap(m => m.records.filter(r => r.verdict === '
 const centralDoc = await parseJSON(CENTRAL_PATH);
 const centralRoots = centralDoc.combined_terminal_loss7_keys.map(x => x.toLowerCase());
 const knownText = await readText(resolve(OUT_DIR, 'ms5_s7_knownloss_candidates.csv'));
-const knownLines = knownText.trimEnd().split(/\\r?\\n/);
+const knownLines = knownText.trimEnd().split(/\r?\n/);
 const header = knownLines.shift().split(',');
 assert.equal(header[0], 's7_hex');
 assert.equal(header[3], 'cat');
@@ -115,5 +115,5 @@ const result = {
   conflicts:{...Object.fromEntries(Object.entries(conflicts).map(([k,v])=>[k,v.length])),total:0},
   interpretation_guard:'Bounded audit of published manifests and the category-1 candidate index only; not every raw cache or private worker cache. No frontier count or game outcome is changed.',
 };
-await writeFile(resolve(OUT_DIR, 'warm-multiband-loss-conflict-audit-20261115.json'), JSON.stringify(result,null,2)+'\\n');
+await writeFile(resolve(OUT_DIR, 'warm-multiband-loss-conflict-audit-20261115.json'), JSON.stringify(result,null,2)+'\n');
 console.log(JSON.stringify({warm:35,priorWin7:77,priorLoss7:200,centralParentLift:274,knownlossCategory1:396,conflicts:0},null,2));
