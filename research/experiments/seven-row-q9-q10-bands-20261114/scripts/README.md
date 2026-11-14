@@ -17,6 +17,19 @@
 - `decode_verify.js` — kissat v-line model → stones (cell var i+1 = cell[y*m+x]) →
   sat.js verifyConfig (census-free).
 
+- `genff.js` — fastest census CNF generator: same-row-pair-pair enumeration
+  (a q>=w+2-point circle has >=2 same-row pairs; two pairs (y1,e1),(y2,e2) determine
+  it exactly; pure-integer pre-filter with >= min(3,w-2,ceil((q-4)/2)) further rows
+  carrying an in-grid point — provably no false negatives — then the genfast-identical
+  exact scan; ORDERED offset pairs required, equal offsets included: an unordered loop
+  silently misses circles, pinned by the (6,20,8) control). Lines for q>w are the w
+  horizontal rows. Byte-identical CNF to sat2.js (8 samples incl. --cap=+tot/rowY/lex
+  and w=6) and genfast.js (4 samples incl. m=100) — `scripts/genff-verification.md`.
+  ~0.74s at (7,150,10) vs genfast 69s; asserts q>=w+2, w<=7.
+- `leanff.sh` — lean2.sh contract with genff.js + gen_sec field; CNFs deleted after the
+  kissat run (deterministically regenerable).
+- `batchff.sh` — wall-budget batch driver over m (resumable per-instance).
+
 sat2.js / sat.js / fastsat.js / verify_witness.py are used **verbatim** from
 `research/experiments/seven-row-inband-families-20261114/scripts/` (K0810 census core);
 they are not duplicated in this experiment. Paths inside the shell scripts point to
