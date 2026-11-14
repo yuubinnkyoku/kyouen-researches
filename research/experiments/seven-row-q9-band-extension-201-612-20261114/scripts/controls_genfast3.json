@@ -1,0 +1,67 @@
+{
+  "generator": "genfast3.js",
+  "md5": "12c2bd9cb3b24887fc3896f7ea9bcadf",
+  "date": "2026-11-15",
+  "method": "CNF byte-identity (cmp, 0 diff) of genfast3.js output against genfast.js (pair census) for m<=51 and genfast2.js for m=101..200, identical CLI options; line census built directly from the w rows (valid for q>=w+1: non-horizontal lines carry <= w < q grid points), circle census by chord-pair abstract enumeration.",
+  "samples": [
+    {
+      "ref": "genfast.js",
+      "instance": "7x24 q9 def"
+    },
+    {
+      "ref": "genfast.js",
+      "instance": "7x24 q10 def"
+    },
+    {
+      "ref": "genfast.js",
+      "instance": "7x30 q9 def"
+    },
+    {
+      "ref": "genfast.js",
+      "instance": "7x45 q10 def"
+    },
+    {
+      "ref": "genfast.js",
+      "instance": "7x51 q9 def"
+    },
+    {
+      "ref": "genfast.js",
+      "instance": "7x60 q9 def rowY=3 (rowfixed)"
+    },
+    {
+      "ref": "genfast2.js",
+      "instance": "7x101 q9 def"
+    },
+    {
+      "ref": "genfast2.js",
+      "instance": "7x110 q10 def lex H"
+    },
+    {
+      "ref": "genfast2.js",
+      "instance": "7x110 q10 def lex V"
+    },
+    {
+      "ref": "genfast2.js",
+      "instance": "7x110 q10 def lex HV"
+    },
+    {
+      "ref": "genfast2.js",
+      "instance": "7x150 q9 def"
+    },
+    {
+      "ref": "genfast2.js",
+      "instance": "7x200 q9 def"
+    },
+    {
+      "ref": "genfast2.js",
+      "instance": "8x26 q10 def"
+    }
+  ],
+  "selfcheck": [
+    {
+      "instance": "7x612 q9 def",
+      "note": "curves=1217 (7 rows + 1210 = 2m-14 family circles), vars=107928, clauses=392741, gen ~1s"
+    }
+  ],
+  "note": "genfast3 requires q>=w+2 (assert): at q=w+1 a q-point circle may have a single double row and the chord-pair census would be incomplete."
+}
