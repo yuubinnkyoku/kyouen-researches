@@ -40,6 +40,15 @@ artifacts:
 - path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-4373-2188/receipt.json
   role: manifest
   note: 15,301変数・115,995節・255,753行DRAT・VERIFIED（469秒）
+- path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3719-1860-x1c0e0/receipt.json
+  role: manifest
+  note: サイズ1860クラス(1,0,0)のUNSAT証明書（32,354行・VERIFIED 23秒）
+- path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3719-1860-x0c1e0/receipt.json
+  role: manifest
+  note: サイズ1860クラス(0,1,0)のUNSAT証明書（86,491行・VERIFIED 165秒）
+- path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3719-1860-x1c1e1/receipt.json
+  role: manifest
+  note: サイズ1860クラス(1,1,1)のUNSAT証明書（472,650行・VERIFIED 1,245秒）
 - path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3719-1861/a3719_1861.cnf
   role: data
   note: 形状(1,1,0)の単一CNF（sha256はreceipt参照）
@@ -87,6 +96,19 @@ SAT 側（達成）は証人密度が低く単一クエリでは遅いので、�
 
 既知の4素数（2207・2531・2647・3251）は 2003..3500 の走査で見つかっていた。
 3719 と 3727 はその範囲の外側にあり、**不達成素数は4個で閉じていない**ことが分かった。
+
+## さらに強い上界: p=3719 は `A(3719) <= 1859 = h`
+
+サイズ `h+1` の集合は `x + c - e = 1` から3クラスに尽きる。p=3719 ではその3クラスすべてを
+証明書つきで UNSAT と確認した:
+
+| クラス | 変数/節 | DRAT行数 | 求解 | 証明書検査 |
+|---|---|---|---|---|
+| (1,0,0) | 11,154 / 102,225 | 32,354 | 2.0 秒 | 23.3 秒 |
+| (0,1,0) | 13,012 / 105,938 | 86,491 | 4.2 秒 | 165.2 秒 |
+| (1,1,1) | 14,870 / 109,655 | 472,650 | 150.5 秒 | 1,245 秒 |
+
+よって **`A(3719) <= 1859 = h`**。`h+1` すら存在しないので、2531・3251 と同じ性質を持つ。
 
 ## 限界
 
