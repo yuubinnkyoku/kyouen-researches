@@ -1,12 +1,11 @@
 {
   "schema": 1,
-  "note": "(7,10) witness-free band confirmation+extension, def+lex=H,V,HV, fastsat (calibration vs seven-row-inband-families results.jsonl, conflicts bit-exact for m=19..40) + kissat 4.0.4 independent verdicts",
-  "total": 33,
+  "note": "(7,10) witness-free band confirmation+extension. m=19..51: def+lex=H,V,HV, fastsat (calibration vs seven-row-inband-families results.jsonl, conflicts bit-exact for m=19..40) + kissat 4.0.4 independent verdicts (band1.sh). m=52..60: kissat 4.0.4 only, lean2.sh (genfast.js CNF byte-identical to sat2.js; sat2.js census OOMs at m=52 in this container); m=52/60 def-only main runs + def+lex=H,V,HV cross-checks all UNSAT",
+  "total": 44,
   "allUnsat": true,
-  "bothSolversAgree": true,
   "widths": {
     "min": 19,
-    "max": 51
+    "max": 60
   },
   "fastsatConflicts": {
     "19": 3215,
@@ -43,7 +42,7 @@
     "50": 4021,
     "51": 2352
   },
-  "kissatConflicts": {
+  "kissatConflictsBand1": {
     "19": 2415,
     "20": 2410,
     "21": 1662,
@@ -77,5 +76,73 @@
     "49": 1236,
     "50": 1056,
     "51": 1171
-  }
+  },
+  "leanExtension": [
+    {
+      "m": 52,
+      "lex": "none",
+      "kissatConflicts": 1370,
+      "sec": 0.1
+    },
+    {
+      "m": 53,
+      "lex": "none",
+      "kissatConflicts": 987,
+      "sec": 0.1
+    },
+    {
+      "m": 54,
+      "lex": "none",
+      "kissatConflicts": 1057,
+      "sec": 0.1
+    },
+    {
+      "m": 55,
+      "lex": "none",
+      "kissatConflicts": 941,
+      "sec": 0.1
+    },
+    {
+      "m": 56,
+      "lex": "none",
+      "kissatConflicts": 888,
+      "sec": 0.1
+    },
+    {
+      "m": 57,
+      "lex": "none",
+      "kissatConflicts": 1203,
+      "sec": 0.1
+    },
+    {
+      "m": 58,
+      "lex": "none",
+      "kissatConflicts": 953,
+      "sec": 0.1
+    },
+    {
+      "m": 59,
+      "lex": "none",
+      "kissatConflicts": 1634,
+      "sec": 0.1
+    },
+    {
+      "m": 60,
+      "lex": "none",
+      "kissatConflicts": 1184,
+      "sec": 0.1
+    },
+    {
+      "m": 52,
+      "lex": "H,V,HV",
+      "kissatConflicts": 1033,
+      "sec": 0.1
+    },
+    {
+      "m": 60,
+      "lex": "H,V,HV",
+      "kissatConflicts": 1020,
+      "sec": 0.1
+    }
+  ]
 }
