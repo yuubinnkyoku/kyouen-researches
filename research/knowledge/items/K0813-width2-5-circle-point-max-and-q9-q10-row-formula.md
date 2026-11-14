@@ -17,7 +17,7 @@ solution:
   verification: [mathematical-proof, independent-enumeration]
   certificate: witness円(2x−3)²+(2y−3)²=10（整係数形x²+y²−3x−3y+2=0・行0..3各2点）とP(5)別witness円(2x−7)²+(2y−7)²=50
   independent_check: 対偶導出（K0069/K0070/K0077/K0331の確定M値とK0767系）がwitness下界と完全一致・全円列挙スクリプトで窓内最大一致
-  note: "P(w)表はw=2..82で連続に。P(17),P(18)∈{16,17,18}はopenのまま"
+  note: "P(w)表はw=2..82で連続に。P(17)=P(18)=16はK0778で全称確定。"
 relations:
 - type: depends_on
   target: K0763
@@ -25,6 +25,9 @@ relations:
 - type: depends_on
   target: K0767
   note: 系「q>P(w)かつq>wなら行分離M_{w,q}=q−1」へのP(5)=8の代入と対偶
+- type: depends_on
+  target: K0778
+  note: P(17)=P(18)=16の全称確定（K0767に残る旧open範囲を解消）
 - type: depends_on
   target: K0331
   note: M_{5,8}=16の確定値（対偶によるP(5)≥8の第2導出）
@@ -94,5 +97,5 @@ artifacts:
 
 - 上界の根拠は数学的論証（行境界・単調性）であり、全円列挙は x が有界な補強にすぎない。
 - 直線（a=0）は P(w) の定義に含めない（行分離の文脈では別扱い）。
-- P(17),P(18) ∈ {16,17,18} は引き続き open（K0767）。
+- P(17)=P(18)=16 は K0778 で全称確定。K0767 の当時の未解決記述は後続結果で解消済み。
 - 系は q ≤ 8 の (5,6)/(5,7)/(5,8) には適用されず、これらの境界・確定値は不変。

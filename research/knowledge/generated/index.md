@@ -800,3 +800,4 @@
 | [K0814](../items/K0814-attained-equality-3793-3803-3863.md) | p=3793・3803・3863は等号A(p)=(p+3)/2を達成する（サイズh+2の証人を独立整数幾何で監査） | proposition | computed | maximum-safe, geometry, search-methods |
 | [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) | 列追加拡張・深除去拡張と外部SATソルバによる下界更新 — M_{6,5}≥31・M_{6,6}≥24・M_{5,6}≥22・M_{6,7}≥21・M_{6,8}≥19・6×12 q=8最小極大=37 | proposition | proved | rectangles, variants |
 | [K0816](../items/K0816-five-row-m20-deficient-nonexistence.md) | 5x20 q=7 row-deficient maximal nonexistence (all 19 classes) — witness-free widths extend to 20, M_{5,7} ∈ {19,20} or ≥22 | proposition | computed | rectangles, maximal-safe |
+| [K0817](../items/K0817-circle-strip-subadditivity-and-density-bound.md) | 円の連続行窓点数 P(w) の劣加法性と漸近密度上界 | proposition | proved | geometry, rectangles |
