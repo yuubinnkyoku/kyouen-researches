@@ -1,0 +1,224 @@
+{
+ "schema": "n11-class2-lane-cost70c-warm-batch3-records-20261115-v1",
+ "generated_utc": "2026-11-14T20:55Z",
+ "lane": "class2-lane long-term lane (warm batch-3, claim b9822fb0)",
+ "baseline_frontier": "unified merge chain head 1,154 / 6,693 / 527,949 / 4,963 / 391,672 (class-frontier-unified-merge-recompute-20261115.json, commit 7aaa7d83)",
+ "sweep_source": "class2-lane-cost70c-sweep-20261115.json: 13 WIN7-D10 / 0 capped / 100,935,666 v16 nodes, determinism rerun node-exact, v15 crosscheck 13/13 loss=true; this batch certifies the last 4 WIN7 bits 3/42/86/103, completing the cost-70c band 13/13",
+ "extraction": "warm_rebuild_pipeline2_20261115.py (repo-verbatim blind extractor class4_child1_cert_extractor_exact.ts via cert_driver68.ts, FBS=1<<20, fbt_drops=0, rows LC_ALL=C sorted-unique) + verify_win7_certificate_bigint_independent.mjs per certificate (BigInt 3x3 cofactor expansion, no solver/cache/repo-verifier import)",
+ "independent_verification": "per-certificate asserts inside the pipeline: root stones=7, root loser mobility == legal_candidates.py independent enumeration, all sub-roots PASS, strategy/consumed union 0/0 both directions, terminal stone range within 13..17, rows sorted strictly ascending and unique; determinism control: bit 103 re-extracted in a separate process, rows/extraction nodes/md5 all identical",
+ "records": [
+  {
+   "band": "class2-lane-cost70c",
+   "child_hex": "00000000000000803242000000000000",
+   "bit": 3,
+   "root_hex": "00000000000000803242000000000008",
+   "verdict": "WIN7",
+   "rows": 50955,
+   "extraction_nodes": 11537642,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (cost-70c warm batch-3 rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 63,
+    "independent_enumeration_legal": 63,
+    "match": true
+   },
+   "sub_roots_verified": 63,
+   "sub_roots_pass": 63,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 116180,
+   "winner_states": 75204,
+   "loser_states": 23606,
+   "loser_reply_edges": 107551,
+   "terminal_count": 17370,
+   "md5": "ae02f4b95be3e50518ce7830d2083434",
+   "sha256": "cf71a53fb6e2e9a06a6dd7c385e55c9ca297f41dd96672f72f8fa56ebe2dc423",
+   "bytes": 1841794,
+   "extraction_ms": 24033,
+   "selection": "warm batch-3: the 4 remaining uncertified WIN7-D10 bits of the completed cost-70c sweep (class2-lane-cost70c-sweep-20261115.json, 13 WIN7-D10 / 0 capped; claimed by class2-lane-cost70c-warm-batch3-inflight-20261115.json)",
+   "storage": {
+    "layout": "part1of2/part2of2 (line-boundary split; repo convention for >1.75 MB certificates)",
+    "part1": {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70c-certificates/bit3-root-00000000000000803242000000000008.cert.part1of2",
+     "bytes": 922360,
+     "md5": "1f9bf9e95d4b038e0b7562d9927f4f7a"
+    },
+    "part2": {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70c-certificates/bit3-root-00000000000000803242000000000008.cert.part2of2",
+     "bytes": 919434,
+     "md5": "28240192ba67d06c439e14d7fddd16e1"
+    },
+    "concat_md5_equals_whole": true
+   },
+   "prior_certificate_absence_check": {
+    "method": "remote directory listing of output/class2-lane-cost70c-certificates/ immediately before the batch-3 claim (GitHub tree page, 2026-11-14 UTC): only the 9 already-certified bits 94/20/23/105/92/40/24/11/8 had certificate files",
+    "prior_certificate_hits": 0
+   }
+  },
+  {
+   "band": "class2-lane-cost70c",
+   "child_hex": "00000000000000803242000000000000",
+   "bit": 42,
+   "root_hex": "00000000000000803242040000000000",
+   "verdict": "WIN7",
+   "rows": 50015,
+   "extraction_nodes": 11335391,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (cost-70c warm batch-3 rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 61,
+    "independent_enumeration_legal": 61,
+    "match": true
+   },
+   "sub_roots_verified": 61,
+   "sub_roots_pass": 61,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 114563,
+   "winner_states": 74293,
+   "loser_states": 23590,
+   "loser_reply_edges": 106369,
+   "terminal_count": 16680,
+   "md5": "b7ae6d13da02e880ca10b4ba7c8231d9",
+   "sha256": "ca805de7b35d2ded77bf022d97d70144e207fe5c8fae4ce2ad9f09134cac1056",
+   "bytes": 1806229,
+   "extraction_ms": 23939,
+   "selection": "warm batch-3: the 4 remaining uncertified WIN7-D10 bits of the completed cost-70c sweep (class2-lane-cost70c-sweep-20261115.json, 13 WIN7-D10 / 0 capped; claimed by class2-lane-cost70c-warm-batch3-inflight-20261115.json)",
+   "storage": {
+    "layout": "part1of2/part2of2 (line-boundary split; repo convention for >1.75 MB certificates)",
+    "part1": {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70c-certificates/bit42-root-00000000000000803242040000000000.cert.part1of2",
+     "bytes": 904657,
+     "md5": "3fb6572e00b04928de2c6a46b1c3838d"
+    },
+    "part2": {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70c-certificates/bit42-root-00000000000000803242040000000000.cert.part2of2",
+     "bytes": 901572,
+     "md5": "45184e560aa4cbf020e18974f8e1ce0d"
+    },
+    "concat_md5_equals_whole": true
+   },
+   "prior_certificate_absence_check": {
+    "method": "remote directory listing of output/class2-lane-cost70c-certificates/ immediately before the batch-3 claim (GitHub tree page, 2026-11-14 UTC): only the 9 already-certified bits 94/20/23/105/92/40/24/11/8 had certificate files",
+    "prior_certificate_hits": 0
+   }
+  },
+  {
+   "band": "class2-lane-cost70c",
+   "child_hex": "00000000000000803242000000000000",
+   "bit": 86,
+   "root_hex": "00000000004000803242000000000000",
+   "verdict": "WIN7",
+   "rows": 68358,
+   "extraction_nodes": 27716890,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (cost-70c warm batch-3 rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 64,
+    "independent_enumeration_legal": 64,
+    "match": true
+   },
+   "sub_roots_verified": 64,
+   "sub_roots_pass": 64,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 162117,
+   "winner_states": 105391,
+   "loser_states": 34601,
+   "loser_reply_edges": 153407,
+   "terminal_count": 22125,
+   "md5": "483618fc5b04db401d91dd6a82b25dfd",
+   "sha256": "66b1497a37e6583d4d28bd4b4ff3bf170e8861d538c37572b9da3a4730c9d6cc",
+   "bytes": 2471137,
+   "extraction_ms": 54223,
+   "selection": "warm batch-3: the 4 remaining uncertified WIN7-D10 bits of the completed cost-70c sweep (class2-lane-cost70c-sweep-20261115.json, 13 WIN7-D10 / 0 capped; claimed by class2-lane-cost70c-warm-batch3-inflight-20261115.json)",
+   "storage": {
+    "layout": "part1of2/part2of2 (line-boundary split; repo convention for >1.75 MB certificates)",
+    "part1": {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70c-certificates/bit86-root-00000000004000803242000000000000.cert.part1of2",
+     "bytes": 1237905,
+     "md5": "5b50c0d3e6339eef4f7f07c353740141"
+    },
+    "part2": {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70c-certificates/bit86-root-00000000004000803242000000000000.cert.part2of2",
+     "bytes": 1233232,
+     "md5": "86bfec5a2b9454e9c2ec5e7068b782b4"
+    },
+    "concat_md5_equals_whole": true
+   },
+   "prior_certificate_absence_check": {
+    "method": "remote directory listing of output/class2-lane-cost70c-certificates/ immediately before the batch-3 claim (GitHub tree page, 2026-11-14 UTC): only the 9 already-certified bits 94/20/23/105/92/40/24/11/8 had certificate files",
+    "prior_certificate_hits": 0
+   }
+  },
+  {
+   "band": "class2-lane-cost70c",
+   "child_hex": "00000000000000803242000000000000",
+   "bit": 103,
+   "root_hex": "00000080000000803242000000000000",
+   "verdict": "WIN7",
+   "rows": 45205,
+   "extraction_nodes": 11012568,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (cost-70c warm batch-3 rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 57,
+    "independent_enumeration_legal": 57,
+    "match": true
+   },
+   "sub_roots_verified": 57,
+   "sub_roots_pass": 57,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "visited_states_across_subroots": 96418,
+   "winner_states": 62677,
+   "loser_states": 19734,
+   "loser_reply_edges": 89201,
+   "terminal_count": 14007,
+   "md5": "aac78501eb7b16edfc4cb45c04d2a897",
+   "sha256": "8fd2eef5fdaf24ab07954c33e6f4eaa35c93b4556f4bbe714cf06f1158768abd",
+   "bytes": 1631748,
+   "extraction_ms": 22636,
+   "selection": "warm batch-3: the 4 remaining uncertified WIN7-D10 bits of the completed cost-70c sweep (class2-lane-cost70c-sweep-20261115.json, 13 WIN7-D10 / 0 capped; claimed by class2-lane-cost70c-warm-batch3-inflight-20261115.json)",
+   "storage": {
+    "layout": "single file",
+    "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70c-certificates/bit103-root-00000080000000803242000000000000.cert",
+    "bytes": 1631748,
+    "md5": "aac78501eb7b16edfc4cb45c04d2a897"
+   },
+   "prior_certificate_absence_check": {
+    "method": "remote directory listing of output/class2-lane-cost70c-certificates/ immediately before the batch-3 claim (GitHub tree page, 2026-11-14 UTC): only the 9 already-certified bits 94/20/23/105/92/40/24/11/8 had certificate files",
+    "prior_certificate_hits": 0
+   },
+   "determinism_rerun": {
+    "method": "full independent re-extraction in a separate process (warm-batch3 determinism control)",
+    "rows": 45205,
+    "extraction_nodes": 11012568,
+    "md5": "aac78501eb7b16edfc4cb45c04d2a897",
+    "node_and_md5_exact": true
+   }
+  }
+ ],
+ "frontier_effect": "to be derived by the canonical fold recompute extending the unified merge head (assert 1,154 then fold these 4 receipts); no frontier numbers are claimed here",
+ "unknown_status": "solved counts measure manifest coverage, not the game-theoretic value of any position; REFUTED-D10 proves only absence of WIN7-D10 in that subtree; WIN7 certificates prove a win within depth 10 from the individual 7-stone roots only; 11x11 empty board, two-stone root {49,60}, S2 {59,60}, class 2 and class 4 remain UNKNOWN"
+}

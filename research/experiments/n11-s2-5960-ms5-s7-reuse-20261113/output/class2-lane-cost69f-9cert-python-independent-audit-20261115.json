@@ -1,0 +1,226 @@
+{
+ "schema": "n11-class2-lane-cost69f-9cert-python-independent-audit-20261115-v1",
+ "date": "2026-11-15",
+ "audited_scope": "all nine WIN7 certificates of the class2-lane cost-69f sweep (bits 2/20/44/68/69/94/109/118/119 of child 00000000000000809102000000000008, the folded chain head 1163 receipt group)",
+ "records_sources": [
+  "class2-lane-cost69f-win7-certificates-20261115.json (bits 20/44/68/69/118)",
+  "class2-lane-cost69f-win7-certificates-2-20261115.json (bits 2/94/109/119, 2-part storage)"
+ ],
+ "method": "fresh Python implementation; no repository verifier import, no engine, no verdict cache, no solver, no floating point; exact integer Bareiss 4x4 determinant of [x^2+y^2,x,y,1] on arbitrary-precision integers; forbidden-by-triple masks recomputed from scratch; per certificate: published storage verified first (single files and both parts of the four 2-part certificates against bytes, md5, sha256 where published and git blob sha, line-boundary split, joined md5/sha256/bytes equal to the records whole-file hashes), then exact header/root lines, root = child | 1<<bit with 7 stones and C(7,4)=35 non-zero determinants (no 4 cocircular), loser mobility re-enumerated and matched to the one-bit strategy rows, full sub-root decomposition with every strategy move legal, all loser replies expanded, terminals loser-stuck at 13..17 stones, no strategy rows at loser or terminal states, the exact consumed/rows union (0 missing / 0 extra) over all sub-roots, records cross-check of winner/loser state counts, loser reply edges, visited states, terminal count, and the v15 cross-engine anchor (loss=true, node count) from class2-lane-cost69f-v15-crosscheck-20261115.jsonl",
+ "totals": {
+  "certificates": 9,
+  "strategy_rows": 495585,
+  "visited_states": 1073872,
+  "winner_states": 691336,
+  "loser_states": 201553,
+  "loser_reply_edges": 956352,
+  "terminal_count": 180983,
+  "subroots_verified": 509,
+  "all_pass": true,
+  "terminal_range_all": [
+   13,
+   17
+  ]
+ },
+ "certificates": [
+  {
+   "bit": 20,
+   "root_hex": "00000000000000809102000000100008",
+   "storage": "single file",
+   "bytes": 1741046,
+   "rows": 48171,
+   "loser_mobility": 56,
+   "subroots_verified": 56,
+   "visited_states": 106145,
+   "winner_states": 68219,
+   "loser_states": 19911,
+   "loser_reply_edges": 93743,
+   "terminal_count": 18015,
+   "terminals_range": [
+    13,
+    17
+   ],
+   "v15_anchor_nodes": 8760558,
+   "union_missing": 0,
+   "union_extra": 0,
+   "seconds": 11.2
+  },
+  {
+   "bit": 44,
+   "root_hex": "00000000000000809102100000000008",
+   "storage": "single file",
+   "bytes": 1785975,
+   "rows": 49220,
+   "loser_mobility": 55,
+   "subroots_verified": 55,
+   "visited_states": 106226,
+   "winner_states": 68577,
+   "loser_states": 20268,
+   "loser_reply_edges": 94395,
+   "terminal_count": 17381,
+   "terminals_range": [
+    13,
+    17
+   ],
+   "v15_anchor_nodes": 12335445,
+   "union_missing": 0,
+   "union_extra": 0,
+   "seconds": 7.6
+  },
+  {
+   "bit": 68,
+   "root_hex": "00000000000000909102000000000008",
+   "storage": "single file",
+   "bytes": 1739044,
+   "rows": 47977,
+   "loser_mobility": 58,
+   "subroots_verified": 58,
+   "visited_states": 101093,
+   "winner_states": 64892,
+   "loser_states": 18465,
+   "loser_reply_edges": 88547,
+   "terminal_count": 17736,
+   "terminals_range": [
+    13,
+    17
+   ],
+   "v15_anchor_nodes": 6780201,
+   "union_missing": 0,
+   "union_extra": 0,
+   "seconds": 5.7
+  },
+  {
+   "bit": 69,
+   "root_hex": "00000000000000a09102000000000008",
+   "storage": "single file",
+   "bytes": 1284192,
+   "rows": 35501,
+   "loser_mobility": 51,
+   "subroots_verified": 51,
+   "visited_states": 82185,
+   "winner_states": 52957,
+   "loser_states": 15797,
+   "loser_reply_edges": 74124,
+   "terminal_count": 13431,
+   "terminals_range": [
+    13,
+    17
+   ],
+   "v15_anchor_nodes": 6934812,
+   "union_missing": 0,
+   "union_extra": 0,
+   "seconds": 4.0
+  },
+  {
+   "bit": 118,
+   "root_hex": "00400000000000809102000000000008",
+   "storage": "single file",
+   "bytes": 1895893,
+   "rows": 52480,
+   "loser_mobility": 54,
+   "subroots_verified": 54,
+   "visited_states": 117950,
+   "winner_states": 75832,
+   "loser_states": 20956,
+   "loser_reply_edges": 103443,
+   "terminal_count": 21162,
+   "terminals_range": [
+    13,
+    17
+   ],
+   "v15_anchor_nodes": 9668618,
+   "union_missing": 0,
+   "union_extra": 0,
+   "seconds": 5.6
+  },
+  {
+   "bit": 2,
+   "root_hex": "0000000000000080910200000000000c",
+   "storage": "2 parts (repo convention for >1.75 MB certificates)",
+   "bytes": 2532382,
+   "rows": 69879,
+   "loser_mobility": 58,
+   "subroots_verified": 58,
+   "visited_states": 142740,
+   "winner_states": 92342,
+   "loser_states": 27477,
+   "loser_reply_edges": 131019,
+   "terminal_count": 22921,
+   "terminals_range": [
+    13,
+    17
+   ],
+   "v15_anchor_nodes": 16285738,
+   "union_missing": 0,
+   "union_extra": 0,
+   "seconds": 6.7
+  },
+  {
+   "bit": 94,
+   "root_hex": "00000000400000809102000000000008",
+   "storage": "2 parts (repo convention for >1.75 MB certificates)",
+   "bytes": 1932853,
+   "rows": 53449,
+   "loser_mobility": 56,
+   "subroots_verified": 56,
+   "visited_states": 120250,
+   "winner_states": 77307,
+   "loser_states": 22782,
+   "loser_reply_edges": 107309,
+   "terminal_count": 20161,
+   "terminals_range": [
+    13,
+    17
+   ],
+   "v15_anchor_nodes": 15200842,
+   "union_missing": 0,
+   "union_extra": 0,
+   "seconds": 5.6
+  },
+  {
+   "bit": 109,
+   "root_hex": "00002000000000809102000000000008",
+   "storage": "2 parts (repo convention for >1.75 MB certificates)",
+   "bytes": 2583344,
+   "rows": 71485,
+   "loser_mobility": 60,
+   "subroots_verified": 60,
+   "visited_states": 153920,
+   "winner_states": 98972,
+   "loser_states": 28551,
+   "loser_reply_edges": 136384,
+   "terminal_count": 26397,
+   "terminals_range": [
+    13,
+    17
+   ],
+   "v15_anchor_nodes": 13955169,
+   "union_missing": 0,
+   "union_extra": 0,
+   "seconds": 6.8
+  },
+  {
+   "bit": 119,
+   "root_hex": "00800000000000809102000000000008",
+   "storage": "2 parts (repo convention for >1.75 MB certificates)",
+   "bytes": 2432356,
+   "rows": 67423,
+   "loser_mobility": 61,
+   "subroots_verified": 61,
+   "visited_states": 143363,
+   "winner_states": 92238,
+   "loser_states": 27346,
+   "loser_reply_edges": 127388,
+   "terminal_count": 23779,
+   "terminals_range": [
+    13,
+    17
+   ],
+   "v15_anchor_nodes": 13661829,
+   "union_missing": 0,
+   "union_extra": 0,
+   "seconds": 6.5
+  }
+ ],
+ "interpretation_guard": "the audit reproduces the certificates game-legal content exactly; WIN7 certificates prove a win within the certified strategy from the individual 7-stone roots only; they close receipt orbits in the s6 manifest but do not by themselves close the six-stone child, the S5 parent, the S2 {59,60} root, or the 11x11 empty board; solved counts measure manifest bookkeeping, not game-theoretic values; 11x11 empty root / {49,60} / S2 {59,60} / class 2 / class 4 remain UNKNOWN"
+}

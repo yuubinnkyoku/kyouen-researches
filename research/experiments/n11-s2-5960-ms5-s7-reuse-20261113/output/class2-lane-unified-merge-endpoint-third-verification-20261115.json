@@ -1,0 +1,188 @@
+{
+ "schema": "n11-class2-unified-merge-endpoint-third-verification-20261115-v1",
+ "date": "2026-11-15",
+ "lane": "class2-lane",
+ "subject": "third independent verification of the unified-merge chain head (6 C-hex fold, merged-1148 solved 1148 -> unified 1154)",
+ "published_under": "commits 7aaa7d83 + 625b0e0c; authoritative JSON research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-unified-merge-recompute-20261115.json",
+ "status": "all published endpoint numbers, the 9-bucket open demand histogram, and the candidate rankings are reproduced exactly by a third, structurally different method (solved-set-free ledger)",
+ "method": {
+  "name": "solved-set-free ledger verification",
+  "inputs": [
+   "research/experiments/n11-s2-5960-milestone5-20261112/output/ms5_s6_manifest_part1..6.csv (7867 rows: hex, cost, classes)",
+   "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-s5-ranking-after-merged-multiband2-68dhyg-20261115.csv (175 open S5 orbits with per-S5 remaining count and remaining cost at merged-1148)",
+   "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-top-candidates-s6-after-merged-multiband2-68dhyg-20261115.csv (77 child rows with demand strings)",
+   "the 6 marginal C hexes of the cost-70c band as published in the 50-receipt reconciliation audit (independently BigInt-verified there)"
+  ],
+  "inputs_not_used": "win7-reuse-hits.csv.gz, s5-remaining-after-reuse.csv.gz, s5-s6-remaining-incidences.csv.gz (unavailable in this environment; not needed by the ledger method)",
+  "incidence_regeneration": "children(X) = {canon(X | 1<<m) : 0<=m<=120} intersect manifest, 175*121 = 21175 canon calls; canon = min over the 8 D4 transforms of the 121-bit BigInt mask, bit index 11*b+a, transforms (x,y),(y,10-x),(10-x,10-y),(10-y,x),(10-x,y),(x,10-y),(y,x),(10-y,10-x)",
+  "key_theorem": "every C hex is unsolved at merged-1148, hence h in rem(X) iff h in children(X); the demand (c1,c2,c4 over the 175 open S5) of any unsolved orbit equals the demand over its rem rows; non-C orbits keep unchanged demand unless their serving S5 closes, and a closing S5 remaining orbits are all in C. Therefore new_rem(X) = rem1148(X) - |C intersect children(X)|, unique = 6699 - |C intersect unique|, sum = 528423 - sum(cost(C intersect unique)), and histogram deltas come only from C hexes with c1=0 (open_only).",
+  "difference_from_prior_verifications": "the two published implementations re-run the fold on runpy-reconstructed solved sets; this verification uses only published ledger aggregates plus freshly regenerated incidence, so it is an independent cross-check of the fold arithmetic itself"
+ },
+ "controls": {
+  "manifest_rows": 7867,
+  "manifest_duplicate_hexes": 0,
+  "manifest_all_d4_canonical_under_verifier_implementation": true,
+  "open_s5_rows": 175,
+  "open_s5_all_d4_canonical": true,
+  "regenerated_child_edges": 14896,
+  "per_s5_children_ge_remaining": "175/175",
+  "top_candidates_rows_exact_reproduced": "77/77 (child hex in regenerated children, manifest cost equal, demand string c1/c2/c4 equal; 18+10+8+41 rows for the four target S5s)",
+  "closing_iff_cost_delta_zero": "175/175",
+  "cap_violations": 0
+ },
+ "marginal_six_structure": {
+  "all_six_in_manifest": true,
+  "all_six_d4_canonical": true,
+  "cost_sum": 474,
+  "costs": {
+   "bit105_00000000000000849002000000008000": 76,
+   "bit92_00000000000000849002000010000000": 80,
+   "bit40_00000000000000801242010000000000": 75,
+   "bit24_00000000000000801242000001000000": 80,
+   "bit11_00000000000000801242000000000800": 78,
+   "bit8_00000000000000801242000000000100": 85
+  },
+  "demand_all_six": "c1=0,c2=2,c4=0 (all six open_only, histogram bucket c2=2,c4=0)",
+  "parents_per_hex_exactly_two_class2_s5": true,
+  "distinct_parent_count": 7,
+  "per_hex_parents": {
+   "00000000000000849002000000008000": [
+    "00000000000083800000008000000",
+    "00000000000000801242000000000000"
+   ],
+   "00000000000000849002000010000000": [
+    "00000000000000403800000080000000",
+    "00000000000000801242000000000000"
+   ],
+   "00000000000000801242010000000000": [
+    "00000000000000801202010000000000",
+    "00000000000000801242000000000000"
+   ],
+   "00000000000000801242000001000000": [
+    "00000000000003800000009000000",
+    "00000000000000801242000000000000"
+   ],
+   "00000000000000801242000000000800": [
+    "00000000000003800000008000002",
+    "00000000000000801242000000000000"
+   ],
+   "00000000000000801242000000000100": [
+    "00000000000000801242000000000000",
+    "00000000000000801202000000000100"
+   ]
+  },
+  "per_parent_deltas": {
+   "00000000000000801242000000000000": {
+    "remaining": [
+     70,
+     64
+    ],
+    "rem_cost": [
+     5517,
+     5043
+    ],
+    "note": "common parent of all six marginal hexes, -474"
+   },
+   "00000000000003800000008000002": {
+    "remaining": [
+     51,
+     50
+    ],
+    "rem_cost": [
+     3837,
+     3759
+    ],
+    "hex": "bit11 00000000000000801242000000000800"
+   },
+   "00000000000083800000008000000": {
+    "remaining": [
+     57,
+     56
+    ],
+    "rem_cost": [
+     4257,
+     4181
+    ],
+    "hex": "bit105 00000000000000849002000000008000"
+   },
+   "00000000000003800000009000000": {
+    "remaining": [
+     63,
+     62
+    ],
+    "rem_cost": [
+     4778,
+     4698
+    ],
+    "hex": "bit24 00000000000000801242000001000000"
+   },
+   "00000000000000801202010000000000": {
+    "remaining": [
+     65,
+     64
+    ],
+    "rem_cost": [
+     4708,
+     4633
+    ],
+    "hex": "bit40 00000000000000801242010000000000"
+   },
+   "00000000000000403800000080000000": {
+    "remaining": [
+     69,
+     68
+    ],
+    "rem_cost": [
+     5590,
+     5510
+    ],
+    "hex": "bit92 00000000000000849002000010000000"
+   },
+   "00000000000000801202000000000100": {
+    "remaining": [
+     71,
+     70
+    ],
+    "rem_cost": [
+     5796,
+     5711
+    ],
+    "hex": "bit8 00000000000000801242000000000100"
+   }
+  },
+  "closers": "none: remaining_s5 stays 175; the fold removes 6 remaining children from open S5s without closing any S5",
+  "candidate_rows_unchanged": "best coverable class2 00000000000000809102000000000000 (8/588), audit-blocked 00000000000000809082000000000000 (10/698), best class4 00000000020000003800000080000000 (18/1460) all unchanged"
+ },
+ "endpoint_verification": {
+  "numbers": {
+   "solved": 1154,
+   "remaining_s5": 175,
+   "unique_uncovered": 6693,
+   "sum_uncovered_cost": 527949,
+   "open_demand": 4963,
+   "open_demand_cost": 391672
+  },
+  "match_with_published_unified_merge_json": "exact on all six",
+  "demand_histogram_open_only": {
+   "c2=0,c4=1": 527,
+   "c2=0,c4=2": 3021,
+   "c2=0,c4=3": 12,
+   "c2=1,c4=0": 239,
+   "c2=1,c4=1": 60,
+   "c2=1,c4=2": 9,
+   "c2=2,c4=0": 1034,
+   "c2=2,c4=1": 6,
+   "c2=2,c4=2": 55
+  },
+  "histogram_delta_from_1148": "bucket c2=2,c4=0: 1040 -> 1034 (-6); all other buckets unchanged; total 4963",
+  "candidate_rankings_match": true
+ },
+ "interpretation_guard": "the solved count is manifest coverage progress, not the game-theoretic value of any position. Standard 11x11 empty board, two-stone roots {49,60} and {59,60}, S2 {59,60}, class2, and class4 all remain UNKNOWN.",
+ "limits": [
+  "this is a ledger verification over published receipts, not a re-execution of certificate bodies",
+  "the 6 marginal hexes are taken from the published reconciliation audit (independently BigInt-verified there) rather than re-derived from certificate bytes",
+  "the demand structure is derived from the merged-1148 published per-S5 aggregates; an identical error affecting both the ranking CSV and the fold would not be detected",
+  "the three gz inputs could not be fetched in this environment, so the solved-set path was not independently re-run here (it was doubly run by the parallel lanes)"
+ ],
+ "observed_parallel_state_at_push": "cost-70c warm batch-3 complete (bits 3/42/86/103 certificates published, claim closure, gain-0 prediction vs 1154) and cost-69f certificates 5 of 9 (bits 20/44/68/69/118) are already on main; these are the material for the next unified fold"
+}
