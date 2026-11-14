@@ -11105,6 +11105,15 @@
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (verifier): 増分DRATチェッカー（RUP＋RAT、決定レベルとtrail）
 - [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (verifier): 増分DRATチェッカー（RUP＋RAT）
 - [K0707](../items/K0707-incremental-drat-deletion-unsoundness.md) (verifier): 削除時に代入を失効する修正版。一般健全性の証明ではない
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/audit_h2_3793.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/audit_h2_3793.json)
+
+- [K0814](../items/K0814-attained-equality-3793-3803-3863.md) (data): 辺0件・独立検証器rc=0の生出力（92.4秒）
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/audit_h2_3803.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/audit_h2_3803.json)
+
+- [K0814](../items/K0814-attained-equality-3793-3803-3863.md) (data): 辺0件・独立検証器rc=0の生出力（99.3秒）
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/audit_h2_3863.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/audit_h2_3863.json)
+
+- [K0814](../items/K0814-attained-equality-3793-3803-3863.md) (data): 辺0件・独立検証器rc=0の生出力（83.7秒）
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-2207-1105/a2207_1105.cnf](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-2207-1105/a2207_1105.cnf)
 
 - [K0722](../items/K0722-p2207-safe-lower-bound-1104.md) (certificate): サイズ1105（クラス(1,1,0)）の単一CNF。7,720変数・50,616節
@@ -11267,6 +11276,15 @@
 
 - [K0768](../items/K0768-p2647-113-full-d-sweep-100k.md) (data): 1,323 レコード、67 UNSAT・1,256 UNKNOWN・0 SAT、予算 100k/d
 - [K0769](../items/K0769-candidate-b-assumption-partition.md) (data): 分割の適用記録 (1,323 d)
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/witness_h2_3793.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/witness_h2_3793.json)
+
+- [K0814](../items/K0814-attained-equality-3793-3803-3863.md) (certificate): 1898点（=h+2、完全対1894）。点は(t,t² mod 3793)
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/witness_h2_3803.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/witness_h2_3803.json)
+
+- [K0814](../items/K0814-attained-equality-3793-3803-3863.md) (certificate): 1903点（=h+2、完全対1901）
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/witness_h2_3863.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/witness_h2_3863.json)
+
+- [K0814](../items/K0814-attained-equality-3793-3803-3863.md) (certificate): 1933点（=h+2、完全対1929）
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/reverse_order_probe.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/reverse_order_probe.py)
 
 - [K0735](../items/K0735-easy-unsat-history-solver-independence.md) (verifier): 逆順と fresh-each の再解器
@@ -13874,6 +13892,7 @@
 ## [research/log/2026-11-14-new-exceptional-primes-3719-3727.md](../../../research/log/2026-11-14-new-exceptional-primes-3719-3727.md)
 
 - [K0812](../items/K0812-new-exceptional-primes-3719-3727.md) (log): 発見の経緯（d走査の候補→単一CNF→証明書）と範囲の注意
+- [K0814](../items/K0814-attained-equality-3793-3803-3863.md) (log): 3701..3899 の走査全体（達成3・不達成2・未決18）
 ## [research/log/2026-11-14-width2-5-circle-point-max.md](../../../research/log/2026-11-14-width2-5-circle-point-max.md)
 
 - [K0813](../items/K0813-width2-5-circle-point-max-and-q9-q10-row-formula.md) (log): 判断・経緯・レジューム

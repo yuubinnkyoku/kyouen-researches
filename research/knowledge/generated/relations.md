@@ -82,6 +82,7 @@
 - ← depends_on [K0775](../items/K0775-p3251-no-size-h1-set.md): 安全集合の定義（整数平面で共円・共線の四点を含まない）
 - ← depends_on [K0781](../items/K0781-p2531-no-size-h1-set.md): 安全集合の定義（整数平面で共円・共線の四点を含まない）
 - ← depends_on [K0787](../items/K0787-greedy-lower-bounds-2531-3251.md): 共線・共円四点を含まない安全集合の定義
+- ← depends_on [K0814](../items/K0814-attained-equality-3793-3803-3863.md): 共線・共円四点を含まない安全集合の定義
 
 ## [K0002](../items/K0002-grundy-and-first-move-conventions.md) Grundy数・P/Nと勝ち初手の向き
 
@@ -838,6 +839,7 @@
 - ← depends_on [K0775](../items/K0775-p3251-no-size-h1-set.md): 上界A(p)<=(p+3)/2と、サイズh+1の集合が(x,c,e)で3形状に尽きること
 - ← depends_on [K0781](../items/K0781-p2531-no-size-h1-set.md): 上界A(p)<=(p+3)/2と、サイズh+1の集合が(x,c,e)で3形状に尽きること
 - ← depends_on [K0812](../items/K0812-new-exceptional-primes-3719-3727.md): 上界A(p)<=(p+3)/2と、サイズh+2の集合が(1,1,0)の一クラスに限られること
+- ← depends_on [K0814](../items/K0814-attained-equality-3793-3803-3863.md): 上界A(p)<=(p+3)/2。本項の証人はこの上界にちょうど到達する
 
 ## [K0098](../items/K0098-p23-half-interval-counterexample.md) 剰余放物線の前半区間安全説はp=23で反例
 
@@ -861,6 +863,7 @@
 - ← refutes [K0706](../items/K0706-p2647-no-parabola-equality-witness.md): 修正版で全dのUNSAT証明を検査した反例により、全奇素数での等号を否定する
 - ← supports [K0708](../items/K0708-p3251-no-parabola-equality-witness.md): 単一CNFの独立監査により全奇素数での等号を否定する4番目の反例
 - ← supports [K0812](../items/K0812-new-exceptional-primes-3719-3727.md): 「全奇素数で等号」の反例が4個から6個に増えた
+- ← supports [K0814](../items/K0814-attained-equality-3793-3803-3863.md): 3701..3899 には達成側と不達成側が混在することを示す
 
 ## [K0102](../items/K0102-concrete-lean-certificate-checker-open.md) 具体巨大証明書をLean核のみで検査する実装は未完成
 
@@ -4538,6 +4541,7 @@
 - ← depends_on [K0769](../items/K0769-candidate-b-assumption-partition.md): 辺リスト完全性（前提(1)）
 - ← depends_on [K0787](../items/K0787-greedy-lower-bounds-2531-3251.md): 禁止四点リストが健全・完全・重複なしであることを前提に、辺の非包含で安全性を判定
 - ← depends_on [K0812](../items/K0812-new-exceptional-primes-3719-3727.md): 禁止四点リストの健全・完全・重複なし（CNFの幾何節の根拠）
+- ← depends_on [K0814](../items/K0814-attained-equality-3793-3803-3863.md): 禁止四点リストの健全・完全・重複なし（辺の非包含で安全性を判定）
 
 ## [K0772](../items/K0772-pysat-seqcounter-equals-small-verification.md) pysat の seqcounter による CardEnc.equals は build と同一の呼び出し形で小規模全件「ちょうど bound 個」を満たす
 
@@ -4894,3 +4898,10 @@
 - → depends_on [K0077](../items/K0077-width-four-q8-stabilization.md): M_{4,8}=11（対偶によるP(4)≥8の第2導出）
 - → generalizes [K0025](../items/K0025-q-above-two-width-all-lengths.md): 行分離公式の新規(w,q)領域（w=5・q=9,10。q≥11はK0025のq>2w帯と一致）
 - → supports [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): w=5の低q側帯の上界会計にP(5)=8を供給
+
+## [K0814](../items/K0814-attained-equality-3793-3803-3863.md) p=3793・3803・3863は等号A(p)=(p+3)/2を達成する（サイズh+2の証人を独立整数幾何で監査）
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 共線・共円四点を含まない安全集合の定義
+- → depends_on [K0771](../items/K0771-forbidden-edge-generator-completeness.md): 禁止四点リストの健全・完全・重複なし（辺の非包含で安全性を判定）
+- → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 上界A(p)<=(p+3)/2。本項の証人はこの上界にちょうど到達する
+- → supports [K0101](../items/K0101-prime-parabola-equality-open.md): 3701..3899 には達成側と不達成側が混在することを示す
