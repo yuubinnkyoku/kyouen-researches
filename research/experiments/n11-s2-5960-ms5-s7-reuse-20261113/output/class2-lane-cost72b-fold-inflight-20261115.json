@@ -2,7 +2,7 @@
  "schema": "n11-class2-lane-cost72b-fold-inflight-20261115-v1",
  "title": "n11 class2-lane cost-72b receipts fold in flight (claimed by a long-term lane execution)",
  "date": "2026-11-15",
- "status": "in-flight",
+ "status": "superseded-by-parallel-fold-cross-verified",
  "claimed_by": "long-term class2 lane",
  "s6_child": "00000000000000809102000002000000",
  "s6_s7_edge_cost": 72,
@@ -16,5 +16,16 @@
  "child_status_at_baseline": "the cost-72b child orbit 00000000000000809102000002000000 is already solved at the 1179 baseline (absorbed cross-orbit by the 74d receipts fold; not in the remaining-children sets of either open parent 00000000000000801202000020000000 or 00000000000000809102000000000000); the fold is a provenance-completion fold with correction note, following the cost-61e precedent",
  "predicted_marginal": "local computation at the 1179 baseline: +9 marginal-in-manifest orbits from bits 2/30/31/36/47/95/97/100/106 (+1 each); expected new head 1188; zero-mim receipts expected: 11/21/66/85",
  "chain_head_at_claim": "1179/6668/526075/4938/389798 (class-frontier-cost74d-receipts-recompute-20261115.json)",
- "unknown_status": "standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, class 2, class 4 remain UNKNOWN"
+ "unknown_status": "standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, class 2, class 4 remain UNKNOWN",
+ "closure": {
+  "fold_landed_by": "parallel lane commit 40e03194 (2026-11-14T22:56:48Z): class-frontier-cost72b-receipts-recompute-20261115.json published on the same 1179 baseline before this lane could push its independently computed fold artifacts",
+  "duplicate_push_avoided": "this lane detected the landed fold on the mandatory pre-push main re-fetch and did not push its own fold JSON/CSVs/script (identical filenames); per the collision protocol the situation is recorded here and in research/log/2026-11-15-n11-class2-lane-cost72b-fold-cross-lane-verification.md",
+  "independent_verification": {
+   "baseline_reproduction": "cost-74d receipts head 1179/6668/526075/4938/389798 reproduced end-to-end from the MS5 manifest inputs by a 30-script runpy chain; head JSON and both ranking CSVs byte-identical to main (blob 06724afe0698ce93319d092521c5887da6eec0f0)",
+   "certificates_bytes": "13/13 local certificate parts verified bytes x md5 x sha256 x git blob sha (per-part and joined) against class2-lane-cost72b-win7-certificates-20261115.json",
+   "certificates_full_replay": "13/13 certificates re-verified with the repo-verbatim independent verifier verify_bit7_win7_cert.ts (exact Bareiss 4x4, no verdict cache): per-loser-first-move full strategy replay, consumed winner-state union == certificate row set exactly on every bit (636,225/636,225 rows), 729/729 sub-roots PASS, root mobility == sub-root count (47..64), terminal range [13,17] everywhere, union missing/extra 0/0",
+   "independent_fold_computation": "independent fold script computed the same head 1188/6659/525437/4929/389160 with identical per-receipt marginals: total marginal 57, marginal_in_manifest +9 (bits 2/30/31/36/47/95/97/100/106, +1 each), zero-mim bits 11/21/66/85, all 9 solved orbits are remaining rows of the shared open parent S5 00000000000000801202000020000000 (56 -> 47 orbits)",
+   "agreement": "fully consistent with the landed fold record (same schema, same head, same 13 marginal_manifest_hexes per receipt, same totals); the landed rebase_note D4-orbit equivalence (72b bit85 == 74d bit91) explains the child pre-closure this lane also observed"
+  }
+ }
 }
