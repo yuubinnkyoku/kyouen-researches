@@ -1,7 +1,7 @@
 {
  "schema": "n11-class2-lane-cost72b-inflight-20261115-v1",
  "date": "2026-11-15",
- "status": "raw-sweep-complete-certificates-pending",
+ "status": "certificates-published-fold-pending",
  "claimed_by": "long-term class2 lane",
  "s6_child": "00000000000000809102000002000000",
  "s6_s7_edge_cost": 72,
@@ -146,5 +146,29 @@
   "d4_orbits": "13 distinct D4 orbits among the 13 WIN roots",
   "prior_publication_check": "13 root hexes: 0 GitHub code-search hits each",
   "next": "certificate extraction for the 13 WIN7-D10 roots (blind extractor, FBS 1<<20), then frontier fold"
+ },
+ "certificates": {
+  "record": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72b-win7-certificates-20261115.json",
+  "directory": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72b-certificates/",
+  "files": 19,
+  "win7_bits_certified": [
+   2,
+   11,
+   21,
+   30,
+   31,
+   36,
+   47,
+   66,
+   85,
+   95,
+   97,
+   100,
+   106
+  ],
+  "rows": 636225,
+  "independently_verified": "13/13 verify_bit7_win7_cert.ts, union 0/0, terminals 13..17",
+  "remote_blob_sha_verified": "19/19",
+  "date": "2026-11-15"
  }
 }
