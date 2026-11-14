@@ -75,3 +75,8 @@ two-stone root {49,60}, S2 {59,60}, class 2 and class 4 are unaffected and remai
 - `output/records.jsonl` — 52 records (17 direct UNSAT + 32 decomposition UNSAT + 2 lex cross-checks + 1 positive control)
 - `output/summary.json` — aggregate
 - `output/r5x21q7_*.txt` — 51 raw kissat logs (UNSAT classes, splits, cross-checks) + `r_ctrl_5x18_c0.txt` (SAT control with model)
+
+
+## 2026-11-15 independent audit addendum
+
+The raw-log/JSONL reconciliation, row-reflection class coverage, and a sharper minpos bound are recorded in [audit-20261115.md](audit-20261115.md); the reproducible checker is [scripts/audit_records.js](scripts/audit_records.js). The audit matches all 52 logs to their records, identifies p=9,10 as vacuous in the k=5 splits, and sharpens the threshold alternative to M_{5,7}=19 or M_{5,7}≥23. It does not add a DRAT/LRAT proof or upgrade the evidence beyond finite machine verification.
