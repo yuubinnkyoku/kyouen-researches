@@ -1,0 +1,253 @@
+{
+ "schema": "n11-class2-lane-unified-fold-reconciliation-20261115-v1",
+ "date": "2026-11-15",
+ "session": "class2-lane long-term lane execution: unified fold reconciliation of the three divergent chain heads (sandbox computation; execution environment bash/filesystem unavailable this session, all work via sandbox + GitHub connector)",
+ "baseline_main": "class-frontier-warm-multiband-recompute-20261115.json (solved 1109 / unique remaining 6738 / sum cost 531295 / open 5008 / 395018) - the common baseline of all three folds",
+ "divergent_heads": {
+  "cost68d": {
+   "frontier": "class-frontier-cost68d-recompute-20261115.json",
+   "solved": 1117,
+   "unique_remaining": 6730,
+   "sum_cost": 530739,
+   "open_s6": 5000,
+   "open_cost": 394462,
+   "receipts": "7 cost-68d WIN7 + 6 warm band hygiene (13; one cross-child duplicate pair)"
+  },
+  "warm_multiband2": {
+   "frontier": "class-frontier-warm-multiband2-recompute-20261115.json",
+   "solved": 1140,
+   "unique_remaining": 6707,
+   "sum_cost": 528979,
+   "open_s6": 4977,
+   "open_cost": 392702,
+   "receipts": "31 WIN7 (warm multiband batch 2, non-cost-70c gain-1 candidates)"
+  },
+  "cost70c_warm_batch2": {
+   "frontier": null,
+   "receipts": "6 WIN7 (this lane batch-2 warm extraction); certificates published under class2-lane-cost70c-certificates/, folded in neither head"
+  }
+ },
+ "receipt_reconciliation": {
+  "total_receipts": 50,
+  "root_identity": "root == child | 1<<bit (BigInt) asserted for all 50 receipts (7 cost-68d + 6 hygiene + 31 multiband2 + 6 cost-70c) across this session sandbox executions; all passed",
+  "root_disjointness": "the three groups root sets are pairwise disjoint (12 distinct roots in the cost-68d group due to the known cross-child duplicate cost-71b bit-1 == cost-61d bit-22, root 00000000000000803202000000400002, canonical single certificate; 31 multiband2; 6 cost-70c)",
+  "cross_lane_batch2_agreement": "the two concurrent batch-2 lanes independently extracted overlapping selections: 29 roots in common (byte-verified by both lanes), this-lane-only = the six cost-70c warm roots, multiband2-only = cost-64b bit-40 and cost-61d bit-23; the multiband2 records JSON documents first_pushed_by {this-lane: 18, concurrent-batch2-lane: 13} - positive duplicate cross-check, no conflict"
+ },
+ "cost70c_warm_batch2_receipts": [
+  {
+   "band": "class2-lane-cost70c",
+   "child_hex": "00000000000000803242000000000000",
+   "bit": 105,
+   "root_hex": "00000200000000803242000000000000",
+   "verdict": "WIN7",
+   "rows": 33992,
+   "sub_roots_pass": 51,
+   "md5": "d6f56e07bf79d21cbc836928883a613a",
+   "bytes": 1226997,
+   "fold_order_position_in_greedy": 1,
+   "marginal_in_manifest_vs_1109": 1,
+   "marginal_manifest_hex": "00000000000000849002000000008000",
+   "storage": "single file",
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20), fbt_drops=0, rows LC_ALL=C sorted-unique; BigInt independent verification passed (stones=7, sub-roots all PASS, union 0/0, terminal range 13..17)"
+  },
+  {
+   "band": "class2-lane-cost70c",
+   "child_hex": "00000000000000803242000000000000",
+   "bit": 92,
+   "root_hex": "00000000100000803242000000000000",
+   "verdict": "WIN7",
+   "rows": 52755,
+   "sub_roots_pass": 58,
+   "md5": "38d60e00f28b6ff96b6cb4080f564036",
+   "bytes": 1905923,
+   "fold_order_position_in_greedy": 2,
+   "marginal_in_manifest_vs_1109": 1,
+   "marginal_manifest_hex": "00000000000000849002000010000000",
+   "storage": "part1of2/part2of2 (remote sizes verified against the directory listing in this audit)",
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20), fbt_drops=0, rows LC_ALL=C sorted-unique; BigInt independent verification passed (stones=7, sub-roots all PASS, union 0/0, terminal range 13..17)"
+  },
+  {
+   "band": "class2-lane-cost70c",
+   "child_hex": "00000000000000803242000000000000",
+   "bit": 40,
+   "root_hex": "00000000000000803242010000000000",
+   "verdict": "WIN7",
+   "rows": 36406,
+   "sub_roots_pass": 53,
+   "md5": "59e4dd070bbf0fd6dd7e4d3bbb2e3ec3",
+   "bytes": 1315377,
+   "fold_order_position_in_greedy": 3,
+   "marginal_in_manifest_vs_1109": 1,
+   "marginal_manifest_hex": "00000000000000801242010000000000",
+   "storage": "part1of2/part2of2 (remote sizes verified against the directory listing in this audit)",
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20), fbt_drops=0, rows LC_ALL=C sorted-unique; BigInt independent verification passed (stones=7, sub-roots all PASS, union 0/0, terminal range 13..17)"
+  },
+  {
+   "band": "class2-lane-cost70c",
+   "child_hex": "00000000000000803242000000000000",
+   "bit": 24,
+   "root_hex": "00000000000000803242000001000000",
+   "verdict": "WIN7",
+   "rows": 43005,
+   "sub_roots_pass": 55,
+   "md5": "db30f4dc370b0109a09c2b15c3573231",
+   "bytes": 1551853,
+   "fold_order_position_in_greedy": 4,
+   "marginal_in_manifest_vs_1109": 1,
+   "marginal_manifest_hex": "00000000000000801242000001000000",
+   "storage": "part1of2/part2of2 (remote sizes verified against the directory listing in this audit)",
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20), fbt_drops=0, rows LC_ALL=C sorted-unique; BigInt independent verification passed (stones=7, sub-roots all PASS, union 0/0, terminal range 13..17)"
+  },
+  {
+   "band": "class2-lane-cost70c",
+   "child_hex": "00000000000000803242000000000000",
+   "bit": 11,
+   "root_hex": "00000000000000803242000000000800",
+   "verdict": "WIN7",
+   "rows": 39873,
+   "sub_roots_pass": 54,
+   "md5": "a79bf70cafbed3a86d93002c564cad3e",
+   "bytes": 1439745,
+   "fold_order_position_in_greedy": 5,
+   "marginal_in_manifest_vs_1109": 1,
+   "marginal_manifest_hex": "00000000000000801242000000000800",
+   "storage": "part1of2/part2of2 (remote sizes verified against the directory listing in this audit)",
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20), fbt_drops=0, rows LC_ALL=C sorted-unique; BigInt independent verification passed (stones=7, sub-roots all PASS, union 0/0, terminal range 13..17)"
+  },
+  {
+   "band": "class2-lane-cost70c",
+   "child_hex": "00000000000000803242000000000000",
+   "bit": 8,
+   "root_hex": "00000000000000803242000000000100",
+   "verdict": "WIN7",
+   "rows": 47165,
+   "sub_roots_pass": 60,
+   "md5": "30db912028d24c74d0b9dc9d2cec61e1",
+   "bytes": 1707377,
+   "fold_order_position_in_greedy": 6,
+   "marginal_in_manifest_vs_1109": 1,
+   "marginal_manifest_hex": "00000000000000801242000000000100",
+   "storage": "part1of2/part2of2 (remote sizes verified against the directory listing in this audit)",
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20), fbt_drops=0, rows LC_ALL=C sorted-unique; BigInt independent verification passed (stones=7, sub-roots all PASS, union 0/0, terminal range 13..17)"
+  }
+ ],
+ "marginal_union_arithmetic": {
+  "cost68d_in_manifest_hexes": [
+   "00000000000000003800000408008000",
+   "00000000000000809122000000000000",
+   "00000000000000003800000808008000",
+   "00000000000000809102000400000000",
+   "0000000000000080120a200000000000",
+   "00000000000000809102800000000000",
+   "00000000000000083800000008020000",
+   "00000000000000809102000000100000"
+  ],
+  "warm_multiband2_in_manifest_hexes": [
+   "00000000000000809102000000000400",
+   "00000000040000809002000000000001",
+   "00000000000020003800000008000100",
+   "00000000200000003800000200100000",
+   "00000000200000003800100000100000",
+   "00000000000000043800000008200000",
+   "00000000000000003800100008200000",
+   "00000000040000809002000000008000",
+   "00000000000000809102000080000000",
+   "00000000000000809102000040000000",
+   "00000000000000103800000008000100",
+   "00000000100000809002000000001000",
+   "00000000040000003810000008000000",
+   "00000000100000801202000000100000",
+   "00000000020000801202000040000000",
+   "00000000000020809002000001000000",
+   "00000000000100809002000000800000",
+   "00000000000100809002000000001000",
+   "00000000000100003800000008200000",
+   "00000000000020801202000080000000",
+   "00000000000000889002000000800000",
+   "00000000000000889002000000000200",
+   "00000000000000909002000001000000",
+   "00000000000000909002000100000000",
+   "00000000000000841202000080000000",
+   "00000000000000809102400000000000",
+   "00000000000000809102001000000000",
+   "00000000000000801222000000100000",
+   "00000000000000801202080000100000",
+   "00000000000000801202010000100000",
+   "00000000000000003800000008002800"
+  ],
+  "cost70c_warm_batch2_in_manifest_hexes": [
+   "00000000000000801242000000000100",
+   "00000000000000801242000000000800",
+   "00000000000000801242010000000000",
+   "00000000000000849002000010000000",
+   "00000000000000849002000000008000",
+   "00000000000000801242000001000000"
+  ],
+  "pairwise_intersections": {
+   "cost68d_x_multiband2": 0,
+   "cost68d_x_cost70c": 0,
+   "multiband2_x_cost70c": 0
+  },
+  "union_size": 45,
+  "predicted_unified_solved": 1154,
+  "prediction_status": "set-union prediction over the published per-receipt marginal manifest hexes of the 50 reconciled receipts; NOT a chain-head publication; the authoritative unified fold must reproduce the 1117 and 1140 endpoints byte-identically and then fold all 50 receipts (expected solved 1154)"
+ },
+ "cost70c_consistency": {
+  "sweep_win7_bits": [
+   3,
+   8,
+   11,
+   20,
+   23,
+   24,
+   40,
+   42,
+   86,
+   92,
+   94,
+   103,
+   105
+  ],
+  "certified_now": [
+   94,
+   20,
+   23,
+   105,
+   92,
+   40,
+   24,
+   11,
+   8
+  ],
+  "remaining_uncertified_win7_bits": [
+   3,
+   42,
+   86,
+   103
+  ],
+  "note": "sweep record class2-lane-cost70c-sweep-20261115.json: 13 WIN7-D10 at 100,935,666 v16 nodes, all 13 v15-anchored loss=true, determinism rerun node-exact"
+ },
+ "unified_fold_specification": {
+  "script_for_next_execution": "recompute_frontier_unified_merge_20261115.py (direct runpy chain: ns68 = recompute_frontier_cost68d_20261115 -> s_1109 = ns68 baseline, s_1117 = ns68 head; nsM2 = recompute_frontier_warm_multiband2_20261115 -> s_1140 = nsM2 head; then fold)",
+  "fold_order": "13 cost-68d-lane receipts in published order (7 WIN7 then 6 hygiene), then 31 multiband2 receipts in published order, then the 6 cost-70c receipts in greedy order 105, 92, 40, 24, 11, 8",
+  "controls": [
+   "reproduce the 1109 baseline byte-identically (1109/6738/531295/5008/395018)",
+   "reproduce the 1117 endpoint and the 1140 endpoint byte-identically",
+   "set-equality: s_merged == s_1117 UNION s_1140 UNION covers(6 cost-70c receipts)",
+   "three-way root disjointness of the 50 receipts",
+   "expected solved_s6_in_manifest 1154"
+  ],
+  "expected_outputs": [
+   "class-frontier-unified-merge-recompute-20261115.json",
+   "unified-merge candidate ranking CSV",
+   "top-candidates CSV"
+  ]
+ },
+ "outstanding": {
+  "cost69f_sweep": "completed on the parallel lane (9 WIN7-D10 bits 2/20/44/68/69/94/109/118/119, raw batches only, certificates and fold pending with that lane); the next unified merge must fold its receipts once published",
+  "cost70c_remaining": "WIN7 bits 3/42/86/103 uncertified (warm rebuild candidates)",
+  "parallel_bands": "cost-65h/67b/68c warm candidates and the in-flight cost-65j sweep stay with the parallel lane (their in-manifest marginals are listed in class2-lane-warm-candidate-ranking2-20261115.json for future folds)"
+ },
+ "win_loss_conflict_check": "no new conflict found by this reconciliation: the three receipt groups root sets and marginal-hex unions are pairwise disjoint; the per-lane published crosschecks (LOSS7 manifest scans, byte-exact landing verification, v15 cross-engine anchors) are cited and not re-run here",
+ "interpretation_guard": "bookkeeping over published receipts; solved counts measure manifest coverage, not the game-theoretic value of the 11x11 empty board; 11x11 empty root / two-stone root {49,60} / S2 {59,60} / class 2 / class 4 remain UNKNOWN"
+}
