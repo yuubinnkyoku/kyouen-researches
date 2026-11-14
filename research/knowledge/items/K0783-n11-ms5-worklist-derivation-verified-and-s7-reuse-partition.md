@@ -686,3 +686,15 @@ cost72 bit111の1/75という局所receiptは引き続きglobal frontierに未�
 詳細: [cost65e bit7監査JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-bit7-independent-audit-20261115.json)、[監査log](../../log/2026-11-15-n11-class2-cost65e-bit7-independent-audit.md)。
 
 標準11×11空盤、二石root `{49,60}`・`{59,60}`、S2 `{59,60}` は引き続き **UNKNOWN**。
+
+## 2026-11-15: warm multiband 35証明書のバッチとchain head更新
+
+coordinator計器（rank_warm_candidates_20261115.py、after-cost75b基準のmarginal_in_manifest貪欲順）が、未認証WIN7-D10候補のうち自レーンband（cost-61d/61e/61f/62a/63a/64b/65e/71b）と明示的にdeprioritize済みのcost-72 bit52から正利得35件を選んだ。4並列でrepo-verbatimのblind抽出器（FBS=1<<20、fbt_drops=0、行LC_ALL=C整列・一意化）により35証明書を生成し、BigInt独立検証器で全件再検査した。合計1,586,728戦略行・抽出節点481,639,572。全35 rootについてGitHub code searchで先行証明書の不在を確認（ヒットはsweep/inflight/audit記録とlogのみ）。27件は単一ファイル、8件（>1.75MB）はrepo慣例のpart1of2/part2of2分割で公開し、連結が全体のmd5と一致することを検査した。
+
+並走レーンのcost-75c完了（12 receipt、第二class-2ターゲットS5 `00000000000000803202000000000000` を閉鎖、cost-72 bit111 partial receiptもfold済み）をmainから取り込み、after-cost75c基準 1,062/6,785/534,768/5,055/398,491 をrunpyでbyte-identical再現した上で、35 receiptを公開記録順にfoldした（marginalは拡大和集合から再導出）。新しいchain headは **解消S6 1,109・残り6,738・費用531,295・open需要5,008/395,018**。35 receiptの合計marginalは166、うちmanifest内は47。zero-mim receiptは5件（cost-71b bit14は既foldのcost-75c bit22と同一rootの独立再抽出でWIN7一致の正の重複照合、cost-64b bit102・cost-61e bit102・cost-61f bit102・cost-61d bit119のmanifest親は基準時点で既被覆）。
+
+best coverable class-2五石親 `00000000000000809102000000000000` は残り35軌道・費用2,525から **17軌道・費用1,220** へ半減した。残るbottleneckはaudit-blocked class2 `00000000000000809082000000000000`（10軌道・698、receipt-unclosable）とclass4 `00000000020000003800000080000000`（18軌道・1,460）。
+
+成果物: [warm multiband記録JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-warm-multiband-certificates-20261115.json)、[chain head再計算](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-warm-multiband-recompute-20261115.json)、[抽出・再構築・再計算スクリプト](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_warm_multiband_20261115.py)、[log](../../log/2026-11-15-n11-class2-warm-multiband.md)。
+
+解消計数はmanifest被覆の前進であり、盤全体の勝敗ではない。標準11×11空盤、二石root `{49,60}`・`{59,60}`、S2 `{59,60}`、class2・class4は引き続き **UNKNOWN**。
