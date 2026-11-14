@@ -852,3 +852,21 @@ unified merge chain head 1,154（7aaa7d83 + 625b0e0c の二重独立実行済み
 解消計数はmanifest被覆の前進であり、盤全体の勝敗ではない。WIN7証明書は個別7石rootの深さ10以内のWINのみを証明する。標準11×11空盤、二石root `{49,60}`・`{59,60}`、S2 `{59,60}`、class2・class4は引き続き **UNKNOWN**。
 
 成果物: [frontier JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost69f-receipts-recompute-20261115.json)、[ranking CSV](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-s5-ranking-after-cost69f-receipts-20261115.csv)、[top-candidates CSV](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-top-candidates-s6-after-cost69f-receipts-20261115.csv)、[foldスクリプト](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost69f_receipts_20261115.py)、[証明書記録JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost69f-win7-certificates-20261115.json)。
+
+## 2026-11-15: cost-70c warm batch-3証明書4件公開・band 13/13完了・gain-0 fold — chain head 1,163不変
+
+自レーン（cost-70c warm lane）がbatch-3残り4証明書（bits 3/42/86/103）を公開してcost-70c band 13/13認証を完了し、69f recompute（30c638d5）が「次のrecomputeでfold」と明示的に委任した4 receiptのfoldを `recompute_frontier_after70cwarm3_20261115.py`（6d4ced10）で実行した（[log](../../log/2026-11-15-n11-class2-cost70c-warm-batch3-fold.md)）。
+
+**証明書4件**: blind抽出 `warm_rebuild_pipeline2_20261115.py`（raw→行抽出、repo検証器・solver・cache不使用）、BigInt独立検証全PASS（root恒等式 child|1<<bit、sub-roots == loser mobility、union 0/0、terminal 13..17、md5/sha256/bytes）。rows 50,955/50,015/68,358/45,205、抽出節点 11,537,642/11,335,391/27,716,890/11,012,568（計61,602,491）。bit-103は別プロセス決定性再実行で節点数・md5完全一致。証明書7ファイル（bits 3/42/86は2分割push、bit 103は単一1.63MB）は全てremote git blob sha照合済み、claim `class2-lane-cost70c-warm-batch3-inflight-20261115.json` はclosure（267762ab）。
+
+**環境事実**: foldスクリプトの初版は69f chainとunified merge chainを同一プロセスでrunpy二重再現し、実行環境の~1GB memory capでSIGKILLされた（exit 137、cost-61d制御の途中で停止）。教訓: **1プロセスにつきfull runpy chain 1本まで**。公開版は69f chain内部のunified再現（head JSON blob sha `a0789eed…` 照合込み）を `nsF['nsU']` 経由で再利用し、root-disjointness制御を保ったまま単一チェーンで完了した。
+
+**gain-0 foldの制御**: 4 rootは49 distinct unified receipt root（12+31+6）および9 cost-69f receipt rootと互いに素。foldは公開record順（bits 3/42/86/103）、per-record marginalは拡大和集合から再導出、set-equality `s == s_1163 ∪ covers(4)` をassert。結果: covers各7、marginal **0/4/4/0**（bits 3/103は既存receiptで被覆済み、bits 42/86は非manifest軌道のみ）、**marginal-in-manifest全bit 0**（総marginal 8）。headは**不変 1,163/6,684/527,280/4,954/391,003**（残りS5軌道175）。2回実行byte-identical、push 4ファイルのremote blob sha照合済み。
+
+**三重独立一致**: (a) 並走予測 `class2-lane-next-fold-marginal-prediction-20261115.json`（baseline 1154でper-bit marginal 0/4/4/0・mim 0）、(b) 並走の第三方法独立監査 `class2-lane-next-fold-prediction-independent-audit-20261115.json`（c10e6e9f。独立D4正規化+1石削除lift再導出、bits 42/86の非manifest lift数が厳密に4、13/13 root identity+safety、repo実装不使用）、(c) 本fold recompute（baseline 1163）。per-bit marginal値まで3導出が完全一致した。
+
+未fold material: cost-75c 12 receipt（並走。なお並走のcost-75c recomputeは別系列のcost-75b baselineで解消1,062であり、canonical 1,163 chainへのfoldは今後のrecompute）、cost-65j sweep（in flight・bit-113交叉被覆の再検査必要）、69f残り4証明書（bits 2/94/109/119、並走がraw sweep receipt+v15 anchorとしてfold済み・抽出は並走レーン担当）。最安未sweep子は `00000000000000809102000000002000`（cost 69、c1=0,c2=2,c4=2）。
+
+解消計数はmanifest被覆の前進であり、盤全体の勝敗ではない。WIN7証明書は個別7石rootの深さ10以内のWINのみを証明する。標準11×11空盤、二石root `{49,60}`・`{59,60}`、S2 `{59,60}`、class2・class4は引き続き **UNKNOWN**。
+
+成果物: [fold再計算JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-after-cost70c-warm3-recompute-20261115.json)、[ranking CSV](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-s5-ranking-after-cost70c-warm3-20261115.csv)、[top-candidates CSV](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-top-candidates-s6-after-cost70c-warm3-20261115.csv)、[foldスクリプト](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_after70cwarm3_20261115.py)、[batch-3 records JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70c-warm-batch3-records-20261115.json)、[log](../../log/2026-11-15-n11-class2-cost70c-warm-batch3-fold.md)。
