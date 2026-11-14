@@ -1,0 +1,72 @@
+{
+  "method": "seeded simulated annealing / greedy maximalization",
+  "runs": {
+    "42": {
+      "seed": 20261115,
+      "initial": "existing 7x41 witness",
+      "iterations": 125,
+      "elapsed_ms": 2500,
+      "build_ms": 2398,
+      "curves": 266921
+    },
+    "44": {
+      "seed": 20261117,
+      "initial": "7x42 witness",
+      "iterations": 147,
+      "elapsed_ms": 2713,
+      "build_ms": 2589,
+      "curves": 306314
+    },
+    "45": {
+      "seed": 20261118,
+      "initial": "7x44 witness",
+      "iterations": 2594,
+      "elapsed_ms": 4944,
+      "build_ms": 2993,
+      "curves": 327328
+    },
+    "47": {
+      "seed": 20261120,
+      "initial": "7x45 witness",
+      "iterations": 2262,
+      "elapsed_ms": 5617,
+      "build_ms": 3458,
+      "curves": 372233
+    },
+    "50": {
+      "seed": 20261121,
+      "initial": "7x45 witness",
+      "iterations": 5618,
+      "elapsed_ms": 10039,
+      "build_ms": 4637,
+      "curves": 446731
+    },
+    "53": {
+      "seed": 20261123,
+      "initial": "7x45 witness",
+      "iterations": 3864,
+      "elapsed_ms": 10530,
+      "build_ms": 6038,
+      "curves": 530614
+    }
+  },
+  "frontier_probes": [
+    {
+      "m": 57,
+      "seed": 20261124,
+      "budget_ms": 30000,
+      "initial": "7x45 witness",
+      "best_stones": 21,
+      "note": "no 20-stone witness found; heuristic only, not an absence proof"
+    },
+    {
+      "m": 57,
+      "seed": 20261126,
+      "budget_ms": 20000,
+      "initial": "7x53 witness",
+      "iterations": 10412,
+      "best_stones": 21,
+      "note": "no 20-stone witness found; heuristic only, not an absence proof"
+    }
+  ]
+}
