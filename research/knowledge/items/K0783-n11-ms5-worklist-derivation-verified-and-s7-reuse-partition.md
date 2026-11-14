@@ -790,3 +790,18 @@ merged chain headは **解消S6 1,148・残り6,699・費用528,423・open需要
 同一セッション内の訂正: audit初版は1117/1140を未統合の分岐headとして記述したが、**併合再計算head 1,148（commit 19bb2abc）は既にmainに存在していた**（push前collision checkのフィルタが unified/reconcil のみで merged/recompute を見落とした）。併合foldは本監査の算術を独立に確認している: cost-68dの8 hexは1109状態と1140状態でset-identical（batch-2の31 hexと非交差であることの実証）、かつ本監査はcost-70cの6 hexが併合39 hex全てと非交差であることを再検証した。よって予測は変更なく **1,154 = 1,148 + 6** となり、未foldはcost-70cの6件のみ。次回実行のfold仕様（audit JSON記載）: `recompute_frontier_merged_after_multiband2_68dhyg_20261115.py` を拡張し1,148 endpointをbyte-identical再現→6件を貪欲順 105, 92, 40, 24, 11, 8 でfold→set-equalityと解消1,154をassert。collision checkは merged/recompute フィルタを含める運用に修正した。
 
 環境事実: 本セッションは実行環境（bash/filesystem）が終始利用不能で、全計算をsandbox + GitHubコネクタで実施した。解消計数はmanifest被覆であり盤全体の勝敗ではない。標準11×11空盤、二石root `{49,60}`・`{59,60}`、S2 `{59,60}`、class2・class4は引き続き **UNKNOWN**。
+
+
+## 2026-11-15: unified merge fold完了 — 全50 receipt統合、chain head 1,154
+
+和解監査のfold仕様（訂正版: merged head 1,148は44/50 receipt fold済み、予測1,154 = 1,148 + 6）に従い、`recompute_frontier_unified_merge_20261115.py`（commit 7aaa7d83）で全50 receiptの権威あるunified foldを実行した。runpyチェーンで1,109基準・1,117 endpoint・1,140 endpointをbyte-identical再現（両レーンの1,109基準集合が同一であることをassert）、6 cost-70c warm batch-2 receiptをroot恒等式・md5・rows・貪欲順 105/92/40/24/11/8 で検査、3-way root disjointness（12+31+6 root、71b bit-1 == 61d bit-22 の同一rootを含む）、各グループのmarginal-in-manifest和集合をcoversから独立再導出して公開hex list（8/31/6、union 45、pairwise空）と照合した。
+
+foldは1,109基準から13 receipt（公開順）→ 31 multiband2 receipt（公開順）→ 6 cost-70c receipt（貪欲順）の順で、per-record marginalをすべて拡大和集合から再導出。set-equality制御: 13 receipt後 == s_1117、44 receipt後 == s_1117 ∪ s_1140（公開merged head 1,148/6,699/528,423/4,969/392,146 と一致）、50 receipt後 == s_1117 ∪ s_1140 ∪ covers(6 cost-70c)。**解消1,154をassertで確認**し、和解監査の集合和予測をfold算術に対して確定させた。2回実行でbyte-identical、push後のremote git blob shaで全4ファイルbyte-exact確認済み。
+
+unified chain headは **解消S6 1,154・残り6,693・費用527,949・open需要4,963/391,672**（残りS5軌道175）。50 receipt・marginal 239（56+154+29）・manifest内45（8+31+6、和解監査のunionと厳密一致）・zero-marginal 7 receipt（68d bit 26 + hygiene 6）。fold戦略行合計 1,958,038。1,109基準の3分岐はmain上で完全和解した。
+
+ランキング: 最良class-2 S5 `00000000000000809102000000000000` は **8軌道・588不変**（cost-70c receiptは同S5の行に触れない）。残る最安未sweep子は `00000000000000809102000000002000`（cost 69、需要c1=0,c2=2,c4=2）、もう一方のcost-69子（cost-69f）は並走レーンでsweep完了・証明書未抽出のため未fold。bottleneck不変: audit-blocked class2 `00000000000000809082000000000000`（10/698）とclass4 `00000000020000003800000080000000`（18/1,460）。cost-70c bandは13 WIN7中9認証・6 fold済み、残りbits 3/42/86/103。
+
+成果物: [unified merge再計算JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-unified-merge-recompute-20261115.json)、[ranking CSV](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-s5-ranking-after-unified-merge-20261115.csv)、[top-candidates CSV](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-top-candidates-s6-after-unified-merge-20261115.csv)、[再計算スクリプト](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_unified_merge_20261115.py)、[log](../../log/2026-11-15-n11-class2-unified-merge-50-receipts.md)。
+
+解消計数はmanifest被覆の前進であり、盤全体の勝敗ではない。WIN7証明書は個別7石rootの深さ10以内のWINのみを証明する。標準11×11空盤、二石root `{49,60}`・`{59,60}`、S2 `{59,60}`、class2・class4は引き続き **UNKNOWN**。
