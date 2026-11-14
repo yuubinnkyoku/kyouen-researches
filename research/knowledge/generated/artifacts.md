@@ -12761,6 +12761,12 @@
 ## [research/experiments/sa-frontier-extension-20261114/report.md](../../../research/experiments/sa-frontier-extension-20261114/report.md)
 
 - [K0811](../items/K0811-sa-row-deficient-witnesses.md) (proof): 第2弾（同一機械・シード/予算/パラメータ多様化のみ）の下界更新と抵抗の記録
+## [research/experiments/sa-frontier3-20261114/output/results.jsonl](../../../research/experiments/sa-frontier3-20261114/output/results.jsonl)
+
+- [K0811](../items/K0811-sa-row-deficient-witnesses.md) (data): 第3弾23実行・6×28の22石（2石欠損）witness座標・独立検証・reverify別プロセス再検証・新前線の抵抗run
+## [research/experiments/sa-frontier3-20261114/report.md](../../../research/experiments/sa-frontier3-20261114/report.md)
+
+- [K0811](../items/K0811-sa-row-deficient-witnesses.md) (proof): 第3弾（同一機械・ドライバのみ追加）の下界更新・パラメータ帯による発見難度差・SAT単発予算の非決着の記録
 ## [research/experiments/sa-row-deficient-witnesses-20261114/output/sa_results.jsonl](../../../research/experiments/sa-row-deficient-witnesses-20261114/output/sa_results.jsonl)
 
 - [K0811](../items/K0811-sa-row-deficient-witnesses.md) (data): 全26実行・witness座標・独立検証詳細・抵抗（非発見）の記録
