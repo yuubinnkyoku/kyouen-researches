@@ -1,0 +1,975 @@
+{
+ "schema": "n11-class2-lane-warm-candidate-ranking-after-warm-multiband-20261115-v1",
+ "date": "2026-11-15",
+ "baseline": "class-frontier-warm-multiband-recompute-20261115.json (solved 1109 / unique remaining 6738 / sum 531295 / open 5008/395018)",
+ "published_win7_roots": 150,
+ "n_candidate_roots": 87,
+ "n_candidate_roots_already_certified": 11,
+ "n_uncertified_candidate_roots": 76,
+ "ranking_top": [
+  {
+   "root_hex": "00000000000000803202000000001010",
+   "entries": [
+    "class2-lane-cost65h bit-4"
+   ],
+   "root_already_certified": false,
+   "n_entries": 1,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000003800100008001000"
+   ]
+  },
+  {
+   "root_hex": "00000000000000803202000200001000",
+   "entries": [
+    "class2-lane-cost65h bit-33"
+   ],
+   "root_already_certified": false,
+   "n_entries": 1,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000003800000008001008"
+   ]
+  },
+  {
+   "root_hex": "00000000000000803202000220000000",
+   "entries": [
+    "class2-lane-cost67b bit-33"
+   ],
+   "root_already_certified": false,
+   "n_entries": 1,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000801202000220000000"
+   ]
+  },
+  {
+   "root_hex": "00000000000000803202000401000000",
+   "entries": [
+    "class2-lane-cost68c bit-24"
+   ],
+   "root_already_certified": false,
+   "n_entries": 1,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000003800000009004000"
+   ]
+  },
+  {
+   "root_hex": "00000000000000803202010000001000",
+   "entries": [
+    "class2-lane-cost65h bit-40"
+   ],
+   "root_already_certified": false,
+   "n_entries": 1,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000801202010000001000"
+   ]
+  },
+  {
+   "root_hex": "00000000000000803202010000100000",
+   "entries": [
+    "class2-lane-cost64b bit-40"
+   ],
+   "root_already_certified": false,
+   "n_entries": 1,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000801202010000100000"
+   ]
+  },
+  {
+   "root_hex": "00000000000000803202080000001000",
+   "entries": [
+    "class2-lane-cost65h bit-43"
+   ],
+   "root_already_certified": false,
+   "n_entries": 1,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000801202080000001000"
+   ]
+  },
+  {
+   "root_hex": "00000000000000803202080000100000",
+   "entries": [
+    "class2-lane-cost64b bit-43"
+   ],
+   "root_already_certified": false,
+   "n_entries": 1,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000801202080000100000"
+   ]
+  },
+  {
+   "root_hex": "00000000000000803222000000100000",
+   "entries": [
+    "class2-lane-cost64b bit-53"
+   ],
+   "root_already_certified": false,
+   "n_entries": 1,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000801222000000100000"
+   ]
+  },
+  {
+   "root_hex": "00000000000000803222000400000000",
+   "entries": [
+    "class2-lane-cost68c bit-53"
+   ],
+   "root_already_certified": false,
+   "n_entries": 1,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000801222000400000000"
+   ]
+  },
+  {
+   "root_hex": "00000000000000803242000000000100",
+   "entries": [
+    "class2-lane-cost70c bit-8"
+   ],
+   "root_already_certified": false,
+   "n_entries": 1,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000801242000000000100"
+   ]
+  },
+  {
+   "root_hex": "00000000000000803242000000000800",
+   "entries": [
+    "class2-lane-cost70c bit-11"
+   ],
+   "root_already_certified": false,
+   "n_entries": 1,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000801242000000000800"
+   ]
+  },
+  {
+   "root_hex": "00000000000000803242010000000000",
+   "entries": [
+    "class2-lane-cost70c bit-40"
+   ],
+   "root_already_certified": false,
+   "n_entries": 1,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000801242010000000000"
+   ]
+  },
+  {
+   "root_hex": "00000000000000809102000080800000",
+   "entries": [
+    "class2-lane-cost65e bit-31"
+   ],
+   "root_already_certified": false,
+   "n_entries": 1,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000809102000080000000"
+   ]
+  },
+  {
+   "root_hex": "00000000000000809102001000800000",
+   "entries": [
+    "class2-lane-cost65e bit-36"
+   ],
+   "root_already_certified": false,
+   "n_entries": 1,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000809102001000000000"
+   ]
+  },
+  {
+   "root_hex": "00000000000000809102400000800000",
+   "entries": [
+    "class2-lane-cost65e bit-46"
+   ],
+   "root_already_certified": false,
+   "n_entries": 1,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000809102400000000000"
+   ]
+  },
+  {
+   "root_hex": "00000000000000843202000080000000",
+   "entries": [
+    "class2-lane-cost61f bit-66"
+   ],
+   "root_already_certified": false,
+   "n_entries": 1,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000841202000080000000"
+   ]
+  },
+  {
+   "root_hex": "00000000000004803202000000400000",
+   "entries": [
+    "class2-lane-cost71b bit-74"
+   ],
+   "root_already_certified": false,
+   "n_entries": 1,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000909002000100000000"
+   ]
+  },
+  {
+   "root_hex": "00000000000004803202000040000000",
+   "entries": [
+    "class2-lane-cost61e bit-74"
+   ],
+   "root_already_certified": false,
+   "n_entries": 1,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000909002000001000000"
+   ]
+  },
+  {
+   "root_hex": "00000000000008803202000000000002",
+   "entries": [
+    "class2-lane-cost61d bit-75"
+   ],
+   "root_already_certified": false,
+   "n_entries": 1,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000889002000000000200"
+   ]
+  },
+  {
+   "root_hex": "00000000000008803202000080000000",
+   "entries": [
+    "class2-lane-cost61f bit-75"
+   ],
+   "root_already_certified": false,
+   "n_entries": 1,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000889002000000800000"
+   ]
+  },
+  {
+   "root_hex": "00000000000020803202000080000000",
+   "entries": [
+    "class2-lane-cost61f bit-77"
+   ],
+   "root_already_certified": false,
+   "n_entries": 1,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000020801202000080000000"
+   ]
+  },
+  {
+   "root_hex": "00000000001000803202000000000002",
+   "entries": [
+    "class2-lane-cost61d bit-84"
+   ],
+   "root_already_certified": false,
+   "n_entries": 1,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000100003800000008200000"
+   ]
+  },
+  {
+   "root_hex": "00000000001000803202000000100000",
+   "entries": [
+    "class2-lane-cost64b bit-84"
+   ],
+   "root_already_certified": false,
+   "n_entries": 1,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000100809002000000001000"
+   ]
+  },
+  {
+   "root_hex": "00000000001000803202000080000000",
+   "entries": [
+    "class2-lane-cost61f bit-84"
+   ],
+   "root_already_certified": false,
+   "n_entries": 1,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000100809002000000800000"
+   ]
+  },
+  {
+   "root_hex": "00000000008000803202000040000000",
+   "entries": [
+    "class2-lane-cost61e bit-87"
+   ],
+   "root_already_certified": false,
+   "n_entries": 1,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000020809002000001000000"
+   ]
+  },
+  {
+   "root_hex": "00000000020000803202000040000000",
+   "entries": [
+    "class2-lane-cost61e bit-89"
+   ],
+   "root_already_certified": false,
+   "n_entries": 1,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000020000801202000040000000"
+   ]
+  },
+  {
+   "root_hex": "00000000100000803202000000100000",
+   "entries": [
+    "class2-lane-cost64b bit-92"
+   ],
+   "root_already_certified": false,
+   "n_entries": 1,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000100000801202000000100000"
+   ]
+  },
+  {
+   "root_hex": "00000000100000803202000040000000",
+   "entries": [
+    "class2-lane-cost61e bit-92"
+   ],
+   "root_already_certified": false,
+   "n_entries": 1,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000040000003810000008000000"
+   ]
+  },
+  {
+   "root_hex": "00000000100000803242000000000000",
+   "entries": [
+    "class2-lane-cost70c bit-92"
+   ],
+   "root_already_certified": false,
+   "n_entries": 1,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000849002000010000000"
+   ]
+  },
+  {
+   "root_hex": "00000000400000803202000000100000",
+   "entries": [
+    "class2-lane-cost64b bit-94"
+   ],
+   "root_already_certified": false,
+   "n_entries": 1,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000100000809002000000001000"
+   ]
+  },
+  {
+   "root_hex": "00000000400000803202000000400000",
+   "entries": [
+    "class2-lane-cost71b bit-94"
+   ],
+   "root_already_certified": false,
+   "n_entries": 1,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000103800000008000100"
+   ]
+  },
+  {
+   "root_hex": "00000001000000809102000800000000",
+   "entries": [
+    "class2-lane-cost63a bit-96"
+   ],
+   "root_already_certified": false,
+   "n_entries": 1,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000809102000040000000"
+   ]
+  },
+  {
+   "root_hex": "00000002000000809102000800000000",
+   "entries": [
+    "class2-lane-cost63a bit-97"
+   ],
+   "root_already_certified": false,
+   "n_entries": 1,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000809102000080000000"
+   ]
+  },
+  {
+   "root_hex": "00000008000000803202000000001000",
+   "entries": [
+    "class2-lane-cost65h bit-99"
+   ],
+   "root_already_certified": false,
+   "n_entries": 1,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000003800000008001200"
+   ]
+  },
+  {
+   "root_hex": "00000008000000803202000020000000",
+   "entries": [
+    "class2-lane-cost67b bit-99"
+   ],
+   "root_already_certified": false,
+   "n_entries": 1,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000080003800000008000200"
+   ]
+  },
+  {
+   "root_hex": "00000200000000803202000040000000",
+   "entries": [
+    "class2-lane-cost61e bit-105"
+   ],
+   "root_already_certified": false,
+   "n_entries": 1,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000040000809002000000008000"
+   ]
+  },
+  {
+   "root_hex": "00000200000000803242000000000000",
+   "entries": [
+    "class2-lane-cost70c bit-105"
+   ],
+   "root_already_certified": false,
+   "n_entries": 1,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000849002000000008000"
+   ]
+  },
+  {
+   "root_hex": "00040000000000803202000000000002",
+   "entries": [
+    "class2-lane-cost61d bit-114"
+   ],
+   "root_already_certified": false,
+   "n_entries": 1,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000003800100008200000"
+   ]
+  },
+  {
+   "root_hex": "00100000000000803202000000000002",
+   "entries": [
+    "class2-lane-cost61d bit-116"
+   ],
+   "root_already_certified": false,
+   "n_entries": 1,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000043800000008200000"
+   ]
+  }
+ ],
+ "greedy_fold_order": [
+  {
+   "root_hex": "01000000000000809102000000800000",
+   "entries": [
+    "class2-lane-cost65e bit-120"
+   ],
+   "fold_gain_in_manifest": 1,
+   "uncovered_outside_manifest": 4,
+   "marginal_manifest_hexes": [
+    "00000000000000809102000000000400"
+   ]
+  },
+  {
+   "root_hex": "01000000000000803202000040000000",
+   "entries": [
+    "class2-lane-cost61e bit-120"
+   ],
+   "fold_gain_in_manifest": 1,
+   "uncovered_outside_manifest": 4,
+   "marginal_manifest_hexes": [
+    "00000000040000809002000000000001"
+   ]
+  },
+  {
+   "root_hex": "00400000000000803202000000001000",
+   "entries": [
+    "class2-lane-cost65h bit-118"
+   ],
+   "fold_gain_in_manifest": 1,
+   "uncovered_outside_manifest": 4,
+   "marginal_manifest_hexes": [
+    "00000000010000003800000008100000"
+   ]
+  },
+  {
+   "root_hex": "00200000000000803202000000400000",
+   "entries": [
+    "class2-lane-cost71b bit-117"
+   ],
+   "fold_gain_in_manifest": 1,
+   "uncovered_outside_manifest": 4,
+   "marginal_manifest_hexes": [
+    "00000000000020003800000008000100"
+   ]
+  },
+  {
+   "root_hex": "00200000000000803202000000100000",
+   "entries": [
+    "class2-lane-cost64b bit-117"
+   ],
+   "fold_gain_in_manifest": 1,
+   "uncovered_outside_manifest": 4,
+   "marginal_manifest_hexes": [
+    "00000000200000003800000200100000"
+   ]
+  },
+  {
+   "root_hex": "00200000000000803202000000001000",
+   "entries": [
+    "class2-lane-cost65h bit-117"
+   ],
+   "fold_gain_in_manifest": 1,
+   "uncovered_outside_manifest": 4,
+   "marginal_manifest_hexes": [
+    "00000000000020003800000008100000"
+   ]
+  },
+  {
+   "root_hex": "00100000000000803202000000100000",
+   "entries": [
+    "class2-lane-cost64b bit-116"
+   ],
+   "fold_gain_in_manifest": 1,
+   "uncovered_outside_manifest": 4,
+   "marginal_manifest_hexes": [
+    "00000000200000003800100000100000"
+   ]
+  },
+  {
+   "root_hex": "00100000000000803202000000000002",
+   "entries": [
+    "class2-lane-cost61d bit-116"
+   ],
+   "fold_gain_in_manifest": 1,
+   "uncovered_outside_manifest": 4,
+   "marginal_manifest_hexes": [
+    "00000000000000043800000008200000"
+   ]
+  },
+  {
+   "root_hex": "00040000000000803202000000000002",
+   "entries": [
+    "class2-lane-cost61d bit-114"
+   ],
+   "fold_gain_in_manifest": 1,
+   "uncovered_outside_manifest": 4,
+   "marginal_manifest_hexes": [
+    "00000000000000003800100008200000"
+   ]
+  },
+  {
+   "root_hex": "00000200000000803242000000000000",
+   "entries": [
+    "class2-lane-cost70c bit-105"
+   ],
+   "fold_gain_in_manifest": 1,
+   "uncovered_outside_manifest": 4,
+   "marginal_manifest_hexes": [
+    "00000000000000849002000000008000"
+   ]
+  },
+  {
+   "root_hex": "00000200000000803202000040000000",
+   "entries": [
+    "class2-lane-cost61e bit-105"
+   ],
+   "fold_gain_in_manifest": 1,
+   "uncovered_outside_manifest": 4,
+   "marginal_manifest_hexes": [
+    "00000000040000809002000000008000"
+   ]
+  },
+  {
+   "root_hex": "00000008000000803202000020000000",
+   "entries": [
+    "class2-lane-cost67b bit-99"
+   ],
+   "fold_gain_in_manifest": 1,
+   "uncovered_outside_manifest": 4,
+   "marginal_manifest_hexes": [
+    "00000000000080003800000008000200"
+   ]
+  },
+  {
+   "root_hex": "00000008000000803202000000001000",
+   "entries": [
+    "class2-lane-cost65h bit-99"
+   ],
+   "fold_gain_in_manifest": 1,
+   "uncovered_outside_manifest": 4,
+   "marginal_manifest_hexes": [
+    "00000000000000003800000008001200"
+   ]
+  },
+  {
+   "root_hex": "00000002000000809102000800000000",
+   "entries": [
+    "class2-lane-cost63a bit-97"
+   ],
+   "fold_gain_in_manifest": 1,
+   "uncovered_outside_manifest": 4,
+   "marginal_manifest_hexes": [
+    "00000000000000809102000080000000"
+   ]
+  },
+  {
+   "root_hex": "00000001000000809102000800000000",
+   "entries": [
+    "class2-lane-cost63a bit-96"
+   ],
+   "fold_gain_in_manifest": 1,
+   "uncovered_outside_manifest": 4,
+   "marginal_manifest_hexes": [
+    "00000000000000809102000040000000"
+   ]
+  },
+  {
+   "root_hex": "00000000400000803202000000400000",
+   "entries": [
+    "class2-lane-cost71b bit-94"
+   ],
+   "fold_gain_in_manifest": 1,
+   "uncovered_outside_manifest": 4,
+   "marginal_manifest_hexes": [
+    "00000000000000103800000008000100"
+   ]
+  },
+  {
+   "root_hex": "00000000400000803202000000100000",
+   "entries": [
+    "class2-lane-cost64b bit-94"
+   ],
+   "fold_gain_in_manifest": 1,
+   "uncovered_outside_manifest": 4,
+   "marginal_manifest_hexes": [
+    "00000000100000809002000000001000"
+   ]
+  },
+  {
+   "root_hex": "00000000100000803242000000000000",
+   "entries": [
+    "class2-lane-cost70c bit-92"
+   ],
+   "fold_gain_in_manifest": 1,
+   "uncovered_outside_manifest": 4,
+   "marginal_manifest_hexes": [
+    "00000000000000849002000010000000"
+   ]
+  },
+  {
+   "root_hex": "00000000100000803202000040000000",
+   "entries": [
+    "class2-lane-cost61e bit-92"
+   ],
+   "fold_gain_in_manifest": 1,
+   "uncovered_outside_manifest": 4,
+   "marginal_manifest_hexes": [
+    "00000000040000003810000008000000"
+   ]
+  },
+  {
+   "root_hex": "00000000100000803202000000100000",
+   "entries": [
+    "class2-lane-cost64b bit-92"
+   ],
+   "fold_gain_in_manifest": 1,
+   "uncovered_outside_manifest": 4,
+   "marginal_manifest_hexes": [
+    "00000000100000801202000000100000"
+   ]
+  },
+  {
+   "root_hex": "00000000020000803202000040000000",
+   "entries": [
+    "class2-lane-cost61e bit-89"
+   ],
+   "fold_gain_in_manifest": 1,
+   "uncovered_outside_manifest": 4,
+   "marginal_manifest_hexes": [
+    "00000000020000801202000040000000"
+   ]
+  },
+  {
+   "root_hex": "00000000008000803202000040000000",
+   "entries": [
+    "class2-lane-cost61e bit-87"
+   ],
+   "fold_gain_in_manifest": 1,
+   "uncovered_outside_manifest": 4,
+   "marginal_manifest_hexes": [
+    "00000000000020809002000001000000"
+   ]
+  },
+  {
+   "root_hex": "00000000001000803202000080000000",
+   "entries": [
+    "class2-lane-cost61f bit-84"
+   ],
+   "fold_gain_in_manifest": 1,
+   "uncovered_outside_manifest": 4,
+   "marginal_manifest_hexes": [
+    "00000000000100809002000000800000"
+   ]
+  },
+  {
+   "root_hex": "00000000001000803202000000100000",
+   "entries": [
+    "class2-lane-cost64b bit-84"
+   ],
+   "fold_gain_in_manifest": 1,
+   "uncovered_outside_manifest": 4,
+   "marginal_manifest_hexes": [
+    "00000000000100809002000000001000"
+   ]
+  },
+  {
+   "root_hex": "00000000001000803202000000000002",
+   "entries": [
+    "class2-lane-cost61d bit-84"
+   ],
+   "fold_gain_in_manifest": 1,
+   "uncovered_outside_manifest": 4,
+   "marginal_manifest_hexes": [
+    "00000000000100003800000008200000"
+   ]
+  },
+  {
+   "root_hex": "00000000000020803202000080000000",
+   "entries": [
+    "class2-lane-cost61f bit-77"
+   ],
+   "fold_gain_in_manifest": 1,
+   "uncovered_outside_manifest": 4,
+   "marginal_manifest_hexes": [
+    "00000000000020801202000080000000"
+   ]
+  },
+  {
+   "root_hex": "00000000000008803202000080000000",
+   "entries": [
+    "class2-lane-cost61f bit-75"
+   ],
+   "fold_gain_in_manifest": 1,
+   "uncovered_outside_manifest": 4,
+   "marginal_manifest_hexes": [
+    "00000000000000889002000000800000"
+   ]
+  },
+  {
+   "root_hex": "00000000000008803202000000000002",
+   "entries": [
+    "class2-lane-cost61d bit-75"
+   ],
+   "fold_gain_in_manifest": 1,
+   "uncovered_outside_manifest": 4,
+   "marginal_manifest_hexes": [
+    "00000000000000889002000000000200"
+   ]
+  },
+  {
+   "root_hex": "00000000000004803202000040000000",
+   "entries": [
+    "class2-lane-cost61e bit-74"
+   ],
+   "fold_gain_in_manifest": 1,
+   "uncovered_outside_manifest": 4,
+   "marginal_manifest_hexes": [
+    "00000000000000909002000001000000"
+   ]
+  },
+  {
+   "root_hex": "00000000000004803202000000400000",
+   "entries": [
+    "class2-lane-cost71b bit-74"
+   ],
+   "fold_gain_in_manifest": 1,
+   "uncovered_outside_manifest": 4,
+   "marginal_manifest_hexes": [
+    "00000000000000909002000100000000"
+   ]
+  },
+  {
+   "root_hex": "00000000000000843202000080000000",
+   "entries": [
+    "class2-lane-cost61f bit-66"
+   ],
+   "fold_gain_in_manifest": 1,
+   "uncovered_outside_manifest": 4,
+   "marginal_manifest_hexes": [
+    "00000000000000841202000080000000"
+   ]
+  },
+  {
+   "root_hex": "00000000000000809102400000800000",
+   "entries": [
+    "class2-lane-cost65e bit-46"
+   ],
+   "fold_gain_in_manifest": 1,
+   "uncovered_outside_manifest": 4,
+   "marginal_manifest_hexes": [
+    "00000000000000809102400000000000"
+   ]
+  },
+  {
+   "root_hex": "00000000000000809102001000800000",
+   "entries": [
+    "class2-lane-cost65e bit-36"
+   ],
+   "fold_gain_in_manifest": 1,
+   "uncovered_outside_manifest": 4,
+   "marginal_manifest_hexes": [
+    "00000000000000809102001000000000"
+   ]
+  },
+  {
+   "root_hex": "00000000000000803242010000000000",
+   "entries": [
+    "class2-lane-cost70c bit-40"
+   ],
+   "fold_gain_in_manifest": 1,
+   "uncovered_outside_manifest": 4,
+   "marginal_manifest_hexes": [
+    "00000000000000801242010000000000"
+   ]
+  },
+  {
+   "root_hex": "00000000000000803242000001000000",
+   "entries": [
+    "class2-lane-cost70c bit-24"
+   ],
+   "fold_gain_in_manifest": 1,
+   "uncovered_outside_manifest": 3,
+   "marginal_manifest_hexes": [
+    "00000000000000801242000001000000"
+   ]
+  },
+  {
+   "root_hex": "00000000000000803242000000000800",
+   "entries": [
+    "class2-lane-cost70c bit-11"
+   ],
+   "fold_gain_in_manifest": 1,
+   "uncovered_outside_manifest": 4,
+   "marginal_manifest_hexes": [
+    "00000000000000801242000000000800"
+   ]
+  },
+  {
+   "root_hex": "00000000000000803242000000000100",
+   "entries": [
+    "class2-lane-cost70c bit-8"
+   ],
+   "fold_gain_in_manifest": 1,
+   "uncovered_outside_manifest": 4,
+   "marginal_manifest_hexes": [
+    "00000000000000801242000000000100"
+   ]
+  },
+  {
+   "root_hex": "00000000000000803222000400000000",
+   "entries": [
+    "class2-lane-cost68c bit-53"
+   ],
+   "fold_gain_in_manifest": 1,
+   "uncovered_outside_manifest": 4,
+   "marginal_manifest_hexes": [
+    "00000000000000801222000400000000"
+   ]
+  },
+  {
+   "root_hex": "00000000000000803222000000100000",
+   "entries": [
+    "class2-lane-cost64b bit-53"
+   ],
+   "fold_gain_in_manifest": 1,
+   "uncovered_outside_manifest": 4,
+   "marginal_manifest_hexes": [
+    "00000000000000801222000000100000"
+   ]
+  },
+  {
+   "root_hex": "00000000000000803202080000100000",
+   "entries": [
+    "class2-lane-cost64b bit-43"
+   ],
+   "fold_gain_in_manifest": 1,
+   "uncovered_outside_manifest": 4,
+   "marginal_manifest_hexes": [
+    "00000000000000801202080000100000"
+   ]
+  }
+ ],
+ "greedy_total_in_manifest_gain": 40,
+ "interpretation_guard": "bookkeeping over published records; marginals are derived from root parent-lift orbits and the current solved set only; no new certificate is created here; 11x11 empty root / {49,60} / S2 {59,60} / class 2 / class 4 remain UNKNOWN"
+}

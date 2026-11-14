@@ -111,8 +111,14 @@ assert dem52[j65e['s6_child_hex']] == {'c1': 0, 'c2': 2, 'c4': 0}
 print('CONTROL cost-65e child demand (c1=0,c2=2,c4=0) reproduced from the merged state: OK')
 
 w65e = json.loads((OUT / 'class2-lane-cost65e-win7-certificates-20261114.json').read_text())
-certs65e = [c for c in w65e['certificates'] if c.get('verdict') == 'WIN7']
-assert len(certs65e) == 1 and certs65e[0]['bit'] == 107
+certs65e_all = [c for c in w65e['certificates'] if c.get('verdict') == 'WIN7']
+# The record was updated on 2026-11-15 with the later cost-65e bit-7 receipt
+# (same root as the warm-multiband cost-65e bit-7 entry, folded downstream in
+# the chain by the warm-multiband recompute). This historical step folds the
+# bit-107 receipt only, exactly as published, so select it from the possibly
+# grown record instead of asserting the whole record has a single entry.
+certs65e = [c for c in certs65e_all if c['bit'] == 107]
+assert len(certs65e) == 1
 c = certs65e[0]
 assert c['rows'] == 18930 and c['sub_roots_pass'] == 44
 assert c['root_check']['loser_mobility'] == 44
