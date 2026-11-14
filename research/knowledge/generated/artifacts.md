@@ -13009,6 +13009,33 @@
 ## [research/experiments/six-row-q7-width6-20261112/scripts/six_row_q7_census_witness.ts](../../../research/experiments/six-row-q7-width6-20261112/scripts/six_row_q7_census_witness.ts)
 
 - [K0760](../items/K0760-six-row-q7-width6-census-full-capacity-witnesses.md) (source): census・制御・witness探索・独立検証の完全再現スクリプト（バッチ実行の手順は冒頭に記載）
+## [research/experiments/six-row-q8-m19-class-split-20261114/output/c6x19q8_2.txt](../../../research/experiments/six-row-q8-m19-class-split-20261114/output/c6x19q8_2.txt)
+
+- [K0818](../items/K0818-six-row-q8-m19-deficient-nonexistence.md) (data): hardest class raw kissat log ({2}: 4,008,520 conflicts UNSAT); all 35 raw logs c6x19q8_*.txt
+## [research/experiments/six-row-q8-m19-class-split-20261114/output/crosscheck_lexH_class2.txt](../../../research/experiments/six-row-q8-m19-class-split-20261114/output/crosscheck_lexH_class2.txt)
+
+- [K0818](../items/K0818-six-row-q8-m19-deficient-nonexistence.md) (data): lex=H re-encoded cross-check of class {2} (3,246,250 conflicts UNSAT); classes {1},{1,2},{2,3} also cross-checked
+## [research/experiments/six-row-q8-m19-class-split-20261114/output/positive_control_6x23_class1_witness.json](../../../research/experiments/six-row-q8-m19-class-split-20261114/output/positive_control_6x23_class1_witness.json)
+
+- [K0818](../items/K0818-six-row-q8-m19-deficient-nonexistence.md) (data): 6x23 q=6 class {1} SAT via kissat: 29 stones rows (5,4,5,5,5,5), census-free verifyConfig + Python Fraction verifier both PASS — end-to-end positive control on a K0815 witness board
+## [research/experiments/six-row-q8-m19-class-split-20261114/output/records.jsonl](../../../research/experiments/six-row-q8-m19-class-split-20261114/output/records.jsonl)
+
+- [K0818](../items/K0818-six-row-q8-m19-deficient-nonexistence.md) (data): all 35 canonical class records: result UNSAT, rc=20, conflicts, seconds (sum 15,492,764 conflicts / 920.1s)
+## [research/experiments/six-row-q8-m19-class-split-20261114/output/smallboard_validation/validation_result.json](../../../research/experiments/six-row-q8-m19-class-split-20261114/output/smallboard_validation/validation_result.json)
+
+- [K0818](../items/K0818-six-row-q8-m19-deficient-nonexistence.md) (data): 19/19 small-board class-split instances (3x7/3x8/2x8/2x9/3x9 q=4, all canonical classes) match full-mask brute-force ground truth, SAT and UNSAT
+## [research/experiments/six-row-q8-m19-class-split-20261114/output/summary.json](../../../research/experiments/six-row-q8-m19-class-split-20261114/output/summary.json)
+
+- [K0818](../items/K0818-six-row-q8-m19-deficient-nonexistence.md) (data): aggregate: 35 UNSAT / 0 SAT / 0 INDET, controls, lex=H cross-check conflicts, coverage argument, determinism notes
+## [research/experiments/six-row-q8-m19-class-split-20261114/report.md](../../../research/experiments/six-row-q8-m19-class-split-20261114/report.md)
+
+- [K0818](../items/K0818-six-row-q8-m19-deficient-nonexistence.md) (proof): claim, coverage argument (exact deficiency set partitions deficient configurations; row-mirror soundness), verification protocol, per-class results, scope and limits
+## [research/experiments/six-row-q8-m19-class-split-20261114/scripts/sat3.js](../../../research/experiments/six-row-q8-m19-class-split-20261114/scripts/sat3.js)
+
+- [K0818](../items/K0818-six-row-q8-m19-deficient-nonexistence.md) (solver): class-split / exact-count (--krow) / minpos / lex encoder on the K0810 sat.js census + sat2.js counter core, plus kissat model decoding to stones with census-free verifyConfig
+## [research/experiments/six-row-q8-m19-class-split-20261114/scripts/sweep1.sh](../../../research/experiments/six-row-q8-m19-class-split-20261114/scripts/sweep1.sh)
+
+- [K0818](../items/K0818-six-row-q8-m19-deficient-nonexistence.md) (source): one-class driver: deterministic DIMACS, kissat 4.0.4 with 275s cap, JSONL record with exit code and conflicts
 ## [research/experiments/solver-benchmarks/output/8x8-o-primary-summary.json](../../../research/experiments/solver-benchmarks/output/8x8-o-primary-summary.json)
 
 - [K0089](../items/K0089-n8-replication-of-n9-o-strata.md) (data): 凍結primary endpoint
