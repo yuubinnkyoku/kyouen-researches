@@ -834,3 +834,21 @@ unified merge chain head 1,154（7aaa7d83 + 625b0e0c の二重独立実行済み
 なお、push時点で並走レーンが cost-70c warm batch-3完了（残りbits 3/42/86/103の4証明書・claim closure・gain-0予測 6751e21e）と cost-69f証明書5/9（bits 20/44/68/69/118）を公開済みであることを確認した。次回unified merge foldの材料である。解消計数はmanifest被覆の前進であり、盤全体の勝敗ではない。標準11×11空盤、二石root `{49,60}`・`{59,60}`、S2 `{59,60}`、class2・class4は引き続き **UNKNOWN**。
 
 成果物: [検証記録JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-unified-merge-endpoint-third-verification-20261115.json)、[log](../../log/2026-11-15-n11-class2-unified-merge-third-independent-verification.md)。
+
+## 2026-11-15: cost-69f証明書5件公開・bit-20 truncated repush・9 receipt fold — chain head 1,163
+
+自レーン（cost-69f sweep実行lane）が証明書5件（bits 20/44/68/69/118）を公開し、9 WIN7 receipt（bits 2/20/44/68/69/94/109/118/119）をunified merge 1,154の上にfoldした（[log](../../log/2026-11-15-n11-class2-lane-cost69f-certificates-and-receipts-fold.md)）。
+
+**bit-20 truncated pushの修復**: 初回push（e36a6b3a）は64KB-capped reader経由で1,770行/63,965バイトのまま着地していた。全1,741,046バイト（48,171行）を再pushし、remote git blob sha `8111cff29c3f0d3d2ef66e9e64e64a8b0968c453` をlocal計算と照合した。事故は[証明書記録JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost69f-win7-certificates-20261115.json)の `incident_bit20_truncated_push` に記録した（原因・初回着地サイズ・repush確認）。
+
+**証明書5件**: repo-verbatim抽出器・blind kill table・FBS 1<<20・全loser初手展開・LC_ALL=C行sortで、rows 35,501〜52,480・抽出節点11,305,750〜17,969,541・fbt_drops 0。BigInt独立検証を再実行し全PASS（sub-roots 56/55/58/51/54 = loser mobility = `legal_candidates.py` 独立列挙、union 0/0、terminal 13..17、行sorted-unique）。v15 anchorは9 WIN7全件 loss=true・節点数照合（bit-20は8,760,558等）、REFUTED anchor 99/112はloss=false。md5/sha256/bytes/git blob shaを記録JSONに残し、remote blob sha照合済み。残り4件（bits 2/94/109/119）は抽出未了。
+
+**9 receipt fold**（`recompute_frontier_cost69f_receipts_20261115.py`）: baseline unified 1,154をrunpyチェーンでbyte-identical再現（head JSON blob sha `a0789eed…` 照合）、child `00000000000000809102000000000008` がbaselineで本当に残存することをassert、sweep-auditを9 raw batchから独立再導出（節点和112,752,229・batch blob sha・root恒等式）、v15/v16制御をJSONLからassert、証明書5件をbytes×md5×sha256×blob shaで検査の上、公開bit順でfold。**+9 manifest軌道**（bit 2がchild軌道+交差軌道`…80120200000000180`の2件、bit 20はmarginal-0の正の重複照合、他7件が各1件の交差軌道）。最初のreceiptがchild軌道を閉鎖したことをassertした。
+
+**chain headは解消S6 1,163・unique残り6,684・費用527,280・open需要4,954/391,003**（残りS5軌道175、`c2=2,c4=0`は1,034→1,025）。親S5 `00000000000000809102000000000000` は7軌道・519不変。2回実行byte-identical、4ファイルのremote blob sha照合済み（初回pushの末尾余分改行1バイトを検出しbyte-exact repush）。
+
+未fold material: cost-70c warm batch-3証明書4件（bits 3/42/86/103）、cost-65j sweep（in flight・bit-113交叉被覆の再検査必要）、69f残り4証明書。最安未sweep子は `00000000000000809102000000002000`（cost 69、c1=0,c2=2,c4=2）。
+
+解消計数はmanifest被覆の前進であり、盤全体の勝敗ではない。WIN7証明書は個別7石rootの深さ10以内のWINのみを証明する。標準11×11空盤、二石root `{49,60}`・`{59,60}`、S2 `{59,60}`、class2・class4は引き続き **UNKNOWN**。
+
+成果物: [frontier JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost69f-receipts-recompute-20261115.json)、[ranking CSV](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-s5-ranking-after-cost69f-receipts-20261115.csv)、[top-candidates CSV](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-top-candidates-s6-after-cost69f-receipts-20261115.csv)、[foldスクリプト](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost69f_receipts_20261115.py)、[証明書記録JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost69f-win7-certificates-20261115.json)。
