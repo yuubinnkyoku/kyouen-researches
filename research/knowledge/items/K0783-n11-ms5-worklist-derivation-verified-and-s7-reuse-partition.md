@@ -460,3 +460,21 @@ Class-2 target S5 `00000000000000809082000000000000` のS6 child `00000000000000
 この更新はS6 worklistの被覆を増やすが、S5のclass-2 blockerを閉じない。class-2最良候補の残り11軌道、class-4の18軌道は未解決。cost-73aのbit81は証明書未公開であり、この監査に含めない。
 
 標準11×11空盤、二石root `{49,60}`、S2 `{59,60}` は引き続き **UNKNOWN**。
+
+## 2026-11-14: sweep-engine fbt cache saturation audit (session 11)
+
+The canonical sweep engine's 3-stone blocked-mask cache (fbtOR, FBS=1<<17, 48-probe linear walk) silently drops queries when a probe walk finds neither the key nor an empty slot. A behavior-identical instrumented variant (fbtDrops/fbtInserts/fbtMaxProbe counters) re-solved 20 published d10 rows of this target's swept children; all 20 rows reproduced node-exact against the published raw batches.
+
+Findings:
+
+- All 8 audited WIN7 rows (cost-67 bits 18/34/101/118, cost-71 bits 9/70, cost-73a bit81, cost-73d bit48) have fbtDrops=0. No published certificate is affected.
+- Saturation is real on 6 heaviest REFUTED rows (drops: cost-73c bit32 834,047; cost-73b bit18 646,356; cost-73c bit120 58,092; cost-74 bit70 16,034; cost-71 bit110 10,298; cost-70 bit112 9,046). Saturation onset sits between 87,159 and 90,616 total cache inserts (66.5%-69.1% of 131,072 slots); fbtMaxProbe hits the 47/48 ceiling exactly on the saturated rows.
+- Every saturated verdict survived an FBS=1<<20 drop-free re-solve (fbtDrops=0 required): all remain loss=false (REFUTED-D10). No published verdict, frontier number, or certificate changes. The certificate layer was already drop-guarded (extractor: FBS=1<<20, fbt_drops=0 required per certificate).
+
+Operational rule going forward: sweep candidates expected above ~19M nodes (~90k fbt inserts) run with the drop counter; any saturated verdict is confirmed with the FBS=1<<20 re-solve before reuse as evidence. The canonical runner stays byte-identical for raw comparability.
+
+Artifacts: research/experiments/n11-fbt-saturation-audit-20261114/ (scripts, raw counter data, drop-free re-solves, manifest, README). The cost-73e/cost-74 remote accounting audit (26 raw files + 2 determinism reruns re-fetched and strictly re-parsed at commit 6ebceabb; candidate sets and node totals bit-exact, 0 parse failures) is recorded in research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73e-cost74-remote-audit-20261114.json.
+
+Provenance: session 10 ran this audit locally but lost the outputs to an environment reset before push; session 11 regenerated everything and all session-10-recorded drop counts and drop-free node counts reproduced bit-exact (determinism confirmation across independent machines). fbtInserts convention documented in the manifest: search-time inserts only, +35 for the C(7,3) root-triple pre-insertions.
+
+Interpretation guard: REFUTED-D10 is not a child refutation. 11x11 empty board, two-stone root {49,60}, S2 {59,60}, class 2, class 4: UNKNOWN.
