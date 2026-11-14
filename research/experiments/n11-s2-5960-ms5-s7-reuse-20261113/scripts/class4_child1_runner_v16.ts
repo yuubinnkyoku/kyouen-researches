@@ -12,14 +12,14 @@
 //    loss=false, 56,791 nodes, terminal [13,15] (v15 baseline: 146,514)
 //
 // Usage (Node >= 22):
-//   node --experimental-strip-types class4_child1_runner.ts (continuation
+//   node --experimental-strip-types class4_child1_runner_v16.ts (continuation
 //        backslash omitted here: it does not survive the push transport)
 //        --bits 34,54,88 --depth 10 --cap 950000 --out results.jsonl
 //   --andclose 0|1   close-first AND ordering (lossAt children by wscore DESC);
 //                   default 1: applied only when depth >= 8 (session-4 finding:
 //                   -30% at pilot d8, worse at d6)
 //   --nocontrol      skip the pilot d6 control (default: run it, require
-//                    loss=false at exactly 5949 nodes, else abort)
+//                    loss=false at exactly 3402 nodes, else abort)
 //   --child HEX      S6 child hex (default 00000000020000003800000080080000)
 //
 // Output JSONL lines: {bit, loss, nodes, capped, terminalStoneRange, ms}
