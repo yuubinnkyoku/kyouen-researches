@@ -1,0 +1,18 @@
+{
+  "session": "class-frontier merged recompute (cost-60b-warm 17 + cost-71b 3) fork resolution, long-term lane, 2026-11-15",
+  "purpose": "resolve the fork at the after-cost-70c frontier (solved 1022 / unique remaining 6825 / sum 537921 / open 5095/401644, commit 6f42af0d): branch A cost-60b-warm (class-frontier-cost60b-warm-recompute-20261115.json, solved 1040) and branch B cost-71b (class-frontier-cost71b-recompute-20261115.json, solved 1026) both chain on the same baseline and must be merged into one canonical sequential recompute with per-bit marginals re-derived from the growing merged union, following the established merged-recompute pattern of recompute_frontier_merged_after65h65i_warm_67b68c_20261115.py",
+  "receipts_to_fold": {
+    "cost_60b_warm": "class2-lane-cost60b-warm-certificates-20261115.json (17 receipts, bits 40/77/26/74/44/28/8/88/95/106/87/22/100/108/32/114/43; bits 15/34 are cross-child duplicates of cost-69e bit-21 and cost-68c bit-21 and are NOT re-added)",
+    "cost_71b": "class2-lane-cost71b-win7-certificates-20261115.json (3 receipts, bits 109/21/105; bit 21 root is the same 7-stone root as cost-60b-warm bit 22 - the duplicate-fold rule applies: whichever group is added first carries the marginal, the second contributes 0 by construction)"
+  },
+  "excluded": "cost-69e warm rebuild certificates (bits 89/94/108/116 etc.): no published record JSON on main at claim time (only .cert blobs and the 2026-11-14 inflight), so they cannot be folded; they remain outstanding for the next recompute after their records are published",
+  "expected_outputs": [
+    "output/class-frontier-merged-cost60bwarm-cost71b-recompute-20261115.json",
+    "output/class-frontier-s5-ranking-after-merged-cost60bwarm-cost71b-20261115.csv",
+    "output/class-frontier-top-candidates-s6-after-merged-cost60bwarm-cost71b-20261115.csv"
+  ],
+  "expected_controls": "reproduce the after-cost-70c baseline by runpy (assert 1022/6825/537921/5095/401644); reproduce branch A endpoint (1040) and branch B endpoint (1026) exactly; assert fork state subset of both; re-add receipt groups in canonical order (cost-60b-warm record order, then cost-71b 109/21/105) with marginals re-derived; two runs byte-identical",
+  "status": "in_progress",
+  "started": "2026-11-15 (JST)",
+  "unknown_status": "11x11 empty board: UNKNOWN; this merged recompute is bookkeeping over published receipts and proves no new game outcome"
+}
