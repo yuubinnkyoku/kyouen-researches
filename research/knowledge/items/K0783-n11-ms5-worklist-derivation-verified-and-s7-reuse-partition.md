@@ -462,6 +462,15 @@ evidence: 公開manifestの辞書順md5は0e95a438dbcb486368393de9c73fc21e。94�
 - path: research/log/2026-11-15-n11-class2-cost72-batches1-9-audit.md
   role: log
   note: cost72の全72候補記録整合性、2つのWIN7-D10候補、未完了扱いの理由
+- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_warm_multiband_loss_conflicts_20261115.mjs
+  role: verifier
+  note: warm multiband 35 WIN7 rootを17 verified manifest・central LOSS7 parent-lift・knownloss候補へD4正規化で照合する衝突監査器
+- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/warm-multiband-loss-conflict-audit-20261115.json
+  role: data
+  note: 35 warm rootと既存WIN7/LOSS7・274 parent-lift・396 category-1候補のD4衝突監査
+- path: research/log/2026-11-15-n11-class2-warm-multiband-loss-conflict-audit.md
+  role: log
+  note: 2026-11-15 warm multiband証明書の範囲限定WIN/LOSS衝突監査
 ---
 
 ## 主張
@@ -698,3 +707,10 @@ best coverable class-2五石親 `00000000000000809102000000000000` は残り35�
 成果物: [warm multiband記録JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-warm-multiband-certificates-20261115.json)、[chain head再計算](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-warm-multiband-recompute-20261115.json)、[抽出・再構築・再計算スクリプト](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_warm_multiband_20261115.py)、[log](../../log/2026-11-15-n11-class2-warm-multiband.md)。
 
 解消計数はmanifest被覆の前進であり、盤全体の勝敗ではない。標準11×11空盤、二石root `{49,60}`・`{59,60}`、S2 `{59,60}`、class2・class4は引き続き **UNKNOWN**。
+
+
+## 2026-11-15: warm multiband 35証明書のWIN/LOSS衝突監査
+
+warm multibandの35 WIN7 rootを、同じS2再利用実験の17 verified manifest（既存WIN7 77件・LOSS7 200件）、中央49 terminal LOSS7 parent-lift 274鍵、MS5のcategory-1既知LOSS候補396行へD4正規化で照合した。35 rootは内部で35個の異なるD4軌道を持ち、既存WIN7・LOSS7・central parent-lift・knownloss候補との交差はいずれも0。既存WIN7とLOSS7の間も交差0。証明・親持ち上げ・候補表のLOSS側870 D4軌道は相互に重複しなかった。category-1候補396行は独立LOSS7証明書とは扱わない。
+
+これは公開manifest・候補表に限った衝突監査であり、全raw cacheや非公開worker cacheを走査したものではない。warm証明書本体の戦略検証を置き換えず、S6 frontierや勝敗も変更しない。詳細は監査logと機械可読JSONを参照。

@@ -1,0 +1,65 @@
+{
+  "schema": "n11-warm-multiband-win-loss-conflict-audit-20261115-v1",
+  "source_snapshot_main": "3631e7ba84b4db97329e4b7de670dde95ce2c814",
+  "main_commit_after_audit": "52fd92c12c27fe02d94d76fe58964b47d4a6fa73",
+  "method": "D4 canonicalization using the same eight coordinate images as research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_published_candidates.py; exact 121-bit masks, no floating point",
+  "warm_multiband": {
+    "records": 35,
+    "unique_roots": 35,
+    "unique_d4_orbits": 35,
+    "stone_counts": [
+      7
+    ]
+  },
+  "prior_verified_manifests": {
+    "manifest_count": 17,
+    "record_count": 277,
+    "win7_records": 77,
+    "loss7_records": 200,
+    "unique_win7_d4_orbits": 77,
+    "unique_loss7_d4_orbits": 200,
+    "paths": [
+      "class2-batch1-certificates-verified.json",
+      "class2-batch1b-certificates-verified.json",
+      "class2-batch2-certificates-verified.json",
+      "class2-batch2b-certificates-verified.json",
+      "class2-batch3-certificates-verified.json",
+      "class2-batch5-certificates-verified.json",
+      "class2-certificates-verified.json",
+      "class2-last-loss-verified.json",
+      "class2-next-certificates-verified.json",
+      "class2-next-loss-verified.json",
+      "class2-next2-certificates-verified.json",
+      "class2-next3-certificates-verified.json",
+      "class2-next4-certificates-verified.json",
+      "class2-third-loss-verified.json",
+      "class4-batch1-certificates-verified.json",
+      "class4-batch2-certificates-verified.json",
+      "priority-certificates-verified.json"
+    ]
+  },
+  "additional_loss_sources": {
+    "central49_parent_lift": {
+      "path": "research/experiments/n11-central-19-cover-20261031/terminal_loss7_parent_lift_274_manifest.json",
+      "entries": 274,
+      "unique_d4_orbits": 274
+    },
+    "knownloss_category1_candidate_pool": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/ms5_s7_knownloss_candidates.csv",
+      "rows": 396,
+      "unique_d4_orbits": 396,
+      "interpretation": "published category-1 candidate rows; not treated as independent LOSS7 certificates"
+    },
+    "combined_unique_d4_orbits": 870,
+    "cross_source_d4_overlaps": 0
+  },
+  "conflicts": {
+    "warm_vs_prior_win7_d4": 0,
+    "warm_vs_prior_loss7_d4": 0,
+    "warm_vs_central_parent_lift_d4": 0,
+    "warm_vs_knownloss_category1_d4": 0,
+    "prior_win7_vs_prior_loss7_d4": 0,
+    "total": 0
+  },
+  "interpretation_guard": "No D4-equivalent WIN7/LOSS7 conflict was found between the 35 warm roots and the listed published sources. This is a bounded manifest/candidate-index audit, not a scan of every raw cache, private worker cache, or every certificate in the repository. It does not change S6 frontier counts or decide the empty board."
+}
