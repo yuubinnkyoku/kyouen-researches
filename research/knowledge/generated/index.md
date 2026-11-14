@@ -798,7 +798,7 @@
 | [K0812](../items/K0812-new-exceptional-primes-3719-3727.md) | p=3719・3727・3967・4211・4231・4373は等号A(p)=(p+3)/2を達成せず、単一CNFのDRAT証明書で監査済み（既知4素数の外側で新発見） | proposition | computed | maximum-safe, geometry, search-methods |
 | [K0813](../items/K0813-width2-5-circle-point-max-and-q9-q10-row-formula.md) | 幅2..5の円格子点数P(w)完全決定（4,6,8,8）・系としてw=5・q≥9の行分離 M_{5,q}=q−1 | proposition | proved | rectangles, geometry, variants |
 | [K0814](../items/K0814-attained-equality-3793-3803-3863.md) | p=3793・3803・3863は等号A(p)=(p+3)/2を達成する（サイズh+2の証人を独立整数幾何で監査） | proposition | computed | maximum-safe, geometry, search-methods |
-| [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) | 列追加拡張・深除去拡張と外部SATソルバによる下界更新 — M_{6,5}≥31・M_{6,6}≥24・M_{5,6}≥22・M_{6,7}≥21・M_{6,8}≥19・6×12 q=8最小極大=37 | proposition | proved | rectangles, variants |
+| [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) | 列追加拡張・深除去拡張と外部SATソルバによる下界更新 — M_{6,5}≥31・M_{6,6}≥24・M_{5,6}≥22・M_{6,7}≥22・M_{6,8}≥19・6×12 q=8最小極大=37 | proposition | proved | rectangles, variants |
 | [K0816](../items/K0816-five-row-m20-deficient-nonexistence.md) | 5x20 q=7 row-deficient maximal nonexistence (all 19 classes) — witness-free widths extend to 20, M_{5,7} ∈ {19,20} or ≥22 | proposition | computed | rectangles, maximal-safe |
 | [K0817](../items/K0817-circle-strip-subadditivity-and-density-bound.md) | 円の連続行窓点数 P(w) の劣加法性・漸近密度上界・P(83)=34 | proposition | proved | geometry, rectangles |
 | [K0818](../items/K0818-six-row-q8-m19-deficient-nonexistence.md) | 6x19 q=8 row-deficient maximal nonexistence (all 35 canonical classes UNSAT) — witness-free width set of (6,8) gains 19, M_{6,8} = 19 or >= 21 | proposition | computed | rectangles, maximal-safe |

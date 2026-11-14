@@ -13012,6 +13012,9 @@
 ## [research/experiments/six-row-q7-deficient-20261112/scripts/six_row_one_deficient_runner.ts](../../../research/experiments/six-row-q7-deficient-20261112/scripts/six_row_one_deficient_runner.ts)
 
 - [K0761](../items/K0761-six-row-one-deficient-class-witnesses.md) (source): 幅6 1行欠損機械（probe + census verify + 独立検証。1実行1エントリの手順は冒頭）
+## [research/experiments/six-row-q7-m21-class-split-20261114/output/w67_21.json](../../../research/experiments/six-row-q7-m21-class-split-20261114/output/w67_21.json)
+
+- [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) (data): 6×21 q=7 35石witness（行構成 6,6,5,6,6,6・class-split SAT class {2}・1,904,706 conflicts）・2系統検証PASS → M_{6,7} ≥ 22
 ## [research/experiments/six-row-q7-stabilization-upper-bound-20261113/output/six_row_q7_upper_bound.json](../../../research/experiments/six-row-q7-stabilization-upper-bound-20261113/output/six_row_q7_upper_bound.json)
 
 - [K0806](../items/K0806-six-row-q7-stabilization-bounds.md) (data): 全検査結果・argmax・K0024再計算・U_{6,q}補助表
