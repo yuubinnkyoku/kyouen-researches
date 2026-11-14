@@ -1,4 +1,4 @@
-# 2026-11-15 class2-lane: cost-69e sweep — 11 WIN7-D10 (6 certificates verified incl. warm rebuilds, all 11 WIN7 bits v15-anchored), frontier 1012 -> 1019 (merged baseline)
+# 2026-11-15 class2-lane: cost-69e sweep — 11 WIN7-D10 (all 11 WIN7 bits certified: 10 lane certificates incl. warm rebuilds, bit 2 by the parallel cost-65g-warm bit-15 rebuild; all 11 v15-anchored), frontier 1012 -> 1023 (merged baseline)
 
 Long-term lane parallel execution, continuing after the cost-68c frontier
 recompute (after-cost-68c solved 998; commit `368e2b1f`). Sweep target: the
@@ -91,10 +91,11 @@ union).
   the sandbox memory limit AFTER the push call completed; the remote file was
   verified byte-exact afterwards.
 - Certificates: `class2-lane-cost69e-certificates/bit{21,99,87}-root-<hex>.cert`.
-- After the warm rebuilds, 4 WIN7-D10 bits remain without extracted
-  certificates (89, 94, 108, 116; bit 2 already certified by the parallel
-  cost-65g-warm bit-15 rebuild): further warm certificate-rebuild
-  candidates; they change no frontier number beyond the +7 published above.
+- After the warm rebuilds of 84/76/90, the remaining 4 WIN7-D10 bits
+  (89, 94, 108, 116) were rebuilt as warm certificates in a follow-up
+  session (next section); bit 2 is certified by the parallel cost-65g-warm
+  bit-15 rebuild, so **all 11 WIN7 bits of this sweep now have
+  certificates**.
 - Records pushed (commit `6f776bef`): sweep record + win7-certificates record
   (schema-consistent with the cost-65h/67b/68c records) + inflight updated to
   completed.
@@ -118,22 +119,59 @@ union 0/0):
   `b0e6f779b229ef4993c8715691db7ede`, bit 84
   `41adac3c1d684d4b4dde25c416c2ae20`).
 - Records updated (commit `53511442`): 6 certificates total; unverified WIN7
-  bits now 89/94/108/116 (bit 2 already certified by the parallel cost-65g-warm
-  bit-15 rebuild).
+  bits then 89/94/108/116 (bit 2 already certified by the parallel
+  cost-65g-warm bit-15 rebuild).
+- Records extended to the complete 10-certificate set (commit `8c5561ee`):
+  bits 89/94/108/116 appended with full verification metadata;
+  `unverified_win7_bits` now empty. Bit-116 is published as base64(gzip -9)
+  (`.../bit116-root-00100000000000803202000000008000.cert.gz.b64`, 445,162
+  bytes, commit `ce7d862d`; restore with `base64 -d | gunzip`; uncompressed
+  2,670,116 bytes / 74,115 lines, md5
+  `691140486067132237d8c11d93a12559`, sha256
+  `20c0f5edf05f9f45cd0e5d3331a22ec3a39ac001b28428a51d79eefda4498159`;
+  roundtrip verified locally and via the SHA-pinned raw URL).
+  Remote md5 verified for all 10 lane certificates (bits
+  21/99/87/84/76/90/89/94/108 plain, 116 via the uncompressed md5 of the
+  base64(gzip) publication).
+
+## Second warm rebuild batch: bits 89 / 94 / 108 / 116
+
+A follow-up session (2026-11-15) rebuilt the remaining four WIN7-D10
+candidates as warm certificates (same blind extraction + verification
+pipeline: root-check mobility match, all sub-roots PASS, consumed/rows
+union 0/0):
+
+| bit | root hex | rows | extraction nodes | sub-roots | union miss/extra | md5 |
+|---:|---|---:|---:|---:|---|---|
+| 89 | `00000000020000803202000000008000` | 47,035 | 8,642,394 | 54/54 | 0/0 | `1e2c8db6...` |
+| 94 | `00000000400000803202000000008000` | 42,538 | 8,681,404 | 52/52 | 0/0 | `4dc6076b...` |
+| 108 | `00001000000000803202000000008000` | 33,942 | 7,620,433 | 51/51 | 0/0 | `74d07146...` |
+| 116 | `00100000000000803202000000008000` | 74,113 | 22,683,171 | 59/59 | 0/0 | `69114048...` (uncompressed) |
+
+- Full md5s: bit 89 `1e2c8db6cd9303fcf0167f59ccb83bae`, bit 94
+  `4dc6076b96edc3a472b4b23f38739451`, bit 108
+  `74d071466140e1b0a48b67134431a570`, bit 116 (uncompressed)
+  `691140486067132237d8c11d93a12559`. Certificates 89/94/108 pushed as
+  plain `.cert` files; 116 as base64(gzip -9) per the 16 MiB sandbox
+  payload limit (commit `ce7d862d`; relay part files removed in commits
+  `f31cb81f` / `064bd6d3`).
 
 ## Frontier recompute after cost-69e
 
 `recompute_frontier_cost69e_20261115.py` (direct runpy extension of the
 published merged recompute script; first pushed at commit `b37252d3`,
-extended to the 6-receipt final version at commits `7cec3e7e` /
-`93c90db6`): the merged baseline reproduced exactly (asserted
+extended to the 6-receipt version at commits `7cec3e7e` / `93c90db6`, and
+to the 10-receipt final version (schema v2) after the second warm-rebuild
+batch): the merged baseline reproduced exactly (asserted
 1012/6,835/538,670/5,105/402,393), the child's remaining membership
 re-derived from the merged frontier (confirmed closed mid-flight; demand
 bookkeeping recorded), the completed cost-69e sweep asserted from the
 published raw batches (69 candidates, 9 pilots, 11 WIN7 + 58 REFUTED,
 80,172,332 nodes; determinism + v15 anchors asserted from the published
-JSONL files), and the six verified receipts added in the published record
-order (21/99/87 sweep certificates, then 84/76/90 warm rebuilds).
+JSONL files), and the ten verified receipts added in the published record
+order (21/99/87 sweep certificates, then the 84/76/90 and 89/94/108/116
+warm rebuilds; bit-116 md5 asserted as the uncompressed certificate md5
+since the file is published as base64(gzip)).
 
 - cost-69e additions (covers / marginal / in-manifest): bit 21: 7/5/1, bit
   99: 7/5/1, bit 87: 7/5/1, bit 84: 7/5/1, bit 76: 7/6/2, bit 90: 7/5/1
@@ -142,8 +180,20 @@ order (21/99/87 sweep certificates, then 84/76/90 warm rebuilds).
 - **after cost-69e (6 receipts): solved 1019 · unique remaining 6,832 with 3
   receipts -> 6,828 with 6 · sum 538,445 -> 538,143 · open 5,102/402,168 ->
   5,098/401,866** (net in-manifest +7 from 1012). The intermediate 3-receipt
-  state (solved 1015) was published first; the 6-receipt recompute is the
-  final state (commits `7cec3e7e` + method-text fix `93c90db6`).
+  state (solved 1015) was published first; the 6-receipt state was the
+  final state at commits `7cec3e7e` + method-text fix `93c90db6`.
+- cost-69e additions from the second warm-rebuild batch (covers /
+  marginal / in-manifest): bits 89/94/108/116 each 7/5/1, closing exactly
+  one additional manifest S6 orbit per bit:
+  `00000000000000003800200008080000` (89),
+  `00000000000000103820000008000000` (94),
+  `00000000200000083800000000100000` (108),
+  `00000000000000043820000008000000` (116) — all outside this target's
+  parent.
+- **after cost-69e (10 receipts, schema v2, final): solved 1023 · unique
+  remaining 6,824 · sum 537,833 · open 5,094/401,556** (net in-manifest
+  +11 from 1012). Two consecutive v2 runs byte-identical (JSON + both
+  CSVs); remote md5 to be verified after push.
 - Notably the warm bit-76 receipt marginally covers **the cost-70 child
   `00000000000000803242000000000000` claimed in parallel as cost-70c** (its
   other in-manifest marginal is `00000000000000849002000000020000`): the
