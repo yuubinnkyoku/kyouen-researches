@@ -794,5 +794,5 @@
 | [K0808](../items/K0808-six-row-deficient-witnesses-q568.md) | 6×m q=5/6/8 の欠損極大witness — M_{6,5}≥20・M_{6,6}≥16・M_{6,8}≥12（下界の初記録） | computation | computed | rectangles, maximal-safe, verification, geometry |
 | [K0809](../items/K0809-handicap-deficient-witnesses-6x5-6x6.md) | 行capハンディキャップ貪欲による欠損witness — M_{6,5}≥22・M_{6,6}≥17（下界更新） | computation | computed | rectangles, maximal-safe, verification, geometry |
 | [K0810](../items/K0810-sat-row-deficient-witnesses.md) | SAT探索による行欠損極大witness — M_{6,5}≥23・M_{6,6}≥20・M_{6,8}≥18・M_{5,6}≥18（K0809候補予想4件の反証） | proposition | proved | rectangles, variants |
-| [K0811](../items/K0811-sa-row-deficient-witnesses.md) | SA探索による行欠損極大witness — M_{6,5}≥26・M_{6,6}≥21・M_{5,6}≥19（K0810の下界3件を更新） | proposition | proved | rectangles, variants |
+| [K0811](../items/K0811-sa-row-deficient-witnesses.md) | SA探索による行欠損極大witness — M_{6,5}≥28・M_{6,6}≥22・M_{5,6}≥19（K0810の下界を更新・第2弾で延長） | proposition | proved | rectangles, variants |
 | [K0812](../items/K0812-new-exceptional-primes-3719-3727.md) | p=3719とp=3727は等号A(p)=(p+3)/2を達成せず、単一CNFのDRAT証明書で監査済み（既知4素数の外側で新発見） | proposition | computed | maximum-safe, geometry, search-methods |
