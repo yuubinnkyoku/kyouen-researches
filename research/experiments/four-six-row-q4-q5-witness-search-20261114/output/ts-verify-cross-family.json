@@ -1,0 +1,73 @@
+{
+ "schema": 1,
+ "tool": "verify_independent.ts (third system: pure TypeScript + BigInt exact rational arithmetic, algorithmically independent of sat.js verifyConfig and verify_witness.py; from seven-row-q7-witness-search-20261114, used verbatim)",
+ "date": "2026-11-14T21:09:17Z",
+ "note": "frontier witnesses of the five four-to-six-row q4/q5 families: all PASS safe+maximal+row-deficient -> triple-verified",
+ "records": [
+  {
+   "file": "s4x34q4.witness.json",
+   "w": 4,
+   "m": 34,
+   "q": 4,
+   "n": 11,
+   "safe": true,
+   "maximal": true,
+   "rowDeficient": true,
+   "pass": true,
+   "maxCirc": 3,
+   "maxLine": 3
+  },
+  {
+   "file": "s5x36q4.witness.json",
+   "w": 5,
+   "m": 36,
+   "q": 4,
+   "n": 14,
+   "safe": true,
+   "maximal": true,
+   "rowDeficient": true,
+   "pass": true,
+   "maxCirc": 3,
+   "maxLine": 3
+  },
+  {
+   "file": "s6x31q4.witness.json",
+   "w": 6,
+   "m": 31,
+   "q": 4,
+   "n": 17,
+   "safe": true,
+   "maximal": true,
+   "rowDeficient": true,
+   "pass": true,
+   "maxCirc": 3,
+   "maxLine": 3
+  },
+  {
+   "file": "s4x19q5.witness.json",
+   "w": 4,
+   "m": 19,
+   "q": 5,
+   "n": 15,
+   "safe": true,
+   "maximal": true,
+   "rowDeficient": true,
+   "pass": true,
+   "maxCirc": 4,
+   "maxLine": 4
+  },
+  {
+   "file": "s5x23q5.witness.json",
+   "w": 5,
+   "m": 23,
+   "q": 5,
+   "n": 19,
+   "safe": true,
+   "maximal": true,
+   "rowDeficient": true,
+   "pass": true,
+   "maxCirc": 4,
+   "maxLine": 4
+  }
+ ]
+}
