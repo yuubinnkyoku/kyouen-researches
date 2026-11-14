@@ -1,0 +1,24 @@
+{
+ "w": 6,
+ "m": 12,
+ "q": 8,
+ "encArgs": "--cap=36 --counter=tot --lex=H,V,HV",
+ "vars": 4285,
+ "clauses": 18851,
+ "mode": "cap",
+ "counter": "tot",
+ "lex": [
+  "H",
+  "V",
+  "HV"
+ ],
+ "result": "UNSAT",
+ "conflicts": 10225097,
+ "decisions": 15790064,
+ "seconds": 410,
+ "date": "2026-11-14T10:07:35Z",
+ "note": "kissat 4.0.4 exit 20, s UNSATISFIABLE observed directly. Env reset destroyed the raw log; deterministic re-run L1re (same CNF 4285 vars/18851 clauses) recorded in L1re_*.json",
+ "rerun_conflicts": 10225097,
+ "rerun_result": "UNSAT",
+ "rerun_note": "L1re reproduced conflicts bit-exact after env reset (cross-restart determinism)"
+}
