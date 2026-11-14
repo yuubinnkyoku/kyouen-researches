@@ -37,8 +37,11 @@ artifacts:
 - path: research/experiments/seven-row-q8-witness-search-20261114/output/controls/genfast_q8_byteidentity.json
   role: data
   note: "genfast.js vs sat2.js CNF md5-identical on 4 samples at q=8 (m=9,12, lex on/off)"
+- path: research/experiments/seven-row-q7-witness-search-20261114/output/ts-verify-cross-family.json
+  role: data
+  note: "third-system (pure TS/BigInt) cross-family record; (7,8) entry: m=24 rowY3 witness PASS (48 stones, rows 7,7,7,6,7,7,7, 14804 circles, all curves and lines <= 7, 0 uncovered cells) — triple-verified"
 scope: "finite machine verification: kissat 4.0.4 (all instances) + fastsat control agreement; widths stated per family only; up to census completeness and solver correctness"
-evidence: "complete-encoding SAT instances (def mode is exactly 'exists row-deficient maximal safe config') + constructive dual-verified witnesses (census-free sat.js verifyConfig + Python Fraction) + bit-exact controls and instance-identity calibration + cross-environment-reset determinism (m=8..22 conflicts reproduced bit-exact). See report.md."
+evidence: "complete-encoding SAT instances (def mode is exactly 'exists row-deficient maximal safe config') + constructive dual-verified witnesses (census-free sat.js verifyConfig + Python Fraction) + third independent verification system (pure TS/BigInt, no repo code: seven-row-q7-witness-search-20261114/scripts/verify_independent.ts — the m=24 rowY3 frontier witness PASS: 14,804 circles, all curves and lines <= 7 stones, maximal, row-deficient; record in seven-row-q7-witness-search-20261114/output/ts-verify-cross-family.json) + bit-exact controls and instance-identity calibration + cross-environment-reset determinism (m=8..22 conflicts reproduced bit-exact). See report.md."
 ---
 
 # 7×m q=8 行欠損witness帯 — witness 7×8..7×24（M_{7,8} ≥ 25・上界651）

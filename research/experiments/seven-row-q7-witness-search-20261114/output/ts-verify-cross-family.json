@@ -1,0 +1,123 @@
+{
+  "verifier": "scripts/verify_independent.ts",
+  "system": "third independent verification system: pure TypeScript + BigInt exact arithmetic, no repo code (same algorithm and implementation as the (7,7) records in ts-verify.json)",
+  "date": "2026-11-14",
+  "lane": "high-speed lane, run 9 (batch 4, cross-family sweep)",
+  "provenance": "witness files fetched from main (head 401108d9) and verified in a pure-TS sandbox; stone counts and row patterns recorded as content fingerprints",
+  "verified": {
+    "seven-row-q8-witness-search-20261114/output/row-split/s7x24q8_rowY3.witness.json": {
+      "family": [
+        7,
+        8
+      ],
+      "m": 24,
+      "verdict": "PASS (safe + maximal + row-deficient) — triple-verified; supports M_{7,8} >= 25",
+      "n": 48,
+      "minRow": 6,
+      "rowCnt": [
+        7,
+        7,
+        7,
+        6,
+        7,
+        7,
+        7
+      ],
+      "maxLine": 7,
+      "maxCirc": 7,
+      "safe": true,
+      "nCircles": 14804,
+      "nQ1Curves": 136,
+      "uncoveredCount": 0,
+      "rowDeficient": true,
+      "maximal": true,
+      "pass": true
+    },
+    "seven-row-q4-q6-witness-search-20261114/output/q6-def-search/s7x26q6_none.witness.json": {
+      "family": [
+        7,
+        6
+      ],
+      "m": 26,
+      "verdict": "PASS (safe + maximal + row-deficient) — triple-verified; supports M_{7,6} >= 27",
+      "n": 33,
+      "minRow": 3,
+      "rowCnt": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        3,
+        5
+      ],
+      "maxLine": 5,
+      "maxCirc": 5,
+      "safe": true,
+      "nCircles": 5073,
+      "nQ1Curves": 95,
+      "uncoveredCount": 0,
+      "rowDeficient": true,
+      "maximal": true,
+      "pass": true
+    },
+    "seven-row-q4-q6-witness-search-20261114/output/q5-frontier-extension/s7x31q5_none.witness.json": {
+      "family": [
+        7,
+        5
+      ],
+      "m": 31,
+      "verdict": "PASS (safe + maximal + row-deficient) — triple-verified; supports M_{7,5} >= 32",
+      "n": 27,
+      "minRow": 3,
+      "rowCnt": [
+        3,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "maxLine": 4,
+      "maxCirc": 4,
+      "safe": true,
+      "nCircles": 2742,
+      "nQ1Curves": 157,
+      "uncoveredCount": 0,
+      "rowDeficient": true,
+      "maximal": true,
+      "pass": true
+    },
+    "seven-row-q4-q6-witness-search-20261114/output/q4-frontier-extension/s7x21q4_none.witness.json": {
+      "family": [
+        7,
+        4
+      ],
+      "m": 21,
+      "verdict": "PASS (safe + maximal + row-deficient) — triple-verified; supports M_{7,4} >= 22",
+      "n": 18,
+      "minRow": 1,
+      "rowCnt": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        2,
+        1
+      ],
+      "maxLine": 3,
+      "maxCirc": 3,
+      "safe": true,
+      "nCircles": 799,
+      "nQ1Curves": 826,
+      "uncoveredCount": 0,
+      "rowDeficient": true,
+      "maximal": true,
+      "pass": true
+    }
+  },
+  "family_7_7_records": "see ts-verify.json (m=25/m=26 rowY3 witnesses PASS)",
+  "conclusion": "all five 7-row family frontier witnesses (the constructive basis of M_{7,8} >= 25, M_{7,7} >= 27, M_{7,6} >= 27, M_{7,5} >= 32, M_{7,4} >= 22) are verified by three independent implementation systems (sat.js verifyConfig, verify_witness.py Python Fraction, pure-TS BigInt)"
+}
