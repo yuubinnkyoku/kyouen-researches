@@ -1,0 +1,98 @@
+{
+ "schema": "n11-class2-lane-cost58-win7-certificates-20261114-v1",
+ "date": "2026-11-14",
+ "s6_child": "00000000000000809082000080000000",
+ "child_cost": 58,
+ "engine": "v15 blind extraction (scripts/class4_child1_cert_extractor.ts, per-loser-first-move batches, sort -u merge, no kill table needed)",
+ "summary": {
+  "roots": 3,
+  "total_rows": 65900,
+  "total_extraction_nodes": 20787359
+ },
+ "certificates": [
+  {
+   "bit": 101,
+   "root": "00000020000000809082000080000000",
+   "verdict": "WIN7",
+   "certificate": {
+    "rows": 16631,
+    "bytes": 600052,
+    "md5": "a4c83c29c7562b04ab99b7432a80c6b5",
+    "certificate_path": "output/class2-lane-cost58-certificates/n11_s7_00000020000000809082000080000000.cert"
+   },
+   "extraction_nodes": 3024309,
+   "verification": {
+    "subroot_count": 40,
+    "union_diff": "0/0",
+    "root_check": "stones=7, loserMobility=40",
+    "terminal_range": [
+     13,
+     17
+    ]
+   }
+  },
+  {
+   "bit": 111,
+   "root": "00008000000000809082000080000000",
+   "verdict": "WIN7",
+   "certificate": {
+    "rows": 15475,
+    "bytes": 557413,
+    "md5": "762ef6fef56b942eb38341c22668b2b3",
+    "certificate_path": "output/class2-lane-cost58-certificates/n11_s7_00008000000000809082000080000000.cert"
+   },
+   "extraction_nodes": 4354791,
+   "verification": {
+    "subroot_count": 37,
+    "union_diff": "0/0",
+    "root_check": "stones=7, loserMobility=37",
+    "terminal_range": [
+     13,
+     17
+    ]
+   }
+  },
+  {
+   "bit": 119,
+   "root": "00800000000000809082000080000000",
+   "verdict": "WIN7",
+   "certificate": {
+    "rows": 33794,
+    "bytes": 1219479,
+    "md5": "1abb30804c1588c410e08e752dfc9a5e",
+    "certificate_path": "output/class2-lane-cost58-certificates/n11_s7_00800000000000809082000080000000.cert"
+   },
+   "extraction_nodes": 13408259,
+   "verification": {
+    "subroot_count": 48,
+    "union_diff": "0/0",
+    "root_check": "stones=7, loserMobility=48",
+    "terminal_range": [
+     13,
+     17
+    ]
+   }
+  }
+ ],
+ "verification_method": "scripts/verify_bit7_win7_cert.ts (Bareiss 4x4 integer determinant, engine-independent): root-check PASS for all 3; ALL loser first-move sub-roots (40/37/48) verified PASS with terminal ranges within [13,17]; consumed-row union equals the certificate row set exactly (bidirectional diff 0)",
+ "interpretation_guard": "each certificate proves a win within depth 10 from its 7-stone root only; no claim about the 11x11 empty root / two-stone root {49,60} / S2 {59,60} / class 2 / class 4 (all remain UNKNOWN)",
+ "frontier_effect": {
+  "measured_against": "after-cost68 solved set (class2-lane-cost68-frontier-recompute-full-20261114)",
+  "covers": 19,
+  "marginal": 19,
+  "marginal_in_manifest": 10,
+  "marginal_manifest_hexes": [
+   "00000000000000003800000008080800",
+   "00000000000000809082000000000002",
+   "00000000000000809082000000000200",
+   "00000000000000809082000000002000",
+   "00000000000000809082000080000000",
+   "00000000020000003800000008080000",
+   "00000000020000801202000000000200",
+   "00000000020000821002000000000002",
+   "00000000020000821002000000000200",
+   "00000000020000821002000000080000"
+  ],
+  "note": "formal frontier recompute with these receipts is the next task; counts are exact marginal arithmetic over the current receipts, not a new full ranking"
+ }
+}
