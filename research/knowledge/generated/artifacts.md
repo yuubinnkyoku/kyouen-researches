@@ -13407,6 +13407,9 @@
 ## [research/experiments/width69-84-sweep-20261114/output/state_w85.json](../../../research/experiments/width69-84-sweep-20261114/output/state_w85.json)
 
 - [K0807](../items/K0807-width83-positive-control-revival-point.md) (data): w=85完走状態（2.4M capプロトコル・3,476,385,481 nodes・leaves=6・生残6・capEsc 92・unique 3,476）
+## [research/experiments/width69-84-sweep-20261114/output/state_w86.json](../../../research/experiments/width69-84-sweep-20261114/output/state_w86.json)
+
+- [K0807](../items/K0807-width83-positive-control-revival-point.md) (data): w=86完走状態（収集版・survPats込み・4,250,048,258 nodes・833チャンク・unique 3,487・leaves計上11・survPats unique 10・capEsc 110・p3249二重計上の生データ）
 ## [research/experiments/width69-84-sweep-20261114/scripts/width_sweep.mjs](../../../research/experiments/width69-84-sweep-20261114/scripts/width_sweep.mjs)
 
 - [K0804](../items/K0804-width69-82-pw32-plateau.md) (verifier): パラメータ化REST6掃引機（per-chunk状態永続化・停滞検出cap拡張・w=83/84正制御対応をheaderに明記）
@@ -13436,28 +13439,43 @@
 - [K0807](../items/K0807-width83-positive-control-revival-point.md) (verifier): REST16再検査 + 11050円2窓の直接検証 + R'≤1e6 実現スキャン
 ## [research/experiments/width83-positive-control-20261114/scripts/width83_survivor_probe.mjs](../../../research/experiments/width83-positive-control-20261114/scripts/width83_survivor_probe.mjs)
 
-- [K0807](../items/K0807-width83-positive-control-revival-point.md) (verifier): 生存mask・生残17行集合の帰属ログ付きプローブ（width_sweep.mjs と同一アルゴリズム・w84でもそのまま使用）
+- [K0807](../items/K0807-width83-positive-control-revival-point.md) (verifier): 生存mask・生残17行集合の帰属ログ付きプローブ（width_sweep.mjs と同一アルゴリズム・w84..86でもそのまま使用）
+## [research/experiments/width84-positive-control-20261114/output/circle11050_window36_census.json](../../../research/experiments/width84-positive-control-20261114/output/circle11050_window36_census.json)
+
+- [K0807](../items/K0807-width83-positive-control-revival-point.md) (data): 36点窓census出力: w87=2窓（a=0,19）・w88=4窓・w89=6窓・w90=8窓・w91=10窓（各36点18行）・34点窓は w87=10・w88=10・w89=12・w90=14・w91=18窓
 ## [research/experiments/width84-positive-control-20261114/output/width84_positive_control.json](../../../research/experiments/width84-positive-control-20261114/output/width84_positive_control.json)
 
 - [K0807](../items/K0807-width83-positive-control-revival-point.md) (data): w=84完走・帰属・REST16・実現・スキャン・窓センサス（w83..86）の全記録
 ## [research/experiments/width84-positive-control-20261114/output/width85_positive_control.json](../../../research/experiments/width84-positive-control-20261114/output/width85_positive_control.json)
 
 - [K0807](../items/K0807-width83-positive-control-revival-point.md) (data): w85完走・帰属・REST16・実現・スキャンの全記録（機械census予測leaves≥6の完全的中）
+## [research/experiments/width84-positive-control-20261114/output/width86_positive_control.json](../../../research/experiments/width84-positive-control-20261114/output/width86_positive_control.json)
+
+- [K0807](../items/K0807-width83-positive-control-revival-point.md) (data): w86完走・REST16・実現・スキャン・w84/w85修正check再スキャンの全記録（機械census予測ユニーク≥10の完全的中）
 ## [research/experiments/width84-positive-control-20261114/report-w85.md](../../../research/experiments/width84-positive-control-20261114/report-w85.md)
 
 - [K0807](../items/K0807-width83-positive-control-revival-point.md) (proof): w85正制御報告（予測プロトコル修正後の初の完全的中）
+## [research/experiments/width84-positive-control-20261114/report-w86.md](../../../research/experiments/width84-positive-control-20261114/report-w86.md)
+
+- [K0807](../items/K0807-width83-positive-control-revival-point.md) (proof): w86正制御報告（leaves 11 vs unique 10 の二重計上注記・check修正の経緯）
+## [research/experiments/width84-positive-control-20261114/scripts/circle11050_window36_census.mjs](../../../research/experiments/width84-positive-control-20261114/scripts/circle11050_window36_census.mjs)
+
+- [K0807](../items/K0807-width83-positive-control-revival-point.md) (verifier): 11050円の36点（18行）窓censusの独立直接実装（w83..92）
 ## [research/experiments/width84-positive-control-20261114/scripts/circle11050_window_census.mjs](../../../research/experiments/width84-positive-control-20261114/scripts/circle11050_window_census.mjs)
 
 - [K0807](../items/K0807-width83-positive-control-revival-point.md) (verifier): 11050円の幅w窓センサスの独立直接実装（w83=2・w84=4・w85=6・w86=10窓・34点窓全列挙）
 ## [research/experiments/width84-positive-control-20261114/scripts/width84_realizability_scan.mjs](../../../research/experiments/width84-positive-control-20261114/scripts/width84_realizability_scan.mjs)
 
-- [K0807](../items/K0807-width83-positive-control-revival-point.md) (verifier): REST16再検査 + 11050円4窓の直接検証 + R'≤1e6 孤立性スキャン（width83_realizability_scan.ts の w=84 版）
+- [K0807](../items/K0807-width83-positive-control-revival-point.md) (verifier): REST16再検査 + 11050円4窓の直接検証 + R'≤1e6 孤立性スキャン（width83_realizability_scan.ts の w=84 版・checkは旧版）
 ## [research/experiments/width84-positive-control-20261114/scripts/width85_realizability_scan.mjs](../../../research/experiments/width84-positive-control-20261114/scripts/width85_realizability_scan.mjs)
 
-- [K0807](../items/K0807-width83-positive-control-revival-point.md) (verifier): w85のREST16再検査 + 11050円6窓の直接検証 + R'≤1e6 孤立性スキャン
+- [K0807](../items/K0807-width83-positive-control-revival-point.md) (verifier): w85のREST16再検査 + 11050円6窓の直接検証 + R'≤1e6 孤立性スキャン（checkは旧版）
+## [research/experiments/width84-positive-control-20261114/scripts/width86_realizability_scan.mjs](../../../research/experiments/width84-positive-control-20261114/scripts/width86_realizability_scan.mjs)
+
+- [K0807](../items/K0807-width83-positive-control-revival-point.md) (verifier): w86のREST16再検査 + 11050円10窓の直接検証 + R'≤1e6 孤立性スキャン（修正check: 窓開始A=k0−2·pat[0]を全キーから試行・w84/85生残の再スキャン込み）
 ## [research/experiments/width84-positive-control-20261114/scripts/width_survivor_collect.mjs](../../../research/experiments/width84-positive-control-20261114/scripts/width_survivor_collect.mjs)
 
-- [K0807](../items/K0807-width83-positive-control-revival-point.md) (verifier): width_sweep.mjs に生残パターン記録を追加したプローブ版（w84の2回目の完走でnode-exact再現と生残4パターン抽出を同時に達成）
+- [K0807](../items/K0807-width83-positive-control-revival-point.md) (verifier): width_sweep.mjs に生残パターン記録を追加したプローブ版（w84の2回目の完走でnode-exact再現と生残4パターン抽出を同時に達成・w86でも使用）
 ## [research/experiments/width9-18-circle-point-max-20261112/output/width9_18_circle_bound.json](../../../research/experiments/width9-18-circle-point-max-20261112/output/width9_18_circle_bound.json)
 
 - [K0767](../items/K0767-width9-18-circle-point-max-row-formulas.md) (data): 全数値の機械出力
@@ -13853,6 +13871,9 @@
 ## [research/log/2026-11-14-width85-positive-control.md](../../../research/log/2026-11-14-width85-positive-control.md)
 
 - [K0807](../items/K0807-width83-positive-control-revival-point.md) (log): w85実行記録・予測的中判定・w86 leaves≥10予測
+## [research/log/2026-11-14-width86-positive-control.md](../../../research/log/2026-11-14-width86-positive-control.md)
+
+- [K0807](../items/K0807-width83-positive-control-revival-point.md) (log): w86実行記録・予測的中判定・w87..91の36点窓censusに基づく次回予測
 ## [research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md](../../../research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md)
 
 - [K0092](../items/K0092-n11-dfpn-search-status.md) (source): 命題・対象範囲・根拠を記した出典

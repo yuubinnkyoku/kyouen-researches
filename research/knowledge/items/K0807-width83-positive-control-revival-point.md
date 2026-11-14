@@ -12,95 +12,95 @@ solution:
   level: strong
   outcome: conditional
   classification: [all-safe-grundy]
-  coverage: w=83..86の生残パターン完全特定は各幅全3,300 maximal maskの全走査による全称（有限計算）。P(83)..P(86)≥34は全m≥1でのwitness
-  conditions: 連続整数行
+  coverage: "w=83..86の生残パターン完全特定は各幅全3,300 maximal maskの全走査による全称（有限計算）。P(83)..P(86)≥34は全m≥1でのwitness"
+  conditions: "連続整数行"
   verification: [mathematical-proof, exhaustive-enumeration]
-  certificate: 幅83..86 REST6 level 17 掃引完走（2.42G / 2.88G / 3.48G / 4.25G nodes）+ 生残mask・生残集合の帰属再現（probe・制御込み）+ REST16 16法再検査 + 11050円全窓の直接列挙一致（2/4/6/10窓）+ R'≤1e6 実現スキャン（realizerは5525のみ・修正checkでw84/85再スキャン済み）
+  certificate: "幅83..86 REST6 level 17 掃引完走（2.42G / 2.88G / 3.48G / 4.25G nodes）+ 生残mask・生残集合の帰属再現（probe・制御込み）+ REST16 16法再検査 + 11050円全窓の直接列挙一致（2/4/6/10窓）+ R'≤1e6 実現スキャン（realizerは5525のみ・修正checkでw84/85再スキャン済み）"
   independent_check: "probe の帰属（w83: mask456/3119・w84: mask456/1909/2612/3119・w85: +2696/3052・w86: +126/169/1376/3249・各1 leaf）・w83公表生残のbit-exact再現・11050円の独立直接列挙（w83 2窓・w84 4窓・w85 6窓・w86 10窓・34点17行）・REST16再検査（全幅全通過）・実現スキャン（1,964円・realizer 5525 のみ・修正checkでw84..86全パターン再確認）・w84 node総数2回の独立完走で一致（2,876,302,072）・state_w83..w86.json"
   note: "w=83 は K0797 会計（g0≥2形・w≤84）の範囲内だが、witness が既知のため level 17 全滅は P≤32 を与えない（K0804の限界どおり）。本項の価値は (i) 掃引機の生存検出感度の正制御が4幅で通過（w≤82全滅の信頼性の実証的裏付け）・(ii) 復活点の実測確定・(iii) 生残パターンの孤立性（realizerは11050円のみ）・(iv) 事前予測プロトコルの反証→原因特定→修正→的中→的中のサイクル（w84手書き予測leaves=2は窓列挙の数え落としで反証・実窓は4 → 修正された機械census予測は w85 leaves≥6 がちょうど6・w86 leaves≥10 がユニークちょうど10で連続完全的中）。教訓: (1) 生残数の事前予測は必ず機械による窓全列挙から導出する。(2) aborted chunk 境界で leaf が二重計上されうる（w86で初観測: leaves計上11 vs ユニーク10）・生残数は survPats の unique 化で読むこと"
 relations:
 - type: depends_on
   target: K0804
-  note: 掃引機（width_sweep.mjs）と w≤82 全滅の境界。本項はその正制御完了（w83..86）
+  note: "掃引機（width_sweep.mjs）と w≤82 全滅の境界。本項はその正制御完了（w83..86）"
 - type: depends_on
   target: K0785
-  note: 11050円 witness（P(83..86)≥34・34点最小幅83）が生残予測の源（w86の生残も本円の窓censusから予測された）
+  note: "11050円 witness（P(83..86)≥34・34点最小幅83）が生残予測の源（w86の生残も本円の窓censusから予測された）"
 - type: depends_on
   target: K0791
-  note: 34点最小幅83（復活点の右端の理論的裏付け）
+  note: "34点最小幅83（復活点の右端の理論的裏付け）"
 - type: supports
   target: K0785
-  note: level 17 復活点を理論値 (82,83] から実測でちょうど w=83 に確定・witness パターンの掃引機内での完全特定（w83..w86）
+  note: "level 17 復活点を理論値 (82,83] から実測でちょうど w=83 に確定・witness パターンの掃引機内での完全特定（w83..w86）"
 artifacts:
 - path: research/experiments/width83-positive-control-20261114/scripts/width83_survivor_probe.mjs
   role: verifier
-  note: 生存mask・生残17行集合の帰属ログ付きプローブ（width_sweep.mjs と同一アルゴリズム・w84..86でもそのまま使用）
+  note: "生存mask・生残17行集合の帰属ログ付きプローブ（width_sweep.mjs と同一アルゴリズム・w84..86でもそのまま使用）"
 - path: research/experiments/width83-positive-control-20261114/scripts/width83_realizability_scan.ts
   role: verifier
-  note: REST16再検査 + 11050円2窓の直接検証 + R'≤1e6 実現スキャン
+  note: "REST16再検査 + 11050円2窓の直接検証 + R'≤1e6 実現スキャン"
 - path: research/experiments/width83-positive-control-20261114/output/width83_positive_control.json
   role: data
-  note: w=83完走・帰属・REST16・実現・スキャンの全記録
+  note: "w=83完走・帰属・REST16・実現・スキャンの全記録"
 - path: research/experiments/width69-84-sweep-20261114/output/state_w83.json
   role: data
-  note: w=83完走状態（2.4M capプロトコル・2,420,302,072 nodes・leaves=2・生残2・capEsc 72）
+  note: "w=83完走状態（2.4M capプロトコル・2,420,302,072 nodes・leaves=2・生残2・capEsc 72）"
 - path: research/experiments/width69-84-sweep-20261114/output/state_w84.json
   role: data
-  note: w=84完走状態（2.4M capプロトコル・2,876,302,072 nodes・leaves=4・生残4・capEsc 78・unique 3,465）
+  note: "w=84完走状態（2.4M capプロトコル・2,876,302,072 nodes・leaves=4・生残4・capEsc 78・unique 3,465）"
 - path: research/experiments/width84-positive-control-20261114/scripts/width_survivor_collect.mjs
   role: verifier
-  note: width_sweep.mjs に生残パターン記録を追加したプローブ版（w84の2回目の完走でnode-exact再現と生残4パターン抽出を同時に達成・w86でも使用）
+  note: "width_sweep.mjs に生残パターン記録を追加したプローブ版（w84の2回目の完走でnode-exact再現と生残4パターン抽出を同時に達成・w86でも使用）"
 - path: research/experiments/width84-positive-control-20261114/scripts/circle11050_window_census.mjs
   role: verifier
-  note: 11050円の幅w窓センサスの独立直接実装（w83=2・w84=4・w85=6・w86=10窓・34点窓全列挙）
+  note: "11050円の幅w窓センサスの独立直接実装（w83=2・w84=4・w85=6・w86=10窓・34点窓全列挙）"
 - path: research/experiments/width84-positive-control-20261114/scripts/width84_realizability_scan.mjs
   role: verifier
-  note: REST16再検査 + 11050円4窓の直接検証 + R'≤1e6 孤立性スキャン（width83_realizability_scan.ts の w=84 版・checkは旧版）
+  note: "REST16再検査 + 11050円4窓の直接検証 + R'≤1e6 孤立性スキャン（width83_realizability_scan.ts の w=84 版・checkは旧版）"
 - path: research/experiments/width84-positive-control-20261114/output/width84_positive_control.json
   role: data
-  note: w=84完走・帰属・REST16・実現・スキャン・窓センサス（w83..86）の全記録
+  note: "w=84完走・帰属・REST16・実現・スキャン・窓センサス（w83..86）の全記録"
 - path: research/log/2026-11-14-width83-positive-control.md
   role: log
-  note: w83判断・教訓・レジューム・w84事前予測（本項で反証）
+  note: "w83判断・教訓・レジューム・w84事前予測（本項で反証）"
 - path: research/log/2026-11-14-width84-positive-control.md
   role: log
-  note: w84実行記録・予測反証の原因特定・w85/86事前予測
+  note: "w84実行記録・予測反証の原因特定・w85/86事前予測"
 - path: research/experiments/width84-positive-control-20261114/scripts/width85_realizability_scan.mjs
   role: verifier
-  note: w85のREST16再検査 + 11050円6窓の直接検証 + R'≤1e6 孤立性スキャン（checkは旧版）
+  note: "w85のREST16再検査 + 11050円6窓の直接検証 + R'≤1e6 孤立性スキャン（checkは旧版）"
 - path: research/experiments/width84-positive-control-20261114/output/width85_positive_control.json
   role: data
-  note: w85完走・帰属・REST16・実現・スキャンの全記録（機械census予測leaves≥6の完全的中）
+  note: "w85完走・帰属・REST16・実現・スキャンの全記録（機械census予測leaves≥6の完全的中）"
 - path: research/experiments/width84-positive-control-20261114/report-w85.md
   role: proof
-  note: w85正制御報告（予測プロトコル修正後の初の完全的中）
+  note: "w85正制御報告（予測プロトコル修正後の初の完全的中）"
 - path: research/experiments/width69-84-sweep-20261114/output/state_w85.json
   role: data
-  note: w=85完走状態（2.4M capプロトコル・3,476,385,481 nodes・leaves=6・生残6・capEsc 92・unique 3,476）
+  note: "w=85完走状態（2.4M capプロトコル・3,476,385,481 nodes・leaves=6・生残6・capEsc 92・unique 3,476）"
 - path: research/log/2026-11-14-width85-positive-control.md
   role: log
-  note: w85実行記録・予測的中判定・w86 leaves≥10予測
+  note: "w85実行記録・予測的中判定・w86 leaves≥10予測"
 - path: research/experiments/width69-84-sweep-20261114/output/state_w86.json
   role: data
-  note: w=86完走状態（収集版・survPats込み・4,250,048,258 nodes・833チャンク・unique 3,487・leaves計上11・survPats unique 10・capEsc 110・p3249二重計上の生データ）
+  note: "w=86完走状態（収集版・survPats込み・4,250,048,258 nodes・833チャンク・unique 3,487・leaves計上11・survPats unique 10・capEsc 110・p3249二重計上の生データ）"
 - path: research/experiments/width84-positive-control-20261114/scripts/width86_realizability_scan.mjs
   role: verifier
-  note: w86のREST16再検査 + 11050円10窓の直接検証 + R'≤1e6 孤立性スキャン（修正check: 窓開始A=k0−2·pat[0]を全キーから試行・w84/85生残の再スキャン込み）
+  note: "w86のREST16再検査 + 11050円10窓の直接検証 + R'≤1e6 孤立性スキャン（修正check: 窓開始A=k0−2·pat[0]を全キーから試行・w84/85生残の再スキャン込み）"
 - path: research/experiments/width84-positive-control-20261114/output/width86_positive_control.json
   role: data
-  note: w86完走・REST16・実現・スキャン・w84/w85修正check再スキャンの全記録（機械census予測ユニーク≥10の完全的中）
+  note: "w86完走・REST16・実現・スキャン・w84/w85修正check再スキャンの全記録（機械census予測ユニーク≥10の完全的中）"
 - path: research/experiments/width84-positive-control-20261114/report-w86.md
   role: proof
-  note: w86正制御報告（leaves 11 vs unique 10 の二重計上注記・check修正の経緯）
+  note: "w86正制御報告（leaves 11 vs unique 10 の二重計上注記・check修正の経緯）"
 - path: research/log/2026-11-14-width86-positive-control.md
   role: log
-  note: w86実行記録・予測的中判定・w87..91の36点窓censusに基づく次回予測
+  note: "w86実行記録・予測的中判定・w87..91の36点窓censusに基づく次回予測"
 - path: research/experiments/width84-positive-control-20261114/scripts/circle11050_window36_census.mjs
   role: verifier
-  note: 11050円の36点（18行）窓censusの独立直接実装（w83..92）
+  note: "11050円の36点（18行）窓censusの独立直接実装（w83..92）"
 - path: research/experiments/width84-positive-control-20261114/output/circle11050_window36_census.json
   role: data
-  note: 36点窓census出力: w87=2窓（a=0,19）・w88=4窓・w89=6窓・w90=8窓・w91=10窓（各36点18行）・34点窓は w87=10・w88=10・w89=12・w90=14・w91=18窓
+  note: "36点窓census出力: w87=2窓（a=0,19）・w88=4窓・w89=6窓・w90=8窓・w91=10窓（各36点18行）・34点窓は w87=10・w88=10・w89=12・w90=14・w91=18窓"
 ---
 
 ## 命題（証明済み・有限全称）
