@@ -782,9 +782,15 @@
 ## [research/experiments/binary-cube-hyperplane-k6-exact-20261025/results.json](../../../research/experiments/binary-cube-hyperplane-k6-exact-20261025/results.json)
 
 - [K0568](../items/K0568-binary-cube-k6-exact-upper-bound.md) (data): 機械可読な主張・CNF統計・検証計画
+## [research/experiments/binary-cube-hyperplane-k6-exact-20261025/small_dimension_circuit_audit.md](../../../research/experiments/binary-cube-hyperplane-k6-exact-20261025/small_dimension_circuit_audit.md)
+
+- [K0568](../items/K0568-binary-cube-k6-exact-upper-bound.md) (proof): 小次元の有限完全監査とexactly-K同値性の適用境界
 ## [research/experiments/binary-cube-hyperplane-k6-exact-20261025/verify_k9_witness.py](../../../research/experiments/binary-cube-hyperplane-k6-exact-20261025/verify_k9_witness.py)
 
 - [K0568](../items/K0568-binary-cube-k6-exact-upper-bound.md) (verifier): exactly-9 CNFのSAT証人9点の幾何学的再検証
+## [research/experiments/binary-cube-hyperplane-k6-exact-20261025/verify_small_dimension_circuits.py](../../../research/experiments/binary-cube-hyperplane-k6-exact-20261025/verify_small_dimension_circuits.py)
+
+- [K0568](../items/K0568-binary-cube-k6-exact-upper-bound.md) (verifier): d=3..5の全部分集合サイズ4..qを二素数・列順反転rankで完全列挙し、circuitの上下閉包を検査
 ## [research/experiments/binary-cube-hyperplane-large-d-20261025/README.md](../../../research/experiments/binary-cube-hyperplane-large-d-20261025/README.md)
 
 - [K0553](../items/K0553-binary-hypercube-growing-excess-witnesses.md) (log): 手法・制御・小素数の教訓・再現手順
@@ -14089,6 +14095,9 @@
 ## [research/log/2026-11-14-circle-strip-subadditivity.md](../../../research/log/2026-11-14-circle-strip-subadditivity.md)
 
 - [K0817](../items/K0817-circle-strip-subadditivity-and-density-bound.md) (log): 発見経緯・有限表検査・証拠境界・次の未解決課題
+## [research/log/2026-11-14-k6-small-d-circuit-audit.md](../../../research/log/2026-11-14-k6-small-d-circuit-audit.md)
+
+- [K0568](../items/K0568-binary-cube-k6-exact-upper-bound.md) (log): 独立監査・READMEの古い評価の訂正・次のd=6監査課題
 ## [research/log/2026-11-14-n11-class2-lane-cost73c-raw-audit.md](../../../research/log/2026-11-14-n11-class2-lane-cost73c-raw-audit.md)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): cost-73cの73候補・11 raw batch・388,889,991 nodesを独立再集計。73 REFUTED-D10のみでfrontier変更なし

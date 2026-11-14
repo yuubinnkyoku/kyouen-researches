@@ -1,6 +1,6 @@
 # 移行集計
 
-K項目: 800 / alias: 269 / artifactファイル: 4419
+K項目: 800 / alias: 269 / artifactファイル: 4422
 
 ## kind
 
@@ -22,10 +22,10 @@ K項目: 800 / alias: 269 / artifactファイル: 4419
 | conjectured | 2 |
 | needs-review | 1 |
 | observed | 26 |
-| open | 37 |
+| open | 38 |
 | proved | 405 |
 | refuted | 64 |
-| scope-unclear | 2 |
+| scope-unclear | 1 |
 | superseded | 9 |
 | verified | 31 |
 | withdrawn | 4 |
@@ -95,7 +95,7 @@ K項目: 800 / alias: 269 / artifactファイル: 4419
 - [K0328](../items/K0328-maximal-fault-tolerance-bound-open.md) [open] n≥2の標準盤の全極大配置で故障耐性ρは一様有界か
 - [K0504](../items/K0504-geometric-rule-variant-comparison.md) [open] 共円ゲームの幾何学的禁止条件を変える拡張案の比較研究
 - [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) [open] 3次元5点禁止版の7×7×7以降の奇数辺立方盤はどちらが必勝か
-- [K0568](../items/K0568-binary-cube-k6-exact-upper-bound.md) [scope-unclear] 二値六次元立方体の共七点禁止版の最大安全石数はK_6=9である
+- [K0568](../items/K0568-binary-cube-k6-exact-upper-bound.md) [open] 二値六次元立方体の共七点禁止版は K_6≥9、上界未確定
 - [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md) [conjectured] 任意の固定rank3残余核に長道を付けたGrundy列は最終的に34周期になるか
 - [K0685](../items/K0685-n11-chain-audit-wall.md) [open] 11x11空盤勝敗は領域機械の壁で留まる（S2 120件全て未証明、最良S3でも遠方ブロッカー60+）
 - [K0737](../items/K0737-assumption-unsat-drat-gap.md) [open] 候補B の assumption-UNSAT を単体の DRAT 証明へ落とす手続きは未取得である
