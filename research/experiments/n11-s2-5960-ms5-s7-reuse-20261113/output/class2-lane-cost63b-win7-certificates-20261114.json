@@ -1,0 +1,103 @@
+{
+ "schema": "n11-class2-lane-cost63b-win7-certificates-20261114-v1",
+ "date": "2026-11-14",
+ "target": {
+  "class2_lane_target_s5": "00000000000000809082000000000000",
+  "s6_child_hex": "00000000000000809082000000001000",
+  "s6_s7_edge_cost": 63
+ },
+ "engine": "v15 engine verbatim (scripts/class4_child1_runner.ts) for the sweep; extractor_exact for certificate extraction; verify_bit7_win7_cert.ts (engine-independent Bareiss det4) for verification",
+ "summary": {
+  "win7_d10_bits": [
+   48,
+   108,
+   118
+  ],
+  "total_certificate_rows": 108266,
+  "total_extraction_nodes": 33478446
+ },
+ "certificates": [
+  {
+   "bit": 48,
+   "root": "00000000000000809083000000001000",
+   "verdict": "WIN7",
+   "certificate": {
+    "rows": 31162,
+    "md5": "0ee0d361f707cbd6411706b9bc0940b6",
+    "certificate_path": "output/class2-lane-cost63b-certificates/n11_s7_00000000000000809083000000001000.cert"
+   },
+   "extraction_nodes": 6071352,
+   "extraction_method": "class4_child1_cert_extractor_exact.ts (fbt FBS=1<<20, probe 96, drop counter; fbt_drops=0 asserted) blind extraction, all loser first moves in one process per root",
+   "verification": {
+    "subroot_count": 48,
+    "union_diff": "0/0",
+    "root_check": "stones=7, loserMobility=48",
+    "terminal_range": [
+     13,
+     17
+    ]
+   }
+  },
+  {
+   "bit": 108,
+   "root": "00001000000000809082000000001000",
+   "verdict": "WIN7",
+   "certificate": {
+    "rows": 27510,
+    "md5": "dbbb8405fd6764fed5a25f999413122b",
+    "certificate_path": "output/class2-lane-cost63b-certificates/n11_s7_00001000000000809082000000001000.cert"
+   },
+   "extraction_nodes": 7679448,
+   "extraction_method": "class4_child1_cert_extractor_exact.ts (fbt FBS=1<<20, probe 96, drop counter; fbt_drops=0 asserted) blind extraction, all loser first moves in one process per root",
+   "verification": {
+    "subroot_count": 47,
+    "union_diff": "0/0",
+    "root_check": "stones=7, loserMobility=47",
+    "terminal_range": [
+     13,
+     17
+    ]
+   }
+  },
+  {
+   "bit": 118,
+   "root": "00400000000000809082000000001000",
+   "verdict": "WIN7",
+   "certificate": {
+    "rows": 49594,
+    "md5": "33f1c185eb43a0cf05a9218540fab89a",
+    "certificate_path": "output/class2-lane-cost63b-certificates/n11_s7_00400000000000809082000000001000.cert"
+   },
+   "extraction_nodes": 19727646,
+   "extraction_method": "class4_child1_cert_extractor_exact.ts (fbt FBS=1<<20, probe 96, drop counter; fbt_drops=0 asserted) blind extraction, all loser first moves in one process per root",
+   "verification": {
+    "subroot_count": 50,
+    "union_diff": "0/0",
+    "root_check": "stones=7, loserMobility=50",
+    "terminal_range": [
+     13,
+     17
+    ]
+   }
+  }
+ ],
+ "verification_method": "per-certificate: --root-check (stones=7, loserMobility matches the independent Bareiss mobility enumerator), all loser first-move sub-roots verified independently, consumed winner-state union == certificate row set both directions (0/0), terminals [13,17]",
+ "frontier_effect": {
+  "measured_against": "after-cost63 solved set (class2-lane-cost63b-frontier-recompute-20261114.json, formal full recompute)",
+  "covers": 19,
+  "marginal": 17,
+  "marginal_in_manifest": 8,
+  "marginal_manifest_hexes": [
+   "00000000000000003801000000001020",
+   "00000000000000801206000000100000",
+   "00000000000000809082000000000100",
+   "00000000000000809082000000001000",
+   "00000000010000003800000000100020",
+   "00000000210000003800000000100000",
+   "00000010000000003800000000100020",
+   "00000010000000003800000008100000"
+  ],
+  "formal_result": "solved 841 -> 849, unique remaining 7006 -> 6998, sum cost 550810 -> 550269, open 5236/411675 -> 5233/411475; class-2 target S5 28 orbit/1926 -> 26 orbit/1798"
+ },
+ "interpretation_guard": "WIN7 certificates prove a win within depth 10 from the 7-stone root only; REFUTED-D10 proves only absence of a winner win within depth 10; 11x11 empty root / {49,60} / S2 {59,60} / class 2 / class 4 remain UNKNOWN"
+}
