@@ -69,15 +69,19 @@ are not counted as new closures here.
 
 ## Frontier and interpretation guard
 
-The global frontier has not been recomputed with this receipt. Keep the
-published after-cost-62a totals (924 solved-in-manifest, 6,923 remaining S6
-orbits, cost 544,799) as the last globally recomputed baseline; do not silently
-subtract the local parent lifts from those totals. A complete receipt-union
-recompute is needed to establish the exact global marginal coverage and update
-the coordinator ranking.
+A subsequent full manifest-level recomputation,
+class-frontier-cost56a-recompute-20261114.json, has now incorporated this
+receipt. It confirms that all three S6 worklist parent lifts listed above are
+marginal. The global frontier moves from the after-cost-62a baseline
+(924 solved-in-manifest, 6,923 remaining S6 orbits, cost 544,799) to
+**927 solved-in-manifest, 6,920 remaining S6 orbits, cost 544,617**;
+open-class demand falls from 5,193 / 408,522 to **5,190 / 408,340**.
+For S5 00000000000000803202000000000000, two covered children (costs 56 and 63)
+reduce the local remaining count from 41 / 2,776 to **39 / 2,657**. The third
+cost-63 parent contributes to another worklist parent.
 
-This is a verified WIN7 root and a local S6 first-player win, not a verdict for
-its five-stone parent. Standard 11x11 empty root, two-stone root {49,60},
+This is a verified WIN7 root and local S6 first-player wins, not a verdict for
+any five-stone parent. Standard 11x11 empty root, two-stone root {49,60},
 S2 {59,60}, class 2, and class 4 remain UNKNOWN.
 
 ## Artifacts
@@ -85,3 +89,5 @@ S2 {59,60}, class 2, and class 4 remain UNKNOWN.
 - Certificate: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost56a-certificates/bit89-root-00000000020000803202020000000000.cert
 - Independent verifier: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost56a_bigint_certificate.mjs
 - Machine-readable result: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost56a-independent-audit-20261114.json
+- Global frontier recomputation: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost56a-recompute-20261114.json
+- Frontier reproduction script: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost56a_20261114.py
