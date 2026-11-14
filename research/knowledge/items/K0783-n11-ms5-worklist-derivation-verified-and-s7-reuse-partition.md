@@ -537,9 +537,21 @@ artifacts:
   note: 両側とも誤りなし。distinct open parents=3 と per-class demand c1=0,c2=2,c4=2 の意味論的和解とコントロール照合
 - path: research/log/2026-11-15-n11-class2-lane-cost69f-python-independent-audit-and-69g-demand-reconciliation.md
   role: log
-  note: Python第三監査と69g需要和解の実行記録
+  note: Python第三監査と69g需要和解の実行記録- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72b-sweep-20261115.json
+  role: data
+  note: cost72b子の72候補sweep記録。WIN7-D10 13・REFUTED-D10 59・打切り0・117,444,772 v16節点。証明書未抽出のためfrontier寄与0
+- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72b-inflight-20261115.json
+  role: manifest
+  note: cost72b子sweepのclaim。歴史的なin-flight記録、statusは完了に更新済み
+- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72b-raw-batch1-20261115.jsonl
+  role: data
+  note: cost72b raw batch 1。batch2..10・v15 crosscheck 4件・determinism rerunも同型の探索記録であり証明書ではない
+- path: research/log/2026-11-15-n11-class2-lane-cost72b-sweep.md
+  role: log
+  note: cost72b子sweep完了の実行記録と交叉検査の詳細
+
 scope: n11 S2 {59,60} milestone-5のワークリストとS7証明書再利用。局所S6と三石位置のblocker類1・2の条件付き勝敗を含むが、二石rootや空盤の勝敗は含まない。
-evidence: 公開manifestの辞書順md5は0e95a438dbcb486368393de9c73fc21e。94オラクルの全744対称像を使い補完候補15072件を独立列挙。類1の新規WIN7戦略証明書13件・LOSS7証明書2件、類2のWIN7証明書54件と3六石位置の全62子・全72子・全64子のLOSS7証明書を独立検査。類1の五石位置の40六石軌道は既存記録と合わせて全て先手WIN。既存の一部証明書本体は別保管であり、公開監査記録に依存する。 2026-11-15 cost72 bit111 WIN7証明書を独立検査し、cost75b統合後の対象S5親を局所的に2軌道・費用147から1軌道・費用75へ縮小した。global frontierは未再計算。2026-11-15 warm multiband 35 WIN7 receipt後の公開frontierは解消S6 1,109・残り6,738・費用531,295・open需要5,008/395,018。35 rootを同実験の17 verified manifest（WIN7 77・LOSS7 200）、central LOSS7 parent-lift 274鍵、category-1候補396行とD4照合し、衝突0（category-1行は証明書とは数えない）。; 2026-11-15 cost69f残り4証明書(bits2/94/109/119)を別V8実行で再検査し全PASS。262,236行、検証訪問560,273局面、union 0/0、4×4行列式による根合法手数一致、8 partのGit blob SHA1・MD5/SHA256一致。cost69fの+9 S6軌道が全て証明書済み 2026-11-15 cost69f全9証明書をPython/Bareiss第三実装で再検査し9/9 PASS（第二検証のV8/BigInt 4件と共通フィールド全一致）。cost69g子の需要は二重役割S5(classes=6)のper-class計数と確定（distinct open parents=3、c1=0,c2=2,c4=2）
+evidence: 公開manifestの辞書順md5は0e95a438dbcb486368393de9c73fc21e。94オラクルの全744対称像を使い補完候補15072件を独立列挙。類1の新規WIN7戦略証明書13件・LOSS7証明書2件、類2のWIN7証明書54件と3六石位置の全62子・全72子・全64子のLOSS7証明書を独立検査。類1の五石位置の40六石軌道は既存記録と合わせて全て先手WIN。既存の一部証明書本体は別保管であり、公開監査記録に依存する。 2026-11-15 cost72 bit111 WIN7証明書を独立検査し、cost75b統合後の対象S5親を局所的に2軌道・費用147から1軌道・費用75へ縮小した。global frontierは未再計算。2026-11-15 warm multiband 35 WIN7 receipt後の公開frontierは解消S6 1,109・残り6,738・費用531,295・open需要5,008/395,018。35 rootを同実験の17 verified manifest（WIN7 77・LOSS7 200）、central LOSS7 parent-lift 274鍵、category-1候補396行とD4照合し、衝突0（category-1行は証明書とは数えない）。; 2026-11-15 cost69f残り4証明書(bits2/94/109/119)を別V8実行で再検査し全PASS。262,236行、検証訪問560,273局面、union 0/0、4×4行列式による根合法手数一致、8 partのGit blob SHA1・MD5/SHA256一致。cost69fの+9 S6軌道が全て証明書済み 2026-11-15 cost69f全9証明書をPython/Bareiss第三実装で再検査し9/9 PASS（第二検証のV8/BigInt 4件と共通フィールド全一致）。cost69g子の需要は二重役割S5(classes=6)のper-class計数と確定（distinct open parents=3、c1=0,c2=2,c4=2） 2026-11-15 cost72b子 00000000000000809102000002000000（cost 72・需要c1=0,c2=2,c4=0・open親2軌道）の72候補raw sweep完了。WIN7-D10 13（bits 2,11,21,30,31,36,47,66,85,95,97,100,106）・REFUTED-D10 59・打切り0・117,444,772節点。v15 cross-engine 13/13 loss=true、決定性再実行13/13 node-exact。13 rootは証明書未抽出の探索候補のためfrontier寄与0。
 ---
 
 ## 主張
@@ -964,5 +976,17 @@ cost65j bit113の7石rootはcost69f bit2と同じS6親軌道を1件共有する�
 frontier計数は不変（解消S6 1,163・残り6,684・費用527,280・open需要4,954/391,003・残りS5軌道175）。本作業は証拠確度の向上と帳簿意味論の確定であり、新規軌道解消ではない。
 
 成果物: [Python第三監査スクリプト](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost69f_win7_certs_20261115.py)、[監査JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost69f-9cert-python-independent-audit-20261115.json)、[和解スクリプト](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/reconcile_cost69g_demand_20261115.py)、[和解JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost69g-demand-reconciliation-20261115.json)、[log](../../log/2026-11-15-n11-class2-lane-cost69f-python-independent-audit-and-69g-demand-reconciliation.md)。
+
+標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class2・class4は引き続き **UNKNOWN**。
+
+## 2026-11-15: cost-72b子sweep完了（13 WIN7-D10探索候補・証明書未抽出）
+
+第三class-2 coverableターゲットS5 `00000000000000809102000000000000` の未sweep子 `00000000000000809102000002000000`（cost 72、需要c1=0,c2=2,c4=0、open親2軌道）をclaimしてsweepした。claimは `class2-lane-cost72b-inflight-20261115.json`（main 50d2773c時点で未claimを確認済み）。独立Bareiss 4x4列挙で72候補がmanifest edge cost 72とbit-exact一致し、**WIN7-D10 13件（bits 2,11,21,30,31,36,47,66,85,95,97,100,106）・REFUTED-D10 59件・打切り0、候補節点117,444,772**（repo-verbatim v16 engine、pilot d6制御3,402 nodesは10/10 batch PASS、終局石数 [13,17]）。batch構成はbit分割ミスで10 batch（7+8×8+1）になったが、72候補は重複・欠落なく1回ずつ実行済み（sweep recordのbatch_noteに正直に記録）。
+
+交叉検査は全て通過: v15 cross-engine（別実装engine）で13 WIN bits全件 loss=true（計132,170,428節点）、REFUTEDアンカー bits 0/9/120 は loss=false、別プロセス決定性再実行13/13 node-exact、13 rootは13個すべて異なるD4軌道、GitHub code searchで13 root hexの先行公開0ヒット。
+
+13 WIN7-D10は**探索候補**であり証明書ではない。S6 frontierへの寄与は現時点で0で、証明書抽出（repo-verbatim blind抽出器・FBS 1<<20・fbt_drops 0・行LC_ALL=C整列一意化）とfoldが次の必要作業。REFUTED-D10は「深さ10以内の先手勝ち不存在」であって子の反証ではない。cost-74d（並走レーンがclaim・実行中）、cost-69g・cost-65j（いずれもin flight）は本項に含めない。
+
+成果物: [sweep記録](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72b-sweep-20261115.json)、[claim](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72b-inflight-20261115.json)、[log](../../log/2026-11-15-n11-class2-lane-cost72b-sweep.md)。raw batch 1–10・v15 crosscheck 4件・determinism rerunは同output/の `class2-lane-cost72b-*`。
 
 標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class2・class4は引き続き **UNKNOWN**。
