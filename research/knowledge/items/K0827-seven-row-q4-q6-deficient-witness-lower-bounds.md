@@ -48,15 +48,21 @@ artifacts:
   note: "per-width exact verification records m=22..35 (safe + maximal + row-deficient PASS, uncovered 0, maxCirc/maxLine 3), configs C22/CA/CB with contiguous coverage 22/31/35, curve counts, negative control (4-collinear correctly unsafe), provenance"
 - path: research/experiments/seven-row-q4-extension-band-20261114/output/witnesses/s7x22q4_none.witness.json
   role: data
-  note: "width-22 witness = the m=21 witness stones (free empty-column extension); s7x23..31q4_none.witness.json = 20-stone config CA (maxX=22, coverage 31, rows [3,3,3,3,3,3,2]); s7x32..35q4_none.witness.json = 20-stone config CB (maxX=26, coverage 35); all third-system verified (tsVerify), jsVerify/pyVerify re-verification pending"
+  note: "width-22 witness = the m=21 witness stones (free empty-column extension); s7x23..31q4_none.witness.json = 20-stone config CA (maxX=22, coverage 31, rows [3,3,3,3,3,3,2]); s7x32..35q4_none.witness.json = 20-stone config CB (maxX=26, coverage 35); all third-system verified (tsVerify); jsVerify/pyVerify re-verification complete (m=22..27 frontier-20261115 stone-identical, m=28..35 sat3-20261115 independent witnesses)"
 - path: research/experiments/seven-row-q4-extension-band-20261114/scripts/extend_band.ts
   role: verifier
   note: "pure TS/BigInt constructive extension + exact verification script (third independent system, no repo code, no SAT); regenerates and re-verifies the whole band 22..35 from the three configs"
 - path: research/experiments/seven-row-q4-q6-witness-frontier-20261115/output/records.jsonl
   role: data
   note: "9 records: (7,4) m=22..27 all SAT 0 conflicts dual-verified (18 stones [3,3,3,3,3,2,1] at 22; 20 stones [3,3,3,3,3,3,2] at 23..27, matching the constructive free-extension and config CA) - completes the jsVerify/pyVerify re-verification of the constructive band for m=22..27; (7,5) m=23 SAT 1,200 conflicts bit-exact with the published record (calibration); (7,5) 7x32 INDET 329,844 conflicts / 200s and (7,6) 7x27 INDET 744,027 conflicts / 200s honest frontier negatives (not absence claims); sat2.js all-triples census OOM (rc 137, 2560MB heap) at 7x28 q=4 - SAT-based q4 extension blocked at m=28"
-scope: "finite machine verification: kissat 4.0.4 for m=4..21; exact rational arithmetic (pure TS/BigInt) for m=22..35; widths stated per family only; up to census completeness and solver/arithmetic correctness"
-evidence: "complete-encoding SAT instances (def mode is exactly 'exists row-deficient maximal safe config') + constructive dual-verified witnesses (census-free sat.js verifyConfig + Python Fraction, all records jsVerify/pyVerify true) + third independent verification system (pure TS/BigInt, no repo code: verify_independent.ts of seven-row-q7-witness-search-20261114 — frontier witnesses (7,6) m=26, (7,5) m=31, (7,4) m=21 all PASS safe+maximal+row-deficient, record in seven-row-q7-witness-search-20261114/output/ts-verify-cross-family.json — triple-verified) + deterministic CNF regeneration from the calibrated sat2.js + cross-environment-reset bit-exact reproduction of the frontier records ((7,5) m=23..26 and (7,4) m=15 re-run after an environment reset with identical conflicts 1,200/2,029/7,730/3,257 and 0) + constructive extension band m=22..35 (seven-row-q4-extension-band-20261114): blocking-coverage lemma gives a free empty-column extension of the triple-verified m=21 witness to m=22; deterministic greedy adds + hill-climb (extend_band.ts, exact TS/BigInt, no SAT) produce 20-stone configs CA (maxX=22, coverage W=31, witnesses m=23..31) and CB (maxX=26, W=35, witnesses m=27..35, used for 32..35); all widths 22..35 verified safe+maximal+row-deficient by exact rational arithmetic (uncovered 0, negative control detected); M_{7,4} >= 36 (M in [36, 1929]); jsVerify/pyVerify re-verification of the extension-band witnesses: m=22..27 SAT re-confirmed and dual-verified by seven-row-q4-q6-witness-frontier-20261115 (kissat 0 conflicts, rows matching the constructive configs; four-way verified: kissat SAT + jsVerify + pyVerify + tsVerify), m=28..35 still tsVerify-only pending. See report.md."
+- path: research/experiments/seven-row-q4-extension-band-sat3-20261115/output/records.jsonl
+  role: data
+  note: "9 records: (7,4) m=28..35 all SAT (kissat 36-537 conflicts), decoded 20-stone witnesses dual-verified (js+py), row multiset {3,3,3,3,3,3,2} same as the constructive band but independently placed; m=35 lex=H,V,HV cross-encoding SAT (314 conflicts) dual-verified; sat3.js streaming census resolves the sat2.js 7x28 census OOM wall; output/calibration.jsonl: m=22..27 q4 reproduction (0 conflicts, witness stones 6/6 identical to the published records) + (7,5) m=23 kissat calibration 1,200 conflicts bit-exact"
+- path: research/experiments/seven-row-q4-extension-band-sat3-20261115/scripts/sat3.js
+  role: verifier
+  note: "streaming all-triples census generator, DIMACS byte-identical to sat2.js (K0810 encode core verbatim: counter/totalizer/lexLeader/CLI): clause streaming to disk + first-encounter circle emission + O(w) row-quadratic point scan; unblocks q<=w SAT search at 7x28+ (gen ~3-5s per width at m=28..35, CNF 103MB at m=35); 9/9 control cmp MATCH vs sat2.js"
+scope: "finite machine verification: kissat 4.0.4 for m=4..21; exact rational arithmetic (pure TS/BigInt) for m=22..35; SAT re-verification m=22..35 (22..27: seven-row-q4-q6-witness-frontier-20261115; 28..35: seven-row-q4-extension-band-sat3-20261115, sat3.js streaming census byte-identical to sat2.js); widths stated per family only; up to census completeness and solver/arithmetic correctness"
+evidence: "complete-encoding SAT instances (def mode is exactly 'exists row-deficient maximal safe config') + constructive dual-verified witnesses (census-free sat.js verifyConfig + Python Fraction, all records jsVerify/pyVerify true) + third independent verification system (pure TS/BigInt, no repo code: verify_independent.ts of seven-row-q7-witness-search-20261114 — frontier witnesses (7,6) m=26, (7,5) m=31, (7,4) m=21 all PASS safe+maximal+row-deficient, record in seven-row-q7-witness-search-20261114/output/ts-verify-cross-family.json — triple-verified) + deterministic CNF regeneration from the calibrated sat2.js + cross-environment-reset bit-exact reproduction of the frontier records ((7,5) m=23..26 and (7,4) m=15 re-run after an environment reset with identical conflicts 1,200/2,029/7,730/3,257 and 0) + constructive extension band m=22..35 (seven-row-q4-extension-band-20261114): blocking-coverage lemma gives a free empty-column extension of the triple-verified m=21 witness to m=22; deterministic greedy adds + hill-climb (extend_band.ts, exact TS/BigInt, no SAT) produce 20-stone configs CA (maxX=22, coverage W=31, witnesses m=23..31) and CB (maxX=26, W=35, witnesses m=27..35, used for 32..35); all widths 22..35 verified safe+maximal+row-deficient by exact rational arithmetic (uncovered 0, negative control detected); M_{7,4} >= 36 (M in [36, 1929]); jsVerify/pyVerify re-verification of the extension-band witnesses: m=22..27 SAT re-confirmed and dual-verified by seven-row-q4-q6-witness-frontier-20261115 (kissat 0 conflicts, rows matching the constructive configs; four-way verified: kissat SAT + jsVerify + pyVerify + tsVerify), m=28..35 SAT re-confirmed and dual-verified by seven-row-q4-extension-band-sat3-20261115 (sat3.js streaming census, DIMACS byte-identical to sat2.js: 9 controls cmp MATCH, (7,5) m=23 kissat calibration 1,200 conflicts bit-exact, m=22..27 witness reproduction 6/6 stones identical; kissat 36-537 conflicts at m=28..35, all 200s cap; independent 20-stone witnesses with row multiset {3,3,3,3,3,3,2} matching the constructive configs; m=35 lex=H,V,HV cross-encoding SAT 314 conflicts) - the whole band m=4..35 is now four-way verified (kissat SAT + jsVerify + pyVerify + tsVerify). See report.md."
 ---
 
 # 7xm q=4,5,6 行欠損witness帯 — 3ファミリー初の結果（M_{7,4} ≥ 36・M_{7,5} ≥ 32・M_{7,6} ≥ 27）
@@ -137,3 +143,25 @@ K番号は作業時点での仮番号（AGENTS.md の再採番規則による）
    m ≥ 28 の SAT 探索には q ≤ w 版メモリ有界 census の開発が必要。
    前線は 7×36 のまま（M ∈ [36, 1929] 不変）。
 4. 較正: (7,5) m=23 再実行 1,200 conflicts が本項目の公開 record と bit-exact。
+
+## 追記 (2026-11-15 sat3 streaming census による m=28..35 の SAT 再検証)
+
+`seven-row-q4-extension-band-sat3-20261115`（frontier レーンの後続）:
+
+1. **sat2.js の 7×28 census メモリ壁（OOM rc 137）を sat3.js で解消**。
+   変更は3点のみ（encode core は verbatim）: 節のストリーム出力（OOM 主因の
+   `enc.clauses[]` 保持+`toDimacs()` GB 結合を廃止）・円の初遭遇処理（circMap
+   挿入順 = 三つ組列挙順でその場 emit）・円の点走査 O(w) 化（行ごと2次方程式の
+   整数根）。**DIMACS は sat2.js と byte-identical**（9対照 cmp MATCH、
+   cap/seq・cap/tot・lex・rowY 全モード）。
+   較正: (7,5) m=23 で 1,200 conflicts bit-exact・(7,4) m=22..27 の再実行は
+   全幅 0 conflicts で **公開 witness と石配置 6/6 完全一致**
+   （output/calibration.jsonl）。
+2. **m=28..35 全幅 SAT・2系統検証 PASS**（kissat 36〜537 conflicts・生成3.1〜5.2s・
+   m=35 は 5,510,073 clauses/CNF 103MB）。witness はいずれも **20石で行マルチセット
+   {3,3,3,3,3,3,2}** — 構成的延伸（config CA/CB）と同一マルチセット・配置は独立。
+   m=35 は lex=H,V,HV 別符号化でも SAT（314 conflicts・2系統検証 PASS）。
+3. **結果: m=4..35 全帯が4系統検証済み**（m=4..21 SAT 2系統+K0827 既往、
+   m=22..27 SAT+構成が石配置まで一致、m=28..35 SAT と構成が互いに独立の証明）。
+   M_{7,4} ∈ [36, 1929] は不変。m ≥ 36 は未実施（不在主張ではない）。
+   sat3 により (7,4) の SAT 探索は m=36 以降も生成 ~6s/幅で実行可能になった。
