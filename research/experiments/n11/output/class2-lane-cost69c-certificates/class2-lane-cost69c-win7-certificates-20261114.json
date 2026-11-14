@@ -1,0 +1,35 @@
+{
+ "session": "class2-lane cost-69c WIN7-D10 certificates (long-term lane, 2026-11-14)",
+ "s6_child_hex": "00000000000000809082040000000000",
+ "win7_bit": 103,
+ "root_hex": "00000080000000809082040000000000",
+ "root_stones": 7,
+ "root_is_new_in_repo": "yes (code search total_count=0 before push)",
+ "root_check_loser_mobility": 53,
+ "root_check_legal_candidates_independent": "legal_candidates.py enumeration = 53, matches",
+ "sub_roots": 53,
+ "sub_roots_pass": 53,
+ "extracted_nodes": 20357850,
+ "certificate_rows": 52338,
+ "fbt_drops": 0,
+ "fatal": null,
+ "union_intersections": 0,
+ "union_missing": 0,
+ "terminal_stone_range": [
+  13,
+  17
+ ],
+ "certificate_txt_md5": "4bb1299324fb69634a848cebc109961c",
+ "certificate_txt_bytes": 1890000,
+ "transport": "xz+base64, split 3 parts (76,983 / 76,983 / 76,919 bytes)",
+ "transport_b64_md5": "fdf83e5a3434ee5cc1ee198dcf871db2",
+ "transport_b64_bytes": 230885,
+ "remote_verification": "parts fetched at commit fb71dbff013e13e8e5040ca9cfbbb22f4c70e00f, concatenated, base64 -d | xz -d: md5 matches 4bb1299324fb69634a848cebc109961c, byte-identical to locally verified sorted certificate",
+ "extraction": "blind extraction via cert_driver69c.ts (copy of cert_driver68.ts, empty kill table) from 69c raw batches; verify_bit7_win7_cert.ts full verification PASS (53/53 sub-roots, union 0/0, fbt_drops=0)",
+ "files": [
+  "cert-bit103-root-00000080000000809082040000000000.txt.xz.b64.part1of3",
+  "cert-bit103-root-00000080000000809082040000000000.txt.xz.b64.part2of3",
+  "cert-bit103-root-00000080000000809082040000000000.txt.xz.b64.part3of3",
+  "README.md"
+ ]
+}
