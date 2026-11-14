@@ -4718,6 +4718,7 @@
 - → supports [K0790](../items/K0790-width49-55-pw32-plateau.md): K0790本文「11050円はw=49..83で16..20点・witnessは別円族（要確認）」を訂正。奇奇実現は22..34点。命題P(49..55)=32自体には影響なし
 - → depends_on [K0072](../items/K0072-mod9-integer-row-separation.md): 行分離・円格子点の標準形（2x−A)²+(2y−B)²=R と3原始実現の分類
 - ← depends_on [K0807](../items/K0807-width83-positive-control-revival-point.md): 34点最小幅83（復活点の右端の理論的裏付け）
+- ← depends_on [K0817](../items/K0817-circle-strip-subadditivity-and-density-bound.md): P(83)≥34 を与える11050円の全整数点・窓計数 witness
 
 ## [K0792](../items/K0792-width56-pw32-plateau-extension.md) 幅56..59の円点数の完全決定 P(56)=…=P(59)=32 — 32点プラトーがw=59まで継続 — P(w)は全幅6..59で決定済み・level 17の復活点は(59,83]に狭窄・g4会計はw=65で飽和
 
@@ -4830,7 +4831,7 @@
 - → supports [K0785](../items/K0785-circle-26-points-min-row-span.md): level 17復活点を (68,83] からちょうど (82,83] に狭窄・34点最小幅83の左端を確定
 - ← depends_on [K0805](../items/K0805-mask-census-closed-form.md): dual-run unique（w=69..82・14 点）が閉形式の制御値
 - ← depends_on [K0807](../items/K0807-width83-positive-control-revival-point.md): 掃引機（width_sweep.mjs）と w≤82 全滅の境界。本項はその正制御完了（w83..86）
-- ← depends_on [K0817](../items/K0817-circle-strip-subadditivity-and-density-bound.md): P(82)=32 の全称値を漸近上界に代入
+- ← depends_on [K0817](../items/K0817-circle-strip-subadditivity-and-density-bound.md): P(82)=32 の全称値を漸近上界と P(83) 上界に使用
 
 ## [K0805](../items/K0805-mask-census-closed-form.md) マスクセンサスの全幅閉形式決定 — level 17 窓マスク掃引の (unique(w), maximal(w)) が交叉統計と区間支配判定で全 w≧17 に決定（unique 3630 到達は w=96 が鋭い・初出現 w=37・maximal=3300 は全 w≧66 で厳密・小パターン参入窓 265..286/309..363/529..561）
 
@@ -4932,7 +4933,8 @@
 - → depends_on [K0815](../items/K0815-witness-column-extension-kissat-bounds.md): 5×20はkissat/貪欲/SA/portfolio全てで未決着だった前線（K0815 note・frontier-portfolio-20261114）。今回完全列挙で不在確定
 - → depends_on [K0810](../items/K0810-sat-row-deficient-witnesses.md): SAT交叉確認はK0810 sat.jsのcensus（circleABC整数三元組・runnerの外心形式と独立）を使用
 
-## [K0817](../items/K0817-circle-strip-subadditivity-and-density-bound.md) 円の連続行窓点数 P(w) の劣加法性と漸近密度上界
+## [K0817](../items/K0817-circle-strip-subadditivity-and-density-bound.md) 円の連続行窓点数 P(w) の劣加法性・漸近密度上界・P(83)=34
 
-- → depends_on [K0804](../items/K0804-width69-82-pw32-plateau.md): P(82)=32 の全称値を漸近上界に代入
+- → depends_on [K0804](../items/K0804-width69-82-pw32-plateau.md): P(82)=32 の全称値を漸近上界と P(83) 上界に使用
 - → depends_on [K0813](../items/K0813-width2-5-circle-point-max-and-q9-q10-row-formula.md): P(w) の円格子点数定義と各水平行2点上界の枠組み
+- → depends_on [K0791](../items/K0791-circle-34pt-witness-verified.md): P(83)≥34 を与える11050円の全整数点・窓計数 witness
