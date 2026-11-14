@@ -187,16 +187,138 @@
    "root_not_among_existing": true,
    "root_absence_check": "GitHub code search over yuubinnkyoku/kyouen-researches for the root hex: 0 hits",
    "push_note": "full paged-read push; remote md5 verified byte-exact after landing (push landed despite a sandbox memory limit after the push call)"
+  },
+  {
+   "bit": 89,
+   "root_hex": "00000000020000803202000000008000",
+   "verdict": "WIN7",
+   "rows": 47035,
+   "extraction_nodes": 8642394,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table), FBS=1<<20: fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15)",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 54,
+    "independent_enumeration_legal": 54,
+    "match": true
+   },
+   "sub_roots_verified": 54,
+   "sub_roots_pass": 54,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "1e2c8db6cd9303fcf0167f59ccb83bae",
+   "sha256": "0399eb05cf207eb8e40218f344d4707f629bf07f6bd352e89de37f81e95bc47a",
+   "file": "class2-lane-cost69e-certificates/bit89-root-00000000020000803202000000008000.cert",
+   "v15_crosscheck_verdict": "loss=true at 5,599,058 nodes (v15 anchor)",
+   "v16_search_nodes": 2310618,
+   "root_not_among_existing": true,
+   "root_absence_check": "GitHub code search over yuubinnkyoku/kyouen-researches for the root hex: 0 hits",
+   "push_note": "push landed despite a sandbox memory limit after the push call; remote md5 verified byte-exact (commit 55c3a016-era push, verified again 2026-11-15 session)"
+  },
+  {
+   "bit": 94,
+   "root_hex": "00000000400000803202000000008000",
+   "verdict": "WIN7",
+   "rows": 42538,
+   "extraction_nodes": 8681404,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table), FBS=1<<20: fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15)",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 52,
+    "independent_enumeration_legal": 52,
+    "match": true
+   },
+   "sub_roots_verified": 52,
+   "sub_roots_pass": 52,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "4dc6076b96edc3a472b4b23f38739451",
+   "sha256": "9edda222d3b5bb25a94a497043a670a85141cb19f5b09ae9a892aa50ce81ca74",
+   "file": "class2-lane-cost69e-certificates/bit94-root-00000000400000803202000000008000.cert",
+   "v15_crosscheck_verdict": "loss=true at 6,171,899 nodes (v15 anchor)",
+   "v16_search_nodes": 2679844,
+   "root_not_among_existing": true,
+   "root_absence_check": "GitHub code search over yuubinnkyoku/kyouen-researches for the root hex: 0 hits",
+   "push_note": "push landed despite a sandbox memory limit after the push call; remote md5 verified byte-exact (2026-11-15 session)"
+  },
+  {
+   "bit": 108,
+   "root_hex": "00001000000000803202000000008000",
+   "verdict": "WIN7",
+   "rows": 33942,
+   "extraction_nodes": 7620433,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table), FBS=1<<20: fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15)",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 51,
+    "independent_enumeration_legal": 51,
+    "match": true
+   },
+   "sub_roots_verified": 51,
+   "sub_roots_pass": 51,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "74d071466140e1b0a48b67134431a570",
+   "sha256": "be2fb2ee178b3aca96fabceffaf30ac6b9bc44fbd9d8f3e76f8e2059c29dcadb",
+   "file": "class2-lane-cost69e-certificates/bit108-root-00001000000000803202000000008000.cert",
+   "v15_crosscheck_verdict": "loss=true at 5,747,330 nodes (v15 anchor)",
+   "v16_search_nodes": 2065659,
+   "root_not_among_existing": true,
+   "root_absence_check": "GitHub code search over yuubinnkyoku/kyouen-researches for the root hex: 0 hits",
+   "push_note": "byte-identical re-extraction after a full sandbox reset (determinism proof); push landed despite a sandbox memory limit after the push call; remote md5 verified byte-exact (commit e5ca22ac); re-verified byte-exact against the local re-extraction in the 2026-11-15 session"
+  },
+  {
+   "bit": 116,
+   "root_hex": "00100000000000803202000000008000",
+   "verdict": "WIN7",
+   "rows": 74113,
+   "extraction_nodes": 22683171,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table), FBS=1<<20: fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15)",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 59,
+    "independent_enumeration_legal": 59,
+    "match": true
+   },
+   "sub_roots_verified": 59,
+   "sub_roots_pass": 59,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "691140486067132237d8c11d93a12559",
+   "sha256": "20c0f5edf05f9f45cd0e5d3331a22ec3a39ac001b28428a51d79eefda4498159",
+   "file": "class2-lane-cost69e-certificates/bit116-root-00100000000000803202000000008000.cert.gz.b64",
+   "v15_crosscheck_verdict": "loss=true at 16,776,883 nodes (v15 anchor)",
+   "v16_search_nodes": 6683450,
+   "root_not_among_existing": true,
+   "root_absence_check": "GitHub code search over yuubinnkyoku/kyouen-researches for the root hex: 0 hits",
+   "push_note": "direct text push exceeded the sandbox 16 MiB operation-record limit (74,115-line / 2,670,116-byte certificate: 42 paged reads + 2.67 MB payload); published as deterministic base64(gzip -9) instead; remote roundtrip verified: base64 -d | gunzip | md5sum == 691140486067132237d8c11d93a12559 (commit ce7d862d, relay parts removed)",
+   "file_format": "base64 (76 cols) of gzip -9 of the certificate text; restore: base64 -d <file | gunzip; uncompressed_bytes: 2670116, uncompressed_lines: 74115",
+   "gz_b64_md5": "9aa8925c2f08857a92be67dc7f4f7ed4",
+   "uncompressed_md5": "691140486067132237d8c11d93a12559",
+   "uncompressed_sha256": "20c0f5edf05f9f45cd0e5d3331a22ec3a39ac001b28428a51d79eefda4498159"
   }
  ],
- "unverified_win7_bits": [
-  2,
-  89,
-  94,
-  108,
-  116
- ],
+ "unverified_win7_bits": [],
  "duplicate_root_note": "the bit-2 WIN7 root 00000000000000803202000000008004 was independently re-derived WIN7-D10 by this sweep (v16 1,999,371 nodes / v15 5,510,814 nodes) and duplicates the cost-65g bit-15 listing whose certificate was rebuilt in parallel (cost-65g-warm bit 15, commit a7f3fc97) - an unplanned cross-lane reproduction, no new certificate needed; the bit-21 WIN7 root 00000000000000803202000000208000 is a cross-child duplicate of the cost-60b bit-15 win7_roots listing (cost-61e bit-1 pattern) with no prior published certificate, so this certificate is new coverage and also closes the cost-60b bit-15 warm entry",
  "unknown_status": "11x11 empty board: UNKNOWN. All WIN7 certificates prove only individual 7-stone roots within depth 10.",
- "warm_rebuild_note": "bits 84/76/90 rebuilt as warm certificates on 2026-11-15 (extraction blind, fbt_drops=0; root-check mobility match 50/57/58, all sub-roots PASS, union 0/0 each); bit 2 already certified by the parallel cost-65g-warm bit-15 rebuild; bits 89/94/108/116 remain warm candidates"
+ "warm_rebuild_note": "bits 84/76/90/89/94/108/116 rebuilt as warm certificates on 2026-11-15 (extraction blind, fbt_drops=0; root-check mobility match 50/57/58/54/52/51/59, all sub-roots PASS, union 0/0 each); bit 2 already certified by the parallel cost-65g-warm bit-15 rebuild; with bits 21/99/87 from the sweep session and these seven warm rebuilds all 11 WIN7 bits of the cost-69e sweep now have published, independently verifiable certificates (bit 116 in base64(gzip) form; the other ten as plain text)"
 }
