@@ -1,2180 +1,2370 @@
 {
- "experiment": "row-deficient-sat-witnesses-20261114",
- "date": "2026-11-14",
- "method": "SAT (CDCL self-implemented, watched literals + VSIDS + 1UIP + restarts + reduceDB); DPLL independent cross-check solver; census: lines via pairs + circles via triples, exact integer arithmetic; independent census-free verifier for every SAT model",
- "validation": {
-  "solver_fuzz": "400 random 3-SAT instances x 2 solvers vs brute-force enumeration: 800 checks, 0 mismatches (SAT models verified, UNSAT cross-checked)",
-  "controls": {
-   "census_6x12_q8": "6 lines + 86 circles of exactly 8 points = 92 curves, matches K0809 census (92)",
-   "brute_2x8_q4": "16 deficient maximal configs, min 5 stones (K0796 witness reproduced)",
-   "sat_2x8_q4": "SAT, 5-stone witness, verify PASS",
-   "sat_2x9_q4": "UNSAT (CDCL) + UNSAT (DPLL) + brute force deficient=0 -> M_{2,4}=9 control (K0796/K0069)"
+  "experiment": "row-deficient-sat-witnesses-20261114",
+  "date": "2026-11-14",
+  "method": "SAT (CDCL self-implemented, watched literals + VSIDS + 1UIP + restarts + reduceDB); DPLL independent cross-check solver; census: lines via pairs + circles via triples, exact integer arithmetic; independent census-free verifier for every SAT model",
+  "validation": {
+    "solver_fuzz": "400 random 3-SAT instances x 2 solvers vs brute-force enumeration: 800 checks, 0 mismatches (SAT models verified, UNSAT cross-checked)",
+    "controls": {
+      "census_6x12_q8": "6 lines + 86 circles of exactly 8 points = 92 curves, matches K0809 census (92)",
+      "brute_2x8_q4": "16 deficient maximal configs, min 5 stones (K0796 witness reproduced)",
+      "sat_2x8_q4": "SAT, 5-stone witness, verify PASS",
+      "sat_2x9_q4": "UNSAT (CDCL) + UNSAT (DPLL) + brute force deficient=0 -> M_{2,4}=9 control (K0796/K0069)",
+      "cap39_6x12_q8": "cap=39 SAT, 39-stone maximal (rows 5,7,7,7,6,7), fresh-process census-free verify PASS; cap=38 timeout x2, not an absence proof"
+    },
+    "witness_reverification": "all 11 SAT witnesses re-verified PASS in a fresh process (safe + maximal + row counts match recorded verify)"
   },
-  "witness_reverification": "all 11 SAT witnesses re-verified PASS in a fresh process (safe + maximal + row counts match recorded verify)"
- },
- "resolved_timeouts": [
-  "(6,8) m=18; (5,6) m=18,19; (5,7) m=19 (2 attempts); (6,7) m=20 (2 attempts); (6,6) m=18,20,21; (6,12) q=8 cap=38,36 — CDCL budget exhausted, NOT absence proofs"
- ],
- "results_summary": {
-  "M_6_5": "was 22..658, now 23..658 (witness 23 stones @ 6x22)",
-  "M_6_6": "was 17..495, now 20..495 (witnesses 29 stones @ 6x17, 6x19)",
-  "M_6_8": "was 12..371, now 18..371 (witnesses 41 stones @ 6x12..6x17); 6x12 also has a 40-stone maximal (cap=40 SAT)",
-  "M_5_6": "was 16..249, now 18..249 (witnesses 24 stones @ 5x16, 5x17)",
-  "M_5_7": "unchanged 19..158 (m=19 unresolved)",
-  "M_6_7": "unchanged 20..402 (m=20 unresolved)"
- },
- "runs": [
-  {
-   "w": 6,
-   "m": 17,
-   "q": 8,
-   "mode": "row-deficient",
-   "maxStones": null,
-   "curves": 176,
-   "lines": 6,
-   "circles": 170,
-   "vars": 6870,
-   "clauses": 24481,
-   "encMs": 211,
-   "solveMs": 37410,
-   "solver": "cdcl",
-   "conflicts": 242874,
-   "result": "SAT",
-   "stones": [
-    [
-     1,
-     0
-    ],
-    [
-     4,
-     0
-    ],
-    [
-     5,
-     0
-    ],
-    [
-     6,
-     0
-    ],
-    [
-     10,
-     0
-    ],
-    [
-     11,
-     0
-    ],
-    [
-     16,
-     0
-    ],
-    [
-     4,
-     1
-    ],
-    [
-     6,
-     1
-    ],
-    [
-     8,
-     1
-    ],
-    [
-     9,
-     1
-    ],
-    [
-     11,
-     1
-    ],
-    [
-     12,
-     1
-    ],
-    [
-     13,
-     1
-    ],
-    [
-     1,
-     2
-    ],
-    [
-     6,
-     2
-    ],
-    [
-     7,
-     2
-    ],
-    [
-     11,
-     2
-    ],
-    [
-     12,
-     2
-    ],
-    [
-     16,
-     2
-    ],
-    [
-     0,
-     3
-    ],
-    [
-     2,
-     3
-    ],
-    [
-     4,
-     3
-    ],
-    [
-     7,
-     3
-    ],
-    [
-     10,
-     3
-    ],
-    [
-     11,
-     3
-    ],
-    [
-     14,
-     3
-    ],
-    [
-     3,
-     4
-    ],
-    [
-     4,
-     4
-    ],
-    [
-     7,
-     4
-    ],
-    [
-     8,
-     4
-    ],
-    [
-     9,
-     4
-    ],
-    [
-     12,
-     4
-    ],
-    [
-     13,
-     4
-    ],
-    [
-     1,
-     5
-    ],
-    [
-     4,
-     5
-    ],
-    [
-     5,
-     5
-    ],
-    [
-     6,
-     5
-    ],
-    [
-     9,
-     5
-    ],
-    [
-     10,
-     5
-    ],
-    [
-     11,
-     5
-    ]
-   ],
-   "verify": {
-    "ok": true,
-    "size": 41,
-    "rows": [
-     7,
-     7,
-     6,
-     7,
-     7,
-     7
-    ],
-    "minRow": 6
-   },
-   "file": "extra_6_17_8.json"
+  "resolved_timeouts": [
+    "(6,8) m=18; (5,6) m=18,19; (5,7) m=19 (2 attempts); (6,7) m=20 (2 attempts); (6,6) m=18,20,21; (6,12) q=8 cap=38,36 — CDCL budget exhausted, NOT absence proofs"
+  ],
+  "results_summary": {
+    "M_6_5": "was 22..658, now 23..658 (witness 23 stones @ 6x22)",
+    "M_6_6": "was 17..495, now 20..495 (witnesses 29 stones @ 6x17, 6x19)",
+    "M_6_8": "was 12..371, now 18..371 (witnesses 41 stones @ 6x12..6x17); 6x12 also has 40-stone and 39-stone maximals (cap=40, cap=39 SAT, both independently verified); 6x12 minimal maximal size <= 39, cap=38 unresolved (not an absence proof)",
+    "M_5_6": "was 16..249, now 18..249 (witnesses 24 stones @ 5x16, 5x17)",
+    "M_5_7": "unchanged 19..158 (m=19 unresolved)",
+    "M_6_7": "unchanged 20..402 (m=20 unresolved)"
   },
-  {
-   "w": 6,
-   "m": 22,
-   "q": 5,
-   "mode": "row-deficient",
-   "maxStones": null,
-   "curves": 2530,
-   "lines": 152,
-   "circles": 2378,
-   "vars": 50032,
-   "clauses": 174573,
-   "encMs": 444,
-   "solveMs": 158346,
-   "solver": "cdcl",
-   "conflicts": 80747,
-   "result": "SAT",
-   "stones": [
-    [
-     8,
-     0
-    ],
-    [
-     11,
-     0
-    ],
-    [
-     14,
-     0
-    ],
-    [
-     19,
-     0
-    ],
-    [
-     6,
-     1
-    ],
-    [
-     9,
-     1
-    ],
-    [
-     14,
-     1
-    ],
-    [
-     17,
-     1
-    ],
-    [
-     6,
-     2
-    ],
-    [
-     7,
-     2
-    ],
-    [
-     11,
-     2
-    ],
-    [
-     12,
-     2
-    ],
-    [
-     3,
-     3
-    ],
-    [
-     5,
-     3
-    ],
-    [
-     14,
-     3
-    ],
-    [
-     18,
-     3
-    ],
-    [
-     10,
-     4
-    ],
-    [
-     12,
-     4
-    ],
-    [
-     14,
-     4
-    ],
-    [
-     16,
-     4
-    ],
-    [
-     4,
-     5
-    ],
-    [
-     9,
-     5
-    ],
-    [
-     20,
-     5
-    ]
-   ],
-   "verify": {
-    "ok": true,
-    "size": 23,
-    "rows": [
-     4,
-     4,
-     4,
-     4,
-     4,
-     3
-    ],
-    "minRow": 3
-   },
-   "file": "extra_6_22_5.json"
-  },
-  {
-   "w": 2,
-   "m": 8,
-   "q": 4,
-   "mode": "row-deficient",
-   "maxStones": null,
-   "curves": 74,
-   "lines": 2,
-   "circles": 72,
-   "vars": 788,
-   "clauses": 2579,
-   "encMs": 6,
-   "solveMs": 14,
-   "solver": "cdcl",
-   "conflicts": 51,
-   "steps": null,
-   "result": "SAT",
-   "stones": [
-    [
-     1,
-     0
-    ],
-    [
-     5,
-     0
-    ],
-    [
-     6,
-     0
-    ],
-    [
-     4,
-     1
-    ],
-    [
-     6,
-     1
-    ]
-   ],
-   "verify": {
-    "ok": true,
-    "size": 5,
-    "rows": [
-     3,
-     2
-    ],
-    "minRow": 2
-   },
-   "file": "r_2_8_4.json"
-  },
-  {
-   "w": 2,
-   "m": 9,
-   "q": 4,
-   "mode": "row-deficient",
-   "maxStones": null,
-   "curves": 106,
-   "lines": 2,
-   "circles": 104,
-   "vars": 1118,
-   "clauses": 3667,
-   "encMs": 9,
-   "solveMs": 118,
-   "solver": "cdcl",
-   "conflicts": 1696,
-   "steps": null,
-   "result": "UNSAT",
-   "file": "r_2_9_4.json"
-  },
-  {
-   "w": 2,
-   "m": 9,
-   "q": 4,
-   "mode": "row-deficient",
-   "maxStones": null,
-   "curves": 106,
-   "lines": 2,
-   "circles": 104,
-   "vars": 1118,
-   "clauses": 3667,
-   "encMs": 8,
-   "solveMs": 161,
-   "solver": "dpll",
-   "conflicts": null,
-   "steps": 2405,
-   "result": "UNSAT",
-   "file": "r_2_9_4_dpll.json"
-  },
-  {
-   "w": 5,
-   "m": 16,
-   "q": 6,
-   "mode": "row-deficient",
-   "maxStones": null,
-   "curves": 426,
-   "lines": 5,
-   "circles": 421,
-   "vars": 10142,
-   "clauses": 35457,
-   "encMs": 101,
-   "solveMs": 1811,
-   "solver": "cdcl",
-   "conflicts": 4755,
-   "steps": null,
-   "result": "SAT",
-   "stones": [
-    [
-     5,
-     0
-    ],
-    [
-     6,
-     0
-    ],
-    [
-     8,
-     0
-    ],
-    [
-     9,
-     0
-    ],
-    [
-     11,
-     0
-    ],
-    [
-     3,
-     1
-    ],
-    [
-     4,
-     1
-    ],
-    [
-     7,
-     1
-    ],
-    [
-     12,
-     1
-    ],
-    [
-     14,
-     1
-    ],
-    [
-     6,
-     2
-    ],
-    [
-     9,
-     2
-    ],
-    [
-     11,
-     2
-    ],
-    [
-     12,
-     2
-    ],
-    [
-     15,
-     2
-    ],
-    [
-     3,
-     3
-    ],
-    [
-     6,
-     3
-    ],
-    [
-     7,
-     3
-    ],
-    [
-     9,
-     3
-    ],
-    [
-     12,
-     3
-    ],
-    [
-     0,
-     4
-    ],
-    [
-     11,
-     4
-    ],
-    [
-     12,
-     4
-    ],
-    [
-     13,
-     4
-    ]
-   ],
-   "verify": {
-    "ok": true,
-    "size": 24,
-    "rows": [
-     5,
-     5,
-     5,
-     5,
-     4
-    ],
-    "minRow": 4
-   },
-   "file": "r_5_16_6.json"
-  },
-  {
-   "w": 5,
-   "m": 17,
-   "q": 6,
-   "mode": "row-deficient",
-   "maxStones": null,
-   "curves": 494,
-   "lines": 5,
-   "circles": 489,
-   "vars": 11689,
-   "clauses": 40863,
-   "encMs": 132,
-   "solveMs": 290,
-   "solver": "cdcl",
-   "conflicts": 313,
-   "steps": null,
-   "result": "SAT",
-   "stones": [
-    [
-     3,
-     0
-    ],
-    [
-     4,
-     0
-    ],
-    [
-     5,
-     0
-    ],
-    [
-     13,
-     0
-    ],
-    [
-     15,
-     0
-    ],
-    [
-     2,
-     1
-    ],
-    [
-     6,
-     1
-    ],
-    [
-     7,
-     1
-    ],
-    [
-     13,
-     1
-    ],
-    [
-     16,
-     1
-    ],
-    [
-     5,
-     2
-    ],
-    [
-     6,
-     2
-    ],
-    [
-     9,
-     2
-    ],
-    [
-     14,
-     2
-    ],
-    [
-     16,
-     2
-    ],
-    [
-     4,
-     3
-    ],
-    [
-     10,
-     3
-    ],
-    [
-     14,
-     3
-    ],
-    [
-     16,
-     3
-    ],
-    [
-     0,
-     4
-    ],
-    [
-     3,
-     4
-    ],
-    [
-     7,
-     4
-    ],
-    [
-     8,
-     4
-    ],
-    [
-     13,
-     4
-    ]
-   ],
-   "verify": {
-    "ok": true,
-    "size": 24,
-    "rows": [
-     5,
-     5,
-     5,
-     4,
-     5
-    ],
-    "minRow": 4
-   },
-   "file": "r_5_17_6.json"
-  },
-  {
-   "w": 6,
-   "m": 12,
-   "q": 8,
-   "mode": "row-deficient",
-   "maxStones": null,
-   "curves": 92,
-   "lines": 6,
-   "circles": 86,
-   "vars": 3576,
-   "clauses": 12685,
-   "encMs": 82,
-   "solveMs": 50,
-   "solver": "cdcl",
-   "conflicts": 48,
-   "steps": null,
-   "result": "SAT",
-   "stones": [
-    [
-     0,
-     0
-    ],
-    [
-     1,
-     0
-    ],
-    [
-     3,
-     0
-    ],
-    [
-     4,
-     0
-    ],
-    [
-     5,
-     0
-    ],
-    [
-     10,
-     0
-    ],
-    [
-     11,
-     0
-    ],
-    [
-     0,
-     1
-    ],
-    [
-     1,
-     1
-    ],
-    [
-     2,
-     1
-    ],
-    [
-     3,
-     1
-    ],
-    [
-     4,
-     1
-    ],
-    [
-     6,
-     1
-    ],
-    [
-     10,
-     1
-    ],
-    [
-     0,
-     2
-    ],
-    [
-     1,
-     2
-    ],
-    [
-     2,
-     2
-    ],
-    [
-     3,
-     2
-    ],
-    [
-     4,
-     2
-    ],
-    [
-     6,
-     2
-    ],
-    [
-     10,
-     2
-    ],
-    [
-     0,
-     3
-    ],
-    [
-     1,
-     3
-    ],
-    [
-     2,
-     3
-    ],
-    [
-     4,
-     3
-    ],
-    [
-     6,
-     3
-    ],
-    [
-     7,
-     3
-    ],
-    [
-     9,
-     3
-    ],
-    [
-     3,
-     4
-    ],
-    [
-     7,
-     4
-    ],
-    [
-     8,
-     4
-    ],
-    [
-     9,
-     4
-    ],
-    [
-     10,
-     4
-    ],
-    [
-     11,
-     4
-    ],
-    [
-     0,
-     5
-    ],
-    [
-     2,
-     5
-    ],
-    [
-     6,
-     5
-    ],
-    [
-     8,
-     5
-    ],
-    [
-     9,
-     5
-    ],
-    [
-     10,
-     5
-    ],
-    [
-     11,
-     5
-    ]
-   ],
-   "verify": {
-    "ok": true,
-    "size": 41,
-    "rows": [
-     7,
-     7,
-     7,
-     7,
-     6,
-     7
-    ],
-    "minRow": 6
-   },
-   "file": "r_6_12_8.json"
-  },
-  {
-   "w": 6,
-   "m": 12,
-   "q": 8,
-   "mode": "total",
-   "maxStones": 40,
-   "curves": 92,
-   "lines": 6,
-   "circles": 86,
-   "vars": 5708,
-   "clauses": 21100,
-   "encMs": 77,
-   "solveMs": 343,
-   "solver": "cdcl",
-   "conflicts": 2092,
-   "steps": null,
-   "result": "SAT",
-   "stones": [
-    [
-     2,
-     0
-    ],
-    [
-     4,
-     0
-    ],
-    [
-     5,
-     0
-    ],
-    [
-     6,
-     0
-    ],
-    [
-     7,
-     0
-    ],
-    [
-     9,
-     0
-    ],
-    [
-     11,
-     0
-    ],
-    [
-     2,
-     1
-    ],
-    [
-     3,
-     1
-    ],
-    [
-     4,
-     1
-    ],
-    [
-     5,
-     1
-    ],
-    [
-     6,
-     1
-    ],
-    [
-     7,
-     1
-    ],
-    [
-     9,
-     1
-    ],
-    [
-     1,
-     2
-    ],
-    [
-     2,
-     2
-    ],
-    [
-     3,
-     2
-    ],
-    [
-     4,
-     2
-    ],
-    [
-     5,
-     2
-    ],
-    [
-     8,
-     2
-    ],
-    [
-     10,
-     2
-    ],
-    [
-     1,
-     3
-    ],
-    [
-     3,
-     3
-    ],
-    [
-     5,
-     3
-    ],
-    [
-     6,
-     3
-    ],
-    [
-     7,
-     3
-    ],
-    [
-     8,
-     3
-    ],
-    [
-     10,
-     3
-    ],
-    [
-     0,
-     4
-    ],
-    [
-     2,
-     4
-    ],
-    [
-     3,
-     4
-    ],
-    [
-     6,
-     4
-    ],
-    [
-     8,
-     4
-    ],
-    [
-     0,
-     5
-    ],
-    [
-     2,
-     5
-    ],
-    [
-     3,
-     5
-    ],
-    [
-     6,
-     5
-    ],
-    [
-     9,
-     5
-    ],
-    [
-     10,
-     5
-    ],
-    [
-     11,
-     5
-    ]
-   ],
-   "verify": {
-    "ok": true,
-    "size": 40,
-    "rows": [
-     7,
-     7,
-     7,
-     7,
-     5,
-     7
-    ],
-    "minRow": 5
-   },
-   "file": "r_6_12_8_cap40.json"
-  },
-  {
-   "w": 6,
-   "m": 13,
-   "q": 8,
-   "mode": "row-deficient",
-   "maxStones": null,
-   "curves": 108,
-   "lines": 6,
-   "circles": 102,
-   "vars": 4206,
-   "clauses": 14941,
-   "encMs": 101,
-   "solveMs": 116,
-   "solver": "cdcl",
-   "conflicts": 375,
-   "steps": null,
-   "result": "SAT",
-   "stones": [
-    [
-     2,
-     0
-    ],
-    [
-     3,
-     0
-    ],
-    [
-     5,
-     0
-    ],
-    [
-     6,
-     0
-    ],
-    [
-     7,
-     0
-    ],
-    [
-     9,
-     0
-    ],
-    [
-     11,
-     0
-    ],
-    [
-     1,
-     1
-    ],
-    [
-     2,
-     1
-    ],
-    [
-     3,
-     1
-    ],
-    [
-     4,
-     1
-    ],
-    [
-     5,
-     1
-    ],
-    [
-     8,
-     1
-    ],
-    [
-     12,
-     1
-    ],
-    [
-     0,
-     2
-    ],
-    [
-     1,
-     2
-    ],
-    [
-     2,
-     2
-    ],
-    [
-     4,
-     2
-    ],
-    [
-     5,
-     2
-    ],
-    [
-     6,
-     2
-    ],
-    [
-     8,
-     2
-    ],
-    [
-     2,
-     3
-    ],
-    [
-     4,
-     3
-    ],
-    [
-     5,
-     3
-    ],
-    [
-     7,
-     3
-    ],
-    [
-     10,
-     3
-    ],
-    [
-     12,
-     3
-    ],
-    [
-     0,
-     4
-    ],
-    [
-     2,
-     4
-    ],
-    [
-     3,
-     4
-    ],
-    [
-     7,
-     4
-    ],
-    [
-     9,
-     4
-    ],
-    [
-     10,
-     4
-    ],
-    [
-     11,
-     4
-    ],
-    [
-     2,
-     5
-    ],
-    [
-     3,
-     5
-    ],
-    [
-     5,
-     5
-    ],
-    [
-     6,
-     5
-    ],
-    [
-     8,
-     5
-    ],
-    [
-     10,
-     5
-    ],
-    [
-     12,
-     5
-    ]
-   ],
-   "verify": {
-    "ok": true,
-    "size": 41,
-    "rows": [
-     7,
-     7,
-     7,
-     6,
-     7,
-     7
-    ],
-    "minRow": 6
-   },
-   "file": "r_6_13_8.json"
-  },
-  {
-   "w": 6,
-   "m": 14,
-   "q": 8,
-   "mode": "row-deficient",
-   "maxStones": null,
-   "curves": 124,
-   "lines": 6,
-   "circles": 118,
-   "vars": 4836,
-   "clauses": 17197,
-   "encMs": 111,
-   "solveMs": 96,
-   "solver": "cdcl",
-   "conflicts": 205,
-   "steps": null,
-   "result": "SAT",
-   "stones": [
-    [
-     0,
-     0
-    ],
-    [
-     3,
-     0
-    ],
-    [
-     5,
-     0
-    ],
-    [
-     6,
-     0
-    ],
-    [
-     9,
-     0
-    ],
-    [
-     10,
-     0
-    ],
-    [
-     11,
-     0
-    ],
-    [
-     1,
-     1
-    ],
-    [
-     2,
-     1
-    ],
-    [
-     5,
-     1
-    ],
-    [
-     6,
-     1
-    ],
-    [
-     7,
-     1
-    ],
-    [
-     12,
-     1
-    ],
-    [
-     13,
-     1
-    ],
-    [
-     0,
-     2
-    ],
-    [
-     1,
-     2
-    ],
-    [
-     2,
-     2
-    ],
-    [
-     3,
-     2
-    ],
-    [
-     4,
-     2
-    ],
-    [
-     8,
-     2
-    ],
-    [
-     10,
-     2
-    ],
-    [
-     0,
-     3
-    ],
-    [
-     2,
-     3
-    ],
-    [
-     3,
-     3
-    ],
-    [
-     6,
-     3
-    ],
-    [
-     9,
-     3
-    ],
-    [
-     11,
-     3
-    ],
-    [
-     13,
-     3
-    ],
-    [
-     2,
-     4
-    ],
-    [
-     3,
-     4
-    ],
-    [
-     4,
-     4
-    ],
-    [
-     11,
-     4
-    ],
-    [
-     12,
-     4
-    ],
-    [
-     13,
-     4
-    ],
-    [
-     1,
-     5
-    ],
-    [
-     2,
-     5
-    ],
-    [
-     5,
-     5
-    ],
-    [
-     6,
-     5
-    ],
-    [
-     7,
-     5
-    ],
-    [
-     8,
-     5
-    ],
-    [
-     9,
-     5
-    ]
-   ],
-   "verify": {
-    "ok": true,
-    "size": 41,
-    "rows": [
-     7,
-     7,
-     7,
-     7,
-     6,
-     7
-    ],
-    "minRow": 6
-   },
-   "file": "r_6_14_8.json"
-  },
-  {
-   "w": 6,
-   "m": 15,
-   "q": 8,
-   "mode": "row-deficient",
-   "maxStones": null,
-   "curves": 140,
-   "lines": 6,
-   "circles": 134,
-   "vars": 5466,
-   "clauses": 19453,
-   "encMs": 143,
-   "solveMs": 272,
-   "solver": "cdcl",
-   "conflicts": 1087,
-   "steps": null,
-   "result": "SAT",
-   "stones": [
-    [
-     1,
-     0
-    ],
-    [
-     2,
-     0
-    ],
-    [
-     4,
-     0
-    ],
-    [
-     6,
-     0
-    ],
-    [
-     7,
-     0
-    ],
-    [
-     11,
-     0
-    ],
-    [
-     12,
-     0
-    ],
-    [
-     1,
-     1
-    ],
-    [
-     3,
-     1
-    ],
-    [
-     4,
-     1
-    ],
-    [
-     5,
-     1
-    ],
-    [
-     7,
-     1
-    ],
-    [
-     9,
-     1
-    ],
-    [
-     11,
-     1
-    ],
-    [
-     0,
-     2
-    ],
-    [
-     2,
-     2
-    ],
-    [
-     4,
-     2
-    ],
-    [
-     7,
-     2
-    ],
-    [
-     8,
-     2
-    ],
-    [
-     11,
-     2
-    ],
-    [
-     12,
-     2
-    ],
-    [
-     1,
-     3
-    ],
-    [
-     3,
-     3
-    ],
-    [
-     5,
-     3
-    ],
-    [
-     7,
-     3
-    ],
-    [
-     10,
-     3
-    ],
-    [
-     12,
-     3
-    ],
-    [
-     13,
-     3
-    ],
-    [
-     4,
-     4
-    ],
-    [
-     8,
-     4
-    ],
-    [
-     9,
-     4
-    ],
-    [
-     10,
-     4
-    ],
-    [
-     11,
-     4
-    ],
-    [
-     14,
-     4
-    ],
-    [
-     1,
-     5
-    ],
-    [
-     3,
-     5
-    ],
-    [
-     6,
-     5
-    ],
-    [
-     8,
-     5
-    ],
-    [
-     9,
-     5
-    ],
-    [
-     11,
-     5
-    ],
-    [
-     12,
-     5
-    ]
-   ],
-   "verify": {
-    "ok": true,
-    "size": 41,
-    "rows": [
-     7,
-     7,
-     7,
-     7,
-     6,
-     7
-    ],
-    "minRow": 6
-   },
-   "file": "r_6_15_8.json"
-  },
-  {
-   "w": 6,
-   "m": 16,
-   "q": 8,
-   "mode": "row-deficient",
-   "maxStones": null,
-   "curves": 158,
-   "lines": 6,
-   "circles": 152,
-   "vars": 6168,
-   "clauses": 21967,
-   "encMs": 175,
-   "solveMs": 938,
-   "solver": "cdcl",
-   "conflicts": 4331,
-   "steps": null,
-   "result": "SAT",
-   "stones": [
-    [
-     6,
-     0
-    ],
-    [
-     7,
-     0
-    ],
-    [
-     9,
-     0
-    ],
-    [
-     10,
-     0
-    ],
-    [
-     11,
-     0
-    ],
-    [
-     13,
-     0
-    ],
-    [
-     14,
-     0
-    ],
-    [
-     4,
-     1
-    ],
-    [
-     7,
-     1
-    ],
-    [
-     9,
-     1
-    ],
-    [
-     10,
-     1
-    ],
-    [
-     12,
-     1
-    ],
-    [
-     13,
-     1
-    ],
-    [
-     14,
-     1
-    ],
-    [
-     0,
-     2
-    ],
-    [
-     2,
-     2
-    ],
-    [
-     5,
-     2
-    ],
-    [
-     7,
-     2
-    ],
-    [
-     9,
-     2
-    ],
-    [
-     12,
-     2
-    ],
-    [
-     15,
-     2
-    ],
-    [
-     0,
-     3
-    ],
-    [
-     2,
-     3
-    ],
-    [
-     9,
-     3
-    ],
-    [
-     10,
-     3
-    ],
-    [
-     12,
-     3
-    ],
-    [
-     13,
-     3
-    ],
-    [
-     3,
-     4
-    ],
-    [
-     5,
-     4
-    ],
-    [
-     6,
-     4
-    ],
-    [
-     10,
-     4
-    ],
-    [
-     11,
-     4
-    ],
-    [
-     13,
-     4
-    ],
-    [
-     14,
-     4
-    ],
-    [
-     0,
-     5
-    ],
-    [
-     3,
-     5
-    ],
-    [
-     6,
-     5
-    ],
-    [
-     9,
-     5
-    ],
-    [
-     10,
-     5
-    ],
-    [
-     11,
-     5
-    ],
-    [
-     14,
-     5
-    ]
-   ],
-   "verify": {
-    "ok": true,
-    "size": 41,
-    "rows": [
-     7,
-     7,
-     7,
-     6,
-     7,
-     7
-    ],
-    "minRow": 6
-   },
-   "file": "r_6_16_8.json"
-  },
-  {
-   "w": 6,
-   "m": 17,
-   "q": 6,
-   "mode": "row-deficient",
-   "maxStones": null,
-   "curves": 926,
-   "lines": 65,
-   "circles": 861,
-   "vars": 22140,
-   "clauses": 77637,
-   "encMs": 207,
-   "solveMs": 752,
-   "solver": "cdcl",
-   "conflicts": 432,
-   "steps": null,
-   "result": "SAT",
-   "stones": [
-    [
-     4,
-     0
-    ],
-    [
-     5,
-     0
-    ],
-    [
-     6,
-     0
-    ],
-    [
-     8,
-     0
-    ],
-    [
-     9,
-     0
-    ],
-    [
-     3,
-     1
-    ],
-    [
-     4,
-     1
-    ],
-    [
-     5,
-     1
-    ],
-    [
-     7,
-     1
-    ],
-    [
-     10,
-     1
-    ],
-    [
-     1,
-     2
-    ],
-    [
-     2,
-     2
-    ],
-    [
-     7,
-     2
-    ],
-    [
-     8,
-     2
-    ],
-    [
-     9,
-     2
-    ],
-    [
-     2,
-     3
-    ],
-    [
-     11,
-     3
-    ],
-    [
-     12,
-     3
-    ],
-    [
-     13,
-     3
-    ],
-    [
-     15,
-     3
-    ],
-    [
-     0,
-     4
-    ],
-    [
-     2,
-     4
-    ],
-    [
-     3,
-     4
-    ],
-    [
-     10,
-     4
-    ],
-    [
-     13,
-     4
-    ],
-    [
-     0,
-     5
-    ],
-    [
-     1,
-     5
-    ],
-    [
-     10,
-     5
-    ],
-    [
-     12,
-     5
-    ]
-   ],
-   "verify": {
-    "ok": true,
-    "size": 29,
-    "rows": [
-     5,
-     5,
-     5,
-     5,
-     5,
-     4
-    ],
-    "minRow": 4
-   },
-   "file": "r_6_17_6.json"
-  },
-  {
-   "w": 6,
-   "m": 19,
-   "q": 6,
-   "mode": "row-deficient",
-   "maxStones": null,
-   "curves": 1208,
-   "lines": 79,
-   "circles": 1129,
-   "vars": 28650,
-   "clauses": 100443,
-   "encMs": 289,
-   "solveMs": 472,
-   "solver": "cdcl",
-   "conflicts": 212,
-   "steps": null,
-   "result": "SAT",
-   "stones": [
-    [
-     2,
-     0
-    ],
-    [
-     5,
-     0
-    ],
-    [
-     11,
-     0
-    ],
-    [
-     12,
-     0
-    ],
-    [
-     13,
-     0
-    ],
-    [
-     4,
-     1
-    ],
-    [
-     5,
-     1
-    ],
-    [
-     9,
-     1
-    ],
-    [
-     15,
-     1
-    ],
-    [
-     16,
-     1
-    ],
-    [
-     2,
-     2
-    ],
-    [
-     6,
-     2
-    ],
-    [
-     7,
-     2
-    ],
-    [
-     11,
-     2
-    ],
-    [
-     18,
-     2
-    ],
-    [
-     12,
-     3
-    ],
-    [
-     13,
-     3
-    ],
-    [
-     15,
-     3
-    ],
-    [
-     16,
-     3
-    ],
-    [
-     18,
-     3
-    ],
-    [
-     10,
-     4
-    ],
-    [
-     11,
-     4
-    ],
-    [
-     13,
-     4
-    ],
-    [
-     17,
-     4
-    ],
-    [
-     3,
-     5
-    ],
-    [
-     5,
-     5
-    ],
-    [
-     8,
-     5
-    ],
-    [
-     9,
-     5
-    ],
-    [
-     12,
-     5
-    ]
-   ],
-   "verify": {
-    "ok": true,
-    "size": 29,
-    "rows": [
-     5,
-     5,
-     5,
-     5,
-     4,
-     5
-    ],
-    "minRow": 4
-   },
-   "file": "r_6_19_6.json"
-  }
- ]
+  "runs": [
+    {
+      "w": 6,
+      "m": 17,
+      "q": 8,
+      "mode": "row-deficient",
+      "maxStones": null,
+      "curves": 176,
+      "lines": 6,
+      "circles": 170,
+      "vars": 6870,
+      "clauses": 24481,
+      "encMs": 211,
+      "solveMs": 37410,
+      "solver": "cdcl",
+      "conflicts": 242874,
+      "result": "SAT",
+      "stones": [
+        [
+          1,
+          0
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          10,
+          0
+        ],
+        [
+          11,
+          0
+        ],
+        [
+          16,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          9,
+          1
+        ],
+        [
+          11,
+          1
+        ],
+        [
+          12,
+          1
+        ],
+        [
+          13,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          11,
+          2
+        ],
+        [
+          12,
+          2
+        ],
+        [
+          16,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          10,
+          3
+        ],
+        [
+          11,
+          3
+        ],
+        [
+          14,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          9,
+          4
+        ],
+        [
+          12,
+          4
+        ],
+        [
+          13,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          9,
+          5
+        ],
+        [
+          10,
+          5
+        ],
+        [
+          11,
+          5
+        ]
+      ],
+      "verify": {
+        "ok": true,
+        "size": 41,
+        "rows": [
+          7,
+          7,
+          6,
+          7,
+          7,
+          7
+        ],
+        "minRow": 6
+      },
+      "file": "extra_6_17_8.json"
+    },
+    {
+      "w": 6,
+      "m": 22,
+      "q": 5,
+      "mode": "row-deficient",
+      "maxStones": null,
+      "curves": 2530,
+      "lines": 152,
+      "circles": 2378,
+      "vars": 50032,
+      "clauses": 174573,
+      "encMs": 444,
+      "solveMs": 158346,
+      "solver": "cdcl",
+      "conflicts": 80747,
+      "result": "SAT",
+      "stones": [
+        [
+          8,
+          0
+        ],
+        [
+          11,
+          0
+        ],
+        [
+          14,
+          0
+        ],
+        [
+          19,
+          0
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          9,
+          1
+        ],
+        [
+          14,
+          1
+        ],
+        [
+          17,
+          1
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          11,
+          2
+        ],
+        [
+          12,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          14,
+          3
+        ],
+        [
+          18,
+          3
+        ],
+        [
+          10,
+          4
+        ],
+        [
+          12,
+          4
+        ],
+        [
+          14,
+          4
+        ],
+        [
+          16,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          9,
+          5
+        ],
+        [
+          20,
+          5
+        ]
+      ],
+      "verify": {
+        "ok": true,
+        "size": 23,
+        "rows": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          3
+        ],
+        "minRow": 3
+      },
+      "file": "extra_6_22_5.json"
+    },
+    {
+      "w": 2,
+      "m": 8,
+      "q": 4,
+      "mode": "row-deficient",
+      "maxStones": null,
+      "curves": 74,
+      "lines": 2,
+      "circles": 72,
+      "vars": 788,
+      "clauses": 2579,
+      "encMs": 6,
+      "solveMs": 14,
+      "solver": "cdcl",
+      "conflicts": 51,
+      "steps": null,
+      "result": "SAT",
+      "stones": [
+        [
+          1,
+          0
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          6,
+          1
+        ]
+      ],
+      "verify": {
+        "ok": true,
+        "size": 5,
+        "rows": [
+          3,
+          2
+        ],
+        "minRow": 2
+      },
+      "file": "r_2_8_4.json"
+    },
+    {
+      "w": 2,
+      "m": 9,
+      "q": 4,
+      "mode": "row-deficient",
+      "maxStones": null,
+      "curves": 106,
+      "lines": 2,
+      "circles": 104,
+      "vars": 1118,
+      "clauses": 3667,
+      "encMs": 9,
+      "solveMs": 118,
+      "solver": "cdcl",
+      "conflicts": 1696,
+      "steps": null,
+      "result": "UNSAT",
+      "file": "r_2_9_4.json"
+    },
+    {
+      "w": 2,
+      "m": 9,
+      "q": 4,
+      "mode": "row-deficient",
+      "maxStones": null,
+      "curves": 106,
+      "lines": 2,
+      "circles": 104,
+      "vars": 1118,
+      "clauses": 3667,
+      "encMs": 8,
+      "solveMs": 161,
+      "solver": "dpll",
+      "conflicts": null,
+      "steps": 2405,
+      "result": "UNSAT",
+      "file": "r_2_9_4_dpll.json"
+    },
+    {
+      "w": 5,
+      "m": 16,
+      "q": 6,
+      "mode": "row-deficient",
+      "maxStones": null,
+      "curves": 426,
+      "lines": 5,
+      "circles": 421,
+      "vars": 10142,
+      "clauses": 35457,
+      "encMs": 101,
+      "solveMs": 1811,
+      "solver": "cdcl",
+      "conflicts": 4755,
+      "steps": null,
+      "result": "SAT",
+      "stones": [
+        [
+          5,
+          0
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          8,
+          0
+        ],
+        [
+          9,
+          0
+        ],
+        [
+          11,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          12,
+          1
+        ],
+        [
+          14,
+          1
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          9,
+          2
+        ],
+        [
+          11,
+          2
+        ],
+        [
+          12,
+          2
+        ],
+        [
+          15,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          9,
+          3
+        ],
+        [
+          12,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          11,
+          4
+        ],
+        [
+          12,
+          4
+        ],
+        [
+          13,
+          4
+        ]
+      ],
+      "verify": {
+        "ok": true,
+        "size": 24,
+        "rows": [
+          5,
+          5,
+          5,
+          5,
+          4
+        ],
+        "minRow": 4
+      },
+      "file": "r_5_16_6.json"
+    },
+    {
+      "w": 5,
+      "m": 17,
+      "q": 6,
+      "mode": "row-deficient",
+      "maxStones": null,
+      "curves": 494,
+      "lines": 5,
+      "circles": 489,
+      "vars": 11689,
+      "clauses": 40863,
+      "encMs": 132,
+      "solveMs": 290,
+      "solver": "cdcl",
+      "conflicts": 313,
+      "steps": null,
+      "result": "SAT",
+      "stones": [
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          13,
+          0
+        ],
+        [
+          15,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          13,
+          1
+        ],
+        [
+          16,
+          1
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          9,
+          2
+        ],
+        [
+          14,
+          2
+        ],
+        [
+          16,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          10,
+          3
+        ],
+        [
+          14,
+          3
+        ],
+        [
+          16,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          13,
+          4
+        ]
+      ],
+      "verify": {
+        "ok": true,
+        "size": 24,
+        "rows": [
+          5,
+          5,
+          5,
+          4,
+          5
+        ],
+        "minRow": 4
+      },
+      "file": "r_5_17_6.json"
+    },
+    {
+      "w": 6,
+      "m": 12,
+      "q": 8,
+      "mode": "row-deficient",
+      "maxStones": null,
+      "curves": 92,
+      "lines": 6,
+      "circles": 86,
+      "vars": 3576,
+      "clauses": 12685,
+      "encMs": 82,
+      "solveMs": 50,
+      "solver": "cdcl",
+      "conflicts": 48,
+      "steps": null,
+      "result": "SAT",
+      "stones": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          10,
+          0
+        ],
+        [
+          11,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          10,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          10,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          9,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          9,
+          4
+        ],
+        [
+          10,
+          4
+        ],
+        [
+          11,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          8,
+          5
+        ],
+        [
+          9,
+          5
+        ],
+        [
+          10,
+          5
+        ],
+        [
+          11,
+          5
+        ]
+      ],
+      "verify": {
+        "ok": true,
+        "size": 41,
+        "rows": [
+          7,
+          7,
+          7,
+          7,
+          6,
+          7
+        ],
+        "minRow": 6
+      },
+      "file": "r_6_12_8.json"
+    },
+    {
+      "w": 6,
+      "m": 12,
+      "q": 8,
+      "mode": "total",
+      "maxStones": 40,
+      "curves": 92,
+      "lines": 6,
+      "circles": 86,
+      "vars": 5708,
+      "clauses": 21100,
+      "encMs": 77,
+      "solveMs": 343,
+      "solver": "cdcl",
+      "conflicts": 2092,
+      "steps": null,
+      "result": "SAT",
+      "stones": [
+        [
+          2,
+          0
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          9,
+          0
+        ],
+        [
+          11,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          9,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          8,
+          2
+        ],
+        [
+          10,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          8,
+          3
+        ],
+        [
+          10,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          9,
+          5
+        ],
+        [
+          10,
+          5
+        ],
+        [
+          11,
+          5
+        ]
+      ],
+      "verify": {
+        "ok": true,
+        "size": 40,
+        "rows": [
+          7,
+          7,
+          7,
+          7,
+          5,
+          7
+        ],
+        "minRow": 5
+      },
+      "file": "r_6_12_8_cap40.json"
+    },
+    {
+      "w": 6,
+      "m": 13,
+      "q": 8,
+      "mode": "row-deficient",
+      "maxStones": null,
+      "curves": 108,
+      "lines": 6,
+      "circles": 102,
+      "vars": 4206,
+      "clauses": 14941,
+      "encMs": 101,
+      "solveMs": 116,
+      "solver": "cdcl",
+      "conflicts": 375,
+      "steps": null,
+      "result": "SAT",
+      "stones": [
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          9,
+          0
+        ],
+        [
+          11,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          12,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          8,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          10,
+          3
+        ],
+        [
+          12,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          9,
+          4
+        ],
+        [
+          10,
+          4
+        ],
+        [
+          11,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          8,
+          5
+        ],
+        [
+          10,
+          5
+        ],
+        [
+          12,
+          5
+        ]
+      ],
+      "verify": {
+        "ok": true,
+        "size": 41,
+        "rows": [
+          7,
+          7,
+          7,
+          6,
+          7,
+          7
+        ],
+        "minRow": 6
+      },
+      "file": "r_6_13_8.json"
+    },
+    {
+      "w": 6,
+      "m": 14,
+      "q": 8,
+      "mode": "row-deficient",
+      "maxStones": null,
+      "curves": 124,
+      "lines": 6,
+      "circles": 118,
+      "vars": 4836,
+      "clauses": 17197,
+      "encMs": 111,
+      "solveMs": 96,
+      "solver": "cdcl",
+      "conflicts": 205,
+      "steps": null,
+      "result": "SAT",
+      "stones": [
+        [
+          0,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          9,
+          0
+        ],
+        [
+          10,
+          0
+        ],
+        [
+          11,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          12,
+          1
+        ],
+        [
+          13,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          8,
+          2
+        ],
+        [
+          10,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          9,
+          3
+        ],
+        [
+          11,
+          3
+        ],
+        [
+          13,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          11,
+          4
+        ],
+        [
+          12,
+          4
+        ],
+        [
+          13,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          8,
+          5
+        ],
+        [
+          9,
+          5
+        ]
+      ],
+      "verify": {
+        "ok": true,
+        "size": 41,
+        "rows": [
+          7,
+          7,
+          7,
+          7,
+          6,
+          7
+        ],
+        "minRow": 6
+      },
+      "file": "r_6_14_8.json"
+    },
+    {
+      "w": 6,
+      "m": 15,
+      "q": 8,
+      "mode": "row-deficient",
+      "maxStones": null,
+      "curves": 140,
+      "lines": 6,
+      "circles": 134,
+      "vars": 5466,
+      "clauses": 19453,
+      "encMs": 143,
+      "solveMs": 272,
+      "solver": "cdcl",
+      "conflicts": 1087,
+      "steps": null,
+      "result": "SAT",
+      "stones": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          11,
+          0
+        ],
+        [
+          12,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          9,
+          1
+        ],
+        [
+          11,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          8,
+          2
+        ],
+        [
+          11,
+          2
+        ],
+        [
+          12,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          10,
+          3
+        ],
+        [
+          12,
+          3
+        ],
+        [
+          13,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          9,
+          4
+        ],
+        [
+          10,
+          4
+        ],
+        [
+          11,
+          4
+        ],
+        [
+          14,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          8,
+          5
+        ],
+        [
+          9,
+          5
+        ],
+        [
+          11,
+          5
+        ],
+        [
+          12,
+          5
+        ]
+      ],
+      "verify": {
+        "ok": true,
+        "size": 41,
+        "rows": [
+          7,
+          7,
+          7,
+          7,
+          6,
+          7
+        ],
+        "minRow": 6
+      },
+      "file": "r_6_15_8.json"
+    },
+    {
+      "w": 6,
+      "m": 16,
+      "q": 8,
+      "mode": "row-deficient",
+      "maxStones": null,
+      "curves": 158,
+      "lines": 6,
+      "circles": 152,
+      "vars": 6168,
+      "clauses": 21967,
+      "encMs": 175,
+      "solveMs": 938,
+      "solver": "cdcl",
+      "conflicts": 4331,
+      "steps": null,
+      "result": "SAT",
+      "stones": [
+        [
+          6,
+          0
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          9,
+          0
+        ],
+        [
+          10,
+          0
+        ],
+        [
+          11,
+          0
+        ],
+        [
+          13,
+          0
+        ],
+        [
+          14,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          9,
+          1
+        ],
+        [
+          10,
+          1
+        ],
+        [
+          12,
+          1
+        ],
+        [
+          13,
+          1
+        ],
+        [
+          14,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          9,
+          2
+        ],
+        [
+          12,
+          2
+        ],
+        [
+          15,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          9,
+          3
+        ],
+        [
+          10,
+          3
+        ],
+        [
+          12,
+          3
+        ],
+        [
+          13,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          10,
+          4
+        ],
+        [
+          11,
+          4
+        ],
+        [
+          13,
+          4
+        ],
+        [
+          14,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          9,
+          5
+        ],
+        [
+          10,
+          5
+        ],
+        [
+          11,
+          5
+        ],
+        [
+          14,
+          5
+        ]
+      ],
+      "verify": {
+        "ok": true,
+        "size": 41,
+        "rows": [
+          7,
+          7,
+          7,
+          6,
+          7,
+          7
+        ],
+        "minRow": 6
+      },
+      "file": "r_6_16_8.json"
+    },
+    {
+      "w": 6,
+      "m": 17,
+      "q": 6,
+      "mode": "row-deficient",
+      "maxStones": null,
+      "curves": 926,
+      "lines": 65,
+      "circles": 861,
+      "vars": 22140,
+      "clauses": 77637,
+      "encMs": 207,
+      "solveMs": 752,
+      "solver": "cdcl",
+      "conflicts": 432,
+      "steps": null,
+      "result": "SAT",
+      "stones": [
+        [
+          4,
+          0
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          8,
+          0
+        ],
+        [
+          9,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          10,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          8,
+          2
+        ],
+        [
+          9,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          11,
+          3
+        ],
+        [
+          12,
+          3
+        ],
+        [
+          13,
+          3
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          10,
+          4
+        ],
+        [
+          13,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          10,
+          5
+        ],
+        [
+          12,
+          5
+        ]
+      ],
+      "verify": {
+        "ok": true,
+        "size": 29,
+        "rows": [
+          5,
+          5,
+          5,
+          5,
+          5,
+          4
+        ],
+        "minRow": 4
+      },
+      "file": "r_6_17_6.json"
+    },
+    {
+      "w": 6,
+      "m": 19,
+      "q": 6,
+      "mode": "row-deficient",
+      "maxStones": null,
+      "curves": 1208,
+      "lines": 79,
+      "circles": 1129,
+      "vars": 28650,
+      "clauses": 100443,
+      "encMs": 289,
+      "solveMs": 472,
+      "solver": "cdcl",
+      "conflicts": 212,
+      "steps": null,
+      "result": "SAT",
+      "stones": [
+        [
+          2,
+          0
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          11,
+          0
+        ],
+        [
+          12,
+          0
+        ],
+        [
+          13,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          9,
+          1
+        ],
+        [
+          15,
+          1
+        ],
+        [
+          16,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          11,
+          2
+        ],
+        [
+          18,
+          2
+        ],
+        [
+          12,
+          3
+        ],
+        [
+          13,
+          3
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          16,
+          3
+        ],
+        [
+          18,
+          3
+        ],
+        [
+          10,
+          4
+        ],
+        [
+          11,
+          4
+        ],
+        [
+          13,
+          4
+        ],
+        [
+          17,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          8,
+          5
+        ],
+        [
+          9,
+          5
+        ],
+        [
+          12,
+          5
+        ]
+      ],
+      "verify": {
+        "ok": true,
+        "size": 29,
+        "rows": [
+          5,
+          5,
+          5,
+          5,
+          4,
+          5
+        ],
+        "minRow": 4
+      },
+      "file": "r_6_19_6.json"
+    },
+    {
+      "w": 6,
+      "m": 12,
+      "q": 8,
+      "mode": "total",
+      "maxStones": 39,
+      "curves": 92,
+      "lines": 6,
+      "circles": 86,
+      "vars": 5676,
+      "clauses": 20973,
+      "encMs": 96,
+      "solveMs": 326,
+      "solver": "cdcl",
+      "conflicts": 1059,
+      "result": "SAT",
+      "stones": [
+        [
+          2,
+          0
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          8,
+          0
+        ],
+        [
+          10,
+          0
+        ],
+        [
+          11,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          10,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          8,
+          2
+        ],
+        [
+          10,
+          2
+        ],
+        [
+          11,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          8,
+          3
+        ],
+        [
+          9,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          10,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          8,
+          5
+        ],
+        [
+          10,
+          5
+        ]
+      ],
+      "verify": {
+        "ok": true,
+        "size": 39,
+        "rows": [
+          5,
+          7,
+          7,
+          7,
+          6,
+          7
+        ],
+        "minRow": 5
+      },
+      "file": "cap39_6_12_8.json"
+    }
+  ]
 }
