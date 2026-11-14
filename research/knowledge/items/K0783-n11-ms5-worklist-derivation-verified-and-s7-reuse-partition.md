@@ -1086,3 +1086,16 @@ cost72bの正利得9件（bits 2, 30, 31, 36, 47, 95, 97, 100, 106）をBigInt�
 mainではcost74e child `00000000000000809142000000000000`（cost 74）がin-flight claim済み。二重起動しない。head 1188の最良class2 S5は4軌道・残り辺費用297。
 
 詳細: [監査ログ](../../log/2026-11-15-n11-class2-cost72b-marginal-certificate-replay.md)、[監査JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/cost72b-marginal-certificate-replay-20261115.json)、[再現スクリプト](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost72b_marginal_certificate_replay_20261115.py)。
+
+
+## 2026-11-15: cost-74d WIN7証明書出版完了 — 15/15 certified
+
+前回の実行環境障害（Koyeb 503/DNS、2026-11-14T22:54Z〜）で3/19で中断していた出版列を、環境復旧後に完遂した。pending 10 bits（69/80/92/100/2/28/102/109/112/116）をrepo-verbatim pipeline（scripts 7件すべてmainのgit blob shaと照合済み）で再抽出し、**全件が障害前のinterim目録のmd5/sha256/git blob shaにbyte-exact一致**。キャリブレーションとして既公開のbit12/66/68/118とD4重複bit91も再抽出し、全15 bitsでbyte-identicalを確認した（bit102は単一プロセスで同一74,238行・29,752,097節点。bit80の正確なextraction_nodesは**13,115,852**と確定 — interim目録の「〜9.417M」は部分ログ由来の誤り）。
+
+二重独立検証を全15証明書に再実行: BigInt検査器（`verify_win7_certificate_bigint_independent.mjs`）**15/15 PASS**、Number Bareiss検査器（`verify_bit7_win7_cert.ts --consumed-out`）**15/15 PASS**（sub-roots計883が敵合法初手数と全件一致、consumed union missing/extra 0/0、終局石数 [13,17]、行sorted-unique）。16ファイルを(4/19)..(19/19)の1コミット1ファイルでpushし、**remote 20ファイルのgit blob shaを全件照合（20/20 byte-exact）**。bit91は本文をpushせず、D4同一軌道のcost72b bit85証明書（blob `c99ef87964f4770e7dab365ea42ad070b8c6495d`）で裏付けた（repo precedent: cost61d bit22 = cost71b bit1）。
+
+**最終マニフェスト** `class2-lane-cost74d-win7-certificates-20261115.json`（32,772 bytes、blob `0f6e7860796b999c6ab3b41d43931881085ad09f`、commit `5d37fab7`）: 15/15 WIN7 bits certified（14 published + bit91 D4-backed）、計723,630行・extraction nodes 186,044,401・visited 1,541,140・terminal 250,132・edges 1,380,013。claim `class2-lane-cost74d-inflight-20261115.json` をcompletedに更新（commit `7cae50e3`）。出版は15 WIN7 rootのreceipt被覆の裏付け強化であり、frontier計数は不変（74d fold 1,163→1,179、cost-72b fold→1,188はraw sweep receiptとして既に織り込み済み）。
+
+運用記録: push_files実行**後**に16 MiB sandbox memory limitでプログラム中断が6回（bit69/80/92/100/102 part1/part2）あったが、いずれもremote blob sha照合で着地を確認してから継続し、欠損・truncationはなし。four-six-row lane（並走）とのfast-forward競合2回は同一内容retryで解決、read_file pagingとpushを同一ブロックにしない運用を確立した。
+
+詳細: [出版完了log](../../log/2026-11-15-n11-class2-lane-cost74d-certificate-publication-completion.md)、[最終マニフェスト](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74d-win7-certificates-20261115.json)、[interim目録](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74d-certificate-hash-inventory-20261115.json)、[claim](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74d-inflight-20261115.json)。証明書14本体は同output/`class2-lane-cost74d-certificates/`（bit91は`class2-lane-cost72b-certificates/bit85-root-00000000002000809102000002000000.cert`）。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class2・class4は引き続き **UNKNOWN**。
