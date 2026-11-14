@@ -537,7 +537,8 @@ artifacts:
   note: 両側とも誤りなし。distinct open parents=3 と per-class demand c1=0,c2=2,c4=2 の意味論的和解とコントロール照合
 - path: research/log/2026-11-15-n11-class2-lane-cost69f-python-independent-audit-and-69g-demand-reconciliation.md
   role: log
-  note: Python第三監査と69g需要和解の実行記録- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72b-sweep-20261115.json
+  note: Python第三監査と69g需要和解の実行記録
+- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72b-sweep-20261115.json
   role: data
   note: cost72b子の72候補sweep記録。WIN7-D10 13・REFUTED-D10 59・打切り0・117,444,772 v16節点。証明書未抽出のためfrontier寄与0
 - path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72b-inflight-20261115.json

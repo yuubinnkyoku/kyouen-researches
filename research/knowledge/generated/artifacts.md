@@ -8953,6 +8953,15 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72-win7-certificates-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72-win7-certificates-20261115.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (manifest): cost72 bit111のpartial WIN7 receipt。bit52は未証明として明示
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72b-inflight-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72b-inflight-20261115.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (manifest): cost72b子sweepのclaim。歴史的なin-flight記録、statusは完了に更新済み
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72b-raw-batch1-20261115.jsonl](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72b-raw-batch1-20261115.jsonl)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): cost72b raw batch 1。batch2..10・v15 crosscheck 4件・determinism rerunも同型の探索記録であり証明書ではない
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72b-sweep-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72b-sweep-20261115.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): cost72b子の72候補sweep記録。WIN7-D10 13・REFUTED-D10 59・打切り0・117,444,772 v16節点。証明書未抽出のためfrontier寄与0
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73d-certificates/README.md](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73d-certificates/README.md)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (certificate): cost-73dのbit48 WIN7 root。2分割66,680行の戦略証明書と検査範囲
@@ -14655,6 +14664,9 @@
 ## [research/log/2026-11-15-n11-class2-lane-cost69f-remaining-certificates.md](../../../research/log/2026-11-15-n11-class2-lane-cost69f-remaining-certificates.md)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): cost69f残り4証明書の抽出・独立検証と9/9完了の記録
+## [research/log/2026-11-15-n11-class2-lane-cost72b-sweep.md](../../../research/log/2026-11-15-n11-class2-lane-cost72b-sweep.md)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): cost72b子sweep完了の実行記録と交叉検査の詳細
 ## [research/log/2026-11-15-n11-class2-warm-multiband-loss-conflict-audit.md](../../../research/log/2026-11-15-n11-class2-warm-multiband-loss-conflict-audit.md)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): 2026-11-15 warm multiband証明書の範囲限定WIN/LOSS衝突監査
