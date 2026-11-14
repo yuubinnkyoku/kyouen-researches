@@ -105,21 +105,22 @@
   "certificates": [
    21,
    99,
-   87
+   87,
+   84,
+   76,
+   90
   ],
   "unverified_win7_bits": [
    2,
-   76,
-   84,
    89,
-   90,
    94,
    108,
    116
   ],
   "records": "class2-lane-cost69e-sweep-20261114.json + class2-lane-cost69e-win7-certificates-20261114.json",
   "log": "research/log/2026-11-15-class2-lane-cost69e-win7.md",
-  "midflight_manifest_closure": "while the sweep was in flight the parallel warm-merged recompute (commit a7f3fc97) closed this child in the manifest via the cost-65g-warm bit-15 receipt; the sweep's certificates are pure new-coverage additions"
+  "midflight_manifest_closure": "while the sweep was in flight the parallel warm-merged recompute (commit a7f3fc97) closed this child in the manifest via the cost-65g-warm bit-15 receipt; the sweep's certificates are pure new-coverage additions",
+  "warm_rebuild": "bits 84/76/90 rebuilt as warm certificates on 2026-11-15 (verified, pushed, remote md5 checked)"
  },
  "sweep": "completed in 9 batches (8x8 + 5); all raw batches + v16 determinism rerun (node-exact bits 116/44) + v15 crosscheck (all 11 WIN7 bits loss=true) published; all 11 WIN7 roots code-searched (bit-2 root duplicates the parallel cost-65g-warm bit-15 certificate - cross-lane reproduction; bit-21 root is a cross-child duplicate of the cost-60b bit-15 listing, no prior certificate, its certificate also closes the cost-60b bit-15 warm entry); 3 certificates extracted blind (fbt_drops=0), fully verified (root-check mobility match, all sub-roots PASS, union 0/0) and pushed with remote md5 verification"
 }
