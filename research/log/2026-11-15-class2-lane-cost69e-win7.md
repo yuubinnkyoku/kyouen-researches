@@ -242,6 +242,81 @@ certificate (rows / mobility = sub-roots / visited / loser edges): 21
 47,035/54/106,325/101,069 · 94 42,538/52/99,751/94,297 · 108
 33,942/51/75,305/69,644 · 116 74,113/59/146,435/134,709.
 
+## Chain break repair: cost-70c/71b/60b-warm runpy chain restored (2026-11-15)
+
+**Defect (third instance of the missing-input class repaired at ac615076 /
+86bbe2ef, discovered independently by the parallel lane in commit b80c2bbc)**:
+extending `recompute_frontier_cost69e_20261115.py` in place to the ten-receipt
+v2 (e228c178, endpoint 1023) silently broke the published downstream chain —
+`recompute_frontier_cost70c_20261115.py` runpy-extends the cost-69e script and
+asserts the historical 1019 intermediate, so the 70c -> 71b -> 60b-warm chain
+(1022 / 1026 / 1040 endpoints) stopped reproducing from main (verified
+locally: AssertionError at the 70c script's line-47 baseline assert; the
+parallel lane verified the same failure).
+
+**Repair pushed here (chain-restoring variant, complementary to the parallel
+lane's approach — their merged recompute inlines the superseded stages and
+chains from the v2 1023 baseline, leaving the historical scripts superseded;
+this repair instead restores the historical chain to runnable state)**:
+
+- `scripts/recompute_frontier_cost69e_6receipts_20261115.py` — the historical
+  six-receipt version (git 3a5d51f1 byte-identical body) republished under a
+  new name with three adjustments, each documented in its header: (1) the
+  records-file assertion is relaxed to the current ten-certificate record
+  (commit 8c5561ee) with the six-receipt chain consuming the first six
+  entries; (2) the three output paths are renamed with a `-6receipts` suffix
+  so a rerun cannot clobber the published v2 record; (3) a repair note.
+- `scripts/recompute_frontier_cost70c_20261115.py` — single-line repair: the
+  runpy target now points at the six-receipt script (plus a header note);
+  everything else unchanged.
+- The restored intermediate outputs (1019 / 6,828 / 538,143 / 5,098/401,866)
+  are published: `class-frontier-cost69e-recompute-6receipts-20261115.json`
+  and its two CSVs. Notably the top-candidates CSV is byte-identical to the
+  v2 one (2342710166b3ad025ac7379eaea1f3bb): the four warm receipts close
+  orbits outside every S5 listed there.
+
+**Verification: the repaired chain reproduces every published endpoint
+byte-identical** — 6receipts 1019 (values match the published 6-receipt
+claims exactly), 70c 1022 (JSON f8969c11..., both CSVs identical), 71b 1026
+(JSON e053bf87..., both CSVs identical), 60b-warm 1040 (JSON 05e524b3...,
+both CSVs identical), all compared against main by md5; every script
+re-run byte-identical.
+
+## Three-branch merge computed locally: 1045 (cross-check pending the parallel merge)
+
+The unified frontier over ALL published receipts (union of the three forked
+branches: 60b-warm 1040 chain + 71b receipts 109/21/105 + the four 69e warm
+receipts 89/94/108/116) was computed with
+`scripts/recompute_frontier_merged_after70c_71b_60bwarm_69e_20261115.py`
+(published as the union-control cross-check instrument; it reproduces all
+three branch states by runpy, applies the seven outstanding receipts on the
+growing union, and asserts the merged solved set equals the EXACT union of
+the three branch solved sets):
+
+- **merged frontier: solved 1045 / unique remaining 6,802 / sum 536,131 /
+  open 5,072/399,854** (merge-consistency control PASS: union missing 0 /
+  extra 0, extends all branches; two runs byte-identical).
+- Per-receipt marginals in the 1040-based order: 71b bit-109: 0 (its covers
+  are already inside the 60b-warm branch), 71b bit-21: 0 (byte-identical
+  certificate as 60b-warm bit-22), 71b bit-105: 5/1 closing
+  `00000000000000083800000008000100`, then the four 69e warm receipts each
+  5/1 closing the same four orbits as on the 1012 fork
+  (`00000000000000003800200008080000` / `00000000000000103820000008000000` /
+  `00000000200000083800000000100000` / `00000000000000043820000008000000`)
+  — intermediate after the 71b receipts: 1041 / 6,806 / 536,441.
+- Second class-2 target S5 `00000000000000803202000000000000` unchanged at
+  3 orbits / 222 (all seven new marginals fall outside its children).
+
+**Coordination**: the parallel lane holds the in-flight claim for the
+canonical merged recompute (updated b80c2bbc: chains from the v2 1023
+baseline, folds 70c(3) + 60b-warm(17) + 71b(3) in chronological order, 23
+receipts). This lane deliberately does NOT publish a competing merged
+frontier record; the numbers above are the exact prediction their merge must
+reproduce (same union solved set => same 1045/6,802/536,131/5,072/399,854
+and the same remaining/ranking content). The next session verifies their
+landed recompute against this prediction and folds the cost-72 receipts
+(bits 52/111, pending their sweep record / recompute) into the next merge.
+
 ## Status
 
 11x11 empty board: UNKNOWN. Two-stone root {49,60}: UNKNOWN. S2 {59,60}:

@@ -8,6 +8,14 @@ itself the runpy extension of recompute_frontier_merged_after65h65i_
 warm_67b68c_20261115.py (merged 1012 state) with the six verified cost-69e
 receipts (bits 21/99/87/84/76/90).
 
+REPAIR NOTE (2026-11-15): the runpy target below is the republished
+six-receipt version recompute_frontier_cost69e_6receipts_20261115.py
+(the historical recompute_frontier_cost69e_20261115.py at git 3a5d51f1,
+renamed after that file was extended in place to the ten-receipt v2 at
+e228c178 producing 1023, which silently broke this chain's 1019 assert;
+third instance of the missing-input defect class repaired at ac615076 /
+86bbe2ef). Everything else is unchanged.
+
 This script:
 1. reproduces the after-cost-69e baseline by runpy (asserting
    1019/6828/538143/5098/401866);
@@ -35,7 +43,7 @@ HERE = Path(__file__).resolve().parents[1]
 OUT = HERE / 'output'
 
 # ---------- 1. reproduce the after-cost-69e baseline (1019) ----------
-ns69 = runpy.run_path(str(HERE / 'scripts' / 'recompute_frontier_cost69e_20261115.py'))
+ns69 = runpy.run_path(str(HERE / 'scripts' / 'recompute_frontier_cost69e_6receipts_20261115.py'))
 s69 = ns69['s_cur']
 st69 = ns69['st69']
 rem69 = ns69['rem69']
