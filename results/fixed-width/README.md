@@ -9,8 +9,8 @@
   16プラトー w=12..21・跳躍帯 w=22..25・24プラトー w=26..42・漸増帯 w=43..48・32プラトー w=49..82・P(83)=34。
   出典: K0813, K0763..K0767, K0778, K0784, K0788, K0789, K0790, K0792, K0793, K0794, K0798, K0799, K0801, K0802, K0804, K0791, K0817。
 - [mwq_stabilization.csv](mwq_stabilization.csv): 真の満容量安定化長 M_{w,q}。
-  - `exact-threshold`: 確定値 9 件（(2,4)=9・(3,4)=24・(3,5)=12・(3,6)=9・(4,6)=16・(4,7)=13・(4,8)=11・(5,8)=16・(7,10)=19）。
-  - `bounds`: open な境界 12 件・いずれも両側（(5,6)=22..249・(5,7)={19,20,21},23..158・
+  - `exact-threshold`: 確定値 10 件（(2,4)=9・(3,4)=24・(3,5)=12・(3,6)=9・(4,6)=16・(4,7)=13・(4,8)=11・(5,8)=16・(7,9)=24・(7,10)=19）。
+  - `bounds`: open な境界 11 件・いずれも両側（(5,6)=22..249・(5,7)={19,20,21},23..158・
     (6,5)=31..658・(6,6)=24..495・(6,7)=22..402・(6,8)={19,20},22..371）。
     (6,5) 6×29/6×30 と (6,6) 6×22/6×23 の欠損極大witnessは K0815 の列追加・深除去拡張、
     6×12 q=8 の最小極大 ≤37（37石witness）・5×20/5×21 (q=6)・6×18 (q=8)・6×20/6×21 (q=7) のwitnessも K0815。
@@ -28,11 +28,13 @@
     {0},{1} は k×minpos 完全分解32点・合計 28,617,104 conflicts・lex=H 交差確認・陽性対照 5×18 SAT）。
     最小witness幅は 18（K0332・29石）。よって M∈{19,20,21} または ≥23。
     残るは 22..157 の持続性で、witness 探索の前線は 5×22。
-    (7,9)={24},201..613 は K0820（witness 7×9..7×23、witness-free 帯 24..200（kissat・
-    m=24/33/52/60/100 は lex 別符号化でも UNSAT・fastsat は 60s TIMEOUT の負記録あり・
-    m=101..200 は seven-row-q9-q10-band-extension-101-200-20261114（genfast/genfast2・全幅 UNSAT・
-    conflicts 6.9k..29.8k）で延長・上界は K0318 代入 613）。
-    q9 閉包レーンが m=201..612 を掃引中（IN FLIGHT・52fd92c1）。witness 探索の前線は 7×201 (q=9)。
+    (7,9)=24 exact は K0820 + seven-row-q9-band-extension-201-612-20261114（witness 7×9..7×23・
+    witness-free 帯 24..200（K0820 + band-extension レーン）に続き 201..612 を
+    genfast3 弦対抽象円census（q9閉包レーン開発・genfast/genfast2 と13対照サンプルで CNF byte-identity・
+    md5 12c2bd9c）+ kissat 4.0.4 def-mode 全412幅 UNSAT（conflicts 14,082..36,876・process-time ≤5.49s・
+    INDET 0・per-width kissat_summaries.jsonl で md5 結合・lex=H,V,HV 交差確認 300/400/500/612 とも UNSAT）
+    で完走、m>=613 は K0318 substitution U=613（proved）で排除 — M_{7,10}=19 に次ぐ w=7 で2例目・
+    w>=6 でも2例目の完全決着）。
     (7,10)=19 exact は K0820 + seven-row-q10-band-closure-201-586-20261115（witness 7×10..7×18・
     witness-free 帯 19..586 全幅完走: 19..200 は K0820（fastsat較正 bit-exact + kissat で交叉確認・
     41..51 両ソルバ・52..100 kissat単独 genfast.js・CNFはsat2.jsと12サンプルでバイト一致・
