@@ -1,11 +1,11 @@
 {
-  "schema": 1,
-  "note": "(7,10) witness-free band confirmation+extension. m=19..51: def+lex=H,V,HV, fastsat (calibration vs seven-row-inband-families results.jsonl, conflicts bit-exact for m=19..40) + kissat 4.0.4 independent verdicts (band1.sh). m=52..60: kissat 4.0.4 only, lean2.sh (genfast.js CNF byte-identical to sat2.js; sat2.js census OOMs at m=52 in this container); m=52/60 def-only main runs + def+lex=H,V,HV cross-checks all UNSAT",
-  "total": 44,
+  "schema": 2,
+  "note": "(7,10) witness-free band confirmation+extension, all widths UNSAT. m=19..51: def+lex=H,V,HV, fastsat calibration (bit-exact vs seven-row-inband-families results.jsonl for m=19..40) + kissat 4.0.4 (band1.sh). m=52..90: kissat-only (lean2.sh/genfast.js; CNF byte-identical to sat2.js; sat2.js census OOMs at m>=52); lex cross-checks at m=52/60 UNSAT. m=61..90 regenerated bit-exact after an execution-environment reset",
+  "total": 74,
   "allUnsat": true,
-  "widths": {
+  "band": {
     "min": 19,
-    "max": 60
+    "max": 90
   },
   "fastsatConflicts": {
     "19": 3215,
@@ -81,68 +81,207 @@
     {
       "m": 52,
       "lex": "none",
-      "kissatConflicts": 1370,
-      "sec": 0.1
+      "kissatConflicts": 1370
     },
     {
       "m": 53,
       "lex": "none",
-      "kissatConflicts": 987,
-      "sec": 0.1
+      "kissatConflicts": 987
     },
     {
       "m": 54,
       "lex": "none",
-      "kissatConflicts": 1057,
-      "sec": 0.1
+      "kissatConflicts": 1057
     },
     {
       "m": 55,
       "lex": "none",
-      "kissatConflicts": 941,
-      "sec": 0.1
+      "kissatConflicts": 941
     },
     {
       "m": 56,
       "lex": "none",
-      "kissatConflicts": 888,
-      "sec": 0.1
+      "kissatConflicts": 888
     },
     {
       "m": 57,
       "lex": "none",
-      "kissatConflicts": 1203,
-      "sec": 0.1
+      "kissatConflicts": 1203
     },
     {
       "m": 58,
       "lex": "none",
-      "kissatConflicts": 953,
-      "sec": 0.1
+      "kissatConflicts": 953
     },
     {
       "m": 59,
       "lex": "none",
-      "kissatConflicts": 1634,
-      "sec": 0.1
+      "kissatConflicts": 1634
     },
     {
       "m": 60,
       "lex": "none",
-      "kissatConflicts": 1184,
-      "sec": 0.1
+      "kissatConflicts": 1184
     },
     {
       "m": 52,
       "lex": "H,V,HV",
-      "kissatConflicts": 1033,
-      "sec": 0.1
+      "kissatConflicts": 1033
     },
     {
       "m": 60,
       "lex": "H,V,HV",
-      "kissatConflicts": 1020,
-      "sec": 0.1
+      "kissatConflicts": 1020
+    },
+    {
+      "m": 61,
+      "lex": "none",
+      "kissatConflicts": 1157
+    },
+    {
+      "m": 62,
+      "lex": "none",
+      "kissatConflicts": 1080
+    },
+    {
+      "m": 63,
+      "lex": "none",
+      "kissatConflicts": 1316
+    },
+    {
+      "m": 64,
+      "lex": "none",
+      "kissatConflicts": 1048
+    },
+    {
+      "m": 65,
+      "lex": "none",
+      "kissatConflicts": 1172
+    },
+    {
+      "m": 66,
+      "lex": "none",
+      "kissatConflicts": 1692
+    },
+    {
+      "m": 67,
+      "lex": "none",
+      "kissatConflicts": 1105
+    },
+    {
+      "m": 68,
+      "lex": "none",
+      "kissatConflicts": 2794
+    },
+    {
+      "m": 69,
+      "lex": "none",
+      "kissatConflicts": 2288
+    },
+    {
+      "m": 70,
+      "lex": "none",
+      "kissatConflicts": 2455
+    },
+    {
+      "m": 71,
+      "lex": "none",
+      "kissatConflicts": 1236
+    },
+    {
+      "m": 72,
+      "lex": "none",
+      "kissatConflicts": 1689
+    },
+    {
+      "m": 73,
+      "lex": "none",
+      "kissatConflicts": 1357
+    },
+    {
+      "m": 74,
+      "lex": "none",
+      "kissatConflicts": 1048
+    },
+    {
+      "m": 75,
+      "lex": "none",
+      "kissatConflicts": 1882
+    },
+    {
+      "m": 76,
+      "lex": "none",
+      "kissatConflicts": 1201
+    },
+    {
+      "m": 77,
+      "lex": "none",
+      "kissatConflicts": 1724
+    },
+    {
+      "m": 78,
+      "lex": "none",
+      "kissatConflicts": 1989
+    },
+    {
+      "m": 79,
+      "lex": "none",
+      "kissatConflicts": 2189
+    },
+    {
+      "m": 80,
+      "lex": "none",
+      "kissatConflicts": 2583
+    },
+    {
+      "m": 81,
+      "lex": "none",
+      "kissatConflicts": 2234
+    },
+    {
+      "m": 82,
+      "lex": "none",
+      "kissatConflicts": 2205
+    },
+    {
+      "m": 83,
+      "lex": "none",
+      "kissatConflicts": 2195
+    },
+    {
+      "m": 84,
+      "lex": "none",
+      "kissatConflicts": 2214
+    },
+    {
+      "m": 85,
+      "lex": "none",
+      "kissatConflicts": 2217
+    },
+    {
+      "m": 86,
+      "lex": "none",
+      "kissatConflicts": 2422
+    },
+    {
+      "m": 87,
+      "lex": "none",
+      "kissatConflicts": 2351
+    },
+    {
+      "m": 88,
+      "lex": "none",
+      "kissatConflicts": 2415
+    },
+    {
+      "m": 89,
+      "lex": "none",
+      "kissatConflicts": 2404
+    },
+    {
+      "m": 90,
+      "lex": "none",
+      "kissatConflicts": 2326
     }
   ]
 }
