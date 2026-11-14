@@ -33,7 +33,7 @@ const VERIFIED = [
 const FIXED = {
   cost72b: ['class2-lane-cost72b-win7-certificates-20261115.json', '27ca07f9bb49e3638c901f62cab7f961844c5106'],
   cost74d: ['class2-lane-cost74d-win7-certificates-20261115.json', '0f6e7860796b999c6ab3b41d43931881085ad09f'],
-  central: ['../n11-central-19-cover-20261031/terminal_loss7_parent_lift_274_manifest.json', '0eb1a47559626a08364c7d23787480f4086c63a4'],
+  central: ['n11-central-19-cover-20261031/terminal_loss7_parent_lift_274_manifest.json', '0eb1a47559626a08364c7d23787480f4086c63a4'],
   knownloss: ['ms5_s7_knownloss_candidates.csv', '678ab8c7ce67e81c0b6fe29abd306118fa754cb0'],
 };
 
@@ -157,6 +157,9 @@ for (const key of Object.keys(overlaps).filter(key => key !== 'cost74d_vs_cost72
 }
 assert.equal(overlaps.cost74d_vs_cost72b_win7.length, 1);
 
+const conflictCount = Object.entries(overlaps)
+  .filter(([key]) => key !== 'cost74d_vs_cost72b_win7')
+  .reduce((sum, [, rows]) => sum + rows.length, 0);
 const bit91 = targetRecords.find(row => row.bit === 91);
 const bit85 = cost72b.certificates.find(row => row.bit === 85);
 assert(bit91 && bit85);
@@ -209,6 +212,7 @@ const result = {
     bits: targetRecords.map(row => row.bit),
     new_d4_orbits_after_cost72b_union: targetD4.size - overlaps.cost74d_vs_cost72b_win7.length,
   },
+  conflict_count: conflictCount,
   overlaps: Object.fromEntries(Object.entries(overlaps).map(([key, rows]) => [key, rows.length])),
   d4_reuse: {
     cost74d_bit: 91,
@@ -236,6 +240,6 @@ console.log(JSON.stringify({
   prior_loss7: priorLosses.length,
   central_parent_lift: centralRoots.length,
   category1_candidates: knownRoots.length,
-  conflicts: Object.values(overlaps).filter(rows => rows.length > 0).length - 1,
+  conflicts: conflictCount,
   intended_cost72b_reuse: overlaps.cost74d_vs_cost72b_win7.length,
 }, null, 2));
