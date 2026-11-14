@@ -31,3 +31,15 @@ q=10 の ≥10点円は 7×m でちょうど 2m−14 本・すべて行 {0,3,6} 
 
 - batchband.sh の wall guard（~235s）でコンテナ hard stop 回避・GUARD_STOP/PROJ_STOP 後も records は幅単位で永続。
 - push_files 前に最新 main を再取得して CSV/K項目の並走更新を確認する。
+
+## 成果2 続き（第2バッチ・genfast2 切替）: (7,9) m=119..184 全 UNSAT
+
+- **genfast2.js**: genfast.js の (v,ρ) 正規化（文字列Map + 二重gcd）をgcdなし正準整数キー
+  (N480,RHO)=(480v, 921600ρ²)・typed-array open addressing に置換した高速版。
+  4サンプル（7×25 q8 --rowY=2 / 7×101 q9 / 7×110 q10 --lex / 8×26 q9）で **CNF バイト一致検証**
+  （`scripts/controls_byteid.json`）。~10.7x 高速（m=101: 21.4s → 2.0s）。
+  初回実装は D=8(ya−yb)<0 の負号を抜いていたが 7×25 q8 サンプルの曲線数 121 vs 656 で捕捉・修正。
+- (7,9): m=119..184 **全幅 UNSAT**（6.9k..26.8k conflicts・全幅 200s cap 内完走・INDET なし）。
+  m=159/160 は 7.1k/6.9k と極端に軽い幅もあるが、m の非単調性は通常観察。
+- (7,10) m=101..108 は並走コミット 699a0110 と重複（双方 UNSAT・無害）。q10 は並走に譲り本レーンは q9 に集中。
+- 帰結: **M_{7,9} ∈ {24} ∪ [185,613]**（q9-band records 101..184）。目標 m=200 まで継続。

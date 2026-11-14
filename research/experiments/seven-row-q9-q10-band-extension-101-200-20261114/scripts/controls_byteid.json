@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "date": "2026-11-14",
+  "tool": "genfast2.js vs genfast.js (K0820 scripts/ verbatim baseline)",
+  "claim": "byte-identical CNF for identical (w,m,q,options); genfast2.js replaces genfast.js's string-Map + double-gcd (v,rho) canonicalization by an exact integer key: (N480, RHO) = (480*v, 921600*rho^2) with N480 = -N*sc, sc = 480/(8*dy) in {60,30,20,15,12,10} for dy=1..6 (D = 8*(ya-yb) < 0), RHO = 230400*Ai + 4*(480*ya - N480)^2; the circle membership test becomes 230400*(2x-U)^2 + 4*(480y-N480)^2 === RHO (all exact integers). Same circle => same key without gcd, so the PAIRTHRESH=12 pair-witness census, exact scan, curve order/dedup and CNF encoding (reused verbatim from sat2.js via the S.buildCensus patch) are unchanged. Inner state: Int32Array/Float64Array open addressing (2^21 slots), per-U touched-slot list.",
+  "verification": {
+    "method": "generate CNF with both generators on 4 representative samples, byte-compare (cmp), record md5+size",
+    "samples": [
+      {"args": "7 25 8 --deficient --rowY=2", "curves": 656, "cnf_bytes": 1533086, "md5": "c725add5e38e49f9ad1b405a463246be", "identical": true},
+      {"args": "7 101 9 --deficient", "curves": 195, "cnf_bytes": 1039566, "md5": "080f91c9cb442ef1e5b322f604988985", "identical": true},
+      {"args": "7 110 10 --deficient --lex=H,V,HV", "cnf_bytes": 1462450, "md5": "875912c54206917bb6ecec1b79470f97", "identical": true},
+      {"args": "8 26 9 --deficient", "cnf_bytes": 515423, "md5": "774e3fa7fa555397b3fae250fed38386", "identical": true}
+    ],
+    "all_identical": true
+  },
+  "speed": {
+    "sample": "7 101 9 --deficient",
+    "genfast_js_sec": 21.4,
+    "genfast2_js_sec": 2.0,
+    "speedup": "10.7x"
+  },
+  "notes": [
+    "Coverage: q=8 with --rowY (rowsplit encoding), q=9, q=10 with --lex (H,V,HV), w=8 (q>=w+1 requirement exercised at w=8).",
+    "A first implementation dropped the negative sign of D = 8*(ya-yb) (N480 = N*sc instead of -N*sc); caught by curve-count mismatch (121 vs 656 curves) on the 7x25 q8 --rowY=2 sample before any solver run; fixed by deriving the sign from D<0 explicitly.",
+    "genfast2.js remains restricted to q >= w+1 like genfast.js (half-integer center census); for q <= w use sat2.js directly."
+  ]
+}

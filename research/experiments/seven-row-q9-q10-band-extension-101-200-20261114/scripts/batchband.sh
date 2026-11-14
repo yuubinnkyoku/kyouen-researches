@@ -10,8 +10,8 @@ for M in $(seq "$S" "$E"); do
   NOW=$(date +%s)
   ELAPSED=$((NOW-T0))
   if [ "$ELAPSED" -gt "$GUARD" ]; then echo "GUARD_STOP after m=$((M-1)) (elapsed ${ELAPSED}s)"; break; fi
-  # estimate next gen cost as (M/101)^3 * 22s; skip if projected to burst the guard
-  PROJ=$(python3 -c "print(int(22*(($M/101.0)**3)+10))")
+  # estimate next gen cost as 2*(M/101)^3 s (genfast2, calibrated at m=101); skip if projected to burst the guard
+  PROJ=$(python3 -c "print(int(2*(($M/101.0)**3)+10))")
   if [ $((ELAPSED+PROJ)) -gt $((GUARD+35)) ]; then echo "PROJ_STOP before m=$M (elapsed ${ELAPSED}s, projected +${PROJ}s)"; break; fi
   ./scripts/leanband.sh "$W" "$M" "$Q" "$OUT" | tail -1
 done

@@ -1,6 +1,6 @@
 #!/bin/bash
 # leanband.sh — one (w,m,q) def-mode band instance for the m>=101 extension round:
-# genfast.js CNF (byte-identical to sat2.js per K0820 validation) + kissat 4.0.4
+# genfast2.js CNF (integer-keyed census, byte-identical to genfast.js per controls_byteid.json) + kissat 4.0.4
 # (200s cap), JSONL record appended to $OUT/records.jsonl, per-width kissat log kept.
 # SAT (unexpected) -> decode + dual verify and emit SAT_WITNESS marker.
 # Usage: ./leanband.sh W M Q OUTDIR
@@ -14,7 +14,7 @@ mkdir -p "$OUT"
 TAG="s${W}x${M}q${Q}_none"
 CNF="$OUT/$TAG.cnf"
 KSOUT="$OUT/$TAG.kissat.txt"
-META=$(node --max-old-space-size=6144 "$SCR/genfast.js" "$W" "$M" "$Q" --deficient "$CNF")
+META=$(node --max-old-space-size=6144 "$SCR/genfast2.js" "$W" "$M" "$Q" --deficient "$CNF")
 echo "$META" > "$OUT/$TAG.meta.json"
 T0=$(date +%s.%N)
 timeout 200 "$KS" "$CNF" > "$KSOUT" 2>&1
@@ -25,7 +25,7 @@ GSEC=$(echo "$META" | jq -r '.gen_sec // empty')
 KCONF=$(grep -E "^c conflicts" "$KSOUT" | tail -1 | awk '{print $3}')
 if [ "$KSRC" = "10" ]; then KRES=SAT; elif [ "$KSRC" = "20" ]; then KRES=UNSAT; else KRES=INDET; fi
 VARS=$(echo "$META" | jq -r '.vars')
-REC="{\"w\":$W,\"m\":$M,\"q\":$Q,\"lex\":\"none\",\"generator\":\"genfast\",\"vars\":$VARS,\"clauses\":$(echo "$META" | jq -r '.clauses'),\"curves\":$(echo "$META" | jq -r '.curves'),\"kissat\":{\"result\":\"$KRES\",\"rc\":$KSRC,\"conflicts\":${KCONF:-null},\"sec\":$KSEC}"
+REC="{\"w\":$W,\"m\":$M,\"q\":$Q,\"lex\":\"none\",\"generator\":\"genfast2\",\"vars\":$VARS,\"clauses\":$(echo "$META" | jq -r '.clauses'),\"curves\":$(echo "$META" | jq -r '.curves'),\"kissat\":{\"result\":\"$KRES\",\"rc\":$KSRC,\"conflicts\":${KCONF:-null},\"sec\":$KSEC}"
 if [ "$KRES" = "SAT" ]; then
   grep "^v " "$KSOUT" > "$OUT/$TAG.model.txt"
   DVO=$(node "$DV" "$W" "$M" "$Q" "$OUT/$TAG.model.txt")
