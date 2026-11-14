@@ -11153,6 +11153,9 @@
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3967-1985/receipt.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3967-1985/receipt.json)
 
 - [K0812](../items/K0812-new-exceptional-primes-3719-3727.md) (manifest): 13,880変数・111,115節・10,941行DRAT・VERIFIED（7.8秒）
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-4211-2107/receipt.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-4211-2107/receipt.json)
+
+- [K0812](../items/K0812-new-exceptional-primes-3719-3727.md) (manifest): 14,734変数・116,331節・326,770行DRAT・VERIFIED（917秒）
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full.json)
 
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (data): 旧チェッカーの標本21 dの受理記録。K0707の偽受理発見により独立証拠への採用を保留
@@ -12776,6 +12779,21 @@
 ## [research/experiments/sa-row-deficient-witnesses-20261114/scripts/sa_machine.js](../../../research/experiments/sa-row-deficient-witnesses-20261114/scripts/sa_machine.js)
 
 - [K0811](../items/K0811-sa-row-deficient-witnesses.md) (source): K0808 census・独立検証器の機械移植＋SA探索部（Metropolis・冷却・再シード）
+## [research/experiments/sat-fastcdcl-20261114/output/results.jsonl](../../../research/experiments/sat-fastcdcl-20261114/output/results.jsonl)
+
+- [K0810](../items/K0810-sat-row-deficient-witnesses.md) (data): cap=38 witness・6×22 2石欠損witness・5×19 witness・制御・fuzz450・相互検証60・抵抗（6×29/6×28/cap=37/(5,7) m=19,20/cap=41）
+## [research/experiments/sat-fastcdcl-20261114/output/w56_19.json](../../../research/experiments/sat-fastcdcl-20261114/output/w56_19.json)
+
+- [K0810](../items/K0810-sat-row-deficient-witnesses.md) (data): 5×19 の24石行欠損witness座標（fastsat seed=7 SAT・census不使用独立検証 PASS）
+## [research/experiments/sat-fastcdcl-20261114/output/w65_22.json](../../../research/experiments/sat-fastcdcl-20261114/output/w65_22.json)
+
+- [K0811](../items/K0811-sa-row-deficient-witnesses.md) (data): 6×22 の22石（2石欠損）witness座標（fastsat SAT・census不使用独立検証 PASS）
+## [research/experiments/sat-fastcdcl-20261114/report.md](../../../research/experiments/sat-fastcdcl-20261114/report.md)
+
+- [K0810](../items/K0810-sat-row-deficient-witnesses.md) (proof): 手法・検証プロトコル・実装バグ2件の捕捉記録・seed portfolioの難度非単調性
+## [research/experiments/sat-fastcdcl-20261114/scripts/fastsat.js](../../../research/experiments/sat-fastcdcl-20261114/scripts/fastsat.js)
+
+- [K0810](../items/K0810-sat-row-deficient-witnesses.md) (source): 高速CDCL（2-watched literals・EVSIDS heap・Luby restarts・LBD削減・phase saving・cell変数ブート・--seed jitter）・cap=38 witness・5×19 witnessの発見機
 ## [research/experiments/saturation/output/saturation_20261003_exact_results.json](../../../research/experiments/saturation/output/saturation_20261003_exact_results.json)
 
 - [K0312](../items/K0312-n11-minimum-maximal-bounds.md) (data): 11盤7石排除の完了計数
@@ -13527,6 +13545,27 @@
 ## [research/experiments/width9-18-circle-point-max-20261112/scripts/width9_18_circle_bound.ts](../../../research/experiments/width9-18-circle-point-max-20261112/scripts/width9_18_circle_bound.ts)
 
 - [K0767](../items/K0767-width9-18-circle-point-max-row-formulas.md) (verifier): 窓カウント・混合除外（第三実装）・g=2形カウント・witness幾何検証の単独再現
+## [research/experiments/witness-extension-kissat-20261114/output/extended.json](../../../research/experiments/witness-extension-kissat-20261114/output/extended.json)
+
+- [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) (data): 拡張witness 4件（6×29 q=5 23石・6×22 q=6 29石・6×19/6×21 q=6 29石）の座標と2系統検証結果
+## [research/experiments/witness-extension-kissat-20261114/output/kissat_runs.json](../../../research/experiments/witness-extension-kissat-20261114/output/kissat_runs.json)
+
+- [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) (data): kissat実行記録（制御・timeout記録込み）
+## [research/experiments/witness-extension-kissat-20261114/output/w37.json](../../../research/experiments/witness-extension-kissat-20261114/output/w37.json)
+
+- [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) (data): 6×12 q=8 37石witness（行構成 7,7,7,2,7,7）・2系統検証PASS
+## [research/experiments/witness-extension-kissat-20261114/report.md](../../../research/experiments/witness-extension-kissat-20261114/report.md)
+
+- [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) (proof): 手法・拡張列挙の完全性根拠・制御・未解決の記録
+## [research/experiments/witness-extension-kissat-20261114/scripts/dump.js](../../../research/experiments/witness-extension-kissat-20261114/scripts/dump.js)
+
+- [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) (source): K0810符号化からDIMACSを吐出
+## [research/experiments/witness-extension-kissat-20261114/scripts/extend.js](../../../research/experiments/witness-extension-kissat-20261114/scripts/extend.js)
+
+- [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) (source): 列追加拡張の決定的完全列挙（既知witnessの平行移動+新規列部分集合・verifyConfigで検証）
+## [research/experiments/witness-extension-kissat-20261114/scripts/verify_py.py](../../../research/experiments/witness-extension-kissat-20261114/scripts/verify_py.py)
+
+- [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) (source): 別実装Python独立検証器（Fraction厳密演算・石ペア直線/石3点組円全列挙）— 初版の÷2バグをJS検証器との矛盾で捕捉し修正
 ## [research/knowledge/items/K0034-n10-minimum-maximal-bounds.md](../../../research/knowledge/items/K0034-n10-minimum-maximal-bounds.md)
 
 - [K0145](../items/K0145-n10-minimum-maximal-ten-open.md) (source): 九石全域排除により本問いを解消した現行命題

@@ -4756,6 +4756,7 @@
 - → supports [K0795](../items/K0795-fixed-width-pw-mwq-results-table.md): results表の(2,4)行をbounds（≤9・最小性未検証）からexact-threshold（9・proved）へ昇格
 - → depends_on [K0302](../items/K0302-fixed-width-five-exact-stabilization-thresholds.md): 確定閾値リスト（5件）に続き2行盤の確定値を追加
 - ← depends_on [K0808](../items/K0808-six-row-deficient-witnesses-q568.md): 2×8 q=4 の5石witness再発見制御
+- ← depends_on [K0815](../items/K0815-witness-column-extension-kissat-bounds.md): 2×8 q=4 5石witnessの制御再現
 
 ## [K0797](../items/K0797-g0-accounting-valid-through-w84.md) convention B g0会計の有効範囲は拡張法でw≤84に延長 — g4形は壁でなく真の壁はg3形（類サイズ29）— P(65)..P(84)の決定に必要な非標準形前提が復活点下界83をちょうどカバー
 
@@ -4842,6 +4843,7 @@
 - ← supports [K0809](../items/K0809-handicap-deficient-witnesses-6x5-6x6.md): (6,5)/(6,6) の境界を [22,658]/[17,495] に更新
 - ← depends_on [K0810](../items/K0810-sat-row-deficient-witnesses.md): 上界（K0318代入）は不変
 - ← depends_on [K0811](../items/K0811-sa-row-deficient-witnesses.md): 上界（K0318代入）は不変
+- ← depends_on [K0815](../items/K0815-witness-column-extension-kissat-bounds.md): 上界（K0318代入）は不変
 
 ## [K0807](../items/K0807-width83-positive-control-revival-point.md) w=83..86正制御の完走 — REST6掃引機の生存検出感度を4幅で実証（w83生残2件・w84生残4件・w85生残6件・w86生残ユニーク10件・全て11050円の実窓で実現・certificate-phantom 0件）・level 17復活点の実測確定はちょうどw=83・w83..86の生残パターン完全特定・w84の事前予測leaves=2は反証（実窓は4窓）・w85・w86の機械census予測はいずれも完全的中（6・10）・w87事前予測（ユニーク生残≥46）登録
 
@@ -4868,20 +4870,22 @@
 - → depends_on [K0808](../items/K0808-six-row-deficient-witnesses-q568.md): census（3点組外心完全列挙）と独立検証器の実装をverbatim流用
 - ← generalizes [K0810](../items/K0810-sat-row-deficient-witnesses.md): 行capハンディキャップ貪欲の候補予想 M=22/17/12/16 を4件とも反証
 
-## [K0810](../items/K0810-sat-row-deficient-witnesses.md) SAT探索による行欠損極大witness — M_{6,5}≥23・M_{6,6}≥20・M_{6,8}≥18・M_{5,6}≥18（K0809候補予想4件の反証）
+## [K0810](../items/K0810-sat-row-deficient-witnesses.md) SAT探索による行欠損極大witness — M_{6,5}≥23・M_{6,6}≥20・M_{6,8}≥18・M_{5,6}≥20（K0809候補予想4件の反証・fastsat seed portfolioで(5,6) m=19突破）
 
 - → generalizes [K0808](../items/K0808-six-row-deficient-witnesses-q568.md): 貪欲では発見できなかったm帯のwitnessをSATで発見し(6,5)/(6,6)/(6,8)下界を更新
 - → generalizes [K0809](../items/K0809-handicap-deficient-witnesses-6x5-6x6.md): 行capハンディキャップ貪欲の候補予想 M=22/17/12/16 を4件とも反証
 - → depends_on [K0806](../items/K0806-six-row-q7-stabilization-bounds.md): 上界（K0318代入）は不変
 - ← generalizes [K0811](../items/K0811-sa-row-deficient-witnesses.md): SATで解けた m 帯の先の witness を SA で発見し (6,5)/(6,6)/(5,6) 下界を更新
+- ← depends_on [K0815](../items/K0815-witness-column-extension-kissat-bounds.md): encode()/toDimacs 符号化をverbatim使用しDIMACSをkissat 4.0.4に投入。6×12 q=8 cap=38/37（自作CDCLのtimeout×2帯）がSAT
 
 ## [K0811](../items/K0811-sa-row-deficient-witnesses.md) SA探索による行欠損極大witness — M_{6,5}≥29・M_{6,6}≥22・M_{5,6}≥19（K0810の下界を更新・第2弾/第3弾で延長）
 
 - → generalizes [K0810](../items/K0810-sat-row-deficient-witnesses.md): SATで解けた m 帯の先の witness を SA で発見し (6,5)/(6,6)/(5,6) 下界を更新
 - → depends_on [K0808](../items/K0808-six-row-deficient-witnesses-q568.md): census・census不使用独立検証器の verbatim 移植
 - → depends_on [K0806](../items/K0806-six-row-q7-stabilization-bounds.md): 上界（K0318代入）は不変
+- ← generalizes [K0815](../items/K0815-witness-column-extension-kissat-bounds.md): SA抵抗帯6×29/6×22に欠損極大witnessが実在することを拡張列挙で示し下界を更新。M_{6,5}=29可能性（6×29 UNSAT）は反証
 
-## [K0812](../items/K0812-new-exceptional-primes-3719-3727.md) p=3719・3727・3967は等号A(p)=(p+3)/2を達成せず、単一CNFのDRAT証明書で監査済み（既知4素数の外側で新発見）
+## [K0812](../items/K0812-new-exceptional-primes-3719-3727.md) p=3719・3727・3967・4211は等号A(p)=(p+3)/2を達成せず、単一CNFのDRAT証明書で監査済み（既知4素数の外側で新発見）
 
 - → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 上界A(p)<=(p+3)/2と、サイズh+2の集合が(1,1,0)の一クラスに限られること
 - → depends_on [K0771](../items/K0771-forbidden-edge-generator-completeness.md): 禁止四点リストの健全・完全・重複なし（CNFの幾何節の根拠）
@@ -4905,3 +4909,10 @@
 - → depends_on [K0771](../items/K0771-forbidden-edge-generator-completeness.md): 禁止四点リストの健全・完全・重複なし（辺の非包含で安全性を判定）
 - → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 上界A(p)<=(p+3)/2。本項の証人はこの上界にちょうど到達する
 - → supports [K0101](../items/K0101-prime-parabola-equality-open.md): 3701..3899 には達成側と不達成側が混在することを示す
+
+## [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) 列追加拡張と外部SATソルバによる下界更新 — M_{6,5}≥30・M_{6,6}≥23・6×12 q=8最小極大≤37
+
+- → generalizes [K0811](../items/K0811-sa-row-deficient-witnesses.md): SA抵抗帯6×29/6×22に欠損極大witnessが実在することを拡張列挙で示し下界を更新。M_{6,5}=29可能性（6×29 UNSAT）は反証
+- → depends_on [K0810](../items/K0810-sat-row-deficient-witnesses.md): encode()/toDimacs 符号化をverbatim使用しDIMACSをkissat 4.0.4に投入。6×12 q=8 cap=38/37（自作CDCLのtimeout×2帯）がSAT
+- → depends_on [K0796](../items/K0796-two-row-m24-stabilization-nine.md): 2×8 q=4 5石witnessの制御再現
+- → depends_on [K0806](../items/K0806-six-row-q7-stabilization-bounds.md): 上界（K0318代入）は不変

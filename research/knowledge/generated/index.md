@@ -793,8 +793,9 @@
 | [K0807](../items/K0807-width83-positive-control-revival-point.md) | w=83..86正制御の完走 — REST6掃引機の生存検出感度を4幅で実証（w83生残2件・w84生残4件・w85生残6件・w86生残ユニーク10件・全て11050円の実窓で実現・certificate-phantom 0件）・level 17復活点の実測確定はちょうどw=83・w83..86の生残パターン完全特定・w84の事前予測leaves=2は反証（実窓は4窓）・w85・w86の機械census予測はいずれも完全的中（6・10）・w87事前予測（ユニーク生残≥46）登録 | proposition | proved | rectangles, geometry, variants |
 | [K0808](../items/K0808-six-row-deficient-witnesses-q568.md) | 6×m q=5/6/8 の欠損極大witness — M_{6,5}≥20・M_{6,6}≥16・M_{6,8}≥12（下界の初記録） | computation | computed | rectangles, maximal-safe, verification, geometry |
 | [K0809](../items/K0809-handicap-deficient-witnesses-6x5-6x6.md) | 行capハンディキャップ貪欲による欠損witness — M_{6,5}≥22・M_{6,6}≥17（下界更新） | computation | computed | rectangles, maximal-safe, verification, geometry |
-| [K0810](../items/K0810-sat-row-deficient-witnesses.md) | SAT探索による行欠損極大witness — M_{6,5}≥23・M_{6,6}≥20・M_{6,8}≥18・M_{5,6}≥18（K0809候補予想4件の反証） | proposition | proved | rectangles, variants |
+| [K0810](../items/K0810-sat-row-deficient-witnesses.md) | SAT探索による行欠損極大witness — M_{6,5}≥23・M_{6,6}≥20・M_{6,8}≥18・M_{5,6}≥20（K0809候補予想4件の反証・fastsat seed portfolioで(5,6) m=19突破） | proposition | proved | rectangles, variants |
 | [K0811](../items/K0811-sa-row-deficient-witnesses.md) | SA探索による行欠損極大witness — M_{6,5}≥29・M_{6,6}≥22・M_{5,6}≥19（K0810の下界を更新・第2弾/第3弾で延長） | proposition | proved | rectangles, variants |
-| [K0812](../items/K0812-new-exceptional-primes-3719-3727.md) | p=3719・3727・3967は等号A(p)=(p+3)/2を達成せず、単一CNFのDRAT証明書で監査済み（既知4素数の外側で新発見） | proposition | computed | maximum-safe, geometry, search-methods |
+| [K0812](../items/K0812-new-exceptional-primes-3719-3727.md) | p=3719・3727・3967・4211は等号A(p)=(p+3)/2を達成せず、単一CNFのDRAT証明書で監査済み（既知4素数の外側で新発見） | proposition | computed | maximum-safe, geometry, search-methods |
 | [K0813](../items/K0813-width2-5-circle-point-max-and-q9-q10-row-formula.md) | 幅2..5の円格子点数P(w)完全決定（4,6,8,8）・系としてw=5・q≥9の行分離 M_{5,q}=q−1 | proposition | proved | rectangles, geometry, variants |
 | [K0814](../items/K0814-attained-equality-3793-3803-3863.md) | p=3793・3803・3863は等号A(p)=(p+3)/2を達成する（サイズh+2の証人を独立整数幾何で監査） | proposition | computed | maximum-safe, geometry, search-methods |
+| [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) | 列追加拡張と外部SATソルバによる下界更新 — M_{6,5}≥30・M_{6,6}≥23・6×12 q=8最小極大≤37 | proposition | proved | rectangles, variants |
