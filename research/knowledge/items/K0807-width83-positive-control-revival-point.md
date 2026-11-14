@@ -16,7 +16,7 @@ solution:
   conditions: 連続整数行
   verification: [mathematical-proof, exhaustive-enumeration]
   certificate: 幅83・幅84 REST6 level 17 掃引完走（2.42G / 2.88G nodes）+ 生残mask・生残集合の帰属再現（probe・制御込み）+ REST16 16法再検査 + 11050円全窓の直接列挙一致（2窓/4窓）+ R'≤1e6 実現スキャン（realizerは5525のみ）
-  independent_check: probe の帰属（w83: mask456/3119・w84: mask456/1909/2612/3119・各1 leaf）・w83公表生残のbit-exact再現・11050円の独立直接列挙（w83 2窓・w84 4窓・34点17行）・REST16再検査（両幅全通過）・実現スキャン（1,964円・realizer 5525 のみ）・w84 node総数2回の独立完走で一致（2,876,302,072）・state_w83/w84.json
+  independent_check: "probe の帰属（w83: mask456/3119・w84: mask456/1909/2612/3119・各1 leaf）・w83公表生残のbit-exact再現・11050円の独立直接列挙（w83 2窓・w84 4窓・34点17行）・REST16再検査（両幅全通過）・実現スキャン（1,964円・realizer 5525 のみ）・w84 node総数2回の独立完走で一致（2,876,302,072）・state_w83/w84.json"
   note: "w=83 は K0797 会計（g0≥2形・w≤84）の範囲内だが、witness が既知のため level 17 全滅は P≤32 を与えない（K0804の限界どおり）。本項の価値は (i) 掃引機の生存検出感度の正制御が2幅で通過（w≤82全滅の信頼性の実証的裏付け）・(ii) 復活点の実測確定・(iii) 生残パターンの孤立性（realizerは11050円のみ・w84の4生残は2行集合×2窓アラインメントでw83のP₁/P₂と同一行集合）・(iv) 事前予測プロトコルの反証→原因特定→修正の1サイクル（w84予測leaves=2は窓列挙の数え落としで反証・実窓は4）。教訓: 生残数の事前予測は必ず機械による窓全列挙から導出する"
 relations:
 - type: depends_on

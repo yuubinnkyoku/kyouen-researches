@@ -1,5 +1,5 @@
 ---
-id: K0811
+id: K0812
 title: p=3719とp=3727は等号A(p)=(p+3)/2を達成せず、単一CNFのDRAT証明書で監査済み（既知4素数の外側で新発見）
 kind: proposition
 status: computed

@@ -11090,7 +11090,7 @@
 - [K0772](../items/K0772-pysat-seqcounter-equals-small-verification.md) (verifier): 全主割当の拡張可能性を自前 DPLL と Cadical assumption の2系統で判定する照合器
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/census_h2_single_cnf.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/census_h2_single_cnf.py)
 
-- [K0811](../items/K0811-new-exceptional-primes-3719-3727.md) (solver): 等号判定を1素数1CNFで行う国勢調査器（サイズh+2は(1,1,0)の一クラスだけ）
+- [K0812](../items/K0812-new-exceptional-primes-3719-3727.md) (solver): 等号判定を1素数1CNFで行う国勢調査器（サイズh+2は(1,1,0)の一クラスだけ）
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/check_scaling_invariance.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/check_scaling_invariance.py)
 
 - [K0774](../items/K0774-no-scaling-symmetry-for-parabola-safety.md) (verifier): 証人を単元倍し、辺リストとの包含と独立なgeneric整数4x4行列式で共円性を再計算する
@@ -11134,13 +11134,13 @@
 - [K0708](../items/K0708-p3251-no-parabola-equality-witness.md) (certificate): サイズ1627（クラス(1,1,0)）の単一CNFがUNSAT、DRAT証明229,866行を修正版検証器でVERIFIED（185.6秒）
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3719-1861/a3719_1861.cnf](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3719-1861/a3719_1861.cnf)
 
-- [K0811](../items/K0811-new-exceptional-primes-3719-3727.md) (data): 形状(1,1,0)の単一CNF（sha256はreceipt参照）
+- [K0812](../items/K0812-new-exceptional-primes-3719-3727.md) (data): 形状(1,1,0)の単一CNF（sha256はreceipt参照）
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3719-1861/receipt.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3719-1861/receipt.json)
 
-- [K0811](../items/K0811-new-exceptional-primes-3719-3727.md) (manifest): 13,012変数・105,940節・23,750行DRAT・VERIFIED（31.6秒）
+- [K0812](../items/K0812-new-exceptional-primes-3719-3727.md) (manifest): 13,012変数・105,940節・23,750行DRAT・VERIFIED（31.6秒）
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3727-1865/receipt.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3727-1865/receipt.json)
 
-- [K0811](../items/K0811-new-exceptional-primes-3719-3727.md) (manifest): 13,040変数・100,592節・334,667行DRAT・VERIFIED（929秒）
+- [K0812](../items/K0812-new-exceptional-primes-3719-3727.md) (manifest): 13,040変数・100,592節・334,667行DRAT・VERIFIED（929秒）
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full.json)
 
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (data): 旧チェッカーの標本21 dの受理記録。K0707の偽受理発見により独立証拠への採用を保留
@@ -12734,6 +12734,15 @@
 ## [research/experiments/row-deficient-sat-witnesses-20261114/scripts/row_deficient_sat.js](../../../research/experiments/row-deficient-sat-witnesses-20261114/scripts/row_deficient_sat.js)
 
 - [K0810](../items/K0810-sat-row-deficient-witnesses.md) (source): census完全列挙・SAT符号化（sequential counter）・自作CDCL/DPLL・census不使用独立検証器
+## [research/experiments/sa-row-deficient-witnesses-20261114/output/sa_results.jsonl](../../../research/experiments/sa-row-deficient-witnesses-20261114/output/sa_results.jsonl)
+
+- [K0811](../items/K0811-sa-row-deficient-witnesses.md) (data): 全26実行・witness座標・独立検証詳細・抵抗（非発見）の記録
+## [research/experiments/sa-row-deficient-witnesses-20261114/report.md](../../../research/experiments/sa-row-deficient-witnesses-20261114/report.md)
+
+- [K0811](../items/K0811-sa-row-deficient-witnesses.md) (proof): 手法・制御・計算コスト対比・6行blocker構造分析
+## [research/experiments/sa-row-deficient-witnesses-20261114/scripts/sa_machine.js](../../../research/experiments/sa-row-deficient-witnesses-20261114/scripts/sa_machine.js)
+
+- [K0811](../items/K0811-sa-row-deficient-witnesses.md) (source): K0808 census・独立検証器の機械移植＋SA探索部（Metropolis・冷却・再シード）
 ## [research/experiments/saturation/output/saturation_20261003_exact_results.json](../../../research/experiments/saturation/output/saturation_20261003_exact_results.json)
 
 - [K0312](../items/K0312-n11-minimum-maximal-bounds.md) (data): 11盤7石排除の完了計数
@@ -13392,6 +13401,9 @@
 ## [research/experiments/width69-84-sweep-20261114/output/state_w83.json](../../../research/experiments/width69-84-sweep-20261114/output/state_w83.json)
 
 - [K0807](../items/K0807-width83-positive-control-revival-point.md) (data): w=83完走状態（2.4M capプロトコル・2,420,302,072 nodes・leaves=2・生残2・capEsc 72）
+## [research/experiments/width69-84-sweep-20261114/output/state_w84.json](../../../research/experiments/width69-84-sweep-20261114/output/state_w84.json)
+
+- [K0807](../items/K0807-width83-positive-control-revival-point.md) (data): w=84完走状態（2.4M capプロトコル・2,876,302,072 nodes・leaves=4・生残4・capEsc 78・unique 3,465）
 ## [research/experiments/width69-84-sweep-20261114/scripts/width_sweep.mjs](../../../research/experiments/width69-84-sweep-20261114/scripts/width_sweep.mjs)
 
 - [K0804](../items/K0804-width69-82-pw32-plateau.md) (verifier): パラメータ化REST6掃引機（per-chunk状態永続化・停滞検出cap拡張・w=83/84正制御対応をheaderに明記）
@@ -13415,13 +13427,25 @@
 - [K0765](../items/K0765-width8-circle-twelve-point-sizes-and-q13-q16-row-formula.md) (verifier): witness列挙・mod9分類・素数補題制御・f=2・2接点・censusの機械検証
 ## [research/experiments/width83-positive-control-20261114/output/width83_positive_control.json](../../../research/experiments/width83-positive-control-20261114/output/width83_positive_control.json)
 
-- [K0807](../items/K0807-width83-positive-control-revival-point.md) (data): 完走走査・帰属・REST16・実現・スキャンの全記録
+- [K0807](../items/K0807-width83-positive-control-revival-point.md) (data): w=83完走・帰属・REST16・実現・スキャンの全記録
 ## [research/experiments/width83-positive-control-20261114/scripts/width83_realizability_scan.ts](../../../research/experiments/width83-positive-control-20261114/scripts/width83_realizability_scan.ts)
 
 - [K0807](../items/K0807-width83-positive-control-revival-point.md) (verifier): REST16再検査 + 11050円2窓の直接検証 + R'≤1e6 実現スキャン
 ## [research/experiments/width83-positive-control-20261114/scripts/width83_survivor_probe.mjs](../../../research/experiments/width83-positive-control-20261114/scripts/width83_survivor_probe.mjs)
 
-- [K0807](../items/K0807-width83-positive-control-revival-point.md) (verifier): 生存mask・生残17行集合の帰属ログ付きプローブ（width_sweep.mjs と同一アルゴリズム）
+- [K0807](../items/K0807-width83-positive-control-revival-point.md) (verifier): 生存mask・生残17行集合の帰属ログ付きプローブ（width_sweep.mjs と同一アルゴリズム・w84でもそのまま使用）
+## [research/experiments/width84-positive-control-20261114/output/width84_positive_control.json](../../../research/experiments/width84-positive-control-20261114/output/width84_positive_control.json)
+
+- [K0807](../items/K0807-width83-positive-control-revival-point.md) (data): w=84完走・帰属・REST16・実現・スキャン・窓センサス（w83..86）の全記録
+## [research/experiments/width84-positive-control-20261114/scripts/circle11050_window_census.mjs](../../../research/experiments/width84-positive-control-20261114/scripts/circle11050_window_census.mjs)
+
+- [K0807](../items/K0807-width83-positive-control-revival-point.md) (verifier): 11050円の幅w窓センサスの独立直接実装（w83=2・w84=4・w85=6・w86=10窓・34点窓全列挙）
+## [research/experiments/width84-positive-control-20261114/scripts/width84_realizability_scan.mjs](../../../research/experiments/width84-positive-control-20261114/scripts/width84_realizability_scan.mjs)
+
+- [K0807](../items/K0807-width83-positive-control-revival-point.md) (verifier): REST16再検査 + 11050円4窓の直接検証 + R'≤1e6 孤立性スキャン（width83_realizability_scan.ts の w=84 版）
+## [research/experiments/width84-positive-control-20261114/scripts/width_survivor_collect.mjs](../../../research/experiments/width84-positive-control-20261114/scripts/width_survivor_collect.mjs)
+
+- [K0807](../items/K0807-width83-positive-control-revival-point.md) (verifier): width_sweep.mjs に生残パターン記録を追加したプローブ版（w84の2回目の完走でnode-exact再現と生残4パターン抽出を同時に達成）
 ## [research/experiments/width9-18-circle-point-max-20261112/output/width9_18_circle_bound.json](../../../research/experiments/width9-18-circle-point-max-20261112/output/width9_18_circle_bound.json)
 
 - [K0767](../items/K0767-width9-18-circle-point-max-row-formulas.md) (data): 全数値の機械出力
@@ -13804,13 +13828,16 @@
 - [K0802](../items/K0802-width68-pw32-plateau-completion.md) (log): 判断・教訓・レジューム
 ## [research/log/2026-11-14-new-exceptional-primes-3719-3727.md](../../../research/log/2026-11-14-new-exceptional-primes-3719-3727.md)
 
-- [K0811](../items/K0811-new-exceptional-primes-3719-3727.md) (log): 発見の経緯（d走査の候補→単一CNF→証明書）と範囲の注意
+- [K0812](../items/K0812-new-exceptional-primes-3719-3727.md) (log): 発見の経緯（d走査の候補→単一CNF→証明書）と範囲の注意
 ## [research/log/2026-11-14-width69-82-dual-run-integration.md](../../../research/log/2026-11-14-width69-82-dual-run-integration.md)
 
 - [K0804](../items/K0804-width69-82-pw32-plateau.md) (log): 判断・教訓・レジューム
 ## [research/log/2026-11-14-width83-positive-control.md](../../../research/log/2026-11-14-width83-positive-control.md)
 
-- [K0807](../items/K0807-width83-positive-control-revival-point.md) (log): 判断・教訓・レジューム
+- [K0807](../items/K0807-width83-positive-control-revival-point.md) (log): w83判断・教訓・レジューム・w84事前予測（本項で反証）
+## [research/log/2026-11-14-width84-positive-control.md](../../../research/log/2026-11-14-width84-positive-control.md)
+
+- [K0807](../items/K0807-width83-positive-control-revival-point.md) (log): w84実行記録・予測反証の原因特定・w85/86事前予測
 ## [research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md](../../../research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md)
 
 - [K0092](../items/K0092-n11-dfpn-search-status.md) (source): 命題・対象範囲・根拠を記した出典

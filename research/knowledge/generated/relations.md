@@ -833,7 +833,7 @@
 - ← depends_on [K0774](../items/K0774-no-scaling-symmetry-for-parabola-safety.md): 完全対{t,p−t}の数え上げが使う反射t↦p−tの正当化との対比
 - ← depends_on [K0775](../items/K0775-p3251-no-size-h1-set.md): 上界A(p)<=(p+3)/2と、サイズh+1の集合が(x,c,e)で3形状に尽きること
 - ← depends_on [K0781](../items/K0781-p2531-no-size-h1-set.md): 上界A(p)<=(p+3)/2と、サイズh+1の集合が(x,c,e)で3形状に尽きること
-- ← depends_on [K0811](../items/K0811-new-exceptional-primes-3719-3727.md): 上界A(p)<=(p+3)/2と、サイズh+2の集合が(1,1,0)の一クラスに限られること
+- ← depends_on [K0812](../items/K0812-new-exceptional-primes-3719-3727.md): 上界A(p)<=(p+3)/2と、サイズh+2の集合が(1,1,0)の一クラスに限られること
 
 ## [K0098](../items/K0098-p23-half-interval-counterexample.md) 剰余放物線の前半区間安全説はp=23で反例
 
@@ -856,7 +856,7 @@
 - ← supports [K0702](../items/K0702-p2531-no-parabola-equality-witness.md): 単一CNFの独立監査により全奇素数での等号を否定する2番目の反例
 - ← refutes [K0706](../items/K0706-p2647-no-parabola-equality-witness.md): 修正版で全dのUNSAT証明を検査した反例により、全奇素数での等号を否定する
 - ← supports [K0708](../items/K0708-p3251-no-parabola-equality-witness.md): 単一CNFの独立監査により全奇素数での等号を否定する4番目の反例
-- ← supports [K0811](../items/K0811-new-exceptional-primes-3719-3727.md): 「全奇素数で等号」の反例が4個から6個に増えた
+- ← supports [K0812](../items/K0812-new-exceptional-primes-3719-3727.md): 「全奇素数で等号」の反例が4個から6個に増えた
 
 ## [K0102](../items/K0102-concrete-lean-certificate-checker-open.md) 具体巨大証明書をLean核のみで検査する実装は未完成
 
@@ -3974,7 +3974,7 @@
 
 - ← depends_on [K0708](../items/K0708-p3251-no-parabola-equality-witness.md): 旧d別監査では削除時代入失効の修正版を使用。別経路の単一CNFはRUP限定検査と空節処理修正版LRATで再検査
 - ← depends_on [K0780](../items/K0780-drat-checker-fast-reason-local-invalidation.md): 削除で代入を失効させないと偽UNSATを受理する不具合と、その修正方針（reason単位の失効）
-- ← depends_on [K0811](../items/K0811-new-exceptional-primes-3719-3727.md): 削除時に代入を失効させる修正版の増分DRAT検査器で証明書を検査
+- ← depends_on [K0812](../items/K0812-new-exceptional-primes-3719-3727.md): 削除時に代入を失効させる修正版の増分DRAT検査器で証明書を検査
 
 ## [K0708](../items/K0708-p3251-no-parabola-equality-witness.md) p=3251でも剰余放物線の等号A(p)=(p+3)/2を達成できない（単一CNF独立schema・RUP/LRAT監査済み）
 
@@ -4529,7 +4529,7 @@
 - → supports [K0769](../items/K0769-candidate-b-assumption-partition.md): 前提(1)（辺リスト完全性）
 - ← depends_on [K0769](../items/K0769-candidate-b-assumption-partition.md): 辺リスト完全性（前提(1)）
 - ← depends_on [K0787](../items/K0787-greedy-lower-bounds-2531-3251.md): 禁止四点リストが健全・完全・重複なしであることを前提に、辺の非包含で安全性を判定
-- ← depends_on [K0811](../items/K0811-new-exceptional-primes-3719-3727.md): 禁止四点リストの健全・完全・重複なし（CNFの幾何節の根拠）
+- ← depends_on [K0812](../items/K0812-new-exceptional-primes-3719-3727.md): 禁止四点リストの健全・完全・重複なし（CNFの幾何節の根拠）
 
 ## [K0772](../items/K0772-pysat-seqcounter-equals-small-verification.md) pysat の seqcounter による CardEnc.equals は build と同一の呼び出し形で小規模全件「ちょうど bound 個」を満たす
 
@@ -4645,8 +4645,8 @@
 - ← supports [K0801](../items/K0801-width67-pw32-plateau-completion.md): level 17復活点を (66,83] から (67,83] に狭窄
 - ← supports [K0802](../items/K0802-width68-pw32-plateau-completion.md): level 17復活点を (67,83] から (68,83] に狭窄
 - ← supports [K0804](../items/K0804-width69-82-pw32-plateau.md): level 17復活点を (68,83] からちょうど (82,83] に狭窄・34点最小幅83の左端を確定
-- ← depends_on [K0807](../items/K0807-width83-positive-control-revival-point.md): 11050円 witness（P(83)≥34・34点最小幅83）が生残予測の源
-- ← supports [K0807](../items/K0807-width83-positive-control-revival-point.md): level 17 復活点を理論値 (82,83] から実測でちょうど w=83 に確定・witness パターンの掃引機内での完全特定
+- ← depends_on [K0807](../items/K0807-width83-positive-control-revival-point.md): 11050円 witness（P(83..86)≥34・34点最小幅83）が生残予測の源
+- ← supports [K0807](../items/K0807-width83-positive-control-revival-point.md): level 17 復活点を理論値 (82,83] から実測でちょうど w=83 に確定・witness パターンの掃引機内での完全特定（w83・w84）
 
 ## [K0786](../items/K0786-width36-48-circle-strip-witnesses.md) 幅36..48の円点数の新規下界 P(43)≧26・P(44),P(45)≧28・P(46),P(47)≧30・P(48)≧32 — witness円2210（初の26点超）・P(36)..P(42)≧24・族スキャン制御は既知P(w)と完全一致（w=6..35）
 
@@ -4813,7 +4813,7 @@
 - → depends_on [K0803](../items/K0803-maximal-mask-plateau-universal.md): maximal mask数3,300（全幅で一致・小パターンはuniqueにのみ参入）
 - → supports [K0785](../items/K0785-circle-26-points-min-row-span.md): level 17復活点を (68,83] からちょうど (82,83] に狭窄・34点最小幅83の左端を確定
 - ← depends_on [K0805](../items/K0805-mask-census-closed-form.md): dual-run unique（w=69..82・14 点）が閉形式の制御値
-- ← depends_on [K0807](../items/K0807-width83-positive-control-revival-point.md): 掃引機（width_sweep.mjs）と w≤82 全滅の境界。本項はその正制御完了
+- ← depends_on [K0807](../items/K0807-width83-positive-control-revival-point.md): 掃引機（width_sweep.mjs）と w≤82 全滅の境界。本項はその正制御完了（w83・w84）
 
 ## [K0805](../items/K0805-mask-census-closed-form.md) マスクセンサスの全幅閉形式決定 — level 17 窓マスク掃引の (unique(w), maximal(w)) が交叉統計と区間支配判定で全 w≧17 に決定（unique 3630 到達は w=96 が鋭い・初出現 w=37・maximal=3300 は全 w≧66 で厳密・小パターン参入窓 265..286/309..363/529..561）
 
@@ -4829,13 +4829,14 @@
 - ← supports [K0808](../items/K0808-six-row-deficient-witnesses-q568.md): K0806 が上界のみ記録した (6,5)/(6,6)/(6,8) に下界を与え、境界を [20,658]/[16,495]/[12,371] の両側にした
 - ← supports [K0809](../items/K0809-handicap-deficient-witnesses-6x5-6x6.md): (6,5)/(6,6) の境界を [22,658]/[17,495] に更新
 - ← depends_on [K0810](../items/K0810-sat-row-deficient-witnesses.md): 上界（K0318代入）は不変
+- ← depends_on [K0811](../items/K0811-sa-row-deficient-witnesses.md): 上界（K0318代入）は不変
 
-## [K0807](../items/K0807-width83-positive-control-revival-point.md) w=83正制御の完走 — REST6掃引機の生存検出感度を実証（生残ちょうど2件・両方11050円の両端83幅窓で実現・certificate-phantom 0件）・level 17復活点の実測確定はちょうどw=83・w=83の生残パターン完全特定（2.42G nodes・leaves=2・実現可能）
+## [K0807](../items/K0807-width83-positive-control-revival-point.md) w=83・w=84正制御の完走 — REST6掃引機の生存検出感度を2幅で実証（w83生残2件・w84生残4件・全て11050円の実窓で実現・certificate-phantom 0件）・level 17復活点の実測確定はちょうどw=83・w83/84の生残パターン完全特定・w84の事前予測leaves=2は反証（実窓は4窓）
 
-- → depends_on [K0804](../items/K0804-width69-82-pw32-plateau.md): 掃引機（width_sweep.mjs）と w≤82 全滅の境界。本項はその正制御完了
-- → depends_on [K0785](../items/K0785-circle-26-points-min-row-span.md): 11050円 witness（P(83)≥34・34点最小幅83）が生残予測の源
+- → depends_on [K0804](../items/K0804-width69-82-pw32-plateau.md): 掃引機（width_sweep.mjs）と w≤82 全滅の境界。本項はその正制御完了（w83・w84）
+- → depends_on [K0785](../items/K0785-circle-26-points-min-row-span.md): 11050円 witness（P(83..86)≥34・34点最小幅83）が生残予測の源
 - → depends_on [K0791](../items/K0791-circle-34pt-witness-verified.md): 34点最小幅83（復活点の右端の理論的裏付け）
-- → supports [K0785](../items/K0785-circle-26-points-min-row-span.md): level 17 復活点を理論値 (82,83] から実測でちょうど w=83 に確定・witness パターンの掃引機内での完全特定
+- → supports [K0785](../items/K0785-circle-26-points-min-row-span.md): level 17 復活点を理論値 (82,83] から実測でちょうど w=83 に確定・witness パターンの掃引機内での完全特定（w83・w84）
 
 ## [K0808](../items/K0808-six-row-deficient-witnesses-q568.md) 6×m q=5/6/8 の欠損極大witness — M_{6,5}≥20・M_{6,6}≥16・M_{6,8}≥12（下界の初記録）
 
@@ -4846,6 +4847,7 @@
 - ← generalizes [K0809](../items/K0809-handicap-deficient-witnesses-6x5-6x6.md): K0808の貪欲では発見できなかった m=20,21（6,5）と m=16（6,6）に行capハンディキャップで到達し、下界 M_{6,5}≥20→22・M_{6,6}≥16→17 を更新
 - ← depends_on [K0809](../items/K0809-handicap-deficient-witnesses-6x5-6x6.md): census（3点組外心完全列挙）と独立検証器の実装をverbatim流用
 - ← generalizes [K0810](../items/K0810-sat-row-deficient-witnesses.md): 貪欲では発見できなかったm帯のwitnessをSATで発見し(6,5)/(6,6)/(6,8)下界を更新
+- ← depends_on [K0811](../items/K0811-sa-row-deficient-witnesses.md): census・census不使用独立検証器の verbatim 移植
 
 ## [K0809](../items/K0809-handicap-deficient-witnesses-6x5-6x6.md) 行capハンディキャップ貪欲による欠損witness — M_{6,5}≥22・M_{6,6}≥17（下界更新）
 
@@ -4859,8 +4861,15 @@
 - → generalizes [K0808](../items/K0808-six-row-deficient-witnesses-q568.md): 貪欲では発見できなかったm帯のwitnessをSATで発見し(6,5)/(6,6)/(6,8)下界を更新
 - → generalizes [K0809](../items/K0809-handicap-deficient-witnesses-6x5-6x6.md): 行capハンディキャップ貪欲の候補予想 M=22/17/12/16 を4件とも反証
 - → depends_on [K0806](../items/K0806-six-row-q7-stabilization-bounds.md): 上界（K0318代入）は不変
+- ← generalizes [K0811](../items/K0811-sa-row-deficient-witnesses.md): SATで解けた m 帯の先の witness を SA で発見し (6,5)/(6,6)/(5,6) 下界を更新
 
-## [K0811](../items/K0811-new-exceptional-primes-3719-3727.md) p=3719とp=3727は等号A(p)=(p+3)/2を達成せず、単一CNFのDRAT証明書で監査済み（既知4素数の外側で新発見）
+## [K0811](../items/K0811-sa-row-deficient-witnesses.md) SA探索による行欠損極大witness — M_{6,5}≥26・M_{6,6}≥21・M_{5,6}≥19（K0810の下界3件を更新）
+
+- → generalizes [K0810](../items/K0810-sat-row-deficient-witnesses.md): SATで解けた m 帯の先の witness を SA で発見し (6,5)/(6,6)/(5,6) 下界を更新
+- → depends_on [K0808](../items/K0808-six-row-deficient-witnesses-q568.md): census・census不使用独立検証器の verbatim 移植
+- → depends_on [K0806](../items/K0806-six-row-q7-stabilization-bounds.md): 上界（K0318代入）は不変
+
+## [K0812](../items/K0812-new-exceptional-primes-3719-3727.md) p=3719とp=3727は等号A(p)=(p+3)/2を達成せず、単一CNFのDRAT証明書で監査済み（既知4素数の外側で新発見）
 
 - → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 上界A(p)<=(p+3)/2と、サイズh+2の集合が(1,1,0)の一クラスに限られること
 - → depends_on [K0771](../items/K0771-forbidden-edge-generator-completeness.md): 禁止四点リストの健全・完全・重複なし（CNFの幾何節の根拠）
