@@ -1,0 +1,55 @@
+{
+  "title": "n11 class2-lane cost-70b sweep independent remote audit",
+  "date": "2026-11-14",
+  "auditor": "long-term lane session 9 (remote-only audit while execution env unavailable)",
+  "target": {
+    "s6_child": "00000000000000809082080000000000",
+    "s6_s7_edge_cost": 70,
+    "source_commit": "40d17dfaf82461a8b379061bf59122a053bb113e",
+    "files": "class2-lane-cost70b-raw-batch1..9-20261114.jsonl, class2-lane-cost70b-determinism-rerun-20261114.jsonl, class2-lane-cost70b-sweep-20261114.json"
+  },
+  "checks": [
+    {
+      "check": "raw batch candidate rows",
+      "result": "70 rows, 70 unique bits",
+      "pass": true
+    },
+    {
+      "check": "pilot d6 controls",
+      "result": "9/9 invocations, each loss=false at exactly 5,949 nodes",
+      "pass": true
+    },
+    {
+      "check": "node accounting",
+      "result": "sum over raw rows = 404,797,576 == sweep record total_nodes",
+      "pass": true
+    },
+    {
+      "check": "capped",
+      "result": "0 capped rows == sweep record",
+      "pass": true
+    },
+    {
+      "check": "WIN7 bits",
+      "result": "raw loss=true exactly bit 37, matching sweep win7_bits=[37] and win7 root 00000000000000809082082000000000",
+      "pass": true
+    },
+    {
+      "check": "determinism rerun",
+      "result": "rerun bits {12,13,14,37} node-exact identical to raw rows",
+      "pass": true
+    },
+    {
+      "check": "root hex arithmetic",
+      "result": "child | (1<<37) independently recomputed = 00000000000000809082082000000000, matches pushed root",
+      "pass": true
+    },
+    {
+      "check": "cross-lane independent reproduction",
+      "result": "this session independently re-ran bits 12,13,110,37 in a separate environment before the parallel lane's push: all four node counts (22,344,826 / 18,184,289 / 16,057,344 / 8,135,396) and the loss flag of bit 37 are identical to the pushed raw rows - a full cross-implementation-machine reproduction of the sweep's heaviest candidates and its WIN7",
+      "pass": true
+    }
+  ],
+  "audit_result": "PASS (8/8 checks), including a cross-lane node-exact reproduction of the WIN7 bit 37 and three heaviest candidates from an independent local run.",
+  "unknown_status": "11x11 empty board: UNKNOWN. Two-stone root {49,60}: UNKNOWN. S2 {59,60}: UNKNOWN. class 2 / class 4 blockers: UNKNOWN."
+}
