@@ -1,18 +1,18 @@
 kind,w,q_min,q_max,M,status,source,note
 exact-threshold,2,4,4,9,proved,K0796;K0069,"m=8 has 5-stone deficient maximal (witness row0={0,2}, row1={1,2,5}); m>=9 all maximal 6 stones (K0069)"
-exact-threshold,3,4,4,24,proved,K0351;K0302;K0068,"g(S)=(9-|S|) mod2 for m>=24; m=23 has 8-stone deficient maximal"
-exact-threshold,3,5,5,12,proved,K0071;K0302,""
-exact-threshold,3,6,6,9,proved,K0070,""
-exact-threshold,4,6,6,16,proved,K0302,""
-exact-threshold,4,7,7,13,proved,K0302,""
-exact-threshold,4,8,8,11,proved,K0302;K0077,""
-exact-threshold,5,8,8,16,proved,K0331,""
+exact-threshold,3,4,4,24,proved,K0351;K0302;K0068,g(S)=(9-|S|) mod2 for m>=24; m=23 has 8-stone deficient maximal
+exact-threshold,3,5,5,12,proved,K0071;K0302,
+exact-threshold,3,6,6,9,proved,K0070,
+exact-threshold,4,6,6,16,proved,K0302,
+exact-threshold,4,7,7,13,proved,K0302,
+exact-threshold,4,8,8,11,proved,K0302;K0077,
+exact-threshold,5,8,8,16,proved,K0331,
 bounds,5,6,6,20..249,open,K0810;K0811;K0723,"lower: 24-stone deficient maximal witnesses in 5x15..5x19 (K0810 SAT m=16,17 and m=19 via fastsat seed portfolio, 8378 conflicts; K0811 SA m=16..18; K0723 m=15); upper: K0318 substitution; m=19 resisted SA 5 runs (K0811) before fastsat seed=7 solved it"
 bounds,5,7,7,19..158,open,K0332,"lower: 29-stone deficient maximal in 5x18; 5x19 complete enumeration (K0759 campaign) covers only m=19; m=19..21 resists handicap greedy (K0808, K0809, not absence)"
-bounds,6,5,5,29..658,open,K0811;K0810;K0809;K0808;K0806,"lower: 22-stone (2-deficient) witness at 6x28 (K0811 sa-frontier3, after 10-run resistance by T0>=2 variants; 74s with T0=1.5/mrf=0.45/sK=36); 23-stone witnesses in 6x8..6x27 (K0811 SA; K0808; K0809); 6x22 also has a 22-stone (2-deficient) maximal witness (fastsat, sat-fastcdcl-20261114); upper: K0318 substitution U=658 (K0806; K0024 T=2814); m=29 resists SA 8 runs, m=30 2 runs (not absence); UNSAT at 6x29 would set M=29"
-bounds,6,6,6,22..495,open,K0811;K0810;K0809;K0808;K0806,"lower: 29-stone deficient maximal witnesses in 6x8..6x21 (K0811 SA m=17..21; K0808 m=8..15, K0809 m=16); upper: K0318 substitution U=495 (K0806; K0024 T=5705); m=22 resists SA 7 runs (K0811+sa-frontier3, not absence)"
-bounds,6,7,7,20..402,open,K0761;K0806,"lower: 35-stone deficient maximal witnesses in 6x13/16/19 (K0761); upper: K0318 substitution U=402 (K0806; K0024 T=10101)"
-bounds,6,8,8,18..371,open,K0811;K0810;K0808;K0806,"lower: 41-stone deficient maximal witnesses in 6x9..6x17 (K0810 SAT m=12..17; K0808 m=9..11; K0811 SA m=12..15 corroborates); upper: K0318 substitution U=371 (K0806; K0024 T=16317); 6x12 also has 40-, 39- and 38-stone maximals (K0810; 38-stone via fastsat sat-fastcdcl-20261114); 6x12 minimal maximal size <= 38, cap=37 unresolved (not absence); m=16 resists SA (K0811, not absence)"
+bounds,6,5,5,30..658,open,K0815;K0811;K0810;K0809;K0808;K0806,"lower: 23-stone deficient maximal at 6x29 (K0815 column-extension of the 6x28 22-stone witness; the 6x29-UNSAT hypothesis is refuted); 22-stone (2-deficient) witnesses at 6x28 (K0811) and 6x22 (sat-fastcdcl-20261114); 23-stone witnesses in 6x8..6x27 (K0811 SA; K0808; K0809); upper: K0318 substitution U=658 (K0806; K0024 T=2814); 6x30 unresolved (K0815 kissat 260s + removal<=3+new-column enumeration, not absence)"
+bounds,6,6,6,23..495,open,K0815;K0811;K0810;K0809;K0808;K0806,"lower: 29-stone deficient maximal witnesses in 6x8..6x22 (K0815 column-extension m=22; K0811 SA m=17..21; K0808 m=8..15, K0809 m=16); upper: K0318 substitution U=495 (K0806; K0024 T=5705); 6x23 unresolved (K0815 kissat 260s, not absence)"
+bounds,6,7,7,20..402,open,K0761;K0806,lower: 35-stone deficient maximal witnesses in 6x13/16/19 (K0761); upper: K0318 substitution U=402 (K0806; K0024 T=10101)
+bounds,6,8,8,18..371,open,K0815;K0811;K0810;K0808;K0806,"lower: 41-stone deficient maximal witnesses in 6x9..6x17 (K0810 SAT m=12..17; K0808 m=9..11; K0811 SA m=12..15 corroborates); upper: K0318 substitution U=371 (K0806; K0024 T=16317); 6x12 minimal maximal size <= 37 (K0815 kissat 37-stone witness rows 7,7,7,2,7,7; cap=36 unresolved, not absence); 6x12 also has 40-, 39- and 38-stone maximals (K0810; 38-stone via fastsat sat-fastcdcl-20261114); m=16 resists SA (K0811, not absence)"
 separation-band,5,9,INF,q-1,proved,K0813;K0767-corollary,"q>=max(P(5),5)+1; P(5)=8 (K0813); M_{5,9}=8 and M_{5,10}=9 are new (q>=11 already in K0025 q>2w band); g(S)=(5*min(m,q-1)-|S|) mod2"
 separation-band,6,9,INF,q-1,proved,K0763;K0767-corollary,"q>=max(P(6),6)+1"
 separation-band,7,11,INF,q-1,proved,K0764;K0767-corollary,"q>=max(P(7),7)+1"
@@ -91,8 +91,8 @@ separation-band,79,80,INF,q-1,proved,K0804;K0767-corollary,"q>=max(P(79),79)+1"
 separation-band,80,81,INF,q-1,proved,K0804;K0767-corollary,"q>=max(P(80),80)+1"
 separation-band,81,82,INF,q-1,proved,K0804;K0767-corollary,"q>=max(P(82),82)+1"
 parametric,all,2w+1,INF,q-1,proved,K0025,"q>2w, q>=4; g=(w*min(m,q-1)-|S|) mod2 for all m>=1"
-parametric,w>=5,2w,2w,2w-1,proved,K0072,"q=2w"
-parametric,w>=6,2w-1,2w-1,2w-2,proved,K0072,"q=2w-1"
-parametric,w>=15,w+ceil(w/2)+1,INF,q-1,proved,K0072,"half-density: q>w+ceil(w/2)"
-parametric,w>=19,2*ceil(w/2)+1,INF,q-1,proved,K0776,"subsumes K0072 half-density for w>=19"
-parametric,odd w>=21,w+1,w+1,w,proved,K0784,"P(w)<=w-3 universal for odd w>=21; inside composed band when P(w) exact"
+parametric,w>=5,2w,2w,2w-1,proved,K0072,q=2w
+parametric,w>=6,2w-1,2w-1,2w-2,proved,K0072,q=2w-1
+parametric,w>=15,w+ceil(w/2)+1,INF,q-1,proved,K0072,half-density: q>w+ceil(w/2)
+parametric,w>=19,2*ceil(w/2)+1,INF,q-1,proved,K0776,subsumes K0072 half-density for w>=19
+parametric,odd w>=21,w+1,w+1,w,proved,K0784,P(w)<=w-3 universal for odd w>=21; inside composed band when P(w) exact
