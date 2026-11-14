@@ -33,22 +33,14 @@
     "00000000000000801202000000208000"
    ]
   },
-  "99": {
-   "root_hex": "00000008000000803202000000008000",
+  "76": {
+   "root_hex": "00000000000010803202000000008000",
    "covers": 7,
-   "marginal": 5,
-   "marginal_in_manifest": 1,
+   "marginal": 6,
+   "marginal_in_manifest": 2,
    "marginal_manifest_hexes": [
-    "00000000000000003800200008000200"
-   ]
-  },
-  "87": {
-   "root_hex": "00000000008000803202000000008000",
-   "covers": 7,
-   "marginal": 5,
-   "marginal_in_manifest": 1,
-   "marginal_manifest_hexes": [
-    "00000000000020809002000000020000"
+    "00000000000000803242000000000000",
+    "00000000000000849002000000020000"
    ]
   },
   "84": {
@@ -60,14 +52,13 @@
     "00000000000100003820000008000000"
    ]
   },
-  "76": {
-   "root_hex": "00000000000010803202000000008000",
+  "87": {
+   "root_hex": "00000000008000803202000000008000",
    "covers": 7,
-   "marginal": 6,
-   "marginal_in_manifest": 2,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
    "marginal_manifest_hexes": [
-    "00000000000000803242000000000000",
-    "00000000000000849002000000020000"
+    "00000000000020809002000000020000"
    ]
   },
   "90": {
@@ -77,6 +68,15 @@
    "marginal_in_manifest": 1,
    "marginal_manifest_hexes": [
     "00000000000000003800200048000000"
+   ]
+  },
+  "99": {
+   "root_hex": "00000008000000803202000000008000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000003800200008000200"
    ]
   }
  },
@@ -104,7 +104,7 @@
    "remaining_s6_orbits": 6,
    "remaining_s7_edge_cost": 443
   },
-  "best_class2_note": "receipt-unclosable per class-frontier-uncoverability-audit-20261114.json (all 10 remaining children sterile-swept); shown for reference only",
+  "best_class2_note": "best_class2 and best_coverable_class2 are the same coverable S5; the separate receipt-unclosable S5 is recorded in receipt_unclosable_class2.",
   "best_coverable_class2": {
    "s5_hex": "00000000000000803202000000000000",
    "classes": 2,
@@ -156,7 +156,15 @@
     "remaining_s6_orbits": 64,
     "remaining_s7_edge_cost": 4570
    }
-  ]
+  ],
+  "receipt_unclosable_class2": {
+   "s5_hex": "00000000000000809082000000000000",
+   "classes": 3,
+   "remaining_s6_orbits": 10,
+   "remaining_s7_edge_cost": 698,
+   "all_remaining_children_sterile_swept": true,
+   "status": "unresolved; no WIN7-D10 was found in the recorded sweeps"
+  }
  },
  "interpretation_guard": "bookkeeping over published receipts; REFUTED-D10 sweeps prove only absence of WIN7-D10; WIN7 certificates prove a win within depth 10 from the 7-stone root only; 11x11 empty root / {49,60} / S2 {59,60} / class 2 / class 4 remain UNKNOWN"
 }
