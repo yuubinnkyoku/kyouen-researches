@@ -12,8 +12,8 @@ const summary = JSON.parse(fs.readFileSync(path.join(outDir, 'summary.json'), 'u
 function parseLog(file) {
   const text = fs.readFileSync(path.join(outDir, file), 'utf8');
   const status = (text.match(/^s (SATISFIABLE|UNSATISFIABLE)$/m) || [])[1];
-  const conflicts = Number((text.match(/^c conflicts:\s*(\d+)\s*$/m) || [])[1]);
-  const seconds = Number((text.match(/^c process-time:.*? ([\d.]+) seconds\s*$/m) || [])[1]);
+  const conflicts = Number((text.match(/^c conflicts:\s*(\d+)/m) || [])[1]);
+  const seconds = Number((text.match(/^c process-time:.* ([\d.]+) seconds/m) || [])[1]);
   assert.ok(status, file + ': missing final SAT status');
   assert.ok(Number.isFinite(conflicts), file + ': missing conflict count');
   assert.ok(Number.isFinite(seconds), file + ': missing process time');
