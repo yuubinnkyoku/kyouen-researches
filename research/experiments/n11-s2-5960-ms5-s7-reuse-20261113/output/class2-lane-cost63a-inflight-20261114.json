@@ -1,12 +1,12 @@
 {
-  "title": "n11 class2-lane cost-63a sweep in flight (claimed by the long-term lane session 11, second run)",
+  "title": "n11 class2-lane cost-63a sweep completed by the long-term lane session 11 second run (claim honoured)",
   "date": "2026-11-14",
   "s5": "00000000000000809102000000000000",
   "s6_child": "00000000000000809102000800000000",
   "s6_s7_edge_cost": 63,
   "demand": "c1=0,c2=2,c4=0",
   "legal_candidates_total": 63,
-  "legal_candidates_source": "legal_candidates.py independent enumeration (Bareiss 4x4), matches published edge cost 63 (after-cost62a frontier, cheapest unswept child in class-frontier-top-candidates-s6-after-cost62a-20261114.csv)",
+  "legal_candidates_source": "legal_candidates.py independent enumeration (Bareiss 4x4), matches published edge cost 63 (after-cost62a frontier, cheapest remaining unswept child in class-frontier-top-candidates-s6-after-cost62a-20261114.csv)",
   "candidate_bits": [
     0,
     1,
@@ -72,9 +72,31 @@
     119,
     120
   ],
-  "motivation": "cheapest unswept child of the best coverable class-2 target S5 00000000000000809102000000000000 (38 orbits / 2,721 after the cost-62a receipt); the parallel class2 lane has cost-56a (S5 803202...) in flight - no collision",
+  "motivation": "cheapest remaining unswept child of the class-2 target S5 00000000000000809102000000000000 (38 orbits / 2,721 after the cost-62a receipt); sweeping the second child covers a second orbit of the same S5 simultaneously; the parallel class2 lane worked the second class-2 target S5 803202... (cost-56a/58b/60b completed, 61d in flight) - no collision",
   "engine": "class4_child1_runner.ts (published repo-verbatim v15 sweep engine), depth 10, andclose=1, cap 1e9, pilot d6 control (loss=false at exactly 5,949 nodes) per batch",
   "batch_plan": "63 candidates in 8 batches (8x7 then 7), raw JSONL pushed per batch as completed",
+  "status": "completed (session 11 second run)",
+  "result": {
+    "win7_d10": 10,
+    "win7_bits": [
+      2,
+      11,
+      15,
+      28,
+      96,
+      97,
+      100,
+      109,
+      118,
+      119
+    ],
+    "refuted_d10": 53,
+    "capped": 0,
+    "total_nodes": 288069056,
+    "pilot_d6_controls": "8/8 batch invocations loss=false at exactly 5,949 nodes",
+    "certificate": "bit 119 root 00800000000000809102000800000000 fully verified (49/49 sub-roots, union 0/0, fbt_drops=0) and pushed as class2-lane-cost63a-certificates/bit119-root-...part1of2+part2of2"
+  },
+  "raw_batches_note": "raw batch1-8 jsonl pushed to main as completed; batch1 independently audited in flight (class2-lane-cost63a-batch1-independent-audit-20261114.json); the execution environment reset mid-sweep and all affected batches were re-run deterministically with node-exact reproduction (cross-restart control)",
   "unknown_status": "11x11 empty board: UNKNOWN. All WIN7 certificates prove only individual 7-stone roots.",
-  "session": "long-term lane session 11 second run (2026-11-14)"
+  "session_ref": "long-term lane session 11 second run (2026-11-14), see class2-lane-cost63a-sweep-20261114.json"
 }
