@@ -1,10 +1,10 @@
 // mwq_results_check.ts — 機械整合性検証（K0795 results統合の実験コード）
 // 検証内容:
-// (1) P(w) の確定値テーブル（w=6..64・K0763..K0794）が単調非減少であること。
+// (1) P(w) の確定値テーブル（w=6..83・K0763..K0817）が単調非減少であること。
 // (2) 合成分離帯 q >= max(P(w), w)+1 が、各K項目が明示的に列挙した
-//     新規確定 (w,q) の全て（K0072/K0763/K0764/K0765/K0767/K0776/K0778/K0782/K0784・289点）
+//     新規確定 (w,q) の全て（K0072/K0763/K0764/K0765/K0767/K0776/K0778/K0782/K0784/K0817・300点）
 //     を包含すること（包含検査・下回り0件であること）。
-// (3) K0784 の奇数w系 (w,w+1)（w=21..63の奇数）が合成帯に含まれること。
+// (3) K0784 の奇数w系 (w,w+1)（w=21..83の奇数）が合成帯に含まれること。
 // 本スクリプトはCSVの再生成を行わない（results/ の正本は items/ を出典として手作業管理）。
 const pw: [number, number, number, string][] = [
   [6, 6, 8, 'K0763'], [7, 7, 10, 'K0764'], [8, 8, 12, 'K0765'],
@@ -14,6 +14,8 @@ const pw: [number, number, number, string][] = [
   [36, 42, 24, 'K0788'], [43, 43, 26, 'K0788'], [44, 45, 28, 'K0788'],
   [46, 47, 30, 'K0788'], [48, 48, 32, 'K0788'], [49, 55, 32, 'K0790'],
   [56, 59, 32, 'K0792'], [60, 63, 32, 'K0793'], [64, 64, 32, 'K0794'],
+  [65, 65, 32, 'K0798'], [66, 66, 32, 'K0799'], [67, 67, 32, 'K0801'],
+  [68, 68, 32, 'K0802'], [69, 82, 32, 'K0804'], [83, 83, 34, 'K0817'],
 ];
 const P = new Map<number, number>();
 for (const [a, b, p] of pw) for (let w = a; w <= b; w++) P.set(w, p);
@@ -32,11 +34,12 @@ const doc: [number, number, number, string][] = [
   [25, 27, 38, 'K0776'], [25, 26, 26, 'K0782'], [26, 27, 39, 'K0776'],
   [27, 29, 41, 'K0776'], [27, 28, 28, 'K0784'], [28, 29, 42, 'K0776'],
   [29, 31, 44, 'K0776'], [29, 30, 30, 'K0784'], [30, 31, 45, 'K0776'],
+  [82, 83, 83, 'K0776'],
 ];
 let n = 0, fails = 0;
 for (const [w, a, b, src] of doc) for (let q = a; q <= b; q++) { n++; if (q < band(w)) { fails++; console.log('FAIL', w, q, src); } }
-for (let w = 21; w <= 63; w += 2) { n++; if (w + 1 < band(w)) { fails++; console.log('FAIL odd', w); } }
+for (let w = 21; w <= 83; w += 2) { n++; if (w + 1 < band(w)) { fails++; console.log('FAIL odd', w); } }
 const vals = [...P.keys()].sort((x, y) => x - y).map(w => P.get(w)!);
 let monotone = true;
 for (let i = 1; i < vals.length; i++) if (vals[i] < vals[i - 1]) monotone = false;
-console.log(JSON.stringify({ nChecks: n, fails, monotone, widthMin: 6, widthMax: 64, pRange: [vals[0], vals[vals.length - 1]] }));
+console.log(JSON.stringify({ nChecks: n, fails, monotone, widthMin: 6, widthMax: 83, pRange: [vals[0], vals[vals.length - 1]] }));
