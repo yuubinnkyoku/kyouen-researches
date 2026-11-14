@@ -1,0 +1,33 @@
+{
+ "session": "class2-lane cost-70b sweep (long-term lane, 2026-11-14)",
+ "s6_child_hex": "00000000000000809082080000000000",
+ "s5_parent_hex": "00000000000000809082000000000000",
+ "s6_s7_edge_cost": 70,
+ "demand_classes": { "c1": 2, "c2": 1, "c4": 0 },
+ "win7_d10": 1,
+ "win7_bits": [37],
+ "win7_roots": ["00000000000000809082082000000000"],
+ "refuted_d10": 69,
+ "capped": 0,
+ "total_nodes": 404797576,
+ "terminal_stone_range_all": [13, 17],
+ "heaviest_bits": [12, 13, 14],
+ "heaviest_fresh_rerun_node_exact": true,
+ "win7_fresh_rerun_node_exact": true,
+ "pilot_d6_controls": 9,
+ "pilot_d6_nodes": 5949,
+ "candidate_enumeration": "legal_candidates.py independent enumeration: 70 legal candidates, matches published edge cost 70",
+ "notes": "Second cost-70-band child of the best class-2 target. Heaviest bits 12/13/14 fresh rerun node-exact (22,344,826 / 18,184,289 / 12,986,771 nodes); WIN7 bit 37 fresh rerun node-exact (8,135,396). Certificate extraction: blind (empty kill table, FBS=1<<20), 30,551 rows, 11,569,428 extraction nodes, fbt_drops=0, fatal=null, all 50 per-move extractions ok and uncapped. Full verification: root-check 7 stones / loser mobility 50 (matches independent enumeration), 50/50 sub-roots PASS, consumed-winner-state union equals the full row set exactly (0 missing / 0 extra), terminal range [13,17].",
+ "raw_batches": [
+  "class2-lane-cost70b-raw-batch1-20261114.jsonl",
+  "class2-lane-cost70b-raw-batch2-20261114.jsonl",
+  "class2-lane-cost70b-raw-batch3-20261114.jsonl",
+  "class2-lane-cost70b-raw-batch4-20261114.jsonl",
+  "class2-lane-cost70b-raw-batch5-20261114.jsonl",
+  "class2-lane-cost70b-raw-batch6-20261114.jsonl",
+  "class2-lane-cost70b-raw-batch7-20261114.jsonl",
+  "class2-lane-cost70b-raw-batch8-20261114.jsonl",
+  "class2-lane-cost70b-raw-batch9-20261114.jsonl",
+  "class2-lane-cost70b-determinism-rerun-20261114.jsonl"
+ ]
+}
