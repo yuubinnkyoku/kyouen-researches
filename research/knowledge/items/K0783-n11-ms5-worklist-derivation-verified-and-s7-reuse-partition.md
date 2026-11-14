@@ -870,3 +870,14 @@ unified merge chain head 1,154（7aaa7d83 + 625b0e0c の二重独立実行済み
 解消計数はmanifest被覆の前進であり、盤全体の勝敗ではない。WIN7証明書は個別7石rootの深さ10以内のWINのみを証明する。標準11×11空盤、二石root `{49,60}`・`{59,60}`、S2 `{59,60}`、class2・class4は引き続き **UNKNOWN**。
 
 成果物: [fold再計算JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-after-cost70c-warm3-recompute-20261115.json)、[ranking CSV](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-s5-ranking-after-cost70c-warm3-20261115.csv)、[top-candidates CSV](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-top-candidates-s6-after-cost70c-warm3-20261115.csv)、[foldスクリプト](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_after70cwarm3_20261115.py)、[batch-3 records JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70c-warm-batch3-records-20261115.json)、[log](../../log/2026-11-15-n11-class2-cost70c-warm-batch3-fold.md)。
+
+## 2026-11-15: cost-69f残り4証明書の公開 — band 9/9全証明書化、chain head不変
+
+自レーンがcost-69f残り4 WIN7証明書（bits 2/94/109/119）を抽出・BigInt独立検証・公開し、**cost-69f sweepの9 WIN7-D10全件にrepo形式の独立検証済み証明書が揃った**（[log](../../log/2026-11-15-n11-class2-lane-cost69f-remaining-certificates.md)）。
+
+- rows 53,449〜71,485・抽出節点20,795,895〜23,677,579・fbt_drops 0全件。BigInt独立検証4件全PASS（sub-roots 58/56/60/61 = loser mobility = `legal_candidates.py` 独立列挙と一致、union 0/0、terminal 13..17、行sorted-unique）。v15 anchorは4件ともloss=true・節点数照合（16,285,738 / 15,200,842 / 13,955,169 / 13,661,829）。
+- 4件とも1.75MB超のためrepo慣例の2分割（行境界分割・連結md5==全体md5検証済み）とし、8 partを1コミット1 part・"(N/8)"形式で公開した。push直前のtarget dir listingで `^bit(2|94|109|119)-` 衝突0を確認した際、**前段のbit2 part1of2 push試行は着地していなかった**（dirに5ファイルのみ）ことが判明したため、(1/8)から全8件をpushし直した。push後、8 part全件のremote git blob shaをdir listingと `blob <size>\0`+内容sha1 のlocal計算で照合し **8/8一致** を確認した（target dirは13ファイル）。
+- 記録JSONは5件版（並走の独立監査が参照中のため上書きせず）とは別の新規ファイル [class2-lane-cost69f-win7-certificates-2-20261115.json](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost69f-win7-certificates-2-20261115.json) に統合し、`uncertified_bits_after: []` としてsweepの被覆状況を確定させた。
+- 4 rootのreceiptは既にraw sweep + v15 anchorとして9 receipt fold（chain head 1,163）に含まれているため、frontier計数は不変（解消S6 1,163・残り6,684・費用527,280・open需要4,954/391,003・残りS5軌道175）。本公開は9 receiptの証明provenanceを証明書で補完するもので、新たな軌道解消を加えない。
+
+解消計数はmanifest被覆の前進であり、盤全体の勝敗ではない。WIN7証明書は個別7石rootの深さ10以内のWINのみを証明する。標準11×11空盤、二石root `{49,60}`・`{59,60}`、S2 `{59,60}`、class2・class4は引き続き **UNKNOWN**。
