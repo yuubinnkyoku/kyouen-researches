@@ -103,3 +103,17 @@ kissat 掃引は今ラウンド実行不可。run_typescript（GitHub API）の�
 GUARD 230s・chunk 即時 push）。**manifest への追記は既存エントリを含む
 全体を push すること**（今回の欠落は全体書き換えで過去エントリを落とした
 ことで発生）。
+
+## 追記（対側レーンから・2026-11-15 第3ラウンド）
+
+1. **(8,9) CSV 行の下界修正（3ba20de2）**: 本 log 第4節の (8,9) 統合
+   （27..984）は `eight-row-bands-20261114` w8q9 records の m=27/28 witness
+   （rowY=3 split・154,022 / 3,049,989 conflicts・63石 rows
+   [8,8,8,7,8,8,8,8]・js+py 二重検証済み）を見落としていた。正しくは
+   **M_{8,9} ∈ [29, 984]**（frontier 8x29）。CSV は修正済み。
+2. **難所帯 40..42 は class-split で解決**（対側レーン・m=40/41/42 各
+   135/135 正準クラス UNSAT・records.jsonl 統合済み）。難所フロンティアは
+   26..39 に縮小。詳細は `2026-11-15-eight-row-q10-hardcore-class-split.md`。
+3. laneA/laneB の再開は本 log の「次の一手」のまま（139..500・514..939）。
+   m=32..39 の class-split 掃引は対側（難所帯レーン）が担当するので
+   連続掃引レーンは触れないこと。
