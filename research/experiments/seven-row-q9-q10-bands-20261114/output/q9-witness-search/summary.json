@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "note": "(7,9) def-mode (no lex) witness search + witness-free band, kissat 4.0.4; SAT witnesses dual-verified (sat.js verifyConfig census-free JS + verify_witness.py Python Fraction); lex=H,V,HV rows are second-encoding cross-checks of UNSAT widths",
+  "total": 21,
+  "sat": 9,
+  "unsat": 12,
+  "satWidths": [
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ],
+  "unsatWidths": [
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    24,
+    33
+  ],
+  "allWitnessesDualVerified": true
+}
