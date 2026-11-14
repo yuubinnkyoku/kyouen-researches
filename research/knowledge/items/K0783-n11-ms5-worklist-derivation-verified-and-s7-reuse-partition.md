@@ -415,7 +415,18 @@ evidence: 公開manifestの辞書順md5は0e95a438dbcb486368393de9c73fc21e。94�
   note: cost-70c後からcost-71bの3 receiptを追加したmanifest-level frontier再計算
 - path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71b-bigint-independent-audit-20261115.json
   role: verifier
-  note: cost-71b bits 109/21/105の独立BigInt検証結果
+  note: cost-71b bits 109/21/105の独立BigInt検証結果- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72-batches1-5-audit-20261115.json
+  role: data
+  note: cost72 raw batch 1–5の40候補をclaim計画と照合。bit52は未証明のWIN7-D10候補
+- path: research/log/2026-11-15-n11-class2-cost72-partial-batches1-5-audit.md
+  role: log
+  note: cost69e v2とcost70c/71bのfrontier基準差、およびcost72部分監査を記録
+- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost69e-recompute-20261115.json
+  role: data
+  note: cost69e 10 receipt・schema v2の独立再計算（merged baseline 1012から1023）
+- path: research/log/2026-11-15-class2-lane-cost69e-win7.md
+  role: log
+  note: cost69e全11 WIN7候補の証明書化と10 receipt後のfrontier記録
 ---
 
 ## 主張
@@ -588,3 +599,15 @@ cost-60bのwarm rebuild証明書17件（bits 8,22,26,28,32,40,43,44,74,77,87,88,
 cost-71bではbits 109/21/105の3証明書がBigInt独立検査済み。bit21はcost-60b warm bit22と同じroot・同一blobであり、二重計上しない。公開済みcost-71b再計算後はS6解消1,026、残り6,821、残り費用537,604、開いた類の必要S6 5,091・費用401,327。最良coverable class2五石親は残り5軌道・費用372となった。
 
 ただし、cost-60b warm17件のうちbit22以外の16件は、このcost-71b frontierにまだ統合されていない。完全なD4親被覆を再計算し、既存receiptとの重複を除いてから追加の解消数を報告する。標準11×11空盤、二石root `{49,60}`、S2 `{59,60}`、class2・class4はいずれも引き続き **UNKNOWN**。
+
+## 2026-11-15: cost69e v2の追加receiptとcost72の途中監査
+
+cost69eの第二warm rebuild（bits 89/94/108/116）を含む10 receipt版の再計算が公開された。merged baseline 1,012から1,023解消へ進み、残り6,824・費用537,833、開いた類の必要S6 5,094・費用401,556。これはcost69e六receipt版ではなく10 receipt版の状態である。
+
+前節に記したcost70c/71b後の1,026解消は、cost69e六receipt版（1,019）を基準にした別の再計算であり、cost69e第二warm batchの4 receiptを含まない。したがって1,023と1,026は別々の枝の集計で、単純加算・比較をしない。両方を重複排除して一つにまとめたfrontier再計算はまだない。
+
+cost72は五石親 `00000000000000803202000000000000` の六石子 `00000000000000803202000000000200`（費用72、需要c1=0,c2=2,c4=0）を対象とする72候補探索。raw batch 1–5を照合し、40候補すべてがclaimのbit列と一致、重複0、候補節点43,875,519、WIN7-D10候補1件（bit52・7,498,054節点）、REFUTED-D10 39件、打切り0。5つのpilot controlは全て3,402節点で一致した。
+
+bit52はまだ探索候補であり、証明書抽出・独立検証前。batch 6–9の32候補も未回収なのでcost72 sweepはin-flight、frontierへの寄与は0として扱う。次は残りbatchを回収し、bit52の交差検査と証明書化の有無を確認する。
+
+標準11×11空盤、二石root `{49,60}`、S2 `{59,60}`、class2・class4はいずれも **UNKNOWN**。
