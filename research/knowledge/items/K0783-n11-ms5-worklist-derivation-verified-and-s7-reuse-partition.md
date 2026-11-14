@@ -505,8 +505,26 @@ artifacts:
 - path: research/log/2026-11-15-n11-class2-cost69f-sweep-complete-raw-audit.md
   role: log
   note: cost69f 69候補完了の集計、D4重複監査、証明境界
+- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost69f-win7-certificates-2-20261115.json
+  role: manifest
+  note: cost69fの9 WIN7-D10証明書を統合した現行記録。uncertified_bits_afterは空
+- path: research/log/2026-11-15-n11-class2-lane-cost69f-remaining-certificates.md
+  role: log
+  note: cost69f残り4証明書の抽出・独立検証と9/9完了の記録
+- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost69f_second_independent_verification_20261115.mjs
+  role: verifier
+  note: split証明書の再検査、hash、4x4整数行列式、D4親被覆、証明書済みfrontierを再現
+- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/cost69f-second-independent-verification-20261115.json
+  role: audit
+  note: bits2/94/109/119の第二独立検査結果と保存hashを記録
+- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost69f-certificate-backed-recompute-20261115.json
+  role: data
+  note: cost69fの9 receiptすべてを証明書済みとして反映したfrontier派生出力
+- path: research/log/2026-11-15-n11-class2-cost69f-second-independent-verification.md
+  role: log
+  note: 4証明書の第二検査、根合法手数の別方式照合、frontier証拠等級更新
 scope: n11 S2 {59,60} milestone-5のワークリストとS7証明書再利用。局所S6と三石位置のblocker類1・2の条件付き勝敗を含むが、二石rootや空盤の勝敗は含まない。
-evidence: 公開manifestの辞書順md5は0e95a438dbcb486368393de9c73fc21e。94オラクルの全744対称像を使い補完候補15072件を独立列挙。類1の新規WIN7戦略証明書13件・LOSS7証明書2件、類2のWIN7証明書54件と3六石位置の全62子・全72子・全64子のLOSS7証明書を独立検査。類1の五石位置の40六石軌道は既存記録と合わせて全て先手WIN。既存の一部証明書本体は別保管であり、公開監査記録に依存する。 2026-11-15 cost72 bit111 WIN7証明書を独立検査し、cost75b統合後の対象S5親を局所的に2軌道・費用147から1軌道・費用75へ縮小した。global frontierは未再計算。2026-11-15 warm multiband 35 WIN7 receipt後の公開frontierは解消S6 1,109・残り6,738・費用531,295・open需要5,008/395,018。35 rootを同実験の17 verified manifest（WIN7 77・LOSS7 200）、central LOSS7 parent-lift 274鍵、category-1候補396行とD4照合し、衝突0（category-1行は証明書とは数えない）。
+evidence: 公開manifestの辞書順md5は0e95a438dbcb486368393de9c73fc21e。94オラクルの全744対称像を使い補完候補15072件を独立列挙。類1の新規WIN7戦略証明書13件・LOSS7証明書2件、類2のWIN7証明書54件と3六石位置の全62子・全72子・全64子のLOSS7証明書を独立検査。類1の五石位置の40六石軌道は既存記録と合わせて全て先手WIN。既存の一部証明書本体は別保管であり、公開監査記録に依存する。 2026-11-15 cost72 bit111 WIN7証明書を独立検査し、cost75b統合後の対象S5親を局所的に2軌道・費用147から1軌道・費用75へ縮小した。global frontierは未再計算。2026-11-15 warm multiband 35 WIN7 receipt後の公開frontierは解消S6 1,109・残り6,738・費用531,295・open需要5,008/395,018。35 rootを同実験の17 verified manifest（WIN7 77・LOSS7 200）、central LOSS7 parent-lift 274鍵、category-1候補396行とD4照合し、衝突0（category-1行は証明書とは数えない）。; 2026-11-15 cost69f残り4証明書(bits2/94/109/119)を別V8実行で再検査し全PASS。262,236行、検証訪問560,273局面、union 0/0、4×4行列式による根合法手数一致、8 partのGit blob SHA1・MD5/SHA256一致。cost69fの+9 S6軌道が全て証明書済み
 ---
 
 ## 主張
@@ -881,3 +899,40 @@ unified merge chain head 1,154（7aaa7d83 + 625b0e0c の二重独立実行済み
 - 4 rootのreceiptは既にraw sweep + v15 anchorとして9 receipt fold（chain head 1,163）に含まれているため、frontier計数は不変（解消S6 1,163・残り6,684・費用527,280・open需要4,954/391,003・残りS5軌道175）。本公開は9 receiptの証明provenanceを証明書で補完するもので、新たな軌道解消を加えない。
 
 解消計数はmanifest被覆の前進であり、盤全体の勝敗ではない。WIN7証明書は個別7石rootの深さ10以内のWINのみを証明する。標準11×11空盤、二石root `{49,60}`・`{59,60}`、S2 `{59,60}`、class2・class4は引き続き **UNKNOWN**。
+
+
+## 2026-11-15: cost69fの4証明書を第二系統で再検査
+
+先行レーンが公開したbits 2/94/109/119の分割証明書をGit blobから再取得し、別のV8実行でゲーム木検査を再実施した。探索器、判定cache、探索結果は使っていない。さらに、根の合法手数は4×4整数行列式の置換展開で別に列挙し、BigInt 3×3余因子展開の検査と照合した。
+
+| bit | 証明書行 | 根の合法手 | 訪問局面 | 終局局面 | v15 anchor節点 |
+|---:|---:|---:|---:|---:|---:|
+| 2 | 69,879 | 58 | 142,740 | 22,921 | 16,285,738 |
+| 94 | 53,449 | 56 | 120,250 | 20,161 | 15,200,842 |
+| 109 | 71,485 | 60 | 153,920 | 26,397 | 13,955,169 |
+| 119 | 67,423 | 61 | 143,363 | 23,779 | 13,661,829 |
+| **計** | **262,236** | **235** | **560,273** | **93,258** | **59,103,578** |
+
+4件すべてPASS。7石rootの安全性、全sub-root、strategy行の整列・一意性、union missing/extra=0/0、終局石数13〜17を確認した。根合法手数58/56/60/61は、別方式の4×4行列式でも一致した。連結後のMD5・SHA256・byte数、8個のpartのGit blob SHA1・行数・個別MD5も公開記録と一致。D4で再導出した親軌道集合も、frontier foldの新規被覆一覧と矛盾しない。
+
+これにより、cost69fの9 WIN7-D10 receiptが増やしたS6 manifest軌道は、全9軌道とも証明書で裏付けられた。元のreceipt foldは変更せず、9件すべてを証明書済みとする派生frontierを別ファイルに保存した。
+
+- 解消済みS6 manifest軌道: **1,163**（baseline 1,154からの+9は全て証明書済み）
+- 残りS6軌道: 6,684
+- 残り七石目費用: 527,280
+- open class需要: 4,954軌道 / 391,003費用
+- 残りS5軌道: 175
+- 最良class2 S5 00000000000000809102000000000000: **7軌道 / 519費用**
+
+bit2証明書により、S6 child 00000000000000809102000000000008 は証明書レベルで閉じた。ただし親S5には7軌道残っているため、S5自体は未解決。1,163は証明済みS6被覆数であって、11×11全体の勝敗や距離ではない。
+
+cost65j bit113の7石rootはcost69f bit2と同じS6親軌道を1件共有するが、S7のD4軌道は別。bit2が証明済みになったため、将来bit113が証明書化されても共通親を二重計上しない。cost69gの次候補は別レーンがclaim済みなので探索を重ねていない。cost65j childも最新claimではcanonical headで既被覆とされており、再開時に最新frontierで再判定する。
+
+再現用の検査スクリプト、第二監査JSON、証明書済みfrontierは以下に保存した。
+
+- [第二独立検証JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/cost69f-second-independent-verification-20261115.json)
+- [証明書済みfrontier](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost69f-certificate-backed-recompute-20261115.json)
+- [再現スクリプト](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost69f_second_independent_verification_20261115.mjs)
+- [監査ログ](../../log/2026-11-15-n11-class2-cost69f-second-independent-verification.md)
+
+標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class2・class4は引き続き **UNKNOWN**。
