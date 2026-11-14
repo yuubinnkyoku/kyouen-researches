@@ -1,0 +1,49 @@
+{
+ "date": "2026-11-14",
+ "tool": "extend5.js - pruned removal+addition column-extension enumeration (deterministic)",
+ "pool": [
+  "6x28 22-stone (sa-frontier3)",
+  "6x27 23-stone (sa-frontier-extension)",
+  "6x26 23-stone x2 (not used: target needs dm=4)",
+  "6x29 23-stone (K0815 extension of the 6x28 22-stone witness)"
+ ],
+ "prune_exactness": "additions may only use new-column cells NOT on a >=4-kept-stone board curve (filling such a cell would put a 5th stone on the curve and is unsafe); the enumeration over that restricted space is exact. Removal sets with >12 unblocked new cells were skipped (heuristic exclusion, not proven absent). verifyConfig (census-free independent verifier) evaluated every surviving candidate.",
+ "runs": [
+  {
+   "target_M": 30,
+   "bases": "28x22(r<=2) 27x23(r<=2) 29x23(r<=2)",
+   "removal_sets": 2424,
+   "candidates": 136831,
+   "witnesses": 0
+  },
+  {
+   "target_M": 30,
+   "bases": "29x23(r<=3, both offsets)",
+   "removal_sets": 4096,
+   "candidates": 36730,
+   "witnesses": 0
+  },
+  {
+   "target_M": 31,
+   "bases": "28x22(dm=3,r<=2)",
+   "removal_sets": 1016,
+   "candidates": 86915,
+   "witnesses": 0
+  },
+  {
+   "target_M": 31,
+   "bases": "29x23(dm=2,r<=2)",
+   "removal_sets": 831,
+   "candidates": 13326,
+   "witnesses": 0
+  },
+  {
+   "target_M": 32,
+   "bases": "29x23(dm=3,r<=2)",
+   "removal_sets": 1108,
+   "candidates": 36352,
+   "witnesses": 0
+  }
+ ],
+ "conclusion": "No 6x30/6x31/6x32 deficient maximal witness exists within removal<=2 (removal<=3 at dm=1 from 6x29) of the known 6x26..6x29 witness pool over <=3-column windows, all offsets. Bounded non-discovery: the next 6x30 witness, if any, must be structurally different from all known witnesses' near neighborhoods. Not an absence proof (base pool limited; removal sets with >12 unblocked new cells skipped)."
+}

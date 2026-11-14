@@ -1,0 +1,47 @@
+{
+ "session": "class2-lane cost-68b sweep (long-term lane, 2026-11-14)",
+ "s6_child_hex": "00000000000000809082000040000000",
+ "s5_parent_hex": "00000000000000809082000000000000",
+ "s6_s7_edge_cost": 68,
+ "demand_classes": {
+  "c1": 2,
+  "c2": 2,
+  "c4": 0
+ },
+ "candidates": 68,
+ "win7_d10": 2,
+ "win7_bits": [
+  23,
+  118
+ ],
+ "refuted_d10": 66,
+ "capped": 0,
+ "total_nodes": 323716265,
+ "terminal_stone_range_all": [
+  13,
+  17
+ ],
+ "heaviest_bits": [
+  18,
+  112,
+  33
+ ],
+ "heaviest_fresh_rerun_node_exact": true,
+ "win7_bits_fresh_rerun_node_exact": true,
+ "pilot_d6_controls": 8,
+ "pilot_d6_nodes": 5949,
+ "engine": "class4_child1_runner.ts (v15 exact rules, close-first AND at d>=8, cap 1e9)",
+ "candidate_enumerator": "legal_candidates.py (Bareiss 4x4), 68 legal candidates, bit-exact with s6_s7_edge_cost",
+ "raw_batches": [
+  "class2-lane-cost68b-raw-batch1-20261114.jsonl",
+  "class2-lane-cost68b-raw-batch2-20261114.jsonl",
+  "class2-lane-cost68b-raw-batch3-20261114.jsonl",
+  "class2-lane-cost68b-raw-batch4-20261114.jsonl",
+  "class2-lane-cost68b-raw-batch5-20261114.jsonl",
+  "class2-lane-cost68b-raw-batch6-20261114.jsonl",
+  "class2-lane-cost68b-raw-batch7-20261114.jsonl",
+  "class2-lane-cost68b-raw-batch8-20261114.jsonl"
+ ],
+ "result": "2 WIN7-D10 (bits 23,118), 66 REFUTED-D10, 0 capped",
+ "note": "named cost-68b because class2-lane-cost68-* is the old class-2 blocker's child; this child belongs to the new target S5 00000000000000809082000000000000. An execution-environment reset occurred mid-sweep (after batch 4); the deterministic rerun reproduced all previous batches node-exact (bit23 5,693,395 nodes identical pre/post reset)."
+}

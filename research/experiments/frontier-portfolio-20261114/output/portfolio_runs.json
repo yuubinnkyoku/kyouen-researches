@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-14",
+  "solver": "kissat 4.0.4 (official linux-amd64 release binary)",
+  "encoding": "K0810 encode()/toDimacs verbatim; extended = total-stone counter <= cap + top-half deficient-row clause (dump2-style); rowfixed = extended + unit clause fixing the deficient row (dump3)",
+  "permutation": "xorshift variable-renumbering + clause/literal shuffle (permute.js); SAT models unpermuted before extraction (unpermute.js)",
+  "controls": [
+    {"instance": "2x8 q=4 cap=5", "expected": "SAT (K0796 5-stone witness)", "result": "SAT via permuted instance", "witness": [[0,0],[4,0],[2,1],[3,1],[4,1]], "verify": "safe+maximal PASS (sat.js census-free verifier)"},
+    {"instance": "2x9 q=4 cap=5", "expected": "UNSAT (K0069 M_{2,4}=9)", "result": "UNSAT"}
+  ],
+  "runs": [
+    {"w":6,"m":30,"q":5,"cap":23,"enc":"extended","seed":1,"result":"timeout","conflicts":null,"seconds":280,"note":"-q run, no stats"},
+    {"w":6,"m":30,"q":5,"cap":23,"enc":"extended","seed":2,"result":"timeout","conflicts":863227,"decisions":10933093,"seconds":272.69},
+    {"w":6,"m":30,"q":5,"cap":23,"enc":"rowfixed","rowY":0,"seed":61,"result":"timeout","conflicts":733294,"decisions":9150446,"seconds":258},
+    {"w":6,"m":23,"q":6,"cap":29,"enc":"extended","seed":11,"result":"timeout","conflicts":1792902,"decisions":11416319,"seconds":262},
+    {"w":6,"m":21,"q":7,"cap":35,"enc":"extended","seed":21,"result":"timeout","conflicts":3626548,"decisions":11284397,"seconds":262},
+    {"w":5,"m":22,"q":6,"cap":24,"enc":"extended","seed":31,"result":"timeout","conflicts":2877252,"decisions":9821711,"seconds":262},
+    {"w":6,"m":19,"q":8,"cap":41,"enc":"extended","seed":41,"result":"timeout","conflicts":4363551,"decisions":8769848,"seconds":262},
+    {"w":5,"m":20,"q":7,"cap":29,"enc":"rowfixed","rowY":0,"seed":51,"result":"timeout","conflicts":4680968,"decisions":8492407,"seconds":257}
+  ],
+  "all_undecided_note": "all runs timeout; not absence evidence",
+  "m19_q57_excluded": "5x19 q=7 cap=29 is excluded from the portfolio: already decided UNSAT by the K0738-K0759 complete occupancy enumeration (no deficient maximal safe configuration on 5x19)",
+  "q57_witness_recheck": {
+    "source": "research/experiments/fixed-width-frontier-20261005/output/q57_independent_witness.json",
+    "board": "5x18 q=7",
+    "size": 29, "row_counts": [5,6,6,6,6],
+    "verify": "safe+maximal PASS (sat.js census-free verifier, this session)",
+    "same_stones_on_5x19": "not-maximal at cell (18,0) - consistent with the enumeration result"
+  }
+}

@@ -8036,6 +8036,24 @@
 ## [research/experiments/n11-central-reply-frontier-20261012/scripts/select_small_s5_probe.py](../../../research/experiments/n11-central-reply-frontier-20261012/scripts/select_small_s5_probe.py)
 
 - [K0415](../items/K0415-n11-opening-first-move-d4-partial-classification.md) (verifier): 上位中央rootのUNKNOWN S4に必要なS5 exact子数と共有効果を測定
+## [research/experiments/n11-class2-blocker-closure-20261114/audit_closure.py](../../../research/experiments/n11-class2-blocker-closure-20261114/audit_closure.py)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): 類2候補の全六石子とWIN7監査記録、blockerからの合法手を2幾何判定で照合
+## [research/experiments/n11-class2-blocker-closure-20261114/closure-audit.json](../../../research/experiments/n11-class2-blocker-closure-20261114/closure-audit.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 五石位置の41六石軌道とblocker 27・93への手の照合
+## [research/experiments/n11-class2-blocker-closure-20261114/key-certificates-audit.json](../../../research/experiments/n11-class2-blocker-closure-20261114/key-certificates-audit.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 主要2証明書のSHA-256と独立検証結果
+## [research/experiments/n11-class2-blocker-closure-20261114/proof.md](../../../research/experiments/n11-class2-blocker-closure-20261114/proof.md)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (proof): 類2 blocker 27・93の条件付き閉鎖と信頼範囲
+## [research/experiments/n11-class2-blocker-closure-20261114/s6-witnesses.csv](../../../research/experiments/n11-class2-blocker-closure-20261114/s6-witnesses.csv)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (certificate): 各六石軌道のWIN7子・合法手・監査記録の所在
+## [research/experiments/n11-class2-blocker-closure-20261114/verify_key_certificates.py](../../../research/experiments/n11-class2-blocker-closure-20261114/verify_key_certificates.py)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): cost-68の主要2証明書をPythonの整数行列式検査器で再検証
 ## [research/experiments/n11-classa-decompose-20261110/scripts/blockers_classA_decompose.ts](../../../research/experiments/n11-classa-decompose-20261110/scripts/blockers_classA_decompose.ts)
 
 - [K0724](../items/K0724-n11-classa-decomposition.md) (source): 純TS再現（W4=FW78部分集合の単純化、BigInt盤、Bareiss幾何）
@@ -8640,6 +8658,9 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/candidate-completeness-audit.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/candidate-completeness-audit.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 全15072件と公開表に欠ける6309件の集計
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-merged-recompute-20261114.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-merged-recompute-20261114.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 並行レーンの公開監査記録を統合した残作業のスナップショット
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class1-closure-audit.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class1-closure-audit.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 五石位置の40六石軌道とblocker 5・115への手の照合
@@ -8663,7 +8684,7 @@
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (certificate): 追加WIN7終局戦略証明書
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-batch1b-progress-audit.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-batch1b-progress-audit.json)
 
-- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 残六石7208軌道と類2候補の残32軌道
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 並行レーンの追加証明前のスナップショット。残六石7208軌道
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-batch2-certificates-verified.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-batch2-certificates-verified.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (manifest): 追加2証明書のSHA-256と検証結果
