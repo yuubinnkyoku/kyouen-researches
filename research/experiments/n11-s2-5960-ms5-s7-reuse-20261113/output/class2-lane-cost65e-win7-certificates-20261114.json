@@ -1,0 +1,58 @@
+{
+  "session": "class2-lane cost-65e WIN7 certificate (long-term lane session 11 second run, 2026-11-14)",
+  "child_hex": "00000000000000809102000000800000",
+  "certificates": [
+    {
+      "bit": 107,
+      "root_hex": "00000800000000809102000000800000",
+      "verdict": "WIN7",
+      "rows": 18930,
+      "extraction_nodes": 2523928,
+      "extraction": "blind extractBatch (empty kill table, FBS=1<<20): fbt_drops=0, fatal=null, all 44 per-move extractions ok and uncapped",
+      "rows_sorted_unique": true,
+      "root_check": {
+        "stones": 7,
+        "loser_mobility": 44,
+        "independent_enumeration_legal": 44,
+        "match": true
+      },
+      "sub_roots_verified": 44,
+      "sub_roots_pass": 44,
+      "union_missing": 0,
+      "union_extra": 0,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "md5": "89fe2214aa925b12100d9e924752924c",
+      "sha256": "ac656690280ef9f2162936fcc48504902840ac1f24315aa3a9323c84a778c2e9",
+      "file": "class2-lane-cost65e-certificates/bit107-root-00000800000000809102000000800000.cert.part1of2 + .part2of2 (line-boundary split at line 9466; cat to rejoin, joined md5 89fe2214aa925b12100d9e924752924c)",
+      "root_not_among_existing": true,
+      "existing_roots_checked": "root hex grepped against all 36 published win7-certificates manifests on main (incl. the fresh cost-61d/61e and cost-63a bit-119 receipts): 0 hits"
+    }
+  ],
+  "unverified_win7_bits": [
+    1,
+    2,
+    7,
+    26,
+    29,
+    31,
+    32,
+    33,
+    36,
+    42,
+    46,
+    90,
+    94,
+    105,
+    106,
+    111,
+    114,
+    116,
+    118,
+    120
+  ],
+  "unverified_note": "search verdicts from the completed sweep record (class2-lane-cost65e-sweep-20261114.json); certificates not yet extracted; the single verified bit-107 receipt suffices to cover the S6 child orbit within the WIN7-D10 receipt framework; this child is unusually receipt-rich (21/65 WIN7)",
+  "unknown_status": "11x11 empty board, two-stone root {49,60}, S2 {59,60}, class 2, class 4: UNKNOWN"
+}

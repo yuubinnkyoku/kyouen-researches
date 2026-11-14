@@ -1,0 +1,144 @@
+{
+  "schema": "n11-class2-lane-cost65e-sweep-20261114-v1",
+  "date": "2026-11-14",
+  "session": "long-term lane session 11 second run (2026-11-14)",
+  "s5_parent_hex": "00000000000000809102000000000000",
+  "s6_child_hex": "00000000000000809102000000800000",
+  "s6_s7_edge_cost": 65,
+  "demand_classes": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+  },
+  "role": "cheapest remaining unswept child (tied with 00000000000000809102000080000000) of the class-2 target S5 00000000000000809102000000000000 (37 orbits / 2,658 after the cost-63a receipt); third child of that S5 swept",
+  "candidate_enumeration": "legal_candidates.py independent Bareiss 4x4 enumeration: 65 legal candidates, bit-exact with the published edge cost 65; candidate list recorded in class2-lane-cost65e-inflight-20261114.json",
+  "win7_d10": 21,
+  "win7_bits": [
+    1,
+    2,
+    7,
+    26,
+    29,
+    31,
+    32,
+    33,
+    36,
+    42,
+    46,
+    90,
+    94,
+    105,
+    106,
+    107,
+    111,
+    114,
+    116,
+    118,
+    120
+  ],
+  "win7_roots": [
+    "00000000000000809102000000800002",
+    "00000000000000809102000000800004",
+    "00000000000000809102000000800080",
+    "00000000000000809102000004800000",
+    "00000000000000809102000020800000",
+    "00000000000000809102000080800000",
+    "00000000000000809102000100800000",
+    "00000000000000809102000200800000",
+    "00000000000000809102001000800000",
+    "00000000000000809102040000800000",
+    "00000000000000809102400000800000",
+    "00000000040000809102000000800000",
+    "00000000400000809102000000800000",
+    "00000200000000809102000000800000",
+    "00000400000000809102000000800000",
+    "00000800000000809102000000800000",
+    "00008000000000809102000000800000",
+    "00040000000000809102000000800000",
+    "00100000000000809102000000800000",
+    "00400000000000809102000000800000",
+    "01000000000000809102000000800000"
+  ],
+  "verdict": "WIN7",
+  "refuted_d10": 44,
+  "capped": 0,
+  "total_nodes": 308092253,
+  "pilot_d6_controls": "loss=false at exactly 5,949 nodes in all 9 batch invocations (identical control lines)",
+  "terminal_stone_range_all": [
+    [
+      13,
+      17
+    ]
+  ],
+  "receipt_density_note": "21/65 WIN7-D10 - the most receipt-rich class2-lane child swept so far (cost-73a: 1/73, cost-62a: 11/62, cost-63a: 10/63); greatly reduces the uncoverability risk of this S5 target",
+  "heaviest_bits": [
+    {
+      "bit": 102,
+      "nodes": 13409210
+    },
+    {
+      "bit": 88,
+      "nodes": 13397346
+    },
+    {
+      "bit": 120,
+      "nodes": 12424487,
+      "win7": true
+    },
+    {
+      "bit": 94,
+      "nodes": 11895967,
+      "win7": true
+    },
+    {
+      "bit": 114,
+      "nodes": 11691638,
+      "win7": true
+    }
+  ],
+  "heaviest_fresh_rerun_node_exact": "bits 102 (13,409,210) and 88 (13,397,346) plus the WIN7s 120 (12,424,487) and 107 (1,331,774, cheapest WIN7) re-solved fresh in separate processes after the sweep: node counts identical",
+  "cross_engine_check": "runner_fbs20.ts (repo FBS=1<<20 instrumented engine): bits 102/88/120 verdicts AND node counts bit-exact identical, fbtDrops=0, fbtMaxProbe<=5 (class2-lane-cost65e-fbs20-crosscheck-20261114.jsonl)",
+  "certificate": {
+    "bit": 107,
+    "root_hex": "00000800000000809102000000800000",
+    "root_check": "7 stones, loserMobility 44 = independent legal_candidates.py enumeration",
+    "rows": 18930,
+    "extraction_nodes": 2523928,
+    "extraction": "cert_driver68.ts over class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table), FBS=1<<20, single batch over all 44 loser first-moves, fbt_drops=0, fatal=null, all 44 per-move extractions ok and uncapped; rows sorted (no duplicates) before verification per the established extractor note",
+    "fbt_drops": 0,
+    "fatal": null,
+    "verification": "verify_bit7_win7_cert.ts: root-check PASS (stones=7, loserMobility=44); 44/44 sub-roots PASS (all seen>0, terminals>0); union of consumed winner states equals the 18,930-row set exactly (0 missing / 0 extra); terminal stone ranges per sub-root within [13,17]",
+    "md5_joined": "89fe2214aa925b12100d9e924752924752924c",
+    "sha256": "ac656690280ef9f2162936fcc48504902840ac1f24315aa3a9323c84a778c2e9",
+    "split": "certificate pushed as part1of2 (9,466 lines, 342,116 bytes, md5 ce977d981e640766bd7d7b741531b7d9) + part2of2 (9,466 lines, 341,299 bytes, md5 016661db22bc261f8243b05a7ad57a96); cat part1of2 part2of2 > bit107.sorted.cert (concat md5 = 89fe2214aa925b12100d9e924752924c, verified JOIN-IDENTICAL locally and by commit-SHA raw md5 after landing)",
+    "root_not_among_existing": "root hex grepped against all 36 published win7-certificates manifests on main: 0 hits"
+  },
+  "unverified_win7_bits": [
+    1,
+    2,
+    7,
+    26,
+    29,
+    31,
+    32,
+    33,
+    36,
+    42,
+    46,
+    90,
+    94,
+    105,
+    106,
+    111,
+    114,
+    116,
+    118,
+    120
+  ],
+  "unverified_note": "search verdicts from this completed sweep; certificates not yet extracted; the single verified bit-107 receipt suffices to cover the S6 child orbit within the WIN7-D10 receipt framework",
+  "raw_batches": "class2-lane-cost65e-raw-batch1..9-20261114.jsonl (65 candidate lines + pilot control per batch; batch1 = bits 0,1,2,4,7,8,9,10; batch2 = 11,12,15,17,18,19,20,21; batch3 = 22,26,29,31,32,33,34,35; batch4 = 36,41,42,44,46,47,53,54; batch5 = 66,75,76,77,79,81,85,86; batch6 = 88,90,94,95,96,97,98,99; batch7 = 102,103,105,106,107,108,109,110; batch8 = 111,112,113,114,116,117,118,119; batch9 = 120)",
+  "determinism_rerun_file": "class2-lane-cost65e-determinism-rerun-20261114.jsonl",
+  "fbs20_crosscheck_file": "class2-lane-cost65e-fbs20-crosscheck-20261114.jsonl",
+  "interpretation_guard": "WIN7-D10 is a winner-win-within-depth-10 from the individual 7-stone root only; REFUTED-D10 is the absence of such a win in that subtree; this record is not a claim about the 11x11 empty root / {49,60} / S2 {59,60} / class 2 / class 4 which remain UNKNOWN",
+  "unknown_status": "11x11 empty board, two-stone root {49,60}, S2 {59,60}, class 2, class 4: UNKNOWN"
+}
