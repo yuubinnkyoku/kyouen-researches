@@ -605,4 +605,3 @@ with (OUT / 'class-frontier-top-candidates-s6-after-cost63d.csv').open('w', newl
             w.writerow((cand['s5_hex'], row['s6_hex'], row['s6_s7_edge_cost'],
                         f"c1={d['c1']},c2={d['c2']},c4={d['c4']}"))
 print('written ranking + top-candidates CSVs (after-cost63d)')
-"}}]
