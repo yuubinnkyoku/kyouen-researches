@@ -74,3 +74,20 @@ DIMACS を吐いて kissat 4.0.4 で解いた。
 `wits/`（入力witness JSONL・`sa-frontier3`/`sa-frontier-extension`/`sa-row-deficient-witnesses`
 の output）を置いて実行する。verify_py.py は witness JSON を読む単体の Python 検証器
 （fractions 標準ライブラリのみ）。
+
+## 第2弾（同日・同一符号化・kissatのみ）
+
+| 対象 | 従来 | 新結果 | conflicts | 秒 |
+|---|---|---|---|---|
+| M_{6,8} | ≥18（41石@6×17） | **≥19**（41石@6×18・行 7,6,7,7,7,7） | 696,972 | 32 |
+| M_{5,6} | ≥20（24石@5×19・fastsat） | **≥22**（24石@5×20・5×21・行 4,5,5,5,5） | 328k/913k | 26/69 |
+| M_{6,7} | ≥20（35石@6×19・K0761） | **≥21**（35石@6×20・行 6,6,5,6,6,6） | 531,416 | 35 |
+
+未決着（timeout・非不在）: 6×30 q=5（838k）・6×23 q=6・5×22 q=6（2.77M）・
+6×19 q=8（4.52M）・6×21 q=7（2.98M）・5×19 q=7（5.54M）・5×20 q=7（5.28M）。
+5×19/5×20 (q=7) は fastsat の自作CDCLもtimeoutしていた最重量帯。
+拡張列挙の反復（fastsatのw56_19/w65_22/w68_12_38と自レーンの新witnessをプールに追加）では
+新たな m は得られず（6×22 q=5 の22石2石欠損witness→6×23 は既知帯内のみ）。
+
+実行記録: output/kissat_runs2.json。witness: output/w68_18.json・w56_20.json・w56_21.json・w67_20.json
+（すべて2系統検証PASS）。
