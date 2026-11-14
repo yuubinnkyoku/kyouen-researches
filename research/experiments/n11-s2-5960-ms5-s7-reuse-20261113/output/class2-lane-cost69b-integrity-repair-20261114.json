@@ -1,0 +1,32 @@
+{
+  "title": "n11 class2-lane raw-batch integrity audit + cost-69b line-wrap corruption repair",
+  "date": "2026-11-14",
+  "auditor": "long-term lane session 9 (remote-only audit while execution env unavailable)",
+  "finding": "cost-69b raw batch files B, C, D each contained one JSON row broken across two physical lines mid-token (bit 32 in B at 'termi|nalStoneRange', bit 86 in C at 'ter|minalStoneRange', bit 110 in D at 'capped|,fal'... pattern: hard line wrap inserted mid-string). As pushed, strict JSONL parsers recovered only 66/69 candidate rows (sum 292,561,827); the sweep record claims 69 rows / 305,754,861 nodes.",
+  "repair": "The 3 broken rows were reconstructed by rejoining each fragment pair; all field values were preserved verbatim (only the spurious line break was removed). After repair: 69 unique candidate rows, node sum exactly 305,754,861 == sweep record total_nodes, 0 capped, 0 WIN7 (bit rows all loss=false), 4/4 pilots at 5,949 nodes. The corrupted B/C/D files are overwritten in place with the repaired versions; batch A was intact.",
+  "other_audits_this_session": [
+    {
+      "tag": "cost-69c",
+      "result": "PASS: 69 rows/69 unique, pilots 9x5949, sum 440,238,688 == record, 0 capped, WIN7 {103} only, determinism {110,68,29,103} node-exact, root bit103 child|(1<<103) reproduced",
+      "commit": "see class2-lane-cost69c records"
+    },
+    {
+      "tag": "cost-69d",
+      "result": "PASS: 69 rows/69 unique, sum 296,122,077 == record, 0 capped, WIN7 none, determinism {114,20,34} node-exact"
+    },
+    {
+      "tag": "cost-70",
+      "result": "PASS: 70 rows/70 unique, pilots 9x5949, sum 380,930,330 == record, 0 capped, WIN7 none, determinism {112,86,94} node-exact"
+    },
+    {
+      "tag": "cost-70b",
+      "result": "PASS 8/8 incl cross-lane node-exact reproduction of bits 12/13/110/37 from an independent environment (see class2-lane-cost70b-remote-audit-20261114.json)"
+    },
+    {
+      "tag": "cost-71",
+      "result": "PASS 7/7 (see class2-lane-cost71-remote-audit-20261114.json)"
+    }
+  ],
+  "lesson": "Raw JSONL pushes must be verified with a strict per-line JSON.parse pass over the fetched remote content; a file that merely looks well-formed locally can acquire hard wraps in transport. All future raw batch pushes should include a remote line-parse receipt.",
+  "unknown_status": "11x11 empty board: UNKNOWN. Two-stone root {49,60}: UNKNOWN. S2 {59,60}: UNKNOWN. class 2 / class 4 blockers: UNKNOWN."
+}
