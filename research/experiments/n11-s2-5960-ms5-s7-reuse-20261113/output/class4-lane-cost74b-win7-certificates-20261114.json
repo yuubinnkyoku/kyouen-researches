@@ -1,0 +1,130 @@
+{
+ "schema": "n11-class4-lane-cost74b-win7-certificates-20261114-v1",
+ "date": "2026-11-14",
+ "target": {
+  "class4_lane_target_s5": "00000000020000003800000080000000",
+  "s6_child_hex": "00000000020000003801000080000000",
+  "s6_s7_edge_cost": 74,
+  "demand": "c1=0,c2=0,c4=3"
+ },
+ "engine": "v15 engine verbatim (scripts/class4_child1_runner.ts) for the sweep; class4_child1_cert_extractor_exact.ts (FBS=1<<20, probe 96, drop counter) for extraction; verify_bit7_win7_cert.ts (engine-independent exact Bareiss det4) for verification",
+ "summary": {
+  "win7_d10_bits": [
+   36,
+   53,
+   70,
+   72,
+   104,
+   117
+  ],
+  "total_certificate_rows": 259912,
+  "total_extraction_nodes": 89465448
+ },
+ "extraction_method": "per root: exact loser-first-move list enumerated by exact integer Bareiss over ALL C(7,3) triples of the root (engine legalMoves cross-checked bit-exact), one process per root via class4_child1_cert_extractor_exact.ts, fbt_drops=0 asserted, fatal=null, rows sort -u (no duplicates observed)",
+ "certificates": [
+  {
+   "bit": 36,
+   "root": "00000000020000003801001080000000",
+   "rows": 50433,
+   "extraction_nodes": 20700026,
+   "md5": "8d9a68e3db5f93248406459b43874f6d",
+   "certificate_path": "output/class4-lane-cost74b-certificates/n11_s7_00000000020000003801001080000000.cert",
+   "verification": {
+    "subroot_count": 58,
+    "union_diff": "0/0",
+    "root_check": "stones=7, loserMobility=58",
+    "terminal_range": [
+     13,
+     17
+    ]
+   }
+  },
+  {
+   "bit": 53,
+   "root": "00000000020000003821000080000000",
+   "rows": 41689,
+   "extraction_nodes": 12171472,
+   "md5": "c7592aafe1c4411491f50be4372e8374",
+   "certificate_path": "output/class4-lane-cost74b-certificates/n11_s7_00000000020000003821000080000000.cert",
+   "verification": {
+    "subroot_count": 57,
+    "union_diff": "0/0",
+    "root_check": "stones=7, loserMobility=57",
+    "terminal_range": [
+     13,
+     17
+    ]
+   }
+  },
+  {
+   "bit": 70,
+   "root": "00000000020000403801000080000000",
+   "rows": 36706,
+   "extraction_nodes": 9330042,
+   "md5": "24c558db6d68e6ff116ca86b234e38ef",
+   "certificate_path": "output/class4-lane-cost74b-certificates/n11_s7_00000000020000403801000080000000.cert",
+   "verification": {
+    "subroot_count": 55,
+    "union_diff": "0/0",
+    "root_check": "stones=7, loserMobility=55",
+    "terminal_range": [
+     13,
+     17
+    ]
+   }
+  },
+  {
+   "bit": 72,
+   "root": "00000000020001003801000080000000",
+   "rows": 19814,
+   "extraction_nodes": 4167467,
+   "md5": "5cf18914bee13c627aa00cc8c0c7ada2",
+   "certificate_path": "output/class4-lane-cost74b-certificates/n11_s7_00000000020001003801000080000000.cert",
+   "verification": {
+    "subroot_count": 50,
+    "union_diff": "0/0",
+    "root_check": "stones=7, loserMobility=50",
+    "terminal_range": [
+     13,
+     17
+    ]
+   }
+  },
+  {
+   "bit": 104,
+   "root": "00000100020000003801000080000000",
+   "rows": 51865,
+   "extraction_nodes": 16251991,
+   "md5": "442798d2fbb4eeb2a17edd6b6456c953",
+   "certificate_path": "output/class4-lane-cost74b-certificates/n11_s7_00000100020000003801000080000000.cert",
+   "verification": {
+    "subroot_count": 63,
+    "union_diff": "0/0",
+    "root_check": "stones=7, loserMobility=63",
+    "terminal_range": [
+     13,
+     17
+    ]
+   }
+  },
+  {
+   "bit": 117,
+   "root": "00200000020000003801000080000000",
+   "rows": 59805,
+   "extraction_nodes": 26844450,
+   "md5": "f17ac9f54c8f8d6b08796029be3f9068",
+   "certificate_path": "output/class4-lane-cost74b-certificates/n11_s7_00200000020000003801000080000000.cert",
+   "verification": {
+    "subroot_count": 64,
+    "union_diff": "0/0",
+    "root_check": "stones=7, loserMobility=64",
+    "terminal_range": [
+     13,
+     17
+    ],
+    "note": "remote file lacks the final trailing newline byte (known push transport artifact, precedent: cost-68 bit87); the remote version was fetched back and independently re-verified: all 64 sub-roots PASS, union 0/0, rows 59,805"
+   }
+  }
+ ],
+ "interpretation_guard": "each certificate proves only a winner win within depth 10 from the individual 7-stone root (loser to move). No statement about deeper play, the S5/S6 orbits, the two-stone root {49,60}, S2 {59,60}, or the 11x11 empty board, all of which remain UNKNOWN."
+}
