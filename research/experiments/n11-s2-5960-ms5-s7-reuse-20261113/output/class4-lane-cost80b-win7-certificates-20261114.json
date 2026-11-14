@@ -1,0 +1,54 @@
+{
+ "schema": "n11-class4-lane-cost80b-win7-certificates-20261114-v1",
+ "date": "2026-11-14",
+ "target": {
+  "class4_lane_target_s5": "00000000020000003800000080000000",
+  "s6_child_hex": "00000000020000003800040080000000",
+  "s6_s7_edge_cost": 80,
+  "demand": "c4=3"
+ },
+ "engine": "v15 engine verbatim (scripts/class4_child1_runner.ts) for the sweep; class4_child1_cert_extractor_exact.ts (FBS=1<<20, probe 96, drop counter) for extraction; verify_bit7_win7_cert.ts (engine-independent exact Bareiss det4) for verification",
+ "summary": {
+  "win7_d10_bits": [
+   50
+  ],
+  "total_new_certificate_rows": 61565,
+  "total_extraction_nodes": 19497704
+ },
+ "extraction_method": "per root: exact loser-first-move list enumerated by exact integer Bareiss over ALL C(7,3) triples of the root (legal_candidates.py protocol), one process per move-batch via class4_child1_cert_extractor_exact.ts (blind kill table: no entry for this child's moves, KILL[m] ?? null), fbt_drops=0 asserted both batches, fatal=null, rows sort -u (no duplicates observed)",
+ "certificates": [
+  {
+   "bit": 50,
+   "root": "00000000020000003804040080000000",
+   "rows": 61565,
+   "extraction_nodes": 19497704,
+   "extraction_batches": [
+    {
+     "moves": "0,2,3,8,10,11,14,15,16,18,19,21,25,28,29,32,38,40,41,43,44,45,46,51,53,54,66,67,69,70,71,72",
+     "nodes": 9557101,
+     "rows": 30749,
+     "fbt_drops": 0
+    },
+    {
+     "moves": "74,76,77,78,79,80,81,82,83,84,87,88,90,93,94,95,99,101,102,103,104,105,106,108,109,112,113,114,115,116,117,118,120",
+     "nodes": 9940603,
+     "rows": 38469,
+     "fbt_drops": 0
+    }
+   ],
+   "md5": "1ca210fee08212ba79632b5de46372ca",
+   "certificate_path": "output/class4-lane-cost80b-certificates/n11_s7_00000000020000003804040080000000.cert",
+   "verification": {
+    "subroot_count": 65,
+    "union_diff": "0/0",
+    "root_check": "stones=7, loserMobility=65 (matches the independent Bareiss enumeration of the root)",
+    "terminal_range": [
+     13,
+     17
+    ],
+    "verifier": "verify_bit7_win7_cert.ts --root-check + all 65 sub-roots in two batches with --consumed-out; consumed set == row set exactly (0 unexplained rows, 0 unconsumed rows)"
+   }
+  }
+ ],
+ "interpretation_guard": "each certificate proves only a winner win within depth 10 from the individual 7-stone root (loser to move). No statement about deeper play, the S5/S6 orbits, the two-stone root {49,60}, S2 {59,60}, or the 11x11 empty board, all of which remain UNKNOWN."
+}
