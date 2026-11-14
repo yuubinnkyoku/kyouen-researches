@@ -111,10 +111,11 @@
   "pilot_d6_control": "loss=false at exactly 5,949 nodes in all 8 batch invocations",
   "terminal_stone_range": "[13,17] on every candidate so far",
   "raw_batches_note": "raw batchA-H jsonl exist locally (work/73a/) but could not be pushed yet: the execution environment went unavailable mid-sweep before batchI. node counts above are captured verbatim from the runner output and are node-exact deterministic; raw files and determinism rerun to be pushed on env recovery.",
-  "status": "in flight (resumed by session 11)",
+  "status": "completed (session 11 takeover)",
   "note": "cost-71 was completed by the parallel lane this same hour (2 WIN7: bits 9, 70); this cost-73a claim avoids that collision.",
   "unknown_status": "11x11 empty board: UNKNOWN. All WIN7 certificates prove only individual 7-stone roots.",
   "session": "long-term lane session 11 (2026-11-14)",
   "takeover_note": "session 9 claimed this sweep and completed 64/73 candidates (1 WIN7 bit81, 63 REFUTED, 0 capped, 324,426,606 nodes) but its execution environment went unavailable before batch I and the raw batches A-H were never pushed. This session re-runs all 73 candidates deterministically to reconstruct the raw JSONL (cross-restart reproduction control: the 64 already-counted candidates must sum node-exactly to 324,426,606) and completes bits 110,111,112,113,116,117,118,119,120.",
-  "rerun_control": "batch1 (bits 0,2,3,6,7,8,10,11) fresh re-run: all REFUTED-D10, sum 47,461,157 nodes, pilot d6 control loss=false at exactly 5,949 nodes"
+  "rerun_control": "batch1 (bits 0,2,3,6,7,8,10,11) fresh re-run: all REFUTED-D10, sum 47,461,157 nodes, pilot d6 control loss=false at exactly 5,949 nodes",
+  "completion_note": "all 73 candidates resolved by session 11: 1 WIN7-D10 (bit 81) + 72 REFUTED, 0 capped, 383,290,602 nodes; session-9 64-candidate control reproduced node-exactly (324,426,606); certificate extracted, verified and pushed; see class2-lane-cost73a-sweep-20261114.json and class2-lane-cost73a-win7-certificates-20261114.json"
 }
