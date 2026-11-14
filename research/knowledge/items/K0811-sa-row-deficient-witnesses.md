@@ -16,6 +16,9 @@ relations:
   target: K0806
   note: 上界（K0318代入）は不変
 artifacts:
+- path: research/experiments/sat-fastcdcl-20261114/output/w65_22.json
+  role: data
+  note: 6×22 の22石（2石欠損）witness座標（fastsat SAT・census不使用独立検証 PASS）
 - path: research/experiments/sa-row-deficient-witnesses-20261114/scripts/sa_machine.js
   role: source
   note: K0808 census・独立検証器の機械移植＋SA探索部（Metropolis・冷却・再シード）
@@ -61,6 +64,9 @@ K0808 の汎用 (w,m,q) 欠損極大配置探索機の census・census 不使用
 - **M_{6,5} ≥ 29**: 22石@6×28（満容量24・2石欠損・行構成 4,4,4,4,2,4）が第3弾
  （sa-frontier3-20261114）で最新。23石@6×22..6×27（1石欠損・6盤連続）に続き、
   (6,5) 初の2石欠損witness。第2弾で 6×26（2座標）・6×27 を追加（6×27 は5シード抵抗後に発見）。
+  さらに sat-fastcdcl-20261114 のCDCL fastsat が 6×22 にも22石（行構成 4,4,4,2,4,4）の
+  2石欠損witnessを発見 — 2石欠損witnessの既知最小 m は 28→22 に更新
+ （1石欠損23石witness帯 m=22..27 と同一盤に2石欠損も同居する）。
   6×28 は第2弾（T0≥2.0 系・10 run）で抵抗した m だが、第3弾の T0=1.5/mrf=0.45/sK=36
   構成が74秒で突破 — 非発見は不在を意味しない最も直接的な再実証。
 - **M_{6,6} ≥ 22**: 29石@6×17..6×21（満容量30・5盤連続）。

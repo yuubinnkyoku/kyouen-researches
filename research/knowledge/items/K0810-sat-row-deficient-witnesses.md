@@ -16,6 +16,15 @@ relations:
   target: K0806
   note: 上界（K0318代入）は不変
 artifacts:
+- path: research/experiments/sat-fastcdcl-20261114/scripts/fastsat.js
+  role: source
+  note: 高速CDCL（2-watched literals・EVSIDS heap・Luby restarts・LBD削減・phase saving・cell変数ブート）・cap=38 witnessの発見機
+- path: research/experiments/sat-fastcdcl-20261114/output/results.jsonl
+  role: data
+  note: cap=38 witness・6×22 2石欠損witness・制御・fuzz450・相互検証60・抵抗（6×29/6×28/cap=37）
+- path: research/experiments/sat-fastcdcl-20261114/report.md
+  role: proof
+  note: 手法・検証プロトコル・実装バグ2件の捕捉記録
 - path: research/experiments/row-deficient-sat-witnesses-20261114/scripts/row_deficient_sat.js
   role: source
   note: census完全列挙・SAT符号化（sequential counter）・自作CDCL/DPLL・census不使用独立検証器
@@ -49,10 +58,14 @@ sequential counter によるSAT符号化（safety・blocking・行欠損）で�
 - **M_{6,5} ≥ 23**: 23石@6×22（行構成 4,4,4,4,4,3）。
 - **M_{6,6} ≥ 20**: 29石@6×17 と 29石@6×19（行構成 5,5,5,5,5,4 / 5,5,5,5,4,5）。
 - **M_{6,8} ≥ 18**: 41石@6×12,6×13,6×14,6×15,6×16,6×17 の6盤連続（いずれも41石=満容量42−1）。
-  さらに 6×12 には40石・**39石**の極大安全配置も存在する（cap=40・cap=39 SAT・
-  行構成 7,7,7,7,5,7 / 5,7,7,7,6,7。いずれも独立検証 PASS。
-  6×12 q=8 の最小極大サイズは ≤39 に更新。cap=38 は未解決・不在証明ではない）。
+  さらに 6×12 には40石・39石・**38石**の極大安全配置も存在する（cap=40・39・38 SAT・
+  行構成 7,7,7,7,5,7 / 5,7,7,7,6,7 / 7,7,7,6,7,4。いずれも独立検証 PASS。
+  cap=38（38石・行構成 7,7,7,6,7,4）は sat-fastcdcl-20261114 の新規CDCL fastsat.js で
+  SAT（133,524 conflicts）。**6×12 q=8 の最小極大サイズは ≤38 に更新**。
+  cap=37 は未解決・不在証明ではない）。
 - **M_{5,6} ≥ 18**: 24石@5×16 と 24石@5×17（行構成 5,5,5,5,4 / 5,5,5,4,5）。
+- 6×22 q=5 には22石（2石欠損・行構成 4,4,4,2,4,4）の行欠損極大も存在する
+ （sat-fastcdcl-20261114・fastsat 3,382 conflicts。K0811参照）。
 
 これにより K0809 の候補予想 M_{6,5}=22・M_{6,6}=17・M_{6,8}=12・M_{5,6}=16 は反証された
 （ヒューリスティックな予想であり、貪欲系探索の非発見 m は実際の不在と系統的にズレる）。
