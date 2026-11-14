@@ -714,3 +714,17 @@ best coverable class-2五石親 `00000000000000809102000000000000` は残り35�
 warm multibandの35 WIN7 rootを、同じS2再利用実験の17 verified manifest（既存WIN7 77件・LOSS7 200件）、中央49 terminal LOSS7 parent-lift 274鍵、MS5のcategory-1既知LOSS候補396行へD4正規化で照合した。35 rootは内部で35個の異なるD4軌道を持ち、既存WIN7・LOSS7・central parent-lift・knownloss候補との交差はいずれも0。既存WIN7とLOSS7の間も交差0。証明・親持ち上げ・候補表のLOSS側870 D4軌道は相互に重複しなかった。category-1候補396行は独立LOSS7証明書とは扱わない。
 
 これは公開manifest・候補表に限った衝突監査であり、全raw cacheや非公開worker cacheを走査したものではない。warm証明書本体の戦略検証を置き換えず、S6 frontierや勝敗も変更しない。詳細は監査logと機械可読JSONを参照。
+
+## 2026-11-15: cost-68d sweep完了（7 WIN7-D10）と7証明書、warm band hygiene、chain head 1,117
+
+第三class-2 coverableターゲットS5 `00000000000000809102000000000000` の最安未sweep子 `00000000000000809122000000000000`（cost 68、demand c1=0,c2=2,c4=0）を、独立Bareiss 4x4列挙で68候補（公開edge cost 68とbit-exact）と確認した上でsweepした。**7 WIN7-D10（bits 18/26/29/34/47/103/108）+ 61 REFUTED + 0 capped、計61,325,518 v16 nodes**（10 pilotすべて3,402 nodesでloss=false）。batch番号の誤操作でbatch1の8候補を二重実行したが、重複分は検索結果フィールド全てで行単位完全一致（`ms`のみ相違）し、`class2-lane-cost68d-v16-determinism-rerun-20261115.jsonl` として保存、raw batchは2..9に再番号した。7 WIN7全bitについてv15 cross-engine anchorはloss=true（bit 18: 12,656,791 / 26: 9,249,234 / 29: 5,720,958 / 34: 9,724,149 / 47: 4,112,662 / 103: 4,220,738 / 108: 2,528,832 nodes）、REFUTED anchor bits 0/120/13はloss=false（5,225,527 / 1,124,734 / 16,699,066）。
+
+7 WIN7全rootをrepo-verbatim blind抽出器（空kill table・FBS=1<<20・fbt_drops=0・行LC_ALL=C整列一意化）で証明書化し、BigInt独立検証器で全件PASS、root-absence check 0ヒット、GitHub code searchで先行証明書不在を確認した。計268,572戦略行・抽出82,180,565 nodes（bit 18は2-part分割、joined md5 8aeaf2b687bc033bbbdab2781d91471c。bit 26: 40,031行 / bit 29: 34,356 / bit 34: 49,328 / bit 47: 29,618 / bit 103: 31,183 / bit 108: 27,614行）。push済み全ファイルをremoteでgit blob sha照合した。
+
+あわせてwarm band hygiene 6 receipt（いずれもmarginal_in_manifest 0、帳簿整備のみ）を抽出・検証した: cost-62a bits 1（55,447行）+ 89（32,471行）で **cost-62a band 11/11完了**、cost-63a bits 11（24,243行）+ 109（38,853行）で **63a 8/10**（96/97は並走レーンのclaimed）、cost-71b bit 1（42,499行）で並走remaining list [1,14,32,74,94,117] の先頭を閉鎖（71b 6/9）、cost-61d bit 22は同一rootの独立再抽出で**md5完全一致**（正の重複照合、証明書はcost-71b配下に1回のみpush）。
+
+`recompute_frontier_cost68d_20261115.py`（runpyで1109基準をbyte-identical再現→68d membership/demand再導出→sweep raw再集計→13 receiptを公開順にfold、2回実行でbyte-identical）により、新しいchain headは **解消S6 1,117・残り6,730・費用530,739・open需要5,000/394,462**（旧 1,109/6,738/531,295/5,008/395,018、+8 solvedはすべて68d由来）。第三class-2ターゲットS5は17軌道・1,220 → **13軌道・937**。bottleneck不変: audit-blocked class2 `00000000000000809082000000000000`（10軌道・698）とclass4 `00000000020000003800000080000000`（18軌道・1,460）。並走batch-2証明書は未fold（並走レーンのfoldに委ねる）。
+
+成果物: [sweep記録](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost68d-sweep-20261115.json)、[証明書manifest](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost68d-win7-certificates-20261115.json)、[hygiene manifest](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-warm-band-hygiene-certificates-20261115.json)、[frontier再計算](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost68d-recompute-20261115.json)、[再計算スクリプト](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost68d_20261115.py)、[log](../../log/2026-11-15-n11-class2-lane-cost68d-win7.md)。
+
+解消計数はmanifest被覆の前進であり、盤全体の勝敗ではない。WIN7証明書は個別7石rootの深さ10以内のWINのみを証明する。標準11×11空盤、二石root `{49,60}`・`{59,60}`、S2 `{59,60}`、class2・class4は引き続き **UNKNOWN**。
