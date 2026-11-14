@@ -1,7 +1,7 @@
 {
   "schema": "n11-class2-lane-cost72b-inflight-20261115-v1",
   "date": "2026-11-15",
-  "status": "certificates-published-fold-pending",
+  "status": "folded-into-chain-head-1188",
   "claimed_by": "long-term class2 lane",
   "s6_child": "00000000000000809102000002000000",
   "s6_s7_edge_cost": 72,
@@ -116,7 +116,7 @@
     "batch_size": 8,
     "pilot_control": "d6 loss=false nodes=3402 required per batch"
   },
-  "plan": "13 certificates are published and independently verified. Rebase the fold on cost74d receipt head 1179; deduplicate cost72b bit85 against cost74d bit91 (same D4 root orbit) and recompute all per-record marginal coverage from the expanded union.",
+  "plan": "13 certificates published and independently verified; fold rebased on the cost74d receipt head 1179 per rebase_required, with cost72b bit85 deduplicated against cost74d bit91 (same D4 root orbit) and all per-record marginal recomputed from the expanded union - completed 2026-11-15, chain head 1188 (see fold block)",
   "naming_note": "cost-72b disambiguates from the first cost-72 child 00000000000000803202000000000200 (class2-lane-cost72-win7-certificates-20261115.json)",
   "demand_semantics_note": "per-class demand counts each open parent S5 once per class bit (class2-lane-cost69g-demand-reconciliation-20261115.json); distinct open parents = 2 here",
   "interpretation_guard": "REFUTED-D10 is absence of a winner win within depth 10, not a refutation of the child; loss=true rows are WIN7-within-depth search candidates needing certificate extraction before any frontier claim",
@@ -183,5 +183,45 @@
       "coordinate_map": "(x,y)->(x,10-y)"
     },
     "instruction": "Rebase all 13 certificate receipts on head 1179. Recompute per-record marginal from the expanded union. Do not count cost72b bit85 and cost74d bit91 as separate D4 root orbits. The bit85 certificate upgrades proof backing for already-folded parent orbits."
+  },
+  "fold": {
+    "status": "completed",
+    "date": "2026-11-15",
+    "baseline_head": 1179,
+    "baseline_head_string": "1179/6668/526075/4938/389798",
+    "new_head_string": "1188/6659/525437/4929/389160",
+    "solved_s6_in_manifest": 1188,
+    "receipts": 13,
+    "win7_bits_folded": [
+      2,
+      11,
+      21,
+      30,
+      31,
+      36,
+      47,
+      66,
+      85,
+      95,
+      97,
+      100,
+      106
+    ],
+    "total_marginal": 57,
+    "marginal_in_manifest": 9,
+    "zero_mim_bits": [
+      11,
+      21,
+      66,
+      85
+    ],
+    "bit85_d4_dedup": "cost72b bit85 root 00000000002000809102000002000000 == cost74d bit91 root 00000000080000809102020000000000 (canonical 00000000000080811202000020000000, chain-internal canon()); counted once - the bit85 certificate upgrades proof backing of the certificate-pending 74d-side raw receipt",
+    "child_orbit": "pre-closed at 1179 by the cost-74d bit-91 cross-cover; both open parents had already lost the child row before this fold",
+    "parent_s5_00000000000000809102000000000000": "unchanged 4/297 (child and bit85 orbit already closed by 74d)",
+    "shared_parent_s5_00000000000000801202000020000000": "56/4199 -> 47/3561 (all 9 marginal manifest hexes)",
+    "record": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost72b-receipts-recompute-20261115.json",
+    "script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost72b_receipts_20261115.py",
+    "controls": "baseline head 1179 reproduced byte-identically (blob sha 06724afe0698ce93319d092521c5887da6eec0f0); 18 input files blob-sha-verified vs main; child-remaining asserted historically at 1163 and pre-closed at 1179; sweep rederived from 10 raw batches (72 candidates, 13 WIN / 59 REFUTED, 117,444,772 nodes); v15 anchors and v16 determinism rerun asserted; 13 certificates byte-verified (19 parts + 13 whole, manifest totals 636,225 rows / 729 sub-roots / 200,029,509 nodes); root disjointness vs 77 folded receipt roots with the single D4-orbit equivalence asserted",
+    "reproducibility": "two runs byte-identical (3 output files, md5)"
   }
 }
