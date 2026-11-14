@@ -25,7 +25,7 @@ Node.js で書き下ろした競争的CDCL `fastsat.js` を開発した
 - fuzz: 450題（nv≤15・全列挙照合・重複リテラル/unit込み）0不一致・SAT modelは元節リストで独立検証。
 - 相互: 乱数3-SAT 60題（nv 20..40）をK0810旧CDCLと判定一致 60/60。
 - 実装バグ2件を実際に捕捉: (a) DIMACSパーサの配列参照バグ（全節空化）、
-  (b) reduceDB compactionがunit節にガベージ第2watchを付け、無関係リテラルの偽化で
+  (b) reduceDB compactionがunit節にガベージ第2watchを付け、無関係なリテラルの偽化で
   偽衝突→偽UNSAT化するバグ（6×22 で4025 conflicts後に発現。衝突節完全偽のtripwireで検出）。
   修復後fuzz全通過。UNSAT時のDRAT出力は実装済みだが、今回はUNSAT未取得のため未使用。
 
@@ -40,3 +40,20 @@ Node.js で書き下ろした競争的CDCL `fastsat.js` を開発した
 
 11×11空盤・二石root {49,60}・S2 {59,60}・class 2・class 4 はいずれも UNKNOWN のまま
 （本成果は固定幅Mと最小極大の話で無盤面勝敗に無関係）。
+
+## 続き（第2実行・同日）
+
+1. **(5,6) m=19 が SAT** → **M_{5,6} ≥ 20**（境界 [20,249]）。
+   fastsat に `--seed`（LCGで初期アクティビティ/補助変数位相をjitter）を追加した
+   seed portfolio の seed=7 が 8,378 conflicts/7.1s で24石witness（行構成 5,5,5,5,4）を発見。
+   census不使用独立検証 PASS。K0811 SA 5 run抵抗の m をCDCLが解決 —
+   探索系の非発見が不在を意味しないことの両レーンからの実証が揃った。
+2. (5,7) m=19 は seeds 1,2,3（base=8192）・11,12（base=4096）の5設定で各100-120秒・
+   110,139〜124,512 conflicts 抵抗（計568,576 conflicts・非不在証明）。
+   m=20 も seed=3 で 117,144 conflicts 抵抗。(6,8) m=18 cap=41 は3設定計 ~440k conflicts 未決着。
+3. fastsat.js の seed 版を push（旧版 md5 391254070c897f4bd824b457b20e3b05 からの差分は
+   seed 3箇所のみ・fuzz450/相互検証60は seed 無指定で旧版と同一挙動）。
+4. レジューム: (5,7) m=19,20 の継続攻撃（符号化改良またはseed並列拡大）・
+   cap=37・6×29 q=5・(6,6) m=22・(6,7) m=20・DRATチェッカ整備は未解決のまま。
+
+11×11空盤・二石root {49,60}・S2 {59,60}・class 2・class 4 はいずれも UNKNOWN のまま。
