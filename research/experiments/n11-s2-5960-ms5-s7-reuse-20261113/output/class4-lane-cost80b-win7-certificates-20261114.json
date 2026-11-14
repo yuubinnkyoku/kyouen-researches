@@ -37,7 +37,7 @@
     }
    ],
    "md5": "1ca210fee08212ba79632b5de46372ca",
-   "certificate_path": "output/class4-lane-cost80b-certificates/n11_s7_00000000020000003804040080000000.cert",
+   "certificate_path": "output/class4-lane-cost80b-certificates/n11_s7_00000000020000003804040080000000.cert.part1of2 + .part2of2 (split at line boundary 30000/61567; single-file size 2,223,980 bytes exceeds the lane push transport ceiling)",
    "verification": {
     "subroot_count": 65,
     "union_diff": "0/0",
@@ -47,6 +47,24 @@
      17
     ],
     "verifier": "verify_bit7_win7_cert.ts --root-check + all 65 sub-roots in two batches with --consumed-out; consumed set == row set exactly (0 unexplained rows, 0 unconsumed rows)"
+   },
+   "certificate_split": {
+    "reason": "2,223,980 bytes exceeds the single-commit push transport ceiling (~1.7 MB) of this lane's tooling",
+    "part1": {
+     "path": "output/class4-lane-cost80b-certificates/n11_s7_00000000020000003804040080000000.cert.part1of2",
+     "lines": "1..30000",
+     "bytes": 1085298,
+     "md5": "e468dbb803470cb16dd739947aa1cba7"
+    },
+    "part2": {
+     "path": "output/class4-lane-cost80b-certificates/n11_s7_00000000020000003804040080000000.cert.part2of2",
+     "lines": "30001..61567",
+     "bytes": 1138682,
+     "md5": "bcce5c0edb96630997e8fb69cd1fc2f4"
+    },
+    "concatenated_md5": "1ca210fee08212ba79632b5de46372ca",
+    "reassembly": "cat part1of2 part2of2 > cert (byte-identical to the locally verified file; remote parts fetched and re-verified by md5 after push)",
+    "readme": "output/class4-lane-cost80b-certificates/README.md"
    }
   }
  ],
