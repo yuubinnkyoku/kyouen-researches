@@ -1,0 +1,120 @@
+c ---- [ banner ] ------------------------------------------------------------
+c
+c Kissat SAT Solver
+c 
+c Copyright (c) 2021-2024 Armin Biere University of Freiburg
+c Copyright (c) 2019-2021 Armin Biere Johannes Kepler University Linz
+c 
+c Version 4.0.4 8af8e56f174b778aef3aa45af9f739b2a5f492c2
+c gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0 -W -Wall -O3 -DNDEBUG
+c Thu Oct 16 19:30:34 CEST 2025 Linux abryzen9 6.8.0-85-generic x86_64
+c
+c ---- [ parsing ] -----------------------------------------------------------
+c
+c opened and reading DIMACS file:
+c
+c   /home/user/krwork/seven/output/band/c7x40q10_HVHV.cnf
+c
+c parsed 'p cnf 7198 27947' header
+c closing input after reading 445628 bytes (435 KB)
+c finished parsing after 0.00 seconds
+c
+c ---- [ solving ] -----------------------------------------------------------
+c
+c seconds switched rate     size/glue tier1  binary        remaining
+c        MB reductions conflicts size  tier2    irredundant
+c         level restarts redundant glue  trail        variables
+c
+c *  0.00  4 0 0 0  0 0   0   0 0.0 0 0 0 0 0% 8520 19348 6912 96%
+c (  0.01  4 0 0 0  0 0   0   0 0.0 0 0 0 0 0% 8520 19348 6912 96%
+c .  0.01  4 0 0 0  0 0   0   0 0.0 0 0 0 0 0% 8447 18645 6912 96%
+c c  0.01  5 0 0 0  0 0   0   0 0.0 0 0 0 0 0% 8461 18640 6835 95%
+c d  0.01  5 0 0 0  0 0   0   0 0.0 0 0 0 0 0% 8307 18640 6835 95%
+c b  0.01  5 0 0 0  0 0   0   0 0.0 0 0 0 0 0% 8307 18640 6834 95%
+c f  0.03  5 0 0 0  0 0   0   0 0.0 0 0 0 0 0% 8383 18520 6854 95%
+c )  0.03  5 0 0 0  0 0   0   0 0.0 0 0 0 0 0% 8383 18520 6854 95%
+c {  0.03  5 0 0 0  0 0   0   0 0.0 0 0 2 6 0% 8383 18520 6854 95%
+c i  0.04  5 17 0 0 12 2 206 177 1.7 6 4 2 6 35% 8396 18520 6853 95%
+c i  0.04  5 20 0 0 26 3 336 279 1.7 6 4 3 5 32% 8411 18520 6852 95%
+c i  0.04  6 18 0 0 29 3 542 435 1.7 6 3 3 5 29% 8437 18520 6851 95%
+c i  0.05  6 21 0 0 43 4 606 482 1.7 6 4 3 5 29% 8446 18520 6850 95%
+c i  0.05  6 20 0 0 43 4 681 534 1.7 6 3 3 5 27% 8458 18520 6849 95%
+c i  0.05  7 18 0 0 43 3 806 619 1.7 6 3 3 5 26% 8477 18520 6816 95%
+c i  0.05  7 18 0 0 43 3 811 622 1.7 6 3 3 5 26% 8478 18520 6799 94%
+c i  0.05  7 18 0 0 43 3 812 622 1.7 6 3 3 5 26% 8478 18520 6798 94%
+c i  0.05  7 18 0 0 43 3 813 622 1.7 6 3 3 5 26% 8478 18520 6786 94%
+c i  0.05  7 18 0 0 43 3 814 622 1.7 6 3 3 5 26% 8478 18520 6785 94%
+c i  0.05  7 18 0 0 43 3 815 622 1.7 6 3 3 5 26% 8478 18520 6783 94%
+c
+c seconds  switched rate     size/glue tier1   binary        remaining
+c        MB reductions conflicts  size  tier2     irredundant
+c         level restarts redundant  glue   trail        variables
+c
+c i  0.05  7 18 0 0 43 3 816 622 1.7 6 3 3 5 26% 8478 18520 6782 94%
+c i  0.05  7 18 0 0 43 3 817 622 1.7 6 3 3 5 26% 8478 18520 6781 94%
+c i  0.05  7 18 0 0 43 3 818 622 1.7 6 3 3 5 26% 8478 18520 6780 94%
+c i  0.05  7 18 0 0 43 3 825 623 1.7 6 3 3 5 26% 8483 18520 6779 94%
+c i  0.05  7 17 0 0 43 3 876 648 1.7 5 3 3 5 25% 8500 18520 6747 94%
+c i  0.05  7 17 0 0 43 3 891 656 1.7 5 3 3 5 25% 8505 18520 6728 93%
+c i  0.05  7 17 0 0 43 3 892 656 1.7 5 3 3 5 25% 8505 18520 6727 93%
+c i  0.05  7 17 0 0 43 3 893 656 1.7 5 3 3 5 25% 8505 18520 6724 93%
+c i  0.05  7 17 0 0 43 3 894 656 1.7 5 3 3 5 25% 8505 18520 6721 93%
+c i  0.05  7 17 0 0 43 3 895 656 1.7 5 3 3 5 25% 8505 18520 6720 93%
+c i  0.05  7 17 0 0 43 3 905 664 1.7 5 3 3 5 25% 8506 18520 6693 93%
+c i  0.05  7 16 0 0 43 3 931 679 1.7 5 3 3 5 25% 8515 18520 6680 93%
+c i  0.05  7 16 0 0 43 3 932 679 1.7 5 3 3 5 25% 8515 18520 6679 93%
+c i  0.05  7 16 0 0 43 3 933 679 1.7 5 3 3 5 25% 8515 18520 6673 93%
+c i  0.05  7 16 0 0 43 3 934 679 1.7 5 3 3 5 25% 8515 18520 6672 93%
+c i  0.05  7 16 0 0 43 3 938 679 1.7 5 3 3 5 25% 8518 18520 6669 93%
+c i  0.05  7 16 0 0 43 3 950 685 1.7 5 3 3 5 25% 8523 18520 6627 92%
+c }  0.05  7 16 0 0 43 3 958 689 1.7 5 3 3 5 24% 8525 18520 6563 91%
+c 0  0.05  7 16 0 0 43 3 958 689 1.7 5 3 3 5 24% 8525 18520 6563 91%
+c
+c ---- [ result ] ------------------------------------------------------------
+c
+s UNSATISFIABLE
+c
+c ---- [ profiling ] ---------------------------------------------------------
+c
+c           0.03   53.40 %  preprocess
+c           0.03   51.92 %  probe
+c           0.02   34.58 %  search
+c           0.02   34.57 %  focused
+c           0.02   31.47 %  sweep
+c           0.00    9.32 %  factor
+c           0.00    8.20 %  congruence
+c           0.00    6.60 %  parse
+c           0.00    4.31 %  lucky
+c           0.00    2.33 %  substitute
+c           0.00    0.53 %  backbone
+c           0.00    0.00 %  simplify
+c =============================================
+c           0.05  100.00 %  total
+c
+c ---- [ statistics ] --------------------------------------------------------
+c
+c conflicts:                              958            17947.13 per second
+c congruent:                               77                1 %  variables
+c decisions:                             3010                3.14 per conflict
+c factored:                                20                0 %  variables
+c iterations:                              29                0 %  variables
+c propagations:                        495727          9286929    per second
+c restarts:                                43               22    interval
+c substituted:                             77                1 %  variables
+c switched:                                 0                0    interval
+c
+c ---- [ glue usage ] --------------------------------------------------------
+c
+c focused glue 2 used 485 clauses 51.05% accumulated 57.05% tier1
+c focused glue 3 used 203 clauses 21.37% accumulated 78.42%
+c focused glue 4 used  90 clauses  9.47% accumulated 87.89%
+c focused glue 5 used  60 clauses  6.32% accumulated 94.21% tier2
+c
+c ---- [ resources ] ---------------------------------------------------------
+c
+c maximum-resident-set-size:          6672384 bytes          6 MB
+c process-time:                                              0.05 seconds
+c
+c ---- [ shutting down ] -----------------------------------------------------
+c
+c exit 20

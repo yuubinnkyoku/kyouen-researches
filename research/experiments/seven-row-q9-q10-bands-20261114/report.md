@@ -1,0 +1,94 @@
+# 7×m q=9 / q=10 row-deficient witness bands — kissat cross-check, band extension, and new (7,9) witnesses (2026-11-14)
+
+## Claim
+
+1. **(7,9)**: On the 7×15..7×23 integer grids (q=9, q点共円/共線禁止), row-deficient
+   maximal safe configurations **exist** (55 stones vs. full capacity 56; m=15 witness has
+   54). All witnesses are dual-verified (census-free JS verifyConfig + Python Fraction).
+   Combined with `seven-row-inband-families-20261114` (witnesses at m=9..14), the witness
+   width set of (7,9) includes **{9..23}**.
+2. **(7,9)**: On the 7×24..7×33 integer grids, the def-mode instance ("some row has ≤ 7
+   stones", no lex) is **UNSAT** for kissat 4.0.4 (exit 20; 43,743–94,368 conflicts per
+   width). Widths 24 and 33 are re-checked UNSAT with the independent def+lex=H,V,HV
+   encoding (81,997 / 38,424 conflicts). Hence the witness-free band of (7,9) contains
+   **{24..33}**, and **M_{7,9} = 24 or M_{7,9} ≥ 34** (M ∈ {24} ∪ [34, 613]; upper bound
+   613 by K0318 curve-packing substitution, recorded in the source experiment's
+   w7_upper_bounds.json).
+3. **(7,10)**: The `seven-row-inband-families-20261114` fastsat UNSAT band (m=19..40,
+   def+lex=H,V,HV) is **independently confirmed by kissat 4.0.4** on regenerated CNFs —
+   the regenerated CNFs are the same instances (fastsat conflicts bit-exact for all 22
+   widths: 3,215 / 3,395 / 3,486 / 3,104 / 2,899 / 2,105 / 3,158 / 3,142 / 7,243 / 3,793 /
+   4,122 / 4,486 / 11,408 / 4,804 / 2,179 / 11,809 / 3,628 / 41,278 / 3,866 / 4,458 /
+   3,195 / 4,702) and kissat returns UNSAT for every width. The band is **extended to
+   m=41..51** (both fastsat and kissat UNSAT; worst 15,399 fastsat conflicts at m=46).
+   With the m=10..18 witnesses of the source experiment, the witness width set of (7,10)
+   is {10..18} and the witness-free band is **{19..51}**: **M_{7,10} = 19 or M_{7,10} ≥ 52**
+   (M ∈ {19} ∪ [52, 587]; upper bound 587 by K0318 substitution).
+
+## Method
+
+Encoding: `sat2.js` from `seven-row-inband-families-20261114` (verbatim; K0810
+`sat.js` census of circleABC integer triples + line pairs, sequential counter, maximality).
+The def mode adds the single clause "∨_y ¬rowGe[y]" (some row ≤ q−2 stones), which is
+exactly "deficient" because safety caps every row at q−1 (rows are length-m ≥ q lines);
+the clause is invariant under H/V/HV, so the lex-leader constraints used on the (7,10)
+band are sound (orbit-min satisfies all constraints). For the (7,9) witness search no
+lex constraints are used (lex hurts the SAT side; K0815 dai-4 lesson), and the def-no-lex
+band instances are the complete encoding of "exists row-deficient maximal safe
+configuration". Solvers: kissat 4.0.4 (official linux-amd64 binary) and fastsat.js
+(verbatim from the source experiment) for calibration/cross-check.
+
+## Verification protocol
+
+- Controls: 2×8 q=4 SAT (fastsat 121 conflicts — bit-exact with the source experiment's
+  results.jsonl; kissat SAT 37 conflicts) and 2×9 q=4 UNSAT (fastsat 535 — bit-exact;
+  kissat 316), consistent with M_{2,4}=9 (K0796).
+- Calibration: for every (7,10) width m=19..40 the regenerated CNF reproduces the
+  source experiment's fastsat conflict count **bit-exact**, proving the instance
+  identity; kissat then gives independent UNSAT verdicts.
+- Witness verification: every SAT model is decoded to stones and verified by two
+  independent implementations (sat.js verifyConfig census-free JS; verify_witness.py
+  Python Fraction — pairs-of-stones lines / triples-of-stones circles) as safe +
+  maximal + row-deficient. 9/9 new (7,9) witnesses PASS both.
+- Second encoding: (7,9) UNSAT widths 24 and 33 re-checked with def+lex=H,V,HV.
+- Determinism: all recorded numbers survived **two execution-environment resets** and
+  were re-run bit-exact (fastsat calibration set and kissat conflicts identical
+  across resets).
+- Negative observation (honest limitation): fastsat could **not** confirm the (7,9)
+  UNSAT band within a 60 s cap at m=24 (210k conflicts, TIMEOUT); the (7,9) band
+  evidence is kissat-only (+ lex cross-encoding at 2 widths), unlike the (7,10) band
+  where both solvers agree.
+
+## Results
+
+- q9-witness-search/records.jsonl: 21 records — SAT m=15..23 (witnesses in
+  s7xMq9_none.witness.json), UNSAT m=24..33, lex cross-checks at m=24/33.
+- q10-band/records.jsonl: 33 records — m=19..51, fastsat + kissat both UNSAT
+  (m=19..40 confirmation, m=41..51 extension).
+- controls/records.jsonl: 2×8/2×9 q=4.
+
+## Scope and limits
+
+Finite machine verification, up to census completeness (all lines/circles with ≥ q grid
+points enumerated by the K0810 census) and solver correctness (kissat 4.0.4; fastsat for
+the calibrated (7,10) band). Not a number-theoretic proof. Determining
+M_{7,9} = 24 exactly needs persistence at m=34..612 (or a K0342-style tail bound);
+M_{7,10} = 19 needs persistence at m=52..586. The witness-search frontiers are
+7×34 (q=9) and 7×52 (q=10).
+
+## Reproduction
+
+```sh
+node sat2.js 7 24 9 --deficient out.cnf          # (7,9) band instance (no lex)
+node sat2.js 7 24 9 --deficient --lex=H,V,HV o2  # lex cross-encoding
+node sat2.js 7 40 10 --deficient --lex=H,V,HV o3 # (7,10) band instance
+./lean1.sh 7 24 9 <outdir> [LEX]                 # encode + kissat + (SAT: dual verify)
+./band1.sh 7 40 10 H,V,HV <outdir>               # encode + fastsat + kissat + record
+node decode_verify.js 7 23 9 model.txt           # kissat model -> stones -> verifyConfig
+python3 verify_witness.py 7 23 9 < stones.json  # Python Fraction independent check
+```
+
+sat2.js / sat.js / fastsat.js / verify_witness.py are verbatim from
+`research/experiments/seven-row-inband-families-20261114/scripts/` (not duplicated here).
+CNFs are deterministically regenerable and not stored (vars/clauses/curves are in the
+records); raw kissat logs are stored per instance.
