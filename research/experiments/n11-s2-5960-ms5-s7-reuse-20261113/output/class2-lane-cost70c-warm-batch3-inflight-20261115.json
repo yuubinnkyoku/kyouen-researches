@@ -7,12 +7,47 @@
  "claim_scope": "warm rebuild only: blind certificate extraction + BigInt independent verification for the 4 remaining uncertified cost-70c WIN7-D10 sweep bits [3, 42, 86, 103]. No new sweep claims - the cost-70c sweep is complete per class2-lane-cost70c-sweep-20261115.json (13 WIN7-D10 / 0 capped / 100,935,666 v16 nodes, determinism rerun node-exact, v15 crosscheck 13/13 loss=true). This claim covers certificate extraction (repo-verbatim blind extractor, empty kill table, FBS=1<<20, fbt_drops=0), the independent BigInt verification, and the fold of any resulting receipts against the unified-merge chain head 1,154/6,693/527,949/4,963/391,672 (class-frontier-unified-merge-recompute-20261115.json).",
  "baseline": "unified merge chain head 1,154 / 6,693 / 527,949 / 4,963 / 391,672 (50-receipt unified fold, commit 7aaa7d83)",
  "targets": [
-  ["class2-lane-cost70c", "00000000000000803242000000000000", 3, "00000000000000803242000000000008"],
-  ["class2-lane-cost70c", "00000000000000803242000000000000", 42, "00000000000000803242040000000000"],
-  ["class2-lane-cost70c", "00000000000000803242000000000000", 86, "00000000004000803242000000000000"],
-  ["class2-lane-cost70c", "00000000000000803242000000000000", 103, "00000080000000803242000000000000"]
+  [
+   "class2-lane-cost70c",
+   "00000000000000803242000000000000",
+   3,
+   "00000000000000803242000000000008"
+  ],
+  [
+   "class2-lane-cost70c",
+   "00000000000000803242000000000000",
+   42,
+   "00000000000000803242040000000000"
+  ],
+  [
+   "class2-lane-cost70c",
+   "00000000000000803242000000000000",
+   86,
+   "00000000004000803242000000000000"
+  ],
+  [
+   "class2-lane-cost70c",
+   "00000000000000803242000000000000",
+   103,
+   "00000080000000803242000000000000"
+  ]
  ],
  "root_identity": "root == child | 1<<bit for every target (BigInt-verified at fold time)",
- "status": "in flight",
- "interpretation_guard": "warm receipts are bookkeeping over the already-published cost-70c sweep records; solved counts measure manifest coverage, not the game-theoretic value of any position; 11x11 empty board / two-stone root {49,60} / S2 {59,60} / class 2 / class 4 remain UNKNOWN"
+ "status": "complete",
+ "interpretation_guard": "warm receipts are bookkeeping over the already-published cost-70c sweep records; solved counts measure manifest coverage, not the game-theoretic value of any position; 11x11 empty board / two-stone root {49,60} / S2 {59,60} / class 2 / class 4 remain UNKNOWN",
+ "completion": {
+  "records": "class2-lane-cost70c-warm-batch3-records-20261115.json",
+  "certificates_pushed": 7,
+  "bits_certified": [
+   3,
+   42,
+   86,
+   103
+  ],
+  "cost70c_band_status": "13/13 WIN7 bits certified (9 previously + 4 here)",
+  "total_rows": 214533,
+  "total_extraction_nodes": 61602491,
+  "determinism_control": "bit 103 re-extracted in a separate process: rows/extraction nodes/md5 identical",
+  "remote_verification": "all 7 certificate files verified byte-exact by md5 on raw.githubusercontent main after landing"
+ }
 }
