@@ -11492,6 +11492,12 @@
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-4373-2188/receipt.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-4373-2188/receipt.json)
 
 - [K0812](../items/K0812-new-exceptional-primes-3719-3727.md) (manifest): 15,301変数・115,995節・255,753行DRAT・VERIFIED（469秒）
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-4759-2381/receipt.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-4759-2381/receipt.json)
+
+- [K0812](../items/K0812-new-exceptional-primes-3719-3727.md) (manifest): 16,652変数・138,438節・520,107行DRAT・VERIFIED（3,097秒）
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-5039-2521/receipt.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-5039-2521/receipt.json)
+
+- [K0812](../items/K0812-new-exceptional-primes-3719-3727.md) (manifest): 17,632変数・162,781節・13,721行DRAT・VERIFIED（21.3秒）
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full.json)
 
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (data): 旧チェッカーの標本21 dの受理記録。K0707の偽受理発見により独立証拠への採用を保留

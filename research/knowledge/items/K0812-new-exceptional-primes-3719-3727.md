@@ -1,6 +1,6 @@
 ---
 id: K0812
-title: p=3719・3727・3967・4211・4231・4373は等号A(p)=(p+3)/2を達成せず、単一CNFのDRAT証明書で監査済み（既知4素数の外側で新発見）
+title: p=3719・3727・3967・4211・4231・4373・4759・5039は等号A(p)=(p+3)/2を達成せず、単一CNFのDRAT証明書で監査済み（既知4素数の外側で新発見）
 kind: proposition
 status: computed
 topics: [maximum-safe, geometry, search-methods]
@@ -40,6 +40,12 @@ artifacts:
 - path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-4373-2188/receipt.json
   role: manifest
   note: 15,301変数・115,995節・255,753行DRAT・VERIFIED（469秒）
+- path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-4759-2381/receipt.json
+  role: manifest
+  note: 16,652変数・138,438節・520,107行DRAT・VERIFIED（3,097秒）
+- path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-5039-2521/receipt.json
+  role: manifest
+  note: 17,632変数・162,781節・13,721行DRAT・VERIFIED（21.3秒）
 - path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3719-1860-x1c0e0/receipt.json
   role: manifest
   note: サイズ1860クラス(1,0,0)のUNSAT証明書（32,354行・VERIFIED 23秒）
@@ -55,15 +61,15 @@ artifacts:
 - path: research/log/2026-11-14-new-exceptional-primes-3719-3727.md
   role: log
   note: 発見の経緯（d走査の候補→単一CNF→証明書）と範囲の注意
-scope: p=3719・3727・3967・4211・4231・4373 の6素数。他の素数での不達成は主張しない。
+scope: p=3719・3727・3967・4211・4231・4373・4759・5039 の8素数。他の素数での不達成は主張しない。
 evidence: 両素数とも形状(1,1,0)の単一CNFがcadicalでUNSAT（2.0秒/20.7秒）。DRATを修正版増分検査器で検査し両方VERIFIED（31.6秒/929秒）。d走査でも24個（3719）のdが全て高速UNSATで、候補として独立に一致した。
 ---
 
 ## 主張
 
 `p = 3719`（`h = 1859`）・`p = 3727`（`h = 1863`）・`p = 3967`（`h = 1983`）・
-`p = 4211`（`h = 2105`）・`p = 4231`（`h = 2115`）・`p = 4373`（`h = 2186`）について、
-サイズ `h+2` の安全集合は存在しない。すなわち
+`p = 4211`（`h = 2105`）・`p = 4231`（`h = 2115`）・`p = 4373`（`h = 2186`）・
+`p = 4759`（`h = 2379`）・`p = 5039`（`h = 2519`）について、サイズ `h+2` の安全集合は存在しない。すなわち
 
 ```
 A(3719) <= 1860 = h+1
@@ -72,6 +78,8 @@ A(3967) <= 1984 = h+1
 A(4211) <= 2106 = h+1
 A(4231) <= 2116 = h+1
 A(4373) <= 2187 = h+1
+A(4759) <= 2380 = h+1
+A(5039) <= 2520 = h+1
 ```
 
 一般上界 `A(p) <= (p+3)/2`（K0097）に対し、この2素数は等号を達成しない。
