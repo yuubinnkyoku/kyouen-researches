@@ -37,7 +37,7 @@ verify_all_t_max.py は V0（ラベル付き/多重集合2エンジン照合5,67
 - 実験ディレクトリ research/experiments/vertical-fiber-all-t-grundy-max-20261116/ に report.md・verify_all_t_max.py・output/audit.json を保存。
 - K0832本文に「全t・全q・全幅・全高さのGrundy最大値」節を追加し、任意t節の「未証明・未反証」の文と t∈{2,3} 節の一般予想記録を本定理への参照で更新、frontmatterのscope・evidence・artifactsを更新。
 - 手書きknowledge READMEのK0832説明に全t定理を追記、refresh workflowにトリガー行を追加。生成viewは直接編集していない。新K番号は作らない。
-- 反映は最新main再取得・anchor検証の後に1コミットで行い、push後にrefetchでbyte-identicalを照合した。
+- 反映は最新main再取得・anchor検証の後に行い、push後にrefetchでbyte-identicalを照合した。GitHub APIのtree作成タイムアウトのため、実験4ファイル・K0832・README・workflow triggerの4コミットに分割して反映した（各ファイルの内容は単一の成果物として一貫）。
 
 ## 次の実行可能課題
 
