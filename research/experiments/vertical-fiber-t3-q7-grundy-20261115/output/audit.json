@@ -1,0 +1,38 @@
+{
+  "scope": {
+    "game": "pure fiber occupancy game",
+    "t": 3,
+    "q": 7,
+    "safety": "sum_b min(c_b, 3) <= 6",
+    "move": "increment one coordinate by one if the child is safe",
+    "grundy": "mex of legal-child Grundy values",
+    "height_range": [2, 12],
+    "width_range": [1, 8]
+  },
+  "audit": {
+    "parameter_pairs": 88,
+    "canonical_multiset_states": 4730,
+    "labeled_vector_states": 179740,
+    "labeled_grundy_histogram": {
+      "0": 91819,
+      "1": 76926,
+      "2": 8505,
+      "3": 2490
+    },
+    "mismatches": 0,
+    "all_parameter_maxima_match_theorem": true,
+    "all_values_at_most_3": true
+  },
+  "minimum_value_3_witness": {
+    "w": 3,
+    "m": 4,
+    "occupancy": [3, 2, 0],
+    "grundy": 3,
+    "children": [
+      {"occupancy": [4, 2, 0], "grundy": 2},
+      {"occupancy": [3, 3, 0], "grundy": 0},
+      {"occupancy": [3, 2, 1], "grundy": 1}
+    ]
+  },
+  "interpretation": "Finite recursive-mex audit only; the all-parameter theorem is proved in report.md."
+}
