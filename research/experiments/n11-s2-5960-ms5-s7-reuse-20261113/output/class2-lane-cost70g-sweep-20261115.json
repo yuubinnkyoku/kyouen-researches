@@ -1,5 +1,5 @@
 {
- "schema": "n11-class2-lane-cost70g-sweep-20261115-v1",
+ "schema": "n11-class2-lane-cost70g-sweep-20261115-v2",
  "date": "2026-11-15",
  "session": "long-term lane execution (2026-11-15 JST), continuing after the cost-70e receipts fold (head 1233) and the parallel cost-70f claim",
  "s5_parent_hex": "00000000000000801202000000200000",
@@ -83,20 +83,20 @@
  "cross_engine_check": "v15 runner (class4_child1_runner.ts, repo blob 8744fc65b6b7cac6bd561403ce4c749e01c51359, byte-exact local copy verified by git blob sha; pilot d6 loss=false at exactly 5,949 nodes, PASS x11) on the same child: ALL 8 WIN7 bits loss=true at 10,273,907 (bit9) / 1,523,082 (20) / 10,750,468 (29) / 10,250,857 (34) / 4,821,985 (62) / 1,408,183 (70) / 9,482,275 (76) / 7,787,565 (119) v15 nodes, and the three heaviest REFUTED bits loss=false at 12,630,899 (6) / 13,387,147 (86) / 10,102,917 (98) - all 11 verdicts identical to v16, terminal stone range [13,17] on every line (class2-lane-cost70g-v15-crosscheck-20261115.jsonl, v15 total 92,419,285 nodes)",
  "duplicate_root_check": "all 8 WIN7 root hexes code-searched over yuubinnkyoku/kyouen-researches immediately before pushing this sweep record: 8/8 roots 0 hits - no prior published claim, sweep, or certificate covers any of these roots; all 8 are new coverage",
  "raw_batches": "class2-lane-cost70g-raw-batch{1..9}-20261115.jsonl (8x8+6, pushed as completed)",
- "certificate": [],
- "certificate_note": "no certificates extracted yet: blind extraction (repo-verbatim extractor class4_child1_cert_extractor_exact_v16.ts + driver, FBS 1<<20, empty kill table) is the next step for the 8 WIN7 roots; until then these are certificate-rebuild candidates only",
- "unverified_win7_bits": [
-  9,
-  20,
-  29,
-  34,
-  62,
-  70,
-  76,
-  119
+ "certificate": [
+  "class2-lane-cost70g-certificates/bit9-root-00000000000100809002000000000a00.cert",
+  "class2-lane-cost70g-certificates/bit20-root-00000000000100809002000000100800.cert",
+  "class2-lane-cost70g-certificates/bit29-root-00000000000100809002000020000800.cert",
+  "class2-lane-cost70g-certificates/bit34-root-00000000000100809002000400000800.cert",
+  "class2-lane-cost70g-certificates/bit62-root-0000000000010080d002000000000800.cert",
+  "class2-lane-cost70g-certificates/bit70-root-00000000000100c09002000000000800.cert",
+  "class2-lane-cost70g-certificates/bit76-root-00000000000110809002000000000800.cert",
+  "class2-lane-cost70g-certificates/bit119-root-00800000000100809002000000000800.cert"
  ],
- "unverified_win7_bits_note": "8 WIN7-D10 candidates without extracted certificates yet (warm certificate-rebuild candidates); they change no frontier number until the receipts fold; all 8 WIN7 verdicts are anchored on the v15 cross-engine runner (loss=true)",
+ "certificate_note": "8 fully verified certificates (blind extraction via repo-verbatim class4_child1_cert_extractor_exact_v16.ts blob 5518d375fc6b4a7a14c22a1a65586f0c1c5731c0 + cert_driver70g.ts, FBS 1<<20, empty kill table, fbt_drops 0 on all 8; rows header+root+sort -u): bits 9 (51,456 rows / 7,016,206 extraction nodes / 60 loser moves), 20 (16,902 / 512,110 / 46), 29 (44,195 / 6,152,408 / 54), 34 (56,345 / 7,359,406 / 63), 62 (26,591 / 1,155,484 / 51), 70 (19,456 / 476,835 / 49), 76 (45,917 / 4,205,108 / 55), 119 (41,408 / 4,934,675 / 56); total 302,270 rows / 31,812,232 extraction nodes; every certificate independently verified by verify_win7_certificate_bigint_independent.mjs (blob 62b5d9413daafb172f6e10249976ee6808f7b454): root stones=7 + safe, loser mobility vs independent enumeration, all sub-roots PASS, union missing/extra 0/0, rows sorted unique, terminal range [13,17]; all 8 repo blob shas match the local files byte-exact; details in class2-lane-cost70g-win7-certificates-20261115.json",
+ "unverified_win7_bits": [],
+ "unverified_win7_bits_note": "none: all 8 WIN7-D10 candidates now have fully verified certificates (see certificate_note); they still change no frontier number until the receipts fold",
  "fold_status": "PENDING: a cost-70g receipts fold must wait for (a) the parallel cost-70f sweep (in flight) and (b) the head-1227-based cost-65l fold reconciliation (1227-baseline fork merge/rebase per the cost-78a+69h precedent); when it lands, the receipts would advance both open class-2 parents at once (00000000000000801202000000200000 at 28 rows / 2119 and 00000000000000801202010000000000 at 60 rows / 4342)",
  "unknown_status": "11x11 empty board: UNKNOWN. All WIN7 certificates prove only individual 7-stone roots within depth 10.",
- "status": "completed (sweep); certificates and fold pending"
+ "status": "completed (sweep + certificates); fold pending"
 }
