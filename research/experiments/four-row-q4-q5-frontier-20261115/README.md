@@ -79,12 +79,16 @@ lex=H 単独の2クラスが absence 可能な初の走査である。
 完全証明（M の確定）。INDET は cap 到達であり不在を意味しない。
 上界（K0068 parity / K0318 substitution）は不変。
 
-## 結果（2026-11-15・バッチ1〜6）
+## 結果（2026-11-15・バッチ1〜8）
 
 1. **(6,4) m=41 SAT**（rowY=0・lex=H,V,HV・245.2s・8,226 conflicts・17石
-   rows [2,3,3,3,3,3]）— **witness 帯 m=6..41・M_{6,4} ∈ [42, 1113]**。
-   js+py 2系統検証 + 第3系統（純TS/BigInt・陽性/陰性対照つき）PASS
-   （output/ts-verify-frontier.json）。前線 m=42。
+   rows [2,3,3,3,3,3]）— js+py 2系統検証 + 第3系統（純TS/BigInt・陽性/陰性対照つき）
+   PASS（output/ts-verify-frontier.json）。
+1b. **(6,4) m=42 SAT**（rowY=0・lex=H,V,HV・461.6s・16,942 conflicts・17石
+   rows [2,3,3,3,3,3]）— **witness 帯 m=6..42・M_{6,4} ∈ [43, 1113]**。
+   js+py 2系統検証 + 第3系統（純TS/BigInt・陽性対照 m=40 再PASS は
+   nCircles=670/nQ1Curves=690 が m=41 run と同一・陰性対照 unsafe 検出つき）PASS
+   （output/ts-verify-frontier-m42.json）。前線 m=43。
 2. **(4,4) m=35**: 2クラス被覆掃引（rowY=0/1・lex=H）ともに 600s INDET
    （324,870 / 230,642 conflicts）— honest negative。不在主張ではない。
    M_{4,4} ∈ [35, 237] は不変。

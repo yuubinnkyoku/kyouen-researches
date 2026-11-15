@@ -48,12 +48,22 @@ lex=H 単独（V/HV なし）であることが本質。逆に SAT は lex に�
 - 完全リセット（作業dir消滅）が ~02:20・~03:19 に発生。push 済みの成果は
   影響なし。バッチごとの即 push が有効だった。
 
+## 追記（第2セッション・バッチ7/8: (6,4) m=42）
+
+1. **(6,4) m=42 rowY=0 SAT**（461.6s・16,942 conflicts・17石 rows [2,3,3,3,3,3]）—
+   **witness 帯 m=6..42・M_{6,4} ∈ [43, 1113]**。js+py 2系統検証 + 第3系統
+   （ts-verify-frontier-m42.json・陽性対照 m=40 再PASS は m=41 run と同一値・
+   陰性対照 maxCirc=4 unsafe+7 uncovered 検出）PASS。前線は m=43。
+   m=41 (8,226/245.2s) → m=42 (16,942/461.6s) は conflicts ほぼ2倍・時間1.9倍の
+   穏やかな難化。CNF は vars 1,939,029 / clauses 6,437,821 / curves 185,453。
+2. 第2統合（CSV・K0833・本 README・本 log）で反映済み。
+
 ## 次課題
 
 - (4,5) m=21 / (4,4) m=35 の2クラス UNSAT には更に長い cap（~30M conflicts 級）
   か class-split（sat3 --class）の併用が必要。両クラス INDET の間は M は
   [21,140] / [35,237] のまま。
-- (6,4) m=42（前線更新）・(5,4) m=40 rowY=0/def-mode の掃引。
+- (6,4) m=43（前線更新）・(5,4) m=40 rowY=0/def-mode の掃引。
 - (4,21,5) は CNF が小さい（84点・542曲線・36,910節）ため、CDCL 以外の
   アプローチ（局所探索・構成的延伸・K0827 型 blocking-coverage）も
   併用価値がある。
