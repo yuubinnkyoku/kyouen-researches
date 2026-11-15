@@ -200,7 +200,7 @@ assert (len(p2_before), sum(p2_before.values())) == (79, 6539), (len(p2_before),
 d = demG[CHILD]
 assert (d["c1"], d["c2"], d["c4"]) == (0, 2, 0), d
 # one-stone deletions of the child, D4-canonicalised with the chain-internal canon
-canon = ns67["canon"]
+canon = ns69["canon"]
 del_orbits = {s: canon(CHILD_V & ~(1 << s))
               for s in [i for i in range(121) if (CHILD_V >> i) & 1]}
 p1_lift = [s for s, o in del_orbits.items() if f"{o:032x}" == PARENT1]
@@ -270,7 +270,7 @@ sums = {"rows": 0, "bytes": 0, "extraction_nodes": 0, "sub_roots_total": 0}
 for bit in [8, 20, 29, 36, 109]:
     c = certs[str(bit)]
     assert c["root_hex"] == f"{CHILD_V | (1 << bit):032x}"
-    assert c["d4_canonical_hex"] == f"{ns67['canon'](int(c['root_hex'], 16)):032x}"
+    assert c["d4_canonical_hex"] == f"{ns69['canon'](int(c['root_hex'], 16)):032x}"
     assert c["bigint_verifier"]["union_missing"] == 0 and c["bigint_verifier"]["union_extra"] == 0
     assert c["bigint_verifier"]["subroots_passed"] == c["sub_roots_total"]
     assert c["bigint_verifier"]["terminal_range"] == [13, 17]
@@ -323,7 +323,7 @@ print("CONTROL 5 published certificates asserted against local bytes: whole "
 assert len(prev) == 116, len(prev)  # 114 pre-69h + 2 cost-69h
 new_roots = {int(certs[str(b)]["root_hex"], 16) for b in [8, 20, 29, 36, 109]}
 assert not (new_roots & prev)
-prev_d4 = {f"{ns67['canon'](r):032x}" for r in prev}
+prev_d4 = {f"{ns69['canon'](r):032x}" for r in prev}
 assert not ({certs[str(b)]["d4_canonical_hex"] for b in [8, 20, 29, 36, 109]} & prev_d4)
 assert len({certs[str(b)]["d4_canonical_hex"] for b in [8, 20, 29, 36, 109]}) == 5
 print("CONTROL root disjointness: 5 new roots vs 116 folded receipt roots "
@@ -600,11 +600,11 @@ if claim.get("status") == "completed":
     assert f["parents_lost_rows"]["parent2"] == sorted(p2_lost)
     obs = f["output_blob_shas"]
     sha_out, blen_out = git_blob_sha(OUT / "class-frontier-cost78a-receipts-recompute-20261115.json")
-    assert sha_out == obs["head_json"] and blen_out == 10629, \
+    assert sha_out == obs["head_json"] and blen_out == 10680, \
         "the regenerated head JSON must stay byte-identical after the claim retire"
     sha_out, blen_out = git_blob_sha(OUT / "class-frontier-s5-ranking-after-cost78a-receipts-20261115.csv")
     assert sha_out == obs["ranking_csv"] and blen_out == 7580
     sha_out, blen_out = git_blob_sha(OUT / "class-frontier-top-candidates-s6-after-cost78a-receipts-20261115.csv")
-    assert sha_out == obs["top_candidates_csv"] and blen_out == 5953
+    assert sha_out == obs["top_candidates_csv"] and blen_out == 5867
     print("CONTROL completed claim fold record matches this recomputation: head "
           + head_str + ", three output blobs re-asserted byte-identical")
