@@ -1,0 +1,42 @@
+{
+  "audit": "pure-fiber-polynomial-boundary-grundy",
+  "range": {
+    "w": [
+      1,
+      4
+    ],
+    "m": [
+      1,
+      4
+    ],
+    "t": [
+      1,
+      4
+    ]
+  },
+  "parameter_cases": 64,
+  "boundary_states": 5080,
+  "all_match": true,
+  "by_width": [
+    {
+      "w": 1,
+      "parameter_cases": 16,
+      "boundary_states": 56
+    },
+    {
+      "w": 2,
+      "parameter_cases": 16,
+      "boundary_states": 216
+    },
+    {
+      "w": 3,
+      "parameter_cases": 16,
+      "boundary_states": 896
+    },
+    {
+      "w": 4,
+      "parameter_cases": 16,
+      "boundary_states": 3912
+    }
+  ]
+}

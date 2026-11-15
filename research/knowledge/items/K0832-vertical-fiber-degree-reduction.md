@@ -34,8 +34,20 @@ artifacts:
 - path: research/log/2026-11-15-vertical-fiber-degree-reduction.md
   role: log
   note: 最新main・未解決一覧との照合、定理の選定、有限検証と限界
-scope: r≥1、有限非空B⊂R^r、有限A⊂R、盤B×A。底面跡族Tの柱T×Aと、deg_z(F)≤tかつ全b∈BでF(b,.)≢0を満たす全多項式族（底面係数次数は無制限）を禁止対象とする。配置Sの多項式族との最大共存数はΣ_b min(c_b,t)と厳密に一致し、安全性は底面跡容量条件とΣ_b min(c_b,t)≤q−1の同時成立と同値
-evidence: 全称数学的証明。各ファイバーの根数上界Σ min(c_b,t)と、分離線形形式に沿うラグランジュ補間による上界達成から、全多項式族に対する最大共存数を厳密決定。底面跡容量条件と合わせて安全性・合法手・Grundy値を占有ベクトルへ厳密縮約する。従来のq>t|B|は一様十分条件として従い、q=t|B|の飽和境界例も維持。2×2底面・3高さの全配置をt=1,2,3で有限監査し、補間構成と退化ファイバーの障害をFractionで検査
+- path: research/experiments/vertical-fiber-boundary-grundy-20261115/report.md
+  role: proof
+  note: 境界層が飽和ファイバーの鎖の直和となる全称証明と、底面跡制約付きの十分条件
+- path: research/experiments/vertical-fiber-boundary-grundy-20261115/verify_boundary_grundy.py
+  role: verifier
+  note: 小パラメータの全境界占有ベクトルを再帰mexと排他的論理和公式で照合
+- path: research/experiments/vertical-fiber-boundary-grundy-20261115/output/audit.json
+  role: data
+  note: 64パラメータ組・5,080境界状態の有限完全監査結果
+- path: research/log/2026-11-15-vertical-fiber-boundary-grundy.md
+  role: log
+  note: K0832の境界層Grundy値を鎖分解で厳密化した判断・証明・限界
+scope: r≥1、有限非空B⊂R^r、有限A⊂R、盤B×A。底面跡族Tの柱T×Aと、deg_z(F)≤tかつ全b∈BでF(b,.)≢0を満たす全多項式族（底面係数次数は無制限）を禁止対象とする。配置Sの多項式族との最大共存数はΣ_b min(c_b,t)と厳密に一致し、安全性は底面跡容量条件とΣ_b min(c_b,t)≤q−1の同時成立と同値。境界層Grundy公式はT=∅の純多項式ルールで全称、T≠∅では飽和ファイバー全充填後も全跡容量が保たれる場合の十分系
+evidence: 全称数学的証明。各ファイバーの根数上界Σ min(c_b,t)と、分離線形形式に沿うラグランジュ補間による上界達成から、全多項式族に対する最大共存数を厳密決定。底面跡容量条件と合わせて安全性・合法手・Grundy値を占有ベクトルへ厳密縮約する。境界層C(c)=q−1では飽和ファイバーの鎖分解からGrundy値の排他的論理和公式を全称証明し、底面跡制約付きの十分条件も証明。2×2底面・3高さの補間監査に加え、w,m,t≤4の64組・5,080境界状態を独立再帰で有限監査
 ---
 
 # 垂直ファイバー次数による一般縮約
@@ -99,6 +111,32 @@ q>tw なので、どの配置も F=0 上に q点を含めない。多項式超�
 を課すことが、全多項式族版の安全性の必要十分条件になる。合法手・子占有ベクトル集合・Grundy値もこの条件だけで決まる。
 
 この等式は、係数の底面次数を制限しない全族についてのもの。固定底面次数や既約性を課した部分族では、補間による上界達成を保証しない。
+
+## 境界層のGrundy値
+
+底面跡制約を持たない純粋なファイバー多項式ルールでは、境界層
+\[
+\sum_{b\in B}\min(c_b,t)=q-1
+\]
+の全局面は、その層の中だけに子を持つ。Grundy値は
+\[
+\boxed{
+G(c)=\bigoplus_{\substack{b\in B\\c_b\ge t}}
+\bigl((m-c_b)\bmod 2\bigr)
+}
+\]
+である。
+
+実際、未飽和ファイバー \(c_b<t\) への追加は容量和を1増やして不合法になる。一方、飽和済みファイバー \(c_b\ge t\) への追加は容量和を変えず、\(c_b<m\) なら合法である。飽和済みファイバーはその後も飽和済みのままなので、境界層のゲームは長さ \(m-c_b\) の一方向の鎖の直和となる。長さ \(h\) の鎖のGrundy値は \(h\bmod2\) であり、直和の値は各成分の排他的論理和である。∎
+
+底面跡族 \(\mathcal T\) も同時に課す場合、さらに
+\[
+\sum_{b\in T}c_b+
+\sum_{\substack{b\in T\\c_b\ge t}}(m-c_b)
+\le q-1
+\quad(\forall T\in\mathcal T)
+\]
+が成立すれば、飽和済みファイバーを全て満杯にしても全跡容量を超えない。この場合は全ての鎖の手が最後まで合法で、同じGrundy公式が成立する。この条件を満たさない一般の跡制約付き局面には公式を適用しない。
 
 ## 境界 q=tw の鋭さ
 
