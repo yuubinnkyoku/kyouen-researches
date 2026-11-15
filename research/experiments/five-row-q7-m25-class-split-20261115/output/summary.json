@@ -1,0 +1,26 @@
+{
+ "w": 5,
+ "m": 25,
+ "q": 7,
+ "claim": "no row-deficient maximal safe configuration on 5x25 q=7; witness-free width set of (5,7) is {19,20,21,22,23,24,25}; M_{5,7} = 19 or >= 27 (upper 158 unchanged)",
+ "direct_classes_unsat": 17,
+ "class0_k_minpos_split_unsat": 18,
+ "class1_k_minpos_split_unsat": 18,
+ "indet": 0,
+ "sat": 0,
+ "total_conflicts_25": 16203899,
+ "hardest": [
+  "1 k1:5 mp0: 2021531",
+  "0 k0:5 mp0: 1620423",
+  "0 k0:5 mp1: 847572",
+  "1 k1:4: 786695",
+  "0 k0:4: 755207"
+ ],
+ "lex_cross_checks": {
+  "2": 290573,
+  "0,1": 391407
+ },
+ "positive_control": "5x18 class {0} SAT 343,134 conflicts (bit-exact with the K0821/K0834/K0835/K0836 lane controls); decoded 29 stones rows (5,6,6,6,6), census-free verifyConfig PASS",
+ "decomposition_soundness": "k=0..5 partitions the deficient-row stone count; k=5 instances split by minpos=0..12, which pins the leftmost stone of the first deficient row at column exactly P; every configuration or its column mirror has leftmost stone column <= floor((m-1)/2) = 12 at m=25 (else x1 >= 13 and the mirror has leftmost column 24-x5 <= 24-13 = 11); the column mirror preserves row occupancy, hence the class",
+ "environment_note": "this sweep completed across an execution-environment outage: batch-1/2 (17 direct + 2 lexH + 10 krow, 27 UNSAT) ran in the interrupted prior session and their 29 raw logs are byte-exact on main (git blob sha verified); the resuming session regenerated all 56 CNFs with the byte-identical encoders and re-ran c2 (259,243) and 0k4 (755,207) as cross-run calibration, matching the main logs conflicts bit-exact, then completed the 26 k=5 x minpos instances; the official kissat 4.0.4 linux-amd64 release binary was used throughout; raw logs were pushed batch-by-batch."
+}
