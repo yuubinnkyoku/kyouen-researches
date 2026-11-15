@@ -1,0 +1,117 @@
+{
+  "experiment": "seven-row-q5-m38-surgery-negative-20261115",
+  "date": "2026-11-15",
+  "seed": "winC = winA-(8,5)-(16,6)+(24,5)+(22,6) (the m=37 witness, 27 stones rows [3,4,4,4,4,4,4])",
+  "board": "7x38",
+  "T": [
+    37,
+    0
+  ],
+  "q": 5,
+  "NEED": 4,
+  "sanity": {
+    "n": 27,
+    "rows": [
+      3,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "maxCurve": 4,
+    "needCurves": 61,
+    "unc37": [],
+    "unc38": [
+      [
+        37,
+        0
+      ]
+    ]
+  },
+  "controls": {
+    "curve_detection": {
+      "collinear5": true,
+      "concyclic5": true,
+      "line4_not5": true,
+      "circle_dedup": true
+    },
+    "m35_caseb_replica": {
+      "spPairs": 49,
+      "candidates": 17199,
+      "safe": 594,
+      "maximal": 1,
+      "witness": "winC rediscovered (removed (8,5),(16,6), added (24,5),(22,6))",
+      "expected": {
+        "spPairs": 49,
+        "candidates": 17199,
+        "safe": 594,
+        "maximal": 1
+      }
+    }
+  },
+  "census": {
+    "k4plusTcurves": 0,
+    "k3Tcurves": 3,
+    "k3TcurvesWithCells": "only the line y=0 (base (8,0),(18,0),(30,0), 34 empty cells); circles 3(x^2+y^2)-135x+145y+888=0 and 5(x^2+y^2)-225x+183y+1480=0 have 0 empty cells",
+    "k2Tcurves": 342,
+    "k2SpPairs": 75,
+    "emptyCells": 239
+  },
+  "cases": {
+    "c1a_Toccupancy": {
+      "candidates": 378,
+      "safe": 378,
+      "maximal": 0
+    },
+    "c1b_1new_on_k3": {
+      "candidates": 10200,
+      "safe": 2623,
+      "maximal": 0
+    },
+    "c2c_2new_on_k3_1curveRemoval": {
+      "candidates": 40392,
+      "safe": 2954,
+      "maximal": 0
+    },
+    "c2d_2new_on_k2": {
+      "candidates": 22500,
+      "safe": 488,
+      "maximal": 0
+    },
+    "c2a_Toccupancy_z2": {
+      "pairs": 351,
+      "pairsSkippedEmptyIntersection": 312,
+      "pairsFreeZ2": 0,
+      "candidates": 378,
+      "safe": 0,
+      "maximal": 0,
+      "fullSpace": 83538
+    },
+    "c2b_1onLine_z2": {
+      "pairs": 276,
+      "combos": 9384,
+      "combosSkipped": 8160,
+      "combosFreeZ2": 0,
+      "candidates": 11219,
+      "safe": 0,
+      "maximal": 0,
+      "fullSpace": 1914336
+    }
+  },
+  "u_validation": {
+    "pairsChecked": 15,
+    "allMatch": true,
+    "method": "U(Rm) vs direct buildTable of winC-Rm uncovered cells + removed positions"
+  },
+  "skip_audits": {
+    "c2bCombos": 14,
+    "c2bCombosZ2Each": 204,
+    "c2aPairs": 6,
+    "c2aPairsZ2Each": 238,
+    "allGroundTruthMaximalZero": true,
+    "note": "audit units were chosen among combos/pairs skipped by the empty-intersection prune; one audited c2b combo contained 52 safe candidates (0 maximal), confirming the prune drops only non-maximal candidates on the samples"
+  },
+  "conclusion": "0 witnesses in the complete two-edit surgery space from winC on 7x38; local negative, not an absence claim; M_{7,5} stays in [38,1142]; frontier 7x38"
+}
