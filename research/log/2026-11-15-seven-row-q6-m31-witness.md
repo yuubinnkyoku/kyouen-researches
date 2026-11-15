@@ -57,3 +57,18 @@
   K0827 追記 + refresh trigger。
 - 次候補（更新）: (a) class {3} (7,31,6) SAT の終了確認と (7,32,6) c3 への
   継続・(b) 3 編集 surgery・(c) 別 seed（クラス {3} 以外の欠損行配置）。
+
+- 第3セッション (class {3} (7,31,6) SAT 実行・INDET・環境リセット): 最初の実行は
+  ~1131s process-time / 5.79M conflicts でサンドボックスリセットにより中断。
+  raw CDN から scripts・kissat 公式バイナリ (md5 3a5eba83…) を再取得し再実行
+  (CNF 再生成 md5 48eb715f… 同一・環境リセット横断の決定性確認)。
+  **結果: INDET (cap 1800s wall・rc=124 SIGTERM・4,368,709 conflicts / process-time
+  896.03s)**。m=30 c3 (2,670,296 conflicts/497s SAT) の 1.64 倍深でも未解決・
+  witness (surgery) は class {3} に属するため instance は SAT 確定 — cap 到達の
+  honest negative (不在主張ではない)。CPU を (7,32,6) c3 と共有したため
+  process-time は wall の半分。**SAT より surgery が m=31 を先に解いた**。
+- 反映: m31-frontier README 結果セクション・output/records.jsonl (c3_7x31 INDET)・
+  output/c3_7x31.raw.txt・scripts/parse_model.py (SAT 時のモデル復号用・m=30/m=29
+  公開 witness で較正済み)。
+- 継続中: class {3} (7,32,6) SAT (cap 3600s・md5 bc10c516…) と (7,5) m=38 class {0}
+  SAT (cap 3600s・md5 b050817d…) がバックグラウンド実行中。
