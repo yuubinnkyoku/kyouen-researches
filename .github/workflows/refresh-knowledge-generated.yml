@@ -128,6 +128,10 @@ jobs:
           git diff --exit-code -- research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/cost67c-third-independent-certificate-audit-20261115.json
       - name: Audit all-t minimum-width G=3 witnesses
         run: uv run --locked python research/experiments/vertical-fiber-all-t-minwidth-witness-20261116/verify_minwidth_witness.py
+      - name: Audit multiplayer coalition census
+        run: |
+          uv run --locked python research/experiments/multiplayer-coalition-kyouen-20261116/verify_multiplayer_coalition.py
+          git diff --exit-code -- research/experiments/multiplayer-coalition-kyouen-20261116/output/audit.json
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python tools/knowledge/build.py
@@ -370,3 +374,5 @@ jobs:
 
 # Refresh trigger for K0832 all-t minimum-width G=3 witness correction (2026-11-16).
 # Refresh trigger for K0832 two-token z=0 residual slice (2026-11-16).
+
+# Refresh generated views for K0858 multiplayer coalition classification (r-person Surv/Win semantics, frozen collapse, regime loser/last-mover table, 40-board census) (2026-11-16).
