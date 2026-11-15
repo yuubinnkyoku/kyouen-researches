@@ -1,0 +1,311 @@
+{
+  "description": "Third verification system (pure TS/BigInt) of all band-extension witnesses: (6,4) m=32..40, (5,4) m=37..39. Verifier: research/experiments/seven-row-q7-witness-search-20261114/scripts/verify_independent.ts used verbatim (export keyword removed only; 18 source fragments cross-checked byte-exact against the repo original after whitespace normalization), executed in a pure-TypeScript sandbox with BigInt exact arithmetic. All 12 witnesses PASS safe+maximal+row-deficient with the single-deficiency row pattern (one q-2 row, w-1 rows of q-1 stones). Together with the js (sat.js verifyConfig) and py (verify_witness.py Fraction) verifications recorded per-instance in records.jsonl, every band-extension witness is now triple-verified.",
+  "date": "2026-11-15",
+  "verifier": {
+    "source": "research/experiments/seven-row-q7-witness-search-20261114/scripts/verify_independent.ts",
+    "modification": "export keyword removed; otherwise char-identical (whitespace-normalized fragment check, 18/18)",
+    "environment": "pure-TS sandbox, BigInt exact arithmetic"
+  },
+  "witnesses": [
+    {
+      "file": "output/q4-w6/s6x32q4_HVHV.witness.json",
+      "family": "(6,4)",
+      "m": 32,
+      "n": 17,
+      "pass": true,
+      "safe": true,
+      "maximal": true,
+      "rowDeficient": true,
+      "maxLine": 3,
+      "maxCirc": 3,
+      "nCircles": 672,
+      "nQ1Curves": 690,
+      "uncoveredCount": 0,
+      "rowCnt": [
+        3,
+        3,
+        2,
+        3,
+        3,
+        3
+      ],
+      "singleDeficiency": true
+    },
+    {
+      "file": "output/q4-w6/s6x33q4_HVHV.witness.json",
+      "family": "(6,4)",
+      "m": 33,
+      "n": 17,
+      "pass": true,
+      "safe": true,
+      "maximal": true,
+      "rowDeficient": true,
+      "maxLine": 3,
+      "maxCirc": 3,
+      "nCircles": 672,
+      "nQ1Curves": 690,
+      "uncoveredCount": 0,
+      "rowCnt": [
+        2,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "singleDeficiency": true
+    },
+    {
+      "file": "output/q4-w6/s6x34q4_HVHV.witness.json",
+      "family": "(6,4)",
+      "m": 34,
+      "n": 17,
+      "pass": true,
+      "safe": true,
+      "maximal": true,
+      "rowDeficient": true,
+      "maxLine": 3,
+      "maxCirc": 3,
+      "nCircles": 669,
+      "nQ1Curves": 691,
+      "uncoveredCount": 0,
+      "rowCnt": [
+        3,
+        3,
+        3,
+        3,
+        2,
+        3
+      ],
+      "singleDeficiency": true
+    },
+    {
+      "file": "output/q4-w6/s6x35q4_HVHV.witness.json",
+      "family": "(6,4)",
+      "m": 35,
+      "n": 17,
+      "pass": true,
+      "safe": true,
+      "maximal": true,
+      "rowDeficient": true,
+      "maxLine": 3,
+      "maxCirc": 3,
+      "nCircles": 671,
+      "nQ1Curves": 692,
+      "uncoveredCount": 0,
+      "rowCnt": [
+        3,
+        3,
+        3,
+        2,
+        3,
+        3
+      ],
+      "singleDeficiency": true
+    },
+    {
+      "file": "output/q4-w6/s6x36q4_HVHV.witness.json",
+      "family": "(6,4)",
+      "m": 36,
+      "n": 17,
+      "pass": true,
+      "safe": true,
+      "maximal": true,
+      "rowDeficient": true,
+      "maxLine": 3,
+      "maxCirc": 3,
+      "nCircles": 673,
+      "nQ1Curves": 690,
+      "uncoveredCount": 0,
+      "rowCnt": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        2
+      ],
+      "singleDeficiency": true
+    },
+    {
+      "file": "output/q4-w6/s6x37q4_HVHV.witness.json",
+      "family": "(6,4)",
+      "m": 37,
+      "n": 17,
+      "pass": true,
+      "safe": true,
+      "maximal": true,
+      "rowDeficient": true,
+      "maxLine": 3,
+      "maxCirc": 3,
+      "nCircles": 672,
+      "nQ1Curves": 692,
+      "uncoveredCount": 0,
+      "rowCnt": [
+        3,
+        3,
+        2,
+        3,
+        3,
+        3
+      ],
+      "singleDeficiency": true
+    },
+    {
+      "file": "output/q4-w6/s6x38q4_HVHV.witness.json",
+      "family": "(6,4)",
+      "m": 38,
+      "n": 17,
+      "pass": true,
+      "safe": true,
+      "maximal": true,
+      "rowDeficient": true,
+      "maxLine": 3,
+      "maxCirc": 3,
+      "nCircles": 673,
+      "nQ1Curves": 690,
+      "uncoveredCount": 0,
+      "rowCnt": [
+        3,
+        3,
+        2,
+        3,
+        3,
+        3
+      ],
+      "singleDeficiency": true
+    },
+    {
+      "file": "output/q4-w6-rowY0/s6x39q4_rowY0_HVHV.witness.json",
+      "family": "(6,4)",
+      "m": 39,
+      "n": 17,
+      "pass": true,
+      "safe": true,
+      "maximal": true,
+      "rowDeficient": true,
+      "maxLine": 3,
+      "maxCirc": 3,
+      "nCircles": 671,
+      "nQ1Curves": 690,
+      "uncoveredCount": 0,
+      "rowCnt": [
+        2,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "singleDeficiency": true
+    },
+    {
+      "file": "output/q4-w6-rowY0/s6x40q4_rowY0_HVHV.witness.json",
+      "family": "(6,4)",
+      "m": 40,
+      "n": 17,
+      "pass": true,
+      "safe": true,
+      "maximal": true,
+      "rowDeficient": true,
+      "maxLine": 3,
+      "maxCirc": 3,
+      "nCircles": 670,
+      "nQ1Curves": 690,
+      "uncoveredCount": 0,
+      "rowCnt": [
+        2,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "singleDeficiency": true
+    },
+    {
+      "file": "output/q4-w5/s5x38q4_HVHV.witness.json",
+      "family": "(5,4)",
+      "m": 38,
+      "n": 14,
+      "pass": true,
+      "safe": true,
+      "maximal": true,
+      "rowDeficient": true,
+      "maxLine": 3,
+      "maxCirc": 3,
+      "nCircles": 357,
+      "nQ1Curves": 372,
+      "uncoveredCount": 0,
+      "rowCnt": [
+        2,
+        3,
+        3,
+        3,
+        3
+      ],
+      "singleDeficiency": true
+    },
+    {
+      "file": "output/q4-w5-rowY0/s5x37q4_rowY0_HVHV.witness.json",
+      "family": "(5,4)",
+      "m": 37,
+      "n": 14,
+      "pass": true,
+      "safe": true,
+      "maximal": true,
+      "rowDeficient": true,
+      "maxLine": 3,
+      "maxCirc": 3,
+      "nCircles": 358,
+      "nQ1Curves": 372,
+      "uncoveredCount": 0,
+      "rowCnt": [
+        2,
+        3,
+        3,
+        3,
+        3
+      ],
+      "singleDeficiency": true
+    },
+    {
+      "file": "output/q4-w5-rowY1/s5x39q4_rowY1_HVHV.witness.json",
+      "family": "(5,4)",
+      "m": 39,
+      "n": 14,
+      "pass": true,
+      "safe": true,
+      "maximal": true,
+      "rowDeficient": true,
+      "maxLine": 3,
+      "maxCirc": 3,
+      "nCircles": 353,
+      "nQ1Curves": 369,
+      "uncoveredCount": 0,
+      "rowCnt": [
+        3,
+        2,
+        3,
+        3,
+        3
+      ],
+      "singleDeficiency": true
+    }
+  ],
+  "negativeControl": {
+    "description": "(6,32) witness with stone[0] moved to empty cell (0,0) - must fail",
+    "result": {
+      "pass": false,
+      "safe": false,
+      "maximal": false,
+      "maxLine": 3,
+      "maxCirc": 4
+    },
+    "detected": true
+  },
+  "positiveControl": {
+    "description": "controls records fetch/parse failed",
+    "detected": false
+  }
+}
