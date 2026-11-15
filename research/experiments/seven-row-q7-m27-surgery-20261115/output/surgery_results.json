@@ -1,0 +1,95 @@
+{
+  "experiment": "seven-row-q7-m27-surgery-20261115",
+  "family": "7xm q=7 row-deficient (q=w diagonal)",
+  "date": "2026-11-15",
+  "seed": {
+    "source": "research/experiments/seven-row-q7-witness-search-20261114/output/w7q7_7x26q7_rowY3.witness.json",
+    "rows": [
+      6,
+      6,
+      6,
+      5,
+      6,
+      6,
+      6
+    ],
+    "maxCurve": 6,
+    "uncoveredOn27": [
+      [
+        26,
+        3
+      ]
+    ],
+    "tCensus": {
+      "k5": 1,
+      "k5note": "line y=3 only",
+      "k4": 0,
+      "k3": 22,
+      "k2": 744,
+      "k1": 34
+    },
+    "curveCensus": {
+      "c6": 20,
+      "c5": 24,
+      "c4": 335
+    }
+  },
+  "twoEdit": {
+    "singles": {
+      "candidates": 18942,
+      "okzGateRejected": 13725,
+      "coverageRejected": 5217,
+      "survivors": 0
+    },
+    "pairs": {
+      "processed": 99326,
+      "sharedSafetyRejected": 15654,
+      "coverageRejected": 83672,
+      "survivors": 0
+    },
+    "ctl": {
+      "coverageTargetedDirect": "150/150",
+      "ctl2PerturbationRejected": true
+    },
+    "note": "identical counts reproduced across two independent implementations"
+  },
+  "oneAddThreeRemove": {
+    "caseIA_lineAddition_rOn0": {
+      "rsets": 7140,
+      "candidates": 149940,
+      "safetyGateRejected": 90540,
+      "coverageRejected": 59400,
+      "survivors": 0,
+      "coverageCtl": "80/80",
+      "safetyGateCtl": {
+        "sampled": 60,
+        "directBruteUnsafeConfirmed": 60
+      }
+    },
+    "caseIB_tAddition": {
+      "rsets": 10660,
+      "candidates": 10660,
+      "coverageRejected": 10660,
+      "survivors": 0,
+      "coverageCtl": "80/80"
+    }
+  },
+  "lineTriple": {
+    "rsets": 360,
+    "triplesTotal": 554400,
+    "okzGateRejected": 550320,
+    "gatedValid": 4080,
+    "sharedSafetyRejected": 1430,
+    "coverageRejected": 2650,
+    "survivors": 0,
+    "coverageCtl": "100/100"
+  },
+  "verdict": "0 witnesses in all enumerated surgery sub-spaces (833,868 candidates: edit distance <= 4 complete + (3,3) line-triple subspace); NOT an absence claim for 7x27 configurations",
+  "openSpaces": [
+    "(|A|=2,|R|=3) ~33M candidates",
+    "(|A|=3,|R|=3) general: T+2 free, 2-on-line+1 free, 1-on-line+2 free, 3 additions on a 3-stone T-curve",
+    "|R| >= 4",
+    "fresh configurations away from the seed (m=27 class instances INDET at caps)"
+  ],
+  "defectNote": "first ad-hoc (1,3)/(3,3) runs had a dead-gate effOf defect (all candidates rejected by an empty covA; invalid grounds, vacuous CTL); superseded by this verified consolidated machine whose gates demonstrably fire (shared 1430 / safety 90540 / okZ 550320) with targeted direct verification"
+}
