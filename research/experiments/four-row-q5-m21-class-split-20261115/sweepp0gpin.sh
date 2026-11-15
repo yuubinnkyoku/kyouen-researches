@@ -22,9 +22,9 @@ esac
 
 run_case() {
   local key=$1; shift
-  if grep -s "\"key\":\"$key\"" "$OUT/records.jsonl"; then
-    if grep -s "\"key\":\"$key\"" "$OUT/records.jsonl" | grep -s -q '"result":"\(SAT\|UNSAT\)"'; then return 0; fi
-    if grep -s "\"key\":\"$key\"" "$OUT/records.jsonl" | grep -s -q "\"cap\":$CAP"; then return 0; fi
+  if grep -s "\"key\":\"$key\"," "$OUT/records.jsonl"; then
+    if grep -s "\"key\":\"$key\"," "$OUT/records.jsonl" | grep -s -q '"result":"\(SAT\|UNSAT\)"'; then return 0; fi
+    if grep -s "\"key\":\"$key\"," "$OUT/records.jsonl" | grep -s -q "\"cap\":$CAP"; then return 0; fi
   fi
   local cnf="$OUT/${key}.cnf" log="$OUT/${key}.txt"
   node scripts/sat5.js 4 21 5 --class="$y" --krow=$y:$k --minpos=$p "$@" "$cnf"

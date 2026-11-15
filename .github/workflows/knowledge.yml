@@ -24,6 +24,8 @@ jobs:
             exit 1
           fi
           test ! -e /tmp/k6-invalid.cnf
+      - name: Audit all-t minimum-width G=3 witnesses
+        run: uv run --locked python research/experiments/vertical-fiber-all-t-minwidth-witness-20261116/verify_minwidth_witness.py
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python research/experiments/graph-star-fixed-q-count-complexity-20261102/verify.py

@@ -1,0 +1,48 @@
+{
+  "checks": 810,
+  "failures": [],
+  "minimal_width_formula": "ceil((cap+2)/t)",
+  "minimality_boundary_checks": 60,
+  "minimality_boundary_failures": [],
+  "minimality_boundary_states": 7331,
+  "pass": true,
+  "proof_boundary": "The finite audit checks the witness family only. The lower bound on width follows from the all-t regime lemma q>=t*w => max G<=1; the construction is proved by the R=1 residual mex H=mex{0,1}=2 and one saturated odd chain.",
+  "range": {
+    "cap": "2t+mu*t+r",
+    "m": "t+1",
+    "mu": [
+      0,
+      5
+    ],
+    "r": "0..t-1",
+    "t": [
+      2,
+      16
+    ]
+  },
+  "regression_example": {
+    "G": 3,
+    "cap": 11,
+    "empty_fibers": 0,
+    "m": 6,
+    "occupancy": [
+      5,
+      4,
+      1
+    ],
+    "q": 12,
+    "residue": 1,
+    "states_visited": 7,
+    "t": 5,
+    "used_capacity": 10,
+    "width": 3
+  },
+  "residue_case_counts": {
+    "1<=r<=t-2": 630,
+    "r=0": 90,
+    "r=t-1": 90
+  },
+  "schema": "vertical-fiber-minwidth-witness-audit-v1",
+  "total_original_game_states_visited": 5670,
+  "verifier_sha256": "39b2b0adf81079c3e756afd0ba3832d0cc97183a9ac60a91f623a0a9907a8294"
+}

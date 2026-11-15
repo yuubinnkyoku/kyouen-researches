@@ -21,9 +21,9 @@ esac
 BMIN=${BMIN:-$((p + 1))}
 for b in $(seq $BMIN $BMAX); do
   key="${BUCKET}b$b"
-  grep -s -q "\"key\":\"$key\"" "$OUT/records.jsonl" && \
-    grep -s "\"key\":\"$key\"" "$OUT/records.jsonl" | grep -s -q '"result":"\(SAT\|UNSAT\)"' && continue
-  grep -s "\"key\":\"$key\"" "$OUT/records.jsonl" | grep -s -q "\"cap\":$CAP" && continue
+  grep -s -q "\"key\":\"$key\"," "$OUT/records.jsonl" && \
+    grep -s "\"key\":\"$key\"," "$OUT/records.jsonl" | grep -s -q '"result":"\(SAT\|UNSAT\)"' && continue
+  grep -s "\"key\":\"$key\"," "$OUT/records.jsonl" | grep -s -q "\"cap\":$CAP" && continue
   cnf="$OUT/${key}.cnf"; log="$OUT/${key}.txt"
   node scripts/sat4.js 4 21 5 --class="$y" --krow=$y:$k --minpos=$p --x2=$b "$cnf"
   md5=$(md5sum "$cnf" | awk '{print $1}')
