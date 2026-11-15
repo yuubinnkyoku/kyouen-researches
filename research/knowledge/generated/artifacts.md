@@ -9460,6 +9460,9 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost79a-receipts-recompute-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost79a-receipts-recompute-20261115.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): fold後head 1304/6543/516873/4813/380596と第二target 10行/787
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost80d-receipts-recompute-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost80d-receipts-recompute-20261115.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): fold後head 1305/6542/516793/4812/380516と第二target 9行/707（best coverable class-2）
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-merged-cost75d-77d-receipts-recompute-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-merged-cost75d-77d-receipts-recompute-20261115.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): merged head 1302/6545/517025/4815/380748、第2開親64行/5036→58行/4593
@@ -9932,6 +9935,9 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost79a_receipts_20261115.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost79a_receipts_20261115.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (source): cost79a 3 receipt fold。head 1302のbyte再現・sweep/証明書bytes検証・第二target 10行へのfold
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost80d_receipts_20261115.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost80d_receipts_20261115.py)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (source): cost80d 4 receipt fold。head 1304のbyte再現・sweep/証明書bytes検証・第二target 9行へのfold
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_merged_cost75d_77d_20261115.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_merged_cost75d_77d_20261115.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (source): 75d head 1296へのwarm-hygiene merge。bit78 root==75d bit92 rootを除外しchild closureを再主張しない
@@ -14106,6 +14112,18 @@
 ## [research/experiments/seven-row-q5-witness-surgery-20261115/scripts/witness_surgery.ts](../../../research/experiments/seven-row-q5-witness-surgery-20261115/scripts/witness_surgery.ts)
 
 - [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (source): pure TS surgery search (inventory-based incremental pruning + brute re-verification) and the independent exhaustive verifier (5-subset enumeration safety + per-cell maximality)
+## [research/experiments/seven-row-q6-m30-class-split-20261115/README.md](../../../research/experiments/seven-row-q6-m30-class-split-20261115/README.md)
+
+- [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (proof): (7,6) m=30 witness by class {3} class-split SAT 2,670,296 conflicts/497.0s; 71 row-mirror canonical deficiency classes enumerated; (7,29,6) class {3} positive control SAT decoding a second distinct m=29 witness; M_{7,6} >= 31, frontier 7x31
+## [research/experiments/seven-row-q6-m30-class-split-20261115/output/c3.witness.json](../../../research/experiments/seven-row-q6-m30-class-split-20261115/output/c3.witness.json)
+
+- [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (data): 34-stone single-deficiency m=30 witness rows [5,5,5,4,5,5,5] row 3 cols [12,23,27,29]; c3.perturbed.json negative control (stone (12,3) removed -> not-maximal) and c3.pyverify.json Fraction verification included
+## [research/experiments/seven-row-q6-m30-class-split-20261115/output/records.jsonl](../../../research/experiments/seven-row-q6-m30-class-split-20261115/output/records.jsonl)
+
+- [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (data): per-instance records: (7,29,6) class {3} control SAT 3,074,703 conflicts/545.5s; (7,30,6) class {3} SAT 2,670,296 conflicts/497.0s (cap 600, cnf md5 09e969b9461e413551f61f76bff817ce)
+## [research/experiments/seven-row-q6-m30-class-split-20261115/scripts/verify_witness_det.js](../../../research/experiments/seven-row-q6-m30-class-split-20261115/scripts/verify_witness_det.js)
+
+- [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (verifier): third verification system: pure-integer 4x4-determinant line/circle test with built-in self-tests, no repo code; PASS on the m=30 witness (maxLine 5, maxCircle 5, uncovered 0) and not-maximal on the perturbation control
 ## [research/experiments/seven-row-q6-m30-surgery-completion-20261115/README.md](../../../research/experiments/seven-row-q6-m30-surgery-completion-20261115/README.md)
 
 - [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (proof): (7,6) m=29 seed to 7x30: complete disjoint classification of all <=2-removal/<=2-addition T-repairs with final size <=34; 1,781,021 unique candidates, 126,730 safe, 0 maximal; local negative only
@@ -15670,6 +15688,9 @@
 ## [research/log/2026-11-15-n11-class2-lane-cost79a-sweep-certificates-and-fold.md](../../../research/log/2026-11-15-n11-class2-lane-cost79a-sweep-certificates-and-fold.md)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): cost79aのsweep・3証明書抽出・二独立検証・第二target 11→10行fold
+## [research/log/2026-11-15-n11-class2-lane-cost80d-sweep-certificates-and-fold.md](../../../research/log/2026-11-15-n11-class2-lane-cost80d-sweep-certificates-and-fold.md)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): cost80dのsweep・4証明書抽出・二独立検証・第二target 10→9行fold
 ## [research/log/2026-11-15-n11-class2-merged-cost75d-77d-warm-hygiene.md](../../../research/log/2026-11-15-n11-class2-merged-cost75d-77d-warm-hygiene.md)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): 75d+77d warm-hygiene mergeとcross-lane root collision（bit78==bit92）の記録

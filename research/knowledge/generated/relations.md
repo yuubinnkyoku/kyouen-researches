@@ -5146,7 +5146,7 @@
 - → depends_on [K0825](../items/K0825-seven-row-q8-deficient-witness-lower-bound.md): same machinery and runner as the (7,8) search; rowY fixed-row split re-validated at q=7 (cracked the m=25 OR-instance wall); sat2.js is the only generator here since genfast.js requires q >= w+1
 - ← depends_on [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md): same machinery and runner as the (7,7) search (same session, same binary); q <= w families confirmed to have continuous witness bands from m=q
 
-## [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) 7xm q=4,5,6 row-deficient witness bands — q=4: 7x4..7x59, q=5: 7x5..7x37, q=6: 7x6..7x29; M_{7,4} >= 60, M_{7,5} >= 38, M_{7,6} >= 30
+## [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) 7xm q=4,5,6 row-deficient witness bands — q=4: 7x4..7x59, q=5: 7x5..7x37, q=6: 7x6..7x30; M_{7,4} >= 60, M_{7,5} >= 38, M_{7,6} >= 31
 
 - → depends_on [K0810](../items/K0810-sat-row-deficient-witnesses.md): census + sequential-counter/maximality core used verbatim (sat.js/sat2.js); def-mode single clause is the complete encoding of 'total < 7(q-1) iff some row <= q-2'
 - → depends_on [K0068](../items/K0068-standard-fixed-width-parity-threshold.md): (7,4) upper bound T_7 = 3+2{C(19,3)-6} = 1929 by the general q=4 parity theorem (all maximals 3w stones, g=(3w-|S|) mod2 for m >= T_w); matches K0318 substitution U=1929
