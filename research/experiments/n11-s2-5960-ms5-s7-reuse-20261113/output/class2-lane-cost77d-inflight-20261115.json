@@ -2,7 +2,7 @@
   "schema": "n11-class2-lane-cost77d-inflight-20261115-v1",
   "title": "n11 class2-lane cost-77d sweep in flight: second coverable class-2 target S5 cost-77 child (two open parents)",
   "date": "2026-11-15",
-  "status": "in-flight",
+  "status": "completed (sweep + WIN7 certificates + receipts fold)",
   "claimed_by": "n11 search continuation session (round 11)",
   "s5": "00000000000000801202000000200000",
   "s6_child": "00000000100000801202000000200000",
@@ -215,5 +215,90 @@
   },
   "verdict_semantics": "loss=true => WIN7-within-depth-10 candidate (certificate rebuild target); loss=false && !capped => REFUTED-D10, no first-player win within depth 10 (NOT a LOSS proof); capped => proves nothing either way",
   "unknown_status": "11x11 empty board: UNKNOWN. A completed sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 7-stone roots of this child.",
-  "coordination_note": "latest main fetched immediately before this claim push; the parallel cost-75d lane (second target cost-75 row) and cost-78a lane are separate."
+  "coordination_note": "latest main fetched immediately before this claim push; the parallel cost-75d lane (second target cost-75 row) and cost-78a lane are separate.",
+  "fold": {
+    "status": "completed",
+    "chain_head_before": "1290/6557/517923/4827/381646",
+    "chain_head_after": "1299/6548/517249/4818/380972",
+    "receipts_folded": 12,
+    "publication_order": [
+      7,
+      12,
+      39,
+      58,
+      62,
+      64,
+      66,
+      78,
+      94,
+      96,
+      108,
+      111
+    ],
+    "total_marginal": 58,
+    "total_marginal_in_manifest": 9,
+    "zero_marginal_in_manifest": [
+      39,
+      58,
+      64,
+      108
+    ],
+    "child_orbit_closed_by_bit": 7,
+    "parents_after": {
+      "parent1": "11 rows / 866",
+      "parent2": "58 rows / 4593"
+    },
+    "parents_lost_rows": {
+      "parent1": [
+        "00000000000040801202000000200000",
+        "00000000100000801202000000200000"
+      ],
+      "parent2": [
+        "00000000000000003800400008000010",
+        "00000000000000003800400008000800",
+        "00000000000000003800400008004000",
+        "00000000000000003800400008100000",
+        "00000000000000103800400008000000",
+        "00000000000000801202000044000000",
+        "00000000000000805202000004000000",
+        "00000000100000801202000000200000"
+      ]
+    },
+    "output_blob_shas": {
+      "head_json": "d19c96b7cb0a01f8fd50179b3ff77595408537d7",
+      "ranking_csv": "a69f5e7a19ccb0ef4565de6c6b5be303eb80e60c",
+      "top_candidates_csv": "49b7f37815f120829d86cd2370dbd0026dec1d63"
+    },
+    "head_json_bytes": 13128,
+    "ranking_csv_bytes": 7538,
+    "top_candidates_csv_bytes": 7416,
+    "fold_script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost77d_receipts_20261115.py",
+    "reproduction": "python research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost77d_receipts_20261115.py",
+    "note": "The second coverable class-2 target S5 00000000000000801202000000200000 now has 11 remaining rows (was 13; two rows closed by this fold). Marginal counts are D4-orbit bookkeeping over published receipts, not game-theoretic values."
+  },
+  "merged_fold": {
+    "status": "completed (warm-hygiene rebase on the cost-75d head 1296)",
+    "chain_head_before": "1296/6551/517468/4821/381191",
+    "chain_head_after": "1302/6545/517025/4815/380748",
+    "receipts_folded": 11,
+    "excluded_receipt": "bit78 root 00000000100040801202000000200000 == cost-75d bit92 root (cross-lane collision; already folded)",
+    "total_marginal": 51,
+    "total_marginal_in_manifest": 6,
+    "child_closure_claimed": "none (the child is already solved at 1296 by cost-75d bit-92 cross-cover)",
+    "parents_after": {
+      "parent1": "11 rows / 866",
+      "parent2": "58 rows / 4593"
+    },
+    "output_blob_shas": {
+      "head_json": "97130384432e4a0e1e022292748f9fed1e957c0f",
+      "ranking_csv": "aba88980c02505b37da936de0f3d19eb23d37798",
+      "top_candidates_csv": "49b7f37815f120829d86cd2370dbd0026dec1d63"
+    },
+    "head_json_bytes": 12460,
+    "ranking_csv_bytes": 7538,
+    "top_candidates_csv_bytes": 7416,
+    "fold_script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_merged_cost75d_77d_20261115.py",
+    "reproduction": "python research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_merged_cost75d_77d_20261115.py",
+    "note": "The lane-local fold (1290 -> 1299) is superseded by this merged fold: the cost-75d fold landed at 1296 while this lane was running, and its bit-92 receipt cross-covers the 77d child. The merged fold excludes the colliding bit78 receipt and claims no child closure."
+  }
 }

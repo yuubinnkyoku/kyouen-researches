@@ -448,6 +448,12 @@
 ## [research/experiments/absorbing-subsets-20261024/verify.py](../../../research/experiments/absorbing-subsets-20261024/verify.py)
 
 - [K0537](../items/K0537-uniform-forbidden-absorbing-subset-sharp-strategies.md) (verifier): 吸収条件の全上位集合検査と二方式の全安全局面mex
+## [research/experiments/anchored-window-sat-frontiers-20261115/README.md](../../../research/experiments/anchored-window-sat-frontiers-20261115/README.md)
+
+- [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (source): 4×21・q=5の既知4×20 witnessを固定した75個の窓SATが全てUNSAT。固定prefixを持つ配置だけの局所排除であり、4×21全体のwitness不存在やM_{4,5}の更新は主張しない
+## [research/experiments/anchored-window-sat-frontiers-20261115/output/w4q5-m21-windows.jsonl](../../../research/experiments/anchored-window-sat-frontiers-20261115/output/w4q5-m21-windows.jsonl)
+
+- [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (data): 75/75 unique jobs all UNSAT。jobs-w4q5-m21.jsonとjobs-w4q5-m21-b.jsonの合併とのタグ完全一致を再監査
 ## [research/experiments/arbitrary-r-terminal-spectra-20261101/proof.md](../../../research/experiments/arbitrary-r-terminal-spectra-20261101/proof.md)
 
 - [K0598](../items/K0598-arbitrary-r-terminal-spectrum-universality.md) (proof): 入れ子型所属署名による全称構成、極大配置数の閉公式、同一N=rqへの均一化
@@ -9445,6 +9451,9 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost78a-receipts-recompute-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost78a-receipts-recompute-20261115.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): fold後head 1222/6625/522908/4895/386631とper-receipt marginal・親S5 after
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-merged-cost75d-77d-receipts-recompute-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-merged-cost75d-77d-receipts-recompute-20261115.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): merged head 1302/6545/517025/4815/380748、第2開親64行/5036→58行/4593
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-merged-recompute-20261114.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-merged-recompute-20261114.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 並行レーンの公開監査記録を統合した残作業のスナップショット
@@ -9911,6 +9920,9 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost78a_receipts_20261115.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost78a_receipts_20261115.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (source): cost78a 5 receipt fold。head 1216のbyte再現・25入力blob照合・sweep再導出・証明書bytes検証・fold・completed claim制御
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_merged_cost75d_77d_20261115.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_merged_cost75d_77d_20261115.py)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (source): 75d head 1296へのwarm-hygiene merge。bit78 root==75d bit92 rootを除外しchild closureを再主張しない
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/reconcile_cost69g_demand_20261115.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/reconcile_cost69g_demand_20261115.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): cost69g子の需要不整合をmanifest+rankingからD4幾何再導出で解消。classesはbitmaskで二重役割S5(classes=6)がc2とc4の両方に需要を作る
@@ -14836,6 +14848,15 @@
 ## [research/experiments/vertical-fiber-t2-q5-grundy-20261115/verify_t2_q5_canonical.py](../../../research/experiments/vertical-fiber-t2-q5-grundy-20261115/verify_t2_q5_canonical.py)
 
 - [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (verifier): 正占有数の多重集合だけで独立に状態・遷移を生成する再帰mex検証器
+## [research/experiments/vertical-fiber-t2-q6-grundy-20261115/output/audit.json](../../../research/experiments/vertical-fiber-t2-q6-grundy-20261115/output/audit.json)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (data): 209組・36,860多重集合状態と56組・137,004ラベル状態の監査結果
+## [research/experiments/vertical-fiber-t2-q6-grundy-20261115/report.md](../../../research/experiments/vertical-fiber-t2-q6-grundy-20261115/report.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (proof): t=2,q=6,w≥2,m≥2の純ファイバーゲームにおける全安全局面Grundy分類と終局偶奇・mex帰納証明
+## [research/experiments/vertical-fiber-t2-q6-grundy-20261115/verify_t2_q6.py](../../../research/experiments/vertical-fiber-t2-q6-grundy-20261115/verify_t2_q6.py)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (verifier): ラベル付き占有ベクトルと正占有多重集合を独立生成する再帰mex検証器
 ## [research/experiments/width17-20-circle-point-bound-20261112/output/width17_20_circle_bound.json](../../../research/experiments/width17-20-circle-point-bound-20261112/output/width17_20_circle_bound.json)
 
 - [K0778](../items/K0778-width17-20-circle-point-bounds.md) (data): 全数値の機械出力
@@ -15631,6 +15652,9 @@
 ## [research/log/2026-11-15-n11-class2-lane-cost78a-certificates-and-receipt-fold.md](../../../research/log/2026-11-15-n11-class2-lane-cost78a-certificates-and-receipt-fold.md)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): 3証明書のblind抽出・二独立検証・5 receipt fold・Windows LF/CRLF再現注意
+## [research/log/2026-11-15-n11-class2-merged-cost75d-77d-warm-hygiene.md](../../../research/log/2026-11-15-n11-class2-merged-cost75d-77d-warm-hygiene.md)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): 75d+77d warm-hygiene mergeとcross-lane root collision（bit78==bit92）の記録
 ## [research/log/2026-11-15-n11-class2-warm-multiband-loss-conflict-audit.md](../../../research/log/2026-11-15-n11-class2-warm-multiband-loss-conflict-audit.md)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): 2026-11-15 warm multiband証明書の範囲限定WIN/LOSS衝突監査
@@ -15658,6 +15682,9 @@
 ## [research/log/2026-11-15-vertical-fiber-t2-q5-grundy.md](../../../research/log/2026-11-15-vertical-fiber-t2-q5-grundy.md)
 
 - [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (log): K0832の既存成果と最新mainを照合し、t=2,q=5分類を証明・独立監査した記録
+## [research/log/2026-11-15-vertical-fiber-t2-q6-grundy.md](../../../research/log/2026-11-15-vertical-fiber-t2-q6-grundy.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (log): K0832の既存q=3/4/5成果と重複しないq=6分類の選定・証明・監査・限界
 ## [research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md](../../../research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md)
 
 - [K0092](../items/K0092-n11-dfpn-search-status.md) (source): 命題・対象範囲・根拠を記した出典
