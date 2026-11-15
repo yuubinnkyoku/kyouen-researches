@@ -1,0 +1,40 @@
+=== kissat 4.0.4 raw log tail evidence: class c04 (5x22 q=6 --class=c04, 250s wall-clock cut) ===
+--- head (banner) ---
+c ---- [ banner ] ------------------------------------------------------------
+c
+c Kissat SAT Solver
+c 
+c Copyright (c) 2021-2024 Armin Biere University of Freiburg
+c Copyright (c) 2019-2021 Armin Biere Johannes Kepler University Linz
+c 
+c Version 4.0.4 8af8e56f174b778aef3aa45af9f739b2a5f492c2
+c gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0 -W -Wall -O3 -DNDEBUG
+c Thu Oct 16 19:30:34 CEST 2025 Linux abryzen9 6.8.0-85-generic x86_64
+c
+c ---- [ parsing ] -----------------------------------------------------------
+--- last 10 progress lines ---
+c o 243.03 30 24 54 297 89464 4 3416976 54936 2.8 39 14 2 10 69% 1064 23293 1460 7%
+c - 243.32 32 24 54 298 89599 4 3421801 46323 2.7 38 14 2 10 69% 1064 23293 1460 7%
+c - 244.21 33 23 54 299 89811 4 3439063 54794 2.6 35 14 2 10 68% 1065 23293 1460 7%
+c - 245.27 34 22 54 300 90186 3 3456354 62189 2.5 33 13 2 10 68% 1065 23293 1460 7%
+c - 246.36 33 21 54 301 90681 3 3473676 64824 2.3 31 13 2 10 67% 1066 23293 1460 7%
+c - 247.72 35 21 54 302 91800 3 3491026 66182 2.2 30 14 2 11 66% 1068 23293 1460 7%
+c - 248.74 34 21 54 303 92201 3 3508404 66655 2.1 29 13 2 11 65% 1069 23293 1460 7%
+c s 248.99 33 21 54 303 92230 3 3513305 70456 2.1 28 13 2 11 65% 1069 23290 1460 7%
+c e 249.00 29 21 54 303 92230 3 3513305 70456 2.1 28 13 2 11 65% 1066 23309 1459 7%
+c s 249.00 29 21 54 303 92230 3 3513305 70456 2.1 28 13 2 11 65% 1066 23304 1459 7%
+--- tail (resources / SIGTERM) ---
+c focused glue 10  used  253378 clauses  2.31% accumulated 89.98%
+c focused glue 11  used  210471 clauses  1.92% accumulated 91.89% tier2
+c
+c stable glue 4    used  540549 clauses  3.18% accumulated 52.16% tier1
+c stable glue 5    used  352558 clauses  2.08% accumulated 54.24%
+c stable glue 6-25 used 5808910 clauses 34.21% accumulated 88.45%
+c stable glue 26   used  167577 clauses  0.99% accumulated 89.44%
+c stable glue 27   used  161321 clauses  0.95% accumulated 90.39% tier2
+c
+c ---- [ resources ] ---------------------------------------------------------
+c
+c maximum-resident-set-size:         56467456 bytes         54 MB
+c process-time:                         4m 10s             249.61 seconds
+c raising signal 15 (SIGTERM)

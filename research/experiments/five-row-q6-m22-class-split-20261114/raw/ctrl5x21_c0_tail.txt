@@ -1,0 +1,31 @@
+=== kissat 4.0.4 raw log tail evidence: control 5x21 q=6 --class=0 (SAT, full deterministic run) ===
+--- head (banner) ---
+c ---- [ banner ] ------------------------------------------------------------
+c
+c Kissat SAT Solver
+c 
+c Copyright (c) 2021-2024 Armin Biere University of Freiburg
+c Copyright (c) 2019-2021 Armin Biere Johannes Kepler University Linz
+c 
+c Version 4.0.4 8af8e56f174b778aef3aa45af9f739b2a5f492c2
+c gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0 -W -Wall -O3 -DNDEBUG
+c Thu Oct 16 19:30:34 CEST 2025 Linux abryzen9 6.8.0-85-generic x86_64
+c
+c ---- [ parsing ] -----------------------------------------------------------
+--- final stats ---
+c conflicts:                           330743            16607.40 per second
+c decisions:                          1395143                4.22 per conflict
+c propagations:                     117081732          5878956    per second
+c maximum-resident-set-size:         27013120 bytes         26 MB
+c process-time:                            20s              19.91 seconds
+--- tail (witness + shutdown) ---
+c ---- [ resources ] ---------------------------------------------------------
+c
+c maximum-resident-set-size:         27013120 bytes         26 MB
+c process-time:                            20s              19.91 seconds
+c
+c ---- [ shutting down ] -----------------------------------------------------
+c
+c exit 10
+--- decode (sat3.js decode 5 21 6) ---
+{"nStones":24,"verify":{"ok":true,"size":24,"rows":[4,5,5,5,5],"minRow":4},"ok":true}
