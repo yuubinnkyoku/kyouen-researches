@@ -45,3 +45,15 @@
   移植)・(b) class {3} (7,32,6) SAT・(c) kissat 終了後の raw log + records push。
 - 並走状況: 同時刻の main は n11 class2-lane (cost-79a/80d/80d/82c) と素数
   センサス checkpoint (498c03d5)。ファイルは衝突なし。
+
+- 第2セッション（7×32 two-edit surgery 完全負記録）: surgery_m32.py
+  （surgery_m31.py の 7×32 移植・seed は m=31 witness・T=(31,3)）で
+  **2,224,675 一意候補**を完全列挙し **0 safe-maximal**。T センサス c4=1
+  （直線 y=3）・c3=10（m=31 を遮断した c4 円は (31,3) を通らない）。
+  同一コードの m=30 seed レプリカ（control_m30seed_replica.py）が m=31 記録を
+  完全再現（2,140,633・unique witness・end-to-end 陽性対照）。
+  局所負記録・M_{7,6} ∈ [32,862] 不変・前線 7×32。
+  反映: seven-row-q6-m32-surgery-negative-20261115（README・2 scripts・4 outputs）・
+  K0827 追記 + refresh trigger。
+- 次候補（更新）: (a) class {3} (7,31,6) SAT の終了確認と (7,32,6) c3 への
+  継続・(b) 3 編集 surgery・(c) 別 seed（クラス {3} 以外の欠損行配置）。
