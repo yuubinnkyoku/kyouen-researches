@@ -16,9 +16,11 @@ class-split SAT（kissat 4.0.4・class {0}・k×minpos 分解サブインスタ�
   safe（1,824 石曲線すべて最大5石・unsafe 0）+ maximal（86/86 空セル遮断）。
 - **陽性対照 5×21 {0} SAT 330,743** が m22 class-split レーンの対照記録と bit-exact
   （24石 rows (4,5,5,5,5)・verifyConfig PASS）。
-- **m=23 は INDET（不在主張ではない）**: class {0} k4p0 **3,343,593** / k4p1
-  **3,369,340** conflicts（いずれも kissat --time=220 の壁時計打ち切り・
-  時間打ち切り値は同一軌跡でも bit-exact ではない）。
+- **m=23 は INDET（不在主張ではない）**: class {0} k4p0 **3,343,593**・k4p1
+  **3,369,340**・k4p2 **3,686,541**（ここまでで最難）・k3p0 **3,276,028**
+  conflicts（いずれも kissat --time=220 の壁時計打ち切り・
+  時間打ち切り値は同一軌跡でも bit-exact ではない）。残る k4p3..p11・k3p1..・
+  k2/k1/k0・他クラスは未走査。
 - **witness 近傍 surgery の完全列挙（負記録）**: m=22 witness を 5×23 に移植すると
   safe かつ未遮断セルは (22,0) のみ（T曲線32本・seed最大カウント 4,3,3）。
   1石surgery **1,416構成 → 0件**・2石surgery（heavy-T曲線健全フィルタで完全）

@@ -64,3 +64,11 @@
   refresh-knowledge-generated.yml に K0852 行を追加）。
 - **11×11空盤・二石root {49,60}/{59,60}・S2 {59,60}・class2・class4は
   いずれもUNKNOWN**。
+
+## 追記（同セッション・m=23 追加プローブ）
+
+- class {0} **k4p2 INDET 3,686,541** conflicts（219.53s・ここまでで m=23 最難）・
+  **k3p0 INDET 3,276,028** conflicts（219.57s）。いずれも kissat --time=220
+  壁時計打ち切り（時間打ち切り値は bit-exact でない）。生ログ2件を
+  records.jsonl 6行に拡張の上 push（実験dir README/report/summary も更新）。
+  残る未走査: k4p3..p11・k3p1..・k2/k1/k0・他クラス分解。
