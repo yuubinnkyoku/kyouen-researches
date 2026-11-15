@@ -39,6 +39,19 @@ fold script end-to-end: after this repair it reproduces the head
 (head JSON blob 8692a7a6..., ranking CSV 7ce2e616..., top-candidates CSV
 945f6556...).
 
+Publication status of `bit*.consumed.txt`: only `bit97.consumed.txt`
+(1,249,347 bytes, remote blob d7023de5..., byte-verified) is pushed, as a
+format witness of the TS verifier's consumed-winner-key emission. The
+bit21/bit100/bit29 emissions (2.24/2.58/3.34 MB) exceed this lane's
+single-file push ceiling (~1.5 MB: a 2.24 MB push failed both as a 36-chunk
+chunked read and as a single `cat`, each hitting the toolchain's 16 MiB
+program memory limit). Regenerate all four locally with the reconstruct
+script - it re-runs the TS verifier with `--consumed-out` and asserts
+`len(set(consumed)) == rows` for every bit before the fold script re-checks
+the same files. The fold script therefore expects the reconstruct step to
+have run (see the reproduce block below); after that it runs from main
+alone.
+
 The intermediate joined certificate files (`c69i-bit*.cert`) are not part of
 the published set; the reconstruction script regenerates them from the
 `class2-lane-cost69i-certificates/` parts.
