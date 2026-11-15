@@ -59,3 +59,18 @@ cost-63fの2 receipt foldは、別の長期class2 laneがhead 1195でin-flight c
 したがって今回の監査によるglobal frontier寄与は0。現headは `1195/6652/524884/4922/388607` のまま。fold完了後に初めてreceipt被覆を計上する。
 
 この2証明書が示すのは、個別の7石root bit85/91から10手以内の先手勝ちだけである。6石childのglobal閉鎖はfold待ちであり、標準11×11空盤、二石root `{49,60}` / `{59,60}`、S2 `{59,60}`、class2、class4は引き続き **UNKNOWN**。
+
+
+## 監査後の追記: cost-63f receipt fold 完了
+
+第三監査を公開した後、並走の長期class2 laneがcost-63fの2 receiptをhead 1195へfoldし、commit `3333d4f99ec0bb473c8760508902255df99c9c28` でmainに反映した。
+
+- 新head: **1199 / 6648 / 524616 / 4918 / 388339**
+- total marginal: 12、manifest内の新規被覆: 4
+- child `00000000000080809002000000000800` はbit85 receiptで閉鎖。
+- 2つのopen S5親はそれぞれ40→38軌道（2977→2837）、52→49軌道（3551→3360）。
+- baseline 1195の再現、入力14ファイルのblob照合、raw 8 batch再導出、証明書のmd5/SHA256/Git blob照合、set-equality `s_after == s_1195 UNION covers(2 roots)` が確認されている。
+
+本監査で得た14 deletion edges / 13 unique D4 parent orbitsと、foldでのmarginal 12は整合する。13軌道のうち1軌道はhead 1195時点で既に閉じており、今回の新規marginalは12。childの共有はbit85・bit91の両方で確認したが、foldでは同じchildを一度だけ閉じている。
+
+監査スクリプトとJSONも、当初の「監査時点ではfold in-flight」という記録を保持しつつ、後続fold JSON・completed claimを読み、新headとmarginalを照合する形へ更新した。CIの再実行結果はまだ取得していない。
