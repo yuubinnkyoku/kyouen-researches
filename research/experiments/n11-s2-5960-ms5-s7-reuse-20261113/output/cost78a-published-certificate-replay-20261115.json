@@ -1,0 +1,127 @@
+{
+  "schema": "n11-class2-cost78a-published-certificate-replay-20261115-v1",
+  "date": "2026-11-15",
+  "status": "PASS",
+  "audit_scope": "the two cost-78a WIN7 certificates published on main at audit time (bit36 single file, bit20 two parts); bits 8/29/109 pending publication by the parallel lane and not audited here",
+  "method": "all six input files asserted byte-exact against main by git blob sha; the bit20 parts re-joined at the verified line boundary (joined md5 == claim joined_md5); both certificates re-verified by verify_win7_certificate_bigint_independent.mjs (BigInt 3x3 cofactor expansion of the exact lifted determinant [x^2+y^2,x,y,1]; no solver, verdict cache, or repository verifier import); root == child | 1<<bit; sub-roots == loser mobility == sweep opponent_legal_replies; consumed union missing/extra 0/0; terminal stone range [13,17]; rows sorted-unique; the six-stone parent-lift orbits re-derived and the child orbit asserted present; v15 anchor and v16 sweep node counts matched to the published crosscheck and sweep audit",
+  "sources": {
+    "class2-lane-cost78a-sweep-audit-20261115.json": {
+      "git_blob_sha": "227098581af12c2a1911f8edb02dc914a476a0d7"
+    },
+    "class2-lane-cost78a-v15-crosscheck-20261115.jsonl": {
+      "git_blob_sha": "eb22e9f8be6f2b5668d2d04567c37c6933731146"
+    },
+    "class2-lane-cost78a-inflight-20261115.json": {
+      "git_blob_sha": "5298e966634976651251479397b476c6a88b8923"
+    },
+    "class2-lane-cost78a-certificates/bit20-root-00000000000000809102000000500000.cert.part1of2": {
+      "git_blob_sha": "feedb02de70206f8630bfdeae9d7a5eadc068173"
+    },
+    "class2-lane-cost78a-certificates/bit20-root-00000000000000809102000000500000.cert.part2of2": {
+      "git_blob_sha": "84d59223f7fb4752dd115407f552563989e1a504"
+    },
+    "class2-lane-cost78a-certificates/bit36-root-00000000000000809102001000400000.cert": {
+      "git_blob_sha": "ea30ad286dd1c3de674ff834da5778b5e0a26ae0"
+    }
+  },
+  "certificates": [
+    {
+      "bit": 20,
+      "root_hex": "00000000000000809102000000500000",
+      "d4_canonical_hex": "00000000000000809102000000500000",
+      "root_mobility": 64,
+      "subroots_passed": 64,
+      "rows": 56452,
+      "joined_or_single": "2 parts joined at line boundary",
+      "bytes": 2039074,
+      "md5": "348871fd605dedeb34b5a4c4ad6f518c",
+      "whole_git_blob_sha": "379a49fc8daaee024547d2beb356618299101d7c",
+      "visited_states_across_subroots": 113966,
+      "winner_states": 73232,
+      "loser_states": 21781,
+      "loser_reply_edges": 100815,
+      "terminal_count": 18953,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "union_missing": 0,
+      "union_extra": 0,
+      "v16_sweep_nodes": 2523199,
+      "v15_anchor_nodes": 9116968,
+      "claim_extraction_nodes": 16192007,
+      "parent_lift_orbits": [
+        "00000000000000009102000000500000",
+        "00000000000000801102000000500000",
+        "00000000000000801202000100001000",
+        "00000000000000808102000000500000",
+        "00000000000000809100000000500000",
+        "00000000000000809102000000100000",
+        "00000000000000809102000000400000"
+      ],
+      "child_orbit_covered": true
+    },
+    {
+      "bit": 36,
+      "root_hex": "00000000000000809102001000400000",
+      "d4_canonical_hex": "00000000000000809102001000400000",
+      "root_mobility": 59,
+      "subroots_passed": 59,
+      "rows": 50711,
+      "joined_or_single": "single file",
+      "bytes": 1833561,
+      "md5": "118de1bc8019d51f3fd909fda13a0b17",
+      "whole_git_blob_sha": "ea30ad286dd1c3de674ff834da5778b5e0a26ae0",
+      "visited_states_across_subroots": 116096,
+      "winner_states": 74930,
+      "loser_states": 22340,
+      "loser_reply_edges": 104123,
+      "terminal_count": 18826,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "union_missing": 0,
+      "union_extra": 0,
+      "v16_sweep_nodes": 1435988,
+      "v15_anchor_nodes": 6829497,
+      "claim_extraction_nodes": 11691313,
+      "parent_lift_orbits": [
+        "00000000000000003800001000010004",
+        "00000000000000009102001000400000",
+        "00000000000000801202010100000000",
+        "00000000000000808102001000400000",
+        "00000000000000809100001000400000",
+        "00000000000000809102000000400000",
+        "00000000000000809102001000000000"
+      ],
+      "child_orbit_covered": true
+    }
+  ],
+  "totals": {
+    "certificates_audited": 2,
+    "strategy_rows_sum": 107163,
+    "visited_states_sum_across_certificates_not_deduplicated": 230062,
+    "terminal_count_sum_across_certificates_not_deduplicated": 37779
+  },
+  "frontier_tie_in": {
+    "canonical_chain_head": "1195/6652/524884/4922/388607 (class-frontier-cost76a-receipts-recompute-20261115.json, the cost-76a receipts fold completed by this lane)",
+    "child_still_remaining_at_head_1195": true,
+    "third_class2_target_rows_at_head_1195": {
+      "00000000000000809102000000002000": 69,
+      "00000000000000809142000000000000": 74,
+      "00000000000000809102000000400000": 78
+    },
+    "third_class2_target_remaining_edge_cost": 221,
+    "s6_frontier_contribution": 0,
+    "rebase_requirement": "the eventual cost-78a receipt fold must rebase on the 1195 head (not 1188) and assert it before extending; this audit changes no frontier count"
+  },
+  "unknown_status": {
+    "empty_11x11": "UNKNOWN",
+    "two_stone_roots_49_60_and_59_60": "UNKNOWN",
+    "s2_59_60": "UNKNOWN",
+    "class2": "UNKNOWN",
+    "class4": "UNKNOWN"
+  },
+  "interpretation_guard": "WIN7 certificates prove a first-player win within depth 10 from the individual seven-stone roots only; they do not close the 78-legal-move six-stone parent. REFUTED-D10 is not a LOSS proof. This audit is independent verification bookkeeping over published material and does not determine the game-theoretic value of any position."
+}

@@ -1175,3 +1175,22 @@ S5ごとの費用減少の合計は13だが、一意なS6→S7辺は7件。最�
 詳細: [第三独立監査ログ](../../log/2026-11-15-n11-class2-cost76a-third-independent-certificate-audit.md)、[監査JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/cost76a-six-certificates-third-independent-audit-20261115.json)、[再現スクリプト](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost76a_six_certificates_third_independent_20261115.mjs)。
 
 6証明書は各7石rootの勝ちを示すだけで、76合法手のS6親を閉じない。REFUTED-D10はLOSS証明ではない。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、類2・類4は引き続き **UNKNOWN**。
+
+
+## 2026-11-15: cost-76a receipts fold 完成 — chain head 1188→1195
+
+cost-76a sweep の証明書付きWIN7-D10 receipts 6件（bits 11/29/66/80/92/96）を head 1188 にfoldし、新chain head **1195/6652/524884/4922/388607**（remaining S5 orbits 175）を確定した。head JSON は `class-frontier-cost76a-receipts-recompute-20261115.json`（blob `efd83f2637f83c0e1c5c477dcb0cc42162cda534`）、fold script は `recompute_frontier_cost76a_receipts_20261115.py`（blob `9090e4c86795f96864c0d83bd66db18b35ea88e2`）。
+
+- total marginal 31 / marginal_in_manifest +7。bit11 receipt が子軌道 `00000000000000809102000000000001` 本体と交差被覆 `00000000000000801202000000200400` を閉鎖し、bits 29/66/80/92/96 が各1軌道（`00000000000000801202000002000400`, `00000000000000849002000000000001`, `00000000000100809002000000000001`, `00000000100000809002000000000001`, `00000000040000801202000000000400`）を閉鎖。zero-mim receipt なし。4回実行すべてbyte-identical。
+- 第三class-2 target S5 `00000000000000809102000000000000` は残り4行（69/74/76/78 = 297）→3行（221）。残る69（cost-69g）・74（cost-74e）・78（cost-78a）はすべて並走レーンでin flight。
+- 統制: 1188 head のrunpy鎖 end-to-end 再現（head JSON・両CSVがmain掲載版とbyte-identical）、16入力ファイルのgit blob SHA照合、sweep audit のraw 10 batchからの再導出（76候補・131,329,581節点・6 WIN7-D10 / 70 REFUTED / 0 capped）、v15 anchor のnode一致、証明書6件のbytes再検証（md5×sha256×git blob、8 parts + 6 wholes、union 0/0、終局石数13〜17）、第三独立audit JSONの全項目一致、root disjointness（既fold 90 roots、raw + D4両方）。set-equality `s_after == s_1188 ∪ covers(6 roots)` 成立。
+
+事前作業として `recompute_frontier_cost72b_receipts_20261115.py` の透明修復（commit b4d655f9）を行った。公開後のclaim closure追記でclaimファイルのblob shaが変わり、公開済みchainが再実行不能になっていた。現行blob `b1c135c539e20c0ae94cdc2e66d769911af5eb7d` に差し替え、算術は無変更で1188 headをbyte-identical再現した。以後のfold script はclosure後のclaim blobをassertする（76a script は `7922a02aa7a84fa12c03ea04be9b1006468ea596` をassertし、無期限に再実行可能）。
+
+自claim c1f3028f の約1分後に並走実行が同fold claim（c4767883）をstale-fetchで上書きしたが、c00b4543 で自版を復元し、衝突をclaim closureの `concurrent_claim_note` に記録した。並走が独立にfoldを公開した場合は同一算術の相互検証を行う（cost-72b collision protocol）。
+
+cost-78a receipts fold（並走、証明書公開中）は**新head 1195 へのrebaseが必須**。以後のrecompute・claimはこのheadをassertして拡張する。
+
+解消計数はmanifest被覆の前進であり、盤全体の勝敗ではない。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class2・class4は引き続き **UNKNOWN**。
+
+詳細: [fold log](../../log/2026-11-15-n11-class2-lane-cost76a-receipts-fold.md)、[head JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost76a-receipts-recompute-20261115.json)、[fold script](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost76a_receipts_20261115.py)。
