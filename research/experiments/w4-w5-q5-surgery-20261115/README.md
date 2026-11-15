@@ -71,9 +71,28 @@ LOCAL ONLY: 4x21 remains INDET (band-extension lane). Raw: `output/q45_m21.jsonl
 L3 occupancy fix); usage `node surgery.js <w> <q> <m> <seed.json> <maxP> <maxRm> <targetMax> [offX]`,
 seed JSON `{"stones":[[x,y],...]}`. Deterministic (no RNG).
 
+## Cross-lane convergence (class-split lane, post-hoc)
+
+The parallel class-split lane (`five-row-q5-m24-class-split-20261115`, commit 1e20e906)
+independently found a 5x24 witness (class {0}, kissat 698,570 conflicts) and then a
+**5x25 witness** (class {0}, 35,972 conflicts) — so the true state is
+**M_{5,5} ∈ [26, 336], witness band m=5..25, frontier m=26** (CSV updated accordingly).
+Cross-lane checks with this lane's artifacts:
+
+- Their m=24 and m=25 witnesses both PASS this lane's third system
+  (`verify_witness_int.py`) in addition to their js+Fraction dual verification.
+- Their m=24 witness is NOT among the 22 surgery witnesses (min symmetric
+  difference 26 = 13 stones): the 5x24 witness space is much larger than either
+  lane's harvest, and the two machines sample disjoint parts of it.
+- Their m=25 witness lies at edit distance >= 20 (i.e. >= 10 stone differences)
+  from every one of the 22 m=24 witnesses over all offX in {0,1} embeddings —
+  the m=25 local negative above is thus not a machine artifact but witness
+  geometry: at m=25 the band does NOT chain from this m=24 cluster by small edits.
+
 ## Status ledger
 
-- M_{5,5}: 24 -> **25** (witness band m=5..24; frontier m=25).
+- M_{5,5}: this lane 24 -> 25 (22 witnesses); class-split lane then 25 -> 26;
+  **current: [26, 336], witness band m=5..25, frontier m=26**.
 - M_{4,5}: unchanged [21,140]; m=21 local negative recorded.
 - All bounded-edit claims here are complete enumerations over the stated edit
   neighborhoods — they are existential positives (witnesses) or local negatives,
