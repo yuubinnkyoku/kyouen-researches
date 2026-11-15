@@ -455,6 +455,7 @@
 - ← depends_on [K0719](../items/K0719-p2647-saved-1300-witness-inclusion-maximal.md): 包含極大と最大サイズを区別する
 - ← depends_on [K0720](../items/K0720-p2647-saved-1302-witness-inclusion-maximal.md): 包含極大と最大サイズを区別する
 - ← depends_on [K0730](../items/K0730-p2539-safe-bound-and-maximal-witness.md): 固定集合の包含極大性と最大サイズを区別する
+- ← depends_on [K0853](../items/K0853-free-column-append-criterion-lemma.md): 極大性の定義（全空点で石を置くと禁止配置が生じること）
 
 ## [K0027](../items/K0027-two-n-minus-one-conjecture-refuted.md) 全正方形盤でK_n=2n−1という仮説は反証済み
 
@@ -5146,13 +5147,14 @@
 - → depends_on [K0825](../items/K0825-seven-row-q8-deficient-witness-lower-bound.md): same machinery and runner as the (7,8) search; rowY fixed-row split re-validated at q=7 (cracked the m=25 OR-instance wall); sat2.js is the only generator here since genfast.js requires q >= w+1
 - ← depends_on [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md): same machinery and runner as the (7,7) search (same session, same binary); q <= w families confirmed to have continuous witness bands from m=q
 
-## [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) 7xm q=4,5,6 row-deficient witness bands — q=4: 7x4..7x59, q=5: 7x5..7x37, q=6: 7x6..7x30; M_{7,4} >= 60, M_{7,5} >= 38, M_{7,6} >= 31
+## [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) 7xm q=4,5,6 row-deficient witness bands — q=4: 7x4..7x59, q=5: 7x5..7x37, q=6: 7x6..7x31; M_{7,4} >= 60, M_{7,5} >= 38, M_{7,6} >= 32
 
 - → depends_on [K0810](../items/K0810-sat-row-deficient-witnesses.md): census + sequential-counter/maximality core used verbatim (sat.js/sat2.js); def-mode single clause is the complete encoding of 'total < 7(q-1) iff some row <= q-2'
 - → depends_on [K0068](../items/K0068-standard-fixed-width-parity-threshold.md): (7,4) upper bound T_7 = 3+2{C(19,3)-6} = 1929 by the general q=4 parity theorem (all maximals 3w stones, g=(3w-|S|) mod2 for m >= T_w); matches K0318 substitution U=1929
 - → depends_on [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md): upper bounds U_{7,6}=862, U_{7,5}=1142 by curve-packing substitution (w7_upper_bounds.json of seven-row-inband-families-20261114)
 - → depends_on [K0826](../items/K0826-seven-row-q7-deficient-witness-lower-bound.md): same machinery and runner as the (7,7) search (same session, same binary); q <= w families confirmed to have continuous witness bands from m=q
 - ← depends_on [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md): 7行 q<=w 3ファミリーと同じ手法・同じ観察（m=q から連続帯・単一欠損 w(q-1)-1 石・構成的延伸は前線を一部だけ越える）; verify_independent.ts（第3系統）を verbatim 使用
+- ← supports [K0854](../items/K0854-row-line-blocking-proposition.md): 7行族の空列延伸失敗セル((33,0)・(29,3)・(31,3)・(37,0)・(59,6))が欠損行にあることの説明。
 
 ## [K0829](../items/K0829-six-row-q8-m21-deficient-nonexistence.md) 6x21 q=8 row-deficient maximal nonexistence (all 3 row-mirror rowY classes UNSAT) — witness-free width set of (6,8) extends to {19,20,21}, M_{6,8} ∈ {19,20,21} or >= 23
 
@@ -5189,6 +5191,8 @@
 - → depends_on [K0068](../items/K0068-standard-fixed-width-parity-threshold.md): q=4 の上界 T_4=237, T_5=567, T_6=1113（全局面偶奇式の一般上界; K0318 curve-packing 代入でも同一値）
 - → depends_on [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md): q=5 の上界 U_{4,5}=140, U_{5,5}=336（curve-packing 代入上界; curve_packing_fixed_width.py bound() で本レーンで再計算・一致確認済み: w4q5 packing_U=140, w5q5 packing_U=336）
 - → depends_on [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md): 7行 q<=w 3ファミリーと同じ手法・同じ観察（m=q から連続帯・単一欠損 w(q-1)-1 石・構成的延伸は前線を一部だけ越える）; verify_independent.ts（第3系統）を verbatim 使用
+- ← verifies [K0853](../items/K0853-free-column-append-criterion-lemma.md): (6,4) m=46 構成 witness の純TS検証に続き js+py 2系統検証を完遂（保留項目の解消）。(4,4) m=33/34 構成延伸・(6,4) m=45→46 延伸とその停止幅が補題で統一的に説明される。
+- ← supports [K0854](../items/K0854-row-line-blocking-proposition.md): witness 帯延伸 surgery の対象セル T が常に欠損行にある理由の理論化((4,4) m=35 T=(34,2)/(0,2)・(4,5) m=21 T=(20,3)/(0,3)・(5,5) m=27 (26,0)・(5,6) m=23 (22,0) はすべて石数最小行)。
 
 ## [K0834](../items/K0834-five-row-q7-m22-deficient-nonexistence.md) 5x22 q=7 row-deficient maximal nonexistence (all 19 canonical classes UNSAT) — witness-free width set of (5,7) extends to {19,20,21,22}, M_{5,7} ∈ {19,20,21,22} or >= 23
 
@@ -5572,3 +5576,15 @@
 - → depends_on [K0723](../items/K0723-width-five-q6-stabilization-bounds.md): the m=15 witness at the base of the (5,6) witness band m=15..21 which this item extends to m=15..22
 - → depends_on [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md): substitution upper bound M_{5,6} <= 249 (with K0024 T=10101), unchanged by this item
 - → supports [K0815](../items/K0815-witness-column-extension-kissat-bounds.md): the (5,6) lower-bound side: witness band m=15..21 -> m=15..22, lower bound 22 -> 23
+
+## [K0853](../items/K0853-free-column-append-criterion-lemma.md) 自由列追加判定補題: 石集合の安全性は幅非依存・極大性は新列のブロック条件と同値・到達幅 R(S) まで witness 帯が無料延伸される
+
+- → verifies [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md): (6,4) m=46 構成 witness の純TS検証に続き js+py 2系統検証を完遂（保留項目の解消）。(4,4) m=33/34 構成延伸・(6,4) m=45→46 延伸とその停止幅が補題で統一的に説明される。
+- → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md): 極大性の定義（全空点で石を置くと禁止配置が生じること）
+- ← depends_on [K0854](../items/K0854-row-line-blocking-proposition.md): blocked・自由列追加到達幅 R(S)・停止セルの定義を利用。K0853 に記録した『停止セルは常に欠損行』観察(当時 6/6・未証明)を一般命題として昇格し証明した。
+
+## [K0854](../items/K0854-row-line-blocking-proposition.md) 行直線ブロック命題: safe配置では行石数≤q−1・石数q−1の行の全空点は行直線でblocked・自由列追加の停止セルは常に石数≤q−2の行にある(単一欠損witnessでは一意の欠損行)
+
+- → depends_on [K0853](../items/K0853-free-column-append-criterion-lemma.md): blocked・自由列追加到達幅 R(S)・停止セルの定義を利用。K0853 に記録した『停止セルは常に欠損行』観察(当時 6/6・未証明)を一般命題として昇格し証明した。
+- → supports [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md): witness 帯延伸 surgery の対象セル T が常に欠損行にある理由の理論化((4,4) m=35 T=(34,2)/(0,2)・(4,5) m=21 T=(20,3)/(0,3)・(5,5) m=27 (26,0)・(5,6) m=23 (22,0) はすべて石数最小行)。
+- → supports [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md): 7行族の空列延伸失敗セル((33,0)・(29,3)・(31,3)・(37,0)・(59,6))が欠損行にあることの説明。

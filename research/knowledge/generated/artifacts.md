@@ -3269,7 +3269,10 @@
 - [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (data): (5,4) m=40 rowY=1 600s INDET 191,445 conflicts の honest negative（不在主張ではない）
 ## [research/experiments/four-row-q4-q5-frontier-20261115/output/q4-w6-construct-m46/records.jsonl](../../../research/experiments/four-row-q4-q5-frontier-20261115/output/q4-w6-construct-m46/records.jsonl)
 
-- [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (data): (6,4) m=46 witness by constructive free-column append of the m=45 witness (solver-free): stones unchanged on the 6x46 board; pure-TS/BigInt full-board verification PASS (safe maxLine=3/maxCirc=3, uncovered=0, rows [2,3,3,3,3,3]); free append stops at m=47 (cell (46,0) uncovered); js+py verification pending bash recovery - witness 帯 m=6..46, M_{6,4} ∈ [47, 1113]
+- [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (data): (6,4) m=46 witness by constructive free-column append of the m=45 witness (solver-free): stones unchanged on the 6x46 board; pure-TS/BigInt full-board verification PASS (safe maxLine=3/maxCirc=3, uncovered=0, rows [2,3,3,3,3,3]); free append stops at m=47 (cell (46,0) uncovered); js+py verification completed 2026-11-15 (K0853: sat.js verifyConfig + verify_witness.py Fraction both PASS on 6x46 and 6x45 same set, 4-stone row-line negative control rejected) - witness 帯 m=6..46, M_{6,4} ∈ [47, 1113]
+## [research/experiments/four-row-q4-q5-frontier-20261115/output/q4-w6-construct-m46/verify-js-py-20261115.json](../../../research/experiments/four-row-q4-q5-frontier-20261115/output/q4-w6-construct-m46/verify-js-py-20261115.json)
+
+- [K0853](../items/K0853-free-column-append-criterion-lemma.md) (data): 構成レーンの output に置いた同一検証記録（保留検証の完遂を現場でも確認可能にするための新規ファイル・既存 records.jsonl は不変）。
 ## [research/experiments/four-row-q4-q5-frontier-20261115/output/q4-w6-rowY0-m42/records.jsonl](../../../research/experiments/four-row-q4-q5-frontier-20261115/output/q4-w6-rowY0-m42/records.jsonl)
 
 - [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (data): (6,4) m=42 rowY=0 固定分割 SAT 461.6s/16,942 conflicts (17石 rows [2,3,3,3,3,3]) - witness 帯 m=6..42, M_{6,4} ∈ [43, 1113]
@@ -3366,6 +3369,51 @@
 ## [research/experiments/four-six-row-q4-q5-witness-search-20261114/report.md](../../../research/experiments/four-six-row-q4-q5-witness-search-20261114/report.md)
 
 - [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (proof): claims・手法・較正・honest negatives（OOM壁・INDET前線）・構造観察・次課題
+## [research/experiments/free-column-append-criterion-20261115/README.md](../../../research/experiments/free-column-append-criterion-20261115/README.md)
+
+- [K0853](../items/K0853-free-column-append-criterion-lemma.md) (proof): 補題の定式化・証明・3 witness 一致表・陰性対照・(6,4) m=46 js+py 検証完遂の記録。
+## [research/experiments/free-column-append-criterion-20261115/output/criterion-4x4-m32-witness.json](../../../research/experiments/free-column-append-criterion-20261115/output/criterion-4x4-m32-witness.json)
+
+- [K0853](../items/K0853-free-column-append-criterion-lemma.md) (data): (4,4) m=32 witness: R=33・停止 (33,2)。m=33 off=0 延伸の根拠と m=34 でシフトが必要な理由。
+## [research/experiments/free-column-append-criterion-20261115/output/criterion-4x4-m34-witness.json](../../../research/experiments/free-column-append-criterion-20261115/output/criterion-4x4-m34-witness.json)
+
+- [K0853](../items/K0853-free-column-append-criterion-lemma.md) (data): (4,4) m=34 witness (+1 シフト): R=34・停止 (34,2)。前線が m=35 である理由。
+## [research/experiments/free-column-append-criterion-20261115/output/criterion-4x5-m20-witness.json](../../../research/experiments/free-column-append-criterion-20261115/output/criterion-4x5-m20-witness.json)
+
+- [K0853](../items/K0853-free-column-append-criterion-lemma.md) (data): (4,5) m=20 witness: R=20・停止 (20,3)。m=21 class-split 掃引が真の前線に向かっていることの構造的根拠（無料延伸不可）。
+## [research/experiments/free-column-append-criterion-20261115/output/criterion-5x5-m26-witness.json](../../../research/experiments/free-column-append-criterion-20261115/output/criterion-5x5-m26-witness.json)
+
+- [K0854](../items/K0854-row-line-blocking-proposition.md) (data): (5,5) m=26 witness(K0833/five-row-q5-m26-extend)の criterion 再現: R=26・停止 (26,0)(同レーンの埋め込み幾何『offX=0 → (26,0) の1セルのみ未遮断』と独立実装間で一致)。
+## [research/experiments/free-column-append-criterion-20261115/output/criterion-5x6-m22-witness.json](../../../research/experiments/free-column-append-criterion-20261115/output/criterion-5x6-m22-witness.json)
+
+- [K0853](../items/K0853-free-column-append-criterion-lemma.md) (data): (5,6) m=22 witness (K0852): R=22・停止 (22,0)・witness_widths [21,22]。m=23 は無料延伸不可。surgery レーンの独立実装が同じ単一未遮断セル (22,0) を指すクロスチェック。
+## [research/experiments/free-column-append-criterion-20261115/output/criterion-5x7-m18-witness.json](../../../research/experiments/free-column-append-criterion-20261115/output/criterion-5x7-m18-witness.json)
+
+- [K0853](../items/K0853-free-column-append-criterion-lemma.md) (data): (5,7) m=18 witness: R=18・停止 (18,0)。witness-free 帯 {19..37} との整合。
+## [research/experiments/free-column-append-criterion-20261115/output/criterion-6x4-m46-neg1.json](../../../research/experiments/free-column-append-criterion-20261115/output/criterion-6x4-m46-neg1.json)
+
+- [K0853](../items/K0853-free-column-append-criterion-lemma.md) (data): 陰性対照1: 石 (21,0)→(22,0) で 4石円生成（unsafe 検出）。
+## [research/experiments/free-column-append-criterion-20261115/output/criterion-6x4-m46-neg2.json](../../../research/experiments/free-column-append-criterion-20261115/output/criterion-6x4-m46-neg2.json)
+
+- [K0853](../items/K0853-free-column-append-criterion-lemma.md) (data): 陰性対照2: 石 (21,0)→(23,0) で safe だが旧列3セル非ブロック（非極大検出）。
+## [research/experiments/free-column-append-criterion-20261115/output/criterion-6x4-m46-witness.json](../../../research/experiments/free-column-append-criterion-20261115/output/criterion-6x4-m46-witness.json)
+
+- [K0853](../items/K0853-free-column-append-criterion-lemma.md) (data): (6,4) m=46 witness: R=46・停止 (46,0)・witness_widths [40,46]・2回実行 byte-identical。
+## [research/experiments/free-column-append-criterion-20261115/output/criterion-7x6-m31-witness.json](../../../research/experiments/free-column-append-criterion-20261115/output/criterion-7x6-m31-witness.json)
+
+- [K0854](../items/K0854-row-line-blocking-proposition.md) (data): (7,6) m=31 surgery witness(K0827)の criterion 再現: R=31・停止 (31,3)(published『7×32 で (31,3) 未遮断』と一致)。witness_widths [30,31] — 同一34石が幅30でも safe+maximal(c3 witness と4石異なる別配置の m=30 witness)。
+## [research/experiments/free-column-append-criterion-20261115/output/m46-js-py-verification-20261115.json](../../../research/experiments/free-column-append-criterion-20261115/output/m46-js-py-verification-20261115.json)
+
+- [K0853](../items/K0853-free-column-append-criterion-lemma.md) (data): (6,4) m=46 witness の js (sat.js verifyConfig) + py (verify_witness.py Fraction) 両系統 PASS・(6,45,4) 同一石も PASS・4石行直線の陰性対照棄却。K0833 の保留検証を完遂。
+## [research/experiments/free-column-append-criterion-20261115/output/rowline-audit-20261115.json](../../../research/experiments/free-column-append-criterion-20261115/output/rowline-audit-20261115.json)
+
+- [K0854](../items/K0854-row-line-blocking-proposition.md) (data): 8 witness 監査結果(全 PASS)。各行 rows・欠損行・窓内非blockedセル・停止セルとその行石数を記録。
+## [research/experiments/free-column-append-criterion-20261115/scripts/append_criterion.py](../../../research/experiments/free-column-append-criterion-20261115/scripts/append_criterion.py)
+
+- [K0853](../items/K0853-free-column-append-criterion-lemma.md) (verifier): 独立 Fraction 実装。blocking 直線は (c,s) 族・blocking 円は石三つ組族の完全列挙。初版の円係数右辺 -(f2-f1)/2 バグを verify_witness.py との不一致で発見・修正（/2 は中点形式と中心 a=-D/2 で打ち消し合う）。
+## [research/experiments/free-column-append-criterion-20261115/scripts/rowline_check.py](../../../research/experiments/free-column-append-criterion-20261115/scripts/rowline_check.py)
+
+- [K0854](../items/K0854-row-line-blocking-proposition.md) (verifier): 独立 Fraction 実装。(a) 行石数上限・(b) q−1石行の全空点 blocked・(c) 走査窓内全非blockedセルの欠損行所属・(d) 停止セル行石数の4検査。exit code は全検査 PASS のときのみ 0。
 ## [research/experiments/frontier-geometry-2026-10-05/density-probe-independent-audit.json](../../../research/experiments/frontier-geometry-2026-10-05/density-probe-independent-audit.json)
 
 - [K0097](../items/K0097-integer-residue-parabola-bounds.md) (data): 証明済み必要合同式と直接整数行列式で全選択四点を検査
@@ -14148,6 +14196,27 @@
 ## [research/experiments/seven-row-q6-m30-surgery-negative-20261115/output/seed-verification.json](../../../research/experiments/seven-row-q6-m30-surgery-negative-20261115/output/seed-verification.json)
 
 - [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (verifier): fresh pure-TS re-verification of the s7x29q6 seed (safe, maximal on 7x29, only (29,3) uncovered on 7x30), T-curve census, all session case counts re-derived, and the completeness gap quantified
+## [research/experiments/seven-row-q6-m31-frontier-20261115/README.md](../../../research/experiments/seven-row-q6-m31-frontier-20261115/README.md)
+
+- [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (proof): (7,6) m=31 witness by complete two-edit surgery of the m=30 witness (unique 2-stone relocation among 2,140,633 candidates); M_{7,6} >= 32, frontier 7x32
+## [research/experiments/seven-row-q6-m31-frontier-20261115/output/m31.detverify.json](../../../research/experiments/seven-row-q6-m31-frontier-20261115/output/m31.detverify.json)
+
+- [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (data): pure-integer 4x4-determinant verification: maxLine 5, maxCircle 5, uncovered 0; Fraction pyverify and the perturbed negative-control JSON alongside
+## [research/experiments/seven-row-q6-m31-frontier-20261115/output/surgery-m31.json](../../../research/experiments/seven-row-q6-m31-frontier-20261115/output/surgery-m31.json)
+
+- [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (data): witness record R={(19,2),(25,4)} A={(27,2),(29,4)}, 34 stones rows [5,5,5,4,5,5,5]; T-curve census c4=2 c3=11; candidates 2,140,633, safe 1
+## [research/experiments/seven-row-q6-m31-frontier-20261115/scripts/surgery_m31.py](../../../research/experiments/seven-row-q6-m31-frontier-20261115/scripts/surgery_m31.py)
+
+- [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (source): deterministic complete enumeration of final states S' = seed - R + A (removals <=2, additions <=2, final size <=34, T occupied or blocked); exact Fraction arithmetic with self-tests
+## [research/experiments/seven-row-q6-m32-surgery-negative-20261115/README.md](../../../research/experiments/seven-row-q6-m32-surgery-negative-20261115/README.md)
+
+- [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (proof): (7,6) 7x32 two-edit surgery complete negative on the m=31 witness seed (2,224,675 unique candidates, 0 safe-maximal); end-to-end m=30-seed replica control PASS
+## [research/experiments/seven-row-q6-m32-surgery-negative-20261115/output/surgery-m32.json](../../../research/experiments/seven-row-q6-m32-surgery-negative-20261115/output/surgery-m32.json)
+
+- [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (data): T=(31,3) census c4=1 (line y=3) c3=10; candidates 2,224,675, safe-maximal 0; control-m30seed-replica.json alongside reproduces the m=31 record exactly
+## [research/experiments/seven-row-q6-m32-surgery-negative-20261115/scripts/surgery_m32.py](../../../research/experiments/seven-row-q6-m32-surgery-negative-20261115/scripts/surgery_m32.py)
+
+- [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (source): port of surgery_m31.py to the 7x32 board targeting T=(31,3); complete final-state case split, exact Fraction arithmetic, self-tests
 ## [research/experiments/seven-row-q7-witness-search-20261114/output/def-search/records.jsonl](../../../research/experiments/seven-row-q7-witness-search-20261114/output/def-search/records.jsonl)
 
 - [K0826](../items/K0826-seven-row-q7-deficient-witness-lower-bound.md) (data): 19 records: SAT m=7..25 witnesses dual-verified (m=7..14 deep deficiency 30..41 stones, m=15..24 single-deficiency 41 stones) + m=25 OR-instance INDET (2,478,476 conflicts at 240s cap — honest negative)
@@ -15601,6 +15670,9 @@
 ## [research/log/2026-11-15-class2-lane-cost69e-win7.md](../../../research/log/2026-11-15-class2-lane-cost69e-win7.md)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): cost69e全11 WIN7候補の証明書化と10 receipt後のfrontier記録
+## [research/log/2026-11-15-free-column-append-criterion.md](../../../research/log/2026-11-15-free-column-append-criterion.md)
+
+- [K0853](../items/K0853-free-column-append-criterion-lemma.md) (log): 定式化の動機・円係数バグの発見経緯・3 witness 一致・各 band レーンへの適用指針。
 ## [research/log/2026-11-15-k6-d6-circuit-family-audit.md](../../../research/log/2026-11-15-k6-d6-circuit-family-audit.md)
 
 - [K0568](../items/K0568-binary-cube-k6-exact-upper-bound.md) (log): d=6 circuit族の二列挙器監査・環境障害とレジューム設計・CNF再生・SAT/カウンタ制御
@@ -15700,6 +15772,9 @@
 ## [research/log/2026-11-15-n11-class2-warm-multiband-loss-conflict-audit.md](../../../research/log/2026-11-15-n11-class2-warm-multiband-loss-conflict-audit.md)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): 2026-11-15 warm multiband証明書の範囲限定WIN/LOSS衝突監査
+## [research/log/2026-11-15-rowline-blocking.md](../../../research/log/2026-11-15-rowline-blocking.md)
+
+- [K0854](../items/K0854-row-line-blocking-proposition.md) (log): 観察→published 記録精査→証明→8 witness 機械監査の発見順の記録。
 ## [research/log/2026-11-15-sidon-height-boundary-reduction.md](../../../research/log/2026-11-15-sidon-height-boundary-reduction.md)
 
 - [K0828](../items/K0828-sidon-height-boundary-reduction.md) (log): 発見経緯と標準連続高さm=2,3への適用範囲
