@@ -79,16 +79,22 @@ lex=H 単独の2クラスが absence 可能な初の走査である。
 完全証明（M の確定）。INDET は cap 到達であり不在を意味しない。
 上界（K0068 parity / K0318 substitution）は不変。
 
-## 結果（2026-11-15・バッチ1〜8）
+## 結果（2026-11-15・バッチ1〜10）
 
 1. **(6,4) m=41 SAT**（rowY=0・lex=H,V,HV・245.2s・8,226 conflicts・17石
    rows [2,3,3,3,3,3]）— js+py 2系統検証 + 第3系統（純TS/BigInt・陽性/陰性対照つき）
    PASS（output/ts-verify-frontier.json）。
 1b. **(6,4) m=42 SAT**（rowY=0・lex=H,V,HV・461.6s・16,942 conflicts・17石
-   rows [2,3,3,3,3,3]）— **witness 帯 m=6..42・M_{6,4} ∈ [43, 1113]**。
-   js+py 2系統検証 + 第3系統（純TS/BigInt・陽性対照 m=40 再PASS は
+   rows [2,3,3,3,3,3]）— js+py 2系統検証 + 第3系統（純TS/BigInt・陽性対照 m=40 再PASS は
    nCircles=670/nQ1Curves=690 が m=41 run と同一・陰性対照 unsafe 検出つき）PASS
-   （output/ts-verify-frontier-m42.json）。前線 m=43。
+   （output/ts-verify-frontier-m42.json）。
+1c. **(6,4) m=43 SAT**（rowY=0・lex=H,V,HV・cap 900s で 581.1s・34,728 conflicts・
+   17石 rows [2,3,3,3,3,3]）— **witness 帯 m=6..43・M_{6,4} ∈ [44, 1113]**。
+   js+py 2系統検証 + 第3系統（output/ts-verify-frontier-m43.json・
+   陽性対照 m=40 再PASS は nQ1Curves=690 が m=41/m=42 run と同一・陰性対照
+   maxCirc=4 unsafe+8 uncovered 検出つき）PASS。ラッパーが SAT 直後に
+   環境リセットで殺されたため model は kissat.txt から手動復元・SAT 分岐を
+   手動再実行（records.jsonl の note に明記）。前線 m=44。
 2. **(4,4) m=35**: 2クラス被覆掃引（rowY=0/1・lex=H）ともに 600s INDET
    （324,870 / 230,642 conflicts）— honest negative。不在主張ではない。
    M_{4,4} ∈ [35, 237] は不変。
