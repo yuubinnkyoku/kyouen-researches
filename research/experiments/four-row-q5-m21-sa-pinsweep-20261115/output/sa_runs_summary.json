@@ -1,0 +1,300 @@
+{
+  "experiment": "four-row-q5-m21-sa-pinsweep-20261115",
+  "lane": "fast-lane",
+  "date": "2026-11-15",
+  "board": {
+    "rows": 4,
+    "m": 21,
+    "q": 5,
+    "stones": 15,
+    "profile": [
+      3,
+      4,
+      4,
+      4
+    ]
+  },
+  "buckets": {
+    "p0": "class{0} k3 x1=0 (cell (0,0) is a stone)",
+    "p1": "class{0} k3 x1=1 ((0,0) empty, (1,0) stone)"
+  },
+  "objective": "U=0 (maximal witness) search via SA / pinned case sweeps — HEURISTIC, no universal claim",
+  "engine": {
+    "runtime": "TS sandbox (run_typescript); execution environment down since 13:41Z, GitHub API + sandbox only",
+    "prng": "xorshift32, literal seeds",
+    "budget": "fixed ITERS (sandbox limits: ~60s deadline, ~16MiB, recorded-ops cap on Math.random/Date.now)"
+  },
+  "census_4x21": {
+    "circles_ge5pts": 538,
+    "by_points": {
+      "5": 180,
+      "6": 340,
+      "8": 18
+    },
+    "rows": 4,
+    "curves_total": 542,
+    "noncollinear_triples": 89228
+  },
+  "calibration": [
+    {
+      "name": "m20 witness on 4x20 (independent recount)",
+      "result": "safe; rows [4,4,4,3]; unblocked 0; count-4 circles 15 (+3 full rows)"
+    },
+    {
+      "name": "p1 seed = V-image of m20 witness, offX=0 transplant",
+      "result": "safe; U=1; sole unblocked cell (20,0); matches surgery-lane transplant"
+    }
+  ],
+  "structural_facts_reverified": {
+    "circles_through_20_0": 19,
+    "circles_through_0_0": 19,
+    "circles_through_both": 1,
+    "gstar": [
+      [
+        0,
+        0
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        9,
+        3
+      ],
+      [
+        11,
+        3
+      ],
+      [
+        16,
+        2
+      ],
+      [
+        20,
+        0
+      ]
+    ],
+    "p1_seed_manifold_u_le1": {
+      "size": 1,
+      "neighbors_total": 169,
+      "neighbors_u_hist": {
+        "2": 5,
+        "3": 42,
+        "4": 21,
+        "5": 9,
+        "6": 22,
+        "7": 57,
+        "8": 13
+      },
+      "method": "exhaustive safeSwap BFS (rigorous, finite)"
+    },
+    "g20_case_enumeration": {
+      "p1": 83,
+      "p0": 86
+    }
+  },
+  "runs": [
+    {
+      "id": "p1-free-sa",
+      "bucket": "p1",
+      "iters": 2000000,
+      "seed": "V-transplant",
+      "seedU": 1,
+      "bestU": 1,
+      "accepted": 520794,
+      "note": "U=0 not reached"
+    },
+    {
+      "id": "p1-diag",
+      "bucket": "p1",
+      "iters": 1800000,
+      "u1_states": 43799,
+      "u1_unblocked_hist": {
+        "(0,0)": 12269,
+        "(20,0)": 31530
+      },
+      "targeted_repair_fired": 0,
+      "note": "U=1 unblocked cells always at extremes; interior always circle-blocked"
+    },
+    {
+      "id": "p1-seed-structure",
+      "bucket": "p1",
+      "result": "circles through (20,0): max stone count 2 (no count-3 circle -> single-swap repair impossible); through (0,0): one count-4; depth-2 escape (escape2, finite enumeration) from seed: NONE (witness needs >=3 swaps)"
+    },
+    {
+      "id": "p1-build-to-3-sa",
+      "bucket": "p1",
+      "iters": 1200000,
+      "bestU": 1,
+      "built_to3": 421369,
+      "note": "repair extended to count-2/3 circles; no improvement"
+    },
+    {
+      "id": "p1-sweep-g20",
+      "bucket": "p1",
+      "cases": 83,
+      "iters_per_case": 12000,
+      "bestU_hist": {
+        "1": 1,
+        "2": 19,
+        "3": 37,
+        "4": 23,
+        "5": 1,
+        "fail": 2
+      },
+      "best_case": {
+        "ci": 79,
+        "circle": [
+          [
+            1,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            15,
+            2
+          ],
+          [
+            18,
+            1
+          ],
+          [
+            20,
+            0
+          ]
+        ],
+        "pins": [
+          [
+            1,
+            0
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            15,
+            2
+          ],
+          [
+            18,
+            1
+          ]
+        ],
+        "bestU": 1
+      }
+    },
+    {
+      "id": "p1-ci79-deep",
+      "bucket": "p1",
+      "iters": 900000,
+      "u1_states": 194590,
+      "u1_unblocked": "always (0,0)",
+      "init_escape": "none"
+    },
+    {
+      "id": "p1-twolevel-ci79",
+      "bucket": "p1",
+      "cases": 57,
+      "iters_per_case": 25000,
+      "bestU_hist": {
+        "2": 2,
+        "3": 17,
+        "4": 22,
+        "5": 11,
+        "6": 1,
+        "init": 4
+      },
+      "note": "second-level (0,0)-blocker pins; no U<=1"
+    },
+    {
+      "id": "p0-sweep-g20",
+      "bucket": "p0",
+      "cases": 86,
+      "iters_per_case": 13000,
+      "bestU_hist": {
+        "1": 2,
+        "2": 24,
+        "3": 36,
+        "4": 19,
+        "5": 5
+      },
+      "u1_cases": [
+        {
+          "ci": 31,
+          "pins": [
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              1
+            ],
+            [
+              14,
+              2
+            ],
+            [
+              17,
+              2
+            ]
+          ]
+        },
+        {
+          "ci": 79,
+          "note": "same circle as p1; (0,0) additionally frozen"
+        }
+      ],
+      "note": "p0: (0,0) is a stone, so circles g containing (0,0) become count-4 via (0,0)+3-subset (3-subset cases handled specially)"
+    },
+    {
+      "id": "p0-ci79-deep",
+      "bucket": "p0",
+      "iters": 900000,
+      "u1_states": 234725,
+      "u1_unblocked": "always (2,0) (interior cell)",
+      "count3_circles": "always present",
+      "manifold_u_le1": {
+        "size": 1,
+        "neighbors": {
+          "u2": 13,
+          "u_ge3": 112
+        }
+      }
+    },
+    {
+      "id": "p0-ci31-deep",
+      "bucket": "p0",
+      "iters": 500000,
+      "u1_states": 213785,
+      "u1_unblocked": "always (1,0)",
+      "manifold_u_le1": {
+        "size": 1,
+        "neighbors": {
+          "u2": 3,
+          "u_ge3": 107
+        }
+      }
+    }
+  ],
+  "totals": {
+    "sa_iters_approx": 11300000,
+    "witness_found": false
+  },
+  "rigorous_local_results": [
+    "escape2 from p1 seed (all 1- and 2-swap sequences): no witness (finite enumeration)",
+    "U<=1 manifolds all isolated (size 1): p1 seed; p0 ci79; p0 ci31",
+    "census / g* uniqueness / case counts (83/86) re-verified by independent implementation (sa21.js core)"
+  ],
+  "coverage_caveat": "pin sweeps cover only the subcase \"(20,0) empty + blocker circle pinned\". The \"(20,0) occupied\" subcase was touched only by free SA (rigorous coverage: class-split sat4.js x2-split).",
+  "next": "kissat blocker-circle case split: c0k3p1 = unit cell(20,0) (1 instance) + (g,4-subset) pin instances (83) = 84 total; c0k3p0 = 1 + 86 = 87. Orthogonal to x2-split; implementable as sat4.js-style unit pins."
+}
