@@ -12195,6 +12195,9 @@
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-5059-2531/receipt.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-5059-2531/receipt.json)
 
 - [K0812](../items/K0812-new-exceptional-primes-3719-3727.md) (manifest): 17,702変数・146,541節・697,860行DRAT・VERIFIED（4,396秒）
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-5623-2813/receipt.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-5623-2813/receipt.json)
+
+- [K0812](../items/K0812-new-exceptional-primes-3719-3727.md) (manifest): 19,676変数・178,786節・648,324行DRAT・VERIFIED（3,324秒）
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full.json)
 
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (data): 旧チェッカーの標本21 dの受理記録。K0707の偽受理発見により独立証拠への採用を保留
