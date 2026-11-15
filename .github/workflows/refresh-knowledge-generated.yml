@@ -136,6 +136,10 @@ jobs:
         run: |
           uv run --locked python research/experiments/multiplayer-coalition-kyouen-20261116/verify_family_high_r.py
           git diff --exit-code -- research/experiments/multiplayer-coalition-kyouen-20261116/output/family_high_r_audit.json
+      - name: Audit elimination continuation rules (CASC/REMO, Theorems C/D)
+        run: |
+          uv run --locked python research/experiments/multiplayer-coalition-kyouen-20261116/verify_elimination_continuation.py
+          git diff --exit-code -- research/experiments/multiplayer-coalition-kyouen-20261116/output/elimination_continuation_audit.json
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python tools/knowledge/build.py
@@ -387,3 +391,4 @@ jobs:
 # Refresh generated views after the K0832 transient band extension (conjecture U k=1..8, diagonal OK m=9/m=10, even-m unified form; 41,575 checks) (2026-11-16).
 
 # Refresh generated views after the K0832 two-token z=1 residual slice theorem and knowledge README update (2026-11-16).
+# Refresh generated views after the K0859 post-elimination continuation rules (CASC cascade ranking theorem, REMO uniform-board stone-removal determinism, r|Delta insufficiency counterexample) (2026-11-16).
