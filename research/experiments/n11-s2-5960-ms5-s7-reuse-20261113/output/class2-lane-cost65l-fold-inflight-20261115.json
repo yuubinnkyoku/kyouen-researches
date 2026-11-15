@@ -1,0 +1,45 @@
+{
+ "schema": "n11-class2-lane-cost65l-fold-inflight-20261115-v1",
+ "title": "n11 class2-lane cost-65l receipts fold in flight: 2 WIN7-D10 receipts (bits 21/48) rebased on the canonical head 1227",
+ "date": "2026-11-15",
+ "status": "in-flight",
+ "claimed_by": "long-term class2 lane (cost-65l receipts fold session)",
+ "s5_parent1": "00000000000000801202000000200000",
+ "s5_parent2_class4": "00000000020000003800000000000200",
+ "s6_child": "00000000220000003800000000000200",
+ "s6_s7_edge_cost": 65,
+ "demand": {
+  "c1": 0,
+  "c2": 1,
+  "c4": 1
+ },
+ "receipts": [
+  {
+   "bit": 21,
+   "root_hex": "00000000220000003800000000200200",
+   "rows": 28523,
+   "extraction_nodes": 3110330,
+   "fbt_drops": 0,
+   "sub_roots": 51,
+   "root_mobility": 51,
+   "bytes": 1032037,
+   "git_blob_sha": "6cdd6d0d3cc5240133cdf3db6787a454e779dbef"
+  },
+  {
+   "bit": 48,
+   "root_hex": "00000000220000003801000000000200",
+   "rows": 31817,
+   "extraction_nodes": 4694247,
+   "fbt_drops": 0,
+   "sub_roots": 50,
+   "root_mobility": 50,
+   "bytes": 1151930,
+   "git_blob_sha": "06bc8da730f16c684d2f734d5e33145cde64970b"
+  }
+ ],
+ "baseline_head": "1227/6620/522561/4890/386284 (class-frontier-cost69h-receipts-recompute-20261115.json, git blob sha d25eb3a00f73cf9ca34fc2816d28045c1e23f3ae; the cost-69h fold rebased on the parallel cost-78a head 1225; re-asserted on latest main immediately before this push)",
+ "published_inputs": "the cost-65l sweep lane published: 8 raw batches (class2-lane-cost65l-raw-batch1..8-20261115.jsonl), v16 determinism rerun (class2-lane-cost65l-v16-determinism-rerun-20261115.jsonl), v15 cross-engine anchors (class2-lane-cost65l-v15-crosscheck-20261115.jsonl), both certificates (single files, git blob shas above), both extraction summaries, both BigInt cert-verify records (union 0/0, terminal [13,17]) and the parent-lift analysis; no fold claim and no sweep-audit JSON existed on latest main at this push (checked by direct path get)",
+ "method": "runpy reproduction of the published cost-69h fold script (which internally reproduces the cost-67c chain head 1219, accepts and geometrically re-derives the cost-78a fold head 1225, and folds the 69h receipts) asserting the regenerated head JSON and both CSVs byte-identical to main by git blob sha; then re-derive the cost-65l sweep audit from the 8 published raw batches (65 candidates exactly once, 2 WIN7-D10 bits 21/48, 63 REFUTED-D10, 0 capped, node sums, pilots), verify both certificate bytes against the published git blob shas (md5/sha256 recomputed locally, rows sorted-unique, sub-roots == root mobility == len(loser first moves), terminal 13..17, fbt_drops 0, D4 canonical hexes), assert both roots disjoint from the 121 folded receipt roots (98 + 14 + 2 + 5 + 2) raw and D4-canonically, assert the child genuinely remaining at head 1227 (held by exactly the two open parents parent1 31 rows/2334 and the class-4 S5 00000000020000003800000000000200 rows at head 1227), then fold the 2 receipts in published bit order [21, 48] with every per-receipt marginal re-derived from the growing union, set-equality control (s_after == s_1227 UNION covers(2 roots)), and regenerate the S5 ranking CSV and top-candidates CSV",
+ "coordination_note": "the cost-65l sweep/certificates lane published its material at 02:01-02:02Z and its fold had not landed by 03:23Z main; the head-1227 fold record (cost-69h) and the cost-70e claim both list the 65l fold as pending work that must rebase on head 1227; this claim reserves the fold; if the parallel 65l lane lands its own fold while this one is in flight, the collision protocol (cost-72b/cost-76a/cost-63f/unified-merge precedents) applies: verify the arithmetic on latest main, do not overwrite blindly, record the concurrent fold",
+ "unknown_status": "11x11 empty board: UNKNOWN. Both two-stone roots {49,60}/{59,60}: UNKNOWN. S2 {59,60}: UNKNOWN. Class 2 and class 4: UNKNOWN. Folding these receipts advances manifest bookkeeping only; a WIN7 certificate proves a first-player win within depth 10 from the individual 7-stone roots only."
+}
