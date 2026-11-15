@@ -1,0 +1,94 @@
+{
+ "all_pass": true,
+ "audits": {
+  "A0_m0_ladder_engine": {
+   "checks": 31,
+   "examples": [],
+   "mismatches": 0
+  },
+  "A0b_m0_vs_published_single_token": {
+   "checks": 195,
+   "examples": [],
+   "mismatches": 0
+  },
+  "A10_bridge_three_token": {
+   "checks": 1969,
+   "examples": [],
+   "mismatches": 0
+  },
+  "A1_full_grid_m1": {
+   "checks": 420,
+   "examples": [],
+   "mismatches": 0
+  },
+  "A1_full_grid_m2": {
+   "checks": 1170,
+   "examples": [],
+   "mismatches": 0
+  },
+  "A1_full_grid_m3": {
+   "checks": 1560,
+   "examples": [],
+   "mismatches": 0
+  },
+  "A1_full_grid_m4": {
+   "checks": 770,
+   "examples": [],
+   "mismatches": 0
+  },
+  "A1_full_grid_m5": {
+   "checks": 504,
+   "examples": [],
+   "mismatches": 0
+  },
+  "A2_m67_spot": {
+   "checks": 225,
+   "examples": [],
+   "mismatches": 0
+  },
+  "A3_all_ones": {
+   "checks": 91,
+   "examples": [],
+   "mismatches": 0
+  },
+  "A4_far_tail_margin150": {
+   "checks": 44,
+   "examples": [],
+   "mismatches": 0
+  },
+  "A5_big_z": {
+   "checks": 45,
+   "examples": [],
+   "mismatches": 0
+  },
+  "A6_engine_crosscheck": {
+   "checks": 600,
+   "examples": [],
+   "mismatches": 0
+  },
+  "A7_cap_lemma": {
+   "checks": 560,
+   "examples": [],
+   "mismatches": 0
+  },
+  "A8_theorem_T_parity": {
+   "checks": 378,
+   "examples": [],
+   "mismatches": 0
+  },
+  "A9_bridge_two_token": {
+   "checks": 2650,
+   "examples": [],
+   "mismatches": 0
+  }
+ },
+ "conjecture": {
+  "ladder": "L(z) = {odd R <= z+1} \\ {z+1}",
+  "positions": "p_0=2t_0+dA(z), p_1=2t_1+dA(z+1), p_j=2t_j+p_{j-2}+2",
+  "status": "conjecture (finite audit, universal proof open)"
+ },
+ "definition": "T_inf(X;z)={R>=1: H(R; X u {R+1}; z)=2}",
+ "seed": 20261116,
+ "total_checks": 11212,
+ "total_mismatches": 0
+}
