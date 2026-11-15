@@ -23,7 +23,7 @@
 
 ## 成果3：77d fold事前予測brief vs 着地merged fold — 全数値一致
 
-fold前に公開した予測（`ff890585`・script `93d0113e`）と着地merged foldの全数値照合:
+fold前に公開した予測（blob `97db3dec`・script `4808dd64`）と着地merged foldの全数値照合:
 
 - **head 5数値すべて一致**: 予測1302/6545/517025/4815/380748 == 着地merged head
 - **totals一致**: union marginal 51 / in-manifest 6
