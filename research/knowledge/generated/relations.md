@@ -5183,7 +5183,7 @@
 - → generalizes [K0824](../items/K0824-higher-dimensional-fiber-trace-reduction.md): K0824の超平面・球面に対するq>2|B|縮約を、各ファイバー上の次数が高々tである多項式超曲面へ一般化する。K0824のq=2|B|境界反例や超平面跡列挙補題を置き換えるものではない
 - → supports [K0504](../items/K0504-geometric-rule-variant-comparison.md): 底面係数次数を制限しない全多項式族ではΣ min(c_b,t)≤q−1が厳密条件。K0504のdeg f≤kなど底面方向の次数制限付きグラフは別問題であり、補間多項式の底面次数は一般に|B|−1程度まで上がるため未解決
 
-## [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) 4〜6行 q=4,5 行欠損witness帯 — (4,4) m=4..34, (5,4) m=5..39, (6,4) m=6..46, (4,5) m=5..20, (5,5) m=5..25 全幅SAT; M_{4,4}>=35, M_{5,4}>=40, M_{6,4}>=47, M_{4,5}>=21, M_{5,5}>=26; sat3 OOM壁越えと rowY 分割・2クラス被覆で帯延伸
+## [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) 4〜6行 q=4,5 行欠損witness帯 — (4,4) m=4..34, (5,4) m=5..39, (6,4) m=6..46, (4,5) m=5..20, (5,5) m=5..26 全幅SAT; M_{4,4}>=35, M_{5,4}>=40, M_{6,4}>=47, M_{4,5}>=21, M_{5,5}>=27; sat3 OOM壁越えと rowY 分割・2クラス被覆で帯延伸
 
 - → depends_on [K0810](../items/K0810-sat-row-deficient-witnesses.md): sat2.js def-mode 完全符号化を verbatim 使用（全三つ組census・逐次カウンタ・極大性・lex=H,V,HVHV）; witness の検証にも sat.js verifyConfig（census不使用）を使用
 - → depends_on [K0068](../items/K0068-standard-fixed-width-parity-threshold.md): q=4 の上界 T_4=237, T_5=567, T_6=1113（全局面偶奇式の一般上界; K0318 curve-packing 代入でも同一値）

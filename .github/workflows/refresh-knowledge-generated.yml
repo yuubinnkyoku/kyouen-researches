@@ -350,3 +350,4 @@ jobs:
 # Refresh generated views for K0832 t=2 q=4 pure-fiber Grundy classification (2026-11-15).
 # Refresh generated views for K0833 fast-lane append: (4,4) m=35 surgery complete-enumeration negative + census q<=w completeness fix + class-split sweep IN FLIGHT + (6,4) m=47 rowY=0 kissat RAM wall (2026-11-15).
 # Refresh generated views for K0833 fast-lane q5 append: (4,5) m=21 surgery complete-enumeration negative (sd<=6 both embeddings) + class-split sweep IN FLIGHT (control SAT calibrated) + driver v2 skip-path bugfix (2026-11-15).
+# Refresh generated views for K0833 fast-lane (5,5) append: m=26 witness (class {0} SAT 1,631,556 conflicts, 19 stones, dual-verified, cross-reset bit-exact) extends the band to m=5..26, M_{5,5} 26..336 -> 27..336; m=27 honest negatives (all sub-instances INDET) + 1/2-stone surgery complete negative (4,651,200 edits, 2 seeds) + witness jump sd=30 (2026-11-15).

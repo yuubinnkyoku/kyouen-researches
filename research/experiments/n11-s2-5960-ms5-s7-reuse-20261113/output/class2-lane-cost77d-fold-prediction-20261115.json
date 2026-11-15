@@ -1,0 +1,388 @@
+{
+ "baseline": "canonical head 1296/6551/517468/4821/381191 (cost-75d receipts fold; reproduced via the published runpy chain)",
+ "caveats": [
+  "the 12 WIN records are raw in-flight sweep output, not certificates; the fold's receipts exist only after the parallel lane extracts and publishes verifiable WIN7 certificates, and any determinism rerun or cross-engine discrepancy could revise the WIN list",
+  "this prediction is geometry-only: covers(root) = the D4-canonical S6 deletion orbits of each 7-stone root; it assumes every WIN candidate extracts into a verified certificate",
+  "the parallel lane's fold script and completed claim remain the authority; a mismatch between the fold and this table is an experiment fact to record, not a reason to force either"
+ ],
+ "child": {
+  "d4_orbit_hex": "00000000100000801202000000200000",
+  "edge_cost": 77,
+  "open_deletion_parents_at_1296": {
+   "21": "00000000000000003800400008000000",
+   "92": "00000000000000801202000000200000"
+  },
+  "s6_hex": "00000000100000801202000000200000",
+  "status_at_baseline_1296": "already closed in s_1296 by the cost-75d bit-92 cross-cover (warm-hygiene precondition); in manifest"
+ },
+ "date": "2026-11-15",
+ "interpretation_guard": "solved counts measure manifest coverage, not game-theoretic values; REFUTED-D10 is not a LOSS proof; WIN7 certificates prove a first-player win within depth 10 from the individual 7-stone roots only; 11x11 empty board / two-stone root {49,60} / S2 {59,60} / class 1 / class 2 / class 4 all remain UNKNOWN",
+ "predicted_all_parents_losing_rows": {
+  "00000000000000003800000008000010": 1,
+  "00000000000000003800000008000800": 1,
+  "00000000000000003800000008001000": 1,
+  "00000000000000003800400008000000": 6,
+  "00000000000000103800000008000000": 1,
+  "00000000000000801202000040000000": 1
+ },
+ "predicted_head_after_fold": {
+  "cost_needed_by_open_classes": 380748,
+  "s6_needed_by_open_classes": 4815,
+  "solved_s6_in_manifest": 1302,
+  "sum_remaining_cost": 517025,
+  "unique_remaining_s6": 6545
+ },
+ "predicted_parent_effects": {
+  "00000000000000003800400008000000": {
+   "cost_before": 5036,
+   "lost_rows": [
+    "00000000000000003800400008000010",
+    "00000000000000003800400008000800",
+    "00000000000000003800400008100000",
+    "00000000000000103800400008000000",
+    "00000000000000801202000044000000",
+    "00000000000000805202000004000000"
+   ],
+   "rows_after": 58,
+   "rows_before": 64
+  },
+  "00000000000000801202000000200000": {
+   "cost_before": 866,
+   "lost_rows": [],
+   "rows_after": 11,
+   "rows_before": 11
+  }
+ },
+ "predicted_receipts": [
+  {
+   "already_folded_root_duplicate": false,
+   "bit": 7,
+   "covered_already_solved_1296": 3,
+   "covers_7": true,
+   "predicted_marginal": 4,
+   "predicted_marginal_hexes": [
+    "00000000000000103800080000000200",
+    "00000000100000001202000000200080",
+    "00000000100000800202000000200080",
+    "00000000100000801200000000200080"
+   ],
+   "predicted_marginal_in_manifest": 0,
+   "root_hex": "00000000100000801202000000200080"
+  },
+  {
+   "already_folded_root_duplicate": false,
+   "bit": 12,
+   "covered_already_solved_1296": 2,
+   "covers_7": true,
+   "predicted_marginal": 5,
+   "predicted_marginal_hexes": [
+    "00000000000000003800400008100000",
+    "00000000100000001202000000201000",
+    "00000000100000800202000000201000",
+    "00000000100000801002000000201000",
+    "00000000100000801200000000201000"
+   ],
+   "predicted_marginal_in_manifest": 1,
+   "root_hex": "00000000100000801202000000201000"
+  },
+  {
+   "already_folded_root_duplicate": false,
+   "bit": 39,
+   "covered_already_solved_1296": 2,
+   "covers_7": true,
+   "predicted_marginal": 5,
+   "predicted_marginal_hexes": [
+    "00000000000000103808000000000200",
+    "00000000000000203810000008000000",
+    "00000000100000001202008000200000",
+    "00000000100000800202008000200000",
+    "00000000100000801200008000200000"
+   ],
+   "predicted_marginal_in_manifest": 0,
+   "root_hex": "00000000100000801202008000200000"
+  },
+  {
+   "already_folded_root_duplicate": false,
+   "bit": 58,
+   "covered_already_solved_1296": 3,
+   "covers_7": true,
+   "predicted_marginal": 4,
+   "predicted_marginal_hexes": [
+    "00000000000400103800000000000200",
+    "00000000100000001602000000200000",
+    "00000000100000800602000000200000",
+    "00000000100000801600000000200000"
+   ],
+   "predicted_marginal_in_manifest": 0,
+   "root_hex": "00000000100000801602000000200000"
+  },
+  {
+   "already_folded_root_duplicate": false,
+   "bit": 62,
+   "covered_already_solved_1296": 2,
+   "covers_7": true,
+   "predicted_marginal": 5,
+   "predicted_marginal_hexes": [
+    "00000000000000103800004000000200",
+    "00000000000000805202000004000000",
+    "00000000100000005202000000200000",
+    "00000000100000804202000000200000",
+    "00000000100000805200000000200000"
+   ],
+   "predicted_marginal_in_manifest": 1,
+   "root_hex": "00000000100000805202000000200000"
+  },
+  {
+   "already_folded_root_duplicate": false,
+   "bit": 64,
+   "covered_already_solved_1296": 3,
+   "covers_7": true,
+   "predicted_marginal": 4,
+   "predicted_marginal_hexes": [
+    "00000000000000103800000000010200",
+    "00000000100000011202000000200000",
+    "00000000100000810202000000200000",
+    "00000000100000811200000000200000"
+   ],
+   "predicted_marginal_in_manifest": 0,
+   "root_hex": "00000000100000811202000000200000"
+  },
+  {
+   "already_folded_root_duplicate": false,
+   "bit": 66,
+   "covered_already_solved_1296": 2,
+   "covers_7": true,
+   "predicted_marginal": 5,
+   "predicted_marginal_hexes": [
+    "00000000000000003800400008000010",
+    "00000000100000041202000000200000",
+    "00000000100000840202000000200000",
+    "00000000100000841002000000200000",
+    "00000000100000841200000000200000"
+   ],
+   "predicted_marginal_in_manifest": 1,
+   "root_hex": "00000000100000841202000000200000"
+  },
+  {
+   "already_folded_root_duplicate": true,
+   "bit": 78,
+   "covered_already_solved_1296": 7,
+   "covers_7": true,
+   "predicted_marginal": 0,
+   "predicted_marginal_hexes": [],
+   "predicted_marginal_in_manifest": 0,
+   "root_hex": "00000000100040801202000000200000"
+  },
+  {
+   "already_folded_root_duplicate": false,
+   "bit": 94,
+   "covered_already_solved_1296": 2,
+   "covers_7": true,
+   "predicted_marginal": 5,
+   "predicted_marginal_hexes": [
+    "00000000000000103800400000000200",
+    "00000000000000103800400008000000",
+    "00000000200000101800400000000200",
+    "00000000200000102800400000000200",
+    "00000000200000103000400000000200"
+   ],
+   "predicted_marginal_in_manifest": 1,
+   "root_hex": "00000000500000801202000000200000"
+  },
+  {
+   "already_folded_root_duplicate": false,
+   "bit": 96,
+   "covered_already_solved_1296": 2,
+   "covers_7": true,
+   "predicted_marginal": 5,
+   "predicted_marginal_hexes": [
+    "00000000000000103800000001000200",
+    "00000000000000801202000044000000",
+    "00000000200000101800000001000200",
+    "00000000200000102800000001000200",
+    "00000000200000103000000001000200"
+   ],
+   "predicted_marginal_in_manifest": 1,
+   "root_hex": "00000001100000801202000000200000"
+  },
+  {
+   "already_folded_root_duplicate": false,
+   "bit": 108,
+   "covered_already_solved_1296": 3,
+   "covers_7": true,
+   "predicted_marginal": 4,
+   "predicted_marginal_hexes": [
+    "00000000000000103800000000001200",
+    "00000000200000101800000000001200",
+    "00000000200000102800000000001200",
+    "00000000200000103000000000001200"
+   ],
+   "predicted_marginal_in_manifest": 0,
+   "root_hex": "00001000100000801202000000200000"
+  },
+  {
+   "already_folded_root_duplicate": false,
+   "bit": 111,
+   "covered_already_solved_1296": 2,
+   "covers_7": true,
+   "predicted_marginal": 5,
+   "predicted_marginal_hexes": [
+    "00000000000000003800400008000800",
+    "00000008000000009002000010000200",
+    "00000008000000103800000000000200",
+    "00000008000000808002000010000200",
+    "00000008000000809000000010000200"
+   ],
+   "predicted_marginal_in_manifest": 1,
+   "root_hex": "00008000100000801202000000200000"
+  }
+ ],
+ "predicted_refuted_bits": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  6,
+  8,
+  9,
+  10,
+  13,
+  14,
+  17,
+  18,
+  22,
+  25,
+  28,
+  30,
+  31,
+  32,
+  33,
+  34,
+  35,
+  40,
+  41,
+  42,
+  43,
+  44,
+  50,
+  51,
+  52,
+  54,
+  55,
+  56,
+  59,
+  61,
+  65,
+  67,
+  72,
+  73,
+  74,
+  75,
+  76,
+  77,
+  79,
+  83,
+  84,
+  85,
+  86,
+  87,
+  88,
+  89,
+  90,
+  95,
+  97,
+  99,
+  102,
+  103,
+  105,
+  106,
+  110,
+  113,
+  114,
+  116,
+  117,
+  118
+ ],
+ "predicted_totals": {
+  "sum_per_receipt_marginal": 51,
+  "union_marginal": 51,
+  "union_marginal_in_manifest": 6,
+  "zero_mim_receipts": [
+   7,
+   39,
+   58,
+   64,
+   78,
+   108
+  ]
+ },
+ "predicted_win_bits": [
+  7,
+  12,
+  39,
+  58,
+  62,
+  64,
+  66,
+  78,
+  94,
+  96,
+  108,
+  111
+ ],
+ "schema": "n11-class2-lane-cost77d-fold-prediction-20261115-v1",
+ "second_target_after_predicted_fold": {
+  "cost": 866,
+  "rows": 11,
+  "rows_by_cost": [
+   [
+    "00000000020000801202000000200000",
+    65
+   ],
+   [
+    "00000000000000801282000000200000",
+    70
+   ],
+   [
+    "00000000000000889002000000000800",
+    74
+   ],
+   [
+    "00000000000000801212000000200000",
+    79
+   ],
+   [
+    "00000008000000809002000000000400",
+    80
+   ],
+   [
+    "00000000200040003800000000000200",
+    82
+   ],
+   [
+    "00000000000000801202000000200008",
+    83
+   ],
+   [
+    "00000000000000801202000000200010",
+    83
+   ],
+   [
+    "00000000200000003800000000400200",
+    83
+   ],
+   [
+    "00000000200000003800100000000200",
+    83
+   ],
+   [
+    "00000000000040809002000000000800",
+    84
+   ]
+  ]
+ },
+ "session": "long-lane session after the cost-75d fold second verification; planning brief only",
+ "status": "prediction for the in-flight parallel cost-77d receipts fold; NOT a fold, NOT a claim, NOT a certificate",
+ "sweep_inputs": "published in-flight claim class2-lane-cost77d-inflight-20261115.json (77 candidates) and the ten published raw batch JSONLs (77 records + 10 pilot controls, 152,577,045 nodes, 0 capped)"
+}

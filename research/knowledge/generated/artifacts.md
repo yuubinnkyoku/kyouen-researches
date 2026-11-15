@@ -1894,6 +1894,12 @@
 ## [research/experiments/five-edge-terminal-spectrum-20261101/verify.py](../../../research/experiments/five-edge-terminal-spectrum-20261101/verify.py)
 
 - [K0597](../items/K0597-five-forbidden-sets-terminal-spectrum.md) (verifier): 17902所属型族・4717374安全局面、271重複署名盤・383059安全局面、14点全1001四点組・12651安全局面の独立照合
+## [research/experiments/five-row-q5-m26-extend-20261115/README.md](../../../research/experiments/five-row-q5-m26-extend-20261115/README.md)
+
+- [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (proof): (5,5) m=26 class {0} SAT 1,631,556 conflicts で witness 帯 m=5..26 に延伸・M_{5,5} ∈ [27,336]; m=27 honest negatives (c0/c0-deep/c0k3/c0k3p0 全 INDET)・1/2石 surgery 完全列挙負 (4,651,200 編集)・witness jump sd=30
+## [research/experiments/five-row-q5-m26-extend-20261115/output/records.jsonl](../../../research/experiments/five-row-q5-m26-extend-20261115/output/records.jsonl)
+
+- [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (data): 12 records: 較正 5×25 bit-exact・5×26 SAT witness 2系統検証 (19石 rows [3,4,4,4,4])・m=27 各 INDET (session1+再生成)・埋め込み幾何 (1セル未遮断)・surgery 列挙 (sd<=1 4,446 + rm2系 2,321,154 × 2 seeds = 0 witness)・jump sd=30
 ## [research/experiments/five-row-q6-m22-witness-20261115/raw/r5x22q6_0k4p0.txt](../../../research/experiments/five-row-q6-m22-witness-20261115/raw/r5x22q6_0k4p0.txt)
 
 - [K0852](../items/K0852-five-row-q6-m22-deficient-witness.md) (certificate): raw kissat 4.0.4 log of the deciding SAT instance: class {0} krow=0:4 minpos=0, 3,126,820 conflicts / 194.87 s; reproduced bit-exactly after a full environment reset

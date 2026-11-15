@@ -1834,6 +1834,8 @@ cost-77d（並走IN FLIGHT・sweepは77c head基準で実行中）はfold head�
 
 詳細: [第二検証log](../../log/2026-11-15-n11-published-fold-chain-audit-second-independent-verification.md)、[第二実装script](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_published_chain_roots_second_independent_20261115.py)、[v2 audit JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-published-chain-roots-independent-audit-v2-20261115.json)。
 
+**第二実装出力JSONの`v1_supersession`欄erratum（本項目に記録・published blobは変更せず）**: v2 audit JSON（blob `db0916c0`）の`v1_supersession`フィールドは「v1 audit JSONが`class2-lane-published-chain-roots-independent-audit-20261115.json`としてpublished unchangedのまま残る」と記載しているが、この記載はv3着地（`b9d6b7c6`）前の想定で書かれたもので、実際には同ファイル名はv3監査（blob `9ae57954`）で上書きされた。v1の元blob `79cab641`（80,309B）はgit履歴上は不変だが現行mainの当該パスには存在しない。proseのみの誤記で、v2 JSONの監査統制・計数・pin検証のいずれにも影響なし（同フィールドは非規範的な経路説明）。第二実装scriptのdocstringと第二検証logは正確なv3関係を記載済み。
+
 ## 2026-11-15: cost-75d + cost-77d のwarm-hygiene merge — canonical head 1302
 
 cost-77d laneのlane-local fold（1290→1299）実行中に、並走のcost-75d foldがhead **1296/6551/517468/4821/381191** で着地していた。75dのbit92 receiptが77d child `00000000100000801202000000200000` を**cross-coverで既に閉鎖**しているため、77d foldを1296 baselineへrebaseし、warm-hygiene統制（child closureを二重計上しない）を適用した。
@@ -1847,3 +1849,4 @@ cost-77d laneのlane-local fold（1290→1299）実行中に、並走のcost-75d
 warm-hygiene mergeは公開receiptの帳簿更新であり、child closureの帰属は75d bit92にある。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}は引き続き **UNKNOWN**。
 
 詳細: [merge log](../../log/2026-11-15-n11-class2-merged-cost75d-77d-warm-hygiene.md)、[merged head JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-merged-cost75d-77d-receipts-recompute-20261115.json)、[merge script](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_merged_cost75d_77d_20261115.py)。
+
