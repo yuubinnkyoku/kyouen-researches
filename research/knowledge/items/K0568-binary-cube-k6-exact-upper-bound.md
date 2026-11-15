@@ -21,7 +21,7 @@ artifacts:
   note: C(64,7)個の7点部分集合の依存判定とCNF生成器（二算法照合つき）。こちらは依存7点組全部を禁止する正しいCNF
 - path: research/experiments/binary-cube-hyperplane-k6-exact-20261025/build_k6_circuits.cpp
   role: solver
-  note: 包含極小依存集合（circuit）列挙とCNF生成器。10点存在判定に限りcircuit禁止と全依存7点組禁止は同値（2026-11-14の一般補題）。列挙器の完全性・UNSATは未検証
+  note: 包含極小依存集合（circuit）列挙とCNF生成器。10点存在判定に限りcircuit禁止と全依存7点組禁止は同値（2026-11-14の一般補題）。d=6の列挙器の完全性は2026-11-15に二列挙器監査で確定（下記）。UNSATは未検証のまま
 - path: research/experiments/binary-cube-hyperplane-k6-exact-20261025/audit_frontier9.py
   role: verifier
   note: 9点証人の極大性（64頂点すべて禁止）の独立監査
@@ -40,8 +40,26 @@ artifacts:
 - path: research/log/2026-11-14-k6-small-d-circuit-audit.md
   role: log
   note: 独立監査・READMEの古い評価の訂正・次のd=6監査課題
+- path: research/experiments/binary-cube-hyperplane-k6-exact-20261025/audit_mine.js
+  role: verifier
+  note: 独立実装のd=6 circuit全列挙器（純整数Bareiss・全小行列式・combinadic rank全葉照合・チェックポイント再開可能）
+- path: research/experiments/binary-cube-hyperplane-k6-exact-20261025/audit_port.js
+  role: verifier
+  note: build_k6_circuits.cpp (f3868c53) の逐語移植（p=2^61-1→1,000,003 置換・Hadamard限界907で判定同値）による第二列挙器。circuits{4..7}.binがaudit_mine.jsとバイト一致
+- path: research/experiments/binary-cube-hyperplane-k6-exact-20261025/build_k6_cnf_stream.js
+  role: solver
+  note: circuit CNFのstreaming再生器。audit_port.js --cnf と合成familyでバイト同一性をcmp確認、実familyで p cnf 4160 19484942 を再生
+- path: research/experiments/binary-cube-hyperplane-k6-exact-20261025/eval_witness_cnf.js
+  role: verifier
+  note: 再生exactly-9 CNF全19,484,942節の直接評価によるSAT制御（Sinz補助変数は接頭辞カウント意味論で計算・0違反）
+- path: research/experiments/binary-cube-hyperplane-k6-exact-20261025/counter_control.js
+  role: verifier
+  note: Sinzカウンタ意味論の孤立制御（counters-only CNF・kissat・6ケース全PASS）
+- path: research/log/2026-11-15-k6-d6-circuit-family-audit.md
+  role: log
+  note: d=6 circuit族の二列挙器監査・環境障害とレジューム設計・CNF再生・SAT/カウンタ制御
 scope: 二値六次元超立方体 V_6={0,1}^6 上で、相異なる7点が一つの実アフィン超平面に載ること（退化を含む）を禁止するゲームの最大安全石数。Grundy値・misère版・d≠6は対象外。
-evidence: "下界9点はK0553の証人で二検証器により確定。上界は未確定。2026-11-14の補題によりexactly-10制約下のcircuit縮約は全依存7点組禁止と論理同値。d=3..5の全有限列挙でcircuit列挙法を独立監査した。ただしd=6 circuit生成器の完全性とCNFのUNSATは未検証。"
+evidence: "下界9点はK0553の証人で二検証器により確定。上界は未確定。2026-11-14の補題によりexactly-10制約下のcircuit縮約は全依存7点組禁止と論理同値。d=3..5の全有限列挙でcircuit列挙法を独立監査した。2026-11-15にd=6のcircuit族を二つの独立列挙器（純整数Bareiss / build_k6_circuits.cpp移植・mod 1,000,003）で全列挙し、依存数は既刊二算法値と全サイズ一致・circuit族はバイト一致（総数19,476,688 = circuit CNF記録値）で列挙器の完全性を確定。ただしCNFのUNSATは未検証で K_6≤9 は未確定のまま。"
 ---
 
 # 二値六次元立方体の共七点禁止版は K_6≥9、K_6≤9 は未確定
@@ -102,3 +120,23 @@ verify_small_dimension_circuits.py により d=3,4,5（q=d+1）のサイズ4..q�
 | 5 | 720, 22,240, 350,000 | 720, 2,080, 41,760 | 350,000/350,000 |
 
 生成circuitのq点拡張370,080件も全て依存q集合に含まれた。これはd=3..5の有限完全監査であり、d=6の列挙完全性はまだ証明していない。K_6≥9は確定、K_6≤9とK_6=9は未確定のままである。
+
+## 2026-11-15：d=6 circuit族の二列挙器監査（列挙器の完全性確定）
+
+2026-11-14の監査課題「d=6のcircuit族を別の独立列挙器と突き合わせる」を完了した。
+`audit_mine.js`（独立実装：純整数Bareiss、wide順は全 $s\times s$ 小行列式、サイズ4..6は全葉combinadic rank照合、size 7は総数照合、共線3点組0件の確認つき）と
+`audit_port.js`（`build_k6_circuits.cpp` commit f3868c53 の逐語移植、唯一の置換は $p=2^{61}-1\to1{,}000{,}003$・両素数ともHadamard限界907超で判定同値）の2系統が、
+サイズ4..7の全circuit族について**数値・8バイトレコードとも完全一致**した。
+
+| サイズ | 依存数（既刊二算法と一致） | circuit数 |
+|---:|---:|---:|
+| 4 | 4,816 | 4,816 |
+| 5 | 311,360 | 22,400 |
+| 6 | 10,663,520 | 1,052,800 |
+| 7 | 255,036,992 | 18,396,672 |
+
+circuit総数 **19,476,688** は既存circuit CNF（19,484,942節 − Sinzカウンタ8,254節）の記録値と一致する。
+制御として (a) 両列挙器が d=3,4,5 の既刊監査表を完全再現、(b) CNF再生器が `p cnf 4160 19484942` を再生し `audit_port.js --cnf` と合成familyでバイト同一、(c) 再生exactly-9 CNFの全19,484,942節を9点証人 {11, 22, 28, 37, 42, 49, 57, 58, 63} の直接評価で0違反（solverを介さないSAT証明・幾何再検証もPASS）、(d) Sinzカウンタの孤立制御6/6 PASS、をすべて確認した。
+
+これにより**d=6 circuit列挙の完全性と、既存circuit CNFのcircuit節集合の正しさは確定した**（verification_plan第1項完了）。
+ただしUNSAT判定は依然得られておらず、$K_6\le9$ は未確定のままである。残る作業はexactly-10 CNF（または完全版CNF）のUNSAT証明か、10点一般位置集合の発見である。
