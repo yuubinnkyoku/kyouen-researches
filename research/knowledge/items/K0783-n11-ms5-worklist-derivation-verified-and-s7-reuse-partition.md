@@ -1207,3 +1207,16 @@ head-1195 tie-in: 第3class-2 target S5 `00000000000000809102000000000000` の�
 WIN7証明書は各7石rootから深さ10以内の先手勝ちのみを証明し、78合法手の6石親は閉じない。REFUTED-D10はLOSS証明ではない。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class2・class4は引き続き **UNKNOWN**。
 
 詳細: [監査log](../../log/2026-11-15-n11-class2-cost78a-published-certificate-replay.md)、[監査JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/cost78a-published-certificate-replay-20261115.json)、[再現スクリプト](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost78a_published_certificate_replay_20261115.py)。
+
+
+## 2026-11-15: cost-63f sweep・WIN7証明書2件出版 — 第2 class-2 target最安行・frontier不変1195
+
+第3class-2 target S5 `00000000000000809102000000000000` の残り3行（69/74/78）がすべて並走in flightのため、head-1195で大域最安の未sweep行 **cost-63 child `00000000000080809002000000000800`** をcost-63fとして取得した（IN FLIGHT claim commit 30d2dd47を先行push）。子は第2 coverable class-2 target S5 `00000000000000801202000000200000`（40 orbits/2977）のD4一石lift（stone 79削除で一致）でもう1個のopen親はclass-2 S5 `00000000000000801202020000000000`（52/3551・stone 11）・demand c1=0,c2=2,c4=0・`legal_candidates.py` 63候補がmanifest edge cost 63とbit-exact。
+
+**sweep（v16・depth 10・cap 1e9・andclose 1・8バッチ・pilot 3402×8）**: 63/63候補・**WIN7-D10 2件（bits 85, 91）**・61 REFUTED・0 capped・44,140,211 nodes（76aの131M比34%）。統制: batch-6 determinism rerun一致・v15交差エンジンでbits 85/91はloss=true（10,145,295/3,920,892 nodes）・refutedアンカーbits 1/7/109はloss=false・pilot 5949×3。独立監査 [audit_cost63f_raw_sweep_20261115.py](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost63f_raw_sweep_20261115.py)（標準ライブラリのみ・Bareiss再実装）が10 rawファイルから全件再導出（候補63 bit-exact・各bit 1回・terminal [13,17]全件・root == child|1<<bit・D4 canonical重複0・published 149 roots比較）。
+
+**証明書2件（二重独立検証 2/2 PASS）**: repo-verbatim driverで全loser初手をchunk抽出・sort -u merge。bit85 root `00000000002080809002000000000800`: 40,154行・51/51 sub-roots・extraction 17,491,560 nodes・1,449,311 B単一ファイル。bit91 root `00000000080080809002000000000800`: 29,305行・49/49 sub-roots・6,973,105 nodes・1,058,527 B。BigInt 3×3余因子検査とNumber Bareiss（--root-check --subroots全初手 --consumed-out）の双方でPASS（consumed union == 証明書行・missing/extra 0/0・終局石数[13,17]・fbt_drops 0）。manifest [class2-lane-cost63f-win7-certificates-20261115.json](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost63f-win7-certificates-20261115.json): 計69,459行・24,464,665 nodes・sub-roots 100。claimをcompletedに更新（fold pending）。15ファイル全remote blob sha byte-exact照合済み。
+
+**2 receiptのfoldは未実施・canonical chain head 1195/6652/524884/4922/388607は不変**（foldはhead 1195へのrebase必須）。兄弟cost-63行 `00000000080000801202000000200000` は未claimのまま別レーン候補。WIN7証明書は各7石rootから深さ10以内の先手勝ちのみを証明し、63合法手のS6親は閉じない。REFUTED-D10はLOSS証明ではない。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class2・class4は引き続き **UNKNOWN**。
+
+詳細: [log](../../log/2026-11-15-n11-class2-lane-cost63f-sweep-and-certificates.md)、[sweep audit](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost63f-sweep-audit-20261115.json)。証明書2本体は同output/`class2-lane-cost63f-certificates/`。
