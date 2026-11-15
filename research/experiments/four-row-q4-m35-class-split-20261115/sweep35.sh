@@ -28,7 +28,7 @@ run() { # key w m Dspec extra
   local rc=$?
   local t1=$(date +%s.%N)
   local sec=$(echo "$t1 $t0" | awk '{printf "%.1f", $1-$2}')
-  local conf=$(grep -E "^c conflicts" "$log" | tail -1 | awk '{print $3}')
+  local conf=$(grep -a -E "^c conflicts" "$log" | tail -1 | awk '{print $3}')
   local res=INDET; [ "$rc" = "10" ] && res=SAT; [ "$rc" = "20" ] && res=UNSAT
   echo "{\"key\":\"$key\",\"w\":$W,\"m\":$M,\"q\":4,\"class\":\"$Dspec\",\"extra\":\"$extra\",\"cnf_md5\":\"$md5\",\"cap\":$CAP,\"kissat\":{\"result\":\"$res\",\"rc\":$rc,\"conflicts\":${conf:-null},\"sec\":$sec},\"date\":\"$(date -u +%FT%TZ)\"}" >> "$OUT/records.jsonl"
   if [ "$res" = "SAT" ]; then
@@ -43,6 +43,7 @@ run() { # key w m Dspec extra
 }
 # --- positive control first: (4,34,4) class {1} k=2 p=7 contains the m=34 witness ---
 run ctrl_4x34_c1k2p7 4 34 1 "--krow=1:2 --minpos=7"
+SATFOUND=0  # bugfix 2026-11-15: control-SAT must not abort the sweep
 # --- priority: class {1} k=2 (the historical witness orbit), then {0} k=2 ---
 for y in 1 0; do
   for p in $(seq 0 17); do
