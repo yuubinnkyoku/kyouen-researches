@@ -3234,6 +3234,15 @@
 ## [research/experiments/four-q4-residual-grundy-20261018/verify.py](../../../research/experiments/four-q4-residual-grundy-20261018/verify.py)
 
 - [K0443](../items/K0443-four-residual-edges-rank4-nimber-five.md) (verifier): Pythonの点集合ビットマスクによる完全再帰
+## [research/experiments/four-row-q4-m35-class-split-20261115/README.md](../../../research/experiments/four-row-q4-m35-class-split-20261115/README.md)
+
+- [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (proof): 高速レーン (2026-11-15) IN FLIGHT: 4×35 absence-capable 完全被覆掃引 (9 正準欠損クラス mod V・単一クラス k×minpos sound H-split・82インスタンス cap 700s resumable)。全 UNSAT なら M_{4,4}=35 or >=37・SAT なら M ∈ [36,237]
+## [research/experiments/four-row-q4-m35-class-split-20261115/output/r_ctrl_4x34_c1k2p7.txt](../../../research/experiments/four-row-q4-m35-class-split-20261115/output/r_ctrl_4x34_c1k2p7.txt)
+
+- [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (data): 掃引進行記録 (1インスタンス1行・増分 push)。陽性対照 (4,34,4) class{1} k2 p7 は m=34 witness の V∘H 像を含む
+## [research/experiments/four-row-q4-m35-surgery-20261115/README.md](../../../research/experiments/four-row-q4-m35-surgery-20261115/README.md)
+
+- [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (proof): 高速レーン (2026-11-15): m=34 witness 両埋め込みからの bounded-edit surgery 完全列挙負 (offX=0/1: 20,277/21,824 最終状態葉・0 witness) と surgery4.js census 完全性修正 (q<=w の chord-pair census 欠陥: 非行直線・(1,1,1)/(2,1) 行分布円)・buildCensus4 == sat.js 全三つ組 8/8 PASS
 ## [research/experiments/four-row-q4-q5-frontier-20261115/README.md](../../../research/experiments/four-row-q4-q5-frontier-20261115/README.md)
 
 - [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (proof): frontier レーン（takeover・2026-11-15）: w=4 rowfixed 2クラス被覆補題（rowY=0/1 ∧ lex=H の2 UNSAT で witness-free が確定する行保存性論法・証明つき）・較正・結果
@@ -9418,6 +9427,9 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost77a-receipts-recompute-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost77a-receipts-recompute-20261115.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): fold後head 1282/6565/518522/4835/382245と第二target 15行/1172
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost77b-receipts-recompute-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost77b-receipts-recompute-20261115.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): fold後head 1286/6561/518211/4831/381934と第二target 14行/1095
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost78a-receipts-recompute-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost78a-receipts-recompute-20261115.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): fold後head 1222/6625/522908/4895/386631とper-receipt marginal・親S5 after
@@ -9878,6 +9890,9 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost77a_receipts_20261115.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost77a_receipts_20261115.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (source): cost77a 3 receipt fold。head 1280のbyte再現・sweep/証明書bytes検証・第二target 15行へのfold
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost77b_receipts_20261115.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost77b_receipts_20261115.py)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (source): cost77b 4 receipt fold。head 1282のbyte再現・sweep/証明書bytes検証・第二target 14行へのfold
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost78a_receipts_20261115.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost78a_receipts_20261115.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (source): cost78a 5 receipt fold。head 1216のbyte再現・25入力blob照合・sweep再導出・証明書bytes検証・fold・completed claim制御
@@ -14240,6 +14255,9 @@
 ## [research/experiments/six-row-deficient-witnesses-20261113/scripts/deficient_maximal_machine.ts](../../../research/experiments/six-row-deficient-witnesses-20261113/scripts/deficient_maximal_machine.ts)
 
 - [K0808](../items/K0808-six-row-deficient-witnesses-q568.md) (source): 汎用欠損極大探索機（3点外心完全census・ハイブリッド貪欲+shake・独立検証器内蔵）
+## [research/experiments/six-row-q4-m47-rowY0-oom-20261115/README.md](../../../research/experiments/six-row-q4-m47-rowY0-oom-20261115/README.md)
+
+- [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (proof): 高速レーン (2026-11-15): (6,4) m=47 rowY=0 は kissat RAM 壁 (rc=137/14.3s・sandbox RAM ~2.1GB)。CNF 生成は成功 (2,701,853 vars / 8,965,702 clauses / 259,412 curves)。INDET/OOM・不在主張ではない
 ## [research/experiments/six-row-q7-deficient-20261112/output/six_row_one_deficient.json](../../../research/experiments/six-row-q7-deficient-20261112/output/six_row_one_deficient.json)
 
 - [K0761](../items/K0761-six-row-one-deficient-class-witnesses.md) (data): 全実行結果・witness・独立検証・サンプリング較正
@@ -15586,6 +15604,9 @@
 ## [research/log/2026-11-15-n11-class2-lane-cost77a-sweep-certificates-and-fold.md](../../../research/log/2026-11-15-n11-class2-lane-cost77a-sweep-certificates-and-fold.md)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): cost77aのsweep・3証明書抽出・二独立検証・第二target 16→15行fold
+## [research/log/2026-11-15-n11-class2-lane-cost77b-sweep-certificates-and-fold.md](../../../research/log/2026-11-15-n11-class2-lane-cost77b-sweep-certificates-and-fold.md)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): cost77bのsweep・4証明書抽出・二独立検証・第二target 15→14行fold
 ## [research/log/2026-11-15-n11-class2-lane-cost78a-certificates-and-receipt-fold.md](../../../research/log/2026-11-15-n11-class2-lane-cost78a-certificates-and-receipt-fold.md)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): 3証明書のblind抽出・二独立検証・5 receipt fold・Windows LF/CRLF再現注意

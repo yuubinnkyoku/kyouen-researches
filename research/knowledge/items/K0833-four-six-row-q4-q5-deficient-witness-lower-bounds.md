@@ -129,7 +129,7 @@ l SAT dual-verified: m=23以降単一欠損17石, m=31 4.1s/131 conflicts, 全�
 - path: research/experiments/four-row-q4-m35-class-split-20261115/README.md
   role: proof
   note: "高速レーン (2026-11-15) IN FLIGHT: 4×35 absence-capable 完全被覆掃引 (9 正準欠損クラス mod V・単一クラス k×minpos sound H-split・82インスタンス cap 700s resumable)。全 UNSAT なら M_{4,4}=35 or >=37・SAT なら M ∈ [36,237]"
-- path: research/experiments/four-row-q4-m35-class-split-20261115/output/records.jsonl
+- path: research/experiments/four-row-q4-m35-class-split-20261115/output/r_ctrl_4x34_c1k2p7.txt
   role: data
   note: "掃引進行記録 (1インスタンス1行・増分 push)。陽性対照 (4,34,4) class{1} k2 p7 は m=34 witness の V∘H 像を含む"
 - path: research/experiments/six-row-q4-m47-rowY0-oom-20261115/README.md
