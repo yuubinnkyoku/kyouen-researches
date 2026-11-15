@@ -261,6 +261,18 @@ artifacts:
 - path: research/log/2026-11-16-vertical-fiber-high-z-multiset-merge.md
   role: log
   note: 最新main・既存未解決事項との照合、高余裕領域縮約の選定・証明・有限監査・次課題
+- path: research/experiments/vertical-fiber-height-only-collapse-20261116/report.md
+  role: proof
+  note: κ=1の一般多重集合でR≤z+1なら総和Sの単一トークンへ縮約する全称証明、R≤2の全z例外、R≥3での一様条件の鋭さ
+- path: research/experiments/vertical-fiber-height-only-collapse-20261116/verify_height_only_merge.py
+  role: verifier
+  note: ソート済み多重集合再帰・順序付き再帰・単一トークン閉形式の独立照合器
+- path: research/experiments/vertical-fiber-height-only-collapse-20261116/output/audit.json
+  role: data
+  note: 高さ安定性8,364件・全列挙4,788件・小R全z 3,780件・散点160件・鋭さ証人38件、全て不一致0
+- path: research/log/2026-11-16-vertical-fiber-height-only-collapse.md
+  role: log
+  note: 最新main・未解決事項との照合、低R縮約の発見・証明・監査・中間帯縮小
 - path: research/experiments/vertical-fiber-two-token-residual-2positions-20261116/report.md
   role: source
   note: 2トークン族残余2位置集合の閉形式予想（ラダー・家族B・家族A）の命題・抽出過程・43,241照合の出典
@@ -792,28 +804,39 @@ z\ge2\text{ 偶}:\ \{1,3,\dots,q(\min(k,z))\}\cup\begin{cases}\{2k-z+1\}&2k-z+1\
 有限監査は[検証器](../../experiments/vertical-fiber-all-ones-residual-structure-20261116/verify_all_ones.py)による: W0 坍縮エンジンと一般多重集合エンジンの照合8,463点・W1 2,601状態・W2 ランダム300点・W3 スライス7,686点・W4 tail 15,554点・W5 プレイ長400プレイ、計35,004照合で不一致0、二回の実行でbyte-identical（[監査結果](../../experiments/vertical-fiber-all-ones-residual-structure-20261116/output/audit.json)）。さらに主定理の帰納監査は[検証器](../../experiments/vertical-fiber-all-ones-induction-proof-20261116/verify_induction_proof.py)による: 基底4,225状態・転写1,273,760照合・アトム等価1,520,000照合・ステップ恒等式318,930点・被覆3,803種（三尺度一致・双方向包含0/0）・エンジン交叉2,925+104,140+7,381点・ランダム400点・系A/B機械演繹1,681+7,686点、計約330万照合で不一致0、二回の実行でbyte-identical（[監査結果](../../experiments/vertical-fiber-all-ones-induction-proof-20261116/output/audit.json)）。検証器SHA-256: ba2896c6497d2d1bc0146dfc918c5d6fbb63dc878af7f0d04a1c409421342504、監査JSON SHA-256: 2585e9f56946e37c6ca889fa5b2b755f05124688754f5a57e83b732280650b85。有限監査は全称証明の代替ではなく、全称性は帰納構造と3,803類の完全列挙による。補題P・tail系・主定理 h=U・系A・系Bが証明済みであり、安定化閾値 \(R^*(k,z)\) の閉形式はデータ規則性として未証明のまま、一般多重集合 \(X\) への拡張（2トークン閉形式・一般のH=2特徴づけ）とともに残課題である。標準二次元幾何ゲームの勝敗は主張しない。
 
 
-## 残余ゲームの高余裕領域における単一トークン縮約（κ=1）
+## 残余ゲームの高さ条件だけによる単一トークン縮約（κ=1・全称証明）
 
-\(S=\sum_{x\in X}x\) と置く。完了手の値が1の残余再帰では
-\[
-z\ge S+R-1\implies H(R;X;z)=H(R;(S);z)
-\]
-が全ての有限多重集合 \(X\) について成立する（\(S=0\) は空多重集合）。これは \(R\) 強帰納で証明できる。A/B/Cの各子が同じ帰納領域に入り、A/Bの子値は単一トークン閉形式の \(z\ge S'+1\) 安定枝で一致するため、親の選択肢値集合が単一トークン状態と一致する。
+\(S=\sum_{x\in X}x\)、\(v(s,z,r)=H(r;(s);z)\)、\(v(0,z,r)=0\) とする。
 
-従って \(X\ne\varnothing\) なら、\(q_o(S)\) を \(S\) 以下最大の奇数として、高余裕領域で
+**定理（高さだけによる縮約）**
 \[
-H(R;X;z)=
-\begin{cases}
-2,&R\text{ 奇数},\ R\le q_o(S),\\
-0,&R\text{ 偶数},\ R\le q_o(S),\\
-S\bmod2,&R>q_o(S).
-\end{cases}
+\boxed{R\le z+1\quad\Longrightarrow\quad H(R;X;z)=v(S,z,R).}
 \]
-既知の高Rレジーム \(R\ge S+|X|+z-1\Rightarrow H=S\bmod2\) と合わせると、固定 \(X,z\) で一般多重集合の値を追加解析する必要がある \(R\) は
+すなわち \(z\ge R-1\) なら、任意の有限正整数多重集合 \(X\) は総和 \(S\) の単一トークンへ厳密に縮約される。さらに \(R\le2\) では \(z\) に条件を付けず成立する。
+
+**補題（単一トークンの高さ安定性）**
 \[
-z-S+2\le R\le z+S+|X|-2
+z\ge r\quad\Longrightarrow\quad v(s,z,r)=v(s,z+1,r).
 \]
-の有限帯に限られ、その幅は \(2S+|X|-3\) で \(z\) に依存しない。証明・監査・領域外反例は[独立実験報告](../experiments/vertical-fiber-high-z-multiset-merge-20261116/report.md)を参照。
+単一トークン閉形式の各枝を比較すればよい。\(z\ge s+1\) では両方とも安定枝、\(z=s\) では特別枝と安定枝が一致する。\(1\le z\le s-2\) では、奇数 \(r\) は両側2、偶数 \(r<z\) は両側0、残る \(r=z\)（偶数）も中間式 \((r+z)\bmod2=0\) と次の閾値枝が一致する。境界 \(z=s-1\) も同じ偶奇比較で一致する。\(r=0\) または \(s=0\) は自明。
+
+**証明。** \(R\) に関する強帰納。\(R=0\) は定義。\(R=1\) は、\(X\ne\varnothing\) ならA/B子の値0があり、\(z\ge1\) のときだけC子の値1が加わるため、分割によらない。\(R=2\) は \(S\ge2\) のとき、\(z=0\) でA/B子値が1または2、\(z=1\) でA/B子値2とC子値0、\(z\ge2\) でA/B子値2とC子値3となり、単一トークン側と同じmex。\(S\le1\) は同一状態または空状態である。
+
+\(R\ge3,\ z\ge R-1\) とする。A/B/Cの各子は残容量 \(R-1\) で、それぞれの高さ \(z,z+1,z-1\) は帰納条件 \(z'\ge R-2\) を満たす。帰納法によりA子は \(v(S-1,z,R-1)\)、B子は \(v(S-1,z+1,R-1)\)、C子は \(1\oplus v(S,z-1,R-1)\)。単一トークン高さ安定性を \(r=R-1\) に適用するとA/B子値は一致する。\(S\ge2\) なら一般側にはA/B手が少なくとも一つあり、その共通子値は単一トークン \((S)\) の唯一のA手の子値と同じ。C手も両側で一致するので選択肢値集合、従ってmexが一致する。\(S=1\) は \(X=(1)\)、\(S=0\) は空多重集合補題。∎
+
+**一様条件の鋭さ。** \(R\ge3\) で \(z\ge R-1\) は全 \(X\) に一様な条件として鋭い。奇数 \(R\) では \(X=(1^R),z=R-2\) とすると、全1族の証明済み公式で一般値は2、総和 \(R\) の単一トークン値は0。偶数 \(R\ge4\) では \(X=(1^{R-1}),z=R-2\) とすると、全1族の公式で一般値は1、総和 \(R-1\) の単一トークン値は0。従って \(z=R-2\) まで一様に条件を弱めることはできない。これは各 \(X\) に必要条件を課す主張ではない。
+
+**既知tailとの接続。** 既存の
+\[
+R\ge S+|X|+z-1\implies H(R;X;z)=S\bmod2
+\]
+と合わせると、\(X\ne\varnothing\) を固定したとき一般多重集合として追加解析が必要な残容量は
+\[
+\boxed{z+2\le R\le S+|X|+z-2}
+\]
+だけである。幅は \(S+|X|-3\) で \(z\) に依存しない。2トークン族では幅 \(S-1\)。従来の \(z\ge S+R-1\) より低R側を大きく広げる結果である。
+
+証明・独立監査: [実験報告](../../experiments/vertical-fiber-height-only-collapse-20261116/report.md)、[検証器](../../experiments/vertical-fiber-height-only-collapse-20261116/verify_height_only_merge.py)、[監査結果](../../experiments/vertical-fiber-height-only-collapse-20261116/output/audit.json)、[研究ログ](../../log/2026-11-16-vertical-fiber-height-only-collapse.md)。検証器は高さ安定性8,364件、全列挙4,788件、R≤2全zの有限窓3,780件、固定seed散点160件、鋭さ証人38件を独立照合し、不一致0・二回実行byte-identical。全称性は上記帰納証明と既証明の全1族閉形式による。
 
 
 ## 2トークン族の残余2位置集合の閉形式予想（κ=1・未証明）
