@@ -159,3 +159,81 @@ b∈{p+1..19} の全ケースで完全・素直な場合分解で、対称性は
 2. **x2=4 対照の kissat SAT 実証** — 停止により未実施のまま。
    sweepp0x2.sh 起動前の必須較定として残っている
    (期待: SAT。m=20 witness の V 像 row 0 = (1,0),(4,0),(19,0) が b=4 バケットに属する)。
+
+
+## 追記: SA pin-sweep (sandbox) — c0k3p0/p1 のヒューリスティック負と blocker 円ケース分割提案 (2026-11-15)
+
+13:41Z 停止後、GitHub API + TS sandbox のみで実行した SA ヒューリスティック掃引を
+[four-row-q5-m21-sa-pinsweep-20261115](../four-row-q5-m21-sa-pinsweep-20261115/) に新設した
+(run 表・構造事実・厳密/ヒューリスティック区別つき)。要点:
+
+- c0k3p1 相当 (p1: (0,0) 空・(1,0) 石) と c0k3p0 相当 (p0: (0,0) 石) を
+  safeSwap SA (合計 ~11.3M iters) + g20-blocker ピン掃引 (p1 83 / p0 86 ケース) で探索し、
+  witness (U=0) には未到達 (全称主張なし・ヒューリスティック)。
+- (4,21) で (20,0) を通る >=5点円は19本・(0,0) を通るのも19本・両方を通るのは
+  g* = {(0,0),(4,2),(9,3),(11,3),(16,2),(20,0)} の1本のみ (第二実装で再検証)。
+- **次段階の具体提案 (x2 分割と直交する完全分解)**: バケットを
+  「(20,0) が石」(unit 1本) と「(20,0) が空」(= 何らかの count-4 円 g∋(20,0) が存在する
+  ため (g, 4-subset) でピン分割: p1 83 / p0 86 インスタンス) に完全分解する (計 84/87)。
+  sat4.js 方式の unit pin で符号化可能。被覆の完全性の論証・静的フィルタは実験 README 参照。
+- x2=4 対照の SAT 実証・c0k3p1 deep 再開と並行して、この blocker 分割の実装
+  (sat5.js 相当) が決着への最短経路候補。
+
+
+## 追記: blocker 円ケース分割の道具 (sat5.js + sweepp0gpin.sh)
+
+SA pin-sweep の構造観察を厳密化した完全ケース分割を実装した
+(設計・被覆論証: [four-row-q5-m21-sa-pinsweep-20261115](../four-row-q5-m21-sa-pinsweep-20261115/) の
+「次段階提案」と sat5.js ヘッダ)。欠損行 y0=0 の右端セル (m-1, 0) について:
+
+- **A: 右端セルが石** — unit 1 本 (key <bucket>gA)。対照 (4,20,5) では
+  m=20 witness V 像 (row 0 = (1,0),(4,0),(19,0)) が右端 (19,0) を石として持つため、
+  minpos1 + gpin=19:0 は SAT であるべき (較正用)。
+- **B: 右端セルが空** — 極大性より (m-1,0) を通る count-4 円 g が存在し、
+  安全性より g 上の石数はちょうど4。(g, S) でピン分割。
+  sat5.js listcases (standalone census・計数法・C(k,3) sanity check) が列挙:
+  - adapted (既定): minpos 石 (0,p) が g 上なら S は3セル (残り1石は minpos unit で
+    既に固定)。**p1 81 / p0 86 ケース** (sandbox 検証済み)。
+  - plain: |S|=4 固定 — SA 掃引記録 (p1 83 / p0 86) との 1:1 対照用
+    (sandbox で 83/86 再現確認・g* のケースは pins 4:2,9:3,11:3,16:2 の1個)。
+  - 幾何補題: 円と行の交点は <=2 → S 中の行0セルは右端を除き高々1個で、
+    追加フィルタ不要。
+
+A ∪ B の全 UNSAT ⟹ バケット UNSAT (完全被覆)。sat4.js --x2 とは直交
+(x2 は素朴な第2石分割で「(20,0) が石」側も含む、gpin は右端セル基準の分割)。
+sweepp0gpin.sh: resumable driver (key <bucket>gA / <bucket>g<i>・cap 900s)。
+
+**較正 (実行環境復旧時・sweepp0gpin.sh 起動前に必須)**:
+1. A の陽性対照: (4,20,5) class{0} krow0:3 minpos1 --gpin=19:0 → SAT 期待。
+2. 句スーパーセット検査: 対照 CNF + --gpin / + --emptytail --gpin=... は
+   base の句集合を全含み、差分はピンの unit のみ。
+3. listcases の plain モードが p1=83 / p0=86、adapted が p1=81 / p0=86 を出すこと。
+
+
+## 追記: blocker円分割の独立整数監査 (2026-11-15)
+
+独立Python実装 [verify_blocker_split.py](scripts/verify_blocker_split.py) を追加し、
+[sat5.js の adapted ケース列挙](blocker-split-independent-audit.md)を再検査した。
+84点から全非共線三つ組を列挙する整数係数実装で、538円・右端 (20,0) を通る19円
+(6点円17・5点円2) を再現し、各円の三つ組数が C(k,3) と一致することを確認した。
+
+重要な補足として、**このバケットでは blocker は円に限られる**。
+非水平直線は4行それぞれと高々1点で交わるため、右端点を含めても盤上点は高々4点。
+水平線 y=0 は21点を含むが、対象バケットの行0はちょうど3石で q-1=4 に届かない。
+したがって sat5.js の円だけの列挙で完全被覆になる。これは w=4, q=5, 欠損行の石数 k<=3
+という範囲の補題であり、他の幅・q・行占有数にはそのまま拡張しない。
+
+独立監査の結果:
+- p1: 固定石 (1,0) も通る円が2本あり、adapted blocker は81件。A枝を加え82件。
+- p0: 固定石 (0,0) も通る円が1本あり、adapted blocker は86件。A枝を加え87件。
+- 旧SAのplain p1=83件には、固定石 (1,0) をピン集合から落とした実行不能枝が2件含まれる。
+  いずれも同一円上に固定石を加えると5石になり、安全性に反する。SA記録の fail:2 と一致する。
+- p1/p0 の正準ケース列SHA-256は監査JSONに保存。2回の監査実行でJSONはバイト一致。
+
+再現:
+```sh
+python scripts/verify_blocker_split.py
+```
+出力: [blocker_split_independent_audit.json](output/blocker_split_independent_audit.json)。
+**これは分割の独立監査であり、KissatのSAT/UNSAT判定ではない。**
+82/87件のsolver結果は未取得で、M_{4,5} は [21,140] のまま。
