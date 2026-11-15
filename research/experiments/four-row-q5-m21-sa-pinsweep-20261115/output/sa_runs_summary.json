@@ -77,21 +77,50 @@
     ],
     "p1_seed_manifold_u_le1": {
       "size": 1,
-      "neighbors_total": 169,
-      "neighbors_u_hist": {
-        "2": 5,
-        "3": 42,
-        "4": 21,
-        "5": 9,
-        "6": 22,
-        "7": 57,
-        "8": 13
+      "method": "exhaustive safeSwap BFS (rigorous, finite)",
+      "all_neighbors_u_ge2": true,
+      "neighbors_hist_no_bucket_flags": {
+        "total": 169,
+        "u2": 5,
+        "u3": 42,
+        "u4": 21,
+        "u5": 9,
+        "u6": 22,
+        "u7": 57,
+        "u8": 13
       },
-      "method": "exhaustive safeSwap BFS (rigorous, finite)"
+      "neighbors_hist_bucket_flags": {
+        "total": 164,
+        "u2": 5,
+        "u3": 38,
+        "u4": 20,
+        "u5": 9,
+        "u6": 22,
+        "u7": 57,
+        "u8": 13
+      }
     },
     "g20_case_enumeration": {
       "p1": 83,
       "p0": 86
+    },
+    "p0_seed_derived": {
+      "derivation": "p1 seed with row-0 stone (1,0) replaced by (0,0)",
+      "u": 3,
+      "unblocked": [
+        [
+          2,
+          0
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          20,
+          0
+        ]
+      ]
     }
   },
   "runs": [
