@@ -224,7 +224,7 @@ EXTRA_BLOBS = {
     'class-frontier-top-candidates-s6-after-cost69h-receipts-20261115.csv': '0f9905fcb9190cbbda3b6581466b50373308fe60',
     'class2-lane-cost70e-sweep-audit-20261115.json': '47d38c00264aae84551eaaf994a10c134ff2f60f',
     'class2-lane-cost70e-win7-certificates-20261115.json': '9f8e5a93562ea9f1ca61ee096d5064b07b782b87',
-    'class2-lane-cost70e-inflight-20261115.json': 'b857b6358c58bedf87f3df2a9fd08f074c5ed542',
+    'class2-lane-cost70e-inflight-20261115.json': '9c27cff582e84159aace369b60cfe4543e788bbf',  # v3 retired claim (v2 b857b635 is history)
     'cost70e-third-independent-certificate-audit-20261115.json': '6727eb651e2ee6b978c24a7d0e898333d632e127',
 }
 RAW_BLOBS = {
@@ -559,9 +559,10 @@ print('CONTROL child genuinely remaining at the reconstructed 1227 head: '
       '(parent1) and 21 (parent2) D4-verified; third coverable class-2 '
       'target 2/143 and audit-blocked 10/698 unchanged')
 
-# ---------- 4. claim v2 + sweep audit re-derivation from the raw batches ----------
+# ---------- 4. claim v2/v3 + sweep audit re-derivation from the raw batches ----------
 claim = json.loads((OUT / 'class2-lane-cost70e-inflight-20261115.json').read_text())
-assert claim['schema'] == 'n11-class2-lane-cost70e-inflight-20261115-v2'
+assert claim['schema'] in ('n11-class2-lane-cost70e-inflight-20261115-v2',
+                           'n11-class2-lane-cost70e-inflight-20261115-v3')
 assert claim['status'] == 'completed'
 assert claim['s5'] == PARENT1 and claim['s6_child'] == CHILD
 assert claim['s6_s7_edge_cost'] == 70
@@ -576,7 +577,8 @@ assert sr['terminal_stone_range_all'] == [13, 17]
 assert sr['pilots_3402'] == 9 and sr['determinism_rerun_batch5_node_exact'] is True
 assert '1227/6620/522561/4890/386284' in claim['chain_head_at_claim']
 wc = claim['win7_certificates']
-assert 'PENDING' in wc['fold'] and '9f8e5a93562ea9f1ca61ee096d5064b07b782b87' in wc['manifest']
+assert ('PENDING' in wc['fold'] or 'COMPLETED' in wc['fold']) and \
+    '9f8e5a93562ea9f1ca61ee096d5064b07b782b87' in wc['manifest']
 
 sweep = json.loads((OUT / 'class2-lane-cost70e-sweep-audit-20261115.json').read_text())
 assert sweep['schema'] == 'n11-class2-lane-cost70e-raw-sweep-audit-20261115-v1'
