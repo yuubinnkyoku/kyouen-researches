@@ -1,0 +1,195 @@
+{
+  "schema": "n11-class2-cost63g-parent-lift-frontier-impact-20261115-v1",
+  "date": "2026-11-15",
+  "baseline": {
+    "chain_head": "1199/6648/524616/4918/388339",
+    "solved_s6_in_manifest": 1199,
+    "remaining_s5_orbits": 175,
+    "unique_remaining_s6": 6648,
+    "sum_remaining_cost": 524616,
+    "s6_needed_by_open_classes": 4918,
+    "cost_needed_by_open_classes": 388339,
+    "source": "class-frontier-cost63f-receipts-recompute-20261115.json"
+  },
+  "cost63g": {
+    "s5_target": "00000000000000801202000000200000",
+    "s6_child": "00000000080000801202000000200000",
+    "edge_cost": 63,
+    "candidates": 63,
+    "win7_d10": 14,
+    "refuted_d10": 49,
+    "capped": 0,
+    "claimed_certificates_published": 14,
+    "claimed_certificate_rows": 419398,
+    "note": "The upstream inflight claim states that all 14 certificates were independently double-verified; this audit does not replay their certificate trees or rehash their bytes."
+  },
+  "d4_parent_lift": {
+    "canonical_win7_roots": 14,
+    "distinct_root_orbits": 14,
+    "root_to_parent_incidences": 98,
+    "unique_s6_parent_orbits": 85,
+    "shared_s6_parent_orbits": 1,
+    "shared_parent": "00000000080000801202000000200000",
+    "shared_parent_multiplicity": 14,
+    "other_s6_parent_orbits": 84,
+    "all_other_parent_multiplicity_one": true
+  },
+  "target_s5_impact": {
+    "before": {
+      "remaining_s6_orbits": 38,
+      "remaining_s7_edge_cost": 2837
+    },
+    "overlaps": [
+      {
+        "s6_hex": "00000000000000801206000000200000",
+        "edge_cost": 73,
+        "certificate_parent_lifts": [
+          {
+            "root": "00000000080000801206000000200000",
+            "move_bit": 50,
+            "removed_stone": 91
+          }
+        ]
+      },
+      {
+        "s6_hex": "00000000000000801242000000200000",
+        "edge_cost": 71,
+        "certificate_parent_lifts": [
+          {
+            "root": "00000000080000801242000000200000",
+            "move_bit": 54,
+            "removed_stone": 91
+          }
+        ]
+      },
+      {
+        "s6_hex": "00000000080000801202000000200000",
+        "edge_cost": 63,
+        "certificate_parent_lifts": [
+          {
+            "root": "00000000080000801202000000200001",
+            "move_bit": 0,
+            "removed_stone": 0
+          },
+          {
+            "root": "00000000080000801202000000200200",
+            "move_bit": 9,
+            "removed_stone": 9
+          },
+          {
+            "root": "00000000080000801202000000201000",
+            "move_bit": 12,
+            "removed_stone": 12
+          },
+          {
+            "root": "00000000080000801206000000200000",
+            "move_bit": 50,
+            "removed_stone": 50
+          },
+          {
+            "root": "00000000080000801242000000200000",
+            "move_bit": 54,
+            "removed_stone": 54
+          },
+          {
+            "root": "00000000080000801602000000200000",
+            "move_bit": 58,
+            "removed_stone": 58
+          },
+          {
+            "root": "00000000080000805202000000200000",
+            "move_bit": 62,
+            "removed_stone": 62
+          },
+          {
+            "root": "00000000080000811202000000200000",
+            "move_bit": 64,
+            "removed_stone": 64
+          },
+          {
+            "root": "00000000080001801202000000200000",
+            "move_bit": 72,
+            "removed_stone": 72
+          },
+          {
+            "root": "00000000200080003800400000000200",
+            "move_bit": 94,
+            "removed_stone": 46
+          },
+          {
+            "root": "00000000200080003800000001000200",
+            "move_bit": 96,
+            "removed_stone": 24
+          },
+          {
+            "root": "00000008000000809002000020200000",
+            "move_bit": 99,
+            "removed_stone": 21
+          },
+          {
+            "root": "00000000200080003800200000000200",
+            "move_bit": 105,
+            "removed_stone": 45
+          },
+          {
+            "root": "000000002000a0003800000000000200",
+            "move_bit": 113,
+            "removed_stone": 77
+          }
+        ]
+      },
+      {
+        "s6_hex": "00000000200020003800000000000200",
+        "edge_cost": 83,
+        "certificate_parent_lifts": [
+          {
+            "root": "000000002000a0003800000000000200",
+            "move_bit": 113,
+            "removed_stone": 79
+          }
+        ]
+      },
+      {
+        "s6_hex": "00000008000000801202000000200000",
+        "edge_cost": 77,
+        "certificate_parent_lifts": [
+          {
+            "root": "00000008000000809002000020200000",
+            "move_bit": 99,
+            "removed_stone": 29
+          }
+        ]
+      }
+    ],
+    "distinct_remaining_s6_orbits_covered": 5,
+    "remaining_edge_cost_covered": 367,
+    "predicted_after": {
+      "remaining_s6_orbits": 33,
+      "remaining_s7_edge_cost": 2470
+    },
+    "status": "conditional_prediction_only; not a receipt fold or updated global frontier"
+  },
+  "inputs": {
+    "audit": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost63g-sweep-audit-20261115.json",
+      "git_blob_sha": "9603730b745413e5a99e10a2fecd48075f81ba2c"
+    },
+    "claim": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost63g-inflight-20261115.json",
+      "git_blob_sha": "663a9ba8459caa2b332683baa05232aeba046d70"
+    },
+    "ranking": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-s5-ranking-after-cost63f-receipts-20261115.csv",
+      "git_blob_sha": "8f1037faa322a245ed7e4dafe047e9ab38935cba"
+    },
+    "top": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-top-candidates-s6-after-cost63f-receipts-20261115.csv",
+      "git_blob_sha": "d640a8edd4a3d1f829f493e710f20ca8cec7c63d"
+    },
+    "head": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost63f-receipts-recompute-20261115.json",
+      "git_blob_sha": "e1e72b12ca39769f2c4a298d91833b612c97afeb"
+    }
+  },
+  "scope": "Exact integer D4 canonicalization of the 14 roots from the published cost63g sweep audit, their 98 one-stone deletions, and intersection with the target S5's 38 remaining S6 rows at chain head 1199. No game-theoretic value is inferred."
+}
