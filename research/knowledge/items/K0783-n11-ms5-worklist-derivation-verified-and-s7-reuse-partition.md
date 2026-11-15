@@ -1509,3 +1509,17 @@ REFUTED-D10はLOSS証明ではない。解消計数はmanifest被覆の前進で
 REFUTED-D10はLOSS証明ではない。8証明書は個別7石rootのdepth-10先手勝ちのみを証明し、fold前はどのfrontier数も変えない。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class1・class2・class4は引き続き **UNKNOWN**。
 
 詳細: [sweep log](../../log/2026-11-15-n11-class2-lane-cost70g-sweep-certificates.md)、[sweep record](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70g-sweep-20261115.json)、[certificate manifest](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70g-win7-certificates-20261115.json)、[claim v3](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70g-inflight-20261115.json)。
+
+## 2026-11-15: cost-71c sweep 完成 — 2 WIN7-D10 / 69 REFUTED・両証明書の二重独立検証・byte-exact push（fold待ち）
+
+第二coverable class-2 target S5 `00000000000000801202000000200000`（head 1233で28行/2119）の最安未sweep cost-71 child `00000000000000801202000080200000`（stones [21,31,49,57,60,71]・edge cost 71・需要 c1=0,c2=2,c4=0・両開親ともclass-2: del31=parent1 bit-exact、del21→第2開親 `00000000000000801202000080000000` 43行/3268）をsweepした（claim `class2-lane-cost71c-inflight-20261115.json`・head 1233基準）。
+
+**2 WIN7-D10（bits 24/112）・69 REFUTED・0 capped・総nodes 94,128,613（win sum 4,442,926）・pilot 3402×9 PASS**。統制: batch5 determinism rerun node-exact、v15交差エンジン（bits 24/112 loss=true 2,695,796/14,334,967・最重REFUTEDアンカー75/113/116 loss=false・pilot 5949）、独立監査 `class2-lane-cost71c-sweep-audit-20261115.json`（71候補bit-exact・aggregate再導出・batch計画一致・D4重複scan 49 manifests/126 roots 0重複・head-1233 ranking/top-candidates CSV cross-check・一石削除lift検証）。
+
+**両WIN rootのn11-terminal-strategy-v1証明書をblind抽出**（repo-verbatim extractor blob `52bcaf509ea12fad4c936501d30d26b5b66c0085`・driver `cert_driver71c.ts`・空kill table・FBS 1<<20・fbt_drops 0）: bit24 root `00000000000000801202000081200000` 22,196行（md5 `9e63e160ba08a7edc827b81dbf9067a5`）・bit112 root `00010000000000801202000080200000` 60,406行（md5 `e38d80cfd89ccc8e48264c36a9e7701a5`）・総82,602行・extraction nodes 24,639,331。**二重独立検証PASS**: BigInt余因子検証器（blob `62b5d941…`・47/56 sub-roots・union 0/0・terminal [13,17]）とPython/Bareiss再プレイ検証器 `verify_cost71c_win7_bareiss_independent.py`（全loser応手展開・インクリメンタル forbidden mask・戦略行集合厳密閉包・union 0/0・terminal {13,15,17}）。環境リセット越えで再抽出が同一md5（determinism control）。pushはbit24単一ファイル（804,827B）・bit112は行境界2分割（part md5 `8ae38925…`/`832120f7…`・join==whole md5確認）、全着地をmd5照合。manifest `class2-lane-cost71c-win7-certificates-20261115.json` にper-cert詳細。
+
+**foldは未実施（PENDING）**: 最新main再取得・canonical head 1233再assert・（並走65l/70f/70g fold着地済みなら）78a+69h流の統合rebaseが必須。receiptsは両開class-2親（parent1 28行/2119・第2親43行/3268）を同時に進める材料。claim v2（sweep+certificates completed・fold pending）で反映済み。
+
+REFUTED-D10はLOSS証明ではない。2証明書は個別7石rootのdepth-10先手勝ちのみを証明し、fold前はどのfrontier数も変えない。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class1・class2・class4は引き続き **UNKNOWN**。
+
+詳細: [sweep log](../../log/2026-11-15-n11-class2-lane-cost71c-sweep-certificates.md)、[sweep audit](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71c-sweep-audit-20261115.json)、[certificate manifest](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71c-win7-certificates-20261115.json)、[claim v2](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71c-inflight-20261115.json)。
