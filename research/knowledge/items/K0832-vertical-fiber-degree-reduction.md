@@ -711,11 +711,13 @@ t+1,&m>t,\ m\not\equiv t\pmod2,\ t\text{ 偶数}.
 
 **系（H=2の特徴づけ・単一トークン）** H(R;(x);z)=2 ⟺ Rが奇数 ∧ R≤μ(x,z)、μ(x,z)=2x−1 (z=x) / min(x,z)以下の最大奇数 (z≠x)。z=0では値2は不成立。値2はz=xのときR=2x−1まで最も深く現れる。レジーム R≥L−1 では v=x mod 2 で全t定理のレジーム閉形式（L−n=x, n=1+z）と一致し、偶数Rでは常に v≤1・奇数Rでは v≤2 はTheorem Tと整合する。witness条件 H(1;(x);z)=2 は z≥x+1 または z=x で常に成立する。
 
-証明はRに関する強帰納（4ケース×帯ごとの子の値の場合分け）。全証明と補題の証明・U座標の注意（U=H⊕(z mod 2)でC手のflipがB手へ移動し1トークンを含まないXではflipが消える）は[証明報告](../../experiments/vertical-fiber-single-token-residual-closed-form-20261116/report.md)に、有限監査は[検証器](../../experiments/vertical-fiber-single-token-residual-closed-form-20261116/verify_single_token.py)による: 2エンジン独立実装照合2,730点・全グリッド639,584点・ランダム200点・閉形式mex恒等式151,290+7,296,320点・cap補題51,975状態・構造一貫性479,460点、計8,706,159照合で不一致0、二回の実行でbyte-identical（[監査結果](../../experiments/vertical-fiber-single-token-residual-closed-form-20261116/output/audit.json)）。有限監査は全称証明の代替ではなく、全称性は帰納証明による。
+証明はRに関する強帰納（4ケース×帯ごとの子の値の場合分け）。全証明と補題の証明は[証明報告](../../experiments/vertical-fiber-single-token-residual-closed-form-20261116/report.md)に、有限監査は[検証器](../../experiments/vertical-fiber-single-token-residual-closed-form-20261116/verify_single_token.py)による: 2エンジン独立実装照合2,730点・全グリッド639,584点・ランダム200点・閉形式mex恒等式151,290+7,296,320点・cap補題51,975状態・構造一貫性479,460点、計8,706,159照合で不一致0、二回の実行でbyte-identical（[監査結果](../../experiments/vertical-fiber-single-token-residual-closed-form-20261116/output/audit.json)）。有限監査は全称証明の代替ではなく、全称性は帰納証明による。旧U座標remarkは誤りであり、次の訂正を参照。
 
 **全1族への拡張（機械検証済み予想）** 上の有限観察（z=2j, k≥2j+1 の部分族）は、全 \((k,z)\) に対する値2位置集合の完全閉形式予想に拡張され、\(k,z\le50\) 全2,601状態＋ランダム300点で機械検証済みである（次節参照）。証明は未解決。
 
 一般多重集合Xへの拡張（2トークン閉形式・cap補題ベースの固定R有限状態DP・一般のH=2特徴づけ）は未解決の残課題である。標準二次元幾何ゲームの勝敗は主張しない。
+
+**訂正（2026-11-16・U座標）** 旧単一トークン報告の「mexは一様XORと可換なので、\(U=H\oplus(z\bmod2)\) ではC手の反転が消えB手へ移る」というremarkは誤りである。mexは一様XORと可換ではない。最小反例は \((R,X,z)=(1,(1),1)\): 元の選択肢は \(\{0,1\}\) なので \(H=2\)、従って \(U=3\)。旧変換再帰は選択肢 \(\{1,0\}\) のmexを2とする。正しい代入式と独立監査は[訂正報告](../../experiments/vertical-fiber-u-coordinate-erratum-20261116/report.md)、[検証器](../../experiments/vertical-fiber-u-coordinate-erratum-20261116/verify_u_coordinate.py)、[監査結果](../../experiments/vertical-fiber-u-coordinate-erratum-20261116/output/audit.json)に記録した。単一トークン閉形式の強帰納証明・cap補題・全1族の直接H再帰による有限監査はこのremarkに依存しないため、変更しない。
 
 ## 全1トークン族の残余構造（κ=1・機械検証済み予想）
 
