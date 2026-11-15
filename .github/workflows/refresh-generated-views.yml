@@ -1,0 +1,346 @@
+name: Refresh knowledge generated views
+
+on:
+  push:
+    paths:
+      - ".github/workflows/refresh-knowledge-generated.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync --locked
+      - name: Audit quantitative circle-density modular checker
+        run: python research/experiments/fixed-width/scripts/verify_quantitative_density.py
+      - name: Audit prime-avoidance finite checks
+        run: python research/experiments/fixed-width/scripts/verify_prime_avoidance.py
+      - name: Audit tree graph-star DP
+        run: python research/experiments/tree-graph-star-dp-20261101/verify.py
+      - name: Audit subdivided-star terminal phase transition
+        run: python research/experiments/spider-graph-star-20261101/verify.py
+      - name: Audit length-three spider terminal Gaussian theorem
+        run: python research/experiments/spider-length-three-20261102/verify.py
+      - name: Audit all fixed-length spider terminal Gaussian theorem
+        run: python research/experiments/spider-all-arm-lengths-20261102/verify.py
+      - name: Audit sparse length-three mixed spider Gaussian threshold
+        run: python research/experiments/mixed-spider-critical-20261102/verify.py
+      - name: Audit bounded mixed-length spider Gaussian criterion
+        run: python research/experiments/bounded-mixed-spider-20261102/verify.py
+      - name: Audit unbounded-arm q4 spider Gaussian criterion
+        run: python research/experiments/unbounded-spider-gaussian-20261102/verify.py
+      - name: Audit one-macroscopic-arm Gaussian coalescence
+        run: python research/experiments/macroscopic-spider-arm-20261102/verify.py
+      - name: Audit unrestricted-arm spider Gaussian sufficiency
+        run: python research/experiments/spider-uniform-clt-20261102/verify.py
+      - name: Audit sharp unrestricted mixed spider Gaussian criterion
+        run: python research/experiments/arbitrary-spider-sharp-clt-20261102/verify.py
+      - name: Audit pseudoforest terminal polynomial transfer theorem
+        run: python research/experiments/pseudoforest-terminal-dp-20261102/verify.py
+      - name: Audit vertex-cover terminal polynomial and K2m phase transition
+        run: python research/experiments/vertex-cover-terminal-dp-20261102/verify.py
+      - name: Audit bounded-treewidth terminal polynomial and ladder family
+        run: python research/experiments/treewidth-terminal-dp-20261102/verify.py
+      - name: Audit complete multipartite terminal polynomial
+        run: python research/experiments/multipartite-terminal-20261102/verify.py
+      - name: Audit bounded-edge-edited multipartite terminal polynomial
+        run: python research/experiments/multipartite-edge-edits-20261102/verify.py
+      - name: Audit cograph cotree terminal polynomial
+        run: python research/experiments/cograph-terminal-20261102/verify.py
+      - name: Audit bounded-arity modular substitution terminal polynomial
+        run: python research/experiments/modular-substitution-20261102/verify.py
+      - name: Audit all-q weighted terminal totals for modular substitution
+        run: python research/experiments/modular-substitution-20261102/verify_weighted_total.py
+      - name: Audit amortized substitution-tree LCA charging
+        run: python research/experiments/modular-substitution-20261102/verify_amortized.py
+      - name: Audit graph-star terminal count #P-hardness reduction
+        run: python research/experiments/graph-star-count-complexity-20261102/verify.py
+      - name: Audit polynomial-bit integer graph-star realization and geometric counting
+        run: python research/experiments/graph-star-polynomial-coordinates-20261102/verify.py
+      - name: Audit fixed-q>=5 graph-star counting #P-hardness interpolation
+        run: python research/experiments/graph-star-fixed-q-count-complexity-20261102/verify.py
+      - name: Audit K0643 q-invariant terminal offsets and parity
+        run: python research/experiments/graph-star-q-spectrum-20261102/verify.py
+      - name: Audit K0645 vertex-cover upper terminal gap
+        run: python research/experiments/graph-star-vertex-cover-terminal-gap-20261103/verify.py
+      - name: Audit K0647 forest dominating-component and subset-sum terminal spectra
+        run: python research/experiments/forest-terminal-spectrum-20261103/verify.py
+      - name: Audit K0648 leaf-core terminal spectrum and degree-two gap
+        run: python research/experiments/graph-star-leaf-core-spectrum-20261103/verify.py
+      - name: Audit improved fixed-defect connected-kernel terminal counting
+        run: python research/experiments/graph-star-connected-kernel-20261103/verify.py
+      - name: Audit FPT fixed-defect graph-star terminal coefficient
+        run: python research/experiments/graph-star-fixed-defect-fpt-20261103/verify.py
+      - name: Audit K0655 first positive terminal degree theorem
+        run: python research/experiments/graph-star-second-terminal-degree-20261103/verify.py
+      - name: Audit K0656 cycle-run terminal closed coefficient formula
+        run: python research/experiments/cycle-terminal-run-formula-20261103/verify.py
+      - name: Audit K0664 path terminal real-rootedness and weighted tilings
+        run: python research/experiments/path-terminal-real-roots-20261103/verify.py
+      - name: Audit circle-strip P(w) subadditivity table
+        run: uv run --locked python research/experiments/circle-strip-subadditivity-20261114/verify.py
+      - name: Audit N11 S2 incremental WIN7 reuse against saved result
+        run: |
+          uv run --locked python research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_incremental_class2_win7_reuse.py --output /tmp/n11-s2-incremental-reuse.json
+          python - <<'PY'
+          import json
+          generated = json.load(open("/tmp/n11-s2-incremental-reuse.json"))
+          saved = json.load(open("research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-win7-reuse-incremental-20261114.json"))
+          assert saved["checks"]["worklist_unique"] is True
+          checks = [
+              "worklist_rows", "total_legal_child_cost", "baseline_win7_roots",
+              "baseline_loss7_roots", "baseline_win_loss_conflicts", "new_win7_roots",
+              "new_roots_already_in_baseline_win7",
+              "new_roots_conflicting_with_baseline_loss7", "new_parent_child_pairs",
+              "new_unique_worklist_parents", "new_parents_already_covered_by_baseline",
+              "baseline_worklist_parent_hits", "incremental_new_worklist_parents",
+              "total_worklist_parent_hits_after_union",
+              "remaining_worklist_parents_not_closed_by_win7_reuse",
+              "baseline_remaining_legal_child_cost", "incremental_legal_child_cost_removed",
+              "remaining_legal_child_cost_after_union", "incremental_class_histogram",
+              "total_class_histogram_after_union",
+          ]
+          for key in checks:
+              assert generated["checks"][key] == saved["checks"][key], key
+          assert generated["checks"]["new_win7_roots_exact_safe_geometry"] == 23
+          assert saved["checks"]["new_win7_roots_all_exact_safe"] is True
+          assert generated["source_manifest_counts"] == saved["source_manifest_counts"]
+          assert generated["new_roots"] == saved["new_roots"]
+          generated_parents = generated["new_parent_records"]
+          for row in generated_parents:
+              row["already_in_baseline"] = row.pop("already_covered_by_baseline")
+          assert generated_parents == saved["new_parent_records"]
+          assert generated["incremental_parent_hex"] == saved["incremental_parent_hex"]
+          print("N11_S2_INCREMENTAL_WIN7_REUSE_MATCH")
+          PY
+      - name: Audit cost74d WIN7 against published LOSS7 sources
+        run: node research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost74d_win_loss_conflicts_20261115.mjs
+      - name: Third independent replay of cost67c WIN7 certificates
+        run: |
+          node research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost67c_certificates_third_independent_20261115.mjs
+          git diff --exit-code -- research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/cost67c-third-independent-certificate-audit-20261115.json
+      - run: uv run --locked python tools/knowledge/check.py
+      - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
+      - run: uv run --locked python tools/knowledge/build.py
+      - name: Commit generated views if stale
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Other research lanes may advance main while this job is running.
+          # Discard only locally generated views, rebuild from the latest main,
+          # and retry a non-fast-forward push without overwriting others.
+          for attempt in 1 2 3 4 5 6 7 8; do
+            git fetch origin main
+            git reset --hard origin/main
+            uv run --locked python tools/knowledge/check.py
+            uv run --locked python -m unittest discover -s tools/knowledge/tests
+            uv run --locked python tools/knowledge/build.py
+            if git diff --quiet -- README.md research/knowledge/generated; then
+              echo "KNOWLEDGE_GENERATED_ALREADY_CURRENT"
+              exit 0
+            fi
+            git add README.md research/knowledge/generated
+            git commit -m "docs: refresh generated knowledge views"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Concurrent main update; retrying generated view refresh"
+          done
+          exit 1
+
+# Refresh trigger for K0525 terminal-certificate knowledge integration (2026-10-23).
+# Refresh trigger for K0526 cube-coplanar-q4 finite strong solution (2026-10-24).
+# Refresh after K0526 result-mask correction and K0504 cross-reference (2026-10-24).
+# Refresh trigger for K0530 two-layer coplanar capacity and 2x3x3 strong solution (2026-10-24).
+# Retry-on-concurrent-push fix for K0530 generated-view refresh (2026-10-24).
+
+# Refresh trigger for K0540 all-opening coplanar prism classification after ID collision (2026-10-24).
+
+# Refresh trigger for K0544 hyperplane minimal terminal theorem (2026-10-24).
+# Refresh trigger for K0531 n11 four-s7-WIN certificate coverage union (2026-10-24).
+# Refresh trigger for K0545 four-dimensional binary hyperplane strong solution (2026-10-24).
+# Refresh trigger for K0552 d+3 binary hypercube witnesses (2026-10-24).
+
+# Refresh trigger for K0553 d25-d30 Gale-minor certificates (2026-10-25).
+# Refresh trigger for K0554 second-largest hyperplane sections (2026-10-25).
+# Refresh trigger for K0555 five-eighths hyperplane sections (2026-10-25).
+# Refresh trigger for K0556 complete superquarter hyperplane spectrum (2026-10-25).
+# Refresh trigger for K0557 exact-quarter vertex-section classification (2026-10-25).
+
+# Refresh trigger for K0559 sparse hyperplane vertex-section formulas (2026-10-25).
+
+# Refresh trigger for K0559 four-vertex section formula and verifier (2026-10-25).
+
+# Refresh trigger for K0560 n11 S9 terminal-neighbor WIN (2026-10-25).
+# Refresh trigger for K0561 sparse q-point pattern-diversity theorem and five-point counts (2026-10-25).
+
+# Refresh trigger for K0564 six N11 S9 terminal-neighbor certificates (2026-10-25).
+# Refresh trigger for K0565 six-point high-pattern coefficients (2026-10-25).
+
+# Refresh trigger for K0576 co-singleton forbidden-family strong theorem (2026-10-31).
+
+# Refresh trigger for K0577 planar q+1 rigidity (2026-10-31).
+# Refresh trigger for K0578 sharp short-board one-curve theorem (2026-10-31).
+
+# Refresh trigger for K0579 two-forbidden misere swap and K0580 critical short boards (2026-10-31).
+
+# Refresh trigger for K0581 N=2q-1 short-board strong solution (2026-10-31).
+
+# Refresh trigger for K0583 constant-state N=2q two-carrier theorem (2026-10-31).
+
+# Refresh trigger for K0587 two-carrier terminal spectrum and history counts (2026-10-31).
+
+# Refresh trigger for K0588 two-quota contiguous terminal spectrum (2026-10-31).
+
+# Refresh trigger for K0589 sunflower quota terminal gaps and planar witness (2026-10-31).
+# Refresh trigger for K0590 even-sunflower normal/misere Grundy theorem (2026-11-01).
+# Refresh trigger for K0593 short-petal parity/modulus theorem (2026-11-01).
+# Refresh trigger for K0595 four-edge terminal spectra and sharp planar q-point witnesses (2026-11-01).
+# Refresh trigger for K0596 maximum terminal gaps for arbitrary r (2026-11-01).
+
+# Refresh trigger for K0597 five-edge terminal spectrum (2026-11-01).
+# Refresh trigger for K0600 grid-circle safe-layer and terminal-gap theorem (2026-11-01).
+
+# Refresh trigger for K0601 graph-star circle universality (2026-11-01).
+
+# Refresh trigger for K0602 q-point graph-star circle theorem (2026-11-01).
+# Refresh trigger for K0603 sparse graph-star cycles and bounded-degree theorem (2026-11-01).
+# Refresh trigger for K0605 domination bipartition theorem (2026-11-01).
+
+# Refresh trigger for K0606 clique-component concentration theorem (2026-11-01).
+# Refresh trigger for K0607 graph-star critical Poisson terminal law (2026-11-01).
+
+# Refresh trigger for K0608 cycle graph-star terminal Gaussian theorem (2026-11-01).
+
+# Refresh trigger for K0609 path graph-star terminal Gaussian theorem (2026-11-01).
+# Refresh trigger for K0610 clique-bouquet terminal Gaussian theorem (2026-11-01).
+
+# Refresh trigger for K0611 forest DP and star terminal spectrum (2026-11-01).
+
+# Refresh trigger for K0612 subdivided-star q4/q5 terminal distribution phase transition (2026-11-01).
+
+# Refresh trigger for K0613 length-three spider all-q Gaussian theorem (2026-11-02).
+
+# Refresh trigger for K0614 all fixed-arm-length spider Gaussian classification (2026-11-02).
+
+# Refresh trigger for K0615 sparse length-three mixed spider Gaussian threshold (2026-11-02).
+
+# Refresh trigger for K0616 bounded mixed-spider Gaussian criterion (2026-11-02).
+
+# Refresh trigger for K0617 unbounded-arm q4 spider Gaussian criterion (2026-11-02).
+
+# Refresh trigger for K0618 macroscopic-arm Gaussian coalescence (2026-11-02).
+
+# Refresh trigger for K0619 uniform Gaussian sufficiency without arm-length bound (2026-11-02).
+
+# Refresh trigger for K0620 sharp arbitrary mixed-arm Gaussian iff criterion (2026-11-02).
+
+# Refresh trigger for K0621 pseudoforest terminal polynomial theorem (2026-11-02).
+
+# Refresh trigger for K0622 generated views and N11 shared-S7 WIN6 evidence (2026-11-02).
+
+# Refresh trigger for K0623 treewidth terminal polynomial theorem (2026-11-02).
+
+# Refresh trigger for K0624 shared terminal WIN7 seven WIN6 (2026-11-02).
+
+# Refresh trigger for K0625 complete multipartite terminal polynomial (2026-11-02).
+
+# Refresh trigger for K0629 bounded edge edits of complete multipartite graphs (2026-11-02).
+
+# Refresh trigger for K0630 second terminal strategy backward closure (2026-11-02).
+
+# Refresh trigger for K0631 cograph cotree terminal polynomial (2026-11-02).
+
+# Refresh trigger for K0632 bounded-arity graph substitution theorem (2026-11-02).
+
+# Refresh trigger for K0631/K0632 all-q weighted terminal total counts (2026-11-02).
+
+# Refresh trigger for K0634 N11 central49 1985 exact three-swap conditional cover (2026-11-02).
+
+# Refresh trigger for K0631/K0632 amortized LCA counting bounds (2026-11-02).
+
+# Refresh trigger for K0635 graph-star q4 terminal counting complexity (2026-11-02).
+
+# Refresh trigger for K0636 polynomial-bit integer graph-star realization (2026-11-02).
+
+# Refresh trigger for K0636 final q4-q7 audit and knowledge integration (2026-11-02).
+
+# Refresh trigger for K0637 N11 five independently terminal-certified LOSS7 (2026-11-02).
+
+# Refresh trigger for K0639 fixed-q>=5 graph-star #P-completeness (2026-11-02).
+
+# Refresh trigger for K0640/K0641 N11 focus WIN7 parent lift and 2301 conditional cover (2026-11-02).
+
+# Refresh trigger for K0642 N11 terminal-backed LOSS7 reuse in current 2301 frontier (2026-11-02).
+
+# Refresh trigger for K0643 q-invariant terminal spectrum and parity (2026-11-02).
+
+# Refresh trigger for K0644 N11 five LOSS7 eight-parent closure (2026-11-02).
+
+# Refresh trigger for K0645 graph-star vertex-cover upper terminal gap (2026-11-03).
+# Refresh trigger for K0646 N11 central49 2154 conditional two-swap local optimum (2026-11-03).
+
+# Refresh trigger for K0647 forest terminal spectra (2026-11-03).
+
+# Refresh trigger for K0648 graph-star leaf-core terminal spectrum (2026-11-03).
+
+# Refresh trigger for K0648 connected-kernel fixed-defect exponent improvement (2026-11-03).
+
+# Refresh trigger for K0651/K0652 N11 central49 2094 exact local optimum and 2093 conditional improvement (2026-11-03).
+
+# Refresh trigger for K0652 exact 2094 three-swap neighborhood and 2093 focus CI verification (2026-11-03).
+
+# Refresh trigger for K0648 FPT fixed-defect terminal coefficient (2026-11-03).
+# Refresh trigger: 2026-11-03 K0653 2091-class conditional cover
+
+# Refresh generated knowledge views for K0654 (2090-class conditional n11 cover; 2026-11-03).
+
+# Refresh trigger for K0648 bit-complexity FPT and integer-only verification (2026-11-03).
+
+# Refresh trigger for K0655 minimum nonleaf degree and second terminal length (2026-11-03).
+# Refresh trigger for K0654 terminal-preserving 2090 two-swap exact neighborhood audit (2026-11-03).
+# Refresh trigger for K0654 exact 2090 three-swap terminal-identity audit (2026-11-03).
+# Refresh trigger for K0654 relaxed 2090 three-swap optimum (2026-11-03).
+
+# 2026-11-03: refresh K0658/K0659 after certified WIN6 exclusion repair.
+
+# Refresh trigger for K0660 terminal WIN7 six roots, 37 WIN6 parents, and K0659 retirement (2026-11-03).
+
+# Refresh trigger for K0663 n11 terminal-certified 274 LOSS7 parent closure (2026-11-03).
+
+# Refresh trigger for K0664 path terminal real-rootedness (2026-11-03).
+
+# Refresh generated views for K0817 circle-strip subadditivity and K0813 P(17)/P(18) correction (2026-11-14).
+# Refresh generated views for K0817 exact P(83)=34 (2026-11-14).
+# Refresh generated views for K0783 n11 S2 incremental reuse reproducibility audit (2026-11-14).
+# Refresh generated views for K0783 corrected K0675 baseline and incremental reuse audit (2026-11-14).
+# Refresh generated views after N11 S2 incremental WIN7 reuse audit wiring (2026-11-14).
+# Refresh generated views after correcting N11 S2 safety-count comparator (2026-11-14).
+# Refresh generated views for K0783 cost72 bit111 partial WIN7 receipt and class2 S5 local frontier delta (2026-11-15).
+# Refresh generated views for K0828 q=2w pair-sum-unique height boundary (2026-11-15).
+# Refresh generated views for K0783 cost65e bit7 WIN7 certificate and two new S6 parent lifts (2026-11-15).
+# Refresh generated views for K0783 cost74d certificate publication completion (2026-11-15).
+# Refresh generated views for K0783 cost74d WIN/LOSS conflict audit (2026-11-15).
+
+# Refresh generated views after K0783 cost67c third independent certificate audit (2026-11-15).
+
+# Refresh generated views for K0845 five-row q=7 m=32 witness-free and K0846 five-row q=7 m=33 witness-free completions (2026-11-15).
+# Refresh generated views for K0847 five-row q=7 m=34 witness-free completion (2026-11-15).
+# Refresh generated views retrigger after the cost67c audit claim-blob pin repair (replay byte-identical on the completed v4 claim); K0845/K0846/K0847 generated views pending (2026-11-15).
+# Refresh generated views for K0783 cost-72c receipts fold (canonical head 1239->1244; claim v4, fold script, ranking/top CSVs) (2026-11-15).
+# Refresh generated views for K0849 five-row q=7 m=35 witness-free completion (2026-11-15).
+# Refresh generated views for K0783 cost-73g sweep + 8 WIN7 certificates (bits 31/54/56/62/69/81/89/113; receipts fold pending) (2026-11-15).
+# Refresh generated views for K0783 cost-73g receipts fold (canonical head 1244->1249; claim v4, fold script, ranking/top CSVs) (2026-11-15).
+# Refresh generated views for K0850 five-row q=7 m=36 witness-free cross-check completion (2026-11-15).
+# Refresh generated views for K0783 cost-73h sweep + 4 WIN7 certificates (bits 45/48/82/96; receipts fold pending) (2026-11-15).
+# Refresh generated views for K0851 five-row q=7 m=37 witness-free cross-check completion (2026-11-15).
+# Refresh generated views for K0783 cost-70g receipts fold (canonical head 1249->1254; warm-hygiene fold, claim v4 + fence v2 completed, fold script, ranking/top CSVs) (2026-11-15).
+# Refresh generated views for K0783 cost-73h receipts fold (canonical head 1254->1257; claim v4 with fold record + D4-canon erratum, fold script, ranking/top CSVs) (2026-11-15).
+# Refresh generated views for K0783 cost-65l receipts fold (canonical head 1257->1261; stale fence 1227 rebased, claim v2 completed, fold script, ranking/top CSVs) (2026-11-15).
