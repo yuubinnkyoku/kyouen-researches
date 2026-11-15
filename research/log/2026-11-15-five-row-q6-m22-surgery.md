@@ -44,6 +44,6 @@
   - rowY=3: kissat 4.0.4 が INDET 25,375,195 conflicts / 1665s で環境リセットにより
     2回 kill。cap 5400s の再実行は bash 280s 制限で不可 → 長期レーンへ。
     rowY=0/1/2 の CNF 未生成。IN FLIGHT claim 継続・判定結果なし。
-- CSV 反費: results/fixed-width/mwq_stabilization.csv の (5,6) 行を更新（source 列に
+- CSV 反映: results/fixed-width/mwq_stabilization.csv の (5,6) 行を更新（source 列に
   five-row-q6-m22-surgery-20261115 を追加・note に 19/19 resume・sd<=6 完全負・C4 PASS・
   K0852 sd=28・m=21 witness sd<=2 球内 3 witness を反映・行全体置換）。
