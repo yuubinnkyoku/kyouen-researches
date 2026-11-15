@@ -28,6 +28,8 @@ jobs:
         run: uv run --locked python research/experiments/vertical-fiber-all-t-minwidth-witness-20261116/verify_minwidth_witness.py
       - name: Audit K0832 two-token z=0 residual slice
         run: uv run --locked python research/experiments/vertical-fiber-two-token-z0-slice-20261116/verify_z0_slice.py
+      - name: Audit K0832 ceiling-token stable 2-position classification
+        run: uv run --locked python research/experiments/vertical-fiber-ceiling-stable-2positions-20261116/verify_ceiling.py
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python research/experiments/graph-star-fixed-q-count-complexity-20261102/verify.py
