@@ -1411,3 +1411,13 @@ fold後frontier: best coverable class-2 = 第三target S5 `000000000000008091020
 REFUTED-D10はLOSS証明ではない。解消計数はmanifest被覆の前進であり、盤全体の勝敗ではない。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class2・class4は引き続き **UNKNOWN**。
 
 詳細: [log](../../log/2026-11-15-n11-class2-lane-cost69h-receipts-fold.md)、[fold head JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost69h-receipts-recompute-20261115.json)、[completed claim](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost69h-inflight-20261115.json)。
+
+## 2026-11-15: 78a+69h merged headの第三独立検証 — fold順可換・二重被覆0・CSV byte-identical第三一致
+
+cost-70d追記の指摘した78a head 1225と69h head 1221のforkは、前節のとおり並走rebase（69h foldを78a headに適用しcanonical head 1227/6620/522561/4890/386284）で解消済み。本レーンはこのmerged headを**並走rebase手法と独立の第三手法**で再構成・検証した。merge script `recompute_frontier_merged_cost78a_69h_20261115.py`は、cost-67c chain head 1219をrunpy 1回でbyte-identical再現（blob `6d187f48…` assert）した後、両branch head JSON（78a `3938bb16…`・69h rebase v2 `d25eb3a0…`）をgit blob shaで検証し、7 receipt roots（78a bits 36/20/29/8/109 + 69h bits 58/96）をcovers()で再計算、fork 1219から単一順でreplayする。全検証PASS: per-bit marginals published一致・child閉鎖 bit36/bit58・addA=26/addB=10・raw overlap 0・**covers overlap 0（二重被覆なし）**・set等式 `s_merged == sA∪sB == sF∪cov7`・**逆順replay（69h→78a）も同一結果（fold順可換）**・**merged head数値 == 並走rebase head数値 1227/6620/522561/4890/386284（第三一致）**。
+
+さらに本scriptが再生成した**ranking CSV（md5 `f248573f9afd378dc3142bb36e488119`）とtop-candidates CSV（md5 `43ceb46eecd84e9fc1c29407d34115ce`）は、並走rebase v2版の両CSVとbyte-identical**（第三一致を数値一致から出力byte一致に格上げ）。3回実行すべてbyte-identical（merged head JSON md5 `bea292d0fed96c67fb707eb4c2165730`・git blob `294c4ed3…`）。**環境知見**: 両fold scriptを同一プロセスでrunpy実行するとcgroup 1GB制限でOOMする（exit 137・78a証明書bytes検証がメモリピーク）ため、blob検証済みhead JSON 2件からrootsを再取得してfork 1219からcovers()で再構成する方式を取った（1回約10秒で完走）。以後のfold（65l/69g/65j/74e等）は引き続き新head 1227をassertして拡張すること。
+
+REFUTED-D10はLOSS証明ではない。解消計数はmanifest被覆の前進であり、盤全体の勝敗ではない。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class1・class2・class4は引き続き **UNKNOWN**。
+
+詳細: [log](../../log/2026-11-15-n11-merged-frontier-78a-69h-independent-verification.md)、[merged head JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-merged-cost78a-69h-recompute-20261115.json)。
