@@ -1,0 +1,220 @@
+{
+  "scope": {
+    "rule": "pure fiber game; t=3; q in {4,5,6}; no base-trace constraints",
+    "capacity_condition": "sum_b min(c_b,3) <= q-1",
+    "grundy_convention": "mex over legal single-stone increments"
+  },
+  "classifications": {
+    "q4": {
+      "canonical_multiset_audit": {
+        "w_range": [
+          2,
+          12
+        ],
+        "m_range": [
+          2,
+          20
+        ],
+        "parameter_pairs": 209,
+        "states_checked": 3116,
+        "mismatches": 0,
+        "grundy_histogram": {
+          "0": 1598,
+          "1": 1419,
+          "2": 99
+        },
+        "maximum_grundy": 2
+      },
+      "labeled_vector_audit": {
+        "w_range": [
+          2,
+          8
+        ],
+        "m_range": [
+          2,
+          9
+        ],
+        "parameter_pairs": 56,
+        "states_checked": 4620,
+        "mismatches": 0,
+        "grundy_histogram": {
+          "0": 3192,
+          "1": 1323,
+          "2": 105
+        },
+        "maximum_grundy": 2
+      }
+    },
+    "q5": {
+      "canonical_multiset_audit": {
+        "w_range": [
+          2,
+          12
+        ],
+        "m_range": [
+          2,
+          20
+        ],
+        "parameter_pairs": 209,
+        "states_checked": 5567,
+        "mismatches": 0,
+        "grundy_histogram": {
+          "0": 2979,
+          "1": 2390,
+          "2": 198
+        },
+        "maximum_grundy": 2
+      },
+      "labeled_vector_audit": {
+        "w_range": [
+          2,
+          8
+        ],
+        "m_range": [
+          2,
+          9
+        ],
+        "parameter_pairs": 56,
+        "states_checked": 14028,
+        "mismatches": 0,
+        "grundy_histogram": {
+          "0": 8715,
+          "1": 4704,
+          "2": 609
+        },
+        "maximum_grundy": 2
+      }
+    },
+    "q6": {
+      "canonical_multiset_audit": {
+        "w_range": [
+          2,
+          12
+        ],
+        "m_range": [
+          2,
+          20
+        ],
+        "parameter_pairs": 209,
+        "states_checked": 9671,
+        "mismatches": 0,
+        "grundy_histogram": {
+          "0": 4912,
+          "1": 4489,
+          "2": 270
+        },
+        "maximum_grundy": 2
+      },
+      "labeled_vector_audit": {
+        "w_range": [
+          2,
+          8
+        ],
+        "m_range": [
+          2,
+          9
+        ],
+        "parameter_pairs": 56,
+        "states_checked": 37044,
+        "mismatches": 0,
+        "grundy_histogram": {
+          "0": 21196,
+          "1": 14216,
+          "2": 1632
+        },
+        "maximum_grundy": 2
+      }
+    }
+  },
+  "minimal_maximum_witnesses": {
+    "q4": {
+      "w": 2,
+      "m": 4,
+      "occupancy": [
+        2,
+        0
+      ],
+      "grundy": 2,
+      "children": [
+        [
+          3,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "child_values": [
+        1,
+        0
+      ]
+    },
+    "q5": {
+      "w": 2,
+      "m": 4,
+      "occupancy": [
+        1,
+        0
+      ],
+      "grundy": 2,
+      "children": [
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "child_values": [
+        1,
+        0
+      ]
+    },
+    "q6": {
+      "w": 3,
+      "m": 4,
+      "occupancy": [
+        1,
+        1,
+        0
+      ],
+      "grundy": 2,
+      "children": [
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "child_values": [
+        1,
+        0
+      ]
+    }
+  },
+  "maximum_grundy_summary": {
+    "q4": {
+      "m odd or m=2": 1,
+      "m even >=4": 2
+    },
+    "q5": {
+      "m odd or m=2": 1,
+      "m even >=4": 2
+    },
+    "q6": {
+      "w=2 (all m)": 1,
+      "w>=3, m odd or m=2": 1,
+      "w>=3, m even >=4": 2
+    }
+  },
+  "verifier_sha256": "4667e34ce404c176898b5602c3367ed0c4d3f7a2c7f5113f7e4e0bc90fb462ea",
+  "audit_note": "Finite recursive-mex audits support the closed forms; the unbounded statements are proved in report.md. Abstract fiber polynomial game; makes no claim about any standard 2D geometric board."
+}
