@@ -2180,6 +2180,33 @@
 ## [research/experiments/five-row-q7-m28-class-split-20261115/scripts/sat3.js](../../../research/experiments/five-row-q7-m28-class-split-20261115/scripts/sat3.js)
 
 - [K0840](../items/K0840-five-row-q7-m28-deficient-nonexistence.md) (solver): class-split / exact-count (--krow) / minpos / lex encoder on the K0810 sat.js census + sat2.js counter core (byte-identical to the K0821..K0839 lanes, restored from the m=27 lane directory), plus kissat model decoding with census-free verifyConfig
+## [research/experiments/five-row-q7-m29-class-split-20261115/raw/r5x29q7_1k5p0.txt](../../../research/experiments/five-row-q7-m29-class-split-20261115/raw/r5x29q7_1k5p0.txt)
+
+- [K0841](../items/K0841-five-row-q7-m29-deficient-nonexistence.md) (data): hardest deciding instance raw kissat log ({1} k=5 minpos=0: 850,480 conflicts UNSAT / 31.21 s); all raw logs r5x29q7_*.txt (17 direct + 40 decomposition + 2 lex + control)
+## [research/experiments/five-row-q7-m29-class-split-20261115/raw/r_ctrl_5x18_c0.txt](../../../research/experiments/five-row-q7-m29-class-split-20261115/raw/r_ctrl_5x18_c0.txt)
+
+- [K0841](../items/K0841-five-row-q7-m29-deficient-nonexistence.md) (data): positive control log: 5x18 class {0} SAT 343,134 conflicts bit-exact with the K0821/K0834/K0835/K0836/K0837/K0838/K0839/K0840 lane controls (eighth cross-lane reproduction); decoded 29 stones rows (5,6,6,6,6), census-free verifyConfig PASS (K0332 witness rediscovered end-to-end)
+## [research/experiments/five-row-q7-m29-class-split-20261115/records.jsonl](../../../research/experiments/five-row-q7-m29-class-split-20261115/records.jsonl)
+
+- [K0841](../items/K0841-five-row-q7-m29-deficient-nonexistence.md) (data): 60 records: 17 direct class UNSAT + 40 k/minpos decomposition UNSAT ({0},{1}: k=0..4 and k=5 x minpos=0..14, 15 points per class at m=29) + 2 lex=H cross-checks + 1 positive control (SAT); deciding-instance conflicts 8,677,594, records total 9,485,616
+## [research/experiments/five-row-q7-m29-class-split-20261115/report.md](../../../research/experiments/five-row-q7-m29-class-split-20261115/report.md)
+
+- [K0841](../items/K0841-five-row-q7-m29-deficient-nonexistence.md) (proof): claim, coverage and decomposition-completeness argument (k partitions the row count; leftmost stone column <= 14 by the column mirror: x_min + (28-x_max) <= 28), verification protocol incl. the eighth cross-lane bit-exact control reproduction, per-class results, scope and limits
+## [research/experiments/five-row-q7-m29-class-split-20261115/scripts/mkcnf.sh](../../../research/experiments/five-row-q7-m29-class-split-20261115/scripts/mkcnf.sh)
+
+- [K0841](../items/K0841-five-row-q7-m29-deficient-nonexistence.md) (source): deterministic CNF generator: 17 direct classes + {0},{1} k=0..4 + k=5 x minpos=0..14 (the m=29 sound bound grows to floor((m-1)/2)=14, 15 points per class) + 2 lex=H + 5x18 control (60 CNFs)
+## [research/experiments/five-row-q7-m29-class-split-20261115/scripts/mkrecords5729.js](../../../research/experiments/five-row-q7-m29-class-split-20261115/scripts/mkrecords5729.js)
+
+- [K0841](../items/K0841-five-row-q7-m29-deficient-nonexistence.md) (source): records.jsonl / summary.json builder from raw kissat logs
+## [research/experiments/five-row-q7-m29-class-split-20261115/scripts/qrun.sh](../../../research/experiments/five-row-q7-m29-class-split-20261115/scripts/qrun.sh)
+
+- [K0841](../items/K0841-five-row-q7-m29-deficient-nonexistence.md) (source): 2-worker claim-directory queue runner with per-instance timeout caps and interrupted-instance reclaim
+## [research/experiments/five-row-q7-m29-class-split-20261115/scripts/sat3.js](../../../research/experiments/five-row-q7-m29-class-split-20261115/scripts/sat3.js)
+
+- [K0841](../items/K0841-five-row-q7-m29-deficient-nonexistence.md) (solver): class-split / exact-count (--krow) / minpos / lex encoder on the K0810 sat.js census + sat2.js counter core (byte-identical to the K0821..K0840 lanes, restored from the m=28 lane directory), plus kissat model decoding with census-free verifyConfig
+## [research/experiments/five-row-q7-m29-class-split-20261115/summary.json](../../../research/experiments/five-row-q7-m29-class-split-20261115/summary.json)
+
+- [K0841](../items/K0841-five-row-q7-m29-deficient-nonexistence.md) (data): aggregate: 0 SAT / 0 INDET among the 57 deciding instances; hardest {1} k=5 mp=0 (850,480 conflicts — down 42% from its m=28 counterpart, resolving the m=28 local non-decrease); decomposition soundness note (minpos pins the leftmost stone of the first deficient row; sound bound floor((m-1)/2)=14 at m=29: columns 0..28, min(x_min, 28-x_max) <= 14)
 ## [research/experiments/fixed-width-frontier-20261005/output/q57_independent_witness.json](../../../research/experiments/fixed-width-frontier-20261005/output/q57_independent_witness.json)
 
 - [K0332](../items/K0332-width-five-q7-stabilization-bounds.md) (data): 5×18の29石安全極大証人と全61空点のblocker
