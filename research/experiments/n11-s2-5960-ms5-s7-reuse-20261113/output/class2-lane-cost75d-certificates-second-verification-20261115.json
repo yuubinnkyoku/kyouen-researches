@@ -1,0 +1,220 @@
+{
+  "schema": "n11-class2-lane-cost75d-certificates-second-verification-20261115-v1",
+  "date": "2026-11-15",
+  "session": "long-lane second independent verification session (third geometry system added alongside the published BigInt and Bareiss verifiers)",
+  "target": "cost-75d WIN7-D10 certificates for the child 00000000000040801202000000200000 (cost 75) of the second coverable class-2 target S5 00000000000000801202000000200000 (17 rows / 1325) at the merged canonical head 1277/6570/518896/4840/382619",
+  "inputs": "published main bytes only: class2-lane-cost75d-certificates/ (bit12, bit40 whole files; bit92 part1of2+part2of2; bit111 part1of3+part2of3+part3of3), tmp-cost75d receipts/summaries/bigint/tsverify/split manifests/consumed dumps, claim class2-lane-cost75d-inflight-20261115.json, head class-frontier-merged-cost65l-74g-69i-recompute-20261115.json",
+  "verifiers": {
+    "bareiss_published": "scripts/verify_cost75d_win7_bareiss_independent.py re-run on a rebuilt local mirror",
+    "bigint_published": "scripts/verify_win7_certificate_bigint_independent.mjs re-run on a rebuilt local mirror",
+    "rational_third_system": "scripts/verify_cost75d_win7_rational_independent.py - written this session: forbidden cells characterised by exact rational circumcentre (fractions.Fraction, perpendicular-bisector 2x2 system) or by the line through a collinear triple (integer cross products), replay driven by an explicit worklist (no recursion); no determinant arithmetic anywhere"
+  },
+  "geometry_cross_control": {
+    "random_triple_mask_agreement_rational_vs_bareiss": "5000 random stone triples, forbidden-mask bit-exact equality: 0 mismatches"
+  },
+  "certificates": [
+    {
+      "bit": 12,
+      "root_hex": "00000000000040801202000000201000",
+      "root_mobility": 55,
+      "strategy_rows": 31181,
+      "extraction_nodes": 1115331,
+      "hashes": {
+        "md5_match_receipt": true,
+        "sha256_match_receipt": true,
+        "git_blob_sha_match_receipt": true,
+        "git_blob_sha": "f52638dcb3a7e1bc7c15f3d8f1f02ca56f9f3a1b"
+      },
+      "root_xor_child_equals_lift_bit": true,
+      "bareiss": {
+        "pass": true,
+        "consumed_rows": 31181,
+        "union_missing": 0,
+        "union_extra": 0,
+        "terminal_stone_range": [13, 15, 17],
+        "visited_winner_states": 101501
+      },
+      "bigint": {
+        "pass": true,
+        "published_json_reproduced_exactly": true,
+        "root_safe": true,
+        "winner_states": 44661,
+        "loser_states": 13583,
+        "loser_reply_edges": 62333,
+        "terminal_count": 11351
+      },
+      "rational": {
+        "pass": true,
+        "consumed_rows": 31181,
+        "union_missing": 0,
+        "union_extra": 0,
+        "terminal_stone_range": [13, 15, 17],
+        "winner_state_visits": 101501,
+        "consumed_set_byte_identical_with_bareiss": true,
+        "consumed_set_byte_identical_with_published_consumed_dump": true
+      }
+    },
+    {
+      "bit": 40,
+      "root_hex": "00000000000040801202010000200000",
+      "root_mobility": 60,
+      "strategy_rows": 52198,
+      "extraction_nodes": 6007621,
+      "hashes": {
+        "md5_match_receipt": true,
+        "sha256_match_receipt": true,
+        "git_blob_sha_match_receipt": true,
+        "git_blob_sha": "1207ee041d315b7828155df785a1f715747f159d"
+      },
+      "root_xor_child_equals_lift_bit": true,
+      "bareiss": {
+        "pass": true,
+        "consumed_rows": 52198,
+        "union_missing": 0,
+        "union_extra": 0,
+        "terminal_stone_range": [13, 15, 17],
+        "visited_winner_states": 162699
+      },
+      "bigint": {
+        "pass": true,
+        "published_json_reproduced_exactly": true,
+        "root_safe": true,
+        "winner_states": 66141,
+        "loser_states": 20171,
+        "loser_reply_edges": 91701,
+        "terminal_count": 16451
+      },
+      "rational": {
+        "pass": true,
+        "consumed_rows": 52198,
+        "union_missing": 0,
+        "union_extra": 0,
+        "terminal_stone_range": [13, 15, 17],
+        "winner_state_visits": 162699,
+        "consumed_set_byte_identical_with_bareiss": true,
+        "consumed_set_byte_identical_with_published_consumed_dump": true
+      }
+    },
+    {
+      "bit": 92,
+      "root_hex": "00000000100040801202000000200000",
+      "root_mobility": 66,
+      "strategy_rows": 75290,
+      "extraction_nodes": 15330145,
+      "hashes": {
+        "part1_md5_match_manifest": true,
+        "part2_md5_match_manifest": true,
+        "join_whole_bytes": 2719747,
+        "whole_md5_match_receipt": true,
+        "whole_sha256_match_receipt": true,
+        "whole_git_blob_sha_match_receipt": true,
+        "whole_git_blob_sha": "689117bff67947b16a90e82a4cbfc45e09d9e336"
+      },
+      "root_xor_child_equals_lift_bit": true,
+      "bareiss": {
+        "pass": true,
+        "consumed_rows": 75290,
+        "union_missing": 0,
+        "union_extra": 0,
+        "terminal_stone_range": [13, 15, 17],
+        "visited_winner_states": 245515
+      },
+      "bigint": {
+        "pass": true,
+        "published_json_reproduced_exactly": true,
+        "root_safe": true,
+        "winner_states": 98601,
+        "loser_states": 30077,
+        "loser_reply_edges": 137303,
+        "terminal_count": 24892
+      },
+      "rational": {
+        "pass": true,
+        "consumed_rows": 75290,
+        "union_missing": 0,
+        "union_extra": 0,
+        "terminal_stone_range": [13, 15, 17],
+        "winner_state_visits": 245515,
+        "consumed_set_byte_identical_with_bareiss": true,
+        "consumed_set_join_byte_identical_with_published_consumed_dump": true
+      }
+    },
+    {
+      "bit": 111,
+      "root_hex": "00008000000040801202000000200000",
+      "root_mobility": 61,
+      "strategy_rows": 81199,
+      "extraction_nodes": 16145165,
+      "hashes": {
+        "part1_md5_match_manifest": true,
+        "part2_md5_match_manifest": true,
+        "part3_md5_match_manifest": true,
+        "join_whole_bytes": 2923377,
+        "whole_md5_match_receipt": true,
+        "whole_sha256_match_receipt": true,
+        "whole_git_blob_sha_match_receipt": true,
+        "whole_git_blob_sha": "5b71dfdf4ed1095fc295cf67b3cb5f9bed486295"
+      },
+      "root_xor_child_equals_lift_bit": true,
+      "bareiss": {
+        "pass": true,
+        "consumed_rows": 81199,
+        "union_missing": 0,
+        "union_extra": 0,
+        "terminal_stone_range": [13, 15, 17],
+        "visited_winner_states": 252069
+      },
+      "bigint": {
+        "pass": true,
+        "published_json_reproduced_exactly": true,
+        "root_safe": true,
+        "winner_states": 106014,
+        "loser_states": 31708,
+        "loser_reply_edges": 145336,
+        "terminal_count": 27328
+      },
+      "rational": {
+        "pass": true,
+        "consumed_rows": 81199,
+        "union_missing": 0,
+        "union_extra": 0,
+        "terminal_stone_range": [13, 15, 17],
+        "winner_state_visits": 252069,
+        "consumed_set_byte_identical_with_bareiss": true,
+        "consumed_set_join_byte_identical_with_published_consumed_dump": true
+      }
+    }
+  ],
+  "root_novelty_controls": {
+    "four_roots_mutually_distinct_raw": true,
+    "four_roots_mutually_distinct_d4_canonical": true,
+    "four_roots_distinct_from_head1277_16_receipt_roots_raw": true,
+    "four_roots_distinct_from_head1277_16_receipt_roots_d4": true,
+    "note": "disjointness against the full 548-root folded set at head 1277 is asserted by the forthcoming cost-75d fold script and is the next second-verification target when that fold lands"
+  },
+  "bookkeeping_controls": {
+    "rows_summary_all_per_move_ok": true,
+    "rows_summary_terminal_ranges_within_13_17": true,
+    "rows_summary_n_moves_equals_root_mobility": true,
+    "consumed_equals_rows_all_four": true,
+    "determinism": "bareiss and rational reruns on bit12 byte-identical"
+  },
+  "transport_observations": {
+    "bit111_split_revision": "the bit111 cert/consumed split manifests were revised from 2 parts to 3 parts mid-landing; the raw CDN served the stale 2-part manifest for several minutes after the 3-part landing, so all manifest reads were taken from the GitHub API (blob-authoritative)",
+    "consumed_dump_transport": "bit12 (1,028,973 B) and bit40 (1,722,534 B) landed as single files; bit92 (2 x 1,242,285 B) and bit111 (893,211+893,211+893,145 B) as parts"
+  },
+  "totals": {
+    "certificates": 4,
+    "strategy_rows_total": 239868,
+    "extraction_nodes_total": 38598262,
+    "bigint_pass": 4,
+    "bareiss_pass": 4,
+    "rational_pass": 4,
+    "published_consumed_dumps_byte_identical": 4
+  },
+  "not_covered": [
+    "the cost-75d receipts fold itself (parallel lane to-follow; will be second-verified after it lands, including the 548-root disjointness control)",
+    "the cost-76b sweep result (76 candidates, WIN7-D10 bits 72/96 per commit 5ef0d819) and its certificates: independent second audit to follow once the sweeping lane's own audit lands"
+  ],
+  "interpretation": "bookkeeping over published certificates; these WIN7-D10 certificates prove a first-player win within depth 10 from the four individual 7-stone roots only; REFUTED-D10 proves only absence of a WIN7-D10 certificate; solved counts measure manifest coverage, not game-theoretic values; 11x11 empty board, two-stone root {49,60}/{59,60}, S2 {59,60}, class 1, class 2 and class 4 all remain UNKNOWN"
+}
