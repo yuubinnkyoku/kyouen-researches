@@ -1235,3 +1235,16 @@ cost-63f sweepの証明書付きWIN7-D10 receipts 2件（bits 85/91）をhead 11
 解消計数はmanifest被覆の前進であり、盤全体の勝敗ではない。WIN7証明書は各7石rootの深さ10以内の先手勝ちのみを証明する。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class2・class4は引き続き **UNKNOWN**。
 
 詳細: [fold log](../../log/2026-11-15-n11-class2-lane-cost63f-receipts-fold.md)、[head JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost63f-receipts-recompute-20261115.json)、[fold script](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost63f_receipts_20261115.py)。
+
+## 2026-11-15: cost-65k sterile sweep — 65 REFUTED-D10・WIN7-D10不在・frontier不変1199
+
+head-1199のtop-candidatesで未sweepだった cost-65 child `00000000020000801202000000200000`（第2 coverable class-2 target S5 `00000000000000801202000000200000` のS6行・stones [21, 49, 57, 60, 71, 89]・lift stone 89・開親2個ともclass 2: parent1 38行/2837〔stone 89削除〕・`00000000000000003800000008002000` 53行/3698〔stone 21削除〕）をcost-65kとしてsweepした（cost-65b–65jは他行で使用済み）。**65/65候補・WIN7-D10 0件・65 REFUTED-D10・0 capped・総nodes 32,457,462**（v16 engine・depth 10・cap 1e9・andclose 1・8バッチ・pilot 3402×8全PASS）。STERILE: receiptが存在しないためfold材料なし・証明書抽出対象なし。
+
+- terminal stone rangeは64候補 [13,17]、bit 9のみ [13,15]（全ライン早期終端・63fとは異なる正当値。監査assertは固定値比較から深さ10境界検査〔[0]≥7・[1]≤17〕に修正し `distinct_terminal_ranges` を記録）。batch 6（bits 74,75,76,77,79,83,84,86）determinism rerunはnode-exact一致、v15交差エンジン（`class4_child1_runner.ts`）でアンカーbits 7/86/118はloss=false（nodes 125301/2037455/5749144・pilot 5949）。
+- 独立監査 `audit_cost65k_raw_sweep_20261115.py`（Python標準ライブラリのみ・Bareiss再実装・repo engine不使用）が10 rawファイルから全件再導出: 候補65==claim列挙 bit-exact・各bit 1回ずつ・pilot 3402×8・D4 canonical重複0（published manifest roots 151個との比較込み・59 manifest走査）。監査JSON `class2-lane-cost65k-sweep-audit-20261115.json`・2回実行byte-identical。
+- 出版はbase64一括転写2回失敗を受け、整数compact-table（bit, nodes, ms, terminal range）からのJSONL行再生方式に切替（ローカルでbyte-exact検証後にpush・remote 13ファイル全部cmp一致・blob sha照合済み）。
+- 並走: cost-63g sweep 63/63・証明書14/14出版済み（commit `1b814444` 時点）・foldは並走担当。78a/69g/65j/74eも並走in flight。
+
+**child `00000000020000801202000000200000` はparent1の未解決S6行のまま（38行/2837）**。この行を反証で閉じるには深さ>10の証拠（65個の7石root各々への深さ>10の反証または不変量）が必要で、parent1の他の子行からのWIN7 receipt foldでの閉鎖も可能。REFUTED-D10はLOSS証明ではない。canonical chain head **1199/6648/524616/4918/388339 は不変**。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class2・class4は引き続き **UNKNOWN**。
+
+詳細: [sweep log](../../log/2026-11-15-n11-class2-lane-cost65k-sterile-sweep.md)、[completed claim](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65k-inflight-20261115.json)、[sweep audit](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65k-sweep-audit-20261115.json)、[audit script](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost65k_raw_sweep_20261115.py)。
