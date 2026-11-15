@@ -3294,6 +3294,15 @@
 ## [research/experiments/four-row-q4-q5-frontier-20261115/output/ts-verify-frontier.json](../../../research/experiments/four-row-q4-q5-frontier-20261115/output/ts-verify-frontier.json)
 
 - [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (data): (6,4) m=41 witness の第3系統検証 PASS・陽性対照（m=40 witness 再PASS）・陰性対照（1石移動で maxCirc=4 unsafe+10 uncovered を検出）
+## [research/experiments/four-row-q5-m21-class-split-20261115/README.md](../../../research/experiments/four-row-q5-m21-class-split-20261115/README.md)
+
+- [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (proof): 高速レーン (2026-11-15) IN FLIGHT: (4,5) m=21 absence-capable 完全被覆掃引 (9 正準欠損クラス mod V・単一クラス k∈0..3×minpos p∈0..10 sound H-split・multi 7 直接・76インスタンス cap 600s resumable・driver v2)。全 UNSAT なら M_{4,5}=21 or >=23・SAT なら M ∈ [22,140]。対照 (4,20,5) class{0} k3 p1 SAT 20.0s/375,415・復号 witness は m=20 witness の V 像 (js+py 検証)
+## [research/experiments/four-row-q5-m21-class-split-20261115/output/records.jsonl](../../../research/experiments/four-row-q5-m21-class-split-20261115/output/records.jsonl)
+
+- [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (data): 掃引進行記録 (1インスタンス1行・増分 push)。対照 SAT (V 像 decode・2系統検証) + c0k3p0 cap 600s INDET 7,814,011 conflicts
+## [research/experiments/four-row-q5-m21-surgery-20261115/README.md](../../../research/experiments/four-row-q5-m21-surgery-20261115/README.md)
+
+- [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (proof): 高速レーン (2026-11-15): (4,5) m=21 bounded-edit surgery 完全列挙負 — m=20 witness 両埋め込みから (2,2) 12,754/12,816 最終状態葉・(3,3) sd≤6 拡張 1,250,587/1,256,103 葉・すべて safe・0 witness; census 542 曲線は sat2.js (4,21,5) def-mode 記録と一致
 ## [research/experiments/four-six-row-q4-q5-band-extension-20261115/README.md](../../../research/experiments/four-six-row-q4-q5-band-extension-20261115/README.md)
 
 - [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (proof): band-extension レーン（2026-11-15）: claim・較正（sat3=sat2 11対照バイト一致・kissat 閾値 7/8・lean5 端到端・ext_constructive 再現）・結果
