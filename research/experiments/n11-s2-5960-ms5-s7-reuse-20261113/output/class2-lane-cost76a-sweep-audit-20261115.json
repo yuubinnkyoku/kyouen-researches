@@ -244,7 +244,7 @@
   ],
   "crosschecks": {
     "determinism_observation": "batch2 bits 13-21 ran twice (a shell-backgrounding mistake started the batch under the first attempt, then again in the parallel round): all 8 candidates node-exact across the two runs (1512503/1512389/993659/1245894/386209/676773/2235643/375497), independent determinism evidence; the pushed batch2 file keeps the first solo-run copy",
-    "v15_independent_engine": "pending (v15 anchor crosscheck to be run with certificate extraction, repo convention cost-74d)",
+    "v15_independent_engine": "DONE: repo v15 runner class4_child1_runner.ts (local copy byte-exact with the repo file, pilot d6 control loss=false nodes=5949 x7 invocations, all PASS): all 6 WIN7-D10 bits reproduced loss=true at depth 10 cap 1e9 andclose=1 (bit96 3556006, bit92 4876955, bit11 7665696, bit66 6198635, bit80 10820542, bit29 10956610 nodes); 3 REFUTED-D10 anchors reproduced loss=false uncapped (bit2 9062944, bit30 2146305, bit120 6757934 nodes); pushed as class2-lane-cost76a-v15-crosscheck-20261115.jsonl",
     "determinism_rerun": "covered for bits 13-21 by the double-run observation above; single rerun of a WIN7 anchor can accompany the v15 crosscheck"
   },
   "d4_duplicate_scan": {
