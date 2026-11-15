@@ -146,6 +146,13 @@ l SAT dual-verified: m=23以降単一欠損17石, m=31 4.1s/131 conflicts, 全�
   note: "掃引進行記録 (1インスタンス1行・増分 push)。対照 SAT (V 像 decode・2系統検証) + c0k3p0 cap 600s INDET 7,814,011 conflicts"
 
 
+- path: research/experiments/anchored-window-sat-frontiers-20261115/README.md
+  role: source
+  note: "4×21・q=5の既知4×20 witnessを固定した75個の窓SATが全てUNSAT。固定prefixを持つ配置だけの局所排除であり、4×21全体のwitness不存在やM_{4,5}の更新は主張しない"
+- path: research/experiments/anchored-window-sat-frontiers-20261115/output/w4q5-m21-windows.jsonl
+  role: data
+  note: "75/75 unique jobs all UNSAT。jobs-w4q5-m21.jsonとjobs-w4q5-m21-b.jsonの合併とのタグ完全一致を再監査"
+
 scope: "有限機械検証: kissat 4.0.4（公式静的バイナリ）による SAT 判定は符号化の完全性（def-mode = 行欠損極大安全配置の存在と同値, K0810）と lexer の正しさまで; 構成的延伸 witness は sat.js verifyConfig + Python Fraction の2系統; 前線5幅はさらに第3系統; 各ファミリーの記載幅のみ（未実施幅は不在主張ではない）"
 evidence: "完全符号化 SAT インスタンス（sat2.js def-mode）+ 全 witness 2系統検証（jsVerify/pyVerify 全 records true）+ 前線5幅の第3系統検証（ts-verify-cross-family.json）+ 較正（確定閾値6件再現・(4,4) m=4..25 は環境リセット前後で conflicts bit-exact 一致）+ 構成的延伸（(4,4) m=29,31,33,34: cap 到達 witness の純粋空列追加/シフトを verifyConfig が直接検証, ソルバ不使用）"
 ---
