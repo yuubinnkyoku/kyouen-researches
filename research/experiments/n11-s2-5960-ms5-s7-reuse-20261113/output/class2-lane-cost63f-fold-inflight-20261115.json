@@ -1,8 +1,8 @@
 {
  "schema": "n11-class2-lane-cost63f-fold-inflight-20261115-v1",
- "title": "n11 class2-lane cost-63f receipts fold in flight (claimed by a long-term lane execution)",
+ "title": "n11 class2-lane cost-63f receipts fold complete: chain head 1195 -> 1199",
  "date": "2026-11-15",
- "status": "in_flight",
+ "status": "completed",
  "claimed_by": "long-term class2 lane",
  "s5_parent": "00000000000000801202000000200000",
  "s6_child": "00000000000080809002000000000800",
@@ -18,5 +18,19 @@
  "predicted_outcome": "the child orbit is expected to be closed by this fold itself (the bit-85 receipt is the first in published order and every root covers the child via deleting its own added stone); expected new head 1195+marginal with the exact value derived only from the re-derivation (no precomputed totals asserted); the second coverable class-2 target S5 is expected to drop from 40 to 39 remaining orbits (2977 to 2914 remaining edge cost) if both receipts contribute one child-closure only, with any additional cross-covers accounted by the re-derivation",
  "chain_head_at_claim": "1195/6652/524884/4922/388607 (class-frontier-cost76a-receipts-recompute-20261115.json)",
  "coordination_note": "the cost-63g sweep (parallel lane, in flight per commit 69a8f4ad), the cost-78a receipt fold (parallel lane, certificates in publication), and the cost-69g/65j/74e lanes are not folded here; their folds must rebase on the new head produced by this fold; mandatory pre-push main re-fetch applies to all sides; collision protocol per the cost-72b/cost-76a fold precedents (class2-lane-cost72b-fold-inflight-20261115.json, class2-lane-cost76a-fold-inflight-20261115.json)",
- "unknown_status": "standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, class 2, class 4 remain UNKNOWN; a receipts fold is manifest bookkeeping only and does not determine the game-theoretic value of any position"
+ "unknown_status": "standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, class 2, class 4 remain UNKNOWN; a receipts fold is manifest bookkeeping only and does not determine the game-theoretic value of any position",
+ "closure": {
+  "fold_landed_by": "this long-term class2 lane execution",
+  "new_chain_head": "1199/6648/524616/4918/388339 (class-frontier-cost63f-receipts-recompute-20261115.json)",
+  "fold_summary": "2 WIN7-D10 receipts folded in published bit order [85, 91] on the reproduced 1195 baseline: total marginal 12, marginal_in_manifest +4 (bit85: 3 - the child orbit 00000000000080809002000000000800 itself plus the cross-covers 00000000000080801202000000200000 and 00000000000000801202020800000000; bit91: 1 - 00000000000000801202020020000000); zero-mim receipts: none; the child orbit closed by the bit-85 receipt; parent1 00000000000000801202000000200000 drops 40 -> 38 remaining rows (2977 -> 2837), parent2 00000000000000801202020000000000 drops 52 -> 49 remaining rows (3551 -> 3360); both open parents lost the child row; set-equality control s_after == s_1195 UNION covers(2 roots) holds",
+  "baseline_reproduction": "the 1195 head was reproduced end-to-end byte-identically by runpy (the published cost-76a fold script regenerating the 72b 1188 chain head and folding the 76a receipts): the regenerated head JSON (git blob efd83f2637f83c0e1c5c477dcb0cc42162cda534, 11478 bytes) and both ranking CSVs (3a16a2a09a87f503d91826e23446b078859402a5 / 62eaf6e4908eb6a7b7be78946276cff18d0cb599) match main before folding",
+  "verification": "two executions of the fold script byte-identical (md5 5245c4057e61e6e60d267e9cbbe504c8 / 368b5a1bc077fe137311c413e1bd1843 / e437ea34568aa150b44859698a8ee042); 14 published cost-63f input files asserted byte-exact against main by git blob sha (sweep audit, 8 raw batches, v16 determinism rerun, v15 crosscheck, claim, certificate manifest, fold claim); the sweep audit re-derived from the 8 raw batches (63 candidates exactly once == claim enumeration, 2 WIN7-D10 / 61 REFUTED / 0 capped / 44,140,211 nodes, win nodes 1,950,992 + 604,700, roots == child|1<<bit, 2 distinct D4 orbits, batch-6 determinism rerun node-exact); the v15 cross-engine anchors asserted (2 WIN loss=true node-matched, refuted anchors bits 1/7/109 loss=false with raw agreement, pilots 5949 x3); both published certificates re-verified against local bytes (md5 x sha256 x git blob sha, rows sorted-unique, sub-roots 51/49 == loser mobility == sweep root mobility, union 0/0, terminal 13..17, chunk node sums, manifest totals re-summed: 69,459 rows / 100 sub-roots / 24,464,665 extraction nodes); the 2 roots asserted disjoint from the 96 folded receipt roots both raw-hex and D4-canonically",
+  "published_artifacts": {
+   "fold_script": "scripts/recompute_frontier_cost63f_receipts_20261115.py (asserts this claim file by its post-closure git blob sha so the chain re-executes indefinitely)",
+   "head_json": "class-frontier-cost63f-receipts-recompute-20261115.json",
+   "ranking_csv": "class-frontier-s5-ranking-after-cost63f-receipts-20261115.csv",
+   "top_candidates_csv": "class-frontier-top-candidates-s6-after-cost63f-receipts-20261115.csv"
+  },
+  "rebase_note": "the cost-63g receipt fold (parallel lane, sweep in flight), the cost-78a receipt fold (parallel lane, certificates in publication) and the cost-69g/65j/74e folds must all rebase on the new canonical 1199/6648/524616/4918/388339 head; all subsequent folds must assert it before extending"
+ }
 }
