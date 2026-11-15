@@ -1,0 +1,72 @@
+{
+  "system": "verify_independent.ts verbatim (pure TS/BigInt third system; research/experiments/seven-row-q7-witness-search-20261114/scripts/verify_independent.ts), inlined into a sandbox run 2026-11-15T04:22:00Z",
+  "subject": "(6,4) m=45 rowY=0 witness of four-row-q4-q5-frontier-20261115 batch 13 (17 stones, rows [2,3,3,3,3,3])",
+  "runs": [
+    {
+      "id": "s6x45q4_rowY0",
+      "w": 6,
+      "m": 45,
+      "q": 4,
+      "result": {
+        "n": 17,
+        "minRow": 2,
+        "rowCnt": [2, 3, 3, 3, 3, 3],
+        "maxLine": 3,
+        "maxCirc": 3,
+        "safe": true,
+        "nCircles": 670,
+        "nQ1Curves": 692,
+        "uncoveredCount": 0,
+        "rowDeficient": true,
+        "maximal": true,
+        "pass": true
+      },
+      "verdict": "PASS safe+maximal+row-deficient (third system)"
+    },
+    {
+      "id": "positive-control-s6x40q4_rowY0",
+      "w": 6,
+      "m": 40,
+      "q": 4,
+      "source": "prior lane four-six-row-q4-q5-band-extension-20261115 m=40 witness, already 3-system verified there; nCircles=670/nQ1Curves=690 identical to the m=41..m=44 third-system runs",
+      "result": {
+        "n": 17,
+        "minRow": 2,
+        "rowCnt": [2, 3, 3, 3, 3, 3],
+        "maxLine": 3,
+        "maxCirc": 3,
+        "safe": true,
+        "nCircles": 670,
+        "nQ1Curves": 690,
+        "uncoveredCount": 0,
+        "rowDeficient": true,
+        "maximal": true,
+        "pass": true
+      },
+      "verdict": "PASS (re-verified)"
+    },
+    {
+      "id": "negative-control-s6x45q4_move-21-0-to-22-0",
+      "w": 6,
+      "m": 45,
+      "q": 4,
+      "perturbation": "single stone [21,0] -> [22,0] of the batch-13 witness",
+      "result": {
+        "n": 17,
+        "minRow": 2,
+        "rowCnt": [2, 3, 3, 3, 3, 3],
+        "maxLine": 3,
+        "maxCirc": 4,
+        "safe": false,
+        "nCircles": 665,
+        "nQ1Curves": 688,
+        "uncoveredCount": 1,
+        "rowDeficient": true,
+        "maximal": false,
+        "pass": false
+      },
+      "verdict": "correctly detected unsafe (maxCirc=4) and non-maximal (1 uncovered cell)"
+    }
+  ],
+  "conclusion": "The (6,4) m=45 rowY=0 witness is verified by three independent implementation systems (sat.js verifyConfig census-free JS, verify_witness.py exact Fraction, verify_independent.ts pure TS/BigInt). Witness band m=6..45; M_{6,4} in [46, 1113]. Difficulty trend: m=43 34,728 -> m=44 12,816 -> m=45 10,066 conflicts (m=43 was a local peak)."
+}

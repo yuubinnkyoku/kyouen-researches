@@ -76,12 +76,53 @@ lex=H 単独（V/HV なし）であることが本質。逆に SAT は lex に�
    ポーリング継続が必要。
 4. 第3統合（CSV・K0833・本 README・本 log）で反映済み。
 
+## 追記（第2セッション続き・バッチ11/12: (6,4) m=44）
+
+1. **(6,4) m=44 rowY=0 SAT**（cap 1200s・493.9s・12,816 conflicts・17石
+   rows [2,3,3,3,3,3]）— **witness 帯 m=6..44・M_{6,4} ∈ [45, 1113]**。
+   CNF は vars 2,224,351 / clauses 7,383,478 / curves 213,086。
+   今回はラッパーが decode・js/py 2系統検証まで完走し lean5.sh が直接 record 生成。
+2. **第3系統検証 PASS**（ts-verify-frontier-m44.json・nCircles=672/nQ1Curves=690・
+   陽性対照 m=40 再PASS は m=41/42/43 run と同一値・陰性対照 [16,0]→[17,0] で
+   maxCirc=4 unsafe+7 uncovered 検出）。
+3. 難化トレンドの反転: m=43 34,728/581s → m=44 12,816/493.9s。conflicts が
+   幅あたり ~1/2.7 に減少し、難化が単調でないことが判明（m=41 8,226 → m=42 16,942
+   → m=43 34,728 のほぼ2倍トレンドは m=44 で途切れた）。cap 1200s は
+   十分な余裕をもって充足。
+4. 第4統合（CSV・K0833・本 README・本 log）で反映済み。
+
+## 追記（第2セッション続き・バッチ13〜15: (6,4) m=45 SAT と m=46 構成 witness）
+
+1. **(6,4) m=45 rowY=0 SAT**（cap 1200s・272.1s・10,066 conflicts・17石
+   rows [2,3,3,3,3,3]）— **witness 帯 m=6..45・M_{6,4} ∈ [46, 1113]**。
+   CNF は vars 2,376,539 / clauses 7,887,805 / curves 227,839。
+   第3系統検証 PASS（ts-verify-frontier-m45.json・nCircles=670/nQ1Curves=692・
+   陽性対照 m=40 再PASS は m=41..44 run と同一値・陰性対照 [21,0]→[22,0] で
+   maxCirc=4 unsafe+1 uncovered 検出）。conflicts は m=43 34,728 → m=44 12,816
+   → m=45 10,066 と減少継続 — m=43 が局所ピーク。
+2. **(6,4) m=46 witness が構成的に確定**（free-column append・ソルバ不使用）—
+   **witness 帯 m=6..46・M_{6,4} ∈ [47, 1113]**。m=45 witness をそのまま 6×46
+   ボードに置くと新列 45 の全点が既存の 3石曲線でブロックされる（純TS
+   full-board 走査 PASS: safe maxLine=3/maxCirc=3・uncovered=0・rows [2,3,3,3,3,3]）。
+   これが本レーン初の「SAT 前線の先のソルバ不使用 witness」。free append は
+   m=47 で停止（(46,0) 未カバー）。output/q4-w6-construct-m46/records.jsonl
+   （js+py 2系統検証は bash 環境復旧後に実施予定と明記）。
+3. 周辺分析（純TS・m=47 目標の bounded-edit surgery）: (46,0) を通る既存2石
+   円/直線上の追加候補 63 点のうち safe は 0（3 unsafe + 60 nonmaximal）。
+   1石移動（remove 1 + add 1）は safe 77 組合せすべて nonmaximal。
+   m=42..44 witness の free-append 到達幅は m0+1 で停止（右端 (m-1,0) が
+   未カバー）— m=45 witness のみ +1 到達。いずれも local negative・不在主張ではない。
+4. 環境: 実行環境（bash）が ~04:21Z に完全利用不可になり、以降の作業は
+   run_typescript の GitHub ツールと純TS計算だけで完結（batch 13-15 と本統合は
+   この状態で push）。kissat 実行は bash 復旧後に再開。
+5. 第6統合（CSV・K0833・本 README・本 log）で反映済み。
+
 ## 次課題
 
 - (4,5) m=21 / (4,4) m=35 の2クラス UNSAT には更に長い cap（~30M conflicts 級）
   か class-split（sat3 --class）の併用が必要。両クラス INDET の間は M は
   [21,140] / [35,237] のまま。
-- (6,4) m=44（前線更新・cap 1200s 級）・(5,4) m=40 rowY=0/def-mode の掃引。
+- (6,4) m=47: bash 復旧後に lean5 cap 1200s で試す（2石移動 surgery も候補）。(5,4) m=40 rowY=0/def-mode の掃引。m=46 witness の js+py 検証。
 - (4,21,5) は CNF が小さい（84点・542曲線・36,910節）ため、CDCL 以外の
   アプローチ（局所探索・構成的延伸・K0827 型 blocking-coverage）も
   併用価値がある。

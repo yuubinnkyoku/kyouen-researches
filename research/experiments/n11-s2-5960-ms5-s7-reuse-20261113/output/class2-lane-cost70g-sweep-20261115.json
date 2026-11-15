@@ -1,0 +1,102 @@
+{
+ "schema": "n11-class2-lane-cost70g-sweep-20261115-v1",
+ "date": "2026-11-15",
+ "session": "long-term lane execution (2026-11-15 JST), continuing after the cost-70e receipts fold (head 1233) and the parallel cost-70f claim",
+ "s5_parent_hex": "00000000000000801202000000200000",
+ "s6_child_hex": "00000000000100809002000000000800",
+ "s6_s7_edge_cost": 70,
+ "demand_classes_at_claim": {
+  "c1": 0,
+  "c2": 2,
+  "c4": 0
+ },
+ "demand_verification": "VERIFIED before the claim at the canonical chain head 1233/6614/522131/4884/385854 (head JSON blob a0171d4bb839aeb813d231c7d879d6a89452359f): stone-80 deletion of the child (stones [11,49,60,63,71,80]) reproduces the second coverable class-2 target S5 00000000000000801202000000200000 bit-exact (28 rows / 2119 at head 1233) and stone-11 deletion canonicalizes to the second open class-2 S5 00000000000000801202010000000000 (60 rows / 4342 at head 1233, own cheapest remaining row cost-63); the remaining four deletions (49/60/63/71) are rejected or fully-solved S5s absent from the head-1233 ranking CSV; per-class demand c1=0,c2=2,c4=0 matches the published head-1233 top-candidates CSV row",
+ "candidate_enumeration": "legal_candidates.py independent Bareiss 4x4 enumeration (script blob 8e97082c42838c7a4a4b6d2dd235276c8d43ab9a): 70 legal candidates, bit-exact with the published manifest edge cost 70; named cost-70g (cost-70/70b/70c/70d/70e/70f occupied by other children of other parents)",
+ "engine": "class4_child1_runner_v16.ts (published repo-verbatim v16 runner, blob 0a4a86f6828dc010c89ff17596054336a6b6091f), depth 10, andclose=1, cap 1e9, pilot d6 control (loss=false at exactly 3,402 nodes) per batch",
+ "engine_gate": "v16 agreement-gated in cost-56a and used for cost-58b/60b/61d/61e/61f/63e/64b/65g/65h/65i/67b/68c/69e/70c/70e",
+ "win7_d10": 8,
+ "win7_bits": [
+  9,
+  20,
+  29,
+  34,
+  62,
+  70,
+  76,
+  119
+ ],
+ "win7_roots": [
+  "00000000000100809002000000000a00",
+  "00000000000100809002000000100800",
+  "00000000000100809002000020000800",
+  "00000000000100809002000400000800",
+  "0000000000010080d002000000000800",
+  "00000000000100c09002000000000800",
+  "00000000000110809002000000000800",
+  "00800000000100809002000000000800"
+ ],
+ "verdict": "WIN7",
+ "refuted_d10": 62,
+ "capped": 0,
+ "total_nodes": 63592195,
+ "total_nodes_note": "v16 engine node count (win-node sum 15,922,270); all 8 WIN7 candidates have v15 loss=true cross-engine anchors; the three heaviest REFUTED candidates (bits 6/86/98) also have v15 loss=false anchors; batch5 covered by a node-exact determinism rerun including WIN7 bit 62",
+ "pilot_d6_controls": "loss=false at exactly 3,402 nodes in all 9 batch invocations (identical control lines)",
+ "terminal_stone_range_all": [
+  [
+   13,
+   17
+  ]
+ ],
+ "heaviest_bits": [
+  {
+   "bit": 6,
+   "nodes": 4514644,
+   "verdict": "REFUTED"
+  },
+  {
+   "bit": 9,
+   "nodes": 3714667,
+   "verdict": "WIN7"
+  },
+  {
+   "bit": 34,
+   "nodes": 3515624,
+   "verdict": "WIN7"
+  },
+  {
+   "bit": 86,
+   "nodes": 3482537,
+   "verdict": "REFUTED"
+  },
+  {
+   "bit": 98,
+   "nodes": 3453609,
+   "verdict": "REFUTED"
+  },
+  {
+   "bit": 1,
+   "nodes": 3423421,
+   "verdict": "REFUTED"
+  }
+ ],
+ "determinism_rerun_node_exact": "batch5 (bits 58/59/61/62/64/65/67/69 incl. WIN7 bit 62 at 586,769 nodes) re-solved fresh in a separate process after the sweep: all 8 bit lines plus the pilot control node-count identical (class2-lane-cost70g-v16-determinism-rerun-20261115.jsonl)",
+ "cross_engine_check": "v15 runner (class4_child1_runner.ts, repo blob 8744fc65b6b7cac6bd561403ce4c749e01c51359, byte-exact local copy verified by git blob sha; pilot d6 loss=false at exactly 5,949 nodes, PASS x11) on the same child: ALL 8 WIN7 bits loss=true at 10,273,907 (bit9) / 1,523,082 (20) / 10,750,468 (29) / 10,250,857 (34) / 4,821,985 (62) / 1,408,183 (70) / 9,482,275 (76) / 7,787,565 (119) v15 nodes, and the three heaviest REFUTED bits loss=false at 12,630,899 (6) / 13,387,147 (86) / 10,102,917 (98) - all 11 verdicts identical to v16, terminal stone range [13,17] on every line (class2-lane-cost70g-v15-crosscheck-20261115.jsonl, v15 total 92,419,285 nodes)",
+ "duplicate_root_check": "all 8 WIN7 root hexes code-searched over yuubinnkyoku/kyouen-researches immediately before pushing this sweep record: 8/8 roots 0 hits - no prior published claim, sweep, or certificate covers any of these roots; all 8 are new coverage",
+ "raw_batches": "class2-lane-cost70g-raw-batch{1..9}-20261115.jsonl (8x8+6, pushed as completed)",
+ "certificate": [],
+ "certificate_note": "no certificates extracted yet: blind extraction (repo-verbatim extractor class4_child1_cert_extractor_exact_v16.ts + driver, FBS 1<<20, empty kill table) is the next step for the 8 WIN7 roots; until then these are certificate-rebuild candidates only",
+ "unverified_win7_bits": [
+  9,
+  20,
+  29,
+  34,
+  62,
+  70,
+  76,
+  119
+ ],
+ "unverified_win7_bits_note": "8 WIN7-D10 candidates without extracted certificates yet (warm certificate-rebuild candidates); they change no frontier number until the receipts fold; all 8 WIN7 verdicts are anchored on the v15 cross-engine runner (loss=true)",
+ "fold_status": "PENDING: a cost-70g receipts fold must wait for (a) the parallel cost-70f sweep (in flight) and (b) the head-1227-based cost-65l fold reconciliation (1227-baseline fork merge/rebase per the cost-78a+69h precedent); when it lands, the receipts would advance both open class-2 parents at once (00000000000000801202000000200000 at 28 rows / 2119 and 00000000000000801202010000000000 at 60 rows / 4342)",
+ "unknown_status": "11x11 empty board: UNKNOWN. All WIN7 certificates prove only individual 7-stone roots within depth 10.",
+ "status": "completed (sweep); certificates and fold pending"
+}
