@@ -95,3 +95,23 @@ R 非依存で一括事前計算可能（circle(u, si, sj) の3石曲線セン�
 カテゴリ II ~22 × C(empt,3) × 10,660 ≈ 10^7–10^8。
 推奨順: ①3直線（forced 構造で既存機械の拡張のみ）→ ②カテゴリ II（eff3 センサスを
 最初に構築）→ ③2直線+1自由 → ④1直線+2自由（z1 反復 × Need 交集の二層化）。
+
+## (3,3) 一般 — 完全ケース分割（メモのギャップ修正）と L3/G/C 完全負・CTL ヘルパー欠陥2件（同日・高速レーン）
+
+- 設計メモの I/II 分割に網羅性ギャップ: T ∈ A（a_on ≤ r3_on）と k=3 T-曲線 blocking
+  の a_on=1（t′ ∈ A）が脱落。完全分割 L3/L2f1/L1f2 + G1..G6 + C0/C1 を提示
+  （T ∉ A ∧ a_on ≤ r3_on ∧ C 不成立 ⟹ T 遮断不能・機械検証）。
+- m33_machine.ts 実装・実行: L3 wholesale 360/360・G1..G6 28,668,927 ペア 0 witness・
+  C0（8,436 R）C1（2,980 R）全 R killer-u 棄却 0 witness。
+  第2実装: L3ctl（verdictAgree 360/360・killer 360/360・U-set 8/8）・
+  Cctl（8,436 + 2,980 全一致・U-set 6+7/13）。22本の k=3 T-曲線のうち
+  A 空間（≥3 直線外空セル）を持つのは C0 で1本・C1 で1本のみ。
+- **CTL ヘルパー2件の index-space 欠陥を発見・修正**: (a) S2of/bruteWitness が A の
+  E-index を cell-index で誤用（CTL 専用・本体無傷）・(b) safeA gate-1 の cov6[a] 同種
+  （本体側・過剰棄却方向 = witness 誤廃棄の恐れ）。(b) は修正版で G/C 全再実行で対処
+  （pairsChecked・survivors 0 不変・CTL 全照合一致 cov 12/12・saf 56/56）。
+  C/L3 は rejR のみで無影響。
+- L2f1 モード（91.7M 形式）実装・実行中。L1f2 モード（1.24G 形式・chunk 対応）実装済み・未実行。
+- 負結果の解釈境界: seed（m=26 rowY3 witness 4ミラー像）の (3,3) 編集空間のうち
+  L3/G/C スライスに witness なし。L2f1/L1f2 未完了のため (3,3) 全負とは書けない。
+  7×27 全配置の不在主張ではない（M_{7,7} ∈ [27, 708] 不変）。

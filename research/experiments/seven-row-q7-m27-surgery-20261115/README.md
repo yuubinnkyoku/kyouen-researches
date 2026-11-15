@@ -120,3 +120,82 @@ rejZcandEmpty = 4,320・rejWh = 115・rejLineCov = 3,150 が bit-exact 一致。
 - scripts/m27_surgery.ts — 検証済み consolidated 機械（3モード: twoEdit / oneAddThreeRemove / lineTriple・
   純TS・決定的・外部依存なし・結果オブジェクトを return）。実行方法: MODE 定数を設定して実行。
   出力: output/surgery_results.json（2026-11-15 正規実行分）。
+
+## (3,3) 一般スペース — 完全ケース分割（設計メモの分割ギャップ修正）と L3/G/C スライス完全負（2026-11-15 追加）
+
+### 設計メモの分割ギャップ
+
+13:47Z の設計メモ（カテゴリ I/II）は A の分割として完全ではなかった。落ちていた2場合:
+
+1. **T ∈ A で a_on ≤ r3_on**: T は石として自身を遮断する（直線 < 6 でも可）。
+   メモ I（a_on = 1+r3_on 強制）にも II（a_on = 0）にも入らない → **G1..G6**。
+2. **k=3 T-曲線 blocking で a_on = 1**: c ∩ 直線 の直線空セル t′ ∈ A
+   （A = {t′} + c 上の2セル）→ **C1**。幾何補題（直線 y=3 以外の曲線は y=3 と
+   ≤2 点で交わる）より c 上の直線セルは T と t′ のみ → C1 の構造は一意。
+
+完全・非重複な A 構造分割（a_on = |A ∩ lineE|, r3_on = |R ∩ 行3|）:
+
+| slice | 条件 | A 空間 |
+|---|---|---|
+| L3 / L2f1 / L1f2 | 直線 blocking（等式 5−r3_on+a_on = 6 強制）: (r3_on, a_on) = (2,3)/(1,2)/(0,1) | C(22,3) / C(22,2)×126 / 22×C(126,2)（T を含む組合せを含む） |
+| G1..G6 | T ∈ A ∧ a_on ≤ r3_on: (r3_on, a_on) = (1,1),(2,1),(2,2),(3,1),(3,2),(3,3) | T+2自由 / T+直線+自由 / T+2直線 等 |
+| C0 / C1 | T ∉ A・k=3 T-曲線 c 上に3追加（a_on = 0 / =1・r3_on ≥ 1） | C(empt(c)\直線, 3) / {t′}+2 |
+
+T ∉ A ∧ a_on ≤ r3_on ∧ C0/C1 いずれにも不成立 ⟹ T は遮断不能（0 witness・機械検証）。
+
+### スライス結果（m33_machine.ts・純TS・決定的・修正版機械）
+
+| slice | R | 検査ペア | 棄却内訳 | witness |
+|---|---|---|---|---|
+| L3 (r3_on=2, 3直線) | 360 | 554,400 形式 | **360/360 R wholesale棄却**（killer-u の追加option構造空） | 0 |
+| L3ctl（第2実装） | 360 | — | verdictAgree 360/360・killerConfirmed 360/360・U-set 照合 8/8 | — |
+| G6 (r3_on=3, a_on=3) | 10 | 1,470 | rejR 3 + safety 1,470 | 0 |
+| G5 (3,2) | 10 | 18,522 | rejR 3 + safety 18,522 | 0 |
+| G4 (3,1) | 10 | 55,125 | rejR 3 + safety 55,125 | 0 |
+| G3 (2,2) | 360 | 952,560 | safety 931,956 + 被覆 20,604 | 0 |
+| G2 (2,1) | 360 | 2,835,000 | safety 2,835,000（全ペア） | 0 |
+| G1 (1,1) | 3,150 | 24,806,250 | safety 23,739,910 + 被覆 1,066,340 | 0 |
+| C0 | 22曲線中1曲線のみ A 空間あり | 8,436 R | 全 R killer-u 棄却（A 列挙前に全滅） | 0 |
+| C0ctl（第2実装） | 同 | — | agree 8,436/8,436・killerConfirmed 8,436/8,436・U-set 6/6 | — |
+| C1 | 1曲線 | 2,980 R (r3_on ≥ 1) | 全 R killer-u 棄却 | 0 |
+| C1ctl（第2実装） | 同 | — | agree 2,980/2,980・killerConfirmed 2,980/2,980・U-set 7/7 | — |
+
+G 合計 28,668,927 検査ペア・0 witness。G の CTL（棄却サンプルを独立 bruteWitness /
+directCoveredU で照合）は修正版で全照合一致（coverage 採択分: G3/G1 12/12・他は
+coverage 棄却なし。safety 採択分: 56/56）。C0/C1 は rejR（killer-u option 構造空）
+のみで safeA を経由せず、独立第2実装 Cctl（fresh 曲線列挙・センサス不使用）で
+R 判定・killer・U-set が全一致。
+
+### 検証プロトコルと CTL ヘルパー2件の index-space 欠陥（発見・修正の記録）
+
+- 初回 G run の CTL で covAgree < covTaken の不一致サンプル → 診断モード（m33_diag.ts
+  Gdiag）で特定: **S2of/bruteWitness（CTL 専用ヘルパー）が A の E-index を cell-index
+  として誤用**（cells[a] → cells[E[a]]）。CTL 側の欠陥で本体の棄却論理は無傷。
+- S2of 修正後の再 run で safety CTL に 1/10 の不一致 → Gdiag2 で特定:
+  **safeA gate-1 の st.cov6[a] が同種の誤用**（cov6 は cell-index 空間）。
+  今度は本体側の欠陥で、**過剰棄却（witness 候補の誤廃棄）方向**。修正して
+  G/C 全スライスを再実行: pairsChecked・survivors 0 は不変・棄却内訳は正規化
+  （例: G6 safety 1,463 + 被覆 7 → safety 1,470）・CTL 全照合一致。
+- L3/L3ctl は wholesale（rejR）のみで safeA を経由しないため両欠陥の影響なし。
+  C0/C1 も rejR のみ（さらに Cctl で独立裏付け）。
+- triage 手順（2件とも有効）: 不一致サンプルのダンプ → gate 別内訳（gate1/eff5pairs）
+  → index-space 突き合わせ。「CTL ヘルパーも検証対象」に加え、
+  **「cell/E/stone の複数 index-space をまたぐヘルパーは空間変換を明示する」**を運用規準に追加。
+
+### open（(3,3) の残り・2026-11-15 時点）
+
+- **L2f1**（r3_on=1, a_on=2: 3,150 R × 29,106 A/R ≈ 91.7M 形式）: モード実装済み・
+  修正版機械で実行中（本 push 時点で未完 → 結果は次回反映）。
+- **L1f2**（r3_on=0, a_on=1: 7,140 R × 173,250 A/R ≈ 1.24G 形式）: モード実装済み・
+  chunk 実行用（第4引数 lo:hi で分割可能）。
+- |R| ≥ 4・seed から離れた fresh 配置は従来通り open。**7×27 全配置の不在主張ではない**
+  （M_{7,7} ∈ [27, 708] 不変）。
+
+## scripts（追記）
+
+- scripts/m33_machine.ts — (3,3) 一般ケース分割機械（modes: facts / L3 / L3ctl / G /
+  C / Cctl / L2f1 / L1f2・chunk 引数 lo:hi・決定的・CTL 同梱・修正版）。
+- scripts/m33_diag.ts — triage 用診断（Gdiag: coverage 不一致ダンプ・Gdiag2: safety
+  不一致ダンプ + gate 別内訳）。2つの index-space 欠陥の特定に使用。
+- output/m33_*.json — 各スライスの正規結果（m33_facts / m33_L3 / m33_L3ctl /
+  m33_G_r3x3 / m33_G_r3x2 / m33_G_r3x1 / m33_C / m33_Cctl）。

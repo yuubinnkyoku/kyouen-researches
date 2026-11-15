@@ -46,6 +46,12 @@ artifacts:
 - path: research/experiments/seven-row-q7-m27-surgery-20261115/output/surgery_results.json
   role: data
   note: "verified consolidated machine outputs: twoEdit singles 18,942 (13,725 okZ + 5,217 coverage) + pairs 99,326 (15,654 shared + 83,672 coverage) -> 0; (1,3) line-addition 149,940 (90,540 safety-gate + 59,400 coverage, gate 60/60 direct-brute UNSAFE confirm) + T-addition 10,660 -> 0; line-triple (3,3) 554,400 total (550,320 okZ-gated) -> 4,080 valid (1,430 shared + 2,650 coverage) -> 0; coverage targeted agreement 150/150 + 80/80 + 80/80 + 100/100; (2,3) complete: 10,660 R -> 0 witnesses (370 r3>=2 blocking-lemma rejects, 3,150 r3=1 forced-line-pair coverage wholesale, 115 wholesale + 4,320 HardU-intersection R rejects + 14,948 z-okZ + 55,638 per-z coverage-intersection rejects, 0 pairs through coverage; targeted cov 36/36 + zok 30/30 + line 23/23; machine script scripts/m27_surgery_two_add_three_remove.ts)"
+- path: research/experiments/seven-row-q7-m27-surgery-20261115/scripts/m33_machine.ts
+  role: verifier
+  note: "(3,3) general-space complete case-split machine (modes facts/L3/L3ctl/G/C/Cctl/L2f1/L1f2, chunkable R-ranges, CTL sampling built in); two CTL-helper index-space defects (S2of cells[E[a]] and safeA cov6[E[a]]) found by CTL disagreement sampling + triage dumps and fixed before the canonical run recorded here"
+- path: research/experiments/seven-row-q7-m27-surgery-20261115/output/m33_Cctl.json
+  role: data
+  note: "second independent implementation (fresh curve enumeration, census-free) of the C0/C1 wholesale rejections: agree 8,436/8,436 and 2,980/2,980, killerConfirmed 8,436 and 2,980, U-set samples 6+7 OK; companion outputs m33_facts/m33_L3/m33_L3ctl/m33_G_r3x3/m33_G_r3x2/m33_G_r3x1/m33_C.json in the same directory (L3 wholesale 360/360; G 28,668,927 pairs 0 witnesses; C0/C1 all-R rejections)"
 scope: "finite machine verification: kissat 4.0.4 (all instances); widths stated per family only; up to census completeness and solver correctness"
 evidence: "complete-encoding SAT instances (def mode is exactly 'exists row-deficient maximal safe config') + constructive dual-verified witnesses (census-free sat.js verifyConfig + Python Fraction) + third independent verification system (pure TS/BigInt, no repo code: scripts/verify_independent.ts + output/ts-verify.json — m=25/m=26 rowY=3 witnesses PASS, 7-collinear negative control unsafe, m=26 triple-verified) + m=24 bit-exact determinism re-run (2,105,329 conflicts reproduced; cross-lane independent-run bit-exact reproduction on shared instances m=24/m=25 rowY=3: 2,105,329 / 756,785). See report.md."
 ---
@@ -103,6 +109,26 @@ evidence: "complete-encoding SAT instances (def mode is exactly 'exists row-defi
    （gate 不動作）で棄却根拠が無効だったため、検証済み consolidated 機械の結果に差し替え。
    **7×27 全配置の不在主張ではない**（open: (3,3) 一般・3石T-曲線上の3追加・
    |R| ≥ 4・seed から離れた fresh 配置 — m=27 の INDET 記録・前線 7×27 は不変）。
+
+8. **(3,3) 一般スペースの完全ケース分割と L3/G/C スライス完全負（2026-11-15 追加）**:
+   設計メモのカテゴリ I/II 分割には網羅性ギャップがあった（T ∈ A で a_on ≤ r3_on の場合と
+   k=3 T-曲線 blocking で a_on = 1（t′ ∈ A）の場合が脱落）。完全・非重複な分割は
+   L3/L2f1/L1f2（直線 blocking・等式 5−r3_on+a_on = 6 強制）+ G1..G6（T ∈ A・a_on ≤ r3_on）+
+   C0/C1（k=3 T-曲線 blocking・C1 は r3_on ≥ 1）で、T ∉ A ∧ a_on ≤ r3_on ∧
+   C0/C1 不成立は T 遮断不能（0 witness・機械検証）。機械検証（m33_machine.ts・純TS・決定的）:
+   - L3: 554,400 形式 → **360/360 R wholesale棄却** → 0 witness。第2実装 L3ctl
+     （fresh 曲線列挙・センサス不使用）: verdictAgree 360/360・killerConfirmed 360/360・U-set 8/8。
+   - G1..G6: 10/10/10/360/360/3,150 R・合計 28,668,927 検査ペア → **0 witness**
+     （CTL 修正版で coverage 12/12×2・safety 56/56 全照合一致）。
+   - C0: 22本の k=3 T-曲線のうち A 空間を持つのは1本のみ・8,436 R 全棄却 → 0。
+     C1: 1本・2,980 R（r3_on ≥ 1）全棄却 → 0。第2実装 Cctl:
+     agree/killerConfirmed とも 8,436/8,436・2,980/2,980・U-set 6+7 OK。
+   検証論の副産物: m33 機械の CTL ヘルパーに2つの index-space 欠陥（S2of の
+   E-index/cell-index 誤用 = CTL 専用・safeA gate-1 の cov6 誤用 = 本体側で
+   過剰棄却方向）を発見・修正し、全 G/C スライスを修正版で再実行
+   （pairsChecked・survivors 0 は不変・棄却内訳は正規化・CTL 全照合一致）。
+   残り open: L2f1（実行中）・L1f2（モード実装済み・未実行）・|R| ≥ 4・fresh 配置。
+   **7×27 全配置の不在主張ではない**（M_{7,7} ∈ [27, 708] 不変）。
 
 ## 手法と検証
 
