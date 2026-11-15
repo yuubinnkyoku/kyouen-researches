@@ -71,3 +71,16 @@ md5 3a5eba830aa6008a604fcc9bbe99a325 を確認済み。
 - `build_n10_cuts.py` — D4像16カット生成 + 制御 K1-K4
 - `n10_ge19.cnf` / `n10_ge20.cnf` / `n10_ge20_cuts.cnf`
 - `encode_report.json` / `ge19_model.txt` (kissat模型) / `ge20_plain_indet.json`
+
+
+## 追記: ge20_cuts 実行の消失 (13:41Z 実行環境全面停止)
+
+13:41Z 頃の実行環境全面停止 (bash・file_system。GitHub API のみ生存) により、
+走行中だった ge20_cuts の kissat 実行 (CPU ~1730s 消費時点) が結果未記録のまま
+消失した。決定的実行のため再実行は同一軌道を辿る。再開手順:
+CNF を build_n10_cuts.py で再生成 (md5 58408731… 照合) し
+`nohup setsid kissat -q n10_ge20_cuts.cnf > ge20cuts_run.log 2>&1 < /dev/null &`。
+決着次第本 README 下段に結果を追記し、K_10=19 (X1/X2 前提) の新規 K 項目
+(K0856 は 2026-11-15 時点で未使用) と K0035・K0141 の更新を行う。
+なお作業dirにのみ存在した K0856 draft (UNSAT 版) は停止で消失した可能性が
+あるが、未決着なので再作成で足りる。

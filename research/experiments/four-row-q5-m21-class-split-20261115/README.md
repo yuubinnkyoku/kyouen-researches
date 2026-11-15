@@ -144,3 +144,18 @@ b∈{p+1..19} の全ケースで完全・素直な場合分解で、対称性は
   CPU が空き次第実施・記録する)。
 - `sweepp0x2.sh`: bucket c0k3p0 (b=1..19) / c0k3p1 (b=2..19) の
   resumable driver (key=<bucket>b<b>・cap 900s・SAT/UNSAT/同cap行で skip)。
+
+
+## 追記: 13:41Z 実行環境全面停止 — バックグラウンド2本の消失と再開手順
+
+13:41Z 頃に bash・file_system を含む実行環境が全面停止した (GitHub API のみ生存)。
+この時点で走行中・準備中だった次の2点は結果未記録のまま消失した
+(プロセスは再起動で消滅。いずれも決定的実行なので再実行は同一軌道を辿る):
+
+1. **c0k3p1 deep (deepcap.sh v2・正しい minpos=1・CNF md5 059fc19d…)** —
+   cap 2400s での決着が未記録のまま消失 (~40分走行後)。
+   再開は deepcap.sh v2 の再実行だけでよい (p0 は cap-2400 INDET 行で skip・
+   p1 のみ正しく再実行される)。
+2. **x2=4 対照の kissat SAT 実証** — 停止により未実施のまま。
+   sweepp0x2.sh 起動前の必須較定として残っている
+   (期待: SAT。m=20 witness の V 像 row 0 = (1,0),(4,0),(19,0) が b=4 バケットに属する)。
