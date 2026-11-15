@@ -189,6 +189,10 @@ jobs:
           node-version: '22'
       - name: Replay published n11 bit-7 certificate with v16 extractor
         run: node --experimental-strip-types research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/class4_child1_cert_extractor_exact_v16.test.ts
+      - name: Third independent replay of cost63f WIN7 certificates
+        run: |
+          node research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost63f_certificates_rational_independent_20261115.mjs --out /tmp/cost63f-rational-audit.json
+          cmp /tmp/cost63f-rational-audit.json research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/cost63f-rational-independent-certificate-audit-20261115.json
       - name: Check independent n11 polarity, geometry and cache policy
         run: |
           python -m pip install scipy
