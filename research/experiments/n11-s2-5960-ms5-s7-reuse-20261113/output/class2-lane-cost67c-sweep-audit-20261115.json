@@ -1,0 +1,165 @@
+{
+  "schema": "n11-class2-lane-cost67c-raw-sweep-audit-20261115-v1",
+  "date": "2026-11-15",
+  "child": "00000000000000801202000000202000",
+  "edge_cost": 67,
+  "s5_target": "00000000000000801202000000200000",
+  "candidates": 67,
+  "win7_count": 2,
+  "win7_d10_bits": [
+    64,
+    96
+  ],
+  "refuted_count": 65,
+  "capped_count": 0,
+  "win7_nodes_sum": 2368197,
+  "candidate_nodes_total": 41942979,
+  "pilots": "v16 d6 pilot loss=false nodes=3402 asserted per batch, 9/9 PASS",
+  "candidate_enumeration": "claim legal_candidates list (legal_candidates.py exact Bareiss enumeration), re-derived from the 9 raw batch JSONLs: every candidate appears exactly once, set-equal to the claim",
+  "raw_batches": [
+    {
+      "file": "class2-lane-cost67c-raw-batch1-20261115.jsonl",
+      "bits": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "file": "class2-lane-cost67c-raw-batch2-20261115.jsonl",
+      "bits": [
+        9,
+        10,
+        14,
+        17,
+        18,
+        22,
+        24,
+        25
+      ]
+    },
+    {
+      "file": "class2-lane-cost67c-raw-batch3-20261115.jsonl",
+      "bits": [
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        40,
+        41
+      ]
+    },
+    {
+      "file": "class2-lane-cost67c-raw-batch4-20261115.jsonl",
+      "bits": [
+        42,
+        44,
+        50,
+        52,
+        54,
+        55,
+        56,
+        58
+      ]
+    },
+    {
+      "file": "class2-lane-cost67c-raw-batch5-20261115.jsonl",
+      "bits": [
+        61,
+        64,
+        66,
+        67,
+        72,
+        74,
+        75,
+        76
+      ]
+    },
+    {
+      "file": "class2-lane-cost67c-raw-batch6-20261115.jsonl",
+      "bits": [
+        77,
+        78,
+        79,
+        83,
+        84,
+        86,
+        87,
+        88
+      ]
+    },
+    {
+      "file": "class2-lane-cost67c-raw-batch7-20261115.jsonl",
+      "bits": [
+        91,
+        92,
+        94,
+        95,
+        96,
+        97,
+        100,
+        102
+      ]
+    },
+    {
+      "file": "class2-lane-cost67c-raw-batch8-20261115.jsonl",
+      "bits": [
+        103,
+        105,
+        106,
+        108,
+        110,
+        111,
+        113,
+        114
+      ]
+    },
+    {
+      "file": "class2-lane-cost67c-raw-batch9-20261115.jsonl",
+      "bits": [
+        116,
+        117,
+        118
+      ]
+    }
+  ],
+  "determinism_rerun": "class2-lane-cost67c-v16-determinism-rerun-20261115.jsonl: batch5 (bits 61,64,66,67,72,74,75,76) re-run node-exact 8/8 rows (loss/nodes/capped/terminal identical; ms differs), pilot 3402 PASS",
+  "v15_crosscheck": {
+    "file": "class2-lane-cost67c-v15-crosscheck-20261115.jsonl",
+    "pilots_5949": 5,
+    "win7_anchors": "2/2 loss=true (engine v15, independent search memo/signing rules), nodes recorded",
+    "refuted_anchors": "bits 1/32/116 loss=false with raw verdict agreement",
+    "anchor_nodes": {
+      "64": 5068403,
+      "96": 2436013,
+      "1": 534814,
+      "32": 1537337,
+      "116": 1384157
+    }
+  },
+  "root_orbit_check": {
+    "roots_equal_child_or_bit": "root == child | 1<<bit for both WIN7 bits",
+    "distinct_d4_orbits": 2,
+    "orbit_map": {
+      "00000000000000809102000000080800": [
+        64
+      ],
+      "00000000040000809002000000080800": [
+        96
+      ]
+    },
+    "root_mobility_bareiss": {
+      "64": 53,
+      "96": 53
+    }
+  },
+  "verdict_semantics": "loss=true => WIN7-within-depth-10 candidate (certificate rebuild target); loss=false && !capped => REFUTED-D10, no first-player win within depth 10 (NOT a LOSS proof); capped => proves nothing either way",
+  "interpretation_guard": "sweep verdicts only - the frontier is unchanged until the receipts are folded; solved counts measure manifest coverage, not the game-theoretic value of any position; the standard 11x11 empty board, both two-stone roots {49,60}/{59,60}, S2 {59,60}, class 2 and class 4 all remain UNKNOWN"
+}
