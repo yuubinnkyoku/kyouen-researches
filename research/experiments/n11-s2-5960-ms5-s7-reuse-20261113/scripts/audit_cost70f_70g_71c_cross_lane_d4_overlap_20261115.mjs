@@ -77,6 +77,7 @@ function main(){
  if(gfP.length!==8||gcP.length!==0||fcP.length!==0)checks.push("unexpected cross-lane parent-lift intersection");
  if(JSON.stringify(f.byBit[84])!==JSON.stringify(g.byBit[29]))checks.push("duplicate-root parent-lift sets differ");
  if(same.length!==7||extra.length!==1)checks.push("overlap decomposition mismatch");
+ if(g.roots.size!==g.bits.length||f.roots.size!==f.bits.length||c.roots.size!==c.bits.length)checks.push("duplicate D4 root within a lane");
  if(!f.parents.has(g.childCanon))checks.push("cost70g child not covered by cost70f parent lifts");
  if(!g.parents.has(f.childCanon))checks.push("cost70f child not covered by cost70g parent lifts");
  if(checks.length)throw new Error(checks.join("; "));
