@@ -276,3 +276,21 @@ cap 900s・resumable・完了バケットから逐次 records に追記)。
 SAT バケットが出たら decode + verify_witness.py 検証の上 M_{4,5} ∈ [22,140]。
 gpin 分割 (82/87インスタンス・独立監査済み) は x2 と直交する別ルートとして
 較正済み・待機 (2コア制約上、x2 掃引と排他運用)。
+
+
+## 追記: x2 スイープ進行中 (2026-11-15 16:01Z)・b2 record 再構成の記録
+
+sweepp0x2.sh (c0k3p1 b=2..19 → c0k3p0 b=1..19・cap 900s) が順調に決着を重ねている。
+このpush時点: **b2..b7 の6バケットすべて UNSAT** (43.2s/977,786・102.6s/1,082,095・
+91.0s/1,023,149・66.8s/810,664・67.6s/829,408・62.7s/752,372 conflicts・いずれも
+cap 900s を大きく下回る)。親バケット c0k3p1 全体は cap 2400s でも INDET
+だったのに対し、x2 分割1枚あたりは2桁秒台 — 分割の効きが実証された。
+
+運用上の注意 (記録): c0k3p1b2 の record 行は、sweep 起動直後の
+records.jsonl 修復作業 (ctl 行の JSON 破損直し) が driver の追記と競合し、
+一時失われた。CNF は決定的に再生成して md5 を照合 (1dcb4c46…・
+sat4.js 生成は冪等)、kissat 判定は実行ログ c0k3p1b2.txt
+(s UNSATISFIABLE・conflicts 977,786・rate 22,626.54/s ≒ 43.2s) から
+record を再構成した。solver 実行は一度のみ・結果は再実行ではない。
+**教訓: driver 実行中の records.jsonl は append (>>) のみ行い、
+in-place 書き換え・全書き直しは driver 停止中に限定すること。**
