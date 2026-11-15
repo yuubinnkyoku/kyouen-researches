@@ -894,3 +894,111 @@ c - 169.92 22 15 50 254 87499 2 2691641 54165 2.4 23 10 1 7 52% 562 9869 627 6%
 c - 171.00 21 14 50 255 87499 2 2707578 54564 2.4 23 9 1 7 52% 562 9869 627 6%
 c - 172.15 22 13 50 256 87499 2 2723546 55599 2.5 22 9 1 7 52% 562 9869 627 6%
 c - 173.34 23 13 50 257 87499 2 2739551 56125 2.5 22 9 1 7 52% 563 9869 627 6%
+c - 174.50 22 12 50 258 87504 1 2755582 56928 2.6 22 8 1 7 52% 565 9869 627 6%
+c
+c seconds    switched      rate           size/glue tier1   binary     remaining
+c         MB   reductions     conflicts         size  tier2   irredundant
+c          level     restarts        redundant    glue   trail      variables
+c
+c u 175.29 23 12 50 258 87504 1 2760891 60407 2.6 22 8 1 7 52% 581 9869 627 6%
+c v 175.64 22 12 50 258 87504 1 2760891 59033 2.6 22 8 1 7 52% 583 9869 627 6%
+c w 175.80 23 12 50 258 87504 1 2760891 58409 2.6 22 8 1 7 52% 583 9869 627 6%
+c t 175.81 23 12 50 258 87504 1 2760891 58409 2.6 22 8 1 7 52% 577 9869 627 6%
+c - 176.73 23 12 50 259 87531 1 2771644 54375 2.6 21 8 1 7 51% 584 9869 627 6%
+c i 176.79 21 12 50 259 87531 1 2772486 54923 2.6 21 8 1 7 51% 594 9869 626 6%
+c } 177.74 23 11 51 259 87533 1 2787382 67085 2.7 21 8 1 7 51% 601 9869 626 6%
+c [ 177.74 23 16 51 259 87533 1 2787382 67085 2.0 25 12 2 11 52% 601 9869 626 6%
+c O 177.74 23 16 51 259 87533 1 2787382 67085 2.0 25 12 2 11 52% 601 9869 626 6%
+c - 177.78 22 16 51 260 87533 1 2787737 51364 2.0 25 12 2 11 52% 586 9869 626 6%
+c - 178.78 22 15 51 261 87543 1 2803864 47245 2.0 24 12 2 11 52% 588 9868 626 6%
+c i 179.61 21 15 51 261 87547 1 2817489 56459 2.0 23 12 2 11 52% 591 9868 623 6%
+c o 179.61 21 15 51 261 87547 1 2817489 56459 2.0 23 12 2 11 52% 591 9868 623 6%
+c - 179.81 21 15 51 262 87547 1 2820020 31618 2.0 23 12 2 11 52% 592 9868 623 6%
+c - 180.79 21 15 51 263 87557 1 2836209 34776 1.9 23 12 2 11 52% 592 9868 623 6%
+c i 181.64 21 15 51 263 87562 1 2850512 44516 1.9 22 12 2 11 51% 597 9868 622 6%
+c - 181.76 21 15 51 264 87562 1 2852426 33223 1.9 22 12 2 11 51% 591 9868 622 6%
+c i 181.99 21 15 51 264 87563 1 2856508 35811 1.9 22 12 2 11 51% 598 9868 619 6%
+c i 182.17 21 15 51 264 87563 1 2859458 37374 1.9 22 12 2 11 51% 601 9868 610 6%
+c i 182.27 21 15 51 264 87563 1 2861300 38311 1.9 22 11 2 11 51% 606 9868 603 6%
+c
+c seconds    switched      rate           size/glue  tier1    binary     remaining
+c         MB   reductions     conflicts         size   tier2    irredundant
+c          level     restarts        redundant     glue    trail      variables
+c
+c i 182.29 21 15 51 264 87563 1 2861481 38429 1.9 22 11 2 11 51% 606 9868 600 6%
+c i 182.35 21 15 51 264 87563 1 2862647 39013 1.9 21 11 2 11 51% 612 9868 580 6%
+c ] 182.35 21 15 51 264 87563 1 2862649 39013 1.9 21 11 2 11 51% 612 9868 504 5%
+c 0 182.35 21 11 51 264 87563 1 2862649 39013 2.7 21 8 1 7 51% 612 9868 504 5%
+c
+c ---- [ result ] ------------------------------------------------------------
+c
+s UNSATISFIABLE
+c
+c ---- [ profiling ] ---------------------------------------------------------
+c
+c         165.49   90.76 %  search
+c          90.18   49.46 %  focused
+c          75.31   41.30 %  stable
+c          16.81    9.22 %  simplify
+c          16.45    9.02 %  probe
+c          14.06    7.71 %  vivify
+c           1.94    1.06 %  sweep
+c           1.19    0.65 %  reduce
+c           0.24    0.13 %  eliminate
+c           0.24    0.13 %  substitute
+c           0.15    0.08 %  walking
+c           0.14    0.08 %  factor
+c           0.05    0.02 %  subsume
+c           0.03    0.02 %  congruence
+c           0.03    0.02 %  preprocess
+c           0.03    0.02 %  transitive
+c           0.01    0.01 %  backbone
+c           0.01    0.00 %  lucky
+c           0.00    0.00 %  parse
+c =============================================
+c         182.35  100.00 %  total
+c
+c ---- [ statistics ] --------------------------------------------------------
+c
+c chronological:                            3                0 %  conflicts
+c conflicts:                          2862649            15698.60 per second
+c congruent:                              380                4 %  variables
+c decisions:                          5208088                1.82 per conflict
+c eliminated:                            8956               90 %  variables
+c factored:                               371                4 %  variables
+c iterations:                              18                0 %  variables
+c propagations:                     317512406          1741219    per second
+c reductions:                             264            10843    interval
+c reordered:                               23           124463    interval
+c rephased:                                36            79518    interval
+c restarts:                             87563               33    interval
+c strengthened:                          3818                0 %  checks
+c substituted:                            380                4 %  variables
+c subsumed:                              1427                0 %  checks
+c switched:                                51            56130    interval
+c vivified:                            120817               37 %  checks
+c walks:                                   12           238554    interval
+c
+c ---- [ glue usage ] --------------------------------------------------------
+c
+c focused glue 1   used 6068120 clauses 53.52% accumulated 53.52% tier1
+c focused glue 2   used 2265125 clauses 19.98% accumulated 73.50%
+c focused glue 3-4 used 1303133 clauses 11.49% accumulated 85.00%
+c focused glue 5   used  316685 clauses  2.79% accumulated 87.79%
+c focused glue 6   used  251868 clauses  2.22% accumulated 90.01% tier2
+c
+c stable glue 2   used 3044426 clauses 18.77% accumulated 66.36% tier1
+c stable glue 3   used 1162170 clauses  7.17% accumulated 73.52%
+c stable glue 4-9 used 2336013 clauses 14.40% accumulated 87.92%
+c stable glue 10  used  275343 clauses  1.70% accumulated 89.62%
+c stable glue 11  used  262065 clauses  1.62% accumulated 91.24% tier2
+c
+c ---- [ resources ] ---------------------------------------------------------
+c
+c maximum-resident-set-size:         26488832 bytes         25 MB
+c process-time:                          3m 2s             182.35 seconds
+c
+c ---- [ shutting down ] -----------------------------------------------------
+c
+c exit 20
+rc=20
