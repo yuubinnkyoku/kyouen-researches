@@ -40,3 +40,14 @@ python research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost
 ```
 
 mainのみから実行可能（所要数秒）。出力 `output/class2-lane-cost75d-raw-sweep-independent-audit-20261115.json`（8,950 bytes）。
+
+# 追記：cost-76b IN FLIGHT claimの第二独立事前監査 — 全チェックPASS
+
+並走がsweep中の**cost-76b claim（`2c518e0e`・child `00000000000000801302000000200000`・stones [21,49,56,57,60,71]・76候補）**を、raw batch着地前にclaim段階で独立監査した（`scripts/audit_cost76b_claim_independent_20261115.py`・出力 `class2-lane-cost76b-claim-independent-audit-20261115.json`）。
+
+- 合法候補76件の独立列挙がclaimとbit-exact一致・edge cost 76 == 候補数。
+- child XOR parent がbit 56のみ（lift石56がchildの石）・6削除orbit相異・**唯一のopen parentが第二coverable class-2 target S5（2/17/1325）**・残り5 orbitはrankingに不在。
+- top-candidates行（cost 76・demand c1=0,c2=1,c4=0）一致・claimのbatch plan（9×8+1×4=76）が候補をexactly-once被覆。
+- 2回実行でaudit JSON byte-identical（md5 `3ceea361838852a808d6d6051513ceed`）。
+
+claim段階の監査であり、sweep結果には一切言及しない。**標準11×11空盤・二石root {49,60}/{59,60}・S2 {59,60}・class1・class2・class4はいずれもUNKNOWN**。
