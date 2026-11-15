@@ -2690,7 +2690,7 @@
 - ← depends_on [K0515](../items/K0515-axis-rectangle-seven-maximum.md): 軸平行長方形だけを禁止する規則の区別
 - ← depends_on [K0518](../items/K0518-quadratic-form-small-board-parameter-classification.md): 退化を含む二次形式パラメータ版の定義
 - ← depends_on [K0526](../items/K0526-cube-coplanar-four-all-safe.md): 共面のみ4点禁止という別変種の定義
-- ← supports [K0832](../items/K0832-vertical-fiber-degree-reduction.md): 多項式超曲面変種のq>t|B|領域を解決する。q≤t|B|、特に補間が効くq≤|B|領域は未解決のまま
+- ← supports [K0832](../items/K0832-vertical-fiber-degree-reduction.md): 底面係数次数を制限しない全多項式族ではΣ min(c_b,t)≤q−1が厳密条件。K0504のdeg f≤kなど底面方向の次数制限付きグラフは別問題であり、補間多項式の底面次数は一般に|B|−1程度まで上がるため未解決
 
 ## [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) 3次元5点禁止版の7×7×7以降の奇数辺立方盤はどちらが必勝か
 
@@ -5116,10 +5116,10 @@
 - → depends_on [K0763](../items/K0763-width6-circle-eight-point-max-and-q9-q12-row-formula.md): 接点・判別式の行ごとの構造解析の枠組み
 - ← depends_on [K0830](../items/K0830-seven-row-ten-point-circle-classification.md): 分母補題 q | 4δ′（L2）と parity 排除（L3）が探索の有限性を与える
 
-## [K0832](../items/K0832-vertical-fiber-degree-reduction.md) 垂直ファイバー次数による一般縮約 — q>t|B| なら占有ベクトルで厳密化
+## [K0832](../items/K0832-vertical-fiber-degree-reduction.md) 垂直ファイバー補間による厳密占有縮約 — Σ min(c_b,t)≤q−1
 
 - → generalizes [K0824](../items/K0824-higher-dimensional-fiber-trace-reduction.md): K0824の超平面・球面に対するq>2|B|縮約を、各ファイバー上の次数が高々tである多項式超曲面へ一般化する。K0824のq=2|B|境界反例や超平面跡列挙補題を置き換えるものではない
-- → supports [K0504](../items/K0504-geometric-rule-variant-comparison.md): 多項式超曲面変種のq>t|B|領域を解決する。q≤t|B|、特に補間が効くq≤|B|領域は未解決のまま
+- → supports [K0504](../items/K0504-geometric-rule-variant-comparison.md): 底面係数次数を制限しない全多項式族ではΣ min(c_b,t)≤q−1が厳密条件。K0504のdeg f≤kなど底面方向の次数制限付きグラフは別問題であり、補間多項式の底面次数は一般に|B|−1程度まで上がるため未解決
 
 ## [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) 4〜6行 q=4,5 行欠損witness帯 — (4,4) m=4..34, (5,4) m=5..39, (6,4) m=6..40, (4,5) m=5..20, (5,5) m=5..23 全幅SAT; M_{4,4}>=35, M_{5,4}>=40, M_{6,4}>=41, M_{4,5}>=21, M_{5,5}>=24; sat3 OOM壁越えと rowY 分割で帯延伸
 

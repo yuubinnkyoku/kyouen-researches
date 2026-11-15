@@ -14311,6 +14311,15 @@
 ## [research/experiments/vertical-fiber-degree-reduction-20261115/verify_boundary.py](../../../research/experiments/vertical-fiber-degree-reduction-20261115/verify_boundary.py)
 
 - [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (verifier): r=1..8・t=1..8の整数単体境界例64件と、次数1..3の既約整数例を検査
+## [research/experiments/vertical-fiber-interpolation-exact-20261115/output/audit.json](../../../research/experiments/vertical-fiber-interpolation-exact-20261115/output/audit.json)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (data): 12,288配置・768占有ベクトル出現の有限監査結果
+## [research/experiments/vertical-fiber-interpolation-exact-20261115/report.md](../../../research/experiments/vertical-fiber-interpolation-exact-20261115/report.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (proof): ファイバー根数上界とラグランジュ補間による最大共存数の厳密公式・ゲーム縮約・適用限界
+## [research/experiments/vertical-fiber-interpolation-exact-20261115/verify_interpolation.py](../../../research/experiments/vertical-fiber-interpolation-exact-20261115/verify_interpolation.py)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (verifier): Fractionによる全4096配置×t=1,2,3の補間達成監査と退化ファイバー障害の確認
 ## [research/experiments/width17-20-circle-point-bound-20261112/output/width17_20_circle_bound.json](../../../research/experiments/width17-20-circle-point-bound-20261112/output/width17_20_circle_bound.json)
 
 - [K0778](../items/K0778-width17-20-circle-point-bounds.md) (data): 全数値の機械出力
@@ -15085,6 +15094,9 @@
 ## [research/log/2026-11-15-vertical-fiber-degree-reduction.md](../../../research/log/2026-11-15-vertical-fiber-degree-reduction.md)
 
 - [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (log): 最新main・未解決一覧との照合、定理の選定、有限検証と限界
+## [research/log/2026-11-15-vertical-fiber-interpolation-exact.md](../../../research/log/2026-11-15-vertical-fiber-interpolation-exact.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (log): K0832の一様閾値を局面ごとの厳密占有条件へ強化した判断・証明・限界
 ## [research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md](../../../research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md)
 
 - [K0092](../items/K0092-n11-dfpn-search-status.md) (source): 命題・対象範囲・根拠を記した出典
