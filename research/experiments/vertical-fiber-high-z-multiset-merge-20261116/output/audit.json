@@ -1,0 +1,38 @@
+{
+  "theorem": "For kappa=1 and S=sum(X), z >= S+R-1 implies H(R;X;z)=H(R;(S);z), with H(R;();z)=0.",
+  "exhaustive": {
+    "multisets": "length 0..4, entries 1..5",
+    "R": "0..16",
+    "z": "max(0,S+R-1)..max(0,S+R-1)+3",
+    "checks": 8568,
+    "mismatches": 0
+  },
+  "seeded_random": {
+    "seed": 20261116,
+    "checks": 120,
+    "multiset_size": "0..6",
+    "token_values": "1..10",
+    "R": "0..28",
+    "z": "max(0,S+R-1) plus 0..8",
+    "mismatches": 0
+  },
+  "outside_region_example": {
+    "X": [2, 3],
+    "S": 5,
+    "z": 5,
+    "R": 9,
+    "condition": "z >= S+R-1",
+    "condition_holds": false,
+    "general_H": 1,
+    "single_token_H": 2
+  },
+  "engines": [
+    "sorted multiset recurrence",
+    "ordered/labeled recurrence"
+  ],
+  "classification": {
+    "theorem": "universal induction proof",
+    "finite_audit": "implementation cross-check only",
+    "scope": "kappa=1 residual game; no claim about the standard two-dimensional geometry game"
+  }
+}
