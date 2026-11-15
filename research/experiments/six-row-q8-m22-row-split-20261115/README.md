@@ -5,27 +5,20 @@ maximal nonexistence, witness-free width set {19,20,21}).
 
 ## Status
 
-- **Band m=22..44 COMPLETE — every width all 3 row-mirror rowY classes UNSAT
+- **Band m=22..55 COMPLETE — every width all 3 row-mirror rowY classes UNSAT
   (plus a lex=H cross-encoding re-check of the hardest class per width).**
-  The witness-free width set of (6,8) is now **{19,...,44}**; M_{6,8} in
-  {19,...,44} or >= 46 (sharp form per the K0821-audit convention: M = 19 or
-  >= 46). Upper 371 (K0318/K0024 substitution) unchanged.
-- Frontier width: 6x45. The predicted sat2.js all-triples census memory wall
-  (extrapolated from the 7x28 n=196 rc137 incident) did NOT materialize:
-  generation and solving stayed cheap through m=44 (n=264). Next steps in
-  this lane: continue the same sat2.js rowY sweep (m=45, 46, ...) while it
-  stays cheap; the genfast3.js switch (valid for q >= w+2; (6,8) qualifies
-  with q=8=w+2) remains the fallback if generation cost or memory eventually
-  walls, with a CNF byte-identity calibration against sat2.js before any
-  genfast3-only width is claimed. Long-term: sweeping the band to m=370
-  witness-free would, with U=371, close M_{6,8} = 19 exactly.
+  The witness-free width set of (6,8) is now **{19,...,55}**; M_{6,8} in
+  {19,...,55} or >= 57 (sharp form per the K0821-audit convention: M = 19 or
+  >= 57). Upper 371 (K0318/K0024 substitution) unchanged.
+- Frontier width: 6x56. Long-term: sweeping the band to m=370 witness-free
+  would, with U=371, close M_{6,8} = 19 exactly.
 
 ## Band results (kissat 4.0.4 official linux-amd64, all exit 20)
 
 conflicts / process-time per instance; "deciding" = sum over the 3 rowY
 classes (lex=H cross-check excluded).
 
-| m | rowY=0 | rowY=1 (hardest) | rowY=2 | lex=H cross | deciding total |
+| m | rowY=0 | rowY=1 | rowY=2 | lex=H cross | deciding total |
 |---|---|---|---|---|---|
 | 22 | 337,741 / 15.20s | 2,162,296 / 127.19s | 1,791,570 / 95.14s | 1,862,336 / 114.92s | 4,291,607 |
 | 23 | 335,230 / 14.11s | 1,810,456 / 107.92s | 776,370 / 36.62s | 1,659,164 / 104.66s | 2,922,056 |
@@ -50,13 +43,25 @@ classes (lex=H cross-check excluded).
 | 42 | 94,471 / 6.17s | 56,759 / 4.64s | 46,264 / 3.57s | 63,345 / 5.00s | 197,494 |
 | 43 | 83,296 / 6.12s | 54,643 / 4.77s | 37,520 / 2.96s | 72,852 / 5.81s | 175,459 |
 | 44 | 107,765 / 7.52s | 73,372 / 5.54s | 41,643 / 3.42s | 63,396 / 5.41s | 222,780 |
+| 45 | 79,347 / 6.20s | 54,964 / 4.61s | 46,073 / 3.92s | 61,851 / 5.42s | 180,384 |
+| 46 | 71,714 / 5.84s | 53,691 / 4.46s | 35,846 / 3.20s | 58,028 / 5.09s | 161,251 |
+| 47 | 70,742 / 5.42s | 68,550 / 5.89s | 39,530 / 3.48s | 48,259 / 4.69s | 178,822 |
+| 48 | 66,059 / 5.46s | 47,052 / 4.49s | 36,867 / 3.65s | 50,355 / 4.74s | 149,978 |
+| 49 | 66,813 / 5.68s | 48,356 / 4.27s | 36,583 / 3.47s | 48,663 / 4.41s | 151,752 |
+| 50 | 65,554 / 5.58s | 59,091 / 4.73s | 32,307 / 3.13s | 48,947 / 4.40s | 156,952 |
+| 51 | 78,979 / 6.64s | 66,512 / 6.05s | 36,454 / 4.01s | 57,575 / 5.13s | 181,945 |
+| 52 | 95,765 / 7.04s | 66,280 / 5.37s | 33,978 / 3.28s | 73,468 / 6.09s | 196,023 |
+| 53 | 98,308 / 7.37s | 99,031 / 6.94s | 33,251 / 3.13s | 73,104 / 6.49s | 230,590 |
+| 54 | 109,295 / 8.50s | 89,971 / 7.88s | 32,535 / 3.49s | 73,563 / 7.01s | 231,801 |
+| 55 | 130,116 / 9.50s | 76,771 / 6.11s | 28,309 / 3.34s | 82,902 / 6.71s | 235,196 |
 
-The hardest-class conflict series (rowY=1) fell from 2,862,649 at m=21
-(K0829) to 54,643 at m=43 (local minima 54,643 / 56,759 at m=43/42), i.e. by
-a factor of ~52 across the band; deciding totals fell from 4,291,607 (m=22)
-to ~200k (m=40..44 range 175,459..222,780 with local non-monotonicities —
-e.g. m=44 at 222,780 is above m=43). No SAT witness and no generation or
-memory wall so far; difficulty is collapsing as the width grows.
+Difficulty shape: the deciding totals fell from 4,291,607 (m=22) to a
+**local minimum 149,978 at m=48**, then turned and are **rising again**
+(151,752 / 156,952 / 181,945 / 196,023 / 230,590 / 231,801 / 235,196 for
+m=49..55). The hardest class is no longer fixed: from m=44 on it alternates
+between y=0 and y=1 (m=53: y=1 at 99,031; m=54/55: y=0 at 109,295 /
+130,116). The rising leg is still 18x below the m=22 start. No SAT witness
+anywhere in the band.
 
 ## Coverage argument (each width)
 
@@ -64,7 +69,7 @@ Identical to K0829: every deficient maximal safe configuration has some row
 with <= 6 stones and appears as a solution of the rowfixed(y) instance for
 that row; the V mirror y <-> 5-y is a board symmetry, so rowfixed(y) is
 equisatisfiable with rowfixed(5-y) and y in {0,1,2} covers all 6 rows. The
-lex=H instance re-decides the hardest class under a different encoding
+lex=H instance re-decides the rowY=1 class under a different encoding
 (sequential-counter lex H constraints) as a cross-encoding check.
 
 ## Calibrations (all bit-exact)
@@ -77,10 +82,36 @@ lex=H instance re-decides the hardest class under a different encoding
   element-identical to the K0829 control board; js census-free verifyConfig
   PASS + Python Fraction verify_witness.py PASS. Reproduced twice
   (15.82s / 15.67s, both 492,432).
-- 6x26 CNF regeneration check (this batch): re-running sat2.js for all four
-  m=26 encodings after the sweep reproduced the on-disk CNFs byte-identical
-  (cmp PASS on rowY0 and rowY1_lexH; meta re-derived verbatim), recovering
-  the meta_26.json that the sweep script had not captured.
+- 6x26 CNF regeneration check (m26..31 batch): re-running sat2.js for all
+  four m=26 encodings after the sweep reproduced the on-disk CNFs
+  byte-identical (cmp PASS on rowY0 and rowY1_lexH; meta re-derived
+  verbatim), recovering the meta_26.json that the sweep script had not
+  captured.
+- **Environment-reset crossing (m45..55 batch)**: a hard environment reset
+  wiped the local workdir mid-session (after the m45..47 sweeps, before
+  their logs were pushed). All machinery was re-fetched from this repo and
+  re-verified by hash (sat.js 6c3262d6..., sat2.js edfae1d2...,
+  verify_witness.py ea7203a3..., decode_verify.js ef5390509b..., kissat
+  4.0.4 md5 3a5eba830aa6008a604fcc9bbe99a325). m=45, 46, 47 were re-run on
+  the rebuilt environment and every conflict count was **bit-exact** with
+  the pre-reset runs (79,347 / 46,073 / 54,964 / 61,851; 71,714 / 35,846 /
+  53,691 / 58,028; 70,742 / 39,530 / 68,550 / 48,259) — a cross-reset
+  determinism calibration of the whole toolchain.
+
+## The m=53 generation heap wall and its resolution
+
+At m=53 (n=318) the sat2.js CNF generation died with a V8 default-heap OOM
+(~512 MB, "Ineffective mark-compacts near heap limit") in all four
+encodings — the memory wall predicted from the 7-row lane's n=196 rc137
+incident, arriving later than extrapolated (the earlier prediction was
+m≈32-33) because it is a V8 heap-limit artifact, not a RAM wall. Re-running
+with `node --max-old-space-size=3500` generates m=53 in ~10 s per instance;
+m=53, 54, 55 were produced this way (sweep_width.sh now carries the flag).
+Generation cost grows ~cubically (census of all triples), so a true RAM wall
+will eventually arrive; the fallback remains the genfast3.js generator
+(valid for q >= w+2; (6,8) qualifies with q=8=w+2), to be calibrated by CNF
+byte-identity against sat2.js on shared widths before any genfast3-only
+width is claimed.
 
 ## Honest negative
 
@@ -97,7 +128,9 @@ from seven-row-q7-witness-search-20261114/scripts (blob shas 6c3262d6... /
 edfae1d2...); verify_witness.py (ea7203a3...); kissat 4.0.4 official
 linux-amd64 (md5 3a5eba830aa6008a604fcc9bbe99a325). decode_verify.js
 (NEW, this lane): decodes the kissat model into stones and runs the js
-verifier - see scripts/.
+verifier - see scripts/. Since m=53 the generator runs with
+`--max-old-space-size=3500` (see the wall section); this changes no output,
+only the heap ceiling.
 
 ## Incident note
 
@@ -105,11 +138,12 @@ The first push of the two calibration raw logs landed truncated (the
 sandbox read_file 64KB page limit; only page 1 was read). Both files were
 repushed complete and remote git blob shas now match the local files
 (0cdf6de1... / 952629af...). All other raw logs were under 64KB and landed
-byte-exact on the first push.
+byte-exact on the first push. (Large batches are now staged through local
+JSON to stay under the sandbox 16 MiB op-recording limit.)
 
 ## Not claimed
 
-- 6x45 and above until the corresponding sweeps finish (frontier: 6x45).
+- 6x56 and above until the corresponding sweeps finish (frontier: 6x56).
 - Any band width decided only by genfast3.js before its CNF byte-identity
   calibration against sat2.js passes on shared widths.
 - 11x11 empty board, two-stone root {49,60}, S2 {59,60}, class 2, class 4:
