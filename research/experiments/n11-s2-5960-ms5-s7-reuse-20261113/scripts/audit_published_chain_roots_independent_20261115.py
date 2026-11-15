@@ -7,24 +7,25 @@ chain, re-derives no solved sets. It re-reads the 26 blob-verified base
 certificate files, the 52 blob-verified pre-70e chain head JSONs and the 30
 post-70e chain head JSONs, and checks:
 
-1. 108 published git blob pins byte-exact (26 base + 52 chain heads + 30
-   pinned post-70e heads through the 63h endpoint, including the four v2
-   pin proposals 71c/70f/73g/70g, now pinned, the 77b/77c heads pinned
-   from the 77c baseline quote and the 77d claim's chain_head_at_claim,
-   the 75d head pinned from the completed 75d claim's output_blob_shas,
-   and the 77d / merged-75d-77d / 79a / 80d / 82c / 83a / 83b / 83c / 83d /
-   84a / 62a / 58c / 63h heads pinned from their completed claim fold
-   records);
+1. 110 published git blob pins byte-exact (26 base + 52 chain heads + 32
+   pinned post-70e heads through the merged 63h+63i endpoint, including
+   the four v2 pin proposals 71c/70f/73g/70g, now pinned, the 77b/77c
+   heads pinned from the 77c baseline quote and the 77d claim's
+   chain_head_at_claim, the 75d head pinned from the completed 75d
+   claim's output_blob_shas, and the 77d / merged-75d-77d / 79a / 80d /
+   82c / 83a / 83b / 83c / 83d / 84a / 62a / 58c / 63h / 63i heads
+   pinned from their completed claim fold records plus the merged
+   63h+63i head pinned from the 63h claim reconciliation record);
 2. the root inventory: 194 distinct WIN7 base roots (with the single
    intra-base duplicate root enumerated), 402 distinct receipt roots
    recorded in the 52 chain head addition records, and the cumulative
    published-root inventory at every post-70e checkpoint
    (497@1233 ... 569@75d, 577@77d lane-local, 580@merged-75d-77d, 583@79a,
    587@80d, 592@82c, 596@83a, 601@83b, 603@83c, 606@83d, 610@84a,
-   616@62a, 649@58c, 650@63h)
+   616@62a, 649@58c, 650@63h lane-local, 667@63i, 668@merged)
    reconciled
    against each fold's own published folded-root count;
-3. D4 orbit structure of the full 650-root inventory: twin pairs
+3. D4 orbit structure of the full 668-root inventory: twin pairs
    (same D4 orbit, different raw hex), their per-pair classification and
    provenance (a fold whose roots are all D4-duplicates of already-folded
    inventory is legal set bookkeeping, never a new orbit);
@@ -41,8 +42,8 @@ post-70e chain head JSONs, and checks:
    erratum-pointer / fork-merge / multi-branch / own-label-recompute /
    unverifiable-quote) and the delta arithmetic is re-derived from the
    published marginal records; anomalies must be zero;
-8. the 77a/77b/77c/75d/77d/79a/80d/82c/83a/83b/83c/83d/84a/62a/58c/63h
-   endpoint heads and
+8. the 77a/77b/77c/75d/77d/79a/80d/82c/83a/83b/83c/83d/84a/62a/58c/63h/
+   63i/merged endpoint heads and
    their completed-
    claim fold records; the merged 75d+77d head cross-checked against the
    77d claim's merged_fold record; the 58c endpoint keeps the published
@@ -51,7 +52,12 @@ post-70e chain head JSONs, and checks:
    the BigInt verifier terminal guard, as documented in the claim); the
    63h claim was opened at the 1326 head and re-based on the parallel 58c
    fold (both the head JSON rebase_note and the claim fold record assert
-   the re-based 1360 baseline); the bit-78 duplicate root (== the 75d
+   the re-based 1360 baseline); the 63i endpoint head and its completed
+   claim fold record, and the merged 63h+63i head that reconciles the
+   two-branch receipts fork at the 58c head 1360 (the single 63h bit-89
+   receipt re-folded on the 63i branch head 1367; both branch heads
+   superseded), cross-checked against the 63h claim reconciliation
+   record; the bit-78 duplicate root (== the 75d
    bit-92 receipt root, raw-hex identical) gets an explicit exactly-once
    bookkeeping control (root identity, sequential-marginal convention at
    the shared 1290 baseline, single canonical-line claim via 75d bit-92,
@@ -221,6 +227,8 @@ POST70E_PINS = {
     'class-frontier-cost62a-receipts-recompute-20261116.json': '3989e9ddfa43d0951a9a58c10919ce5087eb8733',
     'class-frontier-cost58c-receipts-recompute-20261116.json': '62a411bb1a6debc33782c07062843650c556c747',
     'class-frontier-cost63h-receipts-recompute-20261115.json': '647498b995770ff87b12e868a5b89015c26be51e',
+    'class-frontier-cost63i-receipts-recompute-20261116.json': 'db0288f15f1538293e66146542a938c9ebf8b91c',
+    'class-frontier-merged-cost63h-63i-recompute-20261116.json': 'c3ff50364499014a7096151bd9893a6510386c05',
 }
 POST70E_ORDER = [
     'class-frontier-cost70e-receipts-recompute-20261115.json',
@@ -255,6 +263,11 @@ POST70E_ORDER = [
     # (1360 -> 1362) receipts folds
     'class-frontier-cost58c-receipts-recompute-20261116.json',
     'class-frontier-cost63h-receipts-recompute-20261115.json',
+    # v11 extension: the cost-63i (1360 -> 1367) receipts fold and the
+    # merged 63h+63i fold (1367 -> 1369) that reconciles the two-branch
+    # receipts fork at the 58c head 1360
+    'class-frontier-cost63i-receipts-recompute-20261116.json',
+    'class-frontier-merged-cost63h-63i-recompute-20261116.json',
 ]
 UNPINNED_POST70E = [n for n in POST70E_ORDER if n not in POST70E_PINS]
 
@@ -272,7 +285,7 @@ for name, want in sorted(POST70E_PINS.items()):
     assert s == want, ('post70e pin', name, s, want)
     pin_report['post70e'] += 1
 n_pins = pin_report['base'] + pin_report['chain'] + pin_report['post70e']
-assert n_pins == 108, n_pins
+assert n_pins == 110, n_pins
 unpinned_computed = {}
 for name in UNPINNED_POST70E:
     s, blen = git_blob_sha(OUT / name)
@@ -380,6 +393,10 @@ own_claim = {
     'class-frontier-cost62a-receipts-recompute-20261116.json': 603 + 3 + 4 + 6,
     'class-frontier-cost58c-receipts-recompute-20261116.json': 616 + 33,
     'class-frontier-cost63h-receipts-recompute-20261115.json': 616 + 33 + 1,
+    'class-frontier-cost63i-receipts-recompute-20261116.json': 616 + 33 + 18,
+    # the merged fold re-folds the single 63h bit-89 receipt on top of
+    # the 63i branch head (667 + 1)
+    'class-frontier-merged-cost63h-63i-recompute-20261116.json': 616 + 33 + 18 + 1,
 }
 # fork topology: head -> (baseline head for the own-claim arithmetic)
 own_baseline = {
@@ -442,6 +459,10 @@ own_baseline = {
         'class-frontier-cost62a-receipts-recompute-20261116.json',
     'class-frontier-cost63h-receipts-recompute-20261115.json':
         'class-frontier-cost58c-receipts-recompute-20261116.json',
+    'class-frontier-cost63i-receipts-recompute-20261116.json':
+        'class-frontier-cost58c-receipts-recompute-20261116.json',
+    'class-frontier-merged-cost63h-63i-recompute-20261116.json':
+        'class-frontier-cost63i-receipts-recompute-20261116.json',
 }
 own_cum_seen = {}
 
@@ -449,7 +470,8 @@ def head_roots_all(name):
     d = json.loads((OUT / name).read_text())
     rr = []
     for k in d:
-        if k.endswith('_addition') or k in ('merged_receipts', 'group_additions', 'cost72_fold'):
+        if k.endswith('_addition') or k in ('merged_receipts', 'group_additions', 'cost72_fold') \
+                or re.fullmatch(r'[a-z0-9]+_addition_on_[0-9]+', k):
             collect_addition_roots(d[k], rr)
     return {int(h, 16) for h in rr}
 
@@ -492,16 +514,18 @@ for name in POST70E_ORDER:
     cumulative_report.append(entry)
     assert entry['matches_published'], entry
     assert own_after <= cum, entry
-assert cumulative_report[-1]['audit_document_order_cumulative'] == 650
-assert cumulative_report[-1]['fold_own_branch_cumulative'] == 650
+assert cumulative_report[-1]['audit_document_order_cumulative'] == 668
+assert cumulative_report[-1]['fold_own_branch_cumulative'] == 668
 assert inventory == (base_int | chain_set) | set().union(*[
     set(head_roots_all(n)) for n in POST70E_ORDER])
-assert cumulative_report[-1]['audit_document_order_cumulative'] == 650
+assert cumulative_report[-1]['audit_document_order_cumulative'] == 668
 
-# ---------- 3. D4 orbit structure of the 650-root inventory ----------
-# the 33 new roots of the 58c fold plus the single new root of the 63h fold
-# were asserted raw- and D4-disjoint from the prior 616-root inventory by
-# their own fold scripts, so the twin-pair count is unchanged at 11
+# ---------- 3. D4 orbit structure of the 668-root inventory ----------
+# the 33 new roots of the 58c fold, the 18 new roots of the 63i fold and
+# the single new root of the 63h fold were asserted raw- and D4-disjoint
+# from the prior inventory by their own fold scripts (the merged fold
+# additionally asserts the two branch cover sets disjoint, overlap 0),
+# so the twin-pair count is unchanged at 11
 all_roots = sorted(inventory)
 d4_of = {r: canon(r) for r in all_roots}
 orbits = defaultdict(list)
@@ -514,7 +538,7 @@ for o, rs in sorted(orbits.items()):
         assert len(rs) == 2, (o, rs)
         twin_pairs.append(sorted(rs))
 assert len(twin_pairs) == 11, len(twin_pairs)
-assert n_orbits == 650 - 11, n_orbits
+assert n_orbits == 668 - 11, n_orbits
 
 # provenance of every inventory root
 root_prov = defaultdict(list)
@@ -587,7 +611,8 @@ def records_of(name):
 
     for k in d:
         if k.endswith('_addition') or k in ('merged_receipts', 'group_additions') \
-                or k.endswith('_fold'):
+                or k.endswith('_fold') \
+                or re.fullmatch(r'[a-z0-9]+_addition_on_[0-9]+', k):
             scan(k, d[k], [k])
     return recs
 
@@ -695,6 +720,26 @@ for name in chain_names + POST70E_ORDER:
             'n_closing_records': len(closes),
             'declared_by_totals': (d.get('totals', {}) or {}).get('child_closed_by_bit')})
 
+# v11: the merged 63h+63i head declares child_closed_by_bit 89 in its
+# totals but carries no target record; its child is the 63h sweep child
+# (published in the pinned 63h head) and the single
+# cost63h_addition_on_1367 receipt record closes it
+_merged_head_name = 'class-frontier-merged-cost63h-63i-recompute-20261116.json'
+_dm = json.loads((OUT / _merged_head_name).read_text())
+_d63h_child = json.loads(
+    (OUT / 'class-frontier-cost63h-receipts-recompute-20261115.json')
+    .read_text())['target']['s6_child_hex']
+assert (_dm.get('totals', {}) or {}).get('child_closed_by_bit') == 89
+_mrec = _dm['cost63h_addition_on_1367']
+assert _mrec['bit'] == 89 \
+    and _d63h_child in _mrec['marginal_manifest_hexes']
+child_closure_report.append({
+    'head': _merged_head_name, 'child': _d63h_child,
+    'closing_records': [{'key': 'cost63h_addition_on_1367', 'bit': 89,
+                         'path': 'cost63h_addition_on_1367'}],
+    'n_closing_records': 1,
+    'declared_by_totals': 89})
+
 # ---------- 6. convention-external receipts ----------
 def iter_receipt_dicts(name):
     d = json.loads((OUT / name).read_text())
@@ -720,7 +765,8 @@ for name in chain_names + POST70E_ORDER:
     d = json.loads((OUT / name).read_text())
     conv_roots = set()
     for k in d:
-        if k.endswith('_addition') or k in ('merged_receipts', 'group_additions'):
+        if k.endswith('_addition') or k in ('merged_receipts', 'group_additions') \
+                or re.fullmatch(r'[a-z0-9]+_addition_on_[0-9]+', k):
             rr = []
             collect_addition_roots(d[k], rr)
             conv_roots.update(int(h, 16) for h in rr)
@@ -784,6 +830,49 @@ for name in chain_names + POST70E_ORDER:
     d = json.loads((OUT / name).read_text())
     fk, f = frontier_of(name)
     bm = d.get('baseline_main')
+    if bm is None and 'fork_record' in d and f is not None \
+            and 'solved_s6_in_manifest' in f:
+        # v11: fork-merge head (merged 63h+63i): no baseline_main quote;
+        # the fork_record.common_baseline quotes the shared 58c head
+        # state in slash form; the delta splits into the parallel-branch
+        # 63i marginals (folded by the 63i head) plus this head's own
+        # re-folded bit-89 receipt marginals
+        recs = records_of(name)
+        m5 = re.search(r'(\d+)/(\d+)/(\d+)/(\d+)/(\d+)',
+                       d['fork_record']['common_baseline'])
+        assert m5, name
+        base5 = tuple(int(x) for x in m5.groups())
+        entry = {'head': name, 'frontier_key': fk,
+                 'frontier_solved': f['solved_s6_in_manifest'],
+                 'baseline_quote': list(base5),
+                 'delta': f['solved_s6_in_manifest'] - base5[0]}
+        own_mims = [mim_of(r) for _, _, r in recs
+                    if mim_of(r) is not None]
+        own_hex = set()
+        for _, _, r in recs:
+            own_hex.update(hexes_of(r) or [])
+        entry['sum_mim'] = sum(own_mims)
+        entry['union_mim'] = len(own_hex)
+        entry['classification'] = 'fork-merge-rebase'
+        branch63i = 'class-frontier-cost63i-receipts-recompute-20261116.json'
+        branch_mim = sum(mim_of(r) for _, _, r in records_of(branch63i)
+                         if mim_of(r) is not None)
+        entry['external_branch_mim'] = entry['delta'] - entry['sum_mim']
+        assert entry['external_branch_mim'] == branch_mim, entry
+        entry['quote_state_matches'] = state_index.get(base5, [])
+        entry['quote_status'] = ('matched_published_state'
+                                 if entry['quote_state_matches']
+                                 else 'unmatched_quote')
+        pointer = None
+        for other in chain_names + POST70E_ORDER:
+            if other != name \
+                    and other in d['fork_record']['common_baseline']:
+                pointer = other
+                break
+        entry['prose_pointer_head'] = pointer
+        assert entry['quote_status'] == 'matched_published_state', entry
+        arith.append(entry)
+        continue
     if f is None or bm is None or 'solved_s6_in_manifest' not in f:
         continue
     entry = {'head': name, 'frontier_key': fk,
@@ -918,6 +1007,17 @@ assert not arith_anomalies, arith_anomalies
 FORK_HEAD = 'class-frontier-merged-recompute-after65h65i-warm67b68c-20261115.json'
 fork_entry = next((a for a in arith if a['head'] == FORK_HEAD), None)
 
+# v11: the merged 63h+63i fork head entry (fork-merge-rebase)
+MERGED63_HEAD = 'class-frontier-merged-cost63h-63i-recompute-20261116.json'
+fork63_entry = next((a for a in arith if a['head'] == MERGED63_HEAD),
+                    None)
+assert fork63_entry is not None
+assert fork63_entry['classification'] == 'fork-merge-rebase'
+assert fork63_entry['baseline_quote'] == [1360, 6488, 512785, 4758, 376508]
+assert fork63_entry['delta'] == 9
+assert fork63_entry['sum_mim'] == 2 and fork63_entry['union_mim'] == 2
+assert fork63_entry['external_branch_mim'] == 7
+
 # ---------- 7b. canonical-line hex-level exactly-once ----------
 # The canonical line from the 1233 baseline to the 83a endpoint: every
 # consecutive baseline-quote provenance is already verified by the state
@@ -973,12 +1073,19 @@ CANONICAL_LINE = [
      'cost84a_addition'),
     ('class-frontier-cost62a-receipts-recompute-20261116.json',
      'cost62a_addition'),
-    # v10: the canonical line continues through the cost-58c and
-    # cost-63h folds
+    # v10: the canonical line continues through the cost-58c fold
     ('class-frontier-cost58c-receipts-recompute-20261116.json',
      'cost58c_addition'),
-    ('class-frontier-cost63h-receipts-recompute-20261115.json',
-     'cost63h_addition'),
+    # v11: the receipts chain forks at the 58c head 1360 into the
+    # lane-local 63h branch (1360 -> 1362) and the 63i branch
+    # (1360 -> 1367); the merged fold re-folds the single 63h bit-89
+    # receipt on top of the 1367 head, so the canonical line continues
+    # through the 63i head and the merged head while the lane-local
+    # 63h head 1362 stays off the line (the 77d precedent)
+    ('class-frontier-cost63i-receipts-recompute-20261116.json',
+     'cost63i_addition'),
+    ('class-frontier-merged-cost63h-63i-recompute-20261116.json',
+     'cost63h_addition_on_1367'),
 ]
 canon_claims = defaultdict(list)
 canon_sum = 0
@@ -1026,12 +1133,15 @@ canonical_line_report = {
     'multi_claims': 0,
     'per_head': canon_per_head,
     'note': 'every manifest hex solved between the 1233 baseline and the '
-            '1362 endpoint is claimed as a marginal by exactly one receipt '
+            '1369 endpoint is claimed as a marginal by exactly one receipt '
             'record on the canonical line (branch marginals 65l/74g/69i '
             'enter once via the merged-1277 merged_receipts; the lane-local '
             '77d head 1299 is off the canonical line and its marginals are '
             'rebased on 1296 by the merged fold, so the bit-78 root - the '
-            '75d bit-92 duplicate - is claimed exactly once)',
+            '75d bit-92 duplicate - is claimed exactly once; the lane-local '
+            '63h head 1362 is off the canonical line and its single bit-89 '
+            'receipt is re-based on 1367 by the merged 63h+63i fold, so the '
+            '63h child and bonus-orbit marginals are claimed exactly once)',
 }
 
 # ---------- 7c. bit-78 duplicate-root exactly-once bookkeeping ----------
@@ -1423,22 +1533,175 @@ claim_crosschecks.append(
     'the 1326 head and re-based on the parallel 58c fold per both the '
     'head JSON rebase_note and the claim fold record')
 
+# ---------- 8m. 63i endpoint + 63i claim crosscheck (v11) ----------
+# the 63i sweep (parallel lane) found 18 WIN7-D10 among its 63 candidates;
+# the remaining 45 are REFUTED-D10 (absence of a winner win within depth
+# 10 only). The fold runs on the 58c chain head 1360 (its own claim
+# baseline); the 18 receipts close the cost-63 child orbit via bit-30.
+h63i = json.loads(
+    (OUT / 'class-frontier-cost63i-receipts-recompute-20261116.json')
+    .read_text())
+f63i = h63i['frontier_after_cost63i']
+endpoint63i = {
+    'head': 'class-frontier-cost63i-receipts-recompute-20261116.json',
+    'git_blob_sha': POST70E_PINS[
+        'class-frontier-cost63i-receipts-recompute-20261116.json'],
+    'solved_s6_in_manifest': f63i['solved_s6_in_manifest'],
+    'unique_remaining_s6': f63i['unique_remaining_s6'],
+    'sum_remaining_cost': f63i['sum_remaining_cost'],
+    's6_needed_by_open_classes': f63i['s6_needed_by_open_classes'],
+    'cost_needed_by_open_classes': f63i['cost_needed_by_open_classes'],
+    'receipts': h63i['totals']['receipts'],
+    'child_closed_by_bit': h63i['totals']['child_closed_by_bit'],
+}
+assert (endpoint63i['solved_s6_in_manifest'],
+        endpoint63i['unique_remaining_s6'], endpoint63i['sum_remaining_cost'],
+        endpoint63i['s6_needed_by_open_classes'],
+        endpoint63i['cost_needed_by_open_classes']) == \
+    (1367, 6481, 512295, 4751, 376018), endpoint63i
+assert endpoint63i['receipts'] == 18
+assert endpoint63i['child_closed_by_bit'] == 30
+recs63i = h63i['cost63i_addition']
+bits63i = [r['bit'] for r in recs63i]
+assert bits63i == [30, 32, 41, 45, 54, 61, 62, 66, 77, 81, 99, 105, 107,
+                   112, 114, 116, 119, 120], bits63i
+assert h63i['target']['s6_child_hex'] in \
+    recs63i[0]['marginal_manifest_hexes']
+assert recs63i[0]['marginal_in_manifest'] == 1
+certs63i = sorted(p.name for p in
+                  (OUT / 'class2-lane-cost63i-certificates').iterdir())
+assert len(certs63i) == 18, len(certs63i)
+cert_bits63i = {int(c.split('-')[0][3:]) for c in certs63i}
+assert cert_bits63i == set(bits63i), sorted(cert_bits63i)
+claim63i = json.loads(
+    (OUT / 'class2-lane-cost63i-inflight-20261116.json').read_text())
+cf63i = claim63i['fold']
+assert cf63i['status'] == 'completed'
+assert cf63i['chain_head_before'] == '1360/6488/512785/4758/376508'
+assert cf63i['chain_head_after'] == '1367/6481/512295/4751/376018'
+assert cf63i['receipts_folded'] == 18
+assert cf63i['publication_order'] == bits63i
+assert cf63i['total_marginal'] == 80
+assert cf63i['total_marginal_in_manifest'] == 7
+assert cf63i['zero_marginal_in_manifest'] == [32, 41, 54, 61, 62, 77, 81,
+                                              99, 105, 114, 116]
+assert cf63i['child_orbit_closed_by_bit'] == 30
+assert cf63i['parents_after'] == {'parent1': '17 rows / 1185',
+                                  'parent2': '24 rows / 1704'}
+assert cf63i['output_blob_shas']['head_json'] == endpoint63i['git_blob_sha']
+assert cf63i['head_json_bytes'] == 16455
+sha63i, blen63i = git_blob_sha(
+    OUT / 'class-frontier-cost63i-receipts-recompute-20261116.json')
+assert sha63i == cf63i['output_blob_shas']['head_json'] \
+    and blen63i == 16455
+# the 63i head totals zero-marginal list (bit-prefixed strings) is the
+# claim's zero_marginal_in_manifest (plain bits)
+zm63i = h63i['totals']['zero_marginal_in_manifest']
+assert [int(z[len('bit'):]) for z in zm63i] == \
+    cf63i['zero_marginal_in_manifest'], zm63i
+endpoints['endpoint_cost63i'] = endpoint63i
+claim_crosschecks.append(
+    'cost-63i completed claim fold record matches the published head JSON '
+    'byte-exact (blob sha + 16455 bytes); head transition ends at '
+    '1367/6481/512295/4751/376018 with 18 WIN7 receipts folded (child '
+    'orbit closed by bit-30; the other 45 candidates are REFUTED-D10)')
+
+# ---------- 8n. merged 63h+63i head + reconciliation crosscheck (v11) ----
+# the receipts chain forked at the 58c head 1360: the lane-local 63h fold
+# (1360 -> 1362) and the parallel 63i fold (1360 -> 1367). The merged fold
+# re-folds the single 63h bit-89 receipt on top of the 1367 head, so the
+# merged head supersedes both branch heads as the canonical baseline.
+merged63_name = 'class-frontier-merged-cost63h-63i-recompute-20261116.json'
+hm63 = json.loads((OUT / merged63_name).read_text())
+fm63 = hm63['frontier_after_merged']
+endpoint_merged63 = {
+    'head': merged63_name,
+    'git_blob_sha': POST70E_PINS[merged63_name],
+    'solved_s6_in_manifest': fm63['solved_s6_in_manifest'],
+    'unique_remaining_s6': fm63['unique_remaining_s6'],
+    'sum_remaining_cost': fm63['sum_remaining_cost'],
+    's6_needed_by_open_classes': fm63['s6_needed_by_open_classes'],
+    'cost_needed_by_open_classes': fm63['cost_needed_by_open_classes'],
+    'receipts': hm63['totals']['receipts_folded_here'],
+    'child_closed_by_bit': hm63['totals']['child_closed_by_bit'],
+}
+assert (endpoint_merged63['solved_s6_in_manifest'],
+        endpoint_merged63['unique_remaining_s6'],
+        endpoint_merged63['sum_remaining_cost'],
+        endpoint_merged63['s6_needed_by_open_classes'],
+        endpoint_merged63['cost_needed_by_open_classes']) == \
+    (1369, 6479, 512163, 4749, 375886), endpoint_merged63
+assert endpoint_merged63['receipts'] == 1
+assert endpoint_merged63['child_closed_by_bit'] == 89
+mrec63 = hm63['cost63h_addition_on_1367']
+assert mrec63['root_hex'] == '00000000020000801202000040080000'
+# the re-folded receipt is the 63h head's published bit-89 record: same
+# root, same covers/marginal structure, rebased on the 1367 head
+hrec63h = json.loads(
+    (OUT / 'class-frontier-cost63h-receipts-recompute-20261115.json')
+    .read_text())['cost63h_addition'][0]
+assert mrec63['root_hex'] == hrec63h['root_hex']
+assert mrec63['covers'] == hrec63h['covers'] == 7
+assert mrec63['marginal_manifest_hexes'] == \
+    hrec63h['marginal_manifest_hexes']
+assert mrec63['marginal_in_manifest'] == \
+    hrec63h['marginal_in_manifest'] == 2
+assert hm63['totals']['merged_fold_receipts_total'] == 19
+assert hm63['totals']['marginal'] == 5
+assert hm63['totals']['marginal_in_manifest'] == 2
+# the fork record quotes all three involved head states
+assert '1360/6488/512785/4758/376508' in hm63['fork_record']['common_baseline']
+assert '1362/6486/512653/4756/376376' in hm63['fork_record']['branch_63h']
+assert '1367/6481/512295/4751/376018' in hm63['fork_record']['branch_63i']
+assert hm63['parents_at_merged_head'] == {
+    'second_candidate_s5': {
+        's5_hex': '00000000000000801202000040000000',
+        'rows': 16, 'edge_cost': 1122},
+    'dual_class2_4_s5': {
+        's5_hex': '00000000000000801202000000080000',
+        'rows': 68, 'edge_cost': 5202},
+    'class4_s5': {
+        's5_hex': '00000000000000003800000001800000',
+        'rows': 75, 'edge_cost': 5416},
+    'cost63i_second_parent': {
+        's5_hex': '00000000000000403800000008000000',
+        'rows': 24, 'edge_cost': 1704}}
+# the 63h claim's reconciliation record documents the merged head with
+# its git blob sha; assert it byte-exact against the published file
+recon = json.loads(
+    (OUT / 'class2-lane-cost63h-inflight-20261115.json')
+    .read_text())['reconciliation']
+assert '1369/6479/512163/4749/375886' in recon['merged_head']
+assert endpoint_merged63['git_blob_sha'] in recon['merged_head']
+sha_m63, blen_m63 = git_blob_sha(OUT / merged63_name)
+assert sha_m63 == endpoint_merged63['git_blob_sha']
+assert blen_m63 == 6135
+endpoints['endpoint_merged_63h_63i'] = endpoint_merged63
+claim_crosschecks.append(
+    'merged 63h+63i head pinned and cross-checked against the 63h claim '
+    'reconciliation record: the single bit-89 63h receipt re-folded on the '
+    '63i branch head 1367 (same root/covers/manifest marginals as the '
+    'lane-local 63h record), head 1369/6479/512163/4749/375886 with the '
+    'child orbit closed by bit-89 and the 19 merged receipts total; both '
+    'branch heads (1362, 1367) superseded as canonical baselines')
+
 # ---------- output ----------
 result = {
-    'schema': 'n11-class2-lane-published-chain-roots-independent-audit-20261115-v10',
-    'date': '2026-11-15',
+    'schema': 'n11-class2-lane-published-chain-roots-independent-audit-20261115-v11',
+    'date': '2026-11-16',
     'verdict': 'AUDIT PASSED',
     'method': 'independent whole-chain audit over the published files only '
-              '(no runpy chain replay, no solved-set reconstruction): 108 git '
+              '(no runpy chain replay, no solved-set reconstruction): 110 git '
               'blob pins asserted byte-exact (26 base certificate files + 52 '
-              'pre-70e chain head JSONs + 30 pinned post-70e chain heads '
-              'through the 63h endpoint, the v2 pin proposals 71c/70f/73g/70g '
+              'pre-70e chain head JSONs + 32 pinned post-70e chain heads '
+              'through the merged 63h+63i endpoint, the v2 pin proposals '
+              '71c/70f/73g/70g '
               'now pinned, the 77b head pinned from the 77c baseline quote '
               'plus the 77c head pinned from the 77d claim '
               'chain_head_at_claim, the 75d head pinned from the completed '
               '75d claim output_blob_shas, and the 77d / merged-75d-77d / '
               '79a / 80d / 82c / 83a / 83b / 83c / 83d / 84a / 62a / 58c / '
-              '63h heads '
+              '63h / 63i / merged heads '
               'pinned from their '
               'completed '
               'claim fold records), the root '
@@ -1454,9 +1717,9 @@ result = {
               '74g-69i, 550@76b, 553@77a, 557@77b, 565@77c, 569@75d, '
               '577@77d lane-local, 580@merged-75d-77d, 583@79a, 587@80d, '
               '592@82c, 596@83a, 601@83b, 603@83c, 606@83d, 610@84a, '
-              '616@62a, 649@58c, 650@63h), the '
-              'D4 orbit structure of the full inventory audited (639 distinct '
-              'D4 orbits over 650 roots; 11 twin pairs with full provenance; '
+              '616@62a, 649@58c, 650@63h lane-local, 667@63i, 668@merged), the '
+              'D4 orbit structure of the full inventory audited (657 distinct '
+              'D4 orbits over 668 roots; 11 twin pairs with full provenance; '
               'multi-provenance roots enumerated), per-record geometry '
               'checked for every published receipt record and every nested '
               'group-additions record, child-orbit closure bookkeeping '
@@ -1465,11 +1728,12 @@ result = {
               'orbit, keeping the orbit inventory complete as a SET), and '
               'the head arithmetic re-derived from the published marginal '
               'records with zero anomalies; the canonical-line hex-level '
-              'exactly-once check extended to the 63h endpoint (1362); the '
+              'exactly-once check extended to the merged 63h+63i endpoint (1369); '
+              'the '
               'bit-78 duplicate root (== the 75d bit-92 receipt root) held '
               'to an explicit exactly-once bookkeeping control; the '
-              '77a/77b/77c/75d/77d/79a/80d/82c/83a/83b/83c/83d/84a/62a/58c/63h '
-              'endpoint heads '
+              '77a/77b/77c/75d/77d/79a/80d/82c/83a/83b/83c/83d/84a/62a/58c/63h/'
+              '63i/merged endpoint heads '
               'and their '
               'completed-claim fold records cross-checked byte-exact, the '
               'merged 75d+77d head cross-checked against the 77d claim\u2019s '
@@ -1505,21 +1769,24 @@ result = {
                             'pointer_name_differs_cases': pointer_differs,
                             'anomalies': arith_anomalies},
         'fork_merge_head': fork_entry,
+        'fork_merge_head_63h_63i': fork63_entry,
         'canonical_line_hex_exactly_once': canonical_line_report,
         'bit78_duplicate_root_bookkeeping': bit78_report,
         'endpoint_heads': endpoints,
         'completed_claim_crosschecks': claim_crosschecks,
     },
     'supersedes': 'class2-lane-published-chain-roots-independent-audit-'
-                  'v9-20261115.json (schema v9, 62a endpoint); this v10 '
-                  'output extends the pinned chain to the 63h endpoint '
-                  '(108 pins, 650 roots, 30 post-70e heads, canonical-line '
-                  'exactly-once extended to 1362, 58c + 63h endpoints + '
-                  'claim crosschecks added, the 58c static totals.receipts '
-                  'field (34) held against the 33 folded addition records, '
-                  'and the 63h rebase on the parallel 58c fold asserted '
-                  'from both rebase notes; the v9 file remains published '
-                  'unchanged)',
+                  'v10-20261115.json (schema v10, 63h endpoint); this v11 '
+                  'output extends the pinned chain to the merged 63h+63i '
+                  'endpoint (110 pins, 668 roots, 32 post-70e heads, canonical-line '
+                  'exactly-once extended to 1369 through the 63i head and '
+                  'the merged head with the lane-local 63h head off the '
+                  'line, 63i + merged endpoints + claim and reconciliation '
+                  'crosschecks added, the two-branch receipts fork at the '
+                  '58c head 1360 reconciled, and the merged fork-merge-rebase '
+                  'head arithmetic classified with the external 63i branch '
+                  'marginals held against the 63i head records; the v10 '
+                  'file remains published unchanged)',
     'interpretation_guard': 'bookkeeping audit over published receipts and '
                             'head records only; solved counts measure '
                             'manifest coverage, not the game-theoretic value '
@@ -1531,7 +1798,7 @@ result = {
                             'two-stone root {49,60} / S2 {59,60} / class 1 / '
                             'class 2 / class 4 remain UNKNOWN',
 }
-(OUT / 'class2-lane-published-chain-roots-independent-audit-v10-20261115.json').write_text(
+(OUT / 'class2-lane-published-chain-roots-independent-audit-v11-20261115.json').write_text(
     json.dumps(result, indent=1, sort_keys=True) + '\n')
 assert not geom_anomalies, geom_anomalies
 print('AUDIT PASSED')
@@ -1541,7 +1808,7 @@ print('pins %d (base %d, chain %d, post70e %d)' % (
 print('base roots distinct %d (dup %s), chain distinct %d, overlap %d' % (
     len(base_set), [d['root'] for d in intra_base_duplicates],
     len(chain_set), len(overlap_base_chain)))
-print('cumulative inventory @63h: %d roots / %d D4 orbits / %d twin pairs' % (
+print('cumulative inventory @merged63h63i: %d roots / %d D4 orbits / %d twin pairs' % (
     len(all_roots), n_orbits, len(twin_pairs)))
 print('receipt records %d, group records %d, geometry anomalies %d' % (
     n_receipt_records, n_group_records, len(geom_anomalies)))
