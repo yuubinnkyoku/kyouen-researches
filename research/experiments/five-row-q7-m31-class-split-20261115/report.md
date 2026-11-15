@@ -1,7 +1,7 @@
 # 5x31 q=7 row-deficient maximal nonexistence — class-split sweep report
 
 Date: 2026-11-15 (UTC). Fast lane, successor of K0842 (5x30 witness-free).
-Knowledge item: K0843.
+Knowledge item: K0844.
 
 ## Claim
 

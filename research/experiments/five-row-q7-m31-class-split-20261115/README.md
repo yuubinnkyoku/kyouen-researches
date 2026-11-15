@@ -8,7 +8,7 @@ COMPLETE — all 62 instances decided: 59 deciding instances UNSAT (17 direct
 classes + {0},{1} k=0..4 + k=5 x minpos=0..15), 2 lex=H cross-checks UNSAT,
 positive control SAT. **5x31 q=7 is witness-free.** Single continuous
 session, no environment reset. Raw logs pushed batch-by-batch. See
-report.md and records.jsonl / summary.json. Knowledge item: K0843.
+report.md and records.jsonl / summary.json. Knowledge item: K0844.
 
 ## Claim
 
