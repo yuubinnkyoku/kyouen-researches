@@ -1421,3 +1421,11 @@ cost-70d追記の指摘した78a head 1225と69h head 1221のforkは、前節の
 REFUTED-D10はLOSS証明ではない。解消計数はmanifest被覆の前進であり、盤全体の勝敗ではない。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class1・class2・class4は引き続き **UNKNOWN**。
 
 詳細: [log](../../log/2026-11-15-n11-merged-frontier-78a-69h-independent-verification.md)、[merged head JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-merged-cost78a-69h-recompute-20261115.json)。
+
+## 2026-11-15: cost-70e raw sweep第三独立監査 — WIN7-D10 5 roots・D4重複0・証明書待ち
+
+cost-70e（第二coverable class-2 target S5 `00000000000000801202000000200000` の最安未sweep cost-70 child `00000000000000801202000000200004`・stones [2,21,49,57,60,71]・需要 c1=0,c2=2,c4=0・両開親class-2・head 1227でclaim `14970683`）の並走raw sweep（batch1-9・v16 determinism rerun・v15 crosscheck・総nodes 83,656,928）について、第三独立監査 `audit_cost70e_raw_sweep_20261115.py`（stdlib Bareiss・70d監査geometry流用+70e用新規実装・repo engine不使用）を実施した。**全assert合格**: 独立legal再列挙70がclaimとbit-exact・batch bits 1-9がengine計画と一致・pilot 3402×9・**WIN7-D10 bits [0,8,24,66,79]（nodes 4,596,984/1,333,433/2,197,162/1,763,979/1,765,453）・REFUTED 65・capped 0**・全候補 terminal [13,17]・determinism rerun（batch5）node-exact一致・v15交差エンジン 5/5 WIN loss=true + 3 REFUTEDアンカー（bits 113/75/86）loss=false一致・**WIN 5 rootsのD4正準形は互いにdistinct、かつ公開win7証明書manifest 58ファイル・canonical roots 145個と重複0（すべて新規fold材料候補**・bit0 `00000000000000801202000000200005`・bit8 `00000000000000801202000000200104`・bit24 `00000000000000801202000001200004`・bit66 `00000000000000841202000000200004`・bit79 `00000000000080801202000000200004`）。一石削除D4正準化6件を独立再導出（del-2 = parent1 bit-exact 31行/2334・del-21 = class-2 S5 `00000000000000003800000008400000` 49行/3625・del-49/57/60/71 はhead-1227 ranking CSV（175 open）に不在の閉行）・head-1227 top-candidates CSVのchild行 demand c1=0,c2=2,c4=0・edge cost 70照合。監査2回実行byte-identical（md5 `a75a4dcc306b3a9fa17224fe1265cb05`）。
+
+**証明書待ち**: 5 WIN rootsはfold材料候補だが、foldには blind抽出・独立検証済みWIN7証明書manifestの出版が先決（78a/69hと同じ手順）。出版までhead 1227/6620/522561/4890/386284不変。REFUTED-D10 65件はLOSS証明ではなく、child行は両開親の未解決行のまま。解消計数はmanifest被覆の前進であり、盤全体の勝敗ではない。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class1・class2・class4は引き続き **UNKNOWN**。
+
+詳細: [log](../../log/2026-11-15-n11-class2-lane-cost70e-raw-sweep-audit.md)、[sweep audit](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70e-sweep-audit-20261115.json)。
