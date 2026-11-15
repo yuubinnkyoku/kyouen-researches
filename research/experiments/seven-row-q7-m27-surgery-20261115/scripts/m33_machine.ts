@@ -224,7 +224,7 @@ function safeA(st: RState, A: number[]): 0 | 1 | 2 | 3 {
 }
 interface SliceResult { rejR: number; rejA_cov: number; rejA_saf: number; survivors: number; witnesses: any[]; pairsChecked: number;
   ctl: { covAgree: number, covTaken: number, safAgree: number, safTaken: number } }
-function runSlice(Rs: number[][], enumA: (st: RState) => number[][], spFor: () => ASpace, uFilter: (u: number) => boolean, structAssert?: (us: UStruct, u: number) => void): SliceResult {
+function runSlice(Rs: number[][], enumA: (st: RState) => Iterable<number[]>, spFor: () => ASpace, uFilter: (u: number) => boolean, structAssert?: (us: UStruct, u: number) => boolean): SliceResult {
   const res: SliceResult = { rejR: 0, rejA_cov: 0, rejA_saf: 0, survivors: 0, witnesses: [], pairsChecked: 0,
     ctl: { covAgree: 0, covTaken: 0, safAgree: 0, safTaken: 0 } };
   let covSmp = 0, safSmp = 0;
@@ -502,11 +502,11 @@ if (MODE === "L1f2") {
   const freeIdx = freeE.map(c => eIdx.get(c)!);
   const sp: ASpace = { allowed: new Set<number>([...lineEidx, ...freeIdx]), pairOK: () => true, tripleOK: () => true };
   const Rs = applyChunk(rCombos(r => cnt3on(r) === 0));
-  const enumA = (): number[][] => {
-    const out: number[][] = [];
-    for (const l of lineEidx) for (let i = 0; i < freeIdx.length; i++) for (let j = i+1; j < freeIdx.length; j++) out.push([l, freeIdx[i], freeIdx[j]].sort((a,b)=>a-b));
-    return out;
-  };
+  // generator (no per-R materialization of 173,250 triples): the array version was OOM-killed
+  // mid-run (silent SIGKILL at R~250 with 4 concurrent heavy jobs); semantics identical.
+  function* enumA(): Generator<number[]> {
+    for (const l of lineEidx) for (let i = 0; i < freeIdx.length; i++) for (let j = i+1; j < freeIdx.length; j++) yield [l, freeIdx[i], freeIdx[j]].sort((a,b)=>a-b);
+  }
   const r = runSlice(Rs, enumA, () => sp, (u) => cells[u][1] !== 3);
   console.log(JSON.stringify({ mode: "L1f2", nR: Rs.length, ...r }));
 }
