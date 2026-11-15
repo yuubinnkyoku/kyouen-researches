@@ -123,6 +123,19 @@ l SAT dual-verified: m=23以降単一欠損17石, m=31 4.1s/131 conflicts, 全�
   role: data
   note: "第3系統（純TS/BigInt, verify_independent.ts verbatim・フラグメント照合18/18）で band-extension 全12 witness ((6,4) m=32..40, (5,4) m=37..39) が全て PASS safe+maximal+row-deficient・単一欠損; 陰性対照（石移動→unsafe検出）・陽性対照（前レーン3系統検証済み (6,31,4) witness の再PASS）つき — 3系統検証"
 
+- path: research/experiments/four-row-q4-m35-surgery-20261115/README.md
+  role: proof
+  note: "高速レーン (2026-11-15): m=34 witness 両埋め込みからの bounded-edit surgery 完全列挙負 (offX=0/1: 20,277/21,824 最終状態葉・0 witness) と surgery4.js census 完全性修正 (q<=w の chord-pair census 欠陥: 非行直線・(1,1,1)/(2,1) 行分布円)・buildCensus4 == sat.js 全三つ組 8/8 PASS"
+- path: research/experiments/four-row-q4-m35-class-split-20261115/README.md
+  role: proof
+  note: "高速レーン (2026-11-15) IN FLIGHT: 4×35 absence-capable 完全被覆掃引 (9 正準欠損クラス mod V・単一クラス k×minpos sound H-split・82インスタンス cap 700s resumable)。全 UNSAT なら M_{4,4}=35 or >=37・SAT なら M ∈ [36,237]"
+- path: research/experiments/four-row-q4-m35-class-split-20261115/output/records.jsonl
+  role: data
+  note: "掃引進行記録 (1インスタンス1行・増分 push)。陽性対照 (4,34,4) class{1} k2 p7 は m=34 witness の V∘H 像を含む"
+- path: research/experiments/six-row-q4-m47-rowY0-oom-20261115/README.md
+  role: proof
+  note: "高速レーン (2026-11-15): (6,4) m=47 rowY=0 は kissat RAM 壁 (rc=137/14.3s・sandbox RAM ~2.1GB)。CNF 生成は成功 (2,701,853 vars / 8,965,702 clauses / 259,412 curves)。INDET/OOM・不在主張ではない"
+
 scope: "有限機械検証: kissat 4.0.4（公式静的バイナリ）による SAT 判定は符号化の完全性（def-mode = 行欠損極大安全配置の存在と同値, K0810）と lexer の正しさまで; 構成的延伸 witness は sat.js verifyConfig + Python Fraction の2系統; 前線5幅はさらに第3系統; 各ファミリーの記載幅のみ（未実施幅は不在主張ではない）"
 evidence: "完全符号化 SAT インスタンス（sat2.js def-mode）+ 全 witness 2系統検証（jsVerify/pyVerify 全 records true）+ 前線5幅の第3系統検証（ts-verify-cross-family.json）+ 較正（確定閾値6件再現・(4,4) m=4..25 は環境リセット前後で conflicts bit-exact 一致）+ 構成的延伸（(4,4) m=29,31,33,34: cap 到達 witness の純粋空列追加/シフトを verifyConfig が直接検証, ソルバ不使用）"
 ---
@@ -291,3 +304,44 @@ owY 分割)
 7. 環境運用: wrapper (lean5.sh) が cap 到達時に環境側で殺されても kissat 本体は
    cap まで完走し kissat.txt に最終 stats が残るため、記録を復元して records.jsonl
    に note 付きで保存した（conflicts は決定的値）。実効 CPU ~1コアのため逐次実行。
+
+## 追記 (2026-11-15 高速レーン: 4×35 surgery 完全列挙負・class-split 掃引 IN FLIGHT・6×47 RAM 壁)
+
+1. **(4,4) m=35 bounded-edit surgery 完全列挙 (負・局所)**: m=34 witness
+   (rows [3,3,2,3]・11石) を4×35に2通りに移植 (offX=0: T′={(34,2)} /
+   offX=1: T′={(0,2)}) し、追加≤2・除去≤2・石数≤11 の全編集を完全列挙
+   (four-row-q4-m35-surgery-20261115)。offX=0 は 20,277・offX=1 は 21,824
+   最終状態葉で、すべて safe・**0 witness**。**m=34 witness の両埋め込みから
+   2+2石編集以内に 4×35 witness は存在しない (不在主張ではない)**。
+   連続幅間の witness jump が大きい先行観察 ((5,6) sd≥7・(7,5) 2石移動)
+   と整合。
+2. **surgery.js census の q≤w 不完全性の発見と修正**: 従来の chord-pair
+   census は q>w でのみ完全で、q≤w では非行直線と (1点,1点,1点)/(2点,1点)
+   行分布の円が抜ける ((4,35,4) は q=w で該当)。surgery4.js は列挙コアを
+   verbatim のまま census だけ buildCensus4 に差し替え (全直線 (L)・
+   3行1点円 (E-a)・1行2点+他行1点円 (E-b)・chord-pair verbatim・列挙コアの
+   空白正規化一致を機械検証)。
+   **census 完全性検査 8/8 PASS**: buildCensus4(w,m,q) が sat.js 全三つ組
+   buildCensus と点集合族として完全一致
+   ((4,8,4) 485 / (4,20,4) 7,689 / (4,35,4) 41,607 / (5,12,4) 2,875 /
+   (6,10,4) 2,735 / (3,24,4) 6,413 / (4,10,5) 89 / (4,20,5) 491)。
+   (4,5) m=21 surgery への適用も正当化済み。
+3. **(4,4) m=35 class-split 掃引 IN FLIGHT (absence-capable)**: 前線 m=35 の
+   完全分解掃引を開始 (four-row-q4-m35-class-split-20261115)。9 正準欠損
+   クラス mod V ({0},{1},{0,1},{0,2},{0,3},{1,2},{0,1,2},{0,1,3},{0,1,2,3})・
+   単一クラス {0},{1} は正確な石数 k∈{0,1,2} と minpos p∈0..17
+   (sound H-split: min(x₁,34−x_k)≤17) で分解・multi クラスは直接・
+   計82インスタンス (cap 700s・resumable・全インスタンス lex なし)。
+   **全 UNSAT ⟹ 4×35 欠損極大不在が確定し M_{4,4}=35 or ≥37**
+   (K0821-audit 規約: 36..236 に witness があれば M ≥ 37)・
+   **SAT ⟹ witness 帯は m=4..35 に拡大し M ∈ [36, 237]**。
+   陽性対照 (4,34,4) class{1}k2p7 は m=34 witness の V∘H 像を含む
+   (事前 probe 240s 1,052,475 conflicts 未決着・cap 700s で実行中)。
+   census 41,607 曲線は sat3.js (sat.js 全三つ組) と surgery4.js で一致。
+4. **(6,4) m=47 rowY=0 は kissat RAM 壁**: sat3 streaming 7r 版で CNF 生成
+   成功 (2,701,853 vars / 8,965,702 clauses / 259,412 curves・
+   md5 e2c7ab7255893ea4e974a479bd04c8f3) 後、kissat 4.0.4 が SIGKILL/OOM
+   (rc=137) で 14.3s で死亡 (sandbox RAM ~2.1GB)
+   (six-row-q4-m47-rowY0-oom-20261115)。INDET/OOM であり不在主張ではない。
+   **M_{6,4} ∈ [47, 1113] は不変・前線は m=47 のまま**。決着にはメモリ効率
+   符号化か外部実行が必要。
