@@ -25,9 +25,24 @@ artifacts:
 - path: research/experiments/eight-row-q11-q12-band-closure-20261115/records/calibration-cnf-byteidentity.jsonl
   role: verifier
   note: "21/21 CNF byte-identity of genfam12 vs sat2.js all-triples census (8x11..16 q11/q12) and vs genfast.js chord-pair census (8x17/20/26/40/60 q11/q12); reproduced after a full environment rebuild"
-- path: research/experiments/eight-row-q11-q12-band-closure-20261115/witnesses
+- path: research/experiments/eight-row-q11-q12-band-closure-20261115/witnesses/witness-8x15q12.json
   role: data
-  note: "witness files on main: 8x17..20 q11 and 8x15..16 q12 (kissat SAT beyond the SA non-discovery record); 8x15/16 q11 pending upload from the local artifacts mount; all dual-verified (sat.js verifyConfig + verify_witness.py exact Fraction; rows 2,5 full, single 9-stone deficient row; m=11 q11 witness is 78 stones 2-deficient)"
+  note: "87-stone single-deficiency witness at 8x15 q12, kissat def-mode SAT beyond the SA non-discovery record; dual-verified (sat.js verifyConfig + verify_witness.py exact Fraction)"
+- path: research/experiments/eight-row-q11-q12-band-closure-20261115/witnesses/witness-8x16q12.json
+  role: data
+  note: "87-stone single-deficiency witness at 8x16 q12, kissat def-mode SAT beyond the SA non-discovery record; dual-verified (sat.js verifyConfig + verify_witness.py exact Fraction)"
+- path: research/experiments/eight-row-q11-q12-band-closure-20261115/witnesses/witness-8x17q11.json
+  role: data
+  note: "79-stone single-deficiency witness at 8x17 q11 (rows 2,5 full, single 9-stone deficient row), kissat def-mode SAT beyond the SA non-discovery record; dual-verified (sat.js verifyConfig + verify_witness.py exact Fraction)"
+- path: research/experiments/eight-row-q11-q12-band-closure-20261115/witnesses/witness-8x18q11.json
+  role: data
+  note: "79-stone single-deficiency witness at 8x18 q11 (rows 2,5 full, single 9-stone deficient row), kissat def-mode SAT beyond the SA non-discovery record; dual-verified (sat.js verifyConfig + verify_witness.py exact Fraction)"
+- path: research/experiments/eight-row-q11-q12-band-closure-20261115/witnesses/witness-8x19q11.json
+  role: data
+  note: "79-stone single-deficiency witness at 8x19 q11 (rows 2,5 full, single 9-stone deficient row), kissat def-mode SAT beyond the SA non-discovery record; dual-verified (sat.js verifyConfig + verify_witness.py exact Fraction)"
+- path: research/experiments/eight-row-q11-q12-band-closure-20261115/witnesses/witness-8x20q11.json
+  role: data
+  note: "79-stone single-deficiency witness at 8x20 q11 (rows 2,5 full, single 9-stone deficient row), kissat def-mode SAT beyond the SA non-discovery record; dual-verified (sat.js verifyConfig + verify_witness.py exact Fraction); the m=12..15 SA-lane witnesses, the m=11 78-stone 2-deficient q11 witness and the 8x15/16 q11 witnesses are in the SA-lane experiment dirs and the local artifacts mount pending upload"
 scope: "finite machine verification: kissat 4.0.4 def-mode UNSAT over the family census, sound band-wide for m <= 984 (Theorem A + Corollary 4; the q11 sweep stays within m <= 907) + constructive dual-verified witnesses + K0318 proved tail exclusion; up to census completeness and solver correctness; (8,12) sweep 231..882 in flight"
 evidence: "complete-encoding UNSAT instances (def mode = 'exists a row-deficient maximal safe config' since safety caps every row at q-1) + constructive witnesses dual-verified by two independent systems + 21/21 CNF byte-identity against both predecessor census generators + bit-exact cross-reset determinism (m=21: 1,379,955 and m=26: 162,762 conflicts). See the experiment README."
 ---
