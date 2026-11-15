@@ -1,0 +1,123 @@
+{
+  "date": "2026-11-15",
+  "board": "10x10",
+  "target": 20,
+  "question": "K0141: does a safe 20-stone set exist (K_10 >= 20)?",
+  "method": "SLS in Vibe TS sandbox; deterministic mulberry32 PRNG; incremental violation-list + addcost; exact integer det test",
+  "controls": {
+    "forbidden_quad_count": 54441,
+    "k0057_F10_match": true,
+    "K0035_witness_safe": true,
+    "U_cells": [
+      2,
+      6,
+      16,
+      18,
+      21,
+      25,
+      32,
+      35,
+      40,
+      59,
+      62,
+      67,
+      74,
+      77,
+      78,
+      80,
+      81,
+      83,
+      97,
+      99
+    ],
+    "U_bad_quads": [
+      [
+        25,
+        59,
+        62,
+        83
+      ]
+    ],
+    "U_single_swap_fixable": false,
+    "U_2swap_escape_tries": 3,
+    "U_2swap_escape_fixed": false
+  },
+  "runs": [
+    {
+      "id": "calib",
+      "seed": "0x9E3779B9",
+      "engine": "uniform random walk T=0.5 from U",
+      "moves": 200000,
+      "accepted": 3787,
+      "final_E": 9
+    },
+    {
+      "id": "v2",
+      "seed": "0x1234ABCD",
+      "engine": "greedy-sample(6) WalkSAT; seeds U / T+bestAdd(E=3) / random",
+      "moves": 24000,
+      "units": 155234588,
+      "bestE": 1,
+      "e1_catalog_size": 1,
+      "walk_end_E": [
+        21,
+        45,
+        25
+      ]
+    },
+    {
+      "id": "v2a",
+      "seed": "0x77AA11EE",
+      "engine": "annealing + ILS from best (perturb k=2-4)",
+      "moves": 89936,
+      "units": 500000466,
+      "bestE": 1,
+      "e1_catalog_size": 1,
+      "trace": [
+        "U: moves=25000 units=137419307 E=9",
+        "ils1..ils8: moves=9000 each, ends E=12,12,11,7,14,16,11,16 (ils8 truncated at budget: 1936 moves)"
+      ]
+    },
+    {
+      "id": "v3",
+      "seed": "0xBEADED55",
+      "engine": "full-scan greedy (E<=8 all members x all empties) + kicks + 2-swap escape",
+      "moves": 22564,
+      "units": 500001903,
+      "bestE": 1,
+      "e1_catalog_size": 1,
+      "escapes": 3,
+      "walk_end_E": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": "census",
+      "seed": "0x5EEDC0DE",
+      "engine": "v3 + strong kicks + E<=2 cataloging",
+      "moves": 9466,
+      "units": 500043502,
+      "bestE": 1,
+      "e1_catalog_size": 1,
+      "e2_catalog_size": 0,
+      "escapes": 3,
+      "walk_end_E": [
+        7,
+        8,
+        8
+      ]
+    }
+  ],
+  "totals": {
+    "moves": 345966,
+    "interrupted_unrecorded_calls": 3,
+    "op_budget_aborted_calls": 1
+  },
+  "witness_found": false,
+  "e1_catalog": [
+    "2,6,16,18,21,25,32,35,40,59,62,67,74,77,78,80,81,83,97,99"
+  ],
+  "e2_catalog": [],
+  "interpretation": "bounded negative evidence only; K_10 in [19,23] unchanged; does not prove K_10<=19"
+}
