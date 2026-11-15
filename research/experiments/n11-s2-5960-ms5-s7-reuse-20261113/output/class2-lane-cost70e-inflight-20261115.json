@@ -1,9 +1,9 @@
 {
- "schema": "n11-class2-lane-cost70e-inflight-20261115-v2",
+ "schema": "n11-class2-lane-cost70e-inflight-20261115-v3",
  "title": "n11 class2-lane cost-70e sweep in flight: unswept cost-70 child of the second coverable class-2 target S5 (both parents class 2, c1=0,c2=2,c4=0)",
  "date": "2026-11-15",
  "status": "completed",
- "claimed_by": "long-term class2 lane (cost-69h receipts fold + 78a-head rebase session)",
+ "claimed_by": "long-term class2 lane (cost-69h receipts fold + 78a-head rebase session; cost-70e receipts fold landed at head 1233)",
  "s5": "00000000000000801202000000200000",
  "s6_child": "00000000000000801202000000200004",
  "s6_s7_edge_cost": 70,
@@ -107,15 +107,94 @@
   "pilot_control": "per-batch d6 pilot on the fixed control board, require loss=false nodes=3402, else abort",
   "batches_planned": 9,
   "batch_bits": {
-   "batch1": [0, 1, 3, 4, 6, 8, 9, 10],
-   "batch2": [13, 14, 15, 18, 22, 24, 25, 28],
-   "batch3": [29, 31, 32, 33, 35, 39, 40, 42],
-   "batch4": [43, 44, 51, 52, 55, 56, 59, 61],
-   "batch5": [64, 65, 66, 67, 72, 73, 74, 75],
-   "batch6": [76, 77, 78, 79, 84, 85, 86, 87],
-   "batch7": [88, 89, 90, 91, 92, 94, 95, 96],
-   "batch8": [97, 99, 100, 102, 105, 106, 108, 110],
-   "batch9": [111, 113, 114, 116, 117, 118]
+   "batch1": [
+    0,
+    1,
+    3,
+    4,
+    6,
+    8,
+    9,
+    10
+   ],
+   "batch2": [
+    13,
+    14,
+    15,
+    18,
+    22,
+    24,
+    25,
+    28
+   ],
+   "batch3": [
+    29,
+    31,
+    32,
+    33,
+    35,
+    39,
+    40,
+    42
+   ],
+   "batch4": [
+    43,
+    44,
+    51,
+    52,
+    55,
+    56,
+    59,
+    61
+   ],
+   "batch5": [
+    64,
+    65,
+    66,
+    67,
+    72,
+    73,
+    74,
+    75
+   ],
+   "batch6": [
+    76,
+    77,
+    78,
+    79,
+    84,
+    85,
+    86,
+    87
+   ],
+   "batch7": [
+    88,
+    89,
+    90,
+    91,
+    92,
+    94,
+    95,
+    96
+   ],
+   "batch8": [
+    97,
+    99,
+    100,
+    102,
+    105,
+    106,
+    108,
+    110
+   ],
+   "batch9": [
+    111,
+    113,
+    114,
+    116,
+    117,
+    118
+   ]
   },
   "raw_batch_naming": "class2-lane-cost70e-raw-batch{N}-20261115.jsonl (JSONL: {bit,loss,nodes,capped,terminalStoneRange,ms} plus the pilot control line)"
  },
@@ -148,6 +227,54 @@
   "manifest": "class2-lane-cost70e-win7-certificates-20261115.json (5 certificates, 236,784 rows, 8,564,174 bytes; git blob sha 9f8e5a93562ea9f1ca61ee096d5064b07b782b87)",
   "storage": "class2-lane-cost70e-certificates/ bit{0,8,24,66,79}-root-*.cert.part{1,2}of2 (all ten part git blob shas verified against the manifest; the two certificates not pushed in the extraction session were regenerated end-to-end from the repo-verbatim class4_child1_cert_extractor_exact_v16.ts after a sandbox reset and matched the expected part git blob shas 04d7ddbb/c45d058d (bit8) and 38dc49aa/1ca00ce2 (bit0) byte-exactly)",
   "verification": "BigInt verifier verify_win7_certificate_bigint_independent.mjs 5/5 PASS (subroots 60/63/56/49/52, union 0/0 each, terminals [13,17] each) plus the third independent rational-circumcentre replay audit_cost70e_certificates_third_independent_20261115.mjs (cost70e-third-independent-certificate-audit-20261115.json: 236,784 rows replayed, union 0/0, 31 parent orbits / 11 worklist hits, child winning moves 0,8,24,66,79)",
-  "fold": "PENDING: the 5 receipts are fold material for parent1 00000000000000801202000000200000 (31 rows / 2334) and parent2 00000000000000003800000008400000 (49 rows / 3625) at head 1227, but no fold has been run; any fold must re-fetch latest main, re-assert the canonical chain head at fold time and rebase (parallel lanes 65l/class4-82b/five-row may land a newer head first); the frontier stays 1227/6620/522561/4890/386284 until then"
+  "fold": "COMPLETED: the 5 WIN receipts were folded into the canonical head 1227 by scripts/recompute_frontier_cost70e_receipts_20261115.py (blob df5be7fefce1f28e5798a5903660799575c86b66): publication order [0, 8, 24, 66, 79], total marginal 26 (in-manifest 6), child orbit closed by bit 0; the fold landed head 1233/6614/522131/4884/385854 with parent1 00000000000000801202000000200000 at 28 rows / 2119 and parent2 00000000000000003800000008400000 at 45 rows / 3340; fold outputs verified by blob sha (head json a0171d4bb839aeb813d231c7d879d6a89452359f, ranking csv 33fe27c1e2664ac7644a1eff00df649cb38efe1c, top-candidates csv 4561af13ce0dd743051e5f3485ea040438a3d908)"
+ },
+ "fold": {
+  "status": "completed",
+  "schema": "n11-class2-lane-cost70e-fold-20261115-v1",
+  "chain_head_before": "1227/6620/522561/4890/386284",
+  "chain_head_after": "1233/6614/522131/4884/385854",
+  "fold_base": "canonical head 1227 (no fork: cost-65l and cost-86d lanes had not landed a newer head at fold time)",
+  "publication_order": [
+   0,
+   8,
+   24,
+   66,
+   79
+  ],
+  "receipts_folded": 5,
+  "receipts_refuted_kept": 65,
+  "total_marginal": 26,
+  "total_marginal_in_manifest": 6,
+  "per_bit_marginal": {
+   "0": 5,
+   "8": 5,
+   "24": 6,
+   "66": 6,
+   "79": 4
+  },
+  "per_bit_in_manifest": {
+   "0": 1,
+   "8": 1,
+   "24": 2,
+   "66": 2,
+   "79": 0
+  },
+  "child_orbit_closed_by_bit": 0,
+  "parents_after": {
+   "class2_parent1": "28 rows / 2119",
+   "class2_parent2": "45 rows / 3340"
+  },
+  "head_json_solved_delta": "solved 1227 -> 1233",
+  "hist_c2c4_after": "c2=2,c4=0: 959",
+  "fold_script": "scripts/recompute_frontier_cost70e_receipts_20261115.py",
+  "fold_script_blob": "df5be7fefce1f28e5798a5903660799575c86b66",
+  "output_blob_shas": {
+   "head_json": "a0171d4bb839aeb813d231c7d879d6a89452359f",
+   "ranking_csv": "33fe27c1e2664ac7644a1eff00df649cb38efe1c",
+   "top_candidates_csv": "4561af13ce0dd743051e5f3485ea040438a3d908"
+  },
+  "head_json_bytes": 13667,
+  "verification": "117 inputs byte-exact via git blob sha; sweep re-derived from pure geometry; det rerun batch5 node-exact; 5 certificates parts-join-whole with md5/sha256/blob sha; third audit PASS cross-check; root disjointness vs 492 folded roots PASS; set-equality and reverse-order replay PASS"
  }
 }
