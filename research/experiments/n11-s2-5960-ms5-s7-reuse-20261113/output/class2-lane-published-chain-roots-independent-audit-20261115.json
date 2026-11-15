@@ -15,6 +15,70 @@
    ],
    "raw_listings": 195
   },
+  "canonical_line_hex_exactly_once": {
+   "baseline_solved": 1233,
+   "distinct_marginal_hexes": 49,
+   "endpoint_solved": 1282,
+   "multi_claims": 0,
+   "note": "every manifest hex solved between the 1233 baseline and the 1282 endpoint is claimed as a marginal by exactly one receipt record on the canonical line (branch marginals 65l/74g/69i enter once via the merged-1277 merged_receipts)",
+   "per_head": [
+    {
+     "head": "class-frontier-cost71c-receipts-recompute-20261115.json",
+     "key": "cost71c_addition",
+     "mim_sum": 2,
+     "records": 2
+    },
+    {
+     "head": "class-frontier-cost70f-receipts-recompute-20261115.json",
+     "key": "cost70f_addition",
+     "mim_sum": 4,
+     "records": 4
+    },
+    {
+     "head": "class-frontier-cost72c-receipts-recompute-20261115.json",
+     "key": "cost72c_addition",
+     "mim_sum": 5,
+     "records": 9
+    },
+    {
+     "head": "class-frontier-cost73g-receipts-recompute-20261115.json",
+     "key": "cost73g_addition",
+     "mim_sum": 5,
+     "records": 8
+    },
+    {
+     "head": "class-frontier-cost70g-receipts-recompute-20261115.json",
+     "key": "cost70g_addition",
+     "mim_sum": 5,
+     "records": 8
+    },
+    {
+     "head": "class-frontier-cost73h-receipts-recompute-20261115.json",
+     "key": "cost73h_addition",
+     "mim_sum": 3,
+     "records": 4
+    },
+    {
+     "head": "class-frontier-merged-cost65l-74g-69i-recompute-20261115.json",
+     "key": "merged_receipts",
+     "mim_sum": 20,
+     "records": 16
+    },
+    {
+     "head": "class-frontier-cost76b-receipts-recompute-20261115.json",
+     "key": "cost76b_addition",
+     "mim_sum": 3,
+     "records": 2
+    },
+    {
+     "head": "class-frontier-cost77a-receipts-recompute-20261115.json",
+     "key": "cost77a_addition",
+     "mim_sum": 2,
+     "records": 3
+    }
+   ],
+   "total_mim": 49
+  },
   "chain_head_roots": {
    "distinct": 402,
    "heads": 52,

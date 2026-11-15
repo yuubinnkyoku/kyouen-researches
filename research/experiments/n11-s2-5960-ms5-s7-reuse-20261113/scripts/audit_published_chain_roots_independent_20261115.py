@@ -801,6 +801,82 @@ assert not arith_anomalies, arith_anomalies
 FORK_HEAD = 'class-frontier-merged-recompute-after65h65i-warm67b68c-20261115.json'
 fork_entry = next((a for a in arith if a['head'] == FORK_HEAD), None)
 
+# ---------- 7b. canonical-line hex-level exactly-once ----------
+# The canonical line from the 1233 baseline to the 77a endpoint: every
+# consecutive baseline-quote provenance is already verified by the state
+# matching in section 7; branch heads 65l/74g/69i enter the canonical line
+# exactly once through the merged-1277 head's merged_receipts.
+CANONICAL_LINE = [
+    ('class-frontier-cost71c-receipts-recompute-20261115.json',
+     'cost71c_addition'),
+    ('class-frontier-cost70f-receipts-recompute-20261115.json',
+     'cost70f_addition'),
+    ('class-frontier-cost72c-receipts-recompute-20261115.json',
+     'cost72c_addition'),
+    ('class-frontier-cost73g-receipts-recompute-20261115.json',
+     'cost73g_addition'),
+    ('class-frontier-cost70g-receipts-recompute-20261115.json',
+     'cost70g_addition'),
+    ('class-frontier-cost73h-receipts-recompute-20261115.json',
+     'cost73h_addition'),
+    ('class-frontier-merged-cost65l-74g-69i-recompute-20261115.json',
+     'merged_receipts'),
+    ('class-frontier-cost76b-receipts-recompute-20261115.json',
+     'cost76b_addition'),
+    ('class-frontier-cost77a-receipts-recompute-20261115.json',
+     'cost77a_addition'),
+]
+canon_claims = defaultdict(list)
+canon_sum = 0
+canon_per_head = []
+for cname, ckey in CANONICAL_LINE:
+    cd = json.loads((OUT / cname).read_text())
+    crecs = []
+
+    def _scan(x):
+        if isinstance(x, dict):
+            if ('root_hex' in x or 'root' in x or 'roots' in x) \
+                    and (hexes_of(x) is not None):
+                crecs.append(x)
+                return
+            for y in x.values():
+                _scan(y)
+        elif isinstance(x, list):
+            for y in x:
+                _scan(y)
+
+    _scan(cd[ckey])
+    hsum = 0
+    for rec in crecs:
+        mh = [h for h in (hexes_of(rec) or []) if HEX32.match(h)]
+        m = mim_of(rec)
+        hsum += m if m is not None else 0
+        for h in mh:
+            canon_claims[h].append({'head': cname, 'key': ckey,
+                                    'bit': rec.get('bit')})
+    canon_sum += hsum
+    canon_per_head.append({'head': cname, 'key': ckey,
+                           'records': len(crecs), 'mim_sum': hsum})
+canon_multi = {h: v for h, v in canon_claims.items() if len(v) > 1}
+canon_baseline = next(a['baseline_quote'][0] for a in arith
+                      if a['head'] == CANONICAL_LINE[0][0])
+canon_endpoint = next(a['frontier_solved'] for a in arith
+                      if a['head'] == CANONICAL_LINE[-1][0])
+assert not canon_multi, sorted(canon_multi)[:5]
+assert canon_sum == len(canon_claims), (canon_sum, len(canon_claims))
+assert canon_sum == canon_endpoint - canon_baseline, \
+    (canon_sum, canon_endpoint, canon_baseline)
+canonical_line_report = {
+    'baseline_solved': canon_baseline, 'endpoint_solved': canon_endpoint,
+    'total_mim': canon_sum, 'distinct_marginal_hexes': len(canon_claims),
+    'multi_claims': 0,
+    'per_head': canon_per_head,
+    'note': 'every manifest hex solved between the 1233 baseline and the '
+            '1282 endpoint is claimed as a marginal by exactly one receipt '
+            'record on the canonical line (branch marginals 65l/74g/69i '
+            'enter once via the merged-1277 merged_receipts)',
+}
+
 # ---------- 8. 77a endpoint ----------
 h77 = json.loads((OUT / 'class-frontier-cost77a-receipts-recompute-20261115.json').read_text())
 f77 = h77['frontier_after_cost77a']
@@ -890,6 +966,7 @@ result = {
                             'pointer_name_differs_cases': pointer_differs,
                             'anomalies': arith_anomalies},
         'fork_merge_head': fork_entry,
+        'canonical_line_hex_exactly_once': canonical_line_report,
         'endpoint_77a': endpoint,
         'claim_77a_crosscheck': 'completed claim fold record matches the '
                                  'published 77a head JSON byte-exact (blob '
@@ -926,3 +1003,8 @@ print('convention-external receipts: %d' % len(convention_external))
 print('arith heads %d, anomalies %d, quote errata %d, pointer-differs %d' % (
     len(arith), len(arith_anomalies), len(quote_errata), len(pointer_differs)))
 print('child-closure heads: %d' % len(child_closure_report))
+print('canonical line %d..%d: mim %d / distinct %d / multi 0 (exactly-once)' % (
+    canonical_line_report['baseline_solved'],
+    canonical_line_report['endpoint_solved'],
+    canonical_line_report['total_mim'],
+    canonical_line_report['distinct_marginal_hexes']))

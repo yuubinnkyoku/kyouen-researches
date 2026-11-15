@@ -64,6 +64,14 @@ no reuse of any prior audit script state.
    closed at bit 40; the 77a claim's fold record matches the published head JSON
    byte-exact (blob sha + 7554 bytes), and the published head transition
    1280/6567/518678/4837/382401 -> 1282/6565/518522/4835/382245 holds.
+10. **Canonical-line hex-level exactly-once (1233 -> 1282)**: walking the canonical
+    chain 71c/70f/72c/73g/70g/73h/merged-1277/76b/77a (every consecutive baseline
+    provenance already verified by the state matching in item 6; branch marginals
+    65l/74g/69i enter once via the merged-1277 `merged_receipts`), the 49 manifest
+    hexes solved between the 1233 baseline and the 1282 endpoint are each claimed as
+    a marginal by exactly one receipt record: total mim 49 == 49 distinct hexes ==
+    1282 - 1233, zero multi-claims. The count-level head arithmetic and the hex-level
+    claims agree with no double counting anywhere on the canonical line.
 
 ## Interpretation guard
 
@@ -77,11 +85,14 @@ class 1 / class 2 / class 4 all remain UNKNOWN.**
 ## Machine-readable record
 
 - Audit JSON: `research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-published-chain-roots-independent-audit-20261115.json`
-  — git blob sha `2bffb633970c8b4a7ef74488d087ba694aeba64f`, 78476 bytes,
-  md5 `4daa8da82c83086ed8df7f43f6771ff0`; two consecutive runs byte-identical.
+  — git blob sha `79cab6414f9fd23f7ad7ba16966fe0b214f231a5`, 80309 bytes,
+  md5 `854d5ee5864b9c3087758ec5f086d371`; two consecutive runs byte-identical
+  (supersedes the first landing blob `2bffb633…` / md5 `4daa8da8…`, which did not yet
+  include the canonical-line exactly-once check).
 - Audit script: `research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_published_chain_roots_independent_20261115.py`
-  — git blob sha `3119dd1e29210a222c698daae646b5ffead67d74`, 47735 bytes. Runs from the
-  experiment directory with `output/` holding the 93 published files; every check is an
+  — git blob sha `2fb84e55f088bab36416d17bce2882415dfa555e`, 51308 bytes. Runs from the
+  experiment directory with `output/` holding the 93 published files (verified to run
+  in-repo, byte-identical, with the repo's full output/ present); every check is an
   assert, verdict prints `AUDIT PASSED`.
 - Pin proposals (computed this session, not yet pinned): 71c
   `61af2eb311f938f5ee5bf2bb20d8c1a76787dc87` (11891 B), 70f
