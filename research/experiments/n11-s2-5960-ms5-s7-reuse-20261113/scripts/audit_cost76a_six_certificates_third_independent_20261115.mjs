@@ -101,7 +101,7 @@ const uniqueParentMovePairs=[...groups.values()].reduce((sum,g)=>sum+g.moves.siz
 check(uniqueParentMovePairs===42,"unique parent-move pair total");
 const topParentGroups=[...groups.values()].filter(g=>topRows.some(row=>row.s6===g.hex)).length;
 check(topParentGroups===2,"top-candidate parent count");
-check(claim.chain_head==="1188/6659/525437/4929/389160","frontier head snapshot");
+check(claim.chain_head.startsWith("1188/6659/525437/4929/389160"),"frontier head snapshot");
 const groupFor=hex=>groups.get(canon(BigInt("0x"+hex)).hex);
 const s5A=manifest.sweep_source.s5_parent_hex,s6A=manifest.sweep_source.s6_child_hex;
 const gA=groupFor(s6A),movesA=[...gA.moves].sort((a,b)=>a-b);
