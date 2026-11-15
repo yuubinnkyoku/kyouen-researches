@@ -1,6 +1,6 @@
 # 2026-11-15：published fold-chain全root監査のv7拡張（第一実装） — 83b/83c endpoint・canonical line 1313までexactly-once・603 roots
 
-開始時状況: canonical head **1313/6534/516144/4804/379867**（cost-83c receipts fold・head JSON blob `fc7832ed`・6811 bytes）。同日の83b/83c fold第二独立検証（[83b log](./2026-11-15-n11-class2-lane-cost83b-fold-second-verification.md)、[83c log](./2026-11-15-n11-class2-lane-cost83c-fold-second-verification-and-tmp-reconstruction.md)）に続き、published-fold-chain全root監査の第一実装（v6・endpoint 83a・101 pins・596 roots）を**v7に拡張**した。cost-83d sweepは並走IN FLIGHT（claim `3ba611fc`）のため本拡張は83b/83cまで。
+開始時状況: canonical head **1313/6534/516144/4804/379867**（cost-83c receipts fold・head JSON blob `fc7832ed`・6811 bytes）。同日の83b/83c fold第二独立検証（[83b log](./2026-11-15-n11-class2-lane-cost83b-fold-second-verification.md)、[83c log](./2026-11-15-n11-class2-lane-cost83c-fold-second-verification.md)）に続き、published-fold-chain全root監査の第一実装（v6・endpoint 83a・101 pins・596 roots）を**v7に拡張**した。cost-83d sweepは並走IN FLIGHT（claim `3ba611fc`）のため本拡張は83b/83cまで。
 
 ## 成果1：監査corpusを83b/83c endpointまで機械拡張 — 全統制PASS
 
