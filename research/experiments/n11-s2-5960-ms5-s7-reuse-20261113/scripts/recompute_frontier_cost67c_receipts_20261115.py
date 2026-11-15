@@ -149,7 +149,7 @@ for name, want in MAIN_BLOBS.items():
 CLAIM_BLOBS = (
     '0b98e003fae000bb663e8b5a4d7f6ad5954cedc3',  # v2
     '68f370c2096c16365cfd5bf1d88b7359c655d077',  # v3 fold in flight
-    'd3f2f97dd7975328ea64a430575e57187f0ee31c',  # v4 retired (completed)
+    '728f929d999fba6d0bed8e037b573d528f99616e',  # v4 retired (completed)
 )
 sha, blen = git_blob_sha(OUT / 'class2-lane-cost67c-inflight-20261115.json')
 assert sha in CLAIM_BLOBS, \
