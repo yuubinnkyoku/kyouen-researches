@@ -1,4 +1,4 @@
-# (4,5) 4×21 class-split 掃引 — absence-capable 完全被覆 (2026-11-15 高速レーン・IN FLIGHT)
+# (4,5) 4×21 class-split 掃引 — absence-capable 完全被覆 (2026-11-15 高速レーン・掃引完了: 対照SAT + 73 UNSAT + 2 INDET・残り class{0}k3 p0/p1 は deep cap 2400s でも INDET)
 
 ## 位置づけ
 
