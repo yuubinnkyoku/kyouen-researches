@@ -5,12 +5,13 @@ maximal nonexistence, witness-free width set {19,20,21}).
 
 ## Status
 
-- **Band m=22..55 COMPLETE — every width all 3 row-mirror rowY classes UNSAT
+- **Band m=22..59 COMPLETE — every width all 3 row-mirror rowY classes UNSAT
   (plus a lex=H cross-encoding re-check of the hardest class per width).**
-  The witness-free width set of (6,8) is now **{19,...,55}**; M_{6,8} in
-  {19,...,55} or >= 57 (sharp form per the K0821-audit convention: M = 19 or
-  >= 57). Upper 371 (K0318/K0024 substitution) unchanged.
-- Frontier width: 6x56. Long-term: sweeping the band to m=370 witness-free
+  The witness-free width set of (6,8) is now **{19,...,59}**; M_{6,8} in
+  {19,...,59} or >= 61 (sharp form per the K0821-audit convention: M = 19 or
+  >= 61). Upper 371 (K0318/K0024 substitution) unchanged.
+- Frontier width: 6x60 — blocked by the sat2.js generation RAM wall at m=60
+  (see the wall section), not by solver difficulty. Long-term: sweeping the band to m=370 witness-free
   would, with U=371, close M_{6,8} = 19 exactly.
 
 ## Band results (kissat 4.0.4 official linux-amd64, all exit 20)
@@ -54,14 +55,19 @@ classes (lex=H cross-check excluded).
 | 53 | 98,308 / 7.37s | 99,031 / 6.94s | 33,251 / 3.13s | 73,104 / 6.49s | 230,590 |
 | 54 | 109,295 / 8.50s | 89,971 / 7.88s | 32,535 / 3.49s | 73,563 / 7.01s | 231,801 |
 | 55 | 130,116 / 9.50s | 76,771 / 6.11s | 28,309 / 3.34s | 82,902 / 6.71s | 235,196 |
+| 56 | 96,816 / 7.35s | 69,459 / 6.25s | 31,733 / 3.61s | 81,988 / 7.24s | 198,008 |
+| 57 | 102,785 / 8.04s | 71,298 / 6.20s | 32,824 / 3.85s | 62,783 / 6.54s | 206,907 |
+| 58 | 96,183 / 8.44s | 105,216 / 9.15s | 30,019 / 4.07s | 76,539 / 7.75s | 231,418 |
+| 59 | 95,418 / 8.72s | 71,086 / 7.70s | 29,466 / 4.20s | 76,036 / 7.80s | 195,970 |
 
 Difficulty shape: the deciding totals fell from 4,291,607 (m=22) to a
-**local minimum 149,978 at m=48**, then turned and are **rising again**
+**local minimum 149,978 at m=48**, then turned and **rose again**
 (151,752 / 156,952 / 181,945 / 196,023 / 230,590 / 231,801 / 235,196 for
-m=49..55). The hardest class is no longer fixed: from m=44 on it alternates
+m=49..55), then levelled off (198,008 / 206,907 / 231,418 / 195,970 for
+m=56..59). The hardest class is no longer fixed: from m=44 on it alternates
 between y=0 and y=1 (m=53: y=1 at 99,031; m=54/55: y=0 at 109,295 /
-130,116). The rising leg is still 18x below the m=22 start. No SAT witness
-anywhere in the band.
+130,116; m=58: y=1 at 105,216). The m=56..59 leg is still 18x below the
+m=22 start. No SAT witness anywhere in the band.
 
 ## Coverage argument (each width)
 
@@ -98,20 +104,30 @@ lex=H instance re-decides the rowY=1 class under a different encoding
   53,691 / 58,028; 70,742 / 39,530 / 68,550 / 48,259) — a cross-reset
   determinism calibration of the whole toolchain.
 
-## The m=53 generation heap wall and its resolution
+## The m=53 heap wall and the m=60 RAM wall
 
 At m=53 (n=318) the sat2.js CNF generation died with a V8 default-heap OOM
 (~512 MB, "Ineffective mark-compacts near heap limit") in all four
 encodings — the memory wall predicted from the 7-row lane's n=196 rc137
 incident, arriving later than extrapolated (the earlier prediction was
 m≈32-33) because it is a V8 heap-limit artifact, not a RAM wall. Re-running
-with `node --max-old-space-size=3500` generates m=53 in ~10 s per instance;
-m=53, 54, 55 were produced this way (sweep_width.sh now carries the flag).
-Generation cost grows ~cubically (census of all triples), so a true RAM wall
-will eventually arrive; the fallback remains the genfast3.js generator
-(valid for q >= w+2; (6,8) qualifies with q=8=w+2), to be calibrated by CNF
-byte-identity against sat2.js on shared widths before any genfast3-only
-width is claimed.
+with `node --max-old-space-size=3500` (later 900) generates m=53..59 in
+10-20 s per instance; m=53..59 were produced this way (sweep_width.sh now
+carries the flag). At **m=60 the wall became real**: the census needs
+~750 MB and the environment RAM cap sits just below/around it —
+--max-old-space-size=900 generated one m=60 CNF but the next run was
+kernel-killed (rc 137); 1400 is killed instantly; 800 dies with a JS heap
+OOM at ~585 MB. **sat2.js band frontier: m=59 (free); m=60 blocked by
+generation memory, not by the solver.** The m>=60 band is NOT claimed here:
+it is the territory of the parallel IN FLIGHT experiment
+`six-row-q8-band-closure-22-370-20261114`, whose genfast3.js generator
+(chord-pair abstract-circle census, valid for q >= w+2; (6,8) qualifies
+with q=8=w+2; generation O(C(w,2)·m^2·w), seconds at m=370, no all-triples
+census) is already calibrated there against sat2.js (CNF byte-identity 6/6
+samples including 6x21 rowY=1 and 6x24 def+lex, instance-identity 2/2). This
+lane's m=22..59 row-split results and cross-encodings stand as the
+independent-encoding complement of that lane's def-mode sweep; the wall
+documented here does not affect genfast3 generation.
 
 ## Honest negative
 
@@ -128,9 +144,10 @@ from seven-row-q7-witness-search-20261114/scripts (blob shas 6c3262d6... /
 edfae1d2...); verify_witness.py (ea7203a3...); kissat 4.0.4 official
 linux-amd64 (md5 3a5eba830aa6008a604fcc9bbe99a325). decode_verify.js
 (NEW, this lane): decodes the kissat model into stones and runs the js
-verifier - see scripts/. Since m=53 the generator runs with
-`--max-old-space-size=3500` (see the wall section); this changes no output,
-only the heap ceiling.
+verifier - see scripts/. Since m=53 the generator runs with an explicit
+`--max-old-space-size` flag (3500 for m=53..59's first runs, 900 from the
+m=56 batch on; see the wall section); this changes no output, only the
+heap ceiling.
 
 ## Incident note
 
@@ -143,7 +160,9 @@ JSON to stay under the sandbox 16 MiB op-recording limit.)
 
 ## Not claimed
 
-- 6x56 and above until the corresponding sweeps finish (frontier: 6x56).
+- 6x60 and above (claimed by the IN FLIGHT band-closure experiment
+  `six-row-q8-band-closure-22-370-20261114`, genfast3 machinery; this lane
+  stops at the m=60 sat2.js generation RAM wall and defers the rest).
 - Any band width decided only by genfast3.js before its CNF byte-identity
   calibration against sat2.js passes on shared widths.
 - 11x11 empty board, two-stone root {49,60}, S2 {59,60}, class 2, class 4:
