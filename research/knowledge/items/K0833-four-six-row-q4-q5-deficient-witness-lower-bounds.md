@@ -135,6 +135,16 @@ l SAT dual-verified: m=23以降単一欠損17石, m=31 4.1s/131 conflicts, 全�
 - path: research/experiments/six-row-q4-m47-rowY0-oom-20261115/README.md
   role: proof
   note: "高速レーン (2026-11-15): (6,4) m=47 rowY=0 は kissat RAM 壁 (rc=137/14.3s・sandbox RAM ~2.1GB)。CNF 生成は成功 (2,701,853 vars / 8,965,702 clauses / 259,412 curves)。INDET/OOM・不在主張ではない"
+- path: research/experiments/four-row-q5-m21-surgery-20261115/README.md
+  role: proof
+  note: "高速レーン (2026-11-15): (4,5) m=21 bounded-edit surgery 完全列挙負 — m=20 witness 両埋め込みから (2,2) 12,754/12,816 最終状態葉・(3,3) sd≤6 拡張 1,250,587/1,256,103 葉・すべて safe・0 witness; census 542 曲線は sat2.js (4,21,5) def-mode 記録と一致"
+- path: research/experiments/four-row-q5-m21-class-split-20261115/README.md
+  role: proof
+  note: "高速レーン (2026-11-15) IN FLIGHT: (4,5) m=21 absence-capable 完全被覆掃引 (9 正準欠損クラス mod V・単一クラス k∈0..3×minpos p∈0..10 sound H-split・multi 7 直接・76インスタンス cap 600s resumable・driver v2)。全 UNSAT なら M_{4,5}=21 or >=23・SAT なら M ∈ [22,140]。対照 (4,20,5) class{0} k3 p1 SAT 20.0s/375,415・復号 witness は m=20 witness の V 像 (js+py 検証)"
+- path: research/experiments/four-row-q5-m21-class-split-20261115/output/records.jsonl
+  role: data
+  note: "掃引進行記録 (1インスタンス1行・増分 push)。対照 SAT (V 像 decode・2系統検証) + c0k3p0 cap 600s INDET 7,814,011 conflicts"
+
 
 scope: "有限機械検証: kissat 4.0.4（公式静的バイナリ）による SAT 判定は符号化の完全性（def-mode = 行欠損極大安全配置の存在と同値, K0810）と lexer の正しさまで; 構成的延伸 witness は sat.js verifyConfig + Python Fraction の2系統; 前線5幅はさらに第3系統; 各ファミリーの記載幅のみ（未実施幅は不在主張ではない）"
 evidence: "完全符号化 SAT インスタンス（sat2.js def-mode）+ 全 witness 2系統検証（jsVerify/pyVerify 全 records true）+ 前線5幅の第3系統検証（ts-verify-cross-family.json）+ 較正（確定閾値6件再現・(4,4) m=4..25 は環境リセット前後で conflicts bit-exact 一致）+ 構成的延伸（(4,4) m=29,31,33,34: cap 到達 witness の純粋空列追加/シフトを verifyConfig が直接検証, ソルバ不使用）"
@@ -345,3 +355,38 @@ owY 分割)
    (six-row-q4-m47-rowY0-oom-20261115)。INDET/OOM であり不在主張ではない。
    **M_{6,4} ∈ [47, 1113] は不変・前線は m=47 のまま**。決着にはメモリ効率
    符号化か外部実行が必要。
+
+## 追記 (2026-11-15 高速レーン: (4,5) m=21 surgery 完全列挙負 (sd≤6) と class-split 掃引 IN FLIGHT)
+
+1. **(4,5) m=21 bounded-edit surgery 完全列挙 (負・局所)**: m=20 witness
+   (rows [4,4,4,3]・15石) を4×21に両埋め込み (offX=0/1) し、追加・除去
+   上限 (2,2) の全編集を完全列挙 (four-row-q5-m21-surgery-20261115)。
+   最終状態葉 12,754/12,816・すべて safe・**0 witness**
+   (移植で未遮断の空点は T′={(20,3)}/{(0,3)} の1点のみ・census 542 曲線は
+   sat2.js (4,21,5) def-mode 記録と一致)。さらに **(3,3) 拡張 (sd≤6) も
+   完全列挙**: 1,250,587/1,256,103 葉・0 maximal・0 witness (~8秒/埋め込み・
+   決定的)。**m=20 witness 両埋め込みから sd≤6 以内の ≤15石 m=21 witness は
+   存在しない (不在主張ではない)**。連続幅間の witness jump が大きい先行観察
+   ((4,4) m=34→35 surgery 負・(5,6) sd≥7) と整合。
+2. **(4,5) m=21 class-split 掃引 IN FLIGHT (absence-capable)**
+   (four-row-q5-m21-class-split-20261115): 9 正準欠損クラス mod V・
+   単一クラス {0},{1} は正確な石数 k∈{0..3} × minpos p∈0..10
+   (sound H-split: min(x₁,20−x_k)≤floor(20/2)=10・H は行を保存)・
+   multi クラス7個は直接・計76インスタンス (cap 600s・resumable・
+   全インスタンス lex なし)。**全 UNSAT ⟹ M_{4,5}=21 or ≥23・
+   SAT ⟹ M ∈ [22,140]**。較正: 陽性対照 (4,20,5) class{0} k3 p1 は
+   **SAT 20.0s/375,415 conflicts**・復号 witness (rows [3,4,4,4]) は
+   m=20 witness の V 像・sat3.js decode verifyConfig + Python Fraction の
+   2系統検証 ok — decode 鎖とクラス論法が実地検証済み。初記録 c0k3p0 は
+   cap 600s INDET 7,814,011 conflicts — 2クラス lex 掃引 (~7M/クラス) と
+   同水準の均質な前線抵抗。
+3. **掃引 driver v2 bugfix (skip 経路の per-key SAT 判定)**: resumable driver
+   (sweep21.sh/sweep35.sh) の skip 経路が records 全体から SAT record を
+   grep するため、**対照 SAT record が存在すると resume 直後の最初の skip で
+   SATFOUND=1 が立ち掃引が誤終了する** bug があった (q5 掃引の再開時に
+   実際に SWEEP_BATCH_DONE satfound=1 を観測して発見)。同一 key の record に
+   限定する判定に修正し両 driver に適用済み。q4 掃引 (sweep35) は対照が
+   INDET だったため同 bug は一度も顕在化していない。対照直後の
+   SATFOUND=0 リセットだけでは不十分だったことを両実験 README に記録。
+   併せて conflicts 抽出 grep の CR 混入行 binary 判定 (conflicts null 化) を
+   grep -a で修正済み。
