@@ -1,18 +1,19 @@
 #!/usr/bin/env python3
 """Machine crosscheck of the two independent published-fold-chain root
-audit implementations at both endpoints (2026-11-15).
+audit implementations at all three endpoints (2026-11-15).
 
 The first implementation (v1 line, audit_published_chain_roots_independent_
-20261115.py, published outputs schema v3/v4) and the second implementation
-(v2/v4 line, audit_published_chain_roots_second_independent_20261115.py /
-..._v4_20261115.py, published outputs schema v2/v4) were developed
-independently and both pass every control over the same published corpus.
-This third script pins that agreement mechanically: it re-reads the four
-published audit JSONs (blob-pinned below) and asserts that every shared
-control agrees at both endpoints:
+20261115.py, published outputs schema v3/v4/v5) and the second implementation
+(v2/v4/v5 line, audit_published_chain_roots_second_independent_20261115.py /
+..._v4_20261115.py / ..._v5_20261115.py, published outputs schema v2/v4/v5)
+were developed independently and both pass every control over the same
+published corpus. This third script pins that agreement mechanically: it
+re-reads the six published audit JSONs (blob-pinned below) and asserts that
+every shared control agrees at all three endpoints:
 
   75d endpoint pair: v3 (first impl)  vs  v2 (second impl)
   80d endpoint pair: v4 (first impl)  vs  v4 (second impl)
+  82c endpoint pair: v5 (first impl)  vs  v5 (second impl)
 
 Checked per endpoint pair:
   1. cumulative_by_post70e_head: same head sequence and same per-head
@@ -27,8 +28,8 @@ Checked per endpoint pair:
   6. convention_external_receipts: full record equality
   7. child_closure: full record equality
   8. base_roots / chain_head_roots / inventory_at_1233: full equality
-  9. endpoint head records (75d / 80d): full numeric record equality
- 10. (80d) bit-78 duplicate-root bookkeeping: identical root hex
+  9. endpoint head records (75d / 80d / 82c): full numeric record equality
+ 10. (80d/82c) bit-78 duplicate-root bookkeeping: identical root hex
  11. pins_checked: base and chain pin groups must be equal; the post-70e
      count difference must equal exactly the four v2 pin proposals
      (71c/70f/73g/70g) that only the first implementation pins
@@ -61,6 +62,10 @@ AUDIT_PINS = {
         'c3df2d1e5d4a4c698b9c8bcc401182524d93f218',
     'class2-lane-published-chain-roots-second-independent-audit-v4-20261115.json':
         'e3a0b7da0a7b1e59137bc4bf5f82ce3e8892a59d',
+    'class2-lane-published-chain-roots-independent-audit-v5-20261115.json':
+        'd648ed70e8ccafea0ab3cdafe8a3e9cb494f85c7',
+    'class2-lane-published-chain-roots-second-independent-audit-v5-20261115.json':
+        'af86251aa390c4835e56d2948f69b5504d9921a8',
 }
 for name, want in sorted(AUDIT_PINS.items()):
     s = git_blob_sha(OUT / name)
@@ -75,12 +80,16 @@ v3 = load('class2-lane-published-chain-roots-independent-audit-20261115.json')
 v2 = load('class2-lane-published-chain-roots-independent-audit-v2-20261115.json')
 v4f = load('class2-lane-published-chain-roots-independent-audit-v4-20261115.json')
 v4s = load('class2-lane-published-chain-roots-second-independent-audit-v4-20261115.json')
+v5f = load('class2-lane-published-chain-roots-independent-audit-v5-20261115.json')
+v5s = load('class2-lane-published-chain-roots-second-independent-audit-v5-20261115.json')
 
 assert v3['schema'] == 'n11-class2-lane-published-chain-roots-independent-audit-20261115-v3'
 assert v2['schema'] == 'n11-class2-lane-published-chain-roots-independent-audit-20261115-v2'
 assert v4f['schema'] == 'n11-class2-lane-published-chain-roots-independent-audit-20261115-v4'
 assert v4s['schema'] == 'n11-class2-lane-published-chain-roots-second-independent-audit-20261115-v4'
-for d in (v3, v2, v4f, v4s):
+assert v5f['schema'] == 'n11-class2-lane-published-chain-roots-independent-audit-20261115-v5'
+assert v5s['schema'] == 'n11-class2-lane-published-chain-roots-second-independent-audit-20261115-v5'
+for d in (v3, v2, v4f, v4s, v5f, v5s):
     assert d['verdict'] == 'AUDIT PASSED', d['schema']
 
 
@@ -204,22 +213,38 @@ b78_b = controls(v4s)['bit78_duplicate_root_bookkeeping']['root_hex']
 assert b78_a == b78_b, (b78_a, b78_b)
 pair_80d['bit78_root_hex'] = b78_a
 
+# 82c pair
+pair_82c = crosscheck('82c', v5f, v5s)
+ep82_a = controls(v5f)['endpoint_heads']['endpoint_cost82c']
+ep82_b = controls(v5s)['endpoint_82c']
+assert ep82_a == ep82_b, '82c endpoint record'
+pair_82c['endpoint_82c'] = ep82_a
+b78_a5 = controls(v5f)['bit78_duplicate_root_bookkeeping']['root_hex']
+b78_b5 = controls(v5s)['bit78_duplicate_root_bookkeeping']['root_hex']
+assert b78_a5 == b78_b5 == b78_a, (b78_a5, b78_b5, b78_a)
+pair_82c['bit78_root_hex'] = b78_a5
+
 # endpoint progression sanity across the two audits of each implementation
 assert pair_75d['d4']['roots'] == 569 and pair_80d['d4']['roots'] == 587
+assert pair_82c['d4']['roots'] == 592
 assert pair_75d['canonical_line']['endpoint_solved'] == 1296
 assert pair_80d['canonical_line']['endpoint_solved'] == 1305
+assert pair_82c['canonical_line']['endpoint_solved'] == 1306
 assert pair_75d['cumulative_heads'] == 17 and pair_80d['cumulative_heads'] == 21
+assert pair_82c['cumulative_heads'] == 22
 assert pair_75d['child_closure_heads'] == 24 and pair_80d['child_closure_heads'] == 28
+assert pair_82c['child_closure_heads'] == 29
 assert pair_80d['d4']['orbits'] == pair_80d['d4']['roots'] - 11
+assert pair_82c['d4']['orbits'] == pair_82c['d4']['roots'] - 11
 
 result = {
-    'schema': 'n11-class2-lane-published-fold-chain-dual-implementation-agreement-20261115',
+    'schema': 'n11-class2-lane-published-fold-chain-dual-implementation-agreement-20261115-v2',
     'date': '2026-11-15',
     'verdict': 'AGREEMENT CONFIRMED',
     'method': 'third, machine crosscheck of the two independently developed '
               'published-fold-chain root audit implementations over their '
-              'four published audit JSONs (blob-pinned): at both the 75d '
-              'and the 80d endpoint pair, the cumulative per-head '
+              'six published audit JSONs (blob-pinned): at all three '
+              'endpoint pairs (75d, 80d and 82c), the cumulative per-head '
               'bookkeeping (sequence and all fields), D4 orbit structure, '
               'per-record geometry counts and errata, head arithmetic '
               'classification/quote/anomaly counts, canonical-line '
@@ -227,15 +252,25 @@ result = {
               'child-closure bookkeeping, base/chain/baseline inventory '
               'and the endpoint head records agree exactly; the pin count '
               'difference is exactly the four v2 pin proposals pinned only '
-              'by the first implementation; at the 80d endpoint the bit-78 '
-              'duplicate-root bookkeeping reports the identical root',
+              'by the first implementation; at the 80d and 82c endpoints '
+              'the bit-78 duplicate-root bookkeeping reports the identical '
+              'root',
     'inputs': {
         'audit_json_pins': AUDIT_PINS,
-        'first_implementation_schemas': [v3['schema'], v4f['schema']],
-        'second_implementation_schemas': [v2['schema'], v4s['schema']],
+        'first_implementation_schemas': [v3['schema'], v4f['schema'],
+                                         v5f['schema']],
+        'second_implementation_schemas': [v2['schema'], v4s['schema'],
+                                          v5s['schema']],
     },
     'pair_75d': pair_75d,
     'pair_80d': pair_80d,
+    'pair_82c': pair_82c,
+    'supersedes': 'class2-lane-published-fold-chain-dual-implementation-'
+                  'agreement-20261115.json (schema v1, 75d + 80d endpoint '
+                  'pairs); this v2 output adds the 82c endpoint pair '
+                  '(first-impl v5 vs second-impl v5, both extending the '
+                  'pinned chain to the 1306 endpoint); the v1 file '
+                  'remains published unchanged',
     'interpretation_guard': 'bookkeeping agreement crosscheck over '
                             'published audit outputs only; solved counts '
                             'measure manifest coverage, not the '
@@ -246,7 +281,7 @@ result = {
                             'two-stone root {49,60} / S2 {59,60} / class '
                             '1 / class 2 / class 4 remain UNKNOWN',
 }
-(OUT / 'class2-lane-published-fold-chain-dual-implementation-agreement-20261115.json').write_text(
+(OUT / 'class2-lane-published-fold-chain-dual-implementation-agreement-v2-20261115.json').write_text(
     json.dumps(result, indent=1, sort_keys=True) + '\n')
 print('AGREEMENT CONFIRMED')
 print('75d pair: %d heads / %d roots / %d orbits / %d twins / canon %d..%d mim %d'
@@ -262,3 +297,10 @@ print('80d pair: %d heads / %d roots / %d orbits / %d twins / canon %d..%d mim %
          pair_80d['canonical_line']['endpoint_solved'],
          pair_80d['canonical_line']['total_mim'],
          pair_80d['bit78_root_hex']))
+print('82c pair: %d heads / %d roots / %d orbits / %d twins / canon %d..%d mim %d / bit78 %s'
+      % (pair_82c['cumulative_heads'], pair_82c['d4']['roots'],
+         pair_82c['d4']['orbits'], pair_82c['d4']['twin_pairs'],
+         pair_82c['canonical_line']['baseline_solved'],
+         pair_82c['canonical_line']['endpoint_solved'],
+         pair_82c['canonical_line']['total_mim'],
+         pair_82c['bit78_root_hex']))
