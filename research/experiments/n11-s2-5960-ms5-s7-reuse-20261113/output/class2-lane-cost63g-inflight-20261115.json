@@ -1,8 +1,8 @@
 {
-  "schema": "n11-class2-lane-cost63g-inflight-20261115-v2",
-  "title": "n11 class2-lane cost-63g sweep and certificates COMPLETE (63/63 candidates, 14 WIN7 certificates published and double-verified); receipt fold pending, must rebase on chain head 1199 (class-frontier-cost63f-receipts-recompute-20261115.json)",
+  "schema": "n11-class2-lane-cost63g-inflight-20261115-v3",
+  "title": "n11 class2-lane cost-63g COMPLETE (63/63 candidates, 14 WIN7-D10 receipts folded in published bit order; child orbit 00000000080000801202000000200000 closed by bit0; chain head 1199 -> 1216/6631/523382/4901/387105)",
   "date": "2026-11-15",
-  "status": "sweep_and_certificates_complete_fold_pending",
+  "status": "completed",
   "claimed_by": "long-term class2 lane (separate execution from the cost-63f lane)",
   "s5": "00000000000000801202000000200000",
   "s6_child": "00000000080000801202000000200000",
@@ -253,5 +253,35 @@
   "verdict_semantics": "loss=true => WIN7-within-depth-10 candidate (certificate rebuild target); loss=false && !capped => REFUTED-D10, no first-player win within depth 10 (NOT a LOSS proof); capped => proves nothing either way",
   "frontier_impact_note": "Sweep and certificates change no frontier counts by themselves; the pending receipt fold must be rebased on the canonical chain head 1199/6648/524616/4918/388339 (class-frontier-cost63f-receipts-recompute-20261115.json). Fold plan: assert head 1199 byte-identical reproduction via the runpy chain, assert the cost-63g child is genuinely remaining at 1199, re-derive the sweep audit from the raw batches, assert all 14 certificates (md5/sha256/git blob sha/rows/union 0/0/terminal [13,17]), fold the 14 receipts in public bit order with per-receipt marginal recomputed from the growing union at 1199.",
   "unknown_note": "The standard 11x11 empty board, both two-stone roots {49,60}/{59,60}, S2 {59,60}, class 2 and class 4 all remain UNKNOWN.",
-  "next_action": "Build and run the receipt fold recompute script rebase-checked on head 1199, push the new head JSON + two ranking CSVs + fold record, append the K0783 knowledge item, then retire this claim."
+  "next_action": "Retired. The canonical chain head is now 1216/6631/523382/4901/387105 (class-frontier-cost63g-receipts-recompute-20261115.json); subsequent folds (cost-65l receipts, cost-78a certificates, cost-69g/65j/74e lanes) must assert this head before extending.",
+  "fold": {
+    "fold_completed_utc": "2026-11-15T01:57Z",
+    "fold_script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost63g_receipts_20261115.py",
+    "fold_script_blob_sha": "2f2cfa6b1ffc4f8a68fbfcc1247c61fefd700687",
+    "baseline": "class-frontier-cost63f-receipts-recompute-20261115.json (1199/6648/524616/4918/388339, git blob sha e1e72b12ca39769f2c4a298d91833b612c97afeb; reproduced byte-identically by the runpy chain inside the fold script)",
+    "chain_head_after": "1216/6631/523382/4901/387105",
+    "total_marginal": 73,
+    "total_marginal_in_manifest": 17,
+    "zero_marginal_in_manifest_bits": [
+      58,
+      64
+    ],
+    "child_orbit_closed_by_bit": 0,
+    "parents_after": {
+      "parent1": "33 rows / 2470",
+      "parent2": "58 rows / 4351",
+      "note": "parent1 matches the published parent-lift impact audit prediction (cost63g-parent-lift-frontier-impact-20261115.json); neither S5 parent is solved"
+    },
+    "extraction_nodes_correction": {
+      "claim_figure": 54670950,
+      "manifest_re_sum": 54670850,
+      "note": "the claim figure (win7_certificates.extraction_nodes, unchanged above as published) was superseded by the certificate-manifest per-certificate re-sum in the fold script; the manifest re-sum is authoritative"
+    },
+    "output_blob_shas": {
+      "head_json": "e311e24346adad570e42f145f9190fe8427ae921",
+      "ranking_csv": "15eb7f9684bb715bcfa2090dc989e92b4c9b4989",
+      "top_candidates_csv": "77c12f798e9aa3341d1aa1e4e3481e955ebd51f6"
+    },
+    "unknown_note": "The standard 11x11 empty board, both two-stone roots {49,60}/{59,60}, S2 {59,60}, class 2 and class 4 all remain UNKNOWN; folding these receipts measures manifest coverage only."
+  }
 }
