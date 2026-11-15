@@ -4979,7 +4979,7 @@
 - → depends_on [K0806](../items/K0806-six-row-q7-stabilization-bounds.md): 上界（K0318代入）は不変
 - ← generalizes [K0815](../items/K0815-witness-column-extension-kissat-bounds.md): SA抵抗帯6×29/6×22に欠損極大witnessが実在することを拡張列挙で示し下界を更新。M_{6,5}=29可能性（6×29 UNSAT）は反証。深除去拡張（第5弾）で6×30・6×23にもwitnessを実在させ M_{6,5}=30・M_{6,6}=23 の可能性も反証
 
-## [K0812](../items/K0812-new-exceptional-primes-3719-3727.md) p=3719・3727・3967・4211・4231・4373・4759・5039・5051・5059・5623は等号A(p)=(p+3)/2を達成せず、単一CNFのDRAT証明書で監査済み（既知4素数の外側で新発見）
+## [K0812](../items/K0812-new-exceptional-primes-3719-3727.md) p=3719・3727・3967・4211・4231・4373・4759・5039・5051・5059・5623・6247は等号A(p)=(p+3)/2を達成せず、単一CNFのDRAT証明書で監査済み（既知4素数の外側で新発見）
 
 - → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 上界A(p)<=(p+3)/2と、サイズh+2の集合が(1,1,0)の一クラスに限られること
 - → depends_on [K0771](../items/K0771-forbidden-edge-generator-completeness.md): 禁止四点リストの健全・完全・重複なし（CNFの幾何節の根拠）

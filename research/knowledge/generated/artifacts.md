@@ -12255,6 +12255,9 @@
 
 - [K0101](../items/K0101-prime-parabola-equality-open.md) (manifest): p=5623の等号不達成（サイズh+2の単一CNF・DRAT VERIFIED）
 - [K0812](../items/K0812-new-exceptional-primes-3719-3727.md) (manifest): 19,676変数・178,786節・648,324行DRAT・VERIFIED（3,324秒）
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-6247-3125/receipt.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-6247-3125/receipt.json)
+
+- [K0812](../items/K0812-new-exceptional-primes-3719-3727.md) (manifest): 21,860変数・213,895節・95,296行DRAT・VERIFIED（159秒）
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full.json)
 
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (data): 旧チェッカーの標本21 dの受理記録。K0707の偽受理発見により独立証拠への採用を保留
