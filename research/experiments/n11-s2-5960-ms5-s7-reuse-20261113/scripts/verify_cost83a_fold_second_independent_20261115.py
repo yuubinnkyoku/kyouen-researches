@@ -7,7 +7,7 @@ The cost-83a fold (head 1306 -> 1309) was landed by the parallel lane
 tmp-cost83a/ checkpoint (bit12/58/72 .rows + summaries + legal-moves.json,
 commit 477a5199); the extraction-receipt / verifier files the fold script
 reads were not on main. This session first repairs that with
-scripts/reconstruct_tmp_cost83a_20261115.py (regenerating the 16 missing
+research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/reconstruct_tmp_cost83a_20261115.py (regenerating the 16 missing
 files from main artifacts with the published verifiers), then re-verifies
 the whole fold from published main bytes only, in a fresh codeload-tarball
 mirror, without any state from the landing session:
@@ -477,7 +477,7 @@ results["controls_passed"] = {
     "tmp_reconstruction_executed":
         "the 16 missing tmp-cost83a files (cert-receipts / bigint / tsverify "
         "/ consumed for bits 12,58,72,95) are regenerated from main "
-        "artifacts by scripts/reconstruct_tmp_cost83a_20261115.py, executed "
+        "artifacts by research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/reconstruct_tmp_cost83a_20261115.py, executed "
         "here as a subprocess: published BigInt verifier 4/4 PASS (union "
         "0/0, terminal 13..17), published TS-Bareiss verifier 4/4 PASS, "
         "md5/rows/mobility cross-asserted against the published head JSON "
