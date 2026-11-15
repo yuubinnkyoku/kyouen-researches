@@ -352,3 +352,5 @@ jobs:
 # Refresh generated views for K0833 fast-lane q5 append: (4,5) m=21 surgery complete-enumeration negative (sd<=6 both embeddings) + class-split sweep IN FLIGHT (control SAT calibrated) + driver v2 skip-path bugfix (2026-11-15).
 # Refresh generated views for K0833 fast-lane (5,5) append: m=26 witness (class {0} SAT 1,631,556 conflicts, 19 stones, dual-verified, cross-reset bit-exact) extends the band to m=5..26, M_{5,5} 26..336 -> 27..336; m=27 honest negatives (all sub-instances INDET) + 1/2-stone surgery complete negative (4,651,200 edits, 2 seeds) + witness jump sd=30 (2026-11-15).
 # Refresh generated views for K0827 seven-row q=6 m=30 witness band extension (class {3} class-split SAT, M_{7,6} 30..862 -> 31..862) (2026-11-15).
+
+# Refresh generated views for K0827 seven-row q=6 m=31 witness band extension (complete two-edit surgery, M_{7,6} 31..862 -> 32..862) (2026-11-15).
