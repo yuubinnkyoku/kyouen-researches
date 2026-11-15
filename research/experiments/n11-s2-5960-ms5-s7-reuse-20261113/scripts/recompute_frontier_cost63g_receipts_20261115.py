@@ -171,8 +171,9 @@ assert classes.get(PARENT1, 0) & 2 and classes.get(PARENT2, 0) & 2
 assert demF.get(CHILD) == {'c1': 0, 'c2': 2, 'c4': 0}, \
     'per-class demand of the child re-derived from the remaining incidences'
 claim = json.loads((OUT / 'class2-lane-cost63g-inflight-20261115.json').read_text())
-assert claim['schema'] == 'n11-class2-lane-cost63g-inflight-20261115-v2'
-assert claim['status'] == 'sweep_and_certificates_complete_fold_pending'
+assert claim['schema'] in ('n11-class2-lane-cost63g-inflight-20261115-v2',
+                           'n11-class2-lane-cost63g-inflight-20261115-v3')
+assert claim['status'] in ('sweep_and_certificates_complete_fold_pending', 'completed')
 assert claim['s6_child'] == CHILD and claim['s6_s7_edge_cost'] == 63
 assert claim['demand'] == {'c1': 0, 'c2': 2, 'c4': 0}
 assert claim['s5'] == PARENT1
@@ -467,6 +468,28 @@ print(f'total marginal={total_marg} marginal_in_manifest={total_mim}; '
       f'{sum(rows_after_p2.values())} (was 71/5281)')
 print('parent1 marginal rows lost:', p1_lost)
 print('parent2 marginal rows lost:', sorted({r['s6_hex'] for r in p2_rows} - set(rows_after_p2)))
+
+# retired claim control: after the claim retire (schema v3, status completed)
+# a re-run must reproduce every fold number and keep the head JSON
+# byte-identical to the originally pushed blob
+if claim.get('status') == 'completed':
+    f = claim['fold']
+    head_str = (f"{stF2['solved_s6_in_manifest']}/{stF2['unique_remaining_s6']}/"
+                f"{stF2['sum_remaining_cost']}/{stF2['s6_needed_by_open_classes']}/"
+                f"{stF2['cost_needed_by_open_classes']}")
+    assert f['chain_head_after'] == head_str
+    assert f['total_marginal'] == total_marg and f['total_marginal_in_manifest'] == total_mim
+    assert f['child_orbit_closed_by_bit'] == child_closed_by
+    assert f['parents_after']['parent1'] == f'{len(rows_after_p1)} rows / {sum(rows_after_p1.values())}'
+    assert f['parents_after']['parent2'] == f'{len(rows_after_p2)} rows / {sum(rows_after_p2.values())}'
+    assert f['extraction_nodes_correction']['manifest_re_sum'] == t['extraction_nodes']
+    assert f['extraction_nodes_correction']['claim_figure'] == claim_extraction_nodes
+    obs = f['output_blob_shas']
+    sha_out, blen_out = git_blob_sha(OUT / 'class-frontier-cost63g-receipts-recompute-20261115.json')
+    assert sha_out == obs['head_json'] and blen_out == 17292, \
+        'the regenerated head JSON must stay byte-identical after the claim retire'
+    print('CONTROL retired claim v3 fold record matches this recomputation: '
+          'head ' + head_str + ', head JSON blob re-asserted byte-identical')
 
 # ---------- 9. outputs ----------
 def best(rem, bit):
