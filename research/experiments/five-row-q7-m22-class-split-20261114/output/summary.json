@@ -1,0 +1,25 @@
+{
+ "w": 5,
+ "m": 22,
+ "q": 7,
+ "claim": "no row-deficient maximal safe configuration on 5x22 q=7; witness-free width set of (5,7) is {19,20,21,22}; M_{5,7} in {19,20,21,22} or >= 23 (upper 158 unchanged)",
+ "direct_classes_unsat": 17,
+ "class0_k_minpos_split_unsat": 16,
+ "class1_k_minpos_split_unsat": 16,
+ "indet": 0,
+ "total_conflicts_22": 25519268,
+ "hardest": [
+  "0 k0:5 mp0: 3380578",
+  "1 k1:5 mp0: 3111756",
+  "0 k0:4: 1465046",
+  "1 k1:4: 1402958",
+  "0 k0:5 mp1: 1370195"
+ ],
+ "lex_cross_checks": {
+  "2": 310356,
+  "0,1": 627149
+ },
+ "positive_control": "5x18 class {0} SAT 343,134 conflicts (bit-exact with the K0821 lane control); decoded 29 stones rows (5,6,6,6,6), census-free verifyConfig PASS (K0332 witness rediscovered end-to-end)",
+ "batch1_rerun_verification": "all 17 direct UNSAT classes re-run by the takeover lane reproduce the batch-1 raw logs conflicts bit-exactly (e.g. {0,1}: 875,682; {0,2,3}: 199,205)",
+ "decomposition_soundness": "k=0..5 partitions the deficient-row stone count; k=5 instances split by minpos=0..10, which pins the leftmost stone of the first deficient row at column exactly P; every configuration or its column mirror has leftmost stone column <= 10 at m=22 (min(x1,21-x5) <= 10, else x1 >= 11 and x5 <= 10 contradict x1 <= x5); the column mirror preserves row occupancy, hence the class"
+}
