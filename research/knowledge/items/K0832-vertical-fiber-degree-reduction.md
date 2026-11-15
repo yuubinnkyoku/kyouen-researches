@@ -801,4 +801,4 @@ S\bmod2,&R>q_o(S).
 \[
 z-S+2\le R\le z+S+|X|-2
 \]
-の有限帯に限られ、その幅は \(2S+|X|-3\) で \(z\) に依存しない。証明・監査・領域外反例は[独立実験報告](../experiments/vertical-fiber-high-z-multiset-merge-20261116/report.md)を参照。
+の有限帯に限られ、その幅は \(2S+|X|-3\) で \(z\) に依存しない。証明・監査・領域外反例は[独立実験報告](../../experiments/vertical-fiber-high-z-multiset-merge-20261116/report.md)を参照。

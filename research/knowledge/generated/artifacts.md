@@ -9531,6 +9531,9 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost70f-receipts-recompute-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost70f-receipts-recompute-20261115.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): fold後head 1239/6608/521701/4878/385424とper-receipt marginal・親S5 after
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost70g-receipts-recompute-20261116.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost70g-receipts-recompute-20261116.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): fold後head 1403/6445/509589/4715/373312と第二候補S5 7行/502
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost71b-recompute-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost71b-recompute-20261115.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): cost-70c後からcost-71bの3 receiptを追加したmanifest-level frontier再計算
@@ -10054,6 +10057,9 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost70f_receipts_20261115.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost70f_receipts_20261115.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (source): cost70f 4 receipt fold。head 1235のbyte再現・sweep audit/証明書bytes検証・fold・completed claim制御
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost70g_receipts_20261116.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost70g_receipts_20261116.py)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (source): cost70g 7 receipt fold。head 1398のbyte再現・sweep/証明書bytes検証・第二候補S5 7行へのfold
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost72b_receipts_20261115.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost72b_receipts_20261115.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (source): fold実行体。74d head 1,179をrunpy鎖でbyte再現、18入力blob照合、13証明書byte検証、bit85==74d bit91のD4等価検証込み
@@ -15037,6 +15043,15 @@
 ## [research/experiments/vertex-cover-terminal-dp-20261102/verify.py](../../../research/experiments/vertex-cover-terminal-dp-20261102/verify.py)
 
 - [K0622](../items/K0622-vertex-cover-terminal-polynomial.md) (verifier): 8067グラフ条件、996別被覆、100禁止超辺条件472592部分集合、K2m式80条件を照合
+## [research/experiments/vertical-fiber-all-ones-induction-proof-20261116/output/audit.json](../../../research/experiments/vertical-fiber-all-ones-induction-proof-20261116/output/audit.json)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (data): B0/S2/S3/C1/E1..E7監査集計（C_box=C_wit=C_sat=3,803種・双方向包含0/0、全照合不一致0・二回実行byte-identical）
+## [research/experiments/vertical-fiber-all-ones-induction-proof-20261116/report.md](../../../research/experiments/vertical-fiber-all-ones-induction-proof-20261116/report.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (proof): 全1族残余mexの全称定理 h=U の機械支援帰納証明（基底・z=0ステップ・15比較族アトム表・シグネチャ決定性・被覆補題・3,803類完全列挙）と系A・系B
+## [research/experiments/vertical-fiber-all-ones-induction-proof-20261116/verify_induction_proof.py](../../../research/experiments/vertical-fiber-all-ones-induction-proof-20261116/verify_induction_proof.py)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (verifier): published U とアトム表転写 U_tab の二重経路で全実現シグネチャのステップ恒等式を検証する計約330万照合の検証器
 ## [research/experiments/vertical-fiber-all-ones-residual-structure-20261116/output/audit.json](../../../research/experiments/vertical-fiber-all-ones-residual-structure-20261116/output/audit.json)
 
 - [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (data): W0..W5監査集計（不一致0・二回実行byte-identical）
@@ -15088,6 +15103,15 @@
 ## [research/experiments/vertical-fiber-general-t-grundy-bound-20261116/verify_general_bound.py](../../../research/experiments/vertical-fiber-general-t-grundy-bound-20261116/verify_general_bound.py)
 
 - [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (verifier): ラベル付き占有ベクトルと正準占有多重集合を独立生成する再帰mex監査器
+## [research/experiments/vertical-fiber-high-z-multiset-merge-20261116/output/audit.json](../../../research/experiments/vertical-fiber-high-z-multiset-merge-20261116/output/audit.json)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (data): 8,568全列挙照合・120固定seed照合・領域外反例の監査結果
+## [research/experiments/vertical-fiber-high-z-multiset-merge-20261116/report.md](../../../research/experiments/vertical-fiber-high-z-multiset-merge-20261116/report.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (proof): κ=1の一般残余ゲームでz≥ΣX+R−1なら任意多重集合が総和Sの単一トークンへ縮約される全称帰納証明と既知高Rレジームとの有限中間帯
+## [research/experiments/vertical-fiber-high-z-multiset-merge-20261116/verify_high_z_merge.py](../../../research/experiments/vertical-fiber-high-z-multiset-merge-20261116/verify_high_z_merge.py)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (verifier): ソート済み多重集合再帰と順序付きトークン再帰の独立照合器
 ## [research/experiments/vertical-fiber-interpolation-exact-20261115/output/audit.json](../../../research/experiments/vertical-fiber-interpolation-exact-20261115/output/audit.json)
 
 - [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (data): 12,288配置・768占有ベクトル出現の有限監査結果
@@ -16096,9 +16120,15 @@
 ## [research/log/2026-11-16-n11-class2-lane-cost67d-sweep-certificates-and-fold.md](../../../research/log/2026-11-16-n11-class2-lane-cost67d-sweep-certificates-and-fold.md)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): cost67dのsweep・1証明書抽出・二独立検証・第二候補S5 9→8行fold
+## [research/log/2026-11-16-n11-class2-lane-cost70g-sweep-certificates-and-fold.md](../../../research/log/2026-11-16-n11-class2-lane-cost70g-sweep-certificates-and-fold.md)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): cost70gのsweep・7証明書抽出・二独立検証・第二候補S5 8→7行fold
 ## [research/log/2026-11-16-n11-class2-lane-cost84a-sweep-certificates-and-fold.md](../../../research/log/2026-11-16-n11-class2-lane-cost84a-sweep-certificates-and-fold.md)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): cost84aのsweep・4証明書抽出・二独立検証・第二target 4→3行fold
+## [research/log/2026-11-16-vertical-fiber-all-ones-induction-proof.md](../../../research/log/2026-11-16-vertical-fiber-all-ones-induction-proof.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (log): 機械検証済み予想から全称定理への昇格の判断・証明構造・独立検証の記録
 ## [research/log/2026-11-16-vertical-fiber-all-ones-residual-structure.md](../../../research/log/2026-11-16-vertical-fiber-all-ones-residual-structure.md)
 
 - [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (log): 全1族解析の選定・重複回避確認・機械検証・限界の記録
@@ -16111,6 +16141,9 @@
 ## [research/log/2026-11-16-vertical-fiber-general-t-grundy-bound.md](../../../research/log/2026-11-16-vertical-fiber-general-t-grundy-bound.md)
 
 - [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (log): K0832既存のt=2任意q・t=3,q=7結果を一般tへ統一した選定・証明・監査・未解決点
+## [research/log/2026-11-16-vertical-fiber-high-z-multiset-merge.md](../../../research/log/2026-11-16-vertical-fiber-high-z-multiset-merge.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (log): 最新main・既存未解決事項との照合、高余裕領域縮約の選定・証明・有限監査・次課題
 ## [research/log/2026-11-16-vertical-fiber-single-token-residual-closed-form.md](../../../research/log/2026-11-16-vertical-fiber-single-token-residual-closed-form.md)
 
 - [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (log): 残余閉形式第一段階（κ=1）の選定・証明・誤帰納の検出と修正・限界
