@@ -17,7 +17,7 @@
 
 ## 独立監査（全assert合格・2回実行byte-identical）
 
-`audit_cost73f_raw_sweep_20261115.py`（Python標準ライブラリのみ・Bareiss再実装・repo engine不使用）が12 rawファイルから全件再導出: 候補73はclaim列挙とbit-exact・各bit 1回ずつ・pilot 3402×10・batch-6再現一致・v15アンカー一致・終局石数range境界検査合格。監査JSON `class2-lane-cost73f-sweep-audit-20261115.json`（再実行byte-identical・md5 `b65cdf28f5575fa69537546c6de22ef3`）。
+`audit_cost73f_raw_sweep_20261115.py`（Python標準ライブラリのみ・Bareiss再実装・repo engine不使用）が12 rawファイルから全件再導出: 候補73はclaim列挙とbit-exact・各bit 1回ずつ・pilot 3402×10・batch-6再現一致・v15アンカー一致・終局石数range境界検査合格。監査JSON `class2-lane-cost73f-sweep-audit-20261115.json`（再実行byte-identical・md5 `d7bdc5658fdd3bf61e60b1d7ffa55ac8`）。
 
 ## 解釈上の注意
 
@@ -32,3 +32,7 @@ cost-65l（WIN7 bits 21/48・証明書出版中）・cost-67c（WIN7 bits 64/96�
 - completed claim: [class2-lane-cost73f-inflight-20261115.json](../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73f-inflight-20261115.json)
 - raw batches 1–10・determinism rerun・v15 crosscheck: 同output/ `class2-lane-cost73f-raw-batch{1..10}-20261115.jsonl` ほか
 - sweep audit: [class2-lane-cost73f-sweep-audit-20261115.json](../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73f-sweep-audit-20261115.json)（再現: [audit_cost73f_raw_sweep_20261115.py](../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost73f_raw_sweep_20261115.py)）
+
+## 訂正（出版完全性・push後に検出して即修正）
+
+初版の監査script/JSON（commit `e32596bb`）に65k雛形の残骸が2箇所（`independent_legal_candidate_count: 65`・proof-boundary文中の「the 65 seven-stone roots」）と古いヘッダ表記（「ten raw artifacts (8 v16 raw batches)」）が残っていた。**全assert・全集計値・全候補列挙は初版から正しく**、残骸は記述フィールドのみ。73/twelve-rawに修正し監査を再実行（2回byte-identical・新md5 `d7bdc5658fdd3bf61e60b1d7ffa55ac8`）してclaim・logとともに再pushした（訂正コミット参照）。不完全な中間状態は残らない。

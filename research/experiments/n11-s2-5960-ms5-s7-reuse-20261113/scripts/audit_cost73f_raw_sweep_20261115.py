@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # Independent raw-sweep audit for the class2-lane cost-73f child sweep (the best class-4 blocker S5 frontier row) (2026-11-15).
 # Python standard library only; exact integer Bareiss determinants; no floating point,
-# no repository solver/engine code. Re-derives the sweep aggregate from the ten raw
-# artifacts (8 v16 raw batches + v16 determinism rerun + v15 crosscheck JSONLs),
+# no repository solver/engine code. Re-derives the sweep aggregate from the twelve raw
+# artifacts (10 v16 raw batches + v16 determinism rerun + v15 crosscheck JSONLs),
 # re-enumerates the legal candidates from scratch, and cross-checks the claim.
 import json, sys, os, glob, hashlib
 
@@ -199,7 +199,7 @@ def main():
         'geometry': {
             'child_stones': 6,
             'child_safe': True,
-            'independent_legal_candidate_count': 65,
+            'independent_legal_candidate_count': 73,
             'candidate_bits_exact_match': True,
             'lift_note': 'one-stone deletions re-derived independently: stone 30 deletion reproduces the best class-4 blocker S5 00000000020000003800000080000000 bit-exact (18 rows / 1460 at head 1216); stone 31 deletion D4-canonicalizes to the open class-4 parent 00000000020000003800000040000000 (85 rows / 6497); stone 89 deletion D4-canonicalizes to the open class-4 parent 00000000000000003800000001800000 (77 rows / 5548); the remaining three deletions are closed rows absent from the head-1216 ranking CSV (verified in-session against the published head-1216 ranking CSV before the claim push)',
         },
@@ -245,7 +245,7 @@ def main():
             'raw_sweep_rederivation': 'closed by this audit',
             'certificate_extraction': 'not required: the sweep is sterile (no WIN7-D10 bits)',
             'fold_material': 'none: no receipts, the canonical chain frontier is unchanged at 1216/6631/523382/4901/387105',
-            'interpretation_of_refuted_d10': 'all 73 candidates are REFUTED-D10: no first-player win within depth 10 from any of the 65 seven-stone roots. This is NOT a LOSS proof for those roots and does not close the child S6 row; closing this child row requires evidence beyond depth 10 (each candidate would need a refutation at depth > 10 or an equivalent invariant)',
+            'interpretation_of_refuted_d10': 'all 73 candidates are REFUTED-D10: no first-player win within depth 10 from any of the 73 seven-stone roots. This is NOT a LOSS proof for those roots and does not close the child S6 row; closing this child row requires evidence beyond depth 10 (each candidate would need a refutation at depth > 10 or an equivalent invariant)',
         },
         'interpretation': 'win7_d10_bits is empty: the sweep is sterile. refuted_d10 is NOT a LOSS proof. capped proves nothing (and there were no capped candidates). The sweep alone closes no S6 orbit and changes no frontier count; the child 000000000200000038000000c0000000 remains an open S6 row at head 1216 (a remaining row of all three open class-4 parents; the best class-4 blocker S5 stays at 18 rows / 1460). The standard 11x11 empty board, both two-stone roots {49,60}/{59,60}, S2 {59,60}, class 2 and class 4 all remain UNKNOWN.',
     }
