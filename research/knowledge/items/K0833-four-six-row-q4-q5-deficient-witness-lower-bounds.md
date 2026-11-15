@@ -118,7 +118,7 @@ l SAT dual-verified: m=23以降単一欠損17石, m=31 4.1s/131 conflicts, 全�
   note: "(6,4) m=45 witness の第3系統検証 PASS・陽性対照（m=40 再PASS・nCircles=670/nQ1Curves=690 が m=41..44 run と同一）・陰性対照（1石移動で maxCirc=4 unsafe+1 uncovered を検出）"
 - path: research/experiments/four-row-q4-q5-frontier-20261115/output/q4-w6-construct-m46/records.jsonl
   role: data
-  note: "(6,4) m=46 witness by constructive free-column append of the m=45 witness (solver-free): stones unchanged on the 6x46 board; pure-TS/BigInt full-board verification PASS (safe maxLine=3/maxCirc=3, uncovered=0, rows [2,3,3,3,3,3]); free append stops at m=47 (cell (46,0) uncovered); js+py verification pending bash recovery - witness 帯 m=6..46, M_{6,4} ∈ [47, 1113]"
+  note: "(6,4) m=46 witness by constructive free-column append of the m=45 witness (solver-free): stones unchanged on the 6x46 board; pure-TS/BigInt full-board verification PASS (safe maxLine=3/maxCirc=3, uncovered=0, rows [2,3,3,3,3,3]); free append stops at m=47 (cell (46,0) uncovered); js+py verification completed 2026-11-15 (K0853: sat.js verifyConfig + verify_witness.py Fraction both PASS on 6x46 and 6x45 same set, 4-stone row-line negative control rejected) - witness 帯 m=6..46, M_{6,4} ∈ [47, 1113]"
 - path: research/experiments/four-six-row-q4-q5-band-extension-20261115/output/ts-verify-band-extension.json
   role: data
   note: "第3系統（純TS/BigInt, verify_independent.ts verbatim・フラグメント照合18/18）で band-extension 全12 witness ((6,4) m=32..40, (5,4) m=37..39) が全て PASS safe+maximal+row-deficient・単一欠損; 陰性対照（石移動→unsafe検出）・陽性対照（前レーン3系統検証済み (6,31,4) witness の再PASS）つき — 3系統検証"
@@ -303,7 +303,7 @@ owY 分割)
    full-board 走査で safe (maxLine=3/maxCirc=3)・全空点カバー (uncovered=0)・
    行欠損 (rows [2,3,3,3,3,3]) すべて PASS。**witness 帯は m=6..46、
    M_{6,4} ∈ [47, 1113]**。free append は m=47 で停止（(46,0) が未カバー）。
-   js+py 2系統検証は bash 環境復旧後に実施予定。周辺分析（純TS）: 1石追加
+   js+py 2系統検証は 2026-11-15 に完遂（K0853・純TS/js/py/criterion の4系統検証）。周辺分析（純TS）: 1石追加
    （63候補全滅・3 unsafe+60 nonmax）・1石移動（safe 77 組合せ全滅 nonmax）で
    は m=47 witness は出現せず。m=42..44 witness の free-append 到達幅は
    m0+1 で停止（m=42 witness → m=43, m=43/44 witness → m=44/45 の右端
