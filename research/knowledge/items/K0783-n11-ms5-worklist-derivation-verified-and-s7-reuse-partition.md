@@ -1690,3 +1690,26 @@ REFUTED-D10はLOSS証明ではなく、WIN7証明書は個別7石rootの深さ10
 REFUTED-D10はLOSS証明ではなく、WIN7証明書は個別7石rootの深さ10以内の先手勝ちのみを証明する。第三target S5の閉鎖はmanifest被覆（全6石子が先手WIN）に基づく条件付きclosureであり、blocker全体の独立証明ではない。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}は引き続き **UNKNOWN**。次のfold baselineはhead 1273。cost-65l fold（head 1261）は本headへのrebase・mergeが必須。
 
 詳細: [lane log](../../log/2026-11-15-n11-class2-lane-cost69i-sweep-certificates-and-fold.md)、[fold head JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost69i-receipts-recompute-20261115.json)、[top-candidates CSV](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-top-candidates-s6-after-cost69i-receipts-20261115.csv)、[completed claim](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost69i-inflight-20261115.json)。
+
+## 2026-11-15: cost-74h sterile sweep — 74候補exactly-once・WIN7-D10 0件・74 REFUTED-D10・0 capped・総nodes 72,720,136（head不変・第三target S5閉鎖後の次行）
+
+第三class-2 target S5 `00000000000000809102000000000000` の69i閉鎖後、同S5のcost-74行child `00000000000000809142000000000000`（c1=0, c2=1, c4=0）をclass2-laneとしてsweepした。**74候補をexactly-onceで列挙・探索**（pilot 3402×10・総nodes **72,720,136**・全terminal range [13,17]）し、判定は**WIN7-D10 0件・74 REFUTED-D10・0 capped** — **sterile**。raw batches 1-10をpushし、determinism rerun（batch5を同一分割で再実行・node-exact一致）と**v15 crosscheck**を実施。v15アンカーは当初74gのアンカー0/1/2と混同してbit 1を含めていたが、**bit 1は74h childではBareiss-unsafeかつclaim列挙に不含**のため、合法アンカー [0,2,62,86,87] に修正して実行した（全loss=false・pilot 5949×3）。audit script `audit_cost74h_raw_sweep_20261115.py` は全統制PASS・2回実行byte-identical（audit JSON md5 `acd1b1c86daab4096bc4d079bbad26df`）。claim `class2-lane-cost74h-inflight-20261115.json` は **completed (STERILE)** へretire済み（commit `6fac1e3e`・15ファイル）。
+
+重要な副次記録: sweep実行中に**実行sandboxの環境リセットが発生しローカルmirrorが全消滅**した（未pushのraw 12ファイルを含む）。10バッチ+determinism rerunを同一分割で再生成し、消失前の集計（nodes・terminal range・判定別件数・pilot件数）と全件一致を確認した。同一コード・同一分割が**環境をまたいで一致して再現する**ことが実験事実として確定した。REFUTED-D10はLOSS証明ではない。sterile行は当該6石child配下の7石rootsの深さ10以内の先手勝ち証明が存在しないことのみを意味する。headはこのsweepでは不変。
+
+詳細: [sweep log](../../log/2026-11-15-n11-class2-lane-cost74h-sterile-sweep.md)、[audit JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/audit_cost74h_raw_sweep_20261115.json)、[retired claim](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74h-inflight-20261115.json)。
+
+## 2026-11-15: cost-65l/74g/69i 3-way merged fold — fork 1257解消・canonical head 1277/6570/518896/4840/382619（第三target S5 0/0閉鎖を維持）
+
+fork 1257（cost-73h）から着地していた**3本の並走fold**（65l→head 1261・74g→head 1266・69i→head 1273・69iは1266ベースで着地し65l receiptsを含まない）を**3-way mergeで統合解消**した。上の69iセクション末尾の「cost-65l fold（head 1261）は本headへのrebase・mergeが必須」は本foldで**解消済み**。merge script `recompute_frontier_merged_cost65l_74g_69i_20261115.py`（commit `dde42161`）は:
+
+- fork 1257をrunpyでbyte-identical再現し、出版4 head JSON blobをgit blob shaで検証（65l `0b523e70`・74g `fce4ce77`・69i `8692a7a6`・2-way merged-AB `02109530`）。
+- **16 receipt roots（2+10+4）の相互disjointness raw+D4**。**65l-vs-69i・74g-vs-69iは初検証**（69i laneの出版検証は542-root baseline＝532+74g分のみで65l rootsを含まない）。全ペアraw・D4とも重複なし。
+- pairwise covers overlap: A-B 0・A-C 0・**B-C 3**（`00000000000000809102000000001000`・`00000000000000809102000000200000`・`00000000000000809102000020000000`）。3行とも74g foldで既にsolved済みで69iのpublished marginalsには元々不含 — **chain-C marginal deltas vs published: none**。
+- 統合逐次replay（65l→74g→69i）: total marginal 78（10+49+19）・in-manifest 20（4+9+7）・child closures 3つ各1回（65l bit21・74g bit4・69i bit21）・set等式・**逆順replay（69i先）同一集合**。
+- **統合head `1277/6570/518896/4840/382619`**（solved 1257+20）。per-parent: 第二target 17/1325・class-4 lift親 75/5519・**第三target 0/0（CLOSED・維持）**・74g第2親 55/4143・69i第2親 69/5265・69i第3親 79/6427。
+- **3回連続実行で全出力byte-identical**。
+
+branch head 3個（1261・1266・1273）と2-way merged head 1270は1257 forkの有効な独立foldとして残るが、**正準継続は1277のみ**。以後のfoldは1277 baselineをassertしてから行う。次のsweep targetは第二coverable class-2 target S5 `00000000000000801202000000200000`（17行/1325）の次行cost-75 `00000000000040801202000000200000`、およびclass-4 blocker S5（18行/1460）のcost-80行2本。第三target S5の0/0閉鎖はeven-OR/odd-AND規約下の**条件付きclosure**であり、solved 1277はmanifest被覆の簿記であり勝敗ではない。
+
+詳細: [merge log](../../log/2026-11-15-n11-merged-fold-cost65l-74g-69i-fork-resolution.md)、[merged head JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-merged-cost65l-74g-69i-recompute-20261115.json)、[top-candidates CSV](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-top-candidates-s6-after-merged-cost65l-74g-69i-20261115.csv)、[merge script](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_merged_cost65l_74g_69i_20261115.py)。
