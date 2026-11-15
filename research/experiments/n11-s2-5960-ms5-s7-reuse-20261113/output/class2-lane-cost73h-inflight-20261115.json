@@ -1,8 +1,8 @@
 {
- "schema": "n11-class2-lane-cost73h-inflight-20261115-v3",
+ "schema": "n11-class2-lane-cost73h-inflight-20261115-v4",
  "title": "n11 class2-lane cost-73h sweep IN FLIGHT: the sibling cost-73 row 00000000200000083800000000000200 of the second coverable class-2 target S5 at head 1249 (hex previously misquoted as 00000000220000083800000000000200 in prose; see the cost-73g claim v4 erratum_sibling_hex)",
  "date": "2026-11-15",
- "status": "completed (sweep + WIN7 certificates + independent audit); receipts fold IN FLIGHT (this claim fences the fold); canonical chain head 1249/6598/520956/4868/384679 as fold baseline",
+ "status": "completed: sweep + WIN7 certificates + independent audit + receipts fold landed (rebased per the fence_note on the cost-70g head 1254); canonical chain head 1254/6593/520600/4863/384323 -> 1257/6590/520380/4860/384103",
  "claimed_by": "long-term class2 lane (11x11 weak-solve long-term lane session, cost-73g receipts fold session continuation, same session as the sibling-hex erratum push)",
  "s5_parent1": "00000000000000801202000000200000",
  "s5_parent2": "00000000000000003800200008000000",
@@ -278,5 +278,84 @@
   "fold_script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost73h_receipts_20261115.py",
   "claimed_by": "long-term class2 lane (same session that published the sweep + certificates; claim updated before any fold output is published)",
   "fence_note": "parallel sessions must not fold the cost-73h receipts concurrently and must not land another chain-head extension before this fold resolves; the parallel cost-70g fold (class2-lane-cost70g-fold-inflight-20261115.json, baseline already 1249) is respected: if it lands first, this fold rebases on the then-current canonical head and re-derives; the pending cost-65l fold and in-flight 69g/65j/74e/74g lanes target other children"
+ },
+ "claim_v4_erratum": "demand_verification in v3 said the stone-67 deletion reproduces parent1 00000000000000801202000000200000 'bit-exact'; that wording is an erratum: the raw deletion 00000000200000003800000000000200 canonicalizes (D4) to parent1, and the stone-9 deletion canonicalizes (D4) to parent2 00000000000000003800200008000000; neither lift is raw bit-exact. Parent identities, demand c1=0,c2=2,c4=0, the 73-candidate enumeration and all sweep/certificate results are unaffected; the fold script asserts the corrected D4-canon mapping and rejects the raw-equality reading",
+ "fold": {
+  "chain_head_before": "1254/6593/520600/4863/384323",
+  "rebase_note": "fold_in_flight.baseline_head was 1249/6598/520956/4868/384679; the cost-70g fold landed first (bc4ff54d) and this fold rebased on 1254 per the fence_note provision; the rebase is material only in the baseline numbers (asserted: parent1 19 rows / 1463 and parent2 67 rows / 5182 unchanged by the 70g fold, both still holding the child row)",
+  "chain_head_after": "1257/6590/520380/4860/384103",
+  "receipts": [
+   45,
+   48,
+   82,
+   96
+  ],
+  "fold_script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost73h_receipts_20261115.py",
+  "per_receipt_marginals": [
+   {
+    "bit": 45,
+    "covers": 7,
+    "marginal": 6,
+    "marginal_in_manifest": 2,
+    "marginal_manifest_hexes": [
+     "00000000000000083800200008000000",
+     "00000000200000083800000000000200"
+    ]
+   },
+   {
+    "bit": 48,
+    "covers": 7,
+    "marginal": 5,
+    "marginal_in_manifest": 1,
+    "marginal_manifest_hexes": [
+     "00000000000000403800200008000000"
+    ]
+   },
+   {
+    "bit": 82,
+    "covers": 7,
+    "marginal": 4,
+    "marginal_in_manifest": 0,
+    "marginal_manifest_hexes": []
+   },
+   {
+    "bit": 96,
+    "covers": 7,
+    "marginal": 4,
+    "marginal_in_manifest": 0,
+    "marginal_manifest_hexes": []
+   }
+  ],
+  "total_marginal": 19,
+  "total_marginal_in_manifest": 3,
+  "zero_mim_receipts": [
+   82,
+   96
+  ],
+  "zero_marginal_receipts": [],
+  "child_closed_by_bit": 45,
+  "parents_after": {
+   "parent1": "18 rows / 1390",
+   "parent2": "64 rows / 4962"
+  },
+  "parents_lost_rows": {
+   "parent1": [
+    "00000000200000083800000000000200"
+   ],
+   "parent2": [
+    "00000000000000083800200008000000",
+    "00000000000000403800200008000000",
+    "00000000200000083800000000000200"
+   ]
+  },
+  "output_blob_shas": {
+   "head_json": "71f79b4bef000aaa1ce16279aa8d08a1ba9f3357",
+   "ranking_csv": "ee4cc2ff7eb6c9dd1cc33354bf7cbed655b09d54",
+   "top_candidates_csv": "122803eaa3f726f0466c8d44f210d017a0f9e14e"
+  },
+  "head_json_bytes": 10965,
+  "ranking_csv_bytes": 7580,
+  "top_candidates_csv_bytes": 4749,
+  "note": "landed with the child orbit genuinely remaining at the rebased baseline 1254 (unlike the cost-70g fold where the child was already cross-covered); the child 00000000200000083800000000000200 closes at bit45 (first receipt in publication order); parent1 loses only the child row (19/1463 -> 18/1390); parent2 loses the child plus two rows already counted in the bit45/bit48 marginals (67/5182 -> 64/4962); both open class-2 lift parents remain UNSOLVED (parent1 still 18 rows, parent2 still 64 rows); solved 1254 -> 1257 = manifest bookkeeping only"
  }
 }
