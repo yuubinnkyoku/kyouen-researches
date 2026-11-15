@@ -1,8 +1,8 @@
 {
- "schema": "n11-class2-lane-cost70g-inflight-20261115-v2",
+ "schema": "n11-class2-lane-cost70g-inflight-20261115-v3",
  "title": "n11 class2-lane cost-70g sweep completed: second unswept cost-70 child of the second coverable class-2 target S5 after the cost-70e fold (both parents class 2, c1=0,c2=2,c4=0)",
  "date": "2026-11-15",
- "status": "completed (sweep); certificates and receipts fold pending",
+ "status": "completed (sweep + certificates); receipts fold pending",
  "claimed_by": "long-term class2 lane (cost-70e receipts fold session, continuation)",
  "s5": "00000000000000801202000000200000",
  "s6_child": "00000000000100809002000000000800",
@@ -233,7 +233,7 @@
   "determinism_rerun": "batch5 re-solved fresh in a separate process: node-exact on all 8 bits + control (class2-lane-cost70g-v16-determinism-rerun-20261115.jsonl, pushed)",
   "cross_engine": "v15 runner (repo blob 8744fc65b6b7cac6bd561403ce4c749e01c51359, pilot 5949 PASS x11): all 8 WIN7 bits loss=true and the 3 heaviest REFUTED bits (6/86/98) loss=false - 11/11 verdicts identical to v16 (class2-lane-cost70g-v15-crosscheck-20261115.jsonl, pushed, v15 total 92,419,285 nodes)",
   "duplicate_root_check": "all 8 WIN7 root hexes code-searched over yuubinnkyoku/kyouen-researches: 8/8 roots 0 hits, new coverage",
-  "certificates": "none extracted yet (blind extraction is the next step); the 8 WIN7 bits are certificate-rebuild candidates and change no frontier number until the fold",
+  "certificates": "8/8 WIN7 certificates fully extracted (blind) and independently verified (BigInt verifier PASS 8/8, 302,270 rows total); pushed under class2-lane-cost70g-certificates/ with byte-exact blob shas; details in class2-lane-cost70g-win7-certificates-20261115.json (git commit 511228e3f68f8d9af25f76d761faf470af68642d)",
   "fold": "PENDING - waits on the parallel cost-70f sweep and the head-1227-based cost-65l fold reconciliation; when landed the receipts advance both open class-2 parents (00000000000000801202000000200000 at 28 rows / 2119 and 00000000000000801202010000000000 at 60 rows / 4342)"
  }
 }
