@@ -6,20 +6,27 @@
   "whole_git_blob_sha": "63903a9c88c83e3e8bc08168e713eeb552df2dda",
   "parts": [
     {
-      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/tmp-cost75d/bit111.consumed.txt.part1of2",
-      "bytes": 1339800,
-      "md5": "aea87f6d099613b32e87038eca7b269e",
-      "sha256": "762b0ac32c24417cb495f01a4a0f66696805524012db1e6c5b3de381fd0d74a1",
-      "git_blob_sha": "2ded5683ed3a3fd7a963333d6ad83bc7cfa7664c"
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/tmp-cost75d/bit111.consumed.txt.part1of3",
+      "bytes": 893211,
+      "md5": "a4fd9d03f3ab8a48d35714f163724e04",
+      "sha256": "17ae9983e30c9fee21771725b0f0eed12fb641bf0fb8800d4f24109ce2d76a12",
+      "git_blob_sha": "f6940ec896dc4ca04131213d5dd8f551935f1cb1"
     },
     {
-      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/tmp-cost75d/bit111.consumed.txt.part2of2",
-      "bytes": 1339767,
-      "md5": "130fa0fe4474f32e90cf18bbcbbb9bb2",
-      "sha256": "35855ff3d2c6907ab1b2c6694a5f5698c56e46436969303fb6a62c3eca1b8528",
-      "git_blob_sha": "f86b88364058cd8afee9b002822e0924211457a3"
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/tmp-cost75d/bit111.consumed.txt.part2of3",
+      "bytes": 893211,
+      "md5": "bd977b59d9b245cf688552e2b2a9daf5",
+      "sha256": "f23d7ad7db44dc5e1a0aa892e8ee9266e29c789776825302e83d520d8414d5fe",
+      "git_blob_sha": "c8f9e19c8f8200162608211c348c84fa9baa0c92"
+    },
+    {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/tmp-cost75d/bit111.consumed.txt.part3of3",
+      "bytes": 893145,
+      "md5": "431430ca6cb2ae907ac5a5f1cf51a764",
+      "sha256": "dce7cddfb17a475f4bd0d981137a221fbb9080242a0402b59dbb6c73b673a7ca",
+      "git_blob_sha": "59fbc390a27dc1895e7b20d595ceb3e4294cc1af"
     }
   ],
   "joined_equals_whole": true,
-  "note": "split at line boundary for push transport; cat part1of2 part2of2 reproduces the whole consumed dump bit-exact"
+  "note": "split at line boundary for push transport; cat part1of3 part2of3 part3of3 reproduces the whole file bit-exact"
 }

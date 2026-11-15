@@ -6,20 +6,27 @@
   "whole_git_blob_sha": "5b71dfdf4ed1095fc295cf67b3cb5f9bed486295",
   "parts": [
     {
-      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost75d-certificates/bit111-root-00008000000040801202000000200000.cert.part1of2",
-      "bytes": 1463006,
-      "md5": "542f86efda288863b03256e537034afb",
-      "sha256": "d7ae0ab149d09ec2f9f0ccfe324ec2c3e5cc9ae14b927d8c27e991f5b0daf15a",
-      "git_blob_sha": "307386b2f1bbde59d61366e4ca71845652c6d0d7"
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost75d-certificates/bit111-root-00008000000040801202000000200000.cert.part1of3",
+      "bytes": 975616,
+      "md5": "8781b9e90ed7f8d2160579e55ae4b110",
+      "sha256": "9b462248356cda4017f7906907d39fd219beb0e18962992b641e7f6f1b6db7cb",
+      "git_blob_sha": "4dba7e810da7636ad1508bfb906eddf595e57cdb"
     },
     {
-      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost75d-certificates/bit111-root-00008000000040801202000000200000.cert.part2of2",
-      "bytes": 1460371,
-      "md5": "2eddcb82f43759cf620fe9efa61b59f5",
-      "sha256": "e3ea25fe21a33b27aa4fc4322ce47ef9f759115ed79b9924653e0dc68d08030e",
-      "git_blob_sha": "0e5914170b06b2554ff2dc960d806725902b61d6"
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost75d-certificates/bit111-root-00008000000040801202000000200000.cert.part2of3",
+      "bytes": 974906,
+      "md5": "bd3adea6a4cf34b14ffe850681d20f3d",
+      "sha256": "8e93ec83b16e5ec187ff19c20d48beb5a3cb769e6aceba7c09faf3badcbf0433",
+      "git_blob_sha": "1e9ed856808e2a25fffed8368545b717b9cad908"
+    },
+    {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost75d-certificates/bit111-root-00008000000040801202000000200000.cert.part3of3",
+      "bytes": 972855,
+      "md5": "7f4d96aef74ba7fd7d29b90b64766a10",
+      "sha256": "44d7d129cee0c48281c3014be22eefc8579edf70a0c8d51da0add69140eb0e29",
+      "git_blob_sha": "3bed3601a1b8e5c98d3930da330a3f2afd73fea6"
     }
   ],
   "joined_equals_whole": true,
-  "note": "split at line boundary for push transport; cat part1of2 part2of2 (CRLF normalized to LF if needed) reproduces the whole cert bit-exact"
+  "note": "split at line boundary for push transport; cat part1of3 part2of3 part3of3 reproduces the whole file bit-exact"
 }
