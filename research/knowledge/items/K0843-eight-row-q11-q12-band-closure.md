@@ -25,9 +25,9 @@ artifacts:
 - path: research/experiments/eight-row-q11-q12-band-closure-20261115/records/calibration-cnf-byteidentity.jsonl
   role: verifier
   note: "21/21 CNF byte-identity of genfam12 vs sat2.js all-triples census (8x11..16 q11/q12) and vs genfast.js chord-pair census (8x17/20/26/40/60 q11/q12); reproduced after a full environment rebuild"
-- path: research/experiments/eight-row-q11-q12-band-closure-20261115/witnesses
+- path: research/experiments/eight-row-q11-q12-band-closure-20261115/witnesses/witness-8x17q11.json
   role: data
-  note: "witness files on main: 8x17..20 q11 and 8x15..16 q12 (kissat SAT beyond the SA non-discovery record); 8x15/16 q11 pending upload from the local artifacts mount; all dual-verified (sat.js verifyConfig + verify_witness.py exact Fraction; rows 2,5 full, single 9-stone deficient row; m=11 q11 witness is 78 stones 2-deficient)"
+  note: "代表witness（同ディレクトリに8x17..20 q11と8x15..16 q12の計6ファイル）: kissat SAT beyond the SA non-discovery record; 8x15/16 q11 pending upload from the local artifacts mount; all dual-verified (sat.js verifyConfig + verify_witness.py exact Fraction; rows 2,5 full, single 9-stone deficient row; m=11 q11 witness is 78 stones 2-deficient)"
 scope: "finite machine verification: kissat 4.0.4 def-mode UNSAT over the family census, sound band-wide for m <= 984 (Theorem A + Corollary 4; the q11 sweep stays within m <= 907) + constructive dual-verified witnesses + K0318 proved tail exclusion; up to census completeness and solver correctness; (8,12) sweep 231..882 in flight"
 evidence: "complete-encoding UNSAT instances (def mode = 'exists a row-deficient maximal safe config' since safety caps every row at q-1) + constructive witnesses dual-verified by two independent systems + 21/21 CNF byte-identity against both predecessor census generators + bit-exact cross-reset determinism (m=21: 1,379,955 and m=26: 162,762 conflicts). See the experiment README."
 ---
