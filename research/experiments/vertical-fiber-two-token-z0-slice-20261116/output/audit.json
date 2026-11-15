@@ -1,0 +1,25 @@
+{
+  "audit": {
+    "canonical_cache": {
+      "hits": 286686,
+      "misses": 169950
+    },
+    "checks": 120780,
+    "first_mismatch": null,
+    "labeled_cache": {
+      "hits": 353125,
+      "misses": 241812
+    },
+    "max_x": 60,
+    "mismatches": 0
+  },
+  "date": "2026-11-16",
+  "engines": [
+    "sorted-multiset recursion with the proved cap_{R+1} lemma",
+    "ordered labeled-token recursion without capping"
+  ],
+  "formula": "R mod 2 for 0<=R<=2y; 2 if x>y and R=2y+1; 1-(R mod 2) if x>y and 2y+2<=R<=x+y; (x+y) mod 2 if R>=x+y+1",
+  "second_run_identical": true,
+  "status": "theorem; finite audit is corroboration only",
+  "subject": "two-token residual game, z=0 full Grundy slice"
+}
