@@ -1,6 +1,6 @@
 # 2026-11-15：cost63g の親局面持ち上げと1199 headへの局所影響監査
 
-開始時main: `c1cdeb2b3db64b5b8ed56abee88029c5082850bc`。最新の `AGENTS.md`、`research/knowledge/README.md`、K0783、K0023、およびcost63f/cost63gのclaim・frontier・関連logを確認した。規約どおりmainを基準にし、ブランチ・PRは作らない。
+入力取得時main: `15dd0b82ad03b8600d5bbc0460b9ef7379825546`。反映直前のmainは `c1cdeb2b3db64b5b8ed56abee88029c5082850bc` まで進んでいた。最新の `AGENTS.md`、`research/knowledge/README.md`、K0783、K0023、およびcost63f/cost63gのclaim・frontier・関連logを確認した。規約どおりmainを基準にし、ブランチ・PRは作らない。
 
 ## 確定している前提
 
@@ -52,3 +52,13 @@ Proxmoxのノード・稼働中コンテナ・停止中VM・追跡ジョブを�
 ## 勝敗
 
 標準11×11空盤、二石root `{49,60}`・`{59,60}`、S2 `{59,60}`、類2・類4はすべて **UNKNOWN**。今回の親局面監査は勝敗判定を変更しない。
+
+
+## 実行・CI状態の追記
+
+- D4親局面の計算は、この実行環境のJavaScriptでGitHub上の固定入力5ファイルを直接読み、BigIntで再計算した。
+- 保存したNode.jsスクリプト自体は、この実行環境にローカルのrepo checkoutがないため未実行。修正後のスクリプトはcommit `707b27dacd1d4e065577468065ed2ebd7dd8f6df` に含めた。
+- 同commitに対するGitHub Actionsの `CI` と `Knowledge integrity` は確認時点でともにqueued。成功・失敗はまだ確定していない。
+  - [CI run](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/43664942817)
+  - [Knowledge integrity run](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/43664942850)
+- したがって、今回確認済みなのは計算ロジックの実行結果とmainへの記録まで。Nodeスクリプトの実行・CI成功は未確認。
