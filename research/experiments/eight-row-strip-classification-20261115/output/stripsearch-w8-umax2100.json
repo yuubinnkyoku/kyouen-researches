@@ -1,0 +1,228 @@
+{
+  "experiment": "eight-row-strip-classification-w8",
+  "date": "2026-11-15",
+  "description": "K0830 (7-row) chord-bounded complete-enumeration machine ported to w=8: complete enumeration of all circles with >= 10 strip points (8-row window, x-unbounded) and doubled chord <= UMAX = 2100. Basis of Theorem A: every circle with >= 9 in-board points on an 8 x m board, m <= 984, is a placement member of census families F1-F9.",
+  "umax": 2100,
+  "chordBoundJustification": "L2: far case c*^2 <= 4.5(m-1)^2 + 308 => c* <= 2085 < 2100 for m <= 984; near case c*^2 <= (m-1)^2 + 392",
+  "halfRangeZ": {
+    "zlo": -1102502,
+    "zhi": -2,
+    "mirror": "v0 -> 14 - v0",
+    "caseAprimeTests": 2100
+  },
+  "chunks": [
+    {
+      "chunk": 1,
+      "pairsTested": 97231,
+      "aprimeTested": 0,
+      "found": 0
+    },
+    {
+      "chunk": 2,
+      "pairsTested": 194959,
+      "aprimeTested": 0,
+      "found": 0
+    },
+    {
+      "chunk": 3,
+      "pairsTested": 294561,
+      "aprimeTested": 0,
+      "found": 0
+    },
+    {
+      "chunk": 4,
+      "pairsTested": 514699,
+      "aprimeTested": 2100,
+      "found": 13
+    }
+  ],
+  "totalPairsTested": 1101450,
+  "spfSieveCount": 1102503,
+  "qualifyingConfigs": [
+    {
+      "type": "census-family",
+      "family": "F1",
+      "R": 50,
+      "v0": 7,
+      "doubleRows": 6,
+      "stripPoints": 12,
+      "profile": "0:1,1:5,3:7,4:7,6:5,7:1"
+    },
+    {
+      "type": "census-family",
+      "family": "F2",
+      "R": 50,
+      "v0": 5,
+      "doubleRows": 5,
+      "stripPoints": 10,
+      "profile": "0:5,2:7,3:7,5:5,6:1"
+    },
+    {
+      "type": "census-family",
+      "family": "F3",
+      "R": 50,
+      "v0": 9,
+      "doubleRows": 5,
+      "stripPoints": 10,
+      "profile": "1:1,2:5,4:7,5:7,7:5"
+    },
+    {
+      "type": "census-family",
+      "family": "F4",
+      "R": 130,
+      "v0": 11,
+      "doubleRows": 5,
+      "stripPoints": 10,
+      "profile": "0:3,1:7,2:9,4:11,7:11"
+    },
+    {
+      "type": "census-family",
+      "family": "F5",
+      "R": 130,
+      "v0": 3,
+      "doubleRows": 5,
+      "stripPoints": 10,
+      "profile": "0:11,3:11,5:9,6:7,7:3"
+    },
+    {
+      "type": "census-family",
+      "family": "F6",
+      "R": 170,
+      "v0": 1,
+      "doubleRows": 5,
+      "stripPoints": 10,
+      "profile": "0:13,1:13,4:11,6:7,7:1"
+    },
+    {
+      "type": "census-family",
+      "family": "F7",
+      "R": 170,
+      "v0": 13,
+      "doubleRows": 5,
+      "stripPoints": 10,
+      "profile": "0:1,1:7,3:11,6:13,7:13"
+    },
+    {
+      "type": "census-family",
+      "family": "F8",
+      "R": 650,
+      "v0": 25,
+      "doubleRows": 5,
+      "stripPoints": 10,
+      "profile": "0:5,1:11,3:17,4:19,7:23"
+    },
+    {
+      "type": "census-family",
+      "family": "F9",
+      "R": 650,
+      "v0": -11,
+      "doubleRows": 5,
+      "stripPoints": 10,
+      "profile": "0:23,3:19,4:17,6:11,7:5"
+    },
+    {
+      "type": "k0830-exception",
+      "R": 2353705250,
+      "v0": 48515,
+      "mirrorV0": -48501,
+      "doubleRows": 5,
+      "stripPoints": 10,
+      "chords": [
+        5,
+        623,
+        763,
+        985,
+        1079
+      ]
+    },
+    {
+      "type": "k0830-exception",
+      "R": 2353705250,
+      "v0": 48517,
+      "mirrorV0": -48503,
+      "doubleRows": 5,
+      "stripPoints": 10,
+      "chords": [
+        5,
+        623,
+        763,
+        985,
+        1079
+      ]
+    },
+    {
+      "type": "k0830-exception",
+      "R": 2353705250,
+      "v0": -48501,
+      "mirrorV0": 48515,
+      "doubleRows": 5,
+      "stripPoints": 10,
+      "chords": [
+        5,
+        623,
+        763,
+        985,
+        1079
+      ]
+    },
+    {
+      "type": "k0830-exception",
+      "R": 2353705250,
+      "v0": -48503,
+      "mirrorV0": 48517,
+      "doubleRows": 5,
+      "stripPoints": 10,
+      "chords": [
+        5,
+        623,
+        763,
+        985,
+        1079
+      ]
+    }
+  ],
+  "knownNineMatchCensusFamilies": [
+    "F1",
+    "F2",
+    "F3",
+    "F4",
+    "F5",
+    "F6",
+    "F7",
+    "F8",
+    "F9"
+  ],
+  "exception": {
+    "R": 2353705250,
+    "v0Variants": [
+      48515,
+      48517,
+      -48501,
+      -48503
+    ],
+    "reflection": "v0 -> 14 - v0 pairs 48515 <-> -48501 and 48517 <-> -48503",
+    "doubleRows": 5,
+    "chords": [
+      5,
+      623,
+      763,
+      985,
+      1079
+    ],
+    "maxInboardPoints": {
+      "atM984": 8,
+      "atM985": 8,
+      "firstMWith9InBoard": 986,
+      "firstMWith10InBoard": 1080
+    },
+    "k0830CrossRef": "7-row version needs m >= 1080 for 10 in-board points (K0830, chords <= 15000 complete enumeration)"
+  },
+  "validation": {
+    "umax23": "9 census configs reproduced, row profiles match census F1-F9; exception excluded by the chord bound",
+    "umax200": "same 9 configs reproduced",
+    "umax500": "same 9 configs reproduced",
+    "chordSquaresDirectArithmetic": "exception chords verified by direct arithmetic in the run; all 9 family profiles re-verified 2026-11-15 by scripts/family_placement.ts full-band run (exact integers, R = c_y^2 + (2y - v0)^2 per row)"
+  },
+  "conclusion": "Theorem A: for m <= 984 every circle with >= 9 in-board points on the 8 x m board is a placement member of census families F1-F9. Corollaries (band-wide numeric verification, all 976 widths m=9..984, 0 failures — see family-placement-m22-984.json): curves9(m) = 9m-97 for all m in [23,984]; curves10(m) = 9m-105 for all m in [23,940] (model holds to 984); exactly-9-point circles = F8/F9 edge members u in {19,21,2m-23,2m-21} only (8 for m>=23, 4 at m=22, 0 for m<=21); >=11-point circles = F1 only (m-7 members) => rows 2,5 forced full band-wide for (8,11)/(8,12); k2 >= 3 (L1) makes chord-pair census complete for q=9 band-wide",
+  "provenance": "Aggregate counts (spfSieveCount, per-chunk pairsTested/aprimeTested, 13 configs) are the recorded values of the 4-chunk run executed 2026-11-15 (research/log/2026-11-15-eight-row-q10-hardcore-class-split.md, round-5 addendum). scripts/stripsearch_w8.ts is a post-compaction reference reconstruction; the recorded aggregates take precedence. The family-placement half was fully re-executed and verified on 2026-11-15 (all 976 widths, 0 failures)."
+}
