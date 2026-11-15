@@ -14,7 +14,7 @@ energy + Melchior による全称証明・SAT に依らない）。witness-free 
 - CNF 生成: **genfast3.js**（弦対抽象円 census・q≥w+2 限定・
   `six-row-q8-band-closure-22-370-20261114` と同一 blob sha a2fc1cb5・
   `seven-row-q9-band-extension-201-612-20261114` 由来）。(5,7) は q=7=w+2 で
-  適用条件を満たす。完全性論は同 script のヘッダ注释（q≥w+2 なら全 q点円が
+  適用条件を満たす。完全性論は同 script のヘッダコメント（q≥w+2 なら全 q点円が
   ≥2つの double row を持ち、(ya,yb,ℓ,ℓ') の弦対抽象で決まる・4点は自動的に共円）。
   O(C(w,2)·m²·w) で m=157 は秒級。sat2.js 全三つ組 census の OOM 壁を回避。
 - 較正（`output/controls/` に記録）:
@@ -25,6 +25,13 @@ energy + Melchior による全称証明・SAT に依らない）。witness-free 
     js census-free verifyConfig + Python Fraction verify_witness.py の二重検証 PASS。
   - **honest negative**: 5x19 def-mode は 230s cap で INDET（6,046,287 conflicts）。
     m=19 の不在は K0738–K0759 の完全列挙が担保（def-OR は小 m で難しい・既知パターン）。
+- **第三系 census 検証**: 水平弦+第3点列挙による方法非依存の独立 census
+  （`scripts/ts_verify_census5q7.js`・sat2 全三つ組・genfast3 弦対のどちらとも
+  方法が異なる・完全性論は「≥7点円は水平弦を持ち4行以上に触れる」）。
+  掃引済み13幅で genfast3 の curves 数と **13/13 一致**
+  （`output/ts-census-check.json`）。さらに**全帯 m=35..157 の予測曲線数表**を
+  第3系で計算済み（`output/ts-census-fullband.json`・123幅網羅・欠落なし）—
+  掃引進行に合わせて各幅の meta curves と照合する。
 - 帯掃引: 各幅 genfast3 def-mode CNF → kissat 4.0.4（230s cap）→ 記録は
   `output/records.jsonl` に resume-safe に追記。INDET 幅が出た場合は rowY=0/1/2
   行固定分割（V-鏡像 y↔4-y で 3クラスが全5行を被覆・K0829 と同一の被覆論の w=5 版）
@@ -34,9 +41,14 @@ energy + Melchior による全称証明・SAT に依らない）。witness-free 
 ## 進捗
 
 - 2026-11-15: IN FLIGHT claim。較正完了（byte-identity 6/6・陽性対照二重検証 PASS・
-  honest negative 5x19）。帯掃引 m=35 から開始。m=35..49 は全幅 def-mode UNSAT
-  （conflicts 2,809,004 (m=35) → 漸減 → 1,483,146 (m=49)、cap 内・INDET 0）。
-  生ログと records.jsonl は掃引進行に合わせて batch push する。
+  honest negative 5x19・第三系 census 13/13・全帯予測表 123幅）。
+- 帯掃引（def-mode・230s cap・INDET 0）: **m=35, 36, 37, 40..49 の13幅 UNSAT**
+  （conflicts 2,809,004 (m=35) → 漸減 → 1.36M..1.79M の平台帯・m=49 で 1,483,146。
+  records.jsonl は main に checkpoint push 済み・各幅の curves は第三系表と一致）。
+  **未実行: m=38, 39（次の実行で最優先）、残り帯 m=50..157。**
+- 2026-11-15 (追記): 実行環境の長時間障害（アップグレード環境が一時利用不能）により
+  m=50 の実行が中断。m=50 以降と m=38, 39 は環境復旧後に再開する。
+  生 kissat ログは環境復旧後に batch push する。
 
 ## スコープ
 
