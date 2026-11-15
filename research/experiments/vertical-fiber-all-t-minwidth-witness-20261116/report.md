@@ -97,9 +97,9 @@ t=5,\quad cap=11,\quad q=12,\quad m=6,\quad w=3,
 - 最小幅の直前 \(w_{\min}-1\): \(2\le t\le6\)、\(0\le\mu\le2\)、全剰余の60組を空盤から完全列挙。全て最大Grundy値1以下、訪問状態7,331。
 - 2回の実行出力はbyte-identical。
 
-検証器SHA-256: 6631c6a5e19c080db9eb301c8a6c1006236d53fb1d0bce5ea96c6fe85e8b23d4
+検証器SHA-256: 39b2b0adf81079c3e756afd0ba3832d0cc97183a9ac60a91f623a0a9907a8294
 
-監査JSON SHA-256: 904ff58233fa67513359d412d632848cfc63280193bccb819063857b9b93b
+監査JSON SHA-256: 70a8105054bdd9cd116a0e3a2cfe1aac87b52c20c6173ead101eed23868f9c59
 
 有限監査は実装照合であり、全称性は上記の \(R=1\) 構成と既証明レジーム補題による。
 

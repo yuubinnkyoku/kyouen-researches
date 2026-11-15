@@ -25,7 +25,7 @@
 - 新検証器は元の占有多重集合ゲームを直接再帰mex。
 - 810 witness（\(2\le t\le16,\mu\le5\)、全剰余）で全てG=3、5,670状態。
 - 最小幅直前の60盤面（\(2\le t\le6,\mu\le2\)、全剰余）を空盤から完全列挙し、最大G≤1、7,331状態。
-- 2回の出力はbyte-identical。検証器SHA 6631c6a5e19c080db9eb301c8a6c1006236d53fb1d0bce5ea96c6fe85e8b23d4、監査SHA 904ff58233fa67513359d412d632848cfc63280193bccb819063857b9b93b。
+- 2回の出力はbyte-identical。検証器SHA 39b2b0adf81079c3e756afd0ba3832d0cc97183a9ac60a91f623a0a9907a8294、監査SHA 70a8105054bdd9cd116a0e3a2cfe1aac87b52c20c6173ead101eed23868f9c59。
 
 ## 反映
 
