@@ -34,10 +34,22 @@ verify_witness.py (Python Fraction) ok — decode 鎖とクラス論法の両方
 
 ## 結果
 
-IN FLIGHT (records.jsonl に増分追記)。
+掃引 76 インスタンス完了（対照 1 + k3 22 + multi 7 + k2 22 + k1 22 + k0 2・
+2026-11-15 時点）: **対照 SAT・73 UNSAT・2 INDET**。残りは
+class {0} k=3 の minpos p0/p1 の2バケットのみ。
 
-- **全 UNSAT ⟹ 4×21 欠損極大不在が確定し M_{4,5} = 21 or ≥ 23** (K0821-audit 規約)。
-- **SAT ⟹ witness 帯は m=5..21 に拡大し M_{4,5} ∈ [22, 140]**。
+残り2バケットの deep cap 2400s（deepcap.sh v2・p1 は v1 の minpos パース bug
+修正後の正規インスタンス CNF md5 059fc19d）:
+
+- **c0k3p0**: INDET・**13,113,901 conflicts**（cap 600 では 7,814,011）。
+- **c0k3p1**: INDET・**12,619,361 conflicts**（cap 600 では 7,324,409・v1 では
+  パース bug で p0 と同一 CNF だった点は deepcap.sh v2 ヘッダに記録）。
+
+- **両バケット UNSAT なら 4×21 欠損極大不在が確定し M_{4,5} = 21 or ≥ 23**
+  (K0821-audit 規約)。
+- **SAT なら witness 帯は m=5..21 に拡大し M_{4,5} ∈ [22, 140]**。
+- 現時点の決着: 不在・存在ともに未確定（2バケット open・次手段は
+  7200s 級の長時間 cap か SA pin-sweep 系の絞り込み）。
 
 ## files / resume
 

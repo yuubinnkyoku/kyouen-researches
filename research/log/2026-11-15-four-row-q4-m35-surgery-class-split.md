@@ -79,3 +79,16 @@
   M_{4,4}=35 or >=37 の確定記録。
 - (4,5) m=21 surgery は census 検査済み（(4,10,5)/(4,20,5) PASS）で
   実施可能。frontier レーンの (4,5) m=21 INDET との重複に注意。
+
+## (4,5) m=21 class-split 掃引 — 残り2バケットの deep cap 2400s 判定（2026-11-15・高速レーン）
+
+- deepcap.sh v2（p1 の minpos パース bug 修正・cap-aware resume つき）で
+  残り INDET バケット class {0} k3 p0/p1 を cap 2400s で再判定。
+- **c0k3p0: INDET・13,113,901 conflicts。c0k3p1: INDET・12,619,361 conflicts**
+  （正規 CNF md5 059fc19d・v1 ではパース bug で p0 と同一 CNF だった）。
+- 掃引全体: 対照 SAT（較正済み）+ 73 UNSAT + 2 INDET で完了。
+  4×21 の不在・存在ともに未確定（両バケット open・7200s 級の長時間 cap か
+  SA pin 系絞り込みが次手段）。M_{4,5} ∈ [21, 140] 不変。11×11 等は UNKNOWN。
+- 運用: 環境リセットで deepcap 進行中のソルバが1回全滅したが、deepcap.sh は
+  cap-aware resume で決定的再実行可能（CNF 再生成も決定的）なため
+  同一キャップで再実行して判定を取得した。
