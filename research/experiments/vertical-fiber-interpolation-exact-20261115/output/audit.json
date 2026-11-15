@@ -1,0 +1,67 @@
+{
+  "claim": "max_F |S intersect Z(F)| = sum_b min(c_b,t) for all F with deg_z(F)<=t and F(b,.) nonzero on every fiber; equality is attained by monic interpolation",
+  "cases": [
+    {
+      "base": "2x2",
+      "height_count": 3,
+      "vertical_degree": 1,
+      "separating_linear_form_vector": [1, 2],
+      "base_points": 4,
+      "cell_configurations": 4096,
+      "distinct_occupancy_vectors": 256,
+      "expected_occupancy_vectors": 256,
+      "maximum_intersection_attained": 4,
+      "q_classification": {
+        "3": {"safe_configurations": 323, "unsafe_configurations": 3773},
+        "4": {"safe_configurations": 1695, "unsafe_configurations": 2401},
+        "5": {"safe_configurations": 4096, "unsafe_configurations": 0}
+      },
+      "lagrange_matrix": "identity over Q",
+      "pass": true
+    },
+    {
+      "base": "2x2",
+      "height_count": 3,
+      "vertical_degree": 2,
+      "separating_linear_form_vector": [1, 2],
+      "base_points": 4,
+      "cell_configurations": 4096,
+      "distinct_occupancy_vectors": 256,
+      "expected_occupancy_vectors": 256,
+      "maximum_intersection_attained": 8,
+      "q_classification": {
+        "3": {"safe_configurations": 83, "unsafe_configurations": 4013},
+        "4": {"safe_configurations": 335, "unsafe_configurations": 3761},
+        "5": {"safe_configurations": 944, "unsafe_configurations": 3152}
+      },
+      "lagrange_matrix": "identity over Q",
+      "pass": true
+    },
+    {
+      "base": "2x2",
+      "height_count": 3,
+      "vertical_degree": 3,
+      "separating_linear_form_vector": [1, 2],
+      "base_points": 4,
+      "cell_configurations": 4096,
+      "distinct_occupancy_vectors": 256,
+      "expected_occupancy_vectors": 256,
+      "maximum_intersection_attained": 12,
+      "q_classification": {
+        "3": {"safe_configurations": 79, "unsafe_configurations": 4017},
+        "4": {"safe_configurations": 299, "unsafe_configurations": 3797},
+        "5": {"safe_configurations": 794, "unsafe_configurations": 3302}
+      },
+      "lagrange_matrix": "identity over Q",
+      "pass": true
+    }
+  ],
+  "degenerate_fiber_obstruction": {
+    "projection_values": [0, 2, 1, 3],
+    "G_is_nonzero_polynomial": true,
+    "G_values_on_base": [0, 0, 0, 0],
+    "all_fibers_are_identically_zero_for_F_equals_G": true,
+    "conclusion": "without the nonzero-on-each-fiber condition and without a base-degree bound, every board cell lies on one nonzero polynomial zero set"
+  },
+  "all_pass": true
+}
