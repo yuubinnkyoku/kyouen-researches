@@ -14256,6 +14256,12 @@
 ## [research/experiments/seven-row-q6-m32-surgery-negative-20261115/scripts/surgery_m32.py](../../../research/experiments/seven-row-q6-m32-surgery-negative-20261115/scripts/surgery_m32.py)
 
 - [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (source): port of surgery_m31.py to the 7x32 board targeting T=(31,3); complete final-state case split, exact Fraction arithmetic, self-tests
+## [research/experiments/seven-row-q7-m27-surgery-20261115/README.md](../../../research/experiments/seven-row-q7-m27-surgery-20261115/README.md)
+
+- [K0826](../items/K0826-seven-row-q7-deficient-witness-lower-bound.md) (proof): 7x27 frontier surgery complete case-split from the 7x26 rowY3 seed: one-stone-short census (unique uncovered cell (26,3), sole 5-stone T-curve = line y=3, no 4-stone T-curves), blocking lemma (A meets {T} union lineEmpty), exact-iff prefilters (single-addition okZ gate, shared eff>=5 pair gate, eff5+1/eff4+2 coverage), canonical counts for all enumerated sub-spaces, 470/470 targeted controls, open sub-spaces listed, and the discovery that the first ad-hoc (1,3)/(3,3) runs had a dead-gate effOf defect (verdict superseded by the verified consolidated machine)
+## [research/experiments/seven-row-q7-m27-surgery-20261115/output/surgery_results.json](../../../research/experiments/seven-row-q7-m27-surgery-20261115/output/surgery_results.json)
+
+- [K0826](../items/K0826-seven-row-q7-deficient-witness-lower-bound.md) (data): verified consolidated machine outputs: twoEdit singles 18,942 (13,725 okZ + 5,217 coverage) + pairs 99,326 (15,654 shared + 83,672 coverage) -> 0; (1,3) line-addition 149,940 (90,540 safety-gate + 59,400 coverage, gate 60/60 direct-brute UNSAFE confirm) + T-addition 10,660 -> 0; line-triple (3,3) 554,400 total (550,320 okZ-gated) -> 4,080 valid (1,430 shared + 2,650 coverage) -> 0; coverage targeted agreement 150/150 + 80/80 + 80/80 + 100/100
 ## [research/experiments/seven-row-q7-witness-search-20261114/output/def-search/records.jsonl](../../../research/experiments/seven-row-q7-witness-search-20261114/output/def-search/records.jsonl)
 
 - [K0826](../items/K0826-seven-row-q7-deficient-witness-lower-bound.md) (data): 19 records: SAT m=7..25 witnesses dual-verified (m=7..14 deep deficiency 30..41 stones, m=15..24 single-deficiency 41 stones) + m=25 OR-instance INDET (2,478,476 conflicts at 240s cap — honest negative)
