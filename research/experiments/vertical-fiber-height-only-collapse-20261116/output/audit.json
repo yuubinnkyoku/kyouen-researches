@@ -1,0 +1,42 @@
+{
+  "theorem": "For kappa=1, H(R;X;z)=H(R;(sum(X));z) whenever R<=z+1; for R<=2 this holds for every z.",
+  "stability_lemma": {
+    "claim": "v(s,z,r)=v(s,z+1,r) for z>=r",
+    "checks": 8364,
+    "mismatches": 0
+  },
+  "exhaustive": {
+    "multisets": "length 0..4, entries 1..5",
+    "R": "0..12",
+    "z": "max(0,R-1)..R+1",
+    "checks": 4788,
+    "mismatches": 0
+  },
+  "small_R_all_z": {
+    "multisets": "length 0..4, entries 1..5",
+    "R": "0..2",
+    "z": "0..9",
+    "checks": 3780,
+    "mismatches": 0
+  },
+  "seeded_random": {
+    "seed": 20261116,
+    "checks": 160,
+    "n": "0..5",
+    "entries": "1..12",
+    "R": "0..20",
+    "z": "max(0,R-1) plus 0..8",
+    "mismatches": 0
+  },
+  "uniform_threshold_sharpness": {
+    "R": "3..40",
+    "witness": "X=(1^R), z=R-2 for odd R; X=(1^(R-1)), z=R-2 for even R",
+    "checks": 38,
+    "all_mismatch_general_vs_single": true
+  },
+  "engines": [
+    "sorted multiset recurrence",
+    "ordered labeled-token recurrence",
+    "published single-token closed form"
+  ]
+}
