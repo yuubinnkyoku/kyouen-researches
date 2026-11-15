@@ -2,10 +2,11 @@
 
 ## 作業前確認
 
-- 作業開始時の最新main: 1828b78b65574d9b9cf13200f44b2651bb2eb675。
+- 作業開始時の最新main: 4be5f4050f5dfdea5a1451f12953d95dfc5643be。
 - AGENTS.md: mainへ直接反映、正本はK項目、experiment/logは歴史的記録として書き換えない、生成物は直接編集しない。knowledge変更後はcheck・unit test・buildが必要。
 - research/knowledge/README.md: K0832の全t最大値定理は既に記載済み。固定幅では4×m q=4/5、5×m q=5/6/7等が未確定。s_n単調性、K_10の20石存在もopen。今回の作業はこれらを重複探索せず、K0832の証明補足に限定。
 - generated summaryの未解決一覧を確認。新しいK番号は作らない。
+- 成果コミット: eb83bd80a8a0a9b3dc1830fed695b7d9b78fe05f。
 
 ## 発見
 
