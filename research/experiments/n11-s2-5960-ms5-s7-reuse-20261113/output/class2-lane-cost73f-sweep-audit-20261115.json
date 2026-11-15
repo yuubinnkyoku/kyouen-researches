@@ -1,0 +1,312 @@
+{
+ "schema": "n11-class2-lane-cost73f-raw-sweep-audit-20261115-v1",
+ "date": "2026-11-15",
+ "independent_method": "Python standard library; exact Bareiss integer determinants; D4 canonicalization implemented independently; no repository engine/solver/cache, no floating point",
+ "target": {
+  "s5_hex": "00000000020000003800000080000000",
+  "s6_child_hex": "000000000200000038000000c0000000",
+  "edge_cost": 73,
+  "legal_candidate_count": 73
+ },
+ "source_claim": {
+  "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73f-inflight-20261115.json",
+  "chain_head_at_claim": "1216/6631/523382/4901/387105 (class-frontier-cost63g-receipts-recompute-20261115.json, blob e311e24346adad570e42f145f9190fe8427ae921; the 14 cost-63g WIN7 receipts folded on head 1199)"
+ },
+ "geometry": {
+  "child_stones": 6,
+  "child_safe": true,
+  "independent_legal_candidate_count": 73,
+  "candidate_bits_exact_match": true,
+  "lift_note": "one-stone deletions re-derived independently: stone 30 deletion reproduces the best class-4 blocker S5 00000000020000003800000080000000 bit-exact (18 rows / 1460 at head 1216); stone 31 deletion D4-canonicalizes to the open class-4 parent 00000000020000003800000040000000 (85 rows / 6497); stone 89 deletion D4-canonicalizes to the open class-4 parent 00000000000000003800000001800000 (77 rows / 5548); the remaining three deletions are closed rows absent from the head-1216 ranking CSV (verified in-session against the published head-1216 ranking CSV before the claim push)"
+ },
+ "batches": [
+  {
+   "batch": 1,
+   "file": "class2-lane-cost73f-raw-batch1-20261115.jsonl",
+   "candidate_bits": [
+    0,
+    2,
+    3,
+    4,
+    7,
+    8,
+    10,
+    11
+   ],
+   "pilot_nodes": 3402,
+   "nodes": 16532578
+  },
+  {
+   "batch": 2,
+   "file": "class2-lane-cost73f-raw-batch2-20261115.jsonl",
+   "candidate_bits": [
+    14,
+    15,
+    16,
+    17,
+    18,
+    21,
+    26,
+    27
+   ],
+   "pilot_nodes": 3402,
+   "nodes": 4869478
+  },
+  {
+   "batch": 3,
+   "file": "class2-lane-cost73f-raw-batch3-20261115.jsonl",
+   "candidate_bits": [
+    28,
+    29,
+    32,
+    33,
+    34,
+    35,
+    37,
+    38
+   ],
+   "pilot_nodes": 3402,
+   "nodes": 2759445
+  },
+  {
+   "batch": 4,
+   "file": "class2-lane-cost73f-raw-batch4-20261115.jsonl",
+   "candidate_bits": [
+    40,
+    42,
+    43,
+    44,
+    45,
+    48,
+    49,
+    53
+   ],
+   "pilot_nodes": 3402,
+   "nodes": 5618401
+  },
+  {
+   "batch": 5,
+   "file": "class2-lane-cost73f-raw-batch5-20261115.jsonl",
+   "candidate_bits": [
+    54,
+    66,
+    67,
+    69,
+    70,
+    72,
+    74,
+    75
+   ],
+   "pilot_nodes": 3402,
+   "nodes": 4088813
+  },
+  {
+   "batch": 6,
+   "file": "class2-lane-cost73f-raw-batch6-20261115.jsonl",
+   "candidate_bits": [
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83
+   ],
+   "pilot_nodes": 3402,
+   "nodes": 5942692
+  },
+  {
+   "batch": 7,
+   "file": "class2-lane-cost73f-raw-batch7-20261115.jsonl",
+   "candidate_bits": [
+    84,
+    87,
+    88,
+    90,
+    91,
+    92,
+    93,
+    95
+   ],
+   "pilot_nodes": 3402,
+   "nodes": 3744898
+  },
+  {
+   "batch": 8,
+   "file": "class2-lane-cost73f-raw-batch8-20261115.jsonl",
+   "candidate_bits": [
+    99,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    109
+   ],
+   "pilot_nodes": 3402,
+   "nodes": 4356417
+  },
+  {
+   "batch": 9,
+   "file": "class2-lane-cost73f-raw-batch9-20261115.jsonl",
+   "candidate_bits": [
+    110,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118
+   ],
+   "pilot_nodes": 3402,
+   "nodes": 3208992
+  },
+  {
+   "batch": 10,
+   "file": "class2-lane-cost73f-raw-batch10-20261115.jsonl",
+   "candidate_bits": [
+    120
+   ],
+   "pilot_nodes": 3402,
+   "nodes": 400398
+  }
+ ],
+ "aggregate": {
+  "candidates": 73,
+  "win7_d10_bits": [],
+  "win7_d10_nodes": {},
+  "refuted_d10": 73,
+  "refuted_d10_bits": [
+   0,
+   2,
+   3,
+   4,
+   7,
+   8,
+   10,
+   11,
+   14,
+   15,
+   16,
+   17,
+   18,
+   21,
+   26,
+   27,
+   28,
+   29,
+   32,
+   33,
+   34,
+   35,
+   37,
+   38,
+   40,
+   42,
+   43,
+   44,
+   45,
+   48,
+   49,
+   53,
+   54,
+   66,
+   67,
+   69,
+   70,
+   72,
+   74,
+   75,
+   76,
+   77,
+   78,
+   79,
+   80,
+   81,
+   82,
+   83,
+   84,
+   87,
+   88,
+   90,
+   91,
+   92,
+   93,
+   95,
+   99,
+   101,
+   102,
+   103,
+   104,
+   105,
+   106,
+   109,
+   110,
+   112,
+   113,
+   114,
+   115,
+   116,
+   117,
+   118,
+   120
+  ],
+  "capped": 0,
+  "capped_bits": [],
+  "candidate_nodes": 51522112,
+  "pilots": 10
+ },
+ "crosschecks": {
+  "v16_determinism_rerun": {
+   "file": "class2-lane-cost73f-v16-determinism-rerun-20261115.jsonl",
+   "batch_rerun": 6,
+   "identical_ignoring_ms": true
+  },
+  "v15_cross_engine": {
+   "file": "class2-lane-cost73f-v15-crosscheck-20261115.jsonl",
+   "win_bits_agree": true,
+   "refuted_anchors": [
+    3,
+    32,
+    116
+   ],
+   "anchor_nodes": {
+    "3": 7881598,
+    "32": 1751024,
+    "116": 1696566
+   },
+   "pilots_5949": 1
+  }
+ },
+ "d4_duplicate_scan": {
+  "roots_compared": 0,
+  "manifest_files_scanned": 0,
+  "duplicates": 0
+ },
+ "checks": {
+  "all_bits_exactly_once": true,
+  "all_terminal_ranges_within_depth10_bounds": true,
+  "distinct_terminal_ranges": [
+   [
+    11,
+    17
+   ],
+   [
+    13,
+    17
+   ]
+  ],
+  "pilot_3402_per_batch": true,
+  "independent_enumeration_matches_claim": true
+ },
+ "proof_boundary": {
+  "raw_sweep_rederivation": "closed by this audit",
+  "certificate_extraction": "not required: the sweep is sterile (no WIN7-D10 bits)",
+  "fold_material": "none: no receipts, the canonical chain frontier is unchanged at 1216/6631/523382/4901/387105",
+  "interpretation_of_refuted_d10": "all 73 candidates are REFUTED-D10: no first-player win within depth 10 from any of the 73 seven-stone roots. This is NOT a LOSS proof for those roots and does not close the child S6 row; closing this child row requires evidence beyond depth 10 (each candidate would need a refutation at depth > 10 or an equivalent invariant)"
+ },
+ "interpretation": "win7_d10_bits is empty: the sweep is sterile. refuted_d10 is NOT a LOSS proof. capped proves nothing (and there were no capped candidates). The sweep alone closes no S6 orbit and changes no frontier count; the child 000000000200000038000000c0000000 remains an open S6 row at head 1216 (a remaining row of all three open class-4 parents; the best class-4 blocker S5 stays at 18 rows / 1460). The standard 11x11 empty board, both two-stone roots {49,60}/{59,60}, S2 {59,60}, class 2 and class 4 all remain UNKNOWN."
+}
