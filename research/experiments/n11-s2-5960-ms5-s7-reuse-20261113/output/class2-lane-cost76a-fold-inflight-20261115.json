@@ -1,0 +1,21 @@
+{
+ "schema": "n11-class2-lane-cost76a-fold-inflight-20261115-v1",
+ "title": "n11 class2-lane cost-76a receipts fold in flight (claimed by a long-term lane execution)",
+ "date": "2026-11-15",
+ "status": "in-flight",
+ "claimed_by": "long-term class2 lane",
+ "s6_child": "00000000000000809102000000000001",
+ "s6_s7_edge_cost": 76,
+ "demand": {
+  "c1": 0,
+  "c2": 2,
+  "c4": 0
+ },
+ "fold_scope": "fold the 6 published WIN7-D10 receipts (bits 11/29/66/80/92/96, all certificate-backed, 8/8 published files git-blob-sha verified on main per the certificate manifest class2-lane-cost76a-win7-certificates-20261115.json) of the cost-76a sweep (class2-lane-cost76a-sweep-audit-20261115.json, 76 candidates / 6 WIN7 / 70 REFUTED / 0 capped / 131,329,581 nodes) on the cost-72b receipts chain head 1188/6659/525437/4929/389160 (class-frontier-cost72b-receipts-recompute-20261115.json)",
+ "baseline_verification_plan": "the 1188 chain head will be reproduced locally end-to-end (runpy chain from the published recompute scripts, back to the MS5 manifest inputs) with the head JSON and both ranking CSVs asserted byte-identical to main before folding; every published cost-76a input file (sweep audit, 10 raw batches, v15 crosscheck, claim, certificate manifest, 8 certificate part files, third independent audit JSON) will be asserted byte-exact against main by git blob sha; the fold script asserts the child genuinely remaining at the 1188 baseline, re-derives the sweep record from the raw batches, re-verifies certificate bytes/headers/sub-root counts, and folds the 6 receipts in published bit order with per-receipt marginals re-derived from the growing union plus a set-equality control",
+ "child_status_at_baseline": "the cost-76a child orbit 00000000000000809102000000000001 is genuinely remaining at the 1188 head: the cost-78a claim cost-order note records the third target S5 00000000000000809102000000000000 at 4 remaining orbits (69 claimed as cost-69g / 74 as cost-74d completed + cost-74e in flight / 76 this fold / 78 claimed as cost-78a), sum 297 bit-exact with the head-1188 ranking CSV; this will be asserted from the chain-internal remaining incidences before folding",
+ "predicted_outcome": "unlike the cost-72b provenance-completion fold, the child orbit is expected to be closed by this fold itself (first receipt in published order covers it); expected new head 1189+ with the exact value derived only from the re-derivation (no precomputed totals asserted); the third-target S5 is expected to drop from 4 to 3 remaining orbits (297 to 221 remaining edge cost)",
+ "chain_head_at_claim": "1188/6659/525437/4929/389160 (class-frontier-cost72b-receipts-recompute-20261115.json)",
+ "coordination_note": "the cost-78a in-flight claim plans its own receipt fold after the pending cost-76a fold; this claim reserves the cost-76a fold so the cost-78a fold can rebase on the new head; mandatory pre-push main re-fetch applies to both sides; collision protocol per the cost-72b fold precedent (class2-lane-cost72b-fold-inflight-20261115.json)",
+ "unknown_status": "standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, class 2, class 4 remain UNKNOWN; a receipts fold is manifest bookkeeping only and does not determine the game-theoretic value of any position"
+}
