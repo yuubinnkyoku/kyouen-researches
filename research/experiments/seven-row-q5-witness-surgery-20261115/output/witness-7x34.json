@@ -424,6 +424,12 @@
       ],
       "note": "only cell (34,0) is uncovered at width 35 - the starting point for the next surgery round; no absence claim"
     },
+    "independent_recheck": {
+      "system": "second independent TypeScript implementation, method disjoint from the subset-enumeration verifier: pair direction-grouping line counts + pair-determined circles with 4x4 integer determinant concyclicity (no repo code, no shared routines, exact integers < 2^53)",
+      "result": "PASS both witnesses: safety maxLine=4 maxCircle=4 (< q=5); maximality 7x34 uncovered 0/211; rows [3,4,4,4,4,4,4]; 7x35 profile uncovered = {(34,0)} only; subset-method spot cross-checks agree on sampled blocked cells and on (34,0) at width 35 (unblocked); base m=33 witness calibration reproduces uncovered=0 at 7x33 and {(33,0)} at 7x34",
+      "date": "2026-11-15",
+      "note": "verification state now two independent TS implementations; js (sat.js verifyConfig) + py (Python Fraction) cross-check still pending bash recovery"
+    },
     "pending": "js (sat.js verifyConfig) + py (Python Fraction) cross-check pending: the bash execution environment was unavailable at verification time"
   },
   "search_statistics": {
