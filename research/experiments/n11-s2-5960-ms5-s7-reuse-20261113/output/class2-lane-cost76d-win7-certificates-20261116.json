@@ -1,0 +1,145 @@
+{
+  "schema": "n11-class2-lane-cost76d-win7-certificates-20261116-v1",
+  "date": "2026-11-16",
+  "sweep_source": {
+    "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76d-sweep-audit-20261116.json",
+    "git_blob_sha": "a57af0161942a6f597cfabe9aef892df2fa7be3f",
+    "bytes": 6737,
+    "s6_child_hex": "00000000040000003800080008000000",
+    "s5_parents_open": [
+      "00000000000000801202000040000000",
+      "00000000000000003800000208000000"
+    ],
+    "s6_s7_edge_cost": 76,
+    "demand": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+    },
+    "win7_d10_bits": [
+      19,
+      49
+    ],
+    "refuted_d10_count": 74,
+    "capped_count": 0
+  },
+  "claim_source": {
+    "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76d-inflight-20261116.json",
+    "commit": "6958761b",
+    "chain_head_at_claim": "1405/6443/509457/4713/373180"
+  },
+  "extraction": {
+    "engine": "repo-verbatim class4_child1_cert_extractor_exact.ts (FBS 1<<20, drop-counting fbt cache) driven per bit in one node process per bit via scripts/cert_driver76d.ts (published this session, git blob sha 927863a89c626ba33bb73b35668eea5da7220284, 1399 bytes), empty kill table (blind extraction, pref=null), one chunk per bit (no node budget aborts observed in the upgraded execution environment)",
+    "chunking": "single part (part1of1) per bit; rows sorted-unique via sort -u; header and root lines prepended per the cost-74d chunk convention"
+  },
+  "certificates": [
+    {
+      "bit": 19,
+      "child_hex": "00000000040000003800080008000000",
+      "root_hex": "00000000040000003800080008080000",
+      "d4_canonical_hex": "00000000040000003800080008080000",
+      "verdict": "WIN7",
+      "sub_roots": 55,
+      "root_mobility_matches_legal_candidates_py": true,
+      "rows": 44810,
+      "extraction_nodes": 7205539,
+      "fbt_drops": 0,
+      "fatal": null,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "terminal_count": 15404,
+      "published_cert": {
+        "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76d-certificates/bit19-root-00000000040000003800080008080000.cert",
+        "bytes": 1618698,
+        "md5": "c3bdda791f9b63a8d3e5f975a7175ad6",
+        "sha256": "55dce4ba86a33b0b1541d38f8b8d44a46fa9d717f37a484ea5d7389c7e6a321e",
+        "git_blob_sha": "f36ac20a9d4c9ed27e76f3968f4619042e343beb"
+      },
+      "summary": {
+        "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76d-certificates/bit19-root-00000000040000003800080008080000.cert.part1of1.summary.json"
+      },
+      "bareiss_verify": {
+        "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76d-certificates/bit19-bareiss-verify.json",
+        "git_blob_sha": "abbd82383319babd136e143cd710d2e29526bbbf",
+        "root_check": {
+          "stones": 7,
+          "loserMobility": 55
+        },
+        "subroots_verified": 55
+      }
+    },
+    {
+      "bit": 49,
+      "child_hex": "00000000040000003800080008000000",
+      "root_hex": "00000000040000003802080008000000",
+      "d4_canonical_hex": "00000000040000003802080008000000",
+      "verdict": "WIN7",
+      "sub_roots": 54,
+      "root_mobility_matches_legal_candidates_py": true,
+      "rows": 33648,
+      "extraction_nodes": 4333257,
+      "fbt_drops": 0,
+      "fatal": null,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "terminal_count": 11853,
+      "published_cert": {
+        "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76d-certificates/bit49-root-00000000040000003802080008000000.cert",
+        "bytes": 1215488,
+        "md5": "eb4a1a1370e3302f4e1152d1f74f98c9",
+        "sha256": "9ef8848ffd371783533043ebd853ef7f3ee9cfb8fe6854e89f7c12eafc550c8b",
+        "git_blob_sha": "5e2b8d56de5d8ecca8d309a930b1b5133f09a61f"
+      },
+      "summary": {
+        "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76d-certificates/bit49-root-00000000040000003802080008000000.cert.part1of1.summary.json"
+      },
+      "bareiss_verify": {
+        "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76d-certificates/bit49-bareiss-verify.json",
+        "git_blob_sha": "f884fcc072aa12d5c60abf6a571854cf5b8722ea",
+        "root_check": {
+          "stones": 7,
+          "loserMobility": 54
+        },
+        "subroots_verified": 54
+      }
+    }
+  ],
+  "controls": {
+    "all_certificates_independently_verified_double": true,
+    "all_root_mobility_matches_legal_candidates_py": true,
+    "all_rows_sorted_unique": true,
+    "all_union_zero_missing_zero_extra": true,
+    "all_terminal_range_within_13_17": true,
+    "all_v15_anchor_loss_true": true,
+    "all_fbt_drops_zero": true,
+    "all_fatal_null": true
+  },
+  "verification_method": "double independent verification on both certificates in this session: verify_win7_certificate_bigint_independent.mjs (BigInt 3x3 cofactor expansion of the exact lifted determinant [x^2+y^2,x,y,1]; no floating point; no repository engine import) PASS on both (bit19: 55/55 sub-roots, union 0 missing/0 extra, terminal [13,17]; bit49: 54/54 sub-roots, union 0 missing/0 extra, terminal [13,17]); verify_bit7_win7_cert.ts (Number Bareiss independent verifier, --root-check, all root loser first-moves as --subroots) PASS on both (55/55 and 54/54 sub-roots, throws on any violation); root mobility cross-checked against scripts/legal_candidates.py (55 and 54 legal loser first-moves, bit-exact match)",
+  "v15_crosscheck": {
+    "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76d-v15-crosscheck-20261116.jsonl",
+    "pilot_nodes": 5949,
+    "win_bits_loss_true": [
+      19,
+      49
+    ]
+  },
+  "totals": {
+    "certificates": 2,
+    "published_certificates": 2,
+    "rows": 78458,
+    "extraction_nodes": 11538796,
+    "sub_roots": 109,
+    "winner_states": 109726,
+    "loser_states": 32979,
+    "terminal_count": 27257
+  },
+  "push_sequence": "claim 6958761b; raw batches + v15 crosscheck + sweep audit eba444aa (12 files, all verified byte-exact via raw CDN curl + md5); bit19 certificate set (1/2) then bit49 certificate set (2/2) (each: whole .cert + extraction summary + Bareiss verifier output, all verified byte-exact remotely); the bit19 push program hit the 16 MiB run_typescript memory limit AFTER push_files executed (same abort-after-landing pattern as the cost-76a session) - remote md5 verification confirmed all 3 files byte-exact; this manifest published separately",
+  "incident_note": "first sweep attempt passed --bits space-separated so each batch ran only its first candidate; the ten jsonl outputs were deleted and the sweep rerun comma-separated before any publication; the bit19 cert push program aborted at the memory limit after push_files executed and was verified remotely byte-exact (3/3 files); no truncated or partial file landed",
+  "frontier_impact": "the two certificates close the certificate-extraction proof boundary for both WIN7-D10 roots of the cost-76d sweep; the raw sweep receipts have NOT yet been folded into the canonical chain (the cost-76d receipt fold onto the reconciled head 1405/6443/509457/4713/373180 must be published separately and must re-derive every marginal); the child orbit and both open parents are unaffected until that fold",
+  "interpretation_guard": "WIN7 certificates prove a first-player win within the certified strategy from the 7-stone roots only; they do not by themselves close the six-stone child, the S5 parents, the S2 {59,60} root, or the 11x11 empty board; solved counts measure manifest bookkeeping, REFUTED-D10 is not a LOSS proof",
+  "unknown_status": "11x11 empty board: UNKNOWN"
+}
