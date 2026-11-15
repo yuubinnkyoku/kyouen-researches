@@ -1,8 +1,8 @@
 {
- "schema": "n11-class2-lane-cost70d-inflight-20261115-v1",
+ "schema": "n11-class2-lane-cost70d-inflight-20261115-v2",
  "title": "n11 class2-lane cost-70d sweep in flight: cheapest unswept cost-70 child of the second coverable class-2 target S5 (mixed class-1+class-2 demand c1=1,c2=1)",
  "date": "2026-11-15",
- "status": "in_flight",
+ "status": "completed",
  "claimed_by": "long-term class2 lane (independent execution; distinct from the 67c/69h session)",
  "s5": "00000000000000801202000000200000",
  "s6_child": "00000000000000801282000000200000",
@@ -217,5 +217,21 @@
    "remaining_s7_edge_cost": 5971,
    "lift_stone": 57
   }
- ]
+ ],
+ "sweep_results": {
+  "candidates": 70,
+  "win7_d10_bits": [],
+  "refuted_d10": 70,
+  "capped": 0,
+  "total_nodes": 53890941,
+  "terminal_stone_range_all": [
+   13,
+   17
+  ],
+  "pilots_3402": 9,
+  "determinism_rerun_batch5_node_exact": true,
+  "raw_artifacts": "class2-lane-cost70d-raw-batch1..9-20261115.jsonl + class2-lane-cost70d-v16-determinism-rerun-20261115.jsonl + class2-lane-cost70d-v15-crosscheck-20261115.jsonl (all pushed, commit eaacea59)",
+  "sweep_audit": "class2-lane-cost70d-sweep-audit-20261115.json (independent stdlib Bareiss re-derivation; md5 a1739c77c0125dc7180abde83c01aa61, re-run byte-identical; d4 duplicate scan against 56 published win7-certificates manifests, 138 published canonical roots, duplicates 0)"
+ },
+ "sterile_verdict": "STERILE: no WIN7-D10 receipt exists for this child, so there is no fold material and the canonical chain head stays at 1221/6626/523035/4896/386758; the child row remains open for both parents (class-2 31/2334, class-1 75/5971); REFUTED-D10 is NOT a LOSS proof; closing this row requires evidence beyond depth 10"
 }
