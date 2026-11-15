@@ -1276,3 +1276,17 @@ cost-63g sweepの証明書付きWIN7-D10 receipts 14件（bits 0,9,12,50,54,58,6
 REFUTED-D10はWIN7-D10の不在のみを証明し勝敗判定ではない。解消計数はmanifest被覆の前進であり、盤全体の勝敗ではない。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class2・class4は引き続き **UNKNOWN**。
 
 詳細: [sweep log](../../log/2026-11-15-n11-class2-cost67c-sweep-certificates.md)、[certificates manifest](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost67c-win7-certificates-20261115.json)、[claim v2](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost67c-inflight-20261115.json)。
+
+## 2026-11-15: cost-73f sterile sweep — class-4 frontier行の初sweep・73 REFUTED-D10・frontier不変1216
+
+head-1216（cost-63g fold後のcanonical chain head 1216/6631/523382/4901/387105）のtop-candidatesで、**best class-4 blocker S5 `00000000020000003800000080000000`（18 orbits/1460・head-1045以来不変のclass-4 bottleneck）の最安未sweep行 cost-73 child `000000000200000038000000c0000000`**（stones [30,31,59,60,61,89]）をcost-73fとしてsweepした（cost-73a..73eはaudit-blocked class-2 S5の別行で使用済み）。**class-4 frontier行への初のsweep着手**（近年のレーンはすべてclass-2 target行）。
+
+- **claim前検証（head 1216基準）**: exact-integer D4正準化で子の6個の一石削除を照合し、開親3個がすべてclass-4（best blocker 18/1460〔stone 30削除〕・`00000000020000003800000040000000` 85/6497〔stone 31削除〕・`00000000000000003800000001800000` 77/5548〔stone 89削除〕・残り3削除はhead-1216 ranking CSVに不在の閉行）→ c1=0,c2=0,c4=3（head-1216 top-candidates CSVと一致）。IN FLIGHT claim（commit f391d736・blob ecfc38be…）を先行pushして着手。
+- **sweep結果（v16 d10・cap 1e9・andclose 1・10バッチ・pilot 3402×10全PASS）**: **73/73候補・WIN7-D10 0件・73 REFUTED-D10・0 capped・総nodes 51,522,112**。terminal rangeは71候補 [13,17]・bits 40/66が [11,17]（深さ10境界検査〔[0]≥7・[1]≤17〕で合格・distinct_terminal_rangesに記録）。batch-6 determinism rerun node-exact・v15交差エンジンでアンカーbits 3/32/116はloss=false（nodes 7881598/1751024/1696566・pilot 5949）。
+- **独立監査**: `audit_cost73f_raw_sweep_20261115.py`（Python標準ライブラリのみ・Bareiss再実装・repo engine不使用）が12 rawファイルから全件再導出（候補73==claim列挙 bit-exact・各bit 1回・pilot 3402×10・batch-6一致・v15アンカー一致）し2回実行byte-identical（md5 d7bdc565…）。出版訂正1件: 初版監査に65k雛形の記述残骸（"65"表記2箇所・"ten raw artifacts"ヘッダ）が残っていたのを検出即修（assert・集計値は初版から正しく記述フィールドのみ・訂正コミットfb9a609bでclaim/logに記録）。
+- **STERILE（負の実験事実）**: WIN7-D10 receiptが存在しないためfold材料なし・証明書抽出対象なし・**canonical chain head 1216/6631/523382/4901/387105は不変**。childは3開親（すべてclass-4）の未解決S6行のまま（best blockerは18行/1460不変）。REFUTED-D10はLOSS証明ではなく、この行を反証で閉じるには深さ>10の証拠が必要。class-4 frontierの次候補は同S5のcost-74行 `00000000020000003800000080000020`（c1=2,c2=0,c4=3）ほか。
+- 並走（着手時点）: cost-65l（bits 21/48証明書出版中）・cost-67c（bits 64/96・証明書出版済みでfold待ち）・cost-78a（bits 8/29/109）・69g/65j/74eはin flightで本sweepと衝突なし。それらのfoldはfold時点のcanonical headへのrebase必須。
+
+解消計数はmanifest被覆の前進であり、盤全体の勝敗ではない。WIN7証明書は個別7石rootの深さ10以内の先手勝ちのみを証明する。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class2・class4は引き続き **UNKNOWN**。
+
+詳細: [sweep log](../../log/2026-11-15-n11-class2-lane-cost73f-sterile-sweep.md)、[sweep audit](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73f-sweep-audit-20261115.json)、[completed claim](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73f-inflight-20261115.json)。
