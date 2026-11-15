@@ -30,6 +30,8 @@ jobs:
         run: uv run --locked python research/experiments/vertical-fiber-two-token-z0-slice-20261116/verify_z0_slice.py
       - name: Audit K0832 two-token z=1 residual slice
         run: uv run --locked python research/experiments/vertical-fiber-two-token-z1-slice-20261116/verify_z1_slice.py
+      - name: Audit K0832 two-token z=2 residual slice
+        run: uv run --locked python research/experiments/vertical-fiber-two-token-z2-slice-20261116/verify_z2_slice.py
       - name: Audit K0832 ceiling-token stable 2-position classification
         run: uv run --locked python research/experiments/vertical-fiber-ceiling-stable-2positions-20261116/verify_ceiling.py
       - name: Audit K0832 three-token transient band 2-position conjectures
