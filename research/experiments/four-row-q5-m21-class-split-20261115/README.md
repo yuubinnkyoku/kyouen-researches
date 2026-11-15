@@ -208,3 +208,32 @@ sweepp0gpin.sh: resumable driver (key <bucket>gA / <bucket>g<i>・cap 900s)。
 2. 句スーパーセット検査: 対照 CNF + --gpin / + --emptytail --gpin=... は
    base の句集合を全含み、差分はピンの unit のみ。
 3. listcases の plain モードが p1=83 / p0=86、adapted が p1=81 / p0=86 を出すこと。
+
+
+## 追記: blocker円分割の独立整数監査 (2026-11-15)
+
+独立Python実装 [verify_blocker_split.py](scripts/verify_blocker_split.py) を追加し、
+[sat5.js の adapted ケース列挙](blocker-split-independent-audit.md)を再検査した。
+84点から全非共線三つ組を列挙する整数係数実装で、538円・右端 (20,0) を通る19円
+(6点円17・5点円2) を再現し、各円の三つ組数が C(k,3) と一致することを確認した。
+
+重要な補足として、**このバケットでは blocker は円に限られる**。
+非水平直線は4行それぞれと高々1点で交わるため、右端点を含めても盤上点は高々4点。
+水平線 y=0 は21点を含むが、対象バケットの行0はちょうど3石で q-1=4 に届かない。
+したがって sat5.js の円だけの列挙で完全被覆になる。これは w=4, q=5, 欠損行の石数 k<=3
+という範囲の補題であり、他の幅・q・行占有数にはそのまま拡張しない。
+
+独立監査の結果:
+- p1: 固定石 (1,0) も通る円が2本あり、adapted blocker は81件。A枝を加え82件。
+- p0: 固定石 (0,0) も通る円が1本あり、adapted blocker は86件。A枝を加え87件。
+- 旧SAのplain p1=83件には、固定石 (1,0) をピン集合から落とした実行不能枝が2件含まれる。
+  いずれも同一円上に固定石を加えると5石になり、安全性に反する。SA記録の fail:2 と一致する。
+- p1/p0 の正準ケース列SHA-256は監査JSONに保存。2回の監査実行でJSONはバイト一致。
+
+再現:
+```sh
+python scripts/verify_blocker_split.py
+```
+出力: [blocker_split_independent_audit.json](output/blocker_split_independent_audit.json)。
+**これは分割の独立監査であり、KissatのSAT/UNSAT判定ではない。**
+82/87件のsolver結果は未取得で、M_{4,5} は [21,140] のまま。
