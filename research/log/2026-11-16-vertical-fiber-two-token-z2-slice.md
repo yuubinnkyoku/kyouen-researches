@@ -38,8 +38,6 @@ verify_z2_slice.py はcap付き正準多重集合エンジンとcapなし順序�
 - 偶数RでH≤1を146,620点、tail R≥S+3を19,440点、値2位置を144,980奇数点で照合。違反0。
 - 固定seed散点200件、不一致0。
 - 二回実行で監査JSONはbyte-identical。
-- 検証器SHA-256: bf4bce5c927d8054dd6dad725f31f3d6c03409aa9966780967bdd8c05c056f64
-- 監査JSON SHA-256: 9dbb923986198cc8d9db2bc9dab3bea5137466969a805d8c425106ef95923d06
 
 ## K0832・README・workflow
 新しいK番号は発行せず、K0832にz=2の全Grundy閉形式・強帰納証明・限界を追記。一般2位置予想の未証明範囲をz≥3へ狭め、artifact一覧に証明・検証器・監査JSON・本ログを登録。手書きknowledge READMEもz=0,1,2証明済み・z≥3未証明へ更新した。
