@@ -118,10 +118,16 @@ carries the flag). At **m=60 the wall became real**: the census needs
 --max-old-space-size=900 generated one m=60 CNF but the next run was
 kernel-killed (rc 137); 1400 is killed instantly; 800 dies with a JS heap
 OOM at ~585 MB. **sat2.js band frontier: m=59 (free); m=60 blocked by
-generation memory, not by the solver.** The designed fallback is the
-genfast3.js generator (valid for q >= w+2; (6,8) qualifies with q=8=w+2),
-to be calibrated by CNF byte-identity against sat2.js on shared widths
-before any genfast3-only width is claimed.
+generation memory, not by the solver.** The m>=60 band is NOT claimed here:
+it is the territory of the parallel IN FLIGHT experiment
+`six-row-q8-band-closure-22-370-20261114`, whose genfast3.js generator
+(chord-pair abstract-circle census, valid for q >= w+2; (6,8) qualifies
+with q=8=w+2; generation O(C(w,2)·m^2·w), seconds at m=370, no all-triples
+census) is already calibrated there against sat2.js (CNF byte-identity 6/6
+samples including 6x21 rowY=1 and 6x24 def+lex, instance-identity 2/2). This
+lane's m=22..59 row-split results and cross-encodings stand as the
+independent-encoding complement of that lane's def-mode sweep; the wall
+documented here does not affect genfast3 generation.
 
 ## Honest negative
 
@@ -154,8 +160,9 @@ JSON to stay under the sandbox 16 MiB op-recording limit.)
 
 ## Not claimed
 
-- 6x60 and above until the genfast3.js switch is calibrated (frontier: 6x60,
-  blocked by the sat2.js generation RAM wall at m=60, not by difficulty).
+- 6x60 and above (claimed by the IN FLIGHT band-closure experiment
+  `six-row-q8-band-closure-22-370-20261114`, genfast3 machinery; this lane
+  stops at the m=60 sat2.js generation RAM wall and defers the rest).
 - Any band width decided only by genfast3.js before its CNF byte-identity
   calibration against sat2.js passes on shared widths.
 - 11x11 empty board, two-stone root {49,60}, S2 {59,60}, class 2, class 4:
