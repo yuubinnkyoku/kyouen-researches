@@ -97,12 +97,17 @@ const rank=new Map();for(const line of rankText.split(/\r?\n/)){const m=line.mat
 const groups=new Map();let incidences=0;
 for(const spec of manifest.certificates){const root=BigInt("0x"+spec.root_hex);for(const removed of points(root)){incidences++;const p=root^(1n<<BigInt(removed)),c=canon(p),mv=mapPoint(removed,c.symmetry);let g=groups.get(c.hex);if(!g){g={hex:c.hex,incidences:[],moves:new Set()};groups.set(c.hex,g);}g.incidences.push({bit:spec.bit,removed});g.moves.add(mv);}}
 check(incidences===42&&groups.size===37,"parent lift totals");
+const uniqueParentMovePairs=[...groups.values()].reduce((sum,g)=>sum+g.moves.size,0);
+check(uniqueParentMovePairs===42,"unique parent-move pair total");
+const topParentGroups=[...groups.values()].filter(g=>topRows.some(row=>row.s6===g.hex)).length;
+check(topParentGroups===2,"top-candidate parent count");
+check(claim.chain_head==="1188/6659/525437/4929/389160","frontier head snapshot");
 const groupFor=hex=>groups.get(canon(BigInt("0x"+hex)).hex);
 const s5A=manifest.sweep_source.s5_parent_hex,s6A=manifest.sweep_source.s6_child_hex;
 const gA=groupFor(s6A),movesA=[...gA.moves].sort((a,b)=>a-b);
 check(movesA.join(",")==="11,29,66,80,92,96","shared S6 moves");
 const rowA=topByS6.get(canon(BigInt("0x"+s6A)).hex),rankA=rank.get(s5A);
-check(rowA&&rowA.s5===s5A&&rowA.cost===76&&rankA.remaining===4&&rankA.cost===297,"S5 A snapshot");
+check(rowA&&rowA.s5===s5A&&rowA.cost===76&&rankA.classes===2&&rankA.remaining===4&&rankA.cost===297,"S5 A snapshot");
 const legalA=bits(legalMask(points(BigInt("0x"+s6A))));check(legalA.length===76&&movesA.every(x=>legalA.includes(x)),"S6 A legal edges");
 
 const claimB=claim.open_parents_at_head_1188.find(x=>x.s5_hex==="00000000000000801202000000000400");
@@ -113,7 +118,7 @@ check(symB>=0,"S5 B D4 lift");
 const s6B=image(BigInt("0x"+s6A),symB),addedB=mapPoint(56,symB),movesB=movesA.map(x=>mapPoint(x,symB)).sort((a,b)=>a-b);
 check(s6B===(s5B|(1n<<BigInt(addedB)))&&addedB===64,"S5 B added move");
 const legalB=bits(legalMask(points(s6B)));check(legalB.length===76&&movesB.every(x=>legalB.includes(x)),"S6 B legal edges");
-const rankB=rank.get(claimB.s5_hex);check(rankB&&rankB.remaining===77&&rankB.cost===6296,"S5 B ranking");
+const rankB=rank.get(claimB.s5_hex);check(rankB&&rankB.classes===2&&rankB.remaining===77&&rankB.cost===6296,"S5 B ranking");
 
 const s5C="00000000000000801202000000200000",s6C="00000000000000801202000000200400",gC=groupFor(s6C);
 const rowC=topByS6.get(canon(BigInt("0x"+s6C)).hex),rankC=rank.get(s5C);
