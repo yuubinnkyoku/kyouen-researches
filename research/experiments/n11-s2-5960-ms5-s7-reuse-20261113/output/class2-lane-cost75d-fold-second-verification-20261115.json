@@ -1,0 +1,42 @@
+{
+ "controls_passed": {
+  "certificates_bytes_verified": "4 certificates verified against joined LF bytes: 239,868 rows / 8,654,219 bytes / 242 sub-roots; part-join == whole for bit92 (2 parts) and bit111 (3 parts); split manifests, receipts md5/sha256/blob, BigInt + Number Bareiss verifier records 4/4 PASS (union 0/0)",
+  "chain_head_1290_reproduced": "runpy re-execution of the published 77c fold script chain reproduces head 1290/6557/517923/4827/381646 with the 77c head JSON and both CSVs blob-identical to main (7f2badce7132aa7fdf76c9ee0283bd14a9ac9e7b + 10558 B; 9ada5dfc2057d3a340a3c27a8e984498c17118ad + 7539 B; 8d5583e03e490042898be459d06e03b4aa2b5c13 + 7589 B)",
+  "child_genuinely_remaining": "single open lift parent (second target S5) holds the child row 13/1018 at head 1290; demand c1=0,c2=1,c4=0 re-derived; lift stone 78 reproduces parent1 exactly; the other five deletion orbits stay closed",
+  "completed_claim_closure": "the completed claim fold record matches this recomputation: head 1296/6551/517468/4821/381191, three output blobs re-asserted byte-identical",
+  "fold_arithmetic": "total marginal 22, in-manifest 6, zero-mim none; child orbit closed by bit12; set-equality control holds; second target S5 13 rows/1018 -> 11 rows/866, lost rows = the child row and the cost-77 row 00000000100000801202000000200000 (closed by the bit-92 cross-cover, warm-hygiene required for the in-flight 77d fold)",
+  "root_disjointness": "4 new roots disjoint from the 565 folded roots raw-hex and D4-canonically; 4 distinct D4 orbits",
+  "sweep_rederived": "75 candidates exactly once from 10 raw batch JSONLs, 4 WIN7-D10 [12,40,92,111] / 71 REFUTED-D10 / 0 capped, 143,552,593 nodes, pilots 3402 x10, determinism rerun node-exact, v15 pinned record 4/4 WIN (nodes 1,406,438 / 7,087,163 / 16,644,786 / 10,234,430) + 5/5 refuted anchors bits 0/2/4/6/86, pilots 5949 x3"
+ },
+ "date": "2026-11-15",
+ "fold_script_blob_sha": {
+  "bytes": 25237,
+  "git_blob_sha": "a9664368d8833b36fc5cbea9773379ae7743d66d",
+  "md5": "ab5c2539994596d36d380d14a7d0de03"
+ },
+ "inputs": "published main bytes only: the codeload main tarball mirror plus the four files published after it (class-frontier-cost75d-receipts-recompute-20261115.json, both after-cost75d CSVs, the completed claim); no state from the landing session was reused",
+ "interpretation_guard": "bookkeeping verification of a receipts fold only; solved 1296 measures manifest coverage, not the game-theoretic value of any position; REFUTED-D10 is not a LOSS proof; WIN7 certificates prove a win within depth 10 from the individual 7-stone roots only; 11x11 empty board / two-stone root {49,60} / S2 {59,60} / class 1 / class 2 / class 4 all remain UNKNOWN",
+ "method": "the published fold script research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost75d_receipts_20261115.py (git blob sha computed locally and asserted against the claim fold record) was re-executed end-to-end twice in the isolated mirror; every built-in control passed on both runs",
+ "outputs_byte_identical_to_main": {
+  "class-frontier-cost75d-receipts-recompute-20261115.json": {
+   "bytes": 8992,
+   "git_blob_sha": "c801e60578ee5c5272e75719e35847052ac58314",
+   "md5": "034f3e87ec511ad4d0458e7f5e72fcb0"
+  },
+  "class-frontier-s5-ranking-after-cost75d-receipts-20261115.csv": {
+   "bytes": 7538,
+   "git_blob_sha": "25b7fc1ba84d4d0450cf9201312a9355cf7414a1",
+   "md5": "7212d606af62e543b750464def7d0993"
+  },
+  "class-frontier-top-candidates-s6-after-cost75d-receipts-20261115.csv": {
+   "bytes": 7416,
+   "git_blob_sha": "d678283703f7e229a1d36990145bbfa5107ba82d",
+   "md5": "c434a57e456e84fc767cf30e3948e609"
+  }
+ },
+ "runs": 2,
+ "runs_byte_identical": true,
+ "schema": "n11-class2-lane-cost75d-fold-second-verification-20261115-v1",
+ "session": "long-lane whole-chain-audit session (v3); second independent re-execution of the published cost-75d receipts fold script",
+ "target": "cost-75d receipts fold (4 WIN7-D10 bits 12/40/92/111) rebased onto the cost-77c chain head 1290/6557/517923/4827/381646, new canonical head 1296/6551/517468/4821/381191"
+}
