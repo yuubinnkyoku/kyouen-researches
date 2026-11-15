@@ -1,6 +1,6 @@
 ---
 id: K0833
-title: "4〜6行 q=4,5 行欠損witness帯 — (4,4) m=4..34, (5,4) m=5..39, (6,4) m=6..44, (4,5) m=5..20, (5,5) m=5..25 全幅SAT; M_{4,4}>=35, M_{5,4}>=40, M_{6,4}>=45, M_{4,5}>=21, M_{5,5}>=26; sat3 OOM壁越えと rowY 分割・2クラス被覆で帯延伸"
+title: "4〜6行 q=4,5 行欠損witness帯 — (4,4) m=4..34, (5,4) m=5..39, (6,4) m=6..46, (4,5) m=5..20, (5,5) m=5..25 全幅SAT; M_{4,4}>=35, M_{5,4}>=40, M_{6,4}>=47, M_{4,5}>=21, M_{5,5}>=26; sat3 OOM壁越えと rowY 分割・2クラス被覆で帯延伸"
 kind: proposition
 status: computed
 topics: [rectangles, maximal-safe]
@@ -110,6 +110,15 @@ l SAT dual-verified: m=23以降単一欠損17石, m=31 4.1s/131 conflicts, 全�
 - path: research/experiments/four-row-q4-q5-frontier-20261115/output/ts-verify-frontier-m44.json
   role: data
   note: "(6,4) m=44 witness の第3系統検証 PASS・陽性対照（m=40 再PASS・nCircles=670/nQ1Curves=690 が m=41/42/43 run と同一）・陰性対照（1石移動で maxCirc=4 unsafe+7 uncovered を検出）"
+- path: research/experiments/four-row-q4-q5-frontier-20261115/output/q4-w6-rowY0-m45/records.jsonl
+  role: data
+  note: "(6,4) m=45 rowY=0 固定分割 SAT 1200s-cap 10,066 conflicts/272.1s (17石 rows [2,3,3,3,3,3], wrapper completed end-to-end; conflicts keeps decreasing 34,728 -> 12,816 -> 10,066, m=43 was a local peak) - witness 帯 m=6..45, M_{6,4} ∈ [46, 1113]"
+- path: research/experiments/four-row-q4-q5-frontier-20261115/output/ts-verify-frontier-m45.json
+  role: data
+  note: "(6,4) m=45 witness の第3系統検証 PASS・陽性対照（m=40 再PASS・nCircles=670/nQ1Curves=690 が m=41..44 run と同一）・陰性対照（1石移動で maxCirc=4 unsafe+1 uncovered を検出）"
+- path: research/experiments/four-row-q4-q5-frontier-20261115/output/q4-w6-construct-m46/records.jsonl
+  role: data
+  note: "(6,4) m=46 witness by constructive free-column append of the m=45 witness (solver-free): stones unchanged on the 6x46 board; pure-TS/BigInt full-board verification PASS (safe maxLine=3/maxCirc=3, uncovered=0, rows [2,3,3,3,3,3]); free append stops at m=47 (cell (46,0) uncovered); js+py verification pending bash recovery - witness 帯 m=6..46, M_{6,4} ∈ [47, 1113]"
 - path: research/experiments/four-six-row-q4-q5-band-extension-20261115/output/ts-verify-band-extension.json
   role: data
   note: "第3系統（純TS/BigInt, verify_independent.ts verbatim・フラグメント照合18/18）で band-extension 全12 witness ((6,4) m=32..40, (5,4) m=37..39) が全て PASS safe+maximal+row-deficient・単一欠損; 陰性対照（石移動→unsafe検出）・陽性対照（前レーン3系統検証済み (6,31,4) witness の再PASS）つき — 3系統検証"
@@ -246,6 +255,23 @@ owY 分割)
    今回は decode・2系統検証まで完走し record は lean5.sh が直接生成
    （前線は m=45）。conflicts は m=43 の 34,728 から 12,816 に減少 —
    難化トレンドの初の反転。
+1e. **(6,4) m=45 SAT・3系統検証 PASS**（rowY=0 固定分割・cap 1200s で 272.1s・
+   10,066 conflicts・17石単一欠損 rows [2,3,3,3,3,3]）。**witness 帯は m=6..45 に拡大、
+   M_{6,4} ∈ [46, 1113]**。第3系統は同一 verbatim 実行（ts-verify-frontier-m45.json・
+   陽性対照 m=40 再PASS は nCircles=670/nQ1Curves=690 が m=41..44 run と同一・
+   陰性対照 1石移動で maxCirc=4 unsafe+1 uncovered を検出）。conflicts は
+   m=43 34,728 → m=44 12,816 → m=45 10,066 と減少が継続 — m=43 が局所ピーク
+   だったことが確定。
+1f. **(6,4) m=46 witness が構成的に確定**（free-column append: m=45 witness の
+   石配置をそのまま 6×46 ボードに置く・ソルバ不使用）。純TS/BigInt 第3系統の
+   full-board 走査で safe (maxLine=3/maxCirc=3)・全空点カバー (uncovered=0)・
+   行欠損 (rows [2,3,3,3,3,3]) すべて PASS。**witness 帯は m=6..46、
+   M_{6,4} ∈ [47, 1113]**。free append は m=47 で停止（(46,0) が未カバー）。
+   js+py 2系統検証は bash 環境復旧後に実施予定。周辺分析（純TS）: 1石追加
+   （63候補全滅・3 unsafe+60 nonmax）・1石移動（safe 77 組合せ全滅 nonmax）で
+   は m=47 witness は出現せず。m=42..44 witness の free-append 到達幅は
+   m0+1 で停止（m=42 witness → m=43, m=43/44 witness → m=44/45 の右端
+   (m-1,0) が未カバー）— m=45 witness のみ m0+1 を到達。前線は m=47。
 2. **w=4 rowfixed 2クラス被覆補題**（frontier レーン README に証明つき）:
    lex=H 単独の rowfixed(0)/rowfixed(1) の2 UNSAT で固定幅の witness-free が確定する
    （H は行を保存し、V は行 0↔3・1↔2 を送る。full-lex (H,V,HV) では V/HV が

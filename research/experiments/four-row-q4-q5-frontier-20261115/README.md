@@ -79,7 +79,7 @@ lex=H 単独の2クラスが absence 可能な初の走査である。
 完全証明（M の確定）。INDET は cap 到達であり不在を意味しない。
 上界（K0068 parity / K0318 substitution）は不変。
 
-## 結果（2026-11-15・バッチ1〜12）
+## 結果（2026-11-15・バッチ1〜15）
 
 1. **(6,4) m=41 SAT**（rowY=0・lex=H,V,HV・245.2s・8,226 conflicts・17石
    rows [2,3,3,3,3,3]）— js+py 2系統検証 + 第3系統（純TS/BigInt・陽性/陰性対照つき）
@@ -101,7 +101,20 @@ lex=H 単独の2クラスが absence 可能な初の走査である。
    陽性対照 m=40 再PASS は nCircles=670/nQ1Curves=690 が m=41/42/43 run と同一・
    陰性対照 maxCirc=4 unsafe+7 uncovered 検出つき）PASS。ラッパーが今回は
    decode・検証まで完走。conflicts は m=43 の 34,728 から 12,816 に減少 —
-   難化トレンドの初の反転。前線 m=45。
+   難化トレンドの初の反転。
+1e. **(6,4) m=45 SAT**（rowY=0・lex=H,V,HV・cap 1200s で 272.1s・10,066 conflicts・
+   17石 rows [2,3,3,3,3,3]）— **witness 帯 m=6..45・M_{6,4} ∈ [46, 1113]**。
+   js+py 2系統検証 + 第3系統（output/ts-verify-frontier-m45.json・
+   陽性対照 m=40 再PASS は nCircles=670/nQ1Curves=690 が m=41..44 run と同一・
+   陰性対照 maxCirc=4 unsafe+1 uncovered 検出つき）PASS。conflicts 減少が継続
+   （34,728 → 12,816 → 10,066）— m=43 が局所ピーク。
+1f. **(6,4) m=46 witness 構成的に確定**（free-column append・ソルバ不使用）—
+   **witness 帯 m=6..46・M_{6,4} ∈ [47, 1113]**。m=45 witness の石配置をそのまま
+   6×46 ボードに置くと列 45 の全点が既存17石の 3石曲線でブロックされる。
+   純TS/BigInt 第3系統 full-board 走査 PASS（safe・uncovered=0・行欠損）。
+   output/q4-w6-construct-m46/records.jsonl。free append は m=47 で停止
+   （(46,0) 未カバー）。周辺分析: 1石追加 63 候補・1石移動 safe 77 組合せは
+   いずれも m=47 witness なし（local negative・不在主張ではない）。前線 m=47。
 2. **(4,4) m=35**: 2クラス被覆掃引（rowY=0/1・lex=H）ともに 600s INDET
    （324,870 / 230,642 conflicts）— honest negative。不在主張ではない。
    M_{4,4} ∈ [35, 237] は不変。
