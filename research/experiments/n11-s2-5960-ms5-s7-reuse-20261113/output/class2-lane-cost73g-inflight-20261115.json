@@ -1,8 +1,8 @@
 {
- "schema": "n11-class2-lane-cost73g-inflight-20261115-v3",
- "title": "n11 class2-lane cost-73g sweep completed: cheapest unswept row (cost 73) of the second coverable class-2 target S5 at head 1244 (both parents class 2, c1=0,c2=2,c4=0) - 8 WIN7-D10 receipts, certificates published, fold pending",
+ "schema": "n11-class2-lane-cost73g-inflight-20261115-v4",
+ "title": "n11 class2-lane cost-73g sweep completed: cheapest unswept row (cost 73) of the second coverable class-2 target S5 at head 1244 (both parents class 2, c1=0,c2=2,c4=0) - 8 WIN7-D10 receipts, certificates published, folded (chain head 1249)",
  "date": "2026-11-15",
- "status": "receipts fold IN FLIGHT (this session): folding the 8 WIN7-D10 receipts [31, 54, 56, 62, 69, 81, 89, 113] into the canonical chain head 1244/6603/521339/4873/385062 (class-frontier-cost72c-receipts-recompute-20261115.json, git blob sha 42dbb92e1505d05389e840e3368974b1c613b750, byte-verified on latest main immediately before this push); the fold script re-asserts the head, re-derives the sweep audit from the 10 raw batches, re-verifies all 8 certificates from the published part bytes, checks root disjointness against the 512 folded roots, and folds in publication order; outputs land as class-frontier-cost73g-receipts-recompute-20261115.json + ranking + top-candidates CSVs; parallel sessions must not fold these receipts or extend the chain head concurrently",
+ "status": "completed (sweep + WIN7 certificates + independent audit + receipts fold); canonical chain head 1249/6598/520956/4868/384679",
  "claimed_by": "long-term class2 lane (11x11 weak-solve long-term lane session, cost-72c receipts fold session continuation)",
  "s5": "00000000000000801202000000200000",
  "s6_child": "00000000000000849002000000000800",
@@ -204,7 +204,7 @@
    ]
   }
  },
- "plan": "COMPLETED: sweep all 73 candidates, v16 determinism rerun, v15 cross-engine, independent Python sweep audit, certificate extraction + BigInt/Bareiss double verification, raw batches / audit / certificates / manifest / verify records pushed; IN FLIGHT: receipts fold of the 8 WIN7-D10 bits on head 1244 (this session, fenced by fold_in_flight); the pending cost-70g/65l folds may land before/after and are unaffected (other children) but any subsequent fold must re-assert the then-current canonical head",
+ "plan": "COMPLETED: sweep all 73 candidates (10 batches), v16 determinism rerun (batch 5, node-exact), v15 cross-engine (8 WIN + 3 REFUTED anchors, all agreeing), independent Python sweep audit, certificate extraction + BigInt/Bareiss double verification for all 8 WIN7-D10 bits, raw batches / audit / certificates / manifest / verify records pushed, and the receipts fold landed (chain head 1249/6598/520956/4868/384679; outputs class-frontier-cost73g-receipts-recompute-20261115.json + ranking + top-candidates CSVs); the pending cost-70g/65l folds must rebase on this new head",
  "unknown_status": "11x11 empty board: UNKNOWN. A completed sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 7-stone roots of this child; REFUTED-D10 is absence of a winner win within depth 10, not a refutation of the child; solved/coverage counts measure manifest bookkeeping, not the game-theoretic value of any position; class 2 and class 4 remain UNKNOWN.",
  "sweep_results": {
   "candidates": 73,
@@ -298,5 +298,62 @@
   "fold_script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost73g_receipts_20261115.py",
   "claimed_by": "long-term class2 lane (same session that published the sweep + certificates; claim updated before any fold output is published)",
   "fence_note": "parallel sessions must not fold these 8 receipts concurrently and must not land another chain-head extension before this fold resolves; the pending cost-70g/65l folds and in-flight 69g/65j/74e/74g lanes target other children but any later fold must re-assert the head and rebase on the then-current canonical head"
+ },
+ "fold": {
+  "session": "long-term class2 lane fold session (this session, immediately after the sweep/certificate session)",
+  "chain_head_before": "1244/6603/521339/4873/385062",
+  "baseline_head_file": "class-frontier-cost72c-receipts-recompute-20261115.json (git blob sha 42dbb92e1505d05389e840e3368974b1c613b750)",
+  "chain_head_after": "1249/6598/520956/4868/384679",
+  "head_file": "class-frontier-cost73g-receipts-recompute-20261115.json",
+  "fold_script": "scripts/recompute_frontier_cost73g_receipts_20261115.py",
+  "fold_script_blob_sha": "386b0664672d1a30dc89a128c487457f87ef5089",
+  "receipts_folded": [
+   31,
+   54,
+   56,
+   62,
+   69,
+   81,
+   89,
+   113
+  ],
+  "total_marginal": 39,
+  "total_marginal_in_manifest": 5,
+  "zero_marginal_in_manifest": [
+   56,
+   62,
+   69,
+   81,
+   113
+  ],
+  "child_orbit_closed_by_bit": 31,
+  "parents_after": {
+   "parent1": "19 rows / 1463",
+   "parent2": "55 rows / 4352"
+  },
+  "parents_lost_rows": {
+   "parent1": [
+    "00000000000000849002000000000800",
+    "00000000020000809002000000000800"
+   ],
+   "parent2": [
+    "00000000000000801242000080000000",
+    "00000000000000841242000000000000",
+    "00000000000000849002000000000800",
+    "00000000000000849002000080000000"
+   ]
+  },
+  "head_json_bytes": 12956,
+  "ranking_csv_bytes": 7580,
+  "top_candidates_csv_bytes": 4835,
+  "output_blob_shas": {
+   "head_json": "e4fb98dc8670fbb85786ab02f017a0a95e357648",
+   "ranking_csv": "5760754d23d4ee27e5115de5133e25eb960dfc76",
+   "top_candidates_csv": "2da6422175294fa5a35f8ff33fe96a21f1e839e8"
+  },
+  "controls": "runpy reproduction of the cost-72c fold script asserting the 1244 head blob-identically (head JSON + both CSVs == main, blob 42dbb92e); 37 published cost-73g input files byte-exact by git blob sha and this claim asserted by content (the script deliberately does not blob-pin the claim so it stays re-runnable after the claim closure update); the child re-asserted genuinely remaining at 1244 (lift stones 66/11, the other four deletions closed rows, both open parents holding the child row at 21/1615 and 59/4656); the sweep re-derived from the 10 raw batches (73 candidates, 8 WIN7-D10 / 65 REFUTED-D10 / 0 capped, 91,357,592 nodes, pilots 3402 x10, determinism rerun node-exact, v15 8 WIN + 3 refuted anchors); all 8 certificates verified against the local part bytes (parts join == whole md5 and git blob sha, 343,092 rows / 12,392,797 bytes / 94,100,994 extraction nodes, per-bit BigInt and Bareiss verify records re-read, union 0/0); the 8 roots disjoint from the 512 folded roots (499 through cost-71c + 4 cost-70f + 9 cost-72c) raw-hex and D4-canonically; fold in publication order with per-record marginals re-derived from the growing union; child orbit closed by bit31; set-equality s_after == s_1244 UNION covers(8 roots); three consecutive runs byte-identical (head JSON md5 4f36b505ea0e0b8a6900385489de830c)",
+  "outstanding": "cost-70g (8 WIN7 certificates, parallel lane) and cost-65l (2 receipts, fold in flight on a parallel lane) folds must rebase on this new head 1249; cost-69g/65j/74e/74g remain in flight on parallel lanes; the sibling cost-73 row 00000000200000083800000000000200 of the same parent remains unswept",
+  "interpretation": "bookkeeping over published receipts; solved counts measure manifest coverage, not the game-theoretic value of any position; closing the cost-73g child orbit removes the child (and 4 further manifest rows covered en route) from the two open class-2 parents' remaining rows but solves neither S5 parent (the second target still has 19 rows / 1463); 11x11 empty board / two-stone root {49,60} / S2 {59,60} / class 1 / class 2 / class 4 remain UNKNOWN",
+  "erratum_sibling_hex": "prose erratum recorded 2026-11-15: the no_prior_sweep_note of this claim (written at v2, unchanged since) and the outstanding_not_folded.sibling_cost73_row field of the published fold head JSON both quote the sibling row as 00000000220000083800000000000200, but the correct hex of the remaining cost-73 row of parent 00000000000000801202000000200000 at head 1249 is 00000000200000083800000000000200 (per the machine-generated ranking and top-candidates CSVs; re-verified from the fold reproduction). The typo'd hex is not a manifest row and affects no asserted value, no fold arithmetic, and no proof artifact; the published head JSON is left byte-unmodified (70f baseline_main precedent) and future sweep/fold sessions must target 00000000200000083800000000000200 (second open parent 00000000000000003800200008000000, 67 rows / 5182)"
  }
 }

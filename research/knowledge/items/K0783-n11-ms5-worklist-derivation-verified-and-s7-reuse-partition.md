@@ -1621,3 +1621,24 @@ receipts foldは次回以降: fold前に最新mainを再取得しhead 1244（blo
 REFUTED-D10はLOSS証明ではなく、8証明書は個別7石rootの深さ10以内の先手勝ちのみを証明する。solved 1244はmanifest被覆の簿記であり盤全体の勝敗ではない。**標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class1・class2・class4は引き続きUNKNOWN**。
 
 詳細: [lane log](../../log/2026-11-15-n11-class2-lane-cost73g-sweep-certificates.md)、[sweep audit](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73g-sweep-audit-20261115.json)、[certificate manifest](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73g-win7-certificates-20261115.json)、[claim v2](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73g-inflight-20261115.json)。
+
+## 2026-11-15: cost-73g receipts fold — canonical head 1244 → 1249
+
+直前のcost-73g sweep・証明書セッション（上記）に続く同一セッションで、8 WIN7-D10 receipts [31, 54, 56, 62, 69, 81, 89, 113]をcanonical head 1244（blob `42dbb92e`）にfoldした。claim v3（fold IN FLIGHT fence）を先頭にpushして並走をfenceし、fold成果物のpush前に最新mainを再取得してfive-row-q7レーンの新コミットが本チェーンに無影響であることを確認した（72c head JSON不変）。
+
+`recompute_frontier_cost73g_receipts_20261115.py`を書いて3回連続実行、すべてbyte-identical（head JSON md5 `4f36b505`）を確認した上でpushした。統制はcost-72c foldの方式を踏襲:
+
+- **baseline再構成**: 72c fold scriptをrunpy鎖（72c→70f→71c→前期鎖全体）で再現し、1244/6603/521339/4873/385062 head（72c head JSON blob `42dbb92e`・両CSVともblob-identical）を再生成。fold済みroot集合は**512個**（499 through cost-71c + 4 cost-70f + 9 cost-72c）。
+- **childの残存確認**: parent1 `00000000000000801202000000200000` 21行/1615・parent2 `00000000000000801242000000000000` 59行/4656がchild `00000000000000849002000000000800`（edge cost 73・需要 c1=0,c2=2,c4=0）を行として持ち、開親はこの2つのみ。D4 lift: del66=parent1 bit-exact・del11=parent2 bit-exact・残り4削除は閉行。
+- **sweep再導出**: 10 raw batch JSONLsから73候補を一度ずつ（claim列挙と一致）・8 WIN7-D10・65 REFUTED-D10・0 capped・総nodes 91,357,592・pilot 3402×10・batch5 determinism rerun node-exact・v15交差エンジン（8 WIN node-matched・アンカー0/100/117 loss=false・pilot 5949×4）・8 distinct D4 win orbits。
+- **証明書検証**: 8証明書16パートすべてpart bytesで直接検証（part bytes/md5/blob sha → join == whole md5・whole blob sha）・rows sorted-unique・sub-roots == loser mobility（合計450）・terminal 13..17（BigInt）/ 13,15,17（Bareiss）・per-bit verify記録16件の再読込・union 0/0・manifest totals再総和（**343,092 rows / 12,392,797 bytes / 94,100,994 extraction nodes**）。
+- **root disjointness**: 8新root vs 512 fold済みrootをraw-hex・D4両方で確認。
+- **fold**: 公開順 [31, 54, 56, 62, 69, 81, 89, 113]でper-record marginalを拡張unionから再導出。**総marginal 39・in-manifest 5**・zero-mim receipts [56, 62, 69, 81, 113]・child orbit closureはbit31（公開順最初）・set等式 `s_after == s_1244 UNION covers(8 roots)`。
+
+**fold後 head: solved 1249 / unique 6598 / cost 520,956 / open 4,868 / open_cost 384,679**。parent1（第2 target S5）**19行/1463**（child + `00000000020000809002000000000800` を喪失）・parent2 **55行/4352**（child + `00000000000000801242000080000000` + `00000000000000841242000000000000` + `00000000000000849002000080000000` を喪失）。foldはin-manifest 5行を閉じた（child + 4行）が、どちらのS5親も解決していない。head JSON [class-frontier-cost73g-receipts-recompute-20261115.json](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost73g-receipts-recompute-20261115.json)・ranking・top-candidates CSVs・fold script・claim v4（fold record込み・`published_inputs_byte_exact_vs_main` 37）をpush、全remote blob/md5照合済み。
+
+claimは内容検証のみ（blob pinning廃止の運用継続）。claim v4のfold recordがscript blob `386b0666…` と出力3 blob shaを明記し、fold scriptのsection 9がclaim v4と再計算の一致を再assertする（実行確認済み）。
+
+REFUTED-D10はLOSS証明ではなく、8証明書は個別7石rootの深さ10以内の先手勝ちのみを証明する。solved 1249はmanifest被覆の簿記であり盤全体の勝敗ではない。**標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class1・class2・class4は引き続きUNKNOWN**。次のfold baselineはhead 1249。未fold: cost-70g（証明書8件）とcost-65l（bits 21/48）は**本head 1249へのrebaseが必須**。兄弟行 `00000000220000083800000000000200`（cost 73・第2開親67行/5182）は未着手のまま残置。
+
+詳細: [fold log](../../log/2026-11-15-n11-class2-lane-cost73g-receipts-fold.md)、[ranking CSV](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-s5-ranking-after-cost73g-receipts-20261115.csv)、[top-candidates CSV](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-top-candidates-s6-after-cost73g-receipts-20261115.csv)、[claim v4](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73g-inflight-20261115.json)。
