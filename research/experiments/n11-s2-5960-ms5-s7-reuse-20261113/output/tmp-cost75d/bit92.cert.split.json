@@ -1,0 +1,25 @@
+{
+  "cert": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost75d-certificates/bit92-root-00000000100040801202000000200000.cert",
+  "whole_bytes": 2719747,
+  "whole_md5": "cf685596941471a85c3b18e3e68541ce",
+  "whole_sha256": "ced092feadaf3fbc8416cde8e6bd3230fdc16ceb4d91ae006a7ca11af6445622",
+  "whole_git_blob_sha": "689117bff67947b16a90e82a4cbfc45e09d9e336",
+  "parts": [
+    {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost75d-certificates/bit92-root-00000000100040801202000000200000.cert.part1of2",
+      "bytes": 1362476,
+      "md5": "38151e4ae4dd2313e5c0287e1515f3f6",
+      "sha256": "fe3e3ca316240128ae84afdea1058b55afb7b11f5e702458eca1a6d5f0c65437",
+      "git_blob_sha": "02055084771f0b29dcece48a0b0f9a156595dd0d"
+    },
+    {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost75d-certificates/bit92-root-00000000100040801202000000200000.cert.part2of2",
+      "bytes": 1357271,
+      "md5": "9b500599a0ebcd6721677b2cd4885bd3",
+      "sha256": "369276ab45c6fcc032c793c56ff2bf59412dca17aa78f201bf99e627245c0da1",
+      "git_blob_sha": "b44fada801088992f870a4f26331f54cec972afb"
+    }
+  ],
+  "joined_equals_whole": true,
+  "note": "split at line boundary for push transport; cat part1of2 part2of2 (CRLF normalized to LF if needed) reproduces the whole cert bit-exact"
+}

@@ -1,0 +1,25 @@
+{
+  "consumed": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/tmp-cost75d/bit92.consumed.txt",
+  "whole_bytes": 2484570,
+  "whole_md5": "66edf44ad4fcf390aeab690a638efbfb",
+  "whole_sha256": "4417d1ddc48bb19bddc69ae510d272cf2871f2495bf4e723edc011b47621f585",
+  "whole_git_blob_sha": "b04db7eb4836f026e17cb3f90053eb7c70653c5f",
+  "parts": [
+    {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/tmp-cost75d/bit92.consumed.txt.part1of2",
+      "bytes": 1242285,
+      "md5": "56fcd54a464c55b96d52ce63b76d2785",
+      "sha256": "5576874d2b26f2f554789db5b6db0717fdd6ed8cc0578409d0b19eebee3c048d",
+      "git_blob_sha": "8328f371acbf2e2bb61ac11ff0308a3566a4b0fe"
+    },
+    {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/tmp-cost75d/bit92.consumed.txt.part2of2",
+      "bytes": 1242285,
+      "md5": "cccb06d82dc0747840980fa392eef387",
+      "sha256": "a9e9028837b1ef8e48ef433e9cbfc73d5ad46317106e39e910e1bb3640bc15f4",
+      "git_blob_sha": "9e57ed16cc50b21570877219382cad045f5d9ab6"
+    }
+  ],
+  "joined_equals_whole": true,
+  "note": "split at line boundary for push transport; cat part1of2 part2of2 reproduces the whole consumed dump bit-exact"
+}

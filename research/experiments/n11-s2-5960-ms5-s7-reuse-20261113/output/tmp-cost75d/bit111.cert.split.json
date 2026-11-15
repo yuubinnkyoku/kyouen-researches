@@ -1,0 +1,25 @@
+{
+  "cert": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost75d-certificates/bit111-root-00008000000040801202000000200000.cert",
+  "whole_bytes": 2923377,
+  "whole_md5": "cf8b562879cca4b9f8790786bb7b2eaa",
+  "whole_sha256": "4d15d94ba9177a77d6a9a71a24e2b7da42118f9a4ad6b3b8029414f97479df64",
+  "whole_git_blob_sha": "5b71dfdf4ed1095fc295cf67b3cb5f9bed486295",
+  "parts": [
+    {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost75d-certificates/bit111-root-00008000000040801202000000200000.cert.part1of2",
+      "bytes": 1463006,
+      "md5": "542f86efda288863b03256e537034afb",
+      "sha256": "d7ae0ab149d09ec2f9f0ccfe324ec2c3e5cc9ae14b927d8c27e991f5b0daf15a",
+      "git_blob_sha": "307386b2f1bbde59d61366e4ca71845652c6d0d7"
+    },
+    {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost75d-certificates/bit111-root-00008000000040801202000000200000.cert.part2of2",
+      "bytes": 1460371,
+      "md5": "2eddcb82f43759cf620fe9efa61b59f5",
+      "sha256": "e3ea25fe21a33b27aa4fc4322ce47ef9f759115ed79b9924653e0dc68d08030e",
+      "git_blob_sha": "0e5914170b06b2554ff2dc960d806725902b61d6"
+    }
+  ],
+  "joined_equals_whole": true,
+  "note": "split at line boundary for push transport; cat part1of2 part2of2 (CRLF normalized to LF if needed) reproduces the whole cert bit-exact"
+}
