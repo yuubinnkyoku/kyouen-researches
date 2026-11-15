@@ -2,7 +2,7 @@
   "schema": "n11-class2-lane-cost83c-inflight-20261115-v1",
   "title": "n11 class2-lane cost-83c sweep in flight: second coverable class-2 target S5 cost-83 child (third of the trio)",
   "date": "2026-11-15",
-  "status": "in-flight",
+  "status": "completed (sweep + WIN7 certificates + receipts fold)",
   "claimed_by": "n11 search continuation session (round 17)",
   "s5": "00000000000000801202000000200000",
   "s6_child": "00000000200000003800000000400200",
@@ -229,5 +229,44 @@
   },
   "verdict_semantics": "loss=true => WIN7-within-depth-10 candidate (certificate rebuild target); loss=false && !capped => REFUTED-D10, no first-player win within depth 10 (NOT a LOSS proof); capped => proves nothing either way",
   "unknown_status": "11x11 empty board: UNKNOWN. A completed sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 7-stone roots of this child.",
-  "coordination_note": "latest main fetched immediately before this claim push; the parallel cost-78a lane and the class-4 lane are separate."
+  "coordination_note": "latest main fetched immediately before this claim push; the parallel cost-78a lane and the class-4 lane are separate.",
+  "fold": {
+    "status": "completed",
+    "chain_head_before": "1312/6535/516227/4805/379950",
+    "chain_head_after": "1313/6534/516144/4804/379867",
+    "receipts_folded": 2,
+    "publication_order": [
+      16,
+      82
+    ],
+    "total_marginal": 9,
+    "total_marginal_in_manifest": 1,
+    "zero_marginal_in_manifest": [
+      82
+    ],
+    "child_orbit_closed_by_bit": 16,
+    "parents_after": {
+      "parent1": "5 rows / 376",
+      "parent2": "64 rows / 5247"
+    },
+    "parents_lost_rows": {
+      "parent1": [
+        "00000000200000003800000000400200"
+      ],
+      "parent2": [
+        "00000000200000003800000000400200"
+      ]
+    },
+    "output_blob_shas": {
+      "head_json": "fc7832edce1f736ea5f15b2632d79d709fa004f4",
+      "ranking_csv": "08f0d715d5675b3ec11b0482030bad3faee0e876",
+      "top_candidates_csv": "6a40509db4bba256d509e3aa3677f5aa285f4397"
+    },
+    "head_json_bytes": 6811,
+    "ranking_csv_bytes": 7537,
+    "top_candidates_csv_bytes": 6899,
+    "fold_script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost83c_receipts_20261115.py",
+    "reproduction": "python research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost83c_receipts_20261115.py",
+    "note": "The second coverable class-2 target S5 00000000000000801202000000200000 now has 5 remaining rows (was 6). Marginal counts are D4-orbit bookkeeping over published receipts, not game-theoretic values."
+  }
 }
