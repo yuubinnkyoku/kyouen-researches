@@ -1,0 +1,212 @@
+{
+ "w": 7,
+ "m": 37,
+ "q": 5,
+ "nStones": 27,
+ "rows": [
+  3,
+  4,
+  4,
+  4,
+  4,
+  4,
+  4
+ ],
+ "maxX": 32,
+ "stones": [
+  [
+   8,
+   0
+  ],
+  [
+   18,
+   0
+  ],
+  [
+   30,
+   0
+  ],
+  [
+   5,
+   1
+  ],
+  [
+   24,
+   1
+  ],
+  [
+   28,
+   1
+  ],
+  [
+   32,
+   1
+  ],
+  [
+   0,
+   2
+  ],
+  [
+   9,
+   2
+  ],
+  [
+   22,
+   2
+  ],
+  [
+   28,
+   2
+  ],
+  [
+   14,
+   3
+  ],
+  [
+   15,
+   3
+  ],
+  [
+   21,
+   3
+  ],
+  [
+   30,
+   3
+  ],
+  [
+   2,
+   4
+  ],
+  [
+   16,
+   4
+  ],
+  [
+   26,
+   4
+  ],
+  [
+   30,
+   4
+  ],
+  [
+   3,
+   5
+  ],
+  [
+   21,
+   5
+  ],
+  [
+   22,
+   5
+  ],
+  [
+   24,
+   5
+  ],
+  [
+   15,
+   6
+  ],
+  [
+   18,
+   6
+  ],
+  [
+   22,
+   6
+  ],
+  [
+   25,
+   6
+  ]
+ ],
+ "provenance": "unique case-b witness of the complete two-edit surgery enumeration of the m=34 witness winA on the 7x35 board targeting T=(34,0) (q=5, NEED=4)",
+ "surgery": "winA - (8,5) - (16,6) + (24,5) + (22,6)",
+ "seed": "winA (m=34 witness, seven-row-q5-witness-surgery-20261115)",
+ "T_blocking": {
+  "cell": [
+   34,
+   0
+  ],
+  "curve": "x+2y-34=0",
+  "curveStones": [
+   [
+    32,
+    1
+   ],
+   [
+    26,
+    4
+   ],
+   [
+    24,
+    5
+   ],
+   [
+    22,
+    6
+   ]
+  ],
+  "note": "the only 4-stone curve through T=(34,0) in winC; the integer line x+2y=34"
+ },
+ "verification": {
+  "method": "fresh independent pure TypeScript machine, exact integer arithmetic only, no repo code, no census, no SAT (scripts/verify_and_campaign.ts)",
+  "controls": {
+   "collinear5_detected": true,
+   "concyclic5_detected_x2plusy2eq25": true,
+   "line4_not5": true,
+   "circle_key_dedup": true
+  },
+  "safe_maxCurveStones": 4,
+  "needCurves": 61,
+  "uncovered": {
+   "33": [],
+   "34": [],
+   "35": [],
+   "36": [],
+   "37": [],
+   "38": [
+    [
+     37,
+     0
+    ]
+   ]
+  },
+  "conclusion": "maximal safe single-deficiency on 7x33..7x37; 7x38 fails only at (37,0) -> M_{7,5} in [38,1142], frontier 7x38"
+ },
+ "chainProfile": {
+  "base33": {
+   "safe": 4,
+   "unc33": [],
+   "unc34": [
+    [
+     33,
+     0
+    ]
+   ]
+  },
+  "winA": {
+   "safe": 4,
+   "unc34": [],
+   "unc35": [
+    [
+     34,
+     0
+    ]
+   ]
+  },
+  "winC": {
+   "safe": 4,
+   "unc33to37": [],
+   "unc38": [
+    [
+     37,
+     0
+    ]
+   ]
+  }
+ }
+}
