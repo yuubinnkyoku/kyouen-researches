@@ -249,3 +249,30 @@ python scripts/verify_blocker_split.py
 出力: [blocker_split_independent_audit.json](output/blocker_split_independent_audit.json)。
 **これは分割の独立監査であり、KissatのSAT/UNSAT判定ではない。**
 82/87件のsolver結果は未取得で、M_{4,5} は [21,140] のまま。
+
+
+## 追記: x2/gpin 較正の solver 実証完了・x2 スイープ起動 (2026-11-15)
+
+残り2バケット (c0k3p0/c0k3p1) への次段階として、未実施だった両較正の
+kissat 実証を完了した (records.jsonl の ctlx2b4 / ctlgpA 行・いずれも m=20):
+
+- **x2=4 対照**: (4,20,5) class{0} krow0:3 minpos1 --x2=4 →
+  **SAT 33.0s / 409,574 conflicts** (CNF md5 c979067a…・cap 120)。
+  復号 witness は m=20 witness の V 像 (rows [3,4,4,4]・15石・
+  row 0 = (1,0),(4,0),(19,0)) そのまで、sat4.js decode の verifyConfig ok。
+  13:41Z 停止で未実施だった「b=4 バケットが既知 witness を含む」較定が
+  kissat で実証された (句スーパーセット検査との二重確認)。
+- **gpin A 対照**: 同対照に --gpin=19:0 → **SAT 21.0s / 240,930 conflicts**
+  (CNF md5 b3ed8174…・cap 180)。復号 witness は同一の V 像で右端 (19,0) を
+  石として持つ。句スーパーセット検査も PASS (base 32,976 句を全含み・
+  差分は cell(19,0)=true の unit 1本のみ)。
+  sweepp0gpin.sh 起動前の必須較定 (対照SAT・スーパーセット・listcases 計数) が
+  3項目とも完了 (listcases は sandbox 検証済み・独立整数監査と計数一致)。
+
+これを受け `sweepp0x2.sh` を起動した (c0k3p1 b=2..19 → c0k3p0 b=1..19・
+cap 900s・resumable・完了バケットから逐次 records に追記)。
+**37バケットすべて UNSAT なら残り2バケットは UNSAT 確定** →
+4×21 欠損極大不在 → M_{4,5} = 21 or ≥ 23 (K0821-audit 規約)。
+SAT バケットが出たら decode + verify_witness.py 検証の上 M_{4,5} ∈ [22,140]。
+gpin 分割 (82/87インスタンス・独立監査済み) は x2 と直交する別ルートとして
+較正済み・待機 (2コア制約上、x2 掃引と排他運用)。
