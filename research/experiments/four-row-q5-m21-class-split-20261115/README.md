@@ -126,3 +126,21 @@ SAT/UNSAT 済みの key は skip、INDET 行は再実行される)。
 - c0k3p0 の次の分解案: row 0 の第2石位置 b∈{1..19} による完全ケース分割
   (各バケットに unit pin を追加した符号化)。p1 が決着しても p0 は残るため、
   並行して準備する。
+
+
+## 追記: 第2石位置 x2 サブ分割の道具 (sat4.js) — c0k3p0 INDET 受けの次段階
+
+c0k3p0 が cap 2400s でも INDET になったため、bucket 内の完全ケース分割として
+row 0 の第2石位置 b を pin する `sat4.js` を追加した
+(`--minpos=p --x2=B`: cells (0, p+1..B-1) false・(0,B) true の unit 追加。
+b∈{p+1..19} の全ケースで完全・素直な場合分解で、対称性は不要)。
+検証済み:
+
+- **句スーパーセット検査**: 対照 (4,20,5) class{0} krow0:3 minpos1 (md5 362034b2…
+  = records の ctrl 行と同一) に --x2=4 を付けた CNF は base の句集合を
+  全含み、差分はちょうど3個の unit (¬cell(2), ¬cell(3), cell(4))。
+  m=20 witness の V 像 (row 0 = (1,0),(4,0),(19,0)) は x2=4 バケットに属する
+  ため、この対照インスタンスは SAT であるべき (kissat での実証は
+  CPU が空き次第実施・記録する)。
+- `sweepp0x2.sh`: bucket c0k3p0 (b=1..19) / c0k3p1 (b=2..19) の
+  resumable driver (key=<bucket>b<b>・cap 900s・SAT/UNSAT/同cap行で skip)。
