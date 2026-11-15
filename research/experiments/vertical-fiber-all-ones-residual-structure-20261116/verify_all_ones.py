@@ -21,6 +21,25 @@ Machine-checked claims (see report.md):
   W4  tail corollary: h(k,z,R) = k mod 2 for R >= 2k+z-1  (k<=60, z<=50).
   W5  play-length remark: every play has length exactly min(R, 2k+z)
       (random play simulations).
+  W6  UNIFIED full-profile closed form for ALL z >= 1 (CONJECTURE, supersedes
+      W3 as a strict generalisation), z <= 13, k <= 80, window R <= 2k+z+2.
+        z odd (z >= 1):
+          R odd : h = 2 if R <= q(k) else (k mod 2)
+          R even, k odd :
+              h = 0 if R <= min(z-3, k-1)  (pre-wave)
+                       or (R ≡ z-1 (mod 4) and z-1 <= R <= 2k-z-1)  (AP4 zero wave)
+              else h = 1
+          R even, k even :
+              h = 1 if R ≡ z+1 (mod 4) and z+1 <= R <= 2k-z-1  (AP4 one wave)
+              else h = 0
+        z even >= 2:
+          h = 2 if R in {1,3,...,q(min(k,z))} or R == 2k-z+1 >= 1
+          h = 1 if R ≡ z+1 (mod 4) and z+1 <= R <= 2k-z-1 and R != 2k-z+1
+          k odd  : h = 0 if (R even and R <= k-1)
+                            or (R ≡ z-1 (mod 4) and z+3 <= R <= 2k-z-3)
+                   else h = 1
+          k even : h = 0
+      k=0 falls out as all-0 under the same formulae (verified in-window).
 Writes audit JSON to stdout.
 """
 import sys, json, random
@@ -122,6 +141,44 @@ def slice_closed_form(k, z, R):
             return 0
     raise ValueError("slice only defined for z in {1,2}")
 
+def unified_slice_closed_form(k, z, R):
+    """Unified full-profile closed form for ALL z >= 1 (conjecture, W6).
+
+    Supersedes slice_closed_form (z in {1,2}) as a strict generalisation;
+    for k=0 the formulae evaluate to all-0, matching the trivial engine.
+    """
+    if z < 1:
+        raise ValueError("unified slice defined for z >= 1")
+    if z % 2 == 1:
+        # z odd
+        if R % 2 == 1:
+            return 2 if R <= q(k) else (1 if k % 2 == 1 else 0)
+        if k % 2 == 1:
+            if R <= min(z - 3, k - 1):
+                return 0
+            if R % 4 == (z - 1) % 4 and z - 1 <= R <= 2 * k - z - 1:
+                return 0
+            return 1
+        else:
+            if R % 4 == (z + 1) % 4 and z + 1 <= R <= 2 * k - z - 1:
+                return 1
+            return 0
+    else:
+        # z even >= 2
+        twos = set(range(1, q(min(k, z)) + 1, 2))
+        far = 2 * k - z + 1
+        if far >= 1:
+            twos.add(far)
+        if R in twos:
+            return 2
+        if R % 4 == (z + 1) % 4 and z + 1 <= R <= 2 * k - z - 1 and R != far:
+            return 1
+        if k % 2 == 1:
+            if (R % 2 == 0 and R <= k - 1) or (R % 4 == (z - 1) % 4 and z + 3 <= R <= 2 * k - z - 3):
+                return 0
+            return 1
+        return 0
+
 def main():
     rng = random.Random(20261116)
     out = {"W0": {"checks": 0, "mismatches": 0, "first": []},
@@ -129,7 +186,8 @@ def main():
            "W2": {"checks": 0, "mismatches": 0, "first": []},
            "W3": {"checks": 0, "mismatches": 0, "first": []},
            "W4": {"checks": 0, "mismatches": 0, "first": []},
-           "W5": {"checks": 0, "violations": 0}}
+           "W5": {"checks": 0, "violations": 0},
+           "W6": {"checks": 0, "mismatches": 0, "first": []}}
 
     # ---- W0: reduction vs multiset engine ----
     for k in range(0, 21):
@@ -218,6 +276,18 @@ def main():
         out["W5"]["checks"] += 1
         if length != expect:
             out["W5"]["violations"] += 1
+
+    # ---- W6: unified slice closed form for ALL z >= 1, full profile ----
+    for z in range(1, 14):
+        for k in range(0, 81):
+            for R in range(0, 2 * k + z + 3):
+                out["W6"]["checks"] += 1
+                a = unified_slice_closed_form(k, z, R)
+                b = h(k, z, R)
+                if a != b:
+                    out["W6"]["mismatches"] += 1
+                    if len(out["W6"]["first"]) < 5:
+                        out["W6"]["first"].append([k, z, R, a, b])
 
     print(json.dumps(out, ensure_ascii=False, sort_keys=True))
 
