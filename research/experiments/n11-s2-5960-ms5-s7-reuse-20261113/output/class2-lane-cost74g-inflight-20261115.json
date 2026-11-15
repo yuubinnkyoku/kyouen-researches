@@ -212,8 +212,8 @@
   "coordination_note": "latest main fetched immediately before this claim push; the second-target 73g sweep and the 70g fold are parallel lanes; the third target 69 row is owned by the stale cost-69g claim (head 1163, no artifacts) and is not touched here.",
   "fold": {
     "status": "completed",
-    "chain_head_before": "1244/6603/521339/4873/385062",
-    "chain_head_after": "1253/6594/520669/4864/384392",
+    "chain_head_before": "1257/6590/520380/4860/384103",
+    "chain_head_after": "1266/6581/519710/4851/383433",
     "receipts_folded": 10,
     "publication_order": [
       4,
@@ -236,7 +236,7 @@
     "child_orbit_closed_by_bit": 4,
     "parents_after": {
       "parent1": "1 rows / 69",
-      "parent2": "57 rows / 4294"
+      "parent2": "55 rows / 4143"
     },
     "parents_lost_rows": {
       "parent1": [
@@ -255,15 +255,15 @@
       ]
     },
     "output_blob_shas": {
-      "head_json": "0c29a708480af5e9ca10f767a6cbf0907553e603",
-      "ranking_csv": "f7a658a54241580297b3ce342fff6bbae29b44e1",
-      "top_candidates_csv": "ea44af631b5f239965d46e4082f4bcfb8e1f7c10"
+      "head_json": "fce4ce77a64e039709b89f2a78ece9ffff34e533",
+      "ranking_csv": "d3c24ddc88e6682bf22fb9938f1129a48ab82bd3",
+      "top_candidates_csv": "cd6d395e3c0f8158bbdcfa088372b6cc244475b1"
     },
-    "head_json_bytes": 12592,
+    "head_json_bytes": 12590,
     "ranking_csv_bytes": 7579,
-    "top_candidates_csv_bytes": 4920,
+    "top_candidates_csv_bytes": 4662,
     "fold_script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost74g_receipts_20261115.py",
     "reproduction": "python research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost74g_receipts_20261115.py",
-    "note": "Rebased on the cost-72c fold (1239 -> 1244). The fold reproduces the 72c head byte-identically before extending it. Marginal counts are D4-orbit bookkeeping over published receipts, not game-theoretic values. The third target S5 now has only the cost-69 row left."
+    "note": "Rebased twice: cost-73g (1244 -> 1249) and then cost-70g/73h (1249 -> 1257) landed while this lane was running. The fold reproduces the 73h head byte-identically before extending it. Marginal counts are D4-orbit bookkeeping over published receipts, not game-theoretic values. The third target S5 now has only the cost-69 row left."
   }
 }

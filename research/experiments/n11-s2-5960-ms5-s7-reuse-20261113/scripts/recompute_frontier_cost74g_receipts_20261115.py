@@ -3,7 +3,7 @@
 (10 WIN7-D10 bits 4, 11, 20, 44, 69, 95, 100, 108, 109, 116 of the third
 coverable class-2 target S5 00000000000000809102000000000000's child
 00000000000000809142000000000000, edge cost 74, demand c1=0,c2=2,c4=0) on top
-of the cost-73g receipts chain head (solved 1249, 2026-11-15).
+of the cost-73h receipts chain head (solved 1257, 2026-11-15).
 """
 import csv
 import hashlib
@@ -57,32 +57,32 @@ def _write_text_lf(self, data, encoding=None, errors=None, newline=None):
 Path.write_text = _write_text_lf
 
 
-# ---------- 1. reproduce the cost-73g chain head (1249) ----------
-ns73 = runpy.run_path(str(HERE / "scripts" / "recompute_frontier_cost73g_receipts_20261115.py"))
+# ---------- 1. reproduce the cost-73h chain head (1257) ----------
+ns73 = runpy.run_path(str(HERE / "scripts" / "recompute_frontier_cost73h_receipts_20261115.py"))
 s_base = ns73["s_cur"]
-st_base = ns73["stF3"]
+st_base = ns73["stF5"]
 covers = ns73["covers"]
 manifest = ns73["manifest"]
 classes = ns73["classes"]
 summary_state = ns73["summary_state"]
-remG = ns73["remF3"]
-demG = ns73["demF3"]
+remG = ns73["remF5"]
+demG = ns73["demF5"]
 prev = set(ns73["prev"]) | set(ns73["new_roots"])
-assert st_base["solved_s6_in_manifest"] == 1249 and st_base["unique_remaining_s6"] == 6598
-assert st_base["sum_remaining_cost"] == 520956
-assert st_base["s6_needed_by_open_classes"] == 4868 and st_base["cost_needed_by_open_classes"] == 384679
-assert len(prev) == 520, len(prev)  # 512 + 8 cost-73g roots
-sha, blen = git_blob_sha(OUT / "class-frontier-cost73g-receipts-recompute-20261115.json")
-assert sha == "e4fb98dc8670fbb85786ab02f017a0a95e357648" and blen == 12956, \
-    "regenerated cost-73g head JSON must be byte-identical to main"
-sha, blen = git_blob_sha(OUT / "class-frontier-s5-ranking-after-cost73g-receipts-20261115.csv")
-assert sha == "5760754d23d4ee27e5115de5133e25eb960dfc76" and blen == 7580
-sha, blen = git_blob_sha(OUT / "class-frontier-top-candidates-s6-after-cost73g-receipts-20261115.csv")
-assert sha == "2da6422175294fa5a35f8ff33fe96a21f1e839e8" and blen == 4835
-print("CONTROL cost-73g chain head reproduced byte-identically: "
-      "1249/6598/520956/4868/384679 (head JSON + both CSVs blob == main)")
+assert st_base["solved_s6_in_manifest"] == 1257 and st_base["unique_remaining_s6"] == 6590
+assert st_base["sum_remaining_cost"] == 520380
+assert st_base["s6_needed_by_open_classes"] == 4860 and st_base["cost_needed_by_open_classes"] == 384103
+assert len(prev) == 532, len(prev)  # 528 + 4 cost-73h roots
+sha, blen = git_blob_sha(OUT / "class-frontier-cost73h-receipts-recompute-20261115.json")
+assert sha == "71f79b4bef000aaa1ce16279aa8d08a1ba9f3357" and blen == 10965, \
+    "regenerated cost-73h head JSON must be byte-identical to main"
+sha, blen = git_blob_sha(OUT / "class-frontier-s5-ranking-after-cost73h-receipts-20261115.csv")
+assert sha == "ee4cc2ff7eb6c9dd1cc33354bf7cbed655b09d54" and blen == 7580
+sha, blen = git_blob_sha(OUT / "class-frontier-top-candidates-s6-after-cost73h-receipts-20261115.csv")
+assert sha == "122803eaa3f726f0466c8d44f210d017a0f9e14e" and blen == 4749
+print("CONTROL cost-73h chain head reproduced byte-identically: "
+      "1257/6590/520380/4860/384103 (head JSON + both CSVs blob == main)")
 
-# ---------- 2. claim + child remaining at the 1249 baseline ----------
+# ---------- 2. claim + child remaining at the 1257 baseline ----------
 claim_path = OUT / "class2-lane-cost74g-inflight-20261115.json"
 claim = json.loads(claim_path.read_text())
 assert claim["s6_child"] == CHILD and claim["s6_s7_edge_cost"] == 74
@@ -95,7 +95,7 @@ p1_before = {r["s6_hex"]: int(r["s6_s7_edge_cost"]) for r in p1_rows}
 p2_before = {r["s6_hex"]: int(r["s6_s7_edge_cost"]) for r in p2_rows}
 assert CHILD in p1_before and CHILD in p2_before
 assert (len(p1_before), sum(p1_before.values())) == (2, 143), (len(p1_before), sum(p1_before.values()))
-assert (len(p2_before), sum(p2_before.values())) == (65, 4885), (len(p2_before), sum(p2_before.values()))
+assert (len(p2_before), sum(p2_before.values())) == (64, 4813), (len(p2_before), sum(p2_before.values()))
 d = demG[CHILD]
 assert (d["c1"], d["c2"], d["c4"]) == (0, 2, 0), d
 canon = ns73["canon"]
@@ -105,7 +105,7 @@ p1_lift = [s for s, o in del_orbits.items() if f"{o:032x}" == PARENT1]
 p2_lift = [s for s, o in del_orbits.items() if f"{o:032x}" == PARENT2]
 assert p1_lift and p2_lift, (p1_lift, p2_lift)
 assert len(set(del_orbits.values())) == 6
-print(f"CONTROL child genuinely remaining at head 1249: both open parents hold "
+print(f"CONTROL child genuinely remaining at head 1257: both open parents hold "
       f"the child row ({len(p1_before)}/143 and {len(p2_before)}/4964), demand "
       f"c1=0,c2=2,c4=0, lift stones {p1_lift} / {p2_lift}")
 
@@ -245,11 +245,11 @@ assert child_closed_by == 4, "the child orbit must be closed by the first receip
 cov10 = set()
 for bit in WIN_BITS:
     cov10 |= covers(int(certs[str(bit)]["root_hex"], 16))
-assert s_cur == set(s_base) | cov10, "set-equality: s_after == s_1249 UNION covers(10 roots)"
+assert s_cur == set(s_base) | cov10, "set-equality: s_after == s_1257 UNION covers(10 roots)"
 total_mim = sum(a["marginal_in_manifest"] for a in addition)
 total_marg = sum(a["marginal"] for a in addition)
 stF2, remF2, uniqF2, demF2 = summary_state(s_cur)
-assert stF2["solved_s6_in_manifest"] == 1249 + total_mim
+assert stF2["solved_s6_in_manifest"] == 1257 + total_mim
 assert s_cur >= s0
 assert CHILD_V in s_cur and CHILD_V in manifest
 assert CHILD not in {r["s6_hex"] for r in remF2.get(PARENT1, [])}
@@ -266,7 +266,7 @@ print("AFTER cost-74g receipts:", json.dumps(stF2, indent=1))
 print(f"total marginal={total_marg} marginal_in_manifest={total_mim}; "
       f"zero-mim receipts: {zero_mim or 'none'}; child orbit closed by bit{child_closed_by}; "
       f"parent1 {len(rows_after_p1)} rows / {sum(rows_after_p1.values())} (was 2/143, lost {sorted(p1_lost)}); "
-      f"parent2 {len(rows_after_p2)} rows / {sum(rows_after_p2.values())} (was 65/4885, lost {sorted(p2_lost)})")
+      f"parent2 {len(rows_after_p2)} rows / {sum(rows_after_p2.values())} (was 64/4813, lost {sorted(p2_lost)})")
 
 # ---------- 7. outputs ----------
 def best(rem, bit):
@@ -284,13 +284,13 @@ result = {
     "schema": "n11-class-frontier-cost74g-receipts-recompute-20261115-v1",
     "date": "2026-11-15",
     "baseline_main": "class-frontier-cost72c-receipts-recompute-20261115.json "
-                     "(cost-73g chain head 1249/6598/520956/4868/384679; "
+                     "(cost-73h chain head 1257/6590/520380/4860/384103; "
                      "regenerated byte-identical, git blob sha "
                      "42dbb92e1505d05389e840e3368974b1c613b750)",
     "method": "runpy reproduction of the cost-72c chain head (asserting "
-              "1249/6598/520956/4868/384679 and the blob-identical 73g head "
+              "1257/6590/520380/4860/384103 and the blob-identical 73h head "
               "JSON and both 72c CSVs), the cost-74g child asserted genuinely "
-              "remaining at the 1249 baseline (both open class-2 parents "
+              "remaining at the 1257 baseline (both open class-2 parents "
               "00000000000000809102000000000000 at 2 rows / 143 and "
               "00000000000000003800000008000010 at 66 rows / 4964 holding the "
               "child row, child unsolved in-manifest, demand c1=0,c2=2,c4=0 "
@@ -313,7 +313,7 @@ result = {
               "child-orbit closure (bit4) and a set-equality control all hold. "
               "Receipts only - no sweep claims",
     "controls": {
-        "chain_head_1249_reproduced_byte_identical": True,
+        "chain_head_1257_reproduced_byte_identical": True,
         "child_genuinely_remaining_at_baseline": True,
         "both_open_parents_held_child_row_at_baseline": True,
         "sweep_rederived_from_raw_batches": True,
@@ -323,12 +323,12 @@ result = {
         "root_disjointness_vs_512_roots": True,
         "child_orbit_closure": "closed by the bit-4 receipt (first in publication order), of this fold",
         "both_open_parents_lost_child_row": True,
-        "set_equality_after_10": "s == s_1249 UNION covers(10 cost-74g roots)",
+        "set_equality_after_10": "s == s_1257 UNION covers(10 cost-74g roots)",
     },
     "target": {
         "s5_parent_hex": PARENT1, "s6_child_hex": CHILD, "edge_cost": 74,
         "open_parents": [PARENT1, PARENT2],
-        "demand_at_baseline_1249": {"c1": 0, "c2": 2, "c4": 0},
+        "demand_at_baseline_1257": {"c1": 0, "c2": 2, "c4": 0},
         "child_orbit_closure": "closed by the bit-4 receipt of this fold",
         "candidates": 74, "win7_d10": 10, "refuted_d10": 64, "capped": 0,
         "candidate_nodes": 179966455,
@@ -369,7 +369,7 @@ result = {
     "outstanding_not_folded": {
         "cost70g": "8 WIN7 certificates published; fold pending (70f bit84 / "
                    "70g bit29 D4 overlap)",
-        "cost73g": "8 WIN7 certificates pending extraction; sweep complete",
+        "cost73g": "folded at head 1249; superseded by the 70g/73h chain",
         "cost65l": "fold in flight on a parallel lane",
         "cost69g": "stale claim (head 1163) for the third target's remaining "
                    "cost-69 row; no artifacts",
@@ -438,7 +438,7 @@ if claim.get("status", "").startswith("completed") and "fold" in claim:
     head_str = (f"{stF2['solved_s6_in_manifest']}/{stF2['unique_remaining_s6']}/"
                 f"{stF2['sum_remaining_cost']}/{stF2['s6_needed_by_open_classes']}/"
                 f"{stF2['cost_needed_by_open_classes']}")
-    assert f["chain_head_before"] == "1249/6598/520956/4868/384679"
+    assert f["chain_head_before"] == "1257/6590/520380/4860/384103"
     assert f["chain_head_after"] == head_str
     assert f["total_marginal"] == total_marg
     assert f["total_marginal_in_manifest"] == total_mim
