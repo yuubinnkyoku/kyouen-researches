@@ -1,6 +1,6 @@
 # 2026-11-15 n11 cost77a/b/c receipt audit and cost77d pre-sweep verification
 
-監査時点のmainは `5a08dbb442905c1f4d313982fbc8113ee7719dd4`（cost77d claim公開直後）。統合時のmainは `e789146b192395729a282adf679a00c9113e8990`。`AGENTS.md`、`research/knowledge/README.md`、K0023、K0783、milestone-5実験README、cost77a/b/cのfold log・head JSON、cost77d claimを確認した。branch / PRは作成しない。
+監査時点のmainは `5a08dbb442905c1f4d313982fbc8113ee7719dd4`（cost77d claim公開直後）。統合時のmainは `d1bef86a1ec4097a09ef2ef35f13426936e9dfd4`。`AGENTS.md`、`research/knowledge/README.md`、K0023、K0783、milestone-5実験README、cost77a/b/cのfold log・head JSON、cost77d claimを確認した。branch / PRは作成しない。
 
 ## 完了済みcost77a/b/c receiptの独立照合
 
