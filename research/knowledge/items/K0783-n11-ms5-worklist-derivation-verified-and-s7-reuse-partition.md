@@ -1220,3 +1220,18 @@ WIN7証明書は各7石rootから深さ10以内の先手勝ちのみを証明し
 **2 receiptのfoldは未実施・canonical chain head 1195/6652/524884/4922/388607は不変**（foldはhead 1195へのrebase必須）。兄弟cost-63行 `00000000080000801202000000200000` は未claimのまま別レーン候補。WIN7証明書は各7石rootから深さ10以内の先手勝ちのみを証明し、63合法手のS6親は閉じない。REFUTED-D10はLOSS証明ではない。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class2・class4は引き続き **UNKNOWN**。
 
 詳細: [log](../../log/2026-11-15-n11-class2-lane-cost63f-sweep-and-certificates.md)、[sweep audit](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost63f-sweep-audit-20261115.json)。証明書2本体は同output/`class2-lane-cost63f-certificates/`。
+
+## 2026-11-15: cost-63f receipts fold 完成 — chain head 1195→1199
+
+cost-63f sweepの証明書付きWIN7-D10 receipts 2件（bits 85/91）をhead 1195にfoldし、新chain head **1199/6648/524616/4918/388339**（remaining S5 orbits 175）を確定した。head JSONは `class-frontier-cost63f-receipts-recompute-20261115.json`（blob `e1e72b12ca39769f2c4a298d91833b612c97afeb`）、fold scriptは `recompute_frontier_cost63f_receipts_20261115.py`（blob `f9a02900ab13c0dc5c201d7f22ac9b39ff90471d`）。fold claim（claim df33461d → 本体push 3333d4f9・closure版blob `4c1d2e14231961cc4874ab9cc869177747851294`）はclosure後のclaim blob shaをscriptがassertし、無期限に再実行可能（cost-72b修復の教訓を適用）。
+
+- total marginal 12 / marginal_in_manifest +4。bit85 receipt（root `00000000002080809002000000000800`）が子軌道 `00000000000080809002000000000800` 本体＋交差被覆 `00000000000080801202000000200000`・`00000000000000801202020800000000` を閉鎖し、bit91 receipt（root `00000000080080809002000000000800`）が `00000000000000801202020020000000` を閉鎖。zero-mim receiptなし。3回実行すべてbyte-identical。
+- 第2 coverable class-2 target S5 `00000000000000801202000000200000` は残り40行/2977 → **38行/2837**。第2 open parent（class-2 S5 `00000000000000801202020000000000`）は52行/3551 → **49行/3360**。両open parentからchild行が落ちたことをbit-exactで検証。childのD4一石lift関係（stone 79削除→parent1・stone 11削除→parent2）をchain-internal canon()で再導出。
+- 統制: 1195 headのrunpy全再現（76a fold script経由で1188から再現・head JSON `efd83f26…`・両CSVがmain掲載版とbyte-identical）、14入力ファイルのgit blob SHA照合、sweep auditをraw 8 batchから再導出（63候補==claim列挙 bit-exact・2 WIN7-D10 / 61 REFUTED / 0 capped・44,140,211 nodes・batch-6 determinism rerun node-exact）、v15 anchor（2 WIN node一致・refuted bits 1/7/109・pilot 5949×3）、証明書2件のbytes再検証（md5×sha256×git blob・sub-roots 51/49 == loser mobility == sweep root mobility・union 0/0・terminal 13..17・manifest totals再集計: 69,459行 / 100 sub-roots / 24,464,665抽出nodes）、root disjointness（96既fold roots = 90 pre-76a + 6 cost-76a・raw + D4両方）。set-equality `s_after == s_1195 ∪ covers(2 roots)` 成立。
+- 着手直前の最新main確認で、兄弟cost-63行 `00000000080000801202000000200000` は並走がcost-63gとしてIN FLIGHT claim済み（commit 69a8f4ad）であることを確認し、触れていない。並走が同セッション中にcost-63f証明書の第三独立監査（rational-geometry replay・CI・D4 root manifest照合）をpushしているのも確認した（commits 6728ba9d/bdc35e32/71464062/77daf4cf）。
+
+**cost-63g fold（並走・sweep in flight）とcost-78a fold（並走・証明書公開中）は新head 1199へのrebase必須**。以後のrecompute・claimはこのheadをassertして拡張する。69g/65j/74eも並走in flight。
+
+解消計数はmanifest被覆の前進であり、盤全体の勝敗ではない。WIN7証明書は各7石rootの深さ10以内の先手勝ちのみを証明する。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class2・class4は引き続き **UNKNOWN**。
+
+詳細: [fold log](../../log/2026-11-15-n11-class2-lane-cost63f-receipts-fold.md)、[head JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost63f-receipts-recompute-20261115.json)、[fold script](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost63f_receipts_20261115.py)。
