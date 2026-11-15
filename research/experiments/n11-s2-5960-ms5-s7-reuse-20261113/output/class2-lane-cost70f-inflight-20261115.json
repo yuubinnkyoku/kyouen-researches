@@ -2,7 +2,7 @@
   "schema": "n11-class2-lane-cost70f-inflight-20261115-v1",
   "title": "n11 class2-lane cost-70f sweep in flight: unswept cost-70 child of the second coverable class-2 target S5 (both parents class 2, c1=0,c2=2,c4=0)",
   "date": "2026-11-15",
-  "status": "in-flight",
+  "status": "completed",
   "claimed_by": "n11 search continuation session (round 2)",
   "s5": "00000000000000801202000000200000",
   "s6_child": "00000000000000801202000002200000",
@@ -199,5 +199,53 @@
   },
   "verdict_semantics": "loss=true => WIN7-within-depth-10 candidate (certificate rebuild target); loss=false && !capped => REFUTED-D10, no first-player win within depth 10 (NOT a LOSS proof); capped => proves nothing either way",
   "unknown_status": "11x11 empty board: UNKNOWN. A completed sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 7-stone roots of this child.",
-  "coordination_note": "latest main fetched immediately before this claim push; the cost-70e fold (head 1233) and the cost-65l fold (in flight) are separate children; if a parallel execution claims this child first, the collision protocol (cost-72b/cost-76a/cost-63f precedents) applies: verify the arithmetic, do not overwrite."
+  "coordination_note": "latest main fetched immediately before this claim push; the cost-70e fold (head 1233) and the cost-65l fold (in flight) are separate children; if a parallel execution claims this child first, the collision protocol (cost-72b/cost-76a/cost-63f precedents) applies: verify the arithmetic, do not overwrite.",
+  "fold": {
+    "status": "completed",
+    "chain_head_before": "1235/6612/521988/4882/385711",
+    "chain_head_after": "1239/6608/521701/4878/385424",
+    "receipts_folded": 4,
+    "publication_order": [
+      9,
+      64,
+      72,
+      84
+    ],
+    "total_marginal": 20,
+    "total_marginal_in_manifest": 4,
+    "zero_marginal_in_manifest": [
+      64,
+      72
+    ],
+    "child_orbit_closed_by_bit": 9,
+    "parents_after": {
+      "parent1": "24 rows / 1836",
+      "parent2": "54 rows / 4055"
+    },
+    "parents_lost_rows": {
+      "parent1": [
+        "00000000000000801202000002200000",
+        "00000000000100809002000000000800"
+      ],
+      "parent2": [
+        "00000000000000801202000002000200",
+        "00000000000000801202000002200000",
+        "00000000000100003800020008000000"
+      ]
+    },
+    "output_blob_shas": {
+      "head_json": "4d0f130e975b6a7bec4759387bd6d54dfe2b6a18",
+      "ranking_csv": "65a0a19b5d794ceccdc590972b1a7006b5db7c7b",
+      "top_candidates_csv": "415b50d3f34421659f36e73cea854ab89ee837f4"
+    },
+    "head_json_bytes": 9643,
+    "ranking_csv_bytes": 7580,
+    "top_candidates_csv_bytes": 5265,
+    "fold_script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost70f_receipts_20261115.py",
+    "reproduction": "python research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost70f_receipts_20261115.py",
+    "note": "Rebased on the cost-71c fold (1233 -> 1235). The fold reproduces the 71c head by pure geometry and asserts it byte-identically before extending it. Marginal counts are D4-orbit bookkeeping over published receipts, not game-theoretic values."
+  },
+  "sweep_results": {
+    "fold": "completed at head 1239; see the top-level fold block"
+  }
 }

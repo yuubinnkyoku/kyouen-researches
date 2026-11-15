@@ -2303,6 +2303,87 @@
 ## [research/experiments/five-row-q7-m31-class-split-20261115/summary.json](../../../research/experiments/five-row-q7-m31-class-split-20261115/summary.json)
 
 - [K0844](../items/K0844-five-row-q7-m31-deficient-nonexistence.md) (data): aggregate: 0 SAT / 0 INDET among the 59 deciding instances; hardest {1} k=5 mp=0 (654,902 conflicts — down 18.4% from its m=30 counterpart); total_conflicts_31 7,606,500 = deciding 7,275,763 + lex=H 330,737 (same convention as m=27..m=30); decomposition soundness note (minpos pins the leftmost stone of the first deficient row; sound bound floor((m-1)/2)=15 at m=31: columns 0..30, min(x_min, 30-x_max) <= 15); environment note (single continuous session)
+## [research/experiments/five-row-q7-m32-class-split-20261115/raw/r5x32q7_1k5p0.txt](../../../research/experiments/five-row-q7-m32-class-split-20261115/raw/r5x32q7_1k5p0.txt)
+
+- [K0845](../items/K0845-five-row-q7-m32-deficient-nonexistence.md) (data): hardest deciding instance raw kissat log ({1} k=5 minpos=0: 670,375 conflicts UNSAT / 25.66 s); all raw logs r5x32q7_*.txt (17 direct + 42 decomposition + 2 lex + control)
+## [research/experiments/five-row-q7-m32-class-split-20261115/raw/r_ctrl_5x18_c0.txt](../../../research/experiments/five-row-q7-m32-class-split-20261115/raw/r_ctrl_5x18_c0.txt)
+
+- [K0845](../items/K0845-five-row-q7-m32-deficient-nonexistence.md) (data): positive control log: 5x18 class {0} SAT 343,134 conflicts bit-exact with the K0821..K0844 lane controls (eleventh cross-lane reproduction); decoded 29 stones rows (5,6,6,6,6), census-free verifyConfig PASS (K0332 witness rediscovered end-to-end)
+## [research/experiments/five-row-q7-m32-class-split-20261115/records.jsonl](../../../research/experiments/five-row-q7-m32-class-split-20261115/records.jsonl)
+
+- [K0845](../items/K0845-five-row-q7-m32-deficient-nonexistence.md) (data): 62 records: 17 direct class UNSAT + 42 k/minpos decomposition UNSAT ({0},{1}: k=0..4 and k=5 x minpos=0..15, 16 points per class at m=32) + 2 lex=H cross-checks + 1 positive control (SAT); deciding-instance conflicts 6,569,505, records total 7,273,321
+## [research/experiments/five-row-q7-m32-class-split-20261115/report.md](../../../research/experiments/five-row-q7-m32-class-split-20261115/report.md)
+
+- [K0845](../items/K0845-five-row-q7-m32-deficient-nonexistence.md) (proof): claim, coverage and decomposition-completeness argument (k partitions the row count; leftmost stone column <= 15 by the column mirror: x_min + (31 - x_max) <= 31), verification protocol incl. the eleventh cross-lane bit-exact control reproduction, per-class results, scope and limits
+## [research/experiments/five-row-q7-m32-class-split-20261115/scripts/mkcnf.sh](../../../research/experiments/five-row-q7-m32-class-split-20261115/scripts/mkcnf.sh)
+
+- [K0845](../items/K0845-five-row-q7-m32-deficient-nonexistence.md) (source): deterministic CNF generator: 17 direct classes + {0},{1} k=0..4 + k=5 x minpos=0..15 (the m=32 sound bound stays floor((m-1)/2)=15, 16 points per class) + 2 lex=H + 5x18 control (62 CNFs)
+## [research/experiments/five-row-q7-m32-class-split-20261115/scripts/mkrecords5732.js](../../../research/experiments/five-row-q7-m32-class-split-20261115/scripts/mkrecords5732.js)
+
+- [K0845](../items/K0845-five-row-q7-m32-deficient-nonexistence.md) (source): records.jsonl / summary.json builder from raw kissat logs (log-name templates match the pushed raw-log names; no c prefix, per the m=30 lane lesson)
+## [research/experiments/five-row-q7-m32-class-split-20261115/scripts/qrun.sh](../../../research/experiments/five-row-q7-m32-class-split-20261115/scripts/qrun.sh)
+
+- [K0845](../items/K0845-five-row-q7-m32-deficient-nonexistence.md) (source): 2-worker claim-directory queue runner with per-instance timeout caps and interrupted-instance reclaim
+## [research/experiments/five-row-q7-m32-class-split-20261115/scripts/sat3.js](../../../research/experiments/five-row-q7-m32-class-split-20261115/scripts/sat3.js)
+
+- [K0845](../items/K0845-five-row-q7-m32-deficient-nonexistence.md) (solver): class-split / exact-count (--krow) / minpos / lex encoder on the K0810 sat.js census + sat2.js counter core (byte-identical to the K0821..K0844 lanes; git blob shas 6c3262d6 / edfae1d2 / 6dfa7db3), plus kissat model decoding with census-free verifyConfig
+## [research/experiments/five-row-q7-m32-class-split-20261115/summary.json](../../../research/experiments/five-row-q7-m32-class-split-20261115/summary.json)
+
+- [K0845](../items/K0845-five-row-q7-m32-deficient-nonexistence.md) (data): aggregate: 0 SAT / 0 INDET among the 59 deciding instances; hardest {1} k=5 mp=0 (670,375 conflicts — up 2.4% from its m=31 counterpart, the only local non-decrease); total_conflicts_32 6,930,187 = deciding 6,569,505 + lex=H 360,682 (same convention as m=27..m=31); decomposition soundness note (minpos pins the leftmost stone of the first deficient row; sound bound floor((m-1)/2)=15 at m=32: columns 0..31, min(x_min, 31-x_max) <= 15); environment note (single continuous session)
+## [research/experiments/five-row-q7-m33-class-split-20261115/raw/r5x33q7_1k5p0.txt](../../../research/experiments/five-row-q7-m33-class-split-20261115/raw/r5x33q7_1k5p0.txt)
+
+- [K0846](../items/K0846-five-row-q7-m33-deficient-nonexistence.md) (data): hardest deciding instance raw kissat log ({1} k=5 minpos=0: 651,985 conflicts UNSAT / 25.39 s); all raw logs r5x33q7_*.txt (17 direct + 44 decomposition + 2 lex + control)
+## [research/experiments/five-row-q7-m33-class-split-20261115/raw/r_ctrl_5x18_c0.txt](../../../research/experiments/five-row-q7-m33-class-split-20261115/raw/r_ctrl_5x18_c0.txt)
+
+- [K0846](../items/K0846-five-row-q7-m33-deficient-nonexistence.md) (data): positive control log: 5x18 class {0} SAT 343,134 conflicts bit-exact with the K0821..K0845 lane controls (twelfth cross-lane reproduction); decoded 29 stones rows (5,6,6,6,6), census-free verifyConfig PASS (K0332 witness rediscovered end-to-end)
+## [research/experiments/five-row-q7-m33-class-split-20261115/records.jsonl](../../../research/experiments/five-row-q7-m33-class-split-20261115/records.jsonl)
+
+- [K0846](../items/K0846-five-row-q7-m33-deficient-nonexistence.md) (data): 64 records: 17 direct class UNSAT + 44 k/minpos decomposition UNSAT ({0},{1}: k=0..4 and k=5 x minpos=0..16, 17 points per class at m=33) + 2 lex=H cross-checks + 1 positive control (SAT); deciding-instance conflicts 6,140,609, records total 6,824,711
+## [research/experiments/five-row-q7-m33-class-split-20261115/report.md](../../../research/experiments/five-row-q7-m33-class-split-20261115/report.md)
+
+- [K0846](../items/K0846-five-row-q7-m33-deficient-nonexistence.md) (proof): claim, coverage and decomposition-completeness argument (k partitions the row count; leftmost stone column <= 16 by the column mirror: x_min + (32 - x_max) <= 32), verification protocol incl. the twelfth cross-lane bit-exact control reproduction and the cross-reset calibration, per-class results, scope and limits
+## [research/experiments/five-row-q7-m33-class-split-20261115/scripts/mkcnf.sh](../../../research/experiments/five-row-q7-m33-class-split-20261115/scripts/mkcnf.sh)
+
+- [K0846](../items/K0846-five-row-q7-m33-deficient-nonexistence.md) (source): deterministic CNF generator: 17 direct classes + {0},{1} k=0..4 + k=5 x minpos=0..16 (the m=33 sound bound grows to floor((m-1)/2)=16, 17 points per class) + 2 lex=H + 5x18 control (64 CNFs)
+## [research/experiments/five-row-q7-m33-class-split-20261115/scripts/mkrecords5733.js](../../../research/experiments/five-row-q7-m33-class-split-20261115/scripts/mkrecords5733.js)
+
+- [K0846](../items/K0846-five-row-q7-m33-deficient-nonexistence.md) (source): records.jsonl / summary.json builder from raw kissat logs (log-name templates match the pushed raw-log names; no c prefix, per the m=30 lane lesson)
+## [research/experiments/five-row-q7-m33-class-split-20261115/scripts/qrun.sh](../../../research/experiments/five-row-q7-m33-class-split-20261115/scripts/qrun.sh)
+
+- [K0846](../items/K0846-five-row-q7-m33-deficient-nonexistence.md) (source): 2-worker claim-directory queue runner with per-instance timeout caps and interrupted-instance reclaim
+## [research/experiments/five-row-q7-m33-class-split-20261115/scripts/sat3.js](../../../research/experiments/five-row-q7-m33-class-split-20261115/scripts/sat3.js)
+
+- [K0846](../items/K0846-five-row-q7-m33-deficient-nonexistence.md) (solver): class-split / exact-count (--krow) / minpos / lex encoder on the K0810 sat.js census + sat2.js counter core (byte-identical to the K0821..K0845 lanes; git blob shas 6c3262d6 / edfae1d2 / 6dfa7db3), plus kissat model decoding with census-free verifyConfig
+## [research/experiments/five-row-q7-m33-class-split-20261115/summary.json](../../../research/experiments/five-row-q7-m33-class-split-20261115/summary.json)
+
+- [K0846](../items/K0846-five-row-q7-m33-deficient-nonexistence.md) (data): aggregate: 0 SAT / 0 INDET among the 61 deciding instances; hardest {1} k=5 mp=0 (651,985 conflicts — down 2.7% from its m=32 counterpart); total_conflicts_33 6,481,577 = deciding 6,140,609 + lex=H 340,968 (same convention as m=27..m=32); decomposition soundness note (minpos pins the leftmost stone of the first deficient row; sound bound floor((m-1)/2)=16 at m=33: columns 0..32, min(x_min, 32-x_max) <= 16); environment note (batch-1 pre-reset byte-exact on main, batches 2-4 post-reset with scripts restored from main, kissat re-downloaded md5-verified, CNFs regenerated, control 343,134 and {0,1} 334,184 reproduced bit-exactly)
+## [research/experiments/five-row-q7-m34-class-split-20261115/raw/r5x34q7_1k5p0.txt](../../../research/experiments/five-row-q7-m34-class-split-20261115/raw/r5x34q7_1k5p0.txt)
+
+- [K0847](../items/K0847-five-row-q7-m34-deficient-nonexistence.md) (data): hardest deciding instance raw kissat log ({1} k=5 minpos=0: 574,663 conflicts UNSAT / 20.64 s); all raw logs r5x34q7_*.txt (17 direct + 44 decomposition + 2 lex + control)
+## [research/experiments/five-row-q7-m34-class-split-20261115/raw/r_ctrl_5x18_c0.txt](../../../research/experiments/five-row-q7-m34-class-split-20261115/raw/r_ctrl_5x18_c0.txt)
+
+- [K0847](../items/K0847-five-row-q7-m34-deficient-nonexistence.md) (data): positive control log: 5x18 class {0} SAT 343,134 conflicts bit-exact with the K0821..K0846 lane controls (thirteenth cross-lane reproduction); decoded 29 stones rows (5,6,6,6,6), census-free verifyConfig PASS (K0332 witness rediscovered end-to-end)
+## [research/experiments/five-row-q7-m34-class-split-20261115/records.jsonl](../../../research/experiments/five-row-q7-m34-class-split-20261115/records.jsonl)
+
+- [K0847](../items/K0847-five-row-q7-m34-deficient-nonexistence.md) (data): 64 records: 17 direct class UNSAT + 44 k/minpos decomposition UNSAT ({0},{1}: k=0..4 and k=5 x minpos=0..16, 17 points per class at m=34) + 2 lex=H cross-checks + 1 positive control (SAT); deciding-instance conflicts 5,928,015, records total 6,607,549
+## [research/experiments/five-row-q7-m34-class-split-20261115/report.md](../../../research/experiments/five-row-q7-m34-class-split-20261115/report.md)
+
+- [K0847](../items/K0847-five-row-q7-m34-deficient-nonexistence.md) (proof): claim, coverage and decomposition-completeness argument (k partitions the row count; leftmost stone column <= 16 by the column mirror: x_min + (33 - x_max) <= 33), verification protocol incl. the thirteenth cross-lane bit-exact control reproduction, per-class results, scope and limits
+## [research/experiments/five-row-q7-m34-class-split-20261115/scripts/mkcnf.sh](../../../research/experiments/five-row-q7-m34-class-split-20261115/scripts/mkcnf.sh)
+
+- [K0847](../items/K0847-five-row-q7-m34-deficient-nonexistence.md) (source): deterministic CNF generator: 17 direct classes + {0},{1} k=0..4 + k=5 x minpos=0..16 (the m=34 sound bound stays floor((m-1)/2)=16, 17 points per class) + 2 lex=H + 5x18 control (64 CNFs)
+## [research/experiments/five-row-q7-m34-class-split-20261115/scripts/mkrecords5734.js](../../../research/experiments/five-row-q7-m34-class-split-20261115/scripts/mkrecords5734.js)
+
+- [K0847](../items/K0847-five-row-q7-m34-deficient-nonexistence.md) (source): records.jsonl / summary.json builder from raw kissat logs (log-name templates match the pushed raw-log names; no c prefix, per the m=30 lane lesson)
+## [research/experiments/five-row-q7-m34-class-split-20261115/scripts/qrun.sh](../../../research/experiments/five-row-q7-m34-class-split-20261115/scripts/qrun.sh)
+
+- [K0847](../items/K0847-five-row-q7-m34-deficient-nonexistence.md) (source): 2-worker claim-directory queue runner with per-instance timeout caps and interrupted-instance reclaim
+## [research/experiments/five-row-q7-m34-class-split-20261115/scripts/sat3.js](../../../research/experiments/five-row-q7-m34-class-split-20261115/scripts/sat3.js)
+
+- [K0847](../items/K0847-five-row-q7-m34-deficient-nonexistence.md) (solver): class-split / exact-count (--krow) / minpos / lex encoder on the K0810 sat.js census + sat2.js counter core (byte-identical to the K0821..K0846 lanes; git blob shas 6c3262d6 / edfae1d2 / 6dfa7db3), plus kissat model decoding with census-free verifyConfig
+## [research/experiments/five-row-q7-m34-class-split-20261115/summary.json](../../../research/experiments/five-row-q7-m34-class-split-20261115/summary.json)
+
+- [K0847](../items/K0847-five-row-q7-m34-deficient-nonexistence.md) (data): aggregate: 0 SAT / 0 INDET among the 61 deciding instances; hardest {1} k=5 mp=0 (574,663 conflicts — down 11.9% from its m=33 counterpart); total_conflicts_34 6,264,415 = deciding 5,928,015 + lex=H 336,400 (same convention as m=27..m=33); decomposition soundness note (minpos pins the leftmost stone of the first deficient row; sound bound floor((m-1)/2)=16 at m=34: columns 0..33, min(x_min, 33-x_max) <= 16); environment note (single continuous session, no reset; all 64 raw-log remote blob shas verified against local sha1s, 64/64 OK)
 ## [research/experiments/fixed-width-frontier-20261005/output/q57_independent_witness.json](../../../research/experiments/fixed-width-frontier-20261005/output/q57_independent_witness.json)
 
 - [K0332](../items/K0332-width-five-q7-stabilization-bounds.md) (data): 5×18の29石安全極大証人と全61空点のblocker
@@ -3060,12 +3141,21 @@
 ## [research/experiments/four-row-q4-q5-frontier-20261115/output/q4-w5-rowY1/records.jsonl](../../../research/experiments/four-row-q4-q5-frontier-20261115/output/q4-w5-rowY1/records.jsonl)
 
 - [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (data): (5,4) m=40 rowY=1 600s INDET 191,445 conflicts の honest negative（不在主張ではない）
+## [research/experiments/four-row-q4-q5-frontier-20261115/output/q4-w6-construct-m46/records.jsonl](../../../research/experiments/four-row-q4-q5-frontier-20261115/output/q4-w6-construct-m46/records.jsonl)
+
+- [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (data): (6,4) m=46 witness by constructive free-column append of the m=45 witness (solver-free): stones unchanged on the 6x46 board; pure-TS/BigInt full-board verification PASS (safe maxLine=3/maxCirc=3, uncovered=0, rows [2,3,3,3,3,3]); free append stops at m=47 (cell (46,0) uncovered); js+py verification pending bash recovery - witness 帯 m=6..46, M_{6,4} ∈ [47, 1113]
 ## [research/experiments/four-row-q4-q5-frontier-20261115/output/q4-w6-rowY0-m42/records.jsonl](../../../research/experiments/four-row-q4-q5-frontier-20261115/output/q4-w6-rowY0-m42/records.jsonl)
 
 - [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (data): (6,4) m=42 rowY=0 固定分割 SAT 461.6s/16,942 conflicts (17石 rows [2,3,3,3,3,3]) - witness 帯 m=6..42, M_{6,4} ∈ [43, 1113]
 ## [research/experiments/four-row-q4-q5-frontier-20261115/output/q4-w6-rowY0-m43/records.jsonl](../../../research/experiments/four-row-q4-q5-frontier-20261115/output/q4-w6-rowY0-m43/records.jsonl)
 
 - [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (data): (6,4) m=43 rowY=0 固定分割 SAT 900s-cap 34,728 conflicts/581s (17石 rows [2,3,3,3,3,3]; wrapper killed post-SAT by env reset, record honestly reconstructed from kissat.txt) - witness 帯 m=6..43, M_{6,4} ∈ [44, 1113]
+## [research/experiments/four-row-q4-q5-frontier-20261115/output/q4-w6-rowY0-m44/records.jsonl](../../../research/experiments/four-row-q4-q5-frontier-20261115/output/q4-w6-rowY0-m44/records.jsonl)
+
+- [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (data): (6,4) m=44 rowY=0 固定分割 SAT 1200s-cap 12,816 conflicts/493.9s (17石 rows [2,3,3,3,3,3], wrapper completed end-to-end incl. decode; conflicts < m=43's 34,728 - first local reversal of the difficulty trend) - witness 帯 m=6..44, M_{6,4} ∈ [45, 1113]
+## [research/experiments/four-row-q4-q5-frontier-20261115/output/q4-w6-rowY0-m45/records.jsonl](../../../research/experiments/four-row-q4-q5-frontier-20261115/output/q4-w6-rowY0-m45/records.jsonl)
+
+- [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (data): (6,4) m=45 rowY=0 固定分割 SAT 1200s-cap 10,066 conflicts/272.1s (17石 rows [2,3,3,3,3,3], wrapper completed end-to-end; conflicts keeps decreasing 34,728 -> 12,816 -> 10,066, m=43 was a local peak) - witness 帯 m=6..45, M_{6,4} ∈ [46, 1113]
 ## [research/experiments/four-row-q4-q5-frontier-20261115/output/q4-w6-rowY0/records.jsonl](../../../research/experiments/four-row-q4-q5-frontier-20261115/output/q4-w6-rowY0/records.jsonl)
 
 - [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (data): (6,4) m=41 rowY=0 固定分割 SAT 245.2s/8,226 conflicts (17石) - witness 帯 m=6..41, M_{6,4} ∈ [42, 1113]
@@ -3081,6 +3171,12 @@
 ## [research/experiments/four-row-q4-q5-frontier-20261115/output/ts-verify-frontier-m43.json](../../../research/experiments/four-row-q4-q5-frontier-20261115/output/ts-verify-frontier-m43.json)
 
 - [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (data): (6,4) m=43 witness の第3系統検証 PASS・陽性対照（m=40 再PASS・nQ1Curves=690 が m=41/m=42 run と同一）・陰性対照（1石移動で maxCirc=4 unsafe+8 uncovered を検出）
+## [research/experiments/four-row-q4-q5-frontier-20261115/output/ts-verify-frontier-m44.json](../../../research/experiments/four-row-q4-q5-frontier-20261115/output/ts-verify-frontier-m44.json)
+
+- [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (data): (6,4) m=44 witness の第3系統検証 PASS・陽性対照（m=40 再PASS・nCircles=670/nQ1Curves=690 が m=41/42/43 run と同一）・陰性対照（1石移動で maxCirc=4 unsafe+7 uncovered を検出）
+## [research/experiments/four-row-q4-q5-frontier-20261115/output/ts-verify-frontier-m45.json](../../../research/experiments/four-row-q4-q5-frontier-20261115/output/ts-verify-frontier-m45.json)
+
+- [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (data): (6,4) m=45 witness の第3系統検証 PASS・陽性対照（m=40 再PASS・nCircles=670/nQ1Curves=690 が m=41..44 run と同一）・陰性対照（1石移動で maxCirc=4 unsafe+1 uncovered を検出）
 ## [research/experiments/four-row-q4-q5-frontier-20261115/output/ts-verify-frontier.json](../../../research/experiments/four-row-q4-q5-frontier-20261115/output/ts-verify-frontier.json)
 
 - [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (data): (6,4) m=41 witness の第3系統検証 PASS・陽性対照（m=40 witness 再PASS）・陰性対照（1石移動で maxCirc=4 unsafe+10 uncovered を検出）
@@ -9190,6 +9286,9 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost69f-certificate-backed-recompute-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost69f-certificate-backed-recompute-20261115.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): cost69fの9 receiptすべてを証明書済みとして反映したfrontier派生出力
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost70f-receipts-recompute-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost70f-receipts-recompute-20261115.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): fold後head 1239/6608/521701/4878/385424とper-receipt marginal・親S5 after
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost71b-recompute-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost71b-recompute-20261115.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): cost-70c後からcost-71bの3 receiptを追加したmanifest-level frontier再計算
@@ -9343,6 +9442,12 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70e-certificates-third-independent-audit-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70e-certificates-third-independent-audit-20261115.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): cost70e 5/5 PASS・236,784行・8,564,174 bytes・280 sub-roots・31 distinct parent orbits・child orbit covered
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70f-sweep-audit-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70f-sweep-audit-20261115.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): cost70f 70候補・4 WIN7-D10 bits 9/64/72/84・66 REFUTED・0 capped・81,480,831 nodes
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70f-win7-certificates-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70f-win7-certificates-20261115.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (manifest): cost70f WIN7証明書4件。155,155行・5,601,978 bytes・26,952,264 extraction nodes・214 sub-roots・25 distinct parent orbits
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71b-bigint-independent-audit-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71b-bigint-independent-audit-20261115.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): cost-71b bits 109/21/105の独立BigInt検証結果
@@ -9584,6 +9689,9 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost70e_certificates_third_independent_20261115.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost70e_certificates_third_independent_20261115.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): cost70e証明書5件の第三独立監査。part連結・LF正規化・BigInt+Number Bareiss再実行・D4親orbit再導出
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost70f_raw_sweep_20261115.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost70f_raw_sweep_20261115.py)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): cost70f raw sweepの独立監査（stdlib Bareiss・候補70再列挙・9 batch再導出・D4重複0・一石削除6件・head-1233 CSV照合）
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost74d_win_loss_conflicts_20261115.mjs](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost74d_win_loss_conflicts_20261115.mjs)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): cost74dの15 WIN7-D10 rootを既存WIN7/LOSS7 manifest・中央49 LOSS7 parent-lift・category-1候補とD4照合。入力Git blob SHAを固定
@@ -9623,6 +9731,9 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost69e_20261115.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost69e_20261115.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (source): S5親keyを文字列で一貫して扱うよう修正。receipt-unclosable S5とbest coverable S5を分離
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost70f_receipts_20261115.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost70f_receipts_20261115.py)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (source): cost70f 4 receipt fold。head 1235のbyte再現・sweep audit/証明書bytes検証・fold・completed claim制御
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost72b_receipts_20261115.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost72b_receipts_20261115.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (source): fold実行体。74d head 1,179をrunpy鎖でbyte再現、18入力blob照合、13証明書byte検証、bit85==74d bit91のD4等価検証込み
@@ -14470,6 +14581,15 @@
 ## [research/experiments/vertex-cover-terminal-dp-20261102/verify.py](../../../research/experiments/vertex-cover-terminal-dp-20261102/verify.py)
 
 - [K0622](../items/K0622-vertex-cover-terminal-polynomial.md) (verifier): 8067グラフ条件、996別被覆、100禁止超辺条件472592部分集合、K2m式80条件を照合
+## [research/experiments/vertical-fiber-boundary-grundy-20261115/output/audit.json](../../../research/experiments/vertical-fiber-boundary-grundy-20261115/output/audit.json)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (data): 64パラメータ組・5,080境界状態の有限完全監査結果
+## [research/experiments/vertical-fiber-boundary-grundy-20261115/report.md](../../../research/experiments/vertical-fiber-boundary-grundy-20261115/report.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (proof): 境界層が飽和ファイバーの鎖の直和となる全称証明と、底面跡制約付きの十分条件
+## [research/experiments/vertical-fiber-boundary-grundy-20261115/verify_boundary_grundy.py](../../../research/experiments/vertical-fiber-boundary-grundy-20261115/verify_boundary_grundy.py)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (verifier): 小パラメータの全境界占有ベクトルを再帰mexと排他的論理和公式で照合
 ## [research/experiments/vertical-fiber-degree-reduction-20261115/report.md](../../../research/experiments/vertical-fiber-degree-reduction-20261115/report.md)
 
 - [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (proof): ファイバーごとの根数上界から導く全称縮約定理・適用条件・鋭さの境界例
@@ -15241,6 +15361,9 @@
 ## [research/log/2026-11-15-n11-class2-lane-cost70e-certificates-third-independent-audit.md](../../../research/log/2026-11-15-n11-class2-lane-cost70e-certificates-third-independent-audit.md)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): cost70e証明書5件の第三独立監査記録（foldは未実施・head 1227不変）
+## [research/log/2026-11-15-n11-class2-lane-cost70f-sweep-certificates-and-fold.md](../../../research/log/2026-11-15-n11-class2-lane-cost70f-sweep-certificates-and-fold.md)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): cost70fのsweep・4証明書抽出・二独立検証・fold・Windows LF/CRLF再現注意
 ## [research/log/2026-11-15-n11-class2-lane-cost72b-receipts-fold.md](../../../research/log/2026-11-15-n11-class2-lane-cost72b-receipts-fold.md)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): 13 receipt foldの実行記録。rebase経緯・環境リセット事故・並走in-flight markerとの予測一致を含む
@@ -15262,6 +15385,9 @@
 ## [research/log/2026-11-15-sidon-height-boundary-reduction.md](../../../research/log/2026-11-15-sidon-height-boundary-reduction.md)
 
 - [K0828](../items/K0828-sidon-height-boundary-reduction.md) (log): 発見経緯と標準連続高さm=2,3への適用範囲
+## [research/log/2026-11-15-vertical-fiber-boundary-grundy.md](../../../research/log/2026-11-15-vertical-fiber-boundary-grundy.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (log): K0832の境界層Grundy値を鎖分解で厳密化した判断・証明・限界
 ## [research/log/2026-11-15-vertical-fiber-degree-reduction.md](../../../research/log/2026-11-15-vertical-fiber-degree-reduction.md)
 
 - [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (log): 最新main・未解決一覧との照合、定理の選定、有限検証と限界

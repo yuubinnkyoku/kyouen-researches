@@ -240,7 +240,7 @@ EXTRA_BLOBS = {
 RECORDS_71C = {
     'class2-lane-cost71c-sweep-audit-20261115.json': '0a89e14954d76691a62007b1e5c75a97aabaa663',
     'class2-lane-cost71c-win7-certificates-20261115.json': '3a09163ccfde2a3ce4e63f61ef31d42688f60b30',
-    'class2-lane-cost71c-inflight-20261115.json': 'd69f144c26c2bc85c7512ec71b9e196bb39cf453',
+    'class2-lane-cost71c-inflight-20261115.json': '625492ab27498f0b72491f1464e313382037c8cd',  # v3 retired claim (v2 d69f144c is history)
     'class2-lane-cost71c-bit24-bigint-verify-20261115.json': 'bfb30ef703fb0f92c80851b6bd50af1878ac6e6b',
     'class2-lane-cost71c-bit24-bareiss-verify-20261115.json': 'c90369fb51b213e2c124070f10d18a1a9f09ab93',
     'class2-lane-cost71c-bit112-bigint-verify-20261115.json': '8a06717e45495ae19ba6771ab916d28c95d01b80',
@@ -639,12 +639,16 @@ print('CONTROL child genuinely remaining at the reconstructed 1233 head: '
       'other four child stones lifting to closed rows; third coverable '
       'class-2 target 2/143 and audit-blocked 10/698 unchanged')
 
-# ---------- 5. claim v2 + sweep audit re-derivation from the raw batches ----------
+# ---------- 5. claim v2/v3 + sweep audit re-derivation from the raw batches ----------
 claim = json.loads((OUT / 'class2-lane-cost71c-inflight-20261115.json').read_text())
-assert claim['schema'] == 'n11-class2-lane-cost71c-inflight-20261115-v2'
-assert claim['status'].startswith('completed') and 'fold pending' in claim['status']
-assert 'fold' not in claim and 'pending' in claim['fold_pending_note'].lower(), \
-    'the claim must record the fold as pending at fold time'
+assert claim['schema'] in ('n11-class2-lane-cost71c-inflight-20261115-v2',
+                           'n11-class2-lane-cost71c-inflight-20261115-v3')
+if claim['schema'].endswith('-v2'):
+    assert claim['status'].startswith('completed') and 'fold pending' in claim['status']
+    assert 'fold' not in claim and 'pending' in claim['fold_pending_note'].lower(), \
+        'the claim must record the fold as pending at fold time'
+else:
+    assert claim['status'].startswith('completed') and 'fold' in claim
 assert claim['unknown_status'].startswith('11x11 empty board: UNKNOWN')
 assert claim['s5'] == PARENT1 and claim['s6_child'] == CHILD
 assert claim['s6_s7_edge_cost'] == 71
