@@ -1,0 +1,290 @@
+{
+  "schema": "n11-class2-cost76a-six-certificates-third-independent-audit-20261115-v1",
+  "date": "2026-11-15",
+  "status": "PASS",
+  "method": "fresh exact BigInt circumcentre-numerator verifier with a separate exact collinearity branch; no repository verifier, search engine, verdict cache, or floating point",
+  "sources": {
+    "manifest": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76a-win7-certificates-20261115.json",
+      "git_blob_sha": "f3be0e0edfc4ddf5da327dc545de7009926407ef"
+    },
+    "raw_sweep_audit": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76a-sweep-audit-20261115.json",
+      "git_blob_sha": "c754fab60060f8e6ae76bf6215e1559810eaa29e"
+    },
+    "v15_crosscheck": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76a-v15-crosscheck-20261115.jsonl",
+      "git_blob_sha": "920bb32f6fb18dcff01c5a0084364ddf9cd5a5a5"
+    },
+    "top_candidates": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-top-candidates-s6-after-cost72b-receipts-20261115.csv",
+      "git_blob_sha": "03641c2be60e23d663d7e433969725117cb7eecf"
+    },
+    "s5_ranking": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-s5-ranking-after-cost72b-receipts-20261115.csv",
+      "git_blob_sha": "f2ccbf562bfd853d24ad1f345a4c9e7cf46bc28c"
+    },
+    "claim_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76a-inflight-20261115.json"
+  },
+  "sweep_boundary": {
+    "candidates": 76,
+    "win7_d10": 6,
+    "win7_bits": [
+      11,
+      29,
+      66,
+      80,
+      92,
+      96
+    ],
+    "refuted_d10": 70,
+    "capped": 0,
+    "candidate_nodes": 131329581,
+    "note": "The 76-candidate raw sweep is taken from its published audit; this run independently replays all six certificate bodies, not the 70 REFUTED-D10 searches."
+  },
+  "certificate_replay": {
+    "certificates": [
+      {
+        "bit": 11,
+        "root_hex": "00000000000000809102000000000801",
+        "d4_canonical_hex": "00000000000000809102000000000801",
+        "bytes": 1763791,
+        "rows": 48653,
+        "root_mobility": 62,
+        "subroots_passed": 62,
+        "visited_states": 103243,
+        "winner_states": 66459,
+        "loser_states": 20166,
+        "loser_reply_edges": 92356,
+        "terminal_count": 16618,
+        "terminal_range": [
+          13,
+          17
+        ],
+        "union_missing": 0,
+        "union_extra": 0,
+        "v15_nodes": 7665696,
+        "v16_sweep_nodes": 2270437,
+        "whole_git_blob_sha": "516c15a5b6f6f47f692cb5ad6e36923d5a1efabf"
+      },
+      {
+        "bit": 29,
+        "root_hex": "00000000000000809102000020000001",
+        "d4_canonical_hex": "00000000000000809102000020000001",
+        "bytes": 2097005,
+        "rows": 57930,
+        "root_mobility": 60,
+        "subroots_passed": 60,
+        "visited_states": 115685,
+        "winner_states": 74266,
+        "loser_states": 21758,
+        "loser_reply_edges": 102001,
+        "terminal_count": 19661,
+        "terminal_range": [
+          13,
+          17
+        ],
+        "union_missing": 0,
+        "union_extra": 0,
+        "v15_nodes": 10956610,
+        "v16_sweep_nodes": 3378873,
+        "whole_git_blob_sha": "a09d9f29a03ad9b7ed89d695a13ea5eda6daa20b"
+      },
+      {
+        "bit": 66,
+        "root_hex": "00000000000000849102000000000001",
+        "d4_canonical_hex": "00000000000000849102000000000001",
+        "bytes": 1914257,
+        "rows": 52883,
+        "root_mobility": 61,
+        "subroots_passed": 61,
+        "visited_states": 110603,
+        "winner_states": 71211,
+        "loser_states": 20992,
+        "loser_reply_edges": 98645,
+        "terminal_count": 18400,
+        "terminal_range": [
+          13,
+          17
+        ],
+        "union_missing": 0,
+        "union_extra": 0,
+        "v15_nodes": 6198635,
+        "v16_sweep_nodes": 2237413,
+        "whole_git_blob_sha": "5f28b194bd2b7112c7c9d9bd4195131147885bc6"
+      },
+      {
+        "bit": 80,
+        "root_hex": "00000000000100809102000000000001",
+        "d4_canonical_hex": "00000000000100809102000000000001",
+        "bytes": 1799675,
+        "rows": 49741,
+        "root_mobility": 59,
+        "subroots_passed": 59,
+        "visited_states": 104275,
+        "winner_states": 67272,
+        "loser_states": 19969,
+        "loser_reply_edges": 93738,
+        "terminal_count": 17034,
+        "terminal_range": [
+          13,
+          17
+        ],
+        "union_missing": 0,
+        "union_extra": 0,
+        "v15_nodes": 10820542,
+        "v16_sweep_nodes": 3163271,
+        "whole_git_blob_sha": "f4573437e5a3112f0f1a79fc42ae38c731160e9a"
+      },
+      {
+        "bit": 92,
+        "root_hex": "00000000100000809102000000000001",
+        "d4_canonical_hex": "00000000100000809102000000000001",
+        "bytes": 1281708,
+        "rows": 35456,
+        "root_mobility": 54,
+        "subroots_passed": 54,
+        "visited_states": 81739,
+        "winner_states": 52784,
+        "loser_states": 15993,
+        "loser_reply_edges": 73265,
+        "terminal_count": 12962,
+        "terminal_range": [
+          13,
+          17
+        ],
+        "union_missing": 0,
+        "union_extra": 0,
+        "v15_nodes": 4876955,
+        "v16_sweep_nodes": 1430262,
+        "whole_git_blob_sha": "4ec790fee376529edcc914ac84e36c19c5139178"
+      },
+      {
+        "bit": 96,
+        "root_hex": "00000001000000809102000000000001",
+        "d4_canonical_hex": "00000000040000811202000000000400",
+        "bytes": 1254483,
+        "rows": 34681,
+        "root_mobility": 55,
+        "subroots_passed": 55,
+        "visited_states": 77601,
+        "winner_states": 49857,
+        "loser_states": 14755,
+        "loser_reply_edges": 68173,
+        "terminal_count": 12989,
+        "terminal_range": [
+          13,
+          17
+        ],
+        "union_missing": 0,
+        "union_extra": 0,
+        "v15_nodes": 3556006,
+        "v16_sweep_nodes": 1044810,
+        "whole_git_blob_sha": "b41bb8a45c7a6463625685e6fa6559853d8d7ec6"
+      }
+    ],
+    "totals": {
+      "certificates": 6,
+      "bytes": 10110919,
+      "rows": 279344,
+      "subroots": 351,
+      "visited_states": 593146,
+      "winner_states": 381849,
+      "loser_states": 113633,
+      "loser_reply_edges": 528178,
+      "terminals": 97664
+    },
+    "manifest_extraction_nodes": 70911428,
+    "all_roots_D4_distinct": true,
+    "all_roots_safe": true,
+    "all_subroots_passed": true,
+    "all_rows_sorted_unique": true,
+    "all_consumed_unions_exact": true,
+    "all_terminal_ranges": [
+      13,
+      17
+    ],
+    "all_v15_WIN7_anchors_match": true
+  },
+  "edge_lift_audit": {
+    "head_snapshot": "1188/6659/525437/4929/389160",
+    "certificate_parent_incidences": 42,
+    "unique_D4_parent_S6_orbits": 37,
+    "unique_parent_move_pairs": 42,
+    "duplicate_parent_incidences": 5,
+    "top_candidate_S6_orbits_matched": 2,
+    "other_parent_orbits_not_classified_by_shortlist": 35,
+    "unique_known_open_S6_orbits_with_new_edges": 2,
+    "unique_known_open_S6_edges_newly_covered": 7,
+    "affected_open_S5_rows": [
+      {
+        "s5_hex": "00000000000000809102000000000000",
+        "class_count": 2,
+        "remaining_s6_orbits": 4,
+        "cost_before": 297,
+        "cost_after_local": 291,
+        "s6_child_hex": "00000000000000809102000000000001",
+        "legal_s7_edges": 76,
+        "newly_covered_edges": 6,
+        "remaining_edges": 70,
+        "covered_moves": [
+          11,
+          29,
+          66,
+          80,
+          92,
+          96
+        ]
+      },
+      {
+        "s5_hex": "00000000000000801202000000000400",
+        "class_count": 2,
+        "remaining_s6_orbits": 77,
+        "cost_before": 6296,
+        "cost_after_local": 6290,
+        "s6_child_D4_lift_hex": "00000000000000811202000000000400",
+        "legal_s7_edges": 76,
+        "newly_covered_edges": 6,
+        "remaining_edges": 70,
+        "removed_bit_in_target_child": 56,
+        "added_bit_in_parent_orientation": 64,
+        "covered_moves_in_parent_orientation": [
+          21,
+          25,
+          76,
+          84,
+          90,
+          94
+        ]
+      },
+      {
+        "s5_hex": "00000000000000801202000000200000",
+        "class_count": 2,
+        "remaining_s6_orbits": 41,
+        "cost_before": 3058,
+        "cost_after_local": 3057,
+        "s6_child_hex": "00000000000000801202000000200400",
+        "legal_s7_edges": 81,
+        "newly_covered_edges": 1,
+        "remaining_edges": 80,
+        "covered_moves": [
+          64
+        ]
+      }
+    ],
+    "per_S5_row_cost_reduction_sum": 13,
+    "unique_S6_edge_reduction": 7,
+    "S6_orbits_closed": 0,
+    "global_frontier_recomputed": false
+  },
+  "frontier_interpretation": {
+    "canonical_head_before_fold": "1188/6659/525437/4929/389160",
+    "published_global_frontier_changed": false,
+    "known_local_edge_coverage": "7 unique S6-to-S7 edges across 2 known open S6 orbits",
+    "why_per_parent_reduction_is_13": "The same six-edge S6 orbit is a child of two distinct open class-2 S5 parents, so its six edges reduce both per-S5 rows; unique S6 edge count remains six, not twelve.",
+    "no_parent_closed": true,
+    "next_required_action": "Fold the six WIN7 receipts into the canonical chain at head 1188, re-derive all marginal lifts, and only then publish a new global frontier."
+  },
+  "execution_note": "The verifier logic was executed in the connected JavaScript runtime against exact GitHub blob contents. The standalone script is committed for checkout reproduction; local checkout and repository-wide uv checks were not run in this turn.",
+  "interpretation_guard": "Each certificate proves only its seven-stone root is WIN for the player to move. The six certificates do not close the six-stone parent: 70 of its 76 legal seventh moves remain uncovered. REFUTED-D10 is not a LOSS proof. Standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, class 2, and class 4 remain UNKNOWN."
+}

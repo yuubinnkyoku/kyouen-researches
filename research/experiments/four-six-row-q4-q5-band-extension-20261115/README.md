@@ -43,6 +43,7 @@ INDET は honest negative として記録し不在主張とはしない。
 
 - sat3 ≡ sat2 DIMACS バイト一致 11 対照:
   (3,11,5)/(3,12,5)/(4,34,4)/(4,20,5)/(5,23,5)/(5,24,5 rowY=0)/(4,11
+
 ,8)/
   (5,22,6 rowY=2) lex 付き・(4,20,5 rowY=3)/lex=H・(6,32,4 lex=H)。
   さらに repo meta 一致: (6,31,4) lex=H,V で vars/clauses/curves 完全一致。
@@ -76,3 +77,6 @@ INDET は honest negative として記録し不在主張とはしない。
   (5,5) m=24+・(4,5) m=21 rowY 分割。
 - 記録上の訂正: 前レーン lex "H,V,HVHV" は実効 [H,V]（SIG={H,V,HV} で HVHV がフィルタ）。
   判定不変。詳細は README 冒頭の符号化の注記と K0833。
+- **第3系統検証**: 全12 witness が純TS/BigInt（verify_independent.ts verbatim・sandbox 実行）で
+  PASS safe+maximal+row-deficient（ts-verify-band-extension.json）。陰性対照・陽性対照
+  （前レーン (6,31,4) witness 再PASS）つき。3系統検証完了。

@@ -1,6 +1,6 @@
 {
   "schema": "n11-class2-lane-cost76a-inflight-20261115-v1",
-  "title": "n11 class2-lane cost-76a sweep in flight (claimed by a long-term lane execution)",
+  "title": "n11 class2-lane cost-76a sweep and certificate publication complete; receipt fold pending",
   "date": "2026-11-15",
   "status": "completed",
   "claimed_by": "long-term class2 lane",
@@ -123,7 +123,7 @@
     "batch_size": 8,
     "pilot_control": "d6 loss=false nodes=3402 required per batch; local copy byte-exact with the repo blob (git blob sha 0a4a86f6828dc010c89ff17596054336a6b6091f computed locally and equal to the 74d claim record) and control passed at session start"
   },
-  "plan": "All steps complete except the receipt fold. Raw sweep (76/76, 6 WIN7-D10 bits 11/29/66/80/92/96, 0 capped, 131,329,581 nodes), sweep audit, v15 cross-engine crosscheck (6/6 WIN7 loss=true, 3/3 refuted anchors loss=false, pilot d6 7/7 PASS, honesty note about the 4-space transcription delta corrected post-run and byte-exact), and the full certificate publication are done: 6/6 WIN7 bits extracted and certified, 8/8 remote files git-blob-sha verified, and the final manifest class2-lane-cost76a-win7-certificates-20261115.json pushed. Extraction driver cert_driver76a.ts published (blob 68336cdfe7c3eba4c0479bf79a1b309a3d32c191). Double independent verification on all 6 certificates: bigint 6/6 PASS, Bareiss --consumed-out 6/6 PASS. This claim is closed as a sweep+certificates claim; the 6-receipt fold into the chain at head 1188 (asserting 1188/6659/525437/4929/389160) remains open and is the next step; keep 11x11 UNKNOWN.",
+  "plan": "All steps complete except the receipt fold. Raw sweep (76/76, 6 WIN7-D10 bits 11/29/66/80/92/96, 0 capped, 131,329,581 nodes), sweep audit, v15 cross-engine crosscheck (6/6 WIN7 loss=true, 3/3 refuted anchors loss=false, pilot d6 7/7 PASS, honesty note about the 4-space transcription delta corrected post-run and byte-exact), and the full certificate publication are done: 6/6 WIN7 bits extracted and certified, 8/8 remote files git-blob-sha verified, and the final manifest class2-lane-cost76a-win7-certificates-20261115.json pushed. Extraction driver cert_driver76a.ts published (blob 68336cdfe7c3eba4c0479bf79a1b309a3d32c191). Double independent verification on all 6 certificates: bigint 6/6 PASS, Bareiss --consumed-out 6/6 PASS. This claim is closed as a sweep+certificates claim; the 6-receipt fold into the chain at head 1188 (asserting 1188/6659/525437/4929/389160) remains open and is the next step; keep 11x11 UNKNOWN. Third independent exact replay has now passed all six certificate bodies and identified 7 unique edges across 2 known open S6 parent orbits; no S6 orbit is closed. The full receipt fold at head 1188 remains pending.",
   "naming_note": "cost-76a disambiguates from the sibling cost-76 child 00000000000000809102000000004000 (closed by the cost-74d bit102 lift, unswept, unnamed) and from any future cost-76 band; no cost-76 name is used by other experiment scripts (verified on 2026-11-15)",
   "demand_semantics_note": "per-class demand counts each open parent S5 once per set class bit (class2-lane-cost69g-demand-reconciliation-20261115.json); distinct open parents = 2 here",
   "interpretation_guard": "REFUTED-D10 is absence of a winner win within depth 10, not a refutation of the child; loss=true rows are WIN7-within-depth search candidates needing certificate extraction before any frontier claim; solved counts measure manifest coverage, not the game-theoretic value of any position",
@@ -172,5 +172,90 @@
     "d4_duplicate": "none among the 6 roots and 0 vs the 58 published manifest roots (sweep audit d4_duplicate_scan, roots_compared 58, duplicates 0)",
     "incident_note": "two push programs (bit11, bit80) hit the 16 MiB sandbox memory limit AFTER push_files executed; each landing was verified remotely byte-exact via the GitHub contents API before proceeding; no truncated or partial file landed (8/8 blob-exact)",
     "completed": "2026-11-15"
-  }
+  },
+  "third_independent_audit": {
+    "status": "PASS",
+    "method": "fresh exact BigInt circumcentre-numerator test with exact collinearity branch; no repository verifier/solver/cache or floating point",
+    "script_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost76a_six_certificates_third_independent_20261115.mjs",
+    "result_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/cost76a-six-certificates-third-independent-audit-20261115.json",
+    "certificates": 6,
+    "rows": 279344,
+    "subroots": 351,
+    "visited_states": 593146,
+    "winner_states": 381849,
+    "loser_states": 113633,
+    "loser_reply_edges": 528178,
+    "terminal_count": 97664,
+    "terminal_range": [
+      13,
+      17
+    ],
+    "union_missing": 0,
+    "union_extra": 0,
+    "root_mobility": [
+      62,
+      60,
+      61,
+      59,
+      54,
+      55
+    ],
+    "note": "A circle-only prototype initially returned bit96 mobility 71 instead of 55; K0001's collinear-four rule was then implemented with an exact line branch, after which all six roots and certificates passed."
+  },
+  "partial_edge_lift_audit": {
+    "parent_incidences": 42,
+    "unique_D4_parent_S6_orbits": 37,
+    "unique_parent_move_pairs": 42,
+    "duplicate_parent_incidences": 5,
+    "known_open_S6_orbits": 2,
+    "unique_known_open_S6_edges_newly_covered": 7,
+    "affected_S5_rows": [
+      {
+        "s5_hex": "00000000000000809102000000000000",
+        "remaining_s6_orbits": 4,
+        "cost_before": 297,
+        "cost_after_local": 291,
+        "shared_s6": "00000000000000809102000000000001",
+        "covered_moves": [
+          11,
+          29,
+          66,
+          80,
+          92,
+          96
+        ]
+      },
+      {
+        "s5_hex": "00000000000000801202000000000400",
+        "remaining_s6_orbits": 77,
+        "cost_before": 6296,
+        "cost_after_local": 6290,
+        "shared_s6_D4_lift": "00000000000000811202000000000400",
+        "covered_moves": [
+          21,
+          25,
+          76,
+          84,
+          90,
+          94
+        ]
+      },
+      {
+        "s5_hex": "00000000000000801202000000200000",
+        "remaining_s6_orbits": 41,
+        "cost_before": 3058,
+        "cost_after_local": 3057,
+        "s6_child": "00000000000000801202000000200400",
+        "covered_moves": [
+          64
+        ]
+      }
+    ],
+    "per_S5_row_cost_reduction_sum": 13,
+    "unique_S6_edge_reduction": 7,
+    "S6_orbits_closed": 0,
+    "global_frontier_recomputed": false
+  },
+  "frontier_impact_note": "This is partial edge-level coverage only. Keep the published global head 1188/6659/525437/4929/389160 unchanged until the six receipts are folded and the full chain is recomputed.",
+  "next_action": "Fold the six cost-76a WIN7 receipts into the canonical chain at head 1188, re-derive all marginal lifts, and publish a new global frontier only after baseline reproduction."
 }

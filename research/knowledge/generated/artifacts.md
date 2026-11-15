@@ -2754,6 +2754,9 @@
 ## [research/experiments/four-six-row-q4-q5-band-extension-20261115/output/q4-w6/records.jsonl](../../../research/experiments/four-six-row-q4-q5-band-extension-20261115/output/q4-w6/records.jsonl)
 
 - [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (data): (6,4) m=32..38 def-mode SAT (782/445/265/332/744/487/932 conflicts, 全17石単一欠損, js+py 2系統検証) + m=39/40 def-mode 120s INDET (6,072/5,410) honest negatives - sat3 streaming census が sat2 census OOM 壁 (m>=32) を越えた初の (6,4) 記録
+## [research/experiments/four-six-row-q4-q5-band-extension-20261115/output/ts-verify-band-extension.json](../../../research/experiments/four-six-row-q4-q5-band-extension-20261115/output/ts-verify-band-extension.json)
+
+- [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (data): 第3系統（純TS/BigInt, verify_independent.ts verbatim・フラグメント照合18/18）で band-extension 全12 witness ((6,4) m=32..40, (5,4) m=37..39) が全て PASS safe+maximal+row-deficient・単一欠損; 陰性対照（石移動→unsafe検出）・陽性対照（前レーン3系統検証済み (6,31,4) witness の再PASS）つき — 3系統検証
 ## [research/experiments/four-six-row-q4-q5-witness-search-20261114/output/controls/records.jsonl](../../../research/experiments/four-six-row-q4-q5-witness-search-20261114/output/controls/records.jsonl)
 
 - [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (data): 較正11 records: 既知の確定閾値6件を全て再現（(3,5) 11SAT/12UNSAT, (3,6) 8/9, (4,6) 15/16, (4,7) 12/13, (4,8) 10/11, (3,4) m=23 SAT 8石 rows[3,2,3]）
@@ -2765,7 +2768,7 @@
 - [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (data): 34 records m=5..36 all SAT dual-verified: 石数8..14（m=14以降 cap 14=w(q-1)-1）, m=25..33 は lex なし符号化でも SAT（witness としては等価に有効）, m=34 19.1s/2,623, m=35 72.6s/8,521, m=36 104.9s/10,644; m>=37 は sat2.js census CNF生成 OOM（rc=1 行は枝刈り済み）
 ## [research/experiments/four-six-row-q4-q5-witness-search-20261114/output/q4-w6-def-search/records.jsonl](../../../research/experiments/four-six-row-q4-q5-witness-search-20261114/output/q4-w6-def-search/records.jsonl)
 
-- [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (data): 26 records m=6..31 all SAT dual-verified: m=23以降単一欠損17石, m=31 4.1s/131 conflicts, 全インスタンス <7s; m>=32 census OOM
+- [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (data): 26 records m=6..31 al l SAT dual-verified: m=23以降単一欠損17石, m=31 4.1s/131 conflicts, 全インスタンス <7s; m>=32 census OOM
 ## [research/experiments/four-six-row-q4-q5-witness-search-20261114/output/q5-w4-def-search/records.jsonl](../../../research/experiments/four-six-row-q4-q5-witness-search-20261114/output/q5-w4-def-search/records.jsonl)
 
 - [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (data): 16 records: m=5..19 all SAT dual-verified (m=12以降単一欠損15石, m=19 14.2s/262,918), m=20 INDET 210s/3,296,257（未解決前線・不在主張ではない）; genfast.js PAIRTHRESH=12 は (4,5) で不正確なため sat2.js 全三つ組census を使用
@@ -9092,6 +9095,9 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/cost74d-win-loss-conflict-audit-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/cost74d-win-loss-conflict-audit-20261115.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 公開済み範囲のD4衝突監査。既存LOSS7との交差0、cost72b bit85との意図した再利用1件
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/cost76a-six-certificates-third-independent-audit-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/cost76a-six-certificates-third-independent-audit-20261115.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 6/6第三独立再生結果とhead 1188時点の局所edge被覆。global frontierは未更新
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/ms5_s7_reuse_candidates_part1.csv](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/ms5_s7_reuse_candidates_part1.csv)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 候補S7表 s7_hex,s6_hex,move,cat（1=既知LOSS子、2=プール候補）。part1..3で計8,763行
@@ -9200,6 +9206,9 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost74d_win_loss_conflicts_20261115.mjs](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost74d_win_loss_conflicts_20261115.mjs)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): cost74dの15 WIN7-D10 rootを既存WIN7/LOSS7 manifest・中央49 LOSS7 parent-lift・category-1候補とD4照合。入力Git blob SHAを固定
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost76a_six_certificates_third_independent_20261115.mjs](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost76a_six_certificates_third_independent_20261115.mjs)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): 六つのcost-76a証明書を円の有理中心と共線分岐で第三独立再生し、親liftも監査するstandalone Node.js検査器
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_new_certificate_reuse.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_new_certificate_reuse.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): 新規証明書のワークリスト全体への再利用と残件数を集計
@@ -14767,6 +14776,9 @@
 ## [research/log/2026-11-15-n11-class2-cost74d-win-loss-conflict-audit.md](../../../research/log/2026-11-15-n11-class2-cost74d-win-loss-conflict-audit.md)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): cost74d WIN7/LOSS7の範囲限定D4衝突監査と証拠境界
+## [research/log/2026-11-15-n11-class2-cost76a-third-independent-certificate-audit.md](../../../research/log/2026-11-15-n11-class2-cost76a-third-independent-certificate-audit.md)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): 共線判定の初期不一致と修正、6証明書の再生、3つのS5行への部分被覆を記録
 ## [research/log/2026-11-15-n11-class2-lane-cost69f-python-independent-audit-and-69g-demand-reconciliation.md](../../../research/log/2026-11-15-n11-class2-lane-cost69f-python-independent-audit-and-69g-demand-reconciliation.md)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): Python第三監査と69g需要和解の実行記録

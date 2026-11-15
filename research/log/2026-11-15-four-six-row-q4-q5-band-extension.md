@@ -44,3 +44,23 @@ rowY 分割・前線掃引）を継ぐ band-extension レーン。claim c91eb241
   を open_url で取得して JS 内で文字列加工するのが動く手法。
 - 環境一時停止中も connector（github_app・web_search.open_url）だけで
   統合（CSV/K/README/log）が可能。
+
+## 追記（統合・修復・第3系統検証）
+
+- 統合 1/2 着地（fbea1838）: CSV 3行更新（(6,4) 41..1113・(5,4) 40..567・(4,4) m=35
+  honest negative 注記）+ K0833（title・artifacts 7件・追記）+ README 結果 +
+  本ログ。コンパクション前の統合 push は未着地だったため再実行した。
+- **pushデータ完全性監査で2件の破損を発見・修復**: q4-w6/records.jsonl の
+  m=35/m=38 レコードに結合push由来の余分な改行が混入し JSON が壊れていた
+  （921366ba で改行除去・9レコード全て正常パース・値は K0833/CSV 記載と一致）。
+  また 5a059ea7 事故のジャンクファイル（"===" 付き）5件が残存していたので削除
+  （q4-w6 3件・q4-w5 2件）。全 witness/meta 28ファイルは JSON パース検証で正常。
+- **第3系統検証（connectorのみで完結）**: 実行環境停止中、raw URL 取得 +
+  run_typescript sandbox 上で verify_independent.ts を verbatim 実行（フラグメント
+  照合18/18）し、band-extension 全12 witness が PASS。陰性対照（石移動→
+  maxCirc=4 unsafe 検出）・陽性対照（前レーン3系統検証済み (6,31,4) witness
+  再PASS）。ts-verify-band-extension.json として push（2a011d4b）。全 witness
+  3系統検証済み。
+- 技法の記録: github_app.get_file_contents の内容は sandbox コードからは
+  空文字列で返る（添付リソースとしてのみ読める）ため、raw.githubusercontent.com
+  からの open_url 取得で fetch→JS加工→push が動く。
