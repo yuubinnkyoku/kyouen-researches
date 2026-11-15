@@ -2,7 +2,7 @@
   "schema": "n11-class2-lane-cost58c-inflight-20261116-v1",
   "title": "n11 class2-lane cost-58c sweep in flight: second coverable class-2 candidate S5 cost-58 child",
   "date": "2026-11-16",
-  "status": "in-flight",
+  "status": "completed (sweep + WIN7 certificates + receipts fold)",
   "claimed_by": "n11 search continuation session (round 22)",
   "s5": "00000000000000801202000040000000",
   "s6_child": "00000000000000801206000040000000",
@@ -173,5 +173,40 @@
   },
   "verdict_semantics": "loss=true => WIN7-within-depth-10 candidate (certificate rebuild target); loss=false && !capped => REFUTED-D10, no first-player win within depth 10 (NOT a LOSS proof); capped => proves nothing either way",
   "unknown_status": "11x11 empty board: UNKNOWN. A completed sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 7-stone roots of this child.",
-  "coordination_note": "latest main fetched immediately before this claim push; the primary second target S5 has only REFUTED-D10 rows left (depth-10 receipt limit) and is not touched here."
+  "coordination_note": "latest main fetched immediately before this claim push; the primary second target S5 has only REFUTED-D10 rows left (depth-10 receipt limit) and is not touched here.",
+  "fold": {
+    "status": "completed",
+    "chain_head_before": "1326/6522/515251/4792/378974",
+    "chain_head_after": "1360/6488/512785/4758/376508",
+    "receipts_folded": 33,
+    "publication_order": "[1,3,6,18,22,24,32,35,42,43,44,56,66,67,73,75,78,79,86,88,89,91,92,99,102,103,105,109,114,116,117,118,120] (bit76 excluded: its certificate has terminal range 11..17, rejected by the BigInt verifier 13..17 guard)",
+    "total_marginal": 166,
+    "total_marginal_in_manifest": 34,
+    "zero_marginal_in_manifest": [
+      42,
+      44,
+      56,
+      91,
+      99,
+      105,
+      109,
+      118
+    ],
+    "child_orbit_closed_by_bit": 1,
+    "parents_after": {
+      "parent1": "21 rows / 1454",
+      "parent2": "27 rows / 1915"
+    },
+    "output_blob_shas": {
+      "head_json": "62a411bb1a6debc33782c07062843650c556c747",
+      "ranking_csv": "29b901b73da1cd74ee46e841f8ac818ea93165e4",
+      "top_candidates_csv": "ba0a9311f037efff9e0a5dd352a6facbacddd97c"
+    },
+    "head_json_bytes": 26118,
+    "ranking_csv_bytes": 7537,
+    "top_candidates_csv_bytes": 5093,
+    "fold_script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost58c_receipts_20261116.py",
+    "reproduction": "python research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost58c_receipts_20261116.py",
+    "note": "The second coverable class-2 candidate S5 00000000000000801202000040000000 now has 21 remaining rows (was 34). bit76 is a v15/v16-confirmed WIN7-D10 root whose certificate has early terminals (11..17) and is excluded from the fold as a documented verifier limitation. Marginal counts are D4-orbit bookkeeping over published receipts, not game-theoretic values."
+  }
 }
