@@ -1707,7 +1707,7 @@ REFUTED-D10はLOSS証明ではなく、WIN7証明書は個別7石rootの深さ10
 - 新canonical head: **`1277/6570/518896/4840/382619`**。
 - **第三target S5は0行/0で閉鎖**（class-2 blocker条件付き閉鎖）、第2開親は69行/5265、class-4開親は79行/6427。
 - best class-2はaudit-blocked S5（10行/698）、best class-4 blocker S5は18行/1460。
-- 出力: head JSON blob `0f16cdac…`・ranking `b149e713…`・top-candidates `8f72d7a8…`。以後のfoldはhead 1277へのrebaseが必須。
+- 出力: head JSON blob `8d96b482…`（canonical 3-way merge版・16 receipts）・ranking `b149e713…`・top-candidates `8f72d7a8…`。以後のfoldはhead 1277へのrebaseが必須。
 
 標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}は引き続き **UNKNOWN**。
 
