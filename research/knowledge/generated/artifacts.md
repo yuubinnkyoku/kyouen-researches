@@ -15250,6 +15250,15 @@
 ## [research/experiments/vertical-fiber-two-token-residual-2positions-20261116/verify_two_token.py](../../../research/experiments/vertical-fiber-two-token-residual-2positions-20261116/verify_two_token.py)
 
 - [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (verifier): 素朴・ラベル付き・cap付き3エンジン相互照合と閉形式・系A・高余裕帯・tailレジームとの整合検証器
+## [research/experiments/vertical-fiber-two-token-z0-slice-20261116/output/audit.json](../../../research/experiments/vertical-fiber-two-token-z0-slice-20261116/output/audit.json)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (data): x≤60・全y≤x・R≤x+y+4の120,780状態照合、不一致0、二回実行byte-identical
+## [research/experiments/vertical-fiber-two-token-z0-slice-20261116/report.md](../../../research/experiments/vertical-fiber-two-token-z0-slice-20261116/report.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (proof): 2トークン族X=(x,y)のz=0スライスで全Grundy値を閉形式決定するR強帰納証明
+## [research/experiments/vertical-fiber-two-token-z0-slice-20261116/verify_z0_slice.py](../../../research/experiments/vertical-fiber-two-token-z0-slice-20261116/verify_z0_slice.py)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (verifier): cap付き正準多重集合再帰とcapなし順序付きラベル再帰の独立有限照合器
 ## [research/experiments/width17-20-circle-point-bound-20261112/output/width17_20_circle_bound.json](../../../research/experiments/width17-20-circle-point-bound-20261112/output/width17_20_circle_bound.json)
 
 - [K0778](../items/K0778-width17-20-circle-point-bounds.md) (data): 全数値の機械出力
@@ -16171,6 +16180,9 @@
 ## [research/log/2026-11-16-vertical-fiber-two-token-residual-2positions.md](../../../research/log/2026-11-16-vertical-fiber-two-token-residual-2positions.md)
 
 - [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (log): 閉形式予想の抽出・修正過程・破損出力の教訓・未証明範囲と次課題
+## [research/log/2026-11-16-vertical-fiber-two-token-z0-slice.md](../../../research/log/2026-11-16-vertical-fiber-two-token-z0-slice.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (log): 既存2トークン予想のz=0スライスを選定・証明・独立監査した判断記録
 ## [research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md](../../../research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md)
 
 - [K0092](../items/K0092-n11-dfpn-search-status.md) (source): 命題・対象範囲・根拠を記した出典
