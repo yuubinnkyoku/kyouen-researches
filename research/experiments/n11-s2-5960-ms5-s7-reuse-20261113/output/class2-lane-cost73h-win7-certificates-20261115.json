@@ -1,128 +1,292 @@
 {
  "schema": "n11-class2-lane-cost73h-win7-certificates-20261115-v1",
  "date": "2026-11-15",
- "child": {
-  "s6_hex": "00000000200000083800000000000200",
-  "stones_bit_indices": [
-   9,
-   59,
-   60,
-   61,
-   67,
-   93
-  ],
-  "edge_cost": 73,
-  "demand": {
-   "c1": 0,
-   "c2": 2,
-   "c4": 0
-  },
-  "open_parents": {
-   "parent1": "00000000000000801202000000200000 (the second coverable class-2 target S5, 19 rows / 1463 at head 1249)",
-   "parent2": "00000000000000003800200008000000 (class-2 S5, 67 rows / 5182 at head 1249)"
-  },
-  "chain_head_at_claim": "1249/6598/520956/4868/384679",
-  "sweep": "73 candidates, 4 WIN7-D10 (bits 45/48/82/96), 69 REFUTED-D10, 0 capped, 76,012,796 v16 nodes; see class2-lane-cost73h-sweep-audit-20261115.json"
- },
- "certificates": {
-  "45": {
-   "root_hex": "00000000200000083800200000000200",
-   "loser_mobility": 56,
-   "strategy_rows": 44989,
-   "extraction_nodes": 11046694,
-   "part1": {
-    "file": "class2-lane-cost73h-certificates/bit45-root-00000000200000083800200000000200.cert.part1of2",
-    "bytes": 815509,
-    "md5": "60e418d0d59ceee95802a79ea78e7bda",
-    "git_blob_sha": "1d0f6a4bbf21cb4d6d842dad0838f6ee747d5d7a"
-   },
-   "part2": {
-    "file": "class2-lane-cost73h-certificates/bit45-root-00000000200000083800200000000200.cert.part2of2",
-    "bytes": 814405,
-    "md5": "db1aa1e9b3dc6096721bcca1597b0cb0",
-    "git_blob_sha": "0fe43fec9d9164ab924a844936e9fc41eff78445"
-   },
-   "rejoin_md5": "8f238da2fee832be53dcb6f0ee85ee44"
-  },
-  "48": {
-   "root_hex": "00000000200000083801000000000200",
-   "loser_mobility": 56,
-   "strategy_rows": 34929,
-   "extraction_nodes": 3638354,
-   "part1": {
-    "file": "class2-lane-cost73h-certificates/bit48-root-00000000200000083801000000000200.cert.part1of2",
-    "bytes": 633532,
-    "md5": "2727152f8bafe2d779920167f587c120",
-    "git_blob_sha": "fa53dbabad90f693183cce1679616a62ad4aada1"
-   },
-   "part2": {
-    "file": "class2-lane-cost73h-certificates/bit48-root-00000000200000083801000000000200.cert.part2of2",
-    "bytes": 631244,
-    "md5": "681762001148e91be6b82b37882385f8",
-    "git_blob_sha": "e4e3b066288831b730a117f141e3c3a51d7baa25"
-   },
-   "rejoin_md5": "6caab3ffd54613666c476b791f3ffe8a"
-  },
-  "82": {
-   "root_hex": "00000000200400083800000000000200",
-   "loser_mobility": 59,
-   "strategy_rows": 44836,
-   "extraction_nodes": 4175255,
-   "part1": {
-    "file": "class2-lane-cost73h-certificates/bit82-root-00000000200400083800000000000200.cert.part1of2",
-    "bytes": 812049,
-    "md5": "ea794babfd3850f893c02a4f7b5c9c68",
-    "git_blob_sha": "cca89b12bfff1fa911793619954c889f6d0b7694"
-   },
-   "part2": {
-    "file": "class2-lane-cost73h-certificates/bit82-root-00000000200400083800000000000200.cert.part2of2",
-    "bytes": 807665,
-    "md5": "1391f23b14f247ea0e5602ba4f159c10",
-    "git_blob_sha": "d21bf57579258a35769e7c43a234fff552f0af81"
-   },
-   "rejoin_md5": "503cb3c726944fac447e7405aec0f36a"
-  },
-  "96": {
-   "root_hex": "00000001200000083800000000000200",
-   "loser_mobility": 63,
-   "strategy_rows": 51697,
-   "extraction_nodes": 9284460,
-   "part1": {
-    "file": "class2-lane-cost73h-certificates/bit96-root-00000001200000083800000000000200.cert.part1of2",
-    "bytes": 936786,
-    "md5": "71b5ce8a6ad6941d6fe0bf8f76818678",
-    "git_blob_sha": "274fbfda2dd2fc400d73d3b308c5f3416e7130a8"
-   },
-   "part2": {
-    "file": "class2-lane-cost73h-certificates/bit96-root-00000001200000083800000000000200.cert.part2of2",
-    "bytes": 933225,
-    "md5": "fdadd9610c0dc27b9b6fdb25f6aa0802",
-    "git_blob_sha": "3d9e7372737df25cda6c4aba4f9bfb50285cb6e5"
-   },
-   "rejoin_md5": "f68543a00d5797950da63a2a045089ea"
-  }
- },
+ "s5_parent1_hex": "00000000000000801202000000200000",
+ "s5_parent2_hex": "00000000000000003800200008000000",
+ "s6_child_hex": "00000000200000083800000000000200",
+ "win7_bits": [
+  45,
+  48,
+  82,
+  96
+ ],
  "extraction": {
   "method": "blind extraction (empty kill table) with the repo-verbatim n11-terminal-strategy extractor class4_child1_cert_extractor_exact.ts (git blob sha 52bcaf509ea12fad4c936501d30d26b5b66c0085) via cert_driver73h.ts; loser first-move lists independently re-enumerated with legal_candidates.py (git blob sha 8e97082c42838c7a4a4b6d2dd235276c8d43ab9a) from the root hexes (sed -n 2p recipe)",
   "fbt_drops_total": 0,
-  "fatal": "none",
-  "strategy_rows_total": 176451,
-  "extraction_nodes_total": 28144763
+  "fatal": "none"
  },
- "verification": {
+ "independent_verification": {
   "bigint": "all 4 certificates PASS verify_win7_certificate_bigint_independent.mjs (git blob sha 62b5d9413daafb172f6e10249976ee6808f7b454; BigInt 3x3 cofactor expansion, union missing/extra 0/0, terminal range [13,17], rows sorted-unique, sub-roots = root mobility)",
   "bareiss": "all 4 certificates PASS verify_cost73h_win7_bareiss_independent.py (pure Python stdlib exact Bareiss replay, all loser replies expanded, consumed == full strategy, union missing/extra 0/0, terminal stones within [13,17])",
   "per_bit_records": [
-   "class2-lane-cost73h-bit45-bigint-verify-20261115.json, class2-lane-cost73h-bit45-bareiss-verify-20261115.json",
-   "class2-lane-cost73h-bit48-bigint-verify-20261115.json, class2-lane-cost73h-bit48-bareiss-verify-20261115.json",
-   "class2-lane-cost73h-bit82-bigint-verify-20261115.json, class2-lane-cost73h-bit82-bareiss-verify-20261115.json",
-   "class2-lane-cost73h-bit96-bigint-verify-20261115.json, class2-lane-cost73h-bit96-bareiss-verify-20261115.json"
+   "class2-lane-cost73h-bit45-bigint-verify-20261115.json",
+   "class2-lane-cost73h-bit45-bareiss-verify-20261115.json",
+   "class2-lane-cost73h-bit48-bigint-verify-20261115.json",
+   "class2-lane-cost73h-bit48-bareiss-verify-20261115.json",
+   "class2-lane-cost73h-bit82-bigint-verify-20261115.json",
+   "class2-lane-cost73h-bit82-bareiss-verify-20261115.json",
+   "class2-lane-cost73h-bit96-bigint-verify-20261115.json",
+   "class2-lane-cost73h-bit96-bareiss-verify-20261115.json"
   ]
  },
  "totals": {
   "certificates": 4,
   "strategy_rows": 176451,
-  "extraction_nodes": 28144763
+  "extraction_nodes": 28144763,
+  "bytes": 6384415,
+  "bigint_union_missing_extra": "0/0 on all 4",
+  "bareiss_union_missing_extra": "0/0 on all 4",
+  "bytes_parts": 6384415
  },
- "interpretation": "these certificates prove a winner win within depth 10 from the individual 7-stone roots only; REFUTED-D10 is not a LOSS proof; the child orbit closes only after the receipts fold; neither open class-2 parent S5 is solved; the 11x11 empty board, both two-stone roots {49,60}/{59,60}, S2 {59,60}, class 1, class 2 and class 4 remain UNKNOWN"
+ "certificates": [
+  {
+   "bit": 45,
+   "root_hex": "00000000200000083800200000000200",
+   "repo_path": "class2-lane-cost73h-certificates/bit45-root-00000000200000083800200000000200.cert",
+   "repo_blob_sha": "0965678fdb8fd171930d78278718cfacb794cb2d",
+   "md5": "8f238da2fee832be53dcb6f0ee85ee44",
+   "bytes": 1629914,
+   "strategy_rows": 44989,
+   "extraction_nodes": 11046694,
+   "extraction_ms": 18495,
+   "sweep_win7_d10_nodes": 2947015,
+   "loser_first_moves": 56,
+   "fbt_drops": 0,
+   "verify": {
+    "bigint": {
+     "root_stones": 7,
+     "root_safe": true,
+     "root_mobility": 56,
+     "subroots_passed": 56,
+     "union_missing": 0,
+     "union_extra": 0,
+     "rows_sorted_unique": true,
+     "terminal_range": [
+      13,
+      17
+     ],
+     "visited_states_across_subroots": 89762,
+     "loser_reply_edges": 81750,
+     "terminal_count": 13831
+    },
+    "bareiss": {
+     "root_loser_mobility": 56,
+     "subroots_passed": 56,
+     "consumed_rows": 44989,
+     "union_missing": 0,
+     "union_extra": 0,
+     "terminal_stone_range": [
+      13,
+      15,
+      17
+     ],
+     "visited_winner_states": 147819
+    }
+   },
+   "repo_paths": [
+    "class2-lane-cost73h-certificates/bit45-root-00000000200000083800200000000200.cert.part1of2",
+    "class2-lane-cost73h-certificates/bit45-root-00000000200000083800200000000200.cert.part2of2"
+   ],
+   "part_bytes": [
+    815509,
+    814405
+   ],
+   "part_md5s": [
+    "60e418d0d59ceee95802a79ea78e7bda",
+    "db1aa1e9b3dc6096721bcca1597b0cb0"
+   ],
+   "part_blob_shas": [
+    "1d0f6a4bbf21cb4d6d842dad0838f6ee747d5d7a",
+    "0fe43fec9d9164ab924a844936e9fc41eff78445"
+   ],
+   "join_md5_equals_whole": true
+  },
+  {
+   "bit": 48,
+   "root_hex": "00000000200000083801000000000200",
+   "repo_path": "class2-lane-cost73h-certificates/bit48-root-00000000200000083801000000000200.cert",
+   "repo_blob_sha": "536edf88f99095597a60e7529e4ec934a615d2e1",
+   "md5": "6caab3ffd54613666c476b791f3ffe8a",
+   "bytes": 1264776,
+   "strategy_rows": 34929,
+   "extraction_nodes": 3638354,
+   "extraction_ms": 7596,
+   "sweep_win7_d10_nodes": 880086,
+   "loser_first_moves": 56,
+   "fbt_drops": 0,
+   "verify": {
+    "bigint": {
+     "root_stones": 7,
+     "root_safe": true,
+     "root_mobility": 56,
+     "subroots_passed": 56,
+     "union_missing": 0,
+     "union_extra": 0,
+     "rows_sorted_unique": true,
+     "terminal_range": [
+      13,
+      17
+     ],
+     "visited_states_across_subroots": 77576,
+     "loser_reply_edges": 69178,
+     "terminal_count": 12820
+    },
+    "bareiss": {
+     "root_loser_mobility": 56,
+     "subroots_passed": 56,
+     "consumed_rows": 34929,
+     "union_missing": 0,
+     "union_extra": 0,
+     "terminal_stone_range": [
+      13,
+      15,
+      17
+     ],
+     "visited_winner_states": 116236
+    }
+   },
+   "repo_paths": [
+    "class2-lane-cost73h-certificates/bit48-root-00000000200000083801000000000200.cert.part1of2",
+    "class2-lane-cost73h-certificates/bit48-root-00000000200000083801000000000200.cert.part2of2"
+   ],
+   "part_bytes": [
+    633532,
+    631244
+   ],
+   "part_md5s": [
+    "2727152f8bafe2d779920167f587c120",
+    "681762001148e91be6b82b37882385f8"
+   ],
+   "part_blob_shas": [
+    "fa53dbabad90f693183cce1679616a62ad4aada1",
+    "e4e3b066288831b730a117f141e3c3a51d7baa25"
+   ],
+   "join_md5_equals_whole": true
+  },
+  {
+   "bit": 82,
+   "root_hex": "00000000200400083800000000000200",
+   "repo_path": "class2-lane-cost73h-certificates/bit82-root-00000000200400083800000000000200.cert",
+   "repo_blob_sha": "90af1b02765d7f5c651d284412234f046dbbcd63",
+   "md5": "503cb3c726944fac447e7405aec0f36a",
+   "bytes": 1619714,
+   "strategy_rows": 44836,
+   "extraction_nodes": 4175255,
+   "extraction_ms": 8801,
+   "sweep_win7_d10_nodes": 1050117,
+   "loser_first_moves": 59,
+   "fbt_drops": 0,
+   "verify": {
+    "bigint": {
+     "root_stones": 7,
+     "root_safe": true,
+     "root_mobility": 59,
+     "subroots_passed": 59,
+     "union_missing": 0,
+     "union_extra": 0,
+     "rows_sorted_unique": true,
+     "terminal_range": [
+      13,
+      17
+     ],
+     "visited_states_across_subroots": 94123,
+     "loser_reply_edges": 83001,
+     "terminal_count": 16121
+    },
+    "bareiss": {
+     "root_loser_mobility": 59,
+     "subroots_passed": 59,
+     "consumed_rows": 44836,
+     "union_missing": 0,
+     "union_extra": 0,
+     "terminal_stone_range": [
+      13,
+      15,
+      17
+     ],
+     "visited_winner_states": 137503
+    }
+   },
+   "repo_paths": [
+    "class2-lane-cost73h-certificates/bit82-root-00000000200400083800000000000200.cert.part1of2",
+    "class2-lane-cost73h-certificates/bit82-root-00000000200400083800000000000200.cert.part2of2"
+   ],
+   "part_bytes": [
+    812049,
+    807665
+   ],
+   "part_md5s": [
+    "ea794babfd3850f893c02a4f7b5c9c68",
+    "1391f23b14f247ea0e5602ba4f159c10"
+   ],
+   "part_blob_shas": [
+    "cca89b12bfff1fa911793619954c889f6d0b7694",
+    "d21bf57579258a35769e7c43a234fff552f0af81"
+   ],
+   "join_md5_equals_whole": true
+  },
+  {
+   "bit": 96,
+   "root_hex": "00000001200000083800000000000200",
+   "repo_path": "class2-lane-cost73h-certificates/bit96-root-00000001200000083800000000000200.cert",
+   "repo_blob_sha": "c977e5b780d3f915f75038aa7288b087da362ad7",
+   "md5": "f68543a00d5797950da63a2a045089ea",
+   "bytes": 1870011,
+   "strategy_rows": 51697,
+   "extraction_nodes": 9284460,
+   "extraction_ms": 16519,
+   "sweep_win7_d10_nodes": 2098886,
+   "loser_first_moves": 63,
+   "fbt_drops": 0,
+   "verify": {
+    "bigint": {
+     "root_stones": 7,
+     "root_safe": true,
+     "root_mobility": 63,
+     "subroots_passed": 63,
+     "union_missing": 0,
+     "union_extra": 0,
+     "rows_sorted_unique": true,
+     "terminal_range": [
+      13,
+      17
+     ],
+     "visited_states_across_subroots": 110175,
+     "loser_reply_edges": 96404,
+     "terminal_count": 19209
+    },
+    "bareiss": {
+     "root_loser_mobility": 63,
+     "subroots_passed": 63,
+     "consumed_rows": 51697,
+     "union_missing": 0,
+     "union_extra": 0,
+     "terminal_stone_range": [
+      13,
+      15,
+      17
+     ],
+     "visited_winner_states": 160578
+    }
+   },
+   "repo_paths": [
+    "class2-lane-cost73h-certificates/bit96-root-00000001200000083800000000000200.cert.part1of2",
+    "class2-lane-cost73h-certificates/bit96-root-00000001200000083800000000000200.cert.part2of2"
+   ],
+   "part_bytes": [
+    936786,
+    933225
+   ],
+   "part_md5s": [
+    "71b5ce8a6ad6941d6fe0bf8f76818678",
+    "fdadd9610c0dc27b9b6fdb25f6aa0802"
+   ],
+   "part_blob_shas": [
+    "274fbfda2dd2fc400d73d3b308c5f3416e7130a8",
+    "3d9e7372737df25cda6c4aba4f9bfb50285cb6e5"
+   ],
+   "join_md5_equals_whole": true
+  }
+ ],
+ "interpretation_guard": "these certificates prove a winner win within depth 10 from the individual 7-stone roots only; REFUTED-D10 is not a LOSS proof; the child orbit closes only after the receipts fold; neither open class-2 parent S5 is solved; the 11x11 empty board, both two-stone roots {49,60}/{59,60}, S2 {59,60}, class 1, class 2 and class 4 remain UNKNOWN"
 }
