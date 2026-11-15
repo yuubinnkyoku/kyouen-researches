@@ -1523,3 +1523,15 @@ REFUTED-D10はLOSS証明ではない。8証明書は個別7石rootのdepth-10先
 REFUTED-D10はLOSS証明ではない。2証明書は個別7石rootのdepth-10先手勝ちのみを証明し、fold前はどのfrontier数も変えない。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class1・class2・class4は引き続き **UNKNOWN**。
 
 詳細: [sweep log](../../log/2026-11-15-n11-class2-lane-cost71c-sweep-certificates.md)、[sweep audit](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71c-sweep-audit-20261115.json)、[certificate manifest](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71c-win7-certificates-20261115.json)、[claim v2](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71c-inflight-20261115.json)。
+
+## 2026-11-15: cost-71c receipts fold — head 1233→1235（2 receipts・総marginal 10・child orbit closure）とbit112 md5誤記の検出・訂正
+
+`recompute_frontier_cost71c_receipts_20261115.py`（122公開入力をgit blob shaでbyte-exact検証・純幾何baseline再構成）でcost-71c receipts foldを実施した。baselineはhead 1233（70e fold head・blob `a0171d4b`）。統制: 52 pre-70e head JSONsから402 chain rootsで1227 merged headを再構成しstaged controlsとmerged CSV byte-identical再生成、**70e fold（bits [0,8,24,66,79]）をaddition recordsとper-record marginal完全一致で再導出**して1233に到達し70e head CSVもbyte-identical再生成、71c child（`00000000000000801202000080200000`・cost 71・c1=0,c2=2,c4=0）の両開親での残存（parent1 28行/2119・第2親 43行/3268・holderはこの2親のみ・del31/del21 D4 lift・残り4削除は閉行）、9 raw batchesからのsweep再導出（**2 WIN7-D10 bits 24/112・69 REFUTED・0 capped・94,128,613 nodes**・pilot 3402×9・batch5 determinism node-exact・v15 cross-engine 2,695,796/14,334,967・アンカー75/113/116 loss=false・D4 duplicate scan 126 roots 0重複）、両証明書の検証（bit24単一ファイル・bit112 2分割join・rows sorted-unique・sub-roots==mobility 47/56・BigInt/Bareiss verify記録union 0/0・root−追加石→child）、2新root vs **497 fold済みroot**のraw+D4 disjointness、公開順 [24,112] fold（bit24 marginal 5/in-manifest 1〔child〕・bit112 marginal 5/in-manifest 1〔`00000000210000003800000000000200`〕）。
+
+**fold後 head: solved 1235 / unique 6612 / cost 521,988 / open 4,882 / open_cost 385,711（hist c2=2,c4=0=957）**。parent1 26行/1976・第2親42行/3197。head JSON [class-frontier-cost71c-receipts-recompute-20261115.json](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost71c-receipts-recompute-20261115.json)・ranking/top-candidates CSVs・fold scriptをpush、claim v3（fold record込み）で反映。
+
+**bit112全体md5誤記を検出**: 公開6文書（manifest・claim v2・sweep audit・certificates README・前log・前節）のbit112全体md5が末尾に余分な`5`の付いた33文字 `e38d80cfd89ccc8e48264c36a9e7701a5` だった。真値は32-hex `e38d80cfd89ccc8e48264c36a9e7701a`（join bytesから再導出・sha256 `314c456b…`・fold scriptがassert）。part md5・join・証明書バイト・両独立検証PASS・fold算術には影響なし。履歴文書はbyte-unmodifiedのまま[md5 erratum](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71c-md5-erratum-20261115.json)とclaim v3で訂正。**教訓: 記録するmd5は計算値を直接機械転記し、文字数（32/40/64）を検証すること**。
+
+REFUTED-D10はLOSS証明ではない。2証明書は個別7石rootのdepth-10先手勝ちのみを証明する。solved 1235はmanifest被覆の簿記であり盤全体の勝敗ではない。**標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class1・class2・class4は引き続きUNKNOWN**。次のfold baselineはhead 1235。未fold: cost-65l（bits 21/48・証明書本体未push）・cost-70f（fold未）等。
+
+詳細: [fold log](../../log/2026-11-15-n11-class2-lane-cost71c-receipts-fold.md)。
