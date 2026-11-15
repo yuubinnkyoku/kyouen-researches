@@ -67,3 +67,18 @@ v2 では skip 時の SAT 判定を **同一 key の record に限定**した
 掃引が続行するようになった。
 同 bug は four-row-q4-m35-class-split-20261115 の sweep35.sh にもあり、
 同日 v2 修正済み (そちらは対照が INDET だったため未顕在化だった)。
+
+## 追記: 環境リセット越しの決定性 (2026-11-15)
+
+09:25Z に実行環境がリセットされ、ローカル作業 dir (kissat 含む) が消失した。
+main の scripts/sweep21.sh (driver v2)/records.jsonl (3行: 対照 SAT +
+c0k3p0/c0k3p1 INDET) から復元し、kissat 4.0.4 を公式 rel-4.0.4 asset から
+再取得 (md5 3a5eba830aa6008a604fcc9bbe99a325) して掃引を再開した。
+driver v2 の per-key skip が実働し、対照の SAT record を存在下で素通りして
+c0k3p2 から再開した (v1 の bug ならここで誤終了していた箇所)。
+
+**c0k3p2 (リセット前 09:20:59Z UNSAT/5,208,764 conflicts/401.5s) の再実行は
+09:35:02Z に UNSAT/conflicts 5,208,764 bit-exact で再現** (壁時計のみ
+391.0s)。CNF md5 (ce3bed0134103fa362aaef24edf18fbb) も同一。
+K0835 lane と同じく「同一コード・同一分割が環境をまたいで一致再現する」
+決定性傍証として記録する。
