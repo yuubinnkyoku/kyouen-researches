@@ -14764,6 +14764,18 @@
 ## [research/experiments/vertical-fiber-t2-q3-grundy-20261115/verify_t2_q3.py](../../../research/experiments/vertical-fiber-t2-q3-grundy-20261115/verify_t2_q3.py)
 
 - [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (verifier): 容量上限2の再帰列挙と再帰mexを用いたw,m=2..12の独立照合器
+## [research/experiments/vertical-fiber-t2-q5-grundy-20261115/output/audit.json](../../../research/experiments/vertical-fiber-t2-q5-grundy-20261115/output/audit.json)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (data): 150パラメータ組・723,780ラベル状態・11,135多重集合状態の二方式監査集計
+## [research/experiments/vertical-fiber-t2-q5-grundy-20261115/report.md](../../../research/experiments/vertical-fiber-t2-q5-grundy-20261115/report.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (proof): t=2,q=5,w≥3,m≥2の純ファイバーゲームにおける全安全局面Grundy値の閉形式分類とmex帰納証明
+## [research/experiments/vertical-fiber-t2-q5-grundy-20261115/verify_t2_q5.py](../../../research/experiments/vertical-fiber-t2-q5-grundy-20261115/verify_t2_q5.py)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (verifier): ラベル付き占有ベクトルを直接列挙する再帰mex検証器
+## [research/experiments/vertical-fiber-t2-q5-grundy-20261115/verify_t2_q5_canonical.py](../../../research/experiments/vertical-fiber-t2-q5-grundy-20261115/verify_t2_q5_canonical.py)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (verifier): 正占有数の多重集合だけで独立に状態・遷移を生成する再帰mex検証器
 ## [research/experiments/width17-20-circle-point-bound-20261112/output/width17_20_circle_bound.json](../../../research/experiments/width17-20-circle-point-bound-20261112/output/width17_20_circle_bound.json)
 
 - [K0778](../items/K0778-width17-20-circle-point-bounds.md) (data): 全数値の機械出力
@@ -15568,6 +15580,9 @@
 ## [research/log/2026-11-15-vertical-fiber-t2-q3-grundy.md](../../../research/log/2026-11-15-vertical-fiber-t2-q3-grundy.md)
 
 - [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (log): t=2・q=3の全分類を選定・証明・検証した判断と限界
+## [research/log/2026-11-15-vertical-fiber-t2-q5-grundy.md](../../../research/log/2026-11-15-vertical-fiber-t2-q5-grundy.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (log): K0832の既存成果と最新mainを照合し、t=2,q=5分類を証明・独立監査した記録
 ## [research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md](../../../research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md)
 
 - [K0092](../items/K0092-n11-dfpn-search-status.md) (source): 命題・対象範囲・根拠を記した出典
