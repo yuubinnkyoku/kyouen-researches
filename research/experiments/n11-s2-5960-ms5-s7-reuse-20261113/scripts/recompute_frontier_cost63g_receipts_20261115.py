@@ -26,8 +26,8 @@ This script:
    regenerated 63f head JSON and both 63f CSVs are byte-identical to main;
 2. asserts every published cost-63g input file byte-exact against main
    (git blob shas: sweep audit, 8 raw batches, v16 determinism rerun,
-   v15 crosscheck, claim v3, certificate manifest, parent-lift impact
-   audit);
+   v15 crosscheck, claim at its published v2 or retired v3 blob,
+   certificate manifest, parent-lift impact audit);
 3. asserts the child genuinely remaining at the baseline state (both open
    parents at 38/2837 and 71/5281 holding the child row, child unsolved
    in-manifest, demand c1=0,c2=2,c4=0 re-derived, lift stones 91/21);
@@ -130,8 +130,6 @@ MAIN_BLOBS = {
         'afb62ba5f1f10d145efff6b2527373d0da89862c',
     'class2-lane-cost63g-v15-crosscheck-20261115.jsonl':
         '5baf9ef04d49c376e0417c7e8b4a23e6c86f1d9e',
-    'class2-lane-cost63g-inflight-20261115.json':
-        '7f2bfac88ba44e3682d81b836be854c1aac5d263',
     'class2-lane-cost63g-win7-certificates-20261115.json':
         'd2259b88ae85a47cf03671ac7b40428b3097f411',
     'cost63g-parent-lift-frontier-impact-20261115.json':
@@ -140,8 +138,15 @@ MAIN_BLOBS = {
 for name, want in MAIN_BLOBS.items():
     sha, blen = git_blob_sha(OUT / name)
     assert sha == want, name
+# the claim may be the published pre-fold v2 or the retired post-fold v3;
+# both are byte-exact published inputs
+sha, blen = git_blob_sha(OUT / 'class2-lane-cost63g-inflight-20261115.json')
+assert sha in ('7f2bfac88ba44e3682d81b836be854c1aac5d263',
+               '1844f9d25f15dbc6717b13178cb18459894fdade'), \
+    'class2-lane-cost63g-inflight-20261115.json (claim v2 pre-fold or v3 retired)'
 print('CONTROL %d published cost-63g input files byte-exact against main '
-      '(git blob shas)' % len(MAIN_BLOBS))
+      '(git blob shas; claim accepted at its published v2 or retired v3 '
+      'blob)' % len(MAIN_BLOBS))
 
 PARENT1 = '00000000000000801202000000200000'
 PARENT2 = '00000000000000003800000808000000'
@@ -552,7 +557,7 @@ result = {
               'sweep claims',
     'controls': {
         'chain_head_1199_reproduced_byte_identical': True,
-        'input_files_byte_exact_vs_main': len(MAIN_BLOBS),
+        'input_files_byte_exact_vs_main': len(MAIN_BLOBS) + 1,  # + the claim (v2 or v3)
         'child_genuinely_remaining_at_baseline': True,
         'both_open_parents_held_child_row_at_baseline': True,
         'sweep_rederived_from_raw_batches': True,
