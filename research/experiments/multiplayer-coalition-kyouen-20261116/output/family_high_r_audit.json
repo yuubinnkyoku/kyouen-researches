@@ -1,0 +1,2508 @@
+{
+ "boards": [
+  {
+   "C": 2,
+   "achievable_lengths": [
+    2
+   ],
+   "m": 1,
+   "max_length": 2,
+   "min_length": 2,
+   "root_targeted_by_r": {
+    "10": [
+     2
+    ],
+    "11": [
+     2
+    ],
+    "12": [
+     2
+    ],
+    "13": [
+     2
+    ],
+    "14": [
+     2
+    ],
+    "15": [
+     2
+    ],
+    "16": [
+     2
+    ],
+    "2": [
+     0
+    ],
+    "3": [
+     2
+    ],
+    "4": [
+     2
+    ],
+    "5": [
+     2
+    ],
+    "6": [
+     2
+    ],
+    "7": [
+     2
+    ],
+    "8": [
+     2
+    ],
+    "9": [
+     2
+    ]
+   },
+   "root_win_by_r": {
+    "10": [
+     1
+    ],
+    "11": [
+     1
+    ],
+    "12": [
+     1
+    ],
+    "13": [
+     1
+    ],
+    "14": [
+     1
+    ],
+    "15": [
+     1
+    ],
+    "16": [
+     1
+    ],
+    "2": [
+     1
+    ],
+    "3": [
+     1
+    ],
+    "4": [
+     1
+    ],
+    "5": [
+     1
+    ],
+    "6": [
+     1
+    ],
+    "7": [
+     1
+    ],
+    "8": [
+     1
+    ],
+    "9": [
+     1
+    ]
+   },
+   "solo_win_candidate": 1,
+   "solo_win_predicate": true,
+   "solo_win_witness": null,
+   "uniform": true
+  },
+  {
+   "C": 3,
+   "achievable_lengths": [
+    3
+   ],
+   "m": 2,
+   "max_length": 3,
+   "min_length": 3,
+   "root_targeted_by_r": {
+    "10": [
+     3
+    ],
+    "11": [
+     3
+    ],
+    "12": [
+     3
+    ],
+    "13": [
+     3
+    ],
+    "14": [
+     3
+    ],
+    "15": [
+     3
+    ],
+    "16": [
+     3
+    ],
+    "2": [
+     1
+    ],
+    "3": [
+     0
+    ],
+    "4": [
+     3
+    ],
+    "5": [
+     3
+    ],
+    "6": [
+     3
+    ],
+    "7": [
+     3
+    ],
+    "8": [
+     3
+    ],
+    "9": [
+     3
+    ]
+   },
+   "root_win_by_r": {
+    "10": [
+     2
+    ],
+    "11": [
+     2
+    ],
+    "12": [
+     2
+    ],
+    "13": [
+     2
+    ],
+    "14": [
+     2
+    ],
+    "15": [
+     2
+    ],
+    "16": [
+     2
+    ],
+    "2": [
+     0
+    ],
+    "3": [
+     2
+    ],
+    "4": [
+     2
+    ],
+    "5": [
+     2
+    ],
+    "6": [
+     2
+    ],
+    "7": [
+     2
+    ],
+    "8": [
+     2
+    ],
+    "9": [
+     2
+    ]
+   },
+   "solo_win_candidate": 2,
+   "solo_win_predicate": true,
+   "solo_win_witness": null,
+   "uniform": true
+  },
+  {
+   "C": 4,
+   "achievable_lengths": [
+    4
+   ],
+   "m": 3,
+   "max_length": 4,
+   "min_length": 4,
+   "root_targeted_by_r": {
+    "10": [
+     4
+    ],
+    "11": [
+     4
+    ],
+    "12": [
+     4
+    ],
+    "13": [
+     4
+    ],
+    "14": [
+     4
+    ],
+    "15": [
+     4
+    ],
+    "16": [
+     4
+    ],
+    "2": [
+     0
+    ],
+    "3": [
+     1
+    ],
+    "4": [
+     0
+    ],
+    "5": [
+     4
+    ],
+    "6": [
+     4
+    ],
+    "7": [
+     4
+    ],
+    "8": [
+     4
+    ],
+    "9": [
+     4
+    ]
+   },
+   "root_win_by_r": {
+    "10": [
+     3
+    ],
+    "11": [
+     3
+    ],
+    "12": [
+     3
+    ],
+    "13": [
+     3
+    ],
+    "14": [
+     3
+    ],
+    "15": [
+     3
+    ],
+    "16": [
+     3
+    ],
+    "2": [
+     1
+    ],
+    "3": [
+     0
+    ],
+    "4": [
+     3
+    ],
+    "5": [
+     3
+    ],
+    "6": [
+     3
+    ],
+    "7": [
+     3
+    ],
+    "8": [
+     3
+    ],
+    "9": [
+     3
+    ]
+   },
+   "solo_win_candidate": 3,
+   "solo_win_predicate": true,
+   "solo_win_witness": null,
+   "uniform": true
+  },
+  {
+   "C": null,
+   "achievable_lengths": [
+    4,
+    5
+   ],
+   "m": 4,
+   "max_length": 5,
+   "min_length": 4,
+   "root_targeted_by_r": {
+    "10": [
+     4,
+     5
+    ],
+    "11": [
+     4,
+     5
+    ],
+    "12": [
+     4,
+     5
+    ],
+    "13": [
+     4,
+     5
+    ],
+    "14": [
+     4,
+     5
+    ],
+    "15": [
+     4,
+     5
+    ],
+    "16": [
+     4,
+     5
+    ],
+    "2": [
+     1
+    ],
+    "3": [
+     2
+    ],
+    "4": [
+     0,
+     1
+    ],
+    "5": [
+     0,
+     4
+    ],
+    "6": [
+     4,
+     5
+    ],
+    "7": [
+     4,
+     5
+    ],
+    "8": [
+     4,
+     5
+    ],
+    "9": [
+     4,
+     5
+    ]
+   },
+   "root_win_by_r": {
+    "10": [],
+    "11": [],
+    "12": [],
+    "13": [],
+    "14": [],
+    "15": [],
+    "16": [],
+    "2": [
+     0
+    ],
+    "3": [
+     1
+    ],
+    "4": [],
+    "5": [],
+    "6": [],
+    "7": [],
+    "8": [],
+    "9": []
+   },
+   "solo_win_candidate": 3,
+   "solo_win_predicate": false,
+   "solo_win_witness": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     1
+    ],
+    [
+     3,
+     0
+    ]
+   ],
+   "uniform": false
+  },
+  {
+   "C": null,
+   "achievable_lengths": [
+    5,
+    6
+   ],
+   "m": 5,
+   "max_length": 6,
+   "min_length": 5,
+   "root_targeted_by_r": {
+    "10": [
+     5,
+     6
+    ],
+    "11": [
+     5,
+     6
+    ],
+    "12": [
+     5,
+     6
+    ],
+    "13": [
+     5,
+     6
+    ],
+    "14": [
+     5,
+     6
+    ],
+    "15": [
+     5,
+     6
+    ],
+    "16": [
+     5,
+     6
+    ],
+    "2": [
+     1
+    ],
+    "3": [
+     2
+    ],
+    "4": [
+     1,
+     2
+    ],
+    "5": [
+     0,
+     1
+    ],
+    "6": [
+     0,
+     5
+    ],
+    "7": [
+     5,
+     6
+    ],
+    "8": [
+     5,
+     6
+    ],
+    "9": [
+     5,
+     6
+    ]
+   },
+   "root_win_by_r": {
+    "10": [],
+    "11": [],
+    "12": [],
+    "13": [],
+    "14": [],
+    "15": [],
+    "16": [],
+    "2": [
+     0
+    ],
+    "3": [],
+    "4": [],
+    "5": [],
+    "6": [],
+    "7": [],
+    "8": [],
+    "9": []
+   },
+   "solo_win_candidate": 4,
+   "solo_win_predicate": false,
+   "solo_win_witness": [
+    [
+     0,
+     0
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     2,
+     0
+    ]
+   ],
+   "uniform": false
+  },
+  {
+   "C": null,
+   "achievable_lengths": [
+    5,
+    6
+   ],
+   "m": 6,
+   "max_length": 6,
+   "min_length": 5,
+   "root_targeted_by_r": {
+    "10": [
+     5,
+     6
+    ],
+    "11": [
+     5,
+     6
+    ],
+    "12": [
+     5,
+     6
+    ],
+    "13": [
+     5,
+     6
+    ],
+    "14": [
+     5,
+     6
+    ],
+    "15": [
+     5,
+     6
+    ],
+    "16": [
+     5,
+     6
+    ],
+    "2": [
+     0
+    ],
+    "3": [
+     0,
+     2
+    ],
+    "4": [
+     1,
+     2
+    ],
+    "5": [
+     0,
+     1
+    ],
+    "6": [
+     0,
+     5
+    ],
+    "7": [
+     5,
+     6
+    ],
+    "8": [
+     5,
+     6
+    ],
+    "9": [
+     5,
+     6
+    ]
+   },
+   "root_win_by_r": {
+    "10": [],
+    "11": [],
+    "12": [],
+    "13": [],
+    "14": [],
+    "15": [],
+    "16": [],
+    "2": [
+     1
+    ],
+    "3": [],
+    "4": [],
+    "5": [],
+    "6": [],
+    "7": [],
+    "8": [],
+    "9": []
+   },
+   "solo_win_candidate": 4,
+   "solo_win_predicate": false,
+   "solo_win_witness": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     2,
+     0
+    ]
+   ],
+   "uniform": false
+  },
+  {
+   "C": null,
+   "achievable_lengths": [
+    5,
+    6
+   ],
+   "m": 7,
+   "max_length": 6,
+   "min_length": 5,
+   "root_targeted_by_r": {
+    "10": [
+     5,
+     6
+    ],
+    "11": [
+     5,
+     6
+    ],
+    "12": [
+     5,
+     6
+    ],
+    "13": [
+     5,
+     6
+    ],
+    "14": [
+     5,
+     6
+    ],
+    "15": [
+     5,
+     6
+    ],
+    "16": [
+     5,
+     6
+    ],
+    "2": [
+     0
+    ],
+    "3": [
+     0,
+     2
+    ],
+    "4": [
+     1,
+     2
+    ],
+    "5": [
+     0,
+     1
+    ],
+    "6": [
+     0,
+     5
+    ],
+    "7": [
+     5,
+     6
+    ],
+    "8": [
+     5,
+     6
+    ],
+    "9": [
+     5,
+     6
+    ]
+   },
+   "root_win_by_r": {
+    "10": [],
+    "11": [],
+    "12": [],
+    "13": [],
+    "14": [],
+    "15": [],
+    "16": [],
+    "2": [
+     1
+    ],
+    "3": [],
+    "4": [],
+    "5": [],
+    "6": [],
+    "7": [],
+    "8": [],
+    "9": []
+   },
+   "solo_win_candidate": 4,
+   "solo_win_predicate": false,
+   "solo_win_witness": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     2,
+     0
+    ]
+   ],
+   "uniform": false
+  },
+  {
+   "C": null,
+   "achievable_lengths": [
+    5,
+    6
+   ],
+   "m": 8,
+   "max_length": 6,
+   "min_length": 5,
+   "root_targeted_by_r": {
+    "10": [
+     5,
+     6
+    ],
+    "11": [
+     5,
+     6
+    ],
+    "12": [
+     5,
+     6
+    ],
+    "13": [
+     5,
+     6
+    ],
+    "14": [
+     5,
+     6
+    ],
+    "15": [
+     5,
+     6
+    ],
+    "16": [
+     5,
+     6
+    ],
+    "2": [
+     0
+    ],
+    "3": [
+     0
+    ],
+    "4": [
+     2
+    ],
+    "5": [
+     0,
+     1
+    ],
+    "6": [
+     0,
+     5
+    ],
+    "7": [
+     5,
+     6
+    ],
+    "8": [
+     5,
+     6
+    ],
+    "9": [
+     5,
+     6
+    ]
+   },
+   "root_win_by_r": {
+    "10": [],
+    "11": [],
+    "12": [],
+    "13": [],
+    "14": [],
+    "15": [],
+    "16": [],
+    "2": [
+     1
+    ],
+    "3": [
+     2
+    ],
+    "4": [
+     1
+    ],
+    "5": [],
+    "6": [],
+    "7": [],
+    "8": [],
+    "9": []
+   },
+   "solo_win_candidate": 4,
+   "solo_win_predicate": false,
+   "solo_win_witness": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     2,
+     0
+    ]
+   ],
+   "uniform": false
+  },
+  {
+   "C": 6,
+   "achievable_lengths": [
+    6
+   ],
+   "m": 9,
+   "max_length": 6,
+   "min_length": 6,
+   "root_targeted_by_r": {
+    "10": [
+     6
+    ],
+    "11": [
+     6
+    ],
+    "12": [
+     6
+    ],
+    "13": [
+     6
+    ],
+    "14": [
+     6
+    ],
+    "15": [
+     6
+    ],
+    "16": [
+     6
+    ],
+    "2": [
+     0
+    ],
+    "3": [
+     0
+    ],
+    "4": [
+     2
+    ],
+    "5": [
+     1
+    ],
+    "6": [
+     0
+    ],
+    "7": [
+     6
+    ],
+    "8": [
+     6
+    ],
+    "9": [
+     6
+    ]
+   },
+   "root_win_by_r": {
+    "10": [
+     5
+    ],
+    "11": [
+     5
+    ],
+    "12": [
+     5
+    ],
+    "13": [
+     5
+    ],
+    "14": [
+     5
+    ],
+    "15": [
+     5
+    ],
+    "16": [
+     5
+    ],
+    "2": [
+     1
+    ],
+    "3": [
+     2
+    ],
+    "4": [
+     1
+    ],
+    "5": [
+     0
+    ],
+    "6": [
+     5
+    ],
+    "7": [
+     5
+    ],
+    "8": [
+     5
+    ],
+    "9": [
+     5
+    ]
+   },
+   "solo_win_candidate": 5,
+   "solo_win_predicate": true,
+   "solo_win_witness": null,
+   "uniform": true
+  },
+  {
+   "C": 6,
+   "achievable_lengths": [
+    6
+   ],
+   "m": 10,
+   "max_length": 6,
+   "min_length": 6,
+   "root_targeted_by_r": {
+    "10": [
+     6
+    ],
+    "11": [
+     6
+    ],
+    "12": [
+     6
+    ],
+    "13": [
+     6
+    ],
+    "14": [
+     6
+    ],
+    "15": [
+     6
+    ],
+    "16": [
+     6
+    ],
+    "2": [
+     0
+    ],
+    "3": [
+     0
+    ],
+    "4": [
+     2
+    ],
+    "5": [
+     1
+    ],
+    "6": [
+     0
+    ],
+    "7": [
+     6
+    ],
+    "8": [
+     6
+    ],
+    "9": [
+     6
+    ]
+   },
+   "root_win_by_r": {
+    "10": [
+     5
+    ],
+    "11": [
+     5
+    ],
+    "12": [
+     5
+    ],
+    "13": [
+     5
+    ],
+    "14": [
+     5
+    ],
+    "15": [
+     5
+    ],
+    "16": [
+     5
+    ],
+    "2": [
+     1
+    ],
+    "3": [
+     2
+    ],
+    "4": [
+     1
+    ],
+    "5": [
+     0
+    ],
+    "6": [
+     5
+    ],
+    "7": [
+     5
+    ],
+    "8": [
+     5
+    ],
+    "9": [
+     5
+    ]
+   },
+   "solo_win_candidate": 5,
+   "solo_win_predicate": true,
+   "solo_win_witness": null,
+   "uniform": true
+  },
+  {
+   "C": 6,
+   "achievable_lengths": [
+    6
+   ],
+   "m": 11,
+   "max_length": 6,
+   "min_length": 6,
+   "root_targeted_by_r": {
+    "10": [
+     6
+    ],
+    "11": [
+     6
+    ],
+    "12": [
+     6
+    ],
+    "13": [
+     6
+    ],
+    "14": [
+     6
+    ],
+    "15": [
+     6
+    ],
+    "16": [
+     6
+    ],
+    "2": [
+     0
+    ],
+    "3": [
+     0
+    ],
+    "4": [
+     2
+    ],
+    "5": [
+     1
+    ],
+    "6": [
+     0
+    ],
+    "7": [
+     6
+    ],
+    "8": [
+     6
+    ],
+    "9": [
+     6
+    ]
+   },
+   "root_win_by_r": {
+    "10": [
+     5
+    ],
+    "11": [
+     5
+    ],
+    "12": [
+     5
+    ],
+    "13": [
+     5
+    ],
+    "14": [
+     5
+    ],
+    "15": [
+     5
+    ],
+    "16": [
+     5
+    ],
+    "2": [
+     1
+    ],
+    "3": [
+     2
+    ],
+    "4": [
+     1
+    ],
+    "5": [
+     0
+    ],
+    "6": [
+     5
+    ],
+    "7": [
+     5
+    ],
+    "8": [
+     5
+    ],
+    "9": [
+     5
+    ]
+   },
+   "solo_win_candidate": 5,
+   "solo_win_predicate": true,
+   "solo_win_witness": null,
+   "uniform": true
+  },
+  {
+   "C": 6,
+   "achievable_lengths": [
+    6
+   ],
+   "m": 12,
+   "max_length": 6,
+   "min_length": 6,
+   "root_targeted_by_r": {
+    "10": [
+     6
+    ],
+    "11": [
+     6
+    ],
+    "12": [
+     6
+    ],
+    "13": [
+     6
+    ],
+    "14": [
+     6
+    ],
+    "15": [
+     6
+    ],
+    "16": [
+     6
+    ],
+    "2": [
+     0
+    ],
+    "3": [
+     0
+    ],
+    "4": [
+     2
+    ],
+    "5": [
+     1
+    ],
+    "6": [
+     0
+    ],
+    "7": [
+     6
+    ],
+    "8": [
+     6
+    ],
+    "9": [
+     6
+    ]
+   },
+   "root_win_by_r": {
+    "10": [
+     5
+    ],
+    "11": [
+     5
+    ],
+    "12": [
+     5
+    ],
+    "13": [
+     5
+    ],
+    "14": [
+     5
+    ],
+    "15": [
+     5
+    ],
+    "16": [
+     5
+    ],
+    "2": [
+     1
+    ],
+    "3": [
+     2
+    ],
+    "4": [
+     1
+    ],
+    "5": [
+     0
+    ],
+    "6": [
+     5
+    ],
+    "7": [
+     5
+    ],
+    "8": [
+     5
+    ],
+    "9": [
+     5
+    ]
+   },
+   "solo_win_candidate": 5,
+   "solo_win_predicate": true,
+   "solo_win_witness": null,
+   "uniform": true
+  }
+ ],
+ "checks": {
+  "L4_win_subset_movers_2x10_r10": true,
+  "L4_win_subset_movers_2x10_r11": true,
+  "L4_win_subset_movers_2x10_r12": true,
+  "L4_win_subset_movers_2x10_r13": true,
+  "L4_win_subset_movers_2x10_r14": true,
+  "L4_win_subset_movers_2x10_r15": true,
+  "L4_win_subset_movers_2x10_r16": true,
+  "L4_win_subset_movers_2x10_r2": true,
+  "L4_win_subset_movers_2x10_r3": true,
+  "L4_win_subset_movers_2x10_r4": true,
+  "L4_win_subset_movers_2x10_r5": true,
+  "L4_win_subset_movers_2x10_r6": true,
+  "L4_win_subset_movers_2x10_r7": true,
+  "L4_win_subset_movers_2x10_r8": true,
+  "L4_win_subset_movers_2x10_r9": true,
+  "L4_win_subset_movers_2x11_r10": true,
+  "L4_win_subset_movers_2x11_r11": true,
+  "L4_win_subset_movers_2x11_r12": true,
+  "L4_win_subset_movers_2x11_r13": true,
+  "L4_win_subset_movers_2x11_r14": true,
+  "L4_win_subset_movers_2x11_r15": true,
+  "L4_win_subset_movers_2x11_r16": true,
+  "L4_win_subset_movers_2x11_r2": true,
+  "L4_win_subset_movers_2x11_r3": true,
+  "L4_win_subset_movers_2x11_r4": true,
+  "L4_win_subset_movers_2x11_r5": true,
+  "L4_win_subset_movers_2x11_r6": true,
+  "L4_win_subset_movers_2x11_r7": true,
+  "L4_win_subset_movers_2x11_r8": true,
+  "L4_win_subset_movers_2x11_r9": true,
+  "L4_win_subset_movers_2x12_r10": true,
+  "L4_win_subset_movers_2x12_r11": true,
+  "L4_win_subset_movers_2x12_r12": true,
+  "L4_win_subset_movers_2x12_r13": true,
+  "L4_win_subset_movers_2x12_r14": true,
+  "L4_win_subset_movers_2x12_r15": true,
+  "L4_win_subset_movers_2x12_r16": true,
+  "L4_win_subset_movers_2x12_r2": true,
+  "L4_win_subset_movers_2x12_r3": true,
+  "L4_win_subset_movers_2x12_r4": true,
+  "L4_win_subset_movers_2x12_r5": true,
+  "L4_win_subset_movers_2x12_r6": true,
+  "L4_win_subset_movers_2x12_r7": true,
+  "L4_win_subset_movers_2x12_r8": true,
+  "L4_win_subset_movers_2x12_r9": true,
+  "L4_win_subset_movers_2x1_r10": true,
+  "L4_win_subset_movers_2x1_r11": true,
+  "L4_win_subset_movers_2x1_r12": true,
+  "L4_win_subset_movers_2x1_r13": true,
+  "L4_win_subset_movers_2x1_r14": true,
+  "L4_win_subset_movers_2x1_r15": true,
+  "L4_win_subset_movers_2x1_r16": true,
+  "L4_win_subset_movers_2x1_r2": true,
+  "L4_win_subset_movers_2x1_r3": true,
+  "L4_win_subset_movers_2x1_r4": true,
+  "L4_win_subset_movers_2x1_r5": true,
+  "L4_win_subset_movers_2x1_r6": true,
+  "L4_win_subset_movers_2x1_r7": true,
+  "L4_win_subset_movers_2x1_r8": true,
+  "L4_win_subset_movers_2x1_r9": true,
+  "L4_win_subset_movers_2x2_r10": true,
+  "L4_win_subset_movers_2x2_r11": true,
+  "L4_win_subset_movers_2x2_r12": true,
+  "L4_win_subset_movers_2x2_r13": true,
+  "L4_win_subset_movers_2x2_r14": true,
+  "L4_win_subset_movers_2x2_r15": true,
+  "L4_win_subset_movers_2x2_r16": true,
+  "L4_win_subset_movers_2x2_r2": true,
+  "L4_win_subset_movers_2x2_r3": true,
+  "L4_win_subset_movers_2x2_r4": true,
+  "L4_win_subset_movers_2x2_r5": true,
+  "L4_win_subset_movers_2x2_r6": true,
+  "L4_win_subset_movers_2x2_r7": true,
+  "L4_win_subset_movers_2x2_r8": true,
+  "L4_win_subset_movers_2x2_r9": true,
+  "L4_win_subset_movers_2x3_r10": true,
+  "L4_win_subset_movers_2x3_r11": true,
+  "L4_win_subset_movers_2x3_r12": true,
+  "L4_win_subset_movers_2x3_r13": true,
+  "L4_win_subset_movers_2x3_r14": true,
+  "L4_win_subset_movers_2x3_r15": true,
+  "L4_win_subset_movers_2x3_r16": true,
+  "L4_win_subset_movers_2x3_r2": true,
+  "L4_win_subset_movers_2x3_r3": true,
+  "L4_win_subset_movers_2x3_r4": true,
+  "L4_win_subset_movers_2x3_r5": true,
+  "L4_win_subset_movers_2x3_r6": true,
+  "L4_win_subset_movers_2x3_r7": true,
+  "L4_win_subset_movers_2x3_r8": true,
+  "L4_win_subset_movers_2x3_r9": true,
+  "L4_win_subset_movers_2x4_r10": true,
+  "L4_win_subset_movers_2x4_r11": true,
+  "L4_win_subset_movers_2x4_r12": true,
+  "L4_win_subset_movers_2x4_r13": true,
+  "L4_win_subset_movers_2x4_r14": true,
+  "L4_win_subset_movers_2x4_r15": true,
+  "L4_win_subset_movers_2x4_r16": true,
+  "L4_win_subset_movers_2x4_r2": true,
+  "L4_win_subset_movers_2x4_r3": true,
+  "L4_win_subset_movers_2x4_r4": true,
+  "L4_win_subset_movers_2x4_r5": true,
+  "L4_win_subset_movers_2x4_r6": true,
+  "L4_win_subset_movers_2x4_r7": true,
+  "L4_win_subset_movers_2x4_r8": true,
+  "L4_win_subset_movers_2x4_r9": true,
+  "L4_win_subset_movers_2x5_r10": true,
+  "L4_win_subset_movers_2x5_r11": true,
+  "L4_win_subset_movers_2x5_r12": true,
+  "L4_win_subset_movers_2x5_r13": true,
+  "L4_win_subset_movers_2x5_r14": true,
+  "L4_win_subset_movers_2x5_r15": true,
+  "L4_win_subset_movers_2x5_r16": true,
+  "L4_win_subset_movers_2x5_r2": true,
+  "L4_win_subset_movers_2x5_r3": true,
+  "L4_win_subset_movers_2x5_r4": true,
+  "L4_win_subset_movers_2x5_r5": true,
+  "L4_win_subset_movers_2x5_r6": true,
+  "L4_win_subset_movers_2x5_r7": true,
+  "L4_win_subset_movers_2x5_r8": true,
+  "L4_win_subset_movers_2x5_r9": true,
+  "L4_win_subset_movers_2x6_r10": true,
+  "L4_win_subset_movers_2x6_r11": true,
+  "L4_win_subset_movers_2x6_r12": true,
+  "L4_win_subset_movers_2x6_r13": true,
+  "L4_win_subset_movers_2x6_r14": true,
+  "L4_win_subset_movers_2x6_r15": true,
+  "L4_win_subset_movers_2x6_r16": true,
+  "L4_win_subset_movers_2x6_r2": true,
+  "L4_win_subset_movers_2x6_r3": true,
+  "L4_win_subset_movers_2x6_r4": true,
+  "L4_win_subset_movers_2x6_r5": true,
+  "L4_win_subset_movers_2x6_r6": true,
+  "L4_win_subset_movers_2x6_r7": true,
+  "L4_win_subset_movers_2x6_r8": true,
+  "L4_win_subset_movers_2x6_r9": true,
+  "L4_win_subset_movers_2x7_r10": true,
+  "L4_win_subset_movers_2x7_r11": true,
+  "L4_win_subset_movers_2x7_r12": true,
+  "L4_win_subset_movers_2x7_r13": true,
+  "L4_win_subset_movers_2x7_r14": true,
+  "L4_win_subset_movers_2x7_r15": true,
+  "L4_win_subset_movers_2x7_r16": true,
+  "L4_win_subset_movers_2x7_r2": true,
+  "L4_win_subset_movers_2x7_r3": true,
+  "L4_win_subset_movers_2x7_r4": true,
+  "L4_win_subset_movers_2x7_r5": true,
+  "L4_win_subset_movers_2x7_r6": true,
+  "L4_win_subset_movers_2x7_r7": true,
+  "L4_win_subset_movers_2x7_r8": true,
+  "L4_win_subset_movers_2x7_r9": true,
+  "L4_win_subset_movers_2x8_r10": true,
+  "L4_win_subset_movers_2x8_r11": true,
+  "L4_win_subset_movers_2x8_r12": true,
+  "L4_win_subset_movers_2x8_r13": true,
+  "L4_win_subset_movers_2x8_r14": true,
+  "L4_win_subset_movers_2x8_r15": true,
+  "L4_win_subset_movers_2x8_r16": true,
+  "L4_win_subset_movers_2x8_r2": true,
+  "L4_win_subset_movers_2x8_r3": true,
+  "L4_win_subset_movers_2x8_r4": true,
+  "L4_win_subset_movers_2x8_r5": true,
+  "L4_win_subset_movers_2x8_r6": true,
+  "L4_win_subset_movers_2x8_r7": true,
+  "L4_win_subset_movers_2x8_r8": true,
+  "L4_win_subset_movers_2x8_r9": true,
+  "L4_win_subset_movers_2x9_r10": true,
+  "L4_win_subset_movers_2x9_r11": true,
+  "L4_win_subset_movers_2x9_r12": true,
+  "L4_win_subset_movers_2x9_r13": true,
+  "L4_win_subset_movers_2x9_r14": true,
+  "L4_win_subset_movers_2x9_r15": true,
+  "L4_win_subset_movers_2x9_r16": true,
+  "L4_win_subset_movers_2x9_r2": true,
+  "L4_win_subset_movers_2x9_r3": true,
+  "L4_win_subset_movers_2x9_r4": true,
+  "L4_win_subset_movers_2x9_r5": true,
+  "L4_win_subset_movers_2x9_r6": true,
+  "L4_win_subset_movers_2x9_r7": true,
+  "L4_win_subset_movers_2x9_r8": true,
+  "L4_win_subset_movers_2x9_r9": true,
+  "frozen_targ_2x10_r10": true,
+  "frozen_targ_2x10_r11": true,
+  "frozen_targ_2x10_r12": true,
+  "frozen_targ_2x10_r13": true,
+  "frozen_targ_2x10_r14": true,
+  "frozen_targ_2x10_r15": true,
+  "frozen_targ_2x10_r16": true,
+  "frozen_targ_2x10_r7": true,
+  "frozen_targ_2x10_r8": true,
+  "frozen_targ_2x10_r9": true,
+  "frozen_targ_2x11_r10": true,
+  "frozen_targ_2x11_r11": true,
+  "frozen_targ_2x11_r12": true,
+  "frozen_targ_2x11_r13": true,
+  "frozen_targ_2x11_r14": true,
+  "frozen_targ_2x11_r15": true,
+  "frozen_targ_2x11_r16": true,
+  "frozen_targ_2x11_r7": true,
+  "frozen_targ_2x11_r8": true,
+  "frozen_targ_2x11_r9": true,
+  "frozen_targ_2x12_r10": true,
+  "frozen_targ_2x12_r11": true,
+  "frozen_targ_2x12_r12": true,
+  "frozen_targ_2x12_r13": true,
+  "frozen_targ_2x12_r14": true,
+  "frozen_targ_2x12_r15": true,
+  "frozen_targ_2x12_r16": true,
+  "frozen_targ_2x12_r7": true,
+  "frozen_targ_2x12_r8": true,
+  "frozen_targ_2x12_r9": true,
+  "frozen_targ_2x1_r10": true,
+  "frozen_targ_2x1_r11": true,
+  "frozen_targ_2x1_r12": true,
+  "frozen_targ_2x1_r13": true,
+  "frozen_targ_2x1_r14": true,
+  "frozen_targ_2x1_r15": true,
+  "frozen_targ_2x1_r16": true,
+  "frozen_targ_2x1_r7": true,
+  "frozen_targ_2x1_r8": true,
+  "frozen_targ_2x1_r9": true,
+  "frozen_targ_2x2_r10": true,
+  "frozen_targ_2x2_r11": true,
+  "frozen_targ_2x2_r12": true,
+  "frozen_targ_2x2_r13": true,
+  "frozen_targ_2x2_r14": true,
+  "frozen_targ_2x2_r15": true,
+  "frozen_targ_2x2_r16": true,
+  "frozen_targ_2x2_r7": true,
+  "frozen_targ_2x2_r8": true,
+  "frozen_targ_2x2_r9": true,
+  "frozen_targ_2x3_r10": true,
+  "frozen_targ_2x3_r11": true,
+  "frozen_targ_2x3_r12": true,
+  "frozen_targ_2x3_r13": true,
+  "frozen_targ_2x3_r14": true,
+  "frozen_targ_2x3_r15": true,
+  "frozen_targ_2x3_r16": true,
+  "frozen_targ_2x3_r7": true,
+  "frozen_targ_2x3_r8": true,
+  "frozen_targ_2x3_r9": true,
+  "frozen_targ_2x9_r10": true,
+  "frozen_targ_2x9_r11": true,
+  "frozen_targ_2x9_r12": true,
+  "frozen_targ_2x9_r13": true,
+  "frozen_targ_2x9_r14": true,
+  "frozen_targ_2x9_r15": true,
+  "frozen_targ_2x9_r16": true,
+  "frozen_targ_2x9_r7": true,
+  "frozen_targ_2x9_r8": true,
+  "frozen_targ_2x9_r9": true,
+  "frozen_win_2x10_r10": true,
+  "frozen_win_2x10_r11": true,
+  "frozen_win_2x10_r12": true,
+  "frozen_win_2x10_r13": true,
+  "frozen_win_2x10_r14": true,
+  "frozen_win_2x10_r15": true,
+  "frozen_win_2x10_r16": true,
+  "frozen_win_2x10_r7": true,
+  "frozen_win_2x10_r8": true,
+  "frozen_win_2x10_r9": true,
+  "frozen_win_2x11_r10": true,
+  "frozen_win_2x11_r11": true,
+  "frozen_win_2x11_r12": true,
+  "frozen_win_2x11_r13": true,
+  "frozen_win_2x11_r14": true,
+  "frozen_win_2x11_r15": true,
+  "frozen_win_2x11_r16": true,
+  "frozen_win_2x11_r7": true,
+  "frozen_win_2x11_r8": true,
+  "frozen_win_2x11_r9": true,
+  "frozen_win_2x12_r10": true,
+  "frozen_win_2x12_r11": true,
+  "frozen_win_2x12_r12": true,
+  "frozen_win_2x12_r13": true,
+  "frozen_win_2x12_r14": true,
+  "frozen_win_2x12_r15": true,
+  "frozen_win_2x12_r16": true,
+  "frozen_win_2x12_r7": true,
+  "frozen_win_2x12_r8": true,
+  "frozen_win_2x12_r9": true,
+  "frozen_win_2x1_r10": true,
+  "frozen_win_2x1_r11": true,
+  "frozen_win_2x1_r12": true,
+  "frozen_win_2x1_r13": true,
+  "frozen_win_2x1_r14": true,
+  "frozen_win_2x1_r15": true,
+  "frozen_win_2x1_r16": true,
+  "frozen_win_2x1_r7": true,
+  "frozen_win_2x1_r8": true,
+  "frozen_win_2x1_r9": true,
+  "frozen_win_2x2_r10": true,
+  "frozen_win_2x2_r11": true,
+  "frozen_win_2x2_r12": true,
+  "frozen_win_2x2_r13": true,
+  "frozen_win_2x2_r14": true,
+  "frozen_win_2x2_r15": true,
+  "frozen_win_2x2_r16": true,
+  "frozen_win_2x2_r7": true,
+  "frozen_win_2x2_r8": true,
+  "frozen_win_2x2_r9": true,
+  "frozen_win_2x3_r10": true,
+  "frozen_win_2x3_r11": true,
+  "frozen_win_2x3_r12": true,
+  "frozen_win_2x3_r13": true,
+  "frozen_win_2x3_r14": true,
+  "frozen_win_2x3_r15": true,
+  "frozen_win_2x3_r16": true,
+  "frozen_win_2x3_r7": true,
+  "frozen_win_2x3_r8": true,
+  "frozen_win_2x3_r9": true,
+  "frozen_win_2x9_r10": true,
+  "frozen_win_2x9_r11": true,
+  "frozen_win_2x9_r12": true,
+  "frozen_win_2x9_r13": true,
+  "frozen_win_2x9_r14": true,
+  "frozen_win_2x9_r15": true,
+  "frozen_win_2x9_r16": true,
+  "frozen_win_2x9_r7": true,
+  "frozen_win_2x9_r8": true,
+  "frozen_win_2x9_r9": true,
+  "no_terminal_size1_2x1": true,
+  "no_terminal_size2_2x2": true,
+  "no_terminal_size3_2x3": true,
+  "no_terminal_size3_2x4": true,
+  "no_terminal_size4_2x5": true,
+  "no_terminal_size4_2x6": true,
+  "no_terminal_size4_2x7": true,
+  "no_terminal_size4_2x8": true,
+  "no_terminal_size5_2x10": true,
+  "no_terminal_size5_2x11": true,
+  "no_terminal_size5_2x12": true,
+  "no_terminal_size5_2x9": true,
+  "published_targ_2x10_r2": true,
+  "published_targ_2x10_r3": true,
+  "published_targ_2x10_r4": true,
+  "published_targ_2x10_r5": true,
+  "published_targ_2x10_r6": true,
+  "published_targ_2x10_r7": true,
+  "published_targ_2x10_r8": true,
+  "published_targ_2x11_r2": true,
+  "published_targ_2x11_r3": true,
+  "published_targ_2x11_r4": true,
+  "published_targ_2x11_r5": true,
+  "published_targ_2x11_r6": true,
+  "published_targ_2x11_r7": true,
+  "published_targ_2x11_r8": true,
+  "published_targ_2x12_r2": true,
+  "published_targ_2x12_r3": true,
+  "published_targ_2x12_r4": true,
+  "published_targ_2x12_r5": true,
+  "published_targ_2x12_r6": true,
+  "published_targ_2x12_r7": true,
+  "published_targ_2x12_r8": true,
+  "published_targ_2x1_r2": true,
+  "published_targ_2x1_r3": true,
+  "published_targ_2x1_r4": true,
+  "published_targ_2x1_r5": true,
+  "published_targ_2x1_r6": true,
+  "published_targ_2x1_r7": true,
+  "published_targ_2x1_r8": true,
+  "published_targ_2x2_r2": true,
+  "published_targ_2x2_r3": true,
+  "published_targ_2x2_r4": true,
+  "published_targ_2x2_r5": true,
+  "published_targ_2x2_r6": true,
+  "published_targ_2x2_r7": true,
+  "published_targ_2x2_r8": true,
+  "published_targ_2x3_r2": true,
+  "published_targ_2x3_r3": true,
+  "published_targ_2x3_r4": true,
+  "published_targ_2x3_r5": true,
+  "published_targ_2x3_r6": true,
+  "published_targ_2x3_r7": true,
+  "published_targ_2x3_r8": true,
+  "published_targ_2x4_r2": true,
+  "published_targ_2x4_r3": true,
+  "published_targ_2x4_r4": true,
+  "published_targ_2x4_r5": true,
+  "published_targ_2x4_r6": true,
+  "published_targ_2x4_r7": true,
+  "published_targ_2x4_r8": true,
+  "published_targ_2x5_r2": true,
+  "published_targ_2x5_r3": true,
+  "published_targ_2x5_r4": true,
+  "published_targ_2x5_r5": true,
+  "published_targ_2x5_r6": true,
+  "published_targ_2x5_r7": true,
+  "published_targ_2x5_r8": true,
+  "published_targ_2x6_r2": true,
+  "published_targ_2x6_r3": true,
+  "published_targ_2x6_r4": true,
+  "published_targ_2x6_r5": true,
+  "published_targ_2x6_r6": true,
+  "published_targ_2x6_r7": true,
+  "published_targ_2x6_r8": true,
+  "published_targ_2x7_r2": true,
+  "published_targ_2x7_r3": true,
+  "published_targ_2x7_r4": true,
+  "published_targ_2x7_r5": true,
+  "published_targ_2x7_r6": true,
+  "published_targ_2x7_r7": true,
+  "published_targ_2x7_r8": true,
+  "published_targ_2x8_r2": true,
+  "published_targ_2x8_r3": true,
+  "published_targ_2x8_r4": true,
+  "published_targ_2x8_r5": true,
+  "published_targ_2x8_r6": true,
+  "published_targ_2x8_r7": true,
+  "published_targ_2x8_r8": true,
+  "published_targ_2x9_r2": true,
+  "published_targ_2x9_r3": true,
+  "published_targ_2x9_r4": true,
+  "published_targ_2x9_r5": true,
+  "published_targ_2x9_r6": true,
+  "published_targ_2x9_r7": true,
+  "published_targ_2x9_r8": true,
+  "published_win_2x10_r2": true,
+  "published_win_2x10_r3": true,
+  "published_win_2x10_r4": true,
+  "published_win_2x10_r5": true,
+  "published_win_2x10_r6": true,
+  "published_win_2x10_r7": true,
+  "published_win_2x10_r8": true,
+  "published_win_2x11_r2": true,
+  "published_win_2x11_r3": true,
+  "published_win_2x11_r4": true,
+  "published_win_2x11_r5": true,
+  "published_win_2x11_r6": true,
+  "published_win_2x11_r7": true,
+  "published_win_2x11_r8": true,
+  "published_win_2x12_r2": true,
+  "published_win_2x12_r3": true,
+  "published_win_2x12_r4": true,
+  "published_win_2x12_r5": true,
+  "published_win_2x12_r6": true,
+  "published_win_2x12_r7": true,
+  "published_win_2x12_r8": true,
+  "published_win_2x1_r2": true,
+  "published_win_2x1_r3": true,
+  "published_win_2x1_r4": true,
+  "published_win_2x1_r5": true,
+  "published_win_2x1_r6": true,
+  "published_win_2x1_r7": true,
+  "published_win_2x1_r8": true,
+  "published_win_2x2_r2": true,
+  "published_win_2x2_r3": true,
+  "published_win_2x2_r4": true,
+  "published_win_2x2_r5": true,
+  "published_win_2x2_r6": true,
+  "published_win_2x2_r7": true,
+  "published_win_2x2_r8": true,
+  "published_win_2x3_r2": true,
+  "published_win_2x3_r3": true,
+  "published_win_2x3_r4": true,
+  "published_win_2x3_r5": true,
+  "published_win_2x3_r6": true,
+  "published_win_2x3_r7": true,
+  "published_win_2x3_r8": true,
+  "published_win_2x4_r2": true,
+  "published_win_2x4_r3": true,
+  "published_win_2x4_r4": true,
+  "published_win_2x4_r5": true,
+  "published_win_2x4_r6": true,
+  "published_win_2x4_r7": true,
+  "published_win_2x4_r8": true,
+  "published_win_2x5_r2": true,
+  "published_win_2x5_r3": true,
+  "published_win_2x5_r4": true,
+  "published_win_2x5_r5": true,
+  "published_win_2x5_r6": true,
+  "published_win_2x5_r7": true,
+  "published_win_2x5_r8": true,
+  "published_win_2x6_r2": true,
+  "published_win_2x6_r3": true,
+  "published_win_2x6_r4": true,
+  "published_win_2x6_r5": true,
+  "published_win_2x6_r6": true,
+  "published_win_2x6_r7": true,
+  "published_win_2x6_r8": true,
+  "published_win_2x7_r2": true,
+  "published_win_2x7_r3": true,
+  "published_win_2x7_r4": true,
+  "published_win_2x7_r5": true,
+  "published_win_2x7_r6": true,
+  "published_win_2x7_r7": true,
+  "published_win_2x7_r8": true,
+  "published_win_2x8_r2": true,
+  "published_win_2x8_r3": true,
+  "published_win_2x8_r4": true,
+  "published_win_2x8_r5": true,
+  "published_win_2x8_r6": true,
+  "published_win_2x8_r7": true,
+  "published_win_2x8_r8": true,
+  "published_win_2x9_r2": true,
+  "published_win_2x9_r3": true,
+  "published_win_2x9_r4": true,
+  "published_win_2x9_r5": true,
+  "published_win_2x9_r6": true,
+  "published_win_2x9_r7": true,
+  "published_win_2x9_r8": true,
+  "short_regime_2x10_r10": true,
+  "short_regime_2x10_r11": true,
+  "short_regime_2x10_r12": true,
+  "short_regime_2x10_r13": true,
+  "short_regime_2x10_r14": true,
+  "short_regime_2x10_r15": true,
+  "short_regime_2x10_r16": true,
+  "short_regime_2x10_r7": true,
+  "short_regime_2x10_r8": true,
+  "short_regime_2x10_r9": true,
+  "short_regime_2x11_r10": true,
+  "short_regime_2x11_r11": true,
+  "short_regime_2x11_r12": true,
+  "short_regime_2x11_r13": true,
+  "short_regime_2x11_r14": true,
+  "short_regime_2x11_r15": true,
+  "short_regime_2x11_r16": true,
+  "short_regime_2x11_r7": true,
+  "short_regime_2x11_r8": true,
+  "short_regime_2x11_r9": true,
+  "short_regime_2x12_r10": true,
+  "short_regime_2x12_r11": true,
+  "short_regime_2x12_r12": true,
+  "short_regime_2x12_r13": true,
+  "short_regime_2x12_r14": true,
+  "short_regime_2x12_r15": true,
+  "short_regime_2x12_r16": true,
+  "short_regime_2x12_r7": true,
+  "short_regime_2x12_r8": true,
+  "short_regime_2x12_r9": true,
+  "short_regime_2x1_r10": true,
+  "short_regime_2x1_r11": true,
+  "short_regime_2x1_r12": true,
+  "short_regime_2x1_r13": true,
+  "short_regime_2x1_r14": true,
+  "short_regime_2x1_r15": true,
+  "short_regime_2x1_r16": true,
+  "short_regime_2x1_r7": true,
+  "short_regime_2x1_r8": true,
+  "short_regime_2x1_r9": true,
+  "short_regime_2x2_r10": true,
+  "short_regime_2x2_r11": true,
+  "short_regime_2x2_r12": true,
+  "short_regime_2x2_r13": true,
+  "short_regime_2x2_r14": true,
+  "short_regime_2x2_r15": true,
+  "short_regime_2x2_r16": true,
+  "short_regime_2x2_r7": true,
+  "short_regime_2x2_r8": true,
+  "short_regime_2x2_r9": true,
+  "short_regime_2x3_r10": true,
+  "short_regime_2x3_r11": true,
+  "short_regime_2x3_r12": true,
+  "short_regime_2x3_r13": true,
+  "short_regime_2x3_r14": true,
+  "short_regime_2x3_r15": true,
+  "short_regime_2x3_r16": true,
+  "short_regime_2x3_r7": true,
+  "short_regime_2x3_r8": true,
+  "short_regime_2x3_r9": true,
+  "short_regime_2x4_r10": true,
+  "short_regime_2x4_r11": true,
+  "short_regime_2x4_r12": true,
+  "short_regime_2x4_r13": true,
+  "short_regime_2x4_r14": true,
+  "short_regime_2x4_r15": true,
+  "short_regime_2x4_r16": true,
+  "short_regime_2x4_r7": true,
+  "short_regime_2x4_r8": true,
+  "short_regime_2x4_r9": true,
+  "short_regime_2x5_r10": true,
+  "short_regime_2x5_r11": true,
+  "short_regime_2x5_r12": true,
+  "short_regime_2x5_r13": true,
+  "short_regime_2x5_r14": true,
+  "short_regime_2x5_r15": true,
+  "short_regime_2x5_r16": true,
+  "short_regime_2x5_r7": true,
+  "short_regime_2x5_r8": true,
+  "short_regime_2x5_r9": true,
+  "short_regime_2x6_r10": true,
+  "short_regime_2x6_r11": true,
+  "short_regime_2x6_r12": true,
+  "short_regime_2x6_r13": true,
+  "short_regime_2x6_r14": true,
+  "short_regime_2x6_r15": true,
+  "short_regime_2x6_r16": true,
+  "short_regime_2x6_r7": true,
+  "short_regime_2x6_r8": true,
+  "short_regime_2x6_r9": true,
+  "short_regime_2x7_r10": true,
+  "short_regime_2x7_r11": true,
+  "short_regime_2x7_r12": true,
+  "short_regime_2x7_r13": true,
+  "short_regime_2x7_r14": true,
+  "short_regime_2x7_r15": true,
+  "short_regime_2x7_r16": true,
+  "short_regime_2x7_r7": true,
+  "short_regime_2x7_r8": true,
+  "short_regime_2x7_r9": true,
+  "short_regime_2x8_r10": true,
+  "short_regime_2x8_r11": true,
+  "short_regime_2x8_r12": true,
+  "short_regime_2x8_r13": true,
+  "short_regime_2x8_r14": true,
+  "short_regime_2x8_r15": true,
+  "short_regime_2x8_r16": true,
+  "short_regime_2x8_r7": true,
+  "short_regime_2x8_r8": true,
+  "short_regime_2x8_r9": true,
+  "short_regime_2x9_r10": true,
+  "short_regime_2x9_r11": true,
+  "short_regime_2x9_r12": true,
+  "short_regime_2x9_r13": true,
+  "short_regime_2x9_r14": true,
+  "short_regime_2x9_r15": true,
+  "short_regime_2x9_r16": true,
+  "short_regime_2x9_r7": true,
+  "short_regime_2x9_r8": true,
+  "short_regime_2x9_r9": true,
+  "short_win_losers_disjoint_2x10_r10": true,
+  "short_win_losers_disjoint_2x10_r11": true,
+  "short_win_losers_disjoint_2x10_r12": true,
+  "short_win_losers_disjoint_2x10_r13": true,
+  "short_win_losers_disjoint_2x10_r14": true,
+  "short_win_losers_disjoint_2x10_r15": true,
+  "short_win_losers_disjoint_2x10_r16": true,
+  "short_win_losers_disjoint_2x10_r7": true,
+  "short_win_losers_disjoint_2x10_r8": true,
+  "short_win_losers_disjoint_2x10_r9": true,
+  "short_win_losers_disjoint_2x11_r10": true,
+  "short_win_losers_disjoint_2x11_r11": true,
+  "short_win_losers_disjoint_2x11_r12": true,
+  "short_win_losers_disjoint_2x11_r13": true,
+  "short_win_losers_disjoint_2x11_r14": true,
+  "short_win_losers_disjoint_2x11_r15": true,
+  "short_win_losers_disjoint_2x11_r16": true,
+  "short_win_losers_disjoint_2x11_r7": true,
+  "short_win_losers_disjoint_2x11_r8": true,
+  "short_win_losers_disjoint_2x11_r9": true,
+  "short_win_losers_disjoint_2x12_r10": true,
+  "short_win_losers_disjoint_2x12_r11": true,
+  "short_win_losers_disjoint_2x12_r12": true,
+  "short_win_losers_disjoint_2x12_r13": true,
+  "short_win_losers_disjoint_2x12_r14": true,
+  "short_win_losers_disjoint_2x12_r15": true,
+  "short_win_losers_disjoint_2x12_r16": true,
+  "short_win_losers_disjoint_2x12_r7": true,
+  "short_win_losers_disjoint_2x12_r8": true,
+  "short_win_losers_disjoint_2x12_r9": true,
+  "short_win_losers_disjoint_2x1_r10": true,
+  "short_win_losers_disjoint_2x1_r11": true,
+  "short_win_losers_disjoint_2x1_r12": true,
+  "short_win_losers_disjoint_2x1_r13": true,
+  "short_win_losers_disjoint_2x1_r14": true,
+  "short_win_losers_disjoint_2x1_r15": true,
+  "short_win_losers_disjoint_2x1_r16": true,
+  "short_win_losers_disjoint_2x1_r7": true,
+  "short_win_losers_disjoint_2x1_r8": true,
+  "short_win_losers_disjoint_2x1_r9": true,
+  "short_win_losers_disjoint_2x2_r10": true,
+  "short_win_losers_disjoint_2x2_r11": true,
+  "short_win_losers_disjoint_2x2_r12": true,
+  "short_win_losers_disjoint_2x2_r13": true,
+  "short_win_losers_disjoint_2x2_r14": true,
+  "short_win_losers_disjoint_2x2_r15": true,
+  "short_win_losers_disjoint_2x2_r16": true,
+  "short_win_losers_disjoint_2x2_r7": true,
+  "short_win_losers_disjoint_2x2_r8": true,
+  "short_win_losers_disjoint_2x2_r9": true,
+  "short_win_losers_disjoint_2x3_r10": true,
+  "short_win_losers_disjoint_2x3_r11": true,
+  "short_win_losers_disjoint_2x3_r12": true,
+  "short_win_losers_disjoint_2x3_r13": true,
+  "short_win_losers_disjoint_2x3_r14": true,
+  "short_win_losers_disjoint_2x3_r15": true,
+  "short_win_losers_disjoint_2x3_r16": true,
+  "short_win_losers_disjoint_2x3_r7": true,
+  "short_win_losers_disjoint_2x3_r8": true,
+  "short_win_losers_disjoint_2x3_r9": true,
+  "short_win_losers_disjoint_2x4_r10": true,
+  "short_win_losers_disjoint_2x4_r11": true,
+  "short_win_losers_disjoint_2x4_r12": true,
+  "short_win_losers_disjoint_2x4_r13": true,
+  "short_win_losers_disjoint_2x4_r14": true,
+  "short_win_losers_disjoint_2x4_r15": true,
+  "short_win_losers_disjoint_2x4_r16": true,
+  "short_win_losers_disjoint_2x4_r7": true,
+  "short_win_losers_disjoint_2x4_r8": true,
+  "short_win_losers_disjoint_2x4_r9": true,
+  "short_win_losers_disjoint_2x5_r10": true,
+  "short_win_losers_disjoint_2x5_r11": true,
+  "short_win_losers_disjoint_2x5_r12": true,
+  "short_win_losers_disjoint_2x5_r13": true,
+  "short_win_losers_disjoint_2x5_r14": true,
+  "short_win_losers_disjoint_2x5_r15": true,
+  "short_win_losers_disjoint_2x5_r16": true,
+  "short_win_losers_disjoint_2x5_r7": true,
+  "short_win_losers_disjoint_2x5_r8": true,
+  "short_win_losers_disjoint_2x5_r9": true,
+  "short_win_losers_disjoint_2x6_r10": true,
+  "short_win_losers_disjoint_2x6_r11": true,
+  "short_win_losers_disjoint_2x6_r12": true,
+  "short_win_losers_disjoint_2x6_r13": true,
+  "short_win_losers_disjoint_2x6_r14": true,
+  "short_win_losers_disjoint_2x6_r15": true,
+  "short_win_losers_disjoint_2x6_r16": true,
+  "short_win_losers_disjoint_2x6_r7": true,
+  "short_win_losers_disjoint_2x6_r8": true,
+  "short_win_losers_disjoint_2x6_r9": true,
+  "short_win_losers_disjoint_2x7_r10": true,
+  "short_win_losers_disjoint_2x7_r11": true,
+  "short_win_losers_disjoint_2x7_r12": true,
+  "short_win_losers_disjoint_2x7_r13": true,
+  "short_win_losers_disjoint_2x7_r14": true,
+  "short_win_losers_disjoint_2x7_r15": true,
+  "short_win_losers_disjoint_2x7_r16": true,
+  "short_win_losers_disjoint_2x7_r7": true,
+  "short_win_losers_disjoint_2x7_r8": true,
+  "short_win_losers_disjoint_2x7_r9": true,
+  "short_win_losers_disjoint_2x8_r10": true,
+  "short_win_losers_disjoint_2x8_r11": true,
+  "short_win_losers_disjoint_2x8_r12": true,
+  "short_win_losers_disjoint_2x8_r13": true,
+  "short_win_losers_disjoint_2x8_r14": true,
+  "short_win_losers_disjoint_2x8_r15": true,
+  "short_win_losers_disjoint_2x8_r16": true,
+  "short_win_losers_disjoint_2x8_r7": true,
+  "short_win_losers_disjoint_2x8_r8": true,
+  "short_win_losers_disjoint_2x8_r9": true,
+  "short_win_losers_disjoint_2x9_r10": true,
+  "short_win_losers_disjoint_2x9_r11": true,
+  "short_win_losers_disjoint_2x9_r12": true,
+  "short_win_losers_disjoint_2x9_r13": true,
+  "short_win_losers_disjoint_2x9_r14": true,
+  "short_win_losers_disjoint_2x9_r15": true,
+  "short_win_losers_disjoint_2x9_r16": true,
+  "short_win_losers_disjoint_2x9_r7": true,
+  "short_win_losers_disjoint_2x9_r8": true,
+  "short_win_losers_disjoint_2x9_r9": true,
+  "targ_subset_possible_2x10_r10": true,
+  "targ_subset_possible_2x10_r11": true,
+  "targ_subset_possible_2x10_r12": true,
+  "targ_subset_possible_2x10_r13": true,
+  "targ_subset_possible_2x10_r14": true,
+  "targ_subset_possible_2x10_r15": true,
+  "targ_subset_possible_2x10_r16": true,
+  "targ_subset_possible_2x10_r2": true,
+  "targ_subset_possible_2x10_r3": true,
+  "targ_subset_possible_2x10_r4": true,
+  "targ_subset_possible_2x10_r5": true,
+  "targ_subset_possible_2x10_r6": true,
+  "targ_subset_possible_2x10_r7": true,
+  "targ_subset_possible_2x10_r8": true,
+  "targ_subset_possible_2x10_r9": true,
+  "targ_subset_possible_2x11_r10": true,
+  "targ_subset_possible_2x11_r11": true,
+  "targ_subset_possible_2x11_r12": true,
+  "targ_subset_possible_2x11_r13": true,
+  "targ_subset_possible_2x11_r14": true,
+  "targ_subset_possible_2x11_r15": true,
+  "targ_subset_possible_2x11_r16": true,
+  "targ_subset_possible_2x11_r2": true,
+  "targ_subset_possible_2x11_r3": true,
+  "targ_subset_possible_2x11_r4": true,
+  "targ_subset_possible_2x11_r5": true,
+  "targ_subset_possible_2x11_r6": true,
+  "targ_subset_possible_2x11_r7": true,
+  "targ_subset_possible_2x11_r8": true,
+  "targ_subset_possible_2x11_r9": true,
+  "targ_subset_possible_2x12_r10": true,
+  "targ_subset_possible_2x12_r11": true,
+  "targ_subset_possible_2x12_r12": true,
+  "targ_subset_possible_2x12_r13": true,
+  "targ_subset_possible_2x12_r14": true,
+  "targ_subset_possible_2x12_r15": true,
+  "targ_subset_possible_2x12_r16": true,
+  "targ_subset_possible_2x12_r2": true,
+  "targ_subset_possible_2x12_r3": true,
+  "targ_subset_possible_2x12_r4": true,
+  "targ_subset_possible_2x12_r5": true,
+  "targ_subset_possible_2x12_r6": true,
+  "targ_subset_possible_2x12_r7": true,
+  "targ_subset_possible_2x12_r8": true,
+  "targ_subset_possible_2x12_r9": true,
+  "targ_subset_possible_2x1_r10": true,
+  "targ_subset_possible_2x1_r11": true,
+  "targ_subset_possible_2x1_r12": true,
+  "targ_subset_possible_2x1_r13": true,
+  "targ_subset_possible_2x1_r14": true,
+  "targ_subset_possible_2x1_r15": true,
+  "targ_subset_possible_2x1_r16": true,
+  "targ_subset_possible_2x1_r2": true,
+  "targ_subset_possible_2x1_r3": true,
+  "targ_subset_possible_2x1_r4": true,
+  "targ_subset_possible_2x1_r5": true,
+  "targ_subset_possible_2x1_r6": true,
+  "targ_subset_possible_2x1_r7": true,
+  "targ_subset_possible_2x1_r8": true,
+  "targ_subset_possible_2x1_r9": true,
+  "targ_subset_possible_2x2_r10": true,
+  "targ_subset_possible_2x2_r11": true,
+  "targ_subset_possible_2x2_r12": true,
+  "targ_subset_possible_2x2_r13": true,
+  "targ_subset_possible_2x2_r14": true,
+  "targ_subset_possible_2x2_r15": true,
+  "targ_subset_possible_2x2_r16": true,
+  "targ_subset_possible_2x2_r2": true,
+  "targ_subset_possible_2x2_r3": true,
+  "targ_subset_possible_2x2_r4": true,
+  "targ_subset_possible_2x2_r5": true,
+  "targ_subset_possible_2x2_r6": true,
+  "targ_subset_possible_2x2_r7": true,
+  "targ_subset_possible_2x2_r8": true,
+  "targ_subset_possible_2x2_r9": true,
+  "targ_subset_possible_2x3_r10": true,
+  "targ_subset_possible_2x3_r11": true,
+  "targ_subset_possible_2x3_r12": true,
+  "targ_subset_possible_2x3_r13": true,
+  "targ_subset_possible_2x3_r14": true,
+  "targ_subset_possible_2x3_r15": true,
+  "targ_subset_possible_2x3_r16": true,
+  "targ_subset_possible_2x3_r2": true,
+  "targ_subset_possible_2x3_r3": true,
+  "targ_subset_possible_2x3_r4": true,
+  "targ_subset_possible_2x3_r5": true,
+  "targ_subset_possible_2x3_r6": true,
+  "targ_subset_possible_2x3_r7": true,
+  "targ_subset_possible_2x3_r8": true,
+  "targ_subset_possible_2x3_r9": true,
+  "targ_subset_possible_2x4_r10": true,
+  "targ_subset_possible_2x4_r11": true,
+  "targ_subset_possible_2x4_r12": true,
+  "targ_subset_possible_2x4_r13": true,
+  "targ_subset_possible_2x4_r14": true,
+  "targ_subset_possible_2x4_r15": true,
+  "targ_subset_possible_2x4_r16": true,
+  "targ_subset_possible_2x4_r2": true,
+  "targ_subset_possible_2x4_r3": true,
+  "targ_subset_possible_2x4_r4": true,
+  "targ_subset_possible_2x4_r5": true,
+  "targ_subset_possible_2x4_r6": true,
+  "targ_subset_possible_2x4_r7": true,
+  "targ_subset_possible_2x4_r8": true,
+  "targ_subset_possible_2x4_r9": true,
+  "targ_subset_possible_2x5_r10": true,
+  "targ_subset_possible_2x5_r11": true,
+  "targ_subset_possible_2x5_r12": true,
+  "targ_subset_possible_2x5_r13": true,
+  "targ_subset_possible_2x5_r14": true,
+  "targ_subset_possible_2x5_r15": true,
+  "targ_subset_possible_2x5_r16": true,
+  "targ_subset_possible_2x5_r2": true,
+  "targ_subset_possible_2x5_r3": true,
+  "targ_subset_possible_2x5_r4": true,
+  "targ_subset_possible_2x5_r5": true,
+  "targ_subset_possible_2x5_r6": true,
+  "targ_subset_possible_2x5_r7": true,
+  "targ_subset_possible_2x5_r8": true,
+  "targ_subset_possible_2x5_r9": true,
+  "targ_subset_possible_2x6_r10": true,
+  "targ_subset_possible_2x6_r11": true,
+  "targ_subset_possible_2x6_r12": true,
+  "targ_subset_possible_2x6_r13": true,
+  "targ_subset_possible_2x6_r14": true,
+  "targ_subset_possible_2x6_r15": true,
+  "targ_subset_possible_2x6_r16": true,
+  "targ_subset_possible_2x6_r2": true,
+  "targ_subset_possible_2x6_r3": true,
+  "targ_subset_possible_2x6_r4": true,
+  "targ_subset_possible_2x6_r5": true,
+  "targ_subset_possible_2x6_r6": true,
+  "targ_subset_possible_2x6_r7": true,
+  "targ_subset_possible_2x6_r8": true,
+  "targ_subset_possible_2x6_r9": true,
+  "targ_subset_possible_2x7_r10": true,
+  "targ_subset_possible_2x7_r11": true,
+  "targ_subset_possible_2x7_r12": true,
+  "targ_subset_possible_2x7_r13": true,
+  "targ_subset_possible_2x7_r14": true,
+  "targ_subset_possible_2x7_r15": true,
+  "targ_subset_possible_2x7_r16": true,
+  "targ_subset_possible_2x7_r2": true,
+  "targ_subset_possible_2x7_r3": true,
+  "targ_subset_possible_2x7_r4": true,
+  "targ_subset_possible_2x7_r5": true,
+  "targ_subset_possible_2x7_r6": true,
+  "targ_subset_possible_2x7_r7": true,
+  "targ_subset_possible_2x7_r8": true,
+  "targ_subset_possible_2x7_r9": true,
+  "targ_subset_possible_2x8_r10": true,
+  "targ_subset_possible_2x8_r11": true,
+  "targ_subset_possible_2x8_r12": true,
+  "targ_subset_possible_2x8_r13": true,
+  "targ_subset_possible_2x8_r14": true,
+  "targ_subset_possible_2x8_r15": true,
+  "targ_subset_possible_2x8_r16": true,
+  "targ_subset_possible_2x8_r2": true,
+  "targ_subset_possible_2x8_r3": true,
+  "targ_subset_possible_2x8_r4": true,
+  "targ_subset_possible_2x8_r5": true,
+  "targ_subset_possible_2x8_r6": true,
+  "targ_subset_possible_2x8_r7": true,
+  "targ_subset_possible_2x8_r8": true,
+  "targ_subset_possible_2x8_r9": true,
+  "targ_subset_possible_2x9_r10": true,
+  "targ_subset_possible_2x9_r11": true,
+  "targ_subset_possible_2x9_r12": true,
+  "targ_subset_possible_2x9_r13": true,
+  "targ_subset_possible_2x9_r14": true,
+  "targ_subset_possible_2x9_r15": true,
+  "targ_subset_possible_2x9_r16": true,
+  "targ_subset_possible_2x9_r2": true,
+  "targ_subset_possible_2x9_r3": true,
+  "targ_subset_possible_2x9_r4": true,
+  "targ_subset_possible_2x9_r5": true,
+  "targ_subset_possible_2x9_r6": true,
+  "targ_subset_possible_2x9_r7": true,
+  "targ_subset_possible_2x9_r8": true,
+  "targ_subset_possible_2x9_r9": true,
+  "theoremA_targeted_2x10_r10": true,
+  "theoremA_targeted_2x10_r11": true,
+  "theoremA_targeted_2x10_r12": true,
+  "theoremA_targeted_2x10_r13": true,
+  "theoremA_targeted_2x10_r14": true,
+  "theoremA_targeted_2x10_r15": true,
+  "theoremA_targeted_2x10_r16": true,
+  "theoremA_targeted_2x10_r7": true,
+  "theoremA_targeted_2x10_r8": true,
+  "theoremA_targeted_2x10_r9": true,
+  "theoremA_targeted_2x11_r10": true,
+  "theoremA_targeted_2x11_r11": true,
+  "theoremA_targeted_2x11_r12": true,
+  "theoremA_targeted_2x11_r13": true,
+  "theoremA_targeted_2x11_r14": true,
+  "theoremA_targeted_2x11_r15": true,
+  "theoremA_targeted_2x11_r16": true,
+  "theoremA_targeted_2x11_r7": true,
+  "theoremA_targeted_2x11_r8": true,
+  "theoremA_targeted_2x11_r9": true,
+  "theoremA_targeted_2x12_r10": true,
+  "theoremA_targeted_2x12_r11": true,
+  "theoremA_targeted_2x12_r12": true,
+  "theoremA_targeted_2x12_r13": true,
+  "theoremA_targeted_2x12_r14": true,
+  "theoremA_targeted_2x12_r15": true,
+  "theoremA_targeted_2x12_r16": true,
+  "theoremA_targeted_2x12_r7": true,
+  "theoremA_targeted_2x12_r8": true,
+  "theoremA_targeted_2x12_r9": true,
+  "theoremA_targeted_2x1_r10": true,
+  "theoremA_targeted_2x1_r11": true,
+  "theoremA_targeted_2x1_r12": true,
+  "theoremA_targeted_2x1_r13": true,
+  "theoremA_targeted_2x1_r14": true,
+  "theoremA_targeted_2x1_r15": true,
+  "theoremA_targeted_2x1_r16": true,
+  "theoremA_targeted_2x1_r7": true,
+  "theoremA_targeted_2x1_r8": true,
+  "theoremA_targeted_2x1_r9": true,
+  "theoremA_targeted_2x2_r10": true,
+  "theoremA_targeted_2x2_r11": true,
+  "theoremA_targeted_2x2_r12": true,
+  "theoremA_targeted_2x2_r13": true,
+  "theoremA_targeted_2x2_r14": true,
+  "theoremA_targeted_2x2_r15": true,
+  "theoremA_targeted_2x2_r16": true,
+  "theoremA_targeted_2x2_r7": true,
+  "theoremA_targeted_2x2_r8": true,
+  "theoremA_targeted_2x2_r9": true,
+  "theoremA_targeted_2x3_r10": true,
+  "theoremA_targeted_2x3_r11": true,
+  "theoremA_targeted_2x3_r12": true,
+  "theoremA_targeted_2x3_r13": true,
+  "theoremA_targeted_2x3_r14": true,
+  "theoremA_targeted_2x3_r15": true,
+  "theoremA_targeted_2x3_r16": true,
+  "theoremA_targeted_2x3_r7": true,
+  "theoremA_targeted_2x3_r8": true,
+  "theoremA_targeted_2x3_r9": true,
+  "theoremA_targeted_2x4_r10": true,
+  "theoremA_targeted_2x4_r11": true,
+  "theoremA_targeted_2x4_r12": true,
+  "theoremA_targeted_2x4_r13": true,
+  "theoremA_targeted_2x4_r14": true,
+  "theoremA_targeted_2x4_r15": true,
+  "theoremA_targeted_2x4_r16": true,
+  "theoremA_targeted_2x4_r7": true,
+  "theoremA_targeted_2x4_r8": true,
+  "theoremA_targeted_2x4_r9": true,
+  "theoremA_targeted_2x5_r10": true,
+  "theoremA_targeted_2x5_r11": true,
+  "theoremA_targeted_2x5_r12": true,
+  "theoremA_targeted_2x5_r13": true,
+  "theoremA_targeted_2x5_r14": true,
+  "theoremA_targeted_2x5_r15": true,
+  "theoremA_targeted_2x5_r16": true,
+  "theoremA_targeted_2x5_r7": true,
+  "theoremA_targeted_2x5_r8": true,
+  "theoremA_targeted_2x5_r9": true,
+  "theoremA_targeted_2x6_r10": true,
+  "theoremA_targeted_2x6_r11": true,
+  "theoremA_targeted_2x6_r12": true,
+  "theoremA_targeted_2x6_r13": true,
+  "theoremA_targeted_2x6_r14": true,
+  "theoremA_targeted_2x6_r15": true,
+  "theoremA_targeted_2x6_r16": true,
+  "theoremA_targeted_2x6_r7": true,
+  "theoremA_targeted_2x6_r8": true,
+  "theoremA_targeted_2x6_r9": true,
+  "theoremA_targeted_2x7_r10": true,
+  "theoremA_targeted_2x7_r11": true,
+  "theoremA_targeted_2x7_r12": true,
+  "theoremA_targeted_2x7_r13": true,
+  "theoremA_targeted_2x7_r14": true,
+  "theoremA_targeted_2x7_r15": true,
+  "theoremA_targeted_2x7_r16": true,
+  "theoremA_targeted_2x7_r7": true,
+  "theoremA_targeted_2x7_r8": true,
+  "theoremA_targeted_2x7_r9": true,
+  "theoremA_targeted_2x8_r10": true,
+  "theoremA_targeted_2x8_r11": true,
+  "theoremA_targeted_2x8_r12": true,
+  "theoremA_targeted_2x8_r13": true,
+  "theoremA_targeted_2x8_r14": true,
+  "theoremA_targeted_2x8_r15": true,
+  "theoremA_targeted_2x8_r16": true,
+  "theoremA_targeted_2x8_r7": true,
+  "theoremA_targeted_2x8_r8": true,
+  "theoremA_targeted_2x8_r9": true,
+  "theoremA_targeted_2x9_r10": true,
+  "theoremA_targeted_2x9_r11": true,
+  "theoremA_targeted_2x9_r12": true,
+  "theoremA_targeted_2x9_r13": true,
+  "theoremA_targeted_2x9_r14": true,
+  "theoremA_targeted_2x9_r15": true,
+  "theoremA_targeted_2x9_r16": true,
+  "theoremA_targeted_2x9_r7": true,
+  "theoremA_targeted_2x9_r8": true,
+  "theoremA_targeted_2x9_r9": true,
+  "theoremB_win_2x10_r10": true,
+  "theoremB_win_2x10_r11": true,
+  "theoremB_win_2x10_r12": true,
+  "theoremB_win_2x10_r13": true,
+  "theoremB_win_2x10_r14": true,
+  "theoremB_win_2x10_r15": true,
+  "theoremB_win_2x10_r16": true,
+  "theoremB_win_2x10_r7": true,
+  "theoremB_win_2x10_r8": true,
+  "theoremB_win_2x10_r9": true,
+  "theoremB_win_2x11_r10": true,
+  "theoremB_win_2x11_r11": true,
+  "theoremB_win_2x11_r12": true,
+  "theoremB_win_2x11_r13": true,
+  "theoremB_win_2x11_r14": true,
+  "theoremB_win_2x11_r15": true,
+  "theoremB_win_2x11_r16": true,
+  "theoremB_win_2x11_r7": true,
+  "theoremB_win_2x11_r8": true,
+  "theoremB_win_2x11_r9": true,
+  "theoremB_win_2x12_r10": true,
+  "theoremB_win_2x12_r11": true,
+  "theoremB_win_2x12_r12": true,
+  "theoremB_win_2x12_r13": true,
+  "theoremB_win_2x12_r14": true,
+  "theoremB_win_2x12_r15": true,
+  "theoremB_win_2x12_r16": true,
+  "theoremB_win_2x12_r7": true,
+  "theoremB_win_2x12_r8": true,
+  "theoremB_win_2x12_r9": true,
+  "theoremB_win_2x1_r10": true,
+  "theoremB_win_2x1_r11": true,
+  "theoremB_win_2x1_r12": true,
+  "theoremB_win_2x1_r13": true,
+  "theoremB_win_2x1_r14": true,
+  "theoremB_win_2x1_r15": true,
+  "theoremB_win_2x1_r16": true,
+  "theoremB_win_2x1_r7": true,
+  "theoremB_win_2x1_r8": true,
+  "theoremB_win_2x1_r9": true,
+  "theoremB_win_2x2_r10": true,
+  "theoremB_win_2x2_r11": true,
+  "theoremB_win_2x2_r12": true,
+  "theoremB_win_2x2_r13": true,
+  "theoremB_win_2x2_r14": true,
+  "theoremB_win_2x2_r15": true,
+  "theoremB_win_2x2_r16": true,
+  "theoremB_win_2x2_r7": true,
+  "theoremB_win_2x2_r8": true,
+  "theoremB_win_2x2_r9": true,
+  "theoremB_win_2x3_r10": true,
+  "theoremB_win_2x3_r11": true,
+  "theoremB_win_2x3_r12": true,
+  "theoremB_win_2x3_r13": true,
+  "theoremB_win_2x3_r14": true,
+  "theoremB_win_2x3_r15": true,
+  "theoremB_win_2x3_r16": true,
+  "theoremB_win_2x3_r7": true,
+  "theoremB_win_2x3_r8": true,
+  "theoremB_win_2x3_r9": true,
+  "theoremB_win_2x4_r10": true,
+  "theoremB_win_2x4_r11": true,
+  "theoremB_win_2x4_r12": true,
+  "theoremB_win_2x4_r13": true,
+  "theoremB_win_2x4_r14": true,
+  "theoremB_win_2x4_r15": true,
+  "theoremB_win_2x4_r16": true,
+  "theoremB_win_2x4_r7": true,
+  "theoremB_win_2x4_r8": true,
+  "theoremB_win_2x4_r9": true,
+  "theoremB_win_2x5_r10": true,
+  "theoremB_win_2x5_r11": true,
+  "theoremB_win_2x5_r12": true,
+  "theoremB_win_2x5_r13": true,
+  "theoremB_win_2x5_r14": true,
+  "theoremB_win_2x5_r15": true,
+  "theoremB_win_2x5_r16": true,
+  "theoremB_win_2x5_r7": true,
+  "theoremB_win_2x5_r8": true,
+  "theoremB_win_2x5_r9": true,
+  "theoremB_win_2x6_r10": true,
+  "theoremB_win_2x6_r11": true,
+  "theoremB_win_2x6_r12": true,
+  "theoremB_win_2x6_r13": true,
+  "theoremB_win_2x6_r14": true,
+  "theoremB_win_2x6_r15": true,
+  "theoremB_win_2x6_r16": true,
+  "theoremB_win_2x6_r7": true,
+  "theoremB_win_2x6_r8": true,
+  "theoremB_win_2x6_r9": true,
+  "theoremB_win_2x7_r10": true,
+  "theoremB_win_2x7_r11": true,
+  "theoremB_win_2x7_r12": true,
+  "theoremB_win_2x7_r13": true,
+  "theoremB_win_2x7_r14": true,
+  "theoremB_win_2x7_r15": true,
+  "theoremB_win_2x7_r16": true,
+  "theoremB_win_2x7_r7": true,
+  "theoremB_win_2x7_r8": true,
+  "theoremB_win_2x7_r9": true,
+  "theoremB_win_2x8_r10": true,
+  "theoremB_win_2x8_r11": true,
+  "theoremB_win_2x8_r12": true,
+  "theoremB_win_2x8_r13": true,
+  "theoremB_win_2x8_r14": true,
+  "theoremB_win_2x8_r15": true,
+  "theoremB_win_2x8_r16": true,
+  "theoremB_win_2x8_r7": true,
+  "theoremB_win_2x8_r8": true,
+  "theoremB_win_2x8_r9": true,
+  "theoremB_win_2x9_r10": true,
+  "theoremB_win_2x9_r11": true,
+  "theoremB_win_2x9_r12": true,
+  "theoremB_win_2x9_r13": true,
+  "theoremB_win_2x9_r14": true,
+  "theoremB_win_2x9_r15": true,
+  "theoremB_win_2x9_r16": true,
+  "theoremB_win_2x9_r7": true,
+  "theoremB_win_2x9_r8": true,
+  "theoremB_win_2x9_r9": true,
+  "uniform_predicate_2x1": true,
+  "uniform_predicate_2x10": true,
+  "uniform_predicate_2x11": true,
+  "uniform_predicate_2x12": true,
+  "uniform_predicate_2x2": true,
+  "uniform_predicate_2x3": true,
+  "uniform_predicate_2x9": true,
+  "win_r_independent_2x1": true,
+  "win_r_independent_2x10": true,
+  "win_r_independent_2x11": true,
+  "win_r_independent_2x12": true,
+  "win_r_independent_2x2": true,
+  "win_r_independent_2x3": true,
+  "win_r_independent_2x4": true,
+  "win_r_independent_2x5": true,
+  "win_r_independent_2x6": true,
+  "win_r_independent_2x7": true,
+  "win_r_independent_2x8": true,
+  "win_r_independent_2x9": true
+ },
+ "meta": {
+  "determinism": "fixed enumeration order, sorted structures, no timestamps",
+  "engines": "A only; coalition DP identical to the census verifier",
+  "family": "2xm q=4, m=1..12, r=2..16",
+  "published_crosscheck": "output/audit.json family_2xm_q4_root r=2..8",
+  "scope": "finite machine check of the family for r<=16; theorems A/B are proved for all r > max achievable length, so the family root characterization holds for every r >= 7",
+  "short_regime_r": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16
+  ],
+  "theorem_a": "if max achievable play length < r then force-targetable set = possible losers {L mod r}; proved in report.md",
+  "theorem_b": "under the same hypothesis and hereditary safety, solo forced last-mover win iff j = min(Lambda)-1 and every safe j-stone position has a one-move terminal extension; the solo-win set is r-independent for r > max(Lambda)"
+ }
+}
