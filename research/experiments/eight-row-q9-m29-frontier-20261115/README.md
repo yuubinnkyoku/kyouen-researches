@@ -55,3 +55,17 @@ CSV (8,9) 行の census 記録）により「1-double-row 9点円は m ≤ 40 �
 - surgery（eight-row-q9-m29-surgery-20261115）: s8x28 系 5配置の sd≤5 球・
   s8x27/s8x26 系の sd≤4 球に 8x29 witness なし — 局所閉包。
 - 本実験はこれらの条件を課さない無条件判定であり、上記と独立。
+
+## 部分記録（2026-11-15・高速レーン・環境制約で中断）
+
+- rowY=3: kissat 4.0.4 を長 cap で起動したが、実行環境の bash 制限と実行中の
+  環境リセット（2回）により kill。到達した最終 progress は
+  **INDET 25,375,195 conflicts / 1665s**（time-cut。same-trajectory not bit-exact）。
+  判定は未確定のまま。
+- rowY=0/1/2: CNF 未生成。4分割完結には rowY=3 の長 cap 再実行とその続きが必要で、
+  bash 280s 制限の下では完走不能 → 長期レーンへの引き継ぎ。
+- したがって status は IN FLIGHT を継続（判定結果なし。anchored-window・surgery の
+  条件付き結果との重複なし）。
+- 次の実行可能課題（長期レーン）: rowY=3 を cap 5400s で再実行（kissat 4.0.4
+  linux-amd64・md5 3a5eba830aa6008a604fcc9bbe99a325・zip md5
+  eba46606374d283507ce1c37bdf910ac）し、UNSAT なら rowY=0/1/2 へ。
