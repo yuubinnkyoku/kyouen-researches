@@ -1,47 +1,38 @@
-# 2026-11-15：cost-72c receipt fold — head 1239→1244
+# 2026-11-15：cost-72c receipts fold — canonical head 1239 → 1244・claim blob pinningの廃止
 
-開始時main: `51b766410`（cost-70f fold後のhead 1239/6608/521701/4878/385424）。cost-72cは第二coverable class-2 target S5 `00000000000000801202000000200000` のcost-72 child `00000000000000801202000000220000`（stones [17,21,49,57,60,71]・需要 c1=0,c2=2,c4=0）のsweepで、9 WIN7-D10 roots（bits 1,7,24,39,59,64,67,72,96）の証明書9件・独立監査・claim v2が公開済みで、receipt foldだけが未着地だった。AGENTS.md、`research/knowledge/README.md`、K0783、直近のn11 log・experimentを確認した。
+開始時main: HEAD `ebe9cdca`（本レーンのclaim v3 push）。canonical baseline 1239（`class-frontier-cost70f-receipts-recompute-20261115.json`・blob `4d0f130e975b6a7bec4759387bd6d54dfe2b6a18`）。fold直前に最新mainを再取得し、並走の70g/65l foldいずれも着地していないこと・claimがまだv3（blob `2162d7bf`）であること・70f head JSONが不変であることをSHA headerで確認した（rebase不要）。
 
-## 入力検証
+## 成果1：cost-72c receipts fold（head 1239 → 1244）
 
-- 9証明書の公開2 partを行境界連結・CRLF→LF正規化すると、公開manifestのwhole md5/bytesと9/9一致（合計321,781行・11,604,178 B・41,346,462 extraction nodes・sub-roots 474）。
-- 9 rootの全loser初手を独立列挙（mobility 61/47/59/46/53/52/53/47/56）。
-- **BigInt 3x3余因子**と**Number Bareiss 4x4**の二独立検証器で9/9 PASS（union missing/extra 0/0・terminal [13,17]・consumed union == 証明書行集合 0/0）。
-- sweep auditを9 raw batchから再導出: 72候補==claim列挙・9 WIN7-D10 / 63 REFUTED-D10 / 0 capped / 61,297,942 nodes・pilots 3402×9・determinism rerun node-exact・v15 9/9 WIN + 3/3 refuted anchors（pilot 5949×3）。
-- head-1239でchildはmanifest内・未解決、両開親 `00000000000000801202000000200000`（24行/1836）と `00000000000000083800000008000000`（55行/4111）がchild行を保持。一石削除D4正準化でdel 17→parent1・del 21→parent2・他4削除は閉行。需要 c1=0,c2=2,c4=0。
+`recompute_frontier_cost72c_receipts_20261115.py`を書いて実行した。すべての統制がPASS:
 
-## fold（head 1239 → 1244）
+- **baseline再構成**: 70f fold scriptをrunpy鎖で再現し、1239/6608/521701/4878/385424 head（70f head JSON・両CSVともblob-identical）を再生成。71c→70fのrunpy鎖全体がローカルで完結。
+- **childの残存確認**: parent1 `00000000000000801202000000200000` 24行/1836・parent2 `00000000000000083800000008000000` 55行/4111がchild `00000000000000801202000000220000`（edge cost 72・需要 c1=0,c2=2,c4=0）を行として持ち、開親はこの2つのみ。D4 lift: del17=parent1 bit-exact・del21=parent2 bit-exact・残り4削除は閉行。
+- **sweep再導出**: 9 raw batch JSONLsから72候補を一度ずつ（claim列挙と一致）・**9 WIN7-D10（bits [1,7,24,39,59,64,67,72,96]）・63 REFUTED・0 capped・総nodes 61,297,942**・pilot 3402×9・batch5 determinism rerun node-exact・v15 cross-engine（9 WIN node-matched・アンカー0/43/117 loss=false・pilot 5949×3）・9 distinct D4 win orbits。
+- **証明書検証**: 9証明書18パートすべてpart bytesで直接検証（part bytes/md5/blob sha → join == whole md5・whole blob sha）・rows sorted-unique・sub-roots == loser mobility・terminal 13..17（BigInt）/ 13,15,17（Bareiss）・per-bit verify記録18件の再読込・union 0/0・manifest totals再総和（**321,781 rows / 11,604,178 bytes / 41,346,462 extraction nodes**）。
+- **root disjointness**: 9新root vs 503 fold済みroot（499 through cost-71c + 4 cost-70f）をraw-hex・D4両方で確認。
+- **fold**: 公開順 [1, 7, 24, 39, 59, 64, 67, 72, 96]でper-record marginalを拡張unionから再導出。**総marginal 43・in-manifest 5**・zero-mim receipts [39, 59, 64, 72, 96]・child orbit closureはbit1（公開順最初）・set等式 `s_after == s_1239 UNION covers(9 roots)`・3回連続実行byte-identical。
 
-`recompute_frontier_cost72c_receipts_20261115.py` はcost-70f fold scriptをrunpyで再実行してhead 1239をbyte-identicalに再現し、公開順 [1,7,24,39,59,64,67,72,96] で9 receiptをfoldした。
+**fold後 frontier: solved 1244 / unique 6603 / cost 521,339 / open 4,873 / open_cost 385,062**。parent1 21行/1615（3行喪失: child + `00000000000000801202000000200002` + `00000000000000881202000000200000`）・parent2 52行/3898（3行喪失: child + `00000000000000083800000009000000` + `00000000000000801202000000020080`）。third target `00000000000000809102000000000000`（2行/143）が引き続き不変最安のcoverable class-2候補。
 
-- 新canonical head: **`1244/6603/521339/4873/385062`**（solved 1239→1244、in-manifest marginal 5、raw marginal 43、zero-mim bits 39/59/64/72/96）。
-- child `00000000000000801202000000220000` は**bit1**で閉鎖。
-- 第2 target S5: **24行/1836 → 21行/1615**（child + `00000000000000801202000000200002` + `00000000000000881202000000200000`）。
-- 第2開親 `00000000000000083800000008000000`: **55行/4111 → 52行/3898**（child + `00000000000000083800000009000000` + `00000000000000801202000000020080`）。
-- set等式 `s_after == s_1239 ∪ covers(9 roots)`、503 folded rootsとのraw/D4 disjointness、sweep audit再導出、証明書bytes検証をassert。
-- 出力: head JSON（blob `2e5d7ed187b40052d62344b0fbd5a7024ffa9899`・12,264 B）、ranking CSV（`6c36559906eafc30910abd087cdbe2f044159a16`・7,580 B）、top-candidates CSV（`c7497f2f6f5e72a170c34a12d30056a0f063c9eb`・5,007 B）。claimはcompletedへretireし、fold記録・出力blob・再現コマンドを記載。completed claim後の再実行で3出力のbyte-identityとfold数値を再assertする制御付き。
+## 成果2：cost-70f head JSONのbaseline_main prose誤記の記録
 
-## 信頼境界
+fold中に、公開済み70f head JSONの`baseline_main`文が**cost-70eのhead数字（1235/6614/522131/4884/385854）と70e head blob（`a0171d4b`）を引用している**（実際にassertしているのは71c head 1235/6612/521988/4882/385711・blob `61af2eb3`）ことを検出した。prose-onlyのcopy-paste誤記で、70f fold scriptのassertは正しく、いかなる公開数値にも影響しない。履歴ファイルはbyte-unmodifiedとし、本fold head JSONの`baseline_erratum_note`（controls内）に記録した（bit112 md5誤記と同じ運用）。
 
-- foldは公開済みreceiptの帳簿更新であり、いかなる局面の勝敗判定でもない。solved数はmanifest被覆のみを測る。
-- WIN7証明書は各7石rootから深さ10以内の先手勝ちのみを証明する。REFUTED-D10はLOSS証明ではない。
-- child orbitの閉鎖は両S5親の残り行からchildを除くが、どちらのS5も未解決のまま。第2 targetは残り21行/1615。
-- 証明書木そのものの再走査は本foldの範囲外。公開manifestの二重独立検証に依拠し、foldはjoined LF bytes・root同定・sub-roots・終端範囲・親orbit・D4正準性を再検証した。
+## 成果3：claim blob pinningの廃止（運用変更）
 
-## 並走・次の一手
+cost-72b repairの教訓（claim closure updateがfold scriptのblob参照を壊し再実行不能になる循環）に対処するため、**fold scriptからclaimのINPUT_BLOBS pinningを外し、claimは内容検証のみ**とする70f方式に統一した。これにより公開済みscriptはclaimのclosure update後も無条件に再実行可能になる。代償としてfold head JSONの`published_inputs_byte_exact_vs_main`は37（claim分を除く）となり、claimのfoldレコード側にscript blob `144b41c6` を明記して相互参照を担保した。
 
-- cost-70g（8 WIN7証明書・fold待ち）は新head 1244へのrebaseが必須。cost70f bit84とcost70g bit29のD4重複により、70g child行は70f foldで既に被覆済み（二重計上しない）。
-- cost-65l（fold in flight）・cost-69g/74eは本foldに含めない。
-- 第2 target S5は残り21行/1615。次の最安未sweep行の選定が続きの一手。
+## 解釈境界（重要）
 
-## 勝敗
+- solved数はmanifest被覆の簿記であり、いかなる局面のgame-theoretic値も意味しない。
+- **REFUTED-D10はLOSS証明ではない**（depth-10以内の先手勝ちが無いことのみ）。
+- 9つのWIN7証明書は個別7石rootからdepth-10以内の先手勝ちのみを証明する。child orbitの閉鎖は両開class-2親の残行を減らすが、どちらのS5親も解決せず、class 2・class 4も決定しない。
+- **標準11×11空盤・二石root {49,60}/{59,60}・S2 {59,60}・class1・class2・class4は引き続きUNKNOWN**。
 
-標準11×11空盤、二石root `{49,60}`・`{59,60}`、S2 `{59,60}`、class1・class2・class4はすべて **UNKNOWN**。今回のfoldは勝敗判定を変更しない。
+## 今後
 
-## 再現
+- 次のfold baselineは本head 1244（`class-frontier-cost72c-receipts-recompute-20261115.json`・blob `42dbb92e`）。fold前に必ず最新mainを再取得し、並走lane（70g/65l/69g/65j/74e）のfold着地をチェックすること。**70g（8証明書）・65l（2 receipts）のfoldは本head 1244へのrebaseが必須**。
+- 次のsweep候補: third target `00000000000000809102000000000000`の残り2行（cost 69: `00000000000000809102000000002000`・cost 74: `00000000000000809142000000000000`）が最安だが、69g/74eの並走claimとの重複に注意。
 
-```sh
-python research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost72c_receipts_20261115.py
-```
-
-cost-70f baselineを再実行し、head 1239のbyte-identical再現から全制約を再検証した上でfoldする。実行時間は約1〜2分。
+詳細: [fold head JSON](../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost72c-receipts-recompute-20261115.json)、[ranking CSV](../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-s5-ranking-after-cost72c-receipts-20261115.csv)、[top-candidates CSV](../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-top-candidates-s6-after-cost72c-receipts-20261115.csv)、[fold script](../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost72c_receipts_20261115.py)、[claim v4](../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72c-inflight-20261115.json)。
