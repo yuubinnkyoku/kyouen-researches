@@ -2438,6 +2438,33 @@
 ## [research/experiments/five-row-q7-m36-class-split-20261115/summary.json](../../../research/experiments/five-row-q7-m36-class-split-20261115/summary.json)
 
 - [K0850](../items/K0850-five-row-q7-m36-deficient-nonexistence.md) (data): aggregate: 0 SAT / 0 INDET among the 63 deciding instances; hardest {1} k=5 mp=0 (492,545 conflicts — down 0.8% from its m=35 counterpart); total_conflicts_36 5,304,991 = deciding 5,011,486 + lex=H 293,505 (same convention as m=27..m=35); decomposition soundness note (minpos pins the leftmost stone of the first deficient row; sound bound floor((m-1)/2)=17 at m=36: columns 0..35, min(x_min, 35-x_max) <= 17); environment note (single continuous session, no reset; all 66 raw-log remote blob shas verified against local sha1s, 66/66 OK)
+## [research/experiments/five-row-q7-m37-class-split-20261115/raw/r5x37q7_1k5p0.txt](../../../research/experiments/five-row-q7-m37-class-split-20261115/raw/r5x37q7_1k5p0.txt)
+
+- [K0851](../items/K0851-five-row-q7-m37-deficient-nonexistence.md) (data): hardest deciding instance raw kissat log ({1} k=5 minpos=0: 472,443 conflicts UNSAT / 18.82 s); all raw logs r5x37q7_*.txt (17 direct + 48 decomposition + 2 lex + control)
+## [research/experiments/five-row-q7-m37-class-split-20261115/raw/r_ctrl_5x18_c0.txt](../../../research/experiments/five-row-q7-m37-class-split-20261115/raw/r_ctrl_5x18_c0.txt)
+
+- [K0851](../items/K0851-five-row-q7-m37-deficient-nonexistence.md) (data): positive control log: 5x18 class {0} SAT 343,134 conflicts bit-exact with the K0821..K0850 lane controls (sixteenth cross-lane reproduction); decoded 29 stones rows (5,6,6,6,6), census-free verifyConfig PASS (K0332 witness rediscovered end-to-end)
+## [research/experiments/five-row-q7-m37-class-split-20261115/records.jsonl](../../../research/experiments/five-row-q7-m37-class-split-20261115/records.jsonl)
+
+- [K0851](../items/K0851-five-row-q7-m37-deficient-nonexistence.md) (data): 68 records: 17 direct class UNSAT + 48 k/minpos decomposition UNSAT ({0},{1}: k=0..4 and k=5 x minpos=0..18, 19 points per class at m=37) + 2 lex=H cross-checks + 1 positive control (SAT); deciding-instance conflicts 4,729,308, records total 5,371,726
+## [research/experiments/five-row-q7-m37-class-split-20261115/report.md](../../../research/experiments/five-row-q7-m37-class-split-20261115/report.md)
+
+- [K0851](../items/K0851-five-row-q7-m37-deficient-nonexistence.md) (proof): claim, coverage and decomposition-completeness argument (k partitions the row count; leftmost stone column <= 18 by the column mirror: x_min + (36 - x_max) <= 36), verification protocol incl. the sixteenth cross-lane bit-exact control reproduction and the band-closure def-mode cross-check agreement, per-class results, scope and limits
+## [research/experiments/five-row-q7-m37-class-split-20261115/scripts/mkcnf.sh](../../../research/experiments/five-row-q7-m37-class-split-20261115/scripts/mkcnf.sh)
+
+- [K0851](../items/K0851-five-row-q7-m37-deficient-nonexistence.md) (source): deterministic CNF generator: 17 direct classes + {0},{1} k=0..4 + k=5 x minpos=0..18 (the sound bound grows to floor((m-1)/2)=18 at m=37, 19 points per class) + 2 lex=H + 5x18 control (68 CNFs)
+## [research/experiments/five-row-q7-m37-class-split-20261115/scripts/mkrecords5737.js](../../../research/experiments/five-row-q7-m37-class-split-20261115/scripts/mkrecords5737.js)
+
+- [K0851](../items/K0851-five-row-q7-m37-deficient-nonexistence.md) (source): records.jsonl / summary.json builder from raw kissat logs; erratum: the claim-time version omitted minpos '18' from the k5p record list (sed anchor mismatch), caught before records generation (66 vs expected 68 records) and fixed in the experiment-dir commit 4756a5a3; CNFs and raw logs were unaffected (mkcnf.sh had the correct 0..18 loop from the start)
+## [research/experiments/five-row-q7-m37-class-split-20261115/scripts/qrun.sh](../../../research/experiments/five-row-q7-m37-class-split-20261115/scripts/qrun.sh)
+
+- [K0851](../items/K0851-five-row-q7-m37-deficient-nonexistence.md) (source): 2-worker claim-directory queue runner with per-instance timeout caps and interrupted-instance reclaim
+## [research/experiments/five-row-q7-m37-class-split-20261115/scripts/sat3.js](../../../research/experiments/five-row-q7-m37-class-split-20261115/scripts/sat3.js)
+
+- [K0851](../items/K0851-five-row-q7-m37-deficient-nonexistence.md) (solver): class-split / exact-count (--krow) / minpos / lex encoder on the K0810 sat.js census + sat2.js counter core (byte-identical to the K0821..K0850 lanes; git blob shas 6c3262d6 / edfae1d2 / 6dfa7db3), plus kissat model decoding with census-free verifyConfig
+## [research/experiments/five-row-q7-m37-class-split-20261115/summary.json](../../../research/experiments/five-row-q7-m37-class-split-20261115/summary.json)
+
+- [K0851](../items/K0851-five-row-q7-m37-deficient-nonexistence.md) (data): aggregate: 0 SAT / 0 INDET among the 65 deciding instances; hardest {1} k=5 mp=0 (472,443 conflicts — down 4.1% from its m=36 counterpart); total_conflicts_37 5,028,592 = deciding 4,729,308 + lex=H 299,284 (same convention as m=27..m=36); decomposition soundness note (minpos pins the leftmost stone of the first deficient row; sound bound floor((m-1)/2)=18 at m=37: columns 0..36, min(x_min, 36-x_max) <= 18); environment note (single continuous session, no reset; all 68 raw-log remote blob shas verified against local git-hashes, 68/68 OK)
 ## [research/experiments/fixed-width-frontier-20261005/output/q57_independent_witness.json](../../../research/experiments/fixed-width-frontier-20261005/output/q57_independent_witness.json)
 
 - [K0332](../items/K0332-width-five-q7-stabilization-bounds.md) (data): 5×18の29石安全極大証人と全61空点のblocker

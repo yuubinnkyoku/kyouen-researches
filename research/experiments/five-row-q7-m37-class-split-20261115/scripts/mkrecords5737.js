@@ -16,7 +16,7 @@ for (const n of ['2','01','02','03','04','12','13','012','013','014','023','024'
   push({ w: 5, m: 37, q: 7, class: n.split('').join(','), encoding: 'class' }, `r5x37q7_${n}.txt`);
 for (const y of ['0','1']) for (const k of ['0','1','2','3','4'])
   push({ w: 5, m: 37, q: 7, class: y, krow: `${y}:${k}`, encoding: 'class+krow' }, `r5x37q7_${y}k${k}.txt`);
-for (const y of ['0','1']) for (const p of ['0','1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17'])
+for (const y of ['0','1']) for (const p of ['0','1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18'])
   push({ w: 5, m: 37, q: 7, class: y, krow: `${y}:5`, minpos: p, encoding: 'class+krow+minpos' }, `r5x37q7_${y}k5p${p}.txt`);
 push({ w: 5, m: 37, q: 7, class: '0,1', lex: 'H', encoding: 'class+lexH cross-check' }, 'r5x37q7_01_lexH.txt');
 push({ w: 5, m: 37, q: 7, class: '2', lex: 'H', encoding: 'class+lexH cross-check' }, 'r5x37q7_2_lexH.txt');
