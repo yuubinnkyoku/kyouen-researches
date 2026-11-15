@@ -616,10 +616,37 @@ artifacts:
 - path: research/log/2026-11-15-n11-class2-cost74d-win-loss-conflict-audit.md
   role: log
   note: cost74d WIN7/LOSS7の範囲限定D4衝突監査と証拠境界
+- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78a-win7-certificates-20261115.json
+  role: manifest
+  note: cost78a WIN7証明書5/5（bits 8,20,29,36,109）のmanifest。326,698行・97,619,220 extraction nodes・311 sub-roots・31 distinct parent orbits
+- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78a-certificates/bit29-root-00000000000000809102000020400000.cert.part1of2
+  role: certificate
+  note: 新規抽出bit29証明書のpart1。bit8/bit109も同ディレクトリに2 partずつ公開
+- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/assemble_cost78a_certificate_20261115.py
+  role: source
+  note: blind抽出rowsのsort -u・header付与・hash receipt生成
+- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/split_certificate_at_line_boundary_20261115.py
+  role: source
+  note: 1.75 MiB超証明書の行境界2分割とpart hash receipt
+- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/build_cost78a_certificate_manifest_20261115.py
+  role: source
+  note: 5/5証明書manifestの生成。whole LF blob・part blob・二独立検証結果・親orbitを記録
+- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost78a_receipts_20261115.py
+  role: source
+  note: cost78a 5 receipt fold。head 1216のbyte再現・25入力blob照合・sweep再導出・証明書bytes検証・fold・completed claim制御
+- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost78a-receipts-recompute-20261115.json
+  role: data
+  note: fold後head 1222/6625/522908/4895/386631とper-receipt marginal・親S5 after
+- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-top-candidates-s6-after-cost78a-receipts-20261115.csv
+  role: data
+  note: fold後の次候補。best coverable class-2は第3 target 2行/143（69/74）
+- path: research/log/2026-11-15-n11-class2-lane-cost78a-certificates-and-receipt-fold.md
+  role: log
+  note: 3証明書のblind抽出・二独立検証・5 receipt fold・Windows LF/CRLF再現注意
 
 
 scope: n11 S2 {59,60} milestone-5のワークリストとS7証明書再利用。局所S6と三石位置のblocker類1・2の条件付き勝敗を含むが、二石rootや空盤の勝敗は含まない。
-evidence: "公開manifestの辞書順md5は0e95a438dbcb486368393de9c73fc21e。94オラクルの全744対称像を使い補完候補15072件を独立列挙。類1の新規WIN7戦略証明書13件・LOSS7証明書2件、類2のWIN7証明書54件と3六石位置の全62子・全72子・全64子のLOSS7証明書を独立検査。類1の五石位置の40六石軌道は既存記録と合わせて全て先手WIN。既存の一部証明書本体は別保管であり、公開監査記録に依存する。 2026-11-15 cost72 bit111 WIN7証明書を独立検査し、cost75b統合後の対象S5親を局所的に2軌道・費用147から1軌道・費用75へ縮小した。global frontierは未再計算。2026-11-15 warm multiband 35 WIN7 receipt後の公開frontierは解消S6 1,109・残り6,738・費用531,295・open需要5,008/395,018。35 rootを同実験の17 verified manifest（WIN7 77・LOSS7 200）、central LOSS7 parent-lift 274鍵、category-1候補396行とD4照合し、衝突0（category-1行は証明書とは数えない）。; 2026-11-15 cost69f残り4証明書(bits2/94/109/119)を別V8実行で再検査し全PASS。262,236行、検証訪問560,273局面、union 0/0、4×4行列式による根合法手数一致、8 partのGit blob SHA1・MD5/SHA256一致。cost69fの+9 S6軌道が全て証明書済み 2026-11-15 cost69f全9証明書をPython/Bareiss第三実装で再検査し9/9 PASS（第二検証のV8/BigInt 4件と共通フィールド全一致）。cost69g子の需要は二重役割S5(classes=6)のper-class計数と確定（distinct open parents=3、c1=0,c2=2,c4=2） 2026-11-15 cost72b子 00000000000000809102000002000000（cost 72・需要c1=0,c2=2,c4=0・open親2軌道）の72候補raw sweep完了。WIN7-D10 13（bits 2,11,21,30,31,36,47,66,85,95,97,100,106）・REFUTED-D10 59・打切り0・117,444,772節点。v15 cross-engine 13/13 loss=true、決定性再実行13/13 node-exact。13 rootは証明書未抽出の探索候補のためfrontier寄与0。; 2026-11-15 cost74d公開証明書bits12/66/68/118とcost72b bit85をBigInt独立検査器で5/5再生。D4親持ち上げにより証明書付きS6下限1166→1169（receipt frontier 1179とは区別）; 2026-11-15 cost72b正利得9証明書（bits 2,30,31,36,47,95,97,100,106）をBigInt独立再生9/9、13分割blobと9 whole-file Git SHA1一致。新規S6 manifest 9/9を裏付け、証明書付き下限1169→1178（receipt 1188とは区別）"
+evidence: "公開manifestの辞書順md5は0e95a438dbcb486368393de9c73fc21e。94オラクルの全744対称像を使い補完候補15072件を独立列挙。類1の新規WIN7戦略証明書13件・LOSS7証明書2件、類2のWIN7証明書54件と3六石位置の全62子・全72子・全64子のLOSS7証明書を独立検査。類1の五石位置の40六石軌道は既存記録と合わせて全て先手WIN。既存の一部証明書本体は別保管であり、公開監査記録に依存する。 2026-11-15 cost72 bit111 WIN7証明書を独立検査し、cost75b統合後の対象S5親を局所的に2軌道・費用147から1軌道・費用75へ縮小した。global frontierは未再計算。2026-11-15 warm multiband 35 WIN7 receipt後の公開frontierは解消S6 1,109・残り6,738・費用531,295・open需要5,008/395,018。35 rootを同実験の17 verified manifest（WIN7 77・LOSS7 200）、central LOSS7 parent-lift 274鍵、category-1候補396行とD4照合し、衝突0（category-1行は証明書とは数えない）。; 2026-11-15 cost69f残り4証明書(bits2/94/109/119)を別V8実行で再検査し全PASS。262,236行、検証訪問560,273局面、union 0/0、4×4行列式による根合法手数一致、8 partのGit blob SHA1・MD5/SHA256一致。cost69fの+9 S6軌道が全て証明書済み 2026-11-15 cost69f全9証明書をPython/Bareiss第三実装で再検査し9/9 PASS（第二検証のV8/BigInt 4件と共通フィールド全一致）。cost69g子の需要は二重役割S5(classes=6)のper-class計数と確定（distinct open parents=3、c1=0,c2=2,c4=2） 2026-11-15 cost72b子 00000000000000809102000002000000（cost 72・需要c1=0,c2=2,c4=0・open親2軌道）の72候補raw sweep完了。WIN7-D10 13（bits 2,11,21,30,31,36,47,66,85,95,97,100,106）・REFUTED-D10 59・打切り0・117,444,772節点。v15 cross-engine 13/13 loss=true、決定性再実行13/13 node-exact。13 rootは証明書未抽出の探索候補のためfrontier寄与0。; 2026-11-15 cost74d公開証明書bits12/66/68/118とcost72b bit85をBigInt独立検査器で5/5再生。D4親持ち上げにより証明書付きS6下限1166→1169（receipt frontier 1179とは区別）; 2026-11-15 cost72b正利得9証明書（bits 2,30,31,36,47,95,97,100,106）をBigInt独立再生9/9、13分割blobと9 whole-file Git SHA1一致。新規S6 manifest 9/9を裏付け、証明書付き下限1169→1178（receipt 1188とは区別）; 2026-11-15 cost78a WIN7証明書5/5（bits 8,20,29,36,109）をBigInt+Number Bareissで二重独立検証し、5 receiptsをhead 1216へfoldして新head 1222/6625/522908/4895/386631（in-manifest marginal 6・childはbit36で閉鎖・第3 class-2 target S5は2行/143）"
 ---
 
 ## 主張
@@ -1330,3 +1357,15 @@ head-1216（canonical chain head 1216/6631/523382/4901/387105不変）のtop-can
 解消計数はmanifest被覆の前進であり、盤全体の勝敗ではない。WIN7証明書は個別7石rootの深さ10以内の先手勝ちのみを証明する。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class2・class4は引き続き **UNKNOWN**。
 
 詳細: [sweep log](../../log/2026-11-15-n11-class2-lane-cost74f-sterile-sweep.md)、[sweep audit](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74f-sweep-audit-20261115.json)、[completed claim](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74f-inflight-20261115.json)。
+
+## 2026-11-15: cost-78a WIN7証明書5/5出版とreceipt fold — chain head 1216→1222
+
+cost-78a（第3 coverable class-2 target S5 `00000000000000809102000000000000` のcost-78 child `00000000000000809102000000400000`・需要 c1=0,c2=2,c4=0）のsweepで得た5 WIN7-D10 root（bits 8,20,29,36,109）について、既公開2件（bit36/bit20）に加えて残り3件（bit29/bit8/bit109）をblind抽出（空kill table・repo-verbatim v16抽出器）し、BigInt 3x3とNumber Bareiss 4x4の二独立検証器で**5/5 PASS**（sub-roots 59/64/58/62/68・union missing/extra 0/0・terminal [13,17]・fbt_drops 0）。3件の抽出は56,463/75,033/88,039行、16,395,724/25,476,207/27,863,969 nodes。manifest `class2-lane-cost78a-win7-certificates-20261115.json`（blob `b0737084…`）は**326,698行・11,806,510 bytes・97,619,220 extraction nodes・311 sub-roots・31 distinct parent-lift orbits**を記録。
+
+5 receiptsをhead 1216/6631/523382/4901/387105にfoldし、新canonical head **`1222/6625/522908/4895/386631`**（solved 1216→1222・in-manifest marginal 6・raw marginal 26・zero-mimなし）。childは**bit36**で閉鎖。第3 target S5は**3行/221 → 2行/143**（残り69/74）、第2開親 `00000000000000801202000100000000` は**79行/6539 → 73行/6065**（child+5親orbit喪失）。best class-4 blocker S5 `00000000020000003800000080000000` は**18行/1460不変**。best class-2は第3 target（2行/143）で、残る69はcost-69g・74はcost-74eが並走担当。両行がWIN7 receiptで閉じれば第3 target S5が先手WINとなりclass-2 blockerが条件付きで閉鎖されるが、現時点では未fold。
+
+fold scriptはrunpyでcost-63g chain head 1216をbyte-identicalに再現し、25入力+claimのgit blob sha、sweep audit再導出（78候補・5 WIN7/73 REFUTED/0 capped・184,253,822 nodes・pilots 3402×10・determinism rerun node-exact・v15 5/5 WIN+3/3 refuted anchors sum 64,742,220）、manifest totals再合計、112 folded rootsとのraw/D4 disjointness、set等式 `s_after == s_1216 ∪ covers(5 roots)` をassertする。completed claim後の再実行で3出力（head JSON `c1c0f0a4…`・ranking `fac7bd27…`・top-candidates `99f97608…`）のbyte-identityとfold数値を再assertする制御付き。
+
+解消計数はmanifest被覆の前進であり、盤全体の勝敗ではない。WIN7証明書は個別7石rootの深さ10以内の先手勝ちのみを証明する。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class2・class4は引き続き **UNKNOWN**。
+
+詳細: [log](../../log/2026-11-15-n11-class2-lane-cost78a-certificates-and-receipt-fold.md)、[certificate manifest](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78a-win7-certificates-20261115.json)、[fold head JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost78a-receipts-recompute-20261115.json)、[completed claim](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78a-inflight-20261115.json)。

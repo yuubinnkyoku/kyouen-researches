@@ -1827,6 +1827,9 @@
 - ← depends_on [K0816](../items/K0816-five-row-m20-deficient-nonexistence.md): 5x18 29石witnessが下界（M≥19）と5x18陽性対照の由来
 - ← depends_on [K0821](../items/K0821-five-row-q7-m21-deficient-nonexistence.md): 5x18 29-stone witness is the lower bound (least witness width 18) and the positive-control board (rediscovered SAT, 343,134 conflicts)
 - ← depends_on [K0834](../items/K0834-five-row-q7-m22-deficient-nonexistence.md): 5x18 29-stone witness is the lower bound (least witness width 18) and the positive-control board (rediscovered SAT, 343,134 conflicts, bit-exact with the K0821 lane control)
+- ← depends_on [K0835](../items/K0835-five-row-q7-m23-deficient-nonexistence.md): 5x18 29-stone witness is the lower bound (least witness width 18) and the positive-control board (rediscovered SAT, 343,134 conflicts, bit-exact with the K0821 and K0834 lane controls)
+- ← depends_on [K0836](../items/K0836-five-row-q7-m24-deficient-nonexistence.md): 5x18 29-stone witness is the lower bound (least witness width 18) and the positive-control board (rediscovered SAT, 343,134 conflicts, bit-exact with the K0821/K0834/K0835 lane controls)
+- ← depends_on [K0837](../items/K0837-five-row-q7-m25-deficient-nonexistence.md): 5x18 29-stone witness is the lower bound (least witness width 18) and the positive-control board (rediscovered SAT, 343,134 conflicts, bit-exact with the K0821/K0834/K0835/K0836 lane controls — fourth cross-lane reproduction)
 
 ## [K0333](../items/K0333-modular-polynomial-curve-q-point-bound.md) 次数k≥2の剰余多項式グラフは直線高々k点・円高々2k点でq≥2k+1版が全点安全
 
@@ -4215,6 +4218,9 @@
 - → supports [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): M_{5,7}=19 予想のうち単一行欠損クラスの行1/行3側の否定部
 - ← depends_on [K0821](../items/K0821-five-row-q7-m21-deficient-nonexistence.md): 5x19 witness-free by the occupancy complete enumeration (via the K0759 machine) — the first element of the witness-free width set
 - ← depends_on [K0834](../items/K0834-five-row-q7-m22-deficient-nonexistence.md): 5x19 witness-free by the occupancy complete enumeration (via the K0759 machine) — the first element of the witness-free width set
+- ← depends_on [K0835](../items/K0835-five-row-q7-m23-deficient-nonexistence.md): 5x19 witness-free by the occupancy complete enumeration (via the K0759 machine) — the first element of the witness-free width set
+- ← depends_on [K0836](../items/K0836-five-row-q7-m24-deficient-nonexistence.md): 5x19 witness-free by the occupancy complete enumeration (via the K0759 machine) — the first element of the witness-free width set
+- ← depends_on [K0837](../items/K0837-five-row-q7-m25-deficient-nonexistence.md): 5x19 witness-free by the occupancy complete enumeration (via the K0759 machine) — the first element of the witness-free width set
 
 ## [K0739](../items/K0739-five-row-m19-class2-nonexistence.md) 5×19 の (5,6,6,6,6) 型・行2欠損の極大安全配置は全8,378ケースで存在しない — 単一行欠損クラス完結
 
@@ -4482,7 +4488,7 @@
 - ← depends_on [K0765](../items/K0765-width8-circle-twelve-point-sizes-and-q13-q16-row-formula.md): 接点補題（f|t・符号論）の原形
 - ← depends_on [K0767](../items/K0767-width9-18-circle-point-max-row-formulas.md): P=2d+s・接点行s≤2の会計枠組み
 - ← depends_on [K0813](../items/K0813-width2-5-circle-point-max-and-q9-q10-row-formula.md): P(6)=8（単調性によるP(5)≤8）とwitness円(2x−7)²+(2y−7)²=50の原形
-- ← depends_on [K0831](../items/K0831-circle-row-window-denominator-lemma.md): 接点・判別式の行ごとの構造解析の枠組み（本補題は中心座標の可直接的な分母制御を与える）
+- ← depends_on [K0831](../items/K0831-circle-row-window-denominator-lemma.md): 接点・判別式の行ごとの構造解析の枠組み
 
 ## [K0764](../items/K0764-width7-circle-ten-point-sizes-and-q11-q12-row-formula.md) 幅7整数格子の円は全mでP(7)=10・可能サイズ{7,8,10} — 9・11・12点円の全称不在とq=11..12の行分離公式
 
@@ -4919,6 +4925,9 @@
 - ← depends_on [K0829](../items/K0829-six-row-q8-m21-deficient-nonexistence.md): census (circleABC integer triples, line pairs) and the sequential-counter/maximality core used verbatim (sat.js / sat2.js); the rowfixed unit clause is the only addition
 - ← depends_on [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md): sat2.js def-mode 完全符号化を verbatim 使用（全三つ組census・逐次カウンタ・極大性・lex=H,V,HVHV）; witness の検証にも sat.js verifyConfig（census不使用）を使用
 - ← depends_on [K0834](../items/K0834-five-row-q7-m22-deficient-nonexistence.md): census (circleABC integer triples, line pairs) and the sequential-counter/maximality core are used verbatim (sat.js / sat2.js / sat3.js); the class-split unit clauses and the k/minpos splits are the only additions
+- ← depends_on [K0835](../items/K0835-five-row-q7-m23-deficient-nonexistence.md): census (circleABC integer triples, line pairs) and the sequential-counter/maximality core are used verbatim (sat.js / sat2.js / sat3.js); the class-split unit clauses and the k/minpos splits are the only additions
+- ← depends_on [K0836](../items/K0836-five-row-q7-m24-deficient-nonexistence.md): census (circleABC integer triples, line pairs) and the sequential-counter/maximality core are used verbatim (sat.js / sat2.js / sat3.js); the class-split unit clauses and the k/minpos splits are the only additions
+- ← depends_on [K0837](../items/K0837-five-row-q7-m25-deficient-nonexistence.md): census (circleABC integer triples, line pairs) and the sequential-counter/maximality core are used verbatim (sat.js / sat2.js / sat3.js); the class-split unit clauses and the k/minpos splits are the only additions
 
 ## [K0811](../items/K0811-sa-row-deficient-witnesses.md) SA探索による行欠損極大witness — M_{6,5}≥29・M_{6,6}≥22・M_{5,6}≥19（K0810の下界を更新・第2弾/第3弾で延長）
 
@@ -4976,6 +4985,9 @@
 - ← generalizes [K0821](../items/K0821-five-row-q7-m21-deficient-nonexistence.md): the same class-split proposition one width further: 5x20 (K0816) -> 5x21; witness-free width set {19,20} -> {19,20,21}
 - ← generalizes [K0822](../items/K0822-row-mirror-canonical-class-count.md): the 19 row-mirror-canonical classes swept at 5x20 equal C(5) = 19 (the first recorded use of the w=5 count)
 - ← depends_on [K0834](../items/K0834-five-row-q7-m22-deficient-nonexistence.md): the m=20 nonexistence item; the k x minpos decomposition protocol for the hard singleton classes {0},{1} and the 5x18 positive control are taken from its cross-check lane
+- ← depends_on [K0835](../items/K0835-five-row-q7-m23-deficient-nonexistence.md): the m=20 nonexistence item; the k x minpos decomposition protocol for the hard singleton classes {0},{1} and the 5x18 positive control are taken from its cross-check lane
+- ← depends_on [K0836](../items/K0836-five-row-q7-m24-deficient-nonexistence.md): the m=20 nonexistence item; the k x minpos decomposition protocol for the hard singleton classes {0},{1} and the 5x18 positive control are taken from its cross-check lane
+- ← depends_on [K0837](../items/K0837-five-row-q7-m25-deficient-nonexistence.md): the m=20 nonexistence item; the k x minpos decomposition protocol for the hard singleton classes {0},{1} and the 5x18 positive control are taken from its cross-check lane
 
 ## [K0817](../items/K0817-circle-strip-subadditivity-and-density-bound.md) 円の連続行窓点数 P(w) の劣加法性・鋭い線形誤差上界・P(83)=34
 
@@ -5018,6 +5030,9 @@
 - → generalizes [K0816](../items/K0816-five-row-m20-deficient-nonexistence.md): the same class-split proposition one width further: 5x20 (K0816) -> 5x21; witness-free width set {19,20} -> {19,20,21}
 - ← depends_on [K0834](../items/K0834-five-row-q7-m22-deficient-nonexistence.md): the m=21 nonexistence item; the completion lane reuses its scripts byte-identically and its control reproduces bit-exactly; witness-free width set {19,20,21} -> {19,20,21,22}
 - ← generalizes [K0834](../items/K0834-five-row-q7-m22-deficient-nonexistence.md): the same class-split proposition one width further: 5x21 (K0821) -> 5x22; witness-free width set {19,20,21} -> {19,20,21,22}
+- ← depends_on [K0835](../items/K0835-five-row-q7-m23-deficient-nonexistence.md): the m=21 nonexistence item; the witness-free width set {19,20,21} and the minpos coverage convention floor((m-1)/2)
+- ← depends_on [K0836](../items/K0836-five-row-q7-m24-deficient-nonexistence.md): the m=21 nonexistence item; the witness-free width set {19,20,21} and the minpos coverage convention floor((m-1)/2)
+- ← depends_on [K0837](../items/K0837-five-row-q7-m25-deficient-nonexistence.md): the m=21 nonexistence item; the witness-free width set {19,20,21} and the minpos coverage convention floor((m-1)/2)
 
 ## [K0822](../items/K0822-row-mirror-canonical-class-count.md) Row-mirror-canonical deficiency class count for w-row class-split sweeps: C(w) = 2^(w-1) + 2^(ceil(w/2)-1) - 1 (19 at w=5, 35 at w=6, 71 at w=7, 135 at w=8)
 
@@ -5078,12 +5093,12 @@
 - → depends_on [K0764](../items/K0764-width7-circle-ten-point-sizes-and-q11-q12-row-formula.md): P(7) = 10（上界）と 10点円プロファイル（5二重行+2空行）の全称証明。本項目は等号ケースの分類
 - → depends_on [K0831](../items/K0831-circle-row-window-denominator-lemma.md): 分母補題 q | 4δ′（L2）と parity 排除（L3）が探索の有限性を与える
 - → supports [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md): (7,10) 帯の ≥10 点危険円は m ≤ 587 では 50 族のみ（2m−14 本・行 0,3,6 強制通過）
-- ← proves [K0831](../items/K0831-circle-row-window-denominator-lemma.md): K0830 の探索有限性（q ∈ {1,2,4,8}・q=1 への絞り込み L2/L3）の根拠
+- ← proves [K0831](../items/K0831-circle-row-window-denominator-lemma.md): K0830の7行候補制限は訂正後も成立。d=5ならg=1でq|4、d=4ならg∈{1,2}でq|8。一般w,dの旧ceil割り切り主張は本項目で撤回。
 
-## [K0831](../items/K0831-circle-row-window-denominator-lemma.md) 円の行窓二重行に対する分母補題: 2β=p/q 既約なら q | 4δ′（δ′は二重行対の行間隔）・w行d二重行なら q | 4⌈(w−1)/(d−1)⌉
+## [K0831](../items/K0831-circle-row-window-denominator-lemma.md) 円の行窓二重行に対する分母補題: q | 4g（gは二重行位置差の最大公約数）・g ≤ floor((w−1)/(d−1))
 
-- → proves [K0830](../items/K0830-seven-row-ten-point-circle-classification.md): K0830 の探索有限性（q ∈ {1,2,4,8}・q=1 への絞り込み L2/L3）の根拠
-- → depends_on [K0763](../items/K0763-width6-circle-eight-point-max-and-q9-q12-row-formula.md): 接点・判別式の行ごとの構造解析の枠組み（本補題は中心座標の可直接的な分母制御を与える）
+- → proves [K0830](../items/K0830-seven-row-ten-point-circle-classification.md): K0830の7行候補制限は訂正後も成立。d=5ならg=1でq|4、d=4ならg∈{1,2}でq|8。一般w,dの旧ceil割り切り主張は本項目で撤回。
+- → depends_on [K0763](../items/K0763-width6-circle-eight-point-max-and-q9-q12-row-formula.md): 接点・判別式の行ごとの構造解析の枠組み
 - ← depends_on [K0830](../items/K0830-seven-row-ten-point-circle-classification.md): 分母補題 q | 4δ′（L2）と parity 排除（L3）が探索の有限性を与える
 
 ## [K0832](../items/K0832-vertical-fiber-degree-reduction.md) 垂直ファイバー次数による一般縮約 — q>t|B| なら占有ベクトルで厳密化
@@ -5106,3 +5121,45 @@
 - → depends_on [K0821](../items/K0821-five-row-q7-m21-deficient-nonexistence.md): the m=21 nonexistence item; the completion lane reuses its scripts byte-identically and its control reproduces bit-exactly; witness-free width set {19,20,21} -> {19,20,21,22}
 - → depends_on [K0738](../items/K0738-five-row-m19-class1-nonexistence.md): 5x19 witness-free by the occupancy complete enumeration (via the K0759 machine) — the first element of the witness-free width set
 - → generalizes [K0821](../items/K0821-five-row-q7-m21-deficient-nonexistence.md): the same class-split proposition one width further: 5x21 (K0821) -> 5x22; witness-free width set {19,20,21} -> {19,20,21,22}
+- ← depends_on [K0835](../items/K0835-five-row-q7-m23-deficient-nonexistence.md): the m=22 nonexistence item; this lane reuses its scripts byte-identically and its control reproduces bit-exactly; witness-free width set {19,20,21,22} -> {19,20,21,22,23}; its audit-20261115 sharpening convention (M = 19 or >= maxwitness+2) is applied to the extended free set
+- ← generalizes [K0835](../items/K0835-five-row-q7-m23-deficient-nonexistence.md): the same class-split proposition one width further: 5x22 (K0834) -> 5x23; witness-free width set {19,20,21,22} -> {19,20,21,22,23}
+- ← depends_on [K0836](../items/K0836-five-row-q7-m24-deficient-nonexistence.md): the m=22 nonexistence item; its audit-20261115 sharpening convention (M = 19 or >= maxwitness+2) is applied to the extended free set
+- ← depends_on [K0837](../items/K0837-five-row-q7-m25-deficient-nonexistence.md): the m=22 nonexistence item; its audit-20261115 sharpening convention (M = 19 or >= maxwitnessfree+2) is applied to the extended free set
+
+## [K0835](../items/K0835-five-row-q7-m23-deficient-nonexistence.md) 5x23 q=7 row-deficient maximal nonexistence (all 19 canonical classes UNSAT) — witness-free width set of (5,7) extends to {19,20,21,22,23}, M_{5,7} = 19 or >= 25
+
+- → depends_on [K0810](../items/K0810-sat-row-deficient-witnesses.md): census (circleABC integer triples, line pairs) and the sequential-counter/maximality core are used verbatim (sat.js / sat2.js / sat3.js); the class-split unit clauses and the k/minpos splits are the only additions
+- → depends_on [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 5x18 29-stone witness is the lower bound (least witness width 18) and the positive-control board (rediscovered SAT, 343,134 conflicts, bit-exact with the K0821 and K0834 lane controls)
+- → depends_on [K0816](../items/K0816-five-row-m20-deficient-nonexistence.md): the m=20 nonexistence item; the k x minpos decomposition protocol for the hard singleton classes {0},{1} and the 5x18 positive control are taken from its cross-check lane
+- → depends_on [K0821](../items/K0821-five-row-q7-m21-deficient-nonexistence.md): the m=21 nonexistence item; the witness-free width set {19,20,21} and the minpos coverage convention floor((m-1)/2)
+- → depends_on [K0834](../items/K0834-five-row-q7-m22-deficient-nonexistence.md): the m=22 nonexistence item; this lane reuses its scripts byte-identically and its control reproduces bit-exactly; witness-free width set {19,20,21,22} -> {19,20,21,22,23}; its audit-20261115 sharpening convention (M = 19 or >= maxwitness+2) is applied to the extended free set
+- → depends_on [K0738](../items/K0738-five-row-m19-class1-nonexistence.md): 5x19 witness-free by the occupancy complete enumeration (via the K0759 machine) — the first element of the witness-free width set
+- → generalizes [K0834](../items/K0834-five-row-q7-m22-deficient-nonexistence.md): the same class-split proposition one width further: 5x22 (K0834) -> 5x23; witness-free width set {19,20,21,22} -> {19,20,21,22,23}
+- ← depends_on [K0836](../items/K0836-five-row-q7-m24-deficient-nonexistence.md): the m=23 nonexistence item; this lane reuses its scripts byte-identically and its control reproduces bit-exactly; witness-free width set {19,20,21,22,23} -> {19,20,21,22,23,24}
+- ← generalizes [K0836](../items/K0836-five-row-q7-m24-deficient-nonexistence.md): the same class-split proposition one width further: 5x23 (K0835) -> 5x24; witness-free width set {19,20,21,22,23} -> {19,20,21,22,23,24}
+- ← depends_on [K0837](../items/K0837-five-row-q7-m25-deficient-nonexistence.md): the m=23 nonexistence item; its mid-sweep environment-reset bit-exact re-run reconciliation protocol is reused for this lane's outage resume
+
+## [K0836](../items/K0836-five-row-q7-m24-deficient-nonexistence.md) 5x24 q=7 row-deficient maximal nonexistence (all 19 canonical classes UNSAT) — witness-free width set of (5,7) extends to {19,20,21,22,23,24}, M_{5,7} = 19 or >= 26
+
+- → depends_on [K0810](../items/K0810-sat-row-deficient-witnesses.md): census (circleABC integer triples, line pairs) and the sequential-counter/maximality core are used verbatim (sat.js / sat2.js / sat3.js); the class-split unit clauses and the k/minpos splits are the only additions
+- → depends_on [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 5x18 29-stone witness is the lower bound (least witness width 18) and the positive-control board (rediscovered SAT, 343,134 conflicts, bit-exact with the K0821/K0834/K0835 lane controls)
+- → depends_on [K0816](../items/K0816-five-row-m20-deficient-nonexistence.md): the m=20 nonexistence item; the k x minpos decomposition protocol for the hard singleton classes {0},{1} and the 5x18 positive control are taken from its cross-check lane
+- → depends_on [K0821](../items/K0821-five-row-q7-m21-deficient-nonexistence.md): the m=21 nonexistence item; the witness-free width set {19,20,21} and the minpos coverage convention floor((m-1)/2)
+- → depends_on [K0834](../items/K0834-five-row-q7-m22-deficient-nonexistence.md): the m=22 nonexistence item; its audit-20261115 sharpening convention (M = 19 or >= maxwitness+2) is applied to the extended free set
+- → depends_on [K0835](../items/K0835-five-row-q7-m23-deficient-nonexistence.md): the m=23 nonexistence item; this lane reuses its scripts byte-identically and its control reproduces bit-exactly; witness-free width set {19,20,21,22,23} -> {19,20,21,22,23,24}
+- → depends_on [K0738](../items/K0738-five-row-m19-class1-nonexistence.md): 5x19 witness-free by the occupancy complete enumeration (via the K0759 machine) — the first element of the witness-free width set
+- → generalizes [K0835](../items/K0835-five-row-q7-m23-deficient-nonexistence.md): the same class-split proposition one width further: 5x23 (K0835) -> 5x24; witness-free width set {19,20,21,22,23} -> {19,20,21,22,23,24}
+- ← depends_on [K0837](../items/K0837-five-row-q7-m25-deficient-nonexistence.md): the m=24 nonexistence item; this lane reuses its scripts byte-identically and its control reproduces bit-exactly; witness-free width set {19,...,24} -> {19,...,25}
+- ← generalizes [K0837](../items/K0837-five-row-q7-m25-deficient-nonexistence.md): the same class-split proposition one width further: 5x24 (K0836) -> 5x25; witness-free width set {19,20,21,22,23,24} -> {19,20,21,22,23,24,25}
+
+## [K0837](../items/K0837-five-row-q7-m25-deficient-nonexistence.md) 5x25 q=7 row-deficient maximal nonexistence (all 19 canonical classes UNSAT) — witness-free width set of (5,7) extends to {19,20,21,22,23,24,25}, M_{5,7} = 19 or >= 27
+
+- → depends_on [K0810](../items/K0810-sat-row-deficient-witnesses.md): census (circleABC integer triples, line pairs) and the sequential-counter/maximality core are used verbatim (sat.js / sat2.js / sat3.js); the class-split unit clauses and the k/minpos splits are the only additions
+- → depends_on [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 5x18 29-stone witness is the lower bound (least witness width 18) and the positive-control board (rediscovered SAT, 343,134 conflicts, bit-exact with the K0821/K0834/K0835/K0836 lane controls — fourth cross-lane reproduction)
+- → depends_on [K0816](../items/K0816-five-row-m20-deficient-nonexistence.md): the m=20 nonexistence item; the k x minpos decomposition protocol for the hard singleton classes {0},{1} and the 5x18 positive control are taken from its cross-check lane
+- → depends_on [K0821](../items/K0821-five-row-q7-m21-deficient-nonexistence.md): the m=21 nonexistence item; the witness-free width set {19,20,21} and the minpos coverage convention floor((m-1)/2)
+- → depends_on [K0834](../items/K0834-five-row-q7-m22-deficient-nonexistence.md): the m=22 nonexistence item; its audit-20261115 sharpening convention (M = 19 or >= maxwitnessfree+2) is applied to the extended free set
+- → depends_on [K0835](../items/K0835-five-row-q7-m23-deficient-nonexistence.md): the m=23 nonexistence item; its mid-sweep environment-reset bit-exact re-run reconciliation protocol is reused for this lane's outage resume
+- → depends_on [K0836](../items/K0836-five-row-q7-m24-deficient-nonexistence.md): the m=24 nonexistence item; this lane reuses its scripts byte-identically and its control reproduces bit-exactly; witness-free width set {19,...,24} -> {19,...,25}
+- → depends_on [K0738](../items/K0738-five-row-m19-class1-nonexistence.md): 5x19 witness-free by the occupancy complete enumeration (via the K0759 machine) — the first element of the witness-free width set
+- → generalizes [K0836](../items/K0836-five-row-q7-m24-deficient-nonexistence.md): the same class-split proposition one width further: 5x24 (K0836) -> 5x25; witness-free width set {19,20,21,22,23,24} -> {19,20,21,22,23,24,25}
