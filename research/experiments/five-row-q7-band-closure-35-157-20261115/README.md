@@ -34,6 +34,15 @@ energy + Melchior による全称証明・SAT に依らない）。witness-free 
   （`output/ts-census-check.json`）。さらに**全帯 m=35..157 の予測曲線数表**を
   第3系で計算済み（`output/ts-census-fullband.json`・123幅網羅・欠落なし）—
   掃引進行に合わせて各幅の meta curves と照合する。
+- **K0726 アンカー検証**（`scripts/ts_census_k0726_anchor.js`・
+  `output/ts-census-k0726-anchor.json`）: 新規に書き直した2系統
+  （A: 水平弦対+第3点、B: 全三点組 Cramer 整数解・被覆論非依存）が
+  **K0726 の 5×19 census（95円 = 7点8本+8点87本・5行直線・64,980 行対構成・
+  132,180 非共線三点組・83,471 distinct 円）と全数値完全一致**、
+  5×18（84円 = 7点4本+8点80本）も完全一致、両系統互いに一致・self-check 0失敗。
+  帯頭 m=35 も 239円+5直線=244 曲線で records.jsonl と一致。
+  これで K0726 ↔ 本レーン検証スタック ↔ genfast3 掃引記録（13/13）↔ sat2
+  byte-identity の鎖が帯頭で接続し、全帯予測表は repo 確立済み census に錨止めされた。
 - 帯掃引: 各幅 genfast3 def-mode CNF → kissat 4.0.4（230s cap）→ 記録は
   `output/records.jsonl` に resume-safe に追記。**def-mode UNSAT はその幅の
   欠損極大非存在の完全証明（1インスタンスで完結）**。INDET 幅が出た場合は
@@ -45,7 +54,7 @@ energy + Melchior による全称証明・SAT に依らない）。witness-free 
 ## 進捗
 
 - 2026-11-15: IN FLIGHT claim。較正完了（byte-identity 6/6・陽性対照二重検証 PASS・
-  honest negative 5x19・第三系 census 13/13・全帯予測表 123幅）。
+  honest negative 5x19・第三系 census 13/13・全帯予測表 123幅・K0726 アンカー一致）。
 - 帯掃引（def-mode・230s cap・INDET 0）: **m=35, 36, 37, 40..49 の13幅 UNSAT**
   （conflicts 2,809,004 (m=35) → 漸減 → 1.36M..1.79M の平台帯・m=49 で 1,483,146。
   records.jsonl は main に checkpoint push 済み・各幅の curves は第三系表と一致）。
