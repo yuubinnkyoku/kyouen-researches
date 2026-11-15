@@ -268,6 +268,10 @@ const repeatedParents = [...parentOrbits.entries()]
 if (parentOrbits.size !== 13 || childIncidences.length !== 2 || repeatedParents.length !== 1) {
   throw new Error("unexpected D4 parent-lift multiplicity");
 }
+const baselineClosedParentOrbits = parentOrbits.size - fold.totals.total_marginal;
+if (baselineClosedParentOrbits !== 1) {
+  throw new Error("D4 parent-orbit count does not reconcile with fold marginal");
+}
 if (certificates[0].root_d4_canonical_hex === certificates[1].root_d4_canonical_hex) {
   throw new Error("the two WIN7 roots unexpectedly share a D4 orbit");
 }
@@ -281,6 +285,7 @@ const result = {
   parent_lifts: {
     deletion_edges: 14,
     unique_d4_parent_orbits: parentOrbits.size,
+    baseline_closed_parent_orbits: baselineClosedParentOrbits,
     shared_child_orbit: childOrbit,
     shared_child_incidences: childIncidences,
     repeated_parent_orbits: repeatedParents
