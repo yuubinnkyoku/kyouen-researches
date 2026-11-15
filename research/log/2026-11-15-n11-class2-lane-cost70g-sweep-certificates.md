@@ -41,3 +41,10 @@ repo-verbatim `class4_child1_runner.ts`（v15、remote blob `8744fc65b6b7cac6bd5
 ## 勝敗status
 
 標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class 1、class 2、class 4 はすべて **UNKNOWN**。REFUTED-D10 はWIN7-D10不在のみを証明し（LOSS証明ではない）、WIN7証明書8件は個々の7石rootからdepth 10以内の勝ちのみを証明する。いかなるfrontier数も本sweep・証明書だけでは変化しない（fold待ち）。
+
+## 運用記録：push transport の2種のハザードと対策（K0783トランケーション事故と修復）
+
+- **read_file のページ上限は行数ではなくバイト（約27–54KB/ページ）**: 日本語を含むファイル（K0783本文など）では `limit: 1500` を指定しても1ページあたり約440行しか返らない。「返った行数 < limit で最終ページ」と判定すると**途中で打ち切った部分内容をそのままpushしてしまう**。実際にK0783追記push（commit `d49d72a0`）が49,287 chars でトランケートした版を着地させてしまった。
+- **対策**: (1) paging終端は「offset が行数上限に達して read がエラー」または「空ページ」のみをEOFとみなす（返却行数での判定は禁止）。(2) push前に累積文字数をローカルの `wc -c`/`len()` と一致検証。(3) push後は必ずremote blob sha をローカルgit hash-object と照合。
+- **修復**: 200行paging×8ページで全文（165,214 chars / 1511行）を読み直し、トランケート版（blob `1b9bab5a…`）を上書き（commit `9fe2be0f`）。**remote blob sha `cd1386d4c9392437e806e8a9bf59836469507189` がローカルhash と byte-exact 一致し、全本文＋cost-70gセクションが完全着地したことを確認**。
+- run_typescript の16MiB記録制限: 1.5MB超の証明書pushではプログラムがMemoryLimitErrorで終了してもpush自体は実行済みの場合がある。着地はディレクトリlistingのblob sha照合で確認する（本セッションではbit29/76/9/34がこの形で着地し、すべてsha一致を確認済み）。
