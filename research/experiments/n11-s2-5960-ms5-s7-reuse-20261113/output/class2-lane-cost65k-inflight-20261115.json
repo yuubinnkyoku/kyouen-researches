@@ -1,8 +1,8 @@
 {
  "schema": "n11-class2-lane-cost65k-inflight-20261115-v1",
- "title": "n11 class2-lane cost-65k sweep in flight (claimed by a long-term lane execution)",
+ "title": "n11 class2-lane cost-65k sterile sweep complete (long-term class2 lane)",
  "date": "2026-11-15",
- "status": "in_flight",
+ "status": "completed",
  "claimed_by": "long-term class2 lane",
  "s5": "00000000000000801202000000200000",
  "s6_child": "00000000020000801202000000200000",
@@ -103,6 +103,35 @@
   118
  ],
  "enumeration": "legal_candidates.py independent enumeration (exact Bareiss 4x4 integer determinants): 65 legal candidates, bit-exact with the published manifest edge cost 65; enumeration run in this session before the claim push",
+ "sweep_results": {
+  "candidates": 65,
+  "win7_d10_bits": [],
+  "refuted_d10": 65,
+  "capped": 0,
+  "candidate_nodes": 32457462,
+  "pilots": 8,
+  "determinism_rerun": "batch 6 (bits 74,75,76,77,79,83,84,86) re-run with the same v16 runner: node-exact identical verdicts/nodes/capped/terminalStoneRange (ms ignored), saved as class2-lane-cost65k-v16-determinism-rerun-20261115.jsonl",
+  "v15_cross_engine": "class4_child1_runner.ts (v15) on anchor bits 7/86/118: all loss=false (nodes 125301/2037455/5749144, pilot 5949 loss=false), agreeing with the v16 REFUTED-D10 verdicts, saved as class2-lane-cost65k-v15-crosscheck-20261115.jsonl",
+  "terminal_range_note": "all 65 candidates have terminal stone ranges within the depth-10 bounds; bit 9 shows [13,15] (all lines terminate early), the other 64 show [13,17]"
+ },
+ "raw_artifacts": [
+  "class2-lane-cost65k-raw-batch1-20261115.jsonl",
+  "class2-lane-cost65k-raw-batch2-20261115.jsonl",
+  "class2-lane-cost65k-raw-batch3-20261115.jsonl",
+  "class2-lane-cost65k-raw-batch4-20261115.jsonl",
+  "class2-lane-cost65k-raw-batch5-20261115.jsonl",
+  "class2-lane-cost65k-raw-batch6-20261115.jsonl",
+  "class2-lane-cost65k-raw-batch7-20261115.jsonl",
+  "class2-lane-cost65k-raw-batch8-20261115.jsonl",
+  "class2-lane-cost65k-v16-determinism-rerun-20261115.jsonl",
+  "class2-lane-cost65k-v15-crosscheck-20261115.jsonl"
+ ],
+ "independent_audit": {
+  "script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost65k_raw_sweep_20261115.py",
+  "output": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65k-sweep-audit-20261115.json",
+  "method": "Python standard library only; exact Bareiss 4x4 integer determinants; re-enumerates the 65 legal candidates from scratch (bit-exact with this claim list); re-derives the aggregate from the ten raw JSONLs (65 REFUTED-D10, 0 WIN7, 0 capped, 32,457,462 nodes, 8 pilots at 3402); batch-6 determinism and v15 anchors cross-checked; audit script re-run byte-identical"
+ },
+ "completion_note": "STERILE SWEEP (negative experimental fact): no WIN7-D10 candidate exists for this child, so there is no certificate to extract and no fold material; the canonical chain frontier is unchanged at 1199/6648/524616/4918/388339 and the child 00000000020000801202000000200000 remains an open S6 row of parent1 (38 rows / 2837 at head 1199). Closing this child row by refutation would require evidence beyond depth 10 (each of the 65 seven-stone roots would need a refutation at depth > 10 or an equivalent invariant); the row may instead close via a fold of WIN7 receipts from other child rows of parent1.",
  "engine": {
   "script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/class4_child1_runner_v16.ts",
   "blob_sha": "0a4a86f6828dc010c89ff17596054336a6b6091f",
@@ -113,7 +142,7 @@
   "pilot_control": "per-batch d6 pilot on the fixed control position (expect loss=false, nodes=3402)"
  },
  "verdict_semantics": "loss=true => WIN7-within-depth-10 candidate (certificate rebuild target); loss=false && !capped => REFUTED-D10, no first-player win within depth 10 (NOT a LOSS proof); capped => proves nothing either way",
- "frontier_impact_note": "No frontier count changes from the sweep alone: any WIN7 receipts are fold material only and must be folded on the canonical chain head 1199/6648/524616/4918/388339 (class-frontier-cost63f-receipts-recompute-20261115.json) with the rebase discipline; the child remains an open S6 row at head 1199 until a fold closes it",
+ "frontier_impact_note": "Confirmed by the completed sweep: no frontier count changes (no WIN7 receipts, no fold); the canonical chain head remains 1199/6648/524616/4918/388339 (class-frontier-cost63f-receipts-recompute-20261115.json).",
  "coordination_note": "the cost-63g sweep is complete on the parallel lane (14 WIN7-D10 per its sweep audit, certificates in publication) and its fold is not claimed here; the cost-78a certificates/fold and the cost-69g/65j/74e lanes are parallel in flight; collision protocol per the cost-72b/cost-76a/cost-63f fold precedents",
  "unknown_note": "The standard 11x11 empty board, both two-stone roots {49,60}/{59,60}, S2 {59,60}, class 2 and class 4 all remain UNKNOWN."
 }
