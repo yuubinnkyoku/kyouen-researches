@@ -33,6 +33,23 @@
 - sat3.js `--class=D` は D 内の行を ≤4、D 外の行を exactly 5 に固定
   (rowGe 単位制約)。census core は sat2.js (K0810)。
 
+
+## 欠損行クラス分割の独立監査
+
+`python3 scripts/verify_classes.py --output output/class-partition-audit.json` を実行し、`classes.txt` の行反射軌道分割を独立に再構成した。
+
+- 非空の欠損行集合: 127 個。
+- 行反射 `y ↦ 6−y` で固定される非空集合: 15 個（4つの反射軌道の非空和集合）。
+- 残る112集合は56組の二元軌道。
+- Burnsideの補題による軌道数: `(127+15)/2 = 71`。
+- 掲載代表: 71個、重複行0・重複軌道0・欠落軌道0・非正準代表0。
+
+したがって `classes.txt` は、127個すべての非空欠損行集合を行反射で割った71軌道を、ちょうど一度ずつ覆う。これはクラス分割の完全性監査であり、SAT符号化・ソルバ結果・幾何配置の正しさを検査するものではない。
+
+- 検証器: `scripts/verify_classes.py`
+- 結果: `output/class-partition-audit.json`
+
+
 ## 手法・較正
 
 - 生成器: sat3.js (md5 `d03f908ea99ba819caee2a6fbb471c1b`・
