@@ -46,6 +46,15 @@ artifacts:
 - path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/p2207_d_verdicts.json
   role: data
   note: p=2207の全1103 dのCNF UNSAT判定（反例候補。DRAT未検査）
+- path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3719-1861/receipt.json
+  role: manifest
+  note: p=3719の等号不達成（サイズh+2の単一CNF・DRAT VERIFIED）
+- path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-5623-2813/receipt.json
+  role: manifest
+  note: p=5623の等号不達成（サイズh+2の単一CNF・DRAT VERIFIED）
+- path: research/experiments/parabola-p2207-no-equality-witness-20261107/census_h2_single_cnf.py
+  role: solver
+  note: 等号判定を1素数1CNFで行う国勢調査器。3701..6199の249素数を処理し11個の不達成を検出
 - path: research/experiments/parabola-p2207-no-equality-witness-20261107/README.md
   role: source
   note: 反例候補の方法・全数照合・信頼境界
@@ -80,7 +89,7 @@ artifacts:
 - path: research/experiments/parabola-equality-refutation-20261109/README.md
   role: source
   note: 全称命題の反証の論理と有限計算の信頼境界
-scope: 全奇素数pについてQ_p内の最大安全サイズA(p)が(p+3)/2に等しいという全称命題。反例p=2647の最大値そのものは決定しない。
+scope: 全奇素数pについてQ_p内の最大安全サイズA(p)が(p+3)/2に等しいという全称命題。反例p=2647の最大値そのものは決定しない。3701..6199の249素数を単一CNFで国勢調査し、11素数（3719・3727・3967・4211・4231・4373・4759・5039・5051・5059・5623）で不達成を証明書つきで確認した（K0812）。
 evidence: K0706の全1323 dの修正版DRAT検査とK0334の等価よりA(2647)<=1324<1325。全称命題は有限計算で監査された反例によって否定される。
 ---
 

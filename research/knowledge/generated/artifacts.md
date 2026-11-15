@@ -3294,6 +3294,15 @@
 ## [research/experiments/four-row-q4-q5-frontier-20261115/output/ts-verify-frontier.json](../../../research/experiments/four-row-q4-q5-frontier-20261115/output/ts-verify-frontier.json)
 
 - [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (data): (6,4) m=41 witness の第3系統検証 PASS・陽性対照（m=40 witness 再PASS）・陰性対照（1石移動で maxCirc=4 unsafe+10 uncovered を検出）
+## [research/experiments/four-row-q5-m21-class-split-20261115/README.md](../../../research/experiments/four-row-q5-m21-class-split-20261115/README.md)
+
+- [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (proof): 高速レーン (2026-11-15) IN FLIGHT: (4,5) m=21 absence-capable 完全被覆掃引 (9 正準欠損クラス mod V・単一クラス k∈0..3×minpos p∈0..10 sound H-split・multi 7 直接・76インスタンス cap 600s resumable・driver v2)。全 UNSAT なら M_{4,5}=21 or >=23・SAT なら M ∈ [22,140]。対照 (4,20,5) class{0} k3 p1 SAT 20.0s/375,415・復号 witness は m=20 witness の V 像 (js+py 検証)
+## [research/experiments/four-row-q5-m21-class-split-20261115/output/records.jsonl](../../../research/experiments/four-row-q5-m21-class-split-20261115/output/records.jsonl)
+
+- [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (data): 掃引進行記録 (1インスタンス1行・増分 push)。対照 SAT (V 像 decode・2系統検証) + c0k3p0 cap 600s INDET 7,814,011 conflicts
+## [research/experiments/four-row-q5-m21-surgery-20261115/README.md](../../../research/experiments/four-row-q5-m21-surgery-20261115/README.md)
+
+- [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (proof): 高速レーン (2026-11-15): (4,5) m=21 bounded-edit surgery 完全列挙負 — m=20 witness 両埋め込みから (2,2) 12,754/12,816 最終状態葉・(3,3) sd≤6 拡張 1,250,587/1,256,103 葉・すべて safe・0 witness; census 542 曲線は sat2.js (4,21,5) def-mode 記録と一致
 ## [research/experiments/four-six-row-q4-q5-band-extension-20261115/README.md](../../../research/experiments/four-six-row-q4-q5-band-extension-20261115/README.md)
 
 - [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (proof): band-extension レーン（2026-11-15）: claim・較正（sat3=sat2 11対照バイト一致・kissat 閾値 7/8・lean5 端到端・ext_constructive 再現）・結果
@@ -12123,6 +12132,7 @@
 - [K0772](../items/K0772-pysat-seqcounter-equals-small-verification.md) (verifier): 全主割当の拡張可能性を自前 DPLL と Cadical assumption の2系統で判定する照合器
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/census_h2_single_cnf.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/census_h2_single_cnf.py)
 
+- [K0101](../items/K0101-prime-parabola-equality-open.md) (solver): 等号判定を1素数1CNFで行う国勢調査器。3701..6199の249素数を処理し11個の不達成を検出
 - [K0812](../items/K0812-new-exceptional-primes-3719-3727.md) (solver): 等号判定を1素数1CNFで行う国勢調査器（サイズh+2は(1,1,0)の一クラスだけ）
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/check_scaling_invariance.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/check_scaling_invariance.py)
 
@@ -12188,6 +12198,7 @@
 - [K0812](../items/K0812-new-exceptional-primes-3719-3727.md) (data): 形状(1,1,0)の単一CNF（sha256はreceipt参照）
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3719-1861/receipt.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3719-1861/receipt.json)
 
+- [K0101](../items/K0101-prime-parabola-equality-open.md) (manifest): p=3719の等号不達成（サイズh+2の単一CNF・DRAT VERIFIED）
 - [K0812](../items/K0812-new-exceptional-primes-3719-3727.md) (manifest): 13,012変数・105,940節・23,750行DRAT・VERIFIED（31.6秒）
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3727-1865/receipt.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3727-1865/receipt.json)
 
@@ -12218,6 +12229,7 @@
 - [K0812](../items/K0812-new-exceptional-primes-3719-3727.md) (manifest): 17,702変数・146,541節・697,860行DRAT・VERIFIED（4,396秒）
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-5623-2813/receipt.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-5623-2813/receipt.json)
 
+- [K0101](../items/K0101-prime-parabola-equality-open.md) (manifest): p=5623の等号不達成（サイズh+2の単一CNF・DRAT VERIFIED）
 - [K0812](../items/K0812-new-exceptional-primes-3719-3727.md) (manifest): 19,676変数・178,786節・648,324行DRAT・VERIFIED（3,324秒）
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full.json)
 
