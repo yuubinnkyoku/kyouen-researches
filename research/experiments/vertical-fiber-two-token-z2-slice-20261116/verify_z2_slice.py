@@ -366,8 +366,9 @@ def main() -> None:
     ):
         if first[key]:
             raise SystemExit(f"{key} != 0")
-    Path("output").mkdir(exist_ok=True)
-    Path("output/audit.json").write_text(encoded, encoding="utf-8")
+    output_dir = Path(__file__).resolve().parent / "output"
+    output_dir.mkdir(parents=True, exist_ok=True)
+    (output_dir / "audit.json").write_text(encoded, encoding="utf-8")
     print(encoded, end="")
 
 
