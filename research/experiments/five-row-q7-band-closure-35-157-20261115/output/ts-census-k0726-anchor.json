@@ -1,0 +1,26 @@
+{
+  "experiment": "five-row-q7-band-closure-35-157-20261115",
+  "purpose": "Anchor the band-closure verification stack to K0726 (repo-established 5x18/5x19 curve census) with a fresh, method-independent TS reimplementation (this file records the run of scripts/ts_census_k0726_anchor.js)",
+  "date": "2026-11-15",
+  "systems": {
+    "A_horizontal_chord": "same-row chord pair + third point in a different row; completeness by pigeonhole (>=7 points on 5 rows => some row has >=2 points); exact integer arithmetic",
+    "B_all_triples": "all C(5m,3) triples, integer Cramer solve, collinear skipped; independent of the pigeonhole argument",
+    "A_immediate": "system A with per-construction point counting (memory-light, for band widths)"
+  },
+  "m19": {
+    "A": { "constructions": 64980, "distinctCirclesAll": 30117, "circlesGe7": 95, "hist": { "7": 8, "8": 87 }, "selfCheckFail": 0, "rowLines": 5, "totalCurves": 100 },
+    "B": { "nonCollinearTriples": 132180, "collinearTriples": 6235, "distinctCirclesAll": 83471, "circlesGe7": 95, "hist": { "7": 8, "8": 87 }, "selfCheckFail": 0 }
+  },
+  "m18": {
+    "A": { "constructions": 55080, "distinctCirclesAll": 25418, "circlesGe7": 84, "hist": { "7": 4, "8": 80 }, "selfCheckFail": 0, "rowLines": 5, "totalCurves": 89 },
+    "B": { "nonCollinearTriples": 112156, "collinearTriples": 5324, "distinctCirclesAll": 70160, "circlesGe7": 84, "hist": { "7": 4, "8": 80 }, "selfCheckFail": 0 }
+  },
+  "m35_bandStart": { "constructions": 416500, "circlesGe7": 239, "hist": { "7": 8, "8": 231 }, "rowLines": 5, "totalCurves": 244 },
+  "verdicts": {
+    "k0726_m19": "MATCH - K0726 states 95 circles (exactly-7pt: 8, exactly-8pt: 87, >=9pt: 0) + 5 row lines, and reports 64,980 row-pair constructions, 132,180 triple constructions, 83,471 distinct circles. All values reproduced exactly by both systems.",
+    "k0726_m18": "MATCH - K0726 states 84 circles (7pt: 4, 8pt: 80). Both systems reproduce exactly.",
+    "records_m35": "MATCH - records.jsonl m=35 meta curves=244 equals 239 circles + 5 row lines from the fresh implementation.",
+    "A_vs_B": "AGREE at both m=18 and m=19 (same circle sets by identical counts and histograms).",
+    "chain": "This anchors: K0726 <-> this TS stack <-> (13/13 curve-count match at m=35..49, ts-census-check.json) <-> genfast3 sweep records, and K0726 <-> sat2 (via the 5x18/5x19 def-mode byte-identity samples). The third-system full-band table (ts-census-fullband.json, m=35..157) is therefore anchored to a repo-established census at the band head."
+  }
+}

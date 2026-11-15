@@ -1610,3 +1610,14 @@ REFUTED-D10はLOSS証明ではなく、9 WIN7証明書は個別7石rootの深さ
 
 詳細: [fold log](../../log/2026-11-15-n11-class2-lane-cost72c-receipts-fold.md)、[ranking CSV](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-s5-ranking-after-cost72c-receipts-20261115.csv)、[top-candidates CSV](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-top-candidates-s6-after-cost72c-receipts-20261115.csv)、[claim v4](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72c-inflight-20261115.json)。
 
+## 2026-11-15: cost-73g sweep・WIN7証明書8件 — 第2target S5のcost 73行（foldは次回）
+
+第2coverable class-2 target S5 `00000000000000801202000000200000`（head 1244で21行/1615）の最安未sweep行 child `00000000000000849002000000000800`（edge cost 73・需要 c1=0,c2=2,c4=0・stones [11,49,60,63,66,71]）をcost-73gとしてsweepした。**73/73候補・WIN7-D10 8件（bits [31,54,56,62,69,81,89,113]）・65 REFUTED-D10・0 capped・91,357,592 nodes**、pilot 3402×10・batch-5 determinism rerun node-exact・v15交差エンジン8 WIN + 3 refuted anchors（0/100/117）一致。独立監査 `audit_cost73g_raw_sweep_20261115.py`（純Python・完全整数Bareiss）が全assert PASS: 73候補再列挙bit-exact・集計再導出・一石削除で両開親再現（del66=parent1 bit-exact・del11→第2開親 `00000000000000801242000000000000` 59行/4656・残り4削除は閉行）・8 WIN rootのD4 orbitが公開15 manifest・25 canonical rootと無重複。
+
+8 WIN rootsをblind抽出（空kill table・repo-verbatim extractor blob `52bcaf50`・fbt_drops 0）し、**BigInt検証器（blob `62b5d941`）とBareiss検証器（`verify_cost73g_win7_bareiss_independent.py`）の二独立検証で8/8 PASS**（union 0/0・rows sorted-unique・terminal [13,17]）。**343,092 strategy rows / 94,100,994 extraction nodes**。manifest `class2-lane-cost73g-win7-certificates-20261115.json`・16行境界パート（join md5 == whole md5全16件）・per-bit verify records 16件・certificates READMEを公開済み（全ファイルremote md5照合）。
+
+receipts foldは次回以降: fold前に最新mainを再取得しhead 1244（blob `42dbb92e`）を再assertすること。並走のcost-70g/65l foldが先に着地した場合はrebase必須。兄弟行 `00000000220000083800000000000200`（cost 73・第2開親67行/5182）は未着手のまま残置。
+
+REFUTED-D10はLOSS証明ではなく、8証明書は個別7石rootの深さ10以内の先手勝ちのみを証明する。solved 1244はmanifest被覆の簿記であり盤全体の勝敗ではない。**標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class1・class2・class4は引き続きUNKNOWN**。
+
+詳細: [lane log](../../log/2026-11-15-n11-class2-lane-cost73g-sweep-certificates.md)、[sweep audit](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73g-sweep-audit-20261115.json)、[certificate manifest](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73g-win7-certificates-20261115.json)、[claim v2](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73g-inflight-20261115.json)。
