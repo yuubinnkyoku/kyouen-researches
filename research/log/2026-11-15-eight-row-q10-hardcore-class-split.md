@@ -169,3 +169,21 @@ census-structure README・q9-census.md のスコープを「予測」から「�
 CSV 4行（(8,9)/(8,10)/(8,11)/(8,12)）に strip 分類の情報を反映。K item 昇格
 （Theorem A + census 全称昇格）は bash 復帰後（tools/knowledge/build.py・
 check.py 必須・K番号は最新 main で衝突確認）。
+
+## 追記（第5ラウンド補足・(7,4)/(7,5) CSV 要約の復元）
+
+第5ラウンド item 7 で記録した消失（(7,4) width59-two-swap・(7,5)
+witness-surgery の CSV 要約）について、成果ファイル自体は main に残っていたため
+（research/experiments/seven-row-q4-width59-two-swap-20261115/・
+seven-row-q5-witness-surgery-20261115/・各 README が完全な検証記録を保持）、
+両 README から CSV 要約を復元して反映した:
+
+- **(7,4)**: M ∈ [60, 1929]（下界 57→60。幅53証人への 2-for-2 two-swap 完全列挙で
+  7×57 の witness 2個・うち1個が空列延伸で 7×59 まで有効。width-60 の近傍列挙は
+  0 = not absence）。
+- **(7,5)**: M ∈ [35, 1142]（下界 34→35。m=33 witness への witness surgery
+  （depth-1/depth-2 石移動）で 7×34 の 27石 witness 2個（winA/winB）。純TS完全検証
+  済み・js+py 交叉検証は bash 復帰後 pending と CSV にも明記）。
+
+seven-row レーンの次回実行はこの復元を確認されたし（重複反映防止）。K0827 および
+固定幅 README への反映状況は seven-row レーン側で確認すること。
