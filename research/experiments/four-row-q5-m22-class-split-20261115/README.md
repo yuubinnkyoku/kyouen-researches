@@ -44,3 +44,28 @@ V 像を含み、4×21 lane では SAT 20.0s / 375,415 conflicts で V 像を再
 
 IN FLIGHT — 実行中 (2026-11-15 17:12Z 起動)。決着後に本 README を更新し
 K 項目へ昇格する。
+
+## 追記 (2026-11-15 17:25Z: 掃引開始直後の状況と道具の整備)
+
+- **陽性対照 bit-exact 再現**: ctrl_4x20_c0k3p1 = SAT 39.3s / 375,415
+  conflicts (4×21 lane の 20.0s / 375,415 と conflicts が完全一致 —
+  同一 CNF・同一軌跡の cross-lane 較正として機能。秒数差は CPU 配分差)。
+- **c0k3p0 = INDET** (cap 600s / 3,852,260 conflicts)。m21 では直接
+  決着したバケット群だが m22 では x2 分割が必要になる可能性が高い
+  (m21 の最難 x2 サブバケット 1,969,663 conflicts の約2倍を費やして
+  未決着)。
+- **CPU 割り当ての判明**: 本 sandbox の cgroup は `cpu.max 100000 100000`
+  = **実効 1.0 CPU** (nproc=2 は表示上)。driver の cap 600s は壁時計
+  なので、並走プロセス (n10 ge20_cuts) との共存中は実効 cap が目減り
+  する。ge20 側を renice +5 して本掃引に ~75% を優先配分した。
+  INDET 判定は cap 到達打ち切りであり bit-exact でない旨は m21 lane
+  と同様に記録する。
+- **sat4.js の --x2 上限を k-aware 化**: 従来の無条件 `B ≤ m−2` は
+  k=2 バケットで正当な B=m−1 (=21) ケースを落としていた不完全な
+  上限だった。`--krow=y:2` のとき `B ≤ m−1`、k≥3 のとき従来通り
+  `m−2`。k≥3 に対する既存インスタンスは一切不変 (4×21 lane の
+  37 サブバケットの md5 に影響なし)。k=2 分割の完全性に必要。
+- **汎用分割 driver 追加**: `sweepp0x2gen.sh` (c{0,1}k{2,3}p{p} 任意
+  バケット対応・CAP 環境変数・resumable・comma-anchored key 照合・
+  SAT 時の js+py 二系統 witness 検証)。INDET バケットが出次第
+  `bash sweepp0x2gen.sh <bucket>` で追分解する。
