@@ -34,8 +34,8 @@ verify_t3_q7.pyは、正占有多重集合とラベル付き幅wベクトルか�
 - Grundy分布 0:91,819 / 1:76,926 / 2:8,505 / 3:2,490
 - 状態射影・Grundy値・各組の最大値の不一致0
 - 二回の実行で監査JSON byte-identical
-- verifier SHA-256: 3999044bf7a8e90bf7f0aaa1af581d6e7c312ddca7a1239baf2be6832ae28a8b
-- audit SHA-256: 8f441607c14101310168cea549634670185797fcd285bbf99cf2bc7c82e254de
+- verifier SHA-256: 768ec476e389c6308c7c7d22fdbdd85a763fec3ebb2a07ff16ee0cb0751141f7
+- audit SHA-256: fe77a0b5f5cb11729dbca8977cd18b9a520180eaf33514bf1496ba1284ab7776
 
 有限監査はこの範囲の実装照合であり、全称性は本文の証明による。
 

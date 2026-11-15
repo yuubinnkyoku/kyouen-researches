@@ -517,8 +517,8 @@ G(3,2,0,\ldots)=\operatorname{mex}\{2,0,1\}=3.
 - 射影・Grundy値・各組の最大値が一致し、不一致0
 - 二回の実行で監査JSONはbyte-identical
 
-検証器SHA-256: 3999044bf7a8e90bf7f0aaa1af581d6e7c312ddca7a1239baf2be6832ae28a8b。
-監査JSON SHA-256: 8f441607c14101310168cea549634670185797fcd285bbf99cf2bc7c82e254de。
+検証器SHA-256: 768ec476e389c6308c7c7d22fdbdd85a763fec3ebb2a07ff16ee0cb0751141f7。
+監査JSON SHA-256: fe77a0b5f5cb11729dbca8977cd18b9a520180eaf33514bf1496ba1284ab7776。
 
 [証明・監査報告](../../experiments/vertical-fiber-t3-q7-grundy-20261115/report.md)、
 [再帰mex検証器](../../experiments/vertical-fiber-t3-q7-grundy-20261115/verify_t3_q7.py)、
