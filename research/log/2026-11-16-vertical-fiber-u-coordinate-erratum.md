@@ -17,7 +17,7 @@ K0832の単一トークン閉形式報告にある「mexは一様XORと可換な
 - 正しい変換式: 0不一致。
 - 2回の実行で監査JSONはbyte-identical。
 - 検証器SHA-256: `e74ad2b585692e3770da2127afbac6bed181aed0fcc217243cf9f20bd61fb987`。
-- 監査JSON SHA-256: `8f6fea3c67821ebfd6b4dbd58bf3a55ad52068c53369a93dfe26e95ff298b6ad`。
+- 監査JSON SHA-256: `23126031123e3de34a313200cf777ed99891e795a4e2dfb731909ff97015bd58`。
 
 ## 影響範囲
 
