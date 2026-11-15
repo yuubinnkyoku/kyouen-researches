@@ -1,19 +1,20 @@
 #!/usr/bin/env python3
 """Machine crosscheck of the two independent published-fold-chain root
-audit implementations at all ten endpoint pairs (2026-11-16).
+audit implementations at all eleven endpoint pairs (2026-11-16).
 
 The first implementation (v1 line, audit_published_chain_roots_independent_
-20261115.py, published outputs schema v3/v4/v5/v6/v7/v8/v9/v10/v11) and the
+20261115.py, published outputs schema v3/v4/v5/v6/v7/v8/v9/v10/v11/v12) and the
 second implementation
-(v2/v4/v5/v6/v7/v8/v9/v10/v11 line, audit_published_chain_roots_second_independent_20261115.py /
+(v2/v4/v5/v6/v7/v8/v9/v10/v11/v12 line, audit_published_chain_roots_second_independent_20261115.py /
 ..._v4_20261115.py / ..._v5_20261115.py / ..._v6_20261115.py /
 ..._v7_20261115.py / ..._v8_20261115.py / ..._v9_20261115.py /
-..._v10_20261115.py / ..._v11_20261115.py, published
-outputs schema v2/v4/v5/v6/v7/v8/v9/v10/v11)
+..._v10_20261115.py / ..._v11_20261115.py /
+..._v12_20261115.py, published
+outputs schema v2/v4/v5/v6/v7/v8/v9/v10/v11/v12)
 were developed independently and both pass every control over the same
 published corpus. This third script pins that agreement mechanically: it
-re-reads the eighteen published audit JSONs (blob-pinned below) and
-asserts that every shared control agrees at all ten endpoint pairs:
+re-reads the twenty published audit JSONs (blob-pinned below) and
+asserts that every shared control agrees at all eleven endpoint pairs:
 
   75d endpoint pair: v3 (first impl)  vs  v2 (second impl)
   80d endpoint pair: v4 (first impl)  vs  v4 (second impl)
@@ -24,6 +25,7 @@ asserts that every shared control agrees at all ten endpoint pairs:
   84a/62a endpoint pair: v9 (first impl)  vs  v9 (second impl)
   58c/63h endpoint pair: v10 (first impl)  vs  v10 (second impl)
   63i/merged endpoint pair: v11 (first impl)  vs  v11 (second impl)
+  reconciled-1405 endpoint pair: v12 (first impl)  vs  v12 (second impl)
 
 Checked per endpoint pair:
   1. cumulative_by_post70e_head: same head sequence and same per-head
@@ -39,7 +41,8 @@ Checked per endpoint pair:
   7. child_closure: full record equality
   8. base_roots / chain_head_roots / inventory_at_1233: full equality
   9. endpoint head records (75d / 80d / 82c / 83a / 83b / 83c / 83d /
-     84a / 62a / 58c / 63h / 63i / merged): full
+     84a / 62a / 58c / 63h / 63i / merged / 63j / 65m / 67d / 70g /
+     merged-4 / merged-5 / reconciled): full
      numeric record equality
  10. (80d/82c) bit-78 duplicate-root bookkeeping: identical root hex
  11. pins_checked: base and chain pin groups must be equal; the post-70e
@@ -102,6 +105,10 @@ AUDIT_PINS = {
         '63d808d41d275ab8fdc01b530fe104679ce2f4ef',
     'class2-lane-published-chain-roots-second-independent-audit-v11-20261115.json':
         'e43ef238e13f19c0343da0e455968bc9343be214',
+    'class2-lane-published-chain-roots-independent-audit-v12-20261115.json':
+        '2011009e78bc98acbcef505117d0f9bac0250cf3',
+    'class2-lane-published-chain-roots-second-independent-audit-v12-20261115.json':
+        'd788e238c33f598bed1087b4ab3bdf7cf1b28909',
 }
 for name, want in sorted(AUDIT_PINS.items()):
     s = git_blob_sha(OUT / name)
@@ -130,6 +137,8 @@ v10f = load('class2-lane-published-chain-roots-independent-audit-v10-20261115.js
 v10s = load('class2-lane-published-chain-roots-second-independent-audit-v10-20261115.json')
 v11f = load('class2-lane-published-chain-roots-independent-audit-v11-20261115.json')
 v11s = load('class2-lane-published-chain-roots-second-independent-audit-v11-20261115.json')
+v12f = load('class2-lane-published-chain-roots-independent-audit-v12-20261115.json')
+v12s = load('class2-lane-published-chain-roots-second-independent-audit-v12-20261115.json')
 
 assert v3['schema'] == 'n11-class2-lane-published-chain-roots-independent-audit-20261115-v3'
 assert v2['schema'] == 'n11-class2-lane-published-chain-roots-independent-audit-20261115-v2'
@@ -149,8 +158,10 @@ assert v10f['schema'] == 'n11-class2-lane-published-chain-roots-independent-audi
 assert v10s['schema'] == 'n11-class2-lane-published-chain-roots-second-independent-audit-20261115-v10'
 assert v11f['schema'] == 'n11-class2-lane-published-chain-roots-independent-audit-20261115-v11'
 assert v11s['schema'] == 'n11-class2-lane-published-chain-roots-second-independent-audit-20261115-v11'
+assert v12f['schema'] == 'n11-class2-lane-published-chain-roots-independent-audit-20261115-v12'
+assert v12s['schema'] == 'n11-class2-lane-published-chain-roots-second-independent-audit-20261115-v12'
 for d in (v3, v2, v4f, v4s, v5f, v5s, v6f, v6s, v7f, v7s, v8f, v8s,
-          v9f, v9s, v10f, v10s, v11f, v11s):
+          v9f, v9s, v10f, v10s, v11f, v11s, v12f, v12s):
     assert d['verdict'] == 'AUDIT PASSED', d['schema']
 
 
@@ -377,6 +388,55 @@ b78_b11 = controls(v11s)['bit78_duplicate_root_bookkeeping']['root_hex']
 assert b78_a11 == b78_b11 == b78_a, (b78_a11, b78_b11, b78_a)
 pair_63i_merged['bit78_root_hex'] = b78_a11
 
+# reconciled-1405 pair (v12): the v12 outputs extend the pinned chain
+# through the second receipts fork at the 63i head 1367 - branch B (the
+# cost-63j 1367 -> 1394 and cost-65m 1394 -> 1396 folds), branch C (the
+# 63h bit-89 receipt re-folded on the 65m head by the merged-4 head),
+# branch D (the 67d bit-97 receipt on the 65m head), the merged-5
+# canonical-1400 head - to the reconciled canonical-1405 head (the 7
+# cost-70g receipts re-based from the superseded branch-D 1398 head onto
+# the canonical 1400 baseline)
+pair_reconciled = crosscheck('reconciled-1405', v12f, v12s)
+sweep_a = controls(v12f)['endpoint_heads']
+sweep_b = controls(v12s)['v12_sweep_endpoint_crosschecks']
+pair_reconciled['v12_sweep_endpoints'] = {}
+for tag in ('63j', '65m', '67d', '70g'):
+    ep_a = dict(sweep_a['endpoint_cost%s' % tag])
+    cf_a = ep_a.pop('claim_fold_details_checked')
+    ep_b = sweep_b[tag]['endpoint']
+    cf_b = sweep_b[tag]['claim_fold_details_checked']
+    assert ep_a == ep_b, (tag, 'v12 sweep endpoint record')
+    assert cf_a == cf_b, (tag, 'v12 claim fold details')
+    pair_reconciled['v12_sweep_endpoints'][tag] = {
+        'endpoint': ep_a, 'claim_fold_details_checked': cf_a}
+for key in ('endpoint_merged_63h_63i_63j_65m',
+            'endpoint_merged_63h_63i_63j_65m_67d',
+            'endpoint_reconciled_canonical1405'):
+    ea = sweep_a[key]
+    eb = controls(v12s)[key]
+    assert ea == eb, key
+    pair_reconciled[key] = ea
+for key in ('fork_merge_head_63h_63i_63j_65m',
+            'fork_merge_head_63h_63i_63j_65m_67d', 'reconciled_head'):
+    ea = controls(v12f)[key]
+    eb = controls(v12s)[key]
+    assert ea == eb, key
+    pair_reconciled[key] = ea
+# the stale-baseline quote errata and the v12 method/controls prose
+# errata agree record-for-record between the two implementations
+assert controls(v12f)['stale_baseline_quote_errata'] == \
+    controls(v12s)['stale_baseline_quote_errata']
+pair_reconciled['stale_baseline_quote_errata'] = \
+    controls(v12f)['stale_baseline_quote_errata']
+assert controls(v12f)['v12_method_prose_errata'] == \
+    controls(v12s)['v12_method_prose_errata']
+pair_reconciled['v12_method_prose_errata'] = \
+    controls(v12f)['v12_method_prose_errata']
+b78_a12 = controls(v12f)['bit78_duplicate_root_bookkeeping']['root_hex']
+b78_b12 = controls(v12s)['bit78_duplicate_root_bookkeeping']['root_hex']
+assert b78_a12 == b78_b12 == b78_a, (b78_a12, b78_b12, b78_a)
+pair_reconciled['bit78_root_hex'] = b78_a12
+
 # endpoint progression sanity across the two audits of each implementation
 assert pair_75d['d4']['roots'] == 569 and pair_80d['d4']['roots'] == 587
 assert pair_82c['d4']['roots'] == 592 and pair_83a['d4']['roots'] == 596
@@ -384,6 +444,7 @@ assert pair_83c['d4']['roots'] == 603 and pair_83d['d4']['roots'] == 606
 assert pair_84a62a['d4']['roots'] == 616
 assert pair_58c63h['d4']['roots'] == 650
 assert pair_63i_merged['d4']['roots'] == 668
+assert pair_reconciled['d4']['roots'] == 713
 assert pair_75d['canonical_line']['endpoint_solved'] == 1296
 assert pair_80d['canonical_line']['endpoint_solved'] == 1305
 assert pair_82c['canonical_line']['endpoint_solved'] == 1306
@@ -393,18 +454,21 @@ assert pair_83d['canonical_line']['endpoint_solved'] == 1314
 assert pair_84a62a['canonical_line']['endpoint_solved'] == 1326
 assert pair_58c63h['canonical_line']['endpoint_solved'] == 1362
 assert pair_63i_merged['canonical_line']['endpoint_solved'] == 1369
+assert pair_reconciled['canonical_line']['endpoint_solved'] == 1405
 assert pair_75d['cumulative_heads'] == 17 and pair_80d['cumulative_heads'] == 21
 assert pair_82c['cumulative_heads'] == 22 and pair_83a['cumulative_heads'] == 23
 assert pair_83c['cumulative_heads'] == 25 and pair_83d['cumulative_heads'] == 26
 assert pair_84a62a['cumulative_heads'] == 28
 assert pair_58c63h['cumulative_heads'] == 30
 assert pair_63i_merged['cumulative_heads'] == 32
+assert pair_reconciled['cumulative_heads'] == 39
 assert pair_75d['child_closure_heads'] == 24 and pair_80d['child_closure_heads'] == 28
 assert pair_82c['child_closure_heads'] == 29 and pair_83a['child_closure_heads'] == 30
 assert pair_83c['child_closure_heads'] == 32 and pair_83d['child_closure_heads'] == 33
 assert pair_84a62a['child_closure_heads'] == 35
 assert pair_58c63h['child_closure_heads'] == 37
 assert pair_63i_merged['child_closure_heads'] == 39
+assert pair_reconciled['child_closure_heads'] == 46
 assert pair_80d['d4']['orbits'] == pair_80d['d4']['roots'] - 11
 assert pair_82c['d4']['orbits'] == pair_82c['d4']['roots'] - 11
 assert pair_83a['d4']['orbits'] == pair_83a['d4']['roots'] - 11
@@ -413,16 +477,17 @@ assert pair_83d['d4']['orbits'] == pair_83d['d4']['roots'] - 11
 assert pair_84a62a['d4']['orbits'] == pair_84a62a['d4']['roots'] - 11
 assert pair_58c63h['d4']['orbits'] == pair_58c63h['d4']['roots'] - 11
 assert pair_63i_merged['d4']['orbits'] == pair_63i_merged['d4']['roots'] - 11
+assert pair_reconciled['d4']['orbits'] == pair_reconciled['d4']['roots'] - 11
 
 result = {
-    'schema': 'n11-class2-lane-published-fold-chain-dual-implementation-agreement-20261115-v8',
+    'schema': 'n11-class2-lane-published-fold-chain-dual-implementation-agreement-20261115-v9',
     'date': '2026-11-16',
     'verdict': 'AGREEMENT CONFIRMED',
     'method': 'third, machine crosscheck of the two independently developed '
               'published-fold-chain root audit implementations over their '
-              'eighteen published audit JSONs (blob-pinned): at all ten '
+              'twenty published audit JSONs (blob-pinned): at all eleven '
               'endpoint pairs (75d, 80d, 82c, 83a, 83b/83c, 83d, 84a/62a, '
-              '58c/63h and 63i/merged), the '
+              '58c/63h, 63i/merged and reconciled-1405), the '
               'cumulative per-head '
               'bookkeeping (sequence and all fields), D4 orbit structure, '
               'per-record geometry counts and errata, head arithmetic '
@@ -440,12 +505,12 @@ result = {
                                          v5f['schema'], v6f['schema'],
                                          v7f['schema'], v8f['schema'],
                                          v9f['schema'], v10f['schema'],
-                                         v11f['schema']],
+                                         v11f['schema'], v12f['schema']],
         'second_implementation_schemas': [v2['schema'], v4s['schema'],
                                           v5s['schema'], v6s['schema'],
                                           v7s['schema'], v8s['schema'],
                                           v9s['schema'], v10s['schema'],
-                                          v11s['schema']],
+                                          v11s['schema'], v12s['schema']],
     },
     'pair_75d': pair_75d,
     'pair_80d': pair_80d,
@@ -456,18 +521,25 @@ result = {
     'pair_84a62a': pair_84a62a,
     'pair_58c63h': pair_58c63h,
     'pair_63i_merged': pair_63i_merged,
+    'pair_reconciled_canonical1405': pair_reconciled,
     'supersedes': 'class2-lane-published-fold-chain-dual-implementation-'
-                  'agreement-v7-20261115.json (schema v7, 75d + 80d + 82c + '
-                  '83a + 83b/83c + 83d + 84a/62a + 58c/63h endpoint pairs); '
-                  'this v8 output adds the 63i/merged endpoint pair '
-                  '(first-impl v11 vs second-impl v11, both extending the '
-                  'pinned chain through the cost-63i fold and the merged '
-                  '63h+63i fork-reconciliation fold to the 1369 endpoint; '
-                  '110 vs 106 pins, 32 post-70e heads each, 668 roots / '
-                  '657 orbits / 11 twin pairs, canonical-line exactly-once '
-                  'extended to 1369, merged-fork head bookkeeping and '
-                  'fork-merge-rebase arithmetic agreement); the v7 file '
-                  'remains published unchanged',
+                  'agreement-v8-20261115.json (schema v8, the endpoint '
+                  'pairs through the merged 63h+63i 1369 endpoint); '
+                  'this v9 output adds the reconciled-1405 endpoint pair '
+                  '(first-impl v12 vs second-impl v12, both extending '
+                  'the pinned chain through the second receipts fork at '
+                  'the 63i head 1367 - the 63j/65m branch-B folds, the '
+                  'merged-4 branch-C re-fold, the 67d branch-D fold, '
+                  'the merged-5 canonical-1400 head - and the reconciled '
+                  'canonical-1405 head with the 7 re-based cost-70g '
+                  'receipts; 117 vs 113 pins, 39 post-70e heads each, '
+                  '713 roots / 702 orbits / 11 twin pairs, canonical-'
+                  'line exactly-once extended to 1405, the four v12 '
+                  'sweep / two merged / one reconciled endpoint records, '
+                  'the fork-merge-rebase and fork-reconcile arithmetic, '
+                  'the stale-baseline quote errata and the v12 method '
+                  'prose errata agreeing record-for-record); the v8 '
+                  'file remains published unchanged',
     'interpretation_guard': 'bookkeeping agreement crosscheck over '
                             'published audit outputs only; solved counts '
                             'measure manifest coverage, not the '
@@ -478,7 +550,7 @@ result = {
                             'two-stone root {49,60} / S2 {59,60} / class '
                             '1 / class 2 / class 4 remain UNKNOWN',
 }
-(OUT / 'class2-lane-published-fold-chain-dual-implementation-agreement-v8-20261115.json').write_text(
+(OUT / 'class2-lane-published-fold-chain-dual-implementation-agreement-v9-20261115.json').write_text(
     json.dumps(result, indent=1, sort_keys=True) + '\n')
 print('AGREEMENT CONFIRMED')
 print('75d pair: %d heads / %d roots / %d orbits / %d twins / canon %d..%d mim %d'
@@ -543,3 +615,10 @@ print('63i/merged pair (63i + merged 63h+63i folds): %d heads / %d roots / %d or
          pair_63i_merged['canonical_line']['endpoint_solved'],
          pair_63i_merged['canonical_line']['total_mim'],
          pair_63i_merged['bit78_root_hex']))
+print('reconciled-1405 pair (63j/65m/merged-4/67d/merged-5/reconciled folds): %d heads / %d roots / %d orbits / %d twins / canon %d..%d mim %d / bit78 %s'
+      % (pair_reconciled['cumulative_heads'], pair_reconciled['d4']['roots'],
+         pair_reconciled['d4']['orbits'], pair_reconciled['d4']['twin_pairs'],
+         pair_reconciled['canonical_line']['baseline_solved'],
+         pair_reconciled['canonical_line']['endpoint_solved'],
+         pair_reconciled['canonical_line']['total_mim'],
+         pair_reconciled['bit78_root_hex']))
