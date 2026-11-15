@@ -120,6 +120,8 @@ function verifyCertificate(bit) {
   if (strategy.size !== spec.rows) throw new Error("row count mismatch for bit " + bit);
 
   const root = BigInt("0x" + spec.root_hex);
+  const rootCanonical = canonicalD4(root);
+  if (rootCanonical !== spec.d4_canonical_hex) throw new Error("D4 canonical root mismatch for bit " + bit);
   const rootPoints = pointsOf(root);
   if (rootPoints.length !== 7) throw new Error("root is not seven stones");
   assertRootSafe(rootPoints);
