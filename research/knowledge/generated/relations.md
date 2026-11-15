@@ -4975,6 +4975,7 @@
 - ← depends_on [K0850](../items/K0850-five-row-q7-m36-deficient-nonexistence.md): census (circleABC integer triples, line pairs) and the sequential-counter/maximality core are used verbatim (sat.js / sat2.js / sat3.js); the class-split unit clauses and the k/minpos splits are the only additions
 - ← depends_on [K0851](../items/K0851-five-row-q7-m37-deficient-nonexistence.md): census (circleABC integer triples, line pairs) and the sequential-counter/maximality core are used verbatim (sat.js / sat2.js / sat3.js); the class-split unit clauses and the k/minpos splits are the only additions
 - ← depends_on [K0852](../items/K0852-five-row-q6-m22-deficient-witness.md): census (circleABC integer triples, line pairs), sequential-counter/maximality encoding core used verbatim (sat.js / sat2.js / sat3.js; blob shas 6c3262d6 / edfae1d2 / 6dfa7db3)
+- ← depends_on [K0857](../items/K0857-four-row-q5-m21-deficient-nonexistence.md): census (circleABC integer triples, line pairs), the sequential-counter/maximality core and the model decoder/verifyConfig are used verbatim (sat.js / sat2.js); sat4.js adds only the class-split unit clauses, --krow exact count, --minpos and --x2 second-stone pinning
 
 ## [K0811](../items/K0811-sa-row-deficient-witnesses.md) SA探索による行欠損極大witness — M_{6,5}≥29・M_{6,6}≥22・M_{5,6}≥19（K0810の下界を更新・第2弾/第3弾で延長）
 
@@ -5109,6 +5110,7 @@
 - ← depends_on [K0849](../items/K0849-five-row-q7-m35-deficient-nonexistence.md): the m=21 nonexistence item; the witness-free width set {19,20,21} and the minpos coverage convention floor((m-1)/2)
 - ← depends_on [K0850](../items/K0850-five-row-q7-m36-deficient-nonexistence.md): the m=21 nonexistence item; the witness-free width set {19,20,21} and the minpos coverage convention floor((m-1)/2)
 - ← depends_on [K0851](../items/K0851-five-row-q7-m37-deficient-nonexistence.md): the m=21 nonexistence item; the witness-free width set {19,20,21} and the minpos coverage convention floor((m-1)/2)
+- ← depends_on [K0857](../items/K0857-four-row-q5-m21-deficient-nonexistence.md): the witness-free width-set audit convention (band + witness-free widths => M in the free-set complement or >= next width) and the 5x21 q=7 class-split protocol (canonical classes mod row-mirror V, k x minpos sound decomposition) that this (4,21,5) sweep instantiates; the x2 second-stone case split is the new ingredient beyond K0821
 
 ## [K0822](../items/K0822-row-mirror-canonical-class-count.md) Row-mirror-canonical deficiency class count for w-row class-split sweeps: C(w) = 2^(w-1) + 2^(ceil(w/2)-1) - 1 (19 at w=5, 35 at w=6, 71 at w=7, 135 at w=8)
 
@@ -5196,6 +5198,7 @@
 - → depends_on [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md): 7行 q<=w 3ファミリーと同じ手法・同じ観察（m=q から連続帯・単一欠損 w(q-1)-1 石・構成的延伸は前線を一部だけ越える）; verify_independent.ts（第3系統）を verbatim 使用
 - ← verifies [K0853](../items/K0853-free-column-append-criterion-lemma.md): (6,4) m=46 構成 witness の純TS検証に続き js+py 2系統検証を完遂（保留項目の解消）。(4,4) m=33/34 構成延伸・(6,4) m=45→46 延伸とその停止幅が補題で統一的に説明される。
 - ← supports [K0854](../items/K0854-row-line-blocking-proposition.md): witness 帯延伸 surgery の対象セル T が常に欠損行にある理由の理論化((4,4) m=35 T=(34,2)/(0,2)・(4,5) m=21 T=(20,3)/(0,3)・(5,5) m=27 (26,0)・(5,6) m=23 (22,0) はすべて石数最小行)。
+- ← depends_on [K0857](../items/K0857-four-row-q5-m21-deficient-nonexistence.md): the (4,5) witness band m=5..20 (all SAT, dual/triple-verified), the m=20 witness used as the positive-control board, the upper bound U_{4,5}=140 (K0318 substitution) and the frontier history (def-mode 210s INDET, 2-class lex=H covering 600s INDET x2) that motivated the absence-capable class split
 
 ## [K0834](../items/K0834-five-row-q7-m22-deficient-nonexistence.md) 5x22 q=7 row-deficient maximal nonexistence (all 19 canonical classes UNSAT) — witness-free width set of (5,7) extends to {19,20,21,22}, M_{5,7} ∈ {19,20,21,22} or >= 23
 
@@ -5599,3 +5602,9 @@
 - → depends_on [K0853](../items/K0853-free-column-append-criterion-lemma.md): blocked(c を通る曲線が ≥q−1 石)の定義。機械監査の検査Cで使用
 - → supports [K0795](../items/K0795-fixed-width-pw-mwq-results-table.md): M_{w,q} 横断表の q<4 コーナーを埋める(w≥2: M=∞、w=1: M=q−1 の4行を results CSV に追加)
 - → generalizes [K0025](../items/K0025-q-above-two-width-all-lengths.md): 『残り手数偶奇で Grundy 値が決まる』退化帯の q 側極小例(q≤3)。K0025 は q>2w の w 側巨大帯
+
+## [K0857](../items/K0857-four-row-q5-m21-deficient-nonexistence.md) 4x21 q=5 row-deficient maximal nonexistence (all 75 class-split instances UNSAT; the two deep-cap-resistant buckets are decided by a complete 37-bucket second-stone case split) — witness-free width set of (4,5) starts at 21, M_{4,5} ∈ {21} or >= 23
+
+- → depends_on [K0810](../items/K0810-sat-row-deficient-witnesses.md): census (circleABC integer triples, line pairs), the sequential-counter/maximality core and the model decoder/verifyConfig are used verbatim (sat.js / sat2.js); sat4.js adds only the class-split unit clauses, --krow exact count, --minpos and --x2 second-stone pinning
+- → depends_on [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md): the (4,5) witness band m=5..20 (all SAT, dual/triple-verified), the m=20 witness used as the positive-control board, the upper bound U_{4,5}=140 (K0318 substitution) and the frontier history (def-mode 210s INDET, 2-class lex=H covering 600s INDET x2) that motivated the absence-capable class split
+- → depends_on [K0821](../items/K0821-five-row-q7-m21-deficient-nonexistence.md): the witness-free width-set audit convention (band + witness-free widths => M in the free-set complement or >= next width) and the 5x21 q=7 class-split protocol (canonical classes mod row-mirror V, k x minpos sound decomposition) that this (4,21,5) sweep instantiates; the x2 second-stone case split is the new ingredient beyond K0821

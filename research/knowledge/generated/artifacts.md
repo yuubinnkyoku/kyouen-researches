@@ -1825,6 +1825,12 @@
 ## [research/experiments/extend6-deep-removal-20261114/scripts/verify_rowcase.py](../../../research/experiments/extend6-deep-removal-20261114/scripts/verify_rowcase.py)
 
 - [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) (source): Python独立検証器ラッパー（verify_py.py と同方式・Fraction厳密演算）
+## [research/experiments/f-n-13-16-20261115/README.md](../../../research/experiments/f-n-13-16-20261115/README.md)
+
+- [K0057](../items/K0057-forbidden-quadruple-counts.md) (verifier): F_nのn=13..16延長と2実装一致・ライン系4系一致
+## [research/experiments/f-n-13-16-20261115/scripts/count_f_n_13_16.mjs](../../../research/experiments/f-n-13-16-20261115/scripts/count_f_n_13_16.mjs)
+
+- [K0057](../items/K0057-forbidden-quadruple-counts.md) (verifier): F_n n=13..16の再現検証器
 ## [research/experiments/fact-discovery/output/fact_10x10_12pt_circles.json](../../../research/experiments/fact-discovery/output/fact_10x10_12pt_circles.json)
 
 - [K0062](../items/K0062-twelve-point-circle-radius-families.md) (data): 10×10の中心・半径・点集合
@@ -3312,9 +3318,23 @@
 ## [research/experiments/four-row-q5-m21-class-split-20261115/README.md](../../../research/experiments/four-row-q5-m21-class-split-20261115/README.md)
 
 - [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (proof): 高速レーン (2026-11-15) IN FLIGHT: (4,5) m=21 absence-capable 完全被覆掃引 (9 正準欠損クラス mod V・単一クラス k∈0..3×minpos p∈0..10 sound H-split・multi 7 直接・76インスタンス cap 600s resumable・driver v2)。全 UNSAT なら M_{4,5}=21 or >=23・SAT なら M ∈ [22,140]。対照 (4,20,5) class{0} k3 p1 SAT 20.0s/375,415・復号 witness は m=20 witness の V 像 (js+py 検証)
+- [K0857](../items/K0857-four-row-q5-m21-deficient-nonexistence.md) (proof): claim, class coverage and decomposition-completeness argument (9 canonical classes mod V; k in 0..3 x minpos in 0..10 sound H-split; x2 exhaustive disjoint case analysis), calibration, operational notes (records append-only incident, driver v2.1 comma anchor), scope and limits
+## [research/experiments/four-row-q5-m21-class-split-20261115/output/c0k3p0b1.txt](../../../research/experiments/four-row-q5-m21-class-split-20261115/output/c0k3p0b1.txt)
+
+- [K0857](../items/K0857-four-row-q5-m21-deficient-nonexistence.md) (data): hardest deciding instance raw kissat log ({0} k=3 minpos=0 second stone x2=1: UNSATISFIABLE, 1,969,663 conflicts, 185.1s); the other 36 raw x2 logs are not individually archived — every instance is deterministically reproducible (sat4.js CNF md5 recorded per instance, kissat 4.0.4 deterministic), and records.jsonl carries per-instance result/conflicts/sec/md5
 ## [research/experiments/four-row-q5-m21-class-split-20261115/output/records.jsonl](../../../research/experiments/four-row-q5-m21-class-split-20261115/output/records.jsonl)
 
 - [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (data): 掃引進行記録 (1インスタンス1行・増分 push)。対照 SAT (V 像 decode・2系統検証) + c0k3p0 cap 600s INDET 7,814,011 conflicts
+- [K0857](../items/K0857-four-row-q5-m21-deficient-nonexistence.md) (data): 117 records: 110 m=21 UNSAT (73 direct class-split instances + 37 x2 sub-buckets, deciding conflicts 102,380,271), 3 SAT positive controls (incl. (4,20,5) class{0} k3 p1 SAT 20.0s/375,415), 4 superseded INDET rows for the two x2-decided parent buckets (cap 600s/2400s honest negatives)
+## [research/experiments/four-row-q5-m21-class-split-20261115/output/x2-split-verification-20261115.json](../../../research/experiments/four-row-q5-m21-class-split-20261115/output/x2-split-verification-20261115.json)
+
+- [K0857](../items/K0857-four-row-q5-m21-deficient-nonexistence.md) (data): second verification: 37/37 UNSAT tally, per-bucket conflict sums (c0k3p0 19 buckets 13,382,360; c0k3p1 18 buckets 10,930,286; total 24,312,646), 4 CNF regeneration md5 matches, 2 sample reruns bit-exact; deciding-total erratum 126,692,917 -> 102,380,271 recorded in the erratum section
+## [research/experiments/four-row-q5-m21-class-split-20261115/scripts/sat4.js](../../../research/experiments/four-row-q5-m21-class-split-20261115/scripts/sat4.js)
+
+- [K0857](../items/K0857-four-row-q5-m21-deficient-nonexistence.md) (solver): class-split / exact-count (--krow) / minpos / --x2 second-stone encoder on the K0810 sat.js census + sat2.js counter core, plus kissat model decoding with census-free verifyConfig
+## [research/experiments/four-row-q5-m21-class-split-20261115/sweepp0x2.sh](../../../research/experiments/four-row-q5-m21-class-split-20261115/sweepp0x2.sh)
+
+- [K0857](../items/K0857-four-row-q5-m21-deficient-nonexistence.md) (source): deterministic x2 sweep driver v2.1: second-stone sub-buckets c0k3p0 b=1..19 and c0k3p1 b=2..19, cap 900s, resumable with comma-anchored record keys (prefix-collision-proof)
 ## [research/experiments/four-row-q5-m21-surgery-20261115/README.md](../../../research/experiments/four-row-q5-m21-surgery-20261115/README.md)
 
 - [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) (proof): 高速レーン (2026-11-15): (4,5) m=21 bounded-edit surgery 完全列挙負 — m=20 witness 両埋め込みから (2,2) 12,754/12,816 最終状態葉・(3,3) sd≤6 拡張 1,250,587/1,256,103 葉・すべて safe・0 witness; census 542 曲線は sat2.js (4,21,5) def-mode 記録と一致
@@ -9489,6 +9509,9 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost63i-receipts-recompute-20261116.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost63i-receipts-recompute-20261116.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): fold後head 1367/6481/512295/4751/376018と第二候補S5 17行/1185
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost63j-receipts-recompute-20261116.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost63j-receipts-recompute-20261116.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): fold後head 1394/6454/510249/4724/373972と第二候補S5 10行/704
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost69e-recompute-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost69e-recompute-20261115.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 6証明書反映後frontier 1,019/6,828/538,143と別個のreceipt-unclosable S5を記録
@@ -10004,6 +10027,9 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost63i_receipts_20261116.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost63i_receipts_20261116.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (source): cost63i 18 receipt fold。head 1360のbyte再現・sweep/証明書bytes検証・第二候補S5 17行へのfold
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost63j_receipts_20261116.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost63j_receipts_20261116.py)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (source): cost63j 29 receipt fold。head 1367のbyte再現・sweep/証明書bytes検証・第二候補S5 10行へのfold
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost69e_20261115.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost69e_20261115.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (source): S5親keyを文字列で一貫して扱うよう修正。receipt-unclosable S5とbest coverable S5を分離
@@ -10564,6 +10590,13 @@
 ## [research/experiments/n8-grundy-layer-profiles-20261101/output/n8_grundy.json](../../../research/experiments/n8-grundy-layer-profiles-20261101/output/n8_grundy.json)
 
 - [K0006](../items/K0006-n8-all-safe-grundy-computed.md) (data): 層別集計とGrundyヒストグラム（2026-11-03、別実装の再走)
+## [research/experiments/n9-k9-upper-sat-20261115/README.md](../../../research/experiments/n9-k9-upper-sat-20261115/README.md)
+
+- [K0029](../items/K0029-n1-n9-maximum-safe-sizes.md) (verifier): F_9両系センサス一致とW9第三系検証・at-least-19 CNF・19石SLS
+## [research/experiments/n9-k9-upper-sat-20261115/scripts/gen_n9_cnf.mjs](../../../research/experiments/n9-k9-upper-sat-20261115/scripts/gen_n9_cnf.mjs)
+
+- [K0029](../items/K0029-n1-n9-maximum-safe-sizes.md) (verifier): センサス・W9検証・CNF生成・W9充足対照の再現スクリプト
+- [K0057](../items/K0057-forbidden-quadruple-counts.md) (verifier): F_nの2実装センサスとn=7,8,9共線・共円分解の再検証
 ## [research/experiments/n9-minimum-maximal-catalogue-20261016/README.md](../../../research/experiments/n9-minimum-maximal-catalogue-20261016/README.md)
 
 - [K0297](../items/K0297-minimum-maximal-private-point-open.md) (source): n=9の全最小極大配置1,179件を完全列挙し全件でmin b=1を確認
@@ -16039,6 +16072,9 @@
 ## [research/log/2026-11-16-n11-class2-lane-cost63i-sweep-certificates-and-fold.md](../../../research/log/2026-11-16-n11-class2-lane-cost63i-sweep-certificates-and-fold.md)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): cost63iのsweep・18証明書抽出・二独立検証・第二候補S5 21→17行fold
+## [research/log/2026-11-16-n11-class2-lane-cost63j-sweep-certificates-and-fold.md](../../../research/log/2026-11-16-n11-class2-lane-cost63j-sweep-certificates-and-fold.md)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): cost63jのsweep・29証明書抽出・二独立検証・第二候補S5 17→10行fold
 ## [research/log/2026-11-16-n11-class2-lane-cost84a-sweep-certificates-and-fold.md](../../../research/log/2026-11-16-n11-class2-lane-cost84a-sweep-certificates-and-fold.md)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): cost84aのsweep・4証明書抽出・二独立検証・第二target 4→3行fold
