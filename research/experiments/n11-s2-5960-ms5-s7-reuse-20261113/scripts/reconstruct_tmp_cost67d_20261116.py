@@ -1,10 +1,17 @@
 #!/usr/bin/env python3
 """Reconstruct the tmp-cost67d extraction intermediates from the published
-cost-67d certificates (the fold script's runtime inputs). Mirrors
-reconstruct_tmp_cost63h_20261115.py: per WIN bit, recompute the legal loser
-first moves with the independent Bareiss enumerator, join any split parts,
-record the cert receipt (rows/bytes/md5/sha256), and re-run the tsverify and
-BigInt independent verifiers."""
+cost-67d certificate (the fold script's runtime inputs).
+
+The published fold script recompute_frontier_cost67d_receipts_20261116.py reads
+its runtime inputs from output/tmp-cost67d (legal-moves.json, bit97
+cert-receipt / bigint / tsverify / consumed records).  Those intermediates were
+never published, so this script rebuilds them from published artifacts only:
+the certificate bytes (class2-lane-cost67d-certificates), the independent
+legal-candidate enumeration (legal_candidates.py) and fresh runs of the two
+published independent verifiers (verify_bit7_win7_cert.ts, Number Bareiss;
+verify_win7_certificate_bigint_independent.mjs, BigInt).  Every value the fold
+script asserts is re-derived here, and the receipt is cross-checked against
+the published 67d head JSON (rows / md5 / sub-roots)."""
 import hashlib
 import json
 import subprocess
@@ -15,8 +22,8 @@ HERE = Path(__file__).resolve().parents[1]
 OUT = HERE / "output"
 TMP = OUT / "tmp-cost67d"
 CERTS = OUT / "class2-lane-cost67d-certificates"
-CHILD_V = int("00000000000000801202000040002000", 16)
-WIN_BITS = [97]
+ROOT = "00000002000000801202000040002000"
+BIT = 97
 SCRIPTS = HERE / "scripts"
 
 
@@ -24,42 +31,41 @@ def main():
     sys.path.insert(0, str(SCRIPTS))
     from legal_candidates import legal_candidates
     TMP.mkdir(parents=True, exist_ok=True)
-    moves_all = {}
-    for bit in WIN_BITS:
-        root = f"{CHILD_V | (1 << bit):032x}"
-        st, cand = legal_candidates(root)
-        moves_all[str(bit)] = {"root": root, "stones": st, "moves": cand}
+    st, cand = legal_candidates(ROOT)
+    moves_all = {str(BIT): {"root": ROOT, "stones": st, "moves": cand}}
     (TMP / "legal-moves.json").write_text(json.dumps(moves_all, indent=1) + "\n")
-    for bit in WIN_BITS:
-        root = f"{CHILD_V | (1 << bit):032x}"
-        cert = CERTS / f"bit{bit}-root-{root}.cert"
-        parts = sorted(CERTS.glob(f"bit{bit}-root-{root}.cert.part*of2"))
-        if parts:
-            data = b"".join(p.read_bytes().replace(b"\r\n", b"\n") for p in parts)
-        else:
-            data = cert.read_bytes()
-        whole = TMP / f"bit{bit}.cert"
-        whole.write_bytes(data)
-        (TMP / f"bit{bit}.cert-receipt.json").write_text(json.dumps({
-            "bit": bit, "root_hex": root, "rows": len(data.splitlines()) - 2,
-            "bytes": len(data), "md5": hashlib.md5(data).hexdigest(),
-            "sha256": hashlib.sha256(data).hexdigest(),
-        }, indent=1) + "\n")
-        moves = ",".join(map(str, moves_all[str(bit)]["moves"]))
-        ts = subprocess.run(["node", "--experimental-strip-types",
-                             str(SCRIPTS / "verify_bit7_win7_cert.ts"),
-                             "--cert", str(whole), "--root", root, "--root-check",
-                             "--subroots", moves, "--consumed-out",
-                             str(TMP / f"bit{bit}.consumed.txt")],
-                            check=True, capture_output=True, text=True)
-        (TMP / f"bit{bit}.tsverify.json").write_text(ts.stdout)
-        bj = subprocess.run(["node",
-                             str(SCRIPTS / "verify_win7_certificate_bigint_independent.mjs"),
-                             str(whole), str(len(moves_all[str(bit)]["moves"]))],
-                            check=True, capture_output=True, text=True)
-        (TMP / f"bit{bit}.bigint.json").write_text(bj.stdout)
-        print(f"reconstructed bit {bit}: rows {len(data.splitlines()) - 2}"
-              f" md5 {hashlib.md5(data).hexdigest()}")
+    cert = CERTS / f"bit{BIT}-root-{ROOT}.cert"
+    parts = sorted(CERTS.glob(f"bit{BIT}-root-{ROOT}.cert.part*of2"))
+    if parts:
+        data = b"".join(p.read_bytes().replace(b"\r\n", b"\n") for p in parts)
+    else:
+        data = cert.read_bytes()
+    whole = TMP / f"bit{BIT}.cert"
+    whole.write_bytes(data)
+    receipt = {
+        "bit": BIT, "root_hex": ROOT, "rows": len(data.splitlines()) - 2,
+        "bytes": len(data), "md5": hashlib.md5(data).hexdigest(),
+        "sha256": hashlib.sha256(data).hexdigest(),
+    }
+    (TMP / f"bit{BIT}.cert-receipt.json").write_text(json.dumps(receipt, indent=1) + "\n")
+    # cross-check the rebuilt receipt against the published 67d head JSON
+    head = json.loads((OUT / "class-frontier-cost67d-receipts-recompute-20261116.json").read_text())
+    rec = head["cost67d_addition"][0]
+    assert rec["rows"] == receipt["rows"] == 46661, (rec["rows"], receipt["rows"])
+    assert rec["md5"] == receipt["md5"] == "2c316bb0138b82fb3c65dfcbc76e9645", receipt["md5"]
+    assert rec["sub_roots_pass"] == len(cand) == 56, (rec["sub_roots_pass"], len(cand))
+    moves = ",".join(map(str, cand))
+    ts = subprocess.run(["node", "--experimental-strip-types",
+                         str(SCRIPTS / "verify_bit7_win7_cert.ts"),
+                         "--cert", str(whole), "--root", ROOT, "--root-check",
+                         "--subroots", moves, "--consumed-out",
+                         str(TMP / f"bit{BIT}.consumed.txt")],
+                        check=True, capture_output=True, text=True)
+    (TMP / f"bit{BIT}.tsverify.json").write_text(ts.stdout)
+    bj = subprocess.run(["node", str(SCRIPTS / "verify_win7_certificate_bigint_independent.mjs"),
+                         str(whole), str(len(cand))],
+                        check=True, capture_output=True, text=True)
+    (TMP / f"bit{BIT}.bigint.json").write_text(bj.stdout)
     print("reconstructed", TMP)
 
 

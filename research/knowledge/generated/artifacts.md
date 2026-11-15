@@ -15103,6 +15103,15 @@
 ## [research/experiments/vertical-fiber-general-t-grundy-bound-20261116/verify_general_bound.py](../../../research/experiments/vertical-fiber-general-t-grundy-bound-20261116/verify_general_bound.py)
 
 - [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (verifier): ラベル付き占有ベクトルと正準占有多重集合を独立生成する再帰mex監査器
+## [research/experiments/vertical-fiber-height-only-collapse-20261116/output/audit.json](../../../research/experiments/vertical-fiber-height-only-collapse-20261116/output/audit.json)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (data): 高さ安定性8,364件・全列挙4,788件・小R全z 3,780件・散点160件・鋭さ証人38件、全て不一致0
+## [research/experiments/vertical-fiber-height-only-collapse-20261116/report.md](../../../research/experiments/vertical-fiber-height-only-collapse-20261116/report.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (proof): κ=1の一般多重集合でR≤z+1なら総和Sの単一トークンへ縮約する全称証明、R≤2の全z例外、R≥3での一様条件の鋭さ
+## [research/experiments/vertical-fiber-height-only-collapse-20261116/verify_height_only_merge.py](../../../research/experiments/vertical-fiber-height-only-collapse-20261116/verify_height_only_merge.py)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (verifier): ソート済み多重集合再帰・順序付き再帰・単一トークン閉形式の独立照合器
 ## [research/experiments/vertical-fiber-high-z-multiset-merge-20261116/output/audit.json](../../../research/experiments/vertical-fiber-high-z-multiset-merge-20261116/output/audit.json)
 
 - [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (data): 8,568全列挙照合・120固定seed照合・領域外反例の監査結果
@@ -15232,6 +15241,15 @@
 ## [research/experiments/vertical-fiber-t3-q7-full-classification-20261115/verify_t3_q7_full.py](../../../research/experiments/vertical-fiber-t3-q7-full-classification-20261115/verify_t3_q7_full.py)
 
 - [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (verifier): 多重集合・ラベル付き両エンジンの独立再帰mex監査と閉ボックス230状態mex固定点の完全検査器
+## [research/experiments/vertical-fiber-two-token-residual-2positions-20261116/output/audit.json](../../../research/experiments/vertical-fiber-two-token-residual-2positions-20261116/output/audit.json)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (data): 43,241照合・不一致0・二回実行byte-identicalの監査結果
+## [research/experiments/vertical-fiber-two-token-residual-2positions-20261116/report.md](../../../research/experiments/vertical-fiber-two-token-residual-2positions-20261116/report.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (source): 2トークン族残余2位置集合の閉形式予想（ラダー・家族B・家族A）の命題・抽出過程・43,241照合の出典
+## [research/experiments/vertical-fiber-two-token-residual-2positions-20261116/verify_two_token.py](../../../research/experiments/vertical-fiber-two-token-residual-2positions-20261116/verify_two_token.py)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (verifier): 素朴・ラベル付き・cap付き3エンジン相互照合と閉形式・系A・高余裕帯・tailレジームとの整合検証器
 ## [research/experiments/width17-20-circle-point-bound-20261112/output/width17_20_circle_bound.json](../../../research/experiments/width17-20-circle-point-bound-20261112/output/width17_20_circle_bound.json)
 
 - [K0778](../items/K0778-width17-20-circle-point-bounds.md) (data): 全数値の機械出力
@@ -16141,12 +16159,18 @@
 ## [research/log/2026-11-16-vertical-fiber-general-t-grundy-bound.md](../../../research/log/2026-11-16-vertical-fiber-general-t-grundy-bound.md)
 
 - [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (log): K0832既存のt=2任意q・t=3,q=7結果を一般tへ統一した選定・証明・監査・未解決点
+## [research/log/2026-11-16-vertical-fiber-height-only-collapse.md](../../../research/log/2026-11-16-vertical-fiber-height-only-collapse.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (log): 最新main・未解決事項との照合、低R縮約の発見・証明・監査・中間帯縮小
 ## [research/log/2026-11-16-vertical-fiber-high-z-multiset-merge.md](../../../research/log/2026-11-16-vertical-fiber-high-z-multiset-merge.md)
 
 - [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (log): 最新main・既存未解決事項との照合、高余裕領域縮約の選定・証明・有限監査・次課題
 ## [research/log/2026-11-16-vertical-fiber-single-token-residual-closed-form.md](../../../research/log/2026-11-16-vertical-fiber-single-token-residual-closed-form.md)
 
 - [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (log): 残余閉形式第一段階（κ=1）の選定・証明・誤帰納の検出と修正・限界
+## [research/log/2026-11-16-vertical-fiber-two-token-residual-2positions.md](../../../research/log/2026-11-16-vertical-fiber-two-token-residual-2positions.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (log): 閉形式予想の抽出・修正過程・破損出力の教訓・未証明範囲と次課題
 ## [research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md](../../../research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md)
 
 - [K0092](../items/K0092-n11-dfpn-search-status.md) (source): 命題・対象範囲・根拠を記した出典
