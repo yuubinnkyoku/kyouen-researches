@@ -5051,7 +5051,7 @@
 - → depends_on [K0825](../items/K0825-seven-row-q8-deficient-witness-lower-bound.md): same machinery and runner as the (7,8) search; rowY fixed-row split re-validated at q=7 (cracked the m=25 OR-instance wall); sat2.js is the only generator here since genfast.js requires q >= w+1
 - ← depends_on [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md): same machinery and runner as the (7,7) search (same session, same binary); q <= w families confirmed to have continuous witness bands from m=q
 
-## [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) 7xm q=4,5,6 row-deficient witness bands — q=4: 7x4..7x56, q=5: 7x5..7x32, q=6: 7x6..7x27; M_{7,4} >= 57, M_{7,5} >= 33, M_{7,6} >= 28
+## [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) 7xm q=4,5,6 row-deficient witness bands — q=4: 7x4..7x59, q=5: 7x5..7x34, q=6: 7x6..7x29; M_{7,4} >= 60, M_{7,5} >= 35, M_{7,6} >= 30
 
 - → depends_on [K0810](../items/K0810-sat-row-deficient-witnesses.md): census + sequential-counter/maximality core used verbatim (sat.js/sat2.js); def-mode single clause is the complete encoding of 'total < 7(q-1) iff some row <= q-2'
 - → depends_on [K0068](../items/K0068-standard-fixed-width-parity-threshold.md): (7,4) upper bound T_7 = 3+2{C(19,3)-6} = 1929 by the general q=4 parity theorem (all maximals 3w stones, g=(3w-|S|) mod2 for m >= T_w); matches K0318 substitution U=1929
@@ -5085,7 +5085,7 @@
 - → generalizes [K0824](../items/K0824-higher-dimensional-fiber-trace-reduction.md): K0824の超平面・球面に対するq>2|B|縮約を、各ファイバー上の次数が高々tである多項式超曲面へ一般化する。K0824のq=2|B|境界反例や超平面跡列挙補題を置き換えるものではない
 - → supports [K0504](../items/K0504-geometric-rule-variant-comparison.md): 多項式超曲面変種のq>t|B|領域を解決する。q≤t|B|、特に補間が効くq≤|B|領域は未解決のまま
 
-## [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) 4〜6行 q=4,5 行欠損witness帯 — (4,4) m=4..34, (5,4) m=5..36, (6,4) m=6..31, (4,5) m=5..19, (5,5) m=5..23 全幅SAT・5前線とも3系統検証; M_{4,4}>=35, M_{5,4}>=37, M_{6,4}>=32, M_{4,5}>=20, M_{5,5}>=24; 5ファミリー初の結果
+## [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) 4〜6行 q=4,5 行欠損witness帯 — (4,4) m=4..34, (5,4) m=5..39, (6,4) m=6..40, (4,5) m=5..20, (5,5) m=5..23 全幅SAT; M_{4,4}>=35, M_{5,4}>=40, M_{6,4}>=41, M_{4,5}>=21, M_{5,5}>=24; sat3 OOM壁越えと rowY 分割で帯延伸
 
 - → depends_on [K0810](../items/K0810-sat-row-deficient-witnesses.md): sat2.js def-mode 完全符号化を verbatim 使用（全三つ組census・逐次カウンタ・極大性・lex=H,V,HVHV）; witness の検証にも sat.js verifyConfig（census不使用）を使用
 - → depends_on [K0068](../items/K0068-standard-fixed-width-parity-threshold.md): q=4 の上界 T_4=237, T_5=567, T_6=1113（全局面偶奇式の一般上界; K0318 curve-packing 代入でも同一値）
