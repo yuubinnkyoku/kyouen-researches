@@ -345,7 +345,7 @@ artifacts:
   note: x≤80・全y≤x・R≤x+y+7の288,360状態、偶奇301,320点、tail32,400点の監査
 - path: research/log/2026-11-16-vertical-fiber-two-token-z1-slice.md
   role: log
-  note: z=1スライスの選定・全称証明・独立監査・z≥2への引継ぎ
+  note: z=1スライスの選定・全称証明・独立監査・z≥3への引継ぎ
 - path: research/experiments/vertical-fiber-diagonal-m11-m16-20261116/report.md
   role: source
   note: 対角線OK表のm=11..16外挿・偶数統一形のmod 4修正・all-ones族プロファイルの命題と14,638照合の出典
@@ -912,9 +912,9 @@ R\ge S+|X|+z-1\implies H(R;X;z)=S\bmod2
 証明・独立監査: [実験報告](../../experiments/vertical-fiber-height-only-collapse-20261116/report.md)、[検証器](../../experiments/vertical-fiber-height-only-collapse-20261116/verify_height_only_merge.py)、[監査結果](../../experiments/vertical-fiber-height-only-collapse-20261116/output/audit.json)、[研究ログ](../../log/2026-11-16-vertical-fiber-height-only-collapse.md)。検証器は高さ安定性8,364件、全列挙4,788件、R≤2全zの有限窓3,780件、固定seed散点160件、鋭さ証人38件を独立照合し、不一致0・二回実行byte-identical。全称性は上記帰納証明と既証明の全1族閉形式による。
 
 
-## 2トークン族の残余2位置集合の閉形式予想（κ=1・z≥1は未証明）
+## 2トークン族の残余2位置集合の閉形式予想（κ=1・z≥3は未証明）
 
-**証明済みスライス:** \(z=0\) では全Grundy値の閉形式が後掲の定理で確定した。以下の3族予想で未証明として残るのは \(z\ge1\) の場合である。
+**証明済みスライス:** \(z=0,1,2\) の全Grundy値は各高さスライスで全称証明済み。以下の3族予想で未証明として残るのは \(z\ge3\) の場合である。
 
 2トークン族 \(X=(x,y)\)（\(x\ge y\ge1\)）について \(S=x+y\)、\(d=x-y\)、\(\delta=R-2y\)、\(q_o(k)\)=k以下最大奇数、\(\mathrm{smin}(d)\)=\(d+1\)以上の最小奇数、\(\delta_A(z)\)=\(z\)以上の最小奇数、\(y^*=(z-d)/2\) と置く。2位置集合 \(T(x,y,z)=\{R: H(R;(x,y);z)=2\}\) が次の3族で記述できることが予想される（有限監査による支持のみ・全称性は未証明）:
 
@@ -952,7 +952,7 @@ h_{x,1}(R)=\operatorname{mex}\{h_{x-1,1}(R-1),v(x,1,R-1)\}
 
 [独立検証器](../../experiments/vertical-fiber-two-token-z0-slice-20261116/verify_z0_slice.py)は、cap付き正準多重集合再帰とcapなし順序付きラベル再帰の2方式で、\(x\le60\)、全 \(y\le x\)、\(0\le R\le x+y+4\) の120,780状態を照合し、不一致0・二回実行byte-identicalを確認した（[監査JSON](../../experiments/vertical-fiber-two-token-z0-slice-20261116/output/audit.json)）。有限監査は全称証明の代替ではなく、全称性は上記の強帰納による。
 
-この定理は2トークン予想の家族Aの \(z=0\) 場合を証明し、同時にそのスライスの値0/1も決定する。\(z\ge1\) の2トークン閉形式と一般多重集合の \(H=2\) 必要十分条件は引き続き未解決である。
+この定理は2トークン予想の家族Aの \(z=0\) 場合を証明し、同時にそのスライスの値0/1も決定する。\(z\ge1\) を一括する2トークン閉形式と一般多重集合の \(H=2\) 必要十分条件は引き続き未解決である。
 
 ## 天井トークン付き残余ゲームの値2位置分類（全 \(m\) 予想・ラダーは系）
 
@@ -1033,4 +1033,60 @@ S\bmod2&R\ge S+2.
 
 従って値2位置は、\(d=0\): \(\{1\}\)、\(d=1\): \(\{1,2y+1\}\)、\(d=2\): \(\{1,2y+1,S+1\}\)、\(d\ge3\): \(\{1,2y+1\}\)。
 
-証明はR強帰納。C子には既証明z=0閉形式、境界y=1のB子には単一トークンz=2閉形式を用い、対角線・非対角線y≥2・境界y=1を場合分けしてmexを一致させる。完全な証明は[実験報告](../../experiments/vertical-fiber-two-token-z1-slice-20261116/report.md)を参照。独立有限監査は[検証器](../../experiments/vertical-fiber-two-token-z1-slice-20261116/verify_z1_slice.py)で288,360状態・不一致0、偶奇301,320点・tail32,400点で違反0、二回実行byte-identical。有限監査は全称性の根拠ではなく、全称性は強帰納法による。\(z\ge2\) の2トークン全位置予想は引き続き未証明。
+証明はR強帰納。C子には既証明z=0閉形式、境界y=1のB子には単一トークンz=2閉形式を用い、対角線・非対角線y≥2・境界y=1を場合分けしてmexを一致させる。完全な証明は[実験報告](../../experiments/vertical-fiber-two-token-z1-slice-20261116/report.md)を参照。独立有限監査は[検証器](../../experiments/vertical-fiber-two-token-z1-slice-20261116/verify_z1_slice.py)で288,360状態・不一致0、偶奇301,320点・tail32,400点で違反0、二回実行byte-identical。有限監査は全称性の根拠ではなく、全称性は強帰納法による。\(z\ge3\) の2トークン全位置予想は引き続き未証明。
+
+
+## 2トークン族の高さ \(z=2\) スライス（全Grundy値の全称閉形式）
+
+\(S=x+y\)、\(d=x-y\)、\(x\ge y\ge1\) とする。値2位置を
+\[
+T_2=\{1\}\cup
+\begin{cases}
+\{S+1\}&d=0,\\
+\{S,S+2\}&d=3,\\
+\{2y+3\}&d\ge4,\\
+\varnothing&d=1,2
+\end{cases}
+\]
+とする。奇数R≥3で値1となる集合は
+\[
+\mathcal O_2=
+\begin{cases}
+\{3,5,\ldots,S-1\}&d=0,\\
+\{3,5,\ldots\}&d=1,\\
+\{3,5,\ldots,S-1\}&d=2,\\
+\{3,5,\ldots,S-2\}\cup\{S+4,S+6,\ldots\}&d=3,\\
+\{3,5,\ldots,2y+1\}&d\ge4\text{ 偶数},\\
+\{3,5,\ldots,2y+1\}\cup\{S+4,S+6,\ldots\}&d\ge5\text{ 奇数}.
+\end{cases}
+\]
+偶数R≥4で値1となる集合は
+\[
+\mathcal E_2=
+\begin{cases}
+\{S+1,S+3,\ldots\}&d\in\{1,3\},\\
+\{2y+4,2y+6,\ldots\}&d\ge5\text{ 奇数},\\
+\{2y+4,2y+6,\ldots,S+2\}&d\ge4\text{ 偶数},\\
+\varnothing&d\in\{0,2\}.
+\end{cases}
+\]
+ここに現れる各列は偶数列である。
+
+**定理.** 任意のR≥0について
+\[
+\boxed{
+H(R;(x,y);2)=
+\begin{cases}
+0&R=0,2,\\
+2&R\in T_2,\\
+1&R\in\mathcal O_2\cup\mathcal E_2,\\
+0&\text{それ以外}.
+\end{cases}}
+\]
+特に値2位置はd=0で \(\{1,S+1\}\)、d=1,2で \(\{1\}\)、d=3で \(\{1,S,S+2\}\)、d≥4で \(\{1,2y+3\}\)。既存の2トークン3族値2位置予想のz=2スライスが全称証明された。
+
+**証明.** R強帰納。選択肢値集合を \(\mathcal V_R\) とする。Theorem Tより全状態でH≤2、偶数RではH≤1。奇数Rの親ではR−1が偶数なのでA/B子は0/1、C子も既証明z=1公式と偶数残容量の上界により0/1。従って \(\mathcal V_R\subseteq\{0,1\}\) であり、集合が{0},{1},{0,1}のどれかに応じてmexは1,0,2。偶数R≥4では親の値が高々1なので、H=1は \(0\in\mathcal V_R\) と同値。R=1の選択肢集合は{0,1}、R=2は{2,3}で直接評価する。
+
+A子には帰納仮説、C子にはz=1全Grundy閉形式を使う。y=1のB子は単一トークン(x), z=3の既証明閉形式を使い、x=y=1も含める。代入後の選択肢表は実験報告の奇数・偶数表の通りである。奇数表は選択肢集合が{0,1}となる位置、{0}となる位置、{1}となる位置をそれぞれT₂から1を除いた集合、O₂、残りへ分ける。偶数表は0を含む位置がE₂を与える。従って表示式のmexが全てのRで一致する。∎
+
+独立監査は[実験報告](../../experiments/vertical-fiber-two-token-z2-slice-20261116/report.md)、[検証器](../../experiments/vertical-fiber-two-token-z2-slice-20261116/verify_z2_slice.py)、[監査結果](../../experiments/vertical-fiber-two-token-z2-slice-20261116/output/audit.json)、[研究ログ](../../log/2026-11-16-vertical-fiber-two-token-z2-slice.md)。x≤80・全y≤x・R≤S+8の291,600状態、選択肢表288,360点、偶数R146,620点、tail19,440点、値2位置144,980点、固定seed散点200件で不一致・違反0。二回実行byte-identical。有限監査は全称性の根拠ではなく、全称性は上記強帰納法による。z≥3の2トークン全Grundy閉形式・一般値2位置予想は未証明。
