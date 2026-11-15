@@ -56,4 +56,4 @@ v1系scriptに以下を拡張:
 - 次のfold baselineはhead **1305**。並走laneのcost-82c等、80d以降のfoldにも同じ拡張パターン(pins追加・own_claim/own_baseline・CANONICAL_LINE・ENDPOINT_CHECKS)で両実装を機械追従できる。
 - 次回のfold着地後は両系統(v1系v4・第二実装v4)を同時に追従させることで、published fold-chain全root監査の双実装相互検証体制が定常化する。
 
-詳細: [v1系拡張script](../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_published_chain_roots_independent_20261115.py)、[v1系v4出力JSON](../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-published-chain-roots-independent-audit-v4-20261115.json)、[第二実装v4 log(同日)](./2026-11-15-n11-class2-lane-published-chain-roots-audit-v4-second-independent.md)、[v3監査(第一実装・75d endpoint)](../2026-11-15-n11-published-fold-chain-roots-audit.md)。
+詳細: [v1系拡張script](../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_published_chain_roots_independent_20261115.py)、[v1系v4出力JSON](../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-published-chain-roots-independent-audit-v4-20261115.json)、[第二実装v4 log(同日)](./2026-11-15-n11-class2-lane-published-chain-roots-audit-v4-second-independent.md)、[v3監査(第一実装・75d endpoint)](./2026-11-15-n11-published-fold-chain-roots-independent-audit.md)。
