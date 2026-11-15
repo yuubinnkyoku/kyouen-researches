@@ -4,7 +4,7 @@
 The theorem itself is proved in report.md by induction on R.  This verifier
 uses two independently represented recurrences:
   * sorted multiset states;
-  * ordered/labeled token states.
+  * ordered/labeled token states, with no sorting during transitions.
 It checks both against the closed high-z formula on exhaustive and seeded
 finite samples, and records a counterexample outside the sufficient region.
 """
@@ -40,14 +40,14 @@ def H_multiset(R, X, z):
 
 @lru_cache(maxsize=None)
 def H_ordered(R, X, z):
-    """Ordered/labeled recurrence; no canonical sorting of the parent state."""
+    """Ordered/labeled recurrence; token order is preserved, never canonicalized."""
     if R == 0:
         return 0
     options = set()
     for i, x in enumerate(X):
         Y = X[:i] + X[i + 1:]
         if x >= 2:
-            Y = tuple(sorted(Y + (x - 1,)))
+            Y = Y + (x - 1,)
             options.add(H_ordered(R - 1, Y, z))
         else:
             options.add(H_ordered(R - 1, Y, z + 1))
@@ -125,11 +125,11 @@ def main():
     random_checks = 0
     for _ in range(120):
         n = rng.randint(0, 6)
-        X = tuple(sorted(rng.randint(1, 10) for _ in range(n)))
+        X = tuple(rng.randint(1, 10) for _ in range(n))
         total = sum(X)
         R = rng.randint(0, 28)
         z = max(0, total + R - 1) + rng.randint(0, 8)
-        a = H_multiset(R, X, z)
+        a = H_multiset(R, tuple(sorted(X)), z)
         b = H_ordered(R, X, z)
         c = high_formula(total, R)
         random_checks += 1
