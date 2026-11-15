@@ -407,6 +407,19 @@ UNSAT 0（すべて unknown）。4401..4699 と同じ「例外の薄い帯」が
 - 検定するなら「不達成素数の間隔分布」を、同区間の素数全体から無作為抽出した間隔分布と
   比較する置換検定になる。標本が 14 個では検出力が低い。
 
+## 事故: 同一ディレクトリへの並行証明書生成で receipt が壊れた
+
+- 5059 の (0,1,0) クラスを、前ラウンドから走っていたジョブと新しく起動したジョブの**2本同時**に
+  `certify_class_unsat.py` へ投入してしまった。両方が同じ `output/cert-5059-2530-x0c1e0/` に
+  CNF と DRAT を書き、片方が書いている最中にもう片方が hash を取ったため、
+  `proof_sha256` が**空ファイルの hash**（`e3b0c442...`）、`verified=false` という receipt が残った。
+- 実際の DRAT（56,168,077 バイト）を現物に対して再検査したところ
+  `steps=293830 rup=293830 ... ok=1` で **VERIFIED**（327 秒）。receipt を現物の hash で書き直した。
+- 教訓: `certify_class_unsat.py` は同一 (p, size, class) に対して**同時に走らせない**。
+  起動前に `Get-CimInstance Win32_Process` で重複を確認する。
+- なお `verified=false` を「証明書が不正」と読み替えかけたが、原因は並行書き込みだった。
+  receipt の `proof_sha256` が空ファイルの hash になっていることが判別の手がかりになる。
+
 ## 運用メモ: `research/knowledge/K0783.md` のリンク深さが繰り返し壊れる
 
 - 旧パスの `research/knowledge/K0783.md`（252 KB の長い prose 版）は、リンクを
