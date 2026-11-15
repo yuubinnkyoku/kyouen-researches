@@ -8,7 +8,7 @@ WIN7 certificates and a partial checkpoint of this directory (bit12/58/72
 not the extraction-receipt / verifier files the fold script reads, so the
 published fold script could not be re-run end-to-end from main alone. This
 directory was completed by
-`scripts/reconstruct_tmp_cost83a_20261115.py` exclusively from artifacts
+`reconstruct_tmp_cost83a_20261115.py` (in this experiment's `scripts/`) exclusively from artifacts
 that are on main, using the published independent verifiers:
 
 - `bit{12,58,72,95}.cert-receipt.json`: recomputed from the published
