@@ -1194,3 +1194,16 @@ cost-78a receipts fold（並走、証明書公開中）は**新head 1195 へのr
 解消計数はmanifest被覆の前進であり、盤全体の勝敗ではない。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class2・class4は引き続き **UNKNOWN**。
 
 詳細: [fold log](../../log/2026-11-15-n11-class2-lane-cost76a-receipts-fold.md)、[head JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost76a-receipts-recompute-20261115.json)、[fold script](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost76a_receipts_20261115.py)。
+
+
+## 2026-11-15: cost78a公開証明書の独立再生監査 — bit20・bit36 PASS・frontier不変1195
+
+並走cost-78aレーンがmainに公開したWIN7証明書のうち、掲載済み2件（bit20・bit36）をBigInt独立検証で再生監査した。bit20は2 partを行境界で再連結（2,039,074 B・md5 `348871fd605dedeb34b5a4c4ad6f518c` == claimの `joined_md5_equals_whole_md5`）、bit36は単一ファイル（1,833,561 B）。BigInt検査器（3×3余因子展開・engine不使用）で**2/2 PASS**: bit20は64 sub-roots == loser mobility == sweep `opponent_legal_replies`・56,452行sorted-unique、bit36は59 sub-roots・50,711行。計107,163戦略行・consumed union 0/0・終局石数[13,17]・claim記載のrows・md5・v15 anchor nodes（9,116,968/6,829,497）・v16 sweep nodes（2,523,199/1,435,988）と全件一致。
+
+入力6ファイル（sweep audit・v15 crosscheck・claim・bit20両part・bit36）のgit blob SHAをmainと照合しbyte-exact。root == child|1<<bit のbit検算、D4正準形がsweep audit `d4_canonical_hex` と一致、親lift再導出で両rootの6親のD4正準軌道にchild `00000000000000809102000000400000` が含まれることを確認した。
+
+head-1195 tie-in: 第3class-2 target S5 `00000000000000809102000000000000` の残り行は{69,74,78}=221で、child（cost 78）は依然remaining。よって本監査はfrontier計数を一切変更しない（`s6_frontier_contribution: 0`）。bits 8/29/109は並走が公開中のため監査対象外。**cost-78a receipt foldは並走担当・新head 1195へのrebase必須**（1188基準のままfoldしないこと）。
+
+WIN7証明書は各7石rootから深さ10以内の先手勝ちのみを証明し、78合法手の6石親は閉じない。REFUTED-D10はLOSS証明ではない。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class2・class4は引き続き **UNKNOWN**。
+
+詳細: [監査log](../../log/2026-11-15-n11-class2-cost78a-published-certificate-replay.md)、[監査JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/cost78a-published-certificate-replay-20261115.json)、[再現スクリプト](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost78a_published_certificate_replay_20261115.py)。
