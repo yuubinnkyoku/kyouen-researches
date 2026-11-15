@@ -178,3 +178,33 @@ b∈{p+1..19} の全ケースで完全・素直な場合分解で、対称性は
   sat4.js 方式の unit pin で符号化可能。被覆の完全性の論証・静的フィルタは実験 README 参照。
 - x2=4 対照の SAT 実証・c0k3p1 deep 再開と並行して、この blocker 分割の実装
   (sat5.js 相当) が決着への最短経路候補。
+
+
+## 追記: blocker 円ケース分割の道具 (sat5.js + sweepp0gpin.sh)
+
+SA pin-sweep の構造観察を厳密化した完全ケース分割を実装した
+(設計・被覆論証: [four-row-q5-m21-sa-pinsweep-20261115](../four-row-q5-m21-sa-pinsweep-20261115/) の
+「次段階提案」と sat5.js ヘッダ)。欠損行 y0=0 の右端セル (m-1, 0) について:
+
+- **A: 右端セルが石** — unit 1 本 (key <bucket>gA)。対照 (4,20,5) では
+  m=20 witness V 像 (row 0 = (1,0),(4,0),(19,0)) が右端 (19,0) を石として持つため、
+  minpos1 + gpin=19:0 は SAT であるべき (較正用)。
+- **B: 右端セルが空** — 極大性より (m-1,0) を通る count-4 円 g が存在し、
+  安全性より g 上の石数はちょうど4。(g, S) でピン分割。
+  sat5.js listcases (standalone census・計数法・C(k,3) sanity check) が列挙:
+  - adapted (既定): minpos 石 (0,p) が g 上なら S は3セル (残り1石は minpos unit で
+    既に固定)。**p1 81 / p0 86 ケース** (sandbox 検証済み)。
+  - plain: |S|=4 固定 — SA 掃引記録 (p1 83 / p0 86) との 1:1 対照用
+    (sandbox で 83/86 再現確認・g* のケースは pins 4:2,9:3,11:3,16:2 の1個)。
+  - 幾何補題: 円と行の交点は <=2 → S 中の行0セルは右端を除き高々1個で、
+    追加フィルタ不要。
+
+A ∪ B の全 UNSAT ⟹ バケット UNSAT (完全被覆)。sat4.js --x2 とは直交
+(x2 は素朴な第2石分割で「(20,0) が石」側も含む、gpin は右端セル基準の分割)。
+sweepp0gpin.sh: resumable driver (key <bucket>gA / <bucket>g<i>・cap 900s)。
+
+**較正 (実行環境復旧時・sweepp0gpin.sh 起動前に必須)**:
+1. A の陽性対照: (4,20,5) class{0} krow0:3 minpos1 --gpin=19:0 → SAT 期待。
+2. 句スーパーセット検査: 対照 CNF + --gpin / + --emptytail --gpin=... は
+   base の句集合を全含み、差分はピンの unit のみ。
+3. listcases の plain モードが p1=83 / p0=86、adapted が p1=81 / p0=86 を出すこと。
