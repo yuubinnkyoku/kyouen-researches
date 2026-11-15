@@ -1,0 +1,25 @@
+{
+  "actual_R_with_H2_through_60": [1, 3],
+  "case": {"R_checked": [0, 60], "k": 4, "z": 6},
+  "conclusion": "For (k,z)=(4,6), H(R;(1,1,1,1);6)=2 exactly at R={1,3}; the old example's {5,7} are false positives. The list {1,3,5,7} occurs at (k,z)=(6,6).",
+  "diagnostic_k6_z6_R_with_H2_through_60": [1, 3, 5, 7],
+  "finite_prefix_R_0_to_12": [0, 2, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  "stale_false_positives": [5, 7],
+  "stale_missing_values": [],
+  "stale_report_list": [1, 3, 5, 7],
+  "tail": {
+    "checks_through_60": 48,
+    "finite_checks_pass": true,
+    "proved_value": 0,
+    "start_R": 13,
+    "unbounded_basis": "K0832: R >= 2k+z-1 implies H = sum(X) mod 2"
+  },
+  "two_engine": {
+    "first_mismatches": [],
+    "mismatches": 0,
+    "multiset_cache_states": 2460,
+    "reduced_cache_states": 3882,
+    "states": 61
+  },
+  "verifier_sha256": "7fa0a64dc4eec12bc5494d2b5a4c834138e4bc895fca6be32b213161c422f8bb"
+}
