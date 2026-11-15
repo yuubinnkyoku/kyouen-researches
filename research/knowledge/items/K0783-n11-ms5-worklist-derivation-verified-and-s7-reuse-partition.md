@@ -1594,3 +1594,13 @@ REFUTED-D10はLOSS証明ではなく、WIN7証明書は個別7石rootの深さ10
 
 詳細: [lane log](../../log/2026-11-15-n11-class2-lane-cost70f-sweep-certificates-and-fold.md)、[sweep audit](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70f-sweep-audit-20261115.json)、[certificate manifest](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70f-win7-certificates-20261115.json)、[fold head JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost70f-receipts-recompute-20261115.json)、[completed claim](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70f-inflight-20261115.json)。
 
+## 2026-11-15: cost-72c receipt fold — head 1239→1244
+
+第二coverable class-2 target S5 `00000000000000801202000000200000` のcost-72 child `00000000000000801202000000220000`（stones [17,21,49,57,60,71]・需要 c1=0,c2=2,c4=0）のsweepが得た9 WIN7-D10 roots（bits 1,7,24,39,59,64,67,72,96）の証明書9件を、公開partの行境界連結・CRLF→LF正規化の上で**BigInt 3x3 + Number Bareiss 4x4**の二独立検証器により再検証した（**9/9 PASS**・union 0/0・terminal [13,17]・consumed union == 証明書行集合 0/0）。合計**321,781行・11,604,178 bytes・41,346,462 extraction nodes・474 sub-roots**。
+
+9 receiptsをhead 1239/6608/521701/4878/385424（cost-70f fold後）にfoldし、新canonical head **`1244/6603/521339/4873/385062`**（solved 1239→1244・in-manifest marginal 5・raw marginal 43・zero-mim bits 39/59/64/72/96）。childは**bit1**で閉鎖。第2 target S5は**24行/1836 → 21行/1615**、第2開親 `00000000000000083800000008000000` は**55行/4111 → 52行/3898**。set等式・503 folded rootsとのraw/D4 disjointness・sweep audit再導出（72候補・9 WIN/63 REFUTED/0 capped・61,297,942 nodes・v15 9/9 WIN+3/3 anchors）・証明書bytes検証をassertし、completed claim後の再実行で3出力blobのbyte-identityを再assertする制御付き。
+
+REFUTED-D10はLOSS証明ではなく、WIN7証明書は個別7石rootの深さ10以内の先手勝ちのみを証明する。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class1・class2・class4は引き続き **UNKNOWN**。次のfold baselineはhead 1244。未fold: cost-70g（証明書8件・70fとのD4重複に注意）・cost-65l（fold in flight）等。
+
+詳細: [fold log](../../log/2026-11-15-n11-class2-lane-cost72c-receipts-fold.md)、[sweep audit](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72c-sweep-audit-20261115.json)、[certificate manifest](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72c-win7-certificates-20261115.json)、[fold head JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost72c-receipts-recompute-20261115.json)、[completed claim](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72c-inflight-20261115.json)。
+
