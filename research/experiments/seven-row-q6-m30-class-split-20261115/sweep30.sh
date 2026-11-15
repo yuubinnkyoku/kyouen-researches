@@ -14,9 +14,10 @@ cd "$(dirname "$0")"
 CAP=900 ./run_one.sh ctrl_7x29_c3 7 29 3
 CAP=${CAP:-600}
 while IFS= read -r D; do
-  if tail -1 output/records.jsonl 2>/dev/null | grep -q '"result":"SAT"'; then
-    echo "SWEEP_SAT_ABORT $(date -u +%FT%TZ)"; exit 0
-  fi
+  last=$(tail -1 output/records.jsonl 2>/dev/null)
+  case "$last" in
+    *'"m":30'*'"result":"SAT"'*) echo "SWEEP_SAT_ABORT $(date -u +%FT%TZ)"; exit 0 ;;
+  esac
   key="c$(echo "$D" | tr -d ',')"
   ./run_one.sh "$key" 7 30 "$D"
 done < classes.txt

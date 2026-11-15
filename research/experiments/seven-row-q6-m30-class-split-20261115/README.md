@@ -33,33 +33,6 @@
 - sat3.js `--class=D` は D 内の行を ≤4、D 外の行を exactly 5 に固定
   (rowGe 単位制約)。census core は sat2.js (K0810)。
 
-
-## 欠損行クラス分割の独立監査
-
-`python3 scripts/verify_classes.py --output output/class-partition-audit.json` を実行し、`classes.txt` の行反射軌道分割を独立に再構成した。
-
-- 非空の欠損行集合: 127 個。
-- 行反射 `y ↦ 6−y` で固定される非空集合: 15 個（4つの反射軌道の非空和集合）。
-- 残る112集合は56組の二元軌道。
-- Burnsideの補題による軌道数: `(127+15)/2 = 71`。
-- 掲載代表: 71個、重複行0・重複軌道0・欠落軌道0・非正準代表0。
-
-したがって `classes.txt` は、127個すべての非空欠損行集合を行反射で割った71軌道を、ちょうど一度ずつ覆う。これはクラス分割の完全性監査であり、SAT符号化・ソルバ結果・幾何配置の正しさを検査するものではない。
-
-さらに幅を一般の $w\ge1$ とすると、行反射の行軌道は $\lceil w/2\rceil$ 個である。反射で固定される部分集合はそれらの軌道の和集合なので、空集合を含め $2^{\lceil w/2\rceil}$ 個。非空部分集合 $2^w-1$ 個にBurnsideの補題を適用すると、反射で割った非空部分集合の軌道数は
-
-\[
-N_w=\frac{(2^w-1)+(2^{\lceil w/2\rceil}-1)}2
-=2^{w-1}+2^{\lceil w/2\rceil-1}-1.
-\]
-
-これはSAT探索前に必要な正準クラス数を見積もる一般式である。検証器は全部分集合の直接軌道列挙と閉形式を $w=1,\ldots,12$ で照合し、全て一致した（この有限照合は証明の代替ではなく、証明は上のBurnside計算による）。
-
-
-- 検証器: `scripts/verify_classes.py`
-- 結果: `output/class-partition-audit.json`
-
-
 ## 手法・較正
 
 - 生成器: sat3.js (md5 `d03f908ea99ba819caee2a6fbb471c1b`・
@@ -86,6 +59,26 @@ N_w=\frac{(2^w-1)+(2^{\lceil w/2\rceil}-1)}2
   `nohup setsid bash sweep30.sh > output/sweep30.log 2>&1 < /dev/null &`
   (起動前/proc 走査で二重起動防止。環境リセット後は kissat を rel-4.0.4 asset
   から再取得・md5 照合)。
+
+## 追記: driver v1 abort bugfix (2026-11-15)
+
+初版 sweep30.sh の SAT-abort 判定 `tail -1 records.jsonl | grep SAT` が対照
+(ctrl_7x29_c3・m=29) の SAT record にも反応し、m=30 クラス掃引開始前に即
+aborted した (誤終了・record は無傷・1 クラスも未実行)。
+**v2 では m=30 の record に限定**した (`'"m":30'` と `'"result":"SAT"'` の両方を
+要求)。(4,5) m=21 レーンの driver v2 per-key bugfix と同じ教訓: skip/abort
+判定は必ず対象 record に限定する。
+
+## 追記: 対照 (7,29,6) class {3} PASS (2026-11-15 11:22Z)
+
+**SAT 3,074,703 conflicts / 545.5s (cap 900 内)**。
+復号 witness 34石 rows [5,5,5,4,5,5,5]・row 3 の石は列 [4,12,26,28]
+(既刊の空列延伸 witness [3,8,11,27] とは**別の m=29 witness**。
+sat3.js decode verifyConfig PASS + verify_witness.py Python Fraction PASS の
+二系統検証)。class-split 符号化・decode 鎖が (7,6) 家族で実地検証された。
+参考: 同幅の rowfixed rowY=3 SAT は 442,479 conflicts
+(seven-row-q5-q8-sat-frontier-20261115) — class {3} instance の方が約 7 倍
+深い (6行を exactly 5 に固定すると SAT 探索がむしろ難化する観測)。
 
 ## Not claimed
 
