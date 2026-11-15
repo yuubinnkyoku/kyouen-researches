@@ -18,7 +18,17 @@ function dumpClassX2(w, m, q, D, opts) {
   if (opts.lex && opts.lex.length) throw new Error('--x2 with --lex is unsound');
   const { enc, cell } = S3.dumpClass(w, m, q, D, opts); // applies class/krow/minpos
   const y = D[0], p = opts.minpos, B = opts.x2;
-  if (B <= p || B > m - 2) throw new Error('x2 out of range (' + (p + 1) + '..' + (m - 2) + ')');
+  // k-aware x2 upper bound (2026-11-15 generalization for the m=22 lane):
+  // with --krow=y:k, the 2nd-leftmost stone of a k-stone row satisfies
+  //   k >= 3 : B <= m-2 (a 3rd stone must fit to the right of B)
+  //   k == 2 : B <= m-1 (the 2nd stone may be the rightmost column)
+  // The old unconditional B <= m-2 was incomplete for k=2 (missed the
+  // B=m-1 case); no previously generated instance changes (k>=3 bound is
+  // identical). Without a single krow=y:k on row y=D[0] the old m-2 bound
+  // is kept for safety.
+  const kent = (opts.krow || []).map(s => s.split(':')).find(kv => Number(kv[0]) === y);
+  const maxB = (kent && Number(kent[1]) === 2) ? m - 1 : m - 2;
+  if (B <= p || B > maxB) throw new Error('x2 out of range (' + (p + 1) + '..' + maxB + ')');
   for (let x = p + 1; x < B; x++) enc.add([[-cell[y * m + x]]]);
   enc.add([[cell[y * m + B]]]);
   const meta = { w, m, q, class: D.slice().sort((a, b) => a - b), krow: opts.krow || [], minpos: p, x2: B, lex: [], vars: enc.nv, clauses: enc.clauses.length };
