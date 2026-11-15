@@ -72,3 +72,12 @@
   壁時計打ち切り（時間打ち切り値は bit-exact でない）。生ログ2件を
   records.jsonl 6行に拡張の上 push（実験dir README/report/summary も更新）。
   残る未走査: k4p3..p11・k3p1..・k2/k1/k0・他クラス分解。
+
+## 追記2（同セッション・k4p0 の深いキャップ）
+
+- class {0} **k4p0 を 700s キャップで再挑戦 → UNKNOWN 9,630,182 conflicts**
+  （698.15s・220s 実行の3.2倍深い探索でも決着せず）。m=22 witness は同型
+  サブインスタンスで 3.1M conflicts で出現したのに対し、m=23 では 9.6M でも
+  出ない — **m=23 は m=22 より質的に難しい**という強い honest negative。
+  k4p0 が UNSAT なら全反証にはさらに深い実行が必要・SAT なら witness は
+  9.6M conflicts 以遠。生ログ `r5x23q6_0k4p0_700.txt` を records 7行に拡張して push。

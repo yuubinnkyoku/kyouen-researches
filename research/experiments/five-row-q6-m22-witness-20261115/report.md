@@ -56,6 +56,13 @@ family that the five-row-q6-m22-class-split-20261114 sweep left INDET.
   and k3p0 (krow=0:3, minpos=0) INDET 3,276,028 conflicts / 219.57 s.
   Remaining m=23 sub-instances (k4p3..p11, k3p1.., k2/k1/k0, other
   classes) are unprobed.
+- Addendum batch 2: a deep 700 s cap on class {0} k4p0 (the m=22 witness's
+  sub-instance) remains **UNKNOWN at 9,630,182 conflicts** (698.15 s;
+  3.2x the 220 s conflicts count). This is the strongest m=23 honest
+  negative: m=23 is qualitatively harder than m=22, where the witness
+  appeared at 3.1M conflicts. If k4p0 at m=23 is UNSAT, a full refutation
+  needs a substantially deeper run; if SAT, the witness lies beyond
+  9.6M conflicts on this trajectory.
 
 ## Witness-neighborhood surgery (complete enumerations, negative)
 

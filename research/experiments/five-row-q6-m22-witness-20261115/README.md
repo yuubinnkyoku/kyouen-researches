@@ -19,8 +19,10 @@ class-split SAT（kissat 4.0.4・class {0}・k×minpos 分解サブインスタ�
 - **m=23 は INDET（不在主張ではない）**: class {0} k4p0 **3,343,593**・k4p1
   **3,369,340**・k4p2 **3,686,541**（ここまでで最難）・k3p0 **3,276,028**
   conflicts（いずれも kissat --time=220 の壁時計打ち切り・
-  時間打ち切り値は同一軌跡でも bit-exact ではない）。残る k4p3..p11・k3p1..・
-  k2/k1/k0・他クラスは未走査。
+  時間打ち切り値は同一軌跡でも bit-exact ではない）。
+  **k4p0 は 700s の深いキャップでも UNKNOWN（9,630,182 conflicts・3.2倍深い
+  探索でも決着せず）** — m=23 は m=22（witness は 3.1M conflicts で出現）より
+  質的に難しい。残る k4p3..p11・k3p1..・k2/k1/k0・他クラスは未走査。
 - **witness 近傍 surgery の完全列挙（負記録）**: m=22 witness を 5×23 に移植すると
   safe かつ未遮断セルは (22,0) のみ（T曲線32本・seed最大カウント 4,3,3）。
   1石surgery **1,416構成 → 0件**・2石surgery（heavy-T曲線健全フィルタで完全）

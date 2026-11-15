@@ -9,8 +9,111 @@
     "conflicts": 3126820,
     "process_time_seconds": 194.87,
     "n_stones": 24,
-    "rows": [4, 5, 5, 5, 5],
-    "stones": [[0,0],[11,0],[15,0],[20,0],[3,1],[6,1],[10,1],[15,1],[18,1],[3,2],[6,2],[8,2],[10,2],[15,2],[4,3],[6,3],[9,3],[16,3],[17,3],[7,4],[9,4],[11,4],[12,4],[14,4]],
+    "rows": [
+      4,
+      5,
+      5,
+      5,
+      5
+    ],
+    "stones": [
+      [
+        0,
+        0
+      ],
+      [
+        11,
+        0
+      ],
+      [
+        15,
+        0
+      ],
+      [
+        20,
+        0
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        6,
+        1
+      ],
+      [
+        10,
+        1
+      ],
+      [
+        15,
+        1
+      ],
+      [
+        18,
+        1
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        6,
+        2
+      ],
+      [
+        8,
+        2
+      ],
+      [
+        10,
+        2
+      ],
+      [
+        15,
+        2
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        6,
+        3
+      ],
+      [
+        9,
+        3
+      ],
+      [
+        16,
+        3
+      ],
+      [
+        17,
+        3
+      ],
+      [
+        7,
+        4
+      ],
+      [
+        9,
+        4
+      ],
+      [
+        11,
+        4
+      ],
+      [
+        12,
+        4
+      ],
+      [
+        14,
+        4
+      ]
+    ],
     "verification": [
       "sat3.js decode + sat.js census-free verifyConfig PASS (safe + maximal)",
       "independent pure-TS reimplementation (pair lines, triple circles, canonical integer coefficients): safe (0 unsafe curves, max 5 stones on any of 1824 stone-curves) + maximal (86/86 empty cells blocked) PASS",
@@ -34,18 +137,50 @@
     "frontier": "5x23"
   },
   "m23_honest_negatives": {
-    "k4p0": {"result": "INDET", "seconds": 220, "conflicts": 3343593},
-    "k4p1": {"result": "INDET", "seconds": 220, "conflicts": 3369340},
-    "k4p2": {"result": "INDET", "seconds": 220, "conflicts": 3686541, "note": "addendum batch; hardest m=23 sub-instance so far"},
-    "k3p0": {"result": "INDET", "seconds": 220, "conflicts": 3276028, "note": "addendum batch"},
-    "note": "not absence claims; time-cut INDET counts are same-trajectory but not bit-exact across runs; remaining unprobed m=23 sub-instances: class {0} k4p3..p11, k3p1.., k2/k1/k0, and other classes' krow/minpos decompositions"
+    "k4p0": {
+      "result": "INDET",
+      "seconds": 220,
+      "conflicts": 3343593
+    },
+    "k4p1": {
+      "result": "INDET",
+      "seconds": 220,
+      "conflicts": 3369340
+    },
+    "k4p2": {
+      "result": "INDET",
+      "seconds": 220,
+      "conflicts": 3686541,
+      "note": "addendum batch; hardest m=23 sub-instance so far"
+    },
+    "k3p0": {
+      "result": "INDET",
+      "seconds": 220,
+      "conflicts": 3276028,
+      "note": "addendum batch"
+    },
+    "note": "not absence claims; time-cut INDET counts are same-trajectory but not bit-exact across runs; remaining unprobed m=23 sub-instances: class {0} k4p3..p11, k3p1.., k2/k1/k0, and other classes. The k4p0 sub-instance resists a 700s cap (9,630,182 conflicts) - m=23 is qualitatively harder than m=22 (witness found at 3.1M conflicts)",
+    "k4p0_700s": {
+      "result": "INDET",
+      "seconds": 700,
+      "conflicts": 9630182,
+      "note": "addendum batch 2: deep cap 3.2x the 220s conflicts, still UNKNOWN - strongest m=23 honest negative; wall-clock cut, not bit-exact"
+    }
   },
   "witness_neighborhood_surgery_m23": {
     "transplant": "m=22 witness on 5x23: safe (0 unsafe curves), non-maximal with exactly one unblocked cell U=(22,0)",
     "t_curves": 32,
     "t_curve_seed_counts": "4,3,3,2,2,2,1,...,0",
-    "one_stone": {"configs": 1416, "witnesses": 0, "soundness": "add must lie on a T-curve (58 seed-empty cells) or be U itself"},
-    "two_stone": {"configs": 552000, "witnesses": 0, "soundness": "U blocked/occupied requires a T-curve with seed count >= 3 reaching 5 (max 2 adds: seed<=2 gives <=4), so >=1 add on a heavy T-curve (25 seed-empty candidate cells incl. U) or at U; the other add any vacant cell; degenerate vacated-position adds reduce to complete 1-stone enumeration"},
+    "one_stone": {
+      "configs": 1416,
+      "witnesses": 0,
+      "soundness": "add must lie on a T-curve (58 seed-empty cells) or be U itself"
+    },
+    "two_stone": {
+      "configs": 552000,
+      "witnesses": 0,
+      "soundness": "U blocked/occupied requires a T-curve with seed count >= 3 reaching 5 (max 2 adds: seed<=2 gives <=4), so >=1 add on a heavy T-curve (25 seed-empty candidate cells incl. U) or at U; the other add any vacant cell; degenerate vacated-position adds reduce to complete 1-stone enumeration"
+    },
     "conclusion": "no 24-stone deficient-maximal configuration on 5x23 lies within 2 stone-moves (symmetric difference <= 4 cells) of this seed; not an m=23 nonexistence claim"
   },
   "reproducibility": {
