@@ -72,6 +72,36 @@ R(S) の次の列が次の真の前線。
   と同一結論。2つの独立実装が同じ単一セルを指した。
   witness_widths [21,22] は published 帯 m=15..22 と整合。
 
+## 行直線ブロック命題（K0854・全称証明）— 停止セル観察の昇格
+
+上の 6/6 観察（停止セルは常に欠損行）は一般命題として**証明できた**:
+
+- safe ⟹ 各水平行の石数 ≤ q−1（行直線が q 石を含むと違反）。
+- 石数ちょうど q−1 の行では、その水平直線がちょうど q−1 石を含み、
+  行内の**全空点が blocked**（blocked 定義をそのまま満たす）。
+- よって自由列追加の停止セル（最初の非 blocked セル）は常に石数 ≤ q−2
+  の行＝欠損行にあり、単一欠損 witness では一意の欠損行。
+
+**系**: 帯延伸 surgery が狙うべきセルは常に欠損行にあることが理論的に確定
+（各 surgery レーンの T が全件で欠損行だった経験則の根拠）。
+
+検証: `scripts/rowline_check.py`（独立 Fraction 実装）が 8 witness
+（上記6件 + (7,6) m=31 + (5,5) m=26）で
+(a) 行石数 ≤ q−1・(b) q−1石行の全空点 blocked・(c) 窓内全非 blocked
+セルが欠損行・(d) 停止セル行石数 ≤ q−2 を検査し **8/8 PASS**
+（`output/rowline-audit-20261115.json`）。停止セルは
+(46,0)/(33,2)/(34,2)/(20,3)/(26,0)/(22,0)/(18,0)/(31,3) で、すべて
+published 記録と一致。
+
+追加 criterion 再現 2件（published witness との一致・帯の整合）:
+
+| witness | safe | R(S) | 停止セル | published 記録 |
+|---|---|---|---|---|
+| (7,6) m=31 surgery witness（34石・maxx=29） | ✓ | **31** | (31,3) | m=32 surgery T=(31,3) に一致。witness_widths [30,31] — 同一石が幅30でも witness（c3 と4石異なる別配置） |
+| (5,5) m=26 witness（19石・maxx=24） | ✓ | **26** | (26,0) | five-row-q5-m26-extend の埋め込み幾何「offX=0 → (26,0) の1セルのみ未遮断」に一致 |
+
+詳細は K0854（research/knowledge/items/K0854-row-line-blocking-proposition.md）。
+
 ## (6,4) m=46 witness の js+py 2系統検証（保留項目の完遂）
 
 K0833 の artifact note に「js+py 2系統検証は bash 環境復旧後に実施予定」
@@ -88,8 +118,11 @@ K0833 の artifact note に「js+py 2系統検証は bash 環境復旧後に実�
 ## files
 
 - `scripts/append_criterion.py` — 補題判定器（独立実装・Fraction）。
-- `output/criterion-*.json` — witness 6件・陰性対照2件の走査結果
-  （6x4-m46・4x4-m32・4x4-m34・4x5-m20・5x7-m18・5x6-m22）。
+- `scripts/rowline_check.py` — 行直線ブロック命題（K0854）監査器
+  （独立実装・Fraction・4検査 exit code 制御）。
+- `output/criterion-*.json` — witness 8件・陰性対照2件の走査結果
+  （6x4-m46・4x4-m32・4x4-m34・4x5-m20・5x7-m18・5x6-m22・7x6-m31・5x5-m26）。
+- `output/rowline-audit-20261115.json` — K0854 の 8 witness 機械監査（全 PASS）。
 - `output/m46-js-py-verification-20261115.json` — js+py 検証記録
   （research/experiments/four-row-q4-q5-frontier-20261115/output/q4-w6-construct-m46/
   にも同一内容を配置）。
