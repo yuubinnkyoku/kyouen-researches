@@ -581,6 +581,17 @@ artifacts:
   role: log
   note: 13 receipt foldの実行記録。rebase経緯・環境リセット事故・並走in-flight markerとの予測一致を含む
 
+
+- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost76a_six_certificates_third_independent_20261115.mjs
+  role: verifier
+  note: "六つのcost-76a証明書を円の有理中心と共線分岐で第三独立再生し、親liftも監査するstandalone Node.js検査器"
+- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/cost76a-six-certificates-third-independent-audit-20261115.json
+  role: data
+  note: "6/6第三独立再生結果とhead 1188時点の局所edge被覆。global frontierは未更新"
+- path: research/log/2026-11-15-n11-class2-cost76a-third-independent-certificate-audit.md
+  role: log
+  note: "共線判定の初期不一致と修正、6証明書の再生、3つのS5行への部分被覆を記録"
+
 scope: n11 S2 {59,60} milestone-5のワークリストとS7証明書再利用。局所S6と三石位置のblocker類1・2の条件付き勝敗を含むが、二石rootや空盤の勝敗は含まない。
 evidence: 公開manifestの辞書順md5は0e95a438dbcb486368393de9c73fc21e。94オラクルの全744対称像を使い補完候補15072件を独立列挙。類1の新規WIN7戦略証明書13件・LOSS7証明書2件、類2のWIN7証明書54件と3六石位置の全62子・全72子・全64子のLOSS7証明書を独立検査。類1の五石位置の40六石軌道は既存記録と合わせて全て先手WIN。既存の一部証明書本体は別保管であり、公開監査記録に依存する。 2026-11-15 cost72 bit111 WIN7証明書を独立検査し、cost75b統合後の対象S5親を局所的に2軌道・費用147から1軌道・費用75へ縮小した。global frontierは未再計算。2026-11-15 warm multiband 35 WIN7 receipt後の公開frontierは解消S6 1,109・残り6,738・費用531,295・open需要5,008/395,018。35 rootを同実験の17 verified manifest（WIN7 77・LOSS7 200）、central LOSS7 parent-lift 274鍵、category-1候補396行とD4照合し、衝突0（category-1行は証明書とは数えない）。; 2026-11-15 cost69f残り4証明書(bits2/94/109/119)を別V8実行で再検査し全PASS。262,236行、検証訪問560,273局面、union 0/0、4×4行列式による根合法手数一致、8 partのGit blob SHA1・MD5/SHA256一致。cost69fの+9 S6軌道が全て証明書済み 2026-11-15 cost69f全9証明書をPython/Bareiss第三実装で再検査し9/9 PASS（第二検証のV8/BigInt 4件と共通フィールド全一致）。cost69g子の需要は二重役割S5(classes=6)のper-class計数と確定（distinct open parents=3、c1=0,c2=2,c4=2） 2026-11-15 cost72b子 00000000000000809102000002000000（cost 72・需要c1=0,c2=2,c4=0・open親2軌道）の72候補raw sweep完了。WIN7-D10 13（bits 2,11,21,30,31,36,47,66,85,95,97,100,106）・REFUTED-D10 59・打切り0・117,444,772節点。v15 cross-engine 13/13 loss=true、決定性再実行13/13 node-exact。13 rootは証明書未抽出の探索候補のためfrontier寄与0。; 2026-11-15 cost74d公開証明書bits12/66/68/118とcost72b bit85をBigInt独立検査器で5/5再生。D4親持ち上げにより証明書付きS6下限1166→1169（receipt frontier 1179とは区別）; 2026-11-15 cost72b正利得9証明書（bits 2,30,31,36,47,95,97,100,106）をBigInt独立再生9/9、13分割blobと9 whole-file Git SHA1一致。新規S6 manifest 9/9を裏付け、証明書付き下限1169→1178（receipt 1188とは区別）- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74d-win7-certificates-20261115.json
   role: manifest
@@ -1146,3 +1157,19 @@ cost-76a child `00000000000000809102000000000001`（第三class-2 target S5 `000
 解消計数はmanifest被覆の前進であり、盤全体の勝敗ではない。WIN7証明書は各7石rootの深さ10以内の先手勝ちのみを証明する。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class2・class4は引き続き **UNKNOWN**。
 
 詳細: [出版完了log](../../log/2026-11-15-n11-class2-lane-cost76a-certificate-publication-completion.md)。証明書6本体は同output/`class2-lane-cost76a-certificates/`。
+
+## 2026-11-15: cost-76a six WIN7証明書の第三独立再生と部分edge被覆
+
+cost-76aの6証明書（bits 11/29/66/80/92/96）を、既存のBigInt 3×3余因子検査器・Number Bareiss検査器をimportしない第三実装で再生した。円の中心を有理数分子/分母で表し、共線3点は整数外積で直線判定する。浮動小数点・探索器・判定cacheは使わない。6/6 PASS、279,344行、351 sub-root、訪問593,146状態、終局97,664、missing/extra=0/0、終局石数13〜17、v15 anchor全件一致。root合法手数は62/60/61/59/54/55でmanifestと一致し、6 rootのD4軌道も相互に異なる。
+
+実装時、最初の円のみの試作はbit96 rootの合法手数を71と誤算した。K0001の規則は共円だけでなく共線4点も禁止するため、共線3点の分岐を追加して修正した。この失敗と修正は再現ログに記録した。
+
+42件の7石root親liftは37個のD4正準S6親軌道、42個の親・着手辺にまとまる。既知のopen S6軌道2個について7辺を新たに証明:
+- S6 `00000000000000809102000000000001`: 76辺中6辺（bits 11/29/66/80/92/96）を被覆、残り70。これを共有するS5 `00000000000000809102000000000000` は4軌道・297から局所291へ、S5 `00000000000000801202000000000400` は77軌道・6296から局所6290へ。
+- S6 `00000000000000801202000000200400`: 81辺中1辺（bit64）を被覆、残り80。S5 `00000000000000801202000000200000` は41軌道・3058から局所3057へ。
+
+S5ごとの費用減少の合計は13だが、一意なS6→S7辺は7件。最初の6辺が2つの異なるS5親に共有されるためであり、独立した13辺ではない。既知のS6親はいずれも未閉鎖。37親軌道のうち35軌道は今回のshortlistで状態未分類。**global frontierは再計算しておらず、head 1188/6659/525437/4929/389160は変更しない。**
+
+詳細: [第三独立監査ログ](../../log/2026-11-15-n11-class2-cost76a-third-independent-certificate-audit.md)、[監査JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/cost76a-six-certificates-third-independent-audit-20261115.json)、[再現スクリプト](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost76a_six_certificates_third_independent_20261115.mjs)。
+
+6証明書は各7石rootの勝ちを示すだけで、76合法手のS6親を閉じない。REFUTED-D10はLOSS証明ではない。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、類2・類4は引き続き **UNKNOWN**。
