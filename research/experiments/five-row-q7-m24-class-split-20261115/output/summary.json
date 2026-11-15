@@ -1,0 +1,26 @@
+{
+ "w": 5,
+ "m": 24,
+ "q": 7,
+ "claim": "no row-deficient maximal safe configuration on 5x24 q=7; witness-free width set of (5,7) is {19,20,21,22,23,24}; M_{5,7} = 19 or >= 26 (upper 158 unchanged)",
+ "direct_classes_unsat": 17,
+ "class0_k_minpos_split_unsat": 17,
+ "class1_k_minpos_split_unsat": 17,
+ "indet": 0,
+ "sat": 0,
+ "total_conflicts_24": 18200864,
+ "hardest": [
+  "1 k1:5 mp0: 2282668",
+  "0 k0:5 mp0: 1745942",
+  "0 k0:4: 989392",
+  "1 k1:4: 847693",
+  "1 k1:5 mp2: 838969"
+ ],
+ "lex_cross_checks": {
+  "2": 296008,
+  "0,1": 555120
+ },
+ "positive_control": "5x18 class {0} SAT 343,134 conflicts (bit-exact with the K0821/K0834 lane controls); decoded 29 stones rows (5,6,6,6,6), census-free verifyConfig PASS",
+ "decomposition_soundness": "k=0..5 partitions the deficient-row stone count; k=5 instances split by minpos=0..11, which pins the leftmost stone of the first deficient row at column exactly P; every configuration or its column mirror has leftmost stone column <= floor((m-1)/2) = 11 at m=24 (else x1 >= 12 and the mirror has leftmost column 23-x5 <= 23-12 = 11); the column mirror preserves row occupancy, hence the class",
+ "environment_note": "the m=24 sweep ran in one uninterrupted pass with the official kissat 4.0.4 linux-amd64 release binary (no environment reset this time); the encoders are byte-identical to the K0835 m=23 lane, whose cross-environment-reset bit-exact re-run reconciliation is documented there; raw logs were pushed batch-by-batch during the sweep."
+}

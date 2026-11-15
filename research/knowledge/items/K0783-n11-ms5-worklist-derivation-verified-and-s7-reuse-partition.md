@@ -1207,3 +1207,44 @@ head-1195 tie-in: 第3class-2 target S5 `00000000000000809102000000000000` の�
 WIN7証明書は各7石rootから深さ10以内の先手勝ちのみを証明し、78合法手の6石親は閉じない。REFUTED-D10はLOSS証明ではない。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class2・class4は引き続き **UNKNOWN**。
 
 詳細: [監査log](../../log/2026-11-15-n11-class2-cost78a-published-certificate-replay.md)、[監査JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/cost78a-published-certificate-replay-20261115.json)、[再現スクリプト](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost78a_published_certificate_replay_20261115.py)。
+
+
+## 2026-11-15: cost-63f sweep・WIN7証明書2件出版 — 第2 class-2 target最安行・frontier不変1195
+
+第3class-2 target S5 `00000000000000809102000000000000` の残り3行（69/74/78）がすべて並走in flightのため、head-1195で大域最安の未sweep行 **cost-63 child `00000000000080809002000000000800`** をcost-63fとして取得した（IN FLIGHT claim commit 30d2dd47を先行push）。子は第2 coverable class-2 target S5 `00000000000000801202000000200000`（40 orbits/2977）のD4一石lift（stone 79削除で一致）でもう1個のopen親はclass-2 S5 `00000000000000801202020000000000`（52/3551・stone 11）・demand c1=0,c2=2,c4=0・`legal_candidates.py` 63候補がmanifest edge cost 63とbit-exact。
+
+**sweep（v16・depth 10・cap 1e9・andclose 1・8バッチ・pilot 3402×8）**: 63/63候補・**WIN7-D10 2件（bits 85, 91）**・61 REFUTED・0 capped・44,140,211 nodes（76aの131M比34%）。統制: batch-6 determinism rerun一致・v15交差エンジンでbits 85/91はloss=true（10,145,295/3,920,892 nodes）・refutedアンカーbits 1/7/109はloss=false・pilot 5949×3。独立監査 [audit_cost63f_raw_sweep_20261115.py](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost63f_raw_sweep_20261115.py)（標準ライブラリのみ・Bareiss再実装）が10 rawファイルから全件再導出（候補63 bit-exact・各bit 1回・terminal [13,17]全件・root == child|1<<bit・D4 canonical重複0・published 149 roots比較）。
+
+**証明書2件（二重独立検証 2/2 PASS）**: repo-verbatim driverで全loser初手をchunk抽出・sort -u merge。bit85 root `00000000002080809002000000000800`: 40,154行・51/51 sub-roots・extraction 17,491,560 nodes・1,449,311 B単一ファイル。bit91 root `00000000080080809002000000000800`: 29,305行・49/49 sub-roots・6,973,105 nodes・1,058,527 B。BigInt 3×3余因子検査とNumber Bareiss（--root-check --subroots全初手 --consumed-out）の双方でPASS（consumed union == 証明書行・missing/extra 0/0・終局石数[13,17]・fbt_drops 0）。manifest [class2-lane-cost63f-win7-certificates-20261115.json](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost63f-win7-certificates-20261115.json): 計69,459行・24,464,665 nodes・sub-roots 100。claimをcompletedに更新（fold pending）。15ファイル全remote blob sha byte-exact照合済み。
+
+**2 receiptのfoldは未実施・canonical chain head 1195/6652/524884/4922/388607は不変**（foldはhead 1195へのrebase必須）。兄弟cost-63行 `00000000080000801202000000200000` は未claimのまま別レーン候補。WIN7証明書は各7石rootから深さ10以内の先手勝ちのみを証明し、63合法手のS6親は閉じない。REFUTED-D10はLOSS証明ではない。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class2・class4は引き続き **UNKNOWN**。
+
+詳細: [log](../../log/2026-11-15-n11-class2-lane-cost63f-sweep-and-certificates.md)、[sweep audit](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost63f-sweep-audit-20261115.json)。証明書2本体は同output/`class2-lane-cost63f-certificates/`。
+
+## 2026-11-15: cost-63f receipts fold 完成 — chain head 1195→1199
+
+cost-63f sweepの証明書付きWIN7-D10 receipts 2件（bits 85/91）をhead 1195にfoldし、新chain head **1199/6648/524616/4918/388339**（remaining S5 orbits 175）を確定した。head JSONは `class-frontier-cost63f-receipts-recompute-20261115.json`（blob `e1e72b12ca39769f2c4a298d91833b612c97afeb`）、fold scriptは `recompute_frontier_cost63f_receipts_20261115.py`（blob `f9a02900ab13c0dc5c201d7f22ac9b39ff90471d`）。fold claim（claim df33461d → 本体push 3333d4f9・closure版blob `4c1d2e14231961cc4874ab9cc869177747851294`）はclosure後のclaim blob shaをscriptがassertし、無期限に再実行可能（cost-72b修復の教訓を適用）。
+
+- total marginal 12 / marginal_in_manifest +4。bit85 receipt（root `00000000002080809002000000000800`）が子軌道 `00000000000080809002000000000800` 本体＋交差被覆 `00000000000080801202000000200000`・`00000000000000801202020800000000` を閉鎖し、bit91 receipt（root `00000000080080809002000000000800`）が `00000000000000801202020020000000` を閉鎖。zero-mim receiptなし。3回実行すべてbyte-identical。
+- 第2 coverable class-2 target S5 `00000000000000801202000000200000` は残り40行/2977 → **38行/2837**。第2 open parent（class-2 S5 `00000000000000801202020000000000`）は52行/3551 → **49行/3360**。両open parentからchild行が落ちたことをbit-exactで検証。childのD4一石lift関係（stone 79削除→parent1・stone 11削除→parent2）をchain-internal canon()で再導出。
+- 統制: 1195 headのrunpy全再現（76a fold script経由で1188から再現・head JSON `efd83f26…`・両CSVがmain掲載版とbyte-identical）、14入力ファイルのgit blob SHA照合、sweep auditをraw 8 batchから再導出（63候補==claim列挙 bit-exact・2 WIN7-D10 / 61 REFUTED / 0 capped・44,140,211 nodes・batch-6 determinism rerun node-exact）、v15 anchor（2 WIN node一致・refuted bits 1/7/109・pilot 5949×3）、証明書2件のbytes再検証（md5×sha256×git blob・sub-roots 51/49 == loser mobility == sweep root mobility・union 0/0・terminal 13..17・manifest totals再集計: 69,459行 / 100 sub-roots / 24,464,665抽出nodes）、root disjointness（96既fold roots = 90 pre-76a + 6 cost-76a・raw + D4両方）。set-equality `s_after == s_1195 ∪ covers(2 roots)` 成立。
+- 着手直前の最新main確認で、兄弟cost-63行 `00000000080000801202000000200000` は並走がcost-63gとしてIN FLIGHT claim済み（commit 69a8f4ad）であることを確認し、触れていない。並走が同セッション中にcost-63f証明書の第三独立監査（rational-geometry replay・CI・D4 root manifest照合）をpushしているのも確認した（commits 6728ba9d/bdc35e32/71464062/77daf4cf）。
+
+**cost-63g fold（並走・sweep in flight）とcost-78a fold（並走・証明書公開中）は新head 1199へのrebase必須**。以後のrecompute・claimはこのheadをassertして拡張する。69g/65j/74eも並走in flight。
+
+解消計数はmanifest被覆の前進であり、盤全体の勝敗ではない。WIN7証明書は各7石rootの深さ10以内の先手勝ちのみを証明する。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class2・class4は引き続き **UNKNOWN**。
+
+詳細: [fold log](../../log/2026-11-15-n11-class2-lane-cost63f-receipts-fold.md)、[head JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost63f-receipts-recompute-20261115.json)、[fold script](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost63f_receipts_20261115.py)。
+
+## 2026-11-15: cost-65k sterile sweep — 65 REFUTED-D10・WIN7-D10不在・frontier不変1199
+
+head-1199のtop-candidatesで未sweepだった cost-65 child `00000000020000801202000000200000`（第2 coverable class-2 target S5 `00000000000000801202000000200000` のS6行・stones [21, 49, 57, 60, 71, 89]・lift stone 89・開親2個ともclass 2: parent1 38行/2837〔stone 89削除〕・`00000000000000003800000008002000` 53行/3698〔stone 21削除〕）をcost-65kとしてsweepした（cost-65b–65jは他行で使用済み）。**65/65候補・WIN7-D10 0件・65 REFUTED-D10・0 capped・総nodes 32,457,462**（v16 engine・depth 10・cap 1e9・andclose 1・8バッチ・pilot 3402×8全PASS）。STERILE: receiptが存在しないためfold材料なし・証明書抽出対象なし。
+
+- terminal stone rangeは64候補 [13,17]、bit 9のみ [13,15]（全ライン早期終端・63fとは異なる正当値。監査assertは固定値比較から深さ10境界検査〔[0]≥7・[1]≤17〕に修正し `distinct_terminal_ranges` を記録）。batch 6（bits 74,75,76,77,79,83,84,86）determinism rerunはnode-exact一致、v15交差エンジン（`class4_child1_runner.ts`）でアンカーbits 7/86/118はloss=false（nodes 125301/2037455/5749144・pilot 5949）。
+- 独立監査 `audit_cost65k_raw_sweep_20261115.py`（Python標準ライブラリのみ・Bareiss再実装・repo engine不使用）が10 rawファイルから全件再導出: 候補65==claim列挙 bit-exact・各bit 1回ずつ・pilot 3402×8・D4 canonical重複0（published manifest roots 151個との比較込み・59 manifest走査）。監査JSON `class2-lane-cost65k-sweep-audit-20261115.json`・2回実行byte-identical。
+- 出版はbase64一括転写2回失敗を受け、整数compact-table（bit, nodes, ms, terminal range）からのJSONL行再生方式に切替（ローカルでbyte-exact検証後にpush・remote 13ファイル全部cmp一致・blob sha照合済み）。
+- 並走: cost-63g sweep 63/63・証明書14/14出版済み（commit `1b814444` 時点）・foldは並走担当。78a/69g/65j/74eも並走in flight。
+
+**child `00000000020000801202000000200000` はparent1の未解決S6行のまま（38行/2837）**。この行を反証で閉じるには深さ>10の証拠（65個の7石root各々への深さ>10の反証または不変量）が必要で、parent1の他の子行からのWIN7 receipt foldでの閉鎖も可能。REFUTED-D10はLOSS証明ではない。canonical chain head **1199/6648/524616/4918/388339 は不変**。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class2・class4は引き続き **UNKNOWN**。
+
+詳細: [sweep log](../../log/2026-11-15-n11-class2-lane-cost65k-sterile-sweep.md)、[completed claim](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65k-inflight-20261115.json)、[sweep audit](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65k-sweep-audit-20261115.json)、[audit script](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost65k_raw_sweep_20261115.py)。

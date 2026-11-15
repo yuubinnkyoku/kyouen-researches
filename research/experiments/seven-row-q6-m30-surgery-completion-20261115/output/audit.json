@@ -1,0 +1,146 @@
+{
+  "experiment": "seven-row-q6-m30-surgery-completion-20261115",
+  "method": "exact Fraction circumcentres; no SAT, census cache, or repository code",
+  "board": {
+    "width": 30,
+    "height": 7,
+    "q": 6,
+    "seed_stones": 34,
+    "seed_row_counts": [
+      5,
+      5,
+      5,
+      4,
+      5,
+      5,
+      5
+    ],
+    "target": [
+      29,
+      3
+    ]
+  },
+  "seed_audit": {
+    "distinct_seed_defined_curves": 5273,
+    "seed_curve_size_histogram": {
+      "3": 5108,
+      "4": 129,
+      "5": 36
+    },
+    "maximum_seed_curve_size": 5,
+    "uncovered_empty_cells_on_7x29": [],
+    "uncovered_empty_cells_on_7x30": [
+      [
+        29,
+        3
+      ]
+    ],
+    "target_curve_size_histogram": {
+      "2": 531,
+      "3": 8,
+      "4": 1
+    },
+    "three_seed_point_T_curve_empty_pairs": [
+      [
+        [
+          1,
+          3
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      [
+        [
+          1,
+          3
+        ],
+        [
+          29,
+          3
+        ]
+      ],
+      [
+        [
+          5,
+          5
+        ],
+        [
+          29,
+          3
+        ]
+      ],
+      [
+        [
+          15,
+          3
+        ],
+        [
+          29,
+          3
+        ]
+      ]
+    ],
+    "four_seed_point_T_curve": "y=3",
+    "unique_three_seed_point_T_curve_pair_avoiding_T": [
+      [
+        1,
+        3
+      ],
+      [
+        5,
+        5
+      ]
+    ]
+  },
+  "families": [
+    {
+      "name": "T-occupancy",
+      "candidates": 98175,
+      "safe": 18342,
+      "safe_and_maximal": 0
+    },
+    {
+      "name": "one-swap",
+      "candidates": 884,
+      "safe": 154,
+      "safe_and_maximal": 0
+    },
+    {
+      "name": "two-remove-one-add",
+      "candidates": 14586,
+      "safe": 4306,
+      "safe_and_maximal": 0
+    },
+    {
+      "name": "three-stone-T-curve-extra",
+      "candidates": 126,
+      "safe": 5,
+      "safe_and_maximal": 0
+    },
+    {
+      "name": "four-stone-line-gap-A",
+      "candidates": 1631250,
+      "safe": 101439,
+      "safe_and_maximal": 0
+    },
+    {
+      "name": "four-stone-line-gap-B",
+      "candidates": 36000,
+      "safe": 2484,
+      "safe_and_maximal": 0
+    }
+  ],
+  "totals": {
+    "candidates": 1781021,
+    "safe": 126730,
+    "safe_and_maximal": 0
+  },
+  "classification_scope": "All repairs from this seed with at most two removals and at most two additions, final stone count <=34, and T occupied or blocked. The six disjoint families exhaust the T-blocking possibilities.",
+  "completeness_lemmas": {
+    "safety": "A forbidden six-point line/circle after at most two additions contains at least four seed stones, so it appears in the exact seed-triple curve census.",
+    "maximality": "A curve blocking an empty cell after at most two additions contains at least three seed stones, so it appears in the exact seed-triple curve census; all 210 board cells are checked.",
+    "family_disjointness": "The 435 case-b configurations with two off-line removals are already in gap-A; the remaining 126 case-b configurations are separated as three-stone-T-curve-extra."
+  }
+}

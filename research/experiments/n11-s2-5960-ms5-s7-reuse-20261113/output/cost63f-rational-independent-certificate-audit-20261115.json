@@ -1,0 +1,113 @@
+{
+  "schema": "n11-cost63f-rational-independent-certificate-audit-v1",
+  "date": "2026-11-15",
+  "method": "Exact integer rational-circumcenter equation for noncollinear triples and exact cross-product line test for collinear triples; no floating point, no search engine, no verdict cache, no existing verifier imported",
+  "source_manifest": "class2-lane-cost63f-win7-certificates-20261115.json",
+  "certificates": [
+    {
+      "bit": 85,
+      "root_hex": "00000000002080809002000000000800",
+      "root_d4_canonical_hex": "00000000002080801202000000200000",
+      "bytes": 1449311,
+      "md5": "ba123f04c5e51d9fb4369270976ceee6",
+      "sha256": "7e66da64df58946edf1452df19e95a455886c2d2b1b726db11da203bb14b76dd",
+      "git_blob_sha": "141facd1cee3199786546698213a99ef6fe1d361",
+      "rows": 40154,
+      "root_mobility": 51,
+      "sub_roots": 51,
+      "visited_states_across_subroots": 87882,
+      "winner_states": 57352,
+      "loser_states": 19083,
+      "loser_reply_edges": 84887,
+      "terminal_count": 11447,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "max_plies_from_root": 10,
+      "union_missing": 0,
+      "union_extra": 0
+    },
+    {
+      "bit": 91,
+      "root_hex": "00000000080080809002000000000800",
+      "root_d4_canonical_hex": "00000000080080809002000000000800",
+      "bytes": 1058527,
+      "md5": "8eb760b9a1ed9b7fb1498278b39b6553",
+      "sha256": "0182dfaac77af794dc042524c14344bb21b5f145467835039391f997dc18c7fe",
+      "git_blob_sha": "c082272388ce3aa332eed5f278b1ffe5774accdd",
+      "rows": 29305,
+      "root_mobility": 49,
+      "sub_roots": 49,
+      "visited_states_across_subroots": 64688,
+      "winner_states": 41812,
+      "loser_states": 13361,
+      "loser_reply_edges": 59739,
+      "terminal_count": 9515,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "max_plies_from_root": 10,
+      "union_missing": 0,
+      "union_extra": 0
+    }
+  ],
+  "parent_lifts": {
+    "deletion_edges": 14,
+    "unique_d4_parent_orbits": 13,
+    "shared_child_orbit": "00000000000080809002000000000800",
+    "shared_child_incidences": [
+      {
+        "bit": 85,
+        "removed": 85
+      },
+      {
+        "bit": 91,
+        "removed": 91
+      }
+    ],
+    "repeated_parent_orbits": [
+      {
+        "parent": "00000000000080809002000000000800",
+        "incidences": [
+          {
+            "bit": 85,
+            "removed": 85
+          },
+          {
+            "bit": 91,
+            "removed": 91
+          }
+        ]
+      }
+    ],
+    "baseline_closed_parent_orbits": 1
+  },
+  "aggregate": {
+    "rows": 69459,
+    "visited_states_across_subroots": 152570,
+    "winner_states": 99164,
+    "loser_states": 32444,
+    "loser_reply_edges": 144626,
+    "terminal_count": 20962
+  },
+  "frontier_impact": {
+    "at_audit": {
+      "manifest_s6_contribution": 0,
+      "chain_head": "1195/6652/524884/4922/388607",
+      "receipt_fold_status": "in_flight"
+    },
+    "subsequent_fold": {
+      "chain_head": "1199/6648/524616/4918/388339",
+      "marginal": 12,
+      "marginal_in_manifest": 4,
+      "child_closed_by_bit": 85,
+      "remaining_s6": 6648,
+      "remaining_cost": 524616,
+      "s6_needed": 4918,
+      "cost_needed": 388339
+    }
+  },
+  "interpretation_guard": "The two certificates prove only the individual seven-stone roots WIN within ten plies. The later cost-63f receipt fold closes their shared S6 child in the manifest but does not solve either S5 parent. The 11x11 empty root, both two-stone roots, S2, class2 and class4 remain UNKNOWN."
+}

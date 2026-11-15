@@ -1,8 +1,8 @@
 {
   "schema": "n11-class2-lane-cost63f-inflight-20261115-v1",
-  "title": "n11 class2-lane cost-63f sweep in flight (second coverable class-2 target cheapest row); certificates and receipt fold pending",
+  "title": "n11 class2-lane cost-63f sweep and certificate publication complete; receipt fold pending",
   "date": "2026-11-15",
-  "status": "in_flight",
+  "status": "completed",
   "claimed_by": "long-term class2 lane",
   "s5": "00000000000000801202000000200000",
   "s6_child": "00000000000080809002000000000800",
@@ -194,7 +194,50 @@
     "raw_batch_naming": "class2-lane-cost63f-raw-batch{N}-20261115.jsonl (JSONL: {bit,loss,nodes,capped,terminalStoneRange,ms, andclose} plus the pilot control line)"
   },
   "verdict_semantics": "loss=true => WIN7-within-depth-10 candidate (certificate rebuild target); loss=false && !capped => REFUTED-D10, no first-player win within depth 10 (NOT a LOSS proof); capped => proves nothing either way",
-  "frontier_impact_note": "Sweep and certificates change no frontier counts by themselves; the receipt fold (if any WIN7 receipts are certified) must be rebased on the canonical chain head 1195/6652/524884/4922/388607.",
+  "frontier_impact_note": "No frontier count changes: the sweep and certificates alone close nothing; the 2 WIN7 receipts are fold material only. Any fold must be rebased on the canonical chain head 1195/6652/524884/4922/388607 (class-frontier-cost76a-receipts-recompute-20261115.json). The child remains an open S6 row at head 1195.",
   "unknown_note": "The standard 11x11 empty board, both two-stone roots {49,60}/{59,60}, S2 {59,60}, class 2 and class 4 all remain UNKNOWN.",
-  "next_action": "Run the 8 sweep batches (depth 10, cap 1e9, andclose 1, per-batch pilot), push each raw batch JSONL, then re-derive the sweep audit from the raw batches, extract and double-verify certificates for any WIN7 bits, and only then update this claim."
+  "next_action": "Fold the 2 cost-63f WIN7 receipts into the canonical chain at head 1195 (re-derive marginals against the growing union, child-orbit closure check, set-equality control), then publish the new head. Until then the global head stays 1195/6652/524884/4922/388607.",
+  "sweep_results": {
+    "engine": "class4_child1_runner_v16.ts depth 10 cap 1e9 andclose 1 (blob sha 0a4a86f6828dc010c89ff17596054336a6b6091f)",
+    "batches": 8,
+    "raw_batch_files": [
+      "class2-lane-cost63f-raw-batch1-20261115.jsonl",
+      "class2-lane-cost63f-raw-batch2-20261115.jsonl",
+      "class2-lane-cost63f-raw-batch3-20261115.jsonl",
+      "class2-lane-cost63f-raw-batch4-20261115.jsonl",
+      "class2-lane-cost63f-raw-batch5-20261115.jsonl",
+      "class2-lane-cost63f-raw-batch6-20261115.jsonl",
+      "class2-lane-cost63f-raw-batch7-20261115.jsonl",
+      "class2-lane-cost63f-raw-batch8-20261115.jsonl"
+    ],
+    "win7_d10_bits": [
+      85,
+      91
+    ],
+    "win7_root_hexes": {
+      "85": "00000000002080809002000000000800",
+      "91": "00000000080080809002000000000800"
+    },
+    "refuted_d10": 61,
+    "capped": 0,
+    "candidate_nodes": 44140211,
+    "determinism_rerun": "class2-lane-cost63f-v16-determinism-rerun-20261115.jsonl (batch 6, loss/nodes/capped/terminal identical, pilot 3402)",
+    "v15_crosscheck": "class2-lane-cost63f-v15-crosscheck-20261115.jsonl (bits 85/91 loss=true nodes 10145295/3920892; refuted anchors bits 1/7/109 loss=false; pilots 5949 x3)",
+    "sweep_audit": "class2-lane-cost63f-sweep-audit-20261115.json (independent Bareiss re-derivation; audit script audit_cost63f_raw_sweep_20261115.py)"
+  },
+  "certificate_publication": {
+    "bits": [
+      85,
+      91
+    ],
+    "driver": "scripts/cert_driver76a.ts reused verbatim (blind kill table pref=null, chunk rows-only, repo-verbatim extractor import)",
+    "rows_total": 69459,
+    "extraction_nodes_total": 24464665,
+    "fbt_drops": 0,
+    "double_verification": "verify_win7_certificate_bigint_independent.mjs 2/2 PASS and verify_bit7_win7_cert.ts --root-check --subroots(all moves) --consumed-out 2/2 PASS (sub-roots 100 == loser mobility 51/49, consumed union == certificate rows, missing/extra 0/0, terminal [13,17], rows sorted-unique)",
+    "d4_duplicate": "none: the 2 root D4 canonical forms are distinct from each other and from all published manifest roots (sweep audit d4_duplicate_scan)",
+    "certificates_dir": "class2-lane-cost63f-certificates/",
+    "record_final_published": "class2-lane-cost63f-win7-certificates-20261115.json",
+    "completed": "2026-11-15"
+  }
 }
