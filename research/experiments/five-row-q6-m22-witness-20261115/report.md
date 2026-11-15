@@ -51,6 +51,11 @@ family that the five-row-q6-m22-class-split-20261114 sweep left INDET.
   trajectory but are not bit-exact across runs (the cut point depends on
   wall clock). The published raw logs are the fresh post-reset runs;
   pre-reset values on the same trajectory were 3,347,880 / 3,268,987.
+- Addendum batch (same session, same protocol): class {0} k4p2 INDET
+  3,686,541 conflicts / 219.53 s (the hardest m=23 sub-instance so far)
+  and k3p0 (krow=0:3, minpos=0) INDET 3,276,028 conflicts / 219.57 s.
+  Remaining m=23 sub-instances (k4p3..p11, k3p1.., k2/k1/k0, other
+  classes) are unprobed.
 
 ## Witness-neighborhood surgery (complete enumerations, negative)
 

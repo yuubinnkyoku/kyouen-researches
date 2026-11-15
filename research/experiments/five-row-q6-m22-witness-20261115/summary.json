@@ -36,7 +36,9 @@
   "m23_honest_negatives": {
     "k4p0": {"result": "INDET", "seconds": 220, "conflicts": 3343593},
     "k4p1": {"result": "INDET", "seconds": 220, "conflicts": 3369340},
-    "note": "not absence claims; time-cut INDET counts are same-trajectory but not bit-exact across runs"
+    "k4p2": {"result": "INDET", "seconds": 220, "conflicts": 3686541, "note": "addendum batch; hardest m=23 sub-instance so far"},
+    "k3p0": {"result": "INDET", "seconds": 220, "conflicts": 3276028, "note": "addendum batch"},
+    "note": "not absence claims; time-cut INDET counts are same-trajectory but not bit-exact across runs; remaining unprobed m=23 sub-instances: class {0} k4p3..p11, k3p1.., k2/k1/k0, and other classes' krow/minpos decompositions"
   },
   "witness_neighborhood_surgery_m23": {
     "transplant": "m=22 witness on 5x23: safe (0 unsafe curves), non-maximal with exactly one unblocked cell U=(22,0)",
