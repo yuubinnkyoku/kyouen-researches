@@ -62,7 +62,7 @@ g++ -O3 -std=c++17 -Wall -Wextra -Werror -pedantic research/experiments/seven-ro
 
 /tmp/crosscheck_gap_cases
 
-Python検証器を連続2回実行した output/audit.json はSHA-256が同一（35c4a0010e6a5ee3be937c1ac36744408bcbbf451543c6a27928f7f44e569863）。C++のgap-A/B出力もPythonの候補数・安全数・極大数と一致した。
+Python検証器を連続2回実行した output/audit.json はSHA-256が同一（f731ecf2235918e460c61e508ab1439401865b8b447e4c4d29c5abd44f9ae3d0）。C++のgap-A/B出力もPythonの候補数・安全数・極大数と一致した。
 
 ## 範囲と次の課題
 
