@@ -4,8 +4,10 @@ IN FLIGHT (claim) — 高速レーン。(5,7) の現在の境界は **19 ≤ M_{
 （下界 19: K0332 の 5×18・29石・occupancy (5,6,6,6,6) 欠損極大証人・最小不在幅 19 は
 K0738–K0759 の 5×19 全 occupancy クラス完全列挙で確定。上界 158: K0332 の同和弦
 energy + Melchior による全称証明・SAT に依らない）。witness-free 幅集合は
-{19,...,34}（K0738–K0759・K0816・K0821・K0834–K0847 の class-split / 完全列挙）。
-本実験は残る帯 **m=35..157（123幅）** を掃引し、**M_{5,7} の完全決着**を狙う
+{19,...,34}（K0738–K0759・K0816・K0821・K0834–K0847 の class-split / 完全列挙）に
+**5x35 = K0849（five-row-q7-m35-class-split-20261115・63 deciding instances 全 UNSAT）**
+を加えた {19,...,35}（鋭い形は M = 19 または ≥ 37）。本実験は残る帯
+**m=35..157（123幅）** を掃引し、**M_{5,7} の完全決着**を狙う
 （全幅 UNSAT なら **M_{5,7} = 19 exact・w=5 で初の真の安定化長の完全確定**。
 帯内 SAT なら witness 発見として dual-verify して下界を更新し前線を進める）。
 
@@ -33,9 +35,11 @@ energy + Melchior による全称証明・SAT に依らない）。witness-free 
   第3系で計算済み（`output/ts-census-fullband.json`・123幅網羅・欠落なし）—
   掃引進行に合わせて各幅の meta curves と照合する。
 - 帯掃引: 各幅 genfast3 def-mode CNF → kissat 4.0.4（230s cap）→ 記録は
-  `output/records.jsonl` に resume-safe に追記。INDET 幅が出た場合は rowY=0/1/2
-  行固定分割（V-鏡像 y↔4-y で 3クラスが全5行を被覆・K0829 と同一の被覆論の w=5 版）
-  で継続。交差確認は代表幅で def+lex=H,V,HV、決定性は代表幅の再生成・再解 bit-exact。
+  `output/records.jsonl` に resume-safe に追記。**def-mode UNSAT はその幅の
+  欠損極大非存在の完全証明（1インスタンスで完結）**。INDET 幅が出た場合は
+  rowY=0/1/2 行固定分割（V-鏡像 y↔4-y で 3クラスが全5行を被覆・K0829 と同一の
+  被覆論の w=5 版）で継続。交差確認は代表幅で def+lex=H,V,HV、決定性は代表幅の
+  再生成・再解 bit-exact。
 - ソルバ: kissat 4.0.4 official linux-amd64（md5 3a5eba830aa6008a604fcc9bbe99a325）。
 
 ## 進捗
@@ -50,12 +54,24 @@ energy + Melchior による全称証明・SAT に依らない）。witness-free 
   m=50 の実行が中断。m=50 以降と m=38, 39 は環境復旧後に再開する。
   生 kissat ログは環境復旧後に batch push する。
 
+## 並走協調ノート
+
+- **5x35 は二重決着**: class-split レーン（five-row-q7-m35-class-split-20261115・
+  K0849・63 deciding instances 全 UNSAT・66 records）と本レーンの def-mode
+  UNSAT（2,809,004 conflicts・1インスタンス）が**独立な符号化で一致**した。
+  以降の幅でも、class-split レーンが先行して決着した幅は本レーンの def-mode
+  掃引と交叉確認として機能する（両者とも各幅で完全な非存在証明）。
+- 本レーンの def-mode 掃引が m=36 以降の幅を先に決着した場合、class-split レーンの
+  同幅エントリは省略可能（省略しない場合は交叉確認として価値がある）。
+- 本レーンは実行環境障害中。復旧後は records.jsonl への追記で resume する
+  （m=38, 39 → 50..157 の順）。
+
 ## スコープ
 
 有限機械検証（genfast3 弦対 census の完全性論 q≥w+2・CNF byte-identity・
 陽性対照の witness 再発見、kissat 4.0.4 の正確性まで）。m=35..157 の各幅
 def-mode UNSAT はその幅の欠損極大非存在の完全証明。全幅 UNSAT の場合、
-witness 幅 {7..18}（K0808..K0815 系）・witness-free {19..34}（class-split 系）・
-m≥158 witness-free（K0332 全称上界・証明済み）と合わせて **M_{5,7} = 19 が
-exact に決着**する（w=5 初・q=w+2 帯では (6,8) に次ぐ例）。SAT 幅が出た場合は
-そこで停止し、witness を dual-verify して下界更新として記録する。
+witness 幅 {7..18}（K0808..K0815 系）・witness-free {19..35}（class-split 系・
+K0849 含む）・m≥158 witness-free（K0332 全称上界・証明済み）と合わせて
+**M_{5,7} = 19 が exact に決着**する（w=5 初・q=w+2 帯では (6,8) に次ぐ例）。
+SAT 幅が出た場合はそこで停止し、witness を dual-verify して下界更新として記録する。
