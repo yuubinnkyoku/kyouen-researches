@@ -1728,6 +1728,7 @@
 - ← depends_on [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md): q=5 の上界 U_{4,5}=140, U_{5,5}=336（curve-packing 代入上界; curve_packing_fixed_width.py bound() で本レーンで再計算・一致確認済み: w4q5 packing_U=140, w5q5 packing_U=336）
 - ← depends_on [K0843](../items/K0843-eight-row-q11-q12-band-closure.md): upper bounds U_{8,11}=908 and U_{8,12}=883 by curve-packing substitution (w7_upper_bounds.json) - proved; excludes witnesses for all m >= 908 / 883
 - ← depends_on [K0848](../items/K0848-six-row-q8-band-22-59-deficient-nonexistence.md): substitution upper bound U_{6,8} = 371 (via K0806; K0024): witnesses cannot exist for m >= 371, so a witness-free sweep of 19..370 would close M_{6,8} = 19 exactly; this item carries the sweep to m=59
+- ← depends_on [K0852](../items/K0852-five-row-q6-m22-deficient-witness.md): substitution upper bound M_{5,6} <= 249 (with K0024 T=10101), unchanged by this item
 
 ## [K0319](../items/K0319-misere-direct-sum-normal-grundy-rule.md) swap則が全後続局面で成り立つ部品のmisère直和は通常Grundy値だけで解ける
 
@@ -4093,6 +4094,7 @@
 
 - → depends_on [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md): 曲線充填上界への(5,6)代入による一般上界249
 - → depends_on [K0024](../items/K0024-fixed-width-q-point-threshold.md): より弱い初期上界T=2965は参考
+- ← depends_on [K0852](../items/K0852-five-row-q6-m22-deficient-witness.md): the m=15 witness at the base of the (5,6) witness band m=15..21 which this item extends to m=15..22
 
 ## [K0724](../items/K0724-n11-classa-decomposition.md) best-S3壁のclassA分解: classA blockerは32個・8 S2のみで、すべて16第二手勝ち五石子由来（SW16部分集合）
 
@@ -4968,6 +4970,7 @@
 - ← depends_on [K0849](../items/K0849-five-row-q7-m35-deficient-nonexistence.md): census (circleABC integer triples, line pairs) and the sequential-counter/maximality core are used verbatim (sat.js / sat2.js / sat3.js); the class-split unit clauses and the k/minpos splits are the only additions
 - ← depends_on [K0850](../items/K0850-five-row-q7-m36-deficient-nonexistence.md): census (circleABC integer triples, line pairs) and the sequential-counter/maximality core are used verbatim (sat.js / sat2.js / sat3.js); the class-split unit clauses and the k/minpos splits are the only additions
 - ← depends_on [K0851](../items/K0851-five-row-q7-m37-deficient-nonexistence.md): census (circleABC integer triples, line pairs) and the sequential-counter/maximality core are used verbatim (sat.js / sat2.js / sat3.js); the class-split unit clauses and the k/minpos splits are the only additions
+- ← depends_on [K0852](../items/K0852-five-row-q6-m22-deficient-witness.md): census (circleABC integer triples, line pairs), sequential-counter/maximality encoding core used verbatim (sat.js / sat2.js / sat3.js; blob shas 6c3262d6 / edfae1d2 / 6dfa7db3)
 
 ## [K0811](../items/K0811-sa-row-deficient-witnesses.md) SA探索による行欠損極大witness — M_{6,5}≥29・M_{6,6}≥22・M_{5,6}≥19（K0810の下界を更新・第2弾/第3弾で延長）
 
@@ -5014,6 +5017,8 @@
 - ← depends_on [K0819](../items/K0819-six-row-q8-m20-deficient-nonexistence.md): 41-stone deficient-maximal witness at 6x18 (rows 7,6,7,7,7,7) is the lower bound M_{6,8}>=19 and the positive-control board (rediscovered SAT, conflicts bit-exact with K0818)
 - ← depends_on [K0829](../items/K0829-six-row-q8-m21-deficient-nonexistence.md): 41-stone deficient-maximal witness at 6x18 (rows 7,6,7,7,7,7) is the lower bound M_{6,8}>=19 and the positive-control board (row-mirror rows 7,7,7,7,6,7 rediscovered by the def-OR control here)
 - ← depends_on [K0848](../items/K0848-six-row-q8-band-22-59-deficient-nonexistence.md): 41-stone deficient-maximal witness at 6x18 (rows 7,6,7,7,7,7) is the lower bound M_{6,8} >= 19 and the positive-control board (row-mirror rows 7,7,7,7,6,7 rediscovered bit-exactly by the 6x18 def-OR control of this lane, 492,432 conflicts)
+- ← depends_on [K0852](../items/K0852-five-row-q6-m22-deficient-witness.md): 24-stone witnesses at 5x20/5x21 (q=6) and the 5x22 kissat 240s INDET frontier (2.77M conflicts) that this SAT result resolves
+- ← supports [K0852](../items/K0852-five-row-q6-m22-deficient-witness.md): the (5,6) lower-bound side: witness band m=15..21 -> m=15..22, lower bound 22 -> 23
 
 ## [K0816](../items/K0816-five-row-m20-deficient-nonexistence.md) 5x20 q=7 row-deficient maximal nonexistence (all 19 classes) — witness-free widths extend to 20, M_{5,7} ∈ {19,20} or ≥22
 
@@ -5559,3 +5564,11 @@
 - → depends_on [K0850](../items/K0850-five-row-q7-m36-deficient-nonexistence.md): the m=36 nonexistence item; this lane copies its scripts (blob shas verified) and ports mkcnf.sh/qrun.sh/mkrecords5736->5737 m=36 -> m=37 (the minpos sound bound grows to floor((37-1)/2)=18, 19 points per class), extends the witness-free width set {19,...,36} -> {19,...,37}; per the five-row-q7-band-closure-35-157-20261115 coordination note this lane is the independent-encoding cross-check of that lane's def-mode UNSAT at m=37
 - → depends_on [K0738](../items/K0738-five-row-m19-class1-nonexistence.md): 5x19 witness-free by the occupancy complete enumeration (via the K0759 machine) — the first element of the witness-free width set
 - → generalizes [K0850](../items/K0850-five-row-q7-m36-deficient-nonexistence.md): the same class-split proposition one width further: 5x36 (K0850) -> 5x37; witness-free width set {19,...,36} -> {19,...,37}; the third doubly decided width after 5x35 (K0849) and 5x36 (K0850)
+
+## [K0852](../items/K0852-five-row-q6-m22-deficient-witness.md) 5x22 q=6 row-deficient maximal witness exists (class {0} k=4 minpos=0 SAT, 24 stones, dual-verified) — (5,6) witness band m=15..22, M_{5,6} in [23, 249], frontier 5x23
+
+- → depends_on [K0810](../items/K0810-sat-row-deficient-witnesses.md): census (circleABC integer triples, line pairs), sequential-counter/maximality encoding core used verbatim (sat.js / sat2.js / sat3.js; blob shas 6c3262d6 / edfae1d2 / 6dfa7db3)
+- → depends_on [K0815](../items/K0815-witness-column-extension-kissat-bounds.md): 24-stone witnesses at 5x20/5x21 (q=6) and the 5x22 kissat 240s INDET frontier (2.77M conflicts) that this SAT result resolves
+- → depends_on [K0723](../items/K0723-width-five-q6-stabilization-bounds.md): the m=15 witness at the base of the (5,6) witness band m=15..21 which this item extends to m=15..22
+- → depends_on [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md): substitution upper bound M_{5,6} <= 249 (with K0024 T=10101), unchanged by this item
+- → supports [K0815](../items/K0815-witness-column-extension-kissat-bounds.md): the (5,6) lower-bound side: witness band m=15..21 -> m=15..22, lower bound 22 -> 23

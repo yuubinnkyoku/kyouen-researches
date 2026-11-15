@@ -1888,6 +1888,30 @@
 ## [research/experiments/five-edge-terminal-spectrum-20261101/verify.py](../../../research/experiments/five-edge-terminal-spectrum-20261101/verify.py)
 
 - [K0597](../items/K0597-five-forbidden-sets-terminal-spectrum.md) (verifier): 17902所属型族・4717374安全局面、271重複署名盤・383059安全局面、14点全1001四点組・12651安全局面の独立照合
+## [research/experiments/five-row-q6-m22-witness-20261115/raw/r5x22q6_0k4p0.txt](../../../research/experiments/five-row-q6-m22-witness-20261115/raw/r5x22q6_0k4p0.txt)
+
+- [K0852](../items/K0852-five-row-q6-m22-deficient-witness.md) (certificate): raw kissat 4.0.4 log of the deciding SAT instance: class {0} krow=0:4 minpos=0, 3,126,820 conflicts / 194.87 s; reproduced bit-exactly after a full environment reset
+## [research/experiments/five-row-q6-m22-witness-20261115/raw/witness_5x22q6_0k4p0.json](../../../research/experiments/five-row-q6-m22-witness-20261115/raw/witness_5x22q6_0k4p0.json)
+
+- [K0852](../items/K0852-five-row-q6-m22-deficient-witness.md) (data): decoded witness: 24 stones, rows (4,5,5,5,5), verifyConfig PASS (safe + maximal)
+## [research/experiments/five-row-q6-m22-witness-20261115/records.jsonl](../../../research/experiments/five-row-q6-m22-witness-20261115/records.jsonl)
+
+- [K0852](../items/K0852-five-row-q6-m22-deficient-witness.md) (data): 4 kissat records: control 5x21 {0} SAT 330,743 (bit-exact with the five-row-q6-m22-class-split-20261114 control); witness 5x22 {0} k4p0 SAT 3,126,820; m=23 k4p0 / k4p1 INDET 3,343,593 / 3,369,340 at the 220 s wall clock (time-cut counts are same-trajectory, not bit-exact)
+## [research/experiments/five-row-q6-m22-witness-20261115/report.md](../../../research/experiments/five-row-q6-m22-witness-20261115/report.md)
+
+- [K0852](../items/K0852-five-row-q6-m22-deficient-witness.md) (proof): claim, three-way verification (decode+verifyConfig, independent pure-TS census reimplementation, krow/minpos pin check), positive-control bit-exactness, m=23 INDET negatives, complete 1- and 2-stone surgery enumerations from the seed on 5x23 (1,416 / 552,000 configs, 0 witnesses), environment-reset reproducibility protocol, scope
+## [research/experiments/five-row-q6-m22-witness-20261115/scripts/sat3.js](../../../research/experiments/five-row-q6-m22-witness-20261115/scripts/sat3.js)
+
+- [K0852](../items/K0852-five-row-q6-m22-deficient-witness.md) (solver): class-split / krow / minpos encoder + kissat model decode with census-free verifyConfig (byte-identical to the K0836..K0851 lane scripts)
+## [research/experiments/five-row-q6-m22-witness-20261115/scripts/surgery2b_m23.js](../../../research/experiments/five-row-q6-m22-witness-20261115/scripts/surgery2b_m23.js)
+
+- [K0852](../items/K0852-five-row-q6-m22-deficient-witness.md) (source): complete 2-stone surgery enumeration with the heavy-T-curve sound filter (>=1 add on a seed>=3 T-curve or at U; 552,000 configs, 0 witnesses)
+## [research/experiments/five-row-q6-m22-witness-20261115/scripts/surgery_m23.js](../../../research/experiments/five-row-q6-m22-witness-20261115/scripts/surgery_m23.js)
+
+- [K0852](../items/K0852-five-row-q6-m22-deficient-witness.md) (source): 5x23 transplant analysis (single unblocked cell U=(22,0), 32 T-curves, seed counts 4,3,3,...) and the complete 1-stone surgery enumeration (1,416 configs, 0 witnesses)
+## [research/experiments/five-row-q6-m22-witness-20261115/summary.json](../../../research/experiments/five-row-q6-m22-witness-20261115/summary.json)
+
+- [K0852](../items/K0852-five-row-q6-m22-deficient-witness.md) (data): aggregate: witness, band update (5,6) m=15..22 with M in [23, 249], honest negatives, surgery counts, reset-recovery reproducibility notes
 ## [research/experiments/five-row-q7-m19-20261110/circle-census-independent.json](../../../research/experiments/five-row-q7-m19-20261110/circle-census-independent.json)
 
 - [K0726](../items/K0726-width-five-nineteen-curve-census.md) (data): 5×18では84本、5×19では95本の7点以上の円
@@ -9367,6 +9391,9 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost69f-certificate-backed-recompute-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost69f-certificate-backed-recompute-20261115.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): cost69fの9 receiptすべてを証明書済みとして反映したfrontier派生出力
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost69i-receipts-recompute-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost69i-receipts-recompute-20261115.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): fold後head 1273/6574/519179/4844/382902と第三target S5の残行0・class-2 blocker条件付き閉鎖
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost70f-receipts-recompute-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost70f-receipts-recompute-20261115.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): fold後head 1239/6608/521701/4878/385424とper-receipt marginal・親S5 after
@@ -9397,6 +9424,9 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-top-candidates-s6-after-cost69e-20261115.csv](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-top-candidates-s6-after-cost69e-20261115.csv)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): cost69eの7 marginal S6を除いた正しい候補表。best coverable class2は6軌道・費用443
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-top-candidates-s6-after-cost69i-receipts-20261115.csv](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-top-candidates-s6-after-cost69i-receipts-20261115.csv)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 第三target閉鎖後の次候補。第二target 18行/1390・best class-4 18行/1460
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-top-candidates-s6-after-cost72b-receipts-20261115.csv](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-top-candidates-s6-after-cost72b-receipts-20261115.csv)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): fold後の次候補。親809102の残る4子（69g・74第二子・76・78）とclass4首位の明細
@@ -9824,6 +9854,9 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost69e_20261115.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost69e_20261115.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (source): S5親keyを文字列で一貫して扱うよう修正。receipt-unclosable S5とbest coverable S5を分離
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost69i_receipts_20261115.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost69i_receipts_20261115.py)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (source): cost69i 4 receipt fold。head 1266のbyte再現・sweep/証明書bytes検証・第三target S5閉鎖制御・completed claim制御
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost70f_receipts_20261115.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost70f_receipts_20261115.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (source): cost70f 4 receipt fold。head 1235のbyte再現・sweep audit/証明書bytes検証・fold・completed claim制御
@@ -15487,6 +15520,9 @@
 ## [research/log/2026-11-15-n11-class2-lane-cost69f-remaining-certificates.md](../../../research/log/2026-11-15-n11-class2-lane-cost69f-remaining-certificates.md)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): cost69f残り4証明書の抽出・独立検証と9/9完了の記録
+## [research/log/2026-11-15-n11-class2-lane-cost69i-sweep-certificates-and-fold.md](../../../research/log/2026-11-15-n11-class2-lane-cost69i-sweep-certificates-and-fold.md)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): cost69iのsweep・4証明書抽出・二独立検証・第三target S5閉鎖fold
 ## [research/log/2026-11-15-n11-class2-lane-cost70e-certificates-third-independent-audit.md](../../../research/log/2026-11-15-n11-class2-lane-cost70e-certificates-third-independent-audit.md)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): cost70e証明書5件の第三独立監査記録（foldは未実施・head 1227不変）
