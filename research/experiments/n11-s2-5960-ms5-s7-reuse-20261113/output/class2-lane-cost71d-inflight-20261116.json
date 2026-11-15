@@ -1,8 +1,8 @@
 {
  "schema": "n11-class2-lane-cost71d-inflight-20261116-v1",
- "title": "n11 class2-lane cost-71d sweep in flight: second coverable class-2 candidate S5 cost-71 child",
+ "title": "n11 class2-lane cost-71d sweep completed STERILE: second coverable class-2 candidate S5 cost-71 child",
  "date": "2026-11-16",
- "status": "in-flight",
+ "status": "completed (STERILE: 71/71 REFUTED-D10, no WIN7-D10 receipts, no certificates, no fold; head 1400 unchanged)",
  "claimed_by": "n11 long-term lane session (third-fork merge continuation)",
  "s5": "00000000000000801202000040000000",
  "s6_child": "00000000000000801202000040000400",
@@ -201,5 +201,17 @@
  },
  "verdict_semantics": "loss=true => WIN7-within-depth-10 candidate (certificate rebuild target); loss=false && !capped => REFUTED-D10, no first-player win within depth 10 (NOT a LOSS proof); capped => proves nothing either way",
  "unknown_status": "11x11 empty board: UNKNOWN. A completed sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 7-stone roots of this child.",
- "coordination_note": "latest main fetched immediately before this claim push; the in-flight cost-70g claim (same S5, child 00000000000000801202000040000001, continuation session round 27) is untouched here; this claim reserves the next cheapest row of the same S5 to avoid a colliding second sweep."
+ "coordination_note": "latest main fetched immediately before this claim push; the in-flight cost-70g claim (same S5, child 00000000000000801202000040000001, continuation session round 27) is untouched here; this claim reserves the next cheapest row of the same S5 to avoid a colliding second sweep.",
+ "sweep_results": {
+  "status": "completed",
+  "win7_d10_bits": [],
+  "refuted_d10": 71,
+  "capped": 0,
+  "total_nodes": 97476178,
+  "pilots": "3402 x9",
+  "determinism_rerun": "batch5 (8 candidates) rerun node-exact: nodes/loss/capped all identical to the raw batch",
+  "v15_crosscheck": "v15 pilot d6 loss=false nodes=5949; 3/3 refuted anchors (bits 0,1,3) loss=false with raw verdict agreement (nodes 2,855,745 / 2,042,176 / 4,196,243 vs v16 1,423,531 / 1,084,822 / 2,170,270)",
+  "conclusion": "no 7-stone root of this child admits a first-player win within depth 10 under the v16 engine (cross-checked on anchors by v15); the child row cannot be closed by a depth-10 WIN7 receipt and remains open; the merged head 1400/6448/509842/4718/373565 is unchanged",
+  "verdict_guard": "REFUTED-D10 is NOT a LOSS proof for any position; 11x11 empty board remains UNKNOWN"
+ }
 }
