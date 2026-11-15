@@ -22,7 +22,7 @@ const sweep=JSON.parse(pinned(P+"class2-lane-cost67c-sweep-audit-20261115.json",
 const v15=pinned(P+"class2-lane-cost67c-v15-crosscheck-20261115.jsonl","790e2008b15af86d8ad1628c893c14291a233e0c").toString("utf8").trim().split(/\r?\n/).map(JSON.parse);
 const topText=pinned(P+"class-frontier-top-candidates-s6-after-cost63g-receipts-20261115.csv","77c12f798e9aa3341d1aa1e4e3481e955ebd51f6").toString("utf8");
 const rankText=pinned(P+"class-frontier-s5-ranking-after-cost63g-receipts-20261115.csv","15eb7f9684bb715bcfa2090dc989e92b4c9b4989").toString("utf8");
-const claim=JSON.parse(pinned(P+"class2-lane-cost67c-inflight-20261115.json","0b98e003fae000bb663e8b5a4d7f6ad5954cedc3").toString("utf8"));
+const claim=JSON.parse(pinned(P+"class2-lane-cost67c-inflight-20261115.json","728f929d999fba6d0bed8e037b573d528f99616e").toString("utf8"));
 
 const FULL=(1n<<121n)-1n, tripleCache=new Map(), legalCache=new Map();
 function circleOrLineMask(a,b,c){
