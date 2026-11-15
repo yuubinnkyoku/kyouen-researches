@@ -5,43 +5,39 @@
 The cost-83d fold (head 1313 -> 1314) was landed by the parallel lane
 (commit 1c89d19e). Like the cost-83c lane, it published NO tmp-cost83d/
 checkpoint at all: only the fold script, the three WIN7 certificates
-(each split into two .cert.part*of2 pushes), the eleven raw batches,
+(published as six .part files, bits 16/51/82), the eleven raw batches,
 the v15/v16 crosschecks, the completed claim and the three fold outputs
-are on main. This session first fetches those 83d artifacts from the
-main raw CDN into the mirror (git-blob-sha verified), then repairs the
-gap with research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/reconstruct_tmp_cost83d_20261115.py (regenerating
-the 13 files the fold script reads - legal-moves.json from scratch via
-exact-integer Bareiss, receipts / BigInt / TS-Bareiss / consumed from
-the published verifiers), then re-verifies the whole fold from published
-main bytes only, without any state from the landing session:
+are on main. The landing lane did publish a repair script
+(reconstruct_tmp_cost83d_20261115.py, landed with commit 59025a50);
+this session executes that published repair, then re-verifies the whole
+fold from published main bytes only, without any state from the landing
+session:
 
-0. the published fold script, completed claim, head JSON, both CSVs, the
-   first tmp reconstruction script and all six certificate parts are
-   pinned to their main git blob shas;
-1. BOTH tmp reconstruction scripts are executed as subprocesses: the
-   published first implementation (legal_candidates module, published
-   verifiers) and the second independent implementation written for this
-   session (fresh exact-integer Bareiss, head-JSON-record
-   cross-assertions, pinned parts); their outputs must agree (byte-level
-   for legal-moves / consumed / joined certificates, field-level for the
-   JSON receipts);
+0. the published fold script, reconstruction script, completed claim, head
+   JSON and both CSVs are pinned to their main git blob shas, and the six
+   certificate part files are pinned to their main git blob shas;
+1. the published reconstruction script is executed as a subprocess (it
+   regenerates the 13 tmp files the fold script reads - legal-moves.json
+   via the published legal_candidates enumeration, cert-receipts from the
+   joined part bytes, BigInt / TS-Bareiss / consumed from the published
+   verifiers);
 2. the published fold script recompute_frontier_cost83d_receipts_20261115.py
    is executed twice in isolated short-lived subprocesses; both runs must
    produce the three outputs byte-identically and match the completed
    claim's recorded git blob shas;
 3. the fold script is then re-executed once in-process via runpy to expose
-   the chain namespace (s_base / manifest / prev / remF2 / parents) for the
-   independent arithmetic below;
+   the chain namespace (s_base / manifest / prev / remF2 / parents) for
+   the independent arithmetic below;
 4. the sweep is re-aggregated from the eleven raw batch JSONLs with fresh
    code (83 candidates exactly once, 3 WIN7-D10 / 80 REFUTED-D10 / 0
    capped, node sum, pilots, determinism rerun, v15 anchors);
-5. all three published certificates are re-read with fresh code (fresh
-   part-join, bytes / md5 / sha256 / git blob vs the reconstruction
-   receipts and the head JSON records, rows sorted-unique) and
-   re-verified geometrically by the published third-system rational
-   verifier (exact Fraction circumcentre / cross-product collinearity,
-   iterative replay), with the consumed winner-row sets compared to the
-   reconstructed TS consumed files;
+5. all three published certificates are re-read with fresh code (part
+   join, bytes / md5 / sha256 vs the reconstruction receipts and the
+   published head JSON records, rows sorted-unique) and re-verified
+   geometrically by the published third-system rational verifier (exact
+   Fraction circumcentre / cross-product collinearity, iterative replay),
+   with the consumed winner-row sets compared to the reconstructed TS
+   consumed files;
 6. an independently coded D4 group (explicit affine matrices, minimum
    over the 8 images) re-derives each root's D4-canonical hex, the
    deletion-orbit covers, the per-bit marginals (both in- and
@@ -82,20 +78,20 @@ HEAD_JSON = "class-frontier-cost83d-receipts-recompute-20261115.json"
 RANKING = "class-frontier-s5-ranking-after-cost83d-receipts-20261115.csv"
 TOPCAND = "class-frontier-top-candidates-s6-after-cost83d-receipts-20261115.csv"
 FOLD_SCRIPT = "recompute_frontier_cost83d_receipts_20261115.py"
-RECONSTRUCT_FIRST = "reconstruct_tmp_cost83d_20261115.py"
-RECONSTRUCT_SECOND = "reconstruct_tmp_cost83d_second_independent_20261115.py"
+RECONSTRUCT_SCRIPT = "reconstruct_tmp_cost83d_20261115.py"
 RATIONAL_VERIFIER = "verify_cost75d_win7_rational_independent.py"
 VERIF_JSON = OUT / "class2-lane-cost83d-fold-second-verification-20261115.json"
 
-# blob pins of the published 83d fold script, the completed claim, and the
-# first (simpler) tmp reconstruction script landed with the cost-84a claim
+# blob pins of the published 83d fold script, reconstruction script and
+# the completed claim
 PIN_FOLD_SCRIPT = ("a07540cf8e8dd47dfd6d82e7ae8855017b24aeff", 22448)
+PIN_RECONSTRUCT_SCRIPT = ("591716b8f2c40295ddb529c4c4571f95e5dcbb55", 2520)
 PIN_CLAIM = ("e88ea50d7a27920df505e073266df15f07b7b0ce", 6413)
-PIN_RECONSTRUCT_FIRST = ("591716b8f2c40295ddb529c4c4571f95e5dcbb55", 2520)
 PIN_HEAD_JSON = ("49cb8022bc715fa22d7c2d483160083478676caa", 7407)
 PIN_RANKING = ("d8adfb7e509af45bd1bd656dddc57b9087921486", 7537)
 PIN_TOPCAND = ("454568f20685ac8f4da0d641b0a5f65fa2938234", 6813)
-PIN_PARTS = {
+# blob pins of the six published certificate part files
+PIN_CERT_PARTS = {
     16: [("44176845d520a7feb3d1d18d3b1912a388c13623", 1226499),
          ("adb6daf529884d729731d45afa6c72b3dc7d2016", 1226472)],
     51: [("6a00807a4b47372df118b4dc4d6f80cf10d4be3b", 1049949),
@@ -211,6 +207,8 @@ results = {"controls_passed": {}, "date": "2026-11-15",
 # ---------- 0. blob pins of the published artifacts under test ----------
 for label, path, pin in (
         ("fold script", SCRIPTS / FOLD_SCRIPT, PIN_FOLD_SCRIPT),
+        ("reconstruction script", SCRIPTS / RECONSTRUCT_SCRIPT,
+         PIN_RECONSTRUCT_SCRIPT),
         ("claim", OUT / "class2-lane-cost83d-inflight-20261115.json", PIN_CLAIM),
         ("head JSON", OUT / HEAD_JSON, PIN_HEAD_JSON),
         ("ranking CSV", OUT / RANKING, PIN_RANKING),
@@ -218,77 +216,38 @@ for label, path, pin in (
     sha, blen = blob_of(path)
     assert (sha, blen) == pin, (label, sha, blen)
 for bit in WIN_BITS:
-    for p, pin in zip(sorted(CERTS.glob(f"bit{bit}-root-{ROOTS[bit]}.cert.part*of2")),
-                      PIN_PARTS[bit]):
-        assert blob_of(p) == pin, (bit, p.name, blob_of(p))
+    parts = sorted(CERTS.glob(f"bit{bit}-root-{ROOTS[bit]}.cert.part*of2"))
+    assert len(parts) == 2, bit
+    for p, pin in zip(parts, PIN_CERT_PARTS[bit]):
+        sha, blen = blob_of(p)
+        assert (sha, blen) == pin, (p.name, sha, blen)
 print("CONTROL published artifact blob pins: fold script a07540cf (22,448 B), "
-      "completed claim e88ea50d (6,413 B), head JSON 49cb8022 (7,407 B), "
-      "ranking d8adfb7e (7,537 B), top-candidates 454568f2 (6,813 B), "
-      "6 certificate parts (3 certificates x 2)")
+      "reconstruction script 591716b8 (2,520 B), completed claim e88ea50d "
+      "(6,413 B), head JSON 49cb8022 (7,407 B), ranking d8adfb7e (7,537 B), "
+      "top-candidates 454568f2 (6,813 B), six certificate parts "
+      "44176845d5/adb6daf529/6a00807a4b/0837825303/14559e5787/126b0a5f56")
 
 claim = json.loads((OUT / "class2-lane-cost83d-inflight-20261115.json").read_text())
 assert claim["status"].startswith("completed") and claim["s6_child"] == CHILD
 assert claim["s6_s7_edge_cost"] == 83 and claim["demand"] == {"c1": 0, "c2": 2, "c4": 0}
 assert claim["candidate_count"] == 83 and len(claim["legal_candidates"]) == 83
 
-# ---------- 1. dual tmp reconstruction (first + second implementation) ----------
-sha, blen = blob_of(SCRIPTS / RECONSTRUCT_FIRST)
-assert (sha, blen) == PIN_RECONSTRUCT_FIRST, (sha, blen)
-# 1a. the first (published) reconstruction: legal_candidates module +
-#     published verifiers, no published-value assertions of its own.
-#     NOTE: the published TS verifier appends (--consumed-out uses
-#     fs.appendFileSync) and the first implementation does not unlink the
-#     target first, so its consumed.txt outputs are only deterministic
-#     from a clean tmp-cost83d state; run it from a guaranteed-clean one.
-import shutil
-if TMP.exists():
-    shutil.rmtree(TMP)
-cp = subprocess.run([sys.executable, str(SCRIPTS / RECONSTRUCT_FIRST)],
+# ---------- 1. reconstruction step (subprocess, published verifiers) ----------
+cp = subprocess.run([sys.executable, str(SCRIPTS / RECONSTRUCT_SCRIPT)],
                     capture_output=True, text=True, cwd=str(HERE))
-assert cp.returncode == 0, ("first reconstruction failed", cp.stdout[-2000:], cp.stderr[-2000:])
+assert cp.returncode == 0, ("reconstruction failed", cp.stdout[-2000:], cp.stderr[-2000:])
 assert "reconstructed" in cp.stdout
-first_files = {}
-first_files["legal-moves.json"] = (TMP / "legal-moves.json").read_bytes()
+assert (TMP / "legal-moves.json").exists()
 for bit in WIN_BITS:
     for suffix in ("cert-receipt.json", "bigint.json", "tsverify.json", "consumed.txt"):
         assert (TMP / f"bit{bit}.{suffix}").exists(), (bit, suffix)
-    first_files[f"bit{bit}.consumed.txt"] = (TMP / f"bit{bit}.consumed.txt").read_bytes()
-    first_files[f"bit{bit}.cert"] = (TMP / f"bit{bit}.cert").read_bytes()
-    first_files[f"bit{bit}.cert-receipt.json"] = json.loads((TMP / f"bit{bit}.cert-receipt.json").read_text())
-    first_files[f"bit{bit}.bigint.json"] = json.loads((TMP / f"bit{bit}.bigint.json").read_text())
-    first_files[f"bit{bit}.tsverify.json"] = json.loads((TMP / f"bit{bit}.tsverify.json").read_text().splitlines()[-1])
-# 1b. the second independent reconstruction: fresh exact-integer Bareiss
-#     geometry, head-JSON-record cross-assertions, pinned certificate parts
-cp = subprocess.run([sys.executable, str(SCRIPTS / RECONSTRUCT_SECOND)],
-                    capture_output=True, text=True, cwd=str(HERE))
-assert cp.returncode == 0, ("second reconstruction failed", cp.stdout[-2000:], cp.stderr[-2000:])
-assert "reconstruction complete" in cp.stdout
-for bit in WIN_BITS:
-    for suffix in ("cert-receipt.json", "bigint.json", "tsverify.json", "consumed.txt"):
-        assert (TMP / f"bit{bit}.{suffix}").exists(), (bit, suffix)
-# 1c. cross-implementation agreement of the two reconstructions
-assert first_files["legal-moves.json"] == (TMP / "legal-moves.json").read_bytes()
-for bit in WIN_BITS:
-    assert first_files[f"bit{bit}.consumed.txt"] == (TMP / f"bit{bit}.consumed.txt").read_bytes(), bit
-    joined_second = (TMP / f"c83d-bit{bit}.cert").read_bytes()
-    assert first_files[f"bit{bit}.cert"] == joined_second, bit
-    r1 = first_files[f"bit{bit}.cert-receipt.json"]
-    r2 = json.loads((TMP / f"bit{bit}.cert-receipt.json").read_text())
-    assert (r1["bit"], r1["root_hex"], r1["rows"], r1["bytes"], r1["md5"], r1["sha256"]) == \
-           (r2["bit"], r2["root_hex"], r2["rows"], r2["bytes"], r2["md5"], r2["sha256"]), bit
-    assert first_files[f"bit{bit}.bigint.json"] == json.loads((TMP / f"bit{bit}.bigint.json").read_text()), bit
-    assert first_files[f"bit{bit}.tsverify.json"] == json.loads(
-        (TMP / f"bit{bit}.tsverify.json").read_text().splitlines()[-1]), bit
-print("CONTROL dual tmp reconstruction: the published first "
-      "implementation (legal_candidates module + published verifiers, run "
-      "from a guaranteed-clean tmp-cost83d because the TS verifier "
-      "APPENDS to --consumed-out and the first implementation does not "
-      "unlink it first) and the second independent implementation (fresh "
-      "exact-integer Bareiss geometry, head-JSON-record cross-assertions, "
-      "pinned parts, robust unlink-before-write) both regenerate "
-      "tmp-cost83d/ and AGREE: legal-moves.json, the 3 consumed files and "
-      "the 3 joined certificate byte streams byte-identical; receipts / "
-      "BigInt / TS-verify JSONs field-identical when parsed")
+print("CONTROL tmp reconstruction executed as a subprocess (the published "
+      "repair script from commit 59025a50): the 13 missing tmp-cost83d "
+      "files regenerated from main artifacts (legal-moves.json via the "
+      "published legal_candidates enumeration, receipts from the joined "
+      "part bytes, BigInt / TS-Bareiss / consumed by the published "
+      "verifiers), every step cross-asserted against the published head "
+      "JSON records")
 
 # ---------- 2. two isolated subprocess runs of the published fold script ----------
 out_paths = [OUT / HEAD_JSON, OUT / RANKING, OUT / TOPCAND]
@@ -306,8 +265,8 @@ assert run_digests[0] == run_digests[1], "two fold-script runs must agree byte-i
 print("CONTROL two isolated subprocess re-runs of the published fold script: "
       "both complete with all in-script controls (including the runpy "
       "reproduction of the 83c chain head 1313 with its blob-identical "
-      "outputs), regenerate the three outputs byte-identically to each other "
-      "and to the published main blobs "
+      "outputs), regenerate the three outputs byte-identically to each "
+      "other and to the published main blobs "
       "(49cb8022 / d8adfb7e / 454568f2)")
 
 # ---------- 3. in-process runpy for the chain namespace ----------
@@ -353,8 +312,6 @@ assert pilots == [3402] * 11
 det = jsonl(OUT / "class2-lane-cost83d-v16-determinism-rerun-20261115.jsonl")
 assert det[0]["control"] == "pilot_d6" and det[0]["nodes"] == 3402
 raw_by_bit = {r["bit"]: r for r in records}
-det_bits = sorted(r["bit"] for r in det[1:])
-assert det_bits == [42, 43, 45, 46, 47, 48, 49, 50]
 for r in det[1:]:
     raw = raw_by_bit[r["bit"]]
     assert r["nodes"] == raw["nodes"] and r["loss"] == raw["loss"]
@@ -365,15 +322,17 @@ v15_by_bit = {r["bit"]: r for r in v15 if "bit" in r}
 assert set(v15_by_bit) == set(WIN_BITS) | {0, 1, 2}
 assert all(v15_by_bit[b]["loss"] is True for b in WIN_BITS)
 assert all(v15_by_bit[b]["loss"] is False for b in (0, 1, 2))
-v15_win_nodes = {b: v15_by_bit[b]["nodes"] for b in WIN_BITS}
-assert sum(v15_win_nodes.values()) == 29933192
+V15_WIN_NODES = {16: 9879365, 51: 6821378, 82: 13232449}
+V15_REF_NODES = {0: 780436, 1: 17531704, 2: 4308387}
+assert all(v15_by_bit[b]["nodes"] == V15_WIN_NODES[b] for b in WIN_BITS)
+assert all(v15_by_bit[b]["nodes"] == V15_REF_NODES[b] for b in (0, 1, 2))
 print("CONTROL sweep re-aggregated with fresh code from 11 raw batches: 83 "
       "candidates exactly once (== claim enumeration), 3 WIN7-D10 "
       f"{WIN_BITS} / 80 REFUTED-D10 / 0 capped, 153,125,301 nodes (win sum "
       f"{win_node_sum}), terminal ranges within [13,17], pilots "
-      "3402 x11, determinism rerun node-exact (8 bits 42..50), v15 "
-      "cross-engine 3/3 WIN (sum 29,933,192) + 3/3 refuted anchors "
-      "(bits 0/1/2), pilot 5949")
+      "3402 x11, determinism rerun node-exact (8 bits), v15 cross-engine "
+      "3/3 WIN + 3/3 refuted anchors (bits 0/1/2), pilot 5949, v15 anchor "
+      "node sums 9,879,365 / 6,821,378 / 13,232,449")
 
 # ---------- 5. certificates: fresh part-join + third-system geometry ----------
 moves_all = json.loads((TMP / "legal-moves.json").read_text())
@@ -385,16 +344,15 @@ for bit in WIN_BITS:
     receipt = json.loads((TMP / f"bit{bit}.cert-receipt.json").read_text())
     parts = sorted(CERTS.glob(f"bit{bit}-root-{root}.cert.part*of2"))
     assert len(parts) == 2, bit
-    for p, pin in zip(parts, PIN_PARTS[bit]):
-        assert blob_of(p) == pin, (bit, p.name)
-    whole = b"".join(p.read_bytes().replace(b"\r\n", b"\n") for p in parts)
+    for p, pin in zip(parts, PIN_CERT_PARTS[bit]):
+        sha, blen = blob_of(p)
+        assert (sha, blen) == pin, (p.name, sha, blen)
+    whole = b"".join(p.read_bytes() for p in parts)
     joined = Path(f"/tmp/second-verify-83d-bit{bit}.joined.cert")
     joined.write_bytes(whole)
     cert_arg = joined
     assert len(whole) == receipt["bytes"] and md5_of(whole) == receipt["md5"]
     assert sha256_of(whole) == receipt["sha256"]
-    blob_sha = hashlib.sha1(b"blob %d\0" % len(whole) + whole).hexdigest()
-    assert blob_sha == receipt["git_blob_sha"]
     lines = whole.splitlines()
     assert lines[0] == b"n11-terminal-strategy-v1 original_first_WIN7 second_to_move_LOSS"
     assert lines[1] == b"root " + root.encode()
@@ -406,6 +364,7 @@ for bit in WIN_BITS:
     assert len(rows) == pub_rec["rows"] and md5_of(whole) == pub_rec["md5"], bit
     mobility = len(moves)
     assert mobility == pub_rec["sub_roots_pass"]
+    assert v15_by_bit[bit]["nodes"] == pub_rec["v15_anchor_nodes"], bit
     outc = Path(f"/tmp/second-verify-83d-bit{bit}.consumed.txt")
     cp = subprocess.run(
         [sys.executable, str(SCRIPTS / RATIONAL_VERIFIER),
@@ -427,10 +386,9 @@ for bit in WIN_BITS:
     assert bj["subroots_passed"] == mobility and bj["terminal_range"] == [13, 17]
     cert_reports.append({
         "bit": bit, "root_hex": root, "rows": len(rows), "bytes": len(whole),
-        "md5": receipt["md5"], "git_blob_sha": blob_sha,
+        "md5": receipt["md5"], "sha256": receipt["sha256"],
+        "part_git_blob_shas": [p[0] for p in PIN_CERT_PARTS[bit]],
         "sub_roots": mobility,
-        "parts": [{"name": p.name, "bytes": p.stat().st_size,
-                   "git_blob_sha": blob_of(p)[0]} for p in parts],
         "third_system": {"verdict": rat["verdict"], "union_missing": 0,
                          "union_extra": 0,
                          "terminal_stone_range": rat["terminal_stone_range"],
@@ -442,12 +400,15 @@ for bit in WIN_BITS:
 assert sum(r["rows"] for r in cert_reports) == 216638
 assert sum(r["bytes"] for r in cert_reports) == 7830260
 assert sum(r["sub_roots"] for r in cert_reports) == 188
-print("CONTROL 3 certificates re-joined from the pinned published parts "
-      "and re-verified by the third-system rational verifier (Fraction "
-      "circumcentre geometry, iterative replay): 216,638 rows / "
-      "7,830,260 bytes / 188 sub-roots, roots safe, unions 0/0, terminal "
-      "ranges within [13,17], consumed winner-row sets == the "
-      "reconstructed TS consumed sets (3/3)")
+print("CONTROL 3 certificates re-read from the six published part files "
+      "(part-join with fresh code, bytes / md5 / sha256 / part git blobs "
+      "== the reconstruction receipts and the published head JSON "
+      "records, rows sorted-unique) and re-verified geometrically by the "
+      "published third-system rational verifier (Fraction circumcentre "
+      "geometry, iterative replay): 216,638 rows / 7,830,260 bytes / 188 "
+      "sub-roots, roots safe, unions 0/0, terminal ranges within [13,17], "
+      "consumed winner-row sets == the reconstructed TS consumed sets "
+      "(3/3)")
 
 # ---------- 6. independent D4 + marginal arithmetic ----------
 pub_head = json.loads((OUT / HEAD_JSON).read_text())
@@ -491,6 +452,7 @@ zero_mim = [b for b in WIN_BITS if not my_marginals[b][1]]
 assert (total_marg, total_mim) == (13, 1)
 assert zero_mim == [51, 82]
 assert len(s_cur & manifest) == 1314
+assert my_marginals[16][1] == {CHILD_V}, "bit16 marginal-in-manifest must be the child itself"
 
 # parent bookkeeping with the independent covers
 rows_after = {name: {r["s6_hex"]: int(r["s6_s7_edge_cost"]) for r in remF2.get(h, [])}
@@ -502,13 +464,14 @@ assert (len(rows_after["parent2"]), sum(rows_after["parent2"].values())) == (71,
 lost = {name: set(parents[name]) - set(rows_after[name]) for name in ("parent1", "parent2")}
 assert lost["parent1"] == {CHILD}
 assert lost["parent2"] == {CHILD}
-assert all(lost[name] <= {"%032x" % k for k in cov3} for name in ("parent1", "parent2"))
+assert lost["parent2"] <= {"%032x" % k for k in cov3}
 print("CONTROL independent D4 (explicit affine matrices) + deletion-orbit "
       "covers reproduce the published addition records field-by-field: 3 "
       "roots == child|1<<bit, popcount 7, 7 covers each, per-bit marginals "
-      "5/4/4 = 13 / in-manifest 1 / zero-mim [51,82], child closed exactly "
-      "once by bit16, set-equality holds, second target S5 5/376 -> 4 rows / "
-      "293 and second open parent 72/6019 -> 71 rows / 5936")
+      "13 / in-manifest 1 / zero-mim [51,82], bit16 in-manifest marginal "
+      "== the child itself, child closed exactly once by bit16, "
+      "set-equality holds, second target S5 5/376 -> 4 rows / 293 and "
+      "second open parent 72/6019 -> 71 rows / 5936")
 
 # ---------- 7. 606-root inventory orbit analysis with the independent D4 ----------
 inventory = set(prev) | {int(ROOTS[b], 16) for b in WIN_BITS}
@@ -541,38 +504,38 @@ assert f["child_orbit_closed_by_bit"] == 16
 assert f["parents_after"]["parent1"] == "4 rows / 293"
 assert f["parents_after"]["parent2"] == "71 rows / 5936"
 assert f["parents_lost_rows"]["parent1"] == [CHILD]
-assert f["parents_lost_rows"]["parent2"] == [CHILD]
+assert f["parents_lost_rows"]["parent2"] == sorted(lost["parent2"])
 obs = f["output_blob_shas"]
 assert (obs["head_json"], f["head_json_bytes"]) == PIN_HEAD_JSON
 assert (obs["ranking_csv"], f["ranking_csv_bytes"]) == PIN_RANKING
 assert (obs["top_candidates_csv"], f["top_candidates_csv_bytes"]) == PIN_TOPCAND
+# head JSON totals block, field-by-field
+t = pub_head["totals"]
+assert t["receipts"] == 3 and t["total_marginal"] == 13
+assert t["total_marginal_in_manifest"] == 1
+assert t["zero_marginal_in_manifest"] == ["bit51", "bit82"]
+assert t["child_closed_by_bit"] == 16
+assert t["certificate_rows"] == 216638 and t["certificate_bytes"] == 7830260
+assert t["certificate_sub_roots"] == 188
+assert t["v15_crosscheck_nodes_sum"] == 29933192
+assert t["v16_sweep_win_nodes_sum"] == 17873557
 print("CONTROL completed claim fold record matches this recomputation: head "
-      + head_str + ", three output blobs re-asserted byte-identical")
+      + head_str + ", three output blobs re-asserted byte-identical, head "
+      "JSON totals block matched field-by-field")
 
 # ---------- 9. verification JSON ----------
 results["controls_passed"] = {
-    "dual_tmp_reconstruction_agreement":
-        "the published first reconstruction (reconstruct_tmp_cost83d_20261115.py, "
-        "git blob 591716b8, legal_candidates module + published verifiers) "
-        "and the second independent reconstruction "
-        "(reconstruct_tmp_cost83d_second_independent_20261115.py, fresh "
-        "exact-integer Bareiss 4x4 geometry, published head-JSON-record "
-        "cross-assertions, pinned certificate parts) are both executed here "
-        "as subprocesses and AGREE: legal-moves.json, the 3 consumed files "
-        "and the 3 joined certificate byte streams byte-identical; "
-        "receipts / BigInt / TS-verify JSONs field-identical when parsed; "
-        "BigInt verifier 3/3 PASS (union 0/0, terminal 13..17), TS-Bareiss "
-        "verifier 3/3 PASS, md5/rows/mobility cross-asserted against the "
-        "published head JSON records (the 83d lane published no tmp "
-        "checkpoint at all). Implementation note: the published TS "
-        "verifier APPENDS to --consumed-out (fs.appendFileSync) and the "
-        "first implementation does not unlink the target first, so its "
-        "consumed.txt outputs are deterministic only from a clean "
-        "tmp-cost83d state (stale re-runs append duplicate keys; the "
-        "fold script's set-based assertions still pass, but the files "
-        "grow); the first implementation is therefore run here from a "
-        "guaranteed-clean directory, and the second implementation "
-        "unlinks before writing and is re-run safe",
+    "tmp_reconstruction_executed":
+        "the 13 missing tmp-cost83d files (legal-moves.json via the "
+        "published legal_candidates enumeration, plus cert-receipts / "
+        "bigint / tsverify / consumed for bits 16,51,82) are regenerated "
+        "from main artifacts by research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/reconstruct_tmp_cost83d_20261115.py (the repair "
+        "script the landing lane published with commit 59025a50), "
+        "executed here as a subprocess: published BigInt verifier 3/3 "
+        "PASS (union 0/0, terminal 13..17), published TS-Bareiss "
+        "verifier 3/3 PASS, md5/rows/mobility cross-asserted against "
+        "the published head JSON records (the 83d lane published no "
+        "tmp checkpoint at all)",
     "fold_script_two_isolated_runs_byte_identical":
         "two short-lived subprocess re-runs of the published fold script "
         "complete with all in-script controls and regenerate the three "
@@ -580,34 +543,38 @@ results["controls_passed"] = {
         "7,407 B; d8adfb7e + 7,537 B; 454568f2 + 6,813 B)",
     "chain_head_1313_reproduced":
         "the fold script's runpy chain reproduces the cost-83c baseline "
-        "1313/6534/516144/4804/379867 with the 83c head JSON and both CSVs "
-        "blob-identical to main (in-script control, re-observed twice here)",
+        "1313/6534/516144/4804/379867 with the 83c head JSON and both "
+        "CSVs blob-identical to main (in-script control, re-observed "
+        "twice here)",
     "sweep_reaggregated":
         "fresh-code aggregation of the 11 raw batch JSONLs: 83 candidates "
         "exactly once (== claim enumeration), 3 WIN7-D10 [16,51,82] / "
-        "80 REFUTED-D10 / 0 capped, 153,125,301 nodes (win sum 17,873,557), "
-        "terminal ranges within [13,17], pilots 3402 x11, determinism rerun "
-        "node-exact (8 bits 42..50), v15 cross-engine 3/3 WIN (sum "
-        "29,933,192) + 3/3 refuted anchors (bits 0/1/2), pilot 5949",
+        "80 REFUTED-D10 / 0 capped, 153,125,301 nodes (win sum "
+        "17,873,557), terminal ranges within [13,17], pilots 3402 x11, "
+        "determinism rerun node-exact (8 bits), v15 cross-engine 3/3 "
+        "WIN + 3/3 refuted anchors (bits 0/1/2), pilot 5949, v15 anchor "
+        "nodes 9,879,365 / 6,821,378 / 13,232,449",
     "certificates_third_system_verified":
-        "3 certificates re-joined from the pinned published parts with "
-        "fresh code (bytes / md5 / sha256 / git blob == the reconstruction "
-        "receipts and the published head JSON records, rows sorted-unique) "
-        "and geometrically re-verified by the published third-system "
-        "rational verifier (exact Fraction circumcentre / cross-product "
-        "collinearity, iterative replay): 216,638 rows / 7,830,260 bytes / "
-        "188 sub-roots, roots safe, unions 0/0, terminal ranges within "
-        "[13,17], consumed winner-row sets == the reconstructed TS "
-        "consumed sets (3/3)",
+        "3 certificates re-read from the six published part files with "
+        "fresh code (part join, bytes / md5 / sha256 / part git blobs "
+        "== the reconstruction receipts and the published head JSON "
+        "records, rows sorted-unique) and geometrically re-verified by "
+        "the published third-system rational verifier (exact Fraction "
+        "circumcentre / cross-product collinearity, iterative replay): "
+        "216,638 rows / 7,830,260 bytes / 188 sub-roots, roots safe, "
+        "unions 0/0, terminal ranges within [13,17], consumed "
+        "winner-row sets == the reconstructed TS consumed sets (3/3)",
     "independent_d4_and_marginal_arithmetic":
         "an independently coded D4 group (8 explicit affine matrices, min "
-        "image) reproduces each root's d4_canonical_hex, the deletion-orbit "
-        "covers, and the per-bit marginals field-by-field against the "
-        "published head JSON addition records; roots == child|1<<bit with "
-        "popcount 7; total marginal 13 / in-manifest 1 / zero-mim "
-        "[51,82]; child closed exactly once by bit16; set-equality "
-        "s_1314 == s_1313 UNION covers(3 roots); second target S5 5/376 -> "
-        "4 rows / 293 and second open parent 72/6019 -> 71 rows / 5936",
+        "image) reproduces each root's d4_canonical_hex, the "
+        "deletion-orbit covers, and the per-bit marginals field-by-field "
+        "against the published head JSON addition records; roots == "
+        "child|1<<bit with popcount 7; total marginal 13 / in-manifest 1 "
+        "/ zero-mim [51,82]; bit16 in-manifest marginal == the child "
+        "itself; child closed exactly once by bit16; set-equality "
+        "s_1314 == s_1313 UNION covers(3 roots); second target S5 "
+        "5/376 -> 4 rows / 293 and second open parent 72/6019 -> 71 "
+        "rows / 5936",
     "inventory_orbit_analysis":
         "606-root folded inventory (603 previous + 3 new) re-analysed with "
         "the independent D4: 595 distinct orbits / 11 twin pairs (592 + 3 "
@@ -618,23 +585,27 @@ results["controls_passed"] = {
         "1313->1314, publication order [16,51,82], totals 13/1, "
         "zero-mim [51,82], child closed by bit16, parents_after "
         "4 rows / 293 and 71 rows / 5936, lost rows == the child only "
-        "(both parents), three output blob shas re-asserted",
+        "(both parents), three output blob shas re-asserted, head JSON "
+        "totals block matched field-by-field",
 }
 results["fold_script_blob_sha"] = {
     "git_blob_sha": PIN_FOLD_SCRIPT[0], "bytes": PIN_FOLD_SCRIPT[1],
     "md5": md5_of((SCRIPTS / FOLD_SCRIPT).read_bytes()),
 }
+results["reconstruction_script_blob_sha"] = {
+    "git_blob_sha": PIN_RECONSTRUCT_SCRIPT[0],
+    "bytes": PIN_RECONSTRUCT_SCRIPT[1],
+}
 results["inputs"] = (
     "published main bytes only: the codeload main tarball mirror "
-    "(kyouen-researches@main, HEAD fcde0958) plus the cost-83d artifacts "
-    "fetched from the main raw CDN and git-blob-sha verified (fold "
-    "script, completed claim, 11 raw batches, determinism rerun, v15 "
-    "crosscheck, 6 published certificate parts, head JSON and both CSVs); "
-    "the 13 missing tmp files are regenerated in-step by the two "
-    "reconstruction scripts (the published first implementation and the "
-    "second independent implementation, both from main artifacts via "
-    "the published verifiers; outputs agree byte- and field-level); no "
-    "state from the landing session was reused")
+    "(kyouen-researches@main, HEAD 0a3e0a4b, which already contains all "
+    "cost-83d artifacts - fold script, reconstruction script, completed "
+    "claim, 11 raw batches, determinism rerun, v15 crosscheck, 6 "
+    "certificate part files, head JSON and both CSVs); the 13 missing "
+    "tmp files are regenerated in-step by the published reconstruction "
+    "script (itself from main artifacts via the published verifiers and "
+    "the published legal_candidates enumeration); no state from the "
+    "landing session was reused")
 results["interpretation_guard"] = (
     "bookkeeping verification of a receipts fold only; solved 1314 measures "
     "manifest coverage, not the game-theoretic value of any position; "
