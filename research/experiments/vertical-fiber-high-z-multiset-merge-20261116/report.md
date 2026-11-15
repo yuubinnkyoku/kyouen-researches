@@ -98,7 +98,7 @@ z-S+2\le R\le z+S+|X|-2
 - 全照合で二方式と閉形式が一致。不一致0。
 - 領域外の反例 \((X,z,R)=((2,3),5,9)\) も再現。
 
-検証器 SHA-256: \`c835b8a14bbb41186852328ada89b93eaecdebf9c76c7c82b23837fa7eb98984\`
+検証器 SHA-256: \`e79d2975a85308b8fd5a42f6aba4a24a0cdae51704c9ace1bfe6e36e8fefd419\`
 監査JSON SHA-256: \`b298a6c5d00ad3b4d9a2b6ca3154333303f6d7626729ed0fda59125f3814f340\`
 
 ## 次の課題
