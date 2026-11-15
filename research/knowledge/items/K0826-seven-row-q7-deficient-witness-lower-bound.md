@@ -40,6 +40,12 @@ artifacts:
 - path: research/experiments/seven-row-q7-witness-search-20261114/output/ts-verify.json
   role: data
   note: "third-system records: m=25/m=26 rowY=3 witnesses both safe (9,477/9,407 circles, all curves and lines <= 6 stones), maximal (0 uncovered cells), row-deficient (rows 6,6,6,5,6,6,6); 7-collinear negative control correctly unsafe; m=26 hence triple-verified"
+- path: research/experiments/seven-row-q7-m27-surgery-20261115/README.md
+  role: proof
+  note: "7x27 frontier surgery complete case-split from the 7x26 rowY3 seed: one-stone-short census (unique uncovered cell (26,3), sole 5-stone T-curve = line y=3, no 4-stone T-curves), blocking lemma (A meets {T} union lineEmpty), exact-iff prefilters (single-addition okZ gate, shared eff>=5 pair gate, eff5+1/eff4+2 coverage), canonical counts for all enumerated sub-spaces, 470/470 targeted controls, open sub-spaces listed, and the discovery that the first ad-hoc (1,3)/(3,3) runs had a dead-gate effOf defect (verdict superseded by the verified consolidated machine)"
+- path: research/experiments/seven-row-q7-m27-surgery-20261115/output/surgery_results.json
+  role: data
+  note: "verified consolidated machine outputs: twoEdit singles 18,942 (13,725 okZ + 5,217 coverage) + pairs 99,326 (15,654 shared + 83,672 coverage) -> 0; (1,3) line-addition 149,940 (90,540 safety-gate + 59,400 coverage, gate 60/60 direct-brute UNSAFE confirm) + T-addition 10,660 -> 0; line-triple (3,3) 554,400 total (550,320 okZ-gated) -> 4,080 valid (1,430 shared + 2,650 coverage) -> 0; coverage targeted agreement 150/150 + 80/80 + 80/80 + 100/100"
 scope: "finite machine verification: kissat 4.0.4 (all instances); widths stated per family only; up to census completeness and solver correctness"
 evidence: "complete-encoding SAT instances (def mode is exactly 'exists row-deficient maximal safe config') + constructive dual-verified witnesses (census-free sat.js verifyConfig + Python Fraction) + third independent verification system (pure TS/BigInt, no repo code: scripts/verify_independent.ts + output/ts-verify.json — m=25/m=26 rowY=3 witnesses PASS, 7-collinear negative control unsafe, m=26 triple-verified) + m=24 bit-exact determinism re-run (2,105,329 conflicts reproduced; cross-lane independent-run bit-exact reproduction on shared instances m=24/m=25 rowY=3: 2,105,329 / 756,785). See report.md."
 ---
@@ -75,6 +81,23 @@ evidence: "complete-encoding SAT instances (def mode is exactly 'exists row-defi
    負対照（7点共線）は正しく unsafe。**m=26 witness は3系統検証**となり、
    M_{7,7} ≥ 27 の構成要素は3つの独立実装系で確認済み。
 
+
+7. **7×27 前線 surgery 完全負（既知 m=26 witness rowY3 族近傍・全 833,868 候補・2026-11-15）**:
+   m=26 rowY3 witness（既知の唯一の m=26 witness・4ミラー像を含む。surgery の可否は盤面対称性で不変）からの
+   7×27 延伸を編集 S' = S − R + A（|R| ≥ |A|・A は空セル・行欠損要件）で探すと、
+   - 2編集 (|A|,|R|) ∈ {(1,1),(1,2),(2,2)}: 18,942 + 99,326 候補 → **0 witness**
+   - (1,3) 追加1・除去3: 直線追加型 149,940（単追加安全 gate 90,540 + 被覆棄却 59,400）・
+     T 追加型 10,660 → **0**
+   - (3,3) 直線3追加型（r_on=2 で直線 5−2+3=6 が成立する完全部分空間）:
+     554,400（okZ gate 550,320）→ 有効 4,080（shared 1,430 + 被覆 2,650）→ **0**
+   のすべてで safe-maximal witness なし（完全列挙・正規化機械で再検証済み）。
+   seed は一石不足構造: 7×27 の未遮断セルは T=(26,3) のみ・T の5石曲線は直線 y=3 のみ・
+   4石T-曲線は存在せず、blocking の場合分けが完全に閉じる。
+   検証: 標的直接検証 470/470（被覆 410 + safety 直接brute 60）・CTL2 摂動棄却 PASS・
+   twoEdit は独立2実装で全計数一致。初回 ad-hoc 実行の (1,3)/(3,3) は effOf 欠陥
+   （gate 不動作）で棄却根拠が無効だったため、検証済み consolidated 機械の結果に差し替え。
+   **7×27 全配置の不在主張ではない**（open: (2,3), (3,3) 一般・3石T-曲線上の3追加・
+   |R| ≥ 4・seed から離れた fresh 配置 — m=27 の INDET 記録・前線 7×27 は不変）。
 
 ## 手法と検証
 
