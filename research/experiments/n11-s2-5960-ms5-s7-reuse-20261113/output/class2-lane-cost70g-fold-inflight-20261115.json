@@ -1,0 +1,88 @@
+{
+ "schema": "n11-class2-lane-cost70g-fold-inflight-20261115-v1",
+ "title": "n11 class2-lane cost-70g receipts fold in flight: 8 WIN7-D10 receipts (bits 9/20/29/34/62/70/76/119) rebased on the canonical head 1249",
+ "date": "2026-11-15",
+ "status": "in-flight",
+ "claimed_by": "long-term class2 lane (cost-70g receipts fold session; latest-main re-fetch done immediately before this push: HEAD 8736dc61, canonical chain head still 1249, no cost-70g fold claim or fold record exists on main)",
+ "s5_parent1": "00000000000000801202000000200000",
+ "s5_parent2": "00000000000000801202010000000000",
+ "s6_child": "00000000000100809002000000000800",
+ "s6_s7_edge_cost": 70,
+ "demand": {
+  "c1": 0,
+  "c2": 2,
+  "c4": 0
+ },
+ "receipts": [
+  {
+   "bit": 9,
+   "root_hex": "00000000000100809002000000000a00",
+   "rows": 51456,
+   "extraction_nodes": 7016206,
+   "sub_roots": 60,
+   "repo_blob_sha": "1877c1c6d07a458b6daa53e56338cffc941c2a5a"
+  },
+  {
+   "bit": 20,
+   "root_hex": "00000000000100809002000000100800",
+   "rows": 16902,
+   "extraction_nodes": 512110,
+   "sub_roots": 46,
+   "repo_blob_sha": "b2a83239066c35944c281823b9b3ebb77f94815e"
+  },
+  {
+   "bit": 29,
+   "root_hex": "00000000000100809002000020000800",
+   "rows": 44195,
+   "extraction_nodes": 6152408,
+   "sub_roots": 54,
+   "repo_blob_sha": "bab4338b0a17ca93425f4e846d3e0995efa71f99"
+  },
+  {
+   "bit": 34,
+   "root_hex": "00000000000100809002000400000800",
+   "rows": 56345,
+   "extraction_nodes": 7359406,
+   "sub_roots": 63,
+   "repo_blob_sha": "e95fcaf5becc9dadacd9c382c57b1faaf395d8b6"
+  },
+  {
+   "bit": 62,
+   "root_hex": "0000000000010080d002000000000800",
+   "rows": 26591,
+   "extraction_nodes": 1155484,
+   "sub_roots": 51,
+   "repo_blob_sha": "1c023a37bebd87ca3a5a86dc39663e743d1d66fa"
+  },
+  {
+   "bit": 70,
+   "root_hex": "00000000000100c09002000000000800",
+   "rows": 19456,
+   "extraction_nodes": 476835,
+   "sub_roots": 49,
+   "repo_blob_sha": "d522d9ebcddd30483eaa2ee60f24a1cee8e1273e"
+  },
+  {
+   "bit": 76,
+   "root_hex": "00000000000110809002000000000800",
+   "rows": 45917,
+   "extraction_nodes": 4205108,
+   "sub_roots": 55,
+   "repo_blob_sha": "63a6c8b4667ae8a96086d986607891716a021477"
+  },
+  {
+   "bit": 119,
+   "root_hex": "00800000000100809002000000000800",
+   "rows": 41408,
+   "extraction_nodes": 4934675,
+   "sub_roots": 56,
+   "repo_blob_sha": "b5a4297977595a6f11ef21995135f4b2cbe31b78"
+  }
+ ],
+ "baseline_head": "1249/6598/520956/4868/384679 (class-frontier-cost73g-receipts-recompute-20261115.json, git blob sha e4fb98dc8670fbb85786ab02f017a0a95e357648)",
+ "child_row_status_at_baseline": "NOTE: the cost-70g child row 00000000000100809002000000000800 is ALREADY CLOSED at head 1249 - it was cross-covered by the cost-70f bit-84 receipt (d4 canonical 00000000000100809002000020000800, whose marginal_manifest_hexes recorded 00000000000100809002000000000800) at the 70f fold (head 1235->1239); the child is absent from parent1's 19 remaining rows in the head-1249 top-candidates CSV; this fold therefore proceeds in the warm-hygiene precedent (cost-62a/63a/71b band hygiene): every per-receipt marginal is re-derived from the growing union against the 1249 state, the receipts are expected to close rows of the second open class-2 parent 00000000000000801202010000000000 (58 rows / 4203 at head 1249) and cross-cover rows of other open parents, and any zero-marginal receipts are recorded as positive-duplicate bookkeeping",
+ "method": "runpy reproduction of the published cost-73g fold script (which internally reproduces the whole fold chain 1227->1233->1235->1239->1244->1249 and regenerates the head JSON and both CSVs blob-identically), asserting the regenerated 73g head JSON (blob e4fb98dc...) and both CSVs byte-identical to main by git blob sha; then verify all 8 published cost-70g certificates against the published repo blob shas (bytes re-hashed locally, header + root line, rows sorted-unique, sub_roots == root mobility == len(loser_first_moves), terminal 13..17, fbt_drops 0, D4 canonical hex == canon(root)), re-derive the sweep audit from the 9 published raw batches (70 candidates exactly once, 8 WIN7-D10 / 62 REFUTED-D10 / 0 capped, roots == child | 1<<bit, pilots, determinism rerun node-exact, v15 anchors), assert the 8 roots disjoint from the 520 folded roots (512 after 73g + 8) raw-hex and D4-canonically, assert the demand c1=0,c2=2,c4=0 re-derived at the 1249 state, then fold the 8 receipts in published order [9, 20, 29, 34, 62, 70, 76, 119] with every per-record marginal re-derived from the growing union, set-equality control (s_after == s_1249 UNION covers(8 roots)), and regenerate the S5 ranking CSV and top-candidates CSV",
+ "coordination_note": "latest main re-fetched immediately before this push (HEAD 8736dc61): the parallel cost-73h sibling sweep is in flight on 00000000200000083800000000000200 (fenced separately by class2-lane-cost73h-inflight-20261115.json, different child, not touched here); the cost-65l receipts fold claim (class2-lane-cost65l-fold-inflight-20261115.json) is stale (baseline 1227, pushed hours ago, no fold landed); after this fold lands, the 65l fold must rebase on the new head; the in-flight 69g/65j/74e/74g lanes cover other children; if a parallel execution lands a 70g fold while this one is in flight, the collision protocol (cost-72b/cost-76a/cost-63f/unified-merge precedents) applies: verify the arithmetic on latest main, do not overwrite blindly, record the concurrent fold",
+ "fence_note": "parallel sessions must not fold the cost-70g receipts concurrently; the sweep and certificates are complete on main, only the fold is reserved here",
+ "unknown_status": "11x11 empty board: UNKNOWN. Both two-stone roots {49,60}/{59,60}: UNKNOWN. S2 {59,60}: UNKNOWN. Class 2 and class 4: UNKNOWN. Folding these receipts advances manifest bookkeeping only; a WIN7 certificate proves a first-player win within depth 10 from the individual 7-stone roots only; solved counts measure manifest coverage, not the game-theoretic value of any position."
+}
