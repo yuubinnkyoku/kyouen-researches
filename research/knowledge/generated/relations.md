@@ -381,6 +381,7 @@
 - ← supports [K0788](../items/K0788-width36-48-exact-circle-point-counts.md): P(w)の新確定値は行分離公式の M_{w,q}=q−1 帯の基礎データを更新（K0784系の系と同じ導出で拡張可能）
 - ← depends_on [K0795](../items/K0795-fixed-width-pw-mwq-results-table.md): q>2w無限族とg公式の枠組み
 - ← generalizes [K0813](../items/K0813-width2-5-circle-point-max-and-q9-q10-row-formula.md): 行分離公式の新規(w,q)領域（w=5・q=9,10。q≥11はK0025のq>2w帯と一致）
+- ← generalizes [K0855](../items/K0855-q23-complete-degeneracy.md): 『残り手数偶奇で Grundy 値が決まる』退化帯の q 側極小例(q≤3)。K0025 は q>2w の w 側巨大帯
 
 ## [K0026](../items/K0026-maximum-versus-minimum-maximal.md) 最大安全サイズK_nと最小極大サイズs_nは別の量
 
@@ -1846,6 +1847,7 @@
 - ← depends_on [K0849](../items/K0849-five-row-q7-m35-deficient-nonexistence.md): 5x18 29-stone witness is the lower bound (least witness width 18) and the positive-control board (rediscovered SAT, 343,134 conflicts, bit-exact with the K0821..K0847 lane controls — fourteenth cross-lane reproduction)
 - ← depends_on [K0850](../items/K0850-five-row-q7-m36-deficient-nonexistence.md): 5x18 29-stone witness is the lower bound (least witness width 18) and the positive-control board (rediscovered SAT, 343,134 conflicts, bit-exact with the K0821..K0849 lane controls — fifteenth cross-lane reproduction)
 - ← depends_on [K0851](../items/K0851-five-row-q7-m37-deficient-nonexistence.md): 5x18 29-stone witness is the lower bound (least witness width 18) and the positive-control board (rediscovered SAT, 343,134 conflicts, bit-exact with the K0821..K0850 lane controls — sixteenth cross-lane reproduction)
+- ← depends_on [K0855](../items/K0855-q23-complete-degeneracy.md): 安定化長 M・行欠損 witness・満容量の定義的枠組み
 
 ## [K0333](../items/K0333-modular-polynomial-curve-q-point-bound.md) 次数k≥2の剰余多項式グラフは直線高々k点・円高々2k点でq≥2k+1版が全点安全
 
@@ -4807,6 +4809,7 @@
 - → depends_on [K0794](../items/K0794-width64-pw32-accounting-range-complete.md): P(w)全幅確定（w=6..64）の最終幅。合成帯の全幅性はK0763..K0794に依存
 - → supports [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 安定化長M_{w,q}の定義と枠組み。本項目で確定値・境界・分離帯が機械可読化された
 - ← supports [K0796](../items/K0796-two-row-m24-stabilization-nine.md): results表の(2,4)行をbounds（≤9・最小性未検証）からexact-threshold（9・proved）へ昇格
+- ← supports [K0855](../items/K0855-q23-complete-degeneracy.md): M_{w,q} 横断表の q<4 コーナーを埋める(w≥2: M=∞、w=1: M=q−1 の4行を results CSV に追加)
 
 ## [K0796](../items/K0796-two-row-m24-stabilization-nine.md) 2×m・q=4の真の満容量安定化長はM_{2,4}=9 — K0069の十分長さ9が最小であることが確定
 
@@ -5582,9 +5585,17 @@
 - → verifies [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md): (6,4) m=46 構成 witness の純TS検証に続き js+py 2系統検証を完遂（保留項目の解消）。(4,4) m=33/34 構成延伸・(6,4) m=45→46 延伸とその停止幅が補題で統一的に説明される。
 - → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md): 極大性の定義（全空点で石を置くと禁止配置が生じること）
 - ← depends_on [K0854](../items/K0854-row-line-blocking-proposition.md): blocked・自由列追加到達幅 R(S)・停止セルの定義を利用。K0853 に記録した『停止セルは常に欠損行』観察(当時 6/6・未証明)を一般命題として昇格し証明した。
+- ← depends_on [K0855](../items/K0855-q23-complete-degeneracy.md): blocked(c を通る曲線が ≥q−1 石)の定義。機械監査の検査Cで使用
 
 ## [K0854](../items/K0854-row-line-blocking-proposition.md) 行直線ブロック命題: safe配置では行石数≤q−1・石数q−1の行の全空点は行直線でblocked・自由列追加の停止セルは常に石数≤q−2の行にある(単一欠損witnessでは一意の欠損行)
 
 - → depends_on [K0853](../items/K0853-free-column-append-criterion-lemma.md): blocked・自由列追加到達幅 R(S)・停止セルの定義を利用。K0853 に記録した『停止セルは常に欠損行』観察(当時 6/6・未証明)を一般命題として昇格し証明した。
 - → supports [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md): witness 帯延伸 surgery の対象セル T が常に欠損行にある理由の理論化((4,4) m=35 T=(34,2)/(0,2)・(4,5) m=21 T=(20,3)/(0,3)・(5,5) m=27 (26,0)・(5,6) m=23 (22,0) はすべて石数最小行)。
 - → supports [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md): 7行族の空列延伸失敗セル((33,0)・(29,3)・(31,3)・(37,0)・(59,6))が欠損行にあることの説明。
+
+## [K0855](../items/K0855-q23-complete-degeneracy.md) q∈{2,3}完全退化定理: 任意のq点は共線または共円 — safe⟺|S|≤q−1・極大safe⟺|S|=q−1・w≥2では全幅でwitness存在しM_{w,q}=∞・w=1ではM_{1,q}=q−1・g(S)=((q−1)−|S|) mod 2・非退化はq≥4から
+
+- → depends_on [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 安定化長 M・行欠損 witness・満容量の定義的枠組み
+- → depends_on [K0853](../items/K0853-free-column-append-criterion-lemma.md): blocked(c を通る曲線が ≥q−1 石)の定義。機械監査の検査Cで使用
+- → supports [K0795](../items/K0795-fixed-width-pw-mwq-results-table.md): M_{w,q} 横断表の q<4 コーナーを埋める(w≥2: M=∞、w=1: M=q−1 の4行を results CSV に追加)
+- → generalizes [K0025](../items/K0025-q-above-two-width-all-lengths.md): 『残り手数偶奇で Grundy 値が決まる』退化帯の q 側極小例(q≤3)。K0025 は q>2w の w 側巨大帯

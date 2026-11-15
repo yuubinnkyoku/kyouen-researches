@@ -838,3 +838,4 @@
 | [K0852](../items/K0852-five-row-q6-m22-deficient-witness.md) | 5x22 q=6 row-deficient maximal witness exists (class {0} k=4 minpos=0 SAT, 24 stones, dual-verified) — (5,6) witness band m=15..22, M_{5,6} in [23, 249], frontier 5x23 | proposition | computed | rectangles, maximal-safe |
 | [K0853](../items/K0853-free-column-append-criterion-lemma.md) | 自由列追加判定補題: 石集合の安全性は幅非依存・極大性は新列のブロック条件と同値・到達幅 R(S) まで witness 帯が無料延伸される | proposition | proved | geometry, rectangles |
 | [K0854](../items/K0854-row-line-blocking-proposition.md) | 行直線ブロック命題: safe配置では行石数≤q−1・石数q−1の行の全空点は行直線でblocked・自由列追加の停止セルは常に石数≤q−2の行にある(単一欠損witnessでは一意の欠損行) | proposition | proved | geometry, maximal-safe, rectangles |
+| [K0855](../items/K0855-q23-complete-degeneracy.md) | q∈{2,3}完全退化定理: 任意のq点は共線または共円 — safe⟺\|S\|≤q−1・極大safe⟺\|S\|=q−1・w≥2では全幅でwitness存在しM_{w,q}=∞・w=1ではM_{1,q}=q−1・g(S)=((q−1)−\|S\|) mod 2・非退化はq≥4から | proposition | proved | rectangles, geometry, grundy, variants |

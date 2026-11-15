@@ -3399,15 +3399,27 @@
 ## [research/experiments/free-column-append-criterion-20261115/output/criterion-6x4-m46-witness.json](../../../research/experiments/free-column-append-criterion-20261115/output/criterion-6x4-m46-witness.json)
 
 - [K0853](../items/K0853-free-column-append-criterion-lemma.md) (data): (6,4) m=46 witness: R=46・停止 (46,0)・witness_widths [40,46]・2回実行 byte-identical。
+## [research/experiments/free-column-append-criterion-20261115/output/criterion-7x4-m10-deepdef-witness.json](../../../research/experiments/free-column-append-criterion-20261115/output/criterion-7x4-m10-deepdef-witness.json)
+
+- [K0854](../items/K0854-row-line-blocking-proposition.md) (data): 深欠損(欠損4行)監査構成の criterion: R=10・停止 (10,3)・witness_widths [10,10]。rows [3,3,3,1,1,1,1] の13石(stones: q4-m10-deepdef-stones.json)。
+## [research/experiments/free-column-append-criterion-20261115/output/criterion-7x4-m14-deepdef-witness.json](../../../research/experiments/free-column-append-criterion-20261115/output/criterion-7x4-m14-deepdef-witness.json)
+
+- [K0854](../items/K0854-row-line-blocking-proposition.md) (data): 深欠損(欠損3行)監査構成の criterion: R=14・停止 (14,5)・witness_widths [12,14]。rows [3,3,3,3,1,1,1] の15石(stones: q4-m14-deepdef-stones.json)。
 ## [research/experiments/free-column-append-criterion-20261115/output/criterion-7x6-m31-witness.json](../../../research/experiments/free-column-append-criterion-20261115/output/criterion-7x6-m31-witness.json)
 
 - [K0854](../items/K0854-row-line-blocking-proposition.md) (data): (7,6) m=31 surgery witness(K0827)の criterion 再現: R=31・停止 (31,3)(published『7×32 で (31,3) 未遮断』と一致)。witness_widths [30,31] — 同一34石が幅30でも safe+maximal(c3 witness と4石異なる別配置の m=30 witness)。
 ## [research/experiments/free-column-append-criterion-20261115/output/m46-js-py-verification-20261115.json](../../../research/experiments/free-column-append-criterion-20261115/output/m46-js-py-verification-20261115.json)
 
 - [K0853](../items/K0853-free-column-append-criterion-lemma.md) (data): (6,4) m=46 witness の js (sat.js verifyConfig) + py (verify_witness.py Fraction) 両系統 PASS・(6,45,4) 同一石も PASS・4石行直線の陰性対照棄却。K0833 の保留検証を完遂。
+## [research/experiments/free-column-append-criterion-20261115/output/q4-m10-deepdef-stones.json](../../../research/experiments/free-column-append-criterion-20261115/output/q4-m10-deepdef-stones.json)
+
+- [K0854](../items/K0854-row-line-blocking-proposition.md) (data): (7,4) m=10 深欠損監査構成の石配置(13石・rows [3,3,3,1,1,1,1])。
+## [research/experiments/free-column-append-criterion-20261115/output/q4-m14-deepdef-stones.json](../../../research/experiments/free-column-append-criterion-20261115/output/q4-m14-deepdef-stones.json)
+
+- [K0854](../items/K0854-row-line-blocking-proposition.md) (data): (7,4) m=14 深欠損監査構成の石配置(15石・rows [3,3,3,3,1,1,1])。
 ## [research/experiments/free-column-append-criterion-20261115/output/rowline-audit-20261115.json](../../../research/experiments/free-column-append-criterion-20261115/output/rowline-audit-20261115.json)
 
-- [K0854](../items/K0854-row-line-blocking-proposition.md) (data): 8 witness 監査結果(全 PASS)。各行 rows・欠損行・窓内非blockedセル・停止セルとその行石数を記録。
+- [K0854](../items/K0854-row-line-blocking-proposition.md) (data): 10 witness 監査結果(全 PASS・深欠損2件を含む)。各行 rows・欠損行・窓内非blockedセル・停止セルとその行石数を記録。
 ## [research/experiments/free-column-append-criterion-20261115/scripts/append_criterion.py](../../../research/experiments/free-column-append-criterion-20261115/scripts/append_criterion.py)
 
 - [K0853](../items/K0853-free-column-append-criterion-lemma.md) (verifier): 独立 Fraction 実装。blocking 直線は (c,s) 族・blocking 円は石三つ組族の完全列挙。初版の円係数右辺 -(f2-f1)/2 バグを verify_witness.py との不一致で発見・修正（/2 は中点形式と中心 a=-D/2 で打ち消し合う）。
@@ -13463,6 +13475,15 @@
 ## [research/experiments/pure-triple-six-edge-witnesses-20261108/search.py](../../../research/experiments/pure-triple-six-edge-witnesses-20261108/search.py)
 
 - [K0691](../items/K0691-pure-triple-minimum-six-edges-for-grundy-six-seven.md) (verifier): 五辺高Grundy核への一辺追加探索とC++/Python根値照合
+## [research/experiments/q23-degeneracy-20261115/README.md](../../../research/experiments/q23-degeneracy-20261115/README.md)
+
+- [K0855](../items/K0855-q23-complete-degeneracy.md) (source): 定理・証明・監査設計・結果・限界
+## [research/experiments/q23-degeneracy-20261115/output/q23-degeneracy-audit-20261115.json](../../../research/experiments/q23-degeneracy-20261115/output/q23-degeneracy-audit-20261115.json)
+
+- [K0855](../items/K0855-q23-complete-degeneracy.md) (data): 7盤面×q∈{2,3}=14構成の監査結果(全PASS)。盤面ごとのcensus規模・部分集合数・極大数・witness数・Grundy整合
+## [research/experiments/q23-degeneracy-20261115/scripts/q23_degeneracy_check.py](../../../research/experiments/q23-degeneracy-20261115/scripts/q23_degeneracy_check.py)
+
+- [K0855](../items/K0855-q23-complete-degeneracy.md) (verifier): 独立純Fraction実装。全曲線census(直線≥2点全列挙・円≥3点全列挙・周心構成)と5検査(census退化・全部分列挙safe/極大分類・blocked・欠損構造・Grundy完全逆算)。exit 0 iff 全検査PASS
 ## [research/experiments/q56-five-row-20261110/output/q56_witness_5x15.json](../../../research/experiments/q56-five-row-20261110/output/q56_witness_5x15.json)
 
 - [K0723](../items/K0723-width-five-q6-stabilization-bounds.md) (data): 5×15の24石安全極大証人と全51空点のblocker記録
@@ -15781,6 +15802,9 @@
 ## [research/log/2026-11-15-n11-class2-warm-multiband-loss-conflict-audit.md](../../../research/log/2026-11-15-n11-class2-warm-multiband-loss-conflict-audit.md)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): 2026-11-15 warm multiband証明書の範囲限定WIN/LOSS衝突監査
+## [research/log/2026-11-15-q23-degeneracy.md](../../../research/log/2026-11-15-q23-degeneracy.md)
+
+- [K0855](../items/K0855-q23-complete-degeneracy.md) (log): 既存性確認(repo検索でM_{w,3}未記録)→証明→機械監査→表統合の記録
 ## [research/log/2026-11-15-rowline-blocking.md](../../../research/log/2026-11-15-rowline-blocking.md)
 
 - [K0854](../items/K0854-row-line-blocking-proposition.md) (log): 観察→published 記録精査→証明→8 witness 機械監査の発見順の記録。
@@ -15988,6 +16012,7 @@
 ## [results/fixed-width/mwq_stabilization.csv](../../../results/fixed-width/mwq_stabilization.csv)
 
 - [K0795](../items/K0795-fixed-width-pw-mwq-results-table.md) (data): M_{w,q}の確定閾値8件・open境界3件・合成分離帯59行・parametric無限族6行
+- [K0855](../items/K0855-q23-complete-degeneracy.md) (data): q∈{2,3}の4行追加(w≥2: M=∞ 2行・w=1: M=q−1 2行)
 ## [results/fixed-width/pw_circle_point_max.csv](../../../results/fixed-width/pw_circle_point_max.csv)
 
 - [K0795](../items/K0795-fixed-width-pw-mwq-results-table.md) (data): P(w)確定値 w=6..64（出典・witness付き）
