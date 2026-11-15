@@ -36,7 +36,7 @@ const sum = {
   lex_cross_checks: { '0,1': parse('r5x32q7_01_lexH.txt').conflicts, '2': parse('r5x32q7_2_lexH.txt').conflicts },
   positive_control: '5x18 class {0} SAT 343,134 conflicts (bit-exact with the K0821/K0834/K0835/K0836/K0837/K0838/K0839/K0840/K0841/K0842/K0844 lane controls — eleventh cross-lane reproduction); decoded 29 stones rows (5,6,6,6,6), census-free verifyConfig PASS',
   decomposition_soundness: 'k=0..5 partitions the deficient-row stone count; k=5 instances split by minpos=0..15, which pins the leftmost stone of the first deficient row at column exactly P; every configuration or its column mirror has leftmost stone column <= floor((m-1)/2) = 15 at m=32 (columns 0..31: min(x_min, 31-x_max) <= 15 since x_min <= x_max); the column mirror preserves row occupancy, hence the class',
-  environment_note: 'single continuous session; sat.js/sat2.js/sat3.js byte-identical to the K0836..K0842 lane scripts (copied from the local m=30 lane, which was restored from main with blob sha verified); mkcnf.sh/qrun.sh ported m=31 -> m=32; mkrecords5732.js log-name templates match the actual log names (no c prefix on direct/lexH logs); raw logs pushed batch-by-batch',
+  environment_note: 'single continuous session; sat.js/sat2.js/sat3.js byte-identical to the m=31 lane scripts (restored from main with git blob sha verified); mkcnf.sh/qrun.sh ported m=31 -> m=32; mkrecords5732.js log-name templates match the actual log names (no c prefix on direct/lexH logs); raw logs pushed batch-by-batch',
 };
 fs.writeFileSync(path.join(dir, 'summary.json'), JSON.stringify(sum, null, 1) + '\n');
 console.log(JSON.stringify({ records: recs.length, indet: sum.indet, sat: sum.sat, total_conflicts: sum.total_conflicts_32, hardest: sum.hardest }));

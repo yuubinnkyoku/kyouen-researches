@@ -1,6 +1,6 @@
 #!/bin/bash
 cd /home/user/kr32/w5x32
-KISSAT=/home/user/kr26/kissat-4.0.4-linux-amd64
+KISSAT=/home/user/kr32/kissat-4.0.4-linux-amd64
 CAP=$1; MAXEL=$2; shift 2
 START=$(date +%s)
 for n in "$@"; do
