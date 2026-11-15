@@ -1,7 +1,7 @@
 {
   "game": "binary 6-cube V_6={0,1}^6, forbidding 7 points on a common real affine hyperplane (degenerate cases included)",
   "date": "2026-10-25",
-  "updated": "2026-11-14",
+  "updated": "2026-11-15",
   "claim": "K_6 >= 9 (certified witness); upper bound K_6 <= 9 is OPEN",
   "status": "upper-bound-unproven",
   "lower_bound": {
@@ -32,7 +32,7 @@
     "circuit_encoding": {
       "validity": "For exactly-K subsets with K>=7, banning every inclusion-minimal dependent subset of sizes 4..7 is equivalent, on the original point variables, to banning every dependent 7-subset.",
       "scope_limit": "This is only a fixed-cardinality existence equivalence. It does not encode legal positions of size below 7, legal moves, or Grundy values.",
-      "d6_generator": "The d=6 circuit generator has not yet been independently audited for completeness.",
+      "d6_generator": "AUDITED 2026-11-15: two independent d=6 enumerators agree exactly - audit_mine.js (exact-integer Bareiss, all s x s minors in the wide case, combinadic-rank validation at every leaf for sizes 4..6) and audit_port.js (verbatim Node port of build_k6_circuits.cpp with p=2^61-1 replaced by 1000003; both primes exceed the Hadamard bound 907). Dependent counts match the published two-modulus values in every size (4816 / 311360 / 10663520 / 255036992) and the circuit families are byte-identical (cmp of 8-byte records in lexicographic order): circuits 4816 / 22400 / 1052800 / 18396672, total 19476688 = the recorded CNF circuit clause count.",
       "solver_run": "kissat 4.0.4 on the existing exactly-10 circuit CNF was terminated by SIGTERM after 8h10m21s; no SAT/UNSAT verdict.",
       "small_dimension_audit": {
         "path": "research/experiments/binary-cube-hyperplane-k6-exact-20261025/verify_small_dimension_circuits.py",
@@ -43,6 +43,61 @@
         ],
         "result": "PASS",
         "note": "Complete finite enumeration of all subsets of sizes 4..d+1; two modular rank implementations and both directions of the circuit/upward-closure correspondence checked."
+      },
+      "d6_circuit_audit_20261115": {
+        "task": "verification_plan item 1: audit the d=6 circuit enumeration with a second, independent enumerator",
+        "enumerators": {
+          "mine": "audit_mine.js: exact-integer Bareiss elimination (square) / all s x s minors rank test (wide); Hadamard bound 907 << 2^53 makes double arithmetic exact; per-leaf combinadic-rank validation for sizes 4..6; total-count validation for size 7; collinear-triple count 0 (justifies circuit4 == dependent4)",
+          "port": "audit_port.js: verbatim Node port of build_k6_circuits.cpp (commit f3868c53); only substitution p = 2^61-1 -> 1000003 (singularity decisions identical since both primes exceed the Hadamard bound)"
+        },
+        "small_dimension_controls": "both enumerators reproduce the published d=3,4,5 audit tables exactly (d=3: 12/12; d=4: 100,1360->160; d=5: 720,22240,350000->720,2080,41760)",
+        "dependent_counts": {
+          "size_4": 4816,
+          "size_5": 311360,
+          "size_6": 10663520,
+          "size_7": 255036992,
+          "match_published_two_modulus": true
+        },
+        "circuit_counts": {
+          "size_4": 4816,
+          "size_5": 22400,
+          "size_6": 1052800,
+          "size_7": 18396672,
+          "total": 19476688,
+          "equals_recorded_cnf_circuits": true
+        },
+        "byte_identical_families": true,
+        "family_md5": {
+          "circuits4": "4d7c965d38c0986a8306d4df809076cc",
+          "circuits5": "92a0865660e45c9970e53c6f3578700d",
+          "circuits6": "6f53e6bdff494e59d4792c0ddaf9a212",
+          "circuits7": "5b3cdbb057b6deb7e59b91a81e439ce6"
+        },
+        "resumability": "both enumerators are checkpoint-resumable (atomic tmp+rename state files, per-(a,b)-row checkpoints for size 7); the audit survived two full sandbox environment losses and completed across ~10 auto-resumed commands",
+        "cnf_regeneration": {
+          "builder": "build_k6_cnf_stream.js (streaming; byte-identical to audit_port.js --cnf on a synthetic family with and without --fix0, cmp)",
+          "header": "p cnf 4160 19484942",
+          "bytes": 560950871
+        },
+        "sat_control_regeneration": {
+          "method": "eval_witness_cnf.js: direct clause-by-clause evaluation of all 19484942 clauses of the regenerated exactly-9 CNF under the known 9-point witness {11,22,28,37,42,49,57,58,63}; Sinz auxiliary variables computed from prefix-count semantics; violated clauses 0 (a satisfying assignment verified over every clause is a SAT proof without solver trust)",
+          "evaluator_self_test": "python cross-evaluation and a bad-witness (9 stones containing a size-4 circuit) detection test both pass on a truncated-family CNF",
+          "geometric_recheck": "verify_k9_witness.py: all C(9,7)=36 seven-subset determinants nonzero (|det| 1..9)",
+          "note": "the sandbox cgroup memory cap (~1GB) made a fresh kissat run on 19.5M clauses infeasible; the previously recorded kissat 23s SAT result remains the solver-side cross-check"
+        },
+        "counter_isolation_control": {
+          "script": "counter_control.js (counters-only CNFs, kissat 4.0.4)",
+          "cases": {
+            "pos8": "SATISFIABLE",
+            "pos9": "SATISFIABLE",
+            "pos10": "UNSATISFIABLE",
+            "full8": "UNSATISFIABLE",
+            "full9": "SATISFIABLE",
+            "full10": "UNSATISFIABLE"
+          },
+          "all_pass": true
+        },
+        "limits": "This audit fixes the completeness of the d=6 circuit enumeration and the circuit clause set of the existing CNF. It does NOT produce an UNSAT verdict; K_6 <= 9 remains open."
       }
     }
   },
@@ -69,7 +124,7 @@
     "The fixed-cardinality equivalence does not certify that the d=6 circuit enumerator is complete and does not provide an UNSAT result."
   ],
   "verification_plan": [
-    "Independently audit the d=6 circuit enumeration against the complete dependent-7-set list or a second circuit enumerator.",
+    "DONE 2026-11-15: Independently audit the d=6 circuit enumeration against the complete dependent-7-set list or a second circuit enumerator. - two independent enumerators (exact-integer Bareiss vs ported mod-1000003 elimination), byte-identical circuit families sizes 4..7, total 19476688 = CNF record; see circuit_encoding.d6_circuit_audit_20261115.",
     "Verify the exactly-10 cardinality encoding and generate an UNSAT proof for the complete or circuit-reduced CNF.",
     "Alternatively, find and geometrically verify a 10-point general-position set."
   ]

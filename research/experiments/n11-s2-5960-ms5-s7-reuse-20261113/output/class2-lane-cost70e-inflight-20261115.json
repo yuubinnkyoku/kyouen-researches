@@ -1,8 +1,8 @@
 {
- "schema": "n11-class2-lane-cost70e-inflight-20261115-v1",
+ "schema": "n11-class2-lane-cost70e-inflight-20261115-v2",
  "title": "n11 class2-lane cost-70e sweep in flight: unswept cost-70 child of the second coverable class-2 target S5 (both parents class 2, c1=0,c2=2,c4=0)",
  "date": "2026-11-15",
- "status": "in-flight",
+ "status": "completed",
  "claimed_by": "long-term class2 lane (cost-69h receipts fold + 78a-head rebase session)",
  "s5": "00000000000000801202000000200000",
  "s6_child": "00000000000000801202000000200004",
@@ -122,5 +122,32 @@
  "verdict_semantics": "loss=true => WIN7-within-depth-10 candidate (certificate rebuild target); loss=false && !capped => REFUTED-D10, no first-player win within depth 10 (NOT a LOSS proof); capped => proves nothing either way",
  "unknown_note": "The standard 11x11 empty board, both two-stone roots {49,60}/{59,60}, S2 {59,60}, class 1, class 2 and class 4 all remain UNKNOWN.",
  "unknown_status": "11x11 empty board: UNKNOWN. A completed sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 7-stone roots of this child.",
- "coordination_note": "latest main fetched immediately before this claim push; the cost-69h fold (bits 58/96) has landed on latest main rebased as head 1227/6620/522561/4890/386284 and the cost-69g/74e lanes own the third target's remaining rows; the sibling cost-65l row of this S5 is owned by a parallel lane (certificates published, fold pending): its parents are this child's parent1 (shared) plus a class-4 S5, so whenever the 65l fold lands it will decrement parent1's remaining row count but this child row stays open and the fold arithmetic is independent (a re-assert on the then-current head is required before any fold of this child's receipts, rebasing on the canonical head at fold time); if a parallel execution claims this child first, the collision protocol (cost-72b/cost-76a/cost-63f fold precedents) applies: verify the arithmetic, do not overwrite"
+ "coordination_note": "latest main fetched immediately before this claim push; the cost-69h fold (bits 58/96) has landed on latest main rebased as head 1227/6620/522561/4890/386284 and the cost-69g/74e lanes own the third target's remaining rows; the sibling cost-65l row of this S5 is owned by a parallel lane (certificates published, fold pending): its parents are this child's parent1 (shared) plus a class-4 S5, so whenever the 65l fold lands it will decrement parent1's remaining row count but this child row stays open and the fold arithmetic is independent (a re-assert on the then-current head is required before any fold of this child's receipts, rebasing on the canonical head at fold time); if a parallel execution claims this child first, the collision protocol (cost-72b/cost-76a/cost-63f fold precedents) applies: verify the arithmetic, do not overwrite",
+ "sweep_results": {
+  "candidates": 70,
+  "win7_d10_bits": [
+   0,
+   8,
+   24,
+   66,
+   79
+  ],
+  "refuted_d10": 65,
+  "capped": 0,
+  "total_nodes": 83656928,
+  "terminal_stone_range_all": [
+   13,
+   17
+  ],
+  "pilots_3402": 9,
+  "determinism_rerun_batch5_node_exact": true,
+  "raw_artifacts": "class2-lane-cost70e-raw-batch1..9-20261115.jsonl + class2-lane-cost70e-v16-determinism-rerun-20261115.jsonl + class2-lane-cost70e-v15-crosscheck-20261115.jsonl (all pushed)",
+  "sweep_audit": "class2-lane-cost70e-sweep-audit-20261115.json (independent stdlib Bareiss re-derivation of aggregate, batch bits, verdicts, nodes, WIN-root scans, one-stone deletions and CSV cross-checks; git blob sha 47d38c00264aae84551eaaf994a10c134ff2f60f)"
+ },
+ "win7_certificates": {
+  "manifest": "class2-lane-cost70e-win7-certificates-20261115.json (5 certificates, 236,784 rows, 8,564,174 bytes; git blob sha 9f8e5a93562ea9f1ca61ee096d5064b07b782b87)",
+  "storage": "class2-lane-cost70e-certificates/ bit{0,8,24,66,79}-root-*.cert.part{1,2}of2 (all ten part git blob shas verified against the manifest; the two certificates not pushed in the extraction session were regenerated end-to-end from the repo-verbatim class4_child1_cert_extractor_exact_v16.ts after a sandbox reset and matched the expected part git blob shas 04d7ddbb/c45d058d (bit8) and 38dc49aa/1ca00ce2 (bit0) byte-exactly)",
+  "verification": "BigInt verifier verify_win7_certificate_bigint_independent.mjs 5/5 PASS (subroots 60/63/56/49/52, union 0/0 each, terminals [13,17] each) plus the third independent rational-circumcentre replay audit_cost70e_certificates_third_independent_20261115.mjs (cost70e-third-independent-certificate-audit-20261115.json: 236,784 rows replayed, union 0/0, 31 parent orbits / 11 worklist hits, child winning moves 0,8,24,66,79)",
+  "fold": "PENDING: the 5 receipts are fold material for parent1 00000000000000801202000000200000 (31 rows / 2334) and parent2 00000000000000003800000008400000 (49 rows / 3625) at head 1227, but no fold has been run; any fold must re-fetch latest main, re-assert the canonical chain head at fold time and rebase (parallel lanes 65l/class4-82b/five-row may land a newer head first); the frontier stays 1227/6620/522561/4890/386284 until then"
+ }
 }

@@ -58,12 +58,30 @@ lex=H 単独（V/HV なし）であることが本質。逆に SAT は lex に�
    穏やかな難化。CNF は vars 1,939,029 / clauses 6,437,821 / curves 185,453。
 2. 第2統合（CSV・K0833・本 README・本 log）で反映済み。
 
+## 追記（第2セッション続き・バッチ9/10: (6,4) m=43）
+
+1. **(6,4) m=43 rowY=0 SAT**（cap 900s・581.1s・34,728 conflicts・17石
+   rows [2,3,3,3,3,3]）— **witness 帯 m=6..43・M_{6,4} ∈ [44, 1113]**。
+   CNF は vars 2,078,685 / clauses 6,900,670 / curves 198,980
+   （cnf_md5 c10b5eb3…）。ラッパーが SAT 直後の decode 段階で環境リセットに
+   より殺されたため、kissat.txt の model から lean5.sh の SAT 分岐
+   （decode_verify.js + verify_witness.py）を手動再実行して records.jsonl
+   を構成（jsVerify/pyVerify とも ok・note に復元の旨明記）。
+2. **第3系統検証 PASS**（ts-verify-frontier-m43.json・nCircles=672/nQ1Curves=690・
+   陽性対照 m=40 再PASS は m=41/m=42 run と同一値・陰性対照 maxCirc=4
+   unsafe+8 uncovered 検出）。
+3. 難化トレンド: m=41 8,226/245s → m=42 16,942/462s → m=43 34,728/581s
+   （conflicts ほぼ2倍/幅・cap 900s が効いている）。m=44 は cap ~1200s 級の
+   見込みで、本レーンの運用上限（コマンド120s・リセット~10-17分）では
+   ポーリング継続が必要。
+4. 第3統合（CSV・K0833・本 README・本 log）で反映済み。
+
 ## 次課題
 
 - (4,5) m=21 / (4,4) m=35 の2クラス UNSAT には更に長い cap（~30M conflicts 級）
   か class-split（sat3 --class）の併用が必要。両クラス INDET の間は M は
   [21,140] / [35,237] のまま。
-- (6,4) m=43（前線更新）・(5,4) m=40 rowY=0/def-mode の掃引。
+- (6,4) m=44（前線更新・cap 1200s 級）・(5,4) m=40 rowY=0/def-mode の掃引。
 - (4,21,5) は CNF が小さい（84点・542曲線・36,910節）ため、CDCL 以外の
   アプローチ（局所探索・構成的延伸・K0827 型 blocking-coverage）も
   併用価値がある。
