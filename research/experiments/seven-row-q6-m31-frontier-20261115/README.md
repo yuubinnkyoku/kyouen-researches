@@ -52,3 +52,40 @@ m=30 極大性と矛盾する偽の未遮断 15 セルを報告した。自己�
 
 - 7×32 以降の幅、(7,q≠6) 家族、7×31 の不在 (いずれのクラスも不在主張なし)。
 - Grundy 値、11×11 関連 (すべて UNKNOWN)。
+
+## 結果: 7×31 witness 発見 (surgery) — witness 帯 m=6..31・M_{7,6} ∈ [32, 862] (2026-11-15 11:58 UTC)
+
+**2 編集 surgery 完全列挙が m=30 witness の 2 石移動で m=31 witness を発見**
+(SAT 不使用・決定的構成・**solver-free** で SAT 前線の先の 2 例目・
+(6,4) m=46 空列追加に次ぐ (7,6) での初の surgery 構成)。
+
+- **surgery: R = {(19,2), (25,4)} → A = {(27,2), (29,4)}**
+  (seed の 2 石を移動。rows は [5,5,5,4,5,5,5] のまま単一欠損・34 石)。
+- **完全列挙**: 最終状態場合分け (T 占有 / c4・t=0 1 追加 / c4・t=1・c3 2 追加)
+  ・**2,140,633 一意候補**・safe かつ maximal は **1 件のみ** —
+  m=30 witness の ≤2 編集近傍には m=31 witness がちょうど 1 つだけ存在
+  (m=29→30 の場合は 0 件だったのと対照的)。
+- T=(30,3) 曲線センサス: c4 = 2 (直線 y=3・空セル 26、円
+  {(22,2),(23,3),(25,4),(28,4)}・空セル 1)・c3 = 11。blocking 曲線は
+  (27,2),(29,4) を含む c3 円 (3 seed 石 + 両追加石 = 5) 経由。
+- **3 系統検証 PASS**:
+  1. `verify_witness.py` (Python Fraction・census 不使用) — ok, 34 石, min_row 4。
+  2. `verify_witness_det.js` (純整数 4×4 行列式・自己テスト組み込み) —
+     maxLine 5, maxCircle 5, uncovered 0。
+  3. `probe_free_column.py` (第三 Fraction 実装) — 7×31 unblocked 0
+     (7×32 は (31,3) のみ未遮断 = 次前線の one-stone-short 構造)。
+- **負対照 PASS**: 石 (29,4) 除去の摂動配置を py (not-maximal・cells
+  [30,3],[0,4],…)・det (uncovered 22) 両系統が検出。
+- 備考 (script 開発過程): (1) surgery 初版は除去石セルの再遮断と移動
+  (re-add) を含む安全性を统一的に扱っていなかった → 曲線を「盤上全セル」
+  表現で |C∩S'| = |st_on−R| + |A∩full| に統一。(2) 直線キーの gcd
+  正規化漏れで同一幾何直線が重複 (census 表示の重複・候補数には無影響・
+  列挙の完全性にも無影響) → 修正済み。**幾何ルーチンには正規化と
+  自己テスト必須**という m=30 レーンの教訓の再確認。
+
+**witness 帯は m=6..31 に延伸し M_{7,6} ∈ [32, 862]**。残る前線は 7×32
+(m=31 witness の空列延伸は cell (31,3) 未遮断で失敗 — one-stone-short)。
+
+class {3} (7,31,6) SAT (cap 1800s) は並走実行中 — witness は class {3}
+に属するため SAT で確定するはず (INDET なら cap 到達の honest negative
+として記録。surgery 結果の正当性は SAT 結果に依存しない)。

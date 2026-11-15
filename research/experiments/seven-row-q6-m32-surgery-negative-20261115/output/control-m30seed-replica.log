@@ -1,0 +1,11 @@
+selftest PASS
+curves c=3: 5342
+curves c=4: 88
+curves c=5: 29
+T-curve census: c4=2 c3=11
+  c4 curve: [(12, 3), (23, 3), (27, 3), (29, 3)] empty_on: 26
+  c4 curve: [(22, 2), (23, 3), (25, 4), (28, 4)] empty_on: 1
+unique candidates: 2140633  [17s]
+WITNESS R= [[19, 2], [25, 4]] A= [[27, 2], [29, 4]]
+checked=2140633 safe=1 witnesses=1 [30s]
+wrote output/control-m30seed-replica.json

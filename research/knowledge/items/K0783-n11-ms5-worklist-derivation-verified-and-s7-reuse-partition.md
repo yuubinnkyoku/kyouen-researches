@@ -1888,3 +1888,23 @@ REFUTED-D10はLOSS証明ではなく、WIN7証明書は個別7石rootの深さ10
 
 詳細: [lane log](../../log/2026-11-15-n11-class2-lane-cost80d-sweep-certificates-and-fold.md)、[fold head JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost80d-receipts-recompute-20261115.json)、[top-candidates CSV](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-top-candidates-s6-after-cost80d-receipts-20261115.csv)、[completed claim](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost80d-inflight-20261115.json)。
 
+
+## 2026-11-15: cost-77d fold事前予測brief — 着地merged foldとの全数値一致・bit-78重複root同一性の独立確認
+
+当レーンがfold前に公開した予測brief（`class2-lane-cost77d-fold-prediction-20261115.json`・blob `97db3dec…`・script `4808dd64…`）を、着地後のmerged cost-75d+77d warm-hygiene fold（head 1296→1302）と全数値照合した。**head 5数値 1302/6545/517025/4815/380748・union marginal 51 / in-manifest 6・per-bit 11/11（各bitのmarginal・in-manifest数・marginal hex集合まで完全一致）・parent effects（第二target 11/866不変・第2開親64→58は同じ6行喪失）すべて一致**。zero-mim規約のみ差があり、予測[7,39,58,64,78,108]（bit-78をzero-marginal receiptとして計上）に対し着地[7,39,58,64,108]（bit-78を除外済み重複rootとして非計上）で、bit-78の寄与は0のため意味は同一。予測の`already_folded_root_duplicate`フラグ（bit-78 = true）は着地扱いと整合。
+
+あわせて**bit-78重複rootの同一性を独立確認**（merged fold scriptにはcommentのみでassertがなかった統制）: 77d bit-78 root `00000000100040801202000000200000` は75d bit-92 receipt rootとraw-hex完全一致（1296 inventory内）、独立D4実装による7つのdeletion orbitは**すべてhead 1296で既解決（zero marginal）**。11-receipt set等式と仮想12-receipt版が一致し、除外は算術的に正当。
+
+詳細: [prediction brief](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost77d-fold-prediction-20261115.json)。
+
+## 2026-11-15: cost-77d / merged 75d+77d / cost-79a / cost-80d の4 fold第二独立検証 — 全統制PASS・12成果物byte-identical
+
+codeload tarballから再構築した隔離mirror（80d成果物50ファイルはmainからfetchしgit blob sha照合・着地セッションの状態は一切不使用）で、4つのpublished fold scriptを**それぞれ独立の短命サブプロセスで2回ずつend-to-end再実行**し、全統制PASS・12成果物（各foldのhead JSON + ranking CSV + top-candidates CSV）がmainのgit blobとbyte-identical・2回の実行状態一致を確認した。runpy鎖はdel+gcでもプロセス内に状態が残り、同一インタプリタで4 script×2回を実行すると1回目全PASS後に2回目の途中でcgroup約1GB上限を超えてOOM kill（RC=137）することを実測、プロセス分離で解決した（各scriptのピークRSS約150-200 MB）。
+
+追加統制: **独立8要素D4群**で19新root（77d 12 + 79a 3 + 80d 4）を再正準化し565/569/580/583-rootの各baseline inventoryとraw+D4 disjoint・全root==child|1<<bit・popcount 7。**独立Bareiss候補列挙**で77d/79a/80d childのlegal候補77/79/80件がclaimとbit-equal。**独立marginal算術**で11 merged receipts・3 79a receipts・4 80d receiptsのper-bit covers/marginalsがpublished recordsとhex集合単位で一致し、unionが1302・1304・1305状態を正確に再現。80d foldはchild genuinely remaining（両開親 10/787・55/4417）・sweep再導出（80候補・4 WIN7-D10 bits 48/61/81/96・76 REFUTED・131,430,976 nodes）・証明書4件 202,272行/7,309,967 bytes/243 sub-roots・4 root vs 583 folded roots disjoint・child閉鎖bit48・head 1305/6542/516793/4812/380516を再確認。
+
+erratum 2件を記録（published blobは不変・算術無影響・proseのみ）: (1) merged fold scriptのprose「the 12 roots asserted disjoint … the 12 receipts folded in publication order」「set_equality_after_12」はcodeがfoldする11 receipts（bit-78除外）と食い違い、正しくは11。(2) 同scriptのprint「CONTROL 12 published certificates asserted … 11/11 PASS」も11 certificatesが正。
+
+次のfold baselineはhead **1305**（`class-frontier-cost80d-receipts-recompute-20261115.json`・blob `289c9337…`）。solved 1305はmanifest被覆の簿記であり、REFUTED-D10はLOSS証明ではない。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class1、class2、class4は引き続き **UNKNOWN**。
+
+詳細: [検証log](../../log/2026-11-15-n11-class2-lane-cost77d-merged75d77d-79a-folds-second-verification.md)、[検証script](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/verify_cost77d_merged_79a_folds_second_independent_20261115.py)、[検証JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost77d-merged75d77d-79a-folds-second-verification-20261115.json)。
