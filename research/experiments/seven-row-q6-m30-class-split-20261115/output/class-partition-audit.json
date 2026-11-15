@@ -17,18 +17,78 @@
   "noncanonical_representatives": [],
   "malformed_lines": [],
   "general_formula_self_tests": [
-    {"width": 1, "enumerated_orbits": 1, "closed_form_orbits": 1, "match": true},
-    {"width": 2, "enumerated_orbits": 2, "closed_form_orbits": 2, "match": true},
-    {"width": 3, "enumerated_orbits": 5, "closed_form_orbits": 5, "match": true},
-    {"width": 4, "enumerated_orbits": 9, "closed_form_orbits": 9, "match": true},
-    {"width": 5, "enumerated_orbits": 19, "closed_form_orbits": 19, "match": true},
-    {"width": 6, "enumerated_orbits": 35, "closed_form_orbits": 35, "match": true},
-    {"width": 7, "enumerated_orbits": 71, "closed_form_orbits": 71, "match": true},
-    {"width": 8, "enumerated_orbits": 135, "closed_form_orbits": 135, "match": true},
-    {"width": 9, "enumerated_orbits": 271, "closed_form_orbits": 271, "match": true},
-    {"width": 10, "enumerated_orbits": 527, "closed_form_orbits": 527, "match": true},
-    {"width": 11, "enumerated_orbits": 1055, "closed_form_orbits": 1055, "match": true},
-    {"width": 12, "enumerated_orbits": 2079, "closed_form_orbits": 2079, "match": true}
+    {
+      "width": 1,
+      "enumerated_orbits": 1,
+      "closed_form_orbits": 1,
+      "match": true
+    },
+    {
+      "width": 2,
+      "enumerated_orbits": 2,
+      "closed_form_orbits": 2,
+      "match": true
+    },
+    {
+      "width": 3,
+      "enumerated_orbits": 5,
+      "closed_form_orbits": 5,
+      "match": true
+    },
+    {
+      "width": 4,
+      "enumerated_orbits": 9,
+      "closed_form_orbits": 9,
+      "match": true
+    },
+    {
+      "width": 5,
+      "enumerated_orbits": 19,
+      "closed_form_orbits": 19,
+      "match": true
+    },
+    {
+      "width": 6,
+      "enumerated_orbits": 35,
+      "closed_form_orbits": 35,
+      "match": true
+    },
+    {
+      "width": 7,
+      "enumerated_orbits": 71,
+      "closed_form_orbits": 71,
+      "match": true
+    },
+    {
+      "width": 8,
+      "enumerated_orbits": 135,
+      "closed_form_orbits": 135,
+      "match": true
+    },
+    {
+      "width": 9,
+      "enumerated_orbits": 271,
+      "closed_form_orbits": 271,
+      "match": true
+    },
+    {
+      "width": 10,
+      "enumerated_orbits": 527,
+      "closed_form_orbits": 527,
+      "match": true
+    },
+    {
+      "width": 11,
+      "enumerated_orbits": 1055,
+      "closed_form_orbits": 1055,
+      "match": true
+    },
+    {
+      "width": 12,
+      "enumerated_orbits": 2079,
+      "closed_form_orbits": 2079,
+      "match": true
+    }
   ],
   "scope": "Only the row-reflection orbit partition of nonempty deficient-row subsets is checked; SAT encoding, solver outcomes, and geometric witnesses are outside this audit."
 }
