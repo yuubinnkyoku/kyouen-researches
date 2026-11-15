@@ -29,6 +29,19 @@ codeload tarballから**本セッション専用の独立mirror**を再構築し
 - Bareiss検証器(`verify_cost73h_win7_bareiss_independent.py`・純Python整数Bareiss 4x4・汎用引数で再利用): 4/4 PASS。consumed == strategy rows(union 0/0)・loser全応手展開・terminal石数 {13,15,17}([13,17]の部分集合で正しい)。
 - TS検証器(`verify_bit7_win7_cert.ts`・Number-Bareiss)もsub-root分解検証で4/4 PASS(root-check stones=7/loserMobility一致・全sub-root range ⊆ [13,17]・consumed union == 証明書行集合)。
 
+## 2b. 65l/74g証明書12件の第二独立検証 — canonical head 1277の全16 receiptsが2セッション検証済みに
+
+69i分に続き、unified foldの残るreceiptsすなわち**cost-65l 2枚(bits 21/48・60,340行)とcost-74g 10枚(bits 4,11,20,44,69,95,100,108,109,116・638,389行)**も、main上の証明書bytes(74gは9枚が行境界2パートjoin・bit44と65l 2枚は単一ファイル・CRLF→LF正規化)から同一の2検証器で再検証した:
+
+- **BigInt検証器: 12/12 PASS**("WIN7 certificate independently verified")。rows全件がpublished記録と一致(99948/56032/52615/42594/64865/80597/67934/57582/60340/56682/28523/31817)・mobilityがpublishedと一致(65/58/59/58/62/61/60/59/57/61/51/50)・union missing/extra 0/0・terminal_range [13,17]・md5は74g全10枚がpublished head JSON記録と一致(65lはpublishedにmd5記録なし・verify recordのrows/mobilityと一致)。
+- **Bareiss検証器(純Python整数・汎用引数): 12/12 PASS**。consumed == strategy rows(union 0/0)・terminal石数 {13,15,17}。
+
+これにより**canonical head 1277にfoldされた全16 receipts(903,868行・計917 sub-roots = 216+600+101)はすべて2つの独立セッションで幾何検証済み**となった(69i: 元lane+本セッション・65l/74g: 元lane+本セッション)。
+
+## 3b. 全fold script横断のtmp依存監査 — 再現性の穴は69iのみだった
+
+`recompute_frontier_*.py` 全80本をgrep監査したところ、**tmp作業dirを要求するのはcost-69iとcost-74gの2本のみ**(tmp-cost74gは70ファイルpush済み・tmp-cost69iは本修復で再生可能)。他の全fold script(65l・70e/70f/70g・71c・72b/72c・73g/73h・76a・78a・各merge)は証明書bytes・verify recordを直接検証する構成で、mainのみから実行可能。また本セッションの新規mirrorでは、3-way merge scriptのrunpy鎖がMS5 manifest→73h head 1257の全chainを通し再現しており、**manifestからhead 1277までの全fold鎖がmainのみから再実行可能**であることを独立に確認した(要再構成コマンド1本・実時間約20秒)。
+
 ## 3. tmp-cost69i再現性修復 — published fold scriptがmainのみから再実行可能に
 
 **発見した再現性ギャップ**: published 69i fold script `recompute_frontier_cost69i_receipts_20261115.py` は作業dir `output/tmp-cost69i/`(legal-moves.json・bit毎のcert-receipt/bigint/tsverify/consumed)を要求するが、**69i laneはこれをpushしていなかった**。ためmainのみからfold scriptをend-to-end再実行できなかった(再現確認が`sweep再導出`までで停止)。他のfold(tmp-cost70e/70f/72c/74g/78a)はすべてpush済みで、69iだけが例外だった。
@@ -63,6 +76,6 @@ python research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_
 
 ## レジューム
 
-- canonical headは**1277/6570/518896/4840/382619**(`class-frontier-merged-cost65l-74g-69i-recompute-20261115.json`)。次のfold baselineはこのhead。
+- canonical headは**1277/6570/518896/4840/382619**(`class-frontier-merged-cost65l-74g-69i-recompute-20261115.json`)。次のfold baselineはこのhead。**head 1277にfoldされた全16 receipts(903,868行)は2セッション検証済み**。
 - 第二coverable class-2 target 17行/1325・audit-blocked S5 10行/698・best class-4 `00000000020000003800000080000000` 18行/1460。cost-75d(第二targetの次安行)は並走IN FLIGHT。
 - 大きいテキスト(>1.5 MB)の単発pushは本toolchainでは不可。生ログ等は行境界パート分割でpushするか、再生script経由とする。

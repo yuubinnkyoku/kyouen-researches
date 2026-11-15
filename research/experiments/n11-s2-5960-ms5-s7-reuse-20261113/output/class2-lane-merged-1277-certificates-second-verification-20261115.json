@@ -1,0 +1,520 @@
+{
+ "schema": "n11-class2-lane-merged-1277-certificates-second-verification-20261115-v1",
+ "date": "2026-11-15",
+ "session": "long-lane independent verification session (second verification of every certificate folded into the unified canonical head 1277/6570/518896/4840/382619)",
+ "inputs": "published certificate bytes on main only: class2-lane-cost69i-certificates/ (4), class2-lane-cost65l-certificates/ (2), class2-lane-cost74g-certificates/ (10); row-boundary part joins with CRLF->LF normalization exactly as the fold scripts join them",
+ "verifiers": {
+  "bigint": "scripts/verify_win7_certificate_bigint_independent.mjs (BigInt 3x3 cofactor expansion, no floating point)",
+  "bareiss": "scripts/verify_cost73h_win7_bareiss_independent.py (pure-Python exact-integer Bareiss 4x4, generic argv reuse)"
+ },
+ "certificates": [
+  {
+   "lane": "cost69i",
+   "bit": 21,
+   "root_hex": "00000000000000809102000000202000",
+   "root_mobility": 56,
+   "bigint": {
+    "strategy_rows": 49504,
+    "subroots_passed": 56,
+    "union_missing": 0,
+    "union_extra": 0,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "winner_states": 67787,
+    "loser_states": 20410,
+    "loser_reply_edges": 95244
+   },
+   "bareiss": {
+    "strategy_rows": 49504,
+    "consumed_rows": 49504,
+    "union_missing": 0,
+    "union_extra": 0,
+    "terminal_stone_range": [
+     13,
+     15,
+     17
+    ],
+    "visited_winner_states": 171349
+   }
+  },
+  {
+   "lane": "cost69i",
+   "bit": 29,
+   "root_hex": "00000000000000809102000020002000",
+   "root_mobility": 56,
+   "bigint": {
+    "strategy_rows": 70471,
+    "subroots_passed": 56,
+    "union_missing": 0,
+    "union_extra": 0,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "winner_states": 101114,
+    "loser_states": 33110,
+    "loser_reply_edges": 148628
+   },
+   "bareiss": {
+    "strategy_rows": 70471,
+    "consumed_rows": 70471,
+    "union_missing": 0,
+    "union_extra": 0,
+    "terminal_stone_range": [
+     13,
+     15,
+     17
+    ],
+    "visited_winner_states": 304188
+   }
+  },
+  {
+   "lane": "cost69i",
+   "bit": 97,
+   "root_hex": "00000002000000809102000000002000",
+   "root_mobility": 46,
+   "bigint": {
+    "strategy_rows": 27080,
+    "subroots_passed": 46,
+    "union_missing": 0,
+    "union_extra": 0,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "winner_states": 37859,
+    "loser_states": 11835,
+    "loser_reply_edges": 54500
+   },
+   "bareiss": {
+    "strategy_rows": 27080,
+    "consumed_rows": 27080,
+    "union_missing": 0,
+    "union_extra": 0,
+    "terminal_stone_range": [
+     13,
+     15,
+     17
+    ],
+    "visited_winner_states": 99862
+   }
+  },
+  {
+   "lane": "cost69i",
+   "bit": 100,
+   "root_hex": "00000010000000809102000000002000",
+   "root_mobility": 58,
+   "bigint": {
+    "strategy_rows": 57284,
+    "subroots_passed": 58,
+    "union_missing": 0,
+    "union_extra": 0,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "winner_states": 78041,
+    "loser_states": 24032,
+    "loser_reply_edges": 109529
+   },
+   "bareiss": {
+    "strategy_rows": 57284,
+    "consumed_rows": 57284,
+    "union_missing": 0,
+    "union_extra": 0,
+    "terminal_stone_range": [
+     13,
+     15,
+     17
+    ],
+    "visited_winner_states": 208138
+   }
+  },
+  {
+   "lane": "cost65l",
+   "bit": 21,
+   "root_hex": "00000000220000003800000000200200",
+   "root_mobility": 51,
+   "bigint": {
+    "strategy_rows": 28523,
+    "subroots_passed": 51,
+    "union_missing": 0,
+    "union_extra": 0,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "winner_states": 39173,
+    "loser_states": 11972,
+    "loser_reply_edges": 54078
+   },
+   "bareiss": {
+    "strategy_rows": 28523,
+    "consumed_rows": 28523,
+    "union_missing": 0,
+    "union_extra": 0,
+    "terminal_stone_range": [
+     13,
+     15,
+     17
+    ],
+    "visited_winner_states": 87441
+   }
+  },
+  {
+   "lane": "cost65l",
+   "bit": 48,
+   "root_hex": "00000000220000003801000000000200",
+   "root_mobility": 50,
+   "bigint": {
+    "strategy_rows": 31817,
+    "subroots_passed": 50,
+    "union_missing": 0,
+    "union_extra": 0,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "winner_states": 43543,
+    "loser_states": 13595,
+    "loser_reply_edges": 61431
+   },
+   "bareiss": {
+    "strategy_rows": 31817,
+    "consumed_rows": 31817,
+    "union_missing": 0,
+    "union_extra": 0,
+    "terminal_stone_range": [
+     13,
+     15,
+     17
+    ],
+    "visited_winner_states": 109356
+   }
+  },
+  {
+   "lane": "cost74g",
+   "bit": 4,
+   "root_hex": "00000000000000809142000000000010",
+   "root_mobility": 65,
+   "bigint": {
+    "strategy_rows": 99948,
+    "subroots_passed": 65,
+    "union_missing": 0,
+    "union_extra": 0,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "winner_states": 129027,
+    "loser_states": 38609,
+    "loser_reply_edges": 180984
+   },
+   "bareiss": {
+    "strategy_rows": 99948,
+    "consumed_rows": 99948,
+    "union_missing": 0,
+    "union_extra": 0,
+    "terminal_stone_range": [
+     13,
+     15,
+     17
+    ],
+    "visited_winner_states": 334266
+   }
+  },
+  {
+   "lane": "cost74g",
+   "bit": 11,
+   "root_hex": "00000000000000809142000000000800",
+   "root_mobility": 58,
+   "bigint": {
+    "strategy_rows": 56032,
+    "subroots_passed": 58,
+    "union_missing": 0,
+    "union_extra": 0,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "winner_states": 73795,
+    "loser_states": 21908,
+    "loser_reply_edges": 101835
+   },
+   "bareiss": {
+    "strategy_rows": 56032,
+    "consumed_rows": 56032,
+    "union_missing": 0,
+    "union_extra": 0,
+    "terminal_stone_range": [
+     13,
+     15,
+     17
+    ],
+    "visited_winner_states": 179474
+   }
+  },
+  {
+   "lane": "cost74g",
+   "bit": 20,
+   "root_hex": "00000000000000809142000000100000",
+   "root_mobility": 59,
+   "bigint": {
+    "strategy_rows": 52615,
+    "subroots_passed": 59,
+    "union_missing": 0,
+    "union_extra": 0,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "winner_states": 67179,
+    "loser_states": 20282,
+    "loser_reply_edges": 93630
+   },
+   "bareiss": {
+    "strategy_rows": 52615,
+    "consumed_rows": 52615,
+    "union_missing": 0,
+    "union_extra": 0,
+    "terminal_stone_range": [
+     13,
+     15,
+     17
+    ],
+    "visited_winner_states": 165312
+   }
+  },
+  {
+   "lane": "cost74g",
+   "bit": 44,
+   "root_hex": "00000000000000809142100000000000",
+   "root_mobility": 58,
+   "bigint": {
+    "strategy_rows": 42594,
+    "subroots_passed": 58,
+    "union_missing": 0,
+    "union_extra": 0,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "winner_states": 59229,
+    "loser_states": 17494,
+    "loser_reply_edges": 81557
+   },
+   "bareiss": {
+    "strategy_rows": 42594,
+    "consumed_rows": 42594,
+    "union_missing": 0,
+    "union_extra": 0,
+    "terminal_stone_range": [
+     13,
+     15,
+     17
+    ],
+    "visited_winner_states": 138434
+   }
+  },
+  {
+   "lane": "cost74g",
+   "bit": 69,
+   "root_hex": "00000000000000a09142000000000000",
+   "root_mobility": 62,
+   "bigint": {
+    "strategy_rows": 64865,
+    "subroots_passed": 62,
+    "union_missing": 0,
+    "union_extra": 0,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "winner_states": 90721,
+    "loser_states": 26038,
+    "loser_reply_edges": 124612
+   },
+   "bareiss": {
+    "strategy_rows": 64865,
+    "consumed_rows": 64865,
+    "union_missing": 0,
+    "union_extra": 0,
+    "terminal_stone_range": [
+     13,
+     15,
+     17
+    ],
+    "visited_winner_states": 214425
+   }
+  },
+  {
+   "lane": "cost74g",
+   "bit": 95,
+   "root_hex": "00000000800000809142000000000000",
+   "root_mobility": 61,
+   "bigint": {
+    "strategy_rows": 80597,
+    "subroots_passed": 61,
+    "union_missing": 0,
+    "union_extra": 0,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "winner_states": 112057,
+    "loser_states": 33565,
+    "loser_reply_edges": 156489
+   },
+   "bareiss": {
+    "strategy_rows": 80597,
+    "consumed_rows": 80597,
+    "union_missing": 0,
+    "union_extra": 0,
+    "terminal_stone_range": [
+     13,
+     15,
+     17
+    ],
+    "visited_winner_states": 288306
+   }
+  },
+  {
+   "lane": "cost74g",
+   "bit": 100,
+   "root_hex": "00000010000000809142000000000000",
+   "root_mobility": 60,
+   "bigint": {
+    "strategy_rows": 67934,
+    "subroots_passed": 60,
+    "union_missing": 0,
+    "union_extra": 0,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "winner_states": 90041,
+    "loser_states": 25535,
+    "loser_reply_edges": 123099
+   },
+   "bareiss": {
+    "strategy_rows": 67934,
+    "consumed_rows": 67934,
+    "union_missing": 0,
+    "union_extra": 0,
+    "terminal_stone_range": [
+     13,
+     15,
+     17
+    ],
+    "visited_winner_states": 205560
+   }
+  },
+  {
+   "lane": "cost74g",
+   "bit": 108,
+   "root_hex": "00001000000000809142000000000000",
+   "root_mobility": 59,
+   "bigint": {
+    "strategy_rows": 57582,
+    "subroots_passed": 59,
+    "union_missing": 0,
+    "union_extra": 0,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "winner_states": 78914,
+    "loser_states": 23463,
+    "loser_reply_edges": 109139
+   },
+   "bareiss": {
+    "strategy_rows": 57582,
+    "consumed_rows": 57582,
+    "union_missing": 0,
+    "union_extra": 0,
+    "terminal_stone_range": [
+     13,
+     15,
+     17
+    ],
+    "visited_winner_states": 195954
+   }
+  },
+  {
+   "lane": "cost74g",
+   "bit": 109,
+   "root_hex": "00002000000000809142000000000000",
+   "root_mobility": 57,
+   "bigint": {
+    "strategy_rows": 60340,
+    "subroots_passed": 57,
+    "union_missing": 0,
+    "union_extra": 0,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "winner_states": 82278,
+    "loser_states": 23677,
+    "loser_reply_edges": 112992
+   },
+   "bareiss": {
+    "strategy_rows": 60340,
+    "consumed_rows": 60340,
+    "union_missing": 0,
+    "union_extra": 0,
+    "terminal_stone_range": [
+     13,
+     15,
+     17
+    ],
+    "visited_winner_states": 191229
+   }
+  },
+  {
+   "lane": "cost74g",
+   "bit": 116,
+   "root_hex": "00100000000000809142000000000000",
+   "root_mobility": 61,
+   "bigint": {
+    "strategy_rows": 56682,
+    "subroots_passed": 61,
+    "union_missing": 0,
+    "union_extra": 0,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "winner_states": 77059,
+    "loser_states": 22457,
+    "loser_reply_edges": 106344
+   },
+   "bareiss": {
+    "strategy_rows": 56682,
+    "consumed_rows": 56682,
+    "union_missing": 0,
+    "union_extra": 0,
+    "terminal_stone_range": [
+     13,
+     15,
+     17
+    ],
+    "visited_winner_states": 184400
+   }
+  }
+ ],
+ "totals": {
+  "certificates": 16,
+  "strategy_rows_total": 903868,
+  "sub_roots_total": 917,
+  "bigint_pass": 16,
+  "bareiss_pass": 16,
+  "union_missing_extra": [
+   0,
+   0
+  ],
+  "interpretation": "WIN7-D10 receipts only: each certificate proves a first-player win within depth 10 from its individual 7-stone root. Not a verdict on any S5 parent, the two-stone roots, or the 11x11 empty board, all of which remain UNKNOWN. solved 1277 is manifest-coverage bookkeeping."
+ }
+}
