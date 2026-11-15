@@ -132,6 +132,10 @@ jobs:
         run: |
           uv run --locked python research/experiments/multiplayer-coalition-kyouen-20261116/verify_multiplayer_coalition.py
           git diff --exit-code -- research/experiments/multiplayer-coalition-kyouen-20261116/output/audit.json
+      - name: Audit multiplayer coalition high-r family extension
+        run: |
+          uv run --locked python research/experiments/multiplayer-coalition-kyouen-20261116/verify_family_high_r.py
+          git diff --exit-code -- research/experiments/multiplayer-coalition-kyouen-20261116/output/family_high_r_audit.json
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python tools/knowledge/build.py
@@ -378,3 +382,5 @@ jobs:
 # Refresh generated views for K0858 multiplayer coalition classification (r-person Surv/Win semantics, frozen collapse, regime loser/last-mover table, 40-board census) (2026-11-16).
 
 # Refresh generated views after the K0858 2xm q=4 family root characterization extension (44-board census, verifier/audit/report/item updates) (2026-11-16).
+
+# Refresh generated views after the K0858 short-play theorems A/B and the full-r (r>=7) completion of the 2xm q=4 family (verify_family_high_r + r=2..16 census) (2026-11-16).
