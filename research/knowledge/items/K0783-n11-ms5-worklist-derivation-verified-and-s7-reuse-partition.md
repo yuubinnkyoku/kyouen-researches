@@ -1480,3 +1480,19 @@ REFUTED-D10はLOSS証明ではない。解消計数はmanifest被覆の前進で
 
 詳細: [audit log](../../log/2026-11-15-n11-class2-lane-cost70e-certificates-third-independent-audit.md)、[audit JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70e-certificates-third-independent-audit-20261115.json)、[audit script](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost70e_certificates_third_independent_20261115.py)。
 
+## 2026-11-15: cost-70e receipts fold 完成 — chain head 1227 → 1233・claim v3 retire・baseline 1227の純幾何独立再構成
+
+cost-70e（child `00000000000000801202000000200004`）の5 WIN7-D10 receipts（bits 0/8/24/66/79）をcanonical head 1227/6620/522561/4890/386284にfoldした。fold script `recompute_frontier_cost70e_receipts_20261115.py`（remote blob `df5be7fefce1f28e5798a5903660799575c86b66`）。**新canonical chain head: 1233/6614/522131/4884/385854**（head JSON remote blob `a0171d4bb839aeb813d231c7d879d6a89452359f`・ranking CSV `33fe27c1e2664ac7644a1eff00df649cb38efe1c`・top-candidates CSV `4561af13ce0dd743051e5f3485ea040438a3d908`）。
+
+- publication order [0, 8, 24, 66, 79]・total marginal 26（in-manifest 6）・per-bit marginal 5/5/6/6/4・in-manifest 1/1/2/2/0。**bit0 receiptがchild orbit本体を閉鎖**。
+- parent1 `00000000000000801202000000200000` は31行/2334 → **28行/2119**、parent2 `00000000000000003800000008400000` は49行/3625 → **45行/3340**。両開親からchild行が落ちたことをbit-exact検証。solved 1227 → 1233・hist c2=2,c4=0 は965 → 959。
+- fold実行前にbaseline 1227を**52個の公開head JSON（402 chain roots）から純幾何（covers()/canon()）で独立再構成**し、両CSV byte-identical再現（staged controls 638/657/665/814 PASS・merged head `294c4ed3`込み）。以後のfold検証はrunpy再帰鎖に依存せず、入力git blob sha照合＋純幾何だけで完結する。
+- 統制: 117入力のgit blob sha照合、sweep再導出（70候補・5 WIN7-D10 / 65 REFUTED / 0 capped・nodes 83,656,928）、det rerun batch5 node-exact、v15 cross-engine anchors（win sum 27,246,682・refuted 75/86/113・pilots 5949×2）、証明書5件parts-join-whole再検証（md5×sha256×git blob・236,784行・280 sub-roots・d4 parent orbits == covers() 7軌道each・BigInt union 0/0）、第三独立監査PASS cross-check、root disjointness（5 roots vs 492既fold roots）、set-equality + reverse-order replay PASS。
+- fold後frontier: best coverable class-2 は第3target `00000000000000809102000000000000`（2行/143）、second はparent1（28行/2119）。best class-4 blocker 18行/1460・audit-blocked 10行/698 は不変。
+- claim `class2-lane-cost70e-inflight-20261115.json` はv3としてretire（remote blob `9c27cff582e84159aace369b60cfe4543e788bbf`・schema v3・top-level `fold`レコード追記・win7_certificates.fold PENDING→COMPLETED）。
+- 並走cost-65l fold-in-flight（bits 21/48・head 1227ベース）が着地すると1227ベースforkとなるため、**次回のfold/mergeは最新main再取得後に78a+69hと同じ統合rebase手順が必要**。cost-86d（class4）も並走in flight。
+
+REFUTED-D10はLOSS証明ではない。解消計数はmanifest被覆の前進であり、盤全体の勝敗ではない。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class1・class2・class4は引き続き **UNKNOWN**。
+
+詳細: [fold log](../../log/2026-11-15-n11-class2-lane-cost70e-receipts-fold.md)、[head JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost70e-receipts-recompute-20261115.json)、[claim v3](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70e-inflight-20261115.json)。
+
