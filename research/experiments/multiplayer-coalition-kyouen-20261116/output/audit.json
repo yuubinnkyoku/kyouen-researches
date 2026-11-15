@@ -1,0 +1,4371 @@
+{
+ "anchors": {
+  "K0004_grundy_1x1": true,
+  "K0004_grundy_2x2": true,
+  "K0004_grundy_3x3": true,
+  "K0004_grundy_4x4": true,
+  "K0004_safe_count_2x2": true,
+  "K0004_safe_count_3x3": true,
+  "K0004_safe_count_4x4": true,
+  "K0011_1x1_first_win": true,
+  "K0012_2x2_first_win": true,
+  "K0013_3x3_first_win": true,
+  "K0014_4x4_first_lose": true,
+  "K0025_2x4q5_uniform": true,
+  "K0025_2x5q5_uniform": true,
+  "K0025_2x6q5_uniform": true,
+  "K0069_2x6_first_lose": true,
+  "K0069_2x6_grundy_zero": true,
+  "K0069_2x7_first_lose": true,
+  "K0069_2x7_grundy_zero": true,
+  "K0069_2x8_first_lose": true,
+  "K0069_2x8_grundy_zero": true,
+  "K0071_3x1q5_first": true,
+  "K0071_3x2q5_first": true,
+  "K0071_3x3q5_first": true,
+  "K0071_3x4q5_first": true,
+  "K0071_3x5q5_first": true,
+  "K0339_delta_1x1q4": true,
+  "K0339_delta_2x2q4": true,
+  "K0339_delta_3x3q4": true,
+  "K0339_delta_4x4q4": true,
+  "K0339_hist_1x1q4": true,
+  "K0339_hist_2x2q4": true,
+  "K0339_hist_3x3q4": true,
+  "K0339_hist_4x4q4": true,
+  "K0339_losers_1x1q4_r2": true,
+  "K0339_losers_1x1q4_r3": true,
+  "K0339_losers_1x1q4_r4": true,
+  "K0339_losers_1x1q4_r5": true,
+  "K0339_losers_1x1q4_r6": true,
+  "K0339_losers_1x1q4_r7": true,
+  "K0339_losers_1x1q4_r8": true,
+  "K0339_losers_2x2q4_r2": true,
+  "K0339_losers_2x2q4_r3": true,
+  "K0339_losers_2x2q4_r4": true,
+  "K0339_losers_2x2q4_r5": true,
+  "K0339_losers_2x2q4_r6": true,
+  "K0339_losers_2x2q4_r7": true,
+  "K0339_losers_2x2q4_r8": true,
+  "K0339_losers_3x3q4_r2": true,
+  "K0339_losers_3x3q4_r3": true,
+  "K0339_losers_3x3q4_r4": true,
+  "K0339_losers_3x3q4_r5": true,
+  "K0339_losers_3x3q4_r6": true,
+  "K0339_losers_3x3q4_r7": true,
+  "K0339_losers_3x3q4_r8": true,
+  "K0339_losers_4x4q4_r2": true,
+  "K0339_losers_4x4q4_r3": true,
+  "K0339_losers_4x4q4_r4": true,
+  "K0339_losers_4x4q4_r5": true,
+  "K0339_losers_4x4q4_r6": true,
+  "K0339_losers_4x4q4_r7": true,
+  "K0339_losers_4x4q4_r8": true,
+  "engine_children_1x1q4": true,
+  "engine_children_1x2q4": true,
+  "engine_children_1x3q4": true,
+  "engine_children_1x4q4": true,
+  "engine_children_2x1q4": true,
+  "engine_children_2x2q4": true,
+  "engine_children_2x3q4": true,
+  "engine_children_2x4q4": true,
+  "engine_children_2x4q5": true,
+  "engine_children_2x5q4": true,
+  "engine_children_2x5q5": true,
+  "engine_children_2x6q4": true,
+  "engine_children_2x6q5": true,
+  "engine_children_2x7q4": true,
+  "engine_children_2x8q4": true,
+  "engine_children_3x1q4": true,
+  "engine_children_3x1q5": true,
+  "engine_children_3x2q4": true,
+  "engine_children_3x2q5": true,
+  "engine_children_3x3q4": true,
+  "engine_children_3x3q5": true,
+  "engine_children_3x4q4": true,
+  "engine_children_3x4q5": true,
+  "engine_children_3x5q4": true,
+  "engine_children_3x5q5": true,
+  "engine_children_3x6q4": true,
+  "engine_children_4x2q4": true,
+  "engine_children_4x2q5": true,
+  "engine_children_4x3q4": true,
+  "engine_children_4x3q5": true,
+  "engine_children_4x4q4": true,
+  "engine_children_4x4q5": true,
+  "engine_children_5x2q4": true,
+  "engine_children_5x2q5": true,
+  "engine_children_5x3q4": true,
+  "engine_children_6x2q4": true,
+  "engine_children_6x2q5": true,
+  "engine_children_6x3q4": true,
+  "engine_children_7x2q4": true,
+  "engine_children_8x2q4": true,
+  "engine_positions_1x1q4": true,
+  "engine_positions_1x2q4": true,
+  "engine_positions_1x3q4": true,
+  "engine_positions_1x4q4": true,
+  "engine_positions_2x1q4": true,
+  "engine_positions_2x2q4": true,
+  "engine_positions_2x3q4": true,
+  "engine_positions_2x4q4": true,
+  "engine_positions_2x4q5": true,
+  "engine_positions_2x5q4": true,
+  "engine_positions_2x5q5": true,
+  "engine_positions_2x6q4": true,
+  "engine_positions_2x6q5": true,
+  "engine_positions_2x7q4": true,
+  "engine_positions_2x8q4": true,
+  "engine_positions_3x1q4": true,
+  "engine_positions_3x1q5": true,
+  "engine_positions_3x2q4": true,
+  "engine_positions_3x2q5": true,
+  "engine_positions_3x3q4": true,
+  "engine_positions_3x3q5": true,
+  "engine_positions_3x4q4": true,
+  "engine_positions_3x4q5": true,
+  "engine_positions_3x5q4": true,
+  "engine_positions_3x5q5": true,
+  "engine_positions_3x6q4": true,
+  "engine_positions_4x2q4": true,
+  "engine_positions_4x2q5": true,
+  "engine_positions_4x3q4": true,
+  "engine_positions_4x3q5": true,
+  "engine_positions_4x4q4": true,
+  "engine_positions_4x4q5": true,
+  "engine_positions_5x2q4": true,
+  "engine_positions_5x2q5": true,
+  "engine_positions_5x3q4": true,
+  "engine_positions_6x2q4": true,
+  "engine_positions_6x2q5": true,
+  "engine_positions_6x3q4": true,
+  "engine_positions_7x2q4": true,
+  "engine_positions_8x2q4": true,
+  "frozen_1x1q4": true,
+  "frozen_1x2q4": true,
+  "frozen_1x3q4": true,
+  "frozen_1x4q4": true,
+  "frozen_2x1q4": true,
+  "frozen_2x2q4": true,
+  "frozen_2x3q4": true,
+  "frozen_2x4q4": true,
+  "frozen_2x4q5": true,
+  "frozen_2x5q4": true,
+  "frozen_2x5q5": true,
+  "frozen_2x6q4": true,
+  "frozen_2x6q5": true,
+  "frozen_2x7q4": true,
+  "frozen_2x8q4": true,
+  "frozen_3x1q4": true,
+  "frozen_3x1q5": true,
+  "frozen_3x2q4": true,
+  "frozen_3x2q5": true,
+  "frozen_3x3q4": true,
+  "frozen_3x3q5": true,
+  "frozen_3x4q4": true,
+  "frozen_3x4q5": true,
+  "frozen_3x5q4": true,
+  "frozen_3x5q5": true,
+  "frozen_3x6q4": true,
+  "frozen_4x2q4": true,
+  "frozen_4x2q5": true,
+  "frozen_4x3q4": true,
+  "frozen_4x3q5": true,
+  "frozen_4x4q4": true,
+  "frozen_4x4q5": true,
+  "frozen_5x2q4": true,
+  "frozen_5x2q5": true,
+  "frozen_5x3q4": true,
+  "frozen_6x2q4": true,
+  "frozen_6x2q5": true,
+  "frozen_6x3q4": true,
+  "frozen_7x2q4": true,
+  "frozen_8x2q4": true,
+  "r2_1x1q4": true,
+  "r2_1x2q4": true,
+  "r2_1x3q4": true,
+  "r2_1x4q4": true,
+  "r2_2x1q4": true,
+  "r2_2x2q4": true,
+  "r2_2x3q4": true,
+  "r2_2x4q4": true,
+  "r2_2x4q5": true,
+  "r2_2x5q4": true,
+  "r2_2x5q5": true,
+  "r2_2x6q4": true,
+  "r2_2x6q5": true,
+  "r2_2x7q4": true,
+  "r2_2x8q4": true,
+  "r2_3x1q4": true,
+  "r2_3x1q5": true,
+  "r2_3x2q4": true,
+  "r2_3x2q5": true,
+  "r2_3x3q4": true,
+  "r2_3x3q5": true,
+  "r2_3x4q4": true,
+  "r2_3x4q5": true,
+  "r2_3x5q4": true,
+  "r2_3x5q5": true,
+  "r2_3x6q4": true,
+  "r2_4x2q4": true,
+  "r2_4x2q5": true,
+  "r2_4x3q4": true,
+  "r2_4x3q5": true,
+  "r2_4x4q4": true,
+  "r2_4x4q5": true,
+  "r2_5x2q4": true,
+  "r2_5x2q5": true,
+  "r2_5x3q4": true,
+  "r2_6x2q4": true,
+  "r2_6x2q5": true,
+  "r2_6x3q4": true,
+  "r2_7x2q4": true,
+  "r2_8x2q4": true,
+  "r2_grundy_1x1q4": true,
+  "r2_grundy_1x2q4": true,
+  "r2_grundy_1x3q4": true,
+  "r2_grundy_1x4q4": true,
+  "r2_grundy_2x1q4": true,
+  "r2_grundy_2x2q4": true,
+  "r2_grundy_2x3q4": true,
+  "r2_grundy_2x4q4": true,
+  "r2_grundy_2x4q5": true,
+  "r2_grundy_2x5q4": true,
+  "r2_grundy_2x5q5": true,
+  "r2_grundy_2x6q4": true,
+  "r2_grundy_2x6q5": true,
+  "r2_grundy_2x7q4": true,
+  "r2_grundy_2x8q4": true,
+  "r2_grundy_3x1q4": true,
+  "r2_grundy_3x1q5": true,
+  "r2_grundy_3x2q4": true,
+  "r2_grundy_3x2q5": true,
+  "r2_grundy_3x3q4": true,
+  "r2_grundy_3x3q5": true,
+  "r2_grundy_3x4q4": true,
+  "r2_grundy_3x4q5": true,
+  "r2_grundy_3x5q4": true,
+  "r2_grundy_3x5q5": true,
+  "r2_grundy_3x6q4": true,
+  "r2_grundy_4x2q4": true,
+  "r2_grundy_4x2q5": true,
+  "r2_grundy_4x3q4": true,
+  "r2_grundy_4x3q5": true,
+  "r2_grundy_4x4q4": true,
+  "r2_grundy_4x4q5": true,
+  "r2_grundy_5x2q4": true,
+  "r2_grundy_5x2q5": true,
+  "r2_grundy_5x3q4": true,
+  "r2_grundy_6x2q4": true,
+  "r2_grundy_6x2q5": true,
+  "r2_grundy_6x3q4": true,
+  "r2_grundy_7x2q4": true,
+  "r2_grundy_8x2q4": true,
+  "rotation_pair_2x3q4_3x2q4": true,
+  "rotation_pair_2x4q4_4x2q4": true,
+  "rotation_pair_2x4q5_4x2q5": true,
+  "rotation_pair_2x5q4_5x2q4": true,
+  "rotation_pair_2x5q5_5x2q5": true,
+  "rotation_pair_2x6q4_6x2q4": true,
+  "rotation_pair_2x6q5_6x2q5": true,
+  "rotation_pair_2x7q4_7x2q4": true,
+  "rotation_pair_2x8q4_8x2q4": true,
+  "rotation_pair_3x4q4_4x3q4": true,
+  "rotation_pair_3x4q5_4x3q5": true,
+  "rotation_pair_3x5q4_5x3q4": true,
+  "rotation_pair_3x6q4_6x3q4": true,
+  "win_possible_1x1q4": true,
+  "win_possible_1x2q4": true,
+  "win_possible_1x3q4": true,
+  "win_possible_1x4q4": true,
+  "win_possible_2x1q4": true,
+  "win_possible_2x2q4": true,
+  "win_possible_2x3q4": true,
+  "win_possible_2x4q4": true,
+  "win_possible_2x4q5": true,
+  "win_possible_2x5q4": true,
+  "win_possible_2x5q5": true,
+  "win_possible_2x6q4": true,
+  "win_possible_2x6q5": true,
+  "win_possible_2x7q4": true,
+  "win_possible_2x8q4": true,
+  "win_possible_3x1q4": true,
+  "win_possible_3x1q5": true,
+  "win_possible_3x2q4": true,
+  "win_possible_3x2q5": true,
+  "win_possible_3x3q4": true,
+  "win_possible_3x3q5": true,
+  "win_possible_3x4q4": true,
+  "win_possible_3x4q5": true,
+  "win_possible_3x5q4": true,
+  "win_possible_3x5q5": true,
+  "win_possible_3x6q4": true,
+  "win_possible_4x2q4": true,
+  "win_possible_4x2q5": true,
+  "win_possible_4x3q4": true,
+  "win_possible_4x3q5": true,
+  "win_possible_4x4q4": true,
+  "win_possible_4x4q5": true,
+  "win_possible_5x2q4": true,
+  "win_possible_5x2q5": true,
+  "win_possible_5x3q4": true,
+  "win_possible_6x2q4": true,
+  "win_possible_6x2q5": true,
+  "win_possible_6x3q4": true,
+  "win_possible_7x2q4": true,
+  "win_possible_8x2q4": true,
+  "win_surv_1x1q4": true,
+  "win_surv_1x2q4": true,
+  "win_surv_1x3q4": true,
+  "win_surv_1x4q4": true,
+  "win_surv_2x1q4": true,
+  "win_surv_2x2q4": true,
+  "win_surv_2x3q4": true,
+  "win_surv_2x4q4": true,
+  "win_surv_2x4q5": true,
+  "win_surv_2x5q4": true,
+  "win_surv_2x5q5": true,
+  "win_surv_2x6q4": true,
+  "win_surv_2x6q5": true,
+  "win_surv_2x7q4": true,
+  "win_surv_2x8q4": true,
+  "win_surv_3x1q4": true,
+  "win_surv_3x1q5": true,
+  "win_surv_3x2q4": true,
+  "win_surv_3x2q5": true,
+  "win_surv_3x3q4": true,
+  "win_surv_3x3q5": true,
+  "win_surv_3x4q4": true,
+  "win_surv_3x4q5": true,
+  "win_surv_3x5q4": true,
+  "win_surv_3x5q5": true,
+  "win_surv_3x6q4": true,
+  "win_surv_4x2q4": true,
+  "win_surv_4x2q5": true,
+  "win_surv_4x3q4": true,
+  "win_surv_4x3q5": true,
+  "win_surv_4x4q4": true,
+  "win_surv_4x4q5": true,
+  "win_surv_5x2q4": true,
+  "win_surv_5x2q5": true,
+  "win_surv_5x3q4": true,
+  "win_surv_6x2q4": true,
+  "win_surv_6x2q5": true,
+  "win_surv_6x3q4": true,
+  "win_surv_7x2q4": true,
+  "win_surv_8x2q4": true
+ },
+ "boards": [
+  {
+   "cells": 1,
+   "census": {
+    "chaos_positions": {
+     "2": 0,
+     "3": 0,
+     "4": 0,
+     "5": 0,
+     "6": 0,
+     "7": 0,
+     "8": 0
+    },
+    "lens_size_histogram": {
+     "1": 2
+    },
+    "lone_survivor_not_winner_positions": {
+     "2": 0,
+     "3": 2,
+     "4": 2
+    },
+    "lone_winner_positions": {
+     "2": 2,
+     "3": 2,
+     "4": 2
+    }
+   },
+   "checks": {
+    "engine_children_mismatches": 0,
+    "engine_position_count_a": 2,
+    "engine_position_count_b": 2,
+    "engine_position_sets_equal": true,
+    "frozen_rule_all_positions": true,
+    "r2_surv_equals_win": true,
+    "r2_win_equals_grundy_nonzero": true,
+    "win_implies_possible_mover_all_positions": true,
+    "win_implies_surv_all_positions": true
+   },
+   "m": 1,
+   "maximal_size_gcd_delta": 0,
+   "maximal_size_histogram": {
+    "1": 1
+   },
+   "q": 4,
+   "root": {
+    "coalition_survival": {
+     "2": [
+      1,
+      0
+     ],
+     "3": [
+      1,
+      0,
+      1
+     ],
+     "4": [
+      1,
+      0,
+      1,
+      1
+     ]
+    },
+    "coalition_winner": {
+     "2": [
+      1,
+      0
+     ],
+     "3": [
+      1,
+      0,
+      0
+     ],
+     "4": [
+      1,
+      0,
+      0,
+      0
+     ]
+    },
+    "grundy_empty": 1,
+    "possible_added_stones": [
+     1
+    ],
+    "possible_last_movers": {
+     "2": [
+      0
+     ],
+     "3": [
+      0
+     ],
+     "4": [
+      0
+     ],
+     "5": [
+      0
+     ],
+     "6": [
+      0
+     ],
+     "7": [
+      0
+     ],
+     "8": [
+      0
+     ]
+    },
+    "possible_losers": {
+     "2": [
+      1
+     ],
+     "3": [
+      1
+     ],
+     "4": [
+      1
+     ],
+     "5": [
+      1
+     ],
+     "6": [
+      1
+     ],
+     "7": [
+      1
+     ],
+     "8": [
+      1
+     ]
+    }
+   },
+   "safe_positions": 2,
+   "w": 1
+  },
+  {
+   "cells": 2,
+   "census": {
+    "chaos_positions": {
+     "2": 0,
+     "3": 0,
+     "4": 0,
+     "5": 0,
+     "6": 0,
+     "7": 0,
+     "8": 0
+    },
+    "lens_size_histogram": {
+     "1": 4
+    },
+    "lone_survivor_not_winner_positions": {
+     "2": 0,
+     "3": 4,
+     "4": 4
+    },
+    "lone_winner_positions": {
+     "2": 4,
+     "3": 4,
+     "4": 4
+    }
+   },
+   "checks": {
+    "engine_children_mismatches": 0,
+    "engine_position_count_a": 4,
+    "engine_position_count_b": 4,
+    "engine_position_sets_equal": true,
+    "frozen_rule_all_positions": true,
+    "r2_surv_equals_win": true,
+    "r2_win_equals_grundy_nonzero": true,
+    "win_implies_possible_mover_all_positions": true,
+    "win_implies_surv_all_positions": true
+   },
+   "m": 2,
+   "maximal_size_gcd_delta": 0,
+   "maximal_size_histogram": {
+    "2": 1
+   },
+   "q": 4,
+   "root": {
+    "coalition_survival": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      1,
+      1,
+      0
+     ],
+     "4": [
+      1,
+      1,
+      0,
+      1
+     ]
+    },
+    "coalition_winner": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      0,
+      1,
+      0
+     ],
+     "4": [
+      0,
+      1,
+      0,
+      0
+     ]
+    },
+    "grundy_empty": 0,
+    "possible_added_stones": [
+     2
+    ],
+    "possible_last_movers": {
+     "2": [
+      1
+     ],
+     "3": [
+      1
+     ],
+     "4": [
+      1
+     ],
+     "5": [
+      1
+     ],
+     "6": [
+      1
+     ],
+     "7": [
+      1
+     ],
+     "8": [
+      1
+     ]
+    },
+    "possible_losers": {
+     "2": [
+      0
+     ],
+     "3": [
+      2
+     ],
+     "4": [
+      2
+     ],
+     "5": [
+      2
+     ],
+     "6": [
+      2
+     ],
+     "7": [
+      2
+     ],
+     "8": [
+      2
+     ]
+    }
+   },
+   "safe_positions": 4,
+   "w": 1
+  },
+  {
+   "cells": 3,
+   "census": {
+    "chaos_positions": {
+     "2": 0,
+     "3": 0,
+     "4": 0,
+     "5": 0,
+     "6": 0,
+     "7": 0,
+     "8": 0
+    },
+    "lens_size_histogram": {
+     "1": 8
+    },
+    "lone_survivor_not_winner_positions": {
+     "2": 0,
+     "3": 8,
+     "4": 8
+    },
+    "lone_winner_positions": {
+     "2": 8,
+     "3": 8,
+     "4": 8
+    }
+   },
+   "checks": {
+    "engine_children_mismatches": 0,
+    "engine_position_count_a": 8,
+    "engine_position_count_b": 8,
+    "engine_position_sets_equal": true,
+    "frozen_rule_all_positions": true,
+    "r2_surv_equals_win": true,
+    "r2_win_equals_grundy_nonzero": true,
+    "win_implies_possible_mover_all_positions": true,
+    "win_implies_surv_all_positions": true
+   },
+   "m": 3,
+   "maximal_size_gcd_delta": 0,
+   "maximal_size_histogram": {
+    "3": 1
+   },
+   "q": 4,
+   "root": {
+    "coalition_survival": {
+     "2": [
+      1,
+      0
+     ],
+     "3": [
+      0,
+      1,
+      1
+     ],
+     "4": [
+      1,
+      1,
+      1,
+      0
+     ]
+    },
+    "coalition_winner": {
+     "2": [
+      1,
+      0
+     ],
+     "3": [
+      0,
+      0,
+      1
+     ],
+     "4": [
+      0,
+      0,
+      1,
+      0
+     ]
+    },
+    "grundy_empty": 1,
+    "possible_added_stones": [
+     3
+    ],
+    "possible_last_movers": {
+     "2": [
+      0
+     ],
+     "3": [
+      2
+     ],
+     "4": [
+      2
+     ],
+     "5": [
+      2
+     ],
+     "6": [
+      2
+     ],
+     "7": [
+      2
+     ],
+     "8": [
+      2
+     ]
+    },
+    "possible_losers": {
+     "2": [
+      1
+     ],
+     "3": [
+      0
+     ],
+     "4": [
+      3
+     ],
+     "5": [
+      3
+     ],
+     "6": [
+      3
+     ],
+     "7": [
+      3
+     ],
+     "8": [
+      3
+     ]
+    }
+   },
+   "safe_positions": 8,
+   "w": 1
+  },
+  {
+   "cells": 4,
+   "census": {
+    "chaos_positions": {
+     "2": 0,
+     "3": 0,
+     "4": 0,
+     "5": 0,
+     "6": 0,
+     "7": 0,
+     "8": 0
+    },
+    "lens_size_histogram": {
+     "1": 15
+    },
+    "lone_survivor_not_winner_positions": {
+     "2": 0,
+     "3": 15,
+     "4": 15
+    },
+    "lone_winner_positions": {
+     "2": 15,
+     "3": 15,
+     "4": 15
+    }
+   },
+   "checks": {
+    "engine_children_mismatches": 0,
+    "engine_position_count_a": 15,
+    "engine_position_count_b": 15,
+    "engine_position_sets_equal": true,
+    "frozen_rule_all_positions": true,
+    "r2_surv_equals_win": true,
+    "r2_win_equals_grundy_nonzero": true,
+    "win_implies_possible_mover_all_positions": true,
+    "win_implies_surv_all_positions": true
+   },
+   "m": 4,
+   "maximal_size_gcd_delta": 0,
+   "maximal_size_histogram": {
+    "3": 4
+   },
+   "q": 4,
+   "root": {
+    "coalition_survival": {
+     "2": [
+      1,
+      0
+     ],
+     "3": [
+      0,
+      1,
+      1
+     ],
+     "4": [
+      1,
+      1,
+      1,
+      0
+     ]
+    },
+    "coalition_winner": {
+     "2": [
+      1,
+      0
+     ],
+     "3": [
+      0,
+      0,
+      1
+     ],
+     "4": [
+      0,
+      0,
+      1,
+      0
+     ]
+    },
+    "grundy_empty": 1,
+    "possible_added_stones": [
+     3
+    ],
+    "possible_last_movers": {
+     "2": [
+      0
+     ],
+     "3": [
+      2
+     ],
+     "4": [
+      2
+     ],
+     "5": [
+      2
+     ],
+     "6": [
+      2
+     ],
+     "7": [
+      2
+     ],
+     "8": [
+      2
+     ]
+    },
+    "possible_losers": {
+     "2": [
+      1
+     ],
+     "3": [
+      0
+     ],
+     "4": [
+      3
+     ],
+     "5": [
+      3
+     ],
+     "6": [
+      3
+     ],
+     "7": [
+      3
+     ],
+     "8": [
+      3
+     ]
+    }
+   },
+   "safe_positions": 15,
+   "w": 1
+  },
+  {
+   "cells": 2,
+   "census": {
+    "chaos_positions": {
+     "2": 0,
+     "3": 0,
+     "4": 0,
+     "5": 0,
+     "6": 0,
+     "7": 0,
+     "8": 0
+    },
+    "lens_size_histogram": {
+     "1": 4
+    },
+    "lone_survivor_not_winner_positions": {
+     "2": 0,
+     "3": 4,
+     "4": 4
+    },
+    "lone_winner_positions": {
+     "2": 4,
+     "3": 4,
+     "4": 4
+    }
+   },
+   "checks": {
+    "engine_children_mismatches": 0,
+    "engine_position_count_a": 4,
+    "engine_position_count_b": 4,
+    "engine_position_sets_equal": true,
+    "frozen_rule_all_positions": true,
+    "r2_surv_equals_win": true,
+    "r2_win_equals_grundy_nonzero": true,
+    "win_implies_possible_mover_all_positions": true,
+    "win_implies_surv_all_positions": true
+   },
+   "m": 1,
+   "maximal_size_gcd_delta": 0,
+   "maximal_size_histogram": {
+    "2": 1
+   },
+   "q": 4,
+   "root": {
+    "coalition_survival": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      1,
+      1,
+      0
+     ],
+     "4": [
+      1,
+      1,
+      0,
+      1
+     ]
+    },
+    "coalition_winner": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      0,
+      1,
+      0
+     ],
+     "4": [
+      0,
+      1,
+      0,
+      0
+     ]
+    },
+    "grundy_empty": 0,
+    "possible_added_stones": [
+     2
+    ],
+    "possible_last_movers": {
+     "2": [
+      1
+     ],
+     "3": [
+      1
+     ],
+     "4": [
+      1
+     ],
+     "5": [
+      1
+     ],
+     "6": [
+      1
+     ],
+     "7": [
+      1
+     ],
+     "8": [
+      1
+     ]
+    },
+    "possible_losers": {
+     "2": [
+      0
+     ],
+     "3": [
+      2
+     ],
+     "4": [
+      2
+     ],
+     "5": [
+      2
+     ],
+     "6": [
+      2
+     ],
+     "7": [
+      2
+     ],
+     "8": [
+      2
+     ]
+    }
+   },
+   "safe_positions": 4,
+   "w": 2
+  },
+  {
+   "cells": 4,
+   "census": {
+    "chaos_positions": {
+     "2": 0,
+     "3": 0,
+     "4": 0,
+     "5": 0,
+     "6": 0,
+     "7": 0,
+     "8": 0
+    },
+    "lens_size_histogram": {
+     "1": 15
+    },
+    "lone_survivor_not_winner_positions": {
+     "2": 0,
+     "3": 15,
+     "4": 15
+    },
+    "lone_winner_positions": {
+     "2": 15,
+     "3": 15,
+     "4": 15
+    }
+   },
+   "checks": {
+    "engine_children_mismatches": 0,
+    "engine_position_count_a": 15,
+    "engine_position_count_b": 15,
+    "engine_position_sets_equal": true,
+    "frozen_rule_all_positions": true,
+    "r2_surv_equals_win": true,
+    "r2_win_equals_grundy_nonzero": true,
+    "win_implies_possible_mover_all_positions": true,
+    "win_implies_surv_all_positions": true
+   },
+   "m": 2,
+   "maximal_size_gcd_delta": 0,
+   "maximal_size_histogram": {
+    "3": 4
+   },
+   "q": 4,
+   "root": {
+    "coalition_survival": {
+     "2": [
+      1,
+      0
+     ],
+     "3": [
+      0,
+      1,
+      1
+     ],
+     "4": [
+      1,
+      1,
+      1,
+      0
+     ]
+    },
+    "coalition_winner": {
+     "2": [
+      1,
+      0
+     ],
+     "3": [
+      0,
+      0,
+      1
+     ],
+     "4": [
+      0,
+      0,
+      1,
+      0
+     ]
+    },
+    "grundy_empty": 1,
+    "possible_added_stones": [
+     3
+    ],
+    "possible_last_movers": {
+     "2": [
+      0
+     ],
+     "3": [
+      2
+     ],
+     "4": [
+      2
+     ],
+     "5": [
+      2
+     ],
+     "6": [
+      2
+     ],
+     "7": [
+      2
+     ],
+     "8": [
+      2
+     ]
+    },
+    "possible_losers": {
+     "2": [
+      1
+     ],
+     "3": [
+      0
+     ],
+     "4": [
+      3
+     ],
+     "5": [
+      3
+     ],
+     "6": [
+      3
+     ],
+     "7": [
+      3
+     ],
+     "8": [
+      3
+     ]
+    }
+   },
+   "safe_positions": 15,
+   "w": 2
+  },
+  {
+   "cells": 6,
+   "census": {
+    "chaos_positions": {
+     "2": 0,
+     "3": 0,
+     "4": 0,
+     "5": 0,
+     "6": 0,
+     "7": 0,
+     "8": 0
+    },
+    "lens_size_histogram": {
+     "1": 54
+    },
+    "lone_survivor_not_winner_positions": {
+     "2": 0,
+     "3": 54,
+     "4": 54
+    },
+    "lone_winner_positions": {
+     "2": 54,
+     "3": 54,
+     "4": 54
+    }
+   },
+   "checks": {
+    "engine_children_mismatches": 0,
+    "engine_position_count_a": 54,
+    "engine_position_count_b": 54,
+    "engine_position_sets_equal": true,
+    "frozen_rule_all_positions": true,
+    "r2_surv_equals_win": true,
+    "r2_win_equals_grundy_nonzero": true,
+    "win_implies_possible_mover_all_positions": true,
+    "win_implies_surv_all_positions": true
+   },
+   "m": 3,
+   "maximal_size_gcd_delta": 0,
+   "maximal_size_histogram": {
+    "4": 12
+   },
+   "q": 4,
+   "root": {
+    "coalition_survival": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      1,
+      0,
+      1
+     ],
+     "4": [
+      0,
+      1,
+      1,
+      1
+     ]
+    },
+    "coalition_winner": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      1,
+      0,
+      0
+     ],
+     "4": [
+      0,
+      0,
+      0,
+      1
+     ]
+    },
+    "grundy_empty": 0,
+    "possible_added_stones": [
+     4
+    ],
+    "possible_last_movers": {
+     "2": [
+      1
+     ],
+     "3": [
+      0
+     ],
+     "4": [
+      3
+     ],
+     "5": [
+      3
+     ],
+     "6": [
+      3
+     ],
+     "7": [
+      3
+     ],
+     "8": [
+      3
+     ]
+    },
+    "possible_losers": {
+     "2": [
+      0
+     ],
+     "3": [
+      1
+     ],
+     "4": [
+      0
+     ],
+     "5": [
+      4
+     ],
+     "6": [
+      4
+     ],
+     "7": [
+      4
+     ],
+     "8": [
+      4
+     ]
+    }
+   },
+   "safe_positions": 54,
+   "w": 2
+  },
+  {
+   "cells": 8,
+   "census": {
+    "chaos_positions": {
+     "2": 65,
+     "3": 0,
+     "4": 0,
+     "5": 0,
+     "6": 0,
+     "7": 0,
+     "8": 0
+    },
+    "lens_size_histogram": {
+     "1": 104,
+     "2": 65
+    },
+    "lone_survivor_not_winner_positions": {
+     "2": 0,
+     "3": 137,
+     "4": 169
+    },
+    "lone_winner_positions": {
+     "2": 169,
+     "3": 145,
+     "4": 136
+    }
+   },
+   "checks": {
+    "engine_children_mismatches": 0,
+    "engine_position_count_a": 169,
+    "engine_position_count_b": 169,
+    "engine_position_sets_equal": true,
+    "frozen_rule_all_positions": true,
+    "r2_surv_equals_win": true,
+    "r2_win_equals_grundy_nonzero": true,
+    "win_implies_possible_mover_all_positions": true,
+    "win_implies_surv_all_positions": true
+   },
+   "m": 4,
+   "maximal_size_gcd_delta": 1,
+   "maximal_size_histogram": {
+    "4": 8,
+    "5": 16
+   },
+   "q": 4,
+   "root": {
+    "coalition_survival": {
+     "2": [
+      1,
+      0
+     ],
+     "3": [
+      1,
+      1,
+      0
+     ],
+     "4": [
+      0,
+      0,
+      1,
+      1
+     ]
+    },
+    "coalition_winner": {
+     "2": [
+      1,
+      0
+     ],
+     "3": [
+      0,
+      1,
+      0
+     ],
+     "4": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "grundy_empty": 1,
+    "possible_added_stones": [
+     4,
+     5
+    ],
+    "possible_last_movers": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      0,
+      1
+     ],
+     "4": [
+      0,
+      3
+     ],
+     "5": [
+      3,
+      4
+     ],
+     "6": [
+      3,
+      4
+     ],
+     "7": [
+      3,
+      4
+     ],
+     "8": [
+      3,
+      4
+     ]
+    },
+    "possible_losers": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      1,
+      2
+     ],
+     "4": [
+      0,
+      1
+     ],
+     "5": [
+      0,
+      4
+     ],
+     "6": [
+      4,
+      5
+     ],
+     "7": [
+      4,
+      5
+     ],
+     "8": [
+      4,
+      5
+     ]
+    }
+   },
+   "safe_positions": 169,
+   "w": 2
+  },
+  {
+   "cells": 8,
+   "census": {
+    "chaos_positions": {
+     "2": 0,
+     "3": 0,
+     "4": 0,
+     "5": 0,
+     "6": 0,
+     "7": 0,
+     "8": 0
+    },
+    "lens_size_histogram": {
+     "1": 256
+    },
+    "lone_survivor_not_winner_positions": {
+     "2": 0,
+     "3": 256,
+     "4": 256
+    },
+    "lone_winner_positions": {
+     "2": 256,
+     "3": 256,
+     "4": 256
+    }
+   },
+   "checks": {
+    "engine_children_mismatches": 0,
+    "engine_position_count_a": 256,
+    "engine_position_count_b": 256,
+    "engine_position_sets_equal": true,
+    "frozen_rule_all_positions": true,
+    "r2_surv_equals_win": true,
+    "r2_win_equals_grundy_nonzero": true,
+    "win_implies_possible_mover_all_positions": true,
+    "win_implies_surv_all_positions": true
+   },
+   "m": 4,
+   "maximal_size_gcd_delta": 0,
+   "maximal_size_histogram": {
+    "8": 1
+   },
+   "q": 5,
+   "root": {
+    "coalition_survival": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      1,
+      1,
+      0
+     ],
+     "4": [
+      0,
+      1,
+      1,
+      1
+     ]
+    },
+    "coalition_winner": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      0,
+      1,
+      0
+     ],
+     "4": [
+      0,
+      0,
+      0,
+      1
+     ]
+    },
+    "grundy_empty": 0,
+    "possible_added_stones": [
+     8
+    ],
+    "possible_last_movers": {
+     "2": [
+      1
+     ],
+     "3": [
+      1
+     ],
+     "4": [
+      3
+     ],
+     "5": [
+      2
+     ],
+     "6": [
+      1
+     ],
+     "7": [
+      0
+     ],
+     "8": [
+      7
+     ]
+    },
+    "possible_losers": {
+     "2": [
+      0
+     ],
+     "3": [
+      2
+     ],
+     "4": [
+      0
+     ],
+     "5": [
+      3
+     ],
+     "6": [
+      2
+     ],
+     "7": [
+      1
+     ],
+     "8": [
+      0
+     ]
+    }
+   },
+   "safe_positions": 256,
+   "w": 2
+  },
+  {
+   "cells": 10,
+   "census": {
+    "chaos_positions": {
+     "2": 182,
+     "3": 0,
+     "4": 0,
+     "5": 0,
+     "6": 0,
+     "7": 0,
+     "8": 0
+    },
+    "lens_size_histogram": {
+     "1": 288,
+     "2": 182
+    },
+    "lone_survivor_not_winner_positions": {
+     "2": 0,
+     "3": 418,
+     "4": 470
+    },
+    "lone_winner_positions": {
+     "2": 470,
+     "3": 372,
+     "4": 368
+    }
+   },
+   "checks": {
+    "engine_children_mismatches": 0,
+    "engine_position_count_a": 470,
+    "engine_position_count_b": 470,
+    "engine_position_sets_equal": true,
+    "frozen_rule_all_positions": true,
+    "r2_surv_equals_win": true,
+    "r2_win_equals_grundy_nonzero": true,
+    "win_implies_possible_mover_all_positions": true,
+    "win_implies_surv_all_positions": true
+   },
+   "m": 5,
+   "maximal_size_gcd_delta": 1,
+   "maximal_size_histogram": {
+    "5": 72,
+    "6": 6
+   },
+   "q": 4,
+   "root": {
+    "coalition_survival": {
+     "2": [
+      1,
+      0
+     ],
+     "3": [
+      1,
+      1,
+      0
+     ],
+     "4": [
+      1,
+      0,
+      0,
+      1
+     ]
+    },
+    "coalition_winner": {
+     "2": [
+      1,
+      0
+     ],
+     "3": [
+      0,
+      0,
+      0
+     ],
+     "4": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "grundy_empty": 1,
+    "possible_added_stones": [
+     5,
+     6
+    ],
+    "possible_last_movers": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      1,
+      2
+     ],
+     "4": [
+      0,
+      1
+     ],
+     "5": [
+      0,
+      4
+     ],
+     "6": [
+      4,
+      5
+     ],
+     "7": [
+      4,
+      5
+     ],
+     "8": [
+      4,
+      5
+     ]
+    },
+    "possible_losers": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      0,
+      2
+     ],
+     "4": [
+      1,
+      2
+     ],
+     "5": [
+      0,
+      1
+     ],
+     "6": [
+      0,
+      5
+     ],
+     "7": [
+      5,
+      6
+     ],
+     "8": [
+      5,
+      6
+     ]
+    }
+   },
+   "safe_positions": 470,
+   "w": 2
+  },
+  {
+   "cells": 10,
+   "census": {
+    "chaos_positions": {
+     "2": 0,
+     "3": 0,
+     "4": 0,
+     "5": 0,
+     "6": 0,
+     "7": 0,
+     "8": 0
+    },
+    "lens_size_histogram": {
+     "1": 961
+    },
+    "lone_survivor_not_winner_positions": {
+     "2": 0,
+     "3": 961,
+     "4": 961
+    },
+    "lone_winner_positions": {
+     "2": 961,
+     "3": 961,
+     "4": 961
+    }
+   },
+   "checks": {
+    "engine_children_mismatches": 0,
+    "engine_position_count_a": 961,
+    "engine_position_count_b": 961,
+    "engine_position_sets_equal": true,
+    "frozen_rule_all_positions": true,
+    "r2_surv_equals_win": true,
+    "r2_win_equals_grundy_nonzero": true,
+    "win_implies_possible_mover_all_positions": true,
+    "win_implies_surv_all_positions": true
+   },
+   "m": 5,
+   "maximal_size_gcd_delta": 0,
+   "maximal_size_histogram": {
+    "8": 25
+   },
+   "q": 5,
+   "root": {
+    "coalition_survival": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      1,
+      1,
+      0
+     ],
+     "4": [
+      0,
+      1,
+      1,
+      1
+     ]
+    },
+    "coalition_winner": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      0,
+      1,
+      0
+     ],
+     "4": [
+      0,
+      0,
+      0,
+      1
+     ]
+    },
+    "grundy_empty": 0,
+    "possible_added_stones": [
+     8
+    ],
+    "possible_last_movers": {
+     "2": [
+      1
+     ],
+     "3": [
+      1
+     ],
+     "4": [
+      3
+     ],
+     "5": [
+      2
+     ],
+     "6": [
+      1
+     ],
+     "7": [
+      0
+     ],
+     "8": [
+      7
+     ]
+    },
+    "possible_losers": {
+     "2": [
+      0
+     ],
+     "3": [
+      2
+     ],
+     "4": [
+      0
+     ],
+     "5": [
+      3
+     ],
+     "6": [
+      2
+     ],
+     "7": [
+      1
+     ],
+     "8": [
+      0
+     ]
+    }
+   },
+   "safe_positions": 961,
+   "w": 2
+  },
+  {
+   "cells": 12,
+   "census": {
+    "chaos_positions": {
+     "2": 541,
+     "3": 0,
+     "4": 0,
+     "5": 0,
+     "6": 0,
+     "7": 0,
+     "8": 0
+    },
+    "lens_size_histogram": {
+     "1": 626,
+     "2": 541
+    },
+    "lone_survivor_not_winner_positions": {
+     "2": 0,
+     "3": 913,
+     "4": 1167
+    },
+    "lone_winner_positions": {
+     "2": 1167,
+     "3": 912,
+     "4": 892
+    }
+   },
+   "checks": {
+    "engine_children_mismatches": 0,
+    "engine_position_count_a": 1167,
+    "engine_position_count_b": 1167,
+    "engine_position_sets_equal": true,
+    "frozen_rule_all_positions": true,
+    "r2_surv_equals_win": true,
+    "r2_win_equals_grundy_nonzero": true,
+    "win_implies_possible_mover_all_positions": true,
+    "win_implies_surv_all_positions": true
+   },
+   "m": 6,
+   "maximal_size_gcd_delta": 1,
+   "maximal_size_histogram": {
+    "5": 108,
+    "6": 64
+   },
+   "q": 4,
+   "root": {
+    "coalition_survival": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      0,
+      1,
+      0
+     ],
+     "4": [
+      1,
+      0,
+      0,
+      1
+     ]
+    },
+    "coalition_winner": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      0,
+      0,
+      0
+     ],
+     "4": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "grundy_empty": 0,
+    "possible_added_stones": [
+     5,
+     6
+    ],
+    "possible_last_movers": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      1,
+      2
+     ],
+     "4": [
+      0,
+      1
+     ],
+     "5": [
+      0,
+      4
+     ],
+     "6": [
+      4,
+      5
+     ],
+     "7": [
+      4,
+      5
+     ],
+     "8": [
+      4,
+      5
+     ]
+    },
+    "possible_losers": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      0,
+      2
+     ],
+     "4": [
+      1,
+      2
+     ],
+     "5": [
+      0,
+      1
+     ],
+     "6": [
+      0,
+      5
+     ],
+     "7": [
+      5,
+      6
+     ],
+     "8": [
+      5,
+      6
+     ]
+    }
+   },
+   "safe_positions": 1167,
+   "w": 2
+  },
+  {
+   "cells": 12,
+   "census": {
+    "chaos_positions": {
+     "2": 0,
+     "3": 0,
+     "4": 0,
+     "5": 0,
+     "6": 0,
+     "7": 0,
+     "8": 0
+    },
+    "lens_size_histogram": {
+     "1": 3249
+    },
+    "lone_survivor_not_winner_positions": {
+     "2": 0,
+     "3": 3249,
+     "4": 3249
+    },
+    "lone_winner_positions": {
+     "2": 3249,
+     "3": 3249,
+     "4": 3249
+    }
+   },
+   "checks": {
+    "engine_children_mismatches": 0,
+    "engine_position_count_a": 3249,
+    "engine_position_count_b": 3249,
+    "engine_position_sets_equal": true,
+    "frozen_rule_all_positions": true,
+    "r2_surv_equals_win": true,
+    "r2_win_equals_grundy_nonzero": true,
+    "win_implies_possible_mover_all_positions": true,
+    "win_implies_surv_all_positions": true
+   },
+   "m": 6,
+   "maximal_size_gcd_delta": 0,
+   "maximal_size_histogram": {
+    "8": 225
+   },
+   "q": 5,
+   "root": {
+    "coalition_survival": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      1,
+      1,
+      0
+     ],
+     "4": [
+      0,
+      1,
+      1,
+      1
+     ]
+    },
+    "coalition_winner": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      0,
+      1,
+      0
+     ],
+     "4": [
+      0,
+      0,
+      0,
+      1
+     ]
+    },
+    "grundy_empty": 0,
+    "possible_added_stones": [
+     8
+    ],
+    "possible_last_movers": {
+     "2": [
+      1
+     ],
+     "3": [
+      1
+     ],
+     "4": [
+      3
+     ],
+     "5": [
+      2
+     ],
+     "6": [
+      1
+     ],
+     "7": [
+      0
+     ],
+     "8": [
+      7
+     ]
+    },
+    "possible_losers": {
+     "2": [
+      0
+     ],
+     "3": [
+      2
+     ],
+     "4": [
+      0
+     ],
+     "5": [
+      3
+     ],
+     "6": [
+      2
+     ],
+     "7": [
+      1
+     ],
+     "8": [
+      0
+     ]
+    }
+   },
+   "safe_positions": 3249,
+   "w": 2
+  },
+  {
+   "cells": 14,
+   "census": {
+    "chaos_positions": {
+     "2": 591,
+     "3": 0,
+     "4": 0,
+     "5": 0,
+     "6": 0,
+     "7": 0,
+     "8": 0
+    },
+    "lens_size_histogram": {
+     "1": 2083,
+     "2": 591
+    },
+    "lone_survivor_not_winner_positions": {
+     "2": 0,
+     "3": 2450,
+     "4": 2674
+    },
+    "lone_winner_positions": {
+     "2": 2674,
+     "3": 2391,
+     "4": 2313
+    }
+   },
+   "checks": {
+    "engine_children_mismatches": 0,
+    "engine_position_count_a": 2674,
+    "engine_position_count_b": 2674,
+    "engine_position_sets_equal": true,
+    "frozen_rule_all_positions": true,
+    "r2_surv_equals_win": true,
+    "r2_win_equals_grundy_nonzero": true,
+    "win_implies_possible_mover_all_positions": true,
+    "win_implies_surv_all_positions": true
+   },
+   "m": 7,
+   "maximal_size_gcd_delta": 1,
+   "maximal_size_histogram": {
+    "5": 60,
+    "6": 320
+   },
+   "q": 4,
+   "root": {
+    "coalition_survival": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      0,
+      1,
+      0
+     ],
+     "4": [
+      1,
+      0,
+      0,
+      1
+     ]
+    },
+    "coalition_winner": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      0,
+      0,
+      0
+     ],
+     "4": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "grundy_empty": 0,
+    "possible_added_stones": [
+     5,
+     6
+    ],
+    "possible_last_movers": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      1,
+      2
+     ],
+     "4": [
+      0,
+      1
+     ],
+     "5": [
+      0,
+      4
+     ],
+     "6": [
+      4,
+      5
+     ],
+     "7": [
+      4,
+      5
+     ],
+     "8": [
+      4,
+      5
+     ]
+    },
+    "possible_losers": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      0,
+      2
+     ],
+     "4": [
+      1,
+      2
+     ],
+     "5": [
+      0,
+      1
+     ],
+     "6": [
+      0,
+      5
+     ],
+     "7": [
+      5,
+      6
+     ],
+     "8": [
+      5,
+      6
+     ]
+    }
+   },
+   "safe_positions": 2674,
+   "w": 2
+  },
+  {
+   "cells": 16,
+   "census": {
+    "chaos_positions": {
+     "2": 339,
+     "3": 0,
+     "4": 0,
+     "5": 0,
+     "6": 0,
+     "7": 0,
+     "8": 0
+    },
+    "lens_size_histogram": {
+     "1": 5296,
+     "2": 339
+    },
+    "lone_survivor_not_winner_positions": {
+     "2": 0,
+     "3": 5555,
+     "4": 5635
+    },
+    "lone_winner_positions": {
+     "2": 5635,
+     "3": 5483,
+     "4": 5393
+    }
+   },
+   "checks": {
+    "engine_children_mismatches": 0,
+    "engine_position_count_a": 5635,
+    "engine_position_count_b": 5635,
+    "engine_position_sets_equal": true,
+    "frozen_rule_all_positions": true,
+    "r2_surv_equals_win": true,
+    "r2_win_equals_grundy_nonzero": true,
+    "win_implies_possible_mover_all_positions": true,
+    "win_implies_surv_all_positions": true
+   },
+   "m": 8,
+   "maximal_size_gcd_delta": 1,
+   "maximal_size_histogram": {
+    "5": 16,
+    "6": 1058
+   },
+   "q": 4,
+   "root": {
+    "coalition_survival": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      0,
+      1,
+      1
+     ],
+     "4": [
+      1,
+      1,
+      0,
+      1
+     ]
+    },
+    "coalition_winner": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      0,
+      0,
+      1
+     ],
+     "4": [
+      0,
+      1,
+      0,
+      0
+     ]
+    },
+    "grundy_empty": 0,
+    "possible_added_stones": [
+     5,
+     6
+    ],
+    "possible_last_movers": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      1,
+      2
+     ],
+     "4": [
+      0,
+      1
+     ],
+     "5": [
+      0,
+      4
+     ],
+     "6": [
+      4,
+      5
+     ],
+     "7": [
+      4,
+      5
+     ],
+     "8": [
+      4,
+      5
+     ]
+    },
+    "possible_losers": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      0,
+      2
+     ],
+     "4": [
+      1,
+      2
+     ],
+     "5": [
+      0,
+      1
+     ],
+     "6": [
+      0,
+      5
+     ],
+     "7": [
+      5,
+      6
+     ],
+     "8": [
+      5,
+      6
+     ]
+    }
+   },
+   "safe_positions": 5635,
+   "w": 2
+  },
+  {
+   "cells": 3,
+   "census": {
+    "chaos_positions": {
+     "2": 0,
+     "3": 0,
+     "4": 0,
+     "5": 0,
+     "6": 0,
+     "7": 0,
+     "8": 0
+    },
+    "lens_size_histogram": {
+     "1": 8
+    },
+    "lone_survivor_not_winner_positions": {
+     "2": 0,
+     "3": 8,
+     "4": 8
+    },
+    "lone_winner_positions": {
+     "2": 8,
+     "3": 8,
+     "4": 8
+    }
+   },
+   "checks": {
+    "engine_children_mismatches": 0,
+    "engine_position_count_a": 8,
+    "engine_position_count_b": 8,
+    "engine_position_sets_equal": true,
+    "frozen_rule_all_positions": true,
+    "r2_surv_equals_win": true,
+    "r2_win_equals_grundy_nonzero": true,
+    "win_implies_possible_mover_all_positions": true,
+    "win_implies_surv_all_positions": true
+   },
+   "m": 1,
+   "maximal_size_gcd_delta": 0,
+   "maximal_size_histogram": {
+    "3": 1
+   },
+   "q": 4,
+   "root": {
+    "coalition_survival": {
+     "2": [
+      1,
+      0
+     ],
+     "3": [
+      0,
+      1,
+      1
+     ],
+     "4": [
+      1,
+      1,
+      1,
+      0
+     ]
+    },
+    "coalition_winner": {
+     "2": [
+      1,
+      0
+     ],
+     "3": [
+      0,
+      0,
+      1
+     ],
+     "4": [
+      0,
+      0,
+      1,
+      0
+     ]
+    },
+    "grundy_empty": 1,
+    "possible_added_stones": [
+     3
+    ],
+    "possible_last_movers": {
+     "2": [
+      0
+     ],
+     "3": [
+      2
+     ],
+     "4": [
+      2
+     ],
+     "5": [
+      2
+     ],
+     "6": [
+      2
+     ],
+     "7": [
+      2
+     ],
+     "8": [
+      2
+     ]
+    },
+    "possible_losers": {
+     "2": [
+      1
+     ],
+     "3": [
+      0
+     ],
+     "4": [
+      3
+     ],
+     "5": [
+      3
+     ],
+     "6": [
+      3
+     ],
+     "7": [
+      3
+     ],
+     "8": [
+      3
+     ]
+    }
+   },
+   "safe_positions": 8,
+   "w": 3
+  },
+  {
+   "cells": 3,
+   "census": {
+    "chaos_positions": {
+     "2": 0,
+     "3": 0,
+     "4": 0,
+     "5": 0,
+     "6": 0,
+     "7": 0,
+     "8": 0
+    },
+    "lens_size_histogram": {
+     "1": 8
+    },
+    "lone_survivor_not_winner_positions": {
+     "2": 0,
+     "3": 8,
+     "4": 8
+    },
+    "lone_winner_positions": {
+     "2": 8,
+     "3": 8,
+     "4": 8
+    }
+   },
+   "checks": {
+    "engine_children_mismatches": 0,
+    "engine_position_count_a": 8,
+    "engine_position_count_b": 8,
+    "engine_position_sets_equal": true,
+    "frozen_rule_all_positions": true,
+    "r2_surv_equals_win": true,
+    "r2_win_equals_grundy_nonzero": true,
+    "win_implies_possible_mover_all_positions": true,
+    "win_implies_surv_all_positions": true
+   },
+   "m": 1,
+   "maximal_size_gcd_delta": 0,
+   "maximal_size_histogram": {
+    "3": 1
+   },
+   "q": 5,
+   "root": {
+    "coalition_survival": {
+     "2": [
+      1,
+      0
+     ],
+     "3": [
+      0,
+      1,
+      1
+     ],
+     "4": [
+      1,
+      1,
+      1,
+      0
+     ]
+    },
+    "coalition_winner": {
+     "2": [
+      1,
+      0
+     ],
+     "3": [
+      0,
+      0,
+      1
+     ],
+     "4": [
+      0,
+      0,
+      1,
+      0
+     ]
+    },
+    "grundy_empty": 1,
+    "possible_added_stones": [
+     3
+    ],
+    "possible_last_movers": {
+     "2": [
+      0
+     ],
+     "3": [
+      2
+     ],
+     "4": [
+      2
+     ],
+     "5": [
+      2
+     ],
+     "6": [
+      2
+     ],
+     "7": [
+      2
+     ],
+     "8": [
+      2
+     ]
+    },
+    "possible_losers": {
+     "2": [
+      1
+     ],
+     "3": [
+      0
+     ],
+     "4": [
+      3
+     ],
+     "5": [
+      3
+     ],
+     "6": [
+      3
+     ],
+     "7": [
+      3
+     ],
+     "8": [
+      3
+     ]
+    }
+   },
+   "safe_positions": 8,
+   "w": 3
+  },
+  {
+   "cells": 6,
+   "census": {
+    "chaos_positions": {
+     "2": 0,
+     "3": 0,
+     "4": 0,
+     "5": 0,
+     "6": 0,
+     "7": 0,
+     "8": 0
+    },
+    "lens_size_histogram": {
+     "1": 54
+    },
+    "lone_survivor_not_winner_positions": {
+     "2": 0,
+     "3": 54,
+     "4": 54
+    },
+    "lone_winner_positions": {
+     "2": 54,
+     "3": 54,
+     "4": 54
+    }
+   },
+   "checks": {
+    "engine_children_mismatches": 0,
+    "engine_position_count_a": 54,
+    "engine_position_count_b": 54,
+    "engine_position_sets_equal": true,
+    "frozen_rule_all_positions": true,
+    "r2_surv_equals_win": true,
+    "r2_win_equals_grundy_nonzero": true,
+    "win_implies_possible_mover_all_positions": true,
+    "win_implies_surv_all_positions": true
+   },
+   "m": 2,
+   "maximal_size_gcd_delta": 0,
+   "maximal_size_histogram": {
+    "4": 12
+   },
+   "q": 4,
+   "root": {
+    "coalition_survival": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      1,
+      0,
+      1
+     ],
+     "4": [
+      0,
+      1,
+      1,
+      1
+     ]
+    },
+    "coalition_winner": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      1,
+      0,
+      0
+     ],
+     "4": [
+      0,
+      0,
+      0,
+      1
+     ]
+    },
+    "grundy_empty": 0,
+    "possible_added_stones": [
+     4
+    ],
+    "possible_last_movers": {
+     "2": [
+      1
+     ],
+     "3": [
+      0
+     ],
+     "4": [
+      3
+     ],
+     "5": [
+      3
+     ],
+     "6": [
+      3
+     ],
+     "7": [
+      3
+     ],
+     "8": [
+      3
+     ]
+    },
+    "possible_losers": {
+     "2": [
+      0
+     ],
+     "3": [
+      1
+     ],
+     "4": [
+      0
+     ],
+     "5": [
+      4
+     ],
+     "6": [
+      4
+     ],
+     "7": [
+      4
+     ],
+     "8": [
+      4
+     ]
+    }
+   },
+   "safe_positions": 54,
+   "w": 3
+  },
+  {
+   "cells": 6,
+   "census": {
+    "chaos_positions": {
+     "2": 0,
+     "3": 0,
+     "4": 0,
+     "5": 0,
+     "6": 0,
+     "7": 0,
+     "8": 0
+    },
+    "lens_size_histogram": {
+     "1": 64
+    },
+    "lone_survivor_not_winner_positions": {
+     "2": 0,
+     "3": 64,
+     "4": 64
+    },
+    "lone_winner_positions": {
+     "2": 64,
+     "3": 64,
+     "4": 64
+    }
+   },
+   "checks": {
+    "engine_children_mismatches": 0,
+    "engine_position_count_a": 64,
+    "engine_position_count_b": 64,
+    "engine_position_sets_equal": true,
+    "frozen_rule_all_positions": true,
+    "r2_surv_equals_win": true,
+    "r2_win_equals_grundy_nonzero": true,
+    "win_implies_possible_mover_all_positions": true,
+    "win_implies_surv_all_positions": true
+   },
+   "m": 2,
+   "maximal_size_gcd_delta": 0,
+   "maximal_size_histogram": {
+    "6": 1
+   },
+   "q": 5,
+   "root": {
+    "coalition_survival": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      0,
+      1,
+      1
+     ],
+     "4": [
+      1,
+      1,
+      0,
+      1
+     ]
+    },
+    "coalition_winner": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      0,
+      0,
+      1
+     ],
+     "4": [
+      0,
+      1,
+      0,
+      0
+     ]
+    },
+    "grundy_empty": 0,
+    "possible_added_stones": [
+     6
+    ],
+    "possible_last_movers": {
+     "2": [
+      1
+     ],
+     "3": [
+      2
+     ],
+     "4": [
+      1
+     ],
+     "5": [
+      0
+     ],
+     "6": [
+      5
+     ],
+     "7": [
+      5
+     ],
+     "8": [
+      5
+     ]
+    },
+    "possible_losers": {
+     "2": [
+      0
+     ],
+     "3": [
+      0
+     ],
+     "4": [
+      2
+     ],
+     "5": [
+      1
+     ],
+     "6": [
+      0
+     ],
+     "7": [
+      6
+     ],
+     "8": [
+      6
+     ]
+    }
+   },
+   "safe_positions": 64,
+   "w": 3
+  },
+  {
+   "cells": 9,
+   "census": {
+    "chaos_positions": {
+     "2": 0,
+     "3": 0,
+     "4": 0,
+     "5": 0,
+     "6": 0,
+     "7": 0,
+     "8": 0
+    },
+    "lens_size_histogram": {
+     "1": 298
+    },
+    "lone_survivor_not_winner_positions": {
+     "2": 0,
+     "3": 298,
+     "4": 298
+    },
+    "lone_winner_positions": {
+     "2": 298,
+     "3": 298,
+     "4": 298
+    }
+   },
+   "checks": {
+    "engine_children_mismatches": 0,
+    "engine_position_count_a": 298,
+    "engine_position_count_b": 298,
+    "engine_position_sets_equal": true,
+    "frozen_rule_all_positions": true,
+    "r2_surv_equals_win": true,
+    "r2_win_equals_grundy_nonzero": true,
+    "win_implies_possible_mover_all_positions": true,
+    "win_implies_surv_all_positions": true
+   },
+   "m": 3,
+   "maximal_size_gcd_delta": 0,
+   "maximal_size_histogram": {
+    "5": 56
+   },
+   "q": 4,
+   "root": {
+    "coalition_survival": {
+     "2": [
+      1,
+      0
+     ],
+     "3": [
+      1,
+      1,
+      0
+     ],
+     "4": [
+      1,
+      0,
+      1,
+      1
+     ]
+    },
+    "coalition_winner": {
+     "2": [
+      1,
+      0
+     ],
+     "3": [
+      0,
+      1,
+      0
+     ],
+     "4": [
+      1,
+      0,
+      0,
+      0
+     ]
+    },
+    "grundy_empty": 1,
+    "possible_added_stones": [
+     5
+    ],
+    "possible_last_movers": {
+     "2": [
+      0
+     ],
+     "3": [
+      1
+     ],
+     "4": [
+      0
+     ],
+     "5": [
+      4
+     ],
+     "6": [
+      4
+     ],
+     "7": [
+      4
+     ],
+     "8": [
+      4
+     ]
+    },
+    "possible_losers": {
+     "2": [
+      1
+     ],
+     "3": [
+      2
+     ],
+     "4": [
+      1
+     ],
+     "5": [
+      0
+     ],
+     "6": [
+      5
+     ],
+     "7": [
+      5
+     ],
+     "8": [
+      5
+     ]
+    }
+   },
+   "safe_positions": 298,
+   "w": 3
+  },
+  {
+   "cells": 9,
+   "census": {
+    "chaos_positions": {
+     "2": 0,
+     "3": 0,
+     "4": 0,
+     "5": 0,
+     "6": 0,
+     "7": 0,
+     "8": 0
+    },
+    "lens_size_histogram": {
+     "1": 512
+    },
+    "lone_survivor_not_winner_positions": {
+     "2": 0,
+     "3": 512,
+     "4": 512
+    },
+    "lone_winner_positions": {
+     "2": 512,
+     "3": 512,
+     "4": 512
+    }
+   },
+   "checks": {
+    "engine_children_mismatches": 0,
+    "engine_position_count_a": 512,
+    "engine_position_count_b": 512,
+    "engine_position_sets_equal": true,
+    "frozen_rule_all_positions": true,
+    "r2_surv_equals_win": true,
+    "r2_win_equals_grundy_nonzero": true,
+    "win_implies_possible_mover_all_positions": true,
+    "win_implies_surv_all_positions": true
+   },
+   "m": 3,
+   "maximal_size_gcd_delta": 0,
+   "maximal_size_histogram": {
+    "9": 1
+   },
+   "q": 5,
+   "root": {
+    "coalition_survival": {
+     "2": [
+      1,
+      0
+     ],
+     "3": [
+      0,
+      1,
+      1
+     ],
+     "4": [
+      1,
+      0,
+      1,
+      1
+     ]
+    },
+    "coalition_winner": {
+     "2": [
+      1,
+      0
+     ],
+     "3": [
+      0,
+      0,
+      1
+     ],
+     "4": [
+      1,
+      0,
+      0,
+      0
+     ]
+    },
+    "grundy_empty": 1,
+    "possible_added_stones": [
+     9
+    ],
+    "possible_last_movers": {
+     "2": [
+      0
+     ],
+     "3": [
+      2
+     ],
+     "4": [
+      0
+     ],
+     "5": [
+      3
+     ],
+     "6": [
+      2
+     ],
+     "7": [
+      1
+     ],
+     "8": [
+      0
+     ]
+    },
+    "possible_losers": {
+     "2": [
+      1
+     ],
+     "3": [
+      0
+     ],
+     "4": [
+      1
+     ],
+     "5": [
+      4
+     ],
+     "6": [
+      3
+     ],
+     "7": [
+      2
+     ],
+     "8": [
+      1
+     ]
+    }
+   },
+   "safe_positions": 512,
+   "w": 3
+  },
+  {
+   "cells": 12,
+   "census": {
+    "chaos_positions": {
+     "2": 494,
+     "3": 0,
+     "4": 0,
+     "5": 0,
+     "6": 0,
+     "7": 0,
+     "8": 0
+    },
+    "lens_size_histogram": {
+     "1": 705,
+     "2": 494
+    },
+    "lone_survivor_not_winner_positions": {
+     "2": 0,
+     "3": 973,
+     "4": 1199
+    },
+    "lone_winner_positions": {
+     "2": 1199,
+     "3": 974,
+     "4": 945
+    }
+   },
+   "checks": {
+    "engine_children_mismatches": 0,
+    "engine_position_count_a": 1199,
+    "engine_position_count_b": 1199,
+    "engine_position_sets_equal": true,
+    "frozen_rule_all_positions": true,
+    "r2_surv_equals_win": true,
+    "r2_win_equals_grundy_nonzero": true,
+    "win_implies_possible_mover_all_positions": true,
+    "win_implies_surv_all_positions": true
+   },
+   "m": 4,
+   "maximal_size_gcd_delta": 1,
+   "maximal_size_histogram": {
+    "5": 104,
+    "6": 78
+   },
+   "q": 4,
+   "root": {
+    "coalition_survival": {
+     "2": [
+      1,
+      0
+     ],
+     "3": [
+      0,
+      1,
+      0
+     ],
+     "4": [
+      1,
+      0,
+      0,
+      1
+     ]
+    },
+    "coalition_winner": {
+     "2": [
+      1,
+      0
+     ],
+     "3": [
+      0,
+      0,
+      0
+     ],
+     "4": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "grundy_empty": 2,
+    "possible_added_stones": [
+     5,
+     6
+    ],
+    "possible_last_movers": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      1,
+      2
+     ],
+     "4": [
+      0,
+      1
+     ],
+     "5": [
+      0,
+      4
+     ],
+     "6": [
+      4,
+      5
+     ],
+     "7": [
+      4,
+      5
+     ],
+     "8": [
+      4,
+      5
+     ]
+    },
+    "possible_losers": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      0,
+      2
+     ],
+     "4": [
+      1,
+      2
+     ],
+     "5": [
+      0,
+      1
+     ],
+     "6": [
+      0,
+      5
+     ],
+     "7": [
+      5,
+      6
+     ],
+     "8": [
+      5,
+      6
+     ]
+    }
+   },
+   "safe_positions": 1199,
+   "w": 3
+  },
+  {
+   "cells": 12,
+   "census": {
+    "chaos_positions": {
+     "2": 1868,
+     "3": 484,
+     "4": 0,
+     "5": 0,
+     "6": 0,
+     "7": 0,
+     "8": 0
+    },
+    "lens_size_histogram": {
+     "1": 1440,
+     "2": 1384,
+     "3": 484
+    },
+    "lone_survivor_not_winner_positions": {
+     "2": 0,
+     "3": 2874,
+     "4": 3308
+    },
+    "lone_winner_positions": {
+     "2": 3308,
+     "3": 2386,
+     "4": 1952
+    }
+   },
+   "checks": {
+    "engine_children_mismatches": 0,
+    "engine_position_count_a": 3308,
+    "engine_position_count_b": 3308,
+    "engine_position_sets_equal": true,
+    "frozen_rule_all_positions": true,
+    "r2_surv_equals_win": true,
+    "r2_win_equals_grundy_nonzero": true,
+    "win_implies_possible_mover_all_positions": true,
+    "win_implies_surv_all_positions": true
+   },
+   "m": 4,
+   "maximal_size_gcd_delta": 1,
+   "maximal_size_histogram": {
+    "10": 1,
+    "8": 36,
+    "9": 32
+   },
+   "q": 5,
+   "root": {
+    "coalition_survival": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      1,
+      1,
+      0
+     ],
+     "4": [
+      0,
+      0,
+      1,
+      1
+     ]
+    },
+    "coalition_winner": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      0,
+      0,
+      0
+     ],
+     "4": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "grundy_empty": 0,
+    "possible_added_stones": [
+     8,
+     9,
+     10
+    ],
+    "possible_last_movers": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      0,
+      1,
+      2
+     ],
+     "4": [
+      0,
+      1,
+      3
+     ],
+     "5": [
+      2,
+      3,
+      4
+     ],
+     "6": [
+      1,
+      2,
+      3
+     ],
+     "7": [
+      0,
+      1,
+      2
+     ],
+     "8": [
+      0,
+      1,
+      7
+     ]
+    },
+    "possible_losers": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      0,
+      1,
+      2
+     ],
+     "4": [
+      0,
+      1,
+      2
+     ],
+     "5": [
+      0,
+      3,
+      4
+     ],
+     "6": [
+      2,
+      3,
+      4
+     ],
+     "7": [
+      1,
+      2,
+      3
+     ],
+     "8": [
+      0,
+      1,
+      2
+     ]
+    }
+   },
+   "safe_positions": 3308,
+   "w": 3
+  },
+  {
+   "cells": 15,
+   "census": {
+    "chaos_positions": {
+     "2": 2201,
+     "3": 468,
+     "4": 0,
+     "5": 0,
+     "6": 0,
+     "7": 0,
+     "8": 0
+    },
+    "lens_size_histogram": {
+     "1": 2469,
+     "2": 1735,
+     "3": 468
+    },
+    "lone_survivor_not_winner_positions": {
+     "2": 0,
+     "3": 3722,
+     "4": 4558
+    },
+    "lone_winner_positions": {
+     "2": 4672,
+     "3": 3647,
+     "4": 3590
+    }
+   },
+   "checks": {
+    "engine_children_mismatches": 0,
+    "engine_position_count_a": 4672,
+    "engine_position_count_b": 4672,
+    "engine_position_sets_equal": true,
+    "frozen_rule_all_positions": true,
+    "r2_surv_equals_win": true,
+    "r2_win_equals_grundy_nonzero": true,
+    "win_implies_possible_mover_all_positions": true,
+    "win_implies_surv_all_positions": true
+   },
+   "m": 5,
+   "maximal_size_gcd_delta": 1,
+   "maximal_size_histogram": {
+    "5": 64,
+    "6": 530,
+    "7": 80
+   },
+   "q": 4,
+   "root": {
+    "coalition_survival": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      0,
+      0,
+      0
+     ],
+     "4": [
+      1,
+      0,
+      0,
+      0
+     ]
+    },
+    "coalition_winner": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      0,
+      0,
+      0
+     ],
+     "4": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "grundy_empty": 0,
+    "possible_added_stones": [
+     5,
+     6,
+     7
+    ],
+    "possible_last_movers": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      0,
+      1,
+      2
+     ],
+     "4": [
+      0,
+      1,
+      2
+     ],
+     "5": [
+      0,
+      1,
+      4
+     ],
+     "6": [
+      0,
+      4,
+      5
+     ],
+     "7": [
+      4,
+      5,
+      6
+     ],
+     "8": [
+      4,
+      5,
+      6
+     ]
+    },
+    "possible_losers": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      0,
+      1,
+      2
+     ],
+     "4": [
+      1,
+      2,
+      3
+     ],
+     "5": [
+      0,
+      1,
+      2
+     ],
+     "6": [
+      0,
+      1,
+      5
+     ],
+     "7": [
+      0,
+      5,
+      6
+     ],
+     "8": [
+      5,
+      6,
+      7
+     ]
+    }
+   },
+   "safe_positions": 4672,
+   "w": 3
+  },
+  {
+   "cells": 15,
+   "census": {
+    "chaos_positions": {
+     "2": 14900,
+     "3": 6472,
+     "4": 585,
+     "5": 0,
+     "6": 0,
+     "7": 0,
+     "8": 0
+    },
+    "lens_size_histogram": {
+     "1": 6091,
+     "2": 8562,
+     "3": 5887,
+     "4": 585
+    },
+    "lone_survivor_not_winner_positions": {
+     "2": 0,
+     "3": 17896,
+     "4": 21033
+    },
+    "lone_winner_positions": {
+     "2": 21125,
+     "3": 12628,
+     "4": 8790
+    }
+   },
+   "checks": {
+    "engine_children_mismatches": 0,
+    "engine_position_count_a": 21125,
+    "engine_position_count_b": 21125,
+    "engine_position_sets_equal": true,
+    "frozen_rule_all_positions": true,
+    "r2_surv_equals_win": true,
+    "r2_win_equals_grundy_nonzero": true,
+    "win_implies_possible_mover_all_positions": true,
+    "win_implies_surv_all_positions": true
+   },
+   "m": 5,
+   "maximal_size_gcd_delta": 1,
+   "maximal_size_histogram": {
+    "10": 193,
+    "11": 12,
+    "8": 9,
+    "9": 130
+   },
+   "q": 5,
+   "root": {
+    "coalition_survival": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      0,
+      0,
+      1
+     ],
+     "4": [
+      1,
+      0,
+      0,
+      0
+     ]
+    },
+    "coalition_winner": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      0,
+      0,
+      0
+     ],
+     "4": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "grundy_empty": 0,
+    "possible_added_stones": [
+     8,
+     9,
+     10,
+     11
+    ],
+    "possible_last_movers": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      0,
+      1,
+      2
+     ],
+     "4": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "5": [
+      0,
+      2,
+      3,
+      4
+     ],
+     "6": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "7": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "8": [
+      0,
+      1,
+      2,
+      7
+     ]
+    },
+    "possible_losers": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      0,
+      1,
+      2
+     ],
+     "4": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "5": [
+      0,
+      1,
+      3,
+      4
+     ],
+     "6": [
+      2,
+      3,
+      4,
+      5
+     ],
+     "7": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "8": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   },
+   "safe_positions": 21125,
+   "w": 3
+  },
+  {
+   "cells": 18,
+   "census": {
+    "chaos_positions": {
+     "2": 8910,
+     "3": 3449,
+     "4": 69,
+     "5": 0,
+     "6": 0,
+     "7": 0,
+     "8": 0
+    },
+    "lens_size_histogram": {
+     "1": 7990,
+     "2": 5553,
+     "3": 3380,
+     "4": 69
+    },
+    "lone_survivor_not_winner_positions": {
+     "2": 0,
+     "3": 13039,
+     "4": 16224
+    },
+    "lone_winner_positions": {
+     "2": 16992,
+     "3": 12212,
+     "4": 11700
+    }
+   },
+   "checks": {
+    "engine_children_mismatches": 0,
+    "engine_position_count_a": 16992,
+    "engine_position_count_b": 16992,
+    "engine_position_sets_equal": true,
+    "frozen_rule_all_positions": true,
+    "r2_surv_equals_win": true,
+    "r2_win_equals_grundy_nonzero": true,
+    "win_implies_possible_mover_all_positions": true,
+    "win_implies_surv_all_positions": true
+   },
+   "m": 6,
+   "maximal_size_gcd_delta": 1,
+   "maximal_size_histogram": {
+    "5": 4,
+    "6": 648,
+    "7": 964,
+    "8": 108
+   },
+   "q": 4,
+   "root": {
+    "coalition_survival": {
+     "2": [
+      1,
+      0
+     ],
+     "3": [
+      0,
+      0,
+      0
+     ],
+     "4": [
+      0,
+      1,
+      0,
+      0
+     ]
+    },
+    "coalition_winner": {
+     "2": [
+      1,
+      0
+     ],
+     "3": [
+      0,
+      0,
+      0
+     ],
+     "4": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "grundy_empty": 1,
+    "possible_added_stones": [
+     5,
+     6,
+     7,
+     8
+    ],
+    "possible_last_movers": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      0,
+      1,
+      2
+     ],
+     "4": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "5": [
+      0,
+      1,
+      2,
+      4
+     ],
+     "6": [
+      0,
+      1,
+      4,
+      5
+     ],
+     "7": [
+      0,
+      4,
+      5,
+      6
+     ],
+     "8": [
+      4,
+      5,
+      6,
+      7
+     ]
+    },
+    "possible_losers": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      0,
+      1,
+      2
+     ],
+     "4": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "5": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "6": [
+      0,
+      1,
+      2,
+      5
+     ],
+     "7": [
+      0,
+      1,
+      5,
+      6
+     ],
+     "8": [
+      0,
+      5,
+      6,
+      7
+     ]
+    }
+   },
+   "safe_positions": 16992,
+   "w": 3
+  },
+  {
+   "cells": 8,
+   "census": {
+    "chaos_positions": {
+     "2": 65,
+     "3": 0,
+     "4": 0,
+     "5": 0,
+     "6": 0,
+     "7": 0,
+     "8": 0
+    },
+    "lens_size_histogram": {
+     "1": 104,
+     "2": 65
+    },
+    "lone_survivor_not_winner_positions": {
+     "2": 0,
+     "3": 137,
+     "4": 169
+    },
+    "lone_winner_positions": {
+     "2": 169,
+     "3": 145,
+     "4": 136
+    }
+   },
+   "checks": {
+    "engine_children_mismatches": 0,
+    "engine_position_count_a": 169,
+    "engine_position_count_b": 169,
+    "engine_position_sets_equal": true,
+    "frozen_rule_all_positions": true,
+    "r2_surv_equals_win": true,
+    "r2_win_equals_grundy_nonzero": true,
+    "win_implies_possible_mover_all_positions": true,
+    "win_implies_surv_all_positions": true
+   },
+   "m": 2,
+   "maximal_size_gcd_delta": 1,
+   "maximal_size_histogram": {
+    "4": 8,
+    "5": 16
+   },
+   "q": 4,
+   "root": {
+    "coalition_survival": {
+     "2": [
+      1,
+      0
+     ],
+     "3": [
+      1,
+      1,
+      0
+     ],
+     "4": [
+      0,
+      0,
+      1,
+      1
+     ]
+    },
+    "coalition_winner": {
+     "2": [
+      1,
+      0
+     ],
+     "3": [
+      0,
+      1,
+      0
+     ],
+     "4": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "grundy_empty": 1,
+    "possible_added_stones": [
+     4,
+     5
+    ],
+    "possible_last_movers": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      0,
+      1
+     ],
+     "4": [
+      0,
+      3
+     ],
+     "5": [
+      3,
+      4
+     ],
+     "6": [
+      3,
+      4
+     ],
+     "7": [
+      3,
+      4
+     ],
+     "8": [
+      3,
+      4
+     ]
+    },
+    "possible_losers": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      1,
+      2
+     ],
+     "4": [
+      0,
+      1
+     ],
+     "5": [
+      0,
+      4
+     ],
+     "6": [
+      4,
+      5
+     ],
+     "7": [
+      4,
+      5
+     ],
+     "8": [
+      4,
+      5
+     ]
+    }
+   },
+   "safe_positions": 169,
+   "w": 4
+  },
+  {
+   "cells": 8,
+   "census": {
+    "chaos_positions": {
+     "2": 0,
+     "3": 0,
+     "4": 0,
+     "5": 0,
+     "6": 0,
+     "7": 0,
+     "8": 0
+    },
+    "lens_size_histogram": {
+     "1": 256
+    },
+    "lone_survivor_not_winner_positions": {
+     "2": 0,
+     "3": 256,
+     "4": 256
+    },
+    "lone_winner_positions": {
+     "2": 256,
+     "3": 256,
+     "4": 256
+    }
+   },
+   "checks": {
+    "engine_children_mismatches": 0,
+    "engine_position_count_a": 256,
+    "engine_position_count_b": 256,
+    "engine_position_sets_equal": true,
+    "frozen_rule_all_positions": true,
+    "r2_surv_equals_win": true,
+    "r2_win_equals_grundy_nonzero": true,
+    "win_implies_possible_mover_all_positions": true,
+    "win_implies_surv_all_positions": true
+   },
+   "m": 2,
+   "maximal_size_gcd_delta": 0,
+   "maximal_size_histogram": {
+    "8": 1
+   },
+   "q": 5,
+   "root": {
+    "coalition_survival": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      1,
+      1,
+      0
+     ],
+     "4": [
+      0,
+      1,
+      1,
+      1
+     ]
+    },
+    "coalition_winner": {
+     "2": [
+      0,
+      1
+     ],
+     "3": [
+      0,
+      1,
+      0
+     ],
+     "4": [
+      0,
+      0,
+      0,
+      1
+     ]
+    },
+    "grundy_empty": 0,
+    "possible_added_stones": [
+     8
+    ],
+    "possible_last_movers": {
+     "2": [
+      1
+     ],
+     "3": [
+      1
+     ],
+     "4": [
+      3
+     ],
+     "5": [
+      2
+     ],
+     "6": [
+      1
+     ],
+     "7": [
+      0
+     ],
+     "8": [
+      7
+     ]
+    },
+    "possible_losers": {
+     "2": [
+      0
+     ],
+     "3": [
+      2
+     ],
+     "4": [
+      0
+     ],
+     "5": [
+      3
+     ],
+     "6": [
+      2
+     ],
+     "7": [
+      1
+     ],
+     "8": [
+      0
+     ]
+    }
+   },
+   "safe_positions": 256,
+   "w": 4
+  },
+  {
+   "cells": 12,
+   "census": {
+    "chaos_positions": {
+     "2": 494,
+     "3": 0,
+     "4": 0,
+     "5": 0,
+     "6": 0,
+     "7": 0,
+     "8": 0
+    },
+    "lens_size_histogram": {
+     "1": 705,
+     "2": 494
+    },
+    "lone_survivor_not_winner_positions": {
+     "2": 0,
+     "3": 973,
+     "4": 1199
+    },
+    "lone_winner_positions": {
+     "2": 1199,
+     "3": 974,
+     "4": 945
+    }
+   },
+   "checks": {
+    "engine_children_mismatches": 0,
+    "engine_position_count_a": 1199,
+    "engine_position_count_b": 1199,
+    "engine_position_sets_equal": true,
+    "frozen_rule_all_positions": true,
+    "r2_surv_equals_win": true,
+    "r2_win_equals_grundy_nonzero": true,
+    "win_implies_possible_mover_all_positions": true,
+    "win_implies_surv_all_positions": true
+   },
+   "m": 3,
+   "maximal_size_gcd_delta": 1,
+   "maximal_size_histogram": {
+    "5": 104,
+    "6": 78
+   },
