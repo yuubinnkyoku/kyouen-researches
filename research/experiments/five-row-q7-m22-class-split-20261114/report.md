@@ -93,3 +93,13 @@ two-stone root {49,60}, S2 {59,60}, class 2 and class 4 are unaffected and remai
   `output/r5x22q7_[01]k*.txt` — 32 decomposition raw logs,
   `output/r5x22q7_c01_lexH.txt`, `output/r5x22q7_c2_lexH.txt` — lex cross-check logs,
   `output/r_ctrl_5x18_c0.txt` — SAT control with model
+
+## Audit addendum (2026-11-15)
+
+`audit-20261115.md` in this directory adds the K0821-protocol audit of the completion
+lane: 52-record/raw-log reconciliation, bit-exact 17/17 batch-1 reproduction with the
+official binary, minpos-semantics verification (with the vacuity misreading corrected),
+and the threshold sharpening to **M_{5,7} = 19 or M_{5,7} ≥ 24** (widths 20–22 are
+verified witness-free and cannot be the threshold; M = 23 would need a witness at the
+verified witness-free width 22). The loose bracket in the claims above follows the
+pre-audit title convention of K0821 and the CSV (6,8) row.
