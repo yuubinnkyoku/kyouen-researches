@@ -38,3 +38,7 @@ H(R;(x,y);0)=2\iff x>y\text{ and }R=2y+1.
 ## 残件
 
 次の具体課題は z≥1 の2トークン族で0/1値を分類すること。既存の2位置予想の全称化に必要な情報を、今回の z=0 証明の境界帰納から拡張できるか調べる。
+
+## 回帰検査への登録
+
+`.github/workflows/knowledge.yml` に本検証器を実行する監査stepを追加した。ローカルでは検証器の二回実行・監査JSON一致・`py_compile` が成功。リポジトリ全体の `uv sync`、knowledge check、単体試験、生成物再構築はGitHub Actionsで実行待ちであり、成功とは扱っていない。
