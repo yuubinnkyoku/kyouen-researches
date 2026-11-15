@@ -2,7 +2,7 @@
   "schema": "n11-class2-lane-cost74g-inflight-20261115-v1",
   "title": "n11 class2-lane cost-74g sweep in flight: third coverable class-2 target S5 cost-74 child (the last-but-one row, pure class-2 demand)",
   "date": "2026-11-15",
-  "status": "in-flight",
+  "status": "completed (sweep + WIN7 certificates + receipts fold)",
   "claimed_by": "n11 search continuation session (round 4)",
   "s5": "00000000000000809102000000000000",
   "s6_child": "00000000000000809142000000000000",
@@ -209,5 +209,61 @@
   },
   "verdict_semantics": "loss=true => WIN7-within-depth-10 candidate (certificate rebuild target); loss=false && !capped => REFUTED-D10, no first-player win within depth 10 (NOT a LOSS proof); capped => proves nothing either way",
   "unknown_status": "11x11 empty board: UNKNOWN. A completed sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 7-stone roots of this child.",
-  "coordination_note": "latest main fetched immediately before this claim push; the second-target 73g sweep and the 70g fold are parallel lanes; the third target 69 row is owned by the stale cost-69g claim (head 1163, no artifacts) and is not touched here."
+  "coordination_note": "latest main fetched immediately before this claim push; the second-target 73g sweep and the 70g fold are parallel lanes; the third target 69 row is owned by the stale cost-69g claim (head 1163, no artifacts) and is not touched here.",
+  "fold": {
+    "status": "completed",
+    "chain_head_before": "1244/6603/521339/4873/385062",
+    "chain_head_after": "1253/6594/520669/4864/384392",
+    "receipts_folded": 10,
+    "publication_order": [
+      4,
+      11,
+      20,
+      44,
+      69,
+      95,
+      100,
+      108,
+      109,
+      116
+    ],
+    "total_marginal": 49,
+    "total_marginal_in_manifest": 9,
+    "zero_marginal_in_manifest": [
+      11,
+      20
+    ],
+    "child_orbit_closed_by_bit": 4,
+    "parents_after": {
+      "parent1": "1 rows / 69",
+      "parent2": "57 rows / 4294"
+    },
+    "parents_lost_rows": {
+      "parent1": [
+        "00000000000000809142000000000000"
+      ],
+      "parent2": [
+        "00000000000000003800000008000042",
+        "00000000000000003800000008001040",
+        "00000000000000003800000808000040",
+        "00000000000000003800100008000040",
+        "00000000000000043800000008000010",
+        "00000000000000801242100000000000",
+        "00000000000000809142000000000000",
+        "00000000000000841202000000100000",
+        "0000000000000084120a000000000000"
+      ]
+    },
+    "output_blob_shas": {
+      "head_json": "0c29a708480af5e9ca10f767a6cbf0907553e603",
+      "ranking_csv": "f7a658a54241580297b3ce342fff6bbae29b44e1",
+      "top_candidates_csv": "ea44af631b5f239965d46e4082f4bcfb8e1f7c10"
+    },
+    "head_json_bytes": 12592,
+    "ranking_csv_bytes": 7579,
+    "top_candidates_csv_bytes": 4920,
+    "fold_script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost74g_receipts_20261115.py",
+    "reproduction": "python research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost74g_receipts_20261115.py",
+    "note": "Rebased on the cost-72c fold (1239 -> 1244). The fold reproduces the 72c head byte-identically before extending it. Marginal counts are D4-orbit bookkeeping over published receipts, not game-theoretic values. The third target S5 now has only the cost-69 row left."
+  }
 }
