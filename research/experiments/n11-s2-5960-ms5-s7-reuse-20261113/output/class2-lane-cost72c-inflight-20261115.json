@@ -1,8 +1,8 @@
 {
- "schema": "n11-class2-lane-cost72c-inflight-20261115-v1",
- "title": "n11 class2-lane cost-72c sweep in flight: cheapest unswept row of the second coverable class-2 target S5 at head 1235 (both parents class 2, c1=0,c2=2,c4=0)",
+ "schema": "n11-class2-lane-cost72c-inflight-20261115-v2",
+ "title": "n11 class2-lane cost-72c sweep completed: cheapest unswept row (cost 72) of the second coverable class-2 target S5 at head 1235 (both parents class 2, c1=0,c2=2,c4=0) - 9 WIN7-D10 receipts",
  "date": "2026-11-15",
- "status": "in-flight",
+ "status": "completed (sweep + WIN7 certificates + independent audit; receipts fold pending)",
  "claimed_by": "long-term class2 lane (11x11 weak-solve long-term lane session, cost-71c receipts fold session continuation)",
  "s5": "00000000000000801202000000200000",
  "s6_child": "00000000000000801202000000220000",
@@ -106,8 +106,177 @@
   "cap": 1000000000,
   "andclose": 1,
   "batch_size": 8,
-  "pilot_control": "d6 loss=false nodes=3402 required per batch"
+  "pilot_control": "d6 loss=false nodes=3402 required per batch",
+  "batch_bits": {
+   "batch1": [
+    0,
+    1,
+    3,
+    4,
+    6,
+    7,
+    8,
+    9
+   ],
+   "batch2": [
+    10,
+    13,
+    14,
+    15,
+    18,
+    22,
+    23,
+    24
+   ],
+   "batch3": [
+    25,
+    26,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+   ],
+   "batch4": [
+    35,
+    39,
+    40,
+    41,
+    42,
+    43,
+    52,
+    54
+   ],
+   "batch5": [
+    55,
+    56,
+    59,
+    61,
+    62,
+    64,
+    65,
+    66
+   ],
+   "batch6": [
+    67,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78
+   ],
+   "batch7": [
+    79,
+    84,
+    85,
+    86,
+    88,
+    89,
+    90,
+    91
+   ],
+   "batch8": [
+    92,
+    95,
+    96,
+    97,
+    99,
+    100,
+    102,
+    103
+   ],
+   "batch9": [
+    106,
+    108,
+    110,
+    111,
+    112,
+    113,
+    114,
+    117
+   ]
+  }
  },
- "plan": "sweep all 72 candidates (9 batches of 8), v16 determinism rerun on one batch, v15 cross-engine on WIN7 bits plus REFUTED anchors, independent Python sweep audit re-derivation, certificate extraction + BigInt/Bareiss double verification for any WIN7-D10 bits, raw batches pushed immediately, receipts fold on a later session once the pending cost-65l/70f/70g/72b/63f/76a folds land",
- "unknown_status": "11x11 empty board: UNKNOWN. A completed sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 7-stone roots of this child; REFUTED-D10 is absence of a winner win within depth 10, not a refutation of the child; solved/coverage counts measure manifest bookkeeping, not the game-theoretic value of any position; class 2 and class 4 remain UNKNOWN."
+ "plan": "COMPLETED: sweep all 72 candidates (9 batches of 8), v16 determinism rerun (batch 5, node-exact), v15 cross-engine (9 WIN + 3 REFUTED anchors, all agreeing), independent Python sweep audit, certificate extraction + BigInt/Bareiss double verification for all 9 WIN7-D10 bits, raw batches and certificates pushed; REMAINING: receipts fold on a later session (must re-fetch latest main and re-assert the canonical head; the pending cost-65l/70f/70g/72b/63f/76a folds land first or are merged together)",
+ "unknown_status": "11x11 empty board: UNKNOWN. A completed sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 7-stone roots of this child; REFUTED-D10 is absence of a winner win within depth 10, not a refutation of the child; solved/coverage counts measure manifest bookkeeping, not the game-theoretic value of any position; class 2 and class 4 remain UNKNOWN.",
+ "sweep_results": {
+  "candidates": 72,
+  "win7_d10_bits": [
+   1,
+   7,
+   24,
+   39,
+   59,
+   64,
+   67,
+   72,
+   96
+  ],
+  "refuted_d10": 63,
+  "capped": 0,
+  "candidate_nodes": 61297942,
+  "pilots": 9,
+  "determinism_rerun": "batch 5 (bits 55,56,59,61,62,64,65,66) re-run with the same v16 runner: node-exact identical verdicts/nodes/capped/terminalStoneRange (ms ignored), saved as class2-lane-cost72c-v16-determinism-rerun-20261115.jsonl",
+  "v15_cross_engine": "class4_child1_runner.ts (v15, repo blob 8744fc65b6b7cac6bd561403ce4c749e01c51359) on all 9 WIN bits (loss=true, nodes 4356925/1769763/6247539/3142951/1660376/2201693/1087884/1182479/2786272) plus REFUTED anchors 0/43/117 (loss=false, nodes 893457/728239/4535572), pilot 5949 loss=false x3, saved as class2-lane-cost72c-v15-crosscheck-{a,b,refuted}-20261115.jsonl",
+  "terminal_range_note": "all 72 candidates have terminal stone ranges within the depth-10 bounds ([13,17] on every record; no early-termination rows)"
+ },
+ "raw_artifacts": [
+  "class2-lane-cost72c-raw-batch1-20261115.jsonl",
+  "class2-lane-cost72c-raw-batch2-20261115.jsonl",
+  "class2-lane-cost72c-raw-batch3-20261115.jsonl",
+  "class2-lane-cost72c-raw-batch4-20261115.jsonl",
+  "class2-lane-cost72c-raw-batch5-20261115.jsonl",
+  "class2-lane-cost72c-raw-batch6-20261115.jsonl",
+  "class2-lane-cost72c-raw-batch7-20261115.jsonl",
+  "class2-lane-cost72c-raw-batch8-20261115.jsonl",
+  "class2-lane-cost72c-raw-batch9-20261115.jsonl",
+  "class2-lane-cost72c-v16-determinism-rerun-20261115.jsonl",
+  "class2-lane-cost72c-v15-crosscheck-a-20261115.jsonl",
+  "class2-lane-cost72c-v15-crosscheck-b-20261115.jsonl",
+  "class2-lane-cost72c-v15-crosscheck-refuted-20261115.jsonl"
+ ],
+ "win7_certificates": {
+  "manifest": "class2-lane-cost72c-win7-certificates-20261115.json",
+  "bits": [
+   1,
+   7,
+   24,
+   39,
+   59,
+   64,
+   67,
+   72,
+   96
+  ],
+  "root_hexes": [
+   "00000000000000801202000000220002",
+   "00000000000000801202000000220080",
+   "00000000000000801202000001220000",
+   "00000000000000801202008000220000",
+   "00000000000000801a02000000220000",
+   "00000000000000811202000000220000",
+   "00000000000000881202000000220000",
+   "00000000000001801202000000220000",
+   "00000001000000801202000000220000"
+  ],
+  "loser_first_moves": [
+   61,
+   47,
+   59,
+   46,
+   53,
+   52,
+   53,
+   47,
+   56
+  ],
+  "strategy_rows_total": 321781,
+  "extraction_nodes_total": 41346462,
+  "fbt_drops": 0,
+  "parts": "each certificate published as two line-boundary parts (join md5 equals the whole-file md5); see the certificates README",
+  "verification": "all 9 double verified: verify_win7_certificate_bigint_independent.mjs (union 0/0, terminal [13,17]) and verify_cost72c_win7_bareiss_independent.py (union 0/0, terminal {13,15,17}); per-bit records class2-lane-cost72c-bit{N}-{bigint,bareiss}-verify-20261115.json"
+ }
 }
