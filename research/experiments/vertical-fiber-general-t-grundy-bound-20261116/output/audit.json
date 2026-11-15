@@ -1,0 +1,65 @@
+{
+  "limitations": [
+    "finite audit only; it does not prove the unbounded theorem",
+    "the recurrences do not use the decomposition or the claimed bound",
+    "the canonical implementation independently generates quotient transitions"
+  ],
+  "method": "two independently generated recursive-mex state spaces",
+  "per_t": {
+    "1": {
+      "canonical_states": 3248,
+      "labeled_states": 26474,
+      "maximum_observed_grundy": 1,
+      "parameter_sets": 126
+    },
+    "2": {
+      "canonical_states": 4648,
+      "labeled_states": 38206,
+      "maximum_observed_grundy": 3,
+      "parameter_sets": 196
+    },
+    "3": {
+      "canonical_states": 6728,
+      "labeled_states": 55755,
+      "maximum_observed_grundy": 3,
+      "parameter_sets": 266
+    },
+    "4": {
+      "canonical_states": 9453,
+      "labeled_states": 78979,
+      "maximum_observed_grundy": 3,
+      "parameter_sets": 336
+    },
+    "5": {
+      "canonical_states": 12767,
+      "labeled_states": 107565,
+      "maximum_observed_grundy": 3,
+      "parameter_sets": 406
+    }
+  },
+  "scope": {
+    "m": [
+      1,
+      7
+    ],
+    "q": "1..t*w+2 for each (t,w)",
+    "rule": "safe iff sum(min(c_b,t)) <= q-1; one coordinate increases by one",
+    "t": [
+      1,
+      5
+    ],
+    "w": [
+      1,
+      4
+    ]
+  },
+  "status": "PASS",
+  "totals": {
+    "canonical_states": 36844,
+    "labeled_states": 306979,
+    "maximum_canonical_states_in_one_case": 330,
+    "maximum_labeled_states_in_one_case": 4096,
+    "maximum_observed_grundy": 3,
+    "parameter_sets": 1330
+  }
+}
