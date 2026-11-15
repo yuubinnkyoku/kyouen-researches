@@ -122,6 +122,10 @@ jobs:
           PY
       - name: Audit cost74d WIN7 against published LOSS7 sources
         run: node research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost74d_win_loss_conflicts_20261115.mjs
+      - name: Third independent replay of cost67c WIN7 certificates
+        run: |
+          node research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost67c_certificates_third_independent_20261115.mjs
+          git diff --exit-code -- research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/cost67c-third-independent-certificate-audit-20261115.json
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python tools/knowledge/build.py
@@ -324,3 +328,5 @@ jobs:
 # Refresh generated views for K0783 cost65e bit7 WIN7 certificate and two new S6 parent lifts (2026-11-15).
 # Refresh generated views for K0783 cost74d certificate publication completion (2026-11-15).
 # Refresh generated views for K0783 cost74d WIN/LOSS conflict audit (2026-11-15).
+
+# Refresh generated views after K0783 cost67c third independent certificate audit (2026-11-15).

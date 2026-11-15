@@ -13,6 +13,15 @@ relations:
   target: K0672
   note: focus2154の62証明書（27 WIN7 + 35 LOSS7）が再利用分類の入力
 artifacts:
+- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost67c_certificates_third_independent_20261115.mjs
+  role: verifier
+  note: cost67cの2 WIN7証明書を有理中心分子＋共線分岐の別実装で全戦略木再生。D4親liftとS6 worklist所属も照合
+- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/cost67c-third-independent-certificate-audit-20261115.json
+  role: data
+  note: 2証明書PASS、13親軌道・7 worklist所属、共通六石子のWIN証明とfold未実施の境界を記録
+- path: research/log/2026-11-15-n11-class2-cost67c-third-independent-audit.md
+  role: source
+  note: cost67c証明書の第三独立再生監査と親lift・frontier境界の記録
 - path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/ms5_s7_reuse_candidates_part1.csv
   role: data
   note: 候補S7表 s7_hex,s6_hex,move,cat（1=既知LOSS子、2=プール候補）。part1..3で計8,763行
@@ -1276,6 +1285,21 @@ cost-63g sweepの証明書付きWIN7-D10 receipts 14件（bits 0,9,12,50,54,58,6
 REFUTED-D10はWIN7-D10の不在のみを証明し勝敗判定ではない。解消計数はmanifest被覆の前進であり、盤全体の勝敗ではない。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class2・class4は引き続き **UNKNOWN**。
 
 詳細: [sweep log](../../log/2026-11-15-n11-class2-cost67c-sweep-certificates.md)、[certificates manifest](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost67c-win7-certificates-20261115.json)、[claim v2](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost67c-inflight-20261115.json)。
+
+## 2026-11-15: cost-67cの第三独立証明書再生監査
+
+cost-67cの2本のWIN7証明書を、既存のBigInt検査器・perm-det4 Bareiss検査器とは別の実装で再生した。円は有理中心分子の整数等式、共線三点は直線上の整数外積で判定し、浮動小数点・探索器・共有cacheは使っていない。
+
+- **2/2 PASS**。bit64 rootは34,583戦略行、bit96 rootは35,897行。各rootの相手側初手53通りをすべて展開し、戦略行の不足・余分は両方0。全終局は13〜17石。
+- 全証明木を複数初手間で共有するDAGとして再走査した一意局面数は52,739 + 54,785 = **107,524**。勝ち側70,480局面、負け側21,490局面、負け側応手辺102,248、終局15,554。これは今回の検査器での全root合併後の一意数であり、既存検査器のsub-rootごとの訪問数とは集計方法が異なる。
+- 2証明書から得る六石親への持ち上げは14 incidence、D4軌道は**13個**。共通親は子S6 `00000000000000801202000000202000`。13軌道中7軌道が7,867行のS6 worklistに存在する。ただし、worklist membershipは現在の未解決membershipを意味しない。
+- 共通の子S6は、bit64とbit96の2つの異なる合法手で、それぞれ第二手番が負ける7石rootへ進めるため、**この六石局面自体はWINと証明された**。現行headのtop-candidates CSVにはclass2親からの残り行として1件が直接掲載される。もう一つのclass4親もopen S5だが、その親に対する子行はtop-candidatesの掲載範囲外であり、この監査では残りincidenceを独立再生成していない。claimは両親で残り行と記録している。
+- 証明書のreceipt foldは未実施。親lift全体と未解決S6集合の交差を確定していないため、公式frontierは **1216/6631/523382/4901/387105** のまま。S5は175軌道。未foldの証明を公式solved数へ先取りしない。
+
+標準11×11空盤、二石root `{49,60}`・`{59,60}`、S2 `{59,60}`、class2・class4の勝敗は引き続き **UNKNOWN**。
+
+再現スクリプト: [audit_cost67c_certificates_third_independent_20261115.mjs](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost67c_certificates_third_independent_20261115.mjs)  
+監査結果: [cost67c-third-independent-certificate-audit-20261115.json](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/cost67c-third-independent-certificate-audit-20261115.json)
 
 ## 2026-11-15: cost-73f sterile sweep — class-4 frontier行の初sweep・73 REFUTED-D10・frontier不変1216
 
