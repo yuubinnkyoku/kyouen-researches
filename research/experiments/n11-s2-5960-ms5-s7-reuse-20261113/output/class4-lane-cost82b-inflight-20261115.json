@@ -2,7 +2,7 @@
  "schema": "n11-class4-lane-cost82b-inflight-20261115-v1",
  "title": "n11 class4-lane cost-82b sweep in flight: cheapest unswept S6 child of the best class-4 blocker-candidate S5 (three open class-4 parents, c1=0,c2=0,c4=3)",
  "date": "2026-11-15",
- "status": "in-flight",
+ "status": "completed",
  "claimed_by": "long-term class4 frontier lane (cost-73f/74f/70d/70e-audit session series)",
  "s5": "00000000020000003800000080000000",
  "s6_child": "00000000020000003800000090000000",
@@ -119,22 +119,127 @@
   "pilot_control": "per-batch d6 pilot on the fixed control board, require loss=false nodes=3402, else abort",
   "batches_planned": 11,
   "batch_bits": {
-   "batch1": [0, 2, 3, 4, 5, 6, 7, 8],
-   "batch2": [10, 11, 12, 14, 15, 16, 17, 18],
-   "batch3": [19, 21, 29, 30, 32, 33, 34, 35],
-   "batch4": [36, 38, 39, 41, 42, 43, 44, 45],
-   "batch5": [46, 49, 50, 53, 54, 66, 67, 69],
-   "batch6": [70, 71, 72, 74, 75, 76, 77, 78],
-   "batch7": [79, 80, 81, 82, 83, 84, 85, 86],
-   "batch8": [87, 88, 90, 91, 92, 93, 94, 95],
-   "batch9": [99, 101, 102, 103, 104, 105, 106, 108],
-   "batch10": [109, 110, 112, 113, 114, 115, 116, 117],
-   "batch11": [118, 120]
+   "batch1": [
+    0,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "batch2": [
+    10,
+    11,
+    12,
+    14,
+    15,
+    16,
+    17,
+    18
+   ],
+   "batch3": [
+    19,
+    21,
+    29,
+    30,
+    32,
+    33,
+    34,
+    35
+   ],
+   "batch4": [
+    36,
+    38,
+    39,
+    41,
+    42,
+    43,
+    44,
+    45
+   ],
+   "batch5": [
+    46,
+    49,
+    50,
+    53,
+    54,
+    66,
+    67,
+    69
+   ],
+   "batch6": [
+    70,
+    71,
+    72,
+    74,
+    75,
+    76,
+    77,
+    78
+   ],
+   "batch7": [
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86
+   ],
+   "batch8": [
+    87,
+    88,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95
+   ],
+   "batch9": [
+    99,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    108
+   ],
+   "batch10": [
+    109,
+    110,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117
+   ],
+   "batch11": [
+    118,
+    120
+   ]
   },
   "raw_batch_naming": "class4-lane-cost82b-raw-batch{N}-20261115.jsonl (JSONL: {bit,loss,nodes,capped,terminalStoneRange,ms} plus the pilot control line)"
  },
  "verdict_semantics": "loss=true => WIN7-within-depth-10 candidate (certificate rebuild target); loss=false && !capped => REFUTED-D10, no first-player win within depth 10 (NOT a LOSS proof); capped => proves nothing either way",
  "unknown_note": "The standard 11x11 empty board, both two-stone roots {49,60}/{59,60}, S2 {59,60}, class 1, class 2 and class 4 all remain UNKNOWN.",
  "unknown_status": "11x11 empty board: UNKNOWN. A completed sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 7-stone roots of this child.",
- "coordination_note": "latest main fetched immediately before this claim push; the parallel cost-65l receipts fold (bits 21/48) is IN FLIGHT on head 1227 and the parallel cost-70e sweep has 5 WIN7-D10 roots awaiting certificate extraction; neither touches this child's rows or parents (65l's parents are the second coverable class-2 S5 and a class-4 S5 distinct from all three parents here; 70e's parents are both class 2), so the sweep arithmetic is independent of both; if this child yields WIN7-D10 roots, their fold must re-assert the then-current canonical head and follow the collision protocol (cost-72b/cost-76a/cost-63f precedents): verify the arithmetic, do not overwrite; if a parallel execution claims this child first, stand down and audit instead"
+ "coordination_note": "latest main fetched immediately before this claim push; the parallel cost-65l receipts fold (bits 21/48) is IN FLIGHT on head 1227 and the parallel cost-70e sweep has 5 WIN7-D10 roots awaiting certificate extraction; neither touches this child's rows or parents (65l's parents are the second coverable class-2 S5 and a class-4 S5 distinct from all three parents here; 70e's parents are both class 2), so the sweep arithmetic is independent of both; if this child yields WIN7-D10 roots, their fold must re-assert the then-current canonical head and follow the collision protocol (cost-72b/cost-76a/cost-63f precedents): verify the arithmetic, do not overwrite; if a parallel execution claims this child first, stand down and audit instead",
+ "result": {
+  "win7_d10_bits": [],
+  "refuted_d10": 82,
+  "capped": 0,
+  "candidate_nodes": 68922913,
+  "pilots": "11/11 batch invocations loss=false nodes=3402 (built-in abort control)",
+  "terminal_range": "all 82 candidates [13,17] (depth-10 bounds, single distinct range)",
+  "determinism_rerun": "batch5 (bits 46,49,50,53,54,66,67,69) re-run in a separate process: verdicts/nodes/capped/terminal node-exact identical (class4-lane-cost82b-v16-determinism-rerun-20261115.jsonl)",
+  "v15_cross_engine": "pilot 5949 loss=false; 3 heaviest REFUTED anchors bits 118/7/2 re-run with the v15 engine: all loss=false agreement (nodes 5,796,536/11,259,120/9,262,419; class4-lane-cost82b-v15-crosscheck-20261115.jsonl)",
+  "verdict": "STERILE: no WIN7-D10 candidate, no fold material, frontier unchanged at head 1227/6620/522561/4890/386284"
+ },
+ "completed_note": "sweep completed 2026-11-15 in-session (11 batches, ~150s wall); raw JSONLs pushed with this update; independent audit to follow in the same push"
 }
