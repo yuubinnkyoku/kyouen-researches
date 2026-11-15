@@ -42,7 +42,8 @@ INDET は honest negative として記録し不在主張とはしない。
 ## 較正（着手時に実施済み・全 PASS）
 
 - sat3 ≡ sat2 DIMACS バイト一致 11 対照:
-  (3,11,5)/(3,12,5)/(4,34,4)/(4,20,5)/(5,23,5)/(5,24,5 rowY=0)/(4,11,8)/
+  (3,11,5)/(3,12,5)/(4,34,4)/(4,20,5)/(5,23,5)/(5,24,5 rowY=0)/(4,11
+,8)/
   (5,22,6 rowY=2) lex 付き・(4,20,5 rowY=3)/lex=H・(6,32,4 lex=H)。
   さらに repo meta 一致: (6,31,4) lex=H,V で vars/clauses/curves 完全一致。
 - kissat 既知閾値コントロール 8 点中 7 点再現
@@ -58,3 +59,20 @@ INDET は honest negative として記録し不在主張とはしない。
 有限機械検証まで。各幅の SAT はその幅の欠損極大安全配置の存在証明
 （witness 有限証拠）。INDET は cap 到達であり不在を意味しない。
 上界（K0068 parity / K0318 substitution）は不変。
+
+## 結果（第1・2バッチ・2026-11-15）
+
+- **(6,4) m=32..38 全 SAT**（def-mode・17石単一欠損・conflicts 782/445/265/332/744/487/932・
+  全て 40s 未満）— sat2 census OOM 壁を sat3 streaming census で越えた初の (6,4) 記録。
+  m=32..36 は環境リセット前後で conflicts bit-exact。
+- **(6,4) m=39/40**: def-mode 120s INDET（6,072/5,410）を **rowY=0 分割で SAT 解決**
+  （2,573/58.3s・5,864/172.9s）。**witness 帯 m=6..40・M_{6,4} ∈ [41, 1113]**。
+- **(5,4) m=37 SAT**（rowY=0・8,351/75.7s）・**m=38 SAT**（def・8,626/107.9s・再実行 bit-exact）・
+  **m=39 SAT**（rowY=1・21,147/197.1s・rowY=0 260s INDET 64,737 honest negative）。
+  **witness 帯 m=5..39・M_{5,4} ∈ [40, 567]**。
+- **(4,4) m=35 def-mode 260s INDET / 317,151 conflicts** — (4,4) 初の cap 抵抗幅
+  （honest negative・不在主張ではない）。構成的延伸（既知ベース m≤34・全オフセット）は失敗。
+- 上界は不変（K0068 T_4/T_5/T_6）。前線: (6,4) m=41・(5,4) m=40・(4,4) m=35 rowY 分割・
+  (5,5) m=24+・(4,5) m=21 rowY 分割。
+- 記録上の訂正: 前レーン lex "H,V,HVHV" は実効 [H,V]（SIG={H,V,HV} で HVHV がフィルタ）。
+  判定不変。詳細は README 冒頭の符号化の注記と K0833。

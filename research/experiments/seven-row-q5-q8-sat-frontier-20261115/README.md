@@ -60,6 +60,27 @@ INDET は honest negative として記録し不在主張とはしない。
   いずれも1幅も延びない（`output/freecol-extensions/frontier-freecol-probe.json`）。
   (7,6) m=28 SAT witness のみ3幅…ではなく1幅（m=29 まで）延伸した。
 
+## 結果（第2バッチ・900s cap・2026-11-15T00:10Z 時点）
+
+- **(7,5) 7×33 SAT**（rowY=0 分割・**655,159 conflicts・835.7s・cap 900**）:
+  **27石単一欠損 witness rows [3,4,4,4,4,4,4]**・js+py 2系統検証 PASS
+  （`output/q5-m33-rowY0-900s/records.jsonl`）。第1バッチの全4クラス 250s INDET
+  （345k..399k・クラス間抵抗ほぼ一様）は **cap 900s 延長で SAT に解決**。
+  **(7,5) witness 帯は m=5..33 に延伸。M_{7,5} ∈ [34, 1142]**。
+  m=34 への空列延伸は cell (33,0) が未遮断（not-maximal）で失敗
+  （`output/freecol-m34/q5-m33-freecol.json`）。前線は 7×34。
+- **(7,6) 7×30 rowY=3: cap 900s INDET・1,569,306 conflicts**（280s/929,785 の
+  3.2倍 cap でも未解決・honest negative・不在主張ではない）
+  （`output/q6-m30-rowY3-900s/records.jsonl`）。
+- 運用: 900s 実行は setsid nohup バックグラウンド2並列（1コマンド wall ~290s
+  上限の回避）。cap 到達時の conflicts は実行速度依存で変動しうる（bit-exact
+  主張は cap 内完了インスタンスのみ）。生 kissat ログ（両インスタンス）は
+  環境復旧後の後続バッチで追記する（records.jsonl の cnf_md5・conflicts が正本）。
+- **第3系統検証 (tsVerify)**: `output/ts-verify-batch2-crosscheck.json` — 純TS完全整数演算・
+  repo コード不使用・census不使用で (7,5) m=32/33・(7,6) m=27/28/29 の全5 witness が
+  safe+maximal+行欠損 PASS（**triple-verified**）。空列延伸の負記録（m=34 cell (33,0)・
+  m=30 cell (29,3)）も同一セルで再現・制御5件 PASS。
+
 ## スコープ
 
 有限機械検証（sat3 census は sat2 と9対照バイト一致済み、kissat 正確性）まで。

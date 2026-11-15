@@ -54,11 +54,41 @@ m=26..939 の各幅の UNSAT はその幅の「ある行が q-1 石以下の極�
 m ≥ 940 の持続性（K0318 substitution U=940・proved）と合わせ
 **M_{8,10} = 26 が exact に決着**する。
 
-## 現在の結果 (2026-11-14 claim 時点)
+## 現在の結果 (2026-11-15 01:20Z 更新)
 
-- `output/q10-band/records.jsonl`: 幅 60, 80, 100, 150, 200, 300, 500,
-  700, 939 の 9 幅 UNSAT（difficulty probe と同一パイプライン・
-  `raw-logs/` に per-width kissat log + meta）。
-- 残り: m=26..59（難所帯）・60..939 の未掃引幅。
+### 帯掃引 (def-mode 直接・kissat 4.0.4)
 
-（難所帯 m=26..59 の掃引結果・帯内 SAT の有無は追記される）
+- **43..59 全幅 UNSAT** (cap 250/110/90 秒: 43-45 は 250s cap・
+  4.21M-5.00M conflicts・46-50 は 104-147s・51-59 は 55-82s・60 は 54s)。
+  m=46-50 は env reset 後の再実行で bit-exact 再現 (決定性確認)。
+- **難所帯 honest negatives (def-mode)**: m=27/28 (270s・3.45M/3.61M),
+  m=29 (250s・6.01M), m=31 (240s・5.87M), m=41 (250s・6.44M),
+  m=42 (250s・6.31M)。いずれも INDET であり non-absence ではない。
+- **サンプル UNSAT**: 60, 80, 100, 150, 200, 300, 500, 700, 939
+  (m=939 42s/116,323 conflicts; 上限側は U_{8,10}=940 で閉じている)。
+
+### class-split 突破 — m=40, 41, 42 完全決着 (UNSAT)
+
+def-mode OR 実例が抵抗した幅を **sat3.js class-split** (row-mirror 正準欠損行
+クラス分割・six-row-q8-m19-class-split-20261114/scripts/sat3.js md5
+d03f908e 再利用 + classfast.js = genfast3 に S.buildCensus を patch する
+wrapper・byte-identity 確認済み) で分解すると全部解けた:
+
+- **各幅 135/135 クラス UNSAT・0 INDET・0 SAT** → def-mode UNSAT 確定。
+- m=41: 難クラス {3} 1,798,460 conflicts (def-mode 250s INDET 6.44M
+  superseded)。詳細 output/q10-band/class-splits/classes-8x41q10.jsonl。
+- m=42: 難クラス {3} 1.79M / {3,4} 1.76M。
+- m=40: 難クラス {3} 2.22M / {3,4} 1.70M。
+- runner: scripts/classsweep.sh (resume-safe・per-class log + JSONL)。
+
+これで **witness-free 連続帯は 40..138** (61..138 は並走
+eight-row-q10-band-closure-26-939-20261115 が掃引済み・53..60 は
+クロスレーン conflicts bit-exact 検証済み)。残る難所は **26..39**
+(26: 4符号化 INDET・27-31: プローブ INDET・30, 32..39: 未掃引または
+def INDET → class-split 予定)。
+
+### 進行中 (IN FLIGHT)
+
+- m=32..39 を classsweep.sh で掃引中 (cap 100-280s)。
+- 並走レーンが 139..500 (laneA) / 514..938 (laneB) を掃引中。
+- 全幅閉包後: M_{8,10} = 26 exact 決着として K item + CSV exact-threshold 行化予定。

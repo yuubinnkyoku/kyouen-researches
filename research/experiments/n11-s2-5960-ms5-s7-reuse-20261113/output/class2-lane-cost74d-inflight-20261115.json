@@ -2,7 +2,7 @@
   "schema": "n11-class2-lane-cost74d-inflight-20261115-v1",
   "title": "n11 class2-lane cost-74d sweep in flight (claimed by a long-term lane execution)",
   "date": "2026-11-15",
-  "status": "raw-sweep-complete-receipts-folded-certificates-in-publication",
+  "status": "completed",
   "claimed_by": "long-term class2 lane",
   "s5": "00000000000000809102000000000000",
   "s6_child": "00000000000000809102020000000000",
@@ -121,7 +121,7 @@
     "batch_size": 8,
     "pilot_control": "d6 loss=false nodes=3402 required per batch"
   },
-  "plan": "Raw sweep, 15-receipt frontier fold (head 1179; the parallel cost-72b fold then rebased on it, current chain head 1188) and the D4-duplicate scan are complete. All 15 WIN7 bits are now certificate-backed: bit118 published earlier; bit12/bit66/bit68 pushed byte-exact this session (3/19 of the new-file push sequence); the remaining 16 files (bit69/80/92/100 singles + 2-part bit2/28/102/109/112/116) are extracted and double-verified locally, with per-file bytes/md5/sha256/git-blob-sha recorded in class2-lane-cost74d-certificate-hash-inventory-20261115.json because an execution-environment outage blocks their push; bit91 is certificate-backed by D4-equivalent cost72b bit85 and its own local extraction passed double verification as a positive duplicate crosscheck (body intentionally not pushed, repo precedent cost61d bit22 = cost71b bit1). Next: complete the 16 remaining pushes (order 4/19..19/19 in the interim record), push manifest class2-lane-cost74d-win7-certificates-20261115.json, then set this claim to completed.",
+  "plan": "All steps complete. Raw sweep, 15-receipt frontier fold (head 1179; the parallel cost-72b fold then rebased on it, chain head 1188), D4-duplicate scan, and the full certificate publication are done: 15/15 WIN7 bits certified (14 certificate bodies published on main + bit91 backed by the D4-identical cost72b bit85 certificate), 20/20 remote files git-blob-sha verified, and the final manifest class2-lane-cost74d-win7-certificates-20261115.json pushed after the environment outage was resolved. Every pending certificate was re-extracted from scratch in the recovered environment with the repo-verbatim pipeline and landed byte-identical to the pre-outage interim inventory (md5/sha256/git blob sha equal; bit102 single-process rerun identical 74,238 rows / 29,752,097 nodes; bit80 exact extraction nodes 13,115,852 recorded in the manifest). Double independent verification re-run on all 15 certificates: bigint 15/15 PASS, Bareiss --consumed-out 15/15 PASS. This claim is closed; the second cost-74 child 00000000000000809142000000000000 remains unclaimed.",
   "naming_note": "cost-74d disambiguates from class2-lane-cost74 (sterile sweep, session 10), class4-lane cost-74/74b/74c bands",
   "demand_semantics_note": "per-class demand counts each open parent S5 once per set class bit (class2-lane-cost69g-demand-reconciliation-20261115.json); distinct open parents = 2 here",
   "interpretation_guard": "REFUTED-D10 is absence of a winner win within depth 10, not a refutation of the child; loss=true rows are WIN7-within-depth search candidates needing certificate extraction before any frontier claim; solved counts measure manifest coverage, not the game-theoretic value of any position",
@@ -165,7 +165,6 @@
   },
   "certificates": {
     "record_inflight": "class2-lane-cost74d-certificate-hash-inventory-20261115.json",
-    "record_final_pending": "class2-lane-cost74d-win7-certificates-20261115.json",
     "directory": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74d-certificates/",
     "win7_bits_certified_or_backed": [
       2,
@@ -184,14 +183,18 @@
       116,
       118
     ],
-    "files_on_main_blob_sha_verified": 4,
-    "push_sequence_done": "3/19 (bit12 1/19, bit66 2/19, bit68 3/19; bit118 was published in a prior session outside this sequence)",
-    "double_verification": "verify_win7_certificate_bigint_independent.mjs 14/14 PASS (13 new bits + bit91) and verify_bit7_win7_cert.ts 14/14 PASS with --consumed-out (consumed-unique == strategy rows every bit); union missing/extra 0/0, terminal stone range [13,17], rows sorted-unique, fbt_drops 0, all loser first moves extracted ok",
+    "files_on_main_blob_sha_verified": 20,
+    "push_sequence_done": "19/19 (bit12 1/19 through bit116 19/19; bit118 published in a prior session outside this sequence; all 20 remote files blob-sha verified byte-exact)",
+    "double_verification": "re-run in the recovery session on all 15 certificates after byte-identical re-extraction: verify_win7_certificate_bigint_independent.mjs 15/15 PASS and verify_bit7_win7_cert.ts 15/15 PASS with --consumed-out (consumed-unique == strategy rows every bit); union missing/extra 0/0, terminal stone range [13,17], rows sorted-unique, fbt_drops 0, all loser first moves extracted ok",
     "d4_duplicate": "bit91 == cost72b bit85 (canonical 00000000000080811202000020000000, transform index 5, (x,y)->(x,10-y)); the other 14 roots are new D4 orbits, cross-checked against the 444 canonical WIN7 roots of the published 63+cost72b manifests (closes the D4-duplicate-check gap in the self sweep audit)",
     "rows_band_total_including_bit91_bit118": 723630,
     "rows_new_13_bits": 654961,
-    "incident_note": "the file_system execution environment became unavailable (Koyeb 503/DNS) from 2026-11-14T22:54Z, blocking the remaining 16 pushes; each completed push program hit the 16 MiB sandbox memory limit AFTER push_files executed (repo precedent: cost-72b incident_note) but landed byte-exact (remote git blob sha + size verified via the GitHub contents API)",
-    "date": "2026-11-15"
+    "incident_note": "the file_system execution environment became unavailable (Koyeb 503/DNS) from 2026-11-14T22:54Z, blocking the remaining 16 pushes; each completed push program hit the 16 MiB sandbox memory limit AFTER push_files executed (repo precedent: cost-72b incident_note) but landed byte-exact (remote git blob sha + size verified via the GitHub contents API). RESOLVED in the recovery session: environment restored, all pending bits re-extracted byte-identical vs the interim inventory, pushes 4/19..19/19 completed one commit per file, final manifest pushed; 20/20 remote files blob-exact",
+    "date": "2026-11-15",
+    "record_final_published": "class2-lane-cost74d-win7-certificates-20261115.json",
+    "manifest_push_commit": "5d37fab7bf33fd44baa24eb390bb4127181c440a",
+    "manifest_git_blob_sha": "0f6e7860796b999c6ab3b41d43931881085ad09f",
+    "completed": "2026-11-15"
   },
   "frontier_fold": {
     "record": "class-frontier-cost74d-receipts-recompute-20261115.json",

@@ -120,6 +120,8 @@ jobs:
           assert generated["incremental_parent_hex"] == saved["incremental_parent_hex"]
           print("N11_S2_INCREMENTAL_WIN7_REUSE_MATCH")
           PY
+      - name: Audit cost74d WIN7 against published LOSS7 sources
+        run: node research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost74d_win_loss_conflicts_20261115.mjs
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python tools/knowledge/build.py
@@ -320,3 +322,5 @@ jobs:
 # Refresh generated views for K0783 cost72 bit111 partial WIN7 receipt and class2 S5 local frontier delta (2026-11-15).
 # Refresh generated views for K0828 q=2w pair-sum-unique height boundary (2026-11-15).
 # Refresh generated views for K0783 cost65e bit7 WIN7 certificate and two new S6 parent lifts (2026-11-15).
+# Refresh generated views for K0783 cost74d certificate publication completion (2026-11-15).
+# Refresh generated views for K0783 cost74d WIN/LOSS conflict audit (2026-11-15).
