@@ -1,0 +1,22 @@
+{
+  "experiment": "f-n-17-20261115 (n=18 extension)",
+  "date": "2026-11-15",
+  "n": 18,
+  "F": 1567245,
+  "D": 168420,
+  "C": 1398825,
+  "quads_scanned_systemB": 450710001,
+  "verification": {
+    "rule": "C_18 + D_18 == F_18(systemB)",
+    "left": 1567245,
+    "right": 1567245,
+    "exact": true
+  },
+  "environment": "Vibe sandbox (run_typescript), bash unavailable, single-call budget",
+  "finite_observation": {
+    "C_over_n5": 0.7403,
+    "F_over_n6": 0.04608,
+    "D_over_F": 0.1075,
+    "note": "monotone trends continue; no asymptotic claim"
+  }
+}
