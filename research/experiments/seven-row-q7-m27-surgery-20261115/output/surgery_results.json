@@ -91,5 +91,17 @@
     "|R| >= 4",
     "fresh configurations away from the seed (m=27 class instances INDET at caps)"
   ],
-  "defectNote": "first ad-hoc (1,3)/(3,3) runs had a dead-gate effOf defect (all candidates rejected by an empty covA; invalid grounds, vacuous CTL); superseded by this verified consolidated machine whose gates demonstrably fire (shared 1430 / safety 90540 / okZ 550320) with targeted direct verification"
+  "defectNote": "first ad-hoc (1,3)/(3,3) runs had a dead-gate effOf defect (all candidates rejected by an empty covA; invalid grounds, vacuous CTL); superseded by this verified consolidated machine whose gates demonstrably fire (shared 1430 / safety 90540 / okZ 550320) with targeted direct verification",
+  "twoAddThreeRemove": {
+    "space": "|R|=3 (10,660), |A|=2, A subset of seed-empty cells; formal candidates 10,660 x 3,203 = 34,103,980",
+    "r3onCaseSplit": {
+      "r3onGte2": {"R": 370, "reason": "T-blocking impossible for |A|=2 (line eff <= 3; proved)"},
+      "r3onEq1": {"R": 3150, "forced": "both additions on line y=3 (line eff4 needs a_on=2)", "rejected": "every R has an Ux cell uncoverable by any line pair (exact per-u wholesale)", "ctlLine": "23/23"},
+      "r3onEq0": {"wholesaleRejected": 115, "hardIntersectionRejected": 4320, "zOkZRejected": 14948, "zScandEmpty": 55638, "pairsChecked": 0}
+    },
+    "verdict": "0 witnesses in the complete (2,3) surgery space",
+    "ctl": {"coverage": "36/36", "zOkZ": "30/30", "line": "23/23"},
+    "determinism": "rejection counts bit-exact across two independent code paths (measurement run vs final run)",
+    "ctlDefectNote": "the first CTL helper implementation had line-as-[a,b,c,0] circle-evaluation offset (missing 7-stone lines) and over-admitting coverage checks; triage confirmed both were CTL-side defects, the machine held"
+  }
 }
