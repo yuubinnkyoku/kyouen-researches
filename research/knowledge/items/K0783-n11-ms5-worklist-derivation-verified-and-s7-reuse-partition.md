@@ -1472,9 +1472,9 @@ REFUTED-D10はLOSS証明ではない。解消計数はmanifest被覆の前進で
 
 詳細: [sweep log](../../log/2026-11-15-n11-class4-lane-cost84-sterile-sweep.md)、[sweep audit](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class4-lane-cost84-sweep-audit-20261115.json)、[completed claim](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class4-lane-cost84-inflight-20261115.json)。
 
-## 2026-11-15: cost-70e WIN7証明書5件の第三独立監査 — 5/5 PASS・fold待ち
+## 2026-11-15: cost-70e WIN7証明書5件の検証器レベル独立監査 — 5/5 PASS・fold待ち
 
-第二coverable class-2 target S5 `00000000000000801202000000200000` のcost-70 child `00000000000000801202000000200004`（edge cost 70・需要 c1=0,c2=2,c4=0）のsweepが得た5 WIN7-D10 roots（bits 0,8,24,66,79）の証明書5件（各2 part）を、公開partの行境界連結・CRLF→LF正規化の上で**BigInt 3x3余因子**と**Number Bareiss 4x4**の二独立検証器により再検証した。**5/5 PASS**（sub-roots 60/63/56/49/52・union missing/extra 0/0・terminal [13,17]・consumed union == 証明書行集合 0/0）。合計**236,784行・8,564,174 bytes・280 sub-roots・31 distinct parent-lift orbits**、5 rootのD4 canonicalはdistinct、child orbitは全証明書に含まれる。
+第二coverable class-2 target S5 `00000000000000801202000000200000` のcost-70 child `00000000000000801202000000200004`（edge cost 70・需要 c1=0,c2=2,c4=0）のsweepが得た5 WIN7-D10 roots（bits 0,8,24,66,79）の証明書5件（各2 part）を、公開partの行境界連結・CRLF→LF正規化の上で**BigInt 3x3余因子**と**Number Bareiss 4x4**の二独立検証器により再検証した。**5/5 PASS**（sub-roots 60/63/56/49/52・union missing/extra 0/0・terminal [13,17]・consumed union == 証明書行集合 0/0）。合計**236,784行・8,564,174 bytes・280 sub-roots・31 distinct parent-lift orbits**、5 rootのD4 canonicalはdistinct、child orbitは全証明書に含まれる。上記の並走第三独立監査（DAG replay版）とは別実装の検証器レベル監査であり、両監査の数値は一致する。
 
 本監査はfoldの代わりではない。canonical head 1227/6620/522561/4890/386284は不変で、childは両開親の未解決S6行のまま。cost-70eのreceipt foldはfold時点のcanonical headへのrebaseが必須。REFUTED-D10はLOSS証明ではなく、WIN7証明書は個別7石rootの深さ10以内の先手勝ちのみを証明する。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class1・class2・class4は引き続き **UNKNOWN**。
 
