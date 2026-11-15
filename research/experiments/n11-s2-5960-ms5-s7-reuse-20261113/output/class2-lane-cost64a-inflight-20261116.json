@@ -2,7 +2,7 @@
   "schema": "n11-class2-lane-cost64a-inflight-20261116-v1",
   "title": "n11 class2-lane cost-64a sweep in flight: second coverable class-2 candidate S5 cost-64 child",
   "date": "2026-11-16",
-  "status": "in-flight",
+  "status": "completed (sweep: sterile, 0 WIN7-D10)",
   "claimed_by": "n11 search continuation session (round 25)",
   "s5": "00000000000000801202000040000000",
   "s6_child": "00000000000000801282000040000000",
@@ -185,5 +185,19 @@
   },
   "verdict_semantics": "loss=true => WIN7-within-depth-10 candidate (certificate rebuild target); loss=false && !capped => REFUTED-D10, no first-player win within depth 10 (NOT a LOSS proof); capped => proves nothing either way",
   "unknown_status": "11x11 empty board: UNKNOWN. A completed sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 7-stone roots of this child.",
-  "coordination_note": "latest main fetched immediately before this claim push; the primary second target S5 has only REFUTED-D10 rows left (depth-10 receipt limit) and is not touched here."
+  "coordination_note": "latest main fetched immediately before this claim push; the primary second target S5 has only REFUTED-D10 rows left (depth-10 receipt limit) and is not touched here.",
+  "sweep_result": {
+    "status": "completed",
+    "candidates": 64,
+    "win7_d10": 0,
+    "refuted_d10": 64,
+    "capped": 0,
+    "candidate_nodes": 38157151,
+    "pilots": "3402 x8",
+    "determinism_rerun": "node-exact (batch5)",
+    "v15_crosscheck": "not run (no WIN roots to cross-check; REFUTED-D10-only child)",
+    "terminal_ranges": "[13,17] only",
+    "interpretation": "all 64 legal candidates are REFUTED-D10: no first-player win within depth 10 from any 7-stone root of this child. REFUTED-D10 is not a LOSS proof; the child cannot be closed by depth-10 WIN7 receipts.",
+    "note": "No certificates, no fold: a sterile child contributes nothing to the receipt chain. The second candidate S5 keeps its 10 remaining rows."
+  }
 }
