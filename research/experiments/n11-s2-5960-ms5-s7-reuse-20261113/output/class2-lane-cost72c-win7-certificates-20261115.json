@@ -1,0 +1,26 @@
+@@F:pub/class2-lane-cost72c-bit1-bigint-verify-20261115.json
+{
+  "verdict": "WIN7 certificate independently verified",
+  "method": "BigInt 3x3 cofactor expansion of the exact lifted determinant [x²+y²,x,y,1]; no floating point",
+  "root_hex": "00000000000000801202000000220002",
+  "root_stones": 7,
+  "root_safe": true,
+  "root_mobility": 61,
+  "strategy_rows": 54904,
+  "rows_sorted_unique": true,
+  "subroots_passed": 61,
+  "consumed_winner_rows": 54904,
+  "union_missing": 0,
+  "union_extra": 0,
+  "visited_states_across_subroots": 111372,
+  "winner_states": 71504,
+  "loser_states": 21982,
+  "loser_reply_edges": 100407,
+  "terminal_count": 17886,
+  "terminal_range": [
+    13,
+    17
+  ],
+  "forbidden_triple_cache_entries": 27111,
+  "legal_state_cache_entries": 84011
+}
