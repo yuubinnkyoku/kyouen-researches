@@ -126,3 +126,17 @@ resume 後の最初の skip で SATFOUND=1 が立って掃引が即終了する*
 1回の誤終了 SWEEP_BATCH_DONE satfound=1 を観測して発見)。
 v2 では skip 時の SAT 判定を同一 key の record に限定した。幸い
 本掃引 (sweep35) では対照が INDET だったため一度も誤終了していない。
+
+
+## 追記 (2026-11-15 hardening: resume skip の key 前衝突防止)
+
+skip 経路の key 照合 `grep "\"key\":\"$1\""` (done_key) は部分一致のため
+`c1k2p1` が `c1k2p10`..`c1k2p17` の record 行にも一致しうる
+(prefix-collision)。records 破損で p1 の record のみ失われた場合、
+p1 が p1x 行で**誤 skip され被覆の完全性が黙って損なわれる**。
+照合 pattern を `"key":"$1",` / `"key":"$key",` (閉じ quote + comma
+anchor) に強化した。全 record 行は `{"key":"...","w":...` 形式で
+key 値の直後に comma が必ず続くため既存 record と完全互換
+(判定結果は不変)。姉妹掃引 four-row-q5-m21-class-split-20261115 の
+sweepp0x2.sh (`b1` vs `b10..b19`)・sweepp0gpin.sh (`g1` vs `g10..`)
+にも同種の衝突があり、同日修正済み。

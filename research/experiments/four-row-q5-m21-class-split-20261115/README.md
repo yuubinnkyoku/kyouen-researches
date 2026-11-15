@@ -306,3 +306,20 @@ scripts + sweepp0x2.sh + output/records.jsonl を作業 dir に展開し
 `nohup setsid bash -c 'bash sweepp0x2.sh c0k3p1; bash sweepp0x2.sh c0k3p0' > output/sweepp0x2_run.log 2>&1 < /dev/null &`
 (b2..b7 は records で skip され b8 以降から再開。起動前にプロセス走査で
 二重起動を防止のこと。records への修復は driver 停止中のみ)。
+
+
+## 追記: driver v2 hardening — resume skip の key 前衝突防止 (2026-11-15)
+
+resume skip の key 照合 `grep "\"key\":\"$key\""` は部分一致のため、
+`c0k3p0b1` が `c0k3p0b10`..`c0k3p0b19` の record 行にも一致しうる
+(prefix-collision)。逐次実行では通常 b1 が先に record されるため顕在化
+しないが、records 破損で b1 の record のみ失われた場合、b1 が b1x 行で
+**誤 skip され被覆の完全性が黙って損なわれる** (b2 record 消失事故と
+同種の破損経路で現実化しうる)。
+
+v2.1 として照合 pattern を `"key":"$key",` (閉じ quote + comma anchor)
+に強化した。全 record 行は `{"key":"...","w":...` 形式で key 値の直後に
+comma が必ず続くため、既存 record との互換性は完全 (判定結果は不変)。
+対象: sweepp0x2.sh (3箇所) / sweepp0gpin.sh (3箇所・`g1` vs `g10..`
+の同種衝突) および sweep35.sh ($1 版 1箇所 + $key 版 1箇所・
+`c1k2p1` vs `c1k2p10..p17` — 併せて同日修正)。
