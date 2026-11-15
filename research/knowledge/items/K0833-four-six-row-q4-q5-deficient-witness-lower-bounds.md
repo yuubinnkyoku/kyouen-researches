@@ -30,7 +30,8 @@ artifacts:
   note: "34 records m=5..36 all SAT dual-verified: 石数8..14（m=14以降 cap 14=w(q-1)-1）, m=25..33 は lex なし符号化でも SAT（witness としては等価に有効）, m=34 19.1s/2,623, m=35 72.6s/8,521, m=36 104.9s/10,644; m>=37 は sat2.js census CNF生成 OOM（rc=1 行は枝刈り済み）"
 - path: research/experiments/four-six-row-q4-q5-witness-search-20261114/output/q4-w6-def-search/records.jsonl
   role: data
-  note: "26 records m=6..31 all SAT dual-verified: m=23以降単一欠損17石, m=31 4.1s/131 conflicts, 全インスタンス <7s; m>=32 census OOM"
+  note: "26 records m=6..31 al
+l SAT dual-verified: m=23以降単一欠損17石, m=31 4.1s/131 conflicts, 全インスタンス <7s; m>=32 census OOM"
 - path: research/experiments/four-six-row-q4-q5-witness-search-20261114/output/q5-w4-def-search/records.jsonl
   role: data
   note: "16 records: m=5..19 all SAT dual-verified (m=12以降単一欠損15石, m=19 14.2s/262,918), m=20 INDET 210s/3,296,257（未解決前線・不在主張ではない）; genfast.js PAIRTHRESH=12 は (4,5) で不正確なため sat2.js 全三つ組census を使用"
@@ -52,7 +53,8 @@ artifacts:
 - path: research/experiments/four-six-row-q4-q5-band-extension-20261115/output/q4-w6-rowY0/records.jsonl
   role: data
   note: "(6,4) m=39/40 rowY=0 固定分割 SAT (2,573/58.3s, 5,864/172.9s, 17石) - def-mode INDET 前線を解決し witness 帯は m=6..40 に"
-- path: research/experiments/four-six-row-q4-q5-band-extension-20261115/output/q4-w5/records.jsonl
+- pa
+th: research/experiments/four-six-row-q4-q5-band-extension-20261115/output/q4-w5/records.jsonl
   role: data
   note: "(5,4) m=38 def-mode SAT 107.9s/8,626 (14石単一欠損) - 環境リセット前後で conflicts bit-exact"
 - path: research/experiments/four-six-row-q4-q5-band-extension-20261115/output/q4-w5-rowY0/records.jsonl
@@ -67,6 +69,9 @@ artifacts:
 - path: research/experiments/four-six-row-q4-q5-band-extension-20261115/output/q4-w4/records.jsonl
   role: data
   note: "(4,4) m=35 def-mode INDET 260s/317,151 conflicts (lex=H,V,HV) - (4,4) 初の cap 抵抗幅の honest negative（不在主張ではない）"
+- path: research/experiments/four-six-row-q4-q5-band-extension-20261115/output/ts-verify-band-extension.json
+  role: data
+  note: "第3系統（純TS/BigInt, verify_independent.ts verbatim・フラグメント照合18/18）で band-extension 全12 witness ((6,4) m=32..40, (5,4) m=37..39) が全て PASS safe+maximal+row-deficient・単一欠損; 陰性対照（石移動→unsafe検出）・陽性対照（前レーン3系統検証済み (6,31,4) witness の再PASS）つき — 3系統検証"
 scope: "有限機械検証: kissat 4.0.4（公式静的バイナリ）による SAT 判定は符号化の完全性（def-mode = 行欠損極大安全配置の存在と同値, K0810）と lexer の正しさまで; 構成的延伸 witness は sat.js verifyConfig + Python Fraction の2系統; 前線5幅はさらに第3系統; 各ファミリーの記載幅のみ（未実施幅は不在主張ではない）"
 evidence: "完全符号化 SAT インスタンス（sat2.js def-mode）+ 全 witness 2系統検証（jsVerify/pyVerify 全 records true）+ 前線5幅の第3系統検証（ts-verify-cross-family.json）+ 較正（確定閾値6件再現・(4,4) m=4..25 は環境リセット前後で conflicts bit-exact 一致）+ 構成的延伸（(4,4) m=29,31,33,34: cap 到達 witness の純粋空列追加/シフトを verifyConfig が直接検証, ソルバ不使用）"
 ---
@@ -83,7 +88,8 @@ evidence: "完全符号化 SAT インスタンス（sat2.js def-mode）+ 全 wit
    104.9s/10,644 conflicts。**M_{5,4} ∈ [37, 567]**。
    m≥37 は sat2.js census CNF生成 OOM（符号化上の壁・不在主張ではない）。
 3. **(6,4)**: **m=6..31 の全幅で存在**（m=23以降17石）。**M_{6,4} ∈ [32, 1113]**。
-   m≥32 census OOM。
+   m≥32 census O
+OM。
 4. **(4,5)**: **m=5..19 の全幅で存在**（m=12以降15石）。**M_{4,5} ∈ [20, 140]**
    （上界 K0318 U_{4,5}=140）。前線 m=20 は 210s INDET / 3,296,257 conflicts
    — 本レーン最難の未掃引インスタンス。
@@ -132,7 +138,8 @@ K0810 sat2.js verbatim（q≤w でも (4,5) は genfast.js PAIRTHRESH=12 が
 3. 上記で (4,5) の records.jsonl は 21 行（m=5..20 SAT 16幅 + m=20 INDET
    負記録 + m=21 rowY 負記録5件）、m=20 witness は
    ts-verify-cross-family.json で第3系統検証済み。
-## 追記 (2026-11-15 band-extension レーン: sat3 OOM壁越えと rowY 分割)
+## 追記 (2026-11-15 band-extension レーン: sat3 OOM壁越えと r
+owY 分割)
 
 1. **(6,4): witness 帯 m=6..40 に延伸・M_{6,4} ∈ [41, 1113]**。sat3.js streaming
    census（sat2 と11対照で DIMACS バイト一致・repo (6,31,4) meta は --lex=H,V
@@ -161,3 +168,10 @@ K0810 sat2.js verbatim（q≤w でも (4,5) は genfast.js PAIRTHRESH=12 が
    m=24 の 120s INDET は既知 honest negative と整合。
 6. 上界は不変（K0068 T_4=237・T_5=567・T_6=1113）。INDET は cap 到達であり
    不在を意味しない。
+7. **第3系統検証（追記）**: band-extension の全12 witness について、純TS/BigInt
+   検証（verify_independent.ts を verbatim・sandbox 実行・フラグメント照合18/18）
+   が全て PASS（safe: maxLine=maxCirc=3, maximal: uncovered=0, 単一欠損）。
+   陰性対照（(6,32) witness の1石移動 → maxCirc=4 unsafe を検出）・陽性対照
+   （前レーンで3系統検証済みの (6,31,4) witness が再PASS）。これにより
+   band-extension の全 witness は js+py+TS の3系統検証済み
+   （ts-verify-band-extension.json）。
