@@ -1,8 +1,8 @@
 {
- "schema": "n11-class2-lane-cost71c-inflight-20261115-v1",
+ "schema": "n11-class2-lane-cost71c-inflight-20261115-v2",
  "title": "n11 class2-lane cost-71c sweep in flight: cheapest unswept cost-71 child of the second coverable class-2 target S5 at head 1233 (both parents class 2, c1=0,c2=2,c4=0)",
  "date": "2026-11-15",
- "status": "in-flight",
+ "status": "completed (sweep + WIN7 certificates + independent audit; receipts fold pending)",
  "claimed_by": "long-term class2 lane (11x11 weak-solve long-term lane session)",
  "s5": "00000000000000801202000000200000",
  "s6_child": "00000000000000801202000080200000",
@@ -203,5 +203,63 @@
  "verdict_semantics": "loss=true => WIN7-within-depth-10 candidate (certificate rebuild target); loss=false && !capped => REFUTED-D10, no first-player win within depth 10 (NOT a LOSS proof); capped => proves nothing either way",
  "unknown_note": "The standard 11x11 empty board, both two-stone roots {49,60}/{59,60}, S2 {59,60}, class 1, class 2 and class 4 all remain UNKNOWN.",
  "unknown_status": "11x11 empty board: UNKNOWN. A completed sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 7-stone roots of this child.",
- "coordination_note": "latest main fetched immediately before this claim push (HEAD 2c5e2ff0); the canonical chain head is 1233/6614/522131/4884/385854; the parallel cost-70f/70g sweeps and the cost-65l certificate extraction/fold are in flight on other sessions and untouched here; when any of them lands, any cost-71c fold must re-fetch latest main, re-assert the canonical head and rebase (cost-78a+69h merge precedent); this claim reserves the cost-71c sweep only; if a parallel execution claims this child first, the collision protocol (cost-72b/cost-76a/cost-63f fold precedents) applies: verify the arithmetic, do not overwrite"
+ "coordination_note": "latest main fetched immediately before this claim push (HEAD 2c5e2ff0); the canonical chain head is 1233/6614/522131/4884/385854; the parallel cost-70f/70g sweeps and the cost-65l certificate extraction/fold are in flight on other sessions and untouched here; when any of them lands, any cost-71c fold must re-fetch latest main, re-assert the canonical head and rebase (cost-78a+69h merge precedent); this claim reserves the cost-71c sweep only; if a parallel execution claims this child first, the collision protocol (cost-72b/cost-76a/cost-63f fold precedents) applies: verify the arithmetic, do not overwrite",
+ "results": {
+  "sweep": {
+   "win7_d10_bits": [
+    24,
+    112
+   ],
+   "win7_d10_nodes": {
+    "24": 457250,
+    "112": 3985676
+   },
+   "refuted_d10": 69,
+   "capped": 0,
+   "candidate_nodes": 94128613,
+   "batches_completed": 9,
+   "pilots_3402": 9,
+   "determinism_rerun_batch5_node_exact": true,
+   "v15_crosscheck": {
+    "win_bits_loss_true": {
+     "24": 2695796,
+     "112": 14334967
+    },
+    "refuted_anchors_loss_false": {
+     "75": 2127796,
+     "113": 12082176,
+     "116": 20048518
+    },
+    "pilots_5949": 1
+   },
+   "raw_artifacts": [
+    "class2-lane-cost71c-raw-batch1-20261115.jsonl .. batch9 (9 files, pushed during the sweep)",
+    "class2-lane-cost71c-v16-determinism-rerun-20261115.jsonl",
+    "class2-lane-cost71c-v15-crosscheck-20261115.jsonl"
+   ]
+  },
+  "win7_certificates": {
+   "bit24": {
+    "root_hex": "00000000000000801202000081200000",
+    "repo_path": "class2-lane-cost71c-certificates/bit24-root-00000000000000801202000081200000.cert",
+    "repo_blob_sha": "8d9b4459f489b3224c64b4f6bbd37b8ff2dd23e3",
+    "strategy_rows": 22196,
+    "loser_first_moves": 47
+   },
+   "bit112": {
+    "root_hex": "00010000000000801202000080200000",
+    "repo_paths": [
+     "class2-lane-cost71c-certificates/bit112-root-00010000000000801202000080200000.cert.part1of2",
+     "class2-lane-cost71c-certificates/bit112-root-00010000000000801202000080200000.cert.part2of2"
+    ],
+    "join_md5_equals_whole_md5": "e38d80cfd89ccc8e48264c36a9e7701a5",
+    "strategy_rows": 60406,
+    "loser_first_moves": 56
+   }
+  },
+  "independent_verification": "verify_win7_certificate_bigint_independent.mjs 2/2 PASS (subroots 47/56, union 0/0, terminal [13,17]) and verify_cost71c_win7_bareiss_independent.py 2/2 PASS (full loser-reply expansion, strategy-union closure, union 0/0)",
+  "sweep_audit": "class2-lane-cost71c-sweep-audit-20261115.json (independent re-derivation: 71 candidates bit-exact, aggregate, batch plan, det rerun, v15, D4 duplicate scan 126 published roots, head-1233 CSV cross-checks)",
+  "certificate_manifest": "class2-lane-cost71c-win7-certificates-20261115.json"
+ },
+ "fold_pending_note": "the receipts fold for bits 24/112 is pending: re-fetch latest main, re-assert the canonical chain head 1233/6614/522131/4884/385854 (class-frontier-cost70e-receipts-recompute-20261115.json, blob a0171d4bb839aeb813d231c7d879d6a89452359f), and rebase per the cost-78a+69h merge precedent if the parallel cost-65l / cost-70f / cost-70g folds land first"
 }
