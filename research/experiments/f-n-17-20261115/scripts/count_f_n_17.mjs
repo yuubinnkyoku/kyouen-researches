@@ -41,6 +41,6 @@ for(let d=c+1;d<n*n;d++){const r3x=px[d]-xa,r3y=py[d]-ya,r3w=pw[d]-wa;
 if(r1x*(r2y*r3w-r2w*r3y)-r1y*(r2x*r3w-r2w*r3x)+r1w*(r2x*r3y-r2y*r3x)===0)F++;}}}}
 return F;}
 const out={};
-for(const n of[12,13,17]){const C=circles(n),D=lines(n);out[n]={C,D,F:total(n)};}
-out.check_n17=(out[17].C+out[17].D===out[17].F);
+for(const n of[12,13,17,18]){const C=circles(n),D=lines(n);out[n]={C,D,F:total(n)};}
+out.check=(out[17].C+out[17].D===out[17].F)&&(out[18].C+out[18].D===out[18].F);
 console.log(JSON.stringify(out));
