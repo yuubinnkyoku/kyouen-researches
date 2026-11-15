@@ -27,7 +27,7 @@ def audit_parameter(w: int, m: int, q: int) -> dict:
         return mex
 
     checked = 0
-    max_grundy = 0
+    observed = set()
     for c in product(range(m + 1), repeat=w):
         if sum(x > 0 for x in c) > r:
             continue
@@ -35,7 +35,7 @@ def audit_parameter(w: int, m: int, q: int) -> dict:
         predicted = (r * m - sum(c)) % 2
         assert actual == predicted, (w, m, q, c, actual, predicted)
         checked += 1
-        max_grundy = max(max_grundy, actual)
+        observed.add(actual)
 
     return {
         "w": w,
@@ -43,8 +43,7 @@ def audit_parameter(w: int, m: int, q: int) -> dict:
         "q": q,
         "r": r,
         "safe_states": checked,
-        "max_grundy": max_grundy,
-        "recursive_states": grundy.cache_info().currsize,
+        "observed_grundy_values": sorted(observed),
     }
 
 
@@ -55,6 +54,12 @@ def main() -> None:
         for m in range(1, 5)
         for q in range(1, w + 3)
     ]
+    aggregate = {}
+    observed = set()
+    for row in rows:
+        key = (row["w"], row["m"])
+        aggregate[key] = aggregate.get(key, 0) + row["safe_states"]
+        observed.update(row["observed_grundy_values"])
     result = {
         "schema": "vertical-fiber-t1-fixed-length-grundy-audit-v1",
         "method": "direct recursive mex on every safe occupancy vector",
@@ -66,8 +71,12 @@ def main() -> None:
         "parameter_count": len(rows),
         "safe_state_parameter_checks": sum(row["safe_states"] for row in rows),
         "mismatch_count": 0,
-        "observed_grundy_values": sorted({0, 1}),
-        "per_parameter": rows,
+        "observed_grundy_values": sorted(observed),
+        "aggregate_by_w_m": [
+            {"w": w, "m": m, "safe_states_across_q": aggregate[(w, m)]}
+            for w in range(1, 6)
+            for m in range(1, 5)
+        ],
     }
     out = Path(__file__).resolve().parents[1] / "output" / "audit.json"
     out.parent.mkdir(parents=True, exist_ok=True)
