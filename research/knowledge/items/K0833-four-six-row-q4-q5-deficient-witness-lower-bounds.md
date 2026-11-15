@@ -1,6 +1,6 @@
 ---
 id: K0833
-title: "4〜6行 q=4,5 行欠損witness帯 — (4,4) m=4..34, (5,4) m=5..39, (6,4) m=6..46, (4,5) m=5..20, (5,5) m=5..25 全幅SAT; M_{4,4}>=35, M_{5,4}>=40, M_{6,4}>=47, M_{4,5}>=21, M_{5,5}>=26; sat3 OOM壁越えと rowY 分割・2クラス被覆で帯延伸"
+title: "4〜6行 q=4,5 行欠損witness帯 — (4,4) m=4..34, (5,4) m=5..39, (6,4) m=6..46, (4,5) m=5..20, (5,5) m=5..26 全幅SAT; M_{4,4}>=35, M_{5,4}>=40, M_{6,4}>=47, M_{4,5}>=21, M_{5,5}>=27; sat3 OOM壁越えと rowY 分割・2クラス被覆で帯延伸"
 kind: proposition
 status: computed
 topics: [rectangles, maximal-safe]
@@ -152,6 +152,12 @@ l SAT dual-verified: m=23以降単一欠損17石, m=31 4.1s/131 conflicts, 全�
 - path: research/experiments/anchored-window-sat-frontiers-20261115/output/w4q5-m21-windows.jsonl
   role: data
   note: "75/75 unique jobs all UNSAT。jobs-w4q5-m21.jsonとjobs-w4q5-m21-b.jsonの合併とのタグ完全一致を再監査"
+- path: research/experiments/five-row-q5-m26-extend-20261115/README.md
+  role: proof
+  note: "(5,5) m=26 class {0} SAT 1,631,556 conflicts で witness 帯 m=5..26 に延伸・M_{5,5} ∈ [27,336]; m=27 honest negatives (c0/c0-deep/c0k3/c0k3p0 全 INDET)・1/2石 surgery 完全列挙負 (4,651,200 編集)・witness jump sd=30"
+- path: research/experiments/five-row-q5-m26-extend-20261115/output/records.jsonl
+  role: data
+  note: "12 records: 較正 5×25 bit-exact・5×26 SAT witness 2系統検証 (19石 rows [3,4,4,4,4])・m=27 各 INDET (session1+再生成)・埋め込み幾何 (1セル未遮断)・surgery 列挙 (sd<=1 4,446 + rm2系 2,321,154 × 2 seeds = 0 witness)・jump sd=30"
 
 scope: "有限機械検証: kissat 4.0.4（公式静的バイナリ）による SAT 判定は符号化の完全性（def-mode = 行欠損極大安全配置の存在と同値, K0810）と lexer の正しさまで; 構成的延伸 witness は sat.js verifyConfig + Python Fraction の2系統; 前線5幅はさらに第3系統; 各ファミリーの記載幅のみ（未実施幅は不在主張ではない）"
 evidence: "完全符号化 SAT インスタンス（sat2.js def-mode）+ 全 witness 2系統検証（jsVerify/pyVerify 全 records true）+ 前線5幅の第3系統検証（ts-verify-cross-family.json）+ 較正（確定閾値6件再現・(4,4) m=4..25 は環境リセット前後で conflicts bit-exact 一致）+ 構成的延伸（(4,4) m=29,31,33,34: cap 到達 witness の純粋空列追加/シフトを verifyConfig が直接検証, ソルバ不使用）"
@@ -397,3 +403,35 @@ owY 分割)
    SATFOUND=0 リセットだけでは不十分だったことを両実験 README に記録。
    併せて conflicts 抽出 grep の CR 混入行 binary 判定 (conflicts null 化) を
    grep -a で修正済み。
+
+## 追記 (2026-11-15 高速レーン: (5,5) m=26 SAT で witness 帯 m=5..26 に延伸・m=27 honest negatives・1/2石 surgery 完全列挙負)
+
+1. **(5,5) m=26 class {0} SAT — witness 帯 m=5..26・M_{5,5} ∈ [27,336]**
+   (five-row-q5-m26-extend-20261115): kissat 4.0.4 SAT **1,631,556 conflicts / 199.80s**
+   (sat3.js class {0}・vars 41,030 / clauses 142,643・CNF md5 60e71cfd2f1620cfa9b4070f259c1572)。
+   witness 19石 rows [3,4,4,4,4](単一欠損 w(q-1)-1 石)。
+   **2系統検証**: sat3.js decode → sat.js verifyConfig(census 不使用)と自作
+   verify_witness_indep.py(純Python Fraction・census-free・ロジック独立)の両方で
+   safety(111空セル全遮断)・maximality(全1石追加で遮断発火)・deficiency ok。
+   環境リセット2回を跨いで較正(5×25 SAT 35,972)・本 SAT の conflicts とも
+   bit-exact 再現(3回目の再生)。
+2. **m=27 honest negatives(全 INDET・不在主張ではない)**: class {0} plain は
+   session1 250s INDET 1,777,156・再生成 log も 250s cap で kissat が SIGTERM を捕捉し
+   **1,924,144 conflicts**(process-time 243.76s・壁時計カットは同 trajectory で
+   bit-exact ではない)。deep 実行は 817.04s で **≥5,424,572 conflicts** でも未決着
+   (raw log は環境ハードリセットで喪失・進捗行値のみ記録)。class {0} krow=0:3 は
+   session1 240s INDET 1,804,438・再生成 **1,829,756**(SIGTERM 237.22s)。
+   krow=0:3 minpos=0 は 200s INDET 1,644,162(raw log 保存)。残りの minpos p=1..13
+   (sound H-split bound ⌊(m-1)/2⌋=13)は class-split 掃引レーンへ委譲。
+   **前線は m=27 のまま・上界 336(K0318 代入)は不変。**
+3. **1石・2石 surgery 完全列挙(負・局所)**: 欠損性(|S| ≤ 19 = w(q-1)-1)により
+   add-only(a≥1 → |S|≥20)と rm1+add2(|S|=20)は**解析的除外**。sd≤1(4,446 候補)と
+   rm2/rm2add1/rm2add2(2,321,154 候補・枝刈り付き完全列挙・決定的 12s/実行)を
+   seed(m=26 witness・kissat seed@off0)とその H 鏡像(seed@off1・本質的に異なる
+   第2配置)の両方で完全列挙 → **0 witness**(2,325,600 候補×2 seed = 4,651,200 編集)。
+   m=27 witness(があれば)は両 seed から**3石移動以上**離れている。
+4. **witness jump 幾何**: m=26 witness の 5×27 埋め込みは offX=0 → (26,0)・
+   offX=1 → (0,0) の**1セルのみ未遮断**((5,6) m=23 レーンと同型の「1石足りない」
+   構造)。sd(m26, m25+off1) = 30・sd(m26, m24+off1) = 30(≥15石移動)。隣接幅間の
+   witness jump が大きい観察が (4,4)(4,5)(5,6)(5,7) に続き (5,5) でも確認され、
+   5 ファミリーで構造的証拠が揃った。
