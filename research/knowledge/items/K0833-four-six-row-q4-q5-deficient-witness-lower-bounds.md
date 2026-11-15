@@ -1,6 +1,6 @@
 ---
 id: K0833
-title: "4〜6行 q=4,5 行欠損witness帯 — (4,4) m=4..34, (5,4) m=5..39, (6,4) m=6..40, (4,5) m=5..20, (5,5) m=5..23 全幅SAT; M_{4,4}>=35, M_{5,4}>=40, M_{6,4}>=41, M_{4,5}>=21, M_{5,5}>=24; sat3 OOM壁越えと rowY 分割で帯延伸"
+title: "4〜6行 q=4,5 行欠損witness帯 — (4,4) m=4..34, (5,4) m=5..39, (6,4) m=6..41, (4,5) m=5..20, (5,5) m=5..25 全幅SAT; M_{4,4}>=35, M_{5,4}>=40, M_{6,4}>=42, M_{4,5}>=21, M_{5,5}>=26; sat3 OOM壁越えと rowY 分割・2クラス被覆で帯延伸"
 kind: proposition
 status: computed
 topics: [rectangles, maximal-safe]
@@ -68,6 +68,30 @@ l SAT dual-verified: m=23以降単一欠損17石, m=31 4.1s/131 conflicts, 全�
 - path: research/experiments/four-six-row-q4-q5-band-extension-20261115/output/q4-w4/records.jsonl
   role: data
   note: "(4,4) m=35 def-mode INDET 260s/317,151 conflicts (lex=H,V,HV) - (4,4) 初の cap 抵抗幅の honest negative（不在主張ではない）"
+- path: research/experiments/four-row-q4-q5-frontier-20261115/README.md
+  role: proof
+  note: "frontier レーン（takeover・2026-11-15）: w=4 rowfixed 2クラス被覆補題（rowY=0/1 ∧ lex=H の2 UNSAT で witness-free が確定する行保存性論法・証明つき）・較正・結果"
+- path: research/experiments/four-row-q4-q5-frontier-20261115/output/q4-w6-rowY0/records.jsonl
+  role: data
+  note: "(6,4) m=41 rowY=0 固定分割 SAT 245.2s/8,226 conflicts (17石) - witness 帯 m=6..41, M_{6,4} ∈ [42, 1113]"
+- path: research/experiments/four-row-q4-q5-frontier-20261115/output/q4-w5-rowY1/records.jsonl
+  role: data
+  note: "(5,4) m=40 rowY=1 600s INDET 191,445 conflicts の honest negative（不在主張ではない）"
+- path: research/experiments/four-row-q4-q5-frontier-20261115/output/q4-w4-rowY0H/records.jsonl
+  role: data
+  note: "(4,4) m=35 lex=H rowY=0 600s INDET 324,870 conflicts（2クラス被覆の前半・不在主張ではない）"
+- path: research/experiments/four-row-q4-q5-frontier-20261115/output/q4-w4-rowY1H/records.jsonl
+  role: data
+  note: "(4,4) m=35 lex=H rowY=1 600s INDET 230,642 conflicts（2クラス被覆の後半・不在主張ではない）"
+- path: research/experiments/four-row-q4-q5-frontier-20261115/output/q5-w4-rowY0H/records.jsonl
+  role: data
+  note: "(4,5) m=21 lex=H rowY=0 600s INDET 6,924,496 conflicts（2クラス被覆の前半・不在主張ではない）"
+- path: research/experiments/four-row-q4-q5-frontier-20261115/output/q5-w4-rowY1H/records.jsonl
+  role: data
+  note: "(4,5) m=21 lex=H rowY=1 600s INDET 7,286,846 conflicts（2クラス被覆の後半・不在主張ではない）"
+- path: research/experiments/four-row-q4-q5-frontier-20261115/output/ts-verify-frontier.json
+  role: data
+  note: "(6,4) m=41 witness の第3系統検証 PASS・陽性対照（m=40 witness 再PASS）・陰性対照（1石移動で maxCirc=4 unsafe+10 uncovered を検出）"
 - path: research/experiments/four-six-row-q4-q5-band-extension-20261115/output/ts-verify-band-extension.json
   role: data
   note: "第3系統（純TS/BigInt, verify_independent.ts verbatim・フラグメント照合18/18）で band-extension 全12 witness ((6,4) m=32..40, (5,4) m=37..39) が全て PASS safe+maximal+row-deficient・単一欠損; 陰性対照（石移動→unsafe検出）・陽性対照（前レーン3系統検証済み (6,31,4) witness の再PASS）つき — 3系統検証"
@@ -175,3 +199,30 @@ owY 分割)
    （前レーンで3系統検証済みの (6,31,4) witness が再PASS）。これにより
    band-extension の全 witness は js+py+TS の3系統検証済み
    （ts-verify-band-extension.json）。
+
+## 追記 (2026-11-15 four-row-q4-q5-frontier-20261115: takeover と 2クラス被覆掃引)
+
+1. **(6,4) m=41 SAT・3系統検証 PASS**（rowY=0 固定分割・245.2s・8,226 conflicts・
+   17石単一欠損 rows [2,3,3,3,3,3]）。**witness 帯は m=6..41 に拡大、
+   M_{6,4} ∈ [42, 1113]**。第3系統は純TS/BigInt verify_independent.ts verbatim
+   （sandbox 実行・陽性対照 m=40 witness 再PASS・陰性対照 1石移動 unsafe 検出つき、
+   ts-verify-frontier.json）。前線は m=42。
+2. **w=4 rowfixed 2クラス被覆補題**（frontier レーン README に証明つき）:
+   lex=H 単独の rowfixed(0)/rowfixed(1) の2 UNSAT で固定幅の witness-free が確定する
+   （H は行を保存し、V は行 0↔3・1↔2 を送る。full-lex (H,V,HV) では V/HV が
+   行を動かすため2クラスでは被覆しない）。これにより前レーンの rowY=0..3
+   full-lex INDET と違い、2クラス掃引が absence-capable になった。
+3. **(4,4) m=35**: 2クラス掃引（lex=H rowY=0/1）ともに 600s INDET
+   （324,870 / 230,642 conflicts）。honest negative・不在主張ではない。
+   M_{4,4} ∈ [35, 237] は不変。
+4. **(4,5) m=21**: 2クラス掃引ともに 600s INDET（6,924,496 / 7,286,846 conflicts・
+   合計 ~14.2M）。前レーン rowY=3 full-lex 2.7M@200s を大きく超える探索でも
+   未解決。honest negative。M_{4,5} ∈ [21, 140] は不変。
+5. **(5,4) m=40**: rowY=1 600s INDET 191,445 conflicts（m=39 rowY=1 SAT 21,147 の
+   ~9倍の探索）。honest negative。M_{5,4} ∈ [40, 567] は不変・前線は m=40 のまま。
+6. **(5,5) の表記更新**（class-split レーンの成果を反映・CSV と surgery レーン
+   README の cross-lane convergence 記録に基づく）: witness 帯 m=5..25、
+   M_{5,5} ∈ [26, 336]。
+7. 環境運用: wrapper (lean5.sh) が cap 到達時に環境側で殺されても kissat 本体は
+   cap まで完走し kissat.txt に最終 stats が残るため、記録を復元して records.jsonl
+   に note 付きで保存した（conflicts は決定的値）。実効 CPU ~1コアのため逐次実行。

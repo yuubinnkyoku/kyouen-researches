@@ -1,0 +1,349 @@
+{
+ "schema": "n11-class2-lane-cost70e-raw-sweep-audit-20261115-v1",
+ "date": "2026-11-15",
+ "independent_method": "Python standard library; exact Bareiss integer determinants; D4 canonicalization and legal-candidate enumeration helpers reused verbatim from the published cost-70d audit script (same session series, published on main); raw-record parsing, aggregate re-derivation, batch-bit cross-check, WIN-root scan, one-stone-deletion re-derivation and CSV cross-checks written fresh for cost-70e; no repository engine/solver/cache, no floating point",
+ "target": {
+  "s5_hex": "00000000000000801202000000200000",
+  "s6_child_hex": "00000000000000801202000000200004",
+  "edge_cost": 70,
+  "legal_candidate_count": 70,
+  "demand": {
+   "c1": 0,
+   "c2": 2,
+   "c4": 0
+  }
+ },
+ "source_claim": {
+  "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70e-inflight-20261115.json",
+  "chain_head_at_claim": "1227/6620/522561/4890/386284 (class-frontier-cost69h-receipts-recompute-20261115.json, git blob sha d25eb3a00f73cf9ca34fc2816d28045c1e23f3ae; the cost-69h fold rebased on the parallel cost-78a head 1225, resolving the 1219-baseline head fork; re-asserted on latest main immediately before this push)"
+ },
+ "geometry": {
+  "child_stones": 6,
+  "child_stone_bits": [
+   2,
+   21,
+   49,
+   57,
+   60,
+   71
+  ],
+  "child_safe": true,
+  "independent_legal_candidate_count": 70,
+  "candidate_bits_exact_match": true,
+  "lift_note": "one-stone deletions re-derived independently: stone 2 deletion reproduces the second coverable class-2 target S5 00000000000000801202000000200000 bit-exact (31 rows / 2334 at head 1227) and stone 21 deletion D4-canonicalizes to the open class-2 S5 00000000000000003800000008400000 (49 rows / 3625 at head 1227); the remaining four deletions (stones 49/57/60/71) are closed rows absent from the head-1227 ranking CSV; per-class demand c1=0,c2=2,c4=0 matches the published head-1227 top-candidates CSV row for this child"
+ },
+ "batches": [
+  {
+   "batch": 1,
+   "file": "class2-lane-cost70e-raw-batch1-20261115.jsonl",
+   "candidate_bits": [
+    0,
+    1,
+    3,
+    4,
+    6,
+    8,
+    9,
+    10
+   ],
+   "pilot_nodes": 3402,
+   "nodes": 14229004
+  },
+  {
+   "batch": 2,
+   "file": "class2-lane-cost70e-raw-batch2-20261115.jsonl",
+   "candidate_bits": [
+    13,
+    14,
+    15,
+    18,
+    22,
+    24,
+    25,
+    28
+   ],
+   "pilot_nodes": 3402,
+   "nodes": 8755377
+  },
+  {
+   "batch": 3,
+   "file": "class2-lane-cost70e-raw-batch3-20261115.jsonl",
+   "candidate_bits": [
+    29,
+    31,
+    32,
+    33,
+    35,
+    39,
+    40,
+    42
+   ],
+   "pilot_nodes": 3402,
+   "nodes": 4149120
+  },
+  {
+   "batch": 4,
+   "file": "class2-lane-cost70e-raw-batch4-20261115.jsonl",
+   "candidate_bits": [
+    43,
+    44,
+    51,
+    52,
+    55,
+    56,
+    59,
+    61
+   ],
+   "pilot_nodes": 3402,
+   "nodes": 6463655
+  },
+  {
+   "batch": 5,
+   "file": "class2-lane-cost70e-raw-batch5-20261115.jsonl",
+   "candidate_bits": [
+    64,
+    65,
+    66,
+    67,
+    72,
+    73,
+    74,
+    75
+   ],
+   "pilot_nodes": 3402,
+   "nodes": 12985213
+  },
+  {
+   "batch": 6,
+   "file": "class2-lane-cost70e-raw-batch6-20261115.jsonl",
+   "candidate_bits": [
+    76,
+    77,
+    78,
+    79,
+    84,
+    85,
+    86,
+    87
+   ],
+   "pilot_nodes": 3402,
+   "nodes": 11804548
+  },
+  {
+   "batch": 7,
+   "file": "class2-lane-cost70e-raw-batch7-20261115.jsonl",
+   "candidate_bits": [
+    88,
+    89,
+    90,
+    91,
+    92,
+    94,
+    95,
+    96
+   ],
+   "pilot_nodes": 3402,
+   "nodes": 5166551
+  },
+  {
+   "batch": 8,
+   "file": "class2-lane-cost70e-raw-batch8-20261115.jsonl",
+   "candidate_bits": [
+    97,
+    99,
+    100,
+    102,
+    105,
+    106,
+    108,
+    110
+   ],
+   "pilot_nodes": 3402,
+   "nodes": 8288539
+  },
+  {
+   "batch": 9,
+   "file": "class2-lane-cost70e-raw-batch9-20261115.jsonl",
+   "candidate_bits": [
+    111,
+    113,
+    114,
+    116,
+    117,
+    118
+   ],
+   "pilot_nodes": 3402,
+   "nodes": 11814921
+  }
+ ],
+ "aggregate": {
+  "candidates": 70,
+  "win7_d10_bits": [
+   0,
+   8,
+   24,
+   66,
+   79
+  ],
+  "win7_d10_nodes": {
+   "0": 4596984,
+   "8": 1333433,
+   "24": 2197162,
+   "66": 1763979,
+   "79": 1765453
+  },
+  "refuted_d10": 65,
+  "refuted_d10_bits": [
+   1,
+   3,
+   4,
+   6,
+   9,
+   10,
+   13,
+   14,
+   15,
+   18,
+   22,
+   25,
+   28,
+   29,
+   31,
+   32,
+   33,
+   35,
+   39,
+   40,
+   42,
+   43,
+   44,
+   51,
+   52,
+   55,
+   56,
+   59,
+   61,
+   64,
+   65,
+   67,
+   72,
+   73,
+   74,
+   75,
+   76,
+   77,
+   78,
+   84,
+   85,
+   86,
+   87,
+   88,
+   89,
+   90,
+   91,
+   92,
+   94,
+   95,
+   96,
+   97,
+   99,
+   100,
+   102,
+   105,
+   106,
+   108,
+   110,
+   111,
+   113,
+   114,
+   116,
+   117,
+   118
+  ],
+  "capped": 0,
+  "capped_bits": [],
+  "candidate_nodes": 83656928,
+  "pilots": 9
+ },
+ "win_roots": {
+  "0": {
+   "root_hex": "00000000000000801202000000200005",
+   "d4_canonical_hex": "00000000000000801202000000200005",
+   "root_mobility": 60
+  },
+  "8": {
+   "root_hex": "00000000000000801202000000200104",
+   "d4_canonical_hex": "00000000000000801202000000200104",
+   "root_mobility": 63
+  },
+  "24": {
+   "root_hex": "00000000000000801202000001200004",
+   "d4_canonical_hex": "00000000000000801202000001200004",
+   "root_mobility": 56
+  },
+  "66": {
+   "root_hex": "00000000000000841202000000200004",
+   "d4_canonical_hex": "00000000000000841202000000200004",
+   "root_mobility": 49
+  },
+  "79": {
+   "root_hex": "00000000000080801202000000200004",
+   "d4_canonical_hex": "00000000000080801202000000200004",
+   "root_mobility": 52
+  }
+ },
+ "d4_duplicate_scan": {
+  "roots_compared": 145,
+  "manifest_files_scanned": 58,
+  "duplicates": 0
+ },
+ "crosschecks": {
+  "v16_determinism_rerun": {
+   "file": "class2-lane-cost70e-v16-determinism-rerun-20261115.jsonl",
+   "batch_rerun": 5,
+   "identical_ignoring_ms": true
+  },
+  "v15_cross_engine": {
+   "file": "class2-lane-cost70e-v15-crosscheck-20261115.jsonl",
+   "win_bits_agree": true,
+   "refuted_anchors": [
+    75,
+    86,
+    113
+   ],
+   "anchor_nodes": {
+    "75": 6262124,
+    "86": 6426703,
+    "113": 13605564
+   },
+   "pilots_5949": 2
+  }
+ },
+ "checks": {
+  "all_bits_exactly_once": true,
+  "batch_bits_match_claim_engine_plan": true,
+  "all_terminal_ranges_within_depth10_bounds": true,
+  "distinct_terminal_ranges": [
+   [
+    13,
+    17
+   ]
+  ],
+  "pilot_3402_per_batch": true,
+  "determinism_rerun_node_exact": true,
+  "v15_cross_engine_agreement": true,
+  "independent_enumeration_matches_claim": true,
+  "one_stone_deletion_d4_canonicalization_verified": true,
+  "parent_rows_match_head1227_ranking_csv": true,
+  "demand_matches_head1227_top_candidates_csv": true,
+  "win_root_d4_orbits_distinct": true,
+  "win_root_d4_orbits_new_vs_published_manifests": true
+ },
+ "proof_boundary": {
+  "raw_sweep_rederivation": "closed by this audit (aggregate, batch bits, verdicts, nodes re-derived from the raw JSONLs)",
+  "certificate_extraction": "pending: 5 WIN7-D10 roots (bits 0/8/24/66/79) are fold material candidates, but folding requires published, independently verified WIN7 certificates for these roots first",
+  "fold_material": "none usable yet: certificates not published at audit time; the canonical chain frontier stays at 1227/6620/522561/4890/386284",
+  "interpretation_of_refuted_d10": "all 65 non-WIN candidates are REFUTED-D10: no first-player win within depth 10 from those seven-stone roots. This is NOT a LOSS proof for those roots and does not close the child S6 row"
+ },
+ "interpretation": "win7_d10_bits is [0, 8, 24, 66, 79]: the sweep is NOT sterile. The v16 determinism rerun (batch 5) is node-exact and the v15 cross-engine agrees on all 5 WIN bits (loss=true) and the 3 REFUTED anchors (bits 113/75/86, loss=false). The 5 WIN roots are new (no D4 duplicate vs the 145 published certificate-manifest canonical roots scanned), so certificate extraction for these 5 roots would add new fold material; until verified certificates are published, no fold may be run and the frontier is unchanged. REFUTED-D10 is NOT a LOSS proof. The standard 11x11 empty board, both two-stone roots {49,60}/{59,60}, S2 {59,60}, class 1, class 2 and class 4 all remain UNKNOWN."
+}
