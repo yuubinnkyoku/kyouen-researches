@@ -1,5 +1,5 @@
 {
- "schema": "n11-class2-lane-cost69h-inflight-20261115-v3",
+ "schema": "n11-class2-lane-cost69h-inflight-20261115-v4",
  "title": "n11 class2-lane cost-69h sweep in flight: cheapest remaining unswept child of the second coverable class-2 target S5 (dual class-2 demand c2=2)",
  "date": "2026-11-15",
  "status": "completed",
@@ -252,8 +252,9 @@
    58,
    96
   ],
-  "chain_head_before": "1219/6628/523173/4898/386896",
-  "chain_head_after": "1221/6626/523035/4896/386758",
+  "chain_head_before": "1225/6622/522699/4892/386422",
+  "pre_rebase_chain_head_after": "1221/6626/523035/4896/386758",
+  "chain_head_after": "1227/6620/522561/4890/386284",
   "total_marginal": 10,
   "total_marginal_in_manifest": 2,
   "child_orbit_closed_by_bit": 58,
@@ -262,16 +263,17 @@
    "class2_parent2": "47 rows / 3455"
   },
   "parent2_extra_cross_cover": "bit96 certificate covers 00000000000000a09002000001000000 (a second remaining row of class2_parent2), so parent2 loses two rows: the child and this row",
-  "head_json": "class-frontier-cost69h-receipts-recompute-20261115.json (blob 1238cf8853595fbfabcc90856ec13502e7bbf6f6, 9151 bytes)",
-  "ranking_csv": "class-frontier-s5-ranking-after-cost69h-receipts-20261115.csv (blob 9898802912aeb040394bd0a8a53dcaa101e0bc76)",
-  "top_candidates_csv": "class-frontier-top-candidates-s6-after-cost69h-receipts-20261115.csv (blob 0bcdd84e0e83157876676a5fbf85ec79493307d0)",
-  "fold_script": "recompute_frontier_cost69h_receipts_20261115.py (blob 45f4134137435af7c67871d09918c0f1d4d89654)",
+  "rebased_on": "the parallel cost-78a receipts fold (head 1219 -> 1225, class-frontier-cost78a-receipts-recompute-20261115.json, blob 3938bb1668c7dfb80049cdac45f8dee50514c064) landed after this claim was first retired with the 1219-baseline fold record (v3, pre-rebase head 1221/6626/523035/4896/386758); this v4 rebases the same 2 receipts on the newer 1225 canonical head; both folds share the 1219 baseline and the rebased set equality s_1227 == s_1219 UNION covers(5 cost-78a roots) UNION covers(2 cost-69h roots) resolves the temporary head fork; the v3 fold record remains valid as a historical control and is re-derived by the rebased fold script",
+  "head_json": "class-frontier-cost69h-receipts-recompute-20261115.json (schema v2; blob d25eb3a00f73cf9ca34fc2816d28045c1e23f3ae, 11295 bytes; supersedes the pre-rebase head JSON blob 1238cf8853595fbfabcc90856ec13502e7bbf6f6)",
+  "ranking_csv": "class-frontier-s5-ranking-after-cost69h-receipts-20261115.csv (blob 4eeca6155838169050804eb31a34db4a0681ec05)",
+  "top_candidates_csv": "class-frontier-top-candidates-s6-after-cost69h-receipts-20261115.csv (blob 0f9905fcb9190cbbda3b6581466b50373308fe60)",
+  "fold_script": "recompute_frontier_cost69h_receipts_20261115.py (rebased; accepts and re-derives the 78a head geometrically, folds on 1225, dual claim control v3-historical / v4-rebased)",
   "output_blob_shas": {
-   "head_json": "1238cf8853595fbfabcc90856ec13502e7bbf6f6",
-   "ranking_csv": "9898802912aeb040394bd0a8a53dcaa101e0bc76",
-   "top_candidates_csv": "0bcdd84e0e83157876676a5fbf85ec79493307d0"
+   "head_json": "d25eb3a00f73cf9ca34fc2816d28045c1e23f3ae",
+   "ranking_csv": "4eeca6155838169050804eb31a34db4a0681ec05",
+   "top_candidates_csv": "0f9905fcb9190cbbda3b6581466b50373308fe60"
   },
-  "head_json_bytes": 9151,
-  "fold_note": "receipts folded in published bit order [58, 96]; the bit-58 receipt closes the child orbit (both open parents lose the child row); the bit-96 receipt additionally cross-covers one more parent2 row; set equality s_1221 == s_1219 UNION covers(2 roots) asserted chain-internally; 11x11 empty board / two-stone roots / S2 {59,60} / class 2 / class 4 remain UNKNOWN"
+  "head_json_bytes": 11295,
+  "fold_note": "receipts folded in published bit order [58, 96] on the 1225 rebase head; the bit-58 receipt closes the child orbit (both open parents lose the child row); the bit-96 receipt additionally cross-covers one more parent2 row; both open class-2 parents held identical remaining rows at 1219 and 1225 (the 78a fold did not touch them); the marginal structure is unchanged from the pre-rebase fold (10 / 2, no overlap between the 78a covers and the 69h covers); 11x11 empty board / two-stone roots / S2 {59,60} / class 2 / class 4 remain UNKNOWN"
  }
 }
