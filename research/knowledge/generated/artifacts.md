@@ -1985,6 +1985,30 @@
 ## [research/experiments/five-row-q7-m21-class-split-20261114/scripts/sat3.js](../../../research/experiments/five-row-q7-m21-class-split-20261114/scripts/sat3.js)
 
 - [K0821](../items/K0821-five-row-q7-m21-deficient-nonexistence.md) (solver): class-split / exact-count (--krow) / minpos / lex encoder on the K0810 sat.js census + sat2.js counter core (verbatim from the K0818 lane), plus kissat model decoding with census-free verifyConfig
+## [research/experiments/five-row-q7-m22-class-split-20261114/output/r5x22q7_0k5p0.txt](../../../research/experiments/five-row-q7-m22-class-split-20261114/output/r5x22q7_0k5p0.txt)
+
+- [K0834](../items/K0834-five-row-q7-m22-deficient-nonexistence.md) (data): hardest deciding instance raw kissat log ({0} k=5 minpos=0: 3,380,578 conflicts UNSAT / 153.8 s); all raw logs r5x22q7_*.txt (19 direct from batch-1 + 32 decomposition + 2 lex + control)
+## [research/experiments/five-row-q7-m22-class-split-20261114/output/r_ctrl_5x18_c0.txt](../../../research/experiments/five-row-q7-m22-class-split-20261114/output/r_ctrl_5x18_c0.txt)
+
+- [K0834](../items/K0834-five-row-q7-m22-deficient-nonexistence.md) (data): positive control log: 5x18 class {0} SAT 343,134 conflicts bit-exact with the K0821 lane control; decoded 29 stones rows (5,6,6,6,6), census-free verifyConfig PASS (K0332 witness rediscovered end-to-end)
+## [research/experiments/five-row-q7-m22-class-split-20261114/output/records.jsonl](../../../research/experiments/five-row-q7-m22-class-split-20261114/output/records.jsonl)
+
+- [K0834](../items/K0834-five-row-q7-m22-deficient-nonexistence.md) (data): 52 records: 17 direct class UNSAT (batch-1 logs, re-verified bit-exact) + 32 k/minpos decomposition UNSAT ({0},{1}: k=0..4 and k=5 x minpos=0..10) + 2 lex=H cross-checks + 1 positive control (SAT); deciding-instance conflicts 24,581,763, records total 25,519,268
+## [research/experiments/five-row-q7-m22-class-split-20261114/output/summary.json](../../../research/experiments/five-row-q7-m22-class-split-20261114/output/summary.json)
+
+- [K0834](../items/K0834-five-row-q7-m22-deficient-nonexistence.md) (data): aggregate: 0 SAT / 0 INDET among the deciding instances; hardest {0} k=5 mp=0 (3,380,578 conflicts); decomposition soundness note (minpos pins the leftmost stone of the first deficient row; column mirror covers the left half)
+## [research/experiments/five-row-q7-m22-class-split-20261114/report.md](../../../research/experiments/five-row-q7-m22-class-split-20261114/report.md)
+
+- [K0834](../items/K0834-five-row-q7-m22-deficient-nonexistence.md) (proof): claim, coverage and decomposition-completeness argument (k partitions the row count; leftmost stone column <= 10 by the column mirror min(x1,21-x5)<=10), verification protocol incl. the batch-1 bit-exact reconciliation, per-class results, scope and limits
+## [research/experiments/five-row-q7-m22-class-split-20261114/scripts/mkrecords5722.js](../../../research/experiments/five-row-q7-m22-class-split-20261114/scripts/mkrecords5722.js)
+
+- [K0834](../items/K0834-five-row-q7-m22-deficient-nonexistence.md) (source): records.jsonl / summary.json builder from raw kissat logs (batch-1 direct logs + completion-lane decomposition/lex/control logs)
+## [research/experiments/five-row-q7-m22-class-split-20261114/scripts/runall5722.sh](../../../research/experiments/five-row-q7-m22-class-split-20261114/scripts/runall5722.sh)
+
+- [K0834](../items/K0834-five-row-q7-m22-deficient-nonexistence.md) (source): deterministic completion driver: 17 direct class bit-exact re-runs + k x minpos decomposition for {0},{1} + lex=H cross-checks + 5x18 positive control + records build
+## [research/experiments/five-row-q7-m22-class-split-20261114/scripts/sat3.js](../../../research/experiments/five-row-q7-m22-class-split-20261114/scripts/sat3.js)
+
+- [K0834](../items/K0834-five-row-q7-m22-deficient-nonexistence.md) (solver): class-split / exact-count (--krow) / minpos / lex encoder on the K0810 sat.js census + sat2.js counter core (byte-identical to the K0821 lane), plus kissat model decoding with census-free verifyConfig
 ## [research/experiments/fixed-width-frontier-20261005/output/q57_independent_witness.json](../../../research/experiments/fixed-width-frontier-20261005/output/q57_independent_witness.json)
 
 - [K0332](../items/K0332-width-five-q7-stabilization-bounds.md) (data): 5×18の29石安全極大証人と全61空点のblocker
@@ -11553,6 +11577,12 @@
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-5039-2521/receipt.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-5039-2521/receipt.json)
 
 - [K0812](../items/K0812-new-exceptional-primes-3719-3727.md) (manifest): 17,632変数・162,781節・13,721行DRAT・VERIFIED（21.3秒）
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-5051-2527/receipt.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-5051-2527/receipt.json)
+
+- [K0812](../items/K0812-new-exceptional-primes-3719-3727.md) (manifest): 17,674変数・167,844節・14,423行DRAT・VERIFIED（22.6秒）
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-5059-2531/receipt.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-5059-2531/receipt.json)
+
+- [K0812](../items/K0812-new-exceptional-primes-3719-3727.md) (manifest): 17,702変数・146,541節・697,860行DRAT・VERIFIED（4,396秒）
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full.json)
 
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (data): 旧チェッカーの標本21 dの受理記録。K0707の偽受理発見により独立証拠への採用を保留
@@ -13344,6 +13374,15 @@
 ## [research/experiments/seven-row-q4-witness-band-36-40-20261115/output/records.jsonl](../../../research/experiments/seven-row-q4-witness-band-36-40-20261115/output/records.jsonl)
 
 - [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (data): 5 records: (7,4) m=36..40 all SAT (kissat 117..402 conflicts, 200s cap, sat3-generated CNFs), decoded 20-stone witnesses dual-verified (js+py), row multiset {3,3,3,3,3,3,2}; extends the witness band beyond the constructive limit m=35; M_{7,4} lower bound 36 -> 41 (M in [41,1929]); frontier now 7x41 (untested, not an absence claim); sat3 dedup Set OOMs at m=50 generation (>=q-only key registration is the next fix, output-invariant)
+## [research/experiments/seven-row-q5-m37-surgery-20261115/README.md](../../../research/experiments/seven-row-q5-m37-surgery-20261115/README.md)
+
+- [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (proof): (7,5) m=35..37 witnesses by complete two-edit surgery enumeration of the m=34 witness (final-state case split targeting T=(34,0)); M_{7,5} >= 38; fresh independent pure-TS re-verification
+## [research/experiments/seven-row-q5-m37-surgery-20261115/output/witness-7x37.json](../../../research/experiments/seven-row-q5-m37-surgery-20261115/output/witness-7x37.json)
+
+- [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (data): winC 27 stones rows [3,4,4,4,4,4,4], surgery description, chain profile 7x33..7x38, verification record
+## [research/experiments/seven-row-q5-m37-surgery-20261115/scripts/verify_and_campaign.ts](../../../research/experiments/seven-row-q5-m37-surgery-20261115/scripts/verify_and_campaign.ts)
+
+- [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (verifier): fresh independent pure-TS machine (no repo code/census/SAT): winC safety+maximality+profile, seed profiles, surgery cases A/F/b/b2a1 complete re-enumeration (unique witness winC)
 ## [research/experiments/seven-row-q5-q6-frontier-row-split-20261115/output/q4band-witness-dual-verification/records.jsonl](../../../research/experiments/seven-row-q5-q6-frontier-row-split-20261115/output/q4band-witness-dual-verification/records.jsonl)
 
 - [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (data): jsVerify (sat.js verifyConfig) + pyVerify (Python Fraction) on the published constructive witness files s7x22..35q4_none.witness.json of seven-row-q4-extension-band-20261114: 14/14 PASS (m=22 18 stones [3,3,3,3,3,2,1], m=23..35 20 stones [3,3,3,3,3,3,2]) - completes the four-way verification of the constructive files themselves (independent of the sat3-20261115 SAT witnesses)
@@ -13377,6 +13416,12 @@
 ## [research/experiments/seven-row-q5-witness-surgery-20261115/scripts/witness_surgery.ts](../../../research/experiments/seven-row-q5-witness-surgery-20261115/scripts/witness_surgery.ts)
 
 - [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (source): pure TS surgery search (inventory-based incremental pruning + brute re-verification) and the independent exhaustive verifier (5-subset enumeration safety + per-cell maximality)
+## [research/experiments/seven-row-q6-m30-surgery-negative-20261115/README.md](../../../research/experiments/seven-row-q6-m30-surgery-negative-20261115/README.md)
+
+- [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (proof): (7,6) m=30 two-edit surgery of the m=29 seed: four session-enumerated cases (114,206 candidates) 0 witnesses (local negative, not absence) plus a newly identified completeness gap (1,667,250 line-based candidates unenumerated)
+## [research/experiments/seven-row-q6-m30-surgery-negative-20261115/output/seed-verification.json](../../../research/experiments/seven-row-q6-m30-surgery-negative-20261115/output/seed-verification.json)
+
+- [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md) (verifier): fresh pure-TS re-verification of the s7x29q6 seed (safe, maximal on 7x29, only (29,3) uncovered on 7x30), T-curve census, all session case counts re-derived, and the completeness gap quantified
 ## [research/experiments/seven-row-q7-witness-search-20261114/output/def-search/records.jsonl](../../../research/experiments/seven-row-q7-witness-search-20261114/output/def-search/records.jsonl)
 
 - [K0826](../items/K0826-seven-row-q7-deficient-witness-lower-bound.md) (data): 19 records: SAT m=7..25 witnesses dual-verified (m=7..14 deep deficiency 30..41 stones, m=15..24 single-deficiency 41 stones) + m=25 OR-instance INDET (2,478,476 conflicts at 240s cap — honest negative)
