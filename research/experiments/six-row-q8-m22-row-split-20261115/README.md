@@ -5,16 +5,20 @@ maximal nonexistence, witness-free width set {19,20,21}).
 
 ## Status
 
-- **Band m=22..31 COMPLETE — every width all 3 row-mirror rowY classes UNSAT
+- **Band m=22..44 COMPLETE — every width all 3 row-mirror rowY classes UNSAT
   (plus a lex=H cross-encoding re-check of the hardest class per width).**
-  The witness-free width set of (6,8) is now **{19,...,31}**; M_{6,8} in
-  {19,...,31} or >= 33 (sharp form per the K0821-audit convention: M = 19 or
-  >= 33). Upper 371 (K0318/K0024 substitution) unchanged.
-- Frontier width: 6x32. Next steps in this lane: m=32, 33 with the same
-  sat2.js machinery (probing the all-triples census memory wall), then the
-  planned switch to genfast3.js (valid for q >= w+2; (6,8) qualifies with
-  q=8=w+2) for the remaining band m=34..370, with a CNF byte-identity
-  calibration against sat2.js before any genfast3-only width is claimed.
+  The witness-free width set of (6,8) is now **{19,...,44}**; M_{6,8} in
+  {19,...,44} or >= 46 (sharp form per the K0821-audit convention: M = 19 or
+  >= 46). Upper 371 (K0318/K0024 substitution) unchanged.
+- Frontier width: 6x45. The predicted sat2.js all-triples census memory wall
+  (extrapolated from the 7x28 n=196 rc137 incident) did NOT materialize:
+  generation and solving stayed cheap through m=44 (n=264). Next steps in
+  this lane: continue the same sat2.js rowY sweep (m=45, 46, ...) while it
+  stays cheap; the genfast3.js switch (valid for q >= w+2; (6,8) qualifies
+  with q=8=w+2) remains the fallback if generation cost or memory eventually
+  walls, with a CNF byte-identity calibration against sat2.js before any
+  genfast3-only width is claimed. Long-term: sweeping the band to m=370
+  witness-free would, with U=371, close M_{6,8} = 19 exactly.
 
 ## Band results (kissat 4.0.4 official linux-amd64, all exit 20)
 
@@ -33,14 +37,26 @@ classes (lex=H cross-check excluded).
 | 29 | 82,831 / 4.25s | 482,137 / 22.89s | 211,837 / 9.68s | 474,291 / 22.23s | 776,805 |
 | 30 | 204,178 / 9.15s | 385,419 / 17.53s | 160,357 / 7.61s | 329,657 / 17.21s | 749,954 |
 | 31 | 214,319 / 10.15s | 400,693 / 19.39s | 130,995 / 6.97s | 351,655 / 17.41s | 746,007 |
+| 32 | 249,964 / 12.03s | 299,427 / 14.94s | 113,507 / 5.95s | 256,550 / 13.54s | 662,898 |
+| 33 | 273,720 / 13.65s | 210,820 / 10.55s | 85,752 / 4.44s | 198,993 / 10.31s | 570,292 |
+| 34 | 236,543 / 11.20s | 175,116 / 9.64s | 91,526 / 5.05s | 161,884 / 9.17s | 503,185 |
+| 35 | 167,284 / 9.07s | 124,021 / 7.19s | 76,265 / 4.22s | 149,515 / 8.62s | 367,570 |
+| 36 | 214,784 / 10.63s | 134,327 / 7.65s | 82,548 / 4.50s | 97,529 / 6.62s | 431,659 |
+| 37 | 160,244 / 8.91s | 115,414 / 7.36s | 67,031 / 4.13s | 100,168 / 6.67s | 342,689 |
+| 38 | 144,271 / 8.41s | 115,643 / 7.13s | 68,262 / 4.28s | 96,678 / 6.32s | 328,176 |
+| 39 | 134,185 / 8.13s | 99,560 / 6.34s | 52,317 / 3.37s | 90,299 / 6.24s | 286,062 |
+| 40 | 95,625 / 6.07s | 82,449 / 5.76s | 47,194 / 3.22s | 80,272 / 5.67s | 225,268 |
+| 41 | 91,670 / 6.26s | 69,692 / 5.13s | 42,010 / 3.18s | 79,155 / 5.54s | 203,372 |
+| 42 | 94,471 / 6.17s | 56,759 / 4.64s | 46,264 / 3.57s | 63,345 / 5.00s | 197,494 |
+| 43 | 83,296 / 6.12s | 54,643 / 4.77s | 37,520 / 2.96s | 72,852 / 5.81s | 175,459 |
+| 44 | 107,765 / 7.52s | 73,372 / 5.54s | 41,643 / 3.42s | 63,396 / 5.41s | 222,780 |
 
-The hardest-class conflict series (rowY=1) is monotone decreasing across the
-whole band: 2,862,649 (m=21, K0829) -> 2,162,296 -> 1,810,456 -> 1,630,859 ->
-1,404,703 -> 990,038 -> 786,169 -> 583,705 -> 482,137 -> 385,419 -> 400,693.
-The deciding totals likewise decrease monotonically from m=22 to m=31
-(4,291,607 -> 746,007), with only local non-monotonicities inside individual
-easy classes. Difficulty is falling as the width grows; no SAT witness and no
-wall so far.
+The hardest-class conflict series (rowY=1) fell from 2,862,649 at m=21
+(K0829) to 54,643 at m=43 (local minima 54,643 / 56,759 at m=43/42), i.e. by
+a factor of ~52 across the band; deciding totals fell from 4,291,607 (m=22)
+to ~200k (m=40..44 range 175,459..222,780 with local non-monotonicities —
+e.g. m=44 at 222,780 is above m=43). No SAT witness and no generation or
+memory wall so far; difficulty is collapsing as the width grows.
 
 ## Coverage argument (each width)
 
@@ -93,7 +109,7 @@ byte-exact on the first push.
 
 ## Not claimed
 
-- 6x32 and above until the corresponding sweeps finish (frontier: 6x32).
+- 6x45 and above until the corresponding sweeps finish (frontier: 6x45).
 - Any band width decided only by genfast3.js before its CNF byte-identity
   calibration against sat2.js passes on shared widths.
 - 11x11 empty board, two-stone root {49,60}, S2 {59,60}, class 2, class 4:
