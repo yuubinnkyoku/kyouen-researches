@@ -53,7 +53,7 @@ verify_blocker_split.py は既存のJavaScript実装を読み込まず、84点�
 
 scripts/verify_blocker_split.py を実行すると output/blocker_split_independent_audit.json を再生成する。2回の実行でJSONはバイト単位で一致した。
 
-- verifier SHA-256: f4969cbe7c2814a0d9c5e3c6b208ab8e8ddbb26152261a9e70190b0a5c482e1a
+- verifier SHA-256: 67797d1f081dacb91c3016e0ada3a8ec7c7a2d177fe95717daa78ecd1ebafb3e
 - audit JSON SHA-256: 9e1f2116d164f4d4ae1d9f6e04bbad02be02d50b9b0ba66d4e62d06c136b9d05
 
 ## 信頼境界
