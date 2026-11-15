@@ -125,9 +125,29 @@
     "batch_size": 8,
     "pilot_control": "d6 loss=false nodes=3402 required per batch; local copy byte-exact with the repo blob (git blob sha 0a4a86f6828dc010c89ff17596054336a6b6091f computed locally and equal to the 76a/74d claim record) and control passed at session start"
   },
-  "plan": "Sweep 78 candidates in 10 raw batches of 8 (pilot d6 3402 control per batch), publish raw batches + audit + v15 crosscheck on main; certificate extraction for any WIN7-D10 bits (lowest-nodes first) with double independent verification; receipt fold into the chain at head 1188 (after the cost-76a fold, which is still pending) asserting the head state; keep 11x11 UNKNOWN.",
+  "plan": "Sweep complete (78/78, 5 WIN7-D10 bits 8/20/29/36/109, 0 capped, 10 raw batches + audit + v15 crosscheck + determinism rerun published on main). Next: certificate extraction for the 5 WIN7 bits (lowest-nodes first: bit36), double independent verification, then receipt fold into the chain at head 1188 (after the pending cost-76a fold) asserting the head state; keep 11x11 UNKNOWN.",
   "naming_note": "cost-78a disambiguates from any future cost-78 band and from cost-78 children of other class-2 S5 parents (the second open parent 00000000000000801202000100000000 has its own children); no cost-78 band name is in use on main as of this claim (checked against recent output/log naming and the 76a claim cost-order note on 2026-11-15)",
   "demand_semantics_note": "per-class demand counts each open parent S5 once per set class bit (class2-lane-cost69g-demand-reconciliation-20261115.json); distinct open parents = 2 here; lift_stones are the deleted stone indices of the swept child whose deletions D4-canonicalize to the open parent hexes",
   "interpretation_guard": "REFUTED-D10 is absence of a winner win within depth 10, not a refutation of the child; loss=true rows are WIN7-within-depth search candidates needing certificate extraction before any frontier claim; solved counts measure manifest coverage, not the game-theoretic value of any position",
-  "unknown_status": "standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, class 2, class 4 remain UNKNOWN. A completed sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 7-stone roots of this child."
+  "unknown_status": "standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, class 2, class 4 remain UNKNOWN. A completed sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 7-stone roots of this child.",
+  "sweep_result": {
+    "audit": "class2-lane-cost78a-sweep-audit-20261115.json",
+    "raw_batches": 10,
+    "candidates": 78,
+    "win7_d10": 5,
+    "win7_bits": [
+      8,
+      20,
+      29,
+      36,
+      109
+    ],
+    "refuted_d10": 73,
+    "capped": 0,
+    "candidate_nodes": 184253822,
+    "pilots_3402": 10,
+    "d4_duplicates_vs_published_manifests": 0,
+    "determinism_note": "bits 8/20/96/109 node-exact across a deliberate rerun",
+    "v15_crosscheck": "5/5 WIN7 loss=true, 3/3 refuted anchors loss=false, pilots 5949 x2, local v15 byte-exact with repo"
+  }
 }
