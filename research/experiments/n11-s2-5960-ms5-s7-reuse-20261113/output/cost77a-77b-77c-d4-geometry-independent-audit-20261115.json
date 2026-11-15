@@ -1,0 +1,443 @@
+{
+  "schema": "n11-cost77a-77b-77c-receipts-and-cost77d-presweep-independent-audit-20261115-v1",
+  "date": "2026-11-15",
+  "input_snapshot_main": "5a08dbb442905c1f4d313982fbc8113ee7719dd4",
+  "commit_base_main": "e789146b192395729a282adf679a00c9113e8990",
+  "input_git_blobs": {
+    "class-frontier-cost77a-receipts-recompute-20261115.json": {
+      "git_blob_sha": "a2ba7235793b051d80658818a83aa02c5a5d4958",
+      "bytes": 7554
+    },
+    "class-frontier-cost77b-receipts-recompute-20261115.json": {
+      "git_blob_sha": "b648ed068a1b9a04624b4c230e011e6fefeddb01",
+      "bytes": 8073
+    },
+    "class-frontier-cost77c-receipts-recompute-20261115.json": {
+      "git_blob_sha": "7f2badce7132aa7fdf76c9ee0283bd14a9ac9e7b",
+      "bytes": 10558
+    },
+    "class-frontier-s5-ranking-after-cost77b-receipts-20261115.csv": {
+      "git_blob_sha": "aca61cbdb0741ed975efb71a39914ebacbe821c6",
+      "bytes": 7539
+    },
+    "class-frontier-top-candidates-s6-after-cost77b-receipts-20261115.csv": {
+      "git_blob_sha": "9c59ceb9407700be64011c97d49896079f28d21c",
+      "bytes": 7675
+    },
+    "class2-lane-cost77d-inflight-20261115.json": {
+      "git_blob_sha": "676929023e9b67c94054d966f62a524743233987",
+      "bytes": 4723
+    },
+    "class-frontier-s5-ranking-after-cost77c-receipts-20261115.csv": {
+      "git_blob_sha": "9ada5dfc2057d3a340a3c27a8e984498c17118ad",
+      "bytes": 7539
+    },
+    "class-frontier-top-candidates-s6-after-cost77c-receipts-20261115.csv": {
+      "git_blob_sha": "8d5583e03e490042898be459d06e03b4aa2b5c13",
+      "bytes": 7589
+    }
+  },
+  "completed_77abc_receipts": {
+    "method": "exact BigInt D4 transforms; Bareiss determinant of [x,y,x^2+y^2,1] for all 4-subsets of each cost77c 7-stone root",
+    "receipt_roots": {
+      "cost77a": 3,
+      "cost77b": 4,
+      "cost77c": 8,
+      "total": 15,
+      "distinct_d4_orbits_across_three_lanes": 15
+    },
+    "cost77c": {
+      "root_hexes": [
+        "00000000040000801202000000200400",
+        "00000000040000801202010000200000",
+        "00000000040000801206000000200000",
+        "00000000040000801242000000200000",
+        "00000000040000801602000000200000",
+        "00000000840000801202000000200000",
+        "00000001040000801202000000200000",
+        "00008000040000801202000000200000"
+      ],
+      "canonical_hexes": [
+        "00000000040000801202000000200400",
+        "00000000040000801202010000200000",
+        "00000000040000801206000000200000",
+        "00000000040000801242000000200000",
+        "00000000040000801602000000200000",
+        "00000000240000003800000800000200",
+        "00000000240000003800000001000200",
+        "00000008000000809002000040000200"
+      ],
+      "popcounts": [
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7
+      ],
+      "child_plus_bit_identity": true,
+      "safe_roots": 8,
+      "safe_four_subsets_checked": 280,
+      "all_safe": true
+    },
+    "parent_lifts": {
+      "unique_d4_s6_parent_orbits": 49,
+      "manifest_marginal_hexes": [
+        "00000000040000801202000000200000",
+        "00000000000100003800000048000000",
+        "00000000000000849002000040000000",
+        "00000000000000801202000041000000"
+      ],
+      "all_manifest_marginals_are_lifts": true
+    },
+    "sweep_and_receipts": {
+      "candidates": 77,
+      "win7_d10": 8,
+      "refuted_d10": 69,
+      "capped": 0,
+      "candidate_nodes": 98545191,
+      "certificates": 8,
+      "certificate_rows": 362362,
+      "certificate_bytes": 13055390,
+      "certificate_sub_roots": 457,
+      "total_marginal": 36,
+      "total_marginal_in_manifest": 4,
+      "child_closed_by_bit": 10
+    },
+    "frontier": {
+      "before": {
+        "solved_s6_in_manifest": 1286,
+        "remaining_s5_orbits": 174,
+        "unique_remaining_s6": 6561,
+        "sum_remaining_cost": 518211,
+        "s6_needed_by_open_classes": 4831,
+        "cost_needed_by_open_classes": 381934,
+        "demand_histogram_open_only": {
+          "c2=0,c4=1": 526,
+          "c2=0,c4=2": 3016,
+          "c2=0,c4=3": 12,
+          "c2=1,c4=0": 230,
+          "c2=1,c4=1": 55,
+          "c2=1,c4=2": 9,
+          "c2=2,c4=0": 925,
+          "c2=2,c4=1": 5,
+          "c2=2,c4=2": 53
+        },
+        "best_class2": {
+          "s5_hex": "00000000000000809082000000000000",
+          "classes": 3,
+          "remaining_s6_orbits": 10,
+          "remaining_s7_edge_cost": 698
+        },
+        "audit_blocked_class2": {
+          "s5_hex": "00000000000000809082000000000000",
+          "classes": 3,
+          "remaining_s6_orbits": 10,
+          "remaining_s7_edge_cost": 698
+        },
+        "best_coverable_class2": {
+          "s5_hex": "00000000000000801202000000200000",
+          "classes": 2,
+          "remaining_s6_orbits": 14,
+          "remaining_s7_edge_cost": 1095
+        },
+        "next_class2": [
+          {
+            "s5_hex": "00000000000000801202000000200000",
+            "classes": 2,
+            "remaining_s6_orbits": 14,
+            "remaining_s7_edge_cost": 1095
+          },
+          {
+            "s5_hex": "00000000000000801202000080000000",
+            "classes": 2,
+            "remaining_s6_orbits": 40,
+            "remaining_s7_edge_cost": 3038
+          },
+          {
+            "s5_hex": "00000000000000801202000040000000",
+            "classes": 2,
+            "remaining_s6_orbits": 42,
+            "remaining_s7_edge_cost": 2915
+          }
+        ],
+        "best_class4": {
+          "s5_hex": "00000000020000003800000080000000",
+          "classes": 4,
+          "remaining_s6_orbits": 18,
+          "remaining_s7_edge_cost": 1460
+        },
+        "next_class4": [
+          {
+            "s5_hex": "00000000000000003800002000800000",
+            "classes": 4,
+            "remaining_s6_orbits": 60,
+            "remaining_s7_edge_cost": 4216
+          },
+          {
+            "s5_hex": "00000000020000003800000000080000",
+            "classes": 4,
+            "remaining_s6_orbits": 63,
+            "remaining_s7_edge_cost": 4494
+          },
+          {
+            "s5_hex": "00000000000000801802000000080000",
+            "classes": 4,
+            "remaining_s6_orbits": 64,
+            "remaining_s7_edge_cost": 4390
+          }
+        ]
+      },
+      "after": {
+        "solved_s6_in_manifest": 1290,
+        "remaining_s5_orbits": 174,
+        "unique_remaining_s6": 6557,
+        "sum_remaining_cost": 517923,
+        "s6_needed_by_open_classes": 4827,
+        "cost_needed_by_open_classes": 381646,
+        "demand_histogram_open_only": {
+          "c2=0,c4=1": 526,
+          "c2=0,c4=2": 3016,
+          "c2=0,c4=3": 12,
+          "c2=1,c4=0": 230,
+          "c2=1,c4=1": 55,
+          "c2=1,c4=2": 9,
+          "c2=2,c4=0": 921,
+          "c2=2,c4=1": 5,
+          "c2=2,c4=2": 53
+        },
+        "best_class2": {
+          "s5_hex": "00000000000000809082000000000000",
+          "classes": 3,
+          "remaining_s6_orbits": 10,
+          "remaining_s7_edge_cost": 698
+        },
+        "audit_blocked_class2": {
+          "s5_hex": "00000000000000809082000000000000",
+          "classes": 3,
+          "remaining_s6_orbits": 10,
+          "remaining_s7_edge_cost": 698
+        },
+        "best_coverable_class2": {
+          "s5_hex": "00000000000000801202000000200000",
+          "classes": 2,
+          "remaining_s6_orbits": 13,
+          "remaining_s7_edge_cost": 1018
+        },
+        "next_class2": [
+          {
+            "s5_hex": "00000000000000801202000000200000",
+            "classes": 2,
+            "remaining_s6_orbits": 13,
+            "remaining_s7_edge_cost": 1018
+          },
+          {
+            "s5_hex": "00000000000000801202000080000000",
+            "classes": 2,
+            "remaining_s6_orbits": 40,
+            "remaining_s7_edge_cost": 3038
+          },
+          {
+            "s5_hex": "00000000000000801202000040000000",
+            "classes": 2,
+            "remaining_s6_orbits": 41,
+            "remaining_s7_edge_cost": 2845
+          }
+        ],
+        "best_class4": {
+          "s5_hex": "00000000020000003800000080000000",
+          "classes": 4,
+          "remaining_s6_orbits": 18,
+          "remaining_s7_edge_cost": 1460
+        },
+        "next_class4": [
+          {
+            "s5_hex": "00000000000000003800002000800000",
+            "classes": 4,
+            "remaining_s6_orbits": 60,
+            "remaining_s7_edge_cost": 4216
+          },
+          {
+            "s5_hex": "00000000020000003800000000080000",
+            "classes": 4,
+            "remaining_s6_orbits": 63,
+            "remaining_s7_edge_cost": 4494
+          },
+          {
+            "s5_hex": "00000000000000801802000000080000",
+            "classes": 4,
+            "remaining_s6_orbits": 64,
+            "remaining_s7_edge_cost": 4390
+          }
+        ]
+      },
+      "delta": {
+        "solved": 4,
+        "remaining_s6": -4,
+        "remaining_cost": -288,
+        "open_needed": -4,
+        "open_cost": -288
+      }
+    }
+  },
+  "cost77d_pre_sweep": {
+    "status": "in-flight; this audit did not start or duplicate the sweep",
+    "s5": "00000000000000801202000000200000",
+    "s6_child": "00000000100000801202000000200000",
+    "stone_bits": [
+      21,
+      49,
+      57,
+      60,
+      71,
+      92
+    ],
+    "demand": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+    },
+    "edge_cost": 77,
+    "child_safe_four_subsets_checked": 15,
+    "legal_candidates_rederived": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      8,
+      9,
+      10,
+      12,
+      13,
+      14,
+      17,
+      18,
+      22,
+      25,
+      28,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      50,
+      51,
+      52,
+      54,
+      55,
+      56,
+      58,
+      59,
+      61,
+      62,
+      64,
+      65,
+      66,
+      67,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      94,
+      95,
+      96,
+      97,
+      99,
+      102,
+      103,
+      105,
+      106,
+      108,
+      110,
+      111,
+      113,
+      114,
+      116,
+      117,
+      118
+    ],
+    "legal_candidate_count": 77,
+    "exact_match_with_claim": true,
+    "candidate_roots_safe_four_subsets_checked": 2695,
+    "d4_stabilizer_transforms": [
+      0
+    ],
+    "d4_stabilizer_size": 1,
+    "candidate_move_orbits": 77,
+    "child_d4_canonical": "00000000100000801202000000200000",
+    "distinct_d4_child_from_77a_77b_77c": true,
+    "s5_parents": [
+      {
+        "bit": 21,
+        "hex": "00000000000000003800400008000000"
+      },
+      {
+        "bit": 49,
+        "hex": "00000000100000801200000000200000"
+      },
+      {
+        "bit": 57,
+        "hex": "00000000000000103800000000000200"
+      },
+      {
+        "bit": 60,
+        "hex": "00000000100000800202000000200000"
+      },
+      {
+        "bit": 71,
+        "hex": "00000000100000001202000000200000"
+      },
+      {
+        "bit": 92,
+        "hex": "00000000000000801202000000200000"
+      }
+    ],
+    "open_parent_rows": [
+      {
+        "s5_hex": "00000000000000003800400008000000",
+        "classes": 2,
+        "orbits": 66,
+        "cost": 5192
+      },
+      {
+        "s5_hex": "00000000000000801202000000200000",
+        "classes": 2,
+        "orbits": 13,
+        "cost": 1018
+      }
+    ],
+    "closed_parent_count": 4,
+    "top_candidate_row": "00000000000000801202000000200000,00000000100000801202000000200000,77,\"c1=0,c2=2,c4=0\""
+  },
+  "scope_limits": [
+    "No cost77d sweep was run; its in-flight claim remains owned by the existing lane.",
+    "The 77a/77b/77c audit checks mutual D4 uniqueness among those 15 roots, not the entire prior 557-root inventory.",
+    "The audit does not replay the 8 cost77c WIN7 strategy certificates; their 8/8 double-verification is reported by the existing cost77c lane log.",
+    "No full 77d search, proof of any S5 parent, class closure, two-stone-root verdict, or empty-board verdict is established."
+  ],
+  "verdict": "PASS"
+}
