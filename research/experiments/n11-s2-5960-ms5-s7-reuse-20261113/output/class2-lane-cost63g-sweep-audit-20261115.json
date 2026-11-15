@@ -1,0 +1,209 @@
+{
+ "schema": "n11-class2-lane-cost63g-sweep-audit-20261115-v1",
+ "date": "2026-11-15",
+ "child": "00000000080000801202000000200000",
+ "s5_target": "00000000000000801202000000200000",
+ "edge_cost": 63,
+ "candidates": 63,
+ "candidate_enumeration": "claim legal_candidates list (legal_candidates.py exact Bareiss enumeration), re-derived from the 8 raw batch JSONLs: every candidate appears exactly once, set-equal to the claim",
+ "win7_d10_bits": [
+  0,
+  9,
+  12,
+  50,
+  54,
+  58,
+  62,
+  64,
+  72,
+  94,
+  96,
+  99,
+  105,
+  113
+ ],
+ "win7_count": 14,
+ "refuted_count": 49,
+ "capped_count": 0,
+ "candidate_nodes_total": 75637935,
+ "win7_nodes_sum": 15742818,
+ "pilots": "v16 d6 pilot loss=false nodes=3402 asserted per batch, 8/8 PASS",
+ "raw_batches": [
+  {
+   "file": "class2-lane-cost63g-raw-batch1-20261115.jsonl",
+   "bits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    6,
+    8,
+    9
+   ]
+  },
+  {
+   "file": "class2-lane-cost63g-raw-batch2-20261115.jsonl",
+   "bits": [
+    10,
+    12,
+    13,
+    17,
+    18,
+    22,
+    24,
+    26
+   ]
+  },
+  {
+   "file": "class2-lane-cost63g-raw-batch3-20261115.jsonl",
+   "bits": [
+    28,
+    29,
+    30,
+    32,
+    33,
+    34,
+    42,
+    43
+   ]
+  },
+  {
+   "file": "class2-lane-cost63g-raw-batch4-20261115.jsonl",
+   "bits": [
+    44,
+    50,
+    52,
+    54,
+    56,
+    58,
+    59,
+    62
+   ]
+  },
+  {
+   "file": "class2-lane-cost63g-raw-batch5-20261115.jsonl",
+   "bits": [
+    64,
+    65,
+    67,
+    72,
+    73,
+    74,
+    75,
+    76
+   ]
+  },
+  {
+   "file": "class2-lane-cost63g-raw-batch6-20261115.jsonl",
+   "bits": [
+    77,
+    78,
+    84,
+    85,
+    86,
+    87,
+    88,
+    94
+   ]
+  },
+  {
+   "file": "class2-lane-cost63g-raw-batch7-20261115.jsonl",
+   "bits": [
+    95,
+    96,
+    97,
+    99,
+    100,
+    102,
+    105,
+    106
+   ]
+  },
+  {
+   "file": "class2-lane-cost63g-raw-batch8-20261115.jsonl",
+   "bits": [
+    108,
+    110,
+    112,
+    113,
+    114,
+    116,
+    118
+   ]
+  }
+ ],
+ "determinism_rerun": "class2-lane-cost63g-v16-determinism-rerun-20261115.jsonl: batch5 (bits 64,65,67,72,73,74,75,76) re-run node-exact 8/8 rows (loss/nodes/capped/terminal identical; ms differs), pilot 3402 PASS",
+ "v15_crosscheck": {
+  "file": "class2-lane-cost63g-v15-crosscheck-20261115.jsonl",
+  "pilots_5949": 5,
+  "win7_anchors": "14/14 loss=true (engine v15, independent search memo/signing rules), nodes recorded",
+  "refuted_anchors": "bits 1/32/116 loss=false with raw verdict agreement",
+  "anchor_nodes": {
+   "0": 3441596,
+   "9": 1433621,
+   "12": 2693309,
+   "50": 2187871,
+   "54": 1305489,
+   "58": 972227,
+   "62": 1827886,
+   "64": 815902,
+   "72": 945983,
+   "94": 1528617,
+   "96": 635430,
+   "99": 2539837,
+   "105": 1139263,
+   "113": 9901301
+  }
+ },
+ "root_orbit_check": {
+  "roots_equal_child_or_bit": "root == child | 1<<bit for all 14 WIN7 bits",
+  "distinct_d4_orbits": 14,
+  "orbit_map": {
+   "00000000080000801202000000200001": [
+    0
+   ],
+   "00000000080000801202000000200200": [
+    9
+   ],
+   "00000000080000801202000000201000": [
+    12
+   ],
+   "00000000080000801206000000200000": [
+    50
+   ],
+   "00000000080000801242000000200000": [
+    54
+   ],
+   "00000000080000801602000000200000": [
+    58
+   ],
+   "00000000080000805202000000200000": [
+    62
+   ],
+   "00000000080000811202000000200000": [
+    64
+   ],
+   "00000000080001801202000000200000": [
+    72
+   ],
+   "00000000200080003800400000000200": [
+    94
+   ],
+   "00000000200080003800000001000200": [
+    96
+   ],
+   "00000008000000809002000020200000": [
+    99
+   ],
+   "00000000200080003800200000000200": [
+    105
+   ],
+   "000000002000a0003800000000000200": [
+    113
+   ]
+  }
+ },
+ "verdict_semantics": "loss=true => WIN7-within-depth-10 candidate (certificate rebuild target); loss=false => REFUTED-D10, no first-player win within depth 10 (NOT a LOSS proof); 0 capped",
+ "interpretation_guard": "depth-10 bookkeeping over the individual 7-stone roots; REFUTED-D10 proves only absence of a WIN7 within depth 10; WIN7-D10 requires certificate extraction and independent verification before it becomes a receipt; the standard 11x11 empty board, both two-stone roots {49,60}/{59,60}, S2 {59,60}, class 2 and class 4 all remain UNKNOWN"
+}
