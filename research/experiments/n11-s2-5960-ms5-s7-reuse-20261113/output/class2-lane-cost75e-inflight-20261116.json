@@ -1,8 +1,8 @@
 {
- "schema": "n11-class2-lane-cost75e-inflight-20261116-v1",
- "title": "n11 class2-lane cost-75e IN FLIGHT: second coverable class-2 candidate S5 cost-75 child to be swept next",
+ "schema": "n11-class2-lane-cost75e-inflight-20261116-v2",
+ "title": "n11 class2-lane cost-75e sweep completed locally (4 WIN7-D10 bits 6/10/11/37); raw batches + certificates pending publication (execution environment outage)",
  "date": "2026-11-16",
- "status": "in flight",
+ "status": "sweep completed locally on 2026-11-16; raw batches, determinism rerun, v15 crosscheck, certificates and fold NOT yet published - execution environment went unavailable mid-certification; treat the local numbers below as an in-flight coordination memo (cross-checkable, not yet published evidence)",
  "claimed_by": "n11 long-term lane session (cost-71d STERILE continuation)",
  "s5": "00000000000000801202000040000000",
  "s6_child": "00000000040000809002000000000002",
@@ -100,8 +100,8 @@
   120
  ],
  "candidate_count": 75,
- "no_prior_sweep_note": "this child 00000000040000809002000000000002 has no prior claim, raw batch, audit, certificate or fold artifact on latest main (commit-message code search for the child hex: 0 hits); the earlier cost-75 lanes (75b/75c/75d) are DIFFERENT children.",
- "motivation": "the second coverable class-2 candidate S5 has 7 remaining rows (509 cost); cost-64 (64a) and cost-71 (71d) are STERILE, cost-70 is in flight (70g, parallel continuation session), so cost-75 is the cheapest unswept row this lane can reserve; a WIN7-D10 receipt set would close this row (and advance the 67-row class-2 parent), a sterile outcome establishes the no-WIN7-D10 negative fact for this child",
+ "no_prior_sweep_note": "this child 00000000040000809002000000000002 has no prior claim, raw batch, audit, certificate or fold artifact on latest main (commit-message code search for the child hex: 0 hits at claim time); the earlier cost-75 lanes (75b/75c/75d) are DIFFERENT children.",
+ "motivation": "the second coverable class-2 candidate S5 has 7 remaining rows (509 cost at head 1400); cost-64 (64a) and cost-71 (71d) are STERILE, cost-70 was swept in flight by the parallel continuation session (70g), so cost-75 was the cheapest unswept row this lane could reserve",
  "engine": {
   "script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/class4_child1_runner_v16.ts",
   "blob_sha": "0a4a86f6828dc010c89ff17596054336a6b6091f",
@@ -111,106 +111,53 @@
   "batch_size": 8,
   "pilot_control": "per-batch d6 pilot loss=false nodes=3402, else abort",
   "batches_planned": 10,
-  "batch_bits": {
-   "batch1": [
-    3,
-    4,
-    6,
-    7,
-    8,
-    9,
-    10,
-    11
-   ],
-   "batch2": [
-    14,
-    15,
-    17,
-    18,
-    19,
-    20,
-    21,
-    22
-   ],
-   "batch3": [
-    23,
-    25,
-    28,
-    29,
-    30,
-    31,
-    32,
-    33
-   ],
-   "batch4": [
-    34,
-    37,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "batch5": [
-    47,
-    48,
-    53,
-    54,
-    56,
-    57,
-    59,
-    61
-   ],
-   "batch6": [
-    62,
-    64,
-    65,
-    67,
-    68,
-    69,
-    70,
-    75
-   ],
-   "batch7": [
-    76,
-    77,
-    78,
-    80,
-    85,
-    87,
-    88,
-    92
-   ],
-   "batch8": [
-    94,
-    95,
-    96,
-    98,
-    101,
-    102,
-    103,
-    105
-   ],
-   "batch9": [
-    106,
-    107,
-    108,
-    109,
-    110,
-    112,
-    114,
-    116
-   ],
-   "batch10": [
-    117,
-    119,
-    120
-   ]
-  },
   "raw_batch_naming": "class2-lane-cost75e-raw-batch{N}-20261116.jsonl (JSONL: {bit,loss,nodes,capped,terminalStoneRange,ms} plus the pilot control line)"
  },
  "verdict_semantics": "loss=true => WIN7-within-depth-10 candidate (certificate rebuild target); loss=false && !capped => REFUTED-D10, no first-player win within depth 10 (NOT a LOSS proof); capped => proves nothing either way",
  "unknown_status": "11x11 empty board: UNKNOWN. A completed sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 7-stone roots of this child.",
- "coordination_note": "latest main fetched immediately before this claim push; the parallel cost-70g claim (class2-lane-cost70g-inflight-20261116.json, same S5, child 00000000000000801202000040000001, baseline 1398' to be rebased to 1400 on landing) is untouched here; the cost-71d STERILE record for this S5 landed earlier this session; this claim reserves the cost-75 row only; if a parallel execution claims this child first, the collision protocol (verify arithmetic, do not overwrite) applies"
+ "local_results_pending_publication": {
+  "recorded": "2026-11-16 (session hit a persistent execution-environment outage mid-certification; these numbers come from the completed local v16 run and are published here as an in-flight coordination memo so no other lane duplicates the sweep; they remain cross-checkable memo values until the raw artifacts below are published and re-verified)",
+  "sweep": {
+   "engine": "class4_child1_runner_v16.ts --depth 10 --cap 1000000000 --andclose 1, 10 batches (9x8 + 3), pilot 3402 PASS x10",
+   "candidates_swept": 75,
+   "win7_d10_bits": [
+    6,
+    10,
+    11,
+    37
+   ],
+   "win7_root_hexes": [
+    "00000000040000809002000000000042",
+    "00000000040000809002000000000402",
+    "00000000040000809002000000000802",
+    "00000000040000809002002000000002"
+   ],
+   "win7_node_counts": {
+    "bit6": 5825120,
+    "bit10": 3185286,
+    "bit11": 1959154,
+    "bit37": 2514936
+   },
+   "refuted_d10": 71,
+   "capped": 0,
+   "total_nodes": 108292517,
+   "heaviest_refuted_anchors": {
+    "bit98": 7251868,
+    "bit114": 5866037
+   }
+  },
+  "determinism_rerun": "batch5 (bits 47,48,53,54,56,57,59,61) re-solved fresh in a separate process BEFORE the outage: NODE-EXACT on all 8 candidates (nodes/loss/capped identical to the raw batch)",
+  "v15_crosscheck": "launched (pilot + bits 6,10,11,37,96,98,114) but NOT completed when the environment went unavailable; must be re-run before publication",
+  "certificates": {
+   "pipeline": "cost75e_cert_pipeline_20261116.py (repo-verbatim warm_rebuild_pipeline process(): blind extraction, BigInt independent verifier, all pipeline asserts)",
+   "bit6": "extracted and independently BigInt-verified locally (cert 2,207,870 bytes; exact rows/md5 in the local summary json, pending environment recovery)",
+   "bit10": "extracted and independently BigInt-verified locally (cert 1,585,948 bytes)",
+   "bit11": "extracted and independently BigInt-verified locally: 51,382 rows, 13,290,884 extraction nodes, loser mobility 59, md5 b517acf91e3c4652777d7fa16dd8f065, cert 1,859,623 bytes",
+   "bit37": "extraction in progress when the environment went unavailable; must be re-run before publication"
+  },
+  "raw_repo_search": "all 4 WIN root hexes code-searched over yuubinnkyoku/kyouen-researches at claim time: 0 hits each (new coverage by raw hex)",
+  "publication_todo": "(1) publish the 10 raw batch JSONLs + determinism rerun + v15 crosscheck; (2) finish the bit-37 certificate and re-run any incomplete verification; (3) re-verify all 4 certificates against published bytes; (4) fold the 4 receipts on the RECONCILED chain head (see coordination_note); (5) retire this claim with the fold record"
+ },
+ "coordination_note": "latest main at this update: dee808f0 + merge commits 27b87a87/8a65219c. The parallel cost-70g sweep landed (commit dee808f0: 70 candidates, 7 WIN7-D10 bits 18/24/28/59/89/112/120, 124,066,734 nodes, 7 certificates 350,567 rows double-verified) with a fold on ITS OWN 1398' branch baseline: head 1398/6450/509974/4720/373697 -> 1403/6445/509589/4715/373312. That 1403 head LACKS the cost-63h cover folded into the canonical merged head 1400/6448/509842/4718/373565, and 1400 lacks the 70g covers: the two heads are a NON-NESTED FORK and both are superseded by their union. REQUIRED next fold: rebase/reconciliation fold s_union == s_1400 UNION covers(7 x 70g roots) == s_1403 UNION cov(63h root) (reverse-order replay equality across the two branches); then fold the cost-75e receipts (4 roots) on the reconciled head. Observed on the parallel 70g artifacts: (a) their fold head JSON method/baseline prose contains stale copy-paste fragments (cites the 1394/58c baseline, '18 roots', 63i-era sweep numbers) while the actual code asserts reproduce the 1398' 67d baseline - an erratum to note, not a numeric error; (b) their fold script needs unpublished tmp-cost70g runtime files (no reconstruct script pushed, same gap the 67d fold had); (c) their v15 crosscheck bit-120 anchor records exactly 10,000,000 nodes (cap-suspicious round number, worth a re-probe); (d) the class2-lane-cost70g-certificates/ directory now mixes the 2026-11-15 old-70g lane certs and the 2026-11-16 new-70g lane certs (filenames do not collide; root hexes disambiguate). This claim reserves the cost-75e sweep + certification + fold; if another execution already published those artifacts, the collision protocol (verify arithmetic, do not overwrite) applies.",
+ "interpretation_guard": "the local sweep numbers above are coordination memo values until the raw artifacts are published; solved counts measure manifest coverage, not the game-theoretic value of any position; REFUTED-D10 is NOT a LOSS proof; WIN7 certificates prove a win within depth 10 from the individual 7-stone roots only; 11x11 empty board / two-stone root {49,60} / S2 {59,60} / class 1 / class 2 / class 4 remain UNKNOWN"
 }
