@@ -1,0 +1,477 @@
+{
+  "boards": [
+    {
+      "w": 1,
+      "m": 3,
+      "q": 2,
+      "n_cells": 3,
+      "n_lines": 2,
+      "n_circles": 0,
+      "checks": {
+        "A_census_degeneracy": {
+          "violating_subsets_missed": 0
+        },
+        "B_subset_sweep": {
+          "subsets_checked": 8,
+          "safe_class_errors": 0,
+          "maximal_class_errors": 0,
+          "maximal_count": 3,
+          "expected_maximal_count": 3
+        },
+        "C_blocked": {
+          "unblocked_cases": 0
+        },
+        "D_deficiency": {
+          "mode": "w=1: no maximal set is deficient (row capacity q-1)",
+          "deficient_maximal_sets": 0
+        },
+        "E_grundy": {
+          "safe_positions": 4,
+          "formula_violations": 0,
+          "formula": "g(S) = (1 - |S|) mod 2"
+        }
+      },
+      "pass": true
+    },
+    {
+      "w": 1,
+      "m": 3,
+      "q": 3,
+      "n_cells": 3,
+      "n_lines": 2,
+      "n_circles": 0,
+      "checks": {
+        "A_census_degeneracy": {
+          "violating_subsets_missed": 0
+        },
+        "B_subset_sweep": {
+          "subsets_checked": 8,
+          "safe_class_errors": 0,
+          "maximal_class_errors": 0,
+          "maximal_count": 3,
+          "expected_maximal_count": 3
+        },
+        "C_blocked": {
+          "unblocked_cases": 0
+        },
+        "D_deficiency": {
+          "mode": "w=1: no maximal set is deficient (row capacity q-1)",
+          "deficient_maximal_sets": 0
+        },
+        "E_grundy": {
+          "safe_positions": 7,
+          "formula_violations": 0,
+          "formula": "g(S) = (2 - |S|) mod 2"
+        }
+      },
+      "pass": true
+    },
+    {
+      "w": 1,
+      "m": 6,
+      "q": 2,
+      "n_cells": 6,
+      "n_lines": 5,
+      "n_circles": 0,
+      "checks": {
+        "A_census_degeneracy": {
+          "violating_subsets_missed": 0
+        },
+        "B_subset_sweep": {
+          "subsets_checked": 64,
+          "safe_class_errors": 0,
+          "maximal_class_errors": 0,
+          "maximal_count": 6,
+          "expected_maximal_count": 6
+        },
+        "C_blocked": {
+          "unblocked_cases": 0
+        },
+        "D_deficiency": {
+          "mode": "w=1: no maximal set is deficient (row capacity q-1)",
+          "deficient_maximal_sets": 0
+        },
+        "E_grundy": {
+          "safe_positions": 7,
+          "formula_violations": 0,
+          "formula": "g(S) = (1 - |S|) mod 2"
+        }
+      },
+      "pass": true
+    },
+    {
+      "w": 1,
+      "m": 6,
+      "q": 3,
+      "n_cells": 6,
+      "n_lines": 5,
+      "n_circles": 0,
+      "checks": {
+        "A_census_degeneracy": {
+          "violating_subsets_missed": 0
+        },
+        "B_subset_sweep": {
+          "subsets_checked": 64,
+          "safe_class_errors": 0,
+          "maximal_class_errors": 0,
+          "maximal_count": 15,
+          "expected_maximal_count": 15
+        },
+        "C_blocked": {
+          "unblocked_cases": 0
+        },
+        "D_deficiency": {
+          "mode": "w=1: no maximal set is deficient (row capacity q-1)",
+          "deficient_maximal_sets": 0
+        },
+        "E_grundy": {
+          "safe_positions": 22,
+          "formula_violations": 0,
+          "formula": "g(S) = (2 - |S|) mod 2"
+        }
+      },
+      "pass": true
+    },
+    {
+      "w": 2,
+      "m": 3,
+      "q": 2,
+      "n_cells": 6,
+      "n_lines": 13,
+      "n_circles": 9,
+      "checks": {
+        "A_census_degeneracy": {
+          "violating_subsets_missed": 0
+        },
+        "B_subset_sweep": {
+          "subsets_checked": 64,
+          "safe_class_errors": 0,
+          "maximal_class_errors": 0,
+          "maximal_count": 6,
+          "expected_maximal_count": 6
+        },
+        "C_blocked": {
+          "unblocked_cases": 0
+        },
+        "D_deficiency": {
+          "mode": "w>=2: every (q-1)-set has a row <= q-2 stones",
+          "non_deficient_maximal_sets": 0,
+          "witnesses_at_this_width": 6
+        },
+        "E_grundy": {
+          "safe_positions": 7,
+          "formula_violations": 0,
+          "formula": "g(S) = (1 - |S|) mod 2"
+        }
+      },
+      "pass": true
+    },
+    {
+      "w": 2,
+      "m": 3,
+      "q": 3,
+      "n_cells": 6,
+      "n_lines": 13,
+      "n_circles": 9,
+      "checks": {
+        "A_census_degeneracy": {
+          "violating_subsets_missed": 0
+        },
+        "B_subset_sweep": {
+          "subsets_checked": 64,
+          "safe_class_errors": 0,
+          "maximal_class_errors": 0,
+          "maximal_count": 15,
+          "expected_maximal_count": 15
+        },
+        "C_blocked": {
+          "unblocked_cases": 0
+        },
+        "D_deficiency": {
+          "mode": "w>=2: every (q-1)-set has a row <= q-2 stones",
+          "non_deficient_maximal_sets": 0,
+          "witnesses_at_this_width": 15
+        },
+        "E_grundy": {
+          "safe_positions": 22,
+          "formula_violations": 0,
+          "formula": "g(S) = (2 - |S|) mod 2"
+        }
+      },
+      "pass": true
+    },
+    {
+      "w": 2,
+      "m": 4,
+      "q": 2,
+      "n_cells": 8,
+      "n_lines": 22,
+      "n_circles": 24,
+      "checks": {
+        "A_census_degeneracy": {
+          "violating_subsets_missed": 0
+        },
+        "B_subset_sweep": {
+          "subsets_checked": 256,
+          "safe_class_errors": 0,
+          "maximal_class_errors": 0,
+          "maximal_count": 8,
+          "expected_maximal_count": 8
+        },
+        "C_blocked": {
+          "unblocked_cases": 0
+        },
+        "D_deficiency": {
+          "mode": "w>=2: every (q-1)-set has a row <= q-2 stones",
+          "non_deficient_maximal_sets": 0,
+          "witnesses_at_this_width": 8
+        },
+        "E_grundy": {
+          "safe_positions": 9,
+          "formula_violations": 0,
+          "formula": "g(S) = (1 - |S|) mod 2"
+        }
+      },
+      "pass": true
+    },
+    {
+      "w": 2,
+      "m": 4,
+      "q": 3,
+      "n_cells": 8,
+      "n_lines": 22,
+      "n_circles": 24,
+      "checks": {
+        "A_census_degeneracy": {
+          "violating_subsets_missed": 0
+        },
+        "B_subset_sweep": {
+          "subsets_checked": 256,
+          "safe_class_errors": 0,
+          "maximal_class_errors": 0,
+          "maximal_count": 28,
+          "expected_maximal_count": 28
+        },
+        "C_blocked": {
+          "unblocked_cases": 0
+        },
+        "D_deficiency": {
+          "mode": "w>=2: every (q-1)-set has a row <= q-2 stones",
+          "non_deficient_maximal_sets": 0,
+          "witnesses_at_this_width": 28
+        },
+        "E_grundy": {
+          "safe_positions": 37,
+          "formula_violations": 0,
+          "formula": "g(S) = (2 - |S|) mod 2"
+        }
+      },
+      "pass": true
+    },
+    {
+      "w": 3,
+      "m": 3,
+      "q": 2,
+      "n_cells": 9,
+      "n_lines": 28,
+      "n_circles": 34,
+      "checks": {
+        "A_census_degeneracy": {
+          "violating_subsets_missed": 0
+        },
+        "B_subset_sweep": {
+          "subsets_checked": 512,
+          "safe_class_errors": 0,
+          "maximal_class_errors": 0,
+          "maximal_count": 9,
+          "expected_maximal_count": 9
+        },
+        "C_blocked": {
+          "unblocked_cases": 0
+        },
+        "D_deficiency": {
+          "mode": "w>=2: every (q-1)-set has a row <= q-2 stones",
+          "non_deficient_maximal_sets": 0,
+          "witnesses_at_this_width": 9
+        },
+        "E_grundy": {
+          "safe_positions": 10,
+          "formula_violations": 0,
+          "formula": "g(S) = (1 - |S|) mod 2"
+        }
+      },
+      "pass": true
+    },
+    {
+      "w": 3,
+      "m": 3,
+      "q": 3,
+      "n_cells": 9,
+      "n_lines": 28,
+      "n_circles": 34,
+      "checks": {
+        "A_census_degeneracy": {
+          "violating_subsets_missed": 0
+        },
+        "B_subset_sweep": {
+          "subsets_checked": 512,
+          "safe_class_errors": 0,
+          "maximal_class_errors": 0,
+          "maximal_count": 36,
+          "expected_maximal_count": 36
+        },
+        "C_blocked": {
+          "unblocked_cases": 0
+        },
+        "D_deficiency": {
+          "mode": "w>=2: every (q-1)-set has a row <= q-2 stones",
+          "non_deficient_maximal_sets": 0,
+          "witnesses_at_this_width": 36
+        },
+        "E_grundy": {
+          "safe_positions": 46,
+          "formula_violations": 0,
+          "formula": "g(S) = (2 - |S|) mod 2"
+        }
+      },
+      "pass": true
+    },
+    {
+      "w": 3,
+      "m": 4,
+      "q": 2,
+      "n_cells": 12,
+      "n_lines": 49,
+      "n_circles": 90,
+      "checks": {
+        "A_census_degeneracy": {
+          "violating_subsets_missed": 0
+        },
+        "B_subset_sweep": {
+          "subsets_checked": 4096,
+          "safe_class_errors": 0,
+          "maximal_class_errors": 0,
+          "maximal_count": 12,
+          "expected_maximal_count": 12
+        },
+        "C_blocked": {
+          "unblocked_cases": 0
+        },
+        "D_deficiency": {
+          "mode": "w>=2: every (q-1)-set has a row <= q-2 stones",
+          "non_deficient_maximal_sets": 0,
+          "witnesses_at_this_width": 12
+        },
+        "E_grundy": {
+          "safe_positions": 13,
+          "formula_violations": 0,
+          "formula": "g(S) = (1 - |S|) mod 2"
+        }
+      },
+      "pass": true
+    },
+    {
+      "w": 3,
+      "m": 4,
+      "q": 3,
+      "n_cells": 12,
+      "n_lines": 49,
+      "n_circles": 90,
+      "checks": {
+        "A_census_degeneracy": {
+          "violating_subsets_missed": 0
+        },
+        "B_subset_sweep": {
+          "subsets_checked": 4096,
+          "safe_class_errors": 0,
+          "maximal_class_errors": 0,
+          "maximal_count": 66,
+          "expected_maximal_count": 66
+        },
+        "C_blocked": {
+          "unblocked_cases": 0
+        },
+        "D_deficiency": {
+          "mode": "w>=2: every (q-1)-set has a row <= q-2 stones",
+          "non_deficient_maximal_sets": 0,
+          "witnesses_at_this_width": 66
+        },
+        "E_grundy": {
+          "safe_positions": 79,
+          "formula_violations": 0,
+          "formula": "g(S) = (2 - |S|) mod 2"
+        }
+      },
+      "pass": true
+    },
+    {
+      "w": 4,
+      "m": 3,
+      "q": 2,
+      "n_cells": 12,
+      "n_lines": 49,
+      "n_circles": 90,
+      "checks": {
+        "A_census_degeneracy": {
+          "violating_subsets_missed": 0
+        },
+        "B_subset_sweep": {
+          "subsets_checked": 4096,
+          "safe_class_errors": 0,
+          "maximal_class_errors": 0,
+          "maximal_count": 12,
+          "expected_maximal_count": 12
+        },
+        "C_blocked": {
+          "unblocked_cases": 0
+        },
+        "D_deficiency": {
+          "mode": "w>=2: every (q-1)-set has a row <= q-2 stones",
+          "non_deficient_maximal_sets": 0,
+          "witnesses_at_this_width": 12
+        },
+        "E_grundy": {
+          "safe_positions": 13,
+          "formula_violations": 0,
+          "formula": "g(S) = (1 - |S|) mod 2"
+        }
+      },
+      "pass": true
+    },
+    {
+      "w": 4,
+      "m": 3,
+      "q": 3,
+      "n_cells": 12,
+      "n_lines": 49,
+      "n_circles": 90,
+      "checks": {
+        "A_census_degeneracy": {
+          "violating_subsets_missed": 0
+        },
+        "B_subset_sweep": {
+          "subsets_checked": 4096,
+          "safe_class_errors": 0,
+          "maximal_class_errors": 0,
+          "maximal_count": 66,
+          "expected_maximal_count": 66
+        },
+        "C_blocked": {
+          "unblocked_cases": 0
+        },
+        "D_deficiency": {
+          "mode": "w>=2: every (q-1)-set has a row <= q-2 stones",
+          "non_deficient_maximal_sets": 0,
+          "witnesses_at_this_width": 66
+        },
+        "E_grundy": {
+          "safe_positions": 79,
+          "formula_violations": 0,
+          "formula": "g(S) = (2 - |S|) mod 2"
+        }
+      },
+      "pass": true
+    }
+  ],
+  "all_pass": true
+}

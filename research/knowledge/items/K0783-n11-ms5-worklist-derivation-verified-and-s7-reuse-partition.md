@@ -1918,6 +1918,26 @@ erratum 2件を記録（published blobは不変・算術無影響・proseのみ�
 
 詳細: [検証log](../../log/2026-11-15-n11-class2-lane-cost77d-merged75d77d-79a-folds-second-verification.md)、[検証script](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/verify_cost77d_merged_79a_folds_second_independent_20261115.py)、[検証JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost77d-merged75d77d-79a-folds-second-verification-20261115.json)。
 
+## 2026-11-15: published fold-chain全root監査の双実装80d追従完了 — v1系(第一実装)も80d endpointまで拡張・両実装の全統制一致
+
+第二独立実装v4(80d endpoint・95 pins・587 roots・全統制PASS)に続き、**第一実装(v1系・`audit_published_chain_roots_independent_20261115.py`)もcost-80d/1305 endpointまで機械追従**させ、published fold-chain全root監査の双実装相互検証体制が80dで完成した。
+
+v1系の拡張内容: git blob pins **95→99**(77d `d19c96b7`・merged `97130384`・79a `7dea99ff`・80d `289c9337`の4 headをPOST70E_PINS/ORDERに追加・26+52+21)・root inventory **569→587**(own_claimに77d lane-local 577=565+12・merged 580=569+11・79a 583・80d 587、own_baselineに77d→77c・merged→75d・79a→merged・80d→79a)・D4 orbit **587 roots/576 orbits/11 twins**・CANONICAL_LINE +3エントリ(merged key `cost77d_addition`・79a・80d)で**canonical line 1233..1305・mim 72 = distinct 72・multi 0(exactly-once)**・**bit-78重複rootのexactly-once簿記統制を新設**(root同一性・両child軌道covers・逐次marginal規約・canonical line上のclaim源は75d bit-92/bit-12の各1回・inventory単一計上・merged receipts 11 == 77d receipts minus bit-78)・ENDPOINT_CHECKS 4→**8**(77d 1299/…/receipts 12・79a 1304/…/3・80d 1305/…/4の各completed claimとbyte-exact照合、**merged 75d+77d headは77d claimの`merged_fold`レコード経由でcrosscheck** — before 1296→after 1302・excluded bit-78・`97130384` + 12,460 bytes)。
+
+**両実装の数値は全統制で一致**: 587 roots/576 orbits/11 twins・receipt records 464 anomalies 0・arith 73 heads anomalies 0・canonical line 72/72/multi 0・bit-78 root `00000000100040801202000000200000`・convention-external 1(既知75c)。pin数の差(第一実装99・第二実装95)はv3時点のpin範囲の違い(第一実装は77b/77c/75dをv3で先行pin)によるもので、監査corpusのendpoint(80d)は同一。第一実装はschema v4出力を**新ファイル** `class2-lane-published-chain-roots-independent-audit-v4-20261115.json` に書き、v3出力JSONはpublishedのまま無傷(raw CDN照合済み)・`supersedes`フィールドで関係を明記。2回実行byte-identical(md5 `1156db7d…`・95,881 bytes)。
+
+次のfold baselineはhead **1305**。80d以降のfold(並走laneのcost-82c等)にも同じ拡張パターン(pins追加・own_claim/own_baseline・CANONICAL_LINE・ENDPOINT_CHECKS)で両系統を同時に機械追従できる。solved 1305はmanifest被覆の簿記であり、REFUTED-D10はLOSS証明ではない。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class1、class2、class4は引き続き **UNKNOWN**。
+
+詳細: [第一実装v4 log](../../log/2026-11-15-n11-class2-lane-published-chain-roots-audit-v4-first-implementation.md)、[第一実装拡張script](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_published_chain_roots_independent_20261115.py)、[第一実装v4出力JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-published-chain-roots-independent-audit-v4-20261115.json)、[第二実装v4 log(同日)](../../log/2026-11-15-n11-class2-lane-published-chain-roots-audit-v4-second-independent.md)。
+
+## 2026-11-15: 双実装監査一致の機械照合(第三script) — 75d/80d両endpointで全統制一致・bit-78 root同一性を機械固定
+
+双実装一致を人手の表ではなく第三の照合scriptで機械固定した: `audit_dual_implementation_agreement_20261115.py` が4つのpublished audit JSON(v3 `9ae57954`・v2 `db0916c0`・v4first `c3df2d1e`・v4second `e3a0b7da`・blob pin)を再読込し、両endpoint pair(75d: v3 vs v2・80d: v4first vs v4second)で**cumulative per-head bookkeeping(75d 17 heads・80d 21 heads・全フィールド)**・D4 orbit構造・per-record geometry・head arithmetic(69/73 heads・classification/quote counts)・canonical line exactly-once(1296 mim 63・1305 mim 72)・convention-external receipts・child-closure(24/28 heads・全record)・base/chain/baseline inventory・endpoint head records・**bit-78 root hex `00000000100040801202000000200000`**の一致をassert。pin数差(post70e 17 vs 13・21 vs 17)は第一実装のみpinするv2 pin proposals(71c/70f/73g/70g)4件と正確に一致することもassert。**AGREEMENT CONFIRMED**・2回実行byte-identical(md5 `d8878a85…`・8,900 bytes)。75d pairのcumulative 17行の完全一致は今回初の機械確認。fork topology(77d lane-local・bit-78重複・merged rebase)を独立に書いた2実装が同一に導出していることが全行単位で確認された。以後のfold追従では両実装拡張後に本照合scriptのpin差替で一致確認が再実行できる。
+
+cost-82cは並走laneがIN FLIGHT(`class2-lane-cost82c-inflight-20261115.json`・fold: null・claim時head 1305)でsweep実行中。着地後は両監査実装の82c追従と本照合scriptの拡張を次回実行で行う。solved 1305はmanifest被覆の簿記であり、REFUTED-D10はLOSS証明ではない。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class1、class2、class4は引き続き **UNKNOWN**。
+
+詳細: [機械照合log](../../log/2026-11-15-n11-published-fold-chain-dual-implementation-agreement.md)、[照合script](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_dual_implementation_agreement_20261115.py)、[agreement JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-published-fold-chain-dual-implementation-agreement-20261115.json)。
+
 ## 2026-11-15: cost-82c sweep・WIN7証明書5件・receipt fold — 第二class-2 target S5が9→8行（head 1305→1306）
 
 第二coverable class-2 target S5 `00000000000000801202000000200000` のcost-82 child `00000000200040003800000000000200`（stones [9,59,60,61,78,93]・需要 c1=0,c2=2,c4=0・開親は第二targetとclass-2 S5 `00000000000000003800000408000000`）をcost-82cとしてsweepした。**82/82候補・WIN7-D10 5件（bits 16,37,47,71,82）・77 REFUTED-D10・0 capped・151,736,232 nodes**、pilot 3402×11・determinism rerun node-exact・v15 5 WIN+3 refuted anchors一致。
@@ -1927,3 +1947,4 @@ erratum 2件を記録（published blobは不変・算術無影響・proseのみ�
 REFUTED-D10はLOSS証明ではなく、WIN7証明書は個別7石rootの深さ10以内の先手勝ちのみを証明する。第二target S5は残り8行で未解決（best coverable class-2）、best class-4 blocker S5は18行/1460。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}は引き続き **UNKNOWN**。次のfold baselineはhead 1306。
 
 詳細: [lane log](../../log/2026-11-15-n11-class2-lane-cost82c-sweep-certificates-and-fold.md)、[fold head JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost82c-receipts-recompute-20261115.json)、[top-candidates CSV](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-top-candidates-s6-after-cost82c-receipts-20261115.csv)、[completed claim](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost82c-inflight-20261115.json)。
+

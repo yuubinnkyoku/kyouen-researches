@@ -114,3 +114,8 @@ parametric,w>=6,2w-1,2w-1,2w-2,proved,K0072,q=2w-1
 parametric,w>=15,w+ceil(w/2)+1,INF,q-1,proved,K0072,half-density: q>w+ceil(w/2)
 parametric,w>=19,2*ceil(w/2)+1,INF,q-1,proved,K0776,subsumes K0072 half-density for w>=19
 parametric,odd w>=21,w+1,w+1,w,proved,K0784,P(w)<=w-3 universal for odd w>=21; inside composed band when P(w) exact
+
+parametric,w>=2,2,2,INF,proved,K0855,"q=2 degeneracy: any 2 points on a line; safe iff |S|<=1, maximal safe iff |S|=1; every 1-stone config on w>=2 rows is row-deficient (some row holds 0 = q-2 stones) and maximal -> witnesses at EVERY width m>=1, band [1,inf), full-capacity stabilization never happens; g(S)=(1-|S|) mod 2"
+parametric,w>=2,3,3,INF,proved,K0855,"q=3 degeneracy: any 3 points collinear or concyclic; safe iff |S|<=2, maximal safe iff |S|=2; every 2-stone config on w>=2 rows is row-deficient (some row <= 1 = q-2 stones) and maximal -> witnesses at EVERY width m>=1, band [1,inf), full-capacity stabilization never happens; g(S)=(2-|S|) mod 2"
+exact-threshold,1,2,2,1,proved,K0855,"single-row board: every maximal config = 1 stone = row capacity q-1; stabilized from m=q-1=1"
+exact-threshold,1,3,3,2,proved,K0855,"single-row board: every maximal config = 2 stones = row capacity q-1; stabilized from m=q-1=2"
