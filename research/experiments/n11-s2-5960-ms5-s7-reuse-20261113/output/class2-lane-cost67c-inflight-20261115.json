@@ -1,8 +1,8 @@
 {
-  "schema": "n11-class2-lane-cost67c-inflight-20261115-v2",
+  "schema": "n11-class2-lane-cost67c-inflight-20261115-v3",
   "title": "n11 class2-lane cost-67c sweep in flight: cheapest remaining unswept child of the second coverable class-2 target S5 (mixed class-2/class-4 demand)",
   "date": "2026-11-15",
-  "status": "sweep_and_certificates_complete_fold_pending",
+  "status": "fold_in_flight",
   "claimed_by": "long-term class2 lane (the cost-63g fold execution)",
   "s5": "00000000000000801202000000200000",
   "s6_child": "00000000000000801202000000202000",
@@ -246,6 +246,21 @@
     "extraction_nodes": 11554974,
     "verification": "BigInt strategy-tree verifier 2/2 PASS (subroots 53/53 each, union conflicts 0/0) and second independent check (perm-det4 Bareiss exact determinants, loser mobility 53 = sub_roots_total, child contained in d4 parent orbits) 2/2 PASS",
     "storage": "each whole certificate exceeds the 1 MB single-file push threshold; published as 4 split part files (2 per bit), remote git blob shas verified byte-exact, part joins md5-identical to the local whole files"
+  },
+  "fold_in_flight": {
+    "declared": "2026-11-15 (this long-term lane execution; latest main fetched and re-verified immediately before this update - no fold newer than the cost-63g head 1216 had landed)",
+    "baseline_asserted": "1216/6631/523382/4901/387105 (class-frontier-cost63g-receipts-recompute-20261115.json, git blob sha e311e24346adad570e42f145f9190fe8427ae921)",
+    "script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost67c_receipts_20261115.py (cost-63g fold script template, same runpy chain; asserts this claim file byte-exact at its published v2 or v3 blob)",
+    "receipts_to_fold": [
+      64,
+      96
+    ],
+    "outputs_to_publish": [
+      "class-frontier-cost67c-receipts-recompute-20261115.json",
+      "class-frontier-s5-ranking-after-cost67c-receipts-20261115.csv",
+      "class-frontier-top-candidates-s6-after-cost67c-receipts-20261115.csv"
+    ],
+    "concurrent_claim_note": "if a parallel execution publishes the same cost-67c fold first, this lane does not overwrite: it verifies the arithmetic per the cost-72b collision protocol (same fold order [64, 96], same set-equality controls, endpoint agreement) and records the collision; if a parallel cost-65l fold lands a newer head first, this fold rebases on that head before publishing"
   },
   "rebase_target": {
     "instruction": "at fold time, fetch the latest main and assert the current canonical chain head byte-identically before folding; as of this update no fold newer than the cost-63g head has landed",
