@@ -97,3 +97,14 @@ K0835 lane と同じく「同一コード・同一分割が環境をまたいで
   4,396,040/314.1s・c1k3p1 UNSAT 2,717,030/165.1s (同バケットの
   class {0} は 600s cap INDET)。m=20 witness の欠損行は row 3 (≡{0}) で、
   witness 近傍クラスが最難という非対称と整合。
+
+
+## 追記: deep-cap 決着試験 (IN FLIGHT)
+
+残る2バケット c0k3p0/c0k3p1 を cap 600s→2400s で決着する
+`deepcap.sh` を追加した (12:41Z 起動・resumable: records に
+SAT/UNSAT 済みの key は skip、INDET 行は再実行される)。
+- 両方 UNSAT ⟹ 4×21 欠損極大不在が確定し M_{4,5} = 21 or ≥ 23 (K0821-audit 規約)。
+- SAT ⟹ witness 帯は m=5..21 に拡大し M_{4,5} ∈ [22, 140]。
+深キャップでも INDET の場合は minpos サブ分割 (row 0 の第2石位置) か
+--lex=H 交叉検証に分解する。

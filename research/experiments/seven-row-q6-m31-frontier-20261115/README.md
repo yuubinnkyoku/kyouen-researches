@@ -86,6 +86,18 @@ m=30 極大性と矛盾する偽の未遮断 15 セルを報告した。自己�
 **witness 帯は m=6..31 に延伸し M_{7,6} ∈ [32, 862]**。残る前線は 7×32
 (m=31 witness の空列延伸は cell (31,3) 未遮断で失敗 — one-stone-short)。
 
-class {3} (7,31,6) SAT (cap 1800s) は並走実行中 — witness は class {3}
-に属するため SAT で確定するはず (INDET なら cap 到達の honest negative
-として記録。surgery 結果の正当性は SAT 結果に依存しない)。
+## 結果: class {3} (7,31,6) SAT — cap 到達 INDET (honest negative)
+
+cap 1800s wall (timeout wrapper) で **INDET (rc=124・SIGTERM)**:
+**4,368,709 conflicts / process-time 896.03s** (CNF md5 48eb715f96ac1f0be4a8c5429025483d・
+145k 変数・520k 節・再生成バイト一致)。m=30 c3 が 2,670,296 conflicts/497s で SAT した
+のに対し 1.64 倍深くても未解決。witness (surgery) は class {3} に属するため
+instance は SAT 確定 — INDET は cap 到達であって不在主張ではない。
+この時点で CPU を m=32 c3 実行と共有していたため process-time は wall の半分
+(逐次実行なら更に深くまで到達したはず)。
+**SAT より surgery の方が m=31 を先に解いた** — witness の疎分布と
+cap ベース honest negative の解釈境界の実例。
+
+備考: セッション中のサンドボックスリセットにより最初の実行 (~1131s process-time・
+5.79M conflicts) は中断。CNF 再生成は md5 同一 (環境リセット横断の決定性確認)・
+kissat は同一公式バイナリ (md5 3a5eba830aa6008a604fcc9bbe99a325) で再実行した。
