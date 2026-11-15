@@ -69,3 +69,19 @@ K 項目へ昇格する。
   バケット対応・CAP 環境変数・resumable・comma-anchored key 照合・
   SAT 時の js+py 二系統 witness 検証)。INDET バケットが出次第
   `bash sweepp0x2gen.sh <bucket>` で追分解する。
+
+
+## 追記 (2026-11-15 17:55Z: k3 直接試行の連続 INDET と driver 並べ替え)
+
+- **c0k3p0/p1/p2 が全て 600s INDET** (3,852,260 / 6,854,166 / 6,939,580 conflicts)。
+  m21 では p2 以降は 76〜400s で直接決着していた一方、m22 は p2 も抵抗
+  → **m22 の k3 バケットは広く 600s cap を超える** (m21 比 ~1.5〜2倍で
+  一貫した難化。multi c01 は 451s/5,022,943 conflicts UNSAT・m21 310.8s/
+  3,957,766 と同じ比率)。
+- このまま残り19個の k3 直接試行に各 600s を焼くのは非効率なため、
+  driver を **sweep22fast.sh** (multi → k2 → k1 → k0 を先に、k3 直接試行
+  を最後) に並べ替えた。既知 INDET の c0k3p0/p1/p2 は sweepp0x2gen.sh
+  (x2 分割・cap 900s) で追分解する。multi の INDET が出たら krow ピン
+  (欠損行の正確な石数 0..3 で分割・sweep35 規約) で追分解する。
+- cap 600s 到達の INDET の conflicts は壁時計打ち切り (同一 CNF の
+  再実行は同一軌跡を辿るが、打ち切り点は bit-exact ではない)。
