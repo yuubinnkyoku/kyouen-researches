@@ -2,7 +2,7 @@
   "schema": "n11-class2-lane-cost76a-inflight-20261115-v1",
   "title": "n11 class2-lane cost-76a sweep in flight (claimed by a long-term lane execution)",
   "date": "2026-11-15",
-  "status": "in-flight",
+  "status": "completed",
   "claimed_by": "long-term class2 lane",
   "s5": "00000000000000809102000000000000",
   "s6_child": "00000000000000809102000000000001",
@@ -123,7 +123,7 @@
     "batch_size": 8,
     "pilot_control": "d6 loss=false nodes=3402 required per batch; local copy byte-exact with the repo blob (git blob sha 0a4a86f6828dc010c89ff17596054336a6b6091f computed locally and equal to the 74d claim record) and control passed at session start"
   },
-  "plan": "Sweep complete (76/76, 6 WIN7-D10 bits, 0 capped, 10 raw batches + audit published on main). Next: v15 anchor crosscheck, certificate extraction for bits 11,29,66,80,92,96 (lowest-nodes first: bit96), double independent verification, then receipt fold into the chain at head 1188 asserting the head state; keep 11x11 UNKNOWN.",
+  "plan": "All steps complete except the receipt fold. Raw sweep (76/76, 6 WIN7-D10 bits 11/29/66/80/92/96, 0 capped, 131,329,581 nodes), sweep audit, v15 cross-engine crosscheck (6/6 WIN7 loss=true, 3/3 refuted anchors loss=false, pilot d6 7/7 PASS, honesty note about the 4-space transcription delta corrected post-run and byte-exact), and the full certificate publication are done: 6/6 WIN7 bits extracted and certified, 8/8 remote files git-blob-sha verified, and the final manifest class2-lane-cost76a-win7-certificates-20261115.json pushed. Extraction driver cert_driver76a.ts published (blob 68336cdfe7c3eba4c0479bf79a1b309a3d32c191). Double independent verification on all 6 certificates: bigint 6/6 PASS, Bareiss --consumed-out 6/6 PASS. This claim is closed as a sweep+certificates claim; the 6-receipt fold into the chain at head 1188 (asserting 1188/6659/525437/4929/389160) remains open and is the next step; keep 11x11 UNKNOWN.",
   "naming_note": "cost-76a disambiguates from the sibling cost-76 child 00000000000000809102000000004000 (closed by the cost-74d bit102 lift, unswept, unnamed) and from any future cost-76 band; no cost-76 name is used by other experiment scripts (verified on 2026-11-15)",
   "demand_semantics_note": "per-class demand counts each open parent S5 once per set class bit (class2-lane-cost69g-demand-reconciliation-20261115.json); distinct open parents = 2 here",
   "interpretation_guard": "REFUTED-D10 is absence of a winner win within depth 10, not a refutation of the child; loss=true rows are WIN7-within-depth search candidates needing certificate extraction before any frontier claim; solved counts measure manifest coverage, not the game-theoretic value of any position",
@@ -147,5 +147,30 @@
     "pilots_3402": 10,
     "d4_duplicates_vs_published_manifests": 0,
     "determinism_note": "batch2 bits 13-21 node-exact across two runs"
+  },
+  "certificates": {
+    "directory": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76a-certificates/",
+    "win7_bits_certified": [
+      11,
+      29,
+      66,
+      80,
+      92,
+      96
+    ],
+    "files_on_main_blob_sha_verified": 8,
+    "push_sequence_done": "6/6 one part per commit (bit96 1/6, bit92 2/6, bit11 3/6, bit66 4/6 parts 1-2, bit80 5/6, bit29 6/6 parts 1-2); all 8 remote files blob-sha verified byte-exact",
+    "storage": "bit96/bit92/bit11/bit80 single files; bit66 (1,914,257 B) and bit29 (2,097,005 B) split .part1of2/.part2of2 at line boundaries (>1.75 MiB = 1,835,008 B repo convention); joined md5 equals whole md5 for both",
+    "driver": "scripts/cert_driver76a.ts (published this session, git blob sha 68336cdfe7c3eba4c0479bf79a1b309a3d32c191, commit 86622c49); empty kill table (pref=null), chunk rows-only, repo-verbatim extractor import class4_child1_cert_extractor_exact.ts",
+    "double_verification": "verify_win7_certificate_bigint_independent.mjs 6/6 PASS and verify_bit7_win7_cert.ts 6/6 PASS with --root-check, --subroots all moves, --consumed-out (consumed union == strategy rows every bit, comm diff 0); union missing/extra 0/0, terminal stone range [13,17], rows sorted-unique, fbt_drops 0, all loser first moves extracted ok, per-board conflicting-move duplicates 0 on merge",
+    "rows_total": 279344,
+    "extraction_nodes_total": 70911428,
+    "v15_crosscheck_nodes_sum": 44074444,
+    "record_final_published": "class2-lane-cost76a-win7-certificates-20261115.json",
+    "manifest_push_commit": "33777bea95ebaa6e7225b363932da793ac1c26dc",
+    "manifest_git_blob_sha": "f3be0e0edfc4ddf5da327dc545de7009926407ef",
+    "d4_duplicate": "none among the 6 roots and 0 vs the 58 published manifest roots (sweep audit d4_duplicate_scan, roots_compared 58, duplicates 0)",
+    "incident_note": "two push programs (bit11, bit80) hit the 16 MiB sandbox memory limit AFTER push_files executed; each landing was verified remotely byte-exact via the GitHub contents API before proceeding; no truncated or partial file landed (8/8 blob-exact)",
+    "completed": "2026-11-15"
   }
 }

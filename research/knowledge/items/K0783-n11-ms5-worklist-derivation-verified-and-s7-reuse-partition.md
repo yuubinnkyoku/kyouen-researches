@@ -1127,3 +1127,22 @@ cost72b WIN7証明書との交差は1件のみで、cost74d bit91 = cost72b bit8
 詳細: [監査ログ](../../log/2026-11-15-n11-class2-cost74d-win-loss-conflict-audit.md)、[監査JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/cost74d-win-loss-conflict-audit-20261115.json)、[再現スクリプト](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost74d_win_loss_conflicts_20261115.mjs)。
 
 標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class2・class4は引き続き **UNKNOWN**。
+
+
+## 2026-11-15: cost-76a WIN7証明書出版完了 — 6/6 certified・claim closed
+
+cost-76a child `00000000000000809102000000000001`（第三class-2 target S5 `00000000000000809102000000000000` の1<<0 lift、edge cost 76、head 1188でdemand c1=0/c2=2/c4=0）のsweep（76/76候補・131,329,581節点・6 WIN7-D10 bits 11/29/66/80/92/96・70 REFUTED・0 capped）に続く証明書工程を完遂した。
+
+**抽出**: repo-verbatim `class4_child1_cert_extractor_exact.ts`（FBS 1<<20）を、本sessionでscripts/に公開したdriver [cert_driver76a.ts](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/cert_driver76a.ts)（blob `68336cdfe7c3eba4c0479bf79a1b309a3d32c191`）でbitごとにchunk実行。kill tableは空（pref=null）で既存判定の再利用なし、全行をextractorが自己検査つきで再証明。各bitの全loser初手（mobility 55〜62）を3〜4 chunkに分割、sort -u merge（**board移動競合は全bit 0**）、header 2行を付した。rows計279,344・extraction nodes 70,911,428・fbt_drops 0（bit96 6,642,969 / bit92 7,818,115 / bit11 13,521,724 / bit66 10,787,042 / bit80 15,010,982 / bit29 17,130,596）。
+
+**二重独立検証**: BigInt検査器（3x3余因子展開）**6/6 PASS**、Number Bareiss検査器（--root-check・--subroots全初手・--consumed-out）**6/6 PASS**（sub-roots 351 = 敵合法初手数と全件一致、consumed union == 証明書行でcomm diff 0、missing/extra 0/0、終局石数 [13,17]、行sorted-unique）。
+
+**出版**: bit96/bit92/bit11/bit80は単一ファイル、bit66（1,914,257 B）とbit29（2,097,005 B）は1.75 MiB = 1,835,008 bytes超につき `.part1of2`/`.part2of2` に行境界分割（連結md5 = whole md5を両bitで確認）。(1/6)..(6/6)の1コミット1ファイルでpushし、**remote 8ファイルのgit blob shaを全件照合（8/8 byte-exact）**。16 MiB sandbox memory limitがpush_files実行後に2回（bit11・bit80）プログラムを中断したが、いずれもremote listing照合で着地確認済み（欠損・truncationなし）。bit66の初回driver起動でchild hex誤指定によるfatal=2をsummary.jsonで即検出し、出力を汚さずやり直した。
+
+**最終マニフェスト** [class2-lane-cost76a-win7-certificates-20261115.json](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76a-win7-certificates-20261115.json)（15,810 bytes・blob `f3be0e0edfc4ddf5da327dc545de7009926407ef`・commit 33777bea）: totals 279,344 rows / 70,911,428 extraction nodes / 351 sub-roots / visited 593,146 / winner 381,849 / loser 113,633 / terminal 97,664 / edges 528,178 / v15 crosscheck sum 44,074,444。sweep auditのproof_boundary（certificate_extraction・independent_certificate_verification）を閉じ、claim [class2-lane-cost76a-inflight-20261115.json](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76a-inflight-20261115.json) をcompletedに更新した。6 rootはD4重複なし（sweep audit d4_duplicate_scan: published 58 rootと重複0）。
+
+**残作業**: 76aの6 receiptはまだchain head 1188にfoldされていない。fold（`class-frontier-cost76a-receipts-recompute-20261115.json`、head 1188 `1188/6659/525437/4929/389160` assert）は72b/74d/70cwarm3/unified mergeに至るrunpy鎖（39 scripts）のbyte-identical再現を要し、必要材料のfetchを含む大規模タスクとして次回に回す。第三class-2 targetの未claim最後の子はcost-78 `00000000000000809102000000400000`。
+
+解消計数はmanifest被覆の前進であり、盤全体の勝敗ではない。WIN7証明書は各7石rootの深さ10以内の先手勝ちのみを証明する。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class2・class4は引き続き **UNKNOWN**。
+
+詳細: [出版完了log](../../log/2026-11-15-n11-class2-lane-cost76a-certificate-publication-completion.md)。証明書6本体は同output/`class2-lane-cost76a-certificates/`。
