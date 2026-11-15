@@ -1,5 +1,5 @@
 {
-  "description": "Third verification system (pure TS/BigInt) of all band-extension witnesses: (6,4) m=32..40, (5,4) m=37..39. Verifier: research/experiments/seven-row-q7-witness-search-20261114/scripts/verify_independent.ts used verbatim (export keyword removed only; 18 source fragments cross-checked byte-exact against the repo original after whitespace normalization), executed in a pure-TypeScript sandbox with BigInt exact arithmetic. All 12 witnesses PASS safe+maximal+row-deficient with the single-deficiency row pattern (one q-2 row, w-1 rows of q-1 stones). Together with the js (sat.js verifyConfig) and py (verify_witness.py Fraction) verifications recorded per-instance in records.jsonl, every band-extension witness is now triple-verified.",
+  "description": "Third verification system (pure TS/BigInt) of all band-extension witnesses: (6,4) m=32..40, (5,4) m=37..39. Verifier: research/experiments/seven-row-q7-witness-search-20261114/scripts/verify_independent.ts used verbatim (export keyword removed only; 18 source fragments cross-checked byte-exact against the repo original after whitespace normalization), executed in a pure-TypeScript sandbox with BigInt exact arithmetic. All 12 witnesses PASS safe+maximal+row-deficient with the single-deficiency row pattern (one q-2 row, w-1 rows of q-1 stones). Controls: negative (stone moved -> unsafe detected), positive ((6,31,4) and (5,36,4) witnesses already triple-verified by the prior lane both re-PASS). Together with the js (sat.js verifyConfig) and py (verify_witness.py Fraction) verifications recorded per-instance in records.jsonl, every band-extension witness is now triple-verified.",
   "date": "2026-11-15",
   "verifier": {
     "source": "research/experiments/seven-row-q7-witness-search-20261114/scripts/verify_independent.ts",
@@ -304,8 +304,25 @@
     },
     "detected": true
   },
-  "positiveControl": {
-    "description": "controls records fetch/parse failed",
-    "detected": false
-  }
+  "positiveControls": [
+    {
+      "file": "research/experiments/four-six-row-q4-q5-witness-search-20261114/output/q4-w5-def-search/records.jsonl",
+      "witness": "(5,36,4) 14-stone (already triple-verified by the prior lane)",
+      "result": {
+        "pass": true,
+        "safe": true,
+        "maximal": true,
+        "maxLine": 3,
+        "maxCirc": 3,
+        "rowCnt": [
+          3,
+          3,
+          3,
+          3,
+          2
+        ]
+      },
+      "detected": true
+    }
+  ]
 }
