@@ -1,8 +1,8 @@
 {
- "schema": "n11-class2-lane-cost70g-inflight-20261115-v3",
+ "schema": "n11-class2-lane-cost70g-inflight-20261115-v4",
  "title": "n11 class2-lane cost-70g sweep completed: second unswept cost-70 child of the second coverable class-2 target S5 after the cost-70e fold (both parents class 2, c1=0,c2=2,c4=0)",
  "date": "2026-11-15",
- "status": "completed (sweep + certificates); receipts fold pending",
+ "status": "completed (sweep + certificates + receipts fold)",
  "claimed_by": "long-term class2 lane (cost-70e receipts fold session, continuation)",
  "s5": "00000000000000801202000000200000",
  "s6_child": "00000000000100809002000000000800",
@@ -234,6 +234,85 @@
   "cross_engine": "v15 runner (repo blob 8744fc65b6b7cac6bd561403ce4c749e01c51359, pilot 5949 PASS x11): all 8 WIN7 bits loss=true and the 3 heaviest REFUTED bits (6/86/98) loss=false - 11/11 verdicts identical to v16 (class2-lane-cost70g-v15-crosscheck-20261115.jsonl, pushed, v15 total 92,419,285 nodes)",
   "duplicate_root_check": "all 8 WIN7 root hexes code-searched over yuubinnkyoku/kyouen-researches: 8/8 roots 0 hits, new coverage",
   "certificates": "8/8 WIN7 certificates fully extracted (blind) and independently verified (BigInt verifier PASS 8/8, 302,270 rows total); pushed under class2-lane-cost70g-certificates/ with byte-exact blob shas; details in class2-lane-cost70g-win7-certificates-20261115.json (git commit 511228e3f68f8d9af25f76d761faf470af68642d)",
-  "fold": "PENDING - waits on the parallel cost-70f sweep and the head-1227-based cost-65l fold reconciliation; when landed the receipts advance both open class-2 parents (00000000000000801202000000200000 at 28 rows / 2119 and 00000000000000801202010000000000 at 60 rows / 4342)"
+  "fold": "landed (v4): the 8 receipts folded on the canonical head 1249 -> new chain head 1254/6593/520600/4863/384323 by the published fold script recompute_frontier_cost70g_receipts_20261115.py (git blob sha 18b13fa902887a2b7c3e4dd7126244ba44c0dbef); the cost-70g child was already closed at head 1249 (cost-70f bit-84 cross-cover), so this fold proceeds in the warm-hygiene precedent; the second open class-2 parent 00000000000000801202010000000000 advances 58 rows / 4203 -> 53 rows / 3847; parent1 00000000000000801202000000200000 unchanged at 19 rows / 1463; details in the fold block"
+ },
+ "fold": {
+  "folded_by": "long-term class2 lane (cost-70g receipts fold session)",
+  "fold_script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost70g_receipts_20261115.py",
+  "fold_script_blob_sha": "18b13fa902887a2b7c3e4dd7126244ba44c0dbef",
+  "baseline_head": "class-frontier-cost73g-receipts-recompute-20261115.json (1249/6598/520956/4868/384679, git blob sha e4fb98dc8670fbb85786ab02f017a0a95e357648; reproduced byte-identically by runpy inside the fold script)",
+  "chain_head_before": "1249/6598/520956/4868/384679",
+  "chain_head_after": "1254/6593/520600/4863/384323",
+  "receipts": [
+   9,
+   20,
+   29,
+   34,
+   62,
+   70,
+   76,
+   119
+  ],
+  "total_marginal": 33,
+  "total_marginal_in_manifest": 5,
+  "zero_marginal_in_manifest": [
+   9,
+   29,
+   62
+  ],
+  "zero_marginal_receipts": [
+   29
+  ],
+  "child_orbit_closure": "already closed at the 70f fold (bit-84 cross-cover); not closed by this fold",
+  "per_receipt_marginal_in_manifest": {
+   "bit9": 0,
+   "bit20": 1,
+   "bit29": 0,
+   "bit34": 1,
+   "bit62": 0,
+   "bit70": 1,
+   "bit76": 1,
+   "bit119": 1
+  },
+  "marginal_manifest_hexes": {
+   "bit20": "00000000000100003800000008100000",
+   "bit34": "00000000000040809002001000000000",
+   "bit70": "00000000000000801206010000000000",
+   "bit76": "00000000000000801202110000000000",
+   "bit119": "00000000000000801202010000000002"
+  },
+  "bit29_d4_duplicate_note": "the bit-29 root 00000000000100809002000020000800 is D4-canonical to the already-folded cost-70f bit-84 root 00000000001000801202000002200000 (canonical 00000000000100809002000020000800), as recorded by the published cross-lane audit cost70f-70g-71c-cross-lane-d4-overlap-20261115.json; its marginal is exactly 0 (also controlled: folding the 7 non-duplicate receipts gives the same state); the certificate itself remains a valid, independently verified WIN7-D10 proof for its own root and is folded for completeness with set-union semantics",
+  "erratum": "the sweep record's duplicate_root_check was a raw-hex code search over the repo (8/8 roots 0 hits) and therefore reported '8/8 roots 0 hits, new coverage'; in D4 terms the bit-29 root duplicates the folded cost-70f bit-84 receipt root; the claim text in sweep_results.certificates ('8/8 ... new coverage roots') is corrected by this fold block; no coverage count in any chain head is affected (the bit-29 marginal is 0 either way)",
+  "parents_after": {
+   "parent1": "19 rows / 1463",
+   "parent2": "53 rows / 3847"
+  },
+  "parents_lost_rows": {
+   "parent1": [],
+   "parent2": [
+    "00000000000000801202010000000002",
+    "00000000000000801202110000000000",
+    "00000000000000801206010000000000",
+    "00000000000040809002001000000000",
+    "00000000000100003800000008100000"
+   ]
+  },
+  "output_blob_shas": {
+   "head_json": "73890fe34580ec2f869a97a00b3e6400eda30c0a",
+   "ranking_csv": "7397c805ade0295e92356a6fe76fb8a6110bded8",
+   "top_candidates_csv": "2da6422175294fa5a35f8ff33fe96a21f1e839e8"
+  },
+  "head_json_bytes": 13915,
+  "ranking_csv_bytes": 7580,
+  "top_candidates_csv_bytes": 4835,
+  "output_files": [
+   "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost70g-receipts-recompute-20261115.json",
+   "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-s5-ranking-after-cost70g-receipts-20261115.csv",
+   "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-top-candidates-s6-after-cost70g-receipts-20261115.csv"
+  ],
+  "top_candidates_csv_note": "byte-identical to the cost-73g top-candidates CSV (blob 2da6422175294fa5a35f8ff33fe96a21f1e839e8): none of the four spotlighted candidates (best class-4 18/1460, audit-blocked class-2 10/698, best coverable class-2 2/143, second coverable class-2 19/1463) lost rows in this fold; republished under the cost-70g name for per-fold self-containedness",
+  "fold_runs_byte_identical": "4 consecutive runs of the fold script produced byte-identical head JSON and both CSVs",
+  "set_equality_control": "s_after == s_1249 UNION covers(8 cost-70g roots); folding the 7 non-duplicate receipts gives the same state",
+  "unknown_status_after_fold": "11x11 empty board: UNKNOWN. Both two-stone roots {49,60}/{59,60}: UNKNOWN. S2 {59,60}: UNKNOWN. Class 2 and class 4: UNKNOWN. This fold advances manifest bookkeeping only (1254 solved S6 in manifest); it closes no child orbit and solves no S5 parent."
  }
 }
