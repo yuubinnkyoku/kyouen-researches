@@ -11,6 +11,10 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "../../../..");
 const EXP = resolve(ROOT, "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113");
 const manifestPath = resolve(EXP, "output/class2-lane-cost63f-win7-certificates-20261115.json");
 const manifest = JSON.parse(readFileSync(manifestPath, "utf8"));
+const foldPath = resolve(EXP, "output/class-frontier-cost63f-receipts-recompute-20261115.json");
+const fold = JSON.parse(readFileSync(foldPath, "utf8"));
+const foldClaimPath = resolve(EXP, "output/class2-lane-cost63f-fold-inflight-20261115.json");
+const foldClaim = JSON.parse(readFileSync(foldClaimPath, "utf8"));
 const N = 121;
 const FULL = (1n << 121n) - 1n;
 const X = Array.from({ length: N }, (_, i) => i % 11);
@@ -232,6 +236,19 @@ function canonicalD4(mask) {
   return best;
 }
 
+const foldFrontier = fold.frontier_after_cost63f;
+if (foldClaim.status !== "completed") throw new Error("cost63f receipt fold claim is not completed");
+if (foldFrontier.solved_s6_in_manifest !== 1199 ||
+    foldFrontier.unique_remaining_s6 !== 6648 ||
+    foldFrontier.sum_remaining_cost !== 524616 ||
+    foldFrontier.s6_needed_by_open_classes !== 4918 ||
+    foldFrontier.cost_needed_by_open_classes !== 388339 ||
+    fold.totals.total_marginal !== 12 ||
+    fold.totals.total_marginal_in_manifest !== 4 ||
+    fold.totals.child_closed_by_bit !== 85 ||
+    fold.controls.set_equality_after_2 !== "s == s_1195 UNION covers(2 cost-63f roots)") {
+  throw new Error("post-audit cost63f fold record mismatch");
+}
 const certificates = [verifyCertificate(85), verifyCertificate(91)];
 const parentOrbits = new Map();
 for (const bit of [85, 91]) {
@@ -277,11 +294,27 @@ const result = {
     terminal_count: certificates.reduce((s, x) => s + x.terminal_count, 0)
   },
   frontier_impact: {
-    manifest_s6_contribution_before_fold: 0,
-    chain_head: "1195/6652/524884/4922/388607",
-    receipt_fold_status: "in_flight_claimed_by_parallel_class2_lane"
+    at_audit: {
+      manifest_s6_contribution: 0,
+      chain_head: "1195/6652/524884/4922/388607",
+      receipt_fold_status: "in_flight"
+    },
+    subsequent_fold: {
+      chain_head: fold.frontier_after_cost63f.solved_s6_in_manifest + "/" +
+        fold.frontier_after_cost63f.unique_remaining_s6 + "/" +
+        fold.frontier_after_cost63f.sum_remaining_cost + "/" +
+        fold.frontier_after_cost63f.s6_needed_by_open_classes + "/" +
+        fold.frontier_after_cost63f.cost_needed_by_open_classes,
+      marginal: fold.totals.total_marginal,
+      marginal_in_manifest: fold.totals.total_marginal_in_manifest,
+      child_closed_by_bit: fold.totals.child_closed_by_bit,
+      remaining_s6: fold.frontier_after_cost63f.unique_remaining_s6,
+      remaining_cost: fold.frontier_after_cost63f.sum_remaining_cost,
+      s6_needed: fold.frontier_after_cost63f.s6_needed_by_open_classes,
+      cost_needed: fold.frontier_after_cost63f.cost_needed_by_open_classes
+    }
   },
-  interpretation_guard: "These certificates prove only the two individual seven-stone roots WIN within ten plies. The S6 child is not closed in the global manifest until the claimed receipt fold completes; the 11x11 empty root, both two-stone roots, S2, class2 and class4 remain UNKNOWN."
+  interpretation_guard: "The two certificates prove only the individual seven-stone roots WIN within ten plies. The later cost-63f receipt fold closes their shared S6 child in the manifest but does not solve either S5 parent. The 11x11 empty root, both two-stone roots, S2, class2 and class4 remain UNKNOWN."
 };
 
 const out = JSON.stringify(result, null, 2) + "\n";
