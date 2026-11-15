@@ -162,7 +162,7 @@ const result = {
     path: 'research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/' + path,
     git_blob_sha: EXPECTED_BLOBS[key],
   }])),
-  scope: 'Exact integer D4 canonicalization of the 14 roots from the published cost63g sweep audit, their 98 one-stone deletions, and intersection with the target S5\\'s 38 remaining S6 rows at chain head 1199. No game-theoretic value is inferred.',
+  scope: "Exact integer D4 canonicalization of the 14 roots from the published cost63g sweep audit, their 98 one-stone deletions, and intersection with the target S5's 38 remaining S6 rows at chain head 1199. No game-theoretic value is inferred.",
 };
 writeFileSync(resolve(OUT, 'cost63g-parent-lift-frontier-impact-20261115.json'),
   JSON.stringify(result, null, 2) + '\n');
