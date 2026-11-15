@@ -294,3 +294,15 @@ sat4.js 生成は冪等)、kissat 判定は実行ログ c0k3p1b2.txt
 record を再構成した。solver 実行は一度のみ・結果は再実行ではない。
 **教訓: driver 実行中の records.jsonl は append (>>) のみ行い、
 in-place 書き換え・全書き直しは driver 停止中に限定すること。**
+
+
+## 追記: 16:05Z 実行環境停止 — x2 スイープ打ち切りと resume 手順
+
+16:05Z 頃に再び bash・file_system が全面停止した (GitHub API のみ生存・
+13:41Z と同種の停止)。c0k3p1b8 の kissat 実行中だった。
+**b2..b7 (全 UNSAT・43.2s..102.6s) は push 済み** (records 86行・5c440d57)。
+打ち切り分は決定的に再現可能:
+scripts + sweepp0x2.sh + output/records.jsonl を作業 dir に展開し
+`nohup setsid bash -c 'bash sweepp0x2.sh c0k3p1; bash sweepp0x2.sh c0k3p0' > output/sweepp0x2_run.log 2>&1 < /dev/null &`
+(b2..b7 は records で skip され b8 以降から再開。起動前にプロセス走査で
+二重起動を防止のこと。records への修復は driver 停止中のみ)。
