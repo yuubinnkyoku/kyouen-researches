@@ -12,6 +12,11 @@
 //          only to cross-check the SA pin-sweep record (p1 83 / p0 86 cases).
 //      Geometry: a circle meets a row (line) in <=2 points, so besides (y0,m-1)
 //      the circle has at most one row-y0 cell; no extra feasibility filter needed.
+//   Scope of the current circle-only cover: w=4, q=5 and exact deficient-row k<=3.
+//      A nonhorizontal line through target has at most one point in each of 4 rows
+//      (<=4 total including target); the horizontal deficient row has only k<=3 stones
+//      < q-1. Thus no line can block target. Do not reuse listcases outside this scope
+//      without adding line blockers. B cases may overlap if several circles block e.
 //   Complete: any maximal config in the bucket has (y0,m-1) as a stone (covered by A)
 //   or empty with a blocker circle whose stone set is pinned by some B instance.
 //   All-UNSAT over A + B proves the bucket UNSAT.
