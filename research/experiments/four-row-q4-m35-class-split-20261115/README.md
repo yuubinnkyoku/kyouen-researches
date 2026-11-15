@@ -113,3 +113,16 @@ INDET/OOM であり不在主張ではない。生記録は
   除去済みで、resume 時に cap 700s で再実行される。
 - 同レーンの (4,21,5) 姉妹掃引 (four-row-q5-m21-class-split-20261115) は
   この修正版 driver 構造で運用中。
+
+
+## 追記 (2026-11-15 bugfix v2: skip 経路の per-key SAT 判定)
+
+前記 (1) の修正 (対照直後の SATFOUND=0 リセット) は**不十分**だった。
+真の root cause は run() の skip 経路
+`done_key "$key" && { grep -q "\"result\":\"SAT\"" records.jsonl && SATFOUND=1; … }`
+が records 全体から SAT を探す点にあり、**対照の SAT record が存在する限り
+resume 後の最初の skip で SATFOUND=1 が立って掃引が即終了する**
+(姉妹掃引 four-row-q5-m21-class-split-20261115 の再開時に実際に発生・
+1回の誤終了 SWEEP_BATCH_DONE satfound=1 を観測して発見)。
+v2 では skip 時の SAT 判定を同一 key の record に限定した。幸い
+本掃引 (sweep35) では対照が INDET だったため一度も誤終了していない。
