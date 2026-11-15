@@ -1290,3 +1290,19 @@ head-1216（cost-63g fold後のcanonical chain head 1216/6631/523382/4901/387105
 解消計数はmanifest被覆の前進であり、盤全体の勝敗ではない。WIN7証明書は個別7石rootの深さ10以内の先手勝ちのみを証明する。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class2・class4は引き続き **UNKNOWN**。
 
 詳細: [sweep log](../../log/2026-11-15-n11-class2-lane-cost73f-sterile-sweep.md)、[sweep audit](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73f-sweep-audit-20261115.json)、[completed claim](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73f-inflight-20261115.json)。
+
+## 2026-11-15: cost-74f sterile sweep — best class-4 blocker S5の最安2行が連続STERILE・74 REFUTED-D10・frontier不変1216
+
+head-1216（canonical chain head 1216/6631/523382/4901/387105不変）のtop-candidatesで、cost-73fに続く**class-4 frontier 2度目のsweep**: best class-4 blocker S5 `00000000020000003800000080000000`（18 orbits/1460）の最安未sweep行 cost-74 child `00000000020000003800000080000020`（stones [5,31,59,60,61,89]・cost-74a–74eは他行で使用済み）をcost-74fとしてsweepした。
+
+- **claim前検証（head 1216基準）**: exact-integer D4正準化（8要素二面体群）で子の6個の一石削除を照合 → 開親3個（lift 5: best blocker 18/1460〔mask 4〕・lift 31: `00000000000000801082000000080000` 79/6036〔**mask 5 = class-1+4混合**〕・lift 89: `00000000000000003800000000800020` 69/5346〔mask 5〕・lift 59/60/61は閉行）→ maskビットごと需要 c1=2, c2=0, c4=3（head-1216 top-candidates CSVと一致）。**73f（純粋class-4需要3）と対照的に、本行は2個のmask-5開親を通じてclass-1需要も同時に運ぶ**。IN FLIGHT claim先行push（commit 4bc32165）後に着手。
+- **sweep結果（v16 d10・cap 1e9・andclose 1・10バッチ・pilot 3402×10全PASS）**: **74/74候補・WIN7-D10 0件・74 REFUTED-D10・0 capped・総nodes 59,017,987**（74候補==独立Bareiss列挙 bit-exact）。terminal rangeは**全74候補 [13,17]**（73fにあった早期終端行はなし）。batch-6 determinism rerun node-exact、v15交差エンジンのアンカーbits 3/53/118はloss=false（nodes 4013034/4710260/1989273・pilot 5949）。
+- **独立監査**: `audit_cost74f_raw_sweep_20261115.py`（stdlibのみ・Bareiss再実装）が12 rawファイルから全件再導出（候補74==claim列挙・各bit 1回・batch-6一致・v15一致・深さ10境界検査合格）に加え、**一石削除D4正準化6件を監査内で独立再導出**（lift 5/31/89の開親・lift 59/60/61の閉行を全件照合）。2回実行byte-identical（md5 d697aa06…・remote blob 9911a5cc…照合済み）。raw 12ファイルもremote git blob sha全件byte-exact照合済み。
+- **STERILE（負の実験事実）**: WIN7-D10 receiptなし・fold材料なし・**canonical chain head 1216/6631/523382/4901/387105は不変**。childは3開親（best blocker〔mask 4〕と2個のmask-5行）の未解決S6行のまま。REFUTED-D10はLOSS証明ではなく、この行の反証閉鎖には深さ>10の証拠が必要。
+- **class-4 frontierで2行連続STERILE**: best class-4 blocker S5の最安2行（cost-73・cost-74行・計147候補・約1.1億nodes）がともに深さ10以内の先手勝ち候補ゼロ。「class-4 frontier行では深さ10以内のWIN7材料が稀」という作業仮説が強化され、class-4 blocker閉鎖には深さ>10探索か構造的議論が必要になる可能性が高い（観測ベースの仮説・結論ではない）。次候補は同S5の2番目のcost-74行 `00000000020000003800000088000000`（c1=0,c2=1,c4=2）とcost-75行 `00000000020000003800020080000000`（c1=0,c2=0,c4=3）。
+- **出版過程の記録**: 監査JSON・claimとも初回pushは手書きtemplate形式だったため、監査JSONを公開監査スクリプトが生成する形式（byte再現可能・md5 d697aa06…）に標準化して再pushした（JSONセマンティクス不変・レイアウトのみの訂正・73f監査訂正と同じ透明性基準）。標準化後のclaimはremote blob `c3f8d9fe…`（全数値・全記述を再取得して検証済み）。
+- 並走（着手時点）: cost-65l（bits 21/48証明書出版済み・foldは未）・cost-67c（bits 64/96証明書出版済み・foldは未）・cost-78a・69g/65j/74eはin flightで本sweepと衝突なし。fold時はfold時点のcanonical headへのrebase必須。
+
+解消計数はmanifest被覆の前進であり、盤全体の勝敗ではない。WIN7証明書は個別7石rootの深さ10以内の先手勝ちのみを証明する。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class2・class4は引き続き **UNKNOWN**。
+
+詳細: [sweep log](../../log/2026-11-15-n11-class2-lane-cost74f-sterile-sweep.md)、[sweep audit](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74f-sweep-audit-20261115.json)、[completed claim](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74f-inflight-20261115.json)。
