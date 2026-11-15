@@ -6,7 +6,7 @@ status: proved
 topics: [geometry, rectangles]
 aliases: []
 scope: "任意の行数 w・点数 q ≥ 2・行 0..w-1 の有限石集合 S。S が幅 m0 で safe+maximal なら、同一石集合は max_x(S) より右で最初の非ブロックセルを含む列 R(S)（なければ無限）までの全幅 m0 ≤ m' ≤ R(S) で safe+maximal であり、m' > R(S) では極大でない。行石数は不変なので行欠損 witness はこの全区間の witness。R(S) より先の witness 有無には何も言わない。"
-evidence: "全称数学的証明: (1) 禁止配置（q 石の共線/共円）は石集合のみで決まり盤幅に依存しない。(2) 空点 c の blocked 判定（c を通る曲線が S の石をちょうど q-1 個含む）は (S,c) のみで決まり、旧列のブロック状態は幅不変。極大性の定義とこの幅不変性から到達幅 R(S) の主張が従う。独立 Fraction 実装（scripts/append_criterion.py）が published 構成 witness 3件を全て機械再現: (6,4) m=46 witness は R=46・停止 (46,0)（published 記録と一致）・同一17石が幅40..46 の witness、(4,4) m=32 witness は R=33・停止 (33,2)、(4,4) m=34（+1シフト）は R=34・停止 (34,2)。陰性対照2件（石移動 → unsafe/非極大）正検出・2回実行 byte-identical。"
+evidence: "全称数学的証明: (1) 禁止配置（q 石の共線/共円）は石集合のみで決まり盤幅に依存しない。(2) 空点 c の blocked 判定（c を通る曲線が S の石をちょうど q-1 個含む）は (S,c) のみで決まり、旧列のブロック状態は幅不変。極大性の定義とこの幅不変性から到達幅 R(S) の主張が従う。独立 Fraction 実装（scripts/append_criterion.py）が published 構成 witness 3件を全て機械再現: (6,4) m=46 witness は R=46・停止 (46,0)（published 記録と一致）・同一17石が幅40..46 の witness、(4,4) m=32 witness は R=33・停止 (33,2)、(4,4) m=34（+1シフト）は R=34・停止 (34,2)。陰性対照2件（石移動 → unsafe/非極大）正検出・2回実行 byte-identical。さらに published witness 3件で一致: (4,5) m=20 は R=20・停止 (20,3)（m=21 が真の前線であることを確定）、(5,7) m=18 は R=18・停止 (18,0)（witness-free 帯 19..37 と整合）、(5,6) m=22 は R=22・停止 (22,0)（surgery レーンの未遮断セル列挙 (22,0) と独立実装間で一致・m=23 は無料延伸不可）。全 6 witness で停止セルは行石数最小の行にある（観察・定理化はしていない）。"
 relations:
 - type: verifies
   target: K0833
@@ -30,6 +30,15 @@ artifacts:
 - path: research/experiments/free-column-append-criterion-20261115/output/criterion-4x4-m34-witness.json
   role: data
   note: "(4,4) m=34 witness (+1 シフト): R=34・停止 (34,2)。前線が m=35 である理由。"
+- path: research/experiments/free-column-append-criterion-20261115/output/criterion-4x5-m20-witness.json
+  role: data
+  note: "(4,5) m=20 witness: R=20・停止 (20,3)。m=21 class-split 掃引が真の前線に向かっていることの構造的根拠（無料延伸不可）。"
+- path: research/experiments/free-column-append-criterion-20261115/output/criterion-5x7-m18-witness.json
+  role: data
+  note: "(5,7) m=18 witness: R=18・停止 (18,0)。witness-free 帯 {19..37} との整合。"
+- path: research/experiments/free-column-append-criterion-20261115/output/criterion-5x6-m22-witness.json
+  role: data
+  note: "(5,6) m=22 witness (K0852): R=22・停止 (22,0)・witness_widths [21,22]。m=23 は無料延伸不可。surgery レーンの独立実装が同じ単一未遮断セル (22,0) を指すクロスチェック。"
 - path: research/experiments/free-column-append-criterion-20261115/output/criterion-6x4-m46-neg1.json
   role: data
   note: "陰性対照1: 石 (21,0)→(22,0) で 4石円生成（unsafe 検出）。"
@@ -95,6 +104,20 @@ blocking 直線は (c, s) 族、blocking 円は石三つ組族）:
   前線 m=35 が真の前線である理由と一致。
 - 陰性対照: 石 (21,0)→(22,0) は unsafe（4石円）・(23,0) は
   safe だが旧列 3 セル非ブロック（非極大）。いずれも正しく棄却。
+- (4,5) m=20 witness（15石・rows [4,4,4,3]・maxx=19）: R=20・停止 (20,3)。
+  witness_widths [20,20] — **m=21 は無料延伸不可の真の前線**であり、
+  2026-11-15 の m=21 class-split 掃引は無料では済まないことが確定。
+- (5,7) m=18 witness（29石・rows [5,6,6,6,6]・maxx=17）: R=18・停止 (18,0)。
+  witness-free 帯 {19..37} の左端が真の前線であることと整合。
+- (5,6) m=22 witness（24石・rows [4,5,5,5,5]・maxx=20）: R=22・停止 (22,0)。
+  witness_widths [21,22]（published 帯 m=15..22 と整合）。
+  criterion の未遮断セル (22,0) は、five-row-q6 surgery レーンが
+  別実装（T曲線完全列挙）で報告した「5×23 移植で未遮断セルは (22,0) のみ」
+  と同一結論 — **独立実装間クロスチェック**。m=23 longcap 探索は無料延伸不可。
+- **停止セルの位置（観察・6/6・定理化はしていない）**: published witness
+  全 6 件で停止セルの行は行石数最小（= 欠損）行: (6,4)→y0・(4,4)→y2×2・
+  (4,5)→y3・(5,7)→y0・(5,6)→y0。直観的説明（欠損行は石が少なく
+  遠方列を blocked する q−1 石曲線が立ちにくい）はあるが証明は将来課題。
 - 決定性: 同一入力 2 回実行 byte-identical。
 
 ## (6,4) m=46 witness の js+py 検証完遂（K0833 保留項目の解消）

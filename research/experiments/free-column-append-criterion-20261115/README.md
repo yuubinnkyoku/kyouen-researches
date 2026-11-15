@@ -49,6 +49,9 @@ R(S) の次の列が次の真の前線。
 | (6,4) m=46 構成 witness（17石・maxx=39） | ✓ maxline=3/maxcirc=3 | **46** | (46,0) | 「free append は m=47 で停止・(46,0) uncovered」に一致 |
 | (4,4) m=32 witness（11石・maxx=26） | ✓ | **33** | (33,2) | m=33 off=0 延伸の根拠・m=34 でシフトが必要な理由と一致 |
 | (4,4) m=34 witness（= m=32 の +1 シフト） | ✓ | **34** | (34,2) | m=34 off=1 と一致・前線が m=35 である理由と一致 |
+| (4,5) m=20 witness（15石・maxx=19） | ✓ maxline=4/maxcirc=4 | **20** | (20,3) | **(4,5) の m=21 は無料延伸ではなく真の前線**（m=21 class-split 掃引の必要性を確定） |
+| (5,7) m=18 witness（29石・maxx=17） | ✓ | **18** | (18,0) | witness-free 帯 {19..37} の左端が真の前線であることと整合（R=18 で即停止） |
+| (5,6) m=22 witness（24石・maxx=20） | ✓ | **22** | (22,0) | m=23 は無料延伸不可。surgery レーン記録「5×23 移植で safe かつ未遮断セルは (22,0) のみ」と独立実装が同一セルを指す |
 
 - (6,4) の同一17石集合は **幅 40..46 全て**で行欠損極大 witness
   （witness_widths [40,46]）。published の m=45→46 延伸はこの一般則の
@@ -57,6 +60,17 @@ R(S) の次の列が次の真の前線。
   (22,0) は unsafe（4石円を生成）・(23,0) は safe だが旧列 3 セル非ブロック
   （非極大）。いずれも witness_widths=[] として正しく棄却。
 - 決定性: 同一入力の2回実行が byte-identical。
+- **停止セルは常に欠損行（観察・6/6・定理化はしていない）**:
+  published 構成 witness 全 6 件で、自由列追加の停止セルの行は
+  行石数が最小の行（= 欠損行）と一致: (6,4)→y0（2石）・(4,4)→y2（2石）×2・
+  (4,5)→y3（3石）・(5,7)→y0（5石）・(5,6)→y0（4石）。
+  欠損行は石が少なく遠方列を blocked する q−1 石曲線が立ちにくい、
+  という直観と整合するが証明は将来課題。
+- **(5,6) m=22 witness の独立クロスチェック**: criterion の
+  first_unblocked=(22,0) は、five-row-q6 surgery レーンが
+  別実装（T曲線完全列挙）で報告した「5×23 移植で未遮断セルは (22,0) のみ」
+  と同一結論。2つの独立実装が同じ単一セルを指した。
+  witness_widths [21,22] は published 帯 m=15..22 と整合。
 
 ## (6,4) m=46 witness の js+py 2系統検証（保留項目の完遂）
 
@@ -74,7 +88,8 @@ K0833 の artifact note に「js+py 2系統検証は bash 環境復旧後に実�
 ## files
 
 - `scripts/append_criterion.py` — 補題判定器（独立実装・Fraction）。
-- `output/criterion-*.json` — witness 3件・陰性対照2件の走査結果。
+- `output/criterion-*.json` — witness 6件・陰性対照2件の走査結果
+  （6x4-m46・4x4-m32・4x4-m34・4x5-m20・5x7-m18・5x6-m22）。
 - `output/m46-js-py-verification-20261115.json` — js+py 検証記録
   （research/experiments/four-row-q4-q5-frontier-20261115/output/q4-w6-construct-m46/
   にも同一内容を配置）。
@@ -88,8 +103,8 @@ K0833 の artifact note に「js+py 2系統検証は bash 環境復旧後に実�
 
 ## resume
 
-- (4,5)/(4,4) 前線レーン: m=20/m=34 witness に append_criterion.py を
-  走らせて R(S) を先に知ることができる（(4,4) m=34 は R=34 で停止済み・
-  m=35 は新規探索が必要な理由が補題で確定）。
+- (4,5)/(4,4)/(5,6)/(5,7) 前線 witness への走査は完了（R=20/34/22/18 —
+  いずれの前線も無料延伸不可であり、m=21/(4,4) m=35/m=23/{19..37} は
+  新規探索が必要な真の前線であることが確定）。
 - 各 band-closure レーン: 新 witness を得るたびに R(S) を計算すれば
-  無料延伸幅が即座にわかる。
+  無料延伸幅が即座にわかる。次の候補: (7,6) m=31 witness（M_{7,6} ∈ [32,862]）。
