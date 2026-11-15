@@ -1,0 +1,38 @@
+{
+ "B1_closure": {
+  "box_states": 500,
+  "violations": 0
+ },
+ "B2_fixed_point": {
+  "states": 500,
+  "violations": 0,
+  "value_set": [
+   0,
+   1,
+   2
+  ],
+  "sup_H": 2,
+  "count_H_equal_2": 101,
+  "count_H_equal_3": 0
+ },
+ "B3_unconstrained_agreement": {
+  "states": 500,
+  "violations": 0
+ },
+ "B4_saturation": {
+  "checked": 1470,
+  "violations": 0
+ },
+ "B5_published_table_crosscheck": {
+  "rows": 64,
+  "extra_saturated_lookups": 166,
+  "mismatches": 0
+ },
+ "B6_board_grids": {
+  "combos": 44,
+  "states": 673,
+  "mismatches": 0,
+  "examples": []
+ },
+ "overall": "PASS"
+}
