@@ -52,3 +52,18 @@ IN FLIGHT (records.jsonl に増分追記)。
 - resume: scripts + sweep21.sh + output/records.jsonl を作業 dir に展開し
   `nohup setsid bash sweep21.sh > output/sweep21.log 2>&1 < /dev/null &`
   (起動前にプロセス走査で二重起動防止のこと)。
+
+
+## 追記: driver v2 (skip 経路の per-key SAT 判定)
+
+初版 `sweep21.sh` の skip 経路 `done_key && { grep -q "\"result\":\"SAT\"" records … }`
+は records 全体から SAT を探すため、**対照 (SAT) の record が存在する限り
+最初の skip で SATFOUND=1 になり掃引が即終了する** bug があった
+(初回起動時は全インスタンス未記録で skip が起きなかったため、
+対照の decode までは正常に進んだ)。
+v2 では skip 時の SAT 判定を **同一 key の record に限定**した
+(`grep "\"key\":\"$key\"" | grep -q SAT`)。
+対照直後の SATFOUND=0 リセットに加えて、resume 時の対照 skip でも
+掃引が続行するようになった。
+同 bug は four-row-q4-m35-class-split-20261115 の sweep35.sh にもあり、
+同日 v2 修正済み (そちらは対照が INDET だったため未顕在化だった)。

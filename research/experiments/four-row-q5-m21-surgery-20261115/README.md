@@ -62,3 +62,24 @@ surgery4.js の buildCensus4 q≤w 完全性検査は 8/8 PASS 済みで (4,10,5
 
 - absence の決着は class-split 掃引 (four-row-q5-m21-class-split-20261115) が担う。
 - 3石編集 (sd≤6) 拡張は (5,6) 5×23 と同様に構成数が急増するため、掃引結果を見てから判断。
+
+
+## 追記: sd≤6 (追加3・除去3) 拡張 — こちらも完全列挙負
+
+同じ seed・同じ targetMax=15 で編集上限を (2,2) → (3,3) に拡張した
+(`node surgery4.js 4 5 21 scripts/seed20.json 3 3 15 [offX]`)。
+構成数は (5,6) m=22 surgery の (3,3) と同規模で、両埋め込みとも
+~8秒・決定的に完了。
+
+| 埋め込み | nP | nPpruned | nRmLeaves (=nSafe) | nMaximal | nWitness | elapsed |
+|---|---|---|---|---|---|---|
+| offX=0 | 54,809 | 20,478 | 1,250,587 | 0 | 0 | 8,033ms |
+| offX=1 | 54,809 | 20,619 | 1,256,103 | 0 | 0 | 8,024ms |
+
+**系 (有限・局所・強化)**: m=20 witness の両水平埋め込みから
+3+3 石編集以内 (sd≤6) で到達できる 4×21 の ≤15石 witness は存在しない。
+fail 内訳は offX=0 が unblocked_hole 718,846・T′ 未遮断 52,521、
+offX=1 が unblocked_hole 633,894・T′ 未遮断 219,916 で、
+safe でも maximality が全域で失敗する構造は (2,2) と同一。
+(4,4) m=35 は (2,2) で止めたが、本幅は (3,3) まで完了済み。
+(4,4) m=35 の (3,3) 実施可否は class-split 掃引の進展と合わせて判断する。

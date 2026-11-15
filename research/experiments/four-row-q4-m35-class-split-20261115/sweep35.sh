@@ -18,7 +18,7 @@ SATFOUND=0
 done_key() { grep -s -q "\"key\":\"$1\"" "$OUT/records.jsonl"; }
 run() { # key w m Dspec extra
   local key=$1 W=$2 M=$3 Dspec=$4 extra=$5
-  done_key "$key" && { grep -s -q "\"result\":\"SAT\"" "$OUT/records.jsonl" && SATFOUND=1; return 0; }
+  done_key "$key" && { grep -s "\"key\":\"$key\"" "$OUT/records.jsonl" | grep -s -q "\"result\":\"SAT\"" && SATFOUND=1; return 0; }
   local cnf="$OUT/${key}.cnf" log="$OUT/${key}.txt"
   local meta
   meta=$(node scripts/sat3.js $W $M 4 --class="$Dspec" $extra "$cnf") || { echo "{\"key\":\"$key\",\"genfail\":true,\"date\":\"$(date -u +%FT%TZ)\"}" >> "$OUT/records.jsonl"; return 1; }
