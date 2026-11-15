@@ -92,9 +92,21 @@
     "terminal_count": 20962
   },
   "frontier_impact": {
-    "manifest_s6_contribution_before_fold": 0,
-    "chain_head": "1195/6652/524884/4922/388607",
-    "receipt_fold_status": "in_flight_claimed_by_parallel_class2_lane"
+    "at_audit": {
+      "manifest_s6_contribution": 0,
+      "chain_head": "1195/6652/524884/4922/388607",
+      "receipt_fold_status": "in_flight"
+    },
+    "subsequent_fold": {
+      "chain_head": "1199/6648/524616/4918/388339",
+      "marginal": 12,
+      "marginal_in_manifest": 4,
+      "child_closed_by_bit": 85,
+      "remaining_s6": 6648,
+      "remaining_cost": 524616,
+      "s6_needed": 4918,
+      "cost_needed": 388339
+    }
   },
-  "interpretation_guard": "These certificates prove only the two individual seven-stone roots WIN within ten plies. The S6 child is not closed in the global manifest until the claimed receipt fold completes; the 11x11 empty root, both two-stone roots, S2, class2 and class4 remain UNKNOWN."
+  "interpretation_guard": "The two certificates prove only the individual seven-stone roots WIN within ten plies. The later cost-63f receipt fold closes their shared S6 child in the manifest but does not solve either S5 parent. The 11x11 empty root, both two-stone roots, S2, class2 and class4 remain UNKNOWN."
 }
