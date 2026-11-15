@@ -265,8 +265,12 @@ function verify(spec) {
   return result;
 }
 
-if (SWEEP.candidates!==63 || SWEEP.win7_count!==14 || SWEEP.refuted_count!==49 || SWEEP.capped_count!==0) {
+if (SWEEP.candidates!==63 || SWEEP.win7_count!==14 || SWEEP.refuted_count!==49 || SWEEP.capped_count!==0 ||
+    SWEEP.root_orbit_check.distinct_d4_orbits!==14) {
   throw new Error("cost63g sweep audit changed");
+}
+for (const spec of SPECS) {
+  if (!SWEEP.win7_d10_bits.includes(spec.bit)) throw new Error("bit absent from WIN7 sweep set: " + spec.bit);
 }
 const results=SPECS.map(verify);
 if (new Set(results.map(x=>x.d4_canonical_hex)).size!==results.length) throw new Error("D4 duplicate among six roots");
