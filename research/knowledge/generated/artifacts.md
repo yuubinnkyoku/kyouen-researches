@@ -15073,6 +15073,18 @@
 ## [research/experiments/vertical-fiber-t3-q4-q6-grundy-20261115/verify_t3_q456.py](../../../research/experiments/vertical-fiber-t3-q4-q6-grundy-20261115/verify_t3_q456.py)
 
 - [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (verifier): ラベル付き占有ベクトルと正占有多重集合を独立生成する再帰mex検証器
+## [research/experiments/vertical-fiber-t3-q7-full-classification-20261115/output/audit.json](../../../research/experiments/vertical-fiber-t3-q7-full-classification-20261115/output/audit.json)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (data): 228+88組・26,334+179,740状態の二方式監査集計
+## [research/experiments/vertical-fiber-t3-q7-full-classification-20261115/report.md](../../../research/experiments/vertical-fiber-t3-q7-full-classification-20261115/report.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (proof): t=3・q=7・w≥1・m≥2の純ファイバーゲーム全安全局面の閉形式Grundy分類の全証明と64状態普遍残余テーブル
+## [research/experiments/vertical-fiber-t3-q7-full-classification-20261115/t3q7_formulas.py](../../../research/experiments/vertical-fiber-t3-q7-full-classification-20261115/t3q7_formulas.py)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (verifier): 分類閉形式の実装（E_TABLEリテラル内蔵・二方式監査の被検験側）
+## [research/experiments/vertical-fiber-t3-q7-full-classification-20261115/verify_t3_q7_full.py](../../../research/experiments/vertical-fiber-t3-q7-full-classification-20261115/verify_t3_q7_full.py)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (verifier): 多重集合・ラベル付き両エンジンの独立再帰mex監査と閉ボックス230状態mex固定点の完全検査器
 ## [research/experiments/width17-20-circle-point-bound-20261112/output/width17_20_circle_bound.json](../../../research/experiments/width17-20-circle-point-bound-20261112/output/width17_20_circle_bound.json)
 
 - [K0778](../items/K0778-width17-20-circle-point-bounds.md) (data): 全数値の機械出力
@@ -15937,6 +15949,9 @@
 ## [research/log/2026-11-15-vertical-fiber-t3-q4-q6-grundy.md](../../../research/log/2026-11-15-vertical-fiber-t3-q4-q6-grundy.md)
 
 - [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (log): t=3・q=4..6分類の選定・証明・監査・限界と次の課題
+## [research/log/2026-11-15-vertical-fiber-t3-q7-full-classification.md](../../../research/log/2026-11-15-vertical-fiber-t3-q7-full-classification.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (log): t=3・q=7全局面分類の選定・証明・監査と並走の任意t上界との整合確認
 ## [research/log/2026-11-16-n11-class2-lane-cost62a-sweep-certificates-and-fold.md](../../../research/log/2026-11-16-n11-class2-lane-cost62a-sweep-certificates-and-fold.md)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): cost62aのsweep・6証明書抽出・二独立検証・第二候補S5 39→34行foldと第二target S5のdepth-10 receipt限界
