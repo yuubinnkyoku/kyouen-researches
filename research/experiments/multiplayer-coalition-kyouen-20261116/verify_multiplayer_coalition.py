@@ -35,6 +35,16 @@ Scope of this verifier (finite, machine-verified):
     as bitmasks and derives children by a direct mask pass. Both enumerate the
     full safe-position DAG independently and must agree exactly.
   * Rotation pairs (w,m) vs (m,w) must agree on all reported invariants.
+  * 2xm q=4 family root characterization (m=1..12, r=2..8): the census is
+    extended to m=9..12 (uniform C=6 boards, independently replicating the
+    K0069 all-maximal-6-stone theorem on those m), and the root coalition
+    arrays are computed for every r=2..8. Machine-checked pattern: on the
+    non-uniform boards (m=4..8) a solo forced last-move win against the
+    coalition exists exactly at (m=4,r=3,P1), (m=8,r=3,P2), (m=8,r=4,P1)
+    (no solo forced win for any other r=3..8); force-targetable players
+    form the full possible-loser set for every r=4..8 and a specific
+    subset for r=3 (machine-checked per board). On the uniform boards the
+    root arrays equal the frozen prediction for every r.
 
 Not claimed: anything about boards not listed; multiplayer nimbers; payoff or
 ranking conventions; continuation after the loser is fixed; any statement
@@ -474,7 +484,7 @@ def main():
     # q=4 fixed-width family (w rows x m columns)
     for m in (1, 2, 3, 4):
         boards.append((1, m, 4))
-    for m in range(1, 9):
+    for m in range(1, 13):
         boards.append((2, m, 4))
     for m in range(1, 7):
         boards.append((3, m, 4))
@@ -557,6 +567,14 @@ def main():
         e = entries[f"2x{m}q4"]
         assert_close(f"K0069_2x{m}_first_lose", e["root"]["coalition_winner"]["2"][0] == 0)
         assert_close(f"K0069_2x{m}_grundy_zero", e["root"]["grundy_empty"] == 0)
+    # K0069 uniformity independently replicated for m=9..12:
+    # every maximal set has exactly 6 stones (proved for all m>=9).
+    for m in (9, 10, 11, 12):
+        e = entries[f"2x{m}q4"]
+        assert_close(f"K0069_2x{m}_uniform6",
+                    e["maximal_size_histogram"].keys() == {"6"}
+                    and e["maximal_size_gcd_delta"] == 0
+                    and e["root"]["possible_added_stones"] == [6])
     # K0071: 3xm q=5 first player wins iff m in {1,3} (m<=5)
     for m in (1, 2, 3, 4, 5):
         e = entries[f"3x{m}q5"]
@@ -579,6 +597,66 @@ def main():
     ]
     for a, b in pairs:
         assert_close(f"rotation_pair_{a}_{b}", rotation_key(entries[a]) == rotation_key(entries[b]))
+
+    # ---- 2xm q=4 family root characterization (m=1..12, r=2..8) -------------
+    # Root-only view with the full loser range: for every m the root Surv/Win
+    # arrays are recomputed for r=2..8 (the census DP itself stops at r=4).
+    family_rows = []
+    family_checks = {}
+
+    def fam_check(name, cond):
+        family_checks[name] = bool(cond)
+        if not cond:
+            raise AssertionError(f"family check failed: {name}")
+
+    expected_wins = {
+        4: {3: [1]},
+        8: {3: [2], 4: [1]},
+    }
+    expected_targeted_r3 = {
+        4: [2], 5: [2], 6: [0, 2], 7: [0, 2], 8: [0],
+    }
+    for m in range(1, 13):
+        board = Board(2, m, 4)
+        pa = engine_a_positions(board)
+        root = 0
+        win_by_r, targ_by_r = {}, {}
+        for r in range(2, 9):
+            surv = coalition_dp(pa, r, "surv")
+            win = coalition_dp(pa, r, "win")
+            win_by_r[str(r)] = [k for k in range(r) if win[root][k]]
+            targ_by_r[str(r)] = [k for k in range(r) if not surv[root][k]]
+        hist = entries[f"2x{m}q4"]["maximal_size_histogram"]
+        uniform = len(hist) == 1
+        fam_check(f"family_engine_positions_2x{m}",
+                  len(pa) == entries[f"2x{m}q4"]["safe_positions"])
+        if uniform:
+            c = int(next(iter(hist)))
+            for r in range(2, 9):
+                fam_check(f"family_frozen_2x{m}_r{r}",
+                          win_by_r[str(r)] == [(c - 1) % r]
+                          and targ_by_r[str(r)] == [c % r])
+        else:
+            for r in range(3, 9):
+                fam_check(f"family_win_pattern_2x{m}_r{r}",
+                          win_by_r[str(r)] == expected_wins.get(m, {}).get(r, []))
+            fam_check(f"family_targeted_r3_2x{m}",
+                      targ_by_r["3"] == expected_targeted_r3[m])
+            for r in range(4, 9):
+                # r>=4: force-targetable == possible losers minus solo forced
+                # winners (Win implies Surv excludes the forced winner)
+                possible = sorted({l % r for l in
+                                   entries[f"2x{m}q4"]["root"]["possible_added_stones"]}
+                                  - set(win_by_r[str(r)]))
+                fam_check(f"family_targeted_full_2x{m}_r{r}",
+                          targ_by_r[str(r)] == possible)
+        family_rows.append({
+            "m": m,
+            "uniform": uniform,
+            "C": int(next(iter(hist))) if uniform else None,
+            "root_win_by_r": win_by_r,
+            "root_targeted_by_r": targ_by_r,
+        })
 
     # per-board sanity: engines agree and universal checks pass everywhere
     for key, e in entries.items():
@@ -628,6 +706,15 @@ def main():
 
     audit = {
         "table_checks": table_checks,
+        "family_2xm_q4_root": {
+            "rows": family_rows,
+            "checks": family_checks,
+            "corollary_note": ("uniform boards (m=1,2,3 and m>=9 for all m by K0069): "
+                               "root outcome frozen, coalition powerless for every r; "
+                               "m>=9 part is universal for all r by K0069 + frozen collapse, "
+                               "machine-checked here for m=9..12; non-uniform pattern is a "
+                               "finite computation for m=4..8, r=2..8"),
+        },
         "boards": [entries[k] for k in sorted(entries)],
         "anchors": anchor_results,
         "meta": {
