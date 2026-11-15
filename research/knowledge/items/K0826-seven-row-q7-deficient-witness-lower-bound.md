@@ -48,10 +48,16 @@ artifacts:
   note: "verified consolidated machine outputs: twoEdit singles 18,942 (13,725 okZ + 5,217 coverage) + pairs 99,326 (15,654 shared + 83,672 coverage) -> 0; (1,3) line-addition 149,940 (90,540 safety-gate + 59,400 coverage, gate 60/60 direct-brute UNSAFE confirm) + T-addition 10,660 -> 0; line-triple (3,3) 554,400 total (550,320 okZ-gated) -> 4,080 valid (1,430 shared + 2,650 coverage) -> 0; coverage targeted agreement 150/150 + 80/80 + 80/80 + 100/100; (2,3) complete: 10,660 R -> 0 witnesses (370 r3>=2 blocking-lemma rejects, 3,150 r3=1 forced-line-pair coverage wholesale, 115 wholesale + 4,320 HardU-intersection R rejects + 14,948 z-okZ + 55,638 per-z coverage-intersection rejects, 0 pairs through coverage; targeted cov 36/36 + zok 30/30 + line 23/23; machine script scripts/m27_surgery_two_add_three_remove.ts)"
 - path: research/experiments/seven-row-q7-m27-surgery-20261115/scripts/m33_machine.ts
   role: verifier
-  note: "(3,3) general-space complete case-split machine (modes facts/L3/L3ctl/G/C/Cctl/L2f1/L1f2, chunkable R-ranges, CTL sampling built in); two CTL-helper index-space defects (S2of cells[E[a]] and safeA cov6[E[a]]) found by CTL disagreement sampling + triage dumps and fixed before the canonical run recorded here"
+  note: "(3,3) general-space complete case-split machine (modes facts/L3/L3ctl/G/C/Cctl/L2f1/L1f2, chunkable R-ranges, CTL sampling built in, L1f2 enumeration generator-based after the array version was OOM-killed mid-run with bit-exact chunk-0:30 agreement); two CTL-helper index-space defects (S2of cells[E[a]] and safeA cov6[E[a]]) found by CTL disagreement sampling + triage dumps and fixed before the canonical run recorded here"
 - path: research/experiments/seven-row-q7-m27-surgery-20261115/output/m33_Cctl.json
   role: data
   note: "second independent implementation (fresh curve enumeration, census-free) of the C0/C1 wholesale rejections: agree 8,436/8,436 and 2,980/2,980, killerConfirmed 8,436 and 2,980, U-set samples 6+7 OK; companion outputs m33_facts/m33_L3/m33_L3ctl/m33_G_r3x3/m33_G_r3x2/m33_G_r3x1/m33_C.json in the same directory (L3 wholesale 360/360; G 28,668,927 pairs 0 witnesses; C0/C1 all-R rejections)"
+- path: research/experiments/seven-row-q7-m27-surgery-20261115/output/m33_L2f1.json
+  role: data
+  note: "L2f1 (r3_on=1, a_on=2) complete slice: 3,150 R x 29,106 A/R = 91,683,900 pairs, 0 witnesses (coverage 2,298,256 + safety 89,385,644; CTL cov 12/12 saf 10/10)"
+- path: research/experiments/seven-row-q7-m27-surgery-20261115/output/m33_L1f2.json
+  role: data
+  note: "L1f2 (r3_on=0, a_on=1) complete slice: 7,140 R x 173,250 A/R = 1,237,005,000 pairs, 0 witnesses (coverage 59,257,657 + safety 1,177,747,343; CTL cov 12/12 saf 10/10); with L2f1 the whole (3,3) case split is complete-negative (1,357,912,227 checked pairs in total, plus C0/C1 wholesale R rejections)"
 scope: "finite machine verification: kissat 4.0.4 (all instances); widths stated per family only; up to census completeness and solver correctness"
 evidence: "complete-encoding SAT instances (def mode is exactly 'exists row-deficient maximal safe config') + constructive dual-verified witnesses (census-free sat.js verifyConfig + Python Fraction) + third independent verification system (pure TS/BigInt, no repo code: scripts/verify_independent.ts + output/ts-verify.json — m=25/m=26 rowY=3 witnesses PASS, 7-collinear negative control unsafe, m=26 triple-verified) + m=24 bit-exact determinism re-run (2,105,329 conflicts reproduced; cross-lane independent-run bit-exact reproduction on shared instances m=24/m=25 rowY=3: 2,105,329 / 756,785). See report.md."
 ---
@@ -110,7 +116,7 @@ evidence: "complete-encoding SAT instances (def mode is exactly 'exists row-defi
    **7×27 全配置の不在主張ではない**（open: (3,3) 一般・3石T-曲線上の3追加・
    |R| ≥ 4・seed から離れた fresh 配置 — m=27 の INDET 記録・前線 7×27 は不変）。
 
-8. **(3,3) 一般スペースの完全ケース分割と L3/G/C スライス完全負（2026-11-15 追加）**:
+8. **(3,3) 一般スペースの完全ケース分割と全スライス完全負（L3/L2f1/L1f2/G1..G6/C0/C1・2026-11-15 追加・同日完結）**:
    設計メモのカテゴリ I/II 分割には網羅性ギャップがあった（T ∈ A で a_on ≤ r3_on の場合と
    k=3 T-曲線 blocking で a_on = 1（t′ ∈ A）の場合が脱落）。完全・非重複な分割は
    L3/L2f1/L1f2（直線 blocking・等式 5−r3_on+a_on = 6 強制）+ G1..G6（T ∈ A・a_on ≤ r3_on）+
@@ -123,11 +129,18 @@ evidence: "complete-encoding SAT instances (def mode is exactly 'exists row-defi
    - C0: 22本の k=3 T-曲線のうち A 空間を持つのは1本のみ・8,436 R 全棄却 → 0。
      C1: 1本・2,980 R（r3_on ≥ 1）全棄却 → 0。第2実装 Cctl:
      agree/killerConfirmed とも 8,436/8,436・2,980/2,980・U-set 6+7 OK。
+   - L2f1（r3_on=1, a_on=2）: 3,150 R × 29,106 A/R = **91,683,900 検査ペア** → 0 witness
+     （coverage 2,298,256 + safety 89,385,644・CTL cov 12/12・saf 10/10）。
+   - L1f2（r3_on=0, a_on=1）: 7,140 R × 173,250 A/R = **1,237,005,000 検査ペア** → 0 witness
+     （coverage 59,257,657 + safety 1,177,747,343・CTL cov 12/12・saf 10/10）。
+     L1f2 の enumA はジェネレーター化（配列版は R~250 でサイレント死亡 → 省メモリ化。
+     チャンク 0:30 で配列版とビット一致を確認後に全 R 実行）。
    検証論の副産物: m33 機械の CTL ヘルパーに2つの index-space 欠陥（S2of の
    E-index/cell-index 誤用 = CTL 専用・safeA gate-1 の cov6 誤用 = 本体側で
    過剰棄却方向）を発見・修正し、全 G/C スライスを修正版で再実行
    （pairsChecked・survivors 0 は不変・棄却内訳は正規化・CTL 全照合一致）。
-   残り open: L2f1（実行中）・L1f2（モード実装済み・未実行）・|R| ≥ 4・fresh 配置。
+   これで (3,3) の全スライス（合計 1,357,912,227 検査ペア + C0/C1 wholesale 11,416 R 棄却）が
+   完全負。seed 近傍の残り open は |R| ≥ 4 と fresh 配置のみ。
    **7×27 全配置の不在主張ではない**（M_{7,7} ∈ [27, 708] 不変）。
 
 ## 手法と検証
