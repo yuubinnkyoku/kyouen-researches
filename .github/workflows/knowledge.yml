@@ -36,6 +36,8 @@ jobs:
         run: uv run --locked python research/experiments/vertical-fiber-three-token-transient-band-20261116/verify_transient.py
       - name: Audit K0832 transient band extension (k=1..8, m=9/m=10, even-m unified form)
         run: uv run --locked python research/experiments/vertical-fiber-transient-band-extension-20261116/verify_extension.py
+      - name: Audit K0832 diagonal m=11..16 extrapolation (odd family, even mod-4 unified form, all-ones profile)
+        run: uv run --locked python research/experiments/vertical-fiber-diagonal-m11-m16-20261116/verify_diag_m11_m16.py
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python research/experiments/graph-star-fixed-q-count-complexity-20261102/verify.py
