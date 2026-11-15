@@ -36,6 +36,8 @@ claim v3（schema v3・`fold_in_flight`キー・receipts_to_fold [31,54,56,62,69
 ## 今後
 
 - 次のfold baselineは本head 1249（`class-frontier-cost73g-receipts-recompute-20261115.json`・blob `e4fb98dc8670fbb85786ab02f017a0a95e357648`）。fold前に必ず最新mainを再取得し、並走laneのfold着地をチェックすること。**70g（8証明書）・65l（2 receipts）のfoldは本head 1249へのrebaseが必須**。
-- 次のsweep候補: third target `00000000000000809102000000000000`の残り2行（cost 69: `00000000000000809102000000002000`・cost 74: `00000000000000809142000000000000`）が最安だが、69g/74e/74gの並走claimとの重複に注意。兄弟行 `00000000220000083800000000000200`（cost 73・第2開親67行/5182）も未着手のまま残置。
+- 次のsweep候補: third target `00000000000000809102000000000000`の残り2行（cost 69: `00000000000000809102000000002000`・cost 74: `00000000000000809142000000000000`）が最安だが、69g/74e/74gの並走claimとの重複に注意。兄弟行 `00000000200000083800000000000200`（cost 73・第2開親 `00000000000000003800200008000000` 67行/5182）も未着手のまま残置。
+
+**prose誤記の記録（70f baseline_mainと同じ運用）**: claim v2のno_prior_sweep_note（以降の版でも無修正）と本fold head JSONの `outstanding_not_folded.sibling_cost73_row` が兄弟行を `00000000220000083800000000000200` と引用しているが、正しいhexは `00000000200000083800000000000200`（機械生成のranking・top-candidates CSVs・fold再現で確認）。誤記hexはmanifest行ではなく、いかなるassert値・fold算術・証明成果物にも影響しない。公開済みhead JSONはbyte-unmodifiedとし、claim v4の `fold.erratum_sibling_hex` に記録した。次回のsweep/foldは正しいhexを対象にすること。
 
 詳細: [fold head JSON](../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost73g-receipts-recompute-20261115.json)、[ranking CSV](../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-s5-ranking-after-cost73g-receipts-20261115.csv)、[top-candidates CSV](../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-top-candidates-s6-after-cost73g-receipts-20261115.csv)、[fold script](../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost73g_receipts_20261115.py)、[claim v4](../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73g-inflight-20261115.json)。
