@@ -6,7 +6,7 @@ status: proved
 topics: [geometry, maximal-safe, rectangles]
 aliases: []
 scope: "任意の w≥1・q≥2・行 0..w−1 の有限石集合 S が safe(どの直線・円も q 石以上を含まない)なら、各水平行の石数は ≤ q−1 であり、石数ちょうど q−1 の行の全空点はその行の水平直線(ちょうど q−1 石を含む)で blocked である。よって K0853 の自由列追加の最初の非 blocked セル(停止セル)は必ず石数 ≤ q−2 の行にある。単一欠損 witness(rows が (q−2, q−1×(w−1)))では停止セルは一意の欠損行にあり、m′ > R(S) で極大性が壊れるセルも欠損行内にある。"
-evidence: "全称数学的証明: (1) 行 y の水平直線は行 y の全石を含むので、safe(全曲線 ≤ q−1 石)なら行石数 ≤ q−1。(2) 行石数 = q−1 の行では、その行の水平直線は任意の空点 (x,y) を通りちょうど q−1 石を含むため、K0853 の blocked 定義(c を通る曲線が ≥ q−1 石)により全空点が blocked。(3) よって非 blocked セル(停止セルを含む)は石数 ≤ q−2 の行に限られる。独立機械監査 scripts/rowline_check.py(純Python Fraction・blocking 直線 (c,s) 族・blocking 円 三つ組族の完全列挙・K0853 checker と独立のコード)が published witness 8件で (a) 行石数 ≤ q−1・(b) q−1石行の全空点 blocked(走査窓全列)・(c) 窓内の全非blockedセルが欠損行所属・(d) 停止セル行石数 ≤ q−2 の4検査を実施し 8/8 PASS(output/rowline-audit-20261115.json): (6,4) m=46→(46,0)・(4,4) m=32→(33,2)・(4,4) m=34→(34,2)・(4,5) m=20→(20,3)・(5,5) m=26→(26,0)・(5,6) m=22→(22,0)・(5,7) m=18→(18,0)・(7,6) m=31→(31,3)。いずれも停止セルの行は行石数最小の一意の欠損行。published surgery/extension 記録の全停止セルも同一の理論予測と一致((7,5) m=33→(33,0)・(7,6) m=29/30/31→(29,3)/(30,3)/(31,3)・(5,5) m=26→(26,0)・(7,5) winC 7×38→(37,0)・(7,4) m=59 witness→(59,6)・(6,4) m=42..44 free append 停止右端 (m−1,0))。"
+evidence: "全称数学的証明: (1) 行 y の水平直線は行 y の全石を含むので、safe(全曲線 ≤ q−1 石)なら行石数 ≤ q−1。(2) 行石数 = q−1 の行では、その行の水平直線は任意の空点 (x,y) を通りちょうど q−1 石を含むため、K0853 の blocked 定義(c を通る曲線が ≥ q−1 石)により全空点が blocked。(3) よって非 blocked セル(停止セルを含む)は石数 ≤ q−2 の行に限られる。独立機械監査 scripts/rowline_check.py(純Python Fraction・blocking 直線 (c,s) 族・blocking 円 三つ組族の完全列挙・K0853 checker と独立のコード)が published witness 8件で (a) 行石数 ≤ q−1・(b) q−1石行の全空点 blocked(走査窓全列)・(c) 窓内の全非blockedセルが欠損行所属・(d) 停止セル行石数 ≤ q−2 の4検査を実施し 8/8 PASS(output/rowline-audit-20261115.json): (6,4) m=46→(46,0)・(4,4) m=32→(33,2)・(4,4) m=34→(34,2)・(4,5) m=20→(20,3)・(5,5) m=26→(26,0)・(5,6) m=22→(22,0)・(5,7) m=18→(18,0)・(7,6) m=31→(31,3)。いずれも停止セルの行は行石数最小の一意の欠損行。published surgery/extension 記録の全停止セルも同一の理論予測と一致((7,5) m=33→(33,0)・(7,6) m=29/30/31→(29,3)/(30,3)/(31,3)・(5,5) m=26→(26,0)・(7,5) winC 7×38→(37,0)・(7,4) m=59 witness→(59,6)・(6,4) m=42..44 free append 停止右端 (m−1,0))。深欠損拡張(同日): 欠損3行の (7,4) m=14 監査構成(rows [3,3,3,3,1,1,1]・停止 (14,5)∈欠損行{4,5,6})と欠損4行の (7,4) m=10 監査構成(rows [3,3,3,1,1,1,1]・停止 (10,3)∈欠損行{3,4,5,6})を加え 10/10 PASS(rowline-audit v10)・両者とも窓内の全非blockedセルが欠損行内のまま・一般形『停止セルは石数≤q−2の行のどこか』が深欠損でも成立。criterion: m=14 の15石は witness_widths [12,14](同一配置が幅12・14の両方で witness)・m=10 の13石は [10,10]。両構成は本レーンのローカル探索で生成し独立 checker で safe+maximal を検証した監査用テストケース(既知 witness 帯 7x4..7x59 内の幅で band 記録としての新規性なし)。"
 relations:
 - type: depends_on
   target: K0853
@@ -23,7 +23,19 @@ artifacts:
   note: "独立 Fraction 実装。(a) 行石数上限・(b) q−1石行の全空点 blocked・(c) 走査窓内全非blockedセルの欠損行所属・(d) 停止セル行石数の4検査。exit code は全検査 PASS のときのみ 0。"
 - path: research/experiments/free-column-append-criterion-20261115/output/rowline-audit-20261115.json
   role: data
-  note: "8 witness 監査結果(全 PASS)。各行 rows・欠損行・窓内非blockedセル・停止セルとその行石数を記録。"
+  note: "10 witness 監査結果(全 PASS・深欠損2件を含む)。各行 rows・欠損行・窓内非blockedセル・停止セルとその行石数を記録。"
+- path: research/experiments/free-column-append-criterion-20261115/output/criterion-7x4-m14-deepdef-witness.json
+  role: data
+  note: "深欠損(欠損3行)監査構成の criterion: R=14・停止 (14,5)・witness_widths [12,14]。rows [3,3,3,3,1,1,1] の15石(stones: q4-m14-deepdef-stones.json)。"
+- path: research/experiments/free-column-append-criterion-20261115/output/criterion-7x4-m10-deepdef-witness.json
+  role: data
+  note: "深欠損(欠損4行)監査構成の criterion: R=10・停止 (10,3)・witness_widths [10,10]。rows [3,3,3,1,1,1,1] の13石(stones: q4-m10-deepdef-stones.json)。"
+- path: research/experiments/free-column-append-criterion-20261115/output/q4-m14-deepdef-stones.json
+  role: data
+  note: "(7,4) m=14 深欠損監査構成の石配置(15石・rows [3,3,3,3,1,1,1])。"
+- path: research/experiments/free-column-append-criterion-20261115/output/q4-m10-deepdef-stones.json
+  role: data
+  note: "(7,4) m=10 深欠損監査構成の石配置(13石・rows [3,3,3,1,1,1,1])。"
 - path: research/experiments/free-column-append-criterion-20261115/output/criterion-7x6-m31-witness.json
   role: data
   note: "(7,6) m=31 surgery witness(K0827)の criterion 再現: R=31・停止 (31,3)(published『7×32 で (31,3) 未遮断』と一致)。witness_widths [30,31] — 同一34石が幅30でも safe+maximal(c3 witness と4石異なる別配置の m=30 witness)。"
@@ -90,6 +102,22 @@ r_y ≤ q−2 の行は一意。□
 (7,6) m=31 witness の同一34石は幅30でも safe+maximal
 (witness_widths [30,31]・m=30 witness c3 とは4石異なる別配置)。
 
+### 深欠損拡張(同日・監査 v10)
+
+単一欠損以外の一般形(「停止セルは石数 ≤ q−2 の行のどこか」)
+を深欠損構成で検証した(いずれも本レーン生成の監査用テスト
+ケース・既知 witness 帯 7x4..7x59 内・独立 checker で
+safe+maximal 検証済み):
+
+| 構成 | rows | 欠損行 | 停止セル | 窓内非blocked |
+|---|---|---|---|---|
+| (7,4) m=14 | [3,3,3,3,1,1,1] | {4,5,6} の3行 | (14,5) ∈ 欠損行 | 全て欠損行内 |
+| (7,4) m=10 | [3,3,3,1,1,1,1] | {3,4,5,6} の4行 | (10,3) ∈ 欠損行 | 全て欠損行内 |
+
+10/10 PASS。深欠損でも (b)(c)(d) は崩れず、停止セルの行の一意性
+が失われるだけ(命題の一般形どおり)。criterion 副産物: m=14 の
+15石は witness_widths [12,14](幅12でも safe+maximal)。
+
 ## 限界・言っていないこと
 
 - 欠損行の**どの**セルがいつ非 blocked になるか(停止のタイミング
@@ -97,5 +125,7 @@ r_y ≤ q−2 の行は一意。□
 - 「欠損行のすべての空点が非 blocked」ではない(監査 (c) でも
   窓内の非 blocked セルは停止セル以降の欠損行セルのみ)。
 - 深欠損(複数行が ≤ q−2)では停止セルの行は一意に決まらない
-  (命題は「≤ q−2 の行のどこか」まで)。
+  (命題は「≤ q−2 の行のどこか」まで。深欠損2件(欠損3行・4行)で
+  機械検証済み — いずれも停止セル・窓内全非blockedセルが欠損行内)。
 - witness の不在・M の確定には一切言及しない。
+
