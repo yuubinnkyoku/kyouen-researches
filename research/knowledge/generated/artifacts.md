@@ -9535,6 +9535,9 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost83c-receipts-recompute-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost83c-receipts-recompute-20261115.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): fold後head 1313/6534/516144/4804/379867と第二target 5行/376
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost83d-receipts-recompute-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost83d-receipts-recompute-20261115.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): fold後head 1314/6533/516061/4803/379784と第二target 4行/293
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-merged-cost75d-77d-receipts-recompute-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-merged-cost75d-77d-receipts-recompute-20261115.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): merged head 1302/6545/517025/4815/380748、第2開親64行/5036→58行/4593
@@ -10022,6 +10025,9 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost83c_receipts_20261115.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost83c_receipts_20261115.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (source): cost83c 2 receipt fold。head 1312のbyte再現・sweep/証明書bytes検証・第二target 5行へのfold
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost83d_receipts_20261115.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost83d_receipts_20261115.py)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (source): cost83d 3 receipt fold。head 1313のbyte再現・sweep/証明書bytes検証・第二target 4行へのfold
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_merged_cost75d_77d_20261115.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_merged_cost75d_77d_20261115.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (source): 75d head 1296へのwarm-hygiene merge。bit78 root==75d bit92 rootを除外しchild closureを再主張しない
@@ -15850,6 +15856,9 @@
 ## [research/log/2026-11-15-n11-class2-lane-cost83c-sweep-certificates-and-fold.md](../../../research/log/2026-11-15-n11-class2-lane-cost83c-sweep-certificates-and-fold.md)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): cost83cのsweep・2証明書抽出・二独立検証・第二target 6→5行fold
+## [research/log/2026-11-15-n11-class2-lane-cost83d-sweep-certificates-and-fold.md](../../../research/log/2026-11-15-n11-class2-lane-cost83d-sweep-certificates-and-fold.md)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): cost83dのsweep・3証明書抽出・二独立検証・第二target 5→4行fold
 ## [research/log/2026-11-15-n11-class2-merged-cost75d-77d-warm-hygiene.md](../../../research/log/2026-11-15-n11-class2-merged-cost75d-77d-warm-hygiene.md)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): 75d+77d warm-hygiene mergeとcross-lane root collision（bit78==bit92）の記録
