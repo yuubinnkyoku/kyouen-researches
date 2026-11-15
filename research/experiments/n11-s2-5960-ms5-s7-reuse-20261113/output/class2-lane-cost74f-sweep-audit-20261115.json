@@ -20,23 +20,242 @@
   "lift_note": "one-stone deletions re-derived independently: stone 5 deletion reproduces the best class-4 blocker S5 00000000020000003800000080000000 bit-exact (18 rows / 1460 at head 1216); stone 31 deletion D4-canonicalizes to the open mask-5 parent 00000000000000801082000000080000 (79 rows / 6036, mixed class-1+class-4 demand); stone 89 deletion D4-canonicalizes to the open mask-5 parent 00000000000000003800000000800020 (69 rows / 5346, mixed class-1+class-4 demand); the remaining three deletions (stones 59, 60, 61) are closed rows absent from the head-1216 ranking CSV (verified in-session against the published head-1216 ranking CSV before the claim push)"
  },
  "batches": [
-  {"batch": 1, "file": "class2-lane-cost74f-raw-batch1-20261115.jsonl", "candidate_bits": [0,2,3,7,8,10,11,12], "pilot_nodes": 3402, "nodes": 6801681},
-  {"batch": 2, "file": "class2-lane-cost74f-raw-batch2-20261115.jsonl", "candidate_bits": [14,16,17,18,21,26,28,32], "pilot_nodes": 3402, "nodes": 4932517},
-  {"batch": 3, "file": "class2-lane-cost74f-raw-batch3-20261115.jsonl", "candidate_bits": [33,34,37,38,39,43,44,45], "pilot_nodes": 3402, "nodes": 4507198},
-  {"batch": 4, "file": "class2-lane-cost74f-raw-batch4-20261115.jsonl", "candidate_bits": [46,48,49,50,51,53,54,66], "pilot_nodes": 3402, "nodes": 5664207},
-  {"batch": 5, "file": "class2-lane-cost74f-raw-batch5-20261115.jsonl", "candidate_bits": [67,69,70,71,72,74,75,76], "pilot_nodes": 3402, "nodes": 5255209},
-  {"batch": 6, "file": "class2-lane-cost74f-raw-batch6-20261115.jsonl", "candidate_bits": [77,78,79,80,81,82,83,84], "pilot_nodes": 3402, "nodes": 4182369},
-  {"batch": 7, "file": "class2-lane-cost74f-raw-batch7-20261115.jsonl", "candidate_bits": [85,86,87,88,90,91,92,93], "pilot_nodes": 3402, "nodes": 7944287},
-  {"batch": 8, "file": "class2-lane-cost74f-raw-batch8-20261115.jsonl", "candidate_bits": [94,95,99,102,103,104,105,106], "pilot_nodes": 3402, "nodes": 9542506},
-  {"batch": 9, "file": "class2-lane-cost74f-raw-batch9-20261115.jsonl", "candidate_bits": [108,109,110,112,113,114,116,117], "pilot_nodes": 3402, "nodes": 6928243},
-  {"batch": 10, "file": "class2-lane-cost74f-raw-batch10-20261115.jsonl", "candidate_bits": [118,120], "pilot_nodes": 3402, "nodes": 3259770}
+  {
+   "batch": 1,
+   "file": "class2-lane-cost74f-raw-batch1-20261115.jsonl",
+   "candidate_bits": [
+    0,
+    2,
+    3,
+    7,
+    8,
+    10,
+    11,
+    12
+   ],
+   "pilot_nodes": 3402,
+   "nodes": 6801681
+  },
+  {
+   "batch": 2,
+   "file": "class2-lane-cost74f-raw-batch2-20261115.jsonl",
+   "candidate_bits": [
+    14,
+    16,
+    17,
+    18,
+    21,
+    26,
+    28,
+    32
+   ],
+   "pilot_nodes": 3402,
+   "nodes": 4932517
+  },
+  {
+   "batch": 3,
+   "file": "class2-lane-cost74f-raw-batch3-20261115.jsonl",
+   "candidate_bits": [
+    33,
+    34,
+    37,
+    38,
+    39,
+    43,
+    44,
+    45
+   ],
+   "pilot_nodes": 3402,
+   "nodes": 4507198
+  },
+  {
+   "batch": 4,
+   "file": "class2-lane-cost74f-raw-batch4-20261115.jsonl",
+   "candidate_bits": [
+    46,
+    48,
+    49,
+    50,
+    51,
+    53,
+    54,
+    66
+   ],
+   "pilot_nodes": 3402,
+   "nodes": 5664207
+  },
+  {
+   "batch": 5,
+   "file": "class2-lane-cost74f-raw-batch5-20261115.jsonl",
+   "candidate_bits": [
+    67,
+    69,
+    70,
+    71,
+    72,
+    74,
+    75,
+    76
+   ],
+   "pilot_nodes": 3402,
+   "nodes": 5255209
+  },
+  {
+   "batch": 6,
+   "file": "class2-lane-cost74f-raw-batch6-20261115.jsonl",
+   "candidate_bits": [
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84
+   ],
+   "pilot_nodes": 3402,
+   "nodes": 4182369
+  },
+  {
+   "batch": 7,
+   "file": "class2-lane-cost74f-raw-batch7-20261115.jsonl",
+   "candidate_bits": [
+    85,
+    86,
+    87,
+    88,
+    90,
+    91,
+    92,
+    93
+   ],
+   "pilot_nodes": 3402,
+   "nodes": 7944287
+  },
+  {
+   "batch": 8,
+   "file": "class2-lane-cost74f-raw-batch8-20261115.jsonl",
+   "candidate_bits": [
+    94,
+    95,
+    99,
+    102,
+    103,
+    104,
+    105,
+    106
+   ],
+   "pilot_nodes": 3402,
+   "nodes": 9542506
+  },
+  {
+   "batch": 9,
+   "file": "class2-lane-cost74f-raw-batch9-20261115.jsonl",
+   "candidate_bits": [
+    108,
+    109,
+    110,
+    112,
+    113,
+    114,
+    116,
+    117
+   ],
+   "pilot_nodes": 3402,
+   "nodes": 6928243
+  },
+  {
+   "batch": 10,
+   "file": "class2-lane-cost74f-raw-batch10-20261115.jsonl",
+   "candidate_bits": [
+    118,
+    120
+   ],
+   "pilot_nodes": 3402,
+   "nodes": 3259770
+  }
  ],
  "aggregate": {
   "candidates": 74,
   "win7_d10_bits": [],
   "win7_d10_nodes": {},
   "refuted_d10": 74,
-  "refuted_d10_bits": [0,2,3,7,8,10,11,12,14,16,17,18,21,26,28,32,33,34,37,38,39,43,44,45,46,48,49,50,51,53,54,66,67,69,70,71,72,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,90,91,92,93,94,95,99,102,103,104,105,106,108,109,110,112,113,114,116,117,118,120],
+  "refuted_d10_bits": [
+   0,
+   2,
+   3,
+   7,
+   8,
+   10,
+   11,
+   12,
+   14,
+   16,
+   17,
+   18,
+   21,
+   26,
+   28,
+   32,
+   33,
+   34,
+   37,
+   38,
+   39,
+   43,
+   44,
+   45,
+   46,
+   48,
+   49,
+   50,
+   51,
+   53,
+   54,
+   66,
+   67,
+   69,
+   70,
+   71,
+   72,
+   74,
+   75,
+   76,
+   77,
+   78,
+   79,
+   80,
+   81,
+   82,
+   83,
+   84,
+   85,
+   86,
+   87,
+   88,
+   90,
+   91,
+   92,
+   93,
+   94,
+   95,
+   99,
+   102,
+   103,
+   104,
+   105,
+   106,
+   108,
+   109,
+   110,
+   112,
+   113,
+   114,
+   116,
+   117,
+   118,
+   120
+  ],
   "capped": 0,
   "capped_bits": [],
   "candidate_nodes": 59017987,
@@ -51,16 +270,33 @@
   "v15_cross_engine": {
    "file": "class2-lane-cost74f-v15-crosscheck-20261115.jsonl",
    "win_bits_agree": true,
-   "refuted_anchors": [3,53,118],
-   "anchor_nodes": {"3": 4013034, "53": 4710260, "118": 1989273},
+   "refuted_anchors": [
+    3,
+    53,
+    118
+   ],
+   "anchor_nodes": {
+    "3": 4013034,
+    "53": 4710260,
+    "118": 1989273
+   },
    "pilots_5949": 1
   }
  },
- "d4_duplicate_scan": {"roots_compared": 0, "manifest_files_scanned": 0, "duplicates": 0},
+ "d4_duplicate_scan": {
+  "roots_compared": 0,
+  "manifest_files_scanned": 0,
+  "duplicates": 0
+ },
  "checks": {
   "all_bits_exactly_once": true,
   "all_terminal_ranges_within_depth10_bounds": true,
-  "distinct_terminal_ranges": [[13,17]],
+  "distinct_terminal_ranges": [
+   [
+    13,
+    17
+   ]
+  ],
   "pilot_3402_per_batch": true,
   "independent_enumeration_matches_claim": true,
   "one_stone_deletion_d4_canonicalization_verified": true
