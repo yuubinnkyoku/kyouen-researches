@@ -102,3 +102,23 @@ CTRL-A/B・全対象の同一結果を確認）。
 2. クラスタ残り 29 witness の py 検証（各 ~39s・並列化可能）
 3. H/V 鏡像 seed による両側 window-SAT（freeCols を左側にした掃引）
 4. m=29 の def-mode SAT 直接評価（kissat 環境があるレーンでの実施が望ましい）
+
+## 追記（同日・第2バッチ）
+
+1. **クラスタ 34 witness の検証完結**: 新しい第2実装 verify_witness_int.py
+   （純整数・exact・census 不使用、 Fraction なしで 39s→0.3s）を追加。相互検証:
+   既知 band witness 3 個（s8x26q9_none / s8x27q9_rowY3 / s8x28q9_rowY3 — うち
+   8x26/8x27 は canonical verify_witness.py でも追検証 ok）と canonical 済み
+   クラスタサンプル 5 個のすべてで verify_witness.py と一致。残り 29 個を
+   verify_witness_int.py で検証し、**34/34 全検証**（5 canonical + 29 int）。
+   （output/intver-validation.json, output/cluster-m28-witnesses.json 更新版）
+2. **m=30 probe**: 8x30 に s8x28 anchor（offX=0,1,2）で (2,2)/(2,3)（sd≤5）、
+   s8x27 anchor（offX=0,1,2）で (2,2)（sd≤4）の計 9 インスタンス完全走査。
+   **全て 0 witness**。T' は欠損行の自由列セル 2〜3 個（row 3）。8x30 も
+   局所閉包（不在主張ではない）。M_{8,9} ∈ [29, 984] 不変。
+   （output/results-m30.jsonl）
+3. **両側 window-SAT についての対称性注記**: H 鏡像（x→28−x）は 8x29 盤の
+   自己同型なので「H(s8x28) と列 k..28 で一致する witness 不存在」は
+   「s8x28 と列 0..28−k で一致する witness 不存在」と同値。既報の
+   window-SAT（右側自由列）により左側自由列の掃引は全て論理的に被覆済みで、
+   新規情報はない。今後の作業から除外すべき。
