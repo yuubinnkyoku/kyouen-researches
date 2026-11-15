@@ -1,8 +1,8 @@
 {
- "schema": "n11-class2-lane-cost72c-inflight-20261115-v3",
+ "schema": "n11-class2-lane-cost72c-inflight-20261115-v4",
  "title": "n11 class2-lane cost-72c sweep completed: cheapest unswept row (cost 72) of the second coverable class-2 target S5 at head 1235 (both parents class 2, c1=0,c2=2,c4=0) - 9 WIN7-D10 receipts",
  "date": "2026-11-15",
- "status": "completed (sweep + WIN7 certificates + independent audit); receipts fold IN FLIGHT on the long-term class2 lane session (baseline re-asserted on latest main immediately before this push)",
+ "status": "completed (sweep + WIN7 certificates + independent audit + receipts fold); canonical chain head 1244/6603/521339/4873/385062",
  "claimed_by": "long-term class2 lane (11x11 weak-solve long-term lane session, cost-71c receipts fold session continuation)",
  "s5": "00000000000000801202000000200000",
  "s6_child": "00000000000000801202000000220000",
@@ -296,5 +296,62 @@
   ],
   "fold_script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost72c_receipts_20261115.py (to be published with the fold; runpy reproduction of the 70f fold script asserting the 1239 head blob-identically)",
   "no_parallel_fold": "repo code search for a cost-72c fold claim/record on latest main returns no cost72c-receipts-recompute JSON, no fold-in-flight status and no fold record; the parallel pending folds (70g certificates, 65l receipts in flight, 69g/65j/74e) are untouched by this lane"
+ },
+ "fold": {
+  "session": "long-term class2 lane fold session (this session)",
+  "chain_head_before": "1239/6608/521701/4878/385424",
+  "baseline_head_file": "class-frontier-cost70f-receipts-recompute-20261115.json (git blob sha 4d0f130e975b6a7bec4759387bd6d54dfe2b6a18)",
+  "chain_head_after": "1244/6603/521339/4873/385062",
+  "head_file": "class-frontier-cost72c-receipts-recompute-20261115.json",
+  "fold_script": "scripts/recompute_frontier_cost72c_receipts_20261115.py",
+  "fold_script_blob_sha": "144b41c67645df86ea265203d0a259214808b8c1",
+  "receipts_folded": [
+   1,
+   7,
+   24,
+   39,
+   59,
+   64,
+   67,
+   72,
+   96
+  ],
+  "total_marginal": 43,
+  "total_marginal_in_manifest": 5,
+  "zero_marginal_in_manifest": [
+   39,
+   59,
+   64,
+   72,
+   96
+  ],
+  "child_orbit_closed_by_bit": 1,
+  "parents_after": {
+   "parent1": "21 rows / 1615",
+   "parent2": "52 rows / 3898"
+  },
+  "parents_lost_rows": {
+   "parent1": [
+    "00000000000000801202000000200002",
+    "00000000000000801202000000220000",
+    "00000000000000881202000000200000"
+   ],
+   "parent2": [
+    "00000000000000083800000009000000",
+    "00000000000000801202000000020080",
+    "00000000000000801202000000220000"
+   ]
+  },
+  "head_json_bytes": 13994,
+  "ranking_csv_bytes": 7580,
+  "top_candidates_csv_bytes": 5007,
+  "output_blob_shas": {
+   "head_json": "42dbb92e1505d05389e840e3368974b1c613b750",
+   "ranking_csv": "6c36559906eafc30910abd087cdbe2f044159a16",
+   "top_candidates_csv": "c7497f2f6f5e72a170c34a12d30056a0f063c9eb"
+  },
+  "controls": "runpy reproduction of the cost-70f fold script asserting the 1239 head blob-identically (head JSON + both CSVs == main); 37 published cost-72c input files byte-exact by git blob sha and this claim asserted by content (the script deliberately does not blob-pin the claim so it stays re-runnable after the claim closure update); the child re-asserted genuinely remaining at 1239 (lift stones 17/21, the other four deletions closed rows); the sweep re-derived from the 9 raw batches (72 candidates, 9 WIN7-D10 / 63 REFUTED-D10 / 0 capped, 61,297,942 nodes, pilots 3402 x9, determinism rerun node-exact, v15 9 WIN + 3 refuted anchors); all 9 certificates verified against the local part bytes (parts join == whole md5 and git blob sha, 321,781 rows / 11,604,178 bytes / 41,346,462 extraction nodes, per-bit BigInt and Bareiss verify records re-read, union 0/0); the 9 roots disjoint from the 503 folded roots raw-hex and D4-canonically; fold in publication order with per-record marginals re-derived from the growing union; child orbit closed by bit1; set-equality s_after == s_1239 UNION covers(9 roots); three consecutive runs byte-identical",
+  "outstanding": "cost-70g (8 WIN7 certificates, parallel lane) and cost-65l (2 receipts, fold in flight on a parallel lane) folds must rebase on this new head 1244; cost-69g/65j/74e remain in flight on parallel lanes",
+  "interpretation": "bookkeeping over published receipts; solved counts measure manifest coverage, not the game-theoretic value of any position; closing the cost-72c child orbit removes the child from both open class-2 parents' remaining rows but solves neither S5 parent; 11x11 empty board / two-stone root {49,60} / S2 {59,60} / class 1 / class 2 / class 4 remain UNKNOWN"
  }
 }
