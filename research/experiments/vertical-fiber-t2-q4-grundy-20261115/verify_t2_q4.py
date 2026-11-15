@@ -77,7 +77,7 @@ def canonical(w, m):
                 if sum(min(y, 2) for y in t) <= 3:
                     opts.add(g(t))
         if len(s) < w and sum(min(y, 2) for y in s) + 1 <= 3:
-            opts.add(g(tuple(sorted(s + (1,))))
+            opts.add(g(tuple(sorted(s + (1,)))))
         return mex(opts)
 
     seen = set()

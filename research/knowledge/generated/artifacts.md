@@ -9415,6 +9415,9 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost76b-receipts-recompute-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost76b-receipts-recompute-20261115.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): fold後head 1280/6567/518678/4837/382401と第二target 16行/1249
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost77a-receipts-recompute-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost77a-receipts-recompute-20261115.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): fold後head 1282/6565/518522/4835/382245と第二target 15行/1172
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost78a-receipts-recompute-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost78a-receipts-recompute-20261115.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): fold後head 1222/6625/522908/4895/386631とper-receipt marginal・親S5 after
@@ -9872,6 +9875,9 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost76b_receipts_20261115.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost76b_receipts_20261115.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (source): cost76b 2 receipt fold。head 1277のbyte再現・sweep/証明書bytes検証・第二target 16行へのfold
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost77a_receipts_20261115.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost77a_receipts_20261115.py)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (source): cost77a 3 receipt fold。head 1280のbyte再現・sweep/証明書bytes検証・第二target 15行へのfold
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost78a_receipts_20261115.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost78a_receipts_20261115.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (source): cost78a 5 receipt fold。head 1216のbyte再現・25入力blob照合・sweep再導出・証明書bytes検証・fold・completed claim制御
@@ -14773,6 +14779,15 @@
 ## [research/experiments/vertical-fiber-t2-q3-grundy-20261115/verify_t2_q3.py](../../../research/experiments/vertical-fiber-t2-q3-grundy-20261115/verify_t2_q3.py)
 
 - [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (verifier): 容量上限2の再帰列挙と再帰mexを用いたw,m=2..12の独立照合器
+## [research/experiments/vertical-fiber-t2-q4-grundy-20261115/output/audit.json](../../../research/experiments/vertical-fiber-t2-q4-grundy-20261115/output/audit.json)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (data): 209パラメータ組・144,001ラベル状態・4,997多重集合状態の有限監査
+## [research/experiments/vertical-fiber-t2-q4-grundy-20261115/report.md](../../../research/experiments/vertical-fiber-t2-q4-grundy-20261115/report.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (proof): t=2,q=4,w≥2,m≥2の純ファイバーゲームにおける全安全局面Grundy値の閉形式分類とmex帰納証明
+## [research/experiments/vertical-fiber-t2-q4-grundy-20261115/verify_t2_q4.py](../../../research/experiments/vertical-fiber-t2-q4-grundy-20261115/verify_t2_q4.py)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (verifier): ラベル付き占有ベクトルと正占有多重集合を独立生成する再帰mex検証器
 ## [research/experiments/vertical-fiber-t2-q5-grundy-20261115/output/audit.json](../../../research/experiments/vertical-fiber-t2-q5-grundy-20261115/output/audit.json)
 
 - [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (data): 150パラメータ組・723,780ラベル状態・11,135多重集合状態の二方式監査集計
@@ -15568,6 +15583,9 @@
 ## [research/log/2026-11-15-n11-class2-lane-cost76b-sweep-certificates-and-fold.md](../../../research/log/2026-11-15-n11-class2-lane-cost76b-sweep-certificates-and-fold.md)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): cost76bのsweep・2証明書抽出・二独立検証・第二target 17→16行fold
+## [research/log/2026-11-15-n11-class2-lane-cost77a-sweep-certificates-and-fold.md](../../../research/log/2026-11-15-n11-class2-lane-cost77a-sweep-certificates-and-fold.md)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): cost77aのsweep・3証明書抽出・二独立検証・第二target 16→15行fold
 ## [research/log/2026-11-15-n11-class2-lane-cost78a-certificates-and-receipt-fold.md](../../../research/log/2026-11-15-n11-class2-lane-cost78a-certificates-and-receipt-fold.md)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): 3証明書のblind抽出・二独立検証・5 receipt fold・Windows LF/CRLF再現注意
@@ -15592,6 +15610,9 @@
 ## [research/log/2026-11-15-vertical-fiber-t2-q3-grundy.md](../../../research/log/2026-11-15-vertical-fiber-t2-q3-grundy.md)
 
 - [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (log): t=2・q=3の全分類を選定・証明・検証した判断と限界
+## [research/log/2026-11-15-vertical-fiber-t2-q4-grundy.md](../../../research/log/2026-11-15-vertical-fiber-t2-q4-grundy.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (log): K0832のq=3/q=5成果の間を埋めるq=4分類の証明・監査・限界
 ## [research/log/2026-11-15-vertical-fiber-t2-q5-grundy.md](../../../research/log/2026-11-15-vertical-fiber-t2-q5-grundy.md)
 
 - [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (log): K0832の既存成果と最新mainを照合し、t=2,q=5分類を証明・独立監査した記録
