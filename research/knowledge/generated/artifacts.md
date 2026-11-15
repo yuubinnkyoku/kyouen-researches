@@ -9512,6 +9512,9 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost63j-receipts-recompute-20261116.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost63j-receipts-recompute-20261116.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): fold後head 1394/6454/510249/4724/373972と第二候補S5 10行/704
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost65m-receipts-recompute-20261116.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost65m-receipts-recompute-20261116.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): fold後head 1396/6452/510115/4722/373838と第二候補S5 9行/639
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost69e-recompute-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost69e-recompute-20261115.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 6証明書反映後frontier 1,019/6,828/538,143と別個のreceipt-unclosable S5を記録
@@ -9672,6 +9675,9 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-counterexample-audit.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-counterexample-audit.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 次の追加証明前の集計。六石LOSS・3つの五石SECOND_WIN・残六石7297件
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64a-inflight-20261116.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64a-inflight-20261116.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): cost64a child 00000000000000801282000040000000 はsterile（64/64 REFUTED-D10・0 WIN・38,157,151 nodes）
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-bit7-independent-audit-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-bit7-independent-audit-20261115.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): cost65e bit7証明書のBigInt独立検査、D4親被覆、重複・衝突監査とfrontier差分
@@ -10030,6 +10036,9 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost63j_receipts_20261116.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost63j_receipts_20261116.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (source): cost63j 29 receipt fold。head 1367のbyte再現・sweep/証明書bytes検証・第二候補S5 10行へのfold
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost65m_receipts_20261116.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost65m_receipts_20261116.py)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (source): cost65m 8 receipt fold。head 1394のbyte再現・sweep/証明書bytes検証・第二候補S5 9行へのfold
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost69e_20261115.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost69e_20261115.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (source): S5親keyを文字列で一貫して扱うよう修正。receipt-unclosable S5とbest coverable S5を分離
@@ -16075,6 +16084,9 @@
 ## [research/log/2026-11-16-n11-class2-lane-cost63j-sweep-certificates-and-fold.md](../../../research/log/2026-11-16-n11-class2-lane-cost63j-sweep-certificates-and-fold.md)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): cost63jのsweep・29証明書抽出・二独立検証・第二候補S5 17→10行fold
+## [research/log/2026-11-16-n11-class2-lane-cost64a-sterile-and-cost65m-sweep-certificates-fold.md](../../../research/log/2026-11-16-n11-class2-lane-cost64a-sterile-and-cost65m-sweep-certificates-fold.md)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): cost64a sterile確定とcost65mのsweep・8証明書抽出・二独立検証・第二候補S5 10→9行fold
 ## [research/log/2026-11-16-n11-class2-lane-cost84a-sweep-certificates-and-fold.md](../../../research/log/2026-11-16-n11-class2-lane-cost84a-sweep-certificates-and-fold.md)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): cost84aのsweep・4証明書抽出・二独立検証・第二target 4→3行fold

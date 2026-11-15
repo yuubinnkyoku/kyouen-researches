@@ -2,7 +2,7 @@
   "schema": "n11-class2-lane-cost65m-inflight-20261116-v1",
   "title": "n11 class2-lane cost-65m sweep in flight: second coverable class-2 candidate S5 cost-65 child",
   "date": "2026-11-16",
-  "status": "in-flight",
+  "status": "completed (sweep + WIN7 certificates + receipts fold)",
   "claimed_by": "n11 search continuation session (round 25)",
   "s5": "00000000000000801202000040000000",
   "s6_child": "00000000000000801202000040001000",
@@ -189,5 +189,47 @@
   },
   "verdict_semantics": "loss=true => WIN7-within-depth-10 candidate (certificate rebuild target); loss=false && !capped => REFUTED-D10, no first-player win within depth 10 (NOT a LOSS proof); capped => proves nothing either way",
   "unknown_status": "11x11 empty board: UNKNOWN. A completed sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 7-stone roots of this child.",
-  "coordination_note": "latest main fetched immediately before this claim push; the primary second target S5 has only REFUTED-D10 rows left (depth-10 receipt limit) and is not touched here."
+  "coordination_note": "latest main fetched immediately before this claim push; the primary second target S5 has only REFUTED-D10 rows left (depth-10 receipt limit) and is not touched here.",
+  "fold": {
+    "status": "completed",
+    "chain_head_before": "1394/6454/510249/4724/373972",
+    "chain_head_after": "1396/6452/510115/4722/373838",
+    "receipts_folded": 8,
+    "publication_order": [
+      21,
+      22,
+      28,
+      35,
+      44,
+      67,
+      76,
+      83
+    ],
+    "total_marginal": 35,
+    "total_marginal_in_manifest": 2,
+    "zero_marginal_in_manifest": [
+      22,
+      28,
+      44,
+      67,
+      76,
+      83
+    ],
+    "child_orbit_closed_by_bit": 21,
+    "parents_after": {
+      "parent1": "9 rows / 639",
+      "parent2": "46 rows / 3448"
+    },
+    "output_blob_shas": {
+      "head_json": "9798a9fc53b2277b17744737511354b1a830c4d2",
+      "ranking_csv": "ad9a62f6a65f03016e957e01c61bf0b9675d2d0a",
+      "top_candidates_csv": "6df96d8fb8fa9e2ea25a337b8bb8457ca3ef7c17"
+    },
+    "head_json_bytes": 10414,
+    "ranking_csv_bytes": 7535,
+    "top_candidates_csv_bytes": 4059,
+    "fold_script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost65m_receipts_20261116.py",
+    "reproduction": "python research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost65m_receipts_20261116.py",
+    "note": "The second coverable class-2 candidate S5 00000000000000801202000040000000 now has 9 remaining rows (was 10). Marginal counts are D4-orbit bookkeeping over published receipts, not game-theoretic values."
+  }
 }
