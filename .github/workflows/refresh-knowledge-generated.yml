@@ -140,6 +140,10 @@ jobs:
         run: |
           uv run --locked python research/experiments/multiplayer-coalition-kyouen-20261116/verify_elimination_continuation.py
           git diff --exit-code -- research/experiments/multiplayer-coalition-kyouen-20261116/output/elimination_continuation_audit.json
+      - name: Audit REMO two-branch determinism (Theorems E/F)
+        run: |
+          uv run --locked python research/experiments/remo-two-branch-determinism-20261116/verify_remo_two_branch.py
+          git diff --exit-code -- research/experiments/remo-two-branch-determinism-20261116/output/remo_two_branch_audit.json
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python tools/knowledge/build.py
@@ -394,3 +398,5 @@ jobs:
 # Refresh generated views after the K0859 post-elimination continuation rules (CASC cascade ranking theorem, REMO uniform-board stone-removal determinism, r|Delta insufficiency counterexample) (2026-11-16).
 # Refresh generated views after the K0832 diagonal m=11..16 extrapolation (odd family 6 points, even mod-4 correction, all-ones profile; 14,638 checks) (2026-11-16).
 # Refresh generated views for K0832 two-token z=2 full Grundy slice (z=0,1,2 all proven; 291,600-state dual-engine audit, 288,360 option-table checks) (2026-11-16).
+
+# Refresh generated views for the K0860 REMO two-branch survivor determinism (region-count reduction Theorem E, r=3 closed form Theorem F, r|Delta irrelevance quadrants, rank/survivor separation, real-board census) (2026-11-16).
