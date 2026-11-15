@@ -4423,6 +4423,12 @@
 ## [research/experiments/n10-nine-stone-sat-20261016/scripts/nine_stone_exact_search.cpp](../../../research/experiments/n10-nine-stone-sat-20261016/scripts/nine_stone_exact_search.cpp)
 
 - [K0034](../items/K0034-n10-minimum-maximal-bounds.md) (solver): 厳密探索（D4第一石還元・辞書式再開・round56共通の枝刈り）
+## [research/experiments/n10-twenty-stone-sls-20261115/README.md](../../../research/experiments/n10-twenty-stone-sls-20261115/README.md)
+
+- [K0141](../items/K0141-n10-20-stone-existence-open.md) (source): stochastic local search 5 run 345,966 moves の有界な負の証拠と F_10 第3系再現
+## [research/experiments/n10-twenty-stone-sls-20261115/output/sls_runs_20261115.json](../../../research/experiments/n10-twenty-stone-sls-20261115/output/sls_runs_20261115.json)
+
+- [K0141](../items/K0141-n10-20-stone-existence-open.md) (data): SLS 各 run の seed・units・trace の機械可読記録
 ## [research/experiments/n11-adaptive-probe-20261013/output/adaptive10m-manifest.json](../../../research/experiments/n11-adaptive-probe-20261013/output/adaptive10m-manifest.json)
 
 - [K0424](../items/K0424-n11-nine-s5-terminal-verdicts-and-stratified-plan.md) (manifest): 121263 LOSS・145001 LOSSの10M探索記録
@@ -9480,6 +9486,9 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost62a-receipts-recompute-20261116.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost62a-receipts-recompute-20261116.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): fold後head 1326/6522/515251/4792/378974と第二候補S5 34行/2368
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost63i-receipts-recompute-20261116.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost63i-receipts-recompute-20261116.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): fold後head 1367/6481/512295/4751/376018と第二候補S5 17行/1185
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost69e-recompute-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost69e-recompute-20261115.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 6証明書反映後frontier 1,019/6,828/538,143と別個のreceipt-unclosable S5を記録
@@ -9992,6 +10001,9 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost62a_receipts_20261116.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost62a_receipts_20261116.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (source): cost62a 6 receipt fold。head 1318のbyte再現・sweep/証明書bytes検証・第二候補S5 34行へのfold
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost63i_receipts_20261116.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost63i_receipts_20261116.py)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (source): cost63i 18 receipt fold。head 1360のbyte再現・sweep/証明書bytes検証・第二候補S5 17行へのfold
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost69e_20261115.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost69e_20261115.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (source): S5親keyを文字列で一貫して扱うよう修正。receipt-unclosable S5とbest coverable S5を分離
@@ -14977,6 +14989,33 @@
 ## [research/experiments/vertex-cover-terminal-dp-20261102/verify.py](../../../research/experiments/vertex-cover-terminal-dp-20261102/verify.py)
 
 - [K0622](../items/K0622-vertex-cover-terminal-polynomial.md) (verifier): 8067グラフ条件、996別被覆、100禁止超辺条件472592部分集合、K2m式80条件を照合
+## [research/experiments/vertical-fiber-all-ones-residual-structure-20261116/output/audit.json](../../../research/experiments/vertical-fiber-all-ones-residual-structure-20261116/output/audit.json)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (data): W0..W5監査集計（不一致0・二回実行byte-identical）
+## [research/experiments/vertical-fiber-all-ones-residual-structure-20261116/report.md](../../../research/experiments/vertical-fiber-all-ones-residual-structure-20261116/report.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (proof): 全1族残余構造の報告（2位置閉形式予想・スライス閉形式・補題P・tail系・R*安定化データ）
+## [research/experiments/vertical-fiber-all-ones-residual-structure-20261116/verify_all_ones.py](../../../research/experiments/vertical-fiber-all-ones-residual-structure-20261116/verify_all_ones.py)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (verifier): 坍縮/一般多重集合2エンジン・W1..W5閉形式監査器（35,004照合・不一致0）
+## [research/experiments/vertical-fiber-all-t-grundy-max-20261116/output/audit.json](../../../research/experiments/vertical-fiber-all-t-grundy-max-20261116/output/audit.json)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (data): V0..V6監査集計（5,679+200,255状態照合・2,448組グリッド・48,048状態パリティ監査・113 witness、全PASS）
+## [research/experiments/vertical-fiber-all-t-grundy-max-20261116/report.md](../../../research/experiments/vertical-fiber-all-t-grundy-max-20261116/report.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (proof): 全t・全q・全幅・全高さの純ファイバーゲームGrundy最大値定理の全称証明（t非依存残余座標・Theorem T・完了予算・レジーム補題・witness族）
+## [research/experiments/vertical-fiber-all-t-grundy-max-20261116/verify_all_t_max.py](../../../research/experiments/vertical-fiber-all-t-grundy-max-20261116/verify_all_t_max.py)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (verifier): 2エンジン独立実装・分解照合・最大値グリッド・Theorem Tパリティ構造・witness・レジーム閉形式の検証器（V0..V6）
+## [research/experiments/vertical-fiber-all-t-minwidth-witness-20261116/output/audit.json](../../../research/experiments/vertical-fiber-all-t-minwidth-witness-20261116/output/audit.json)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (data): 810 witness・60境界検査・13,001状態訪問の監査結果（全PASS）
+## [research/experiments/vertical-fiber-all-t-minwidth-witness-20261116/report.md](../../../research/experiments/vertical-fiber-all-t-minwidth-witness-20261116/report.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (proof): 全t値3 witnessの最小幅を3剰余場合に分けて構成し、旧構成の余分な空ファイバーを訂正する全称証明
+## [research/experiments/vertical-fiber-all-t-minwidth-witness-20261116/verify_minwidth_witness.py](../../../research/experiments/vertical-fiber-all-t-minwidth-witness-20261116/verify_minwidth_witness.py)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (verifier): 元の占有多重集合ゲームの再帰mexで810 witnessと60個の最小幅直前盤面を検査
 ## [research/experiments/vertical-fiber-boundary-grundy-20261115/output/audit.json](../../../research/experiments/vertical-fiber-boundary-grundy-20261115/output/audit.json)
 
 - [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (data): 64パラメータ組・5,080境界状態の有限完全監査結果
@@ -15010,6 +15049,15 @@
 ## [research/experiments/vertical-fiber-interpolation-exact-20261115/verify_interpolation.py](../../../research/experiments/vertical-fiber-interpolation-exact-20261115/verify_interpolation.py)
 
 - [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (verifier): Fractionによる全4096配置×t=1,2,3の補間達成監査と退化ファイバー障害の確認
+## [research/experiments/vertical-fiber-single-token-residual-closed-form-20261116/output/audit.json](../../../research/experiments/vertical-fiber-single-token-residual-closed-form-20261116/output/audit.json)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (data): 8,706,159照合・不一致0・二回実行byte-identicalの監査集計
+## [research/experiments/vertical-fiber-single-token-residual-closed-form-20261116/report.md](../../../research/experiments/vertical-fiber-single-token-residual-closed-form-20261116/report.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (proof): 単一未飽和ファイバー残余閉形式の全称証明・空ファイバー/cap補題・U座標の注意・全1族の有限観察
+## [research/experiments/vertical-fiber-single-token-residual-closed-form-20261116/verify_single_token.py](../../../research/experiments/vertical-fiber-single-token-residual-closed-form-20261116/verify_single_token.py)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (verifier): 2エンジン独立実装・全グリッド照合・広域mex恒等式・cap補題・構造一貫性の検証器（V0..V5+V3b）
 ## [research/experiments/vertical-fiber-t1-fixed-length-grundy-20261115/output/audit.json](../../../research/experiments/vertical-fiber-t1-fixed-length-grundy-20261115/output/audit.json)
 
 - [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (data): t=1全局面Grundy監査の集計結果
@@ -15988,12 +16036,27 @@
 ## [research/log/2026-11-16-n11-class2-lane-cost62a-sweep-certificates-and-fold.md](../../../research/log/2026-11-16-n11-class2-lane-cost62a-sweep-certificates-and-fold.md)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): cost62aのsweep・6証明書抽出・二独立検証・第二候補S5 39→34行foldと第二target S5のdepth-10 receipt限界
+## [research/log/2026-11-16-n11-class2-lane-cost63i-sweep-certificates-and-fold.md](../../../research/log/2026-11-16-n11-class2-lane-cost63i-sweep-certificates-and-fold.md)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): cost63iのsweep・18証明書抽出・二独立検証・第二候補S5 21→17行fold
 ## [research/log/2026-11-16-n11-class2-lane-cost84a-sweep-certificates-and-fold.md](../../../research/log/2026-11-16-n11-class2-lane-cost84a-sweep-certificates-and-fold.md)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): cost84aのsweep・4証明書抽出・二独立検証・第二target 4→3行fold
+## [research/log/2026-11-16-vertical-fiber-all-ones-residual-structure.md](../../../research/log/2026-11-16-vertical-fiber-all-ones-residual-structure.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (log): 全1族解析の選定・重複回避確認・機械検証・限界の記録
+## [research/log/2026-11-16-vertical-fiber-all-t-grundy-max.md](../../../research/log/2026-11-16-vertical-fiber-all-t-grundy-max.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (log): 全t最大値定理の選定・証明・監査・実装バグ2件の発見修正・反映の記録
+## [research/log/2026-11-16-vertical-fiber-all-t-minwidth-witness.md](../../../research/log/2026-11-16-vertical-fiber-all-t-minwidth-witness.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (log): 旧V5の未検査剰余境界を特定し、最小幅構成を補正・独立監査した判断記録
 ## [research/log/2026-11-16-vertical-fiber-general-t-grundy-bound.md](../../../research/log/2026-11-16-vertical-fiber-general-t-grundy-bound.md)
 
 - [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (log): K0832既存のt=2任意q・t=3,q=7結果を一般tへ統一した選定・証明・監査・未解決点
+## [research/log/2026-11-16-vertical-fiber-single-token-residual-closed-form.md](../../../research/log/2026-11-16-vertical-fiber-single-token-residual-closed-form.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (log): 残余閉形式第一段階（κ=1）の選定・証明・誤帰納の検出と修正・限界
 ## [research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md](../../../research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md)
 
 - [K0092](../items/K0092-n11-dfpn-search-status.md) (source): 命題・対象範囲・根拠を記した出典
