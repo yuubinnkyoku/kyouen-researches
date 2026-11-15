@@ -1,0 +1,194 @@
+{
+ "schema": "n11-class2-lane-cost77e-sweep-20261116-v1",
+ "date": "2026-11-16",
+ "claimed_by": "n11 long-term class2 lane (reconciled canonical head 1405 second independent verification round)",
+ "claim": "class2-lane-cost77e-inflight-20261116.json (commit e11268da, IN FLIGHT at sweep start, based on canonical head 1405/6443/509457/4713/373180)",
+ "s5": "00000000000000801202000040000000",
+ "s6_child": "00000000040000809002000000004000",
+ "s6_s7_edge_cost": 77,
+ "demand": {
+  "c1": 0,
+  "c2": 2,
+  "c4": 0
+ },
+ "chain_head_at_claim": "1405/6443/509457/4713/373180",
+ "engine": {
+  "script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/class4_child1_runner_v16.ts",
+  "blob_sha": "0a4a86f6828dc010c89ff17596054336a6b6091f",
+  "depth": 10,
+  "cap": 1000000000,
+  "andclose": 1,
+  "batch_size": 8,
+  "pilot_control": "per-batch d6 pilot loss=false nodes=3402",
+  "batches_planned": 10,
+  "batch_bits": {
+   "batch1": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    6,
+    7,
+    8
+   ],
+   "batch2": [
+    9,
+    10,
+    11,
+    15,
+    17,
+    18,
+    19,
+    20
+   ],
+   "batch3": [
+    22,
+    23,
+    25,
+    28,
+    29,
+    30,
+    31,
+    32
+   ],
+   "batch4": [
+    33,
+    34,
+    37,
+    41,
+    42,
+    43,
+    44,
+    45
+   ],
+   "batch5": [
+    46,
+    47,
+    48,
+    53,
+    54,
+    56,
+    57,
+    59
+   ],
+   "batch6": [
+    61,
+    62,
+    64,
+    65,
+    67,
+    68,
+    69,
+    70
+   ],
+   "batch7": [
+    75,
+    76,
+    77,
+    78,
+    80,
+    85,
+    87,
+    88
+   ],
+   "batch8": [
+    92,
+    94,
+    95,
+    96,
+    98,
+    99,
+    101,
+    103
+   ],
+   "batch9": [
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112
+   ],
+   "batch10": [
+    114,
+    116,
+    117,
+    119,
+    120
+   ]
+  }
+ },
+ "aggregate": {
+  "candidates": 77,
+  "win7_d10_bits": [
+   37,
+   69
+  ],
+  "win7_d10_nodes": {
+   "37": 1819936,
+   "69": 2623346
+  },
+  "refuted_d10": 75,
+  "capped": 0,
+  "total_nodes": 116019458,
+  "win_node_sum": 4443282,
+  "refuted_node_sum": 111576176,
+  "heaviest_bits": [
+   [
+    33,
+    11599283
+   ],
+   [
+    110,
+    6120211
+   ],
+   [
+    68,
+    4679010
+   ],
+   [
+    44,
+    4616237
+   ],
+   [
+    31,
+    4363849
+   ]
+  ],
+  "terminal_range_all": [
+   13,
+   17
+  ],
+  "andclose_all": true,
+  "pilots_3402": 10
+ },
+ "determinism_rerun": "class2-lane-cost77e-v16-determinism-rerun-20261116.jsonl: batches 4 and 6 (both WIN-containing, 16 bits + pilot) re-run node-exact (nodes/loss/capped identical, ms excluded)",
+ "v15_crosscheck": "class2-lane-cost77e-v15-crosscheck-20261116.jsonl: pilot d6 loss=false nodes=5949; WIN bits 37/69 both loss=true on v15 (6,551,704 / 10,089,870 nodes); refuted anchor bit 0 loss=false (11,578,726 nodes); verdicts 3/3 agree with v16",
+ "certificates": {
+  "status": "extracted, dual-independently verified, published in class2-lane-cost77e-certificates/",
+  "bit37": {
+   "root_hex": "00000000040000809002002000004000",
+   "rows": 47018,
+   "bytes": 1695679,
+   "md5": "5bf6a67f38f2027e45d62a5ee3eadfa2",
+   "sub_roots": 57,
+   "bigint_verify": "PASS union 0/0, 57/57 sub-roots, terminal [13,17]",
+   "ts_bareiss_verify": "PASS rows match, consumed distinct = rows"
+  },
+  "bit69": {
+   "root_hex": "00000000040000a09002000000004000",
+   "rows": 54491,
+   "bytes": 1964949,
+   "md5": "1e738110f8796278cd117cf02508425c",
+   "sub_roots": 57,
+   "bigint_verify": "PASS union 0/0, 57/57 sub-roots, terminal [13,17]",
+   "ts_bareiss_verify": "PASS rows match, consumed distinct = rows"
+  }
+ },
+ "fold_status": "PENDING at this record's publication; the fold re-bases the two receipts onto canonical head 1405 (recompute_frontier_cost77e_receipts_20261116.py)",
+ "interpretation_guard": "WIN7-D10 certificates prove only a first-player win within depth 10 from the individual 7-stone roots; REFUTED-D10 is only the negation of such a win, NOT a LOSS proof; no statement about the S5/S6 orbits, the two-stone roots {49,60}/{59,60}, S2 {59,60}, class 1/2/4, or the 11x11 empty board",
+ "unknown_status": "11x11 empty board, two-stone root {49,60}, S2 {59,60}, class 2, class 4: UNKNOWN"
+}
