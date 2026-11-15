@@ -35,8 +35,14 @@ artifacts:
   role: manifest
   note: B082の原文監査
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
+- path: research/experiments/n10-twenty-stone-sls-20261115/README.md
+  role: source
+  note: stochastic local search 5 run 345,966 moves の有界な負の証拠と F_10 第3系再現
+- path: research/experiments/n10-twenty-stone-sls-20261115/output/sls_runs_20261115.json
+  role: data
+  note: SLS 各 run の seed・units・trace の機械可読記録
 scope: 安全20石の存在（K_10≥20）を問う。旧B082の等号K_10=20にはさらに全域上界20が必要。
-evidence: 19≤K_10≤23。既知19石近傍とほぼ安全20点集合Uの広い近傍に安全20石なし。
+evidence: 19≤K_10≤23。既知19石近傍とほぼ安全20点集合Uの広い近傍に安全20石なし。SLS 345,966 moves (2026-11-15 sandbox) でも証人なし。
 ---
 
 # 10×10では20石まで届くか
@@ -64,3 +70,9 @@ Scope clarification: negative evidence only; does not establish K_10 <= 19. Boun
 Next steps: longer better-pruned exact search or SAT/ILP with stronger cuts; stochastic local search. Status remains open.
 
 統合監査（2026-10-20）: 上記2026-10-17の追記はローカル研究時点の報告であり、今回すべての探索・測定を再実行したものではない。再検証の範囲は `research/experiments/local-main-integration-20261020/README.md` に記す。既存の未解決性・量化の限界を維持する。
+
+## 2026-11-15 bounded advance (stochastic local search — sandbox)
+
+New finite evidence: the previously unexecuted "stochastic local search" next step was run in the Vibe TS sandbox during the 16:05Z execution-environment outage ([n10-twenty-stone-sls-20261115](../../experiments/n10-twenty-stone-sls-20261115/)). 5 completed runs, 345,966 moves total (uniform random walk / greedy-sample WalkSAT / annealing+ILS / full-scan greedy / census variants; deterministic mulberry32 PRNG; incremental violation-list + add-cost machinery; exact integer determinant test). No 20-stone witness. The only E=1 (one violated quad) 20-set ever observed is the published U; no new near-miss cut-family candidates were found at this scale. Controls reproduced F_10=54,441 (third independent code path), the K0035 19-stone witness safety, U's unique violated quad {25,59,62,83}, and U's single-swap and bounded 2-swap non-fixability (consistent with the X1/X2 complete enumerations).
+
+Scope clarification: bounded negative evidence only; does not prove K_10<=19. Bounds remain 19<=K_10<=23. The SLS scale (~3.5e5 moves) is far below the prior 243M-node branch-and-bound. Status remains open; the SAT/cut attack (n10-twenty-stone-sat-20261115) remains the primary decision route for this question.
