@@ -1,8 +1,8 @@
 {
- "schema": "n11-class2-lane-cost73g-inflight-20261115-v2",
+ "schema": "n11-class2-lane-cost73g-inflight-20261115-v3",
  "title": "n11 class2-lane cost-73g sweep completed: cheapest unswept row (cost 73) of the second coverable class-2 target S5 at head 1244 (both parents class 2, c1=0,c2=2,c4=0) - 8 WIN7-D10 receipts, certificates published, fold pending",
  "date": "2026-11-15",
- "status": "completed (sweep + WIN7 certificates + independent audit); receipts fold PENDING (a later session must re-fetch latest main and re-assert the canonical head); canonical chain head at claim 1244/6603/521339/4873/385062",
+ "status": "receipts fold IN FLIGHT (this session): folding the 8 WIN7-D10 receipts [31, 54, 56, 62, 69, 81, 89, 113] into the canonical chain head 1244/6603/521339/4873/385062 (class-frontier-cost72c-receipts-recompute-20261115.json, git blob sha 42dbb92e1505d05389e840e3368974b1c613b750, byte-verified on latest main immediately before this push); the fold script re-asserts the head, re-derives the sweep audit from the 10 raw batches, re-verifies all 8 certificates from the published part bytes, checks root disjointness against the 512 folded roots, and folds in publication order; outputs land as class-frontier-cost73g-receipts-recompute-20261115.json + ranking + top-candidates CSVs; parallel sessions must not fold these receipts or extend the chain head concurrently",
  "claimed_by": "long-term class2 lane (11x11 weak-solve long-term lane session, cost-72c receipts fold session continuation)",
  "s5": "00000000000000801202000000200000",
  "s6_child": "00000000000000849002000000000800",
@@ -204,7 +204,7 @@
    ]
   }
  },
- "plan": "COMPLETED: sweep all 73 candidates (10 batches: 9x8 + 1), v16 determinism rerun (batch 5, node-exact), v15 cross-engine (8 WIN bits loss=true + REFUTED anchors 0/100/117 loss=false, all agreeing), independent Python sweep audit (all asserts PASS), certificate extraction + BigInt/Bareiss double verification for all 8 WIN7-D10 bits, raw batches, audit, certificates, manifest and verify records pushed; REMAINING: receipts fold on a later session (must re-fetch latest main and re-assert the canonical head; the pending cost-70g/65l folds may land first and require rebase)",
+ "plan": "COMPLETED: sweep all 73 candidates, v16 determinism rerun, v15 cross-engine, independent Python sweep audit, certificate extraction + BigInt/Bareiss double verification, raw batches / audit / certificates / manifest / verify records pushed; IN FLIGHT: receipts fold of the 8 WIN7-D10 bits on head 1244 (this session, fenced by fold_in_flight); the pending cost-70g/65l folds may land before/after and are unaffected (other children) but any subsequent fold must re-assert the then-current canonical head",
  "unknown_status": "11x11 empty board: UNKNOWN. A completed sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 7-stone roots of this child; REFUTED-D10 is absence of a winner win within depth 10, not a refutation of the child; solved/coverage counts measure manifest bookkeeping, not the game-theoretic value of any position; class 2 and class 4 remain UNKNOWN.",
  "sweep_results": {
   "candidates": 73,
@@ -281,5 +281,22 @@
   "fbt_drops": 0,
   "parts": "each certificate published as two line-boundary parts (join md5 equals the whole-file md5); see the certificates README",
   "verification": "all 8 double verified: verify_win7_certificate_bigint_independent.mjs (union 0/0, terminal [13,17]) and verify_cost73g_win7_bareiss_independent.py (union 0/0); per-bit records class2-lane-cost73g-bit{N}-{bigint,bareiss}-verify-20261115.json"
+ },
+ "fold_in_flight": {
+  "receipts_to_fold": [
+   31,
+   54,
+   56,
+   62,
+   69,
+   81,
+   89,
+   113
+  ],
+  "baseline_head": "1244/6603/521339/4873/385062",
+  "baseline_head_json_blob": "42dbb92e1505d05389e840e3368974b1c613b750",
+  "fold_script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost73g_receipts_20261115.py",
+  "claimed_by": "long-term class2 lane (same session that published the sweep + certificates; claim updated before any fold output is published)",
+  "fence_note": "parallel sessions must not fold these 8 receipts concurrently and must not land another chain-head extension before this fold resolves; the pending cost-70g/65l folds and in-flight 69g/65j/74e/74g lanes target other children but any later fold must re-assert the head and rebase on the then-current canonical head"
  }
 }
