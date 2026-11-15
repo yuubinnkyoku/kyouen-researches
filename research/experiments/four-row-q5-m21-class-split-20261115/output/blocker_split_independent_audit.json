@@ -1,11 +1,21 @@
 {
-  "board": {"width": 4, "length": 21, "q": 5},
-  "target_empty_cell": [20, 0],
+  "board": {
+    "width": 4,
+    "length": 21,
+    "q": 5
+  },
+  "target_empty_cell": [
+    20,
+    0
+  ],
   "circle_census": {
     "all_ge5_circles": 538,
     "all_circle_triples_match_Ck3": true,
     "through_target": 19,
-    "through_target_point_count_histogram": {"5": 2, "6": 17}
+    "through_target_point_count_histogram": {
+      "5": 2,
+      "6": 17
+    }
   },
   "line_blocker_exclusion": {
     "nonhorizontal_lines_through_target": 45,
@@ -17,16 +27,33 @@
   },
   "buckets": {
     "p1": {
-      "anchor": [1, 0], "forbidden": [[0, 0]],
+      "anchor": [
+        1,
+        0
+      ],
+      "forbidden": [
+        [
+          0,
+          0
+        ]
+      ],
       "circles_through_target_and_anchor": 2,
-      "blocker_cases": 81, "occupied_target_case": 1, "total_instances": 82,
+      "blocker_cases": 81,
+      "occupied_target_case": 1,
+      "total_instances": 82,
       "unique_pin_sets": true,
       "canonical_case_list_sha256": "d013a8119caefdf0b0f5426c3b10d58af172ae5853c697559be70017c4b605e9"
     },
     "p0": {
-      "anchor": [0, 0], "forbidden": [],
+      "anchor": [
+        0,
+        0
+      ],
+      "forbidden": [],
       "circles_through_target_and_anchor": 1,
-      "blocker_cases": 86, "occupied_target_case": 1, "total_instances": 87,
+      "blocker_cases": 86,
+      "occupied_target_case": 1,
+      "total_instances": 87,
       "unique_pin_sets": true,
       "canonical_case_list_sha256": "8df10e6135f8bc63c35c280e6a2502ad6ea7955a0529137a17e32ab78ce2ca8f"
     }
@@ -38,14 +65,108 @@
     "reason": "The old enumerator omitted the already-forced (1,0) from its mandatory set on two circles through both (20,0) and (1,0), creating two five-stone-on-one-circle branches.",
     "invalid_cases": [
       {
-        "circle": [1, -21, 17, 20],
-        "circle_points": [[1, 0], [20, 0], [2, 1], [19, 1], [5, 3], [16, 3]],
-        "pins": [[2, 1], [5, 3], [16, 3], [19, 1]]
+        "circle": [
+          1,
+          -21,
+          17,
+          20
+        ],
+        "circle_points": [
+          [
+            1,
+            0
+          ],
+          [
+            20,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            19,
+            1
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            16,
+            3
+          ]
+        ],
+        "pins": [
+          [
+            2,
+            1
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            16,
+            3
+          ],
+          [
+            19,
+            1
+          ]
+        ]
       },
       {
-        "circle": [1, -21, 33, 20],
-        "circle_points": [[1, 0], [20, 0], [3, 1], [18, 1], [6, 2], [15, 2]],
-        "pins": [[3, 1], [6, 2], [15, 2], [18, 1]]
+        "circle": [
+          1,
+          -21,
+          33,
+          20
+        ],
+        "circle_points": [
+          [
+            1,
+            0
+          ],
+          [
+            20,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            18,
+            1
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            15,
+            2
+          ]
+        ],
+        "pins": [
+          [
+            3,
+            1
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            15,
+            2
+          ],
+          [
+            18,
+            1
+          ]
+        ]
       }
     ]
   },
