@@ -108,3 +108,21 @@ SAT/UNSAT 済みの key は skip、INDET 行は再実行される)。
 - SAT ⟹ witness 帯は m=5..21 に拡大し M_{4,5} ∈ [22, 140]。
 深キャップでも INDET の場合は minpos サブ分割 (row 0 の第2石位置) か
 --lex=H 交叉検証に分解する。
+
+
+## 追記: deep-cap その1 — c0k3p0 は cap 2400s でも INDET・driver v1 の minpos 解析 bug
+
+- **c0k3p0 deep (cap 2400s): INDET / 13,113,901 conflicts** (cap 600s の
+  7,814,011 から延伸)。CNF md5 9a6e40b4… は cap-600 行と同一 (インスタンス同一の再実行)。
+- **driver v1 bug**: `${key:6}` は "c0k3p0" に対し空文字列になり、
+  `--minpos=` (空) を渡していた。sat3.js は `Number("")=0` として minpos=0 に pin するため、
+  結果的に (a) p0 の脚は偶然にも真の c0k3p0 インスタンスと完全一致 (md5 で確認済み・記録は正当)、
+  (b) p1 の脚は c0k3p1 ではなく **c0k3p0 の重複** になっていた。
+  重複を検出して p1 の kissat を ~3 分で kill (junk record の追記は deepcap.sh を先に kill して防止・
+  records は 77 行のまま)。
+- **driver v2**: `${key:5}` に修正し、resume guard を cap-aware にした
+  (SAT/UNSAT 済み OR 同 cap の行あり → skip)。再起動で p0 は skip、
+  **p1 は正しく minpos=1 で起動** (CNF md5 059fc19d… は cap-600 行と同一)。
+- c0k3p0 の次の分解案: row 0 の第2石位置 b∈{1..19} による完全ケース分割
+  (各バケットに unit pin を追加した符号化)。p1 が決着しても p0 は残るため、
+  並行して準備する。
