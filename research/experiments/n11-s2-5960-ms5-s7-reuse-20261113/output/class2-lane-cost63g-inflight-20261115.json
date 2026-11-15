@@ -240,14 +240,14 @@
       "bit58-root-00000000080000801602000000200000.cert (24,030 rows)",
       "bit62-root-00000000080000805202000000200000.cert (23,905 rows)",
       "bit64-root-00000000080000811202000000200000.cert (14,896 rows)",
-      "bit72-root-00000000080001801202000000200000.cert (22,713 rows)",
+      "bit72-root-00000000080001801202000000200000.cert (22,792 rows; the initial publication push silently failed to land and was restored by a follow-up push at blob sha 1a7cdef3398a9a95ff08a2680d37982eb9d39789)",
       "bit94-root-00000000480000801202000000200000.cert (28,382 rows)",
       "bit96-root-00000001080000801202000000200000.cert (18,463 rows)",
       "bit99-root-00000008080000801202000000200000.cert (35,428 rows)",
       "bit105-root-00000200080000801202000000200000.cert (21,430 rows)",
       "bit113-root-00020000080000801202000000200000.cert (67,220 rows; pushed as part1of2+part2of2, joined md5 == whole md5 a15ef520ca38ad2252055358fa9e57ac)"
     ],
-    "verification": "every certificate independently verified by the repo BigInt strategy-tree verifier (verify_win7_certificate_bigint_independent.mjs, 14/14 PASS) and a second independent implementation (perm-det4 Bareiss exact integer determinants; root mobility and per-node mobility identical on all 14); GitHub code search: all 14 root hexes and their D4 canonical forms have 0 hits (no prior publication, no duplicates); remote git blob shas of all 14 files verified byte-exact against local sha1('blob N\\0'+data)",
+    "verification": "every certificate independently verified by the repo BigInt strategy-tree verifier (verify_win7_certificate_bigint_independent.mjs, 14/14 PASS) and a second independent implementation (perm-det4 Bareiss exact integer determinants; root mobility and per-node mobility identical on all 14); GitHub code search: all 14 root hexes and their D4 canonical forms have 0 hits (no prior publication, no duplicates); remote git blob shas of all 15 published files (14 certificates, bit113 split into 2 parts) verified byte-exact against local sha1('blob N\\0'+data)",
     "rows_note": "bit72 certificate was verified and counted in the audit; total certificate rows across the 14 files = 419,398"
   },
   "verdict_semantics": "loss=true => WIN7-within-depth-10 candidate (certificate rebuild target); loss=false && !capped => REFUTED-D10, no first-player win within depth 10 (NOT a LOSS proof); capped => proves nothing either way",
