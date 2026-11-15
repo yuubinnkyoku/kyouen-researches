@@ -1,0 +1,165 @@
+{
+  "verification": "x2-split second verification (sample re-run + deterministic CNF regeneration)",
+  "date": "2026-11-15T16:57:00Z",
+  "tally_37_buckets": {
+    "UNSAT": 37,
+    "SAT": 0,
+    "INDET": 0
+  },
+  "x2_conflicts": {
+    "c0k3p0": {
+      "buckets": 19,
+      "conflicts": 13382360,
+      "hardest": {
+        "key": "c0k3p0b1",
+        "conflicts": 1969663,
+        "sec": 185.1
+      }
+    },
+    "c0k3p1": {
+      "buckets": 18,
+      "conflicts": 10930286,
+      "hardest": {
+        "key": "c0k3p1b3",
+        "conflicts": 1082095,
+        "sec": 102.6
+      }
+    },
+    "total": 24312646
+  },
+  "m21_deciding_total_conflicts": 102380271,
+  "cnf_regeneration_md5_checks": [
+    {
+      "key": "c0k3p1b7",
+      "md5": "286e4509bdccd0f6e722452c5c2ec7df",
+      "matches_record": true
+    },
+    {
+      "key": "c0k3p1b2",
+      "md5": "1dcb4c46536a9e3c635ed01f08581879",
+      "matches_record": true
+    },
+    {
+      "key": "c0k3p0b1",
+      "md5": "13749780ebd7467aca0a7b2e3ea7e163",
+      "matches_record": true
+    },
+    {
+      "key": "c0k3p1b8",
+      "md5": "3a1648ec35b92f316ffdbf24aa30133b",
+      "matches_record": true
+    }
+  ],
+  "sample_reruns": [
+    {
+      "key": "c0k3p0b1",
+      "record": {
+        "result": "UNSAT",
+        "conflicts": 1969663
+      },
+      "rerun": {
+        "result": "UNSATISFIABLE",
+        "conflicts": 1969663
+      },
+      "bit_exact": true
+    },
+    {
+      "key": "c0k3p1b8",
+      "record": {
+        "result": "UNSAT",
+        "conflicts": 721355
+      },
+      "rerun": {
+        "result": "UNSATISFIABLE",
+        "conflicts": 721355
+      },
+      "bit_exact": true
+    }
+  ],
+  "conclusion": "all 37 x2 sub-buckets UNSAT => c0k3p0 and c0k3p1 UNSAT (complete disjoint second-stone case split) => all 75 m=21 class-split instances decided UNSAT => no row-deficient maximal safe configuration exists on 4x21 (q=5); every maximal safe configuration has 16 stones rows (4,4,4,4); witness band m=5..20, witness-free at 21 => M_{4,5} in {21} or >= 23 (K0821-audit convention); upper 140 (K0318) unchanged; finite machine verification, not a number-theoretic proof; persistence at m>=22 open",
+  "deciding_breakdown": {
+    "direct_73": 78067625,
+    "x2_37": 24312646,
+    "total_110": 102380271
+  },
+  "erratum": {
+    "field": "m21_deciding_total_conflicts",
+    "first_published_value": 126692917,
+    "corrected_value": 102380271,
+    "cause": "the first published JSON double-counted the 37 x2 bucket conflicts (102380271 + 24312646 = 126692917); records.jsonl recomputation gives direct 73 = 78067625 + x2 37 = 24312646 = 102380271",
+    "corrected_by": "records.jsonl jq recomputation during the K0857 landing session (2026-11-15), same commit family as K0857"
+  },
+  "post_reset_reruns": {
+    "note": "the six c0k3p1 buckets b2..b7 ran before the 16:05Z execution-environment outage; their raw logs were lost to the reset (the b2 record itself was reconstructed from its pre-outage raw log). After the reset each instance was re-encoded from a regenerated CNF and re-run: all six reproduce their recorded conflict counts bit-exactly and all six are UNSATISFIABLE (kissat 4.0.4, regen6.log).",
+    "date": "2026-11-15T17:11:00Z",
+    "buckets": [
+      {
+        "key": "c0k3p1b2",
+        "record_cn_md5": "1dcb4c46536a9e3c635ed01f08581879",
+        "regenerated_cn_md5": "1dcb4c46536a9e3c635ed01f08581879",
+        "md5_match": true,
+        "record_conflicts": 977786,
+        "rerun_conflicts": 977786,
+        "bit_exact": true,
+        "result": "UNSAT"
+      },
+      {
+        "key": "c0k3p1b3",
+        "record_cn_md5": "97d8526f7f37149a34ff59a6c3806965",
+        "regenerated_cn_md5": "97d8526f7f37149a34ff59a6c3806965",
+        "md5_match": true,
+        "record_conflicts": 1082095,
+        "rerun_conflicts": 1082095,
+        "bit_exact": true,
+        "result": "UNSAT"
+      },
+      {
+        "key": "c0k3p1b4",
+        "record_cn_md5": "7456fc1d67fa737c92a18eee712ffdfd",
+        "regenerated_cn_md5": "7456fc1d67fa737c92a18eee712ffdff",
+        "md5_match": false,
+        "record_conflicts": 1023149,
+        "rerun_conflicts": 1023149,
+        "bit_exact": true,
+        "result": "UNSAT"
+      },
+      {
+        "key": "c0k3p1b5",
+        "record_cn_md5": "55bbaab8c3cb5d7d79bc8bd675ceb661",
+        "regenerated_cn_md5": "55bbaab8c3cb5d7d79bc8bd675ceb661",
+        "md5_match": true,
+        "record_conflicts": 810664,
+        "rerun_conflicts": 810664,
+        "bit_exact": true,
+        "result": "UNSAT"
+      },
+      {
+        "key": "c0k3p1b6",
+        "record_cn_md5": "e91b2169200c08e9c3d26856cd17ed87",
+        "regenerated_cn_md5": "e91b216920c08e9c3d26856cd17ed871",
+        "md5_match": false,
+        "record_conflicts": 829408,
+        "rerun_conflicts": 829408,
+        "bit_exact": true,
+        "result": "UNSAT"
+      },
+      {
+        "key": "c0k3p1b7",
+        "record_cn_md5": "286e4509bdccd0f6e722452c5c2ec7df",
+        "regenerated_cn_md5": "286e4509bdccd0f6e722452c5c2ec7df",
+        "md5_match": true,
+        "record_conflicts": 752372,
+        "rerun_conflicts": 752372,
+        "bit_exact": true,
+        "result": "UNSAT"
+      }
+    ],
+    "cn_md5_finding": {
+      "note": "cnf regeneration is deterministic (double generation byte-identical; local sat4.js md5 269012e6d2756de351ef866089986526 == main). For b2/b3/b5/b7 the recorded cnf_md5 matches the regenerated CNF. For b4/b6 the recorded cnf_md5 is a one-character transcription slip of the true generated md5 (b4: ...ffdff recorded as ...ffdfd; b6: ...ed871 recorded as ...ed87 with an extra 0 at position 11) - these record lines were among the manually reconstructed ones in the pre-outage records repair; the kissat verdicts and conflict counts are unaffected and the reruns reproduce them bit-exactly. The regenerated md5s are the authoritative encoding fingerprints.",
+      "authoritative_regenerated_md5s": {
+        "c0k3p1b4": "7456fc1d67fa737c92a18eee712ffdff",
+        "c0k3p1b6": "e91b216920c08e9c3d26856cd17ed871"
+      }
+    }
+  }
+}

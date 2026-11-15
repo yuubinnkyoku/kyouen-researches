@@ -1,0 +1,26 @@
+{
+  "experiment": "f-n-17-20261115",
+  "date": "2026-11-15",
+  "n": 17,
+  "F": 1146776,
+  "D": 123216,
+  "C": 1023560,
+  "quads_scanned_systemB": 284660376,
+  "calibration": {
+    "n12": {"C": 141272, "D": 17154, "F_systemB": 158426, "matches": "batch-08 / f-n-13-16 published values"},
+    "n13": {"C": 225022, "D": 27340, "matches": "f-n-13-16 published values"}
+  },
+  "verification": {
+    "rule": "C_17 + D_17 == F_17(systemB)",
+    "left": 1146776,
+    "right": 1146776,
+    "exact": true
+  },
+  "environment": "Vibe sandbox (run_typescript), bash unavailable, single-call budget",
+  "finite_observation": {
+    "C_over_n5": 0.7209,
+    "F_over_n6": 0.04750,
+    "D_over_F": 0.1074,
+    "note": "monotone trends continue (C/n5 increasing, F/n6 decreasing, D/F flat ~0.108); no asymptotic claim"
+  }
+}

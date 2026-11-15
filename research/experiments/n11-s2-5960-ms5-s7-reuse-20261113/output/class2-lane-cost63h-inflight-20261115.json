@@ -2,7 +2,7 @@
  "schema": "n11-class2-lane-cost63h-inflight-20261115-v1",
  "title": "n11 class2-lane cost-63h sweep in flight: second coverable class-2 candidate S5 cost-63 child (triple-parent row: class-2 + dual class-2/4 + class-4)",
  "date": "2026-11-15",
- "status": "in-flight",
+ "status": "completed (sweep + WIN7 certificate + receipts fold)",
  "claimed_by": "n11 long-term lane (published fold-chain audit v9 dual implementation + agreement v6 session)",
  "s5": "00000000000000801202000040000000",
  "s6_child": "00000000000000801202000040080000",
@@ -175,5 +175,33 @@
  },
  "verdict_semantics": "loss=true => WIN7-within-depth-10 candidate (certificate rebuild target); loss=false && !capped => REFUTED-D10 (no winner win within depth; NOT a refutation of the position, NOT a LOSS proof); capped => proves nothing",
  "unknown_status": "11x11 empty board: UNKNOWN. A completed sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 7-stone candidate positions of this child; solved counts are manifest-coverage bookkeeping; two-stone root {49,60}/{59,60}, S2 {59,60}, class 1, class 2, class 4 all UNKNOWN",
- "coordination_note": "latest main fetched immediately before this claim push; the in-flight cost-58c claim (908716e1, child 00000000000000801206000040000000) is NOT touched; the primary second target S5 00000000000000801202000000200000 has only REFUTED-D10 rows left (depth-10 receipt limit) and is not touched here"
+ "coordination_note": "latest main fetched before the fold; the parallel cost-58c fold (dcd2ead) landed while this sweep was running, so the fold re-based from the claimed 1326 head to the 58c chain head 1360; the cost-58c child and claim were not touched; the in-flight cost-58c claim (908716e1) completed on main as class2-lane-cost58c-inflight-20261116.json; 11x11 empty board remains UNKNOWN",
+ "fold": {
+  "status": "completed",
+  "chain_head_before": "1360/6488/512785/4758/376508",
+  "chain_head_after": "1362/6486/512653/4756/376376",
+  "receipts_folded": 1,
+  "publication_order": "[89] (single WIN7-D10 of the sweep; the other 62 candidates are REFUTED-D10, proving only absence of a winner win within depth 10)",
+  "total_marginal": 5,
+  "total_marginal_in_manifest": 2,
+  "zero_marginal_in_manifest": [],
+  "child_orbit_closed_by_bit": 89,
+  "parents_after": {
+   "parent1": "20 rows / 1391",
+   "parent2": "68 rows / 5202",
+   "parent3": "75 rows / 5416"
+  },
+  "output_blob_shas": {
+   "head_json": "647498b995770ff87b12e868a5b89015c26be51e",
+   "ranking_csv": "2a264dadb0fa006bfc01a63195858a2069604d3b",
+   "top_candidates_csv": "bfb1538f19d5122521e644252749403b3635c847"
+  },
+  "head_json_bytes": 6852,
+  "ranking_csv_bytes": 7537,
+  "top_candidates_csv_bytes": 5007,
+  "fold_script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost63h_receipts_20261115.py",
+  "reproduction": "python research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost63h_receipts_20261115.py",
+  "rebase_note": "this claim was opened at the cost-62a chain head 1326/6522/515251/4792/378974 (parents 34/2368, 69/5265, 77/5548); the parallel cost-58c fold landed on main during the sweep, so the receipt folds on the re-based cost-58c chain head 1360/6488/512785/4758/376508 where the same three parents hold the still-remaining child row at 21/1454, 69/5265, 77/5548; sweep verdicts are baseline-independent per-position depth-10 results",
+  "note": "The second coverable class-2 candidate S5 00000000000000801202000040000000 now has 20 remaining rows (was 21 at the 1360 baseline, 34 at claim time); the bit-89 WIN7-D10 receipt additionally closed a second manifest orbit 00000000020000801002000040080000, a row of the class-4 parent 00000000000000003800000001800000 (77 -> 75 rows). Marginal counts are D4-orbit bookkeeping over published receipts, not game-theoretic values."
+ }
 }

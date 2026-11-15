@@ -1,0 +1,3777 @@
+{
+ "controls": {
+  "base_roots": {
+   "distinct": 194,
+   "files": 26,
+   "intra_base_duplicates": [
+    {
+     "files": [
+      "class2-lane-cost68-win7-certificates-20261114.json",
+      "class2-lane-cost75-win7-certificates-20261114.json"
+     ],
+     "root": "00000000000000801a02040080000000",
+     "times_listed": 2
+    }
+   ],
+   "raw_listings": 195
+  },
+  "bit78_duplicate_root_bookkeeping": {
+   "canonical_line_claims": "exactly once (75d bit-92); the merged fold excludes bit-78 from its receipts",
+   "identity": "77d bit-78 root == 75d bit-92 receipt root (raw-hex identical)",
+   "inventory_count": "exactly once (enters via 75d; the lane-local 77d re-listing adds 0 new inventory roots)",
+   "marginals_at_1290": "sequential-order marginals from the same 1290 baseline: the records share every manifest marginal except that each fold excludes its own sweep child (77d closes its child via bit-7 first, 75d via bit-12 first); the root covers both child orbits",
+   "merged_receipts": "11 == the 77d receipts minus bit-78",
+   "root_hex": "00000000100040801202000000200000"
+  },
+  "canonical_line_hex_exactly_once": {
+   "baseline_solved": 1233,
+   "distinct_marginal_hexes": 129,
+   "endpoint_solved": 1362,
+   "multi_claims": 0,
+   "note": "every manifest hex solved between the 1233 baseline and the 1362 endpoint is claimed as a marginal by exactly one receipt record on the canonical line (branch marginals 65l/74g/69i enter once via the merged-1277 merged_receipts; the lane-local 77d head 1299 is off the canonical line and its marginals are rebased on 1296 by the merged fold, so the bit-78 root - the 75d bit-92 duplicate - is claimed exactly once)",
+   "per_head": [
+    {
+     "head": "class-frontier-cost71c-receipts-recompute-20261115.json",
+     "key": "cost71c_addition",
+     "mim_sum": 2,
+     "records": 2
+    },
+    {
+     "head": "class-frontier-cost70f-receipts-recompute-20261115.json",
+     "key": "cost70f_addition",
+     "mim_sum": 4,
+     "records": 4
+    },
+    {
+     "head": "class-frontier-cost72c-receipts-recompute-20261115.json",
+     "key": "cost72c_addition",
+     "mim_sum": 5,
+     "records": 9
+    },
+    {
+     "head": "class-frontier-cost73g-receipts-recompute-20261115.json",
+     "key": "cost73g_addition",
+     "mim_sum": 5,
+     "records": 8
+    },
+    {
+     "head": "class-frontier-cost70g-receipts-recompute-20261115.json",
+     "key": "cost70g_addition",
+     "mim_sum": 5,
+     "records": 8
+    },
+    {
+     "head": "class-frontier-cost73h-receipts-recompute-20261115.json",
+     "key": "cost73h_addition",
+     "mim_sum": 3,
+     "records": 4
+    },
+    {
+     "head": "class-frontier-merged-cost65l-74g-69i-recompute-20261115.json",
+     "key": "merged_receipts",
+     "mim_sum": 20,
+     "records": 16
+    },
+    {
+     "head": "class-frontier-cost76b-receipts-recompute-20261115.json",
+     "key": "cost76b_addition",
+     "mim_sum": 3,
+     "records": 2
+    },
+    {
+     "head": "class-frontier-cost77a-receipts-recompute-20261115.json",
+     "key": "cost77a_addition",
+     "mim_sum": 2,
+     "records": 3
+    },
+    {
+     "head": "class-frontier-cost77b-receipts-recompute-20261115.json",
+     "key": "cost77b_addition",
+     "mim_sum": 4,
+     "records": 4
+    },
+    {
+     "head": "class-frontier-cost77c-receipts-recompute-20261115.json",
+     "key": "cost77c_addition",
+     "mim_sum": 4,
+     "records": 8
+    },
+    {
+     "head": "class-frontier-cost75d-receipts-recompute-20261115.json",
+     "key": "cost75d_addition",
+     "mim_sum": 6,
+     "records": 4
+    },
+    {
+     "head": "class-frontier-merged-cost75d-77d-receipts-recompute-20261115.json",
+     "key": "cost77d_addition",
+     "mim_sum": 6,
+     "records": 11
+    },
+    {
+     "head": "class-frontier-cost79a-receipts-recompute-20261115.json",
+     "key": "cost79a_addition",
+     "mim_sum": 2,
+     "records": 3
+    },
+    {
+     "head": "class-frontier-cost80d-receipts-recompute-20261115.json",
+     "key": "cost80d_addition",
+     "mim_sum": 1,
+     "records": 4
+    },
+    {
+     "head": "class-frontier-cost82c-receipts-recompute-20261115.json",
+     "key": "cost82c_addition",
+     "mim_sum": 1,
+     "records": 5
+    },
+    {
+     "head": "class-frontier-cost83a-receipts-recompute-20261115.json",
+     "key": "cost83a_addition",
+     "mim_sum": 3,
+     "records": 4
+    },
+    {
+     "head": "class-frontier-cost83b-receipts-recompute-20261115.json",
+     "key": "cost83b_addition",
+     "mim_sum": 3,
+     "records": 5
+    },
+    {
+     "head": "class-frontier-cost83c-receipts-recompute-20261115.json",
+     "key": "cost83c_addition",
+     "mim_sum": 1,
+     "records": 2
+    },
+    {
+     "head": "class-frontier-cost83d-receipts-recompute-20261115.json",
+     "key": "cost83d_addition",
+     "mim_sum": 1,
+     "records": 3
+    },
+    {
+     "head": "class-frontier-cost84a-receipts-recompute-20261115.json",
+     "key": "cost84a_addition",
+     "mim_sum": 4,
+     "records": 4
+    },
+    {
+     "head": "class-frontier-cost62a-receipts-recompute-20261116.json",
+     "key": "cost62a_addition",
+     "mim_sum": 8,
+     "records": 6
+    },
+    {
+     "head": "class-frontier-cost58c-receipts-recompute-20261116.json",
+     "key": "cost58c_addition",
+     "mim_sum": 34,
+     "records": 33
+    },
+    {
+     "head": "class-frontier-cost63h-receipts-recompute-20261115.json",
+     "key": "cost63h_addition",
+     "mim_sum": 2,
+     "records": 1
+    }
+   ],
+   "total_mim": 129
+  },
+  "chain_head_roots": {
+   "distinct": 402,
+   "heads": 52,
+   "overlap_with_base": 104
+  },
+  "child_closure": [
+   {
+    "child": "00000000000080809002000000000800",
+    "closing_records": [
+     {
+      "bit": 85,
+      "key": "cost63f_addition",
+      "path": "cost63f_addition"
+     }
+    ],
+    "declared_by_totals": 85,
+    "head": "class-frontier-cost63f-receipts-recompute-20261115.json",
+    "n_closing_records": 1
+   },
+   {
+    "child": "00000000080000801202000000200000",
+    "closing_records": [
+     {
+      "bit": 0,
+      "key": "cost63g_addition",
+      "path": "cost63g_addition"
+     }
+    ],
+    "declared_by_totals": 0,
+    "head": "class-frontier-cost63g-receipts-recompute-20261115.json",
+    "n_closing_records": 1
+   },
+   {
+    "child": "00000000000000801202000000202000",
+    "closing_records": [
+     {
+      "bit": 64,
+      "key": "cost67c_addition",
+      "path": "cost67c_addition"
+     }
+    ],
+    "declared_by_totals": 64,
+    "head": "class-frontier-cost67c-receipts-recompute-20261115.json",
+    "n_closing_records": 1
+   },
+   {
+    "child": "00000000000000809102000000000008",
+    "closing_records": [
+     {
+      "bit": 2,
+      "key": "cost69f_addition",
+      "path": "cost69f_addition"
+     }
+    ],
+    "declared_by_totals": null,
+    "head": "class-frontier-cost69f-receipts-recompute-20261115.json",
+    "n_closing_records": 1
+   },
+   {
+    "child": "0000000000000080120a000000200000",
+    "closing_records": [
+     {
+      "bit": 58,
+      "key": "cost69h_addition",
+      "path": "cost69h_addition"
+     }
+    ],
+    "declared_by_totals": 58,
+    "head": "class-frontier-cost69h-receipts-recompute-20261115.json",
+    "n_closing_records": 1
+   },
+   {
+    "child": "00000000000000809102000002000000",
+    "closing_records": [],
+    "declared_by_totals": null,
+    "head": "class-frontier-cost72b-receipts-recompute-20261115.json",
+    "n_closing_records": 0
+   },
+   {
+    "child": "00000000000000809102020000000000",
+    "closing_records": [
+     {
+      "bit": 2,
+      "key": "cost74d_addition",
+      "path": "cost74d_addition"
+     }
+    ],
+    "declared_by_totals": null,
+    "head": "class-frontier-cost74d-receipts-recompute-20261115.json",
+    "n_closing_records": 1
+   },
+   {
+    "child": "00000000000000809102000000000001",
+    "closing_records": [
+     {
+      "bit": 11,
+      "key": "cost76a_addition",
+      "path": "cost76a_addition"
+     }
+    ],
+    "declared_by_totals": 11,
+    "head": "class-frontier-cost76a-receipts-recompute-20261115.json",
+    "n_closing_records": 1
+   },
+   {
+    "child": "00000000000000809102000000400000",
+    "closing_records": [
+     {
+      "bit": 36,
+      "key": "cost78a_addition",
+      "path": "cost78a_addition"
+     }
+    ],
+    "declared_by_totals": 36,
+    "head": "class-frontier-cost78a-receipts-recompute-20261115.json",
+    "n_closing_records": 1
+   },
+   {
+    "child": "00000000000000801202000000200004",
+    "closing_records": [
+     {
+      "bit": 0,
+      "key": "cost70e_addition",
+      "path": "cost70e_addition"
+     }
+    ],
+    "declared_by_totals": 0,
+    "head": "class-frontier-cost70e-receipts-recompute-20261115.json",
+    "n_closing_records": 1
+   },
+   {
+    "child": "00000000000000801202000080200000",
+    "closing_records": [
+     {
+      "bit": 24,
+      "key": "cost71c_addition",
+      "path": "cost71c_addition"
+     }
+    ],
+    "declared_by_totals": 24,
+    "head": "class-frontier-cost71c-receipts-recompute-20261115.json",
+    "n_closing_records": 1
+   },
+   {
+    "child": "00000000000000801202000002200000",
+    "closing_records": [
+     {
+      "bit": 9,
+      "key": "cost70f_addition",
+      "path": "cost70f_addition"
+     }
+    ],
+    "declared_by_totals": 9,
+    "head": "class-frontier-cost70f-receipts-recompute-20261115.json",
+    "n_closing_records": 1
+   },
+   {
+    "child": "00000000000000801202000000220000",
+    "closing_records": [
+     {
+      "bit": 1,
+      "key": "cost72c_addition",
+      "path": "cost72c_addition"
+     }
+    ],
+    "declared_by_totals": 1,
+    "head": "class-frontier-cost72c-receipts-recompute-20261115.json",
+    "n_closing_records": 1
+   },
+   {
+    "child": "00000000000000849002000000000800",
+    "closing_records": [
+     {
+      "bit": 31,
+      "key": "cost73g_addition",
+      "path": "cost73g_addition"
+     }
+    ],
+    "declared_by_totals": 31,
+    "head": "class-frontier-cost73g-receipts-recompute-20261115.json",
+    "n_closing_records": 1
+   },
+   {
+    "child": "00000000000100809002000000000800",
+    "closing_records": [],
+    "declared_by_totals": null,
+    "head": "class-frontier-cost70g-receipts-recompute-20261115.json",
+    "n_closing_records": 0
+   },
+   {
+    "child": "00000000200000083800000000000200",
+    "closing_records": [
+     {
+      "bit": 45,
+      "key": "cost73h_addition",
+      "path": "cost73h_addition"
+     }
+    ],
+    "declared_by_totals": 45,
+    "head": "class-frontier-cost73h-receipts-recompute-20261115.json",
+    "n_closing_records": 1
+   },
+   {
+    "child": "00000000220000003800000000000200",
+    "closing_records": [
+     {
+      "bit": 21,
+      "key": "cost65l_addition",
+      "path": "cost65l_addition"
+     }
+    ],
+    "declared_by_totals": 21,
+    "head": "class-frontier-cost65l-receipts-recompute-20261115.json",
+    "n_closing_records": 1
+   },
+   {
+    "child": "00000000000000809142000000000000",
+    "closing_records": [
+     {
+      "bit": 4,
+      "key": "cost74g_addition",
+      "path": "cost74g_addition"
+     }
+    ],
+    "declared_by_totals": 4,
+    "head": "class-frontier-cost74g-receipts-recompute-20261115.json",
+    "n_closing_records": 1
+   },
+   {
+    "child": "00000000000000809102000000002000",
+    "closing_records": [
+     {
+      "bit": 21,
+      "key": "cost69i_addition",
+      "path": "cost69i_addition"
+     }
+    ],
+    "declared_by_totals": 21,
+    "head": "class-frontier-cost69i-receipts-recompute-20261115.json",
+    "n_closing_records": 1
+   },
+   {
+    "child": "00000000000000801302000000200000",
+    "closing_records": [
+     {
+      "bit": 72,
+      "key": "cost76b_addition",
+      "path": "cost76b_addition"
+     }
+    ],
+    "declared_by_totals": 72,
+    "head": "class-frontier-cost76b-receipts-recompute-20261115.json",
+    "n_closing_records": 1
+   },
+   {
+    "child": "00000000000000801202000000204000",
+    "closing_records": [
+     {
+      "bit": 40,
+      "key": "cost77a_addition",
+      "path": "cost77a_addition"
+     }
+    ],
+    "declared_by_totals": 40,
+    "head": "class-frontier-cost77a-receipts-recompute-20261115.json",
+    "n_closing_records": 1
+   },
+   {
+    "child": "00000000000000801202000200200000",
+    "closing_records": [
+     {
+      "bit": 9,
+      "key": "cost77b_addition",
+      "path": "cost77b_addition"
+     }
+    ],
+    "declared_by_totals": 9,
+    "head": "class-frontier-cost77b-receipts-recompute-20261115.json",
+    "n_closing_records": 1
+   },
+   {
+    "child": "00000000040000801202000000200000",
+    "closing_records": [
+     {
+      "bit": 10,
+      "key": "cost77c_addition",
+      "path": "cost77c_addition"
+     }
+    ],
+    "declared_by_totals": 10,
+    "head": "class-frontier-cost77c-receipts-recompute-20261115.json",
+    "n_closing_records": 1
+   },
+   {
+    "child": "00000000000040801202000000200000",
+    "closing_records": [
+     {
+      "bit": 12,
+      "key": "cost75d_addition",
+      "path": "cost75d_addition"
+     }
+    ],
+    "declared_by_totals": 12,
+    "head": "class-frontier-cost75d-receipts-recompute-20261115.json",
+    "n_closing_records": 1
+   },
+   {
+    "child": "00000000100000801202000000200000",
+    "closing_records": [
+     {
+      "bit": 7,
+      "key": "cost77d_addition",
+      "path": "cost77d_addition"
+     }
+    ],
+    "declared_by_totals": 7,
+    "head": "class-frontier-cost77d-receipts-recompute-20261115.json",
+    "n_closing_records": 1
+   },
+   {
+    "child": "00000000100000801202000000200000",
+    "closing_records": [],
+    "declared_by_totals": null,
+    "head": "class-frontier-merged-cost75d-77d-receipts-recompute-20261115.json",
+    "n_closing_records": 0
+   },
+   {
+    "child": "00000000000000801212000000200000",
+    "closing_records": [
+     {
+      "bit": 9,
+      "key": "cost79a_addition",
+      "path": "cost79a_addition"
+     }
+    ],
+    "declared_by_totals": 9,
+    "head": "class-frontier-cost79a-receipts-recompute-20261115.json",
+    "n_closing_records": 1
+   },
+   {
+    "child": "00000008000000809002000000000400",
+    "closing_records": [
+     {
+      "bit": 48,
+      "key": "cost80d_addition",
+      "path": "cost80d_addition"
+     }
+    ],
+    "declared_by_totals": 48,
+    "head": "class-frontier-cost80d-receipts-recompute-20261115.json",
+    "n_closing_records": 1
+   },
+   {
+    "child": "00000000200040003800000000000200",
+    "closing_records": [
+     {
+      "bit": 16,
+      "key": "cost82c_addition",
+      "path": "cost82c_addition"
+     }
+    ],
+    "declared_by_totals": 16,
+    "head": "class-frontier-cost82c-receipts-recompute-20261115.json",
+    "n_closing_records": 1
+   },
+   {
+    "child": "00000000000000801202000000200008",
+    "closing_records": [
+     {
+      "bit": 12,
+      "key": "cost83a_addition",
+      "path": "cost83a_addition"
+     }
+    ],
+    "declared_by_totals": 12,
+    "head": "class-frontier-cost83a-receipts-recompute-20261115.json",
+    "n_closing_records": 1
+   },
+   {
+    "child": "00000000000000801202000000200010",
+    "closing_records": [
+     {
+      "bit": 9,
+      "key": "cost83b_addition",
+      "path": "cost83b_addition"
+     }
+    ],
+    "declared_by_totals": 9,
+    "head": "class-frontier-cost83b-receipts-recompute-20261115.json",
+    "n_closing_records": 1
+   },
+   {
+    "child": "00000000200000003800000000400200",
+    "closing_records": [
+     {
+      "bit": 16,
+      "key": "cost83c_addition",
+      "path": "cost83c_addition"
+     }
+    ],
+    "declared_by_totals": 16,
+    "head": "class-frontier-cost83c-receipts-recompute-20261115.json",
+    "n_closing_records": 1
+   },
+   {
+    "child": "00000000200000003800100000000200",
+    "closing_records": [
+     {
+      "bit": 16,
+      "key": "cost83d_addition",
+      "path": "cost83d_addition"
+     }
+    ],
+    "declared_by_totals": 16,
+    "head": "class-frontier-cost83d-receipts-recompute-20261115.json",
+    "n_closing_records": 1
+   },
+   {
+    "child": "00000000000040809002000000000800",
+    "closing_records": [
+     {
+      "bit": 1,
+      "key": "cost84a_addition",
+      "path": "cost84a_addition"
+     }
+    ],
+    "declared_by_totals": 1,
+    "head": "class-frontier-cost84a-receipts-recompute-20261115.json",
+    "n_closing_records": 1
+   },
+   {
+    "child": "00000000040000003800000008100000",
+    "closing_records": [
+     {
+      "bit": 7,
+      "key": "cost62a_addition",
+      "path": "cost62a_addition"
+     }
+    ],
+    "declared_by_totals": 7,
+    "head": "class-frontier-cost62a-receipts-recompute-20261116.json",
+    "n_closing_records": 1
+   },
+   {
+    "child": "00000000000000801206000040000000",
+    "closing_records": [
+     {
+      "bit": 1,
+      "key": "cost58c_addition",
+      "path": "cost58c_addition"
+     }
+    ],
+    "declared_by_totals": 1,
+    "head": "class-frontier-cost58c-receipts-recompute-20261116.json",
+    "n_closing_records": 1
+   },
+   {
+    "child": "00000000000000801202000040080000",
+    "closing_records": [
+     {
+      "bit": 89,
+      "key": "cost63h_addition",
+      "path": "cost63h_addition"
+     }
+    ],
+    "declared_by_totals": 89,
+    "head": "class-frontier-cost63h-receipts-recompute-20261115.json",
+    "n_closing_records": 1
+   }
+  ],
+  "claim_58c_crosscheck": "completed 58c claim fold record matches the published 58c head JSON byte-exact (blob sha + 26118 bytes) and the published head transition 1326/6522/515251/4792/378974 -> 1360/6488/512785/4758/376508 with 33 receipts folded; the published head totals.receipts field is the static sweep count 34 (the bit-76 certificate is excluded by the BigInt verifier terminal guard, as documented in the claim publication_order note); child closed by bit-1, parents_after 21/1454 and 27/1915",
+  "claim_62a_crosscheck": "completed 62a claim fold record matches the published 62a head JSON byte-exact (blob sha + 9434 bytes) and the published head transition 1318/6530/515822/4800/379545 -> 1326/6522/515251/4792/378974 (receipts [7, 15, 35, 76, 81, 98], child closed by bit-7, second candidate S5 39/2708 -> 34/2368, totals marginal 32 / in-manifest 8, zero-mim [35]), also covered by the same-day second independent verification JSON",
+  "claim_63h_crosscheck": "completed 63h claim fold record matches the published 63h head JSON byte-exact (blob sha + 6852 bytes) and the published head transition (re-based) 1360/6488/512785/4758/376508 -> 1362/6486/512653/4756/376376 with the single bit-89 WIN7 receipt (child orbit closed, two manifest marginals; the other 62 candidates are REFUTED-D10); the claim was opened at the 1326 head and re-based on the parallel 58c fold per both the head JSON rebase_note and the claim fold record",
+  "claim_75d_crosscheck": "completed claim fold record matches the published 75d head JSON byte-exact (blob sha + 8992 bytes) and the published head transition 1290/6557/517923/4827/381646 -> 1296/6551/517468/4821/381191; the claim records the target parent losing both the cost-75 child row and the cost-77 child row (bit-92 cross-cover), so the parallel cost-77d fold must follow the warm-hygiene pattern (cost-70g precedent)",
+  "claim_79a_crosscheck": "completed 79a claim fold record matches the published 79a head JSON (blob sha pinned) and the head transition 1302 -> 1304 (receipts [9, 50, 64], child closed by bit-9)",
+  "claim_80d_crosscheck": "completed 80d claim fold record matches the published 80d head JSON byte-exact (blob sha + 8033 bytes) and the published head transition 1304/6543/516873/4813/380596 -> 1305/6542/516793/4812/380516 (receipts [48, 61, 81, 96], child closed by bit-48, second target S5 10/787 -> 9/707)",
+  "claim_82c_crosscheck": "completed 82c claim fold record matches the published 82c head JSON byte-exact (blob sha + 8587 bytes) and the published head transition 1305/6542/516793/4812/380516 -> 1306/6541/516711/4811/380434 (receipts [16, 37, 47, 71, 82], child closed by bit-16, second target S5 9/707 -> 8/625, totals marginal 21 / in-manifest 1, zero-mim [37, 47, 71, 82]), also covered by the same-day second independent verification JSON",
+  "claim_83a_crosscheck": "completed 83a claim fold record matches the published 83a head JSON byte-exact (blob sha + 8068 bytes) and the published head transition 1306/6541/516711/4811/380434 -> 1309/6538/516477/4808/380200 (receipts [12, 58, 72, 95], child closed by bit-12, second target S5 8/625 -> 7/542, totals marginal 19 / in-manifest 3, zero-mim [58, 95]), also covered by the same-day second independent verification and mirror replication JSONs",
+  "claim_83b_crosscheck": "completed 83b claim fold record matches the published 83b head JSON byte-exact (blob sha + 8651 bytes) and the published head transition 1309/6538/516477/4808/380200 -> 1312/6535/516227/4805/379950 (receipts [9, 12, 58, 64, 96], child closed by bit-9, second target S5 7/542 -> 6/459, totals marginal 23 / in-manifest 3, zero-mim [58, 64, 96]), also covered by the same-day second independent verification JSON",
+  "claim_83c_crosscheck": "completed 83c claim fold record matches the published 83c head JSON byte-exact (blob sha + 6811 bytes) and the published head transition 1312/6535/516227/4805/379950 -> 1313/6534/516144/4804/379867 (receipts [16, 82], child closed by bit-16, second target S5 6/459 -> 5/376, totals marginal 9 / in-manifest 1, zero-mim [82]), also covered by the same-day second independent verification JSON",
+  "claim_83d_crosscheck": "completed 83d claim fold record matches the published 83d head JSON byte-exact (blob sha + 7407 bytes) and the published head transition 1313/6534/516144/4804/379867 -> 1314/6533/516061/4803/379784 (receipts [16, 51, 82], child closed by bit-16, second target S5 5/376 -> 4/293, totals marginal 13 / in-manifest 1, zero-mim [51, 82]), also covered by the same-day second independent verification JSON",
+  "claim_84a_crosscheck": "completed 84a claim fold record matches the published 84a head JSON byte-exact (blob sha + 7935 bytes) and the published head transition 1314/6533/516061/4803/379784 -> 1318/6530/515822/4800/379545 (receipts [1, 62, 70, 90], child closed by bit-1, second target S5 4/293 -> 3/209, totals marginal 20 / in-manifest 4, zero-mim [70]), also covered by the same-day second independent verification JSON",
+  "convention_external_receipts": [
+   {
+    "d4_orbit": "00000008000000803800000008200000",
+    "d4_twin_of_inventory": true,
+    "head": "class-frontier-cost75c-recompute-20261115.json",
+    "marginal_in_manifest": 2,
+    "path": "cost72_fold",
+    "root_hex": "00008000000000803202000000000200"
+   }
+  ],
+  "cumulative_by_post70e_head": [
+   {
+    "audit_document_order_cumulative": 497,
+    "baseline_head": null,
+    "fold_own_branch_cumulative": 497,
+    "fold_published_own_claim": 497,
+    "head": "class-frontier-cost70e-receipts-recompute-20261115.json",
+    "matches_published": true,
+    "new_orbits_added": 5,
+    "roots_in_head": 5
+   },
+   {
+    "audit_document_order_cumulative": 499,
+    "baseline_head": "class-frontier-cost70e-receipts-recompute-20261115.json",
+    "fold_own_branch_cumulative": 499,
+    "fold_published_own_claim": 499,
+    "head": "class-frontier-cost71c-receipts-recompute-20261115.json",
+    "matches_published": true,
+    "new_orbits_added": 2,
+    "roots_in_head": 2
+   },
+   {
+    "audit_document_order_cumulative": 503,
+    "baseline_head": "class-frontier-cost71c-receipts-recompute-20261115.json",
+    "fold_own_branch_cumulative": 503,
+    "fold_published_own_claim": 503,
+    "head": "class-frontier-cost70f-receipts-recompute-20261115.json",
+    "matches_published": true,
+    "new_orbits_added": 4,
+    "roots_in_head": 4
+   },
+   {
+    "audit_document_order_cumulative": 512,
+    "baseline_head": "class-frontier-cost70f-receipts-recompute-20261115.json",
+    "fold_own_branch_cumulative": 512,
+    "fold_published_own_claim": 512,
+    "head": "class-frontier-cost72c-receipts-recompute-20261115.json",
+    "matches_published": true,
+    "new_orbits_added": 9,
+    "roots_in_head": 9
+   },
+   {
+    "audit_document_order_cumulative": 520,
+    "baseline_head": "class-frontier-cost72c-receipts-recompute-20261115.json",
+    "fold_own_branch_cumulative": 520,
+    "fold_published_own_claim": 520,
+    "head": "class-frontier-cost73g-receipts-recompute-20261115.json",
+    "matches_published": true,
+    "new_orbits_added": 8,
+    "roots_in_head": 8
+   },
+   {
+    "audit_document_order_cumulative": 528,
+    "baseline_head": "class-frontier-cost73g-receipts-recompute-20261115.json",
+    "fold_own_branch_cumulative": 528,
+    "fold_published_own_claim": 528,
+    "head": "class-frontier-cost70g-receipts-recompute-20261115.json",
+    "matches_published": true,
+    "new_orbits_added": 8,
+    "roots_in_head": 8
+   },
+   {
+    "audit_document_order_cumulative": 532,
+    "baseline_head": "class-frontier-cost70g-receipts-recompute-20261115.json",
+    "fold_own_branch_cumulative": 532,
+    "fold_published_own_claim": 532,
+    "head": "class-frontier-cost73h-receipts-recompute-20261115.json",
+    "matches_published": true,
+    "new_orbits_added": 4,
+    "roots_in_head": 4
+   },
+   {
+    "audit_document_order_cumulative": 534,
+    "baseline_head": "class-frontier-cost73h-receipts-recompute-20261115.json",
+    "fold_own_branch_cumulative": 534,
+    "fold_published_own_claim": 534,
+    "head": "class-frontier-cost65l-receipts-recompute-20261115.json",
+    "matches_published": true,
+    "new_orbits_added": 2,
+    "roots_in_head": 2
+   },
+   {
+    "audit_document_order_cumulative": 544,
+    "baseline_head": "class-frontier-cost73h-receipts-recompute-20261115.json",
+    "fold_own_branch_cumulative": 542,
+    "fold_published_own_claim": 542,
+    "head": "class-frontier-cost74g-receipts-recompute-20261115.json",
+    "matches_published": true,
+    "new_orbits_added": 10,
+    "roots_in_head": 10
+   },
+   {
+    "audit_document_order_cumulative": 548,
+    "baseline_head": "class-frontier-cost74g-receipts-recompute-20261115.json",
+    "fold_own_branch_cumulative": 546,
+    "fold_published_own_claim": 546,
+    "head": "class-frontier-cost69i-receipts-recompute-20261115.json",
+    "matches_published": true,
+    "new_orbits_added": 4,
+    "roots_in_head": 4
+   },
+   {
+    "audit_document_order_cumulative": 548,
+    "baseline_head": "class-frontier-cost73h-receipts-recompute-20261115.json",
+    "fold_own_branch_cumulative": 544,
+    "fold_published_own_claim": 544,
+    "head": "class-frontier-merged-cost65l-74g-recompute-20261115.json",
+    "matches_published": true,
+    "new_orbits_added": 0,
+    "roots_in_head": 12
+   },
+   {
+    "audit_document_order_cumulative": 548,
+    "baseline_head": "class-frontier-merged-cost65l-74g-recompute-20261115.json",
+    "fold_own_branch_cumulative": 548,
+    "fold_published_own_claim": 548,
+    "head": "class-frontier-merged-cost65l-74g-69i-recompute-20261115.json",
+    "matches_published": true,
+    "new_orbits_added": 0,
+    "roots_in_head": 16
+   },
+   {
+    "audit_document_order_cumulative": 550,
+    "baseline_head": "class-frontier-merged-cost65l-74g-69i-recompute-20261115.json",
+    "fold_own_branch_cumulative": 550,
+    "fold_published_own_claim": 550,
+    "head": "class-frontier-cost76b-receipts-recompute-20261115.json",
+    "matches_published": true,
+    "new_orbits_added": 2,
+    "roots_in_head": 2
+   },
+   {
+    "audit_document_order_cumulative": 553,
+    "baseline_head": "class-frontier-cost76b-receipts-recompute-20261115.json",
+    "fold_own_branch_cumulative": 553,
+    "fold_published_own_claim": 553,
+    "head": "class-frontier-cost77a-receipts-recompute-20261115.json",
+    "matches_published": true,
+    "new_orbits_added": 3,
+    "roots_in_head": 3
+   },
+   {
+    "audit_document_order_cumulative": 557,
+    "baseline_head": "class-frontier-cost77a-receipts-recompute-20261115.json",
+    "fold_own_branch_cumulative": 557,
+    "fold_published_own_claim": 557,
+    "head": "class-frontier-cost77b-receipts-recompute-20261115.json",
+    "matches_published": true,
+    "new_orbits_added": 4,
+    "roots_in_head": 4
+   },
+   {
+    "audit_document_order_cumulative": 565,
+    "baseline_head": "class-frontier-cost77b-receipts-recompute-20261115.json",
+    "fold_own_branch_cumulative": 565,
+    "fold_published_own_claim": 565,
+    "head": "class-frontier-cost77c-receipts-recompute-20261115.json",
+    "matches_published": true,
+    "new_orbits_added": 8,
+    "roots_in_head": 8
+   },
+   {
+    "audit_document_order_cumulative": 569,
+    "baseline_head": "class-frontier-cost77c-receipts-recompute-20261115.json",
+    "fold_own_branch_cumulative": 569,
+    "fold_published_own_claim": 569,
+    "head": "class-frontier-cost75d-receipts-recompute-20261115.json",
+    "matches_published": true,
+    "new_orbits_added": 4,
+    "roots_in_head": 4
+   },
+   {
+    "audit_document_order_cumulative": 580,
+    "baseline_head": "class-frontier-cost77c-receipts-recompute-20261115.json",
+    "fold_own_branch_cumulative": 577,
+    "fold_published_own_claim": 577,
+    "head": "class-frontier-cost77d-receipts-recompute-20261115.json",
+    "matches_published": true,
+    "new_orbits_added": 11,
+    "roots_in_head": 12
+   },
+   {
+    "audit_document_order_cumulative": 580,
+    "baseline_head": "class-frontier-cost75d-receipts-recompute-20261115.json",
+    "fold_own_branch_cumulative": 580,
+    "fold_published_own_claim": 580,
+    "head": "class-frontier-merged-cost75d-77d-receipts-recompute-20261115.json",
+    "matches_published": true,
+    "new_orbits_added": 0,
+    "roots_in_head": 11
+   },
+   {
+    "audit_document_order_cumulative": 583,
+    "baseline_head": "class-frontier-merged-cost75d-77d-receipts-recompute-20261115.json",
+    "fold_own_branch_cumulative": 583,
+    "fold_published_own_claim": 583,
+    "head": "class-frontier-cost79a-receipts-recompute-20261115.json",
+    "matches_published": true,
+    "new_orbits_added": 3,
+    "roots_in_head": 3
+   },
+   {
+    "audit_document_order_cumulative": 587,
+    "baseline_head": "class-frontier-cost79a-receipts-recompute-20261115.json",
+    "fold_own_branch_cumulative": 587,
+    "fold_published_own_claim": 587,
+    "head": "class-frontier-cost80d-receipts-recompute-20261115.json",
+    "matches_published": true,
+    "new_orbits_added": 4,
+    "roots_in_head": 4
+   },
+   {
+    "audit_document_order_cumulative": 592,
+    "baseline_head": "class-frontier-cost80d-receipts-recompute-20261115.json",
+    "fold_own_branch_cumulative": 592,
+    "fold_published_own_claim": 592,
+    "head": "class-frontier-cost82c-receipts-recompute-20261115.json",
+    "matches_published": true,
+    "new_orbits_added": 5,
+    "roots_in_head": 5
+   },
+   {
+    "audit_document_order_cumulative": 596,
+    "baseline_head": "class-frontier-cost82c-receipts-recompute-20261115.json",
+    "fold_own_branch_cumulative": 596,
+    "fold_published_own_claim": 596,
+    "head": "class-frontier-cost83a-receipts-recompute-20261115.json",
+    "matches_published": true,
+    "new_orbits_added": 4,
+    "roots_in_head": 4
+   },
+   {
+    "audit_document_order_cumulative": 601,
+    "baseline_head": "class-frontier-cost83a-receipts-recompute-20261115.json",
+    "fold_own_branch_cumulative": 601,
+    "fold_published_own_claim": 601,
+    "head": "class-frontier-cost83b-receipts-recompute-20261115.json",
+    "matches_published": true,
+    "new_orbits_added": 5,
+    "roots_in_head": 5
+   },
+   {
+    "audit_document_order_cumulative": 603,
+    "baseline_head": "class-frontier-cost83b-receipts-recompute-20261115.json",
+    "fold_own_branch_cumulative": 603,
+    "fold_published_own_claim": 603,
+    "head": "class-frontier-cost83c-receipts-recompute-20261115.json",
+    "matches_published": true,
+    "new_orbits_added": 2,
+    "roots_in_head": 2
+   },
+   {
+    "audit_document_order_cumulative": 606,
+    "baseline_head": "class-frontier-cost83c-receipts-recompute-20261115.json",
+    "fold_own_branch_cumulative": 606,
+    "fold_published_own_claim": 606,
+    "head": "class-frontier-cost83d-receipts-recompute-20261115.json",
+    "matches_published": true,
+    "new_orbits_added": 3,
+    "roots_in_head": 3
+   },
+   {
+    "audit_document_order_cumulative": 610,
+    "baseline_head": "class-frontier-cost83d-receipts-recompute-20261115.json",
+    "fold_own_branch_cumulative": 610,
+    "fold_published_own_claim": 610,
+    "head": "class-frontier-cost84a-receipts-recompute-20261115.json",
+    "matches_published": true,
+    "new_orbits_added": 4,
+    "roots_in_head": 4
+   },
+   {
+    "audit_document_order_cumulative": 616,
+    "baseline_head": "class-frontier-cost84a-receipts-recompute-20261115.json",
+    "fold_own_branch_cumulative": 616,
+    "fold_published_own_claim": 616,
+    "head": "class-frontier-cost62a-receipts-recompute-20261116.json",
+    "matches_published": true,
+    "new_orbits_added": 6,
+    "roots_in_head": 6
+   },
+   {
+    "audit_document_order_cumulative": 649,
+    "baseline_head": "class-frontier-cost62a-receipts-recompute-20261116.json",
+    "fold_own_branch_cumulative": 649,
+    "fold_published_own_claim": 649,
+    "head": "class-frontier-cost58c-receipts-recompute-20261116.json",
+    "matches_published": true,
+    "new_orbits_added": 33,
+    "roots_in_head": 33
+   },
+   {
+    "audit_document_order_cumulative": 650,
+    "baseline_head": "class-frontier-cost58c-receipts-recompute-20261116.json",
+    "fold_own_branch_cumulative": 650,
+    "fold_published_own_claim": 650,
+    "head": "class-frontier-cost63h-receipts-recompute-20261115.json",
+    "matches_published": true,
+    "new_orbits_added": 1,
+    "roots_in_head": 1
+   }
+  ],
+  "d4_orbits": {
+   "multi_provenance_roots": [
+    {
+     "provenance": [
+      {
+       "head": "class2-lane-cost75-win7-certificates-20261114.json",
+       "kind": "base"
+      },
+      {
+       "head": "class2-lane-cost63cd-frontier-recompute-20261114.json",
+       "kind": "chain_head"
+      },
+      {
+       "head": "class2-lane-cost75-frontier-recompute-20261114.json",
+       "kind": "chain_head"
+      }
+     ],
+     "root_hex": "00000000000000801a02040000000001"
+    },
+    {
+     "provenance": [
+      {
+       "head": "class2-lane-cost75-win7-certificates-20261114.json",
+       "kind": "base"
+      },
+      {
+       "head": "class2-lane-cost63cd-frontier-recompute-20261114.json",
+       "kind": "chain_head"
+      },
+      {
+       "head": "class2-lane-cost75-frontier-recompute-20261114.json",
+       "kind": "chain_head"
+      }
+     ],
+     "root_hex": "00000000000000801a02040000000010"
+    },
+    {
+     "provenance": [
+      {
+       "head": "class2-lane-cost75-win7-certificates-20261114.json",
+       "kind": "base"
+      },
+      {
+       "head": "class2-lane-cost63cd-frontier-recompute-20261114.json",
+       "kind": "chain_head"
+      },
+      {
+       "head": "class2-lane-cost75-frontier-recompute-20261114.json",
+       "kind": "chain_head"
+      }
+     ],
+     "root_hex": "00000000000000801a02040000004000"
+    },
+    {
+     "provenance": [
+      {
+       "head": "class2-lane-cost75-win7-certificates-20261114.json",
+       "kind": "base"
+      },
+      {
+       "head": "class2-lane-cost63cd-frontier-recompute-20261114.json",
+       "kind": "chain_head"
+      },
+      {
+       "head": "class2-lane-cost75-frontier-recompute-20261114.json",
+       "kind": "chain_head"
+      }
+     ],
+     "root_hex": "00000000000000801a02040000020000"
+    },
+    {
+     "provenance": [
+      {
+       "head": "class2-lane-cost75-win7-certificates-20261114.json",
+       "kind": "base"
+      },
+      {
+       "head": "class2-lane-cost63cd-frontier-recompute-20261114.json",
+       "kind": "chain_head"
+      },
+      {
+       "head": "class2-lane-cost75-frontier-recompute-20261114.json",
+       "kind": "chain_head"
+      }
+     ],
+     "root_hex": "00000000000000801a02040000100000"
+    },
+    {
+     "provenance": [
+      {
+       "head": "class2-lane-cost75-win7-certificates-20261114.json",
+       "kind": "base"
+      },
+      {
+       "head": "class2-lane-cost63cd-frontier-recompute-20261114.json",
+       "kind": "chain_head"
+      },
+      {
+       "head": "class2-lane-cost75-frontier-recompute-20261114.json",
+       "kind": "chain_head"
+      }
+     ],
+     "root_hex": "00000000000000801a02040000200000"
+    },
+    {
+     "provenance": [
+      {
+       "head": "class2-lane-cost75-win7-certificates-20261114.json",
+       "kind": "base"
+      },
+      {
+       "head": "class2-lane-cost63cd-frontier-recompute-20261114.json",
+       "kind": "chain_head"
+      },
+      {
+       "head": "class2-lane-cost75-frontier-recompute-20261114.json",
+       "kind": "chain_head"
+      }
+     ],
+     "root_hex": "00000000000000801a02040000400000"
+    },
+    {
+     "provenance": [
+      {
+       "head": "class2-lane-cost68-win7-certificates-20261114.json",
+       "kind": "base"
+      },
+      {
+       "head": "class2-lane-cost75-win7-certificates-20261114.json",
+       "kind": "base"
+      },
+      {
+       "head": "class2-lane-cost63cd-frontier-recompute-20261114.json",
+       "kind": "chain_head"
+      },
+      {
+       "head": "class2-lane-cost75-frontier-recompute-20261114.json",
+       "kind": "chain_head"
+      }
+     ],
+     "root_hex": "00000000000000801a02040080000000"
+    },
+    {
+     "provenance": [
+      {
+       "head": "class2-lane-cost75-win7-certificates-20261114.json",
+       "kind": "base"
+      },
+      {
+       "head": "class2-lane-cost63cd-frontier-recompute-20261114.json",
+       "kind": "chain_head"
+      },
+      {
+       "head": "class2-lane-cost75-frontier-recompute-20261114.json",
+       "kind": "chain_head"
+      }
+     ],
+     "root_hex": "00000000000000801a02040100000000"
+    },
+    {
+     "provenance": [
+      {
+       "head": "class2-lane-cost75-win7-certificates-20261114.json",
+       "kind": "base"
+      },
+      {
+       "head": "class2-lane-cost63cd-frontier-recompute-20261114.json",
+       "kind": "chain_head"
+      },
+      {
+       "head": "class2-lane-cost75-frontier-recompute-20261114.json",
+       "kind": "chain_head"
+      }
+     ],
+     "root_hex": "00000000000000801a02040400000000"
+    },
+    {
+     "provenance": [
+      {
+       "head": "class2-lane-cost75-win7-certificates-20261114.json",
+       "kind": "base"
+      },
+      {
+       "head": "class2-lane-cost63cd-frontier-recompute-20261114.json",
+       "kind": "chain_head"
+      },
+      {
+       "head": "class2-lane-cost75-frontier-recompute-20261114.json",
+       "kind": "chain_head"
+      }
+     ],
+     "root_hex": "00000000000000801a06040000000000"
+    },
+    {
+     "provenance": [
+      {
+       "head": "class2-lane-cost75-win7-certificates-20261114.json",
+       "kind": "base"
+      },
+      {
+       "head": "class2-lane-cost63cd-frontier-recompute-20261114.json",
+       "kind": "chain_head"
+      },
+      {
+       "head": "class2-lane-cost75-frontier-recompute-20261114.json",
+       "kind": "chain_head"
+      }
+     ],
+     "root_hex": "00000000000000801a42040000000000"
+    },
+    {
+     "provenance": [
+      {
+       "head": "class-frontier-merged-recompute-20261114.json",
+       "kind": "chain_head"
+      },
+      {
+       "head": "class2-lane-cost65c-frontier-recompute-20261114.json",
+       "kind": "chain_head"
+      },
+      {
+       "head": "class2-lane-cost65d-frontier-recompute-20261114.json",
+       "kind": "chain_head"
+      }
+     ],
+     "root_hex": "00000000000000809082000000200200"
+    },
+    {
+     "provenance": [
+      {
+       "head": "class-frontier-merged-recompute-20261114.json",
+       "kind": "chain_head"
+      },
+      {
+       "head": "class2-lane-cost65c-frontier-recompute-20261114.json",
+       "kind": "chain_head"
+      },
+      {
+       "head": "class2-lane-cost65d-frontier-recompute-20261114.json",
+       "kind": "chain_head"
+      }
+     ],
+     "root_hex": "00000000000000809083000000200000"
+    },
+    {
+     "provenance": [
+      {
+       "head": "class-frontier-cost74g-receipts-recompute-20261115.json",
+       "kind": "post70e_head"
+      },
+      {
+       "head": "class-frontier-merged-cost65l-74g-recompute-20261115.json",
+       "kind": "post70e_head"
+      },
+      {
+       "head": "class-frontier-merged-cost65l-74g-69i-recompute-20261115.json",
+       "kind": "post70e_head"
+      }
+     ],
+     "root_hex": "00000000000000809142000000000010"
+    },
+    {
+     "provenance": [
+      {
+       "head": "class-frontier-cost74g-receipts-recompute-20261115.json",
+       "kind": "post70e_head"
+      },
+      {
+       "head": "class-frontier-merged-cost65l-74g-recompute-20261115.json",
+       "kind": "post70e_head"
+      },
+      {
+       "head": "class-frontier-merged-cost65l-74g-69i-recompute-20261115.json",
+       "kind": "post70e_head"
+      }
+     ],
+     "root_hex": "00000000000000809142000000000800"
+    },
+    {
+     "provenance": [
+      {
+       "head": "class-frontier-cost74g-receipts-recompute-20261115.json",
+       "kind": "post70e_head"
+      },
+      {
+       "head": "class-frontier-merged-cost65l-74g-recompute-20261115.json",
+       "kind": "post70e_head"
+      },
+      {
+       "head": "class-frontier-merged-cost65l-74g-69i-recompute-20261115.json",
+       "kind": "post70e_head"
+      }
+     ],
+     "root_hex": "00000000000000809142000000100000"
+    },
+    {
+     "provenance": [
+      {
+       "head": "class-frontier-cost74g-receipts-recompute-20261115.json",
+       "kind": "post70e_head"
+      },
+      {
+       "head": "class-frontier-merged-cost65l-74g-recompute-20261115.json",
+       "kind": "post70e_head"
+      },
+      {
+       "head": "class-frontier-merged-cost65l-74g-69i-recompute-20261115.json",
+       "kind": "post70e_head"
+      }
+     ],
+     "root_hex": "00000000000000809142100000000000"
+    },
+    {
+     "provenance": [
+      {
+       "head": "class-frontier-cost74g-receipts-recompute-20261115.json",
+       "kind": "post70e_head"
+      },
+      {
+       "head": "class-frontier-merged-cost65l-74g-recompute-20261115.json",
+       "kind": "post70e_head"
+      },
+      {
+       "head": "class-frontier-merged-cost65l-74g-69i-recompute-20261115.json",
+       "kind": "post70e_head"
+      }
+     ],
+     "root_hex": "00000000000000a09142000000000000"
+    },
+    {
+     "provenance": [
+      {
+       "head": "class-frontier-merged-recompute-20261114.json",
+       "kind": "chain_head"
+      },
+      {
+       "head": "class2-lane-cost65c-frontier-recompute-20261114.json",
+       "kind": "chain_head"
+      },
+      {
+       "head": "class2-lane-cost65d-frontier-recompute-20261114.json",
+       "kind": "chain_head"
+      }
+     ],
+     "root_hex": "00000000000000c09082000000200000"
+    },
+    {
+     "provenance": [
+      {
+       "head": "class2-lane-cost75-win7-certificates-20261114.json",
+       "kind": "base"
+      },
+      {
+       "head": "class2-lane-cost63cd-frontier-recompute-20261114.json",
+       "kind": "chain_head"
+      },
+      {
+       "head": "class2-lane-cost75-frontier-recompute-20261114.json",
+       "kind": "chain_head"
+      }
+     ],
+     "root_hex": "00000000000001801a02040000000000"
+    },
+    {
+     "provenance": [
+      {
+       "head": "class2-lane-cost75-win7-certificates-20261114.json",
+       "kind": "base"
+      },
+      {
+       "head": "class2-lane-cost63cd-frontier-recompute-20261114.json",
+       "kind": "chain_head"
+      },
+      {
+       "head": "class2-lane-cost75-frontier-recompute-20261114.json",
+       "kind": "chain_head"
+      }
+     ],
+     "root_hex": "00000000000010801a02040000000000"
+    },
+    {
+     "provenance": [
+      {
+       "head": "class2-lane-cost75-win7-certificates-20261114.json",
+       "kind": "base"
+      },
+      {
+       "head": "class2-lane-cost63cd-frontier-recompute-20261114.json",
+       "kind": "chain_head"
+      },
+      {
+       "head": "class2-lane-cost75-frontier-recompute-20261114.json",
+       "kind": "chain_head"
+      }
+     ],
+     "root_hex": "00000000000080801a02040000000000"
+    },
+    {
+     "provenance": [
+      {
+       "head": "class2-lane-cost75-win7-certificates-20261114.json",
+       "kind": "base"
+      },
+      {
+       "head": "class2-lane-cost63cd-frontier-recompute-20261114.json",
+       "kind": "chain_head"
+      },
+      {
+       "head": "class2-lane-cost75-frontier-recompute-20261114.json",
+       "kind": "chain_head"
+      }
+     ],
+     "root_hex": "00000000040000801a02040000000000"
+    },
+    {
+     "provenance": [
+      {
+       "head": "class2-lane-cost75-win7-certificates-20261114.json",
+       "kind": "base"
+      },
+      {
+       "head": "class2-lane-cost63cd-frontier-recompute-20261114.json",
+       "kind": "chain_head"
+      },
+      {
+       "head": "class2-lane-cost75-frontier-recompute-20261114.json",
+       "kind": "chain_head"
+      }
+     ],
+     "root_hex": "00000000100000801a02040000000000"
+    },
+    {
+     "provenance": [
+      {
+       "head": "class-frontier-cost65l-receipts-recompute-20261115.json",
+       "kind": "post70e_head"
+      },
+      {
+       "head": "class-frontier-merged-cost65l-74g-recompute-20261115.json",
+       "kind": "post70e_head"
+      },
+      {
+       "head": "class-frontier-merged-cost65l-74g-69i-recompute-20261115.json",
+       "kind": "post70e_head"
+      }
+     ],
+     "root_hex": "00000000220000003800000000200200"
+    },
+    {
+     "provenance": [
+      {
+       "head": "class-frontier-cost65l-receipts-recompute-20261115.json",
+       "kind": "post70e_head"
+      },
+      {
+       "head": "class-frontier-merged-cost65l-74g-recompute-20261115.json",
+       "kind": "post70e_head"
+      },
+      {
+       "head": "class-frontier-merged-cost65l-74g-69i-recompute-20261115.json",
+       "kind": "post70e_head"
+      }
+     ],
+     "root_hex": "00000000220000003801000000000200"
+    },
+    {
+     "provenance": [
+      {
+       "head": "class-frontier-cost74g-receipts-recompute-20261115.json",
+       "kind": "post70e_head"
+      },
+      {
+       "head": "class-frontier-merged-cost65l-74g-recompute-20261115.json",
+       "kind": "post70e_head"
+      },
+      {
+       "head": "class-frontier-merged-cost65l-74g-69i-recompute-20261115.json",
+       "kind": "post70e_head"
+      }
+     ],
+     "root_hex": "00000000800000809142000000000000"
+    },
+    {
+     "provenance": [
+      {
+       "head": "class-frontier-cost74g-receipts-recompute-20261115.json",
+       "kind": "post70e_head"
+      },
+      {
+       "head": "class-frontier-merged-cost65l-74g-recompute-20261115.json",
+       "kind": "post70e_head"
+      },
+      {
+       "head": "class-frontier-merged-cost65l-74g-69i-recompute-20261115.json",
+       "kind": "post70e_head"
+      }
+     ],
+     "root_hex": "00000010000000809142000000000000"
+    },
+    {
+     "provenance": [
+      {
+       "head": "class2-lane-cost75-win7-certificates-20261114.json",
+       "kind": "base"
+      },
+      {
+       "head": "class2-lane-cost63cd-frontier-recompute-20261114.json",
+       "kind": "chain_head"
+      },
+      {
+       "head": "class2-lane-cost75-frontier-recompute-20261114.json",
+       "kind": "chain_head"
+      }
+     ],
+     "root_hex": "00001000000000801a02040000000000"
+    },
+    {
+     "provenance": [
+      {
+       "head": "class-frontier-cost74g-receipts-recompute-20261115.json",
+       "kind": "post70e_head"
+      },
+      {
+       "head": "class-frontier-merged-cost65l-74g-recompute-20261115.json",
+       "kind": "post70e_head"
+      },
+      {
+       "head": "class-frontier-merged-cost65l-74g-69i-recompute-20261115.json",
+       "kind": "post70e_head"
+      }
+     ],
+     "root_hex": "00001000000000809142000000000000"
+    },
+    {
+     "provenance": [
+      {
+       "head": "class-frontier-cost74g-receipts-recompute-20261115.json",
+       "kind": "post70e_head"
+      },
+      {
+       "head": "class-frontier-merged-cost65l-74g-recompute-20261115.json",
+       "kind": "post70e_head"
+      },
+      {
+       "head": "class-frontier-merged-cost65l-74g-69i-recompute-20261115.json",
+       "kind": "post70e_head"
+      }
+     ],
+     "root_hex": "00002000000000809142000000000000"
+    },
+    {
+     "provenance": [
+      {
+       "head": "class-frontier-cost74g-receipts-recompute-20261115.json",
+       "kind": "post70e_head"
+      },
+      {
+       "head": "class-frontier-merged-cost65l-74g-recompute-20261115.json",
+       "kind": "post70e_head"
+      },
+      {
+       "head": "class-frontier-merged-cost65l-74g-69i-recompute-20261115.json",
+       "kind": "post70e_head"
+      }
+     ],
+     "root_hex": "00100000000000809142000000000000"
+    },
+    {
+     "provenance": [
+      {
+       "head": "class2-lane-cost75-win7-certificates-20261114.json",
+       "kind": "base"
+      },
+      {
+       "head": "class2-lane-cost63cd-frontier-recompute-20261114.json",
+       "kind": "chain_head"
+      },
+      {
+       "head": "class2-lane-cost75-frontier-recompute-20261114.json",
+       "kind": "chain_head"
+      }
+     ],
+     "root_hex": "00400000000000801a02040000000000"
+    }
+   ],
+   "orbits": 639,
+   "roots": 650,
+   "twin_analysis": [
+    {
+     "d4_orbit": "00000000000000849802000000020000",
+     "members": [
+      {
+       "n_provenance": 1,
+       "provenance": [
+        {
+         "head": "class-frontier-cost69e-recompute-20261115.json",
+         "kind": "chain_head"
+        }
+       ],
+       "root_hex": "00000000000010803202000000008000"
+      },
+      {
+       "n_provenance": 1,
+       "provenance": [
+        {
+         "head": "class-frontier-after-cost70c-warm3-recompute-20261115.json",
+         "kind": "chain_head"
+        }
+       ],
+       "root_hex": "00000080000000803242000000000000"
+      }
+     ],
+     "roots": [
+      "00000000000010803202000000008000",
+      "00000080000000803242000000000000"
+     ]
+    },
+    {
+     "d4_orbit": "00000000000080811202000020000000",
+     "members": [
+      {
+       "n_provenance": 1,
+       "provenance": [
+        {
+         "head": "class-frontier-cost72b-receipts-recompute-20261115.json",
+         "kind": "chain_head"
+        }
+       ],
+       "root_hex": "00000000002000809102000002000000"
+      },
+      {
+       "n_provenance": 1,
+       "provenance": [
+        {
+         "head": "class-frontier-cost74d-receipts-recompute-20261115.json",
+         "kind": "chain_head"
+        }
+       ],
+       "root_hex": "00000000080000809102020000000000"
+      }
+     ],
+     "roots": [
+      "00000000002000809102000002000000",
+      "00000000080000809102020000000000"
+     ]
+    },
+    {
+     "d4_orbit": "00000000000100809002000020000800",
+     "members": [
+      {
+       "n_provenance": 1,
+       "provenance": [
+        {
+         "head": "class-frontier-cost70g-receipts-recompute-20261115.json",
+         "kind": "post70e_head"
+        }
+       ],
+       "root_hex": "00000000000100809002000020000800"
+      },
+      {
+       "n_provenance": 1,
+       "provenance": [
+        {
+         "head": "class-frontier-cost70f-receipts-recompute-20261115.json",
+         "kind": "post70e_head"
+        }
+       ],
+       "root_hex": "00000000001000801202000002200000"
+      }
+     ],
+     "roots": [
+      "00000000000100809002000020000800",
+      "00000000001000801202000002200000"
+     ]
+    },
+    {
+     "d4_orbit": "00000000010000803202000000200000",
+     "members": [
+      {
+       "n_provenance": 1,
+       "provenance": [
+        {
+         "head": "class-frontier-merged-cost60bwarm-cost71b-recompute-20261115.json",
+         "kind": "chain_head"
+        }
+       ],
+       "root_hex": "00000000010000803202000000200000"
+      },
+      {
+       "n_provenance": 1,
+       "provenance": [
+        {
+         "head": "class-frontier-merged-cost60bwarm-cost71b-recompute-20261115.json",
+         "kind": "chain_head"
+        }
+       ],
+       "root_hex": "00002000000000803202000000400000"
+      }
+     ],
+     "roots": [
+      "00000000010000803202000000200000",
+      "00002000000000803202000000400000"
+     ]
+    },
+    {
+     "d4_orbit": "00000000020000809802000000040000",
+     "members": [
+      {
+       "n_provenance": 1,
+       "provenance": [
+        {
+         "head": "class-frontier-cost75c-recompute-20261115.json",
+         "kind": "chain_head"
+        }
+       ],
+       "root_hex": "00000002000000803202000000004000"
+      },
+      {
+       "n_provenance": 1,
+       "provenance": [
+        {
+         "head": "class-frontier-warm-multiband-recompute-20261115.json",
+         "kind": "chain_head"
+        }
+       ],
+       "root_hex": "00000040000000803202000080000000"
+      }
+     ],
+     "roots": [
+      "00000002000000803202000000004000",
+      "00000040000000803202000080000000"
+     ]
+    },
+    {
+     "d4_orbit": "00000000020100003800000084000000",
+     "members": [
+      {
+       "n_provenance": 1,
+       "provenance": [
+        {
+         "head": "class4-batch3-win7-certificates-20261114.json",
+         "kind": "base"
+        }
+       ],
+       "root_hex": "00000000020100003800000084000000"
+      },
+      {
+       "n_provenance": 1,
+       "provenance": [
+        {
+         "head": "class4-batch3-win7-certificates-child7-20261114.json",
+         "kind": "base"
+        }
+       ],
+       "root_hex": "00000000420000003800010080000000"
+      }
+     ],
+     "roots": [
+      "00000000020100003800000084000000",
+      "00000000420000003800010080000000"
+     ]
+    },
+    {
+     "d4_orbit": "00000000040000803800040008000000",
+     "members": [
+      {
+       "n_provenance": 1,
+       "provenance": [
+        {
+         "head": "class-frontier-cost75c-recompute-20261115.json",
+         "kind": "chain_head"
+        }
+       ],
+       "root_hex": "00000001000000803202000000004000"
+      },
+      {
+       "n_provenance": 1,
+       "provenance": [
+        {
+         "head": "class-frontier-warm-multiband-recompute-20261115.json",
+         "kind": "chain_head"
+        }
+       ],
+       "root_hex": "00000040000000803202000040000000"
+      }
+     ],
+     "roots": [
+      "00000001000000803202000000004000",
+      "00000040000000803202000040000000"
+     ]
+    },
+    {
+     "d4_orbit": "00000000040000809802000000000800",
+     "members": [
+      {
+       "n_provenance": 1,
+       "provenance": [
+        {
+         "head": "class-frontier-cost60b-recompute-20261114.json",
+         "kind": "chain_head"
+        }
+       ],
+       "root_hex": "00000001000000803202000000200000"
+      },
+      {
+       "n_provenance": 1,
+       "provenance": [
+        {
+         "head": "class-frontier-cost61e-recompute-20261114.json",
+         "kind": "chain_head"
+        }
+       ],
+       "root_hex": "00002000000000803202000040000000"
+      }
+     ],
+     "roots": [
+      "00000001000000803202000000200000",
+      "00002000000000803202000040000000"
+     ]
+    },
+    {
+     "d4_orbit": "00000000080000809802000000000800",
+     "members": [
+      {
+       "n_provenance": 1,
+       "provenance": [
+        {
+         "head": "class-frontier-merged-cost60bwarm-cost71b-recompute-20261115.json",
+         "kind": "chain_head"
+        }
+       ],
+       "root_hex": "00000000800000803202000000200000"
+      },
+      {
+       "n_provenance": 2,
+       "provenance": [
+        {
+         "head": "class-frontier-cost67b-recompute-20261114.json",
+         "kind": "chain_head"
+        },
+        {
+         "head": "class-frontier-merged-recompute-after65h65i-warm67b68c-20261115.json",
+         "kind": "chain_head"
+        }
+       ],
+       "root_hex": "00002000000000803202000020000000"
+      }
+     ],
+     "roots": [
+      "00000000800000803202000000200000",
+      "00002000000000803202000020000000"
+     ]
+    },
+    {
+     "d4_orbit": "00000000200040003802000000100000",
+     "members": [
+      {
+       "n_provenance": 1,
+       "provenance": [
+        {
+         "head": "class-frontier-warm-multiband-recompute-20261115.json",
+         "kind": "chain_head"
+        }
+       ],
+       "root_hex": "00000040000000803202000000100000"
+      },
+      {
+       "n_provenance": 1,
+       "provenance": [
+        {
+         "head": "class-frontier-cost75c-recompute-20261115.json",
+         "kind": "chain_head"
+        }
+       ],
+       "root_hex": "00001000000000803202000000004000"
+      }
+     ],
+     "roots": [
+      "00000040000000803202000000100000",
+      "00001000000000803202000000004000"
+     ]
+    },
+    {
+     "d4_orbit": "00000008000000809802000000100000",
+     "members": [
+      {
+       "n_provenance": 1,
+       "provenance": [
+        {
+         "head": "class-frontier-merged-cost60bwarm-cost71b-recompute-20261115.json",
+         "kind": "chain_head"
+        }
+       ],
+       "root_hex": "00000010000000803202000000200000"
+      },
+      {
+       "n_provenance": 1,
+       "provenance": [
+        {
+         "head": "class-frontier-cost65h-65i-recompute-20261114.json",
+         "kind": "chain_head"
+        }
+       ],
+       "root_hex": "00002000000000803202000000001000"
+      }
+     ],
+     "roots": [
+      "00000010000000803202000000200000",
+      "00002000000000803202000000001000"
+     ]
+    }
+   ],
+   "twin_pairs": 11
+  },
+  "endpoint_58c": {
+   "child_closed_by_bit": 1,
+   "cost_needed_by_open_classes": 376508,
+   "git_blob_sha": "62a411bb1a6debc33782c07062843650c556c747",
+   "head": "class-frontier-cost58c-receipts-recompute-20261116.json",
+   "receipts": 34,
+   "s6_needed_by_open_classes": 4758,
+   "solved_s6_in_manifest": 1360,
+   "sum_remaining_cost": 512785,
+   "unique_remaining_s6": 6488
+  },
+  "endpoint_62a": {
+   "child_closed_by_bit": 7,
+   "cost_needed_by_open_classes": 378974,
+   "git_blob_sha": "3989e9ddfa43d0951a9a58c10919ce5087eb8733",
+   "head": "class-frontier-cost62a-receipts-recompute-20261116.json",
+   "receipts": 6,
+   "s6_needed_by_open_classes": 4792,
+   "solved_s6_in_manifest": 1326,
+   "sum_remaining_cost": 515251,
+   "unique_remaining_s6": 6522
+  },
+  "endpoint_63h": {
+   "child_closed_by_bit": 89,
+   "cost_needed_by_open_classes": 376376,
+   "git_blob_sha": "647498b995770ff87b12e868a5b89015c26be51e",
+   "head": "class-frontier-cost63h-receipts-recompute-20261115.json",
+   "receipts": 1,
+   "s6_needed_by_open_classes": 4756,
+   "solved_s6_in_manifest": 1362,
+   "sum_remaining_cost": 512653,
+   "unique_remaining_s6": 6486
+  },
+  "endpoint_75d": {
+   "child_closed_by_bit": 12,
+   "cost_needed_by_open_classes": 381191,
+   "git_blob_sha": "c801e60578ee5c5272e75719e35847052ac58314",
+   "head": "class-frontier-cost75d-receipts-recompute-20261115.json",
+   "receipts": 4,
+   "s6_needed_by_open_classes": 4821,
+   "solved_s6_in_manifest": 1296,
+   "sum_remaining_cost": 517468,
+   "unique_remaining_s6": 6551
+  },
+  "endpoint_80d": {
+   "child_closed_by_bit": 48,
+   "cost_needed_by_open_classes": 380516,
+   "git_blob_sha": "289c93373692d6627347dc9bbb9ffdc3653f508b",
+   "head": "class-frontier-cost80d-receipts-recompute-20261115.json",
+   "receipts": 4,
+   "s6_needed_by_open_classes": 4812,
+   "solved_s6_in_manifest": 1305,
+   "sum_remaining_cost": 516793,
+   "unique_remaining_s6": 6542
+  },
+  "endpoint_82c": {
+   "child_closed_by_bit": 16,
+   "cost_needed_by_open_classes": 380434,
+   "git_blob_sha": "4ee6aaab50b61e8d48e1d37afed373cd01094620",
+   "head": "class-frontier-cost82c-receipts-recompute-20261115.json",
+   "receipts": 5,
+   "s6_needed_by_open_classes": 4811,
+   "solved_s6_in_manifest": 1306,
+   "sum_remaining_cost": 516711,
+   "unique_remaining_s6": 6541
+  },
+  "endpoint_83a": {
+   "child_closed_by_bit": 12,
+   "cost_needed_by_open_classes": 380200,
+   "git_blob_sha": "74e35f224e4e46f9464bcaed14c5ea073f4bee5c",
+   "head": "class-frontier-cost83a-receipts-recompute-20261115.json",
+   "receipts": 4,
+   "s6_needed_by_open_classes": 4808,
+   "solved_s6_in_manifest": 1309,
+   "sum_remaining_cost": 516477,
+   "unique_remaining_s6": 6538
+  },
+  "endpoint_83b": {
+   "child_closed_by_bit": 9,
+   "cost_needed_by_open_classes": 379950,
+   "git_blob_sha": "b089bd955efaf51933c892ca1877ca6ac8062f75",
+   "head": "class-frontier-cost83b-receipts-recompute-20261115.json",
+   "receipts": 5,
+   "s6_needed_by_open_classes": 4805,
+   "solved_s6_in_manifest": 1312,
+   "sum_remaining_cost": 516227,
+   "unique_remaining_s6": 6535
+  },
+  "endpoint_83c": {
+   "child_closed_by_bit": 16,
+   "cost_needed_by_open_classes": 379867,
+   "git_blob_sha": "fc7832edce1f736ea5f15b2632d79d709fa004f4",
+   "head": "class-frontier-cost83c-receipts-recompute-20261115.json",
+   "receipts": 2,
+   "s6_needed_by_open_classes": 4804,
+   "solved_s6_in_manifest": 1313,
+   "sum_remaining_cost": 516144,
+   "unique_remaining_s6": 6534
+  },
+  "endpoint_83d": {
+   "child_closed_by_bit": 16,
+   "cost_needed_by_open_classes": 379784,
+   "git_blob_sha": "49cb8022bc715fa22d7c2d483160083478676caa",
+   "head": "class-frontier-cost83d-receipts-recompute-20261115.json",
+   "receipts": 3,
+   "s6_needed_by_open_classes": 4803,
+   "solved_s6_in_manifest": 1314,
+   "sum_remaining_cost": 516061,
+   "unique_remaining_s6": 6533
+  },
+  "endpoint_84a": {
+   "child_closed_by_bit": 1,
+   "cost_needed_by_open_classes": 379545,
+   "git_blob_sha": "f5624e99f8603ea612a862ed63539011989b5506",
+   "head": "class-frontier-cost84a-receipts-recompute-20261115.json",
+   "receipts": 4,
+   "s6_needed_by_open_classes": 4800,
+   "solved_s6_in_manifest": 1318,
+   "sum_remaining_cost": 515822,
+   "unique_remaining_s6": 6530
+  },
+  "fork_merge_head": {
+   "baseline_quote": [
+    991,
+    6856,
+    540177,
+    5126,
+    403900
+   ],
+   "classification": "parallel-batch-union",
+   "delta": 21,
+   "frontier_key": "frontier_after_merged",
+   "frontier_solved": 1012,
+   "head": "class-frontier-merged-recompute-after65h65i-warm67b68c-20261115.json",
+   "prose_pointer_head": null,
+   "quote_state_matches": [
+    "class-frontier-cost65h-65i-recompute-20261114.json:frontier_after_cost65h_65i"
+   ],
+   "quote_status": "matched_published_state",
+   "sum_mim": 25,
+   "union_mim": 21
+  },
+  "head_arithmetic": {
+   "anomalies": [],
+   "classification_counts": {
+    "cross-head-merge": 1,
+    "no_numeric_baseline_quote": 7,
+    "own-label-recompute": 1,
+    "parallel-batch-union": 11,
+    "sequential-fold-union": 62
+   },
+   "heads": [
+    {
+     "baseline_quote": [
+      1163,
+      6684,
+      527280,
+      4954,
+      391003
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 0,
+     "frontier_key": "frontier_after_cost70c_warm3",
+     "frontier_solved": 1163,
+     "head": "class-frontier-after-cost70c-warm3-recompute-20261115.json",
+     "prose_pointer_head": "class-frontier-cost69f-receipts-recompute-20261115.json",
+     "quote_state_matches": [
+      "class-frontier-after-cost70c-warm3-recompute-20261115.json:frontier_after_cost70c_warm3",
+      "class-frontier-cost69f-receipts-recompute-20261115.json:frontier_after_cost69f"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 0,
+     "union_mim": 0
+    },
+    {
+     "baseline_quote": [
+      924,
+      6923,
+      544799,
+      5193,
+      408522
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 3,
+     "frontier_key": "frontier_after_cost56a",
+     "frontier_solved": 927,
+     "head": "class-frontier-cost56a-recompute-20261114.json",
+     "prose_pointer_head": null,
+     "quote_state_matches": [
+      "class-frontier-cost62a-recompute-20261114.json:frontier_after_cost62a"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 3,
+     "union_mim": 3
+    },
+    {
+     "baseline_quote": [
+      927,
+      6920,
+      544617,
+      5190,
+      408340
+     ],
+     "classification": "parallel-batch-union",
+     "delta": 8,
+     "frontier_key": "frontier_after_cost58b",
+     "frontier_solved": 935,
+     "head": "class-frontier-cost58b-recompute-20261114.json",
+     "prose_pointer_head": null,
+     "quote_state_matches": [
+      "class-frontier-cost56a-recompute-20261114.json:frontier_after_cost56a"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 10,
+     "union_mim": 8
+    },
+    {
+     "baseline_quote": [
+      935,
+      6912,
+      544040,
+      5182,
+      407763
+     ],
+     "classification": "parallel-batch-union",
+     "delta": 11,
+     "frontier_key": "frontier_after_cost60b",
+     "frontier_solved": 946,
+     "head": "class-frontier-cost60b-recompute-20261114.json",
+     "prose_pointer_head": null,
+     "quote_state_matches": [
+      "class-frontier-cost58b-recompute-20261114.json:frontier_after_cost58b"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 16,
+     "union_mim": 11
+    },
+    {
+     "baseline_quote": [
+      946,
+      6901,
+      543316,
+      5171,
+      407039
+     ],
+     "classification": "parallel-batch-union",
+     "delta": 5,
+     "frontier_key": "frontier_after_cost61d",
+     "frontier_solved": 951,
+     "head": "class-frontier-cost61d-recompute-20261114.json",
+     "prose_pointer_head": null,
+     "quote_state_matches": [
+      "class-frontier-cost60b-recompute-20261114.json:frontier_after_cost60b"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 7,
+     "union_mim": 5
+    },
+    {
+     "baseline_quote": [
+      951,
+      6896,
+      542952,
+      5166,
+      406675
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 3,
+     "frontier_key": "frontier_after_cost61e",
+     "frontier_solved": 954,
+     "head": "class-frontier-cost61e-recompute-20261114.json",
+     "prose_pointer_head": null,
+     "quote_state_matches": [
+      "class-frontier-cost61d-recompute-20261114.json:frontier_after_cost61d"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 3,
+     "union_mim": 3
+    },
+    {
+     "baseline_quote": [
+      954,
+      6893,
+      542756,
+      5163,
+      406479
+     ],
+     "classification": "parallel-batch-union",
+     "delta": 5,
+     "frontier_key": "frontier_after_cost61f",
+     "frontier_solved": 959,
+     "head": "class-frontier-cost61f-recompute-20261114.json",
+     "prose_pointer_head": null,
+     "quote_state_matches": [
+      "class-frontier-cost61e-recompute-20261114.json:frontier_after_cost61e"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 7,
+     "union_mim": 5
+    },
+    {
+     "baseline_quote": [
+      921,
+      6926,
+      544995,
+      5196,
+      408718
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 3,
+     "frontier_key": "frontier_after_cost62a",
+     "frontier_solved": 924,
+     "head": "class-frontier-cost62a-recompute-20261114.json",
+     "prose_pointer_head": null,
+     "quote_state_matches": [
+      "class-frontier-cost73a-recompute-20261114.json:frontier_after_cost73a"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 3,
+     "union_mim": 3
+    },
+    {
+     "baseline_quote": [
+      965,
+      6882,
+      542020,
+      5152,
+      405743
+     ],
+     "classification": "parallel-batch-union",
+     "delta": 5,
+     "frontier_key": "frontier_after_cost63e",
+     "frontier_solved": 970,
+     "head": "class-frontier-cost63e-recompute-20261114.json",
+     "prose_pointer_head": null,
+     "quote_state_matches": [
+      "class-frontier-merged-recompute-after61f-63a65e-20261114.json:frontier_merged"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 7,
+     "union_mim": 5
+    },
+    {
+     "baseline_quote": [
+      991,
+      6856,
+      540177,
+      5126,
+      403900
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 6,
+     "frontier_key": "frontier_after_cost63e_warm",
+     "frontier_solved": 997,
+     "head": "class-frontier-cost63e-warm-recompute-20261114.json",
+     "prose_pointer_head": null,
+     "quote_state_matches": [
+      "class-frontier-cost65h-65i-recompute-20261114.json:frontier_after_cost65h_65i"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 6,
+     "union_mim": 6
+    },
+    {
+     "baseline_quote": [
+      1195,
+      6652,
+      524884,
+      4922,
+      388607
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 4,
+     "frontier_key": "frontier_after_cost63f",
+     "frontier_solved": 1199,
+     "head": "class-frontier-cost63f-receipts-recompute-20261115.json",
+     "prose_pointer_head": "class-frontier-cost76a-receipts-recompute-20261115.json",
+     "quote_state_matches": [
+      "class-frontier-cost76a-receipts-recompute-20261115.json:frontier_after_cost76a"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 4,
+     "union_mim": 4
+    },
+    {
+     "baseline_quote": [
+      1199,
+      6648,
+      524616,
+      4918,
+      388339
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 17,
+     "frontier_key": "frontier_after_cost63g",
+     "frontier_solved": 1216,
+     "head": "class-frontier-cost63g-receipts-recompute-20261115.json",
+     "prose_pointer_head": "class-frontier-cost63f-receipts-recompute-20261115.json",
+     "quote_state_matches": [
+      "class-frontier-cost63f-receipts-recompute-20261115.json:frontier_after_cost63f"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 17,
+     "union_mim": 17
+    },
+    {
+     "baseline_quote": [
+      970,
+      6877,
+      541680,
+      5147,
+      405403
+     ],
+     "classification": "parallel-batch-union",
+     "delta": 4,
+     "frontier_key": "frontier_after_cost64b",
+     "frontier_solved": 974,
+     "head": "class-frontier-cost64b-recompute-20261114.json",
+     "prose_pointer_head": null,
+     "quote_state_matches": [
+      "class-frontier-cost63e-recompute-20261114.json:frontier_after_cost63e"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 6,
+     "union_mim": 4
+    },
+    {
+     "baseline_quote": [
+      974,
+      6873,
+      541401,
+      5143,
+      405124
+     ],
+     "classification": "parallel-batch-union",
+     "delta": 5,
+     "frontier_key": "frontier_after_cost65g",
+     "frontier_solved": 979,
+     "head": "class-frontier-cost65g-recompute-20261114.json",
+     "prose_pointer_head": null,
+     "quote_state_matches": [
+      "class-frontier-cost64b-recompute-20261114.json:frontier_after_cost64b"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 7,
+     "union_mim": 5
+    },
+    {
+     "baseline_quote": [
+      997,
+      6850,
+      539745,
+      5120,
+      403468
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 8,
+     "frontier_key": "frontier_after_cost65g_warm",
+     "frontier_solved": 1005,
+     "head": "class-frontier-cost65g-warm-recompute-20261114.json",
+     "prose_pointer_head": null,
+     "quote_state_matches": [
+      "class-frontier-cost63e-warm-recompute-20261114.json:frontier_after_cost63e_warm"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 8,
+     "union_mim": 8
+    },
+    {
+     "baseline_quote": [
+      979,
+      6868,
+      541041,
+      5138,
+      404764
+     ],
+     "classification": "parallel-batch-union",
+     "delta": 12,
+     "frontier_key": "frontier_after_cost65h_65i",
+     "frontier_solved": 991,
+     "head": "class-frontier-cost65h-65i-recompute-20261114.json",
+     "prose_pointer_head": null,
+     "quote_state_matches": [
+      "class-frontier-cost65g-recompute-20261114.json:frontier_after_cost65g"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 16,
+     "union_mim": 12
+    },
+    {
+     "baseline_quote": [
+      887,
+      6960,
+      547472,
+      5206,
+      409451
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 11,
+     "frontier_key": "frontier_after_cost67",
+     "frontier_solved": 898,
+     "head": "class-frontier-cost67-recompute-20261114.json",
+     "prose_pointer_head": null,
+     "quote_state_matches": [
+      "class-frontier-merged-recompute-20261114.json:frontier_after_merged"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 11,
+     "union_mim": 11
+    },
+    {
+     "baseline_quote": [
+      991,
+      6856,
+      540177,
+      5126,
+      403900
+     ],
+     "classification": "parallel-batch-union",
+     "delta": 2,
+     "frontier_key": "frontier_after_cost67b",
+     "frontier_solved": 993,
+     "head": "class-frontier-cost67b-recompute-20261114.json",
+     "prose_pointer_head": null,
+     "quote_state_matches": [
+      "class-frontier-cost65h-65i-recompute-20261114.json:frontier_after_cost65h_65i"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 4,
+     "union_mim": 2
+    },
+    {
+     "baseline_quote": [
+      1216,
+      6631,
+      523382,
+      4901,
+      387105
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 3,
+     "frontier_key": "frontier_after_cost67c",
+     "frontier_solved": 1219,
+     "head": "class-frontier-cost67c-receipts-recompute-20261115.json",
+     "prose_pointer_head": "class-frontier-cost63g-receipts-recompute-20261115.json",
+     "quote_state_matches": [
+      "class-frontier-cost63g-receipts-recompute-20261115.json:frontier_after_cost63g"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 3,
+     "union_mim": 3
+    },
+    {
+     "baseline_quote": [
+      898,
+      6949,
+      546687,
+      5202,
+      409163
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 5,
+     "frontier_key": "frontier_after_cost68b",
+     "frontier_solved": 903,
+     "head": "class-frontier-cost68b-recompute-20261114.json",
+     "prose_pointer_head": null,
+     "quote_state_matches": [
+      "class-frontier-cost67-recompute-20261114.json:frontier_after_cost67"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 5,
+     "union_mim": 5
+    },
+    {
+     "baseline_quote": [
+      993,
+      6854,
+      540035,
+      5124,
+      403758
+     ],
+     "classification": "parallel-batch-union",
+     "delta": 5,
+     "frontier_key": "frontier_after_cost68c",
+     "frontier_solved": 998,
+     "head": "class-frontier-cost68c-recompute-20261114.json",
+     "prose_pointer_head": null,
+     "quote_state_matches": [
+      "class-frontier-cost67b-recompute-20261114.json:frontier_after_cost67b"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 7,
+     "union_mim": 5
+    },
+    {
+     "baseline_quote": [
+      1109,
+      6738,
+      531295,
+      5008,
+      395018
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 8,
+     "frontier_key": "frontier_after_cost68d",
+     "frontier_solved": 1117,
+     "head": "class-frontier-cost68d-recompute-20261115.json",
+     "prose_pointer_head": "class-frontier-warm-multiband-recompute-20261115.json",
+     "quote_state_matches": [
+      "class-frontier-warm-multiband-recompute-20261115.json:frontier_after_warm_multiband"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 8,
+     "union_mim": 8
+    },
+    {
+     "baseline_quote": [
+      903,
+      6944,
+      546334,
+      5201,
+      409091
+     ],
+     "classification": "own-label-recompute",
+     "delta": 6,
+     "frontier_key": "frontier_after_cost69a",
+     "frontier_solved": 909,
+     "head": "class-frontier-cost69a-recompute-20261114.json",
+     "own_label_sum_mim": 6,
+     "own_label_union_mim": 6,
+     "prose_pointer_head": null,
+     "quote_state_matches": [
+      "class-frontier-cost68b-recompute-20261114.json:frontier_after_cost68b"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 22,
+     "union_mim": 22
+    },
+    {
+     "baseline_quote": [
+      909,
+      6938,
+      545893,
+      5199,
+      408942
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 3,
+     "frontier_key": "frontier_after_cost69c",
+     "frontier_solved": 912,
+     "head": "class-frontier-cost69c-recompute-20261114.json",
+     "prose_pointer_head": null,
+     "quote_state_matches": [
+      "class-frontier-cost69a-recompute-20261114.json:frontier_after_cost69a"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 3,
+     "union_mim": 3
+    },
+    {
+     "baseline_quote": [
+      1012,
+      6835,
+      538670,
+      5105,
+      402393
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 11,
+     "frontier_key": "frontier_after_cost69e",
+     "frontier_solved": 1023,
+     "head": "class-frontier-cost69e-recompute-20261115.json",
+     "prose_pointer_head": null,
+     "quote_state_matches": [
+      "class-frontier-merged-recompute-after65h65i-warm67b68c-20261115.json:frontier_after_merged"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 11,
+     "union_mim": 11
+    },
+    {
+     "baseline_quote": [
+      1154,
+      6693,
+      527949,
+      4963,
+      391672
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 9,
+     "frontier_key": "frontier_after_cost69f",
+     "frontier_solved": 1163,
+     "head": "class-frontier-cost69f-receipts-recompute-20261115.json",
+     "prose_pointer_head": null,
+     "quote_state_matches": [
+      "class-frontier-unified-merge-recompute-20261115.json:frontier_after_unified_merge"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 9,
+     "union_mim": 9
+    },
+    {
+     "baseline_quote": [
+      1225,
+      6622,
+      522699,
+      4892,
+      386422
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 2,
+     "frontier_key": "frontier_after_cost69h",
+     "frontier_solved": 1227,
+     "head": "class-frontier-cost69h-receipts-recompute-20261115.json",
+     "prose_pointer_head": "class-frontier-cost78a-receipts-recompute-20261115.json",
+     "quote_state_matches": [
+      "class-frontier-cost78a-receipts-recompute-20261115.json:frontier_after_cost78a"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 2,
+     "union_mim": 2
+    },
+    {
+     "baseline_quote": [
+      912,
+      6935,
+      545666,
+      5198,
+      408868
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 1,
+     "frontier_key": "frontier_after_cost70b",
+     "frontier_solved": 913,
+     "head": "class-frontier-cost70b-recompute-20261114.json",
+     "prose_pointer_head": null,
+     "quote_state_matches": [
+      "class-frontier-cost69c-recompute-20261114.json:frontier_after_cost69c"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 1,
+     "union_mim": 1
+    },
+    {
+     "baseline_quote": [
+      913,
+      6934,
+      545596,
+      5198,
+      408868
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 4,
+     "frontier_key": "frontier_after_cost71",
+     "frontier_solved": 917,
+     "head": "class-frontier-cost71-recompute-20261114.json",
+     "prose_pointer_head": null,
+     "quote_state_matches": [
+      "class-frontier-cost70b-recompute-20261114.json:frontier_after_cost70b"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 4,
+     "union_mim": 4
+    },
+    {
+     "baseline_quote": [
+      1179,
+      6668,
+      526075,
+      4938,
+      389798
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 9,
+     "frontier_key": "frontier_after_cost72b",
+     "frontier_solved": 1188,
+     "head": "class-frontier-cost72b-receipts-recompute-20261115.json",
+     "prose_pointer_head": "class-frontier-cost74d-receipts-recompute-20261115.json",
+     "quote_state_matches": [
+      "class-frontier-cost74d-receipts-recompute-20261115.json:frontier_after_cost74d"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 9,
+     "union_mim": 9
+    },
+    {
+     "baseline_quote": [
+      920,
+      6927,
+      545068,
+      5196,
+      408718
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 1,
+     "frontier_key": "frontier_after_cost73a",
+     "frontier_solved": 921,
+     "head": "class-frontier-cost73a-recompute-20261114.json",
+     "prose_pointer_head": null,
+     "quote_state_matches": [
+      "class-frontier-cost73d-recompute-20261114.json:frontier_after_cost73d"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 1,
+     "union_mim": 1
+    },
+    {
+     "baseline_quote": [
+      917,
+      6930,
+      545301,
+      5197,
+      408797
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 3,
+     "frontier_key": "frontier_after_cost73d",
+     "frontier_solved": 920,
+     "head": "class-frontier-cost73d-recompute-20261114.json",
+     "prose_pointer_head": null,
+     "quote_state_matches": [
+      "class-frontier-cost71-recompute-20261114.json:frontier_after_cost71"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 3,
+     "union_mim": 3
+    },
+    {
+     "baseline_quote": [
+      1163,
+      6684,
+      527280,
+      4954,
+      391003
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 16,
+     "frontier_key": "frontier_after_cost74d",
+     "frontier_solved": 1179,
+     "head": "class-frontier-cost74d-receipts-recompute-20261115.json",
+     "prose_pointer_head": null,
+     "quote_state_matches": [
+      "class-frontier-after-cost70c-warm3-recompute-20261115.json:frontier_after_cost70c_warm3",
+      "class-frontier-cost69f-receipts-recompute-20261115.json:frontier_after_cost69f"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 16,
+     "union_mim": 16
+    },
+    {
+     "baseline_quote": [
+      1045,
+      6802,
+      536131,
+      5072,
+      399854
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 4,
+     "frontier_key": "frontier_after_cost75b",
+     "frontier_solved": 1049,
+     "head": "class-frontier-cost75b-recompute-20261115.json",
+     "prose_pointer_head": null,
+     "quote_state_matches": [
+      "class-frontier-merged-cost60bwarm-cost71b-recompute-20261115.json:frontier_after_merged"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 4,
+     "union_mim": 4
+    },
+    {
+     "baseline_quote": [
+      1049,
+      6798,
+      535812,
+      5068,
+      399535
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 13,
+     "frontier_key": "frontier_after_cost75c",
+     "frontier_solved": 1062,
+     "head": "class-frontier-cost75c-recompute-20261115.json",
+     "prose_pointer_head": null,
+     "quote_state_matches": [
+      "class-frontier-cost75b-recompute-20261115.json:frontier_after_cost75b"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 13,
+     "union_mim": 13
+    },
+    {
+     "baseline_quote": [
+      1188,
+      6659,
+      525437,
+      4929,
+      389160
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 7,
+     "frontier_key": "frontier_after_cost76a",
+     "frontier_solved": 1195,
+     "head": "class-frontier-cost76a-receipts-recompute-20261115.json",
+     "prose_pointer_head": "class-frontier-cost72b-receipts-recompute-20261115.json",
+     "quote_state_matches": [
+      "class-frontier-cost72b-receipts-recompute-20261115.json:frontier_after_cost72b"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 7,
+     "union_mim": 7
+    },
+    {
+     "baseline_quote": [
+      1219,
+      6628,
+      523173,
+      4898,
+      386896
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 6,
+     "frontier_key": "frontier_after_cost78a",
+     "frontier_solved": 1225,
+     "head": "class-frontier-cost78a-receipts-recompute-20261115.json",
+     "prose_pointer_head": "class-frontier-cost67c-receipts-recompute-20261115.json",
+     "quote_state_matches": [
+      "class-frontier-cost67c-receipts-recompute-20261115.json:frontier_after_cost67c"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 6,
+     "union_mim": 6
+    },
+    {
+     "baseline_quote": [
+      1023,
+      6824,
+      537833,
+      5094,
+      401556
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 22,
+     "frontier_key": "frontier_after_merged",
+     "frontier_solved": 1045,
+     "head": "class-frontier-merged-cost60bwarm-cost71b-recompute-20261115.json",
+     "prose_pointer_head": null,
+     "quote_state_matches": [
+      "class-frontier-cost69e-recompute-20261115.json:frontier_after_cost69e"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 22,
+     "union_mim": 22
+    },
+    {
+     "baseline_quote": [
+      1219,
+      6628,
+      523173,
+      4898,
+      386896
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 8,
+     "frontier_key": "frontier_after_merged",
+     "frontier_solved": 1227,
+     "head": "class-frontier-merged-cost78a-69h-recompute-20261115.json",
+     "prose_pointer_head": "class-frontier-cost67c-receipts-recompute-20261115.json",
+     "quote_state_matches": [
+      "class-frontier-cost67c-receipts-recompute-20261115.json:frontier_after_cost67c"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 8,
+     "union_mim": 8
+    },
+    {
+     "classification": "no_numeric_baseline_quote",
+     "delta": null,
+     "frontier_key": "frontier_after_merged",
+     "frontier_solved": 887,
+     "head": "class-frontier-merged-recompute-20261114.json",
+     "quote_status": "unverifiable_quote",
+     "referenced_head": null,
+     "sum_mim": 12
+    },
+    {
+     "baseline_quote": [
+      1140,
+      6707,
+      528979,
+      4977,
+      392702
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 8,
+     "frontier_key": "frontier_after_merged",
+     "frontier_solved": 1148,
+     "head": "class-frontier-merged-recompute-after-multiband2-68dhyg-20261115.json",
+     "prose_pointer_head": "class-frontier-warm-multiband2-recompute-20261115.json",
+     "quote_state_matches": [
+      "class-frontier-warm-multiband2-recompute-20261115.json:frontier_after_warm_multiband2"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 8,
+     "union_mim": 8
+    },
+    {
+     "baseline_quote": [
+      959,
+      6888,
+      542417,
+      5158,
+      406140
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 6,
+     "frontier_key": "frontier_merged",
+     "frontier_solved": 965,
+     "head": "class-frontier-merged-recompute-after61f-63a65e-20261114.json",
+     "prose_pointer_head": null,
+     "quote_state_matches": [
+      "class-frontier-cost61f-recompute-20261114.json:frontier_after_cost61f"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 6,
+     "union_mim": 6
+    },
+    {
+     "baseline_quote": [
+      991,
+      6856,
+      540177,
+      5126,
+      403900
+     ],
+     "classification": "parallel-batch-union",
+     "delta": 21,
+     "frontier_key": "frontier_after_merged",
+     "frontier_solved": 1012,
+     "head": "class-frontier-merged-recompute-after65h65i-warm67b68c-20261115.json",
+     "prose_pointer_head": null,
+     "quote_state_matches": [
+      "class-frontier-cost65h-65i-recompute-20261114.json:frontier_after_cost65h_65i"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 25,
+     "union_mim": 21
+    },
+    {
+     "baseline_quote": [
+      1109,
+      6738,
+      531295,
+      5008,
+      395018
+     ],
+     "classification": "cross-head-merge",
+     "delta": 45,
+     "external_declared_mim": 8,
+     "frontier_key": "frontier_after_unified_merge",
+     "frontier_solved": 1154,
+     "head": "class-frontier-unified-merge-recompute-20261115.json",
+     "prose_pointer_head": null,
+     "quote_state_matches": [
+      "class-frontier-warm-multiband-recompute-20261115.json:frontier_after_warm_multiband"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 37,
+     "union_mim": 37
+    },
+    {
+     "baseline_quote": [
+      1062,
+      6785,
+      534768,
+      5055,
+      398491
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 47,
+     "frontier_key": "frontier_after_warm_multiband",
+     "frontier_solved": 1109,
+     "head": "class-frontier-warm-multiband-recompute-20261115.json",
+     "prose_pointer_head": null,
+     "quote_state_matches": [
+      "class-frontier-cost75c-recompute-20261115.json:frontier_after_cost75c"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 47,
+     "union_mim": 47
+    },
+    {
+     "baseline_quote": [
+      1109,
+      6738,
+      531295,
+      5008,
+      395018
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 31,
+     "frontier_key": "frontier_after_warm_multiband2",
+     "frontier_solved": 1140,
+     "head": "class-frontier-warm-multiband2-recompute-20261115.json",
+     "prose_pointer_head": null,
+     "quote_state_matches": [
+      "class-frontier-warm-multiband-recompute-20261115.json:frontier_after_warm_multiband"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 31,
+     "union_mim": 31
+    },
+    {
+     "classification": "no_numeric_baseline_quote",
+     "delta": null,
+     "frontier_key": "frontier_after_cost63d",
+     "frontier_solved": 855,
+     "head": "class2-lane-cost63cd-frontier-recompute-20261114.json",
+     "quote_status": "unverifiable_quote",
+     "referenced_head": null,
+     "sum_mim": 41
+    },
+    {
+     "classification": "no_numeric_baseline_quote",
+     "delta": null,
+     "frontier_key": "frontier_after_cost65c",
+     "frontier_solved": 881,
+     "head": "class2-lane-cost65c-frontier-recompute-20261114.json",
+     "quote_status": "unverifiable_quote",
+     "referenced_head": null,
+     "sum_mim": 6
+    },
+    {
+     "classification": "no_numeric_baseline_quote",
+     "delta": null,
+     "frontier_key": "frontier_after_cost65d",
+     "frontier_solved": 884,
+     "head": "class2-lane-cost65d-frontier-recompute-20261114.json",
+     "quote_status": "unverifiable_quote",
+     "referenced_head": null,
+     "sum_mim": 9
+    },
+    {
+     "classification": "no_numeric_baseline_quote",
+     "delta": null,
+     "frontier_key": "frontier_after_cost75",
+     "frontier_solved": 814,
+     "head": "class2-lane-cost75-frontier-recompute-20261114.json",
+     "quote_status": "unverifiable_quote",
+     "referenced_head": null,
+     "sum_mim": 141
+    },
+    {
+     "classification": "no_numeric_baseline_quote",
+     "delta": null,
+     "frontier_key": "frontier_after_cost78b",
+     "frontier_solved": 875,
+     "head": "class4-lane-cost78b-frontier-recompute-20261114.json",
+     "quote_status": "unverifiable_quote",
+     "referenced_head": null,
+     "sum_mim": 20
+    },
+    {
+     "classification": "no_numeric_baseline_quote",
+     "delta": null,
+     "frontier_key": "frontier_after_cost80b",
+     "frontier_solved": 878,
+     "head": "class4-lane-cost80b-frontier-recompute-20261114.json",
+     "quote_status": "unverifiable_quote",
+     "referenced_head": null,
+     "sum_mim": 23
+    },
+    {
+     "baseline_quote": [
+      1227,
+      6620,
+      522561,
+      4890,
+      386284
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 6,
+     "frontier_key": "frontier_after_cost70e",
+     "frontier_solved": 1233,
+     "head": "class-frontier-cost70e-receipts-recompute-20261115.json",
+     "prose_pointer_head": "class-frontier-cost69h-receipts-recompute-20261115.json",
+     "quote_state_matches": [
+      "class-frontier-cost69h-receipts-recompute-20261115.json:frontier_after_cost69h",
+      "class-frontier-merged-cost78a-69h-recompute-20261115.json:frontier_after_merged"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 6,
+     "union_mim": 6
+    },
+    {
+     "baseline_quote": [
+      1233,
+      6614,
+      522131,
+      4884,
+      385854
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 2,
+     "frontier_key": "frontier_after_cost71c",
+     "frontier_solved": 1235,
+     "head": "class-frontier-cost71c-receipts-recompute-20261115.json",
+     "prose_pointer_head": "class-frontier-cost70e-receipts-recompute-20261115.json",
+     "quote_state_matches": [
+      "class-frontier-cost70e-receipts-recompute-20261115.json:frontier_after_cost70e"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 2,
+     "union_mim": 2
+    },
+    {
+     "baseline_quote": [
+      1235,
+      6614,
+      522131,
+      4884,
+      385854
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 4,
+     "frontier_key": "frontier_after_cost70f",
+     "frontier_solved": 1239,
+     "head": "class-frontier-cost70f-receipts-recompute-20261115.json",
+     "prose_pointer_head": "class-frontier-cost71c-receipts-recompute-20261115.json",
+     "quote_state_matches": [],
+     "quote_status": "unmatched_quote",
+     "sum_mim": 4,
+     "union_mim": 4
+    },
+    {
+     "baseline_quote": [
+      1239,
+      6608,
+      521701,
+      4878,
+      385424
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 5,
+     "frontier_key": "frontier_after_cost72c",
+     "frontier_solved": 1244,
+     "head": "class-frontier-cost72c-receipts-recompute-20261115.json",
+     "prose_pointer_head": "class-frontier-cost70f-receipts-recompute-20261115.json",
+     "quote_state_matches": [
+      "class-frontier-cost70f-receipts-recompute-20261115.json:frontier_after_cost70f"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 5,
+     "union_mim": 5
+    },
+    {
+     "baseline_quote": [
+      1244,
+      6603,
+      521339,
+      4873,
+      385062
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 5,
+     "frontier_key": "frontier_after_cost73g",
+     "frontier_solved": 1249,
+     "head": "class-frontier-cost73g-receipts-recompute-20261115.json",
+     "prose_pointer_head": "class-frontier-cost72c-receipts-recompute-20261115.json",
+     "quote_state_matches": [
+      "class-frontier-cost72c-receipts-recompute-20261115.json:frontier_after_cost72c"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 5,
+     "union_mim": 5
+    },
+    {
+     "baseline_quote": [
+      1249,
+      6598,
+      520956,
+      4868,
+      384679
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 5,
+     "frontier_key": "frontier_after_cost70g",
+     "frontier_solved": 1254,
+     "head": "class-frontier-cost70g-receipts-recompute-20261115.json",
+     "prose_pointer_head": "class-frontier-cost73g-receipts-recompute-20261115.json",
+     "quote_state_matches": [
+      "class-frontier-cost73g-receipts-recompute-20261115.json:frontier_after_cost73g"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 5,
+     "union_mim": 5
+    },
+    {
+     "baseline_quote": [
+      1254,
+      6593,
+      520600,
+      4863,
+      384323
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 3,
+     "frontier_key": "frontier_after_cost73h",
+     "frontier_solved": 1257,
+     "head": "class-frontier-cost73h-receipts-recompute-20261115.json",
+     "prose_pointer_head": "class-frontier-cost70g-receipts-recompute-20261115.json",
+     "quote_state_matches": [
+      "class-frontier-cost70g-receipts-recompute-20261115.json:frontier_after_cost70g"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 3,
+     "union_mim": 3
+    },
+    {
+     "baseline_quote": [
+      1257,
+      6590,
+      520380,
+      4860,
+      384103
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 4,
+     "frontier_key": "frontier_after_cost65l",
+     "frontier_solved": 1261,
+     "head": "class-frontier-cost65l-receipts-recompute-20261115.json",
+     "prose_pointer_head": "class-frontier-cost73h-receipts-recompute-20261115.json",
+     "quote_state_matches": [
+      "class-frontier-cost73h-receipts-recompute-20261115.json:frontier_after_cost73h"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 4,
+     "union_mim": 4
+    },
+    {
+     "baseline_quote": [
+      1257,
+      6590,
+      520380,
+      4860,
+      384103
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 9,
+     "frontier_key": "frontier_after_cost74g",
+     "frontier_solved": 1266,
+     "head": "class-frontier-cost74g-receipts-recompute-20261115.json",
+     "pointer_name_differs_from_matched_state": true,
+     "prose_pointer_head": "class-frontier-cost72c-receipts-recompute-20261115.json",
+     "quote_state_matches": [
+      "class-frontier-cost73h-receipts-recompute-20261115.json:frontier_after_cost73h"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 9,
+     "union_mim": 9
+    },
+    {
+     "baseline_quote": [
+      1266,
+      6581,
+      519710,
+      4851,
+      383433
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 7,
+     "frontier_key": "frontier_after_cost69i",
+     "frontier_solved": 1273,
+     "head": "class-frontier-cost69i-receipts-recompute-20261115.json",
+     "prose_pointer_head": "class-frontier-cost74g-receipts-recompute-20261115.json",
+     "quote_state_matches": [
+      "class-frontier-cost74g-receipts-recompute-20261115.json:frontier_after_cost74g"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 7,
+     "union_mim": 7
+    },
+    {
+     "baseline_quote": [
+      1257,
+      6590,
+      520380,
+      4860,
+      384103
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 13,
+     "frontier_key": "frontier_after_merged",
+     "frontier_solved": 1270,
+     "head": "class-frontier-merged-cost65l-74g-recompute-20261115.json",
+     "prose_pointer_head": "class-frontier-cost73h-receipts-recompute-20261115.json",
+     "quote_state_matches": [
+      "class-frontier-cost73h-receipts-recompute-20261115.json:frontier_after_cost73h"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 13,
+     "union_mim": 13
+    },
+    {
+     "baseline_quote": [
+      1257,
+      6590,
+      520380,
+      4860,
+      384103
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 20,
+     "frontier_key": "frontier_after_merged",
+     "frontier_solved": 1277,
+     "head": "class-frontier-merged-cost65l-74g-69i-recompute-20261115.json",
+     "prose_pointer_head": "class-frontier-cost73h-receipts-recompute-20261115.json",
+     "quote_state_matches": [
+      "class-frontier-cost73h-receipts-recompute-20261115.json:frontier_after_cost73h"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 20,
+     "union_mim": 20
+    },
+    {
+     "baseline_quote": [
+      1277,
+      6570,
+      518896,
+      4840,
+      382619
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 3,
+     "frontier_key": "frontier_after_cost76b",
+     "frontier_solved": 1280,
+     "head": "class-frontier-cost76b-receipts-recompute-20261115.json",
+     "prose_pointer_head": "class-frontier-merged-cost65l-74g-69i-recompute-20261115.json",
+     "quote_state_matches": [
+      "class-frontier-merged-cost65l-74g-69i-recompute-20261115.json:frontier_after_merged"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 3,
+     "union_mim": 3
+    },
+    {
+     "baseline_quote": [
+      1280,
+      6567,
+      518678,
+      4837,
+      382401
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 2,
+     "frontier_key": "frontier_after_cost77a",
+     "frontier_solved": 1282,
+     "head": "class-frontier-cost77a-receipts-recompute-20261115.json",
+     "prose_pointer_head": "class-frontier-cost76b-receipts-recompute-20261115.json",
+     "quote_state_matches": [
+      "class-frontier-cost76b-receipts-recompute-20261115.json:frontier_after_cost76b"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 2,
+     "union_mim": 2
+    },
+    {
+     "baseline_quote": [
+      1282,
+      6565,
+      518522,
+      4835,
+      382245
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 4,
+     "frontier_key": "frontier_after_cost77b",
+     "frontier_solved": 1286,
+     "head": "class-frontier-cost77b-receipts-recompute-20261115.json",
+     "prose_pointer_head": "class-frontier-cost77a-receipts-recompute-20261115.json",
+     "quote_state_matches": [
+      "class-frontier-cost77a-receipts-recompute-20261115.json:frontier_after_cost77a"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 4,
+     "union_mim": 4
+    },
+    {
+     "baseline_quote": [
+      1286,
+      6561,
+      518211,
+      4831,
+      381934
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 4,
+     "frontier_key": "frontier_after_cost77c",
+     "frontier_solved": 1290,
+     "head": "class-frontier-cost77c-receipts-recompute-20261115.json",
+     "prose_pointer_head": "class-frontier-cost77b-receipts-recompute-20261115.json",
+     "quote_state_matches": [
+      "class-frontier-cost77b-receipts-recompute-20261115.json:frontier_after_cost77b"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 4,
+     "union_mim": 4
+    },
+    {
+     "baseline_quote": [
+      1290,
+      6557,
+      517923,
+      4827,
+      381646
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 6,
+     "frontier_key": "frontier_after_cost75d",
+     "frontier_solved": 1296,
+     "head": "class-frontier-cost75d-receipts-recompute-20261115.json",
+     "prose_pointer_head": "class-frontier-cost77c-receipts-recompute-20261115.json",
+     "quote_state_matches": [
+      "class-frontier-cost77c-receipts-recompute-20261115.json:frontier_after_cost77c"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 6,
+     "union_mim": 6
+    },
+    {
+     "baseline_quote": [
+      1290,
+      6557,
+      517923,
+      4827,
+      381646
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 9,
+     "frontier_key": "frontier_after_cost77d",
+     "frontier_solved": 1299,
+     "head": "class-frontier-cost77d-receipts-recompute-20261115.json",
+     "prose_pointer_head": "class-frontier-cost77c-receipts-recompute-20261115.json",
+     "quote_state_matches": [
+      "class-frontier-cost77c-receipts-recompute-20261115.json:frontier_after_cost77c"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 9,
+     "union_mim": 9
+    },
+    {
+     "baseline_quote": [
+      1296,
+      6551,
+      517468,
+      4821,
+      381191
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 6,
+     "frontier_key": "frontier_after_merged_75d_77d",
+     "frontier_solved": 1302,
+     "head": "class-frontier-merged-cost75d-77d-receipts-recompute-20261115.json",
+     "prose_pointer_head": "class-frontier-cost75d-receipts-recompute-20261115.json",
+     "quote_state_matches": [
+      "class-frontier-cost75d-receipts-recompute-20261115.json:frontier_after_cost75d"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 6,
+     "union_mim": 6
+    },
+    {
+     "baseline_quote": [
+      1302,
+      6545,
+      517025,
+      4815,
+      380748
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 2,
+     "frontier_key": "frontier_after_cost79a",
+     "frontier_solved": 1304,
+     "head": "class-frontier-cost79a-receipts-recompute-20261115.json",
+     "prose_pointer_head": "class-frontier-merged-cost75d-77d-receipts-recompute-20261115.json",
+     "quote_state_matches": [
+      "class-frontier-merged-cost75d-77d-receipts-recompute-20261115.json:frontier_after_merged_75d_77d"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 2,
+     "union_mim": 2
+    },
+    {
+     "baseline_quote": [
+      1304,
+      6543,
+      516873,
+      4813,
+      380596
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 1,
+     "frontier_key": "frontier_after_cost80d",
+     "frontier_solved": 1305,
+     "head": "class-frontier-cost80d-receipts-recompute-20261115.json",
+     "prose_pointer_head": "class-frontier-cost79a-receipts-recompute-20261115.json",
+     "quote_state_matches": [
+      "class-frontier-cost79a-receipts-recompute-20261115.json:frontier_after_cost79a"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 1,
+     "union_mim": 1
+    },
+    {
+     "baseline_quote": [
+      1305,
+      6542,
+      516793,
+      4812,
+      380516
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 1,
+     "frontier_key": "frontier_after_cost82c",
+     "frontier_solved": 1306,
+     "head": "class-frontier-cost82c-receipts-recompute-20261115.json",
+     "prose_pointer_head": "class-frontier-cost80d-receipts-recompute-20261115.json",
+     "quote_state_matches": [
+      "class-frontier-cost80d-receipts-recompute-20261115.json:frontier_after_cost80d"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 1,
+     "union_mim": 1
+    },
+    {
+     "baseline_quote": [
+      1306,
+      6541,
+      516711,
+      4811,
+      380434
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 3,
+     "frontier_key": "frontier_after_cost83a",
+     "frontier_solved": 1309,
+     "head": "class-frontier-cost83a-receipts-recompute-20261115.json",
+     "prose_pointer_head": "class-frontier-cost82c-receipts-recompute-20261115.json",
+     "quote_state_matches": [
+      "class-frontier-cost82c-receipts-recompute-20261115.json:frontier_after_cost82c"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 3,
+     "union_mim": 3
+    },
+    {
+     "baseline_quote": [
+      1309,
+      6538,
+      516477,
+      4808,
+      380200
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 3,
+     "frontier_key": "frontier_after_cost83b",
+     "frontier_solved": 1312,
+     "head": "class-frontier-cost83b-receipts-recompute-20261115.json",
+     "prose_pointer_head": "class-frontier-cost83a-receipts-recompute-20261115.json",
+     "quote_state_matches": [
+      "class-frontier-cost83a-receipts-recompute-20261115.json:frontier_after_cost83a"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 3,
+     "union_mim": 3
+    },
+    {
+     "baseline_quote": [
+      1312,
+      6535,
+      516227,
+      4805,
+      379950
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 1,
+     "frontier_key": "frontier_after_cost83c",
+     "frontier_solved": 1313,
+     "head": "class-frontier-cost83c-receipts-recompute-20261115.json",
+     "prose_pointer_head": "class-frontier-cost83b-receipts-recompute-20261115.json",
+     "quote_state_matches": [
+      "class-frontier-cost83b-receipts-recompute-20261115.json:frontier_after_cost83b"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 1,
+     "union_mim": 1
+    },
+    {
+     "baseline_quote": [
+      1313,
+      6534,
+      516144,
+      4804,
+      379867
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 1,
+     "frontier_key": "frontier_after_cost83d",
+     "frontier_solved": 1314,
+     "head": "class-frontier-cost83d-receipts-recompute-20261115.json",
+     "prose_pointer_head": "class-frontier-cost83c-receipts-recompute-20261115.json",
+     "quote_state_matches": [
+      "class-frontier-cost83c-receipts-recompute-20261115.json:frontier_after_cost83c"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 1,
+     "union_mim": 1
+    },
+    {
+     "baseline_quote": [
+      1314,
+      6533,
+      516061,
+      4803,
+      379784
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 4,
+     "frontier_key": "frontier_after_cost84a",
+     "frontier_solved": 1318,
+     "head": "class-frontier-cost84a-receipts-recompute-20261115.json",
+     "prose_pointer_head": "class-frontier-cost83d-receipts-recompute-20261115.json",
+     "quote_state_matches": [
+      "class-frontier-cost83d-receipts-recompute-20261115.json:frontier_after_cost83d"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 4,
+     "union_mim": 4
+    },
+    {
+     "baseline_quote": [
+      1318,
+      6530,
+      515822,
+      4800,
+      379545
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 8,
+     "frontier_key": "frontier_after_cost62a",
+     "frontier_solved": 1326,
+     "head": "class-frontier-cost62a-receipts-recompute-20261116.json",
+     "prose_pointer_head": "class-frontier-cost84a-receipts-recompute-20261115.json",
+     "quote_state_matches": [
+      "class-frontier-cost84a-receipts-recompute-20261115.json:frontier_after_cost84a"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 8,
+     "union_mim": 8
+    },
+    {
+     "baseline_quote": [
+      1326,
+      6522,
+      515251,
+      4792,
+      378974
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 34,
+     "frontier_key": "frontier_after_cost58c",
+     "frontier_solved": 1360,
+     "head": "class-frontier-cost58c-receipts-recompute-20261116.json",
+     "prose_pointer_head": "class-frontier-cost62a-receipts-recompute-20261116.json",
+     "quote_state_matches": [
+      "class-frontier-cost62a-receipts-recompute-20261116.json:frontier_after_cost62a"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 34,
+     "union_mim": 34
+    },
+    {
+     "baseline_quote": [
+      1360,
+      6488,
+      512785,
+      4758,
+      376508
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 2,
+     "frontier_key": "frontier_after_cost63h",
+     "frontier_solved": 1362,
+     "head": "class-frontier-cost63h-receipts-recompute-20261115.json",
+     "prose_pointer_head": "class-frontier-cost58c-receipts-recompute-20261116.json",
+     "quote_state_matches": [
+      "class-frontier-cost58c-receipts-recompute-20261116.json:frontier_after_cost58c"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 2,
+     "union_mim": 2
+    }
+   ],
+   "heads_classified": 82,
+   "pointer_name_differs_cases": [
+    {
+     "head": "class-frontier-cost74g-receipts-recompute-20261115.json",
+     "matched_states": [
+      "class-frontier-cost73h-receipts-recompute-20261115.json:frontier_after_cost73h"
+     ],
+     "prose_pointer_head": "class-frontier-cost72c-receipts-recompute-20261115.json"
+    }
+   ],
+   "quote_errata": [
+    {
+     "characterization": "quoted solved count matches the pointer head final state but the four remaining-fields quote the pre-lane baseline state; quoted 5-tuple matches no published head; delta arithmetic uses the correct solved baseline and reconciles with the head receipts",
+     "head": "class-frontier-cost70f-receipts-recompute-20261115.json",
+     "pointer_actual_final_state": [
+      1235,
+      6612,
+      521988,
+      4882,
+      385711
+     ],
+     "prose_pointer_head": "class-frontier-cost71c-receipts-recompute-20261115.json",
+     "quoted": [
+      1235,
+      6614,
+      522131,
+      4884,
+      385854
+     ]
+    }
+   ],
+   "quote_status_counts": {
+    "matched_published_state": 74,
+    "unmatched_quote": 1,
+    "unverifiable_quote": 7
+   }
+  },
+  "inventory_at_1233": 497,
+  "per_record_geometry": {
+   "anomalies": [],
+   "group_records": 40,
+   "published_hex_errata": [
+    {
+     "check": "malformed_marginal_hex",
+     "head": "class2-lane-cost63cd-frontier-recompute-20261114.json",
+     "key": "cost63b_addition",
+     "marginal_in_manifest": 8,
+     "n_valid_entries": 7,
+     "value": [
+      "00000000000010000003800000000100020"
+     ]
+    }
+   ],
+   "receipt_records": 527
+  },
+  "pin_groups": {
+   "base": 26,
+   "chain": 52,
+   "post70e": 26
+  },
+  "pins_checked": 104,
+  "unpinned_post70e_heads_computed_blob_shas": {
+   "class-frontier-cost70f-receipts-recompute-20261115.json": {
+    "bytes": 9643,
+    "git_blob_sha": "4d0f130e975b6a7bec4759387bd6d54dfe2b6a18"
+   },
+   "class-frontier-cost70g-receipts-recompute-20261115.json": {
+    "bytes": 13915,
+    "git_blob_sha": "73890fe34580ec2f869a97a00b3e6400eda30c0a"
+   },
+   "class-frontier-cost71c-receipts-recompute-20261115.json": {
+    "bytes": 11891,
+    "git_blob_sha": "61af2eb311f938f5ee5bf2bb20d8c1a76787dc87"
+   },
+   "class-frontier-cost73g-receipts-recompute-20261115.json": {
+    "bytes": 12956,
+    "git_blob_sha": "e4fb98dc8670fbb85786ab02f017a0a95e357648"
+   }
+  },
+  "v1_supersession": "the first published audit (v1, endpoint 77a, 88 pins, 553 roots) remains published unchanged as class2-lane-published-chain-roots-independent-audit-20261115.json; the v2 output subsumed it at the 75d endpoint (91 pins, 569 roots); the v4 output extended the pinned chain to the 80d endpoint (95 pins, 587 roots, 17 post-70e heads, canonical-line exactly-once extended to 1305); the v5 output extended it to the 82c endpoint (96 pins, 592 roots, 18 post-70e heads, canonical-line exactly-once extended to 1306); the v6 output extended it to the 83a endpoint (97 pins, 596 roots, 19 post-70e heads, canonical-line exactly-once extended to 1309); the v7 output extended it to the 83c endpoint (99 pins, 603 roots, 21 post-70e heads, canonical-line exactly-once extended to 1313); this v8 output extends it to the 83d endpoint (100 pins, 606 roots, 22 post-70e heads, canonical-line exactly-once extended to 1314); this v9 output extends it to the 62a endpoint (102 pins, 616 roots, 24 post-70e heads, canonical-line exactly-once extended to 1326); this v10 output extends it to the 63h endpoint (104 pins, 650 roots, 26 post-70e heads, canonical-line exactly-once extended to 1362)"
+ },
+ "date": "2026-11-15",
+ "interpretation_guard": "bookkeeping audit over published receipts and head records only; solved counts measure manifest coverage, not the game-theoretic value of any position; WIN7 certificates prove a win within depth 10 from the individual 7-stone roots only; nothing in this audit decides any S5 parent, any class, the two-stone root {49,60} or the 11x11 empty board: 11x11 empty board / two-stone root {49,60} / S2 {59,60} / class 1 / class 2 / class 4 remain UNKNOWN",
+ "method": "independent whole-chain audit over the published files only (no runpy chain replay, no solved-set reconstruction): 104 git blob pins asserted byte-exact (26 base certificate files + 52 pre-70e chain head JSONs + 26 pinned post-70e chain heads through the 63h endpoint; the v9 method text understated the pin count as 100 against the same 102 pins actually checked by the controls), the root inventory rebuilt from the published records (194 distinct WIN7 base roots with the single intra-base duplicate root enumerated, 402 distinct receipt roots from the 52 chain head addition records, 104 base-roots re-listed by chain records), the cumulative published-root inventory reconciled at every post-70e checkpoint against each fold script\u2019s own published folded-root count (497@1233, 499@71c, 503@70f, 512@72c, 520@73g, 528@70g, 532@73h, 534@65l / 542@74g / 546@69i branch lines, 544@merged-65l-74g, 548@merged-65l-74g-69i, 550@76b, 553@77a, 557@77b, 565@77c, 569@75d, 577@77d lane-local, 580@merged-75d-77d, 583@79a, 587@80d, 592@82c, 596@83a, 601@83b, 603@83c, 606@83d, 610@84a, 616@62a, 649@58c, 650@63h), the D4 orbit structure of the full inventory audited (v10: full 650-root D4 orbits; 11 twin pairs with full provenance; the 16 roots added by the 77b/77c/75d folds plus the 5+4+5+2+3+4+6 roots added by the 82c/83a/83b/83c/83d/84a/62a folds and the 33+1 roots added by the 58c/63h folds are D4-disjoint from the prior inventory and pairwise orbit-distinct); multi-provenance roots enumerated), per-record geometry checked for every published receipt record and every nested group-additions record, child-orbit closure bookkeeping checked at every head declaring a child, convention-external receipts scanned (each must be a D4 twin of an inventoried orbit, keeping the orbit inventory complete as a SET), the head arithmetic re-derived from the published marginal records with zero anomalies, and the 75d / 80d / 82c / 83a / 83b / 83c / 83d / 84a / 62a / 58c / 63h endpoint heads and their completed claim fold records cross-checked byte-exact",
+ "schema": "n11-class2-lane-published-chain-roots-second-independent-audit-20261115-v10",
+ "verdict": "AUDIT PASSED"
+}
