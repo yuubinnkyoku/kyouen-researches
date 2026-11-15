@@ -66,7 +66,7 @@ artifacts:
   note: 全称補題の証明・確定表の導出・センサス結果と限界
 - path: research/experiments/multiplayer-coalition-kyouen-20261116/verify_multiplayer_coalition.py
   role: verifier
-  note: 2独立エンジン・全位置凍結検査・既刊アンカー354件・回転対13組・決定性
+  note: 2独立エンジン・全位置凍結検査・既刊アンカー386件・回転対13組・決定性・族ルート表
 - path: research/experiments/multiplayer-coalition-kyouen-20261116/output/audit.json
   role: data
   note: 44盤の全安全局面センサスと2×m q=4族ルート表（バイト同一再現）
