@@ -1386,3 +1386,15 @@ fold scriptはrunpyでcost-67c chain head 1219をbyte-identicalに再現し（ch
 
 詳細: [log](../../log/2026-11-15-n11-class2-lane-cost78a-certificates-and-receipt-fold.md)、[certificate manifest](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78a-win7-certificates-20261115.json)、[fold head JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost78a-receipts-recompute-20261115.json)、[completed claim](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78a-inflight-20261115.json)。
 
+
+## 2026-11-15: cost-70d sterile sweep — 第二coverable targetの最安未sweep行・frontier不変・head分岐の指摘
+
+第二coverable class-2 target S5 `00000000000000801202000000200000` の最安未sweep行 cost-70 child `00000000000000801282000000200000`（stones [21,49,55,57,60,71]・5本あるcost-70行で唯一のclass-1需要 c1=1,c2=1,c4=0）をcost-70dとしてsweepした。claim前検証: legal 70 = manifest edge cost 70 bit-exact・D4正準化で開親2個（lift 55 = 第二coverable S5・lift 57 = class-1 S5 `00000000000000801082000000200000` 75/5971）・残り4削除は閉行。**70/70 REFUTED-D10・WIN7-D10 0件・0 capped・総nodes 53,890,941・全候補 terminal [13,17]・pilot 3402×9 PASS**。STERILE: fold材料なし・frontier不変。統制: batch5 determinism rerun node-exact・v15交差エンジン（pilot 5949）でアンカーbits 4/92/114一致（loss=false）。独立監査 `audit_cost70d_raw_sweep_20261115.py`（stdlib Bareiss・repo engine不使用）全assert合格・2回実行byte-identical（md5 `a1739c77…`）・D4重複走査は公開win7 manifest 56ファイル138 canonical rootsと重複0。一石削除D4正準化6件を監査内で独立再導出。
+
+**訂正（cost-74fのK0783追記の次候補記述）**: 74f追記は「class-4 frontierの次候補は同S5の2番目のcost-74行 `00000000020000003800000088000000` とcost-75行 `00000000020000003800020080000000`」と書いたが、この2行は並走により既にSTERILE確定済みだった（cost-74c = `class4-lane-cost74c-sweep` 2026-11-14・cost-75 = `class2-lane-cost75-sterile` 相当・いずれも74/75 REFUTED-D10・0 WIN7）。さらにcost-79行2本 `00000000020000003800000880000000` `00000000020000003800400080000000` も並走cost-79/79bとしてSTERILE確定済み（270,231,378 / 223,708,504 nodes・全REFUTED-D10）。best class-4 blocker S5 `00000000020000003800000080000000` のsweep済み行は73f/74f（自レーン）+74c/75/79/79b（並走）の6行・すべてSTERILE。次の未sweep行はcost-80行2本（`00000000020000003800000180000000` c4=2・`00000000020000003800200080000000` c4=1）。
+
+**head分岐の指摘**: 本claim（head参照1221/6626/523035/4896/386758・commit `bb44940e`）の時点で、並走cost-78a fold head `1225/6622/522699/4892/386422`（commit `1691d9bb`）が既にmainに存在していた。78a foldと69h fold（1219→1221・commit `3d2faf3b`）は**同一baseline head 1219から並行着地**しており、canonical chainが分岐したまま（両head JSONがmainに併存）。70dはSTERILEでfold材料を持たずどちらのchainとも交差しない（70d child行は両chainで開行・2開親は78a foldの影響を受けない）。**次のfold実行者は78a（1225）と69h（1221）のマージrecompute（両fold receiptsを単一chainに再適用）が必須**。
+
+REFUTED-D10はLOSS証明ではない。解消計数はmanifest被覆の前進であり、盤全体の勝敗ではない。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class1・class2・class4は引き続き **UNKNOWN**。
+
+詳細: [sweep log](../../log/2026-11-15-n11-class2-lane-cost70d-sterile-sweep.md)、[sweep audit](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70d-sweep-audit-20261115.json)、[completed claim](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70d-inflight-20261115.json)。
