@@ -151,8 +151,7 @@ CLAIM_BLOBS = (
     'e1e15e7ba5f5c92fe5430ca784c76d18e685409b',  # v2 sweep+certs complete, fold pending
 )
 CLAIM_BLOBS_RETIRED = (
-    # filled after the claim retire (see the swap convention of cost-67c):
-    # '...'  # v3 retired (completed)
+    '7627d490683b01ad88f2f27c99e99ca75b6a0be2',  # v3 retired (completed; fold 1219 -> 1221)
 )
 sha, blen = git_blob_sha(OUT / 'class2-lane-cost69h-inflight-20261115.json')
 assert sha in CLAIM_BLOBS + CLAIM_BLOBS_RETIRED, \
