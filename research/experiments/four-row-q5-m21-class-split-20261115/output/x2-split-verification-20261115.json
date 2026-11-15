@@ -1,0 +1,80 @@
+{
+  "verification": "x2-split second verification (sample re-run + deterministic CNF regeneration)",
+  "date": "2026-11-15T16:57:00Z",
+  "tally_37_buckets": {
+    "UNSAT": 37,
+    "SAT": 0,
+    "INDET": 0
+  },
+  "x2_conflicts": {
+    "c0k3p0": {
+      "buckets": 19,
+      "conflicts": 13382360,
+      "hardest": {
+        "key": "c0k3p0b1",
+        "conflicts": 1969663,
+        "sec": 185.1
+      }
+    },
+    "c0k3p1": {
+      "buckets": 18,
+      "conflicts": 10930286,
+      "hardest": {
+        "key": "c0k3p1b3",
+        "conflicts": 1082095,
+        "sec": 102.6
+      }
+    },
+    "total": 24312646
+  },
+  "m21_deciding_total_conflicts": 126692917,
+  "cnf_regeneration_md5_checks": [
+    {
+      "key": "c0k3p1b7",
+      "md5": "286e4509bdccd0f6e722452c5c2ec7df",
+      "matches_record": true
+    },
+    {
+      "key": "c0k3p1b2",
+      "md5": "1dcb4c46536a9e3c635ed01f08581879",
+      "matches_record": true
+    },
+    {
+      "key": "c0k3p0b1",
+      "md5": "13749780ebd7467aca0a7b2e3ea7e163",
+      "matches_record": true
+    },
+    {
+      "key": "c0k3p1b8",
+      "md5": "3a1648ec35b92f316ffdbf24aa30133b",
+      "matches_record": true
+    }
+  ],
+  "sample_reruns": [
+    {
+      "key": "c0k3p0b1",
+      "record": {
+        "result": "UNSAT",
+        "conflicts": 1969663
+      },
+      "rerun": {
+        "result": "UNSATISFIABLE",
+        "conflicts": 1969663
+      },
+      "bit_exact": true
+    },
+    {
+      "key": "c0k3p1b8",
+      "record": {
+        "result": "UNSAT",
+        "conflicts": 721355
+      },
+      "rerun": {
+        "result": "UNSATISFIABLE",
+        "conflicts": 721355
+      },
+      "bit_exact": true
+    }
+  ],
+  "conclusion": "all 37 x2 sub-buckets UNSAT => c0k3p0 and c0k3p1 UNSAT (complete disjoint second-stone case split) => all 75 m=21 class-split instances decided UNSAT => no row-deficient maximal safe configuration exists on 4x21 (q=5); every maximal safe configuration has 16 stones rows (4,4,4,4); witness band m=5..20, witness-free at 21 => M_{4,5} in {21} or >= 23 (K0821-audit convention); upper 140 (K0318) unchanged; finite machine verification, not a number-theoretic proof; persistence at m>=22 open"
+}
