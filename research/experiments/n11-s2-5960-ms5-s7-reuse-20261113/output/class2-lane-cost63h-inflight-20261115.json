@@ -203,5 +203,12 @@
   "reproduction": "python research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost63h_receipts_20261115.py",
   "rebase_note": "this claim was opened at the cost-62a chain head 1326/6522/515251/4792/378974 (parents 34/2368, 69/5265, 77/5548); the parallel cost-58c fold landed on main during the sweep, so the receipt folds on the re-based cost-58c chain head 1360/6488/512785/4758/376508 where the same three parents hold the still-remaining child row at 21/1454, 69/5265, 77/5548; sweep verdicts are baseline-independent per-position depth-10 results",
   "note": "The second coverable class-2 candidate S5 00000000000000801202000040000000 now has 20 remaining rows (was 21 at the 1360 baseline, 34 at claim time); the bit-89 WIN7-D10 receipt additionally closed a second manifest orbit 00000000020000801002000040080000, a row of the class-4 parent 00000000000000003800000001800000 (77 -> 75 rows). Marginal counts are D4-orbit bookkeeping over published receipts, not game-theoretic values."
+ },
+ "reconciliation": {
+  "date": "2026-11-16",
+  "situation": "the parallel cost-63i claim (child 00000000000000c09002000001000000, in-flight at this claim's completion) landed as commit 12b71971 and folded its 18 receipts on the SAME cost-58c chain head 1360/6488/512785/4758/376508 (NOT on this claim's 1362 head), declaring 1367/6481/512295/4751/376018 as the canonical baseline: a two-branch fork of the receipts chain",
+  "resolution": "recompute_frontier_merged_cost63h_63i_20261116.py reproduces BOTH branch heads through their published scripts (each blob-identical), asserts the branch cover sets disjoint (|cov(63h root)|=7, |cov(18x63i)|=109, overlap=0) and the 63h root disjoint from the 667 folded roots raw-hex and D4-canonically, re-folds this claim's bit-89 receipt on top of the 1367 head (marginal 5 / in-manifest 2, child orbit closed by bit 89), and asserts a reverse-order replay (the 18 cost-63i covers on the 1362 head) reproduces the identical merged set",
+  "merged_head": "1369/6479/512163/4749/375886 (class-frontier-merged-cost63h-63i-recompute-20261116.json, git blob sha c3ff50364499014a7096151bd9893a6510386c05)",
+  "note": "this claim's fold record above remains the historical record of the 1360->1362 branch fold; the merged head supersedes both branch heads as the canonical baseline for all subsequent folds; 11x11 empty board / two-stone root {49,60} / S2 {59,60} / class 1 / class 2 / class 4 all UNKNOWN"
  }
 }
