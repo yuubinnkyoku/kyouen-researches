@@ -45,6 +45,17 @@ This script:
 Receipts only - no sweep claims are made here. The in-flight cost-74d
 certificate extraction (parallel lane) and the cost-69g/65j sweeps are not
 folded by this script.
+
+Transparent repair (2026-11-15, cost-76a fold session): the MAIN_BLOBS entry
+for class2-lane-cost72b-inflight-20261115.json is updated to the current main
+blob b1c135c539e20c0ae94cdc2e66d769911af5eb7d. The claim file was legitimately
+updated AFTER this script was published (a cross-lane fold-verification lane
+appended its closure section, status superseded-by-parallel-fold-cross-verified,
+commits 58718492/eeeb6857 era), so the original assert e8ede675... became stale
+and the published chain no longer re-executed byte-identically. No fold
+arithmetic, no other assert, and no output byte changed: the re-run reproduces
+the published 1188 head JSON and both CSVs byte-identically (asserted by the
+downstream cost-76a fold script that runpy-executes this one).
 """
 import csv, hashlib, json, runpy
 from pathlib import Path
@@ -115,7 +126,7 @@ MAIN_BLOBS = {
     'class2-lane-cost72b-determinism-rerun-20261115.jsonl':
         'e97e5583d687da4fe4ca2645c80806cedd3519e9',
     'class2-lane-cost72b-inflight-20261115.json':
-        'e8ede6750351b11037115f8478a2c556c578cc6a',
+        'b1c135c539e20c0ae94cdc2e66d769911af5eb7d',
     'class2-lane-cost72b-win7-certificates-20261115.json':
         '27ca07f9bb49e3638c901f62cab7f961844c5106',
 }
