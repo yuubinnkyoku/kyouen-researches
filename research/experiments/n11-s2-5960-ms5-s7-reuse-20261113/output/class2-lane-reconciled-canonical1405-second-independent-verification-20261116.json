@@ -1,0 +1,24 @@
+{
+ "schema": "n11-class2-lane-reconciled-canonical1405-second-independent-verification-20261116-v1",
+ "date": "2026-11-16",
+ "verified": "class-frontier-reconciled-canonical1400-cost70g-recompute-20261116.json (git blob sha b3ad19d7bfd48c771d5a6827707a9f26940dc1bb, 11352 bytes, commit ca0e8c4230444d51540d86e1987a05b16dd7e8c5)",
+ "method": "independent implementation of the same merge from the opposite direction: both receipt sets (the 63h bit-89 cover, the 67d bit-97 cover and the 7 cost-70g receipt covers) folded on the shared cost-65m 1396 baseline, with both published branch heads (1400 and 1403) reproduced through their published scripts in subprocesses (all blob asserts re-run), fork set equalities, the cover overlap facts pinned (cov(63h) & cov(70g) == 1 raw non-manifest position 00000000020000801202000040000000; cov(70g) & s_1400 == 10; cov(63h) & s_1403 == 2), root disjointness (7 70g roots vs the 705 branch-M roots raw + D4), all 8 published certificates re-asserted against local bytes, dual-direction reverse-order replays, then the merged state asserted equal to the published reconciled head field-by-field and both regenerated CSVs asserted byte-identical",
+ "controls": {
+  "both_branch_heads_reproduced_byte_identical": true,
+  "fork_set_equalities": true,
+  "cover_overlap_cov63h_cov70g": "1 raw non-manifest position (no solved effect)",
+  "root_disjointness_70g_vs_705": true,
+  "certificates_bytes_md5_verified": true,
+  "reverse_order_replay_identical_both_directions": true,
+  "published_head_json_field_by_field_equal": true,
+  "published_head_json_blob_pinned": "b3ad19d7bfd48c771d5a6827707a9f26940dc1bb",
+  "ranking_csv_byte_identical": "26fa720b9935ea3bfa1445409d941a5063c52694 (7535 B)",
+  "top_candidates_csv_byte_identical": "c3433eeecccf0098a04f227af876b37196c7c0a5 (3801 B)",
+  "frontier": "1405/6443/509457/4713/373180",
+  "per_bit_addition_records_equal": true,
+  "parents_equal": true,
+  "totals_equal": true
+ },
+ "result": "VERIFIED: the published reconciliation head 1405/6443/509457/4713/373180 is reproduced byte-identically (both CSVs) and field-by-field (head JSON) by this independent opposite-direction implementation; the published reconciled head remains canonical",
+ "interpretation_guard": "bookkeeping verification over published receipts; no new head is declared here; solved counts measure manifest coverage, not the game-theoretic value of any position; REFUTED-D10 sweeps prove only absence of WIN7-D10; WIN7 certificates prove a win within depth 10 from the individual 7-stone roots only; 11x11 empty board / two-stone root {49,60} / S2 {59,60} / class 1 / class 2 / class 4 remain UNKNOWN"
+}
