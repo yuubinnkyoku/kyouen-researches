@@ -1,0 +1,48 @@
+{
+ "date": "2026-11-16",
+ "engine_basis": [
+  "naive multiset memo",
+  "labeled independent memo",
+  "cap-lemma capped memo"
+ ],
+ "results": {
+  "V0a_naive_vs_labeled": {
+   "checks": 1535,
+   "mismatches": 0
+  },
+  "V0b_capped_vs_naive": {
+   "checks": 1672,
+   "mismatches": 0
+  },
+  "V1_grid_z0_16_y1_26_d0_18": {
+   "checks": 8398,
+   "mismatches": 0,
+   "samples": []
+  },
+  "V2_random_and_boundary": {
+   "checks": 1494,
+   "mismatches": 0,
+   "samples": []
+  },
+  "V3_all_ones_k2_vs_corollaryA": {
+   "checks": 82,
+   "mismatches": 0,
+   "samples": []
+  },
+  "V4a_highz_band_consistency": {
+   "checks": 8400,
+   "mismatches": 0
+  },
+  "V4b_tail_regime_consistency": {
+   "checks": 8610,
+   "mismatches": 0
+  },
+  "V5_parity_consistency": {
+   "checks": 13050,
+   "mismatches": 0
+  }
+ },
+ "subject": "two-token residual 2-position closed form (conjecture)",
+ "total_checks": 43241,
+ "total_mismatches": 0
+}
