@@ -1727,6 +1727,7 @@
 - ← depends_on [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md): upper bounds U_{7,6}=862, U_{7,5}=1142 by curve-packing substitution (w7_upper_bounds.json of seven-row-inband-families-20261114)
 - ← depends_on [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md): q=5 の上界 U_{4,5}=140, U_{5,5}=336（curve-packing 代入上界; curve_packing_fixed_width.py bound() で本レーンで再計算・一致確認済み: w4q5 packing_U=140, w5q5 packing_U=336）
 - ← depends_on [K0843](../items/K0843-eight-row-q11-q12-band-closure.md): upper bounds U_{8,11}=908 and U_{8,12}=883 by curve-packing substitution (w7_upper_bounds.json) - proved; excludes witnesses for all m >= 908 / 883
+- ← depends_on [K0848](../items/K0848-six-row-q8-band-22-59-deficient-nonexistence.md): substitution upper bound U_{6,8} = 371 (via K0806; K0024): witnesses cannot exist for m >= 371, so a witness-free sweep of 19..370 would close M_{6,8} = 19 exactly; this item carries the sweep to m=59
 
 ## [K0319](../items/K0319-misere-direct-sum-normal-grundy-rule.md) swap則が全後続局面で成り立つ部品のmisère直和は通常Grundy値だけで解ける
 
@@ -4957,6 +4958,7 @@
 - ← depends_on [K0845](../items/K0845-five-row-q7-m32-deficient-nonexistence.md): census (circleABC integer triples, line pairs) and the sequential-counter/maximality core are used verbatim (sat.js / sat2.js / sat3.js); the class-split unit clauses and the k/minpos splits are the only additions
 - ← depends_on [K0846](../items/K0846-five-row-q7-m33-deficient-nonexistence.md): census (circleABC integer triples, line pairs) and the sequential-counter/maximality core are used verbatim (sat.js / sat2.js / sat3.js); the class-split unit clauses and the k/minpos splits are the only additions
 - ← depends_on [K0847](../items/K0847-five-row-q7-m34-deficient-nonexistence.md): census (circleABC integer triples, line pairs) and the sequential-counter/maximality core are used verbatim (sat.js / sat2.js / sat3.js); the class-split unit clauses and the k/minpos splits are the only additions
+- ← depends_on [K0848](../items/K0848-six-row-q8-band-22-59-deficient-nonexistence.md): census (circleABC integer triples, line pairs) and the sequential-counter/maximality core used verbatim (sat.js / sat2.js); the rowfixed unit clause is the only addition, exactly as in K0829
 
 ## [K0811](../items/K0811-sa-row-deficient-witnesses.md) SA探索による行欠損極大witness — M_{6,5}≥29・M_{6,6}≥22・M_{5,6}≥19（K0810の下界を更新・第2弾/第3弾で延長）
 
@@ -5002,6 +5004,7 @@
 - ← depends_on [K0818](../items/K0818-six-row-q8-m19-deficient-nonexistence.md): 41-stone deficient-maximal witness at 6x18 (rows 7,6,7,7,7,7) is the lower bound M_{6,8}>=19 and the positive-control board; the 6x19 'unresolved' instance (kissat 255s, 4.52M conflicts single some-deficient clause) is settled by the class split
 - ← depends_on [K0819](../items/K0819-six-row-q8-m20-deficient-nonexistence.md): 41-stone deficient-maximal witness at 6x18 (rows 7,6,7,7,7,7) is the lower bound M_{6,8}>=19 and the positive-control board (rediscovered SAT, conflicts bit-exact with K0818)
 - ← depends_on [K0829](../items/K0829-six-row-q8-m21-deficient-nonexistence.md): 41-stone deficient-maximal witness at 6x18 (rows 7,6,7,7,7,7) is the lower bound M_{6,8}>=19 and the positive-control board (row-mirror rows 7,7,7,7,6,7 rediscovered by the def-OR control here)
+- ← depends_on [K0848](../items/K0848-six-row-q8-band-22-59-deficient-nonexistence.md): 41-stone deficient-maximal witness at 6x18 (rows 7,6,7,7,7,7) is the lower bound M_{6,8} >= 19 and the positive-control board (row-mirror rows 7,7,7,7,6,7 rediscovered bit-exactly by the 6x18 def-OR control of this lane, 492,432 conflicts)
 
 ## [K0816](../items/K0816-five-row-m20-deficient-nonexistence.md) 5x20 q=7 row-deficient maximal nonexistence (all 19 classes) — witness-free widths extend to 20, M_{5,7} ∈ {19,20} or ≥22
 
@@ -5042,6 +5045,7 @@
 - → generalizes [K0816](../items/K0816-five-row-m20-deficient-nonexistence.md): same class-split methodology as the 5x20 q=7 nonexistence, applied at w=6 without the runner system: pure per-class UNSAT sweep with lex cross-checks and small-board ground-truth validation
 - ← generalizes [K0819](../items/K0819-six-row-q8-m20-deficient-nonexistence.md): the m=19 class-split sweep extended to m=20 with the identical machinery; 6x20 was the witness-search frontier opened by K0818
 - ← generalizes [K0822](../items/K0822-row-mirror-canonical-class-count.md): the 35 row-mirror-canonical classes swept at 6x19 equal C(6) = 35 (K0819 at 6x20 and K0821 at 5x21 reuse the same counts)
+- ← depends_on [K0848](../items/K0848-six-row-q8-band-22-59-deficient-nonexistence.md): 6x19 witness-free (35-class complete enumeration); first element of the witness-free set beyond the witness band 9..18
 
 ## [K0819](../items/K0819-six-row-q8-m20-deficient-nonexistence.md) 6x20 q=8 row-deficient maximal nonexistence (all 35 canonical classes UNSAT) — witness-free width set of (6,8) extends to {19,20}, M_{6,8} ∈ {19,20} or >= 22
 
@@ -5050,6 +5054,7 @@
 - → depends_on [K0796](../items/K0796-two-row-m24-stabilization-nine.md): 2x8 q=4 5-stone control (SAT rediscovered); 2x9 q=4 UNSAT control consistent with M_{2,4}=9
 - → generalizes [K0818](../items/K0818-six-row-q8-m19-deficient-nonexistence.md): the m=19 class-split sweep extended to m=20 with the identical machinery; 6x20 was the witness-search frontier opened by K0818
 - ← depends_on [K0829](../items/K0829-six-row-q8-m21-deficient-nonexistence.md): 6x19/6x20 witness-free by the 35-class deficiency split; K0819 opened the 6x21 frontier and stated exactly this extension branch
+- ← depends_on [K0848](../items/K0848-six-row-q8-band-22-59-deficient-nonexistence.md): 6x20 witness-free (same 35-class machinery); the K0819/K0818 items plus K0829 hold widths 19..21, this item extends the free set 22..59 with the cheaper 3-class rowY split
 
 ## [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md) 7xm q=9 / q=10 row-deficient witness bands — (7,9) witness-free band 24..612 fully swept (M_{7,9} = 24 exact), (7,10) witness-free band 19..586 fully swept (M_{7,10} = 19 exact)
 
@@ -5087,6 +5092,7 @@
 - → generalizes [K0816](../items/K0816-five-row-m20-deficient-nonexistence.md): the 19 row-mirror-canonical classes swept at 5x20 equal C(5) = 19 (the first recorded use of the w=5 count)
 - → generalizes [K0818](../items/K0818-six-row-q8-m19-deficient-nonexistence.md): the 35 row-mirror-canonical classes swept at 6x19 equal C(6) = 35 (K0819 at 6x20 and K0821 at 5x21 reuse the same counts)
 - ← depends_on [K0829](../items/K0829-six-row-q8-m21-deficient-nonexistence.md): row-mirror canonical class logic (y -> 5-y pairs the 6 rows into 3 mirror classes), brute-force-validated in K0818
+- ← depends_on [K0848](../items/K0848-six-row-q8-band-22-59-deficient-nonexistence.md): row-mirror canonical class logic (y -> 5-y pairs the 6 rows into 3 mirror classes), brute-force-validated there
 
 ## [K0823](../items/K0823-sigma-side-window-p-inverse.md) 円格子点の最小行窓幅 σ(n)=min{w:P(w)≥n} — n≤34の全称決定（σ₁₃=43・σ₁₇=83）・中心窓版n=26..34の同値・K0791レジューム2と旧側窓σ₁₃注記の解消
 
@@ -5111,6 +5117,7 @@
 - → depends_on [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md): genfast.js (memory-bounded CNF generator) reused; instance-identity calibration (7,10) m=46 def+lex regenerated, kissat 861 conflicts bit-exact with the q10-band record; genfast byte-identity to sat2.js re-validated for q=8 on 4 samples
 - ← depends_on [K0826](../items/K0826-seven-row-q7-deficient-witness-lower-bound.md): same machinery and runner as the (7,8) search; rowY fixed-row split re-validated at q=7 (cracked the m=25 OR-instance wall); sat2.js is the only generator here since genfast.js requires q >= w+1
 - ← depends_on [K0829](../items/K0829-six-row-q8-m21-deficient-nonexistence.md): rowY fixed-row split technique (used there on the SAT side for seven-row witnesses), applied here on the UNSAT side with all mirror classes swept
+- ← depends_on [K0848](../items/K0848-six-row-q8-band-22-59-deficient-nonexistence.md): rowY fixed-row split technique, applied on the UNSAT side with all mirror classes swept per width
 
 ## [K0826](../items/K0826-seven-row-q7-deficient-witness-lower-bound.md) 7xm q=7 row-deficient witness band — witnesses 7x7..7x26 (M_{7,7} >= 27, upper 708 by K0318 substitution); first (7,7) family results (q=w diagonal)
 
@@ -5134,6 +5141,8 @@
 - → depends_on [K0819](../items/K0819-six-row-q8-m20-deficient-nonexistence.md): 6x19/6x20 witness-free by the 35-class deficiency split; K0819 opened the 6x21 frontier and stated exactly this extension branch
 - → depends_on [K0822](../items/K0822-row-mirror-canonical-class-count.md): row-mirror canonical class logic (y -> 5-y pairs the 6 rows into 3 mirror classes), brute-force-validated in K0818
 - → depends_on [K0825](../items/K0825-seven-row-q8-deficient-witness-lower-bound.md): rowY fixed-row split technique (used there on the SAT side for seven-row witnesses), applied here on the UNSAT side with all mirror classes swept
+- ← depends_on [K0848](../items/K0848-six-row-q8-band-22-59-deficient-nonexistence.md): 6x21 witness-free by the same rowfixed rowY split (3 mirror classes); this lane reproduces both its calibrations bit-exactly (6x21 rowY=1 UNSAT 2,862,649; 6x18 def-OR SAT 492,432) and generalizes the split across the band m=22..59
+- ← generalizes [K0848](../items/K0848-six-row-q8-band-22-59-deficient-nonexistence.md): the same row-split proposition extended from the single width 6x21 to the band 6x22..6x59; witness-free width set {19,20,21} -> {19,...,59}
 
 ## [K0830](../items/K0830-seven-row-ten-point-circle-classification.md) 7行窓の≥10点円の完全分類（m ≤ 15001）: 50族 2m−14 本＋例外 R=4ρ²=2353705250・全て行 0,3,6 通過
 
@@ -5451,3 +5460,15 @@
 - → depends_on [K0846](../items/K0846-five-row-q7-m33-deficient-nonexistence.md): the m=33 nonexistence item; this lane copies its scripts (restored from main with git blob shas verified) and ports mkcnf.sh/qrun.sh/mkrecords5733->5734 m=33 -> m=34, extends the witness-free width set {19,...,33} -> {19,...,34} and moves the frontier to 5x35
 - → depends_on [K0738](../items/K0738-five-row-m19-class1-nonexistence.md): 5x19 witness-free by the occupancy complete enumeration (via the K0759 machine) — the first element of the witness-free width set
 - → generalizes [K0846](../items/K0846-five-row-q7-m33-deficient-nonexistence.md): the same class-split proposition one width further: 5x33 (K0846) -> 5x34; witness-free width set {19,...,33} -> {19,...,34}
+
+## [K0848](../items/K0848-six-row-q8-band-22-59-deficient-nonexistence.md) 6x22..6x59 q=8 row-deficient maximal nonexistence band (all 3 row-mirror rowY classes UNSAT per width) — witness-free width set of (6,8) extends to {19,...,59}, M_{6,8} = 19 or >= 61
+
+- → depends_on [K0810](../items/K0810-sat-row-deficient-witnesses.md): census (circleABC integer triples, line pairs) and the sequential-counter/maximality core used verbatim (sat.js / sat2.js); the rowfixed unit clause is the only addition, exactly as in K0829
+- → depends_on [K0815](../items/K0815-witness-column-extension-kissat-bounds.md): 41-stone deficient-maximal witness at 6x18 (rows 7,6,7,7,7,7) is the lower bound M_{6,8} >= 19 and the positive-control board (row-mirror rows 7,7,7,7,6,7 rediscovered bit-exactly by the 6x18 def-OR control of this lane, 492,432 conflicts)
+- → depends_on [K0818](../items/K0818-six-row-q8-m19-deficient-nonexistence.md): 6x19 witness-free (35-class complete enumeration); first element of the witness-free set beyond the witness band 9..18
+- → depends_on [K0819](../items/K0819-six-row-q8-m20-deficient-nonexistence.md): 6x20 witness-free (same 35-class machinery); the K0819/K0818 items plus K0829 hold widths 19..21, this item extends the free set 22..59 with the cheaper 3-class rowY split
+- → depends_on [K0829](../items/K0829-six-row-q8-m21-deficient-nonexistence.md): 6x21 witness-free by the same rowfixed rowY split (3 mirror classes); this lane reproduces both its calibrations bit-exactly (6x21 rowY=1 UNSAT 2,862,649; 6x18 def-OR SAT 492,432) and generalizes the split across the band m=22..59
+- → depends_on [K0822](../items/K0822-row-mirror-canonical-class-count.md): row-mirror canonical class logic (y -> 5-y pairs the 6 rows into 3 mirror classes), brute-force-validated there
+- → depends_on [K0825](../items/K0825-seven-row-q8-deficient-witness-lower-bound.md): rowY fixed-row split technique, applied on the UNSAT side with all mirror classes swept per width
+- → depends_on [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md): substitution upper bound U_{6,8} = 371 (via K0806; K0024): witnesses cannot exist for m >= 371, so a witness-free sweep of 19..370 would close M_{6,8} = 19 exactly; this item carries the sweep to m=59
+- → generalizes [K0829](../items/K0829-six-row-q8-m21-deficient-nonexistence.md): the same row-split proposition extended from the single width 6x21 to the band 6x22..6x59; witness-free width set {19,20,21} -> {19,...,59}

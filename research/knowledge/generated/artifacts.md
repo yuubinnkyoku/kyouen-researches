@@ -9569,6 +9569,9 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/cost69f-second-independent-verification-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/cost69f-second-independent-verification-20261115.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): bits2/94/109/119の第二独立検査結果と保存hashを記録
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/cost70f-70g-71c-cross-lane-d4-overlap-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/cost70f-70g-71c-cross-lane-d4-overlap-20261115.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): cost70f bit84とcost70g bit29のD4同値、親lift交差8軌道、cost71cとの交差0を記録
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/cost74d-win-loss-conflict-audit-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/cost74d-win-loss-conflict-audit-20261115.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 公開済み範囲のD4衝突監査。既存LOSS7との交差0、cost72b bit85との意図した再利用1件
@@ -9689,6 +9692,9 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost70e_certificates_third_independent_20261115.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost70e_certificates_third_independent_20261115.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): cost70e証明書5件の第三独立監査。part連結・LF正規化・BigInt+Number Bareiss再実行・D4親orbit再導出
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost70f_70g_71c_cross_lane_d4_overlap_20261115.mjs](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost70f_70g_71c_cross_lane_d4_overlap_20261115.mjs)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): cost70f/70g/71cのWIN7 rootと六石parent liftをBigInt D4正準化で横断照合。raw hexでは見えない重複root・親軌道を検出
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost70f_raw_sweep_20261115.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost70f_raw_sweep_20261115.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): cost70f raw sweepの独立監査（stdlib Bareiss・候補70再列挙・9 batch再導出・D4重複0・一石削除6件・head-1233 CSV照合）
@@ -14187,6 +14193,18 @@
 ## [research/experiments/six-row-q8-m21-row-split-20261114/report.md](../../../research/experiments/six-row-q8-m21-row-split-20261114/report.md)
 
 - [K0829](../items/K0829-six-row-q8-m21-deficient-nonexistence.md) (proof): claim, coverage argument (deficient config has a deficient row y in a rowfixed(y) instance; row-mirror soundness y<->5-y reduces 6 rows to 3 classes), verification protocol, honest negatives, scope and limits
+## [research/experiments/six-row-q8-m22-row-split-20261115/README.md](../../../research/experiments/six-row-q8-m22-row-split-20261115/README.md)
+
+- [K0848](../items/K0848-six-row-q8-band-22-59-deficient-nonexistence.md) (proof): claim, per-width coverage argument (deficient config has a deficient row y captured by rowfixed(y); row-mirror soundness y<->5-y reduces 6 rows to 3 classes), full band results table m=22..59 (conflicts/process-time per instance, lex=H cross-checks, deciding totals), calibrations (K0829 bit-exact m=21 rowY=1 and 6x18 def-OR control, m=26 CNF regeneration byte-identical, cross-environment-reset re-runs of m=45..47 bit-exact), honest negatives, the m=53 V8-heap and m=60 RAM generation walls, scope and limits
+## [research/experiments/six-row-q8-m22-row-split-20261115/output/r6x22q8_rowY1.txt](../../../research/experiments/six-row-q8-m22-row-split-20261115/output/r6x22q8_rowY1.txt)
+
+- [K0848](../items/K0848-six-row-q8-band-22-59-deficient-nonexistence.md) (data): band-hardest raw kissat log (m=22 rowY=1: 2,162,296 conflicts UNSAT / 127.19 s); all 152 band raw logs r6x{22..59}q8_rowY{0,1,2}+rowY1_lexH.txt and the calibration/control logs are siblings in the same directory, all pushed with remote git blob shas verified against local sha1
+## [research/experiments/six-row-q8-m22-row-split-20261115/output/records.jsonl](../../../research/experiments/six-row-q8-m22-row-split-20261115/output/records.jsonl)
+
+- [K0848](../items/K0848-six-row-q8-band-22-59-deficient-nonexistence.md) (data): 155 records: per width m=22..59, the 3 rowY class UNSAT records (conflicts, wallMs, sat2.js encoding meta) + 1 lex=H cross-encoding UNSAT record each; plus the m=21 calibration, m=18 positive control, m=24 def-OR honest-negative INDET record; deciding totals noted per width in the lex=H record note
+## [research/experiments/six-row-q8-m22-row-split-20261115/scripts/decode_verify.js](../../../research/experiments/six-row-q8-m22-row-split-20261115/scripts/decode_verify.js)
+
+- [K0848](../items/K0848-six-row-q8-band-22-59-deficient-nonexistence.md) (solver): kissat model decoder + census-free js verifyConfig runner used for the 6x18 positive-control witness dual verification (with verify_witness.py, Python Fraction)
 ## [research/experiments/solver-benchmarks/output/8x8-o-primary-summary.json](../../../research/experiments/solver-benchmarks/output/8x8-o-primary-summary.json)
 
 - [K0089](../items/K0089-n8-replication-of-n9-o-strata.md) (data): 凍結primary endpoint
@@ -14605,6 +14623,15 @@
 ## [research/experiments/vertical-fiber-interpolation-exact-20261115/verify_interpolation.py](../../../research/experiments/vertical-fiber-interpolation-exact-20261115/verify_interpolation.py)
 
 - [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (verifier): Fractionによる全4096配置×t=1,2,3の補間達成監査と退化ファイバー障害の確認
+## [research/experiments/vertical-fiber-t1-fixed-length-grundy-20261115/output/audit.json](../../../research/experiments/vertical-fiber-t1-fixed-length-grundy-20261115/output/audit.json)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (data): t=1全局面Grundy監査の集計結果
+## [research/experiments/vertical-fiber-t1-fixed-length-grundy-20261115/report.md](../../../research/experiments/vertical-fiber-t1-fixed-length-grundy-20261115/report.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (proof): t=1純ファイバーゲームで全終局石数がrmに固定されることから導く全局面Grundy公式
+## [research/experiments/vertical-fiber-t1-fixed-length-grundy-20261115/scripts/verify_t1.py](../../../research/experiments/vertical-fiber-t1-fixed-length-grundy-20261115/scripts/verify_t1.py)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (verifier): 小パラメータ100組・17,368安全状態の再帰mexと固定終局長公式の有限完全照合
 ## [research/experiments/width17-20-circle-point-bound-20261112/output/width17_20_circle_bound.json](../../../research/experiments/width17-20-circle-point-bound-20261112/output/width17_20_circle_bound.json)
 
 - [K0778](../items/K0778-width17-20-circle-point-bounds.md) (data): 全数値の機械出力
@@ -15352,6 +15379,9 @@
 ## [research/log/2026-11-15-n11-class2-cost76a-third-independent-certificate-audit.md](../../../research/log/2026-11-15-n11-class2-cost76a-third-independent-certificate-audit.md)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): 共線判定の初期不一致と修正、6証明書の再生、3つのS5行への部分被覆を記録
+## [research/log/2026-11-15-n11-class2-cross-lane-d4-receipt-overlap.md](../../../research/log/2026-11-15-n11-class2-cross-lane-d4-receipt-overlap.md)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (source): cross-lane重複の分解とfold順への含意。frontier foldではない境界を明記
 ## [research/log/2026-11-15-n11-class2-lane-cost69f-python-independent-audit-and-69g-demand-reconciliation.md](../../../research/log/2026-11-15-n11-class2-lane-cost69f-python-independent-audit-and-69g-demand-reconciliation.md)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): Python第三監査と69g需要和解の実行記録
@@ -15394,6 +15424,9 @@
 ## [research/log/2026-11-15-vertical-fiber-interpolation-exact.md](../../../research/log/2026-11-15-vertical-fiber-interpolation-exact.md)
 
 - [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (log): K0832の一様閾値を局面ごとの厳密占有条件へ強化した判断・証明・限界
+## [research/log/2026-11-15-vertical-fiber-t1-fixed-length-grundy.md](../../../research/log/2026-11-15-vertical-fiber-t1-fixed-length-grundy.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (log): 境界層からt=1全局面へGrundy公式を拡張した判断・証明・限界
 ## [research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md](../../../research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md)
 
 - [K0092](../items/K0092-n11-dfpn-search-status.md) (source): 命題・対象範囲・根拠を記した出典
