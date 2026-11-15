@@ -96,3 +96,20 @@ INDET/OOM であり不在主張ではない。生記録は
 - `sweep35.sh` — resumable driver (root に置いて実行)
 - `output/records.jsonl` — 1インスタンス1行の進行記録 (増分 push)
 - `output/r_ctrl_4x34_c1k2p7.txt` — 事前 probe 240s の対照生ログ
+
+
+## 追記 (2026-11-15 bugfix)
+
+- `sweep35.sh` に2つの欠陥を修正した (commit 同日):
+  (1) 陽性対照が SAT だと SATFOUND=1 のまま後続ループに入り、
+  掃引全体が誤終了する bug — 対照直後に `SATFOUND=0` をリセット。
+  今回は対照が cap 700s INDET (rc=124) だったため顕在化しなかった。
+  (2) conflicts 抽出の `grep -E "^c conflicts"` が kissat ログの CR を
+  含む行で binary 判定になり、対照 record の conflicts が null に化けていた —
+  `grep -a -E` に修正。対照の真値はログから復元可能
+  (output/ctrl_4x34_c1k2p7.txt の最終 "c conflicts" 行)。
+- 2026-11-15T08:49Z に lane の一時停止で c1k2p0 を 161.3s で打ち切った
+  (rc=143・conflicts 367,338)。この truncation record は records.jsonl から
+  除去済みで、resume 時に cap 700s で再実行される。
+- 同レーンの (4,21,5) 姉妹掃引 (four-row-q5-m21-class-split-20261115) は
+  この修正版 driver 構造で運用中。
