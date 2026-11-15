@@ -76,6 +76,10 @@ INDET は honest negative として記録し不在主張とはしない。
   上限の回避）。cap 到達時の conflicts は実行速度依存で変動しうる（bit-exact
   主張は cap 内完了インスタンスのみ）。生 kissat ログ（両インスタンス）は
   環境復旧後の後続バッチで追記する（records.jsonl の cnf_md5・conflicts が正本）。
+- **第3系統検証 (tsVerify)**: `output/ts-verify-batch2-crosscheck.json` — 純TS完全整数演算・
+  repo コード不使用・census不使用で (7,5) m=32/33・(7,6) m=27/28/29 の全5 witness が
+  safe+maximal+行欠損 PASS（**triple-verified**）。空列延伸の負記録（m=34 cell (33,0)・
+  m=30 cell (29,3)）も同一セルで再現・制御5件 PASS。
 
 ## スコープ
 
