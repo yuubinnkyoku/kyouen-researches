@@ -1,8 +1,8 @@
 {
-  "schema": "n11-class2-lane-cost67c-inflight-20261115-v1",
+  "schema": "n11-class2-lane-cost67c-inflight-20261115-v2",
   "title": "n11 class2-lane cost-67c sweep in flight: cheapest remaining unswept child of the second coverable class-2 target S5 (mixed class-2/class-4 demand)",
   "date": "2026-11-15",
-  "status": "sweep_in_flight",
+  "status": "sweep_and_certificates_complete_fold_pending",
   "claimed_by": "long-term class2 lane (the cost-63g fold execution)",
   "s5": "00000000000000801202000000200000",
   "s6_child": "00000000000000801202000000202000",
@@ -210,5 +210,46 @@
   },
   "verdict_semantics": "loss=true => WIN7-within-depth-10 candidate (certificate rebuild target); loss=false && !capped => REFUTED-D10, no first-player win within depth 10 (NOT a LOSS proof); capped => proves nothing either way",
   "unknown_note": "The standard 11x11 empty board, both two-stone roots {49,60}/{59,60}, S2 {59,60}, class 2 and class 4 all remain UNKNOWN.",
-  "next_action": "Run the 9 batches with the repo-verbatim v16 runner, publish raw batches + sweep audit + determinism rerun + v15 crosscheck anchors, extract certificates for any WIN7 bits, and fold the receipts rebase-checked on the canonical head current at fold time (assert it byte-identically first)."
+  "next_action": "Create recompute_frontier_cost67c_receipts_20261115.py using the cost-63g fold script as template (same runpy chain), assert the latest canonical chain head byte-identically, fold the 2 published WIN7 receipts (bit order 64, 96) with per-receipt marginal re-derived from the growing union, publish the new head JSON + ranking CSV + top-candidates CSV, then retire this claim (status completed with fold record and blob shas).",
+  "sweep_results": {
+    "completed": "2026-11-15 (same session as the claim; 9/9 batches run, pilot 3402 PASS 9/9)",
+    "candidates": 67,
+    "win7_d10_bits": [
+      64,
+      96
+    ],
+    "win7_d10_roots": {
+      "64": "00000000000000811202000000202000",
+      "96": "00000001000000801202000000202000"
+    },
+    "refuted_d10": 65,
+    "capped": 0,
+    "total_nodes": 41942979,
+    "win_nodes_sum": 2368197,
+    "win_nodes_per_bit": {
+      "64": 1393667,
+      "96": 974530
+    },
+    "terminal_stone_range_all": [
+      13,
+      17
+    ],
+    "sweep_audit": "class2-lane-cost67c-sweep-audit-20261115.json",
+    "raw_batches": "class2-lane-cost67c-raw-batch1..9-20261115.jsonl (9 files, pilot control line in each)",
+    "determinism_rerun": "class2-lane-cost67c-v16-determinism-rerun-20261115.json (batch5 re-run 8/8 node-exact)",
+    "v15_crosscheck": "class2-lane-cost67c-v15-crosscheck-20261115.json (WIN bits 64/96 loss=true node-recorded: bit64 5068403 nodes, bit96 2436013 nodes, pilots 5949 x5; refuted anchors bits 1/32/116 loss=false; raw verdict agreement)"
+  },
+  "win7_certificates": {
+    "published": 2,
+    "manifest": "class2-lane-cost67c-win7-certificates-20261115.json",
+    "total_rows": 70480,
+    "extraction_nodes": 11554974,
+    "verification": "BigInt strategy-tree verifier 2/2 PASS (subroots 53/53 each, union conflicts 0/0) and second independent check (perm-det4 Bareiss exact determinants, loser mobility 53 = sub_roots_total, child contained in d4 parent orbits) 2/2 PASS",
+    "storage": "each whole certificate exceeds the 1 MB single-file push threshold; published as 4 split part files (2 per bit), remote git blob shas verified byte-exact, part joins md5-identical to the local whole files"
+  },
+  "rebase_target": {
+    "instruction": "at fold time, fetch the latest main and assert the current canonical chain head byte-identically before folding; as of this update no fold newer than the cost-63g head has landed",
+    "head_at_this_update": "1216/6631/523382/4901/387105 (class-frontier-cost63g-receipts-recompute-20261115.json)",
+    "note": "a parallel cost-65l receipt fold may land first; in that case rebase the cost-67c fold on the newer head, never fold on a stale head"
+  }
 }
