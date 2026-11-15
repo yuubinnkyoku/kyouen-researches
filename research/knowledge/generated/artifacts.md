@@ -9474,6 +9474,9 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/candidate-completeness-audit.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/candidate-completeness-audit.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 全15072件と公開表に欠ける6309件の集計
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost62a-receipts-recompute-20261116.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost62a-receipts-recompute-20261116.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): fold後head 1326/6522/515251/4792/378974と第二候補S5 34行/2368
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost69e-recompute-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost69e-recompute-20261115.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 6証明書反映後frontier 1,019/6,828/538,143と別個のreceipt-unclosable S5を記録
@@ -9980,6 +9983,9 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/ms5_s7_reuse_analysis.ts](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/ms5_s7_reuse_analysis.ts)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (source): コメントのみで実行本体は未公開。再導出・再分類の再現器としては使用できない
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost62a_receipts_20261116.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost62a_receipts_20261116.py)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (source): cost62a 6 receipt fold。head 1318のbyte再現・sweep/証明書bytes検証・第二候補S5 34行へのfold
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost69e_20261115.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost69e_20261115.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (source): S5親keyを文字列で一貫して扱うよう修正。receipt-unclosable S5とbest coverable S5を分離
@@ -14277,9 +14283,21 @@
 ## [research/experiments/seven-row-q7-m27-surgery-20261115/README.md](../../../research/experiments/seven-row-q7-m27-surgery-20261115/README.md)
 
 - [K0826](../items/K0826-seven-row-q7-deficient-witness-lower-bound.md) (proof): 7x27 frontier surgery complete case-split from the 7x26 rowY3 seed: one-stone-short census (unique uncovered cell (26,3), sole 5-stone T-curve = line y=3, no 4-stone T-curves), blocking lemma (A meets {T} union lineEmpty), exact-iff prefilters (single-addition okZ gate, shared eff>=5 pair gate, eff5+1/eff4+2 coverage), canonical counts for all enumerated sub-spaces incl. the complete (2,3) case split (r3_on blocking analysis), 559/559 targeted controls, open sub-spaces listed, and the discovery that the first ad-hoc (1,3)/(3,3) runs had a dead-gate effOf defect (verdict superseded by the verified consolidated machine)
+## [research/experiments/seven-row-q7-m27-surgery-20261115/output/m33_Cctl.json](../../../research/experiments/seven-row-q7-m27-surgery-20261115/output/m33_Cctl.json)
+
+- [K0826](../items/K0826-seven-row-q7-deficient-witness-lower-bound.md) (data): second independent implementation (fresh curve enumeration, census-free) of the C0/C1 wholesale rejections: agree 8,436/8,436 and 2,980/2,980, killerConfirmed 8,436 and 2,980, U-set samples 6+7 OK; companion outputs m33_facts/m33_L3/m33_L3ctl/m33_G_r3x3/m33_G_r3x2/m33_G_r3x1/m33_C.json in the same directory (L3 wholesale 360/360; G 28,668,927 pairs 0 witnesses; C0/C1 all-R rejections)
+## [research/experiments/seven-row-q7-m27-surgery-20261115/output/m33_L1f2.json](../../../research/experiments/seven-row-q7-m27-surgery-20261115/output/m33_L1f2.json)
+
+- [K0826](../items/K0826-seven-row-q7-deficient-witness-lower-bound.md) (data): L1f2 (r3_on=0, a_on=1) complete slice: 7,140 R x 173,250 A/R = 1,237,005,000 pairs, 0 witnesses (coverage 59,257,657 + safety 1,177,747,343; CTL cov 12/12 saf 10/10); with L2f1 the whole (3,3) case split is complete-negative (1,357,912,227 checked pairs in total, plus C0/C1 wholesale R rejections)
+## [research/experiments/seven-row-q7-m27-surgery-20261115/output/m33_L2f1.json](../../../research/experiments/seven-row-q7-m27-surgery-20261115/output/m33_L2f1.json)
+
+- [K0826](../items/K0826-seven-row-q7-deficient-witness-lower-bound.md) (data): L2f1 (r3_on=1, a_on=2) complete slice: 3,150 R x 29,106 A/R = 91,683,900 pairs, 0 witnesses (coverage 2,298,256 + safety 89,385,644; CTL cov 12/12 saf 10/10)
 ## [research/experiments/seven-row-q7-m27-surgery-20261115/output/surgery_results.json](../../../research/experiments/seven-row-q7-m27-surgery-20261115/output/surgery_results.json)
 
 - [K0826](../items/K0826-seven-row-q7-deficient-witness-lower-bound.md) (data): verified consolidated machine outputs: twoEdit singles 18,942 (13,725 okZ + 5,217 coverage) + pairs 99,326 (15,654 shared + 83,672 coverage) -> 0; (1,3) line-addition 149,940 (90,540 safety-gate + 59,400 coverage, gate 60/60 direct-brute UNSAFE confirm) + T-addition 10,660 -> 0; line-triple (3,3) 554,400 total (550,320 okZ-gated) -> 4,080 valid (1,430 shared + 2,650 coverage) -> 0; coverage targeted agreement 150/150 + 80/80 + 80/80 + 100/100; (2,3) complete: 10,660 R -> 0 witnesses (370 r3>=2 blocking-lemma rejects, 3,150 r3=1 forced-line-pair coverage wholesale, 115 wholesale + 4,320 HardU-intersection R rejects + 14,948 z-okZ + 55,638 per-z coverage-intersection rejects, 0 pairs through coverage; targeted cov 36/36 + zok 30/30 + line 23/23; machine script scripts/m27_surgery_two_add_three_remove.ts)
+## [research/experiments/seven-row-q7-m27-surgery-20261115/scripts/m33_machine.ts](../../../research/experiments/seven-row-q7-m27-surgery-20261115/scripts/m33_machine.ts)
+
+- [K0826](../items/K0826-seven-row-q7-deficient-witness-lower-bound.md) (verifier): (3,3) general-space complete case-split machine (modes facts/L3/L3ctl/G/C/Cctl/L2f1/L1f2, chunkable R-ranges, CTL sampling built in, L1f2 enumeration generator-based after the array version was OOM-killed mid-run with bit-exact chunk-0:30 agreement); two CTL-helper index-space defects (S2of cells[E[a]] and safeA cov6[E[a]]) found by CTL disagreement sampling + triage dumps and fixed before the canonical run recorded here
 ## [research/experiments/seven-row-q7-witness-search-20261114/output/def-search/records.jsonl](../../../research/experiments/seven-row-q7-witness-search-20261114/output/def-search/records.jsonl)
 
 - [K0826](../items/K0826-seven-row-q7-deficient-witness-lower-bound.md) (data): 19 records: SAT m=7..25 witnesses dual-verified (m=7..14 deep deficiency 30..41 stones, m=15..24 single-deficiency 41 stones) + m=25 OR-instance INDET (2,478,476 conflicts at 240s cap — honest negative)
@@ -14968,6 +14986,15 @@
 ## [research/experiments/vertical-fiber-degree-reduction-20261115/verify_boundary.py](../../../research/experiments/vertical-fiber-degree-reduction-20261115/verify_boundary.py)
 
 - [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (verifier): r=1..8・t=1..8の整数単体境界例64件と、次数1..3の既約整数例を検査
+## [research/experiments/vertical-fiber-general-t-grundy-bound-20261116/output/audit.json](../../../research/experiments/vertical-fiber-general-t-grundy-bound-20261116/output/audit.json)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (data): t=1..5,w=1..4,m=1..7,q=1..tw+2の1,330組・306,979ラベル状態・36,844正準状態の有限監査
+## [research/experiments/vertical-fiber-general-t-grundy-bound-20261116/report.md](../../../research/experiments/vertical-fiber-general-t-grundy-bound-20261116/report.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (proof): 任意次数上限t・任意禁止点数qの純ファイバーゲームで、mとtの偶奇に応じたGrundy一様上界を飽和鎖分離と残余mexで証明
+## [research/experiments/vertical-fiber-general-t-grundy-bound-20261116/verify_general_bound.py](../../../research/experiments/vertical-fiber-general-t-grundy-bound-20261116/verify_general_bound.py)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (verifier): ラベル付き占有ベクトルと正準占有多重集合を独立生成する再帰mex監査器
 ## [research/experiments/vertical-fiber-interpolation-exact-20261115/output/audit.json](../../../research/experiments/vertical-fiber-interpolation-exact-20261115/output/audit.json)
 
 - [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (data): 12,288配置・768占有ベクトル出現の有限監査結果
@@ -15910,9 +15937,15 @@
 ## [research/log/2026-11-15-vertical-fiber-t3-q4-q6-grundy.md](../../../research/log/2026-11-15-vertical-fiber-t3-q4-q6-grundy.md)
 
 - [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (log): t=3・q=4..6分類の選定・証明・監査・限界と次の課題
+## [research/log/2026-11-16-n11-class2-lane-cost62a-sweep-certificates-and-fold.md](../../../research/log/2026-11-16-n11-class2-lane-cost62a-sweep-certificates-and-fold.md)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): cost62aのsweep・6証明書抽出・二独立検証・第二候補S5 39→34行foldと第二target S5のdepth-10 receipt限界
 ## [research/log/2026-11-16-n11-class2-lane-cost84a-sweep-certificates-and-fold.md](../../../research/log/2026-11-16-n11-class2-lane-cost84a-sweep-certificates-and-fold.md)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): cost84aのsweep・4証明書抽出・二独立検証・第二target 4→3行fold
+## [research/log/2026-11-16-vertical-fiber-general-t-grundy-bound.md](../../../research/log/2026-11-16-vertical-fiber-general-t-grundy-bound.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (log): K0832既存のt=2任意q・t=3,q=7結果を一般tへ統一した選定・証明・監査・未解決点
 ## [research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md](../../../research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md)
 
 - [K0092](../items/K0092-n11-dfpn-search-status.md) (source): 命題・対象範囲・根拠を記した出典
