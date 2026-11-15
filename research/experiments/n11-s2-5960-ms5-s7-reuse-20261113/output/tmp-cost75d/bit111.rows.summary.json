@@ -1,0 +1,651 @@
+{
+ "child": "00000000000040801202000000200000",
+ "bit": 111,
+ "note": "merged from 3 chunk summaries; nodes = per-move df-pn extraction node counts (per-move subtrees re-explored independently, shared rows deduplicated on write), rowsWritten = rows written during extraction per chunk, final_rows_unique = unique sorted rows in bit111.rows (= consumed.txt lines = cert rows)",
+ "nMoves": 61,
+ "moves": [
+  0,
+  2,
+  3,
+  4,
+  6,
+  7,
+  8,
+  9,
+  10,
+  13,
+  14,
+  15,
+  17,
+  22,
+  24,
+  25,
+  26,
+  28,
+  29,
+  30,
+  32,
+  33,
+  35,
+  39,
+  40,
+  42,
+  43,
+  44,
+  50,
+  52,
+  55,
+  56,
+  58,
+  64,
+  65,
+  66,
+  67,
+  72,
+  73,
+  74,
+  76,
+  79,
+  84,
+  86,
+  87,
+  88,
+  90,
+  92,
+  94,
+  95,
+  97,
+  99,
+  100,
+  102,
+  103,
+  105,
+  106,
+  108,
+  113,
+  114,
+  118
+ ],
+ "perMove": {
+  "0": {
+   "ok": true,
+   "nodes": 211802,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "2": {
+   "ok": true,
+   "nodes": 19974,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "3": {
+   "ok": true,
+   "nodes": 569994,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "4": {
+   "ok": true,
+   "nodes": 92085,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "6": {
+   "ok": true,
+   "nodes": 73290,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "7": {
+   "ok": true,
+   "nodes": 151458,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "8": {
+   "ok": true,
+   "nodes": 55344,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "9": {
+   "ok": true,
+   "nodes": 11259,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "10": {
+   "ok": true,
+   "nodes": 130153,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "13": {
+   "ok": true,
+   "nodes": 437760,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "14": {
+   "ok": true,
+   "nodes": 263842,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "15": {
+   "ok": true,
+   "nodes": 9235,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "17": {
+   "ok": true,
+   "nodes": 207061,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "22": {
+   "ok": true,
+   "nodes": 140910,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "24": {
+   "ok": true,
+   "nodes": 194835,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "25": {
+   "ok": true,
+   "nodes": 457354,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "26": {
+   "ok": true,
+   "nodes": 85583,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "28": {
+   "ok": true,
+   "nodes": 203781,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "29": {
+   "ok": true,
+   "nodes": 43272,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "30": {
+   "ok": true,
+   "nodes": 497712,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "32": {
+   "ok": true,
+   "nodes": 708092,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "33": {
+   "ok": true,
+   "nodes": 216826,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "35": {
+   "ok": true,
+   "nodes": 243664,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "39": {
+   "ok": true,
+   "nodes": 463275,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "40": {
+   "ok": true,
+   "nodes": 262819,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "42": {
+   "ok": true,
+   "nodes": 135394,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "43": {
+   "ok": true,
+   "nodes": 131274,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "44": {
+   "ok": true,
+   "nodes": 93176,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "50": {
+   "ok": true,
+   "nodes": 137498,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "52": {
+   "ok": true,
+   "nodes": 292353,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "55": {
+   "ok": true,
+   "nodes": 350646,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "56": {
+   "ok": true,
+   "nodes": 743925,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "58": {
+   "ok": true,
+   "nodes": 40177,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "64": {
+   "ok": true,
+   "nodes": 30368,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "65": {
+   "ok": true,
+   "nodes": 60050,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "66": {
+   "ok": true,
+   "nodes": 18176,
+   "capped": false,
+   "terminalRange": [
+    13,
+    15
+   ]
+  },
+  "67": {
+   "ok": true,
+   "nodes": 1000061,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "72": {
+   "ok": true,
+   "nodes": 59413,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "73": {
+   "ok": true,
+   "nodes": 649601,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "74": {
+   "ok": true,
+   "nodes": 194754,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "76": {
+   "ok": true,
+   "nodes": 64632,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "79": {
+   "ok": true,
+   "nodes": 23515,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "84": {
+   "ok": true,
+   "nodes": 17609,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "86": {
+   "ok": true,
+   "nodes": 29317,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "87": {
+   "ok": true,
+   "nodes": 31757,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "88": {
+   "ok": true,
+   "nodes": 482560,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "90": {
+   "ok": true,
+   "nodes": 35112,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "92": {
+   "ok": true,
+   "nodes": 24294,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "94": {
+   "ok": true,
+   "nodes": 114184,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "95": {
+   "ok": true,
+   "nodes": 582199,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "97": {
+   "ok": true,
+   "nodes": 14128,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "99": {
+   "ok": true,
+   "nodes": 109037,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "100": {
+   "ok": true,
+   "nodes": 79247,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "102": {
+   "ok": true,
+   "nodes": 28653,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "103": {
+   "ok": true,
+   "nodes": 501962,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "105": {
+   "ok": true,
+   "nodes": 79842,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "106": {
+   "ok": true,
+   "nodes": 1492024,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "108": {
+   "ok": true,
+   "nodes": 812205,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "113": {
+   "ok": true,
+   "nodes": 914930,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "114": {
+   "ok": true,
+   "nodes": 140603,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  },
+  "118": {
+   "ok": true,
+   "nodes": 879109,
+   "capped": false,
+   "terminalRange": [
+    13,
+    17
+   ]
+  }
+ },
+ "extraction_nodes_total": 16145165,
+ "chunk_rows_written_total": 95975,
+ "final_rows_unique": 81199,
+ "fbt_drops": 0,
+ "ms_extraction_total": 29759,
+ "mergedFromChunks": [
+  {
+   "chunk": 1,
+   "nMoves": 20,
+   "nodes": 3856704,
+   "rowsWritten": 31384,
+   "fbt_drops": 0,
+   "ms": 7526
+  },
+  {
+   "chunk": 2,
+   "nMoves": 20,
+   "nodes": 5831542,
+   "rowsWritten": 33422,
+   "fbt_drops": 0,
+   "ms": 10750
+  },
+  {
+   "chunk": 3,
+   "nMoves": 21,
+   "nodes": 6456919,
+   "rowsWritten": 31169,
+   "fbt_drops": 0,
+   "ms": 11483
+  }
+ ]
+}
