@@ -1,0 +1,124 @@
+{
+  "schema": "vertical-fiber-t1-fixed-length-grundy-audit-v1",
+  "method": "direct recursive mex on every safe occupancy vector",
+  "ranges": {
+    "w": [
+      1,
+      5
+    ],
+    "m": [
+      1,
+      4
+    ],
+    "q": "1..w+2 for each w"
+  },
+  "parameter_count": 100,
+  "safe_state_parameter_checks": 17368,
+  "mismatch_count": 0,
+  "observed_grundy_values": [
+    0,
+    1
+  ],
+  "aggregate_by_w_m": [
+    {
+      "w": 1,
+      "m": 1,
+      "safe_states_across_q": 5
+    },
+    {
+      "w": 1,
+      "m": 2,
+      "safe_states_across_q": 7
+    },
+    {
+      "w": 1,
+      "m": 3,
+      "safe_states_across_q": 9
+    },
+    {
+      "w": 1,
+      "m": 4,
+      "safe_states_across_q": 11
+    },
+    {
+      "w": 2,
+      "m": 1,
+      "safe_states_across_q": 12
+    },
+    {
+      "w": 2,
+      "m": 2,
+      "safe_states_across_q": 24
+    },
+    {
+      "w": 2,
+      "m": 3,
+      "safe_states_across_q": 40
+    },
+    {
+      "w": 2,
+      "m": 4,
+      "safe_states_across_q": 60
+    },
+    {
+      "w": 3,
+      "m": 1,
+      "safe_states_across_q": 28
+    },
+    {
+      "w": 3,
+      "m": 2,
+      "safe_states_across_q": 81
+    },
+    {
+      "w": 3,
+      "m": 3,
+      "safe_states_across_q": 176
+    },
+    {
+      "w": 3,
+      "m": 4,
+      "safe_states_across_q": 325
+    },
+    {
+      "w": 4,
+      "m": 1,
+      "safe_states_across_q": 64
+    },
+    {
+      "w": 4,
+      "m": 2,
+      "safe_states_across_q": 270
+    },
+    {
+      "w": 4,
+      "m": 3,
+      "safe_states_across_q": 768
+    },
+    {
+      "w": 4,
+      "m": 4,
+      "safe_states_across_q": 1750
+    },
+    {
+      "w": 5,
+      "m": 1,
+      "safe_states_across_q": 144
+    },
+    {
+      "w": 5,
+      "m": 2,
+      "safe_states_across_q": 891
+    },
+    {
+      "w": 5,
+      "m": 3,
+      "safe_states_across_q": 3328
+    },
+    {
+      "w": 5,
+      "m": 4,
+      "safe_states_across_q": 9375
+    }
+  ]
+}
