@@ -1,8 +1,8 @@
 {
- "schema": "n11-class2-lane-cost69h-inflight-20261115-v2",
+ "schema": "n11-class2-lane-cost69h-inflight-20261115-v3",
  "title": "n11 class2-lane cost-69h sweep in flight: cheapest remaining unswept child of the second coverable class-2 target S5 (dual class-2 demand c2=2)",
  "date": "2026-11-15",
- "status": "sweep_and_certificates_complete_fold_pending",
+ "status": "completed",
  "claimed_by": "long-term class2 lane (the cost-67c receipts fold execution; same session)",
  "s5": "00000000000000801202000000200000",
  "s6_child": "0000000000000080120a000000200000",
@@ -244,15 +244,34 @@
   "manifest": "class2-lane-cost69h-win7-certificates-20261115.json (blob 2b81cc77a2b4bbaa43b9c3b32b6f7577a39d3855; bits 58/96, rows 46555/44091, blind kill-table extraction fbt_drops 0, BigInt independent verifier 2/2 PASS, 4 part files pushed under class2-lane-cost69h-certificates/ with remote blob shas verified)",
   "third_independent_audit": "cost69h-third-independent-certificate-audit-20261115.json (rational circumcentre + exact collinear branch full strategy-tree replay; status PASS; blob e4a82f25cbee8f0585e880d82584af5acc963db3)"
  },
- "fold_pending": {
-  "receipts_to_fold": [
+ "unknown_note": "The standard 11x11 empty board, both two-stone roots {49,60}/{59,60}, S2 {59,60}, class 2 and class 4 all remain UNKNOWN.",
+ "unknown_status": "11x11 empty board: UNKNOWN. A completed sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 7-stone roots of this child.",
+ "coordination_note": "latest main fetched immediately before this claim push (the cost-67c fold head 1219 verified on latest main); parallel lanes 65l/78a/69g/65j/74e in flight on other children; their folds must rebase on the canonical head at their fold time; if a parallel execution claims this child first, the collision protocol (cost-72b/76a precedents) applies: verify the arithmetic, do not overwrite",
+ "fold": {
+  "receipts_folded": [
    58,
    96
   ],
-  "baseline_asserted": "1219/6628/523173/4898/386896",
-  "note": "latest main re-fetched immediately before this push; no parallel class2 lane has landed a newer head (the 67c fold head 1219 is canonical); the fold script recompute_frontier_cost69h_receipts_20261115.py asserts the 1219 baseline byte-identically via the runpy chain before folding"
- },
- "unknown_note": "The standard 11x11 empty board, both two-stone roots {49,60}/{59,60}, S2 {59,60}, class 2 and class 4 all remain UNKNOWN.",
- "unknown_status": "11x11 empty board: UNKNOWN. A completed sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 7-stone roots of this child.",
- "coordination_note": "latest main fetched immediately before this claim push (the cost-67c fold head 1219 verified on latest main); parallel lanes 65l/78a/69g/65j/74e in flight on other children; their folds must rebase on the canonical head at their fold time; if a parallel execution claims this child first, the collision protocol (cost-72b/76a precedents) applies: verify the arithmetic, do not overwrite"
+  "chain_head_before": "1219/6628/523173/4898/386896",
+  "chain_head_after": "1221/6626/523035/4896/386758",
+  "total_marginal": 10,
+  "total_marginal_in_manifest": 2,
+  "child_orbit_closed_by_bit": 58,
+  "parents_after": {
+   "class2_parent1": "31 rows / 2334",
+   "class2_parent2": "47 rows / 3455"
+  },
+  "parent2_extra_cross_cover": "bit96 certificate covers 00000000000000a09002000001000000 (a second remaining row of class2_parent2), so parent2 loses two rows: the child and this row",
+  "head_json": "class-frontier-cost69h-receipts-recompute-20261115.json (blob 1238cf8853595fbfabcc90856ec13502e7bbf6f6, 9151 bytes)",
+  "ranking_csv": "class-frontier-s5-ranking-after-cost69h-receipts-20261115.csv (blob 9898802912aeb040394bd0a8a53dcaa101e0bc76)",
+  "top_candidates_csv": "class-frontier-top-candidates-s6-after-cost69h-receipts-20261115.csv (blob 0bcdd84e0e83157876676a5fbf85ec79493307d0)",
+  "fold_script": "recompute_frontier_cost69h_receipts_20261115.py (blob 45f4134137435af7c67871d09918c0f1d4d89654)",
+  "output_blob_shas": {
+   "head_json": "1238cf8853595fbfabcc90856ec13502e7bbf6f6",
+   "ranking_csv": "9898802912aeb040394bd0a8a53dcaa101e0bc76",
+   "top_candidates_csv": "0bcdd84e0e83157876676a5fbf85ec79493307d0"
+  },
+  "head_json_bytes": 9151,
+  "fold_note": "receipts folded in published bit order [58, 96]; the bit-58 receipt closes the child orbit (both open parents lose the child row); the bit-96 receipt additionally cross-covers one more parent2 row; set equality s_1221 == s_1219 UNION covers(2 roots) asserted chain-internally; 11x11 empty board / two-stone roots / S2 {59,60} / class 2 / class 4 remain UNKNOWN"
+ }
 }
