@@ -1,8 +1,8 @@
 {
-  "schema": "n11-class2-lane-cost67c-inflight-20261115-v3",
+  "schema": "n11-class2-lane-cost67c-inflight-20261115-v4",
   "title": "n11 class2-lane cost-67c sweep in flight: cheapest remaining unswept child of the second coverable class-2 target S5 (mixed class-2/class-4 demand)",
   "date": "2026-11-15",
-  "status": "fold_in_flight",
+  "status": "completed",
   "claimed_by": "long-term class2 lane (the cost-63g fold execution)",
   "s5": "00000000000000801202000000200000",
   "s6_child": "00000000000000801202000000202000",
@@ -210,7 +210,7 @@
   },
   "verdict_semantics": "loss=true => WIN7-within-depth-10 candidate (certificate rebuild target); loss=false && !capped => REFUTED-D10, no first-player win within depth 10 (NOT a LOSS proof); capped => proves nothing either way",
   "unknown_note": "The standard 11x11 empty board, both two-stone roots {49,60}/{59,60}, S2 {59,60}, class 2 and class 4 all remain UNKNOWN.",
-  "next_action": "Create recompute_frontier_cost67c_receipts_20261115.py using the cost-63g fold script as template (same runpy chain), assert the latest canonical chain head byte-identically, fold the 2 published WIN7 receipts (bit order 64, 96) with per-receipt marginal re-derived from the growing union, publish the new head JSON + ranking CSV + top-candidates CSV, then retire this claim (status completed with fold record and blob shas).",
+  "next_action": "completed: the 2 published WIN7 receipts (bits 64/96) are folded on the cost-63g head 1216 and the new canonical chain head 1219/6628/523173/4898/386896 is published (see fold record); subsequent folds (65l/78a/69g/65j/74e) must rebase on the new head",
   "sweep_results": {
     "completed": "2026-11-15 (same session as the claim; 9/9 batches run, pilot 3402 PASS 9/9)",
     "candidates": 67,
@@ -248,23 +248,61 @@
     "storage": "each whole certificate exceeds the 1 MB single-file push threshold; published as 4 split part files (2 per bit), remote git blob shas verified byte-exact, part joins md5-identical to the local whole files"
   },
   "fold_in_flight": {
-    "declared": "2026-11-15 (this long-term lane execution; latest main fetched and re-verified immediately before this update - no fold newer than the cost-63g head 1216 had landed)",
-    "baseline_asserted": "1216/6631/523382/4901/387105 (class-frontier-cost63g-receipts-recompute-20261115.json, git blob sha e311e24346adad570e42f145f9190fe8427ae921)",
-    "script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost67c_receipts_20261115.py (cost-63g fold script template, same runpy chain; asserts this claim file byte-exact at its published v2 or v3 blob)",
-    "receipts_to_fold": [
-      64,
-      96
-    ],
-    "outputs_to_publish": [
-      "class-frontier-cost67c-receipts-recompute-20261115.json",
-      "class-frontier-s5-ranking-after-cost67c-receipts-20261115.csv",
-      "class-frontier-top-candidates-s6-after-cost67c-receipts-20261115.csv"
-    ],
-    "concurrent_claim_note": "if a parallel execution publishes the same cost-67c fold first, this lane does not overwrite: it verifies the arithmetic per the cost-72b collision protocol (same fold order [64, 96], same set-equality controls, endpoint agreement) and records the collision; if a parallel cost-65l fold lands a newer head first, this fold rebases on that head before publishing"
+    "historical": "v3 declaration superseded by the fold record above; the fold landed in the declared order [64, 96] on the declared baseline"
   },
   "rebase_target": {
     "instruction": "at fold time, fetch the latest main and assert the current canonical chain head byte-identically before folding; as of this update no fold newer than the cost-63g head has landed",
     "head_at_this_update": "1216/6631/523382/4901/387105 (class-frontier-cost63g-receipts-recompute-20261115.json)",
     "note": "a parallel cost-65l receipt fold may land first; in that case rebase the cost-67c fold on the newer head, never fold on a stale head"
+  },
+  "fold": {
+    "completed": "2026-11-15 (this long-term lane execution; latest main fetched and re-verified immediately before the fold push - no fold newer than the cost-63g head 1216 had landed)",
+    "script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost67c_receipts_20261115.py (cost-63g fold script template, same runpy chain; asserts this claim file byte-exact at its published v2/v3/v4 blobs)",
+    "baseline": "1216/6631/523382/4901/387105 (class-frontier-cost63g-receipts-recompute-20261115.json, git blob sha e311e24346adad570e42f145f9190fe8427ae921)",
+    "receipts_folded": [
+      64,
+      96
+    ],
+    "chain_head_after": "1219/6628/523173/4898/386896",
+    "total_marginal": 9,
+    "total_marginal_in_manifest": 3,
+    "child_orbit_closed_by_bit": 64,
+    "parents_after": {
+      "class2_parent1": "32 rows / 2403",
+      "class4_parent": "74 rows / 5560"
+    },
+    "parents_after_detail": {
+      "class2_parent1": "was 33 rows / 2470; lost the child row 00000000000000801202000000202000 (closed by the bit-64 receipt)",
+      "class4_parent": "was 76 rows / 5703; lost the child row 00000000000000801202000000202000 and the marginal row 00000000200000003800000040000002 (bit-96 receipt)"
+    },
+    "per_receipt": {
+      "64": {
+        "covers": 7,
+        "marginal": 4,
+        "marginal_in_manifest": 1,
+        "marginal_manifest_hexes": [
+          "00000000000000801202000000202000"
+        ]
+      },
+      "96": {
+        "covers": 7,
+        "marginal": 5,
+        "marginal_in_manifest": 2,
+        "marginal_manifest_hexes": [
+          "00000000020000003800000040000002",
+          "00000000040000003800000088000000"
+        ]
+      }
+    },
+    "third_manifest_marginal_note": "the bit-96 receipt also closed 00000000040000003800000088000000, a manifest orbit that is not a remaining row of either open parent of this child",
+    "output_blob_shas": {
+      "head_json": "6d187f48420a9b66d527c3c0fb2764ad5f63235a",
+      "ranking_csv": "fa04928a15c62d56fcceae3ce1ef5d670d5365a1",
+      "top_candidates_csv": "52872558ff4e1d5a0d972a840fedc776fcba460c",
+      "fold_script_at_fold": "17f36faabc5e3172340c0d41935fe4989c003284"
+    },
+    "head_json_bytes": 9323,
+    "reproducibility": "the fold script was run twice byte-identically before publishing; all 14 published cost-67c input files and this claim were asserted byte-exact against main by git blob sha before folding; the child-orbit closure (bit64), the both-open-parents-lose-the-child-row control, the set-equality control (s_after == s_1216 UNION covers(2 roots)), the 13-covered-orbit cross-check against the third independent audit and root disjointness vs the 112 folded receipt roots all hold",
+    "concurrent_claim_note": "no collision: this is the first cost-67c fold on main; parallel lanes (65l/78a/69g/65j/74e) had not landed any fold at push time; their folds must rebase on the new head 1219/6628/523173/4898/386896"
   }
 }
