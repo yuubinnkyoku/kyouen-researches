@@ -17,10 +17,10 @@
   },
   "canonical_line_hex_exactly_once": {
    "baseline_solved": 1233,
-   "distinct_marginal_hexes": 49,
-   "endpoint_solved": 1282,
+   "distinct_marginal_hexes": 63,
+   "endpoint_solved": 1296,
    "multi_claims": 0,
-   "note": "every manifest hex solved between the 1233 baseline and the 1282 endpoint is claimed as a marginal by exactly one receipt record on the canonical line (branch marginals 65l/74g/69i enter once via the merged-1277 merged_receipts)",
+   "note": "every manifest hex solved between the 1233 baseline and the 1296 endpoint is claimed as a marginal by exactly one receipt record on the canonical line (branch marginals 65l/74g/69i enter once via the merged-1277 merged_receipts)",
    "per_head": [
     {
      "head": "class-frontier-cost71c-receipts-recompute-20261115.json",
@@ -75,9 +75,27 @@
      "key": "cost77a_addition",
      "mim_sum": 2,
      "records": 3
+    },
+    {
+     "head": "class-frontier-cost77b-receipts-recompute-20261115.json",
+     "key": "cost77b_addition",
+     "mim_sum": 4,
+     "records": 4
+    },
+    {
+     "head": "class-frontier-cost77c-receipts-recompute-20261115.json",
+     "key": "cost77c_addition",
+     "mim_sum": 4,
+     "records": 8
+    },
+    {
+     "head": "class-frontier-cost75d-receipts-recompute-20261115.json",
+     "key": "cost75d_addition",
+     "mim_sum": 6,
+     "records": 4
     }
    ],
-   "total_mim": 49
+   "total_mim": 63
   },
   "chain_head_roots": {
    "distinct": 402,
@@ -345,9 +363,53 @@
     "declared_by_totals": 40,
     "head": "class-frontier-cost77a-receipts-recompute-20261115.json",
     "n_closing_records": 1
+   },
+   {
+    "child": "00000000000000801202000200200000",
+    "closing_records": [
+     {
+      "bit": 9,
+      "key": "cost77b_addition",
+      "path": "cost77b_addition"
+     }
+    ],
+    "declared_by_totals": 9,
+    "head": "class-frontier-cost77b-receipts-recompute-20261115.json",
+    "n_closing_records": 1
+   },
+   {
+    "child": "00000000040000801202000000200000",
+    "closing_records": [
+     {
+      "bit": 10,
+      "key": "cost77c_addition",
+      "path": "cost77c_addition"
+     }
+    ],
+    "declared_by_totals": 10,
+    "head": "class-frontier-cost77c-receipts-recompute-20261115.json",
+    "n_closing_records": 1
+   },
+   {
+    "child": "00000000000040801202000000200000",
+    "closing_records": [
+     {
+      "bit": 12,
+      "key": "cost75d_addition",
+      "path": "cost75d_addition"
+     }
+    ],
+    "declared_by_totals": 12,
+    "head": "class-frontier-cost75d-receipts-recompute-20261115.json",
+    "n_closing_records": 1
    }
   ],
-  "claim_77a_crosscheck": "completed claim fold record matches the published 77a head JSON byte-exact (blob sha + 7554 bytes) and the published head transition 1280/6567/518678/4837/382401 -> 1282/6565/518522/4835/382245",
+  "completed_claim_crosschecks": [
+   "cost-77a completed claim fold record matches the published head JSON byte-exact (blob sha + 7554 bytes); head transition ends at 1282/6565/518522/4835/382245",
+   "cost-77b completed claim fold record matches the published head JSON byte-exact (blob sha + 8073 bytes); head transition ends at 1286/6561/518211/4831/381934",
+   "cost-77c completed claim fold record matches the published head JSON byte-exact (blob sha + 10558 bytes); head transition ends at 1290/6557/517923/4827/381646",
+   "cost-75d completed claim fold record matches the published head JSON byte-exact (blob sha + 8992 bytes); head transition ends at 1296/6551/517468/4821/381191"
+  ],
   "convention_external_receipts": [
    {
     "d4_orbit": "00000008000000803800000008200000",
@@ -498,6 +560,36 @@
     "matches_published": true,
     "new_orbits_added": 3,
     "roots_in_head": 3
+   },
+   {
+    "audit_document_order_cumulative": 557,
+    "baseline_head": "class-frontier-cost77a-receipts-recompute-20261115.json",
+    "fold_own_branch_cumulative": 557,
+    "fold_published_own_claim": 557,
+    "head": "class-frontier-cost77b-receipts-recompute-20261115.json",
+    "matches_published": true,
+    "new_orbits_added": 4,
+    "roots_in_head": 4
+   },
+   {
+    "audit_document_order_cumulative": 565,
+    "baseline_head": "class-frontier-cost77b-receipts-recompute-20261115.json",
+    "fold_own_branch_cumulative": 565,
+    "fold_published_own_claim": 565,
+    "head": "class-frontier-cost77c-receipts-recompute-20261115.json",
+    "matches_published": true,
+    "new_orbits_added": 8,
+    "roots_in_head": 8
+   },
+   {
+    "audit_document_order_cumulative": 569,
+    "baseline_head": "class-frontier-cost77c-receipts-recompute-20261115.json",
+    "fold_own_branch_cumulative": 569,
+    "fold_published_own_claim": 569,
+    "head": "class-frontier-cost75d-receipts-recompute-20261115.json",
+    "matches_published": true,
+    "new_orbits_added": 4,
+    "roots_in_head": 4
    }
   ],
   "d4_orbits": {
@@ -1085,8 +1177,8 @@
      "root_hex": "00400000000000801a02040000000000"
     }
    ],
-   "orbits": 542,
-   "roots": 553,
+   "orbits": 558,
+   "roots": 569,
    "twin_analysis": [
     {
      "d4_orbit": "00000000000000849802000000020000",
@@ -1414,16 +1506,51 @@
    ],
    "twin_pairs": 11
   },
-  "endpoint_77a": {
-   "child_closed_by_bit": 40,
-   "cost_needed_by_open_classes": 382245,
-   "git_blob_sha": "a2ba7235793b051d80658818a83aa02c5a5d4958",
-   "head": "class-frontier-cost77a-receipts-recompute-20261115.json",
-   "receipts": 3,
-   "s6_needed_by_open_classes": 4835,
-   "solved_s6_in_manifest": 1282,
-   "sum_remaining_cost": 518522,
-   "unique_remaining_s6": 6565
+  "endpoint_heads": {
+   "endpoint_cost75d": {
+    "child_closed_by_bit": 12,
+    "cost_needed_by_open_classes": 381191,
+    "git_blob_sha": "c801e60578ee5c5272e75719e35847052ac58314",
+    "head": "class-frontier-cost75d-receipts-recompute-20261115.json",
+    "receipts": 4,
+    "s6_needed_by_open_classes": 4821,
+    "solved_s6_in_manifest": 1296,
+    "sum_remaining_cost": 517468,
+    "unique_remaining_s6": 6551
+   },
+   "endpoint_cost77a": {
+    "child_closed_by_bit": 40,
+    "cost_needed_by_open_classes": 382245,
+    "git_blob_sha": "a2ba7235793b051d80658818a83aa02c5a5d4958",
+    "head": "class-frontier-cost77a-receipts-recompute-20261115.json",
+    "receipts": 3,
+    "s6_needed_by_open_classes": 4835,
+    "solved_s6_in_manifest": 1282,
+    "sum_remaining_cost": 518522,
+    "unique_remaining_s6": 6565
+   },
+   "endpoint_cost77b": {
+    "child_closed_by_bit": 9,
+    "cost_needed_by_open_classes": 381934,
+    "git_blob_sha": "b648ed068a1b9a04624b4c230e011e6fefeddb01",
+    "head": "class-frontier-cost77b-receipts-recompute-20261115.json",
+    "receipts": 4,
+    "s6_needed_by_open_classes": 4831,
+    "solved_s6_in_manifest": 1286,
+    "sum_remaining_cost": 518211,
+    "unique_remaining_s6": 6561
+   },
+   "endpoint_cost77c": {
+    "child_closed_by_bit": 10,
+    "cost_needed_by_open_classes": 381646,
+    "git_blob_sha": "7f2badce7132aa7fdf76c9ee0283bd14a9ac9e7b",
+    "head": "class-frontier-cost77c-receipts-recompute-20261115.json",
+    "receipts": 8,
+    "s6_needed_by_open_classes": 4827,
+    "solved_s6_in_manifest": 1290,
+    "sum_remaining_cost": 517923,
+    "unique_remaining_s6": 6557
+   }
   },
   "fork_merge_head": {
    "baseline_quote": [
@@ -1453,7 +1580,7 @@
     "no_numeric_baseline_quote": 7,
     "own-label-recompute": 1,
     "parallel-batch-union": 11,
-    "sequential-fold-union": 46
+    "sequential-fold-union": 49
    },
    "heads": [
     {
@@ -2769,9 +2896,72 @@
      "quote_status": "matched_published_state",
      "sum_mim": 2,
      "union_mim": 2
+    },
+    {
+     "baseline_quote": [
+      1282,
+      6565,
+      518522,
+      4835,
+      382245
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 4,
+     "frontier_key": "frontier_after_cost77b",
+     "frontier_solved": 1286,
+     "head": "class-frontier-cost77b-receipts-recompute-20261115.json",
+     "prose_pointer_head": "class-frontier-cost77a-receipts-recompute-20261115.json",
+     "quote_state_matches": [
+      "class-frontier-cost77a-receipts-recompute-20261115.json:frontier_after_cost77a"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 4,
+     "union_mim": 4
+    },
+    {
+     "baseline_quote": [
+      1286,
+      6561,
+      518211,
+      4831,
+      381934
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 4,
+     "frontier_key": "frontier_after_cost77c",
+     "frontier_solved": 1290,
+     "head": "class-frontier-cost77c-receipts-recompute-20261115.json",
+     "prose_pointer_head": "class-frontier-cost77b-receipts-recompute-20261115.json",
+     "quote_state_matches": [
+      "class-frontier-cost77b-receipts-recompute-20261115.json:frontier_after_cost77b"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 4,
+     "union_mim": 4
+    },
+    {
+     "baseline_quote": [
+      1290,
+      6557,
+      517923,
+      4827,
+      381646
+     ],
+     "classification": "sequential-fold-union",
+     "delta": 6,
+     "frontier_key": "frontier_after_cost75d",
+     "frontier_solved": 1296,
+     "head": "class-frontier-cost75d-receipts-recompute-20261115.json",
+     "prose_pointer_head": "class-frontier-cost77c-receipts-recompute-20261115.json",
+     "quote_state_matches": [
+      "class-frontier-cost77c-receipts-recompute-20261115.json:frontier_after_cost77c"
+     ],
+     "quote_status": "matched_published_state",
+     "sum_mim": 6,
+     "union_mim": 6
     }
    ],
-   "heads_classified": 66,
+   "heads_classified": 69,
    "pointer_name_differs_cases": [
     {
      "head": "class-frontier-cost74g-receipts-recompute-20261115.json",
@@ -2803,7 +2993,7 @@
     }
    ],
    "quote_status_counts": {
-    "matched_published_state": 58,
+    "matched_published_state": 61,
     "unmatched_quote": 1,
     "unverifiable_quote": 7
    }
@@ -2824,36 +3014,19 @@
      ]
     }
    ],
-   "receipt_records": 418
+   "receipt_records": 434
   },
   "pin_groups": {
    "base": 26,
    "chain": 52,
-   "post70e": 10
+   "post70e": 17
   },
-  "pins_checked": 88,
-  "unpinned_post70e_heads_computed_blob_shas": {
-   "class-frontier-cost70f-receipts-recompute-20261115.json": {
-    "bytes": 9643,
-    "git_blob_sha": "4d0f130e975b6a7bec4759387bd6d54dfe2b6a18"
-   },
-   "class-frontier-cost70g-receipts-recompute-20261115.json": {
-    "bytes": 13915,
-    "git_blob_sha": "73890fe34580ec2f869a97a00b3e6400eda30c0a"
-   },
-   "class-frontier-cost71c-receipts-recompute-20261115.json": {
-    "bytes": 11891,
-    "git_blob_sha": "61af2eb311f938f5ee5bf2bb20d8c1a76787dc87"
-   },
-   "class-frontier-cost73g-receipts-recompute-20261115.json": {
-    "bytes": 12956,
-    "git_blob_sha": "e4fb98dc8670fbb85786ab02f017a0a95e357648"
-   }
-  }
+  "pins_checked": 95,
+  "unpinned_post70e_heads_computed_blob_shas": {}
  },
  "date": "2026-11-15",
  "interpretation_guard": "bookkeeping audit over published receipts and head records only; solved counts measure manifest coverage, not the game-theoretic value of any position; WIN7 certificates prove a win within depth 10 from the individual 7-stone roots only; nothing in this audit decides any S5 parent, any class, the two-stone root {49,60} or the 11x11 empty board: 11x11 empty board / two-stone root {49,60} / S2 {59,60} / class 1 / class 2 / class 4 remain UNKNOWN",
- "method": "independent whole-chain audit over the published files only (no runpy chain replay, no solved-set reconstruction): 88 git blob pins asserted byte-exact (26 base certificate files + 52 pre-70e chain head JSONs + 10 pinned post-70e chain heads), the root inventory rebuilt from the published records (194 distinct WIN7 base roots with the single intra-base duplicate root enumerated, 402 distinct receipt roots from the 52 chain head addition records, 104 base-roots re-listed by chain records), the cumulative published-root inventory reconciled at every post-70e checkpoint against each fold script\u2019s own published folded-root count (497@1233, 499@71c, 503@70f, 512@72c, 520@73g, 528@70g, 532@73h, 534@65l / 542@74g / 546@69i branch lines, 544@merged-65l-74g, 548@merged-65l-74g-69i, 550@76b, 553@77a), the D4 orbit structure of the full inventory audited (542 distinct D4 orbits; 11 twin pairs with full provenance; multi-provenance roots enumerated), per-record geometry checked for every published receipt record and every nested group-additions record, child-orbit closure bookkeeping checked at every head declaring a child, convention-external receipts scanned (each must be a D4 twin of an inventoried orbit, keeping the orbit inventory complete as a SET), and the head arithmetic re-derived from the published marginal records with zero anomalies; the 77a endpoint head and its completed claim fold record cross-checked byte-exact",
- "schema": "n11-class2-lane-published-chain-roots-independent-audit-20261115-v1",
+ "method": "independent whole-chain audit over the published files only (no runpy chain replay, no solved-set reconstruction): 95 git blob pins asserted byte-exact (26 base certificate files + 52 pre-70e chain head JSONs + 17 pinned post-70e chain heads, the v2 pin proposals 71c/70f/73g/70g now pinned, the 77b head pinned from the 77c baseline quote plus the 77c head pinned from the 77d claim chain_head_at_claim, and the 75d head pinned from the completed 75d claim output_blob_shas), the root inventory rebuilt from the published records (194 distinct WIN7 base roots with the single intra-base duplicate root enumerated, 402 distinct receipt roots from the 52 chain head addition records, 104 base-roots re-listed by chain records), the cumulative published-root inventory reconciled at every post-70e checkpoint against each fold script\u2019s own published folded-root count (497@1233, 499@71c, 503@70f, 512@72c, 520@73g, 528@70g, 532@73h, 534@65l / 542@74g / 546@69i branch lines, 544@merged-65l-74g, 548@merged-65l-74g-69i, 550@76b, 553@77a, 557@77b, 565@77c, 569@75d), the D4 orbit structure of the full inventory audited (558 distinct D4 orbits over 569 roots; 11 twin pairs with full provenance; multi-provenance roots enumerated), per-record geometry checked for every published receipt record and every nested group-additions record, child-orbit closure bookkeeping checked at every head declaring a child, convention-external receipts scanned (each must be a D4 twin of an inventoried orbit, keeping the orbit inventory complete as a SET), and the head arithmetic re-derived from the published marginal records with zero anomalies; the 77a/77b/77c/75d endpoint heads and their completed-claim fold records cross-checked byte-exact",
+ "schema": "n11-class2-lane-published-chain-roots-independent-audit-20261115-v3",
  "verdict": "AUDIT PASSED"
 }

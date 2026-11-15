@@ -4,19 +4,21 @@ and head bookkeeping (2026-11-15).
 
 Pure-stdlib, published-files-only audit: re-fetches nothing, runs no runpy
 chain, re-derives no solved sets. It re-reads the 26 blob-verified base
-certificate files, the 52 blob-verified pre-70e chain head JSONs and the 14
+certificate files, the 52 blob-verified pre-70e chain head JSONs and the 17
 post-70e chain head JSONs, and checks:
 
-1. 88 published git blob pins byte-exact (26 base + 52 chain heads + 10
-   pinned post-70e heads); the 4 unpinned post-70e heads (71c/70f/73g/70g)
-   get their computed git blob shas recorded for future pinning;
+1. 95 published git blob pins byte-exact (26 base + 52 chain heads + 17
+   pinned post-70e heads, including the four v2 pin proposals 71c/70f/73g/
+   70g, now pinned, the 77b/77c heads pinned from the 77c baseline quote
+   and the 77d claim's chain_head_at_claim, and the 75d head pinned from
+   the completed 75d claim's output_blob_shas);
 2. the root inventory: 194 distinct WIN7 base roots (with the single
    intra-base duplicate root enumerated), 402 distinct receipt roots
    recorded in the 52 chain head addition records, and the cumulative
    published-root inventory at every post-70e checkpoint
-   (497@1233 ... 553@77a) reconciled against each fold's own published
+   (497@1233 ... 569@75d) reconciled against each fold's own published
    folded-root count;
-3. D4 orbit structure of the full 553-root inventory: twin pairs
+3. D4 orbit structure of the full 569-root inventory: twin pairs
    (same D4 orbit, different raw hex), their per-pair classification and
    provenance (a fold whose roots are all D4-duplicates of already-folded
    inventory is legal set bookkeeping, never a new orbit);
@@ -33,7 +35,8 @@ post-70e chain head JSONs, and checks:
    erratum-pointer / fork-merge / multi-branch / own-label-recompute /
    unverifiable-quote) and the delta arithmetic is re-derived from the
    published marginal records; anomalies must be zero;
-8. the 77a endpoint head and its completed-claim fold record.
+8. the 77a/77b/77c/75d endpoint heads and their completed-claim fold
+   records.
 
 The audit asserts; on success it writes the audit JSON. Running it twice
 must produce byte-identical output (deterministic ordering throughout).
@@ -170,7 +173,11 @@ CHAIN_PINS = {
 }
 POST70E_PINS = {
     'class-frontier-cost70e-receipts-recompute-20261115.json': 'a0171d4bb839aeb813d231c7d879d6a89452359f',
+    'class-frontier-cost71c-receipts-recompute-20261115.json': '61af2eb311f938f5ee5bf2bb20d8c1a76787dc87',
+    'class-frontier-cost70f-receipts-recompute-20261115.json': '4d0f130e975b6a7bec4759387bd6d54dfe2b6a18',
     'class-frontier-cost72c-receipts-recompute-20261115.json': '42dbb92e1505d05389e840e3368974b1c613b750',
+    'class-frontier-cost73g-receipts-recompute-20261115.json': 'e4fb98dc8670fbb85786ab02f017a0a95e357648',
+    'class-frontier-cost70g-receipts-recompute-20261115.json': '73890fe34580ec2f869a97a00b3e6400eda30c0a',
     'class-frontier-cost73h-receipts-recompute-20261115.json': '71f79b4bef000aaa1ce16279aa8d08a1ba9f3357',
     'class-frontier-cost65l-receipts-recompute-20261115.json': '0b523e707461b1c4201218a632c3d5c821b8f7f0',
     'class-frontier-cost74g-receipts-recompute-20261115.json': 'fce4ce77a64e039709b89f2a78ece9ffff34e533',
@@ -179,6 +186,9 @@ POST70E_PINS = {
     'class-frontier-merged-cost65l-74g-69i-recompute-20261115.json': '8d96b48273248073958b327ff91f7aecccd09944',
     'class-frontier-cost76b-receipts-recompute-20261115.json': '0c35759729663fd561574fd4c5c8ccf2e46550a5',
     'class-frontier-cost77a-receipts-recompute-20261115.json': 'a2ba7235793b051d80658818a83aa02c5a5d4958',
+    'class-frontier-cost77b-receipts-recompute-20261115.json': 'b648ed068a1b9a04624b4c230e011e6fefeddb01',
+    'class-frontier-cost77c-receipts-recompute-20261115.json': '7f2badce7132aa7fdf76c9ee0283bd14a9ac9e7b',
+    'class-frontier-cost75d-receipts-recompute-20261115.json': 'c801e60578ee5c5272e75719e35847052ac58314',
 }
 POST70E_ORDER = [
     'class-frontier-cost70e-receipts-recompute-20261115.json',
@@ -195,6 +205,9 @@ POST70E_ORDER = [
     'class-frontier-merged-cost65l-74g-69i-recompute-20261115.json',
     'class-frontier-cost76b-receipts-recompute-20261115.json',
     'class-frontier-cost77a-receipts-recompute-20261115.json',
+    'class-frontier-cost77b-receipts-recompute-20261115.json',
+    'class-frontier-cost77c-receipts-recompute-20261115.json',
+    'class-frontier-cost75d-receipts-recompute-20261115.json',
 ]
 UNPINNED_POST70E = [n for n in POST70E_ORDER if n not in POST70E_PINS]
 
@@ -212,7 +225,7 @@ for name, want in sorted(POST70E_PINS.items()):
     assert s == want, ('post70e pin', name, s, want)
     pin_report['post70e'] += 1
 n_pins = pin_report['base'] + pin_report['chain'] + pin_report['post70e']
-assert n_pins == 88, n_pins
+assert n_pins == 95, n_pins
 unpinned_computed = {}
 for name in UNPINNED_POST70E:
     s, blen = git_blob_sha(OUT / name)
@@ -299,6 +312,9 @@ own_claim = {
     'class-frontier-merged-cost65l-74g-69i-recompute-20261115.json': 532 + 2 + 10 + 4,
     'class-frontier-cost76b-receipts-recompute-20261115.json': 548 + 2,
     'class-frontier-cost77a-receipts-recompute-20261115.json': 550 + 3,
+    'class-frontier-cost77b-receipts-recompute-20261115.json': 553 + 4,
+    'class-frontier-cost77c-receipts-recompute-20261115.json': 553 + 4 + 8,
+    'class-frontier-cost75d-receipts-recompute-20261115.json': 553 + 4 + 8 + 4,
 }
 # fork topology: head -> (baseline head for the own-claim arithmetic)
 own_baseline = {
@@ -329,6 +345,12 @@ own_baseline = {
         'class-frontier-merged-cost65l-74g-69i-recompute-20261115.json',
     'class-frontier-cost77a-receipts-recompute-20261115.json':
         'class-frontier-cost76b-receipts-recompute-20261115.json',
+    'class-frontier-cost77b-receipts-recompute-20261115.json':
+        'class-frontier-cost77a-receipts-recompute-20261115.json',
+    'class-frontier-cost77c-receipts-recompute-20261115.json':
+        'class-frontier-cost77b-receipts-recompute-20261115.json',
+    'class-frontier-cost75d-receipts-recompute-20261115.json':
+        'class-frontier-cost77c-receipts-recompute-20261115.json',
 }
 own_cum_seen = {}
 
@@ -379,13 +401,13 @@ for name in POST70E_ORDER:
     cumulative_report.append(entry)
     assert entry['matches_published'], entry
     assert own_after <= cum, entry
-assert cumulative_report[-1]['audit_document_order_cumulative'] == 553
-assert cumulative_report[-1]['fold_own_branch_cumulative'] == 553
+assert cumulative_report[-1]['audit_document_order_cumulative'] == 569
+assert cumulative_report[-1]['fold_own_branch_cumulative'] == 569
 assert inventory == (base_int | chain_set) | set().union(*[
     set(head_roots_all(n)) for n in POST70E_ORDER])
-assert cumulative_report[-1]['audit_document_order_cumulative'] == 553
+assert cumulative_report[-1]['audit_document_order_cumulative'] == 569
 
-# ---------- 3. D4 orbit structure of the 553-root inventory ----------
+# ---------- 3. D4 orbit structure of the 569-root inventory ----------
 all_roots = sorted(inventory)
 d4_of = {r: canon(r) for r in all_roots}
 orbits = defaultdict(list)
@@ -398,7 +420,7 @@ for o, rs in sorted(orbits.items()):
         assert len(rs) == 2, (o, rs)
         twin_pairs.append(sorted(rs))
 assert len(twin_pairs) == 11, len(twin_pairs)
-assert n_orbits == 553 - 11, n_orbits
+assert n_orbits == 569 - 11, n_orbits
 
 # provenance of every inventory root
 root_prov = defaultdict(list)
@@ -802,10 +824,11 @@ FORK_HEAD = 'class-frontier-merged-recompute-after65h65i-warm67b68c-20261115.jso
 fork_entry = next((a for a in arith if a['head'] == FORK_HEAD), None)
 
 # ---------- 7b. canonical-line hex-level exactly-once ----------
-# The canonical line from the 1233 baseline to the 77a endpoint: every
+# The canonical line from the 1233 baseline to the 77c endpoint: every
 # consecutive baseline-quote provenance is already verified by the state
 # matching in section 7; branch heads 65l/74g/69i enter the canonical line
-# exactly once through the merged-1277 head's merged_receipts.
+# exactly once through the merged-1277 head's merged_receipts; the deferred
+# 75d fold is rebased on the 77c head per its deferral note.
 CANONICAL_LINE = [
     ('class-frontier-cost71c-receipts-recompute-20261115.json',
      'cost71c_addition'),
@@ -825,6 +848,12 @@ CANONICAL_LINE = [
      'cost76b_addition'),
     ('class-frontier-cost77a-receipts-recompute-20261115.json',
      'cost77a_addition'),
+    ('class-frontier-cost77b-receipts-recompute-20261115.json',
+     'cost77b_addition'),
+    ('class-frontier-cost77c-receipts-recompute-20261115.json',
+     'cost77c_addition'),
+    ('class-frontier-cost75d-receipts-recompute-20261115.json',
+     'cost75d_addition'),
 ]
 canon_claims = defaultdict(list)
 canon_sum = 0
@@ -872,69 +901,104 @@ canonical_line_report = {
     'multi_claims': 0,
     'per_head': canon_per_head,
     'note': 'every manifest hex solved between the 1233 baseline and the '
-            '1282 endpoint is claimed as a marginal by exactly one receipt '
+            '1296 endpoint is claimed as a marginal by exactly one receipt '
             'record on the canonical line (branch marginals 65l/74g/69i '
             'enter once via the merged-1277 merged_receipts)',
 }
 
-# ---------- 8. 77a endpoint ----------
-h77 = json.loads((OUT / 'class-frontier-cost77a-receipts-recompute-20261115.json').read_text())
-f77 = h77['frontier_after_cost77a']
-endpoint = {
-    'head': 'class-frontier-cost77a-receipts-recompute-20261115.json',
-    'git_blob_sha': POST70E_PINS['class-frontier-cost77a-receipts-recompute-20261115.json'],
-    'solved_s6_in_manifest': f77['solved_s6_in_manifest'],
-    'unique_remaining_s6': f77['unique_remaining_s6'],
-    'sum_remaining_cost': f77['sum_remaining_cost'],
-    's6_needed_by_open_classes': f77['s6_needed_by_open_classes'],
-    'cost_needed_by_open_classes': f77['cost_needed_by_open_classes'],
-    'receipts': h77['totals']['receipts'],
-    'child_closed_by_bit': h77['totals']['child_closed_by_bit'],
-}
-assert (endpoint['solved_s6_in_manifest'], endpoint['unique_remaining_s6'],
-        endpoint['sum_remaining_cost'], endpoint['s6_needed_by_open_classes'],
-        endpoint['cost_needed_by_open_classes']) == \
-    (1282, 6565, 518522, 4835, 382245), endpoint
-assert endpoint['receipts'] == 3 and endpoint['child_closed_by_bit'] == 40
-claim = json.loads((OUT / 'class2-lane-cost77a-inflight-20261115.json').read_text())
-cf = claim['fold']
-assert cf['chain_head_after'] == '1282/6565/518522/4835/382245'
-assert cf['receipts_folded'] == 3 and cf['publication_order'] == [40, 64, 111]
-assert cf['output_blob_shas']['head_json'] == endpoint['git_blob_sha']
-assert cf['head_json_bytes'] == 7554
-sha_claim, blen_claim = git_blob_sha(
-    OUT / 'class-frontier-cost77a-receipts-recompute-20261115.json')
-assert sha_claim == cf['output_blob_shas']['head_json'] and blen_claim == 7554
+# ---------- 8. 77a/77b/77c/75d endpoints and completed-claim fold records ----------
+ENDPOINT_CHECKS = [
+    ('77a', 'class-frontier-cost77a-receipts-recompute-20261115.json',
+     'frontier_after_cost77a',
+     (1282, 6565, 518522, 4835, 382245), 3, 40, [40, 64, 111],
+     '1282/6565/518522/4835/382245', 7554),
+    ('77b', 'class-frontier-cost77b-receipts-recompute-20261115.json',
+     'frontier_after_cost77b',
+     (1286, 6561, 518211, 4831, 381934), 4, 9, [9, 12, 59, 105],
+     '1286/6561/518211/4831/381934', 8073),
+    ('77c', 'class-frontier-cost77c-receipts-recompute-20261115.json',
+     'frontier_after_cost77c',
+     (1290, 6557, 517923, 4827, 381646), 8, 10,
+     [10, 40, 50, 54, 58, 95, 96, 111],
+     '1290/6557/517923/4827/381646', 10558),
+    ('75d', 'class-frontier-cost75d-receipts-recompute-20261115.json',
+     'frontier_after_cost75d',
+     (1296, 6551, 517468, 4821, 381191), 4, 12, [12, 40, 92, 111],
+     '1296/6551/517468/4821/381191', 8992),
+]
+endpoints = {}
+claim_crosschecks = []
+for tag, hname, fkey, nums, nrec, closebit, order, head_after, nbytes \
+        in ENDPOINT_CHECKS:
+    hd = json.loads((OUT / hname).read_text())
+    fd = hd[fkey]
+    ep = {
+        'head': hname,
+        'git_blob_sha': POST70E_PINS[hname],
+        'solved_s6_in_manifest': fd['solved_s6_in_manifest'],
+        'unique_remaining_s6': fd['unique_remaining_s6'],
+        'sum_remaining_cost': fd['sum_remaining_cost'],
+        's6_needed_by_open_classes': fd['s6_needed_by_open_classes'],
+        'cost_needed_by_open_classes': fd['cost_needed_by_open_classes'],
+        'receipts': hd['totals']['receipts'],
+        'child_closed_by_bit': hd['totals']['child_closed_by_bit'],
+    }
+    assert (ep['solved_s6_in_manifest'], ep['unique_remaining_s6'],
+            ep['sum_remaining_cost'], ep['s6_needed_by_open_classes'],
+            ep['cost_needed_by_open_classes']) == nums, ep
+    assert ep['receipts'] == nrec and ep['child_closed_by_bit'] == closebit
+    claim = json.loads(
+        (OUT / ('class2-lane-cost%s-inflight-20261115.json' % tag)).read_text())
+    cf = claim['fold']
+    assert cf['chain_head_after'] == head_after
+    assert cf['receipts_folded'] == nrec \
+        and cf['publication_order'] == order
+    assert cf['output_blob_shas']['head_json'] == ep['git_blob_sha']
+    assert cf['head_json_bytes'] == nbytes
+    sha_c, blen_c = git_blob_sha(OUT / hname)
+    assert sha_c == cf['output_blob_shas']['head_json'] and blen_c == nbytes
+    endpoints['endpoint_cost%s' % tag] = ep
+    claim_crosschecks.append(
+        'cost-%s completed claim fold record matches the published head '
+        'JSON byte-exact (blob sha + %d bytes); head transition ends at %s'
+        % (tag, nbytes, head_after))
 
 # ---------- output ----------
 result = {
-    'schema': 'n11-class2-lane-published-chain-roots-independent-audit-20261115-v1',
+    'schema': 'n11-class2-lane-published-chain-roots-independent-audit-20261115-v3',
     'date': '2026-11-15',
     'verdict': 'AUDIT PASSED',
     'method': 'independent whole-chain audit over the published files only '
-              '(no runpy chain replay, no solved-set reconstruction): 88 git '
+              '(no runpy chain replay, no solved-set reconstruction): 95 git '
               'blob pins asserted byte-exact (26 base certificate files + 52 '
-              'pre-70e chain head JSONs + 10 pinned post-70e chain heads), the '
-              'root inventory rebuilt from the published records (194 distinct '
+              'pre-70e chain head JSONs + 17 pinned post-70e chain heads, '
+              'the v2 pin proposals 71c/70f/73g/70g now pinned, the 77b '
+              'head pinned from the 77c baseline quote plus the 77c head '
+              'pinned from the 77d claim chain_head_at_claim, and the 75d '
+              'head pinned from the completed 75d claim output_blob_shas), '
+              'the root '
+              'inventory rebuilt from the published records (194 distinct '
               'WIN7 base roots with the single intra-base duplicate root '
               'enumerated, 402 distinct receipt roots from the 52 chain head '
               'addition records, 104 base-roots re-listed by chain records), '
               'the cumulative published-root inventory reconciled at every '
               'post-70e checkpoint against each fold script\u2019s own '
-              'published folded-root count (497@1233, 499@71c, 503@70f, 512@72c, '
-              '520@73g, 528@70g, 532@73h, 534@65l / 542@74g / 546@69i branch '
-              'lines, 544@merged-65l-74g, 548@merged-65l-74g-69i, 550@76b, '
-              '553@77a), the D4 orbit structure of the full inventory '
-              'audited (542 distinct D4 orbits; 11 twin pairs with full '
-              'provenance; multi-provenance roots enumerated), per-record '
-              'geometry checked for every published receipt record and every '
-              'nested group-additions record, child-orbit closure bookkeeping '
+              'published folded-root count (497@1233, 499@71c, 503@70f, '
+              '512@72c, 520@73g, 528@70g, 532@73h, 534@65l / 542@74g / '
+              '546@69i branch lines, 544@merged-65l-74g, 548@merged-65l-'
+              '74g-69i, 550@76b, 553@77a, 557@77b, 565@77c, 569@75d), the D4 '
+              'orbit structure of the full inventory audited (558 distinct '
+              'D4 orbits over 569 roots; 11 twin pairs with full provenance; '
+              'multi-provenance roots enumerated), per-record geometry '
+              'checked for every published receipt record and every nested '
+              'group-additions record, child-orbit closure bookkeeping '
               'checked at every head declaring a child, convention-external '
               'receipts scanned (each must be a D4 twin of an inventoried '
-              'orbit, keeping the orbit inventory complete as a SET), and the '
-              'head arithmetic re-derived from the published marginal records '
-              'with zero anomalies; the 77a endpoint head and its completed '
-              'claim fold record cross-checked byte-exact',
+              'orbit, keeping the orbit inventory complete as a SET), and '
+              'the head arithmetic re-derived from the published marginal '
+              'records with zero anomalies; the 77a/77b/77c/75d endpoint '
+              'heads and their completed-claim fold records cross-checked '
+              'byte-exact',
     'controls': {
         'pins_checked': n_pins,
         'pin_groups': pin_report,
@@ -967,12 +1031,8 @@ result = {
                             'anomalies': arith_anomalies},
         'fork_merge_head': fork_entry,
         'canonical_line_hex_exactly_once': canonical_line_report,
-        'endpoint_77a': endpoint,
-        'claim_77a_crosscheck': 'completed claim fold record matches the '
-                                 'published 77a head JSON byte-exact (blob '
-                                 'sha + 7554 bytes) and the published head '
-                                 'transition 1280/6567/518678/4837/382401 -> '
-                                 '1282/6565/518522/4835/382245',
+        'endpoint_heads': endpoints,
+        'completed_claim_crosschecks': claim_crosschecks,
     },
     'interpretation_guard': 'bookkeeping audit over published receipts and '
                             'head records only; solved counts measure '
@@ -995,7 +1055,7 @@ print('pins %d (base %d, chain %d, post70e %d)' % (
 print('base roots distinct %d (dup %s), chain distinct %d, overlap %d' % (
     len(base_set), [d['root'] for d in intra_base_duplicates],
     len(chain_set), len(overlap_base_chain)))
-print('cumulative inventory @77a: %d roots / %d D4 orbits / %d twin pairs' % (
+print('cumulative inventory @75d: %d roots / %d D4 orbits / %d twin pairs' % (
     len(all_roots), n_orbits, len(twin_pairs)))
 print('receipt records %d, group records %d, geometry anomalies %d' % (
     n_receipt_records, n_group_records, len(geom_anomalies)))

@@ -1789,3 +1789,28 @@ REFUTED-D10はLOSS証明ではなく、WIN7証明書は個別7石rootの深さ10
 REFUTED-D10はLOSS証明ではなく、WIN7証明書は個別7石rootの深さ10以内の先手勝ちのみを証明する。第二target S5は残り13行で未解決、best class-2はaudit-blocked S5（10行/698）、best class-4 blocker S5は18行/1460。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}は引き続き **UNKNOWN**。次のfold baselineはhead 1290。
 
 詳細: [lane log](../../log/2026-11-15-n11-class2-lane-cost77c-sweep-certificates-and-fold.md)、[fold head JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost77c-receipts-recompute-20261115.json)、[top-candidates CSV](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-top-candidates-s6-after-cost77c-receipts-20261115.csv)、[completed claim](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost77c-inflight-20261115.json)。
+## 2026-11-15: cost-75d receipts fold — 延期foldのhead 1290 rebase完走 — 第二class-2 target S5が13→11行（head 1290→1296）・bit-92 cross-coverが並走77d行も閉鎖
+
+実行環境outageでsweep・証明書4件公開後にfoldだけ延期されていたcost-75d（第二coverable class-2 target S5 `00000000000000801202000000200000` のcost-75 child `00000000000040801202000000200000`・stones [21,49,57,60,71,78]・需要 c1=0,c2=1,c4=0・単一開lift親）を、deferral noteのrebase条項に従いhead 1290へrebaseしてfoldした（77a/77b/77c/78a foldが延期中に着地）。`recompute_frontier_cost75d_receipts_20261115.py`は77c fold scriptをrunpy再実行してhead 1290/6557/517923/4827/381646と3出力をbyte-identical assertし、claim検証・head 1290でchild genuinely remaining（第二target 13行/1018・lift 78・他5削除軌道は閉鎖維持）・sweep再導出（75候補・WIN7-D10 4件 [12,40,92,111]・71 REFUTED・0 capped・143,552,593 nodes・pilot 3402×10・det rerun node-exact・v15 pinned record一致）・証明書bytes検証（part join == whole・split manifests・BigInt+Bareiss 4/4・239,868行・8,654,219 bytes・242 sub-roots）・4 root vs 565 folded rootsのraw/D4 disjointnessを統制してから4 receiptsを公開順 [12,40,92,111] でfoldした。childは**bit12**で閉鎖・総marginal 22・in-manifest marginal 6・zero-mimなし・set等式 PASS・3回連続実行byte-identical。
+
+新canonical head **`1296/6551/517468/4821/381191`**。**第二target S5は13行/1018 → 11行/866**。喪失2行のうち1行はchild行、もう1行は**bit-92 receiptのcross-coverが閉じたcost-77行 `00000000100000801202000000200000`**（並走cost-77d sweepがIN FLIGHT claim中のchild行）で、77d foldはcost-70g先例のwarm-hygiene統制（child既閉鎖assert・拡張unionからのmarginal再導出）が必須。
+
+REFUTED-D10はLOSS証明ではなく、WIN7証明書は個別7石rootの深さ10以内の先手勝ちのみを証明する。第二target S5は残り11行で未解決、best class-2はaudit-blocked S5（10行/698）、best class-4 blocker S5は18行/1460。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}は引き続き **UNKNOWN**。次のfold baselineはhead 1296。
+
+詳細: [lane log](../../log/2026-11-15-n11-class2-lane-cost75d-receipts-fold.md)、[fold head JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost75d-receipts-recompute-20261115.json)、[top-candidates CSV](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-top-candidates-s6-after-cost75d-receipts-20261115.csv)、[completed claim](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost75d-inflight-20261115.json)。
+
+## 2026-11-15: 全published fold chain監査のv3拡張（77b/77c/75dまで）+ cost63cd malformed hex erratum記録
+
+同一監査レーンで、v2監査（1233→1282・553 roots・88 pins byte-exact）を着地済みの77b/77c/75d headまで拡張した。純stdlib・publishedファイルのみ・過去の監査状態は一切再利用しない。**全統制PASS・2回実行byte-identical**（schema v3・86,060 bytes・md5 `77d3b34952c46f16d074692b468eeb66`）。
+
+- **pins 88→95**: v2のpin提案4件（71c `61af2eb3…`・70f `4d0f130e…`・73g `e4fb98dc…`・70g `73890fe3…`）をpin tableに反映し、77b `b648ed06…`（77c headのbaseline_main quoteから）・77c `7f2badce…`（77d claimのchain_head_at_claimから）・75d `c801e605…`（completed 75d claimのoutput_blob_shasから）を追加。post-70e headは全件pinnedとなった。
+- **root在庫 553→569**（557@77b・565@77c・569@75d・branch-aware own-line lineage一致）。新16 receipt rootsは16新D4 orbitで**twin pair増加なし**（558 orbits / 569 roots / 11 twins）——77b/77c/75d fold scriptのraw+D4 disjointness主張を先行在庫全体に対して独立確認し、特に**deferred後にrebaseされた75d receiptsがどこでも未計数だった**ことも確認。
+- **head arithmetic 66→69 heads・anomaly 0**: 77b/77c/75dともsequential-fold-union（delta 4/4/6・sum_mim == union_mim == delta・77cのraw marginal 36・75dのraw marginal 22のうちin-manifestは4/6）。3 baseline quoteはpublished状態と5数値完全一致（77b→77a・77c→77b・75d→77c frontier状態）。quote erratumは既知の70fのみ・pointer-differsは74gのみ。
+- **canonical-line hex-level exactly-once 1233→1296**: 正準鎖に77a→77b→77c→75dを追加し、63 manifest hexes（49+4+4+6）が各々ちょうど1つのreceipt recordからmarginal主張される（total mim 63 == distinct 63 == 1296−1233・multi-claim 0）。75dのbit-92 cross-coverによる77d child行の閉鎖もこのhex集合に正確に1回だけ計上。
+- **endpoint 77a/77b/77c/75d**: 4件のcompleted claim fold recordがpublished head JSONとbyte-exact（blob sha a2ba7235…/b648ed06…/7f2badce…/c801e605…・7554/8073/10558/8992 bytes）・head遷移 1280→1282→1286→1290→1296 成立。
+
+**cost63cd malformed hex erratum（本項目に記録・履歴文書はbyte-unmodified）**: `class2-lane-cost63cd-frontier-recompute-20261114.json` の `cost63b_addition` の `marginal_manifest_hexes` に35文字のmalformed hex `00000000000010000003800000000100020` が混入（残り7件は正常）。`marginal_in_manifest`=8は計数整合で**fold算術・被覆計数には無影響**。1〜4文字削除でもLevenshtein-4修復でも未掲載covers候補から一意に修復できず、published corpus単独では当該1エントリのhex同一性は回復不能。v2監査で発見・v3監査でも単一のpublished hex erratumとして再確認。
+
+cost-77d（並走IN FLIGHT・sweepは77c head基準で実行中）はfold head未存在のため本監査対象外。77d fold着地時はhead 1296へのrebaseと、75d bit-92 cross-coverでchild行が既に閉じたことに伴うwarm-hygiene統制（cost-70g先例）が必要。solved 1296はmanifest被覆の簿記であり勝敗ではない。REFUTED-D10はLOSS証明ではない。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class1・class2・class4は引き続き **UNKNOWN**。
+
+詳細: [監査log](../../log/2026-11-15-n11-published-fold-chain-roots-independent-audit.md)、[audit JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-published-chain-roots-independent-audit-20261115.json)、[audit script](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_published_chain_roots_independent_20261115.py)。

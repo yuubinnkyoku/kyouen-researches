@@ -1,8 +1,8 @@
 {
- "schema": "n11-class2-lane-cost75d-inflight-20261115-v1",
+ "schema": "n11-class2-lane-cost75d-inflight-20261115-v2",
  "title": "n11 class2-lane cost-75d sweep in flight: next-cheapest unswept child of the second coverable class-2 target S5 at the merged canonical head 1277",
  "date": "2026-11-15",
- "status": "in_flight",
+ "status": "completed (sweep + WIN7 certificates + receipts fold)",
  "claimed_by": "long-term class2 lane (11x11 weak-solve long-term lane execution)",
  "s5_parent1": "00000000000000801202000000200000",
  "s5_parent2": null,
@@ -125,5 +125,43 @@
  "verdict_semantics": "loss=true => WIN7-within-depth-10 candidate (certificate rebuild target); loss=false && !capped => no winner win within depth 10 (NOT a refutation); capped => proves nothing either way",
  "unknown_note": "11x11 empty board, two-stone root {49,60}/{59,60}, S2 {59,60}, class 1, class 2 and class 4 all remain UNKNOWN; sweeping this child does not change any game-theoretic value; solved counts measure manifest coverage only",
  "coordination_note": "claimed against the 3-way merged canonical head 1277 (65l+74g+69i fork resolved); stale parallel claims (cost-69g/65j/74e, and the older cost-75c in_flight on a different child) are untouched; any fold must assert the canonical head in force when it folds (currently 1277)",
- "batch_plan": "75 candidates in 10 batches (9x8 + 1x3), raw JSONL pushed per batch as completed"
+ "batch_plan": "75 candidates in 10 batches (9x8 + 1x3), raw JSONL pushed per batch as completed",
+ "fold": {
+  "status": "completed",
+  "chain_head_before": "1290/6557/517923/4827/381646",
+  "chain_head_after": "1296/6551/517468/4821/381191",
+  "receipts_folded": 4,
+  "publication_order": [
+   12,
+   40,
+   92,
+   111
+  ],
+  "total_marginal": 22,
+  "total_marginal_in_manifest": 6,
+  "zero_marginal_in_manifest": [],
+  "child_orbit_closed_by_bit": 12,
+  "parents_after": {
+   "parent1": "11 rows / 866"
+  },
+  "parents_lost_rows": {
+   "parent1": [
+    "00000000000040801202000000200000",
+    "00000000100000801202000000200000"
+   ]
+  },
+  "output_blob_shas": {
+   "head_json": "c801e60578ee5c5272e75719e35847052ac58314",
+   "ranking_csv": "25b7fc1ba84d4d0450cf9201312a9355cf7414a1",
+   "top_candidates_csv": "d678283703f7e229a1d36990145bbfa5107ba82d"
+  },
+  "head_json_bytes": 8992,
+  "ranking_csv_bytes": 7538,
+  "top_candidates_csv_bytes": 7416,
+  "fold_script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost75d_receipts_20261115.py",
+  "reproduction": "python research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost75d_receipts_20261115.py",
+  "deferred_fold_note": "this fold was deferred at head 1280 by an execution-environment outage (research/log/2026-11-15-n11-class2-lane-cost75d-fold-deferral-note.md); executed here rebased to the canonical head 1290 per the deferral note's rebase clause (cost-77a/77b/77c and 78a folds landed in between); three consecutive runs byte-identical",
+  "cross_cover_note": "the bit-92 receipt cross-covers 00000000100000801202000000200000, the second target's cost-77 child row that the parallel cost-77d sweep has claimed in-flight at head 1290; that row is already closed at the new head 1296, so the parallel 77d fold must follow the warm-hygiene pattern (cost-70g precedent)",
+  "note": "The second coverable class-2 target S5 00000000000000801202000000200000 now has 11 remaining rows (was 13). Marginal counts are D4-orbit bookkeeping over published receipts, not game-theoretic values."
+ }
 }

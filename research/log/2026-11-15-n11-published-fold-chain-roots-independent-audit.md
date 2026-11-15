@@ -109,3 +109,77 @@ class 1 / class 2 / class 4 all remain UNKNOWN.**
   script's pin table; (2) record the cost63cd malformed-hex erratum in the lane's errata
   list if one is maintained; (3) extend the same whole-chain audit to heads published
   after 77a once the 77b/78a chain lands.
+
+## v3 extension (2026-11-15, same audit lane): chain extended to the 77b/77c/75d heads
+
+Three folds landed after the v2 audit (77b head
+`1286/6561/518211/4831/381934`, 4 receipts bits 9/12/59/105; 77c head
+`1290/6557/517923/4827/381646`, 8 receipts bits 10/40/50/54/58/95/96/111;
+and the deferred 75d fold rebased onto the 77c head per its deferral-note
+rebase clause, head `1296/6551/517468/4821/381191`, 4 receipts bits
+12/40/92/111), so the same whole-chain audit was extended (v3) to the new
+canonical endpoint 1296. No prior audit script state is reused beyond the
+v2 script's own verified structure; every new number is re-derived from the
+published files.
+
+What changed in v3 (all re-verified, two consecutive runs byte-identical):
+
+1. **Pins extended 88 -> 95**: the four v2 pin proposals (71c `61af2eb3…`,
+   70f `4d0f130e…`, 73g `e4fb98dc…`, 70g `73890fe3…`) are now pinned in the
+   audit's POST70E pin table (v2 resume item (2)), and the three new heads
+   are pinned from published provenance: 77b `b648ed06…` (the 77c head's
+   `baseline_main` quote), 77c `7f2badce…` (the in-flight cost-77d claim's
+   `chain_head_at_claim`), 75d `c801e605…` (the completed 75d claim's
+   `output_blob_shas`). All 95 pins assert byte-exact; no post-70e head
+   remains unpinned.
+2. **Root inventory 553 -> 569** (557@77b, 565@77c, 569@75d), all reconciled
+   branch-aware (77b's baseline 77a, 77c's baseline 77b, 75d's baseline 77c;
+   every own-branch lineage matches the published own claim). The 16 new
+   receipt roots add 16 new D4 orbits and **no new twin pair** (558 orbits /
+   569 roots / 11 twin pairs), independently confirming the 77b/77c/75d
+   fold scripts' raw+D4 disjointness assertions against the full prior
+   inventory — in particular that the deferred-then-rebased 75d receipts
+   were never counted anywhere before.
+3. **Per-record geometry**: 434 receipt records + 40 group records, 0
+   anomalies; the cost63cd malformed-hex erratum remains the single
+   published hex erratum.
+4. **Head arithmetic 66 -> 69 heads, 0 anomalies**: 77b, 77c and 75d all
+   classify as sequential-fold-union (deltas 4/4/6 with sum_mim ==
+   union_mim == delta; 77c's raw marginal 36 and 75d's raw marginal 22 each
+   carry only 4/6 in-manifest); all three baseline quotes match published
+   states exactly (77b quotes the 77a frontier state, 77c the 77b state,
+   75d the 77c state). The 70f quote erratum and the 74g pointer-differs
+   case remain the only two quote-level findings.
+5. **Canonical-line hex-level exactly-once extended 1233 -> 1296**: the
+   canonical line now ends at 75d (77a -> 77b -> 77c -> 75d appended); 63
+   manifest hexes (49 + 4 + 4 + 6) are each claimed as a marginal by
+   exactly one receipt record, total mim 63 == 63 distinct == 1296 - 1233,
+   zero multi-claims.
+6. **Endpoint checks extended to 77a/77b/77c/75d**: all four completed-claim
+   fold records match their published head JSONs byte-exact (blob shas
+   a2ba7235…/b648ed06…/7f2badce…/c801e605…, 7554/8073/10558/8992 bytes) and
+   the published head transitions 1280 -> 1282 -> 1286 -> 1290 -> 1296 hold.
+
+cost-77d (sweep in flight on a parallel lane against the 77c head) is NOT
+part of this audit — no fold head exists yet; its eventual fold must rebase
+to the new canonical head 1296. This lane touched neither the 77d sweep nor
+any in-flight claim.
+
+The cost63cd malformed-hex erratum is recorded in K0783 this session
+(v2 resume item (3)).
+
+### v3 machine-readable record
+
+- Audit JSON (supersedes the v2 landing): schema
+  `n11-class2-lane-published-chain-roots-independent-audit-20261115-v3`,
+  md5 `77d3b34952c46f16d074692b468eeb66`, 86060 bytes.
+- Audit script: same path, extended in place (the v2 structure is kept;
+  POST70E pin table and order, own-claim/own-baseline tables, canonical
+  line and endpoint checks are the changed regions).
+
+### Interpretation guard (unchanged)
+
+Bookkeeping audit over published receipts and head records only. Solved 1296
+is manifest coverage, not any position's game-theoretic value. REFUTED-D10
+is not a LOSS proof. **11x11 empty board / two-stone root {49,60} /
+S2 {59,60} / class 1 / class 2 / class 4 all remain UNKNOWN.**
