@@ -80,6 +80,32 @@ sat3.js decode verifyConfig PASS + verify_witness.py Python Fraction PASS の
 (seven-row-q5-q8-sat-frontier-20261115) — class {3} instance の方が約 7 倍
 深い (6行を exactly 5 に固定すると SAT 探索がむしろ難化する観測)。
 
+## 結果: 7×30 witness 発見 — witness 帯 m=6..30・M_{7,6} ∈ [31, 862] (2026-11-15 11:33Z)
+
+**class {3} (7,30,6) SAT: 2,670,296 conflicts / 497.0s (cap 600 内・cnf_md5
+`09e969b9461e413551f61f76bff817ce`)**。driver v2 が SAT を検出して掃引を即時
+打ち切り (SWEEP_SAT_ABORT・他 70 クラスは不実施 = 不在主張なし)。
+
+**witness: 34石 rows [5,5,5,4,5,5,5]・row 3 の石は列 [12,23,27,29]**
+(3 番目の連続幅帯延長 m=28→29→30)。**3 系統検証 PASS**:
+
+1. `sat.js verifyConfig` (census) — ok, size 34, rows [5,5,5,4,5,5,5], minRow 4。
+2. `verify_witness.py` (Python Fraction・census 不使用) — ok, n 34, min_row 4。
+3. `verify_witness_det.js` (第三系統・純整数 4×4 行列式円判定・自己テスト
+   3 件組み込み・repo コード不使用) — ok, maxLine 5, maxCircle 5, uncovered 0。
+
+**負対照 PASS**: 石 (12,3) を除去した摂動配置は py/det 両系統で not-maximal
+(cells [1,3],[5,3],[11,3],[12,3]) — 検証器が非極大を検出する実地確認。
+**toolchain 備考**: sat3.js decode は `Math.max(...lits)` の spread が
+>65k 変数モデルで RangeError (m=30 は 123,533→128k 変数系)。モデル解析は
+独立 Python パーサ (output/c3.model.txt → c3.stones.json) で実施。
+sat3.js blob 自体は不変 (他レーンの較正に影響しない)。
+
+よって **witness 帯 m=6..30 に延伸し M_{7,6} ∈ [31, 862]** (上界 K0318
+substitution U=862 不変)。7×30 の不在は不成立 — rowY=0/1/2 の既存 250s
+INDET と rowY=3 の 900s INDET は witness 手前の打ち切りだったことが確定。
+残る前線は 7×31。
+
 ## Not claimed
 
 - 7×30 以外の幅、(7,q≠6) 家族、Grundy 値、

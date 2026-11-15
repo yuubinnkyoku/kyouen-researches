@@ -1,0 +1,199 @@
+{
+ "w": 7,
+ "m": 30,
+ "q": 6,
+ "nStones": 34,
+ "rows": [
+  5,
+  5,
+  5,
+  4,
+  5,
+  5,
+  5
+ ],
+ "stones": [
+  [
+   6,
+   0
+  ],
+  [
+   7,
+   0
+  ],
+  [
+   11,
+   0
+  ],
+  [
+   12,
+   0
+  ],
+  [
+   23,
+   0
+  ],
+  [
+   4,
+   1
+  ],
+  [
+   13,
+   1
+  ],
+  [
+   25,
+   1
+  ],
+  [
+   26,
+   1
+  ],
+  [
+   29,
+   1
+  ],
+  [
+   0,
+   2
+  ],
+  [
+   9,
+   2
+  ],
+  [
+   13,
+   2
+  ],
+  [
+   19,
+   2
+  ],
+  [
+   22,
+   2
+  ],
+  [
+   12,
+   3
+  ],
+  [
+   23,
+   3
+  ],
+  [
+   27,
+   3
+  ],
+  [
+   29,
+   3
+  ],
+  [
+   19,
+   4
+  ],
+  [
+   24,
+   4
+  ],
+  [
+   25,
+   4
+  ],
+  [
+   26,
+   4
+  ],
+  [
+   28,
+   4
+  ],
+  [
+   1,
+   5
+  ],
+  [
+   6,
+   5
+  ],
+  [
+   7,
+   5
+  ],
+  [
+   21,
+   5
+  ],
+  [
+   24,
+   5
+  ],
+  [
+   4,
+   6
+  ],
+  [
+   9,
+   6
+  ],
+  [
+   23,
+   6
+  ],
+  [
+   25,
+   6
+  ],
+  [
+   29,
+   6
+  ]
+ ],
+ "deficientRow": 3,
+ "row3Cols": [
+  12,
+  23,
+  27,
+  29
+ ],
+ "provenance": "7x30 q=6 class {3} sat3.js kissat 4.0.4 SAT (2,670,296 conflicts / 497.0s, cap 600, cnf_md5 09e969b9461e413551f61f76bff817ce, key c3, seven-row-q6-m30-class-split-20261115); third witness family member extending the band m=6..30; model decoded by an independent Python parser (sat3.js decode spread-arg overflow at 128k vars)",
+ "jsVerify": {
+  "source": "sat.js verifyConfig (census)",
+  "ok": true,
+  "size": 34,
+  "rows": [
+   5,
+   5,
+   5,
+   4,
+   5,
+   5,
+   5
+  ],
+  "minRow": 4
+ },
+ "pyVerify": {
+  "source": "verify_witness.py exact Fraction",
+  "ok": true,
+  "n": 34,
+  "rows": [
+   5,
+   5,
+   5,
+   4,
+   5,
+   5,
+   5
+  ],
+  "min_row": 4
+ },
+ "detVerify": {
+  "source": "verify_witness_det.js pure integer 4x4 determinant, self-tested",
+  "ok": true,
+  "maxLine": 5,
+  "maxCircle": 5,
+  "uncovered": 0
+ },
+ "negativeControl": "removing stone (12,3) -> both py and det verifiers report not-maximal (cells [1,3],[5,3],[11,3],[12,3])"
+}
