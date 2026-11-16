@@ -13,7 +13,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parents[1]
 OUT = HERE / "output"
-CLAIM_NAME = "class2-lane-cost76c-inflight-20261116.json"
+CLAIM_NAME = "class2-lane-cost76c-claim-input-20261117.json"
 PRESWEEP_NAME = "class2-lane-next-target-presweep-1452-20261116.json"
 CLAIM_BLOB = "8932f2d5e100325549a5f251a1d883558cae0708"
 PRESWEEP_BLOB = "0d9a94a272de9fe45708757f17bfea60239a3c9b"
