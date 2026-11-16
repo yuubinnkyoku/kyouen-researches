@@ -1,0 +1,41 @@
+{
+  "schema": "kyouen.two_token_value2_grid_audit.v1",
+  "status": "finite_audit_only",
+  "claim_tested": "K0832 three-family conjecture for H(R;(x,y);z)=2",
+  "sorted_canonical_engine": {
+    "x_max": 60,
+    "z_max": 60,
+    "y_range": "1 <= y <= x",
+    "R_range": "0 <= R <= x+y+z",
+    "cases": 10269960,
+    "mismatches": 0,
+    "cache_hits": 30579057,
+    "cache_misses": 10498771,
+    "cache_size": 10498771
+  },
+  "ordered_labeled_engine": {
+    "x_max": 60,
+    "z_max": 45,
+    "y_range": "1 <= y <= x",
+    "R_range": "0 <= R <= x+y+z",
+    "sorting": false,
+    "z_blocks": [[0, 10], [11, 20], [21, 30], [31, 40], [41, 45]],
+    "cases": 7113210,
+    "mismatches": 0
+  },
+  "direct_engine_cross_check": {
+    "x_max": 20,
+    "z_max": 20,
+    "R_range": "0 <= R <= x+y+z",
+    "cases": 141120,
+    "engine_value_mismatches": 0,
+    "formula_mismatches": 0
+  },
+  "tail_scope": "The proved tail theorem gives H(R;(x,y);z)=x+y mod 2 for R >= x+y+z+1, so no value-2 positions can occur beyond the finite R range scanned for each tested (x,y,z).",
+  "limitations": [
+    "Finite parameter boxes do not prove the conjecture for all x,y,z.",
+    "The ordered engine is scanned only through z=45.",
+    "This audit classifies only the value-2 locus, not all values 0,1,2.",
+    "The all-parameter three-family conjecture remains unproved."
+  ]
+}
