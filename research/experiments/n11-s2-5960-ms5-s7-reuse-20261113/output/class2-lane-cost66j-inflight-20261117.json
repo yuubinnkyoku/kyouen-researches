@@ -1,8 +1,8 @@
 {
-  "schema": "n11-class2-lane-cost66j-inflight-20261117-v1",
+  "schema": "n11-class2-lane-cost66j-sweep-complete-20261117-v2",
   "title": "n11 class2-lane cost66j: planned fresh 66-bit depth-10 sweep of the cheapest remaining unswept/unclaimed row of the primary pure class-2 target family (head-1472 presweep census v3 selection)",
   "date": "2026-11-17",
-  "status": "claimed; sweep not yet started at publication time; this file records the preregistered plan, batch split and expected transfer verdicts before any engine run",
+  "status": "sweep complete: 9 WIN7-D10 + 57 REFUTED-D10, 0 capped; raw batches 1-9, determinism reruns (batches 5/8) and the v15 crosscheck published and audited (0 conflicts vs the 64h/76c/66i maps); certificate extraction pending; this row's receipt fold must wait behind the pending cost-76c and cost-66i folds",
   "claimed_by": "n11 long-term lane session (head-1472 presweep census v3 selector)",
   "s5": "00000000000000403800000008000000",
   "s6_child": "00000000000000c09002000000001000",
@@ -318,5 +318,59 @@
   "unknown_status": "11x11 empty board: UNKNOWN. A completed sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 7-stone roots of this child. The two-stone roots {49,60} and {59,60}, S2 {59,60} and classes 1/2/4 remain UNKNOWN.",
   "coordination_note": "latest main fetched immediately before this push (HEAD ea2b53a0, the census v3 commit); no claim, raw batch or audit exists for this child on main (searched: child hex, cost66j); the parallel lane holds the pending cost-76c fold (bit 61 certificate in flight) and the cost-66i receipt fold behind it; this claim does not touch either fold",
   "next_action": "run the 9 planned v17 batches (8x8 sweep bits + 1 confirmation pair), publish the raw JSONL batches, then the stdlib-only raw audit with the cross-sweep conflict scan against the 64h/76c/66i verdict maps; on WIN bits extract certificates, verify independently, then wait behind the 76c/66i folds before any receipt fold of this row",
-  "last_updated": "2026-11-17"
+  "last_updated": "2026-11-17",
+  "actual_execution": {
+    "date": "2026-11-17",
+    "basis_head": "1472/174/6376/504672/4649/368586",
+    "engine": "v17 (blob c132cc6425eee3feaeef1d697dd74f968cfedb59), fresh environment",
+    "actual_raw_batches": 9,
+    "actual_raw_candidate_bits": 66,
+    "planned_engine_bits": 66,
+    "win7_d10_bits": [
+      7,
+      9,
+      30,
+      66,
+      78,
+      79,
+      92,
+      96,
+      114
+    ],
+    "winner_roots": [],
+    "refuted_d10_count": 57,
+    "capped_count": 0,
+    "candidate_nodes": 65981633,
+    "pilot_count": 9,
+    "pilot_nodes_each": 3402,
+    "total_nodes_including_pilots": 65982115,
+    "terminal_stone_range": [
+      13,
+      17
+    ],
+    "andclose": true,
+    "confirmation_bits_agreement": {
+      "bits": [
+        20,
+        97
+      ],
+      "result": "2/2 REFUTED-D10 as expected (bit 20 = cost-64h orbit transfer as 64h bit 108, cross-engine canon agreement; bit 97 = v1 harvest transfer confirmed fresh)"
+    },
+    "parallelism_note": "two background streams (2 concurrent node processes, nproc=2, cgroup quota 1 CPU); batch wall times 3-40s each, total ~2 minutes; the standalone bit-20 pre-batch test (518,569 nodes) matches the batch-9 line exactly",
+    "determinism_rerun": "batches 5 (heaviest, WIN bits 66/78/79) and 8 (WIN bit 114) re-run field-identical on all non-ms fields (class2-lane-cost66j-det-batch{5,8}-20261117.jsonl)",
+    "v15_crosscheck": "independent v15 engine (blob 8744fc65...) re-checked all 9 WIN bits: 9/9 loss=true, pilot exactly 5949 (class2-lane-cost66j-v15-crosscheck-20261117.jsonl)",
+    "independent_audit": "class2-lane-cost66j-raw-audit-20261117.json (audit_cost66j_raw_batches_20261117.py): all checks passed, cross-source conflict scan vs the 64h/76c/66i verdict maps found 0 conflicts, internal canon collisions 0, v1 bit-table canon agreement 66/66",
+    "audit_json": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost66j-raw-audit-20261117.json"
+  },
+  "certificate_extraction": {
+    "status": "pending; the 9 WIN7-D10 roots await certificate extraction and independent verification (next step)"
+  },
+  "receipt_fold": {
+    "status": "pending behind the cost-76c and cost-66i folds",
+    "note": "the 9 WIN7-D10 certificates, once verified, fold only after the cost-76c fold (parallel lane, bit 61 certificate in flight) and the cost-66i receipt fold land; no manifest row is closed by the sweep itself"
+  },
+  "previous_version": {
+    "schema": "n11-class2-lane-cost66j-inflight-20261117-v1",
+    "blob_sha": "68d8f8f26f598ad061021cda3d9a240518c0e73a"
+  }
 }
