@@ -1,0 +1,295 @@
+{
+  "basis": {
+    "basis_distinct_d4_canons": 756,
+    "basis_receipt_roots": 771,
+    "head_after_any_one_cost76c_candidate": [
+      1453,
+      174,
+      6395,
+      506068,
+      4668,
+      369982
+    ],
+    "head_after_cost76d77e": [
+      1452,
+      174,
+      6396,
+      506144,
+      4669,
+      370058
+    ],
+    "head_before_cost76d77e": [
+      1450,
+      174,
+      6398,
+      506297,
+      4671,
+      370211
+    ],
+    "manifest_rows": 7867,
+    "head_after_all_two_cost76c_candidates": [
+      1453,
+      174,
+      6395,
+      506068,
+      4668,
+      369982
+    ]
+  },
+  "candidate_cover_union": {
+    "candidate_count": 2,
+    "candidate_bits": [
+      61,
+      99
+    ],
+    "distinct_d4_s6_orbits": 15,
+    "manifest_intersection": 7,
+    "already_covered_manifest_orbits_at_head1452": 6,
+    "currently_open_manifest_orbits": 1,
+    "currently_open_manifest_hexes": [
+      "00000000010000809002000001000000"
+    ],
+    "new_manifest_orbits_if_both_are_folded": 1,
+    "new_non_manifest_orbits_if_both_are_folded": 8,
+    "new_orbits_if_both_are_folded": 9,
+    "outside_manifest_orbits": 8
+  },
+  "combined_projection": {
+    "affected_parents_after_bit61": {
+      "00000000000000003800000208000000": {
+        "classes": 2,
+        "edge_cost_after": 5282,
+        "edge_cost_before": 5358,
+        "lost_edge_cost": 76,
+        "lost_rows_hexes": [
+          "00000000040000003800080008000000"
+        ],
+        "rows_after": 64,
+        "rows_before": 65,
+        "s5_hex": "00000000000000003800000208000000"
+      },
+      "00000000000000801202000000040000": {
+        "classes": 2,
+        "edge_cost_after": 5883,
+        "edge_cost_before": 5960,
+        "lost_edge_cost": 77,
+        "lost_rows_hexes": [
+          "00000000040000809002000000004000"
+        ],
+        "rows_after": 71,
+        "rows_before": 72,
+        "s5_hex": "00000000000000801202000000040000"
+      },
+      "00000000000000801202000040000000": {
+        "classes": 2,
+        "edge_cost_after": 135,
+        "edge_cost_before": 364,
+        "lost_edge_cost": 229,
+        "lost_rows_hexes": [
+          "00000000010000809002000001000000",
+          "00000000040000003800080008000000",
+          "00000000040000809002000000004000"
+        ],
+        "rows_after": 2,
+        "rows_before": 5,
+        "s5_hex": "00000000000000801202000040000000"
+      },
+      "00000000000000801202000100000000": {
+        "classes": 2,
+        "edge_cost_after": 5682,
+        "edge_cost_before": 5758,
+        "lost_edge_cost": 76,
+        "lost_rows_hexes": [
+          "00000000010000809002000001000000"
+        ],
+        "rows_after": 68,
+        "rows_before": 69,
+        "s5_hex": "00000000000000801202000100000000"
+      }
+    },
+    "fold_order_bits": [
+      61,
+      99
+    ],
+    "parent_edge_cost_lost": 458,
+    "parent_row_incidences_lost": 6,
+    "per_candidate_marginal": [
+      {
+        "bit": 61,
+        "marginal_d4_s6_orbits": 5,
+        "marginal_manifest_hexes": [
+          "00000000010000809002000001000000"
+        ],
+        "marginal_manifest_rows": 1
+      },
+      {
+        "bit": 99,
+        "marginal_d4_s6_orbits": 4,
+        "marginal_manifest_hexes": [],
+        "marginal_manifest_rows": 0
+      }
+    ],
+    "projected_head": {
+      "cost_needed_by_open_classes": 369982,
+      "remaining_s5_orbits": 174,
+      "s6_needed_by_open_classes": 4668,
+      "solved_s6_in_manifest": 1453,
+      "sum_remaining_cost": 506068,
+      "unique_remaining_s6": 6395
+    },
+    "parent_effect_scope": "The parent-row and parent-edge deltas below are the published bit61-first projection only; bit99 adds four D4 orbits but zero further manifest rows."
+  },
+  "date": "2026-11-17",
+  "interpretation_guard": "This is a corrected projection over two v17 WIN7-D10 candidates. The v17 raw sweep was independently reaggregated from all ten raw batches. The D4 cover geometry is a restriction of the prior pinned three-candidate projection after removing bit113's final four non-manifest marginal orbits; no new geometric engine run was performed. No certificate was extracted or independently verified, and no receipt fold was applied. REFUTED-D10 is not a LOSS proof. The standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN.",
+  "recommendation": {
+    "first_certificate_extraction_bit": 61,
+    "fallback_bits_if_extraction_fails": [
+      99
+    ],
+    "node_ratios_vs_bit61": {
+      "61": 1,
+      "99": 5.500772
+    },
+    "reason": "After excluding bit113 (v17 REFUTED-D10), bit61 contributes five new D4 S6 orbits and bit99 contributes four more. Both individually touch the same one open manifest row; in bit order the manifest marginals are 1/0. Bit61 has fewer v17 raw nodes (752696 vs 4140409).",
+    "caveat": "Raw search-node count is not certificate-extraction cost. Bit99 remains a backup WIN7-D10 search candidate, not a LOSS proof."
+  },
+  "schema": "n11-class2-lane-cost76c-v17-corrected-candidate-manifest-marginals-20261117-v1",
+  "single_candidate_projections": [
+    {
+      "bit": 61,
+      "covers_d4_s6_orbits": 7,
+      "marginal_d4_s6_orbits": 5,
+      "marginal_hexes": [
+        "00000000000000803800000001000100",
+        "0000000001000000b002000001000000",
+        "00000000010000809002000001000000",
+        "0000000001000080a002000001000000",
+        "0000000001000080b000000001000000"
+      ],
+      "marginal_manifest_hexes": [
+        "00000000010000809002000001000000"
+      ],
+      "marginal_manifest_rows": 1,
+      "new_non_manifest_marginal": 4,
+      "nodes": 752696,
+      "nodes_relative_to_bit61": 1,
+      "projected_head": {
+        "cost_needed_by_open_classes": 369982,
+        "remaining_s5_orbits": 174,
+        "s6_needed_by_open_classes": 4668,
+        "solved_s6_in_manifest": 1453,
+        "sum_remaining_cost": 506068,
+        "unique_remaining_s6": 6395
+      },
+      "root_canon": "0000000001000080b002000001000000",
+      "root_hex": "0000000001000080b002000001000000",
+      "v16_nodes": 752696,
+      "nodes_source": "independently reaggregated v17 raw batch"
+    },
+    {
+      "bit": 99,
+      "covers_d4_s6_orbits": 7,
+      "marginal_d4_s6_orbits": 5,
+      "marginal_hexes": [
+        "00000000000000003800000001000300",
+        "00000000010000809002000001000000",
+        "00000000040000009002000000400800",
+        "00000000040000808002000000400800",
+        "00000000040000809000000000400800"
+      ],
+      "marginal_manifest_hexes": [
+        "00000000010000809002000001000000"
+      ],
+      "marginal_manifest_rows": 1,
+      "new_non_manifest_marginal": 4,
+      "nodes": 4140409,
+      "nodes_relative_to_bit61": 5.538705,
+      "projected_head": {
+        "cost_needed_by_open_classes": 369982,
+        "remaining_s5_orbits": 174,
+        "s6_needed_by_open_classes": 4668,
+        "solved_s6_in_manifest": 1453,
+        "sum_remaining_cost": 506068,
+        "unique_remaining_s6": 6395
+      },
+      "root_canon": "00000000040000809002000000400800",
+      "root_hex": "00000008010000809002000001000000",
+      "v16_nodes": 4168961,
+      "nodes_source": "independently reaggregated v17 raw batch"
+    }
+  ],
+  "source_blob_pins": {
+    "prior_three_candidate_projection": "96916b0659a3366290882d29ff46158425058188",
+    "v17_fbt_saturation_audit": "235f964365a7ab33e33986c915fc7f6861e4d686",
+    "claim_input_snapshot": "8932f2d5e100325549a5f251a1d883558cae0708",
+    "v17_runner": "c132cc6425eee3feaeef1d697dd74f968cfedb59",
+    "corrected_marginal_auditor": "e6f8ca925348a18ac7be545aa4c0b5cb32654f09",
+    "raw_batches": {
+      "1": "a62cd9aa478d3930cc8f672cd1fa8ae55f399d73",
+      "2": "9d4aacedd902eef335d349c9467f31ee256df897",
+      "3": "c20c808a7963726374922d3a05e91de7c65b3ce2",
+      "4": "26729eb3e5997a52c8b31ed4d9afcd22579c840f",
+      "5": "937e64420909119b315c5bb302e23a782b53cc0c",
+      "6": "472168193757ddec5eed790880d12c63be631a26",
+      "7": "78897a4bd09f02e7e6e029115ec241c064345cbc",
+      "8": "44482915469b3e52e7964808d3f118197acce7e4",
+      "9": "d77a403725a7b9dc93d9e43a84ef160a2e196d49",
+      "10": "f54c9f0c573314b971c6e50cd154175013d05383"
+    }
+  },
+  "status": "v17-corrected two-WIN candidate projection; no certificate extracted; no fold",
+  "removed_candidate": {
+    "bit": 113,
+    "root_canon": "00000000040000809002000000400008",
+    "v16_published": "WIN7-D10",
+    "v17": "REFUTED-D10",
+    "v16_nodes": 8174662,
+    "v17_nodes": 7893054,
+    "v15_v17_andclose1_agreement": true,
+    "reason": "Excluded from certificate extraction and fold; the v17 repaired engine removes the v16 false-positive verdict."
+  },
+  "v17_raw_reaggregation": {
+    "raw_records": 86,
+    "candidate_records": 76,
+    "unique_candidate_bits": 76,
+    "winner_bits": [
+      61,
+      99
+    ],
+    "refuted_d10_count": 74,
+    "capped_count": 0,
+    "candidate_nodes": 144218750,
+    "pilot_count": 10,
+    "pilot_nodes_each": 3402,
+    "terminal_stone_range": [
+      13,
+      17
+    ],
+    "andclose": true,
+    "raw_batch_blob_pins": {
+      "1": "a62cd9aa478d3930cc8f672cd1fa8ae55f399d73",
+      "2": "9d4aacedd902eef335d349c9467f31ee256df897",
+      "3": "c20c808a7963726374922d3a05e91de7c65b3ce2",
+      "4": "26729eb3e5997a52c8b31ed4d9afcd22579c840f",
+      "5": "937e64420909119b315c5bb302e23a782b53cc0c",
+      "6": "472168193757ddec5eed790880d12c63be631a26",
+      "7": "78897a4bd09f02e7e6e029115ec241c064345cbc",
+      "8": "44482915469b3e52e7964808d3f118197acce7e4",
+      "9": "d77a403725a7b9dc93d9e43a84ef160a2e196d49",
+      "10": "f54c9f0c573314b971c6e50cd154175013d05383"
+    },
+    "v15_v17_andclose1_agreement": {
+      "61": "WIN7-D10",
+      "99": "WIN7-D10",
+      "113": "REFUTED-D10"
+    },
+    "checks": {
+      "legal_candidate_set_exact": true,
+      "no_duplicate_bits": true,
+      "all_pilots_exact": true,
+      "all_uncapped": true,
+      "all_terminal_ranges_exact": true,
+      "all_v17_per_bit_records_match": true
+    }
+  }
+}
