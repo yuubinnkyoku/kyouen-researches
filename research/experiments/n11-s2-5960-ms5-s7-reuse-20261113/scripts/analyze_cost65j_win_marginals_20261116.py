@@ -189,10 +189,12 @@ def main():
     op = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..',
                       'output', 'class2-lane-cost65j-win-marginals-20261116.json')
     with open(op, 'w') as f:
-        f.write(json.dumps(out, indent=1) + '
-')
+        f.write(json.dumps(out, indent=1) + '\n')
     print('receipts:', len(receipts), 'covered manifest rows (union):',
           len(out['covered_manifest_rows_union']))
+    for d, v in out['covered_manifest_rows_union'].items():
+        print('  row', d, 'cost', v['cost'], 'classes', v['classes'],
+              'bits', v['covered_by_bits'])
     print('65f-covered-row checks:', all(c['verified'] for c in checks.values()))
     print('written', op)
 
