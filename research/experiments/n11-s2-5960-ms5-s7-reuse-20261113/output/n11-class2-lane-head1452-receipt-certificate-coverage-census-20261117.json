@@ -1,0 +1,6619 @@
+{
+ "schema": "n11-class2-lane-head1452-receipt-certificate-coverage-census-20261117-v1",
+ "date": "2026-11-17",
+ "basis": {
+  "canonical_head_1452": {
+   "solved_s6_in_manifest": 1452,
+   "remaining_s5_orbits": 174,
+   "unique_remaining_s6": 6396,
+   "sum_remaining_cost": 506144,
+   "s6_needed_by_open_classes": 4669,
+   "cost_needed_by_open_classes": 370058
+  },
+  "basis_input_blobs_verified": 136,
+  "root_count": 775,
+  "reconstruction": "771 basis roots via fold_projection_head1450_tool_20261116.reconstruct() with per-file git-blob pin verification; +4 roots from class-frontier-cost76d77e-receipts-recompute-20261116.json totals.root_hexes (all popcount 7, asserted) = 775 WIN-receipt roots folded into the head-1452 basis"
+ },
+ "method": {
+  "provenance": "every root is attributed to the basis/receipt JSON files that contributed it (BASE_WIN7_ONLY, class-frontier-* basis blobs, NAMED_FRONTIER, the 66c fold JSON, and the 76d/77e receipt recompute); completeness asserted over all 775",
+  "cert_scan": "scanned files: output/*.json, output/tmp-cost*/bit*.json, output/class2-lane-cost*-certificates/*, and the 69c manifest under n11/output; evidence kinds: bareiss, bigint, tsverify, bigintaudit, verified, verdictverify, orbitverify, receipt, summary, certpart, manifest, warmcert, class4cert, certbacked",
+  "tier_definitions": {
+   "V": "raw independent verification artifact present in the scanned set (bareiss/bigint/tsverify/bigintaudit/verified/verdictverify/orbitverify)",
+   "R": "published certificate record or artifact documenting or pointing to independent verification (manifest/warmcert/class4cert/certbacked/receipt/summary/certpart); raw verifier output not in scanned subset",
+   "N": "no certificate evidence found in the scanned set"
+  },
+  "conservative_notes": [
+   "frontier and receipt recompute files are provenance-only: their WIN mentions are not counted as certificate evidence",
+   "only popcount-7 roots with WIN7-style or absent verdicts are counted as certified",
+   "uncertified (N) may overcount the at-risk set, never undercount it",
+   "win23/win13/win6/win3/win2/win1 certificate records concern non-7-stone roots and are excluded by the popcount filter"
+  ]
+ },
+ "controls": {
+  "reconstruction_771_assert": true,
+  "receipts_plus4_popcount7_assert": true,
+  "provenance_complete_all_775": true
+ },
+ "totals": {
+  "roots": 775,
+  "certified": 588,
+  "tier_V": 241,
+  "tier_R": 347,
+  "uncertified": 187,
+  "uncertified_orbit_covered": 6,
+  "uncertified_fully_uncovered": 181
+ },
+ "kind_histogram": {
+  "manifest": 311,
+  "bigint+receipt": 74,
+  "verified": 70,
+  "bareiss+summary+manifest": 30,
+  "bareiss+receipt+summary+manifest": 18,
+  "bigint+manifest": 16,
+  "bigintaudit+warmcert": 16,
+  "summary+manifest": 12,
+  "manifest+certbacked": 9,
+  "manifest+warmcert": 8,
+  "bigint+receipt+manifest": 7,
+  "warmcert": 5,
+  "verified+manifest": 5,
+  "verified+class4cert": 2,
+  "verdictverify": 2,
+  "bigintaudit+manifest+warmcert": 1,
+  "class4cert": 1,
+  "certpart+manifest": 1
+ },
+ "uncertified_by_provenance_source": {
+  "class-frontier-unified-merge-recompute-20261115.json": 37,
+  "class-frontier-cost58c-receipts-recompute-20261116.json": 33,
+  "class-frontier-warm-multiband-recompute-20261115.json": 33,
+  "class-frontier-warm-multiband2-recompute-20261115.json": 31,
+  "class-frontier-cost63j-receipts-recompute-20261116.json": 29,
+  "class-frontier-cost63i-receipts-recompute-20261116.json": 18,
+  "class-frontier-cost65m-receipts-recompute-20261116.json": 8,
+  "class-frontier-cost70g-receipts-recompute-20261116.json": 7,
+  "class-frontier-reconciled-canonical1400-cost70g-recompute-20261116.json": 7,
+  "class-frontier-cost62a-receipts-recompute-20261116.json": 6,
+  "class-frontier-cost68d-recompute-20261115.json": 5,
+  "class-frontier-merged-recompute-after-multiband2-68dhyg-20261115.json": 5,
+  "class-frontier-cost84a-receipts-recompute-20261115.json": 4,
+  "class-frontier-after-cost70c-warm3-recompute-20261115.json": 3,
+  "class-frontier-merged-cost63h-63i-63j-65m-67d-recompute-20261116.json": 2,
+  "class2-lane-cost63cd-frontier-recompute-20261114.json": 2,
+  "class-frontier-cost63h-receipts-recompute-20261115.json": 1,
+  "class-frontier-cost67d-receipts-recompute-20261116.json": 1,
+  "class-frontier-merged-cost63h-63i-63j-65m-recompute-20261116.json": 1,
+  "class-frontier-merged-cost63h-63i-recompute-20261116.json": 1
+ },
+ "certified_roots": [
+  {
+   "root_hex": "00000000000000003800004008000802",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000003800004008002001",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000003800004008400400",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000003800004009000400",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000003800004208000200",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000003800004208100000",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000003800004408200000",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000003800004808000100",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000003802000008000006",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000003802000008000011",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000003802000008001010",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000003802000009000008",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000003812000008000010",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000043800004048000000",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000203800004008008000",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000403800000008002001",
+   "tier": "V",
+   "kinds": [
+    "bareiss",
+    "receipt",
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 4
+  },
+  {
+   "root_hex": "00000000000000403800000008002002",
+   "tier": "V",
+   "kinds": [
+    "bareiss",
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00000000000000403800000008002004",
+   "tier": "V",
+   "kinds": [
+    "bareiss",
+    "receipt",
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 4
+  },
+  {
+   "root_hex": "00000000000000403800000008002800",
+   "tier": "V",
+   "kinds": [
+    "bareiss",
+    "receipt",
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 4
+  },
+  {
+   "root_hex": "00000000000000403800000008012000",
+   "tier": "V",
+   "kinds": [
+    "bareiss",
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00000000000000403800000048002000",
+   "tier": "V",
+   "kinds": [
+    "bareiss",
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00000000000000403800000108002000",
+   "tier": "V",
+   "kinds": [
+    "bareiss",
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00000000000000403800004008000001",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000403800004088000000",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000403800080008002000",
+   "tier": "V",
+   "kinds": [
+    "bareiss",
+    "receipt",
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 4
+  },
+  {
+   "root_hex": "00000000000000403820000008002000",
+   "tier": "V",
+   "kinds": [
+    "bareiss",
+    "receipt",
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 4
+  },
+  {
+   "root_hex": "00000000000000443800000008002000",
+   "tier": "V",
+   "kinds": [
+    "bareiss",
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00000000000000603800000008002000",
+   "tier": "V",
+   "kinds": [
+    "bareiss",
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00000000000000801202000000200005",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000801202000000200104",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000801202000000200210",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000801202000000201008",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000801202000000201010",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000801202000000220002",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000801202000000220080",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000801202000001200004",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000801202000001220000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000801202000002200200",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt",
+    "manifest"
+   ],
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00000000000000801202000081200000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801202000200200200",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000801202000200201000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000801202008000220000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000801202010000204000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "0000000000000080120a008000800000",
+   "tier": "V",
+   "kinds": [
+    "bareiss",
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00000000000000801212000000200200",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000801216000000200000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000801602000000000088",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801602000000000102",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801602000000000204",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801602000000000408",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801602000000200001",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801602000000200008",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000801602000000200010",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000801602000020200000",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801602000040000800",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801602000080000002",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801602000100000080",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801602000800200000",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801602010002000000",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801602020000200000",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801602080000000004",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "0000000000000080160a000000000008",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "0000000000000080160a000000200000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801622000000000002",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801642000000000008",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a02000000084000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a020000000c0000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a02000000220000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000801a02000020000001",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a02000020000002",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a02000020000400",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a02000020100000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a02000022000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a02000024000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a02000080000001",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a02000080000010",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a02000080000080",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a02000080000100",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a02000080000200",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a02000080001000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a02000080100000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a02000081000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a02000200200000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000801a02010080000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a02020000000001",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a02020000000002",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a02020000000040",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a02020010000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a02020100000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a02020200000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a02040000000001",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a02040000000010",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a02040000004000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a02040000020000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a02040000100000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a02040000200000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a02040000400000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a02040080000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000801a02040100000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a02040400000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a06000020000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a06000080000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a06020000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a06040000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a0a000000000001",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a0a000000000010",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a0a000000000400",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a0a000000004000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a0a000000400000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a0a000001000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a0a000200000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a0a000800000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a0a010000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a0a080000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a12000020000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a12000080000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a1a000000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a22000020000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a2a000000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a42040000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000801a4a000000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000803082000000000404",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000803082000010000400",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000803082000014000000",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000803082000040000004",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000803082000040000400",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000803082000080000001",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000803082000200000004",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000803082000400000008",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000803082020000000001",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000803082040000000100",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "0000000000000080308a000000000004",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000803092000000000200",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "000000000000008030a2000000000001",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000803202000000000005",
+   "tier": "R",
+   "kinds": [
+    "warmcert"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000803202000000000006",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000803202000000000088",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000803202000000001080",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000803202000000004100",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000803202000000005000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000803202000000008004",
+   "tier": "R",
+   "kinds": [
+    "warmcert"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000803202000000042000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000803202000000080080",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000803202000000100080",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000803202000000200100",
+   "tier": "V",
+   "kinds": [
+    "bigintaudit",
+    "warmcert"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000803202000000208000",
+   "tier": "R",
+   "kinds": [
+    "manifest",
+    "warmcert"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000803202000000404000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000803202000000600000",
+   "tier": "V",
+   "kinds": [
+    "bigintaudit",
+    "manifest",
+    "warmcert"
+   ],
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00000000000000803202000000a00000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000803202000001001000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000803202000004200000",
+   "tier": "V",
+   "kinds": [
+    "bigintaudit",
+    "warmcert"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000803202000010200000",
+   "tier": "V",
+   "kinds": [
+    "bigintaudit",
+    "warmcert"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000803202000020020000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000803202000040000002",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000803202000040020000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000803202000080800000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000803202000084000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000803202000100200000",
+   "tier": "V",
+   "kinds": [
+    "bigintaudit",
+    "warmcert"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000803202000400000800",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000803202000400200000",
+   "tier": "R",
+   "kinds": [
+    "manifest",
+    "warmcert"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000803202010000200000",
+   "tier": "V",
+   "kinds": [
+    "bigintaudit",
+    "warmcert"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000803202010040000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000803202080000080000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000803202080000200000",
+   "tier": "V",
+   "kinds": [
+    "bigintaudit",
+    "warmcert"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000803202100000000004",
+   "tier": "R",
+   "kinds": [
+    "manifest",
+    "warmcert"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000803202100000200000",
+   "tier": "V",
+   "kinds": [
+    "bigintaudit",
+    "warmcert"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000803202200010000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000803202240000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest",
+    "warmcert"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "0000000000000080320a000000000008",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000803212000000000004",
+   "tier": "R",
+   "kinds": [
+    "warmcert"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000803242000000000008",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000803242000000100000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000803242000000800000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000805202000000000402",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000805202000000000408",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000805202000000000801",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000805202000000008800",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000805202000000200040",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000805202008000004000",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000805206000000000010",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000805206000000000200",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809082000000000204",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809082000000000808",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809082000000100800",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809082000000200200",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809082000040800000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809082020000040000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809082020400000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809082082000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809082200000008000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809083000000000400",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809083000000001000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809083000000004000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809083000000200000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "0000000000000080910200000000000c",
+   "tier": "R",
+   "kinds": [
+    "manifest",
+    "certbacked"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000809102000000000801",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809102000000100008",
+   "tier": "R",
+   "kinds": [
+    "manifest",
+    "certbacked"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000809102000000202000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000809102000000400100",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt",
+    "manifest"
+   ],
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00000000000000809102000000500000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000809102000000800080",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809102000001000800",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809102000002000004",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809102000002000800",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809102000002200000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809102000020000001",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809102000020002000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000809102000020400000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt",
+    "manifest"
+   ],
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00000000000000809102000042000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809102000080000010",
+   "tier": "V",
+   "kinds": [
+    "bareiss",
+    "receipt",
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 5
+  },
+  {
+   "root_hex": "00000000000000809102000080008000",
+   "tier": "V",
+   "kinds": [
+    "bareiss",
+    "receipt",
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 4
+  },
+  {
+   "root_hex": "00000000000000809102000080040000",
+   "tier": "V",
+   "kinds": [
+    "bareiss",
+    "receipt",
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 5
+  },
+  {
+   "root_hex": "00000000000000809102000080100000",
+   "tier": "V",
+   "kinds": [
+    "bareiss",
+    "receipt",
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 6
+  },
+  {
+   "root_hex": "00000000000000809102000080200000",
+   "tier": "V",
+   "kinds": [
+    "bareiss",
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 5
+  },
+  {
+   "root_hex": "00000000000000809102000080800000",
+   "tier": "V",
+   "kinds": [
+    "bareiss",
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00000000000000809102000082000000",
+   "tier": "V",
+   "kinds": [
+    "bareiss",
+    "receipt",
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 5
+  },
+  {
+   "root_hex": "00000000000000809102000090000000",
+   "tier": "V",
+   "kinds": [
+    "bareiss",
+    "receipt",
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 5
+  },
+  {
+   "root_hex": "00000000000000809102001000400000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000809102001002000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809102020000000004",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809102020000001000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809102020010000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809102100000000008",
+   "tier": "R",
+   "kinds": [
+    "manifest",
+    "certbacked"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000809102800002000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809122000000040000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809122000004000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809122000020000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809122000400000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809122800000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809142000000000010",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000809142000000000800",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000809142000000100000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000809142100000000000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000809202000000000102",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809202000000004002",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809202000000008004",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809202000000041000",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809202000000401000",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809202000000800008",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809202000001000002",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809202000001000010",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809202000002008000",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809202000004100000",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809202000200000100",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809202000800000400",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809202000800002000",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809202100000000100",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000811202000000200010",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000811202000000202000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000811202000000204000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000811202000000220000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000811202000002200000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt",
+    "manifest"
+   ],
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00000000000000811212000000200000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000841202000000200004",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000843202000000004000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000849002000080000800",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000849042000000000800",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000849102000000000001",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000849102000000000800",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000849102000002000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000849102000080000000",
+   "tier": "V",
+   "kinds": [
+    "bareiss",
+    "receipt",
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 4
+  },
+  {
+   "root_hex": "00000000000000849102020000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000849402000000100000",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "0000000000000084d002000000000800",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000881202000000220000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000909102000000000008",
+   "tier": "R",
+   "kinds": [
+    "manifest",
+    "certbacked"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000909102020000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000a09102000000000008",
+   "tier": "R",
+   "kinds": [
+    "manifest",
+    "certbacked"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000a09102020000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000a09142000000000000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000a49002000000000800",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000c09082000000000004",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000c09082000000000400",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000c09082000000000800",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000c09082000000200000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000001003802000008000010",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000001801202000000200008",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000001801202000000220000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000001801202000002200000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt",
+    "manifest"
+   ],
+   "cert_files": 3
+  },
+  {
+   "root_hex": "0000000000000180120a000000800000",
+   "tier": "V",
+   "kinds": [
+    "bareiss",
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00000000000001801302000000200000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000001801a02000020000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000001801a02040000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000002003800000008002008",
+   "tier": "V",
+   "kinds": [
+    "bareiss",
+    "receipt",
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 5
+  },
+  {
+   "root_hex": "00000000000002003802000008000010",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000002803202000000100000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000002803202000000200000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000002803202200000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest",
+    "warmcert"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000004803202000000000002",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000004803202000000200000",
+   "tier": "V",
+   "kinds": [
+    "bigintaudit",
+    "warmcert"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000008003800000008002008",
+   "tier": "V",
+   "kinds": [
+    "bareiss",
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 4
+  },
+  {
+   "root_hex": "00000000000008403800000008002000",
+   "tier": "V",
+   "kinds": [
+    "bareiss",
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00000000000008803202000000000004",
+   "tier": "R",
+   "kinds": [
+    "warmcert"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000010801a02000020000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000010801a02040000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000010803202000000008000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000020803202000000002000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000020803202000000200000",
+   "tier": "V",
+   "kinds": [
+    "bigintaudit",
+    "warmcert"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000040801202000000201000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000040801202010000200000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000040801a02000080000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000040801a0a000000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000080003800000008002008",
+   "tier": "V",
+   "kinds": [
+    "bareiss",
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 4
+  },
+  {
+   "root_hex": "00000000000080403800000008002000",
+   "tier": "V",
+   "kinds": [
+    "bareiss",
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00000000000080801202000000200004",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000080801a02040000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000080801a0a000000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000080809102000080000000",
+   "tier": "V",
+   "kinds": [
+    "bareiss",
+    "receipt",
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 4
+  },
+  {
+   "root_hex": "00000000000100809002000000000a00",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000100809002000000100800",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000100809002000020000800",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000100809002000400000800",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000100809102000000000001",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000100809102020000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "0000000000010080d002000000000800",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000100c09002000000000800",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000110809002000000000800",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000200809082000000000010",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000200849002000000000800",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000001000003802000008000010",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000001000801202000002200000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt",
+    "manifest"
+   ],
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00000000001000801a02020000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000001000803202000000000008",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000001000803202000000004000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000001000803202000000008000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000002000809102000002000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000002080809002000000000800",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000004000403800000008002000",
+   "tier": "V",
+   "kinds": [
+    "bareiss",
+    "receipt",
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 4
+  },
+  {
+   "root_hex": "00000000004000803202000000000004",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000008000003800000008002008",
+   "tier": "V",
+   "kinds": [
+    "bareiss",
+    "receipt",
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 5
+  },
+  {
+   "root_hex": "00000000008000801a02000080000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000008000803202000000008000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000008000803202000000200000",
+   "tier": "V",
+   "kinds": [
+    "bigintaudit",
+    "warmcert"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000010000801a0a000000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000010000803202000000200000",
+   "tier": "V",
+   "kinds": [
+    "bigintaudit",
+    "warmcert"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000010400003800000008000200",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000020000003800000080021000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000020000003800000080080080",
+   "tier": "V",
+   "kinds": [
+    "verified",
+    "class4cert"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "000000000200000038000000800c0000",
+   "tier": "V",
+   "kinds": [
+    "verified",
+    "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000020000003800000082080000",
+   "tier": "V",
+   "kinds": [
+    "verified",
+    "class4cert"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000020000003800018080000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000020000003801001080000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000020000003802002080000000",
+   "tier": "R",
+   "kinds": [
+    "class4cert"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "000000000200000038040000a0000000",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000020000003804010080000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000020000003804040080000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000020000003821000080000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000020000083800000080080000",
+   "tier": "V",
+   "kinds": [
+    "verified",
+    "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000020000403800000080000040",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000020000403801000080000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000020000803202000000000008",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000020000803202000000004000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000020000803202000000008000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000020000803202020000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000020000849002000000000800",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000020001003801000080000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "000000000200200038000000a0000000",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000020100003800000008080000",
+   "tier": "V",
+   "kinds": [
+    "bareiss",
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00000000020100003800000084000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000020100003800010080000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000020400003800000080080000",
+   "tier": "V",
+   "kinds": [
+    "verified",
+    "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000024000003800000084000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000040000003800080008080000",
+   "tier": "R",
+   "kinds": [
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000040000003802000008000010",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000040000003802080008000000",
+   "tier": "R",
+   "kinds": [
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000040000801202000000200400",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000040000801202010000200000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000040000801202010000800000",
+   "tier": "V",
+   "kinds": [
+    "bareiss",
+    "receipt",
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 4
+  },
+  {
+   "root_hex": "00000000040000801206000000200000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000040000801242000000200000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000040000801602000000200000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000040000801a02020000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000040000801a02040000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000040000801a0a000000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000040000803202000000008000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000040000803202200000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000040000809002000000000042",
+   "tier": "V",
+   "kinds": [
+    "bareiss",
+    "receipt",
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 4
+  },
+  {
+   "root_hex": "00000000040000809002000000000402",
+   "tier": "V",
+   "kinds": [
+    "bareiss",
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00000000040000809002000000000802",
+   "tier": "V",
+   "kinds": [
+    "bareiss",
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00000000040000809002002000000002",
+   "tier": "V",
+   "kinds": [
+    "bareiss",
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00000000040000809002002000004000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000040000a09002000000004000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000080000801202000000200001",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000080000801202000000200200",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000080000801202000000201000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000080000801206000000200000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000080000801242000000200000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000080000801602000000200000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000080000805202000000200000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000080000809102000080000000",
+   "tier": "V",
+   "kinds": [
+    "bareiss",
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00000000080000809102020000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000080000811202000000200000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000080001801202000000200000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000080080809002000000000800",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "000000000a00000038000000a0000000",
+   "tier": "V",
+   "kinds": [
+    "verified"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000100000003800000008008020",
+   "tier": "V",
+   "kinds": [
+    "bareiss",
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00000000100000403800000008002000",
+   "tier": "V",
+   "kinds": [
+    "bareiss",
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00000000100000801202000000200080",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000100000801202000000201000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000100000801202008000200000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000100000801602000000200000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000100000801a02000020000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000100000801a02040000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000100000805202000000200000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000100000809102000000000001",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000100000809102020000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000100000811202000000200000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000100000841202000000200000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000100040801202000000200000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 4
+  },
+  {
+   "root_hex": "00000000200000003800000000410200",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000200000003800100000010200",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000200000003808100000000200",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000200000083800200000000200",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000200000083801000000000200",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000200040003800000000010200",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000200040003800002000000200",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000200040003800800000000200",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000200040803800000000000200",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000200400003800000000400200",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000200400003800100000000200",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000200400083800000000000200",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000200440003800000000000200",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000220000003800000000200200",
+   "tier": "V",
+   "kinds": [
+    "verdictverify"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000220000003801000000000200",
+   "tier": "V",
+   "kinds": [
+    "verdictverify"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000400000803202000000000002",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000400000803202000000000004",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000400000803202000000008000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000400000803202000000200000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000400000803242000000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000400000809102000000000008",
+   "tier": "R",
+   "kinds": [
+    "manifest",
+    "certbacked"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000420000003800000084000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000420000003800010080000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000480000801202000000200000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000500000801202000000200000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000800000403800000008002000",
+   "tier": "V",
+   "kinds": [
+    "bareiss",
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00000000800000801202000000200008",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000800000803202000000200000",
+   "tier": "V",
+   "kinds": [
+    "bigintaudit",
+    "warmcert"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000800000809102000002000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000800000809142000000000000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000820000003800000080001000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000840000801202000000200000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000001000000003800000008002008",
+   "tier": "V",
+   "kinds": [
+    "bareiss",
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 4
+  },
+  {
+   "root_hex": "00000001000000801202000000200010",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000001000000801202000000202000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000001000000801202000000220000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "0000000100000080120a000000200000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000001000000801302000000200000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000001000000801a02000020000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000001000000801a02000080000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000001000000803202000000004000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000001000000803202000000200000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000001000000809102000000000001",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000001040000801202000000200000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000001080000801202000000200000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000001100000801202000000200000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000001200000083800000000000200",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000002000000003800000008002008",
+   "tier": "V",
+   "kinds": [
+    "bareiss",
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 4
+  },
+  {
+   "root_hex": "00000002000000803202000000004000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000002000000803202200000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000002000000809102000000002000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000002000000809102000002000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000004000000403800000008002000",
+   "tier": "V",
+   "kinds": [
+    "bareiss",
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00000004000000801a02000020000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000004000000803202000000004000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000008000000801a02020000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000008000000801a0a000000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000008000000803202000000000008",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000008000000803202000000008000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000008000000803202000000080000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000008000000803202000000100000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000008000000803202000080000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000008000000809003000000000400",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "0000000800000080b002000000000400",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000008000200809002000000000400",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000008020000003800000080001000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000008080000801202000000200000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000009000000809002000000000400",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000010000000803202000000004000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000010000000803202000000200000",
+   "tier": "V",
+   "kinds": [
+    "bigintaudit",
+    "warmcert"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000010000000803202200000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest",
+    "warmcert"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000010000000809102000000002000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000010000000809102000002000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000010000000809102020000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000010000000809142000000000000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000020000000809082000080000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000020000000809082020000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000020000000809102000080000000",
+   "tier": "V",
+   "kinds": [
+    "bareiss",
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00000040000000809102020000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000080000000809082000000000400",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000080000000809082000010000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000080000000809082040000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000080000000809122000000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000100020000003801000080000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000200000000801202000200200000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000200000000801a02020000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000200000000801a0a000000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000200000000803202000000000004",
+   "tier": "R",
+   "kinds": [
+    "warmcert"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000200000000803202000000200000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000200000000803202000000400000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000200080000801202000000200000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000400000000403800000008002000",
+   "tier": "R",
+   "kinds": [
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000400000000801a0a000000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000400000000803202000000200000",
+   "tier": "V",
+   "kinds": [
+    "bigintaudit",
+    "warmcert"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000400000000809102000002000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000800000000403800000008002000",
+   "tier": "R",
+   "kinds": [
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "0000080000000080120a000000800000",
+   "tier": "V",
+   "kinds": [
+    "bareiss",
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00000800000000809102000000800000",
+   "tier": "R",
+   "kinds": [
+    "certpart",
+    "manifest"
+   ],
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00001000000000801a02000000080000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00001000000000801a02040000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00001000000000803202000000004000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00001000000000803202000000008000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00001000000000803202000000200000",
+   "tier": "V",
+   "kinds": [
+    "bigintaudit",
+    "warmcert"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00001000000000809082000000001000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00001000000000809122000000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00001000000000809142000000000000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00001000020000003800000080001000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00001000100000801202000000200000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00002000000000403800000008002000",
+   "tier": "V",
+   "kinds": [
+    "bareiss",
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00002000000000801a0a000000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00002000000000803202000000001000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00002000000000803202000000400000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00002000000000803202000020000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00002000000000803202000040000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00002000000000809102000000000008",
+   "tier": "R",
+   "kinds": [
+    "manifest",
+    "certbacked"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00002000000000809102000000400000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt",
+    "manifest"
+   ],
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00002000000000809102000080000000",
+   "tier": "R",
+   "kinds": [
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00002000000000809102020000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00002000000000809142000000000000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00004000000000801a02000020000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00004000000000801a02000080000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00004000000000801a02020000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00008000000000403800000008002000",
+   "tier": "R",
+   "kinds": [
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00008000000000801202000000204000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00008000000000801a02000020000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00008000000000803202000000000200",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00008000000000803202000000004000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00008000000000809082000080000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00008000000040801202000000200000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00008000040000801202000000200000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00008000100000801202000000200000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00010000000000003800000008002008",
+   "tier": "R",
+   "kinds": [
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00010000000000801202000080200000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00010000000000801a02000020000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00010000000000801a02000080000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00010000000000809102000080000000",
+   "tier": "V",
+   "kinds": [
+    "bareiss",
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00010000000000809102020000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00020000000000403800000008002000",
+   "tier": "V",
+   "kinds": [
+    "bareiss",
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00020000000000801a02000020000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00020000000000801a0a000000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00020000000000849002000000000800",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00020000020000003800001080000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00020000080000801202000000200000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00040000000000801a0a000000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00040000000000803202000000200000",
+   "tier": "V",
+   "kinds": [
+    "bigintaudit",
+    "warmcert"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00100000000000801a02000000080000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00100000000000803202000000000008",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00100000000000803202000000008000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00100000000000803202200000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest",
+    "warmcert"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00100000000000809102000080000000",
+   "tier": "R",
+   "kinds": [
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00100000000000809102020000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00100000000000809142000000000000",
+   "tier": "V",
+   "kinds": [
+    "bigint",
+    "receipt"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00100000020000003800000080000040",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00200000000000801202010000800000",
+   "tier": "R",
+   "kinds": [
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00200000000000801a02000020000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00200000000000803202000000200000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00200000000000803202000020000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00200000020000003800000080080000",
+   "tier": "V",
+   "kinds": [
+    "verified",
+    "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00200000020000003800010080000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00200000020000003801000080000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00400000000000801a02040000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00400000000000803202000400000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00400000000000809082000000001000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00400000000000809082000040000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00400000000000809082020000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00400000000000809102000000000008",
+   "tier": "R",
+   "kinds": [
+    "manifest",
+    "certbacked"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00400000000000809102000080000000",
+   "tier": "R",
+   "kinds": [
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00400000000000809102020000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00800000000000801a0a000000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00800000000000809082000000000800",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00800000000000809082000080000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00800000000000809102000000000008",
+   "tier": "R",
+   "kinds": [
+    "manifest",
+    "certbacked"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00800000000000809102000080000000",
+   "tier": "R",
+   "kinds": [
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00800000000000809102000800000000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00800000000100809002000000000800",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "01000000000000403800000008002000",
+   "tier": "R",
+   "kinds": [
+    "summary",
+    "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "01000000000000803202000000002000",
+   "tier": "R",
+   "kinds": [
+    "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "01000000000000803202200000000000",
+   "tier": "R",
+   "kinds": [
+    "manifest",
+    "warmcert"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "01000000020000003800000080080000",
+   "tier": "V",
+   "kinds": [
+    "verified",
+    "manifest"
+   ],
+   "cert_files": 2
+  }
+ ],
+ "uncertified_roots": [
+  {
+   "root_hex": "00000000000000801202000040040001",
+   "canonical_hex": "00000000000000801202000040040001",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost70g-receipts-recompute-20261116.json",
+    "class-frontier-reconciled-canonical1400-cost70g-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000801202000040201000",
+   "canonical_hex": "00000000000000801202000040201000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost65m-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000801202000040401000",
+   "canonical_hex": "00000000000000801202000040401000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost65m-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000801202000041000001",
+   "canonical_hex": "00000000000000801202000041000001",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost70g-receipts-recompute-20261116.json",
+    "class-frontier-reconciled-canonical1400-cost70g-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000801202000050000001",
+   "canonical_hex": "00000000000000801202000050000001",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost70g-receipts-recompute-20261116.json",
+    "class-frontier-reconciled-canonical1400-cost70g-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000801202000050001000",
+   "canonical_hex": "00000000000000801202000050001000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost65m-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000801202000840001000",
+   "canonical_hex": "00000000000000801202000840001000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost65m-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000801202100040001000",
+   "canonical_hex": "00000000000000801202100040001000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost65m-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000801206000040000002",
+   "canonical_hex": "00000000000000801206000040000002",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost58c-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000801206000040000008",
+   "canonical_hex": "00000000000000801206000040000008",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost58c-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000801206000040000040",
+   "canonical_hex": "00000000000000801206000040000040",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost58c-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000801206000040040000",
+   "canonical_hex": "00000000000000801206000040040000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost58c-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000801206000040400000",
+   "canonical_hex": "00000000000000801206000040400000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost58c-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000801206000041000000",
+   "canonical_hex": "00000000000000801206000041000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost58c-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000801206000140000000",
+   "canonical_hex": "00000000000000801206000140000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost58c-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000801206000840000000",
+   "canonical_hex": "00000000000000801206000840000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost58c-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000801206040040000000",
+   "canonical_hex": "00000000000000801206040040000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost58c-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000801206080040000000",
+   "canonical_hex": "00000000000000801206080040000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost58c-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000801206100040000000",
+   "canonical_hex": "00000000000000801206100040000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost58c-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000801306000040000000",
+   "canonical_hex": "00000000000000801306000040000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost58c-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000801a02000040000001",
+   "canonical_hex": "00000000000000801a02000040000001",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost70g-receipts-recompute-20261116.json",
+    "class-frontier-reconciled-canonical1400-cost70g-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000803202000000100100",
+   "canonical_hex": "00000000000000803202000000100100",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-warm-multiband-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000803202000000400002",
+   "canonical_hex": "00000000000000803202000000400002",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost68d-recompute-20261115.json",
+    "class-frontier-merged-recompute-after-multiband2-68dhyg-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000803202000000800002",
+   "canonical_hex": "00000000000000803202000000800002",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-unified-merge-recompute-20261115.json",
+    "class-frontier-warm-multiband2-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000803202000040000010",
+   "canonical_hex": "00000000000000803202000040000010",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-warm-multiband-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000803202000100400000",
+   "canonical_hex": "00000000000000803202000100400000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-warm-multiband-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000803202000200100000",
+   "canonical_hex": "00000000000000803202000200100000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-warm-multiband-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000803202010000100000",
+   "canonical_hex": "00000000000000803202010000100000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-unified-merge-recompute-20261115.json",
+    "class-frontier-warm-multiband2-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000803202080000100000",
+   "canonical_hex": "00000000000000803202080000100000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-unified-merge-recompute-20261115.json",
+    "class-frontier-warm-multiband2-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000803212000000000200",
+   "canonical_hex": "00000000000000803212000000000200",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-warm-multiband-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000803222000000100000",
+   "canonical_hex": "00000000000000803222000000100000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-unified-merge-recompute-20261115.json",
+    "class-frontier-warm-multiband2-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000803242000000000100",
+   "canonical_hex": "00000000000000803242000000000100",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-unified-merge-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000803242000000000800",
+   "canonical_hex": "00000000000000803242000000000800",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-unified-merge-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000803242000001000000",
+   "canonical_hex": "00000000000000803242000001000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-unified-merge-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000803242010000000000",
+   "canonical_hex": "00000000000000803242010000000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-unified-merge-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000803242040000000000",
+   "canonical_hex": "00000000000000803242040000000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-after-cost70c-warm3-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "000000000000008090a2400000000000",
+   "canonical_hex": "000000000000008090a2400000000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class2-lane-cost63cd-frontier-recompute-20261114.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000809102000001000002",
+   "canonical_hex": "00000000000000809102000001000002",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost68d-recompute-20261115.json",
+    "class-frontier-merged-recompute-after-multiband2-68dhyg-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000809102000004800000",
+   "canonical_hex": "00000000000000809102000004800000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-warm-multiband-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000809102000020800000",
+   "canonical_hex": "00000000000000809102000020800000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-warm-multiband-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000809102000100800000",
+   "canonical_hex": "00000000000000809102000100800000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-warm-multiband-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000809102000101000000",
+   "canonical_hex": "00000000000000809102000101000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-warm-multiband-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000809102000200800000",
+   "canonical_hex": "00000000000000809102000200800000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-warm-multiband-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000809102000800000004",
+   "canonical_hex": "00000000000000809102000800000004",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-warm-multiband-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000809102000800000800",
+   "canonical_hex": "00000000000000809102000800000800",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost68d-recompute-20261115.json",
+    "class-frontier-merged-recompute-after-multiband2-68dhyg-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000809102000800008000",
+   "canonical_hex": "00000000000000809102000800008000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-warm-multiband-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000809102000810000000",
+   "canonical_hex": "00000000000000809102000810000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-warm-multiband-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000809102001000800000",
+   "canonical_hex": "00000000000000809102001000800000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-unified-merge-recompute-20261115.json",
+    "class-frontier-warm-multiband2-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000809102040000800000",
+   "canonical_hex": "00000000000000809102040000800000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-warm-multiband-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000809102400000800000",
+   "canonical_hex": "00000000000000809102400000800000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-unified-merge-recompute-20261115.json",
+    "class-frontier-warm-multiband2-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000841206000040000000",
+   "canonical_hex": "00000000000000841206000040000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost58c-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000843202000080000000",
+   "canonical_hex": "00000000000000843202000080000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-unified-merge-recompute-20261115.json",
+    "class-frontier-warm-multiband2-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000849102000001000000",
+   "canonical_hex": "00000000000000849102000001000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-warm-multiband-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000881202000040001000",
+   "canonical_hex": "00000000000000881202000040001000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost65m-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000881206000040000000",
+   "canonical_hex": "00000000000000881206000040000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost58c-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000c09002000041000000",
+   "canonical_hex": "00000000000000c09002000041000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost63i-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000c09002000101000000",
+   "canonical_hex": "00000000000000c09002000101000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost63i-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000c09002020001000000",
+   "canonical_hex": "00000000000000c09002020001000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost63i-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000c09002200001000000",
+   "canonical_hex": "00000000000000c09002200001000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost63i-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000c09042000001000000",
+   "canonical_hex": "00000000000000c09042000001000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost63i-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000c09082000000080000",
+   "canonical_hex": "00000000000000c09082000000080000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class2-lane-cost63cd-frontier-recompute-20261114.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000c0b002000001000000",
+   "canonical_hex": "00000000000000c0b002000001000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost63i-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000c0d002000001000000",
+   "canonical_hex": "00000000000000c0d002000001000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost63i-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000000c49002000001000000",
+   "canonical_hex": "00000000000000c49002000001000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost63i-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000002801206000040000000",
+   "canonical_hex": "00000000000000a09003000001000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost58c-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000004803202000000400000",
+   "canonical_hex": "00000000000000909802000100000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-unified-merge-recompute-20261115.json",
+    "class-frontier-warm-multiband2-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000004803202000040000000",
+   "canonical_hex": "00000000000000909802000001000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-unified-merge-recompute-20261115.json",
+    "class-frontier-warm-multiband2-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000008801206000040000000",
+   "canonical_hex": "00000000000000889003000001000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost58c-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000008803202000000000002",
+   "canonical_hex": "00000000000000889802000000000200",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-unified-merge-recompute-20261115.json",
+    "class-frontier-warm-multiband2-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000008803202000080000000",
+   "canonical_hex": "00000000000000889802000000800000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-unified-merge-recompute-20261115.json",
+    "class-frontier-warm-multiband2-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000010801202000040001000",
+   "canonical_hex": "00000000000000849002000001100000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost65m-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000020803202000080000000",
+   "canonical_hex": "00000000000020803202000080000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-unified-merge-recompute-20261115.json",
+    "class-frontier-warm-multiband2-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000020c09002000001000000",
+   "canonical_hex": "00000000000020c09002000001000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost63i-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000040801206000040000000",
+   "canonical_hex": "00000000000040801206000040000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost58c-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000040809002000000000802",
+   "canonical_hex": "00000000000040809002000000000802",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost84a-receipts-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "0000000000004080d002000000000800",
+   "canonical_hex": "0000000000004080d002000000000800",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost84a-receipts-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000040c09002000000000800",
+   "canonical_hex": "00000000000040c09002000000000800",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost84a-receipts-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000080801206000040000000",
+   "canonical_hex": "00000000000080801206000040000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost58c-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000200c09002000001000000",
+   "canonical_hex": "00000000000200c09002000001000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost63i-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000000800801202000040001000",
+   "canonical_hex": "00000000000200809002000001100000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost65m-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000001000803202000000000002",
+   "canonical_hex": "00000000000100803800000008200000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-unified-merge-recompute-20261115.json",
+    "class-frontier-warm-multiband2-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000001000803202000000100000",
+   "canonical_hex": "00000000000100809802000000001000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-unified-merge-recompute-20261115.json",
+    "class-frontier-warm-multiband2-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000001000803202000080000000",
+   "canonical_hex": "00000000000100809802000000800000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-unified-merge-recompute-20261115.json",
+    "class-frontier-warm-multiband2-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000004000801206000040000000",
+   "canonical_hex": "00000000000040809003000001000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost58c-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000004000803242000000000000",
+   "canonical_hex": "00000000000000849802000400000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-after-cost70c-warm3-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000004000809102000001000000",
+   "canonical_hex": "00000000000040811202000040000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-warm-multiband-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000008000803202000040000000",
+   "canonical_hex": "00000000000020809802000001000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-unified-merge-recompute-20261115.json",
+    "class-frontier-warm-multiband2-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000010000801206000040000000",
+   "canonical_hex": "00000000010000801206000040000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost58c-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000020000801202000040000001",
+   "canonical_hex": "00000000020000801202000040000001",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost70g-receipts-recompute-20261116.json",
+    "class-frontier-reconciled-canonical1400-cost70g-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000020000801202000040080000",
+   "canonical_hex": "00000000020000801202000040080000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost63h-receipts-recompute-20261115.json",
+    "class-frontier-merged-cost63h-63i-63j-65m-67d-recompute-20261116.json",
+    "class-frontier-merged-cost63h-63i-63j-65m-recompute-20261116.json",
+    "class-frontier-merged-cost63h-63i-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000020000801206000040000000",
+   "canonical_hex": "00000000020000801206000040000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost58c-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000020000803202000040000000",
+   "canonical_hex": "00000000020000803202000040000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-unified-merge-recompute-20261115.json",
+    "class-frontier-warm-multiband2-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000020000809102000001000000",
+   "canonical_hex": "00000000020000809102000001000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost68d-recompute-20261115.json",
+    "class-frontier-merged-recompute-after-multiband2-68dhyg-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000040000003800000008100080",
+   "canonical_hex": "00000000040000003800000008100080",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost62a-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000040000003800000008108000",
+   "canonical_hex": "00000000040000003800000008108000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost62a-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000040000003800000048000002",
+   "canonical_hex": "00000000040000003800000048000002",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost63j-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000040000003800000048000008",
+   "canonical_hex": "00000000040000003800000048000008",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost63j-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000040000003800000048000010",
+   "canonical_hex": "00000000040000003800000048000010",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost63j-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000040000003800000048000080",
+   "canonical_hex": "00000000040000003800000048000080",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost63j-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000040000003800000048000200",
+   "canonical_hex": "00000000040000003800000048000200",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost63j-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000040000003800000048000800",
+   "canonical_hex": "00000000040000003800000048000800",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost63j-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000040000003800000048010000",
+   "canonical_hex": "00000000040000003800000048010000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost63j-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000040000003800000048020000",
+   "canonical_hex": "00000000040000003800000048020000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost63j-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000040000003800000048040000",
+   "canonical_hex": "00000000040000003800000048040000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost63j-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000040000003800000448000000",
+   "canonical_hex": "00000000040000003800000448000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost63j-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000040000003800000808100000",
+   "canonical_hex": "00000000040000003800000808100000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost62a-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000040000003800000848000000",
+   "canonical_hex": "00000000040000003800000848000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost63j-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000040000003800100048000000",
+   "canonical_hex": "00000000040000003800100048000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost63j-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000040000003800200048000000",
+   "canonical_hex": "00000000040000003800200048000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost63j-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000040000003810000048000000",
+   "canonical_hex": "00000000040000003810000048000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost63j-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000040000003840000048000000",
+   "canonical_hex": "00000000040000003840000048000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost63j-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000040000103800000048000000",
+   "canonical_hex": "00000000040000103800000048000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost63j-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000040002003800000048000000",
+   "canonical_hex": "00000000040000809002002040000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost63j-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000040010003800000008100000",
+   "canonical_hex": "00000000040000809002000000100010",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost62a-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000040040003800000048000000",
+   "canonical_hex": "00000000040000801202000040040000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost63j-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000040040809002000000000800",
+   "canonical_hex": "00000000040040809002000000000800",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost84a-receipts-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000040200003800000008100000",
+   "canonical_hex": "00000000040000a09002000000100000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost62a-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000040200003800000048000000",
+   "canonical_hex": "0000000004000080120a000040000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost63j-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000048000003800000048000000",
+   "canonical_hex": "00000000040000809002000040000008",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost63j-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000050000003800000048000000",
+   "canonical_hex": "00000000040000801202000040000100",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost63j-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000080000801206000040000000",
+   "canonical_hex": "00000000040000403800020008000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost58c-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000100000801206000040000000",
+   "canonical_hex": "00000000040000403810000008000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost58c-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000100000803202000000100000",
+   "canonical_hex": "00000000100000803202000000100000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-unified-merge-recompute-20261115.json",
+    "class-frontier-warm-multiband2-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000100000803202000040000000",
+   "canonical_hex": "00000000040000803810000008000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-unified-merge-recompute-20261115.json",
+    "class-frontier-warm-multiband2-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000100000803242000000000000",
+   "canonical_hex": "00000000000000849802000010000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-unified-merge-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000140000003800000048000000",
+   "canonical_hex": "00000000040000801212000040000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost63j-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000240000003800000048000000",
+   "canonical_hex": "00000000040000809202000040000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost63j-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000000400000803202000000100000",
+   "canonical_hex": "00000000100000809802000000001000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-unified-merge-recompute-20261115.json",
+    "class-frontier-warm-multiband2-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000400000803202000000400000",
+   "canonical_hex": "00000000000000903800000008000100",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-unified-merge-recompute-20261115.json",
+    "class-frontier-warm-multiband2-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000400000809102000000800000",
+   "canonical_hex": "00000000020000809102000010000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-warm-multiband-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000000800000809102000001000000",
+   "canonical_hex": "00000000040000809102000020000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-warm-multiband-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000001000000809102000800000000",
+   "canonical_hex": "00000000000080809102000040000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-unified-merge-recompute-20261115.json",
+    "class-frontier-warm-multiband2-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000002000000801202000040002000",
+   "canonical_hex": "00000000020000809002000001080000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost67d-receipts-recompute-20261116.json",
+    "class-frontier-merged-cost63h-63i-63j-65m-67d-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000002000000809102000800000000",
+   "canonical_hex": "00000000000080809102000080000000",
+   "orbit_covered_by_certified_sibling": true,
+   "provenance_sources": [
+    "class-frontier-unified-merge-recompute-20261115.json",
+    "class-frontier-warm-multiband2-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000004040000003800000008100000",
+   "canonical_hex": "00000000040000809002000000100004",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost62a-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000008000000801206000040000000",
+   "canonical_hex": "00000000040000403800000008000200",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost58c-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000008000000c09002000001000000",
+   "canonical_hex": "00000000040000809003000000000800",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost63i-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000008040000003800000048000000",
+   "canonical_hex": "00000000040000801202000040000200",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost63j-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000010000000809102000800000000",
+   "canonical_hex": "00000000000080809102000000001000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-warm-multiband-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000040000000801206000040000000",
+   "canonical_hex": "00000000040000403800040008000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost58c-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000040000000803202000000100000",
+   "canonical_hex": "00000000200040003802000000100000",
+   "orbit_covered_by_certified_sibling": true,
+   "provenance_sources": [
+    "class-frontier-warm-multiband-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000040000000803202000040000000",
+   "canonical_hex": "00000000040000803800040008000000",
+   "orbit_covered_by_certified_sibling": true,
+   "provenance_sources": [
+    "class-frontier-warm-multiband-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000040000000803202000080000000",
+   "canonical_hex": "00000000020000809802000000040000",
+   "orbit_covered_by_certified_sibling": true,
+   "provenance_sources": [
+    "class-frontier-warm-multiband-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000040040000003800000048000000",
+   "canonical_hex": "00000000040000801202040040000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost63j-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000080000000801206000040000000",
+   "canonical_hex": "00000000040000403820000008000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost58c-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000080000000803242000000000000",
+   "canonical_hex": "00000000000000849802000000020000",
+   "orbit_covered_by_certified_sibling": true,
+   "provenance_sources": [
+    "class-frontier-after-cost70c-warm3-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000080040000003800000048000000",
+   "canonical_hex": "00000000040000801222000040000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost63j-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000200000000801206000040000000",
+   "canonical_hex": "00000000040000c09002000000008000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost58c-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000200000000803202000040000000",
+   "canonical_hex": "00000000040000809802000000008000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-unified-merge-recompute-20261115.json",
+    "class-frontier-warm-multiband2-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000200000000803242000000000000",
+   "canonical_hex": "00000000000000849802000000008000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-unified-merge-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000200000000809102000000800000",
+   "canonical_hex": "00000000020000809102000000020000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-warm-multiband-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000200000000809102000001000000",
+   "canonical_hex": "00000000040000809102000000020000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-warm-multiband-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000200000000c09002000001000000",
+   "canonical_hex": "00000000040000809003000000020000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost63i-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000200040000003800000048000000",
+   "canonical_hex": "00000000040000809002200040000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost63j-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000400000000809102000000800000",
+   "canonical_hex": "00000000020000809102000000040000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-warm-multiband-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00000800000000c09002000001000000",
+   "canonical_hex": "00000000040000809003000000080000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost63i-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00000800040000003800000048000000",
+   "canonical_hex": "00000000040000809002000040800000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost63j-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00002000000000801206000040000000",
+   "canonical_hex": "00000000040000c09002000000000800",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost58c-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00002000000000809102000001000000",
+   "canonical_hex": "00000000040000809102000000200000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-warm-multiband-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00002000000000809102000800000000",
+   "canonical_hex": "00000000000080809102000000200000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost68d-recompute-20261115.json",
+    "class-frontier-merged-recompute-after-multiband2-68dhyg-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00008000000000809102000000800000",
+   "canonical_hex": "00000000020000809102000000000002",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-warm-multiband-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00010000000000801202000040000001",
+   "canonical_hex": "00000000040000003800000108000001",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost70g-receipts-recompute-20261116.json",
+    "class-frontier-reconciled-canonical1400-cost70g-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00010000000000809102000001000000",
+   "canonical_hex": "00000000040000809102000000000004",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-warm-multiband-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00010000000000c09002000001000000",
+   "canonical_hex": "00000000040000809003000000000004",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost63i-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00020000040000003800000048000000",
+   "canonical_hex": "00000000040000801202080040000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost63j-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00040000000000801206000040000000",
+   "canonical_hex": "00000000040000403840000008000000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost58c-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00040000000000803202000000000002",
+   "canonical_hex": "00000000000000803800100008200000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-unified-merge-recompute-20261115.json",
+    "class-frontier-warm-multiband2-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00040000000000809102000000800000",
+   "canonical_hex": "00000000020000809102000000000010",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-warm-multiband-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00040000000000c09002000001000000",
+   "canonical_hex": "00000000040000809003000000000010",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost63i-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00100000000000801206000040000000",
+   "canonical_hex": "00000000040000c09002000000000010",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost58c-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00100000000000803202000000000002",
+   "canonical_hex": "00000000000000843800000008200000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-unified-merge-recompute-20261115.json",
+    "class-frontier-warm-multiband2-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00100000000000803202000000100000",
+   "canonical_hex": "00000000200000003802100000100000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-unified-merge-recompute-20261115.json",
+    "class-frontier-warm-multiband2-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00100000000000809102000000800000",
+   "canonical_hex": "00000000020000809102000000000040",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-warm-multiband-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00100000000000c09002000001000000",
+   "canonical_hex": "00000000040000809003000000000040",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost63i-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00200000000000801206000040000000",
+   "canonical_hex": "00000000040000c09002000000000008",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost58c-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00200000000000803202000000100000",
+   "canonical_hex": "00000000200000003802000200100000",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-unified-merge-recompute-20261115.json",
+    "class-frontier-warm-multiband2-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00200000000000803202000000400000",
+   "canonical_hex": "00000000000020803800000008000100",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-unified-merge-recompute-20261115.json",
+    "class-frontier-warm-multiband2-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00400000000000801206000040000000",
+   "canonical_hex": "00000000040000c09002000000000004",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost58c-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "00400000000000809102000001000000",
+   "canonical_hex": "00000000040000809102000000000100",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-warm-multiband-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00400000000000809102000800000000",
+   "canonical_hex": "00000000000080809102000000000100",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-warm-multiband-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00800000000000803202000000000002",
+   "canonical_hex": "00000008000000803800000008200000",
+   "orbit_covered_by_certified_sibling": true,
+   "provenance_sources": [
+    "class-frontier-warm-multiband-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "00800000000000c09002000001000000",
+   "canonical_hex": "00000000040000809003000000000200",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost63i-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "01000000000000801202000040000001",
+   "canonical_hex": "00004000000000809002000001000400",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost70g-receipts-recompute-20261116.json",
+    "class-frontier-reconciled-canonical1400-cost70g-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "01000000000000801206000040000000",
+   "canonical_hex": "00000000040000c09002000000000001",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost58c-receipts-recompute-20261116.json"
+   ]
+  },
+  {
+   "root_hex": "01000000000000803202000040000000",
+   "canonical_hex": "00000000040000809802000000000001",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-unified-merge-recompute-20261115.json",
+    "class-frontier-warm-multiband2-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "01000000000000809102000000800000",
+   "canonical_hex": "00000000020000809102000000000400",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-unified-merge-recompute-20261115.json",
+    "class-frontier-warm-multiband2-recompute-20261115.json"
+   ]
+  },
+  {
+   "root_hex": "01000000000000c09002000001000000",
+   "canonical_hex": "00000000040000809003000000000400",
+   "orbit_covered_by_certified_sibling": false,
+   "provenance_sources": [
+    "class-frontier-cost63i-receipts-recompute-20261116.json"
+   ]
+  }
+ ],
+ "interpretation_guard": [
+  "solved 1452 is manifest cover bookkeeping of the head-1452 frontier; this census does not change any frontier number",
+  "a WIN7-D10 certificate proves only that its individual 7-stone root is a first-player win within depth 10",
+  "REFUTED-D10 entries are not LOSS proofs",
+  "uncertified (N) roots are folded WIN receipts without certificate evidence in the scanned set: they are 76c-bit113-style bookkeeping risks until certificates are published and independently verified",
+  "11x11 empty board, two-stone root {49,60}, S2 {59,60}, class 1, class 2 and class 4 all remain UNKNOWN"
+ ]
+}
