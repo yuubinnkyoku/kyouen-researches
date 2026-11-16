@@ -76,6 +76,17 @@ v17で全76候補を同じbatch分割で再スイープ（pilot 10/10・nodes総
 
 76cと64hの対比から、飽和の実務的しきい値は「そのbit探索のfb unique triple が約1.16e5を超えるか」であり、76cの大規模bit（4-17M nodes）では発生し、64h（最大3.5M nodes/bit・行全体47M nodes）では発生しなかった。node数のみでは判定できず、v17でのnode数不一致（またはprobe計測）が飽和の検出器になる。過去の他lane（65n/66c等、bitあたりnode数が大きいもの）のREFUTED verdictを planning入力に使う前のv17再検査を次回以降の課題とする。
 
+## 追試2: cost64e STERILE行のv17再検査（STERILE判定基盤の無影響確認）
+
+STERILE判定はK0863の深さ10非閉鎖性定理を通じて共有class-2 parentの実効closable需要に影響するため、fbt欠陥がSTERILE判自体を覆す可能性を閉じる必要がある。共有parentの最安行cost64e（child `0000000000000000380000000a002000`・64候補中60候補をv16掃引・全REFUTED-D10・4候補はD4転写）をv17で全bit再実行した。
+
+- **60/60 bitがv16出版記録と全フィールド一致**（verdict・nodes・capped・terminalStoneRange・andclose、nodes総和39,961,790も同一。異なるのは実時間msのみ）。pilot 3/3（3402）。
+- 最重bit 32（3,279,693 nodes）・bit 21（3,270,894）・bit 118（2,185,077）を含む全bitがv17で正確に再現され、**64e掃引分行全体がfb非飽和**。なおv17再実行は出版v16と異なるバッチ分割（20bit×3 vs 8bit×7+4）でもnode-exactであり、この行についての順序不変性も同時に観察された。
+- よって**STERILE判定とK0863帰結は掃引基盤上で変わらず有効**。ただし4つの転写bit（70/104/115/119）は他行の出版verdictのD4正準同一性転写であり本再検査の対象外で、それらの源流行のv17再検査は既存の過去lane再検査キューに含まれる。
+- 保存物: `output/class2-lane-cost64e-v17-full-row-recheck-20261117.json`（全入出力blob pin付き）+ v17 chunk 3本（refuted）。
+
+76c（飽和あり・反転1件）、64h（最大3.5M nodes/bit・無影響）、64e（最大3.3M nodes/bit・無影響）の3行の再検査が揃い、**node数がbitあたり3.5M以下の行はこの2例ではいずれも非飽和**という経験則が得られた。ただし飽和はfb unique triple数に依存しnode数からは判定できないため、検出器は引き続きv17でのnode数不一致（またはprobe計測）とする。
+
 ## 信頼境界
 
 v17自体の健全性は「両順序でverdict不変・非飽和領域でv16一致・pilot不変」による強い証拠だが、形式的検証ではない。bits 61/99の最終確定は証明書の独立検証合格による。bit 113のREFUTED-D10もLOSS証明ではない。
