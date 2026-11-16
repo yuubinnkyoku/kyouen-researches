@@ -98,7 +98,7 @@ def main():
     old_bits = [x["bit"] for x in old["single_candidate_projections"]]
     assert old_bits == [61, 99, 113]
     old_marginals = {x["bit"]: x for x in old["combined_projection"]["per_candidate_marginal"]}
-    assert [x["bit"] for x in old["combined_projection"]["fold_order_bits"]] == [61, 99, 113]
+    assert old["combined_projection"]["fold_order_bits"] == [61, 99, 113]
     assert old_marginals[61]["marginal_d4_s6_orbits"] == 5
     assert old_marginals[99]["marginal_d4_s6_orbits"] == 4
     assert old_marginals[113]["marginal_d4_s6_orbits"] == 4
