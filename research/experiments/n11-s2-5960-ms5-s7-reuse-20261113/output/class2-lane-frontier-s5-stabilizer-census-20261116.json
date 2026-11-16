@@ -1,0 +1,134 @@
+{
+ "meta": {
+  "date": "2026-11-16",
+  "lane": "class2-lane (11x11 long-term, weak solve)",
+  "title": "Frontier-wide S5 D4 stabilizer census + ranking bookkeeping audit (174 remaining S5)",
+  "implementation": "independent third implementation (TypeScript sandbox): D4 (order 8) canonical form and stabilizer computation written from scratch",
+  "input": "class-frontier-s5-ranking-after-reconciled-canonical1400-cost70g-20261116.csv (head 4caee1a7)",
+  "related": "class2-lane-next-targets-orbit-dedup-measurement-20261116.json (same session)"
+ },
+ "controls": {
+  "rows": 174,
+  "popcount5_all": true,
+  "all_rows_canonical_under_third_impl": true,
+  "non_canonical_count": 0,
+  "duplicate_canonical_forms": 0,
+  "note": "all 174 S5 hexes are fixed points of the third implementation's D4-canonical form and pairwise distinct - the ranking's canonical convention matches the independent implementation exactly"
+ },
+ "stabilizer_census": {
+  "identity_only": 166,
+  "nontrivial": 8,
+  "nontrivial_detail": [
+   {
+    "hex": "00000000000000809082000000000000",
+    "classes": 3,
+    "rem_s6": 10,
+    "cost": 698,
+    "stab": [
+     "identity",
+     "y_flip"
+    ],
+    "measured_family_dup_pct": 12.18
+   },
+   {
+    "hex": "00000000020000003800000080000000",
+    "classes": 4,
+    "rem_s6": 18,
+    "cost": 1460,
+    "stab": [
+     "identity",
+     "rot180"
+    ],
+    "measured_family_dup_pct": 19.86
+   },
+   {
+    "hex": "00000000000000821082000000000000",
+    "classes": 1,
+    "rem_s6": 18,
+    "cost": 1238,
+    "stab": [
+     "identity",
+     "x_flip",
+     "y_flip",
+     "rot180"
+    ],
+    "note": "Klein four-group (order 4) - largest stabilizer among all remaining S5; this is S5 'Q' on the engine task list (class-1)"
+   },
+   {
+    "hex": "00000000000000805082000000000000",
+    "classes": 1,
+    "rem_s6": 36,
+    "cost": 2526,
+    "stab": [
+     "identity",
+     "y_flip"
+    ]
+   },
+   {
+    "hex": "00000000000000003802000000000020",
+    "classes": 1,
+    "rem_s6": 36,
+    "cost": 2679,
+    "stab": [
+     "identity",
+     "x_flip"
+    ]
+   },
+   {
+    "hex": "00000000000000811082000000000000",
+    "classes": 1,
+    "rem_s6": 38,
+    "cost": 2821,
+    "stab": [
+     "identity",
+     "y_flip"
+    ]
+   },
+   {
+    "hex": "00000000000000003800004000000020",
+    "classes": 1,
+    "rem_s6": 39,
+    "cost": 2870,
+    "stab": [
+     "identity",
+     "x_flip"
+    ]
+   },
+   {
+    "hex": "00000000000000003800000000010020",
+    "classes": 1,
+    "rem_s6": 40,
+    "cost": 3143,
+    "stab": [
+     "identity",
+     "x_flip"
+    ]
+   }
+  ],
+  "cost_share_nontrivial": 17435,
+  "cost_share_trivial": 953591,
+  "nontrivial_cost_pct": 1.8,
+  "stabilizer_vs_dup_correlation": "measured same-session: order-2 stabilizer families showed 12.18% and 19.86% family-internal candidate-orbit duplication; trivial-stabilizer families showed 1.44% and 2.75% - stabilizer order is the leading structural predictor of family-internal redundancy"
+ },
+ "bookkeeping_consistency": {
+  "ranking_sum_cost_with_multiplicity": 971026,
+  "ranking_sum_rem_s6_with_multiplicity": 12284,
+  "head1419_unique_remaining_s6": 6429,
+  "head1419_sum_remaining_cost": 508474,
+  "observation": "the ranking aggregates per-S5 families with multiplicity (a shared S6 child is counted once per parent family); 6429/12284 = 0.5232 and 508474/971026 = 0.5236 - consistent with multiplicity dedup at the S6 level, though this is a consistency indication, not an independent verification of 508474 (child-level lists would be needed)"
+ },
+ "recommendation": {
+  "q_sweep": "when the engine sweep for Q (00000000000000821082000000000000, class-1, 18 children / cost 1238) runs, apply family-level orbit dedup first: its order-4 stabilizer gives it the highest expected family-internal duplication of all remaining S5s (above the 19.86% measured for the order-2 class4 family)",
+  "fleet_note": "only 8/174 remaining S5s have nontrivial stabilizers; family-internal orbit transfer pays off mainly for these (1.8% of ranked cost). Cross-family orbit collisions (the 8.95% re-search redundancy measured in the 65f/65j census) require the global seen-orbit table instead"
+ },
+ "interpretation_guard": {
+  "no_verdict_claim": "this census contains no win/loss verdicts and changes the status of no root",
+  "stabilizer_meaning": "stabilizer order predicts search-work redundancy only",
+  "solved_1419_note": "solved 1419 counts are manifest coverage bookkeeping, not game outcomes"
+ },
+ "status": {
+  "11x11_empty_board": "UNKNOWN",
+  "s2_root_59_60": "UNKNOWN",
+  "class1_class2_class4_roots": "UNKNOWN"
+ }
+}
