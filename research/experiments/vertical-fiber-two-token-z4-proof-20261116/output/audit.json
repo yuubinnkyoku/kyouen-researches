@@ -1,0 +1,43 @@
+{
+  "all_checks_pass": true,
+  "all_parameter_option_table_audit": {
+    "even_zero_membership_checks": 62685,
+    "even_zero_membership_mismatches": 0,
+    "extra_R_after_S": 12,
+    "first_mismatch": null,
+    "max_x": 60,
+    "odd_option_set_checks": 63585,
+    "odd_option_set_mismatches": 0,
+    "small_option_checks": 7320,
+    "small_option_mismatches": 0
+  },
+  "date": "2026-11-16",
+  "proof_method": "R-strong induction; exact small-R table; odd option-set signatures; even zero-membership signatures",
+  "raw_two_engine_audit": {
+    "all_zero_mismatch": true,
+    "checks": {
+      "grid_bad_first": [],
+      "grid_mismatches": 0,
+      "grid_states": 10200,
+      "induction_bad_first": [],
+      "induction_mismatches": 0,
+      "induction_steps_checked": 9900,
+      "parity_checked": 10200,
+      "parity_violations": 0,
+      "scatter_bad_first": [],
+      "scatter_checked": 200,
+      "scatter_mismatches": 0,
+      "single_anchor_checked": 4608,
+      "single_anchor_mismatches": 0,
+      "tail_checked": 1200,
+      "tail_violations": 0,
+      "z3_anchor_checked": 10200,
+      "z3_anchor_mismatches": 0
+    },
+    "extra_R_after_S": 8,
+    "max_x": 24
+  },
+  "status": "proved by strong induction; finite audits are corroboration",
+  "target": "two-token residual game z=4 full Grundy slice",
+  "verifier_sha256": "13215e81021fda8d97fa80df183247b767554338b83dcbeaa760f95a2d199c6d"
+}
