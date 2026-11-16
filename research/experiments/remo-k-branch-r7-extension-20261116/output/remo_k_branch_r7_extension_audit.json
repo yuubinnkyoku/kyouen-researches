@@ -1,0 +1,1223 @@
+{
+ "burnside_cap10": {
+  "fix_cyc": 125,
+  "fix_id": 84494,
+  "fix_trans": 3478,
+  "orbits": 15863
+ },
+ "delta0_r7": {
+  "mismatches": 0,
+  "profiles": 728
+ },
+ "failing_witnesses_r7": {
+  "4,4,9|0#7": {
+   "chain_survivors": [
+    3
+   ],
+   "det_atoms": [
+    1,
+    1,
+    1,
+    5,
+    2,
+    2,
+    0
+   ],
+   "det_cells": 12,
+   "det_survivors": [
+    3
+   ],
+   "ndet_atoms": [
+    1,
+    1,
+    0,
+    3,
+    3,
+    3,
+    0
+   ],
+   "ndet_cells": 11,
+   "ndet_survivors": [
+    1,
+    2,
+    3
+   ]
+  },
+  "4,4,9|1#7": {
+   "chain_survivors": [
+    3
+   ],
+   "det_atoms": [
+    1,
+    1,
+    1,
+    6,
+    1,
+    1,
+    1
+   ],
+   "det_cells": 12,
+   "det_survivors": [
+    3
+   ],
+   "ndet_atoms": [
+    1,
+    1,
+    0,
+    4,
+    2,
+    2,
+    1
+   ],
+   "ndet_cells": 11,
+   "ndet_survivors": [
+    1,
+    2,
+    3
+   ]
+  },
+  "4,4,9|2#7": {
+   "chain_survivors": [
+    3
+   ],
+   "det_atoms": [
+    1,
+    1,
+    1,
+    7,
+    0,
+    0,
+    2
+   ],
+   "det_cells": 12,
+   "det_survivors": [
+    3
+   ],
+   "ndet_atoms": [
+    1,
+    1,
+    0,
+    5,
+    1,
+    1,
+    2
+   ],
+   "ndet_cells": 11,
+   "ndet_survivors": [
+    1,
+    2,
+    3
+   ]
+  },
+  "4,9,9|0#7": {
+   "chain_survivors": [
+    3
+   ],
+   "det_atoms": [
+    1,
+    1,
+    2,
+    2,
+    1,
+    6,
+    0
+   ],
+   "det_cells": 13,
+   "det_survivors": [
+    3
+   ],
+   "ndet_atoms": [
+    1,
+    1,
+    3,
+    4,
+    0,
+    5,
+    0
+   ],
+   "ndet_cells": 14,
+   "ndet_survivors": [
+    1,
+    2,
+    3
+   ]
+  },
+  "4,9,9|1#7": {
+   "chain_survivors": [
+    3
+   ],
+   "det_atoms": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    6,
+    1
+   ],
+   "det_cells": 12,
+   "det_survivors": [
+    3
+   ],
+   "ndet_atoms": [
+    1,
+    1,
+    2,
+    3,
+    0,
+    5,
+    1
+   ],
+   "ndet_cells": 13,
+   "ndet_survivors": [
+    1,
+    2,
+    3
+   ]
+  },
+  "4,9,9|2#7": {
+   "chain_survivors": [
+    3
+   ],
+   "det_atoms": [
+    1,
+    1,
+    6,
+    2,
+    0,
+    0,
+    2
+   ],
+   "det_cells": 12,
+   "det_survivors": [
+    3
+   ],
+   "ndet_atoms": [
+    1,
+    1,
+    1,
+    2,
+    0,
+    5,
+    2
+   ],
+   "ndet_cells": 12,
+   "ndet_survivors": [
+    1,
+    2,
+    3
+   ]
+  }
+ },
+ "fate_48_families_r7": {
+  "4,4,8|0": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "n_det": 0,
+   "profiles": 20
+  },
+  "4,4,8|1": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "n_det": 0,
+   "profiles": 10
+  },
+  "4,4,8|2": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "n_det": 0,
+   "profiles": 4
+  },
+  "4,4,8|3": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3,
+    4
+   ],
+   "n_det": 0,
+   "profiles": 1
+  },
+  "4,8,8|0": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "n_det": 0,
+   "profiles": 39
+  },
+  "4,8,8|1": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "n_det": 0,
+   "profiles": 24
+  },
+  "4,8,8|2": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "n_det": 0,
+   "profiles": 11
+  },
+  "4,8,8|3": {
+   "chain_determined": false,
+   "chain_survivors": [
+    2,
+    3,
+    4
+   ],
+   "n_det": 0,
+   "profiles": 5
+  }
+ },
+ "fate_89_families_r7": {
+  "8,8,9|0": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "n_det": 0,
+   "profiles": 100
+  },
+  "8,8,9|1": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "n_det": 0,
+   "profiles": 70
+  },
+  "8,8,9|2": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "n_det": 0,
+   "profiles": 48
+  },
+  "8,8,9|3": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "n_det": 0,
+   "profiles": 30
+  },
+  "8,8,9|4": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "n_det": 0,
+   "profiles": 18
+  },
+  "8,8,9|5": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "n_det": 0,
+   "profiles": 9
+  },
+  "8,9,9|0": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "n_det": 0,
+   "profiles": 110
+  },
+  "8,9,9|1": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "n_det": 0,
+   "profiles": 80
+  },
+  "8,9,9|2": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "n_det": 0,
+   "profiles": 54
+  },
+  "8,9,9|3": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "n_det": 0,
+   "profiles": 36
+  },
+  "8,9,9|4": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "n_det": 0,
+   "profiles": 21
+  },
+  "8,9,9|5": {
+   "chain_determined": false,
+   "chain_survivors": [
+    3,
+    4
+   ],
+   "n_det": 0,
+   "profiles": 12
+  }
+ },
+ "first_loser_violations_r7": 0,
+ "machine_checks": [
+  {
+   "data": {
+    "enum_count": 15863,
+    "fix_cyc": 125,
+    "fix_id": 84494,
+    "fix_trans": 3478,
+    "orbits": 15863
+   },
+   "name": "cap=10: canonical profile count == Burnside orbit count (15863, K0862/K0864 anchor)",
+   "ok": true
+  },
+  {
+   "data": {
+    "det_keys": 98,
+    "keys": 715,
+    "odet_keys": 55,
+    "profiles": 15863
+   },
+   "name": "r=7 sweep: 15863 profiles, 715 keys, 0 budget skips; 98 uniformly-determined keys, 55 uniformly-order-determined keys",
+   "ok": true
+  },
+  {
+   "data": {
+    "failing": [
+     [
+      [
+       4,
+       4,
+       9
+      ],
+      0
+     ],
+     [
+      [
+       4,
+       4,
+       9
+      ],
+      1
+     ],
+     [
+      [
+       4,
+       4,
+       9
+      ],
+      2
+     ],
+     [
+      [
+       4,
+       9,
+       9
+      ],
+      0
+     ],
+     [
+      [
+       4,
+       9,
+       9
+      ],
+      1
+     ],
+     [
+      [
+       4,
+       9,
+       9
+      ],
+      2
+     ]
+    ],
+    "has_4": true,
+    "has_9": true,
+    "no_10": true,
+    "no_8": true
+   },
+   "name": "Theorem I r=7: non-collapse keys are exactly the 6 keys (4,4,9),(4,9,9) x g=0..2; every failing key has a 9-branch and a 4-branch, NO failing key has an 8-branch (size-8 necessity breaks at r=7), none has a 10-branch; chain determined with survivor P_3; determined side uniform P_3; ndet survivor sets == {{1,2,3}}; per-key partitions match published counts",
+   "ok": true
+  },
+  {
+   "data": {
+    "violations": 0
+   },
+   "name": "Lemma FL at r=7: possible first losers == {C_i mod 7} on all 15863 profiles (0 violations; the lemma is universal, K0864)",
+   "ok": true
+  },
+  {
+   "data": {
+    "order_mismatch": 0,
+    "survivor_mismatch": 0,
+    "uniformly_determined_keys": 98,
+    "uniformly_order_determined_keys": 55
+   },
+   "name": "Theorem G' at r=7: every uniformly-determined key has survivor == chain survivor (and a determined chain); every uniformly-order-determined key has order == chain order",
+   "ok": true
+  },
+  {
+   "data": {
+    "mismatches": 0,
+    "profiles": 728,
+    "table_entries": 84,
+    "table_mismatches": 0
+   },
+   "name": "Delta=0 profiles (cap<=10, 728) == Theorem D survivor at r=7; Theorem D recursion == K0859 published (C,r) table (84 entries incl. r=7, 0 mismatches)",
+   "ok": true
+  },
+  {
+   "data": {
+    "per_key": {
+     "8,8,9|0": {
+      "chain_determined": false,
+      "chain_survivors": [
+       3,
+       4
+      ],
+      "n_det": 0,
+      "profiles": 100
+     },
+     "8,8,9|1": {
+      "chain_determined": false,
+      "chain_survivors": [
+       3,
+       4
+      ],
+      "n_det": 0,
+      "profiles": 70
+     },
+     "8,8,9|2": {
+      "chain_determined": false,
+      "chain_survivors": [
+       3,
+       4
+      ],
+      "n_det": 0,
+      "profiles": 48
+     },
+     "8,8,9|3": {
+      "chain_determined": false,
+      "chain_survivors": [
+       3,
+       4
+      ],
+      "n_det": 0,
+      "profiles": 30
+     },
+     "8,8,9|4": {
+      "chain_determined": false,
+      "chain_survivors": [
+       3,
+       4
+      ],
+      "n_det": 0,
+      "profiles": 18
+     },
+     "8,8,9|5": {
+      "chain_determined": false,
+      "chain_survivors": [
+       3,
+       4
+      ],
+      "n_det": 0,
+      "profiles": 9
+     },
+     "8,9,9|0": {
+      "chain_determined": false,
+      "chain_survivors": [
+       3,
+       4
+      ],
+      "n_det": 0,
+      "profiles": 110
+     },
+     "8,9,9|1": {
+      "chain_determined": false,
+      "chain_survivors": [
+       3,
+       4
+      ],
+      "n_det": 0,
+      "profiles": 80
+     },
+     "8,9,9|2": {
+      "chain_determined": false,
+      "chain_survivors": [
+       3,
+       4
+      ],
+      "n_det": 0,
+      "profiles": 54
+     },
+     "8,9,9|3": {
+      "chain_determined": false,
+      "chain_survivors": [
+       3,
+       4
+      ],
+      "n_det": 0,
+      "profiles": 36
+     },
+     "8,9,9|4": {
+      "chain_determined": false,
+      "chain_survivors": [
+       3,
+       4
+      ],
+      "n_det": 0,
+      "profiles": 21
+     },
+     "8,9,9|5": {
+      "chain_determined": false,
+      "chain_survivors": [
+       3,
+       4
+      ],
+      "n_det": 0,
+      "profiles": 12
+     }
+    }
+   },
+   "name": "F89: the 12 keys (8,8,9),(8,9,9) g=0..5 (failing at r=3,4,5) are non-determined for EVERY profile at r=7 and their chains are non-determined (collapse to uniformly-ndet; published profile totals reproduced)",
+   "ok": true
+  },
+  {
+   "data": {
+    "per_key": {
+     "4,4,8|0": {
+      "chain_determined": false,
+      "chain_survivors": [
+       3,
+       4
+      ],
+      "n_det": 0,
+      "profiles": 20
+     },
+     "4,4,8|1": {
+      "chain_determined": false,
+      "chain_survivors": [
+       3,
+       4
+      ],
+      "n_det": 0,
+      "profiles": 10
+     },
+     "4,4,8|2": {
+      "chain_determined": false,
+      "chain_survivors": [
+       3,
+       4
+      ],
+      "n_det": 0,
+      "profiles": 4
+     },
+     "4,4,8|3": {
+      "chain_determined": false,
+      "chain_survivors": [
+       2,
+       3,
+       4
+      ],
+      "n_det": 0,
+      "profiles": 1
+     },
+     "4,8,8|0": {
+      "chain_determined": false,
+      "chain_survivors": [
+       3,
+       4
+      ],
+      "n_det": 0,
+      "profiles": 39
+     },
+     "4,8,8|1": {
+      "chain_determined": false,
+      "chain_survivors": [
+       3,
+       4
+      ],
+      "n_det": 0,
+      "profiles": 24
+     },
+     "4,8,8|2": {
+      "chain_determined": false,
+      "chain_survivors": [
+       3,
+       4
+      ],
+      "n_det": 0,
+      "profiles": 11
+     },
+     "4,8,8|3": {
+      "chain_determined": false,
+      "chain_survivors": [
+       2,
+       3,
+       4
+      ],
+      "n_det": 0,
+      "profiles": 5
+     }
+    }
+   },
+   "name": "F48: the 6 keys (4,4,8),(4,8,8) g=0..2 (failing at r=6) plus g=3 are non-determined for EVERY profile at r=7 and their chains are non-determined (the r=6 failing family collapses; its determined side vanishes exactly as the r=3 small-branch family's did at r>=4)",
+   "ok": true
+  },
+  {
+   "data": {
+    "targeted": {
+     "4,4,9|0": {
+      "by_r": {
+       "2": {
+        "chain_determined": false,
+        "n_det": 0
+       },
+       "3": {
+        "chain_determined": false,
+        "n_det": 0
+       },
+       "4": {
+        "chain_determined": false,
+        "n_det": 0
+       },
+       "5": {
+        "chain_determined": false,
+        "n_det": 0
+       },
+       "6": {
+        "chain_determined": false,
+        "n_det": 0
+       }
+      },
+      "profiles": 20
+     },
+     "4,4,9|1": {
+      "by_r": {
+       "2": {
+        "chain_determined": false,
+        "n_det": 0
+       },
+       "3": {
+        "chain_determined": false,
+        "n_det": 0
+       },
+       "4": {
+        "chain_determined": false,
+        "n_det": 0
+       },
+       "5": {
+        "chain_determined": false,
+        "n_det": 0
+       },
+       "6": {
+        "chain_determined": false,
+        "n_det": 0
+       }
+      },
+      "profiles": 10
+     },
+     "4,4,9|2": {
+      "by_r": {
+       "2": {
+        "chain_determined": false,
+        "n_det": 0
+       },
+       "3": {
+        "chain_determined": false,
+        "n_det": 0
+       },
+       "4": {
+        "chain_determined": false,
+        "n_det": 0
+       },
+       "5": {
+        "chain_determined": false,
+        "n_det": 0
+       },
+       "6": {
+        "chain_determined": false,
+        "n_det": 0
+       }
+      },
+      "profiles": 4
+     },
+     "4,4,9|3": {
+      "by_r": {
+       "2": {
+        "chain_determined": false,
+        "n_det": 0
+       },
+       "3": {
+        "chain_determined": false,
+        "n_det": 0
+       },
+       "4": {
+        "chain_determined": false,
+        "n_det": 0
+       },
+       "5": {
+        "chain_determined": false,
+        "n_det": 0
+       },
+       "6": {
+        "chain_determined": false,
+        "n_det": 0
+       }
+      },
+      "profiles": 1
+     },
+     "4,9,9|0": {
+      "by_r": {
+       "2": {
+        "chain_determined": false,
+        "n_det": 0
+       },
+       "3": {
+        "chain_determined": false,
+        "n_det": 0
+       },
+       "4": {
+        "chain_determined": false,
+        "n_det": 0
+       },
+       "5": {
+        "chain_determined": false,
+        "n_det": 0
+       },
+       "6": {
+        "chain_determined": false,
+        "n_det": 0
+       }
+      },
+      "profiles": 45
+     },
+     "4,9,9|1": {
+      "by_r": {
+       "2": {
+        "chain_determined": false,
+        "n_det": 0
+       },
+       "3": {
+        "chain_determined": false,
+        "n_det": 0
+       },
+       "4": {
+        "chain_determined": false,
+        "n_det": 0
+       },
+       "5": {
+        "chain_determined": false,
+        "n_det": 0
+       },
+       "6": {
+        "chain_determined": false,
+        "n_det": 0
+       }
+      },
+      "profiles": 28
+     },
+     "4,9,9|2": {
+      "by_r": {
+       "2": {
+        "chain_determined": false,
+        "n_det": 0
+       },
+       "3": {
+        "chain_determined": false,
+        "n_det": 0
+       },
+       "4": {
+        "chain_determined": false,
+        "n_det": 0
+       },
+       "5": {
+        "chain_determined": false,
+        "n_det": 0
+       },
+       "6": {
+        "chain_determined": false,
+        "n_det": 0
+       }
+      },
+      "profiles": 13
+     },
+     "4,9,9|3": {
+      "by_r": {
+       "2": {
+        "chain_determined": false,
+        "n_det": 0
+       },
+       "3": {
+        "chain_determined": false,
+        "n_det": 0
+       },
+       "4": {
+        "chain_determined": false,
+        "n_det": 0
+       },
+       "5": {
+        "chain_determined": false,
+        "n_det": 0
+       },
+       "6": {
+        "chain_determined": false,
+        "n_det": 0
+       }
+      },
+      "profiles": 6
+     }
+    }
+   },
+   "name": "PE: the new r=7 failing families (4,4,9),(4,9,9) g=0..3 were uniformly-ndet (every profile AND the chain) for ALL r=2..6 (40 key x r sweeps) - the same dormant state the (4,4,8)/(4,8,8) pair kept at r=3,4,5 before failing at r=6",
+   "ok": true
+  }
+ ],
+ "meta": {
+  "cap": 10,
+  "engine_sha256": "43adec69c0a6c5da0a43f6db6405c11376fda6c7eec8e7055f17b274c35a1edf",
+  "engine_source": "verbatim from research/experiments/remo-k-branch-r-boundary-20261116/verify_remo_k_branch_r_boundary.py (K0864, commit 3138e0e3)",
+  "profiles": 15863,
+  "r": 7
+ },
+ "partition_49_r7": {
+  "4,4,9|0": {
+   "n_det": 16,
+   "n_ndet": 4,
+   "profiles": 20
+  },
+  "4,4,9|1": {
+   "n_det": 7,
+   "n_ndet": 3,
+   "profiles": 10
+  },
+  "4,4,9|2": {
+   "n_det": 2,
+   "n_ndet": 2,
+   "profiles": 4
+  },
+  "4,9,9|0": {
+   "n_det": 39,
+   "n_ndet": 6,
+   "profiles": 45
+  },
+  "4,9,9|1": {
+   "n_det": 22,
+   "n_ndet": 6,
+   "profiles": 28
+  },
+  "4,9,9|2": {
+   "n_det": 7,
+   "n_ndet": 6,
+   "profiles": 13
+  }
+ },
+ "pre_echo_49_r2_6": {
+  "4,4,9|0": {
+   "by_r": {
+    "2": {
+     "chain_determined": false,
+     "n_det": 0
+    },
+    "3": {
+     "chain_determined": false,
+     "n_det": 0
+    },
+    "4": {
+     "chain_determined": false,
+     "n_det": 0
+    },
+    "5": {
+     "chain_determined": false,
+     "n_det": 0
+    },
+    "6": {
+     "chain_determined": false,
+     "n_det": 0
+    }
+   },
+   "profiles": 20
+  },
+  "4,4,9|1": {
+   "by_r": {
+    "2": {
+     "chain_determined": false,
+     "n_det": 0
+    },
+    "3": {
+     "chain_determined": false,
+     "n_det": 0
+    },
+    "4": {
+     "chain_determined": false,
+     "n_det": 0
+    },
+    "5": {
+     "chain_determined": false,
+     "n_det": 0
+    },
+    "6": {
+     "chain_determined": false,
+     "n_det": 0
+    }
+   },
+   "profiles": 10
+  },
+  "4,4,9|2": {
+   "by_r": {
+    "2": {
+     "chain_determined": false,
+     "n_det": 0
+    },
+    "3": {
+     "chain_determined": false,
+     "n_det": 0
+    },
+    "4": {
+     "chain_determined": false,
+     "n_det": 0
+    },
+    "5": {
+     "chain_determined": false,
+     "n_det": 0
+    },
+    "6": {
+     "chain_determined": false,
+     "n_det": 0
+    }
+   },
+   "profiles": 4
+  },
+  "4,4,9|3": {
+   "by_r": {
+    "2": {
+     "chain_determined": false,
+     "n_det": 0
+    },
+    "3": {
+     "chain_determined": false,
+     "n_det": 0
+    },
+    "4": {
+     "chain_determined": false,
+     "n_det": 0
+    },
+    "5": {
+     "chain_determined": false,
+     "n_det": 0
+    },
+    "6": {
+     "chain_determined": false,
+     "n_det": 0
+    }
+   },
+   "profiles": 1
+  },
+  "4,9,9|0": {
+   "by_r": {
+    "2": {
+     "chain_determined": false,
+     "n_det": 0
+    },
+    "3": {
+     "chain_determined": false,
+     "n_det": 0
+    },
+    "4": {
+     "chain_determined": false,
+     "n_det": 0
+    },
+    "5": {
+     "chain_determined": false,
+     "n_det": 0
+    },
+    "6": {
+     "chain_determined": false,
+     "n_det": 0
+    }
+   },
+   "profiles": 45
+  },
+  "4,9,9|1": {
+   "by_r": {
+    "2": {
+     "chain_determined": false,
+     "n_det": 0
+    },
+    "3": {
+     "chain_determined": false,
+     "n_det": 0
+    },
+    "4": {
+     "chain_determined": false,
+     "n_det": 0
+    },
+    "5": {
+     "chain_determined": false,
+     "n_det": 0
+    },
+    "6": {
+     "chain_determined": false,
+     "n_det": 0
+    }
+   },
+   "profiles": 28
+  },
+  "4,9,9|2": {
+   "by_r": {
+    "2": {
+     "chain_determined": false,
+     "n_det": 0
+    },
+    "3": {
+     "chain_determined": false,
+     "n_det": 0
+    },
+    "4": {
+     "chain_determined": false,
+     "n_det": 0
+    },
+    "5": {
+     "chain_determined": false,
+     "n_det": 0
+    },
+    "6": {
+     "chain_determined": false,
+     "n_det": 0
+    }
+   },
+   "profiles": 13
+  },
+  "4,9,9|3": {
+   "by_r": {
+    "2": {
+     "chain_determined": false,
+     "n_det": 0
+    },
+    "3": {
+     "chain_determined": false,
+     "n_det": 0
+    },
+    "4": {
+     "chain_determined": false,
+     "n_det": 0
+    },
+    "5": {
+     "chain_determined": false,
+     "n_det": 0
+    },
+    "6": {
+     "chain_determined": false,
+     "n_det": 0
+    }
+   },
+   "profiles": 6
+  }
+ },
+ "summary": {
+  "all_ok": true,
+  "n_checks": 9,
+  "n_ok": 9
+ },
+ "sweep_r7": {
+  "det_keys": 98,
+  "failing_keys": [
+   [
+    [
+     4,
+     4,
+     9
+    ],
+    0
+   ],
+   [
+    [
+     4,
+     4,
+     9
+    ],
+    1
+   ],
+   [
+    [
+     4,
+     4,
+     9
+    ],
+    2
+   ],
+   [
+    [
+     4,
+     9,
+     9
+    ],
+    0
+   ],
+   [
+    [
+     4,
+     9,
+     9
+    ],
+    1
+   ],
+   [
+    [
+     4,
+     9,
+     9
+    ],
+    2
+   ]
+  ],
+  "keys": 715,
+  "odet_keys": 55,
+  "profiles": 15863
+ },
+ "theorem_g_prime_r7": {
+  "order_mismatch": 0,
+  "survivor_mismatch": 0,
+  "uniformly_determined_keys": 98,
+  "uniformly_order_determined_keys": 55
+ }
+}
