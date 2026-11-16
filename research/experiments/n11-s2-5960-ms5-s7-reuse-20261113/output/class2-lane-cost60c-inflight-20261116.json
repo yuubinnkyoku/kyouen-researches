@@ -1,0 +1,45 @@
+{
+ "schema": "n11-class2-lane-cost60c-inflight-20261116-v1",
+ "title": "n11 class2-lane cost-60c sweep in flight: the unswept edge-60 child 00000000000000003800000008008020 at the post-cost-75e canonical head 1407 (dual class-1+class-2 demand; cross-cover neighbor of the STERILE cost-70j child)",
+ "date": "2026-11-16",
+ "status": "IN FLIGHT by the n11 long-term lane session (claimed before sweep start): full raw sweep of the 60 legal candidates with the v16 runner (depth 10, cap 1e9, andclose 1, 4-way parallel batches), determinism rerun and v15 crosscheck to follow",
+ "claimed_by": "n11 long-term lane session (cost-70j sterile-sweep continuation)",
+ "s6_child": "00000000000000003800000008008020",
+ "s6_s7_edge_cost": 60,
+ "demand": {
+  "c1": 1,
+  "c2": 1,
+  "c4": 0
+ },
+ "demand_semantics": "per-class open-parent counts at head 1407: the child is a row of one pure class-2 parent (00000000000000003800000008008000, 50 rows / 3551, lift stone 5) AND one pure class-1 parent (00000000000000003800000000008020, 74 rows / 5399, lift stone 27) - a dual class-1+class-2 demand row",
+ "chain_head_at_claim": "1407/174/6441/509300/4711/373023 (class-frontier-cost75e-receipts-recompute-20261116.json, git blob sha 5cd93de7ee8943681549b8f97918f6112548b373, commit dd623408)",
+ "child_stones_bit_indices": [
+  5,
+  15,
+  27,
+  59,
+  60,
+  61
+ ],
+ "open_parents_at_head_1407": [
+  {
+   "s5_hex": "00000000000000003800000008008000",
+   "classes_bitmask": 2,
+   "remaining_s6_orbits": 50,
+   "remaining_s7_edge_cost": 3551,
+   "lift_stone": 5
+  },
+  {
+   "s5_hex": "00000000000000003800000000008020",
+   "classes_bitmask": 1,
+   "remaining_s6_orbits": 74,
+   "remaining_s7_edge_cost": 5399,
+   "lift_stone": 27
+  }
+ ],
+ "legal_candidates": 60,
+ "motivation_cross_cover": "this child is a one-stone-replacement neighbor of the STERILE cost-70j child 00000000000000801282000000200000 (a remaining row, edge 70, of the best coverable class-2 S5 00000000000000801202000000200000, 3 rows / 209, all three rows STERILE by their own-row sweeps 65k / 74h / 70j). Exactly one of this child's 60 legal candidate roots covers the 70j child: bit 119, root 00800000000000003800000008008020. A WIN7-D10 verdict for bit 119 closes the 70j row via the standard marginal (cross-cover) mechanism, the only remaining closure route for that row; the other 59 candidates advance the two open parents normally. This claim does NOT assert the 70j row is closable - only that this sweep is the unique-category opportunity to test it.",
+ "demand_verification": "re-derived at head 1407 by prep_claim_cost60c_20261116.py (runpy of the published cost-75e fold script, byte-identical reproduction incl. all CONTROLs, then re-derivation): exact-integer D4 canonicalization of the six one-stone deletions of the child (stones [5,15,27,59,60,61]) gives exactly two open parents - del 5 -> class-2 S5 00000000000000003800000008008000 (50 rows / 3551), del 27 -> class-1 S5 00000000000000003800000000008020 (74 rows / 5399); the other four deletions are closed rows; legal candidates enumerated independently (60) and the single covering root for the 70j child identified by canonical covers over all 60 candidates x 7 deletions",
+ "coordination": "this child is NOT a row of the in-flight second-candidate-S5 lane (5 rows / 364, rows 64/71 STERILE + 76c in-flight + 76d/77e fold-pending), NOT a row of the class-4 best-S5 lane (00000000020000003800000080000000), and not part of the 354-root unique S7 worklist measurement lane; no sweep record and no prior claim reference this child hex (commit search on main returned none)",
+ "bookkeeping_only_note": "bookkeeping claim only; 11x11 empty board / two-stone root {49,60} / S2 {59,60} / class 1 / class 2 / class 4 all remain UNKNOWN; REFUTED-D10 is not a LOSS proof; STERILE is not a LOSS proof"
+}
