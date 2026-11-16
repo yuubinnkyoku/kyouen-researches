@@ -172,6 +172,10 @@ jobs:
         run: |
           uv run --locked python research/experiments/remo-k-branch-r8-sweep-20261116/verify_remo_k_branch_r8_sweep.py
           git diff --exit-code -- research/experiments/remo-k-branch-r8-sweep-20261116/output/remo_k_branch_r8_sweep_audit.json
+      - name: Audit K0873 two-token z=5 Grundy-one locus conjecture
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z5-value1-locus-20261116/verify_z5_value1.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z5-value1-locus-20261116/output/audit.json
       - name: Audit K0872 three-branch REMO first-loser residue signature
         run: |
           uv run --locked python research/experiments/remo-first-loser-residue-signature-20261116/verify_first_loser_residue_signature.py
