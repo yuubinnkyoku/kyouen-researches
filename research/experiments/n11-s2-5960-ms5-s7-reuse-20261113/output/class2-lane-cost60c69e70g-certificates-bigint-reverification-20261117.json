@@ -1,0 +1,877 @@
+{
+ "all_checks_pass": true,
+ "bands": {
+  "cost60c": {
+   "certificates": 1,
+   "manifest": "class2-lane-cost60c-win7-certificates-20261116.json"
+  },
+  "cost69e": {
+   "certificates": 10,
+   "manifest": "class2-lane-cost69e-win7-certificates-20261114.json"
+  },
+  "cost70g": {
+   "certificates": 8,
+   "manifest": "class2-lane-cost70g-win7-certificates-20261115.json"
+  }
+ },
+ "certificates_checked": 19,
+ "checks": [
+  {
+   "check": "verifier_blob_sha_matches_pinned_62b5d941",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "60c_bit92_blob_sha_matches_manifest",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "60c_bit92_md5_matches_manifest",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "60c_bit92_sha256_matches_manifest",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "60c_bit92_bytes_match_manifest",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "69e_bit21_md5_matches_manifest",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "69e_bit21_sha256_matches_manifest",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "69e_bit76_md5_matches_manifest",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "69e_bit76_sha256_matches_manifest",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "69e_bit84_md5_matches_manifest",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "69e_bit84_sha256_matches_manifest",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "69e_bit87_md5_matches_manifest",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "69e_bit87_sha256_matches_manifest",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "69e_bit89_md5_matches_manifest",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "69e_bit89_sha256_matches_manifest",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "69e_bit90_md5_matches_manifest",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "69e_bit90_sha256_matches_manifest",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "69e_bit94_md5_matches_manifest",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "69e_bit94_sha256_matches_manifest",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "69e_bit99_md5_matches_manifest",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "69e_bit99_sha256_matches_manifest",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "69e_bit108_md5_matches_manifest",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "69e_bit108_sha256_matches_manifest",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "69e_bit116_gzb64_md5_matches_manifest",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "69e_bit116_uncompressed_md5_matches_manifest",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "69e_bit116_uncompressed_sha256_matches_manifest",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "69e_bit116_uncompressed_bytes_match_manifest",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "69e_bit116_uncompressed_lines_match_manifest",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "70g_bit9_blob_sha_matches_manifest",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "70g_bit20_blob_sha_matches_manifest",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "70g_bit29_blob_sha_matches_manifest",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "70g_bit34_blob_sha_matches_manifest",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "70g_bit62_blob_sha_matches_manifest",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "70g_bit70_blob_sha_matches_manifest",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "70g_bit76_blob_sha_matches_manifest",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "70g_bit119_blob_sha_matches_manifest",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "cost60c_bit92_verifier_pass_with_manifest_stats",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "cost69e_bit21_verifier_pass_with_manifest_stats",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "cost69e_bit76_verifier_pass_with_manifest_stats",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "cost69e_bit84_verifier_pass_with_manifest_stats",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "cost69e_bit87_verifier_pass_with_manifest_stats",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "cost69e_bit89_verifier_pass_with_manifest_stats",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "cost69e_bit90_verifier_pass_with_manifest_stats",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "cost69e_bit94_verifier_pass_with_manifest_stats",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "cost69e_bit99_verifier_pass_with_manifest_stats",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "cost69e_bit108_verifier_pass_with_manifest_stats",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "cost69e_bit116_verifier_pass_with_manifest_stats",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "cost70g_bit9_verifier_pass_with_manifest_stats",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "cost70g_bit20_verifier_pass_with_manifest_stats",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "cost70g_bit29_verifier_pass_with_manifest_stats",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "cost70g_bit34_verifier_pass_with_manifest_stats",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "cost70g_bit62_verifier_pass_with_manifest_stats",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "cost70g_bit70_verifier_pass_with_manifest_stats",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "cost70g_bit76_verifier_pass_with_manifest_stats",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "cost70g_bit119_verifier_pass_with_manifest_stats",
+   "detail": "",
+   "pass": true
+  }
+ ],
+ "date": "2026-11-17",
+ "interpretation_guard": "bytes and verifier re-check of published WIN7-D10 certificates only; they prove first-player wins within depth 10 for the individual 7-stone roots only; REFUTED-D10 is not a LOSS proof; 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60} and classes 1/2/4 remain UNKNOWN",
+ "method": "published certificate bytes re-checked against the band manifest pins (git blob SHA / md5 / sha256; bit 116 restored from base64(gzip-9) with in-memory round-trip digest equality) and every certificate re-run through verify_win7_certificate_bigint_independent.mjs (BigInt 3x3 cofactor expansion, no solver/verdict-cache import); 4 workers",
+ "per_certificate": [
+  {
+   "band": "cost60c",
+   "bit": 92,
+   "expected_rows": 27547,
+   "published": {
+    "bytes": 996758,
+    "git_blob_sha": "b35128897b07f03e4baa11583423453cb378e18d",
+    "md5": "d771ef8275a9889a22974310e5c1e411",
+    "sha256": "33fcd4853b874f88d44a7c0e7a2f0d48c9d96dadf12eaad4bf6b27a3eebf31d9"
+   },
+   "root_hex": "00000000100000003800000008008020",
+   "storage": "plain text single file",
+   "verifier": {
+    "loser_reply_edges": 54807,
+    "loser_states": 12028,
+    "root_mobility": 45,
+    "strategy_rows": 27547,
+    "subroots_passed": 45,
+    "terminal_count": 8543,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "visited_states_across_subroots": 58661,
+    "winner_states": 38090
+   },
+   "verifier_status": "PASS"
+  },
+  {
+   "band": "cost69e",
+   "bit": 21,
+   "expected_rows": 22261,
+   "published": {
+    "bytes": 802884,
+    "git_blob_sha": "507351ff0cb58df80d1231db9ea62228a7293d20",
+    "md5": "b229fe7c0c96901fe04ddf05763ffb9e",
+    "sha256": "8c730b8880f9734d5cc156b19a5b9c62484ba4ffea49494eb5913ae3d4d84203"
+   },
+   "root_hex": "00000000000000803202000000208000",
+   "storage": "plain text single file",
+   "verifier": {
+    "loser_reply_edges": 48620,
+    "loser_states": 10753,
+    "root_mobility": 45,
+    "strategy_rows": 22261,
+    "subroots_passed": 45,
+    "terminal_count": 7130,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "visited_states_across_subroots": 51285,
+    "winner_states": 33402
+   },
+   "verifier_status": "PASS"
+  },
+  {
+   "band": "cost69e",
+   "bit": 76,
+   "expected_rows": 45665,
+   "published": {
+    "bytes": 1645600,
+    "git_blob_sha": "02e5456a0fc55f5090394c6300329de64b3313c6",
+    "md5": "2358870d7a2625b4d40a0c178f8cba66",
+    "sha256": "ea9f04da58b67801b5c98cec0bb2150a96dba8e00a5d3fd79876b863233bb4ee"
+   },
+   "root_hex": "00000000000010803202000000008000",
+   "storage": "plain text single file",
+   "verifier": {
+    "loser_reply_edges": 89709,
+    "loser_states": 19851,
+    "root_mobility": 57,
+    "strategy_rows": 45665,
+    "subroots_passed": 57,
+    "terminal_count": 13951,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "visited_states_across_subroots": 96678,
+    "winner_states": 62876
+   },
+   "verifier_status": "PASS"
+  },
+  {
+   "band": "cost69e",
+   "bit": 84,
+   "expected_rows": 29614,
+   "published": {
+    "bytes": 1068973,
+    "git_blob_sha": "b3261526b628915bb2c31dd9aa6f4bd6668da92b",
+    "md5": "41adac3c1d684d4b4dde25c416c2ae20",
+    "sha256": "9540dee4c8b213e9b659e3af6e88e0730a81fd6f56ef09b497e97ea28a137133"
+   },
+   "root_hex": "00000000001000803202000000008000",
+   "storage": "plain text single file",
+   "verifier": {
+    "loser_reply_edges": 65303,
+    "loser_states": 14656,
+    "root_mobility": 50,
+    "strategy_rows": 29614,
+    "subroots_passed": 50,
+    "terminal_count": 9495,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "visited_states_across_subroots": 69534,
+    "winner_states": 45383
+   },
+   "verifier_status": "PASS"
+  },
+  {
+   "band": "cost69e",
+   "bit": 87,
+   "expected_rows": 43838,
+   "published": {
+    "bytes": 1585747,
+    "git_blob_sha": "3e22d3d2c90422ae53c8e0432e3d84d0086c0d57",
+    "md5": "5f5063233ff919b704e01a105e1fb132",
+    "sha256": "a5ee200e72bb7b0fa15b128805de9391092d6fb21c9f8a49aaa66418ef23e7bd"
+   },
+   "root_hex": "00000000008000803202000000008000",
+   "storage": "plain text single file",
+   "verifier": {
+    "loser_reply_edges": 85999,
+    "loser_states": 19102,
+    "root_mobility": 59,
+    "strategy_rows": 43838,
+    "subroots_passed": 59,
+    "terminal_count": 13834,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "visited_states_across_subroots": 93566,
+    "winner_states": 60630
+   },
+   "verifier_status": "PASS"
+  },
+  {
+   "band": "cost69e",
+   "bit": 89,
+   "expected_rows": 47035,
+   "published": {
+    "bytes": 1698203,
+    "git_blob_sha": "4d939aeb21eba32f1cd0bdb31b0ad3abc207b347",
+    "md5": "1e2c8db6cd9303fcf0167f59ccb83bae",
+    "sha256": "0399eb05cf207eb8e40218f344d4707f629bf07f6bd352e89de37f81e95bc47a"
+   },
+   "root_hex": "00000000020000803202000000008000",
+   "storage": "plain text single file",
+   "verifier": {
+    "loser_reply_edges": 101069,
+    "loser_states": 22124,
+    "root_mobility": 54,
+    "strategy_rows": 47035,
+    "subroots_passed": 54,
+    "terminal_count": 15099,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "visited_states_across_subroots": 106325,
+    "winner_states": 69102
+   },
+   "verifier_status": "PASS"
+  },
+  {
+   "band": "cost69e",
+   "bit": 90,
+   "expected_rows": 46959,
+   "published": {
+    "bytes": 1693810,
+    "git_blob_sha": "78d7c47ea696f638a7cad1e5d98204fcfd76d0e5",
+    "md5": "b0e6f779b229ef4993c8715691db7ede",
+    "sha256": "a86f492ec972d5c7458c99dcd6a1ac06758cfd333c26e90d671fbc7f274a5c5c"
+   },
+   "root_hex": "00000000040000803202000000008000",
+   "storage": "plain text single file",
+   "verifier": {
+    "loser_reply_edges": 90977,
+    "loser_states": 20156,
+    "root_mobility": 58,
+    "strategy_rows": 46959,
+    "subroots_passed": 58,
+    "terminal_count": 14599,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "visited_states_across_subroots": 98588,
+    "winner_states": 63833
+   },
+   "verifier_status": "PASS"
+  },
+  {
+   "band": "cost69e",
+   "bit": 94,
+   "expected_rows": 42538,
+   "published": {
+    "bytes": 1532586,
+    "git_blob_sha": "d1ca7c8cc4bf361d933b4ce0ee77f50801af2e80",
+    "md5": "4dc6076b96edc3a472b4b23f38739451",
+    "sha256": "9edda222d3b5bb25a94a497043a670a85141cb19f5b09ae9a892aa50ce81ca74"
+   },
+   "root_hex": "00000000400000803202000000008000",
+   "storage": "plain text single file",
+   "verifier": {
+    "loser_reply_edges": 94297,
+    "loser_states": 21057,
+    "root_mobility": 52,
+    "strategy_rows": 42538,
+    "subroots_passed": 52,
+    "terminal_count": 13606,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "visited_states_across_subroots": 99751,
+    "winner_states": 65088
+   },
+   "verifier_status": "PASS"
+  },
+  {
+   "band": "cost69e",
+   "bit": 99,
+   "expected_rows": 25149,
+   "published": {
+    "bytes": 905701,
+    "git_blob_sha": "4fbd36bd1b83af00eeb462c08f7b83a9aa1027f4",
+    "md5": "69f5fae13d3c712df7b2883ec79d7c2a",
+    "sha256": "62172344421d73a12dbe71a1efd735dd7899f031d1d3638af30139762ba096dc"
+   },
+   "root_hex": "00000008000000803202000000008000",
+   "storage": "plain text single file",
+   "verifier": {
+    "loser_reply_edges": 50571,
+    "loser_states": 11069,
+    "root_mobility": 50,
+    "strategy_rows": 25149,
+    "subroots_passed": 50,
+    "terminal_count": 8659,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "visited_states_across_subroots": 55552,
+    "winner_states": 35824
+   },
+   "verifier_status": "PASS"
+  },
+  {
+   "band": "cost69e",
+   "bit": 108,
+   "expected_rows": 33942,
+   "published": {
+    "bytes": 1224805,
+    "git_blob_sha": "8f65b1d375f39cd8b70e5296ce531ee0eacdb163",
+    "md5": "74d071466140e1b0a48b67134431a570",
+    "sha256": "be2fb2ee178b3aca96fabceffaf30ac6b9bc44fbd9d8f3e76f8e2059c29dcadb"
+   },
+   "root_hex": "00001000000000803202000000008000",
+   "storage": "plain text single file",
+   "verifier": {
+    "loser_reply_edges": 69644,
+    "loser_states": 15546,
+    "root_mobility": 51,
+    "strategy_rows": 33942,
+    "subroots_passed": 51,
+    "terminal_count": 11007,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "visited_states_across_subroots": 75305,
+    "winner_states": 48752
+   },
+   "verifier_status": "PASS"
+  },
+  {
+   "band": "cost69e",
+   "bit": 116,
+   "expected_rows": 74113,
+   "published": {
+    "gz_b64_bytes": 445162,
+    "gz_b64_md5": "9aa8925c2f08857a92be67dc7f4f7ed4",
+    "uncompressed_bytes": 2670116,
+    "uncompressed_lines": 74115,
+    "uncompressed_md5": "691140486067132237d8c11d93a12559",
+    "uncompressed_sha256": "20c0f5edf05f9f45cd0e5d3331a22ec3a39ac001b28428a51d79eefda4498159"
+   },
+   "root_hex": "00100000000000803202000000008000",
+   "storage": "base64(gzip -9) published; restored in-memory for verification",
+   "verifier": {
+    "loser_reply_edges": 134709,
+    "loser_states": 29490,
+    "root_mobility": 59,
+    "strategy_rows": 74113,
+    "subroots_passed": 59,
+    "terminal_count": 22074,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "visited_states_across_subroots": 146435,
+    "winner_states": 94871
+   },
+   "verifier_status": "PASS"
+  },
+  {
+   "band": "cost70g",
+   "bit": 9,
+   "expected_rows": 51456,
+   "published": {
+    "bytes": 1860364,
+    "git_blob_sha": "1877c1c6d07a458b6daa53e56338cffc941c2a5a",
+    "md5": "11d5243c731031c16e90feb74cfb12df",
+    "sha256": "22581535e57070a364b00880979ef60b0aa04442e17fc1826005b7fd3b00277f"
+   },
+   "root_hex": "00000000000100809002000000000a00",
+   "storage": "plain text single file",
+   "verifier": {
+    "loser_reply_edges": 92383,
+    "loser_states": 20687,
+    "root_mobility": 60,
+    "strategy_rows": 51456,
+    "subroots_passed": 60,
+    "terminal_count": 15885,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "visited_states_across_subroots": 102474,
+    "winner_states": 65902
+   },
+   "verifier_status": "PASS"
+  },
+  {
+   "band": "cost70g",
+   "bit": 20,
+   "expected_rows": 16902,
+   "published": {
+    "bytes": 610855,
+    "git_blob_sha": "b2a83239066c35944c281823b9b3ebb77f94815e",
+    "md5": "dca7260e22a16b76d03135b800b40548",
+    "sha256": "98ad7cc32cfe469725990399ae3fd701a935a0ec0813dd8d66693df4e93c497a"
+   },
+   "root_hex": "00000000000100809002000000100800",
+   "storage": "plain text single file",
+   "verifier": {
+    "loser_reply_edges": 35277,
+    "loser_states": 7947,
+    "root_mobility": 46,
+    "strategy_rows": 16902,
+    "subroots_passed": 46,
+    "terminal_count": 5695,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "visited_states_across_subroots": 38438,
+    "winner_states": 24796
+   },
+   "verifier_status": "PASS"
+  },
+  {
+   "band": "cost70g",
+   "bit": 29,
+   "expected_rows": 44195,
+   "published": {
+    "bytes": 1593904,
+    "git_blob_sha": "bab4338b0a17ca93425f4e846d3e0995efa71f99",
+    "md5": "ac0b4d3fecff83eb504be4d4c1b66068",
+    "sha256": "47c420f86236813c888b3f0554bdfda0700295f3207255ea019c32a7d6a8b0c6"
+   },
+   "root_hex": "00000000000100809002000020000800",
+   "storage": "plain text single file",
+   "verifier": {
+    "loser_reply_edges": 91511,
+    "loser_states": 20154,
+    "root_mobility": 54,
+    "strategy_rows": 44195,
+    "subroots_passed": 54,
+    "terminal_count": 14967,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "visited_states_across_subroots": 99654,
+    "winner_states": 64533
+   },
+   "verifier_status": "PASS"
+  },
+  {
+   "band": "cost70g",
+   "bit": 34,
+   "expected_rows": 56345,
+   "published": {
+    "bytes": 2034038,
+    "git_blob_sha": "e95fcaf5becc9dadacd9c382c57b1faaf395d8b6",
+    "md5": "aae9e6108fd33b9801102fbba9146ccc",
+    "sha256": "65b70f791dde22bc9d8bb56c2bf13b6e30a27ca07f58273dd3e81aaab83630d2"
+   },
+   "root_hex": "00000000000100809002000400000800",
+   "storage": "plain text single file",
+   "verifier": {
+    "loser_reply_edges": 104901,
+    "loser_states": 23190,
+    "root_mobility": 63,
+    "strategy_rows": 56345,
+    "subroots_passed": 63,
+    "terminal_count": 17849,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "visited_states_across_subroots": 115931,
+    "winner_states": 74892
+   },
+   "verifier_status": "PASS"
+  },
+  {
+   "band": "cost70g",
+   "bit": 62,
+   "expected_rows": 26591,
+   "published": {
+    "bytes": 958852,
+    "git_blob_sha": "1c023a37bebd87ca3a5a86dc39663e743d1d66fa",
+    "md5": "3c3c1dc4e7a487ecfc1ee4b374b2c8ea",
+    "sha256": "8ace8e36c2086e3406d21cbf3cb025a9185138461d5d703fa07338603750f458"
+   },
+   "root_hex": "0000000000010080d002000000000800",
+   "storage": "plain text single file",
+   "verifier": {
+    "loser_reply_edges": 52248,
+    "loser_states": 11861,
+    "root_mobility": 51,
+    "strategy_rows": 26591,
+    "subroots_passed": 51,
+    "terminal_count": 8166,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "visited_states_across_subroots": 56806,
+    "winner_states": 36779
+   },
+   "verifier_status": "PASS"
+  },
+  {
+   "band": "cost70g",
+   "bit": 70,
+   "expected_rows": 19456,
+   "published": {
+    "bytes": 700014,
+    "git_blob_sha": "d522d9ebcddd30483eaa2ee60f24a1cee8e1273e",
+    "md5": "21e5326a26b7a54dbf16ac503efef456",
+    "sha256": "d254a8f0e7cef3cc0029c4723a9bae9ad8e28a6c6c076c5add1807de7810c00c"
+   },
+   "root_hex": "00000000000100c09002000000000800",
+   "storage": "plain text single file",
+   "verifier": {
+    "loser_reply_edges": 41826,
+    "loser_states": 9429,
+    "root_mobility": 49,
+    "strategy_rows": 19456,
+    "subroots_passed": 49,
+    "terminal_count": 6618,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "visited_states_across_subroots": 45395,
+    "winner_states": 29348
+   },
+   "verifier_status": "PASS"
+  },
+  {
+   "band": "cost70g",
+   "bit": 76,
+   "expected_rows": 45917,
+   "published": {
+    "bytes": 1657038,
+    "git_blob_sha": "63a6c8b4667ae8a96086d986607891716a021477",
+    "md5": "7ea443879a19625f268ce7974eda97af",
+    "sha256": "be1d7dfcdec6e53e44a51e78fc1f535129cb96bae32bfbdaa6ed9ac6c387d77f"
+   },
+   "root_hex": "00000000000110809002000000000800",
+   "storage": "plain text single file",
+   "verifier": {
+    "loser_reply_edges": 90276,
+    "loser_states": 20344,
+    "root_mobility": 55,
+    "strategy_rows": 45917,
+    "subroots_passed": 55,
+    "terminal_count": 14094,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "visited_states_across_subroots": 97634,
+    "winner_states": 63196
+   },
+   "verifier_status": "PASS"
+  },
+  {
+   "band": "cost70g",
+   "bit": 119,
+   "expected_rows": 41408,
+   "published": {
+    "bytes": 1490548,
+    "git_blob_sha": "b5a4297977595a6f11ef21995135f4b2cbe31b78",
+    "md5": "b62c0f52737e7bafbf9450d9b2ce88b2",
+    "sha256": "c7a7828a4b3ed669164ba32def80fee4d6cd13004dbeecc9070ebda46171de42"
+   },
+   "root_hex": "00800000000100809002000000000800",
+   "storage": "plain text single file",
+   "verifier": {
+    "loser_reply_edges": 79274,
+    "loser_states": 17552,
+    "root_mobility": 56,
+    "strategy_rows": 41408,
+    "subroots_passed": 56,
+    "terminal_count": 14119,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "visited_states_across_subroots": 89094,
+    "winner_states": 57423
+   },
+   "verifier_status": "PASS"
+  }
+ ],
+ "schema": "n11-class2-lane-cost60c69e70g-certificates-bigint-reverification-20261117-v1",
+ "source_commit": "0b81d0d1763a218caae22f867612b1919eec4f38",
+ "total_strategy_rows": 740931,
+ "verifier_blob_sha": "62b5d9413daafb172f6e10249976ee6808f7b454",
+ "verifier_pass": 19
+}
