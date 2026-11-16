@@ -1,3 +1,5 @@
+> **SUPERSEDED (2026-11-16, later the same day).** The fresh-target claims below are WRONG: the two 70j-covering roots of the candidate (bits 21 and 109) are OWN-SWEEP tier - they equal 70j+bit41 and yflip(70j)+bit41, and bits 41/85 are legal for the 70j row itself, so both roots were already swept with the 70j child and are REFUTED-D10 by its STERILE classification. Sweeping the record's cost-62 candidate 00000000000000801282020000000000 CANNOT close 70j. The corrected pre-check JSON and the orbit-aware fresh-target tables are published; see `2026-11-16-n11-class2-lane-sterile-fresh-target-tables-and-precheck-correction.md`.
+
 # class2-lane: cost-62 neighbor 70j-coverage pre-check (2026-11-16)
 
 ## What was done

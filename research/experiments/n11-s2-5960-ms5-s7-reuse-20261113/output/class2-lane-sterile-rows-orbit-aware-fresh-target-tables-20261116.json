@@ -1,11 +1,36 @@
 {
- "schema": "n11-class2-lane-sterile-rows-orbit-aware-fresh-target-tables-20261116-v1",
+ "schema": "n11-class2-lane-sterile-rows-orbit-aware-fresh-target-tables-20261116-v2",
  "date": "2026-11-16",
+ "v2_change": "adds partial_registry_clearance (135/135 fresh roots cleared against the four most recent candidate sweeps' 270 swept roots); tables otherwise identical to v1 (commit 3fbbf271)",
  "baseline_record": "head 1419/174/6429/508474/4702/372388; three open STERILE rows at 1419: 65k 00000000020000801202000000200000, 70j 00000000000000801282000000200000, 74h 00000000000000889002000000000800",
- "method": "orbit-aware enumeration with the verified third implementation: all 8 D4 images of each row; covering root orbits = image + one stone, deduplicated canonically; tier classification per root orbit: own-sweep iff some 6-subset lies in the row orbit with the removed bit legal (these were swept with the row's own child - STERILE means all are REFUTED-D10); unreachable iff the root is not a legal root of any of its 7 children (can never be tested by any child sweep); fresh = covering, not own-sweep, with >= 1 generator child; generator = child C = root - b with b legal for C (C is then a one-stone-replacement neighbor of some row image); costs = recomputed legal-candidate counts (third implementation)",
+ "method": "orbit-aware enumeration with the verified third implementation: all 8 D4 images of each row; covering root orbits = image + one stone, deduplicated canonically; tier classification per root orbit: own-sweep iff some 6-subset lies in the row orbit with the removed bit legal (swept with the row's own child - STERILE means all are REFUTED-D10); unreachable iff not a legal root of any of its 7 children (can never be tested); fresh = covering, not own-sweep, with >= 1 generator child; generator = child C = root - b with b legal for C; costs = recomputed legal-candidate counts",
  "internal_consistency": {
-  "legal_bits_own_matches_name_cost": "65k: 65 legal bits, 70j: 70, 74h: 74 - exactly the cost letters of the row names",
-  "own_sweep_tier_equals_legal_bits_own": "65k: 65=65, 70j: 70=70, 74h: 74=74 - every own-sweep root orbit is exactly one legal root of the row orbit (identity verified)"
+  "legal_bits_own_matches_name_cost": "65k: 65, 70j: 70, 74h: 74 - exactly the cost letters of the row names",
+  "own_sweep_tier_equals_legal_bits_own": "65=65, 70=70, 74=74"
+ },
+ "partial_registry_clearance": {
+  "checked_children": {
+   "cost60c_child": {
+    "hex": "00000000000000003800000008008020",
+    "swept_roots": 60
+   },
+   "cost75e_child": {
+    "hex": "00000000040000809002000000000002",
+    "swept_roots": 75
+   },
+   "cost65f_65j_child": {
+    "hex": "00000000000000809102000080000000",
+    "swept_roots": 65
+   },
+   "cost70g_child": {
+    "hex": "00000000000000801202000040000001",
+    "swept_roots": 70
+   }
+  },
+  "swept_root_counts_match_recorded_candidate_counts": "60c: 60 roots vs 60 recorded candidates; 75e: 75 vs 75; 65f/65j: 65 vs 65; 70g: 70 vs 70 (cost-letter naming)",
+  "control": "the certified WIN7 cost-60c bit-92 root 00000000000000801292200000000000 is found in the cost-60c child registry at bit 92 - construction validated",
+  "result": "135/135 fresh root orbits cleared against the 270 swept roots of these four candidates (0 hits)",
+  "caveat": "older candidate sweeps (2026-11-15 lanes 75c/75d/76a/76b/77a-d/78a/79a/80d/82c/83a/83b, plus 63a/63h/72b/69i and earlier) are not remotely enumerable here; a fresh root swept REFUTED in any of them would be a false-fresh target (it cannot be WIN7 or the row would already be closed). The engine lane must check the fresh roots against the full swept-root registry before sweeping generator children."
  },
  "rows": {
   "s65k": {
@@ -3628,13 +3653,13 @@
   }
  },
  "caveats": {
-  "fresh_vs_registry": "fresh means 'not in the row's own sweep'. A fresh root may still have been swept as part of ANOTHER candidate's sweep - in that case it is necessarily REFUTED (it cannot be WIN7 or the row would already be closed). The engine lane must check the fresh roots against the global swept-root registry before sweeping their generator children.",
-  "generator_openness": "generator children listed are canonical forms; whether each child is still open at 1419 and unswept must be checked against the manifest and the sweep registry by the engine lane."
+  "generator_openness": "generator children are canonical forms; openness at 1419 and swept status must be checked by the engine lane against the manifest and sweep registry.",
+  "second_candidate_sterile_rows": "the second coverable class-2 parent 00000000000000801202000040000000 holds two further open STERILE rows (edges 64 and 71 among its 5 remaining rows 76/76/77/64/71). Their hexes cannot be uniquely identified remotely (the parent's ~116 superset orbits are mostly long-closed; the cost fingerprint is insufficient). The engine lane should extract them from the manifest and apply the same fresh-target methodology."
  },
  "engine_lane_priority": {
   "s74h": "cheapest fresh attack of all three rows: child 00000000000000803202000000200000 (cost 60) tests fresh root 00000000000000889802000000000800",
   "s65k": "child 00000000000000003802000008002000 (cost 61) tests fresh root 00000000020000801a02000000200000",
-  "s70j": "child 00000000000000805282000000000000 (cost 62) tests fresh root 00000000000000805282000000200000 - NOT the cost-60c record's cost-62 neighbor 00000000000000801282020000000000, whose 70j-covering roots are both own-sweep/REFUTED (see the corrected pre-check)"
+  "s70j": "child 00000000000000805282000000000000 (cost 62) tests fresh root 00000000000000805282000000200000 - NOT the cost-60c record's cost-62 neighbor 00000000000000801282020000000000, whose 70j-covering roots are both own-sweep/REFUTED"
  },
  "interpretation_guard": "geometry and bookkeeping only; no game-theoretic value is asserted; closing a STERILE row still requires a WIN7-D10 certificate on a fresh covering root; REFUTED-D10 proves only absence of WIN7-D10; 11x11 empty board / two-stone root {49,60} / S2 {59,60} / class 1 / class 2 / class 4 remain UNKNOWN"
 }
