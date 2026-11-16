@@ -49,17 +49,6 @@
   "overlaps": 0
  },
  "cross_lane": {
-  "cost66i_certified_bits": [
-   19,
-   103,
-   99,
-   88,
-   28,
-   29,
-   90,
-   58,
-   112
-  ],
   "cost66i_conflict_scan": {
    "conflicts": 0,
    "note": "bit 100's root canon matches the cost-64h REFUTED-D10 verdict (64h bit 103), an agreement recorded by the census v2 selection; no canon carries contradictory verdicts across sources",
@@ -77,7 +66,6 @@
     "win_bits_also_win_in_76c": []
    }
   },
-  "cost66i_remaining_certificate_bits": [],
   "cost66i_win_bits": [
    19,
    28,
@@ -1432,10 +1420,8 @@
   "agreement": "9ab473ac0163755ddf541d8a9a5e44da304f8095",
   "audit66i": "f7d8bad610fe07fee6b365e711838600722737e2",
   "audit76c": "235f964365a7ab33e33986c915fc7f6861e4d686",
-  "claim64h": "68e4878094b78eaf0a465033d0289a6db5d94861",
-  "claim66i": "4010732a833ae15de801dfe9c2b2e7486b187955",
-  "claim76c": "6be75df147303cb21f6b357210c993724fa22f11",
-  "generator_script": "85f960508d934c5c4c266bdacaf5bcaccb8428f8",
+  "cost64h_claim_v2_historical": "68e4878094b78eaf0a465033d0289a6db5d94861",
+  "generator_script": "22bae2d8478b733ca2e81fbc88f31a8106d262df",
   "prereg": "5074a8a0cbb75fcc91b5b999a3135fac06d42400",
   "v17": "b1a6c23b2ad0504252ab6bda3a09c23161f98107",
   "verifier": "276e70e3dc930ffa17a02fe2280dff52b72b724c"
