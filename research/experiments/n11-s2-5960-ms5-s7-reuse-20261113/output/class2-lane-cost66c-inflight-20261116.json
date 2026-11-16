@@ -1,8 +1,8 @@
 {
- "schema": "n11-class2-lane-cost66c-completed-20261116-v2",
+ "schema": "n11-class2-lane-cost66c-fold-complete-20261116-v3",
  "title": "n11 class2-lane cost-66c sweep completed NOT-STERILE: third-ranked open row 00000000000000003800000008002008 of the shared class-2 parent at head 1441 (7 WIN7-D10 + 52 swept REFUTED-D10 + 7 transferred REFUTED-D10, 0 capped after the bit-112 cap-raise resolution)",
  "date": "2026-11-16",
- "status": "COMPLETED on 2026-11-16 (claim v2 supersedes the v1 IN FLIGHT claim, preserving all v1 fields): the 59 open candidate bits were swept with the repo-verbatim v16 engine in 8 raw batches (7x8+3) at depth 10; results: 7 WIN7-D10 (bits 73, 75, 79, 87, 96, 97, 112) + 52 REFUTED-D10 swept + 7 transferred REFUTED-D10 = 66/66 candidates determined, 0 capped (bit 112 exceeded the 10000000-node protocol cap at 10000001 nodes in raw batch 7 and was resolved at a raised cap of 80000000 as WIN7-D10 with 12574920 nodes, determinism rerun node-exact); total definitive swept nodes 84180263 (raw batches as run, including the capped attempt: 81605344); the row is NOT-STERILE and the 7 WIN7-D10 receipts are pending certificate extraction, then fold on the then-current head; independent stdlib raw-sweep audit 21/21 ALL PASS (audit_cost66c_raw_sweep_20261116.py, byte-identical on re-run); cross-row verdict watch item: 66c bit 83 root canon 00000000000000a09002080080000000 (REFUTED-D10, v16 269856 / v15 653399 nodes) is D4-identical to the in-flight cost-65o claim's open bit 43 candidate, so the 65o completion must record it as a transfer or a WIN/LOSS conflict investigation; head 1441 unchanged until the WIN receipts are certified and folded; REFUTED-D10 is not a LOSS proof; 11x11 empty board, two-stone roots {49,60} and {59,60}, S2 {59,60}, and classes 1/2/4 all remain UNKNOWN",
+ "status": "FOLD COMPLETE on 2026-11-16 by the long-term lane session: the seven WIN7-D10 receipts (bits 73, 75, 79, 87, 96, 97, 112, roots published and dual-verified as certificates) are folded on the head-1444 basis (independent reconstruction of the published fold chain state; every input blob-pinned) - the child row closes in the manifest exactly once (child closed by bit 73) and five collateral manifest rows close with the bit-79/87/97/112 receipts; every fold result agrees field-by-field with the pre-registration published before the fold (git blob 809ad05e1bc560b1086c3d30cc34ad78727e430a, commit aca9d762); new canonical head 1450/174/6398/506297/4671/370211; conflict census vs the 764 folded roots (749 D4 canons) at 1444: zero overlaps, zero WIN/LOSS conflicts; all v1/v2 fields preserved (v2 restorable byte-identically from the fold record); 11x11 empty board, two-stone roots {49,60} and {59,60}, S2 {59,60}, and classes 1/2/4 all remain UNKNOWN",
  "claimed_by": "n11 long-term lane parallel session (third-cheapest-first continuation at head 1441 per the published census v4 ranking)",
  "s5_target": "00000000000000003800000008002000",
  "s6_child": "00000000000000003800000008002008",
@@ -368,6 +368,91 @@
   "v15_crosscheck": "class2-lane-cost66c-v15-crosscheck-20261116.jsonl (pilot 5949; anchors 73 WIN 3128502, 96 WIN 5027518, 30 REFUTED 16840620, 83 REFUTED 653399 - all verdicts agree with v16)",
   "row_result": "NOT-STERILE: 7 WIN7-D10 receipt roots are available; certificate extraction is the next step, then the fold on the then-current head",
   "cross_row_watch": "66c bit 83 root canon 00000000000000a09002080080000000 is D4-identical to the in-flight cost-65o claim v1 open bit 43 candidate (REFUTED-D10 verdict here): the 65o completion update must either transfer this verdict or flag a WIN/LOSS conflict for investigation",
-  "certificates_status": "pending extraction (7 roots); the fold will use certified receipts only"
+  "certificates_status": "pending extraction (7 roots); the fold will use certified receipts only",
+  "fold": "complete: the seven receipts are folded by recompute_frontier_cost66c_receipts_20261116.py; new canonical head 1450/174/6398/506297/4671/370211"
+ },
+ "supersedes": "v2 (completed NOT-STERILE claim, git blob sha ed21be8836214fffe003eabe69bb0b8a75d978b1, all fields preserved) which superseded the v1 IN FLIGHT claim",
+ "fold": {
+  "schema": "n11-class2-lane-cost66c-fold-20261116-v1",
+  "fold_json": "class-frontier-cost66c-receipts-recompute-20261116.json (git blob sha 8783993e5c73cc9697c3ca48aef981725f422be8)",
+  "head_before": "1444/174/6404/506746/4677/370660",
+  "head_after": "1450/174/6398/506297/4671/370211",
+  "receipts": 7,
+  "win_bits": [
+   73,
+   75,
+   79,
+   87,
+   96,
+   97,
+   112
+  ],
+  "root_hexes": [
+   "00000000000002003800000008002008",
+   "00000000000008003800000008002008",
+   "00000000000080003800000008002008",
+   "00000000008000003800000008002008",
+   "00000001000000003800000008002008",
+   "00000002000000003800000008002008",
+   "00010000000000003800000008002008"
+  ],
+  "total_marginal": 35,
+  "total_marginal_in_manifest": 6,
+  "child_closed_by_bit": 73,
+  "parent_row_incidences": 8,
+  "parent_edge_cost_delta": 596,
+  "parents_after": {
+   "00000000000000003800000008002000": {
+    "s5_hex": "00000000000000003800000008002000",
+    "classes": 2,
+    "rows": 25,
+    "edge_cost": 1748,
+    "rows_before": 27,
+    "edge_cost_before": 1883
+   },
+   "00000000000000801202000000000080": {
+    "s5_hex": "00000000000000801202000000000080",
+    "classes": 2,
+    "rows": 52,
+    "edge_cost": 3929,
+    "rows_before": 53,
+    "edge_cost_before": 4003
+   },
+   "00000000000000801202000000080000": {
+    "s5_hex": "00000000000000801202000000080000",
+    "classes": 6,
+    "rows": 65,
+    "edge_cost": 4988,
+    "rows_before": 66,
+    "edge_cost_before": 5066
+   },
+   "00000000000000801202000020000000": {
+    "s5_hex": "00000000000000801202000020000000",
+    "classes": 2,
+    "rows": 45,
+    "edge_cost": 3420,
+    "rows_before": 46,
+    "edge_cost_before": 3497
+   },
+   "00000000000000801202000100000000": {
+    "s5_hex": "00000000000000801202000100000000",
+    "classes": 2,
+    "rows": 69,
+    "edge_cost": 5758,
+    "rows_before": 71,
+    "edge_cost_before": 5912
+   },
+   "00000000000020801002000000080000": {
+    "s5_hex": "00000000000020801002000000080000",
+    "classes": 4,
+    "rows": 87,
+    "edge_cost": 7361,
+    "rows_before": 88,
+    "edge_cost_before": 7439
+   }
+  },
+  "v2_fields": {
+   "status": "COMPLETED on 2026-11-16 (claim v2 supersedes the v1 IN FLIGHT claim, preserving all v1 fields): the 59 open candidate bits were swept with the repo-verbatim v16 engine in 8 raw batches (7x8+3) at depth 10; results: 7 WIN7-D10 (bits 73, 75, 79, 87, 96, 97, 112) + 52 REFUTED-D10 swept + 7 transferred REFUTED-D10 = 66/66 candidates determined, 0 capped (bit 112 exceeded the 10000000-node protocol cap at 10000001 nodes in raw batch 7 and was resolved at a raised cap of 80000000 as WIN7-D10 with 12574920 nodes, determinism rerun node-exact); total definitive swept nodes 84180263 (raw batches as run, including the capped attempt: 81605344); the row is NOT-STERILE and the 7 WIN7-D10 receipts are pending certificate extraction, then fold on the then-current head; independent stdlib raw-sweep audit 21/21 ALL PASS (audit_cost66c_raw_sweep_20261116.py, byte-identical on re-run); cross-row verdict watch item: 66c bit 83 root canon 00000000000000a09002080080000000 (REFUTED-D10, v16 269856 / v15 653399 nodes) is D4-identical to the in-flight cost-65o claim's open bit 43 candidate, so the 65o completion must record it as a transfer or a WIN/LOSS conflict investigation; head 1441 unchanged until the WIN receipts are certified and folded; REFUTED-D10 is not a LOSS proof; 11x11 empty board, two-stone roots {49,60} and {59,60}, S2 {59,60}, and classes 1/2/4 all remain UNKNOWN"
+  }
  }
 }
