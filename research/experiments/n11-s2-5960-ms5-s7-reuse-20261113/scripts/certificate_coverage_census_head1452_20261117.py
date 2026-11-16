@@ -28,6 +28,12 @@ Certificate evidence kinds (scanned from the published output artifact set):
   class4cert   class4-batch bit certificate records (all_pass)
   certbacked   certificate-backed frontier recompute (certified:true entries)
   receipt      cert-receipt records (git blob sha of the landed .cert file)
+  receiptcert  per-entry certificate documentation inside receipt/fold
+               recompute files: certified:true with rows, md5 and
+               sub_roots_pass (independent verifier PASS asserted in the
+               file's method/controls; e.g. the cost-58c receipts recompute
+               asserts all certificates against published bytes with
+               BigInt and Number Bareiss verifier PASS)
   summary      certificate part summaries (per-move extraction stats)
   certpart     other root-named certificate artifacts
 
@@ -38,8 +44,9 @@ Tiers:
   N  no certificate evidence found in the scanned set
 
 Conservative scoping:
-- frontier/receipt recompute files are treated as provenance sources only
-  (their WIN mentions are NOT counted as certificate evidence).
+- a WIN mention in a frontier/receipt recompute file is NOT certificate
+  evidence per se; per-entry certificate documentation (certified:true with
+  rows, md5 and sub_roots_pass) IS counted (kind receiptcert).
 - only popcount-7 roots with WIN7-style (or absent) verdicts are counted.
 - N/uncertified is the safe direction: it may overcount the at-risk set,
   never undercount it.
@@ -60,13 +67,13 @@ import fold_projection_head1450_tool_20261116 as tool  # noqa: E402
 
 popcount, canon = tool.popcount, tool.canon
 
-CENSUS_SCHEMA = 'n11-class2-lane-head1452-receipt-certificate-coverage-census-20261117-v1'
+CENSUS_SCHEMA = 'n11-class2-lane-head1452-receipt-certificate-coverage-census-20261117-v2'
 FOLD_76D77E = 'class-frontier-cost76d77e-receipts-recompute-20261116.json'
 
 KIND_ORDER = [
     'bareiss', 'bigint', 'tsverify', 'bigintaudit', 'verified',
-    'verdictverify', 'orbitverify', 'receipt', 'summary', 'certpart',
-    'manifest', 'warmcert', 'class4cert', 'certbacked',
+    'verdictverify', 'orbitverify', 'receipt', 'receiptcert', 'summary',
+    'certpart', 'manifest', 'warmcert', 'class4cert', 'certbacked',
 ]
 TIER_V_KINDS = {'bareiss', 'bigint', 'tsverify', 'bigintaudit',
                 'verified', 'verdictverify', 'orbitverify'}
@@ -173,11 +180,10 @@ def main():
 
     for p, name in scan_targets():
         kind = classify_name(name)
-        if kind is None:
-            continue
-        m = re.search(r'root-([0-9a-f]{32})', name)
-        if m:
-            add_cert(m.group(1), name, kind)
+        if kind is not None:
+            m = re.search(r'root-([0-9a-f]{32})', name)
+            if m:
+                add_cert(m.group(1), name, kind)
         try:
             d = json.loads(p.read_text())
         except Exception:
@@ -186,10 +192,18 @@ def main():
         def walk(o):
             if isinstance(o, dict):
                 rh = o.get('root_hex') or o.get('root')
-                v = o.get('verdict')
                 if isinstance(rh, str) and re.fullmatch(r'[0-9a-f]{32}', rh):
-                    if v is None or str(v).startswith('WIN7'):
+                    v = o.get('verdict')
+                    if kind is not None and (v is None or
+                                            str(v).startswith('WIN7')):
                         add_cert(rh, name, kind)
+                    # field-based rule (v2): per-entry certificate
+                    # documentation with independent-verification fields
+                    if (o.get('certified') is True
+                            and isinstance(o.get('rows'), int)
+                            and isinstance(o.get('md5'), str)
+                            and isinstance(o.get('sub_roots_pass'), int)):
+                        add_cert(rh, name, 'receiptcert')
                 for vv in o.values():
                     walk(vv)
             elif isinstance(o, list):
@@ -221,9 +235,72 @@ def main():
         for s in prov[r]:
             uncert_by_src[s] = uncert_by_src.get(s, 0) + 1
 
+    # receipt references for the uncertified roots: for each provenance
+    # source file, collect the receipt-entry fields (band, bit, rows, md5,
+    # certified, sub_roots_pass) of every dict whose root_hex matches an
+    # uncertified root. This separates "certificate published with rows+md5
+    # but verification not documented in the scanned set" (level-1 risk)
+    # from "verdict-only receipt" (level-2 risk).
+    uncert_set = set(uncertified)
+    receipt_refs = {r: [] for r in uncertified}
+    for src in sorted(uncert_by_src):
+        try:
+            d = json.loads((OUT / src).read_text())
+        except Exception:
+            continue
+
+        def rwalk(o):
+            if isinstance(o, dict):
+                rh = o.get('root_hex')
+                if isinstance(rh, str) and re.fullmatch(r'[0-9a-f]{32}', rh):
+                    x = int(rh, 16)
+                    if x in uncert_set:
+                        ref = {'source': src}
+                        for k in ('band', 'bit', 'rows', 'md5',
+                                  'certified', 'sub_roots_pass'):
+                            if k in o:
+                                ref[k] = o[k]
+                        receipt_refs[x].append(ref)
+                for vv in o.values():
+                    rwalk(vv)
+            elif isinstance(o, list):
+                for e in o:
+                    rwalk(e)
+
+        rwalk(d)
+    for r in uncertified:
+        # dedupe identical refs
+        seen, uniq = set(), []
+        for ref in receipt_refs[r]:
+            key = json.dumps(ref, sort_keys=True)
+            if key not in seen:
+                seen.add(key)
+                uniq.append(ref)
+        receipt_refs[r] = uniq
+
+    def cert_published_unverified(r):
+        for ref in receipt_refs[r]:
+            if isinstance(ref.get('rows'), int) and \
+                    isinstance(ref.get('md5'), str) and \
+                    not (ref.get('certified') is True or
+                         isinstance(ref.get('sub_roots_pass'), int)):
+                return True
+        return False
+
     out = {
         'schema': CENSUS_SCHEMA,
         'date': '2026-11-17',
+        'revision': (
+            'v2: adds the field-based receiptcert kind. v1 (published at '
+            'commit 3020c5aa) treated receipt/fold recompute files as '
+            'provenance-only and undercounted certified roots whose '
+            'certificates are documented per-entry inside those files '
+            '(e.g. the cost-58c receipts recompute: 33/33 folded entries '
+            'certified:true with rows/md5/sub_roots_pass, all certificates '
+            'asserted against published bytes with BigInt and Number '
+            'Bareiss verifier PASS). v2 counts such entries as tier R '
+            'evidence; remaining N roots are unchanged or fewer'
+        ),
         'basis': {
             'canonical_head_1452': {
                 'solved_s6_in_manifest': 1452,
@@ -267,8 +344,10 @@ def main():
                 'N': 'no certificate evidence found in the scanned set',
             },
             'conservative_notes': [
-                'frontier and receipt recompute files are provenance-only: '
-                'their WIN mentions are not counted as certificate evidence',
+                'a WIN mention in a frontier or receipt recompute file is '
+                'not certificate evidence by itself; per-entry certificate '
+                'documentation (certified:true with rows, md5 and '
+                'sub_roots_pass) is counted as receiptcert evidence',
                 'only popcount-7 roots with WIN7-style or absent verdicts '
                 'are counted as certified',
                 'uncertified (N) may overcount the at-risk set, never '
@@ -293,6 +372,10 @@ def main():
                 1 for r in uncertified if canon(r) in canon_cert),
             'uncertified_fully_uncovered': sum(
                 1 for r in uncertified if canon(r) not in canon_cert),
+            'uncertified_cert_published_unverified': sum(
+                1 for r in uncertified if cert_published_unverified(r)),
+            'uncertified_verdict_only': sum(
+                1 for r in uncertified if not cert_published_unverified(r)),
         },
         'kind_histogram': dict(sorted(kind_hist.items(),
                                       key=lambda kv: -kv[1])),
@@ -308,6 +391,8 @@ def main():
             {'root_hex': f'{r:032x}',
              'canonical_hex': f'{canon(r):032x}',
              'orbit_covered_by_certified_sibling': canon(r) in canon_cert,
+             'cert_published_unverified': cert_published_unverified(r),
+             'receipt_refs': receipt_refs[r],
              'provenance_sources': sorted(prov[r])}
             for r in uncertified
         ],
@@ -317,10 +402,13 @@ def main():
             'a WIN7-D10 certificate proves only that its individual '
             '7-stone root is a first-player win within depth 10',
             'REFUTED-D10 entries are not LOSS proofs',
-            'uncertified (N) roots are folded WIN receipts without '
-            'certificate evidence in the scanned set: they are 76c-bit113-'
-            'style bookkeeping risks until certificates are published and '
-            'independently verified',
+            'uncertified (N) roots are folded WIN receipts without counted '
+            'certificate evidence: they are 76c-bit113-style bookkeeping '
+            'risks until certificates are published and independently '
+            'verified. Level-1 (cert_published_unverified): a certificate '
+            'file with rows+md5 is referenced but verification is not '
+            'documented in the scanned set. Level-2 (verdict_only): no '
+            'certificate artifact referenced at all',
             '11x11 empty board, two-stone root {49,60}, S2 {59,60}, '
             'class 1, class 2 and class 4 all remain UNKNOWN',
         ],
