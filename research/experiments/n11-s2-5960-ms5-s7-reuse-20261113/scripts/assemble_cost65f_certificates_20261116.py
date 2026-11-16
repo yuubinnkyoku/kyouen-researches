@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""Assemble, verify and manifest the six cost-65f WIN7-D10 certificates
-(bits 4/18/20/21/28/109, child 00000000000000809102000080000000, 2026-11-16).
+"""Assemble, verify and manifest all thirteen cost-65f WIN7-D10 certificates
+(bits 4/15/18/20/21/23/25/28/66/79/91/101/109, child 00000000000000809102000080000000, 2026-11-16).
 
 Per bit, from the blind extraction chunk written by scripts/cert_driver65j.ts
 (generic single-root blind extraction driver, repo-verbatim
@@ -38,7 +38,7 @@ CERTS = OUT / "class2-lane-cost65f-certificates"
 SCRIPTS = HERE / "scripts"
 CHILD = "00000000000000809102000080000000"
 CHILD_V = int(CHILD, 16)
-BITS = [4, 18, 20, 21, 28, 109]
+BITS = [4, 15, 18, 20, 21, 23, 25, 28, 66, 79, 91, 101, 109]
 SPLIT_LIMIT = 1200000  # publication split threshold (bytes):
                # keeps every published part safely below the
                # 1.75 MiB repo per-file convention AND the
@@ -288,24 +288,25 @@ def main():
               f"{'split parts' if len(whole) > SPLIT_LIMIT else 'whole cert'}"
               f" ({len(whole)} bytes)", flush=True)
     manifest = {
-        "schema": "n11-class2-lane-cost65f-win6-certificates-20261116-v1",
+        "schema": "n11-class2-lane-cost65f-win13-certificates-20261116-v1",
         "date": "2026-11-16",
         "target": {
             "s6_child_hex": CHILD,
             "s5_parent": "00000000000000809102000000000000",
             "s6_s7_edge_cost": 65,
             "win7_d10_bits_certified_65f": BITS,
-            "win7_d10_bits_inherited_65f_still_uncertified":
-                [15, 23, 25, 66, 79, 91, 101],
-            "note": "these six bits are the marginal-in-manifest cost-65f "
-                    "v15 WIN7-D10 receipts of the cost-65j fold v2 (head "
-                    "1419): each closed one open manifest row (bits 20/21 "
-                    "the two cost-64 rows, bits 4/18/28/109 four cost-65+ "
-                    "rows). Together with the four cost-65j certificates "
-                    "(manifest d4981d7e) all nine fold-closed rows now "
-                    "have certified receipts. The seven zero-marginal 65f "
-                    "WIN bits closed no open row by themselves and stay "
-                    "folded on their blob-pinned raw sweep records",
+            "win7_d10_bits_inherited_65f_still_uncertified": [],
+            "note": "all thirteen cost-65f v15 WIN7-D10 receipts of the "
+                    "cost-65j fold v2 (head 1419) now have published "
+                    "certificates. Six are marginal-in-manifest receipts "
+                    "(bits 4/18/20/21/28/109, each closed one open row; "
+                    "bits 20/21 the two cost-64 rows); seven are "
+                    "zero-marginal (bits 15/23/25/66/79/91/101, closed no "
+                    "open row by themselves). Together with the four "
+                    "cost-65j certificates (manifest d4981d7e) every WIN "
+                    "receipt folded at head 1419 is certified. bits "
+                    "25/79/91/101 are orbit-identical to folded roots of "
+                    "other lanes (72b/63a/69i), all WIN/WIN, conflict 0",
         },
         "extraction": {
             "engine": "repo-verbatim class4_child1_cert_extractor_exact_"
@@ -327,9 +328,9 @@ def main():
                                  "class 1 / class 2 / class 4 remain "
                                  "UNKNOWN",
     }
-    (OUT / "class2-lane-cost65f-win6-certificates-20261116.json").write_text(
+    (OUT / "class2-lane-cost65f-win13-certificates-20261116.json").write_text(
         json.dumps(manifest, indent=1) + "\n")
-    print("written class2-lane-cost65f-win6-certificates-20261116.json")
+    print("written class2-lane-cost65f-win13-certificates-20261116.json")
     print("totals:", json.dumps(totals))
 
 
