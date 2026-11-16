@@ -4030,7 +4030,7 @@
 - ← supports [K0708](../items/K0708-p3251-no-parabola-equality-witness.md): 2647に続く4例目
 - ← supports [K0711](../items/K0711-p2647-safe-lower-bound-1292.md): 従来の全d監査による1324より強い、4形状RUP/LRAT監査の上界1322
 - ← depends_on [K0737](../items/K0737-assumption-unsat-drat-gap.md): DRAT 監査の実施例
-- ← depends_on [K0869](../items/K0869-p2647-size1322-three-class-drat-audit.md): 同じ増分DRATチェッカーによる全1323 d監査の流儀
+- ← depends_on [K0871](../items/K0871-p2647-size1322-three-class-drat-audit.md): 同じ増分DRATチェッカーによる全1323 d監査の流儀
 
 ## [K0707](../items/K0707-incremental-drat-deletion-unsoundness.md) 旧増分DRATチェッカーは節削除後の古い代入により偽UNSAT証明を受理する
 
@@ -4054,7 +4054,7 @@
 - → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 安全集合は完全対を高々一つしか含まず、h点を4形状に分類できる
 - → depends_on [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 整数共円行列式が0なら四パラメータ和が0 mod pとなる必要条件
 - ← depends_on [K0720](../items/K0720-p2647-saved-1302-witness-inclusion-maximal.md): 指定1302点集合自体の安全性を確認した独立整数幾何receipt
-- ← verifies [K0869](../items/K0869-p2647-size1322-three-class-drat-audit.md): 上界 A(2647)<=1322 のうち (1,1,3) を除く3クラスのソルバUNSAT主張
+- ← verifies [K0871](../items/K0871-p2647-size1322-three-class-drat-audit.md): 上界 A(2647)<=1322 のうち (1,1,3) を除く3クラスのソルバUNSAT主張
 
 ## [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md) 原点と一完全対を固定した安全集合は低側・高側・空対のSATへ厳密還元できる
 
@@ -4621,7 +4621,7 @@
 - ← depends_on [K0787](../items/K0787-greedy-lower-bounds-2531-3251.md): 禁止四点リストが健全・完全・重複なしであることを前提に、辺の非包含で安全性を判定
 - ← depends_on [K0812](../items/K0812-new-exceptional-primes-3719-3727.md): 禁止四点リストの健全・完全・重複なし（CNFの幾何節の根拠）
 - ← depends_on [K0814](../items/K0814-attained-equality-3793-3803-3863.md): 禁止四点リストの健全・完全・重複なし（辺の非包含で安全性を判定）
-- ← depends_on [K0869](../items/K0869-p2647-size1322-three-class-drat-audit.md): 禁止四点生成器の完全性（CNF構築の前提）
+- ← depends_on [K0871](../items/K0871-p2647-size1322-three-class-drat-audit.md): 禁止四点生成器の完全性（CNF構築の前提）
 
 ## [K0772](../items/K0772-pysat-seqcounter-equals-small-verification.md) pysat の seqcounter による CardEnc.equals は build と同一の呼び出し形で小規模全件「ちょうど bound 個」を満たす
 
@@ -5219,6 +5219,7 @@
 
 - → generalizes [K0824](../items/K0824-higher-dimensional-fiber-trace-reduction.md): K0824の超平面・球面に対するq>2|B|縮約を、各ファイバー上の次数が高々tである多項式超曲面へ一般化する。K0824のq=2|B|境界反例や超平面跡列挙補題を置き換えるものではない
 - → supports [K0504](../items/K0504-geometric-rule-variant-comparison.md): 底面係数次数を制限しない全多項式族ではΣ min(c_b,t)≤q−1が厳密条件。K0504のdeg f≤kなど底面方向の次数制限付きグラフは別問題であり、補間多項式の底面次数は一般に|B|−1程度まで上がるため未解決
+- ← depends_on [K0873](../items/K0873-two-token-z5-grundy-one-locus.md): 残余ゲームHの定義、偶奇上界、tail定理、2トークン再帰を使用する
 
 ## [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) 4〜6行 q=4,5 行欠損witness帯 — (4,4) m=4..34, (5,4) m=5..39, (6,4) m=6..46, (4,5) m=5..20, (5,5) m=5..26 全幅SAT; M_{4,4}>=35, M_{5,4}>=40, M_{6,4}>=47, M_{4,5}>=21, M_{5,5}>=27; sat3 OOM壁越えと rowY 分割・2クラス被覆で帯延伸
 
@@ -5673,6 +5674,7 @@
 - ← depends_on [K0862](../items/K0862-remo-k-branch-collapse-boundary.md): Δ=0プロファイル（cap≤10全域）の生存者が定理D値に一致することを再確認・拡張
 - ← depends_on [K0864](../items/K0864-remo-k-branch-r-dependent-boundary.md): Δ=0プロファイルの生存者が定理D値に一致することをr=2..6で再確認・拡張し、定理D再帰をK0859出版(C,r)表84エントリと照合
 - ← depends_on [K0866](../items/K0866-remo-k-branch-r7-boundary.md): Δ=0プロファイル728個が定理D再帰にr=7で一致。K0859出版(C,r)表84エントリはr=7を含む
+- ← depends_on [K0869](../items/K0869-remo-k-branch-r8-boundary.md): Δ=0プロファイル728個が定理D再帰にr=8で一致。(C,r)表84エントリはr=8を含む
 
 ## [K0860](../items/K0860-remo-two-branch-determinism.md) 2枝合成族でのREMO生存者決定性 — 領域計数帰約（全rで決定可能・成果は石数と枝ロックのみで決まる・全称）とr=3閉形式、r|Δの必要十分性の否定（両方向無限族・∀γ）、生存者決定的だが順位非決定的な族
 
@@ -5691,6 +5693,9 @@
 - ← depends_on [K0864](../items/K0864-remo-k-branch-r-dependent-boundary.md): 定理E′（atomプロファイルへの軌道簡約）を全結果の全称橋として使用。K0861/K0862が残した「r≥4のcap≤10非坍縮境界」限界を解決
 - ← depends_on [K0866](../items/K0866-remo-k-branch-r7-boundary.md): 定理E′（軌道簡約・全称）によりプロファイルverdictは実現盤面すべてに移る。r=7ではセルレベルアンカーは省略（最小witness 13〜18セルでセルゲームがOOM・実測13セルでも強制終了）だがE′自体は全称定理
 - ← depends_on [K0867](../items/K0867-remo-k-branch-r8-prediction-refuted.md): 定理E′の領域ゲーム正確性により、プロファイル結果は全ての実現盤面に及ぶ
+- ← depends_on [K0869](../items/K0869-remo-k-branch-r8-boundary.md): 定理E′（軌道簡約・全称）によりプロファイルverdictは実現盤面すべてに移る
+- ← depends_on [K0874](../items/K0874-remo-failure-family-state-matrix.md): 定理E′（atomプロファイルへの軌道簡約・全称）でプロファイル判定が盤に転送される
+- ← depends_on [K0875](../items/K0875-remo-k-branch-cap12-boundary.md): 定理E′（atomプロファイルへの軌道簡約・全称）でプロファイル判定が盤に転送される
 
 ## [K0862](../items/K0862-remo-k-branch-collapse-boundary.md) 3枝REMO決定性の坍縮境界 — 定理G（枝サイズ≤7で決定性・順位決定性・決定生存者・決定順位がすべて(sizes,γ)に坍縮しチェーン値と一致・r=2..6・全域）と定理H（枝サイズ≤10で非坍縮はサイズ8を含むちょうど22キー・r=3・完全境界）
 
@@ -5698,6 +5703,10 @@
 - → depends_on [K0859](../items/K0859-elimination-continuation-rules.md): Δ=0プロファイル（cap≤10全域）の生存者が定理D値に一致することを再確認・拡張
 - ← depends_on [K0864](../items/K0864-remo-k-branch-r-dependent-boundary.md): 定理H（r=3の22キー境界）のr=2,4,5,6拡張。r=3の22キーを同じ検証器で再導出してアンカーとし、小枝族10キーの決定側witnessをセルアンカーに転用。定理Gのcap≤7統計を再導出・照合
 - ← depends_on [K0866](../items/K0866-remo-k-branch-r7-boundary.md): 同一のcap≤10領域（15863プロファイル・715キー・Burnside 15863）。r=3小枝族のr≥4決定側消滅パターンがr=6失敗族のr=7消滅で再現されることを記録
+- ← depends_on [K0869](../items/K0869-remo-k-branch-r8-boundary.md): 同一のcap≤10領域（15863プロファイル・715キー・Burnside 15863）。r=3の22非坍縮キーを含む全34前失敗キーのr=8運命（完全坍縮）を確定
+- ← depends_on [K0872](../items/K0872-remo-first-loser-residue-signature.md): r=3・cap<=10の非坍縮22キー完全境界
+- ← depends_on [K0874](../items/K0874-remo-failure-family-state-matrix.md): r=3・cap<=10の非坍縮22キー完全境界と22組の最小witness
+- ← depends_on [K0875](../items/K0875-remo-k-branch-cap12-boundary.md): エンジンverbatim供給・定理H（cap≤10の22非坍縮キー）・22×2最小witness・Burnside機構
 
 ## [K0863](../items/K0863-sterile-row-depth10-unclosability.md) STERILE行depth-10閉鎖不能性定理 — 全合法候補がREFUTED-D10・0 cappedのS6行（STERILE）は自出行・cross-coverを問わずどのWIN7-D10 receipt rootにもcoverされない（位置レベル補題「X covers R ⟺ canon(X) ∈ 自出行候補のD4正準形集合」とD4判定不変性による）、best coverable class-2 S5の3行65k/70j/74hの完全route枯渇（自出行65/70/74・cross 390/420/444経路すべてがown candidateのREFUTED-D10へ(σ,t) witness付きで写像）、70j erratumの「STERILE行もcross-coverで閉鎖され得る」は過大訂正（引用先例は未sweep行かつ70g childは8 WIN7-D10の非STERILE行）
 
@@ -5710,6 +5719,10 @@
 - → depends_on [K0861](../items/K0861-remo-k-branch-determinism.md): 定理E′（atomプロファイルへの軌道簡約）を全結果の全称橋として使用。K0861/K0862が残した「r≥4のcap≤10非坍縮境界」限界を解決
 - → depends_on [K0859](../items/K0859-elimination-continuation-rules.md): Δ=0プロファイルの生存者が定理D値に一致することをr=2..6で再確認・拡張し、定理D再帰をK0859出版(C,r)表84エントリと照合
 - ← depends_on [K0866](../items/K0866-remo-k-branch-r7-boundary.md): r依存境界のr=7拡張。エンジンはK0864検証器（commit 3138e0e3・sha256 43adec69…）からverbatim。r=3..6失敗族のr=7での運命（一様非決定坍縮）と補題FL・定理G′のr=7アンカーを同時に確定
+- ← depends_on [K0869](../items/K0869-remo-k-branch-r8-boundary.md): r依存境界のr=8拡張。エンジンはK0864検証器（commit 3138e0e3・sha256 43adec69…）からverbatim。補題FL・定理G′のr=8機械アンカーとr=2全域坍縮（ECHOのr=2完全決定の根拠）もK0864に由来
+- ← depends_on [K0872](../items/K0872-remo-first-loser-residue-signature.md): 任意枝数・任意rで可能第1敗者集合が {C_i mod r} となる全称補題FL
+- ← depends_on [K0874](../items/K0874-remo-failure-family-state-matrix.md): r=2,4,5,6境界・補題FL（全称）・r=3,4,5決定プロファイル分割の源
+- ← depends_on [K0875](../items/K0875-remo-k-branch-cap12-boundary.md): r=3 (8,8,9)/(8,9,9)分割計数の出版定数
 
 ## [K0865](../items/K0865-head1410-sterile-coverage-census.md) head-1410 receipt-unclosability census — 174 個の open S5 parent 全数の STERILE 被覆分類（3 parent が残行すべて STERILE で D10 receipt 閉鎖不能・57 partial・orbit-level join）
 
@@ -5723,25 +5736,69 @@
 - → depends_on [K0861](../items/K0861-remo-k-branch-determinism.md): 定理E′（軌道簡約・全称）によりプロファイルverdictは実現盤面すべてに移る。r=7ではセルレベルアンカーは省略（最小witness 13〜18セルでセルゲームがOOM・実測13セルでも強制終了）だがE′自体は全称定理
 - → depends_on [K0859](../items/K0859-elimination-continuation-rules.md): Δ=0プロファイル728個が定理D再帰にr=7で一致。K0859出版(C,r)表84エントリはr=7を含む
 - ← depends_on [K0867](../items/K0867-remo-k-branch-r8-prediction-refuted.md): K0866からのr=8外挿予想だけを対象にする。r=7定理Iは維持される
+- ← depends_on [K0869](../items/K0869-remo-k-branch-r8-boundary.md): r=7境界の次のstep。r=7失敗族(4,4,9)/(4,9,9)の決定側がr=8で消滅することを確定
+- ← depends_on [K0872](../items/K0872-remo-first-loser-residue-signature.md): r=7・cap<=10の非坍縮6キー完全境界
+- ← depends_on [K0874](../items/K0874-remo-failure-family-state-matrix.md): r=7・cap<=10の非坍縮6キー境界・r=7 witness・FATE連鎖値
 
 ## [K0867](../items/K0867-remo-k-branch-r8-prediction-refuted.md) r=8 REMO 3枝の4/10族非坍縮予想を対象族の完全検査で反証
 
 - → depends_on [K0866](../items/K0866-remo-k-branch-r7-boundary.md): K0866からのr=8外挿予想だけを対象にする。r=7定理Iは維持される
 - → depends_on [K0861](../items/K0861-remo-k-branch-determinism.md): 定理E′の領域ゲーム正確性により、プロファイル結果は全ての実現盤面に及ぶ
+- ← depends_on [K0869](../items/K0869-remo-k-branch-r8-boundary.md): フルスイープが(4,4,10),(4,10,10)×γ=0..3のK0867結果（一様非決定・{3,7}・計数）を独立に再現。K0867が空けた「r=8全境界」を本項が埋める
+- ← depends_on [K0874](../items/K0874-remo-failure-family-state-matrix.md): 4/10族r=8外挿の反証（計数・0決定・集合{3,7}）
 
 ## [K0868](../items/K0868-n11-s6-s7-sweep-candidate-convention.md) S6→S7 sweep候補規約の確定 — own_candidates・edge costは6石の任意の3つ組と共円にも共線にも乗らない空セル（survival moves）であり、det4整数演算で石配置から独立再導出できる
 
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 生残条件は共円禁止規則（q=4・完全指摘）の勝利条件の否定（退化円=直線を含む）
 - → depends_on [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md): worklist・receipt・foldの簿記規約（own_candidates列・edge cost・bits）
 
-## [K0869](../items/K0869-p2647-size1322-three-class-drat-audit.md) p=2647 サイズ1322 の3形状クラス (0,0,1),(1,0,2),(0,1,2) は DRAT 監査済み
+## [K0869](../items/K0869-remo-k-branch-r8-boundary.md) 3枝REMO決定性のr=8境界 — 定理I r=8（非坍縮キーは(6,6,8),(6,8,8)×γ=0..4の10個ちょうど・初のγ≥3失敗範囲・r=3..7の全34前失敗キーは一様非決定へ完全坍縮・新失敗族のr=3..7休眠）・定理G′ r=8拡張（98決定キー・55順位決定キー全てチェーン一致）
 
-- → verifies [K0711](../items/K0711-p2647-safe-lower-bound-1292.md): 上界 A(2647)<=1322 のうち (1,1,3) を除く3クラスのソルバUNSAT主張
-- → depends_on [K0771](../items/K0771-forbidden-edge-generator-completeness.md): 禁止四点生成器の完全性（CNF構築の前提）
-- → depends_on [K0706](../items/K0706-p2647-no-parabola-equality-witness.md): 同じ増分DRATチェッカーによる全1323 d監査の流儀
+- → depends_on [K0864](../items/K0864-remo-k-branch-r-dependent-boundary.md): r依存境界のr=8拡張。エンジンはK0864検証器（commit 3138e0e3・sha256 43adec69…）からverbatim。補題FL・定理G′のr=8機械アンカーとr=2全域坍縮（ECHOのr=2完全決定の根拠）もK0864に由来
+- → depends_on [K0862](../items/K0862-remo-k-branch-collapse-boundary.md): 同一のcap≤10領域（15863プロファイル・715キー・Burnside 15863）。r=3の22非坍縮キーを含む全34前失敗キーのr=8運命（完全坍縮）を確定
+- → depends_on [K0861](../items/K0861-remo-k-branch-determinism.md): 定理E′（軌道簡約・全称）によりプロファイルverdictは実現盤面すべてに移る
+- → depends_on [K0859](../items/K0859-elimination-continuation-rules.md): Δ=0プロファイル728個が定理D再帰にr=8で一致。(C,r)表84エントリはr=8を含む
+- → depends_on [K0866](../items/K0866-remo-k-branch-r7-boundary.md): r=7境界の次のstep。r=7失敗族(4,4,9)/(4,9,9)の決定側がr=8で消滅することを確定
+- → depends_on [K0867](../items/K0867-remo-k-branch-r8-prediction-refuted.md): フルスイープが(4,4,10),(4,10,10)×γ=0..3のK0867結果（一様非決定・{3,7}・計数）を独立に再現。K0867が空けた「r=8全境界」を本項が埋める
+- ← depends_on [K0872](../items/K0872-remo-first-loser-residue-signature.md): r=8・cap<=10の非坍縮10キー完全境界
+- ← depends_on [K0874](../items/K0874-remo-failure-family-state-matrix.md): r=8・cap<=10の非坍縮10キー境界・FATE・ECHO・出版compactによるr=8全レコード照合
 
 ## [K0870](../items/K0870-p2647-113-budget-ladder-3m-20m.md) p=2647 サイズ1322 形状クラス(1,1,3) の層別19 d は 3M/10M/20M ラダーで 8 件 UNSAT に到達し、11 件は 20M でも UNKNOWN である
 
 - → depends_on [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md): 固定原点・一完全対の三値還元（d 固定 CNF）の上での予算ラダー
 - → depends_on [K0736](../items/K0736-ternary-encoding-arbitrary-d-verification.md): d を引数化した一般 d 符号化（各段は再生成 CNF）
 - → supports [K0768](../items/K0768-p2647-113-full-d-sweep-100k.md): 100k 掃引の「決まる d の地図」に対する予算軸の拡張
+
+## [K0871](../items/K0871-p2647-size1322-three-class-drat-audit.md) p=2647 サイズ1322 の3形状クラス (0,0,1),(1,0,2),(0,1,2) は DRAT 監査済み
+
+- → verifies [K0711](../items/K0711-p2647-safe-lower-bound-1292.md): 上界 A(2647)<=1322 のうち (1,1,3) を除く3クラスのソルバUNSAT主張
+- → depends_on [K0771](../items/K0771-forbidden-edge-generator-completeness.md): 禁止四点生成器の完全性（CNF構築の前提）
+- → depends_on [K0706](../items/K0706-p2647-no-parabola-equality-witness.md): 同じ増分DRATチェッカーによる全1323 d監査の流儀
+
+## [K0872](../items/K0872-remo-first-loser-residue-signature.md) 3枝REMOの非坍縮キーはr=3..8で第1敗者剰余がちょうど2種類
+
+- → depends_on [K0864](../items/K0864-remo-k-branch-r-dependent-boundary.md): 任意枝数・任意rで可能第1敗者集合が {C_i mod r} となる全称補題FL
+- → depends_on [K0862](../items/K0862-remo-k-branch-collapse-boundary.md): r=3・cap<=10の非坍縮22キー完全境界
+- → depends_on [K0866](../items/K0866-remo-k-branch-r7-boundary.md): r=7・cap<=10の非坍縮6キー完全境界
+- → depends_on [K0869](../items/K0869-remo-k-branch-r8-boundary.md): r=8・cap<=10の非坍縮10キー完全境界
+- ← depends_on [K0875](../items/K0875-remo-k-branch-cap12-boundary.md): 第1敗者剰余レンズ（2剰余キー分類・r=3剰余対{0,2}）
+
+## [K0873](../items/K0873-two-token-z5-grundy-one-locus.md) 2トークン残余ゲーム z=5 のGrundy値1位置候補
+
+- → depends_on [K0832](../items/K0832-vertical-fiber-degree-reduction.md): 残余ゲームHの定義、偶奇上界、tail定理、2トークン再帰を使用する
+
+## [K0874](../items/K0874-remo-failure-family-state-matrix.md) 3枝REMO失敗族52キーのr=2..8状態行列と4/10族の位相構造
+
+- → depends_on [K0861](../items/K0861-remo-k-branch-determinism.md): 定理E′（atomプロファイルへの軌道簡約・全称）でプロファイル判定が盤に転送される
+- → depends_on [K0862](../items/K0862-remo-k-branch-collapse-boundary.md): r=3・cap<=10の非坍縮22キー完全境界と22組の最小witness
+- → depends_on [K0864](../items/K0864-remo-k-branch-r-dependent-boundary.md): r=2,4,5,6境界・補題FL（全称）・r=3,4,5決定プロファイル分割の源
+- → depends_on [K0866](../items/K0866-remo-k-branch-r7-boundary.md): r=7・cap<=10の非坍縮6キー境界・r=7 witness・FATE連鎖値
+- → depends_on [K0867](../items/K0867-remo-k-branch-r8-prediction-refuted.md): 4/10族r=8外挿の反証（計数・0決定・集合{3,7}）
+- → depends_on [K0869](../items/K0869-remo-k-branch-r8-boundary.md): r=8・cap<=10の非坍縮10キー境界・FATE・ECHO・出版compactによるr=8全レコード照合
+
+## [K0875](../items/K0875-remo-k-branch-cap12-boundary.md) 3枝REMO決定性のサイズ境界cap≤12拡張（非坍縮キーは定理Hの22個のまま）
+
+- → depends_on [K0861](../items/K0861-remo-k-branch-determinism.md): 定理E′（atomプロファイルへの軌道簡約・全称）でプロファイル判定が盤に転送される
+- → depends_on [K0862](../items/K0862-remo-k-branch-collapse-boundary.md): エンジンverbatim供給・定理H（cap≤10の22非坍縮キー）・22×2最小witness・Burnside機構
+- → depends_on [K0864](../items/K0864-remo-k-branch-r-dependent-boundary.md): r=3 (8,8,9)/(8,9,9)分割計数の出版定数
+- → depends_on [K0872](../items/K0872-remo-first-loser-residue-signature.md): 第1敗者剰余レンズ（2剰余キー分類・r=3剰余対{0,2}）

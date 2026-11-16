@@ -851,5 +851,10 @@
 | [K0866](../items/K0866-remo-k-branch-r7-boundary.md) | 3枝REMO決定性のr=7境界 — 定理I r=7（非坍縮キーは(4,4,9),(4,9,9)×γ=0..2の6個ちょうど・サイズ8必要性の初の破れ・前失敗族は一様非決定へ完全坍縮・新失敗族のr=2..6事前エコー）・定理G′ r=7拡張（98決定キー・55順位決定キー全てチェーン一致） | proposition | proved | variants, maximal-safe, strategy-length, multiplayer |
 | [K0867](../items/K0867-remo-k-branch-r8-prediction-refuted.md) | r=8 REMO 3枝の4/10族非坍縮予想を対象族の完全検査で反証 | proposition | refuted | variants, multiplayer, maximal-safe, strategy-length |
 | [K0868](../items/K0868-n11-s6-s7-sweep-candidate-convention.md) | S6→S7 sweep候補規約の確定 — own_candidates・edge costは6石の任意の3つ組と共円にも共線にも乗らない空セル（survival moves）であり、det4整数演算で石配置から独立再導出できる | definition | active | certificates, verification, search-methods |
-| [K0869](../items/K0869-p2647-size1322-three-class-drat-audit.md) | p=2647 サイズ1322 の3形状クラス (0,0,1),(1,0,2),(0,1,2) は DRAT 監査済み | verification | verified | maximum-safe, geometry, verification, certificates |
+| [K0869](../items/K0869-remo-k-branch-r8-boundary.md) | 3枝REMO決定性のr=8境界 — 定理I r=8（非坍縮キーは(6,6,8),(6,8,8)×γ=0..4の10個ちょうど・初のγ≥3失敗範囲・r=3..7の全34前失敗キーは一様非決定へ完全坍縮・新失敗族のr=3..7休眠）・定理G′ r=8拡張（98決定キー・55順位決定キー全てチェーン一致） | proposition | proved | variants, maximal-safe, strategy-length, multiplayer |
 | [K0870](../items/K0870-p2647-113-budget-ladder-3m-20m.md) | p=2647 サイズ1322 形状クラス(1,1,3) の層別19 d は 3M/10M/20M ラダーで 8 件 UNSAT に到達し、11 件は 20M でも UNKNOWN である | computation | computed | geometry, maximum-safe, search-methods |
+| [K0871](../items/K0871-p2647-size1322-three-class-drat-audit.md) | p=2647 サイズ1322 の3形状クラス (0,0,1),(1,0,2),(0,1,2) は DRAT 監査済み | verification | verified | maximum-safe, geometry, verification, certificates |
+| [K0872](../items/K0872-remo-first-loser-residue-signature.md) | 3枝REMOの非坍縮キーはr=3..8で第1敗者剰余がちょうど2種類 | computation | computed | multiplayer, variants, strategy-length |
+| [K0873](../items/K0873-two-token-z5-grundy-one-locus.md) | 2トークン残余ゲーム z=5 のGrundy値1位置候補 | proposition | conjectured | grundy, residual-games |
+| [K0874](../items/K0874-remo-failure-family-state-matrix.md) | 3枝REMO失敗族52キーのr=2..8状態行列と4/10族の位相構造 | computation | computed | multiplayer, variants, strategy-length |
+| [K0875](../items/K0875-remo-k-branch-cap12-boundary.md) | 3枝REMO決定性のサイズ境界cap≤12拡張（非坍縮キーは定理Hの22個のまま） | computation | computed | multiplayer, variants, strategy-length |
