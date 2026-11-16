@@ -3,7 +3,11 @@
 from __future__ import annotations
 import hashlib
 import json
+import sys
 from pathlib import Path
+
+# The finite-audit module is a sibling experiment directory, not this one.
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "vertical-fiber-two-token-z4-slice-20261116"))
 from verify_z4_conjecture import audit as raw_audit
 from verify_z4_conjecture import z4_options_from_closed_forms
 
