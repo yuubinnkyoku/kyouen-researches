@@ -1,0 +1,138 @@
+{
+ "meta": {
+  "date": "2026-11-16",
+  "lane": "class2-lane (11x11 long-term, weak solve)",
+  "title": "cost-65j fold row-level bookkeeping verification (independent third implementation)",
+  "input": "class-frontier-cost65j-receipts-recompute-20261116.json (v2, head commit c0288d71 chain)",
+  "implementation": "independent third implementation (TypeScript sandbox): D4 canonical form, superset-orbit family membership, survival legality via verified det3"
+ },
+ "verified": {
+  "parents": {
+   "count": 9,
+   "all_popcount5": true,
+   "all_rows_delta_equals_lost_rows": true,
+   "all_cost_delta_equals_lost_cost_sum": true,
+   "per_parent": [
+    {
+     "parent": "00000000000000003800000008000002",
+     "lost_rows": 2,
+     "rows_delta": 2,
+     "cost_delta": 133
+    },
+    {
+     "parent": "00000000000000003800000008001000",
+     "lost_rows": 1,
+     "rows_delta": 1,
+     "cost_delta": 64
+    },
+    {
+     "parent": "00000000000000003800000008002000",
+     "lost_rows": 9,
+     "rows_delta": 9,
+     "cost_delta": 635
+    },
+    {
+     "parent": "00000000000000003800000008400000",
+     "lost_rows": 1,
+     "rows_delta": 1,
+     "cost_delta": 71
+    },
+    {
+     "parent": "000000000000003800000408000000",
+     "lost_rows": 1,
+     "rows_delta": 1,
+     "cost_delta": 74
+    },
+    {
+     "parent": "00000000000000380001000080000000",
+     "lost_rows": 1,
+     "rows_delta": 1,
+     "cost_delta": 76
+    },
+    {
+     "parent": "0000000000000038004000080000000",
+     "lost_rows": 1,
+     "rows_delta": 1,
+     "cost_delta": 69
+    },
+    {
+     "parent": "00000000000000043800000008000000",
+     "lost_rows": 1,
+     "rows_delta": 1,
+     "cost_delta": 74
+    },
+    {
+     "parent": "00000000000000801202000000000100",
+     "lost_rows": 1,
+     "rows_delta": 1,
+     "cost_delta": 74
+    }
+   ]
+  },
+  "children": {
+   "unique_lost_children": 9,
+   "all_popcount6": true,
+   "every_child_row_of_exactly_two_parents": true,
+   "all_edge_costs_match_third_impl_recomputation": true,
+   "recomputed_costs": {
+    "000000000000003800000008002002": 64,
+    "000000000000003800000008002200": 69,
+    "000000000000003800000008003000": 64,
+    "0000000000000038000000084800000": 71,
+    "000000000000003800000408002000": 74,
+    "0000000000000038001000080800000": 76,
+    "000000000000003800400008002000": 69,
+    "0000000000000043800000008002000": 74,
+    "00000000010000003800000008080000": 74
+   }
+  },
+  "family_membership": {
+   "pairs": 18,
+   "all_orbit_level_family_membership": true,
+   "raw_subset_pairs": 13,
+   "d4_image_pairs": 5,
+   "note": "manifest rows are D4-canonical representatives; in 5 of the 18 pairs the canonical child does not contain the parent as a raw subset - a D4 image of the child does (family membership is orbit-level, verified by enumerating each parent's 116-superset canonical orbit set)"
+  },
+  "receipt_marginals": {
+   "receipts": 17,
+   "certified": 4,
+   "uncertified_65f": 13,
+   "marginal_manifest_union_size": 9,
+   "receipt_union_equals_lost_children_d4_canonically": true,
+   "note": "e.g. the bit-4 receipt lists 00000000000000043800000008002000 while the manifest row is 0000000000000043800000008002000 - D4-equivalent representatives, canonical-equality verified"
+  },
+  "global_accounting": {
+   "unique_child_cost_sum": 635,
+   "matches_head_sum_cost_delta": "509109-508474=635 OK",
+   "parent_row_cost_sum": 1270,
+   "equals_two_parents_per_child": "1270=2*635 OK",
+   "parent_rows_total": 18,
+   "unique_children": 9,
+   "head_solved_delta": "1410+9=1419 OK (9 = total_marginal_in_manifest)"
+  }
+ },
+ "observations": {
+  "bit79_orbit_proof_tier": "the census-overlap bit-79 orbit is now confirmed uncertified on BOTH sides: the 65f-side receipt (root 00000000000080809102000080000000) is one of the 13 uncertified cost-65f receipts folded on blob-pinned raw records, and the 63a-side root (00000002000000809102000800000000) remains search-level - certificate extraction for this orbit is the weakest link among the four census overlaps",
+  "zero_mim_receipts": [
+   15,
+   23,
+   25,
+   66,
+   79,
+   91,
+   101,
+   119
+  ],
+  "covers_note": "all 17 receipts carry covers=7 (7 covered S6 rows each); total covered rows union before fold = 34, of which 9 were still remaining at 1410"
+ },
+ "interpretation_guard": {
+  "no_verdict_claim": "this verification checks fold bookkeeping only; it asserts no game-theoretic values",
+  "solved_meaning": "solved 1419 counts manifest coverage of S6 rows; REFUTED-D10 proves only absence of WIN7-D10; WIN7 certificates prove a win within depth 10 from the individual 7-stone roots only"
+ },
+ "status": {
+  "11x11_empty_board": "UNKNOWN",
+  "s2_root_59_60": "UNKNOWN",
+  "class1_class2_class4_roots": "UNKNOWN",
+  "current_head_bookkeeping": "1419/174/6429/508474/4702/372388 (now third-implementation verified at the row level for its final fold)"
+ }
+}
