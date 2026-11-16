@@ -1,0 +1,57 @@
+{
+  "M_7_4_bound_unchanged": "60 <= M_{7,4} <= 1929",
+  "all_checks_pass": true,
+  "board": {
+    "height": 7,
+    "q": 4,
+    "width": 60
+  },
+  "bounded_neighborhood_conclusion": "Neither seed has a safe maximal 7x60 configuration within 0, 1-for-1, or 2-for-2 relocations while preserving the 20-stone row profile.",
+  "global_claim": false,
+  "one_for_one": {
+    "cpp_method": "exact integer cross products and 4x4 determinants",
+    "method": "independent exact integer implementations agree",
+    "python_method": "normalized integer line/circle equations; no floating point",
+    "results": [
+      {
+        "candidates": 1142,
+        "safe": 276,
+        "safe_maximal": 0,
+        "seed": "base53"
+      },
+      {
+        "candidates": 1142,
+        "safe": 313,
+        "safe_maximal": 0,
+        "seed": "foundB_7x59"
+      }
+    ]
+  },
+  "prior_two_for_two": {
+    "results": [
+      {
+        "candidates": 1599648,
+        "safe": 83225,
+        "safe_maximal": 0,
+        "seed": "base53"
+      },
+      {
+        "candidates": 1599648,
+        "safe": 110748,
+        "safe_maximal": 0,
+        "seed": "foundB_7x59"
+      }
+    ],
+    "source": "research/experiments/seven-row-q4-width59-two-swap-20261115/output/two_swap_audit.json"
+  },
+  "required_row_profile": [
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    2
+  ],
+  "status": "finite-local-negative"
+}
