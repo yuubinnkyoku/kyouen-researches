@@ -333,7 +333,7 @@ def main() -> None:
     fold_path.write_text(json.dumps(fold, ensure_ascii=False, indent=1,
                                    sort_keys=True) + "\n", encoding="utf-8")
     audit_path.write_text(json.dumps(audit, ensure_ascii=False, indent=1,
-                                    sort_keys=True) + "\\n", encoding="utf-8")
+                                    sort_keys=True) + "\n", encoding="utf-8")
     print(json.dumps({
         "fold": fold_path.name,
         "audit": audit_path.name,
