@@ -1,0 +1,3099 @@
+{
+ "schema": "n11-class2-lane-warm-multiband-band-certificates-bigint-independent-reverification-20261117-v1",
+ "date": "2026-11-17",
+ "method": "all 82 certificate records of the warm-multiband (35), warm-multiband2 (31), cost-70c warm6 (6), cost-70c warm-batch3 (4) and warm-band-hygiene (6) record files resolved to their published certificate bytes (single files or .part1of2/.part2of2 line-boundary splits in the band certificate directories), byte-checked against the per-record bytes/md5 (and per-part bytes/md5 where documented), then independently verified with the published BigInt 3x3-cofactor verifier (verify_win7_certificate_bigint_independent.mjs, no engine, no floating point) with per-record row / sub_roots_pass / root_hex / union / terminal-range equality asserted",
+ "summary": {
+  "records": 82,
+  "distinct_certificate_files": 81,
+  "verifier_pass": 82,
+  "verifier_fail": 0,
+  "record_mismatch": 0,
+  "records_with_layout_drift": 6,
+  "total_rows_independently_verified": 3490727,
+  "total_sub_roots_independently_verified": 4343,
+  "total_certificate_bytes_rehashed": 126089080,
+  "records_per_source": {
+   "warm-multiband": 35,
+   "warm-multiband2": 31,
+   "cost70c-warm6": 6,
+   "cost70c-warm-batch3": 4,
+   "warm-band-hygiene": 6
+  }
+ },
+ "layout_drift_note": "six records declare 'single file' storage while the repo holds a part1of2/part2of2 split (cost63a bits 96/97, cost64b bits 53/116, cost61d bits 114/116); the concatenated parts match the record bytes and full-certificate md5 exactly, so the drift is presentational, not substantive",
+ "duplicate_file_note": "the warm-band-hygiene cost-61d bit-22 record and cost-71b bit-1 record reference the same certificate file (same root 00000000000000803202000000400002); the verifier ran once for it",
+ "entries": [
+  {
+   "source_record_file": "class2-lane-warm-multiband-certificates-20261115.json",
+   "record_source": "warm-multiband",
+   "band": "class2-lane-cost71b",
+   "bit": 14,
+   "root_hex": "00000000000000803202000000404000",
+   "resolved_layout": "part1of2+part2of2",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 2847673,
+   "md5_full_certificate": "aaa837e0ef6e75890f2bfbaa6d2b4f52",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71b-certificates/bit14-root-00000000000000803202000000404000.cert.part1of2",
+     "bytes": 1425717,
+     "md5": "ac37e6b1629aff4ea1eba81f2519092f",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    },
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71b-certificates/bit14-root-00000000000000803202000000404000.cert.part2of2",
+     "bytes": 1421956,
+     "md5": "b546fea7cd6411ae36195e4b0ef73343",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 78999,
+   "verifier_subroots_passed": 63,
+   "verifier_root_mobility": 63,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 78999,
+   "record_sub_roots_pass": 63,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband-certificates-20261115.json",
+   "record_source": "warm-multiband",
+   "band": "class2-lane-cost65e",
+   "bit": 7,
+   "root_hex": "00000000000000809102000000800080",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1611767,
+   "md5_full_certificate": "fcfe4eb170a8362794a8f8d475b97757",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-certificates/bit7-root-00000000000000809102000000800080.cert",
+     "bytes": 1611767,
+     "md5": "fcfe4eb170a8362794a8f8d475b97757",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 44561,
+   "verifier_subroots_passed": 56,
+   "verifier_root_mobility": 56,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 44561,
+   "record_sub_roots_pass": 56,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband-certificates-20261115.json",
+   "record_source": "warm-multiband",
+   "band": "class2-lane-cost65e",
+   "bit": 26,
+   "root_hex": "00000000000000809102000004800000",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1457674,
+   "md5_full_certificate": "abcb6dcd6c2bb783cfaa9b62aab3684c",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-certificates/bit26-root-00000000000000809102000004800000.cert",
+     "bytes": 1457674,
+     "md5": "abcb6dcd6c2bb783cfaa9b62aab3684c",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 40340,
+   "verifier_subroots_passed": 50,
+   "verifier_root_mobility": 50,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 40340,
+   "record_sub_roots_pass": 50,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband-certificates-20261115.json",
+   "record_source": "warm-multiband",
+   "band": "class2-lane-cost65e",
+   "bit": 29,
+   "root_hex": "00000000000000809102000020800000",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1186179,
+   "md5_full_certificate": "fbea1400777759561c5150e63838c4c5",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-certificates/bit29-root-00000000000000809102000020800000.cert",
+     "bytes": 1186179,
+     "md5": "fbea1400777759561c5150e63838c4c5",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 32780,
+   "verifier_subroots_passed": 51,
+   "verifier_root_mobility": 51,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 32780,
+   "record_sub_roots_pass": 51,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband-certificates-20261115.json",
+   "record_source": "warm-multiband",
+   "band": "class2-lane-cost65e",
+   "bit": 32,
+   "root_hex": "00000000000000809102000100800000",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1612164,
+   "md5_full_certificate": "ab0940eb8dbbb1a409c1985341daf555",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-certificates/bit32-root-00000000000000809102000100800000.cert",
+     "bytes": 1612164,
+     "md5": "ab0940eb8dbbb1a409c1985341daf555",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 44577,
+   "verifier_subroots_passed": 56,
+   "verifier_root_mobility": 56,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 44577,
+   "record_sub_roots_pass": 56,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband-certificates-20261115.json",
+   "record_source": "warm-multiband",
+   "band": "class2-lane-cost62a",
+   "bit": 32,
+   "root_hex": "00000000000000809102000101000000",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1069740,
+   "md5_full_certificate": "5058d5c86521877c66ef73ce8d34bba3",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost62a-certificates/bit32-root-00000000000000809102000101000000.cert",
+     "bytes": 1069740,
+     "md5": "5058d5c86521877c66ef73ce8d34bba3",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 29639,
+   "verifier_subroots_passed": 47,
+   "verifier_root_mobility": 47,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 29639,
+   "record_sub_roots_pass": 47,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband-certificates-20261115.json",
+   "record_source": "warm-multiband",
+   "band": "class2-lane-cost65e",
+   "bit": 33,
+   "root_hex": "00000000000000809102000200800000",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1446739,
+   "md5_full_certificate": "3544879232fe3988d2d34355403f0a93",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-certificates/bit33-root-00000000000000809102000200800000.cert",
+     "bytes": 1446739,
+     "md5": "3544879232fe3988d2d34355403f0a93",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 40001,
+   "verifier_subroots_passed": 51,
+   "verifier_root_mobility": 51,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 40001,
+   "record_sub_roots_pass": 51,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband-certificates-20261115.json",
+   "record_source": "warm-multiband",
+   "band": "class2-lane-cost63a",
+   "bit": 2,
+   "root_hex": "00000000000000809102000800000004",
+   "resolved_layout": "part1of2+part2of2",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 2182786,
+   "md5_full_certificate": "80b6087ef5bb38e1cbeaed1d7d6f0955",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost63a-certificates/bit2-root-00000000000000809102000800000004.cert.part1of2",
+     "bytes": 1092174,
+     "md5": "2fff8bc487deaef5fe162c251ae69aa7",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    },
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost63a-certificates/bit2-root-00000000000000809102000800000004.cert.part2of2",
+     "bytes": 1090612,
+     "md5": "f86f527654c8a43ca00d240f0cc2b0c0",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 60177,
+   "verifier_subroots_passed": 58,
+   "verifier_root_mobility": 58,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 60177,
+   "record_sub_roots_pass": 58,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband-certificates-20261115.json",
+   "record_source": "warm-multiband",
+   "band": "class2-lane-cost63a",
+   "bit": 15,
+   "root_hex": "00000000000000809102000800008000",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1568212,
+   "md5_full_certificate": "d0e96b8a3c320a1b389a79e44eb74271",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost63a-certificates/bit15-root-00000000000000809102000800008000.cert",
+     "bytes": 1568212,
+     "md5": "d0e96b8a3c320a1b389a79e44eb74271",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 43426,
+   "verifier_subroots_passed": 50,
+   "verifier_root_mobility": 50,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 43426,
+   "record_sub_roots_pass": 50,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband-certificates-20261115.json",
+   "record_source": "warm-multiband",
+   "band": "class2-lane-cost63a",
+   "bit": 28,
+   "root_hex": "00000000000000809102000810000000",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1751932,
+   "md5_full_certificate": "0ed30a903e83bad467ae45bf4f600c46",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost63a-certificates/bit28-root-00000000000000809102000810000000.cert",
+     "bytes": 1751932,
+     "md5": "0ed30a903e83bad467ae45bf4f600c46",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 48512,
+   "verifier_subroots_passed": 51,
+   "verifier_root_mobility": 51,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 48512,
+   "record_sub_roots_pass": 51,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband-certificates-20261115.json",
+   "record_source": "warm-multiband",
+   "band": "class2-lane-cost65e",
+   "bit": 42,
+   "root_hex": "00000000000000809102040000800000",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1471328,
+   "md5_full_certificate": "3fbe1e5709a7126e756f05b30542c5a0",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-certificates/bit42-root-00000000000000809102040000800000.cert",
+     "bytes": 1471328,
+     "md5": "3fbe1e5709a7126e756f05b30542c5a0",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 40642,
+   "verifier_subroots_passed": 52,
+   "verifier_root_mobility": 52,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 40642,
+   "record_sub_roots_pass": 52,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband-certificates-20261115.json",
+   "record_source": "warm-multiband",
+   "band": "class2-lane-cost62a",
+   "bit": 66,
+   "root_hex": "00000000000000849102000001000000",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 967543,
+   "md5_full_certificate": "cfbdee3082aa4fccd2c496fc2a4039a7",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost62a-certificates/bit66-root-00000000000000849102000001000000.cert",
+     "bytes": 967543,
+     "md5": "cfbdee3082aa4fccd2c496fc2a4039a7",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 26807,
+   "verifier_subroots_passed": 47,
+   "verifier_root_mobility": 47,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 26807,
+   "record_sub_roots_pass": 47,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband-certificates-20261115.json",
+   "record_source": "warm-multiband",
+   "band": "class2-lane-cost62a",
+   "bit": 86,
+   "root_hex": "00000000004000809102000001000000",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1609548,
+   "md5_full_certificate": "e1d4b692fbee836a9982ea509fdb8edb",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost62a-certificates/bit86-root-00000000004000809102000001000000.cert",
+     "bytes": 1609548,
+     "md5": "e1d4b692fbee836a9982ea509fdb8edb",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 44514,
+   "verifier_subroots_passed": 51,
+   "verifier_root_mobility": 51,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 44514,
+   "record_sub_roots_pass": 51,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband-certificates-20261115.json",
+   "record_source": "warm-multiband",
+   "band": "class2-lane-cost65e",
+   "bit": 94,
+   "root_hex": "00000000400000809102000000800000",
+   "resolved_layout": "part1of2+part2of2",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 2048632,
+   "md5_full_certificate": "6864b433657e3d5f374b23666bf7771a",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-certificates/bit94-root-00000000400000809102000000800000.cert.part1of2",
+     "bytes": 1026236,
+     "md5": "605a5c254f3563583b73ee976d9def9d",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    },
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-certificates/bit94-root-00000000400000809102000000800000.cert.part2of2",
+     "bytes": 1022396,
+     "md5": "89d01647793b2c655a545ed4d48eb3e0",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 56582,
+   "verifier_subroots_passed": 56,
+   "verifier_root_mobility": 56,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 56582,
+   "record_sub_roots_pass": 56,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband-certificates-20261115.json",
+   "record_source": "warm-multiband",
+   "band": "class2-lane-cost62a",
+   "bit": 95,
+   "root_hex": "00000000800000809102000001000000",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1261381,
+   "md5_full_certificate": "3dfe06026872739465278b347320222d",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost62a-certificates/bit95-root-00000000800000809102000001000000.cert",
+     "bytes": 1261381,
+     "md5": "3dfe06026872739465278b347320222d",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 34952,
+   "verifier_subroots_passed": 51,
+   "verifier_root_mobility": 51,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 34952,
+   "record_sub_roots_pass": 51,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband-certificates-20261115.json",
+   "record_source": "warm-multiband",
+   "band": "class2-lane-cost63a",
+   "bit": 100,
+   "root_hex": "00000010000000809102000800000000",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1800180,
+   "md5_full_certificate": "e1c55f676106b579e807d7d8519c0550",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost63a-certificates/bit100-root-00000010000000809102000800000000.cert",
+     "bytes": 1800180,
+     "md5": "e1c55f676106b579e807d7d8519c0550",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 49833,
+   "verifier_subroots_passed": 53,
+   "verifier_root_mobility": 53,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 49833,
+   "record_sub_roots_pass": 53,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband-certificates-20261115.json",
+   "record_source": "warm-multiband",
+   "band": "class2-lane-cost64b",
+   "bit": 102,
+   "root_hex": "00000040000000803202000000100000",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1644841,
+   "md5_full_certificate": "0409cadf2f7ee6969f98a56bced28901",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64b-certificates/bit102-root-00000040000000803202000000100000.cert",
+     "bytes": 1644841,
+     "md5": "0409cadf2f7ee6969f98a56bced28901",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 45651,
+   "verifier_subroots_passed": 57,
+   "verifier_root_mobility": 57,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 45651,
+   "record_sub_roots_pass": 57,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband-certificates-20261115.json",
+   "record_source": "warm-multiband",
+   "band": "class2-lane-cost61e",
+   "bit": 102,
+   "root_hex": "00000040000000803202000040000000",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1575506,
+   "md5_full_certificate": "250487a518bea8d84ca8b09695d66781",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61e-certificates/bit102-root-00000040000000803202000040000000.cert",
+     "bytes": 1575506,
+     "md5": "250487a518bea8d84ca8b09695d66781",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 43648,
+   "verifier_subroots_passed": 55,
+   "verifier_root_mobility": 55,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 43648,
+   "record_sub_roots_pass": 55,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband-certificates-20261115.json",
+   "record_source": "warm-multiband",
+   "band": "class2-lane-cost61f",
+   "bit": 102,
+   "root_hex": "00000040000000803202000080000000",
+   "resolved_layout": "part1of2+part2of2",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 2112735,
+   "md5_full_certificate": "3e38704c8b2f9f00fbc7753e0b935fd0",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61f-certificates/bit102-root-00000040000000803202000080000000.cert.part1of2",
+     "bytes": 1057912,
+     "md5": "55768ff2dabe4adb3d07f2c80073730d",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    },
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61f-certificates/bit102-root-00000040000000803202000080000000.cert.part2of2",
+     "bytes": 1054823,
+     "md5": "f4ea90eef699287f6ff88ffc258df16e",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 58545,
+   "verifier_subroots_passed": 55,
+   "verifier_root_mobility": 55,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 58545,
+   "record_sub_roots_pass": 55,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband-certificates-20261115.json",
+   "record_source": "warm-multiband",
+   "band": "class2-lane-cost65e",
+   "bit": 105,
+   "root_hex": "00000200000000809102000000800000",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1607417,
+   "md5_full_certificate": "cf309a1d7a9daced758252553f7afdb5",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-certificates/bit105-root-00000200000000809102000000800000.cert",
+     "bytes": 1607417,
+     "md5": "cf309a1d7a9daced758252553f7afdb5",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 44511,
+   "verifier_subroots_passed": 56,
+   "verifier_root_mobility": 56,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 44511,
+   "record_sub_roots_pass": 56,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband-certificates-20261115.json",
+   "record_source": "warm-multiband",
+   "band": "class2-lane-cost62a",
+   "bit": 105,
+   "root_hex": "00000200000000809102000001000000",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1558827,
+   "md5_full_certificate": "5e27ca7c232ad4997881888459cd55ff",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost62a-certificates/bit105-root-00000200000000809102000001000000.cert",
+     "bytes": 1558827,
+     "md5": "5e27ca7c232ad4997881888459cd55ff",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 43256,
+   "verifier_subroots_passed": 50,
+   "verifier_root_mobility": 50,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 43256,
+   "record_sub_roots_pass": 50,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband-certificates-20261115.json",
+   "record_source": "warm-multiband",
+   "band": "class2-lane-cost65e",
+   "bit": 106,
+   "root_hex": "00000400000000809102000000800000",
+   "resolved_layout": "part1of2+part2of2",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 2121779,
+   "md5_full_certificate": "0e8e6009ea9b0134448da21de20d72e5",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-certificates/bit106-root-00000400000000809102000000800000.cert.part1of2",
+     "bytes": 1062939,
+     "md5": "b9a7694b6638f8879e7e1e9c7d6f91f9",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    },
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-certificates/bit106-root-00000400000000809102000000800000.cert.part2of2",
+     "bytes": 1058840,
+     "md5": "e020392f427280009767956d18cecfb6",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 58688,
+   "verifier_subroots_passed": 59,
+   "verifier_root_mobility": 59,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 58688,
+   "record_sub_roots_pass": 59,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband-certificates-20261115.json",
+   "record_source": "warm-multiband",
+   "band": "class2-lane-cost62a",
+   "bit": 109,
+   "root_hex": "00002000000000809102000001000000",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1226545,
+   "md5_full_certificate": "a1c019c9c36c48704a2971135b823efc",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost62a-certificates/bit109-root-00002000000000809102000001000000.cert",
+     "bytes": 1226545,
+     "md5": "a1c019c9c36c48704a2971135b823efc",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 33983,
+   "verifier_subroots_passed": 51,
+   "verifier_root_mobility": 51,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 33983,
+   "record_sub_roots_pass": 51,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband-certificates-20261115.json",
+   "record_source": "warm-multiband",
+   "band": "class2-lane-cost65e",
+   "bit": 111,
+   "root_hex": "00008000000000809102000000800000",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1208790,
+   "md5_full_certificate": "1f1a09d43fc51f1be4b1b0c52b7254f8",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-certificates/bit111-root-00008000000000809102000000800000.cert",
+     "bytes": 1208790,
+     "md5": "1f1a09d43fc51f1be4b1b0c52b7254f8",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 33530,
+   "verifier_subroots_passed": 52,
+   "verifier_root_mobility": 52,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 33530,
+   "record_sub_roots_pass": 52,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband-certificates-20261115.json",
+   "record_source": "warm-multiband",
+   "band": "class2-lane-cost62a",
+   "bit": 112,
+   "root_hex": "00010000000000809102000001000000",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1113148,
+   "md5_full_certificate": "40f11793e3651eb3aa1c656430358fb8",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost62a-certificates/bit112-root-00010000000000809102000001000000.cert",
+     "bytes": 1113148,
+     "md5": "40f11793e3651eb3aa1c656430358fb8",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 30852,
+   "verifier_subroots_passed": 52,
+   "verifier_root_mobility": 52,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 30852,
+   "record_sub_roots_pass": 52,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband-certificates-20261115.json",
+   "record_source": "warm-multiband",
+   "band": "class2-lane-cost65e",
+   "bit": 114,
+   "root_hex": "00040000000000809102000000800000",
+   "resolved_layout": "part1of2+part2of2",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 2081709,
+   "md5_full_certificate": "265956dde8e5e5516ec05bf032a6e35a",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-certificates/bit114-root-00040000000000809102000000800000.cert.part1of2",
+     "bytes": 1042029,
+     "md5": "939c6499c81cbca8286a1004e52cb233",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    },
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-certificates/bit114-root-00040000000000809102000000800000.cert.part2of2",
+     "bytes": 1039680,
+     "md5": "f71988b036c7033aee54c0c667028874",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 57588,
+   "verifier_subroots_passed": 57,
+   "verifier_root_mobility": 57,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 57588,
+   "record_sub_roots_pass": 57,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband-certificates-20261115.json",
+   "record_source": "warm-multiband",
+   "band": "class2-lane-cost65e",
+   "bit": 116,
+   "root_hex": "00100000000000809102000000800000",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1414440,
+   "md5_full_certificate": "b5de9631bc3c56af1170a00667c6f9c9",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-certificates/bit116-root-00100000000000809102000000800000.cert",
+     "bytes": 1414440,
+     "md5": "b5de9631bc3c56af1170a00667c6f9c9",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 39199,
+   "verifier_subroots_passed": 56,
+   "verifier_root_mobility": 56,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 39199,
+   "record_sub_roots_pass": 56,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband-certificates-20261115.json",
+   "record_source": "warm-multiband",
+   "band": "class2-lane-cost62a",
+   "bit": 118,
+   "root_hex": "00400000000000809102000001000000",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1261652,
+   "md5_full_certificate": "de7df89ebf44e5f43084fb4748d91ee9",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost62a-certificates/bit118-root-00400000000000809102000001000000.cert",
+     "bytes": 1261652,
+     "md5": "de7df89ebf44e5f43084fb4748d91ee9",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 34974,
+   "verifier_subroots_passed": 50,
+   "verifier_root_mobility": 50,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 34974,
+   "record_sub_roots_pass": 50,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband-certificates-20261115.json",
+   "record_source": "warm-multiband",
+   "band": "class2-lane-cost63a",
+   "bit": 118,
+   "root_hex": "00400000000000809102000800000000",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1566176,
+   "md5_full_certificate": "d0f4ee014b99e62f900a3172612f110f",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost63a-certificates/bit118-root-00400000000000809102000800000000.cert",
+     "bytes": 1566176,
+     "md5": "d0f4ee014b99e62f900a3172612f110f",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 43423,
+   "verifier_subroots_passed": 50,
+   "verifier_root_mobility": 50,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 43423,
+   "record_sub_roots_pass": 50,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband-certificates-20261115.json",
+   "record_source": "warm-multiband",
+   "band": "class2-lane-cost61d",
+   "bit": 119,
+   "root_hex": "00800000000000803202000000000002",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1668128,
+   "md5_full_certificate": "b626684714ffc2958e4d4b384959cf04",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61d-certificates/bit119-root-00800000000000803202000000000002.cert",
+     "bytes": 1668128,
+     "md5": "b626684714ffc2958e4d4b384959cf04",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 46185,
+   "verifier_subroots_passed": 54,
+   "verifier_root_mobility": 54,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 46185,
+   "record_sub_roots_pass": 54,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband-certificates-20261115.json",
+   "record_source": "warm-multiband",
+   "band": "class2-lane-cost72",
+   "bit": 52,
+   "root_hex": "00000000000000803212000000000200",
+   "resolved_layout": "part1of2+part2of2",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 2368490,
+   "md5_full_certificate": "3cb1df7c4e41aa2907d7ea55a32bf23e",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72-certificates/bit52-root-00000000000000803212000000000200.cert.part1of2",
+     "bytes": 1185443,
+     "md5": "475ea3cac0ea5dc8ac974d7e6abe0a30",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    },
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72-certificates/bit52-root-00000000000000803212000000000200.cert.part2of2",
+     "bytes": 1183047,
+     "md5": "78284bceae8082fa66d37f9cbd1b4596",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 65509,
+   "verifier_subroots_passed": 56,
+   "verifier_root_mobility": 56,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 65509,
+   "record_sub_roots_pass": 56,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband-certificates-20261115.json",
+   "record_source": "warm-multiband",
+   "band": "class2-lane-cost64b",
+   "bit": 8,
+   "root_hex": "00000000000000803202000000100100",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1456949,
+   "md5_full_certificate": "376d5dc629529c1a36a702a8ec879e60",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64b-certificates/bit8-root-00000000000000803202000000100100.cert",
+     "bytes": 1456949,
+     "md5": "376d5dc629529c1a36a702a8ec879e60",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 40315,
+   "verifier_subroots_passed": 54,
+   "verifier_root_mobility": 54,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 40315,
+   "record_sub_roots_pass": 54,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband-certificates-20261115.json",
+   "record_source": "warm-multiband",
+   "band": "class2-lane-cost61e",
+   "bit": 4,
+   "root_hex": "00000000000000803202000040000010",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1291154,
+   "md5_full_certificate": "4d5d08907d491a6d186b13620acc9af1",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61e-certificates/bit4-root-00000000000000803202000040000010.cert",
+     "bytes": 1291154,
+     "md5": "4d5d08907d491a6d186b13620acc9af1",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 35674,
+   "verifier_subroots_passed": 54,
+   "verifier_root_mobility": 54,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 35674,
+   "record_sub_roots_pass": 54,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband-certificates-20261115.json",
+   "record_source": "warm-multiband",
+   "band": "class2-lane-cost71b",
+   "bit": 32,
+   "root_hex": "00000000000000803202000100400000",
+   "resolved_layout": "part1of2+part2of2",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 2561541,
+   "md5_full_certificate": "24a98b05d8edc1112871d15952bbfd53",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71b-certificates/bit32-root-00000000000000803202000100400000.cert.part1of2",
+     "bytes": 1282742,
+     "md5": "d48c4b4a3ea981f74f02ed585ad0ca7f",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    },
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71b-certificates/bit32-root-00000000000000803202000100400000.cert.part2of2",
+     "bytes": 1278799,
+     "md5": "a6d2822daf718693fe86ebd651b04d97",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 70892,
+   "verifier_subroots_passed": 64,
+   "verifier_root_mobility": 64,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 70892,
+   "record_sub_roots_pass": 64,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband-certificates-20261115.json",
+   "record_source": "warm-multiband",
+   "band": "class2-lane-cost64b",
+   "bit": 33,
+   "root_hex": "00000000000000803202000200100000",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1587726,
+   "md5_full_certificate": "84f88bc531e7531c336a96055a7fac7e",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64b-certificates/bit33-root-00000000000000803202000200100000.cert",
+     "bytes": 1587726,
+     "md5": "84f88bc531e7531c336a96055a7fac7e",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 43963,
+   "verifier_subroots_passed": 52,
+   "verifier_root_mobility": 52,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 43963,
+   "record_sub_roots_pass": 52,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband2-certificates-20261115.json",
+   "record_source": "warm-multiband2",
+   "band": "class2-lane-cost65e",
+   "bit": 120,
+   "root_hex": "01000000000000809102000000800000",
+   "resolved_layout": "part1of2+part2of2",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 2094155,
+   "md5_full_certificate": "9573d02d42e4f22fad5eee69555b7710",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-certificates/bit120-root-01000000000000809102000000800000.cert.part1of2",
+     "bytes": 1047091,
+     "md5": "8325a78a1fab1dc8c70bf83bbed0f2ba",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    },
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-certificates/bit120-root-01000000000000809102000000800000.cert.part2of2",
+     "bytes": 1047064,
+     "md5": "1cd5df3cf7010ddd2535f46039a7d695",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 57951,
+   "verifier_subroots_passed": 59,
+   "verifier_root_mobility": 59,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 57951,
+   "record_sub_roots_pass": 59,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband2-certificates-20261115.json",
+   "record_source": "warm-multiband2",
+   "band": "class2-lane-cost61e",
+   "bit": 120,
+   "root_hex": "01000000000000803202000040000000",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1142542,
+   "md5_full_certificate": "6a93d8237ee69ac3eab2d7d8bf12d114",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61e-certificates/bit120-root-01000000000000803202000040000000.cert",
+     "bytes": 1142542,
+     "md5": "6a93d8237ee69ac3eab2d7d8bf12d114",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 31699,
+   "verifier_subroots_passed": 51,
+   "verifier_root_mobility": 51,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 31699,
+   "record_sub_roots_pass": 51,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband2-certificates-20261115.json",
+   "record_source": "warm-multiband2",
+   "band": "class2-lane-cost71b",
+   "bit": 117,
+   "root_hex": "00200000000000803202000000400000",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1615736,
+   "md5_full_certificate": "5c5e2fc07716138929d4087372b2d6a5",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71b-certificates/bit117-root-00200000000000803202000000400000.cert",
+     "bytes": 1615736,
+     "md5": "5c5e2fc07716138929d4087372b2d6a5",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 44860,
+   "verifier_subroots_passed": 55,
+   "verifier_root_mobility": 55,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 44860,
+   "record_sub_roots_pass": 55,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband2-certificates-20261115.json",
+   "record_source": "warm-multiband2",
+   "band": "class2-lane-cost64b",
+   "bit": 117,
+   "root_hex": "00200000000000803202000000100000",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1044462,
+   "md5_full_certificate": "9eb1f63ba361672394962ad3ad29b6a9",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64b-certificates/bit117-root-00200000000000803202000000100000.cert",
+     "bytes": 1044462,
+     "md5": "9eb1f63ba361672394962ad3ad29b6a9",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 29035,
+   "verifier_subroots_passed": 48,
+   "verifier_root_mobility": 48,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 29035,
+   "record_sub_roots_pass": 48,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband2-certificates-20261115.json",
+   "record_source": "warm-multiband2",
+   "band": "class2-lane-cost64b",
+   "bit": 116,
+   "root_hex": "00100000000000803202000000100000",
+   "resolved_layout": "single-declared-parts-found",
+   "layout_drift_single_declared_parts_found": true,
+   "bytes": 1583424,
+   "md5_full_certificate": "2980f16166dee6ee8618a112a9512f80",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64b-certificates/bit116-root-00100000000000803202000000100000.cert.part1of2",
+     "bytes": 791731,
+     "md5": "9926719f164e5a7242dea21b39cb7647",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    },
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64b-certificates/bit116-root-00100000000000803202000000100000.cert.part2of2",
+     "bytes": 791693,
+     "md5": "5d3e5095eadf7e6e1890f96ed5b7b171",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 43997,
+   "verifier_subroots_passed": 54,
+   "verifier_root_mobility": 54,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 43997,
+   "record_sub_roots_pass": 54,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband2-certificates-20261115.json",
+   "record_source": "warm-multiband2",
+   "band": "class2-lane-cost61d",
+   "bit": 116,
+   "root_hex": "00100000000000803202000000000002",
+   "resolved_layout": "single-declared-parts-found",
+   "layout_drift_single_declared_parts_found": true,
+   "bytes": 1444577,
+   "md5_full_certificate": "5282eafe79bda2131248827d768ca7f6",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61d-certificates/bit116-root-00100000000000803202000000000002.cert.part1of2",
+     "bytes": 722321,
+     "md5": "d56723319cd429e0d961dde1f24d0aab",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    },
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61d-certificates/bit116-root-00100000000000803202000000000002.cert.part2of2",
+     "bytes": 722256,
+     "md5": "9cbb175a7a765ab6bed45fd4de512ee7",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 39990,
+   "verifier_subroots_passed": 54,
+   "verifier_root_mobility": 54,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 39990,
+   "record_sub_roots_pass": 54,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband2-certificates-20261115.json",
+   "record_source": "warm-multiband2",
+   "band": "class2-lane-cost61d",
+   "bit": 114,
+   "root_hex": "00040000000000803202000000000002",
+   "resolved_layout": "single-declared-parts-found",
+   "layout_drift_single_declared_parts_found": true,
+   "bytes": 1738924,
+   "md5_full_certificate": "68515e21749ebc3026d96b5c755efcc7",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61d-certificates/bit114-root-00040000000000803202000000000002.cert.part1of2",
+     "bytes": 869489,
+     "md5": "7ba121a9cfccff0a3d4b452f72a7ce0d",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    },
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61d-certificates/bit114-root-00040000000000803202000000000002.cert.part2of2",
+     "bytes": 869435,
+     "md5": "d61756edb3b7a37f72d18147aee9581b",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 48125,
+   "verifier_subroots_passed": 54,
+   "verifier_root_mobility": 54,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 48125,
+   "record_sub_roots_pass": 54,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband2-certificates-20261115.json",
+   "record_source": "warm-multiband2",
+   "band": "class2-lane-cost61e",
+   "bit": 105,
+   "root_hex": "00000200000000803202000040000000",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1008619,
+   "md5_full_certificate": "fee6a14834eb7ebc7bfd41357de7a347",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61e-certificates/bit105-root-00000200000000803202000040000000.cert",
+     "bytes": 1008619,
+     "md5": "fee6a14834eb7ebc7bfd41357de7a347",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 27882,
+   "verifier_subroots_passed": 45,
+   "verifier_root_mobility": 45,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 27882,
+   "record_sub_roots_pass": 45,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband2-certificates-20261115.json",
+   "record_source": "warm-multiband2",
+   "band": "class2-lane-cost63a",
+   "bit": 97,
+   "root_hex": "00000002000000809102000800000000",
+   "resolved_layout": "single-declared-parts-found",
+   "layout_drift_single_declared_parts_found": true,
+   "bytes": 1414720,
+   "md5_full_certificate": "8560baefc0644bf8fd670bbb569b47f8",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost63a-certificates/bit97-root-00000002000000809102000800000000.cert.part1of2",
+     "bytes": 707361,
+     "md5": "024cd121d166adc4391f8d204ffd1bfe",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    },
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost63a-certificates/bit97-root-00000002000000809102000800000000.cert.part2of2",
+     "bytes": 707359,
+     "md5": "66184aedc6766b9a8cef50d207d7350d",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 39159,
+   "verifier_subroots_passed": 49,
+   "verifier_root_mobility": 49,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 39159,
+   "record_sub_roots_pass": 49,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband2-certificates-20261115.json",
+   "record_source": "warm-multiband2",
+   "band": "class2-lane-cost63a",
+   "bit": 96,
+   "root_hex": "00000001000000809102000800000000",
+   "resolved_layout": "single-declared-parts-found",
+   "layout_drift_single_declared_parts_found": true,
+   "bytes": 1357279,
+   "md5_full_certificate": "436469fd549a2f12f5cd5a9baea35cb6",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost63a-certificates/bit96-root-00000001000000809102000800000000.cert.part1of2",
+     "bytes": 678663,
+     "md5": "69f1f7a59267f61a5f3bc75d330ced36",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    },
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost63a-certificates/bit96-root-00000001000000809102000800000000.cert.part2of2",
+     "bytes": 678616,
+     "md5": "0daeda9246d766914974640796b7b3fb",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 37547,
+   "verifier_subroots_passed": 50,
+   "verifier_root_mobility": 50,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 37547,
+   "record_sub_roots_pass": 50,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband2-certificates-20261115.json",
+   "record_source": "warm-multiband2",
+   "band": "class2-lane-cost71b",
+   "bit": 94,
+   "root_hex": "00000000400000803202000000400000",
+   "resolved_layout": "part1of2+part2of2",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1908937,
+   "md5_full_certificate": "560d06829c8910ba0271e939abadf8a1",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71b-certificates/bit94-root-00000000400000803202000000400000.cert.part1of2",
+     "bytes": 954500,
+     "md5": "f2f6e370a0e970ae3d6ae40d140b8179",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    },
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71b-certificates/bit94-root-00000000400000803202000000400000.cert.part2of2",
+     "bytes": 954437,
+     "md5": "25329c91160e28a1a3311306381af44b",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 52969,
+   "verifier_subroots_passed": 54,
+   "verifier_root_mobility": 54,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 52969,
+   "record_sub_roots_pass": 54,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband2-certificates-20261115.json",
+   "record_source": "warm-multiband2",
+   "band": "class2-lane-cost64b",
+   "bit": 94,
+   "root_hex": "00000000400000803202000000100000",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1311902,
+   "md5_full_certificate": "2731f2f916282d48cbdc500fd9ab7e6b",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64b-certificates/bit94-root-00000000400000803202000000100000.cert",
+     "bytes": 1311902,
+     "md5": "2731f2f916282d48cbdc500fd9ab7e6b",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 36444,
+   "verifier_subroots_passed": 49,
+   "verifier_root_mobility": 49,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 36444,
+   "record_sub_roots_pass": 49,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband2-certificates-20261115.json",
+   "record_source": "warm-multiband2",
+   "band": "class2-lane-cost61e",
+   "bit": 92,
+   "root_hex": "00000000100000803202000040000000",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1365252,
+   "md5_full_certificate": "44fa0ea9f0048dcbff5686c2df963911",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61e-certificates/bit92-root-00000000100000803202000040000000.cert",
+     "bytes": 1365252,
+     "md5": "44fa0ea9f0048dcbff5686c2df963911",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 37840,
+   "verifier_subroots_passed": 51,
+   "verifier_root_mobility": 51,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 37840,
+   "record_sub_roots_pass": 51,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband2-certificates-20261115.json",
+   "record_source": "warm-multiband2",
+   "band": "class2-lane-cost64b",
+   "bit": 92,
+   "root_hex": "00000000100000803202000000100000",
+   "resolved_layout": "part1of2+part2of2",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1867337,
+   "md5_full_certificate": "4d29194e78a5f15bf3d3c65a50bbaac5",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64b-certificates/bit92-root-00000000100000803202000000100000.cert.part1of2",
+     "bytes": 933685,
+     "md5": "e301d9f1d3bce32340c75fbbd3943680",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    },
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64b-certificates/bit92-root-00000000100000803202000000100000.cert.part2of2",
+     "bytes": 933652,
+     "md5": "d76536d064f294af6f6a538e6b090aaf",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 51742,
+   "verifier_subroots_passed": 57,
+   "verifier_root_mobility": 57,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 51742,
+   "record_sub_roots_pass": 57,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband2-certificates-20261115.json",
+   "record_source": "warm-multiband2",
+   "band": "class2-lane-cost61e",
+   "bit": 89,
+   "root_hex": "00000000020000803202000040000000",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1090932,
+   "md5_full_certificate": "e60611a3f8584bfe89ca055f73e4a7c6",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61e-certificates/bit89-root-00000000020000803202000040000000.cert",
+     "bytes": 1090932,
+     "md5": "e60611a3f8584bfe89ca055f73e4a7c6",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 30208,
+   "verifier_subroots_passed": 47,
+   "verifier_root_mobility": 47,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 30208,
+   "record_sub_roots_pass": 47,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband2-certificates-20261115.json",
+   "record_source": "warm-multiband2",
+   "band": "class2-lane-cost61e",
+   "bit": 87,
+   "root_hex": "00000000008000803202000040000000",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1152351,
+   "md5_full_certificate": "7bdcbf5fdfb932dfbf8f2af64cc78609",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61e-certificates/bit87-root-00000000008000803202000040000000.cert",
+     "bytes": 1152351,
+     "md5": "7bdcbf5fdfb932dfbf8f2af64cc78609",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 31864,
+   "verifier_subroots_passed": 55,
+   "verifier_root_mobility": 55,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 31864,
+   "record_sub_roots_pass": 55,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband2-certificates-20261115.json",
+   "record_source": "warm-multiband2",
+   "band": "class2-lane-cost61f",
+   "bit": 84,
+   "root_hex": "00000000001000803202000080000000",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1136493,
+   "md5_full_certificate": "62a6c3fad0549eae25451b8255db5a32",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61f-certificates/bit84-root-00000000001000803202000080000000.cert",
+     "bytes": 1136493,
+     "md5": "62a6c3fad0549eae25451b8255db5a32",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 31438,
+   "verifier_subroots_passed": 47,
+   "verifier_root_mobility": 47,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 31438,
+   "record_sub_roots_pass": 47,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband2-certificates-20261115.json",
+   "record_source": "warm-multiband2",
+   "band": "class2-lane-cost64b",
+   "bit": 84,
+   "root_hex": "00000000001000803202000000100000",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1010443,
+   "md5_full_certificate": "5dab082575338d21be4d9359f2320fd6",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64b-certificates/bit84-root-00000000001000803202000000100000.cert",
+     "bytes": 1010443,
+     "md5": "5dab082575338d21be4d9359f2320fd6",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 27997,
+   "verifier_subroots_passed": 48,
+   "verifier_root_mobility": 48,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 27997,
+   "record_sub_roots_pass": 48,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband2-certificates-20261115.json",
+   "record_source": "warm-multiband2",
+   "band": "class2-lane-cost61d",
+   "bit": 84,
+   "root_hex": "00000000001000803202000000000002",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1141508,
+   "md5_full_certificate": "13f4e9f99571662ceeb7032e2eba3e92",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61d-certificates/bit84-root-00000000001000803202000000000002.cert",
+     "bytes": 1141508,
+     "md5": "13f4e9f99571662ceeb7032e2eba3e92",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 31542,
+   "verifier_subroots_passed": 49,
+   "verifier_root_mobility": 49,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 31542,
+   "record_sub_roots_pass": 49,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband2-certificates-20261115.json",
+   "record_source": "warm-multiband2",
+   "band": "class2-lane-cost61f",
+   "bit": 77,
+   "root_hex": "00000000000020803202000080000000",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1574812,
+   "md5_full_certificate": "c221c6447b65a478652bcabade5e5a4c",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61f-certificates/bit77-root-00000000000020803202000080000000.cert",
+     "bytes": 1574812,
+     "md5": "c221c6447b65a478652bcabade5e5a4c",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 43629,
+   "verifier_subroots_passed": 50,
+   "verifier_root_mobility": 50,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 43629,
+   "record_sub_roots_pass": 50,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband2-certificates-20261115.json",
+   "record_source": "warm-multiband2",
+   "band": "class2-lane-cost61f",
+   "bit": 75,
+   "root_hex": "00000000000008803202000080000000",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1467042,
+   "md5_full_certificate": "1264f35a1a092ca6a3a93177a7ce5bef",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61f-certificates/bit75-root-00000000000008803202000080000000.cert",
+     "bytes": 1467042,
+     "md5": "1264f35a1a092ca6a3a93177a7ce5bef",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 40612,
+   "verifier_subroots_passed": 48,
+   "verifier_root_mobility": 48,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 40612,
+   "record_sub_roots_pass": 48,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband2-certificates-20261115.json",
+   "record_source": "warm-multiband2",
+   "band": "class2-lane-cost61d",
+   "bit": 75,
+   "root_hex": "00000000000008803202000000000002",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1671243,
+   "md5_full_certificate": "e7ab2b0a7dda83a6f0295b5164b7b573",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61d-certificates/bit75-root-00000000000008803202000000000002.cert",
+     "bytes": 1671243,
+     "md5": "e7ab2b0a7dda83a6f0295b5164b7b573",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 46232,
+   "verifier_subroots_passed": 53,
+   "verifier_root_mobility": 53,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 46232,
+   "record_sub_roots_pass": 53,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband2-certificates-20261115.json",
+   "record_source": "warm-multiband2",
+   "band": "class2-lane-cost61e",
+   "bit": 74,
+   "root_hex": "00000000000004803202000040000000",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1113211,
+   "md5_full_certificate": "a6b6f6a7f68921851b3cf0a9dded61fd",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61e-certificates/bit74-root-00000000000004803202000040000000.cert",
+     "bytes": 1113211,
+     "md5": "a6b6f6a7f68921851b3cf0a9dded61fd",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 30836,
+   "verifier_subroots_passed": 50,
+   "verifier_root_mobility": 50,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 30836,
+   "record_sub_roots_pass": 50,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband2-certificates-20261115.json",
+   "record_source": "warm-multiband2",
+   "band": "class2-lane-cost71b",
+   "bit": 74,
+   "root_hex": "00000000000004803202000000400000",
+   "resolved_layout": "part1of2+part2of2",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1823744,
+   "md5_full_certificate": "4cc6139b53282dfb7cec9500c2486c48",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71b-certificates/bit74-root-00000000000004803202000000400000.cert.part1of2",
+     "bytes": 911874,
+     "md5": "5cba9b2a7153c0e2efc0e83fd2883678",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    },
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71b-certificates/bit74-root-00000000000004803202000000400000.cert.part2of2",
+     "bytes": 911870,
+     "md5": "bc883ce2bbe8460ce68528e3b34bf380",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 50498,
+   "verifier_subroots_passed": 56,
+   "verifier_root_mobility": 56,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 50498,
+   "record_sub_roots_pass": 56,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband2-certificates-20261115.json",
+   "record_source": "warm-multiband2",
+   "band": "class2-lane-cost61f",
+   "bit": 66,
+   "root_hex": "00000000000000843202000080000000",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1455272,
+   "md5_full_certificate": "675ed95c8d5e881c45185a71357e8115",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61f-certificates/bit66-root-00000000000000843202000080000000.cert",
+     "bytes": 1455272,
+     "md5": "675ed95c8d5e881c45185a71357e8115",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 40272,
+   "verifier_subroots_passed": 51,
+   "verifier_root_mobility": 51,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 40272,
+   "record_sub_roots_pass": 51,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband2-certificates-20261115.json",
+   "record_source": "warm-multiband2",
+   "band": "class2-lane-cost65e",
+   "bit": 46,
+   "root_hex": "00000000000000809102400000800000",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1217832,
+   "md5_full_certificate": "49fcd7ebb8f119b7199d5842bf16259f",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-certificates/bit46-root-00000000000000809102400000800000.cert",
+     "bytes": 1217832,
+     "md5": "49fcd7ebb8f119b7199d5842bf16259f",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 33632,
+   "verifier_subroots_passed": 53,
+   "verifier_root_mobility": 53,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 33632,
+   "record_sub_roots_pass": 53,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband2-certificates-20261115.json",
+   "record_source": "warm-multiband2",
+   "band": "class2-lane-cost65e",
+   "bit": 36,
+   "root_hex": "00000000000000809102001000800000",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1171399,
+   "md5_full_certificate": "18d76141423dde1137ff580bc90fa675",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-certificates/bit36-root-00000000000000809102001000800000.cert",
+     "bytes": 1171399,
+     "md5": "18d76141423dde1137ff580bc90fa675",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 32406,
+   "verifier_subroots_passed": 50,
+   "verifier_root_mobility": 50,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 32406,
+   "record_sub_roots_pass": 50,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband2-certificates-20261115.json",
+   "record_source": "warm-multiband2",
+   "band": "class2-lane-cost64b",
+   "bit": 53,
+   "root_hex": "00000000000000803222000000100000",
+   "resolved_layout": "single-declared-parts-found",
+   "layout_drift_single_declared_parts_found": true,
+   "bytes": 1461085,
+   "md5_full_certificate": "348f1bfec15dfb33d00d9e2592ab2bed",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64b-certificates/bit53-root-00000000000000803222000000100000.cert.part1of2",
+     "bytes": 730576,
+     "md5": "3fd147e33ab612e9d8ae87794dba5142",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    },
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64b-certificates/bit53-root-00000000000000803222000000100000.cert.part2of2",
+     "bytes": 730509,
+     "md5": "59bcc939225441d29751833f26eba780",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 40428,
+   "verifier_subroots_passed": 50,
+   "verifier_root_mobility": 50,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 40428,
+   "record_sub_roots_pass": 50,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband2-certificates-20261115.json",
+   "record_source": "warm-multiband2",
+   "band": "class2-lane-cost64b",
+   "bit": 43,
+   "root_hex": "00000000000000803202080000100000",
+   "resolved_layout": "part1of2+part2of2",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1768470,
+   "md5_full_certificate": "220b9f957eaba67267e76a28635187f1",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64b-certificates/bit43-root-00000000000000803202080000100000.cert.part1of2",
+     "bytes": 884247,
+     "md5": "bf2ea3ece02f49a33bb9bb3d0cb18e82",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    },
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64b-certificates/bit43-root-00000000000000803202080000100000.cert.part2of2",
+     "bytes": 884223,
+     "md5": "b1fce63514630eb342a126dbc248acf1",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 49013,
+   "verifier_subroots_passed": 55,
+   "verifier_root_mobility": 55,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 49013,
+   "record_sub_roots_pass": 55,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband2-certificates-20261115.json",
+   "record_source": "warm-multiband2",
+   "band": "class2-lane-cost64b",
+   "bit": 40,
+   "root_hex": "00000000000000803202010000100000",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1126251,
+   "md5_full_certificate": "da5715c9044295d4d88a23d3ce03b21a",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64b-certificates/bit40-root-00000000000000803202010000100000.cert",
+     "bytes": 1126251,
+     "md5": "da5715c9044295d4d88a23d3ce03b21a",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 31226,
+   "verifier_subroots_passed": 50,
+   "verifier_root_mobility": 50,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 31226,
+   "record_sub_roots_pass": 50,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-multiband2-certificates-20261115.json",
+   "record_source": "warm-multiband2",
+   "band": "class2-lane-cost61d",
+   "bit": 23,
+   "root_hex": "00000000000000803202000000800002",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1056049,
+   "md5_full_certificate": "27528b96a0968bb61ede41b5d6107fe3",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61d-certificates/bit23-root-00000000000000803202000000800002.cert",
+     "bytes": 1056049,
+     "md5": "27528b96a0968bb61ede41b5d6107fe3",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 29185,
+   "verifier_subroots_passed": 44,
+   "verifier_root_mobility": 44,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 29185,
+   "record_sub_roots_pass": 44,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-cost70c-warm6-bigint-independent-verification-20261115.json",
+   "record_source": "cost70c-warm6",
+   "band": "class2-lane-cost70c",
+   "bit": 105,
+   "root_hex": "00000200000000803242000000000000",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1226997,
+   "md5_full_certificate": "d6f56e07bf79d21cbc836928883a613a",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70c-certificates/bit105-root-00000200000000803242000000000000.cert",
+     "bytes": 1226997,
+     "md5": "d6f56e07bf79d21cbc836928883a613a",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 33992,
+   "verifier_subroots_passed": 51,
+   "verifier_root_mobility": 51,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 33992,
+   "record_sub_roots_pass": 51,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-cost70c-warm6-bigint-independent-verification-20261115.json",
+   "record_source": "cost70c-warm6",
+   "band": "class2-lane-cost70c",
+   "bit": 92,
+   "root_hex": "00000000100000803242000000000000",
+   "resolved_layout": "part1of2+part2of2",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1905923,
+   "md5_full_certificate": "38d60e00f28b6ff96b6cb4080f564036",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70c-certificates/bit92-root-00000000100000803242000000000000.cert.part1of2",
+     "bytes": 952985,
+     "md5": "9604bd9998bd9b6483daa0a68ca77bf6",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    },
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70c-certificates/bit92-root-00000000100000803242000000000000.cert.part2of2",
+     "bytes": 952938,
+     "md5": "704c859d5d775040c906974879f66b59",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 52755,
+   "verifier_subroots_passed": 58,
+   "verifier_root_mobility": 58,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 52755,
+   "record_sub_roots_pass": 58,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-cost70c-warm6-bigint-independent-verification-20261115.json",
+   "record_source": "cost70c-warm6",
+   "band": "class2-lane-cost70c",
+   "bit": 40,
+   "root_hex": "00000000000000803242010000000000",
+   "resolved_layout": "part1of2+part2of2",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1315377,
+   "md5_full_certificate": "59e4dd070bbf0fd6dd7e4d3bbb2e3ec3",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70c-certificates/bit40-root-00000000000000803242010000000000.cert.part1of2",
+     "bytes": 657706,
+     "md5": "8fdc0aa1fcdd0d18e432462763f30067",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    },
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70c-certificates/bit40-root-00000000000000803242010000000000.cert.part2of2",
+     "bytes": 657671,
+     "md5": "9cbf17dc615777f96800b5bb64ccc32c",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 36406,
+   "verifier_subroots_passed": 53,
+   "verifier_root_mobility": 53,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 36406,
+   "record_sub_roots_pass": 53,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-cost70c-warm6-bigint-independent-verification-20261115.json",
+   "record_source": "cost70c-warm6",
+   "band": "class2-lane-cost70c",
+   "bit": 24,
+   "root_hex": "00000000000000803242000001000000",
+   "resolved_layout": "part1of2+part2of2",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1551853,
+   "md5_full_certificate": "db30f4dc370b0109a09c2b15c3573231",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70c-certificates/bit24-root-00000000000000803242000001000000.cert.part1of2",
+     "bytes": 775957,
+     "md5": "c5698b4a0481e1a6930547a650c7ad11",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    },
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70c-certificates/bit24-root-00000000000000803242000001000000.cert.part2of2",
+     "bytes": 775896,
+     "md5": "618291abb344e4c2e9877e58701cd6ad",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 43005,
+   "verifier_subroots_passed": 55,
+   "verifier_root_mobility": 55,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 43005,
+   "record_sub_roots_pass": 55,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-cost70c-warm6-bigint-independent-verification-20261115.json",
+   "record_source": "cost70c-warm6",
+   "band": "class2-lane-cost70c",
+   "bit": 11,
+   "root_hex": "00000000000000803242000000000800",
+   "resolved_layout": "part1of2+part2of2",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1439745,
+   "md5_full_certificate": "a79bf70cafbed3a86d93002c564cad3e",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70c-certificates/bit11-root-00000000000000803242000000000800.cert.part1of2",
+     "bytes": 719881,
+     "md5": "9dc6d62048daa0b3922316a3a9113ba9",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    },
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70c-certificates/bit11-root-00000000000000803242000000000800.cert.part2of2",
+     "bytes": 719864,
+     "md5": "bf672007e170da48f22d998a8631f0b9",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 39873,
+   "verifier_subroots_passed": 54,
+   "verifier_root_mobility": 54,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 39873,
+   "record_sub_roots_pass": 54,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-cost70c-warm6-bigint-independent-verification-20261115.json",
+   "record_source": "cost70c-warm6",
+   "band": "class2-lane-cost70c",
+   "bit": 8,
+   "root_hex": "00000000000000803242000000000100",
+   "resolved_layout": "part1of2+part2of2",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1707377,
+   "md5_full_certificate": "30db912028d24c74d0b9dc9d2cec61e1",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70c-certificates/bit8-root-00000000000000803242000000000100.cert.part1of2",
+     "bytes": 853696,
+     "md5": "9694f92e0d71fd1c1b6c1c29ba591910",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    },
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70c-certificates/bit8-root-00000000000000803242000000000100.cert.part2of2",
+     "bytes": 853681,
+     "md5": "33ef078b0155545f218020a02efc29c8",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 47165,
+   "verifier_subroots_passed": 60,
+   "verifier_root_mobility": 60,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 47165,
+   "record_sub_roots_pass": 60,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-cost70c-warm-batch3-records-20261115.json",
+   "record_source": "cost70c-warm-batch3",
+   "band": "class2-lane-cost70c",
+   "bit": 3,
+   "root_hex": "00000000000000803242000000000008",
+   "resolved_layout": "part1of2+part2of2",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1841794,
+   "md5_full_certificate": "ae02f4b95be3e50518ce7830d2083434",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70c-certificates/bit3-root-00000000000000803242000000000008.cert.part1of2",
+     "bytes": 922360,
+     "md5": "1f9bf9e95d4b038e0b7562d9927f4f7a",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    },
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70c-certificates/bit3-root-00000000000000803242000000000008.cert.part2of2",
+     "bytes": 919434,
+     "md5": "28240192ba67d06c439e14d7fddd16e1",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 50955,
+   "verifier_subroots_passed": 63,
+   "verifier_root_mobility": 63,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 50955,
+   "record_sub_roots_pass": 63,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-cost70c-warm-batch3-records-20261115.json",
+   "record_source": "cost70c-warm-batch3",
+   "band": "class2-lane-cost70c",
+   "bit": 42,
+   "root_hex": "00000000000000803242040000000000",
+   "resolved_layout": "part1of2+part2of2",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1806229,
+   "md5_full_certificate": "b7ae6d13da02e880ca10b4ba7c8231d9",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70c-certificates/bit42-root-00000000000000803242040000000000.cert.part1of2",
+     "bytes": 904657,
+     "md5": "3fb6572e00b04928de2c6a46b1c3838d",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    },
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70c-certificates/bit42-root-00000000000000803242040000000000.cert.part2of2",
+     "bytes": 901572,
+     "md5": "45184e560aa4cbf020e18974f8e1ce0d",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 50015,
+   "verifier_subroots_passed": 61,
+   "verifier_root_mobility": 61,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 50015,
+   "record_sub_roots_pass": 61,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-cost70c-warm-batch3-records-20261115.json",
+   "record_source": "cost70c-warm-batch3",
+   "band": "class2-lane-cost70c",
+   "bit": 86,
+   "root_hex": "00000000004000803242000000000000",
+   "resolved_layout": "part1of2+part2of2",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 2471137,
+   "md5_full_certificate": "483618fc5b04db401d91dd6a82b25dfd",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70c-certificates/bit86-root-00000000004000803242000000000000.cert.part1of2",
+     "bytes": 1237905,
+     "md5": "5b50c0d3e6339eef4f7f07c353740141",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    },
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70c-certificates/bit86-root-00000000004000803242000000000000.cert.part2of2",
+     "bytes": 1233232,
+     "md5": "86bfec5a2b9454e9c2ec5e7068b782b4",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 68358,
+   "verifier_subroots_passed": 64,
+   "verifier_root_mobility": 64,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 68358,
+   "record_sub_roots_pass": 64,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-cost70c-warm-batch3-records-20261115.json",
+   "record_source": "cost70c-warm-batch3",
+   "band": "class2-lane-cost70c",
+   "bit": 103,
+   "root_hex": "00000080000000803242000000000000",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1631748,
+   "md5_full_certificate": "aac78501eb7b16edfc4cb45c04d2a897",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70c-certificates/bit103-root-00000080000000803242000000000000.cert",
+     "bytes": 1631748,
+     "md5": "aac78501eb7b16edfc4cb45c04d2a897",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 45205,
+   "verifier_subroots_passed": 57,
+   "verifier_root_mobility": 57,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 45205,
+   "record_sub_roots_pass": 57,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-band-hygiene-certificates-20261115.json",
+   "record_source": "warm-band-hygiene",
+   "band": "class2-lane-cost62a",
+   "bit": 1,
+   "root_hex": "00000000000000809102000001000002",
+   "resolved_layout": "part1of2+part2of2",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 2008189,
+   "md5_full_certificate": "e4cb10a3a15dd2c01b8c698762b2d911",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost62a-certificates/bit1-root-00000000000000809102000001000002.cert.part1of2",
+     "bytes": 1004733,
+     "md5": "fb98505c790de78f1d069ace127a181a",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    },
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost62a-certificates/bit1-root-00000000000000809102000001000002.cert.part2of2",
+     "bytes": 1003456,
+     "md5": "23caf3d774b5f313704fb2f9c7747bdf",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 55447,
+   "verifier_subroots_passed": 55,
+   "verifier_root_mobility": 55,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 55447,
+   "record_sub_roots_pass": 55,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-band-hygiene-certificates-20261115.json",
+   "record_source": "warm-band-hygiene",
+   "band": "class2-lane-cost62a",
+   "bit": 89,
+   "root_hex": "00000000020000809102000001000000",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1172565,
+   "md5_full_certificate": "2f7427721039a848083749b0761b06a6",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost62a-certificates/bit89-root-00000000020000809102000001000000.cert",
+     "bytes": 1172565,
+     "md5": "2f7427721039a848083749b0761b06a6",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 32471,
+   "verifier_subroots_passed": 50,
+   "verifier_root_mobility": 50,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 32471,
+   "record_sub_roots_pass": 50,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-band-hygiene-certificates-20261115.json",
+   "record_source": "warm-band-hygiene",
+   "band": "class2-lane-cost63a",
+   "bit": 11,
+   "root_hex": "00000000000000809102000800000800",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 877191,
+   "md5_full_certificate": "b38ead02cefef112ad621614b4435db7",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost63a-certificates/bit11-root-00000000000000809102000800000800.cert",
+     "bytes": 877191,
+     "md5": "b38ead02cefef112ad621614b4435db7",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 24243,
+   "verifier_subroots_passed": 45,
+   "verifier_root_mobility": 45,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 24243,
+   "record_sub_roots_pass": 45,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-band-hygiene-certificates-20261115.json",
+   "record_source": "warm-band-hygiene",
+   "band": "class2-lane-cost63a",
+   "bit": 109,
+   "root_hex": "00002000000000809102000800000000",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1402575,
+   "md5_full_certificate": "cd58cd16122d98328c2c3678b282990e",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost63a-certificates/bit109-root-00002000000000809102000800000000.cert",
+     "bytes": 1402575,
+     "md5": "cd58cd16122d98328c2c3678b282990e",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": null,
+   "verifier_status": "PASS",
+   "verifier_rows": 38853,
+   "verifier_subroots_passed": 52,
+   "verifier_root_mobility": 52,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 38853,
+   "record_sub_roots_pass": 52,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-band-hygiene-certificates-20261115.json",
+   "record_source": "warm-band-hygiene",
+   "band": "class2-lane-cost71b",
+   "bit": 1,
+   "root_hex": "00000000000000803202000000400002",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1536673,
+   "md5_full_certificate": "0c241e6759fdddd9605bdb4f63e19d3c",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71b-certificates/bit1-root-00000000000000803202000000400002.cert",
+     "bytes": 1536673,
+     "md5": "0c241e6759fdddd9605bdb4f63e19d3c",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": [
+    "class2-lane-cost61d bit 22"
+   ],
+   "verifier_status": "PASS",
+   "verifier_rows": 42499,
+   "verifier_subroots_passed": 51,
+   "verifier_root_mobility": 51,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 42499,
+   "record_sub_roots_pass": 51,
+   "rows_match": true,
+   "sub_roots_match": true
+  },
+  {
+   "source_record_file": "class2-lane-warm-band-hygiene-certificates-20261115.json",
+   "record_source": "warm-band-hygiene",
+   "band": "class2-lane-cost61d",
+   "bit": 22,
+   "root_hex": "00000000000000803202000000400002",
+   "resolved_layout": "single",
+   "layout_drift_single_declared_parts_found": false,
+   "bytes": 1536673,
+   "md5_full_certificate": "0c241e6759fdddd9605bdb4f63e19d3c",
+   "parts": [
+    {
+     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71b-certificates/bit1-root-00000000000000803202000000400002.cert",
+     "bytes": 1536673,
+     "md5": "0c241e6759fdddd9605bdb4f63e19d3c",
+     "record_part_bytes_match": true,
+     "record_part_md5_match": true
+    }
+   ],
+   "shared_file_with_other_record": [
+    "class2-lane-cost71b bit 1"
+   ],
+   "verifier_status": "PASS",
+   "verifier_rows": 42499,
+   "verifier_subroots_passed": 51,
+   "verifier_root_mobility": 51,
+   "verifier_terminal_range": [
+    13,
+    17
+   ],
+   "verifier_union_missing": 0,
+   "verifier_union_extra": 0,
+   "record_rows": 42499,
+   "record_sub_roots_pass": 51,
+   "rows_match": true,
+   "sub_roots_match": true
+  }
+ ],
+ "interpretation_guard": "bookkeeping over published certificates; solved counts measure manifest coverage, not the game-theoretic value of any position; WIN7 certificates prove only individual 7-stone roots within depth 10",
+ "unknown_status": "11x11 empty board: UNKNOWN"
+}
