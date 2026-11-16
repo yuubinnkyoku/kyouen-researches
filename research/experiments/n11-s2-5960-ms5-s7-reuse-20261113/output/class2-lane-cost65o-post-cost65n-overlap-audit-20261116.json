@@ -17,6 +17,11 @@
       "pass": true
     },
     {
+      "check": "cost65n completed claim WIN bits match preregistered receipt bits",
+      "detail": "claim bits=90,117; receipt bits=90,117",
+      "pass": true
+    },
+    {
       "check": "cost65o legal/open/transferred partition",
       "detail": "legal=65 open=59 transferred=6",
       "pass": true
@@ -49,11 +54,6 @@
     {
       "check": "cost65o child row is not among the preregistered cost65n covered S6 rows",
       "detail": "child canon=00000000000000a09002000080000000; covered row orbits=13",
-      "pass": true
-    },
-    {
-      "check": "cost65o claim structure was independently verified 8/8",
-      "detail": "source blob cfff0b80; this audit does not rerun that separate legality verifier",
       "pass": true
     }
   ],
@@ -644,6 +644,11 @@
     "open_candidate_bits": [],
     "open_candidates_remaining_against_these_two_receipts": 59,
     "transferred_refuted_conflict_bits": []
+  },
+  "prior_structural_verification": {
+    "blob": "cfff0b8087a54f3b4d327d73737f220372f34248",
+    "note": "provenance only; this overlap audit does not rerun the separate legality verifier",
+    "summary": "8/8 PASS"
   },
   "schema": "n11-class2-lane-cost65o-post-cost65n-overlap-audit-20261116-v1",
   "source_blobs": {
