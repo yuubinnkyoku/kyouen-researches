@@ -1,0 +1,336 @@
+{
+  "schema": "n11-frontier-q-family-remaining-orbit-dedup-20261116-v1",
+  "date": "2026-11-16",
+  "baseline": {
+    "worklist_head": 1410,
+    "post_cost65j_frontier_head": 1419,
+    "note": "Q/P parent counts and costs are rechecked against the post-cost65j ranking; no cost65j receipt changed either family."
+  },
+  "inputs": {
+    "research/experiments/n11-class2-lane-closability-ranking-20261116/output/class-frontier-remaining-s6-worklist-1410-20261116.csv": {
+      "git_blob_sha": "2fee1d0718547a62e346d35f5858d7913e37c097"
+    },
+    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-s5-ranking-after-cost65j-receipts-20261116.csv": {
+      "git_blob_sha": "cbed4d094b87dc4fe2cc48b2db375d7ddb0776c6"
+    },
+    "research/experiments/n11-class2-lane-closability-ranking-20261116/output/class-frontier-s5-closability-after-cost60c-20261116.csv": {
+      "git_blob_sha": "65215b6582de6efedfed8d77d91630edd883a2cb"
+    },
+    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-top-candidates-s6-after-cost65j-receipts-20261116.csv": {
+      "git_blob_sha": "08aaf31892680668e7e292848235a154eb746407"
+    }
+  },
+  "candidate_rule": {
+    "source": "K0868",
+    "definition": "For a six-stone S6 row, enumerate empty cells d for which det4(a,b,c,d) != 0 for every 3-subset of the six stones; canonicalize each resulting seven-stone root under D4.",
+    "determinant": "Bareiss 4x4 determinant of rows [x^2+y^2,x,y,1] in the independent verifier; equivalent to the K0868 integer det4 rule.",
+    "symmetry": "All eight D4 square isometries; canonical root is the minimum 128-bit mask."
+  },
+  "targets": {
+    "Q": {
+      "s5_hex": "00000000000000821082000000000000",
+      "class": 1,
+      "category": "own_closable",
+      "remaining_s6_rows": 18,
+      "legal_candidate_occurrences": 1238,
+      "open_candidates_after_transfers": 1238,
+      "engine_win7_d10": 0,
+      "engine_refuted_d10": 0,
+      "transferred_refuted_d10": 0,
+      "closability_rows_sterile": 0,
+      "closability_rows_unswept": 18,
+      "note": "The cheapest any-class own-closable parent in the current post-cost65j S5 ranking."
+    },
+    "P": {
+      "s5_hex": "00000000000000403800000008000000",
+      "class": 2,
+      "category": "own_closable",
+      "remaining_s6_rows": 24,
+      "legal_candidate_occurrences": 1704,
+      "open_candidates_after_transfers": 1704,
+      "engine_win7_d10": 0,
+      "engine_refuted_d10": 0,
+      "transferred_refuted_d10": 0,
+      "note": "The best own-closable class-2 parent; retained as second priority."
+    }
+  },
+  "family_summaries": {
+    "Q": {
+      "rows": 18,
+      "candidate_occurrences": 1238,
+      "unique_d4_root_orbits": 687,
+      "redundant_occurrences": 551,
+      "saved_pct": 44.507,
+      "root_owner_multiplicity": {
+        "1": 136,
+        "2": 551
+      }
+    },
+    "P": {
+      "rows": 24,
+      "candidate_occurrences": 1704,
+      "unique_d4_root_orbits": 1468,
+      "redundant_occurrences": 236,
+      "saved_pct": 13.85,
+      "root_owner_multiplicity": {
+        "1": 1232,
+        "2": 236
+      }
+    },
+    "class4": {
+      "rows": 18,
+      "candidate_occurrences": 1460,
+      "unique_d4_root_orbits": 1170,
+      "redundant_occurrences": 290,
+      "saved_pct": 19.863,
+      "root_owner_multiplicity": {
+        "1": 880,
+        "2": 290
+      }
+    },
+    "audit_blocked": {
+      "rows": 10,
+      "candidate_occurrences": 698,
+      "unique_d4_root_orbits": 613,
+      "redundant_occurrences": 85,
+      "saved_pct": 12.178,
+      "root_owner_multiplicity": {
+        "1": 528,
+        "2": 85
+      }
+    },
+    "best_coverable": {
+      "rows": 3,
+      "candidate_occurrences": 209,
+      "unique_d4_root_orbits": 206,
+      "redundant_occurrences": 3,
+      "saved_pct": 1.435,
+      "root_owner_multiplicity": {
+        "1": 203,
+        "2": 3
+      }
+    },
+    "second_coverable": {
+      "rows": 5,
+      "candidate_occurrences": 364,
+      "unique_d4_root_orbits": 354,
+      "redundant_occurrences": 10,
+      "saved_pct": 2.747,
+      "root_owner_multiplicity": {
+        "1": 344,
+        "2": 10
+      }
+    }
+  },
+  "q_pair_graph": {
+    "s6_rows": 18,
+    "possible_row_pairs": 153,
+    "observed_row_pairs": 152,
+    "missing_row_pairs": [
+      {
+        "row_a_s6_hex": "00000000000000821082000000800000",
+        "row_b_s6_hex": "00000000000000821082000000002000"
+      }
+    ],
+    "shared_root_orbits": 551,
+    "root_owner_multiplicity": {
+      "1": 136,
+      "2": 551
+    },
+    "pair_weight_histogram": {
+      "1": 1,
+      "2": 7,
+      "3": 40,
+      "4": 104
+    },
+    "maximum_weight_matching": {
+      "pair_count": 9,
+      "total_alternative_weight": 36,
+      "alternatives_total": 36,
+      "alternatives_per_pair": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "minimum_candidate_roots_to_cover_all_rows": 9,
+      "seed_pairs": [
+        {
+          "pair_id": 1,
+          "row_a_s6_hex": "00000000000000821082000000800000",
+          "row_b_s6_hex": "00000000000000821083000000000000",
+          "shared_root_orbits": 4,
+          "primary_root_hex": "00000000000000821083000000800000",
+          "alternative_root_hexes": [
+            "00000000000000821083000000800000",
+            "00000000000000821083000080000000",
+            "00000000000000c21082000000800000",
+            "00000000000000c21082000080000000"
+          ]
+        },
+        {
+          "pair_id": 2,
+          "row_a_s6_hex": "00000000000000821082000004000000",
+          "row_b_s6_hex": "00000000000000821082000000400000",
+          "shared_root_orbits": 4,
+          "primary_root_hex": "00000000000000821082000004400000",
+          "alternative_root_hexes": [
+            "00000000000000821082000004400000",
+            "00000000000000821082000010400000",
+            "00000000010000821082000004000000",
+            "00000000010000821082000010000000"
+          ]
+        },
+        {
+          "pair_id": 3,
+          "row_a_s6_hex": "00000000000000821082000000002000",
+          "row_b_s6_hex": "00000000000000821082000400000000",
+          "shared_root_orbits": 4,
+          "primary_root_hex": "00000000000000821082000400002000",
+          "alternative_root_hexes": [
+            "00000000000000821082000400002000",
+            "00000000000000821082000400080000",
+            "00000000000040821082000000002000",
+            "00000000000040821082000000080000"
+          ]
+        },
+        {
+          "pair_id": 4,
+          "row_a_s6_hex": "00000000000000821082000000008000",
+          "row_b_s6_hex": "00000000000000821082000000000008",
+          "shared_root_orbits": 4,
+          "primary_root_hex": "00000000000000821082000000008008",
+          "alternative_root_hexes": [
+            "00000000000000821082000000008008",
+            "00000000000000821082000000008080",
+            "00000080000000821082000000000008",
+            "00000080000000821082000000000080"
+          ]
+        },
+        {
+          "pair_id": 5,
+          "row_a_s6_hex": "00000000000000821082000000000001",
+          "row_b_s6_hex": "00000000000000821082000000000004",
+          "shared_root_orbits": 4,
+          "primary_root_hex": "00000000000000821082000000000005",
+          "alternative_root_hexes": [
+            "00000000000000821082000000000005",
+            "00000000000000821082000000000101",
+            "00004000000000821082000000000004",
+            "00004000000000821082000000000100"
+          ]
+        },
+        {
+          "pair_id": 6,
+          "row_a_s6_hex": "00000000000000821082000000001000",
+          "row_b_s6_hex": "00000000000000821082000000004000",
+          "shared_root_orbits": 4,
+          "primary_root_hex": "00000000000000821082000000005000",
+          "alternative_root_hexes": [
+            "00000000000000821082000000005000",
+            "00000000000000821082000000041000",
+            "00000010000000821082000000004000",
+            "00000010000000821082000000040000"
+          ]
+        },
+        {
+          "pair_id": 7,
+          "row_a_s6_hex": "00000000000000821082200000000000",
+          "row_b_s6_hex": "00000000000000821082000200000000",
+          "shared_root_orbits": 4,
+          "primary_root_hex": "00000000000000821082200200000000",
+          "alternative_root_hexes": [
+            "00000000000000821082200200000000",
+            "00000000000000821082280000000000",
+            "000000000000008a1082000200000000",
+            "000000000000008a1082080000000000"
+          ]
+        },
+        {
+          "pair_id": 8,
+          "row_a_s6_hex": "00000000000000821082400000000000",
+          "row_b_s6_hex": "00000000000000821082000000000010",
+          "shared_root_orbits": 4,
+          "primary_root_hex": "00000000000000821082400000000010",
+          "alternative_root_hexes": [
+            "00000000000000821082400000000010",
+            "00000000000000821082400000000040",
+            "00000000000000921082000000000010",
+            "00000000000000921082000000000040"
+          ]
+        },
+        {
+          "pair_id": 9,
+          "row_a_s6_hex": "00000000000000821082800000000000",
+          "row_b_s6_hex": "00000000000000821082000000000800",
+          "shared_root_orbits": 4,
+          "primary_root_hex": "00000000000000821082800000000800",
+          "alternative_root_hexes": [
+            "00000000000000821082800000000800",
+            "00000000000000821082800000200000",
+            "00000000000000a21082000000000800",
+            "00000000000000a21082000000200000"
+          ]
+        }
+      ]
+    },
+    "interpretation": "Every Q-family canonical root has one or two S6-row owners. A perfect matching gives a 9-root candidate cover of all 18 rows; this is a candidate-incidence result, not a WIN7 result."
+  },
+  "cross_family": {
+    "pairwise_overlap_counts": {
+      "Q|P": 0,
+      "Q|class4": 0,
+      "Q|audit_blocked": 0,
+      "Q|best_coverable": 0,
+      "Q|second_coverable": 0,
+      "P|class4": 2,
+      "P|audit_blocked": 4,
+      "P|best_coverable": 4,
+      "P|second_coverable": 4,
+      "class4|audit_blocked": 0,
+      "class4|best_coverable": 0,
+      "class4|second_coverable": 0,
+      "audit_blocked|best_coverable": 0,
+      "audit_blocked|second_coverable": 0,
+      "best_coverable|second_coverable": 2
+    },
+    "distinct_shared_root_orbits": 16,
+    "q_vs_p_overlap": 0,
+    "q_vs_top4_overlap": 0,
+    "p_vs_top4_overlap": 14,
+    "q_roots_shared_with_other_families": 0,
+    "note": "Q's 687 candidate-root orbits are disjoint from P and all four coordinator top families; P shares 14 roots with top4, while top4 has two internal cross-family overlaps."
+  },
+  "combined": {
+    "candidate_occurrences": 5673,
+    "unique_d4_root_orbits": 4482,
+    "redundant_occurrences": 1191,
+    "saved_pct": 20.994,
+    "families": [
+      "Q",
+      "P",
+      "class4",
+      "audit_blocked",
+      "best_coverable",
+      "second_coverable"
+    ]
+  },
+  "trust_boundary": {
+    "no_engine_search_run": true,
+    "no_new_win7_d10_verdicts": 0,
+    "no_new_refuted_d10_verdicts": 0,
+    "no_certificate_created": true,
+    "meaning": "This is exact candidate legality and D4 orbit dedup only. It does not establish any game-theoretic WIN/LOSS value or game distance."
+  },
+  "status": {
+    "q_family": "UNKNOWN",
+    "p_family": "UNKNOWN",
+    "s2_root_59_60": "UNKNOWN",
+    "n11_empty_board": "UNKNOWN"
+  }
+}
