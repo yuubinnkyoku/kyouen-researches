@@ -1,5 +1,5 @@
 {
- "schema": "n11-class2-lane-cost66i-win7-certificates-20261116-v1",
+ "schema": "n11-class2-lane-cost66i-win7-certificates-20261116-v2",
  "date": "2026-11-16",
  "s6_child_hex": "00000000000000801226000000000000",
  "s5_parent_hex": "00000000000000403800000008000000",
@@ -18,17 +18,124 @@
    "subroots_pass": 52,
    "union_missing": 0,
    "union_extra": 0,
-   "terminal_stone_range": [13, 17],
+   "terminal_stone_range": [
+    13,
+    17
+   ],
    "loser_mobility": 52,
    "file": "n11_s7_00000000000000801226000000080000.cert",
    "certificate_split": "1,478,743 bytes exceeds the single-run transport limit; pushed as .cert.part1of2 (739,395 bytes) + .cert.part2of2 (739,348 bytes), recombine with cat (see README-split-bit19.md), md5 of concatenation below",
    "md5": "084bc1f4d0244ca1fc1ee769977060fd",
    "sha256": "f87df551ab38f73fb34d756fc4be287de42f1538735e7daf6006deb05749b0ac",
    "determinism_rerun": "full blind re-extraction in a fresh process (node --experimental-strip-types, fresh environment): byte-identical certificate (same md5), sum 11,200,170 nodes, nRows 40,935, fbt_drops 0, 52/52 loser defenses ok, 0 capped, per-move node counts recorded in the run log",
-   "marginals_rank": "bit 19 is the top-marginal WIN7-D10 root of the cost66i sweep: it appears in 4 candidate-manifest rows (3 net of pending cost-64h/76c fold duplicates), per class2-lane-cost66i-candidate-manifest-marginals-20261116.json; extraction order [19, 103, 99, 88, 28, 29, 90, 58, 112]"
+   "marginals_rank": "bit 19 is the top-marginal WIN7-D10 root of the cost66i sweep: it appears in 4 candidate-manifest rows (3 net of pending cost-64h/76c fold duplicates), per class2-lane-cost66i-candidate-manifest-marginals-20261116.json; extraction order [19, 103, 99, 88, 28, 29, 90, 58, 112]",
+   "d4_canon_root": "00000000000000801226000000080000"
+  },
+  {
+   "bit": 103,
+   "root": "00000080000000801226000000000000",
+   "d4_canon_root": "00000000000000c89002000000020000",
+   "verdict": "WIN7",
+   "depth": 10,
+   "rows": 31276,
+   "extraction_nodes": 3834589,
+   "fbt_drops": 0,
+   "fatal": null,
+   "subroots": 53,
+   "subroots_pass": 53,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_stone_range": [
+    13,
+    17
+   ],
+   "loser_mobility": 53,
+   "file": "n11_s7_00000080000000801226000000000000.cert",
+   "md5": "b5d031a2eebd7eef0b6b564bb3b2d2fc",
+   "sha256": "365c434bb780cbf247703225450c5bd80f98ac4f24553208d47bc2a1cb060bbb",
+   "determinism_rerun": "fresh-process blind re-extraction byte-identical (same md5), same node sums, fbt_drops 0",
+   "marginals_rank": "marginals order #2 of the cost66i sweep (2 candidate-manifest rows)"
+  },
+  {
+   "bit": 99,
+   "root": "00000008000000801226000000000000",
+   "d4_canon_root": "00000000000000c89002000000200000",
+   "verdict": "WIN7",
+   "depth": 10,
+   "rows": 41402,
+   "extraction_nodes": 5788340,
+   "fbt_drops": 0,
+   "fatal": null,
+   "subroots": 55,
+   "subroots_pass": 55,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_stone_range": [
+    13,
+    17
+   ],
+   "loser_mobility": 55,
+   "file": "n11_s7_00000008000000801226000000000000.cert",
+   "certificate_split": "1,494,354 bytes exceeds the single-run transport limit; pushed as .cert.part1of2 (747,182 bytes) + .cert.part2of2 (747,172 bytes), recombine with cat (see README-split-bit99.md), md5 of concatenation below",
+   "md5": "5b566ba91ca6ee57e897f4bd15df29c1",
+   "sha256": "5d0a683d12da3dbb87631a02e788e1bd6394e8157a80cbfbc0fd60a86af1f144",
+   "determinism_rerun": "fresh-process blind re-extraction byte-identical (same md5), same node sums, fbt_drops 0",
+   "marginals_rank": "marginals order #3 of the cost66i sweep (2 candidate-manifest rows)"
+  },
+  {
+   "bit": 88,
+   "root": "00000000010000801226000000000000",
+   "d4_canon_root": "00000000000000c89002000100000000",
+   "verdict": "WIN7",
+   "depth": 10,
+   "rows": 61820,
+   "extraction_nodes": 9480796,
+   "fbt_drops": 0,
+   "fatal": null,
+   "subroots": 62,
+   "subroots_pass": 62,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_stone_range": [
+    13,
+    17
+   ],
+   "loser_mobility": 62,
+   "file": "n11_s7_00000000010000801226000000000000.cert",
+   "certificate_split": "2,234,562 bytes exceeds the single-run transport limit; pushed as .cert.part1of2 (1,117,299 bytes) + .cert.part2of2 (1,117,263 bytes), recombine with cat (see README-split-bit88.md), md5 of concatenation below",
+   "md5": "012c0e0e47811825f3214b4cff9e0837",
+   "sha256": "b442ecd155925dc5bed338a50470243908c99702f0cdcc9990282c3e702b1b2a",
+   "determinism_rerun": "fresh-process blind re-extraction byte-identical (same md5), same node sums, fbt_drops 0",
+   "marginals_rank": "marginals order #4 of the cost66i sweep (2 candidate-manifest rows)"
+  },
+  {
+   "bit": 28,
+   "root": "00000000000000801226000010000000",
+   "d4_canon_root": "00000000000000801226000010000000",
+   "verdict": "WIN7",
+   "depth": 10,
+   "rows": 47847,
+   "extraction_nodes": 18054620,
+   "fbt_drops": 0,
+   "fatal": null,
+   "subroots": 54,
+   "subroots_pass": 54,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_stone_range": [
+    13,
+    17
+   ],
+   "loser_mobility": 54,
+   "file": "n11_s7_00000000000000801226000010000000.cert",
+   "certificate_split": "1,729,318 bytes exceeds the single-run transport limit; pushed as .cert.part1of2 (864,694 bytes) + .cert.part2of2 (864,624 bytes), recombine with cat (see README-split-bit28.md), md5 of concatenation below",
+   "md5": "3a50222b79a3b7bbaefe7d65e511de76",
+   "sha256": "e9639b2bf74abdf7a3d2a6f744a4c68acd316e6bf176a88b2617f01ce97cfd9a",
+   "determinism_rerun": "fresh-process blind re-extraction byte-identical (same md5), same node sums, fbt_drops 0",
+   "marginals_rank": "marginals order #5 of the cost66i sweep (3 candidate-manifest rows, largest after bit19)"
   }
  ],
- "method": "blind extraction with class4_child1_cert_extractor_exact.ts (FBS=1<<20, probe96, empty kill table via cert_driver66i.ts import; rows deduplicated and sorted before write), fbt_drops=0; independent verification with verify_bit7_win7_cert.ts (Bareiss 4x4 cofactor, engine-free): root-check stone count 7 and loser mobility 52 equal the independent legal_candidates.py enumeration (52 legal), all 52 sub-roots PASS, terminal stone range [13,17] on every sub-root, consumed-winner-state union vs certificate row set 0 missing / 0 extra in both directions; extraction determinism: fresh-process re-extraction byte-identical",
+ "method": "blind extraction with class4_child1_cert_extractor_exact.ts (FBS=1<<20, probe96, empty kill table via cert_driver66i.ts import; rows deduplicated and sorted before write), fbt_drops=0; independent verification with verify_bit7_win7_cert.ts (Bareiss 4x4 cofactor, engine-free): root-check stone count 7 and loser mobility 52 equal the independent legal_candidates.py enumeration (52 legal), all 52 sub-roots PASS, terminal stone range [13,17] on every sub-root, consumed-winner-state union vs certificate row set 0 missing / 0 extra in both directions; extraction determinism: fresh-process re-extraction byte-identical; loser defenses are enumerated with legal_candidates.py on the RAW child|bit root (the certificate root), never on its D4 canonical image: for bits 19/28/29/58 the raw root coincides with the canon, for bits 88/90/99/103/112 it does not, and a canon-defense list applied to the raw root produces a bogus certificate (caught by the root-header check of the independent verifier; see log)",
  "driver_note": "cert_driver66i.ts is archived in scripts/ and imports the extractor as './class4_child1_cert_extractor_exact.ts' (same directory); unlike the archived cert_driver67.ts, which was invoked from the experiment root and therefore imports './scripts/...', this driver resolves correctly as placed",
- "note": "first cost66i WIN7 certificate; the remaining 8 WIN7-D10 roots [28, 29, 58, 88, 90, 99, 103, 112] await extraction in marginals order; the root is new (not present in any published certificate directory)"
+ "note": "five of nine cost66i WIN7 certificates published (bits 19, 103, 99, 88, 28); remaining: [29, 90, 58, 112]; all roots are new (not present in any published certificate directory)"
 }

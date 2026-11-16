@@ -1,8 +1,8 @@
 {
- "schema": "n11-class2-lane-cost66i-sweep-complete-20261116-v3",
+ "schema": "n11-class2-lane-cost66i-sweep-complete-20261116-v4",
  "title": "n11 class2-lane cost66i: fresh 66-bit depth-10 sweep of the cheapest remaining row of the primary pure class-2 target family (head-1452 census v2 selection)",
  "date": "2026-11-16",
- "status": "sweep-complete; 9 WIN7-D10 candidates [19,28,29,58,88,90,99,103,112]; candidate-manifest marginals audit published (bit19 top marginal); bit19 WIN7 certificate extracted, independently verified (52/52 sub-roots, union 0/0 both directions, determinism re-extraction byte-identical); remaining 8 WIN certificates pending; receipt fold pending",
+ "status": "sweep-complete; 9 WIN7-D10 candidates [19,28,29,58,88,90,99,103,112]; FIVE WIN7 certificates extracted, independently verified and published (bits 19, 103, 99, 88, 28; all sub-roots PASS, union 0/0 both directions, determinism re-extraction byte-identical, fbt_drops 0); remaining 4 WIN certificates [29, 90, 58, 112]; receipt fold pending",
  "claimed_by": "n11 long-term lane session (head-1452 presweep census v2 selector)",
  "s5": "00000000000000403800000008000000",
  "s6_child": "00000000000000801226000000000000",
@@ -323,10 +323,10 @@
  "verdict_semantics": "loss=true => WIN7-within-depth-10 candidate (certificate rebuild target); loss=false && !capped => REFUTED-D10, no first-player win within depth 10 (NOT a LOSS proof of the position); capped => proves nothing either way",
  "unknown_status": "11x11 empty board: UNKNOWN. A completed sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 7-stone roots of this child. The two-stone roots {49,60} and {59,60}, S2 {59,60} and classes 1/2/4 remain UNKNOWN.",
  "coordination_note": "latest main fetched immediately before this push; no claim, raw batch or audit exists for this child on main (searched: child hex, cost66i); the parallel lane is in a bytes re-verification band and holds the pending 64h/76c folds; this claim does not touch those folds",
- "next_action": "Extract the next WIN7 roots in marginals order [103, 99, 88, 28, 29, 90, 58, 112] (blind extraction + independent verification each); the receipt fold remains blocked until the pending cost-64h and cost-76c folds land; rebase against the current canonical head after certificate verification.",
+ "next_action": "Extract the remaining 4 WIN7 roots [29, 90, 58, 112] (blind extraction on the RAW child|bit root + independent verification each); the receipt fold remains blocked until the pending cost-64h and cost-76c folds land; rebase against the current canonical head after certificate verification.",
  "previous_version": {
-  "schema": "n11-class2-lane-cost66i-sweep-complete-20261116-v2",
-  "blob_sha": "738443c0d1076115d723029edac2de3cb67c3e86"
+  "schema": "n11-class2-lane-cost66i-sweep-complete-20261116-v3",
+  "blob_sha": "232262879ee820048915ba1bc9d4a328323f982c"
  },
  "actual_execution": {
   "date": "2026-11-16",
@@ -428,7 +428,7 @@
   "audit_json": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost66i-raw-audit-20261116.json"
  },
  "certificate_extraction": {
-  "status": "bit19 extracted and verified; 8 remaining",
+  "status": "bits 19, 103, 99, 88, 28 extracted and verified; 4 remaining [29, 90, 58, 112]",
   "win7_d10_bits": [
    19,
    28,
@@ -445,6 +445,7 @@
    {
     "bit": 19,
     "root": "00000000000000801226000000080000",
+    "d4_canon_root": "00000000000000801226000000080000",
     "rows": 40935,
     "extraction_nodes": 11200170,
     "fbt_drops": 0,
@@ -457,14 +458,100 @@
      17
     ],
     "loser_mobility": 52,
-    "determinism": "fresh-process re-extraction byte-identical (same md5 084bc1f4d0244ca1fc1ee769977060fd)",
-    "record_json": "class2-lane-cost66i-win7-certificates-20261116.json",
-    "certificate_dir": "class2-lane-cost66i-certificates (split part1of2/part2of2 + README-split-bit19.md; sha256 f87df551ab38f73fb34d756fc4be287de42f1538735e7daf6006deb05749b0ac)",
-    "driver": "cert_driver66i.ts (scripts/)"
+    "determinism": "fresh-process re-extraction byte-identical (md5 084bc1f4d0244ca1fc1ee769977060fd)",
+    "md5": "084bc1f4d0244ca1fc1ee769977060fd",
+    "sha256": "f87df551ab38f73fb34d756fc4be287de42f1538735e7daf6006deb05749b0ac",
+    "storage": "split part1of2/part2of2 + README-split-bit19.md"
+   },
+   {
+    "bit": 103,
+    "root": "00000080000000801226000000000000",
+    "d4_canon_root": "00000000000000c89002000000020000",
+    "rows": 31276,
+    "extraction_nodes": 3834589,
+    "fbt_drops": 0,
+    "subroots": 53,
+    "subroots_pass": 53,
+    "union_missing": 0,
+    "union_extra": 0,
+    "terminal_stone_range": [
+     13,
+     17
+    ],
+    "loser_mobility": 53,
+    "determinism": "fresh-process re-extraction byte-identical (md5 b5d031a2eebd7eef0b6b564bb3b2d2fc)",
+    "md5": "b5d031a2eebd7eef0b6b564bb3b2d2fc",
+    "sha256": "365c434bb780cbf247703225450c5bd80f98ac4f24553208d47bc2a1cb060bbb",
+    "storage": "whole file"
+   },
+   {
+    "bit": 99,
+    "root": "00000008000000801226000000000000",
+    "d4_canon_root": "00000000000000c89002000000200000",
+    "rows": 41402,
+    "extraction_nodes": 5788340,
+    "fbt_drops": 0,
+    "subroots": 55,
+    "subroots_pass": 55,
+    "union_missing": 0,
+    "union_extra": 0,
+    "terminal_stone_range": [
+     13,
+     17
+    ],
+    "loser_mobility": 55,
+    "determinism": "fresh-process re-extraction byte-identical (md5 5b566ba91ca6ee57e897f4bd15df29c1)",
+    "md5": "5b566ba91ca6ee57e897f4bd15df29c1",
+    "sha256": "5d0a683d12da3dbb87631a02e788e1bd6394e8157a80cbfbc0fd60a86af1f144",
+    "storage": "split part1of2/part2of2 + README-split-bit99.md"
+   },
+   {
+    "bit": 88,
+    "root": "00000000010000801226000000000000",
+    "d4_canon_root": "00000000000000c89002000100000000",
+    "rows": 61820,
+    "extraction_nodes": 9480796,
+    "fbt_drops": 0,
+    "subroots": 62,
+    "subroots_pass": 62,
+    "union_missing": 0,
+    "union_extra": 0,
+    "terminal_stone_range": [
+     13,
+     17
+    ],
+    "loser_mobility": 62,
+    "determinism": "fresh-process re-extraction byte-identical (md5 012c0e0e47811825f3214b4cff9e0837)",
+    "md5": "012c0e0e47811825f3214b4cff9e0837",
+    "sha256": "b442ecd155925dc5bed338a50470243908c99702f0cdcc9990282c3e702b1b2a",
+    "storage": "split part1of2/part2of2 + README-split-bit88.md"
+   },
+   {
+    "bit": 28,
+    "root": "00000000000000801226000010000000",
+    "d4_canon_root": "00000000000000801226000010000000",
+    "rows": 47847,
+    "extraction_nodes": 18054620,
+    "fbt_drops": 0,
+    "subroots": 54,
+    "subroots_pass": 54,
+    "union_missing": 0,
+    "union_extra": 0,
+    "terminal_stone_range": [
+     13,
+     17
+    ],
+    "loser_mobility": 54,
+    "determinism": "fresh-process re-extraction byte-identical (md5 3a50222b79a3b7bbaefe7d65e511de76)",
+    "md5": "3a50222b79a3b7bbaefe7d65e511de76",
+    "sha256": "e9639b2bf74abdf7a3d2a6f744a4c68acd316e6bf176a88b2617f01ce97cfd9a",
+    "storage": "split part1of2/part2of2 + README-split-bit28.md"
    }
   ],
-  "independent_verification": "verify_bit7_win7_cert.ts (engine-free, Bareiss 4x4): root-check stones=7, loserMobility=52 matches independent legal_candidates.py enumeration; all 52 sub-roots PASS; consumed union equals the certificate row set exactly (0 missing / 0 extra both directions)",
-  "note": "extraction priority set by the candidate-manifest marginals audit; 8 WIN roots remain"
+  "independent_verification": "verify_bit7_win7_cert.ts (engine-free, Bareiss 4x4) per root: root-check stones=7 and loserMobility equals the independent legal_candidates.py enumeration (52/53/55/62/54); all sub-roots PASS (52/53/55/62/54); consumed union equals the certificate row set exactly (0 missing / 0 extra both directions, every root)",
+  "note": "extraction priority set by the candidate-manifest marginals audit; 4 WIN roots remain [29, 90, 58, 112]",
+  "record_json": "class2-lane-cost66i-win7-certificates-20261116.json (v2 schema, five entries)",
+  "coordinate_convention": "loser defenses and the certificate root use the RAW child|bit position; the D4 canonical root is recorded as d4_canon_root. For bits 19/28/29/58 raw==canon; for bits 88/90/99/103/112 the raw root is a non-canonical D4 image and the defense list MUST be enumerated on the raw root. An initial bit103/bit99 run that enumerated canon defenses on the raw root produced a bogus certificate (bit103: fatal at a bogus defense; bit99: 48,289-row cert failing the verifier root-header check); both were caught before publication and re-run correctly."
  },
  "receipt_fold": {
   "status": "pending",
