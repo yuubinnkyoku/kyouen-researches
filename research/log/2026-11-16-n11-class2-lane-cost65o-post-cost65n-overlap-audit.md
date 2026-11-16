@@ -40,3 +40,10 @@ K0863の位置レベル補題を使い、cost-65oの各合法候補root `child |
 - [監査コード](../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost65o_post_cost65n_receipt_overlap_20261116.py)
 - [監査JSON](../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65o-post-cost65n-overlap-audit-20261116.json)
 - 根拠定理: [K0863](../knowledge/items/K0863-sterile-row-depth10-unclosability.md)
+
+
+## 実行・再現確認
+
+- main上の監査コード（blob `47e875ee01b524d8bdaab39ca13903b31581545a`）を一時作業領域へ取り出し、`python3 -m py_compile` と実行を確認。**11/11 checks PASS**。
+- 生成されたJSONは18,663 bytes。Git blob SHA-1 `5e68bb4013f3fd5fdeab753114380169c27d045a` がmain上の公開JSON blobと完全一致し、**スクリプト出力と出版物のbyte identity**を確認。
+- これは当該の標準ライブラリ監査だけの実行確認。リポジトリ全体の `uv sync`・knowledge check・unit tests・buildは別であり、最新mainに対するCI/Knowledge integrityの完了判定はまだ待ち（実行中）。
