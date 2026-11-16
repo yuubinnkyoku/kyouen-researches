@@ -1,0 +1,358 @@
+{
+  "all_checks_pass": true,
+  "domain": {
+    "branch_count": 3,
+    "gamma_range": "0 <= gamma < min(C_1,C_2,C_3)",
+    "keys": 715,
+    "max_branch_size": 10
+  },
+  "interpretation": {
+    "finite_observation": "For cap<=10 and r=3..8, every published non-collapse key has exactly two distinct first-loser residues; for each r all such keys share one residue pair.",
+    "not_proved": "This does not prove that one or three distinct first-loser residues force survivor determinacy for arbitrary profiles or r. The r=9 data is only an arithmetic prefilter census, not an outcome sweep.",
+    "proved_input": "For every k-branch profile and r, possible first losers are exactly {C_i mod r} (Lemma FL, K0864)."
+  },
+  "key_count_crosscheck": {
+    "direct_enumeration": 715,
+    "match": true,
+    "minimum_size_sum": 715
+  },
+  "noncollapse_signature_r3_to_r8": {
+    "3": {
+      "all_noncollapse_keys_have_exactly_two_first_loser_residues": true,
+      "all_noncollapse_keys_share_same_residue_pair": true,
+      "distinct_first_loser_residue_pair": [
+        0,
+        2
+      ],
+      "gamma_values_by_size_family": {
+        "2,3,8": [
+          0,
+          1
+        ],
+        "2,8,9": [
+          0,
+          1
+        ],
+        "3,3,8": [
+          0,
+          1
+        ],
+        "3,8,8": [
+          0,
+          1
+        ],
+        "3,8,9": [
+          0,
+          1
+        ],
+        "8,8,9": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "8,9,9": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "noncollapse_key_count": 22,
+      "size_families": [
+        [
+          2,
+          3,
+          8
+        ],
+        [
+          2,
+          8,
+          9
+        ],
+        [
+          3,
+          3,
+          8
+        ],
+        [
+          3,
+          8,
+          8
+        ],
+        [
+          3,
+          8,
+          9
+        ],
+        [
+          8,
+          8,
+          9
+        ],
+        [
+          8,
+          9,
+          9
+        ]
+      ],
+      "source": "K0862 (re-derived in K0864)"
+    },
+    "4": {
+      "all_noncollapse_keys_have_exactly_two_first_loser_residues": true,
+      "all_noncollapse_keys_share_same_residue_pair": true,
+      "distinct_first_loser_residue_pair": [
+        0,
+        1
+      ],
+      "gamma_values_by_size_family": {
+        "8,8,9": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "8,9,9": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "noncollapse_key_count": 12,
+      "size_families": [
+        [
+          8,
+          8,
+          9
+        ],
+        [
+          8,
+          9,
+          9
+        ]
+      ],
+      "source": "K0864"
+    },
+    "5": {
+      "all_noncollapse_keys_have_exactly_two_first_loser_residues": true,
+      "all_noncollapse_keys_share_same_residue_pair": true,
+      "distinct_first_loser_residue_pair": [
+        3,
+        4
+      ],
+      "gamma_values_by_size_family": {
+        "8,8,9": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "8,9,9": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "noncollapse_key_count": 12,
+      "size_families": [
+        [
+          8,
+          8,
+          9
+        ],
+        [
+          8,
+          9,
+          9
+        ]
+      ],
+      "source": "K0864"
+    },
+    "6": {
+      "all_noncollapse_keys_have_exactly_two_first_loser_residues": true,
+      "all_noncollapse_keys_share_same_residue_pair": true,
+      "distinct_first_loser_residue_pair": [
+        2,
+        4
+      ],
+      "gamma_values_by_size_family": {
+        "4,4,8": [
+          0,
+          1,
+          2
+        ],
+        "4,8,8": [
+          0,
+          1,
+          2
+        ]
+      },
+      "noncollapse_key_count": 6,
+      "size_families": [
+        [
+          4,
+          4,
+          8
+        ],
+        [
+          4,
+          8,
+          8
+        ]
+      ],
+      "source": "K0864"
+    },
+    "7": {
+      "all_noncollapse_keys_have_exactly_two_first_loser_residues": true,
+      "all_noncollapse_keys_share_same_residue_pair": true,
+      "distinct_first_loser_residue_pair": [
+        2,
+        4
+      ],
+      "gamma_values_by_size_family": {
+        "4,4,9": [
+          0,
+          1,
+          2
+        ],
+        "4,9,9": [
+          0,
+          1,
+          2
+        ]
+      },
+      "noncollapse_key_count": 6,
+      "size_families": [
+        [
+          4,
+          4,
+          9
+        ],
+        [
+          4,
+          9,
+          9
+        ]
+      ],
+      "source": "K0866"
+    },
+    "8": {
+      "all_noncollapse_keys_have_exactly_two_first_loser_residues": true,
+      "all_noncollapse_keys_share_same_residue_pair": true,
+      "distinct_first_loser_residue_pair": [
+        0,
+        6
+      ],
+      "gamma_values_by_size_family": {
+        "6,6,8": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "6,8,8": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "noncollapse_key_count": 10,
+      "size_families": [
+        [
+          6,
+          6,
+          8
+        ],
+        [
+          6,
+          8,
+          8
+        ]
+      ],
+      "source": "K0869"
+    }
+  },
+  "r9_prefilter": {
+    "complete_r9_sweep_must_not_skip_other_classes": true,
+    "single_residue_keys": 57,
+    "singleton_residue_characterization": "all equal triples (a,a,a), 1<=a<=10, 0<=gamma<a; plus (1,1,10)|gamma=0 and (1,10,10)|gamma=0",
+    "singleton_residue_key_count_by_pattern": {
+      "equal_triples": 55,
+      "mixed_1_10_triples": 2
+    },
+    "three_residue_keys": 322,
+    "total_keys": 715,
+    "two_residue_keys": 336,
+    "two_residue_keys_are_ordering_hint_only": true
+  },
+  "residue_class_census_r3_to_r9": {
+    "3": {
+      "keys_by_distinct_first_loser_count": {
+        "1": 145,
+        "2": 462,
+        "3": 108
+      }
+    },
+    "4": {
+      "keys_by_distinct_first_loser_count": {
+        "1": 106,
+        "2": 429,
+        "3": 180
+      }
+    },
+    "5": {
+      "keys_by_distinct_first_loser_count": {
+        "1": 85,
+        "2": 400,
+        "3": 230
+      }
+    },
+    "6": {
+      "keys_by_distinct_first_loser_count": {
+        "1": 75,
+        "2": 380,
+        "3": 260
+      }
+    },
+    "7": {
+      "keys_by_distinct_first_loser_count": {
+        "1": 67,
+        "2": 362,
+        "3": 286
+      }
+    },
+    "8": {
+      "keys_by_distinct_first_loser_count": {
+        "1": 61,
+        "2": 347,
+        "3": 307
+      }
+    },
+    "9": {
+      "keys_by_distinct_first_loser_count": {
+        "1": 57,
+        "2": 336,
+        "3": 322
+      }
+    }
+  },
+  "status": "finite-complete-census-derived-from-published-boundaries",
+  "title": "Three-branch REMO first-loser residue signature census"
+}
