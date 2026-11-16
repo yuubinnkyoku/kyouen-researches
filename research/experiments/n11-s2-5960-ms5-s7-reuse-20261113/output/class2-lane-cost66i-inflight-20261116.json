@@ -1,8 +1,8 @@
 {
- "schema": "n11-class2-lane-cost66i-sweep-complete-20261116-v5",
+ "schema": "n11-class2-lane-cost66i-sweep-complete-20261117-v6",
  "title": "n11 class2-lane cost66i: fresh 66-bit depth-10 sweep of the cheapest remaining row of the primary pure class-2 target family (head-1452 census v2 selection)",
  "date": "2026-11-16",
- "status": "sweep-complete; 9 WIN7-D10 candidates [19,28,29,58,88,90,99,103,112]; ALL NINE WIN7 certificates extracted, independently verified and published (every root: sub-roots PASS, union 0/0 both directions, determinism re-extraction byte-identical, fbt_drops 0); certificate phase complete; receipt fold pending",
+ "status": "sweep-complete; all 9 WIN7-D10 certificates extracted, independently verified and published; cost64h receipt fold now complete at head1472; cost76c fold still pending; this row's receipt fold must be recomputed after cost76c",
  "claimed_by": "n11 long-term lane session (head-1452 presweep census v2 selector)",
  "s5": "00000000000000403800000008000000",
  "s6_child": "00000000000000801226000000000000",
@@ -323,7 +323,7 @@
  "verdict_semantics": "loss=true => WIN7-within-depth-10 candidate (certificate rebuild target); loss=false && !capped => REFUTED-D10, no first-player win within depth 10 (NOT a LOSS proof of the position); capped => proves nothing either way",
  "unknown_status": "11x11 empty board: UNKNOWN. A completed sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 7-stone roots of this child. The two-stone roots {49,60} and {59,60}, S2 {59,60} and classes 1/2/4 remain UNKNOWN.",
  "coordination_note": "latest main fetched immediately before this push; no claim, raw batch or audit exists for this child on main (searched: child hex, cost66i); the parallel lane is in a bytes re-verification band and holds the pending 64h/76c folds; this claim does not touch those folds",
- "next_action": "Certificate phase complete. Next: fold this child against the current canonical head once the pending cost-64h and cost-76c folds land (receipt fold is blocked until then); re-verify the fold with the standard receipt-agreement controls.",
+ "next_action": "After cost76c is folded, recompute the nine cost66i receipt marginals and the complete frontier from the new canonical head; verify all nine certificate blobs and conflicts before folding.",
  "previous_version": {
   "schema": "n11-class2-lane-cost66i-sweep-complete-20261116-v4",
   "blob_sha": "e4f3e1b6f091cd653e9494c6f93d39966a74d8b5"
@@ -638,7 +638,16 @@
   "coordinate_convention": "loser defenses and the certificate root use the RAW child|bit position; the D4 canonical root is recorded as d4_canon_root. For bits 19/28/29/58 raw==canon; for bits 88/90/99/103/112 the raw root is a non-canonical D4 image and the defense list MUST be enumerated on the raw root. An initial bit103/bit99 run that enumerated canon defenses on the raw root produced a bogus certificate (bit103: fatal at a bogus defense; bit99: 48,289-row cert failing the verifier root-header check); both were caught before publication and re-run correctly."
  },
  "receipt_fold": {
-  "status": "pending",
-  "note": "No receipt has been folded from this child. The pending cost-64h and cost-76c folds must land first; rebase against the current canonical head after certificate verification."
- }
+  "status": "pending; cost64h fold completed at head1472; cost76c bit61 certificate/fold remains pending",
+  "note": "All nine cost66i WIN7-D10 certificates are complete and verified. The sweep and old candidate-marginal audit are historical head-1452 snapshots. Wait for cost76c bit61 certificate and fold, then recompute all nine receipt marginals against the resulting canonical head, recheck conflicts, and fold."
+ },
+ "latest_canonical_head_after_cost64h_fold": [
+  1472,
+  174,
+  6376,
+  504672,
+  4649,
+  368586
+ ],
+ "last_updated": "2026-11-17"
 }
