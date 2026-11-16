@@ -148,7 +148,7 @@ def options(x, y, r):
         return set()
     a = tuple(sorted((x-1,y), reverse=True))
     b = tuple(sorted((x,y-1), reverse=True))
-    return {h5(*a,r-1), h5(*b,r-1), 1 ^ h4(x,y,r-1)}
+    return {h5(a[0],a[1],r-1), h5(b[0],b[1],r-1), 1 ^ h4(x,y,r-1)}
 
 
 def y1_formula(x, r):
