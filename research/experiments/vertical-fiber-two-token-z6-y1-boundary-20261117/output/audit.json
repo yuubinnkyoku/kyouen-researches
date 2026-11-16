@@ -1,0 +1,21 @@
+{
+  "schema": "two-token-z6-y1-audit-v1",
+  "claim": "H(R;(x,1);6) is given by the z6_y1 formula in report.md",
+  "classification": "finite-independent-audit-not-proof",
+  "seed": 20261117,
+  "counts": {
+    "direct_two_token_states": 7260,
+    "single_token_anchor_states": 8080,
+    "z5_boundary_anchor_states": 8080,
+    "option_signature_states": 2051000,
+    "tail_states": 20000,
+    "random_states": 2000
+  },
+  "total_checks": 2096420,
+  "failures": [],
+  "direct_engine_cache": {
+    "hits": 197361,
+    "misses": 133935
+  },
+  "pass": true
+}
