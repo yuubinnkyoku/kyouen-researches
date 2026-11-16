@@ -1,9 +1,9 @@
 {
-  "schema": "n11-class2-lane-cost69j-inflight-20261117-v1",
+  "schema": "n11-class2-lane-cost69j-inflight-20261117-v2",
   "date": "2026-11-17",
   "last_updated": "2026-11-17",
   "title": "n11 class2-lane cost69j: planned fresh 69-bit depth-10 sweep of the cheapest remaining unswept/unclaimed row of the primary pure class-2 target family (head-1472 presweep census v4 selection)",
-  "status": "claim v1: preregistered 69-bit fresh v17 depth-10 sweep plan for the head-1472 census v4 selected target 00000000000000403800000008000020 (cost 69, primary family, demand c1=1/c2=1; 59 fresh sweep bits + 10 confirmation transfers, all expected REFUTED-D10); sweep not yet started; runner-up and the pending 76c/66i/66j folds untouched; 11x11 remains UNKNOWN",
+  "status": "claim v2: sweep complete; all 69 legal bits freshly run (8 sweep batches + 2 confirmation batches, v17, depth 10, cap 1e9, andclose 1, 0 capped); 6 WIN7-D10 bits [1,52,75,109,110,114] + 63 REFUTED-D10; all 10 confirmation transfers came out REFUTED-D10 as predicted (10/10, incl. bit 20 = 64h bit 5 exact node match 254303, bit 103 = 66i bit 55, bit 108 = 66j bit 65); stdlib raw audit v1 all checks passed (cross-source conflict scan over the 64h/76c/66i/66j maps: 0 conflicts); certificates for the 6 WIN bits not yet extracted; the receipt fold stays behind the pending 76c/66i/66j folds; 11x11 remains UNKNOWN",
   "s5": "00000000000000403800000008000000",
   "s6_child": "00000000000000403800000008000020",
   "s6_s7_edge_cost": 69,
@@ -388,11 +388,73 @@
     "v15_crosscheck": "independent v15 engine (blob 8744fc65b6b7cac6bd561403ce4c749e01c51359) re-check of all WIN bits plus anchor bits (pilot 5949), verdict agreement required",
     "independent_audit": "stdlib-only re-audit of all raw batch lines (pilot exactness, cap, stone counts, canon recomputation from the child, cross-sweep conflict scan against the 64h/76c/66i/66j verdict maps) before any verdict is treated as established"
   },
-  "next_action": "run the 10 planned v17 batches (8 sweep batches + 2 confirmation batches), publish the raw JSONL batches, then the stdlib-only raw audit; on WIN bits extract certificates, verify independently, then wait behind the 76c/66i/66j folds before any receipt fold of this row",
+  "next_action": "extract the 6 WIN7-D10 certificates (cert driver duplicated from cert_driver66j for cost69j, root defenses via legal_candidates), verify them independently (root-check stones=7 + loserMobility, sub-roots PASS, union 0/0), then publish; the receipt fold of this row stays behind the pending 76c/66i/66j folds",
   "receipt_fold": {
     "status": "pending behind the cost-76c, cost-66i and cost-66j folds",
     "note": "any WIN7-D10 certificates of this row fold only after the pending cost-76c, cost-66i and cost-66j folds land; no manifest row is closed by the sweep itself"
   },
   "verdict_semantics": "loss=true => WIN7-within-depth-10 candidate (certificate rebuild target); loss=false && !capped => REFUTED-D10, no first-player win within depth 10 (NOT a LOSS proof of the position); capped => proves nothing either way",
-  "unknown_status": "11x11 empty board: UNKNOWN. A completed sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 7-stone roots of this child. The two-stone roots {49,60} and {59,60}, S2 {59,60} and classes 1/2/4 remain UNKNOWN."
+  "unknown_status": "11x11 empty board: UNKNOWN. A completed sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 7-stone roots of this child. The two-stone roots {49,60} and {59,60}, S2 {59,60} and classes 1/2/4 remain UNKNOWN.",
+  "actual_execution": {
+    "started": "2026-11-17",
+    "engine": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/class4_child1_runner_v17.ts (v17, blob c132cc6425eee3feaeef1d697dd74f968cfedb59)",
+    "batches_run": 10,
+    "pilot_controls": "10/10 batches: pilot_d6 exact {loss=false, nodes=3402, capped=false}",
+    "results": {
+      "win7_d10_bits": [
+        1,
+        52,
+        75,
+        109,
+        110,
+        114
+      ],
+      "win7_d10_nodes": {
+        "1": 4540327,
+        "52": 2559592,
+        "75": 488542,
+        "109": 4432592,
+        "110": 2100847,
+        "114": 3337412
+      },
+      "refuted_d10_bits_count": 63,
+      "capped_count": 0,
+      "candidate_nodes_total": 69489347,
+      "total_nodes_including_pilots": 69523367,
+      "terminal_stone_range": [
+        13,
+        17
+      ]
+    },
+    "confirmation_outcome": "10/10 REFUTED-D10 as predicted by the v1 claim",
+    "determinism_rerun": "batches 1 and 7 re-run: field-identical on every non-ms field",
+    "v15_crosscheck": "independent v15 engine (blob 8744fc65b6b7cac6bd561403ce4c749e01c51359) re-check of all 6 WIN bits: 6/6 loss=true, pilot 5949 exact",
+    "raw_outputs": {
+      "raw_batch_pattern": "class2-lane-cost69j-raw-batch{n}-20261117.jsonl",
+      "raw_batch_blob_pins": {
+        "batch1": "1cc2ee6080dee5c9242132c38a8bc7148ff4f3e2",
+        "batch2": "1b789fe3e13e5dc07cece634a7e020b09704267e",
+        "batch3": "53958049988f2af965613330a447e889f2334a71",
+        "batch4": "8eb7f519114506fa0f03e35b6458ca52f8dd7b6b",
+        "batch5": "fa941b4a9a53fc1fe0e37ef4a85fd3fc1d19a4c7",
+        "batch6": "d95c87903c4c19b7d6d84c42ff57e6826622db1b",
+        "batch7": "c0a574a1beee4522e2b10d12de9cca6c142d9da1",
+        "batch8": "feaa2d78ac5a11f772a649b7f13865abe2aa743c",
+        "batch9": "a0e1a8ee462502bc71f0b9fc680bf3bec66d0259",
+        "batch10": "3071af1077afda5a32fe0f01907a9f0b00faa1d1"
+      },
+      "det_batch_blob_pins": {
+        "batch1": "9976802399ad2d720ca131e51d120644cfb14c3e",
+        "batch7": "217e14a965ebdf6ec8df8024dfe31c31a0db1c88"
+      },
+      "v15_crosscheck_blob_pin": "78d965927e077ab50b4bad30813584b072daa9c0",
+      "independent_audit": {
+        "json": "class2-lane-cost69j-raw-audit-20261117.json",
+        "blob_pin": "2f6bba29ee388bdf1211400ce5599f0ba24d03e1",
+        "script": "scripts/audit_cost69j_raw_batches_20261117.py",
+        "script_blob_pin": "503f9b0b634fc0d918c84c58d84cab08889d3b42",
+        "result": "all checks passed; conflicts 0"
+      }
+    }
+  }
 }
