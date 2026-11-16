@@ -1,0 +1,3640 @@
+{
+ "schema": "n11-class2-lane-sterile-rows-orbit-aware-fresh-target-tables-20261116-v1",
+ "date": "2026-11-16",
+ "baseline_record": "head 1419/174/6429/508474/4702/372388; three open STERILE rows at 1419: 65k 00000000020000801202000000200000, 70j 00000000000000801282000000200000, 74h 00000000000000889002000000000800",
+ "method": "orbit-aware enumeration with the verified third implementation: all 8 D4 images of each row; covering root orbits = image + one stone, deduplicated canonically; tier classification per root orbit: own-sweep iff some 6-subset lies in the row orbit with the removed bit legal (these were swept with the row's own child - STERILE means all are REFUTED-D10); unreachable iff the root is not a legal root of any of its 7 children (can never be tested by any child sweep); fresh = covering, not own-sweep, with >= 1 generator child; generator = child C = root - b with b legal for C (C is then a one-stone-replacement neighbor of some row image); costs = recomputed legal-candidate counts (third implementation)",
+ "internal_consistency": {
+  "legal_bits_own_matches_name_cost": "65k: 65 legal bits, 70j: 70, 74h: 74 - exactly the cost letters of the row names",
+  "own_sweep_tier_equals_legal_bits_own": "65k: 65=65, 70j: 70=70, 74h: 74=74 - every own-sweep root orbit is exactly one legal root of the row orbit (identity verified)"
+ },
+ "rows": {
+  "s65k": {
+   "row_hex": "00000000020000801202000000200000",
+   "row_canon": "00000000020000801202000000200000",
+   "legal_bits_own": 65,
+   "unique_covering_root_orbits": 115,
+   "own_sweep_tier_all_refuted": 65,
+   "unreachable_no_generator": 1,
+   "fresh_targets": 49,
+   "fresh_ranked": [
+    {
+     "root_canon": "00000000020000801a02000000200000",
+     "n_generators": 3,
+     "min_gen_cost": 61,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003802000008002000",
+       "child_cost": 61,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000020000801a00000000200000",
+       "child_cost": 77,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000000020000800a02000000200000",
+       "child_cost": 78,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000020000a01202000000200000",
+     "n_generators": 3,
+     "min_gen_cost": 63,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003800002008002000",
+       "child_cost": 63,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000020000201202000000200000",
+       "child_cost": 81,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 89,
+       "child_canon": "00000000000000a01202000000200000",
+       "child_cost": 82,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000022000801202000000200000",
+     "n_generators": 3,
+     "min_gen_cost": 63,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000801202020000800000",
+       "child_cost": 63,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000000022000800202000000200000",
+       "child_cost": 76,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000022000001202000000200000",
+       "child_cost": 86,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000001020000801202000000200000",
+     "n_generators": 3,
+     "min_gen_cost": 64,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000801202000040800000",
+       "child_cost": 64,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000001020000800202000000200000",
+       "child_cost": 89,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000001020000001202000000200000",
+       "child_cost": 84,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000020000805202000000200000",
+     "n_generators": 3,
+     "min_gen_cost": 65,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000805202000000800000",
+       "child_cost": 65,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000000020000804202000000200000",
+       "child_cost": 81,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000020000005202000000200000",
+       "child_cost": 83,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000020000809202000000200000",
+     "n_generators": 3,
+     "min_gen_cost": 65,
+     "generators": [
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000020000809200000000200000",
+       "child_cost": 80,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000000020000808202000000200000",
+       "child_cost": 88,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 89,
+       "child_canon": "00000000000000809202000000000800",
+       "child_cost": 65,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000020000881202000000200000",
+     "n_generators": 3,
+     "min_gen_cost": 65,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "0000000000000000380000000800a000",
+       "child_cost": 65,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000020000881200000000200000",
+       "child_cost": 87,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000000020000880202000000200000",
+       "child_cost": 80,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000420000801202000000200000",
+     "n_generators": 3,
+     "min_gen_cost": 66,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000103800000008002000",
+       "child_cost": 66,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000420000801200000000200000",
+       "child_cost": 82,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000420000001202000000200000",
+       "child_cost": 85,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000020000801202000000a00000",
+     "n_generators": 3,
+     "min_gen_cost": 67,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003800000008082000",
+       "child_cost": 67,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 57,
+       "child_canon": "00000000020000801002000000a00000",
+       "child_cost": 83,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000000020000800202000000a00000",
+       "child_cost": 80,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000020000801202800000200000",
+     "n_generators": 3,
+     "min_gen_cost": 67,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003800002008080000",
+       "child_cost": 67,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000020000801200800000200000",
+       "child_cost": 87,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 89,
+       "child_canon": "00000000000000801202800000200000",
+       "child_cost": 79,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000020000801202002000200000",
+     "n_generators": 3,
+     "min_gen_cost": 69,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003800800008080000",
+       "child_cost": 69,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000020000001202002000200000",
+       "child_cost": 86,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 89,
+       "child_canon": "00000000000000801202002000200000",
+       "child_cost": 74,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000020000801202000000210000",
+     "n_generators": 3,
+     "min_gen_cost": 70,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003900000008080000",
+       "child_cost": 76,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 57,
+       "child_canon": "00000000020000801002000000210000",
+       "child_cost": 76,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 89,
+       "child_canon": "00000000000000801202000000210000",
+       "child_cost": 70,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000020100801202000000200000",
+     "n_generators": 3,
+     "min_gen_cost": 70,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003800001008002000",
+       "child_cost": 70,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000020100801200000000200000",
+       "child_cost": 83,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 89,
+       "child_canon": "00000000000100801202000000200000",
+       "child_cost": 79,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000008000000809002000080080000",
+     "n_generators": 3,
+     "min_gen_cost": 70,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003800000008802000",
+       "child_cost": 70,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 49,
+       "child_canon": "00000008000000009002000080080000",
+       "child_cost": 70,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000008000000808002000080080000",
+       "child_cost": 70,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000020000801202000000201000",
+     "n_generators": 3,
+     "min_gen_cost": 71,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003800000008081000",
+       "child_cost": 71,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 57,
+       "child_canon": "00000000020000801002000000201000",
+       "child_cost": 73,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000020000001202000000201000",
+       "child_cost": 76,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000020000801202000002200000",
+     "n_generators": 3,
+     "min_gen_cost": 71,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003800000808080000",
+       "child_cost": 71,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 57,
+       "child_canon": "00000000020000801002000002200000",
+       "child_cost": 85,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000000020000800202000002200000",
+       "child_cost": 85,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000020000801202000400200000",
+     "n_generators": 3,
+     "min_gen_cost": 71,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003800000008042000",
+       "child_cost": 71,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000020000801200000400200000",
+       "child_cost": 81,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 57,
+       "child_canon": "00000000020000801002000400200000",
+       "child_cost": 83,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000060000801202000000200000",
+     "n_generators": 3,
+     "min_gen_cost": 71,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003800000009002000",
+       "child_cost": 71,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 57,
+       "child_canon": "00000000060000801002000000200000",
+       "child_cost": 84,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000060000001202000000200000",
+       "child_cost": 87,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "000000000a0000801202000000200000",
+     "n_generators": 3,
+     "min_gen_cost": 71,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003800000808002000",
+       "child_cost": 71,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 57,
+       "child_canon": "000000000a0000801002000000200000",
+       "child_cost": 76,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "000000000a0000800202000000200000",
+       "child_cost": 80,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000008000000809002000080000008",
+     "n_generators": 3,
+     "min_gen_cost": 71,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000801202000000800080",
+       "child_cost": 71,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000008000000808002000080000008",
+       "child_cost": 74,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000008000000809000000080000008",
+       "child_cost": 76,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000020000901202000000200000",
+     "n_generators": 3,
+     "min_gen_cost": 72,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "0000000000000000380000000c002000",
+       "child_cost": 72,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000020000901200000000200000",
+       "child_cost": 88,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 89,
+       "child_canon": "00000000000000901202000000200000",
+       "child_cost": 86,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000020000801202200000200000",
+     "n_generators": 3,
+     "min_gen_cost": 73,
+     "generators": [
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000020000801200200000200000",
+       "child_cost": 83,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000000020000800202200000200000",
+       "child_cost": 81,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 89,
+       "child_canon": "00000000000000801202200000200000",
+       "child_cost": 73,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000020400801202000000200000",
+     "n_generators": 3,
+     "min_gen_cost": 73,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003c00000008002000",
+       "child_cost": 73,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 57,
+       "child_canon": "00000000020400801002000000200000",
+       "child_cost": 85,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 89,
+       "child_canon": "00000000000400801202000000200000",
+       "child_cost": 85,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000220000801202000000200000",
+     "n_generators": 1,
+     "min_gen_cost": 73,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003a00000008002000",
+       "child_cost": 73,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000008000000809002000080000020",
+     "n_generators": 3,
+     "min_gen_cost": 73,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003880000008002000",
+       "child_cost": 73,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 57,
+       "child_canon": "00000008000000801002000080000020",
+       "child_cost": 82,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 89,
+       "child_canon": "00000000200000003880000000000200",
+       "child_cost": 81,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000008000000809002000080000100",
+     "n_generators": 3,
+     "min_gen_cost": 73,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003800000008402000",
+       "child_cost": 73,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000008000000808002000080000100",
+       "child_cost": 86,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000008000000809000000080000100",
+       "child_cost": 86,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000020000801202000000200020",
+     "n_generators": 3,
+     "min_gen_cost": 74,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003880000008080000",
+       "child_cost": 74,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 57,
+       "child_canon": "00000000020000801002000000200020",
+       "child_cost": 83,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 89,
+       "child_canon": "00000000000000801202000000200020",
+       "child_cost": 75,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000020000801202000000202000",
+     "n_generators": 3,
+     "min_gen_cost": 74,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003800000008880000",
+       "child_cost": 74,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 57,
+       "child_canon": "00000000020000801002000000202000",
+       "child_cost": 82,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000020000001202000000202000",
+       "child_cost": 84,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000020000c01202000000200000",
+     "n_generators": 3,
+     "min_gen_cost": 74,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003801000008002000",
+       "child_cost": 74,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000020000401202000000200000",
+       "child_cost": 90,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 89,
+       "child_canon": "00000000000000c01202000000200000",
+       "child_cost": 78,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000008000000809002000080000800",
+     "n_generators": 3,
+     "min_gen_cost": 74,
+     "generators": [
+      {
+       "removed_bit": 57,
+       "child_canon": "00000008000000801002000080000800",
+       "child_cost": 85,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000008000000808002000080000800",
+       "child_cost": 84,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 89,
+       "child_canon": "00000000200000003800000000000202",
+       "child_cost": 74,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000008000000809002000080020000",
+     "n_generators": 3,
+     "min_gen_cost": 74,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003800200008002000",
+       "child_cost": 74,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 49,
+       "child_canon": "00000008000000009002000080020000",
+       "child_cost": 84,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000008000000808002000080020000",
+       "child_cost": 87,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000020000801202001000200000",
+     "n_generators": 3,
+     "min_gen_cost": 75,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003800001008080000",
+       "child_cost": 75,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000020000001202001000200000",
+       "child_cost": 91,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 89,
+       "child_canon": "00000000000000801202001000200000",
+       "child_cost": 82,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000020000801202004000200000",
+     "n_generators": 3,
+     "min_gen_cost": 75,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003c00000008080000",
+       "child_cost": 75,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 57,
+       "child_canon": "00000000020000801002004000200000",
+       "child_cost": 85,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 89,
+       "child_canon": "00000000000000801202004000200000",
+       "child_cost": 81,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000020200801202000000200000",
+     "n_generators": 1,
+     "min_gen_cost": 75,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003800800008002000",
+       "child_cost": 75,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000002010000809002000000000800",
+     "n_generators": 3,
+     "min_gen_cost": 75,
+     "generators": [
+      {
+       "removed_bit": 57,
+       "child_canon": "00000002010000801002000000000800",
+       "child_cost": 75,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000002010000009002000000000800",
+       "child_cost": 81,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 89,
+       "child_canon": "00000000010000809002000000000800",
+       "child_cost": 83,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000020000801202000000300000",
+     "n_generators": 3,
+     "min_gen_cost": 76,
+     "generators": [
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000020000801200000000300000",
+       "child_cost": 90,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 57,
+       "child_canon": "00000000020000801002000000300000",
+       "child_cost": 85,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 89,
+       "child_canon": "00000000000000801202000000300000",
+       "child_cost": 76,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000020000801202400000200000",
+     "n_generators": 3,
+     "min_gen_cost": 76,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "0000000000000000380000000c080000",
+       "child_cost": 76,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000020000001202400000200000",
+       "child_cost": 89,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 89,
+       "child_canon": "00000000000000801202400000200000",
+       "child_cost": 86,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000020000801203000000200000",
+     "n_generators": 1,
+     "min_gen_cost": 76,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003801000008080000",
+       "child_cost": 76,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000008000000809002000080010000",
+     "n_generators": 3,
+     "min_gen_cost": 76,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003900000008002000",
+       "child_cost": 76,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 57,
+       "child_canon": "00000008000000801002000080010000",
+       "child_cost": 84,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 89,
+       "child_canon": "00000000200000003900000000000200",
+       "child_cost": 82,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000020000801202000004200000",
+     "n_generators": 3,
+     "min_gen_cost": 77,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003800400008080000",
+       "child_cost": 77,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 57,
+       "child_canon": "00000000020000801002000004200000",
+       "child_cost": 87,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000020000001202000004200000",
+       "child_cost": 91,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000020040801202000000200000",
+     "n_generators": 3,
+     "min_gen_cost": 77,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003800000008006000",
+       "child_cost": 77,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000000020040800202000000200000",
+       "child_cost": 87,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000020040001202000000200000",
+       "child_cost": 87,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000020000801202000000200800",
+     "n_generators": 3,
+     "min_gen_cost": 79,
+     "generators": [
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000020000801200000000200800",
+       "child_cost": 88,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000000020000800202000000200800",
+       "child_cost": 88,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 89,
+       "child_canon": "00000000000000801202000000200800",
+       "child_cost": 79,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000020000801202000040200000",
+     "n_generators": 3,
+     "min_gen_cost": 79,
+     "generators": [
+      {
+       "removed_bit": 57,
+       "child_canon": "00000000020000801002000040200000",
+       "child_cost": 80,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000000020000800202000040200000",
+       "child_cost": 79,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000020000001202000040200000",
+       "child_cost": 85,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000020000801222000000200000",
+     "n_generators": 3,
+     "min_gen_cost": 79,
+     "generators": [
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000020000801220000000200000",
+       "child_cost": 88,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000000020000800222000000200000",
+       "child_cost": 83,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 89,
+       "child_canon": "00000000000000801222000000200000",
+       "child_cost": 79,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000008000000809002000080002000",
+     "n_generators": 3,
+     "min_gen_cost": 80,
+     "generators": [
+      {
+       "removed_bit": 57,
+       "child_canon": "00000008000000801002000080002000",
+       "child_cost": 81,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000008000000808002000080002000",
+       "child_cost": 89,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 89,
+       "child_canon": "00000000200000003800000000800200",
+       "child_cost": 80,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000008000000809002000080000200",
+     "n_generators": 3,
+     "min_gen_cost": 82,
+     "generators": [
+      {
+       "removed_bit": 49,
+       "child_canon": "00000008000000009002000080000200",
+       "child_cost": 82,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000008000000808002000080000200",
+       "child_cost": 82,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000008000000809000000080000200",
+       "child_cost": 90,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000020000801202000000280000",
+     "n_generators": 1,
+     "min_gen_cost": 83,
+     "generators": [
+      {
+       "removed_bit": 60,
+       "child_canon": "00000000020000800202000000280000",
+       "child_cost": 83,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000008000000809002000080000001",
+     "n_generators": 3,
+     "min_gen_cost": 86,
+     "generators": [
+      {
+       "removed_bit": 49,
+       "child_canon": "00000008000000009002000080000001",
+       "child_cost": 94,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 57,
+       "child_canon": "00000008000000801002000080000001",
+       "child_cost": 90,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 89,
+       "child_canon": "00000000200000003800000000000201",
+       "child_cost": 86,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000008000000809002000080000002",
+     "n_generators": 3,
+     "min_gen_cost": 86,
+     "generators": [
+      {
+       "removed_bit": 49,
+       "child_canon": "00000008000000009002000080000002",
+       "child_cost": 94,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 57,
+       "child_canon": "00000008000000801002000080000002",
+       "child_cost": 90,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 89,
+       "child_canon": "00000000200000003800000000000a00",
+       "child_cost": 86,
+       "child_in_row_orbit": false
+      }
+     ]
+    }
+   ]
+  },
+  "s70j": {
+   "row_hex": "00000000000000801282000000200000",
+   "row_canon": "00000000000000801282000000200000",
+   "legal_bits_own": 70,
+   "unique_covering_root_orbits": 115,
+   "own_sweep_tier_all_refuted": 70,
+   "unreachable_no_generator": 0,
+   "fresh_targets": 45,
+   "fresh_ranked": [
+    {
+     "root_canon": "00000000000000805282000000200000",
+     "n_generators": 3,
+     "min_gen_cost": 62,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000805282000000000000",
+       "child_cost": 62,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000000000805280000000200000",
+       "child_cost": 79,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000000000005282000000200000",
+       "child_cost": 84,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000200801282000000200000",
+     "n_generators": 3,
+     "min_gen_cost": 67,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003800800008000020",
+       "child_cost": 71,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000000200801280000000200000",
+       "child_cost": 78,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 55,
+       "child_canon": "00000000000200801202000000200000",
+       "child_cost": 67,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000801282000000200020",
+     "n_generators": 3,
+     "min_gen_cost": 68,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003880000008000020",
+       "child_cost": 68,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 55,
+       "child_canon": "00000000000000801202000000200020",
+       "child_cost": 75,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 57,
+       "child_canon": "00000000000000801082000000200020",
+       "child_cost": 73,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000803282000000200000",
+     "n_generators": 3,
+     "min_gen_cost": 68,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000803282000000000000",
+       "child_cost": 68,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000000000803280000000200000",
+       "child_cost": 75,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000000000003282000000200000",
+       "child_cost": 78,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000821282000000200000",
+     "n_generators": 3,
+     "min_gen_cost": 68,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000821282000000000000",
+       "child_cost": 68,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000000000821280000000200000",
+       "child_cost": 77,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000000000021282000000200000",
+       "child_cost": 82,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000008000000829002000000000020",
+     "n_generators": 3,
+     "min_gen_cost": 68,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003880000008000020",
+       "child_cost": 68,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 55,
+       "child_canon": "00000000200000003880000000000200",
+       "child_cost": 81,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 57,
+       "child_canon": "00000008000000821002000000000020",
+       "child_cost": 79,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000801282000000210000",
+     "n_generators": 3,
+     "min_gen_cost": 70,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003900000008000020",
+       "child_cost": 73,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 55,
+       "child_canon": "00000000000000801202000000210000",
+       "child_cost": 70,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 57,
+       "child_canon": "00000000000000801082000000210000",
+       "child_cost": 75,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000801282000008200000",
+     "n_generators": 3,
+     "min_gen_cost": 70,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003a00000008000020",
+       "child_cost": 70,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 55,
+       "child_canon": "00000000000000801202000008200000",
+       "child_cost": 71,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 57,
+       "child_canon": "00000000000000801082000008200000",
+       "child_cost": 79,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000801283000000200000",
+     "n_generators": 3,
+     "min_gen_cost": 70,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003801000008000020",
+       "child_cost": 70,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000000000801281000000200000",
+       "child_cost": 77,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 55,
+       "child_canon": "00000000000000801203000000200000",
+       "child_cost": 70,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000c01282000000200000",
+     "n_generators": 3,
+     "min_gen_cost": 70,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003801000008000020",
+       "child_cost": 70,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 55,
+       "child_canon": "00000000000000c01202000000200000",
+       "child_cost": 78,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000000000401282000000200000",
+       "child_cost": 90,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000200000801282000000200000",
+     "n_generators": 3,
+     "min_gen_cost": 70,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003a00000008000020",
+       "child_cost": 70,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 55,
+       "child_canon": "00000000200000003a00000000000200",
+       "child_cost": 76,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 57,
+       "child_canon": "00000000200000801082000000200000",
+       "child_cost": 84,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000801282002000200000",
+     "n_generators": 3,
+     "min_gen_cost": 71,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003800800008000020",
+       "child_cost": 71,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 55,
+       "child_canon": "00000000000000801202002000200000",
+       "child_cost": 74,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000000000001282002000200000",
+       "child_cost": 90,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000801682000000200000",
+     "n_generators": 3,
+     "min_gen_cost": 72,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003800004008000020",
+       "child_cost": 72,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000000000801680000000200000",
+       "child_cost": 84,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000000000001682000000200000",
+       "child_cost": 90,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000801a82000000200000",
+     "n_generators": 3,
+     "min_gen_cost": 72,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003802000008000020",
+       "child_cost": 72,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000000000801a80000000200000",
+       "child_cost": 78,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000000000001a82000000200000",
+       "child_cost": 86,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000801282000002200000",
+     "n_generators": 3,
+     "min_gen_cost": 73,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003800000808000020",
+       "child_cost": 73,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 57,
+       "child_canon": "00000000000000801082000002200000",
+       "child_cost": 87,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000000000001282000002200000",
+       "child_cost": 85,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000801282200000200000",
+     "n_generators": 3,
+     "min_gen_cost": 73,
+     "generators": [
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000000000801280200000200000",
+       "child_cost": 77,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 55,
+       "child_canon": "00000000000000801202200000200000",
+       "child_cost": 73,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000000000000800282200000200000",
+       "child_cost": 92,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000080000801282000000200000",
+     "n_generators": 3,
+     "min_gen_cost": 73,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003800000808000020",
+       "child_cost": 73,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000080000801280000000200000",
+       "child_cost": 75,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 57,
+       "child_canon": "00000000080000801082000000200000",
+       "child_cost": 75,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000008000000829002000000000001",
+     "n_generators": 4,
+     "min_gen_cost": 73,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000801282000000000400",
+       "child_cost": 73,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 49,
+       "child_canon": "00000008000000029002000000000001",
+       "child_cost": 86,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 55,
+       "child_canon": "00000000200000003800000000000201",
+       "child_cost": 86,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 57,
+       "child_canon": "00000008000000821002000000000001",
+       "child_cost": 86,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000008000000829002000000010000",
+     "n_generators": 3,
+     "min_gen_cost": 73,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003900000008000020",
+       "child_cost": 73,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 55,
+       "child_canon": "00000000200000003900000000000200",
+       "child_cost": 82,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 57,
+       "child_canon": "00000008000000821002000000010000",
+       "child_cost": 88,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000801282100000200000",
+     "n_generators": 3,
+     "min_gen_cost": 74,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003800000008000030",
+       "child_cost": 74,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 57,
+       "child_canon": "00000000000000801082100000200000",
+       "child_cost": 90,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000000000001282100000200000",
+       "child_cost": 90,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000801282800000200000",
+     "n_generators": 3,
+     "min_gen_cost": 74,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003800002008000020",
+       "child_cost": 74,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000000000801280800000200000",
+       "child_cost": 79,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 55,
+       "child_canon": "00000000000000801202800000200000",
+       "child_cost": 79,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000811282000000200000",
+     "n_generators": 3,
+     "min_gen_cost": 74,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000811282000000000000",
+       "child_cost": 74,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000000000811280000000200000",
+       "child_cost": 82,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000000000011282000000200000",
+       "child_cost": 83,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000841282000000200000",
+     "n_generators": 3,
+     "min_gen_cost": 74,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003800000008000030",
+       "child_cost": 74,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000000000841280000000200000",
+       "child_cost": 80,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 57,
+       "child_canon": "00000000000000841082000000200000",
+       "child_cost": 86,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000a01282000000200000",
+     "n_generators": 3,
+     "min_gen_cost": 74,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003800002008000020",
+       "child_cost": 74,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 55,
+       "child_canon": "00000000000000a01202000000200000",
+       "child_cost": 82,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000000000201282000000200000",
+       "child_cost": 86,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000008000000829002000000000800",
+     "n_generators": 3,
+     "min_gen_cost": 74,
+     "generators": [
+      {
+       "removed_bit": 55,
+       "child_canon": "00000000200000003800000000000202",
+       "child_cost": 74,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 57,
+       "child_canon": "00000008000000821002000000000800",
+       "child_cost": 87,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000008000000828002000000000800",
+       "child_cost": 98,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000801282000001200000",
+     "n_generators": 3,
+     "min_gen_cost": 75,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003800000009000020",
+       "child_cost": 75,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 57,
+       "child_canon": "00000000000000801082000001200000",
+       "child_cost": 86,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000000000001282000001200000",
+       "child_cost": 90,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000801282000800200000",
+     "n_generators": 3,
+     "min_gen_cost": 75,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "0000000000000000380000000a000020",
+       "child_cost": 75,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000000000801280000800200000",
+       "child_cost": 79,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 57,
+       "child_canon": "00000000000000801082000800200000",
+       "child_cost": 82,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000801282400000200000",
+     "n_generators": 3,
+     "min_gen_cost": 75,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "0000000000000000380000000c000020",
+       "child_cost": 75,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 55,
+       "child_canon": "00000000000000801202400000200000",
+       "child_cost": 86,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000000000001282400000200000",
+       "child_cost": 88,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000901282000000200000",
+     "n_generators": 3,
+     "min_gen_cost": 75,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "0000000000000000380000000c000020",
+       "child_cost": 75,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000000000901280000000200000",
+       "child_cost": 84,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 55,
+       "child_canon": "00000000000000901202000000200000",
+       "child_cost": 86,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000080801282000000200000",
+     "n_generators": 3,
+     "min_gen_cost": 75,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "0000000000000000380000000a000020",
+       "child_cost": 75,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 57,
+       "child_canon": "00000000000080801082000000200000",
+       "child_cost": 85,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000000080001282000000200000",
+       "child_cost": 88,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000040000801282000000200000",
+     "n_generators": 3,
+     "min_gen_cost": 75,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003800000009000020",
+       "child_cost": 75,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000040000801280000000200000",
+       "child_cost": 87,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 57,
+       "child_canon": "00000000040000801082000000200000",
+       "child_cost": 86,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000008000000829002000000000002",
+     "n_generators": 4,
+     "min_gen_cost": 75,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000801282000000000200",
+       "child_cost": 75,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 49,
+       "child_canon": "00000008000000029002000000000002",
+       "child_cost": 90,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 55,
+       "child_canon": "00000000200000003800000000000a00",
+       "child_cost": 86,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 57,
+       "child_canon": "00000008000000821002000000000002",
+       "child_cost": 90,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000801282000000300000",
+     "n_generators": 3,
+     "min_gen_cost": 76,
+     "generators": [
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000000000801280000000300000",
+       "child_cost": 86,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 55,
+       "child_canon": "00000000000000801202000000300000",
+       "child_cost": 76,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 57,
+       "child_canon": "00000000000000801082000000300000",
+       "child_cost": 85,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000801382000000200000",
+     "n_generators": 3,
+     "min_gen_cost": 76,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003800000008010020",
+       "child_cost": 76,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000000000801380000000200000",
+       "child_cost": 88,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000000000001382000000200000",
+       "child_cost": 93,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000010000829002000000000800",
+     "n_generators": 4,
+     "min_gen_cost": 76,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000801282000100000000",
+       "child_cost": 76,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 55,
+       "child_canon": "00000000010000809002000000000800",
+       "child_cost": 83,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 57,
+       "child_canon": "00000000010000821002000000000800",
+       "child_cost": 87,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000010000029002000000000800",
+       "child_cost": 95,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000801282000000200800",
+     "n_generators": 3,
+     "min_gen_cost": 78,
+     "generators": [
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000000000801280000000200800",
+       "child_cost": 78,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 55,
+       "child_canon": "00000000000000801202000000200800",
+       "child_cost": 79,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000000000000800282000000200800",
+       "child_cost": 94,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000801282004000200000",
+     "n_generators": 3,
+     "min_gen_cost": 78,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003c00000008000020",
+       "child_cost": 78,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 55,
+       "child_canon": "00000000000000801202004000200000",
+       "child_cost": 81,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 57,
+       "child_canon": "00000000000000801082004000200000",
+       "child_cost": 85,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000400801282000000200000",
+     "n_generators": 3,
+     "min_gen_cost": 78,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003c00000008000020",
+       "child_cost": 78,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 55,
+       "child_canon": "00000000000400801202000000200000",
+       "child_cost": 85,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 57,
+       "child_canon": "00000000000400801082000000200000",
+       "child_cost": 89,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "000000000000008012a2000000200000",
+     "n_generators": 3,
+     "min_gen_cost": 79,
+     "generators": [
+      {
+       "removed_bit": 49,
+       "child_canon": "000000000000008012a0000000200000",
+       "child_cost": 89,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 55,
+       "child_canon": "00000000000000801222000000200000",
+       "child_cost": 79,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "000000000000008002a2000000200000",
+       "child_cost": 102,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000801282000080200000",
+     "n_generators": 3,
+     "min_gen_cost": 80,
+     "generators": [
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000000000801280000080200000",
+       "child_cost": 80,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000000000000800282000080200000",
+       "child_cost": 95,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000000000001282000080200000",
+       "child_cost": 91,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000801282001000200000",
+     "n_generators": 1,
+     "min_gen_cost": 80,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003800001008000020",
+       "child_cost": 80,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000100801282000000200000",
+     "n_generators": 1,
+     "min_gen_cost": 80,
+     "generators": [
+      {
+       "removed_bit": 21,
+       "child_canon": "00000000000000003800001008000020",
+       "child_cost": 80,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000809282000000200000",
+     "n_generators": 1,
+     "min_gen_cost": 82,
+     "generators": [
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000000000809280000000200000",
+       "child_cost": 82,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000801282000000280000",
+     "n_generators": 1,
+     "min_gen_cost": 105,
+     "generators": [
+      {
+       "removed_bit": 60,
+       "child_canon": "00000000000000800282000000280000",
+       "child_cost": 105,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000008000000829002000000002000",
+     "n_generators": 1,
+     "min_gen_cost": 107,
+     "generators": [
+      {
+       "removed_bit": 60,
+       "child_canon": "00000008000000828002000000002000",
+       "child_cost": 107,
+       "child_in_row_orbit": false
+      }
+     ]
+    }
+   ]
+  },
+  "s74h": {
+   "row_hex": "00000000000000889002000000000800",
+   "row_canon": "00000000000000889002000000000800",
+   "legal_bits_own": 74,
+   "unique_covering_root_orbits": 115,
+   "own_sweep_tier_all_refuted": 74,
+   "unreachable_no_generator": 0,
+   "fresh_targets": 41,
+   "fresh_ranked": [
+    {
+     "root_canon": "00000000000000889802000000000800",
+     "n_generators": 6,
+     "min_gen_cost": 60,
+     "generators": [
+      {
+       "removed_bit": 11,
+       "child_canon": "00000000000000803222000000000000",
+       "child_cost": 69,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000000000889800000000000800",
+       "child_cost": 73,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000000000000888802000000000800",
+       "child_cost": 78,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 63,
+       "child_canon": "00000000000000003802000000008200",
+       "child_cost": 71,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 67,
+       "child_canon": "00000000000000803202000000200000",
+       "child_cost": 60,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000000000089802000000000800",
+       "child_cost": 81,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000889002002000000800",
+     "n_generators": 4,
+     "min_gen_cost": 63,
+     "generators": [
+      {
+       "removed_bit": 11,
+       "child_canon": "00000000000000889002002000000000",
+       "child_cost": 70,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000000000000888002002000000800",
+       "child_cost": 85,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 63,
+       "child_canon": "00000000000000003800800000020002",
+       "child_cost": 76,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 67,
+       "child_canon": "00000000000000801202008000200000",
+       "child_cost": 63,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000889002000008000800",
+     "n_generators": 3,
+     "min_gen_cost": 65,
+     "generators": [
+      {
+       "removed_bit": 11,
+       "child_canon": "00000000000000889002000008000000",
+       "child_cost": 65,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 63,
+       "child_canon": "00000000000000003a00000000020002",
+       "child_cost": 82,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 67,
+       "child_canon": "00000000000000801202000008200000",
+       "child_cost": 71,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000200889002000000000800",
+     "n_generators": 4,
+     "min_gen_cost": 65,
+     "generators": [
+      {
+       "removed_bit": 11,
+       "child_canon": "00000000000000801222008000000000",
+       "child_cost": 70,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000000000200888002000000000800",
+       "child_cost": 85,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 63,
+       "child_canon": "00000000000000003800800000008200",
+       "child_cost": 80,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 67,
+       "child_canon": "00000000000200809002000000000800",
+       "child_cost": 65,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000c89002000000000800",
+     "n_generators": 5,
+     "min_gen_cost": 66,
+     "generators": [
+      {
+       "removed_bit": 11,
+       "child_canon": "00000000000000801226000000000000",
+       "child_cost": 66,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000000000c89000000000000800",
+       "child_cost": 77,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000000000000c88002000000000800",
+       "child_cost": 79,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 63,
+       "child_canon": "00000000000000003801000000008200",
+       "child_cost": 69,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000000000489002000000000800",
+       "child_cost": 86,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000889002000000080800",
+     "n_generators": 6,
+     "min_gen_cost": 67,
+     "generators": [
+      {
+       "removed_bit": 11,
+       "child_canon": "00000000000000889002000000080000",
+       "child_cost": 73,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000000000889000000000080800",
+       "child_cost": 87,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000000000000888002000000080800",
+       "child_cost": 88,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 63,
+       "child_canon": "00000000000000881002000000080800",
+       "child_cost": 74,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 67,
+       "child_canon": "00000000000000801202000000202000",
+       "child_cost": 67,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000000000089002000000080800",
+       "child_cost": 86,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000889002000000100800",
+     "n_generators": 6,
+     "min_gen_cost": 67,
+     "generators": [
+      {
+       "removed_bit": 11,
+       "child_canon": "00000000000000889002000000100000",
+       "child_cost": 74,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000000000889000000000100800",
+       "child_cost": 84,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000000000000888002000000100800",
+       "child_cost": 88,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 63,
+       "child_canon": "00000000000000881002000000100800",
+       "child_cost": 72,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 67,
+       "child_canon": "00000000000000801202000000201000",
+       "child_cost": 67,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000000000089002000000100800",
+       "child_cost": 87,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000889002000000008800",
+     "n_generators": 6,
+     "min_gen_cost": 68,
+     "generators": [
+      {
+       "removed_bit": 11,
+       "child_canon": "00000000000000889002000000008000",
+       "child_cost": 68,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000000000889000000000008800",
+       "child_cost": 83,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000000000000888002000000008800",
+       "child_cost": 87,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 63,
+       "child_canon": "00000000000000003800200000020002",
+       "child_cost": 81,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 67,
+       "child_canon": "00000000000000801202000000220000",
+       "child_cost": 72,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000000000089002000000008800",
+       "child_cost": 86,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000889002800000000800",
+     "n_generators": 6,
+     "min_gen_cost": 69,
+     "generators": [
+      {
+       "removed_bit": 11,
+       "child_canon": "00000000000000889002800000000000",
+       "child_cost": 71,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000000000889000800000000800",
+       "child_cost": 80,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000000000000888002800000000800",
+       "child_cost": 79,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 63,
+       "child_canon": "00000000000000003800002000020002",
+       "child_cost": 69,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 67,
+       "child_canon": "0000000000000080120a000000200000",
+       "child_cost": 69,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000000000089002800000000800",
+       "child_cost": 89,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000889002000000010800",
+     "n_generators": 3,
+     "min_gen_cost": 70,
+     "generators": [
+      {
+       "removed_bit": 11,
+       "child_canon": "00000000000000889002000000010000",
+       "child_cost": 81,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 63,
+       "child_canon": "00000000000000003900000000020002",
+       "child_cost": 80,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 67,
+       "child_canon": "00000000000000801202000000210000",
+       "child_cost": 70,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "000000000000008a9002000000000800",
+     "n_generators": 5,
+     "min_gen_cost": 70,
+     "generators": [
+      {
+       "removed_bit": 49,
+       "child_canon": "000000000000008a9000000000000800",
+       "child_cost": 86,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "000000000000008a8002000000000800",
+       "child_cost": 96,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 63,
+       "child_canon": "000000000000008a1002000000000800",
+       "child_cost": 79,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 67,
+       "child_canon": "00000000000000801282000000200000",
+       "child_cost": 70,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "000000000000000a9002000000000800",
+       "child_cost": 90,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000989002000000000800",
+     "n_generators": 6,
+     "min_gen_cost": 70,
+     "generators": [
+      {
+       "removed_bit": 11,
+       "child_canon": "00000000000000801232000000000000",
+       "child_cost": 77,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000000000989000000000000800",
+       "child_cost": 81,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000000000000988002000000000800",
+       "child_cost": 85,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 63,
+       "child_canon": "00000000000000003800000004008200",
+       "child_cost": 70,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 67,
+       "child_canon": "00000000000000909002000000000800",
+       "child_cost": 78,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000000000189002000000000800",
+       "child_cost": 100,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000008881202000000200000",
+     "n_generators": 3,
+     "min_gen_cost": 70,
+     "generators": [
+      {
+       "removed_bit": 11,
+       "child_canon": "00000000000000801222200000000000",
+       "child_cost": 70,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000000000008880202000000200000",
+       "child_cost": 82,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000000008081202000000200000",
+       "child_cost": 98,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000100889002000000000800",
+     "n_generators": 6,
+     "min_gen_cost": 70,
+     "generators": [
+      {
+       "removed_bit": 11,
+       "child_canon": "00000000000000801222010000000000",
+       "child_cost": 75,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000000100889000000000000800",
+       "child_cost": 78,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000000000100888002000000000800",
+       "child_cost": 85,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 63,
+       "child_canon": "00000000000000003800001000008200",
+       "child_cost": 74,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 67,
+       "child_canon": "00000000000100809002000000000800",
+       "child_cost": 70,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000000100089002000000000800",
+       "child_cost": 93,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000a89002000000000800",
+     "n_generators": 6,
+     "min_gen_cost": 71,
+     "generators": [
+      {
+       "removed_bit": 11,
+       "child_canon": "0000000000000080122a000000000000",
+       "child_cost": 73,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000000000a89000000000000800",
+       "child_cost": 83,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000000000000a88002000000000800",
+       "child_cost": 82,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 63,
+       "child_canon": "00000000000000003800002000008200",
+       "child_cost": 71,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 67,
+       "child_canon": "00000000000000a09002000000000800",
+       "child_cost": 72,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000000000289002000000000800",
+       "child_cost": 92,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000889002001000000800",
+     "n_generators": 6,
+     "min_gen_cost": 72,
+     "generators": [
+      {
+       "removed_bit": 11,
+       "child_canon": "00000000000000889002001000000000",
+       "child_cost": 75,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000000000889000001000000800",
+       "child_cost": 87,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000000000000888002001000000800",
+       "child_cost": 93,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 63,
+       "child_canon": "00000000000000003800001000020002",
+       "child_cost": 79,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 67,
+       "child_canon": "00000000000000801202010000200000",
+       "child_cost": 72,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000000000089002001000000800",
+       "child_cost": 92,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000889003000000000800",
+     "n_generators": 6,
+     "min_gen_cost": 72,
+     "generators": [
+      {
+       "removed_bit": 11,
+       "child_canon": "00000000000000889003000000000000",
+       "child_cost": 72,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000000000889001000000000800",
+       "child_cost": 86,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000000000000888003000000000800",
+       "child_cost": 88,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 63,
+       "child_canon": "00000000000000003801000000020002",
+       "child_cost": 76,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 67,
+       "child_canon": "00000000000000801206000000200000",
+       "child_cost": 73,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000000000089003000000000800",
+       "child_cost": 91,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000200000003a00000000008200",
+     "n_generators": 2,
+     "min_gen_cost": 72,
+     "generators": [
+      {
+       "removed_bit": 11,
+       "child_canon": "00000000000000801222000008000000",
+       "child_cost": 72,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 63,
+       "child_canon": "00000000000000003a00000000008200",
+       "child_cost": 82,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000220000003800000000008200",
+     "n_generators": 5,
+     "min_gen_cost": 72,
+     "generators": [
+      {
+       "removed_bit": 11,
+       "child_canon": "00000000000000801222000000002000",
+       "child_cost": 74,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000220000001800000000008200",
+       "child_cost": 75,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000000220000002800000000008200",
+       "child_cost": 83,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 63,
+       "child_canon": "00000000020000003800000000008200",
+       "child_cost": 72,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000220000003000000000008200",
+       "child_cost": 95,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000008000000809002200000000200",
+     "n_generators": 6,
+     "min_gen_cost": 73,
+     "generators": [
+      {
+       "removed_bit": 11,
+       "child_canon": "00000000000000801222000000000002",
+       "child_cost": 79,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 49,
+       "child_canon": "00000008000000009002200000000200",
+       "child_cost": 81,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000008000000808002200000000200",
+       "child_cost": 83,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 63,
+       "child_canon": "00000008000000003800000000008200",
+       "child_cost": 75,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 67,
+       "child_canon": "00000008000000809002000000000200",
+       "child_cost": 73,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000008000000809000200000000200",
+       "child_cost": 95,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000200000003880000000008200",
+     "n_generators": 2,
+     "min_gen_cost": 74,
+     "generators": [
+      {
+       "removed_bit": 11,
+       "child_canon": "00000000000000801222000000000020",
+       "child_cost": 74,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 63,
+       "child_canon": "00000000000000003880000000008200",
+       "child_cost": 80,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000200000003900000000008200",
+     "n_generators": 3,
+     "min_gen_cost": 74,
+     "generators": [
+      {
+       "removed_bit": 11,
+       "child_canon": "00000000000000801222000000010000",
+       "child_cost": 74,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 63,
+       "child_canon": "00000000000000003900000000008200",
+       "child_cost": 85,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 67,
+       "child_canon": "00000000200000003900000000000200",
+       "child_cost": 82,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000889002000000000820",
+     "n_generators": 2,
+     "min_gen_cost": 75,
+     "generators": [
+      {
+       "removed_bit": 63,
+       "child_canon": "00000000000000003880000000020002",
+       "child_cost": 87,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 67,
+       "child_canon": "00000000000000801202000000200020",
+       "child_cost": 75,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000889002020000000800",
+     "n_generators": 5,
+     "min_gen_cost": 75,
+     "generators": [
+      {
+       "removed_bit": 11,
+       "child_canon": "00000000000000889002020000000000",
+       "child_cost": 77,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000000000889000020000000800",
+       "child_cost": 80,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000000000000888002020000000800",
+       "child_cost": 83,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 63,
+       "child_canon": "00000000000000881002020000000800",
+       "child_cost": 75,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000000000089002020000000800",
+       "child_cost": 98,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000208801202000000200000",
+     "n_generators": 2,
+     "min_gen_cost": 76,
+     "generators": [
+      {
+       "removed_bit": 11,
+       "child_canon": "00000000000000801222002000000000",
+       "child_cost": 76,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000000208801200000000200000",
+       "child_cost": 85,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000889002000000000a00",
+     "n_generators": 6,
+     "min_gen_cost": 77,
+     "generators": [
+      {
+       "removed_bit": 11,
+       "child_canon": "00000000000000889002000000000200",
+       "child_cost": 81,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000000000889000000000000a00",
+       "child_cost": 93,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000000000000888002000000000a00",
+       "child_cost": 95,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 63,
+       "child_canon": "00000000000000881002000000000a00",
+       "child_cost": 82,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 67,
+       "child_canon": "00000000000000801202000000200002",
+       "child_cost": 77,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000000000089002000000000a00",
+       "child_cost": 97,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000899002000000000800",
+     "n_generators": 5,
+     "min_gen_cost": 77,
+     "generators": [
+      {
+       "removed_bit": 11,
+       "child_canon": "00000000000000801322000000000000",
+       "child_cost": 77,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000000000899000000000000800",
+       "child_cost": 91,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000000000000898002000000000800",
+       "child_cost": 95,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 63,
+       "child_canon": "00000000000000891002000000000800",
+       "child_cost": 87,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000000000099002000000000800",
+       "child_cost": 95,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000889002008000000800",
+     "n_generators": 2,
+     "min_gen_cost": 78,
+     "generators": [
+      {
+       "removed_bit": 11,
+       "child_canon": "00000000000000889002008000000000",
+       "child_cost": 78,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000000000089002008000000800",
+       "child_cost": 103,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000889002040000000800",
+     "n_generators": 5,
+     "min_gen_cost": 78,
+     "generators": [
+      {
+       "removed_bit": 11,
+       "child_canon": "00000000000000889002040000000000",
+       "child_cost": 78,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000000000889000040000000800",
+       "child_cost": 84,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000000000000888002040000000800",
+       "child_cost": 86,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 63,
+       "child_canon": "00000000000000881002040000000800",
+       "child_cost": 85,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000000000089002040000000800",
+       "child_cost": 96,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000088801202000000200000",
+     "n_generators": 5,
+     "min_gen_cost": 78,
+     "generators": [
+      {
+       "removed_bit": 11,
+       "child_canon": "00000000000000801222000800000000",
+       "child_cost": 78,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000000088801200000000200000",
+       "child_cost": 94,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000000000088800202000000200000",
+       "child_cost": 89,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 63,
+       "child_canon": "00000000000088801002000000200000",
+       "child_cost": 78,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000000088001202000000200000",
+       "child_cost": 92,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000008000000809002200000200000",
+     "n_generators": 3,
+     "min_gen_cost": 78,
+     "generators": [
+      {
+       "removed_bit": 11,
+       "child_canon": "00000000000000801222000000000800",
+       "child_cost": 78,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000008000000808002200000200000",
+       "child_cost": 95,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000008000000809000200000200000",
+       "child_cost": 101,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000889002000000200800",
+     "n_generators": 3,
+     "min_gen_cost": 79,
+     "generators": [
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000000000889000000000200800",
+       "child_cost": 93,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000000000000888002000000200800",
+       "child_cost": 96,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 67,
+       "child_canon": "00000000000000801202000000200800",
+       "child_cost": 79,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000889002200000000800",
+     "n_generators": 2,
+     "min_gen_cost": 79,
+     "generators": [
+      {
+       "removed_bit": 60,
+       "child_canon": "00000000000000888002200000000800",
+       "child_cost": 98,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 67,
+       "child_canon": "00000000000000801222000000200000",
+       "child_cost": 79,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000889002400000000800",
+     "n_generators": 6,
+     "min_gen_cost": 79,
+     "generators": [
+      {
+       "removed_bit": 11,
+       "child_canon": "00000000000000889002400000000000",
+       "child_cost": 80,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000000000889000400000000800",
+       "child_cost": 95,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000000000000888002400000000800",
+       "child_cost": 91,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 63,
+       "child_canon": "00000000000000003800000004020002",
+       "child_cost": 80,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 67,
+       "child_canon": "00000000000000801212000000200000",
+       "child_cost": 79,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000000000089002400000000800",
+       "child_cost": 97,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000008000000809002200000000400",
+     "n_generators": 6,
+     "min_gen_cost": 79,
+     "generators": [
+      {
+       "removed_bit": 11,
+       "child_canon": "00000000000000801222000000000001",
+       "child_cost": 79,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 49,
+       "child_canon": "00000008000000009002200000000400",
+       "child_cost": 92,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000008000000808002200000000400",
+       "child_cost": 96,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 63,
+       "child_canon": "00000008000000801002200000000400",
+       "child_cost": 85,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 67,
+       "child_canon": "00000008000000809002000000000400",
+       "child_cost": 80,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000008000000809000200000000400",
+       "child_cost": 101,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000889002004000000800",
+     "n_generators": 3,
+     "min_gen_cost": 81,
+     "generators": [
+      {
+       "removed_bit": 11,
+       "child_canon": "00000000000000889002004000000000",
+       "child_cost": 81,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 63,
+       "child_canon": "00000000000000003c00000000020002",
+       "child_cost": 83,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 67,
+       "child_canon": "00000000000000801202004000200000",
+       "child_cost": 81,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000010008801202000000200000",
+     "n_generators": 6,
+     "min_gen_cost": 81,
+     "generators": [
+      {
+       "removed_bit": 11,
+       "child_canon": "00000000000000801222000000400000",
+       "child_cost": 81,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000010008801200000000200000",
+       "child_cost": 94,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000000010008800202000000200000",
+       "child_cost": 96,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 63,
+       "child_canon": "00000000010008801002000000200000",
+       "child_cost": 84,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 67,
+       "child_canon": "00000000010000801202000000200000",
+       "child_cost": 83,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 71,
+       "child_canon": "00000000010008001202000000200000",
+       "child_cost": 100,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000400889002000000000800",
+     "n_generators": 3,
+     "min_gen_cost": 84,
+     "generators": [
+      {
+       "removed_bit": 11,
+       "child_canon": "00000000000000801222004000000000",
+       "child_cost": 84,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 63,
+       "child_canon": "00000000000000003c00000000008200",
+       "child_cost": 89,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 67,
+       "child_canon": "00000000000400801202000000200000",
+       "child_cost": 85,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000889022000000000800",
+     "n_generators": 2,
+     "min_gen_cost": 88,
+     "generators": [
+      {
+       "removed_bit": 49,
+       "child_canon": "00000000000000889020000000000800",
+       "child_cost": 92,
+       "child_in_row_orbit": false
+      },
+      {
+       "removed_bit": 60,
+       "child_canon": "00000000000000888022000000000800",
+       "child_cost": 88,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000200000003800000000008202",
+     "n_generators": 1,
+     "min_gen_cost": 93,
+     "generators": [
+      {
+       "removed_bit": 60,
+       "child_canon": "00000000200000002800000000008202",
+       "child_cost": 93,
+       "child_in_row_orbit": false
+      }
+     ]
+    },
+    {
+     "root_canon": "00000000000000889202000000000800",
+     "n_generators": 1,
+     "min_gen_cost": 94,
+     "generators": [
+      {
+       "removed_bit": 60,
+       "child_canon": "00000000000000888202000000000800",
+       "child_cost": 94,
+       "child_in_row_orbit": false
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "caveats": {
+  "fresh_vs_registry": "fresh means 'not in the row's own sweep'. A fresh root may still have been swept as part of ANOTHER candidate's sweep - in that case it is necessarily REFUTED (it cannot be WIN7 or the row would already be closed). The engine lane must check the fresh roots against the global swept-root registry before sweeping their generator children.",
+  "generator_openness": "generator children listed are canonical forms; whether each child is still open at 1419 and unswept must be checked against the manifest and the sweep registry by the engine lane."
+ },
+ "engine_lane_priority": {
+  "s74h": "cheapest fresh attack of all three rows: child 00000000000000803202000000200000 (cost 60) tests fresh root 00000000000000889802000000000800",
+  "s65k": "child 00000000000000003802000008002000 (cost 61) tests fresh root 00000000020000801a02000000200000",
+  "s70j": "child 00000000000000805282000000000000 (cost 62) tests fresh root 00000000000000805282000000200000 - NOT the cost-60c record's cost-62 neighbor 00000000000000801282020000000000, whose 70j-covering roots are both own-sweep/REFUTED (see the corrected pre-check)"
+ },
+ "interpretation_guard": "geometry and bookkeeping only; no game-theoretic value is asserted; closing a STERILE row still requires a WIN7-D10 certificate on a fresh covering root; REFUTED-D10 proves only absence of WIN7-D10; 11x11 empty board / two-stone root {49,60} / S2 {59,60} / class 1 / class 2 / class 4 remain UNKNOWN"
+}

@@ -1,43 +1,40 @@
 {
- "schema": "n11-class2-lane-cost62-neighbor-70j-coverage-precheck-20261116-v1",
+ "schema": "n11-class2-lane-cost62-neighbor-70j-coverage-precheck-20261116-v2-corrected",
  "date": "2026-11-16",
+ "correction_of": "the v1 of this file (commit 79d8399b) claimed both covering roots (bits 21 and 109 of the cost-62 candidate 00000000000000801282020000000000) are fresh unrefuted targets. That claim was WRONG: the freshness check compared only against the known REFUTED bit-119 cross-cover root and missed the own-sweep tier. Correction published after the orbit-aware fresh-target recomputation (see class2-lane-sterile-rows-orbit-aware-fresh-target-tables-20261116.json).",
  "baseline_record": "head 1419/174/6429/508474/4702/372388; the cost-60c fold record names the cost-62 one-stone-replacement neighbor 00000000000000801282020000000000 (parents 73/5489 and 49/3360 at 1410) and requests a pre-check whether any legal root covers the STERILE 70j row before sweeping",
- "method": "independent third implementation (verified-det3 survival legality; the same implementation that verified all fold row bookkeeping 1405->1419): candidate cost re-enumeration, full 62-root enumeration, D4-orbit-level subset coverage against the three open STERILE rows, D4-equality check against the known REFUTED-D10 cross-cover root (cost-60c bit 119), and orbit-level overlap of the candidate's six 5-stone parents against the cost-65j fold's parents and lost children",
+ "method": "independent third implementation (verified-det3 survival legality), D4-orbit coverage, and tier classification: a covering root R is own-sweep tier iff some 6-subset of R lies in the 70j row orbit AND the removed bit is legal for that subset - such roots were already swept with the 70j child itself (STERILE = all own legal roots REFUTED-D10). Fresh = covering, not own-sweep, with at least one generator child (a child C with R = C|b, b legal for C).",
  "results": {
   "candidate_hex": "00000000000000801282020000000000",
+  "candidate_relation_to_70j": "one-stone-replacement neighbor: 70j - bit 21 + bit 41 (bits {71,60,57,55,49,41} vs 70j {71,60,57,55,49,21})",
   "candidate_popcount": 6,
   "cost_recomputed": 62,
-  "cost_claimed": 62,
   "cost_ok": true,
   "legal_roots_enumerated": 62,
-  "sterile_70j_row": "00000000000000801282000000200000",
   "covers_70j": true,
   "covering_roots": [
    {
-    "bit": 21,
+    "candidate_bit": 21,
     "root_hex": "00000000000000801282020000200000",
-    "d4_canonical_hex": "00000000000000801282020000200000"
+    "root_equals": "70j + bit 41",
+    "tier": "OWN-SWEEP (bit 41 is legal for the 70j row itself: legal_bits_own=70 includes 41) -> already swept with the 70j child, REFUTED-D10 by the STERILE classification. NOT a fresh target."
    },
    {
-    "bit": 109,
+    "candidate_bit": 109,
     "root_hex": "00002000000000801282020000000000",
-    "d4_canonical_hex": "00000000000080829002000000000800"
+    "root_equals": "yflip(70j) + bit 41 (yflip-image of 70j + bit 85)",
+    "tier": "OWN-SWEEP (bit 85 legal for the 70j row) -> same root orbit as 70j + bit 85, already swept, REFUTED-D10. NOT a fresh target."
    }
   ],
   "covers_65k": false,
-  "sterile_65k_row": "00000000020000801202000000200000",
   "covers_74h": false,
-  "sterile_74h_row": "00000000000000889002000000000800",
-  "refuted_119_root_d4_canonical": "00000000000000881282000000200000",
-  "covering_roots_equal_refuted_119": false,
-  "both_covering_roots_fresh_unrefuted_targets": true,
+  "both_covering_roots_fresh": false,
+  "candidate_cannot_close_70j": true,
+  "v1_error_cause": "the v1 freshness check only compared the covering roots against the single known REFUTED bit-119 root; it did not check whether the covering roots belong to the row's own legal-root sweep. Both do.",
   "candidate_open_at_1419": true,
-  "candidate_open_reasoning": "open at 1410 per the cost-60c fold record; not among the 9 cost-65j lost children (D4-orbit check against the published 65j row verification), and the 75e/60c marginal unions equal their own lost children only",
-  "candidate_vs_65j_parents_overlap": "none of the candidate's six parent orbits is a cost-65j fold parent",
-  "n_65j_parents_found": 7,
-  "n_65j_children_found": 0,
-  "candidate_is_65j_lost_child": false
+  "candidate_open_reasoning": "open at 1410 per the cost-60c fold record; not among the 9 cost-65j lost children (D4-orbit check), and the 75e/60c marginal unions equal their own lost children only; none of its six parent orbits is a cost-65j fold parent (re-verified against all 9 fold parents - the v1 inline scan compared only 7 due to a 32-char regex artifact, conclusion unchanged)",
+  "n_65j_parents_compared": 9
  },
- "sweep_decision": "DO NOT SKIP: two of the 62 legal roots (bits 21 and 109) cover the open STERILE 70j row at the orbit level and neither is the known REFUTED bit-119 root; a sweep of this candidate can close 70j if bit 21 or bit 109 yields a WIN7-D10 certificate. 65k and 74h cannot be closed by this candidate's roots (0/62 coverage each).",
- "interpretation_guard": "bookkeeping and geometry only; no game-theoretic value is asserted; a covering root still requires a WIN7-D10 certificate to close the 70j row; REFUTED-D10 sweeps prove only absence of WIN7-D10; STERILE rows are unclosable by depth-10 WIN7 receipts from their own rows, which is NOT a LOSS proof; 11x11 empty board / two-stone root {49,60} / S2 {59,60} / class 1 / class 2 / class 4 remain UNKNOWN"
+ "sweep_decision": "CORRECTED: sweeping the record's cost-62 candidate 00000000000000801282020000000000 CANNOT close the STERILE 70j row - both its 70j-covering roots are own-sweep tier (already REFUTED). The candidate remains worth sweeping only for its own orbit (cost 62). If 70j closure is the goal, the fresh route is the OTHER cost-62 one-stone-replacement neighbor 00000000000000805282000000000000 (= 70j - bit 21 + bit 62), whose covering root 00000000000000805282000000200000 (= 70j + bit 62) is fresh (bit 62 not legal for the 70j row), pending a check against the global swept-root registry.",
+ "interpretation_guard": "bookkeeping and geometry only; no game-theoretic value is asserted; STERILE = unclosable by depth-10 WIN7 receipts from the row's own roots, which is NOT a LOSS proof; a fresh covering root still requires a WIN7-D10 certificate to close the row; 11x11 empty board / two-stone root {49,60} / S2 {59,60} / class 1 / class 2 / class 4 remain UNKNOWN"
 }
