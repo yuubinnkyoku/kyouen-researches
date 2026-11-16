@@ -4,7 +4,7 @@
   "checks": [
     "all 140 r=8 profiles were enumerated from the three pair-only atom counts",
     "K0866 region engine and independent survivor-mask engine agree on every profile and chain",
-    "every r=8 target profile and chain has survivor set {3,7}",
+    "every r=8 target profile and chain has zero-based survivor IDs 3 and 7 (P_3,P_7)",
     "the predicted gamma=0..2 keys are uniformly non-determined, not non-collapse keys",
     "r=7 positive control reproduces the published determined-profile splits",
     "no budget skips"
@@ -262,6 +262,7 @@
       3
     ],
     "r": 8,
+    "player_indexing": "zero-based (0..r-1)",
     "target_families": [
       "4,4,10",
       "4,10,10"
