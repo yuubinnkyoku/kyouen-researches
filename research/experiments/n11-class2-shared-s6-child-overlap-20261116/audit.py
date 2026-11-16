@@ -366,8 +366,18 @@ def main() -> None:
             "runner_memo_key": "raw four-word occupancy; no D4 canonicalization",
         },
         "methods": [lifted["method"], bareiss["method"]],
+        "independent_verification": {
+            "method": bareiss["method"],
+            "agreement": "PASS",
+            "compared": [
+                "all six D4 alignments and legal-move counts",
+                "all per-group safe-pair and directed-edge counts",
+                "all 15 pairwise raw intersections",
+                "all 15 duplicate S7 root masks and source incidences",
+                "all multiplicity histograms and aggregate totals",
+            ],
+        },
         "audit": lifted,
-        "independent_audit": bareiss,
         "interpretation": (
             "15 duplicate raw S7 roots can be removed before search. After that, "
             "13,386 first-reply visits are combinatorially redundant across the 424 "
