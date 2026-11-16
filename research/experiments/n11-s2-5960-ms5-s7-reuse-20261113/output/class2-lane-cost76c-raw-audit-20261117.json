@@ -1,0 +1,313 @@
+{
+  "schema": "n11-class2-lane-cost76c-raw-sweep-audit-20261117-v1",
+  "date": "2026-11-17",
+  "status": "raw-sweep-audited; certificate-extraction-pending; receipt-fold-pending",
+  "role": "Independent reassembly and consistency audit of the ten published cost76c raw batches against the published claim and head-1452 presweep census.",
+  "source_blob_pins": {
+    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76c-inflight-20261116.json": "8932f2d5e100325549a5f251a1d883558cae0708",
+    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-next-target-presweep-1452-20261116.json": "0d9a94a272de9fe45708757f17bfea60239a3c9b",
+    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76c-raw-batch1-20261116.jsonl": "1aebb80f0b4f4384a7207afff4c706433d0fcaff",
+    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76c-raw-batch2-20261116.jsonl": "7b0b471d81ad1815f529bfc98a63acdff73ccc7a",
+    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76c-raw-batch3-20261116.jsonl": "9f5c63cd2c93a276ebcfc6874f2f0aa870921c0c",
+    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76c-raw-batch4-20261116.jsonl": "a7c5ee5167529ff44351f5b438cf1636352bffca",
+    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76c-raw-batch5-20261116.jsonl": "a07e06607aeb6b9a06f629e9210bc6774b43e964",
+    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76c-raw-batch6-20261116.jsonl": "beb9283161491d17c435890f563b8c7f283b48a3",
+    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76c-raw-batch7-20261116.jsonl": "a511e748ba227b2d20627f653acde89fca0e19e6",
+    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76c-raw-batch8-20261116.jsonl": "a2aa8bb60fd7f5c875a234ead60f4826335d32a6",
+    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76c-raw-batch9-20261116.jsonl": "0f41ee0c7f685f8a41a5574a399dde3c6eea7eee",
+    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76c-raw-batch10-20261116.jsonl": "273f6e710d791b20e5ec2ab57ae53b7127f18122"
+  },
+  "target": {
+    "s5": "00000000000000801202000040000000",
+    "s6_child": "00000000010000809002000001000000",
+    "legal_candidate_count": 76,
+    "edge_cost": 76,
+    "canonical_head_at_sweep": "1452/174/6396/506144/4669/370058"
+  },
+  "plan_vs_execution": {
+    "planned_engine_bits": 66,
+    "planned_open_bits": 61,
+    "planned_crosscheck_transferred_bits": 5,
+    "planned_reused_transferred_bits": 10,
+    "actual_raw_engine_bits": 76,
+    "actual_raw_batches": 10,
+    "note": "The claim's engine_candidate_bits prose partitions 61 open + 5 crosscheck = 66 engine bits and marks 10 transferred bits for reuse. However, its engine.batches arrays and the ten published raw files contain all 76 legal bits. The ten reuse-marked transferred bits were also actually rerun; do not count them as saved work."
+  },
+  "result": {
+    "win7_d10_bits": [
+      61,
+      99,
+      113
+    ],
+    "winner_roots": [
+      {
+        "bit": 61,
+        "root_canon": "0000000001000080b002000001000000",
+        "status_at_presweep": "open",
+        "nodes": 752696
+      },
+      {
+        "bit": 99,
+        "root_canon": "00000000040000809002000000400800",
+        "status_at_presweep": "open",
+        "nodes": 4168961
+      },
+      {
+        "bit": 113,
+        "root_canon": "00000000040000809002000000400008",
+        "status_at_presweep": "open",
+        "nodes": 8174662
+      }
+    ],
+    "refuted_d10_count": 73,
+    "capped_count": 0,
+    "total_candidate_nodes": 141221576,
+    "pilot_count": 10,
+    "pilot_nodes_each": 3402,
+    "pilot_node_sum": 34020,
+    "total_nodes_including_pilots": 141255596,
+    "terminal_stone_range": [
+      13,
+      17
+    ],
+    "andclose_all": true,
+    "transferred_refuted_bits_rerun": [
+      0,
+      10,
+      13,
+      19,
+      20,
+      48,
+      56,
+      59,
+      65,
+      70,
+      96,
+      102,
+      108,
+      111,
+      117
+    ]
+  },
+  "batch_summaries": [
+    {
+      "batch": 1,
+      "bits": [
+        0,
+        1,
+        2,
+        4,
+        6,
+        7,
+        9,
+        10
+      ],
+      "win_bits": [],
+      "refuted_count": 8,
+      "node_sum": 26376764,
+      "pilot_nodes": 3402,
+      "raw_blob_sha1": "1aebb80f0b4f4384a7207afff4c706433d0fcaff"
+    },
+    {
+      "batch": 2,
+      "bits": [
+        13,
+        14,
+        15,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "win_bits": [],
+      "refuted_count": 8,
+      "node_sum": 10084828,
+      "pilot_nodes": 3402,
+      "raw_blob_sha1": "7b0b471d81ad1815f529bfc98a63acdff73ccc7a"
+    },
+    {
+      "batch": 3,
+      "bits": [
+        26,
+        28,
+        29,
+        30,
+        32,
+        34,
+        36,
+        41
+      ],
+      "win_bits": [],
+      "refuted_count": 8,
+      "node_sum": 16041267,
+      "pilot_nodes": 3402,
+      "raw_blob_sha1": "9f5c63cd2c93a276ebcfc6874f2f0aa870921c0c"
+    },
+    {
+      "batch": 4,
+      "bits": [
+        43,
+        45,
+        46,
+        47,
+        48,
+        53,
+        54,
+        56
+      ],
+      "win_bits": [],
+      "refuted_count": 8,
+      "node_sum": 12622700,
+      "pilot_nodes": 3402,
+      "raw_blob_sha1": "a7c5ee5167529ff44351f5b438cf1636352bffca"
+    },
+    {
+      "batch": 5,
+      "bits": [
+        57,
+        59,
+        61,
+        62,
+        64,
+        65,
+        66,
+        67
+      ],
+      "win_bits": [
+        61
+      ],
+      "refuted_count": 7,
+      "node_sum": 6330745,
+      "pilot_nodes": 3402,
+      "raw_blob_sha1": "a07e06607aeb6b9a06f629e9210bc6774b43e964"
+    },
+    {
+      "batch": 6,
+      "bits": [
+        68,
+        69,
+        70,
+        75,
+        76,
+        77,
+        78,
+        81
+      ],
+      "win_bits": [],
+      "refuted_count": 8,
+      "node_sum": 25392195,
+      "pilot_nodes": 3402,
+      "raw_blob_sha1": "beb9283161491d17c435890f563b8c7f283b48a3"
+    },
+    {
+      "batch": 7,
+      "bits": [
+        85,
+        86,
+        87,
+        89,
+        91,
+        94,
+        95,
+        96
+      ],
+      "win_bits": [],
+      "refuted_count": 8,
+      "node_sum": 5479908,
+      "pilot_nodes": 3402,
+      "raw_blob_sha1": "a511e748ba227b2d20627f653acde89fca0e19e6"
+    },
+    {
+      "batch": 8,
+      "bits": [
+        97,
+        98,
+        99,
+        102,
+        103,
+        105,
+        106,
+        107
+      ],
+      "win_bits": [
+        99
+      ],
+      "refuted_count": 7,
+      "node_sum": 15471860,
+      "pilot_nodes": 3402,
+      "raw_blob_sha1": "a2aa8bb60fd7f5c875a234ead60f4826335d32a6"
+    },
+    {
+      "batch": 9,
+      "bits": [
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        116
+      ],
+      "win_bits": [
+        113
+      ],
+      "refuted_count": 7,
+      "node_sum": 17004990,
+      "pilot_nodes": 3402,
+      "raw_blob_sha1": "0f41ee0c7f685f8a41a5574a399dde3c6eea7eee"
+    },
+    {
+      "batch": 10,
+      "bits": [
+        117,
+        118,
+        119,
+        120
+      ],
+      "win_bits": [],
+      "refuted_count": 4,
+      "node_sum": 6416319,
+      "pilot_nodes": 3402,
+      "raw_blob_sha1": "273f6e710d791b20e5ec2ab57ae53b7127f18122"
+    }
+  ],
+  "checks": {
+    "ten_raw_batches_present": true,
+    "raw_bit_records_unique": true,
+    "raw_bits_equal_all_76_legal_candidates": true,
+    "raw_batch_bit_lists_match_claim": true,
+    "one_exact_pilot_per_batch": true,
+    "all_76_uncapped_andclose": true,
+    "all_terminal_ranges_13_17": true,
+    "all_transferred_15_rerun_as_refuted": true,
+    "five_crosscheck_bits_present": true,
+    "ten_reused_bits_were_also_rerun": true,
+    "sixty_one_open_bits_present": true,
+    "open_plus_transferred_partition_legal_candidates": true,
+    "three_wins_exactly_61_99_113": true,
+    "winner_canons_match_presweep": true,
+    "no_capped_records": true,
+    "all_raw_records_have_boolean_verdict": true,
+    "claim_plan_count_is_66": true,
+    "actual_batch_count_is_76": true
+  },
+  "interpretation_guard": {
+    "loss=true": "WIN7-D10: a certificate extraction target for that individual seven-stone root",
+    "loss=false && capped=false": "REFUTED-D10: no WIN7-D10 found by this bounded search; not a LOSS proof",
+    "capped=true": "unresolved by this run",
+    "scope": "No certificate tree has been extracted or independently verified by this audit, and no receipt fold is performed here."
+  },
+  "limitations": [
+    "This is a raw-data coverage and consistency audit, not a second engine run.",
+    "The ten raw batches are v16 outputs; v15 cross-engine checks for the three WIN bits remain pending.",
+    "The three WIN7-D10 certificates still need blind extraction and independent verification.",
+    "The 66-versus-76 discrepancy is preserved explicitly: actual raw outputs cover all 76 legal candidates."
+  ],
+  "next_steps": [
+    "Blindly extract certificates for bits 61, 99, and 113 with class4_child1_cert_extractor_exact.ts.",
+    "Verify each extracted certificate with the independent WIN7 verifier and a separate v15 engine crosscheck.",
+    "Only after certificate checks, rebase the receipt fold onto the then-current canonical head and independently recompute the frontier."
+  ]
+}
