@@ -148,6 +148,10 @@ jobs:
         run: |
           uv run --locked python research/experiments/remo-k-branch-determinism-20261116/verify_remo_k_branch.py
           git diff --exit-code -- research/experiments/remo-k-branch-determinism-20261116/output/remo_k_branch_audit.json
+      - name: Audit REMO 3-branch collapse boundary (Theorems G/H)
+        run: |
+          uv run --locked python research/experiments/remo-k-branch-collapse-boundary-20261116/verify_remo_k_branch_boundary.py
+          git diff --exit-code -- research/experiments/remo-k-branch-collapse-boundary-20261116/output/remo_k_branch_boundary_audit.json
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python tools/knowledge/build.py
@@ -408,3 +412,4 @@ jobs:
 # Refresh generated views after the K0832 z=3 frontmatter artifact-registry repair (z=2 slice registration, z=3 list placement, proven-slice status lines to z>=4) (2026-11-16).
 # Refresh generated views for K0832 two-token z=4 residual slice conjecture (dual-engine + induction-step finite audit, universal claim open) (2026-11-16).
 # Refresh generated views for the K0861 REMO 3-branch survivor determinism (orbit reduction Theorem E', 3-branch chain closed form Theorem F', quadrants, (sizes,gamma) non-collapse census) (2026-11-16).
+# Refresh generated views for the K0862 REMO 3-branch determinacy collapse boundary (cap<=7 full collapse Theorem G with chain reduction, cap<=10 exact 22-key non-collapse list Theorem H, size-8 necessity within cap<=10) (2026-11-16).
