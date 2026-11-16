@@ -1,0 +1,172 @@
+{
+ "schema": "n11-class2-lane-cost64g-bit89-fold-independent-agreement-20261116-v1",
+ "date": "2026-11-16",
+ "method": "independent published-files-only reconstruction: frontier semantics reproduced verbatim from recompute_frontier_full.py (canon/covers/frontier/summary_state); solved set rebuilt as winners UNION covers(all published receipt roots extracted from the 26 blob-pinned base certificate files, the 91 chain-head JSONs (52 pinned pre-70e + 35 pinned post-70e + the 4 unpinned first-generation 71c/70f/73g/70g heads) and the five later fold heads 75e/60c/65j/64d/64f; the reconstruction is accepted only because it reproduces the published canonical head, its demand histogram and both open class-2 parents of the cost-64g child exactly",
+ "reconstruction_control": {
+  "roots_distinct": 761,
+  "roots_distinct_d4_canons": 746,
+  "winners": 498,
+  "manifest_rows": 7867,
+  "head_reproduced": [
+   1438,
+   174,
+   6410,
+   507143,
+   4683,
+   371057
+  ],
+  "match": true,
+  "hist_at_1438_matches_published": true,
+  "parents_of_child_at_1438": {
+   "00000000000000003800000008002000": {
+    "rows": 30,
+    "edge_cost": 2081
+   },
+   "00000000000000801202010000000000": {
+    "rows": 50,
+    "edge_cost": 3631
+   }
+  }
+ },
+ "receipt_bit89": {
+  "root_hex": "00000000020100003800000008080000",
+  "d4_canonical_hex": "00000000020000801202010000080000",
+  "d4_orbit_distinct_from_all_folded_roots": true,
+  "covers": 7,
+  "covers_hexes": [
+   "00000000000000801202010000080000",
+   "00000000000100003800000008080000",
+   "00000000020000001202010000080000",
+   "00000000020000003800000008080000",
+   "00000000020000800202010000080000",
+   "00000000020000801002010000080000",
+   "00000000020000801200010000080000"
+  ],
+  "marginal": 6,
+  "marginal_hexes": [
+   "00000000000000801202010000080000",
+   "00000000000100003800000008080000",
+   "00000000020000001202010000080000",
+   "00000000020000800202010000080000",
+   "00000000020000801002010000080000",
+   "00000000020000801200010000080000"
+  ],
+  "marginal_in_manifest": 3,
+  "marginal_manifest_hexes": [
+   "00000000000000801202010000080000",
+   "00000000000100003800000008080000",
+   "00000000020000801002010000080000"
+  ],
+  "marginal_non_manifest_hexes": [
+   "00000000020000001202010000080000",
+   "00000000020000800202010000080000",
+   "00000000020000801200010000080000"
+  ]
+ },
+ "marginal_row_demands": {
+  "00000000000000801202010000080000": {
+   "c1": 0,
+   "c2": 2,
+   "c4": 2
+  },
+  "00000000000100003800000008080000": {
+   "c1": 0,
+   "c2": 2,
+   "c4": 0
+  },
+  "00000000020000801002010000080000": {
+   "c1": 0,
+   "c2": 0,
+   "c4": 2
+  }
+ },
+ "projected_head_after_cost64g_fold": {
+  "solved_s6_in_manifest": 1441,
+  "remaining_s5_orbits": 174,
+  "unique_remaining_s6": 6407,
+  "sum_remaining_cost": 506945,
+  "s6_needed_by_open_classes": 4680,
+  "cost_needed_by_open_classes": 370859,
+  "demand_histogram_open_only": {
+   "c2=0,c4=1": 526,
+   "c2=0,c4=2": 3011,
+   "c2=0,c4=3": 12,
+   "c2=1,c4=0": 212,
+   "c2=1,c4=1": 54,
+   "c2=1,c4=2": 9,
+   "c2=2,c4=0": 801,
+   "c2=2,c4=1": 5,
+   "c2=2,c4=2": 50
+  },
+  "demand_histogram_deltas": {
+   "c2=0,c4=2": -1,
+   "c2=2,c4=0": -1,
+   "c2=2,c4=2": -1
+  }
+ },
+ "affected_parents": {
+  "00000000000000003800000008002000": {
+   "s5_hex": "00000000000000003800000008002000",
+   "classes": 2,
+   "rows_before": 30,
+   "rows_after": 29,
+   "edge_cost_before": 2081,
+   "edge_cost_after": 2017,
+   "lost_rows_hexes": [
+    "00000000000100003800000008080000"
+   ],
+   "lost_edge_cost": 64
+  },
+  "00000000000000003800001000800000": {
+   "s5_hex": "00000000000000003800001000800000",
+   "classes": 4,
+   "rows_before": 66,
+   "rows_after": 64,
+   "edge_cost_before": 4719,
+   "edge_cost_after": 4585,
+   "lost_rows_hexes": [
+    "00000000000000801202010000080000",
+    "00000000020000801002010000080000"
+   ],
+   "lost_edge_cost": 134
+  },
+  "00000000000000801202000000080000": {
+   "s5_hex": "00000000000000801202000000080000",
+   "classes": 6,
+   "rows_before": 67,
+   "rows_after": 66,
+   "edge_cost_before": 5135,
+   "edge_cost_after": 5066,
+   "lost_rows_hexes": [
+    "00000000000000801202010000080000"
+   ],
+   "lost_edge_cost": 69
+  },
+  "00000000000000801202010000000000": {
+   "s5_hex": "00000000000000801202010000000000",
+   "classes": 2,
+   "rows_before": 50,
+   "rows_after": 48,
+   "edge_cost_before": 3631,
+   "edge_cost_after": 3498,
+   "lost_rows_hexes": [
+    "00000000000000801202010000080000",
+    "00000000000100003800000008080000"
+   ],
+   "lost_edge_cost": 133
+  },
+  "00000000020000003800000000080000": {
+   "s5_hex": "00000000020000003800000000080000",
+   "classes": 4,
+   "rows_before": 60,
+   "rows_after": 59,
+   "edge_cost_before": 4288,
+   "edge_cost_after": 4223,
+   "lost_rows_hexes": [
+    "00000000020000801002010000080000"
+   ],
+   "lost_edge_cost": 65
+  }
+ },
+ "interpretation_guard": "bookkeeping fold projection over published receipts; solved counts measure manifest coverage, not the game-theoretic value of any position; the WIN7-D10 certificate proves a first-player win within depth 10 from the individual 7-stone root only; 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60} and classes 1/2/4 remain UNKNOWN"
+}
