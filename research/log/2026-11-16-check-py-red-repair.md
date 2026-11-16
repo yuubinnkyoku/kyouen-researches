@@ -33,8 +33,13 @@ build.pyが永久に実行されない（自己修復不能のデッドロック
    に修正した。実行系（`SCRIPTS / "..."` のPath結合）には影響しない metadata のみの修正。
 2. **衝突修復log**: L29 の2リンクをmarkdownリンクからコードスパンに変更した
    （frozen_links.json は research/experiments 配下 .md のみ対応のため、logではコードスパンで記録）。
-3. **生成ビューの再生成**: 現在の855 itemから index / aliases / artifacts / relations / summary
-   の5ビューを再生成した（solutions.md と README.md の解決状況ブロックは内容が不変のため変更なし）。
+3. **生成ビューの再生成**: 現在の856 itemから index / aliases / relations / summary
+   の4ビューを全量再生成したほか、artifacts.md は連携ツールの1コミット容量上限のために
+   先頭1,200,045 bytes（artifactパス辞書順で `research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost69f-raw-batch6-20261115.jsonl` のセクション直前まで、9,787行）で
+   切った版を公開した（切断位置はセクション境界"\n## ["で、リンク整合性は全量検証済み）。残り後半とK0875以降の追記は
+   check.py 通過後に走る refresh-knowledge-generated.yml の build.py が全量を正規再生成して
+   コミットするため、そこで正本に置き換わる。solutions.md と README.md の解決状況ブロックは
+   内容が不変のため変更なし。
    PyYAMLが利用できないサンドボックスでは、tools/knowledge/common.py・layout.py・build.py を
    忠実に移植したローカル実装（mini-YAML parser込み）で生成した。
 4. workflow末尾にtrigger commentを追加した。
