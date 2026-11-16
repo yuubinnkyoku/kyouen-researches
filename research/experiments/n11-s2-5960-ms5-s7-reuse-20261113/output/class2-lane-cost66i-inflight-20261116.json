@@ -1,8 +1,8 @@
 {
- "schema": "n11-class2-lane-cost66i-sweep-inflight-20261116-v1",
+ "schema": "n11-class2-lane-cost66i-sweep-complete-20261116-v2",
  "title": "n11 class2-lane cost66i: fresh 66-bit depth-10 sweep of the cheapest remaining row of the primary pure class-2 target family (head-1452 census v2 selection)",
  "date": "2026-11-16",
- "status": "in-flight (claim published before raw launch; no raw batch launched yet)",
+ "status": "sweep-complete; 9 WIN7-D10 candidates [19,28,29,58,88,90,99,103,112]; certificate extraction priority pending (marginals audit); receipt fold pending",
  "claimed_by": "n11 long-term lane session (head-1452 presweep census v2 selector)",
  "s5": "00000000000000403800000008000000",
  "s6_child": "00000000000000801226000000000000",
@@ -323,5 +323,128 @@
  "verdict_semantics": "loss=true => WIN7-within-depth-10 candidate (certificate rebuild target); loss=false && !capped => REFUTED-D10, no first-player win within depth 10 (NOT a LOSS proof of the position); capped => proves nothing either way",
  "unknown_status": "11x11 empty board: UNKNOWN. A completed sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 7-stone roots of this child. The two-stone roots {49,60} and {59,60}, S2 {59,60} and classes 1/2/4 remain UNKNOWN.",
  "coordination_note": "latest main fetched immediately before this push; no claim, raw batch or audit exists for this child on main (searched: child hex, cost66i); the parallel lane is in a bytes re-verification band and holds the pending 64h/76c folds; this claim does not touch those folds",
- "next_action": "launch the 9 raw batches (63 open + 3 confirmation bits, depth 10, cap 1e9, andclose 1, 4-way parallel), then determinism rerun, v15 crosscheck, independent audit, certificate extraction for any WIN bits, and only then fold against the latest canonical head"
+ "next_action": "Run the candidate-manifest marginals audit for the 9 WIN roots to rank certificate extraction; blind-extract the highest-marginal root; independently verify (BigInt cofactor, Bareiss, circle-equation) and v15-crosscheck; only then fold against the latest canonical head.",
+ "previous_version": {
+  "schema": "n11-class2-lane-cost66i-sweep-inflight-20261116-v1",
+  "blob_sha": "9eb3991abe1ee32d7296607990218a4958a571f0"
+ },
+ "actual_execution": {
+  "date": "2026-11-16",
+  "basis_head": "1452/174/6396/506144/4669/370058",
+  "engine": "v17 (blob c132cc6425eee3feaeef1d697dd74f968cfedb59), fresh environment",
+  "actual_raw_batches": 9,
+  "actual_raw_candidate_bits": 66,
+  "planned_engine_bits": 66,
+  "win7_d10_bits": [
+   19,
+   28,
+   29,
+   58,
+   88,
+   90,
+   99,
+   103,
+   112
+  ],
+  "winner_roots": [
+   {
+    "bit": 19,
+    "root_canon": "00000000000000801226000000080000",
+    "status_at_presweep": "open",
+    "nodes": 2645084
+   },
+   {
+    "bit": 28,
+    "root_canon": "00000000000000801226000010000000",
+    "status_at_presweep": "open",
+    "nodes": 4429373
+   },
+   {
+    "bit": 29,
+    "root_canon": "00000000000000801226000020000000",
+    "status_at_presweep": "open",
+    "nodes": 595534
+   },
+   {
+    "bit": 58,
+    "root_canon": "00000000000000801626000000000000",
+    "status_at_presweep": "open",
+    "nodes": 1858116
+   },
+   {
+    "bit": 88,
+    "root_canon": "00000000000000c89002000100000000",
+    "status_at_presweep": "open",
+    "nodes": 2662456
+   },
+   {
+    "bit": 90,
+    "root_canon": "00000000000000c89002000040000000",
+    "status_at_presweep": "open",
+    "nodes": 604093
+   },
+   {
+    "bit": 99,
+    "root_canon": "00000000000000c89002000000200000",
+    "status_at_presweep": "open",
+    "nodes": 1812502
+   },
+   {
+    "bit": 103,
+    "root_canon": "00000000000000c89002000000020000",
+    "status_at_presweep": "open",
+    "nodes": 1033614
+   },
+   {
+    "bit": 112,
+    "root_canon": "00000000000000c89002000000000100",
+    "status_at_presweep": "open",
+    "nodes": 2285468
+   }
+  ],
+  "refuted_d10_count": 57,
+  "capped_count": 0,
+  "candidate_nodes": 74232744,
+  "pilot_count": 9,
+  "pilot_nodes_each": 3402,
+  "total_nodes_including_pilots": 74263362,
+  "terminal_stone_range": [
+   13,
+   17
+  ],
+  "andclose": true,
+  "confirmation_bits_agreement": {
+   "bits": [
+    23,
+    100,
+    109
+   ],
+   "result": "3/3 REFUTED-D10 as expected (2 v1 harvest transfers + 1 cost-64h orbit transfer)"
+  },
+  "parallelism_note": "nproc=2 in the execution environment: batches ran 1-2 per concurrent pair (batch 1 concurrently with a failed-to-launch sibling), the rest sequentially; planned 4-way was not used; node counts are load-independent and batch 3 was re-verified field-identical",
+  "determinism_rerun": "batch 3 (heaviest, contains WIN bits 28/29) re-run field-identical on all non-ms fields (class2-lane-cost66i-det-batch3-20261116.jsonl)",
+  "v15_crosscheck": "independent v15 engine (blob 8744fc65...) re-checked all 9 WIN bits: 9/9 loss=true, pilots exactly 5949 (class2-lane-cost66i-v15-crosscheck-a/b-20261116.jsonl)",
+  "independent_audit": "class2-lane-cost66i-raw-audit-20261116.json (audit_cost66i_raw_batches_20261116.py): all checks passed, cross-source conflict scan vs cost-64h and cost-76c verdict maps found 0 conflicts, bit-100 canon agrees with the cost-64h REFUTED-D10 verdict",
+  "audit_json": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost66i-raw-audit-20261116.json"
+ },
+ "certificate_extraction": {
+  "status": "pending",
+  "win7_d10_bits": [
+   19,
+   28,
+   29,
+   58,
+   88,
+   90,
+   99,
+   103,
+   112
+  ],
+  "independent_verification": "pending",
+  "note": "extraction priority requires a candidate-manifest marginals audit (which open manifest rows each WIN root closes); not yet run; no certificate has been extracted"
+ },
+ "receipt_fold": {
+  "status": "pending",
+  "note": "No receipt has been folded from this child. The pending cost-64h and cost-76c folds must land first; rebase against the current canonical head after certificate verification."
+ }
 }
