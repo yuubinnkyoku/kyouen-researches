@@ -40,6 +40,10 @@ jobs:
         run: uv run --locked python research/experiments/vertical-fiber-two-token-z4-proof-20261116/verify_z4_proof.py
       - name: Audit K0832 two-token z=5 Grundy-2 locus conjecture
         run: uv run --locked python research/experiments/vertical-fiber-two-token-z5-value2-locus-20261116/verify_z5_value2.py
+      - name: Audit K0873 two-token z=5 Grundy-1 locus conjecture
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z5-value1-locus-20261116/verify_z5_value1.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z5-value1-locus-20261116/output/audit.json
       - name: Audit K0832 ceiling-token stable 2-position classification
         run: uv run --locked python research/experiments/vertical-fiber-ceiling-stable-2positions-20261116/verify_ceiling.py
       - name: Audit K0832 three-token transient band 2-position conjectures
