@@ -1027,16 +1027,20 @@ def assemble_audit():
         chain_set_mism == 0,
         {"chain_set_mismatches": chain_set_mism},
     )
+    r2_uni_ndet_cap10 = sum(
+        1 for k in byks[2]
+        if max(k[0]) <= 10
+        and {rec["determined"] for rec in byks[2][k]} == {False})
     record(
         "r=2 cap<=10 sub-census equals the published K0864 values "
         "(245 uniformly determined keys, 470 uniformly non-determined, "
         "no failing keys; mixed parity <=> uniformly non-determined)",
         a2["uniformly_determined_keys_cap10"] == K0864_R2_CAP10["det_keys"]
-        and a2["uniformly_ndet_keys_cap10"] == K0864_R2_CAP10["keys"]
+        and r2_uni_ndet_cap10 == K0864_R2_CAP10["keys"]
         - K0864_R2_CAP10["det_keys"]
         and a2["failing_keys"] == K0864_R2_CAP10["failing_keys"],
         {"uniformly_determined_cap10": a2["uniformly_determined_keys_cap10"],
-         "uniformly_ndet_cap10": a2["uniformly_ndet_keys_cap10"]},
+         "uniformly_ndet_cap10": r2_uni_ndet_cap10},
     )
     echo_ok = True
     for kk, v in K0869_ECHO_DORMANCY_R2.items():
@@ -1084,7 +1088,7 @@ def assemble_audit():
                                       if r == 7
                                       else K0869_SWEEP_R8["failing_keys"])
             and a["new_key_census"]["failing_with_11_or_12"] == 0
-            and a["new_key_census"]["mixed_keys"] == len(pub)
+            and a["mixed_keys"] == len(pub)
             and a["first_loser_violations"] == 0
             and a["delta0_profiles"] == DELTA0_EXPECTED
             and a["delta0_mismatches"] == 0
