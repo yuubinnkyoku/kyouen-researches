@@ -229,8 +229,10 @@ def matching_for_q(q_family, q_row_ids):
             sub_value, sub_pairs = best(rest & ~(1 << j))
             candidate_pairs = ((i, j),) + sub_pairs
             value = len(roots) + sub_value
+            candidate_key = json.dumps(candidate_pairs, separators=(",", ":"))
+            best_key = json.dumps(best_pairs, separators=(",", ":")) if best_pairs is not None else None
             if value > best_value or (
-                value == best_value and (best_pairs is None or candidate_pairs < best_pairs)
+                value == best_value and (best_pairs is None or candidate_key < best_key)
             ):
                 best_value, best_pairs = value, candidate_pairs
         if best_pairs is None:
