@@ -1,0 +1,31 @@
+{
+ "schema": "n11-class2-lane-cost64e-in-flight-20261116-v1",
+ "title": "n11 class2-lane cost-64e sweep in flight: cheapest open row 0000000000000000380000000a002000 of the shared class-2 parent at head 1435 (60 open candidate bits after 4 published-verbatim REFUTED-D10 transfers)",
+ "date": "2026-11-16",
+ "status": "IN FLIGHT: claim v1 published by the long-term lane session after the head-1435 next-target pre-sweep census; the 60 open candidate bits have not been swept yet; no engine verdict for this child exists at publication time",
+ "claimed_by": "n11 long-term lane session (next-target cheapest-first continuation after the cost-64d fold)",
+ "s5_target": "00000000000000003800000008002000",
+ "s6_child": "0000000000000000380000000a002000",
+ "s6_s7_edge_cost": 64,
+ "demand": {"c1": 0, "c2": 2, "c4": 0},
+ "demand_semantics": "per-class open-parent counts at head 1435 (class2-lane-next-target-presweep-1435-20261116.json family census, dem_after of the reproduced fold chain): two open class-2 parents own this row; within the class-2 lane protocol parents the row belongs to the shared parent 00000000000000003800000008002000 (31 rows / 2145 edge cost at head 1435); the second class-2 owner is outside the two protocol parents",
+ "chain_head_at_claim": "1435/174/6413/507337/4686/371251 (class-frontier-cost64d-receipts-recompute-20261116.json, git blob 082aa7f25596fe52e89ae4b158adba64a7f0d4c9, landed at commit c7a849e0785f56be38c397aabed101427fdc5a7c)",
+ "child_stones_bit_indices": [13, 25, 27, 59, 60, 61],
+ "demand_verification": "re-derived at head 1435 by scripts/next_target_presweep_head1435_20261116.py (runpy reproduction of the published cost-64d fold chain with every published assert re-run; census output class2-lane-next-target-presweep-1435-20261116.json git blob 5387128c15f630e8fc02a97188d1358554d6c762, rows CSV git blob 4a0efc808302677cae265d4ae16b547ecb5edb3a)",
+ "legal_candidates": [0, 2, 3, 4, 7, 8, 9, 10, 11, 12, 16, 21, 32, 33, 34, 38, 42, 43, 44, 46, 53, 54, 66, 67, 70, 72, 74, 75, 76, 78, 79, 80, 81, 83, 84, 86, 87, 88, 89, 92, 93, 95, 96, 98, 99, 100, 102, 103, 104, 105, 106, 107, 108, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120],
+ "candidate_count": 64,
+ "transferred_refuted_d10_bits": {
+  "70": {"root_canon": "0000000000000040380000000a002000", "note": "published lane sweep verdict, D4-transferred by canonical root identity (harvest of the class2-lane sweep corpus; see census bit table)"},
+  "104": {"root_canon": "00000000000000809102020080000000", "note": "published lane sweep verdict, D4-transferred by canonical root identity"},
+  "115": {"root_canon": "00000000000000809082020080000000", "note": "published lane sweep verdict, D4-transferred by canonical root identity"},
+  "119": {"root_canon": "00000000020080801202000000200000", "note": "published lane sweep verdict, D4-transferred by canonical root identity"}
+ },
+ "transferred_refuted_d10_count": 4,
+ "open_candidates_to_sweep": [0, 2, 3, 4, 7, 8, 9, 10, 11, 12, 16, 21, 32, 33, 34, 38, 42, 43, 44, 46, 53, 54, 66, 67, 72, 74, 75, 76, 78, 79, 80, 81, 83, 84, 86, 87, 88, 89, 92, 93, 95, 96, 98, 99, 100, 102, 103, 105, 106, 107, 108, 110, 111, 112, 113, 114, 116, 117, 118, 120],
+ "open_candidate_count": 60,
+ "no_prior_sweep_note": "this child 0000000000000000380000000a002000 has no prior claim, raw batch, audit, certificate or fold receipt in the class2 lane at publication time; the 4 transferred bits are D4-canonical identities of roots already determined verbatim in published lane sweeps, so they are recorded as REFUTED-D10 transfers and will not be re-swept (same convention as the cost-65j bit-113 transfer)",
+ "target_context": "the head-1435 next-target pre-sweep census ranks this row first among the 49 remaining rows of the two class-2 lane protocol parents by open candidate bits (60 of 64; the two fully-determined rows, e.g. the cost-64c STERILE row 00000000000000003800000008002020, need no sweep); family-level demand at head 1435: shared parent 2145 candidate occurrences -> 1898 open after transfers -> 1533 distinct open D4 root orbits; class-2 target 00000000000000403800000008000000 1287 -> 1261 -> 1131",
+ "planned_protocol": "v16 engine (class4_child1_runner_v16.ts, repo-verbatim, published test PASS), depth 10, node cap 10000000 per candidate, pilot_d6 control 3402 nodes per batch invocation, batches of ~8 open bits, raw batch JSONL published per batch, determinism rerun node-exact on the heaviest batch, v15 crosscheck anchors, independent candidate enumeration bit-exact via legal_candidates.py (already asserted in the census), sweep aggregate audit and claim update on completion, certificate extraction for any WIN7-D10 root (whole or part1of2/part2of2), fold of WIN receipts on the 1435 head with conflict census before the next ranking",
+ "interpretation_guard": "WIN7-D10 candidates prove a first-player win within depth 10 from the individual 7-stone roots only; REFUTED-D10 is not a LOSS proof; STERILE is not a LOSS proof; transferred verdicts are D4-canonical identities of published depth-10 engine results, not new engine output; solved 1435 is manifest-coverage bookkeeping",
+ "unknown_status": "11x11 empty board, two-stone roots {49,60} and {59,60}, S2 {59,60}, and classes 1/2/4 all remain UNKNOWN"
+}
