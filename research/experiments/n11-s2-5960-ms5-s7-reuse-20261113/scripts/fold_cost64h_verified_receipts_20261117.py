@@ -263,7 +263,7 @@ def main() -> None:
         "certificate_verification": ver["summary"],
         "v17_full_row_recheck": v17["result"],
         "cross_lane": {
-            "cost66i_win_bits": claim66["actual_execution"]["win7_d10_bits"],
+            "cost66i_win_bits": audit66["verdicts"]["win7_d10_bits"],
             "cost66i_conflict_scan": conflict,
             "cost76c_win_bits": audit76["v17_full_resweep"]["win_bits_corrected"],
             "cost76c_bit113_refuted": True,
