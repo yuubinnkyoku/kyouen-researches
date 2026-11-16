@@ -66,7 +66,7 @@ verify_z5_value2.py は次の二つの再帰を別々に実装する。
 
 正準再帰のキャッシュ状態数は1,262,373、順序付き再帰は6,428,886。監査を二回実行し、JSONはバイト単位で一致した。
 
-- verifier SHA-256: 2cf48b55e4752b7b24e6ff7cd2f8d9ec1e21e5701d42a5e4b3c558f8b0f6e4e4
+- verifier SHA-256: de30ae5ae93370589d688c1d61949a881632f452f62377a8861505d6c8cdc56e
 - audit SHA-256: c81ee0d83ddff335fa9651e20a830c60dfca7e891e4d396d488fdeaf6a441e09
 
 ## 証明状況と限界
