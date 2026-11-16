@@ -144,6 +144,10 @@ jobs:
         run: |
           uv run --locked python research/experiments/remo-two-branch-determinism-20261116/verify_remo_two_branch.py
           git diff --exit-code -- research/experiments/remo-two-branch-determinism-20261116/output/remo_two_branch_audit.json
+      - name: Audit REMO 3-branch determinism (Theorems E'/F')
+        run: |
+          uv run --locked python research/experiments/remo-k-branch-determinism-20261116/verify_remo_k_branch.py
+          git diff --exit-code -- research/experiments/remo-k-branch-determinism-20261116/output/remo_k_branch_audit.json
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python tools/knowledge/build.py
@@ -403,3 +407,4 @@ jobs:
 # Refresh generated views for K0832 two-token z=3 residual slice (full Grundy slice, strong-induction option tables, independent dual-engine audit) (2026-11-16).
 # Refresh generated views after the K0832 z=3 frontmatter artifact-registry repair (z=2 slice registration, z=3 list placement, proven-slice status lines to z>=4) (2026-11-16).
 # Refresh generated views for K0832 two-token z=4 residual slice conjecture (dual-engine + induction-step finite audit, universal claim open) (2026-11-16).
+# Refresh generated views for the K0861 REMO 3-branch survivor determinism (orbit reduction Theorem E', 3-branch chain closed form Theorem F', quadrants, (sizes,gamma) non-collapse census) (2026-11-16).
