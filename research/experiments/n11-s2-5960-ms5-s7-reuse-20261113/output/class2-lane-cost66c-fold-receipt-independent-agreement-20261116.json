@@ -1,0 +1,211 @@
+{
+ "all_agree": true,
+ "checks": {
+  "C10_child_closed": {
+   "agree": true,
+   "prereg_bit73_manifest_hexes": [
+    "00000000000000003800000008002008"
+   ],
+   "receipt_child_closed_by_bit": 73
+  },
+  "C11_sweep_nodes": {
+   "agree": true,
+   "receipt_sweep_nodes_excluding_pilots": 84180263
+  },
+  "C12_receipt_bits": {
+   "agree": true
+  },
+  "C1_projected_head": {
+   "agree": true,
+   "prereg": {
+    "cost_needed_by_open_classes": 370211,
+    "remaining_s5_orbits": 174,
+    "s6_needed_by_open_classes": 4671,
+    "solved_s6_in_manifest": 1450,
+    "sum_remaining_cost": 506297,
+    "unique_remaining_s6": 6398
+   },
+   "receipt": {
+    "cost_needed_by_open_classes": 370211,
+    "remaining_s5_orbits": 174,
+    "s6_needed_by_open_classes": 4671,
+    "solved_s6_in_manifest": 1450,
+    "sum_remaining_cost": 506297,
+    "unique_remaining_s6": 6398
+   }
+  },
+  "C2_basis": {
+   "agree": true,
+   "prereg_head_numbers": [
+    1444,
+    174,
+    6404,
+    506746,
+    4677,
+    370660
+   ],
+   "prereg_roots": 764,
+   "receipt_distinct_d4_canons": 749,
+   "receipt_receipt_roots": 764
+  },
+  "C3_demand_histogram": {
+   "agree": true,
+   "derived_deltas": {
+    "c2=0,c4=1": 0,
+    "c2=0,c4=2": 0,
+    "c2=0,c4=3": 0,
+    "c2=1,c4=0": -4,
+    "c2=1,c4=1": 0,
+    "c2=1,c4=2": -1,
+    "c2=2,c4=0": -1,
+    "c2=2,c4=1": 0,
+    "c2=2,c4=2": 0
+   },
+   "prereg_deltas": {
+    "c2=0,c4=1": 0,
+    "c2=0,c4=2": 0,
+    "c2=0,c4=3": 0,
+    "c2=1,c4=0": -4,
+    "c2=1,c4=1": 0,
+    "c2=1,c4=2": -1,
+    "c2=2,c4=0": -1,
+    "c2=2,c4=1": 0,
+    "c2=2,c4=2": 0
+   }
+  },
+  "C4_per_receipt": {
+   "agree": true,
+   "receipts": [
+    {
+     "bit": 73,
+     "fields_agree": true,
+     "marginal": 7,
+     "marginal_in_manifest": 1,
+     "order": 0,
+     "root_hex": "00000000000002003800000008002008"
+    },
+    {
+     "bit": 75,
+     "fields_agree": true,
+     "marginal": 4,
+     "marginal_in_manifest": 0,
+     "order": 1,
+     "root_hex": "00000000000008003800000008002008"
+    },
+    {
+     "bit": 79,
+     "fields_agree": true,
+     "marginal": 5,
+     "marginal_in_manifest": 1,
+     "order": 2,
+     "root_hex": "00000000000080003800000008002008"
+    },
+    {
+     "bit": 87,
+     "fields_agree": true,
+     "marginal": 5,
+     "marginal_in_manifest": 1,
+     "order": 3,
+     "root_hex": "00000000008000003800000008002008"
+    },
+    {
+     "bit": 96,
+     "fields_agree": true,
+     "marginal": 4,
+     "marginal_in_manifest": 0,
+     "order": 4,
+     "root_hex": "00000001000000003800000008002008"
+    },
+    {
+     "bit": 97,
+     "fields_agree": true,
+     "marginal": 4,
+     "marginal_in_manifest": 1,
+     "order": 5,
+     "root_hex": "00000002000000003800000008002008"
+    },
+    {
+     "bit": 112,
+     "fields_agree": true,
+     "marginal": 6,
+     "marginal_in_manifest": 2,
+     "order": 6,
+     "root_hex": "00010000000000003800000008002008"
+    }
+   ]
+  },
+  "C5_totals": {
+   "agree": true,
+   "receipts": 7,
+   "total_marginal": 35,
+   "total_marginal_in_manifest": 6
+  },
+  "C6_rows_closed": {
+   "agree": true,
+   "prereg_union_manifest_hexes": [
+    "00000000000000003800000008002008",
+    "00000000000000801202000100800000",
+    "00000000000000801202000220000000",
+    "00000000000000801202000300000000",
+    "00000000000020003800000008000080",
+    "00000000000020801202000000080000"
+   ],
+   "receipt_rows_closed_hexes": [
+    "00000000000000003800000008002008",
+    "00000000000000801202000100800000",
+    "00000000000000801202000220000000",
+    "00000000000000801202000300000000",
+    "00000000000020003800000008000080",
+    "00000000000020801202000000080000"
+   ]
+  },
+  "C7_affected_parents": {
+   "agree": true,
+   "count": 6,
+   "parents": [
+    {
+     "agree": true,
+     "s5_hex": "00000000000000003800000008002000"
+    },
+    {
+     "agree": true,
+     "s5_hex": "00000000000000801202000000000080"
+    },
+    {
+     "agree": true,
+     "s5_hex": "00000000000000801202000000080000"
+    },
+    {
+     "agree": true,
+     "s5_hex": "00000000000000801202000020000000"
+    },
+    {
+     "agree": true,
+     "s5_hex": "00000000000000801202000100000000"
+    },
+    {
+     "agree": true,
+     "s5_hex": "00000000000020801002000000080000"
+    }
+   ]
+  },
+  "C8_conflict_census": {
+   "agree": true,
+   "prereg_all_orbits_distinct": true,
+   "receipt_overlaps": []
+  },
+  "C9_parent_edge_cost_delta": {
+   "agree": true,
+   "prereg_sum_lost_edge_cost": 596,
+   "receipt_parent_edge_cost_delta": 596
+  }
+ },
+ "date": "2026-11-16",
+ "inputs": {
+  "fold_receipt": "class-frontier-cost66c-receipts-recompute-20261116.json (commit 96e2dbac, landed 11:19:20Z)",
+  "preregistration": "class2-lane-cost66c-fold-preregistration-20261116.json (git blob 809ad05e1bc560b1086c3d30cc34ad78727e430a, commit aca9d762, published 11:10:03Z, pinned locally by this lane before the fold landed)"
+ },
+ "interpretation_guard": "bookkeeping agreement only; a fold changes manifest coverage bookkeeping, not the game-theoretic value of any position; WIN7 certificates prove a first-player win within depth 10 from individual 7-stone roots only; REFUTED-D10 is not a LOSS proof; the 11x11 empty board, the two-stone roots {49,60}/{59,60}, S2 {59,60} and classes 1/2/4 remain UNKNOWN",
+ "method": "independent field-by-field comparison written from the pre-registration semantics only; does not reuse the fold arm's own check script (check_cost66c_fold_receipt_vs_preregistration_20261116.py)",
+ "schema": "n11-class2-lane-cost66c-fold-receipt-independent-agreement-20261116-v1"
+}
