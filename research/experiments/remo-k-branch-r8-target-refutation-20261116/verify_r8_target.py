@@ -344,6 +344,7 @@ def audit():
             "game": "three-branch REMO region game",
             "branch_size_cap": 10,
             "r": 8,
+            "player_indexing": "zero-based (0..r-1)",
             "target_families": ["4,4,10", "4,10,10"],
             "gamma_checked": [0, 1, 2, 3],
             "claim_scope": (
@@ -356,7 +357,7 @@ def audit():
         "checks": [
             "all 140 r=8 profiles were enumerated from the three pair-only atom counts",
             "K0866 region engine and independent survivor-mask engine agree on every profile and chain",
-            "every r=8 target profile and chain has survivor set {3,7}",
+            "every r=8 target profile and chain has zero-based survivor IDs 3 and 7 (P_3,P_7)",
             "the predicted gamma=0..2 keys are uniformly non-determined, not non-collapse keys",
             "r=7 positive control reproduces the published determined-profile splits",
             "no budget skips",
@@ -382,7 +383,7 @@ def run():
         raise SystemExit("FATAL: regenerated audit differs from committed JSON")
     output.write_text(blob, encoding="utf-8")
     print("AUDIT PASSED")
-    print("r=8: 140 profiles + 8 chains; every survivor set is {3,7}")
+    print("r=8: 140 profiles + 8 chains; every survivor set is {P_3,P_7} (zero-based)")
     print("r=7 positive control: 127 profiles; published split reproduced")
     print("two independent engines agree; repeated output is byte-identical")
 
