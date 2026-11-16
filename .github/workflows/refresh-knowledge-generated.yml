@@ -168,6 +168,8 @@ jobs:
         run: |
           uv run --locked python research/experiments/remo-k-branch-r8-target-refutation-20261116/verify_r8_target.py
           git diff --exit-code -- research/experiments/remo-k-branch-r8-target-refutation-20261116/output/audit.json
+      - name: Audit K0869 REMO 3-branch r=8 boundary sweep
+        run: uv run --locked python research/experiments/remo-k-branch-r8-sweep-20261116/verify_remo_k_branch_r8_sweep.py
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python tools/knowledge/build.py
@@ -437,3 +439,5 @@ jobs:
 # Refresh generated views for the K0866 REMO 3-branch r=7 boundary (Theorem I r=7 exact 6-key (4,4,9)/(4,9,9) gamma<=2, size-8 necessity break, previous failing families collapse to uniformly-ndet at r=7, pre-echo of the new families at r=2..6, Lemma FL / Theorem G-prime / Delta=0 r=7 anchors) (2026-11-16).
 # Refresh generated views for the K0863 post-theorem head-1410 frontier closability re-ranking (all 174 remaining S5 orbits classified own_closable 114 / cross_cover_required 57 / fully_sterile 3 incl. the best coverable class-2 3/209, audit-blocked 10/698 and best class-4 18/1460; row-level remaining-s6 worklist 505,675 sweep candidates after transfers and the pending cost-65j cover map; s6-s7 edge cost == own-candidate-count invariant over all 6,438 rows; independent python re-derivation fully consistent with the K0865 JavaScript census; 11x11 remains UNKNOWN) (2026-11-16).
 # Refresh generated views after K0865 metadata normalization and Q-family remaining-root worklist (2026-11-16).
+
+# Refresh generated views for the K0869 REMO 3-branch r=8 boundary (Theorem I r=8 exact 10-key (6,6,8)/(6,8,8) gamma<=4, first gamma>=3 failing range, total collapse of all 34 previous failing keys, K0867 cross-check, FL/G'/Delta=0 r=8 anchors) (2026-11-16).
