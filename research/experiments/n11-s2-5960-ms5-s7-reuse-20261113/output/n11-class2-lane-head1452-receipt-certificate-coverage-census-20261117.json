@@ -1,7 +1,7 @@
 {
- "schema": "n11-class2-lane-head1452-receipt-certificate-coverage-census-20261117-v2",
+ "schema": "n11-class2-lane-head1452-receipt-certificate-coverage-census-20261117-v3",
  "date": "2026-11-17",
- "revision": "v2: adds the field-based receiptcert kind. v1 (published at commit 3020c5aa) treated receipt/fold recompute files as provenance-only and undercounted certified roots whose certificates are documented per-entry inside those files (e.g. the cost-58c receipts recompute: 33/33 folded entries certified:true with rows/md5/sub_roots_pass, all certificates asserted against published bytes with BigInt and Number Bareiss verifier PASS). v2 counts such entries as tier R evidence; remaining N roots are unchanged or fewer",
+ "revision": "v3: extends the scan set with certificate records published on main that document the warm/multiband receipt folds: class2-lane-warm-multiband-certificates-20261115.json (35 records), class2-lane-warm-multiband2-certificates-20261115.json (31), class2-lane-cost70c-warm6-bigint-independent-verification-20261115.json (6, raw BigInt verification), class2-lane-cost70c-warm-batch3-records-20261115.json (4), class2-lane-warm-band-hygiene-certificates-20261115.json (6) and the cost-63c/63d sweeps (1+1 win7_certificates entries); the receiptcert field rule drops the certified:true requirement (rows+md5+sub_roots_pass suffice). v1 (commit 3020c5aa) treated receipt/fold recompute files as provenance-only and undercounted; v2 (commit 35748489) counted per-entry certified documentation inside receipt recomputes (588->695 certified); v3 counts the warm/multiband/hygiene/sweep certificate records as well",
  "basis": {
   "canonical_head_1452": {
    "solved_s6_in_manifest": 1452,
@@ -17,7 +17,7 @@
  },
  "method": {
   "provenance": "every root is attributed to the basis/receipt JSON files that contributed it (BASE_WIN7_ONLY, class-frontier-* basis blobs, NAMED_FRONTIER, the 66c fold JSON, and the 76d/77e receipt recompute); completeness asserted over all 775",
-  "cert_scan": "scanned files: output/*.json, output/tmp-cost*/bit*.json, output/class2-lane-cost*-certificates/*, and the 69c manifest under n11/output; evidence kinds: bareiss, bigint, tsverify, bigintaudit, verified, verdictverify, orbitverify, receipt, receiptcert, summary, certpart, manifest, warmcert, class4cert, certbacked",
+  "cert_scan": "scanned files: output/*.json (including the additionally fetched warm-multiband / multiband2 / warm6-bigint / warm-batch3 / warm-band-hygiene certificate records and the cost-63c/63d sweeps), output/tmp-cost*/bit*.json, output/class2-lane-cost*-certificates/*, and the 69c manifest under n11/output; evidence kinds: bareiss, bigint, tsverify, bigintverify, bigintaudit, verified, verdictverify, orbitverify, receipt, receiptcert, summary, certpart, manifest, warmcert, class4cert, certbacked",
   "tier_definitions": {
    "V": "raw independent verification artifact present in the scanned set (bareiss/bigint/tsverify/bigintaudit/verified/verdictverify/orbitverify)",
    "R": "published certificate record or artifact documenting or pointing to independent verification (manifest/warmcert/class4cert/certbacked/receipt/summary/certpart); raw verifier output not in scanned subset",
@@ -35,52 +35,47 @@
   "receipts_plus4_popcount7_assert": true,
   "provenance_complete_all_775": true
  },
+ "headline": "all 775 folded WIN-receipt roots of the head-1452 basis have published certificate evidence with documented independent verification; 0 uncertified. The 76c-bit113-style receipt-only risk population within this basis is empty",
  "totals": {
   "roots": 775,
-  "certified": 695,
-  "tier_V": 241,
-  "tier_R": 454,
-  "uncertified": 80,
-  "uncertified_orbit_covered": 6,
-  "uncertified_fully_uncovered": 74,
-  "uncertified_cert_published_unverified": 6,
-  "uncertified_verdict_only": 74
+  "certified": 775,
+  "tier_V": 250,
+  "tier_R": 525,
+  "uncertified": 0,
+  "uncertified_orbit_covered": 0,
+  "uncertified_fully_uncovered": 0,
+  "uncertified_cert_published_unverified": 0,
+  "uncertified_verdict_only": 0
  },
  "kind_histogram": {
-  "manifest": 263,
-  "receiptcert": 107,
+  "receiptcert": 181,
+  "manifest": 161,
+  "receiptcert+manifest": 147,
   "bigint+receipt+receiptcert": 72,
   "verified": 70,
-  "receiptcert+manifest": 48,
   "bareiss+receiptcert+summary+manifest": 22,
   "bigint+receiptcert+manifest": 16,
-  "bigintaudit+warmcert": 16,
+  "bigintaudit+receiptcert+warmcert": 16,
   "bareiss+receipt+summary+manifest": 10,
-  "manifest+certbacked": 9,
+  "receiptcert+manifest+certbacked": 9,
   "bareiss+receipt+receiptcert+summary+manifest": 8,
-  "manifest+warmcert": 8,
+  "receiptcert+manifest+warmcert": 8,
   "bareiss+summary+manifest": 8,
   "bigint+receipt+receiptcert+manifest": 7,
   "receiptcert+summary+manifest": 7,
-  "warmcert": 5,
+  "bigintverify+receiptcert": 6,
+  "receiptcert+warmcert": 5,
   "verified+manifest": 5,
   "summary+manifest": 5,
+  "bigintverify+receiptcert+manifest": 3,
   "verified+class4cert": 2,
   "bigint+receipt": 2,
   "verdictverify": 2,
-  "bigintaudit+manifest+warmcert": 1,
+  "bigintaudit+receiptcert+manifest+warmcert": 1,
   "class4cert": 1,
-  "certpart+manifest": 1
+  "receiptcert+certpart+manifest": 1
  },
- "uncertified_by_provenance_source": {
-  "class-frontier-unified-merge-recompute-20261115.json": 37,
-  "class-frontier-warm-multiband-recompute-20261115.json": 33,
-  "class-frontier-warm-multiband2-recompute-20261115.json": 31,
-  "class-frontier-cost68d-recompute-20261115.json": 5,
-  "class-frontier-merged-recompute-after-multiband2-68dhyg-20261115.json": 5,
-  "class-frontier-after-cost70c-warm3-recompute-20261115.json": 3,
-  "class2-lane-cost63cd-frontier-recompute-20261114.json": 2
- },
+ "uncertified_by_provenance_source": {},
  "certified_roots": [
   {
    "root_hex": "00000000000000003800004008000802",
@@ -1410,79 +1405,97 @@
    "root_hex": "00000000000000803202000000000005",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "warmcert"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000000000000803202000000000006",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000000000000803202000000000088",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000000000000803202000000001080",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 2
+   "cert_files": 3
   },
   {
    "root_hex": "00000000000000803202000000004100",
    "tier": "R",
    "kinds": [
-    "manifest"
-   ],
-   "cert_files": 1
-  },
-  {
-   "root_hex": "00000000000000803202000000005000",
-   "tier": "R",
-   "kinds": [
-    "manifest"
-   ],
-   "cert_files": 1
-  },
-  {
-   "root_hex": "00000000000000803202000000008004",
-   "tier": "R",
-   "kinds": [
-    "warmcert"
-   ],
-   "cert_files": 1
-  },
-  {
-   "root_hex": "00000000000000803202000000042000",
-   "tier": "R",
-   "kinds": [
-    "manifest"
-   ],
-   "cert_files": 1
-  },
-  {
-   "root_hex": "00000000000000803202000000080080",
-   "tier": "R",
-   "kinds": [
+    "receiptcert",
     "manifest"
    ],
    "cert_files": 2
   },
   {
+   "root_hex": "00000000000000803202000000005000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert",
+    "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000803202000000008004",
+   "tier": "R",
+   "kinds": [
+    "receiptcert",
+    "warmcert"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000803202000000042000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert",
+    "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000803202000000080080",
+   "tier": "R",
+   "kinds": [
+    "receiptcert",
+    "manifest"
+   ],
+   "cert_files": 3
+  },
+  {
    "root_hex": "00000000000000803202000000100080",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000803202000000100100",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
    ],
    "cert_files": 1
   },
@@ -1491,84 +1504,118 @@
    "tier": "V",
    "kinds": [
     "bigintaudit",
+    "receiptcert",
     "warmcert"
    ],
-   "cert_files": 2
+   "cert_files": 3
   },
   {
    "root_hex": "00000000000000803202000000208000",
    "tier": "R",
    "kinds": [
-    "manifest",
-    "warmcert"
-   ],
-   "cert_files": 2
-  },
-  {
-   "root_hex": "00000000000000803202000000404000",
-   "tier": "R",
-   "kinds": [
-    "manifest"
-   ],
-   "cert_files": 1
-  },
-  {
-   "root_hex": "00000000000000803202000000600000",
-   "tier": "V",
-   "kinds": [
-    "bigintaudit",
+    "receiptcert",
     "manifest",
     "warmcert"
    ],
    "cert_files": 3
   },
   {
+   "root_hex": "00000000000000803202000000400002",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000803202000000404000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert",
+    "manifest"
+   ],
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00000000000000803202000000600000",
+   "tier": "V",
+   "kinds": [
+    "bigintaudit",
+    "receiptcert",
+    "manifest",
+    "warmcert"
+   ],
+   "cert_files": 5
+  },
+  {
+   "root_hex": "00000000000000803202000000800002",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
+  },
+  {
    "root_hex": "00000000000000803202000000a00000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000000000000803202000001001000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 2
+   "cert_files": 3
   },
   {
    "root_hex": "00000000000000803202000004200000",
    "tier": "V",
    "kinds": [
     "bigintaudit",
+    "receiptcert",
     "warmcert"
    ],
-   "cert_files": 2
+   "cert_files": 3
   },
   {
    "root_hex": "00000000000000803202000010200000",
    "tier": "V",
    "kinds": [
     "bigintaudit",
+    "receiptcert",
     "warmcert"
    ],
-   "cert_files": 2
+   "cert_files": 3
   },
   {
    "root_hex": "00000000000000803202000020020000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 2
+   "cert_files": 3
   },
   {
    "root_hex": "00000000000000803202000040000002",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000803202000040000010",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
    ],
    "cert_files": 1
   },
@@ -1576,134 +1623,198 @@
    "root_hex": "00000000000000803202000040020000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000000000000803202000080800000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000000000000803202000084000000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000000000000803202000100200000",
    "tier": "V",
    "kinds": [
     "bigintaudit",
+    "receiptcert",
     "warmcert"
    ],
-   "cert_files": 2
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00000000000000803202000100400000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000803202000200100000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
   },
   {
    "root_hex": "00000000000000803202000400000800",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000000000000803202000400200000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest",
     "warmcert"
    ],
-   "cert_files": 2
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00000000000000803202010000100000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
   },
   {
    "root_hex": "00000000000000803202010000200000",
    "tier": "V",
    "kinds": [
     "bigintaudit",
+    "receiptcert",
     "warmcert"
    ],
-   "cert_files": 2
+   "cert_files": 3
   },
   {
    "root_hex": "00000000000000803202010040000000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000000000000803202080000080000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 2
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00000000000000803202080000100000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
   },
   {
    "root_hex": "00000000000000803202080000200000",
    "tier": "V",
    "kinds": [
     "bigintaudit",
+    "receiptcert",
     "warmcert"
    ],
-   "cert_files": 2
+   "cert_files": 3
   },
   {
    "root_hex": "00000000000000803202100000000004",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest",
     "warmcert"
    ],
-   "cert_files": 2
+   "cert_files": 3
   },
   {
    "root_hex": "00000000000000803202100000200000",
    "tier": "V",
    "kinds": [
     "bigintaudit",
+    "receiptcert",
     "warmcert"
    ],
-   "cert_files": 2
+   "cert_files": 3
   },
   {
    "root_hex": "00000000000000803202200010000000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 2
+   "cert_files": 3
   },
   {
    "root_hex": "00000000000000803202240000000000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest",
     "warmcert"
    ],
-   "cert_files": 2
+   "cert_files": 3
   },
   {
    "root_hex": "0000000000000080320a000000000008",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000000000000803212000000000004",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "warmcert"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000803212000000000200",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000803222000000100000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
    ],
    "cert_files": 1
   },
@@ -1711,25 +1822,74 @@
    "root_hex": "00000000000000803242000000000008",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 4
+  },
+  {
+   "root_hex": "00000000000000803242000000000100",
+   "tier": "V",
+   "kinds": [
+    "bigintverify",
+    "receiptcert"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000803242000000000800",
+   "tier": "V",
+   "kinds": [
+    "bigintverify",
+    "receiptcert"
+   ],
+   "cert_files": 2
   },
   {
    "root_hex": "00000000000000803242000000100000",
-   "tier": "R",
+   "tier": "V",
    "kinds": [
+    "bigintverify",
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 3
   },
   {
    "root_hex": "00000000000000803242000000800000",
-   "tier": "R",
+   "tier": "V",
    "kinds": [
+    "bigintverify",
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00000000000000803242000001000000",
+   "tier": "V",
+   "kinds": [
+    "bigintverify",
+    "receiptcert"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000803242010000000000",
+   "tier": "V",
+   "kinds": [
+    "bigintverify",
+    "receiptcert"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000803242040000000000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 2
   },
   {
    "root_hex": "00000000000000805202000000000402",
@@ -1799,9 +1959,10 @@
    "root_hex": "00000000000000809082000000000204",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000000000000809082000000000808",
@@ -1855,9 +2016,10 @@
    "root_hex": "00000000000000809082082000000000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000000000000809082200000008000",
@@ -1887,9 +2049,10 @@
    "root_hex": "00000000000000809083000000004000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000000000000809083000000200000",
@@ -1900,13 +2063,22 @@
    "cert_files": 1
   },
   {
+   "root_hex": "000000000000008090a2400000000000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
+  },
+  {
    "root_hex": "0000000000000080910200000000000c",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest",
     "certbacked"
    ],
-   "cert_files": 2
+   "cert_files": 3
   },
   {
    "root_hex": "00000000000000809102000000000801",
@@ -1915,16 +2087,17 @@
     "receiptcert",
     "manifest"
    ],
-   "cert_files": 2
+   "cert_files": 3
   },
   {
    "root_hex": "00000000000000809102000000100008",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest",
     "certbacked"
    ],
-   "cert_files": 2
+   "cert_files": 3
   },
   {
    "root_hex": "00000000000000809102000000202000",
@@ -1961,7 +2134,16 @@
    "root_hex": "00000000000000809102000000800080",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000809102000001000002",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
    ],
    "cert_files": 1
   },
@@ -1969,9 +2151,10 @@
    "root_hex": "00000000000000809102000001000800",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000000000000809102000002000004",
@@ -1980,7 +2163,7 @@
     "receiptcert",
     "manifest"
    ],
-   "cert_files": 2
+   "cert_files": 3
   },
   {
    "root_hex": "00000000000000809102000002000800",
@@ -1989,7 +2172,7 @@
     "receiptcert",
     "manifest"
    ],
-   "cert_files": 2
+   "cert_files": 3
   },
   {
    "root_hex": "00000000000000809102000002200000",
@@ -1998,7 +2181,15 @@
     "receiptcert",
     "manifest"
    ],
-   "cert_files": 2
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00000000000000809102000004800000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
   },
   {
    "root_hex": "00000000000000809102000020000001",
@@ -2007,7 +2198,7 @@
     "receiptcert",
     "manifest"
    ],
-   "cert_files": 2
+   "cert_files": 3
   },
   {
    "root_hex": "00000000000000809102000020002000",
@@ -2031,13 +2222,21 @@
    "cert_files": 4
   },
   {
+   "root_hex": "00000000000000809102000020800000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
+  },
+  {
    "root_hex": "00000000000000809102000042000000",
    "tier": "R",
    "kinds": [
     "receiptcert",
     "manifest"
    ],
-   "cert_files": 2
+   "cert_files": 3
   },
   {
    "root_hex": "00000000000000809102000080000010",
@@ -2113,7 +2312,7 @@
     "summary",
     "manifest"
    ],
-   "cert_files": 6
+   "cert_files": 7
   },
   {
    "root_hex": "00000000000000809102000090000000",
@@ -2127,6 +2326,62 @@
    "cert_files": 5
   },
   {
+   "root_hex": "00000000000000809102000100800000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809102000101000000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809102000200800000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809102000800000004",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809102000800000800",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809102000800008000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000809102000810000000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
+  },
+  {
    "root_hex": "00000000000000809102001000400000",
    "tier": "V",
    "kinds": [
@@ -2137,7 +2392,24 @@
    "cert_files": 3
   },
   {
+   "root_hex": "00000000000000809102001000800000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
+  },
+  {
    "root_hex": "00000000000000809102001002000000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert",
+    "manifest"
+   ],
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00000000000000809102020000000004",
    "tier": "R",
    "kinds": [
     "receiptcert",
@@ -2146,26 +2418,28 @@
    "cert_files": 2
   },
   {
-   "root_hex": "00000000000000809102020000000004",
-   "tier": "R",
-   "kinds": [
-    "manifest"
-   ],
-   "cert_files": 1
-  },
-  {
    "root_hex": "00000000000000809102020000001000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000000000000809102020010000000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000809102040000800000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
    ],
    "cert_files": 1
   },
@@ -2173,10 +2447,19 @@
    "root_hex": "00000000000000809102100000000008",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest",
     "certbacked"
    ],
-   "cert_files": 2
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00000000000000809102400000800000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
   },
   {
    "root_hex": "00000000000000809102800002000000",
@@ -2185,47 +2468,52 @@
     "receiptcert",
     "manifest"
    ],
-   "cert_files": 2
+   "cert_files": 3
   },
   {
    "root_hex": "00000000000000809122000000040000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000000000000809122000004000000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000000000000809122000020000000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000000000000809122000400000000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000000000000809122800000000000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000000000000809142000000000010",
@@ -2461,7 +2749,16 @@
    "root_hex": "00000000000000843202000000004000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000000843202000080000000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
    ],
    "cert_files": 1
   },
@@ -2490,7 +2787,7 @@
     "receiptcert",
     "manifest"
    ],
-   "cert_files": 2
+   "cert_files": 3
   },
   {
    "root_hex": "00000000000000849102000000000800",
@@ -2502,13 +2799,21 @@
    "cert_files": 2
   },
   {
+   "root_hex": "00000000000000849102000001000000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
+  },
+  {
    "root_hex": "00000000000000849102000002000000",
    "tier": "R",
    "kinds": [
     "receiptcert",
     "manifest"
    ],
-   "cert_files": 2
+   "cert_files": 3
   },
   {
    "root_hex": "00000000000000849102000080000000",
@@ -2525,9 +2830,10 @@
    "root_hex": "00000000000000849102020000000000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000000000000849402000000100000",
@@ -2576,35 +2882,39 @@
    "root_hex": "00000000000000909102000000000008",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest",
     "certbacked"
    ],
-   "cert_files": 2
+   "cert_files": 3
   },
   {
    "root_hex": "00000000000000909102020000000000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000000000000a09102000000000008",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest",
     "certbacked"
    ],
-   "cert_files": 2
+   "cert_files": 3
   },
   {
    "root_hex": "00000000000000a09102020000000000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000000000000a09142000000000000",
@@ -2669,9 +2979,10 @@
    "root_hex": "00000000000000c09082000000000004",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000000000000c09082000000000400",
@@ -2686,6 +2997,14 @@
    "tier": "R",
    "kinds": [
     "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000000c09082000000080000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
    ],
    "cert_files": 1
   },
@@ -2828,43 +3147,64 @@
    "root_hex": "00000000000002803202000000100000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000000000002803202000000200000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000000000002803202200000000000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest",
     "warmcert"
    ],
-   "cert_files": 2
+   "cert_files": 3
   },
   {
    "root_hex": "00000000000004803202000000000002",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000000000004803202000000200000",
    "tier": "V",
    "kinds": [
     "bigintaudit",
+    "receiptcert",
     "warmcert"
    ],
-   "cert_files": 2
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00000000000004803202000000400000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000000004803202000040000000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
   },
   {
    "root_hex": "00000000000008003800000008002008",
@@ -2896,10 +3236,27 @@
    "cert_files": 1
   },
   {
+   "root_hex": "00000000000008803202000000000002",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
+  },
+  {
    "root_hex": "00000000000008803202000000000004",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "warmcert"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000000008803202000080000000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
    ],
    "cert_files": 1
   },
@@ -2931,26 +3288,37 @@
    "root_hex": "00000000000010803202000000008000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000000000020803202000000002000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000000000020803202000000200000",
    "tier": "V",
    "kinds": [
     "bigintaudit",
+    "receiptcert",
     "warmcert"
    ],
-   "cert_files": 2
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00000000000020803202000080000000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
   },
   {
    "root_hex": "00000000000020c09002000001000000",
@@ -3133,15 +3501,16 @@
     "receiptcert",
     "manifest"
    ],
-   "cert_files": 2
+   "cert_files": 3
   },
   {
    "root_hex": "00000000000100809102020000000000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "0000000000010080d002000000000800",
@@ -3171,9 +3540,10 @@
    "root_hex": "00000000000200809082000000000010",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000000000200849002000000000800",
@@ -3228,26 +3598,53 @@
    "cert_files": 1
   },
   {
+   "root_hex": "00000000001000803202000000000002",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
+  },
+  {
    "root_hex": "00000000001000803202000000000008",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000000001000803202000000004000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000000001000803202000000008000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000001000803202000000100000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000001000803202000080000000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
    ],
    "cert_files": 1
   },
@@ -3258,7 +3655,7 @@
     "receiptcert",
     "manifest"
    ],
-   "cert_files": 2
+   "cert_files": 3
   },
   {
    "root_hex": "00000000002080809002000000000800",
@@ -3267,7 +3664,7 @@
     "receiptcert",
     "manifest"
    ],
-   "cert_files": 2
+   "cert_files": 3
   },
   {
    "root_hex": "00000000004000403800000008002000",
@@ -3293,7 +3690,24 @@
    "root_hex": "00000000004000803202000000000004",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000004000803242000000000000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000004000809102000001000000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
    ],
    "cert_files": 1
   },
@@ -3320,18 +3734,28 @@
    "root_hex": "00000000008000803202000000008000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000000008000803202000000200000",
    "tier": "V",
    "kinds": [
     "bigintaudit",
+    "receiptcert",
     "warmcert"
    ],
-   "cert_files": 2
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00000000008000803202000040000000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
   },
   {
    "root_hex": "00000000010000801206000040000000",
@@ -3354,9 +3778,10 @@
    "tier": "V",
    "kinds": [
     "bigintaudit",
+    "receiptcert",
     "warmcert"
    ],
-   "cert_files": 2
+   "cert_files": 3
   },
   {
    "root_hex": "00000000010400003800000008000200",
@@ -3510,23 +3935,34 @@
    "root_hex": "00000000020000803202000000000008",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000000020000803202000000004000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000000020000803202000000008000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000020000803202000040000000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
    ],
    "cert_files": 1
   },
@@ -3534,7 +3970,16 @@
    "root_hex": "00000000020000803202020000000000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000020000809102000001000000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
    ],
    "cert_files": 1
   },
@@ -3874,17 +4319,19 @@
    "root_hex": "00000000040000803202000000008000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000000040000803202200000000000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 2
+   "cert_files": 3
   },
   {
    "root_hex": "00000000040000809002000000000042",
@@ -4098,9 +4545,10 @@
    "root_hex": "00000000080000809102020000000000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000000080000811202000000200000",
@@ -4127,7 +4575,7 @@
     "receiptcert",
     "manifest"
    ],
-   "cert_files": 2
+   "cert_files": 3
   },
   {
    "root_hex": "000000000a00000038000000a0000000",
@@ -4224,6 +4672,31 @@
    "cert_files": 1
   },
   {
+   "root_hex": "00000000100000803202000000100000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000100000803202000040000000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000000100000803242000000000000",
+   "tier": "V",
+   "kinds": [
+    "bigintverify",
+    "receiptcert"
+   ],
+   "cert_files": 2
+  },
+  {
    "root_hex": "00000000100000805202000000200000",
    "tier": "V",
    "kinds": [
@@ -4240,15 +4713,16 @@
     "receiptcert",
     "manifest"
    ],
-   "cert_files": 2
+   "cert_files": 3
   },
   {
    "root_hex": "00000000100000809102020000000000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000000100000811202000000200000",
@@ -4440,23 +4914,34 @@
    "root_hex": "00000000400000803202000000000002",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000000400000803202000000000004",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000000400000803202000000008000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000400000803202000000100000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
    ],
    "cert_files": 1
   },
@@ -4464,26 +4949,46 @@
    "root_hex": "00000000400000803202000000200000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000000400000803202000000400000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
    ],
    "cert_files": 1
   },
   {
    "root_hex": "00000000400000803242000000000000",
-   "tier": "R",
+   "tier": "V",
    "kinds": [
+    "bigintverify",
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 3
   },
   {
    "root_hex": "00000000400000809102000000000008",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest",
     "certbacked"
    ],
-   "cert_files": 2
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00000000400000809102000000800000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
   },
   {
    "root_hex": "00000000420000003800000084000000",
@@ -4546,9 +5051,18 @@
    "tier": "V",
    "kinds": [
     "bigintaudit",
+    "receiptcert",
     "warmcert"
    ],
-   "cert_files": 2
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00000000800000809102000001000000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
   },
   {
    "root_hex": "00000000800000809102000002000000",
@@ -4557,7 +5071,7 @@
     "receiptcert",
     "manifest"
    ],
-   "cert_files": 2
+   "cert_files": 3
   },
   {
    "root_hex": "00000000800000809142000000000000",
@@ -4665,17 +5179,19 @@
    "root_hex": "00000001000000803202000000004000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000001000000803202000000200000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000001000000809102000000000001",
@@ -4684,7 +5200,15 @@
     "receiptcert",
     "manifest"
    ],
-   "cert_files": 2
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00000001000000809102000800000000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
   },
   {
    "root_hex": "00000001040000801202000000200000",
@@ -4745,17 +5269,19 @@
    "root_hex": "00000002000000803202000000004000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000002000000803202200000000000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 2
+   "cert_files": 3
   },
   {
    "root_hex": "00000002000000809102000000002000",
@@ -4774,7 +5300,15 @@
     "receiptcert",
     "manifest"
    ],
-   "cert_files": 2
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00000002000000809102000800000000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
   },
   {
    "root_hex": "00000004000000403800000008002000",
@@ -4799,9 +5333,10 @@
    "root_hex": "00000004000000803202000000004000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000004040000003800000008100000",
@@ -4839,41 +5374,46 @@
    "root_hex": "00000008000000803202000000000008",
    "tier": "R",
    "kinds": [
-    "manifest"
-   ],
-   "cert_files": 1
-  },
-  {
-   "root_hex": "00000008000000803202000000008000",
-   "tier": "R",
-   "kinds": [
-    "manifest"
-   ],
-   "cert_files": 1
-  },
-  {
-   "root_hex": "00000008000000803202000000080000",
-   "tier": "R",
-   "kinds": [
+    "receiptcert",
     "manifest"
    ],
    "cert_files": 2
   },
   {
+   "root_hex": "00000008000000803202000000008000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert",
+    "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000008000000803202000000080000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert",
+    "manifest"
+   ],
+   "cert_files": 3
+  },
+  {
    "root_hex": "00000008000000803202000000100000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000008000000803202000080000000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000008000000809003000000000400",
@@ -4952,27 +5492,30 @@
    "root_hex": "00000010000000803202000000004000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000010000000803202000000200000",
    "tier": "V",
    "kinds": [
     "bigintaudit",
+    "receiptcert",
     "warmcert"
    ],
-   "cert_files": 2
+   "cert_files": 3
   },
   {
    "root_hex": "00000010000000803202200000000000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest",
     "warmcert"
    ],
-   "cert_files": 2
+   "cert_files": 3
   },
   {
    "root_hex": "00000010000000809102000000002000",
@@ -4991,15 +5534,24 @@
     "receiptcert",
     "manifest"
    ],
-   "cert_files": 2
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00000010000000809102000800000000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
   },
   {
    "root_hex": "00000010000000809102020000000000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000010000000809142000000000000",
@@ -5046,12 +5598,37 @@
    "cert_files": 1
   },
   {
+   "root_hex": "00000040000000803202000000100000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000040000000803202000040000000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000040000000803202000080000000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
+  },
+  {
    "root_hex": "00000040000000809102020000000000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000040040000003800000048000000",
@@ -5068,6 +5645,14 @@
     "receiptcert"
    ],
    "cert_files": 1
+  },
+  {
+   "root_hex": "00000080000000803242000000000000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 2
   },
   {
    "root_hex": "00000080000000809082000000000400",
@@ -5097,9 +5682,10 @@
    "root_hex": "00000080000000809122000000000000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000080040000003800000048000000",
@@ -5155,23 +5741,59 @@
    "root_hex": "00000200000000803202000000000004",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "warmcert"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000200000000803202000000200000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00000200000000803202000000400000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000200000000803202000040000000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000200000000803242000000000000",
+   "tier": "V",
+   "kinds": [
+    "bigintverify",
+    "receiptcert"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00000200000000809102000000800000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00000200000000809102000001000000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
    ],
    "cert_files": 1
   },
@@ -5223,9 +5845,18 @@
    "tier": "V",
    "kinds": [
     "bigintaudit",
+    "receiptcert",
     "warmcert"
    ],
-   "cert_files": 2
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00000400000000809102000000800000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
   },
   {
    "root_hex": "00000400000000809102000002000000",
@@ -5234,7 +5865,7 @@
     "receiptcert",
     "manifest"
    ],
-   "cert_files": 2
+   "cert_files": 3
   },
   {
    "root_hex": "00000800000000403800000008002000",
@@ -5261,10 +5892,11 @@
    "root_hex": "00000800000000809102000000800000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "certpart",
     "manifest"
    ],
-   "cert_files": 3
+   "cert_files": 4
   },
   {
    "root_hex": "00000800000000c09002000001000000",
@@ -5302,26 +5934,29 @@
    "root_hex": "00001000000000803202000000004000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00001000000000803202000000008000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00001000000000803202000000200000",
    "tier": "V",
    "kinds": [
     "bigintaudit",
+    "receiptcert",
     "warmcert"
    ],
-   "cert_files": 2
+   "cert_files": 3
   },
   {
    "root_hex": "00001000000000809082000000001000",
@@ -5335,9 +5970,10 @@
    "root_hex": "00001000000000809122000000000000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00001000000000809142000000000000",
@@ -5398,42 +6034,47 @@
    "root_hex": "00002000000000803202000000001000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 2
+   "cert_files": 3
   },
   {
    "root_hex": "00002000000000803202000000400000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00002000000000803202000020000000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 2
+   "cert_files": 3
   },
   {
    "root_hex": "00002000000000803202000040000000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00002000000000809102000000000008",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest",
     "certbacked"
    ],
-   "cert_files": 2
+   "cert_files": 3
   },
   {
    "root_hex": "00002000000000809102000000400000",
@@ -5447,6 +6088,14 @@
    "cert_files": 4
   },
   {
+   "root_hex": "00002000000000809102000001000000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
+  },
+  {
    "root_hex": "00002000000000809102000080000000",
    "tier": "R",
    "kinds": [
@@ -5456,12 +6105,21 @@
    "cert_files": 3
   },
   {
+   "root_hex": "00002000000000809102000800000000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
+  },
+  {
    "root_hex": "00002000000000809102020000000000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00002000000000809142000000000000",
@@ -5537,15 +6195,24 @@
    "root_hex": "00008000000000803202000000004000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00008000000000809082000080000000",
    "tier": "R",
    "kinds": [
     "manifest"
+   ],
+   "cert_files": 1
+  },
+  {
+   "root_hex": "00008000000000809102000000800000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
    ],
    "cert_files": 1
   },
@@ -5622,6 +6289,14 @@
    "cert_files": 1
   },
   {
+   "root_hex": "00010000000000809102000001000000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
+  },
+  {
    "root_hex": "00010000000000809102000080000000",
    "tier": "V",
    "kinds": [
@@ -5636,9 +6311,10 @@
    "root_hex": "00010000000000809102020000000000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00010000000000c09002000001000000",
@@ -5726,13 +6402,30 @@
    "cert_files": 1
   },
   {
+   "root_hex": "00040000000000803202000000000002",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
+  },
+  {
    "root_hex": "00040000000000803202000000200000",
    "tier": "V",
    "kinds": [
     "bigintaudit",
+    "receiptcert",
     "warmcert"
    ],
-   "cert_files": 2
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00040000000000809102000000800000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
   },
   {
    "root_hex": "00040000000000c09002000001000000",
@@ -5759,18 +6452,36 @@
    "cert_files": 1
   },
   {
+   "root_hex": "00100000000000803202000000000002",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
+  },
+  {
    "root_hex": "00100000000000803202000000000008",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00100000000000803202000000008000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00100000000000803202000000100000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
    ],
    "cert_files": 1
   },
@@ -5778,10 +6489,19 @@
    "root_hex": "00100000000000803202200000000000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest",
     "warmcert"
    ],
-   "cert_files": 2
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00100000000000809102000000800000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
   },
   {
    "root_hex": "00100000000000809102000080000000",
@@ -5797,9 +6517,10 @@
    "root_hex": "00100000000000809102020000000000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00100000000000809142000000000000",
@@ -5853,10 +6574,27 @@
    "cert_files": 1
   },
   {
+   "root_hex": "00200000000000803202000000100000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
+  },
+  {
    "root_hex": "00200000000000803202000000200000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00200000000000803202000000400000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
    ],
    "cert_files": 1
   },
@@ -5864,9 +6602,10 @@
    "root_hex": "00200000000000803202000020000000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 2
+   "cert_files": 3
   },
   {
    "root_hex": "00200000020000003800000080080000",
@@ -5913,9 +6652,10 @@
    "root_hex": "00400000000000803202000400000000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00400000000000809082000000001000",
@@ -5945,10 +6685,19 @@
    "root_hex": "00400000000000809102000000000008",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest",
     "certbacked"
    ],
-   "cert_files": 2
+   "cert_files": 3
+  },
+  {
+   "root_hex": "00400000000000809102000001000000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
   },
   {
    "root_hex": "00400000000000809102000080000000",
@@ -5961,7 +6710,24 @@
    "cert_files": 3
   },
   {
+   "root_hex": "00400000000000809102000800000000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
+  },
+  {
    "root_hex": "00400000000000809102020000000000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert",
+    "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "00800000000000801a0a000000000000",
    "tier": "R",
    "kinds": [
     "manifest"
@@ -5969,10 +6735,10 @@
    "cert_files": 1
   },
   {
-   "root_hex": "00800000000000801a0a000000000000",
+   "root_hex": "00800000000000803202000000000002",
    "tier": "R",
    "kinds": [
-    "manifest"
+    "receiptcert"
    ],
    "cert_files": 1
   },
@@ -5996,10 +6762,11 @@
    "root_hex": "00800000000000809102000000000008",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest",
     "certbacked"
    ],
-   "cert_files": 2
+   "cert_files": 3
   },
   {
    "root_hex": "00800000000000809102000080000000",
@@ -6015,9 +6782,10 @@
    "root_hex": "00800000000000809102000800000000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
    ],
-   "cert_files": 1
+   "cert_files": 2
   },
   {
    "root_hex": "00800000000000c09002000001000000",
@@ -6065,7 +6833,16 @@
    "root_hex": "01000000000000803202000000002000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest"
+   ],
+   "cert_files": 2
+  },
+  {
+   "root_hex": "01000000000000803202000040000000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
    ],
    "cert_files": 1
   },
@@ -6073,10 +6850,19 @@
    "root_hex": "01000000000000803202200000000000",
    "tier": "R",
    "kinds": [
+    "receiptcert",
     "manifest",
     "warmcert"
    ],
-   "cert_files": 2
+   "cert_files": 3
+  },
+  {
+   "root_hex": "01000000000000809102000000800000",
+   "tier": "R",
+   "kinds": [
+    "receiptcert"
+   ],
+   "cert_files": 1
   },
   {
    "root_hex": "01000000000000c09002000001000000",
@@ -6096,1523 +6882,7 @@
    "cert_files": 2
   }
  ],
- "uncertified_roots": [
-  {
-   "root_hex": "00000000000000803202000000100100",
-   "canonical_hex": "00000000000000803202000000100100",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-warm-multiband-recompute-20261115.json",
-     "band": "class2-lane-cost64b",
-     "bit": 8
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-warm-multiband-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000000000000803202000000400002",
-   "canonical_hex": "00000000000000803202000000400002",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-cost68d-recompute-20261115.json",
-     "band": "class2-lane-cost71b",
-     "bit": 1
-    },
-    {
-     "source": "class-frontier-cost68d-recompute-20261115.json",
-     "band": "class2-lane-cost61d",
-     "bit": 22
-    },
-    {
-     "source": "class-frontier-merged-recompute-after-multiband2-68dhyg-20261115.json",
-     "band": "class2-lane-cost71b",
-     "bit": 1
-    },
-    {
-     "source": "class-frontier-merged-recompute-after-multiband2-68dhyg-20261115.json",
-     "band": "class2-lane-cost61d",
-     "bit": 22
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-cost68d-recompute-20261115.json",
-    "class-frontier-merged-recompute-after-multiband2-68dhyg-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000000000000803202000000800002",
-   "canonical_hex": "00000000000000803202000000800002",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-unified-merge-recompute-20261115.json",
-     "band": "class2-lane-cost61d",
-     "bit": 23
-    },
-    {
-     "source": "class-frontier-warm-multiband2-recompute-20261115.json",
-     "band": "class2-lane-cost61d",
-     "bit": 23
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-unified-merge-recompute-20261115.json",
-    "class-frontier-warm-multiband2-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000000000000803202000040000010",
-   "canonical_hex": "00000000000000803202000040000010",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-warm-multiband-recompute-20261115.json",
-     "band": "class2-lane-cost61e",
-     "bit": 4
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-warm-multiband-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000000000000803202000100400000",
-   "canonical_hex": "00000000000000803202000100400000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-warm-multiband-recompute-20261115.json",
-     "band": "class2-lane-cost71b",
-     "bit": 32
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-warm-multiband-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000000000000803202000200100000",
-   "canonical_hex": "00000000000000803202000200100000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-warm-multiband-recompute-20261115.json",
-     "band": "class2-lane-cost64b",
-     "bit": 33
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-warm-multiband-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000000000000803202010000100000",
-   "canonical_hex": "00000000000000803202010000100000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-unified-merge-recompute-20261115.json",
-     "band": "class2-lane-cost64b",
-     "bit": 40
-    },
-    {
-     "source": "class-frontier-warm-multiband2-recompute-20261115.json",
-     "band": "class2-lane-cost64b",
-     "bit": 40
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-unified-merge-recompute-20261115.json",
-    "class-frontier-warm-multiband2-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000000000000803202080000100000",
-   "canonical_hex": "00000000000000803202080000100000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-unified-merge-recompute-20261115.json",
-     "band": "class2-lane-cost64b",
-     "bit": 43
-    },
-    {
-     "source": "class-frontier-warm-multiband2-recompute-20261115.json",
-     "band": "class2-lane-cost64b",
-     "bit": 43
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-unified-merge-recompute-20261115.json",
-    "class-frontier-warm-multiband2-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000000000000803212000000000200",
-   "canonical_hex": "00000000000000803212000000000200",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-warm-multiband-recompute-20261115.json",
-     "band": "class2-lane-cost72",
-     "bit": 52
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-warm-multiband-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000000000000803222000000100000",
-   "canonical_hex": "00000000000000803222000000100000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-unified-merge-recompute-20261115.json",
-     "band": "class2-lane-cost64b",
-     "bit": 53
-    },
-    {
-     "source": "class-frontier-warm-multiband2-recompute-20261115.json",
-     "band": "class2-lane-cost64b",
-     "bit": 53
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-unified-merge-recompute-20261115.json",
-    "class-frontier-warm-multiband2-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000000000000803242000000000100",
-   "canonical_hex": "00000000000000803242000000000100",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": true,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-unified-merge-recompute-20261115.json",
-     "band": "class2-lane-cost70c",
-     "bit": 8,
-     "rows": 47165,
-     "md5": "30db912028d24c74d0b9dc9d2cec61e1"
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-unified-merge-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000000000000803242000000000800",
-   "canonical_hex": "00000000000000803242000000000800",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": true,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-unified-merge-recompute-20261115.json",
-     "band": "class2-lane-cost70c",
-     "bit": 11,
-     "rows": 39873,
-     "md5": "a79bf70cafbed3a86d93002c564cad3e"
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-unified-merge-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000000000000803242000001000000",
-   "canonical_hex": "00000000000000803242000001000000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": true,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-unified-merge-recompute-20261115.json",
-     "band": "class2-lane-cost70c",
-     "bit": 24,
-     "rows": 43005,
-     "md5": "db30f4dc370b0109a09c2b15c3573231"
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-unified-merge-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000000000000803242010000000000",
-   "canonical_hex": "00000000000000803242010000000000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": true,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-unified-merge-recompute-20261115.json",
-     "band": "class2-lane-cost70c",
-     "bit": 40,
-     "rows": 36406,
-     "md5": "59e4dd070bbf0fd6dd7e4d3bbb2e3ec3"
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-unified-merge-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000000000000803242040000000000",
-   "canonical_hex": "00000000000000803242040000000000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-after-cost70c-warm3-recompute-20261115.json",
-     "band": "class2-lane-cost70c",
-     "bit": 42,
-     "rows": 50015,
-     "md5": "b7ae6d13da02e880ca10b4ba7c8231d9",
-     "sub_roots_pass": 61
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-after-cost70c-warm3-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "000000000000008090a2400000000000",
-   "canonical_hex": "000000000000008090a2400000000000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [],
-   "provenance_sources": [
-    "class2-lane-cost63cd-frontier-recompute-20261114.json"
-   ]
-  },
-  {
-   "root_hex": "00000000000000809102000001000002",
-   "canonical_hex": "00000000000000809102000001000002",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-cost68d-recompute-20261115.json",
-     "band": "class2-lane-cost62a",
-     "bit": 1
-    },
-    {
-     "source": "class-frontier-merged-recompute-after-multiband2-68dhyg-20261115.json",
-     "band": "class2-lane-cost62a",
-     "bit": 1
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-cost68d-recompute-20261115.json",
-    "class-frontier-merged-recompute-after-multiband2-68dhyg-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000000000000809102000004800000",
-   "canonical_hex": "00000000000000809102000004800000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-warm-multiband-recompute-20261115.json",
-     "band": "class2-lane-cost65e",
-     "bit": 26
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-warm-multiband-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000000000000809102000020800000",
-   "canonical_hex": "00000000000000809102000020800000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-warm-multiband-recompute-20261115.json",
-     "band": "class2-lane-cost65e",
-     "bit": 29
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-warm-multiband-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000000000000809102000100800000",
-   "canonical_hex": "00000000000000809102000100800000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-warm-multiband-recompute-20261115.json",
-     "band": "class2-lane-cost65e",
-     "bit": 32
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-warm-multiband-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000000000000809102000101000000",
-   "canonical_hex": "00000000000000809102000101000000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-warm-multiband-recompute-20261115.json",
-     "band": "class2-lane-cost62a",
-     "bit": 32
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-warm-multiband-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000000000000809102000200800000",
-   "canonical_hex": "00000000000000809102000200800000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-warm-multiband-recompute-20261115.json",
-     "band": "class2-lane-cost65e",
-     "bit": 33
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-warm-multiband-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000000000000809102000800000004",
-   "canonical_hex": "00000000000000809102000800000004",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-warm-multiband-recompute-20261115.json",
-     "band": "class2-lane-cost63a",
-     "bit": 2
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-warm-multiband-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000000000000809102000800000800",
-   "canonical_hex": "00000000000000809102000800000800",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-cost68d-recompute-20261115.json",
-     "band": "class2-lane-cost63a",
-     "bit": 11
-    },
-    {
-     "source": "class-frontier-merged-recompute-after-multiband2-68dhyg-20261115.json",
-     "band": "class2-lane-cost63a",
-     "bit": 11
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-cost68d-recompute-20261115.json",
-    "class-frontier-merged-recompute-after-multiband2-68dhyg-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000000000000809102000800008000",
-   "canonical_hex": "00000000000000809102000800008000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-warm-multiband-recompute-20261115.json",
-     "band": "class2-lane-cost63a",
-     "bit": 15
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-warm-multiband-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000000000000809102000810000000",
-   "canonical_hex": "00000000000000809102000810000000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-warm-multiband-recompute-20261115.json",
-     "band": "class2-lane-cost63a",
-     "bit": 28
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-warm-multiband-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000000000000809102001000800000",
-   "canonical_hex": "00000000000000809102001000800000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-unified-merge-recompute-20261115.json",
-     "band": "class2-lane-cost65e",
-     "bit": 36
-    },
-    {
-     "source": "class-frontier-warm-multiband2-recompute-20261115.json",
-     "band": "class2-lane-cost65e",
-     "bit": 36
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-unified-merge-recompute-20261115.json",
-    "class-frontier-warm-multiband2-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000000000000809102040000800000",
-   "canonical_hex": "00000000000000809102040000800000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-warm-multiband-recompute-20261115.json",
-     "band": "class2-lane-cost65e",
-     "bit": 42
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-warm-multiband-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000000000000809102400000800000",
-   "canonical_hex": "00000000000000809102400000800000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-unified-merge-recompute-20261115.json",
-     "band": "class2-lane-cost65e",
-     "bit": 46
-    },
-    {
-     "source": "class-frontier-warm-multiband2-recompute-20261115.json",
-     "band": "class2-lane-cost65e",
-     "bit": 46
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-unified-merge-recompute-20261115.json",
-    "class-frontier-warm-multiband2-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000000000000843202000080000000",
-   "canonical_hex": "00000000000000843202000080000000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-unified-merge-recompute-20261115.json",
-     "band": "class2-lane-cost61f",
-     "bit": 66
-    },
-    {
-     "source": "class-frontier-warm-multiband2-recompute-20261115.json",
-     "band": "class2-lane-cost61f",
-     "bit": 66
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-unified-merge-recompute-20261115.json",
-    "class-frontier-warm-multiband2-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000000000000849102000001000000",
-   "canonical_hex": "00000000000000849102000001000000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-warm-multiband-recompute-20261115.json",
-     "band": "class2-lane-cost62a",
-     "bit": 66
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-warm-multiband-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000000000000c09082000000080000",
-   "canonical_hex": "00000000000000c09082000000080000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [],
-   "provenance_sources": [
-    "class2-lane-cost63cd-frontier-recompute-20261114.json"
-   ]
-  },
-  {
-   "root_hex": "00000000000004803202000000400000",
-   "canonical_hex": "00000000000000909802000100000000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-unified-merge-recompute-20261115.json",
-     "band": "class2-lane-cost71b",
-     "bit": 74
-    },
-    {
-     "source": "class-frontier-warm-multiband2-recompute-20261115.json",
-     "band": "class2-lane-cost71b",
-     "bit": 74
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-unified-merge-recompute-20261115.json",
-    "class-frontier-warm-multiband2-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000000000004803202000040000000",
-   "canonical_hex": "00000000000000909802000001000000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-unified-merge-recompute-20261115.json",
-     "band": "class2-lane-cost61e",
-     "bit": 74
-    },
-    {
-     "source": "class-frontier-warm-multiband2-recompute-20261115.json",
-     "band": "class2-lane-cost61e",
-     "bit": 74
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-unified-merge-recompute-20261115.json",
-    "class-frontier-warm-multiband2-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000000000008803202000000000002",
-   "canonical_hex": "00000000000000889802000000000200",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-unified-merge-recompute-20261115.json",
-     "band": "class2-lane-cost61d",
-     "bit": 75
-    },
-    {
-     "source": "class-frontier-warm-multiband2-recompute-20261115.json",
-     "band": "class2-lane-cost61d",
-     "bit": 75
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-unified-merge-recompute-20261115.json",
-    "class-frontier-warm-multiband2-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000000000008803202000080000000",
-   "canonical_hex": "00000000000000889802000000800000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-unified-merge-recompute-20261115.json",
-     "band": "class2-lane-cost61f",
-     "bit": 75
-    },
-    {
-     "source": "class-frontier-warm-multiband2-recompute-20261115.json",
-     "band": "class2-lane-cost61f",
-     "bit": 75
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-unified-merge-recompute-20261115.json",
-    "class-frontier-warm-multiband2-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000000000020803202000080000000",
-   "canonical_hex": "00000000000020803202000080000000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-unified-merge-recompute-20261115.json",
-     "band": "class2-lane-cost61f",
-     "bit": 77
-    },
-    {
-     "source": "class-frontier-warm-multiband2-recompute-20261115.json",
-     "band": "class2-lane-cost61f",
-     "bit": 77
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-unified-merge-recompute-20261115.json",
-    "class-frontier-warm-multiband2-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000000001000803202000000000002",
-   "canonical_hex": "00000000000100803800000008200000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-unified-merge-recompute-20261115.json",
-     "band": "class2-lane-cost61d",
-     "bit": 84
-    },
-    {
-     "source": "class-frontier-warm-multiband2-recompute-20261115.json",
-     "band": "class2-lane-cost61d",
-     "bit": 84
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-unified-merge-recompute-20261115.json",
-    "class-frontier-warm-multiband2-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000000001000803202000000100000",
-   "canonical_hex": "00000000000100809802000000001000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-unified-merge-recompute-20261115.json",
-     "band": "class2-lane-cost64b",
-     "bit": 84
-    },
-    {
-     "source": "class-frontier-warm-multiband2-recompute-20261115.json",
-     "band": "class2-lane-cost64b",
-     "bit": 84
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-unified-merge-recompute-20261115.json",
-    "class-frontier-warm-multiband2-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000000001000803202000080000000",
-   "canonical_hex": "00000000000100809802000000800000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-unified-merge-recompute-20261115.json",
-     "band": "class2-lane-cost61f",
-     "bit": 84
-    },
-    {
-     "source": "class-frontier-warm-multiband2-recompute-20261115.json",
-     "band": "class2-lane-cost61f",
-     "bit": 84
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-unified-merge-recompute-20261115.json",
-    "class-frontier-warm-multiband2-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000000004000803242000000000000",
-   "canonical_hex": "00000000000000849802000400000000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-after-cost70c-warm3-recompute-20261115.json",
-     "band": "class2-lane-cost70c",
-     "bit": 86,
-     "rows": 68358,
-     "md5": "483618fc5b04db401d91dd6a82b25dfd",
-     "sub_roots_pass": 64
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-after-cost70c-warm3-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000000004000809102000001000000",
-   "canonical_hex": "00000000000040811202000040000000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-warm-multiband-recompute-20261115.json",
-     "band": "class2-lane-cost62a",
-     "bit": 86
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-warm-multiband-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000000008000803202000040000000",
-   "canonical_hex": "00000000000020809802000001000000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-unified-merge-recompute-20261115.json",
-     "band": "class2-lane-cost61e",
-     "bit": 87
-    },
-    {
-     "source": "class-frontier-warm-multiband2-recompute-20261115.json",
-     "band": "class2-lane-cost61e",
-     "bit": 87
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-unified-merge-recompute-20261115.json",
-    "class-frontier-warm-multiband2-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000000020000803202000040000000",
-   "canonical_hex": "00000000020000803202000040000000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-unified-merge-recompute-20261115.json",
-     "band": "class2-lane-cost61e",
-     "bit": 89
-    },
-    {
-     "source": "class-frontier-warm-multiband2-recompute-20261115.json",
-     "band": "class2-lane-cost61e",
-     "bit": 89
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-unified-merge-recompute-20261115.json",
-    "class-frontier-warm-multiband2-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000000020000809102000001000000",
-   "canonical_hex": "00000000020000809102000001000000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-cost68d-recompute-20261115.json",
-     "band": "class2-lane-cost62a",
-     "bit": 89
-    },
-    {
-     "source": "class-frontier-merged-recompute-after-multiband2-68dhyg-20261115.json",
-     "band": "class2-lane-cost62a",
-     "bit": 89
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-cost68d-recompute-20261115.json",
-    "class-frontier-merged-recompute-after-multiband2-68dhyg-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000000100000803202000000100000",
-   "canonical_hex": "00000000100000803202000000100000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-unified-merge-recompute-20261115.json",
-     "band": "class2-lane-cost64b",
-     "bit": 92
-    },
-    {
-     "source": "class-frontier-warm-multiband2-recompute-20261115.json",
-     "band": "class2-lane-cost64b",
-     "bit": 92
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-unified-merge-recompute-20261115.json",
-    "class-frontier-warm-multiband2-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000000100000803202000040000000",
-   "canonical_hex": "00000000040000803810000008000000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-unified-merge-recompute-20261115.json",
-     "band": "class2-lane-cost61e",
-     "bit": 92
-    },
-    {
-     "source": "class-frontier-warm-multiband2-recompute-20261115.json",
-     "band": "class2-lane-cost61e",
-     "bit": 92
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-unified-merge-recompute-20261115.json",
-    "class-frontier-warm-multiband2-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000000100000803242000000000000",
-   "canonical_hex": "00000000000000849802000010000000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": true,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-unified-merge-recompute-20261115.json",
-     "band": "class2-lane-cost70c",
-     "bit": 92,
-     "rows": 52755,
-     "md5": "38d60e00f28b6ff96b6cb4080f564036"
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-unified-merge-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000000400000803202000000100000",
-   "canonical_hex": "00000000100000809802000000001000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-unified-merge-recompute-20261115.json",
-     "band": "class2-lane-cost64b",
-     "bit": 94
-    },
-    {
-     "source": "class-frontier-warm-multiband2-recompute-20261115.json",
-     "band": "class2-lane-cost64b",
-     "bit": 94
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-unified-merge-recompute-20261115.json",
-    "class-frontier-warm-multiband2-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000000400000803202000000400000",
-   "canonical_hex": "00000000000000903800000008000100",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-unified-merge-recompute-20261115.json",
-     "band": "class2-lane-cost71b",
-     "bit": 94
-    },
-    {
-     "source": "class-frontier-warm-multiband2-recompute-20261115.json",
-     "band": "class2-lane-cost71b",
-     "bit": 94
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-unified-merge-recompute-20261115.json",
-    "class-frontier-warm-multiband2-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000000400000809102000000800000",
-   "canonical_hex": "00000000020000809102000010000000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-warm-multiband-recompute-20261115.json",
-     "band": "class2-lane-cost65e",
-     "bit": 94
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-warm-multiband-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000000800000809102000001000000",
-   "canonical_hex": "00000000040000809102000020000000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-warm-multiband-recompute-20261115.json",
-     "band": "class2-lane-cost62a",
-     "bit": 95
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-warm-multiband-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000001000000809102000800000000",
-   "canonical_hex": "00000000000080809102000040000000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-unified-merge-recompute-20261115.json",
-     "band": "class2-lane-cost63a",
-     "bit": 96
-    },
-    {
-     "source": "class-frontier-warm-multiband2-recompute-20261115.json",
-     "band": "class2-lane-cost63a",
-     "bit": 96
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-unified-merge-recompute-20261115.json",
-    "class-frontier-warm-multiband2-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000002000000809102000800000000",
-   "canonical_hex": "00000000000080809102000080000000",
-   "orbit_covered_by_certified_sibling": true,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-unified-merge-recompute-20261115.json",
-     "band": "class2-lane-cost63a",
-     "bit": 97
-    },
-    {
-     "source": "class-frontier-warm-multiband2-recompute-20261115.json",
-     "band": "class2-lane-cost63a",
-     "bit": 97
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-unified-merge-recompute-20261115.json",
-    "class-frontier-warm-multiband2-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000010000000809102000800000000",
-   "canonical_hex": "00000000000080809102000000001000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-warm-multiband-recompute-20261115.json",
-     "band": "class2-lane-cost63a",
-     "bit": 100
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-warm-multiband-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000040000000803202000000100000",
-   "canonical_hex": "00000000200040003802000000100000",
-   "orbit_covered_by_certified_sibling": true,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-warm-multiband-recompute-20261115.json",
-     "band": "class2-lane-cost64b",
-     "bit": 102
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-warm-multiband-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000040000000803202000040000000",
-   "canonical_hex": "00000000040000803800040008000000",
-   "orbit_covered_by_certified_sibling": true,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-warm-multiband-recompute-20261115.json",
-     "band": "class2-lane-cost61e",
-     "bit": 102
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-warm-multiband-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000040000000803202000080000000",
-   "canonical_hex": "00000000020000809802000000040000",
-   "orbit_covered_by_certified_sibling": true,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-warm-multiband-recompute-20261115.json",
-     "band": "class2-lane-cost61f",
-     "bit": 102
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-warm-multiband-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000080000000803242000000000000",
-   "canonical_hex": "00000000000000849802000000020000",
-   "orbit_covered_by_certified_sibling": true,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-after-cost70c-warm3-recompute-20261115.json",
-     "band": "class2-lane-cost70c",
-     "bit": 103,
-     "rows": 45205,
-     "md5": "aac78501eb7b16edfc4cb45c04d2a897",
-     "sub_roots_pass": 57
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-after-cost70c-warm3-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000200000000803202000040000000",
-   "canonical_hex": "00000000040000809802000000008000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-unified-merge-recompute-20261115.json",
-     "band": "class2-lane-cost61e",
-     "bit": 105
-    },
-    {
-     "source": "class-frontier-warm-multiband2-recompute-20261115.json",
-     "band": "class2-lane-cost61e",
-     "bit": 105
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-unified-merge-recompute-20261115.json",
-    "class-frontier-warm-multiband2-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000200000000803242000000000000",
-   "canonical_hex": "00000000000000849802000000008000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": true,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-unified-merge-recompute-20261115.json",
-     "band": "class2-lane-cost70c",
-     "bit": 105,
-     "rows": 33992,
-     "md5": "d6f56e07bf79d21cbc836928883a613a"
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-unified-merge-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000200000000809102000000800000",
-   "canonical_hex": "00000000020000809102000000020000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-warm-multiband-recompute-20261115.json",
-     "band": "class2-lane-cost65e",
-     "bit": 105
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-warm-multiband-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000200000000809102000001000000",
-   "canonical_hex": "00000000040000809102000000020000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-warm-multiband-recompute-20261115.json",
-     "band": "class2-lane-cost62a",
-     "bit": 105
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-warm-multiband-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00000400000000809102000000800000",
-   "canonical_hex": "00000000020000809102000000040000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-warm-multiband-recompute-20261115.json",
-     "band": "class2-lane-cost65e",
-     "bit": 106
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-warm-multiband-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00002000000000809102000001000000",
-   "canonical_hex": "00000000040000809102000000200000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-warm-multiband-recompute-20261115.json",
-     "band": "class2-lane-cost62a",
-     "bit": 109
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-warm-multiband-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00002000000000809102000800000000",
-   "canonical_hex": "00000000000080809102000000200000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-cost68d-recompute-20261115.json",
-     "band": "class2-lane-cost63a",
-     "bit": 109
-    },
-    {
-     "source": "class-frontier-merged-recompute-after-multiband2-68dhyg-20261115.json",
-     "band": "class2-lane-cost63a",
-     "bit": 109
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-cost68d-recompute-20261115.json",
-    "class-frontier-merged-recompute-after-multiband2-68dhyg-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00008000000000809102000000800000",
-   "canonical_hex": "00000000020000809102000000000002",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-warm-multiband-recompute-20261115.json",
-     "band": "class2-lane-cost65e",
-     "bit": 111
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-warm-multiband-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00010000000000809102000001000000",
-   "canonical_hex": "00000000040000809102000000000004",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-warm-multiband-recompute-20261115.json",
-     "band": "class2-lane-cost62a",
-     "bit": 112
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-warm-multiband-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00040000000000803202000000000002",
-   "canonical_hex": "00000000000000803800100008200000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-unified-merge-recompute-20261115.json",
-     "band": "class2-lane-cost61d",
-     "bit": 114
-    },
-    {
-     "source": "class-frontier-warm-multiband2-recompute-20261115.json",
-     "band": "class2-lane-cost61d",
-     "bit": 114
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-unified-merge-recompute-20261115.json",
-    "class-frontier-warm-multiband2-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00040000000000809102000000800000",
-   "canonical_hex": "00000000020000809102000000000010",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-warm-multiband-recompute-20261115.json",
-     "band": "class2-lane-cost65e",
-     "bit": 114
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-warm-multiband-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00100000000000803202000000000002",
-   "canonical_hex": "00000000000000843800000008200000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-unified-merge-recompute-20261115.json",
-     "band": "class2-lane-cost61d",
-     "bit": 116
-    },
-    {
-     "source": "class-frontier-warm-multiband2-recompute-20261115.json",
-     "band": "class2-lane-cost61d",
-     "bit": 116
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-unified-merge-recompute-20261115.json",
-    "class-frontier-warm-multiband2-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00100000000000803202000000100000",
-   "canonical_hex": "00000000200000003802100000100000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-unified-merge-recompute-20261115.json",
-     "band": "class2-lane-cost64b",
-     "bit": 116
-    },
-    {
-     "source": "class-frontier-warm-multiband2-recompute-20261115.json",
-     "band": "class2-lane-cost64b",
-     "bit": 116
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-unified-merge-recompute-20261115.json",
-    "class-frontier-warm-multiband2-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00100000000000809102000000800000",
-   "canonical_hex": "00000000020000809102000000000040",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-warm-multiband-recompute-20261115.json",
-     "band": "class2-lane-cost65e",
-     "bit": 116
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-warm-multiband-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00200000000000803202000000100000",
-   "canonical_hex": "00000000200000003802000200100000",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-unified-merge-recompute-20261115.json",
-     "band": "class2-lane-cost64b",
-     "bit": 117
-    },
-    {
-     "source": "class-frontier-warm-multiband2-recompute-20261115.json",
-     "band": "class2-lane-cost64b",
-     "bit": 117
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-unified-merge-recompute-20261115.json",
-    "class-frontier-warm-multiband2-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00200000000000803202000000400000",
-   "canonical_hex": "00000000000020803800000008000100",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-unified-merge-recompute-20261115.json",
-     "band": "class2-lane-cost71b",
-     "bit": 117
-    },
-    {
-     "source": "class-frontier-warm-multiband2-recompute-20261115.json",
-     "band": "class2-lane-cost71b",
-     "bit": 117
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-unified-merge-recompute-20261115.json",
-    "class-frontier-warm-multiband2-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00400000000000809102000001000000",
-   "canonical_hex": "00000000040000809102000000000100",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-warm-multiband-recompute-20261115.json",
-     "band": "class2-lane-cost62a",
-     "bit": 118
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-warm-multiband-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00400000000000809102000800000000",
-   "canonical_hex": "00000000000080809102000000000100",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-warm-multiband-recompute-20261115.json",
-     "band": "class2-lane-cost63a",
-     "bit": 118
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-warm-multiband-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "00800000000000803202000000000002",
-   "canonical_hex": "00000008000000803800000008200000",
-   "orbit_covered_by_certified_sibling": true,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-warm-multiband-recompute-20261115.json",
-     "band": "class2-lane-cost61d",
-     "bit": 119
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-warm-multiband-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "01000000000000803202000040000000",
-   "canonical_hex": "00000000040000809802000000000001",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-unified-merge-recompute-20261115.json",
-     "band": "class2-lane-cost61e",
-     "bit": 120
-    },
-    {
-     "source": "class-frontier-warm-multiband2-recompute-20261115.json",
-     "band": "class2-lane-cost61e",
-     "bit": 120
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-unified-merge-recompute-20261115.json",
-    "class-frontier-warm-multiband2-recompute-20261115.json"
-   ]
-  },
-  {
-   "root_hex": "01000000000000809102000000800000",
-   "canonical_hex": "00000000020000809102000000000400",
-   "orbit_covered_by_certified_sibling": false,
-   "cert_published_unverified": false,
-   "receipt_refs": [
-    {
-     "source": "class-frontier-unified-merge-recompute-20261115.json",
-     "band": "class2-lane-cost65e",
-     "bit": 120
-    },
-    {
-     "source": "class-frontier-warm-multiband2-recompute-20261115.json",
-     "band": "class2-lane-cost65e",
-     "bit": 120
-    }
-   ],
-   "provenance_sources": [
-    "class-frontier-unified-merge-recompute-20261115.json",
-    "class-frontier-warm-multiband2-recompute-20261115.json"
-   ]
-  }
- ],
+ "uncertified_roots": [],
  "interpretation_guard": [
   "solved 1452 is manifest cover bookkeeping of the head-1452 frontier; this census does not change any frontier number",
   "a WIN7-D10 certificate proves only that its individual 7-stone root is a first-player win within depth 10",

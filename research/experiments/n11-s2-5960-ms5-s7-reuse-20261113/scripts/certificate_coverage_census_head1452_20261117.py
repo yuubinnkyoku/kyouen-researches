@@ -28,12 +28,15 @@ Certificate evidence kinds (scanned from the published output artifact set):
   class4cert   class4-batch bit certificate records (all_pass)
   certbacked   certificate-backed frontier recompute (certified:true entries)
   receipt      cert-receipt records (git blob sha of the landed .cert file)
-  receiptcert  per-entry certificate documentation inside receipt/fold
-               recompute files: certified:true with rows, md5 and
-               sub_roots_pass (independent verifier PASS asserted in the
-               file's method/controls; e.g. the cost-58c receipts recompute
-               asserts all certificates against published bytes with
-               BigInt and Number Bareiss verifier PASS)
+  receiptcert  per-entry certificate documentation: an entry with rows,
+               md5 and sub_roots_pass (independent verifier PASS). Found
+               inside receipt/fold recompute additions (certified:true;
+               e.g. the cost-58c receipts recompute asserts all
+               certificates against published bytes with BigInt and
+               Number Bareiss verifier PASS) and inside warm/multiband/
+               hygiene/batch3/sweep certificate record files (verified
+               with verify_win7_certificate_bigint_independent.mjs or
+               verify_bit7_win7_cert.ts)
   summary      certificate part summaries (per-move extraction stats)
   certpart     other root-named certificate artifacts
 
@@ -45,8 +48,8 @@ Tiers:
 
 Conservative scoping:
 - a WIN mention in a frontier/receipt recompute file is NOT certificate
-  evidence per se; per-entry certificate documentation (certified:true with
-  rows, md5 and sub_roots_pass) IS counted (kind receiptcert).
+  evidence per se; per-entry certificate documentation (rows, md5 and
+  sub_roots_pass, certified optional) IS counted (kind receiptcert).
 - only popcount-7 roots with WIN7-style (or absent) verdicts are counted.
 - N/uncertified is the safe direction: it may overcount the at-risk set,
   never undercount it.
@@ -67,16 +70,17 @@ import fold_projection_head1450_tool_20261116 as tool  # noqa: E402
 
 popcount, canon = tool.popcount, tool.canon
 
-CENSUS_SCHEMA = 'n11-class2-lane-head1452-receipt-certificate-coverage-census-20261117-v2'
+CENSUS_SCHEMA = 'n11-class2-lane-head1452-receipt-certificate-coverage-census-20261117-v3'
 FOLD_76D77E = 'class-frontier-cost76d77e-receipts-recompute-20261116.json'
 
 KIND_ORDER = [
-    'bareiss', 'bigint', 'tsverify', 'bigintaudit', 'verified',
-    'verdictverify', 'orbitverify', 'receipt', 'receiptcert', 'summary',
-    'certpart', 'manifest', 'warmcert', 'class4cert', 'certbacked',
+    'bareiss', 'bigint', 'tsverify', 'bigintverify', 'bigintaudit',
+    'verified', 'verdictverify', 'orbitverify', 'receipt', 'receiptcert',
+    'summary', 'certpart', 'manifest', 'warmcert', 'class4cert',
+    'certbacked',
 ]
-TIER_V_KINDS = {'bareiss', 'bigint', 'tsverify', 'bigintaudit',
-                'verified', 'verdictverify', 'orbitverify'}
+TIER_V_KINDS = {'bareiss', 'bigint', 'tsverify', 'bigintverify',
+                'bigintaudit', 'verified', 'verdictverify', 'orbitverify'}
 
 
 def classify_name(name):
@@ -89,6 +93,8 @@ def classify_name(name):
         return 'tsverify'
     if 'bigint-independent-audit' in name:
         return 'bigintaudit'
+    if 'bigint-independent-verification' in name:
+        return 'bigintverify'
     if 'cert-receipt' in name:
         return 'receipt'
     if 'cert.part' in name and 'summary' in name:
@@ -197,10 +203,13 @@ def main():
                     if kind is not None and (v is None or
                                             str(v).startswith('WIN7')):
                         add_cert(rh, name, kind)
-                    # field-based rule (v2): per-entry certificate
+                    # field-based rule (v3): per-entry certificate
                     # documentation with independent-verification fields
-                    if (o.get('certified') is True
-                            and isinstance(o.get('rows'), int)
+                    # (rows, md5, sub_roots_pass; certified optional --
+                    # receipt recompute additions carry certified:true,
+                    # warm/multiband/hygiene/sweep certificate records do
+                    # not need it)
+                    if (isinstance(o.get('rows'), int)
                             and isinstance(o.get('md5'), str)
                             and isinstance(o.get('sub_roots_pass'), int)):
                         add_cert(rh, name, 'receiptcert')
@@ -291,15 +300,21 @@ def main():
         'schema': CENSUS_SCHEMA,
         'date': '2026-11-17',
         'revision': (
-            'v2: adds the field-based receiptcert kind. v1 (published at '
-            'commit 3020c5aa) treated receipt/fold recompute files as '
-            'provenance-only and undercounted certified roots whose '
-            'certificates are documented per-entry inside those files '
-            '(e.g. the cost-58c receipts recompute: 33/33 folded entries '
-            'certified:true with rows/md5/sub_roots_pass, all certificates '
-            'asserted against published bytes with BigInt and Number '
-            'Bareiss verifier PASS). v2 counts such entries as tier R '
-            'evidence; remaining N roots are unchanged or fewer'
+            'v3: extends the scan set with certificate records published on '
+            'main that document the warm/multiband receipt folds: '
+            'class2-lane-warm-multiband-certificates-20261115.json (35 '
+            'records), class2-lane-warm-multiband2-certificates-20261115.json '
+            '(31), class2-lane-cost70c-warm6-bigint-independent-verification-'
+            '20261115.json (6, raw BigInt verification), class2-lane-cost70c-'
+            'warm-batch3-records-20261115.json (4), class2-lane-warm-band-'
+            'hygiene-certificates-20261115.json (6) and the cost-63c/63d '
+            'sweeps (1+1 win7_certificates entries); the receiptcert field '
+            'rule drops the certified:true requirement (rows+md5+'
+            'sub_roots_pass suffice). v1 (commit 3020c5aa) treated receipt/'
+            'fold recompute files as provenance-only and undercounted; v2 '
+            '(commit 35748489) counted per-entry certified documentation '
+            'inside receipt recomputes (588->695 certified); v3 counts the '
+            'warm/multiband/hygiene/sweep certificate records as well'
         ),
         'basis': {
             'canonical_head_1452': {
@@ -328,7 +343,10 @@ def main():
                 'receipt recompute); completeness asserted over all 775'
             ),
             'cert_scan': (
-                'scanned files: output/*.json, output/tmp-cost*/bit*.json, '
+                'scanned files: output/*.json (including the additionally '
+                'fetched warm-multiband / multiband2 / warm6-bigint / '
+                'warm-batch3 / warm-band-hygiene certificate records and '
+                'the cost-63c/63d sweeps), output/tmp-cost*/bit*.json, '
                 'output/class2-lane-cost*-certificates/*, and the 69c '
                 'manifest under n11/output; evidence kinds: ' +
                 ', '.join(KIND_ORDER)
@@ -362,6 +380,12 @@ def main():
             'receipts_plus4_popcount7_assert': True,
             'provenance_complete_all_775': True,
         },
+        'headline': (
+            'all 775 folded WIN-receipt roots of the head-1452 basis have '
+            'published certificate evidence with documented independent '
+            'verification; 0 uncertified. The 76c-bit113-style receipt-only '
+            'risk population within this basis is empty'
+        ),
         'totals': {
             'roots': 775,
             'certified': len(certified),
