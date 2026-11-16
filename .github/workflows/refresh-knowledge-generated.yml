@@ -217,6 +217,10 @@ jobs:
         run: |
           uv run --locked python research/experiments/remo-k-branch-cap13-boundary-20261116/verify_remo_k_branch_cap13_boundary.py
           git diff --exit-code -- research/experiments/remo-k-branch-cap13-boundary-20261116/output/remo_k_branch_cap13_boundary_audit.json
+      - name: Audit K0883 three-branch REMO cap14 r=3 size boundary
+        run: |
+          uv run --locked python research/experiments/remo-k-branch-cap14-boundary-20261116/verify_remo_k_branch_cap14_boundary.py
+          git diff --exit-code -- research/experiments/remo-k-branch-cap14-boundary-20261116/output/remo_k_branch_cap14_boundary_audit.json
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python tools/knowledge/build.py
@@ -500,3 +504,4 @@ jobs:
 # Refresh generated views for K0873 full z=5 two-token Grundy classification (all x,y,R; R-strong induction; 857,466 option signatures, 2,021,000 boundary checks) (2026-11-17).
 # Refresh generated views after the K0876 artifact repair (packed publication format for the four committed sweep records, packed-reading verifier, repaired audit JSON sha256 19b4d833; artifact references updated) (2026-11-16).
 # Refresh generated views for K0882 three-branch REMO cap13 r=3 size boundary (Theorem H13: non-collapse keys exactly the theorem H 22, zero mixed keys containing a 13-branch, FL lemma 0 violations over 77828 profiles, K0876 r=3 records fully reproduced at the D_12 subsequence positions) (2026-11-16).
+# Refresh generated views for K0883 three-branch REMO cap14 r=3 size boundary (Theorem H14: non-collapse keys are exactly 52 = theorem H 22 + 30 new keys each containing a size-14 branch, boundary stabilization 10->12->13 breaks at 14, FL lemma 0 violations over 123272 profiles, K0882 r=3 records fully reproduced at the D_13 subsequence positions) (2026-11-16).
