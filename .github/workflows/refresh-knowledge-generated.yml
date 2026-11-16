@@ -188,6 +188,7 @@ jobs:
         run: |
           uv run --locked python research/experiments/vertical-fiber-two-token-z6-y1-boundary-20261117/verify_z6_y1.py
           git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y1-boundary-20261117/output/audit.json
+      # Keep the proved z=6,y=2 slice audit paired with the K0878 knowledge entry.
       - name: Audit K0878 two-token z=6 y=2 boundary slice
         run: |
           uv run --locked python research/experiments/vertical-fiber-two-token-z6-y2-boundary-20261117/verify_z6_y2.py
