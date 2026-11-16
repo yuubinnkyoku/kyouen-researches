@@ -48,7 +48,7 @@ HEAD_1472 = [1472, 174, 6376, 504672, 4649, 368586]
 
 
 def git_blob_sha(data: bytes) -> str:
-    return hashlib.sha1(b"blob %d\\0" % len(data) + data).hexdigest()
+    return hashlib.sha1(b"blob %d\0" % len(data) + data).hexdigest()
 
 
 def read_pinned(key: str) -> tuple[dict, str]:
@@ -331,7 +331,7 @@ def main() -> None:
     fold_path = OUT / "class-frontier-cost64h-receipts-recompute-20261117.json"
     audit_path = OUT / "class2-lane-cost64h-fold-audit-20261117.json"
     fold_path.write_text(json.dumps(fold, ensure_ascii=False, indent=1,
-                                   sort_keys=True) + "\\n", encoding="utf-8")
+                                   sort_keys=True) + "\n", encoding="utf-8")
     audit_path.write_text(json.dumps(audit, ensure_ascii=False, indent=1,
                                     sort_keys=True) + "\\n", encoding="utf-8")
     print(json.dumps({
