@@ -1,0 +1,1101 @@
+{
+ "cell_vs_region_k3": [
+  {
+   "atoms": [
+    2,
+    3,
+    0,
+    4,
+    0,
+    0,
+    2
+   ],
+   "cell_states": 1054,
+   "match": true,
+   "r": 3
+  },
+  {
+   "atoms": [
+    2,
+    3,
+    0,
+    4,
+    0,
+    0,
+    2
+   ],
+   "cell_states": 2002,
+   "match": true,
+   "r": 4
+  },
+  {
+   "atoms": [
+    2,
+    4,
+    0,
+    5,
+    0,
+    0,
+    2
+   ],
+   "cell_states": 3373,
+   "match": true,
+   "r": 3
+  },
+  {
+   "atoms": [
+    2,
+    4,
+    0,
+    5,
+    0,
+    0,
+    2
+   ],
+   "cell_states": 7081,
+   "match": true,
+   "r": 4
+  },
+  {
+   "atoms": [
+    2,
+    4,
+    0,
+    4,
+    0,
+    0,
+    3
+   ],
+   "cell_states": 5254,
+   "match": true,
+   "r": 3
+  },
+  {
+   "atoms": [
+    2,
+    4,
+    0,
+    4,
+    0,
+    0,
+    3
+   ],
+   "cell_states": 11314,
+   "match": true,
+   "r": 4
+  },
+  {
+   "atoms": [
+    2,
+    2,
+    0,
+    3,
+    0,
+    0,
+    1
+   ],
+   "cell_states": 117,
+   "match": true,
+   "r": 3
+  },
+  {
+   "atoms": [
+    2,
+    2,
+    0,
+    3,
+    0,
+    0,
+    1
+   ],
+   "cell_states": 177,
+   "match": true,
+   "r": 4
+  },
+  {
+   "atoms": [
+    1,
+    1,
+    1,
+    1,
+    2,
+    0,
+    1
+   ],
+   "cell_states": 327,
+   "match": true,
+   "r": 3
+  },
+  {
+   "atoms": [
+    1,
+    1,
+    1,
+    1,
+    2,
+    0,
+    1
+   ],
+   "cell_states": 596,
+   "match": true,
+   "r": 4
+  },
+  {
+   "atoms": [
+    2,
+    1,
+    1,
+    1,
+    2,
+    1,
+    1
+   ],
+   "cell_states": 1040,
+   "match": true,
+   "r": 3
+  },
+  {
+   "atoms": [
+    2,
+    1,
+    1,
+    1,
+    2,
+    1,
+    1
+   ],
+   "cell_states": 1988,
+   "match": true,
+   "r": 4
+  },
+  {
+   "atoms": [
+    1,
+    1,
+    0,
+    1,
+    2,
+    2,
+    2
+   ],
+   "cell_states": 2988,
+   "match": true,
+   "r": 3
+  },
+  {
+   "atoms": [
+    1,
+    1,
+    0,
+    1,
+    2,
+    2,
+    2
+   ],
+   "cell_states": 6740,
+   "match": true,
+   "r": 4
+  },
+  {
+   "atoms": [
+    2,
+    2,
+    2,
+    2,
+    1,
+    1,
+    1
+   ],
+   "cell_states": 1746,
+   "match": true,
+   "r": 3
+  },
+  {
+   "atoms": [
+    2,
+    2,
+    2,
+    2,
+    1,
+    1,
+    1
+   ],
+   "cell_states": 3366,
+   "match": true,
+   "r": 4
+  }
+ ],
+ "chain3_r3_grid": {
+  "determined": 35,
+  "determined_and_order_determined": 15,
+  "families": 207,
+  "gamma_dependent_size_triples": [
+   [
+    3,
+    3,
+    8
+   ]
+  ],
+  "nondetermined": 172,
+  "smallest_nondetermined": {
+   "gamma": 0,
+   "sizes": [
+    3,
+    3,
+    4
+   ],
+   "survivors": [
+    1,
+    2
+   ]
+  }
+ },
+ "chain3_r456_census": {
+  "4": {
+   "determined": 25,
+   "families": 103,
+   "skipped": 0,
+   "smallest_nondetermined": [
+    3,
+    3,
+    4,
+    0
+   ]
+  },
+  "5": {
+   "determined": 18,
+   "families": 103,
+   "skipped": 0,
+   "smallest_nondetermined": [
+    3,
+    3,
+    4,
+    0
+   ]
+  },
+  "6": {
+   "determined": 18,
+   "families": 103,
+   "skipped": 0,
+   "smallest_nondetermined": [
+    3,
+    3,
+    4,
+    0
+   ]
+  }
+ },
+ "k4_varied_profile": {
+  "atoms": [
+   1,
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   1,
+   0,
+   0,
+   0,
+   1,
+   0,
+   0,
+   1
+  ],
+  "cell_states": 84,
+  "match": true,
+  "r": 3,
+  "region_states": 84
+ },
+ "machine_checks": [
+  {
+   "detail": {
+    "entries": 84,
+    "mismatches": 0
+   },
+   "name": "K0859 Theorem D recursion == published uniform elimination table (C=1..12 x r=2..8)",
+   "ok": true
+  },
+  {
+   "detail": {
+    "families": 255,
+    "mismatches": 0,
+    "skipped": 0
+   },
+   "name": "k=2 regression: region game == K0860 closed form (r=3 grid)",
+   "ok": true
+  },
+  {
+   "name": "K0860 anchor (6,9,g=3) r=2..6 survivor sets",
+   "ok": true
+  },
+  {
+   "detail": {
+    "families": 10
+   },
+   "name": "K0860 published family verdicts reproduced (10 families, all gamma)",
+   "ok": true
+  },
+  {
+   "name": "K0860 r=4 determined examples (4,6) all gamma",
+   "ok": true
+  },
+  {
+   "detail": {
+    "instances": 70
+   },
+   "name": "k=2 same-size (Delta=0) chain: region singleton == Theorem D (C=2..8, all gamma, r=3,4)",
+   "ok": true
+  },
+  {
+   "detail": {
+    "families": 207,
+    "mismatches": 0,
+    "skipped": 0
+   },
+   "name": "k=3 chain r=3: region game == Theorem F' closed form",
+   "ok": true
+  },
+  {
+   "detail": {
+    "instances": 36
+   },
+   "name": "chain 3-branch infinite families: (6u,9u,12u) det iff u even; (6u,12u,18u) always det P_2",
+   "ok": true
+  },
+  {
+   "detail": {
+    "instances": 50
+   },
+   "name": "k=3 same-size (Delta=0) chain: region singleton == Theorem D (C=3..7, all gamma, r=3,4)",
+   "ok": true
+  },
+  {
+   "detail": {
+    "4": 103,
+    "5": 103,
+    "6": 103
+   },
+   "name": "k=3 chain r=4,5,6 census completed (no budget skips)",
+   "ok": true
+  },
+  {
+   "detail": {
+    "instances": 16,
+    "mismatches": 0,
+    "skipped": 0
+   },
+   "name": "Theorem E' machine check: cell-level == region game (k=3, chain+pair samples, r=3,4)",
+   "ok": true
+  },
+  {
+   "detail": {
+    "instances": 10
+   },
+   "name": "k=4 same-size (Delta=0) chain: region singleton == Theorem D (C=2,3, all gamma, r=3,4)",
+   "ok": true
+  },
+  {
+   "detail": {
+    "cell_states": 84
+   },
+   "name": "Theorem E' machine check: cell-level == region game (k=4 varied profile, r=3)",
+   "ok": true
+  },
+  {
+   "detail": {
+    "canonical_profiles": 3790,
+    "skipped": 0
+   },
+   "name": "pair-profile scan r=3 (N<=13, canonical): completed without budget skips",
+   "ok": true
+  },
+  {
+   "detail": {
+    "profiles": 146
+   },
+   "name": "Delta=0 profiles in scan: all singleton == Theorem D (r=3)",
+   "ok": true
+  },
+  {
+   "detail": {
+    "witnesses": 5
+   },
+   "name": "Theorem E' + T5 witnesses: cell-level == region game on the minimal (sizes,gamma) disagreement profiles",
+   "ok": true
+  }
+ ],
+ "meta": {
+  "deterministic": true,
+  "generated_by": "verify_remo_k_branch.py",
+  "notes": [
+   "Theorem E'/F' are universal proofs in report.md; machine checks instances.",
+   "Finite censuses are not promoted to universal claims.",
+   "11x11 empty board and class frontiers remain UNKNOWN, unrelated to this audit.",
+   "solved 1407 is manifest bookkeeping only."
+  ],
+  "rule": "REMO (K0859)"
+ },
+ "pair_scan_r3": {
+  "canonical_profiles": 3790,
+  "delta0_profiles_checked": 146,
+  "determined_count": 523,
+  "nmax": 13,
+  "size_multiset_disagreements": [
+   [
+    2,
+    3,
+    8
+   ],
+   [
+    2,
+    8,
+    9
+   ],
+   [
+    3,
+    3,
+    8
+   ],
+   [
+    3,
+    8,
+    8
+   ],
+   [
+    3,
+    8,
+    9
+   ],
+   [
+    8,
+    8,
+    9
+   ],
+   [
+    8,
+    9,
+    9
+   ]
+  ],
+  "sizes_gamma_disagreements": [
+   {
+    "determined_example": {
+     "atoms": [
+      1,
+      1,
+      1,
+      7,
+      0,
+      1,
+      0
+     ],
+     "cells": 11,
+     "survivors": [
+      1
+     ]
+    },
+    "gamma": 0,
+    "nondetermined_example": {
+     "atoms": [
+      1,
+      1,
+      0,
+      5,
+      1,
+      2,
+      0
+     ],
+     "cells": 10,
+     "survivors": [
+      1,
+      2
+     ]
+    },
+    "sizes": [
+     2,
+     3,
+     8
+    ]
+   },
+   {
+    "determined_example": {
+     "atoms": [
+      1,
+      2,
+      0,
+      7,
+      0,
+      0,
+      1
+     ],
+     "cells": 11,
+     "survivors": [
+      1
+     ]
+    },
+    "gamma": 1,
+    "nondetermined_example": {
+     "atoms": [
+      1,
+      1,
+      0,
+      6,
+      0,
+      1,
+      1
+     ],
+     "cells": 10,
+     "survivors": [
+      1,
+      2
+     ]
+    },
+    "sizes": [
+     2,
+     3,
+     8
+    ]
+   },
+   {
+    "determined_example": {
+     "atoms": [
+      1,
+      2,
+      1,
+      4,
+      0,
+      5,
+      0
+     ],
+     "cells": 13,
+     "survivors": [
+      1
+     ]
+    },
+    "gamma": 0,
+    "nondetermined_example": {
+     "atoms": [
+      1,
+      1,
+      0,
+      1,
+      1,
+      7,
+      0
+     ],
+     "cells": 11,
+     "survivors": [
+      0,
+      1,
+      2
+     ]
+    },
+    "sizes": [
+     2,
+     8,
+     9
+    ]
+   },
+   {
+    "determined_example": {
+     "atoms": [
+      1,
+      3,
+      0,
+      4,
+      0,
+      4,
+      1
+     ],
+     "cells": 13,
+     "survivors": [
+      1
+     ]
+    },
+    "gamma": 1,
+    "nondetermined_example": {
+     "atoms": [
+      1,
+      1,
+      0,
+      2,
+      0,
+      6,
+      1
+     ],
+     "cells": 11,
+     "survivors": [
+      0,
+      1,
+      2
+     ]
+    },
+    "sizes": [
+     2,
+     8,
+     9
+    ]
+   },
+   {
+    "determined_example": {
+     "atoms": [
+      1,
+      1,
+      1,
+      6,
+      1,
+      1,
+      0
+     ],
+     "cells": 11,
+     "survivors": [
+      1
+     ]
+    },
+    "gamma": 0,
+    "nondetermined_example": {
+     "atoms": [
+      1,
+      1,
+      0,
+      4,
+      2,
+      2,
+      0
+     ],
+     "cells": 10,
+     "survivors": [
+      1,
+      2
+     ]
+    },
+    "sizes": [
+     3,
+     3,
+     8
+    ]
+   },
+   {
+    "determined_example": {
+     "atoms": [
+      1,
+      1,
+      1,
+      7,
+      0,
+      0,
+      1
+     ],
+     "cells": 11,
+     "survivors": [
+      1
+     ]
+    },
+    "gamma": 1,
+    "nondetermined_example": {
+     "atoms": [
+      1,
+      1,
+      0,
+      5,
+      1,
+      1,
+      1
+     ],
+     "cells": 10,
+     "survivors": [
+      1,
+      2
+     ]
+    },
+    "sizes": [
+     3,
+     3,
+     8
+    ]
+   },
+   {
+    "determined_example": {
+     "atoms": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      6,
+      0
+     ],
+     "cells": 11,
+     "survivors": [
+      1
+     ]
+    },
+    "gamma": 0,
+    "nondetermined_example": {
+     "atoms": [
+      1,
+      1,
+      2,
+      3,
+      0,
+      5,
+      0
+     ],
+     "cells": 12,
+     "survivors": [
+      1,
+      2
+     ]
+    },
+    "sizes": [
+     3,
+     8,
+     8
+    ]
+   },
+   {
+    "determined_example": {
+     "atoms": [
+      1,
+      1,
+      6,
+      2,
+      0,
+      0,
+      1
+     ],
+     "cells": 11,
+     "survivors": [
+      1
+     ]
+    },
+    "gamma": 1,
+    "nondetermined_example": {
+     "atoms": [
+      1,
+      1,
+      1,
+      2,
+      0,
+      5,
+      1
+     ],
+     "cells": 11,
+     "survivors": [
+      1,
+      2
+     ]
+    },
+    "sizes": [
+     3,
+     8,
+     8
+    ]
+   },
+   {
+    "determined_example": {
+     "atoms": [
+      1,
+      2,
+      1,
+      3,
+      1,
+      5,
+      0
+     ],
+     "cells": 13,
+     "survivors": [
+      1
+     ]
+    },
+    "gamma": 0,
+    "nondetermined_example": {
+     "atoms": [
+      1,
+      1,
+      1,
+      2,
+      1,
+      6,
+      0
+     ],
+     "cells": 12,
+     "survivors": [
+      0,
+      1,
+      2
+     ]
+    },
+    "sizes": [
+     3,
+     8,
+     9
+    ]
+   },
+   {
+    "determined_example": {
+     "atoms": [
+      1,
+      3,
+      0,
+      3,
+      1,
+      4,
+      1
+     ],
+     "cells": 13,
+     "survivors": [
+      1
+     ]
+    },
+    "gamma": 1,
+    "nondetermined_example": {
+     "atoms": [
+      1,
+      1,
+      0,
+      1,
+      1,
+      6,
+      1
+     ],
+     "cells": 11,
+     "survivors": [
+      0,
+      1,
+      2
+     ]
+    },
+    "sizes": [
+     3,
+     8,
+     9
+    ]
+   },
+   {
+    "determined_example": {
+     "atoms": [
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      3
+     ],
+     "cells": 13,
+     "survivors": [
+      1
+     ]
+    },
+    "gamma": 3,
+    "nondetermined_example": {
+     "atoms": [
+      1,
+      1,
+      3,
+      2,
+      1,
+      2,
+      3
+     ],
+     "cells": 13,
+     "survivors": [
+      0,
+      1,
+      2
+     ]
+    },
+    "sizes": [
+     8,
+     8,
+     9
+    ]
+   },
+   {
+    "determined_example": {
+     "atoms": [
+      1,
+      1,
+      2,
+      3,
+      1,
+      1,
+      4
+     ],
+     "cells": 13,
+     "survivors": [
+      1
+     ]
+    },
+    "gamma": 4,
+    "nondetermined_example": {
+     "atoms": [
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      4
+     ],
+     "cells": 12,
+     "survivors": [
+      0,
+      1,
+      2
+     ]
+    },
+    "sizes": [
+     8,
+     8,
+     9
+    ]
+   },
+   {
+    "determined_example": {
+     "atoms": [
+      1,
+      1,
+      2,
+      4,
+      0,
+      0,
+      5
+     ],
+     "cells": 13,
+     "survivors": [
+      1
+     ]
+    },
+    "gamma": 5,
+    "nondetermined_example": {
+     "atoms": [
+      1,
+      1,
+      1,
+      2,
+      1,
+      1,
+      5
+     ],
+     "cells": 12,
+     "survivors": [
+      0,
+      1,
+      2
+     ]
+    },
+    "sizes": [
+     8,
+     8,
+     9
+    ]
+   },
+   {
+    "determined_example": {
+     "atoms": [
+      1,
+      1,
+      3,
+      2,
+      1,
+      1,
+      4
+     ],
+     "cells": 13,
+     "survivors": [
+      1
+     ]
+    },
+    "gamma": 4,
+    "nondetermined_example": {
+     "atoms": [
+      1,
+      1,
+      2,
+      2,
+      1,
+      2,
+      4
+     ],
+     "cells": 13,
+     "survivors": [
+      0,
+      1,
+      2
+     ]
+    },
+    "sizes": [
+     8,
+     9,
+     9
+    ]
+   },
+   {
+    "determined_example": {
+     "atoms": [
+      1,
+      1,
+      3,
+      3,
+      0,
+      0,
+      5
+     ],
+     "cells": 13,
+     "survivors": [
+      1
+     ]
+    },
+    "gamma": 5,
+    "nondetermined_example": {
+     "atoms": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      5
+     ],
+     "cells": 12,
+     "survivors": [
+      0,
+      1,
+      2
+     ]
+    },
+    "sizes": [
+     8,
+     9,
+     9
+    ]
+   }
+  ]
+ },
+ "summary": {
+  "all_ok": true,
+  "check_count": 16,
+  "check_names_ok": {
+   "Delta=0 profiles in scan: all singleton == Theorem D (r=3)": true,
+   "K0859 Theorem D recursion == published uniform elimination table (C=1..12 x r=2..8)": true,
+   "K0860 anchor (6,9,g=3) r=2..6 survivor sets": true,
+   "K0860 published family verdicts reproduced (10 families, all gamma)": true,
+   "K0860 r=4 determined examples (4,6) all gamma": true,
+   "Theorem E' + T5 witnesses: cell-level == region game on the minimal (sizes,gamma) disagreement profiles": true,
+   "Theorem E' machine check: cell-level == region game (k=3, chain+pair samples, r=3,4)": true,
+   "Theorem E' machine check: cell-level == region game (k=4 varied profile, r=3)": true,
+   "chain 3-branch infinite families: (6u,9u,12u) det iff u even; (6u,12u,18u) always det P_2": true,
+   "k=2 regression: region game == K0860 closed form (r=3 grid)": true,
+   "k=2 same-size (Delta=0) chain: region singleton == Theorem D (C=2..8, all gamma, r=3,4)": true,
+   "k=3 chain r=3: region game == Theorem F' closed form": true,
+   "k=3 chain r=4,5,6 census completed (no budget skips)": true,
+   "k=3 same-size (Delta=0) chain: region singleton == Theorem D (C=3..7, all gamma, r=3,4)": true,
+   "k=4 same-size (Delta=0) chain: region singleton == Theorem D (C=2,3, all gamma, r=3,4)": true,
+   "pair-profile scan r=3 (N<=13, canonical): completed without budget skips": true
+  }
+ }
+}
