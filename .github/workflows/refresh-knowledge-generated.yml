@@ -180,6 +180,10 @@ jobs:
         run: |
           uv run --locked python research/experiments/vertical-fiber-two-token-z5-y1-boundary-20261116/verify_z5_y1.py
           git diff --exit-code -- research/experiments/vertical-fiber-two-token-z5-y1-boundary-20261116/output/audit.json
+      - name: Audit K0873 full z=5 two-token Grundy theorem
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z5-full-grundy-20261117/verify_z5_full.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z5-full-grundy-20261117/output/audit.json
       - name: Audit K0872 three-branch REMO first-loser residue signature
         run: |
           uv run --locked python research/experiments/remo-first-loser-residue-signature-20261116/verify_first_loser_residue_signature.py
@@ -480,3 +484,4 @@ jobs:
 # Refresh generated views after the check.py red repair: request canonical full regeneration of the truncated artifacts.md view (2026-11-16).
 # Refresh generated views after the workflow audit-step restoration (K0875 cap12 boundary and K0874 independent verification audit steps lost in the 2026-11-16 check.py red repair restored verbatim) (2026-11-16).
 # Refresh generated views for K0876 three-branch REMO cap12 r=4,5,6 size boundary (Theorem I12: r=4,5 non-collapse keys exactly the 12 (8,8,9)/(8,9,9) gamma<=5, r=6 exactly the 6 (4,4,8)/(4,8,8) gamma<=2; zero mixed keys containing an 11- or 12-branch; det survivors P2/P2/P3) (2026-11-16).
+# Refresh generated views for K0873 full z=5 two-token Grundy classification (all x,y,R; R-strong induction; 857,466 option signatures, 2,021,000 boundary checks) (2026-11-17).
