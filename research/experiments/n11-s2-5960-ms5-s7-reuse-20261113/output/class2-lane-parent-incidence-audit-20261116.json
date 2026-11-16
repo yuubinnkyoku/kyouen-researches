@@ -1,0 +1,1242 @@
+{
+ "schema": "n11-class2-lane-parent-incidence-audit-20261116-v1",
+ "date": "2026-11-16",
+ "method": "third independent implementation (remote-only TypeScript, exact small-integer arithmetic; lifted 4x4 determinant expanded to four 3x3 minors for the cocircular-or-collinear quadruple test; D4 canonicalization as the minimal BigInt over 8 dihedral images; bit=y*11+x). For every one of the 174 open S5 parents of the head-1410 closability CSV, the full legal-child set is re-enumerated from first principles, canonicalized, and intersected with the 1410 remaining-S6 worklist, re-deriving the complete parent->row incidence structure. No engine, no float, no repo-local execution.",
+ "data_pins": {
+  "fetched_at_commit": "6bff7890045c7a6c3c4e3e47b276d090e7f477c8",
+  "closability_csv_1410": "research/experiments/n11-class2-lane-closability-ranking-20261116/output/class-frontier-s5-closability-after-cost60c-20261116.csv",
+  "worklist_1410": "research/experiments/n11-class2-lane-closability-ranking-20261116/output/class-frontier-remaining-s6-worklist-1410-20261116.csv",
+  "pre_sweep_audit_same_implementation": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-next-target-presweep-audit-20261116.json",
+  "published_census_reference": "K0865 head-1410 receipt-unclosability census (items/K0865-head1410-sterile-coverage-census.md)"
+ },
+ "verification": {
+  "parents_parsed": 174,
+  "parent_categories": {
+   "own_closable": 114,
+   "cross_cover_required": 57,
+   "fully_sterile": 3
+  },
+  "worklist_rows": 6438,
+  "parent_canonical_form_check": "174/174 parents are D4-canonical (canon(hex)==hex)",
+  "per_parent_remaining_rows_match": "174/174 (re-enumerated legal remaining children == CSV remaining_s6_orbits)",
+  "per_parent_cost_sum_match": "174/174 (worklist cost column summed over owned rows == CSV remaining_s7_edge_cost)",
+  "per_parent_open_sum_match": "174/174 (open column summed over owned rows == CSV own_sweep_candidates_after_transfers)",
+  "per_parent_category_breakdown_match": "174/174 (sterile/win_pending/win_receipt_scheduled/transfer_partial/unswept per-category counts and their sum == remaining rows)",
+  "category_structure_checks": "fully_sterile parents own only STERILE rows (3/3); own_closable parents own no STERILE rows (114/114)",
+  "open_parents_column": "6438/6438 rows: the number of the 174 open S5 parents owning the row (by child re-enumeration up to D4) equals the worklist open_parents column exactly; column sum 12274",
+  "incidence_totals": {
+   "total_row_parent_incidences": 12274,
+   "sterile_incidences": 91,
+   "effective_incidences": 12183,
+   "note": "12,274 / 91 / 12,183 exactly reproduce the published K0865 census totals"
+  },
+  "candidate_count_invariant_sample": "67/67 (every 97th worklist row, exact legal-candidate re-count == edge cost)",
+  "sweep_demand_sums": {
+   "unique_row_level_open_candidates": 505675,
+   "incidence_weighted_open_candidates": 961844,
+   "note": "unique-row level is the actual deduplicated sweep demand since a row's verdicts serve all owning parents"
+  }
+ },
+ "leverage_analysis": {
+  "description": "unswept open rows sorted cheapest-first; owners are the open S5 parents owning the row, so one sweep of a multi-owner row serves several parents at once (verdict cache is per canonical 7-stone root and shared across parents). owner categories: own_closable rows close their parent directly via WIN7-D10 receipts; cross_cover_required owners additionally need the STERILE-blocked rows covered by other parents' receipts.",
+  "top60_cheapest_rows": [
+   {
+    "hex": "00000000000002901002000000002000",
+    "cost": 50,
+    "open_candidates": 50,
+    "owners": 1,
+    "owner_hexes": [
+     "00000000000000a01002000000080000"
+    ],
+    "owner_categories": [
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000000801802000800080000",
+    "cost": 55,
+    "open_candidates": 55,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000801002000800080000",
+     "00000000000000801802000000080000"
+    ],
+    "owner_categories": [
+     "own_closable",
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000001080801002000000080000",
+    "cost": 56,
+    "open_candidates": 56,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000003800001080000000",
+     "00000000000080801002000000080000"
+    ],
+    "owner_categories": [
+     "own_closable",
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000000003800001001800000",
+    "cost": 57,
+    "open_candidates": 57,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000003800000001800000",
+     "00000000000000003800001000800000"
+    ],
+    "owner_categories": [
+     "cross_cover_required",
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000000003800002000802000",
+    "cost": 57,
+    "open_candidates": 57,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000003800000000802000",
+     "00000000000000003800002000800000"
+    ],
+    "owner_categories": [
+     "own_closable",
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000000003800000003800000",
+    "cost": 58,
+    "open_candidates": 58,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000003800000001800000",
+     "00000000000000003800000002800000"
+    ],
+    "owner_categories": [
+     "cross_cover_required",
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000080809002000000080000",
+    "cost": 58,
+    "open_candidates": 58,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000801202020000000000",
+     "00000000000080801002000000080000"
+    ],
+    "owner_categories": [
+     "cross_cover_required",
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000000901002020000002000",
+    "cost": 58,
+    "open_candidates": 58,
+    "owners": 1,
+    "owner_hexes": [
+     "00000000000000801002000800080000"
+    ],
+    "owner_categories": [
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000000801002000880080000",
+    "cost": 59,
+    "open_candidates": 59,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000003800000000802000",
+     "00000000000000801002000800080000"
+    ],
+    "owner_categories": [
+     "own_closable",
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000000801002100000102000",
+    "cost": 59,
+    "open_candidates": 59,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000003800000000800010",
+     "00000000000000801002000000081000"
+    ],
+    "owner_categories": [
+     "own_closable",
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000000801012200000002000",
+    "cost": 59,
+    "open_candidates": 59,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000003800000000808000",
+     "00000000000000801002400000080000"
+    ],
+    "owner_categories": [
+     "own_closable",
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000000801802010000080000",
+    "cost": 59,
+    "open_candidates": 59,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000003800001000800000",
+     "00000000000000801802000000080000"
+    ],
+    "owner_categories": [
+     "own_closable",
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000000a0100a000000080000",
+    "cost": 59,
+    "open_candidates": 59,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000003800002000800000",
+     "00000000000000a01002000000080000"
+    ],
+    "owner_categories": [
+     "own_closable",
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000002881002000000002000",
+    "cost": 59,
+    "open_candidates": 59,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000003800000000820000",
+     "00000000000000a01002000000080000"
+    ],
+    "owner_categories": [
+     "cross_cover_required",
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000080801002000000081000",
+    "cost": 59,
+    "open_candidates": 59,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000801002000000081000",
+     "00000000000080801002000000080000"
+    ],
+    "owner_categories": [
+     "own_closable",
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000080809002000020000000",
+    "cost": 59,
+    "open_candidates": 59,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000003800000808000000",
+     "00000000000000801202020000000000"
+    ],
+    "owner_categories": [
+     "cross_cover_required",
+     "cross_cover_required"
+    ]
+   },
+   {
+    "hex": "00000000000000003800001800800000",
+    "cost": 60,
+    "open_candidates": 60,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000003800000800800000",
+     "00000000000000003800001000800000"
+    ],
+    "owner_categories": [
+     "cross_cover_required",
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000000003800002004800000",
+    "cost": 60,
+    "open_candidates": 60,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000003800000004800000",
+     "00000000000000003800002000800000"
+    ],
+    "owner_categories": [
+     "cross_cover_required",
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000000801002000000902000",
+    "cost": 60,
+    "open_candidates": 60,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000003800000000802000",
+     "00000000000000801002000000081000"
+    ],
+    "owner_categories": [
+     "own_closable",
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000000801002000040802000",
+    "cost": 60,
+    "open_candidates": 60,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000003800000000802000",
+     "00000000000000801002000001080000"
+    ],
+    "owner_categories": [
+     "own_closable",
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000000801002010800002000",
+    "cost": 60,
+    "open_candidates": 60,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000003800000002800000",
+     "00000000000000801002001000080000"
+    ],
+    "owner_categories": [
+     "own_closable",
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000000a01002000800080000",
+    "cost": 60,
+    "open_candidates": 60,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000801002000800080000",
+     "00000000000000a01002000000080000"
+    ],
+    "owner_categories": [
+     "own_closable",
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000000c01002000000102000",
+    "cost": 60,
+    "open_candidates": 60,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000003801000080000000",
+     "00000000000000801002000000081000"
+    ],
+    "owner_categories": [
+     "own_closable",
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000001a01002000000080000",
+    "cost": 60,
+    "open_candidates": 60,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000003801000080000000",
+     "00000000000000a01002000000080000"
+    ],
+    "owner_categories": [
+     "own_closable",
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000002a01002000000002000",
+    "cost": 60,
+    "open_candidates": 60,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000003800002080000000",
+     "00000000000000a01002000000080000"
+    ],
+    "owner_categories": [
+     "own_closable",
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000100801002000000102000",
+    "cost": 60,
+    "open_candidates": 60,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000003800001080000000",
+     "00000000000000801002000000081000"
+    ],
+    "owner_categories": [
+     "own_closable",
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000000801002000020802000",
+    "cost": 60,
+    "open_candidates": 60,
+    "owners": 1,
+    "owner_hexes": [
+     "00000000000000003800000000802000"
+    ],
+    "owner_categories": [
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000000801082000000081000",
+    "cost": 61,
+    "open_candidates": 61,
+    "owners": 3,
+    "owner_hexes": [
+     "00000000000000003800000000001020",
+     "00000000000000801002000000081000",
+     "00000000000000801082000000080000"
+    ],
+    "owner_categories": [
+     "own_closable",
+     "own_closable",
+     "cross_cover_required"
+    ]
+   },
+   {
+    "hex": "00000000000000003802000002800000",
+    "cost": 61,
+    "open_candidates": 61,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000003800000002800000",
+     "00000000000000003802000000800000"
+    ],
+    "owner_categories": [
+     "own_closable",
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "000000000000008010020000000a1000",
+    "cost": 61,
+    "open_candidates": 61,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000003800200000800000",
+     "00000000000000801002000000081000"
+    ],
+    "owner_categories": [
+     "own_closable",
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000000801202000000102000",
+    "cost": 61,
+    "open_candidates": 61,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000801002000000081000",
+     "00000000000000801202000000100000"
+    ],
+    "owner_categories": [
+     "own_closable",
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000000801802020000080000",
+    "cost": 61,
+    "open_candidates": 61,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000003800000002800000",
+     "00000000000000801802000000080000"
+    ],
+    "owner_categories": [
+     "own_closable",
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000000805083000000000000",
+    "cost": 61,
+    "open_candidates": 61,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000003801000000000020",
+     "00000000000000805082000000000000"
+    ],
+    "owner_categories": [
+     "own_closable",
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000000a01002000000081000",
+    "cost": 61,
+    "open_candidates": 61,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000801002000000081000",
+     "00000000000000a01002000000080000"
+    ],
+    "owner_categories": [
+     "own_closable",
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000000a09002000000080000",
+    "cost": 61,
+    "open_candidates": 61,
+    "owners": 2,
+    "owner_hexes": [
+     "0000000000000080120a000000000000",
+     "00000000000000a01002000000080000"
+    ],
+    "owner_categories": [
+     "own_closable",
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000080801002010000080000",
+    "cost": 61,
+    "open_candidates": 61,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000003800001000800000",
+     "00000000000080801002000000080000"
+    ],
+    "owner_categories": [
+     "own_closable",
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000082801002000000080000",
+    "cost": 61,
+    "open_candidates": 61,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000003800002080000000",
+     "00000000000080801002000000080000"
+    ],
+    "owner_categories": [
+     "own_closable",
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000022000003800000000080000",
+    "cost": 61,
+    "open_candidates": 61,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000003800000880000000",
+     "00000000020000003800000000080000"
+    ],
+    "owner_categories": [
+     "cross_cover_required",
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000022000801002000000080000",
+    "cost": 61,
+    "open_candidates": 61,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000003800000020800000",
+     "00000000020000003800000000080000"
+    ],
+    "owner_categories": [
+     "own_closable",
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000000801002000000089000",
+    "cost": 61,
+    "open_candidates": 61,
+    "owners": 1,
+    "owner_hexes": [
+     "00000000000000801002000000081000"
+    ],
+    "owner_categories": [
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000000801002000802080000",
+    "cost": 61,
+    "open_candidates": 61,
+    "owners": 1,
+    "owner_hexes": [
+     "00000000000000801002000800080000"
+    ],
+    "owner_categories": [
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000000805202000020000000",
+    "cost": 61,
+    "open_candidates": 61,
+    "owners": 1,
+    "owner_hexes": [
+     "00000000000000801202000020000000"
+    ],
+    "owner_categories": [
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000084801002000000080000",
+    "cost": 61,
+    "open_candidates": 61,
+    "owners": 1,
+    "owner_hexes": [
+     "00000000000080801002000000080000"
+    ],
+    "owner_categories": [
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000000801082000080080000",
+    "cost": 62,
+    "open_candidates": 62,
+    "owners": 3,
+    "owner_hexes": [
+     "00000000000000003800000000802000",
+     "00000000000000801082000000080000",
+     "00000000000000801082000080000000"
+    ],
+    "owner_categories": [
+     "own_closable",
+     "cross_cover_required",
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000000403800002000800000",
+    "cost": 62,
+    "open_candidates": 62,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000003800002000800000",
+     "00000000000000403800000000800000"
+    ],
+    "owner_categories": [
+     "own_closable",
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000000403800010080000000",
+    "cost": 62,
+    "open_candidates": 62,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000003800001000800000",
+     "00000000000000403800000080000000"
+    ],
+    "owner_categories": [
+     "own_closable",
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "000000000000008010020000000c1000",
+    "cost": 62,
+    "open_candidates": 62,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000003800000400800000",
+     "00000000000000801002000000081000"
+    ],
+    "owner_categories": [
+     "own_closable",
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000000801002000001081000",
+    "cost": 62,
+    "open_candidates": 62,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000801002000000081000",
+     "00000000000000801002000001080000"
+    ],
+    "owner_categories": [
+     "own_closable",
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000000801002000820080000",
+    "cost": 62,
+    "open_candidates": 62,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000003800000800800000",
+     "00000000000000801002000800080000"
+    ],
+    "owner_categories": [
+     "cross_cover_required",
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000000801002001000081000",
+    "cost": 62,
+    "open_candidates": 62,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000801002000000081000",
+     "00000000000000801002001000080000"
+    ],
+    "owner_categories": [
+     "own_closable",
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000000801802000000080800",
+    "cost": 62,
+    "open_candidates": 62,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000801002000000080800",
+     "00000000000000801802000000080000"
+    ],
+    "owner_categories": [
+     "own_closable",
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000000803800000880000000",
+    "cost": 62,
+    "open_candidates": 62,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000003800000880000000",
+     "00000000000000801802000000080000"
+    ],
+    "owner_categories": [
+     "cross_cover_required",
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000000805082020000000000",
+    "cost": 62,
+    "open_candidates": 62,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000801082020000000000",
+     "00000000000000805082000000000000"
+    ],
+    "owner_categories": [
+     "cross_cover_required",
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000000881202020000000000",
+    "cost": 62,
+    "open_candidates": 62,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000003800000008008000",
+     "00000000000000801202020000000000"
+    ],
+    "owner_categories": [
+     "own_closable",
+     "cross_cover_required"
+    ]
+   },
+   {
+    "hex": "00000000000000a01002000000084000",
+    "cost": 62,
+    "open_candidates": 62,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000801002000000042000",
+     "00000000000000a01002000000080000"
+    ],
+    "owner_categories": [
+     "own_closable",
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000000a01002000080080000",
+    "cost": 62,
+    "open_candidates": 62,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000003800000000802000",
+     "00000000000000a01002000000080000"
+    ],
+    "owner_categories": [
+     "own_closable",
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000000c01002000040002000",
+    "cost": 62,
+    "open_candidates": 62,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000003801000080000000",
+     "00000000000000801002000001080000"
+    ],
+    "owner_categories": [
+     "own_closable",
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000000c01002010000002000",
+    "cost": 62,
+    "open_candidates": 62,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000003801000080000000",
+     "00000000000000801002001000080000"
+    ],
+    "owner_categories": [
+     "own_closable",
+     "own_closable"
+    ]
+   },
+   {
+    "hex": "00000000000000c01082000040000000",
+    "cost": 62,
+    "open_candidates": 62,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000003801000000000020",
+     "00000000000000801082000040000000"
+    ],
+    "owner_categories": [
+     "own_closable",
+     "cross_cover_required"
+    ]
+   },
+   {
+    "hex": "00000000000080801002000000080004",
+    "cost": 62,
+    "open_candidates": 62,
+    "owners": 2,
+    "owner_hexes": [
+     "00000000000000801002000000002100",
+     "00000000000080801002000000080000"
+    ],
+    "owner_categories": [
+     "own_closable",
+     "own_closable"
+    ]
+   }
+  ]
+ },
+ "lane_targets_owner_maps": {
+  "class2_target": {
+   "s5_hex": "00000000000000403800000008000000",
+   "rows": [
+    {
+     "hex": "00000000000000403800000008000008",
+     "cost": 78,
+     "owners": [
+      "00000000000000403800000008000000"
+     ]
+    },
+    {
+     "hex": "00000000000000403800000008000020",
+     "cost": 69,
+     "owners": [
+      "00000000000000403800000008000000",
+      "00000000000000403800000000000020"
+     ]
+    },
+    {
+     "hex": "00000000000000403800000008002000",
+     "cost": 64,
+     "owners": [
+      "00000000000000403800000008000000",
+      "00000000000000003800000008002000"
+     ]
+    },
+    {
+     "hex": "00000000000000403800000008004000",
+     "cost": 72,
+     "owners": [
+      "00000000000000403800000008000000"
+     ]
+    },
+    {
+     "hex": "00000000000000403800000008100000",
+     "cost": 64,
+     "owners": [
+      "00000000000000403800000008000000",
+      "00000000000000003800000008001000"
+     ]
+    },
+    {
+     "hex": "00000000000000403800000008200000",
+     "cost": 79,
+     "owners": [
+      "00000000000000403800000008000000",
+      "00000000000000003800000008000800"
+     ]
+    },
+    {
+     "hex": "00000000000000403800000108000000",
+     "cost": 70,
+     "owners": [
+      "00000000000000403800000008000000",
+      "00000000000000003800000008400000"
+     ]
+    },
+    {
+     "hex": "00000000000000403800000408000000",
+     "cost": 73,
+     "owners": [
+      "00000000000000403800000008000000",
+      "00000000000000003800000408000000"
+     ]
+    },
+    {
+     "hex": "00000000000000403800400008000000",
+     "cost": 73,
+     "owners": [
+      "00000000000000403800000008000000",
+      "00000000000000003800400008000000"
+     ]
+    },
+    {
+     "hex": "00000000000000503800000008000000",
+     "cost": 71,
+     "owners": [
+      "00000000000000403800000008000000",
+      "00000000000000103800000008000000"
+     ]
+    },
+    {
+     "hex": "00000000000000801206000000000080",
+     "cost": 71,
+     "owners": [
+      "00000000000000403800000008000000",
+      "00000000000000801202000000000080"
+     ]
+    },
+    {
+     "hex": "00000000000000801206000000000400",
+     "cost": 73,
+     "owners": [
+      "00000000000000403800000008000000",
+      "00000000000000801202000000000400"
+     ]
+    },
+    {
+     "hex": "00000000000000801206000000080000",
+     "cost": 71,
+     "owners": [
+      "00000000000000403800000008000000",
+      "00000000000000801202000000080000",
+      "00000000000000003801000000800000"
+     ]
+    },
+    {
+     "hex": "00000000000000801226000000000000",
+     "cost": 66,
+     "owners": [
+      "00000000000000403800000008000000",
+      "00000000000000801222000000000000"
+     ]
+    },
+    {
+     "hex": "00000000000000849003000000000000",
+     "cost": 72,
+     "owners": [
+      "00000000000000403800000008000000",
+      "00000000000000801242000000000000"
+     ]
+    },
+    {
+     "hex": "00000000000000c09002000000000002",
+     "cost": 74,
+     "owners": [
+      "00000000000000403800000008000000",
+      "00000000000000801202000000000200"
+     ]
+    },
+    {
+     "hex": "00000000000000c09002000000001000",
+     "cost": 66,
+     "owners": [
+      "00000000000000403800000008000000",
+      "00000000000000801202000000100000"
+     ]
+    },
+    {
+     "hex": "00000000000000c09002000000002000",
+     "cost": 71,
+     "owners": [
+      "00000000000000403800000008000000",
+      "00000000000000801202000000080000",
+      "00000000000000003801000080000000"
+     ]
+    },
+    {
+     "hex": "00000000000000c09002000000004000",
+     "cost": 78,
+     "owners": [
+      "00000000000000403800000008000000",
+      "00000000000000801202000000040000"
+     ]
+    },
+    {
+     "hex": "00000000000000c09002000000400000",
+     "cost": 73,
+     "owners": [
+      "00000000000000403800000008000000",
+      "00000000000000801202000100000000"
+     ]
+    },
+    {
+     "hex": "00000000000000c09002000000800000",
+     "cost": 67,
+     "owners": [
+      "00000000000000403800000008000000",
+      "00000000000000801202000080000000"
+     ]
+    },
+    {
+     "hex": "00000000000000c09002000004000000",
+     "cost": 66,
+     "owners": [
+      "00000000000000403800000008000000",
+      "00000000000000103800000008000000"
+     ]
+    },
+    {
+     "hex": "00000000000000c09002000200000000",
+     "cost": 79,
+     "owners": [
+      "00000000000000403800000008000000",
+      "00000000000000801202080000000000"
+     ]
+    },
+    {
+     "hex": "00000000000000c09002000800000000",
+     "cost": 64,
+     "owners": [
+      "00000000000000403800000008000000",
+      "00000000000000801202020000000000"
+     ]
+    }
+   ]
+  },
+  "class1_target": {
+   "s5_hex": "00000000000000821082000000000000",
+   "rows": [
+    {
+     "hex": "00000000000000821082000000000001",
+     "cost": 66,
+     "owners": [
+      "00000000000000821082000000000000",
+      "00000000000000003800000000000021",
+      "00000000000000801082000000000400"
+     ]
+    },
+    {
+     "hex": "00000000000000821082000000000004",
+     "cost": 73,
+     "owners": [
+      "00000000000000821082000000000000",
+      "00000000000000003800000000400020",
+      "00000000000000801082000000000100"
+     ]
+    },
+    {
+     "hex": "00000000000000821082000000000008",
+     "cost": 74,
+     "owners": [
+      "00000000000000821082000000000000",
+      "00000000000000003800000200000020",
+      "00000000000000801082000000000080"
+     ]
+    },
+    {
+     "hex": "00000000000000821082000000000010",
+     "cost": 75,
+     "owners": [
+      "00000000000000821082000000000000",
+      "00000000000000003800100000000020",
+      "00000000000000043800000000000020"
+     ]
+    },
+    {
+     "hex": "00000000000000821082000000000800",
+     "cost": 68,
+     "owners": [
+      "00000000000000821082000000000000",
+      "00000000000000003800000000000022",
+      "00000000000000801082000000200000"
+     ]
+    },
+    {
+     "hex": "00000000000000821082000000001000",
+     "cost": 66,
+     "owners": [
+      "00000000000000821082000000000000",
+      "00000000000000003800000000001020",
+      "00000000000000801082000000100000"
+     ]
+    },
+    {
+     "hex": "00000000000000821082000000002000",
+     "cost": 64,
+     "owners": [
+      "00000000000000821082000000000000",
+      "00000000000000003800000000800020",
+      "00000000000000801082000000080000"
+     ]
+    },
+    {
+     "hex": "00000000000000821082000000004000",
+     "cost": 74,
+     "owners": [
+      "00000000000000821082000000000000",
+      "00000000000000801082000000040000",
+      "00000000000000003800000400000020"
+     ]
+    },
+    {
+     "hex": "00000000000000821082000000008000",
+     "cost": 64,
+     "owners": [
+      "00000000000000821082000000000000",
+      "00000000000000003800200000000020"
+     ]
+    },
+    {
+     "hex": "00000000000000821082000000400000",
+     "cost": 71,
+     "owners": [
+      "00000000000000821082000000000000",
+      "00000000000000003800000000000024",
+      "00000000000000801082000100000000"
+     ]
+    },
+    {
+     "hex": "00000000000000821082000000800000",
+     "cost": 63,
+     "owners": [
+      "00000000000000821082000000000000",
+      "00000000000000801082000080000000",
+      "00000000000000003800000000002020"
+     ]
+    },
+    {
+     "hex": "00000000000000821082000004000000",
+     "cost": 63,
+     "owners": [
+      "00000000000000821082000000000000",
+      "00000000000000103800000000000020",
+      "00000000000000003800400000000020"
+     ]
+    },
+    {
+     "hex": "00000000000000821082000200000000",
+     "cost": 74,
+     "owners": [
+      "00000000000000821082000000000000",
+      "00000000000000003800000000000028",
+      "00000000000000801082080000000000"
+     ]
+    },
+    {
+     "hex": "00000000000000821082000400000000",
+     "cost": 73,
+     "owners": [
+      "00000000000000821082000000000000",
+      "00000000000000003800000000004020",
+      "00000000000000801082040000000000"
+     ]
+    },
+    {
+     "hex": "00000000000000821082200000000000",
+     "cost": 66,
+     "owners": [
+      "00000000000000821082000000000000",
+      "00000000000000003800000000008020",
+      "000000000000008010a2000000000000"
+     ]
+    },
+    {
+     "hex": "00000000000000821082400000000000",
+     "cost": 67,
+     "owners": [
+      "00000000000000821082000000000000",
+      "00000000000000003800000004000020",
+      "00000000000000801092000000000000"
+     ]
+    },
+    {
+     "hex": "00000000000000821082800000000000",
+     "cost": 67,
+     "owners": [
+      "00000000000000821082000000000000",
+      "00000000000000003800002000000020",
+      "0000000000000080108a000000000000"
+     ]
+    },
+    {
+     "hex": "00000000000000821083000000000000",
+     "cost": 70,
+     "owners": [
+      "00000000000000821082000000000000",
+      "00000000000000003801000000000020",
+      "00000000000000403800000000000020"
+     ]
+    }
+   ]
+  },
+  "note": "per-row owner identity for the two pre-registered sweep targets of the pre-sweep audit; the class-2 target's cheapest row 00000000000000403800000008002000 is co-owned with the fold's shared parent 00000000000000003800000008002000 (cross_cover_required), so sweeping it progresses both parents"
+ },
+ "unknown_guard": "structural enumeration and bookkeeping verification only; no engine verdict was produced or consumed; WIN7-D10/REFUTED-D10 labels referenced are published depth-10 engine results, REFUTED-D10 is not a LOSS proof, STERILE rows stay open; the 11x11 empty board, the two-stone roots {49,60}/{59,60}, S2 {59,60}, classes 1/2/4 and all parent/row game values remain UNKNOWN"
+}
