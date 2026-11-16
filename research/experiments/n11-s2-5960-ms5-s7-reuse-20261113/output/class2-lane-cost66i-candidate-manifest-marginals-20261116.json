@@ -1,0 +1,397 @@
+{
+  "basis": {
+    "baseline_receipt_roots": [
+      "00000000040000003800080008080000",
+      "00000000040000003802080008000000",
+      "00000000040000809002002000004000",
+      "00000000040000a09002000000004000"
+    ],
+    "head_at_projection": [
+      1452,
+      174,
+      6396,
+      506144,
+      4669,
+      370058
+    ],
+    "manifest_rows": 7867,
+    "pending_folds_note": "the cost-64h fold (prereg blob 5074a8a0..., projected head 1472, 20 closed rows) and the cost-76c fold (projected head 1453, row 00000000010000809002000001000000) had NOT landed on main at audit time; projections are made at the head-1452 baseline and the overlaps are accounted separately per candidate"
+  },
+  "candidate_cover_union": {
+    "candidate_count": 9,
+    "distinct_d4_s6_orbits": 55,
+    "manifest_intersection": 20,
+    "new_manifest_orbits_if_all_nine_are_folded": 9,
+    "new_non_manifest_orbits_if_all_nine_are_folded": 35,
+    "new_orbits_if_all_nine_are_folded": 44,
+    "outside_manifest_orbits": 35
+  },
+  "combined_projection": {
+    "fold_order_bits": [
+      19,
+      28,
+      29,
+      58,
+      88,
+      90,
+      99,
+      103,
+      112
+    ],
+    "per_candidate_marginal": [
+      {
+        "bit": 19,
+        "marginal_d4_s6_orbits": 7,
+        "marginal_manifest_hexes": [
+          "00000000000000003801000000808000",
+          "00000000000000801206000000080000",
+          "00000000000000801222000000080000",
+          "00000000000000801226000000000000"
+        ],
+        "marginal_manifest_rows": 4
+      },
+      {
+        "bit": 28,
+        "marginal_d4_s6_orbits": 6,
+        "marginal_manifest_hexes": [
+          "00000000000000503800000008000000",
+          "00000000000000801222000010000000"
+        ],
+        "marginal_manifest_rows": 2
+      },
+      {
+        "bit": 29,
+        "marginal_d4_s6_orbits": 4,
+        "marginal_manifest_hexes": [],
+        "marginal_manifest_rows": 0
+      },
+      {
+        "bit": 58,
+        "marginal_d4_s6_orbits": 4,
+        "marginal_manifest_hexes": [],
+        "marginal_manifest_rows": 0
+      },
+      {
+        "bit": 88,
+        "marginal_d4_s6_orbits": 5,
+        "marginal_manifest_hexes": [
+          "00000000000000889002000100000000"
+        ],
+        "marginal_manifest_rows": 1
+      },
+      {
+        "bit": 90,
+        "marginal_d4_s6_orbits": 4,
+        "marginal_manifest_hexes": [],
+        "marginal_manifest_rows": 0
+      },
+      {
+        "bit": 99,
+        "marginal_d4_s6_orbits": 5,
+        "marginal_manifest_hexes": [
+          "00000000000000889002000000200000"
+        ],
+        "marginal_manifest_rows": 1
+      },
+      {
+        "bit": 103,
+        "marginal_d4_s6_orbits": 5,
+        "marginal_manifest_hexes": [
+          "00000000000000889002000000020000"
+        ],
+        "marginal_manifest_rows": 1
+      },
+      {
+        "bit": 112,
+        "marginal_d4_s6_orbits": 4,
+        "marginal_manifest_hexes": [],
+        "marginal_manifest_rows": 0
+      }
+    ],
+    "projected_head": {
+      "cost_needed_by_open_classes": 369402,
+      "remaining_s5_orbits": 174,
+      "s6_needed_by_open_classes": 4660,
+      "solved_s6_in_manifest": 1461,
+      "sum_remaining_cost": 505488,
+      "unique_remaining_s6": 6387
+    }
+  },
+  "date": "2026-11-16",
+  "interpretation_guard": "This is a manifest-coverage projection over published receipt roots and raw WIN7-D10 candidates only. No certificate was extracted or independently verified, no new verdict was created, and no receipt fold was applied. REFUTED-D10 is not a LOSS proof. The standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN.",
+  "recommendation": {
+    "caveat": "Raw search-node count is not certificate-extraction cost; the extraction run must measure its own cost. All nine remain WIN7-D10 search candidates, not LOSS proofs. The marginals are computed at the head-1452 baseline; after the pending cost-64h/cost-76c folds land, the shared rows drop out and the projection must be re-derived against the then-current canonical head before any 66i fold.",
+    "extraction_order": [
+      19,
+      103,
+      99,
+      88,
+      28,
+      29,
+      90,
+      58,
+      112
+    ],
+    "first_certificate_extraction_bit": 19,
+    "node_ratios_vs_cheapest": {
+      "103": 1.735609,
+      "112": 3.837678,
+      "19": 4.441533,
+      "28": 7.437649,
+      "29": 1.0,
+      "58": 3.120084,
+      "88": 4.470704,
+      "90": 1.014372,
+      "99": 3.04349
+    },
+    "reason": "Bit 19 alone closes 4 currently-open manifest rows (3 net of the one row it shares with the pending cost-64h fold), the largest marginal of the nine candidates; bit 28 is second (3 rows, 2 net); bits 88/99/103 each close the child row plus one row of the 000000000000008890020000... family; bits 29/58/90/112 close only the child row 00000000000000801226000000000000, which any other candidate also closes, so they add nothing if another candidate is folded first."
+  },
+  "schema": "n11-class2-lane-cost66i-candidate-manifest-marginals-20261116-v1",
+  "single_candidate_projections": [
+    {
+      "bit": 19,
+      "covers_d4_s6_orbits": 7,
+      "marginal_d4_s6_orbits": 7,
+      "marginal_manifest_hexes": [
+        "00000000000000003801000000808000",
+        "00000000000000801206000000080000",
+        "00000000000000801222000000080000",
+        "00000000000000801226000000000000"
+      ],
+      "marginal_manifest_rows": 4,
+      "marginal_manifest_rows_net_of_pending_64h_fold": 3,
+      "new_non_manifest_marginal": 3,
+      "nodes": 2645084,
+      "nodes_relative_to_cheapest": 4.441533,
+      "overlap_with_pending_64h_fold_rows": [
+        "00000000000000801206000000080000"
+      ],
+      "overlap_with_pending_76c_fold_rows": [],
+      "projected_head": {
+        "cost_needed_by_open_classes": 369780,
+        "remaining_s5_orbits": 174,
+        "s6_needed_by_open_classes": 4665,
+        "solved_s6_in_manifest": 1456,
+        "sum_remaining_cost": 505866,
+        "unique_remaining_s6": 6392
+      },
+      "root_canon": "00000000000000801226000000080000",
+      "root_hex": "00000000000000801226000000080000"
+    },
+    {
+      "bit": 28,
+      "covers_d4_s6_orbits": 7,
+      "marginal_d4_s6_orbits": 7,
+      "marginal_manifest_hexes": [
+        "00000000000000503800000008000000",
+        "00000000000000801222000010000000",
+        "00000000000000801226000000000000"
+      ],
+      "marginal_manifest_rows": 3,
+      "marginal_manifest_rows_net_of_pending_64h_fold": 2,
+      "new_non_manifest_marginal": 4,
+      "nodes": 4429373,
+      "nodes_relative_to_cheapest": 7.437649,
+      "overlap_with_pending_64h_fold_rows": [
+        "00000000000000503800000008000000"
+      ],
+      "overlap_with_pending_76c_fold_rows": [],
+      "projected_head": {
+        "cost_needed_by_open_classes": 369847,
+        "remaining_s5_orbits": 174,
+        "s6_needed_by_open_classes": 4666,
+        "solved_s6_in_manifest": 1455,
+        "sum_remaining_cost": 505933,
+        "unique_remaining_s6": 6393
+      },
+      "root_canon": "00000000000000801226000010000000",
+      "root_hex": "00000000000000801226000010000000"
+    },
+    {
+      "bit": 29,
+      "covers_d4_s6_orbits": 7,
+      "marginal_d4_s6_orbits": 5,
+      "marginal_manifest_hexes": [
+        "00000000000000801226000000000000"
+      ],
+      "marginal_manifest_rows": 1,
+      "marginal_manifest_rows_net_of_pending_64h_fold": 1,
+      "new_non_manifest_marginal": 4,
+      "nodes": 595534,
+      "nodes_relative_to_cheapest": 1.0,
+      "overlap_with_pending_64h_fold_rows": [],
+      "overlap_with_pending_76c_fold_rows": [],
+      "projected_head": {
+        "cost_needed_by_open_classes": 369992,
+        "remaining_s5_orbits": 174,
+        "s6_needed_by_open_classes": 4668,
+        "solved_s6_in_manifest": 1453,
+        "sum_remaining_cost": 506078,
+        "unique_remaining_s6": 6395
+      },
+      "root_canon": "00000000000000801226000020000000",
+      "root_hex": "00000000000000801226000020000000"
+    },
+    {
+      "bit": 58,
+      "covers_d4_s6_orbits": 7,
+      "marginal_d4_s6_orbits": 5,
+      "marginal_manifest_hexes": [
+        "00000000000000801226000000000000"
+      ],
+      "marginal_manifest_rows": 1,
+      "marginal_manifest_rows_net_of_pending_64h_fold": 1,
+      "new_non_manifest_marginal": 4,
+      "nodes": 1858116,
+      "nodes_relative_to_cheapest": 3.120084,
+      "overlap_with_pending_64h_fold_rows": [],
+      "overlap_with_pending_76c_fold_rows": [],
+      "projected_head": {
+        "cost_needed_by_open_classes": 369992,
+        "remaining_s5_orbits": 174,
+        "s6_needed_by_open_classes": 4668,
+        "solved_s6_in_manifest": 1453,
+        "sum_remaining_cost": 506078,
+        "unique_remaining_s6": 6395
+      },
+      "root_canon": "00000000000000801626000000000000",
+      "root_hex": "00000000000000801626000000000000"
+    },
+    {
+      "bit": 88,
+      "covers_d4_s6_orbits": 7,
+      "marginal_d4_s6_orbits": 6,
+      "marginal_manifest_hexes": [
+        "00000000000000801226000000000000",
+        "00000000000000889002000100000000"
+      ],
+      "marginal_manifest_rows": 2,
+      "marginal_manifest_rows_net_of_pending_64h_fold": 2,
+      "new_non_manifest_marginal": 4,
+      "nodes": 2662456,
+      "nodes_relative_to_cheapest": 4.470704,
+      "overlap_with_pending_64h_fold_rows": [],
+      "overlap_with_pending_76c_fold_rows": [],
+      "projected_head": {
+        "cost_needed_by_open_classes": 369909,
+        "remaining_s5_orbits": 174,
+        "s6_needed_by_open_classes": 4667,
+        "solved_s6_in_manifest": 1454,
+        "sum_remaining_cost": 505995,
+        "unique_remaining_s6": 6394
+      },
+      "root_canon": "00000000000000c89002000100000000",
+      "root_hex": "00000000010000801226000000000000"
+    },
+    {
+      "bit": 90,
+      "covers_d4_s6_orbits": 7,
+      "marginal_d4_s6_orbits": 5,
+      "marginal_manifest_hexes": [
+        "00000000000000801226000000000000"
+      ],
+      "marginal_manifest_rows": 1,
+      "marginal_manifest_rows_net_of_pending_64h_fold": 1,
+      "new_non_manifest_marginal": 4,
+      "nodes": 604093,
+      "nodes_relative_to_cheapest": 1.014372,
+      "overlap_with_pending_64h_fold_rows": [],
+      "overlap_with_pending_76c_fold_rows": [],
+      "projected_head": {
+        "cost_needed_by_open_classes": 369992,
+        "remaining_s5_orbits": 174,
+        "s6_needed_by_open_classes": 4668,
+        "solved_s6_in_manifest": 1453,
+        "sum_remaining_cost": 506078,
+        "unique_remaining_s6": 6395
+      },
+      "root_canon": "00000000000000c89002000040000000",
+      "root_hex": "00000000040000801226000000000000"
+    },
+    {
+      "bit": 99,
+      "covers_d4_s6_orbits": 7,
+      "marginal_d4_s6_orbits": 6,
+      "marginal_manifest_hexes": [
+        "00000000000000801226000000000000",
+        "00000000000000889002000000200000"
+      ],
+      "marginal_manifest_rows": 2,
+      "marginal_manifest_rows_net_of_pending_64h_fold": 2,
+      "new_non_manifest_marginal": 4,
+      "nodes": 1812502,
+      "nodes_relative_to_cheapest": 3.04349,
+      "overlap_with_pending_64h_fold_rows": [],
+      "overlap_with_pending_76c_fold_rows": [],
+      "projected_head": {
+        "cost_needed_by_open_classes": 369915,
+        "remaining_s5_orbits": 174,
+        "s6_needed_by_open_classes": 4667,
+        "solved_s6_in_manifest": 1454,
+        "sum_remaining_cost": 506001,
+        "unique_remaining_s6": 6394
+      },
+      "root_canon": "00000000000000c89002000000200000",
+      "root_hex": "00000008000000801226000000000000"
+    },
+    {
+      "bit": 103,
+      "covers_d4_s6_orbits": 7,
+      "marginal_d4_s6_orbits": 6,
+      "marginal_manifest_hexes": [
+        "00000000000000801226000000000000",
+        "00000000000000889002000000020000"
+      ],
+      "marginal_manifest_rows": 2,
+      "marginal_manifest_rows_net_of_pending_64h_fold": 2,
+      "new_non_manifest_marginal": 4,
+      "nodes": 1033614,
+      "nodes_relative_to_cheapest": 1.735609,
+      "overlap_with_pending_64h_fold_rows": [],
+      "overlap_with_pending_76c_fold_rows": [],
+      "projected_head": {
+        "cost_needed_by_open_classes": 369919,
+        "remaining_s5_orbits": 174,
+        "s6_needed_by_open_classes": 4667,
+        "solved_s6_in_manifest": 1454,
+        "sum_remaining_cost": 506005,
+        "unique_remaining_s6": 6394
+      },
+      "root_canon": "00000000000000c89002000000020000",
+      "root_hex": "00000080000000801226000000000000"
+    },
+    {
+      "bit": 112,
+      "covers_d4_s6_orbits": 7,
+      "marginal_d4_s6_orbits": 5,
+      "marginal_manifest_hexes": [
+        "00000000000000801226000000000000"
+      ],
+      "marginal_manifest_rows": 1,
+      "marginal_manifest_rows_net_of_pending_64h_fold": 1,
+      "new_non_manifest_marginal": 4,
+      "nodes": 2285468,
+      "nodes_relative_to_cheapest": 3.837678,
+      "overlap_with_pending_64h_fold_rows": [],
+      "overlap_with_pending_76c_fold_rows": [],
+      "projected_head": {
+        "cost_needed_by_open_classes": 369992,
+        "remaining_s5_orbits": 174,
+        "s6_needed_by_open_classes": 4668,
+        "solved_s6_in_manifest": 1453,
+        "sum_remaining_cost": 506078,
+        "unique_remaining_s6": 6395
+      },
+      "root_canon": "00000000000000c89002000000000100",
+      "root_hex": "00010000000000801226000000000000"
+    }
+  ],
+  "source_blob_pins": {
+    "cost64h_fold_prereg": "5074a8a0cbb75fcc91b5b999a3135fac06d42400",
+    "cost66i_claim_v2": "738443c0d1076115d723029edac2de3cb67c3e86",
+    "cost66i_raw_audit": "f7d8bad610fe07fee6b365e711838600722737e2",
+    "fold_projection_head1450_tool": "49fcd8ae6706c075b39eea5b115b2a045c2950cf",
+    "head1452_presweep_v2": "67d6a5c192953b9bc95fd13b356e5aabeac2a12c"
+  },
+  "status": "projection-audited; certificate-extraction-pending; no-fold"
+}
