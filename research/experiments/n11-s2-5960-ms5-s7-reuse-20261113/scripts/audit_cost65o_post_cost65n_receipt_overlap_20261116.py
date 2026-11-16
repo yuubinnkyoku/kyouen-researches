@@ -152,6 +152,12 @@ def main() -> int:
         ", ".join(sorted(hx(x) for x in receipt_canons)),
     )
 
+    check(
+        "cost65n completed claim WIN bits match preregistered receipt bits",
+        COST65N_WIN_BITS == sorted(rec["bit"] for rec in RECEIPTS),
+        f"claim bits={COST65N_WIN_BITS}; receipt bits={sorted(rec['bit'] for rec in RECEIPTS)}",
+    )
+
     legal_set = set(LEGAL_BITS)
     open_set = set(OPEN_BITS)
     transferred_set = set(TRANSFERRED_CANONS)
@@ -232,17 +238,15 @@ def main() -> int:
         f"child canon={hx(cost65o_child_canon)}; covered row orbits={len(covered_row_canons)}",
     )
 
-    # The cost65o structural verification itself is pinned as 8/8 PASS.
-    check(
-        "cost65o claim structure was independently verified 8/8",
-        True,
-        "source blob cfff0b80; this audit does not rerun that separate legality verifier",
-    )
-
     result = {
         "schema": "n11-class2-lane-cost65o-post-cost65n-overlap-audit-20261116-v1",
         "date": "2026-11-16",
         "source_blobs": SOURCE_BLOBS,
+        "prior_structural_verification": {
+            "blob": SOURCE_BLOBS["cost65o_claim_verification_8_of_8"],
+            "summary": "8/8 PASS",
+            "note": "provenance only; this overlap script does not rerun the separate legality verifier",
+        },
         "method": (
             "Independent exact D4 canonicalization of every legal 7-stone root "
             "child|1<<bit in the cost65o row, compared with the two WIN7-D10 "
