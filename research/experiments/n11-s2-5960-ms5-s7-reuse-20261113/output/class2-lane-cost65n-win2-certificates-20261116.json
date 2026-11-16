@@ -1,0 +1,143 @@
+{
+ "schema": "n11-class2-lane-cost65n-win2-certificates-20261116-v1",
+ "date": "2026-11-16",
+ "target": {
+  "s6_child_hex": "00000000000000801202010000800000",
+  "s5_parent": "00000000000000003800000008002000",
+  "protocol_anchor_s5_parent": "00000000000000403800000008000000",
+  "s5_parent_role": "protocol parent containing the selected S6 row; full direct-parent set is listed separately",
+  "direct_s5_parents": [
+   {
+    "s5_hex": "00000000000000003800000008002000",
+    "classes_mask": 2,
+    "remaining_s6_orbits_head1441": 29,
+    "remaining_s7_edge_cost_head1441": 2017
+   },
+   {
+    "s5_hex": "00000000000000801202010000000000",
+    "classes_mask": 2,
+    "remaining_s6_orbits_head1441": 48,
+    "remaining_s7_edge_cost_head1441": 3498
+   }
+  ],
+  "s6_s7_edge_cost": 65,
+  "win7_d10_bits_certified_65n": [
+   90,
+   117
+  ],
+  "note": "the two cost-65n v16 WIN7-D10 receipts (bits 90 and 117 of the 59-bit sweep published in class2-lane-cost65n-raw-batch1..8-20261116.jsonl; both additionally crosschecked by the v15 engine - bit 90 at 3,204,116 nodes and bit 117 at 865,824 nodes, both loss=true) now have published certificates; the 57 REFUTED-D10 candidates and the 6 pre-sweep REFUTED-D10 transfers have no certificate here (REFUTED is not a LOSS proof). The row is NOT sterile; the fold of these receipts on the head-1441 chain follows the chain-reproduction protocol. Each root has a distinct D4 canonical form from every folded root (conflict census in the fold session)"
+ },
+ "extraction": {
+  "engine": "repo-verbatim class4_child1_cert_extractor_exact_v16.ts driven by scripts/cert_driver65j.ts (published generic single-root blind extraction driver), empty kill table (blind extraction), single chunk part1of1 per bit",
+  "chunking": "rows sorted-unique (exact byte order); header and root lines prepended; whole certs over the 1,200,000-byte publication split threshold are split at a line boundary into part1of2/part2of2 with a receipt"
+ },
+ "certificates": [
+  {
+   "bit": 90,
+   "child_hex": "00000000000000801202010000800000",
+   "root_hex": "00000000040000801202010000800000",
+   "d4_canonical_hex": "00000000000100003800000048002000",
+   "verdict": "WIN7",
+   "sub_roots": 51,
+   "root_mobility_matches_legal_candidates_py": true,
+   "rows": 35627,
+   "extraction_nodes": 2770239,
+   "fbt_drops": 0,
+   "fatal": null,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "terminal_count": 12139,
+   "winner_states": 47526,
+   "loser_states": 14036,
+   "published_cert": {
+    "note": "split at a line boundary into part1of2 + part2of2 (whole exceeds the 1,200,000-byte publication split threshold: the 1.75 MiB repo per-file convention and the ~1.2 MB practical single-push transport limit of the publication tooling); cat of the two parts reproduces the whole byte-exactly (see bit90-root-00000000040000801202010000800000.cert-receipt.json)",
+    "whole_bytes": 1285412,
+    "whole_md5": "616b15e76809b3e31064986d804d29a5",
+    "whole_sha256": "801bfdacbbb5163e3097ef3df57b2fd3db1ecf38c2e5357df972f633802badff",
+    "whole_git_blob_sha": "c2460e597072493195dbd738335ca7b36bdbcf53",
+    "parts": [
+     {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65n-certificates/bit90-root-00000000040000801202010000800000.cert.part1of2",
+      "bytes": 642720,
+      "git_blob_sha": "a5d67f1d1acef7900453de25f30f0af959837ac0"
+     },
+     {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65n-certificates/bit90-root-00000000040000801202010000800000.cert.part2of2",
+      "bytes": 642692,
+      "git_blob_sha": "0b12b216cc5f99e1d8b19f40b5285aac911f8fdd"
+     }
+    ],
+    "path": null
+   },
+   "bigint_verify": {
+    "union_missing": 0,
+    "union_extra": 0,
+    "subroots_passed": 51,
+    "winner_states": 47526,
+    "loser_states": 14036,
+    "terminal_count": 12139
+   },
+   "bareiss_verify": {
+    "subroots_verified": 51,
+    "all_subroots_pass": true,
+    "winner_states_seen_across_subroots": 73701,
+    "terminal_count": 12139
+   }
+  },
+  {
+   "bit": 117,
+   "child_hex": "00000000000000801202010000800000",
+   "root_hex": "00200000000000801202010000800000",
+   "d4_canonical_hex": "00000000001020003800000008080000",
+   "verdict": "WIN7",
+   "sub_roots": 49,
+   "root_mobility_matches_legal_candidates_py": true,
+   "rows": 20047,
+   "extraction_nodes": 769616,
+   "fbt_drops": 0,
+   "fatal": null,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "terminal_count": 6753,
+   "winner_states": 28468,
+   "loser_states": 9004,
+   "published_cert": {
+    "note": "single whole cert (under the 1.75 MiB repo per-file limit)",
+    "bytes": 721989,
+    "md5": "9a1e0abe9602b25e5a3dd0ae1bbf4b59",
+    "sha256": "8c657f44b78b48b298baeef2d3b2cc68c26e334d01c9fbdfb7c6b7c7877572a5",
+    "git_blob_sha": "ac0ea37d6d5ace282ef6383f8998dbb6ca8832a1",
+    "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65n-certificates/bit117-root-00200000000000801202010000800000.cert"
+   },
+   "bigint_verify": {
+    "union_missing": 0,
+    "union_extra": 0,
+    "subroots_passed": 49,
+    "winner_states": 28468,
+    "loser_states": 9004,
+    "terminal_count": 6753
+   },
+   "bareiss_verify": {
+    "subroots_verified": 49,
+    "all_subroots_pass": true,
+    "winner_states_seen_across_subroots": 44225,
+    "terminal_count": 6753
+   }
+  }
+ ],
+ "totals": {
+  "published_certificates": 2,
+  "rows": 55674,
+  "extraction_nodes": 3539855,
+  "sub_roots": 100,
+  "winner_states": 75994,
+  "loser_states": 23040,
+  "terminal_count": 18892,
+  "cert_bytes": 2007401
+ },
+ "interpretation_guard": "WIN7 certificates prove a first-player win within depth 10 from the individual 7-stone roots only; 11x11 empty board / two-stone roots {49,60} and {59,60} / S2 {59,60} / class 1 / class 2 / class 4 remain UNKNOWN"
+}
