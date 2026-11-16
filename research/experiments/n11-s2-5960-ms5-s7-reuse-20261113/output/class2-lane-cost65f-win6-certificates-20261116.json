@@ -1,0 +1,368 @@
+{
+ "schema": "n11-class2-lane-cost65f-win6-certificates-20261116-v1",
+ "date": "2026-11-16",
+ "target": {
+  "s6_child_hex": "00000000000000809102000080000000",
+  "s5_parent": "00000000000000809102000000000000",
+  "s6_s7_edge_cost": 65,
+  "win7_d10_bits_certified_65f": [
+   4,
+   18,
+   20,
+   21,
+   28,
+   109
+  ],
+  "win7_d10_bits_inherited_65f_still_uncertified": [
+   15,
+   23,
+   25,
+   66,
+   79,
+   91,
+   101
+  ],
+  "note": "these six bits are the marginal-in-manifest cost-65f v15 WIN7-D10 receipts of the cost-65j fold v2 (head 1419): each closed one open manifest row (bits 20/21 the two cost-64 rows, bits 4/18/28/109 four cost-65+ rows). Together with the four cost-65j certificates (manifest d4981d7e) all nine fold-closed rows now have certified receipts. The seven zero-marginal 65f WIN bits closed no open row by themselves and stay folded on their blob-pinned raw sweep records"
+ },
+ "extraction": {
+  "engine": "repo-verbatim class4_child1_cert_extractor_exact_v16.ts driven by scripts/cert_driver65j.ts (published this session), empty kill table (blind extraction), single chunk part1of1 per bit",
+  "chunking": "rows sorted-unique (exact byte order); header and root lines prepended; bits 112/118 split at a line boundary into part1of2/part2of2 with a receipt (whole exceeds the 1,200,000-byte publication split threshold)"
+ },
+ "certificates": [
+  {
+   "bit": 4,
+   "child_hex": "00000000000000809102000080000000",
+   "root_hex": "00000000000000809102000080000010",
+   "d4_canonical_hex": "00000000000000809102000080000010",
+   "verdict": "WIN7",
+   "sub_roots": 56,
+   "root_mobility_matches_legal_candidates_py": true,
+   "rows": 56237,
+   "extraction_nodes": 5974156,
+   "fbt_drops": 0,
+   "fatal": null,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "terminal_count": 19474,
+   "winner_states": 73682,
+   "loser_states": 21548,
+   "published_cert": {
+    "note": "split at a line boundary into part1of2 + part2of2 (whole exceeds the 1,200,000-byte publication split threshold: the 1.75 MiB repo per-file convention and the ~1.2 MB practical single-push transport limit of the publication tooling); cat of the two parts reproduces the whole byte-exactly (see bit4-root-00000000000000809102000080000010.cert-receipt.json)",
+    "whole_bytes": 2035458,
+    "whole_md5": "adb0ef79ab5a111fe481408f580934ce",
+    "whole_sha256": "84555f8c4bc2e7966dd6987e868e2638d27573bab3c0f57e21942d81bf48b331",
+    "whole_git_blob_sha": "09ae999e0183ede9f9e73252af283b62356e552f",
+    "parts": [
+     {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65f-certificates/bit4-root-00000000000000809102000080000010.cert.part1of2",
+      "bytes": 1017744,
+      "git_blob_sha": "bbb59e551b3b83224f6d40e5d6e65fc751a49055"
+     },
+     {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65f-certificates/bit4-root-00000000000000809102000080000010.cert.part2of2",
+      "bytes": 1017714,
+      "git_blob_sha": "606c90fa2212c62cf2ee6ab5f0ad5515f7842784"
+     }
+    ],
+    "path": null
+   },
+   "bigint_verify": {
+    "union_missing": 0,
+    "union_extra": 0,
+    "subroots_passed": 56,
+    "winner_states": 73682,
+    "loser_states": 21548,
+    "terminal_count": 19474
+   },
+   "bareiss_verify": {
+    "subroots_verified": 56,
+    "all_subroots_pass": true,
+    "winner_states_seen_across_subroots": 114704,
+    "terminal_count": 19474
+   }
+  },
+  {
+   "bit": 18,
+   "child_hex": "00000000000000809102000080000000",
+   "root_hex": "00000000000000809102000080040000",
+   "d4_canonical_hex": "00000000000000809102000080040000",
+   "verdict": "WIN7",
+   "sub_roots": 61,
+   "root_mobility_matches_legal_candidates_py": true,
+   "rows": 68379,
+   "extraction_nodes": 11037457,
+   "fbt_drops": 0,
+   "fatal": null,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "terminal_count": 25012,
+   "winner_states": 89466,
+   "loser_states": 25271,
+   "published_cert": {
+    "note": "split at a line boundary into part1of2 + part2of2 (whole exceeds the 1,200,000-byte publication split threshold: the 1.75 MiB repo per-file convention and the ~1.2 MB practical single-push transport limit of the publication tooling); cat of the two parts reproduces the whole byte-exactly (see bit18-root-00000000000000809102000080040000.cert-receipt.json)",
+    "whole_bytes": 2467325,
+    "whole_md5": "4dc64fc38e7bb95d80700e54050e0d2f",
+    "whole_sha256": "0b372b0e796cb95470e55487422ce26a82b570c0626c574597d5856cd9926364",
+    "whole_git_blob_sha": "a8dc42a3d328ff186f0dcb01375976e60e83466f",
+    "parts": [
+     {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65f-certificates/bit18-root-00000000000000809102000080040000.cert.part1of2",
+      "bytes": 1233667,
+      "git_blob_sha": "f13cb8a21e258c44302b5abaa3ca9c351b404fca"
+     },
+     {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65f-certificates/bit18-root-00000000000000809102000080040000.cert.part2of2",
+      "bytes": 1233658,
+      "git_blob_sha": "e405b25b9c97b7eed940b489d3ae08a9b870ee53"
+     }
+    ],
+    "path": null
+   },
+   "bigint_verify": {
+    "union_missing": 0,
+    "union_extra": 0,
+    "subroots_passed": 61,
+    "winner_states": 89466,
+    "loser_states": 25271,
+    "terminal_count": 25012
+   },
+   "bareiss_verify": {
+    "subroots_verified": 61,
+    "all_subroots_pass": true,
+    "winner_states_seen_across_subroots": 139749,
+    "terminal_count": 25012
+   }
+  },
+  {
+   "bit": 20,
+   "child_hex": "00000000000000809102000080000000",
+   "root_hex": "00000000000000809102000080100000",
+   "d4_canonical_hex": "00000000000000809102000080100000",
+   "verdict": "WIN7",
+   "sub_roots": 52,
+   "root_mobility_matches_legal_candidates_py": true,
+   "rows": 43119,
+   "extraction_nodes": 3272794,
+   "fbt_drops": 0,
+   "fatal": null,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "terminal_count": 15287,
+   "winner_states": 63529,
+   "loser_states": 19370,
+   "published_cert": {
+    "note": "split at a line boundary into part1of2 + part2of2 (whole exceeds the 1,200,000-byte publication split threshold: the 1.75 MiB repo per-file convention and the ~1.2 MB practical single-push transport limit of the publication tooling); cat of the two parts reproduces the whole byte-exactly (see bit20-root-00000000000000809102000080100000.cert-receipt.json)",
+    "whole_bytes": 1558820,
+    "whole_md5": "f07c8444d5f8fe1b14b2b00f056f74f8",
+    "whole_sha256": "74985b34a81fe15e7ae97feefb50c93aa9318f5216fabd57b28e644e15240a2f",
+    "whole_git_blob_sha": "2759f1aa3a18ac32324dc08ee9c70f0451849e4f",
+    "parts": [
+     {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65f-certificates/bit20-root-00000000000000809102000080100000.cert.part1of2",
+      "bytes": 779413,
+      "git_blob_sha": "7c4ceb1e05f45da0730406b22b512c6c0008fe96"
+     },
+     {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65f-certificates/bit20-root-00000000000000809102000080100000.cert.part2of2",
+      "bytes": 779407,
+      "git_blob_sha": "97cb9772e8c577cc2fdfa28d6721bd6c72b0083d"
+     }
+    ],
+    "path": null
+   },
+   "bigint_verify": {
+    "union_missing": 0,
+    "union_extra": 0,
+    "subroots_passed": 52,
+    "winner_states": 63529,
+    "loser_states": 19370,
+    "terminal_count": 15287
+   },
+   "bareiss_verify": {
+    "subroots_verified": 52,
+    "all_subroots_pass": true,
+    "winner_states_seen_across_subroots": 98186,
+    "terminal_count": 15287
+   }
+  },
+  {
+   "bit": 21,
+   "child_hex": "00000000000000809102000080000000",
+   "root_hex": "00000000000000809102000080200000",
+   "d4_canonical_hex": "00000000000000809102000080200000",
+   "verdict": "WIN7",
+   "sub_roots": 52,
+   "root_mobility_matches_legal_candidates_py": true,
+   "rows": 50284,
+   "extraction_nodes": 4025789,
+   "fbt_drops": 0,
+   "fatal": null,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "terminal_count": 17991,
+   "winner_states": 72662,
+   "loser_states": 21690,
+   "published_cert": {
+    "note": "split at a line boundary into part1of2 + part2of2 (whole exceeds the 1,200,000-byte publication split threshold: the 1.75 MiB repo per-file convention and the ~1.2 MB practical single-push transport limit of the publication tooling); cat of the two parts reproduces the whole byte-exactly (see bit21-root-00000000000000809102000080200000.cert-receipt.json)",
+    "whole_bytes": 1817363,
+    "whole_md5": "796e07325a6a64b64a977d9b6686f8fd",
+    "whole_sha256": "25862e73fe7798ecc981aafe089188e7909fb3a9cec571720f48af5dd165fca9",
+    "whole_git_blob_sha": "04293ea2be39240ec9bd18b0a4f23c2534ec704f",
+    "parts": [
+     {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65f-certificates/bit21-root-00000000000000809102000080200000.cert.part1of2",
+      "bytes": 908701,
+      "git_blob_sha": "2b94f557cc1baf77a34f7bd2eab59777c2f0cc91"
+     },
+     {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65f-certificates/bit21-root-00000000000000809102000080200000.cert.part2of2",
+      "bytes": 908662,
+      "git_blob_sha": "b249e3466a72fb599ee1199c83dc9c85decb7b14"
+     }
+    ],
+    "path": null
+   },
+   "bigint_verify": {
+    "union_missing": 0,
+    "union_extra": 0,
+    "subroots_passed": 52,
+    "winner_states": 72662,
+    "loser_states": 21690,
+    "terminal_count": 17991
+   },
+   "bareiss_verify": {
+    "subroots_verified": 52,
+    "all_subroots_pass": true,
+    "winner_states_seen_across_subroots": 112343,
+    "terminal_count": 17991
+   }
+  },
+  {
+   "bit": 28,
+   "child_hex": "00000000000000809102000080000000",
+   "root_hex": "00000000000000809102000090000000",
+   "d4_canonical_hex": "00000000000000809102000090000000",
+   "verdict": "WIN7",
+   "sub_roots": 54,
+   "root_mobility_matches_legal_candidates_py": true,
+   "rows": 51248,
+   "extraction_nodes": 3641657,
+   "fbt_drops": 0,
+   "fatal": null,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "terminal_count": 18594,
+   "winner_states": 74759,
+   "loser_states": 22411,
+   "published_cert": {
+    "note": "split at a line boundary into part1of2 + part2of2 (whole exceeds the 1,200,000-byte publication split threshold: the 1.75 MiB repo per-file convention and the ~1.2 MB practical single-push transport limit of the publication tooling); cat of the two parts reproduces the whole byte-exactly (see bit28-root-00000000000000809102000090000000.cert-receipt.json)",
+    "whole_bytes": 1850452,
+    "whole_md5": "082fca6175b26a76efe5b17a3c81604e",
+    "whole_sha256": "d3daf92d301e6cec3b67943e610764e73c58ae34f7378b510828d75fa452f5b2",
+    "whole_git_blob_sha": "59c94b8b91ea9e43eebb2081d5f2e3fa2b0dba67",
+    "parts": [
+     {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65f-certificates/bit28-root-00000000000000809102000090000000.cert.part1of2",
+      "bytes": 925253,
+      "git_blob_sha": "e653f126aa3d78febf74f73a8ca27ff26f6ec234"
+     },
+     {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65f-certificates/bit28-root-00000000000000809102000090000000.cert.part2of2",
+      "bytes": 925199,
+      "git_blob_sha": "44baa03087e98718da72efe8f6e34072e62f8d37"
+     }
+    ],
+    "path": null
+   },
+   "bigint_verify": {
+    "union_missing": 0,
+    "union_extra": 0,
+    "subroots_passed": 54,
+    "winner_states": 74759,
+    "loser_states": 22411,
+    "terminal_count": 18594
+   },
+   "bareiss_verify": {
+    "subroots_verified": 54,
+    "all_subroots_pass": true,
+    "winner_states_seen_across_subroots": 115764,
+    "terminal_count": 18594
+   }
+  },
+  {
+   "bit": 109,
+   "child_hex": "00000000000000809102000080000000",
+   "root_hex": "00002000000000809102000080000000",
+   "d4_canonical_hex": "00000000020000811202000000000800",
+   "verdict": "WIN7",
+   "sub_roots": 57,
+   "root_mobility_matches_legal_candidates_py": true,
+   "rows": 57527,
+   "extraction_nodes": 6823357,
+   "fbt_drops": 0,
+   "fatal": null,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "terminal_count": 20089,
+   "winner_states": 75924,
+   "loser_states": 22014,
+   "published_cert": {
+    "note": "split at a line boundary into part1of2 + part2of2 (whole exceeds the 1,200,000-byte publication split threshold: the 1.75 MiB repo per-file convention and the ~1.2 MB practical single-push transport limit of the publication tooling); cat of the two parts reproduces the whole byte-exactly (see bit109-root-00002000000000809102000080000000.cert-receipt.json)",
+    "whole_bytes": 2077808,
+    "whole_md5": "afb262ee3735088f26e59ce6c9755bb5",
+    "whole_sha256": "a0844aa4f25669699987d241313f58e2259147a966c1353947f10c1bded28140",
+    "whole_git_blob_sha": "792a406a03e90fcff4bfebcda87459895cbe3adf",
+    "parts": [
+     {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65f-certificates/bit109-root-00002000000000809102000080000000.cert.part1of2",
+      "bytes": 1038937,
+      "git_blob_sha": "27d85cf72e5fb765f9bbfcc1b88e0d0531db63af"
+     },
+     {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65f-certificates/bit109-root-00002000000000809102000080000000.cert.part2of2",
+      "bytes": 1038871,
+      "git_blob_sha": "fa7c3b4599f7aacff96a84e8f2d2a1ed696f29aa"
+     }
+    ],
+    "path": null
+   },
+   "bigint_verify": {
+    "union_missing": 0,
+    "union_extra": 0,
+    "subroots_passed": 57,
+    "winner_states": 75924,
+    "loser_states": 22014,
+    "terminal_count": 20089
+   },
+   "bareiss_verify": {
+    "subroots_verified": 57,
+    "all_subroots_pass": true,
+    "winner_states_seen_across_subroots": 118027,
+    "terminal_count": 20089
+   }
+  }
+ ],
+ "totals": {
+  "published_certificates": 6,
+  "rows": 326794,
+  "extraction_nodes": 34775210,
+  "sub_roots": 332,
+  "winner_states": 450022,
+  "loser_states": 132304,
+  "terminal_count": 116447,
+  "cert_bytes": 11807226
+ },
+ "interpretation_guard": "WIN7 certificates prove a first-player win within depth 10 from the individual 7-stone roots only; 11x11 empty board / two-stone root {49,60} / S2 {59,60} / class 1 / class 2 / class 4 remain UNKNOWN"
+}

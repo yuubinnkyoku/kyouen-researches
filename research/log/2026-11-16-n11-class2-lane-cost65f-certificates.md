@@ -1,33 +1,45 @@
-# 2026-11-16：cost-65f WIN bits 21/20の証明書抽出・出版 — cost-64行2件のfold閉鎖をcertifiedに格上げ（BigInt+Bareiss二重検証）・head 1419不変・11×11等はUNKNOWN
+# 2026-11-16：cost-65f WIN bits 4/18/20/21/28/109の証明書抽出・出版 — 65j fold v2の9行閉鎖のうち65f担当事の6行をcertified receiptに格上げ（BigInt+Bareiss二重検証）・head 1419不変・11×11等はUNKNOWN
 
-開始時点: cost-65j fold v2着地済み（head 1419・claim v5 `7a4c9007`）。foldが閉じた9行のうち2行（cost-64行 `00000000000000003800000008002002`〔bit 21〕・`00000000000000003800000008003000`〔bit 20〕）は、65f v15 raw batch 2（2026-11-14・blob pin済み）由来のWIN7-D10 receiptに基づくclosingで**証明書が存在しない**（certified:false）状態だった。本セッションでこの2枚を抽出・二重検証・出版し、**cost-64行2件の閉鎖をcertified receiptに格上げ**した。残り11本の65f WIN bits（4,15,18,23,25,28,66,79,91,101,109）は引き続き証明書なし（blob-pin済みraw sweep記録ベース）。
+開始時点: cost-65j fold v2着地済み（head 1419・claim v5 `7a4c9007`）。foldが閉じた9行のうち65j証明書4枚（bits 112/116/118/119・manifest `d4981d7e`）はcertified。65f v15由来の9 receiptのうち**marginal-in-manifest 1の6本（bits 4/18/20/21/28/109・各1行閉鎖）は証明書なし（certified:false）**だった。本セッションでこの6枚を抽出・二重検証・出版し、**9行閉鎖のうち65f担当事6行をcertified receiptに格上げした（65j 4枚と合わせ9行すべてcertified）**。zero-mimの7本（bits 15/23/25/66/79/91/101）は単独ではopen行を閉じておらず、blob-pin済みraw sweep記録ベースのまま。
 
 ## 実施内容
 
 ### 1. 盲抽出（`scripts/cert_driver65j.ts`・repo-verbatim v16 engine・空kill table）
 
-- rootはfold receipt（`class-frontier-cost65j-receipts-recompute-20261116.json`）のroot_hexとbyte-identical事前確認済み: bit 21 → `00000000000000809102000080200000`、bit 20 → `00000000000000809102000080100000`（root=child|1<<bit・child `00000000000000809102000080000000`）。両rootともD4-canonical（d4_canonical_hex == root_hex）。
-- driver moves == legal_candidates(root) mobility（52手×2・assemble scriptがassert）。
-- bit 21: **50,284 rows / 4,025,789 extraction nodes / 52 sub-roots / 10.7s**（v15 sweep 12,104,576 nodes比0.33×・v16 node計数の違いによるもので検証は独立実施）。
-- bit 20: **43,119 rows / 3,272,794 extraction nodes / 52 sub-roots / 9.2s**（v15 sweep 12,621,100 nodes比0.26×）。
-- fatal 0・fbt_drops 0・perMove capped 0。
+- root=child|1<<bit（child `00000000000000809102000080000000`）。**全6rootがfold receipt（`class-frontier-cost65j-receipts-recompute-20261116.json`）のroot_hexとbyte-identical事前確認済み**。driver moves == legal_candidates(root) mobility（assemble scriptがassert）。
+- 抽出（全てfatal 0・fbt_drops 0・perMove capped 0）:
+  - bit 4（root `00000000000000809102000080000010`）: **56,237 rows / 5,974,156 nodes / 56 sub-roots / 13.1s**
+  - bit 18（`…809102000080040000`）: **68,379 rows / 11,037,457 nodes / 61 sub-roots / 20.9s**
+  - bit 20（`…809102000080100000`）: **43,119 rows / 3,272,794 nodes / 52 sub-roots / 9.2s**
+  - bit 21（`…809102000080200000`）: **50,284 rows / 4,025,789 nodes / 52 sub-roots / 10.7s**
+  - bit 28（`…809102000090000000`）: **51,248 rows / 3,641,657 nodes / 54 sub-roots / 10.3s**
+  - bit 109（`00002000000000809102000080000000`）: **57,527 rows / 6,823,357 nodes / 57 sub-roots / 14.5s**
+- v15 raw sweep nodes比は0.26〜0.33×（v16 node計数差によるもので、検証は独立実施）。
 
-### 2. 組立・二重検証（`scripts/assemble_cost65f_certificates_20261116.py`・65j版のbits 20/21変種）
+### 2. 組立・二重検証（`scripts/assemble_cost65f_certificates_20261116.py`・65j版の6 bits変種）
 
-- rows sorted-unique（exact byte order）+ header/root行prepend。
-- **両枚ともBigInt union missing 0 / extra 0（52/52 sub-roots・terminals [13,17]）+ Bareiss 52/52全PASS（`verify_bit7_win7_cert.ts --root-check`・stones 7・loserMobility 52）の二重検証**。root mobilityはlegal_candidates.pyと一致。
-- whole cert: bit 21 = 1,817,363 bytes（md5/sha256/git blob `04293ea2…`）・bit 20 = 1,558,820 bytes（`2759f1aa…`）。**両枚とも1,200,000-byte publication split閾値超過 → part1of2+part2of2+join receiptで出版**（bit21: 908,701/908,662・bit20: 779,413/779,407）。cat再構成のbyte-exact性はreceiptが保証。
-- **assemble script再実行で全出力byte-identical確認済み**（raw chunk・manifest・verify 6枚・parts・receipts全blob sha一致）。
+- **全6枚BigInt union missing 0 / extra 0（sub-roots全PASS・terminals [13,17]）+ Bareiss全PASS（`verify_bit7_win7_cert.ts --root-check`・stones 7）の二重検証**。root mobilityはlegal_candidates.pyと一致。
+- whole cert: bit 4 = 2,035,458 B・bit 18 = 2,467,325 B・bit 20 = 1,558,820 B・bit 21 = 1,817,363 B・bit 28 = 1,850,452 B・bit 109 = 2,077,808 B。**全6枚とも1,200,000-byte publication split閾値超過 → part1of2+part2of2+join receiptで出版**（最大part 1,233,667 B = bit 18 p1）。cat再構成のbyte-exact性はreceiptが保証。
+- **assemble script再実行で全出力byte-identical確認済み**（raw chunk・manifest・verify 24枚・parts・receipts全blob sha一致・2回）。
 
 ### 3. manifest
 
-`output/class2-lane-cost65f-win2-certificates-20261116.json`（schema `n11-class2-lane-cost65f-win2-certificates-20261116-v1`）。totals: **2 certs・93,403 rows・7,298,583 extraction nodes・104 sub-roots・winner 136,191・loser 41,060・terminals 33,278・3,376,183 bytes**。per-bit: bit 20 = 43,119 rows/63529 winner/19370 loser/15287 terminals・bit 21 = 50,284/72662/21690/17991。target.noteは「bits 21/20は65j fold v2でcost-64行2件を閉じたreceipt・本manifestでcertifiedに格上げ。残11 bitsはraw sweep記録ベースのまま」を明記。
+`output/class2-lane-cost65f-win6-certificates-20261116.json`（schema `n11-class2-lane-cost65f-win6-certificates-20261116-v1`・blob `5666d730`・14,234 bytes）。totals: **6 certs・326,794 rows・34,775,210 extraction nodes・332 sub-roots・winner 450,022・loser 132,304・terminals 116,447・11,807,226 bytes**。target.noteは「6 bitsはfold v2のmim=1 receipt（各1行閉鎖・bits 20/21はcost-64行）。65j 4枚（`d4981d7e`）と合わせ9行すべてcertified。zero-mim 7 bitsはraw記録ベースのまま」を明記。
+
+**出版順序**: 最初にbits 20/21の2枚を`class2-lane-cost65f-win2-certificates-20261116.json`（blob `4ad01f58`・commit `0f551304`）として出版し、その後6 bits版に拡張した。win2 manifestはwin6に置き換わる（git historyに残る・本logが相互参照）。bits 20/21のparts/verify 8ファイルは不変（同一blobで再出版不要・win6 manifestに同一pinが入る）。
+
+### 4. 出版commits
+
+- `0f551304`: bits 20/21小ファイル一式（log v1 + win2 manifest + assemble script + verify 8枚）
+- `ebdf8cf9`/`0959546c`: bit 21 parts（908,701/908,662 B）
+- `19465182`/`f5fd1231`: bit 20 parts（779,413/779,407 B）
+- （本commit群）: bits 4/18/28/109小ファイル + win6 manifest + assemble script 6 bits版 + log v2 + 8 parts
 
 ## 意味
 
-- fold v2の9行閉鎖のうち、**costが最も高い2行（edge cost 64）の証明基盤が独立検証可能な証明書に置き換わった**。WIN7証明書は「個別7石root（52の相手初手すべてに対するfirst-player win・depth 10以内）」のみを証明する。fold閉鎖の簿記（head 1419）は不変。
-- 65fの残り11 WIN bitsの証明書抽出は残課題（v15 raw nodes順に重い順: bit 20/21を除くと最大はbatch内の他bits・いずれも同driverで数分以内と推定）。
-- claim v5のfold receipts欄のbits 20/21 certified:false表記の更新はfollow-up（claim更新は次回のclaim改訂時にまとめて実施し、本manifestを参照させる）。
+- **fold v2の9行閉鎖の証明基盤が全て独立検証可能な証明書になった**（65f 6枚 + 65j 4枚）。WIN7証明書は「個別7石root（相手初手すべてに対するfirst-player win・depth 10以内）」のみを証明する。fold閉鎖の簿記（head 1419）は不変。
+- zero-mim 7 bits（15/23/25/66/79/91/101）の証明書抽出は残課題（fold閉鎖には不要・raw記録ベースで十分）。bit 25/79/91/101は他lane fold rootsとのorbit一致(WIN/WIN)が既にcensus済み（`96e0d14d`のlog参照）。
+- claim v5のreceipts欄certified表記の更新はfollow-up（**recompute scriptがCLAIM_BLOB=7a4c9007をpinしているため、claim単独更新はfold script再現assertを壊す — claim v6化はscript pin更新とセットで実施**）。
 
 ## UNKNOWN guard
 
