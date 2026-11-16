@@ -1,0 +1,23 @@
+{
+  "schema": "two-token-z6-y3-audit-v1",
+  "claim": "H(R;(x,3);6) is given by the z6_y3 formula in report.md for all x>=3,R>=0",
+  "classification": "finite-independent-audit-not-proof",
+  "seed": 20261117,
+  "counts": {
+    "direct_z6_y3_states": 4515,
+    "z5_y3_anchor_states": 5858,
+    "z6_y2_anchor_states": 5959,
+    "option_signature_states": 2040957,
+    "mex_states": 2040957,
+    "tail_states": 19992,
+    "random_signature_states": 2000,
+    "theorem_t_violations": 0
+  },
+  "total_checks": 4120238,
+  "direct_engine_cache": {
+    "hits": 288541,
+    "misses": 175069
+  },
+  "failures": [],
+  "pass": true
+}
