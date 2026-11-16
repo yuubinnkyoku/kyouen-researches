@@ -1,8 +1,8 @@
 {
-  "schema": "n11-class2-lane-cost64h-inflight-20261116-v1",
+  "schema": "n11-class2-lane-cost64h-inflight-20261116-v2",
   "title": "n11 class2-lane cost-64h sweep in flight: next pure class-2 target S5 cheapest row child 00000000000000403800000008100000 (64 candidates, all open per the head-1452 presweep census)",
   "date": "2026-11-16",
-  "status": "in flight",
+  "status": "completed (sweep); certificate extraction in progress this session; receipt fold onto head 1452 NOT yet done",
   "claimed_by": "n11 long-term class2 lane (cost76d/77e fold + head-1452 presweep round)",
   "s5": "00000000000000403800000008000000",
   "s6_child": "00000000000000403800000008100000",
@@ -185,5 +185,100 @@
   },
   "verdict_semantics": "loss=true => WIN7-within-depth-10 candidate (certificate rebuild target); loss=false && !capped => REFUTED-D10, no first-player win within depth 10 (NOT a LOSS proof); capped => proves nothing either way",
   "unknown_status": "11x11 empty board: UNKNOWN. A completed sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 7-stone roots of this child.",
-  "coordination_note": "latest main fetched immediately before this claim push (the cost76d/77e fold publication chain through the head-1452 presweep census and its log); canonical head 1452; cost-75e (artifacts pending publication) and cost-76c (in flight) are parallel lanes on other children and must re-base onto canonical head 1452 when their receipts land; this claim is already based on 1452."
+  "coordination_note": "latest main re-fetched immediately before the claim v1 push and again before this v2 wave (head chain through commit 27c0fea6 is this lane alone); parallel lanes cost-75e (folded to head 1407 in its own lineage before the 66c/76d/77e folds) and cost-76c (in-flight on a superseded head, rebase pending) are on OTHER children of the second coverable class-2 S5 00000000000000801202000040000000 and do not overlap this child or its two parents; this claim and its receipts are based on canonical head 1452.",
+  "sweep_results": {
+    "date": "2026-11-16",
+    "engine": "class4_child1_runner_v16.ts (git blob sha 0a4a86f6828dc010c89ff17596054336a6b6091f), depth 10, cap 1e9, andclose 1",
+    "candidates_resolved": 64,
+    "win7_d10_bits": [
+      4,
+      6,
+      8,
+      33,
+      38,
+      42,
+      44,
+      49,
+      68,
+      74,
+      76,
+      77,
+      78,
+      79,
+      83,
+      89,
+      91,
+      101,
+      109,
+      113,
+      114,
+      116,
+      120
+    ],
+    "refuted_d10_count": 41,
+    "capped_count": 0,
+    "node_sum_v16": 47017565,
+    "terminal_stone_range_all": [
+      13,
+      17
+    ],
+    "pilots": "8/8 batches pilot d6 loss=false nodes=3402 exactly",
+    "v15_crosscheck": "independent v15 engine (blob 8744fc65b6b7) reconfirms all 23 WIN7-D10 bits loss=true uncapped; pilot 5949; node_sum 55171821"
+  },
+  "published_artifacts": {
+    "raw_batches": [
+      [
+        "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64h-raw-batch1-20261116.jsonl",
+        "47da4e04357b7012c55903aea22160f3ca0767c9"
+      ],
+      [
+        "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64h-raw-batch2-20261116.jsonl",
+        "04e59e2ed62ba2306c80743e9c0517a6d89e70a2"
+      ],
+      [
+        "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64h-raw-batch3-20261116.jsonl",
+        "78bb44093ef56191110119009ce788d0cd4f383f"
+      ],
+      [
+        "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64h-raw-batch4-20261116.jsonl",
+        "7d196917961356c69cfa608930c3a1b7716aaf59"
+      ],
+      [
+        "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64h-raw-batch5-20261116.jsonl",
+        "ba6a36d4cb93111461aeec86b55e2909cbc0a489"
+      ],
+      [
+        "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64h-raw-batch6-20261116.jsonl",
+        "a49e2b9cd7d239fd95681afa83793deb075b4ccf"
+      ],
+      [
+        "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64h-raw-batch7-20261116.jsonl",
+        "6771b7a900191fce3d11feccf3da0e2e05f001e9"
+      ],
+      [
+        "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64h-raw-batch8-20261116.jsonl",
+        "5e778cae345d2a1d0d50455a3633ea673b6c08be"
+      ]
+    ],
+    "v15_crosscheck_jsonl": [
+      "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64h-v15-crosscheck-20261116.jsonl",
+      "0d32c2a0f5411d455f5b1503bc37c95c58f0b155"
+    ],
+    "sweep_audit": [
+      "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64h-sweep-audit-20261116.json",
+      "98f55cdaf7810f89ab32b726ea810d4b31ca6c88"
+    ],
+    "audit_script": [
+      "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/cost64h_sweep_audit_20261116.py",
+      "7d588c3a74944ed632bfb8a078d1804651092721"
+    ]
+  },
+  "certificates": {
+    "status": "extraction in progress this session (23 WIN7-D10 roots are certificate rebuild targets per the claim v1 protocol)",
+    "driver": "repo-verbatim cert_driver76d.ts pattern (blob 927863a89c626ba33bb73b35668eea5da7220284) importing class4_child1_cert_extractor_exact.ts (blob 52bcaf509ea1), empty kill table, one node process per bit",
+    "verifiers": "verify_win7_certificate_bigint_independent.mjs (blob 62b5d9413daa) + verify_bit7_win7_cert.ts (blob 2960afabdf7c), root mobility cross-checked against scripts/legal_candidates.py"
+  },
+  "fold": {
+    "status": "NOT yet done; the receipt fold of this row onto the canonical head 1452/174/6396/506144/4669/370058 is the next published step (separate recompute script + prereg per the cost76d/77e fold precedent)"
+  }
 }
