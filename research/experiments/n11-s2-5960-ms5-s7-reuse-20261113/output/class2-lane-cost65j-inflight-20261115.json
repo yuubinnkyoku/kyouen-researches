@@ -11,7 +11,7 @@
  "motivation": "first sweep of the third class-2 target S5 00000000000000809102000000000000: after the cost-75c frontier recompute (solved 1062, second class-2 target fully closed) this child is the cheapest remaining unswept child (cost 65) of the best receipt-coverable class-2 S5; named cost-65j (cost-65b..65i are published sibling sweeps of earlier sessions); the completed sweep yields 17 WIN7-D10 receipt roots for the third class-2 target's fold",
  "engine": "class4_child1_runner_v16.ts (published repo-verbatim v16 runner), depth 10, andclose=1, cap 1e9, pilot d6 control (loss=false at exactly 3,402 nodes) per batch; v16 agreement-gated in cost-56a and used for cost-58b/60b/61d/61e/61f/63e/64b/65g/65h/65i/67b/68c/69e/70c/71b/75b/75c",
  "unknown_status": "11x11 empty board: UNKNOWN. A completed sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 7-stone roots of this child.",
- "schema": "n11-class2-lane-cost65j-inflight-20261115-v3",
+ "schema": "n11-class2-lane-cost65j-inflight-20261115-v4",
  "status": "SWEEP COMPLETE (2026-11-16, long-term lane session takeover): 65/65 candidates resolved — 17 WIN7-D10 (bits 4,15,18,20,21,23,25,28,66,79,91,101,109 from cost-65f raw batches 1-7 [v15 engine, 2026-11-14] and bits 112,116,118,119 from cost-65j raw batch8 [v16 engine, 2026-11-16]), 48 REFUTED-D10 (43 from cost-65f, bit 113 by published canonical identity transfer [theorem-applicability scan commit 2d090b49, X1-verified at 7c99621f], bits 111,114,117,120 from cost-65j raw batches 8-9), 0 capped. Raw batches 8-9 published at commit 738e33e3. FOLD PENDING: receipt processing (certificate extraction for the 4 new WIN roots and marginal-cover bookkeeping onto the head-1410 state) is delegated to the next lane session; the claim is retired as completed-sweep-pending-fold.",
  "takeover": {
   "takeover_by": "long-term lane session (2026-11-16)",
@@ -30,10 +30,11 @@
   "win7_d10_total": 17,
   "win7_bits": [4,15,18,20,21,23,25,28,66,79,91,101,109,112,116,118,119],
   "refuted_d10_total": 48,
-  "refuted_bits": [0,1,2,6,7,9,10,11,12,13,14,32,33,34,36,37,41,44,46,47,54,68,69,75,76,77,78,80,81,85,88,89,90,96,98,99,100,102,103,105,106,110,111,113,114,117,120],
+  "refuted_bits": [0,1,2,6,7,9,10,11,12,13,14,32,33,34,36,37,41,44,46,47,54,68,69,75,76,77,78,80,81,85,88,89,90,92,96,98,99,100,102,103,105,106,110,111,113,114,117,120],
   "transferred_refuted": [113],
   "capped_total": 0,
   "pilot_controls": "loss=false at exactly 3,402 nodes in both batch8 and batch9 invocations (v16)",
-  "unknown_status": "11x11 empty board: UNKNOWN. All WIN7 certificates prove only individual 7-stone roots."
+  "unknown_status": "11x11 empty board: UNKNOWN. All WIN7 certificates prove only individual 7-stone roots.",
+  "refuted_erratum": "v4 erratum: the v3 refuted_bits list omitted bit 92 (cost-65f raw batch 6: loss=false, nodes 1,228,321, REFUTED-D10); total 48 was correct, this list now carries all 48. No other field changes."
  }
 }
