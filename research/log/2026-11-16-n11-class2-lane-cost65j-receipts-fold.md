@@ -22,20 +22,21 @@
 - **新head 1419/174/6429/508474/4702/372388**（unique_remaining_s6 -9・sum_remaining_cost -635・needed -9/-635・hist c2=2,c4=0: 826→817）。
 - per-parent（touched 9個、全class-2）: 共有parent `00000000000000003800000008002000` **51/3564→42/2929**（9行全てを保持していた）・`…08000002` 41/3095→39/2962（2行）・`…08001000` 46/3448→45/3384・`…08400000` 44/3268→43/3197・`…0408000000` 56/4624→55/4550・`…00100008000000` 66/5493→65/5417・`…00400008000000` 56/4444→55/4375・`…438…08000000` 67/5621→66/5547・`…801202000000000100` 60/4939→59/4865。行-母数計18 incidences = 9行×2 parentで整合。
 - 上位候補不変: best coverable class-2 3/209（65k/70j/74h STERILE行はopenのまま）・second 5/364・audit-blocked 10/698・best class-4 18/1460。
-- 出力3ファイル（**再実行byte-identical確認済み**）: fold JSON（**blob `6a355c69a3cc81d7871cb0cc9a0e6e6e4541a0ef`**・20,641 bytes）・ranking CSV（blob `cbed4d094b87dc4fe2cc48b2db375d7ddb0776c6`・7,535 bytes）・top-candidates CSV（blob `08aaf31892680668e7e292848235a154eb746407`・3,715 bytes・60c/75e版と同一）。
+- 出力3ファイル（**再実行byte-identical確認済み**）: fold JSON（**blob `e8c835840f2fad8ffd9a9a8e6f1a9f5944470524`**・20,641 bytes）・ranking CSV（blob `cbed4d094b87dc4fe2cc48b2db375d7ddb0776c6`・7,535 bytes）・top-candidates CSV（blob `08aaf31892680668e7e292848235a154eb746407`・3,715 bytes・60c/75e版と同一）。
 
 ### 2. 閉じた9行（全てdual class-2 demand c1=0,c2=2,c4=0）
 `00000000000000043800000008002000`(bit 4)・`00000000000000003800000408002000`(18)・`00000000000000003800000008003000`(**cost-64**, 20)・`00000000000000003800000008002002`(**cost-64**, 21)・`00000000000000003800400008002000`(28)・`00000000000000003800000008002200`(109)・`00000000010000003800000008080000`(112)・`00000000000000003800100008080000`(116)・`00000000000000003800000008480000`(118)。
 
 ### 3. WIN7-D10証明書4枚（bits 112/116/118/119・二重検証済み・今回出版）
-- manifest: `class2-lane-cost65j-win7-certificates-20261116.json`（**blob `57bb95c9efc29a8c484a7e24249802f57996f560`**・8,036 bytes）。totals: 4 certs・232,426 rows・36,781,305 extraction nodes・225 sub-roots・winner 313,767・loser 93,295・terminals 79,542・8,381,377 bytes。
-- bit 112: 64,020 rows / 8,598,381 nodes / 58 sub-roots（part1of2+part2of2分割+receipt）。bit 116: 49,082 / 3,238,015 / 56（whole cert）。bit 118: 70,510 / 20,287,890 / 56（parts+receipt）。bit 119: 48,814 / 4,657,019 / 55（whole cert）。
-- 全枚: BigInt union 0/0（sub-roots 45…58全pass・terminals [13,17]）+ Bareiss 45…58/全PASS の二重検証。root = child|1<<bit、D4-canonical、rows sorted-unique、root mobilityが合法候補と一致。
-- 抽出driver `scripts/cert_driver65j.ts`（60c模倣・v16 engine）・組立/検証 `scripts/assemble_cost65j_certificates_20261116.py`。
+- manifest: `class2-lane-cost65j-win7-certificates-20261116.json`（**blob `d4981d7e075d8b2bb2e032790cbb95555bdc2b84`**・9,804 bytes）。totals: 4 certs・232,426 rows・36,781,305 extraction nodes・225 sub-roots・winner 313,767・loser 93,295・terminals 79,542・8,381,377 bytes。
+- bit 112: 64,020 rows / 8,598,381 nodes / 58 sub-roots。bit 116: 49,082 / 3,238,015 / 56。bit 118: 70,510 / 20,287,890 / 56。bit 119: 48,814 / 4,657,019 / 55。
+- **全4枚をpart1of2+part2of2+join receiptで出版**（最大part 1,270,899 bytes = bit 118 part1of2）。公開用split閾値を1,200,000 bytesに設定: 1.75 MiB repo慣例に加え、**公開transport（sandbox経由の単一push）の実用上限約1.2 MBを2026-11-16に観測**したため（bit 116のwhole cert 1,770,063 bytesは1.75 MiB慣例内だがtransport上限を超え、読み込み段階で16 MiB sandboxメモリ制限に到達）。assemble scriptのSPLIT_LIMITを変更して全4枚を2分割で再生成、manifestのper-part blob sha・receipts（md5/sha256/bytes/joined_equals_whole）でcat再構成を保証。
+- 全枚: BigInt union 0/0（sub-roots全pass・terminals [13,17]）+ Bareiss全PASS の二重検証。root = child|1<<bit、D4-canonical、rows sorted-unique、root mobilityが合法候補と一致。
+- 抽出driver `scripts/cert_driver65j.ts`（60c模倣・v16 engine）・組立/検証 `scripts/assemble_cost65j_certificates_20261116.py`（再実行でbits 112/118のparts/receiptsはbyte-identical再生成を確認済み）。
 - **65f 13 receipts（bits 4,15,18,20,21,23,25,28,66,79,91,101,109）はpublished証明書なし**。blob-pin済みv15 raw batch記録 + corpus raw-vs-audit node-sum監査（`f44f9f3a`）+ canonical root verdict cache conflict-0 census（`2d090b49`/`7c99621f`）を証拠にfold（certified:falseと明記）。証明書抽出はoptional follow-up。
 
 ### 4. claim更新（v5）
-`class2-lane-cost65j-inflight-20261115.json` → v5（**blob `28a308d8170d51a4c31c2e483d04b2e9d04354da`**・7,632 bytes）。schema・status更新 + fold section追加（前提修正・head前後・9行・zero-mim・証明書・UNKNOWN guard）。v4全field保持。
+`class2-lane-cost65j-inflight-20261115.json` → v5（**blob `7a4c900710e3ddb34fb9e272e8e673815e13a4f3`**・7,870 bytes）。schema・status更新 + fold section追加（前提修正・head前後・9行・zero-mim・証明書・UNKNOWN guard）。v4全field保持。
 
 ## 構造的事実
 

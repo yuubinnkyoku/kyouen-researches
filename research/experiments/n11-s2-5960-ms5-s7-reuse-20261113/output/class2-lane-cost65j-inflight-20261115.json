@@ -209,7 +209,7 @@
    101,
    119
   ],
-  "certificates": "class2-lane-cost65j-win7-certificates-20261116.json (git blob sha 57bb95c9efc29a8c484a7e24249802f57996f560): four WIN7 certificates bits 112/116/118/119, 232,426 rows / 36,781,305 extraction nodes / 225 sub-roots, BigInt union 0/0 + Bareiss double verification; bits 112/118 published as part1of2+part2of2 with receipts",
+  "certificates": "class2-lane-cost65j-win7-certificates-20261116.json (git blob sha d4981d7e075d8b2bb2e032790cbb95555bdc2b84): four WIN7 certificates bits 112/116/118/119, 232,426 rows / 36,781,305 extraction nodes / 225 sub-roots, BigInt union 0/0 + Bareiss double verification; ALL FOUR published as part1of2 + part2of2 with join receipts (publication split threshold 1,200,000 bytes: the 1.75 MiB repo per-file convention and the ~1.2 MB practical single-push transport limit of the publication tooling observed 2026-11-16); largest part 1,270,899 bytes (bit 118 part1of2)",
   "uncertified_receipts": "the thirteen cost-65f receipts (v15, 2026-11-14) have no published certificates and are folded on their blob-pinned raw sweep records (certified:false in the fold record); certificate extraction remains optional follow-up",
   "outputs": [
    "class-frontier-cost65j-receipts-recompute-20261116.json",

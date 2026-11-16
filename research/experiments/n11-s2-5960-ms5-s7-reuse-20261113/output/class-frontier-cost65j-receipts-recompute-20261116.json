@@ -3,7 +3,7 @@
  "date": "2026-11-16",
  "baseline_record": {
   "cost60c_head_1410": "1410/174/6438/509109/4711/373023 (reproduced byte-identically by runpy of the published cost-60c fold script)",
-  "claim": "class2-lane-cost65j-inflight-20261115.json (v5, git blob sha 28a308d8170d51a4c31c2e483d04b2e9d04354da; supersedes the v4 sweep-complete claim, all v4 fields preserved)",
+  "claim": "class2-lane-cost65j-inflight-20261115.json (v5, git blob sha 7a4c900710e3ddb34fb9e272e8e673815e13a4f3; supersedes the v4 sweep-complete claim, all v4 fields preserved)",
   "sweep": "9 raw batch JSONLs (7 x cost-65f v15, 2 x cost-65j v16), all blob-pinned; 65 candidates, 17 WIN7-D10, 48 REFUTED-D10 (incl. the bit-113 canonical transfer), 0 capped, 402652063 nodes incl. pilots",
   "cover_map": "class2-lane-cost65j-win-marginals-20261116.json (git blob sha d6d20e52c6b5af8f268222bfc9c87d6ac77c655d)",
   "premise_correction": "the motivating child 00000000000000809102000080000000 is ALREADY SOLVED at head 1410: closed exactly once by the cost-63a bit-97 cross-cover receipt 00000002000000809102000800000000 in the warm-multiband2/unified-merge fold (2026-11-15, marginal = exactly the child row, blob-pinned record); three further folded roots cover it (cost-72b roots 00000000000000809102000082000000 = the 65f bit-25 root byte-identical and 00000002000000809102000002000000, cost-69i root 00000002000000809102000000002000); the sweep re-derived all four orbits WIN7 \u2014 zero conflicts; the third class-2 target S5 00000000000000809102000000000000 has zero remaining rows at 1410; the fold's value is the nine still-remaining covered rows, not the child"

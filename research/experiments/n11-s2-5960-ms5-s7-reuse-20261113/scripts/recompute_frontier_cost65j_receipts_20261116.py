@@ -82,7 +82,7 @@ PARENT_S5 = "00000000000000809102000000000000"   # third class-2 target S5
 ROW64_BIT21 = "00000000000000003800000008002002"  # cost-64 row, 65f bit 21
 ROW64_BIT20 = "00000000000000003800000008003000"  # cost-64 row, 65f bit 20
 COVERMAP_BLOB = "d6d20e52c6b5af8f268222bfc9c87d6ac77c655d"
-CLAIM_BLOB = "28a308d8170d51a4c31c2e483d04b2e9d04354da"  # v5
+CLAIM_BLOB = "7a4c900710e3ddb34fb9e272e8e673815e13a4f3"  # v5
 REUSE_AUDIT_BLOB = "1999d82b0f78dd9f69b6c81fbbe6bf3937d31a44"
 MERGE2_BLOB = "0830cfc3746baa6ad5b542579dc9d657b61ac72a"  # warm-multiband2
 MERGE_UNIFIED_BLOB = "a0789eedd5b81d1c9ea96220acfb487f38e70e08"
@@ -293,7 +293,7 @@ print("CONTROL pre-fold cover map re-asserted (blob-pinned): 17 receipts "
 # ---------- 4. re-assert the four new cost-65j certificates ----------
 sha, blen = git_blob_sha(OUT / "class2-lane-cost65j-win7-certificates-"
                          "20261116.json")
-assert sha == "57bb95c9efc29a8c484a7e24249802f57996f560" and blen == 8036, \
+assert sha == "d4981d7e075d8b2bb2e032790cbb95555bdc2b84" and blen == 9804, \
     "certificates manifest blob"
 cman = json.loads((OUT / "class2-lane-cost65j-win7-certificates-"
                    "20261116.json").read_text())
@@ -309,7 +309,7 @@ for bit in WIN_BITS_65J:
     assert e["root_mobility_matches_legal_candidates_py"] is True, bit
     pc = e["published_cert"]
     if pc["path"] is None:
-        # split parts (bits 112/118): cat part1of2 part2of2 == whole
+        # split parts (all four bits): cat part1of2 part2of2 == whole
         p1 = CERTS / f"bit{bit}-root-{ROOTS[bit]}.cert.part1of2"
         p2 = CERTS / f"bit{bit}-root-{ROOTS[bit]}.cert.part2of2"
         data = p1.read_bytes() + p2.read_bytes()
@@ -359,7 +359,7 @@ assert (tot["published_certificates"], tot["rows"], tot["extraction_nodes"],
     (4, 232426, 36781305, 225, 313767, 93295, 79542, 8381377), tot
 print("CONTROL the four new cost-65j certificates re-asserted: manifest "
       "blob pinned, root = child | 1<<bit, D4 canonical, md5 byte pins "
-      "(bits 112/118 via part1of2+part2of2 with per-part blob shas and the "
+      "(all four bits via part1of2+part2of2 with per-part blob shas and "
       "receipts), sorted-unique rows, BigInt union 0/0 and Bareiss "
       "sub-roots; manifest totals 232,426 rows / 36,781,305 extraction "
       "nodes / 225 sub-roots")

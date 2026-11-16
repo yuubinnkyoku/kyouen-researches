@@ -9,9 +9,11 @@ Per bit, from the blind extraction chunk written by scripts/cert_driver65j.ts
   - verify with the published independent verifiers:
       verify_bit7_win7_cert.ts --cert ... --root-check --subroots ...
       verify_win7_certificate_bigint_independent.mjs ... n_moves
-  - keep every tracked file under 1.75 MiB (1,835,008 bytes): bits 116/119
-    are published as single whole certs; bits 112/118 exceed the limit and
-    are split at a line boundary into part1of2/part2of2 with a receipt
+  - split every cert over the publication split threshold (1,200,000
+    bytes: below both the 1.75 MiB repo per-file convention and the
+    ~1.2 MB practical single-push transport limit of the publication
+    tooling observed on 2026-11-16) at a line boundary into
+    part1of2/part2of2 with a receipt
     (the published split_certificate_at_line_boundary convention; cat of the
     two parts reproduces the whole byte-exactly),
   - write the published-schema bigint-verify.json / bareiss-verify.json
@@ -35,7 +37,11 @@ SCRIPTS = HERE / "scripts"
 CHILD = "00000000000000809102000080000000"
 CHILD_V = int(CHILD, 16)
 BITS = [112, 116, 118, 119]
-SPLIT_LIMIT = 1835008  # 1.75 MiB repo per-file convention
+SPLIT_LIMIT = 1200000  # publication split threshold (bytes):
+               # keeps every published part safely below the
+               # 1.75 MiB repo per-file convention AND the
+               # ~1.2 MB practical single-push transport
+               # limit of the publication tooling
 HEADER = ("n11-terminal-strategy-v1 original_first_WIN7 "
           "second_to_move_LOSS")
 
@@ -204,7 +210,10 @@ def main():
                 json.dumps(receipt, indent=1) + "\n")
             published = {
                 "note": "split at a line boundary into part1of2 + part2of2 "
-                        "(whole exceeds the 1.75 MiB repo per-file limit); "
+                        "(whole exceeds the 1,200,000-byte publication "
+                        "split threshold: the 1.75 MiB repo per-file "
+                        "convention and the ~1.2 MB practical single-push "
+                        "transport limit of the publication tooling); "
                         "cat of the two parts reproduces the whole "
                         "byte-exactly (see bit"
                         f"{bit}-root-{root}.cert-receipt.json)",

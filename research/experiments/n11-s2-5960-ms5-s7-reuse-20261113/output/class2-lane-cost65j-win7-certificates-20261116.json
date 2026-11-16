@@ -53,7 +53,7 @@
    "winner_states": 82449,
    "loser_states": 24338,
    "published_cert": {
-    "note": "split at a line boundary into part1of2 + part2of2 (whole exceeds the 1.75 MiB repo per-file limit); cat of the two parts reproduces the whole byte-exactly (see bit112-root-00010000000000809102000080000000.cert-receipt.json)",
+    "note": "split at a line boundary into part1of2 + part2of2 (whole exceeds the 1,200,000-byte publication split threshold: the 1.75 MiB repo per-file convention and the ~1.2 MB practical single-push transport limit of the publication tooling); cat of the two parts reproduces the whole byte-exactly (see bit112-root-00010000000000809102000080000000.cert-receipt.json)",
     "whole_bytes": 2308545,
     "whole_md5": "92062a57dd5f0b171cb6a25af6a8ced1",
     "whole_sha256": "58caec797d78dbf8b4a3b749fbbce43c5cdfb001470345a8b07404a0fae97236",
@@ -107,12 +107,24 @@
    "winner_states": 67600,
    "loser_states": 19739,
    "published_cert": {
-    "note": "single whole cert (under the 1.75 MiB repo per-file limit)",
-    "bytes": 1770063,
-    "md5": "dd80063b63f99b373e2bf9ccf4f04a37",
-    "sha256": "cf90189ba49bc99351846f598c3713fb6dbd2ff4c298f8bfc39b61331fa640f7",
-    "git_blob_sha": "25bde10c58192deb0f4e6c127b3194340ba62e33",
-    "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65j-certificates/bit116-root-00100000000000809102000080000000.cert"
+    "note": "split at a line boundary into part1of2 + part2of2 (whole exceeds the 1,200,000-byte publication split threshold: the 1.75 MiB repo per-file convention and the ~1.2 MB practical single-push transport limit of the publication tooling); cat of the two parts reproduces the whole byte-exactly (see bit116-root-00100000000000809102000080000000.cert-receipt.json)",
+    "whole_bytes": 1770063,
+    "whole_md5": "dd80063b63f99b373e2bf9ccf4f04a37",
+    "whole_sha256": "cf90189ba49bc99351846f598c3713fb6dbd2ff4c298f8bfc39b61331fa640f7",
+    "whole_git_blob_sha": "25bde10c58192deb0f4e6c127b3194340ba62e33",
+    "parts": [
+     {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65j-certificates/bit116-root-00100000000000809102000080000000.cert.part1of2",
+      "bytes": 885036,
+      "git_blob_sha": "770b4a764462e458923d3b20c2845a6549a3b7a7"
+     },
+     {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65j-certificates/bit116-root-00100000000000809102000080000000.cert.part2of2",
+      "bytes": 885027,
+      "git_blob_sha": "6c499b253970d44ba55b901022d1f474fc616c1c"
+     }
+    ],
+    "path": null
    },
    "bigint_verify": {
     "union_missing": 0,
@@ -149,7 +161,7 @@
    "winner_states": 98528,
    "loser_states": 28775,
    "published_cert": {
-    "note": "split at a line boundary into part1of2 + part2of2 (whole exceeds the 1.75 MiB repo per-file limit); cat of the two parts reproduces the whole byte-exactly (see bit118-root-00400000000000809102000080000000.cert-receipt.json)",
+    "note": "split at a line boundary into part1of2 + part2of2 (whole exceeds the 1,200,000-byte publication split threshold: the 1.75 MiB repo per-file convention and the ~1.2 MB practical single-push transport limit of the publication tooling); cat of the two parts reproduces the whole byte-exactly (see bit118-root-00400000000000809102000080000000.cert-receipt.json)",
     "whole_bytes": 2541776,
     "whole_md5": "6807d64c951d84290f09a514fb6be307",
     "whole_sha256": "6050f09dc4ab42580e87db43348a2912659c2a611160adbcb9eb2d6a9f6f7578",
@@ -203,12 +215,24 @@
    "winner_states": 65190,
    "loser_states": 20443,
    "published_cert": {
-    "note": "single whole cert (under the 1.75 MiB repo per-file limit)",
-    "bytes": 1760993,
-    "md5": "a399db07a80356430101d351447e8c2b",
-    "sha256": "eb0f8da813704a6f6d938e367211e1093eada4053560f3a22b7da1ed724a9504",
-    "git_blob_sha": "ac9a6ba4b13a5e508d2bf4e835995e060557b444",
-    "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65j-certificates/bit119-root-00800000000000809102000080000000.cert"
+    "note": "split at a line boundary into part1of2 + part2of2 (whole exceeds the 1,200,000-byte publication split threshold: the 1.75 MiB repo per-file convention and the ~1.2 MB practical single-push transport limit of the publication tooling); cat of the two parts reproduces the whole byte-exactly (see bit119-root-00800000000000809102000080000000.cert-receipt.json)",
+    "whole_bytes": 1760993,
+    "whole_md5": "a399db07a80356430101d351447e8c2b",
+    "whole_sha256": "eb0f8da813704a6f6d938e367211e1093eada4053560f3a22b7da1ed724a9504",
+    "whole_git_blob_sha": "ac9a6ba4b13a5e508d2bf4e835995e060557b444",
+    "parts": [
+     {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65j-certificates/bit119-root-00800000000000809102000080000000.cert.part1of2",
+      "bytes": 880514,
+      "git_blob_sha": "e03778820c2435a1eb841cb1f8d361aab9a27d0d"
+     },
+     {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65j-certificates/bit119-root-00800000000000809102000080000000.cert.part2of2",
+      "bytes": 880479,
+      "git_blob_sha": "692477b11565e7ab1897a1e814a8d9111c521810"
+     }
+    ],
+    "path": null
    },
    "bigint_verify": {
     "union_missing": 0,
