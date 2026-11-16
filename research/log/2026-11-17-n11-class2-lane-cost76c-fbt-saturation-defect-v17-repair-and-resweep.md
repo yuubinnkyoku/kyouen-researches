@@ -66,6 +66,16 @@ v17で全76候補を同じbatch分割で再スイープ（pilot 10/10・nodes総
 - raw証拠: v16独立再実行batch1-10・v17再スイープbatch1-10・v15 crosscheck 5本・order matrix 7本・fbt probe 6本（いずれもJSONL）
 - 本ログ
 
+## 追試：cost64h全64候補のv17再検査（in-flight fold基盤の無影響確認）
+
+同じ欠陥が過去laneに影響したかを確定するため、in-flightのcost64h fold（並走実行中・prereg済み）の基盤となった64h sweep（child `00000000000000403800000008100000`・64候補・23 WIN7-D10 + 41 REFUTED-D10）をv17で全bit再実行した。
+
+- **64/64 bitがv16出版記録と完全一致**（verdict・nodes・capped・terminalStoneRange・andclose全項目・nodes総和47,017,565も同一）。pilot 5/5。
+- つまり64h行は全体として**fb非飽和**で、fbt欠陥の影響を受けない。23 WIN receipt（証明書二重検証済み）と41 REFUTED簿記のいずれもv17で正確に再現された。**in-flightの64h fold（head 1452→投影1472）の基盤に欠陥の影響はない。**
+- 保存物: `output/class2-lane-cost64h-v17-full-row-recheck-20261117.json`（全入出力blob pin付き）+ v17 chunk 5本（win 2 + refuted 3）。
+
+76cと64hの対比から、飽和の実務的しきい値は「そのbit探索のfb unique triple が約1.16e5を超えるか」であり、76cの大規模bit（4-17M nodes）では発生し、64h（最大3.5M nodes/bit・行全体47M nodes）では発生しなかった。node数のみでは判定できず、v17でのnode数不一致（またはprobe計測）が飽和の検出器になる。過去の他lane（65n/66c等、bitあたりnode数が大きいもの）のREFUTED verdictを planning入力に使う前のv17再検査を次回以降の課題とする。
+
 ## 信頼境界
 
 v17自体の健全性は「両順序でverdict不変・非飽和領域でv16一致・pilot不変」による強い証拠だが、形式的検証ではない。bits 61/99の最終確定は証明書の独立検証合格による。bit 113のREFUTED-D10もLOSS証明ではない。
