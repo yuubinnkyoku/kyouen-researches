@@ -1,0 +1,216 @@
+{
+ "schema": "n11-class-frontier-cost65n-receipts-20261116-v1",
+ "date": "2026-11-16",
+ "baseline_record": {
+  "basis_head_1441": "1441/174/6407/506945/4680/370859 (independently reconstructed from the 762 published receipt roots - 100 class-frontier recompute JSONs incl. the cost-64g fold JSON contributing the bit-89 root, 26 WIN7-only base certificate files, 6 named frontier recomputes - plus the 498 sweep winners, frontier semantics verbatim-ported from the published recompute_frontier_full.py; identical to the published chain head pinned in class2-lane-cost65n-inflight-20261116.json chain_head_at_claim and to the pre-registration basis summary, git blob da2b2292a3a3436f73dc04bae266de2c01a6ef21, commit 0c237017)",
+  "receipt_roots": {
+   "count": 762,
+   "distinct_d4_canons": 747,
+   "note": "the chain reproduction counts 761 receipt roots at head 1441 (census v4 receipt_roots); the independent glob collection differs by one hex within the same D4 canon orbit - equal coverage, recorded as a bookkeeping difference in the cost-64g independent-agreement log (commit 6719f0c6)"
+  },
+  "claim": "class2-lane-cost65n-inflight-20261116.json (v2 completed NOT-STERILE, git blob sha 257e7093582f9080a551ec4ef42e1bdccee3c878; supersedes the v1 in-flight claim blob c16ba5c953db3bd74bb323f9ffd30efea59c7764; all v1 fields preserved)",
+  "sweep": "8 raw batch JSONLs (v16), all blob-pinned; 65 candidates = 2 WIN7-D10 (bits 90, 117) + 57 REFUTED-D10 swept + 6 REFUTED-D10 transferred (D4-canonical identity, published head-1441 census v4), 0 capped, 92530349 nodes + 8 pilots x 3402; determinism reruns batch5/batch7 node-exact; v15 crosscheck two-directional (anchors 9/90/94/117); independently re-verified node-exact 59/59 by the verification lane (class2-lane-cost65n-independent-rerun-verification-20261116.json)",
+  "census_v4": "class2-lane-next-target-presweep-1441-20261116.json (git blob sha 3dcb7cb64d38d27a86043b4349faa85bc0e344ea; rows CSV git blob sha 4ede6c25d7659fc4dc1902c61828a51a70944497)",
+  "certificates": "class2-lane-cost65n-win2-certificates-20261116.json (git blob sha e2e4e3f5d352e162f2d6e898b285462ff5b4d286) + bit-90 whole 1,285,412 bytes (parts joined byte-exactly, whole git blob sha c2460e597072493195dbd738335ca7b36bdbcf53) and bit-117 whole 721,989 bytes (git blob sha ac0ea37d6d5ace282ef6383f8998dbb6ca8832a1); BigInt union 0/0 (51/51, 49/49) + Bareiss records blob-pinned; second independent verification byte_identical true (class2-lane-cost65n-win2-certificates-independent-verification-20261116.json)",
+  "preregistration": "class2-lane-cost65n-fold-preregistration-20261116.json (git blob sha da2b2292a3a3436f73dc04bae266de2c01a6ef21, commit 0c237017, published before this fold); every machine-checkable field re-derived and compared here"
+ },
+ "method": "independent basis reconstruction of head 1441 (published fold-projection method), re-derivation of the cost-65n sweep from the 8 blob-pinned raw batches plus the 6 blob-pinned pre-sweep transferred REFUTED verdicts, re-assertion of both certificates byte-for-byte (parts join, md5/sha256/whole-blob re-hash, sorted-unique rows, BigInt/Bareiss verify records), 65-candidate-orbit conflict census vs the 762 folded roots (zero overlaps), the child-remaining fact asserted on both direct open parents, then the two receipts folded in publication order with per-receipt marginals, a set-equality control and field-by-field agreement with the pre-registration",
+ "cost65n_additions": [
+  {
+   "bit": 90,
+   "root_hex": "00000000040000801202010000800000",
+   "d4_canonical_hex": "00000000000100003800000048002000",
+   "source": "cost-65n raw batches 1-8 (v16) + the published head-1441 census v4 transfer census",
+   "certified": true,
+   "sweep_nodes": 1562274,
+   "certificate": {
+    "rows": 35627,
+    "sub_roots": 51,
+    "extraction_nodes": 2770239,
+    "winner_states": 47526,
+    "loser_states": 14036,
+    "terminal_count": 12139,
+    "md5": "616b15e76809b3e31064986d804d29a5",
+    "sha256": "801bfdacbbb5163e3097ef3df57b2fd3db1ecf38c2e5357df972f633802badff"
+   },
+   "covers": 7,
+   "covers_hexes": [
+    "00000000000000003800000009080000",
+    "00000000000000801202010000800000",
+    "00000000000100001800000048002000",
+    "00000000000100002800000048002000",
+    "00000000000100003000000048002000",
+    "00000000000100003800000040002000",
+    "00000000000100003800000048000000"
+   ],
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000801202010000800000"
+   ],
+   "marginal_non_manifest_hexes": [
+    "00000000000100001800000048002000",
+    "00000000000100002800000048002000",
+    "00000000000100003000000048002000",
+    "00000000000100003800000040002000"
+   ]
+  },
+  {
+   "bit": 117,
+   "root_hex": "00200000000000801202010000800000",
+   "d4_canonical_hex": "00000000001020003800000008080000",
+   "source": "cost-65n raw batches 1-8 (v16) + the published head-1441 census v4 transfer census",
+   "certified": true,
+   "sweep_nodes": 388910,
+   "certificate": {
+    "rows": 20047,
+    "sub_roots": 49,
+    "extraction_nodes": 769616,
+    "winner_states": 28468,
+    "loser_states": 9004,
+    "terminal_count": 6753,
+    "md5": "9a1e0abe9602b25e5a3dd0ae1bbf4b59",
+    "sha256": "8c657f44b78b48b298baeef2d3b2cc68c26e334d01c9fbdfb7c6b7c7877572a5"
+   },
+   "covers": 7,
+   "covers_hexes": [
+    "00000000000000801202010000800000",
+    "00000000000020003800000008080000",
+    "00000000000100809002000000000008",
+    "00000000001020001800000008080000",
+    "00000000001020002800000008080000",
+    "00000000001020003000000008080000",
+    "00000000001020003800000000080000"
+   ],
+   "marginal": 6,
+   "marginal_in_manifest": 2,
+   "marginal_manifest_hexes": [
+    "00000000000020003800000008080000",
+    "00000000000100809002000000000008"
+   ],
+   "marginal_non_manifest_hexes": [
+    "00000000001020001800000008080000",
+    "00000000001020002800000008080000",
+    "00000000001020003000000008080000",
+    "00000000001020003800000000080000"
+   ]
+  }
+ ],
+ "totals": {
+  "receipts": 2,
+  "total_marginal": 11,
+  "total_marginal_in_manifest": 3,
+  "child_closed_by_bit": 90,
+  "transferred_refuted_bits": [
+   35,
+   50,
+   51,
+   55,
+   64,
+   109
+  ],
+  "conflict_census_overlaps": [],
+  "folded_roots_at_1441": {
+   "receipt_roots": 762,
+   "distinct_d4_canons": 747
+  },
+  "rows_closed_hexes": [
+   "00000000000000801202010000800000",
+   "00000000000020003800000008080000",
+   "00000000000100809002000000000008"
+  ],
+  "sweep_nodes_excluding_pilots": 92530349,
+  "parent_row_incidences": 6,
+  "parent_edge_cost_delta": 398
+ },
+ "frontier_after_cost65n": {
+  "solved_s6_in_manifest": 1444,
+  "remaining_s5_orbits": 174,
+  "unique_remaining_s6": 6404,
+  "sum_remaining_cost": 506746,
+  "s6_needed_by_open_classes": 4677,
+  "cost_needed_by_open_classes": 370660,
+  "demand_histogram_open_only": {
+   "c2=0,c4=1": 526,
+   "c2=0,c4=2": 3011,
+   "c2=0,c4=3": 12,
+   "c2=1,c4=0": 212,
+   "c2=1,c4=1": 54,
+   "c2=1,c4=2": 9,
+   "c2=2,c4=0": 798,
+   "c2=2,c4=1": 5,
+   "c2=2,c4=2": 50
+  },
+  "best_class2": {
+   "s5_hex": "00000000000000801202000000200000",
+   "classes": 2,
+   "remaining_s6_orbits": 3,
+   "remaining_s7_edge_cost": 209
+  },
+  "best_class4": {
+   "s5_hex": "00000000020000003800000080000000",
+   "classes": 4,
+   "remaining_s6_orbits": 18,
+   "remaining_s7_edge_cost": 1460
+  },
+  "best_class1": {
+   "s5_hex": "00000000000000809082000000000000",
+   "classes": 3,
+   "remaining_s6_orbits": 10,
+   "remaining_s7_edge_cost": 698
+  },
+  "best_coverable_class2": {
+   "s5_hex": "00000000000000801202000000200000",
+   "classes": 2,
+   "remaining_s6_orbits": 3,
+   "remaining_s7_edge_cost": 209
+  },
+  "second_coverable_class2": {
+   "s5_hex": "00000000000000801202000040000000",
+   "classes": 2,
+   "remaining_s6_orbits": 5,
+   "remaining_s7_edge_cost": 364
+  }
+ },
+ "parents_after": {
+  "00000000000000003800000008002000": {
+   "s5_hex": "00000000000000003800000008002000",
+   "classes": 2,
+   "rows": 27,
+   "edge_cost": 1883,
+   "rows_before": 29,
+   "edge_cost_before": 2017
+  },
+  "00000000000000801202000000000080": {
+   "s5_hex": "00000000000000801202000000000080",
+   "classes": 2,
+   "rows": 53,
+   "edge_cost": 4003,
+   "rows_before": 55,
+   "edge_cost_before": 4137
+  },
+  "00000000000000801202010000000000": {
+   "s5_hex": "00000000000000801202010000000000",
+   "classes": 2,
+   "rows": 46,
+   "edge_cost": 3368,
+   "rows_before": 48,
+   "edge_cost_before": 3498
+  }
+ },
+ "lost_rows_per_parent": {
+  "00000000000000003800000008002000": {
+   "00000000000000801202010000800000": 65,
+   "00000000000020003800000008080000": 69
+  },
+  "00000000000000801202000000000080": {
+   "00000000000020003800000008080000": 69,
+   "00000000000100809002000000000008": 65
+  },
+  "00000000000000801202010000000000": {
+   "00000000000000801202010000800000": 65,
+   "00000000000100809002000000000008": 65
+  }
+ },
+ "interpretation_guard": "bookkeeping over published receipts; solved counts measure manifest coverage, not the game-theoretic value of any position; WIN7 certificates prove a first-player win within depth 10 from the individual 7-stone roots only; REFUTED-D10 proves only absence of WIN7-D10 from that root and is never a LOSS proof; 11x11 empty board / two-stone roots {49,60} and {59,60} / S2 {59,60} / class 1 / class 2 / class 4 remain UNKNOWN"
+}

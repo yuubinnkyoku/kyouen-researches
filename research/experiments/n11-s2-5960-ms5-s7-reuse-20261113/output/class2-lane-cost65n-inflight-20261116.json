@@ -1,8 +1,8 @@
 {
- "schema": "n11-class2-lane-cost65n-completed-20261116-v2",
+ "schema": "n11-class2-lane-cost65n-fold-complete-20261116-v3",
  "title": "n11 class2-lane cost-65n sweep in flight: cheapest open row 00000000000000801202010000800000 of the shared class-2 parent at head 1441 (59 open candidate bits after 6 published-verbatim REFUTED-D10 transfers)",
  "date": "2026-11-16",
- "status": "completed NOT-STERILE on 2026-11-16 by the long-term lane session: the full raw sweep of the 59 open candidates is published (8 v16 raw batches + determinism reruns batch5/batch7 node-exact + v15 crosscheck anchors 9/90/94/117 including both WIN bits), plus the 6 pre-sweep REFUTED-D10 transfers: 65/65 candidates determined - 2 WIN7-D10 (bits 90, 117) + 63 REFUTED-D10 (57 swept + 6 transferred), 0 capped - the row is NOT sterile; both WIN7-D10 receipts (roots 00000000040000801202010000800000 = child|1<<90 and 00200000000000801202010000800000 = child|1<<117) have published independently-verified certificates (BigInt union 0/0 + Bareiss 51/51 and 49/49 sub-roots, 35,627 + 20,047 rows, 2,770,239 + 769,616 extraction nodes, whole certs 1,285,412 bytes split part1of2/part2of2 with a byte-exact join receipt and 721,989 bytes whole; class2-lane-cost65n-win2-certificates-20261116.json); the fold of these receipts on the head-1441 chain follows the chain-reproduction protocol next, so the canonical head stays 1441 until then; 11x11 empty board, two-stone roots {49,60} and {59,60}, S2 {59,60}, and classes 1/2/4 all remain UNKNOWN",
+ "status": "FOLD COMPLETE on 2026-11-16 by the long-term lane session: the two WIN7-D10 receipts (bits 90 and 117, roots 00000000040000801202010000800000 and 00200000000000801202010000800000) are folded on the head-1441 basis (independent reconstruction of the published fold chain state; every input blob-pinned) - the child row closes in the manifest exactly once (child closed by bit 90) and both collateral rows close with the bit-117 receipt; every fold result agrees field-by-field with the pre-registration published before the fold (git blob da2b2292a3a3436f73dc04bae266de2c01a6ef21, commit 0c237017); new canonical head 1444/174/6404/506746/4677/370660; conflict census vs the 762 folded roots (747 D4 canons) at 1441: zero overlaps, zero WIN/LOSS conflicts; all v1/v2 fields preserved (v2 restorable byte-identically from the fold record); 11x11 empty board, two-stone roots {49,60} and {59,60}, S2 {59,60}, and classes 1/2/4 all remain UNKNOWN",
  "claimed_by": "n11 long-term lane session (next-target cheapest-first continuation after the cost-64g fold)",
  "s5_target": "00000000000000003800000008002000",
  "s6_child": "00000000000000801202010000800000",
@@ -262,7 +262,7 @@
    120
   ]
  },
- "supersedes": "v1 (in-flight claim published in commit 7dcd976786ed150bc85b6a896c081431e61ff4a3, git blob c16ba5c953db3bd74bb323f9ffd30efea59c7764, all v1 fields preserved)",
+ "supersedes": "v2 (completed NOT-STERILE claim, git blob sha 257e7093582f9080a551ec4ef42e1bdccee3c878, all fields preserved) which superseded v1 (in-flight claim, git blob sha c16ba5c953db3bd74bb323f9ffd30efea59c7764)",
  "results": {
   "candidates": 65,
   "win7_d10_bits": [
@@ -461,5 +461,56 @@
   "candidate_enumeration": "65 legal candidates bit-exact vs legal_candidates.py (independent exact-integer Bareiss 4x4), asserted in the head-1441 pre-sweep census before the sweep and re-derived by the raw-sweep audit",
   "k0863_consequence": "not applicable: the row is NOT sterile (two WIN7-D10 receipt roots cover it), so K0863 does not block a fold; the row remains an open manifest row at head 1441 until the receipts are folded",
   "fold": "deferred per protocol: 2 WIN7-D10 receipts (bits 90 and 117) ready to fold on the head-1441 chain in the chain-reproduction session; head 1441 unchanged until then"
+ },
+ "fold": {
+  "schema": "n11-class2-lane-cost65n-fold-20261116-v1",
+  "fold_json": "class-frontier-cost65n-receipts-recompute-20261116.json (git blob sha 7390c540836d5e8440833aec9b4ac014fd96dd44)",
+  "head_before": "1441/174/6407/506945/4680/370859",
+  "head_after": "1444/174/6404/506746/4677/370660",
+  "receipts": 2,
+  "win_bits": [
+   90,
+   117
+  ],
+  "root_hexes": [
+   "00000000040000801202010000800000",
+   "00200000000000801202010000800000"
+  ],
+  "total_marginal": 11,
+  "total_marginal_in_manifest": 3,
+  "child_closed_by_bit": 90,
+  "parent_row_incidences": 6,
+  "parent_edge_cost_delta": 398,
+  "parents_after": {
+   "00000000000000003800000008002000": {
+    "s5_hex": "00000000000000003800000008002000",
+    "classes": 2,
+    "rows": 27,
+    "edge_cost": 1883,
+    "rows_before": 29,
+    "edge_cost_before": 2017
+   },
+   "00000000000000801202000000000080": {
+    "s5_hex": "00000000000000801202000000000080",
+    "classes": 2,
+    "rows": 53,
+    "edge_cost": 4003,
+    "rows_before": 55,
+    "edge_cost_before": 4137
+   },
+   "00000000000000801202010000000000": {
+    "s5_hex": "00000000000000801202010000000000",
+    "classes": 2,
+    "rows": 46,
+    "edge_cost": 3368,
+    "rows_before": 48,
+    "edge_cost_before": 3498
+   }
+  },
+  "v2_fields": {
+   "status": "completed NOT-STERILE on 2026-11-16 by the long-term lane session: the full raw sweep of the 59 open candidates is published (8 v16 raw batches + determinism reruns batch5/batch7 node-exact + v15 crosscheck anchors 9/90/94/117 including both WIN bits), plus the 6 pre-sweep REFUTED-D10 transfers: 65/65 candidates determined - 2 WIN7-D10 (bits 90, 117) + 63 REFUTED-D10 (57 swept + 6 transferred), 0 capped - the row is NOT sterile; both WIN7-D10 receipts (roots 00000000040000801202010000800000 = child|1<<90 and 00200000000000801202010000800000 = child|1<<117) have published independently-verified certificates (BigInt union 0/0 + Bareiss 51/51 and 49/49 sub-roots, 35,627 + 20,047 rows, 2,770,239 + 769,616 extraction nodes, whole certs 1,285,412 bytes split part1of2/part2of2 with a byte-exact join receipt and 721,989 bytes whole; class2-lane-cost65n-win2-certificates-20261116.json); the fold of these receipts on the head-1441 chain follows the chain-reproduction protocol next, so the canonical head stays 1441 until then; 11x11 empty board, two-stone roots {49,60} and {59,60}, S2 {59,60}, and classes 1/2/4 all remain UNKNOWN",
+   "supersedes": "v1 (in-flight claim published in commit 7dcd976786ed150bc85b6a896c081431e61ff4a3, git blob c16ba5c953db3bd74bb323f9ffd30efea59c7764, all v1 fields preserved)",
+   "results_fold": "deferred per protocol: 2 WIN7-D10 receipts (bits 90 and 117) ready to fold on the head-1441 chain in the chain-reproduction session; head 1441 unchanged until then"
+  }
  }
 }
