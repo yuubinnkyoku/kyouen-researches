@@ -44,7 +44,7 @@ K0866はr=6の4/8族、r=7の4/9族から、r=8では4/10族
 この有限予想は反証された。
 
 詳細な数値・二方式の検証・適用範囲は
-[実験報告](../experiments/remo-k-branch-r8-target-refutation-20261116/report.md)、
-[検証器](../experiments/remo-k-branch-r8-target-refutation-20261116/verify_r8_target.py)、
-[監査JSON](../experiments/remo-k-branch-r8-target-refutation-20261116/output/audit.json)
+[実験報告](../../experiments/remo-k-branch-r8-target-refutation-20261116/report.md)、
+[検証器](../../experiments/remo-k-branch-r8-target-refutation-20261116/verify_r8_target.py)、
+[監査JSON](../../experiments/remo-k-branch-r8-target-refutation-20261116/output/audit.json)
 を参照。

@@ -84,6 +84,10 @@
 - ← depends_on [K0787](../items/K0787-greedy-lower-bounds-2531-3251.md): 共線・共円四点を含まない安全集合の定義
 - ← depends_on [K0814](../items/K0814-attained-equality-3793-3803-3863.md): 共線・共円四点を含まない安全集合の定義
 - ← depends_on [K0824](../items/K0824-higher-dimensional-fiber-trace-reduction.md): 安全な追加だけを合法手とする通常プレイの規則
+- ← depends_on [K0858](../items/K0858-multiplayer-coalition-classification.md): 完全指摘の安全判定と整数行列式幾何
+- ← depends_on [K0859](../items/K0859-elimination-continuation-rules.md): 完全指摘の安全判定と整数行列式幾何（有限盤での機械検証に使用）
+- ← depends_on [K0860](../items/K0860-remo-two-branch-determinism.md): 実盤センサス（2×4/2×5/2×6/3×4 q=4）の安全判定に整数行列式幾何を使用
+- ← depends_on [K0868](../items/K0868-n11-s6-s7-sweep-candidate-convention.md): 生残条件は共円禁止規則（q=4・完全指摘）の勝利条件の否定（退化円=直線を含む）
 
 ## [K0002](../items/K0002-grundy-and-first-move-conventions.md) Grundy数・P/Nと勝ち初手の向き
 
@@ -167,6 +171,7 @@
 - ← depends_on [K0690](../items/K0690-legal-mobility-universal-grundy-gap-two.md): 通常ゲームのmex定義
 - ← depends_on [K0692](../items/K0692-common-pivot-rank-three-sharp-grundy-bound.md): mexとGrundyの定義
 - ← depends_on [K0704](../items/K0704-misere-one-free-point-xor-and-restriction-commutation.md): 通常ゲームのmexと独立な一回手との直和
+- ← depends_on [K0858](../items/K0858-multiplayer-coalition-classification.md): r=2帰着の古典勝敗・Grundy規約
 
 ## [K0003](../items/K0003-solution-and-evidence-levels.md) 解決段階と計算・証明書・監査の区別
 
@@ -362,6 +367,7 @@
 - ← depends_on [K0351](../items/K0351-width-three-q4-exact-stabilization.md): 固定幅q点版の一般的な満容量安定化枠組み
 - ← depends_on [K0723](../items/K0723-width-five-q6-stabilization-bounds.md): より弱い初期上界T=2965は参考
 - ← depends_on [K0806](../items/K0806-six-row-q7-stabilization-bounds.md): 従来の暗黙の一般上界T_{6,7}=10,101（402はその25分の1）
+- ← depends_on [K0858](../items/K0858-multiplayer-coalition-classification.md): 確定表の十分長さレジーム C=(q−1)w
 
 ## [K0025](../items/K0025-q-above-two-width-all-lengths.md) q>2wでは全長の固定幅盤が分離し強解決
 
@@ -382,6 +388,7 @@
 - ← depends_on [K0795](../items/K0795-fixed-width-pw-mwq-results-table.md): q>2w無限族とg公式の枠組み
 - ← generalizes [K0813](../items/K0813-width2-5-circle-point-max-and-q9-q10-row-formula.md): 行分離公式の新規(w,q)領域（w=5・q=9,10。q≥11はK0025のq>2w帯と一致）
 - ← generalizes [K0855](../items/K0855-q23-complete-degeneracy.md): 『残り手数偶奇で Grundy 値が決まる』退化帯の q 側極小例(q≤3)。K0025 は q>2w の w 側巨大帯
+- ← depends_on [K0858](../items/K0858-multiplayer-coalition-classification.md): 確定表の q>2w 全長レジーム C=w·min(m,q−1)
 
 ## [K0026](../items/K0026-maximum-versus-minimum-maximal.md) 最大安全サイズK_nと最小極大サイズs_nは別の量
 
@@ -677,6 +684,7 @@
 - ← supports [K0796](../items/K0796-two-row-m24-stabilization-nine.md): 十分長さT_2=9が最小であることを確定（真の安定化長と一致）
 - ← depends_on [K0827](../items/K0827-seven-row-q4-q6-deficient-witness-lower-bounds.md): (7,4) upper bound T_7 = 3+2{C(19,3)-6} = 1929 by the general q=4 parity theorem (all maximals 3w stones, g=(3w-|S|) mod2 for m >= T_w); matches K0318 substitution U=1929
 - ← depends_on [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md): q=4 の上界 T_4=237, T_5=567, T_6=1113（全局面偶奇式の一般上界; K0318 curve-packing 代入でも同一値）
+- ← depends_on [K0858](../items/K0858-multiplayer-coalition-classification.md): 確定表の標準q=4十分長さレジーム C=3w
 
 ## [K0069](../items/K0069-two-row-all-lengths-strong-solution.md) 標準二行盤は全mで強解決、m≥6の空盤は後手勝ち
 
@@ -686,11 +694,13 @@
 - ← depends_on [K0532](../items/K0532-quadratic-parameter-finite-classes-and-two-row-invariance.md): 二水平行の不変性を用いた数値的帰結には既存強解決を使用
 - ← depends_on [K0796](../items/K0796-two-row-m24-stabilization-nine.md): 上界（m≥9全極大6石）と幾何モデル（B214圧縮・弦和同値）の出典
 - ← depends_on [K0813](../items/K0813-width2-5-circle-point-max-and-q9-q10-row-formula.md): M_{2,4}=9の確定値（対偶によるP(2)≥4の第2導出・K0796と併用）
+- ← depends_on [K0858](../items/K0858-multiplayer-coalition-classification.md): 確定表の (2,4) m≥9 レジーム C=6
 
 ## [K0070](../items/K0070-width-three-q6-stabilization.md) 3×m・q=6の真の満容量安定化長M_{3,6}=9
 
 - → depends_on [K0024](../items/K0024-fixed-width-q-point-threshold.md)
 - ← depends_on [K0813](../items/K0813-width2-5-circle-point-max-and-q9-q10-row-formula.md): M_{3,6}=9（対偶によるP(3)≥6の第2導出）
+- ← depends_on [K0858](../items/K0858-multiplayer-coalition-classification.md): 確定表の (3,6) m≥9 レジーム C=15
 
 ## [K0071](../items/K0071-width-three-q5-exact-stabilization.md) 3×m・q=5の真の満容量安定化長はM_{3,5}=12
 
@@ -699,6 +709,7 @@
 - ← supports [K0078](../items/K0078-width-three-q5-intermediate-range-closed.md): M_{3,5}=12の有限区間部分を閉じる
 - ← generalizes [K0302](../items/K0302-fixed-width-five-exact-stabilization-thresholds.md): M_{3,5}=12を含む
 - ← supports [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md): 3×m・q=5の一般上界を56から40へ改善した
+- ← depends_on [K0858](../items/K0858-multiplayer-coalition-classification.md): 確定表の (3,5) m≥12 レジーム C=12
 
 ## [K0072](../items/K0072-mod9-integer-row-separation.md) 標準整数行の合同条件は高q全長分離領域を拡大する
 
@@ -723,6 +734,7 @@
 - ← depends_on [K0784](../items/K0784-width21-35-pw-exact-universal-bound.md): Vieta 整数化・合同証明書・窓マスクの枠組み
 - ← depends_on [K0789](../items/K0789-width19-21-pw16-certificate.md): Vieta 整数化・合同証明書・接点行≦2 の枠組み
 - ← depends_on [K0791](../items/K0791-circle-34pt-witness-verified.md): 行分離・円格子点の標準形（2x−A)²+(2y−B)²=R と3原始実現の分類
+- ← depends_on [K0858](../items/K0858-multiplayer-coalition-classification.md): 確定表の q=2w・q=2w−1・半密度拡張レジーム
 
 ## [K0073](../items/K0073-q-two-width-circle-criterion.md) q=2w共円の一般必要十分条件は行ペア和一致と積の二階差
 
@@ -1636,6 +1648,7 @@
 - ← verifies [K0740](../items/K0740-two-deficient-blocker-fill-machine.md): 全分岐版が5×18で第3 witnessを発見し独立検証で確認（石分岐の健全性の実証）
 - ← depends_on [K0795](../items/K0795-fixed-width-pw-mwq-results-table.md): 確定閾値5件（M_{3,4}..M_{4,8}）の出典
 - ← depends_on [K0796](../items/K0796-two-row-m24-stabilization-nine.md): 確定閾値リスト（5件）に続き2行盤の確定値を追加
+- ← depends_on [K0858](../items/K0858-multiplayer-coalition-classification.md): 確定表の (3,4)/(3,5)/(4,6)/(4,7)/(4,8) 厳密閾値レジーム
 
 ## [K0303](../items/K0303-width-three-all-q-all-length-grundy.md) 幅3・全q≥4・全長の空盤Grundyと全局面最大値を分類
 
@@ -1796,6 +1809,7 @@
 - → depends_on [K0342](../items/K0342-sharp-horizontal-chord-sum-energy.md): E7=47の鋭い同和弦energyから短い無界末尾を証明
 - ← supports [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md): 標準五行の八点円の四行構造と組合せて全称末尾101、必要有限証明255件を得る
 - ← depends_on [K0813](../items/K0813-width2-5-circle-point-max-and-q9-q10-row-formula.md): M_{5,8}=16の確定値（対偶によるP(5)≥8の第2導出）
+- ← depends_on [K0858](../items/K0858-multiplayer-coalition-classification.md): 確定表の (5,8) m≥16 レジーム C=35
 
 ## [K0332](../items/K0332-width-five-q7-stabilization-bounds.md) 5×m・q=7の満容量安定化長は19以上158以下
 
@@ -1901,6 +1915,9 @@
 - ← depends_on [K0346](../items/K0346-arbitrary-integer-board-unbounded-circle-fault-tolerance.md): 終局サイズ差から多人数の策略非依存敗者を判定する帰結
 - ← depends_on [K0352](../items/K0352-general-dimensional-parallel-columns.md): 多人数版の敗者固定条件に極大サイズ差gcd定理を使う
 - ← depends_on [K0593](../items/K0593-sunflower-short-petal-parity-modulus.md): 終局長差のgcdと巡回多人数対戦の敗者固定性
+- ← depends_on [K0858](../items/K0858-multiplayer-coalition-classification.md): Δと剰余公式・凍結系の前提。連合分類はK0339が明示的に残した未解決方向
+- ← depends_on [K0859](../items/K0859-elimination-continuation-rules.md): 継続規則はK0339が明示的に残した未解決。第1敗者の規則・r|Δ条件・剰余公式の前提
+- ← generalizes [K0860](../items/K0860-remo-two-branch-determinism.md): 第1敗者の剰余公式の先（排除後の継続を含む全成果）への拡張。r|Δは生存者決定性と独立（4象限すべて無限族）であることの対比
 
 ## [K0340](../items/K0340-three-dimensional-prism-capacity-and-grundy.md) 三次元の平行格子列では高qでも二列容量が残り、列数の偶奇が全Grundy0/1を決める
 
@@ -2607,6 +2624,7 @@
 
 - → depends_on [K0072](../items/K0072-mod9-integer-row-separation.md): 法9平方剰余による連続行の障害と比較
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常プレイGrundy値の定義
+- ← depends_on [K0858](../items/K0858-multiplayer-coalition-classification.md): 確定表の (5,9) m≥8 レジーム C=40
 
 ## [K0485](../items/K0485-n11-four-s7-win-and-s6-correction-verified.md) 11盤の既知S7 WIN四件を終局から独立再検証し、S6のUNKNOWN誤記を訂正
 
@@ -4012,6 +4030,7 @@
 - ← supports [K0708](../items/K0708-p3251-no-parabola-equality-witness.md): 2647に続く4例目
 - ← supports [K0711](../items/K0711-p2647-safe-lower-bound-1292.md): 従来の全d監査による1324より強い、4形状RUP/LRAT監査の上界1322
 - ← depends_on [K0737](../items/K0737-assumption-unsat-drat-gap.md): DRAT 監査の実施例
+- ← depends_on [K0869](../items/K0869-p2647-size1322-three-class-drat-audit.md): 同じ増分DRATチェッカーによる全1323 d監査の流儀
 
 ## [K0707](../items/K0707-incremental-drat-deletion-unsoundness.md) 旧増分DRATチェッカーは節削除後の古い代入により偽UNSAT証明を受理する
 
@@ -4035,6 +4054,7 @@
 - → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 安全集合は完全対を高々一つしか含まず、h点を4形状に分類できる
 - → depends_on [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 整数共円行列式が0なら四パラメータ和が0 mod pとなる必要条件
 - ← depends_on [K0720](../items/K0720-p2647-saved-1302-witness-inclusion-maximal.md): 指定1302点集合自体の安全性を確認した独立整数幾何receipt
+- ← verifies [K0869](../items/K0869-p2647-size1322-three-class-drat-audit.md): 上界 A(2647)<=1322 のうち (1,1,3) を除く3クラスのソルバUNSAT主張
 
 ## [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md) 原点と一完全対を固定した安全集合は低側・高側・空対のSATへ厳密還元できる
 
@@ -4046,6 +4066,7 @@
 - ← generalizes [K0736](../items/K0736-ternary-encoding-arbitrary-d-verification.md): d=1323 固定の保存CNFから任意 d の再生成へ
 - ← depends_on [K0768](../items/K0768-p2647-113-full-d-sweep-100k.md): 固定原点・一完全対の還元の上でのクラス符号化
 - ← depends_on [K0769](../items/K0769-candidate-b-assumption-partition.md): 固定原点・一完全対の還元
+- ← depends_on [K0870](../items/K0870-p2647-113-budget-ladder-3m-20m.md): 固定原点・一完全対の三値還元（d 固定 CNF）の上での予算ラダー
 
 ## [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) 二値立方体の共面四点は一意な平行四辺形で三点から高々一通りに補完
 
@@ -4224,6 +4245,7 @@
 - → verifies [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md): 三値還元の一般 d 実装の検証
 - → generalizes [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md): d=1323 固定の保存CNFから任意 d の再生成へ
 - → supports [K0768](../items/K0768-p2647-113-full-d-sweep-100k.md): 候補A/三値系の一般化が次の測定の前提になる
+- ← depends_on [K0870](../items/K0870-p2647-113-budget-ladder-3m-20m.md): d を引数化した一般 d 符号化（各段は再生成 CNF）
 
 ## [K0737](../items/K0737-assumption-unsat-drat-gap.md) 候補B の assumption-UNSAT を単体の DRAT 証明へ落とす手続きは未取得である
 
@@ -4520,6 +4542,7 @@
 - ← depends_on [K0767](../items/K0767-width9-18-circle-point-max-row-formulas.md): P=2d+s・接点行s≤2の会計枠組み
 - ← depends_on [K0813](../items/K0813-width2-5-circle-point-max-and-q9-q10-row-formula.md): P(6)=8（単調性によるP(5)≤8）とwitness円(2x−7)²+(2y−7)²=50の原形
 - ← depends_on [K0831](../items/K0831-circle-row-window-denominator-lemma.md): 接点・判別式の行ごとの構造解析の枠組み
+- ← depends_on [K0858](../items/K0858-multiplayer-coalition-classification.md): 確定表の w=6, q=9..12 全長レジーム
 
 ## [K0764](../items/K0764-width7-circle-ten-point-sizes-and-q11-q12-row-formula.md) 幅7整数格子の円は全mでP(7)=10・可能サイズ{7,8,10} — 9・11・12点円の全称不在とq=11..12の行分離公式
 
@@ -4568,6 +4591,7 @@
 - → supports [K0735](../items/K0735-easy-unsat-history-solver-independence.md): 独立性検証の対象データ
 - ← depends_on [K0735](../items/K0735-easy-unsat-history-solver-independence.md): 掃引記録
 - ← supports [K0736](../items/K0736-ternary-encoding-arbitrary-d-verification.md): 候補A/三値系の一般化が次の測定の前提になる
+- ← supports [K0870](../items/K0870-p2647-113-budget-ladder-3m-20m.md): 100k 掃引の「決まる d の地図」に対する予算軸の拡張
 
 ## [K0769](../items/K0769-candidate-b-assumption-partition.md) 形状クラスCNFのモデル集合は完全対の仮定 B_d で互いに素に分割され、全 d の UNSAT はクラス UNSAT と同値
 
@@ -4597,6 +4621,7 @@
 - ← depends_on [K0787](../items/K0787-greedy-lower-bounds-2531-3251.md): 禁止四点リストが健全・完全・重複なしであることを前提に、辺の非包含で安全性を判定
 - ← depends_on [K0812](../items/K0812-new-exceptional-primes-3719-3727.md): 禁止四点リストの健全・完全・重複なし（CNFの幾何節の根拠）
 - ← depends_on [K0814](../items/K0814-attained-equality-3793-3803-3863.md): 禁止四点リストの健全・完全・重複なし（辺の非包含で安全性を判定）
+- ← depends_on [K0869](../items/K0869-p2647-size1322-three-class-drat-audit.md): 禁止四点生成器の完全性（CNF構築の前提）
 
 ## [K0772](../items/K0772-pysat-seqcounter-equals-small-verification.md) pysat の seqcounter による CardEnc.equals は build と同一の呼び出し形で小規模全件「ちょうど bound 個」を満たす
 
@@ -4685,6 +4710,9 @@
 
 - → depends_on [K0675](../items/K0675-n11-s6-universe-s5-verdicts.md): 94オラクル位置（78 FW + 16 SW）と14 LOSS sweep鍵が導出の全入力
 - → depends_on [K0672](../items/K0672-n11-focus-s6-all-62-children-classified.md): focus2154の62証明書（27 WIN7 + 35 LOSS7）が再利用分類の入力
+- ← depends_on [K0863](../items/K0863-sterile-row-depth10-unclosability.md): n11 S2{59,60} milestone-5のMS5 S6 manifest・S7 edge cost・WIN7-D10 receipt/cover機構（foldのmarginal閉鎖・D4正準化covers）の定義を継承し、その体系内の不可能性を証明する
+- ← depends_on [K0865](../items/K0865-head1410-sterile-coverage-census.md): manifest・receipt の簿記規約
+- ← depends_on [K0868](../items/K0868-n11-s6-s7-sweep-candidate-convention.md): worklist・receipt・foldの簿記規約（own_candidates列・edge cost・bits）
 
 ## [K0784](../items/K0784-width21-35-pw-exact-universal-bound.md) 幅21..35の円点数の完全決定 P(22)=18・P(23)=P(24)=20・P(25)=22・P(26)=…=P(35)=24・24点witness円650 — 全称上界 P(w) ≤ 2⌈w/2⌉−4（全w≥21・w≠26）・行分離公式 M_{w,w+1}=w（全奇数w≥21）
 
@@ -5003,6 +5031,7 @@
 - → generalizes [K0025](../items/K0025-q-above-two-width-all-lengths.md): 行分離公式の新規(w,q)領域（w=5・q=9,10。q≥11はK0025のq>2w帯と一致）
 - → supports [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): w=5の低q側帯の上界会計にP(5)=8を供給
 - ← depends_on [K0817](../items/K0817-circle-strip-subadditivity-and-density-bound.md): P(w) の円格子点数定義と各水平行2点上界の枠組み
+- ← depends_on [K0858](../items/K0858-multiplayer-coalition-classification.md): 確定表の w=5, q≥9 全長レジーム
 
 ## [K0814](../items/K0814-attained-equality-3793-3803-3863.md) p=3793・3803・3863は等号A(p)=(p+3)/2を達成する（サイズh+2の証人を独立整数幾何で監査）
 
@@ -5085,6 +5114,7 @@
 - → depends_on [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md): upper bounds U_{7,9}=613 and U_{7,10}=587 by curve-packing substitution (w7_upper_bounds.json of the source experiment)
 - ← depends_on [K0825](../items/K0825-seven-row-q8-deficient-witness-lower-bound.md): genfast.js (memory-bounded CNF generator) reused; instance-identity calibration (7,10) m=46 def+lex regenerated, kissat 861 conflicts bit-exact with the q10-band record; genfast byte-identity to sat2.js re-validated for q=8 on 4 samples
 - ← supports [K0830](../items/K0830-seven-row-ten-point-circle-classification.md): (7,10) 帯の ≥10 点危険円は m ≤ 587 では 50 族のみ（2m−14 本・行 0,3,6 強制通過）
+- ← depends_on [K0858](../items/K0858-multiplayer-coalition-classification.md): 確定表の (7,9) m≥24・(7,10) m≥19 レジーム
 
 ## [K0821](../items/K0821-five-row-q7-m21-deficient-nonexistence.md) 5x21 q=7 row-deficient maximal nonexistence (all 19 canonical classes UNSAT) — witness-free width set of (5,7) extends to {19,20,21}, M_{5,7} ∈ {19,20,21} or >= 23
 
@@ -5416,6 +5446,7 @@
 - → depends_on [K0810](../items/K0810-sat-row-deficient-witnesses.md): census (circleABC integer triples, line pairs) + sequential-counter/maximality core reused verbatim via the sat2.js monkey-patch; def-mode single clause and lex as in K0820
 - → depends_on [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md): upper bounds U_{8,11}=908 and U_{8,12}=883 by curve-packing substitution (w7_upper_bounds.json) - proved; excludes witnesses for all m >= 908 / 883
 - → depends_on [K0830](../items/K0830-seven-row-ten-point-circle-classification.md): strip-classification machine ported to w=8 (eight-row-strip-classification-20261115): Theorem A + Corollary 4 - every in-board circle with >= 11 points is a placement member of the twelve-point F1 family for all m <= 984; band-wide soundness basis of the genfam12 family census
+- ← depends_on [K0858](../items/K0858-multiplayer-coalition-classification.md): 確定表の (8,11) m≥21 レジーム
 
 ## [K0844](../items/K0844-five-row-q7-m31-deficient-nonexistence.md) 5x31 q=7 row-deficient maximal nonexistence (all 19 canonical classes UNSAT) — witness-free width set of (5,7) extends to {19,20,21,22,23,24,25,26,27,28,29,30,31}, M_{5,7} = 19 or >= 33
 
@@ -5602,9 +5633,115 @@
 - → depends_on [K0853](../items/K0853-free-column-append-criterion-lemma.md): blocked(c を通る曲線が ≥q−1 石)の定義。機械監査の検査Cで使用
 - → supports [K0795](../items/K0795-fixed-width-pw-mwq-results-table.md): M_{w,q} 横断表の q<4 コーナーを埋める(w≥2: M=∞、w=1: M=q−1 の4行を results CSV に追加)
 - → generalizes [K0025](../items/K0025-q-above-two-width-all-lengths.md): 『残り手数偶奇で Grundy 値が決まる』退化帯の q 側極小例(q≤3)。K0025 は q>2w の w 側巨大帯
+- ← depends_on [K0858](../items/K0858-multiplayer-coalition-classification.md): 確定表の q∈{2,3} 完全退化レジーム C=min(q−1,総升目数)
 
 ## [K0857](../items/K0857-four-row-q5-m21-deficient-nonexistence.md) 4x21 q=5 row-deficient maximal nonexistence (all 75 class-split instances UNSAT; the two deep-cap-resistant buckets are decided by a complete 37-bucket second-stone case split) — witness-free width set of (4,5) starts at 21, M_{4,5} ∈ {21} or >= 23
 
 - → depends_on [K0810](../items/K0810-sat-row-deficient-witnesses.md): census (circleABC integer triples, line pairs), the sequential-counter/maximality core and the model decoder/verifyConfig are used verbatim (sat.js / sat2.js); sat4.js adds only the class-split unit clauses, --krow exact count, --minpos and --x2 second-stone pinning
 - → depends_on [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md): the (4,5) witness band m=5..20 (all SAT, dual/triple-verified), the m=20 witness used as the positive-control board, the upper bound U_{4,5}=140 (K0318 substitution) and the frontier history (def-mode 210s INDET, 2-class lex=H covering 600s INDET x2) that motivated the absence-capable class split
 - → depends_on [K0821](../items/K0821-five-row-q7-m21-deficient-nonexistence.md): the witness-free width-set audit convention (band + witness-free widths => M in the free-set complement or >= next width) and the 5x21 q=7 class-split protocol (canonical classes mod row-mirror V, k x minpos sound decomposition) that this (4,21,5) sweep instantiates; the x2 second-stone case split is the new ingredient beyond K0821
+
+## [K0858](../items/K0858-multiplayer-coalition-classification.md) r人共円ゲームの連合強制分類 — Surv/Win意味論と凍結崩壊・確定レジーム敗者・最終着手者表・2×m q=4族の全rルート特徴付け（短プレイ定理）・44小盤の完全センサス
+
+- → depends_on [K0339](../items/K0339-multiplayer-terminal-modulus.md): Δと剰余公式・凍結系の前提。連合分類はK0339が明示的に残した未解決方向
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 完全指摘の安全判定と整数行列式幾何
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): r=2帰着の古典勝敗・Grundy規約
+- → depends_on [K0024](../items/K0024-fixed-width-q-point-threshold.md): 確定表の十分長さレジーム C=(q−1)w
+- → depends_on [K0025](../items/K0025-q-above-two-width-all-lengths.md): 確定表の q>2w 全長レジーム C=w·min(m,q−1)
+- → depends_on [K0855](../items/K0855-q23-complete-degeneracy.md): 確定表の q∈{2,3} 完全退化レジーム C=min(q−1,総升目数)
+- → depends_on [K0072](../items/K0072-mod9-integer-row-separation.md): 確定表の q=2w・q=2w−1・半密度拡張レジーム
+- → depends_on [K0068](../items/K0068-standard-fixed-width-parity-threshold.md): 確定表の標準q=4十分長さレジーム C=3w
+- → depends_on [K0069](../items/K0069-two-row-all-lengths-strong-solution.md): 確定表の (2,4) m≥9 レジーム C=6
+- → depends_on [K0302](../items/K0302-fixed-width-five-exact-stabilization-thresholds.md): 確定表の (3,4)/(3,5)/(4,6)/(4,7)/(4,8) 厳密閾値レジーム
+- → depends_on [K0070](../items/K0070-width-three-q6-stabilization.md): 確定表の (3,6) m≥9 レジーム C=15
+- → depends_on [K0071](../items/K0071-width-three-q5-exact-stabilization.md): 確定表の (3,5) m≥12 レジーム C=12
+- → depends_on [K0331](../items/K0331-width-five-q8-exact-stabilization.md): 確定表の (5,8) m≥16 レジーム C=35
+- → depends_on [K0484](../items/K0484-width-five-q9-all-lengths.md): 確定表の (5,9) m≥8 レジーム C=40
+- → depends_on [K0813](../items/K0813-width2-5-circle-point-max-and-q9-q10-row-formula.md): 確定表の w=5, q≥9 全長レジーム
+- → depends_on [K0763](../items/K0763-width6-circle-eight-point-max-and-q9-q12-row-formula.md): 確定表の w=6, q=9..12 全長レジーム
+- → depends_on [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md): 確定表の (7,9) m≥24・(7,10) m≥19 レジーム
+- → depends_on [K0843](../items/K0843-eight-row-q11-q12-band-closure.md): 確定表の (8,11) m≥21 レジーム
+- ← extends [K0859](../items/K0859-elimination-continuation-rules.md): CASC の下で可能生存者集合＝可能最終着手者集合、連合 Win_j＝単独生存強制となり、K0858 の表が勝者表に昇格する
+
+## [K0859](../items/K0859-elimination-continuation-rules.md) 敗者除外後の継続規則の定式化 — カスケード順位定理（順位は終端長 mod r で完全決定・全称）と一様盤石除去の全敗者列決定（(C,r) のみで決まる幾何自由再帰・全称）、r|Δでも石除去が非決定的になる合成反例
+
+- → depends_on [K0339](../items/K0339-multiplayer-terminal-modulus.md): 継続規則はK0339が明示的に残した未解決。第1敗者の規則・r|Δ条件・剰余公式の前提
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 完全指摘の安全判定と整数行列式幾何（有限盤での機械検証に使用）
+- → extends [K0858](../items/K0858-multiplayer-coalition-classification.md): CASC の下で可能生存者集合＝可能最終着手者集合、連合 Win_j＝単独生存強制となり、K0858 の表が勝者表に昇格する
+- ← depends_on [K0860](../items/K0860-remo-two-branch-determinism.md): REMO規則の定義・{6,9}合成反例の一般化。K0859が残した「Δ≠0でのREMO決定性の必要十分条件の同定」を2枝合成族（極大2個・サイズ対{C1,C2}・共通γ）に限って解く
+- ← depends_on [K0861](../items/K0861-remo-k-branch-determinism.md): REMO規則の定義と定理D（一様盤）を継承。Δ=0の3枝点族の全プロファイル146件がatom構造によらず定理Dの値（生存者・全敗者順）に一致することを機械確認
+- ← depends_on [K0862](../items/K0862-remo-k-branch-collapse-boundary.md): Δ=0プロファイル（cap≤10全域）の生存者が定理D値に一致することを再確認・拡張
+- ← depends_on [K0864](../items/K0864-remo-k-branch-r-dependent-boundary.md): Δ=0プロファイルの生存者が定理D値に一致することをr=2..6で再確認・拡張し、定理D再帰をK0859出版(C,r)表84エントリと照合
+- ← depends_on [K0866](../items/K0866-remo-k-branch-r7-boundary.md): Δ=0プロファイル728個が定理D再帰にr=7で一致。K0859出版(C,r)表84エントリはr=7を含む
+
+## [K0860](../items/K0860-remo-two-branch-determinism.md) 2枝合成族でのREMO生存者決定性 — 領域計数帰約（全rで決定可能・成果は石数と枝ロックのみで決まる・全称）とr=3閉形式、r|Δの必要十分性の否定（両方向無限族・∀γ）、生存者決定的だが順位非決定的な族
+
+- → depends_on [K0859](../items/K0859-elimination-continuation-rules.md): REMO規則の定義・{6,9}合成反例の一般化。K0859が残した「Δ≠0でのREMO決定性の必要十分条件の同定」を2枝合成族（極大2個・サイズ対{C1,C2}・共通γ）に限って解く
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 実盤センサス（2×4/2×5/2×6/3×4 q=4）の安全判定に整数行列式幾何を使用
+- → generalizes [K0339](../items/K0339-multiplayer-terminal-modulus.md): 第1敗者の剰余公式の先（排除後の継続を含む全成果）への拡張。r|Δは生存者決定性と独立（4象限すべて無限族）であることの対比
+- ← depends_on [K0861](../items/K0861-remo-k-branch-determinism.md): 2枝族の定理E/Fを直接の土台にし、K0860が残した「極大3個以上の族」を3枝共通コア族（チェーン）について解く
+- ← generalizes [K0861](../items/K0861-remo-k-branch-determinism.md): 定理E′は定理Eの軌道簡約を任意k・任意rへ拡張する
+
+## [K0861](../items/K0861-remo-k-branch-determinism.md) 3枝合成族でのREMO決定性 — 定理E′（軌道簡約・成果はatomプロファイルのみで決まる・全称・任意k/r）と定理F′（r=3・3枝共通コア族の閉形式・dipタイミング不変性）、(6u,9u,12u)/(6u,12u,18u)無限族、(サイズ,γ)非坍縮の有限反例
+
+- → depends_on [K0859](../items/K0859-elimination-continuation-rules.md): REMO規則の定義と定理D（一様盤）を継承。Δ=0の3枝点族の全プロファイル146件がatom構造によらず定理Dの値（生存者・全敗者順）に一致することを機械確認
+- → depends_on [K0860](../items/K0860-remo-two-branch-determinism.md): 2枝族の定理E/Fを直接の土台にし、K0860が残した「極大3個以上の族」を3枝共通コア族（チェーン）について解く
+- → generalizes [K0860](../items/K0860-remo-two-branch-determinism.md): 定理E′は定理Eの軌道簡約を任意k・任意rへ拡張する
+- ← depends_on [K0862](../items/K0862-remo-k-branch-collapse-boundary.md): 定理E′（atomプロファイルへの軌道簡約）を全結果の全称橋として使用し、定理F′閉形式でmin C_i≥3キーを決定。K0861が残した「サイズ≤7での反例の有無」限界を定理G/Hで解決し、N≤13センサスの15非坍縮キーを22キーへ拡張確定（15⊂22・差7キーはN>13）
+- ← depends_on [K0864](../items/K0864-remo-k-branch-r-dependent-boundary.md): 定理E′（atomプロファイルへの軌道簡約）を全結果の全称橋として使用。K0861/K0862が残した「r≥4のcap≤10非坍縮境界」限界を解決
+- ← depends_on [K0866](../items/K0866-remo-k-branch-r7-boundary.md): 定理E′（軌道簡約・全称）によりプロファイルverdictは実現盤面すべてに移る。r=7ではセルレベルアンカーは省略（最小witness 13〜18セルでセルゲームがOOM・実測13セルでも強制終了）だがE′自体は全称定理
+- ← depends_on [K0867](../items/K0867-remo-k-branch-r8-prediction-refuted.md): 定理E′の領域ゲーム正確性により、プロファイル結果は全ての実現盤面に及ぶ
+
+## [K0862](../items/K0862-remo-k-branch-collapse-boundary.md) 3枝REMO決定性の坍縮境界 — 定理G（枝サイズ≤7で決定性・順位決定性・決定生存者・決定順位がすべて(sizes,γ)に坍縮しチェーン値と一致・r=2..6・全域）と定理H（枝サイズ≤10で非坍縮はサイズ8を含むちょうど22キー・r=3・完全境界）
+
+- → depends_on [K0861](../items/K0861-remo-k-branch-determinism.md): 定理E′（atomプロファイルへの軌道簡約）を全結果の全称橋として使用し、定理F′閉形式でmin C_i≥3キーを決定。K0861が残した「サイズ≤7での反例の有無」限界を定理G/Hで解決し、N≤13センサスの15非坍縮キーを22キーへ拡張確定（15⊂22・差7キーはN>13）
+- → depends_on [K0859](../items/K0859-elimination-continuation-rules.md): Δ=0プロファイル（cap≤10全域）の生存者が定理D値に一致することを再確認・拡張
+- ← depends_on [K0864](../items/K0864-remo-k-branch-r-dependent-boundary.md): 定理H（r=3の22キー境界）のr=2,4,5,6拡張。r=3の22キーを同じ検証器で再導出してアンカーとし、小枝族10キーの決定側witnessをセルアンカーに転用。定理Gのcap≤7統計を再導出・照合
+- ← depends_on [K0866](../items/K0866-remo-k-branch-r7-boundary.md): 同一のcap≤10領域（15863プロファイル・715キー・Burnside 15863）。r=3小枝族のr≥4決定側消滅パターンがr=6失敗族のr=7消滅で再現されることを記録
+
+## [K0863](../items/K0863-sterile-row-depth10-unclosability.md) STERILE行depth-10閉鎖不能性定理 — 全合法候補がREFUTED-D10・0 cappedのS6行（STERILE）は自出行・cross-coverを問わずどのWIN7-D10 receipt rootにもcoverされない（位置レベル補題「X covers R ⟺ canon(X) ∈ 自出行候補のD4正準形集合」とD4判定不変性による）、best coverable class-2 S5の3行65k/70j/74hの完全route枯渇（自出行65/70/74・cross 390/420/444経路すべてがown candidateのREFUTED-D10へ(σ,t) witness付きで写像）、70j erratumの「STERILE行もcross-coverで閉鎖され得る」は過大訂正（引用先例は未sweep行かつ70g childは8 WIN7-D10の非STERILE行）
+
+- → depends_on [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md): n11 S2{59,60} milestone-5のMS5 S6 manifest・S7 edge cost・WIN7-D10 receipt/cover機構（foldのmarginal閉鎖・D4正準化covers）の定義を継承し、その体系内の不可能性を証明する
+- ← depends_on [K0865](../items/K0865-head1410-sterile-coverage-census.md): 閉鎖不能分類は K0863（STERILE 行は自前行からの depth-10 WIN7 receipt を持たない）の適用
+
+## [K0864](../items/K0864-remo-k-branch-r-dependent-boundary.md) 3枝REMO決定性のr依存境界 — 定理I（r=2はcap≤10全域で決定性・順位・決定生存者・可能生存者集合までチェーンに完全坍縮・r=4,5の非坍縮は(8,8,9),(8,9,9)×γ=0..5の12キーちょうど・r=6は(4,4,8),(4,8,8)×γ=0..2の6キーちょうど）・補題FL（可能第1敗者集合={C_i mod r}・全称証明）・定理G′（一様決定キーの生存者=チェーン生存者・一様順位決定キーの順位=チェーン順位・cap≤10・r=2..6）
+
+- → depends_on [K0862](../items/K0862-remo-k-branch-collapse-boundary.md): 定理H（r=3の22キー境界）のr=2,4,5,6拡張。r=3の22キーを同じ検証器で再導出してアンカーとし、小枝族10キーの決定側witnessをセルアンカーに転用。定理Gのcap≤7統計を再導出・照合
+- → depends_on [K0861](../items/K0861-remo-k-branch-determinism.md): 定理E′（atomプロファイルへの軌道簡約）を全結果の全称橋として使用。K0861/K0862が残した「r≥4のcap≤10非坍縮境界」限界を解決
+- → depends_on [K0859](../items/K0859-elimination-continuation-rules.md): Δ=0プロファイルの生存者が定理D値に一致することをr=2..6で再確認・拡張し、定理D再帰をK0859出版(C,r)表84エントリと照合
+- ← depends_on [K0866](../items/K0866-remo-k-branch-r7-boundary.md): r依存境界のr=7拡張。エンジンはK0864検証器（commit 3138e0e3・sha256 43adec69…）からverbatim。r=3..6失敗族のr=7での運命（一様非決定坍縮）と補題FL・定理G′のr=7アンカーを同時に確定
+
+## [K0865](../items/K0865-head1410-sterile-coverage-census.md) head-1410 receipt-unclosability census — 174 個の open S5 parent 全数の STERILE 被覆分類（3 parent が残行すべて STERILE で D10 receipt 閉鎖不能・57 partial・orbit-level join）
+
+- → depends_on [K0863](../items/K0863-sterile-row-depth10-unclosability.md): 閉鎖不能分類は K0863（STERILE 行は自前行からの depth-10 WIN7 receipt を持たない）の適用
+- → depends_on [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md): manifest・receipt の簿記規約
+
+## [K0866](../items/K0866-remo-k-branch-r7-boundary.md) 3枝REMO決定性のr=7境界 — 定理I r=7（非坍縮キーは(4,4,9),(4,9,9)×γ=0..2の6個ちょうど・サイズ8必要性の初の破れ・前失敗族は一様非決定へ完全坍縮・新失敗族のr=2..6事前エコー）・定理G′ r=7拡張（98決定キー・55順位決定キー全てチェーン一致）
+
+- → depends_on [K0864](../items/K0864-remo-k-branch-r-dependent-boundary.md): r依存境界のr=7拡張。エンジンはK0864検証器（commit 3138e0e3・sha256 43adec69…）からverbatim。r=3..6失敗族のr=7での運命（一様非決定坍縮）と補題FL・定理G′のr=7アンカーを同時に確定
+- → depends_on [K0862](../items/K0862-remo-k-branch-collapse-boundary.md): 同一のcap≤10領域（15863プロファイル・715キー・Burnside 15863）。r=3小枝族のr≥4決定側消滅パターンがr=6失敗族のr=7消滅で再現されることを記録
+- → depends_on [K0861](../items/K0861-remo-k-branch-determinism.md): 定理E′（軌道簡約・全称）によりプロファイルverdictは実現盤面すべてに移る。r=7ではセルレベルアンカーは省略（最小witness 13〜18セルでセルゲームがOOM・実測13セルでも強制終了）だがE′自体は全称定理
+- → depends_on [K0859](../items/K0859-elimination-continuation-rules.md): Δ=0プロファイル728個が定理D再帰にr=7で一致。K0859出版(C,r)表84エントリはr=7を含む
+- ← depends_on [K0867](../items/K0867-remo-k-branch-r8-prediction-refuted.md): K0866からのr=8外挿予想だけを対象にする。r=7定理Iは維持される
+
+## [K0867](../items/K0867-remo-k-branch-r8-prediction-refuted.md) r=8 REMO 3枝の4/10族非坍縮予想を対象族の完全検査で反証
+
+- → depends_on [K0866](../items/K0866-remo-k-branch-r7-boundary.md): K0866からのr=8外挿予想だけを対象にする。r=7定理Iは維持される
+- → depends_on [K0861](../items/K0861-remo-k-branch-determinism.md): 定理E′の領域ゲーム正確性により、プロファイル結果は全ての実現盤面に及ぶ
+
+## [K0868](../items/K0868-n11-s6-s7-sweep-candidate-convention.md) S6→S7 sweep候補規約の確定 — own_candidates・edge costは6石の任意の3つ組と共円にも共線にも乗らない空セル（survival moves）であり、det4整数演算で石配置から独立再導出できる
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 生残条件は共円禁止規則（q=4・完全指摘）の勝利条件の否定（退化円=直線を含む）
+- → depends_on [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md): worklist・receipt・foldの簿記規約（own_candidates列・edge cost・bits）
+
+## [K0869](../items/K0869-p2647-size1322-three-class-drat-audit.md) p=2647 サイズ1322 の3形状クラス (0,0,1),(1,0,2),(0,1,2) は DRAT 監査済み
+
+- → verifies [K0711](../items/K0711-p2647-safe-lower-bound-1292.md): 上界 A(2647)<=1322 のうち (1,1,3) を除く3クラスのソルバUNSAT主張
+- → depends_on [K0771](../items/K0771-forbidden-edge-generator-completeness.md): 禁止四点生成器の完全性（CNF構築の前提）
+- → depends_on [K0706](../items/K0706-p2647-no-parabola-equality-witness.md): 同じ増分DRATチェッカーによる全1323 d監査の流儀
+
+## [K0870](../items/K0870-p2647-113-budget-ladder-3m-20m.md) p=2647 サイズ1322 形状クラス(1,1,3) の層別19 d は 3M/10M/20M ラダーで 8 件 UNSAT に到達し、11 件は 20M でも UNKNOWN である
+
+- → depends_on [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md): 固定原点・一完全対の三値還元（d 固定 CNF）の上での予算ラダー
+- → depends_on [K0736](../items/K0736-ternary-encoding-arbitrary-d-verification.md): d を引数化した一般 d 符号化（各段は再生成 CNF）
+- → supports [K0768](../items/K0768-p2647-113-full-d-sweep-100k.md): 100k 掃引の「決まる d の地図」に対する予算軸の拡張

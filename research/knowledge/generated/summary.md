@@ -1,57 +1,58 @@
 # 移行集計
 
-K項目: 838 / alias: 269 / artifactファイル: 5104
+K項目: 851 / alias: 274 / artifactファイル: 5200
 
 ## kind
 
 | 値 | 件数 |
 |---|---:|
-| computation | 96 |
-| definition | 5 |
+| computation | 98 |
+| definition | 6 |
 | method | 7 |
-| proposition | 660 |
+| proposition | 669 |
 | question | 39 |
-| verification | 31 |
+| verification | 32 |
 
 ## status
 
 | 値 | 件数 |
 |---|---:|
-| active | 12 |
-| computed | 237 |
+| active | 13 |
+| computed | 239 |
 | conjectured | 2 |
 | observed | 26 |
 | open | 38 |
-| proved | 414 |
-| refuted | 64 |
+| proved | 422 |
+| refuted | 65 |
 | scope-unclear | 1 |
 | superseded | 9 |
-| verified | 31 |
+| verified | 32 |
 | withdrawn | 4 |
 
 ## topics
 
 | 値 | 件数 |
 |---|---:|
-| certificates | 109 |
+| certificates | 113 |
 | first-moves | 67 |
 | formalization | 5 |
-| geometry | 417 |
-| grundy | 177 |
-| maximal-safe | 235 |
-| maximum-safe | 103 |
+| geometry | 419 |
+| grundy | 178 |
+| maximal-safe | 242 |
+| maximum-safe | 105 |
 | migration | 1 |
+| multiplayer | 7 |
 | provenance | 41 |
 | reconfiguration | 38 |
-| rectangles | 199 |
+| rectangles | 200 |
 | residual-games | 124 |
 | rules | 8 |
-| search-methods | 126 |
+| search-methods | 130 |
 | square-outcomes | 101 |
 | statistics | 121 |
-| strategy-length | 94 |
-| variants | 353 |
-| verification | 143 |
+| strategy-length | 102 |
+| variants | 361 |
+| verification | 147 |
 
 ## 未解決・要監査・範囲不明
 

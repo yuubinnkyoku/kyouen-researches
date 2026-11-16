@@ -271,3 +271,8 @@
 | H5 | [K0109](../items/K0109-n7-n9-certificate-loss-ratios.md) | 7〜9×9公開証明書のLOSS比34〜35%は三サイズの観測 |
 | H6 | [K0289](../items/K0289-same-distance-two-stone-opposite-outcomes.md) | 10×10では同じ二点間距離でも二石局面の勝敗が異なる |
 | H7 | [K0044](../items/K0044-n9-certificate-terminal-nodes.md) | 公開9×9証明書の末端は16石WIN十個から17石飽和LOSS一個へ閉じる |
+| head1410 sterile-coverage census | [K0865](../items/K0865-head1410-sterile-coverage-census.md) | head-1410 receipt-unclosability census — 174 個の open S5 parent 全数の STERILE 被覆分類（3 parent が残行すべて STERILE で D10 receipt 閉鎖不能・57 partial・orbit-level join） |
+| own_candidates convention | [K0868](../items/K0868-n11-s6-s7-sweep-candidate-convention.md) | S6→S7 sweep候補規約の確定 — own_candidates・edge costは6石の任意の3つ組と共円にも共線にも乗らない空セル（survival moves）であり、det4整数演算で石配置から独立再導出できる |
+| receipt-unclosability census | [K0865](../items/K0865-head1410-sterile-coverage-census.md) | head-1410 receipt-unclosability census — 174 個の open S5 parent 全数の STERILE 被覆分類（3 parent が残行すべて STERILE で D10 receipt 閉鎖不能・57 partial・orbit-level join） |
+| s6-s7 sweep candidate convention | [K0868](../items/K0868-n11-s6-s7-sweep-candidate-convention.md) | S6→S7 sweep候補規約の確定 — own_candidates・edge costは6石の任意の3つ組と共円にも共線にも乗らない空セル（survival moves）であり、det4整数演算で石配置から独立再導出できる |
+| survival move convention | [K0868](../items/K0868-n11-s6-s7-sweep-candidate-convention.md) | S6→S7 sweep候補規約の確定 — own_candidates・edge costは6石の任意の3つ組と共円にも共線にも乗らない空セル（survival moves）であり、det4整数演算で石配置から独立再導出できる |
