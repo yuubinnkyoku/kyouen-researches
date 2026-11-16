@@ -1,0 +1,1157 @@
+{
+ "schema": "n11-class2-lane-post-cost66c-top-candidates-sterility-audit-20261116-v1",
+ "date": "2026-11-16",
+ "baseline_record": {
+  "head_before_1444": "1444/174/6404/506746/4677/370660",
+  "head_after_1450": "1450/174/6398/506297/4671/370211 (re-derived here from the independent fold-projection basis reconstruction + the seven-receipt fold, every pin re-asserted; identical to the published class-frontier-cost66c-receipts-recompute-20261116.json, git blob 8783999e5c73cc9697c3ca48aef981725f422be8)",
+  "claim": "class2-lane-cost66c-inflight-20261116.json v4 FOLD COMPLETE (git blob sha 5e89637b748cbc70838723edbbfeda907af78da5; corrects the stale certificate/fold result fields of v3; all v3 fields preserved in fold.v3_fields (v3 blob 6dd3091362dc3d11febd1be020e173fb6df21173, which itself preserved all v2 fields); fold record head_after 1450/174/6398/506297/4671/370211)",
+  "fold_preregistration": "class2-lane-cost66c-fold-preregistration-20261116.json (git blob sha 809ad05e1bc560b1086c3d30cc34ad78727e430a, commit aca9d762)",
+  "further_published_confirmations": "cost-66c fold receipt independent agreement 12/12 PASS (commit cc5125bf4076a5efe98050f08a4c99cf7016f724); blind re-extraction verification of all 7 certificates byte-identical incl. per-move node counts (commit b41027e1cebdb391ecb0a02d0911bb8988f12ddf); independent cost65n/65o/66c D4 cross-row fold audit (commits 19c1dc6d67cc60774b5284162395935328ec5f80 / de2db9325bb66584aac24ef7f17e5ce4691707e6)",
+  "verdict_corpus": {
+   "scan": "theorem-applicability-scan-20261116.json (git blob sha 24f214e6a9dd721ef95ac97d6b84cf34af33b14b, sha256 57a0584f..., 227648 bytes, scan landing commit 2d090b491c069d6cbe42f3f1c1cff99144b6f176; engine_map 8305 REFUTED-D10 / 659 WIN7-D10 / 0 UNKNOWN-CAPPED, 8964 determined root bits, source_conflicts empty; transfers 115, same-position cross-sweep agreement groups 1782 with 0 conflicts)",
+   "second_independent_verification": "VERIFICATION PASSED (theorem-applicability-scan-second-independent-verification-20261116.json, git blob sha 65e3e822a390ee945f632d07e80c95049985078c; independent Leibniz-circle determinant implementation, all 1279 input files re-hashed, 0 problems)",
+   "targets": 133,
+   "sterile_rows_detected": 35
+  }
+ },
+ "method": "the full published cost-66c fold pipeline is re-run with every blob pin re-asserted (basis head-1444 reconstruction, sweep re-derivation, claim v3, census v4, seven certificates byte-for-byte, conflict census, fold, head 1450); then every remaining row of the top-5 coverable class-2 S5 parents at head 1450 is cross-referenced against the canonical-root verdict corpus (engine verdicts, verdict transfers, open counts, claims) and classified as sterile_unclosable_by_win7_d10 / win7_d10_receipts_swept_fold_pending / partially_determined_open_candidates_remain / determined_mixed / unswept_unclaimed; the published fold output files are never rewritten (their git blobs are re-asserted unchanged)",
+ "headline": {
+  "best_coverable_class2_s5": {
+   "s5_hex": "00000000000000801202000000200000",
+   "rows": 3,
+   "edge_cost": 209,
+   "fully_sterile": true,
+   "row_children": [
+    "00000000020000801202000000200000",
+    "00000000000000801282000000200000",
+    "00000000000000889002000000000800"
+   ],
+   "row_edge_costs": [
+    65,
+    70,
+    74
+   ],
+   "sterility_basis": "all 209 legal 7th-stone candidates across the three rows are REFUTED-D10 in the published cost-65k / cost-70d+70j / cost-74h sweeps; 0 WIN7-D10, 0 capped, 0 open; no depth-10 WIN7 receipt can ever close any remaining row of this parent"
+  },
+  "second_coverable_class2_s5": {
+   "s5_hex": "00000000000000801202000040000000",
+   "rows": 5,
+   "edge_cost": 364,
+   "sterile_rows": [
+    {
+     "child": "00000000000000801282000040000000",
+     "edge_cost": 64,
+     "refuted": 64
+    },
+    {
+     "child": "00000000000000801202000040000400",
+     "edge_cost": 71,
+     "refuted": 71
+    }
+   ],
+   "in_flight_row": {
+    "child": "00000000010000809002000001000000",
+    "edge_cost": 76,
+    "open": 61,
+    "transferred_refuted": 15,
+    "claim": "class2-lane-cost76c/20261116"
+   },
+   "fold_pending_rows": [
+    {
+     "child": "00000000040000003800080008000000",
+     "edge_cost": 76,
+     "win7_d10": 2,
+     "claim": "class2-lane-cost76d/20261116"
+    },
+    {
+     "child": "00000000040000809002000000004000",
+     "edge_cost": 77,
+     "win7_d10": 2,
+     "claim": "class2-lane-cost77e/20261116"
+    }
+   ]
+  },
+  "third_coverable_class2_s5": {
+   "s5_hex": "00000000000000403800000008000000",
+   "rows": 18,
+   "edge_cost": 1287,
+   "all_rows": "unswept unclaimed in the verdict corpus - effective next sweep target"
+  },
+  "fourth_coverable_class2_s5": {
+   "s5_hex": "00000000000000003800000008002000",
+   "rows": 25,
+   "edge_cost": 1748,
+   "statuses": [
+    "partially_determined_open_candidates_remain",
+    "sterile_unclosable_by_win7_d10",
+    "unswept_unclaimed"
+   ]
+  },
+  "fifth_coverable_class2_s5": {
+   "s5_hex": "00000000000000003800000009000000",
+   "rows": 29,
+   "edge_cost": 2203,
+   "statuses": [
+    "unswept_unclaimed"
+   ]
+  }
+ },
+ "audited_top5": [
+  {
+   "s5_hex": "00000000000000801202000000200000",
+   "classes": 2,
+   "rows": 3,
+   "edge_cost": 209,
+   "statuses": [
+    "sterile_unclosable_by_win7_d10"
+   ],
+   "fully_sterile": true,
+   "row_classifications": [
+    {
+     "child": "00000000020000801202000000200000",
+     "status": "sterile_unclosable_by_win7_d10",
+     "in_verdict_corpus": true,
+     "legal_count": 65,
+     "engine_refuted_d10": 65,
+     "engine_win7_d10": 0,
+     "engine_unknown_capped": 0,
+     "transferred_refuted_d10": 0,
+     "transferred_win7_d10": 0,
+     "open": 0,
+     "claims": [
+      "class2-lane-cost65k/20261115"
+     ],
+     "s6_s7_edge_cost": 65,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000801282000000200000",
+     "status": "sterile_unclosable_by_win7_d10",
+     "in_verdict_corpus": true,
+     "legal_count": 70,
+     "engine_refuted_d10": 70,
+     "engine_win7_d10": 0,
+     "engine_unknown_capped": 0,
+     "transferred_refuted_d10": 0,
+     "transferred_win7_d10": 0,
+     "open": 0,
+     "claims": [
+      "class2-lane-cost70d/20261115",
+      "class2-lane-cost70j/20261116"
+     ],
+     "s6_s7_edge_cost": 70,
+     "demand_at_head_1450": {
+      "c1": 1,
+      "c2": 1,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000889002000000000800",
+     "status": "sterile_unclosable_by_win7_d10",
+     "in_verdict_corpus": true,
+     "legal_count": 74,
+     "engine_refuted_d10": 74,
+     "engine_win7_d10": 0,
+     "engine_unknown_capped": 0,
+     "transferred_refuted_d10": 0,
+     "transferred_win7_d10": 0,
+     "open": 0,
+     "claims": [
+      "class2-lane-cost74h/20261115"
+     ],
+     "s6_s7_edge_cost": 74,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    }
+   ]
+  },
+  {
+   "s5_hex": "00000000000000801202000040000000",
+   "classes": 2,
+   "rows": 5,
+   "edge_cost": 364,
+   "statuses": [
+    "partially_determined_open_candidates_remain",
+    "sterile_unclosable_by_win7_d10",
+    "win7_d10_receipts_swept_fold_pending"
+   ],
+   "fully_sterile": false,
+   "row_classifications": [
+    {
+     "child": "00000000000000801282000040000000",
+     "status": "sterile_unclosable_by_win7_d10",
+     "in_verdict_corpus": true,
+     "legal_count": 64,
+     "engine_refuted_d10": 64,
+     "engine_win7_d10": 0,
+     "engine_unknown_capped": 0,
+     "transferred_refuted_d10": 0,
+     "transferred_win7_d10": 0,
+     "open": 0,
+     "claims": [
+      "class2-lane-cost64a/20261116"
+     ],
+     "s6_s7_edge_cost": 64,
+     "demand_at_head_1450": {
+      "c1": 1,
+      "c2": 1,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000801202000040000400",
+     "status": "sterile_unclosable_by_win7_d10",
+     "in_verdict_corpus": true,
+     "legal_count": 71,
+     "engine_refuted_d10": 71,
+     "engine_win7_d10": 0,
+     "engine_unknown_capped": 0,
+     "transferred_refuted_d10": 0,
+     "transferred_win7_d10": 0,
+     "open": 0,
+     "claims": [
+      "class2-lane-cost71d/20261116"
+     ],
+     "s6_s7_edge_cost": 71,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000010000809002000001000000",
+     "status": "partially_determined_open_candidates_remain",
+     "in_verdict_corpus": true,
+     "legal_count": 76,
+     "engine_refuted_d10": 0,
+     "engine_win7_d10": 0,
+     "engine_unknown_capped": 0,
+     "transferred_refuted_d10": 15,
+     "transferred_win7_d10": 0,
+     "open": 61,
+     "claims": [
+      "class2-lane-cost76c/20261116"
+     ],
+     "s6_s7_edge_cost": 76,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000040000003800080008000000",
+     "status": "win7_d10_receipts_swept_fold_pending",
+     "in_verdict_corpus": true,
+     "legal_count": 76,
+     "engine_refuted_d10": 74,
+     "engine_win7_d10": 2,
+     "engine_unknown_capped": 0,
+     "transferred_refuted_d10": 0,
+     "transferred_win7_d10": 0,
+     "open": 0,
+     "claims": [
+      "class2-lane-cost76d/20261116"
+     ],
+     "s6_s7_edge_cost": 76,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000040000809002000000004000",
+     "status": "win7_d10_receipts_swept_fold_pending",
+     "in_verdict_corpus": true,
+     "legal_count": 77,
+     "engine_refuted_d10": 75,
+     "engine_win7_d10": 2,
+     "engine_unknown_capped": 0,
+     "transferred_refuted_d10": 0,
+     "transferred_win7_d10": 0,
+     "open": 0,
+     "claims": [
+      "class2-lane-cost77e/20261116"
+     ],
+     "s6_s7_edge_cost": 77,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    }
+   ]
+  },
+  {
+   "s5_hex": "00000000000000403800000008000000",
+   "classes": 2,
+   "rows": 18,
+   "edge_cost": 1287,
+   "statuses": [
+    "unswept_unclaimed"
+   ],
+   "fully_sterile": false,
+   "row_classifications": [
+    {
+     "child": "00000000000000403800000008100000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 64,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000801226000000000000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 66,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000c09002000000001000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 66,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000c09002000004000000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 66,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000403800000008000020",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 69,
+     "demand_at_head_1450": {
+      "c1": 1,
+      "c2": 1,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000503800000008000000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 71,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000801206000000000080",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 71,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000801206000000080000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 71,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 2
+     }
+    },
+    {
+     "child": "00000000000000c09002000000002000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 71,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 2
+     }
+    },
+    {
+     "child": "00000000000000403800000008004000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 72,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 1,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000849003000000000000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 72,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000403800000408000000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 73,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000403800400008000000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 73,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000801206000000000400",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 73,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000c09002000000400000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 73,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000403800000008000008",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 78,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 1,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000403800000008200000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 79,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000c09002000200000000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 79,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    }
+   ]
+  },
+  {
+   "s5_hex": "00000000000000003800000008002000",
+   "classes": 2,
+   "rows": 25,
+   "edge_cost": 1748,
+   "statuses": [
+    "partially_determined_open_candidates_remain",
+    "sterile_unclosable_by_win7_d10",
+    "unswept_unclaimed"
+   ],
+   "fully_sterile": false,
+   "row_classifications": [
+    {
+     "child": "00000000000000003800000008002020",
+     "status": "sterile_unclosable_by_win7_d10",
+     "in_verdict_corpus": true,
+     "legal_count": 64,
+     "engine_refuted_d10": 64,
+     "engine_win7_d10": 0,
+     "engine_unknown_capped": 0,
+     "transferred_refuted_d10": 0,
+     "transferred_win7_d10": 0,
+     "open": 0,
+     "claims": [
+      "class2-lane-cost64c/20261116"
+     ],
+     "s6_s7_edge_cost": 64,
+     "demand_at_head_1450": {
+      "c1": 1,
+      "c2": 1,
+      "c4": 0
+     }
+    },
+    {
+     "child": "0000000000000000380000000a002000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 64,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000a09002000080000000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 65,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000020000801202000000200000",
+     "status": "sterile_unclosable_by_win7_d10",
+     "in_verdict_corpus": true,
+     "legal_count": 65,
+     "engine_refuted_d10": 65,
+     "engine_win7_d10": 0,
+     "engine_unknown_capped": 0,
+     "transferred_refuted_d10": 0,
+     "transferred_win7_d10": 0,
+     "open": 0,
+     "claims": [
+      "class2-lane-cost65k/20261115"
+     ],
+     "s6_s7_edge_cost": 65,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000003800000008002010",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 66,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000003800000008002040",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 66,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000020000801202000000100000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 66,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000801202000000880000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 67,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 2
+     }
+    },
+    {
+     "child": "00000000000000889002000080000000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 67,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000801202000000900000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 68,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000003800000008002080",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 69,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 1,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000103800000008080000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 69,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000801222000000800000",
+     "status": "partially_determined_open_candidates_remain",
+     "in_verdict_corpus": true,
+     "legal_count": 69,
+     "engine_refuted_d10": 0,
+     "engine_win7_d10": 0,
+     "engine_unknown_capped": 0,
+     "transferred_refuted_d10": 3,
+     "transferred_win7_d10": 0,
+     "open": 66,
+     "claims": [
+      "class2-lane-cost69a/20261116"
+     ],
+     "s6_s7_edge_cost": 69,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000909002000080000000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 69,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "0000000000000000380000000a080000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 70,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000801202000000840000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 73,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000003800000008002100",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 74,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000003800100008002000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 74,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000801202000000800200",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 74,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000801202000000800400",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 74,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000043800000008080000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 75,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000801202000000800100",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 75,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000801202040000800000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 75,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 1,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000020809002000080000000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 75,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000010000809002000080000000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 75,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    }
+   ]
+  },
+  {
+   "s5_hex": "00000000000000003800000009000000",
+   "classes": 2,
+   "rows": 29,
+   "edge_cost": 2203,
+   "statuses": [
+    "unswept_unclaimed"
+   ],
+   "fully_sterile": false,
+   "row_classifications": [
+    {
+     "child": "00000000000000805202000001000000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 62,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 1,
+      "c4": 0
+     }
+    },
+    {
+     "child": "0000000000000000380000000b000000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 68,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000801202020001000000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 68,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000040000801202000000100000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 68,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000003800000009800000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 69,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 1,
+      "c4": 1
+     }
+    },
+    {
+     "child": "00000000000000801202010001000000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 69,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000801202000001100000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 71,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000103800000009000000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 74,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000801212000001000000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 74,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000003800000209000000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 75,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000083800000048000000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 75,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000020003800000048000000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 75,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000003800000009040000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 76,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 1,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000003800000409000000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 76,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000801202000001000100",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 76,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000801202040001000000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 77,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 1,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000080003800000048000000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 77,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000003800200009000000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 78,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000801202000001080000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 78,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 2
+     }
+    },
+    {
+     "child": "00000000020000809002000040000000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 78,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000020000003800000048000000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 79,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 2
+     }
+    },
+    {
+     "child": "00000000000000801202000001000400",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 80,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000801202000001040000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 80,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000003800000009000004",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 82,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000801202080001000000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 82,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000043800000009000000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 83,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000801202000001000200",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 83,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000000000003800000248000000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 85,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    },
+    {
+     "child": "00000000010000809002000040000000",
+     "status": "unswept_unclaimed",
+     "in_verdict_corpus": false,
+     "s6_s7_edge_cost": 85,
+     "demand_at_head_1450": {
+      "c1": 0,
+      "c2": 2,
+      "c4": 0
+     }
+    }
+   ]
+  }
+ ],
+ "interpretation_guard": "STERILE is a per-row unclosability bookkeeping fact over published depth-10 sweep verdicts: no depth-10 WIN7 receipt can close the row; it is NOT a LOSS proof and determines no game-theoretic value; solved counts measure manifest coverage; WIN7-D10 certificates prove a first-player win within depth 10 from the individual 7-stone roots only; the 11x11 empty board, the two-stone roots {49,60} and {59,60}, S2 {59,60}, and classes 1/2/4 all remain UNKNOWN"
+}
