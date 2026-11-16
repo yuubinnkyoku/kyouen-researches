@@ -1,0 +1,32 @@
+{
+ "all_applicable_pass": true,
+ "checks": {
+  "C10_affected_parent_set": true,
+  "C10b_affected_parent_row_deltas": true,
+  "C11_parent_row_incidences_42": true,
+  "C12_parent_edge_cost_delta_3090": true,
+  "C13_win_bit_set": true,
+  "C14_per_receipt_marginals_exact": true,
+  "C15_conflict_census_zero": true,
+  "C16_root_hexes_child_or_bit": true,
+  "C1_fold_record_readable": true,
+  "C2_receipt_count_23": true,
+  "C2b_basis_head_1452": true,
+  "C3_projected_head_six_numbers": true,
+  "C4_projected_demand_histogram": true,
+  "C4_projected_demand_histogram_present": true,
+  "C5_demand_histogram_deltas": true,
+  "C6_total_marginal_111": true,
+  "C7_total_mim_20": true,
+  "C8_closed_manifest_row_set": true,
+  "C9_child_row_closed": true
+ },
+ "date": "2026-11-16",
+ "failed_checks": [],
+ "fold_json": "class-frontier-cost64h-receipts-recompute-20261117.json",
+ "fold_json_blob": "1633be292f6f1862c895009eac29d398d0be7738",
+ "interpretation_guard": "agreement check over published bookkeeping records only; no engine search, no verdicts; solved counts measure manifest coverage, not the game-theoretic value of any position; WIN7 certificates prove a first-player win within depth 10 from the individual 7-stone roots only; REFUTED-D10 is not a LOSS proof; 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60} and classes 1/2/4 all remain UNKNOWN",
+ "notes": [],
+ "prereg_blob": "5074a8a0cbb75fcc91b5b999a3135fac06d42400",
+ "schema": "n11-class2-lane-cost64h-fold-receipt-agreement-20261116-v1"
+}
