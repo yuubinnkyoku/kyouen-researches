@@ -1,0 +1,178 @@
+{
+ "2": {
+  "root_hex": "00000000000000809102000800000004",
+  "root_reconstruction": "child63a | 1<<2 (exact)",
+  "survival_legal_under_k0868": true,
+  "popcount": 7,
+  "covers_count": 7,
+  "covers_child63a": true,
+  "covers_child_65f65j": false,
+  "ok": true
+ },
+ "11": {
+  "root_hex": "00000000000000809102000800000800",
+  "root_reconstruction": "child63a | 1<<11 (exact)",
+  "survival_legal_under_k0868": true,
+  "popcount": 7,
+  "covers_count": 7,
+  "covers_child63a": true,
+  "covers_child_65f65j": false,
+  "ok": true
+ },
+ "15": {
+  "root_hex": "00000000000000809102000800008000",
+  "root_reconstruction": "child63a | 1<<15 (exact)",
+  "survival_legal_under_k0868": true,
+  "popcount": 7,
+  "covers_count": 7,
+  "covers_child63a": true,
+  "covers_child_65f65j": false,
+  "ok": true
+ },
+ "28": {
+  "root_hex": "00000000000000809102000810000000",
+  "root_reconstruction": "child63a | 1<<28 (exact)",
+  "survival_legal_under_k0868": true,
+  "popcount": 7,
+  "covers_count": 7,
+  "covers_child63a": true,
+  "covers_child_65f65j": false,
+  "ok": true
+ },
+ "96": {
+  "root_hex": "00000001000000809102000800000000",
+  "root_reconstruction": "child63a | 1<<96 (exact)",
+  "survival_legal_under_k0868": true,
+  "popcount": 7,
+  "covers_count": 7,
+  "covers_child63a": true,
+  "covers_child_65f65j": false,
+  "ok": true
+ },
+ "97": {
+  "root_hex": "00000002000000809102000800000000",
+  "root_reconstruction": "child63a | 1<<97 (exact)",
+  "survival_legal_under_k0868": true,
+  "popcount": 7,
+  "covers_7_rows": [
+   "00000000000000809102000080000000",
+   "00000000000000809102000800000000",
+   "00000000000080009102000080000000",
+   "00000000000080801102000080000000",
+   "00000000000080808102000080000000",
+   "00000000000080809002000080000000",
+   "00000000000080809100000080000000"
+  ],
+  "covers_count": 7,
+  "covers_child63a": true,
+  "covers_child_65f65j": true,
+  "cross_cover_note": "removing stone 35 from the root leaves {49,56,60,63,71,97}, whose D4 canonical form is exactly child_65f65j 00000000000000809102000080000000; removing stone 97 leaves child63a - both children are covered by this single root",
+  "ok": true
+ },
+ "100": {
+  "root_hex": "00000010000000809102000800000000",
+  "root_reconstruction": "child63a | 1<<100 (exact)",
+  "survival_legal_under_k0868": true,
+  "popcount": 7,
+  "covers_count": 7,
+  "covers_child63a": true,
+  "covers_child_65f65j": false,
+  "ok": true
+ },
+ "109": {
+  "root_hex": "00002000000000809102000800000000",
+  "root_reconstruction": "child63a | 1<<109 (exact)",
+  "survival_legal_under_k0868": true,
+  "popcount": 7,
+  "covers_count": 7,
+  "covers_child63a": true,
+  "covers_child_65f65j": false,
+  "ok": true
+ },
+ "118": {
+  "root_hex": "00400000000000809102000800000000",
+  "root_reconstruction": "child63a | 1<<118 (exact)",
+  "survival_legal_under_k0868": true,
+  "popcount": 7,
+  "covers_count": 7,
+  "covers_child63a": true,
+  "covers_child_65f65j": false,
+  "ok": true
+ },
+ "119": {
+  "root_hex": "00800000000000809102000800000000",
+  "root_reconstruction": "child63a | 1<<119 (exact)",
+  "survival_legal_under_k0868": true,
+  "popcount": 7,
+  "covers_7_rows": [
+   "00000000000000809102000000000200",
+   "00000000000000809102000800000000",
+   "00000000000080009102000000000200",
+   "00000000000080801102000000000200",
+   "00000000000080808102000000000200",
+   "00000000000080809002000000000200",
+   "00000000000080809100000000000200"
+  ],
+  "covers_count": 7,
+  "covers_child63a": true,
+  "covers_child_65f65j": false,
+  "certificate_verified": true,
+  "ok": true
+ },
+ "schema": "n11-class2-lane-cost63a-sweep-crosscover-premise-audit-20261116-v1",
+ "date": "2026-11-16",
+ "subject": "structural audit of the cost-63a sweep record's ten WIN7-D10 receipt roots of child 00000000000000809102000800000000 and of the head-1410 closure premise of the 65f/65j fold child 00000000000000809102000080000000, which the warm-multiband2/unified-merge fold attributed to the cost-63a bit-97 cross-cover receipt 00000002000000809102000800000000",
+ "method": "independent third re-implementation (BigInt board, bit = y*11+x, D4 canonicalization over the 8 board transforms, integer-only det3/det4), the same implementation family as the win2 (6cbb878f), win13 (74076854) and win4 (9f779089) structural audits, with the K0868 survival-move convention; run twice with identical results; inputs are only the published cost-63a sweep record, the published cost-63a win7-certificates manifest, and the published win13/win4 structural audits",
+ "controls": {
+  "s5_parent_hex": "00000000000000809102000000000000",
+  "s5_parent_popcount": 5,
+  "s5_parent_stones": [
+   49,
+   56,
+   60,
+   63,
+   71
+  ],
+  "s5_parent_subset_of_child63a": true,
+  "s5_parent_subset_of_child_65f65j": true,
+  "child63a_hex": "00000000000000809102000800000000",
+  "child63a_equals_s5_plus_bit35": true,
+  "child63a_stones": [
+   35,
+   49,
+   56,
+   60,
+   63,
+   71
+  ],
+  "child63a_popcount": 6,
+  "child63a_d4_canonical_is_self": true,
+  "child_65f65j_hex": "00000000000000809102000080000000",
+  "child_65f65j_equals_s5_plus_bit31": true,
+  "child_65f65j_stones": [
+   31,
+   49,
+   56,
+   60,
+   63,
+   71
+  ],
+  "child_65f65j_popcount": 6,
+  "child_65f65j_d4_canonical_is_self": true,
+  "children_distinct_d4_orbits": true
+ },
+ "claim_checks": {
+  "all_10_win7_root_reconstructions_exact": true,
+  "all_10_survival_legal_under_k0868": true,
+  "all_10_covers_count_7_with_child63a": true,
+  "bit97_root_covers_child_65f65j": true,
+  "bit97_is_the_only_63a_win7_root_covering_child_65f65j": true,
+  "verified_bit119_certificate_root_does_not_cover_child_65f65j": true,
+  "bit97_verification_status": "search-level WIN7-D10 verdict from the completed cost-63a sweep (win7_bits includes 97; heaviest_bits entry bit 97 nodes 11,447,839 win7=true; raw batch6 line); bit 97 is listed in unverified_win7_bits of the certificates manifest - no certificate has been extracted for it; the cross-engine (FBS=1<<20) and fresh-rerun controls recorded in the sweep cover bits 32/2/119/11, not bit 97",
+  "bit119_verification_status": "the single certificate-backed receipt of the family (28,509 rows, md5 c042fbf46be29ecc0ac74ceb25324b16, 49/49 sub-roots pass, union 0/0); it covers the child63a orbit only",
+  "child_closure_note": "within the repo's WIN7-D10 receipt framework, the head-1410 'solved' bookkeeping of child 00000000000000809102000080000000 rests on the bit-97 receipt, which is search-level; the certificate-backed coverage of the same child comes from the 17 head-1419 receipts of the 65f/65j folds, whose roots are all child+1 stone (the child is in every one of the 17 cover sets; 13 of the 65f family are certificate-backed per the win13 manifest, the 4 of the 65j family are fold-v2 receipt records whose certificate extraction status is not asserted here)"
+ },
+ "result": "all_ok: 10/10 win7 roots pass every structural check; the bit-97 cross-cover of the 65f/65j child is exact and unique within the 63a family; the premise 'child already solved at head-1410' is structurally confirmed while its verification tier is pinned down precisely (bit-97 search-level receipt; bit-119 verified certificate covers only child63a)",
+ "certificates_note": "this audit verifies structure only (root reconstruction, K0868 legality, covers, D4 orbit distinctness, cross-cover membership) and does not re-run the engine remotely; the certificate and sweep bodies are the publishing lane's records",
+ "interpretation_guard": "bookkeeping over published records; solved counts measure manifest coverage, not game-theoretic values; WIN7-D10 certificates prove a first-player win within depth 10 from the individual 7-stone roots only; a search-level WIN7-D10 verdict is weaker than a certificate: it is the engine's verdict with determinism/cross-engine controls on the sweep, not an independently re-verifiable certificate body; REFUTED-D10 sweeps prove only the absence of WIN7-D10; 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, class 1, class 2 and class 4 all remain UNKNOWN"
+}
