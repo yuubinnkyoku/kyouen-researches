@@ -208,10 +208,6 @@ def audit(max_x: int = 100, extra_after_sum: int = 8, scatter: int = 200) -> dic
             "scatter_seed": 20261116,
         },
         "checks": checks,
-        "cache_states": {
-            "canonical": len(canonical.memo),
-            "ordered_after_scatter": len(ordered.memo),
-        },
         "first_mismatches": first_mismatches,
         "all_checks_pass": not failures,
     }
