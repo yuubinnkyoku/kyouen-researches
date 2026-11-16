@@ -1,0 +1,74 @@
+{
+ "certificates": {
+  "bit116": {
+   "cert_git_blob_sha": "fbc3836be608c963f0a5dea8a2dd32ef52956ec5",
+   "summary_nRows": 32382
+  },
+  "bit120": {
+   "cert_git_blob_sha": "dbeaf4a648294efe362a8659d7299aa8043c7d7f",
+   "summary_on_main": false
+  }
+ },
+ "date": "2026-11-16",
+ "interpretation_guard": "local verification evidence only; no repo file was modified and no verdict was created; WIN7 certificates prove a first-player win within depth 10 from the individual 7-stone roots only; the 11x11 empty board and all class-2 S5 parents remain UNKNOWN",
+ "records": {
+  "116": {
+   "consumed_winner_rows": 32382,
+   "forbidden_triple_cache_entries": 18614,
+   "legal_state_cache_entries": 49243,
+   "loser_reply_edges": 65501,
+   "loser_states": 14345,
+   "method": "BigInt 3x3 cofactor expansion of the exact lifted determinant [x\u00b2+y\u00b2,x,y,1]; no floating point",
+   "root_hex": "00100000000000403800000008100000",
+   "root_mobility": 51,
+   "root_safe": true,
+   "root_stones": 7,
+   "rows_sorted_unique": true,
+   "strategy_rows": 32382,
+   "subroots_passed": 51,
+   "terminal_count": 10874,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "union_extra": 0,
+   "union_missing": 0,
+   "verdict": "WIN7 certificate independently verified",
+   "visited_states_across_subroots": 71150,
+   "winner_states": 45931
+  },
+  "120": {
+   "consumed_winner_rows": 52213,
+   "forbidden_triple_cache_entries": 25402,
+   "legal_state_cache_entries": 79716,
+   "loser_reply_edges": 94767,
+   "loser_states": 20704,
+   "method": "BigInt 3x3 cofactor expansion of the exact lifted determinant [x\u00b2+y\u00b2,x,y,1]; no floating point",
+   "root_hex": "01000000000000403800000008100000",
+   "root_mobility": 58,
+   "root_safe": true,
+   "root_stones": 7,
+   "rows_sorted_unique": true,
+   "strategy_rows": 52213,
+   "subroots_passed": 58,
+   "terminal_count": 16527,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "union_extra": 0,
+   "union_missing": 0,
+   "verdict": "WIN7 certificate independently verified",
+   "visited_states_across_subroots": 104871,
+   "winner_states": 67640
+  }
+ },
+ "role": "evidence record produced by the second-implementation lane: bits 116 and 120 of the cost-64h WIN7 sweep have no published BigInt/Bareiss records on main at check time (bit 120 also lacks its extraction summary; a local mirror of it was a 404 placeholder and was removed); the published independent BigInt verifier was fetched byte-faithfully from main and run locally on the byte-pinned certificates to close the verification gap in this record",
+ "schema": "n11-class2-lane-cost64h-bit116-120-local-bigint-verification-20261116-v1",
+ "verifier": {
+  "bytes": 7860,
+  "git_blob_sha": "62b5d9413daafb172f6e10249976ee6808f7b454",
+  "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/",
+  "script": "verify_win7_certificate_bigint_independent.mjs"
+ }
+}
