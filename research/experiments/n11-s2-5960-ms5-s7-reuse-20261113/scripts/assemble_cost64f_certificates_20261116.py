@@ -37,6 +37,16 @@ CERTS = OUT / "class2-lane-cost64f-certificates"
 SCRIPTS = HERE / "scripts"
 CHILD = "0000000000000080120a000000800000"
 CHILD_V = int(CHILD, 16)
+PARENT_ANCHOR = "00000000000000403800000008000000"
+SH_PARENT = "00000000000000003800000008002000"
+DIRECT_S5_PARENTS = [
+    {"s5_hex": "00000000000000003800000008002000",
+     "classes_mask": 2, "remaining_s6_orbits_head1435": 31,
+     "remaining_s7_edge_cost_head1435": 2145},
+    {"s5_hex": "0000000000000080120a000000000000",
+     "classes_mask": 2, "remaining_s6_orbits_head1435": 43,
+     "remaining_s7_edge_cost_head1435": 3167},
+]
 BITS = [39, 72, 107]
 SPLIT_LIMIT = 1200000  # publication split threshold (bytes):
                # keeps every published part safely below the
@@ -287,11 +297,15 @@ def main():
               f"{'split parts' if len(whole) > SPLIT_LIMIT else 'whole cert'}"
               f" ({len(whole)} bytes)", flush=True)
     manifest = {
-        "schema": "n11-class2-lane-cost64f-win3-certificates-20261116-v1",
+        "schema": "n11-class2-lane-cost64f-win3-certificates-20261116-v2",
         "date": "2026-11-16",
         "target": {
             "s6_child_hex": CHILD,
-            "s5_parent": "00000000000000403800000008000000",
+            "s5_parent": SH_PARENT,
+            "protocol_anchor_s5_parent": PARENT_ANCHOR,
+            "s5_parent_role": ("protocol parent containing the selected S6 row; "
+                               "full direct-parent set is listed separately"),
+            "direct_s5_parents": DIRECT_S5_PARENTS,
             "s6_s7_edge_cost": 64,
             "win7_d10_bits_certified_64f": BITS,
             "note": "all three cost-64f v16 WIN7-D10 receipts (bits 39, 72, "
@@ -327,6 +341,17 @@ def main():
                                  "two-stone roots {49,60} and {59,60} / "
                                  "S2 {59,60} / class 1 / class 2 / "
                                  "class 4 remain UNKNOWN",
+    }
+    manifest["supersedes"] = {
+        "schema": "n11-class2-lane-cost64f-win3-certificates-20261116-v1",
+        "git_blob_sha": "33a444b97a55f6fb1b19ec9399c04bb9e7e55c18",
+        "note": "certificate bytes and per-root verifier results are unchanged; only target-parent metadata is corrected",
+    }
+    manifest["parent_metadata_correction"] = {
+        "previous_s5_parent": PARENT_ANCHOR,
+        "corrected_s5_parent": SH_PARENT,
+        "direct_s5_parents": DIRECT_S5_PARENTS,
+        "note": "the prior s5_parent field named the protocol anchor, not a direct parent of the selected S6 row",
     }
     (OUT / "class2-lane-cost64f-win3-certificates-20261116.json").write_text(
         json.dumps(manifest, indent=1) + "\n")

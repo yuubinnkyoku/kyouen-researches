@@ -1,16 +1,32 @@
 {
- "schema": "n11-class2-lane-cost64f-win3-certificates-20261116-v1",
+ "schema": "n11-class2-lane-cost64f-win3-certificates-20261116-v2",
  "date": "2026-11-16",
  "target": {
   "s6_child_hex": "0000000000000080120a000000800000",
-  "s5_parent": "00000000000000403800000008000000",
+  "s5_parent": "00000000000000003800000008002000",
   "s6_s7_edge_cost": 64,
   "win7_d10_bits_certified_64f": [
    39,
    72,
    107
   ],
-  "note": "all three cost-64f v16 WIN7-D10 receipts (bits 39, 72, 107 of the 59-bit sweep published in class2-lane-cost64f-raw-batch1..8-20261116.jsonl; bit 39 additionally crosschecked by the v15 engine) now have published certificates; the 56 REFUTED-D10 candidates and the 5 pre-sweep REFUTED-D10 transfers have no certificate here (REFUTED is not a LOSS proof). The row is NOT sterile; the fold of these receipts on the head-1435 chain is deferred to the chain-reproduction session per protocol, so the canonical head stays 1435 until then. All 3 roots have distinct D4 canonical forms and the child stabilizer is order 1"
+  "note": "all three cost-64f v16 WIN7-D10 receipts (bits 39, 72, 107 of the 59-bit sweep) have published certificates; the selected child belongs to shared protocol parent 00000000000000003800000008002000 and has exactly two direct S5 parent orbits in the head-1435 ranking: 0000000000000080120a000000000000 and 00000000000000003800000008002000 (both class-2 masks). The other protocol anchor 00000000000000403800000008000000 is not a direct parent of this child. The 56 REFUTED-D10 candidates and 5 pre-sweep REFUTED-D10 transfers have no certificate here (REFUTED is not a LOSS proof). Fold remains deferred; canonical head stays 1435 until full chain reproduction and conflict census.",
+  "protocol_anchor_s5_parent": "00000000000000403800000008000000",
+  "s5_parent_role": "protocol parent containing the selected S6 row; full direct-parent set is listed separately",
+  "direct_s5_parents": [
+   {
+    "s5_hex": "00000000000000003800000008002000",
+    "classes_mask": 2,
+    "remaining_s6_orbits_head1435": 31,
+    "remaining_s7_edge_cost_head1435": 2145
+   },
+   {
+    "s5_hex": "0000000000000080120a000000000000",
+    "classes_mask": 2,
+    "remaining_s6_orbits_head1435": 43,
+    "remaining_s7_edge_cost_head1435": 3167
+   }
+  ]
  },
  "extraction": {
   "engine": "repo-verbatim class4_child1_cert_extractor_exact_v16.ts driven by scripts/cert_driver65j.ts (published generic single-root blind extraction driver), empty kill table (blind extraction), single chunk part1of1 per bit",
@@ -178,5 +194,30 @@
   "terminal_count": 38570,
   "cert_bytes": 4197505
  },
- "interpretation_guard": "WIN7 certificates prove a first-player win within depth 10 from the individual 7-stone roots only; 11x11 empty board / two-stone roots {49,60} and {59,60} / S2 {59,60} / class 1 / class 2 / class 4 remain UNKNOWN"
+ "interpretation_guard": "WIN7 certificates prove a first-player win within depth 10 from the individual 7-stone roots only; 11x11 empty board / two-stone roots {49,60} and {59,60} / S2 {59,60} / class 1 / class 2 / class 4 remain UNKNOWN",
+ "supersedes": {
+  "schema": "n11-class2-lane-cost64f-win3-certificates-20261116-v1",
+  "git_blob_sha": "33a444b97a55f6fb1b19ec9399c04bb9e7e55c18",
+  "note": "certificate bytes and per-root verifier results are unchanged; only target-parent metadata is corrected"
+ },
+ "parent_metadata_correction": {
+  "previous_s5_target": "00000000000000403800000008000000",
+  "corrected_s5_target": "00000000000000003800000008002000",
+  "protocol_anchor_s5_parent": "00000000000000403800000008000000",
+  "direct_s5_parents": [
+   {
+    "s5_hex": "00000000000000003800000008002000",
+    "classes_mask": 2,
+    "remaining_s6_orbits_head1435": 31,
+    "remaining_s7_edge_cost_head1435": 2145
+   },
+   {
+    "s5_hex": "0000000000000080120a000000000000",
+    "classes_mask": 2,
+    "remaining_s6_orbits_head1435": 43,
+    "remaining_s7_edge_cost_head1435": 3167
+   }
+  ],
+  "reason": "The v2 cheapest_open_rows_ranking cross-producted the best-open rows with both protocol parents. The selected row is in the shared protocol parent; an independent D4 subset join against all 174 open S5 parents finds exactly the two direct parents listed here. The PARENT protocol anchor is not a direct parent of this row."
+ }
 }

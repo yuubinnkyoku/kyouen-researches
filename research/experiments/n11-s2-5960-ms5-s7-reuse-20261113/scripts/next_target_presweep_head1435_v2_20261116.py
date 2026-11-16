@@ -383,9 +383,18 @@ best_rows = sorted(
       "census": r["census"]} for parent in (P_PARENT, SH_PARENT)
      for r in family[parent]["rows"]),
     key=lambda x: (x["cost"], x["s5_hex"], x["s6_hex"]))
+best_open_with_parent = sorted(
+    ((parent, r) for parent in (P_PARENT, SH_PARENT)
+     for r in family[parent]["rows"] if r["open_after_census"] > 0),
+    key=lambda pr: (pr[1]["open_after_census"], pr[1]["cost"],
+                    pr[1]["s6_hex"], pr[0]))
 best_open_rows = [
     {"cost": r["cost"], "s5_hex": parent, **r}
-    for parent in (P_PARENT, SH_PARENT) for r in best_open][:12]
+    for parent, r in best_open_with_parent[:12]]
+assert len(best_open_rows) == min(12, len(best_open_with_parent))
+assert all(any(r["s6_hex"] == item["s6_hex"]
+               for r in family[item["s5_hex"]]["rows"])
+           for item in best_open_rows)
 fully_determined_rows = [
     {"cost": r["cost"], "s5_hex": parent, **r}
     for parent in (P_PARENT, SH_PARENT)
@@ -431,6 +440,24 @@ result = {
     "family_census": family,
     "cheapest_rows_ranking": best_rows[:12],
     "cheapest_open_rows_ranking": best_open_rows,
+    "ranking_parent_mapping_audit": {
+        "method": ("preserve each (parent,row) pair from family_census; "
+                   "do not cross-product best rows with both parents"),
+        "entries": len(best_open_rows),
+        "first_entry": {"s5_hex": best_open_rows[0]["s5_hex"],
+                        "s6_hex": best_open_rows[0]["s6_hex"],
+                        "open_after_census":
+                            best_open_rows[0]["open_after_census"]},
+        "all_entries_match_family_census": True,
+    },
+    "parent_mapping_correction": {
+        "supersedes_blob_sha": "e2d12b5bc3701aa11afa297bb50e6df771fb91cf",
+        "reason": ("the previous list comprehension assigned both protocol "
+                   "parents to every best-open row, mislabeling ownership"),
+        "corrected_selected_row_parent": SH_PARENT,
+        "note": ("the recommendation string already used a membership lookup; "
+                 "this fixes the machine-readable ranking"),
+    },
     "fully_determined_rows": fully_determined_rows,
     "cheapest_row_bit_tables": bit_tables,
     "recommendation": (

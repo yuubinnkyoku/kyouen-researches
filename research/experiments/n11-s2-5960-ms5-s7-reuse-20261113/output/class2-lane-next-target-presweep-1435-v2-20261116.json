@@ -3477,7 +3477,7 @@
  "cheapest_open_rows_ranking": [
   {
    "cost": 64,
-   "s5_hex": "00000000000000403800000008000000",
+   "s5_hex": "00000000000000003800000008002000",
    "s6_hex": "0000000000000080120a000000800000",
    "demand": {
     "c1": 0,
@@ -3494,7 +3494,7 @@
   },
   {
    "cost": 64,
-   "s5_hex": "00000000000000403800000008000000",
+   "s5_hex": "00000000000000003800000008002000",
    "s6_hex": "00000000000100003800000008080000",
    "demand": {
     "c1": 0,
@@ -3511,7 +3511,7 @@
   },
   {
    "cost": 65,
-   "s5_hex": "00000000000000403800000008000000",
+   "s5_hex": "00000000000000003800000008002000",
    "s6_hex": "00000000000000801202010000800000",
    "demand": {
     "c1": 0,
@@ -3528,7 +3528,7 @@
   },
   {
    "cost": 65,
-   "s5_hex": "00000000000000403800000008000000",
+   "s5_hex": "00000000000000003800000008002000",
    "s6_hex": "00000000000000a09002000080000000",
    "demand": {
     "c1": 0,
@@ -3545,7 +3545,7 @@
   },
   {
    "cost": 66,
-   "s5_hex": "00000000000000403800000008000000",
+   "s5_hex": "00000000000000003800000008002000",
    "s6_hex": "00000000000000003800000008002008",
    "demand": {
     "c1": 0,
@@ -3562,7 +3562,7 @@
   },
   {
    "cost": 66,
-   "s5_hex": "00000000000000403800000008000000",
+   "s5_hex": "00000000000000003800000008002000",
    "s6_hex": "00000000000000003800000008002010",
    "demand": {
     "c1": 0,
@@ -3579,7 +3579,7 @@
   },
   {
    "cost": 66,
-   "s5_hex": "00000000000000403800000008000000",
+   "s5_hex": "00000000000000003800000008002000",
    "s6_hex": "00000000020000801202000000100000",
    "demand": {
     "c1": 0,
@@ -3596,7 +3596,7 @@
   },
   {
    "cost": 66,
-   "s5_hex": "00000000000000403800000008000000",
+   "s5_hex": "00000000000000003800000008002000",
    "s6_hex": "00000000000000003800000008002040",
    "demand": {
     "c1": 0,
@@ -3613,7 +3613,7 @@
   },
   {
    "cost": 68,
-   "s5_hex": "00000000000000403800000008000000",
+   "s5_hex": "00000000000000003800000008002000",
    "s6_hex": "00000000000000801202000000900000",
    "demand": {
     "c1": 0,
@@ -3647,7 +3647,7 @@
   },
   {
    "cost": 67,
-   "s5_hex": "00000000000000403800000008000000",
+   "s5_hex": "00000000000000003800000008002000",
    "s6_hex": "00000000000000801202000000880000",
    "demand": {
     "c1": 0,
@@ -3664,7 +3664,7 @@
   },
   {
    "cost": 67,
-   "s5_hex": "00000000000000403800000008000000",
+   "s5_hex": "00000000000000003800000008002000",
    "s6_hex": "00000000000000889002000080000000",
    "demand": {
     "c1": 0,
@@ -6328,5 +6328,21 @@
  },
  "recommendation": "cheapest-first within the class-2 lane protocol at head 1435, ranked by open candidate bits after receipt/harvest transfers: the best next sweep target is 0000000000000080120a000000800000 (parent 00000000000000003800000008002000, cost 64, demand c1=0,c2=2,c4=0) with only 59 open bits of 64 candidates; 3 of the 49 remaining rows of the two protocol parents are already fully determined by transfers (no sweep needed, e.g. the cost-64c STERILE row); sweep the open bits, extract certificates for any WIN7-D10 roots, and fold receipts before the next ranking",
  "interpretation_guard": "search-plan bookkeeping only: no engine search was run, no verdict was created, no row was closed by this audit; harvested verdicts are published depth-10 engine results D4-transferred by canonical root identity; receipt_win canons are folded WIN7-D10 receipts with published certificates; REFUTED-D10 is not a LOSS proof; STERILE is not a LOSS proof; solved 1435 is manifest-coverage bookkeeping",
- "unknown_status": "11x11 empty board, two-stone roots {49,60} and {59,60}, S2 {59,60}, and classes 1/2/4 all remain UNKNOWN"
+ "unknown_status": "11x11 empty board, two-stone roots {49,60} and {59,60}, S2 {59,60}, and classes 1/2/4 all remain UNKNOWN",
+ "ranking_parent_mapping_audit": {
+  "method": "preserve (parent,row) pairs from family_census; do not cross-product every best row with both protocol parents",
+  "entries": 12,
+  "first_entry": {
+   "s5_hex": "00000000000000003800000008002000",
+   "s6_hex": "0000000000000080120a000000800000",
+   "open_after_census": 59
+  },
+  "all_entries_match_family_census": true
+ },
+ "parent_mapping_correction": {
+  "supersedes_blob_sha": "e2d12b5bc3701aa11afa297bb50e6df771fb91cf",
+  "reason": "The previous v2 list comprehension iterated over both protocol parents outside the already-ranked best_open rows, assigning the first parent's s5_hex to every listed row.",
+  "corrected_selected_row_parent": "00000000000000003800000008002000",
+  "note": "The recommendation string already found the actual family owner by membership; this correction fixes the machine-readable cheapest_open_rows_ranking and downstream parent metadata."
+ }
 }

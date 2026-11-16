@@ -1,10 +1,10 @@
 {
- "schema": "n11-class2-lane-cost64f-completed-20261116-v2",
- "title": "n11 class2-lane cost-64f sweep completed NOT-STERILE: 3 WIN7-D10 receipts (bits 39, 72, 107) of the cheapest open row 0000000000000080120a000000800000 at head 1435 certified; fold deferred per protocol; head 1435 unchanged until the fold session",
+ "schema": "n11-class2-lane-cost64f-completed-20261116-v3",
+ "title": "n11 class2-lane cost-64f sweep completed NOT-STERILE: 3 WIN7-D10 receipts certified; direct S5 parent metadata corrected after independent D4 subset audit; fold still deferred; 11x11 UNKNOWN",
  "date": "2026-11-16",
  "status": "completed NOT-STERILE on 2026-11-16 by the long-term lane session: the full raw sweep of the 59 open candidates is published (8 v16 raw batches + determinism rerun batch2 node-exact + v15 crosscheck anchors 0/32/39/118 incl. the WIN bit 39), plus the 5 pre-sweep REFUTED-D10 transfers: 3 WIN7-D10 (bits 39, 72, 107), 56 REFUTED-D10, 0 capped - the row is NOT sterile; all three WIN7 roots have published, independently verified certificates (BigInt union 0/0 + exact-integer Bareiss sub-roots 50/51/41 all PASS); the fold of the 3 receipts on the head-1435 chain is deferred to the chain-reproduction session per protocol, so the canonical head stays 1435 until then; 11x11 empty board, two-stone roots {49,60} and {59,60}, S2 {59,60}, and classes 1/2/4 all remain UNKNOWN",
  "claimed_by": "n11 long-term lane session (next-target cheapest-first continuation after the cost-64e STERILE determination)",
- "s5_target": "00000000000000403800000008000000",
+ "s5_target": "00000000000000003800000008002000",
  "s6_child": "0000000000000080120a000000800000",
  "s6_s7_edge_cost": 64,
  "demand": {
@@ -176,7 +176,7 @@
  ],
  "open_candidate_count": 59,
  "no_prior_sweep_note": "this child 0000000000000080120a000000800000 has no prior claim, raw batch, audit, certificate or fold receipt in the class2 lane at publication time; the 5 transferred bits are D4-canonical identities of roots already determined verbatim in published lane sweeps, so they are recorded as REFUTED-D10 transfers and will not be re-swept (same convention as the cost-64e transfers)",
- "target_context": "the head-1435 v2 next-target pre-sweep census ranks this row first among the 46 not-fully-determined rows of the two class-2 lane protocol parents by open candidate bits (59 of 64; three rows are already fully determined by transfers - the cost-64c STERILE row 00000000000000003800000008002020, the cost-64e STERILE row 0000000000000000380000000a002000, and the cost-65 transferred row 00000000020000801202000000200000 - and need no sweep); family-level demand at head 1435 after the v2 census: class-2 target 00000000000000403800000008000000 1287 candidate occurrences -> 1261 open after transfers -> 1131 distinct open D4 root orbits; shared parent 00000000000000003800000008002000 2145 -> 1813 -> 1473; the runner-up cost-64 row 00000000000100003800000008080000 (also 59 open) is reserved for the next ranking",
+ "target_context": "The head-1435 v2 census selects child 0000000000000080120a000000800000 first among the 46 not-fully-determined rows of the two class-2 protocol parents (59 of 64 candidate bits remain open). The selected row is in the shared protocol parent 00000000000000003800000008002000; the other protocol parent 00000000000000403800000008000000 is a family-level anchor but is not a direct parent of this row. An independent D4 subset join against all 174 open S5 parents finds exactly two direct parents: 0000000000000080120a000000000000 and 00000000000000003800000008002000, both class-2 masks. Family-level census remains PARENT 18 rows/1287 candidate occurrences and SHARED 31 rows/2145. The runner-up cost-64 row 00000000000100003800000008080000 remains the next row to re-rank after the fold.",
  "planned_protocol": "v16 engine (class4_child1_runner_v16.ts, repo-verbatim), depth 10, node cap 10000000 per candidate, pilot_d6 control 3402 nodes per batch invocation, batches of ~8 open bits (8x8+3), raw batch JSONL published per batch, determinism rerun node-exact on the heaviest batch, v15 crosscheck anchors, independent candidate enumeration bit-exact via legal_candidates.py (already asserted in the v2 census), sweep aggregate audit and claim update on completion, certificate extraction for any WIN7-D10 root (whole or part1of2/part2of2), fold of WIN receipts on the 1435 head with conflict census before the next ranking",
  "interpretation_guard": "WIN7-D10 candidates prove a first-player win within depth 10 from the individual 7-stone roots only; REFUTED-D10 is NOT a LOSS proof and a STERILE determination is NOT a game-theoretic value for the row; STERILE would mean only that no depth-10 receipt route exists to close this row; transferred verdicts are D4-canonical identities of published depth-10 engine results; solved 1435 is manifest-coverage bookkeeping",
  "unknown_status": "11x11 empty board, two-stone roots {49,60} and {59,60}, S2 {59,60}, and classes 1/2/4 all remain UNKNOWN",
@@ -533,5 +533,41 @@
   "fold": "deferred to the chain-reproduction session per protocol (same as cost-64d): the canonical head stays 1435 until the fold of these 3 receipts is run with the full chain reproduction and conflict census; projected closures include the child row itself (bit 39 root = child|1<<39 is a receipt)",
   "k0863_consequence": "not applicable: K0863 concerns STERILE rows (no depth-10 receipt can close them); this row is NOT sterile - three receipt roots exist in the row, so the row is closable by a fold"
  },
- "supersedes": "v1 (in-flight claim git blob fba4ebcf94e82766671305ce68382dd51c4d17df, all v1 fields preserved)"
+ "supersedes": "v1 (in-flight claim git blob fba4ebcf94e82766671305ce68382dd51c4d17df, all v1 fields preserved); v2 (git blob 48d2de0c0cac1656533a99b8b729297ad95a4307, all sweep and certificate fields preserved; v3 corrects only parent ownership metadata)",
+ "protocol_anchor_s5_parent": "00000000000000403800000008000000",
+ "s5_target_role": "protocol parent containing the selected S6 row; the complete direct-parent set is listed separately",
+ "direct_s5_parents": [
+  {
+   "s5_hex": "00000000000000003800000008002000",
+   "classes_mask": 2,
+   "remaining_s6_orbits_head1435": 31,
+   "remaining_s7_edge_cost_head1435": 2145
+  },
+  {
+   "s5_hex": "0000000000000080120a000000000000",
+   "classes_mask": 2,
+   "remaining_s6_orbits_head1435": 43,
+   "remaining_s7_edge_cost_head1435": 3167
+  }
+ ],
+ "parent_metadata_correction": {
+  "previous_s5_target": "00000000000000403800000008000000",
+  "corrected_s5_target": "00000000000000003800000008002000",
+  "protocol_anchor_s5_parent": "00000000000000403800000008000000",
+  "direct_s5_parents": [
+   {
+    "s5_hex": "00000000000000003800000008002000",
+    "classes_mask": 2,
+    "remaining_s6_orbits_head1435": 31,
+    "remaining_s7_edge_cost_head1435": 2145
+   },
+   {
+    "s5_hex": "0000000000000080120a000000000000",
+    "classes_mask": 2,
+    "remaining_s6_orbits_head1435": 43,
+    "remaining_s7_edge_cost_head1435": 3167
+   }
+  ],
+  "reason": "The v2 cheapest_open_rows_ranking cross-producted the best-open rows with both protocol parents. The selected row is in the shared protocol parent; an independent D4 subset join against all 174 open S5 parents finds exactly the two direct parents listed here. The PARENT protocol anchor is not a direct parent of this row."
+ }
 }
