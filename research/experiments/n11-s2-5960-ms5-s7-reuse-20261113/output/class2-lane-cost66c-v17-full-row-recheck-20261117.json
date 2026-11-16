@@ -1,0 +1,1183 @@
+{
+ "all_checks_pass": true,
+ "bit112_cap80m": {
+  "v16": {
+   "andclose": true,
+   "bit": 112,
+   "capped": false,
+   "loss": true,
+   "ms": 22226,
+   "nodes": 12574920,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  "v17": {
+   "andclose": true,
+   "bit": 112,
+   "capped": false,
+   "loss": true,
+   "ms": 26943,
+   "nodes": 12574920,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  }
+ },
+ "bit117_conclusion": "v16 c1 dropped 22 nodes worth of fb triples (3,121,390 -> 3,121,368 under the v17 repair); the c0 traversal is node-exact across engines (1,341,675) so saturation manifested only in the close-first ordering; the REFUTED-D10 verdict is identical in all 4 configurations (2 engines x 2 orderings), so the published REFUTED stands with engine-corrected node count 3,121,368",
+ "bit117_order_matrix": [
+  {
+   "andclose": true,
+   "andclose_mode": 1,
+   "bit": 117,
+   "capped": false,
+   "engine": "v16",
+   "loss": false,
+   "ms": 13916,
+   "nodes": 3121390,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": false,
+   "andclose_mode": 0,
+   "bit": 117,
+   "capped": false,
+   "engine": "v16",
+   "loss": false,
+   "ms": 6896,
+   "nodes": 1341675,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "andclose_mode": 1,
+   "bit": 117,
+   "capped": false,
+   "engine": "v17",
+   "loss": false,
+   "ms": 34904,
+   "nodes": 3121368,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": false,
+   "andclose_mode": 0,
+   "bit": 117,
+   "capped": false,
+   "engine": "v17",
+   "loss": false,
+   "ms": 5877,
+   "nodes": 1341675,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  }
+ ],
+ "checked_bits": 59,
+ "checks": [
+  {
+   "check": "engine_blob_sha1_matches_pinned_c132cc64",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "raw_batch1_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "raw_batch2_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "raw_batch3_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "raw_batch4_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "raw_batch5_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "raw_batch6_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "raw_batch7_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "raw_batch8_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "bit112_resolution_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "batch1_bit_set_identity",
+   "detail": "v16=[1, 2, 9, 10, 12, 17, 21, 30] v17=[1, 2, 9, 10, 12, 17, 21, 30]",
+   "pass": true
+  },
+  {
+   "check": "batch2_bit_set_identity",
+   "detail": "v16=[32, 33, 34, 38, 42, 43, 44, 53] v17=[32, 33, 34, 38, 42, 43, 44, 53]",
+   "pass": true
+  },
+  {
+   "check": "batch3_bit_set_identity",
+   "detail": "v16=[54, 66, 67, 69, 71, 73, 74, 75] v17=[54, 66, 67, 69, 71, 73, 74, 75]",
+   "pass": true
+  },
+  {
+   "check": "batch4_bit_set_identity",
+   "detail": "v16=[76, 78, 79, 83, 85, 86, 87, 88] v17=[76, 78, 79, 83, 85, 86, 87, 88]",
+   "pass": true
+  },
+  {
+   "check": "batch5_bit_set_identity",
+   "detail": "v16=[89, 92, 93, 94, 95, 96, 97, 98] v17=[89, 92, 93, 94, 95, 96, 97, 98]",
+   "pass": true
+  },
+  {
+   "check": "batch6_bit_set_identity",
+   "detail": "v16=[99, 100, 101, 102, 103, 105, 106, 107] v17=[99, 100, 101, 102, 103, 105, 106, 107]",
+   "pass": true
+  },
+  {
+   "check": "batch7_bit_set_identity",
+   "detail": "v16=[108, 109, 110, 111, 112, 113, 114, 116] v17=[108, 109, 110, 111, 112, 113, 114, 116]",
+   "pass": true
+  },
+  {
+   "check": "batch8_bit_set_identity",
+   "detail": "v16=[117, 118, 120] v17=[117, 118, 120]",
+   "pass": true
+  },
+  {
+   "check": "v17_bit112_pilot_d6_identity",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "bit112_cap80m_resolution_field_identity",
+   "detail": "v16={'bit': 112, 'loss': True, 'nodes': 12574920, 'capped': False, 'terminalStoneRange': [13, 17], 'ms': 22226, 'andclose': True} v17={'bit': 112, 'loss': True, 'nodes': 12574920, 'capped': False, 'terminalStoneRange': [13, 17], 'ms': 26943, 'andclose': True}",
+   "pass": true
+  },
+  {
+   "check": "order_matrix_4_configurations_present",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "order_matrix_all_refuted_d10",
+   "detail": "{('v16', 1): False, ('v16', 0): False, ('v17', 1): False, ('v17', 0): False}",
+   "pass": true
+  },
+  {
+   "check": "order_matrix_c0_node_exact_v16_eq_v17",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "order_matrix_c1_v16_3121390_v17_3121368",
+   "detail": "{'v16': 3121390, 'v17': 3121368}",
+   "pass": true
+  },
+  {
+   "check": "all_8_batch_pilots_identity_3402",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "verdict_flips_zero",
+   "detail": "flips=[]",
+   "pass": true
+  },
+  {
+   "check": "win_bits_unchanged_73_75_79_87_96_97_112",
+   "detail": "v17 win bits=[73, 75, 79, 87, 96, 97, 112]",
+   "pass": true
+  },
+  {
+   "check": "saturation_detected_only_bit_117",
+   "detail": "node-delta bits=[(117, -22)]",
+   "pass": true
+  },
+  {
+   "check": "bit_117_verdict_unchanged_refuted_d10",
+   "detail": "",
+   "pass": true
+  }
+ ],
+ "child": "00000000000000003800000008002008",
+ "date": "2026-11-17",
+ "determinism": "two full 8-batch + cap80M runs in this lane produced identical bit/loss/nodes/capped/terminalStoneRange/andclose for all 59 bits and identical pilots (ms only differs)",
+ "engine_blob_sha1": "c132cc6425eee3feaeef1d697dd74f968cfedb59",
+ "field_identical_bits": 58,
+ "interpretation_guard": "bookkeeping verification only; WIN7-D10 proves a first-player win within depth 10 from the individual 7-stone roots only; REFUTED-D10 is not a LOSS proof; NOT-STERILE is not a game resolution; 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60} and classes 1/2/4 remain UNKNOWN",
+ "method": "fbt-repaired v17 engine (class4_child1_runner_v17.ts, blob c132cc64) re-executed all 59 swept bits from scratch with the published batch partitions (8 batches), depth 10, cap 1e7, --andclose 1 (bit 112 additionally at cap 80000000), fresh engine state per candidate, pilot_d6 control per batch; compared field-by-field against the published v16 raw batches 1-8 and the bit-112 cap-raise resolution record",
+ "per_bit": [
+  {
+   "andclose": true,
+   "batch": 1,
+   "bit": 1,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 1874269,
+   "v17_loss": false,
+   "v17_nodes": 1874269
+  },
+  {
+   "andclose": true,
+   "batch": 1,
+   "bit": 2,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 535142,
+   "v17_loss": false,
+   "v17_nodes": 535142
+  },
+  {
+   "andclose": true,
+   "batch": 1,
+   "bit": 9,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 254183,
+   "v17_loss": false,
+   "v17_nodes": 254183
+  },
+  {
+   "andclose": true,
+   "batch": 1,
+   "bit": 10,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 2175112,
+   "v17_loss": false,
+   "v17_nodes": 2175112
+  },
+  {
+   "andclose": true,
+   "batch": 1,
+   "bit": 12,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 1356268,
+   "v17_loss": false,
+   "v17_nodes": 1356268
+  },
+  {
+   "andclose": true,
+   "batch": 1,
+   "bit": 17,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 854039,
+   "v17_loss": false,
+   "v17_nodes": 854039
+  },
+  {
+   "andclose": true,
+   "batch": 1,
+   "bit": 21,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 1827396,
+   "v17_loss": false,
+   "v17_nodes": 1827396
+  },
+  {
+   "andclose": true,
+   "batch": 1,
+   "bit": 30,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 8806920,
+   "v17_loss": false,
+   "v17_nodes": 8806920
+  },
+  {
+   "andclose": true,
+   "batch": 2,
+   "bit": 32,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 1046121,
+   "v17_loss": false,
+   "v17_nodes": 1046121
+  },
+  {
+   "andclose": true,
+   "batch": 2,
+   "bit": 33,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 4106530,
+   "v17_loss": false,
+   "v17_nodes": 4106530
+  },
+  {
+   "andclose": true,
+   "batch": 2,
+   "bit": 34,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 1293322,
+   "v17_loss": false,
+   "v17_nodes": 1293322
+  },
+  {
+   "andclose": true,
+   "batch": 2,
+   "bit": 38,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 929475,
+   "v17_loss": false,
+   "v17_nodes": 929475
+  },
+  {
+   "andclose": true,
+   "batch": 2,
+   "bit": 42,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 1956008,
+   "v17_loss": false,
+   "v17_nodes": 1956008
+  },
+  {
+   "andclose": true,
+   "batch": 2,
+   "bit": 43,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 1677418,
+   "v17_loss": false,
+   "v17_nodes": 1677418
+  },
+  {
+   "andclose": true,
+   "batch": 2,
+   "bit": 44,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 434073,
+   "v17_loss": false,
+   "v17_nodes": 434073
+  },
+  {
+   "andclose": true,
+   "batch": 2,
+   "bit": 53,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 282625,
+   "v17_loss": false,
+   "v17_nodes": 282625
+  },
+  {
+   "andclose": true,
+   "batch": 3,
+   "bit": 54,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 2066005,
+   "v17_loss": false,
+   "v17_nodes": 2066005
+  },
+  {
+   "andclose": true,
+   "batch": 3,
+   "bit": 66,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 605707,
+   "v17_loss": false,
+   "v17_nodes": 605707
+  },
+  {
+   "andclose": true,
+   "batch": 3,
+   "bit": 67,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 999284,
+   "v17_loss": false,
+   "v17_nodes": 999284
+  },
+  {
+   "andclose": true,
+   "batch": 3,
+   "bit": 69,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 404014,
+   "v17_loss": false,
+   "v17_nodes": 404014
+  },
+  {
+   "andclose": true,
+   "batch": 3,
+   "bit": 71,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 2369015,
+   "v17_loss": false,
+   "v17_nodes": 2369015
+  },
+  {
+   "andclose": true,
+   "batch": 3,
+   "bit": 73,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": true,
+   "v16_nodes": 1380970,
+   "v17_loss": true,
+   "v17_nodes": 1380970
+  },
+  {
+   "andclose": true,
+   "batch": 3,
+   "bit": 74,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 363131,
+   "v17_loss": false,
+   "v17_nodes": 363131
+  },
+  {
+   "andclose": true,
+   "batch": 3,
+   "bit": 75,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": true,
+   "v16_nodes": 2092539,
+   "v17_loss": true,
+   "v17_nodes": 2092539
+  },
+  {
+   "andclose": true,
+   "batch": 4,
+   "bit": 76,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 1080739,
+   "v17_loss": false,
+   "v17_nodes": 1080739
+  },
+  {
+   "andclose": true,
+   "batch": 4,
+   "bit": 78,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 1960010,
+   "v17_loss": false,
+   "v17_nodes": 1960010
+  },
+  {
+   "andclose": true,
+   "batch": 4,
+   "bit": 79,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": true,
+   "v16_nodes": 1078921,
+   "v17_loss": true,
+   "v17_nodes": 1078921
+  },
+  {
+   "andclose": true,
+   "batch": 4,
+   "bit": 83,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 269856,
+   "v17_loss": false,
+   "v17_nodes": 269856
+  },
+  {
+   "andclose": true,
+   "batch": 4,
+   "bit": 85,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 340603,
+   "v17_loss": false,
+   "v17_nodes": 340603
+  },
+  {
+   "andclose": true,
+   "batch": 4,
+   "bit": 86,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 825064,
+   "v17_loss": false,
+   "v17_nodes": 825064
+  },
+  {
+   "andclose": true,
+   "batch": 4,
+   "bit": 87,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": true,
+   "v16_nodes": 2016731,
+   "v17_loss": true,
+   "v17_nodes": 2016731
+  },
+  {
+   "andclose": true,
+   "batch": 4,
+   "bit": 88,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 667518,
+   "v17_loss": false,
+   "v17_nodes": 667518
+  },
+  {
+   "andclose": true,
+   "batch": 5,
+   "bit": 89,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 1297611,
+   "v17_loss": false,
+   "v17_nodes": 1297611
+  },
+  {
+   "andclose": true,
+   "batch": 5,
+   "bit": 92,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 494079,
+   "v17_loss": false,
+   "v17_nodes": 494079
+  },
+  {
+   "andclose": true,
+   "batch": 5,
+   "bit": 93,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 110148,
+   "v17_loss": false,
+   "v17_nodes": 110148
+  },
+  {
+   "andclose": true,
+   "batch": 5,
+   "bit": 94,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 300005,
+   "v17_loss": false,
+   "v17_nodes": 300005
+  },
+  {
+   "andclose": true,
+   "batch": 5,
+   "bit": 95,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 240655,
+   "v17_loss": false,
+   "v17_nodes": 240655
+  },
+  {
+   "andclose": true,
+   "batch": 5,
+   "bit": 96,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": true,
+   "v16_nodes": 2363101,
+   "v17_loss": true,
+   "v17_nodes": 2363101
+  },
+  {
+   "andclose": true,
+   "batch": 5,
+   "bit": 97,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": true,
+   "v16_nodes": 689724,
+   "v17_loss": true,
+   "v17_nodes": 689724
+  },
+  {
+   "andclose": true,
+   "batch": 5,
+   "bit": 98,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 988997,
+   "v17_loss": false,
+   "v17_nodes": 988997
+  },
+  {
+   "andclose": true,
+   "batch": 6,
+   "bit": 99,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 311473,
+   "v17_loss": false,
+   "v17_nodes": 311473
+  },
+  {
+   "andclose": true,
+   "batch": 6,
+   "bit": 100,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 355530,
+   "v17_loss": false,
+   "v17_nodes": 355530
+  },
+  {
+   "andclose": true,
+   "batch": 6,
+   "bit": 101,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 1034686,
+   "v17_loss": false,
+   "v17_nodes": 1034686
+  },
+  {
+   "andclose": true,
+   "batch": 6,
+   "bit": 102,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 1163856,
+   "v17_loss": false,
+   "v17_nodes": 1163856
+  },
+  {
+   "andclose": true,
+   "batch": 6,
+   "bit": 103,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 720839,
+   "v17_loss": false,
+   "v17_nodes": 720839
+  },
+  {
+   "andclose": true,
+   "batch": 6,
+   "bit": 105,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 624610,
+   "v17_loss": false,
+   "v17_nodes": 624610
+  },
+  {
+   "andclose": true,
+   "batch": 6,
+   "bit": 106,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 1209956,
+   "v17_loss": false,
+   "v17_nodes": 1209956
+  },
+  {
+   "andclose": true,
+   "batch": 6,
+   "bit": 107,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 654278,
+   "v17_loss": false,
+   "v17_nodes": 654278
+  },
+  {
+   "andclose": true,
+   "batch": 7,
+   "bit": 108,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 321134,
+   "v17_loss": false,
+   "v17_nodes": 321134
+  },
+  {
+   "andclose": true,
+   "batch": 7,
+   "bit": 109,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 149214,
+   "v17_loss": false,
+   "v17_nodes": 149214
+  },
+  {
+   "andclose": true,
+   "batch": 7,
+   "bit": 110,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 766286,
+   "v17_loss": false,
+   "v17_nodes": 766286
+  },
+  {
+   "andclose": true,
+   "batch": 7,
+   "bit": 111,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 2086932,
+   "v17_loss": false,
+   "v17_nodes": 2086932
+  },
+  {
+   "andclose": true,
+   "batch": 7,
+   "bit": 113,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 229656,
+   "v17_loss": false,
+   "v17_nodes": 229656
+  },
+  {
+   "andclose": true,
+   "batch": 7,
+   "bit": 114,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 2264030,
+   "v17_loss": false,
+   "v17_nodes": 2264030
+  },
+  {
+   "andclose": true,
+   "batch": 7,
+   "bit": 116,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 352146,
+   "v17_loss": false,
+   "v17_nodes": 352146
+  },
+  {
+   "andclose": true,
+   "batch": 8,
+   "bit": 117,
+   "capped": false,
+   "nodes_delta": -22,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 3121390,
+   "v17_loss": false,
+   "v17_nodes": 3121368
+  },
+  {
+   "andclose": true,
+   "batch": 8,
+   "bit": 118,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 735317,
+   "v17_loss": false,
+   "v17_nodes": 735317
+  },
+  {
+   "andclose": true,
+   "batch": 8,
+   "bit": 120,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": false,
+   "v16_nodes": 1090682,
+   "v17_loss": false,
+   "v17_nodes": 1090682
+  },
+  {
+   "andclose": true,
+   "batch": "cap80m_resolution",
+   "bit": 112,
+   "capped": false,
+   "nodes_delta": 0,
+   "terminalStoneRange": [
+    13,
+    17
+   ],
+   "v16_loss": true,
+   "v16_nodes": 12574920,
+   "v17_loss": true,
+   "v17_nodes": 12574920
+  }
+ ],
+ "previous_evidence": {
+  "claim_v1": "64e83dff",
+  "claim_v2_completed": "b17e978e",
+  "independent_v16_rerun_verification": "42788a0d",
+  "win_certificates": "7 WIN7-D10 certificates (bits 73/75/79/87/96/97/112), dual-verified BigInt + Bareiss, manifest commit 39665854; blind re-extraction byte-identical (b41027e1)"
+ },
+ "published_bit112_resolution_blob_sha1": "317876ada7bdb23d158ddebce6a0876475bebd3e",
+ "published_raw_blob_sha1": {
+  "class2-lane-cost66c-raw-batch1-20261116.jsonl": "1ee1146df8ef8ef666df96a69732feabfc87c2fb",
+  "class2-lane-cost66c-raw-batch2-20261116.jsonl": "b598d6ccff9c93deb5739e96e3b32ce9a110661c",
+  "class2-lane-cost66c-raw-batch3-20261116.jsonl": "c3a85aca605061fafbc19ce220923386f87c9064",
+  "class2-lane-cost66c-raw-batch4-20261116.jsonl": "5ff20e15a8d892e930bda28b3198765b9e0d6f57",
+  "class2-lane-cost66c-raw-batch5-20261116.jsonl": "5899ba17b7d5ee35da2a4716c28a85973d90f797",
+  "class2-lane-cost66c-raw-batch6-20261116.jsonl": "8d84f6cba95ab80eb397b4ea3a3494947b2b7e54",
+  "class2-lane-cost66c-raw-batch7-20261116.jsonl": "a805e4101fa657c6b6b2ad029691f06088d31986",
+  "class2-lane-cost66c-raw-batch8-20261116.jsonl": "ec9adcd267c2943aac144444b43b790a8cc225fe"
+ },
+ "row": "head-1441 third-ranked cheapest open row, cost 66, shared class-2 parent 00000000000000003800000008002000, 66 legal candidates, 7 pre-swept REFUTED transfers excluded, 59 swept bits (bit 112 resolved at cap 80M)",
+ "saturation_context": "bit 112 at 12,574,920 nodes and bit 30 at 8,806,920 nodes are node-exact under v17 (fb-unsaturated), while bit 117 at only 3,121,390 nodes saturated lightly: saturation depends on fb unique-triple diversity, not on raw node count, confirming that node-count thresholds are only an empirical guide",
+ "saturation_detected_bits": [
+  {
+   "bit": 117,
+   "nodes_delta": -22,
+   "v16_nodes": 3121390,
+   "v17_nodes": 3121368,
+   "verdict": "REFUTED-D10 unchanged"
+  }
+ ],
+ "schema": "n11-class2-lane-cost66c-v17-full-row-recheck-20261117-v1",
+ "total_nodes_v16": 84180263,
+ "total_nodes_v17": 84180241,
+ "v17_raw_files": [
+  "class2-lane-cost66c-v17-recheck-batch1-20261117.jsonl",
+  "class2-lane-cost66c-v17-recheck-batch2-20261117.jsonl",
+  "class2-lane-cost66c-v17-recheck-batch3-20261117.jsonl",
+  "class2-lane-cost66c-v17-recheck-batch4-20261117.jsonl",
+  "class2-lane-cost66c-v17-recheck-batch5-20261117.jsonl",
+  "class2-lane-cost66c-v17-recheck-batch6-20261117.jsonl",
+  "class2-lane-cost66c-v17-recheck-batch7-20261117.jsonl",
+  "class2-lane-cost66c-v17-recheck-batch8-20261117.jsonl",
+  "class2-lane-cost66c-v17-recheck-bit112-cap80m-20261117.jsonl",
+  "class2-lane-cost66c-v17-bit117-order-matrix-20261117.jsonl"
+ ],
+ "verdict_flips": [],
+ "win_bits_v17": [
+  73,
+  75,
+  79,
+  87,
+  96,
+  97,
+  112
+ ]
+}
