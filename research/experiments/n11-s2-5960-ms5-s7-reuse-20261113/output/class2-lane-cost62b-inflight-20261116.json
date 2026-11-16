@@ -1,8 +1,8 @@
 {
- "schema": "n11-class2-lane-cost62b-inflight-20261116-v1",
- "title": "n11 class2-lane cost-62b sweep in flight: the unswept edge-62 child 00000000000000801282020000000000 at the post-cost-60c canonical head 1410 (dual class-1+class-2 demand; next cheapest cross-cover neighbor of the STERILE cost-70j child)",
+ "schema": "n11-class2-lane-cost62b-completed-20261116-v2",
+ "title": "n11 class2-lane cost-62b sweep completed STERILE: the unswept edge-62 child 00000000000000801282020000000000 at the post-cost-60c canonical head 1410 (dual class-1+class-2 demand; next cheapest cross-cover neighbor of the STERILE cost-70j child)",
  "date": "2026-11-16",
- "status": "in flight by the n11 long-term lane session (cost-60c fold continuation)",
+ "status": "completed STERILE on 2026-11-16 by the long-term lane session: the full raw sweep of the 62 legal candidates is published (10 v16 raw batches + determinism rerun + v15 crosscheck), independently audited - 0 WIN7-D10, 62 REFUTED-D10, 0 capped, 34,617,690 candidate nodes, 10 per-batch d6 pilots at 3402 nodes; the child is STERILE (unclosable by depth-10 WIN7 receipts from its own row - NOT a LOSS proof); both cross-cover roots for the STERILE cost-70j child (bits 21 and 109) are REFUTED-D10, so the 70j row is NOT closed by this neighbor either - its cross-cover route via this child is exhausted (negative fact only); no certificates, no fold, canonical head 1410 unchanged; 11x11 empty board remains UNKNOWN",
  "claimed_by": "n11 long-term lane session (cost-60c cross-cover continuation)",
  "s6_child": "00000000000000801282020000000000",
  "s6_s7_edge_cost": 62,
@@ -104,5 +104,110 @@
  "motivation_cross_cover": "this child is the next cheapest unswept one-stone-replacement neighbor of the STERILE cost-70j child 00000000000000801282000000200000 (a remaining row, edge 70, of the best coverable class-2 S5 00000000000000801202000000200000, 3 rows / 209, all three rows STERILE by their own-row sweeps 65k / 74h / 70j). The cost-60c attempt failed (its unique cross-cover root, bit 119, is REFUTED-D10). TWO of this child's 62 legal candidate roots cover the 70j child: bit 21 (root 00000000000000801282020000200000) and bit 109 (root 00002000000000801282020000000000). A WIN7-D10 verdict for either closes the 70j row via the standard marginal (cross-cover) mechanism. This claim does NOT assert the 70j row is closable - only that this sweep tests its two remaining cover roots of this neighbor.",
  "demand_verification": "re-derived at head 1410 by prep_claim_cost62b_20261116.py (runpy of the published cost-60c fold script, which internally reproduces the cost-75e chain head 1407 and the cost-60c fold byte-identically incl. all CONTROLs, then re-derivation): exact-integer D4 canonicalization of the six one-stone deletions of the child (stones [41,49,55,57,60,71]) gives exactly two open parents - del 55 -> class-2 S5 00000000000000801202020000000000 (49 rows / 3360), del 57 -> class-1 S5 00000000000000801082020000000000 (73 rows / 5489); the other four deletions are closed rows; legal candidates enumerated independently (62) and the covering roots for the 70j child identified by canonical covers over all 62 candidates x 7 deletions (bits 21 and 109)",
  "coordination": "this child is NOT a row of the in-flight second-candidate-S5 lane (5 rows / 364, rows 64/71 STERILE + 76c in-flight + 76d/77e fold-pending), NOT a row of the class-4 best-S5 lane (00000000020000003800000080000000, whose 18 rows are all STERILE per the parallel cost-87 sweep but open), and not part of the 354-root unique S7 worklist measurement lane; no sweep record and no prior claim reference this child hex; distinct from the already-swept cost-62a child 00000000040000003800000008100000 (different child hex)",
- "bookkeeping_only_note": "bookkeeping claim only; 11x11 empty board / two-stone root {49,60} / S2 {59,60} / class 1 / class 2 / class 4 all remain UNKNOWN; REFUTED-D10 is not a LOSS proof; STERILE is not a LOSS proof"
+ "bookkeeping_only_note": "bookkeeping claim only; 11x11 empty board / two-stone root {49,60} / S2 {59,60} / class 1 / class 2 / class 4 all remain UNKNOWN; REFUTED-D10 is not a LOSS proof; STERILE is not a LOSS proof",
+ "results": {
+  "candidates": 62,
+  "win7_d10_bits": [],
+  "refuted_d10_count": 62,
+  "capped_count": 0,
+  "candidate_nodes": 34617690,
+  "pilots_3402": 10,
+  "batches": 10,
+  "batch_bit_lists": {
+   "1": [
+    4,
+    0,
+    1,
+    3,
+    12,
+    15,
+    50
+   ],
+   "2": [
+    32,
+    6,
+    8,
+    9,
+    10,
+    29,
+    73
+   ],
+   "3": [
+    43,
+    11,
+    13,
+    14,
+    17,
+    18,
+    21
+   ],
+   "4": [
+    45,
+    22,
+    26,
+    28,
+    31,
+    33,
+    67
+   ],
+   "5": [
+    52,
+    54,
+    77,
+    78,
+    84,
+    86,
+    87
+   ],
+   "6": [
+    72,
+    88,
+    89,
+    92,
+    94,
+    97,
+    98
+   ],
+   "7": [
+    99,
+    100,
+    101,
+    102,
+    103,
+    105,
+    106
+   ],
+   "8": [
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114
+   ],
+   "9": [
+    116,
+    117,
+    118,
+    119,
+    120
+   ],
+   "10": [
+    42
+   ]
+  },
+  "heaviest_bits_nodes": {
+   "114": 1701321,
+   "105": 1699567,
+   "43": 1562851,
+   "52": 1402441,
+   "32": 1345798,
+   "45": 1310282
+  },
+  "determinism_rerun": "class2-lane-cost62b-v16-determinism-rerun-20261116.jsonl (batch 5, fresh process, node-exact ignoring ms)",
+  "v15_crosscheck": "class2-lane-cost62b-v15-crosscheck-20261116.jsonl (single foreground invocation, pilot d6 5949 nodes; anchors 21/109/114/105/0 all loss=false, agreeing with v16)",
+  "sweep_audit": "class2-lane-cost62b-sweep-audit-20261116.json (independent stdlib re-derivation; all checks pass; byte-identical on rerun)"
+ },
+ "cross_cover_outcome": "the sweep tested the two candidate roots of this child that cover the STERILE cost-70j child 00000000000000801282000000200000: bit 21 (root 00000000000000801282020000200000, 218,394 v16 nodes / 482,514 v15 nodes) and bit 109 (root 00002000000000801282020000000000, 723,379 v16 nodes / 1,777,172 v15 nodes). Both REFUTED-D10 - the 70j row is NOT closed by this neighbor; its cross-cover route via this child is exhausted. Together with the cost-60c negative fact (bit 119 REFUTED), the two cheapest one-stone-replacement neighbors of the 70j child are both exhausted. The 70j row remains open; next candidates are the 65k-child (cost 64) and 74h-child (cost 65) neighborhoods, or evidence beyond depth 10. NOT a LOSS proof for any position."
 }
