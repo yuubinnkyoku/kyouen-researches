@@ -1,0 +1,28 @@
+{
+  "schema": "two-token-z6-y5-audit-v1",
+  "claim": "H(R;(x,5);6) is given by the complete formula for all x>=5,R>=0",
+  "classification": "finite-independent-audit-not-proof",
+  "counts": {
+    "direct_recurrence_formula_anchor_checks": 3003,
+    "option_signature_checks": 2022946,
+    "mex_identity_checks": 2022946,
+    "odd_parent_option_bound_checks": 1011972,
+    "even_parent_value_bound_checks": 1010974,
+    "three_family_value2_specialization_checks": 1996,
+    "tail_checks": 129740,
+    "fixed_seed_random_tail_checks": 2000
+  },
+  "total_checks": 6205577,
+  "ordered_engine_cache": {
+    "hits": 69496,
+    "misses": 41172
+  },
+  "canonical_engine_cache": {
+    "hits": 67074,
+    "misses": 39776
+  },
+  "seed": 20261117,
+  "failures": [],
+  "pass": true,
+  "sha256_without_hash_field": "454bbae7f1da7bac48a4f5be9ddaf4ab7a64916a2630be70f9b93d20a1b6c6d7"
+}
