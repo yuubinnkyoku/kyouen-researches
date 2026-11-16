@@ -1,0 +1,207 @@
+{
+ "schema": "n11-class2-lane-cost65n-win2-certificates-independent-verification-20261116-v1",
+ "date": "2026-11-16",
+ "starting_main": "373bcdd9",
+ "method": "second independent verification of the two cost-65n WIN7-D10 certificates (bits 90/117 of child 00000000000000801202010000800000, published by the parallel lane in commits 57ab8ed5/15c9b66b/373bcdd9): blind extraction from the published generic blind driver scripts/cert_driver65j.ts driving the repo-verbatim class4_child1_cert_extractor_exact_v16.ts with an empty kill table, moves re-enumerated independently by scripts/legal_candidates.py (51/49), 4 chunks per root (12/13/13/13 and 13/12/12/12), rows sorted-unique and the n11-terminal-strategy-v1 header + root line prepended (published chunk convention); the published certificates were downloaded but never read by the extraction; assembled whole certs compared byte-identical AFTER the extraction; both published independent verifiers re-run in this environment (BigInt 3x3 cofactor + exact Bareiss 4x4), all statistics cross-checked against the parallel lane's manifest class2-lane-cost65n-win2-certificates-20261116.json",
+ "certificates": [
+  {
+   "bit": 90,
+   "root_hex": "00000000040000801202010000800000",
+   "root_mobility_legal_candidates_py": 51,
+   "chunk_summaries": [
+    {
+     "chunk": 1,
+     "n_moves": 12,
+     "rows": 10970,
+     "extraction_nodes": 478972,
+     "fbt_drops": 0,
+     "ms": 6314
+    },
+    {
+     "chunk": 2,
+     "n_moves": 13,
+     "rows": 10535,
+     "extraction_nodes": 586022,
+     "fbt_drops": 0,
+     "ms": 6710
+    },
+    {
+     "chunk": 3,
+     "n_moves": 13,
+     "rows": 12369,
+     "extraction_nodes": 1016188,
+     "fbt_drops": 0,
+     "ms": 6923
+    },
+    {
+     "chunk": 4,
+     "n_moves": 13,
+     "rows": 9698,
+     "extraction_nodes": 357305,
+     "fbt_drops": 0,
+     "ms": 4590
+    }
+   ],
+   "rows_pre_union": 43572,
+   "rows_sorted_unique": 35627,
+   "extraction_nodes_chunked": 2438487,
+   "fbt_drops_total": 0,
+   "fatal": null,
+   "assembled_whole": {
+    "bytes": 1285412,
+    "md5": "616b15e76809b3e31064986d804d29a5",
+    "git_blob_sha": "c2460e597072493195dbd738335ca7b36bdbcf53"
+   },
+   "published_whole_bytes": 1285412,
+   "byte_identical": true,
+   "bigint_verify_rerun": {
+    "verdict": "WIN7 certificate independently verified",
+    "exit": 0,
+    "root_stones": 7,
+    "root_safe": true,
+    "root_mobility": 51,
+    "strategy_rows": 35627,
+    "rows_sorted_unique": true,
+    "subroots_passed": 51,
+    "union_missing": 0,
+    "union_extra": 0,
+    "winner_states": 47526,
+    "loser_states": 14036,
+    "terminal_count": 12139,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "visited_states_across_subroots": 73701
+   },
+   "bareiss_verify_rerun": {
+    "exit": 0,
+    "root_check": {
+     "stones": 7,
+     "loserMobility": 51
+    },
+    "rows": 35627,
+    "subroots_verified": 51,
+    "winner_states_seen_across_subroots": 73701,
+    "terminal_count": 12139,
+    "terminal_range": [
+     13,
+     17
+    ]
+   }
+  },
+  {
+   "bit": 117,
+   "root_hex": "00200000000000801202010000800000",
+   "root_mobility_legal_candidates_py": 49,
+   "chunk_summaries": [
+    {
+     "chunk": 1,
+     "n_moves": 13,
+     "rows": 6004,
+     "extraction_nodes": 159030,
+     "fbt_drops": 0,
+     "ms": 2899
+    },
+    {
+     "chunk": 2,
+     "n_moves": 12,
+     "rows": 6267,
+     "extraction_nodes": 242057,
+     "fbt_drops": 0,
+     "ms": 3063
+    },
+    {
+     "chunk": 3,
+     "n_moves": 12,
+     "rows": 5996,
+     "extraction_nodes": 157555,
+     "fbt_drops": 0,
+     "ms": 2979
+    },
+    {
+     "chunk": 4,
+     "n_moves": 12,
+     "rows": 6883,
+     "extraction_nodes": 154712,
+     "fbt_drops": 0,
+     "ms": 2588
+    }
+   ],
+   "rows_pre_union": 25150,
+   "rows_sorted_unique": 20047,
+   "extraction_nodes_chunked": 713354,
+   "fbt_drops_total": 0,
+   "fatal": null,
+   "assembled_whole": {
+    "bytes": 721989,
+    "md5": "9a1e0abe9602b25e5a3dd0ae1bbf4b59",
+    "git_blob_sha": "ac0ea37d6d5ace282ef6383f8998dbb6ca8832a1"
+   },
+   "published_whole_bytes": 721989,
+   "byte_identical": true,
+   "bigint_verify_rerun": {
+    "verdict": "WIN7 certificate independently verified",
+    "exit": 0,
+    "root_stones": 7,
+    "root_safe": true,
+    "root_mobility": 49,
+    "strategy_rows": 20047,
+    "rows_sorted_unique": true,
+    "subroots_passed": 49,
+    "union_missing": 0,
+    "union_extra": 0,
+    "winner_states": 28468,
+    "loser_states": 9004,
+    "terminal_count": 6753,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "visited_states_across_subroots": 44225
+   },
+   "bareiss_verify_rerun": {
+    "exit": 0,
+    "root_check": {
+     "stones": 7,
+     "loserMobility": 49
+    },
+    "rows": 20047,
+    "subroots_verified": 49,
+    "winner_states_seen_across_subroots": 44225,
+    "terminal_count": 6753,
+    "terminal_range": [
+     13,
+     17
+    ]
+   }
+  }
+ ],
+ "totals": {
+  "certificates_verified": 2,
+  "all_byte_identical": true,
+  "bigint_pass": true,
+  "bareiss_pass": true
+ },
+ "chunking_observation": "extraction node totals depend on chunk composition (parallel lane single-chunk per bit: 3,539,855 nodes; this lane 4 chunks per bit: 3,151,841 nodes, -10.97%), while the sorted-unique row set and hence the assembled certificate are chunk-invariant; recorded as an experimental fact about the extractor, not a discrepancy",
+ "interpretation_guard": "WIN7 certificates prove a first-player win within depth 10 from the individual 7-stone roots only; REFUTED-D10 is not a LOSS proof; 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60} and classes 1/2/4 remain UNKNOWN",
+ "manifest_agreement": {
+  "manifest": "class2-lane-cost65n-win2-certificates-20261116.json (commit 373bcdd9)",
+  "rows": 55674,
+  "my_rows": 55674,
+  "rows_match": true,
+  "sub_roots": 100,
+  "my_sub_roots": 100,
+  "sub_roots_match": true,
+  "winner_states": 75994,
+  "winner_match": true,
+  "loser_states": 23040,
+  "loser_match": true,
+  "terminal_count": 18892,
+  "terminal_match": true,
+  "cert_bytes": 2007401,
+  "cert_bytes_match": true,
+  "manifest_extraction_nodes_single_chunk": 3539855,
+  "my_extraction_nodes_4_chunk": 3151841
+ }
+}
