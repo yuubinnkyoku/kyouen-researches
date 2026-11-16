@@ -1,8 +1,8 @@
 {
-  "schema": "n11-class2-lane-cost76d-inflight-20261116-v1",
+  "schema": "n11-class2-lane-cost76d-fold-complete-20261116-v2",
   "title": "n11 class2-lane cost-76d sweep in flight: second coverable class-2 candidate S5, second cost-76 row",
   "date": "2026-11-16",
-  "status": "completed",
+  "status": "FOLD COMPLETE on 2026-11-16 by the long-term lane session: the two WIN7-D10 receipts (bits 19 and 49, roots published and dual-verified as certificates) are folded together with the two cost-77e receipts on the head-1450 basis (independent reconstruction of the published fold chain state; every input blob-pinned) - the child row closes in the manifest exactly once (child closed by bit 19) and the shared second-coverable class-2 S5 loses both in-flight rows; every fold result agrees field-by-field with the pre-registration published before the fold (git blob d150d3118227f1f0ed1b7b96a83c0ac96521bd27, commit 40d1e16b591242b5239da163dd9281f62aec2584); new canonical head 1452/174/6396/506144/4669/370058; conflict census vs the 771 folded roots (756 D4 canons) at 1450: zero overlaps, zero WIN/LOSS conflicts (the one cross-lane shared orbit 00000000040000809002000000004080 = 76d bit 86 == 77e bit 7 is REFUTED-D10 in both sweeps, agreement); all v1 fields preserved (v1 restorable byte-identically from the fold record); 11x11 empty board, two-stone roots {49,60} and {59,60}, S2 {59,60}, and classes 1/2/4 all remain UNKNOWN",
   "claimed_by": "n11 long-term class2 lane (cost-70g reconciliation round)",
   "s5": "00000000000000801202000040000000",
   "s6_child": "00000000040000003800080008000000",
@@ -239,5 +239,65 @@
       "rows_total": 78458
     },
     "verdict_semantics_note": "the sweep proves WIN7-D10 for the two certified roots and REFUTED-D10 (no WIN7 within depth 10, NOT a LOSS proof) for the other 74; the receipt fold onto the reconciled canonical head 1405 is published separately; 11x11 empty board UNKNOWN"
+  },
+  "supersedes": "v1 (completed claim, git blob sha d2e40a3e4c3ff5002395c7dcf46d50977c3a4964, commit 99848fd309b32f26cfe91f8fda0be03568425412, all fields preserved)",
+  "fold": {
+    "schema": "n11-class2-lane-cost76d-77e-fold-20261116-v1",
+    "fold_json": "class-frontier-cost76d77e-receipts-recompute-20261116.json (git blob sha 8d4bc622f9da22b8754f2e398e5481359656d956)",
+    "preregistration": "class2-lane-cost76d-77e-fold-preregistration-20261116.json (git blob sha d150d3118227f1f0ed1b7b96a83c0ac96521bd27, commit 40d1e16b591242b5239da163dd9281f62aec2584, published before the fold; field-by-field agreement asserted by the fold script)",
+    "head_before": "1450/174/6398/506297/4671/370211",
+    "head_after": "1452/174/6396/506144/4669/370058",
+    "receipts": 4,
+    "win_bits": {
+      "cost-76d": [
+        19,
+        49
+      ],
+      "cost-77e": [
+        37,
+        69
+      ]
+    },
+    "root_hexes": [
+      "00000000040000003800080008080000",
+      "00000000040000003802080008000000",
+      "00000000040000809002002000004000",
+      "00000000040000a09002000000004000"
+    ],
+    "total_marginal": 19,
+    "total_marginal_in_manifest": 2,
+    "children_closed_by_bit": {
+      "cost-76d": 19,
+      "cost-77e": 37
+    },
+    "parent_row_incidences": 4,
+    "parent_edge_cost_delta": 306,
+    "parents_after": {
+      "00000000000000003800000208000000": {
+        "s5_hex": "00000000000000003800000208000000",
+        "classes": 2,
+        "rows": 64,
+        "edge_cost": 5282,
+        "rows_before": 65,
+        "edge_cost_before": 5358
+      },
+      "00000000000000801202000000040000": {
+        "s5_hex": "00000000000000801202000000040000",
+        "classes": 2,
+        "rows": 71,
+        "edge_cost": 5883,
+        "rows_before": 72,
+        "edge_cost_before": 5960
+      },
+      "00000000000000801202000040000000": {
+        "s5_hex": "00000000000000801202000040000000",
+        "classes": 2,
+        "rows": 3,
+        "edge_cost": 211,
+        "rows_before": 5,
+        "edge_cost_before": 364
+      }
+    },
+    "conflict_census": "zero overlaps with the 771 folded roots; cross-lane orbit 00000000040000809002000000004080 = 76d bit 86 == 77e bit 7, both REFUTED-D10, agreement"
   }
 }
