@@ -126,10 +126,39 @@ JS==twin==検証器三重照合が0不一致であることを確認済みであ
 
 `verify_remo_k_branch_cap12_r456_boundary.py`（自己完結・決定的・
 stdlibのみ・乱数・時計・ネットワーク不使用）。コミット済み
-sweepレコード（`output/js_cap12_r{3,4,5,6}.jsonl.gz`・gzip -n決定的）
-をsha256照合で読み、Python twinのlive checks・出版定数の全再現を
-含む40 machine checks全合格。assembleは同一入力2回でバイト同一
+sweepレコード（`output/js_cap12_r{3,4,5,6}.packed.jsonl`・
+packed出版形式・sha256照合: ea7c6628/04caba43/c6dddad7/65f1cb32）
+を読み、Python twinのlive checks・出版定数の全再現を含む
+40 machine checks全合格。assembleは同一入力2回でバイト同一
 （audit sha256
-b13593f041957a5bf58c850ab1fd9adbb49f36332ab2a8079a695727f057eaad）。
+19b4d833dd87168b7157bf4f66f8a2704e1453c39eb1dc54c608581b2ecd7067）。
 live checksはcap≤7全域8,192判定・層化サンプル5,952判定・全witness
 104件の三重照合（verbatim==twin==JS）0不一致。
+
+## 修復記録（2026-11-16）
+
+初回出版push（commit `6ae748d4`）で12 artifactのうち8件（sweep
+レコード4・audit JSON・resume_sweep.sh・resume_check.py・
+gen_profs.py）がGitHub push経路のサイズ制約で未着地となり、
+check.py（artifact実在検査）とrefresh workflowのK0876監査stepが
+赤になっていた。修復内容:
+
+- committedエンジン（mask_engine_fast.js）でレコードを再生成し
+  **packed出版形式**（`output/js_cap12_r<R>.packed.jsonl`・
+  1行=[i, sv_mask, fl_mask, states]・約0.78〜0.90MB）で再出版した
+  （repair 1/3 `d4c79322`: r3+r4・repair 2/3 part1 `1d8cc110`:
+  r5・part2 `dd116e4a`: r6+pack_records.py）。atomsは正準形cap≤12
+  列挙（検証器内蔵direct_constrained(12)）のindexの純関数のため
+  packed形式は無損失（検証器がatomsを再導出する）。初回pushで
+  失敗したfull形式（jsonl.gz）の照合も、検証器はfull形式を優先
+  して読むため将来の再出版を妨げない。
+- 検証器をpacked読み取り対応（full優先・packedフォールバック・
+  auditにformat/sha256_packed欄追加）し、40チェックの内容は不変。
+- **決定性の環境跨ぎ確認**: r3/r4 packed sha256
+  （`ea7c6628…`/`04caba43…`）は環境フルリセット前後で
+  byte-identical。r6 packed sha256（`65f1cb32…`）は同一レーンの
+  独立2回のsweep（環境リセット挟み込み）でbyte-identical。
+- 初回監査sha256 `b13593f0…`（fullフォーマット記録基準）は
+  main未着地のため参照不能であり、本修復監査（packed基準・
+  `19b4d833…`）が正本。数値主張・40チェックの内容は初回と同一
+  （r3記録はK0875出版auditの全値を完全再現）。

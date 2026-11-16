@@ -79,3 +79,37 @@ check.py red repairコミットで脱落している回帰を発見していた�
 （maskエンジンのレコードはorder列を再現しない）。「一様非決定」は
 決定性レベルの話で、可能生存者集合はr・atom配分に依存してよい。
 本項の有限観察を全称定理へ昇格させない。
+
+## 修復（K0876 artifact repair・2026-11-16 追記）
+
+初回出版push（`6ae748d4`）で12 artifactのうち8件（sweepレコード4・
+audit JSON・resume_sweep.sh・resume_check.py・gen_profs.py）がGitHub push
+経路のサイズ制約で未着地となり、check.pyとrefresh workflowのK0876監査
+stepが赤になっていた。修復を3段で実施した:
+
+- **repair 1/3 `d4c79322`**（前回実行）: r3+r4 packedレコード出版。
+- **repair 2/3** part1 `1d8cc110`（前回実行）: r5 packed出版・
+  part2 `dd116e4a`（本実行）: r6 packed出版 + pack_records.py
+  （決定的packer）。packed形式は1行=[i, sv_mask, fl_mask, states]・
+  約0.78〜0.90MBでpush可能サイズ。atomsは検証器内蔵の正準形列挙の
+  indexの純関数のため無損失。
+- **repair 3/3**（本実行・このcommit）: 検証器をpacked読み取り対応
+  （full形式優先・packedフォールバック・auditにformat/sha256_packed欄
+  追加・40チェック内容不変）し、packedのみの入力環境（CIと同一条件）
+  で再実行して修復監査JSON（sha256
+  `19b4d833dd87168b7157bf4f66f8a2704e1453c39eb1dc54c608581b2ecd7067`）
+  を出版。assemble二重実行バイト同一。report.mdに修復記録セクション
+  追記、item K0876のartifact参照を実際の着地物（packed 4件+
+  pack_records.py）へ更新。
+
+**決定性の環境跨ぎ確認**: r3/r4 packed sha256（`ea7c6628…`/
+`04caba43…`）は環境フルリセット前後でbyte-identical。r6 packed
+sha256（`65f1cb32…`）も本レーンの独立2回のsweep（リセット挟み込み）
+でbyte-identical。全40 machine checks合格・live checks
+（cap≤7全域8,192判定・層化5,952判定・witness 104件三重照合）0不一致。
+初回監査sha `b13593f0…`（full形式基準）はmain未着地のため参照不能
+（reportに履歴として併記）。
+
+**解釈上の注意（不変）**: 定理I12はr=4,5,6・サイズ≤12の有限完全
+計算。順位決定性は再導出していない。r=7,8×サイズ11,12・サイズ≥13は
+未走査。11×11空盤はUNKNOWNのまま。

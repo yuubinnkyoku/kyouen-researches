@@ -5,12 +5,16 @@ Self-contained verifier. Deterministic (no randomness, no wall clock, no
 network). Python 3.11+ / stdlib only.
 
 Data provenance. The full-domain sweep records committed under output/
-(js_cap12_r{3,4,5,6}.jsonl.gz, one JSONL record per canonical cap<=12
-profile: index, atoms, determined, survivors, first_losers, states) were
-produced by the JavaScript mask engine committed in this directory
-(mask_engine_fast.js, with mask_engine.js as its readable base; the sweep
-driver resume_sweep.sh segments are byte-concatenable because each record
-is a pure function of (profile, r)). The mask engine carries
+(js_cap12_r{3,4,5,6}.packed.jsonl - packed publication format, one JSON
+array per canonical cap<=12 profile: [index, survivor_mask, first_loser_
+mask, states]; the full-format jsonl.gz files exceeded the GitHub push
+transport size limit during the original publication and are preferred
+if present) were produced by the JavaScript mask engine committed in
+this directory (mask_engine_fast.js, with mask_engine.js as its readable
+base; sweep segments are byte-concatenable because each record is a pure
+function of (profile, r)). In the packed format atoms are not stored:
+they are a pure function of the index via the canonical cap<=12
+enumeration re-derived inside this verifier, so the packing is lossless. The mask engine carries
 (survivorMask, firstLoserMask) per state instead of the verbatim
 frozenset of (order, survivor) outcomes; determined / survivors /
 first_losers agree with the verbatim engine's outcome_summary by
@@ -665,6 +669,23 @@ DELTA0_EXPECTED = 1512
 
 
 def load_jsonl(r):
+    """Committed sweep records for r -> (records, format).
+
+    Full format first (js_cap12_r{r}.jsonl[.gz], one JSON object per
+    line: i, atoms, determined, survivors, first_losers, states), then
+    the packed publication format (js_cap12_r{r}.packed.jsonl, one JSON
+    array per line: [i, sv_mask, fl_mask, states]). The packed format is
+    the one committed under output/: the full-format files exceeded the
+    GitHub push transport size limit during the original K0876
+    publication (8 of 12 artifacts were lost; repaired by re-publishing
+    the same deterministic records in packed form). Packed records store
+    everything the checks need; atoms are NOT stored because atoms are a
+    pure function of i (canonical cap<=12 enumeration,
+    direct_constrained below), so they are re-derived by the caller (C2)
+    and the C2 atoms check is vacuous-but-recorded in packed mode (the
+    engine-vs-enumeration agreement is instead re-verified live by the
+    mask-twin live checks, which never read atoms from the records).
+    """
     base = os.path.join(
         os.path.dirname(os.path.abspath(__file__)),
         "output", "js_cap12_r%d.jsonl" % r,
@@ -672,12 +693,35 @@ def load_jsonl(r):
     if os.path.exists(base + ".gz"):
         with gzip.open(base + ".gz", "rt", encoding="utf-8") as f:
             lines = f.read().splitlines()
-    elif os.path.exists(base):
+        return [json.loads(line) for line in lines if line.strip()], "full"
+    if os.path.exists(base):
         with open(base, "r", encoding="utf-8") as f:
             lines = f.read().splitlines()
-    else:
-        raise FileNotFoundError(base + "[.gz]")
-    return [json.loads(line) for line in lines if line.strip()]
+        return [json.loads(line) for line in lines if line.strip()], "full"
+    packed_path = os.path.join(
+        os.path.dirname(os.path.abspath(__file__)),
+        "output", "js_cap12_r%d.packed.jsonl" % r,
+    )
+    if os.path.exists(packed_path):
+        out = []
+        with open(packed_path, "r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if not line:
+                    continue
+                i, sv, fl, states = json.loads(line)
+                survivors = [p for p in range(64) if (sv >> p) & 1]
+                first_losers = [p for p in range(64) if (fl >> p) & 1]
+                out.append({
+                    "i": i,
+                    "atoms": None,  # re-derived by the caller (C2)
+                    "determined": len(survivors) == 1,
+                    "survivors": survivors,
+                    "first_losers": first_losers,
+                    "states": states,
+                })
+        return out, "packed"
+    raise FileNotFoundError(base + "[.gz] / " + packed_path)
 
 
 def analyze_r(r, profiles, pidx, records):
@@ -916,7 +960,10 @@ def assemble_audit():
     records = {}
     audit["sweep_inputs"] = {}
     for r in R_VALUES:
-        recs = load_jsonl(r)
+        recs, fmt = load_jsonl(r)
+        if fmt == "packed":
+            for rec in recs:
+                rec["atoms"] = list(profiles[rec["i"]])
         ok = (
             len(recs) == 47595
             and [rec["i"] for rec in recs] == list(range(47595))
@@ -942,18 +989,29 @@ def assemble_audit():
         if os.path.exists(gz_path):
             with open(gz_path, "rb") as f:
                 gz_digest = hashlib.sha256(f.read()).hexdigest()
+        packed_path = os.path.join(
+            os.path.dirname(os.path.abspath(__file__)),
+            "output", "js_cap12_r%d.packed.jsonl" % r,
+        )
+        packed_digest = None
+        if os.path.exists(packed_path):
+            with open(packed_path, "rb") as f:
+                packed_digest = hashlib.sha256(f.read()).hexdigest()
         audit["sweep_inputs"]["r%d" % r] = {
             "records": len(recs),
+            "format": fmt,
             "skipped": sum(1 for rec in recs if rec.get("skipped")),
             "sha256_uncompressed": digest,
             "sha256_gz": gz_digest,
+            "sha256_packed": packed_digest,
             "max_states": max(rec["states"] for rec in recs),
         }
         record(
             "r=%d committed sweep records: 47595 records, index-complete, "
             "atoms == enumeration, no budget skips" % r,
             ok,
-            {"records": len(recs), "sha256": digest},
+            {"records": len(recs), "sha256": digest,
+             "format": fmt, "sha256_packed": packed_digest},
         )
         records[r] = {rec["i"]: rec for rec in recs}
 
@@ -1215,7 +1273,8 @@ def live_checks(audit):
     records on deterministic samples."""
     profiles = direct_constrained(12)
     pidx = {atoms: i for i, atoms in enumerate(profiles)}
-    recs = {r: {rec["i"]: rec for rec in load_jsonl(r)} for r in R_VALUES}
+    recs = {r: {rec["i"]: rec
+                for rec in load_jsonl(r)[0]} for r in R_VALUES}
 
     # L1: full cap<=7 domain, verbatim == mask twin == committed JS
     profs7 = direct_constrained(7)

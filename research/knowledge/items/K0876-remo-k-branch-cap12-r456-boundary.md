@@ -36,36 +36,30 @@ artifacts:
   note: 定理I12主張・センサス表・剰余レンズ・アンカー・savedColバグ修正記録・限界
 - path: research/experiments/remo-k-branch-cap12-r456-boundary-20261116/verify_remo_k_branch_cap12_r456_boundary.py
   role: verifier
-  note: committed records照合・Python twin live checks・出版定数埋込み・40機械チェック・assemble二重バイト同一
+  note: committed records照合（packed出版形式対応・full形式優先）・Python twin live checks・出版定数埋込み・40機械チェック・assemble二重バイト同一
 - path: research/experiments/remo-k-branch-cap12-r456-boundary-20261116/mask_engine_fast.js
   role: solver
-  note: r=3..6の決定的maskエンジン（savedCol退避バグ修正済み）
-- path: research/experiments/remo-k-branch-cap12-r456-boundary-20261116/resume_sweep.sh
+  note: r=3..6の決定的maskエンジン（savedCol退避バグ修正済み）・正準形プロファイル列挙は検証器内蔵のdirect_constrained(12)で再現
+- path: research/experiments/remo-k-branch-cap12-r456-boundary-20261116/pack_records.py
   role: solver
-  note: 実行環境制約下での分割再開スイープdriver
-- path: research/experiments/remo-k-branch-cap12-r456-boundary-20261116/resume_check.py
-  role: solver
-  note: スイープ進捗・レコード整合の再開前検査
-- path: research/experiments/remo-k-branch-cap12-r456-boundary-20261116/gen_profs.py
-  role: solver
-  note: 正準形47,595プロファイルの決定的生成
-- path: research/experiments/remo-k-branch-cap12-r456-boundary-20261116/output/js_cap12_r3.jsonl.gz
+  note: full形式レコード→packed出版形式の決定的packer（初回pushの輸送障害に対する修復で使用）
+- path: research/experiments/remo-k-branch-cap12-r456-boundary-20261116/output/js_cap12_r3.packed.jsonl
   role: data
-  note: r=3決定的sweepレコード47,595件（K0875クロスアーティファクト照合済み）
-- path: research/experiments/remo-k-branch-cap12-r456-boundary-20261116/output/js_cap12_r4.jsonl.gz
+  note: r=3決定的sweepレコード47,595件・packed形式[i,sv_mask,fl_mask,states]（K0875クロスアーティファクト照合済み・sha256 ea7c6628）
+- path: research/experiments/remo-k-branch-cap12-r456-boundary-20261116/output/js_cap12_r4.packed.jsonl
   role: data
-  note: r=4決定的sweepレコード47,595件
-- path: research/experiments/remo-k-branch-cap12-r456-boundary-20261116/output/js_cap12_r5.jsonl.gz
+  note: r=4決定的sweepレコード47,595件・packed形式（sha256 04caba43）
+- path: research/experiments/remo-k-branch-cap12-r456-boundary-20261116/output/js_cap12_r5.packed.jsonl
   role: data
-  note: r=5決定的sweepレコード47,595件
-- path: research/experiments/remo-k-branch-cap12-r456-boundary-20261116/output/js_cap12_r6.jsonl.gz
+  note: r=5決定的sweepレコード47,595件・packed形式（sha256 c6dddad7）
+- path: research/experiments/remo-k-branch-cap12-r456-boundary-20261116/output/js_cap12_r6.packed.jsonl
   role: data
-  note: r=6決定的sweepレコード47,595件
+  note: r=6決定的sweepレコード47,595件・packed形式（sha256 65f1cb32・環境リセット挟み独立2回でbyte-identical）
 - path: research/experiments/remo-k-branch-cap12-r456-boundary-20261116/output/remo_k_branch_cap12_r456_boundary_audit.json
   role: data
-  note: 40機械チェック・r=3..6センサス・分割・剰余レンズ・アンカーの全記録
+  note: 40機械チェック・r=3..6センサス・分割・剰余レンズ・アンカーの全記録（修復版・sha256 19b4d833）
 scope: "3枝REMO、r=4,5,6、枝サイズ≤12（正準形47,595プロファイル・1,365キー）の有限完全列挙。r=7,8×枝サイズ11,12の組合せと枝サイズ≥13は未走査。順位決定性は再導出していない。"
-evidence: "決定的JavaScript maskエンジンで生成したコミット済みsweepレコード（47,595件×r・gzip -n・sha256照合）を、Python mask twinのlive checks（cap≤7全域8,192判定・層化サンプル5,952判定・全witness 104件の三重照合0不一致）と出版定数の機械再現（K0864境界・分割・生存者・K0875 audit・K0859定理D表・K0872剰余対）で検証する単一検証器（stdlibのみ・決定的・assemble二重バイト同一）による40 machine checks全合格。"
+evidence: "決定的JavaScript maskエンジンで生成したコミット済みsweepレコード（47,595件×r・packed出版形式・sha256照合・初回pushの輸送障害はpacked形式での再出版とpacked読み取り検証器で修復済み）を、Python mask twinのlive checks（cap≤7全域8,192判定・層化サンプル5,952判定・全witness 104件の三重照合0不一致）と出版定数の機械再現（K0864境界・分割・生存者・K0875 audit・K0859定理D表・K0872剰余対）で検証する単一検証器（stdlibのみ・決定的・assemble二重バイト同一）による40 machine checks全合格。"
 ---
 
 ## 主張
