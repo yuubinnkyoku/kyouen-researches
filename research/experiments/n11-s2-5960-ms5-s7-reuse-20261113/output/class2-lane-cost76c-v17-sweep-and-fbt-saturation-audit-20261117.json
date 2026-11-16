@@ -1,0 +1,906 @@
+{
+  "schema": "n11-class2-lane-cost76c-fbt-saturation-v17-audit-20261117-v1",
+  "date": "2026-11-17",
+  "status": "engine-defect-found-root-caused-repaired; cost76c row verdict corrected (WIN7-D10 bits 61/99; bit 113 REFUTED-D10); 11x11 UNKNOWN",
+  "role": "Independent full re-run verification of the published cost76c raw sweep, v15 cross-engine check, discovery and root cause of the fbtOR cache saturation defect, v17 engine repair, and full v17 re-sweep of all 76 candidates.",
+  "basis": "latest main fetched at session start (audit commit 1de5c46a1c); published raw batches 1-10 and the published Python auditor are treated as immutable inputs",
+  "target": {
+    "s5": "00000000000000801202000040000000",
+    "s6_child": "00000000010000809002000001000000",
+    "legal_candidate_count": 76,
+    "canonical_head_at_sweep": "1452/174/6396/506144/4669/370058"
+  },
+  "input_blob_pins": {
+    "class4_child1_runner_v16.ts": "0a4a86f6828dc010c89ff17596054336a6b6091f",
+    "class4_child1_runner.ts(v15)": "8744fc65b6b7cac6bd561403ce4c749e01c51359",
+    "class4_child1_runner_v17.ts": "c132cc6425eee3feaeef1d697dd74f968cfedb59"
+  },
+  "evidence_blob_pins": {
+    "class2-lane-cost76c-independent-rerun-batch1-20261117.jsonl": "91d4b02295508fd36eec480e0fefb0a76227b7d1",
+    "class2-lane-cost76c-independent-rerun-batch2-20261117.jsonl": "3adee24f29c667a0ec1cf83f4a81f6b420a83b4e",
+    "class2-lane-cost76c-independent-rerun-batch3-20261117.jsonl": "63d3578e9bb22ee8b74f81d947ed7e33c465188e",
+    "class2-lane-cost76c-independent-rerun-batch4-20261117.jsonl": "0a9fb7eaaee64aedb4e863ee5b330cd56a30c4fe",
+    "class2-lane-cost76c-independent-rerun-batch5-20261117.jsonl": "4db84f3a22c6dd6224677ec3d978d2228a166ce0",
+    "class2-lane-cost76c-independent-rerun-batch6-20261117.jsonl": "d86da315fc1ae0535f99c4b7594df8c12f9c2457",
+    "class2-lane-cost76c-independent-rerun-batch7-20261117.jsonl": "16aceb180e16551353957af58b1b0cdcdec713de",
+    "class2-lane-cost76c-independent-rerun-batch8-20261117.jsonl": "d5832a08328d57eee524be1bcde7f96330fa15cf",
+    "class2-lane-cost76c-independent-rerun-batch9-20261117.jsonl": "001263d14784e26dbde27e8e239bf1bd7282fceb",
+    "class2-lane-cost76c-independent-rerun-batch10-20261117.jsonl": "fbba075c0b1f750240d2382b7762d09428137518"
+  },
+  "independent_rerun_v16": {
+    "engine": "v16 (blob 0a4a86f6...), fresh environment, same batch partitions, depth 10, cap 1e9, andclose 1",
+    "bits": 76,
+    "node_exact_bits": 76,
+    "pilots": "10/10 pilot_d6 loss=false nodes=3402",
+    "total_nodes": 141221576,
+    "conclusion": "publication fidelity confirmed: the published raw batches reproduce node-exactly (ms-only differences)"
+  },
+  "published_auditor_execution": {
+    "script": "scripts/audit_cost76c_raw_batches_20261117.py (first execution in a Python-capable environment; the published log had recorded the Python auditor as unexecuted)",
+    "checks_passed": 18,
+    "checks_total": 18,
+    "output_relation": "regenerated output is semantically equal to the published audit JSON after normalizing the key-name pair blob_sha1/raw_blob_sha1, role/note wording, and dict key order; all 18 check values and all numerical fields equal"
+  },
+  "v15_crosscheck": {
+    "engine": "v15 (blob 8744fc65...), depth 10, cap 1e9, andclose 1, fresh environment",
+    "bits": 76,
+    "verdict_agreement_bits": 75,
+    "pilots": "5/5 pilot_d6 loss=false nodes=5949 (plus 2 extra pilots in the andclose0 runs)",
+    "total_nodes": 444779818,
+    "disagreements": [
+      {
+        "bit": 113,
+        "v16_published": "WIN7-D10 (8174662 nodes)",
+        "v15": "REFUTED-D10 (16811999 nodes, uncapped)"
+      }
+    ]
+  },
+  "order_dependence": {
+    "matrix": [
+      {
+        "engine": "v16",
+        "andclose": 1,
+        "bit": 61,
+        "source": "published raw batches",
+        "loss": true,
+        "nodes": 752696
+      },
+      {
+        "engine": "v16",
+        "andclose": 1,
+        "bit": 99,
+        "source": "published raw batches",
+        "loss": true,
+        "nodes": 4168961
+      },
+      {
+        "engine": "v16",
+        "andclose": 1,
+        "bit": 113,
+        "source": "published raw batches",
+        "loss": true,
+        "nodes": 8174662
+      },
+      {
+        "engine": "v16",
+        "andclose": 0,
+        "bit": 113,
+        "source": "v16-bit113-andclose0.jsonl",
+        "loss": false,
+        "nodes": 9875922
+      },
+      {
+        "engine": "v16",
+        "andclose": 0,
+        "bit": 61,
+        "source": "v16-bits61-99-andclose0.jsonl",
+        "loss": true,
+        "nodes": 982127
+      },
+      {
+        "engine": "v16",
+        "andclose": 0,
+        "bit": 99,
+        "source": "v16-bits61-99-andclose0.jsonl",
+        "loss": false,
+        "nodes": 4738822
+      },
+      {
+        "engine": "v15",
+        "andclose": 1,
+        "bit": 61,
+        "source": "v15-win.jsonl",
+        "loss": true,
+        "nodes": 4301193
+      },
+      {
+        "engine": "v15",
+        "andclose": 1,
+        "bit": 99,
+        "source": "v15-win.jsonl",
+        "loss": true,
+        "nodes": 10649504
+      },
+      {
+        "engine": "v15",
+        "andclose": 1,
+        "bit": 113,
+        "source": "v15-win.jsonl",
+        "loss": false,
+        "nodes": 16811999
+      },
+      {
+        "engine": "v15",
+        "andclose": 0,
+        "bit": 113,
+        "source": "v15-bit113-andclose0.jsonl",
+        "loss": false,
+        "nodes": 16445119
+      },
+      {
+        "engine": "v15",
+        "andclose": 0,
+        "bit": 61,
+        "source": "v15-bits61-99-andclose0.jsonl",
+        "loss": true,
+        "nodes": 4587846
+      },
+      {
+        "engine": "v15",
+        "andclose": 0,
+        "bit": 99,
+        "source": "v15-bits61-99-andclose0.jsonl",
+        "loss": false,
+        "nodes": 9265533
+      },
+      {
+        "engine": "v17",
+        "andclose": 1,
+        "bit": 61,
+        "source": "class2-lane-cost76c-v17-bit61-andclose1-20261117.jsonl",
+        "loss": true,
+        "nodes": 752696
+      },
+      {
+        "engine": "v17",
+        "andclose": 0,
+        "bit": 61,
+        "source": "class2-lane-cost76c-v17-bit61-andclose0-20261117.jsonl",
+        "loss": true,
+        "nodes": 982127
+      },
+      {
+        "engine": "v17",
+        "andclose": 1,
+        "bit": 99,
+        "source": "class2-lane-cost76c-v17-bit99-andclose1-20261117.jsonl",
+        "loss": true,
+        "nodes": 4140409
+      },
+      {
+        "engine": "v17",
+        "andclose": 0,
+        "bit": 99,
+        "source": "class2-lane-cost76c-v17-bit99-andclose0-20261117.jsonl",
+        "loss": true,
+        "nodes": 8231656
+      },
+      {
+        "engine": "v17",
+        "andclose": 1,
+        "bit": 113,
+        "source": "class2-lane-cost76c-v17-bit113-andclose1-20261117.jsonl",
+        "loss": false,
+        "nodes": 7893054
+      },
+      {
+        "engine": "v17",
+        "andclose": 0,
+        "bit": 113,
+        "source": "class2-lane-cost76c-v17-bit113-andclose0-20261117.jsonl",
+        "loss": false,
+        "nodes": 14700323
+      }
+    ],
+    "finding": "v16 bit113: andclose1 WIN vs andclose0 REFUTED; v16 bit99: andclose1 WIN vs andclose0 REFUTED; v15 bit99: andclose1 WIN vs andclose0 REFUTED; bits 61 (all four configs) and 113 on v15 are order-stable",
+    "interpretation": "a complete depth-limited AND/OR search cannot return order-dependent verdicts; this proves an engine defect affecting both published engines"
+  },
+  "root_cause": {
+    "component": "fbtOR fb cache (shared code of v15/v16)",
+    "mechanism": "open-addressed fb cache (FBS=1<<17 slots) with probe limit 48: when the probe chain exhausts 48 slots (table saturated at ~1.16e5 unique triples), the triple's circle-blocking mask update is silently dropped (the function returns without applying it); blocked cells then appear legal, corrupting the explored game; the drop pattern depends on traversal order",
+    "probe_measurements": [
+      {
+        "bit": 61,
+        "andclose": 1,
+        "fbt_drops": 0,
+        "fbt_inserts": 70209,
+        "loss": true,
+        "nodes": 752696,
+        "pilot_ok": true,
+        "nodes_match_uninstrumented": true
+      },
+      {
+        "bit": 61,
+        "andclose": 0,
+        "fbt_drops": 0,
+        "fbt_inserts": 70569,
+        "loss": true,
+        "nodes": 982127,
+        "pilot_ok": true,
+        "nodes_match_uninstrumented": true
+      },
+      {
+        "bit": 99,
+        "andclose": 1,
+        "fbt_drops": 37236,
+        "fbt_inserts": 115827,
+        "loss": true,
+        "nodes": 4168961,
+        "pilot_ok": true,
+        "nodes_match_uninstrumented": true
+      },
+      {
+        "bit": 99,
+        "andclose": 0,
+        "fbt_drops": 71808,
+        "fbt_inserts": 115165,
+        "loss": false,
+        "nodes": 4738822,
+        "pilot_ok": true,
+        "nodes_match_uninstrumented": true
+      },
+      {
+        "bit": 113,
+        "andclose": 1,
+        "fbt_drops": 396102,
+        "fbt_inserts": 122449,
+        "loss": true,
+        "nodes": 8174662,
+        "pilot_ok": true,
+        "nodes_match_uninstrumented": true
+      },
+      {
+        "bit": 113,
+        "andclose": 0,
+        "fbt_drops": 534900,
+        "fbt_inserts": 122278,
+        "loss": false,
+        "nodes": 9875922,
+        "pilot_ok": true,
+        "nodes_match_uninstrumented": true
+      }
+    ],
+    "correlation": "bit 61 (order-stable WIN in every config): 0 drops; bits 99/113: verdict flips exactly in the configurations with drops > 0"
+  },
+  "v17_repair": {
+    "runner": "scripts/class4_child1_runner_v17.ts",
+    "blob_sha": "c132cc6425eee3feaeef1d697dd74f968cfedb59",
+    "change": "on probe exhaustion, compute the triple's blocking mask directly and apply it without caching (fallback path); game rules and all other logic unchanged",
+    "validation": {
+      "pilot_d6": "loss=false nodes=3402 (unchanged)",
+      "bit61_andclose1": "752696 nodes loss=true (byte-identical to v16: unsaturated runs are unaffected)",
+      "bit61_andclose0": "982127 nodes loss=true (byte-identical to v16)",
+      "bits_99_113_order_stable": "bit99 WIN in both orderings (4140409 / 8231656 nodes); bit113 REFUTED in both orderings (7893054 / 14700323 nodes)"
+    }
+  },
+  "v17_full_resweep": {
+    "engine": "v17, same batch partitions, depth 10, cap 1e9, andclose 1, fresh environment",
+    "raw_files": [
+      "class2-lane-cost76c-v17-raw-batch1-20261117.jsonl",
+      "class2-lane-cost76c-v17-raw-batch2-20261117.jsonl",
+      "class2-lane-cost76c-v17-raw-batch3-20261117.jsonl",
+      "class2-lane-cost76c-v17-raw-batch4-20261117.jsonl",
+      "class2-lane-cost76c-v17-raw-batch5-20261117.jsonl",
+      "class2-lane-cost76c-v17-raw-batch6-20261117.jsonl",
+      "class2-lane-cost76c-v17-raw-batch7-20261117.jsonl",
+      "class2-lane-cost76c-v17-raw-batch8-20261117.jsonl",
+      "class2-lane-cost76c-v17-raw-batch9-20261117.jsonl",
+      "class2-lane-cost76c-v17-raw-batch10-20261117.jsonl"
+    ],
+    "raw_blob_pins": {
+      "class2-lane-cost76c-v17-raw-batch1-20261117.jsonl": "a62cd9aa478d3930cc8f672cd1fa8ae55f399d73",
+      "class2-lane-cost76c-v17-raw-batch2-20261117.jsonl": "9d4aacedd902eef335d349c9467f31ee256df897",
+      "class2-lane-cost76c-v17-raw-batch3-20261117.jsonl": "c20c808a7963726374922d3a05e91de7c65b3ce2",
+      "class2-lane-cost76c-v17-raw-batch4-20261117.jsonl": "26729eb3e5997a52c8b31ed4d9afcd22579c840f",
+      "class2-lane-cost76c-v17-raw-batch5-20261117.jsonl": "937e64420909119b315c5bb302e23a782b53cc0c",
+      "class2-lane-cost76c-v17-raw-batch6-20261117.jsonl": "472168193757ddec5eed790880d12c63be631a26",
+      "class2-lane-cost76c-v17-raw-batch7-20261117.jsonl": "78897a4bd09f02e7e6e029115ec241c064345cbc",
+      "class2-lane-cost76c-v17-raw-batch8-20261117.jsonl": "44482915469b3e52e7964808d3f118197acce7e4",
+      "class2-lane-cost76c-v17-raw-batch9-20261117.jsonl": "d77a403725a7b9dc93d9e43a84ef160a2e196d49",
+      "class2-lane-cost76c-v17-raw-batch10-20261117.jsonl": "f54c9f0c573314b971c6e50cd154175013d05383"
+    },
+    "bits": 76,
+    "pilots": "10/10 pilot_d6 loss=false nodes=3402",
+    "total_nodes": 144218750,
+    "verdict_flips_vs_published": [
+      {
+        "bit": 113,
+        "v16_published": "WIN7-D10 (8174662 nodes)",
+        "v17": "REFUTED-D10 (7893054 nodes)"
+      }
+    ],
+    "node_count_changed_same_verdict_bits": [
+      0,
+      1,
+      2,
+      6,
+      9,
+      10,
+      14,
+      20,
+      32,
+      64,
+      76,
+      77,
+      78,
+      86,
+      87,
+      91,
+      99,
+      102,
+      105,
+      109,
+      110,
+      111,
+      112,
+      114,
+      116,
+      117,
+      119
+    ],
+    "unsaturated_identical_bits": 48,
+    "win_bits_corrected": [
+      61,
+      99
+    ],
+    "per_bit": {
+      "0": {
+        "v16_loss": false,
+        "v16_nodes": 6876424,
+        "v17_loss": false,
+        "v17_nodes": 6879144,
+        "saturated": true
+      },
+      "1": {
+        "v16_loss": false,
+        "v16_nodes": 6571339,
+        "v17_loss": false,
+        "v17_nodes": 6458575,
+        "saturated": true
+      },
+      "2": {
+        "v16_loss": false,
+        "v16_nodes": 2946800,
+        "v17_loss": false,
+        "v17_nodes": 2957587,
+        "saturated": true
+      },
+      "4": {
+        "v16_loss": false,
+        "v16_nodes": 514632,
+        "v17_loss": false,
+        "v17_nodes": 514632,
+        "saturated": false
+      },
+      "6": {
+        "v16_loss": false,
+        "v16_nodes": 5118412,
+        "v17_loss": false,
+        "v17_nodes": 5075421,
+        "saturated": true
+      },
+      "7": {
+        "v16_loss": false,
+        "v16_nodes": 759055,
+        "v17_loss": false,
+        "v17_nodes": 759055,
+        "saturated": false
+      },
+      "9": {
+        "v16_loss": false,
+        "v16_nodes": 1834165,
+        "v17_loss": false,
+        "v17_nodes": 1852851,
+        "saturated": true
+      },
+      "10": {
+        "v16_loss": false,
+        "v16_nodes": 1755937,
+        "v17_loss": false,
+        "v17_nodes": 1772881,
+        "saturated": true
+      },
+      "13": {
+        "v16_loss": false,
+        "v16_nodes": 451746,
+        "v17_loss": false,
+        "v17_nodes": 451746,
+        "saturated": false
+      },
+      "14": {
+        "v16_loss": false,
+        "v16_nodes": 2466542,
+        "v17_loss": false,
+        "v17_nodes": 2416407,
+        "saturated": true
+      },
+      "15": {
+        "v16_loss": false,
+        "v16_nodes": 2142360,
+        "v17_loss": false,
+        "v17_nodes": 2142360,
+        "saturated": false
+      },
+      "17": {
+        "v16_loss": false,
+        "v16_nodes": 271100,
+        "v17_loss": false,
+        "v17_nodes": 271100,
+        "saturated": false
+      },
+      "18": {
+        "v16_loss": false,
+        "v16_nodes": 1248676,
+        "v17_loss": false,
+        "v17_nodes": 1248676,
+        "saturated": false
+      },
+      "19": {
+        "v16_loss": false,
+        "v16_nodes": 437326,
+        "v17_loss": false,
+        "v17_nodes": 437326,
+        "saturated": false
+      },
+      "20": {
+        "v16_loss": false,
+        "v16_nodes": 2391536,
+        "v17_loss": false,
+        "v17_nodes": 2391410,
+        "saturated": true
+      },
+      "21": {
+        "v16_loss": false,
+        "v16_nodes": 675542,
+        "v17_loss": false,
+        "v17_nodes": 675542,
+        "saturated": false
+      },
+      "26": {
+        "v16_loss": false,
+        "v16_nodes": 1611421,
+        "v17_loss": false,
+        "v17_nodes": 1611421,
+        "saturated": false
+      },
+      "28": {
+        "v16_loss": false,
+        "v16_nodes": 174425,
+        "v17_loss": false,
+        "v17_nodes": 174425,
+        "saturated": false
+      },
+      "29": {
+        "v16_loss": false,
+        "v16_nodes": 2098309,
+        "v17_loss": false,
+        "v17_nodes": 2098309,
+        "saturated": false
+      },
+      "30": {
+        "v16_loss": false,
+        "v16_nodes": 517844,
+        "v17_loss": false,
+        "v17_nodes": 517844,
+        "saturated": false
+      },
+      "32": {
+        "v16_loss": false,
+        "v16_nodes": 6847229,
+        "v17_loss": false,
+        "v17_nodes": 6840625,
+        "saturated": true
+      },
+      "34": {
+        "v16_loss": false,
+        "v16_nodes": 2977908,
+        "v17_loss": false,
+        "v17_nodes": 2977908,
+        "saturated": false
+      },
+      "36": {
+        "v16_loss": false,
+        "v16_nodes": 990208,
+        "v17_loss": false,
+        "v17_nodes": 990208,
+        "saturated": false
+      },
+      "41": {
+        "v16_loss": false,
+        "v16_nodes": 823923,
+        "v17_loss": false,
+        "v17_nodes": 823923,
+        "saturated": false
+      },
+      "43": {
+        "v16_loss": false,
+        "v16_nodes": 554396,
+        "v17_loss": false,
+        "v17_nodes": 554396,
+        "saturated": false
+      },
+      "45": {
+        "v16_loss": false,
+        "v16_nodes": 1156101,
+        "v17_loss": false,
+        "v17_nodes": 1156101,
+        "saturated": false
+      },
+      "46": {
+        "v16_loss": false,
+        "v16_nodes": 77505,
+        "v17_loss": false,
+        "v17_nodes": 77505,
+        "saturated": false
+      },
+      "47": {
+        "v16_loss": false,
+        "v16_nodes": 895475,
+        "v17_loss": false,
+        "v17_nodes": 895475,
+        "saturated": false
+      },
+      "48": {
+        "v16_loss": false,
+        "v16_nodes": 146090,
+        "v17_loss": false,
+        "v17_nodes": 146090,
+        "saturated": false
+      },
+      "53": {
+        "v16_loss": false,
+        "v16_nodes": 7913591,
+        "v17_loss": false,
+        "v17_nodes": 7913591,
+        "saturated": false
+      },
+      "54": {
+        "v16_loss": false,
+        "v16_nodes": 699326,
+        "v17_loss": false,
+        "v17_nodes": 699326,
+        "saturated": false
+      },
+      "56": {
+        "v16_loss": false,
+        "v16_nodes": 1180216,
+        "v17_loss": false,
+        "v17_nodes": 1180216,
+        "saturated": false
+      },
+      "57": {
+        "v16_loss": false,
+        "v16_nodes": 1033413,
+        "v17_loss": false,
+        "v17_nodes": 1033413,
+        "saturated": false
+      },
+      "59": {
+        "v16_loss": false,
+        "v16_nodes": 550283,
+        "v17_loss": false,
+        "v17_nodes": 550283,
+        "saturated": false
+      },
+      "61": {
+        "v16_loss": true,
+        "v16_nodes": 752696,
+        "v17_loss": true,
+        "v17_nodes": 752696,
+        "saturated": false
+      },
+      "62": {
+        "v16_loss": false,
+        "v16_nodes": 387231,
+        "v17_loss": false,
+        "v17_nodes": 387231,
+        "saturated": false
+      },
+      "64": {
+        "v16_loss": false,
+        "v16_nodes": 1862929,
+        "v17_loss": false,
+        "v17_nodes": 1863105,
+        "saturated": true
+      },
+      "65": {
+        "v16_loss": false,
+        "v16_nodes": 399586,
+        "v17_loss": false,
+        "v17_nodes": 399586,
+        "saturated": false
+      },
+      "66": {
+        "v16_loss": false,
+        "v16_nodes": 650736,
+        "v17_loss": false,
+        "v17_nodes": 650736,
+        "saturated": false
+      },
+      "67": {
+        "v16_loss": false,
+        "v16_nodes": 693871,
+        "v17_loss": false,
+        "v17_nodes": 693871,
+        "saturated": false
+      },
+      "68": {
+        "v16_loss": false,
+        "v16_nodes": 1469470,
+        "v17_loss": false,
+        "v17_nodes": 1469470,
+        "saturated": false
+      },
+      "69": {
+        "v16_loss": false,
+        "v16_nodes": 2329481,
+        "v17_loss": false,
+        "v17_nodes": 2329481,
+        "saturated": false
+      },
+      "70": {
+        "v16_loss": false,
+        "v16_nodes": 2217493,
+        "v17_loss": false,
+        "v17_nodes": 2217493,
+        "saturated": false
+      },
+      "75": {
+        "v16_loss": false,
+        "v16_nodes": 667535,
+        "v17_loss": false,
+        "v17_nodes": 667535,
+        "saturated": false
+      },
+      "76": {
+        "v16_loss": false,
+        "v16_nodes": 7812307,
+        "v17_loss": false,
+        "v17_nodes": 7814396,
+        "saturated": true
+      },
+      "77": {
+        "v16_loss": false,
+        "v16_nodes": 3693063,
+        "v17_loss": false,
+        "v17_nodes": 1962326,
+        "saturated": true
+      },
+      "78": {
+        "v16_loss": false,
+        "v16_nodes": 5311963,
+        "v17_loss": false,
+        "v17_nodes": 5809086,
+        "saturated": true
+      },
+      "81": {
+        "v16_loss": false,
+        "v16_nodes": 1890883,
+        "v17_loss": false,
+        "v17_nodes": 1890883,
+        "saturated": false
+      },
+      "85": {
+        "v16_loss": false,
+        "v16_nodes": 239113,
+        "v17_loss": false,
+        "v17_nodes": 239113,
+        "saturated": false
+      },
+      "86": {
+        "v16_loss": false,
+        "v16_nodes": 1139319,
+        "v17_loss": false,
+        "v17_nodes": 1093737,
+        "saturated": true
+      },
+      "87": {
+        "v16_loss": false,
+        "v16_nodes": 617772,
+        "v17_loss": false,
+        "v17_nodes": 617766,
+        "saturated": true
+      },
+      "89": {
+        "v16_loss": false,
+        "v16_nodes": 186479,
+        "v17_loss": false,
+        "v17_nodes": 186479,
+        "saturated": false
+      },
+      "91": {
+        "v16_loss": false,
+        "v16_nodes": 2023259,
+        "v17_loss": false,
+        "v17_nodes": 2043591,
+        "saturated": true
+      },
+      "94": {
+        "v16_loss": false,
+        "v16_nodes": 327188,
+        "v17_loss": false,
+        "v17_nodes": 327188,
+        "saturated": false
+      },
+      "95": {
+        "v16_loss": false,
+        "v16_nodes": 595302,
+        "v17_loss": false,
+        "v17_nodes": 595302,
+        "saturated": false
+      },
+      "96": {
+        "v16_loss": false,
+        "v16_nodes": 351476,
+        "v17_loss": false,
+        "v17_nodes": 351476,
+        "saturated": false
+      },
+      "97": {
+        "v16_loss": false,
+        "v16_nodes": 235207,
+        "v17_loss": false,
+        "v17_nodes": 235207,
+        "saturated": false
+      },
+      "98": {
+        "v16_loss": false,
+        "v16_nodes": 606414,
+        "v17_loss": false,
+        "v17_nodes": 606414,
+        "saturated": false
+      },
+      "99": {
+        "v16_loss": true,
+        "v16_nodes": 4168961,
+        "v17_loss": true,
+        "v17_nodes": 4140409,
+        "saturated": true
+      },
+      "102": {
+        "v16_loss": false,
+        "v16_nodes": 1701951,
+        "v17_loss": false,
+        "v17_nodes": 1751381,
+        "saturated": true
+      },
+      "103": {
+        "v16_loss": false,
+        "v16_nodes": 2553977,
+        "v17_loss": false,
+        "v17_nodes": 2553977,
+        "saturated": false
+      },
+      "105": {
+        "v16_loss": false,
+        "v16_nodes": 4478239,
+        "v17_loss": false,
+        "v17_nodes": 5278415,
+        "saturated": true
+      },
+      "106": {
+        "v16_loss": false,
+        "v16_nodes": 510708,
+        "v17_loss": false,
+        "v17_nodes": 510708,
+        "saturated": false
+      },
+      "107": {
+        "v16_loss": false,
+        "v16_nodes": 1216403,
+        "v17_loss": false,
+        "v17_nodes": 1216403,
+        "saturated": false
+      },
+      "108": {
+        "v16_loss": false,
+        "v16_nodes": 1323989,
+        "v17_loss": false,
+        "v17_nodes": 1323989,
+        "saturated": false
+      },
+      "109": {
+        "v16_loss": false,
+        "v16_nodes": 1922982,
+        "v17_loss": false,
+        "v17_nodes": 1922983,
+        "saturated": true
+      },
+      "110": {
+        "v16_loss": false,
+        "v16_nodes": 1547025,
+        "v17_loss": false,
+        "v17_nodes": 1610799,
+        "saturated": true
+      },
+      "111": {
+        "v16_loss": false,
+        "v16_nodes": 1435319,
+        "v17_loss": false,
+        "v17_nodes": 1469926,
+        "saturated": true
+      },
+      "112": {
+        "v16_loss": false,
+        "v16_nodes": 1265260,
+        "v17_loss": false,
+        "v17_nodes": 1265675,
+        "saturated": true
+      },
+      "113": {
+        "v16_loss": true,
+        "v16_nodes": 8174662,
+        "v17_loss": false,
+        "v17_nodes": 7893054,
+        "saturated": true
+      },
+      "114": {
+        "v16_loss": false,
+        "v16_nodes": 778462,
+        "v17_loss": false,
+        "v17_nodes": 815267,
+        "saturated": true
+      },
+      "116": {
+        "v16_loss": false,
+        "v16_nodes": 557291,
+        "v17_loss": false,
+        "v17_nodes": 557289,
+        "saturated": true
+      },
+      "117": {
+        "v16_loss": false,
+        "v16_nodes": 1227182,
+        "v17_loss": false,
+        "v17_nodes": 1248502,
+        "saturated": true
+      },
+      "118": {
+        "v16_loss": false,
+        "v16_nodes": 2996495,
+        "v17_loss": false,
+        "v17_nodes": 2996495,
+        "saturated": false
+      },
+      "119": {
+        "v16_loss": false,
+        "v16_nodes": 1621379,
+        "v17_loss": false,
+        "v17_nodes": 5342275,
+        "saturated": true
+      },
+      "120": {
+        "v16_loss": false,
+        "v16_nodes": 571263,
+        "v17_loss": false,
+        "v17_nodes": 571263,
+        "saturated": false
+      }
+    },
+    "saturation_summary": "28/76 bits ran under fb-table saturation in the published v16 sweep (1 verdict flip + 27 node-count changes); 48/76 bits are byte-identical to v16 and their published verdicts are unaffected"
+  },
+  "implications": [
+    "The published cost76c claim result '3 WIN7-D10 bits 61/99/113' is corrected to '2 WIN7-D10 bits 61/99'; bit 113 is REFUTED-D10 under v17 in both orderings and must not be certificate-extracted or folded",
+    "The published candidate manifest marginals computed under the 3-WIN assumption must be re-derived for bits 61/99 only before any 76c fold",
+    "bit 99's WIN is confirmed by v17 in both orderings (v15 andclose1 also agrees); bit 61 was never affected (0 drops, byte-identical)",
+    "All v16/v15 verdicts for saturated searches are unreliable in principle; previously folded WIN receipts remain proven because their certificates were verified by rule-independent verifiers (BigInt cofactor, Bareiss, Python circle-equation)",
+    "Any certificate extraction performed with the fbt-affected extractor must continue to pass the independent verifiers; failed verification of a bit-99 certificate would be explained by this defect and require v17-based re-extraction",
+    "Past lanes' REFUTED-D10 verdicts on saturated bits are not evidence of anything; a v17 re-sweep is required before they are used as planning inputs"
+  ],
+  "caveats": [
+    "REFUTED-D10 is not a LOSS proof",
+    "solved head counts are manifest-coverage bookkeeping, not game outcomes",
+    "WIN7-D10 certificates prove the individual 7-stone roots only (first-player win within depth 10)",
+    "11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, class 1/2/4 all remain UNKNOWN"
+  ]
+}
