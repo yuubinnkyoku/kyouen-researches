@@ -31,6 +31,12 @@ artifacts:
 - path: research/experiments/n11-class2-lane-sterile-unclosability-20261116/output/theorem-applicability-scan-20261116.json
   role: data
   note: スキャン出力227,648 bytes・sha256 57a0584f0b81…。115個の新theorem-derived REFUTED-D10（69a bits 55/65/109・76c 15/76候補ほか）・同位置1,782組のcross-sweep一致（矛盾0）・STERILE行35行census・入力1,279ファイルのsha256 manifest込み。全8 check合格
+- path: research/experiments/n11-class2-lane-sterile-unclosability-20261116/verify_theorem_applicability_scan_second_independent_20261116.py
+  role: verifier
+  note: verdict cacheスキャンの第二独立検証器（第一実装とコード共有なし・stdlibのみ・Leibniz 4x4円行列式・独立D4正準化・独立候補列挙・独立harvest/fixpoint/conflict実装）。入力はスキャン自身のsha256 manifest（1,279ファイル）にピンし全ファイル再照合。46項目の全フィールド照合・X1全115転送のcanon同一性直接再検証・X5非合法rootの転写不活性性・X6全コーパスraw/auditバッチ整合
+- path: research/experiments/n11-class2-lane-sterile-unclosability-20261116/output/theorem-applicability-scan-second-independent-verification-20261116.json
+  role: data
+  note: 第二独立検証出力29,474 bytes・sha256 899d5dee…。VERIFICATION PASSED（46比較全一致・2回実行byte-identical）・cost-69h raw batch2/batch3出版ギャップ観察（verdict不変・他186バッチファイルのraw/audit整合は完全）
 scope: 'n11 S2{59,60}のdepth-10 WIN7-D10 receipt/cover体系（MS5 S6 manifestの6石行・D4正準化covers・foldのmarginal閉鎖）に限る。行RがSTERILE（Rの全合法候補root R+tの出版verdictがREFUTED-D10・capped 0）のとき、任意のWIN7-D10 receipt root X（安全な7石位置）についてX covers Rでないことを、位置レベル補題（X covers R ⟺ canon(X) ∈ {canon(R+t): t∈legal_candidates(R)}・D4等長変換が安全性を保存することによる）とゲーム規則のD4不変性から証明する。前提はengine depth-10 verdictの健全性とD4不変性のみで、当レーンの全出版verdictと同一のtrust境界（前提が破れれば2 sweep間のverdict矛盾として検出可能）。機械検証は完全route枯渇を3 STERILE行の全canonical一石置換近傍（689/636/689軌道・出版解析と一致）にわたって(σ, own bit) witness付きで確認し、cost≤70出版route map（17子24経路）と掃済6経路（60c bit119・62b bits21/109・64c bits111/119+65k bit119）を厳密な部分集合として含む。depth>10の証拠・ capped候補のある行・receipt機構以外の閉鎖手段・engine健全性そのものの証明は含まない。STERILE行のゲーム理論的値（LOSS/WIN）には一切言及しない'
 evidence: '定理はreport.mdの補題（位置レベルの同値・Bareiss det4安全性とD4等長変換）とD4ゲーム木同型性による矛盾論法。機械検証は独立stdlib実装（候補列挙・D4正準化・covers・完全route列挙）で、V0-V5全合格・V6決定論（新プロセス2回バイト同一・audit sha256 6221d1ae…）。実証: (a) 出版route map 17子のcovers・候補数をbit-exact再現、(b) 掃済6 cross-cover経路が全てown candidateのREFUTED-D10へ写像（REFUTED-REFUTED一致6件）、(c) 最近5 WIN receipt roots（75e bits 6/10/11/37・60c bit 92）は3 STERILE行をcoverしない、(d) 先例70f bit-84のcover先70g childは自乗sweep8 WIN7-D10（非STERILE）でV4c WIN-WIN一致（canon(bit84 root)=canon(70g child+bit29)）、75e bit-10のcover先は未sweep行（いずれもerratum引用で、定理と無矛盾）、(e) 完全route map 455/490/518経路すべてのown candidate tが出版REFUTED-D10リストに含まれる、(f) 定理のout-of-sample予測（64c bits 111/119はREFUTED-D10）が並走sweep完了（64/64 REFUTED・v15+v16一致）で的中。verdict一致は計8件・矛盾0'
 ---
@@ -100,3 +106,13 @@ STERILEはLOSS証明ではない。本定理は閉鎖手段の不可能性のみ
 - 決定論的（2回実行byte-identical）・入力1,279ファイルのsha256 manifest込み・trust境界は既存sweepと同一（engine depth-10 verdict健全性+D4不変性）。
 
 転送は個別7石rootのverdictのみを定め、行の閉鎖・receipt被覆・ゲーム理論的値には一切言及しない。STERILE行・open行の値はそのまま。11×11空盤・二石root {49,60}/{59,60}・S2 {59,60}・class 1/2/4はすべてUNKNOWNのまま。
+
+## 追記: verdict cacheスキャンの第二独立検証とcost-69h raw出版ギャップの特定（2026-11-16）
+
+正準形verdict cacheスキャン（前節追記）を、第一実装とコードを共有しない第二実装で再導出した（`verify_theorem_applicability_scan_second_independent_20261116.py`・stdlibのみ・Leibniz展開による4x4円行列式・独立D4正準化・独立合法候補列挙・独立harvest/fixpoint/conflictコード・2回実行byte-identical）。入力はスキャン出版時のsha256 manifest（1,279ファイル）に固定し、commit `2d090b49`のraw CDN取得コピーがsha256とgit blob shaの二重照合で正本一致を確認したうえで再導出している。
+
+結果は**全46フィールドで完全一致**（VERIFICATION PASSED）: engine map 8,964 determined bits（REFUTED-D10 8,305・WIN7-D10 659・capped 0・source conflicts 0）・fixpoint反復構造（索引7,149・115転送・第2反復0）・bit規約対照（win_roots 6照合）・claim合法候補一致59件・69a bit 109回帰・targets全133子のengine/transferred/open/claims・unswept 5子34事前REFUTED/293 open・同位置cross-sweep 1,782組矛盾0・STERILE census 35行・skipped files・出版8 check全件。X1で**115転送すべて**についてcanon(child|bit)と全via根のcanon同一性とverdict一致を直接再検証、X2で転送bitの合法性、X3でWIN転送0（新receipt主張なし）を確認。定理の転写機構は第二実装でも reproducible であり、69a bits 55/65/109・76c 15/76候補の事前確定は確定した。
+
+**データ品質観察（X4/X5/X6・verdictへの影響なし）**: cost-69h（child `0000000000000080120a000000200000`・2026-11-15 sweep）のraw batch2ファイルのbit集合が同一sweep監査のbatch-2記録と不一致（raw [9,10,14,17,19,20,21,22] vs 監査 [9,10,12,14,15,18,22,23]・子の合法候補にないbits 17/19/20/21を含み、監査記載のbits 12/15/18/23を欠く）・batch3ファイルがmain上に存在しない（監査は参照する）・被る12/69候補にraw行がない。engine mapにはこの4件の非合法rootエントリが混入する（出版集計と本検証の再現集計の双方が8,964に含む）が、circle完結を含む7石位置はD4不変の性質であり、どの合法候補rootのcanonとも衝突し得ない（X5で衝突∅を機械確認）ため、転送・targets・STERILE census・矛盾検出のいずれにも影響しない。69hのsweep verdict（WIN bits 58/96・REFUTED 67・capped 0）はaudit aggregateが全69候補を被覆しており完全。X6（監査batch記録のcandidate_bits vs rawファイル実bit集合）をcorpus全体に適用したところ、**186バッチファイル中この69h batch2のみが不一致・batch3のみが欠落**で、他レーンのraw/audit整合は完全。よってスキャンの全結論は第二実装で確定した。69h batch2/3のraw再出版は残課題（verdict不変・出版記録の整合性のみの問題）。
+
+本検証器はスキャンのmanifestピンに固定されており、入力コーパスが進化した場合（claimのin-place更新等）は`input_sha256_all_match`が赤になる設計（=スキャン再実行+再検証を要求するシグナル）。REFUTED-D10はLOSS証明ではなく、STERILE行はopenのまま。11×11空盤・二石root {49,60}/{59,60}・S2 {59,60}・class 1/2/4はすべてUNKNOWNのまま。
