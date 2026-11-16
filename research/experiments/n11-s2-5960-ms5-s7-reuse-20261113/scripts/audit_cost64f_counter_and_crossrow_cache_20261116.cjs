@@ -297,6 +297,7 @@ function main() {
       next_target_parent_mapping_correct: true,
       fold_not_applied: true
     },
+    execution_note: "Deterministic standard-library Node.js audit. It reconciles published depth-10 verdict counts and D4 cache reuse only; it performs no game search and applies no manifest fold.",
     interpretation_guard: "This audit only reconciles depth-10 root verdict counts and D4 cache reuse across eight selected presweep rows. WIN7-D10 proves a first-player win from an individual seven-stone root only. REFUTED-D10 is not a LOSS proof. The cost64f fold is not applied; the projected head is manifest bookkeeping only. Standard 11x11, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN.",
     unknown_status: "11x11 empty board, two-stone roots {49,60} and {59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN"
   };
