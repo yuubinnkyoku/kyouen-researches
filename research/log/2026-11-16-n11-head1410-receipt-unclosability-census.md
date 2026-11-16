@@ -1,6 +1,7 @@
 # 2026-11-16 n11 head-1410 receipt-unclosability census
 
-- 長期レーン（自動実行）。list_commits 確認時点の main HEAD: 855bf0dbf0cfc1eb78584739c4cb3349c77ff89"。
+- 長期レーン（自動実行）。list_commits 確認時点の main HEAD: f855bf0dbf0cfc1eb78584739c4cb3349c77ff89。
+- 本 census の出版 push: commit 5ada304a1f30fced2a74a513fc58d331237d34f7（census JSON 112,531 bytes・全6ファイル、読み戻し検証で全行・registry・コントロール照合済み）。
 - head-1410 の 174 open S5 すべてについて STERILE 被覆を D4 orbit レベルで集計。3 parent が receipt-unclosable（残行すべて STERILE）、57 partial、effRem 計 12183（残 12274 のうち 91 が STERILE 参照）。
 - S5↔S6 行の親子関係は D4 orbit レベル（∃σ∈D4: σ(P) ⊂ R）。raw hex subset join では 65k/74h 行の class-1 demand が出版値と不一致になるため orbit join が正しいと特定。60c fold の 6 ペアで全数検証（CC pass）。
 - 70j cover precheck: cover bits {21,109} が出版 62b claim v2 と一致（合法手 bit 集合・両 cover root hex も一致する独立再導出）。両 bit とも REFUTED-D10。62b 行の census-derived demand {c1:1,c2:1,c4:0} も claim と完全一致。
