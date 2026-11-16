@@ -10,7 +10,7 @@
     88
   ],
   "claimed_by": "n11 long-term lane session (takeover; precedent: cost65j claim v1->v2 takeover)",
-  "coordination_note": "latest main fetched immediately before this takeover push; the parallel cost64h lane is mid-fold (prereg + fourth independent verification + cover-multiplicity audit prediction published, fold receipt pending); no other claim, raw batch or audit exists for this child on main Reconciled against the current K0863 full theorem-applicability scan: 15/76 candidates are already REFUTED-D10 transfers (not 5); the 10 omitted bits are now recorded and must be reused, leaving 61 open + 5 cross-agreement reruns = 66 engine bits. No raw batch has been launched. Raw batch audit added 2026-11-17: all 10 batch files cover 76/76 legal bits and yield WIN7-D10 bits 61/99/113, REFUTED-D10 73, capped 0. Actual raw files reran all 15 transferred bits, including the 10 marked reused; actual engine work was 76, not the planned 66. See class2-lane-cost76c-raw-audit-20261117.json and the 2026-11-17 research log.",
+  "coordination_note": "latest main fetched immediately before this takeover push; the parallel cost64h lane is mid-fold (prereg + fourth independent verification + cover-multiplicity audit prediction published, fold receipt pending); no other claim, raw batch or audit exists for this child on main Reconciled against the current K0863 full theorem-applicability scan: 15/76 candidates are already REFUTED-D10 transfers (not 5); the 10 omitted bits are now recorded and must be reused, leaving 61 open + 5 cross-agreement reruns = 66 engine bits. No raw batch has been launched. Raw batch audit added 2026-11-17: all 10 batch files cover 76/76 legal bits and yield WIN7-D10 bits 61/99/113, REFUTED-D10 73, capped 0. Actual raw files reran all 15 transferred bits, including the 10 marked reused; actual engine work was 76, not the planned 66. See class2-lane-cost76c-raw-audit-20261117.json and the 2026-11-17 research log.\n2026-11-17 manifest-marginal audit: bits 61/99/113 each individually close only the same open manifest row 00000000010000809002000001000000; combined marginal sequence is 1/0/0. Prioritize bit61 (752696 raw nodes) and keep 99/113 as fallbacks; see candidate-manifest-marginals audit.",
   "date": "2026-11-16",
   "demand": {
     "c1": 0,
@@ -348,10 +348,10 @@
   "s5": "00000000000000801202000040000000",
   "s6_child": "00000000010000809002000001000000",
   "s6_s7_edge_cost": 76,
-  "schema": "n11-class2-lane-cost76c-sweep-complete-20261117-v3",
+  "schema": "n11-class2-lane-cost76c-sweep-complete-20261117-v4",
   "stale_claim_history": "claim v1 (this file, schema -v1) was published 2026-11-15 at ~20:54Z (git blob e5bf66f62323f6434d82743c662295618af232a3) with chain head 1403/6445/509589/4715/373312 and never landed raw batches, audit, certificates or fold artifacts; it is stale; this long-term lane session takes it over per the cost65j takeover precedent",
-  "status": "sweep-complete; certificate extraction pending; receipt fold pending",
-  "title": "n11 class2-lane cost-76c sweep complete: 3 WIN7-D10 bits 61/99/113; certificate extraction pending",
+  "status": "sweep-complete; bit61 certificate extraction prioritized; bits99/113 retained as fallbacks; receipt fold pending",
+  "title": "n11 class2-lane cost76c: 3 WIN7-D10 candidates; bit61 is the first manifest-closing extraction target",
   "transfers": {
     "0": {
       "attested_by": [
@@ -682,5 +682,38 @@
     "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76c-claim-input-20261117.json",
     "git_blob_sha1": "8932f2d5e100325549a5f251a1d883558cae0708"
   },
-  "audit_script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost76c_raw_batches_20261117.py"
+  "audit_script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost76c_raw_batches_20261117.py",
+  "previous_version": {
+    "schema": "n11-class2-lane-cost76c-sweep-complete-20261117-v3",
+    "blob_sha": "9572950bc09ca100dc29357c44b2b4baf31e84ba"
+  },
+  "next_action": "Blind-extract bit61 only. If extraction fails, try bit99 then bit113. Independently verify the extracted certificate and v15-crosscheck it; only then fold against the latest canonical head.",
+  "certificate_priority_audit": {
+    "date": "2026-11-17",
+    "script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost76c_candidate_manifest_marginals_20261117.py",
+    "script_blob_sha": "ddba3810597184a2e7b68bb9fb3002f73c8d1939",
+    "script_sha256": "094047faccd99a459ee6726711b5cd9a2bff74feee1eb099bb1cc7475bcde821",
+    "output": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76c-candidate-manifest-marginals-20261117.json",
+    "output_blob_sha": "96916b0659a3366290882d29ff46158425058188",
+    "output_sha256": "dab6e411c977713496650ac1c65d3d657e509a6908aa8ad8922732a1c3981c8c",
+    "basis_head": "1452/174/6396/506144/4669/370058",
+    "first_bit": 61,
+    "fallback_bits": [
+      99,
+      113
+    ],
+    "candidate_individual_manifest_marginals": {
+      "61": 1,
+      "99": 1,
+      "113": 1
+    },
+    "common_open_manifest_row": "00000000010000809002000001000000",
+    "combined_manifest_marginals_in_bit_order": [
+      1,
+      0,
+      0
+    ],
+    "projected_head_if_any_one_candidate_is_verified_and_folded": "1453/174/6395/506068/4668/369982",
+    "note": "Each candidate alone closes the same one currently-open manifest row. After bit61, bits99 and113 add zero manifest rows. The three-root union has 19 D4 S6 cover orbits, 7 manifest members, of which 6 are already covered and 1 is open."
+  }
 }
