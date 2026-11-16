@@ -375,9 +375,7 @@ def run():
     second = serialize(audit())
     if first != second:
         raise SystemExit("FATAL: repeated audit output differs")
-    result = json.loads(first)
-    result["repeat_run_byte_identical"] = True
-    blob = serialize(result)
+    blob = first
     output = HERE / "output" / "audit.json"
     output.parent.mkdir(parents=True, exist_ok=True)
     if output.exists() and output.read_text(encoding="utf-8") != blob:
