@@ -1,0 +1,1529 @@
+{
+ "baseline_record": {
+  "frontier_before": {
+   "cost_needed_by_open_classes": 370058,
+   "remaining_s5_orbits": 174,
+   "s6_needed_by_open_classes": 4669,
+   "solved_s6_in_manifest": 1452,
+   "sum_remaining_cost": 506144,
+   "unique_remaining_s6": 6396
+  }
+ },
+ "basis_head": 1452,
+ "certificate_verification": {
+  "all_pass": true,
+  "bits_without_published_lane_bareiss_verify": [
+   116,
+   120
+  ],
+  "bits_without_published_summary": [
+   120
+  ],
+  "certificates_in_directory": 23,
+  "cross_agreements": {
+   "lane_bareiss_verify_per_move": "21/21 bits, per-subroot seen/terminals/opponentEdges/range identical",
+   "node_bareiss_third_verification": "6/6 bits, all aggregate fields identical",
+   "second_impl_lane_local_bigint_116_120": "2/2 bits, all aggregate fields identical (records published at commit 0330d83dfd191d6e03b46c7f3d9aea98704584b8, after this verification's pin; comparison added at publication time)"
+  },
+  "independently_verified": 23,
+  "matches_lane_bareiss_verify_per_move_bits": 21,
+  "matches_node_bareiss_third_verification_bits": 6,
+  "note_bits_116_120": "bits 116/120 lack bareiss-verify.json in the certificates directory at pin time; the gap was independently closed by this Python verification and by the second-implementation lane's local BigInt run; all fields agree",
+  "terminal_range_union": [
+   13,
+   17
+  ],
+  "total_loser_reply_edges": 1584262,
+  "total_strategy_rows": 804783,
+  "total_terminals": 280569,
+  "total_visited_states": 1755168,
+  "union_extra": 0,
+  "union_missing": 0
+ },
+ "conflict_census": {
+  "basis_distinct_d4_canons": 760,
+  "basis_receipt_roots": 775,
+  "cost66i_cross_source_verdict_conflicts": 0,
+  "cost66i_win_root_overlaps": 0,
+  "cost76c_win_root_overlaps": 0,
+  "overlaps": 0
+ },
+ "cross_lane": {
+  "cost66i_certified_bits": [
+   19,
+   103,
+   99,
+   88,
+   28,
+   29,
+   90,
+   58,
+   112
+  ],
+  "cost66i_conflict_scan": {
+   "conflicts": 0,
+   "note": "bit 100's root canon matches the cost-64h REFUTED-D10 verdict (64h bit 103), an agreement recorded by the census v2 selection; no canon carries contradictory verdicts across sources",
+   "sources": [
+    "cost64h raw batches 1-8",
+    "cost76c v17 raw batches 1-10",
+    "cost64h fold prereg receipts"
+   ],
+   "win_refuted_agreements": {
+    "refuted_bits_also_refuted_in_64h": [
+     100
+    ],
+    "refuted_bits_also_refuted_in_76c": [],
+    "win_bits_also_win_in_64h": [],
+    "win_bits_also_win_in_76c": []
+   }
+  },
+  "cost66i_remaining_certificate_bits": [],
+  "cost66i_win_bits": [
+   19,
+   28,
+   29,
+   58,
+   88,
+   90,
+   99,
+   103,
+   112
+  ],
+  "cost76c_bit113_refuted": true,
+  "cost76c_v17_audit_blob": "235f964365a7ab33e33986c915fc7f6861e4d686",
+  "cost76c_win_bits": [
+   61,
+   99
+  ],
+  "d4_overlap_with_cost66i": [],
+  "d4_overlap_with_cost76c": []
+ },
+ "date": "2026-11-17",
+ "frontier_after_cost64h": {
+  "cost_needed_by_open_classes": 368586,
+  "demand_histogram_open_only": {
+   "c2=0,c4=1": 526,
+   "c2=0,c4=2": 3010,
+   "c2=0,c4=3": 12,
+   "c2=1,c4=0": 208,
+   "c2=1,c4=1": 54,
+   "c2=1,c4=2": 8,
+   "c2=2,c4=0": 778,
+   "c2=2,c4=1": 5,
+   "c2=2,c4=2": 48
+  },
+  "remaining_s5_orbits": 174,
+  "s6_needed_by_open_classes": 4649,
+  "solved_s6_in_manifest": 1472,
+  "sum_remaining_cost": 504672,
+  "unique_remaining_s6": 6376
+ },
+ "interpretation_guard": "Bookkeeping fold over 23 independently verified WIN7-D10 receipts. No engine search or new verdict was created. The fold closes 20 manifest S6 rows and reduces open frontier demand only. It does not close any S5 parent and is not a LOSS proof for REFUTED-D10. The 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN.",
+ "parent_count_fully_closed": 0,
+ "parent_edge_cost_delta": 3090,
+ "parent_row_incidences": 42,
+ "parents_after": {
+  "00000000000000003800000008001000": {
+   "classes": 2,
+   "edge_cost_after": 2333,
+   "edge_cost_before": 3384,
+   "lost_edge_cost": 1051,
+   "lost_rows_hexes": [
+    "00000000000000003800100008100000",
+    "00000000000000103800000008100000",
+    "00000000000000403800000008100000",
+    "00000000000000801202000000001200",
+    "00000000000000801202000000001400",
+    "0000000000000080120a000000001000",
+    "00000000000000801242000000001000",
+    "00000000000020003800000008100000",
+    "00000000000020809002000000100000",
+    "00000000000040003800000008100000",
+    "00000000000080003800000008100000",
+    "00000000000080809002000000100000",
+    "00000000020000003800000008100000",
+    "00000000020000809002000000100000"
+   ],
+   "rows_after": 31,
+   "rows_before": 45,
+   "s5_hex": "00000000000000003800000008001000"
+  },
+  "00000000000000003800100008000000": {
+   "classes": 2,
+   "edge_cost_after": 5336,
+   "edge_cost_before": 5417,
+   "lost_edge_cost": 81,
+   "lost_rows_hexes": [
+    "00000000000000003800100008100000"
+   ],
+   "rows_after": 64,
+   "rows_before": 65,
+   "s5_hex": "00000000000000003800100008000000"
+  },
+  "00000000000000003801000000800000": {
+   "classes": 4,
+   "edge_cost_after": 5085,
+   "edge_cost_before": 5226,
+   "lost_edge_cost": 141,
+   "lost_rows_hexes": [
+    "00000000000000801206000000080000",
+    "00000000020000403800000000100000"
+   ],
+   "rows_after": 67,
+   "rows_before": 69,
+   "s5_hex": "00000000000000003801000000800000"
+  },
+  "00000000000000103800000008000000": {
+   "classes": 2,
+   "edge_cost_after": 4214,
+   "edge_cost_before": 4426,
+   "lost_edge_cost": 212,
+   "lost_rows_hexes": [
+    "00000000000000103800000008100000",
+    "00000000000000503800000008000000",
+    "00000000000000c09002000004000000"
+   ],
+   "rows_after": 56,
+   "rows_before": 59,
+   "s5_hex": "00000000000000103800000008000000"
+  },
+  "00000000000000403800000008000000": {
+   "classes": 2,
+   "edge_cost_after": 872,
+   "edge_cost_before": 1287,
+   "lost_edge_cost": 415,
+   "lost_rows_hexes": [
+    "00000000000000403800000008100000",
+    "00000000000000503800000008000000",
+    "00000000000000801206000000000080",
+    "00000000000000801206000000080000",
+    "00000000000000849003000000000000",
+    "00000000000000c09002000004000000"
+   ],
+   "rows_after": 12,
+   "rows_before": 18,
+   "s5_hex": "00000000000000403800000008000000"
+  },
+  "00000000000000801202000000000080": {
+   "classes": 2,
+   "edge_cost_after": 3784,
+   "edge_cost_before": 3929,
+   "lost_edge_cost": 145,
+   "lost_rows_hexes": [
+    "00000000000000801206000000000080",
+    "00000000000020003800000008100000"
+   ],
+   "rows_after": 50,
+   "rows_before": 52,
+   "s5_hex": "00000000000000801202000000000080"
+  },
+  "00000000000000801202000000000200": {
+   "classes": 2,
+   "edge_cost_after": 5161,
+   "edge_cost_before": 5242,
+   "lost_edge_cost": 81,
+   "lost_rows_hexes": [
+    "00000000000000801202000000001200"
+   ],
+   "rows_after": 63,
+   "rows_before": 64,
+   "s5_hex": "00000000000000801202000000000200"
+  },
+  "00000000000000801202000000000400": {
+   "classes": 2,
+   "edge_cost_after": 5436,
+   "edge_cost_before": 5514,
+   "lost_edge_cost": 78,
+   "lost_rows_hexes": [
+    "00000000000000801202000000001400"
+   ],
+   "rows_after": 66,
+   "rows_before": 67,
+   "s5_hex": "00000000000000801202000000000400"
+  },
+  "00000000000000801202000000040000": {
+   "classes": 2,
+   "edge_cost_after": 5802,
+   "edge_cost_before": 5883,
+   "lost_edge_cost": 81,
+   "lost_rows_hexes": [
+    "00000000000040003800000008100000"
+   ],
+   "rows_after": 70,
+   "rows_before": 71,
+   "s5_hex": "00000000000000801202000000040000"
+  },
+  "00000000000000801202000000080000": {
+   "classes": 6,
+   "edge_cost_after": 4842,
+   "edge_cost_before": 4988,
+   "lost_edge_cost": 146,
+   "lost_rows_hexes": [
+    "00000000000000801206000000080000",
+    "00000000020000003800000008100000"
+   ],
+   "rows_after": 63,
+   "rows_before": 65,
+   "s5_hex": "00000000000000801202000000080000"
+  },
+  "00000000000000801202000020000000": {
+   "classes": 2,
+   "edge_cost_after": 3348,
+   "edge_cost_before": 3420,
+   "lost_edge_cost": 72,
+   "lost_rows_hexes": [
+    "00000000000080003800000008100000"
+   ],
+   "rows_after": 44,
+   "rows_before": 45,
+   "s5_hex": "00000000000000801202000020000000"
+  },
+  "00000000000000801202000080000000": {
+   "classes": 2,
+   "edge_cost_after": 2825,
+   "edge_cost_before": 2901,
+   "lost_edge_cost": 76,
+   "lost_rows_hexes": [
+    "00000000020000809002000000100000"
+   ],
+   "rows_after": 37,
+   "rows_before": 38,
+   "s5_hex": "00000000000000801202000080000000"
+  },
+  "00000000000000801202020000000000": {
+   "classes": 2,
+   "edge_cost_after": 3231,
+   "edge_cost_before": 3296,
+   "lost_edge_cost": 65,
+   "lost_rows_hexes": [
+    "00000000000080809002000000100000"
+   ],
+   "rows_after": 47,
+   "rows_before": 48,
+   "s5_hex": "00000000000000801202020000000000"
+  },
+  "00000000000000801202080000000000": {
+   "classes": 2,
+   "edge_cost_after": 5970,
+   "edge_cost_before": 6052,
+   "lost_edge_cost": 82,
+   "lost_rows_hexes": [
+    "00000000000020809002000000100000"
+   ],
+   "rows_after": 72,
+   "rows_before": 73,
+   "s5_hex": "00000000000000801202080000000000"
+  },
+  "0000000000000080120a000000000000": {
+   "classes": 2,
+   "edge_cost_after": 2965,
+   "edge_cost_before": 3036,
+   "lost_edge_cost": 71,
+   "lost_rows_hexes": [
+    "0000000000000080120a000000001000"
+   ],
+   "rows_after": 40,
+   "rows_before": 41,
+   "s5_hex": "0000000000000080120a000000000000"
+  },
+  "00000000000000801242000000000000": {
+   "classes": 2,
+   "edge_cost_after": 3981,
+   "edge_cost_before": 4129,
+   "lost_edge_cost": 148,
+   "lost_rows_hexes": [
+    "00000000000000801242000000001000",
+    "00000000000000849003000000000000"
+   ],
+   "rows_after": 50,
+   "rows_before": 52,
+   "s5_hex": "00000000000000801242000000000000"
+  },
+  "00000000020000003800000000100000": {
+   "classes": 4,
+   "edge_cost_after": 6736,
+   "edge_cost_before": 6881,
+   "lost_edge_cost": 145,
+   "lost_rows_hexes": [
+    "00000000020000003800000008100000",
+    "00000000020000403800000000100000"
+   ],
+   "rows_after": 85,
+   "rows_before": 87,
+   "s5_hex": "00000000020000003800000000100000"
+  }
+ },
+ "receipts": [
+  {
+   "bit": 4,
+   "certificate": {
+    "bytes": 1036850,
+    "git_blob_sha": "c0911621828cc098c240f6b2a38ee407a740d956",
+    "loser_reply_edges": 59850,
+    "path": "class2-lane-cost64h-certificates/bit4-root-00000000000000403800000008100010.cert",
+    "root_mobility": 46,
+    "strategy_rows": 28668,
+    "subroots_passed": 46,
+    "terminal_count": 9576,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "verifier_checks": {
+     "cert_verdict": true,
+     "matches_lane_bareiss_verify_per_move": true,
+     "matches_third_verification_all_fields": true,
+     "root_hex_matches": true,
+     "root_safe": true,
+     "root_seven_stones": true,
+     "rows_equal_consumed": true,
+     "rows_sorted_unique": true,
+     "terminal_range_ok": true,
+     "union_exact": true
+    },
+    "visited_states": 64156
+   },
+   "covers": 7,
+   "d4_canonical_hex": "00000000000000403800000008100010",
+   "d4_orbit_distinct_from_all_folded_roots": true,
+   "marginal": 5,
+   "marginal_hexes": [
+    "00000000000000401800000008100010",
+    "00000000000000402800000008100010",
+    "00000000000000403000000008100010",
+    "00000000000000403800000000100010",
+    "00000000000000403800000008100000"
+   ],
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000403800000008100000"
+   ],
+   "root_hex": "00000000000000403800000008100010"
+  },
+  {
+   "bit": 6,
+   "certificate": {
+    "bytes": 906596,
+    "git_blob_sha": "96c5574f04a496a124bdd16ecd8926226fbc9786",
+    "loser_reply_edges": 53357,
+    "path": "class2-lane-cost64h-certificates/bit6-root-00000000000000403800000008100040.cert",
+    "root_mobility": 45,
+    "strategy_rows": 25015,
+    "subroots_passed": 45,
+    "terminal_count": 9510,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "verifier_checks": {
+     "cert_verdict": true,
+     "matches_lane_bareiss_verify_per_move": true,
+     "matches_third_verification_all_fields": true,
+     "root_hex_matches": true,
+     "root_safe": true,
+     "root_seven_stones": true,
+     "rows_equal_consumed": true,
+     "rows_sorted_unique": true,
+     "terminal_range_ok": true,
+     "union_exact": true
+    },
+    "visited_states": 58725
+   },
+   "covers": 7,
+   "d4_canonical_hex": "00000000000000403800000008100040",
+   "d4_orbit_distinct_from_all_folded_roots": true,
+   "marginal": 4,
+   "marginal_hexes": [
+    "00000000000000401800000008100040",
+    "00000000000000402800000008100040",
+    "00000000000000403000000008100040",
+    "00000000000000403800000000100040"
+   ],
+   "marginal_in_manifest": 0,
+   "marginal_manifest_hexes": [],
+   "root_hex": "00000000000000403800000008100040"
+  },
+  {
+   "bit": 8,
+   "certificate": {
+    "bytes": 1503583,
+    "git_blob_sha": "db414850ef78b6c338fcb6094d32e9a546b81089",
+    "loser_reply_edges": 77284,
+    "path": "class2-lane-cost64h-certificates/bit8-root-00000000000000403800000008100100.cert",
+    "root_mobility": 54,
+    "strategy_rows": 41450,
+    "subroots_passed": 54,
+    "terminal_count": 15009,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "verifier_checks": {
+     "cert_verdict": true,
+     "matches_lane_bareiss_verify_per_move": true,
+     "root_hex_matches": true,
+     "root_safe": true,
+     "root_seven_stones": true,
+     "rows_equal_consumed": true,
+     "rows_sorted_unique": true,
+     "terminal_range_ok": true,
+     "union_exact": true
+    },
+    "visited_states": 87371
+   },
+   "covers": 7,
+   "d4_canonical_hex": "00000000000000403800000008100100",
+   "d4_orbit_distinct_from_all_folded_roots": true,
+   "marginal": 4,
+   "marginal_hexes": [
+    "00000000000000401800000008100100",
+    "00000000000000402800000008100100",
+    "00000000000000403000000008100100",
+    "00000000000000403800000000100100"
+   ],
+   "marginal_in_manifest": 0,
+   "marginal_manifest_hexes": [],
+   "root_hex": "00000000000000403800000008100100"
+  },
+  {
+   "bit": 33,
+   "certificate": {
+    "bytes": 1774279,
+    "git_blob_sha": "bcc45876c54a548d372c9fc6dab076e44d4e7d47",
+    "loser_reply_edges": 92083,
+    "path": "class2-lane-cost64h-certificates/bit33-root-00000000000000403800000208100000.cert",
+    "root_mobility": 55,
+    "strategy_rows": 49091,
+    "subroots_passed": 55,
+    "terminal_count": 17783,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "verifier_checks": {
+     "cert_verdict": true,
+     "matches_lane_bareiss_verify_per_move": true,
+     "root_hex_matches": true,
+     "root_safe": true,
+     "root_seven_stones": true,
+     "rows_equal_consumed": true,
+     "rows_sorted_unique": true,
+     "terminal_range_ok": true,
+     "union_exact": true
+    },
+    "visited_states": 103818
+   },
+   "covers": 7,
+   "d4_canonical_hex": "00000000000000403800000208100000",
+   "d4_orbit_distinct_from_all_folded_roots": true,
+   "marginal": 4,
+   "marginal_hexes": [
+    "00000000000000401800000208100000",
+    "00000000000000402800000208100000",
+    "00000000000000403000000208100000",
+    "00000000000000403800000200100000"
+   ],
+   "marginal_in_manifest": 0,
+   "marginal_manifest_hexes": [],
+   "root_hex": "00000000000000403800000208100000"
+  },
+  {
+   "bit": 38,
+   "certificate": {
+    "bytes": 632825,
+    "git_blob_sha": "65ed7517f216e5c4c159c4481180836f5f89b30d",
+    "loser_reply_edges": 41022,
+    "path": "class2-lane-cost64h-certificates/bit38-root-00000000000000403800004008100000.cert",
+    "root_mobility": 44,
+    "strategy_rows": 17496,
+    "subroots_passed": 44,
+    "terminal_count": 5971,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "verifier_checks": {
+     "cert_verdict": true,
+     "matches_lane_bareiss_verify_per_move": true,
+     "matches_third_verification_all_fields": true,
+     "root_hex_matches": true,
+     "root_safe": true,
+     "root_seven_stones": true,
+     "rows_equal_consumed": true,
+     "rows_sorted_unique": true,
+     "terminal_range_ok": true,
+     "union_exact": true
+    },
+    "visited_states": 43333
+   },
+   "covers": 7,
+   "d4_canonical_hex": "00000000000000403800004008100000",
+   "d4_orbit_distinct_from_all_folded_roots": true,
+   "marginal": 4,
+   "marginal_hexes": [
+    "00000000000000401800004008100000",
+    "00000000000000402800004008100000",
+    "00000000000000403000004008100000",
+    "00000000000000403800004000100000"
+   ],
+   "marginal_in_manifest": 0,
+   "marginal_manifest_hexes": [],
+   "root_hex": "00000000000000403800004008100000"
+  },
+  {
+   "bit": 42,
+   "certificate": {
+    "bytes": 1524234,
+    "git_blob_sha": "ac6649de93627daaedb69ffdb5d1a1f4b7db1c94",
+    "loser_reply_edges": 79947,
+    "path": "class2-lane-cost64h-certificates/bit42-root-00000000000000403800040008100000.cert",
+    "root_mobility": 54,
+    "strategy_rows": 42179,
+    "subroots_passed": 54,
+    "terminal_count": 14776,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "verifier_checks": {
+     "cert_verdict": true,
+     "matches_lane_bareiss_verify_per_move": true,
+     "root_hex_matches": true,
+     "root_safe": true,
+     "root_seven_stones": true,
+     "rows_equal_consumed": true,
+     "rows_sorted_unique": true,
+     "terminal_range_ok": true,
+     "union_exact": true
+    },
+    "visited_states": 89523
+   },
+   "covers": 7,
+   "d4_canonical_hex": "00000000000000403800040008100000",
+   "d4_orbit_distinct_from_all_folded_roots": true,
+   "marginal": 4,
+   "marginal_hexes": [
+    "00000000000000401800040008100000",
+    "00000000000000402800040008100000",
+    "00000000000000403000040008100000",
+    "00000000000000403800040000100000"
+   ],
+   "marginal_in_manifest": 0,
+   "marginal_manifest_hexes": [],
+   "root_hex": "00000000000000403800040008100000"
+  },
+  {
+   "bit": 44,
+   "certificate": {
+    "bytes": 1602854,
+    "git_blob_sha": "2a79c84e1f0bcfe724cd888461d1d025e4fd29b8",
+    "loser_reply_edges": 83485,
+    "path": "class2-lane-cost64h-certificates/bit44-root-00000000000000403800100008100000.cert",
+    "root_mobility": 58,
+    "strategy_rows": 44393,
+    "subroots_passed": 58,
+    "terminal_count": 15334,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "verifier_checks": {
+     "cert_verdict": true,
+     "matches_lane_bareiss_verify_per_move": true,
+     "root_hex_matches": true,
+     "root_safe": true,
+     "root_seven_stones": true,
+     "rows_equal_consumed": true,
+     "rows_sorted_unique": true,
+     "terminal_range_ok": true,
+     "union_exact": true
+    },
+    "visited_states": 93490
+   },
+   "covers": 7,
+   "d4_canonical_hex": "00000000000000403800100008100000",
+   "d4_orbit_distinct_from_all_folded_roots": true,
+   "marginal": 5,
+   "marginal_hexes": [
+    "00000000000000003800100008100000",
+    "00000000000000401800100008100000",
+    "00000000000000402800100008100000",
+    "00000000000000403000100008100000",
+    "00000000000000403800100000100000"
+   ],
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000003800100008100000"
+   ],
+   "root_hex": "00000000000000403800100008100000"
+  },
+  {
+   "bit": 49,
+   "certificate": {
+    "bytes": 888984,
+    "git_blob_sha": "ba7aef3f186620c89101e7f74564cec591ca4fbd",
+    "loser_reply_edges": 52301,
+    "path": "class2-lane-cost64h-certificates/bit49-root-00000000000000403802000008100000.cert",
+    "root_mobility": 48,
+    "strategy_rows": 24625,
+    "subroots_passed": 48,
+    "terminal_count": 9245,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "verifier_checks": {
+     "cert_verdict": true,
+     "matches_lane_bareiss_verify_per_move": true,
+     "matches_third_verification_all_fields": true,
+     "root_hex_matches": true,
+     "root_safe": true,
+     "root_seven_stones": true,
+     "rows_equal_consumed": true,
+     "rows_sorted_unique": true,
+     "terminal_range_ok": true,
+     "union_exact": true
+    },
+    "visited_states": 57719
+   },
+   "covers": 7,
+   "d4_canonical_hex": "00000000000000403802000008100000",
+   "d4_orbit_distinct_from_all_folded_roots": true,
+   "marginal": 4,
+   "marginal_hexes": [
+    "00000000000000401802000008100000",
+    "00000000000000402802000008100000",
+    "00000000000000403002000008100000",
+    "00000000000000403802000000100000"
+   ],
+   "marginal_in_manifest": 0,
+   "marginal_manifest_hexes": [],
+   "root_hex": "00000000000000403802000008100000"
+  },
+  {
+   "bit": 68,
+   "certificate": {
+    "bytes": 1525179,
+    "git_blob_sha": "5f889da88fd89be51f1defe6db2f6677d037bd09",
+    "loser_reply_edges": 85206,
+    "path": "class2-lane-cost64h-certificates/bit68-root-00000000000000503800000008100000.cert",
+    "root_mobility": 54,
+    "strategy_rows": 42252,
+    "subroots_passed": 54,
+    "terminal_count": 14902,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "verifier_checks": {
+     "cert_verdict": true,
+     "matches_lane_bareiss_verify_per_move": true,
+     "root_hex_matches": true,
+     "root_safe": true,
+     "root_seven_stones": true,
+     "rows_equal_consumed": true,
+     "rows_sorted_unique": true,
+     "terminal_range_ok": true,
+     "union_exact": true
+    },
+    "visited_states": 93941
+   },
+   "covers": 7,
+   "d4_canonical_hex": "00000000000000503800000008100000",
+   "d4_orbit_distinct_from_all_folded_roots": true,
+   "marginal": 6,
+   "marginal_hexes": [
+    "00000000000000103800000008100000",
+    "00000000000000501800000008100000",
+    "00000000000000502800000008100000",
+    "00000000000000503000000008100000",
+    "00000000000000503800000000100000",
+    "00000000000000503800000008000000"
+   ],
+   "marginal_in_manifest": 2,
+   "marginal_manifest_hexes": [
+    "00000000000000103800000008100000",
+    "00000000000000503800000008000000"
+   ],
+   "root_hex": "00000000000000503800000008100000"
+  },
+  {
+   "bit": 74,
+   "certificate": {
+    "bytes": 860844,
+    "git_blob_sha": "3f4f5ab294f6e7dd84e9c95fa9d4120add4392cb",
+    "loser_reply_edges": 48570,
+    "path": "class2-lane-cost64h-certificates/bit74-root-00000000000004403800000008100000.cert",
+    "root_mobility": 44,
+    "strategy_rows": 23867,
+    "subroots_passed": 44,
+    "terminal_count": 7999,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "verifier_checks": {
+     "cert_verdict": true,
+     "matches_lane_bareiss_verify_per_move": true,
+     "matches_third_verification_all_fields": true,
+     "root_hex_matches": true,
+     "root_safe": true,
+     "root_seven_stones": true,
+     "rows_equal_consumed": true,
+     "rows_sorted_unique": true,
+     "terminal_range_ok": true,
+     "union_exact": true
+    },
+    "visited_states": 52948
+   },
+   "covers": 7,
+   "d4_canonical_hex": "00000000000000c09002000004100000",
+   "d4_orbit_distinct_from_all_folded_roots": true,
+   "marginal": 5,
+   "marginal_hexes": [
+    "00000000000000409002000004100000",
+    "00000000000000c01002000004100000",
+    "00000000000000c08002000004100000",
+    "00000000000000c09000000004100000",
+    "00000000000000c09002000004000000"
+   ],
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000c09002000004000000"
+   ],
+   "root_hex": "00000000000004403800000008100000"
+  },
+  {
+   "bit": 76,
+   "certificate": {
+    "bytes": 1410026,
+    "git_blob_sha": "350cf706c408d0f008482618debb0565c52a7851",
+    "loser_reply_edges": 71433,
+    "path": "class2-lane-cost64h-certificates/bit76-root-00000000000010403800000008100000.cert",
+    "root_mobility": 56,
+    "strategy_rows": 39089,
+    "subroots_passed": 56,
+    "terminal_count": 13478,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "verifier_checks": {
+     "cert_verdict": true,
+     "matches_lane_bareiss_verify_per_move": true,
+     "root_hex_matches": true,
+     "root_safe": true,
+     "root_seven_stones": true,
+     "rows_equal_consumed": true,
+     "rows_sorted_unique": true,
+     "terminal_range_ok": true,
+     "union_exact": true
+    },
+    "visited_states": 80987
+   },
+   "covers": 7,
+   "d4_canonical_hex": "00000000000000c09002000000100010",
+   "d4_orbit_distinct_from_all_folded_roots": true,
+   "marginal": 4,
+   "marginal_hexes": [
+    "00000000000000409002000000100010",
+    "00000000000000c01002000000100010",
+    "00000000000000c08002000000100010",
+    "00000000000000c09000000000100010"
+   ],
+   "marginal_in_manifest": 0,
+   "marginal_manifest_hexes": [],
+   "root_hex": "00000000000010403800000008100000"
+  },
+  {
+   "bit": 77,
+   "certificate": {
+    "bytes": 1459327,
+    "git_blob_sha": "dec4b93727d5048ce25f59fd894ba86a45302f18",
+    "loser_reply_edges": 80575,
+    "path": "class2-lane-cost64h-certificates/bit77-root-00000000000020403800000008100000.cert",
+    "root_mobility": 54,
+    "strategy_rows": 40376,
+    "subroots_passed": 54,
+    "terminal_count": 14908,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "verifier_checks": {
+     "cert_verdict": true,
+     "matches_lane_bareiss_verify_per_move": true,
+     "root_hex_matches": true,
+     "root_safe": true,
+     "root_seven_stones": true,
+     "rows_equal_consumed": true,
+     "rows_sorted_unique": true,
+     "terminal_range_ok": true,
+     "union_exact": true
+    },
+    "visited_states": 90354
+   },
+   "covers": 7,
+   "d4_canonical_hex": "00000000000020403800000008100000",
+   "d4_orbit_distinct_from_all_folded_roots": true,
+   "marginal": 6,
+   "marginal_hexes": [
+    "00000000000000801206000000000080",
+    "00000000000020003800000008100000",
+    "00000000000020401800000008100000",
+    "00000000000020402800000008100000",
+    "00000000000020403000000008100000",
+    "00000000000020403800000000100000"
+   ],
+   "marginal_in_manifest": 2,
+   "marginal_manifest_hexes": [
+    "00000000000000801206000000000080",
+    "00000000000020003800000008100000"
+   ],
+   "root_hex": "00000000000020403800000008100000"
+  },
+  {
+   "bit": 78,
+   "certificate": {
+    "bytes": 1393737,
+    "git_blob_sha": "d5cdce8917dc1fa7ae45ceeb1e7a47049782aa2f",
+    "loser_reply_edges": 72533,
+    "path": "class2-lane-cost64h-certificates/bit78-root-00000000000040403800000008100000.cert",
+    "root_mobility": 58,
+    "strategy_rows": 38630,
+    "subroots_passed": 58,
+    "terminal_count": 12465,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "verifier_checks": {
+     "cert_verdict": true,
+     "matches_lane_bareiss_verify_per_move": true,
+     "root_hex_matches": true,
+     "root_safe": true,
+     "root_seven_stones": true,
+     "rows_equal_consumed": true,
+     "rows_sorted_unique": true,
+     "terminal_range_ok": true,
+     "union_exact": true
+    },
+    "visited_states": 80504
+   },
+   "covers": 7,
+   "d4_canonical_hex": "00000000000040403800000008100000",
+   "d4_orbit_distinct_from_all_folded_roots": true,
+   "marginal": 5,
+   "marginal_hexes": [
+    "00000000000040003800000008100000",
+    "00000000000040401800000008100000",
+    "00000000000040402800000008100000",
+    "00000000000040403000000008100000",
+    "00000000000040403800000000100000"
+   ],
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000040003800000008100000"
+   ],
+   "root_hex": "00000000000040403800000008100000"
+  },
+  {
+   "bit": 79,
+   "certificate": {
+    "bytes": 974707,
+    "git_blob_sha": "3c61d138dead96bf6905beb86c17acd275ecf06e",
+    "loser_reply_edges": 52385,
+    "path": "class2-lane-cost64h-certificates/bit79-root-00000000000080403800000008100000.cert",
+    "root_mobility": 50,
+    "strategy_rows": 26980,
+    "subroots_passed": 50,
+    "terminal_count": 8880,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "verifier_checks": {
+     "cert_verdict": true,
+     "matches_lane_bareiss_verify_per_move": true,
+     "root_hex_matches": true,
+     "root_safe": true,
+     "root_seven_stones": true,
+     "rows_equal_consumed": true,
+     "rows_sorted_unique": true,
+     "terminal_range_ok": true,
+     "union_exact": true
+    },
+    "visited_states": 57952
+   },
+   "covers": 7,
+   "d4_canonical_hex": "00000000000080403800000008100000",
+   "d4_orbit_distinct_from_all_folded_roots": true,
+   "marginal": 5,
+   "marginal_hexes": [
+    "00000000000080003800000008100000",
+    "00000000000080401800000008100000",
+    "00000000000080402800000008100000",
+    "00000000000080403000000008100000",
+    "00000000000080403800000000100000"
+   ],
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000080003800000008100000"
+   ],
+   "root_hex": "00000000000080403800000008100000"
+  },
+  {
+   "bit": 83,
+   "certificate": {
+    "bytes": 1267339,
+    "git_blob_sha": "d9454bbd5dec5c81d1782496079f344166c4e96e",
+    "loser_reply_edges": 68711,
+    "path": "class2-lane-cost64h-certificates/bit83-root-00000000000800403800000008100000.cert",
+    "root_mobility": 51,
+    "strategy_rows": 35139,
+    "subroots_passed": 51,
+    "terminal_count": 12705,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "verifier_checks": {
+     "cert_verdict": true,
+     "matches_lane_bareiss_verify_per_move": true,
+     "root_hex_matches": true,
+     "root_safe": true,
+     "root_seven_stones": true,
+     "rows_equal_consumed": true,
+     "rows_sorted_unique": true,
+     "terminal_range_ok": true,
+     "union_exact": true
+    },
+    "visited_states": 76561
+   },
+   "covers": 7,
+   "d4_canonical_hex": "00000000000000c09002800000100000",
+   "d4_orbit_distinct_from_all_folded_roots": true,
+   "marginal": 5,
+   "marginal_hexes": [
+    "00000000000000409002800000100000",
+    "0000000000000080120a000000001000",
+    "00000000000000c01002800000100000",
+    "00000000000000c08002800000100000",
+    "00000000000000c09000800000100000"
+   ],
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "0000000000000080120a000000001000"
+   ],
+   "root_hex": "00000000000800403800000008100000"
+  },
+  {
+   "bit": 89,
+   "certificate": {
+    "bytes": 1249636,
+    "git_blob_sha": "5e174da908f8617c87e761112db50f5b093669f8",
+    "loser_reply_edges": 71914,
+    "path": "class2-lane-cost64h-certificates/bit89-root-00000000020000403800000008100000.cert",
+    "root_mobility": 53,
+    "strategy_rows": 34626,
+    "subroots_passed": 53,
+    "terminal_count": 11532,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "verifier_checks": {
+     "cert_verdict": true,
+     "matches_lane_bareiss_verify_per_move": true,
+     "root_hex_matches": true,
+     "root_safe": true,
+     "root_seven_stones": true,
+     "rows_equal_consumed": true,
+     "rows_sorted_unique": true,
+     "terminal_range_ok": true,
+     "union_exact": true
+    },
+    "visited_states": 77481
+   },
+   "covers": 7,
+   "d4_canonical_hex": "00000000020000403800000008100000",
+   "d4_orbit_distinct_from_all_folded_roots": true,
+   "marginal": 6,
+   "marginal_hexes": [
+    "00000000000000801206000000080000",
+    "00000000020000003800000008100000",
+    "00000000020000401800000008100000",
+    "00000000020000402800000008100000",
+    "00000000020000403000000008100000",
+    "00000000020000403800000000100000"
+   ],
+   "marginal_in_manifest": 3,
+   "marginal_manifest_hexes": [
+    "00000000000000801206000000080000",
+    "00000000020000003800000008100000",
+    "00000000020000403800000000100000"
+   ],
+   "root_hex": "00000000020000403800000008100000"
+  },
+  {
+   "bit": 91,
+   "certificate": {
+    "bytes": 597982,
+    "git_blob_sha": "bc433641c6caecf440bdeb13842cc9e4bcfe6041",
+    "loser_reply_edges": 39624,
+    "path": "class2-lane-cost64h-certificates/bit91-root-00000000080000403800000008100000.cert",
+    "root_mobility": 44,
+    "strategy_rows": 16590,
+    "subroots_passed": 44,
+    "terminal_count": 6436,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "verifier_checks": {
+     "cert_verdict": true,
+     "matches_lane_bareiss_verify_per_move": true,
+     "matches_third_verification_all_fields": true,
+     "root_hex_matches": true,
+     "root_safe": true,
+     "root_seven_stones": true,
+     "rows_equal_consumed": true,
+     "rows_sorted_unique": true,
+     "terminal_range_ok": true,
+     "union_exact": true
+    },
+    "visited_states": 42592
+   },
+   "covers": 7,
+   "d4_canonical_hex": "00000000000080c09002000000100000",
+   "d4_orbit_distinct_from_all_folded_roots": true,
+   "marginal": 5,
+   "marginal_hexes": [
+    "00000000000080409002000000100000",
+    "00000000000080809002000000100000",
+    "00000000000080c01002000000100000",
+    "00000000000080c08002000000100000",
+    "00000000000080c09000000000100000"
+   ],
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000080809002000000100000"
+   ],
+   "root_hex": "00000000080000403800000008100000"
+  },
+  {
+   "bit": 101,
+   "certificate": {
+    "bytes": 1444630,
+    "git_blob_sha": "68c7235d49bb7dc45b63e9d2e190054b2409bb60",
+    "loser_reply_edges": 75980,
+    "path": "class2-lane-cost64h-certificates/bit101-root-00000020000000403800000008100000.cert",
+    "root_mobility": 55,
+    "strategy_rows": 40056,
+    "subroots_passed": 55,
+    "terminal_count": 13227,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "verifier_checks": {
+     "cert_verdict": true,
+     "matches_lane_bareiss_verify_per_move": true,
+     "root_hex_matches": true,
+     "root_safe": true,
+     "root_seven_stones": true,
+     "rows_equal_consumed": true,
+     "rows_sorted_unique": true,
+     "terminal_range_ok": true,
+     "union_exact": true
+    },
+    "visited_states": 84094
+   },
+   "covers": 7,
+   "d4_canonical_hex": "00000000020000c09002000000100000",
+   "d4_orbit_distinct_from_all_folded_roots": true,
+   "marginal": 5,
+   "marginal_hexes": [
+    "00000000020000409002000000100000",
+    "00000000020000809002000000100000",
+    "00000000020000c01002000000100000",
+    "00000000020000c08002000000100000",
+    "00000000020000c09000000000100000"
+   ],
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000020000809002000000100000"
+   ],
+   "root_hex": "00000020000000403800000008100000"
+  },
+  {
+   "bit": 109,
+   "certificate": {
+    "bytes": 1237092,
+    "git_blob_sha": "4f8398876e36c861d1b97dbb8f91614acddade3e",
+    "loser_reply_edges": 66880,
+    "path": "class2-lane-cost64h-certificates/bit109-root-00002000000000403800000008100000.cert",
+    "root_mobility": 56,
+    "strategy_rows": 34357,
+    "subroots_passed": 56,
+    "terminal_count": 12081,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "verifier_checks": {
+     "cert_verdict": true,
+     "matches_lane_bareiss_verify_per_move": true,
+     "root_hex_matches": true,
+     "root_safe": true,
+     "root_seven_stones": true,
+     "rows_equal_consumed": true,
+     "rows_sorted_unique": true,
+     "terminal_range_ok": true,
+     "union_exact": true
+    },
+    "visited_states": 74794
+   },
+   "covers": 7,
+   "d4_canonical_hex": "00000000000000c09002000000100002",
+   "d4_orbit_distinct_from_all_folded_roots": true,
+   "marginal": 5,
+   "marginal_hexes": [
+    "00000000000000409002000000100002",
+    "00000000000000801202000000001200",
+    "00000000000000c01002000000100002",
+    "00000000000000c08002000000100002",
+    "00000000000000c09000000000100002"
+   ],
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000801202000000001200"
+   ],
+   "root_hex": "00002000000000403800000008100000"
+  },
+  {
+   "bit": 113,
+   "certificate": {
+    "bytes": 1601746,
+    "git_blob_sha": "fb4b02dcd336a474384ae045f533dd0368b81052",
+    "loser_reply_edges": 89499,
+    "path": "class2-lane-cost64h-certificates/bit113-root-00020000000000403800000008100000.cert",
+    "root_mobility": 59,
+    "strategy_rows": 44410,
+    "subroots_passed": 59,
+    "terminal_count": 16654,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "verifier_checks": {
+     "cert_verdict": true,
+     "matches_lane_bareiss_verify_per_move": true,
+     "root_hex_matches": true,
+     "root_safe": true,
+     "root_seven_stones": true,
+     "rows_equal_consumed": true,
+     "rows_sorted_unique": true,
+     "terminal_range_ok": true,
+     "union_exact": true
+    },
+    "visited_states": 100499
+   },
+   "covers": 7,
+   "d4_canonical_hex": "00000000000020c09002000000100000",
+   "d4_orbit_distinct_from_all_folded_roots": true,
+   "marginal": 5,
+   "marginal_hexes": [
+    "00000000000020409002000000100000",
+    "00000000000020809002000000100000",
+    "00000000000020c01002000000100000",
+    "00000000000020c08002000000100000",
+    "00000000000020c09000000000100000"
+   ],
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000020809002000000100000"
+   ],
+   "root_hex": "00020000000000403800000008100000"
+  },
+  {
+   "bit": 114,
+   "certificate": {
+    "bytes": 1113298,
+    "git_blob_sha": "1880bc8a9428052d7e8cfb941a20b444f633cd45",
+    "loser_reply_edges": 61355,
+    "path": "class2-lane-cost64h-certificates/bit114-root-00040000000000403800000008100000.cert",
+    "root_mobility": 53,
+    "strategy_rows": 30899,
+    "subroots_passed": 53,
+    "terminal_count": 10697,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "verifier_checks": {
+     "cert_verdict": true,
+     "matches_lane_bareiss_verify_per_move": true,
+     "root_hex_matches": true,
+     "root_safe": true,
+     "root_seven_stones": true,
+     "rows_equal_consumed": true,
+     "rows_sorted_unique": true,
+     "terminal_range_ok": true,
+     "union_exact": true
+    },
+    "visited_states": 68305
+   },
+   "covers": 7,
+   "d4_canonical_hex": "00000000000000c49002000000100000",
+   "d4_orbit_distinct_from_all_folded_roots": true,
+   "marginal": 4,
+   "marginal_hexes": [
+    "00000000000000449002000000100000",
+    "00000000000000c41002000000100000",
+    "00000000000000c48002000000100000",
+    "00000000000000c49000000000100000"
+   ],
+   "marginal_in_manifest": 0,
+   "marginal_manifest_hexes": [],
+   "root_hex": "00040000000000403800000008100000"
+  },
+  {
+   "bit": 116,
+   "certificate": {
+    "bytes": 1166128,
+    "git_blob_sha": "fbc3836be608c963f0a5dea8a2dd32ef52956ec5",
+    "loser_reply_edges": 65501,
+    "path": "class2-lane-cost64h-certificates/bit116-root-00100000000000403800000008100000.cert",
+    "root_mobility": 51,
+    "strategy_rows": 32382,
+    "subroots_passed": 51,
+    "terminal_count": 10874,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "verifier_checks": {
+     "cert_verdict": true,
+     "matches_second_impl_lane_local_bigint_all_fields": true,
+     "root_hex_matches": true,
+     "root_safe": true,
+     "root_seven_stones": true,
+     "rows_equal_consumed": true,
+     "rows_sorted_unique": true,
+     "terminal_range_ok": true,
+     "union_exact": true
+    },
+    "visited_states": 71150
+   },
+   "covers": 7,
+   "d4_canonical_hex": "00000000000000c09002100000100000",
+   "d4_orbit_distinct_from_all_folded_roots": true,
+   "marginal": 6,
+   "marginal_hexes": [
+    "00000000000000409002100000100000",
+    "00000000000000801242000000001000",
+    "00000000000000849003000000000000",
+    "00000000000000c01002100000100000",
+    "00000000000000c08002100000100000",
+    "00000000000000c09000100000100000"
+   ],
+   "marginal_in_manifest": 2,
+   "marginal_manifest_hexes": [
+    "00000000000000801242000000001000",
+    "00000000000000849003000000000000"
+   ],
+   "root_hex": "00100000000000403800000008100000"
+  },
+  {
+   "bit": 120,
+   "certificate": {
+    "bytes": 1881171,
+    "git_blob_sha": "dbeaf4a648294efe362a8659d7299aa8043c7d7f",
+    "loser_reply_edges": 94767,
+    "path": "class2-lane-cost64h-certificates/bit120-root-01000000000000403800000008100000.cert",
+    "root_mobility": 58,
+    "strategy_rows": 52213,
+    "subroots_passed": 58,
+    "terminal_count": 16527,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "verifier_checks": {
+     "cert_verdict": true,
+     "matches_second_impl_lane_local_bigint_all_fields": true,
+     "root_hex_matches": true,
+     "root_safe": true,
+     "root_seven_stones": true,
+     "rows_equal_consumed": true,
+     "rows_sorted_unique": true,
+     "terminal_range_ok": true,
+     "union_exact": true
+    },
+    "visited_states": 104871
+   },
+   "covers": 7,
+   "d4_canonical_hex": "00000000000000c09002000000100001",
+   "d4_orbit_distinct_from_all_folded_roots": true,
+   "marginal": 5,
+   "marginal_hexes": [
+    "00000000000000409002000000100001",
+    "00000000000000801202000000001400",
+    "00000000000000c01002000000100001",
+    "00000000000000c08002000000100001",
+    "00000000000000c09000000000100001"
+   ],
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000801202000000001400"
+   ],
+   "root_hex": "01000000000000403800000008100000"
+  }
+ ],
+ "schema": "n11-class2-lane-cost64h-receipts-recompute-20261117-v1",
+ "source_blob_pins": {
+  "agreement": "9ab473ac0163755ddf541d8a9a5e44da304f8095",
+  "audit66i": "f7d8bad610fe07fee6b365e711838600722737e2",
+  "audit76c": "235f964365a7ab33e33986c915fc7f6861e4d686",
+  "claim64h": "68e4878094b78eaf0a465033d0289a6db5d94861",
+  "claim66i": "4010732a833ae15de801dfe9c2b2e7486b187955",
+  "claim76c": "6be75df147303cb21f6b357210c993724fa22f11",
+  "generator_script": "85f960508d934c5c4c266bdacaf5bcaccb8428f8",
+  "prereg": "5074a8a0cbb75fcc91b5b999a3135fac06d42400",
+  "v17": "b1a6c23b2ad0504252ab6bda3a09c23161f98107",
+  "verifier": "276e70e3dc930ffa17a02fe2280dff52b72b724c"
+ },
+ "status": "fold-complete",
+ "target_parent": {
+  "classes": 2,
+  "edge_cost_after": 872,
+  "edge_cost_before": 1287,
+  "lost_edge_cost": 415,
+  "lost_rows_hexes": [
+   "00000000000000403800000008100000",
+   "00000000000000503800000008000000",
+   "00000000000000801206000000000080",
+   "00000000000000801206000000080000",
+   "00000000000000849003000000000000",
+   "00000000000000c09002000004000000"
+  ],
+  "rows_after": 12,
+  "rows_before": 18,
+  "s5_hex": "00000000000000403800000008000000"
+ },
+ "totals": {
+  "child_closed_by_bit": 4,
+  "closed_manifest_rows": [
+   "00000000000000003800100008100000",
+   "00000000000000103800000008100000",
+   "00000000000000403800000008100000",
+   "00000000000000503800000008000000",
+   "00000000000000801202000000001200",
+   "00000000000000801202000000001400",
+   "00000000000000801206000000000080",
+   "00000000000000801206000000080000",
+   "0000000000000080120a000000001000",
+   "00000000000000801242000000001000",
+   "00000000000000849003000000000000",
+   "00000000000000c09002000004000000",
+   "00000000000020003800000008100000",
+   "00000000000020809002000000100000",
+   "00000000000040003800000008100000",
+   "00000000000080003800000008100000",
+   "00000000000080809002000000100000",
+   "00000000020000003800000008100000",
+   "00000000020000403800000000100000",
+   "00000000020000809002000000100000"
+  ],
+  "conflict_census_overlaps": 0,
+  "independently_verified_certificates": 23,
+  "pairwise_distinct_d4_canons": true,
+  "receipts": 23,
+  "total_certificate_bytes": 29053047,
+  "total_marginal": 111,
+  "total_marginal_in_manifest": 20,
+  "total_strategy_rows": 804783
+ },
+ "v17_full_row_recheck": {
+  "bits_checked": 64,
+  "conclusion": "every cost64h bit search was fb-unsaturated (0 effective drops); the published v16 verdicts for the whole row are exactly reproduced by v17, so the in-flight 64h fold (23 WIN receipts, all dual-verified certificates) and the 41 REFUTED bookkeeping are unaffected by the fbt defect",
+  "identical_bits": 64,
+  "node_count_changes": [],
+  "refuted_bits": 41,
+  "v16_published_total_nodes": 47017565,
+  "v17_total_nodes": 47017565,
+  "verdict_flips": [],
+  "win_bits": [
+   4,
+   6,
+   8,
+   33,
+   38,
+   42,
+   44,
+   49,
+   68,
+   74,
+   76,
+   77,
+   78,
+   79,
+   83,
+   89,
+   91,
+   101,
+   109,
+   113,
+   114,
+   116,
+   120
+  ]
+ }
+}
