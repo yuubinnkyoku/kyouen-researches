@@ -1,0 +1,95 @@
+{
+ "schema": "n11-k0863-theorem-application-bit109-verification-20261116-v1",
+ "date": "2026-11-16",
+ "method": "Python standard library only; exact integer Bareiss determinants; D4 canonicalization, legal-candidate enumeration and the position-level cover lemma re-implemented independently of the repository engine; reads only published claim JSONs and raw batch JSONLs; deterministic output, no timestamps, no floating point",
+ "application": {
+  "claim_file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost69a-inflight-20261116.json",
+  "claim_commit": "e3c5117cb24b",
+  "candidate_bit": 109,
+  "root_hex": "00002000000000801222000000800000",
+  "canonical_root_hex": "00000000020008801202000000200000",
+  "theorem_derived_verdict": "REFUTED-D10",
+  "theorem": "K0863 STERILE-row depth-10 unclosability"
+ },
+ "d4_identity": {
+  "canonical_hex": "00000000020008801202000000200000",
+  "69a_bit109": {
+   "child": "00000000000000801222000000800000",
+   "bit": 109,
+   "root_hex": "00002000000000801222000000800000"
+  },
+  "65k_bit75": {
+   "row": "00000000020000801202000000200000",
+   "bit": 75,
+   "root_hex": "00000000020008801202000000200000"
+  },
+  "74h_bit97": {
+   "row": "00000000000000889002000000000800",
+   "bit": 97,
+   "root_hex": "00000002000000889002000000000800"
+  },
+  "all_canonicalize_identically": true
+ },
+ "cover_lemma": {
+  "row_65k": {
+   "row_hex": "00000000020000801202000000200000",
+   "legal_candidates": 65,
+   "bit109_root_covers_row": true
+  },
+  "row_74h": {
+   "row_hex": "00000000000000889002000000000800",
+   "legal_candidates": 74,
+   "bit109_root_covers_row": true
+  },
+  "contradiction_route": "a WIN7-D10 receipt at bit 109 would close both STERILE rows by the marginal mechanism; K0863 proves no WIN7-D10 receipt root can cover a STERILE row, forcing REFUTED-D10 - the same verdict as the D4-transfer route"
+ },
+ "own_sweep_records": {
+  "65k": {
+   "status": "completed",
+   "candidates": 65,
+   "win7_d10_bits": [],
+   "refuted_d10": 65,
+   "capped": 0,
+   "bit75_raw": {
+    "file": "class2-lane-cost65k-raw-batch6-20261115.jsonl",
+    "loss": false,
+    "nodes": 488221,
+    "capped": false,
+    "terminalStoneRange": [
+     13,
+     17
+    ],
+    "andclose": true
+   }
+  },
+  "74h": {
+   "status": "completed",
+   "candidates": 74,
+   "win7_d10_bits": [],
+   "refuted_d10": 74,
+   "capped": 0,
+   "bit97_raw": {
+    "file": "class2-lane-cost74h-raw-batch8-20261115.jsonl",
+    "loss": false,
+    "nodes": 282846,
+    "capped": false,
+    "terminalStoneRange": [
+     13,
+     17
+    ],
+    "andclose": true
+   }
+  }
+ },
+ "checks": {
+  "a1_claim_structure": true,
+  "a2_d4_canonical_identity": true,
+  "a3_cover_membership_both_rows": true,
+  "a4_own_sweeps_complete_sterile_with_raw_bits": true,
+  "a5_safety_and_independent_enumeration": true,
+  "failures": [],
+  "all_pass": true
+ },
+ "interpretation": "the parallel lane's theorem-derived REFUTED-D10 for cost-69a bit 109 is verified: both derivation routes agree (D4 transfer from the already-swept own representatives 65k bit 75 / 74h bit 97, and the K0863 contradiction route via dual cover membership). The engine line for bit 109, if batch 8 runs it, is a consistency check, not new evidence. This rules out the last cost<=70 single-root dual-cover of two STERILE rows; the three STERILE rows remain open (STERILE is not a LOSS proof). 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, class 1, class 2 and class 4 all remain UNKNOWN.",
+ "trust_boundary": "engine soundness is assumed as in every verdict claim of this lane; this script verifies position-level facts, published records and canonical identities only"
+}
