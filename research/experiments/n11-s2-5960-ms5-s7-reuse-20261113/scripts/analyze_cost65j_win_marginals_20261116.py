@@ -28,6 +28,7 @@ proof and the 11x11 empty board remains UNKNOWN.
 import csv
 import json
 import os
+import sys
 
 CHILD = '00000000000000809102000080000000'
 WIN_BITS_65F = [4, 15, 18, 20, 21, 23, 25, 28, 66, 79, 91, 101, 109]
@@ -155,12 +156,15 @@ def main():
         for d in in_man:
             covered_rows.setdefault(d, []).append(bit)
 
+    # re-derive the session observation: the two cost-64 rows are covered
+    # by the 65f bit-21 / bit-20 receipts
     checks = {}
     for row, bit in KNOWN_65F_COVERED_ROWS.items():
         ok = row in receipts[bit]['in_manifest_deletions']
         checks[row] = {'covered_by_65f_bit': bit, 'verified': ok}
         assert ok, (row, bit)
 
+    # cross-root root-canon distinctness of the 17 receipts
     canons = [receipts[b]['root_d4_canon'] for b in receipts]
     assert len(set(canons)) == len(canons), 'duplicate root canon'
 
