@@ -102,6 +102,6 @@ H(R;(x,y);5)=
 
 ## 証明と監査
 
-完全なR強帰納、A/A/C選択肢署名表、有限監査の範囲と限界は[証明報告](../experiments/vertical-fiber-two-token-z5-full-grundy-20261117/report.md)に記録した。y=1の境界証明は[先行報告](../experiments/vertical-fiber-two-token-z5-y1-boundary-20261116/report.md)を参照。検証器は857,466署名・2,021,000境界式・44,793 tail点で不一致0。有限監査は証明の代わりではなく、全称性は強帰納による。
+完全なR強帰納、A/A/C選択肢署名表、有限監査の範囲と限界は[証明報告](../../experiments/vertical-fiber-two-token-z5-full-grundy-20261117/report.md)に記録した。y=1の境界証明は[先行報告](../../experiments/vertical-fiber-two-token-z5-y1-boundary-20261116/report.md)を参照。検証器は857,466署名・2,021,000境界式・44,793 tail点で不一致0。有限監査は証明の代わりではなく、全称性は強帰納による。
 
 z≥6の全Grundy分類と全高さの統一式は未解決である。

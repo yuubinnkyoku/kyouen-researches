@@ -91,9 +91,9 @@ H(R-1;(x);7),\
 
 Theorem Tにより、奇数Rの親では子の残容量が偶数なので選択肢値は0/1だけである。選択肢集合が \(\{0,1\}\)、\(\{0\}\)、\(\{1\}\) または空のどれかに応じてmexは2、1、0、0となる。偶数Rの親は値が高々1なので、選択肢に0があるかだけを見ればよい。
 
-これらをA/B/Cに代入した全 \(x\) の選択肢署名表は[証明報告](../experiments/vertical-fiber-two-token-z6-y1-boundary-20261117/report.md)に記載した。特に \(x=7,8,9\) の過渡例外と \(x\ge10\) の偶奇定常域を分けると、全てのRが被覆され、mexは上記の \(T_6^{(1)},P_6^{(1)}\) と一致する。従ってR強帰納が閉じる。∎
+これらをA/B/Cに代入した全 \(x\) の選択肢署名表は[証明報告](../../experiments/vertical-fiber-two-token-z6-y1-boundary-20261117/report.md)に記載した。特に \(x=7,8,9\) の過渡例外と \(x\ge10\) の偶奇定常域を分けると、全てのRが被覆され、mexは上記の \(T_6^{(1)},P_6^{(1)}\) と一致する。従ってR強帰納が閉じる。∎
 
-独立監査は2,096,420照合・不一致0。有限監査は全称性の根拠ではなく、全称性は上記の強帰納証明による。詳細は[報告](../experiments/vertical-fiber-two-token-z6-y1-boundary-20261117/report.md)と[検証器](../experiments/vertical-fiber-two-token-z6-y1-boundary-20261117/verify_z6_y1.py)を参照。
+独立監査は2,096,420照合・不一致0。有限監査は全称性の根拠ではなく、全称性は上記の強帰納証明による。詳細は[報告](../../experiments/vertical-fiber-two-token-z6-y1-boundary-20261117/report.md)と[検証器](../../experiments/vertical-fiber-two-token-z6-y1-boundary-20261117/verify_z6_y1.py)を参照。
 
 ## 限界
 
