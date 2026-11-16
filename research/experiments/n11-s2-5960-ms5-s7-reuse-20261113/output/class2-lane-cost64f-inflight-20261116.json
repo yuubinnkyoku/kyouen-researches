@@ -1,8 +1,8 @@
 {
- "schema": "n11-class2-lane-cost64f-inflight-20261116-v1",
- "title": "n11 class2-lane cost-64f sweep in flight: cheapest open row 0000000000000080120a000000800000 of the class-2 target parent at head 1435 (59 open candidate bits after 5 published-verbatim REFUTED-D10 transfers)",
+ "schema": "n11-class2-lane-cost64f-completed-20261116-v2",
+ "title": "n11 class2-lane cost-64f sweep completed NOT-STERILE: 3 WIN7-D10 receipts (bits 39, 72, 107) of the cheapest open row 0000000000000080120a000000800000 at head 1435 certified; fold deferred per protocol; head 1435 unchanged until the fold session",
  "date": "2026-11-16",
- "status": "in flight on 2026-11-16 by the long-term lane session: the head-1435 v2 pre-sweep census (harvest extended with the published cost-64e completed-STERILE raw sweep, claim v2 blob 55c51c92) ranks this row first among the 46 not-fully-determined rows of the two class-2 lane protocol parents; sweep of the 59 open candidate bits with the v16 engine (depth 10, cap 10000000) is starting; 11x11 empty board, two-stone roots {49,60} and {59,60}, S2 {59,60}, and classes 1/2/4 all remain UNKNOWN",
+ "status": "completed NOT-STERILE on 2026-11-16 by the long-term lane session: the full raw sweep of the 59 open candidates is published (8 v16 raw batches + determinism rerun batch2 node-exact + v15 crosscheck anchors 0/32/39/118 incl. the WIN bit 39), plus the 5 pre-sweep REFUTED-D10 transfers: 3 WIN7-D10 (bits 39, 72, 107), 56 REFUTED-D10, 0 capped - the row is NOT sterile; all three WIN7 roots have published, independently verified certificates (BigInt union 0/0 + exact-integer Bareiss sub-roots 50/51/41 all PASS); the fold of the 3 receipts on the head-1435 chain is deferred to the chain-reproduction session per protocol, so the canonical head stays 1435 until then; 11x11 empty board, two-stone roots {49,60} and {59,60}, S2 {59,60}, and classes 1/2/4 all remain UNKNOWN",
  "claimed_by": "n11 long-term lane session (next-target cheapest-first continuation after the cost-64e STERILE determination)",
  "s5_target": "00000000000000403800000008000000",
  "s6_child": "0000000000000080120a000000800000",
@@ -179,5 +179,359 @@
  "target_context": "the head-1435 v2 next-target pre-sweep census ranks this row first among the 46 not-fully-determined rows of the two class-2 lane protocol parents by open candidate bits (59 of 64; three rows are already fully determined by transfers - the cost-64c STERILE row 00000000000000003800000008002020, the cost-64e STERILE row 0000000000000000380000000a002000, and the cost-65 transferred row 00000000020000801202000000200000 - and need no sweep); family-level demand at head 1435 after the v2 census: class-2 target 00000000000000403800000008000000 1287 candidate occurrences -> 1261 open after transfers -> 1131 distinct open D4 root orbits; shared parent 00000000000000003800000008002000 2145 -> 1813 -> 1473; the runner-up cost-64 row 00000000000100003800000008080000 (also 59 open) is reserved for the next ranking",
  "planned_protocol": "v16 engine (class4_child1_runner_v16.ts, repo-verbatim), depth 10, node cap 10000000 per candidate, pilot_d6 control 3402 nodes per batch invocation, batches of ~8 open bits (8x8+3), raw batch JSONL published per batch, determinism rerun node-exact on the heaviest batch, v15 crosscheck anchors, independent candidate enumeration bit-exact via legal_candidates.py (already asserted in the v2 census), sweep aggregate audit and claim update on completion, certificate extraction for any WIN7-D10 root (whole or part1of2/part2of2), fold of WIN receipts on the 1435 head with conflict census before the next ranking",
  "interpretation_guard": "WIN7-D10 candidates prove a first-player win within depth 10 from the individual 7-stone roots only; REFUTED-D10 is NOT a LOSS proof and a STERILE determination is NOT a game-theoretic value for the row; STERILE would mean only that no depth-10 receipt route exists to close this row; transferred verdicts are D4-canonical identities of published depth-10 engine results; solved 1435 is manifest-coverage bookkeeping",
- "unknown_status": "11x11 empty board, two-stone roots {49,60} and {59,60}, S2 {59,60}, and classes 1/2/4 all remain UNKNOWN"
+ "unknown_status": "11x11 empty board, two-stone roots {49,60} and {59,60}, S2 {59,60}, and classes 1/2/4 all remain UNKNOWN",
+ "results": {
+  "candidates": [
+   0,
+   1,
+   4,
+   6,
+   8,
+   9,
+   10,
+   11,
+   14,
+   18,
+   21,
+   22,
+   26,
+   31,
+   32,
+   33,
+   35,
+   39,
+   40,
+   42,
+   43,
+   52,
+   53,
+   54,
+   55,
+   56,
+   58,
+   61,
+   64,
+   66,
+   67,
+   72,
+   75,
+   76,
+   77,
+   79,
+   85,
+   86,
+   87,
+   88,
+   90,
+   94,
+   95,
+   96,
+   97,
+   98,
+   99,
+   102,
+   103,
+   105,
+   106,
+   107,
+   108,
+   109,
+   110,
+   111,
+   112,
+   113,
+   114,
+   116,
+   117,
+   118,
+   119,
+   120
+  ],
+  "candidate_count": 64,
+  "candidate_enumeration": "legal_candidates.py independent exact-integer Bareiss 4x4 (bit-exact asserted in the v2 census and the certificate assembler: root mobility == driver moves for all 3 roots)",
+  "batch_bit_lists": {
+   "1": [
+    0,
+    1,
+    4,
+    6,
+    8,
+    9,
+    10,
+    11
+   ],
+   "2": [
+    14,
+    18,
+    22,
+    26,
+    31,
+    32,
+    33,
+    39
+   ],
+   "3": [
+    40,
+    42,
+    43,
+    52,
+    53,
+    54,
+    56,
+    58
+   ],
+   "4": [
+    61,
+    66,
+    67,
+    72,
+    75,
+    76,
+    77,
+    79
+   ],
+   "5": [
+    85,
+    86,
+    87,
+    88,
+    90,
+    94,
+    95,
+    96
+   ],
+   "6": [
+    97,
+    98,
+    99,
+    102,
+    103,
+    105,
+    106,
+    107
+   ],
+   "7": [
+    108,
+    110,
+    111,
+    112,
+    113,
+    114,
+    116,
+    117
+   ],
+   "8": [
+    118,
+    119,
+    120
+   ]
+  },
+  "win7_d10_bits": [
+   39,
+   72,
+   107
+  ],
+  "win7_d10_count": 3,
+  "refuted_d10_bits_swept_v16": [
+   0,
+   1,
+   4,
+   6,
+   8,
+   9,
+   10,
+   11,
+   14,
+   18,
+   22,
+   26,
+   31,
+   32,
+   33,
+   40,
+   42,
+   43,
+   52,
+   53,
+   54,
+   56,
+   58,
+   61,
+   66,
+   67,
+   75,
+   76,
+   77,
+   79,
+   85,
+   86,
+   87,
+   88,
+   90,
+   94,
+   95,
+   96,
+   97,
+   98,
+   99,
+   102,
+   103,
+   105,
+   106,
+   108,
+   110,
+   111,
+   112,
+   113,
+   114,
+   116,
+   117,
+   118,
+   119,
+   120
+  ],
+  "refuted_d10_bits_transferred": [
+   21,
+   35,
+   55,
+   64,
+   109
+  ],
+  "refuted_d10_count": 64,
+  "capped_bits": [],
+  "capped_count": 0,
+  "candidate_nodes_excluding_pilots": 54905391,
+  "candidate_ms_total": 110818,
+  "approx_nodes_per_sec": 495000,
+  "terminal_stone_range_all": [
+   13,
+   17
+  ],
+  "andclose_all": true,
+  "pilots": {
+   "v16_pilot_d6_per_batch": 3402,
+   "batches": 8
+  },
+  "heaviest_bits_nodes": {
+   "bit40": 2994208,
+   "bit72": 2913001,
+   "bit106": 2655747,
+   "bit10": 2303721,
+   "bit112": 2300486
+  },
+  "raw_batches": {
+   "batch1": "class2-lane-cost64f-raw-batch1-20261116.jsonl git blob e33817e9457ab509789e0092492b6d1640936abc",
+   "batch2": "class2-lane-cost64f-raw-batch2-20261116.jsonl git blob 6dd3db9b4456366c0e2adc8c4a6d34cefe22eeec",
+   "batch3": "class2-lane-cost64f-raw-batch3-20261116.jsonl git blob 44ad9e809bea1a70c9587304669b055ad4c542df",
+   "batch4": "class2-lane-cost64f-raw-batch4-20261116.jsonl git blob 1b62bb8a217f20cb13b7897fb14456255ab48bfb",
+   "batch5": "class2-lane-cost64f-raw-batch5-20261116.jsonl git blob 5a89767ccc9fe04ff205a9107aa7e949193efa26",
+   "batch6": "class2-lane-cost64f-raw-batch6-20261116.jsonl git blob c598100ffe3ebe93170ebac5f8b96ec7af4d7b68",
+   "batch7": "class2-lane-cost64f-raw-batch7-20261116.jsonl git blob 0d5ed3ad125a247574754a79790e62b2a83913c3",
+   "batch8": "class2-lane-cost64f-raw-batch8-20261116.jsonl git blob 6b29c18220595fa47efbcea7aabfdd105f98f2a9"
+  },
+  "determinism_rerun": {
+   "file": "class2-lane-cost64f-v16-determinism-rerun-batch2-20261116.jsonl",
+   "git_blob_sha": "018cec32d3959b3e7a20a2a37359fb77c61432b1",
+   "batch": 2,
+   "bits": [
+    14,
+    18,
+    22,
+    26,
+    31,
+    32,
+    33,
+    39
+   ],
+   "result": "node-exact: bit/loss/nodes/capped/terminalStoneRange all equal to raw batch2 (ms differs only); batch2 is the heaviest batch (9,028,952 nodes) and contains the WIN bit 39"
+  },
+  "v15_crosscheck": {
+   "file": "class2-lane-cost64f-v15-crosscheck-20261116.jsonl",
+   "git_blob_sha": "a3d687e708d09b44be69964ffc3dee7369f90141",
+   "pilot_d6_v15_nodes": 5949,
+   "anchor_bits": [
+    0,
+    32,
+    39,
+    118
+   ],
+   "result": "all four anchor verdicts agree with the v16 raw batches in both directions, including the WIN bit 39 (loss=true in both engines); node counts differ between engines as expected for independent implementations"
+  },
+  "certificates": {
+   "manifest": "class2-lane-cost64f-win3-certificates-20261116.json git blob 33a444b97a55f6fb1b19ec9399c04bb9e7e55c18",
+   "assembler": "scripts/assemble_cost64f_certificates_20261116.py (protocol identical to the published cost-64d assembler; independent verifiers verify_bit7_win7_cert.ts --root-check --subroots and verify_win7_certificate_bigint_independent.mjs, both exit non-zero on any failure and both PASS on all 3 certificates)",
+   "extraction": "repo-verbatim class4_child1_cert_extractor_exact_v16.ts driven by the published generic blind driver cert_driver65j.ts, empty kill table, single chunk part1of1 per bit; fbt_drops 0, fatal null on all 3",
+   "totals": {
+    "published_certificates": 3,
+    "rows": 116367,
+    "extraction_nodes": 9709419,
+    "sub_roots": 142,
+    "winner_states": 161762,
+    "loser_states": 49341,
+    "terminal_count": 38570,
+    "cert_bytes": 4197505
+   },
+   "per_bit": {
+    "bit39": {
+     "root_hex": "0000000000000080120a008000800000",
+     "d4_canonical_hex": "0000000000000080120a008000800000",
+     "rows": 44078,
+     "sub_roots": 50,
+     "extraction_nodes": 2681848,
+     "published": "split part1of2 + part2of2 (receipt present)",
+     "parts": [
+      {
+       "path": "bit39-root-0000000000000080120a008000800000.cert.part1of2",
+       "bytes": 794943,
+       "git_blob_sha": "d53c3e006f5f2df496c7641c17b23959b95cd6ef"
+      },
+      {
+       "path": "bit39-root-0000000000000080120a008000800000.cert.part2of2",
+       "bytes": 794938,
+       "git_blob_sha": "cd495bcbf54de9592e6832b7a5b378b3dc5f4705"
+      }
+     ],
+     "whole_git_blob_sha": "1ddd640e2254943bf66486b63d4416c26302bcc2",
+     "whole_md5": "42561d3ff7e0eb8c9d9b5f407a60009c",
+     "whole_bytes": 1589881
+    },
+    "bit72": {
+     "root_hex": "0000000000000180120a000000800000",
+     "d4_canonical_hex": "00000000000000c09002800080000000",
+     "rows": 44343,
+     "sub_roots": 51,
+     "extraction_nodes": 5037452,
+     "published": "split part1of2 + part2of2 (receipt present)",
+     "parts": [
+      {
+       "path": "bit72-root-0000000000000180120a000000800000.cert.part1of2",
+       "bytes": 799881,
+       "git_blob_sha": "45c79099c1e82f65b9b1e4b44ea6d1ba4eec4de8"
+      },
+      {
+       "path": "bit72-root-0000000000000180120a000000800000.cert.part2of2",
+       "bytes": 799866,
+       "git_blob_sha": "2531c3b2015c2898a641ad83b24e203f376c5ac5"
+      }
+     ],
+     "whole_git_blob_sha": "85bec6b3121a87dcb975765585cf180c82f7ddb6",
+     "whole_md5": "0bfe17ee9abbd1d35cb90f5237539e33",
+     "whole_bytes": 1599747
+    },
+    "bit107": {
+     "root_hex": "0000080000000080120a000000800000",
+     "d4_canonical_hex": "00000000020002801202000000080000",
+     "rows": 27946,
+     "sub_roots": 41,
+     "extraction_nodes": 1990119,
+     "published": "whole cert bit107-root-0000080000000080120a000000800000.cert",
+     "git_blob_sha": "98a3a9daf0440e47b282d2fd9befa3c20260449e",
+     "md5": "0aa381e667919a61ab98cc8c3966969c"
+    }
+   }
+  },
+  "fold": "deferred to the chain-reproduction session per protocol (same as cost-64d): the canonical head stays 1435 until the fold of these 3 receipts is run with the full chain reproduction and conflict census; projected closures include the child row itself (bit 39 root = child|1<<39 is a receipt)",
+  "k0863_consequence": "not applicable: K0863 concerns STERILE rows (no depth-10 receipt can close them); this row is NOT sterile - three receipt roots exist in the row, so the row is closable by a fold"
+ },
+ "supersedes": "v1 (in-flight claim git blob fba4ebcf94e82766671305ce68382dd51c4d17df, all v1 fields preserved)"
 }
