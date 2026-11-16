@@ -1,0 +1,28 @@
+{
+  "all_checks_pass": true,
+  "checks": {
+    "even_parent_above_one": 0,
+    "large_d_signature_states": 803825,
+    "mex_mismatches": 0,
+    "odd_option_above_one": 0,
+    "sigma_mismatches": 0,
+    "small_d_signature_states": 53641,
+    "tail_checks": 44793,
+    "tail_mismatches": 0,
+    "y1_boundary_formula_checks": 2021000,
+    "y1_boundary_formula_mismatches": 0
+  },
+  "domain": {
+    "induction_table_grid": "0<=d<= 80, 2<=y<= 80, 1<=R<=2y+d+12",
+    "y1_boundary_formula_grid": "1<=x<=2000, 0<=R<=x+9"
+  },
+  "first_mismatches": [],
+  "proof_basis": [
+    "proved y=1 boundary slice",
+    "proved z=4 full two-token slice",
+    "Theorem T: H<=2 and even-R H<=1",
+    "A/A/C option recurrence and the sigma=V intersect {0,1} table"
+  ],
+  "status": "proved-by-R-strong-induction; finite-audit-is-independent-check",
+  "target": "two-token z=5 full Grundy classification"
+}
