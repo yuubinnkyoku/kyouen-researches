@@ -1,0 +1,24 @@
+{
+ "all_agree": true,
+ "date": "2026-11-17",
+ "interpretation_guard": "agreement of two independently produced bytes-level re-verification runs over their 19 overlapping certificates; it is not a game-theoretic result; 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60} and classes 1/2/4 remain UNKNOWN",
+ "mismatches": [],
+ "pairs_agree": 19,
+ "pairs_compared": 19,
+ "pairs_disagree": 0,
+ "pairs_missing_in_this_run": [],
+ "parallel_run": {
+  "certificates_checked": 19,
+  "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost60c69e70g-certificates-bigint-reverification-20261117.json",
+  "published_commits": {
+   "artifacts": "1514699b",
+   "log": "c45ad66f"
+  }
+ },
+ "schema": "n11-class2-lane-cross-lane-agreement-cost60c69e70g-20261117-v1",
+ "this_run": {
+  "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-receipts-recompute-bands-certificates-bigint-independent-reverification-20261117.json",
+  "records": 83
+ },
+ "total_field_comparisons": 284
+}
