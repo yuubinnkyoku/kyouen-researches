@@ -1,0 +1,189 @@
+{
+ "meta": {
+  "date": "2026-11-16",
+  "lane": "class2-lane (11x11 long-term, weak solve)",
+  "title": "Next-target S5 families: candidate-orbit dedup measurement (pre-sweep redundancy)",
+  "implementation": "independent third implementation (TypeScript sandbox): D4 canonical form, survival legality via 4x4 concyclicity determinant, det3 written from scratch",
+  "input_csv": "class-frontier-top-candidates-s6-after-cost65j-receipts-20261116.csv",
+  "input_csv_head_commit": "626ff5d3"
+ },
+ "controls": {
+  "legal_count_matches_csv_edge_cost_all_children": true,
+  "children_checked": 36,
+  "control_note": "for every child in all 4 families the recomputed number of legal 7th-stone candidates (no concyclicity with any stone triple of the child) exactly equals the published s6_s7_edge_cost",
+  "control_65f_child_reenumeration": 65,
+  "det3_note": "an earlier in-session draft had a transcription bug in det3 (b[2]*b[0] for b[2]*c[0]) inflating counts (e.g. 73->114); caught by the CSV cross-check, all numbers in this file come from the corrected determinant"
+ },
+ "families": [
+  {
+   "label": "best_class4",
+   "s5_hex": "00000000020000003800000080000000",
+   "s5_stabilizer_d4": [
+    "identity",
+    "rot180"
+   ],
+   "children": 18,
+   "per_child_legal_costs": [
+    73,
+    74,
+    74,
+    75,
+    79,
+    79,
+    80,
+    80,
+    81,
+    82,
+    82,
+    84,
+    86,
+    86,
+    86,
+    86,
+    86,
+    87
+   ],
+   "per_child_dup_vs_earlier": [
+    0,
+    1,
+    3,
+    4,
+    5,
+    9,
+    12,
+    13,
+    15,
+    17,
+    19,
+    22,
+    24,
+    26,
+    28,
+    30,
+    29,
+    33
+   ],
+   "naive_candidate_searches": 1460,
+   "union_candidate_orbits": 1170,
+   "redundant_searches": 290,
+   "saved_pct": 19.86
+  },
+  {
+   "label": "audit_blocked_class2",
+   "s5_hex": "00000000000000809082000000000000",
+   "s5_stabilizer_d4": [
+    "identity",
+    "vertical_flip"
+   ],
+   "children": 10,
+   "per_child_legal_costs": [
+    65,
+    66,
+    66,
+    69,
+    69,
+    70,
+    73,
+    73,
+    73,
+    74
+   ],
+   "per_child_dup_vs_earlier": [
+    0,
+    2,
+    4,
+    6,
+    6,
+    10,
+    11,
+    13,
+    15,
+    18
+   ],
+   "naive_candidate_searches": 698,
+   "union_candidate_orbits": 613,
+   "redundant_searches": 85,
+   "saved_pct": 12.18
+  },
+  {
+   "label": "best_coverable_class2",
+   "s5_hex": "00000000000000801202000000200000",
+   "s5_stabilizer_d4": [
+    "identity"
+   ],
+   "children": 3,
+   "per_child_legal_costs": [
+    65,
+    70,
+    74
+   ],
+   "per_child_dup_vs_earlier": [
+    0,
+    1,
+    2
+   ],
+   "naive_candidate_searches": 209,
+   "union_candidate_orbits": 206,
+   "redundant_searches": 3,
+   "saved_pct": 1.44
+  },
+  {
+   "label": "second_coverable_class2",
+   "s5_hex": "00000000000000801202000040000000",
+   "s5_stabilizer_d4": [
+    "identity"
+   ],
+   "children": 5,
+   "per_child_legal_costs": [
+    64,
+    71,
+    76,
+    76,
+    77
+   ],
+   "per_child_dup_vs_earlier": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "naive_candidate_searches": 364,
+   "union_candidate_orbits": 354,
+   "redundant_searches": 10,
+   "saved_pct": 2.75,
+   "note": "children ci2-ci4 (costs 76/76/77) are win_pending rows already swept in earlier runs; their numbers here are reference values only"
+  }
+ ],
+ "measured_sweep_redundancy_65f_65j": {
+  "nodes_spent_on_census_4_bits": 36043714,
+  "total_sweep_nodes_20261113": 402603616,
+  "pct": 8.95,
+  "note": "the 4 census-overlap bits (25/79/91/101) were re-searched inside both the 65f and 63a/65j sweeps; orbit-level pre-search verdict transfer (generalizing the K0863 bit-113 transfer) would have skipped these re-searches"
+ },
+ "structural_observations": {
+  "orbit_contains_s5_all_36_children": true,
+  "orbit_contains_s5_note": "separate in-session check: for all 36 children, the D4 orbit image set of the child contains the parent S5 pattern - family-internal candidate collisions are therefore systematic, not incidental",
+  "dup_mechanism": "duplicate candidate roots arise from cross-child D4 equivalences mediated by the parent stabilizer (class4: rot180, audit_blocked: vertical flip); per-child dup counts grow near-linearly with cumulative union size within a family"
+ },
+ "recommendation": {
+  "action": "apply orbit-level verdict transfer at candidate-enumeration time in the next engine sweep; prioritize the class4 S5 (18 children)",
+  "expected_saving_pct": {
+   "best_class4": 19.86,
+   "audit_blocked_class2": 12.18,
+   "second_coverable_class2": 2.75,
+   "best_coverable_class2": 1.44
+  },
+  "implementation_hint": "canonicalize each candidate root (child | 7th stone) under D4 before search; keep a family-level seen-orbit table; transfer WIN/REFUTED verdicts across identical canonical forms"
+ },
+ "interpretation_guard": {
+  "no_verdict_claim": "this file contains no win/loss verdicts and changes the status of no root",
+  "saved_pct_meaning": "saved_pct is search-work redundancy, not solved-coverage progress",
+  "solved_1419_note": "solved 1419 counts are manifest coverage bookkeeping, not game outcomes"
+ },
+ "status": {
+  "11x11_empty_board": "UNKNOWN",
+  "s2_root_59_60": "UNKNOWN",
+  "class1_class2_class4_roots": "UNKNOWN"
+ }
+}
