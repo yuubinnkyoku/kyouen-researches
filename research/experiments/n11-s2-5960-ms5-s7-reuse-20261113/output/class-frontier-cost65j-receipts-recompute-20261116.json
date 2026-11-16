@@ -1,0 +1,528 @@
+{
+ "schema": "n11-class-frontier-cost65j-receipts-20261116-v2",
+ "date": "2026-11-16",
+ "baseline_record": {
+  "cost60c_head_1410": "1410/174/6438/509109/4711/373023 (reproduced byte-identically by runpy of the published cost-60c fold script)",
+  "claim": "class2-lane-cost65j-inflight-20261115.json (v5, git blob sha 28a308d8170d51a4c31c2e483d04b2e9d04354da; supersedes the v4 sweep-complete claim, all v4 fields preserved)",
+  "sweep": "9 raw batch JSONLs (7 x cost-65f v15, 2 x cost-65j v16), all blob-pinned; 65 candidates, 17 WIN7-D10, 48 REFUTED-D10 (incl. the bit-113 canonical transfer), 0 capped, 402652063 nodes incl. pilots",
+  "cover_map": "class2-lane-cost65j-win-marginals-20261116.json (git blob sha d6d20e52c6b5af8f268222bfc9c87d6ac77c655d)",
+  "premise_correction": "the motivating child 00000000000000809102000080000000 is ALREADY SOLVED at head 1410: closed exactly once by the cost-63a bit-97 cross-cover receipt 00000002000000809102000800000000 in the warm-multiband2/unified-merge fold (2026-11-15, marginal = exactly the child row, blob-pinned record); three further folded roots cover it (cost-72b roots 00000000000000809102000082000000 = the 65f bit-25 root byte-identical and 00000002000000809102000002000000, cost-69i root 00000002000000809102000000002000); the sweep re-derived all four orbits WIN7 \u2014 zero conflicts; the third class-2 target S5 00000000000000809102000000000000 has zero remaining rows at 1410; the fold's value is the nine still-remaining covered rows, not the child"
+ },
+ "method": "runpy reproduction of the published cost-60c fold script, re-derivation of the 65f+65j sweep from the 9 blob-pinned raw batches, re-assertion of the published pre-fold cover map (34 covered manifest rows), re-assertion of the four new WIN7-D10 certificates (BigInt union 0/0 + Bareiss double verification), 65-candidate-orbit conflict census vs the 718 folded roots (exactly four overlaps, all WIN/WIN), the child-already-closed fact asserted against the blob-pinned warm-multiband2 record, the exact nine remaining covered rows pinned, then the 17 receipts folded in publication order with per-receipt marginals pinned and a set-equality control",
+ "certificates_note": "the four cost-65j receipts (bits 112/116/118/119) carry published WIN7-D10 certificates; the thirteen cost-65f receipts (v15, 2026-11-14) have no published certificates and are folded on their blob-pinned raw sweep records \u2014 certificate extraction for them remains optional follow-up work",
+ "cost65j_additions_on_cost60c_1410": [
+  {
+   "bit": 4,
+   "root_hex": "00000000000000809102000080000010",
+   "d4_canonical_hex": "00000000000000809102000080000010",
+   "source": "cost-65f raw batches 1-7 (v15)",
+   "certified": false,
+   "sweep_nodes": 11889707,
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000043800000008002000"
+   ],
+   "marginal_non_manifest_hexes": [
+    "00000000000000009102000080000010",
+    "00000000000000801102000080000010",
+    "00000000000000808102000080000010",
+    "00000000000000809100000080000010"
+   ],
+   "certificate_status": "no published certificate; verdict evidence = the blob-pinned v15 raw batch record + the corpus-wide raw-vs-audit node-sum consistency audit (commit f44f9f3a) + the canonical root verdict cache conflict-0 census (scan 2d090b49, second independent verification 7c99621f)"
+  },
+  {
+   "bit": 15,
+   "root_hex": "00000000000000809102000080008000",
+   "d4_canonical_hex": "00000000000000809102000080008000",
+   "source": "cost-65f raw batches 1-7 (v15)",
+   "certified": false,
+   "sweep_nodes": 10209459,
+   "covers": 7,
+   "marginal": 4,
+   "marginal_in_manifest": 0,
+   "marginal_manifest_hexes": [],
+   "marginal_non_manifest_hexes": [
+    "00000000000000009102000080008000",
+    "00000000000000801102000080008000",
+    "00000000000000808102000080008000",
+    "00000000000000809100000080008000"
+   ],
+   "certificate_status": "no published certificate; verdict evidence = the blob-pinned v15 raw batch record + the corpus-wide raw-vs-audit node-sum consistency audit (commit f44f9f3a) + the canonical root verdict cache conflict-0 census (scan 2d090b49, second independent verification 7c99621f)"
+  },
+  {
+   "bit": 18,
+   "root_hex": "00000000000000809102000080040000",
+   "d4_canonical_hex": "00000000000000809102000080040000",
+   "source": "cost-65f raw batches 1-7 (v15)",
+   "certified": false,
+   "sweep_nodes": 19029129,
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000003800000408002000"
+   ],
+   "marginal_non_manifest_hexes": [
+    "00000000000000009102000080040000",
+    "00000000000000801102000080040000",
+    "00000000000000808102000080040000",
+    "00000000000000809100000080040000"
+   ],
+   "certificate_status": "no published certificate; verdict evidence = the blob-pinned v15 raw batch record + the corpus-wide raw-vs-audit node-sum consistency audit (commit f44f9f3a) + the canonical root verdict cache conflict-0 census (scan 2d090b49, second independent verification 7c99621f)"
+  },
+  {
+   "bit": 20,
+   "root_hex": "00000000000000809102000080100000",
+   "d4_canonical_hex": "00000000000000809102000080100000",
+   "source": "cost-65f raw batches 1-7 (v15)",
+   "certified": false,
+   "sweep_nodes": 12621100,
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000003800000008003000"
+   ],
+   "marginal_non_manifest_hexes": [
+    "00000000000000009102000080100000",
+    "00000000000000801102000080100000",
+    "00000000000000808102000080100000",
+    "00000000000000809100000080100000"
+   ],
+   "certificate_status": "no published certificate; verdict evidence = the blob-pinned v15 raw batch record + the corpus-wide raw-vs-audit node-sum consistency audit (commit f44f9f3a) + the canonical root verdict cache conflict-0 census (scan 2d090b49, second independent verification 7c99621f)"
+  },
+  {
+   "bit": 21,
+   "root_hex": "00000000000000809102000080200000",
+   "d4_canonical_hex": "00000000000000809102000080200000",
+   "source": "cost-65f raw batches 1-7 (v15)",
+   "certified": false,
+   "sweep_nodes": 12104576,
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000003800000008002002"
+   ],
+   "marginal_non_manifest_hexes": [
+    "00000000000000009102000080200000",
+    "00000000000000801102000080200000",
+    "00000000000000808102000080200000",
+    "00000000000000809100000080200000"
+   ],
+   "certificate_status": "no published certificate; verdict evidence = the blob-pinned v15 raw batch record + the corpus-wide raw-vs-audit node-sum consistency audit (commit f44f9f3a) + the canonical root verdict cache conflict-0 census (scan 2d090b49, second independent verification 7c99621f)"
+  },
+  {
+   "bit": 23,
+   "root_hex": "00000000000000809102000080800000",
+   "d4_canonical_hex": "00000000000000809102000080800000",
+   "source": "cost-65f raw batches 1-7 (v15)",
+   "certified": false,
+   "sweep_nodes": 7276886,
+   "covers": 7,
+   "marginal": 4,
+   "marginal_in_manifest": 0,
+   "marginal_manifest_hexes": [],
+   "marginal_non_manifest_hexes": [
+    "00000000000000009102000080800000",
+    "00000000000000801102000080800000",
+    "00000000000000808102000080800000",
+    "00000000000000809100000080800000"
+   ],
+   "certificate_status": "no published certificate; verdict evidence = the blob-pinned v15 raw batch record + the corpus-wide raw-vs-audit node-sum consistency audit (commit f44f9f3a) + the canonical root verdict cache conflict-0 census (scan 2d090b49, second independent verification 7c99621f)"
+  },
+  {
+   "bit": 25,
+   "root_hex": "00000000000000809102000082000000",
+   "d4_canonical_hex": "00000000000000809102000082000000",
+   "source": "cost-65f raw batches 1-7 (v15)",
+   "certified": false,
+   "sweep_nodes": 13884751,
+   "covers": 7,
+   "marginal": 0,
+   "marginal_in_manifest": 0,
+   "marginal_manifest_hexes": [],
+   "marginal_non_manifest_hexes": [],
+   "certificate_status": "no published certificate; verdict evidence = the blob-pinned v15 raw batch record + the corpus-wide raw-vs-audit node-sum consistency audit (commit f44f9f3a) + the canonical root verdict cache conflict-0 census (scan 2d090b49, second independent verification 7c99621f)"
+  },
+  {
+   "bit": 28,
+   "root_hex": "00000000000000809102000090000000",
+   "d4_canonical_hex": "00000000000000809102000090000000",
+   "source": "cost-65f raw batches 1-7 (v15)",
+   "certified": false,
+   "sweep_nodes": 9817151,
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000003800400008002000"
+   ],
+   "marginal_non_manifest_hexes": [
+    "00000000000000009102000090000000",
+    "00000000000000801102000090000000",
+    "00000000000000808102000090000000",
+    "00000000000000809100000090000000"
+   ],
+   "certificate_status": "no published certificate; verdict evidence = the blob-pinned v15 raw batch record + the corpus-wide raw-vs-audit node-sum consistency audit (commit f44f9f3a) + the canonical root verdict cache conflict-0 census (scan 2d090b49, second independent verification 7c99621f)"
+  },
+  {
+   "bit": 66,
+   "root_hex": "00000000000000849102000080000000",
+   "d4_canonical_hex": "00000000000000849102000080000000",
+   "source": "cost-65f raw batches 1-7 (v15)",
+   "certified": false,
+   "sweep_nodes": 12201952,
+   "covers": 7,
+   "marginal": 4,
+   "marginal_in_manifest": 0,
+   "marginal_manifest_hexes": [],
+   "marginal_non_manifest_hexes": [
+    "00000000000000049102000080000000",
+    "00000000000000841102000080000000",
+    "00000000000000848102000080000000",
+    "00000000000000849100000080000000"
+   ],
+   "certificate_status": "no published certificate; verdict evidence = the blob-pinned v15 raw batch record + the corpus-wide raw-vs-audit node-sum consistency audit (commit f44f9f3a) + the canonical root verdict cache conflict-0 census (scan 2d090b49, second independent verification 7c99621f)"
+  },
+  {
+   "bit": 79,
+   "root_hex": "00000000000080809102000080000000",
+   "d4_canonical_hex": "00000000000080809102000080000000",
+   "source": "cost-65f raw batches 1-7 (v15)",
+   "certified": false,
+   "sweep_nodes": 11264515,
+   "covers": 7,
+   "marginal": 0,
+   "marginal_in_manifest": 0,
+   "marginal_manifest_hexes": [],
+   "marginal_non_manifest_hexes": [],
+   "certificate_status": "no published certificate; verdict evidence = the blob-pinned v15 raw batch record + the corpus-wide raw-vs-audit node-sum consistency audit (commit f44f9f3a) + the canonical root verdict cache conflict-0 census (scan 2d090b49, second independent verification 7c99621f)"
+  },
+  {
+   "bit": 91,
+   "root_hex": "00000000080000809102000080000000",
+   "d4_canonical_hex": "00000000020000811202000020000000",
+   "source": "cost-65f raw batches 1-7 (v15)",
+   "certified": false,
+   "sweep_nodes": 6369617,
+   "covers": 7,
+   "marginal": 0,
+   "marginal_in_manifest": 0,
+   "marginal_manifest_hexes": [],
+   "marginal_non_manifest_hexes": [],
+   "certificate_status": "no published certificate; verdict evidence = the blob-pinned v15 raw batch record + the corpus-wide raw-vs-audit node-sum consistency audit (commit f44f9f3a) + the canonical root verdict cache conflict-0 census (scan 2d090b49, second independent verification 7c99621f)"
+  },
+  {
+   "bit": 101,
+   "root_hex": "00000020000000809102000080000000",
+   "d4_canonical_hex": "00000000020000811202000000080000",
+   "source": "cost-65f raw batches 1-7 (v15)",
+   "certified": false,
+   "sweep_nodes": 4524831,
+   "covers": 7,
+   "marginal": 0,
+   "marginal_in_manifest": 0,
+   "marginal_manifest_hexes": [],
+   "marginal_non_manifest_hexes": [],
+   "certificate_status": "no published certificate; verdict evidence = the blob-pinned v15 raw batch record + the corpus-wide raw-vs-audit node-sum consistency audit (commit f44f9f3a) + the canonical root verdict cache conflict-0 census (scan 2d090b49, second independent verification 7c99621f)"
+  },
+  {
+   "bit": 109,
+   "root_hex": "00002000000000809102000080000000",
+   "d4_canonical_hex": "00000000020000811202000000000800",
+   "source": "cost-65f raw batches 1-7 (v15)",
+   "certified": false,
+   "sweep_nodes": 12595103,
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000003800000008002200"
+   ],
+   "marginal_non_manifest_hexes": [
+    "00000000020000011202000000000800",
+    "00000000020000810202000000000800",
+    "00000000020000811002000000000800",
+    "00000000020000811200000000000800"
+   ],
+   "certificate_status": "no published certificate; verdict evidence = the blob-pinned v15 raw batch record + the corpus-wide raw-vs-audit node-sum consistency audit (commit f44f9f3a) + the canonical root verdict cache conflict-0 census (scan 2d090b49, second independent verification 7c99621f)"
+  },
+  {
+   "bit": 112,
+   "root_hex": "00010000000000809102000080000000",
+   "d4_canonical_hex": "00000000020000811202000000000100",
+   "source": "cost-65j raw batch 8 (v16)",
+   "certified": true,
+   "sweep_nodes": 3673038,
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000010000003800000008080000"
+   ],
+   "marginal_non_manifest_hexes": [
+    "00000000020000011202000000000100",
+    "00000000020000810202000000000100",
+    "00000000020000811002000000000100",
+    "00000000020000811200000000000100"
+   ],
+   "rows": 64020,
+   "md5": "92062a57dd5f0b171cb6a25af6a8ced1",
+   "sub_roots_pass": 58,
+   "extraction_nodes": 8598381,
+   "terminal_count": 21578
+  },
+  {
+   "bit": 116,
+   "root_hex": "00100000000000809102000080000000",
+   "d4_canonical_hex": "00000000020000811202000000000010",
+   "source": "cost-65j raw batch 8 (v16)",
+   "certified": true,
+   "sweep_nodes": 1235013,
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000003800100008080000"
+   ],
+   "marginal_non_manifest_hexes": [
+    "00000000020000011202000000000010",
+    "00000000020000810202000000000010",
+    "00000000020000811002000000000010",
+    "00000000020000811200000000000010"
+   ],
+   "rows": 49082,
+   "md5": "dd80063b63f99b373e2bf9ccf4f04a37",
+   "sub_roots_pass": 56,
+   "extraction_nodes": 3238015,
+   "terminal_count": 17681
+  },
+  {
+   "bit": 118,
+   "root_hex": "00400000000000809102000080000000",
+   "d4_canonical_hex": "00000000020000811202000000000004",
+   "source": "cost-65j raw batch 8 (v16)",
+   "certified": true,
+   "sweep_nodes": 7987181,
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000003800000008480000"
+   ],
+   "marginal_non_manifest_hexes": [
+    "00000000020000011202000000000004",
+    "00000000020000810202000000000004",
+    "00000000020000811002000000000004",
+    "00000000020000811200000000000004"
+   ],
+   "rows": 70510,
+   "md5": "6807d64c951d84290f09a514fb6be307",
+   "sub_roots_pass": 56,
+   "extraction_nodes": 20287890,
+   "terminal_count": 25293
+  },
+  {
+   "bit": 119,
+   "root_hex": "00800000000000809102000080000000",
+   "d4_canonical_hex": "00000000020000811202000000000002",
+   "source": "cost-65j raw batch 8 (v16)",
+   "certified": true,
+   "sweep_nodes": 1788624,
+   "covers": 7,
+   "marginal": 4,
+   "marginal_in_manifest": 0,
+   "marginal_manifest_hexes": [],
+   "marginal_non_manifest_hexes": [
+    "00000000020000011202000000000002",
+    "00000000020000810202000000000002",
+    "00000000020000811002000000000002",
+    "00000000020000811200000000000002"
+   ],
+   "rows": 48814,
+   "md5": "a399db07a80356430101d351447e8c2b",
+   "sub_roots_pass": 55,
+   "extraction_nodes": 4657019,
+   "terminal_count": 14990
+  }
+ ],
+ "totals": {
+  "receipts": 17,
+  "total_marginal": 61,
+  "total_marginal_in_manifest": 9,
+  "child_closed_by_bit": null,
+  "child_already_closed_by": "cost-63a bit-97 cross-cover receipt (warm-multiband2/unified-merge fold 2026-11-15)",
+  "conflict_census_overlaps": {
+   "bits": [
+    25,
+    79,
+    91,
+    101
+   ],
+   "verdicts": "all WIN7, 0 conflicts"
+  },
+  "remaining_covered_rows_at_1410": 9,
+  "zero_mim_receipts": [
+   15,
+   23,
+   25,
+   66,
+   79,
+   91,
+   101,
+   119
+  ],
+  "covered_manifest_rows_union_before_fold": 34,
+  "sweep_nodes_total_incl_pilots": 402652063
+ },
+ "frontier_after_cost65j": {
+  "solved_s6_in_manifest": 1419,
+  "remaining_s5_orbits": 174,
+  "unique_remaining_s6": 6429,
+  "sum_remaining_cost": 508474,
+  "s6_needed_by_open_classes": 4702,
+  "cost_needed_by_open_classes": 372388,
+  "demand_histogram_open_only": {
+   "c2=0,c4=1": 526,
+   "c2=0,c4=2": 3013,
+   "c2=0,c4=3": 12,
+   "c2=1,c4=0": 214,
+   "c2=1,c4=1": 54,
+   "c2=1,c4=2": 9,
+   "c2=2,c4=0": 817,
+   "c2=2,c4=1": 5,
+   "c2=2,c4=2": 52
+  },
+  "best_class2": {
+   "s5_hex": "00000000000000801202000000200000",
+   "classes": 2,
+   "remaining_s6_orbits": 3,
+   "remaining_s7_edge_cost": 209
+  },
+  "best_class4": {
+   "s5_hex": "00000000020000003800000080000000",
+   "classes": 4,
+   "remaining_s6_orbits": 18,
+   "remaining_s7_edge_cost": 1460
+  },
+  "best_coverable_class2": {
+   "s5_hex": "00000000000000801202000000200000",
+   "classes": 2,
+   "remaining_s6_orbits": 3,
+   "remaining_s7_edge_cost": 209
+  },
+  "second_coverable_class2": {
+   "s5_hex": "00000000000000801202000040000000",
+   "classes": 2,
+   "remaining_s6_orbits": 5,
+   "remaining_s7_edge_cost": 364
+  }
+ },
+ "parents_after": {
+  "00000000000000003800000008000002": {
+   "s5_hex": "00000000000000003800000008000002",
+   "rows": 39,
+   "edge_cost": 2962,
+   "rows_before": 41,
+   "edge_cost_before": 3095
+  },
+  "00000000000000003800000008001000": {
+   "s5_hex": "00000000000000003800000008001000",
+   "rows": 45,
+   "edge_cost": 3384,
+   "rows_before": 46,
+   "edge_cost_before": 3448
+  },
+  "00000000000000003800000008002000": {
+   "s5_hex": "00000000000000003800000008002000",
+   "rows": 42,
+   "edge_cost": 2929,
+   "rows_before": 51,
+   "edge_cost_before": 3564
+  },
+  "00000000000000003800000008400000": {
+   "s5_hex": "00000000000000003800000008400000",
+   "rows": 43,
+   "edge_cost": 3197,
+   "rows_before": 44,
+   "edge_cost_before": 3268
+  },
+  "00000000000000003800000408000000": {
+   "s5_hex": "00000000000000003800000408000000",
+   "rows": 55,
+   "edge_cost": 4550,
+   "rows_before": 56,
+   "edge_cost_before": 4624
+  },
+  "00000000000000003800100008000000": {
+   "s5_hex": "00000000000000003800100008000000",
+   "rows": 65,
+   "edge_cost": 5417,
+   "rows_before": 66,
+   "edge_cost_before": 5493
+  },
+  "00000000000000003800400008000000": {
+   "s5_hex": "00000000000000003800400008000000",
+   "rows": 55,
+   "edge_cost": 4375,
+   "rows_before": 56,
+   "edge_cost_before": 4444
+  },
+  "00000000000000043800000008000000": {
+   "s5_hex": "00000000000000043800000008000000",
+   "rows": 66,
+   "edge_cost": 5547,
+   "rows_before": 67,
+   "edge_cost_before": 5621
+  },
+  "00000000000000801202000000000100": {
+   "s5_hex": "00000000000000801202000000000100",
+   "rows": 59,
+   "edge_cost": 4865,
+   "rows_before": 60,
+   "edge_cost_before": 4939
+  }
+ },
+ "lost_rows_per_parent": {
+  "00000000000000003800000008000002": {
+   "00000000000000003800000008002002": 64,
+   "00000000000000003800000008002200": 69
+  },
+  "00000000000000003800000008001000": {
+   "00000000000000003800000008003000": 64
+  },
+  "00000000000000003800000008002000": {
+   "00000000000000003800000008002002": 64,
+   "00000000000000003800000008002200": 69,
+   "00000000000000003800000008003000": 64,
+   "00000000000000003800000008480000": 71,
+   "00000000000000003800000408002000": 74,
+   "00000000000000003800100008080000": 76,
+   "00000000000000003800400008002000": 69,
+   "00000000000000043800000008002000": 74,
+   "00000000010000003800000008080000": 74
+  },
+  "00000000000000003800000008400000": {
+   "00000000000000003800000008480000": 71
+  },
+  "00000000000000003800000408000000": {
+   "00000000000000003800000408002000": 74
+  },
+  "00000000000000003800100008000000": {
+   "00000000000000003800100008080000": 76
+  },
+  "00000000000000003800400008000000": {
+   "00000000000000003800400008002000": 69
+  },
+  "00000000000000043800000008000000": {
+   "00000000000000043800000008002000": 74
+  },
+  "00000000000000801202000000000100": {
+   "00000000010000003800000008080000": 74
+  }
+ },
+ "interpretation_guard": "bookkeeping over published receipts; solved counts measure manifest coverage, not the game-theoretic value of any position; WIN7 certificates prove a first-player win within depth 10 from the individual 7-stone roots only; REFUTED-D10 sweeps prove only absence of WIN7-D10; 11x11 empty board / two-stone root {49,60} / S2 {59,60} / class 1 / class 2 / class 4 remain UNKNOWN"
+}
