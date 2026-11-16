@@ -1,8 +1,8 @@
 {
- "schema": "n11-class2-lane-cost75e-inflight-20261116-v2",
- "title": "n11 class2-lane cost-75e sweep completed locally (4 WIN7-D10 bits 6/10/11/37); raw batches + certificates pending publication (execution environment outage)",
+ "schema": "n11-class2-lane-cost75e-completed-20261116-v3",
+ "title": "n11 class2-lane cost-75e COMPLETED: sweep republished node-exact, 4 WIN7-D10 certificates published and double-verified, receipts folded on the reconciled head 1405 -> new head 1407/6441/509300/4711/373023",
  "date": "2026-11-16",
- "status": "sweep completed locally on 2026-11-16; raw batches, determinism rerun, v15 crosscheck, certificates and fold NOT yet published - execution environment went unavailable mid-certification; treat the local numbers below as an in-flight coordination memo (cross-checkable, not yet published evidence)",
+ "status": "completed on 2026-11-16 by the long-lane continuation session after environment recovery: (a) the raw sweep evidence republished node-exact (commit 725f4b65: 10 raw batch JSONLs, determinism rerun batch5 node-exact, v15 crosscheck completed, sweep audit blob ef813af4b9046e390962cfc09214d645c8f00727 - every pre-outage memo number reproduced: 75 candidates, WIN7-D10 bits 6/10/11/37, 71 REFUTED-D10, 0 capped, 108,292,517 nodes); (b) all four WIN7-D10 certificates published (bits 10/11/37 whole - commits dca46d09/5cf7f657/a27d240d, bit11 md5 b517acf91e3c4652777d7fa16dd8f065 byte-exact to the memo; bit6 as part1of2/part2of2 with receipt - commits beb6c605/0fd2b1f9/99ff9f19, cat reproduces the whole 2,207,870-byte cert md5 fb4da31600c2c862f5dc2c5d48cd8d90, CDN-verified; certificates manifest blob a8127435e1a32e117d9dc5540acf77c6631af7c0); (c) all four certificates double-verified (BigInt union 0/0 + TS Bareiss sub-roots + root mobility == legal_candidates.py) and re-asserted from published bytes by the fold script; (d) the 4 receipts folded on the reconciled canonical head 1405/6443/509457/4713/373180 by scripts/recompute_frontier_cost75e_receipts_20261116.py: total marginal 19 / in-manifest 2, the child orbit closed exactly once by the bit-6 receipt, new head 1407/6441/509300/4711/373023",
  "claimed_by": "n11 long-term lane session (cost-71d STERILE continuation)",
  "s5": "00000000000000801202000040000000",
  "s6_child": "00000000040000809002000000000002",
@@ -156,8 +156,45 @@
    "bit37": "extraction in progress when the environment went unavailable; must be re-run before publication"
   },
   "raw_repo_search": "all 4 WIN root hexes code-searched over yuubinnkyoku/kyouen-researches at claim time: 0 hits each (new coverage by raw hex)",
-  "publication_todo": "(1) publish the 10 raw batch JSONLs + determinism rerun + v15 crosscheck; (2) finish the bit-37 certificate and re-run any incomplete verification; (3) re-verify all 4 certificates against published bytes; (4) fold the 4 receipts on the RECONCILED chain head (see coordination_note); (5) retire this claim with the fold record"
+  "publication_todo": "(superseded - all five items completed 2026-11-16, see completion_record; this block remains as the historical outage memo)"
  },
  "coordination_note": "latest main at this update: dee808f0 + merge commits 27b87a87/8a65219c. The parallel cost-70g sweep landed (commit dee808f0: 70 candidates, 7 WIN7-D10 bits 18/24/28/59/89/112/120, 124,066,734 nodes, 7 certificates 350,567 rows double-verified) with a fold on ITS OWN 1398' branch baseline: head 1398/6450/509974/4720/373697 -> 1403/6445/509589/4715/373312. That 1403 head LACKS the cost-63h cover folded into the canonical merged head 1400/6448/509842/4718/373565, and 1400 lacks the 70g covers: the two heads are a NON-NESTED FORK and both are superseded by their union. REQUIRED next fold: rebase/reconciliation fold s_union == s_1400 UNION covers(7 x 70g roots) == s_1403 UNION cov(63h root) (reverse-order replay equality across the two branches); then fold the cost-75e receipts (4 roots) on the reconciled head. Observed on the parallel 70g artifacts: (a) their fold head JSON method/baseline prose contains stale copy-paste fragments (cites the 1394/58c baseline, '18 roots', 63i-era sweep numbers) while the actual code asserts reproduce the 1398' 67d baseline - an erratum to note, not a numeric error; (b) their fold script needs unpublished tmp-cost70g runtime files (no reconstruct script pushed, same gap the 67d fold had); (c) their v15 crosscheck bit-120 anchor records exactly 10,000,000 nodes (cap-suspicious round number, worth a re-probe); (d) the class2-lane-cost70g-certificates/ directory now mixes the 2026-11-15 old-70g lane certs and the 2026-11-16 new-70g lane certs (filenames do not collide; root hexes disambiguate). This claim reserves the cost-75e sweep + certification + fold; if another execution already published those artifacts, the collision protocol (verify arithmetic, do not overwrite) applies.",
- "interpretation_guard": "the local sweep numbers above are coordination memo values until the raw artifacts are published; solved counts measure manifest coverage, not the game-theoretic value of any position; REFUTED-D10 is NOT a LOSS proof; WIN7 certificates prove a win within depth 10 from the individual 7-stone roots only; 11x11 empty board / two-stone root {49,60} / S2 {59,60} / class 1 / class 2 / class 4 remain UNKNOWN"
+ "interpretation_guard": "the local sweep numbers above are coordination memo values until the raw artifacts are published; solved counts measure manifest coverage, not the game-theoretic value of any position; REFUTED-D10 is NOT a LOSS proof; WIN7 certificates prove a win within depth 10 from the individual 7-stone roots only; 11x11 empty board / two-stone root {49,60} / S2 {59,60} / class 1 / class 2 / class 4 remain UNKNOWN",
+ "rebase_note": "chain_head_at_claim 1400/6448/509842/4718/373565 (blob 777474faf6730242b7e0080bfcdad390cca3a0ee) was superseded by the reconciled canonical head 1405/6443/509457/4713/373180 (class2-lane-rebase-facts-75e-76c-on-canonical1405-20261116.json, blob 8a811317b27c4006b3a43b36bfe2c61bcd438483, commit d2c82ee2); per the rebase rule the fold used the reconciled head and reproduced it end-to-end (the reconciliation script re-run + three output blobs byte-identical); the fold produced the new head 1407/6441/509300/4711/373023, which is now the canonical baseline for later claims",
+ "completion_record": {
+  "completed_by": "n11 long-term lane continuation session, 2026-11-16",
+  "publication_todo_items": [
+   "(1) raw batches + determinism rerun + v15 crosscheck published (commit 725f4b65, sweep audit blob ef813af4b9046e390962cfc09214d645c8f00727)",
+   "(2) bit-37 certificate completed (46,987 rows / 13,202,647 extraction nodes / 54 sub-roots, md5 d14af6598d9fd5cd97339d8b8acd7544) and published (commit a27d240d)",
+   "(3) all four certificates re-verified against published bytes (fold-script re-assertion: md5 byte pins, sorted-unique rows, BigInt union 0/0, Bareiss sub-roots; bit6 parts per-part blob shas)",
+   "(4) folded on the reconciled head 1405/6443/509457/4713/373180",
+   "(5) this claim retired with the fold record"
+  ],
+  "certificates_manifest": "class2-lane-cost75e-win7-certificates-20261116.json (git blob sha a8127435e1a32e117d9dc5540acf77c6631af7c0): 4 certificates, 203,163 rows, 62,175,955 extraction nodes, 234 sub-roots, terminal_count 67,334, cert bytes 7,352,075"
+ },
+ "fold_record": {
+  "fold_script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost75e_receipts_20261116.py",
+  "head_json": "class-frontier-cost75e-receipts-recompute-20261116.json (git blob sha 5cd93de7ee8943681549b8f97918f6112548b373, 10,762 bytes)",
+  "baseline": "reconciled canonical head 1405/6443/509457/4713/373180",
+  "new_head": "1407/174/6441/509300/4711/373023 (solved_s6_in_manifest / remaining_s5_orbits / unique_remaining_s6 / sum_remaining_cost / s6_needed_by_open_classes / cost_needed_by_open_classes)",
+  "total_marginal": 19,
+  "total_marginal_in_manifest": 2,
+  "child_closed_by_bit": 6,
+  "second_in_manifest_marginal": {
+   "hex": "00000000000000801202000000000201",
+   "closed_by_bit": 10,
+   "was_row_of": {
+    "cost75e_parent2": 82,
+    "cost70g_parent2": 82
+   }
+  },
+  "parents": {
+   "second_candidate_s5": "6/439 -> 5/364",
+   "cost75e_parent2": "67/5473 -> 65/5316",
+   "cost70g_parent2": "48/3885 -> 47/3803"
+  },
+  "root_disjointness": "the 4 roots vs all 713 folded roots (706 + 7 cost-70g), raw-hex and D4-canonically",
+  "reverse_order_replay_identical": true
+ },
+ "coordination_after_fold": "the in-flight cost-76c claim (child 00000000010000809002000001000000) references 1405 and must re-base onto 1407 before folding; the parallel cost-76d / cost-77e certificate lanes pin the 1405 head and their folds (unpublished at this fold) will fork against 1407 (1405 + their mim) and require a reconciliation fold, which must assert root disjointness against these 4 cost-75e roots; second coverable class-2 candidate S5 worklist after this fold: 5 rows / 364 (edges 76/76/77 + STERILE 64/71)"
 }
