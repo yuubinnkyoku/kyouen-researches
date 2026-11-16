@@ -1,0 +1,322 @@
+{
+  "schema": "n11-class2-lane-cost66j-inflight-20261117-v1",
+  "title": "n11 class2-lane cost66j: planned fresh 66-bit depth-10 sweep of the cheapest remaining unswept/unclaimed row of the primary pure class-2 target family (head-1472 presweep census v3 selection)",
+  "date": "2026-11-17",
+  "status": "claimed; sweep not yet started at publication time; this file records the preregistered plan, batch split and expected transfer verdicts before any engine run",
+  "claimed_by": "n11 long-term lane session (head-1472 presweep census v3 selector)",
+  "s5": "00000000000000403800000008000000",
+  "s6_child": "00000000000000c09002000000001000",
+  "child_stones_bit_indices": [
+    12,
+    49,
+    60,
+    63,
+    70,
+    71
+  ],
+  "s6_s7_edge_cost": 66,
+  "legal_candidates": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    6,
+    7,
+    8,
+    9,
+    10,
+    14,
+    17,
+    18,
+    20,
+    21,
+    23,
+    25,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    41,
+    42,
+    44,
+    45,
+    53,
+    58,
+    61,
+    62,
+    64,
+    65,
+    66,
+    68,
+    76,
+    77,
+    78,
+    79,
+    80,
+    85,
+    86,
+    87,
+    88,
+    91,
+    92,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    101,
+    102,
+    105,
+    106,
+    107,
+    109,
+    112,
+    113,
+    114,
+    116,
+    117,
+    119,
+    120
+  ],
+  "candidate_count": 66,
+  "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+  },
+  "demand_verification": "row demand c2=2 carried over from the published head-1452 v1 census bit/row tables through the head-1472 presweep census v3 (class2-lane-next-target-presweep-1472-20261117.json, git blob 3ee5703c8cabf738eaecefb17a759c78c4a34e61), unchanged by the 64h/76c/66i overlay",
+  "basis_head": "1472/174/6376/504672/4649/368586 (canonical head after the LANDED cost-64h receipt fold; the cost-76c and cost-66i folds are still pending and are excluded by the v3 overlay, not assumed)",
+  "basis": {
+    "census_v3_json": "class2-lane-next-target-presweep-1472-20261117.json (git blob 3ee5703c8cabf738eaecefb17a759c78c4a34e61)",
+    "census_v3_script": "next_target_presweep_head1472_v3_20261117.py (git blob a0c37cc46a664d0dde57e50767c0668c5e92ab0b)",
+    "selection": "cheapest remaining unswept/unclaimed/unexcluded row of the primary pure class-2 target family 00000000000000403800000008000000 at head 1472 after the landed cost-64h fold closure, excluding the three swept children (64h/76c/66i) and every row pending the 76c/66i folds; runner-up 00000000000000801282000040000000 (cost 64, 55 open, STERILE-family caveat) is recorded in the census v3 ranking but not claimed"
+  },
+  "engine": {
+    "script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/class4_child1_runner_v17.ts",
+    "blob_sha": "c132cc6425eee3feaeef1d697dd74f968cfedb59",
+    "note": "v17 = the fbt-saturation-repaired engine used for the cost-76c resweep and the cost-66i sweep; fresh sweeps must use v17, not v16",
+    "depth": 10,
+    "cap": 1000000000,
+    "andclose": 1,
+    "pilot": "pilot d6 control per batch: loss=false at exactly 3402 nodes, else abort",
+    "parallelism": "4 concurrent node processes (shared-server courtesy)",
+    "raw_output_pattern": "class2-lane-cost66j-raw-batch{n}-20261117.jsonl",
+    "batches": [
+      {
+        "batch": 1,
+        "bits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          8
+        ]
+      },
+      {
+        "batch": 2,
+        "bits": [
+          9,
+          10,
+          14,
+          17,
+          18,
+          21,
+          23,
+          25
+        ]
+      },
+      {
+        "batch": 3,
+        "bits": [
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          41
+        ]
+      },
+      {
+        "batch": 4,
+        "bits": [
+          42,
+          44,
+          45,
+          53,
+          58,
+          61,
+          62,
+          64
+        ]
+      },
+      {
+        "batch": 5,
+        "bits": [
+          65,
+          66,
+          68,
+          76,
+          77,
+          78,
+          79,
+          80
+        ]
+      },
+      {
+        "batch": 6,
+        "bits": [
+          85,
+          86,
+          87,
+          88,
+          91,
+          92,
+          94,
+          95
+        ]
+      },
+      {
+        "batch": 7,
+        "bits": [
+          96,
+          98,
+          99,
+          101,
+          102,
+          105,
+          106,
+          107
+        ]
+      },
+      {
+        "batch": 8,
+        "bits": [
+          109,
+          112,
+          113,
+          114,
+          116,
+          117,
+          119,
+          120
+        ]
+      },
+      {
+        "batch": 9,
+        "bits": [
+          20,
+          97
+        ]
+      }
+    ]
+  },
+  "engine_candidate_bits": {
+    "open_bits": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      8,
+      9,
+      10,
+      14,
+      17,
+      18,
+      21,
+      23,
+      25,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      41,
+      42,
+      44,
+      45,
+      53,
+      58,
+      61,
+      62,
+      64,
+      65,
+      66,
+      68,
+      76,
+      77,
+      78,
+      79,
+      80,
+      85,
+      86,
+      87,
+      88,
+      91,
+      92,
+      94,
+      95,
+      96,
+      98,
+      99,
+      101,
+      102,
+      105,
+      106,
+      107,
+      109,
+      112,
+      113,
+      114,
+      116,
+      117,
+      119,
+      120
+    ],
+    "confirmation_bits": [
+      20,
+      97
+    ],
+    "expected_verdicts": {
+      "20": "REFUTED-D10",
+      "97": "REFUTED-D10"
+    },
+    "note": "64 fresh open bits plus 2 known-verdict bits re-run fresh for cross-agreement (bit 20 = cost-64h orbit transfer as 64h bit 108; bit 97 = v1 harvest transfer); total fresh engine work 66 bits = the complete legal row"
+  },
+  "transfers": {
+    "20": {
+      "root_canon": "00000000000000c09002000000101000",
+      "verdict": "REFUTED-D10",
+      "kind": "cost-64h orbit transfer (64h bit 108, 527814 nodes, v16 raw batch map)"
+    },
+    "97": {
+      "root_canon": "00000000020001801202000000100000",
+      "verdict": "REFUTED-D10",
+      "kind": "v1 harvest transfer (head-1452 census bit table status harvested_refuted)"
+    }
+  },
+  "planned_controls": {
+    "determinism_rerun": "one batch re-run byte-compare on nodes (ms-only differences allowed): the heaviest batch and, if any WIN bit appears, a batch containing a WIN bit",
+    "v15_crosscheck": "independent v15 engine (blob 8744fc65b6b7...) re-check of all WIN bits plus anchor bits (pilot 5949), verdict agreement required",
+    "independent_audit": "stdlib-only re-audit of all raw batch lines (pilot exactness, cap, stone counts, canon recomputation from the child) before any verdict is treated as established"
+  },
+  "verdict_semantics": "loss=true => WIN7-within-depth-10 candidate (certificate rebuild target); loss=false && !capped => REFUTED-D10, no first-player win within depth 10 (NOT a LOSS proof of the position); capped => proves nothing either way",
+  "unknown_status": "11x11 empty board: UNKNOWN. A completed sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 7-stone roots of this child. The two-stone roots {49,60} and {59,60}, S2 {59,60} and classes 1/2/4 remain UNKNOWN.",
+  "coordination_note": "latest main fetched immediately before this push (HEAD ea2b53a0, the census v3 commit); no claim, raw batch or audit exists for this child on main (searched: child hex, cost66j); the parallel lane holds the pending cost-76c fold (bit 61 certificate in flight) and the cost-66i receipt fold behind it; this claim does not touch either fold",
+  "next_action": "run the 9 planned v17 batches (8x8 sweep bits + 1 confirmation pair), publish the raw JSONL batches, then the stdlib-only raw audit with the cross-sweep conflict scan against the 64h/76c/66i verdict maps; on WIN bits extract certificates, verify independently, then wait behind the 76c/66i folds before any receipt fold of this row",
+  "last_updated": "2026-11-17"
+}
