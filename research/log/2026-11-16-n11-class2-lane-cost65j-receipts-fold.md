@@ -51,3 +51,17 @@
 - 69aは並走IN FLIGHT（着手禁止）。K0863 CI refreshは`45e558f3`で着地済み。
 - 65f 13 WIN bitsの証明書抽出はoptional follow-up（最重量は既知nodes順に bit 21/20等、cost-64行を直接閉じた2枚が優先）。
 - 11x11空盤・二石root {49,60}/{59,60}・S2 {59,60}・class 1/2/4はすべてUNKNOWNのまま。
+
+## 出版完了（2026-11-16、別commit群）
+
+証明書4枚（bits 112/116/118/119）の全8 partファイル・小ファイル一式がmainに着地した。**mainのdirectory listing（GitHub API）で全8 partのgit blob shaがmanifest `d4981d7e` のper-part pinと完全一致を確認**（bit112: `accb6823`/`697b8656`、bit116: `770b4a76`/`6c499b25`、bit118: `8862c7a6`/`6e84559e`、bit119: `e0377882`/`692477b1`）。
+
+- `10b4a515`: 小ファイル一式（receipts script pin更新=claim v5 `7a4c9007`/manifest `d4981d7e`、assemble script SPLIT_LIMIT=1,200,000、fold JSON `e8c83584`、claim v5 rev2、cert receipts 116/119（blob `18d60560`/`c79e5bb3`・各1,246 bytes）、log）
+- `aa5cef54`/`0312bcfa`: bit116 part1of2/part2of2
+- `fada034f`/`4fbdbe9d`: bit118 part1of2/part2of2
+- `5023ab6e`/`9d7b2854`: bit119 part1of2/part2of2
+- （bit112 parts `b78bd87f`/`538a4866`・verify records `46b35bc4` は前commit群で着地済み）
+
+**transport観測（実験事実）**: 16 MiB sandbox単一pushは、read_file chunk結合+push_files直列でもcontent約0.88 MB・1.27 MBでプログラム予算超過エラーを常に出すが、**push_files opが"done"記録されていればcommitは着地する**（全6 part pushで再現・失敗なし）。エラー後はlist_commits/directory listingで着地とblob sha照合を必ず行うこと。並走laneとの衝突なし（間に`9bfd18dc` candidate-A budget ladder 2/3が挟まったのみ・パス非交差）。
+
+fold v2のremote-only独立検証は並走laneが`e202661b`で着地済み（2nd TS/BigInt実装）。
