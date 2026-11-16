@@ -169,7 +169,9 @@ jobs:
           uv run --locked python research/experiments/remo-k-branch-r8-target-refutation-20261116/verify_r8_target.py
           git diff --exit-code -- research/experiments/remo-k-branch-r8-target-refutation-20261116/output/audit.json
       - name: Audit K0869 REMO 3-branch r=8 boundary sweep
-        run: uv run --locked python research/experiments/remo-k-branch-r8-sweep-20261116/verify_remo_k_branch_r8_sweep.py
+        run: |
+          uv run --locked python research/experiments/remo-k-branch-r8-sweep-20261116/verify_remo_k_branch_r8_sweep.py
+          git diff --exit-code -- research/experiments/remo-k-branch-r8-sweep-20261116/output/remo_k_branch_r8_sweep_audit.json
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python tools/knowledge/build.py
@@ -441,3 +443,4 @@ jobs:
 # Refresh generated views after K0865 metadata normalization and Q-family remaining-root worklist (2026-11-16).
 
 # Refresh generated views for the K0869 REMO 3-branch r=8 boundary (Theorem I r=8 exact 10-key (6,6,8)/(6,8,8) gamma<=4, first gamma>=3 failing range, total collapse of all 34 previous failing keys, K0867 cross-check, FL/G'/Delta=0 r=8 anchors) (2026-11-16).
+# Refresh generated views after the K0869 r=8 boundary sweep audit JSON publication (2026-11-16).
