@@ -57,6 +57,28 @@ cost-64e として claim v1 出版した（60 open bits・4 REFUTED-D10 転送�
   solved 1435 は manifest 被覆の簿記である。
 - 11x11 空盤・二石 root {49,60}/{59,60}・S2 {59,60}・class1/class2/class4 はいずれも UNKNOWN。
 
+## 追記: cost-64e sweep 完走（同日・同一セッション）
+
+claim v1 出版直後に v16 engine（repo-verbatim `class4_child1_runner_v16.ts`・Node 22）で
+60 open bits を 8 batch で完走した。
+
+- **結果: 60/60 REFUTED-D10・WIN7-D10 0件・capped 0件**。事前転送 4 bits（70/104/115/119）
+  と合わせ **64/64 candidates REFUTED-D10 → cost-64e 行は STERILE**。
+- 総 nodes **39,961,790**（pilots 8×3402 除く）・全 bit terminalStoneRange [13,17]・andclose true。
+  heaviest: bit 32（3,279,693）・bit 21（3,270,894）・bit 118（2,185,077）。
+- **determinism rerun**: batch2 を再実行し 9/9 行 node-exact 一致
+  （`class2-lane-cost64e-v16-determinism-rerun-batch2-20261116.jsonl`・blob `7fa222a6`）。
+- **v15 crosscheck**: v15 engine（pilot 5949）で anchors bits 32/0/118 が v16 と双方向一致
+  （`class2-lane-cost64e-v15-crosscheck-20261116.jsonl`・blob `bce440b1`）。
+- raw batch 1〜8 の git blob pin は claim v2（blob `55c51c92`）に記載。
+- **K0863 帰結**: STERILE 行はいかなる WIN7-D10 receipt でも閉鎖不能（自出行・cross-cover
+  とも）。よって **head 1435 は不変**（fold する receipt が存在しない）。共有親の実効
+  closable demand がこの行ぶん（64 candidates）減る。REFUTED-D10 は LOSS 証明ではなく、
+  STERILE 確定も行の勝敗判定ではない。
+- 次回はこの 60 root の verdict が harvest に加わった状態で census を再計算すること
+  （残り 2 行の cost-64 open 行 `0000000000000080120a000000800000`・
+  `00000000000100003800000008080000` との orbit 共有で追加転送が見込める）。
+
 ## レジューム
 
 - canonical head **1435**。
