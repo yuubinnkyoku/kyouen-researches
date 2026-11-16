@@ -10,7 +10,7 @@
     88
   ],
   "claimed_by": "n11 long-term lane session (takeover; precedent: cost65j claim v1->v2 takeover)",
-  "coordination_note": "latest main fetched immediately before this takeover push; the parallel cost64h lane is mid-fold (prereg + fourth independent verification + cover-multiplicity audit prediction published, fold receipt pending); no other claim, raw batch or audit exists for this child on main Reconciled against the current K0863 full theorem-applicability scan: 15/76 candidates are already REFUTED-D10 transfers (not 5); the 10 omitted bits are now recorded and must be reused, leaving 61 open + 5 cross-agreement reruns = 66 engine bits. No raw batch has been launched.",
+  "coordination_note": "latest main fetched immediately before this takeover push; the parallel cost64h lane is mid-fold (prereg + fourth independent verification + cover-multiplicity audit prediction published, fold receipt pending); no other claim, raw batch or audit exists for this child on main Reconciled against the current K0863 full theorem-applicability scan: 15/76 candidates are already REFUTED-D10 transfers (not 5); the 10 omitted bits are now recorded and must be reused, leaving 61 open + 5 cross-agreement reruns = 66 engine bits. No raw batch has been launched. Raw batch audit added 2026-11-17: all 10 batch files cover 76/76 legal bits and yield WIN7-D10 bits 61/99/113, REFUTED-D10 73, capped 0. Actual raw files reran all 15 transferred bits, including the 10 marked reused; actual engine work was 76, not the planned 66. See class2-lane-cost76c-raw-audit-20261117.json and the 2026-11-17 research log.",
   "date": "2026-11-16",
   "demand": {
     "c1": 0,
@@ -348,10 +348,10 @@
   "s5": "00000000000000801202000040000000",
   "s6_child": "00000000010000809002000001000000",
   "s6_s7_edge_cost": 76,
-  "schema": "n11-class2-lane-cost76c-inflight-20261116-v2",
+  "schema": "n11-class2-lane-cost76c-sweep-complete-20261117-v3",
   "stale_claim_history": "claim v1 (this file, schema -v1) was published 2026-11-15 at ~20:54Z (git blob e5bf66f62323f6434d82743c662295618af232a3) with chain head 1403/6445/509589/4715/373312 and never landed raw batches, audit, certificates or fold artifacts; it is stale; this long-term lane session takes it over per the cost65j takeover precedent",
-  "status": "takeover-in-flight",
-  "title": "n11 class2-lane cost-76c sweep takeover in flight: 00000000010000809002000001000000, all 76 candidates (71 open + 5 transferred cross-agreement re-runs)",
+  "status": "sweep-complete; certificate extraction pending; receipt fold pending",
+  "title": "n11 class2-lane cost-76c sweep complete: 3 WIN7-D10 bits 61/99/113; certificate extraction pending",
   "transfers": {
     "0": {
       "attested_by": [
@@ -614,5 +614,68 @@
     ],
     "conflict_count": 0,
     "independent_check": "K0863 theorem-applicability scan; its second independent verifier rechecked 46 comparisons and all 115 D4 transfers"
+  },
+  "actual_execution": {
+    "date": "2026-11-17",
+    "basis_head": "1452/174/6396/506144/4669/370058",
+    "audit_json": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76c-raw-audit-20261117.json",
+    "audit_status": "all checks passed",
+    "actual_raw_batches": 10,
+    "actual_raw_candidate_bits": 76,
+    "planned_engine_bits": 66,
+    "planned_reused_transferred_bits": 10,
+    "actual_reused_transferred_bits_rerun": 10,
+    "all_15_transferred_bits_rerun_refuted": true,
+    "win7_d10_bits": [
+      61,
+      99,
+      113
+    ],
+    "winner_roots": [
+      {
+        "bit": 61,
+        "root_canon": "0000000001000080b002000001000000",
+        "status_at_presweep": "open",
+        "nodes": 752696
+      },
+      {
+        "bit": 99,
+        "root_canon": "00000000040000809002000000400800",
+        "status_at_presweep": "open",
+        "nodes": 4168961
+      },
+      {
+        "bit": 113,
+        "root_canon": "00000000040000809002000000400008",
+        "status_at_presweep": "open",
+        "nodes": 8174662
+      }
+    ],
+    "refuted_d10_count": 73,
+    "capped_count": 0,
+    "candidate_nodes": 141221576,
+    "pilot_count": 10,
+    "pilot_nodes_each": 3402,
+    "total_nodes_including_pilots": 141255596,
+    "terminal_stone_range": [
+      13,
+      17
+    ],
+    "andclose": true,
+    "note": "The engine.batches arrays and published raw files cover all 76 legal candidates. The 10 transfer bits marked reused in engine_candidate_bits were also rerun; actual work was 76, not 66."
+  },
+  "certificate_extraction": {
+    "status": "pending",
+    "win7_d10_bits": [
+      61,
+      99,
+      113
+    ],
+    "independent_verification": "pending",
+    "v15_cross_engine_check": "pending"
+  },
+  "receipt_fold": {
+    "status": "pending",
+    "note": "No receipt has been folded from this child. Rebase against the current canonical head after certificate verification."
   }
 }
