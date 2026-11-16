@@ -184,6 +184,18 @@ jobs:
         run: |
           uv run --locked python research/experiments/remo-failure-family-matrix-20261116/verify_remo_failure_family_matrix.py
           git diff --exit-code -- research/experiments/remo-failure-family-matrix-20261116/output/remo_failure_family_matrix_audit.json
+      - name: Audit K0875 three-branch REMO cap12 size boundary
+        run: |
+          uv run --locked python research/experiments/remo-k-branch-cap12-boundary-20261116/verify_remo_k_branch_cap12_boundary.py
+          git diff --exit-code -- research/experiments/remo-k-branch-cap12-boundary-20261116/output/remo_k_branch_cap12_boundary_audit.json
+      - name: Audit K0874 independent verification of the failure-family state matrix
+        run: |
+          uv run --locked python research/experiments/remo-failure-family-matrix-independent-20261116/verify_remo_failure_family_matrix_independent.py
+          git diff --exit-code -- research/experiments/remo-failure-family-matrix-independent-20261116/output/remo_failure_family_matrix_independent_audit.json
+      - name: Audit K0876 three-branch REMO cap12 r=4,5,6 size boundary
+        run: |
+          uv run --locked python research/experiments/remo-k-branch-cap12-r456-boundary-20261116/verify_remo_k_branch_cap12_r456_boundary.py
+          git diff --exit-code -- research/experiments/remo-k-branch-cap12-r456-boundary-20261116/output/remo_k_branch_cap12_r456_boundary_audit.json
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python tools/knowledge/build.py
@@ -462,3 +474,5 @@ jobs:
 # Refresh generated views for K0874 three-branch REMO failure-family state matrix (52 keys x r=2..8, 4/10 family phase structure, small-branch r=7 structural non-uniformity) (2026-11-16).
 # Refresh generated views for the 2026-11-16 check.py red repair (regenerated stale views after the K0869/K0871 collision renumber from 856 items incl. K0875; 4 presweep path-metadata fixes; collision-repair log link fix) (2026-11-16).
 # Refresh generated views after the check.py red repair: request canonical full regeneration of the truncated artifacts.md view (2026-11-16).
+# Refresh generated views after the workflow audit-step restoration (K0875 cap12 boundary and K0874 independent verification audit steps lost in the 2026-11-16 check.py red repair restored verbatim) (2026-11-16).
+# Refresh generated views for K0876 three-branch REMO cap12 r=4,5,6 size boundary (Theorem I12: r=4,5 non-collapse keys exactly the 12 (8,8,9)/(8,9,9) gamma<=5, r=6 exactly the 6 (4,4,8)/(4,8,8) gamma<=2; zero mixed keys containing an 11- or 12-branch; det survivors P2/P2/P3) (2026-11-16).
