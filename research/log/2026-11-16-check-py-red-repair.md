@@ -67,3 +67,20 @@ build.pyが永久に実行されない（自己修復不能のデッドロック
 - `/home/user/ci-diag/check_local.py`（common.py/layout.py のローカル移植+mini-YAML）・
   `build_local.py`（build.pyの移植）・`gt_test.py`（31dcedd2 に対する回帰検証）は
   サンドボックス内のみの資材（repo外）。
+
+## 完了確認（2026-11-16 09:23Z 正本landing）
+
+- 切断版 artifacts.md（1,200,045 bytes・9,787行）を 7761ceea でpushした後、62031291 の
+  trigger comment で再発火した refresh workflow の commit step が正本の全量
+  artifacts.md を再生成・commitし、`docs: refresh generated knowledge views`
+  （37b9a1ed・09:23:46Z）としてlandingした。同コミットの差分は +7,014行・削除0行で、
+  切断版の9,787行が canonical 再生成の行完全prefixであることをCI側の git diff が機械確認した。
+- run 7971（Knowledge integrity・7761ceea起点）は check.py・unittest・build.py が全て通過し、
+  失敗は最終段階の `git diff --exit-code`（切断版と正本の差分検出）のみだった。
+  すなわち check.py 自体は本修復で green に復帰済み。
+- refresh run #53（refresh-generated-views.yml・62031291起点）は success。run #180
+  （refresh-knowledge-generated.yml・同起点）は監査継続中で、commit step は最新mainで
+  生成ビューがcurrentであることを確認して正常終了する見込み。
+- GITHUB_TOKEN による push は後続workflowを発火しないため 37b9a1ed 自身には run が
+  存在しない（check-runs total=0）。本コミット以降の main へのpushで Knowledge integrity が
+  green になれば本修復は完全確認となる。
