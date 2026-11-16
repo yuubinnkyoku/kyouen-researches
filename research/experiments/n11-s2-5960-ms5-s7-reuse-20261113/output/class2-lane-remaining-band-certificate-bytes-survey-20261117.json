@@ -1,0 +1,286 @@
+{
+ "schema": "n11-class2-lane-remaining-band-certificate-bytes-survey-20261117-v1",
+ "date": "2026-11-17",
+ "basis": {
+  "repository": "yuubinnkyoku/kyouen-researches",
+  "survey_main_head": "aded350bd99af5d08c163991a6342b92e37572de (last commit before the survey probes; band certificate directories were not modified by the 2026-11-17 re-verification sessions)",
+  "method": "GitHub contents API directory listing of research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost<band>-certificates for each of the 31 remaining candidate bands; single .cert/.gz.b64 files and .cert.partNofM split parts counted with sizes"
+ },
+ "scope": "the remaining receiptcert-only candidate bands after the 2026-11-17 83-record session (60c/63h/63i/63j/65m/67d/69e/70g), the cost-58c block (34) and the warm/multiband groups (82)",
+ "per_band": [
+  {
+   "band": "63f",
+   "dir": "class2-lane-cost63f-certificates",
+   "dir_entries": 2,
+   "storage": "single .cert files",
+   "certificates": 2,
+   "published_bytes": 2507838
+  },
+  {
+   "band": "63g",
+   "dir": "class2-lane-cost63g-certificates",
+   "dir_entries": 16,
+   "storage": "single .cert files",
+   "certificates": 14,
+   "published_bytes": 15142573
+  },
+  {
+   "band": "67c",
+   "dir": "class2-lane-cost67c-certificates",
+   "dir_entries": 6,
+   "storage": "single .cert files",
+   "certificates": 2,
+   "published_bytes": 2546005
+  },
+  {
+   "band": "69f",
+   "dir": "class2-lane-cost69f-certificates",
+   "dir_entries": 13,
+   "storage": "single .cert files",
+   "certificates": 5,
+   "published_bytes": 8446150
+  },
+  {
+   "band": "69h",
+   "dir": "class2-lane-cost69h-certificates",
+   "dir_entries": 6,
+   "storage": "single .cert files",
+   "certificates": 2,
+   "published_bytes": 3272824
+  },
+  {
+   "band": "69i",
+   "dir": "class2-lane-cost69i-certificates",
+   "dir_entries": 6,
+   "storage": "single .cert files",
+   "certificates": 2,
+   "published_bytes": 2766896
+  },
+  {
+   "band": "70e",
+   "dir": "class2-lane-cost70e-certificates",
+   "dir_entries": 15,
+   "storage": "single .cert files",
+   "certificates": 5,
+   "published_bytes": 8564174
+  },
+  {
+   "band": "70f",
+   "dir": "class2-lane-cost70f-certificates",
+   "dir_entries": 4,
+   "storage": "single .cert files",
+   "certificates": 4,
+   "published_bytes": 5601978
+  },
+  {
+   "band": "71c",
+   "dir": "class2-lane-cost71c-certificates",
+   "dir_entries": 4,
+   "storage": "single .cert files",
+   "certificates": 1,
+   "published_bytes": 804827
+  },
+  {
+   "band": "72b",
+   "dir": "class2-lane-cost72b-certificates",
+   "dir_entries": 19,
+   "storage": "single .cert files",
+   "certificates": 7,
+   "published_bytes": 10142954
+  },
+  {
+   "band": "74d",
+   "dir": "class2-lane-cost74d-certificates",
+   "dir_entries": 20,
+   "storage": "single .cert files",
+   "certificates": 8,
+   "published_bytes": 11856071
+  },
+  {
+   "band": "74g",
+   "dir": "class2-lane-cost74g-certificates",
+   "dir_entries": 19,
+   "storage": "single .cert files",
+   "certificates": 1,
+   "published_bytes": 1542624
+  },
+  {
+   "band": "75d",
+   "dir": "class2-lane-cost75d-certificates",
+   "dir_entries": 7,
+   "storage": "single .cert files",
+   "certificates": 2,
+   "published_bytes": 3011095
+  },
+  {
+   "band": "76a",
+   "dir": "class2-lane-cost76a-certificates",
+   "dir_entries": 8,
+   "storage": "single .cert files",
+   "certificates": 4,
+   "published_bytes": 6099657
+  },
+  {
+   "band": "76b",
+   "dir": "class2-lane-cost76b-certificates",
+   "dir_entries": 3,
+   "storage": "single .cert files",
+   "certificates": 1,
+   "published_bytes": 1832366
+  },
+  {
+   "band": "77a",
+   "dir": "class2-lane-cost77a-certificates",
+   "dir_entries": 5,
+   "storage": "single .cert files",
+   "certificates": 1,
+   "published_bytes": 1463572
+  },
+  {
+   "band": "77b",
+   "dir": "class2-lane-cost77b-certificates",
+   "dir_entries": 5,
+   "storage": "single .cert files",
+   "certificates": 3,
+   "published_bytes": 4690065
+  },
+  {
+   "band": "77c",
+   "dir": "class2-lane-cost77c-certificates",
+   "dir_entries": 9,
+   "storage": "single .cert files",
+   "certificates": 7,
+   "published_bytes": 10529747
+  },
+  {
+   "band": "77d",
+   "dir": "class2-lane-cost77d-certificates",
+   "dir_entries": 17,
+   "storage": "single .cert files",
+   "certificates": 7,
+   "published_bytes": 10125755
+  },
+  {
+   "band": "78a",
+   "dir": "class2-lane-cost78a-certificates",
+   "dir_entries": 9,
+   "storage": "single .cert files",
+   "certificates": 1,
+   "published_bytes": 1833561
+  },
+  {
+   "band": "79a",
+   "dir": "class2-lane-cost79a-certificates",
+   "dir_entries": 5,
+   "storage": "single .cert files",
+   "certificates": 1,
+   "published_bytes": 1184838
+  },
+  {
+   "band": "80d",
+   "dir": "class2-lane-cost80d-certificates",
+   "dir_entries": 6,
+   "storage": "single .cert files",
+   "certificates": 2,
+   "published_bytes": 3198447
+  },
+  {
+   "band": "82c",
+   "dir": "class2-lane-cost82c-certificates",
+   "dir_entries": 8,
+   "storage": "single .cert files",
+   "certificates": 2,
+   "published_bytes": 3582271
+  },
+  {
+   "band": "83a",
+   "dir": "class2-lane-cost83a-certificates",
+   "dir_entries": 5,
+   "storage": "single .cert files",
+   "certificates": 3,
+   "published_bytes": 4283365
+  },
+  {
+   "band": "83b",
+   "dir": "class2-lane-cost83b-certificates",
+   "dir_entries": 8,
+   "storage": "single .cert files",
+   "certificates": 2,
+   "published_bytes": 3100014
+  },
+  {
+   "band": "83c",
+   "dir": "class2-lane-cost83c-certificates",
+   "dir_entries": 2,
+   "storage": "single .cert files",
+   "certificates": 2,
+   "published_bytes": 3257864
+  },
+  {
+   "band": "84a",
+   "dir": "class2-lane-cost84a-certificates",
+   "dir_entries": 6,
+   "storage": "single .cert files",
+   "certificates": 2,
+   "published_bytes": 3324946
+  },
+  {
+   "band": "72c",
+   "dir": "class2-lane-cost72c-certificates",
+   "dir_entries": 19,
+   "storage": "split .cert.part1of2/.part2of2",
+   "certificates": 9,
+   "part_files": 18,
+   "published_bytes": 11604178,
+   "readme_present": true
+  },
+  {
+   "band": "73g",
+   "dir": "class2-lane-cost73g-certificates",
+   "dir_entries": 17,
+   "storage": "split .cert.part1of2/.part2of2",
+   "certificates": 8,
+   "part_files": 16,
+   "published_bytes": 12392797,
+   "readme_present": true
+  },
+  {
+   "band": "73h",
+   "dir": "class2-lane-cost73h-certificates",
+   "dir_entries": 9,
+   "storage": "split .cert.part1of2/.part2of2",
+   "certificates": 4,
+   "part_files": 8,
+   "published_bytes": 6384415,
+   "readme_present": true
+  },
+  {
+   "band": "83d",
+   "dir": "class2-lane-cost83d-certificates",
+   "dir_entries": 6,
+   "storage": "split .cert.part1of2/.part2of2",
+   "certificates": 3,
+   "part_files": 6,
+   "published_bytes": 7830260,
+   "readme_present": false
+  }
+ ],
+ "summary": {
+  "bands_with_published_certificate_bytes": 31,
+  "single_file_certificates": 93,
+  "split_part_certificates": 24,
+  "total_certificates": 117,
+  "total_published_bytes": 172924127
+ },
+ "caveats": [
+  "this survey is filesystem-level: it identifies WHERE published certificate bytes exist, not which records are already verified; the next session must cross-reference the census v3 (commit 0c486e53) tier classification and the coverage of the earlier bytes re-verification sessions (427e29fa cost-58c, 7693da2a warm/multiband, 2026-11-17 83-record session) before choosing the batch",
+  "per-record documentation (rows/md5/sub_roots_pass) for these bands has not yet been located in this survey; record sources (win7 manifests / receipts-recompute / inflight files) must be identified before asserting against the verifier",
+  "the four split-part directories store certificates as .cert.part1of2/.part2of2 (72c/73g/73h have a README.md, 83d does not); a re-verification run must define concatenation semantics and pin both part blob shas"
+ ],
+ "interpretation_guard": [
+  "survey bookkeeping of published certificate bytes only; no new certificate was verified in this survey",
+  "solved 1452 is manifest cover bookkeeping of the head-1452 frontier",
+  "a WIN7-D10 certificate proves only that its individual 7-stone root is a first-player win within depth 10; REFUTED-D10 entries are not LOSS proofs",
+  "11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, class 1, class 2 and class 4 all remain UNKNOWN"
+ ]
+}
