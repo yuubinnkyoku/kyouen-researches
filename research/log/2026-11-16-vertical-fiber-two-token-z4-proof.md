@@ -20,8 +20,8 @@ Theorem T（全残余値≤2、偶数Rで≤1）により、奇数親では子�
 - raw grid 10,200状態、帰納9,900点、偶奇10,200点、tail1,200点、z=3アンカー10,200点、単一トークンアンカー4,608点、散点200件、不一致・違反0
 - option signatures: small 7,320 / odd 63,585 / even 62,685、不一致0
 
-検証器SHA-256: 13215e81021fda8d97fa80df183247b767554338b83dcbeaa760f95a2d199c6d
-監査JSON SHA-256: b9055c87ca45cf97445faa850b8bb2e1442aa2399d2f5c2ce1a666cb196825f7
+検証器SHA-256: 2945b2a563b997e6c9a6dc2c4370bcc2a2004b995800d7b12f238107c91d6667
+監査JSON SHA-256: 91517cc1246592e5dd6bb69b3429c1a13eac5e51d4a65ce8412339fa9c7be142
 
 ## 反映と限界
 
