@@ -1,6 +1,6 @@
 ---
 id: K0867
-title: r=8 REMO 3枝の4/10族非坍縮予想はcap≤10の完全検査で反証
+title: r=8 REMO 3枝の4/10族非坍縮予想を対象族の完全検査で反証
 kind: proposition
 status: refuted
 topics: [variants, multiplayer, maximal-safe, strategy-length]
