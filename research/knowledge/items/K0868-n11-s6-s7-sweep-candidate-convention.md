@@ -3,8 +3,7 @@ id: K0868
 title: "S6→S7 sweep候補規約の確定 — own_candidates・edge costは6石の任意の3つ組と共円にも共線にも乗らない空セル（survival moves）であり、det4整数演算で石配置から独立再導出できる"
 kind: definition
 status: active
-computed: 2026-11-16
-topics: [bookkeeping, certificates, verification]
+topics: [certificates, verification, search-methods]
 aliases: [s6-s7 sweep candidate convention, own_candidates convention, survival move convention]
 relations:
 - type: depends_on
@@ -15,13 +14,13 @@ relations:
   note: worklist・receipt・foldの簿記規約（own_candidates列・edge cost・bits）
 artifacts:
 - path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65f-win2-structural-audit-20261116.json
-  role: primary output
+  role: data
   note: 候補規約確定の正本記録。42/42 cost階層・17/17 receipts bits・65f child再導出・円のみ規約の9行不一致リスト
 - path: research/experiments/n11-class2-lane-closability-ranking-20261116/output/class-frontier-remaining-s6-worklist-1410-20261116.csv
-  role: input data
+  role: manifest
   note: worklist-1410全6,438行のown_candidates・edge cost列の正本
 - path: research/log/2026-11-16-n11-class2-lane-cost65f-win2-structural-audit.md
-  role: report
+  role: log
   note: 規約確定とbits 20/21構造監査のログ
 scope: "n11 class-lane head-1410のS6行（6石の自分の石配置）からS7へのsweep候補の法定義と、worklist-1410のedge cost列・65j fold v2の17 receipts bits・65f childのpublished値との一致"
 evidence: "第三実装（TypeScript・BigInt・D4正準化・整数のみdet3/det4）による独立再導出: (a) 65f child 00000000000000809102000080000000 で completing 50・survival 65・published edge cost 65と完全一致、(b) 65j fold v2の17/17 receipts bitsが全てsurvival合法、(c) worklist-1410の6,438行からcost階層ごとに42層サンプリングして42/42完全一致、(d) 共線を除外した円のみ規約は9/42階層で不一致（常にderived≧published、cost-57行で63・cost-78行で90）。不一致9行のリストはaudit JSONに記録"
