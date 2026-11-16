@@ -26,10 +26,11 @@ fbt修復済みv17 engine（blob `c132cc64`）で両行の全swept bit（64d 64 
 
 ## 保存物
 
-- 監査script: `scripts/verify_cost64d64g_v17_full_row_rechecks_20261117.py`（stdlibのみ・入力blob SHA pin照合・engine blob pin照合・43 checks・2回実行byte-identical）
-- 監査JSON: `output/class2-lane-cost64d64g-v17-full-row-rechecks-20261117.json`
-- v17生記録: `output/class2-lane-cost64d-v17-recheck-batch{1..8}-20261117.jsonl`・`output/class2-lane-cost64g-v17-recheck-batch{1..8}-20261117.jsonl`（計16本）
+- 監査script: `research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/verify_cost64d64g_v17_full_row_rechecks_20261117.py`（stdlibのみ・入力blob SHA pin照合・engine blob pin照合・43 checks・2回実行byte-identical）
+- 監査JSON: `research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64d64g-v17-full-row-rechecks-20261117.json`
+- v17生記録: 同output/配下 `class2-lane-cost64d-v17-recheck-batch{1..8}-20261117.jsonl`・`class2-lane-cost64g-v17-recheck-batch{1..8}-20261117.jsonl`（計16本）
 - 入力（出版済み・blob pin照合済）: `class2-lane-cost64d-raw-batch{1..8}-20261116.jsonl`（`0f93456c`/`c41d88f1`/`d45d8cfa`/`bba937a0`/`12a379c4`/`a0d86791`/`6d34099b`/`ce86d0fb`）・`class2-lane-cost64g-raw-batch{1..8}-20261116.jsonl`（`873807ad`/`e9b0b41b`/`f22888df`/`a8ba871f`/`07809fd4`/`13088f70`/`fcc2786d`/`1f2ea9d8`）
+- 運用注記: 初回push（`ad26ac69`）で誤ってroot `output/`・root `scripts/` に配置されたため、同日中に上記experiments配下へ移設しroot側は削除した（内容はbyte-identical）。
 
 ## 信頼境界
 
