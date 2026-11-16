@@ -26,14 +26,8 @@ FILES = {
             "b1a6c23b2ad0504252ab6bda3a09c23161f98107"),
     "agreement": ("class2-lane-cost64h-prereg-independent-agreement-20261116.json",
                   "9ab473ac0163755ddf541d8a9a5e44da304f8095"),
-    "claim64h": ("class2-lane-cost64h-inflight-20261116.json",
-                 "68e4878094b78eaf0a465033d0289a6db5d94861"),
-    "claim66i": ("class2-lane-cost66i-inflight-20261116.json",
-                 "e4f3e1b6f091cd653e9494c6f93d39966a74d8b5"),
     "audit66i": ("class2-lane-cost66i-raw-audit-20261116.json",
                  "f7d8bad610fe07fee6b365e711838600722737e2"),
-    "claim76c": ("class2-lane-cost76c-inflight-20261116.json",
-                 "6be75df147303cb21f6b357210c993724fa22f11"),
     "audit76c": ("class2-lane-cost76c-v17-sweep-and-fbt-saturation-audit-20261117.json",
                  "235f964365a7ab33e33986c915fc7f6861e4d686"),
 }
@@ -103,10 +97,7 @@ def main() -> None:
     ver = src["verifier"]
     v17 = src["v17"]
     agreement = src["agreement"]
-    claim64 = src["claim64h"]
-    claim66 = src["claim66i"]
     audit66 = src["audit66i"]
-    claim76 = src["claim76c"]
     audit76 = src["audit76c"]
 
     checks: dict[str, bool] = {}
@@ -136,10 +127,10 @@ def main() -> None:
     check("independent_conflict_census_zero",
           agreement["checks"]["C9_conflict_census"]["overlaps"] == 0)
 
-    win_bits = claim64["sweep_results"]["win7_d10_bits"]
+    win_bits = pre["win_bits_in_fold_order"]
     certs = sorted(ver["certificates"], key=lambda x: x["bit"])
     receipts = sorted(pre["receipts"], key=lambda x: x["bit"])
-    check("receipt_bits_match_claim", [r["bit"] for r in receipts] == win_bits)
+    check("receipt_bits_match_prereg", [r["bit"] for r in receipts] == win_bits)
     check("certificate_bits_match_receipts",
           [c["bit"] for c in certs] == [r["bit"] for r in receipts])
     check("certificate_roots_match_receipts",
@@ -191,7 +182,7 @@ def main() -> None:
     check("v17_node_total_unchanged",
           v17["result"]["v17_total_nodes"] ==
           v17["result"]["v16_published_total_nodes"] == 47017565)
-    check("v17_win_bits_match_claim",
+    check("v17_win_bits_match_prereg",
           v17["result"]["win_bits"] == win_bits)
 
     conflict = audit66["cross_source_conflict_scan"]
@@ -200,11 +191,11 @@ def main() -> None:
           "cost64h raw batches 1-8" in conflict["sources"]
           and "cost76c v17 raw batches 1-10" in conflict["sources"])
 
-    roots64 = roots_for(claim64["s6_child"], win_bits)
-    roots66 = roots_for(claim66["s6_child"],
-                        claim66["actual_execution"]["win7_d10_bits"])
-    roots76 = roots_for(claim76["s6_child"],
-                        claim76["actual_execution"]["win7_d10_bits"])
+    roots64 = roots_for(pre["child"]["s6_hex"], win_bits)
+    roots66 = roots_for(audit66["target"]["s6_child"],
+                        audit66["verdicts"]["win7_d10_bits"])
+    roots76 = roots_for(audit76["target"]["s6_child"],
+                        audit76["v17_full_resweep"]["win_bits_corrected"])
     canons64 = {bit: canon(root) for bit, root in roots64.items()}
     canons66 = {bit: canon(root) for bit, root in roots66.items()}
     canons76 = {bit: canon(root) for bit, root in roots76.items()}
@@ -218,6 +209,8 @@ def main() -> None:
           conflict["conflicts"] == 0)
     check("cost76c_v17_wins_61_99",
           audit76["v17_full_resweep"]["win_bits_corrected"] == [61, 99])
+    check("cost76c_bit113_refuted",
+          audit76["v17_full_resweep"]["per_bit"]["113"]["v17_loss"] is False)
 
     projected = {k: pre["projected_head"][k] for k in HEAD_KEYS}
     after = dict(projected)
@@ -237,6 +230,8 @@ def main() -> None:
     check("no_s5_parent_fully_closed",
           all(p["rows_after"] > 0 for p in pre["affected_parents"].values()))
 
+    source_pins["cost64h_claim_v2_historical"] = pre["inputs_blob_pins"]["cost64h_claim_v2_json"]
+    source_pins["generator_script"] = git_blob_sha(Path(__file__).read_bytes())
     cert_bytes = sum(c["bytes"] for c in certs)
     cert_rows_total = sum(c["strategy_rows"] for c in certs)
     fold = {
@@ -269,13 +264,9 @@ def main() -> None:
         "v17_full_row_recheck": v17["result"],
         "cross_lane": {
             "cost66i_win_bits": claim66["actual_execution"]["win7_d10_bits"],
-            "cost66i_certified_bits": [
-                e["bit"] for e in claim66["certificate_extraction"]["extracted"]
-            ],
-            "cost66i_remaining_certificate_bits": sorted(set(claim66["actual_execution"]["win7_d10_bits"]) - {e["bit"] for e in claim66["certificate_extraction"]["extracted"]}),
             "cost66i_conflict_scan": conflict,
-            "cost76c_win_bits": claim76["actual_execution"]["win7_d10_bits"],
-            "cost76c_bit113_refuted": claim76["actual_execution"]["refuted_bit113"],
+            "cost76c_win_bits": audit76["v17_full_resweep"]["win_bits_corrected"],
+            "cost76c_bit113_refuted": True,
             "cost76c_v17_audit_blob": FILES["audit76c"][1],
             "d4_overlap_with_cost66i": overlap66,
             "d4_overlap_with_cost76c": overlap76,
