@@ -9,7 +9,7 @@
    - batch9（bit 120）: REFUTED-D10（1,929,932）
    - raw batch出版 `738e33e3`・claim v3 completed `0d6be9d5`・**v4 erratum**（v3のrefuted_bitsリストがbit 92抜け〔65f batch6・loss=false nodes 1,228,321〕・total 48は正しくlist 47件→48件訂正）`614d0ac2`。
    - これでchildは**65/65確定: 17 WIN7-D10（65f 13 + 65j 4）・48 REFUTED-D10（65f 43 + 転送1 + 65j 4）・0 capped**。
-4. **fold前cover map**（`analyze_cost65j_win_marginals_20261116.py`〔`1f3960ab`〕 + `class2-lane-cost65j-win-marginals-20261116.json`〔`6d46cb72`〕・stdlib・Bareiss・独立D4・engine不使用・再実行byte-identical md5 `65f77eb0…`）。17 WIN receiptsの全7削除canonをMS5 S6 manifest（7,867行）と照合:
+4. **fold前cover map**（`analyze_cost65j_win_marginals_20261116.py`〔`f41b7dd2`〕 + `class2-lane-cost65j-win-marginals-20261116.json`〔`a64b1b18`〕・stdlib・Bareiss・独立D4・engine不使用・再実行byte-identical md5 `65f77eb0…`）。**出版経路のerratum**: scriptは初回push（`1f3960ab`）と再push（`3fe05708`）の両方でpaste出版経路の既知事故（2文字のbackslash-escape `'\n'`が実改行にdecodeされPython構文エラー）で破損していた。`String.fromCharCode`で組み立てたtransport-safe形式で3度目のpush（`f41b7dd2`）で修復し、commitピンrawのmd5 `bd79b300e1b3dcd05fae82dfe1f02b95`がローカル正本と`cmp` byte-exact一致することを確認した。JSONもpaste整形差があったため`a64b1b18`で再pushし同様にbyte-exact照合済み（md5 `65f77eb0…`）。17 WIN receiptsの全7削除canonをMS5 S6 manifest（7,867行）と照合:
    - **34行がcover対象**（union）。65j自身の行（cost 65）は全17 receiptがcover。他33行はcost 61-77（大半class-2、bit 101はclass-6の2行とclass-4の1行もcover）。
    - 2行は複数receiptでcover（`…809102000000200000` bits [21,109]・`…809102000002000000` bits [25,91]）。
    - 最安のcover行はcost 61 `00000000000080003800000008080000`（bit 91）とcost 62 `00000000020000003800000008080000`（bit 101）。
