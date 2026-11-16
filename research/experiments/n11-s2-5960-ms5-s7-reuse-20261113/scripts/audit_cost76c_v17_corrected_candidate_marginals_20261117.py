@@ -37,7 +37,7 @@ RAW_BLOBS = {
 }
 
 def git_blob_sha(data: bytes) -> str:
-    return hashlib.sha1(b"blob %d\\0" % len(data) + data).hexdigest()
+    return hashlib.sha1(b"blob %d\0" % len(data) + data).hexdigest()
 
 def read_pinned(path: Path, expected: str):
     data = path.read_bytes()
