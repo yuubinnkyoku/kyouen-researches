@@ -41,9 +41,10 @@ head-1452 presweep censusのD4正準形と照合した。
 
 - 監査器: `research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost76c_raw_batches_20261117.py`
 - 監査結果: `research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76c-raw-audit-20261117.json`
-- claim: `research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76c-inflight-20261116.json`（sweep-complete / certificate-pendingへ更新）
+- immutable claim input snapshot: `research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76c-claim-input-20261117.json`（Git blob `8932f2d5e100325549a5f251a1d883558cae0708`、監査入力）
+- current claim: `research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76c-inflight-20261116.json`（sweep-complete / certificate-pendingへ更新）
 
-監査結果にはclaim・presweep・10 raw batchのGit blob SHA-1を固定し、候補集合・batch列・pilot・verdict・転送bit・root canonをassertする再現用Python標準ライブラリ監査器を追加した。
+監査結果にはimmutable claim input snapshot・presweep・10 raw batchのGit blob SHA-1を固定し、候補集合・batch列・pilot・verdict・転送bit・root canonをassertする再現用Python標準ライブラリ監査器を追加した。
 
 作成コミット:
 - 監査器: `e37b381f30b8870707f9e58073218dd01473c384`
