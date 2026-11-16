@@ -5,40 +5,16 @@
  "source_claim_blob_sha_before_correction": "5159e0ac0ba9591e95ee6a9ab7a01aeb9e899f6e",
  "source_presweep_blob_sha": "59d42a6b1d8db4dbc498872576283e0130a0c390",
  "source_marginal_audit_blob_sha": "d9f5f377b9503f034cb7e9220b0d84d716bde87d",
- "source_raw_batch_blob_shas": [
-  {
-   "file": "class2-lane-cost64f-raw-batch1-20261116.jsonl",
-   "blob_sha": "e33817e9457ab509789e0092492b6d1640936abc"
-  },
-  {
-   "file": "class2-lane-cost64f-raw-batch2-20261116.jsonl",
-   "blob_sha": "6dd3db9b4456366c0e2adc8c4a6d34cefe22eeec"
-  },
-  {
-   "file": "class2-lane-cost64f-raw-batch3-20261116.jsonl",
-   "blob_sha": "44ad9e809bea1a70c9587304669b055ad4c542df"
-  },
-  {
-   "file": "class2-lane-cost64f-raw-batch4-20261116.jsonl",
-   "blob_sha": "1b62bb8a217f20cb13b7897fb14456255ab48bfb"
-  },
-  {
-   "file": "class2-lane-cost64f-raw-batch5-20261116.jsonl",
-   "blob_sha": "5a89767ccc9fe04ff205a9107aa7e949193efa26"
-  },
-  {
-   "file": "class2-lane-cost64f-raw-batch6-20261116.jsonl",
-   "blob_sha": "c598100ffe3ebe93170ebac5f8b96ec7af4d7b68"
-  },
-  {
-   "file": "class2-lane-cost64f-raw-batch7-20261116.jsonl",
-   "blob_sha": "0d5ed3ad125a247574754a79790e62b2a83913c3"
-  },
-  {
-   "file": "class2-lane-cost64f-raw-batch8-20261116.jsonl",
-   "blob_sha": "6b29c18220595fa47efbcea7aabfdd105f98f2a9"
-  }
- ],
+ "source_raw_batch_blob_shas": {
+  "class2-lane-cost64f-raw-batch1-20261116.jsonl": "e33817e9457ab509789e0092492b6d1640936abc",
+  "class2-lane-cost64f-raw-batch2-20261116.jsonl": "6dd3db9b4456366c0e2adc8c4a6d34cefe22eeec",
+  "class2-lane-cost64f-raw-batch3-20261116.jsonl": "44ad9e809bea1a70c9587304669b055ad4c542df",
+  "class2-lane-cost64f-raw-batch4-20261116.jsonl": "1b62bb8a217f20cb13b7897fb14456255ab48bfb",
+  "class2-lane-cost64f-raw-batch5-20261116.jsonl": "5a89767ccc9fe04ff205a9107aa7e949193efa26",
+  "class2-lane-cost64f-raw-batch6-20261116.jsonl": "c598100ffe3ebe93170ebac5f8b96ec7af4d7b68",
+  "class2-lane-cost64f-raw-batch7-20261116.jsonl": "0d5ed3ad125a247574754a79790e62b2a83913c3",
+  "class2-lane-cost64f-raw-batch8-20261116.jsonl": "6b29c18220595fa47efbcea7aabfdd105f98f2a9"
+ },
  "raw_sweep_recount": {
   "candidate_bits_swept": 59,
   "win7_d10_bits": [
@@ -842,7 +818,7 @@
   "next_target_parent_mapping_correct": true,
   "fold_not_applied": true
  },
- "execution_note": "Equivalent pure JavaScript calculation executed in the ChatGPT V8 tool runtime against published main-branch files. The committed Node script was not run locally because Proxmox VM124 entered IO-ERROR while pve-hp-aio local-lvm thin pool was out of data space; no recovery or solver job was attempted.",
+ "execution_note": "Deterministic standard-library Node.js audit. It reconciles published depth-10 verdict counts and D4 cache reuse only; it performs no game search and applies no manifest fold.",
  "interpretation_guard": "This audit reconciles depth-10 root verdict counts and D4 cache reuse across eight selected presweep rows only. WIN7-D10 proves a first-player win from an individual seven-stone root only. REFUTED-D10 is not a LOSS proof. The cost64f fold is not applied; the projected head is manifest bookkeeping only. Standard 11x11, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN.",
  "unknown_status": "11x11 empty board, two-stone roots {49,60} and {59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN",
  "source_claim_blob_sha_after_correction": "b9d0f9fa714237ca5f7cfffcedc2d7917fee8eb3"
