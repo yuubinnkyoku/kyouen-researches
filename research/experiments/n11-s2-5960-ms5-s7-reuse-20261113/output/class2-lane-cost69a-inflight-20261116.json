@@ -1,257 +1,399 @@
 {
- "schema": "n11-class2-lane-cost69a-inflight-20261116-v1",
- "title": "n11 class2-lane cost-69a IN FLIGHT claim: the unswept edge-69 child 00000000000000801222000000800000 at the canonical head 1410 (pure class-2 dual-parent demand; bit 109 is the only remaining single root in the cost<=70 neighborhood that covers TWO of the three STERILE rows of the best coverable class-2 S5)",
- "date": "2026-11-16",
- "status": "IN FLIGHT on 2026-11-16 by the long-term lane session (STERILE-rows cross-cover continuation): sweep of the 69 legal candidate roots at depth 10 started, raw batches pending; 11x11 empty board remains UNKNOWN",
- "claimed_by": "n11 long-term lane session (STERILE-rows cross-cover continuation)",
- "s6_child": "00000000000000801222000000800000",
- "s6_s7_edge_cost": 69,
- "demand": {
-  "c1": 0,
-  "c2": 2,
-  "c4": 0
- },
- "demand_semantics": "per-class open-parent counts at head 1410: the child is a row of two pure class-2 parents - 00000000000000801222000000000000 (70 rows / 5345, lift stone 23) and 00000000000000003800000008002000 (51 rows / 3564, lift stone 53, the cost-60c fold lift-5 parent)",
- "chain_head_at_claim": "1410/174/6438/509109/4711/373023 (class-frontier-cost60c-receipts-recompute-20261116.json, git blob sha 239a6cf432e53713514d583e3682e1bef6075968, commit 05cc8bdb)",
- "child_stones_bit_indices": [
-  23,
-  49,
-  53,
-  57,
-  60,
-  71
- ],
- "open_parents_at_head_1410": [
-  {
-   "s5_hex": "00000000000000801222000000000000",
-   "classes_bitmask": 2,
-   "remaining_s6_orbits": 70,
-   "remaining_s7_edge_cost": 5345,
-   "lift_stone": 23
+  "schema": "n11-class2-lane-cost69a-inflight-20261116-v1",
+  "title": "n11 class2-lane cost-69a IN FLIGHT claim: the unswept edge-69 child 00000000000000801222000000800000 at the canonical head 1410 (pure class-2 dual-parent demand; bit 109 is the only remaining single root in the cost<=70 neighborhood that covers TWO of the three STERILE rows of the best coverable class-2 S5)",
+  "date": "2026-11-16",
+  "status": "IN FLIGHT on 2026-11-16: published D4 verdict-cache scan has transferred REFUTED-D10 to candidate bits 55/65/109; 66 legal candidates remain for the depth-10 engine sweep; raw batches are not yet published. 11x11 empty board remains UNKNOWN.",
+  "claimed_by": "n11 long-term lane session (STERILE-rows cross-cover continuation)",
+  "s6_child": "00000000000000801222000000800000",
+  "s6_s7_edge_cost": 69,
+  "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
   },
-  {
-   "s5_hex": "00000000000000003800000008002000",
-   "classes_bitmask": 2,
-   "remaining_s6_orbits": 51,
-   "remaining_s7_edge_cost": 3564,
-   "lift_stone": 53
-  }
- ],
- "legal_candidates": [
-  0,
-  1,
-  3,
-  4,
-  6,
-  8,
-  9,
-  10,
-  12,
-  14,
-  17,
-  18,
-  19,
-  20,
-  22,
-  26,
-  29,
-  31,
-  32,
-  33,
-  35,
-  40,
-  42,
-  43,
-  44,
-  50,
-  51,
-  52,
-  54,
-  55,
-  56,
-  58,
-  61,
-  65,
-  66,
-  67,
-  72,
-  73,
-  74,
-  76,
-  77,
-  79,
-  84,
-  87,
-  88,
-  90,
-  94,
-  95,
-  96,
-  97,
-  98,
-  99,
-  102,
-  103,
-  105,
-  106,
-  107,
-  108,
-  109,
-  110,
-  111,
-  112,
-  113,
-  114,
-  116,
-  117,
-  118,
-  119,
-  120
- ],
- "motivation_cross_cover": "all three remaining rows of the best coverable class-2 S5 00000000000000801202000000200000 (3 rows / 209) are STERILE by their own-row sweeps (65k / 70j / 74h), so they can only be closed by cross-covers (marginal mechanism) from other children's WIN7 receipts. The neighbor analysis at head 1410 (class2-lane-sterile-rows-neighbor-analysis-20261116.json) found that of this child's 69 legal candidate roots, bit 109 (root 00002000000000801222000000800000) covers BOTH the STERILE cost-65k child 00000000020000801202000000200000 AND the STERILE cost-74h child 00000000000000889002000000000800: a WIN7-D10 verdict for bit 109 would close TWO of the three STERILE rows via the standard marginal mechanism in one receipt. It is the only remaining single-root dual-cover opportunity in the cost<=70 neighborhood: the cost-64c dual-cover root bit 119 (covering 65k+70j) was swept and is REFUTED-D10, and the three cheapest 70j-child neighbors (cost 60c bit 119, cost 62b bits 21/109) are exhausted (all REFUTED-D10). This claim does NOT assert either row is closable - only that this sweep tests the last single-root dual-cover opportunity of that neighborhood. UPDATE 2026-11-16: the K0863 STERILE-row theorem now rules out this bit-109 dual-cover opportunity. An independent exact D4 re-canonicalization shows cost69a+109 is canonically identical to 65k+75 and 74h+97; both source candidates are REFUTED-D10 in STERILE rows. Do not count bit 109 as a live WIN7 receipt opportunity.",
- "demand_verification": "re-derived at head 1410 by prep_claim_cost69a_20261116.py (runpy of the published cost-60c fold script, which internally reproduces the cost-75e chain head 1407 and the cost-60c fold byte-identically incl. all CONTROLs, then re-derivation): exact-integer D4 canonicalization of the six one-stone deletions of the child (stones [23,49,53,57,60,71]) gives exactly two open parents - del 23 -> class-2 S5 00000000000000801222000000000000 (70 rows / 5345), del 53 -> class-2 S5 00000000000000003800000008002000 (51 rows / 3564); the other four deletions are closed rows; legal candidates enumerated independently (69) and the covering roots identified by canonical covers over all 69 candidates x 7 deletions (65k: bit 109; 74h: bit 109)",
- "coordination": "this child is NOT a row of the in-flight second-candidate-S5 lane (5 rows / 364, rows 64/71 STERILE + 76c in-flight + 76d/77e fold-pending), NOT a row of the class-4 best-S5 lane (00000000020000003800000080000000, all 18 open rows STERILE per the parallel cost-87 sweep), and not part of the 354-root unique S7 worklist measurement lane; no sweep record and no prior claim reference this child hex; first cost-69 child claimed in this lane (label 69a)",
- "bookkeeping_only_note": "bookkeeping claim only; 11x11 empty board / two-stone root {49,60} / S2 {59,60} / class 1 / class 2 / class 4 all remain UNKNOWN; REFUTED-D10 is not a LOSS proof; STERILE is not a LOSS proof",
- "planned_batches": {
-  "1": [
-   0,
-   1,
-   3,
-   4,
-   6,
-   8,
-   9,
-   10
+  "demand_semantics": "per-class open-parent counts at head 1410: the child is a row of two pure class-2 parents - 00000000000000801222000000000000 (70 rows / 5345, lift stone 23) and 00000000000000003800000008002000 (51 rows / 3564, lift stone 53, the cost-60c fold lift-5 parent)",
+  "chain_head_at_claim": "1410/174/6438/509109/4711/373023 (class-frontier-cost60c-receipts-recompute-20261116.json, git blob sha 239a6cf432e53713514d583e3682e1bef6075968, commit 05cc8bdb)",
+  "child_stones_bit_indices": [
+    23,
+    49,
+    53,
+    57,
+    60,
+    71
   ],
-  "2": [
-   12,
-   14,
-   17,
-   18,
-   19,
-   20,
-   22,
-   26
-  ],
-  "3": [
-   29,
-   31,
-   32,
-   33,
-   35,
-   40,
-   42,
-   43
-  ],
-  "4": [
-   44,
-   50,
-   51,
-   52,
-   54,
-   55,
-   56,
-   58
-  ],
-  "5": [
-   61,
-   65,
-   66,
-   67,
-   72,
-   73,
-   74,
-   76
-  ],
-  "6": [
-   77,
-   79,
-   84,
-   87,
-   88,
-   90,
-   94,
-   95
-  ],
-  "7": [
-   96,
-   97,
-   98,
-   99,
-   102,
-   103,
-   105,
-   106
-  ],
-  "8": [
-   107,
-   108,
-   109,
-   110,
-   111,
-   112,
-   113,
-   114
-  ],
-  "9": [
-   116,
-   117,
-   118,
-   119,
-   120
-  ]
- },
- "theorem_derived_verdicts": [
-  {
-   "candidate_bit": 109,
-   "root_hex": "00002000000000801222000000800000",
-   "canonical_root_hex": "00000000020008801202000000200000",
-   "d4_transform_index_to_canonical": 1,
-   "verdict": "REFUTED-D10",
-   "derivation": "The candidate root is D4-equivalent to own candidate roots of two STERILE rows. K0863 proves that no WIN7-D10 receipt root can cover a STERILE row; the published own-row sweeps give REFUTED-D10 for both representatives, and D4 invariance transfers that verdict.",
-   "representatives": [
+  "open_parents_at_head_1410": [
     {
-     "row": "65k",
-     "row_hex": "00000000020000801202000000200000",
-     "own_candidate_bit": 75,
-     "own_candidate_root_hex": "00000000020008801202000000200000",
-     "d4_transform_index_to_canonical": 0,
-     "own_sweep": "65/65 REFUTED-D10; 0 capped"
+      "s5_hex": "00000000000000801222000000000000",
+      "classes_bitmask": 2,
+      "remaining_s6_orbits": 70,
+      "remaining_s7_edge_cost": 5345,
+      "lift_stone": 23
     },
     {
-     "row": "74h",
-     "row_hex": "00000000000000889002000000000800",
-     "own_candidate_bit": 97,
-     "own_candidate_root_hex": "00000002000000889002000000000800",
-     "d4_transform_index_to_canonical": 2,
-     "own_sweep": "74/74 REFUTED-D10; 0 capped"
+      "s5_hex": "00000000000000003800000008002000",
+      "classes_bitmask": 2,
+      "remaining_s6_orbits": 51,
+      "remaining_s7_edge_cost": 3564,
+      "lift_stone": 53
     }
-   ],
-   "intersection_audit": {
-    "method": "enumerate the 69 legal roots of this cost69a child and compare their D4 canonical masks against all own-candidate roots of 65k, 70j and 74h",
-    "matching_cost69a_bits": [
-     109
+  ],
+  "legal_candidates": [
+    0,
+    1,
+    3,
+    4,
+    6,
+    8,
+    9,
+    10,
+    12,
+    14,
+    17,
+    18,
+    19,
+    20,
+    22,
+    26,
+    29,
+    31,
+    32,
+    33,
+    35,
+    40,
+    42,
+    43,
+    44,
+    50,
+    51,
+    52,
+    54,
+    55,
+    56,
+    58,
+    61,
+    65,
+    66,
+    67,
+    72,
+    73,
+    74,
+    76,
+    77,
+    79,
+    84,
+    87,
+    88,
+    90,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    102,
+    103,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    116,
+    117,
+    118,
+    119,
+    120
+  ],
+  "motivation_cross_cover": "all three remaining rows of the best coverable class-2 S5 00000000000000801202000000200000 (3 rows / 209) are STERILE by their own-row sweeps (65k / 70j / 74h), so they can only be closed by cross-covers (marginal mechanism) from other children's WIN7 receipts. The neighbor analysis at head 1410 (class2-lane-sterile-rows-neighbor-analysis-20261116.json) found that of this child's 69 legal candidate roots, bit 109 (root 00002000000000801222000000800000) covers BOTH the STERILE cost-65k child 00000000020000801202000000200000 AND the STERILE cost-74h child 00000000000000889002000000000800: a WIN7-D10 verdict for bit 109 would close TWO of the three STERILE rows via the standard marginal mechanism in one receipt. It is the only remaining single-root dual-cover opportunity in the cost<=70 neighborhood: the cost-64c dual-cover root bit 119 (covering 65k+70j) was swept and is REFUTED-D10, and the three cheapest 70j-child neighbors (cost 60c bit 119, cost 62b bits 21/109) are exhausted (all REFUTED-D10). This claim does NOT assert either row is closable - only that this sweep tests the last single-root dual-cover opportunity of that neighborhood. UPDATE 2026-11-16: the K0863 STERILE-row theorem now rules out this bit-109 dual-cover opportunity. An independent exact D4 re-canonicalization shows cost69a+109 is canonically identical to 65k+75 and 74h+97; both source candidates are REFUTED-D10 in STERILE rows. Do not count bit 109 as a live WIN7 receipt opportunity.",
+  "demand_verification": "re-derived at head 1410 by prep_claim_cost69a_20261116.py (runpy of the published cost-60c fold script, which internally reproduces the cost-75e chain head 1407 and the cost-60c fold byte-identically incl. all CONTROLs, then re-derivation): exact-integer D4 canonicalization of the six one-stone deletions of the child (stones [23,49,53,57,60,71]) gives exactly two open parents - del 23 -> class-2 S5 00000000000000801222000000000000 (70 rows / 5345), del 53 -> class-2 S5 00000000000000003800000008002000 (51 rows / 3564); the other four deletions are closed rows; legal candidates enumerated independently (69) and the covering roots identified by canonical covers over all 69 candidates x 7 deletions (65k: bit 109; 74h: bit 109)",
+  "coordination": "this child is NOT a row of the in-flight second-candidate-S5 lane (5 rows / 364, rows 64/71 STERILE + 76c in-flight + 76d/77e fold-pending), NOT a row of the class-4 best-S5 lane (00000000020000003800000080000000, all 18 open rows STERILE per the parallel cost-87 sweep), and not part of the 354-root unique S7 worklist measurement lane; no sweep record and no prior claim reference this child hex; first cost-69 child claimed in this lane (label 69a)",
+  "bookkeeping_only_note": "bookkeeping claim only; 11x11 empty board / two-stone root {49,60} / S2 {59,60} / class 1 / class 2 / class 4 all remain UNKNOWN; REFUTED-D10 is not a LOSS proof; STERILE is not a LOSS proof",
+  "planned_batches": {
+    "1": [
+      0,
+      1,
+      3,
+      4,
+      6,
+      8,
+      9,
+      10
     ],
-    "matching_rows": [
-     "65k",
-     "74h"
+    "2": [
+      12,
+      14,
+      17,
+      18,
+      19,
+      20,
+      22,
+      26
     ],
-    "no_other_match": true
-   },
-   "scope_guard": "REFUTED-D10 is not a LOSS proof and does not settle the cost69a six-stone child or either five-stone parent.",
-   "sources": [
-    "research/experiments/n11-class2-lane-sterile-unclosability-20261116/output/audit.json (V0, V5)",
-    "research/log/2026-11-16-n11-class2-lane-sterile-unclosability-theorem.md",
-    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65k-inflight-20261115.json",
-    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74h-inflight-20261115.json"
-   ]
-  }
- ],
- "cross_cover_precheck_update": {
-  "result": "the last cost<=70 single-root opportunity to close two STERILE rows is ruled out by K0863",
-  "engine_candidates_remaining": 68,
-  "planned_batch_containing_bit109": "8",
-  "execution_note": "Do not alter an already-running batch. If batch 8 has not started, bit 109 may be omitted from engine work and entered as theorem-derived REFUTED-D10. If it has already run, preserve its raw line as a consistency check. The other 68 candidates remain relevant because a WIN7 receipt may close this cost69a child row for its two class-2 parents.",
-  "canonical_head_at_claim": "1410/174/6438/509109/4711/373023 (class-frontier-cost60c-receipts-recompute-20261116.json, git blob sha 239a6cf432e53713514d583e3682e1bef6075968, commit 05cc8bdb)"
- }
+    "3": [
+      29,
+      31,
+      32,
+      33,
+      35,
+      40,
+      42,
+      43
+    ],
+    "4": [
+      44,
+      50,
+      51,
+      52,
+      54,
+      56,
+      58
+    ],
+    "5": [
+      61,
+      66,
+      67,
+      72,
+      73,
+      74,
+      76
+    ],
+    "6": [
+      77,
+      79,
+      84,
+      87,
+      88,
+      90,
+      94,
+      95
+    ],
+    "7": [
+      96,
+      97,
+      98,
+      99,
+      102,
+      103,
+      105,
+      106
+    ],
+    "8": [
+      107,
+      108,
+      110,
+      111,
+      112,
+      113,
+      114
+    ],
+    "9": [
+      116,
+      117,
+      118,
+      119,
+      120
+    ]
+  },
+  "theorem_derived_verdicts": [
+    {
+      "candidate_bit": 109,
+      "root_hex": "00002000000000801222000000800000",
+      "canonical_root_hex": "00000000020008801202000000200000",
+      "d4_transform_index_to_canonical": 1,
+      "verdict": "REFUTED-D10",
+      "derivation": "The candidate root is D4-equivalent to own candidate roots of two STERILE rows. K0863 proves that no WIN7-D10 receipt root can cover a STERILE row; the published own-row sweeps give REFUTED-D10 for both representatives, and D4 invariance transfers that verdict.",
+      "representatives": [
+        {
+          "row": "65k",
+          "row_hex": "00000000020000801202000000200000",
+          "own_candidate_bit": 75,
+          "own_candidate_root_hex": "00000000020008801202000000200000",
+          "d4_transform_index_to_canonical": 0,
+          "own_sweep": "65/65 REFUTED-D10; 0 capped"
+        },
+        {
+          "row": "74h",
+          "row_hex": "00000000000000889002000000000800",
+          "own_candidate_bit": 97,
+          "own_candidate_root_hex": "00000002000000889002000000000800",
+          "d4_transform_index_to_canonical": 2,
+          "own_sweep": "74/74 REFUTED-D10; 0 capped"
+        }
+      ],
+      "intersection_audit": {
+        "method": "enumerate the 69 legal roots of this cost69a child and compare their D4 canonical masks against all own-candidate roots of 65k, 70j and 74h",
+        "matching_cost69a_bits": [
+          109
+        ],
+        "matching_rows": [
+          "65k",
+          "74h"
+        ],
+        "no_other_match": true
+      },
+      "scope_guard": "REFUTED-D10 is not a LOSS proof and does not settle the cost69a six-stone child or either five-stone parent.",
+      "sources": [
+        "research/experiments/n11-class2-lane-sterile-unclosability-20261116/output/audit.json (V0, V5)",
+        "research/log/2026-11-16-n11-class2-lane-sterile-unclosability-theorem.md",
+        "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65k-inflight-20261115.json",
+        "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74h-inflight-20261115.json"
+      ]
+    }
+  ],
+  "cross_cover_precheck_update": {
+    "result": "the last cost<=70 single-root opportunity to close two STERILE rows is ruled out by K0863",
+    "engine_candidates_remaining": 68,
+    "planned_batch_containing_bit109": "8",
+    "execution_note": "Do not alter an already-running batch. If batch 8 has not started, bit 109 may be omitted from engine work and entered as theorem-derived REFUTED-D10. If it has already run, preserve its raw line as a consistency check. The other 68 candidates remain relevant because a WIN7 receipt may close this cost69a child row for its two class-2 parents.",
+    "canonical_head_at_claim": "1410/174/6438/509109/4711/373023 (class-frontier-cost60c-receipts-recompute-20261116.json, git blob sha 239a6cf432e53713514d583e3682e1bef6075968, commit 05cc8bdb)"
+  },
+  "precomputed_candidate_bits": [
+    55,
+    65,
+    109
+  ],
+  "engine_candidate_bits": [
+    0,
+    1,
+    3,
+    4,
+    6,
+    8,
+    9,
+    10,
+    12,
+    14,
+    17,
+    18,
+    19,
+    20,
+    22,
+    26,
+    29,
+    31,
+    32,
+    33,
+    35,
+    40,
+    42,
+    43,
+    44,
+    50,
+    51,
+    52,
+    54,
+    56,
+    58,
+    61,
+    66,
+    67,
+    72,
+    73,
+    74,
+    76,
+    77,
+    79,
+    84,
+    87,
+    88,
+    90,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    102,
+    103,
+    105,
+    106,
+    107,
+    108,
+    110,
+    111,
+    112,
+    113,
+    114,
+    116,
+    117,
+    118,
+    119,
+    120
+  ],
+  "canonical_cache_transfer_summary": {
+    "scan": "research/experiments/n11-class2-lane-sterile-unclosability-20261116/output/theorem-applicability-scan-20261116.json",
+    "scan_commit": "2d090b491c069d6cbe42f3f1c1cff99144b6f176",
+    "second_independent_verification": "research/experiments/n11-class2-lane-sterile-unclosability-20261116/output/theorem-applicability-scan-second-independent-verification-20261116.json",
+    "second_verification_commit": "2d090b491c069d6cbe42f3f1c1cff99144b6f176",
+    "corpus_root_verdicts": 8964,
+    "corpus_refuted_d10": 8305,
+    "corpus_win7_d10": 659,
+    "same_position_cross_sweep_agreement_groups": 1782,
+    "same_position_conflicts": 0,
+    "this_child_legal_candidates": 69,
+    "this_child_cache_refuted_bits": [
+      55,
+      65,
+      109
+    ],
+    "this_child_cache_win_bits": [],
+    "this_child_remaining_engine_candidates": 66,
+    "transfer_semantics": "A candidate 7-stone root inherits REFUTED-D10 only when its D4-canonical mask equals a published root with REFUTED-D10. This is a root verdict transfer, not a LOSS proof and not a manifest receipt."
+  },
+  "canonical_cache_transfers": [
+    {
+      "candidate_bit": 55,
+      "root_hex": "000000000000008012a2000000800000",
+      "canonical_root_hex": "000000000000008012a2000000800000",
+      "verdict": "REFUTED-D10",
+      "transfer_kind": "D4 canonical verdict-cache identity",
+      "source_roots": [
+        {
+          "child_hex": "00000000000000003800000008002020",
+          "candidate_bit": 103,
+          "root_hex": "00000080000000003800000008002020",
+          "canonical_root_hex": "000000000000008012a2000000800000",
+          "source_sweep": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64c-inflight-20261116.json",
+          "source_audit": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64c-sweep-audit-20261116.json",
+          "source_log": "research/log/2026-11-16-n11-class2-lane-cost64c-sterile-sweep.md",
+          "source_sweep_verdict": "64/64 REFUTED-D10; 0 capped"
+        }
+      ],
+      "scope_guard": "Only the 7-stone root verdict transfers by D4 invariance; this is not a LOSS proof."
+    },
+    {
+      "candidate_bit": 65,
+      "root_hex": "00000000000000821222000000800000",
+      "canonical_root_hex": "00000000000000809082200080000000",
+      "verdict": "REFUTED-D10",
+      "transfer_kind": "D4 canonical verdict-cache identity",
+      "source_roots": [
+        {
+          "child_hex": "00000000000000809082000080000000",
+          "candidate_bit": 45,
+          "root_hex": "00000000000000809082200080000000",
+          "canonical_root_hex": "00000000000000809082200080000000",
+          "source_sweep": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost58-sweep-20261114.json",
+          "source_sweep_verdict": "REFUTED-D10",
+          "nodes": 1628004
+        },
+        {
+          "child_hex": "00000000000000809082200000000000",
+          "candidate_bit": 31,
+          "root_hex": "00000000000000809082200080000000",
+          "canonical_root_hex": "00000000000000809082200080000000",
+          "source_sweep": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61c-sweep-20261114.json",
+          "source_sweep_verdict": "REFUTED-D10",
+          "nodes": 1628004
+        }
+      ],
+      "source_agreement": "The two independent sweeps contain the same exact 7-stone root and agree on REFUTED-D10; the corpus scan reports 1,782 same-position agreement groups and 0 conflicts.",
+      "scope_guard": "Only the 7-stone root verdict transfers by D4 invariance; this is not a LOSS proof."
+    }
+  ],
+  "frontier_effect_note": "The three precomputed bits are excluded from planned engine batches only. No class-frontier row is closed, no WIN7 receipt is created, and canonical head remains 1410 until a published WIN7 certificate is independently verified and folded."
 }
