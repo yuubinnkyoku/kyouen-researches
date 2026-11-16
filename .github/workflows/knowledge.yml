@@ -50,6 +50,10 @@ jobs:
         run: uv run --locked python research/experiments/vertical-fiber-diagonal-m11-m16-20261116/verify_diag_m11_m16.py
       - name: Audit Q-family remaining D4 orbit worklist
         run: python research/experiments/n11-frontier-q-family-orbit-dedup-20261116/verify.py
+      - name: Audit K0872 three-branch REMO first-loser residue signature
+        run: |
+          uv run --locked python research/experiments/remo-first-loser-residue-signature-20261116/verify_first_loser_residue_signature.py
+          git diff --exit-code -- research/experiments/remo-first-loser-residue-signature-20261116/output/audit.json
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python research/experiments/graph-star-fixed-q-count-complexity-20261102/verify.py
