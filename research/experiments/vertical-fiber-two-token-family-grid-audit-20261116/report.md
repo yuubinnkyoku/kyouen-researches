@@ -58,8 +58,8 @@ R\ge S+z+1\implies H(R;(x,y);z)=S\bmod2,
 
 リポジトリルートから:
 
-\`\`\`sh
+```sh
 python research/experiments/vertical-fiber-two-token-family-grid-audit-20261116/verify_two_token_family_grid.py
-\`\`\`
+```
 
 Python標準ライブラリのみ。既定値で上表の3検査を実行し、同じ場所の output/audit.json を再生成する。
