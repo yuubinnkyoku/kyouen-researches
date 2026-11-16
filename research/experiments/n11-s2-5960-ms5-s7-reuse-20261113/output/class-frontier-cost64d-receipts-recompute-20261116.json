@@ -1,0 +1,810 @@
+{
+ "schema": "n11-class-frontier-cost64d-receipts-20261116-v1",
+ "date": "2026-11-16",
+ "baseline_record": {
+  "cost65j_head_1419": "1419/174/6429/508474/4702/372388 (reproduced byte-identically by runpy of the published cost-65j fold script)",
+  "claim": "class2-lane-cost64d-inflight-20261116.json (v4, git blob sha e3cf7378a08b156c5c0299c52e4ccbcd59de9236; supersedes the v3 win23-certificate claim, all v1/v2/v3 fields preserved)",
+  "sweep": "8 raw batch JSONLs (v16), all blob-pinned; 64 candidates, 23 WIN7-D10, 41 REFUTED-D10, 0 capped, 64291757 nodes + 8 pilots x 3402; determinism rerun batch5 node-exact; v15 crosscheck two-directional",
+  "sweep_audit": "class2-lane-cost64d-raw-sweep-audit-20261116.json (git blob sha 8ebfb7213a0a16fb9792a075c4ead65d2d53f855)",
+  "marginal_audit_third": "class2-lane-cost64d-marginal-audit-third-20261116.json (git blob sha 734b7879d91a583dc7caf593204a20acdf737c91)"
+ },
+ "method": "runpy reproduction of the published cost-65j fold script (whole-chain head 1419), re-derivation of the cost-64d sweep from the 8 blob-pinned raw batches, re-assertion of the sweep audit and the independent third marginal audit (per-receipt in-manifest marginals on the 1419 baseline), re-assertion of all 23 win23 certificates byte-for-byte (whole/parts blob pins, join receipts, sorted-unique rows, root mobility == legal_candidates.py, BigInt union 0/0 + Bareiss records), 64-candidate-orbit conflict census vs the folded roots (zero overlaps), the child-remaining fact asserted on both open parents, then the 23 receipts folded in publication order with per-receipt marginals pinned and a set-equality control",
+ "cost64d_additions_on_cost65j_1419": [
+  {
+   "bit": 0,
+   "root_hex": "00000000000000403800000008002001",
+   "d4_canonical_hex": "00000000000000403800000008002001",
+   "source": "cost-64d raw batches 1-8 (v16, commit f38be6d6)",
+   "certified": true,
+   "sweep_nodes": 2145200,
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000403800000008002000"
+   ],
+   "marginal_non_manifest_hexes": [
+    "00000000000000001206000000800001",
+    "00000000000000402800000008002001",
+    "00000000000000403000000008002001",
+    "00000000000000403800000000002001"
+   ],
+   "rows": 42975,
+   "md5": "3ec2817832afe4c6dcc82d2ded0033dc",
+   "sub_roots_pass": 54,
+   "extraction_nodes": 4498457,
+   "terminal_count": 15166
+  },
+  {
+   "bit": 1,
+   "root_hex": "00000000000000403800000008002002",
+   "d4_canonical_hex": "00000000000000403800000008002002",
+   "source": "cost-64d raw batches 1-8 (v16, commit f38be6d6)",
+   "certified": true,
+   "sweep_nodes": 738037,
+   "covers": 7,
+   "marginal": 4,
+   "marginal_in_manifest": 0,
+   "marginal_manifest_hexes": [],
+   "marginal_non_manifest_hexes": [
+    "00000000000000001206000000800800",
+    "00000000000000402800000008002002",
+    "00000000000000403000000008002002",
+    "00000000000000403800000000002002"
+   ],
+   "rows": 32089,
+   "md5": "f0ab2fbcb8531a8480b35798965d22b1",
+   "sub_roots_pass": 48,
+   "extraction_nodes": 1420348,
+   "terminal_count": 11801
+  },
+  {
+   "bit": 2,
+   "root_hex": "00000000000000403800000008002004",
+   "d4_canonical_hex": "00000000000000403800000008002004",
+   "source": "cost-64d raw batches 1-8 (v16, commit f38be6d6)",
+   "certified": true,
+   "sweep_nodes": 3457163,
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000003800000008002004"
+   ],
+   "marginal_non_manifest_hexes": [
+    "00000000000000001206000000c00000",
+    "00000000000000402800000008002004",
+    "00000000000000403000000008002004",
+    "00000000000000403800000000002004"
+   ],
+   "rows": 57543,
+   "md5": "dade4acbfc5b93b95df743bf6cb760df",
+   "sub_roots_pass": 59,
+   "extraction_nodes": 7847223,
+   "terminal_count": 21915
+  },
+  {
+   "bit": 11,
+   "root_hex": "00000000000000403800000008002800",
+   "d4_canonical_hex": "00000000000000403800000008002800",
+   "source": "cost-64d raw batches 1-8 (v16, commit f38be6d6)",
+   "certified": true,
+   "sweep_nodes": 1107865,
+   "covers": 7,
+   "marginal": 4,
+   "marginal_in_manifest": 0,
+   "marginal_manifest_hexes": [],
+   "marginal_non_manifest_hexes": [
+    "00000000000000001206000000800002",
+    "00000000000000402800000008002800",
+    "00000000000000403000000008002800",
+    "00000000000000403800000000002800"
+   ],
+   "rows": 36442,
+   "md5": "336795d040a4b94097eba2b70f9af0a5",
+   "sub_roots_pass": 53,
+   "extraction_nodes": 2150116,
+   "terminal_count": 13124
+  },
+  {
+   "bit": 16,
+   "root_hex": "00000000000000403800000008012000",
+   "d4_canonical_hex": "00000000000000403800000008012000",
+   "source": "cost-64d raw batches 1-8 (v16, commit f38be6d6)",
+   "certified": true,
+   "sweep_nodes": 1853380,
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000003800000008012000"
+   ],
+   "marginal_non_manifest_hexes": [
+    "00000000000000001306000000800000",
+    "00000000000000402800000008012000",
+    "00000000000000403000000008012000",
+    "00000000000000403800000000012000"
+   ],
+   "rows": 40116,
+   "md5": "87353634cabe4232903db18bc12a6838",
+   "sub_roots_pass": 52,
+   "extraction_nodes": 3797743,
+   "terminal_count": 14206
+  },
+  {
+   "bit": 30,
+   "root_hex": "00000000000000403800000048002000",
+   "d4_canonical_hex": "00000000000000403800000048002000",
+   "source": "cost-64d raw batches 1-8 (v16, commit f38be6d6)",
+   "certified": true,
+   "sweep_nodes": 357342,
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000003800000009080000"
+   ],
+   "marginal_non_manifest_hexes": [
+    "00000000000000401800000048002000",
+    "00000000000000402800000048002000",
+    "00000000000000403000000048002000",
+    "00000000000000403800000040002000"
+   ],
+   "rows": 22054,
+   "md5": "dd4e9f74c9ba7ebcca3e56b98ef851d3",
+   "sub_roots_pass": 45,
+   "extraction_nodes": 669543,
+   "terminal_count": 8550
+  },
+  {
+   "bit": 32,
+   "root_hex": "00000000000000403800000108002000",
+   "d4_canonical_hex": "00000000000000403800000108002000",
+   "source": "cost-64d raw batches 1-8 (v16, commit f38be6d6)",
+   "certified": true,
+   "sweep_nodes": 2648192,
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000403800000108000000"
+   ],
+   "marginal_non_manifest_hexes": [
+    "00000000000000401800000108002000",
+    "00000000000000402800000108002000",
+    "00000000000000403000000108002000",
+    "00000000000000403800000100002000"
+   ],
+   "rows": 50624,
+   "md5": "b010c11807481bdd15cf695ff254631d",
+   "sub_roots_pass": 55,
+   "extraction_nodes": 5898585,
+   "terminal_count": 16908
+  },
+  {
+   "bit": 43,
+   "root_hex": "00000000000000403800080008002000",
+   "d4_canonical_hex": "00000000000000403800080008002000",
+   "source": "cost-64d raw batches 1-8 (v16, commit f38be6d6)",
+   "certified": true,
+   "sweep_nodes": 1275050,
+   "covers": 7,
+   "marginal": 4,
+   "marginal_in_manifest": 0,
+   "marginal_manifest_hexes": [],
+   "marginal_non_manifest_hexes": [
+    "00000000000000401800080008002000",
+    "00000000000000402800080008002000",
+    "00000000000000403000080008002000",
+    "00000000000000403800080000002000"
+   ],
+   "rows": 39135,
+   "md5": "e0fa1035b81583330e9eb8211963e6fa",
+   "sub_roots_pass": 53,
+   "extraction_nodes": 2280936,
+   "terminal_count": 14062
+  },
+  {
+   "bit": 53,
+   "root_hex": "00000000000000403820000008002000",
+   "d4_canonical_hex": "00000000000000403820000008002000",
+   "source": "cost-64d raw batches 1-8 (v16, commit f38be6d6)",
+   "certified": true,
+   "sweep_nodes": 1849832,
+   "covers": 7,
+   "marginal": 4,
+   "marginal_in_manifest": 0,
+   "marginal_manifest_hexes": [],
+   "marginal_non_manifest_hexes": [
+    "00000000000000401820000008002000",
+    "00000000000000402820000008002000",
+    "00000000000000403020000008002000",
+    "00000000000000403820000000002000"
+   ],
+   "rows": 43010,
+   "md5": "9877ca5f783dacb7825596845aebeb4e",
+   "sub_roots_pass": 57,
+   "extraction_nodes": 3254829,
+   "terminal_count": 14978
+  },
+  {
+   "bit": 66,
+   "root_hex": "00000000000000443800000008002000",
+   "d4_canonical_hex": "00000000000000443800000008002000",
+   "source": "cost-64d raw batches 1-8 (v16, commit f38be6d6)",
+   "certified": true,
+   "sweep_nodes": 3401428,
+   "covers": 7,
+   "marginal": 4,
+   "marginal_in_manifest": 0,
+   "marginal_manifest_hexes": [],
+   "marginal_non_manifest_hexes": [
+    "00000000000000001206000000800040",
+    "00000000000000442800000008002000",
+    "00000000000000443000000008002000",
+    "00000000000000443800000000002000"
+   ],
+   "rows": 46953,
+   "md5": "2cb8e489de4d6a756d9478cd12f47088",
+   "sub_roots_pass": 56,
+   "extraction_nodes": 6372576,
+   "terminal_count": 17811
+  },
+  {
+   "bit": 69,
+   "root_hex": "00000000000000603800000008002000",
+   "d4_canonical_hex": "00000000000000603800000008002000",
+   "source": "cost-64d raw batches 1-8 (v16, commit f38be6d6)",
+   "certified": true,
+   "sweep_nodes": 569947,
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 0,
+   "marginal_manifest_hexes": [],
+   "marginal_non_manifest_hexes": [
+    "00000000000000001206008000800000",
+    "00000000000000203800000008002000",
+    "00000000000000602800000008002000",
+    "00000000000000603000000008002000",
+    "00000000000000603800000000002000"
+   ],
+   "rows": 26893,
+   "md5": "e9b68f3c62ee3e3128adbf8a3f320b93",
+   "sub_roots_pass": 47,
+   "extraction_nodes": 1048245,
+   "terminal_count": 10926
+  },
+  {
+   "bit": 75,
+   "root_hex": "00000000000008403800000008002000",
+   "d4_canonical_hex": "00000000000001083800000008080000",
+   "source": "cost-64d raw batches 1-8 (v16, commit f38be6d6)",
+   "certified": true,
+   "sweep_nodes": 319937,
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000083800000008080000"
+   ],
+   "marginal_non_manifest_hexes": [
+    "00000000000001081800000008080000",
+    "00000000000001082800000008080000",
+    "00000000000001083000000008080000",
+    "00000000000001083800000000080000"
+   ],
+   "rows": 17503,
+   "md5": "1fb44bc82fa1e09dc6efd980906f9663",
+   "sub_roots_pass": 44,
+   "extraction_nodes": 510576,
+   "terminal_count": 6898
+  },
+  {
+   "bit": 79,
+   "root_hex": "00000000000080403800000008002000",
+   "d4_canonical_hex": "00000000000000801206000020800000",
+   "source": "cost-64d raw batches 1-8 (v16, commit f38be6d6)",
+   "certified": true,
+   "sweep_nodes": 377990,
+   "covers": 7,
+   "marginal": 4,
+   "marginal_in_manifest": 0,
+   "marginal_manifest_hexes": [],
+   "marginal_non_manifest_hexes": [
+    "00000000000000001206000020800000",
+    "00000000000000800206000020800000",
+    "00000000000000801003000082000000",
+    "00000000000000801204000020800000"
+   ],
+   "rows": 24227,
+   "md5": "830d6529c73d5d8c903d8c32fdec0701",
+   "sub_roots_pass": 47,
+   "extraction_nodes": 743990,
+   "terminal_count": 8874
+  },
+  {
+   "bit": 86,
+   "root_hex": "00000000004000403800000008002000",
+   "d4_canonical_hex": "00000000000041003800000008080000",
+   "source": "cost-64d raw batches 1-8 (v16, commit f38be6d6)",
+   "certified": true,
+   "sweep_nodes": 2071433,
+   "covers": 7,
+   "marginal": 6,
+   "marginal_in_manifest": 2,
+   "marginal_manifest_hexes": [
+    "00000000000000c09002000000004000",
+    "00000000000040003800000008080000"
+   ],
+   "marginal_non_manifest_hexes": [
+    "00000000000041001800000008080000",
+    "00000000000041002800000008080000",
+    "00000000000041003000000008080000",
+    "00000000000041003800000000080000"
+   ],
+   "rows": 56607,
+   "md5": "37c7d3d9cb3f8f5af23b4170ac955afa",
+   "sub_roots_pass": 58,
+   "extraction_nodes": 5156381,
+   "terminal_count": 19219
+  },
+  {
+   "bit": 92,
+   "root_hex": "00000000100000403800000008002000",
+   "d4_canonical_hex": "00000000000000801216000000800000",
+   "source": "cost-64d raw batches 1-8 (v16, commit f38be6d6)",
+   "certified": true,
+   "sweep_nodes": 1215671,
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000801212000000800000"
+   ],
+   "marginal_non_manifest_hexes": [
+    "00000000000000001216000000800000",
+    "00000000000000800216000000800000",
+    "00000000000000801003400080000000",
+    "00000000000000801214000000800000"
+   ],
+   "rows": 37920,
+   "md5": "ef42f69769e807586bc3a3c949038dd5",
+   "sub_roots_pass": 52,
+   "extraction_nodes": 2049472,
+   "terminal_count": 12731
+  },
+  {
+   "bit": 95,
+   "root_hex": "00000000800000403800000008002000",
+   "d4_canonical_hex": "00000000000080809003000080000000",
+   "source": "cost-64d raw batches 1-8 (v16, commit f38be6d6)",
+   "certified": true,
+   "sweep_nodes": 887709,
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000c09002000800000000"
+   ],
+   "marginal_non_manifest_hexes": [
+    "00000000000080009003000080000000",
+    "00000000000080801003000080000000",
+    "00000000000080808003000080000000",
+    "00000000000080809001000080000000"
+   ],
+   "rows": 28352,
+   "md5": "64e1483eaec9a9639284eec999e4ff06",
+   "sub_roots_pass": 48,
+   "extraction_nodes": 1672223,
+   "terminal_count": 10616
+  },
+  {
+   "bit": 98,
+   "root_hex": "00000004000000403800000008002000",
+   "d4_canonical_hex": "00000000010001003800000008080000",
+   "source": "cost-64d raw batches 1-8 (v16, commit f38be6d6)",
+   "certified": true,
+   "sweep_nodes": 981906,
+   "covers": 7,
+   "marginal": 4,
+   "marginal_in_manifest": 0,
+   "marginal_manifest_hexes": [],
+   "marginal_non_manifest_hexes": [
+    "00000000010001001800000008080000",
+    "00000000010001002800000008080000",
+    "00000000010001003000000008080000",
+    "00000000010001003800000000080000"
+   ],
+   "rows": 35070,
+   "md5": "0d44ff8910cc13a8946c1302d5ebb6d3",
+   "sub_roots_pass": 51,
+   "extraction_nodes": 2055858,
+   "terminal_count": 12600
+  },
+  {
+   "bit": 106,
+   "root_hex": "00000400000000403800000008002000",
+   "d4_canonical_hex": "00000000000040809003000080000000",
+   "source": "cost-64d raw batches 1-8 (v16, commit f38be6d6)",
+   "certified": true,
+   "sweep_nodes": 1368669,
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000040809002000080000000"
+   ],
+   "marginal_non_manifest_hexes": [
+    "00000000000040009003000080000000",
+    "00000000000040801003000080000000",
+    "00000000000040808003000080000000",
+    "00000000000040809001000080000000"
+   ],
+   "rows": 29469,
+   "md5": "5e8147968e477c8bdfd36fafd8926436",
+   "sub_roots_pass": 50,
+   "extraction_nodes": 2617647,
+   "terminal_count": 10983
+  },
+  {
+   "bit": 107,
+   "root_hex": "00000800000000403800000008002000",
+   "d4_canonical_hex": "00000000020000809003000080000000",
+   "source": "cost-64d raw batches 1-8 (v16, commit f38be6d6)",
+   "certified": true,
+   "sweep_nodes": 1120894,
+   "covers": 7,
+   "marginal": 6,
+   "marginal_in_manifest": 2,
+   "marginal_manifest_hexes": [
+    "00000000000000c09002000000800000",
+    "00000000020000801202000080000000"
+   ],
+   "marginal_non_manifest_hexes": [
+    "00000000020000009003000080000000",
+    "00000000020000801003000080000000",
+    "00000000020000808003000080000000",
+    "00000000020000809001000080000000"
+   ],
+   "rows": 29043,
+   "md5": "ab08997f18510d057ff3ed782516fbc2",
+   "sub_roots_pass": 47,
+   "extraction_nodes": 1826624,
+   "terminal_count": 9907
+  },
+  {
+   "bit": 109,
+   "root_hex": "00002000000000403800000008002000",
+   "d4_canonical_hex": "00000000020001801202000000000200",
+   "source": "cost-64d raw batches 1-8 (v16, commit f38be6d6)",
+   "certified": true,
+   "sweep_nodes": 457181,
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000c09002000000000002"
+   ],
+   "marginal_non_manifest_hexes": [
+    "00000000020001001202000000000200",
+    "00000000020001800202000000000200",
+    "00000000020001801002000000000200",
+    "00000000020001801200000000000200"
+   ],
+   "rows": 22855,
+   "md5": "401c70ae36d8d267780dc209753a0c96",
+   "sub_roots_pass": 48,
+   "extraction_nodes": 905323,
+   "terminal_count": 8652
+  },
+  {
+   "bit": 111,
+   "root_hex": "00008000000000403800000008002000",
+   "d4_canonical_hex": "00000000000000801206000000a00000",
+   "source": "cost-64d raw batches 1-8 (v16, commit f38be6d6)",
+   "certified": true,
+   "sweep_nodes": 1740815,
+   "covers": 7,
+   "marginal": 4,
+   "marginal_in_manifest": 0,
+   "marginal_manifest_hexes": [],
+   "marginal_non_manifest_hexes": [
+    "00000000000000001206000000a00000",
+    "00000000000000800206000000a00000",
+    "00000000000000801003000080000800",
+    "00000000000000801204000000a00000"
+   ],
+   "rows": 45982,
+   "md5": "a4b2e0c832fdc47e4278fbfda2c7130a",
+   "sub_roots_pass": 54,
+   "extraction_nodes": 4165675,
+   "terminal_count": 16827
+  },
+  {
+   "bit": 113,
+   "root_hex": "00020000000000403800000008002000",
+   "d4_canonical_hex": "00000000000000801206080000800000",
+   "source": "cost-64d raw batches 1-8 (v16, commit f38be6d6)",
+   "certified": true,
+   "sweep_nodes": 1630001,
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000801202080000800000"
+   ],
+   "marginal_non_manifest_hexes": [
+    "00000000000000001206080000800000",
+    "00000000000000800206080000800000",
+    "00000000000000801003000280000000",
+    "00000000000000801204080000800000"
+   ],
+   "rows": 48883,
+   "md5": "56db229d7b79d03704f3823653f318d0",
+   "sub_roots_pass": 59,
+   "extraction_nodes": 3811908,
+   "terminal_count": 18526
+  },
+  {
+   "bit": 120,
+   "root_hex": "01000000000000403800000008002000",
+   "d4_canonical_hex": "00000000020001801202000000000400",
+   "source": "cost-64d raw batches 1-8 (v16, commit f38be6d6)",
+   "certified": true,
+   "sweep_nodes": 2484895,
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000020000801202000000000400"
+   ],
+   "marginal_non_manifest_hexes": [
+    "00000000020001001202000000000400",
+    "00000000020001800202000000000400",
+    "00000000020001801002000000000400",
+    "00000000020001801200000000000400"
+   ],
+   "rows": 47694,
+   "md5": "15ab7973029506d90a6e3706fed96fd0",
+   "sub_roots_pass": 56,
+   "extraction_nodes": 5015192,
+   "terminal_count": 15358
+  }
+ ],
+ "totals": {
+  "receipts": 23,
+  "total_marginal": 109,
+  "total_marginal_in_manifest": 16,
+  "child_closed_by_bit": 0,
+  "zero_mim_receipts": [
+   1,
+   11,
+   43,
+   53,
+   66,
+   69,
+   79,
+   98,
+   111
+  ],
+  "conflict_census_overlaps": [],
+  "folded_roots_at_1419": {
+   "receipt_roots": 735,
+   "distinct_roots": 734
+  },
+  "rows_closed_hexes": [
+   "00000000000000003800000008002004",
+   "00000000000000003800000008012000",
+   "00000000000000003800000009080000",
+   "00000000000000083800000008080000",
+   "00000000000000403800000008002000",
+   "00000000000000403800000108000000",
+   "00000000000000801202080000800000",
+   "00000000000000801212000000800000",
+   "00000000000000c09002000000000002",
+   "00000000000000c09002000000004000",
+   "00000000000000c09002000000800000",
+   "00000000000000c09002000800000000",
+   "00000000000040003800000008080000",
+   "00000000000040809002000080000000",
+   "00000000020000801202000000000400",
+   "00000000020000801202000080000000"
+  ],
+  "sweep_nodes_excluding_pilots": 64291757
+ },
+ "frontier_after_cost64d": {
+  "solved_s6_in_manifest": 1435,
+  "remaining_s5_orbits": 174,
+  "unique_remaining_s6": 6413,
+  "sum_remaining_cost": 507337,
+  "s6_needed_by_open_classes": 4686,
+  "cost_needed_by_open_classes": 371251,
+  "demand_histogram_open_only": {
+   "c2=0,c4=1": 526,
+   "c2=0,c4=2": 3013,
+   "c2=0,c4=3": 12,
+   "c2=1,c4=0": 212,
+   "c2=1,c4=1": 54,
+   "c2=1,c4=2": 9,
+   "c2=2,c4=0": 803,
+   "c2=2,c4=1": 5,
+   "c2=2,c4=2": 52
+  },
+  "best_class2": {
+   "s5_hex": "00000000000000801202000000200000",
+   "classes": 2,
+   "remaining_s6_orbits": 3,
+   "remaining_s7_edge_cost": 209
+  },
+  "best_class4": {
+   "s5_hex": "00000000020000003800000080000000",
+   "classes": 4,
+   "remaining_s6_orbits": 18,
+   "remaining_s7_edge_cost": 1460
+  },
+  "best_coverable_class2": {
+   "s5_hex": "00000000000000801202000000200000",
+   "classes": 2,
+   "remaining_s6_orbits": 3,
+   "remaining_s7_edge_cost": 209
+  },
+  "second_coverable_class2": {
+   "s5_hex": "00000000000000801202000040000000",
+   "classes": 2,
+   "remaining_s6_orbits": 5,
+   "remaining_s7_edge_cost": 364
+  }
+ },
+ "parents_after": {
+  "00000000000000003800000008000004": {
+   "s5_hex": "00000000000000003800000008000004",
+   "rows": 65,
+   "edge_cost": 5377,
+   "rows_before": 66,
+   "edge_cost_before": 5451
+  },
+  "00000000000000003800000008002000": {
+   "s5_hex": "00000000000000003800000008002000",
+   "rows": 31,
+   "edge_cost": 2145,
+   "rows_before": 42,
+   "edge_cost_before": 2929
+  },
+  "00000000000000003800000008400000": {
+   "s5_hex": "00000000000000003800000008400000",
+   "rows": 42,
+   "edge_cost": 3127,
+   "rows_before": 43,
+   "edge_cost_before": 3197
+  },
+  "00000000000000003800000009000000": {
+   "s5_hex": "00000000000000003800000009000000",
+   "rows": 29,
+   "edge_cost": 2203,
+   "rows_before": 30,
+   "edge_cost_before": 2276
+  },
+  "00000000000000083800000008000000": {
+   "s5_hex": "00000000000000083800000008000000",
+   "rows": 49,
+   "edge_cost": 3683,
+   "rows_before": 50,
+   "edge_cost_before": 3750
+  },
+  "00000000000000403800000008000000": {
+   "s5_hex": "00000000000000403800000008000000",
+   "rows": 18,
+   "edge_cost": 1287,
+   "rows_before": 24,
+   "edge_cost_before": 1704
+  },
+  "00000000000000801202000000000200": {
+   "s5_hex": "00000000000000801202000000000200",
+   "rows": 64,
+   "edge_cost": 5242,
+   "rows_before": 65,
+   "edge_cost_before": 5316
+  },
+  "00000000000000801202000000000400": {
+   "s5_hex": "00000000000000801202000000000400",
+   "rows": 67,
+   "edge_cost": 5514,
+   "rows_before": 68,
+   "edge_cost_before": 5588
+  },
+  "00000000000000801202000000040000": {
+   "s5_hex": "00000000000000801202000000040000",
+   "rows": 72,
+   "edge_cost": 5960,
+   "rows_before": 74,
+   "edge_cost_before": 6113
+  },
+  "00000000000000801202000080000000": {
+   "s5_hex": "00000000000000801202000080000000",
+   "rows": 38,
+   "edge_cost": 2901,
+   "rows_before": 40,
+   "edge_cost_before": 3038
+  },
+  "00000000000000801202020000000000": {
+   "s5_hex": "00000000000000801202020000000000",
+   "rows": 48,
+   "edge_cost": 3296,
+   "rows_before": 49,
+   "edge_cost_before": 3360
+  },
+  "00000000000000801202080000000000": {
+   "s5_hex": "00000000000000801202080000000000",
+   "rows": 73,
+   "edge_cost": 6052,
+   "rows_before": 74,
+   "edge_cost_before": 6127
+  },
+  "00000000000000801212000000000000": {
+   "s5_hex": "00000000000000801212000000000000",
+   "rows": 67,
+   "edge_cost": 5305,
+   "rows_before": 68,
+   "edge_cost_before": 5376
+  }
+ },
+ "lost_rows_per_parent": {
+  "00000000000000003800000008000004": {
+   "00000000000000003800000008002004": 74
+  },
+  "00000000000000003800000008002000": {
+   "00000000000000003800000008002004": 74,
+   "00000000000000003800000008012000": 66,
+   "00000000000000003800000009080000": 73,
+   "00000000000000083800000008080000": 67,
+   "00000000000000403800000008002000": 64,
+   "00000000000000801202080000800000": 75,
+   "00000000000000801212000000800000": 71,
+   "00000000000040003800000008080000": 75,
+   "00000000000040809002000080000000": 75,
+   "00000000020000801202000000000400": 74,
+   "00000000020000801202000080000000": 70
+  },
+  "00000000000000003800000008400000": {
+   "00000000000000403800000108000000": 70
+  },
+  "00000000000000003800000009000000": {
+   "00000000000000003800000009080000": 73
+  },
+  "00000000000000083800000008000000": {
+   "00000000000000083800000008080000": 67
+  },
+  "00000000000000403800000008000000": {
+   "00000000000000403800000008002000": 64,
+   "00000000000000403800000108000000": 70,
+   "00000000000000c09002000000000002": 74,
+   "00000000000000c09002000000004000": 78,
+   "00000000000000c09002000000800000": 67,
+   "00000000000000c09002000800000000": 64
+  },
+  "00000000000000801202000000000200": {
+   "00000000000000c09002000000000002": 74
+  },
+  "00000000000000801202000000000400": {
+   "00000000020000801202000000000400": 74
+  },
+  "00000000000000801202000000040000": {
+   "00000000000000c09002000000004000": 78,
+   "00000000000040003800000008080000": 75
+  },
+  "00000000000000801202000080000000": {
+   "00000000000000c09002000000800000": 67,
+   "00000000020000801202000080000000": 70
+  },
+  "00000000000000801202020000000000": {
+   "00000000000000c09002000800000000": 64
+  },
+  "00000000000000801202080000000000": {
+   "00000000000000801202080000800000": 75
+  },
+  "00000000000000801212000000000000": {
+   "00000000000000801212000000800000": 71
+  }
+ },
+ "interpretation_guard": "bookkeeping over published receipts; solved counts measure manifest coverage, not the game-theoretic value of any position; WIN7 certificates prove a first-player win within depth 10 from the individual 7-stone roots only; REFUTED-D10 proves only absence of WIN7-D10 from that root and is never a LOSS proof; 11x11 empty board / two-stone root {49,60} / S2 {59,60} / class 1 / class 2 / class 4 remain UNKNOWN"
+}

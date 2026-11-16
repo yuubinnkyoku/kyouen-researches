@@ -1,8 +1,8 @@
 {
- "schema": "n11-class2-lane-cost64d-completed-20261116-v3",
+ "schema": "n11-class2-lane-cost64d-completed-20261116-v4",
  "title": "n11 class2-lane cost-64d sweep in flight: cheapest unswept row 00000000000000403800000008002000 of the best own-closable class-2 target S5 at the canonical head 1419",
  "date": "2026-11-16",
- "status": "completed on 2026-11-16 by the long-term lane session (two updates in one day): (1) the full raw sweep of the 64 legal candidates was published (8 v16 raw batches + a fresh-process determinism rerun + a v15 crosscheck), independently audited: 23 WIN7-D10, 41 REFUTED-D10, 0 capped, 64,291,757 candidate nodes excluding the 8 pilots at 3402 nodes each (v2, commit f38be6d6); (2) all 23 WIN7-D10 roots now have published, independently verifiable certificates (win23 manifest class2-lane-cost64d-win23-certificates-20261116.json, blob 244e4b61: 23 certs, 861,439 rows, 69,769,470 extraction nodes, 1,193 sub-roots, BigInt union 0/0 + Bareiss double verification all PASS, 9 whole certs + 14 split part1of2/part2of2 with join receipts); the fold-prep marginal analysis projects 16 closed rows at head 1419 -> projected head 1435 (shared class-2 parent 00000000000000003800000008002000 42->31 rows, target S5 00000000000000403800000008000000 24->18); the fold itself is deferred to the chain-reproduction session per protocol; the canonical head stays 1419 until the fold; 11x11 empty board remains UNKNOWN",
+ "status": "fold complete on 2026-11-16 by the long-term lane session: the 23 WIN7-D10 receipts were folded on the cost-65j chain head 1419 by recompute_frontier_cost64d_receipts_20261116.py (runpy chain reproduction: the published 13 reconstruct_tmp_* prerequisites plus the whole fold chain 84a..70g -> canonical 1405 -> cost-75e 1407 -> cost-60c 1410 -> cost-65j 1419, all byte-identical), closing exactly 16 manifest rows (the child row closed by bit 0; nine zero-marginal receipts bits 1/11/43/53/66/69/79/98/111; total marginal 109 / marginal_in_manifest 16; set-equality control), producing the new canonical head 1435/174/6413/507337/4686/371251; conflict census: all 64 candidate D4 orbits are disjoint from the 734 distinct folded roots at 1419 (718 at head 1410 plus the 17 cost-65j receipts, one of which is byte-identical to the already-folded cost-72b root) - zero overlaps, zero WIN/LOSS conflicts; the 23 receipt roots occupy 23 distinct D4 orbits and are disjoint raw-hex and D4-canonically from every folded root; all 23 receipts carry published certificates (win23 manifest blob 244e4b61) re-asserted byte-for-byte in the fold script (whole/parts blob pins, join receipts, sorted-unique rows, root mobility == legal_candidates.py, BigInt union 0/0 + Bareiss all PASS); per-parent: shared class-2 parent 00000000000000003800000008002000 42/2929 -> 31/2145, target S5 00000000000000403800000008000000 24/1704 -> 18/1287, eleven further open parents lose 1-2 rows each (30 parent-row incidences); REFUTED-D10 remains a depth-10 refutation only, never a LOSS proof; 11x11 empty board remains UNKNOWN",
  "claimed_by": "n11 long-term lane session (next-target cheapest-first continuation)",
  "s5_target": "00000000000000403800000008000000",
  "s6_child": "00000000000000403800000008002000",
@@ -185,5 +185,69 @@
    "publication": "9 whole certs (bits 1/30/69/75/79/95/106/107/109) + 14 split part1of2/part2of2 with join receipts (bits 0/2/11/16/32/43/53/66/86/92/98/111/113/120)"
   }
  },
- "supersedes": "v2 (completed sweep publication, commit f38be6d6; all v1/v2 fields preserved)"
+ "supersedes": "v3 (completed win23 certificate publication, commit 9f4684ad; all v1/v2/v3 fields preserved)",
+ "fold": {
+  "date": "2026-11-16",
+  "baseline": "1419/174/6429/508474/4702/372388 reproduced byte-identically by runpy of recompute_frontier_cost65j_receipts_20261116.py (which internally reproduces the whole published chain, including the cost-60c and cost-75e folds and the 13 published reconstruct_tmp_* prerequisites); the three cost-65j output blobs re-asserted byte-identical",
+  "head_before": "1419/174/6429/508474/4702/372388",
+  "head_after": "1435/174/6413/507337/4686/371251",
+  "rows_closed": 16,
+  "rows_closed_hexes": [
+   "00000000000000003800000008002004",
+   "00000000000000003800000008012000",
+   "00000000000000003800000009080000",
+   "00000000000000083800000008080000",
+   "00000000000000403800000008002000",
+   "00000000000000403800000108000000",
+   "00000000000000801202080000800000",
+   "00000000000000801212000000800000",
+   "00000000000000c09002000000000002",
+   "00000000000000c09002000000004000",
+   "00000000000000c09002000000800000",
+   "00000000000000c09002000800000000",
+   "00000000000040003800000008080000",
+   "00000000000040809002000080000000",
+   "00000000020000801202000000000400",
+   "00000000020000801202000080000000"
+  ],
+  "child_closed_by_bit": 0,
+  "zero_marginal_receipts": [
+   1,
+   11,
+   43,
+   53,
+   66,
+   69,
+   79,
+   98,
+   111
+  ],
+  "total_marginal": 109,
+  "total_marginal_in_manifest": 16,
+  "conflict_census": "all 64 candidate D4 orbits disjoint from the 734 distinct folded roots at 1419 - zero overlaps, zero WIN/LOSS conflicts; the 23 receipt roots are 23 distinct D4 orbits, disjoint raw-hex and D4-canonically from every folded root",
+  "demand_histogram_delta": "c2=1,c4=0: 214 -> 212; c2=2,c4=0: 817 -> 803; every closed row has open-class demand c2>0 and c4=0",
+  "per_open_parent_rows": {
+   "00000000000000003800000008000004": "66/5451 -> 65/5377",
+   "00000000000000003800000008002000": "42/2929 -> 31/2145",
+   "00000000000000003800000008400000": "43/3197 -> 42/3127",
+   "00000000000000003800000009000000": "30/2276 -> 29/2203",
+   "00000000000000083800000008000000": "50/3750 -> 49/3683",
+   "00000000000000403800000008000000": "24/1704 -> 18/1287",
+   "00000000000000801202000000000200": "65/5316 -> 64/5242",
+   "00000000000000801202000000000400": "68/5588 -> 67/5514",
+   "00000000000000801202000000040000": "74/6113 -> 72/5960",
+   "00000000000000801202000080000000": "40/3038 -> 38/2901",
+   "00000000000000801202020000000000": "49/3360 -> 48/3296",
+   "00000000000000801202080000000000": "74/6127 -> 73/6052",
+   "00000000000000801212000000000000": "68/5376 -> 67/5305"
+  },
+  "certificates": "class2-lane-cost64d-win23-certificates-20261116.json (git blob sha 244e4b618b4bed4de298f8e3179b0b569f85cf26): all 23 WIN7 receipts certified - 861,439 rows / 69,769,470 extraction nodes / 1,193 sub-roots / winner 1,220,504 / loser 362,105 / terminals 310,638 / 31,086,866 cert bytes; BigInt union 0/0 + Bareiss all PASS; 9 whole certs (bits 1/30/69/75/79/95/106/107/109) + 14 split part1of2/part2of2 with join receipts; re-asserted byte-for-byte in the fold script",
+  "recompute_script": "scripts/recompute_frontier_cost64d_receipts_20261116.py",
+  "outputs": [
+   "class-frontier-cost64d-receipts-recompute-20261116.json",
+   "class-frontier-s5-ranking-after-cost64d-receipts-20261116.csv",
+   "class-frontier-top-candidates-s6-after-cost64d-receipts-20261116.csv"
+  ],
+  "unknown_status": "11x11 empty board: UNKNOWN. The fold is bookkeeping over published receipts; solved counts measure manifest coverage, not the game-theoretic value of any position; WIN7 certificates prove only the individual 7-stone roots (first-player win within depth 10); REFUTED-D10 proves only the absence of WIN7-D10 from that root."
+ }
 }
