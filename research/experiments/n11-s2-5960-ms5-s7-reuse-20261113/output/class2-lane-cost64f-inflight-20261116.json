@@ -1,8 +1,8 @@
 {
- "schema": "n11-class2-lane-cost64f-completed-20261116-v3",
- "title": "n11 class2-lane cost-64f sweep completed NOT-STERILE: 3 WIN7-D10 receipts certified; direct S5 parent metadata corrected after independent D4 subset audit; fold still deferred; 11x11 UNKNOWN",
+ "schema": "n11-class2-lane-cost64f-completed-20261116-v4",
+ "title": "n11 class2-lane cost-64f completed NOT-STERILE: 3 WIN7-D10, 61 REFUTED-D10 total; counter corrected and cross-row cache reuse audited",
  "date": "2026-11-16",
- "status": "completed NOT-STERILE on 2026-11-16 by the long-term lane session: the full raw sweep of the 59 open candidates is published (8 v16 raw batches + determinism rerun batch2 node-exact + v15 crosscheck anchors 0/32/39/118 incl. the WIN bit 39), plus the 5 pre-sweep REFUTED-D10 transfers: 3 WIN7-D10 (bits 39, 72, 107), 56 REFUTED-D10, 0 capped - the row is NOT sterile; all three WIN7 roots have published, independently verified certificates (BigInt union 0/0 + exact-integer Bareiss sub-roots 50/51/41 all PASS); the fold of the 3 receipts on the head-1435 chain is deferred to the chain-reproduction session per protocol, so the canonical head stays 1435 until then; 11x11 empty board, two-stone roots {49,60} and {59,60}, S2 {59,60}, and classes 1/2/4 all remain UNKNOWN",
+ "status": "completed NOT-STERILE on 2026-11-16; v4 corrects results.refuted_d10_count from 64 to 61 (56 swept REFUTED-D10 + 5 transferred REFUTED-D10), with 3 WIN7-D10 and 0 capped; all 64 candidates are determined. The three WIN certificates remain independently verified; fold remains deferred and canonical head stays 1435.",
  "claimed_by": "n11 long-term lane session (next-target cheapest-first continuation after the cost-64e STERILE determination)",
  "s5_target": "00000000000000003800000008002000",
  "s6_child": "0000000000000080120a000000800000",
@@ -397,7 +397,7 @@
    64,
    109
   ],
-  "refuted_d10_count": 64,
+  "refuted_d10_count": 61,
   "capped_bits": [],
   "capped_count": 0,
   "candidate_nodes_excluding_pilots": 54905391,
@@ -531,9 +531,13 @@
    }
   },
   "fold": "deferred to the chain-reproduction session per protocol (same as cost-64d): the canonical head stays 1435 until the fold of these 3 receipts is run with the full chain reproduction and conflict census; projected closures include the child row itself (bit 39 root = child|1<<39 is a receipt)",
-  "k0863_consequence": "not applicable: K0863 concerns STERILE rows (no depth-10 receipt can close them); this row is NOT sterile - three receipt roots exist in the row, so the row is closable by a fold"
+  "k0863_consequence": "not applicable: K0863 concerns STERILE rows (no depth-10 receipt can close them); this row is NOT sterile - three receipt roots exist in the row, so the row is closable by a fold",
+  "refuted_d10_count_swept_v16": 56,
+  "refuted_d10_count_transferred": 5,
+  "determined_d10_count": 64,
+  "count_identity": "candidate_count = win7_d10_count + refuted_d10_count + capped_count; refuted_d10_count = swept_refuted_v16 + transferred_refuted"
  },
- "supersedes": "v1 (in-flight claim git blob fba4ebcf94e82766671305ce68382dd51c4d17df, all v1 fields preserved); v2 (git blob 48d2de0c0cac1656533a99b8b729297ad95a4307, all sweep and certificate fields preserved; v3 corrects only parent ownership metadata)",
+ "supersedes": "v3 (blob 5159e0ac0ba9591e95ee6a9ab7a01aeb9e899f6e); all v3 fields retained, only the REFUTED-D10 count semantics are corrected and split counts made explicit.",
  "protocol_anchor_s5_parent": "00000000000000403800000008000000",
  "s5_target_role": "protocol parent containing the selected S6 row; the complete direct-parent set is listed separately",
  "direct_s5_parents": [
@@ -569,5 +573,26 @@
    }
   ],
   "reason": "The v2 cheapest_open_rows_ranking cross-producted the best-open rows with both protocol parents. The selected row is in the shared protocol parent; an independent D4 subset join against all 174 open S5 parents finds exactly the two direct parents listed here. The PARENT protocol anchor is not a direct parent of this row."
- }
+ },
+ "counter_correction": {
+  "field": "results.refuted_d10_count",
+  "previous_value": 64,
+  "corrected_value": 61,
+  "previous_value_semantics": "The old value equalled candidate_count and incorrectly counted all determined candidates as REFUTED.",
+  "derivation": "59 raw sweep rows: 3 loss=true => WIN7-D10 and 56 loss=false => REFUTED-D10; plus 5 pre-sweep transferred REFUTED-D10 bits; total 64 = 3 WIN + 61 REFUTED + 0 capped.",
+  "source_main_head_before_correction": "63c5443a5919e9a7df4d68b37c13a600ce46b674",
+  "previous_claim_blob_sha": "5159e0ac0ba9591e95ee6a9ab7a01aeb9e899f6e",
+  "raw_batch_nodes_excluding_pilots": 54905391,
+  "raw_batch_rows": 59,
+  "raw_win7_d10_count": 3,
+  "raw_refuted_d10_count": 56,
+  "transferred_refuted_d10_count": 5,
+  "total_refuted_d10_count": 61,
+  "total_determined_count": 64,
+  "total_capped_count": 0,
+  "previous_supersedes_field": "v1 (in-flight claim git blob fba4ebcf94e82766671305ce68382dd51c4d17df, all v1 fields preserved); v2 (git blob 48d2de0c0cac1656533a99b8b729297ad95a4307, all sweep and certificate fields preserved; v3 corrects only parent ownership metadata)"
+ },
+ "supersedes_history": [
+  "v1 (in-flight claim git blob fba4ebcf94e82766671305ce68382dd51c4d17df, all v1 fields preserved); v2 (git blob 48d2de0c0cac1656533a99b8b729297ad95a4307, all sweep and certificate fields preserved; v3 corrects only parent ownership metadata)"
+ ]
 }
