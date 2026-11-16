@@ -1,8 +1,8 @@
 {
- "schema": "n11-class2-lane-cost66i-sweep-complete-20261116-v2",
+ "schema": "n11-class2-lane-cost66i-sweep-complete-20261116-v3",
  "title": "n11 class2-lane cost66i: fresh 66-bit depth-10 sweep of the cheapest remaining row of the primary pure class-2 target family (head-1452 census v2 selection)",
  "date": "2026-11-16",
- "status": "sweep-complete; 9 WIN7-D10 candidates [19,28,29,58,88,90,99,103,112]; certificate extraction priority pending (marginals audit); receipt fold pending",
+ "status": "sweep-complete; 9 WIN7-D10 candidates [19,28,29,58,88,90,99,103,112]; candidate-manifest marginals audit published (bit19 top marginal); bit19 WIN7 certificate extracted, independently verified (52/52 sub-roots, union 0/0 both directions, determinism re-extraction byte-identical); remaining 8 WIN certificates pending; receipt fold pending",
  "claimed_by": "n11 long-term lane session (head-1452 presweep census v2 selector)",
  "s5": "00000000000000403800000008000000",
  "s6_child": "00000000000000801226000000000000",
@@ -323,10 +323,10 @@
  "verdict_semantics": "loss=true => WIN7-within-depth-10 candidate (certificate rebuild target); loss=false && !capped => REFUTED-D10, no first-player win within depth 10 (NOT a LOSS proof of the position); capped => proves nothing either way",
  "unknown_status": "11x11 empty board: UNKNOWN. A completed sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 7-stone roots of this child. The two-stone roots {49,60} and {59,60}, S2 {59,60} and classes 1/2/4 remain UNKNOWN.",
  "coordination_note": "latest main fetched immediately before this push; no claim, raw batch or audit exists for this child on main (searched: child hex, cost66i); the parallel lane is in a bytes re-verification band and holds the pending 64h/76c folds; this claim does not touch those folds",
- "next_action": "Run the candidate-manifest marginals audit for the 9 WIN roots to rank certificate extraction; blind-extract the highest-marginal root; independently verify (BigInt cofactor, Bareiss, circle-equation) and v15-crosscheck; only then fold against the latest canonical head.",
+ "next_action": "Extract the next WIN7 roots in marginals order [103, 99, 88, 28, 29, 90, 58, 112] (blind extraction + independent verification each); the receipt fold remains blocked until the pending cost-64h and cost-76c folds land; rebase against the current canonical head after certificate verification.",
  "previous_version": {
-  "schema": "n11-class2-lane-cost66i-sweep-inflight-20261116-v1",
-  "blob_sha": "9eb3991abe1ee32d7296607990218a4958a571f0"
+  "schema": "n11-class2-lane-cost66i-sweep-complete-20261116-v2",
+  "blob_sha": "738443c0d1076115d723029edac2de3cb67c3e86"
  },
  "actual_execution": {
   "date": "2026-11-16",
@@ -428,7 +428,7 @@
   "audit_json": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost66i-raw-audit-20261116.json"
  },
  "certificate_extraction": {
-  "status": "pending",
+  "status": "bit19 extracted and verified; 8 remaining",
   "win7_d10_bits": [
    19,
    28,
@@ -440,8 +440,31 @@
    103,
    112
   ],
-  "independent_verification": "pending",
-  "note": "extraction priority requires a candidate-manifest marginals audit (which open manifest rows each WIN root closes); not yet run; no certificate has been extracted"
+  "marginals_audit": "class2-lane-cost66i-candidate-manifest-marginals-20261116.json: bit19 covers 4 candidate-manifest rows (top marginal; 3 net of pending 64h/76c fold duplicates); extraction order [19, 103, 99, 88, 28, 29, 90, 58, 112]",
+  "extracted": [
+   {
+    "bit": 19,
+    "root": "00000000000000801226000000080000",
+    "rows": 40935,
+    "extraction_nodes": 11200170,
+    "fbt_drops": 0,
+    "subroots": 52,
+    "subroots_pass": 52,
+    "union_missing": 0,
+    "union_extra": 0,
+    "terminal_stone_range": [
+     13,
+     17
+    ],
+    "loser_mobility": 52,
+    "determinism": "fresh-process re-extraction byte-identical (same md5 084bc1f4d0244ca1fc1ee769977060fd)",
+    "record_json": "class2-lane-cost66i-win7-certificates-20261116.json",
+    "certificate_dir": "class2-lane-cost66i-certificates (split part1of2/part2of2 + README-split-bit19.md; sha256 f87df551ab38f73fb34d756fc4be287de42f1538735e7daf6006deb05749b0ac)",
+    "driver": "cert_driver66i.ts (scripts/)"
+   }
+  ],
+  "independent_verification": "verify_bit7_win7_cert.ts (engine-free, Bareiss 4x4): root-check stones=7, loserMobility=52 matches independent legal_candidates.py enumeration; all 52 sub-roots PASS; consumed union equals the certificate row set exactly (0 missing / 0 extra both directions)",
+  "note": "extraction priority set by the candidate-manifest marginals audit; 8 WIN roots remain"
  },
  "receipt_fold": {
   "status": "pending",

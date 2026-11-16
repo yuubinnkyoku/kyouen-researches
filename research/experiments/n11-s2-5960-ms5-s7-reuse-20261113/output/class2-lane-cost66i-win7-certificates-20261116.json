@@ -1,0 +1,34 @@
+{
+ "schema": "n11-class2-lane-cost66i-win7-certificates-20261116-v1",
+ "date": "2026-11-16",
+ "s6_child_hex": "00000000000000801226000000000000",
+ "s5_parent_hex": "00000000000000403800000008000000",
+ "s6_s7_edge_cost": 66,
+ "certificates": [
+  {
+   "bit": 19,
+   "root": "00000000000000801226000000080000",
+   "verdict": "WIN7",
+   "depth": 10,
+   "rows": 40935,
+   "extraction_nodes": 11200170,
+   "fbt_drops": 0,
+   "fatal": null,
+   "subroots": 52,
+   "subroots_pass": 52,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_stone_range": [13, 17],
+   "loser_mobility": 52,
+   "file": "n11_s7_00000000000000801226000000080000.cert",
+   "certificate_split": "1,478,743 bytes exceeds the single-run transport limit; pushed as .cert.part1of2 (739,395 bytes) + .cert.part2of2 (739,348 bytes), recombine with cat (see README-split-bit19.md), md5 of concatenation below",
+   "md5": "084bc1f4d0244ca1fc1ee769977060fd",
+   "sha256": "f87df551ab38f73fb34d756fc4be287de42f1538735e7daf6006deb05749b0ac",
+   "determinism_rerun": "full blind re-extraction in a fresh process (node --experimental-strip-types, fresh environment): byte-identical certificate (same md5), sum 11,200,170 nodes, nRows 40,935, fbt_drops 0, 52/52 loser defenses ok, 0 capped, per-move node counts recorded in the run log",
+   "marginals_rank": "bit 19 is the top-marginal WIN7-D10 root of the cost66i sweep: it appears in 4 candidate-manifest rows (3 net of pending cost-64h/76c fold duplicates), per class2-lane-cost66i-candidate-manifest-marginals-20261116.json; extraction order [19, 103, 99, 88, 28, 29, 90, 58, 112]"
+  }
+ ],
+ "method": "blind extraction with class4_child1_cert_extractor_exact.ts (FBS=1<<20, probe96, empty kill table via cert_driver66i.ts import; rows deduplicated and sorted before write), fbt_drops=0; independent verification with verify_bit7_win7_cert.ts (Bareiss 4x4 cofactor, engine-free): root-check stone count 7 and loser mobility 52 equal the independent legal_candidates.py enumeration (52 legal), all 52 sub-roots PASS, terminal stone range [13,17] on every sub-root, consumed-winner-state union vs certificate row set 0 missing / 0 extra in both directions; extraction determinism: fresh-process re-extraction byte-identical",
+ "driver_note": "cert_driver66i.ts is archived in scripts/ and imports the extractor as './class4_child1_cert_extractor_exact.ts' (same directory); unlike the archived cert_driver67.ts, which was invoked from the experiment root and therefore imports './scripts/...', this driver resolves correctly as placed",
+ "note": "first cost66i WIN7 certificate; the remaining 8 WIN7-D10 roots [28, 29, 58, 88, 90, 99, 103, 112] await extraction in marginals order; the root is new (not present in any published certificate directory)"
+}
