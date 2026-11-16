@@ -57,3 +57,14 @@ head-1452 presweep censusのD4正準形と照合した。
 次はbits 61/99/113をblind extractionし、各証明書を独立検証してから、fold時点の最新canonical headへrebaseする。head 1472はcost64h preregの予測値であり、現時点の確定headとして扱わない。
 
 **標準11×11空盤、二石root `{49,60}` / `{59,60}`、S2 `{59,60}`、class 1/2/4 はすべてUNKNOWN。** REFUTED-D10、STERILE、solved headはいずれも空盤の勝敗を決めない。
+
+
+## 最終固定・実行境界
+
+- immutable claim snapshot: `c7c52094c7b1539a7e3111395c417dbda87c2133`（blob `8932f2d5e100325549a5f251a1d883558cae0708`）
+- 最終監査器: `11e3d4cc1badb7ecf8db82ff7e373d6663882b3e` の後、winner-canon assertionを明確化した `e6928642cbdc43d97894e36d481b5bfc028b14a8`
+- 最終監査JSON: `0be02d250c07d4c0933dab929382860fc4cbcb7a`（18/18項目をこのrunの独立再集計でPASS）
+- current claim更新: `08fe56eb29ea05ea903f66ffe4dc34941bb24fc5`
+- このログの最終更新: 本追記を含むコミットで確定。
+
+監査JSONの18項目は、GitHubから取得した実ファイルをこのrunで再集計した結果。Python監査器は再現用に出版したが、このrunではリポジトリを実行できるPython環境を確保できず、Python版そのものの実行は未確認。ローカルの構文検査は旧版に対してのみ実施済みなので、最終版の実行成功とは扱わない。GitHub commit statusは空で、CI成功も未確認。
