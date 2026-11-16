@@ -1,0 +1,642 @@
+{
+  "schema": "n11-class2-lane-cost65o-post-cost65n-overlap-audit-20261116-v1",
+  "date": "2026-11-16",
+  "source_blobs": {
+    "main_at_audit": "23480542c21a08bdb4e1756a0226a90586c94f73",
+    "cost65n_completed_claim_v2": "257e7093582f9080a551ec4ef42e1bdccee3c878",
+    "cost65o_claim_v1": "18c49eb010e0f464f5b7874c5ffbfb0ae34b67bb",
+    "cost65o_claim_verification_8_of_8": "cfff0b8087a54f3b4d327d73737f220372f34248",
+    "cost65n_fold_preregistration": "da2b2292a3a3436f73dc04bae266de2c01a6ef21",
+    "K0863_position_level_lemma": "6b79dbcb2db0b8c34c108c1c227be139a3f1493b"
+  },
+  "method": "Independent exact D4 canonicalization of every legal 7-stone root child|1<<bit in the cost65o row, compared with the two WIN7-D10 receipt-root canons from cost65n. By K0863's position-level lemma, a receipt covers an S6 row iff its canonical 7-stone root is one of that row's own legal candidate-root canons.",
+  "cost65o_input": {
+    "child_hex": "00000000000000a09002000080000000",
+    "legal_candidate_count": 65,
+    "legal_candidate_bits": [
+      0,
+      1,
+      2,
+      4,
+      6,
+      7,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      18,
+      20,
+      21,
+      22,
+      23,
+      25,
+      28,
+      32,
+      33,
+      34,
+      41,
+      43,
+      44,
+      45,
+      48,
+      54,
+      56,
+      59,
+      62,
+      64,
+      65,
+      66,
+      67,
+      68,
+      75,
+      77,
+      78,
+      80,
+      81,
+      85,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      96,
+      98,
+      99,
+      101,
+      102,
+      105,
+      106,
+      109,
+      110,
+      112,
+      113,
+      114,
+      116,
+      117,
+      118,
+      119,
+      120
+    ],
+    "open_candidate_count": 59,
+    "open_candidate_bits": [
+      0,
+      1,
+      2,
+      4,
+      6,
+      7,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      18,
+      20,
+      21,
+      22,
+      23,
+      25,
+      28,
+      32,
+      33,
+      34,
+      43,
+      44,
+      45,
+      54,
+      59,
+      62,
+      64,
+      66,
+      67,
+      68,
+      75,
+      77,
+      78,
+      81,
+      85,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      96,
+      98,
+      101,
+      102,
+      105,
+      106,
+      109,
+      110,
+      112,
+      113,
+      114,
+      116,
+      117,
+      118,
+      119,
+      120
+    ],
+    "transferred_refuted_d10_bits": [
+      41,
+      48,
+      56,
+      65,
+      80,
+      99
+    ],
+    "transferred_root_canons": {
+      "41": "00000000000000a09002020080000000",
+      "48": "00000000000000a09003000080000000",
+      "56": "00000000000000a09102000080000000",
+      "65": "00000000000000a29002000080000000",
+      "80": "00000000000100a09002000080000000",
+      "99": "0000000002000080120a000000200000"
+    },
+    "d4_canonical_candidate_count": 65,
+    "candidate_roots": [
+      {
+        "bit": 0,
+        "root_hex": "00000000000000a09002000080000001",
+        "d4_canonical_hex": "00000000000000a09002000080000001",
+        "status": "open"
+      },
+      {
+        "bit": 1,
+        "root_hex": "00000000000000a09002000080000002",
+        "d4_canonical_hex": "00000000000000a09002000080000002",
+        "status": "open"
+      },
+      {
+        "bit": 2,
+        "root_hex": "00000000000000a09002000080000004",
+        "d4_canonical_hex": "00000000000000a09002000080000004",
+        "status": "open"
+      },
+      {
+        "bit": 4,
+        "root_hex": "00000000000000a09002000080000010",
+        "d4_canonical_hex": "00000000000000a09002000080000010",
+        "status": "open"
+      },
+      {
+        "bit": 6,
+        "root_hex": "00000000000000a09002000080000040",
+        "d4_canonical_hex": "00000000000000a09002000080000040",
+        "status": "open"
+      },
+      {
+        "bit": 7,
+        "root_hex": "00000000000000a09002000080000080",
+        "d4_canonical_hex": "00000000000000a09002000080000080",
+        "status": "open"
+      },
+      {
+        "bit": 10,
+        "root_hex": "00000000000000a09002000080000400",
+        "d4_canonical_hex": "00000000000000a09002000080000400",
+        "status": "open"
+      },
+      {
+        "bit": 11,
+        "root_hex": "00000000000000a09002000080000800",
+        "d4_canonical_hex": "00000000000000a09002000080000800",
+        "status": "open"
+      },
+      {
+        "bit": 12,
+        "root_hex": "00000000000000a09002000080001000",
+        "d4_canonical_hex": "00000000000000a09002000080001000",
+        "status": "open"
+      },
+      {
+        "bit": 13,
+        "root_hex": "00000000000000a09002000080002000",
+        "d4_canonical_hex": "00000000000000a09002000080002000",
+        "status": "open"
+      },
+      {
+        "bit": 14,
+        "root_hex": "00000000000000a09002000080004000",
+        "d4_canonical_hex": "00000000000000a09002000080004000",
+        "status": "open"
+      },
+      {
+        "bit": 15,
+        "root_hex": "00000000000000a09002000080008000",
+        "d4_canonical_hex": "00000000000000a09002000080008000",
+        "status": "open"
+      },
+      {
+        "bit": 18,
+        "root_hex": "00000000000000a09002000080040000",
+        "d4_canonical_hex": "00000000000000a09002000080040000",
+        "status": "open"
+      },
+      {
+        "bit": 20,
+        "root_hex": "00000000000000a09002000080100000",
+        "d4_canonical_hex": "00000000000000a09002000080100000",
+        "status": "open"
+      },
+      {
+        "bit": 21,
+        "root_hex": "00000000000000a09002000080200000",
+        "d4_canonical_hex": "00000000000000a09002000080200000",
+        "status": "open"
+      },
+      {
+        "bit": 22,
+        "root_hex": "00000000000000a09002000080400000",
+        "d4_canonical_hex": "00000000000000a09002000080400000",
+        "status": "open"
+      },
+      {
+        "bit": 23,
+        "root_hex": "00000000000000a09002000080800000",
+        "d4_canonical_hex": "00000000000000a09002000080800000",
+        "status": "open"
+      },
+      {
+        "bit": 25,
+        "root_hex": "00000000000000a09002000082000000",
+        "d4_canonical_hex": "00000000000000a09002000082000000",
+        "status": "open"
+      },
+      {
+        "bit": 28,
+        "root_hex": "00000000000000a09002000090000000",
+        "d4_canonical_hex": "00000000000000a09002000090000000",
+        "status": "open"
+      },
+      {
+        "bit": 32,
+        "root_hex": "00000000000000a09002000180000000",
+        "d4_canonical_hex": "00000000000000a09002000180000000",
+        "status": "open"
+      },
+      {
+        "bit": 33,
+        "root_hex": "00000000000000a09002000280000000",
+        "d4_canonical_hex": "00000000000000a09002000280000000",
+        "status": "open"
+      },
+      {
+        "bit": 34,
+        "root_hex": "00000000000000a09002000480000000",
+        "d4_canonical_hex": "00000000000000a09002000480000000",
+        "status": "open"
+      },
+      {
+        "bit": 41,
+        "root_hex": "00000000000000a09002020080000000",
+        "d4_canonical_hex": "00000000000000a09002020080000000",
+        "status": "transferred-refuted-d10"
+      },
+      {
+        "bit": 43,
+        "root_hex": "00000000000000a09002080080000000",
+        "d4_canonical_hex": "00000000000000a09002080080000000",
+        "status": "open"
+      },
+      {
+        "bit": 44,
+        "root_hex": "00000000000000a09002100080000000",
+        "d4_canonical_hex": "00000000000000a09002100080000000",
+        "status": "open"
+      },
+      {
+        "bit": 45,
+        "root_hex": "00000000000000a09002200080000000",
+        "d4_canonical_hex": "00000000000000a09002200080000000",
+        "status": "open"
+      },
+      {
+        "bit": 48,
+        "root_hex": "00000000000000a09003000080000000",
+        "d4_canonical_hex": "00000000000000a09003000080000000",
+        "status": "transferred-refuted-d10"
+      },
+      {
+        "bit": 54,
+        "root_hex": "00000000000000a09042000080000000",
+        "d4_canonical_hex": "00000000000000a09042000080000000",
+        "status": "open"
+      },
+      {
+        "bit": 56,
+        "root_hex": "00000000000000a09102000080000000",
+        "d4_canonical_hex": "00000000000000a09102000080000000",
+        "status": "transferred-refuted-d10"
+      },
+      {
+        "bit": 59,
+        "root_hex": "00000000000000a09802000080000000",
+        "d4_canonical_hex": "00000000000000a09802000080000000",
+        "status": "open"
+      },
+      {
+        "bit": 62,
+        "root_hex": "00000000000000a0d002000080000000",
+        "d4_canonical_hex": "00000000000000a0d002000080000000",
+        "status": "open"
+      },
+      {
+        "bit": 64,
+        "root_hex": "00000000000000a19002000080000000",
+        "d4_canonical_hex": "00000000000000a19002000080000000",
+        "status": "open"
+      },
+      {
+        "bit": 65,
+        "root_hex": "00000000000000a29002000080000000",
+        "d4_canonical_hex": "00000000000000a29002000080000000",
+        "status": "transferred-refuted-d10"
+      },
+      {
+        "bit": 66,
+        "root_hex": "00000000000000a49002000080000000",
+        "d4_canonical_hex": "00000000000000a49002000080000000",
+        "status": "open"
+      },
+      {
+        "bit": 67,
+        "root_hex": "00000000000000a89002000080000000",
+        "d4_canonical_hex": "00000000000000a89002000080000000",
+        "status": "open"
+      },
+      {
+        "bit": 68,
+        "root_hex": "00000000000000b09002000080000000",
+        "d4_canonical_hex": "00000000000000b09002000080000000",
+        "status": "open"
+      },
+      {
+        "bit": 75,
+        "root_hex": "00000000000008a09002000080000000",
+        "d4_canonical_hex": "00000000000002881202000000800000",
+        "status": "open"
+      },
+      {
+        "bit": 77,
+        "root_hex": "00000000000020a09002000080000000",
+        "d4_canonical_hex": "00000000000020a09002000080000000",
+        "status": "open"
+      },
+      {
+        "bit": 78,
+        "root_hex": "00000000000040a09002000080000000",
+        "d4_canonical_hex": "00000000000040a09002000080000000",
+        "status": "open"
+      },
+      {
+        "bit": 80,
+        "root_hex": "00000000000100a09002000080000000",
+        "d4_canonical_hex": "00000000000100a09002000080000000",
+        "status": "transferred-refuted-d10"
+      },
+      {
+        "bit": 81,
+        "root_hex": "00000000000200a09002000080000000",
+        "d4_canonical_hex": "00000000000200203800000008080000",
+        "status": "open"
+      },
+      {
+        "bit": 85,
+        "root_hex": "00000000002000a09002000080000000",
+        "d4_canonical_hex": "00000000000082801202000000800000",
+        "status": "open"
+      },
+      {
+        "bit": 87,
+        "root_hex": "00000000008000a09002000080000000",
+        "d4_canonical_hex": "00000000000022801202000000800000",
+        "status": "open"
+      },
+      {
+        "bit": 88,
+        "root_hex": "00000000010000a09002000080000000",
+        "d4_canonical_hex": "00000000010000a09002000080000000",
+        "status": "open"
+      },
+      {
+        "bit": 89,
+        "root_hex": "00000000020000a09002000080000000",
+        "d4_canonical_hex": "0000000002000080120a000080000000",
+        "status": "open"
+      },
+      {
+        "bit": 90,
+        "root_hex": "00000000040000a09002000080000000",
+        "d4_canonical_hex": "0000000002000080120a000040000000",
+        "status": "open"
+      },
+      {
+        "bit": 91,
+        "root_hex": "00000000080000a09002000080000000",
+        "d4_canonical_hex": "00000000000280003800000008080000",
+        "status": "open"
+      },
+      {
+        "bit": 92,
+        "root_hex": "00000000100000a09002000080000000",
+        "d4_canonical_hex": "00000000000200103800000008080000",
+        "status": "open"
+      },
+      {
+        "bit": 96,
+        "root_hex": "00000001000000a09002000080000000",
+        "d4_canonical_hex": "00000000000200003800000009080000",
+        "status": "open"
+      },
+      {
+        "bit": 98,
+        "root_hex": "00000004000000a09002000080000000",
+        "d4_canonical_hex": "00000000000200003800000008080004",
+        "status": "open"
+      },
+      {
+        "bit": 99,
+        "root_hex": "00000008000000a09002000080000000",
+        "d4_canonical_hex": "0000000002000080120a000000200000",
+        "status": "transferred-refuted-d10"
+      },
+      {
+        "bit": 101,
+        "root_hex": "00000020000000a09002000080000000",
+        "d4_canonical_hex": "0000000002000080120a000000080000",
+        "status": "open"
+      },
+      {
+        "bit": 102,
+        "root_hex": "00000040000000a09002000080000000",
+        "d4_canonical_hex": "00000000000240003800000008080000",
+        "status": "open"
+      },
+      {
+        "bit": 105,
+        "root_hex": "00000200000000a09002000080000000",
+        "d4_canonical_hex": "00000000000200003800200008080000",
+        "status": "open"
+      },
+      {
+        "bit": 106,
+        "root_hex": "00000400000000a09002000080000000",
+        "d4_canonical_hex": "00000000000200003800000408080000",
+        "status": "open"
+      },
+      {
+        "bit": 109,
+        "root_hex": "00002000000000a09002000080000000",
+        "d4_canonical_hex": "00000000000200003800000008080002",
+        "status": "open"
+      },
+      {
+        "bit": 110,
+        "root_hex": "00004000000000a09002000080000000",
+        "d4_canonical_hex": "0000000002000080120a000000000400",
+        "status": "open"
+      },
+      {
+        "bit": 112,
+        "root_hex": "00010000000000a09002000080000000",
+        "d4_canonical_hex": "00000000010200003800000008080000",
+        "status": "open"
+      },
+      {
+        "bit": 113,
+        "root_hex": "00020000000000a09002000080000000",
+        "d4_canonical_hex": "00000000000220003800000008080000",
+        "status": "open"
+      },
+      {
+        "bit": 114,
+        "root_hex": "00040000000000a09002000080000000",
+        "d4_canonical_hex": "00000000000200043800000008080000",
+        "status": "open"
+      },
+      {
+        "bit": 116,
+        "root_hex": "00100000000000a09002000080000000",
+        "d4_canonical_hex": "00000000000200003800100008080000",
+        "status": "open"
+      },
+      {
+        "bit": 117,
+        "root_hex": "00200000000000a09002000080000000",
+        "d4_canonical_hex": "00000000000200003800000208080000",
+        "status": "open"
+      },
+      {
+        "bit": 118,
+        "root_hex": "00400000000000a09002000080000000",
+        "d4_canonical_hex": "00000000000200003800000008480000",
+        "status": "open"
+      },
+      {
+        "bit": 119,
+        "root_hex": "00800000000000a09002000080000000",
+        "d4_canonical_hex": "00000000000200003800000008080800",
+        "status": "open"
+      },
+      {
+        "bit": 120,
+        "root_hex": "01000000000000a09002000080000000",
+        "d4_canonical_hex": "00000000000200003800000008080001",
+        "status": "open"
+      }
+    ]
+  },
+  "cost65n_receipts": [
+    {
+      "bit": 90,
+      "root_hex": "00000000040000801202010000800000",
+      "d4_canonical_hex": "00000000000100003800000048002000",
+      "covers_hexes": [
+        "00000000000000003800000009080000",
+        "00000000000000801202010000800000",
+        "00000000000100001800000048002000",
+        "00000000000100002800000048002000",
+        "00000000000100003000000048002000",
+        "00000000000100003800000040002000",
+        "00000000000100003800000048000000"
+      ]
+    },
+    {
+      "bit": 117,
+      "root_hex": "00200000000000801202010000800000",
+      "d4_canonical_hex": "00000000001020003800000008080000",
+      "covers_hexes": [
+        "00000000000000801202010000800000",
+        "00000000000020003800000008080000",
+        "00000000000100809002000000000008",
+        "00000000001020001800000008080000",
+        "00000000001020002800000008080000",
+        "00000000001020003000000008080000",
+        "00000000001020003800000000080000"
+      ]
+    }
+  ],
+  "covered_s6_rows": {
+    "raw_reference_count": 14,
+    "unique_d4_orbits": 13,
+    "cost65o_child_canonical_hex": "00000000000000a09002000080000000",
+    "cost65o_child_is_covered": false
+  },
+  "overlap": {
+    "all_legal_candidate_bits": [],
+    "open_candidate_bits": [],
+    "transferred_refuted_conflict_bits": [],
+    "new_cost65o_transfers_from_cost65n": 0,
+    "open_candidates_remaining_against_these_two_receipts": 59
+  },
+  "checks": [
+    {
+      "check": "cost65n receipt root anchors",
+      "pass": true,
+      "detail": "PASS"
+    },
+    {
+      "check": "cost65o legal/open/transferred partition",
+      "pass": true,
+      "detail": "PASS"
+    },
+    {
+      "check": "transferred root canons",
+      "pass": true,
+      "detail": "PASS"
+    },
+    {
+      "check": "65 candidate D4 orbits distinct",
+      "pass": true,
+      "detail": "PASS"
+    },
+    {
+      "check": "no receipt root overlaps any legal candidate",
+      "pass": true,
+      "detail": "PASS"
+    },
+    {
+      "check": "no receipt root conflicts with transferred REFUTED-D10",
+      "pass": true,
+      "detail": "PASS"
+    },
+    {
+      "check": "no receipt root transfers an open candidate",
+      "pass": true,
+      "detail": "PASS"
+    },
+    {
+      "check": "cost65o child row not in preregistered covered rows",
+      "pass": true,
+      "detail": "PASS"
+    }
+  ],
+  "all_pass": true,
+  "interpretation_guard": "Structural receipt-overlap audit only. It neither runs the engine nor changes any verdict or manifest head. It proves only that the two cost65n WIN7-D10 receipt roots do not cover the cost65o row or any of its 65 candidate roots. Other receipts published later must still be checked. REFUTED-D10 is not a LOSS proof; 11x11 remains UNKNOWN."
+}
