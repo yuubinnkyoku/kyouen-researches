@@ -313,10 +313,10 @@ def main():
                       "(published this session), empty kill table (blind "
                       "extraction), single chunk part1of1 per bit",
             "chunking": "rows sorted-unique (exact byte order); header and "
-                        "root lines prepended; bits 112/118 split at a line "
-                        "boundary into part1of2/part2of2 with a receipt "
-                        "(whole exceeds the 1,200,000-byte publication "
-                        "split threshold)",
+                        "root lines prepended; all six whole certs exceed "
+                        "the 1,200,000-byte publication split threshold and "
+                        "are split at a line boundary into part1of2/part2of2 "
+                        "with a receipt",
         },
         "certificates": certificates,
         "totals": totals,

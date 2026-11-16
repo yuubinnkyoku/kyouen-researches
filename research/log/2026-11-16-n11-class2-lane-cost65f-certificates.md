@@ -24,7 +24,7 @@
 
 ### 3. manifest
 
-`output/class2-lane-cost65f-win6-certificates-20261116.json`（schema `n11-class2-lane-cost65f-win6-certificates-20261116-v1`・blob `5666d730`・14,234 bytes）。totals: **6 certs・326,794 rows・34,775,210 extraction nodes・332 sub-roots・winner 450,022・loser 132,304・terminals 116,447・11,807,226 bytes**。target.noteは「6 bitsはfold v2のmim=1 receipt（各1行閉鎖・bits 20/21はcost-64行）。65j 4枚（`d4981d7e`）と合わせ9行すべてcertified。zero-mim 7 bitsはraw記録ベースのまま」を明記。
+`output/class2-lane-cost65f-win6-certificates-20261116.json`（schema `n11-class2-lane-cost65f-win6-certificates-20261116-v1`・blob `5028331d67288ad59fa575ed323d06ba05ecdabd`・14240 bytes（chunking文言修正後のrev2・初版はblob `5666d730`））。totals: **6 certs・326,794 rows・34,775,210 extraction nodes・332 sub-roots・winner 450,022・loser 132,304・terminals 116,447・11,807,226 bytes**。target.noteは「6 bitsはfold v2のmim=1 receipt（各1行閉鎖・bits 20/21はcost-64行）。65j 4枚（`d4981d7e`）と合わせ9行すべてcertified。zero-mim 7 bitsはraw記録ベースのまま」を明記。
 
 **出版順序**: 最初にbits 20/21の2枚を`class2-lane-cost65f-win2-certificates-20261116.json`（blob `4ad01f58`・commit `0f551304`）として出版し、その後6 bits版に拡張した。win2 manifestはwin6に置き換わる（git historyに残る・本logが相互参照）。bits 20/21のparts/verify 8ファイルは不変（同一blobで再出版不要・win6 manifestに同一pinが入る）。
 
