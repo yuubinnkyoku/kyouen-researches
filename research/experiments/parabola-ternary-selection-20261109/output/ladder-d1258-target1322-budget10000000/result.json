@@ -1,0 +1,28 @@
+{
+  "p": 2647,
+  "d": 1258,
+  "target": 1322,
+  "empty_bound": 3,
+  "conflict_budget": 10000000,
+  "variables": 7926,
+  "clauses": 68404,
+  "base_clauses": 53886,
+  "base_cnf_sha256": "eceeccaf9d78f9f7a9306e727d553dc6a30f3861d1b6e810e14d1b01ad05ad1e",
+  "base_cnf_source": "regenerated",
+  "edge_cache_gz_sha256": "bb1c0201192863b560a8687b570cdbab0f0a7d51c40d71fcd4a03c0f9ccbdae0",
+  "edge_cache_sha256": "4e17fe105f191f781192466d0775a59d3c341b16b267ebe372ba279911f67a72",
+  "encoded_cnf_sha256": "c51d5cfbc7b0bd55d1a96f9f8822b9ef6453d03b43490f6d8d24ae8f8e2802c3",
+  "warm_input_sha256": "c421c9d2948f0f865bfcc4f0d80a3294d412e6ccaaad0f70888a168793b1f52b",
+  "worker_source_sha256": "8875004ef41e4f8570e59efaad842081d7bef33f248cd5ec08f98191de9bfb46",
+  "python_sat": "1.9.dev21",
+  "solver": "Cadical195",
+  "scope": "0 and complete pair d fixed; all other pairs low/high/empty. Solver UNSAT is unaudited and restricted to this d.",
+  "status": "SOLVER_UNSAT",
+  "solve_seconds": 887.4729327630012,
+  "statistics": {
+    "restarts": 113312,
+    "conflicts": 4176372,
+    "decisions": 5670166,
+    "propagations": 1704897016
+  }
+}
