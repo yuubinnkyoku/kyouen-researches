@@ -96,7 +96,9 @@ def roots_for(child_hex: str, bits: list[int]) -> dict[int, int]:
 
 
 def main() -> None:
-    src = {key: read_pinned(key)[0] for key in FILES}
+    src_pairs = {key: read_pinned(key) for key in FILES}
+    src = {key: value[0] for key, value in src_pairs.items()}
+    source_pins = {key: value[1] for key, value in src_pairs.items()}
     pre = src["prereg"]
     ver = src["verifier"]
     v17 = src["v17"]
@@ -262,7 +264,7 @@ def main() -> None:
             "cost76c_win_root_overlaps": len(overlap76),
             "cost66i_cross_source_verdict_conflicts": conflict["conflicts"],
         },
-        "source_blob_pins": {k: v[1] for k, v in src.items()},
+        "source_blob_pins": source_pins,
         "certificate_verification": ver["summary"],
         "v17_full_row_recheck": v17["result"],
         "cross_lane": {
@@ -270,7 +272,7 @@ def main() -> None:
             "cost66i_certified_bits": [
                 e["bit"] for e in claim66["certificate_extraction"]["extracted"]
             ],
-            "cost66i_remaining_certificate_bits": [29, 90, 58, 112],
+            "cost66i_remaining_certificate_bits": sorted(set(claim66["actual_execution"]["win7_d10_bits"]) - {e["bit"] for e in claim66["certificate_extraction"]["extracted"]}),
             "cost66i_conflict_scan": conflict,
             "cost76c_win_bits": claim76["actual_execution"]["win7_d10_bits"],
             "cost76c_bit113_refuted": claim76["actual_execution"]["refuted_bit113"],
