@@ -1,0 +1,425 @@
+{
+ "schema": "n11-class4-lane-cost87-raw-sweep-audit-20261116-v1",
+ "date": "2026-11-16",
+ "independent_method": "Python standard library; exact Bareiss integer determinants; D4 canonicalization and legal-candidate enumeration helpers reused verbatim from the published cost-70d/70e/84 audit scripts (same session series, published on main); raw-record parsing, aggregate re-derivation, batch-bit cross-check, determinism/v15 crosschecks, one-stone-deletion re-derivation, head-1407 CSV cross-checks and the 86d duplicate-claim verification written fresh for cost-87; no repository engine/solver/cache, no floating point",
+ "target": {
+  "s5_hex": "00000000020000003800000080000000",
+  "s6_child_hex": "00000000020000003800000080000004",
+  "edge_cost": 87,
+  "legal_candidate_count": 87,
+  "demand": {
+   "c1": 0,
+   "c2": 0,
+   "c4": 3
+  }
+ },
+ "source_claim": {
+  "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class4-lane-cost87-inflight-20261114.json",
+  "status": "completed",
+  "chain_head_at_sweep": "1407/174/6441/509300/4711/373023 (class-frontier-cost75e-receipts-recompute-20261116.json, git blob sha 5cd93de7ee8943681549b8f97918f6112548b373, commit dd623408)"
+ },
+ "geometry": {
+  "child_stones": 6,
+  "child_stone_bits": [
+   2,
+   31,
+   59,
+   60,
+   61,
+   89
+  ],
+  "child_safe": true,
+  "independent_legal_candidate_count": 87,
+  "candidate_bits_exact_match": true,
+  "lift_note": "one-stone deletions re-derived independently: stone 2 deletion reproduces the best class-4 blocker-candidate S5 00000000020000003800000080000000 bit-exact (18 rows / 1460 at head 1407), stone 31 deletion D4-canonicalizes to the open class-4 S5 00000000000000801002000000480000 (89 rows / 7577 at head 1407) and stone 89 deletion to the open class-4 S5 00000000000000003800000000800100 (90 rows / 7775 at head 1407); the remaining three deletions (stones 59/60/61) are closed rows absent from the head-1407 ranking CSV; per-class demand c1=0,c2=0,c4=3 matches the published head-1407 top-candidates CSV row"
+ },
+ "batches": [
+  {
+   "batch": 1,
+   "file": "class4-lane-cost87-raw-batch1-20261116.jsonl",
+   "candidate_bits": [
+    0,
+    3,
+    4,
+    5,
+    6,
+    10,
+    11,
+    12
+   ],
+   "pilot_lines": 8,
+   "nodes": 26923829
+  },
+  {
+   "batch": 2,
+   "file": "class4-lane-cost87-raw-batch2-20261116.jsonl",
+   "candidate_bits": [
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    21,
+    25
+   ],
+   "pilot_lines": 8,
+   "nodes": 16918617
+  },
+  {
+   "batch": 3,
+   "file": "class4-lane-cost87-raw-batch3-20261116.jsonl",
+   "candidate_bits": [
+    26,
+    27,
+    28,
+    29,
+    30,
+    32,
+    33,
+    34
+   ],
+   "pilot_lines": 8,
+   "nodes": 11689689
+  },
+  {
+   "batch": 4,
+   "file": "class4-lane-cost87-raw-batch4-20261116.jsonl",
+   "candidate_bits": [
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42
+   ],
+   "pilot_lines": 8,
+   "nodes": 11577583
+  },
+  {
+   "batch": 5,
+   "file": "class4-lane-cost87-raw-batch5-20261116.jsonl",
+   "candidate_bits": [
+    43,
+    44,
+    45,
+    46,
+    48,
+    49,
+    50,
+    51
+   ],
+   "pilot_lines": 8,
+   "nodes": 5406131
+  },
+  {
+   "batch": 6,
+   "file": "class4-lane-cost87-raw-batch6-20261116.jsonl",
+   "candidate_bits": [
+    53,
+    54,
+    66,
+    67,
+    69,
+    70,
+    71,
+    72
+   ],
+   "pilot_lines": 8,
+   "nodes": 9381971
+  },
+  {
+   "batch": 7,
+   "file": "class4-lane-cost87-raw-batch7-20261116.jsonl",
+   "candidate_bits": [
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81
+   ],
+   "pilot_lines": 8,
+   "nodes": 7808713
+  },
+  {
+   "batch": 8,
+   "file": "class4-lane-cost87-raw-batch8-20261116.jsonl",
+   "candidate_bits": [
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    90
+   ],
+   "pilot_lines": 8,
+   "nodes": 16961156
+  },
+  {
+   "batch": 9,
+   "file": "class4-lane-cost87-raw-batch9-20261116.jsonl",
+   "candidate_bits": [
+    91,
+    92,
+    93,
+    94,
+    95,
+    99,
+    101,
+    102
+   ],
+   "pilot_lines": 8,
+   "nodes": 7161303
+  },
+  {
+   "batch": 10,
+   "file": "class4-lane-cost87-raw-batch10-20261116.jsonl",
+   "candidate_bits": [
+    103,
+    104,
+    105,
+    106,
+    108,
+    109,
+    110,
+    112
+   ],
+   "pilot_lines": 8,
+   "nodes": 16236867
+  },
+  {
+   "batch": 11,
+   "file": "class4-lane-cost87-raw-batch11-20261116.jsonl",
+   "candidate_bits": [
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    120
+   ],
+   "pilot_lines": 7,
+   "nodes": 12549088
+  }
+ ],
+ "raw_file_md5_pins": [
+  {
+   "file": "class4-lane-cost87-raw-batch1-20261116.jsonl",
+   "md5": "5f3a94e87a650328223ab3ca62e7587d"
+  },
+  {
+   "file": "class4-lane-cost87-raw-batch2-20261116.jsonl",
+   "md5": "6e13ae500cd567e215212623b113a024"
+  },
+  {
+   "file": "class4-lane-cost87-raw-batch3-20261116.jsonl",
+   "md5": "e26954e16eae8500169856671e2e34ac"
+  },
+  {
+   "file": "class4-lane-cost87-raw-batch4-20261116.jsonl",
+   "md5": "73e158287be7541263fa4513a0cecea4"
+  },
+  {
+   "file": "class4-lane-cost87-raw-batch5-20261116.jsonl",
+   "md5": "0dd68c90c41b91e290fe9ea8542b0189"
+  },
+  {
+   "file": "class4-lane-cost87-raw-batch6-20261116.jsonl",
+   "md5": "3cf8b1c62bcee7fb7940ccbaa8558b3e"
+  },
+  {
+   "file": "class4-lane-cost87-raw-batch7-20261116.jsonl",
+   "md5": "6de31a1266ce282070ff3af415943994"
+  },
+  {
+   "file": "class4-lane-cost87-raw-batch8-20261116.jsonl",
+   "md5": "de0a9f131d1dde0c0a351ab79801ed4d"
+  },
+  {
+   "file": "class4-lane-cost87-raw-batch9-20261116.jsonl",
+   "md5": "e9200c422c949279d47fdb1c432caa4a"
+  },
+  {
+   "file": "class4-lane-cost87-raw-batch10-20261116.jsonl",
+   "md5": "bc130c6af0889c9f1132d8e16fb2e83b"
+  },
+  {
+   "file": "class4-lane-cost87-raw-batch11-20261116.jsonl",
+   "md5": "983613e089fbfaa086b7292a54e24cd1"
+  },
+  {
+   "file": "class4-lane-cost87-v16-determinism-rerun-20261116.jsonl",
+   "md5": "92aa1734406cc10634f810a529679d27"
+  },
+  {
+   "file": "class4-lane-cost87-v15-crosscheck-20261116.jsonl",
+   "md5": "b3353229a00ebed74bf0a69887b399e2"
+  }
+ ],
+ "aggregate": {
+  "candidates": 87,
+  "win7_d10_bits": [],
+  "refuted_d10": 87,
+  "refuted_d10_bits": [
+   0,
+   3,
+   4,
+   5,
+   6,
+   10,
+   11,
+   12,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   21,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46,
+   48,
+   49,
+   50,
+   51,
+   53,
+   54,
+   66,
+   67,
+   69,
+   70,
+   71,
+   72,
+   74,
+   75,
+   76,
+   77,
+   78,
+   79,
+   80,
+   81,
+   82,
+   83,
+   84,
+   85,
+   86,
+   87,
+   88,
+   90,
+   91,
+   92,
+   93,
+   94,
+   95,
+   99,
+   101,
+   102,
+   103,
+   104,
+   105,
+   106,
+   108,
+   109,
+   110,
+   112,
+   113,
+   114,
+   115,
+   116,
+   117,
+   118,
+   120
+  ],
+  "capped": 0,
+  "capped_bits": [],
+  "candidate_nodes": 142614947,
+  "pilots": 87,
+  "andclose_true_all": true
+ },
+ "crosschecks": {
+  "v16_determinism_rerun": {
+   "file": "class4-lane-cost87-v16-determinism-rerun-20261116.jsonl",
+   "batch_rerun": 5,
+   "identical_ignoring_ms": true
+  },
+  "v15_cross_engine": {
+   "file": "class4-lane-cost87-v15-crosscheck-20261116.jsonl",
+   "win_bits_agree": true,
+   "refuted_anchors": [
+    6,
+    28,
+    110
+   ],
+   "anchor_nodes": {
+    "6": 14292036,
+    "28": 11734720,
+    "110": 5004960
+   },
+   "pilots_5949": 3
+  }
+ },
+ "checks": {
+  "all_bits_exactly_once": true,
+  "batch_bits_match_claim_engine_plan": true,
+  "all_terminal_ranges_within_depth10_bounds": true,
+  "distinct_terminal_ranges": [
+   [
+    13,
+    17
+   ]
+  ],
+  "andclose_true_on_every_candidate": true,
+  "pilot_3402_per_candidate_fresh_process": true,
+  "determinism_rerun_node_exact": true,
+  "v15_cross_engine_agreement": true,
+  "independent_enumeration_matches_claim": true,
+  "one_stone_deletion_d4_canonicalization_verified": true,
+  "parent_rows_match_head1407_ranking_csv": true,
+  "demand_matches_head1407_top_candidates_csv": true,
+  "blocker_s5_listed_rows_18": true
+ },
+ "duplicate_claim_retirement_check": {
+  "retired_claim": "class4-lane-cost86d-inflight-20261115.json",
+  "status": "superseded_duplicate",
+  "prior_sweep": "class4-lane-cost86d-sweep-20261114.json (86/86 REFUTED-D10, 315,578,134 nodes, STERILE, published 2026-11-14)",
+  "child_hex_identical": true,
+  "candidate_list_bit_exact_identical": true,
+  "independent_reenumeration_86_matches": true,
+  "no_conflicting_evidence": true,
+  "note": "the 2026-11-15 claim duplicated an already-published 2026-11-14 sweep; no raw batches ran under the duplicate claim, no computation was wasted, no evidence conflict; the claim is retired in the same push as this audit"
+ },
+ "proof_boundary": {
+  "raw_sweep_rederivation": "closed by this audit (aggregate, batch bits, verdicts, nodes re-derived from the raw JSONLs)",
+  "certificate_extraction": "not required: the sweep is sterile (no WIN7-D10 bits)",
+  "fold_material": "none: no receipts, the canonical chain frontier is unchanged at head 1407/174/6441/509300/4711/373023 (the parallel cost-60c WIN7 fold and the cost-76d/77e folds are separate lanes and do not touch this child or its parents)",
+  "interpretation_of_refuted_d10": "all 87 candidates are REFUTED-D10: no first-player win within depth 10 from any of the 87 seven-stone roots. This is NOT a LOSS proof for those roots and does not close the child S6 row; closing this child row requires evidence beyond depth 10"
+ },
+ "interpretation": "win7_d10_bits is empty: the sweep is sterile. With it, all 18 open S6 rows of the best class-4 blocker-candidate S5 00000000020000003800000080000000 are swept REFUTED-D10 (73f,74f,74c,75,79,79b,80,80c,81,82,82b,84,86a,86b,86c,86d,86e,87): the S5 is unclosable by depth-10 WIN7 receipts - a negative structural fact only, NOT a LOSS proof; the row remains open on the class-4 frontier until closed by other evidence or deeper search. The next class-4 candidates by the head-1407 ranking are 000000000000003800002000800000 (60 rows / 4216), 00000000020000003800000000080000 (61 rows / 4351) and 00000000000000801802000000080000 (64 rows / 4390). REFUTED-D10 is NOT a LOSS proof. The standard 11x11 empty board, both two-stone roots {49,60}/{59,60}, S2 {59,60}, class 1, class 2 and class 4 all remain UNKNOWN."
+}
