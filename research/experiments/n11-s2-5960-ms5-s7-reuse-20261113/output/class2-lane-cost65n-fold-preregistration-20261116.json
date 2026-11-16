@@ -1,0 +1,153 @@
+{
+ "affected_parents": {
+  "00000000000000003800000008002000": {
+   "classes": 2,
+   "edge_cost_after": 1883,
+   "edge_cost_before": 2017,
+   "lost_edge_cost": 134,
+   "lost_rows_hexes": [
+    "00000000000000801202010000800000",
+    "00000000000020003800000008080000"
+   ],
+   "rows_after": 27,
+   "rows_before": 29,
+   "s5_hex": "00000000000000003800000008002000"
+  },
+  "00000000000000801202000000000080": {
+   "classes": 2,
+   "edge_cost_after": 4003,
+   "edge_cost_before": 4137,
+   "lost_edge_cost": 134,
+   "lost_rows_hexes": [
+    "00000000000020003800000008080000",
+    "00000000000100809002000000000008"
+   ],
+   "rows_after": 53,
+   "rows_before": 55,
+   "s5_hex": "00000000000000801202000000000080"
+  },
+  "00000000000000801202010000000000": {
+   "classes": 2,
+   "edge_cost_after": 3368,
+   "edge_cost_before": 3498,
+   "lost_edge_cost": 130,
+   "lost_rows_hexes": [
+    "00000000000000801202010000800000",
+    "00000000000100809002000000000008"
+   ],
+   "rows_after": 46,
+   "rows_before": 48,
+   "s5_hex": "00000000000000801202010000000000"
+  }
+ },
+ "basis_head": 1441,
+ "basis_head_numbers": [
+  1441,
+  174,
+  6407,
+  506945,
+  4680,
+  370859
+ ],
+ "basis_roots": 762,
+ "basis_summary": {
+  "cost_needed_by_open_classes": 370859,
+  "hist": {
+   "c2=0,c4=1": 526,
+   "c2=0,c4=2": 3011,
+   "c2=0,c4=3": 12,
+   "c2=1,c4=0": 212,
+   "c2=1,c4=1": 54,
+   "c2=1,c4=2": 9,
+   "c2=2,c4=0": 801,
+   "c2=2,c4=1": 5,
+   "c2=2,c4=2": 50
+  },
+  "remaining_s5_orbits": 174,
+  "s6_needed_by_open_classes": 4680,
+  "solved_s6_in_manifest": 1441,
+  "sum_remaining_cost": 506945,
+  "unique_remaining_s6": 6407
+ },
+ "date": "2026-11-16",
+ "demand_histogram_deltas": {
+  "c2=0,c4=1": 0,
+  "c2=0,c4=2": 0,
+  "c2=0,c4=3": 0,
+  "c2=1,c4=0": 0,
+  "c2=1,c4=1": 0,
+  "c2=1,c4=2": 0,
+  "c2=2,c4=0": -3,
+  "c2=2,c4=1": 0,
+  "c2=2,c4=2": 0
+ },
+ "interpretation_guard": "bookkeeping fold projection only; no engine search, no verdicts; solved counts measure manifest coverage, not the game-theoretic value of any position; WIN7 certificates prove a first-player win within depth 10 from individual 7-stone roots only; 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60} and classes 1/2/4 remain UNKNOWN",
+ "method": "pre-registration computed with the published fold-projection tool (fold_projection_head1441_tool_20261116.py, commit a7ac1757) on the independently reconstructed basis head 1441, folding the two cost-65n WIN7-D10 roots (bits 90 and 117 of child 00000000000000801202010000800000) whose verdicts were independently reproduced 59/59 node-exact against the parallel lane's raw batches 1-8 (commit e728c47e). Every input is a blob-pinned pre-fold artifact; the parallel lane's fold receipt is NOT read. Published BEFORE the parallel lane's cost-65n fold receipt lands.",
+ "projected_head": {
+  "cost_needed_by_open_classes": 370660,
+  "remaining_s5_orbits": 174,
+  "s6_needed_by_open_classes": 4677,
+  "solved_s6_in_manifest": 1444,
+  "sum_remaining_cost": 506746,
+  "unique_remaining_s6": 6404
+ },
+ "receipts": [
+  {
+   "covers": 7,
+   "covers_hexes": [
+    "00000000000000003800000009080000",
+    "00000000000000801202010000800000",
+    "00000000000100001800000048002000",
+    "00000000000100002800000048002000",
+    "00000000000100003000000048002000",
+    "00000000000100003800000040002000",
+    "00000000000100003800000048000000"
+   ],
+   "d4_canonical_hex": "00000000000100003800000048002000",
+   "d4_orbit_distinct_from_all_folded_roots": true,
+   "marginal": 5,
+   "marginal_hexes": [
+    "00000000000000801202010000800000",
+    "00000000000100001800000048002000",
+    "00000000000100002800000048002000",
+    "00000000000100003000000048002000",
+    "00000000000100003800000040002000"
+   ],
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000801202010000800000"
+   ],
+   "root_hex": "00000000040000801202010000800000"
+  },
+  {
+   "covers": 7,
+   "covers_hexes": [
+    "00000000000000801202010000800000",
+    "00000000000020003800000008080000",
+    "00000000000100809002000000000008",
+    "00000000001020001800000008080000",
+    "00000000001020002800000008080000",
+    "00000000001020003000000008080000",
+    "00000000001020003800000000080000"
+   ],
+   "d4_canonical_hex": "00000000001020003800000008080000",
+   "d4_orbit_distinct_from_all_folded_roots": true,
+   "marginal": 6,
+   "marginal_hexes": [
+    "00000000000020003800000008080000",
+    "00000000000100809002000000000008",
+    "00000000001020001800000008080000",
+    "00000000001020002800000008080000",
+    "00000000001020003000000008080000",
+    "00000000001020003800000000080000"
+   ],
+   "marginal_in_manifest": 2,
+   "marginal_manifest_hexes": [
+    "00000000000020003800000008080000",
+    "00000000000100809002000000000008"
+   ],
+   "root_hex": "00200000000000801202010000800000"
+  }
+ ],
+ "schema": "n11-class2-lane-cost65n-fold-preregistration-20261116-v1"
+}

@@ -1,0 +1,750 @@
+{
+ "all_node_exact": true,
+ "capped_bits": 0,
+ "checked_bits": 59,
+ "child": "00000000000000801202010000800000",
+ "date": "2026-11-16",
+ "independent_raw_files": [
+  "class2-lane-cost65n-independent-rerun-batch1-20261116.jsonl",
+  "class2-lane-cost65n-independent-rerun-batch2-20261116.jsonl",
+  "class2-lane-cost65n-independent-rerun-batch3-20261116.jsonl",
+  "class2-lane-cost65n-independent-rerun-batch4-20261116.jsonl",
+  "class2-lane-cost65n-independent-rerun-batch5-20261116.jsonl",
+  "class2-lane-cost65n-independent-rerun-batch6-20261116.jsonl",
+  "class2-lane-cost65n-independent-rerun-batch7-20261116.jsonl",
+  "class2-lane-cost65n-independent-rerun-batch8-20261116.jsonl"
+ ],
+ "interpretation_guard": "bookkeeping verification only; WIN7-D10 proves a first-player win within depth 10 from the individual 7-stone roots only; REFUTED-D10 is not a LOSS proof; NOT-STERILE is not a game resolution; 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60} and classes 1/2/4 remain UNKNOWN",
+ "method": "repo-verbatim v16 runner (class4_child1_runner_v16.ts) re-run in this lane's fresh environment (Node 22, engine state reset per batch, --andclose 1, depth 10, cap 1e7), compared field-by-field against the parallel lane's published raw batches 1-8",
+ "mismatches": [],
+ "parallel_inputs": {
+  "claim_v1": "class2-lane-cost65n-inflight-20261116.json (commit 7dcd9767)",
+  "raw_batches_1_4": "commit 60c97b93",
+  "raw_batches_5_8": "commit e728c47e"
+ },
+ "per_bit": [
+  {
+   "andclose": true,
+   "batch": 1,
+   "bit": 1,
+   "capped": false,
+   "loss": false,
+   "nodes": 2545685,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 1,
+   "bit": 3,
+   "capped": false,
+   "loss": false,
+   "nodes": 2829802,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 1,
+   "bit": 6,
+   "capped": false,
+   "loss": false,
+   "nodes": 898536,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 1,
+   "bit": 8,
+   "capped": false,
+   "loss": false,
+   "nodes": 234780,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 1,
+   "bit": 9,
+   "capped": false,
+   "loss": false,
+   "nodes": 5075917,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 1,
+   "bit": 10,
+   "capped": false,
+   "loss": false,
+   "nodes": 2753096,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 1,
+   "bit": 11,
+   "capped": false,
+   "loss": false,
+   "nodes": 484122,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 1,
+   "bit": 12,
+   "capped": false,
+   "loss": false,
+   "nodes": 665145,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 2,
+   "bit": 14,
+   "capped": false,
+   "loss": false,
+   "nodes": 973556,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 2,
+   "bit": 17,
+   "capped": false,
+   "loss": false,
+   "nodes": 651646,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 2,
+   "bit": 18,
+   "capped": false,
+   "loss": false,
+   "nodes": 2679763,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 2,
+   "bit": 19,
+   "capped": false,
+   "loss": false,
+   "nodes": 2111147,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 2,
+   "bit": 20,
+   "capped": false,
+   "loss": false,
+   "nodes": 1543799,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 2,
+   "bit": 21,
+   "capped": false,
+   "loss": false,
+   "nodes": 500656,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 2,
+   "bit": 22,
+   "capped": false,
+   "loss": false,
+   "nodes": 900562,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 2,
+   "bit": 26,
+   "capped": false,
+   "loss": false,
+   "nodes": 5654046,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 3,
+   "bit": 29,
+   "capped": false,
+   "loss": false,
+   "nodes": 3089156,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 3,
+   "bit": 31,
+   "capped": false,
+   "loss": false,
+   "nodes": 278150,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 3,
+   "bit": 32,
+   "capped": false,
+   "loss": false,
+   "nodes": 2344307,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 3,
+   "bit": 42,
+   "capped": false,
+   "loss": false,
+   "nodes": 934485,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 3,
+   "bit": 43,
+   "capped": false,
+   "loss": false,
+   "nodes": 499654,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 3,
+   "bit": 44,
+   "capped": false,
+   "loss": false,
+   "nodes": 848389,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 3,
+   "bit": 53,
+   "capped": false,
+   "loss": false,
+   "nodes": 991549,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 3,
+   "bit": 54,
+   "capped": false,
+   "loss": false,
+   "nodes": 20943,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 4,
+   "bit": 56,
+   "capped": false,
+   "loss": false,
+   "nodes": 175917,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 4,
+   "bit": 58,
+   "capped": false,
+   "loss": false,
+   "nodes": 631782,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 4,
+   "bit": 61,
+   "capped": false,
+   "loss": false,
+   "nodes": 374793,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 4,
+   "bit": 66,
+   "capped": false,
+   "loss": false,
+   "nodes": 1058424,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 4,
+   "bit": 67,
+   "capped": false,
+   "loss": false,
+   "nodes": 1621800,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 4,
+   "bit": 74,
+   "capped": false,
+   "loss": false,
+   "nodes": 1286136,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 4,
+   "bit": 75,
+   "capped": false,
+   "loss": false,
+   "nodes": 940415,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 4,
+   "bit": 77,
+   "capped": false,
+   "loss": false,
+   "nodes": 653108,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 5,
+   "bit": 79,
+   "capped": false,
+   "loss": false,
+   "nodes": 4072659,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 5,
+   "bit": 83,
+   "capped": false,
+   "loss": false,
+   "nodes": 2138337,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 5,
+   "bit": 85,
+   "capped": false,
+   "loss": false,
+   "nodes": 1927445,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 5,
+   "bit": 86,
+   "capped": false,
+   "loss": false,
+   "nodes": 321590,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 5,
+   "bit": 87,
+   "capped": false,
+   "loss": false,
+   "nodes": 1896946,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 5,
+   "bit": 88,
+   "capped": false,
+   "loss": false,
+   "nodes": 2459080,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 5,
+   "bit": 90,
+   "capped": false,
+   "loss": true,
+   "nodes": 1562274,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 5,
+   "bit": 94,
+   "capped": false,
+   "loss": false,
+   "nodes": 104197,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 6,
+   "bit": 97,
+   "capped": false,
+   "loss": false,
+   "nodes": 805835,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 6,
+   "bit": 98,
+   "capped": false,
+   "loss": false,
+   "nodes": 2657980,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 6,
+   "bit": 99,
+   "capped": false,
+   "loss": false,
+   "nodes": 2657465,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 6,
+   "bit": 102,
+   "capped": false,
+   "loss": false,
+   "nodes": 2666035,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 6,
+   "bit": 103,
+   "capped": false,
+   "loss": false,
+   "nodes": 577455,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 6,
+   "bit": 105,
+   "capped": false,
+   "loss": false,
+   "nodes": 347412,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 6,
+   "bit": 106,
+   "capped": false,
+   "loss": false,
+   "nodes": 1336441,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 6,
+   "bit": 107,
+   "capped": false,
+   "loss": false,
+   "nodes": 907421,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 7,
+   "bit": 108,
+   "capped": false,
+   "loss": false,
+   "nodes": 820191,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 7,
+   "bit": 110,
+   "capped": false,
+   "loss": false,
+   "nodes": 2992168,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 7,
+   "bit": 111,
+   "capped": false,
+   "loss": false,
+   "nodes": 1189044,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 7,
+   "bit": 112,
+   "capped": false,
+   "loss": false,
+   "nodes": 3965917,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 7,
+   "bit": 113,
+   "capped": false,
+   "loss": false,
+   "nodes": 985222,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 7,
+   "bit": 114,
+   "capped": false,
+   "loss": false,
+   "nodes": 3909114,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 7,
+   "bit": 116,
+   "capped": false,
+   "loss": false,
+   "nodes": 3655872,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 7,
+   "bit": 117,
+   "capped": false,
+   "loss": true,
+   "nodes": 388910,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 8,
+   "bit": 118,
+   "capped": false,
+   "loss": false,
+   "nodes": 140020,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 8,
+   "bit": 119,
+   "capped": false,
+   "loss": false,
+   "nodes": 1336963,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  },
+  {
+   "andclose": true,
+   "batch": 8,
+   "bit": 120,
+   "capped": false,
+   "loss": false,
+   "nodes": 457090,
+   "terminalStoneRange": [
+    13,
+    17
+   ]
+  }
+ ],
+ "pilots": "8/8 pilot_d6 = 3402 nodes, loss=false, all identical",
+ "refuted_bits": 57,
+ "schema": "n11-class2-lane-cost65n-independent-rerun-verification-20261116-v1",
+ "total_nodes_mine": 92530349,
+ "total_nodes_parallel": 92530349,
+ "win_bits": [
+  {
+   "bit": 90,
+   "nodes": 1562274
+  },
+  {
+   "bit": 117,
+   "nodes": 388910
+  }
+ ]
+}
