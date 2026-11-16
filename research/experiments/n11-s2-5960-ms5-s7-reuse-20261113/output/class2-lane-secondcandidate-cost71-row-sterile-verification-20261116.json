@@ -1,0 +1,1630 @@
+{
+ "basis": {
+  "distinct_d4_canons": 760,
+  "head": "1452/174/6396/506144/4669/370058",
+  "projected_head_after_cost64h": "1472/174/6376/504672/4649/368586",
+  "projected_per_prereg_blob": true,
+  "receipt_roots": 775
+ },
+ "controls": {
+  "audit_transfer_canons_cross_checked": true,
+  "census_blob": "0d9a94a272de9fe45708757f17bfea60239a3c9b",
+  "cost64h_new_canons_vs_phase_a": 64,
+  "harvest_claim_files_cross_checked": 77,
+  "harvest_conflicts_total": 0,
+  "head_1452_reproduced": true,
+  "head_1472_histogram_matches_prereg": true,
+  "head_1472_projection_reproduced": true,
+  "independent_canon_agrees_with_tool": true,
+  "phase_a_matches_census_totals": {
+   "conflicts": 0,
+   "distinct_verdict_canons": 3548,
+   "refuted_d10": 3195,
+   "win7_d10": 353
+  }
+ },
+ "date": "2026-11-16",
+ "harvest": {
+  "cost64h_wins": [
+   4,
+   6,
+   8,
+   33,
+   38,
+   42,
+   44,
+   49,
+   68,
+   74,
+   76,
+   77,
+   78,
+   79,
+   83,
+   89,
+   91,
+   101,
+   109,
+   113,
+   114,
+   116,
+   120
+  ],
+  "distinct_verdict_canons": 3612,
+  "phase_a_inputs": 79,
+  "phase_b_cost64h_bits": 64,
+  "refuted_d10": 3236,
+  "win7_d10": 376
+ },
+ "method": "second implementation: published head-1452 basis reproduced through the blob-pinned fold_projection_head1450_tool (basis 771 roots at 1450 + the four published cost-76d/77e receipt roots = 775 roots / 760 distinct D4 canons at head 1452, head six-number summary and demand histogram re-asserted); independent verdict-harvest parser over the 77 published claim/audit files (recursive bit-list collection with per-class identity assertion and a dedicated audit-schema path cross-checking per-transfer D4 canons) plus raw-batch JSONL parsing for cost-76d/77e/64h with pilot control 3402 and per-bit conflict assertion at every canon insertion; the phase-A map over the exact published census input set reproduces the published census totals (3548/353/3195, 0 conflicts); independent D4 canonicalization asserted equal to the published tool canon on all 121 single-stone masks and all 760 folded canons; legal candidate enumeration via legal_candidates.py (exact Bareiss 4x4)",
+ "row71_sterile": {
+  "child_safe": true,
+  "determination": "all 71 legal candidate roots of this row are REFUTED-D10 by D4-canonical transfer from published sweeps; the row is STERILE in the K0863 sense without any engine run of its own",
+  "engine_runs_needed_for_row_verdicts": 0,
+  "k0863_consequence": "by the published STERILE-row unclosability theorem (K0863, commit 4122ea73), no WIN7-D10 receipt can cover this row, own or cross; therefore the second coverable class-2 candidate S5 00000000000000801202000040000000 (3 rows / 211 edge cost at head 1452: this cost-71 row, the cost-64 row 00000000000000801282000040000000 and the cost-76c row 00000000010000809002000001000000) can never be fully closed within the depth-10 receipt system; it should be reclassified from coverable class-2 to the depth>10-evidence-waiting category, exactly like the best coverable class-2 S5 00000000000000801202000000200000",
+  "k0863_out_of_sample_check": "the 23 published cost-64h receipts cover none of the row's 71 candidate canons (0 receipt_win statuses at the projected head 1472 as well), a passing out-of-sample consistency check of K0863 on a row that was never swept as a lane",
+  "legal_candidates": 71,
+  "parent_s5": "00000000000000801202000040000000",
+  "per_bit": [
+   {
+    "bit": 0,
+    "root_canon": "00000000000000801202000040000401",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 1,
+    "root_canon": "00000000000000801202000040000402",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 3,
+    "root_canon": "00000000000000801202000040000408",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 4,
+    "root_canon": "00000000000000801202000040000410",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 6,
+    "root_canon": "00000000000000801202000040000440",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 8,
+    "root_canon": "00000000000000801202000040000500",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 11,
+    "root_canon": "00000000000000801202000040000c00",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 12,
+    "root_canon": "00000000000000801202000040001400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 13,
+    "root_canon": "00000000000000801202000040002400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 14,
+    "root_canon": "00000000000000801202000040004400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 15,
+    "root_canon": "00000000000000801202000040008400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 17,
+    "root_canon": "00000000000000801202000040020400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 18,
+    "root_canon": "00000000000000801202000040040400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 19,
+    "root_canon": "00000000000000801202000040080400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 21,
+    "root_canon": "00000000000000801202000040200400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 22,
+    "root_canon": "00000000000000801202000040400400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 24,
+    "root_canon": "00000000000000801202000041000400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 25,
+    "root_canon": "00000000000000801202000042000400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 26,
+    "root_canon": "00000000000000801202000044000400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 28,
+    "root_canon": "00000000000000801202000050000400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 32,
+    "root_canon": "00000000000000801202000140000400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 33,
+    "root_canon": "00000000000000801202000240000400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 35,
+    "root_canon": "00000000000000801202000840000400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 42,
+    "root_canon": "00000000000000801202040040000400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 43,
+    "root_canon": "00000000000000801202080040000400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 44,
+    "root_canon": "00000000000000801202100040000400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 45,
+    "root_canon": "00000000000000801202200040000400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 51,
+    "root_canon": "0000000000000080120a000040000400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 52,
+    "root_canon": "00000000000000801212000040000400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 53,
+    "root_canon": "00000000000000801222000040000400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 55,
+    "root_canon": "00000000000000801282000040000400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 56,
+    "root_canon": "00000000000000801302000040000400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 58,
+    "root_canon": "00000000000000801602000040000400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 59,
+    "root_canon": "00000000000000801a02000040000400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 61,
+    "root_canon": "00000000000000803202000040000400",
+    "sources": [
+     "class2-lane-cost61e-inflight-20261114.json",
+     "class2-lane-cost61e-sweep-20261114.json",
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 63,
+    "root_canon": "00000000000000809202000001000001",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 64,
+    "root_canon": "00000000000000809102000001000001",
+    "sources": [
+     "class2-lane-cost62a-inflight-20261114.json",
+     "class2-lane-cost62a-sweep-20261114.json",
+     "class2-lane-cost71d-inflight-20261116.json",
+     "class2-lane-cost76a-inflight-20261115.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 66,
+    "root_canon": "00000000000000841202000040000400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 67,
+    "root_canon": "00000000000000881202000040000400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 72,
+    "root_canon": "00000000000000c09002000001000001",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 73,
+    "root_canon": "00000000000000a09002000001000001",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 74,
+    "root_canon": "00000000000000909002000001000001",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 75,
+    "root_canon": "00000000000000889002000001000001",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 76,
+    "root_canon": "00000000000000849002000001000001",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 77,
+    "root_canon": "00000000000020801202000040000400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 78,
+    "root_canon": "00000000000040801202000040000400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 79,
+    "root_canon": "00000000000080801202000040000400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 83,
+    "root_canon": "00000000000200809002000001000001",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 86,
+    "root_canon": "00000000000040809002000001000001",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 87,
+    "root_canon": "00000000000020809002000001000001",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 88,
+    "root_canon": "00000000010000801202000040000400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 89,
+    "root_canon": "00000000020000801202000040000400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 91,
+    "root_canon": "00000000080000801202000040000400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 92,
+    "root_canon": "00000000100000801202000040000400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 95,
+    "root_canon": "00000000080000809002000001000001",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 97,
+    "root_canon": "00000000020000809002000001000001",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 98,
+    "root_canon": "00000000010000809002000001000001",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 99,
+    "root_canon": "00000008000000801202000040000400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 101,
+    "root_canon": "00000000220000003800000040000400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 102,
+    "root_canon": "00000000200040003800000040000400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 103,
+    "root_canon": "00000000200000083800000040000400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 105,
+    "root_canon": "00000000200000003800200040000400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 106,
+    "root_canon": "00000000200000003800000440000400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json",
+     "class2-lane-cost77e-sweep-20261116.json",
+     "cost-77e-raw-batches"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 111,
+    "root_canon": "00000008200000003800000040000400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 112,
+    "root_canon": "00000000210000003800000040000400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 113,
+    "root_canon": "00000000200020003800000040000400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json",
+     "cost-76d-raw-batches"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 114,
+    "root_canon": "00000000200000043800000040000400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 116,
+    "root_canon": "00000000200000003800100040000400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 117,
+    "root_canon": "00000000200000003800000240000400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 118,
+    "root_canon": "00000000200000003800000040400400",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   },
+   {
+    "bit": 119,
+    "root_canon": "00000000200000003800000001200001",
+    "sources": [
+     "class2-lane-cost71d-inflight-20261116.json"
+    ],
+    "status": "harvested_refuted"
+   }
+  ],
+  "s6_hex": "00000000000000801202000040000400",
+  "scope_guard": "STERILE and unclosable-within-depth-10 are NOT loss proofs; the row, the parent S5, all S2 roots and the 11x11 empty board remain UNKNOWN; the row stays open in the manifest bookkeeping forever under the depth-10 receipt system",
+  "status_counts_1452": {
+   "harvested_refuted": 71
+  },
+  "status_counts_projected_1472": {
+   "harvested_refuted": 71
+  }
+ },
+ "schema": "n11-class2-lane-secondcandidate-cost71-sterile-verification-20261116-v1",
+ "takeover_prep": {
+  "cost69a": {
+   "demand_at_1452": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "legal_candidates": 69,
+   "note": "stale claim (2026-11-16T01:31Z, zero published raw batches); three bits (55/65/109) were already precomputed as transferred REFUTED in the published claim; the harvest re-derivation here re-counts them plus any newer transfers (incl. cost-64h)",
+   "open_parents_at_1452": [
+    {
+     "classes": 2,
+     "edge_cost": 5345,
+     "rows": 70,
+     "s5_hex": "00000000000000801222000000000000"
+    },
+    {
+     "classes": 2,
+     "edge_cost": 1748,
+     "rows": 25,
+     "s5_hex": "00000000000000003800000008002000"
+    }
+   ],
+   "per_bit": [
+    {
+     "bit": 0,
+     "root_canon": "00000000000000801222000000800001",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 1,
+     "root_canon": "00000000000000801222000000800002",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 3,
+     "root_canon": "00000000000000801222000000800008",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 4,
+     "root_canon": "00000000000000801222000000800010",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 6,
+     "root_canon": "00000000000000801222000000800040",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 8,
+     "root_canon": "00000000000000801222000000800100",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 9,
+     "root_canon": "00000000000000801222000000800200",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 10,
+     "root_canon": "00000000000000801222000000800400",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 12,
+     "root_canon": "00000000000000801222000000801000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 14,
+     "root_canon": "00000000000000801222000000804000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 17,
+     "root_canon": "00000000000000801222000000820000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 18,
+     "root_canon": "00000000000000801222000000840000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 19,
+     "root_canon": "00000000000000801222000000880000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 20,
+     "root_canon": "00000000000000801222000000900000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 22,
+     "root_canon": "00000000000000801222000000c00000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 26,
+     "root_canon": "00000000000000801222000004800000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 29,
+     "root_canon": "00000000000000801222000020800000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 31,
+     "root_canon": "00000000000000801222000080800000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 32,
+     "root_canon": "00000000000000801222000100800000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 33,
+     "root_canon": "00000000000000801222000200800000",
+     "sources": [
+      "class2-lane-cost66c-inflight-20261116.json"
+     ],
+     "status": "harvested_refuted"
+    },
+    {
+     "bit": 35,
+     "root_canon": "00000000000000801222000800800000",
+     "sources": [
+      "class2-lane-cost64e-inflight-20261116.json"
+     ],
+     "status": "harvested_refuted"
+    },
+    {
+     "bit": 40,
+     "root_canon": "00000000000000801222010000800000",
+     "sources": [
+      "class2-lane-cost65n-inflight-20261116.json",
+      "class2-lane-cost65n-sweep-audit-20261116.json"
+     ],
+     "status": "harvested_refuted"
+    },
+    {
+     "bit": 42,
+     "root_canon": "00000000000000801222040000800000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 43,
+     "root_canon": "00000000000000801222080000800000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 44,
+     "root_canon": "00000000000000801222100000800000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 50,
+     "root_canon": "00000000000000801226000000800000",
+     "sources": [
+      "class2-lane-cost64d-inflight-20261116.json"
+     ],
+     "status": "harvested_refuted"
+    },
+    {
+     "bit": 51,
+     "root_canon": "0000000000000080122a000000800000",
+     "sources": [
+      "class2-lane-cost64f-inflight-20261116.json"
+     ],
+     "status": "harvested_refuted"
+    },
+    {
+     "bit": 52,
+     "root_canon": "00000000000000801232000000800000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 54,
+     "root_canon": "00000000000000801262000000800000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 55,
+     "root_canon": "000000000000008012a2000000800000",
+     "sources": [
+      "class2-lane-cost64c-inflight-20261116.json"
+     ],
+     "status": "harvested_refuted"
+    },
+    {
+     "bit": 56,
+     "root_canon": "00000000000000801322000000800000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 58,
+     "root_canon": "00000000000000801622000000800000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 61,
+     "root_canon": "00000000000000803222000000800000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 65,
+     "root_canon": "00000000000000809082200080000000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 66,
+     "root_canon": "00000000000000841222000000800000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 67,
+     "root_canon": "00000000000000881222000000800000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 72,
+     "root_canon": "00000000000000c09002200080000000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 73,
+     "root_canon": "00000000000000a09002200080000000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 74,
+     "root_canon": "00000000000000909002200080000000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 76,
+     "root_canon": "00000000000000849002200080000000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 77,
+     "root_canon": "00000000000020801222000000800000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 79,
+     "root_canon": "00000000000080801222000000800000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 84,
+     "root_canon": "00000000000100809002200080000000",
+     "sources": [
+      "class2-lane-cost64g-inflight-20261116.json",
+      "class2-lane-cost64g-sweep-audit-20261116.json"
+     ],
+     "status": "harvested_refuted"
+    },
+    {
+     "bit": 87,
+     "root_canon": "00000000000020809002200080000000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 88,
+     "root_canon": "00000000010000801222000000800000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 90,
+     "root_canon": "00000000020008801202000001000000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 94,
+     "root_canon": "00000000020008801202000010000000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 95,
+     "root_canon": "00000000020008801202000020000000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 96,
+     "root_canon": "00000000020008801202000040000000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 97,
+     "root_canon": "00000000020000809002200080000000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 98,
+     "root_canon": "00000000010000809002200080000000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 99,
+     "root_canon": "00000000020008801202000000000800",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 102,
+     "root_canon": "00000000020008801202000000004000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 103,
+     "root_canon": "00000000020008801202000000008000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 105,
+     "root_canon": "00000000020008801202000000020000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 106,
+     "root_canon": "00000000020008801202000000040000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 107,
+     "root_canon": "00000000020008801202000000080000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 108,
+     "root_canon": "00000000020008801202000000100000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 109,
+     "root_canon": "00000000020008801202000000200000",
+     "sources": [
+      "class2-lane-cost65k-inflight-20261115.json",
+      "class2-lane-cost74h-inflight-20261115.json"
+     ],
+     "status": "harvested_refuted"
+    },
+    {
+     "bit": 110,
+     "root_canon": "00000000020008801202000000000001",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 111,
+     "root_canon": "00000000020008801202000000000002",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 112,
+     "root_canon": "00000000020008801202000000000004",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 113,
+     "root_canon": "00000000020008801202000000000008",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 114,
+     "root_canon": "00000000020008801202000000000010",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 116,
+     "root_canon": "00000000020008801202000000000040",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 117,
+     "root_canon": "00000000020008801202000000000080",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 118,
+     "root_canon": "00000000020008801202000000000100",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 119,
+     "root_canon": "00000000020008801202000000000200",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 120,
+     "root_canon": "00000000020008801202000000000400",
+     "sources": [],
+     "status": "open"
+    }
+   ],
+   "s6_hex": "00000000000000801222000000800000",
+   "status_counts_1452": {
+    "harvested_refuted": 8,
+    "open": 61
+   },
+   "status_counts_projected_1472": {
+    "harvested_refuted": 8,
+    "open": 61
+   }
+  },
+  "cost76c": {
+   "demand_at_1452": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "legal_candidates": 76,
+   "note": "stale claim (2026-11-15T20:54Z, zero published raw batches) taken over by the long-term lane session; the S5-parent closure motivation is void per row71_sterile.k0863_consequence, the remaining value is the row itself for its second parent and the harvest verdicts",
+   "open_parents_at_1452": [
+    {
+     "classes": 2,
+     "edge_cost": 5758,
+     "rows": 69,
+     "s5_hex": "00000000000000801202000100000000"
+    },
+    {
+     "classes": 2,
+     "edge_cost": 211,
+     "rows": 3,
+     "s5_hex": "00000000000000801202000040000000"
+    }
+   ],
+   "per_bit": [
+    {
+     "bit": 0,
+     "root_canon": "00000000010000809002000001000001",
+     "sources": [
+      "class2-lane-cost71d-inflight-20261116.json"
+     ],
+     "status": "harvested_refuted"
+    },
+    {
+     "bit": 1,
+     "root_canon": "00000000010000809002000001000002",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 2,
+     "root_canon": "00000000010000809002000001000004",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 4,
+     "root_canon": "00000000010000809002000001000010",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 6,
+     "root_canon": "00000000010000809002000001000040",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 7,
+     "root_canon": "00000000010000809002000001000080",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 9,
+     "root_canon": "00000000010000809002000001000200",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 10,
+     "root_canon": "00000000010000809002000001000400",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 13,
+     "root_canon": "00000000010000809002000001002000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 14,
+     "root_canon": "00000000010000809002000001004000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 15,
+     "root_canon": "00000000010000809002000001008000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 17,
+     "root_canon": "00000000010000809002000001020000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 18,
+     "root_canon": "00000000010000809002000001040000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 19,
+     "root_canon": "00000000010000809002000001080000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 20,
+     "root_canon": "00000000010000809002000001100000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 21,
+     "root_canon": "00000000010000809002000001200000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 26,
+     "root_canon": "00000000010000809002000005000000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 28,
+     "root_canon": "00000000010000809002000011000000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 29,
+     "root_canon": "00000000010000809002000021000000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 30,
+     "root_canon": "00000000010000809002000041000000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 32,
+     "root_canon": "00000000010000809002000101000000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 34,
+     "root_canon": "00000000010000809002000401000000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 36,
+     "root_canon": "00000000010000809002001001000000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 41,
+     "root_canon": "00000000010000809002020001000000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 43,
+     "root_canon": "00000000010000809002080001000000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 45,
+     "root_canon": "00000000010000809002200001000000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 46,
+     "root_canon": "00000000010000809002400001000000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 47,
+     "root_canon": "00000000010000809002800001000000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 48,
+     "root_canon": "00000000010000809003000001000000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 53,
+     "root_canon": "00000000010000809022000001000000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 54,
+     "root_canon": "00000000010000809042000001000000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 56,
+     "root_canon": "00000000010000809102000001000000",
+     "sources": [
+      "class2-lane-cost62a-inflight-20261114.json",
+      "class2-lane-cost62a-sweep-20261114.json",
+      "class2-lane-cost78a-inflight-20261115.json"
+     ],
+     "status": "harvested_refuted"
+    },
+    {
+     "bit": 57,
+     "root_canon": "00000000010000809202000001000000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 59,
+     "root_canon": "00000000010000809802000001000000",
+     "sources": [
+      "class2-lane-cost61e-inflight-20261114.json",
+      "class2-lane-cost61e-sweep-20261114.json"
+     ],
+     "status": "harvested_refuted"
+    },
+    {
+     "bit": 61,
+     "root_canon": "0000000001000080b002000001000000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 62,
+     "root_canon": "0000000001000080d002000001000000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 64,
+     "root_canon": "00000000010000819002000001000000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 65,
+     "root_canon": "00000000010000829002000001000000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 66,
+     "root_canon": "00000000010000849002000001000000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 67,
+     "root_canon": "00000000010000889002000001000000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 68,
+     "root_canon": "00000000010000909002000001000000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 69,
+     "root_canon": "00000000010000a09002000001000000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 70,
+     "root_canon": "00000000010000c09002000001000000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 75,
+     "root_canon": "00000000010008809002000001000000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 76,
+     "root_canon": "00000000010010809002000001000000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 77,
+     "root_canon": "00000000010020809002000001000000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 78,
+     "root_canon": "00000000010040809002000001000000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 81,
+     "root_canon": "00000000010200809002000001000000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 85,
+     "root_canon": "00000000012000809002000001000000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 86,
+     "root_canon": "00000000014000809002000001000000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 87,
+     "root_canon": "00000000018000809002000001000000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 89,
+     "root_canon": "00000000030000809002000001000000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 91,
+     "root_canon": "00000000040000809002000002400000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 94,
+     "root_canon": "00000000040000809002000010400000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 95,
+     "root_canon": "00000000040000809002000020400000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 96,
+     "root_canon": "00000000040000809002000040400000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 97,
+     "root_canon": "00000000040000809002000080400000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 98,
+     "root_canon": "00000000040000809002000100400000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 99,
+     "root_canon": "00000000040000809002000000400800",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 102,
+     "root_canon": "00000000040000809002000000404000",
+     "sources": [
+      "class2-lane-cost77e-sweep-20261116.json",
+      "cost-77e-raw-batches"
+     ],
+     "status": "harvested_refuted"
+    },
+    {
+     "bit": 103,
+     "root_canon": "00000000040000809002000000408000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 105,
+     "root_canon": "00000000040000809002000000420000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 106,
+     "root_canon": "00000000040000809002000000440000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 107,
+     "root_canon": "00000000040000809002000000480000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 108,
+     "root_canon": "00000000040000809002000000500000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 109,
+     "root_canon": "00000000040000809002000000600000",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 110,
+     "root_canon": "00000000040000809002000000400001",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 111,
+     "root_canon": "00000000040000809002000000400002",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 112,
+     "root_canon": "00000000040000809002000000400004",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 113,
+     "root_canon": "00000000040000809002000000400008",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 114,
+     "root_canon": "00000000040000809002000000400010",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 116,
+     "root_canon": "00000000040000809002000000400040",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 117,
+     "root_canon": "00000000040000809002000000400080",
+     "sources": [
+      "cost-76d-raw-batches"
+     ],
+     "status": "harvested_refuted"
+    },
+    {
+     "bit": 118,
+     "root_canon": "00000000040000809002000000400100",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 119,
+     "root_canon": "00000000040000809002000000400200",
+     "sources": [],
+     "status": "open"
+    },
+    {
+     "bit": 120,
+     "root_canon": "00000000040000809002000000400400",
+     "sources": [],
+     "status": "open"
+    }
+   ],
+   "s6_hex": "00000000010000809002000001000000",
+   "status_counts_1452": {
+    "harvested_refuted": 5,
+    "open": 71
+   },
+   "status_counts_projected_1472": {
+    "harvested_refuted": 5,
+    "open": 71
+   }
+  }
+ },
+ "unknown_status": "11x11 empty board: UNKNOWN. This verification creates no verdict and closes no row; solved counts are manifest bookkeeping; REFUTED-D10 is not a LOSS proof; STERILE is not a LOSS proof; the two-stone roots {49,60} and {59,60}, S2 {59,60} and classes 1/2/4 all remain UNKNOWN"
+}
