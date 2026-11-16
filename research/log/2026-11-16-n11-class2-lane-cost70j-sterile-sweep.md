@@ -36,3 +36,15 @@
 - 次のcoverable class-2 candidateは第二候補S5 `00000000000000801202000040000000`（5行/364）だが、残行のうち64/71はSTERILE済み・76cはin-flight（着手禁止）・76d/77eは並走fold-pending → **現時点で本レーンが着手可能なunclaimed coverable class-2行は存在しない**。
 - 76d/77e foldの着地後に1407とのreconciliation foldが必要（root disjointness対75eの4 rootをassert）。
 - 11x11空盤・二石root {49,60}/{59,60}・S2 {59,60}・class 1/2/4はすべてUNKNOWNのまま。
+
+## 正誤（erratum・同日セッション内訂正）
+
+初版のlog本文・audit JSON `structural_consequence`・claim v2 `completion_note` に書いた「**receipt機構から永久に到達不能（permanently unreachable by the receipt mechanism）**」は**過大な主張だった**。正しくは:
+
+- STERILE行（自出行のsweepが0 WIN7-D10）も、**他のchildのsweepで得られたWIN7 receiptのcross-cover（marginal）で閉鎖され得る**。これはfold機構の標準経路で、先例が複数ある:
+  - cost-70g child は head 1249 で **cost-70f bit-84 receiptのcross-cover**で閉鎖（"child already closed at head 1249 (cost-70f bit-84 cross-cover)"）。
+  - cost-75e bit-10 のin-manifest marginal `00000000000000801202000000000201` は**2つのopen parentの行を同時に**閉鎖した。
+- したがって確定するのは「**このS5は自出行のsweepからはreceiptを一切産まない = own-row-coverableカテゴリからの離脱**（この点でaudit-blocked S5 `00000000000000809082000000000000`〔10/698〕と同カテゴリ）」まで。3行の閉鎖は今後cross-coverまたはdepth-10超の証拠に全面的に依存するが、「永久に不可能」ではない。
+- 訂正反映: audit JSON/scriptは `structural_consequence` のみ修正して再生成（v1→v2差分は当該テキストのみをdiff確認。数値・assert・交差検査は全て不変。audit JSON md5 `654db415…`→`11cf0f70…`・script md5 `4576f8d8…`→`01466f22…`）。claimは schema v3 に更新（`erratum_note` 追加・既存キー全保持）。
+
+solved 1407はmanifest被覆の簿記。REFUTED-D10はLOSS証明ではない。STERILEは自出行からの閉鎖不能の表明でLOSS証明ではない。11x11空盤・二石root {49,60}/{59,60}・S2 {59,60}・class1/class2/class4はいずれもUNKNOWN。
