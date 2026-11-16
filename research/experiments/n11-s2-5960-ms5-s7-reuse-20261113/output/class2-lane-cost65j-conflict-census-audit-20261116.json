@@ -1,0 +1,276 @@
+{
+ "schema": "n11-class2-lane-cost65j-conflict-census-audit-20261116-v1",
+ "date": "2026-11-16",
+ "target": {
+  "claim_record": "class-frontier-cost65j-receipts-recompute-20261116.json (schema n11-class-frontier-cost65j-receipts-20261116-v2; claim v5 blob 7a4c900710e3ddb34fb9e272e8e673815e13a4f3; fold script recompute_frontier_cost65j_receipts_20261116.py)",
+  "census_claim": "65-candidate-orbit conflict census vs the 718 folded roots at head 1410: exactly four overlaps (bits 25/79/91/101), all WIN7/WIN7, zero WIN/LOSS conflicts (totals.conflict_census_overlaps)",
+  "s6_child": "00000000000000809102000080000000",
+  "s5_parent": "00000000000000809102000000000000",
+  "candidate_bits": 65,
+  "folded_roots_at_head_1410": 718
+ },
+ "method": "independent third implementation of the win2/win13/win4 audits (BigInt board, bit = y*11+x, D4 canonicalization over the 8 board transforms, exact integer det3/det4, K0868 survival-move convention): survival-rule re-enumeration of the child's legal candidate set, D4-orbit census of all 65 candidate roots, canon/covers/legality verification of the four claimed overlap closers, full re-read of the 9 blob-pinned raw batch JSONLs from latest main, and provenance fetch of the folded-side receipt records (cost-72b and cost-69i recompute records; warm-multiband2/unified-merge addition entries). The audit was run twice with identical results.",
+ "controls": {
+  "partition_ok": {
+   "candidates": 65,
+   "win7": 17,
+   "refuted": 48,
+   "disjoint": true,
+   "census_bits_all_win7": true
+  },
+  "legal_candidates_reenumerated": {
+   "count": 65,
+   "set_equals_published_candidate_bits": true
+  },
+  "bit97_exclusion": {
+   "is_candidate": false,
+   "survival_violating_triple": [
+    31,
+    49,
+    71
+   ],
+   "note": "square 97 is concyclic with child stones 31/49/71 (det4 = 0), so child|1<<97 is not a legal 7th-stone placement; the folded cross-cover roots contain stone 97 only together with a stone replacing 31"
+  },
+  "candidate_orbits": {
+   "total": 65,
+   "distinct_d4_orbits": 65,
+   "intra_sweep_collisions": 0
+  },
+  "win_receipt_orbits": {
+   "total": 17,
+   "distinct_d4_orbits": 17,
+   "canons_match_fold_record": "17/17"
+  },
+  "run_twice_identical": true
+ },
+ "sweep_verdict_reread_from_raw_batches": {
+  "files": 9,
+  "bit_records": 64,
+  "duplicate_bits": 0,
+  "bit_113_present": false,
+  "bit_113_note": "pre-resolved REFUTED-D10 by the published canonical identity transfer (K0863); not re-run",
+  "win7_bits": [
+   4,
+   15,
+   18,
+   20,
+   21,
+   23,
+   25,
+   28,
+   66,
+   79,
+   91,
+   101,
+   109,
+   112,
+   116,
+   118,
+   119
+  ],
+  "refuted_run_bits_count": 47,
+  "refuted_run_plus_transfer_equals_claim_48": true,
+  "capped": 0,
+  "per_batch_bit_node_sums_match_script_pins": true,
+  "per_batch_sums": {
+   "cost65f-batch1": 70778854,
+   "cost65f-batch2": 76633276,
+   "cost65f-batch3": 70718886,
+   "cost65f-batch4": 36995447,
+   "cost65f-batch5": 45653717,
+   "cost65f-batch6": 36897448,
+   "cost65f-batch7": 47202063,
+   "cost65j-batch8": 15793993,
+   "cost65j-batch9": 1929932
+  },
+  "total_bit_nodes": 402603616,
+  "win_nodes": 158472633,
+  "refuted_run_nodes": 244130983,
+  "pilots": "5949 x7 (v15) + 3402 x2 (v16), all loss:false capped:false",
+  "terminal_range_all": [
+   13,
+   17
+  ],
+  "andclose_all": true
+ },
+ "census_overlap_pairs": [
+  {
+   "bit": 25,
+   "candidate_root_hex": "00000000000000809102000082000000",
+   "d4_canonical_hex": "00000000000000809102000082000000",
+   "closer_root_hex": "00000000000000809102000082000000",
+   "closer_byte_identical": true,
+   "closer_provenance": {
+    "record": "class-frontier-cost72b-receipts-recompute-20261115.json",
+    "band": "cost-72b",
+    "receipt_bit": 31,
+    "certified": true,
+    "md5": "1ee298bcb02c41962aa1242dc1f805dc",
+    "rows": 44299,
+    "sub_roots": 51,
+    "v16_sweep_nodes": 2481547,
+    "v15_anchor_nodes": 13884751
+   },
+   "verdict_pair": "WIN7 (65f raw batch 3, loss:true, 13,884,751 nodes) / WIN7 (72b bit-31, certificate-backed)"
+  },
+  {
+   "bit": 79,
+   "candidate_root_hex": "00000000000080809102000080000000",
+   "d4_canonical_hex": "00000000000080809102000080000000",
+   "closer_root_hex": "00000002000000809102000800000000",
+   "closer_byte_identical": false,
+   "closer_provenance": {
+    "record": "warm-multiband2/unified-merge fold 2026-11-15 (multiband2 addition, band class2-lane-cost63a, bit 97, marginal_in_manifest = exactly the child row)",
+    "band": "cost-63a",
+    "receipt_bit": 97,
+    "certified": false,
+    "note": "search-level WIN7-D10 (63a sweep unverified_win7_bits); certificate extraction pending"
+   },
+   "verdict_pair": "WIN7 (65f raw batch 5, loss:true, 11,264,515 nodes) / WIN7 (63a bit-97, search-level)"
+  },
+  {
+   "bit": 91,
+   "candidate_root_hex": "00000000080000809102000080000000",
+   "d4_canonical_hex": "00000000020000811202000020000000",
+   "closer_root_hex": "00000002000000809102000002000000",
+   "closer_byte_identical": false,
+   "closer_provenance": {
+    "record": "class-frontier-cost72b-receipts-recompute-20261115.json",
+    "band": "cost-72b",
+    "receipt_bit": 97,
+    "certified": true,
+    "md5": "6ed0334c4c9540c39ce8cf839f900a18",
+    "rows": 31434,
+    "sub_roots": 47,
+    "v16_sweep_nodes": 833113,
+    "v15_anchor_nodes": 6431542
+   },
+   "verdict_pair": "WIN7 (65f raw batch 6, loss:true, 6,369,617 nodes) / WIN7 (72b bit-97, certificate-backed)"
+  },
+  {
+   "bit": 101,
+   "candidate_root_hex": "00000020000000809102000080000000",
+   "d4_canonical_hex": "00000000020000811202000000080000",
+   "closer_root_hex": "00000002000000809102000000002000",
+   "closer_byte_identical": false,
+   "closer_provenance": {
+    "record": "class-frontier-cost69i-receipts-recompute-20261115.json",
+    "band": "cost-69i",
+    "receipt_bit": 97,
+    "certified": true,
+    "md5": "95707f643661f24bad14c3c01bcefefb",
+    "rows": 27080,
+    "sub_roots": 46,
+    "v15_anchor_nodes": 4349523
+   },
+   "verdict_pair": "WIN7 (65f raw batch 7, loss:true, 4,524,831 nodes) / WIN7 (69i bit-97, certificate-backed)"
+  }
+ ],
+ "closer_structure_checks": [
+  {
+   "bit": 25,
+   "closer_hex": "00000000000000809102000082000000",
+   "stones": [
+    25,
+    31,
+    49,
+    56,
+    60,
+    63,
+    71
+   ],
+   "n_stones": 7,
+   "covers": 7,
+   "child_canon_in_covers": true,
+   "canon_equals_candidate": true,
+   "all_stones_survival_legal_vs_other_six": true
+  },
+  {
+   "bit": 79,
+   "closer_hex": "00000002000000809102000800000000",
+   "stones": [
+    35,
+    49,
+    56,
+    60,
+    63,
+    71,
+    97
+   ],
+   "n_stones": 7,
+   "covers": 7,
+   "child_canon_in_covers": true,
+   "canon_equals_candidate": true,
+   "all_stones_survival_legal_vs_other_six": true
+  },
+  {
+   "bit": 91,
+   "closer_hex": "00000002000000809102000002000000",
+   "stones": [
+    25,
+    49,
+    56,
+    60,
+    63,
+    71,
+    97
+   ],
+   "n_stones": 7,
+   "covers": 7,
+   "child_canon_in_covers": true,
+   "canon_equals_candidate": true,
+   "all_stones_survival_legal_vs_other_six": true
+  },
+  {
+   "bit": 101,
+   "closer_hex": "00000002000000809102000000002000",
+   "stones": [
+    13,
+    49,
+    56,
+    60,
+    63,
+    71,
+    97
+   ],
+   "n_stones": 7,
+   "covers": 7,
+   "child_canon_in_covers": true,
+   "canon_equals_candidate": true,
+   "all_stones_survival_legal_vs_other_six": true
+  }
+ ],
+ "stabilizer_structure": {
+  "s5_parent_hex": "00000000000000809102000000000000",
+  "s5_stones": [
+   49,
+   56,
+   60,
+   63,
+   71
+  ],
+  "s5_setwise_stabilizer": [
+   "identity",
+   "vertical reflection (x,y)->(x,10-y)"
+  ],
+  "reflection_action": {
+   "49<->71": true,
+   "56_fixed": true,
+   "60_fixed": true,
+   "63_fixed": true
+  },
+  "child_65f_stabilizer": "trivial (identity only)",
+  "child_63a_stabilizer": "trivial (identity only)",
+  "sigma_image_map": {
+   "31<->97": "sigma(31)=97; canon(S5+97) == canon(S5+31) == the child (child canonical-self): the cross-cover receipts reach the child through the S5+97 six-subset",
+   "79->35": "sigma(79)=35: the cost-63a bit-97 root S5+{35,97} is the sigma-image of the 65f bit-79 root S5+{31,79}",
+   "91->25": "sigma(91)=25: the cost-72b bit-97 root S5+{25,97} is the sigma-image of the 65f bit-91 root S5+{31,91}",
+   "101->13": "sigma(101)=13: the cost-69i bit-97 root S5+{13,97} is the sigma-image of the 65f bit-101 root S5+{31,101}"
+  },
+  "structural_conclusion": "the four census overlaps are exactly the sigma-images of the four zero-marginal 65f WIN candidates {25,79,91,101} under the S5-invariant vertical reflection; the child's own stabilizer is trivial, which is why the 65 candidate roots occupy 65 distinct D4 orbits and no intra-sweep WIN/REFUTED collision is possible in this sweep"
+ },
+ "proof_tier_observation": "three of the four census-overlap orbits already carry published certificate-backed WIN7 receipts on the folded side (72b bit-31 md5 1ee298bcb02c41962aa1242dc1f805dc for the bit-25 orbit, byte-identical root; 72b bit-97 md5 6ed0334c4c9540c39ce8cf839f900a18 for the bit-91 orbit; 69i bit-97 md5 95707f643661f24bad14c3c01bcefefb for the bit-101 orbit); by D4 symmetry of the game these are WIN7 certificates for the 65f receipt orbits as well, upgrading 65f bits 25/91/101 from certified:false raw-sweep receipts to effectively certificate-backed without new computation. The remaining gap is the bit-79 orbit, whose folded counterpart (cost-63a bit-97) is a search-level WIN7 (unverified_win7_bits); extracting that single certificate would certificate-back all four census-overlap orbits.",
+ "v15_anchor_observation": "the cost-72b bit-31 v15 cross-engine anchor node count 13,884,751 equals the cost-65f bit-25 raw batch record exactly: the census overlap identifies an existing node-exact cross-engine pair on the same root (v15 as 65f bit-25 at 13,884,751 nodes; v16 as 72b bit-31 at 2,481,547 nodes), both WIN7",
+ "scope_note": "the exhaustive negative direction of the census (no fifth overlap among the 718 folded roots) is asserted by the published fold script against its runpy-derived 718-root corpus with byte-identical chain-reproduction controls; this remote audit does not re-enumerate the 718 roots: it independently verifies the four positive overlaps (orbit identity, structure, legality, covers, verdict provenance on both sides) and the 65-distinct-orbit intra-sweep disjointness",
+ "interpretation_guard": "bookkeeping and structural verification over published receipts; solved counts measure manifest coverage, not the game-theoretic value of any position; WIN7 certificates prove a first-player win within depth 10 from the individual 7-stone roots only; REFUTED-D10 sweeps prove only absence of WIN7-D10; 11x11 empty board / two-stone root {49,60} / S2 {59,60} / class 1 / class 2 / class 4 remain UNKNOWN"
+}
