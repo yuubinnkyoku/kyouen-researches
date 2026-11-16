@@ -348,7 +348,7 @@ for r in [x[2] for x in sorted(all_rows,
 # ---------- 5. emit ----------
 inp_pins = {
     "fold_script": {
-        "path": "scripts/recompute_frontier_cost64d_receipts_20261116.py",
+        "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost64d_receipts_20261116.py",
         "git_blob_sha": git_blob_sha(SCRIPTS /
             "recompute_frontier_cost64d_receipts_20261116.py")},
     "fold_output_json": {

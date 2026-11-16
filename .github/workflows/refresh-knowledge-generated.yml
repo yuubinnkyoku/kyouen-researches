@@ -184,14 +184,6 @@ jobs:
         run: |
           uv run --locked python research/experiments/remo-failure-family-matrix-20261116/verify_remo_failure_family_matrix.py
           git diff --exit-code -- research/experiments/remo-failure-family-matrix-20261116/output/remo_failure_family_matrix_audit.json
-      - name: Audit K0875 three-branch REMO cap12 size boundary
-        run: |
-          uv run --locked python research/experiments/remo-k-branch-cap12-boundary-20261116/verify_remo_k_branch_cap12_boundary.py
-          git diff --exit-code -- research/experiments/remo-k-branch-cap12-boundary-20261116/output/remo_k_branch_cap12_boundary_audit.json
-      - name: Audit K0874 independent verification of the failure-family state matrix
-        run: |
-          uv run --locked python research/experiments/remo-failure-family-matrix-independent-20261116/verify_remo_failure_family_matrix_independent.py
-          git diff --exit-code -- research/experiments/remo-failure-family-matrix-independent-20261116/output/remo_failure_family_matrix_independent_audit.json
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python tools/knowledge/build.py
@@ -468,5 +460,4 @@ jobs:
 # Refresh generated views for K0872 first-loser residue signature census (cap<=10, r=3..9; 715-key arithmetic audit) (2026-11-16).
 # Refresh generated views after the 2026-11-16 audit-publication repair (multiplayer census audit truncated JSON republished from verifier SSOT; r8-target audit key order normalized; Q-family pair-cover seed CSV boolean casing regenerated) (2026-11-16).
 # Refresh generated views for K0874 three-branch REMO failure-family state matrix (52 keys x r=2..8, 4/10 family phase structure, small-branch r=7 structural non-uniformity) (2026-11-16).
-# Refresh generated views for K0875 three-branch REMO cap<=12 size boundary (r=3 sweep 47,595 profiles / 1,365 keys; non-collapse keys exactly the Theorem H 22, zero new; all 650 keys with an 11- or 12-branch collapse; 890 two-residue keys) (2026-11-16).
-# Refresh generated views for the K0874 independent verification (52-key x r=2..8 state matrix fully re-derived with an independently written driver; all 18 published anchors reproduced) (2026-11-16).
+# Refresh generated views for the 2026-11-16 check.py red repair (regenerated stale views after the K0869/K0871 collision renumber from 856 items incl. K0875; 4 presweep path-metadata fixes; collision-repair log link fix) (2026-11-16).

@@ -1,15 +1,15 @@
 # 移行集計
 
-K項目: 851 / alias: 274 / artifactファイル: 5200
+K項目: 856 / alias: 278 / artifactファイル: 5218
 
 ## kind
 
 | 値 | 件数 |
 |---|---:|
-| computation | 98 |
+| computation | 101 |
 | definition | 6 |
 | method | 7 |
-| proposition | 669 |
+| proposition | 671 |
 | question | 39 |
 | verification | 32 |
 
@@ -18,11 +18,11 @@ K項目: 851 / alias: 274 / artifactファイル: 5200
 | 値 | 件数 |
 |---|---:|
 | active | 13 |
-| computed | 239 |
-| conjectured | 2 |
+| computed | 242 |
+| conjectured | 3 |
 | observed | 26 |
 | open | 38 |
-| proved | 422 |
+| proved | 423 |
 | refuted | 65 |
 | scope-unclear | 1 |
 | superseded | 9 |
@@ -37,21 +37,21 @@ K項目: 851 / alias: 274 / artifactファイル: 5200
 | first-moves | 67 |
 | formalization | 5 |
 | geometry | 419 |
-| grundy | 178 |
-| maximal-safe | 242 |
+| grundy | 179 |
+| maximal-safe | 243 |
 | maximum-safe | 105 |
 | migration | 1 |
-| multiplayer | 7 |
+| multiplayer | 11 |
 | provenance | 41 |
 | reconfiguration | 38 |
 | rectangles | 200 |
-| residual-games | 124 |
+| residual-games | 125 |
 | rules | 8 |
 | search-methods | 130 |
 | square-outcomes | 101 |
 | statistics | 121 |
-| strategy-length | 102 |
-| variants | 361 |
+| strategy-length | 106 |
+| variants | 365 |
 | verification | 147 |
 
 ## 未解決・要監査・範囲不明
@@ -99,6 +99,7 @@ K項目: 851 / alias: 274 / artifactファイル: 5200
 - [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md) [conjectured] 任意の固定rank3残余核に長道を付けたGrundy列は最終的に34周期になるか
 - [K0685](../items/K0685-n11-chain-audit-wall.md) [open] 11x11空盤勝敗は領域機械の壁で留まる（S2 120件全て未証明、最良S3でも遠方ブロッカー60+）
 - [K0737](../items/K0737-assumption-unsat-drat-gap.md) [open] 候補B の assumption-UNSAT を単体の DRAT 証明へ落とす手続きは未取得である
+- [K0873](../items/K0873-two-token-z5-grundy-one-locus.md) [conjectured] 2トークン残余ゲーム z=5 のGrundy値1位置候補
 
 ## 警告
 

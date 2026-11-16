@@ -276,3 +276,7 @@
 | receipt-unclosability census | [K0865](../items/K0865-head1410-sterile-coverage-census.md) | head-1410 receipt-unclosability census — 174 個の open S5 parent 全数の STERILE 被覆分類（3 parent が残行すべて STERILE で D10 receipt 閉鎖不能・57 partial・orbit-level join） |
 | s6-s7 sweep candidate convention | [K0868](../items/K0868-n11-s6-s7-sweep-candidate-convention.md) | S6→S7 sweep候補規約の確定 — own_candidates・edge costは6石の任意の3つ組と共円にも共線にも乗らない空セル（survival moves）であり、det4整数演算で石配置から独立再導出できる |
 | survival move convention | [K0868](../items/K0868-n11-s6-s7-sweep-candidate-convention.md) | S6→S7 sweep候補規約の確定 — own_candidates・edge costは6石の任意の3つ組と共円にも共線にも乗らない空セル（survival moves）であり、det4整数演算で石配置から独立再導出できる |
+| three-branch REMO cap12 size boundary | [K0875](../items/K0875-remo-k-branch-cap12-boundary.md) | 3枝REMO決定性のサイズ境界cap≤12拡張（非坍縮キーは定理Hの22個のまま） |
+| three-branch REMO failure-family state matrix | [K0874](../items/K0874-remo-failure-family-state-matrix.md) | 3枝REMO失敗族52キーのr=2..8状態行列と4/10族の位相構造 |
+| three-branch first-loser residue signature | [K0872](../items/K0872-remo-first-loser-residue-signature.md) | 3枝REMOの非坍縮キーはr=3..8で第1敗者剰余がちょうど2種類 |
+| two-token z5 Grundy-one locus | [K0873](../items/K0873-two-token-z5-grundy-one-locus.md) | 2トークン残余ゲーム z=5 のGrundy値1位置候補 |
