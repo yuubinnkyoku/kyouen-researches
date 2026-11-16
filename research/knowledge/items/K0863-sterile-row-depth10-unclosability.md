@@ -37,6 +37,18 @@ artifacts:
 - path: research/experiments/n11-class2-lane-sterile-unclosability-20261116/output/theorem-applicability-scan-second-independent-verification-20261116.json
   role: data
   note: 第二独立検証出力29,474 bytes・sha256 899d5dee…。VERIFICATION PASSED（46比較全一致・2回実行byte-identical）・cost-69h raw batch2/batch3出版ギャップ観察（verdict不変・他186バッチファイルのraw/audit整合は完全）
+- path: research/experiments/n11-class2-lane-closability-ranking-20261116/scripts/recompute_frontier_closability_ranking_20261116.py
+  role: verifier
+  note: head-1410 frontier全行・全S5 orbitのclosability再分類。出版cost-60c fold chainをrunpyで再現（head 1410/174/6438/509109/473023…・出力blob再assert）し、scan・65j cover map・neighbor analysisを全てblobピンで接合。D4正準化・合法候補列挙はscan出版実装＋新規整数外接円/直線実装の二重実装（固定100行サンプルでbit-exact交叉検証・全6,438行でs6-s7 edge cost==自行合法候補数0不一致・12,274 parent-incidenceでchain正準形と一致）・65j receipt 17根のSTERILE行非coverを機械確認。stdlibのみ・決定論的（2回実行byte-identical・約11秒）
+- path: research/experiments/n11-class2-lane-closability-ranking-20261116/output/class-frontier-closability-ranking-1410-20261116.json
+  role: data
+  note: 再分類出力95,031 bytes・git blob c39c547d…。行分類（unswept 6,390・sterile 35・win_receipt_scheduled 9・transfer_partial 2・win_pending 2）とS5 orbit分類（own_closable 114・cross_cover_required 57・fully_sterile 3）・STERILE遮断レバレッジ（35行が91 incidence/60 orbitを遮断・22行x3+12行x2+1行x1）・定理転送・65j予約後の実残sweep作業505,675候補・次target 3件
+- path: research/experiments/n11-class2-lane-closability-ranking-20261116/output/class-frontier-s5-closability-after-cost60c-20261116.csv
+  role: data
+  note: 174 remaining S5 orbitのclosability表16,470 bytes・git blob 65215b65…。best coverable class-2 3行/209・audit-blocked 10行/698・best class-4 18行/1460がfully_sterile、第二候補5行/364はcross_cover_required、best own-closable class-2は24行/1704・any-class最小18行/1238（class-1）・class-4最小60行/4216
+- path: research/experiments/n11-class2-lane-closability-ranking-20261116/output/class-frontier-remaining-s6-worklist-1410-20261116.csv
+  role: data
+  note: 残sweep worklist 360,834 bytes・git blob 2fee1d07…。全6,438 unique remaining S6行の分類・edge cost（==自行合法候補数）・open_parents・engine/転送済み候補数・転送後open候補数（合計505,675）
 scope: 'n11 S2{59,60}のdepth-10 WIN7-D10 receipt/cover体系（MS5 S6 manifestの6石行・D4正準化covers・foldのmarginal閉鎖）に限る。行RがSTERILE（Rの全合法候補root R+tの出版verdictがREFUTED-D10・capped 0）のとき、任意のWIN7-D10 receipt root X（安全な7石位置）についてX covers Rでないことを、位置レベル補題（X covers R ⟺ canon(X) ∈ {canon(R+t): t∈legal_candidates(R)}・D4等長変換が安全性を保存することによる）とゲーム規則のD4不変性から証明する。前提はengine depth-10 verdictの健全性とD4不変性のみで、当レーンの全出版verdictと同一のtrust境界（前提が破れれば2 sweep間のverdict矛盾として検出可能）。機械検証は完全route枯渇を3 STERILE行の全canonical一石置換近傍（689/636/689軌道・出版解析と一致）にわたって(σ, own bit) witness付きで確認し、cost≤70出版route map（17子24経路）と掃済6経路（60c bit119・62b bits21/109・64c bits111/119+65k bit119）を厳密な部分集合として含む。depth>10の証拠・ capped候補のある行・receipt機構以外の閉鎖手段・engine健全性そのものの証明は含まない。STERILE行のゲーム理論的値（LOSS/WIN）には一切言及しない'
 evidence: '定理はreport.mdの補題（位置レベルの同値・Bareiss det4安全性とD4等長変換）とD4ゲーム木同型性による矛盾論法。機械検証は独立stdlib実装（候補列挙・D4正準化・covers・完全route列挙）で、V0-V5全合格・V6決定論（新プロセス2回バイト同一・audit sha256 6221d1ae…）。実証: (a) 出版route map 17子のcovers・候補数をbit-exact再現、(b) 掃済6 cross-cover経路が全てown candidateのREFUTED-D10へ写像（REFUTED-REFUTED一致6件）、(c) 最近5 WIN receipt roots（75e bits 6/10/11/37・60c bit 92）は3 STERILE行をcoverしない、(d) 先例70f bit-84のcover先70g childは自乗sweep8 WIN7-D10（非STERILE）でV4c WIN-WIN一致（canon(bit84 root)=canon(70g child+bit29)）、75e bit-10のcover先は未sweep行（いずれもerratum引用で、定理と無矛盾）、(e) 完全route map 455/490/518経路すべてのown candidate tが出版REFUTED-D10リストに含まれる、(f) 定理のout-of-sample予測（64c bits 111/119はREFUTED-D10）が並走sweep完了（64/64 REFUTED・v15+v16一致）で的中。verdict一致は計8件・矛盾0'
 ---
@@ -116,3 +128,16 @@ STERILEはLOSS証明ではない。本定理は閉鎖手段の不可能性のみ
 **データ品質観察（X4/X5/X6・verdictへの影響なし）**: cost-69h（child `0000000000000080120a000000200000`・2026-11-15 sweep）のraw batch2ファイルのbit集合が同一sweep監査のbatch-2記録と不一致（raw [9,10,14,17,19,20,21,22] vs 監査 [9,10,12,14,15,18,22,23]・子の合法候補にないbits 17/19/20/21を含み、監査記載のbits 12/15/18/23を欠く）・batch3ファイルがmain上に存在しない（監査は参照する）・被る12/69候補にraw行がない。engine mapにはこの4件の非合法rootエントリが混入する（出版集計と本検証の再現集計の双方が8,964に含む）が、circle完結を含む7石位置はD4不変の性質であり、どの合法候補rootのcanonとも衝突し得ない（X5で衝突∅を機械確認）ため、転送・targets・STERILE census・矛盾検出のいずれにも影響しない。69hのsweep verdict（WIN bits 58/96・REFUTED 67・capped 0）はaudit aggregateが全69候補を被覆しており完全。X6（監査batch記録のcandidate_bits vs rawファイル実bit集合）をcorpus全体に適用したところ、**186バッチファイル中この69h batch2のみが不一致・batch3のみが欠落**で、他レーンのraw/audit整合は完全。よってスキャンの全結論は第二実装で確定した。69h batch2/3のraw再出版は残課題（verdict不変・出版記録の整合性のみの問題）。
 
 本検証器はスキャンのmanifestピンに固定されており、入力コーパスが進化した場合（claimのin-place更新等）は`input_sha256_all_match`が赤になる設計（=スキャン再実行+再検証を要求するシグナル）。REFUTED-D10はLOSS証明ではなく、STERILE行はopenのまま。11×11空盤・二石root {49,60}/{59,60}・S2 {59,60}・class 1/2/4はすべてUNKNOWNのまま。
+
+## 追記: head-1410 frontierのclosability再分類と残sweep worklist（2026-11-16）
+
+定理のcensus（STERILE 35行）と第二独立検証済みの正準形verdict cache（8,964 verdict・115事前REFUTED-D10転送）を、head 1410（cost-60c fold chain runpy再現・`recompute_frontier_closability_ranking_20261116.py`）のfrontier簿記に接合し、全6,438 unique remaining S6行（12,274 parent-incidence・D4正準形はchain正準形と全instance一致）と174 remaining S5 orbitを閉鎖可能性で再分類した:
+
+- **S5 orbit**: own_closable 114 / cross_cover_required 57 / fully_sterile 3。fully_sterileはbest coverable class-2（3行/209・65k/70j/74h）に加え、audit-blocked（10行/698）とbest class-4（18行/1460）も自出行では絶対に閉じない。第二候補（5行/364）はcross_cover_required（64a+71d相当の2 STERILE行を含む）。best own-closable class-2は24行/1704・any-class最小18行/1238（class-1）・class-4最小60行/4216へtargetが移る。
+- **行分類**: unswept 6,390 / sterile 35（== scan census） / win_receipt_scheduled 9（pending cost-65j cover map・union 34行のうちhead 1410で残る9行・635候補はsweep不要） / transfer_partial 2（76c 76/15/61・69a 69/3/66） / win_pending 2（76d/77e・各2 WIN7-D10・fold未着地）。cost-65j自身の行はhead 1410で既に解決済み。
+- **遮断レバレッジ**: 35 STERILE行が91 parent-incidence・60 orbitを遮断（3 orbit遮断22行・2 orbit 12行・1 orbit 1行）。neighbor analysisは65k/70j/74hの3行のみで残32行は次のworklist。
+- **edge cost不変量**: 全6,438行でs6-s7 edge cost == 自行合法候補数（0不一致・新規整数外接円/直線実装とscan出版実装の二重交叉検証）なので、sum_remaining_cost 509,109 = 残自行sweep候補数。定理転送・掃済・pending cost-65j cover map予約を除く実残sweep作業は**505,675候補**。どの65j receiptもSTERILE行をcoverしない（定理の強い否定的予測と無矛盾・機械確認）。
+- **K0865との一致**: 並走レーンのK0865（サンドボックスJavaScript独立census・commit 5ada304a）は独立に同一の3 receipt-unclosable parent（3 parentのhexも完全一致）・57 partial・91/12274 STERILE参照・effRem 12183を導出しており、本python再導出（fold chain runpy再現・二重実装）と全数値で一致する。K0865が「bash復旧後に実施」と保留していたpython再現に相当する。
+- 前追記のcost-69h raw出版ギャップは並走レーンが修復済み（commit `4885d75e` 元出版コミットからbyte-exact復元・`f44f9f3a` corpus全体29監査273 raw batchのnode-sum/candidate整合監査・0不一致）。
+
+行・親のゲーム理論的値は不変。REFUTED-D10はLOSS証明でない。11×11空盤・二石root {49,60}/{59,60}・S2 {59,60}・class 1/2/4はすべてUNKNOWNのまま。
