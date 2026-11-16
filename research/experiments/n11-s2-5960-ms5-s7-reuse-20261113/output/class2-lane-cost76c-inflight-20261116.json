@@ -677,5 +677,10 @@
   "receipt_fold": {
     "status": "pending",
     "note": "No receipt has been folded from this child. Rebase against the current canonical head after certificate verification."
-  }
+  },
+  "claim_input_snapshot": {
+    "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76c-claim-input-20261117.json",
+    "git_blob_sha1": "8932f2d5e100325549a5f251a1d883558cae0708"
+  },
+  "audit_script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost76c_raw_batches_20261117.py"
 }
