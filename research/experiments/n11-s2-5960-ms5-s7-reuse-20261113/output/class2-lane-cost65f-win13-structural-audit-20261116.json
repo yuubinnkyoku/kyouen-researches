@@ -1,0 +1,338 @@
+{
+ "schema": "n11-class2-lane-cost65f-win13-structural-audit-20261116-v1",
+ "date": "2026-11-16",
+ "subject": "structural audit of all 13 cost-65f WIN7-D10 certificates of child 00000000000000809102000080000000 published in the win13 certificates manifest (schema n11-class2-lane-cost65f-win13-certificates-20261116-v1): the six marginal-in-manifest receipts bits 4/18/20/21/28/109 and the seven zero-marginal receipts bits 15/23/25/66/79/91/101 of the cost-65j fold v2 (head 1419)",
+ "method": "independent third re-implementation (BigInt board, bit = y*11+x, D4 canonicalization over the 8 board transforms, integer-only det3/det4), the same implementation family as the win2 structural audit (commit 6cbb878f) and the K0868 survival-move convention; run twice with byte-identical results; inputs are only the published win13 manifest, the 6,438-row remaining-worklist-1410 CSV, and the published win2 audit",
+ "controls": {
+  "child_hex": "00000000000000809102000080000000",
+  "s5_parent_subset_of_child": true,
+  "child_popcount": 6,
+  "child_survival_count_k0868": 65,
+  "child_d4_canonical_hex": "00000000000000809102000080000000",
+  "worklist_1410_rows": 6438,
+  "win_receipt_scheduled_rows": 9
+ },
+ "claim_checks": {
+  "all_13_root_reconstructions_exact": true,
+  "all_13_d4_canonical_hexes_match": true,
+  "all_13_survival_legal_under_k0868": true,
+  "all_13_covers_count_7_with_child": true,
+  "six_marginal_bits_each_cover_exactly_one_scheduled_row": true,
+  "seven_zero_marginal_bits_cover_no_scheduled_row": true,
+  "zero_marginal_bits_worklist_intersection_empty": true,
+  "bits_20_21_consistent_with_win2_audit": true,
+  "scheduled_rows_closed_by_65f": [
+   "00000000000000003800000008002002 (cost 64, by bit 21)",
+   "00000000000000003800000008003000 (cost 64, by bit 20)",
+   "00000000000000003800000008002200 (cost 69, by bit 109)",
+   "00000000000000003800400008002000 (cost 69, by bit 28)",
+   "00000000000000003800000408002000 (cost 74, by bit 18)",
+   "00000000000000043800000008002000 (cost 74, by bit 4)"
+  ],
+  "scheduled_rows_not_hit_by_65f_attributed_to_65j_certificates": [
+   "00000000000000003800000008480000 (cost 71)",
+   "00000000000000003800100008080000 (cost 76)",
+   "00000000010000003800000008080000 (cost 74)"
+  ],
+  "nontrivial_canonicals": "bits 91/101/109 played roots are not D4-canonical; their published canonical forms 00000000020000811202000020000000 / 00000000020000811202000000080000 / 00000000020000811202000000000800 all recomputed exactly; the other 10 bits have root == canonical"
+ },
+ "result": "all_ok: 13/13 bits pass every check; the manifest's marginal/zero-marginal split and CLOSED-row attribution are exact",
+ "bit4": {
+  "root_hex": "00000000000000809102000080000010",
+  "root_reconstruction": "child | 1<<4 = published root_hex (exact)",
+  "d4_canonical_hex": "00000000000000809102000080000010 (recomputed, matches published)",
+  "survival_legal_under_k0868": true,
+  "popcount": 7,
+  "covers_7_rows": [
+   "00000000000000009102000080000010",
+   "00000000000000043800000008002000",
+   "00000000000000801102000080000010",
+   "00000000000000808102000080000010",
+   "00000000000000809100000080000010",
+   "00000000000000809102000000000010",
+   "00000000000000809102000080000000"
+  ],
+  "child_in_covers": true,
+  "marginal_rows_in_worklist_1410": [
+   {
+    "hex": "00000000000000043800000008002000",
+    "category": "win_receipt_scheduled",
+    "own_candidates_cost": 74
+   }
+  ],
+  "covers_count_match": 7,
+  "ok": true
+ },
+ "bit15": {
+  "root_hex": "00000000000000809102000080008000",
+  "root_reconstruction": "child | 1<<15 = published root_hex (exact)",
+  "d4_canonical_hex": "00000000000000809102000080008000 (recomputed, matches published)",
+  "survival_legal_under_k0868": true,
+  "popcount": 7,
+  "covers_7_rows": [
+   "00000000000000009102000080008000",
+   "00000000000000083800000008002000",
+   "00000000000000801102000080008000",
+   "00000000000000808102000080008000",
+   "00000000000000809100000080008000",
+   "00000000000000809102000000008000",
+   "00000000000000809102000080000000"
+  ],
+  "child_in_covers": true,
+  "marginal_rows_in_worklist_1410": [],
+  "covers_count_match": 7,
+  "ok": true
+ },
+ "bit18": {
+  "root_hex": "00000000000000809102000080040000",
+  "root_reconstruction": "child | 1<<18 = published root_hex (exact)",
+  "d4_canonical_hex": "00000000000000809102000080040000 (recomputed, matches published)",
+  "survival_legal_under_k0868": true,
+  "popcount": 7,
+  "covers_7_rows": [
+   "00000000000000003800000408002000",
+   "00000000000000009102000080040000",
+   "00000000000000801102000080040000",
+   "00000000000000808102000080040000",
+   "00000000000000809100000080040000",
+   "00000000000000809102000000040000",
+   "00000000000000809102000080000000"
+  ],
+  "child_in_covers": true,
+  "marginal_rows_in_worklist_1410": [
+   {
+    "hex": "00000000000000003800000408002000",
+    "category": "win_receipt_scheduled",
+    "own_candidates_cost": 74
+   }
+  ],
+  "covers_count_match": 7,
+  "ok": true
+ },
+ "bit20": {
+  "root_hex": "00000000000000809102000080100000",
+  "root_reconstruction": "child | 1<<20 = published root_hex (exact)",
+  "d4_canonical_hex": "00000000000000809102000080100000 (recomputed, matches published)",
+  "survival_legal_under_k0868": true,
+  "popcount": 7,
+  "covers_7_rows": [
+   "00000000000000003800000008003000",
+   "00000000000000009102000080100000",
+   "00000000000000801102000080100000",
+   "00000000000000808102000080100000",
+   "00000000000000809100000080100000",
+   "00000000000000809102000000100000",
+   "00000000000000809102000080000000"
+  ],
+  "child_in_covers": true,
+  "marginal_rows_in_worklist_1410": [
+   {
+    "hex": "00000000000000003800000008003000",
+    "category": "win_receipt_scheduled",
+    "own_candidates_cost": 64
+   }
+  ],
+  "covers_count_match": 7,
+  "ok": true
+ },
+ "bit21": {
+  "root_hex": "00000000000000809102000080200000",
+  "root_reconstruction": "child | 1<<21 = published root_hex (exact)",
+  "d4_canonical_hex": "00000000000000809102000080200000 (recomputed, matches published)",
+  "survival_legal_under_k0868": true,
+  "popcount": 7,
+  "covers_7_rows": [
+   "00000000000000003800000008002002",
+   "00000000000000009102000080200000",
+   "00000000000000801102000080200000",
+   "00000000000000808102000080200000",
+   "00000000000000809100000080200000",
+   "00000000000000809102000000200000",
+   "00000000000000809102000080000000"
+  ],
+  "child_in_covers": true,
+  "marginal_rows_in_worklist_1410": [
+   {
+    "hex": "00000000000000003800000008002002",
+    "category": "win_receipt_scheduled",
+    "own_candidates_cost": 64
+   }
+  ],
+  "covers_count_match": 7,
+  "ok": true
+ },
+ "bit23": {
+  "root_hex": "00000000000000809102000080800000",
+  "root_reconstruction": "child | 1<<23 = published root_hex (exact)",
+  "d4_canonical_hex": "00000000000000809102000080800000 (recomputed, matches published)",
+  "survival_legal_under_k0868": true,
+  "popcount": 7,
+  "covers_7_rows": [
+   "00000000000000009102000080800000",
+   "00000000000000801102000080800000",
+   "00000000000000801202000080800000",
+   "00000000000000808102000080800000",
+   "00000000000000809100000080800000",
+   "00000000000000809102000000800000",
+   "00000000000000809102000080000000"
+  ],
+  "child_in_covers": true,
+  "marginal_rows_in_worklist_1410": [],
+  "covers_count_match": 7,
+  "ok": true
+ },
+ "bit25": {
+  "root_hex": "00000000000000809102000082000000",
+  "root_reconstruction": "child | 1<<25 = published root_hex (exact)",
+  "d4_canonical_hex": "00000000000000809102000082000000 (recomputed, matches published)",
+  "survival_legal_under_k0868": true,
+  "popcount": 7,
+  "covers_7_rows": [
+   "00000000000000009102000082000000",
+   "00000000000000801102000082000000",
+   "00000000000000801202000020800000",
+   "00000000000000808102000082000000",
+   "00000000000000809100000082000000",
+   "00000000000000809102000002000000",
+   "00000000000000809102000080000000"
+  ],
+  "child_in_covers": true,
+  "marginal_rows_in_worklist_1410": [],
+  "covers_count_match": 7,
+  "ok": true
+ },
+ "bit28": {
+  "root_hex": "00000000000000809102000090000000",
+  "root_reconstruction": "child | 1<<28 = published root_hex (exact)",
+  "d4_canonical_hex": "00000000000000809102000090000000 (recomputed, matches published)",
+  "survival_legal_under_k0868": true,
+  "popcount": 7,
+  "covers_7_rows": [
+   "00000000000000003800400008002000",
+   "00000000000000009102000090000000",
+   "00000000000000801102000090000000",
+   "00000000000000808102000090000000",
+   "00000000000000809100000090000000",
+   "00000000000000809102000010000000",
+   "00000000000000809102000080000000"
+  ],
+  "child_in_covers": true,
+  "marginal_rows_in_worklist_1410": [
+   {
+    "hex": "00000000000000003800400008002000",
+    "category": "win_receipt_scheduled",
+    "own_candidates_cost": 69
+   }
+  ],
+  "covers_count_match": 7,
+  "ok": true
+ },
+ "bit66": {
+  "root_hex": "00000000000000849102000080000000",
+  "root_reconstruction": "child | 1<<66 = published root_hex (exact)",
+  "d4_canonical_hex": "00000000000000849102000080000000 (recomputed, matches published)",
+  "survival_legal_under_k0868": true,
+  "popcount": 7,
+  "covers_7_rows": [
+   "00000000000000049102000080000000",
+   "00000000000000809102000080000000",
+   "00000000000000809102100000000000",
+   "00000000000000841102000080000000",
+   "00000000000000848102000080000000",
+   "00000000000000849002000080000000",
+   "00000000000000849100000080000000"
+  ],
+  "child_in_covers": true,
+  "marginal_rows_in_worklist_1410": [],
+  "covers_count_match": 7,
+  "ok": true
+ },
+ "bit79": {
+  "root_hex": "00000000000080809102000080000000",
+  "root_reconstruction": "child | 1<<79 = published root_hex (exact)",
+  "d4_canonical_hex": "00000000000080809102000080000000 (recomputed, matches published)",
+  "survival_legal_under_k0868": true,
+  "popcount": 7,
+  "covers_7_rows": [
+   "00000000000000809102000080000000",
+   "00000000000000809102000800000000",
+   "00000000000080009102000080000000",
+   "00000000000080801102000080000000",
+   "00000000000080808102000080000000",
+   "00000000000080809002000080000000",
+   "00000000000080809100000080000000"
+  ],
+  "child_in_covers": true,
+  "marginal_rows_in_worklist_1410": [],
+  "covers_count_match": 7,
+  "ok": true
+ },
+ "bit91": {
+  "root_hex": "00000000080000809102000080000000",
+  "root_reconstruction": "child | 1<<91 = published root_hex (exact)",
+  "d4_canonical_hex": "00000000020000811202000020000000 (recomputed, matches published)",
+  "survival_legal_under_k0868": true,
+  "popcount": 7,
+  "covers_7_rows": [
+   "00000000000000809102000002000000",
+   "00000000000000809102000080000000",
+   "00000000000080003800000008080000",
+   "00000000020000011202000020000000",
+   "00000000020000810202000020000000",
+   "00000000020000811002000020000000",
+   "00000000020000811200000020000000"
+  ],
+  "child_in_covers": true,
+  "marginal_rows_in_worklist_1410": [],
+  "covers_count_match": 7,
+  "ok": true
+ },
+ "bit101": {
+  "root_hex": "00000020000000809102000080000000",
+  "root_reconstruction": "child | 1<<101 = published root_hex (exact)",
+  "d4_canonical_hex": "00000000020000811202000000080000 (recomputed, matches published)",
+  "survival_legal_under_k0868": true,
+  "popcount": 7,
+  "covers_7_rows": [
+   "00000000000000809102000000002000",
+   "00000000000000809102000080000000",
+   "00000000020000003800000008080000",
+   "00000000020000011202000000080000",
+   "00000000020000810202000000080000",
+   "00000000020000811002000000080000",
+   "00000000020000811200000000080000"
+  ],
+  "child_in_covers": true,
+  "marginal_rows_in_worklist_1410": [],
+  "covers_count_match": 7,
+  "ok": true
+ },
+ "bit109": {
+  "root_hex": "00002000000000809102000080000000",
+  "root_reconstruction": "child | 1<<109 = published root_hex (exact)",
+  "d4_canonical_hex": "00000000020000811202000000000800 (recomputed, matches published)",
+  "survival_legal_under_k0868": true,
+  "popcount": 7,
+  "covers_7_rows": [
+   "00000000000000003800000008002200",
+   "00000000000000809102000000200000",
+   "00000000000000809102000080000000",
+   "00000000020000011202000000000800",
+   "00000000020000810202000000000800",
+   "00000000020000811002000000000800",
+   "00000000020000811200000000000800"
+  ],
+  "child_in_covers": true,
+  "marginal_rows_in_worklist_1410": [
+   {
+    "hex": "00000000000000003800000008002200",
+    "category": "win_receipt_scheduled",
+    "own_candidates_cost": 69
+   }
+  ],
+  "covers_count_match": 7,
+  "ok": true
+ },
+ "certificates_note": "certificate bodies (587,837 rows, 678 sub-roots, 54,037,732 extraction nodes total per the manifest; BigInt union 0/0 and Bareiss all-pass per certificate) are the publishing lane's double-verified records; this audit verifies structure only (root reconstruction, D4 canon, K0868 legality, covers, worklist cross-classification) and does not re-run the engine remotely",
+ "interpretation_guard": "bookkeeping over published records; solved counts measure manifest coverage, not game-theoretic values; WIN7-D10 certificates prove a first-player win within depth 10 from the individual 7-stone roots only; REFUTED-D10 sweeps prove only the absence of WIN7-D10; 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, class 1, class 2 and class 4 all remain UNKNOWN"
+}
