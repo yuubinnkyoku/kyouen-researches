@@ -167,7 +167,9 @@ def cross_check(x_max: int, z_max: int) -> dict:
     grundy_sorted.cache_clear()
     grundy_ordered.cache_clear()
     cases = 0
-    mismatches = []
+    engine_value_mismatches = 0
+    formula_mismatches = 0
+    examples = []
     for z in range(z_max + 1):
         for x in range(1, x_max + 1):
             for y in range(1, x + 1):
@@ -176,16 +178,23 @@ def cross_check(x_max: int, z_max: int) -> dict:
                 for R in range(total + z + 1):
                     a = grundy_sorted(R, (x, y), z)
                     b = grundy_ordered(R, (x, y), z)
-                    if a != b or ((a == 2) != (R in predicted)):
-                        mismatches.append({
+                    if a != b:
+                        engine_value_mismatches += 1
+                    if (a == 2) != (R in predicted):
+                        formula_mismatches += 1
+                    if (a != b or (a == 2) != (R in predicted)) and len(examples) < 10:
+                        examples.append({
                             "x": x, "y": y, "z": z, "R": R,
                             "sorted": a, "ordered": b,
                             "predicted_value2": R in predicted,
                         })
-                        return {"cases": cases + 1, "mismatches": mismatches}
                     cases += 1
-    return {"cases": cases, "mismatches": mismatches}
-
+    return {
+        "cases": cases,
+        "engine_value_mismatches": engine_value_mismatches,
+        "formula_mismatches": formula_mismatches,
+        "examples": examples,
+    }
 
 def main() -> None:
     parser = argparse.ArgumentParser()
