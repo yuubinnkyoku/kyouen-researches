@@ -49,8 +49,17 @@ artifacts:
 - path: research/experiments/n11-class2-lane-closability-ranking-20261116/output/class-frontier-remaining-s6-worklist-1410-20261116.csv
   role: data
   note: 残sweep worklist 360,834 bytes・git blob 2fee1d07…。全6,438 unique remaining S6行の分類・edge cost（==自行合法候補数）・open_parents・engine/転送済み候補数・転送後open候補数（合計505,675）
+- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost64h_k0863_out_of_sample_20261116.mjs
+  role: verifier
+  note: cost-64hの23 WIN7-D10 rootとK0863 STERILE censusの独立out-of-sample照合。BigInt Bareiss幾何・D4正準化・raw/v15照合を再実装し、35 STERILE行/2,628候補との重複0を確認
+- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64h-k0863-out-of-sample-audit-20261116.json
+  role: data
+  note: 10 checks PASS。64候補のD4 class 64・verdict conflict 0・WIN root 23 class、STERILE 35行とのcover overlap 0
+- path: research/log/2026-11-16-n11-class2-lane-cost64h-k0863-out-of-sample-audit.md
+  role: log
+  note: 監査方法・結果・限界・次の証明書抽出作業
 scope: 'n11 S2{59,60}のdepth-10 WIN7-D10 receipt/cover体系（MS5 S6 manifestの6石行・D4正準化covers・foldのmarginal閉鎖）に限る。行RがSTERILE（Rの全合法候補root R+tの出版verdictがREFUTED-D10・capped 0）のとき、任意のWIN7-D10 receipt root X（安全な7石位置）についてX covers Rでないことを、位置レベル補題（X covers R ⟺ canon(X) ∈ {canon(R+t): t∈legal_candidates(R)}・D4等長変換が安全性を保存することによる）とゲーム規則のD4不変性から証明する。前提はengine depth-10 verdictの健全性とD4不変性のみで、当レーンの全出版verdictと同一のtrust境界（前提が破れれば2 sweep間のverdict矛盾として検出可能）。機械検証は完全route枯渇を3 STERILE行の全canonical一石置換近傍（689/636/689軌道・出版解析と一致）にわたって(σ, own bit) witness付きで確認し、cost≤70出版route map（17子24経路）と掃済6経路（60c bit119・62b bits21/109・64c bits111/119+65k bit119）を厳密な部分集合として含む。depth>10の証拠・ capped候補のある行・receipt機構以外の閉鎖手段・engine健全性そのものの証明は含まない。STERILE行のゲーム理論的値（LOSS/WIN）には一切言及しない'
-evidence: '定理はreport.mdの補題（位置レベルの同値・Bareiss det4安全性とD4等長変換）とD4ゲーム木同型性による矛盾論法。機械検証は独立stdlib実装（候補列挙・D4正準化・covers・完全route列挙）で、V0-V5全合格・V6決定論（新プロセス2回バイト同一・audit sha256 6221d1ae…）。実証: (a) 出版route map 17子のcovers・候補数をbit-exact再現、(b) 掃済6 cross-cover経路が全てown candidateのREFUTED-D10へ写像（REFUTED-REFUTED一致6件）、(c) 最近5 WIN receipt roots（75e bits 6/10/11/37・60c bit 92）は3 STERILE行をcoverしない、(d) 先例70f bit-84のcover先70g childは自乗sweep8 WIN7-D10（非STERILE）でV4c WIN-WIN一致（canon(bit84 root)=canon(70g child+bit29)）、75e bit-10のcover先は未sweep行（いずれもerratum引用で、定理と無矛盾）、(e) 完全route map 455/490/518経路すべてのown candidate tが出版REFUTED-D10リストに含まれる、(f) 定理のout-of-sample予測（64c bits 111/119はREFUTED-D10）が並走sweep完了（64/64 REFUTED・v15+v16一致）で的中。verdict一致は計8件・矛盾0'
+evidence: '定理はreport.mdの補題（位置レベルの同値・Bareiss det4安全性とD4等長変換）とD4ゲーム木同型性による矛盾論法。機械検証は独立stdlib実装（候補列挙・D4正準化・covers・完全route列挙）で、V0-V5全合格・V6決定論（新プロセス2回バイト同一・audit sha256 6221d1ae…）。実証: (a) 出版route map 17子のcovers・候補数をbit-exact再現、(b) 掃済6 cross-cover経路が全てown candidateのREFUTED-D10へ写像（REFUTED-REFUTED一致6件）、(c) 最近5 WIN receipt roots（75e bits 6/10/11/37・60c bit 92）は3 STERILE行をcoverしない、(d) 先例70f bit-84のcover先70g childは自乗sweep8 WIN7-D10（非STERILE）でV4c WIN-WIN一致（canon(bit84 root)=canon(70g child+bit29)）、75e bit-10のcover先は未sweep行（いずれもerratum引用で、定理と無矛盾）、(e) 完全route map 455/490/518経路すべてのown candidate tが出版REFUTED-D10リストに含まれる、(f) 定理のout-of-sample予測（64c bits 111/119はREFUTED-D10）が並走sweep完了（64/64 REFUTED・v15+v16一致）で的中。verdict一致は計8件・矛盾0 cost-64h out-of-sample consistency check: 23 WIN7-D10 roots are pairwise D4-distinct and cover none of the 35 K0863 STERILE rows; all 2,628 legal candidates across those rows were independently re-enumerated. This is finite consistency evidence only and does not assign a game-theoretic value to any STERILE row.'
 ---
 
 # STERILE行depth-10閉鎖不能性定理
