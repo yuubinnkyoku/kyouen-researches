@@ -4,7 +4,11 @@ from __future__ import annotations
 
 import json
 import random
+import sys
 from pathlib import Path
+
+# The ordered recurrence is recursive in R; the published scatter reaches R>2000.
+sys.setrecursionlimit(max(sys.getrecursionlimit(), 5000))
 
 
 def mex(values: set[int]) -> int:

@@ -32,3 +32,10 @@ AはR強帰納、BはK0877、CはK0873で既知。Theorem Tにより奇数親の
 K0878をprovedとして登録し、K0832のartifact一覧、K0877の限界記述、knowledge READMEの未解決範囲、Knowledge integrityと生成ビュー更新workflowの検証器一覧を更新する。generated filesは直接編集しない。
 
 作業環境には巨大な全リポジトリ（GitHub表示サイズ約3.1GB）の作業コピーがないため、uv sync --locked、knowledge全体check、unittest全体、buildはこの実行環境では未実施。新規検証器は通常のPythonで2回実行済み。push後のGitHub Actionsで残りを確認する。
+
+
+## CIで見つかった既存検証器の実行上の問題
+
+最初のKnowledge integrity実行は、K0873のz=5,y=1検証器が固定seed散点の \(x\le2000\) を再帰計算する際、Python既定の再帰上限に達して停止した。候補式・監査値の不一致ではなく、ordered engineの呼び出し深さが約2000になる実行環境依存の問題である。
+
+検証器に再帰上限5000（既定値がそれ以上なら維持）を設定した。再帰式・探索範囲・出力内容は変更していない。次のKnowledge integrity実行でこの修正とK0878の監査が通るか確認する。
