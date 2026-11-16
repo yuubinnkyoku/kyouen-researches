@@ -1,0 +1,134 @@
+{
+ "all_checks_pass": true,
+ "certificate_bytes": 29053047,
+ "certificate_count": 23,
+ "checks": {
+  "basis_head_1452": true,
+  "cert_dir_23": true,
+  "cost76c_v17_wins_61_99": true,
+  "cross_source_conflicts_zero": true,
+  "independent_certificates_23": true,
+  "independent_sweep_23_41_0": true,
+  "no_d4_overlap_cost66i": true,
+  "no_d4_overlap_cost76c": true,
+  "no_s5_parent_fully_closed": true,
+  "parent_edge_cost_delta_3090": true,
+  "parent_row_incidences_42": true,
+  "prereg_independent_agreement": true,
+  "projected_head_1472": true,
+  "seventeen_affected_parents": true,
+  "target_parent_18_to_12": true,
+  "twenty_manifest_rows_closed": true,
+  "v17_all_64_identical": true,
+  "v17_nodes_unchanged": true,
+  "v17_wins_match": true
+ },
+ "cross_lane": {
+  "cost66i_certified_bits": [
+   19,
+   103,
+   99,
+   88,
+   28,
+   29,
+   90,
+   58,
+   112
+  ],
+  "cost66i_conflict_scan": {
+   "conflicts": 0,
+   "note": "bit 100's root canon matches the cost-64h REFUTED-D10 verdict (64h bit 103), an agreement recorded by the census v2 selection; no canon carries contradictory verdicts across sources",
+   "sources": [
+    "cost64h raw batches 1-8",
+    "cost76c v17 raw batches 1-10",
+    "cost64h fold prereg receipts"
+   ],
+   "win_refuted_agreements": {
+    "refuted_bits_also_refuted_in_64h": [
+     100
+    ],
+    "refuted_bits_also_refuted_in_76c": [],
+    "win_bits_also_win_in_64h": [],
+    "win_bits_also_win_in_76c": []
+   }
+  },
+  "cost66i_remaining_certificate_bits": [],
+  "cost66i_win_bits": [
+   19,
+   28,
+   29,
+   58,
+   88,
+   90,
+   99,
+   103,
+   112
+  ],
+  "cost76c_bit113_refuted": true,
+  "cost76c_v17_audit_blob": "235f964365a7ab33e33986c915fc7f6861e4d686",
+  "cost76c_win_bits": [
+   61,
+   99
+  ],
+  "d4_overlap_with_cost66i": [],
+  "d4_overlap_with_cost76c": []
+ },
+ "date": "2026-11-17",
+ "fold": {
+  "affected_parents": 17,
+  "basis_head": [
+   1452,
+   174,
+   6396,
+   506144,
+   4669,
+   370058
+  ],
+  "closed_manifest_rows": 20,
+  "fully_closed_s5_parents": 0,
+  "marginal": 111,
+  "marginal_in_manifest": 20,
+  "parent_edge_cost_delta": 3090,
+  "parent_row_incidences": 42,
+  "projected_head": [
+   1472,
+   174,
+   6376,
+   504672,
+   4649,
+   368586
+  ],
+  "receipts": 23,
+  "target_parent_edge_cost": [
+   1287,
+   872
+  ],
+  "target_parent_rows": [
+   18,
+   12
+  ]
+ },
+ "interpretation_guard": "Bookkeeping fold over 23 independently verified WIN7-D10 receipts. No engine search or new verdict was created. The fold closes 20 manifest S6 rows and reduces open frontier demand only. It does not close any S5 parent and is not a LOSS proof for REFUTED-D10. The 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN.",
+ "loser_reply_edges": 1584262,
+ "schema": "n11-class2-lane-cost64h-fold-audit-20261117-v1",
+ "source_blob_pins": {
+  "agreement": "9ab473ac0163755ddf541d8a9a5e44da304f8095",
+  "audit66i": "f7d8bad610fe07fee6b365e711838600722737e2",
+  "audit76c": "235f964365a7ab33e33986c915fc7f6861e4d686",
+  "claim64h": "68e4878094b78eaf0a465033d0289a6db5d94861",
+  "claim66i": "4010732a833ae15de801dfe9c2b2e7486b187955",
+  "claim76c": "6be75df147303cb21f6b357210c993724fa22f11",
+  "generator_script": "85f960508d934c5c4c266bdacaf5bcaccb8428f8",
+  "prereg": "5074a8a0cbb75fcc91b5b999a3135fac06d42400",
+  "v17": "b1a6c23b2ad0504252ab6bda3a09c23161f98107",
+  "verifier": "276e70e3dc930ffa17a02fe2280dff52b72b724c"
+ },
+ "status": "PASS",
+ "strategy_rows": 804783,
+ "terminal_count": 280569,
+ "terminal_range": [
+  13,
+  17
+ ],
+ "visited_states": 1755168
+}
