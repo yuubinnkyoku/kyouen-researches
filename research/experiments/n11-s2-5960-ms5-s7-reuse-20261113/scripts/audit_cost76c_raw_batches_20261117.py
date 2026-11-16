@@ -13,7 +13,6 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parents[1]
 OUT = HERE / "output"
-REPO_ROOT = Path(__file__).resolve().parents[4]
 OUTPUT_REL = Path("research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output")
 CLAIM_NAME = "class2-lane-cost76c-claim-input-20261117.json"
 PRESWEEP_NAME = "class2-lane-next-target-presweep-1452-20261116.json"
@@ -146,7 +145,6 @@ def main() -> None:
     check("open_plus_transferred_partition_legal_candidates",
           sorted(open_bits + transfers) == legal)
     check("three_wins_exactly_61_99_113", wins == [61, 99, 113])
-    check("winner_canons_match_presweep", True)
     check("no_capped_records", len(capped) == 0)
     check("all_raw_records_have_boolean_verdict",
           all(isinstance(row.get("loss"), bool) for row in records))
@@ -168,7 +166,7 @@ def main() -> None:
             "status_at_presweep": row["status"],
             "nodes": by_bit[bit]["nodes"],
         })
-    checks["winner_canons_match_presweep"] = len(winner_roots) == 3
+    check("winner_canons_match_presweep", len(winner_roots) == 3)
 
     node_sum = sum(row["nodes"] for row in records)
     pilot_sum = sum(batch["pilot_nodes"] for batch in batches)
