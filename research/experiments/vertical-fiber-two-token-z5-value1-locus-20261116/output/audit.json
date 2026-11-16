@@ -1,0 +1,27 @@
+{
+  "all_checks_pass": true,
+  "cache_states": {
+    "canonical": 3235296,
+    "ordered_after_scatter": 13058875
+  },
+  "checks": {
+    "candidate_value1_mismatches": 0,
+    "candidate_value2_mismatches": 0,
+    "engine_mismatches": 0,
+    "grid_states": 555500,
+    "parity_violations": 0,
+    "scatter_checked": 200,
+    "scatter_mismatches": 0,
+    "tail_violations": 0
+  },
+  "domain": {
+    "R_range": "0..x+y+8",
+    "max_x": 100,
+    "scatter_seed": 20261116,
+    "y_range": "1..x",
+    "z": 5
+  },
+  "first_mismatches": [],
+  "status": "finite-conjecture-audit",
+  "target": "two-token z=5 Grundy-1 locus"
+}
