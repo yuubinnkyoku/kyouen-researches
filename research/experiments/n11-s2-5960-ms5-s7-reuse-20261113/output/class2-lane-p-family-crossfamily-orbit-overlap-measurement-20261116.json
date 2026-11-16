@@ -1,0 +1,80 @@
+{
+ "meta": {
+  "date": "2026-11-16",
+  "lane": "class2-lane (11x11 long-term, weak solve)",
+  "title": "P family full orbit-dedup measurement + frontier-top cross-family candidate-orbit overlap",
+  "implementation": "independent third implementation (TypeScript sandbox): D4 canonical form, superset-orbit enumeration, survival legality via verified det3",
+  "related": "q-family-full-orbit-dedup (be91d324), frontier-s5-stabilizer-census (992d9713), next-targets-orbit-dedup (4caee1a7) - all same session"
+ },
+ "controls": {
+  "control_65f_child_legal_count": 65
+ },
+ "p_family": {
+  "s5_hex": "00000000000000403800000008000000",
+  "s5_stabilizer": [
+   "identity"
+  ],
+  "engine_task_list": "P (class-2 own_closable, remaining 24 children / cost 1704)",
+  "total_superset_orbits": 116,
+  "full_family_naive_candidate_searches": 8308,
+  "full_family_union_candidate_orbits": 5261,
+  "full_family_redundant": 3047,
+  "full_family_saved_pct": 36.68
+ },
+ "cross_family_measurements": {
+  "full_families": {
+   "families": [
+    "class4_full (58 orbits)",
+    "audit_blocked_full (62)",
+    "q_full (33)",
+    "p_full (116)"
+   ],
+   "naive_total": 19395,
+   "per_family_union_sum": 12067,
+   "global_union": 11949,
+   "cross_family_overlap_orbits": 118,
+   "cross_family_overlap_pct_of_unions": 0.98,
+   "pairwise_shared_candidate_orbits": {
+    "class4_audit": 1,
+    "class4_q": 0,
+    "audit_q": 34,
+    "p_class4": 2,
+    "p_audit": 81,
+    "p_q": 0
+   }
+  },
+  "remaining_top4": {
+   "families": [
+    "class4 (18 children)",
+    "audit_blocked (10)",
+    "best_coverable (3)",
+    "second_coverable (5)"
+   ],
+   "naive_total": 2731,
+   "per_family_union_sum": 2343,
+   "global_union": 2341,
+   "cross_family_overlap_orbits": 2,
+   "note": "cross-family collisions at the frontier top are negligible (0.09% of union); the per-family table captures almost all redundancy"
+  }
+ },
+ "interpretation_correction": {
+  "supersedes": "frontier-s5-stabilizer-census-20261116.json stated stabilizer order is the leading structural predictor of family-internal redundancy, based on remaining-subset measurements (18/10/3/5 children)",
+  "correction": "the P family (identity-only stabilizer) shows 36.68% full-family duplication across 116 children - nearly the class4 (38.0%) and audit_blocked (37.75%) levels. Family-internal duplication is driven primarily by FAMILY SIZE (cumulative union overlap over many children); stabilizer order is a secondary modifier. Q (order-4, 33 children) at 41.41% sits above the size trend, and the identity-family P at 116 children shows the lowest rate, so the stabilizer effect is real but modest",
+  "prior_data_validity": "the census data itself remains correct; only the causal reading of the 1.4-2.75% trivial-family values was confounded by their tiny remaining subsets (3 and 5 children)",
+  "practical_consequence": "family-level orbit transfer should be applied to ALL families (not only the 8 nontrivial-stabilizer ones) - expected remaining-subset savings scale with subset size and structure; a global cross-family table adds only ~1% (full families) to ~0.1% (frontier-top remaining) on top"
+ },
+ "recommendation": {
+  "p_sweep": "when the P engine sweep runs (24 remaining children / cost 1704), apply family-level orbit-level verdict transfer like Q: family-internal duplication is high (36.68% full-family; remaining-24 subset will be lower but structurally similar to class4's remaining measurement)",
+  "table_priority": "implement per-family seen-orbit tables first; the global table is a second-order refinement at the current frontier"
+ },
+ "interpretation_guard": {
+  "no_verdict_claim": "this measurement contains no win/loss verdicts and changes the status of no root",
+  "full_family_vs_remaining": "full-family dup rates (36-41%) describe complete families; engines only search remaining subsets whose dup rates are lower",
+  "cross_family_scope": "the 65f/63a census overlap (8.95% re-search redundancy) concerned two specific paired sweeps sharing folded roots; the frontier-top families measured here show much smaller cross-family overlap"
+ },
+ "status": {
+  "11x11_empty_board": "UNKNOWN",
+  "s2_root_59_60": "UNKNOWN",
+  "class1_class2_class4_roots": "UNKNOWN"
+ }
+}
