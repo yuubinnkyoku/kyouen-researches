@@ -1,0 +1,1759 @@
+{
+ "all_checks_pass": true,
+ "checks": [
+  {
+   "check": "engine_blob_sha1_matches_pinned_c132cc64",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "76d_raw_batch1_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "76d_batch1_bit_set_identity",
+   "detail": "v16=[0, 1, 2, 3, 4, 5, 6, 7] v17=[0, 1, 2, 3, 4, 5, 6, 7]",
+   "pass": true
+  },
+  {
+   "check": "76d_raw_batch2_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "76d_batch2_bit_set_identity",
+   "detail": "v16=[8, 9, 10, 11, 12, 15, 16, 17] v17=[8, 9, 10, 11, 12, 15, 16, 17]",
+   "pass": true
+  },
+  {
+   "check": "76d_raw_batch3_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "76d_batch3_bit_set_identity",
+   "detail": "v16=[18, 19, 20, 21, 23, 24, 25, 29] v17=[18, 19, 20, 21, 23, 24, 25, 29]",
+   "pass": true
+  },
+  {
+   "check": "76d_raw_batch4_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "76d_batch4_bit_set_identity",
+   "detail": "v16=[30, 31, 32, 35, 38, 41, 42, 44] v17=[30, 31, 32, 35, 38, 41, 42, 44]",
+   "pass": true
+  },
+  {
+   "check": "76d_raw_batch5_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "76d_batch5_bit_set_identity",
+   "detail": "v16=[45, 46, 49, 52, 53, 66, 67, 68] v17=[45, 46, 49, 52, 53, 66, 67, 68]",
+   "pass": true
+  },
+  {
+   "check": "76d_raw_batch6_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "76d_batch6_bit_set_identity",
+   "detail": "v16=[70, 71, 72, 73, 75, 76, 78, 80] v17=[70, 71, 72, 73, 75, 76, 78, 80]",
+   "pass": true
+  },
+  {
+   "check": "76d_raw_batch7_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "76d_batch7_bit_set_identity",
+   "detail": "v16=[81, 83, 85, 86, 87, 88, 89, 92] v17=[81, 83, 85, 86, 87, 88, 89, 92]",
+   "pass": true
+  },
+  {
+   "check": "76d_raw_batch8_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "76d_batch8_bit_set_identity",
+   "detail": "v16=[93, 94, 98, 99, 102, 103, 104, 105] v17=[93, 94, 98, 99, 102, 103, 104, 105]",
+   "pass": true
+  },
+  {
+   "check": "76d_raw_batch9_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "76d_batch9_bit_set_identity",
+   "detail": "v16=[106, 107, 109, 110, 111, 112, 113, 116] v17=[106, 107, 109, 110, 111, 112, 113, 116]",
+   "pass": true
+  },
+  {
+   "check": "76d_raw_batch10_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "76d_batch10_bit_set_identity",
+   "detail": "v16=[117, 118, 119, 120] v17=[117, 118, 119, 120]",
+   "pass": true
+  },
+  {
+   "check": "76d_all_10_pilots_identity_3402",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "76d_terminal_range_andclose_only_fields_differ_as_nodes",
+   "detail": "non-node field mismatches=[]",
+   "pass": true
+  },
+  {
+   "check": "76d_win_bits_unchanged",
+   "detail": "v17=[19, 49] published=[19, 49]",
+   "pass": true
+  },
+  {
+   "check": "76d_verdict_flips_zero",
+   "detail": "flips=[]",
+   "pass": true
+  },
+  {
+   "check": "76d_determinism_second_run_identical",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "77e_raw_batch1_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "77e_batch1_bit_set_identity",
+   "detail": "v16=[0, 1, 2, 3, 4, 6, 7, 8] v17=[0, 1, 2, 3, 4, 6, 7, 8]",
+   "pass": true
+  },
+  {
+   "check": "77e_raw_batch2_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "77e_batch2_bit_set_identity",
+   "detail": "v16=[9, 10, 11, 15, 17, 18, 19, 20] v17=[9, 10, 11, 15, 17, 18, 19, 20]",
+   "pass": true
+  },
+  {
+   "check": "77e_raw_batch3_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "77e_batch3_bit_set_identity",
+   "detail": "v16=[22, 23, 25, 28, 29, 30, 31, 32] v17=[22, 23, 25, 28, 29, 30, 31, 32]",
+   "pass": true
+  },
+  {
+   "check": "77e_raw_batch4_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "77e_batch4_bit_set_identity",
+   "detail": "v16=[33, 34, 37, 41, 42, 43, 44, 45] v17=[33, 34, 37, 41, 42, 43, 44, 45]",
+   "pass": true
+  },
+  {
+   "check": "77e_raw_batch5_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "77e_batch5_bit_set_identity",
+   "detail": "v16=[46, 47, 48, 53, 54, 56, 57, 59] v17=[46, 47, 48, 53, 54, 56, 57, 59]",
+   "pass": true
+  },
+  {
+   "check": "77e_raw_batch6_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "77e_batch6_bit_set_identity",
+   "detail": "v16=[61, 62, 64, 65, 67, 68, 69, 70] v17=[61, 62, 64, 65, 67, 68, 69, 70]",
+   "pass": true
+  },
+  {
+   "check": "77e_raw_batch7_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "77e_batch7_bit_set_identity",
+   "detail": "v16=[75, 76, 77, 78, 80, 85, 87, 88] v17=[75, 76, 77, 78, 80, 85, 87, 88]",
+   "pass": true
+  },
+  {
+   "check": "77e_raw_batch8_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "77e_batch8_bit_set_identity",
+   "detail": "v16=[92, 94, 95, 96, 98, 99, 101, 103] v17=[92, 94, 95, 96, 98, 99, 101, 103]",
+   "pass": true
+  },
+  {
+   "check": "77e_raw_batch9_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "77e_batch9_bit_set_identity",
+   "detail": "v16=[105, 106, 107, 108, 109, 110, 111, 112] v17=[105, 106, 107, 108, 109, 110, 111, 112]",
+   "pass": true
+  },
+  {
+   "check": "77e_raw_batch10_blob_sha1_matches_main",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "77e_batch10_bit_set_identity",
+   "detail": "v16=[114, 116, 117, 119, 120] v17=[114, 116, 117, 119, 120]",
+   "pass": true
+  },
+  {
+   "check": "77e_all_10_pilots_identity_3402",
+   "detail": "",
+   "pass": true
+  },
+  {
+   "check": "77e_terminal_range_andclose_only_fields_differ_as_nodes",
+   "detail": "non-node field mismatches=[]",
+   "pass": true
+  },
+  {
+   "check": "77e_win_bits_unchanged",
+   "detail": "v17=[37, 69] published=[37, 69]",
+   "pass": true
+  },
+  {
+   "check": "77e_verdict_flips_zero",
+   "detail": "flips=[]",
+   "pass": true
+  },
+  {
+   "check": "77e_determinism_second_run_identical",
+   "detail": "",
+   "pass": true
+  }
+ ],
+ "date": "2026-11-17",
+ "engine_blob_sha1": "c132cc6425eee3feaeef1d697dd74f968cfedb59",
+ "interpretation_guard": "bookkeeping verification only; WIN7-D10 proves a first-player win within depth 10 from the individual 7-stone roots only; REFUTED-D10 is not a LOSS proof; node-count corrections are engine-consistency bookkeeping, not a game resolution; 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60} and classes 1/2/4 remain UNKNOWN",
+ "method": "fbt-repaired v17 engine (class4_child1_runner_v17.ts, blob c132cc64) re-executed all swept bits of both rows from scratch with the published batch partitions (10 batches each), depth 10, cap 1e9 (both published rows are 0-capped), --andclose 1, fresh engine state per candidate, pilot_d6 control per batch; compared field-by-field against the published v16 raw batches 1-10; second independent full executions anchor two-run determinism",
+ "rows": {
+  "76d": {
+   "checked_bits": 76,
+   "child": "00000000040000003800080008000000",
+   "determinism_rerun": {
+    "detail": "two full independent executions agree on every bit and pilot (ms excluded)",
+    "status": "pass"
+   },
+   "node_corrections": [
+    {
+     "bit": 2,
+     "delta": -541397,
+     "v16_nodes": 6816947,
+     "v17_nodes": 6275550,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 8,
+     "delta": -30,
+     "v16_nodes": 951084,
+     "v17_nodes": 951054,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 11,
+     "delta": 1339,
+     "v16_nodes": 3549766,
+     "v17_nodes": 3551105,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 16,
+     "delta": 3233,
+     "v16_nodes": 2774856,
+     "v17_nodes": 2778089,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 18,
+     "delta": -19855,
+     "v16_nodes": 964255,
+     "v17_nodes": 944400,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 21,
+     "delta": -7664,
+     "v16_nodes": 2007017,
+     "v17_nodes": 1999353,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 42,
+     "delta": -838,
+     "v16_nodes": 535606,
+     "v17_nodes": 534768,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 44,
+     "delta": -137547,
+     "v16_nodes": 2295891,
+     "v17_nodes": 2158344,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 52,
+     "delta": 59809,
+     "v16_nodes": 3198668,
+     "v17_nodes": 3258477,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 66,
+     "delta": -17138,
+     "v16_nodes": 1935644,
+     "v17_nodes": 1918506,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 76,
+     "delta": 22561,
+     "v16_nodes": 2479557,
+     "v17_nodes": 2502118,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 87,
+     "delta": -62,
+     "v16_nodes": 3429409,
+     "v17_nodes": 3429347,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 88,
+     "delta": 16998,
+     "v16_nodes": 4366388,
+     "v17_nodes": 4383386,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 99,
+     "delta": 6070225,
+     "v16_nodes": 1952317,
+     "v17_nodes": 8022542,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 102,
+     "delta": -372,
+     "v16_nodes": 1232988,
+     "v17_nodes": 1232616,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 105,
+     "delta": 217,
+     "v16_nodes": 1245287,
+     "v17_nodes": 1245504,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 106,
+     "delta": -639,
+     "v16_nodes": 1618773,
+     "v17_nodes": 1618134,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 111,
+     "delta": -8877,
+     "v16_nodes": 2215041,
+     "v17_nodes": 2206164,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 112,
+     "delta": -7838719,
+     "v16_nodes": 10150705,
+     "v17_nodes": 2311986,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 113,
+     "delta": -3730,
+     "v16_nodes": 2478751,
+     "v17_nodes": 2475021,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 116,
+     "delta": -23517,
+     "v16_nodes": 1512720,
+     "v17_nodes": 1489203,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 117,
+     "delta": 253698,
+     "v16_nodes": 2217803,
+     "v17_nodes": 2471501,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 120,
+     "delta": -1369,
+     "v16_nodes": 903025,
+     "v17_nodes": 901656,
+     "verdict_unchanged": true
+    }
+   ],
+   "non_node_field_mismatches": [],
+   "per_bit": [
+    {
+     "batch": 1,
+     "bit": 0,
+     "v16_nodes": 243856,
+     "v17_loss": false,
+     "v17_nodes": 243856
+    },
+    {
+     "batch": 1,
+     "bit": 1,
+     "v16_nodes": 193655,
+     "v17_loss": false,
+     "v17_nodes": 193655
+    },
+    {
+     "batch": 1,
+     "bit": 2,
+     "v16_nodes": 6816947,
+     "v17_loss": false,
+     "v17_nodes": 6275550
+    },
+    {
+     "batch": 1,
+     "bit": 3,
+     "v16_nodes": 1520497,
+     "v17_loss": false,
+     "v17_nodes": 1520497
+    },
+    {
+     "batch": 1,
+     "bit": 4,
+     "v16_nodes": 806538,
+     "v17_loss": false,
+     "v17_nodes": 806538
+    },
+    {
+     "batch": 1,
+     "bit": 5,
+     "v16_nodes": 419611,
+     "v17_loss": false,
+     "v17_nodes": 419611
+    },
+    {
+     "batch": 1,
+     "bit": 6,
+     "v16_nodes": 721543,
+     "v17_loss": false,
+     "v17_nodes": 721543
+    },
+    {
+     "batch": 1,
+     "bit": 7,
+     "v16_nodes": 1073478,
+     "v17_loss": false,
+     "v17_nodes": 1073478
+    },
+    {
+     "batch": 2,
+     "bit": 8,
+     "v16_nodes": 951084,
+     "v17_loss": false,
+     "v17_nodes": 951054
+    },
+    {
+     "batch": 2,
+     "bit": 9,
+     "v16_nodes": 290695,
+     "v17_loss": false,
+     "v17_nodes": 290695
+    },
+    {
+     "batch": 2,
+     "bit": 10,
+     "v16_nodes": 307957,
+     "v17_loss": false,
+     "v17_nodes": 307957
+    },
+    {
+     "batch": 2,
+     "bit": 11,
+     "v16_nodes": 3549766,
+     "v17_loss": false,
+     "v17_nodes": 3551105
+    },
+    {
+     "batch": 2,
+     "bit": 12,
+     "v16_nodes": 869904,
+     "v17_loss": false,
+     "v17_nodes": 869904
+    },
+    {
+     "batch": 2,
+     "bit": 15,
+     "v16_nodes": 454653,
+     "v17_loss": false,
+     "v17_nodes": 454653
+    },
+    {
+     "batch": 2,
+     "bit": 16,
+     "v16_nodes": 2774856,
+     "v17_loss": false,
+     "v17_nodes": 2778089
+    },
+    {
+     "batch": 2,
+     "bit": 17,
+     "v16_nodes": 515702,
+     "v17_loss": false,
+     "v17_nodes": 515702
+    },
+    {
+     "batch": 3,
+     "bit": 18,
+     "v16_nodes": 964255,
+     "v17_loss": false,
+     "v17_nodes": 944400
+    },
+    {
+     "batch": 3,
+     "bit": 19,
+     "v16_nodes": 1738943,
+     "v17_loss": true,
+     "v17_nodes": 1738943
+    },
+    {
+     "batch": 3,
+     "bit": 20,
+     "v16_nodes": 33569,
+     "v17_loss": false,
+     "v17_nodes": 33569
+    },
+    {
+     "batch": 3,
+     "bit": 21,
+     "v16_nodes": 2007017,
+     "v17_loss": false,
+     "v17_nodes": 1999353
+    },
+    {
+     "batch": 3,
+     "bit": 23,
+     "v16_nodes": 297297,
+     "v17_loss": false,
+     "v17_nodes": 297297
+    },
+    {
+     "batch": 3,
+     "bit": 24,
+     "v16_nodes": 407415,
+     "v17_loss": false,
+     "v17_nodes": 407415
+    },
+    {
+     "batch": 3,
+     "bit": 25,
+     "v16_nodes": 4455558,
+     "v17_loss": false,
+     "v17_nodes": 4455558
+    },
+    {
+     "batch": 3,
+     "bit": 29,
+     "v16_nodes": 756046,
+     "v17_loss": false,
+     "v17_nodes": 756046
+    },
+    {
+     "batch": 4,
+     "bit": 30,
+     "v16_nodes": 631678,
+     "v17_loss": false,
+     "v17_nodes": 631678
+    },
+    {
+     "batch": 4,
+     "bit": 31,
+     "v16_nodes": 346373,
+     "v17_loss": false,
+     "v17_nodes": 346373
+    },
+    {
+     "batch": 4,
+     "bit": 32,
+     "v16_nodes": 989845,
+     "v17_loss": false,
+     "v17_nodes": 989845
+    },
+    {
+     "batch": 4,
+     "bit": 35,
+     "v16_nodes": 488448,
+     "v17_loss": false,
+     "v17_nodes": 488448
+    },
+    {
+     "batch": 4,
+     "bit": 38,
+     "v16_nodes": 1802534,
+     "v17_loss": false,
+     "v17_nodes": 1802534
+    },
+    {
+     "batch": 4,
+     "bit": 41,
+     "v16_nodes": 379652,
+     "v17_loss": false,
+     "v17_nodes": 379652
+    },
+    {
+     "batch": 4,
+     "bit": 42,
+     "v16_nodes": 535606,
+     "v17_loss": false,
+     "v17_nodes": 534768
+    },
+    {
+     "batch": 4,
+     "bit": 44,
+     "v16_nodes": 2295891,
+     "v17_loss": false,
+     "v17_nodes": 2158344
+    },
+    {
+     "batch": 5,
+     "bit": 45,
+     "v16_nodes": 174126,
+     "v17_loss": false,
+     "v17_nodes": 174126
+    },
+    {
+     "batch": 5,
+     "bit": 46,
+     "v16_nodes": 654002,
+     "v17_loss": false,
+     "v17_nodes": 654002
+    },
+    {
+     "batch": 5,
+     "bit": 49,
+     "v16_nodes": 1263398,
+     "v17_loss": true,
+     "v17_nodes": 1263398
+    },
+    {
+     "batch": 5,
+     "bit": 52,
+     "v16_nodes": 3198668,
+     "v17_loss": false,
+     "v17_nodes": 3258477
+    },
+    {
+     "batch": 5,
+     "bit": 53,
+     "v16_nodes": 475595,
+     "v17_loss": false,
+     "v17_nodes": 475595
+    },
+    {
+     "batch": 5,
+     "bit": 66,
+     "v16_nodes": 1935644,
+     "v17_loss": false,
+     "v17_nodes": 1918506
+    },
+    {
+     "batch": 5,
+     "bit": 67,
+     "v16_nodes": 1147965,
+     "v17_loss": false,
+     "v17_nodes": 1147965
+    },
+    {
+     "batch": 5,
+     "bit": 68,
+     "v16_nodes": 151086,
+     "v17_loss": false,
+     "v17_nodes": 151086
+    },
+    {
+     "batch": 6,
+     "bit": 70,
+     "v16_nodes": 120855,
+     "v17_loss": false,
+     "v17_nodes": 120855
+    },
+    {
+     "batch": 6,
+     "bit": 71,
+     "v16_nodes": 185624,
+     "v17_loss": false,
+     "v17_nodes": 185624
+    },
+    {
+     "batch": 6,
+     "bit": 72,
+     "v16_nodes": 577230,
+     "v17_loss": false,
+     "v17_nodes": 577230
+    },
+    {
+     "batch": 6,
+     "bit": 73,
+     "v16_nodes": 141703,
+     "v17_loss": false,
+     "v17_nodes": 141703
+    },
+    {
+     "batch": 6,
+     "bit": 75,
+     "v16_nodes": 292314,
+     "v17_loss": false,
+     "v17_nodes": 292314
+    },
+    {
+     "batch": 6,
+     "bit": 76,
+     "v16_nodes": 2479557,
+     "v17_loss": false,
+     "v17_nodes": 2502118
+    },
+    {
+     "batch": 6,
+     "bit": 78,
+     "v16_nodes": 360759,
+     "v17_loss": false,
+     "v17_nodes": 360759
+    },
+    {
+     "batch": 6,
+     "bit": 80,
+     "v16_nodes": 226245,
+     "v17_loss": false,
+     "v17_nodes": 226245
+    },
+    {
+     "batch": 7,
+     "bit": 81,
+     "v16_nodes": 717600,
+     "v17_loss": false,
+     "v17_nodes": 717600
+    },
+    {
+     "batch": 7,
+     "bit": 83,
+     "v16_nodes": 217741,
+     "v17_loss": false,
+     "v17_nodes": 217741
+    },
+    {
+     "batch": 7,
+     "bit": 85,
+     "v16_nodes": 401222,
+     "v17_loss": false,
+     "v17_nodes": 401222
+    },
+    {
+     "batch": 7,
+     "bit": 86,
+     "v16_nodes": 242529,
+     "v17_loss": false,
+     "v17_nodes": 242529
+    },
+    {
+     "batch": 7,
+     "bit": 87,
+     "v16_nodes": 3429409,
+     "v17_loss": false,
+     "v17_nodes": 3429347
+    },
+    {
+     "batch": 7,
+     "bit": 88,
+     "v16_nodes": 4366388,
+     "v17_loss": false,
+     "v17_nodes": 4383386
+    },
+    {
+     "batch": 7,
+     "bit": 89,
+     "v16_nodes": 821600,
+     "v17_loss": false,
+     "v17_nodes": 821600
+    },
+    {
+     "batch": 7,
+     "bit": 92,
+     "v16_nodes": 129090,
+     "v17_loss": false,
+     "v17_nodes": 129090
+    },
+    {
+     "batch": 8,
+     "bit": 93,
+     "v16_nodes": 274685,
+     "v17_loss": false,
+     "v17_nodes": 274685
+    },
+    {
+     "batch": 8,
+     "bit": 94,
+     "v16_nodes": 285495,
+     "v17_loss": false,
+     "v17_nodes": 285495
+    },
+    {
+     "batch": 8,
+     "bit": 98,
+     "v16_nodes": 1442514,
+     "v17_loss": false,
+     "v17_nodes": 1442514
+    },
+    {
+     "batch": 8,
+     "bit": 99,
+     "v16_nodes": 1952317,
+     "v17_loss": false,
+     "v17_nodes": 8022542
+    },
+    {
+     "batch": 8,
+     "bit": 102,
+     "v16_nodes": 1232988,
+     "v17_loss": false,
+     "v17_nodes": 1232616
+    },
+    {
+     "batch": 8,
+     "bit": 103,
+     "v16_nodes": 1949039,
+     "v17_loss": false,
+     "v17_nodes": 1949039
+    },
+    {
+     "batch": 8,
+     "bit": 104,
+     "v16_nodes": 727668,
+     "v17_loss": false,
+     "v17_nodes": 727668
+    },
+    {
+     "batch": 8,
+     "bit": 105,
+     "v16_nodes": 1245287,
+     "v17_loss": false,
+     "v17_nodes": 1245504
+    },
+    {
+     "batch": 9,
+     "bit": 106,
+     "v16_nodes": 1618773,
+     "v17_loss": false,
+     "v17_nodes": 1618134
+    },
+    {
+     "batch": 9,
+     "bit": 107,
+     "v16_nodes": 82945,
+     "v17_loss": false,
+     "v17_nodes": 82945
+    },
+    {
+     "batch": 9,
+     "bit": 109,
+     "v16_nodes": 354299,
+     "v17_loss": false,
+     "v17_nodes": 354299
+    },
+    {
+     "batch": 9,
+     "bit": 110,
+     "v16_nodes": 1204189,
+     "v17_loss": false,
+     "v17_nodes": 1204189
+    },
+    {
+     "batch": 9,
+     "bit": 111,
+     "v16_nodes": 2215041,
+     "v17_loss": false,
+     "v17_nodes": 2206164
+    },
+    {
+     "batch": 9,
+     "bit": 112,
+     "v16_nodes": 10150705,
+     "v17_loss": false,
+     "v17_nodes": 2311986
+    },
+    {
+     "batch": 9,
+     "bit": 113,
+     "v16_nodes": 2478751,
+     "v17_loss": false,
+     "v17_nodes": 2475021
+    },
+    {
+     "batch": 9,
+     "bit": 116,
+     "v16_nodes": 1512720,
+     "v17_loss": false,
+     "v17_nodes": 1489203
+    },
+    {
+     "batch": 10,
+     "bit": 117,
+     "v16_nodes": 2217803,
+     "v17_loss": false,
+     "v17_nodes": 2471501
+    },
+    {
+     "batch": 10,
+     "bit": 118,
+     "v16_nodes": 683580,
+     "v17_loss": false,
+     "v17_nodes": 683580
+    },
+    {
+     "batch": 10,
+     "bit": 119,
+     "v16_nodes": 363872,
+     "v17_loss": false,
+     "v17_nodes": 363872
+    },
+    {
+     "batch": 10,
+     "bit": 120,
+     "v16_nodes": 903025,
+     "v17_loss": false,
+     "v17_nodes": 901656
+    }
+   ],
+   "published_total_nodes": 96246915,
+   "published_win_bits": [
+    19,
+    49
+   ],
+   "total_nodes_v16": 96246915,
+   "total_nodes_v17": 94073241,
+   "verdict_flips": [],
+   "win_bits_v17": [
+    19,
+    49
+   ]
+  },
+  "77e": {
+   "checked_bits": 77,
+   "child": "00000000040000809002000000004000",
+   "determinism_rerun": {
+    "detail": "two full independent executions agree on every bit and pilot (ms excluded)",
+    "status": "pass"
+   },
+   "node_corrections": [
+    {
+     "bit": 0,
+     "delta": -2033452,
+     "v16_nodes": 3948711,
+     "v17_nodes": 1915259,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 2,
+     "delta": -4643,
+     "v16_nodes": 2276924,
+     "v17_nodes": 2272281,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 3,
+     "delta": 1513742,
+     "v16_nodes": 2878811,
+     "v17_nodes": 4392553,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 9,
+     "delta": 98127,
+     "v16_nodes": 1889354,
+     "v17_nodes": 1987481,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 11,
+     "delta": -17476,
+     "v16_nodes": 1413381,
+     "v17_nodes": 1395905,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 18,
+     "delta": -8990,
+     "v16_nodes": 686452,
+     "v17_nodes": 677462,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 22,
+     "delta": -27928,
+     "v16_nodes": 1391763,
+     "v17_nodes": 1363835,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 25,
+     "delta": 183273,
+     "v16_nodes": 2596894,
+     "v17_nodes": 2780167,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 28,
+     "delta": -40844,
+     "v16_nodes": 2732066,
+     "v17_nodes": 2691222,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 33,
+     "delta": -9895801,
+     "v16_nodes": 11599283,
+     "v17_nodes": 1703482,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 34,
+     "delta": 865,
+     "v16_nodes": 1845782,
+     "v17_nodes": 1846647,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 43,
+     "delta": -137,
+     "v16_nodes": 791255,
+     "v17_nodes": 791118,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 44,
+     "delta": -133,
+     "v16_nodes": 4616237,
+     "v17_nodes": 4616104,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 54,
+     "delta": -16,
+     "v16_nodes": 955198,
+     "v17_nodes": 955182,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 64,
+     "delta": 11238,
+     "v16_nodes": 2353601,
+     "v17_nodes": 2364839,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 67,
+     "delta": -1311,
+     "v16_nodes": 3250747,
+     "v17_nodes": 3249436,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 68,
+     "delta": 9908,
+     "v16_nodes": 4679010,
+     "v17_nodes": 4688918,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 85,
+     "delta": 1,
+     "v16_nodes": 1071109,
+     "v17_nodes": 1071110,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 87,
+     "delta": -635,
+     "v16_nodes": 881081,
+     "v17_nodes": 880446,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 88,
+     "delta": 92409,
+     "v16_nodes": 2096735,
+     "v17_nodes": 2189144,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 96,
+     "delta": 461376,
+     "v16_nodes": 1585873,
+     "v17_nodes": 2047249,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 98,
+     "delta": -238,
+     "v16_nodes": 2687900,
+     "v17_nodes": 2687662,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 105,
+     "delta": -4685,
+     "v16_nodes": 2088184,
+     "v17_nodes": 2083499,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 110,
+     "delta": -132006,
+     "v16_nodes": 6120211,
+     "v17_nodes": 5988205,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 111,
+     "delta": -35490,
+     "v16_nodes": 1037117,
+     "v17_nodes": 1001627,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 112,
+     "delta": -13209,
+     "v16_nodes": 639842,
+     "v17_nodes": 626633,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 114,
+     "delta": 217,
+     "v16_nodes": 574819,
+     "v17_nodes": 575036,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 116,
+     "delta": -36997,
+     "v16_nodes": 2309778,
+     "v17_nodes": 2272781,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 119,
+     "delta": -19101,
+     "v16_nodes": 1725251,
+     "v17_nodes": 1706150,
+     "verdict_unchanged": true
+    },
+    {
+     "bit": 120,
+     "delta": 17449,
+     "v16_nodes": 1079433,
+     "v17_nodes": 1096882,
+     "verdict_unchanged": true
+    }
+   ],
+   "non_node_field_mismatches": [],
+   "per_bit": [
+    {
+     "batch": 1,
+     "bit": 0,
+     "v16_nodes": 3948711,
+     "v17_loss": false,
+     "v17_nodes": 1915259
+    },
+    {
+     "batch": 1,
+     "bit": 1,
+     "v16_nodes": 79824,
+     "v17_loss": false,
+     "v17_nodes": 79824
+    },
+    {
+     "batch": 1,
+     "bit": 2,
+     "v16_nodes": 2276924,
+     "v17_loss": false,
+     "v17_nodes": 2272281
+    },
+    {
+     "batch": 1,
+     "bit": 3,
+     "v16_nodes": 2878811,
+     "v17_loss": false,
+     "v17_nodes": 4392553
+    },
+    {
+     "batch": 1,
+     "bit": 4,
+     "v16_nodes": 756242,
+     "v17_loss": false,
+     "v17_nodes": 756242
+    },
+    {
+     "batch": 1,
+     "bit": 6,
+     "v16_nodes": 321850,
+     "v17_loss": false,
+     "v17_nodes": 321850
+    },
+    {
+     "batch": 1,
+     "bit": 7,
+     "v16_nodes": 251746,
+     "v17_loss": false,
+     "v17_nodes": 251746
+    },
+    {
+     "batch": 1,
+     "bit": 8,
+     "v16_nodes": 570064,
+     "v17_loss": false,
+     "v17_nodes": 570064
+    },
+    {
+     "batch": 2,
+     "bit": 9,
+     "v16_nodes": 1889354,
+     "v17_loss": false,
+     "v17_nodes": 1987481
+    },
+    {
+     "batch": 2,
+     "bit": 10,
+     "v16_nodes": 1511576,
+     "v17_loss": false,
+     "v17_nodes": 1511576
+    },
+    {
+     "batch": 2,
+     "bit": 11,
+     "v16_nodes": 1413381,
+     "v17_loss": false,
+     "v17_nodes": 1395905
+    },
+    {
+     "batch": 2,
+     "bit": 15,
+     "v16_nodes": 2230614,
+     "v17_loss": false,
+     "v17_nodes": 2230614
+    },
+    {
+     "batch": 2,
+     "bit": 17,
+     "v16_nodes": 397674,
+     "v17_loss": false,
+     "v17_nodes": 397674
+    },
+    {
+     "batch": 2,
+     "bit": 18,
+     "v16_nodes": 686452,
+     "v17_loss": false,
+     "v17_nodes": 677462
+    },
+    {
+     "batch": 2,
+     "bit": 19,
+     "v16_nodes": 370489,
+     "v17_loss": false,
+     "v17_nodes": 370489
+    },
+    {
+     "batch": 2,
+     "bit": 20,
+     "v16_nodes": 731230,
+     "v17_loss": false,
+     "v17_nodes": 731230
+    },
+    {
+     "batch": 3,
+     "bit": 22,
+     "v16_nodes": 1391763,
+     "v17_loss": false,
+     "v17_nodes": 1363835
+    },
+    {
+     "batch": 3,
+     "bit": 23,
+     "v16_nodes": 920736,
+     "v17_loss": false,
+     "v17_nodes": 920736
+    },
+    {
+     "batch": 3,
+     "bit": 25,
+     "v16_nodes": 2596894,
+     "v17_loss": false,
+     "v17_nodes": 2780167
+    },
+    {
+     "batch": 3,
+     "bit": 28,
+     "v16_nodes": 2732066,
+     "v17_loss": false,
+     "v17_nodes": 2691222
+    },
+    {
+     "batch": 3,
+     "bit": 29,
+     "v16_nodes": 1233750,
+     "v17_loss": false,
+     "v17_nodes": 1233750
+    },
+    {
+     "batch": 3,
+     "bit": 30,
+     "v16_nodes": 757575,
+     "v17_loss": false,
+     "v17_nodes": 757575
+    },
+    {
+     "batch": 3,
+     "bit": 31,
+     "v16_nodes": 4363849,
+     "v17_loss": false,
+     "v17_nodes": 4363849
+    },
+    {
+     "batch": 3,
+     "bit": 32,
+     "v16_nodes": 577333,
+     "v17_loss": false,
+     "v17_nodes": 577333
+    },
+    {
+     "batch": 4,
+     "bit": 33,
+     "v16_nodes": 11599283,
+     "v17_loss": false,
+     "v17_nodes": 1703482
+    },
+    {
+     "batch": 4,
+     "bit": 34,
+     "v16_nodes": 1845782,
+     "v17_loss": false,
+     "v17_nodes": 1846647
+    },
+    {
+     "batch": 4,
+     "bit": 37,
+     "v16_nodes": 1819936,
+     "v17_loss": true,
+     "v17_nodes": 1819936
+    },
+    {
+     "batch": 4,
+     "bit": 41,
+     "v16_nodes": 1374580,
+     "v17_loss": false,
+     "v17_nodes": 1374580
+    },
+    {
+     "batch": 4,
+     "bit": 42,
+     "v16_nodes": 359170,
+     "v17_loss": false,
+     "v17_nodes": 359170
+    },
+    {
+     "batch": 4,
+     "bit": 43,
+     "v16_nodes": 791255,
+     "v17_loss": false,
+     "v17_nodes": 791118
+    },
+    {
+     "batch": 4,
+     "bit": 44,
+     "v16_nodes": 4616237,
+     "v17_loss": false,
+     "v17_nodes": 4616104
+    },
+    {
+     "batch": 4,
+     "bit": 45,
+     "v16_nodes": 959356,
+     "v17_loss": false,
+     "v17_nodes": 959356
+    },
+    {
+     "batch": 5,
+     "bit": 46,
+     "v16_nodes": 434422,
+     "v17_loss": false,
+     "v17_nodes": 434422
+    },
+    {
+     "batch": 5,
+     "bit": 47,
+     "v16_nodes": 1128858,
+     "v17_loss": false,
+     "v17_nodes": 1128858
+    },
+    {
+     "batch": 5,
+     "bit": 48,
+     "v16_nodes": 382106,
+     "v17_loss": false,
+     "v17_nodes": 382106
+    },
+    {
+     "batch": 5,
+     "bit": 53,
+     "v16_nodes": 165825,
+     "v17_loss": false,
+     "v17_nodes": 165825
+    },
+    {
+     "batch": 5,
+     "bit": 54,
+     "v16_nodes": 955198,
+     "v17_loss": false,
+     "v17_nodes": 955182
+    },
+    {
+     "batch": 5,
+     "bit": 56,
+     "v16_nodes": 332007,
+     "v17_loss": false,
+     "v17_nodes": 332007
+    },
+    {
+     "batch": 5,
+     "bit": 57,
+     "v16_nodes": 1551545,
+     "v17_loss": false,
+     "v17_nodes": 1551545
+    },
+    {
+     "batch": 5,
+     "bit": 59,
+     "v16_nodes": 480716,
+     "v17_loss": false,
+     "v17_nodes": 480716
+    },
+    {
+     "batch": 6,
+     "bit": 61,
+     "v16_nodes": 428340,
+     "v17_loss": false,
+     "v17_nodes": 428340
+    },
+    {
+     "batch": 6,
+     "bit": 62,
+     "v16_nodes": 1453529,
+     "v17_loss": false,
+     "v17_nodes": 1453529
+    },
+    {
+     "batch": 6,
+     "bit": 64,
+     "v16_nodes": 2353601,
+     "v17_loss": false,
+     "v17_nodes": 2364839
+    },
+    {
+     "batch": 6,
+     "bit": 65,
+     "v16_nodes": 2139500,
+     "v17_loss": false,
+     "v17_nodes": 2139500
+    },
+    {
+     "batch": 6,
+     "bit": 67,
+     "v16_nodes": 3250747,
+     "v17_loss": false,
+     "v17_nodes": 3249436
+    },
+    {
+     "batch": 6,
+     "bit": 68,
+     "v16_nodes": 4679010,
+     "v17_loss": false,
+     "v17_nodes": 4688918
+    },
+    {
+     "batch": 6,
+     "bit": 69,
+     "v16_nodes": 2623346,
+     "v17_loss": true,
+     "v17_nodes": 2623346
+    },
+    {
+     "batch": 6,
+     "bit": 70,
+     "v16_nodes": 235821,
+     "v17_loss": false,
+     "v17_nodes": 235821
+    },
+    {
+     "batch": 7,
+     "bit": 75,
+     "v16_nodes": 3269826,
+     "v17_loss": false,
+     "v17_nodes": 3269826
+    },
+    {
+     "batch": 7,
+     "bit": 76,
+     "v16_nodes": 191720,
+     "v17_loss": false,
+     "v17_nodes": 191720
+    },
+    {
+     "batch": 7,
+     "bit": 77,
+     "v16_nodes": 1500958,
+     "v17_loss": false,
+     "v17_nodes": 1500958
+    },
+    {
+     "batch": 7,
+     "bit": 78,
+     "v16_nodes": 655512,
+     "v17_loss": false,
+     "v17_nodes": 655512
+    },
+    {
+     "batch": 7,
+     "bit": 80,
+     "v16_nodes": 912988,
+     "v17_loss": false,
+     "v17_nodes": 912988
+    },
+    {
+     "batch": 7,
+     "bit": 85,
+     "v16_nodes": 1071109,
+     "v17_loss": false,
+     "v17_nodes": 1071110
+    },
+    {
+     "batch": 7,
+     "bit": 87,
+     "v16_nodes": 881081,
+     "v17_loss": false,
+     "v17_nodes": 880446
+    },
+    {
+     "batch": 7,
+     "bit": 88,
+     "v16_nodes": 2096735,
+     "v17_loss": false,
+     "v17_nodes": 2189144
+    },
+    {
+     "batch": 8,
+     "bit": 92,
+     "v16_nodes": 389451,
+     "v17_loss": false,
+     "v17_nodes": 389451
+    },
+    {
+     "batch": 8,
+     "bit": 94,
+     "v16_nodes": 130574,
+     "v17_loss": false,
+     "v17_nodes": 130574
+    },
+    {
+     "batch": 8,
+     "bit": 95,
+     "v16_nodes": 788581,
+     "v17_loss": false,
+     "v17_nodes": 788581
+    },
+    {
+     "batch": 8,
+     "bit": 96,
+     "v16_nodes": 1585873,
+     "v17_loss": false,
+     "v17_nodes": 2047249
+    },
+    {
+     "batch": 8,
+     "bit": 98,
+     "v16_nodes": 2687900,
+     "v17_loss": false,
+     "v17_nodes": 2687662
+    },
+    {
+     "batch": 8,
+     "bit": 99,
+     "v16_nodes": 600993,
+     "v17_loss": false,
+     "v17_nodes": 600993
+    },
+    {
+     "batch": 8,
+     "bit": 101,
+     "v16_nodes": 215723,
+     "v17_loss": false,
+     "v17_nodes": 215723
+    },
+    {
+     "batch": 8,
+     "bit": 103,
+     "v16_nodes": 693638,
+     "v17_loss": false,
+     "v17_nodes": 693638
+    },
+    {
+     "batch": 9,
+     "bit": 105,
+     "v16_nodes": 2088184,
+     "v17_loss": false,
+     "v17_nodes": 2083499
+    },
+    {
+     "batch": 9,
+     "bit": 106,
+     "v16_nodes": 479799,
+     "v17_loss": false,
+     "v17_nodes": 479799
+    },
+    {
+     "batch": 9,
+     "bit": 107,
+     "v16_nodes": 406134,
+     "v17_loss": false,
+     "v17_nodes": 406134
+    },
+    {
+     "batch": 9,
+     "bit": 108,
+     "v16_nodes": 272824,
+     "v17_loss": false,
+     "v17_nodes": 272824
+    },
+    {
+     "batch": 9,
+     "bit": 109,
+     "v16_nodes": 488595,
+     "v17_loss": false,
+     "v17_nodes": 488595
+    },
+    {
+     "batch": 9,
+     "bit": 110,
+     "v16_nodes": 6120211,
+     "v17_loss": false,
+     "v17_nodes": 5988205
+    },
+    {
+     "batch": 9,
+     "bit": 111,
+     "v16_nodes": 1037117,
+     "v17_loss": false,
+     "v17_nodes": 1001627
+    },
+    {
+     "batch": 9,
+     "bit": 112,
+     "v16_nodes": 639842,
+     "v17_loss": false,
+     "v17_nodes": 626633
+    },
+    {
+     "batch": 10,
+     "bit": 114,
+     "v16_nodes": 574819,
+     "v17_loss": false,
+     "v17_nodes": 575036
+    },
+    {
+     "batch": 10,
+     "bit": 116,
+     "v16_nodes": 2309778,
+     "v17_loss": false,
+     "v17_nodes": 2272781
+    },
+    {
+     "batch": 10,
+     "bit": 117,
+     "v16_nodes": 275731,
+     "v17_loss": false,
+     "v17_nodes": 275731
+    },
+    {
+     "batch": 10,
+     "bit": 119,
+     "v16_nodes": 1725251,
+     "v17_loss": false,
+     "v17_nodes": 1706150
+    },
+    {
+     "batch": 10,
+     "bit": 120,
+     "v16_nodes": 1079433,
+     "v17_loss": false,
+     "v17_nodes": 1096882
+    }
+   ],
+   "published_total_nodes": 116019458,
+   "published_win_bits": [
+    37,
+    69
+   ],
+   "total_nodes_v16": 116019458,
+   "total_nodes_v17": 106134971,
+   "verdict_flips": [],
+   "win_bits_v17": [
+    37,
+    69
+   ]
+  }
+ },
+ "schema": "n11-class2-lane-cost76d77e-v17-full-row-rechecks-20261117-v1"
+}
