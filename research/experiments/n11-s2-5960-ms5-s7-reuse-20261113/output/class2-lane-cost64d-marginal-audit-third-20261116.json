@@ -1,0 +1,300 @@
+{
+  "schema": "n11-class2-lane-cost64d-marginal-audit-third-20261116-v1",
+  "date": "2026-11-16",
+  "source_main_head": "d155647e02020f1fbff798b6fa229ed4cdb658c8",
+  "inputs": {
+    "worklist": {
+      "path": "research/experiments/n11-class2-lane-closability-ranking-20261116/output/class-frontier-remaining-s6-worklist-1410-20261116.csv",
+      "git_blob_sha": "2fee1d0718547a62e346d35f5858d7913e37c097"
+    },
+    "claim": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64d-inflight-20261116.json",
+      "git_blob_sha": "7d82f6f2f617ff433e82975a7b6e030ac8e981a3"
+    },
+    "sweep_audit": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64d-raw-sweep-audit-20261116.json",
+      "git_blob_sha": "8ebfb7213a0a16fb9792a075c4ead65d2d53f855"
+    }
+  },
+  "method": "Independent D4 re-canonicalization of all 23 WIN roots and their seven one-stone deletions. Only rows with open_candidates_after_transfers > 0 count as new marginals; no engine verdict is recomputed.",
+  "worklist_rows": 6438,
+  "legal_candidates": 64,
+  "win_roots": 23,
+  "distinct_d4_win_root_orbits": 23,
+  "raw_subset_hits": {
+    "unique_rows": 20,
+    "receipt_row_edges": 42,
+    "already_scheduled_rows_excluded": 4,
+    "already_scheduled_edges_excluded": 4
+  },
+  "new_marginals": {
+    "unique_rows": 16,
+    "receipt_row_edges": 38,
+    "receipt_coverage_histogram": {
+      "1": 10,
+      "2": 11,
+      "3": 2
+    },
+    "parent_row_incidences": 30,
+    "published_parent_rows_lost": 30,
+    "sum_projected_parent_cost_delta": -2133,
+    "projected_head": 1435
+  },
+  "per_root_marginals_match_published_audit": true,
+  "mismatches": [],
+  "swept_child_in_new_marginals": true,
+  "per_root": [
+    {
+      "bit": 0,
+      "marginal_rows": [
+        "00000000000000403800000008002000"
+      ]
+    },
+    {
+      "bit": 1,
+      "marginal_rows": [
+        "00000000000000403800000008002000"
+      ]
+    },
+    {
+      "bit": 2,
+      "marginal_rows": [
+        "00000000000000003800000008002004",
+        "00000000000000403800000008002000"
+      ]
+    },
+    {
+      "bit": 11,
+      "marginal_rows": [
+        "00000000000000403800000008002000"
+      ]
+    },
+    {
+      "bit": 16,
+      "marginal_rows": [
+        "00000000000000003800000008012000",
+        "00000000000000403800000008002000"
+      ]
+    },
+    {
+      "bit": 30,
+      "marginal_rows": [
+        "00000000000000003800000009080000",
+        "00000000000000403800000008002000"
+      ]
+    },
+    {
+      "bit": 32,
+      "marginal_rows": [
+        "00000000000000403800000008002000",
+        "00000000000000403800000108000000"
+      ]
+    },
+    {
+      "bit": 43,
+      "marginal_rows": [
+        "00000000000000403800000008002000"
+      ]
+    },
+    {
+      "bit": 53,
+      "marginal_rows": [
+        "00000000000000403800000008002000"
+      ]
+    },
+    {
+      "bit": 66,
+      "marginal_rows": [
+        "00000000000000403800000008002000"
+      ]
+    },
+    {
+      "bit": 69,
+      "marginal_rows": [
+        "00000000000000403800000008002000"
+      ]
+    },
+    {
+      "bit": 75,
+      "marginal_rows": [
+        "00000000000000083800000008080000",
+        "00000000000000403800000008002000"
+      ]
+    },
+    {
+      "bit": 79,
+      "marginal_rows": [
+        "00000000000000403800000008002000"
+      ]
+    },
+    {
+      "bit": 86,
+      "marginal_rows": [
+        "00000000000000403800000008002000",
+        "00000000000000c09002000000004000",
+        "00000000000040003800000008080000"
+      ]
+    },
+    {
+      "bit": 92,
+      "marginal_rows": [
+        "00000000000000403800000008002000",
+        "00000000000000801212000000800000"
+      ]
+    },
+    {
+      "bit": 95,
+      "marginal_rows": [
+        "00000000000000403800000008002000",
+        "00000000000000c09002000800000000"
+      ]
+    },
+    {
+      "bit": 98,
+      "marginal_rows": [
+        "00000000000000403800000008002000"
+      ]
+    },
+    {
+      "bit": 106,
+      "marginal_rows": [
+        "00000000000000403800000008002000",
+        "00000000000040809002000080000000"
+      ]
+    },
+    {
+      "bit": 107,
+      "marginal_rows": [
+        "00000000000000403800000008002000",
+        "00000000000000c09002000000800000",
+        "00000000020000801202000080000000"
+      ]
+    },
+    {
+      "bit": 109,
+      "marginal_rows": [
+        "00000000000000403800000008002000",
+        "00000000000000c09002000000000002"
+      ]
+    },
+    {
+      "bit": 111,
+      "marginal_rows": [
+        "00000000000000403800000008002000"
+      ]
+    },
+    {
+      "bit": 113,
+      "marginal_rows": [
+        "00000000000000403800000008002000",
+        "00000000000000801202080000800000"
+      ]
+    },
+    {
+      "bit": 120,
+      "marginal_rows": [
+        "00000000000000403800000008002000",
+        "00000000020000801202000000000400"
+      ]
+    }
+  ],
+  "newly_closed_rows": [
+    {
+      "s6_canonical_hex": "00000000000000003800000008002004",
+      "category": "unswept",
+      "edge_cost": 74,
+      "open_parents": 2
+    },
+    {
+      "s6_canonical_hex": "00000000000000003800000008012000",
+      "category": "unswept",
+      "edge_cost": 66,
+      "open_parents": 1
+    },
+    {
+      "s6_canonical_hex": "00000000000000003800000009080000",
+      "category": "unswept",
+      "edge_cost": 73,
+      "open_parents": 2
+    },
+    {
+      "s6_canonical_hex": "00000000000000083800000008080000",
+      "category": "unswept",
+      "edge_cost": 67,
+      "open_parents": 2
+    },
+    {
+      "s6_canonical_hex": "00000000000000403800000008002000",
+      "category": "unswept",
+      "edge_cost": 64,
+      "open_parents": 2
+    },
+    {
+      "s6_canonical_hex": "00000000000000403800000108000000",
+      "category": "unswept",
+      "edge_cost": 70,
+      "open_parents": 2
+    },
+    {
+      "s6_canonical_hex": "00000000000000801202080000800000",
+      "category": "unswept",
+      "edge_cost": 75,
+      "open_parents": 2
+    },
+    {
+      "s6_canonical_hex": "00000000000000801212000000800000",
+      "category": "unswept",
+      "edge_cost": 71,
+      "open_parents": 2
+    },
+    {
+      "s6_canonical_hex": "00000000000000c09002000000000002",
+      "category": "unswept",
+      "edge_cost": 74,
+      "open_parents": 2
+    },
+    {
+      "s6_canonical_hex": "00000000000000c09002000000004000",
+      "category": "unswept",
+      "edge_cost": 78,
+      "open_parents": 2
+    },
+    {
+      "s6_canonical_hex": "00000000000000c09002000000800000",
+      "category": "unswept",
+      "edge_cost": 67,
+      "open_parents": 2
+    },
+    {
+      "s6_canonical_hex": "00000000000000c09002000800000000",
+      "category": "unswept",
+      "edge_cost": 64,
+      "open_parents": 2
+    },
+    {
+      "s6_canonical_hex": "00000000000040003800000008080000",
+      "category": "unswept",
+      "edge_cost": 75,
+      "open_parents": 2
+    },
+    {
+      "s6_canonical_hex": "00000000000040809002000080000000",
+      "category": "unswept",
+      "edge_cost": 75,
+      "open_parents": 1
+    },
+    {
+      "s6_canonical_hex": "00000000020000801202000000000400",
+      "category": "unswept",
+      "edge_cost": 74,
+      "open_parents": 2
+    },
+    {
+      "s6_canonical_hex": "00000000020000801202000080000000",
+      "category": "unswept",
+      "edge_cost": 70,
+      "open_parents": 2
+    }
+  ],
+  "interpretation_guard": "Structural fold-prep audit only: it does not independently verify WIN7-D10 engine verdicts, does not apply the fold, and proves no game-theoretic value for any parent or the 11x11 empty board."
+}
