@@ -1,0 +1,115 @@
+{
+ "schema": "n11-class2-lane-cost65f-win2-structural-audit-20261116-v1",
+ "date": "2026-11-16",
+ "subject": "structural audit of the two cost-65f WIN7-D10 sweep receipts bits 20 and 21 of child 00000000000000809102000080000000 - the two receipts that closed the cost-64 manifest rows 00000000000000003800000008003000 and 00000000000000003800000008002002 in the cost-65j fold v2 (head-1410, remaining_covered_rows_at_1410 = 9)",
+ "method": "independent TypeScript re-implementation (BigInt board, bit = y*11+x, D4 canonicalization over the 8 board transforms, integer-only det3/det4 concyclicity/collinearity arithmetic); no engine re-run, no network verdict sources; all inputs are the published receipts recompute record (class-frontier-cost65j-receipts-recompute-20261116.json), the remaining-worklist-1410 CSV, and the published fold v2 application audit (commit 72d18d2ca016f6c2224d9466ba3537172e936109)",
+ "sweep_candidate_convention": {
+  "determined_rule": "a legal S6->S7 sweep candidate (own_candidates / edge cost) is an empty cell c such that for EVERY triple (a,b,c) of the 6 stones, det4(a,b,c,c) != 0 - i.e. the placed stone completes no circle AND lies on no line through 3 existing stones (degenerate triples included); the sweep enumerates survival moves of the side to move, and edge cost = count of such cells",
+  "arithmetic": "det4(a,b,c,cell) = det3(a,b,c) - det3(a,b,cell) + det3(a,c,cell) - det3(b,c,cell), with det3 over rows [x^2+y^2, x, y]; exact integers, Number-safe",
+  "evidence_child_65f": {
+   "child_hex": "00000000000000809102000080000000",
+   "completing_cells_inclusive": 50,
+   "survival_cells": 65,
+   "published_edge_cost": 65,
+   "match": true
+  },
+  "evidence_17_receipts": "all 17 fold-v2 receipt bits (4,15,18,20,21,23,25,28,66,79,91,101,109,112,116,118,119) are survival cells of the child under the inclusive rule",
+  "evidence_worklist_cost_column": "one representative row per cost stratum, 42 strata sampled from the 6,438-row remaining-worklist-1410 CSV: 42/42 match 115 - inclusive_completing_count",
+  "circle_only_variant_rejected": {
+   "note": "with degenerate (collinear) triples excluded, 9 of the 42 sampled rows mismatch, always with derived survival > published (completing undercounted); the inclusive rule fixes all 9",
+   "mismatches": [
+    {
+     "hex": "00000000000000003800001001800000",
+     "published": 57,
+     "circle_only_survival": 63
+    },
+    {
+     "hex": "00000000000000003800000000000025",
+     "published": 78,
+     "circle_only_survival": 90
+    },
+    {
+     "hex": "00000000020000003800000080000800",
+     "published": 82,
+     "circle_only_survival": 83
+    },
+    {
+     "hex": "00000000000000003800000000000920",
+     "published": 83,
+     "circle_only_survival": 85
+    },
+    {
+     "hex": "00000000020000003800000080000400",
+     "published": 84,
+     "circle_only_survival": 85
+    },
+    {
+     "hex": "00000000000000003800000000800c00",
+     "published": 88,
+     "circle_only_survival": 90
+    },
+    {
+     "hex": "00000000000000003800000000800101",
+     "published": 89,
+     "circle_only_survival": 96
+    },
+    {
+     "hex": "00000000000000003800000000800500",
+     "published": 91,
+     "circle_only_survival": 92
+    },
+    {
+     "hex": "00000000000000003800000000a00001",
+     "published": 93,
+     "circle_only_survival": 96
+    }
+   ]
+  },
+  "practical_meaning": "the entire own_candidates cost column of the 6,438-row worklist is independently re-derivable from the 6 stone positions alone with exact integer arithmetic; the column is a mobility lower bound for sweeps, not a game-theoretic quantity"
+ },
+ "bit20": {
+  "root_hex": "00000000000000809102000080100000",
+  "root_reconstruction": "child | 1<<20 = published root_hex (exact)",
+  "d4_canonical_hex": "00000000000000809102000080100000 (recomputed, matches published)",
+  "survival_legal": true,
+  "covers_7_rows": [
+   "00000000000000809102000080000000",
+   "00000000000000809102000000100000",
+   "00000000000000809100000080100000",
+   "00000000000000003800000008003000",
+   "00000000000000808102000080100000",
+   "00000000000000801102000080100000",
+   "00000000000000009102000080100000"
+  ],
+  "child_in_covers": true,
+  "marginal_manifest_hex_present": "00000000000000003800000008003000 in covers (the cost-64 win_receipt_scheduled row of the fold v2 CLOSED9)",
+  "marginal_non_manifest_hexes_all_in_covers": true,
+  "covers_count_match": 7
+ },
+ "bit21": {
+  "root_hex": "00000000000000809102000080200000",
+  "root_reconstruction": "child | 1<<21 = published root_hex (exact)",
+  "d4_canonical_hex": "00000000000000809102000080200000 (recomputed, matches published)",
+  "survival_legal": true,
+  "covers_7_rows": [
+   "00000000000000809102000080000000",
+   "00000000000000809102000000200000",
+   "00000000000000809100000080200000",
+   "00000000000000003800000008002002",
+   "00000000000000808102000080200000",
+   "00000000000000801102000080200000",
+   "00000000000000009102000080200000"
+  ],
+  "child_in_covers": true,
+  "marginal_manifest_hex_present": "00000000000000003800000008002002 in covers (the cost-64 win_receipt_scheduled row of the fold v2 CLOSED9)",
+  "marginal_non_manifest_hexes_all_in_covers": true,
+  "covers_count_match": 7
+ },
+ "cross_checks": {
+  "fold_v2_C3": "the fold v2 application audit (commit 72d18d2c) pinned CLOSED9 = the nine win_receipt_scheduled rows; this audit independently recomputes that bit20's root covers 00000000000000003800000008003000 and bit21's root covers 00000000000000003800000008002002, matching the manifest claim that bits 21/20 are the receipts that closed the two cost-64 rows in the cost-65j fold v2",
+  "totals_consistency": "17 receipts, total marginal 61, marginal_in_manifest 9, remaining_covered_rows_at_1410 9 - taken from the published recompute record and consistent with the covers computed here (each receipt root covers exactly 7 rows including the child)"
+ },
+ "certificates_note": "the bits 20/21 WIN7-D10 certificate bodies (43,119 and 50,284 rows, part1of2/part2of2 split, BigInt union 0/0 + Bareiss 52/52) are double-verified by the parallel lane's published records; this audit verifies structure only (root reconstruction, D4 canon, covers, legality under the determined convention) and does not re-run the engine remotely",
+ "earlier_misreading_correction": "an initial legality probe in this lane treated the circle-completing set as the legal set and therefore flagged bits 20/21 as non-legal; the determined convention is the complement (survival moves), under which bits 20/21 and all 17 receipt bits are legal. The published fold audit's C2 receipt-legality check (17/17 PASS) is consistent with the survival convention and is unaffected",
+ "interpretation_guard": "bookkeeping over published records; solved counts measure manifest coverage, not game-theoretic values; WIN7-D10 certificates prove a first-player win within depth 10 from the individual 7-stone roots only; REFUTED-D10 sweeps prove only the absence of WIN7-D10; 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, class 1, class 2 and class 4 all remain UNKNOWN"
+}
