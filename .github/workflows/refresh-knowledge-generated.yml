@@ -221,6 +221,10 @@ jobs:
         run: |
           uv run --locked python research/experiments/remo-k-branch-cap14-boundary-20261116/verify_remo_k_branch_cap14_boundary.py
           git diff --exit-code -- research/experiments/remo-k-branch-cap14-boundary-20261116/output/remo_k_branch_cap14_boundary_audit.json
+      - name: Audit K0886 three-branch REMO cap15 r=3 size boundary
+        run: |
+          uv run --locked python research/experiments/remo-k-branch-cap15-boundary-20261116/verify_remo_k_branch_cap15_boundary.py
+          git diff --exit-code -- research/experiments/remo-k-branch-cap15-boundary-20261116/output/remo_k_branch_cap15_boundary_audit.json
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python tools/knowledge/build.py
@@ -507,3 +511,4 @@ jobs:
 # Refresh generated views for K0883 three-branch REMO cap14 r=3 size boundary (Theorem H14: non-collapse keys are exactly 52 = theorem H 22 + 30 new keys each containing a size-14 branch, boundary stabilization 10->12->13 breaks at 14, FL lemma 0 violations over 123272 profiles, K0882 r=3 records fully reproduced at the D_13 subsequence positions) (2026-11-16).
 
 # Refresh generated views for K0885 two-token z=6,y=6 full Grundy boundary slice (2026-11-17).
+# Refresh generated views for K0886 three-branch REMO cap15 r=3 size boundary (Theorem H15: non-collapse keys are exactly 110 = theorem H14 52 + 58 new keys each containing a size-15 branch, gamma windows of (14,14,15)/(14,15,15) extend to 0..9, first possible survivor set {0,1} on the non-determined side, FL lemma 0 violations over 189864 profiles, K0883 r=3 records fully reproduced at the D_14 subsequence positions) (2026-11-16).
