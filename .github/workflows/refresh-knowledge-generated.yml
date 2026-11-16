@@ -164,6 +164,10 @@ jobs:
         run: |
           uv run --locked python research/experiments/remo-k-branch-r7-extension-20261116/verify_remo_k_branch_r7_extension.py
           git diff --exit-code -- research/experiments/remo-k-branch-r7-extension-20261116/output/remo_k_branch_r7_extension_audit.json
+      - name: Audit K0867 REMO r=8 target-family refutation
+        run: |
+          uv run --locked python research/experiments/remo-k-branch-r8-target-refutation-20261116/verify_r8_target.py
+          git diff --exit-code -- research/experiments/remo-k-branch-r8-target-refutation-20261116/output/audit.json
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python tools/knowledge/build.py
