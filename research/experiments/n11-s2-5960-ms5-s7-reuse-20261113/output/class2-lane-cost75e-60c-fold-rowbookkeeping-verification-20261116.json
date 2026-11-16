@@ -1,0 +1,184 @@
+{
+ "schema": "n11-class2-lane-cost75e-60c-fold-rowbookkeeping-verification-20261116-v1",
+ "date": "2026-11-16",
+ "baseline_records": {
+  "reconciled_head_1405": "class-frontier-reconciled-canonical1400-cost70g-recompute-20261116.json: head 1405/6443/509457/4713/373180 (git blob sha b3ad19d7bfd48c771d5a6827707a9f26940dc1bb; per-parent baselines for second_candidate_s5 6/439 and cost70g_parent2 48/3885 taken from its parents_at_reconciled_head)",
+  "cost75e_head_1407": "class-frontier-cost75e-receipts-recompute-20261116.json: head 1407/6441/509300/4711/373023 (git blob sha 5cd93de7ee8943681549b8f97918f6112548b373, cited by the cost-60c record)",
+  "cost60c_head_1410": "class-frontier-cost60c-receipts-recompute-20261116.json: head 1410/6438/509109/4711/373023 (fetched and verified in this run)",
+  "cost65j_row_verification": "class2-lane-cost65j-fold-rowbookkeeping-verification-20261116.json (commit a66f35c8): 1410 -> 1419 verified at the row level"
+ },
+ "method": "independent third implementation (TypeScript, same verified-det3 survival legality as the orbit-dedup measurement and the 65j row verification; det3 control: cost-65f child re-enumerates to 65), D4 canonical orbit family membership via full 116-superset enumeration per parent, per-child legal-candidate count recomputation, receipt in-manifest marginal union vs lost-children set comparison (D4-canonical), head-total accounting",
+ "verification": {
+  "cost75e_1405_to_1407": {
+   "parents_with_losses": [
+    {
+     "label": "second_candidate_s5",
+     "s5_hex": "00000000000000801202000040000000",
+     "rows_before": 6,
+     "edge_cost_before": 439,
+     "rows_after": 5,
+     "edge_cost_after": 364,
+     "n_lost": 1,
+     "lost_cost_sum": 75,
+     "baseline_published": true,
+     "rows_delta_ok": true,
+     "cost_delta_ok": true
+    },
+    {
+     "label": "cost70g_parent2",
+     "s5_hex": "00000000000000003800000008000001",
+     "rows_before": 48,
+     "edge_cost_before": 3885,
+     "rows_after": 47,
+     "edge_cost_after": 3803,
+     "n_lost": 1,
+     "lost_cost_sum": 82,
+     "baseline_published": true,
+     "rows_delta_ok": true,
+     "cost_delta_ok": true
+    },
+    {
+     "label": "cost75e_parent2",
+     "s5_hex": "00000000000000801202000000000200",
+     "rows_after": 65,
+     "edge_cost_after": 5316,
+     "n_lost": 2,
+     "lost_cost_sum": 157,
+     "baseline_published": false,
+     "note": "no per-parent 1405 baseline in the published fold JSONs; loss cross-checked via head totals, marginal union and the was_row_of record (82+75)"
+    }
+   ],
+   "unique_lost_children": [
+    {
+     "hex": "00000000040000809002000000000002",
+     "popcount6": true,
+     "cost_listed": 75,
+     "cost_recomputed": 75,
+     "n_parents": 2
+    },
+    {
+     "hex": "00000000000000801202000000000201",
+     "popcount6": true,
+     "cost_listed": 82,
+     "cost_recomputed": 82,
+     "n_parents": 2
+    }
+   ],
+   "parent_child_pairs_family_ok": "4/4 at the D4-orbit level",
+   "receipts": 4,
+   "certified": 4,
+   "receipt_bits": [
+    6,
+    10,
+    11,
+    37
+   ],
+   "zero_mim_bits": [
+    11,
+    37
+   ],
+   "marginal_union_equals_lost_children": true,
+   "head_accounting": {
+    "sum_unique_child_cost": 157,
+    "equals_cost_delta": "509457-509300",
+    "unique_children": 2,
+    "equals_rows_delta": "6443-6441"
+   },
+   "all_checks_pass": true
+  },
+  "cost60c_1407_to_1410": {
+   "parents_with_losses": [
+    {
+     "label": "class1_lift_parent",
+     "s5_hex": "00000000000000003800000000008020",
+     "rows_after": 72,
+     "edge_cost_after": 5280,
+     "n_lost": 2,
+     "lost_cost_sum": 119,
+     "baseline_published": false
+    },
+    {
+     "label": "class2_lift_parent",
+     "s5_hex": "00000000000000003800000008008000",
+     "rows_after": 49,
+     "edge_cost_after": 3491,
+     "n_lost": 1,
+     "lost_cost_sum": 60,
+     "baseline_published": false
+    },
+    {
+     "label": "class1_shared_parent",
+     "s5_hex": "00000000000000801092000000000000",
+     "rows_after": 77,
+     "edge_cost_after": 5913,
+     "n_lost": 2,
+     "lost_cost_sum": 131,
+     "baseline_published": false
+    },
+    {
+     "label": "class2_shared_parent",
+     "s5_hex": "00000000000000801212000000000000",
+     "rows_after": 68,
+     "edge_cost_after": 5376,
+     "n_lost": 1,
+     "lost_cost_sum": 72,
+     "baseline_published": false
+    },
+    {
+     "label": "unchanged_parents_vs_published_1407_baselines",
+     "note": "second_candidate_s5 5/364, best_coverable_class2 3/209, audit_blocked_class2 10/698, cost75e_parent2 65/5316 all byte-identical to the cost-75e parents_after records (untouched by this fold, 0 lost rows each)",
+     "ok": true
+    }
+   ],
+   "baseline_gap_note": "the four lift/shared parents have no per-parent 1407 rows_before in the published fold JSONs; their losses are cross-checked via head totals, the receipt marginal union, and the in_manifest_marginals was_row_of records",
+   "unique_lost_children": [
+    {
+     "hex": "00000000000000003800000008008020",
+     "popcount6": true,
+     "cost_listed": 60,
+     "cost_recomputed": 60,
+     "n_parents": 2
+    },
+    {
+     "hex": "00000000000000801092200000000000",
+     "popcount6": true,
+     "cost_listed": 59,
+     "cost_recomputed": 59,
+     "n_parents": 2
+    },
+    {
+     "hex": "00000000000000801292000000000000",
+     "popcount6": true,
+     "cost_listed": 72,
+     "cost_recomputed": 72,
+     "n_parents": 2
+    }
+   ],
+   "parent_child_pairs_family_ok": "6/6 at the D4-orbit level",
+   "receipts": 1,
+   "certified": 1,
+   "receipt_bits": [
+    92
+   ],
+   "marginal_union_equals_lost_children": true,
+   "head_accounting": {
+    "sum_unique_child_cost": 191,
+    "equals_cost_delta": "509300-509109",
+    "unique_children": 3,
+    "equals_rows_delta": "6441-6438"
+   },
+   "all_checks_pass": true
+  }
+ },
+ "chain_completion": "with the cost-65j row verification (commit a66f35c8), the entire 1405 -> 1419 chain is now third-implementation verified at the row level: 14 unique lost children (75e: 2, 60c: 3, 65j: 9), sum 157+191+635 = 983 = 509457-508474, rows 2+3+9 = 14 = 6443-6429, solved 1405+14 = 1419; all fold deltas accounted with zero residual",
+ "forward_notes": {
+  "sterile_rows_still_open": [
+   "65k 00000000020000801202000000200000",
+   "70j 00000000000000801282000000200000",
+   "74h 00000000000000889002000000000800"
+  ],
+  "next_neighbor_candidate": "cost 62 00000000000000801282020000000000 - pre-check 70j-row coverage before sweeping (60c record)",
+  "recommendation_for_future_fold_jsons": "publish per-parent rows_before/edge_cost_before for every affected parent so row-level verification does not depend on head totals for parents absent from the top-rank baselines (this run found two such gaps: cost75e_parent2 at 75e, and the four lift/shared parents at 60c)"
+ },
+ "interpretation_guard": "bookkeeping verification over published fold records; solved counts measure manifest coverage, not the game-theoretic value of any position; WIN7 certificates prove a first-player win within depth 10 from the individual 7-stone roots only; REFUTED-D10 sweeps prove only absence of WIN7-D10; STERILE rows are unclosable by depth-10 WIN7 receipts, which is NOT a LOSS proof; 11x11 empty board / two-stone root {49,60} / S2 {59,60} / class 1 / class 2 / class 4 remain UNKNOWN"
+}
