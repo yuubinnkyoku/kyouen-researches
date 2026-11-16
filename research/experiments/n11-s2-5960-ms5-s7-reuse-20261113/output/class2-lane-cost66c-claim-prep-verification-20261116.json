@@ -1,0 +1,54 @@
+{
+ "schema": "n11-class2-lane-cost66c-claim-prep-verification-20261116-v1",
+ "date": "2026-11-16",
+ "title": "cost-66c IN FLIGHT claim v1 pre-publication structural verification (pre-sweep): 8/8 PASS",
+ "claim_file": "class2-lane-cost66c-inflight-20261116.json",
+ "claim_schema": "n11-class2-lane-cost66c-inflight-20261116-v1",
+ "child": "00000000000000003800000008002008",
+ "basis": "published artifacts only: head-1441 census v4 (blob 3dcb7cb6), cost-65n raw batches 1-8 + claim v2 (commit 6e85762f), cost-65n win2 certificates manifest, cost-65o post-cost65n overlap audit canon lists, legal_candidates.py, class4_child1_runner_v16.ts + test",
+ "checks": [
+  {
+   "check": "child legal candidate re-enumeration (legal_candidates.py, independent Bareiss)",
+   "detail": "66 legal bits, bit-exact vs the census bit table bit list",
+   "pass": true
+  },
+  {
+   "check": "census bit table canon reproduction (independent D4 implementation)",
+   "detail": "66/66 root_canon values reproduced bit-exact from child|1<<bit",
+   "pass": true
+  },
+  {
+   "check": "candidate orbit distinctness",
+   "detail": "66/66 distinct D4 orbits",
+   "pass": true
+  },
+  {
+   "check": "open/transferred partition",
+   "detail": "open 59 + harvested_refuted 7 = 66 legal",
+   "pass": true
+  },
+  {
+   "check": "post-cost65n overlap: swept roots",
+   "detail": "59 cost-65n swept root canons (57 REFUTED-D10 + 2 WIN7-D10) overlap 0 of the 66 candidate canons; no new transfers",
+   "pass": true
+  },
+  {
+   "check": "post-cost65n overlap: covered S6 rows",
+   "detail": "child canon 00000000000000003800000008002008 not among the 13 covered row orbits of the two cost-65n receipts",
+   "pass": true
+  },
+  {
+   "check": "child stone set",
+   "detail": "stones [3,13,27,59,60,61]; one-stone deletion of bit 3 = shared parent 00000000000000003800000008002000; other 5 deletions are closed orbits at head 1441",
+   "pass": true
+  },
+  {
+   "check": "v16 engine published test re-run",
+   "detail": "class4_child1_runner_v16.test.ts PASS (pilot 3402, bit15 56791, bit0 121837)",
+   "pass": true
+  }
+ ],
+ "all_pass": true,
+ "interpretation_guard": "claim bookkeeping only: no engine search was run for this row beyond the published v16 test vectors; no verdict was created; REFUTED-D10 is not a LOSS proof; transfers are D4-canonical identities of published depth-10 engine results",
+ "unknown_status": "11x11 empty board, two-stone roots {49,60} and {59,60}, S2 {59,60}, and classes 1/2/4 all remain UNKNOWN"
+}
