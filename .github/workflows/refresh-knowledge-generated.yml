@@ -172,6 +172,10 @@ jobs:
         run: |
           uv run --locked python research/experiments/remo-k-branch-r8-sweep-20261116/verify_remo_k_branch_r8_sweep.py
           git diff --exit-code -- research/experiments/remo-k-branch-r8-sweep-20261116/output/remo_k_branch_r8_sweep_audit.json
+      - name: Audit K0872 three-branch REMO first-loser residue signature
+        run: |
+          uv run --locked python research/experiments/remo-first-loser-residue-signature-20261116/verify_first_loser_residue_signature.py
+          git diff --exit-code -- research/experiments/remo-first-loser-residue-signature-20261116/output/audit.json
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python tools/knowledge/build.py
@@ -445,3 +449,4 @@ jobs:
 # Refresh generated views for the K0869 REMO 3-branch r=8 boundary (Theorem I r=8 exact 10-key (6,6,8)/(6,8,8) gamma<=4, first gamma>=3 failing range, total collapse of all 34 previous failing keys, K0867 cross-check, FL/G'/Delta=0 r=8 anchors) (2026-11-16).
 # Refresh generated views after the K0869 r=8 boundary sweep audit JSON publication (2026-11-16).
 # Refresh generated views after the K0869 id-collision repair (later-arriving p2647 DRAT audit renumbered K0869->K0871; the K0869 id now belongs to the REMO r=8 boundary only) (2026-11-16).
+# Refresh generated views for K0872 first-loser residue signature census (cap<=10, r=3..9; 715-key arithmetic audit) (2026-11-16).
