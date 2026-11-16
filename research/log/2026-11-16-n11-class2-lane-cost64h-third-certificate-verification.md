@@ -10,7 +10,7 @@
 
 ## 結果
 
-<badge>6 / 6 PASS</badge>
+**6 / 6 PASS**
 
 | bit | root mobility / subroots | strategy rows | visited states | terminals |
 |---:|---:|---:|---:|---:|
