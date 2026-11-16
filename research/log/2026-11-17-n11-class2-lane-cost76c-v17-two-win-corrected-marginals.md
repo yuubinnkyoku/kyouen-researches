@@ -64,7 +64,7 @@ Thus a rows file can be emitted alongside a fatal result. Any extraction wrapper
 - Reproducer: `research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost76c_v17_corrected_candidate_marginals_20261117.py` (blob `49e4852757774002118461c6e21da8f958463513`).
 - Corrected projection: `research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76c-v17-corrected-candidate-manifest-marginals-20261117.json` (blob `3469cf3649ae3ab859edb33bf944ff0f13f229b0`).
 - v17 source audit: `class2-lane-cost76c-v17-sweep-and-fbt-saturation-audit-20261117.json` (blob `235f964365a7ab33e33986c915fc7f6861e4d686`).
-- Active claim updated in place: `class2-lane-cost76c-inflight-20261116.json` (blob `60090e7c36454e5ecda00d0ca5de5afa18bc5a19`), schema v4. It preserves the v16 execution as history, records v17 as the current result, marks v15 cross-engine agreement complete, excludes bit 113, and records the extractor fail-closed requirement.
+- Active claim updated in place: `class2-lane-cost76c-inflight-20261116.json`, schema v4. It preserves the v16 execution as history, records v17 as the current result, marks v15 cross-engine agreement complete, excludes bit 113, and records the extractor fail-closed requirement.
 
 The raw-batch reaggregation and assertions were executed directly against the fetched GitHub file contents in this audit session. The published Python reproducer was added for checkout-based reproduction but was not executed in a local clone: the container could not resolve github.com. CI and Knowledge integrity runs for the latest claim commit were queued at log time; no passing result is claimed.
 
