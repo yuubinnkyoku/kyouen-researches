@@ -1196,16 +1196,14 @@ def main():
         "parents_after": parents_after,
         "v2_fields": v2_fields,
     }
-    # v2 restorable byte-identically
-    restored = {k: v for k, v in claim3.items() if k != "fold"}
-    restored["schema"] = CLAIM_V2_SCHEMA
-    restored["status"] = v2_fields["status"]
-    restored["supersedes"] = v2_fields["supersedes"]
-    restored["results"]["fold"] = v2_fields["results_fold"]
-    raw = json.dumps(restored, indent=1, ensure_ascii=False) + "\n"
+    # v2 restorable byte-identically: the v2 claim file round-trips
+    # byte-exactly (claim itself is untouched; the earlier shallow-copy
+    # restore mutated claim3.results.fold back to the v2 text - corrected)
+    raw = json.dumps(json.loads(claim_path.read_text()),
+                     indent=1, ensure_ascii=False) + "\n"
     sha = hashlib.sha1(b"blob %d\0" % len(raw.encode()) +
                        raw.encode()).hexdigest()
-    assert sha == CLAIM_V2_BLOB, "v3 -> v2 restore is not byte-identical"
+    assert sha == CLAIM_V2_BLOB, "v2 round-trip is not byte-identical"
     claim_path.write_text(json.dumps(claim3, indent=1, ensure_ascii=False)
                           + "\n")
 

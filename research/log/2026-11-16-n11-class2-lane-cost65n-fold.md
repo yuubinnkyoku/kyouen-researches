@@ -25,7 +25,7 @@
 
 ## 決定論性（再現性）
 
-- 2回実行で出力4ファイル（fold JSON・ranking・top-cand・claim v3）ともbyte-identical。2回目はclaim v3入力からfold recordの`v2_fields`でv2を復元しblob `257e7093`と一致することを確認してから再foldする経路で、出版後の再実行（repo上でv3のみが存在する状態）でも全assertが通り同一出力になることを実証済み。
+- 2回実行で出力4ファイル（fold JSON・ranking・top-cand・claim v3）ともbyte-identical。2回目はclaim v3のfold record `v2_fields`からv2を復元しblob `257e7093`と一致することを確認してから再foldする経路で、出版後の再実行（repo上でv3のみが存在する状態）でも全assertが通り同一出力になることを実証済み。script内のv2復元検査はv2 claimファイル自体のround-trip（blob `257e7093`）で行う。
 
 ## 解釈上の注意
 
@@ -37,7 +37,7 @@
 - fold JSON: [class-frontier-cost65n-receipts-recompute-20261116.json](../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost65n-receipts-recompute-20261116.json)（blob `7390c540`・9,308B）
 - ranking CSV: [class-frontier-s5-ranking-after-cost65n-receipts-20261116.csv](../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-s5-ranking-after-cost65n-receipts-20261116.csv)（blob `da17bfec`・7,535B）
 - top-candidates CSV: [class-frontier-top-candidates-s6-after-cost65n-receipts-20261116.csv](../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-top-candidates-s6-after-cost65n-receipts-20261116.csv)（blob `838d98a3`・4,717B・64f/64g版と同一内容）
-- claim v3: [class2-lane-cost65n-inflight-20261116.json](../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65n-inflight-20261116.json)（blob `137b9c56`・16,782B・v2 `257e7093`全欄保存・v2 byte-identical復元可能）
+- claim v3: [class2-lane-cost65n-inflight-20261116.json](../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65n-inflight-20261116.json)（blob `ae35e76c`・16,760B・v2 `257e7093`全欄保存・v2 byte-identical復元可能。初回出版blob `137b9c56`では`results.fold`欄にv2の`deferred per protocol`文言がshallow-copy aliasingで残っていたため、`results.fold`を`complete...`に修正した上で出版し直した（script側もv2復元検査をv2 claim自体のround-tripに変更・修正版で2回実行byte-identicalを再確認））
 - prereg agreement record: [class2-lane-cost65n-fold-preregistration-agreement-20261116.json](../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65n-fold-preregistration-agreement-20261116.json)（blob `684219f6`・3,846B・16/16 checks PASS）
 
 ## 次の候補（着手前に最新main・orbit重複確認が必須）

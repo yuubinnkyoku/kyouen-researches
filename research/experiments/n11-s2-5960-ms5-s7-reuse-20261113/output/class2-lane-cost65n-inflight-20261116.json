@@ -460,7 +460,7 @@
   },
   "candidate_enumeration": "65 legal candidates bit-exact vs legal_candidates.py (independent exact-integer Bareiss 4x4), asserted in the head-1441 pre-sweep census before the sweep and re-derived by the raw-sweep audit",
   "k0863_consequence": "not applicable: the row is NOT sterile (two WIN7-D10 receipt roots cover it), so K0863 does not block a fold; the row remains an open manifest row at head 1441 until the receipts are folded",
-  "fold": "deferred per protocol: 2 WIN7-D10 receipts (bits 90 and 117) ready to fold on the head-1441 chain in the chain-reproduction session; head 1441 unchanged until then"
+  "fold": "complete: the two receipts are folded by recompute_frontier_cost65n_receipts_20261116.py; new canonical head 1444/174/6404/506746/4677/370660"
  },
  "fold": {
   "schema": "n11-class2-lane-cost65n-fold-20261116-v1",
