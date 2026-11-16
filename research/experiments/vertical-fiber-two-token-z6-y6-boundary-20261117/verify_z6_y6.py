@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Independent finite audit for the proved two-token residual slice z=6, y=5.
+"""Independent finite audit for the proved two-token residual slice z=6, y=6.
 
 The unbounded result is proved in report.md by R-strong induction from the
-z=6,y=4 and z=5 anchors, the signature table, Theorem T, and the tail theorem.
+z=5 and z=6,y=5 anchors, the signature table, Theorem T, and the tail theorem.
 This script checks the recurrence in two independent state representations,
 the complete pre-tail signature table on a large x-range, and the tail.
 """
