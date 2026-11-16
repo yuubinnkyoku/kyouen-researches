@@ -1,8 +1,8 @@
 {
- "schema": "n11-class2-lane-cost64f-completed-20261116-v4",
+ "schema": "n11-class2-lane-cost64f-completed-20261116-v5",
  "title": "n11 class2-lane cost-64f completed NOT-STERILE: 3 WIN7-D10, 61 REFUTED-D10 total; counter corrected and cross-row cache reuse audited",
  "date": "2026-11-16",
- "status": "completed NOT-STERILE on 2026-11-16; v4 corrects results.refuted_d10_count from 64 to 61 (56 swept REFUTED-D10 + 5 transferred REFUTED-D10), with 3 WIN7-D10 and 0 capped; all 64 candidates are determined. The three WIN certificates remain independently verified; fold remains deferred and canonical head stays 1435.",
+ "status": "fold complete on 2026-11-16 by the long-term lane session: the 3 WIN7-D10 receipts (bits 39, 72, 107) were folded on the cost-64d chain head 1435 by recompute_frontier_cost64f_receipts_20261116.py (runpy chain reproduction: the published reconstruct_tmp_* prerequisites plus the whole fold chain 84a..70g -> canonical 1405 -> cost-75e 1407 -> cost-60c 1410 -> cost-65j 1419 -> cost-64d 1435, all byte-identical), closing exactly 3 rows (the child by bit 39, plus 2 further rows by bit 107) for the new canonical head 1438/174/6410/507143/4683/371057; conflict census zero overlaps vs the 757 distinct folded roots (743 D4 canons) at 1435; the row is NOT sterile and is now closed in the manifest; both direct open class-2 parents hold no further row of the child; REFUTED-D10 is not a LOSS proof; 11x11 empty board, two-stone roots {49,60} and {59,60}, S2 {59,60}, and classes 1/2/4 all remain UNKNOWN",
  "claimed_by": "n11 long-term lane session (next-target cheapest-first continuation after the cost-64e STERILE determination)",
  "s5_target": "00000000000000003800000008002000",
  "s6_child": "0000000000000080120a000000800000",
@@ -537,7 +537,7 @@
   "determined_d10_count": 64,
   "count_identity": "candidate_count = win7_d10_count + refuted_d10_count + capped_count; refuted_d10_count = swept_refuted_v16 + transferred_refuted"
  },
- "supersedes": "v3 (blob 5159e0ac0ba9591e95ee6a9ab7a01aeb9e899f6e); all v3 fields retained, only the REFUTED-D10 count semantics are corrected and split counts made explicit.",
+ "supersedes": "v4 (counter-corrected completed NOT-STERILE claim with the cross-row cache reuse audit, git blob b9d0f9fa714237ca5f7cfffcedc2d7917fee8eb3, which itself corrected results.refuted_d10_count from 64 to 61 = 56 swept + 5 transferred and superseded the v3 parent-metadata-corrected claim blob 5159e0ac0ba9591e95ee6a9ab7a01aeb9e899f6e; all v1/v2/v3/v4 fields preserved)",
  "protocol_anchor_s5_parent": "00000000000000403800000008000000",
  "s5_target_role": "protocol parent containing the selected S6 row; the complete direct-parent set is listed separately",
  "direct_s5_parents": [
@@ -594,5 +594,41 @@
  },
  "supersedes_history": [
   "v1 (in-flight claim git blob fba4ebcf94e82766671305ce68382dd51c4d17df, all v1 fields preserved); v2 (git blob 48d2de0c0cac1656533a99b8b729297ad95a4307, all sweep and certificate fields preserved; v3 corrects only parent ownership metadata)"
- ]
+ ],
+ "fold": {
+  "date": "2026-11-16",
+  "baseline": "1435/174/6413/507337/4686/371251 reproduced byte-identically by runpy of recompute_frontier_cost64d_receipts_20261116.py (which internally reproduces the whole published chain, including the cost-65j and cost-60c folds, the cost-75e fold, the reconciled canonical 1405 head and the published reconstruct_tmp_* prerequisites); the five cost-64d output blobs re-asserted byte-identical",
+  "head_before": "1435/174/6413/507337/4686/371251",
+  "head_after": "1438/174/6410/507143/4683/371057",
+  "rows_closed": 3,
+  "rows_closed_hexes": [
+   "0000000000000080120a000000800000",
+   "00000000000000a09002000000002000",
+   "00000000020002801002000000080000"
+  ],
+  "child_closed_by_bit": 39,
+  "zero_marginal_receipts": [
+   72
+  ],
+  "total_marginal": 15,
+  "total_marginal_in_manifest": 3,
+  "conflict_census": "all 64 candidate D4 orbits disjoint from the 757 distinct folded roots (743 D4 canons) at 1435 - zero overlaps, zero WIN/LOSS conflicts; the 3 receipt roots are 3 distinct D4 orbits, disjoint raw-hex and D4-canonically from every folded root",
+  "demand_histogram_delta": "c2=0,c4=2: 3013 -> 3012; c2=2,c4=0: 803 -> 802; c2=2,c4=2: 52 -> 51; every closed row has open-class demand c1=0",
+  "per_open_parent_rows": {
+   "00000000000000003800000008002000": "31/2145 -> 30/2081",
+   "00000000000000003800002080000000": "78/5837 -> 76/5707",
+   "00000000000000801202000000080000": "68/5202 -> 67/5135",
+   "0000000000000080120a000000000000": "43/3167 -> 41/3036",
+   "00000000020000003800000000080000": "61/4351 -> 60/4288"
+  },
+  "marginal_audit_cross_check": "class2-lane-cost64f-parent-and-marginal-audit-20261116.json (git blob d9f5f377b9503f034cb7e9220b0d84d716bde87d): the independent third JavaScript BigInt audit pre-registered sequential per-receipt in-manifest marginals 1/0/2 (receipt order), 3 new rows, the same 5 affected parents with 7 parent-row incidences and the same projected head 1438/174/6410/507143/4683/371057 with its histogram; all re-derived and matched here",
+  "certificates": "class2-lane-cost64f-win3-certificates-20261116.json (git blob 29aedffcfe7e4f7d110671c26177d9ff9cbb085d): all 3 WIN7 receipts certified - 116,367 rows / 9,709,419 extraction nodes / 142 sub-roots / winner 161,762 / loser 49,341 / terminals 38,570 / 4,197,505 cert bytes; BigInt union 0/0 + Bareiss all PASS; bit 107 whole cert, bits 39/72 split part1of2/part2of2 with join receipts; re-asserted byte-for-byte in the fold script",
+  "recompute_script": "scripts/recompute_frontier_cost64f_receipts_20261116.py",
+  "outputs": [
+   "class-frontier-cost64f-receipts-recompute-20261116.json",
+   "class-frontier-s5-ranking-after-cost64f-receipts-20261116.csv",
+   "class-frontier-top-candidates-s6-after-cost64f-receipts-20261116.csv"
+  ],
+  "unknown_status": "11x11 empty board: UNKNOWN. The fold is bookkeeping over published receipts; solved counts measure manifest coverage, not the game-theoretic value of any position; WIN7 certificates prove only the individual 7-stone roots (first-player win within depth 10); REFUTED-D10 proves only the absence of WIN7-D10 from that root."
+ }
 }
