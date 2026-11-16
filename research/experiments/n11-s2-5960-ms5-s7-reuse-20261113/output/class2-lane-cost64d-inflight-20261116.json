@@ -1,8 +1,8 @@
 {
- "schema": "n11-class2-lane-cost64d-completed-20261116-v2",
+ "schema": "n11-class2-lane-cost64d-completed-20261116-v3",
  "title": "n11 class2-lane cost-64d sweep in flight: cheapest unswept row 00000000000000403800000008002000 of the best own-closable class-2 target S5 at the canonical head 1419",
  "date": "2026-11-16",
- "status": "completed on 2026-11-16 by the long-term lane session: the full raw sweep of the 64 legal candidates is published (8 v16 raw batches + a fresh-process determinism rerun + a v15 crosscheck with two-directional anchor agreement), independently audited (stdlib Bareiss re-enumeration, batch bit lists, parent derivation, fold-prep marginals): 23 WIN7-D10, 41 REFUTED-D10, 0 capped, 64,291,757 candidate nodes excluding the 8 pilots at 3402 nodes each; the row is closable (all 23 WIN receipts cover the swept row); the fold-prep marginal analysis projects 16 closed rows at head 1419 -> projected head 1435, with the target S5 00000000000000403800000008000000 projected 24->18 rows and the shared class-2 parent 00000000000000003800000008002000 projected 42->31; the fold itself is deferred to the chain-reproduction session per protocol; certificates for the 23 WIN roots are the immediate follow-up (none published at v2); the canonical head stays 1419 until the fold; 11x11 empty board remains UNKNOWN",
+ "status": "completed on 2026-11-16 by the long-term lane session (two updates in one day): (1) the full raw sweep of the 64 legal candidates was published (8 v16 raw batches + a fresh-process determinism rerun + a v15 crosscheck), independently audited: 23 WIN7-D10, 41 REFUTED-D10, 0 capped, 64,291,757 candidate nodes excluding the 8 pilots at 3402 nodes each (v2, commit f38be6d6); (2) all 23 WIN7-D10 roots now have published, independently verifiable certificates (win23 manifest class2-lane-cost64d-win23-certificates-20261116.json, blob 244e4b61: 23 certs, 861,439 rows, 69,769,470 extraction nodes, 1,193 sub-roots, BigInt union 0/0 + Bareiss double verification all PASS, 9 whole certs + 14 split part1of2/part2of2 with join receipts); the fold-prep marginal analysis projects 16 closed rows at head 1419 -> projected head 1435 (shared class-2 parent 00000000000000003800000008002000 42->31 rows, target S5 00000000000000403800000008000000 24->18); the fold itself is deferred to the chain-reproduction session per protocol; the canonical head stays 1419 until the fold; 11x11 empty board remains UNKNOWN",
  "claimed_by": "n11 long-term lane session (next-target cheapest-first continuation)",
  "s5_target": "00000000000000403800000008000000",
  "s6_child": "00000000000000403800000008002000",
@@ -169,7 +169,21 @@
   "determinism": "batch 5 rerun node-exact in a fresh process",
   "v15_crosscheck": "pilot 5949 + anchors [2,66,87,92,113]: 4 WIN anchors loss=true, 1 REFUTED anchor loss=false - two-directional agreement",
   "audit": "class2-lane-cost64d-raw-sweep-audit-20261116.json (independent stdlib audit, all controls PASS)",
-  "fold_prep": "union of in-manifest marginals at 1419 = 16 rows (projected head 1435); per-parent projected row loss: shared parent 00000000000000003800000008002000 42->31, target S5 00000000000000403800000008000000 24->18, 11 further parents lose 1-2 rows each"
+  "fold_prep": "union of in-manifest marginals at 1419 = 16 rows (projected head 1435); per-parent projected row loss: shared parent 00000000000000003800000008002000 42->31, target S5 00000000000000403800000008000000 24->18, 11 further parents lose 1-2 rows each",
+  "certificates": {
+   "published": true,
+   "manifest": "class2-lane-cost64d-win23-certificates-20261116.json (blob 244e4b61)",
+   "certs": 23,
+   "rows": 861439,
+   "extraction_nodes": 69769470,
+   "sub_roots": 1193,
+   "winner_states": 1220504,
+   "loser_states": 362105,
+   "terminal_count": 310638,
+   "cert_bytes": 31086866,
+   "double_verification": "BigInt union missing 0 / extra 0 on all 23 (1,193 sub-roots) + Bareiss verify_bit7_win7_cert.ts --root-check all PASS; assemble rerun byte-identical",
+   "publication": "9 whole certs (bits 1/30/69/75/79/95/106/107/109) + 14 split part1of2/part2of2 with join receipts (bits 0/2/11/16/32/43/53/66/86/92/98/111/113/120)"
+  }
  },
- "supersedes": "v1 (in flight, commit d31f6828; all v1 fields preserved)"
+ "supersedes": "v2 (completed sweep publication, commit f38be6d6; all v1/v2 fields preserved)"
 }
