@@ -1,8 +1,8 @@
 {
- "schema": "n11-class2-lane-cost65n-inflight-20261116-v1",
+ "schema": "n11-class2-lane-cost65n-completed-20261116-v2",
  "title": "n11 class2-lane cost-65n sweep in flight: cheapest open row 00000000000000801202010000800000 of the shared class-2 parent at head 1441 (59 open candidate bits after 6 published-verbatim REFUTED-D10 transfers)",
  "date": "2026-11-16",
- "status": "IN FLIGHT claimed on 2026-11-16 by the long-term lane session (next-target cheapest-first continuation after the cost-64g fold): the 59 open candidate bits are being swept with the repo-verbatim v16 engine (8 raw batches planned, ~8 bits each); this claim reserves the target against duplicate sweeps by parallel sessions; the 6 pre-sweep REFUTED-D10 transfers are recorded verbatim and will not be re-swept; a completion update will supersede this v1 preserving all fields; 11x11 empty board, two-stone roots {49,60} and {59,60}, S2 {59,60}, and classes 1/2/4 all remain UNKNOWN",
+ "status": "completed NOT-STERILE on 2026-11-16 by the long-term lane session: the full raw sweep of the 59 open candidates is published (8 v16 raw batches + determinism reruns batch5/batch7 node-exact + v15 crosscheck anchors 9/90/94/117 including both WIN bits), plus the 6 pre-sweep REFUTED-D10 transfers: 65/65 candidates determined - 2 WIN7-D10 (bits 90, 117) + 63 REFUTED-D10 (57 swept + 6 transferred), 0 capped - the row is NOT sterile; both WIN7-D10 receipts (roots 00000000040000801202010000800000 = child|1<<90 and 00200000000000801202010000800000 = child|1<<117) have published independently-verified certificates (BigInt union 0/0 + Bareiss 51/51 and 49/49 sub-roots, 35,627 + 20,047 rows, 2,770,239 + 769,616 extraction nodes, whole certs 1,285,412 bytes split part1of2/part2of2 with a byte-exact join receipt and 721,989 bytes whole; class2-lane-cost65n-win2-certificates-20261116.json); the fold of these receipts on the head-1441 chain follows the chain-reproduction protocol next, so the canonical head stays 1441 until then; 11x11 empty board, two-stone roots {49,60} and {59,60}, S2 {59,60}, and classes 1/2/4 all remain UNKNOWN",
  "claimed_by": "n11 long-term lane session (next-target cheapest-first continuation after the cost-64g fold)",
  "s5_target": "00000000000000003800000008002000",
  "s6_child": "00000000000000801202010000800000",
@@ -261,5 +261,205 @@
    119,
    120
   ]
+ },
+ "supersedes": "v1 (in-flight claim published in commit 7dcd976786ed150bc85b6a896c081431e61ff4a3, git blob c16ba5c953db3bd74bb323f9ffd30efea59c7764, all v1 fields preserved)",
+ "results": {
+  "candidates": 65,
+  "win7_d10_bits": [
+   90,
+   117
+  ],
+  "win7_d10_count": 2,
+  "refuted_d10_bits_swept_v16": [
+   1,
+   3,
+   6,
+   8,
+   9,
+   10,
+   11,
+   12,
+   14,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   26,
+   29,
+   31,
+   32,
+   42,
+   43,
+   44,
+   53,
+   54,
+   56,
+   58,
+   61,
+   66,
+   67,
+   74,
+   75,
+   77,
+   79,
+   83,
+   85,
+   86,
+   87,
+   88,
+   94,
+   97,
+   98,
+   99,
+   102,
+   103,
+   105,
+   106,
+   107,
+   108,
+   110,
+   111,
+   112,
+   113,
+   114,
+   116,
+   118,
+   119,
+   120
+  ],
+  "refuted_d10_bits_transferred": [
+   35,
+   50,
+   51,
+   55,
+   64,
+   109
+  ],
+  "refuted_d10_count": 63,
+  "capped_bits": [],
+  "capped_count": 0,
+  "candidate_nodes_excluding_pilots": 92530349,
+  "candidate_ms_total": 187251,
+  "approx_nodes_per_sec": 494000,
+  "pilots": "8 batch invocations x pilot_d6 control loss=false at exactly 3402 nodes",
+  "terminal_stone_range_all": [
+   13,
+   17
+  ],
+  "andclose_all": true,
+  "batch_bit_lists": {
+   "1": [
+    1,
+    3,
+    6,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "2": [
+    14,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    26
+   ],
+   "3": [
+    29,
+    31,
+    32,
+    42,
+    43,
+    44,
+    53,
+    54
+   ],
+   "4": [
+    56,
+    58,
+    61,
+    66,
+    67,
+    74,
+    75,
+    77
+   ],
+   "5": [
+    79,
+    83,
+    85,
+    86,
+    87,
+    88,
+    90,
+    94
+   ],
+   "6": [
+    97,
+    98,
+    99,
+    102,
+    103,
+    105,
+    106,
+    107
+   ],
+   "7": [
+    108,
+    110,
+    111,
+    112,
+    113,
+    114,
+    116,
+    117
+   ],
+   "8": [
+    118,
+    119,
+    120
+   ]
+  },
+  "heaviest_bits_nodes": {
+   "26": 5654046,
+   "9": 5075917,
+   "79": 4072659
+  },
+  "win_bit_crosschecks": {
+   "90": {
+    "v16_sweep": "loss=true, 1,562,274 nodes (batch 5)",
+    "v15_crosscheck": "loss=true, 3,204,116 nodes, pilot 5949 (two-directional agreement on the WIN verdict)",
+    "certificate": "bit90-root-00000000040000801202010000800000.cert (whole 1,285,412 bytes, sha256 801bfdacbbb5163e3097ef3df57b2fd3db1ecf38c2e5357df972f633802badff, git blob c2460e597072493195dbd738335ca7b36bdbcf53; split at a line boundary into part1of2 git blob a5d67f1d1acef7900453de25f30f0af959837ac0 + part2of2 git blob 0b12b216cc5f99e1d8b19f40b5285aac911f8fdd, cat reproduces the whole byte-exactly per bit90-root-00000000040000801202010000800000.cert-receipt.json): 35,627 sorted-unique rows, 51 sub-roots == root mobility == legal_candidates.py, terminal range [13,17], fbt_drops 0, fatal null, BigInt union 0/0 and Bareiss 51/51 all PASS (class2-lane-cost65n-win2-certificates-20261116.json, git blob e2e4e3f5d352e162f2d6e898b285462ff5b4d286)"
+   },
+   "117": {
+    "v16_sweep": "loss=true, 388,910 nodes (batch 7)",
+    "v15_crosscheck": "loss=true, 865,824 nodes, pilot 5949 (two-directional agreement on the WIN verdict)",
+    "certificate": "bit117-root-00200000000000801202010000800000.cert (whole, 721,989 bytes, git blob ac0ea37d6d5ace282ef6383f8998dbb6ca8832a1): 20,047 sorted-unique rows, 49 sub-roots == root mobility == legal_candidates.py, terminal range [13,17], fbt_drops 0, fatal null, BigInt union 0/0 and Bareiss 49/49 all PASS (class2-lane-cost65n-win2-certificates-20261116.json, git blob e2e4e3f5d352e162f2d6e898b285462ff5b4d286)"
+   }
+  },
+  "determinism_reruns": {
+   "batch5": "bits 79,83,85,86,87,88,90,94 (WIN bit 90 included) re-solved from scratch: node-exact 9/9 lines, ms-only diff (class2-lane-cost65n-v16-determinism-rerun-batch5-20261116.jsonl, git blob 005417e4d4183d73b550cea62a97c92274585d59)",
+   "batch7": "bits 108,110,111,112,113,114,116,117 (WIN bit 117 included) re-solved from scratch: node-exact 9/9 lines, ms-only diff (class2-lane-cost65n-v16-determinism-rerun-batch7-20261116.jsonl, git blob cb450e2703f2d98b2d24988e5252623307d6a133)"
+  },
+  "v15_crosscheck": "v15 engine (class4_child1_runner.ts, pilot 5949) on the same child: anchors bits 90 (WIN, loss=true, 3,204,116 nodes), 117 (WIN, loss=true, 865,824 nodes), 9 (7,357,368), 94 (275,044) all agree with the v16 verdicts two-directionally (class2-lane-cost65n-v15-crosscheck-20261116.jsonl, git blob 158012b7d5a0d6be20a487b256a4d3d25ab6c9b4)",
+  "raw_batches": {
+   "batch1": "class2-lane-cost65n-raw-batch1-20261116.jsonl git blob 8361a5be1cfa801947ba1e9ec48601f188f7cf6e",
+   "batch2": "class2-lane-cost65n-raw-batch2-20261116.jsonl git blob 4e2bbc51baeb4a65aadb3e9ece6868a9494f2eb4",
+   "batch3": "class2-lane-cost65n-raw-batch3-20261116.jsonl git blob c613f71462a82f74e0ed0923c9b5996966b9ef01",
+   "batch4": "class2-lane-cost65n-raw-batch4-20261116.jsonl git blob 35b53b20b05d1e725aafe7980572e8d1d034d4bb",
+   "batch5": "class2-lane-cost65n-raw-batch5-20261116.jsonl git blob c4f810a23f0081ccaa97a5d88f3a79c908fa11c6",
+   "batch6": "class2-lane-cost65n-raw-batch6-20261116.jsonl git blob 32545b321511f19b75688871d9960ea09efa3e04",
+   "batch7": "class2-lane-cost65n-raw-batch7-20261116.jsonl git blob fe5a98c31115e8885385399200b47cec2adadb20",
+   "batch8": "class2-lane-cost65n-raw-batch8-20261116.jsonl git blob 278e69ba3854b57d2e8a032bd6770352d3a18261"
+  },
+  "candidate_enumeration": "65 legal candidates bit-exact vs legal_candidates.py (independent exact-integer Bareiss 4x4), asserted in the head-1441 pre-sweep census before the sweep and re-derived by the raw-sweep audit",
+  "k0863_consequence": "not applicable: the row is NOT sterile (two WIN7-D10 receipt roots cover it), so K0863 does not block a fold; the row remains an open manifest row at head 1441 until the receipts are folded",
+  "fold": "deferred per protocol: 2 WIN7-D10 receipts (bits 90 and 117) ready to fold on the head-1441 chain in the chain-reproduction session; head 1441 unchanged until then"
  }
 }
