@@ -1,0 +1,273 @@
+{
+  "all_checks_pass": true,
+  "base_verifier_git_blob_sha": "8c8ea051dc0e2be51133e5f10be2968b17336176",
+  "checks": [
+    "all 140 r=8 profiles were enumerated from the three pair-only atom counts",
+    "K0866 region engine and independent survivor-mask engine agree on every profile and chain",
+    "every r=8 target profile and chain has survivor set {3,7}",
+    "the predicted gamma=0..2 keys are uniformly non-determined, not non-collapse keys",
+    "r=7 positive control reproduces the published determined-profile splits",
+    "no budget skips"
+  ],
+  "r7_positive_control": {
+    "families": {
+      "4,4,9": {
+        "0": {
+          "chain_survivors": [
+            3
+          ],
+          "determined_profiles": 16,
+          "profiles": 20,
+          "survivor_sets": {
+            "3": 16,
+            "1,2,3": 4
+          }
+        },
+        "1": {
+          "chain_survivors": [
+            3
+          ],
+          "determined_profiles": 7,
+          "profiles": 10,
+          "survivor_sets": {
+            "3": 7,
+            "1,2,3": 3
+          }
+        },
+        "2": {
+          "chain_survivors": [
+            3
+          ],
+          "determined_profiles": 2,
+          "profiles": 4,
+          "survivor_sets": {
+            "3": 2,
+            "1,2,3": 2
+          }
+        },
+        "3": {
+          "chain_survivors": [
+            1,
+            2,
+            3
+          ],
+          "determined_profiles": 0,
+          "profiles": 1,
+          "survivor_sets": {
+            "1,2,3": 1
+          }
+        }
+      },
+      "4,9,9": {
+        "0": {
+          "chain_survivors": [
+            3
+          ],
+          "determined_profiles": 39,
+          "profiles": 45,
+          "survivor_sets": {
+            "3": 39,
+            "1,2,3": 6
+          }
+        },
+        "1": {
+          "chain_survivors": [
+            3
+          ],
+          "determined_profiles": 22,
+          "profiles": 28,
+          "survivor_sets": {
+            "3": 22,
+            "1,2,3": 6
+          }
+        },
+        "2": {
+          "chain_survivors": [
+            3
+          ],
+          "determined_profiles": 7,
+          "profiles": 13,
+          "survivor_sets": {
+            "3": 7,
+            "1,2,3": 6
+          }
+        },
+        "3": {
+          "chain_survivors": [
+            1,
+            2,
+            3
+          ],
+          "determined_profiles": 0,
+          "profiles": 6,
+          "survivor_sets": {
+            "1,2,3": 6
+          }
+        }
+      }
+    },
+    "profiles": 127
+  },
+  "r8_target_sweep": {
+    "chain_profiles": 8,
+    "chain_states_engine_a": 4767,
+    "chain_states_engine_b": 4767,
+    "families": {
+      "4,10,10": {
+        "0": {
+          "chain_states_engine_a": 65,
+          "chain_states_engine_b": 65,
+          "chain_survivors": [
+            3,
+            7
+          ],
+          "determined_profiles": 0,
+          "max_states_single_profile": 18952,
+          "profile_states_engine_a": 309118,
+          "profile_states_engine_b": 309118,
+          "profiles": 51,
+          "survivor_sets": {
+            "3,7": 51
+          }
+        },
+        "1": {
+          "chain_states_engine_a": 312,
+          "chain_states_engine_b": 312,
+          "chain_survivors": [
+            3,
+            7
+          ],
+          "determined_profiles": 0,
+          "max_states_single_profile": 50816,
+          "profile_states_engine_a": 572237,
+          "profile_states_engine_b": 572237,
+          "profiles": 32,
+          "survivor_sets": {
+            "3,7": 32
+          }
+        },
+        "2": {
+          "chain_states_engine_a": 876,
+          "chain_states_engine_b": 876,
+          "chain_survivors": [
+            3,
+            7
+          ],
+          "determined_profiles": 0,
+          "max_states_single_profile": 57739,
+          "profile_states_engine_a": 327248,
+          "profile_states_engine_b": 327248,
+          "profiles": 15,
+          "survivor_sets": {
+            "3,7": 15
+          }
+        },
+        "3": {
+          "chain_states_engine_a": 1776,
+          "chain_states_engine_b": 1776,
+          "chain_survivors": [
+            3,
+            7
+          ],
+          "determined_profiles": 0,
+          "max_states_single_profile": 33107,
+          "profile_states_engine_a": 128389,
+          "profile_states_engine_b": 128389,
+          "profiles": 7,
+          "survivor_sets": {
+            "3,7": 7
+          }
+        }
+      },
+      "4,4,10": {
+        "0": {
+          "chain_states_engine_a": 51,
+          "chain_states_engine_b": 51,
+          "chain_survivors": [
+            3,
+            7
+          ],
+          "determined_profiles": 0,
+          "max_states_single_profile": 16753,
+          "profile_states_engine_a": 55618,
+          "profile_states_engine_b": 55618,
+          "profiles": 20,
+          "survivor_sets": {
+            "3,7": 20
+          }
+        },
+        "1": {
+          "chain_states_engine_a": 217,
+          "chain_states_engine_b": 217,
+          "chain_survivors": [
+            3,
+            7
+          ],
+          "determined_profiles": 0,
+          "max_states_single_profile": 29774,
+          "profile_states_engine_a": 56081,
+          "profile_states_engine_b": 56081,
+          "profiles": 10,
+          "survivor_sets": {
+            "3,7": 10
+          }
+        },
+        "2": {
+          "chain_states_engine_a": 525,
+          "chain_states_engine_b": 525,
+          "chain_survivors": [
+            3,
+            7
+          ],
+          "determined_profiles": 0,
+          "max_states_single_profile": 12065,
+          "profile_states_engine_a": 15657,
+          "profile_states_engine_b": 15657,
+          "profiles": 4,
+          "survivor_sets": {
+            "3,7": 4
+          }
+        },
+        "3": {
+          "chain_states_engine_a": 945,
+          "chain_states_engine_b": 945,
+          "chain_survivors": [
+            3,
+            7
+          ],
+          "determined_profiles": 0,
+          "max_states_single_profile": 945,
+          "profile_states_engine_a": 945,
+          "profile_states_engine_b": 945,
+          "profiles": 1,
+          "survivor_sets": {
+            "3,7": 1
+          }
+        }
+      }
+    },
+    "max_states_single_profile": 57739,
+    "profile_states_engine_a": 1465293,
+    "profile_states_engine_b": 1465293,
+    "profiles": 140
+  },
+  "repeat_run_byte_identical": true,
+  "scope": {
+    "branch_size_cap": 10,
+    "claim_scope": "Complete only for these two size families and gamma values; not a full r=8 cap<=10 boundary sweep.",
+    "game": "three-branch REMO region game",
+    "gamma_checked": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "r": 8,
+    "target_families": [
+      "4,4,10",
+      "4,10,10"
+    ]
+  },
+  "status": "finite-complete-targeted-refutation",
+  "target": "K0866 r=8 extrapolation: (4,4,10)/(4,10,10), gamma=0..2"
+}
