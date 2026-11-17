@@ -1,10 +1,10 @@
 {
-  "schema": "n11-class2-lane-cost79e-inflight-20261118-v1",
+  "schema": "n11-class2-lane-cost79e-inflight-20261118-v2",
   "date": "2026-11-18",
   "last_updated": "2026-11-18",
   "title": "n11 class2-lane cost79e: planned fresh 79-bit depth-10 sweep of the census v14 rank-1 row (cheapest remaining unswept/unclaimed/unexcluded row after the completed cost-79d sweep, census v14 publication and the 19/19 BigInt general-circle corpus sync)",
-  "status": "claim v1: IN-FLIGHT (long-term lane; batches_run=0; the fresh v17 depth-10 sweep of the 79-bit census v14 rank-1 child 00000000020000003800000880000000 is claimed and planned but not yet run; raw JSONL batches, the audit and any WIN7-D10 certificates will be published as they complete, with this claim updated to v2 on completion); 11x11 UNKNOWN",
-  "claimed_by": "n11 long-term lane session (head-1473 presweep census v14 selector, post-79d, cost79e)",
+  "status": "claim v2: COMPLETED (long-term lane; the fresh v17 depth-10 sweep of the 79-bit census v14 rank-1 child 00000000020000003800000880000000 is published and independently audited (72 open + 7 confirmation: 0 WIN7-D10 / 79 REFUTED-D10 / 0 capped, 74,450,533 candidate nodes + 9x3402 pilot nodes; audit class2-lane-cost79e-raw-batches-1-9-audit-20261118.json git blob 4e10e4771fd4a093ff62c3fda895d1462493d96e; confirmation batch matched the census v14 overlay prediction 7/7 REFUTED-D10, 0 conflicts); v15 cross-engine agreement 7/7 on the confirmation batch (pilot_d6 5949); determinism re-runs of batches 1 and 8 field-identical (ms-only); this is the fourth fully refuted row after cost-74i, cost-75f and cost-79d, so no WIN7-D10 certificate exists for this row and the receipt fold is not needed; 11x11 UNKNOWN",
+  "claimed_by": "n11 long-term lane session (head-1473 presweep census v14 selector, post-79d, cost79e; sweep run to completion by the same lane)",
   "s5": "00000000020000003800000080000000",
   "s6_child": "00000000020000003800000880000000",
   "s6_s7_edge_cost": 79,
@@ -265,14 +265,54 @@
   },
   "batch_plan": "72 sweep bits in batches of at most 9 bits (planned 8x9) + 1 confirmation batch of 7 bits; a batch exceeding the runner wall-time budget may be split, with every split part keeping its own pilot control; raw JSONL per batch pushed as completed; engine cap 1e9 per bit, andclose 1",
   "driver_script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/ev79e_batches_20261118.sh",
-  "next_action": "run batches 1..9 per ev79e_batches_20261118.sh (72 open bits as 8x9 + confirmation 7 bits), publish raw JSONL per batch, then the audit, blind-extracted certificates for any WIN bits and the claim v2 update; receipt fold of this row stays pending behind the parallel-lane folds unless the row comes out fully refuted",
+  "next_action": "census v15: mark the cost79e row swept (0 WIN7-D10 / 79 REFUTED-D10, fully refuted, no certificates, no fold needed) and select the next cheapest unswept/unclaimed/unexcluded row from the census v14 ranking_top10 (runner-up 00000000020000003800000180000000, cost 80, open 70); 11x11 UNKNOWN",
+  "actual_execution": {
+    "date": "2026-11-18",
+    "environment": "node v22.20.0, 2 vCPU sandbox, single-threaded runner process per batch (batch1 ~9.8M nodes in ~22s, ~450k nodes/s)",
+    "batches": "8x9 open bits + 1x7 confirmation, per ev79e_batches_20261118.sh (commit 43b493ac publishes the driver)",
+    "engine_run": "class4_child1_runner_v17.ts blob c132cc6425eee3feaeef1d697dd74f968cfedb59, depth 10, cap 1e9 per bit, andclose 1, fresh engine state per candidate bit, pilot_d6 control per batch",
+    "verdicts": {
+      "win7_d10_bits": [],
+      "refuted_d10_bits": "all 79 (72 open + 7 confirmation)",
+      "capped_bits": [],
+      "counts": {
+        "win7_d10": 0,
+        "refuted_d10": 79,
+        "capped": 0
+      }
+    },
+    "total_candidate_nodes": 74450533,
+    "pilot_controls": "9/9 batches open with pilot_d6 loss=false at exactly 3402 nodes",
+    "raw_files": {
+      "class2-lane-cost79e-raw-batch1-20261118.jsonl": "git blob f9a0afecb643bd0109891587596e56872853cb66 (1037 bytes, 9966869 candidate nodes)",
+      "class2-lane-cost79e-raw-batch2-20261118.jsonl": "git blob 4a4c31848f27ab7d045ef08f596e057716e3a149 (1051 bytes, 14504749 candidate nodes)",
+      "class2-lane-cost79e-raw-batch3-20261118.jsonl": "git blob 304eef2e690c4e3a7d6b6960b01918e329d5c1af (1043 bytes, 4452840 candidate nodes)",
+      "class2-lane-cost79e-raw-batch4-20261118.jsonl": "git blob 7c46e966e02a7ff8012a530535b1ba5d8888d881 (1043 bytes, 7640188 candidate nodes)",
+      "class2-lane-cost79e-raw-batch5-20261118.jsonl": "git blob 3acb125186c30c1072122ca856e40f793752e910 (1041 bytes, 4753807 candidate nodes)",
+      "class2-lane-cost79e-raw-batch6-20261118.jsonl": "git blob c09e40f474647bf8be2307d64a731957800f1b6d (1041 bytes, 6763614 candidate nodes)",
+      "class2-lane-cost79e-raw-batch7-20261118.jsonl": "git blob df039db8e630c74f5ad71d46d3540ebc15d21383 (1052 bytes, 10536030 candidate nodes)",
+      "class2-lane-cost79e-raw-batch8-20261118.jsonl": "git blob ef3054bc153307e1ef50bc7d5458887cb33572a2 (1055 bytes, 8111032 candidate nodes)",
+      "class2-lane-cost79e-raw-batch9-confirmation-20261118.jsonl": "git blob 9db89516b504274122569e3d573db455b82e0192 (828 bytes, 7721404 candidate nodes)",
+      "class2-lane-cost79e-det-batch1-20261118.jsonl": "git blob 9896faf39ca5242734d01824341ffc643f68e4e8 (determinism re-run of batch 1, field-identical, ms-only differences)",
+      "class2-lane-cost79e-det-batch8-20261118.jsonl": "git blob 2af1a7d5e41fc9b700e26c4d82cf22217d6ee966 (determinism re-run of batch 8, field-identical, ms-only differences)",
+      "class2-lane-cost79e-v15-crosscheck-a-20261118.jsonl": "git blob 67063383596ad5ba76dce9f4f6d2670f60ab8f2d (v15 engine re-check of the 7 confirmation bits, pilot_d6 5949, 7/7 REFUTED-D10 agreement)"
+    },
+    "audit": {
+      "json": "class2-lane-cost79e-raw-batches-1-9-audit-20261118.json (git blob 4e10e4771fd4a093ff62c3fda895d1462493d96e, 20351 bytes)",
+      "script": "audit_cost79e_raw_batches_20261118.py (git blob 6be4cf5962f4fa2fed0cb06aa92a7faff810a66a)",
+      "checks": "pilot controls 9/9 at 3402; per-batch bit lists match the plan exactly; andclose=true and capped=false on all 79 bits; terminal stone ranges within [13,17]; verdict semantics applied; per-bit D4 root canons recomputed independently and the 7 confirmation root canons match the census v14 transfer canons; node sum 74,450,533; raw files pinned by sha1"
+    },
+    "determinism": "det re-runs of batches 1 and 8 field-identical (nodes/verdicts/terminal ranges equal; ms-only differences)",
+    "v15_crosscheck": "independent v15 runner (blob 8744fc65b6b7cac6bd561403ce4c749e01c51359) re-checked the 7 confirmation bits: 7/7 REFUTED-D10 agreement (pilot_d6 5949), 0 conflicts"
+  },
+  "confirmation_outcome": "7/7 confirmation bits re-run fresh matched the census v14 overlay prediction exactly (7 REFUTED-D10 as transferred from the pre-64h harvest x2 and the cost-74i, cost-75f and cost-79d sweep rows), 0 conflicts; independently cross-checked with the v15 engine (7/7)",
   "receipt_fold": {
-    "status": "pending behind the cost-66i (remaining receipts), cost-66j, cost-69j, cost-71e, cost-72d, cost-73i, cost-73j, cost-73k and cost-73l folds; if the sweep comes out fully refuted (0 WIN bits), the fold is not needed as with cost-74i, cost-75f and cost-79d",
-    "note": "any WIN7-D10 certificates of this row fold only after the pending folds land; no manifest row is closed by this sweep or this claim"
+    "status": "not needed (0 win bits): the row is fully refuted (79/79 REFUTED-D10), so there is no WIN7-D10 certificate to fold and no manifest row of this child closes; family-row receipt accounting is unaffected, as with the fully refuted cost-74i, cost-75f and cost-79d rows",
+    "note": "no WIN7-D10 certificate was produced by this sweep; the parallel-lane folds (cost-66i remaining, 66j, 69j, 71e, 72d, 73i, 73j, 73k, 73l) are untouched by this claim"
   },
   "verdict_semantics": "loss=true => WIN7-within-depth-10 candidate (certificate rebuild target); loss=false && !capped => REFUTED-D10, no first-player win within depth 10 from this root (NOT a LOSS proof); capped => inconclusive, re-run with a higher cap; verdicts are per 7-stone root only",
   "unknown_status": "11x11 empty board: UNKNOWN. A completed sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 79 seven-stone roots of this child and closes no family row by itself; the 11x11 empty board, the two-stone roots {49,60} and {59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN regardless of this sweep's outcome",
-  "batches_run": 0,
-  "open_bits_completed": 0,
-  "open_bits_remaining": 72
+  "batches_run": 9,
+  "open_bits_completed": 72,
+  "open_bits_remaining": 0
 }
