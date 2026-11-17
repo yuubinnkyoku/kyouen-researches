@@ -1,9 +1,9 @@
 {
- "schema": "n11-class2-lane-cost73j-inflight-20261117-v2",
+ "schema": "n11-class2-lane-cost73j-inflight-20261117-v3",
  "date": "2026-11-17",
  "last_updated": "2026-11-17",
  "title": "n11 class2-lane cost73j: planned fresh 73-bit depth-10 sweep of the head-1472 census v6 selected row (cheapest remaining unswept/unclaimed row of the primary class-2 target family after the completed cost71e, cost72d and cost73i sweeps)",
- "status": "claim v2: sweep complete; the fresh v17 73-bit depth-10 sweep of the census v6 rank-1 row finished 16 WIN7-D10 bits [0,1,6,29,44,49,52,69,74,82,87,91,98,100,110,118] + 57 REFUTED-D10, 0 capped (168,445,380 candidate nodes + 9 pilot controls at 3,402 nodes each; 9/9 pilots exact, determinism reruns of batches 1 and 6 field-identical on every non-ms field, independent v15 cross-engine re-check 16/16 WIN agreement, pilot 5,949 exact, 0 capped, 7/7 census-v6 confirmation bits re-run fresh and REFUTED-D10 as predicted (4 raw-identical + 3 canon-equal transfer sources, all source pins verified against their published audits / the pinned census v4 script), stdlib raw audit all checks passed); the 16 WIN7-D10 roots go to blind certificate extraction and independent engine-free verification before publication (certificates pending, this claim does not publish them); the receipt fold stays pending behind the 76c/66i/66j/69j/71e/72d/73i folds; no manifest row is closed by this claim; 11x11 UNKNOWN",
+ "status": "claim v3: certificates complete; the 16 WIN7-D10 bits [0,1,6,29,44,49,52,69,74,82,87,91,98,100,110,118] of the completed v2 sweep were blindly extracted (extractor_exact, engine v15 inlined, FBS=1<<20, empty kill table) into 726,778 certificate rows (166,238,087 extraction nodes, 26,236,851 published bytes; fbt_drops=0, no fatal, no capped per-move on all sixteen) and independently verified engine-free (verify_bit7_win7_cert: root-check stones=7 and loser mobility = the legal_candidates.py RAW-root enumeration, all sub-roots PASS, terminal stone range within [13,17], consumed union 0 missing / 0 extra on every root, re-verified from the saved certkeys/consumed artifacts when building the manifest); bits 69/82 published whole, the other fourteen split at line boundaries into part1of2/part2of2 with README-split per bit; determinism: fresh-process re-extraction of the heaviest WIN bit 98 (64,451 rows) is byte-identical (md5 0d8124b781d6d98878125abdb1a7ce76); all 30 certificate files landed byte-exact on main (reassembled split md5s match the manifest); manifest class2-lane-cost73j-win7-certificates-20261117.json (git blob e88710b5a2d4848be77a03ae5104e46aefc1279a); the receipt fold stays pending behind the 76c/66i/66j/69j/71e/72d/73i folds; no manifest row is closed by this claim; 11x11 UNKNOWN",
  "s5": "00000000000000403800000008000000",
  "s6_child": "00000000000000403800000408000000",
  "s6_s7_edge_cost": 73,
@@ -252,7 +252,7 @@
   "confirmation_outcome": "the 7 confirmation bits are re-run fresh and must come out REFUTED-D10 as predicted by the census v6 overlay (any disagreement is a conflict to be reported, not folded)"
  },
  "batch_plan": "66 sweep bits in batches of at most 9 bits (planned 7x9 + 1x3) + 1 confirmation batch (bits 5, 14, 20, 46, 97, 103, 108); a batch exceeding the runner wall-time budget may be split, with every split part keeping its own pilot control; raw JSONL per batch pushed as completed; engine cap 1e9 per bit, andclose 1",
- "next_action": "blind certificate extraction + independent verification of the 16 WIN7-D10 roots, published as certificate files (part1of2/part2of2 splits for large bits, one file per push) with a certificate manifest; then the receipt fold of this row stays pending behind the 76c/66i/66j/69j/71e/72d/73i folds",
+ "next_action": "receipt fold of this row stays pending behind the 76c/66i/66j/69j/71e/72d/73i folds (managed by their own lanes); the next fresh target for this lane is the census v6 top-10 cost-73 runner-up row 00000000000000801206000000000400 (open 67, demand c2=2)",
  "receipt_fold": {
   "status": "pending behind the cost-76c, cost-66i, cost-66j, cost-69j, cost-71e, cost-72d and cost-73i folds",
   "note": "any WIN7-D10 certificates of this row fold only after the pending folds land; no manifest row is closed by this sweep or this claim"
@@ -336,7 +336,55 @@
   "raw_audit_json": "class2-lane-cost73j-raw-sweep-audit-20261117.json (git blob 4c13cbb2008c6439a95bd0818af0d09ee465484e); audit script research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost73j_raw_batches_20261117.py (git blob 789b81d54b216f52d45bff60e55a4acca373deb3)"
  },
  "certificates": {
-  "status": "pending: blind extraction of the 16 WIN7-D10 roots (engine v15 inlined, extractor_exact, empty kill table as in the 69j/71e/72d lanes) with independent engine-free verification before publication; not published by this claim v2",
-  "planned_driver": "cert_driver73j.ts (71e/72d driver duplicated, argv-driven, String.fromCharCode(10) newline convention)"
+  "manifest": "output/class2-lane-cost73j-certificates/class2-lane-cost73j-win7-certificates-20261117.json",
+  "schema": "n11-class2-lane-cost73j-win7-certificates-20261117-v1",
+  "manifest_git_blob": "e88710b5a2d4848be77a03ae5104e46aefc1279a",
+  "win7_d10_bits": [
+   0,
+   1,
+   6,
+   29,
+   44,
+   49,
+   52,
+   69,
+   74,
+   82,
+   87,
+   91,
+   98,
+   100,
+   110,
+   118
+  ],
+  "totals": {
+   "certificates": 16,
+   "rows": 726778,
+   "extraction_nodes": 166238087,
+   "published_bytes": 26236851,
+   "fbt_drops": 0
+  },
+  "whole_file_bits": [
+   69,
+   82
+  ],
+  "split_bits": [
+   0,
+   1,
+   6,
+   29,
+   44,
+   49,
+   52,
+   74,
+   87,
+   91,
+   98,
+   100,
+   110,
+   118
+  ],
+  "verification": "engine-free verify_bit7_win7_cert.ts per root: stones=7 root check, loser mobility = legal_candidates.py RAW-root count (48-62 per root), all sub-roots PASS, consumed union 0 missing / 0 extra, terminal stone range within [13,17]; heaviest bit 98 blind re-extraction byte-identical (md5 0d8124b781d6d98878125abdb1a7ce76)",
+  "driver": "scripts/cert_driver73j.ts (72d driver duplicated, argv-driven, String.fromCharCode(10) newline convention); ev73j.sh orchestrates; verify_cost73j_one.sh per-root orchestration"
  }
 }
