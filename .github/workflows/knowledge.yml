@@ -120,6 +120,14 @@ jobs:
         run: |
           uv run --locked python research/experiments/vertical-fiber-two-token-z6-y17-boundary-20261117/verify_z6_y17.py
           git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y17-boundary-20261117/output/audit.json
+      - name: Audit K0910 two-token z=6 y=18 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y18-boundary-20261117/verify_z6_y18.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y18-boundary-20261117/output/audit.json
+      - name: Audit K0911 two-token z=6 y=19 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y19-boundary-20261117/verify_z6_y19.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y19-boundary-20261117/output/audit.json
       - name: Audit K0832 ceiling-token stable 2-position classification
         run: uv run --locked python research/experiments/vertical-fiber-ceiling-stable-2positions-20261116/verify_ceiling.py
       - name: Audit K0832 three-token transient band 2-position conjectures
