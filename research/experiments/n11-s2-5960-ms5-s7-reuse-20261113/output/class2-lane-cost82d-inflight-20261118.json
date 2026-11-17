@@ -3,7 +3,7 @@
  "date": "2026-11-18",
  "last_updated": "2026-11-18",
  "title": "n11 class2-lane cost82d: fresh 82-bit depth-10 sweep of the census v18 rank-1 row COMPLETED (0 WIN7-D10 / 82 REFUTED-D10 / 0 capped: the EIGHTH fully refuted swept row of the presweep-1473 band)",
- "status": "claim v2: COMPLETED (long-term lane; the fresh v17 depth-10 sweep of the 82-bit census v18 rank-1 child 00000000020000003800000080000800 is published and independently audited (65 open + 17 confirmation: 0 WIN7-D10 / 82 REFUTED-D10 / 0 capped, 127,619,232 candidate nodes + 9x3402 pilot nodes; audit git blob 14a44c8bce6c839d95d2e864692e272867bd0e3e, claim v2 = this file); the row is the EIGHTH fully refuted swept row of the presweep-1473 band after cost-74i, cost-75f, cost-79d, cost-79e, cost-80e, cost-80f and cost-81, so no WIN7-D10 certificate exists and the receipt fold is not needed; 11x11 UNKNOWN)",
+ "status": "claim v3: COMPLETED (sweep result unchanged; post-sweep coordinator correction: all nine remaining v18 candidates belong to a fully STERILE S5 parent, so the v18 runner-up is not a D10 receipt-closure target)",
  "claimed_by": "n11 long-term lane session (head-1473 presweep census v18 selector, post-81, cost82d; sweep run by the same lane)",
  "s5": "00000000020000003800000080000000",
  "s6_child": "00000000020000003800000080000800",
@@ -206,7 +206,7 @@
   "prior_lane_state": "cost-74i fully refuted (census v10, row excluded), cost-75f fully refuted (census v11), cost-79c 20 WIN with 19+1 certificates published (census v13), cost-79d fully refuted (census v14), cost-79e fully refuted (census v15), cost-80e fully refuted (census v16), cost-80f fully refuted (census v17), cost-81 fully refuted (census v18); the receipt folds of the WIN-bearing swept rows remain pending behind the 66i/66j/69j/71e/72d/73i/73j/73k/73l folds"
  },
  "basis_head": "1473/174/6375/504596/4648/368510 (census v18 selection basis; the canonical head after the landed cost-66i bit-19 fold is 1476/174/6372/504389/4645/368303; the ranking pool and the swept/excluded row set are unaffected by the fold)",
- "coordination_note": "latest main re-fetched immediately before each push (2026-11-18; claim v1 published at commit 89aabc45 with the batch driver ev82d_batches_20261118.sh; raw batches 1-5 were published by the parallel lane session at commits 724cca8b / 9d884650 / d6919973 / 46a1dfb2 / 02ff4596; batches 6-9 + det reruns + the v15 crosscheck were published at commit 4ac5fa29 by a second lane session after field-verifying the published batches 1-5 against its own independent full re-run of all nine batches, every non-ms field identical 48/48 lines); no other claim, raw batch, audit or census file for this child exists on main",
+ "coordination_note": "latest main re-fetched immediately before each push (2026-11-18; claim v1 published at commit 89aabc45 with the batch driver ev82d_batches_20261118.sh; raw batches 1-5 were published by the parallel lane session at commits 724cca8b / 9d884650 / d6919973 / 46a1dfb2 / 02ff4596; batches 6-9 + det reruns + the v15 crosscheck were published at commit 4ac5fa29 by a second lane session after field-verifying the published batches 1-5 against its own independent full re-run of all nine batches, every non-ms field identical 48/48 lines); no other claim, raw batch, audit or census file for this child exists on main; post-sweep correction (2026-11-18): the v18 sterile-parent filter audit (blob 60233241c6c48ab5085bf125b3edfb1cf56941a6) shows the entire 9-row v18 remaining pool belongs to K0865's all_remaining_sterile S5 parent 00000000020000003800000080000000; no candidate remains after filtering. Do not launch the cost82b runner-up for D10 receipt closure; rebase v19 over the current head-1473 worklist with STERILE-parent exclusions.",
  "planned_controls": {
   "pilot_d6": "per batch: loss=false at exactly 3,402 nodes (v17 control), else the batch is invalid",
   "determinism_rerun": "batch 1 and batch 8 re-run field-compare (ms-only differences allowed), plus a batch containing a WIN bit if any WIN bit appears",
@@ -319,7 +319,7 @@
   }
  },
  "confirmation_outcome": "17/17 confirmation bits re-run fresh matched the census v18 overlay prediction (0 conflicts; per-bit transfer root canons identical; sources: pre-64h harvest x4, cost81 x2 bits 15/105 (the first cost81-sourced transfers), cost74i x2, cost80e x1, cost79e x2, cost75f x2, cost79d x2, cost80f x2)",
- "next_action": "census v19: mark the cost82d row swept (0 WIN7-D10 / 82 REFUTED-D10, fully refuted, no certificates, no fold needed) and select the next cheapest unswept/unclaimed/unexcluded row from the census v18 ranking (runner-up 00000000020000003800000090000000, cost 82, open 65); 11x11 UNKNOWN",
+ "next_action": "Rebuild a v19 target census from the current head-1473 worklist with K0865/K0863 STERILE-parent exclusions before ranking. Do not launch the v18 runner-up 00000000020000003800000090000000 as a D10 receipt-closure target: the v18 remaining pool has 9 rows and all 9 belong to parent 00000000020000003800000080000000, which K0865 classifies all_remaining_sterile (18/18 S6 rows, edge cost 1460). The cost82d v17 sweep is a revalidation of a historical STERILE row, not new closure progress. If cross-version revalidation is separately desired, label it as revalidation and do not count it as a new receipt/coverage result. Partial-STERILE parents may still have cross-cover value through their non-STERILE children, but cannot be fully closed by D10 receipts while a STERILE child remains. 11x11 UNKNOWN.",
  "receipt_fold": {
   "status": "not needed (0 win bits): the row is fully refuted (82/82 REFUTED-D10), so there is no WIN7-D10 certificate to fold and no manifest row of this child closes; family-row receipt accounting is unaffected, as with the fully refuted cost-74i, cost-75f, cost-79d, cost-79e, cost-80e, cost-80f and cost-81 rows",
   "note": "no WIN7-D10 bit exists in this sweep; certificates: not applicable"
@@ -363,5 +363,13 @@
  },
  "open_bits_completed": 65,
  "open_bits_remaining": 0,
- "batches_run": 9
+ "batches_run": 9,
+ "post_sweep_selection_audit": {
+  "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-presweep-v18-sterile-parent-filter-audit-20261118.json",
+  "blob_sha": "60233241c6c48ab5085bf125b3edfb1cf56941a6",
+  "result": "PASS",
+  "v18_remaining_candidates": 9,
+  "eligible_after_sterile_parent_filter": 0,
+  "interpretation": "all nine rows are in the all_remaining_sterile class-4 S5 parent"
+ }
 }
