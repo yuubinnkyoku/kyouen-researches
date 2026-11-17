@@ -1,0 +1,12 @@
+# split certificate bit 112 (cost-73l)
+
+root `00010000000000c09002000000400000`
+
+`n11_s7_00010000000000c09002000000400000.cert` is 2280207 bytes and is published as two parts:
+
+```
+cat n11_s7_00010000000000c09002000000400000.cert.part1of2 n11_s7_00010000000000c09002000000400000.cert.part2of2 > n11_s7_00010000000000c09002000000400000.cert
+md5sum n11_s7_00010000000000c09002000000400000.cert   # af72c16c0d1f4da66dcd1574138e440b
+```
+
+The split is at a line boundary (byte 1140102); both parts are byte-exact halves of the certificate.
