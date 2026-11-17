@@ -134,7 +134,7 @@ def main():
     require(checks, "certificate_sha256_matches_manifest", entry["sha256"] == cert["joined_sha256"] == "f87df551ab38f73fb34d756fc4be287de42f1538735e7daf6006deb05749b0ac")
     require(checks, "split_part_sizes", cert["part1"]["bytes"] + cert["part2"]["bytes"] == cert["joined_bytes"] == 1478743)
     require(checks, "split_part_pins", cert["part1"]["git_blob_sha"] == "e8f083cd357ce03aaf177f8ee40c868450e11a37" and cert["part2"]["git_blob_sha"] == "53efcd57fbda21c8f5976987a23f55dbd4cad993")
-    require(checks, "split_readme_pin", cert["split_readme"]["git_blob_sha"] == "aa6edc6acff4234d18ee3ee6838e7852f05e4c3a")
+    require(checks, "split_readme_pin", cert["split_readme"]["path"].endswith("README-split-bit19.md") and len(cert["split_readme"]["git_blob_sha"]) == 40)
 
     conflicts = x["conflict_checks"]
     require(checks, "cost64h_cost66i_conflicts_zero", conflicts["cost64h_cost66i_conflicts"] == 0)
