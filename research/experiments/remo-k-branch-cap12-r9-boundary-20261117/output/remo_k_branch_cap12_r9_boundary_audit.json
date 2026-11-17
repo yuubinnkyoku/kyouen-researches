@@ -1,0 +1,1842 @@
+{
+ "burnside": {
+  "10": {
+   "fix_cyc": 125,
+   "fix_id": 84494,
+   "fix_trans": 3478,
+   "keys": 715,
+   "orbits": 15863
+  },
+  "11": {
+   "fix_cyc": 161,
+   "fix_id": 152171,
+   "fix_trans": 5299,
+   "keys": 1001,
+   "orbits": 28065
+  },
+  "12": {
+   "fix_cyc": 203,
+   "fix_id": 261749,
+   "fix_trans": 7805,
+   "keys": 1365,
+   "orbits": 47595
+  }
+ },
+ "echo_table": {
+  "6,6,8|0": {
+   "n": 51,
+   "r2": 51,
+   "r3": 0,
+   "r4": 0,
+   "r5": 0,
+   "r6": 0,
+   "r7": 0,
+   "r8": 48,
+   "r9": 48
+  },
+  "6,6,8|1": {
+   "n": 33,
+   "r2": 33,
+   "r3": 0,
+   "r4": 0,
+   "r5": 0,
+   "r6": 0,
+   "r7": 0,
+   "r8": 30,
+   "r9": 30
+  },
+  "6,6,8|2": {
+   "n": 19,
+   "r2": 19,
+   "r3": 0,
+   "r4": 0,
+   "r5": 0,
+   "r6": 0,
+   "r7": 0,
+   "r8": 16,
+   "r9": 16
+  },
+  "6,6,8|3": {
+   "n": 10,
+   "r2": 10,
+   "r3": 0,
+   "r4": 0,
+   "r5": 0,
+   "r6": 0,
+   "r7": 0,
+   "r8": 7,
+   "r9": 7
+  },
+  "6,6,8|4": {
+   "n": 4,
+   "r2": 4,
+   "r3": 0,
+   "r4": 0,
+   "r5": 0,
+   "r6": 0,
+   "r7": 0,
+   "r8": 2,
+   "r9": 2
+  },
+  "6,6,9|0": {
+   "n": 54,
+   "r2": 0,
+   "r3": 0,
+   "r4": 0,
+   "r5": 0,
+   "r6": 0,
+   "r7": 0,
+   "r8": 0,
+   "r9": 40
+  },
+  "6,6,9|1": {
+   "n": 34,
+   "r2": 0,
+   "r3": 0,
+   "r4": 0,
+   "r5": 0,
+   "r6": 0,
+   "r7": 0,
+   "r8": 0,
+   "r9": 22
+  },
+  "6,6,9|2": {
+   "n": 20,
+   "r2": 0,
+   "r3": 0,
+   "r4": 0,
+   "r5": 0,
+   "r6": 0,
+   "r7": 0,
+   "r8": 0,
+   "r9": 10
+  },
+  "6,6,9|3": {
+   "n": 10,
+   "r2": 0,
+   "r3": 0,
+   "r4": 0,
+   "r5": 0,
+   "r6": 0,
+   "r7": 0,
+   "r8": 0,
+   "r9": 3
+  },
+  "6,8,8|0": {
+   "n": 66,
+   "r2": 66,
+   "r3": 0,
+   "r4": 0,
+   "r5": 0,
+   "r6": 0,
+   "r7": 0,
+   "r8": 63,
+   "r9": 63
+  },
+  "6,8,8|1": {
+   "n": 45,
+   "r2": 45,
+   "r3": 0,
+   "r4": 0,
+   "r5": 0,
+   "r6": 0,
+   "r7": 0,
+   "r8": 42,
+   "r9": 42
+  },
+  "6,8,8|2": {
+   "n": 27,
+   "r2": 27,
+   "r3": 0,
+   "r4": 0,
+   "r5": 0,
+   "r6": 0,
+   "r7": 0,
+   "r8": 24,
+   "r9": 24
+  },
+  "6,8,8|3": {
+   "n": 16,
+   "r2": 16,
+   "r3": 0,
+   "r4": 0,
+   "r5": 0,
+   "r6": 0,
+   "r7": 0,
+   "r8": 13,
+   "r9": 13
+  },
+  "6,8,8|4": {
+   "n": 7,
+   "r2": 7,
+   "r3": 0,
+   "r4": 0,
+   "r5": 0,
+   "r6": 0,
+   "r7": 0,
+   "r8": 4,
+   "r9": 4
+  },
+  "6,8,9|0": {
+   "n": 120,
+   "r2": 0,
+   "r3": 0,
+   "r4": 0,
+   "r5": 0,
+   "r6": 0,
+   "r7": 0,
+   "r8": 0,
+   "r9": 95
+  },
+  "6,8,9|1": {
+   "n": 78,
+   "r2": 0,
+   "r3": 0,
+   "r4": 0,
+   "r5": 0,
+   "r6": 0,
+   "r7": 0,
+   "r8": 0,
+   "r9": 53
+  },
+  "6,8,9|2": {
+   "n": 47,
+   "r2": 0,
+   "r3": 0,
+   "r4": 0,
+   "r5": 0,
+   "r6": 0,
+   "r7": 0,
+   "r8": 0,
+   "r9": 24
+  },
+  "6,8,9|3": {
+   "n": 25,
+   "r2": 0,
+   "r3": 0,
+   "r4": 0,
+   "r5": 0,
+   "r6": 0,
+   "r7": 0,
+   "r8": 0,
+   "r9": 6
+  },
+  "6,9,9|0": {
+   "n": 78,
+   "r2": 0,
+   "r3": 0,
+   "r4": 0,
+   "r5": 0,
+   "r6": 0,
+   "r7": 0,
+   "r8": 0,
+   "r9": 64
+  },
+  "6,9,9|1": {
+   "n": 54,
+   "r2": 0,
+   "r3": 0,
+   "r4": 0,
+   "r5": 0,
+   "r6": 0,
+   "r7": 0,
+   "r8": 0,
+   "r9": 40
+  },
+  "6,9,9|2": {
+   "n": 33,
+   "r2": 0,
+   "r3": 0,
+   "r4": 0,
+   "r5": 0,
+   "r6": 0,
+   "r7": 0,
+   "r8": 0,
+   "r9": 19
+  },
+  "6,9,9|3": {
+   "n": 20,
+   "r2": 0,
+   "r3": 0,
+   "r4": 0,
+   "r5": 0,
+   "r6": 0,
+   "r7": 0,
+   "r8": 0,
+   "r9": 6
+  },
+  "8,8,9|0": {
+   "n": 100,
+   "r2": 0,
+   "r3": 92,
+   "r4": 92,
+   "r5": 92,
+   "r6": 0,
+   "r7": 0,
+   "r8": 0,
+   "r9": 92
+  },
+  "8,8,9|1": {
+   "n": 70,
+   "r2": 0,
+   "r3": 62,
+   "r4": 62,
+   "r5": 62,
+   "r6": 0,
+   "r7": 0,
+   "r8": 0,
+   "r9": 62
+  },
+  "8,8,9|2": {
+   "n": 48,
+   "r2": 0,
+   "r3": 40,
+   "r4": 40,
+   "r5": 40,
+   "r6": 0,
+   "r7": 0,
+   "r8": 0,
+   "r9": 40
+  },
+  "8,8,9|3": {
+   "n": 30,
+   "r2": 0,
+   "r3": 22,
+   "r4": 22,
+   "r5": 22,
+   "r6": 0,
+   "r7": 0,
+   "r8": 0,
+   "r9": 22
+  },
+  "8,8,9|4": {
+   "n": 18,
+   "r2": 0,
+   "r3": 10,
+   "r4": 10,
+   "r5": 10,
+   "r6": 0,
+   "r7": 0,
+   "r8": 0,
+   "r9": 10
+  },
+  "8,8,9|5": {
+   "n": 9,
+   "r2": 0,
+   "r3": 3,
+   "r4": 3,
+   "r5": 3,
+   "r6": 0,
+   "r7": 0,
+   "r8": 0,
+   "r9": 3
+  },
+  "8,9,9|0": {
+   "n": 110,
+   "r2": 0,
+   "r3": 102,
+   "r4": 102,
+   "r5": 102,
+   "r6": 0,
+   "r7": 0,
+   "r8": 0,
+   "r9": 102
+  },
+  "8,9,9|1": {
+   "n": 80,
+   "r2": 0,
+   "r3": 72,
+   "r4": 72,
+   "r5": 72,
+   "r6": 0,
+   "r7": 0,
+   "r8": 0,
+   "r9": 72
+  },
+  "8,9,9|2": {
+   "n": 54,
+   "r2": 0,
+   "r3": 46,
+   "r4": 46,
+   "r5": 46,
+   "r6": 0,
+   "r7": 0,
+   "r8": 0,
+   "r9": 46
+  },
+  "8,9,9|3": {
+   "n": 36,
+   "r2": 0,
+   "r3": 28,
+   "r4": 28,
+   "r5": 28,
+   "r6": 0,
+   "r7": 0,
+   "r8": 0,
+   "r9": 28
+  },
+  "8,9,9|4": {
+   "n": 21,
+   "r2": 0,
+   "r3": 13,
+   "r4": 13,
+   "r5": 13,
+   "r6": 0,
+   "r7": 0,
+   "r8": 0,
+   "r9": 13
+  },
+  "8,9,9|5": {
+   "n": 12,
+   "r2": 0,
+   "r3": 4,
+   "r4": 4,
+   "r5": 4,
+   "r6": 0,
+   "r7": 0,
+   "r8": 0,
+   "r9": 4
+  }
+ },
+ "machine_checks": [
+  {
+   "data": {
+    "fix_cyc": 125,
+    "fix_id": 84494,
+    "fix_trans": 3478,
+    "keys": 715,
+    "orbits": 15863
+   },
+   "name": "cap=10: Burnside orbit count == direct canonical enumeration (15863 profiles, 715 keys)",
+   "ok": true
+  },
+  {
+   "data": {
+    "fix_cyc": 161,
+    "fix_id": 152171,
+    "fix_trans": 5299,
+    "keys": 1001,
+    "orbits": 28065
+   },
+   "name": "cap=11: Burnside orbit count == direct canonical enumeration (28065 profiles, 1001 keys)",
+   "ok": true
+  },
+  {
+   "data": {
+    "fix_cyc": 203,
+    "fix_id": 261749,
+    "fix_trans": 7805,
+    "keys": 1365,
+    "orbits": 47595
+   },
+   "name": "cap=12: Burnside orbit count == direct canonical enumeration (47595 profiles, 1365 keys)",
+   "ok": true
+  },
+  {
+   "data": {
+    "cap10": 15863,
+    "cap11": 28065,
+    "cap12": 47595
+   },
+   "name": "profile-set inclusion: cap10 subset of cap11 subset of cap12",
+   "ok": true
+  },
+  {
+   "data": {
+    "bytes": 975488,
+    "max_states": 2331310,
+    "max_states_atoms": [
+     3,
+     3,
+     3,
+     3,
+     3,
+     3,
+     3
+    ],
+    "max_states_i": 31964,
+    "records": 47595,
+    "sha256": "02e771cda84ae5178ee67a905cc9c2148e0c186790cf0562f569d9923110f32d",
+    "states_sum": 3889246676
+   },
+   "name": "r=9 committed packed column: 47595 records [i, sv_mask, fl_mask, states], index-complete, atoms a pure function of i via the canonical enumeration, mask/state field invariants, file sha256 + engine sha256 pinned",
+   "ok": true
+  },
+  {
+   "data": {
+    "committed_bytes": 975488,
+    "derived_bytes": 975488
+   },
+   "name": "packed round-trip: re-serialized [i, sv_mask, fl_mask, states] from the parsed column reproduce the committed packed bytes exactly (mask <-> player-set unpacking lossless, states exact)",
+   "ok": true
+  },
+  {
+   "data": {
+    "first": 0,
+    "last": 47562,
+    "max_states": 363630,
+    "mismatches": 0,
+    "positions": 15863,
+    "ref_column_sha256": {
+     "cap10_r9": "a2bb16bc8d03f341704d902f0a50ce4352b14ad08043cbced54b8e8f83b9973b",
+     "r2": "1fd9dbf4cb6699c26bab7f6b34a900f5877d3408603a02a2dd121ca71ef8e951",
+     "r3": "ea7c66286f728a52d5696d627ce1faf7705e77f9e4222493221f3a4fe79ed134",
+     "r4": "04caba43a7c0f7124db1ea81fcad4f170de04bd041699f6659e42f786e9a40b4",
+     "r5": "c6dddad7a4ce39d3ebc8765187b0f16961720654918d74f54e608e12975ea693",
+     "r6": "65f1cb32a9ecae6bd258056dfe8ab7c59d376d570f1d11c647b6823fd2467f1d",
+     "r7": "50eb7c1ba41825dcbf726258cb2c6878a324d58bb17a708cb587d9d2b3b79c78",
+     "r8": "0a884b490e28c281166754c1e82aaa73f7515580dea05b4ce023e8a1f079e8dc"
+    }
+   },
+   "name": "D_10 subsequence: the 15863 cap<=10 canonical profiles embed order-preservingly at pinned positions (first 0, last 47562) and the r=9 records there equal the committed K0893 cap<=10 r=9 column byte-wise (sv/fl/states, 0 mismatches); D_10 max states 363630 == K0893 published",
+   "ok": true
+  },
+  {
+   "data": {
+    "violations": 0
+   },
+   "name": "Lemma FL (K0864, universal; redundant machine anchor): first losers == {C_i mod 9} for all 47595 profiles, 0 violations",
+   "ok": true
+  },
+  {
+   "data": {
+    "cap10_sub_census": {
+     "keys": 715,
+     "mixed": 34,
+     "uniform_det": 98,
+     "uniform_ndet": 583
+    },
+    "chain_determined": 34,
+    "det_survivor_sets": [
+     [
+      5
+     ]
+    ],
+    "keys": 1365,
+    "mixed": 34,
+    "uniform_det": 143,
+    "uniform_ndet": 1188
+   },
+   "name": "r=9 cap<=12 key census: 1365 keys, 143 uniform-det / 1188 uniform-ndet / 34 mixed; the 34 mixed keys are EXACTLY the K0893 cap<=10 boundary (7 families), per-key partitions pinned-identical, det-side survivor uniformly P_5, all 34 chain profiles determined, cap<=10 sub-census 98/583/34 == K0893 published",
+   "ok": true
+  },
+  {
+   "data": {
+    "chain_union_equal": 167,
+    "det_residue_classes": [
+     "1,2",
+     "1,3",
+     "2",
+     "3"
+    ],
+    "gprime_mismatches": 0,
+    "keys": 650,
+    "mixed": 0,
+    "profiles": 31732,
+    "uniform_det": 45,
+    "uniform_ndet": 605,
+    "with_11": 363,
+    "with_12": 364
+   },
+   "name": "new-key census (keys containing an 11 or 12 branch): 650 keys (363 with 11, 364 with 12; 31732 profiles) split 45 uniform-det / 605 uniform-ndet / 0 MIXED - ZERO new non-collapse keys at sizes 11,12; residue-class census pinned; the 45 uniform-det new keys are pinned exactly; Theorem G' survivor level holds for all 143 uniform-det keys (0 mismatches); 167/605 uniform-ndet new keys have chain survivors == union (observation)",
+   "ok": true
+  },
+  {
+   "data": {
+    "delta0_mismatches": 0,
+    "delta0_profiles": 1512,
+    "delta0_with_11_or_12": 784,
+    "det_diffs_by_m": {
+     "9": 876
+    },
+    "m9_uniform_det_keys": [
+     "9,9,9|0",
+     "9,9,9|1",
+     "9,9,9|2",
+     "9,9,9|3",
+     "9,9,9|4",
+     "9,9,9|5",
+     "9,9,9|6",
+     "9,9,9|7",
+     "9,9,9|8"
+    ],
+    "m_le_7_fl_mismatches": 0,
+    "m_le_8_det_mismatches": 0,
+    "m_le_8_sv_mismatches": 0,
+    "sv_mask_diffs": 38070
+   },
+   "name": "Theorem J (K0906, universal) cap<=12 r=9 anchor: for M = max C_i <= 8 the r=9 det/sv equal the committed r=8 column (det 0 / sv 0 mismatches; M <= 7 fl also 0); all 876 r8->r9 det differences lie in M=9 profiles (the 34-key families crossing the r >= max(M,2) threshold); sv-mask diffs 38070 all in M>=8; the M=9 uniformly determined keys are exactly the Delta=0 family (9,9,9) x g=0..8; all 1512 Delta=0 profiles (784 with an 11/12 branch) are determined with the Theorem D r=9 survivor (0 mismatches)",
+   "ok": true
+  },
+  {
+   "data": {
+    "rows": 34
+   },
+   "name": "ECHO: the r=2..9 determinacy history of the 34 mixed keys (det counts per committed column) matches the pinned table: (6,6,8)/(6,8,8) active at r=2, dormant r=3..7, revived r=8-9; (8,8,9)/(8,9,9) active r=3..5, dormant r=6..8, revived r=9; the three 6/9 families fully dormant r=2..8, awaken at r=9 - the size 11/12 extension changes none of it",
+   "ok": true
+  },
+  {
+   "data": {
+    "entries": 84,
+    "mismatches": 0
+   },
+   "name": "Theorem D recursion == K0859 published (C,r) table (84 entries, C=1..12, r=2..8)",
+   "ok": true
+  }
+ ],
+ "meta": {
+  "date": "2026-11-17",
+  "engine_provenance": "verbatim region game / enumeration / Burnside / Theorem D from the K0862 verifier via K0875, K0876 and K0893; full-domain records produced by the committed JavaScript mask engine mask_engine_fast2.js (game logic, recursion order, budget semantics and record format verbatim identical to the committed K0893 engine mask_engine_fast_r9.js; only the memo representation differs - byte arena + open addressing instead of a JS Map - which does not affect any record); the sweep was run as two independent processes (indices 0..24447 and 23798..47594, 650-record overlap byte-identical) and merged; the committed publication form is the packed column (lossless: atoms are a pure function of i); Python mask twin cross-validated live in every run",
+  "item": "K0912",
+  "r_swept": [
+   9
+  ],
+  "title": "3-branch REMO determinacy size boundary cap<=12 x r=9: the K0893 34-key boundary is unchanged by the size 11/12 extension (650 new keys, 0 new mixed); Theorem J cap<=12 r>=max(M,2) anchor at r=9"
+ },
+ "summary": {
+  "all_ok": true,
+  "checks_total": 13
+ },
+ "sweep_inputs": {
+  "engine_sha256": "b904760e109e9adf1689b91e7dcbb1aa530704af322ee7808e2304d0377586de",
+  "r9_packed": {
+   "bytes": 975488,
+   "records": 47595,
+   "sha256": "02e771cda84ae5178ee67a905cc9c2148e0c186790cf0562f569d9923110f32d"
+  },
+  "ref_column_sha256": {
+   "cap10_r9": "a2bb16bc8d03f341704d902f0a50ce4352b14ad08043cbced54b8e8f83b9973b",
+   "r2": "1fd9dbf4cb6699c26bab7f6b34a900f5877d3408603a02a2dd121ca71ef8e951",
+   "r3": "ea7c66286f728a52d5696d627ce1faf7705e77f9e4222493221f3a4fe79ed134",
+   "r4": "04caba43a7c0f7124db1ea81fcad4f170de04bd041699f6659e42f786e9a40b4",
+   "r5": "c6dddad7a4ce39d3ebc8765187b0f16961720654918d74f54e608e12975ea693",
+   "r6": "65f1cb32a9ecae6bd258056dfe8ab7c59d376d570f1d11c647b6823fd2467f1d",
+   "r7": "50eb7c1ba41825dcbf726258cb2c6878a324d58bb17a708cb587d9d2b3b79c78",
+   "r8": "0a884b490e28c281166754c1e82aaa73f7515580dea05b4ce023e8a1f079e8dc"
+  }
+ },
+ "sweeps": {
+  "cap10_sub_census": {
+   "keys": 715,
+   "mixed": 34,
+   "uniform_det": 98,
+   "uniform_ndet": 583
+  },
+  "census": {
+   "keys": 1365,
+   "mixed": 34,
+   "uniform_det": 143,
+   "uniform_ndet": 1188
+  },
+  "mixed_partition": {
+   "6,6,8|0": {
+    "det": 48,
+    "dsv": [
+     [
+      5
+     ]
+    ],
+    "n": 51,
+    "ndet": 3,
+    "ndet_sets": [
+     [
+      3,
+      4,
+      5
+     ]
+    ]
+   },
+   "6,6,8|1": {
+    "det": 30,
+    "dsv": [
+     [
+      5
+     ]
+    ],
+    "n": 33,
+    "ndet": 3,
+    "ndet_sets": [
+     [
+      3,
+      4,
+      5
+     ]
+    ]
+   },
+   "6,6,8|2": {
+    "det": 16,
+    "dsv": [
+     [
+      5
+     ]
+    ],
+    "n": 19,
+    "ndet": 3,
+    "ndet_sets": [
+     [
+      3,
+      4,
+      5
+     ]
+    ]
+   },
+   "6,6,8|3": {
+    "det": 7,
+    "dsv": [
+     [
+      5
+     ]
+    ],
+    "n": 10,
+    "ndet": 3,
+    "ndet_sets": [
+     [
+      3,
+      4,
+      5
+     ]
+    ]
+   },
+   "6,6,8|4": {
+    "det": 2,
+    "dsv": [
+     [
+      5
+     ]
+    ],
+    "n": 4,
+    "ndet": 2,
+    "ndet_sets": [
+     [
+      3,
+      4,
+      5
+     ]
+    ]
+   },
+   "6,6,9|0": {
+    "det": 40,
+    "dsv": [
+     [
+      5
+     ]
+    ],
+    "n": 54,
+    "ndet": 14,
+    "ndet_sets": [
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      3,
+      5
+     ]
+    ]
+   },
+   "6,6,9|1": {
+    "det": 22,
+    "dsv": [
+     [
+      5
+     ]
+    ],
+    "n": 34,
+    "ndet": 12,
+    "ndet_sets": [
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      3,
+      5
+     ]
+    ]
+   },
+   "6,6,9|2": {
+    "det": 10,
+    "dsv": [
+     [
+      5
+     ]
+    ],
+    "n": 20,
+    "ndet": 10,
+    "ndet_sets": [
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      3,
+      5
+     ]
+    ]
+   },
+   "6,6,9|3": {
+    "det": 3,
+    "dsv": [
+     [
+      5
+     ]
+    ],
+    "n": 10,
+    "ndet": 7,
+    "ndet_sets": [
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      3,
+      5
+     ]
+    ]
+   },
+   "6,8,8|0": {
+    "det": 63,
+    "dsv": [
+     [
+      5
+     ]
+    ],
+    "n": 66,
+    "ndet": 3,
+    "ndet_sets": [
+     [
+      3,
+      4,
+      5
+     ]
+    ]
+   },
+   "6,8,8|1": {
+    "det": 42,
+    "dsv": [
+     [
+      5
+     ]
+    ],
+    "n": 45,
+    "ndet": 3,
+    "ndet_sets": [
+     [
+      3,
+      4,
+      5
+     ]
+    ]
+   },
+   "6,8,8|2": {
+    "det": 24,
+    "dsv": [
+     [
+      5
+     ]
+    ],
+    "n": 27,
+    "ndet": 3,
+    "ndet_sets": [
+     [
+      3,
+      4,
+      5
+     ]
+    ]
+   },
+   "6,8,8|3": {
+    "det": 13,
+    "dsv": [
+     [
+      5
+     ]
+    ],
+    "n": 16,
+    "ndet": 3,
+    "ndet_sets": [
+     [
+      3,
+      4,
+      5
+     ]
+    ]
+   },
+   "6,8,8|4": {
+    "det": 4,
+    "dsv": [
+     [
+      5
+     ]
+    ],
+    "n": 7,
+    "ndet": 3,
+    "ndet_sets": [
+     [
+      3,
+      4,
+      5
+     ]
+    ]
+   },
+   "6,8,9|0": {
+    "det": 95,
+    "dsv": [
+     [
+      5
+     ]
+    ],
+    "n": 120,
+    "ndet": 25,
+    "ndet_sets": [
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      3,
+      4,
+      5,
+      7
+     ],
+     [
+      3,
+      5
+     ],
+     [
+      3,
+      5,
+      7
+     ]
+    ]
+   },
+   "6,8,9|1": {
+    "det": 53,
+    "dsv": [
+     [
+      5
+     ]
+    ],
+    "n": 78,
+    "ndet": 25,
+    "ndet_sets": [
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      3,
+      4,
+      5,
+      7
+     ],
+     [
+      3,
+      5
+     ],
+     [
+      3,
+      5,
+      7
+     ]
+    ]
+   },
+   "6,8,9|2": {
+    "det": 24,
+    "dsv": [
+     [
+      5
+     ]
+    ],
+    "n": 47,
+    "ndet": 23,
+    "ndet_sets": [
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      3,
+      4,
+      5,
+      7
+     ],
+     [
+      3,
+      5
+     ],
+     [
+      3,
+      5,
+      7
+     ]
+    ]
+   },
+   "6,8,9|3": {
+    "det": 6,
+    "dsv": [
+     [
+      5
+     ]
+    ],
+    "n": 25,
+    "ndet": 19,
+    "ndet_sets": [
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      3,
+      4,
+      5,
+      7
+     ],
+     [
+      3,
+      5
+     ],
+     [
+      3,
+      5,
+      7
+     ]
+    ]
+   },
+   "6,9,9|0": {
+    "det": 64,
+    "dsv": [
+     [
+      5
+     ]
+    ],
+    "n": 78,
+    "ndet": 14,
+    "ndet_sets": [
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      3,
+      5
+     ]
+    ]
+   },
+   "6,9,9|1": {
+    "det": 40,
+    "dsv": [
+     [
+      5
+     ]
+    ],
+    "n": 54,
+    "ndet": 14,
+    "ndet_sets": [
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      3,
+      5
+     ]
+    ]
+   },
+   "6,9,9|2": {
+    "det": 19,
+    "dsv": [
+     [
+      5
+     ]
+    ],
+    "n": 33,
+    "ndet": 14,
+    "ndet_sets": [
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      3,
+      5
+     ]
+    ]
+   },
+   "6,9,9|3": {
+    "det": 6,
+    "dsv": [
+     [
+      5
+     ]
+    ],
+    "n": 20,
+    "ndet": 14,
+    "ndet_sets": [
+     [
+      3,
+      4,
+      5
+     ],
+     [
+      3,
+      5
+     ]
+    ]
+   },
+   "8,8,9|0": {
+    "det": 92,
+    "dsv": [
+     [
+      5
+     ]
+    ],
+    "n": 100,
+    "ndet": 8,
+    "ndet_sets": [
+     [
+      3,
+      4,
+      5,
+      7
+     ],
+     [
+      3,
+      5,
+      7
+     ]
+    ]
+   },
+   "8,8,9|1": {
+    "det": 62,
+    "dsv": [
+     [
+      5
+     ]
+    ],
+    "n": 70,
+    "ndet": 8,
+    "ndet_sets": [
+     [
+      3,
+      4,
+      5,
+      7
+     ],
+     [
+      3,
+      5,
+      7
+     ]
+    ]
+   },
+   "8,8,9|2": {
+    "det": 40,
+    "dsv": [
+     [
+      5
+     ]
+    ],
+    "n": 48,
+    "ndet": 8,
+    "ndet_sets": [
+     [
+      3,
+      4,
+      5,
+      7
+     ],
+     [
+      3,
+      5,
+      7
+     ]
+    ]
+   },
+   "8,8,9|3": {
+    "det": 22,
+    "dsv": [
+     [
+      5
+     ]
+    ],
+    "n": 30,
+    "ndet": 8,
+    "ndet_sets": [
+     [
+      3,
+      4,
+      5,
+      7
+     ],
+     [
+      3,
+      5,
+      7
+     ]
+    ]
+   },
+   "8,8,9|4": {
+    "det": 10,
+    "dsv": [
+     [
+      5
+     ]
+    ],
+    "n": 18,
+    "ndet": 8,
+    "ndet_sets": [
+     [
+      3,
+      4,
+      5,
+      7
+     ],
+     [
+      3,
+      5,
+      7
+     ]
+    ]
+   },
+   "8,8,9|5": {
+    "det": 3,
+    "dsv": [
+     [
+      5
+     ]
+    ],
+    "n": 9,
+    "ndet": 6,
+    "ndet_sets": [
+     [
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     [
+      3,
+      4,
+      5,
+      7
+     ],
+     [
+      3,
+      5,
+      7
+     ]
+    ]
+   },
+   "8,9,9|0": {
+    "det": 102,
+    "dsv": [
+     [
+      5
+     ]
+    ],
+    "n": 110,
+    "ndet": 8,
+    "ndet_sets": [
+     [
+      3,
+      4,
+      5,
+      7
+     ],
+     [
+      3,
+      5,
+      7
+     ]
+    ]
+   },
+   "8,9,9|1": {
+    "det": 72,
+    "dsv": [
+     [
+      5
+     ]
+    ],
+    "n": 80,
+    "ndet": 8,
+    "ndet_sets": [
+     [
+      3,
+      4,
+      5,
+      7
+     ],
+     [
+      3,
+      5,
+      7
+     ]
+    ]
+   },
+   "8,9,9|2": {
+    "det": 46,
+    "dsv": [
+     [
+      5
+     ]
+    ],
+    "n": 54,
+    "ndet": 8,
+    "ndet_sets": [
+     [
+      3,
+      4,
+      5,
+      7
+     ],
+     [
+      3,
+      5,
+      7
+     ]
+    ]
+   },
+   "8,9,9|3": {
+    "det": 28,
+    "dsv": [
+     [
+      5
+     ]
+    ],
+    "n": 36,
+    "ndet": 8,
+    "ndet_sets": [
+     [
+      3,
+      4,
+      5,
+      7
+     ],
+     [
+      3,
+      5,
+      7
+     ]
+    ]
+   },
+   "8,9,9|4": {
+    "det": 13,
+    "dsv": [
+     [
+      5
+     ]
+    ],
+    "n": 21,
+    "ndet": 8,
+    "ndet_sets": [
+     [
+      3,
+      4,
+      5,
+      7
+     ],
+     [
+      3,
+      5,
+      7
+     ]
+    ]
+   },
+   "8,9,9|5": {
+    "det": 4,
+    "dsv": [
+     [
+      5
+     ]
+    ],
+    "n": 12,
+    "ndet": 8,
+    "ndet_sets": [
+     [
+      3,
+      4,
+      5,
+      7
+     ],
+     [
+      3,
+      5,
+      7
+     ]
+    ]
+   }
+  },
+  "new_key_census": {
+   "keys": 650,
+   "mixed": 0,
+   "profiles": 31732,
+   "residue_census": {
+    "0,1,2": {
+     "det": 0,
+     "keys": 10,
+     "mixed": 0,
+     "ndet": 10
+    },
+    "0,1,3": {
+     "det": 0,
+     "keys": 10,
+     "mixed": 0,
+     "ndet": 10
+    },
+    "0,2": {
+     "det": 0,
+     "keys": 20,
+     "mixed": 0,
+     "ndet": 20
+    },
+    "0,2,3": {
+     "det": 0,
+     "keys": 14,
+     "mixed": 0,
+     "ndet": 14
+    },
+    "0,2,4": {
+     "det": 0,
+     "keys": 4,
+     "mixed": 0,
+     "ndet": 4
+    },
+    "0,2,5": {
+     "det": 0,
+     "keys": 5,
+     "mixed": 0,
+     "ndet": 5
+    },
+    "0,2,6": {
+     "det": 0,
+     "keys": 6,
+     "mixed": 0,
+     "ndet": 6
+    },
+    "0,2,7": {
+     "det": 0,
+     "keys": 7,
+     "mixed": 0,
+     "ndet": 7
+    },
+    "0,2,8": {
+     "det": 0,
+     "keys": 8,
+     "mixed": 0,
+     "ndet": 8
+    },
+    "0,3": {
+     "det": 0,
+     "keys": 21,
+     "mixed": 0,
+     "ndet": 21
+    },
+    "0,3,4": {
+     "det": 0,
+     "keys": 4,
+     "mixed": 0,
+     "ndet": 4
+    },
+    "0,3,5": {
+     "det": 0,
+     "keys": 5,
+     "mixed": 0,
+     "ndet": 5
+    },
+    "0,3,6": {
+     "det": 0,
+     "keys": 6,
+     "mixed": 0,
+     "ndet": 6
+    },
+    "0,3,7": {
+     "det": 0,
+     "keys": 7,
+     "mixed": 0,
+     "ndet": 7
+    },
+    "0,3,8": {
+     "det": 0,
+     "keys": 8,
+     "mixed": 0,
+     "ndet": 8
+    },
+    "1,2": {
+     "det": 2,
+     "keys": 26,
+     "mixed": 0,
+     "ndet": 24
+    },
+    "1,2,3": {
+     "det": 0,
+     "keys": 18,
+     "mixed": 0,
+     "ndet": 18
+    },
+    "1,2,4": {
+     "det": 0,
+     "keys": 5,
+     "mixed": 0,
+     "ndet": 5
+    },
+    "1,2,5": {
+     "det": 0,
+     "keys": 6,
+     "mixed": 0,
+     "ndet": 6
+    },
+    "1,2,6": {
+     "det": 0,
+     "keys": 7,
+     "mixed": 0,
+     "ndet": 7
+    },
+    "1,2,7": {
+     "det": 0,
+     "keys": 8,
+     "mixed": 0,
+     "ndet": 8
+    },
+    "1,2,8": {
+     "det": 0,
+     "keys": 9,
+     "mixed": 0,
+     "ndet": 9
+    },
+    "1,3": {
+     "det": 20,
+     "keys": 27,
+     "mixed": 0,
+     "ndet": 7
+    },
+    "1,3,4": {
+     "det": 0,
+     "keys": 5,
+     "mixed": 0,
+     "ndet": 5
+    },
+    "1,3,5": {
+     "det": 0,
+     "keys": 6,
+     "mixed": 0,
+     "ndet": 6
+    },
+    "1,3,6": {
+     "det": 0,
+     "keys": 7,
+     "mixed": 0,
+     "ndet": 7
+    },
+    "1,3,7": {
+     "det": 0,
+     "keys": 8,
+     "mixed": 0,
+     "ndet": 8
+    },
+    "1,3,8": {
+     "det": 0,
+     "keys": 9,
+     "mixed": 0,
+     "ndet": 9
+    },
+    "2": {
+     "det": 11,
+     "keys": 15,
+     "mixed": 0,
+     "ndet": 4
+    },
+    "2,3": {
+     "det": 0,
+     "keys": 41,
+     "mixed": 0,
+     "ndet": 41
+    },
+    "2,3,4": {
+     "det": 0,
+     "keys": 9,
+     "mixed": 0,
+     "ndet": 9
+    },
+    "2,3,5": {
+     "det": 0,
+     "keys": 10,
+     "mixed": 0,
+     "ndet": 10
+    },
+    "2,3,6": {
+     "det": 0,
+     "keys": 11,
+     "mixed": 0,
+     "ndet": 11
+    },
+    "2,3,7": {
+     "det": 0,
+     "keys": 12,
+     "mixed": 0,
+     "ndet": 12
+    },
+    "2,3,8": {
+     "det": 0,
+     "keys": 13,
+     "mixed": 0,
+     "ndet": 13
+    },
+    "2,4": {
+     "det": 0,
+     "keys": 10,
+     "mixed": 0,
+     "ndet": 10
+    },
+    "2,4,5": {
+     "det": 0,
+     "keys": 4,
+     "mixed": 0,
+     "ndet": 4
+    },
+    "2,4,6": {
+     "det": 0,
+     "keys": 4,
+     "mixed": 0,
+     "ndet": 4
+    },
+    "2,4,7": {
+     "det": 0,
+     "keys": 4,
+     "mixed": 0,
+     "ndet": 4
+    },
+    "2,4,8": {
+     "det": 0,
+     "keys": 4,
+     "mixed": 0,
+     "ndet": 4
+    },
+    "2,5": {
+     "det": 0,
+     "keys": 12,
+     "mixed": 0,
+     "ndet": 12
+    },
+    "2,5,6": {
+     "det": 0,
+     "keys": 5,
+     "mixed": 0,
+     "ndet": 5
+    },
+    "2,5,7": {
+     "det": 0,
+     "keys": 5,
+     "mixed": 0,
+     "ndet": 5
+    },
+    "2,5,8": {
+     "det": 0,
+     "keys": 5,
+     "mixed": 0,
+     "ndet": 5
+    },
+    "2,6": {
+     "det": 0,
+     "keys": 14,
+     "mixed": 0,
+     "ndet": 14
+    },
+    "2,6,7": {
+     "det": 0,
+     "keys": 6,
+     "mixed": 0,
+     "ndet": 6
+    },
+    "2,6,8": {
+     "det": 0,
+     "keys": 6,
+     "mixed": 0,
+     "ndet": 6
+    },
+    "2,7": {
+     "det": 0,
+     "keys": 16,
+     "mixed": 0,
+     "ndet": 16
+    },
+    "2,7,8": {
+     "det": 0,
+     "keys": 7,
+     "mixed": 0,
+     "ndet": 7
+    },
+    "2,8": {
+     "det": 0,
+     "keys": 18,
+     "mixed": 0,
+     "ndet": 18
+    },
+    "3": {
+     "det": 12,
+     "keys": 18,
+     "mixed": 0,
+     "ndet": 6
+    },
+    "3,4": {
+     "det": 0,
+     "keys": 11,
+     "mixed": 0,
+     "ndet": 11
+    },
+    "3,4,5": {
+     "det": 0,
+     "keys": 4,
+     "mixed": 0,
+     "ndet": 4
+    },
+    "3,4,6": {
+     "det": 0,
+     "keys": 4,
+     "mixed": 0,
+     "ndet": 4
+    },
+    "3,4,7": {
+     "det": 0,
+     "keys": 4,
+     "mixed": 0,
+     "ndet": 4
+    },
+    "3,4,8": {
+     "det": 0,
+     "keys": 4,
+     "mixed": 0,
+     "ndet": 4
+    },
+    "3,5": {
+     "det": 0,
+     "keys": 13,
+     "mixed": 0,
+     "ndet": 13
+    },
+    "3,5,6": {
+     "det": 0,
+     "keys": 5,
+     "mixed": 0,
+     "ndet": 5
+    },
+    "3,5,7": {
+     "det": 0,
+     "keys": 5,
+     "mixed": 0,
+     "ndet": 5
+    },
+    "3,5,8": {
+     "det": 0,
+     "keys": 5,
+     "mixed": 0,
+     "ndet": 5
+    },
+    "3,6": {
+     "det": 0,
+     "keys": 15,
+     "mixed": 0,
+     "ndet": 15
+    },
+    "3,6,7": {
+     "det": 0,
+     "keys": 6,
+     "mixed": 0,
+     "ndet": 6
+    },
+    "3,6,8": {
+     "det": 0,
+     "keys": 6,
+     "mixed": 0,
+     "ndet": 6
+    },
+    "3,7": {
+     "det": 0,
+     "keys": 17,
+     "mixed": 0,
+     "ndet": 17
+    },
+    "3,7,8": {
+     "det": 0,
+     "keys": 7,
+     "mixed": 0,
+     "ndet": 7
+    },
+    "3,8": {
+     "det": 0,
+     "keys": 19,
+     "mixed": 0,
+     "ndet": 19
+    }
+   },
+   "uniform_det": 45,
+   "uniform_det_keys": [
+    "1,1,11|0",
+    "1,11,11|0",
+    "10,10,12|0",
+    "10,10,12|1",
+    "10,10,12|2",
+    "10,10,12|3",
+    "10,10,12|4",
+    "10,10,12|5",
+    "10,10,12|6",
+    "10,10,12|7",
+    "10,10,12|8",
+    "10,10,12|9",
+    "10,12,12|0",
+    "10,12,12|1",
+    "10,12,12|2",
+    "10,12,12|3",
+    "10,12,12|4",
+    "10,12,12|5",
+    "10,12,12|6",
+    "10,12,12|7",
+    "10,12,12|8",
+    "10,12,12|9",
+    "11,11,11|0",
+    "11,11,11|1",
+    "11,11,11|10",
+    "11,11,11|2",
+    "11,11,11|3",
+    "11,11,11|4",
+    "11,11,11|5",
+    "11,11,11|6",
+    "11,11,11|7",
+    "11,11,11|8",
+    "11,11,11|9",
+    "12,12,12|0",
+    "12,12,12|1",
+    "12,12,12|10",
+    "12,12,12|11",
+    "12,12,12|2",
+    "12,12,12|3",
+    "12,12,12|4",
+    "12,12,12|5",
+    "12,12,12|6",
+    "12,12,12|7",
+    "12,12,12|8",
+    "12,12,12|9"
+   ],
+   "uniform_ndet": 605,
+   "with_11": 363,
+   "with_12": 364
+  },
+  "states": {
+   "max": 2331310,
+   "max_i": 31964,
+   "sum": 3889246676
+  }
+ }
+}
