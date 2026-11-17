@@ -130,7 +130,7 @@ def main() -> None:
     total_cost = sum(row["edge_cost"] for row in row_data)
     assert total_cost == 514
     for item in combined:
-        item["edge_cost_sum"] = sum(worklist[h]["own_candidates_s6_s7_edge_cost"] for h in item["head1473_sequential_new_rows"])
+        item["edge_cost_sum"] = sum(int(worklist[h]["own_candidates_s6_s7_edge_cost"]) for h in item["head1473_sequential_new_rows"])
         item["edge_cost_sum"] = int(item["edge_cost_sum"])
     bit19_combined = next(x for x in combined if x["bit"] == 19)
     assert bit19_combined["row_count"] == 3 and bit19_combined["edge_cost_sum"] == 207
