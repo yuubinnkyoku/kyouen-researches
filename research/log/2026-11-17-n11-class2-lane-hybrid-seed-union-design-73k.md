@@ -54,3 +54,8 @@
 ## 解釈ガード
 
 これはcache seedの構成設計であり、探索・証明書生成・receipt foldではない。新しいWIN/LOSS verdictなし、証明書bytes不変、manifest行の閉鎖なし。WIN7-D10は個別7石rootの深さ10以内の先手勝ちだけを示し、REFUTED-D10はLOSS証明ではない。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class 1/2/4は引き続きUNKNOWN。
+
+
+## 実装の事後点検（修正記録）
+
+初回commit後のファイル再取得で、再現スクリプトのGit blobヘッダー終端とJSON末尾改行のエスケープが誤っていることを発見した。初回版はまだ実行しておらず、測定値・導出値への影響はない。Git blobヘッダーをNUL byteで組み立て、出力改行をbyteで明示する形に修正した。併せて、スクリプトが生成するJSONにsource_pinsとno_actual_hybrid_seedrun gateを含め、公開済みJSONと同じ項目構成に揃えた。修正版を実行してから次段階へ進む。

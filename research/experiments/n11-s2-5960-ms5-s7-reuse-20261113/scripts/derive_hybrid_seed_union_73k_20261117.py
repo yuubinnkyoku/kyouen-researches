@@ -19,7 +19,7 @@ ORCHESTRATOR_NAME = "measure_worker_split4_boundary_memo_merge_73k_20261117.py"
 
 
 def git_blob_sha(data: bytes) -> str:
-    header = b"blob " + str(len(data)).encode("ascii") + b"\\0"
+    header = b"blob " + str(len(data)).encode("ascii") + bytes([0])
     return hashlib.sha1(header + data).hexdigest()
 
 
@@ -78,9 +78,9 @@ def derive(document: dict, loader_order_verified: bool) -> dict:
         "derived_hybrid": {
             "key_count": union_keys,
             "construction": (
-                "Keep boundary FINAL4 records in existing order under one "
-                "header; append only-in-2way records in deterministic key "
-                "order, without a second header."
+                "Keep the boundary-preserving FINAL4 KYOENWM2 records in their "
+                "existing order under one header; append the 262 only-in-2way "
+                "records in deterministic key order, without a second header."
             ),
             "is_superset_of_both_by_published_set_counts": True,
             "initial_load_factor_ms_1_25": union_keys / (1 << 25),
@@ -108,9 +108,10 @@ def derive(document: dict, loader_order_verified: bool) -> dict:
             "union_arithmetic": True,
             "shared_values_monotone": True,
             "loader_consumes_input_in_file_order": loader_order_verified,
+            "no_actual_hybrid_seedrun": True,
         },
         "next_measurement": [
-            "Reconstruct the exact 262 only-in-2way key/value records from the pinned 2-way and boundary-4way distinct tables.",
+            "Reconstruct the exact 262 only-in-2way key/value records from the pinned 2-way and boundary-preserving 4-way distinct tables.",
             "Append them after FINAL4 without reordering existing FINAL4 records; use one KYOENWM2 header.",
             "Run the hybrid seed at MS=1<<25 and record inserted/failed counts, conflict count, and full record-identity results.",
             "Run all 22 roots and require 22/22 certificate byte identity; compare per-bit nodes against boundary-4way-only and node-balanced-4way seeds.",
@@ -150,8 +151,14 @@ def main() -> None:
         loader_order_verified = True
 
     result = derive(document, loader_order_verified)
+    result["source_pins"] = {
+        "boundary_4way_measurement_git_blob": EXPECTED_INPUT_BLOB,
+        "boundary_4way_orchestrator_git_blob": EXPECTED_ORCHESTRATOR_BLOB,
+    }
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+    args.output.write_bytes(
+        (json.dumps(result, ensure_ascii=False, indent=2) + chr(10)).encode("utf-8")
+    )
     print(json.dumps({
         "status": result["status"],
         "hybrid_keys": result["derived_hybrid"]["key_count"],
