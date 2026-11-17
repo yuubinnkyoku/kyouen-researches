@@ -181,8 +181,13 @@ def main():
     assert v7_target["legal_candidates"] == 73
     assert sorted(v7_target["sweep_bits"]) == open_bits
     assert census["ranking_top10"][0]["s6_hex"] == child_hex
-    assert sorted(v7_target["confirmation_bits"], key=lambda x: x["bit"]) == sorted(
-        v7_target["confirmation_bits"], key=lambda x: x["bit"])
+    census_confirmation = {
+        x["bit"]: x["verdict"] for x in v7_target["confirmation_bits"]
+    }
+    claim_confirmation = {
+        int(b): v["verdict"] for b, v in claim["transfers"].items()
+    }
+    assert census_confirmation == claim_confirmation
 
     canonical_claim = record["situation"]["parallel_session_claim_v1"]
     assert PINS["claim"][:8] in canonical_claim["file"]
