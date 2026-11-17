@@ -1,0 +1,120 @@
+{
+ "machine_checks": [
+  {
+   "detail": {
+    "max_states": 666030,
+    "records": 15863,
+    "sha256": "0835a06fe3a2cc812b5434ef0d56146f72b2b019b144ed62544d437472c05274"
+   },
+   "name": "C1 independent packed records: 15863 records, index-complete, nonempty survivor masks within r=12 bits, first-loser masks within r=12 bits, states>0",
+   "ok": true
+  },
+  {
+   "detail": {
+    "sha256_committed": "0835a06fe3a2cc812b5434ef0d56146f72b2b019b144ed62544d437472c05274",
+    "sha256_independent": "0835a06fe3a2cc812b5434ef0d56146f72b2b019b144ed62544d437472c05274"
+   },
+   "name": "C2 cross-lane byte agreement: the independent packed records are byte-identical to the committed K0898 packed records (published pin)",
+   "ok": true
+  },
+  {
+   "detail": {
+    "keys": 715,
+    "max_states": 666030,
+    "mixed": 34,
+    "uniformly_determined": 98,
+    "uniformly_ndet": 583
+   },
+   "name": "C3 independent census: 715 keys / 98 uniformly determined / 583 uniformly non-determined / 34 mixed == the published 7-family boundary with identical per-key partitions, max_states 666030",
+   "ok": true
+  },
+  {
+   "detail": {
+    "det_flag_differences": 0,
+    "first_loser_mask_differences": 0,
+    "survivor_mask_differences": 0
+   },
+   "name": "C4 STASIS4 independent re-derivation: det flags / survivor masks / first-loser masks of the independent records vs the committed K0897 r=11 packed records -> 0/0/0 differences (full-label fixpoint)",
+   "ok": true
+  },
+  {
+   "detail": {
+    "r10": {
+     "check_ok": true,
+     "committed_format_fields": [
+      "full",
+      "full"
+     ],
+     "committed_sha256": "8b37525729eb869b2fe8eb383d10331d4249c91135b128ff08c88bd8ca022dfa",
+     "regenerated_all_ok": true,
+     "regenerated_format_fields": [
+      "packed",
+      "packed"
+     ],
+     "regenerated_sha256": "87d73c4a124523d63ef1518dd843379d64d942343b4c4acaf388780f80c20e4e",
+     "state": "format_only_difference"
+    },
+    "r11": {
+     "check_ok": true,
+     "committed_format_fields": [
+      "full",
+      "full"
+     ],
+     "committed_sha256": "a437de751047de99b5c466ca87f7c0ad9abfd31da82108d954b08423c048cb5d",
+     "regenerated_all_ok": true,
+     "regenerated_format_fields": [
+      "packed",
+      "packed"
+     ],
+     "regenerated_sha256": "9153233085d73241bd83cb7b39169814f6b052cc7587c8733357c57c60326a1b",
+     "state": "format_only_difference"
+    },
+    "r12": {
+     "check_ok": true,
+     "committed_format_fields": [
+      "full",
+      "full"
+     ],
+     "committed_sha256": "249ec902ba56bee625a87b939655ad23c989d0c47bc54649e6de7314d717cea4",
+     "regenerated_all_ok": true,
+     "regenerated_format_fields": [
+      "packed",
+      "packed"
+     ],
+     "regenerated_sha256": "600bd0873665943eb59a5eb3affa8f9fe051b009a12ae2ff165d996cd81fb067",
+     "state": "format_only_difference"
+    },
+    "r9": {
+     "check_ok": true,
+     "committed_sha256": "f407faee7280a95d5674128fa4ba7c9fced8923d710a657eb16cfac0bae289d8",
+     "regenerated_all_ok": true,
+     "regenerated_sha256": "f407faee7280a95d5674128fa4ba7c9fced8923d710a657eb16cfac0bae289d8",
+     "state": "byte_identical"
+    }
+   },
+   "name": "C5 committed-audit reproducibility scan (fresh-checkout state): K0893 r=9 control regenerates its committed audit byte-identically; K0895/K0897/K0898 are either byte-identical (post-fix state) or in the pinned defect state (recorded)",
+   "ok": true
+  },
+  {
+   "detail": {
+    "r10": "format_only_difference",
+    "r11": "format_only_difference",
+    "r12": "format_only_difference",
+    "r9": "byte_identical"
+   },
+   "name": "C6 defect pinning: in the defect state the regenerated audit equals the committed audit except exactly the two 'format' fields (committed 'full' from the pre-publication local state vs fresh-checkout 'packed'), all_ok=true in both versions",
+   "ok": true
+  },
+  {
+   "detail": {
+    "sha256": "f407faee7280a95d5674128fa4ba7c9fced8923d710a657eb16cfac0bae289d8"
+   },
+   "name": "C7 control pin: the committed K0893 r=9 verifier regenerates the committed r=9 audit byte-identically (sha256 f407faee...)",
+   "ok": true
+  }
+ ],
+ "summary": {
+  "all_ok": true,
+  "checks": 7
+ }
+}
