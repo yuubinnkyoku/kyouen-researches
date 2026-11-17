@@ -290,7 +290,7 @@
    "kind": "census v16 nineteen-map/harvest overlay verdict transfer (head-1473 census v16 rank-1 confirmation)"
   }
  },
- "confirmation_outcome": "pending (the 13 confirmation bits will be re-run fresh in the sweep and compared against the census v16 overlay prediction)",
+ "confirmation_outcome": "13/13 confirmation bits re-run fresh matched the census v16 overlay prediction (0 conflicts; per-bit transfer root canons identical; sources: pre-64h harvest x4, cost74i x2, cost79e x2, cost75f x2, cost79d x2, cost80e x1 bit 88)",
  "next_action": "census v17: mark the cost80f row swept (0 WIN7-D10 / 80 REFUTED-D10, fully refuted, no certificates, no fold needed) and select the next cheapest unswept/unclaimed/unexcluded row from the census v16 ranking_top10 (runner-up 00000000020000003800000080008000, cost 81, open 68); 11x11 UNKNOWN",
  "receipt_fold": {
   "status": "not needed (0 win bits): the row is fully refuted (80/80 REFUTED-D10), so there is no WIN7-D10 certificate to fold and no manifest row of this child closes; family-row receipt accounting is unaffected, as with the fully refuted cost-74i, cost-75f, cost-79d, cost-79e and cost-80e rows",
