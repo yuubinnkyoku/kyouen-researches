@@ -1,0 +1,30 @@
+{
+ "schema": "n11-class2-lane-worker-split16-merge-73k-claim-20261117-v1",
+ "date": "2026-11-17",
+ "lane": "n11 class2-lane long-term (cost73k)",
+ "status": "CLAIMED_IN_PROGRESS",
+ "claim": "Measure the verbatim engine in the K0909 16-way worker-split merge configuration (worker-count-limit measurement): DP min-max contiguous 16-way split of the published band ms23 per-bit node counts (22 bits, 10 singleton + 6 two-bit workers, min-max value 11,857,737 = bit95 singleton), 16 fresh workers at MS=1<<23 with band-carried memo, KYOENWM1 dump census, 16-way heapq merge with conflict detection, sim MS sweep (1<<24/25/26), and the MS=1<<25 design-point seedrun, in this session.",
+ "base_head": "fb9aeb7d0fa261438481f3403b00ee9a575f2a8c",
+ "design_pins": {
+  "extractor_git_blob": "52bcaf509ea12fad4c936501d30d26b5b66c0085",
+  "worker_split_driver_git_blob": "2a95d9527afa3c1a24685b697c822f451aae58a5",
+  "legal_git_blob": "8e97082c42838c7a4a4b6d2dd235276c8d43ab9a",
+  "manifest_git_blob": "0892aed07d187ae2fb3b4b90a21c7adbc1002b62",
+  "worker_memo_merge_git_blob": "fe2c5411393f789757b6e9a85d1f3925d6d260bc",
+  "published_8way_measurement_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/worker-split8-memo-merge-73k-20261117.json",
+  "published_8way_orchestrator_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/measure_worker_split8_memo_merge_73k_20261117.py"
+ },
+ "planned_stages": [
+  "16-way split design: DP min-max contiguous partition of the 22 band bits on the published band ms23 per-bit node counts (V1=[0], V2=[7,11], V3=[15], V4=[35,39], V5=[41,44], V6=[58,62], V7=[73], V8=[76], V9=[87], V10=[89], V11=[94], V12=[95], V13=[97,98], V14=[103], V15=[105,112], V16=[117]; min-max value 11,857,737)",
+  "16 fresh workers (MS=1<<23, band-carried memo within worker bits): per-bit nodes, KYOENWM1 dumps, certificate byte-identity gates (22/22 band-wide), head-bit anchors vs the published fresh per-bit values (15 heads incl. bit0), bit95 memo-state-invariant gate",
+  "per-worker distinct passes with internal conflict counts",
+  "16-way heapq merge-join: incidence histogram up to 16, cross conflicts, occupied_after (union growth vs the published 2/4/8-way values 4,291,899 / 4,975,265 / 5,243,408), merged KYOENWM2 seed16, merge determinism (byte-identical repeat)",
+  "sim MS sweep (1<<24 / 1<<25 / 1<<26) on seed16 with the published light simulator",
+  "MS=1<<25 design-point seedrun (all 22 bits, hardened fsync dump, cap 200): seed failures vs sim prediction, record-identity gate, certificates 22/22 byte-identical, node total vs the published 8-way seedrun25 70,538,916 (workers-total monotonicity 2->4->8->16 is the measured question)"
+ ],
+ "batches_run": 0,
+ "non_overlap": "The published verbatim 2/4/8-way and hybrid measurements (f9e3acf8/b38b9f3d/439ad7e3/175048ff/1299412a), the in-progress fixB 8-way claim (7dca832c), the completed fixB 2-way measurement (dcfdcb25/d3060c8e), the cost74i/cost75f sweeps, the census v11 cost-78 row selection and all other parallel-session claims are NOT touched; this claim is the verbatim 16-way extension only (the open K0909 resume item '16-way: does the union keep growing at the 0.0073% loss level, and where is the worker-count limit').",
+ "interpretation_guard": "Claim in progress; no measurement batches completed yet. No new WIN/LOSS verdicts, no certificate byte changes, no manifest closures. Standard 11x11 remains UNKNOWN.",
+ "session_note": "Executed in the agent execution environment. All inputs rebuilt from pinned blobs (verified: extractor 52bcaf50, driver 2a95d952, legal 8e97082c, manifest 0892aed0, worker_memo_merge fe2c5411, 41 certificate part files); long jobs run detached, every step resumes from the workdir state.",
+ "last_checked_main": "fb9aeb7d0fa261438481f3403b00ee9a575f2a8c"
+}
