@@ -13,7 +13,7 @@
 
 ## Independent record-level checks
 
-K0868のdet4展開を用い、既存 `legal_candidates.py` とは別のPython整数演算で6石配置から候補を再導出した。
+K0868のdet4展開を用い、既存 `legal_candidates.py` とは別のJavaScript BigInt実装で6石配置から候補を再導出した。再現用Pythonスクリプトも同じ判定を実装して追加したが、この実行環境ではそのスクリプト自体の実行までは行っていない。
 
 - child: `00000000000000801206000000000400`
 - 石bit: [10, 49, 50, 57, 60, 71]
