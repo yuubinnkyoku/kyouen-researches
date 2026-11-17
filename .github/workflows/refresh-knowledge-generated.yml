@@ -253,6 +253,10 @@ jobs:
         run: |
           uv run --locked python research/experiments/vertical-fiber-two-token-z6-y13-boundary-20261117/verify_z6_y13.py
           git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y13-boundary-20261117/output/audit.json
+      - name: Audit K0901 two-token z=6,y=14 full Grundy slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y14-boundary-20261117/verify_z6_y14.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y14-boundary-20261117/output/audit.json
       - name: Audit K0900 r=12 boundary cross-lane agreement check
         run: |
           uv run --locked python research/experiments/remo-k-branch-cap10-r12-boundary-independent-check-20261117/check_k0898_cross_lane_agreement.py
@@ -555,3 +559,5 @@ jobs:
 # Refresh generated views for K0897 three-branch REMO cap10 r=11 boundary (Theorem I r=11 identical 34-key boundary with r=9/r=10, STASIS3 three-column det-flag fixpoint with the new survivor-mask full-column fixpoint vs r=10, FATE56 second consecutive no-event column, residue census 55/330/330 with the identical split to r=10) (2026-11-17).
 # Refresh generated views for K0898 three-branch REMO cap10 r=12 boundary (Theorem I r=12 identical 34-key boundary with r=9/r=10/r=11, STASIS4 four-column det-flag fixpoint with the new FULL-LABEL fixpoint vs r=11 (det flag, survivor mask AND first-loser mask all identical, 0/0/0), FATE56 third consecutive no-event column, residue census 55/330/330 identical split) (2026-11-17).
 # Refresh generated views for K0900 r=12 boundary cross-lane agreement check (independent lane re-sweep reproduces the K0898 packed records byte-identically, census/34-key/STASIS4 anchors re-derived from the independent records, STASIS-series committed-audit reproducibility defect pinned for K0895/K0897/K0898 with the K0893 control and the workflow audit step fix recipe) (2026-11-17).
+
+# Refresh generated views for K0901 two-token z=6,y=14 full Grundy slice (2026-11-17).
