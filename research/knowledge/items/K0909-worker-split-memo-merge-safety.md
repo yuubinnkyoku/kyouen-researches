@@ -34,6 +34,15 @@ artifacts:
   - path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/worker-split4-boundary-memo-merge-73k-20261117.json
     role: data
     note: 境界保存4-way測定JSON（2-way出版パイプラインのbyte完全再現・全工程2回実行でbyte同一・merge非閉包only_in_seed2 262を記録）
+  - path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/light_sim_seed_73k.mjs
+    role: verifier
+    note: 軽量seed挿入simulator（verbatim mHash + 64-slot線形探査の占有率のみ・実seedキーでMS掃引・prefix knee・失敗attribution）
+  - path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/measure_seed_capacity_design_73k_20261117.py
+    role: verifier
+    note: seed容量設計オーケストレータ（pin付きblob再構築による4-way/2-way再現・sim二重anchor検証・design point MS=1<<25 band実行・16 gate判定）
+  - path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/seed-capacity-design-73k-20261117.json
+    role: data
+    note: seed容量設計測定JSON（16/16 gate合格・engine seed失敗28==sim予測28・record恒等式閉包・MS=1<<25 band実行72,745,351 nodes=ms24 seedrun比0.9459）
 ---
 
 # K0909: worker分割メモmergeの安全性（cost73kバンド・verbatim engine）
@@ -130,6 +139,20 @@ cost-73kバンド（child `00000000000000801206000000000400`・22 WIN7-D10 root�
   nowin/noloseは常に255（K0907）なので、任意のW3レコードへの注入で吸収試験は
   常にwell-posedであり、この緩和版で実施した。
 
+- 実行環境のフルリセット（bashのdefault timeout超過でblocking読み込みが発生）により作業treeを喪失し、
+  seed容量設計測定はpin付きblob（orchestrator 50b60247・extractor 52bcaf50・manifest 0892aed0・legal 8e97082c）からの
+  完全再構築として実行した。再構築後も全出版値（両merge seed md5を含む）が厳密に再現され、
+  クロス環境決定性が再度確認された。
+- MS=1<<25 seedrunは3回のOOM killで環境上限（~1.09 GiB cgroup・typed arraysだけで672MB）を特徴付けた:
+  cap 500はdumpMemo 26%で死・cap 200は22 bit探索完走後にdumpMemo 61%で死（VmRSS 806MBで安定）・
+  cap 150は~5.6GBの中間dumpがpage cacheに乗った状態でbit 15前に探索中に死（memory.peak=cgroup上限値ちょうど）。
+  単離再現（672MB typed arrays + verbatim dumpMemo chunkループ・cap 200・678MB書き込み）は生存し、
+  arrays+dumpループ単独ではkillを説明できない。完走版はcap 200で(a)不要中間ファイル5.1GBの削除とpage cache解放、
+  (b) MS=1<<25 variantのみのdumpMemo fsync強化（32MiB毎+最終fsync・dump bytes不変・実測~36ms/32MiB）
+  により840MB dumpをOOMなしで完走した。
+- MS>=1<<26のengine全band実行は本環境のcgroupでは不可能（typed arraysが1.34GB/2.68GB）。
+  MS掃引はsimulatorが担ぎ、MS=1<<24で2 anchor・design point MS=1<<25で1回のcross-validation済み。
+
 ## 解釈ガード
 
 測定・検証のみ。新規WIN/LOSS verdict無し・manifest行は1行も閉じない・証明書bytes不変。
@@ -174,5 +197,42 @@ MS=1<<24全22 bit band実行を測定（独立環境での測定・全工程2回
 5. **gates_all_pass=Falseは予測gate 2件のみ**（(a) superset予測・(b) seed失敗率
    <0.1%）で、健全性/正確性/再現/衝突0/決定性gateは全合格。両不成立は実測事実
    として記録し、gate定数の再設計（0.1%は大きいseedには不適切）を次回に残す。
+
+勝敗変更なし・11×11はUNKNOWN。
+
+## N-way merge seed容量設計（2026-11-17追記2・測定のみ・gate定数の再設計）
+
+両4-way測定（ノード均衡・境界保存）が事前gate「seed挿入失敗<0.1%」を0.324%/0.295%で破った件の
+gate定数再設計として、N-way merge seedの容量設計規則を確定した
+（`measure_seed_capacity_design_73k_20261117.py`・軽量simulator `light_sim_seed_73k.mjs`・
+測定JSON 16/16 gate合格・独立log `2026-11-17-n11-class2-lane-seed-capacity-design-73k.md`）:
+
+1. **出版pipelineの完全再構築**: pin付きblobから4-way pipelineを再構築し、全出版値
+   （workers W1 29,193,572/W2 30,417,638/W3 31,104,578/W4 22,025,713 nodes・distincts・
+   merge occupied_after 4,985,986・seed md5 7b098aeb…・seedrun4 76,903,818 nodes・seed失敗16,137・
+   record恒等式）をgate逐一致で再現。2-wayもworker A 48,482,011/B 71,480,136 nodes・
+   distincts 2,619,833/2,554,155・生seed md5 1599c496…・出版header置換で出版md5 e7c2c17e…完全一致。
+2. **軽量simulatorの二重anchor検証**: verbatim mHash（4語imul XOR）+64-slot線形探査の
+   占有率のみを複製するsimulatorは、distinct-key seedではengineのkey-match分岐が非到達になるため
+   厳密。MS=1<<24で両engine anchorに完全一致（4-way 16,137・2-way 1,448）。
+3. **MS掃引**（4-way seed 4,985,986 keys）: 1<<24→16,137（0.324%・load 0.296）・
+   **1<<25→28（0.00056%・load 0.149・0.1% gateを2桁の余裕で合格）**・1<<26→0。
+   失敗機構はhash clustering: 最大base indexに109 distinct keys（>=64 keysのbaseが
+   1,224,783中250）・own-cluster飽和2,278+spill-over 13,859。
+4. **MS=1<<24でのseedサイズknee**（実キー・merge順のprefix実測）:
+   S=1M/2M→0・3M→26・3.5M→256・4M→2,017・4.29M→5,969・4.5M→8,233・4.75M→11,410・4.99M→16,137。
+   0.1% gate境界はS≈4.1-4.2M keys: 2-way（4.29M・0.034%）が合格し両4-way（~4.99M・~0.3%）が
+   破った理由を定量的に説明する。gate定数は固定MSでの固定失敗率ではなくseed負荷（S/MS）と
+   kneeの距離で設計すべき。
+5. **design point MS=1<<25の全band engine実行**: seed 4,985,986中28件失敗==sim予測28（0.00056%<0.1%）・
+   証明書22/22 byte同一・record恒等式閉包（present 4,985,958・missing==28・違反0）。
+   **band計算も72,745,351 nodesで、MS=1<<24 seedrun（76,903,818）の0.9459**:
+   MS=1<<24では探索中にも64-slot窓飽和が発生して~3.5M memoエントリを喪失し
+   （最終占有率10,526,730=load 0.627 vs 1<<25の14,073,139=0.419）再展開の余分を払っていた。
+   per-bitはbit 95を除き全て1<<25が安い（比率0.878-0.986）。bit 95は両MSで11,857,737 nodes
+   （比率ちょうど1.0）でmemo-state-invariant rootの3度目の独立確認。
+6. **設計規則**: N-way merge seedはMS=1<<25（初期負荷<=~0.15）に播種する。
+   MS=1<<24はS<=~4.1M keysまでしか0.1% gateを許容せず、仮にseedが通ってもband実行が~5%高コスト。
+   「失敗率<0.1% at MS=1<<24」ではなくseed負荷とkneeの距離でgateを評価する。
 
 勝敗変更なし・11×11はUNKNOWN。
