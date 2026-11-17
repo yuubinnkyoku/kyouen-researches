@@ -157,3 +157,22 @@ closed, certificate bytes unchanged, repo-verbatim extractor unmodified
 within depth 10 from the individual 7-stone roots only; REFUTED-D10 is
 not a LOSS proof. The 11x11 empty board, both two-stone roots {49,60}
 and {59,60}, S2 {59,60} and classes 1/2/4 all remain UNKNOWN.
+
+## Publish incident (operational fact, resolved within minutes)
+
+The 7-file publication was composed from bases fetched at main 1c234a02; the
+K0918 lane's commit 83a6b527 (z=6 y=24 two-token slice) landed between the
+base fetch and the push, so the full-file knowledge-README replacement in
+175048ff unintentionally reverted that lane's one-line README edit (the
+y=24 K0918 reference). The affected lane restored its line at 3974711c
+within about two minutes; the restored README was verified byte-identical
+to the intended merged state (their line + the 8-way K0909 bullet).
+Lesson for the hourly multi-lane protocol: push_files performs full-file
+replacement, so every full-file target must be re-fetched and diffed
+against its base immediately before the push (base staleness is not
+detectable from the push response), and a push must be followed by a
+revert check against the parent commit. All seven published artifacts
+were byte-verified after landing against the API-reported git blob SHAs
+(script f89e6a71, data JSON 41ed348e, K0909 item 7755f852, experiments
+README fcbac327, log and claim via raw-CDN byte comparison,
+knowledge README via the repaired-state comparison).
