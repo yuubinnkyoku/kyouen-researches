@@ -110,3 +110,38 @@ partial所属 == 出版membership）・parent分類の分割健全性。
 own_closableとの共有は「行が両方のparent型の行集合に乗っている」ことであり、sweep予定の
 保証ではない。本フォローアップも候補の簿記であり、closure・coverage・verdictの主張を
 含まない。
+
+## フォローアップ2: special 13行のdownstream cross-verification (同日)
+
+`audit_nonsterile_special_rows_downstream_20261118.py`（blob `d4110f703704f0b5657424f3ccb9ff3df73caa49`）が、
+非STERILE 3,555行のうち非unswept statusを持つ13行（win_receipt_scheduled 9・
+win_pending 2・transfer_partial 2）を、**downstreamの出版記録に対して**検証する
+（出力 `nonsterile-special-rows-downstream-20261118.json`・blob
+`0c2408c5da607042ebf0603ea65b3521bf9b430c`・51 checks all PASS・二重実行byte-identical）。
+入力10ファイルは全てgit blob pin検証（worklist `2fee1d07`・STERILE scan `24f214e6`・
+scan第二独立検証 `65e3e822`・cost-65j fold record `7a4c9007`・cost-76d sweep audit
+`a57af016`・76d WIN7証明書manifest `e8a6116a`・76d/77e第二独立検証 `d267fa8d`・
+77e sweep `57afde38`・census v19 `a0c6abaf`・前audit出力 `30c8fdc4`）。
+
+- **win_receipt_scheduled 9行 == cost-65j receipt foldのrows_closed_hexesと集合一致**
+  （head 1410→1419）。9行のown candidates総和635 == worklist cost総和 ==
+  head cost delta 509,109−508,474 == rows delta 6,438−6,429。9行ともscan targets外
+  （自前行のengine/transfer決定なし・「sweep不要で閉じる」分類と整合）。
+- **win_pending 2行（4 WIN7 root・bits 19/49/37/69）**: sweep audit・証明書manifest・
+  第二独立検証（VERIFICATION PASSED・全boolean checks true）・scan targets・worklist
+  計数の全段階一致。各WIN root hexを `root == child | 1<<bit`（121-bit exact）で
+  再導出し一致（76d bits 19/49・77e bits 37/69）。両行のsweep target parent
+  `00000000000801202000040000000` はK0865 effective worklist第1位のpartial parent。
+  foldは両記録時点でPENDINGのまま（fold適用はsweep-lane管轄）。
+- **transfer_partial 2行**: 転移REFUTED-D10 15+3 bit全てで
+  `canon(row|1<<b) == canon(via_child|1<<via_bit)`（第三実装D4正準化・21 via entries・
+  不一致0）・open計数（61 = 76−15・66 = 69−3）一致。**76c行の15転移予測は
+  census v19 cost76c verdict map（後の直接v17 sweep）で15/15 REFUTED-D10確認・
+  衝突0・後出のWIN bits 61/99は転移と非交差**（verdict-cache転移機構の実測検証）。
+  69a-band行はcensus v19に不在（当該行の後続直接sweep記録はmain上に無い）。
+- scan自身の第二独立検証（`65e3e822`・transfer canon 115/115・problems 0）もpin検証の上
+  引用した。
+
+special 13行が触るpartial parentは6行のみ。3,555行全体ではengine WIN7 receipt証拠は
+この2行（4 root）に限られ、残り3,542行は未決定のままである。本検証は記録間整合の
+確認であり、engine実行・fold適用・新規receipt/coverage主張を含まない。

@@ -77,6 +77,28 @@ parent分類にゲーム理論的値の主張は無い。
   （12 parentの最小候補はpartial-only）。
 - この追加も候補の簿記であり、sweep予定・closure・verdictの主張を含まない。
 
+## フォローアップ2（同日・同experiment）: special 13行のdownstream cross-verification
+
+`audit_nonsterile_special_rows_downstream_20261118.py`（blob `d4110f703704f0b5657424f3ccb9ff3df73caa49`・
+出力blob `0c2408c5da607042ebf0603ea65b3521bf9b430c`・51 checks all PASS・二重実行byte-identical）。
+非STERILE 3,555行中の非unswept 13行をdownstream出版記録（10入力・全blob pin）に対して検証。
+
+- **win_receipt_scheduled 9行 == cost-65j foldのrows_closed_hexes（head 1410→1419）と
+  集合一致**。own candidates総和635 == head cost delta 509,109−508,474 ==
+  rows delta 6,438−6,429。9行ともscan targets外（sweep不要分類と整合）。
+- **win_pending 2行**: cost-76d/77e sweep audit・WIN7証明書manifest・第二独立検証
+  （VERIFICATION PASSED）・scan・worklist計数の全段階一致。WIN root hexを
+  `root == child | 1<<bit`（121-bit exact）で再導出一致（bits 19/49・37/69）。
+  foldは記録時点でPENDING（適用はsweep-lane管轄）。target parent
+  `00000000000801202000040000000` はK0865 effective worklist第1位。
+- **transfer_partial 2行**: 転移15+3 bit全てで `canon(row|1<<b) == canon(via_child|1<<via_bit)`
+  （第三実装D4正準化・21 via entries・不一致0）・open計数一致。
+  **76c行の15転移予測はcensus v19 cost76c map（後の直接v17 sweep）で15/15 REFUTED-D10
+  確認・衝突0・WIN bits 61/99は転移と非交差**。69a-band行はcensus v19に不在
+  （後続直接sweep記録なし）。
+- special 13行が触るpartial parentは6行。engine WIN7 receipt証拠はwin_pending 2行
+  （4 root）のみで、残り3,542行は未決定のまま。
+
 ## 次の一手
 
 - 並走のSTERILEフィルタ付きcensus再構築の出版を待ち、出版されたら検証側に回る
