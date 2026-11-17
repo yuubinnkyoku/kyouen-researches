@@ -16,7 +16,7 @@ cost73lの32本について、第三実装BigInt verifierによる独立再検�
 
 各bitについて、battery↔manifest↔BigInt結果の行数、MD5、SHA-256、root、mobility、終端石数範囲、verifier status、union missing/extra、byte-identicalを照合した。加えてper-bit値から総節点数・戦略行数・BigInt訪問状態・終端数・敗者応手辺数を再集計した。
 
-この監査は公開済みJSONの相互整合を調べるものであり、BigInt verifierの再実行や61MBの証明書本文の再読込ではない。
+この監査は公開済みJSONの相互整合を調べるものであり、BigInt verifierの再実行や61MBの証明書本文の再読込ではない。 実データに対する8 gateは本セッション内のJavaScript照合で実行した。公開したPythonスクリプトは同じ検査をcheckout上で再現するためのもので、この実行環境ではPython版自体は実行していない。
 
 ## Results
 
