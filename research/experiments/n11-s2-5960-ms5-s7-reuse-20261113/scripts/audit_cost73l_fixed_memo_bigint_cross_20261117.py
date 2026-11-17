@@ -27,7 +27,7 @@ OUTPUT = BASE / "output/class2-lane-cost73l-fixed-memo-bigint-cross-audit-202611
 
 
 def git_blob_sha(data: bytes) -> str:
-    return hashlib.sha1(b"blob " + str(len(data)).encode() + b"\\0" + data).hexdigest()
+    return hashlib.sha1(b"blob " + str(len(data)).encode() + b"\0" + data).hexdigest()
 
 
 def unique_by_bit(records: list[dict], label: str) -> dict[int, dict]:
@@ -173,7 +173,7 @@ def main() -> None:
             "The standard 11x11 empty board, both two-stone roots, S2 {59,60}, and classes 1/2/4 remain UNKNOWN.",
         ],
     }
-    OUTPUT.write_text(json.dumps(report, ensure_ascii=False, indent=2, sort_keys=True) + "\\n")
+    OUTPUT.write_text(json.dumps(report, ensure_ascii=False, indent=2, sort_keys=True) + "\n")
     if not report["all_checks_pass"]:
         raise SystemExit("cross-audit failed; inspect " + str(OUTPUT))
     print(json.dumps(report, ensure_ascii=False, indent=2, sort_keys=True))
