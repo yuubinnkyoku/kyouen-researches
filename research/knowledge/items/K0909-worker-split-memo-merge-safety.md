@@ -64,6 +64,12 @@ artifacts:
   - path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/worker-split8-memo-merge-73k-20261117.json
     role: data
     note: 8-way測定JSON（15/15 gate合格・worker合計110,639,931 nodes・merge 5,243,408 keys・seedrun25 70,538,916 nodes・seed失敗383==sim予測）
+  - path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/measure_worker_split_fixb_memo_merge_73k_20261117.py
+    role: verifier
+    note: fixB worker分割merge測定オーケストレータ（fixB band23・2 worker・live bound merge・seedrun24・設計点seedrun25・sim交差検証・record恒等式・全gate判定）
+  - path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/fixb-worker-split-memo-merge-73k-20261117.json
+    role: data
+    note: fixB測定JSON（workers 27,837,399 nodes・dup_keys 0・merge衝突0・seed失敗==sim予測・設計点ms25 gates全合格）
 ---
 
 # K0909: worker分割メモmergeの安全性（cost73kバンド・verbatim engine）
@@ -348,3 +354,17 @@ claim `worker-split8-memo-merge-measurement-claim-73k-20261117.json`・
    （sim==engine一致は設計較正点（4.99M）の1つ外側まで拡張）。
 
 勝敗変更なし・manifest行は閉じず・証明書bytes不変・11×11はUNKNOWN。
+
+## fixBエンジンでのworker分割memo merge測定（2026-11-17追記5・測定のみ）
+
+K0907の両バグ修正エンジンfixB（測定専用variant・repo-verbatim extractorはrepo上未修正）をK0909の出版2-way構成（73/76境界・MS=1<<23・band内共有）で測定した（`measure_worker_split_fixb_memo_merge_73k_20261117.py`・測定JSON `fixb-worker-split-memo-merge-73k-20261117.json`・log `2026-11-17-n11-class2-lane-fixb-worker-split-memo-merge-73k.md`・claim dcfdcb25・並走8-way/hybrid測定とは別軸）:
+
+1. **fixB band ms23単一プロセス（初のfixBバンド全体測定）**: 28,620,380 nodes・最終占有率5,028,453・証明書22/22 byte同一（verbatim band ms23 121,186,659の0.2362・fixB fresh battery 28,290,025の1.011）。
+2. **2-way workers**: A 11,662,998 + B 16,174,401 = **27,837,399 nodes**（fixB band23比0.9726・**出版verbatim 2-way 119,962,147比0.2321**・fixB fresh battery比0.9840）。workerAはfixB band23プレフィックスとper-bit完全一致（占有率3,159,518も一致）。
+3. **重複キーcensus**: 両worker・band23・両seedrun dump・band24 dumpのすべてでrecords == distinct（dup_keys=0・max_copies=1）で、K0907 bug A機構（符号キー重複挿入）のバンド全体での消滅を定量確認。live bound被覆はnowin 11-12%・nolose 39-40%・win_and_lose=0・all_unbound=0。
+4. **live bound merge**: shared 1,332,283・occupied_after **5,479,157**（出版verbatim 2-way merge 4,291,899の1.277倍）・内部衝突0・cross衝突0・決定的（md5 c5941251…）。verbatimの負境界は常に死哨255でcross衝突が構造的に不可能だったため、**liveなnowin/nolose境界を持つ表の自然mergeとしては衝突検出器が初めて実動作し**矛盾0だった（追記のfault注入実証の自然対応物）。
+5. **merge seed MS=1<<24 seedrun**: 7,947,885 nodes（未seed fixB band ms24 21,697,814の0.366）・seed失敗24,253件（0.443%）== sim予測と完全一致（own-cluster 2,068+spill-over 22,185・max cluster 94・bases>=64 308）。出版knee設計（MS=1<<24で0.1% gate境界はS約4.1-4.2M keys）どおりの超線形失敗で0.1%事前gateは不成立・record恒等式は閉包（present==inserted 5,454,904・missing==failed・違反0）・22/22 byte同一。
+6. **設計点 MS=1<<25 seedrun**: **6,005,236 nodes**・seed失敗19件 == sim予測19（3.5e-6）・record恒等式閉包・22/22 byte同一・占有率5,798,302（load 0.173）・design gates全合格。未seed band24比0.2768・fixB fresh battery比0.2123・**出版verbatim最良の8-way seedrun25 70,538,916比0.0852（11.7倍）**で、エンジン軸を横断したこのバンドの測定済み最安band実行。
+7. **merge非閉包はfixBでも存続**: band表 vs merged表でshared 5,027,776・only_in_band 677・only_in_merged 451,381・共有キー値矛盾0。coordinatorはmerge表を近似として扱うべきという結論（追記）は修正エンジンでも変わらない。
+
+勝敗変更なし・manifest行は閉じず・証明書bytes不変・repo-verbatim extractorはrepo上未修正・fixBの本番採用は別レーン判断・11×11はUNKNOWN。
