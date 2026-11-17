@@ -1,0 +1,556 @@
+{
+  "schema": "n11-class2-lane-cost73l-claim-structural-audit-20261117-v1",
+  "date": "2026-11-17",
+  "basis_commit": "43838dec48c863589d897a32497c59524b6be071",
+  "source_pins": {
+    "class2-lane-cost73l-inflight-20261117.json": "fa13a0ada22e3de95c06e9a3101ce6d2a738f5b1",
+    "class2-lane-next-target-presweep-1473-v8-20261117.json": "2542914e02db14a8426a1a16ef1c2cfcd9817375",
+    "audit_cost73l_claim_structure_20261117.py": "fbd8cd768ad97812afbc72176acd6be2c7912b70"
+  },
+  "target": {
+    "s6_child": "00000000000000c09002000000400000",
+    "s5_parent_canon": "00000000000000403800000008000000",
+    "stone_bits": [
+      22,
+      49,
+      60,
+      63,
+      70,
+      71
+    ],
+    "edge_cost": 73,
+    "legal_candidate_count": 73,
+    "legal_candidates": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      8,
+      9,
+      10,
+      14,
+      17,
+      18,
+      19,
+      21,
+      23,
+      24,
+      25,
+      26,
+      28,
+      29,
+      30,
+      32,
+      33,
+      34,
+      35,
+      41,
+      42,
+      44,
+      45,
+      47,
+      53,
+      54,
+      58,
+      61,
+      62,
+      64,
+      65,
+      66,
+      68,
+      76,
+      78,
+      79,
+      80,
+      81,
+      85,
+      86,
+      87,
+      89,
+      90,
+      91,
+      92,
+      94,
+      95,
+      96,
+      97,
+      98,
+      100,
+      101,
+      102,
+      105,
+      106,
+      107,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      116,
+      117,
+      119,
+      120
+    ],
+    "excluded_empty_cell_count": 42,
+    "excluded_cell_zero_determinant_witnesses": [
+      {
+        "cell": 5,
+        "triple": [
+          49,
+          60,
+          71
+        ]
+      },
+      {
+        "cell": 11,
+        "triple": [
+          22,
+          70,
+          71
+        ]
+      },
+      {
+        "cell": 12,
+        "triple": [
+          22,
+          60,
+          70
+        ]
+      },
+      {
+        "cell": 13,
+        "triple": [
+          22,
+          49,
+          70
+        ]
+      },
+      {
+        "cell": 15,
+        "triple": [
+          22,
+          60,
+          70
+        ]
+      },
+      {
+        "cell": 16,
+        "triple": [
+          49,
+          60,
+          71
+        ]
+      },
+      {
+        "cell": 20,
+        "triple": [
+          22,
+          70,
+          71
+        ]
+      },
+      {
+        "cell": 27,
+        "triple": [
+          22,
+          60,
+          70
+        ]
+      },
+      {
+        "cell": 31,
+        "triple": [
+          22,
+          70,
+          71
+        ]
+      },
+      {
+        "cell": 36,
+        "triple": [
+          49,
+          60,
+          70
+        ]
+      },
+      {
+        "cell": 37,
+        "triple": [
+          49,
+          60,
+          70
+        ]
+      },
+      {
+        "cell": 38,
+        "triple": [
+          49,
+          60,
+          71
+        ]
+      },
+      {
+        "cell": 39,
+        "triple": [
+          49,
+          60,
+          63
+        ]
+      },
+      {
+        "cell": 40,
+        "triple": [
+          49,
+          60,
+          63
+        ]
+      },
+      {
+        "cell": 43,
+        "triple": [
+          63,
+          70,
+          71
+        ]
+      },
+      {
+        "cell": 46,
+        "triple": [
+          49,
+          60,
+          70
+        ]
+      },
+      {
+        "cell": 48,
+        "triple": [
+          49,
+          70,
+          71
+        ]
+      },
+      {
+        "cell": 50,
+        "triple": [
+          60,
+          63,
+          71
+        ]
+      },
+      {
+        "cell": 51,
+        "triple": [
+          60,
+          63,
+          71
+        ]
+      },
+      {
+        "cell": 52,
+        "triple": [
+          49,
+          60,
+          63
+        ]
+      },
+      {
+        "cell": 55,
+        "triple": [
+          22,
+          60,
+          70
+        ]
+      },
+      {
+        "cell": 56,
+        "triple": [
+          63,
+          70,
+          71
+        ]
+      },
+      {
+        "cell": 57,
+        "triple": [
+          49,
+          60,
+          70
+        ]
+      },
+      {
+        "cell": 59,
+        "triple": [
+          60,
+          70,
+          71
+        ]
+      },
+      {
+        "cell": 67,
+        "triple": [
+          22,
+          60,
+          70
+        ]
+      },
+      {
+        "cell": 69,
+        "triple": [
+          49,
+          60,
+          70
+        ]
+      },
+      {
+        "cell": 72,
+        "triple": [
+          49,
+          60,
+          63
+        ]
+      },
+      {
+        "cell": 73,
+        "triple": [
+          49,
+          60,
+          63
+        ]
+      },
+      {
+        "cell": 74,
+        "triple": [
+          60,
+          63,
+          71
+        ]
+      },
+      {
+        "cell": 75,
+        "triple": [
+          60,
+          63,
+          70
+        ]
+      },
+      {
+        "cell": 77,
+        "triple": [
+          22,
+          49,
+          60
+        ]
+      },
+      {
+        "cell": 82,
+        "triple": [
+          49,
+          60,
+          71
+        ]
+      },
+      {
+        "cell": 83,
+        "triple": [
+          60,
+          63,
+          71
+        ]
+      },
+      {
+        "cell": 84,
+        "triple": [
+          60,
+          63,
+          71
+        ]
+      },
+      {
+        "cell": 88,
+        "triple": [
+          22,
+          49,
+          71
+        ]
+      },
+      {
+        "cell": 93,
+        "triple": [
+          49,
+          60,
+          71
+        ]
+      },
+      {
+        "cell": 99,
+        "triple": [
+          22,
+          60,
+          71
+        ]
+      },
+      {
+        "cell": 103,
+        "triple": [
+          60,
+          63,
+          70
+        ]
+      },
+      {
+        "cell": 104,
+        "triple": [
+          49,
+          60,
+          71
+        ]
+      },
+      {
+        "cell": 108,
+        "triple": [
+          60,
+          63,
+          70
+        ]
+      },
+      {
+        "cell": 115,
+        "triple": [
+          49,
+          60,
+          71
+        ]
+      },
+      {
+        "cell": 118,
+        "triple": [
+          60,
+          63,
+          70
+        ]
+      }
+    ],
+    "open_bit_count": 66,
+    "confirmation_bit_count": 7,
+    "confirmation_bits": [
+      65,
+      86,
+      90,
+      94,
+      97,
+      106,
+      110
+    ],
+    "transfer_verdict_counts": {
+      "WIN7-D10": 2,
+      "REFUTED-D10": 5
+    }
+  },
+  "checks": {
+    "child_has_six_stones": true,
+    "det4_rederives_73_survival_moves": true,
+    "claim_legal_list_is_exact": true,
+    "all_115_empty_cells_are_partitioned": true,
+    "every_excluded_cell_has_det4_zero_witness": true,
+    "engine_partition_is_66_plus_7": true,
+    "open_and_confirmation_partition_exactly_legal": true,
+    "s5_parent_is_a_d4_one_stone_deletion": true,
+    "claim_and_census_use_same_head": true,
+    "selected_child_parent_and_cost_match": true,
+    "census_sweep_bits_match_claim": true,
+    "census_confirmation_bits_match_claim": true,
+    "rank_one_is_selected_target": true,
+    "rank_two_matches_recorded_runner_up": true,
+    "transfer_bits_equal_confirmation_bits": true,
+    "all_seven_transfer_roots_match_d4": true,
+    "transfer_verdicts_match_census": true,
+    "confirmation_split_is_two_win_five_refuted": true
+  },
+  "all_checks_pass": true,
+  "negative_tests": [
+    {
+      "test": "missing_legal_candidate",
+      "rejected": true
+    },
+    {
+      "test": "duplicate_legal_candidate",
+      "rejected": true
+    },
+    {
+      "test": "missing_open_bit",
+      "rejected": true
+    },
+    {
+      "test": "wrong_transfer_root",
+      "rejected": true
+    },
+    {
+      "test": "wrong_selected_child",
+      "rejected": true
+    }
+  ],
+  "negative_tests_pass": true,
+  "transfer_rows": [
+    {
+      "bit": 65,
+      "verdict": "REFUTED-D10",
+      "published_root_canon": "00000000000000c29002000000400000",
+      "recomputed_root_canon": "00000000000000c29002000000400000",
+      "root_canon_matches": true
+    },
+    {
+      "bit": 86,
+      "verdict": "REFUTED-D10",
+      "published_root_canon": "00000000000041801202000100000000",
+      "recomputed_root_canon": "00000000000041801202000100000000",
+      "root_canon_matches": true
+    },
+    {
+      "bit": 90,
+      "verdict": "REFUTED-D10",
+      "published_root_canon": "00000000010000809003000001000000",
+      "recomputed_root_canon": "00000000010000809003000001000000",
+      "root_canon_matches": true
+    },
+    {
+      "bit": 94,
+      "verdict": "REFUTED-D10",
+      "published_root_canon": "00000000010000809003000010000000",
+      "recomputed_root_canon": "00000000010000809003000010000000",
+      "root_canon_matches": true
+    },
+    {
+      "bit": 97,
+      "verdict": "REFUTED-D10",
+      "published_root_canon": "00000000010000809003000080000000",
+      "recomputed_root_canon": "00000000010000809003000080000000",
+      "root_canon_matches": true
+    },
+    {
+      "bit": 106,
+      "verdict": "WIN7-D10",
+      "published_root_canon": "00000000010000809003000000040000",
+      "recomputed_root_canon": "00000000010000809003000000040000",
+      "root_canon_matches": true
+    },
+    {
+      "bit": 110,
+      "verdict": "WIN7-D10",
+      "published_root_canon": "00000000010000809003000000000001",
+      "recomputed_root_canon": "00000000010000809003000000000001",
+      "root_canon_matches": true
+    }
+  ],
+  "engine_sweep_performed_by_this_audit": false,
+  "receipt_fold_performed_by_this_audit": false,
+  "interpretation_guard": {
+    "WIN7_D10": "個別7石rootで深さ10以内の先手勝ちを示す。空盤勝敗ではない。",
+    "REFUTED_D10": "深さ10以内の先手勝ちが得られなかったという結果。LOSS証明ではない。",
+    "census": "探索対象選定の簿記であり、勝敗や証明書の成立を意味しない。",
+    "empty_board_outcome": "UNKNOWN"
+  }
+}
