@@ -1,0 +1,42 @@
+{
+  "all_pass": true,
+  "classification": "universal proof by explicit A/B/C signatures, Theorem T, the general tail theorem, and strong induction on R; finite checks are independent audits only",
+  "counts": {
+    "direct_formula_and_two_engine_checks": 7020,
+    "even_parent_upper_bound": 1032431,
+    "far_tail_seeded_checks": 5000,
+    "mex_identities": 2065850,
+    "odd_parent_option_bound": 1033419,
+    "signature_points": 2065850,
+    "tail_checks": 128375,
+    "value2_locus_parameters": 1975
+  },
+  "failures": [],
+  "repeat_runs": 2,
+  "repeat_byte_identical": true,
+  "scope": {
+    "direct_R": "0 <= R <= x+44 (y=25 and z=5 anchors also checked)",
+    "direct_x": [
+      26,
+      40
+    ],
+    "far_tail_samples": 5000,
+    "far_tail_seed": 20261118,
+    "signature_R": "1 <= R <= x+33",
+    "signature_x": [
+      26,
+      2000
+    ],
+    "tail_offsets": [
+      0,
+      64
+    ],
+    "tail_x": [
+      26,
+      2000
+    ]
+  },
+  "sha256_without_hash_field": "e41152739d4d2ce871baa6495220a5a09070cbde1e19db708935c853509fabf8",
+  "target": "H(R;(x,26);6), x>=26, R>=0",
+  "total_checks": 6339920
+}
