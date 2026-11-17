@@ -2,7 +2,7 @@
   "schema": "n11-class2-lane-hybrid-seed-union-measurement-claim-73k-20261117-v1",
   "date": "2026-11-17",
   "lane": "n11 class2-lane long-term (cost73k)",
-  "status": "CLAIMED_IN_PROGRESS",
+  "status": "BLOCKED_PREFLIGHT",
   "claim": "Execute the next_measurement stages of the published hybrid seed union design (DESIGN_DERIVED_NOT_MEASURED) in this session.",
   "base_head": "9b7a0a1d9e61124a61f7eb8bfa32467de43d5a53",
   "design_pins": {
@@ -21,5 +21,44 @@
     "per-bit node comparison vs boundary-only and node-balanced 4-way seeds"
   ],
   "batches_run": 0,
-  "interpretation_guard": "Claim only. No measurement values yet. No new WIN/LOSS verdicts, no certificate byte changes, no manifest closures. Standard 11x11 remains UNKNOWN."
+  "interpretation_guard": "Preflight blocked; no measurement batches ran. No new WIN/LOSS verdicts, no certificate byte changes, no manifest closures. Standard 11x11 remains UNKNOWN.",
+  "last_checked_main": "03655b567a7ab76da080b2831c07efdd36bfeeed",
+  "last_preflight": {
+    "checked_at": "2026-11-17T22:37:16+09:00",
+    "status": "BLOCKED_ENVIRONMENT",
+    "pve_hp_aio": {
+      "cpu_cores": 6,
+      "host_memory_available_gb": 1.39,
+      "host_swap_used_gb": 2.07,
+      "vmid": "124",
+      "guest_memory_available_kib": 7149752,
+      "guest_root_disk_available_gb": 3.6,
+      "required_tools_missing": [
+        "git",
+        "node",
+        "python3",
+        "uv",
+        "curl",
+        "nix"
+      ]
+    },
+    "pve_n100": {
+      "cpu_cores": 4,
+      "memory_available_gb": 6.34,
+      "dedicated_research_guest": false,
+      "production_containers_used": false
+    },
+    "raw_worker_artifacts_found": false,
+    "jobs_started": 0
+  },
+  "blockers": [
+    "No isolated guest with Git, Node.js 22, and Python 3 available.",
+    "The running 4-core VM is on a host with only 1.39 GB available memory and has only about 3.6 GB free disk.",
+    "No pinned cost73k worker dumps or the exact 262 missing key/value records are present in the available worktrees."
+  ],
+  "resume_conditions": [
+    "Provide or prepare an isolated guest with Git, Node.js 22, Python 3, and sufficient memory/disk for the pinned worker rebuild and MS=1<<25 seedrun.",
+    "Reconstruct W0..W3 and 2-way A/B from pinned blobs and extract the exact 262 only-in-2way records.",
+    "Build the hybrid seed, run the engine seedrun, and require record identity, conflict=0, and 22/22 certificate byte identity."
+  ]
 }
