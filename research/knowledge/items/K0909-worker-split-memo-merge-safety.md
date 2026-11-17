@@ -43,6 +43,21 @@ artifacts:
   - path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/seed-capacity-design-73k-20261117.json
     role: data
     note: seed容量設計測定JSON（16/16 gate合格・engine seed失敗28==sim予測28・record恒等式閉包・MS=1<<25 band実行72,745,351 nodes=ms24 seedrun比0.9459）
+  - path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/measure_hybrid_seed_union_73k_20261117.py
+    role: verifier
+    note: ハイブリッドseed union測定オーケストレータ（pin付き再構築・262レコード再抽出・hybrid seed構築・sim・MS=1<<25 seedrun・record恒等式・全gate判定・run A・824行）
+  - path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/measure_hybrid_seed_union_73k_independent_20261117.py
+    role: verifier
+    note: 独立実装の同一測定オーケストレータ（run B・957行・境界seedrun24のin-run再現アンカー・prefix merge join+tail hash join方式のrecord恒等式）
+  - path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/hybrid-seed-union-73k-20261117.json
+    role: data
+    note: run A測定JSON（全gate合格・262レコードmd5 1d97a0d2…・hybrid seed md5 d24198ea…・seedrun25 72,761,010 nodes）
+  - path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/hybrid-seed-union-measurement-73k-20261117.json
+    role: data
+    note: run B測定JSON（59 gate合格・独立実装との全数値一致・record恒等式prefix/tail分割検査）
+  - path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/hybrid-seed-union-independent-verification-73k-20261117.json
+    role: verifier
+    note: claimセッションの独立検証JSON（hash・tail byte同一・証明書22/22・record恒等式独自再実装・run間完全一致・3セッション実行履歴と環境リセット記録）
 ---
 
 # K0909: worker分割メモmergeの安全性（cost73kバンド・verbatim engine）
@@ -236,3 +251,53 @@ gate定数再設計として、N-way merge seedの容量設計規則を確定し
    「失敗率<0.1% at MS=1<<24」ではなくseed負荷とkneeの距離でgateを評価する。
 
 勝敗変更なし・11×11はUNKNOWN。
+
+## hybrid seed union測定（2026-11-17追記3・測定のみ）
+
+出版hybrid seed union設計（DESIGN_DERIVED_NOT_MEASURED・blob 8ec64f21）を実測へ転換した
+（run A `measure_hybrid_seed_union_73k_20261117.py`・run B独立実装
+`measure_hybrid_seed_union_73k_independent_20261117.py`・run A JSON
+`hybrid-seed-union-73k-20261117.json`・run B JSON
+`hybrid-seed-union-measurement-73k-20261117.json`・独立検証JSON
+`hybrid-seed-union-independent-verification-73k-20261117.json`・log
+`2026-11-17-n11-class2-lane-hybrid-seed-union-measurement-73k.md`）:
+
+1. **262レコード再構成**: only-in-2way 262レコード（13,356 bytes・
+   md5 1d97a0d2167506168faae5f3898ff952・sha256 8195de51…）を決定的再抽出
+   （再抽出byte同一）。
+2. **hybrid seed**: 境界保存FINAL4 seed（4,975,265 key・md5 35ccec0e…）の
+   byte-prefixに262レコードを追記した4,975,527 key・253,874,013 bytes・
+   単一KYOENWM2ヘッダー（md5 d24198ea37b31ffbd85ead4ba230560b・
+   sha256 c4f76b07…・出版FINAL4 seedとbyte-prefix同一・FINAL4部分は
+   キー厳密昇順・追記分ちょうど13,356 bytes）。初期負荷0.1482822597026825
+   （MS=1<<25）は設計予測と最後の桁まで一致。
+3. **sim予測**: MS=1<<24→14,657失敗（境界FINAL4 anchorと同一・設計上界
+   14,919内・追記レコードは失敗を1件も増やさない）・MS=1<<25→20・
+   MS=1<<26→0。
+4. **MS=1<<25全band実行**: seeded 4,975,527 / inserted 4,975,507 /
+   **failed 20 == sim予測**（0.00040%・<0.1% gateを2桁の余裕で合格）・
+   **証明書22/22 byte同一**・**72,761,010 nodes**・最終占有率14,065,965
+   （負荷0.419）。node-balanced seedrun25（72,745,351）比1.00022
+   （262レコードの非閉包補償は測定済み最安seed比+0.022%）、境界FINAL4
+   seedrun24（76,599,320）比0.9499、出版2-way seedrun24（85,747,496）比
+   0.8485。bit95は11,857,737 nodesで再度完全不変（4度目の独立確認）。
+5. **record恒等式**: present 4,975,507・missing==failed 20・値違反0で閉包。
+   **連結seedの落とし穴（新規・実験事実）**: hybrid seedはFINAL4整列prefix+
+   非整列262レコードtailの連結で、単一sort merge joinはtailを誤読して
+   missing 282（=真の20+tail 262）を出す。run Aはseedレコードをsort後に
+   外部mergeで修正（アーカイブ済みrun1 JSONは最終JSONとbyte同一・
+   md5 9da5ccc8…）、run Bは当初からprefix merge join（present 4,975,245・
+   missing 20）+tail hash join（present 262・missing 0）で設計。
+   今後の連結seedのrecord恒等式gateは非整列tailを考慮すること。
+6. **実行と検証の経緯**: 測定は2つの独立実装orchestrator（824行/957行）で
+   2回独立に完走し全成果物がbyte同一（run Bは出版境界seedrun24もin-run
+   anchorとして再現・76,599,320 nodes・14,657失敗・22/22 byte同一）。
+   claim保持セッションの自runは6 worker全て出版値byte同一で完了後、
+   sleep 300のpollingコマンドが環境の300秒上限に抵触して環境リセットで
+   workspaceを喪失（実験事実として記録）。同セッションが事後検証として
+   ファイルhash・tail byte同一・証明書22/22（分割出版証明書連結比較）・
+   record恒等式の独自再実装（seed全件sort+streaming mergeで
+   present 4,975,507・missing 20・違反0・missingリスト一致）・per-bit総和・
+   run間完全一致を確認して本測定をclaimとして出版した。
+
+勝敗変更なし・manifest行は閉じず・証明書bytes不変・11×11はUNKNOWN。

@@ -2,7 +2,7 @@
   "schema": "n11-class2-lane-hybrid-seed-union-measurement-claim-73k-20261117-v1",
   "date": "2026-11-17",
   "lane": "n11 class2-lane long-term (cost73k)",
-  "status": "CLAIMED_IN_PROGRESS",
+  "status": "COMPLETED",
   "claim": "Execute the next_measurement stages of the published hybrid seed union design (DESIGN_DERIVED_NOT_MEASURED) in this session.",
   "base_head": "f7365b16453b5a5c941082fe4b0f072a25d50488",
   "design_pins": {
@@ -20,13 +20,43 @@
     "engine seedrun MS=1<<25, record identity, conflict 0, certs 22/22 byte identity gate",
     "per-bit node comparison vs boundary-only and node-balanced 4-way seeds"
   ],
-  "batches_run": 0,
-  "interpretation_guard": "Claim in progress; no measurement batches completed yet. No new WIN/LOSS verdicts, no certificate byte changes, no manifest closures. Standard 11x11 remains UNKNOWN.",
+  "batches_run": 1,
+  "interpretation_guard": "Claim completed. Measurement executed, independently verified and published. No new WIN/LOSS verdicts, no certificate byte changes, no manifest closures. Standard 11x11 remains UNKNOWN.",
   "session_note": "Takeover of the BLOCKED_PREFLIGHT claim: the preflight blockers were about the external Proxmox guests. This session executes in the upgraded agent execution environment (Node 22.20.0, Python 3.12.14, same environment class as the published K0909 measurements), so those blockers do not apply. Workers are rebuilt from pinned blobs (extractor 52bcaf50, driver 2a95d952, legal 8e97082c, manifest 0892aed0); the orchestrator is resumable and progress is checkpointed.",
   "claim_history": [
     "2026-11-17T13:01:57Z claimed by a parallel long-lane session (CLAIMED_IN_PROGRESS, batches_run 0)",
     "2026-11-17T13:45:12Z marked BLOCKED_PREFLIGHT by that session after external-environment checks; no jobs started",
-    "taken over by this session in the agent execution environment; status returns to CLAIMED_IN_PROGRESS"
+    "taken over by this session in the agent execution environment; status returns to CLAIMED_IN_PROGRESS",
+    "2026-11-17T14:29Z measurement completed by two concurrent hourly-lane sessions in the shared durable scratch: two independently written orchestrators (824 and 957 lines) both finished with gates_all_pass=True and byte-identical artifacts (hybrid seed md5 d24198ea37b31ffbd85ead4ba230560b, MS=1<<25 seedrun 72,761,010 nodes, seed failed 20 == sim prediction, certificates 22/22 byte-identical, record identity present 4,975,507 / missing == failed == 20 / violations 0)",
+    "the claim-holding session's own run completed all six workers byte-identically to the published values, then lost its volatile workspace to an environment reset (sleep-300 polling vs the 300-second hard cap; recorded as experimental fact)",
+    "2026-11-17T15:0xZ the claim-holding session independently verified both completed runs' artifacts (file hashes and structure, tail byte identity, 22/22 certificates vs published split parts, record identity recomputed with an independent implementation, per-bit sums, full cross-run agreement) and published the measurement on behalf of the claim (artifacts commit 1299412a, docs and this claim update in the same commit)"
   ],
-  "last_checked_main": "f7365b16453b5a5c941082fe4b0f072a25d50488"
+  "last_checked_main": "dcfdcb25ffd2b121c9d4948073124a433b7786b8",
+  "completion": {
+    "date": "2026-11-17",
+    "measurement_outputs": [
+      "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/hybrid-seed-union-73k-20261117.json",
+      "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/hybrid-seed-union-measurement-73k-20261117.json",
+      "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/hybrid-seed-union-independent-verification-73k-20261117.json"
+    ],
+    "artifacts_commit": "1299412a1cd74f1a34244e9ae3d1024a38066df9",
+    "key_results": {
+      "hybrid_seed_keys": 4975527,
+      "hybrid_seed_md5": "d24198ea37b31ffbd85ead4ba230560b",
+      "only_in_seed2_records": 262,
+      "seedrun_ms_1_25_total_nodes": 72761010,
+      "seed": {
+        "seeded": 4975527,
+        "inserted": 4975507,
+        "failed": 20
+      },
+      "certificates_byte_identical": "22/22",
+      "record_identity": {
+        "present": 4975507,
+        "missing": 20,
+        "value_violations": 0
+      }
+    },
+    "interpretation_guard": "Completed measurement only. No new WIN/LOSS verdicts, no manifest closures, certificate bytes unchanged. The 11x11 empty board, both two-stone roots and S2 {59,60} remain UNKNOWN."
+  }
 }
