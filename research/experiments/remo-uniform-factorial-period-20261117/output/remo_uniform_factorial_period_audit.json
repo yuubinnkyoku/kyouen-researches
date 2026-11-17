@@ -1,0 +1,324 @@
+{
+ "all_ok": true,
+ "checks": [
+  {
+   "data": {
+    "r10": {
+     "index_contiguous": true,
+     "lines": 15863,
+     "sha256": "fa1e1a405523403611101f819aed5013b353fdf2a526d125e643b8364b072884"
+    },
+    "r11": {
+     "index_contiguous": true,
+     "lines": 15863,
+     "sha256": "08324c19e8837041d8128423f26d88100b1ba7963fea1b86e3f90052b10664f0"
+    },
+    "r12": {
+     "index_contiguous": true,
+     "lines": 15863,
+     "sha256": "0835a06fe3a2cc812b5434ef0d56146f72b2b019b144ed62544d437472c05274"
+    },
+    "r13": {
+     "index_contiguous": true,
+     "lines": 15863,
+     "sha256": "b0ec4f58ac0f4e91185ad252924920738d5e6e8d47a75e61477cf3d915bb7dca"
+    },
+    "r2": {
+     "index_contiguous": true,
+     "lines": 47595,
+     "sha256": "1fd9dbf4cb6699c26bab7f6b34a900f5877d3408603a02a2dd121ca71ef8e951"
+    },
+    "r3": {
+     "index_contiguous": true,
+     "lines": 47595,
+     "sha256": "ea7c66286f728a52d5696d627ce1faf7705e77f9e4222493221f3a4fe79ed134"
+    },
+    "r4": {
+     "index_contiguous": true,
+     "lines": 47595,
+     "sha256": "04caba43a7c0f7124db1ea81fcad4f170de04bd041699f6659e42f786e9a40b4"
+    },
+    "r5": {
+     "index_contiguous": true,
+     "lines": 47595,
+     "sha256": "c6dddad7a4ce39d3ebc8765187b0f16961720654918d74f54e608e12975ea693"
+    },
+    "r6": {
+     "index_contiguous": true,
+     "lines": 47595,
+     "sha256": "65f1cb32a9ecae6bd258056dfe8ab7c59d376d570f1d11c647b6823fd2467f1d"
+    },
+    "r7": {
+     "index_contiguous": true,
+     "lines": 47595,
+     "sha256": "50eb7c1ba41825dcbf726258cb2c6878a324d58bb17a708cb587d9d2b3b79c78"
+    },
+    "r8": {
+     "index_contiguous": true,
+     "lines": 47595,
+     "sha256": "0a884b490e28c281166754c1e82aaa73f7515580dea05b4ce023e8a1f079e8dc"
+    },
+    "r9": {
+     "index_contiguous": true,
+     "lines": 47595,
+     "sha256": "02e771cda84ae5178ee67a905cc9c2148e0c186790cf0562f569d9923110f32d"
+    }
+   },
+   "name": "PIN: 14 committed columns sha256/shape",
+   "ok": true
+  },
+  {
+   "data": {
+    "mismatches": 0,
+    "pairs": 6388,
+    "stratified": {
+     "r2_pairs": 2,
+     "r3_pairs": 6,
+     "r4_pairs": 24,
+     "r5_pairs": 120,
+     "r6_pairs": 720,
+     "r7_pairs": 5040,
+     "r8_stratified": 240,
+     "r9_stratified": 236
+    },
+    "table_entries": 84,
+    "table_mismatches": 0
+   },
+   "name": "E1: verbatim per-stone recursion == closed-form twin (exhaustive for r=2..7 over all C in [1,r!]; stratified sample for r=8,9; the twin also reproduces the K0859 published 84-entry table)",
+   "ok": true
+  },
+  {
+   "data": {
+    "Q_divides_factorial": true,
+    "Q_mismatches": 0,
+    "Q_pairs": 3920,
+    "factorial_mismatches": 0,
+    "factorial_pairs": 409112,
+    "per_r": {
+     "r2": {
+      "Q": 2,
+      "Q_matches_pin": true,
+      "mismatches": 0,
+      "pairs": 2
+     },
+     "r3": {
+      "Q": 6,
+      "Q_matches_pin": true,
+      "mismatches": 0,
+      "pairs": 6
+     },
+     "r4": {
+      "Q": 12,
+      "Q_matches_pin": true,
+      "mismatches": 0,
+      "pairs": 12
+     },
+     "r5": {
+      "Q": 60,
+      "Q_matches_pin": true,
+      "mismatches": 0,
+      "pairs": 60
+     },
+     "r6": {
+      "Q": 60,
+      "Q_matches_pin": true,
+      "mismatches": 0,
+      "pairs": 60
+     },
+     "r7": {
+      "Q": 420,
+      "Q_matches_pin": true,
+      "mismatches": 0,
+      "pairs": 420
+     },
+     "r8": {
+      "Q": 840,
+      "Q_matches_pin": true,
+      "mismatches": 0,
+      "pairs": 840
+     },
+     "r9": {
+      "Q": 2520,
+      "Q_matches_pin": true,
+      "mismatches": 0,
+      "pairs": 2520
+     }
+    }
+   },
+   "name": "E2: THEOREM PER (universal proof in report.md) machine anchor - E(C + Q(r), r) == E(C, r) for every r = 2..9 and ALL C in [1, Q(r)] with Q(r) = lcm(1..r) as pinned; Q(r) | r! for every r = 2..9; and the r! anchor E(C + r!, r) == E(C, r) for every r = 2..9 and ALL C in [1, r!]",
+   "ok": true
+  },
+  {
+   "data": {
+    "r2": {
+     "Q": 2,
+     "all_proper_fail_elim": true,
+     "all_proper_fail_survivor": true,
+     "proper_divisors": 1
+    },
+    "r3": {
+     "Q": 6,
+     "all_proper_fail_elim": true,
+     "all_proper_fail_survivor": true,
+     "proper_divisors": 3
+    },
+    "r4": {
+     "Q": 12,
+     "all_proper_fail_elim": true,
+     "all_proper_fail_survivor": true,
+     "proper_divisors": 5
+    },
+    "r5": {
+     "Q": 60,
+     "all_proper_fail_elim": true,
+     "all_proper_fail_survivor": true,
+     "proper_divisors": 11
+    },
+    "r6": {
+     "Q": 60,
+     "all_proper_fail_elim": true,
+     "all_proper_fail_survivor": true,
+     "proper_divisors": 11
+    },
+    "r7": {
+     "Q": 420,
+     "all_proper_fail_elim": true,
+     "all_proper_fail_survivor": true,
+     "proper_divisors": 23
+    },
+    "r8": {
+     "Q": 840,
+     "all_proper_fail_elim": true,
+     "all_proper_fail_survivor": true,
+     "proper_divisors": 31
+    },
+    "r9": {
+     "Q": 2520,
+     "all_proper_fail_elim": true,
+     "all_proper_fail_survivor": true,
+     "proper_divisors": 47
+    }
+   },
+   "name": "E3: minimality (machine, r=2..9 only): the minimal period of both the elimination-sequence column and the survivor column is exactly Q(r) = lcm(1..r) (every proper divisor of Q(r) fails, full scan).  For r >= 10 the universal period Q(r) stands by the proof; minimality and the necessity direction are OPEN",
+   "ok": true
+  },
+  {
+   "data": {
+    "pairs": 50152,
+    "per_r": {
+     "r2": {
+      "Q_violations": 0,
+      "r!_swept": true,
+      "r!_violations": 0
+     },
+     "r3": {
+      "Q_violations": 0,
+      "r!_swept": true,
+      "r!_violations": 0
+     },
+     "r4": {
+      "Q_violations": 0,
+      "r!_swept": true,
+      "r!_violations": 0
+     },
+     "r5": {
+      "Q_violations": 0,
+      "r!_swept": true,
+      "r!_violations": 0
+     },
+     "r6": {
+      "Q_violations": 0,
+      "r!_swept": true,
+      "r!_violations": 0
+     },
+     "r7": {
+      "Q_violations": 0,
+      "r!_swept": true,
+      "r!_violations": 0
+     },
+     "r8": {
+      "Q_violations": 0,
+      "r!_swept": true,
+      "r!_violations": 0
+     },
+     "r9": {
+      "Q_violations": 0,
+      "r!_swept": false,
+      "r!_violations": 0
+     }
+    },
+    "violations_Q": 0,
+    "violations_r_factorial": 0
+   },
+   "name": "E4: uniform-offset induction data check: period T = Q(r) for every r = 2..9 and ALL C in [1, Q(r)], and period T = r! for every r = 2..8 and ALL C in [1, r!] (the r! data check for r = 9 is omitted for runtime; the r = 9 r!-periodicity itself is fully machine-anchored by E2): per phase k/t/li/loser/turn identical between C and C+T; every active player's count offset == D_h exactly; X_h == T - k_h*D_h; closed forms X_1 = T, X_h = T/(k_h+1) for h >= 2; s shift == k_h*D_h; receipts shift by exactly X_h/k_h (uniform); the phase loser received exactly q_h stones in phase h; k_h | X_h",
+   "ok": true
+  },
+  {
+   "data": {
+    "delta0_cap10": 728,
+    "delta0_cap12": 1512,
+    "embedding_positions": 15863,
+    "mismatches_cap10": 0,
+    "mismatches_cap12": 0
+   },
+   "name": "E5: Theorem D (K0859, universal) anchor vs committed columns: all 1,512 cap<=12 Delta=0 canonical profiles determined with the theorem_d survivor at every r = 2..9 (8 columns) and all 728 cap<=10 Delta=0 profiles at every r = 9..13 (5 columns, r=9 access via the K0882 order-preserving embedding); 15,736 record checks, 0 mismatches; K0882 D_10 embedding reproduced (15,863 positions)",
+   "ok": true
+  },
+  {
+   "data": {
+    "plateau_constant_violations": [],
+    "plateau_sequence": [
+     0,
+     1,
+     1,
+     3,
+     1,
+     5,
+     1,
+     5,
+     5,
+     9,
+     1,
+     11,
+     1,
+     5,
+     7,
+     15,
+     1,
+     17,
+     1,
+     15,
+     17,
+     21,
+     1,
+     21,
+     11,
+     15,
+     7,
+     27,
+     1,
+     29,
+     1,
+     27,
+     17,
+     21,
+     11,
+     35,
+     1,
+     5,
+     7,
+     39
+    ]
+   },
+   "name": "E6: plateau observation (finite; Theorem J corollary anchor for Delta=0 keys): survivor S(C,r) is constant on r >= C for C <= 24 (up to r = 3C+3); the plateau sequence P(C) = S(C,C), C=1..40, is pinned; NO closed form for P(C) is claimed",
+   "ok": true
+  }
+ ],
+ "meta": {
+  "columns": "committed packed columns only (K0881/K0876/K0912 r=2..9 cap<=12; K0895/K0897/K0898/K0902 r=10..13 cap<=10)",
+  "date": "2026-11-17",
+  "item": "K0919",
+  "machinery": "verbatim K0859 theorem_d + closed-form twin; K0862/K0875 canonical enumeration for the column anchor",
+  "title": "LCM periodicity of the uniform-board REMO counting recursion: E(C + lcm(1..r), r) == E(C, r) for all C >= 1, r >= 2 (universal proof, uniform-offset induction); minimal period == lcm(1..r) machine-verified for r <= 9"
+ }
+}
