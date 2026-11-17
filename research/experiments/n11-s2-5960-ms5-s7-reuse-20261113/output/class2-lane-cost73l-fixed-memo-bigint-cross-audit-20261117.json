@@ -1,0 +1,121 @@
+{
+  "schema": "n11-cost73l-fixed-memo-vs-bigint-cross-audit-20261117-v1",
+  "date": "2026-11-17",
+  "basis": {
+    "blob_pins": {
+      "battery": "963dccc777340974981eb3799e753657b3743e53",
+      "manifest": "6e0a94aba212ba54bb5329fbea4643c9dcdb1ec4",
+      "bigint": "547fe617abc179ff47f3607079d3ca8c1de4359b"
+    }
+  },
+  "checks": [
+    {
+      "name": "population_and_bit_sets",
+      "ok": true,
+      "detail": {
+        "battery": 32,
+        "manifest": 32,
+        "bigint": 32,
+        "bits_match": true
+      }
+    },
+    {
+      "name": "per_bit_cross_agreement",
+      "ok": true,
+      "detail": {
+        "mismatch_count": 0,
+        "mismatches": []
+      }
+    },
+    {
+      "name": "fixed_node_total",
+      "ok": true,
+      "detail": {
+        "per_bit_sum": 52079030,
+        "recorded_total": 52079030
+      }
+    },
+    {
+      "name": "verbatim_node_total",
+      "ok": true,
+      "detail": {
+        "per_bit_sum": 424657112,
+        "battery_total": 424657112,
+        "manifest_total": 424657112
+      }
+    },
+    {
+      "name": "strategy_row_total",
+      "ok": true,
+      "detail": {
+        "battery_sum": 1693203,
+        "manifest_total": 1693203,
+        "bigint_sum": 1693203
+      }
+    },
+    {
+      "name": "byte_identity_and_gates",
+      "ok": true,
+      "detail": {
+        "byte_identical": 32,
+        "gates": {
+          "byte_identical_32of32": true,
+          "determinism_bit1_bytes": true,
+          "determinism_bit1_nodes": true,
+          "fatal_zero": true,
+          "fbt_drops_zero": true,
+          "pins_4of4": true,
+          "rows_match_32of32": true
+        }
+      }
+    },
+    {
+      "name": "fixed_memo_ratio",
+      "ok": true,
+      "detail": {
+        "ratio": 0.12263783774802292,
+        "reduction": 0.877362162251977,
+        "speedup": 8.154090273954795
+      }
+    },
+    {
+      "name": "bigint_aggregate",
+      "ok": true,
+      "detail": {
+        "pass": 32,
+        "visited_states": 3599832,
+        "terminal_count": 613366,
+        "loser_reply_edges": 3178030
+      }
+    }
+  ],
+  "check_count": 8,
+  "all_checks_pass": true,
+  "totals": {
+    "certificates": 32,
+    "fixed_extraction_nodes": 52079030,
+    "verbatim_extraction_nodes": 424657112,
+    "fixed_to_verbatim_ratio": 0.12263783774802292,
+    "node_reduction": 0.877362162251977,
+    "speedup": 8.154090273954795,
+    "byte_identical_certificates": 32,
+    "strategy_rows": 1693203,
+    "bigint_visited_states": 3599832,
+    "bigint_terminal_count": 613366,
+    "bigint_loser_reply_edges": 3178030,
+    "best_per_bit_ratio": {
+      "bit": 25,
+      "ratio_rounded": 0.0981
+    },
+    "worst_per_bit_ratio": {
+      "bit": 119,
+      "ratio_rounded": 0.1587
+    }
+  },
+  "interpretation_boundary": [
+    "This is a cross-audit of pinned result files, not a fresh run of the BigInt verifier.",
+    "The fixed-memo battery reports byte identity with the published certificate bytes; this audit cross-checks those per-bit claims against the manifest and BigInt result records.",
+    "WIN7-D10 proves only an individual seven-stone root within depth 10; REFUTED-D10 is not a LOSS proof.",
+    "The standard 11x11 empty board, both two-stone roots, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+  ]
+}
