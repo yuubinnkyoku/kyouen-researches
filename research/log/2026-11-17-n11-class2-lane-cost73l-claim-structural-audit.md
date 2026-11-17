@@ -50,7 +50,7 @@ cost73l は6石 child `00000000000000c09002000000400000` の73候補を対象と
 ## 成果物
 
 - `research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost73l_claim_structure_20261117.py`（Git blob `fbd8cd768ad97812afbc72176acd6be2c7912b70`）
-- `research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73l-claim-structural-audit-20261117.json`（Git blob `0bef53116dd015bab19a2fab3a69ce006cf2c7c8`）
+- `research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73l-claim-structural-audit-20261117.json`（Git blob `f693f2f32f6de14c55ad29f73d8b7bcc715b05c3`）
 
 作業中にmainはK0900の出版修正で前進した。比較結果は開始headから最新headへのfast-forward 4 commitで、今回追加した監査スクリプトとJSONは最新mainの履歴に含まれている。branch / PRは作成していない。
 
