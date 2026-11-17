@@ -1,0 +1,300 @@
+{
+ "schema": "rank1-parent-receipt-channel-20261118-v1",
+ "date": "2026-11-18",
+ "lane": "n11 long-term lane, autonomous session (standard 11x11 weak-resolution)",
+ "title": "receipt-channel closure-distance audit of the K0865 effective-worklist rank-1 partial-STERILE S5 parent 00000000000000801202000040000000: all 3 non-STERILE remaining rows fully determined by published sweeps (6 WIN7-D10 roots), 2 STERILE rows K0863-unclosable, remaining work on this channel is the 3 pending receipt folds",
+ "inputs": {
+  "worklist": {
+   "git_blob_sha1": "2fee1d0718547a62e346d35f5858d7913e37c097"
+  },
+  "census": {
+   "git_blob_sha1": "9c251da3138c5cb0516e097be5e5d0427dfaf5f0"
+  },
+  "scan": {
+   "git_blob_sha1": "24f214e6a9dd721ef95ac97d6b84cf34af33b14b"
+  },
+  "s76d": {
+   "git_blob_sha1": "a57af0161942a6f597cfabe9aef892df2fa7be3f"
+  },
+  "c76d": {
+   "git_blob_sha1": "e8a6116aec45c19642877db85340e120d23331b3"
+  },
+  "v76d77e": {
+   "git_blob_sha1": "d267fa8d93017110ff74df4520b3a8e8a47bee5b"
+  },
+  "s77e": {
+   "git_blob_sha1": "57afde38509ae3c10df0c6c38883c9b5d4fc67a5"
+  },
+  "census19": {
+   "git_blob_sha1": "a0c6abaf0df163eddc35f8b8dc0f8c0eb4268fe6"
+  },
+  "prior": {
+   "git_blob_sha1": "30c8fdc4e7212bafe271662d8dcf0bbbde35b63b"
+  }
+ },
+ "method": "independent orbit join (exists sigma in D4 with sigma(P) subset R, 121-bit masks, 8 transforms) from the raw worklist; exact one-bit root arithmetic; third-implementation D4 canonicalisation for the derived cost-76c root forms; no engine, no float, no fold",
+ "checks": [
+  {
+   "check": "A.pin.worklist",
+   "pass": true,
+   "detail": "2fee1d0718547a62e346d35f5858d7913e37c097"
+  },
+  {
+   "check": "A.pin.census",
+   "pass": true,
+   "detail": "9c251da3138c5cb0516e097be5e5d0427dfaf5f0"
+  },
+  {
+   "check": "A.pin.scan",
+   "pass": true,
+   "detail": "24f214e6a9dd721ef95ac97d6b84cf34af33b14b"
+  },
+  {
+   "check": "A.pin.s76d",
+   "pass": true,
+   "detail": "a57af0161942a6f597cfabe9aef892df2fa7be3f"
+  },
+  {
+   "check": "A.pin.c76d",
+   "pass": true,
+   "detail": "e8a6116aec45c19642877db85340e120d23331b3"
+  },
+  {
+   "check": "A.pin.v76d77e",
+   "pass": true,
+   "detail": "d267fa8d93017110ff74df4520b3a8e8a47bee5b"
+  },
+  {
+   "check": "A.pin.s77e",
+   "pass": true,
+   "detail": "57afde38509ae3c10df0c6c38883c9b5d4fc67a5"
+  },
+  {
+   "check": "A.pin.census19",
+   "pass": true,
+   "detail": "a0c6abaf0df163eddc35f8b8dc0f8c0eb4268fe6"
+  },
+  {
+   "check": "A.pin.prior",
+   "pass": true,
+   "detail": "30c8fdc4e7212bafe271662d8dcf0bbbde35b63b"
+  },
+  {
+   "check": "B.census_entry",
+   "pass": true,
+   "detail": "effCost 229 / effRem 3"
+  },
+  {
+   "check": "B.census_sterile_refs",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "B.rank1_effective_worklist",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "B.prior_enumeration_entry",
+   "pass": true,
+   "detail": "nonsterile 3 / min 76"
+  },
+  {
+   "check": "C.join_rows",
+   "pass": true,
+   "detail": "['00000000000000801282000040000000', '00000000000000801202000040000400', '00000000010000809002000001000000', '00000000040000003800080008000000', '00000000040000809002000000004000']"
+  },
+  {
+   "check": "C.join_matches_census",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "C.nonsterile_rows_are_special",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "C.row_costs",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "D1.s76d_fully_determined",
+   "pass": true,
+   "detail": "2 WIN + 74 REFUTED + 0 capped == 76/76"
+  },
+  {
+   "check": "D1b.s76d_win_roots_bit_arithmetic",
+   "pass": true,
+   "detail": "['00000000040000003800080008080000', '00000000040000003802080008000000']"
+  },
+  {
+   "check": "D1c.s76d_certs_published",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "D1d.s76d_second_verification",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "D2.s77e_fully_determined",
+   "pass": true,
+   "detail": "2 WIN + 75 REFUTED + 0 capped == 77/77"
+  },
+  {
+   "check": "D2b.s77e_win_roots_bit_arithmetic",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "D3.s76c_fully_determined",
+   "pass": true,
+   "detail": "2 WIN + 74 REFUTED + 0 capped == 76/76 (census v19 map)"
+  },
+  {
+   "check": "D3b.s76c_win_roots_derived_canonical",
+   "pass": true,
+   "detail": "derived canon forms (labelled derived, not published values)"
+  },
+  {
+   "check": "D3c.s76c_transfer_predictions_confirmed",
+   "pass": true,
+   "detail": "15/15 confirmed REFUTED-D10 by the later direct sweep, 0 conflicts"
+  },
+  {
+   "check": "D4.zero_unswept_nonsterile_rows",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "E.sterile_rows_all_candidates_refuted",
+   "pass": true,
+   "detail": "64/64 and 71/71 REFUTED-D10, 0 WIN, 0 capped -> K0863 unclosable"
+  },
+  {
+   "check": "F.folds_pending",
+   "pass": true,
+   "detail": "76c / 76d / 77e receipt folds all PENDING at the pinned records"
+  }
+ ],
+ "all_checks_pass": true,
+ "rows": [
+  {
+   "hex": "00000000000000801202000040000400",
+   "category": "sterile",
+   "cost": 71,
+   "engine_win7_d10": 0,
+   "engine_refuted_d10": 71,
+   "transferred_refuted_d10": 0,
+   "open_after_transfers": 0,
+   "determination": "STERILE: all own candidates REFUTED-D10 (K0863 unclosable)"
+  },
+  {
+   "hex": "00000000000000801282000040000000",
+   "category": "sterile",
+   "cost": 64,
+   "engine_win7_d10": 0,
+   "engine_refuted_d10": 64,
+   "transferred_refuted_d10": 0,
+   "open_after_transfers": 0,
+   "determination": "STERILE: all own candidates REFUTED-D10 (K0863 unclosable)"
+  },
+  {
+   "hex": "00000000010000809002000001000000",
+   "category": "transfer_partial",
+   "cost": 76,
+   "engine_win7_d10": 0,
+   "engine_refuted_d10": 0,
+   "transferred_refuted_d10": 15,
+   "open_after_transfers": 61,
+   "win_bits": [
+    61,
+    99
+   ],
+   "win_root_canon_hexes_derived": [
+    "0000000001000080b002000001000000",
+    "00000000040000809002000000400800"
+   ],
+   "determination": "census v19 cost76c verdict map (direct v17 sweep; 15/15 head-1410 transfer predictions confirmed)",
+   "fold": "PENDING (parallel lane; bit 61 certificate in flight)"
+  },
+  {
+   "hex": "00000000040000003800080008000000",
+   "category": "win_pending",
+   "cost": 76,
+   "engine_win7_d10": 2,
+   "engine_refuted_d10": 74,
+   "transferred_refuted_d10": 0,
+   "open_after_transfers": 0,
+   "win_bits": [
+    19,
+    49
+   ],
+   "win_root_hexes": [
+    "00000000040000003800080008080000",
+    "00000000040000003802080008000000"
+   ],
+   "determination": "cost-76d sweep (published, second-verified)",
+   "fold": "PENDING (cost-76d receipt fold onto head 1405)"
+  },
+  {
+   "hex": "00000000040000809002000000004000",
+   "category": "win_pending",
+   "cost": 77,
+   "engine_win7_d10": 2,
+   "engine_refuted_d10": 75,
+   "transferred_refuted_d10": 0,
+   "open_after_transfers": 0,
+   "win_bits": [
+    37,
+    69
+   ],
+   "win_root_hexes": [
+    "00000000040000809002002000004000",
+    "00000000040000a09002000000004000"
+   ],
+   "determination": "cost-77e sweep (published, dual-verified)",
+   "fold": "PENDING (cost-77e receipt fold onto head 1405)"
+  }
+ ],
+ "summary": {
+  "parent": "00000000000000801202000040000000",
+  "classes": 2,
+  "k0865_classification": "partial_sterile (cross_cover_required)",
+  "effective_worklist_rank": 1,
+  "effective_cost": 229,
+  "remaining_rows": 5,
+  "sterile_rows": 2,
+  "nonsterile_rows": 3,
+  "nonsterile_rows_unswept": 0,
+  "nonsterile_rows_fully_determined": 3,
+  "win7_d10_roots_available": 6,
+  "win7_d10_bits": [
+   19,
+   37,
+   49,
+   61,
+   69,
+   99
+  ],
+  "certificates_published_and_verified": [
+   19,
+   37,
+   49,
+   69
+  ],
+  "fold_pending_bands": [
+   "cost76c",
+   "cost76d",
+   "cost77e"
+  ],
+  "receipt_channel_sweep_work_remaining_on_own_rows": 0,
+  "note": "the parent's non-STERILE receipt channel is fully determined by published sweeps; what remains on this channel is the three pending receipt folds (sweep-lane jurisdiction), not sweep work; the two STERILE rows can never be covered by a D10 WIN7 receipt (K0863); no parent-closure claim is made here"
+ },
+ "interpretation_guard": "fully determined rows and WIN7 certificates prove only individual 7-stone roots and row-level bookkeeping; a parent is not a position value and parent closure is manifest work; REFUTED-D10 is not a LOSS proof; STERILE is not a LOSS proof; folds remain sweep-lane jurisdiction and none is applied here",
+ "trust_boundary": "engine depth-10 verdict soundness underlying the pinned sweep records, identical to all published lane verdicts; the cost-76c determination is the census v19 verdict map's published record",
+ "unknown_status": "11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60} and classes 1/2/4 all remain UNKNOWN; REFUTED-D10 is not a LOSS proof; STERILE is not a LOSS proof"
+}

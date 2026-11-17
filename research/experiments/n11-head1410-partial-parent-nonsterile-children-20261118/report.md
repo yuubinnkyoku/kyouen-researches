@@ -145,3 +145,29 @@ scan第二独立検証 `65e3e822`・cost-65j fold record `7a4c9007`・cost-76d s
 special 13行が触るpartial parentは6行のみ。3,555行全体ではengine WIN7 receipt証拠は
 この2行（4 root）に限られ、残り3,542行は未決定のままである。本検証は記録間整合の
 確認であり、engine実行・fold適用・新規receipt/coverage主張を含まない。
+
+## フォローアップ3: K0865 effective worklist 第1位parentのreceipt-channel closure-distance (同日)
+
+`audit_rank1_parent_receipt_channel_20261118.py`（blob `606de306c9d08bac3cc0e119a486dc59cb04de6e`）が、
+K0865 effective worklist第1位のpartial-STERILE parent
+`00000000000000801202000040000000`（class 2・effCost 229・effRem 3）のremaining 5行を
+raw worklistからの独立orbit joinで再導出し（出力
+`rank1-parent-receipt-channel-20261118.json`・blob
+`881b7c7777b313bd88ae1840e32f06f397a31e7c`・29 checks all PASS・二重実行byte-identical）、
+census entryとの全フィールド一致を確認した上で、**receipt channelのclosure-distance**を
+確定した:
+
+- **非STERILE 3行すべてがsweep完了済み・unswept 0行**: 76d行（2 WIN7-D10 bits 19/49 +
+  74 REFUTED + 0 capped = 76/76）・77e行（2 WIN7-D10 bits 37/69 + 75 REFUTED + 0 capped
+  = 77/77）・76c行（census v19 verdict map: 2 WIN7-D10 bits 61/99 + 74 REFUTED + 0 capped
+  = 76/76・head-1410の15転移予測は15/15直接sweepで確認済み）。**6 WIN7-D10 root計**
+  （bits 19/37/49/61/69/99）。76d/77eの4 rootは証明書出版・二重独立検証済み。76cの
+  root canon形は本auditで導出（derived値として明示）。
+- **STERILE 2行（cost 64/71）はK0863によりD10 receiptでは永久に被覆不能**
+  （64/64・71/71 REFUTED-D10・0 WIN・0 capped・scanの35行STERILE集合に両行含む）。
+- **3つのreceipt fold（76c/76d/77e）は全てPENDING**（全pin記録で確認・fold適用は
+  sweep-lane管轄）。**このparentのreceipt channelに残る作業はsweepではなく
+  fold待ちのみである**（`receipt_channel_sweep_work_remaining_on_own_rows: 0`）。
+
+parent closureはmanifest作業であり、本auditはparent閉鎖を主張しない。fold適用・
+sweepはsweep-lane管轄のまま。11×11空盤・二石root・S2・class 1/2/4はいずれもUNKNOWNのまま。

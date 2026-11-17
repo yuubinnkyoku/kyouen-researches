@@ -99,6 +99,22 @@ parent分類にゲーム理論的値の主張は無い。
 - special 13行が触るpartial parentは6行。engine WIN7 receipt証拠はwin_pending 2行
   （4 root）のみで、残り3,542行は未決定のまま。
 
+## フォローアップ3（同日・同experiment）: 第1位parentのreceipt-channel closure-distance
+
+`audit_rank1_parent_receipt_channel_20261118.py`（blob `606de306c9d08bac3cc0e119a486dc59cb04de6e`・
+出力blob `881b7c7777b313bd88ae1840e32f06f397a31e7c`・29 checks all PASS・二重実行byte-identical）。
+K0865 effective worklist第1位parent `00000000000000801202000040000000`（cl2・effCost 229・
+effRem 3）のremaining 5行を独立orbit joinで再導出し、census entryと全フィールド一致を確認。
+
+- **非STERILE 3行すべてsweep完了・unswept 0行**: 76d行 2 WIN（bits 19/49）+ 74 REFUTED、
+  77e行 2 WIN（bits 37/69）+ 75 REFUTED、76c行 2 WIN（bits 61/99）+ 74 REFUTED
+  （census v19 map）。**6 WIN7-D10 root計**。76d/77eの4 rootは証明書出版・二重独立検証済み。
+- **STERILE 2行（64/71）はK0863でD10被覆不能**。scanの35行STERILE集合に両行含む。
+- **76c/76d/77eの3 foldは全てPENDING**（fold適用はsweep-lane管轄）。
+  **このparentのreceipt channelに残る作業はsweepではなくfold待ちのみ**
+  （`receipt_channel_sweep_work_remaining_on_own_rows: 0`）。
+- parent closureはmanifest作業であり、parent閉鎖の主張はしない。
+
 ## 次の一手
 
 - 並走のSTERILEフィルタ付きcensus再構築の出版を待ち、出版されたら検証側に回る
