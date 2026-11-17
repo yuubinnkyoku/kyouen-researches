@@ -77,6 +77,8 @@ import os
 import subprocess
 import sys
 
+from worker_memo_merge import combine_values, conflict_kind
+
 HERE = os.path.dirname(os.path.abspath(__file__)) or "."
 OUT = os.path.join(HERE, "output")
 CERTDIR = os.path.join(OUT, "class2-lane-cost73k-certificates")
@@ -384,26 +386,6 @@ def sort_dump(tag):
             subprocess.run(["sort", "-S", "200M", "-k2,5"], stdin=fi,
                            stdout=fo, env=env, check=True)
     return srt
-
-
-def combine_values(win, lose, nowin, nolose, rec):
-    """rec is a 4-tuple (win, lose, nowin, nolose); combine bounds:
-    win=min lose=min nowin=max nolose=max (255 = unbound)."""
-    w = min(win, rec[0]); l = min(lose, rec[1])
-    nw = max(nowin, rec[2]); nl = max(nolose, rec[3])
-    return w, l, nw, nl
-
-
-def conflict_kind(win, lose, nowin, nolose):
-    """Bound contradiction.  255 is the 'unbound' sentinel on BOTH sides,
-    so a bound conflict requires BOTH values to be real bounds."""
-    if win < 255 and lose < 255:
-        return "win_and_lose"
-    if win < 255 and nowin < 255 and nowin >= win:
-        return "win_le_nowin"
-    if lose < 255 and nolose < 255 and nolose >= lose:
-        return "lose_le_nolose"
-    return None
 
 
 def distinct_pass(tag):
