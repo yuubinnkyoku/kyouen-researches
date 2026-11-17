@@ -10,7 +10,7 @@
     88
   ],
   "claimed_by": "n11 long-term lane session (takeover; precedent: cost65j claim v1->v2 takeover)",
-  "coordination_note": "latest main fetched immediately before this takeover push; the parallel cost64h lane is mid-fold (prereg + fourth independent verification + cover-multiplicity audit prediction published, fold receipt pending); no other claim, raw batch or audit exists for this child on main Reconciled against the current K0863 full theorem-applicability scan: 15/76 candidates are already REFUTED-D10 transfers (not 5); the 10 omitted bits are now recorded and must be reused, leaving 61 open + 5 cross-agreement reruns = 66 engine bits. No raw batch has been launched. Raw batch audit added 2026-11-17: all 10 batch files cover 76/76 legal bits and yield WIN7-D10 bits 61/99/113, REFUTED-D10 73, capped 0. Actual raw files reran all 15 transferred bits, including the 10 marked reused; actual engine work was 76, not the planned 66. See class2-lane-cost76c-raw-audit-20261117.json and the 2026-11-17 research log.\n2026-11-17 manifest-marginal audit: bits 61/99/113 each individually close only the same open manifest row 00000000010000809002000001000000; combined marginal sequence is 1/0/0. Prioritize bit61 (752696 raw nodes) and keep 99/113 as fallbacks; see candidate-manifest-marginals audit.\n2026-11-17 v17 correction: the fbtOR saturation defect changes the cost76c verdict set from v16's 61/99/113 to v17's 61/99; bit113 is REFUTED-D10 in both v17 orderings and v15 agrees. All ten v17 raw batches were independently reaggregated (76/76 legal bits, 2 WIN, 74 REFUTED, capped 0, 144218750 candidate nodes). The three-candidate marginal projection is superseded by the corrected two-candidate projection ac4f6e22...; bit61 remains primary, bit99 fallback. Do not extract or fold bit113.\n2026-11-17 fail-closed extraction preparation: cert_driver76c.ts and its mock guard test are published. The driver wraps exact_v16 without changing search semantics and refuses all incomplete/fatal/fbt_drops outputs. Six mock cases pass; the actual extractor has not been invoked. Bit61 remains the sole primary extraction target.",
+  "coordination_note": "latest main fetched immediately before this takeover push; the parallel cost64h lane is mid-fold (prereg + fourth independent verification + cover-multiplicity audit prediction published, fold receipt pending); no other claim, raw batch or audit exists for this child on main Reconciled against the current K0863 full theorem-applicability scan: 15/76 candidates are already REFUTED-D10 transfers (not 5); the 10 omitted bits are now recorded and must be reused, leaving 61 open + 5 cross-agreement reruns = 66 engine bits. No raw batch has been launched. Raw batch audit added 2026-11-17: all 10 batch files cover 76/76 legal bits and yield WIN7-D10 bits 61/99/113, REFUTED-D10 73, capped 0. Actual raw files reran all 15 transferred bits, including the 10 marked reused; actual engine work was 76, not the planned 66. See class2-lane-cost76c-raw-audit-20261117.json and the 2026-11-17 research log.\n2026-11-17 manifest-marginal audit: bits 61/99/113 each individually close only the same open manifest row 00000000010000809002000001000000; combined marginal sequence is 1/0/0. Prioritize bit61 (752696 raw nodes) and keep 99/113 as fallbacks; see candidate-manifest-marginals audit.\n2026-11-17 v17 correction: the fbtOR saturation defect changes the cost76c verdict set from v16's 61/99/113 to v17's 61/99; bit113 is REFUTED-D10 in both v17 orderings and v15 agrees. All ten v17 raw batches were independently reaggregated (76/76 legal bits, 2 WIN, 74 REFUTED, capped 0, 144218750 candidate nodes). The three-candidate marginal projection is superseded by the corrected two-candidate projection ac4f6e22...; bit61 remains primary, bit99 fallback. Do not extract or fold bit113.\n2026-11-17 fail-closed extraction preparation: cert_driver76c.ts and its mock guard test are published. The driver wraps exact_v16 without changing search semantics and refuses all incomplete/fatal/fbt_drops outputs. Six mock cases pass; the actual extractor has not been invoked. Bit61 remains the sole primary extraction target.\n2026-11-17 exact defense guard v2: bit61 raw root 0000000001000080b002000001000000 was independently audited as 55 legal / 59 illegal defenses (35/35 root four-subsets safe); the guard now rejects any non-exact, incomplete, illegal, duplicate or unsorted defense list before extraction. See the bit61 legal-defense audit log and JSON.",
   "date": "2026-11-16",
   "demand": {
     "c1": 0,
@@ -350,10 +350,10 @@
   "s5": "00000000000000801202000040000000",
   "s6_child": "00000000010000809002000001000000",
   "s6_s7_edge_cost": 76,
-  "schema": "n11-class2-lane-cost76c-sweep-complete-20261117-v6",
+  "schema": "n11-class2-lane-cost76c-sweep-complete-20261117-v7",
   "stale_claim_history": "claim v1 (this file, schema -v1) was published 2026-11-15 at ~20:54Z (git blob e5bf66f62323f6434d82743c662295618af232a3) with chain head 1403/6445/509589/4715/373312 and never landed raw batches, audit, certificates or fold artifacts; it is stale; this long-term lane session takes it over per the cost65j takeover precedent",
-  "status": "v17-corrected; WIN7-D10 bits 61/99; bit113 REFUTED-D10; cost64h fold complete at head1472; fail-closed bit61 extraction driver prepared and mock-tested; actual certificate extraction remains pending; receipt fold pending",
-  "title": "n11 class2-lane cost76c: 3 WIN7-D10 candidates; bit61 is the first manifest-closing extraction target",
+  "status": "v17-corrected; WIN7-D10 bits 61/99; bit113 REFUTED-D10; cost64h fold complete at head1472; fail-closed driver v2 now verifies the exact raw-root legal defense list; actual certificate extraction remains pending; receipt fold pending",
+  "title": "n11 class2-lane cost76c: two WIN7-D10 candidates; bit61 is the first manifest-closing extraction target",
   "transfers": {
     "0": {
       "attested_by": [
@@ -672,7 +672,7 @@
     "note": "All ten v17 raw batches were fetched and independently reaggregated; the 76-bit set matches the pinned legal candidate list and every per-bit verdict/node count matches the published v17 audit."
   },
   "certificate_extraction": {
-    "status": "pending; bit61 primary, bit99 fallback; guarded driver prepared and mock-tested; actual extraction not run",
+    "status": "pending; bit61 primary, bit99 fallback; guard v2 independently derives and requires the exact ascending raw-root defense list; 14/14 mock cases pass; actual extraction not run",
     "win7_d10_bits": [
       61,
       99
@@ -697,11 +697,64 @@
     },
     "extractor": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/class4_child1_cert_extractor_exact_v16.ts",
     "extractor_blob_sha": "5518d375fc6b4a7a14c22a1a65586f0c1c5731c0",
-    "required_extractor_guard": "The exact_v16 CLI itself remains unsafe: it writes res.rows even when fatal is set. Use cert_driver76c.ts only. It validates a raw six-stone in-board child and empty selected bit; requires a nonempty unique in-range defense list; every perMove must be ok and uncapped; rows must be nonempty, unique, and agree with nRows; fatal must be unset and fbt_drops exactly 0. Publication uses a same-directory temporary file and no-overwrite hard link.",
+    "required_extractor_guard": "The exact_v16 CLI itself remains unsafe: it writes res.rows even when fatal is set. Use cert_driver76c.ts only. It validates the raw six-stone in-board child and empty selected bit; independently derives every legal defense of the raw seven-stone root with exact Bareiss 4x4 determinants and requires the exact ascending list; requires perMove keys to equal that list; every perMove must be ok and uncapped; rows must be nonempty, well-formed, unique by board key, and agree with nRows; fatal must be unset and fbt_drops exactly 0. Publication uses a same-directory temporary file and no-overwrite hard link.",
     "guarded_driver": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/cert_driver76c.ts",
-    "guarded_driver_blob_sha": "af6dc9b98de4e632246399077908a8d184c08f2a",
+    "guarded_driver_blob_sha": "3aae6b6ce133b2a3fb13796ad303e2a57823f05a",
     "guard_test": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/test_cert_driver76c_guard.mjs",
-    "guard_test_blob_sha": "7e342afbec0455ce9dedb01870860f2e14ba0746"
+    "guard_test_blob_sha": "10ca0a00ef107480d6021ba3d58459b1b7ca9956",
+    "legal_defense_audit": {
+      "script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost76c_bit61_root_legal_moves_20261117.py",
+      "script_blob_sha": "d3afb601e02e0f0f2b14f8e524ea31009035a35a",
+      "output": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76c-bit61-root-legal-moves-20261117.json",
+      "output_blob_sha": "d4755c946b898c4b516106ee5a691b8467e83b8e",
+      "output_sha256": "f28d8f4ddf57978fc67787f12f1a956b53f43600d58caf2e051ca62bb8a2fbd1",
+      "base_main": "353cda65aa4550ff159ba760130371fccb9c474a",
+      "bit61_raw_root": "0000000001000080b002000001000000",
+      "bit61_legal_defenses": 55,
+      "bit61_illegal_empty_cells": 59,
+      "root_four_subset_count": 35,
+      "root_zero_determinants": 0,
+      "pinned_legal_candidates_blob_sha": "8e97082c42838c7a4a4b6d2dd235276c8d43ab9a",
+      "independent_checks": [
+        "pivoted Bareiss 4x4 determinant",
+        "translated 3x3 determinant",
+        "pinned legal_candidates.py",
+        "direct candidate test equals triple-union forbidden mask"
+      ],
+      "bit99_mock_guard_test_legal_defenses": 65,
+      "game_verdict_claimed": false
+    },
+    "guard_test_result": {
+      "status": "PASS",
+      "cases": 14,
+      "passed": 14,
+      "valid_roots": {
+        "bit61": {
+          "legal_defenses": 55,
+          "output_created": true
+        },
+        "bit99": {
+          "legal_defenses": 65,
+          "output_created": true
+        }
+      },
+      "rejected_cases": [
+        "missing defense",
+        "illegal defense",
+        "duplicate defense",
+        "unsorted defense",
+        "missing bit99 defense",
+        "fatal",
+        "fbt_drops",
+        "missing rows",
+        "incomplete per-move result",
+        "malformed row",
+        "duplicate board key",
+        "selected bit already occupied"
+      ],
+      "runtime": "Node v22.16.0 with --experimental-strip-types",
+      "actual_extractor_invoked": false
+    }
   },
   "receipt_fold": {
     "status": "pending; cost64h fold has completed at canonical head 1472; bit61 certificate extraction and independent verification remain pending",
@@ -713,10 +766,10 @@
   },
   "audit_script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost76c_raw_batches_20261117.py",
   "previous_version": {
-    "schema": "n11-class2-lane-cost76c-sweep-complete-20261117-v5",
-    "blob_sha": "f3ccfe55056b180de1e7b60cc00bacb83fde66aa"
+    "schema": "n11-class2-lane-cost76c-sweep-complete-20261117-v6",
+    "blob_sha": "c58a35a960018ff0d45c44d3efa1383da5c4898f"
   },
-  "next_action": "Run cert_driver76c.ts for bit61 only using the raw child and independently enumerated legal root defenses; then run independent BigInt/Bareiss verification and fresh-process byte comparison; recompute the receipt marginal against head1472. Use bit99 only as fallback; do not extract or fold bit113.",
+  "next_action": "Run cert_driver76c.ts for bit61 only using the exact 55 raw-root legal defenses; then run independent BigInt/Bareiss verification and fresh-process byte comparison; recompute the receipt marginal against head1472 and scan WIN/LOSS conflicts before folding. Use bit99 only as fallback; do not extract or fold bit113.",
   "certificate_priority_audit": {
     "date": "2026-11-17",
     "script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost76c_v17_corrected_candidate_marginals_20261117.py",
@@ -811,23 +864,54 @@
     "cli_write_condition": "writes res.rows whenever res.rows exists; it does not test res.fatal",
     "safe_use_rule": "do not consume or fold any rows from a run with fatal set or fbt_drops > 0",
     "guarded_driver": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/cert_driver76c.ts",
-    "guarded_driver_blob_sha": "af6dc9b98de4e632246399077908a8d184c08f2a",
+    "guarded_driver_blob_sha": "3aae6b6ce133b2a3fb13796ad303e2a57823f05a",
     "guard_test": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/test_cert_driver76c_guard.mjs",
-    "guard_test_blob_sha": "7e342afbec0455ce9dedb01870860f2e14ba0746",
+    "guard_test_blob_sha": "10ca0a00ef107480d6021ba3d58459b1b7ca9956",
     "guard_test_result": {
       "status": "PASS",
-      "cases": 6,
-      "passed": 6,
-      "case_names": [
-        "success",
-        "fatal+fbt_drops",
-        "fbt_drops_without_fatal",
-        "missing_rows",
-        "incomplete_per_move",
-        "selected_bit_already_occupied"
+      "cases": 14,
+      "passed": 14,
+      "valid_roots": {
+        "bit61": {
+          "legal_defenses": 55,
+          "output_created": true
+        },
+        "bit99": {
+          "legal_defenses": 65,
+          "output_created": true
+        }
+      },
+      "rejected_cases": [
+        "missing defense",
+        "illegal defense",
+        "duplicate defense",
+        "unsorted defense",
+        "missing bit99 defense",
+        "fatal",
+        "fbt_drops",
+        "missing rows",
+        "incomplete per-move result",
+        "malformed row",
+        "duplicate board key",
+        "selected bit already occupied"
       ],
       "runtime": "Node v22.16.0 with --experimental-strip-types",
       "actual_extractor_invoked": false
+    },
+    "root_defense_coverage_guard": {
+      "method": "independent exact Bareiss 4x4 determinant over raw child|bit root",
+      "requirement": "supplied move list must equal the complete ascending legal-defense list",
+      "checks": [
+        "selected seven-stone root itself is safe",
+        "no legal defense omitted",
+        "no illegal defense included",
+        "no duplicate or reordered defense",
+        "perMove keys exactly equal the expected defense list",
+        "certificate row syntax and move range",
+        "row uniqueness by board key"
+      ],
+      "bit61_legal_defenses": 55,
+      "bit99_legal_defenses": 65
     }
   },
   "v17_correction_log": {
