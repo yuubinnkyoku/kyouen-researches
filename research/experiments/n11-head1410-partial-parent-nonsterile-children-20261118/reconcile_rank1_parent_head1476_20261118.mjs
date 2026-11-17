@@ -212,14 +212,14 @@ function main() {
   check("fold.current_cost_135", currentRowsCost === 135 &&
     sameSet(currentRows.map(x => String(x.cost)), ["64", "71"]) &&
     currentRowsCost === sum(sterileRefs.map(x => x.cost)));
-  check("fold.66i_head1476", f66i.frontier_after.solved_s6_in_manifest === 1476 &&
-    f66i.frontier_after.remaining_s5_orbits === 174 &&
+  check("fold.66i_head1476", f66i.frontier_after_cost66i_bit19.solved_s6_in_manifest === 1476 &&
+    f66i.frontier_after_cost66i_bit19.remaining_s5_orbits === 174 &&
     a66i.fold.frontier_after[0] === 1476 &&
     a66i.all_checks_pass === true &&
     c66i.receipt_fold?.status?.startsWith("partial-fold-complete"));
   check("fold.66i_does_not_touch_parent", !currentParent66iAffected &&
-    f66i.frontier_after.unique_remaining_s6 === 6372 &&
-    f66i.frontier_after.sum_remaining_cost === 504389);
+    f66i.frontier_after_cost66i_bit19.unique_remaining_s6 === 6372 &&
+    f66i.frontier_after_cost66i_bit19.sum_remaining_cost === 504389);
   check("fold.no_s5_parent_closed", f76.parent_count_fully_closed === 0 &&
     f66i.parent_count_fully_closed === 0);
 
@@ -284,7 +284,7 @@ function main() {
       },
       cost66i_bit19: {
         status: c66i.receipt_fold.status,
-        frontier_after: f66i.frontier_after,
+        frontier_after: f66i.frontier_after_cost66i_bit19,
         target_parent_affected: currentParent66iAffected
       }
     },
