@@ -84,7 +84,7 @@ jobs:
         run: |
           uv run --locked python research/experiments/vertical-fiber-two-token-z6-y8-boundary-20261117/verify_z6_y8.py
           git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y8-boundary-20261117/output/audit.json
-      - name: Audit K0889 two-token z=6 y=9 boundary slice
+      - name: Audit K0890 two-token z=6 y=9 boundary slice
         run: |
           uv run --locked python research/experiments/vertical-fiber-two-token-z6-y9-boundary-20261117/verify_z6_y9.py
           git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y9-boundary-20261117/output/audit.json
