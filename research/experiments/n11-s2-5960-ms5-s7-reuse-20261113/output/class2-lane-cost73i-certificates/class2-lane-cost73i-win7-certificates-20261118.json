@@ -1,0 +1,482 @@
+{
+ "schema": "n11-class2-lane-cost73i-win7-certificates-20261118-v1",
+ "date": "2026-11-18",
+ "s5_parent_hex": "00000000000000403800000008000000",
+ "s6_child_hex": "00000000000000403800400008000000",
+ "s6_s7_edge_cost": 73,
+ "method": "blind extraction with class4_child1_cert_extractor_exact_ms23.ts (the repo-verbatim extractor_exact with the single MS=1<<18 -> MS=1<<23 memo-capacity line substitution; engine v15 inlined; FBS unchanged; empty kill table via cert_driver73i.ts import; per-bit fresh process; rows deduplicated and sorted before write), fbt_drops=0 on all twelve, no fatal, no capped per-move; independent verification with verify_bit7_win7_cert.ts (Bareiss 4x4, engine-free), orchestrated by verify_cost73i_one.sh: root-check stones=7 and loser mobility equals the independent legal_candidates.py enumeration on the RAW root, all sub-roots PASS on every root, terminal stone range within [13,17] on every sub-root, consumed-winner-state union vs certificate row set 0 missing / 0 extra in both directions on every root; determinism: fresh-process re-extraction byte-identical (md5) on two of the twelve bits [82, 54] spanning the size range (941,950 and 2,549,054 published bytes); the same blind-extraction and engine-free verification pipeline as the 69j/66j/71e/72d/73j/73k/73l/78c/79c certificate lanes; the sweep the certificates come from passed all its planned controls (raw sweep audit git blob 33c8c6bb2b81301354e8b796f5a4751fb52aba3b: 9/9 pilots at 3402, det reruns of batches 1 and 4 field-identical, v15 cross-engine 12/12 on the WIN bits, 5/5 confirmation transfers re-verified); loser defenses are enumerated on the RAW child|bit root (the certificate root), never on its D4 canonical image; split certificates are published at line boundaries (cat the parts to recombine; see the README-split files)",
+ "driver_note": "cert_driver73i.ts in scripts/ (duplicated from cert_driver78c.ts, argv-driven, defense list on stdin, String.fromCharCode(10) newline convention, import of the ms23 extractor variant); extract73i_all_20261118.sh is the per-bit extraction wrapper (root=child|1<<bit fed to legal_candidates.py on stdin); stats.json and det-reextraction.json accumulate the per-bit extraction summaries and the re-extraction determinism record",
+ "totals": {
+  "certificates": 12,
+  "rows": 649340,
+  "extraction_nodes": 102080312,
+  "published_bytes": 23451347,
+  "fbt_drops_total": 0,
+  "capped_per_move_total": 0
+ },
+ "basis": "cost73i raw sweep audit (class2-lane-cost73i-raw-sweep-audit-20261117.json, git blob 33c8c6bb2b81301354e8b796f5a4751fb52aba3b, status: 12 WIN7-D10 + 61 REFUTED-D10, 0 capped): completed fresh v17 73-bit depth-10 sweep of the head-1472 census v5 rank-3 child; this manifest covers all 12 WIN roots [1, 9, 11, 18, 29, 38, 54, 82, 97, 100, 110, 111]; the 73i receipt fold stays pending behind the 66i/66j/69j/71e/72d folds (parallel-lane fold queue); the claim file class2-lane-cost73i-inflight-20261117.json remains at claim v1 (in-flight) with the parallel lane and is not modified by this publication",
+ "certificates": [
+  {
+   "bit": 1,
+   "root": "00000000000000403800400008000002",
+   "verdict": "WIN7",
+   "depth": 10,
+   "rows": 59184,
+   "extraction_nodes": 6012121,
+   "fbt_drops": 0,
+   "fatal": null,
+   "subroots": 59,
+   "subroots_pass": 59,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_stone_range": [
+    13,
+    17
+   ],
+   "loser_mobility": 59,
+   "file": "n11_s7_00000000000000403800400008000002.cert",
+   "md5": "09668ede9021f2ea5526369b9974d494",
+   "sha256": "be806aab228665e2f5d79411247267ddc8914bf2bc9287a87b872ff2641f5fb1",
+   "d4_canon_root": "00000000000000403800400008000002",
+   "raw_is_canon": true,
+   "certificate_split": "2138819 bytes exceeds the 1200000-byte whole-file threshold; pushed as .part1of2 + .part2of2 (2-way line-boundary split), recombine with cat (see README-split-bit1.md), md5 of concatenation below",
+   "storage": "split part1of2/part2of2 + README-split-bit1.md",
+   "parts": [
+    {
+     "name": "n11_s7_00000000000000403800400008000002.cert.part1of2",
+     "bytes": 1069431,
+     "git_blob_sha": "ae30232f7df463a4cc592a019cbe553d454582ea"
+    },
+    {
+     "name": "n11_s7_00000000000000403800400008000002.cert.part2of2",
+     "bytes": 1069388,
+     "git_blob_sha": "3d1471576adb95813e2f8ae68e73a363b8120606"
+    }
+   ]
+  },
+  {
+   "bit": 9,
+   "root": "00000000000000403800400008000200",
+   "verdict": "WIN7",
+   "depth": 10,
+   "rows": 57174,
+   "extraction_nodes": 5988411,
+   "fbt_drops": 0,
+   "fatal": null,
+   "subroots": 61,
+   "subroots_pass": 61,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_stone_range": [
+    13,
+    17
+   ],
+   "loser_mobility": 61,
+   "file": "n11_s7_00000000000000403800400008000200.cert",
+   "md5": "65e8913a402b438b13aa472e8bd4ba10",
+   "sha256": "96640f54593da1ed16ce2489a8732bd143bcb90565888785704bbd0122861f8d",
+   "d4_canon_root": "00000000000000403800400008000200",
+   "raw_is_canon": true,
+   "certificate_split": "2068348 bytes exceeds the 1200000-byte whole-file threshold; pushed as .part1of2 + .part2of2 (2-way line-boundary split), recombine with cat (see README-split-bit9.md), md5 of concatenation below",
+   "storage": "split part1of2/part2of2 + README-split-bit9.md",
+   "parts": [
+    {
+     "name": "n11_s7_00000000000000403800400008000200.cert.part1of2",
+     "bytes": 1034193,
+     "git_blob_sha": "360c81d25471ff303b613fd6cfed441c66dae376"
+    },
+    {
+     "name": "n11_s7_00000000000000403800400008000200.cert.part2of2",
+     "bytes": 1034155,
+     "git_blob_sha": "a0845ff4672bfb76c9e806fa2acb004fa4748844"
+    }
+   ]
+  },
+  {
+   "bit": 11,
+   "root": "00000000000000403800400008000800",
+   "verdict": "WIN7",
+   "depth": 10,
+   "rows": 67172,
+   "extraction_nodes": 10993145,
+   "fbt_drops": 0,
+   "fatal": null,
+   "subroots": 61,
+   "subroots_pass": 61,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_stone_range": [
+    13,
+    17
+   ],
+   "loser_mobility": 61,
+   "file": "n11_s7_00000000000000403800400008000800.cert",
+   "md5": "f011a6393b02c1cf69e72f637ff8bad4",
+   "sha256": "597a637e2921a6823adfad202ebf9f2740db46f87f46fd0393bdf85c98892584",
+   "d4_canon_root": "00000000000000403800400008000800",
+   "raw_is_canon": true,
+   "certificate_split": "2430677 bytes exceeds the 1200000-byte whole-file threshold; pushed as .part1of3 + .part2of3 + .part3of3 (3-way line-boundary split), recombine with cat (see README-split-bit11.md), md5 of concatenation below",
+   "storage": "split part1of3/part2of3/part3of3 + README-split-bit11.md",
+   "parts": [
+    {
+     "name": "n11_s7_00000000000000403800400008000800.cert.part1of3",
+     "bytes": 810241,
+     "git_blob_sha": "0a514f9775323801fc769e7a507a99e40527c8bd"
+    },
+    {
+     "name": "n11_s7_00000000000000403800400008000800.cert.part2of3",
+     "bytes": 810258,
+     "git_blob_sha": "3003ae7d9f451c211828afc91edf5ce00b8c3faf"
+    },
+    {
+     "name": "n11_s7_00000000000000403800400008000800.cert.part3of3",
+     "bytes": 810178,
+     "git_blob_sha": "5645fff8cf9289b3b4381aefabedbb6064d2e2f8"
+    }
+   ]
+  },
+  {
+   "bit": 18,
+   "root": "00000000000000403800400008040000",
+   "verdict": "WIN7",
+   "depth": 10,
+   "rows": 59794,
+   "extraction_nodes": 6071501,
+   "fbt_drops": 0,
+   "fatal": null,
+   "subroots": 60,
+   "subroots_pass": 60,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_stone_range": [
+    13,
+    17
+   ],
+   "loser_mobility": 60,
+   "file": "n11_s7_00000000000000403800400008040000.cert",
+   "md5": "afd03bd6a7600c7ae29e2a9cbb51cc4b",
+   "sha256": "91f3c8fbe5584738a657ad30877a51b1168ffee6f6d84caf0353a652aee4cd5b",
+   "d4_canon_root": "00000000000000403800400008040000",
+   "raw_is_canon": true,
+   "certificate_split": "2161503 bytes exceeds the 1200000-byte whole-file threshold; pushed as .part1of2 + .part2of2 (2-way line-boundary split), recombine with cat (see README-split-bit18.md), md5 of concatenation below",
+   "storage": "split part1of2/part2of2 + README-split-bit18.md",
+   "parts": [
+    {
+     "name": "n11_s7_00000000000000403800400008040000.cert.part1of2",
+     "bytes": 1080778,
+     "git_blob_sha": "8d3d27ad4ab3fb3419638111d7e6d9a92cd491f4"
+    },
+    {
+     "name": "n11_s7_00000000000000403800400008040000.cert.part2of2",
+     "bytes": 1080725,
+     "git_blob_sha": "734475ffde7e49c7ad408c7b4869b6f19f7f6342"
+    }
+   ]
+  },
+  {
+   "bit": 29,
+   "root": "00000000000000403800400028000000",
+   "verdict": "WIN7",
+   "depth": 10,
+   "rows": 45839,
+   "extraction_nodes": 10637199,
+   "fbt_drops": 0,
+   "fatal": null,
+   "subroots": 56,
+   "subroots_pass": 56,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_stone_range": [
+    13,
+    17
+   ],
+   "loser_mobility": 56,
+   "file": "n11_s7_00000000000000403800400028000000.cert",
+   "md5": "de475eda071b0710b0765d6115e950e4",
+   "sha256": "2bf99f7602e2c6febcb18bbf497bc14e37106b2c3d9bb3c645afd2392fd9641f",
+   "d4_canon_root": "00000000000000403800400028000000",
+   "raw_is_canon": true,
+   "certificate_split": "1656260 bytes exceeds the 1200000-byte whole-file threshold; pushed as .part1of2 + .part2of2 (2-way line-boundary split), recombine with cat (see README-split-bit29.md), md5 of concatenation below",
+   "storage": "split part1of2/part2of2 + README-split-bit29.md",
+   "parts": [
+    {
+     "name": "n11_s7_00000000000000403800400028000000.cert.part1of2",
+     "bytes": 828163,
+     "git_blob_sha": "4781f177079ad3a51d94b673d7ec95f5e8c108e9"
+    },
+    {
+     "name": "n11_s7_00000000000000403800400028000000.cert.part2of2",
+     "bytes": 828097,
+     "git_blob_sha": "2a6bff83000094940de6a90bb6f95a58a403a300"
+    }
+   ]
+  },
+  {
+   "bit": 38,
+   "root": "00000000000000403800404008000000",
+   "verdict": "WIN7",
+   "depth": 10,
+   "rows": 49142,
+   "extraction_nodes": 12544107,
+   "fbt_drops": 0,
+   "fatal": null,
+   "subroots": 54,
+   "subroots_pass": 54,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_stone_range": [
+    13,
+    17
+   ],
+   "loser_mobility": 54,
+   "file": "n11_s7_00000000000000403800404008000000.cert",
+   "md5": "fb1d62e7ca1ad3dcfaa745d121cad1ae",
+   "sha256": "14458c1c1575e3a29c58ead891532478d887e0b30b78e84e818b0c2e5599c2a0",
+   "d4_canon_root": "00000000000000403800404008000000",
+   "raw_is_canon": true,
+   "certificate_split": "1776912 bytes exceeds the 1200000-byte whole-file threshold; pushed as .part1of2 + .part2of2 (2-way line-boundary split), recombine with cat (see README-split-bit38.md), md5 of concatenation below",
+   "storage": "split part1of2/part2of2 + README-split-bit38.md",
+   "parts": [
+    {
+     "name": "n11_s7_00000000000000403800404008000000.cert.part1of2",
+     "bytes": 888476,
+     "git_blob_sha": "8c8f872b41028e2000ffd55815589ce8d4032a7a"
+    },
+    {
+     "name": "n11_s7_00000000000000403800404008000000.cert.part2of2",
+     "bytes": 888436,
+     "git_blob_sha": "b58c3cf3377657eed63a167ad8616315f2432f4b"
+    }
+   ]
+  },
+  {
+   "bit": 54,
+   "root": "00000000000000403840400008000000",
+   "verdict": "WIN7",
+   "depth": 10,
+   "rows": 70562,
+   "extraction_nodes": 15168447,
+   "fbt_drops": 0,
+   "fatal": null,
+   "subroots": 63,
+   "subroots_pass": 63,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_stone_range": [
+    13,
+    17
+   ],
+   "loser_mobility": 63,
+   "file": "n11_s7_00000000000000403840400008000000.cert",
+   "md5": "029e2bb18b8d34c0c5164cce1fec9051",
+   "sha256": "70a0386d66ff0fd6ce9c5d1bfda8824e2b5b884df416191ed9bf7819598f9928",
+   "d4_canon_root": "00000000000000403840400008000000",
+   "raw_is_canon": true,
+   "certificate_split": "2549054 bytes exceeds the 1200000-byte whole-file threshold; pushed as .part1of3 + .part2of3 + .part3of3 (3-way line-boundary split), recombine with cat (see README-split-bit54.md), md5 of concatenation below",
+   "storage": "split part1of3/part2of3/part3of3 + README-split-bit54.md",
+   "parts": [
+    {
+     "name": "n11_s7_00000000000000403840400008000000.cert.part1of3",
+     "bytes": 849697,
+     "git_blob_sha": "8b24087bd3412b5a51cc831909da249bb50019c9"
+    },
+    {
+     "name": "n11_s7_00000000000000403840400008000000.cert.part2of3",
+     "bytes": 849707,
+     "git_blob_sha": "b117ef9a63155ec4d5710929ca7b3ed8d3636087"
+    },
+    {
+     "name": "n11_s7_00000000000000403840400008000000.cert.part3of3",
+     "bytes": 849650,
+     "git_blob_sha": "2a82980fbbae751c908c332b3516830d279a2560"
+    }
+   ]
+  },
+  {
+   "bit": 82,
+   "root": "00000000000400403800400008000000",
+   "verdict": "WIN7",
+   "depth": 10,
+   "rows": 26067,
+   "extraction_nodes": 2296078,
+   "fbt_drops": 0,
+   "fatal": null,
+   "subroots": 47,
+   "subroots_pass": 47,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_stone_range": [
+    13,
+    17
+   ],
+   "loser_mobility": 47,
+   "file": "n11_s7_00000000000400403800400008000000.cert",
+   "md5": "03f3578c0b7e3a9f16e49dcbfd9f711f",
+   "sha256": "56d6bef5743fde949e8dd7f2aaf72b139e8aaca5a438f8f8033b7195f7bcfc38",
+   "d4_canon_root": "00000000000000805206000004000000",
+   "raw_is_canon": false,
+   "certificate_split": "941950 bytes at or under the 1200000-byte whole-file threshold; published as the single file n11_s7_00000000000400403800400008000000.cert",
+   "storage": "single file n11_s7_00000000000400403800400008000000.cert",
+   "parts": [
+    {
+     "name": "n11_s7_00000000000400403800400008000000.cert",
+     "bytes": 941950,
+     "git_blob_sha": "f0a57ca0b61fbb87db684d325286b76ce1532752"
+    }
+   ]
+  },
+  {
+   "bit": 97,
+   "root": "00000002000000403800400008000000",
+   "verdict": "WIN7",
+   "depth": 10,
+   "rows": 47929,
+   "extraction_nodes": 7166012,
+   "fbt_drops": 0,
+   "fatal": null,
+   "subroots": 57,
+   "subroots_pass": 57,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_stone_range": [
+    13,
+    17
+   ],
+   "loser_mobility": 57,
+   "file": "n11_s7_00000002000000403800400008000000.cert",
+   "md5": "9a0e2c0ca8e6df62845f27f8ca92e1d4",
+   "sha256": "bf310fe569f5d3f62ee5a43dc65f645ac91903ce1b619b34c2f90052174a773b",
+   "d4_canon_root": "00000000020001003810000008000000",
+   "raw_is_canon": false,
+   "certificate_split": "1728802 bytes exceeds the 1200000-byte whole-file threshold; pushed as .part1of2 + .part2of2 (2-way line-boundary split), recombine with cat (see README-split-bit97.md), md5 of concatenation below",
+   "storage": "split part1of2/part2of2 + README-split-bit97.md",
+   "parts": [
+    {
+     "name": "n11_s7_00000002000000403800400008000000.cert.part1of2",
+     "bytes": 864405,
+     "git_blob_sha": "4f5081e4c8f78683d6c1c1a0474e17e00f16703b"
+    },
+    {
+     "name": "n11_s7_00000002000000403800400008000000.cert.part2of2",
+     "bytes": 864397,
+     "git_blob_sha": "c70fb39f4cafc57833d2459c636c70b99b9e0c47"
+    }
+   ]
+  },
+  {
+   "bit": 100,
+   "root": "00000010000000403800400008000000",
+   "verdict": "WIN7",
+   "depth": 10,
+   "rows": 47899,
+   "extraction_nodes": 7482073,
+   "fbt_drops": 0,
+   "fatal": null,
+   "subroots": 53,
+   "subroots_pass": 53,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_stone_range": [
+    13,
+    17
+   ],
+   "loser_mobility": 53,
+   "file": "n11_s7_00000010000000403800400008000000.cert",
+   "md5": "e034ecfc0e921d02c85110b2bd01f921",
+   "sha256": "c549de7ff70fbbb12d9c374ba0e4101cd59f62df360c7356329d88ba8dacc013",
+   "d4_canon_root": "00000000000000801206000004100000",
+   "raw_is_canon": false,
+   "certificate_split": "1726891 bytes exceeds the 1200000-byte whole-file threshold; pushed as .part1of2 + .part2of2 (2-way line-boundary split), recombine with cat (see README-split-bit100.md), md5 of concatenation below",
+   "storage": "split part1of2/part2of2 + README-split-bit100.md",
+   "parts": [
+    {
+     "name": "n11_s7_00000010000000403800400008000000.cert.part1of2",
+     "bytes": 863464,
+     "git_blob_sha": "783d8192eaae0dff912c6a5720d5eb140964e9e4"
+    },
+    {
+     "name": "n11_s7_00000010000000403800400008000000.cert.part2of2",
+     "bytes": 863427,
+     "git_blob_sha": "ab05546c3ab59ba311ff35d3e81d9b9fea350a60"
+    }
+   ]
+  },
+  {
+   "bit": 110,
+   "root": "00004000000000403800400008000000",
+   "verdict": "WIN7",
+   "depth": 10,
+   "rows": 58241,
+   "extraction_nodes": 12212512,
+   "fbt_drops": 0,
+   "fatal": null,
+   "subroots": 58,
+   "subroots_pass": 58,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_stone_range": [
+    13,
+    17
+   ],
+   "loser_mobility": 58,
+   "file": "n11_s7_00004000000000403800400008000000.cert",
+   "md5": "d9e2c158def2983b8d641ff672e8923f",
+   "sha256": "4488b135de47bea01e5a57e342f803ecb615a87c69974f63db4a9d558555c7d9",
+   "d4_canon_root": "00000000000000801206000004000400",
+   "raw_is_canon": false,
+   "certificate_split": "2098582 bytes exceeds the 1200000-byte whole-file threshold; pushed as .part1of2 + .part2of2 (2-way line-boundary split), recombine with cat (see README-split-bit110.md), md5 of concatenation below",
+   "storage": "split part1of2/part2of2 + README-split-bit110.md",
+   "parts": [
+    {
+     "name": "n11_s7_00004000000000403800400008000000.cert.part1of2",
+     "bytes": 1049317,
+     "git_blob_sha": "24e11db3bcd1655dd398cde89091c6c57dac82ae"
+    },
+    {
+     "name": "n11_s7_00004000000000403800400008000000.cert.part2of2",
+     "bytes": 1049265,
+     "git_blob_sha": "a7ea7250c28ee8c2839c487e6828a7e329d0a614"
+    }
+   ]
+  },
+  {
+   "bit": 111,
+   "root": "00008000000000403800400008000000",
+   "verdict": "WIN7",
+   "depth": 10,
+   "rows": 60337,
+   "extraction_nodes": 5508706,
+   "fbt_drops": 0,
+   "fatal": null,
+   "subroots": 60,
+   "subroots_pass": 60,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_stone_range": [
+    13,
+    17
+   ],
+   "loser_mobility": 60,
+   "file": "n11_s7_00008000000000403800400008000000.cert",
+   "md5": "2513e7d8e0ff6605be94c2d303c9f4cd",
+   "sha256": "d46c3a3c49ec8f957336c7641be507a80add40594391f49edad217598cb33328",
+   "d4_canon_root": "00000000000000801206000004200000",
+   "raw_is_canon": false,
+   "certificate_split": "2173549 bytes exceeds the 1200000-byte whole-file threshold; pushed as .part1of2 + .part2of2 (2-way line-boundary split), recombine with cat (see README-split-bit111.md), md5 of concatenation below",
+   "storage": "split part1of2/part2of2 + README-split-bit111.md",
+   "parts": [
+    {
+     "name": "n11_s7_00008000000000403800400008000000.cert.part1of2",
+     "bytes": 1086785,
+     "git_blob_sha": "f60a055e226df9e43e2372c316fae36fc31e4af5"
+    },
+    {
+     "name": "n11_s7_00008000000000403800400008000000.cert.part2of2",
+     "bytes": 1086764,
+     "git_blob_sha": "e0a9ba3fa1b6d65f6ba1877fa006483c71ed527f"
+    }
+   ]
+  }
+ ],
+ "interpretation_guard": "Twelve individual seven-stone WIN7 roots of the cost-73i sweep row only. WIN7-D10 proves a first-player win within depth 10 from the individual 7-stone root; REFUTED-D10 is not a LOSS proof; no receipt fold was performed. The 11x11 empty board, the two-stone roots {49,60} and {59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+}
