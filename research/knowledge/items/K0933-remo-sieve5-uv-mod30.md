@@ -90,7 +90,7 @@ K0931で4グリッド8,282検査のみだった制限ラダーのh≥1インス�
 **open class（h≥2・1≤r<h）の初の証明済みインスタンス**を3つ得た:
 F(4,2;5t+1)（breaking敗者位置n−2・hot・phase t・終pot 5）・
 F(4,3;5t+1)（同形）・F(4,3;5t+2)（hot最終死亡・SIEVE5-Vの機構）。
-一般wのopen class構造はOPENのまま。
+一般wのopen class構造はK0934（LAD-GEN）で全称解決済み。
 
 ## 予想（機械検証のみ・全称未証明）
 
@@ -129,8 +129,8 @@ F(4,3;5t+1)（同形）・F(4,3;5t+2)（hot最終死亡・SIEVE5-Vの機構）�
   LAW1-{3,5}・LAW2-{3,5}・ラダー昇格（open class 3インスタンス込み）。
 - 機械検証のみ（無証明）: SIEVEのspf≥7（m≤8000・新鮮再確認m≤700）・
   素数側生存。
-- OPEN: SIEVE p≥7（次はstretch-6/W5族）・ラダーopen classの一般構造
-  （任意w）・W4/H4/G4/T4族の深部（第一stretch-4以降）・LAW1/LAW2の
-  spf≥7類。P(C)の一般閉形式は主張しない。
+- OPEN: SIEVE p≥7（次はstretch-6/W5族）・W4/H4/G4/T4族の深部
+  （第一stretch-4以降）・LAW1/LAW2のspf≥7類。ラダーopen classの
+  一般構造（任意w）はK0934（LAD-GEN）で解決済み。P(C)の一般閉形式は主張しない。
 - 11×11空盤の状況は不変（空盤・二石root {49,60}/{59,60}・S2
   {59,60}・class 1/2/4はすべてUNKNOWN）。
