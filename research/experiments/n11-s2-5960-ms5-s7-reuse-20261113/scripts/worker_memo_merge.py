@@ -19,6 +19,21 @@ def max_bound(a, b):
     return max(a, b)
 
 
+def bound_at_least(value, required):
+    """Whether value retains at least the finite bound required by a seed.
+
+    An absent required bound imposes no condition.  An absent final bound
+    cannot satisfy a finite requirement.
+    """
+    _check_depth(value)
+    _check_depth(required)
+    if required == UNBOUND:
+        return True
+    if value == UNBOUND:
+        return False
+    return value >= required
+
+
 def combine_values(win, lose, nowin, nolose, rec):
     """Combine (win, lose, nowin, nolose) records from independent workers.
 
