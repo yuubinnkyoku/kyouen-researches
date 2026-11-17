@@ -1,0 +1,215 @@
+{
+ "all_ok": true,
+ "checks": [
+  {
+   "data": {
+    "P40": [
+     0,
+     1,
+     1,
+     3,
+     1,
+     5,
+     1,
+     5,
+     5,
+     9,
+     1,
+     11,
+     1,
+     5,
+     7,
+     15,
+     1,
+     17,
+     1,
+     15,
+     17,
+     21,
+     1,
+     21,
+     11,
+     15,
+     7,
+     27,
+     1,
+     29,
+     1,
+     27,
+     17,
+     21,
+     11,
+     35,
+     1,
+     5,
+     7,
+     39
+    ]
+   },
+   "name": "PIN: P(C)=S(C,C) recomputed C=1..40 equals the K0919 published P(C) pin",
+   "ok": true
+  },
+  {
+   "data": {
+    "examples": [],
+    "violations": 0
+   },
+   "name": "CAS: zero-stone cascade lemma, exhaustive r=2..40 x C=1..r-1 (losers P_C..P_{r-1}, ell=0 in phases 2..r-C, canonical state K_C after phase r-C, survivor P_0 for C=1)",
+   "ok": true
+  },
+  {
+   "data": {
+    "examples": [],
+    "violations": 0
+   },
+   "name": "COUPLE: merge coupling run(C,r) vs run(C,r+1) both reach the identical canonical state K_C and proceed identically, exhaustive r=2..60 x C=1..r-1",
+   "ok": true
+  },
+  {
+   "data": {
+    "exhaustive_pairs": 1580,
+    "spot_pairs": 120,
+    "violations": 0
+   },
+   "name": "E6U: S(C,r)==P(C) for r>=C, exhaustive r=2..60 x C<=min(r-1,40) plus anchor spots r in {61,97,128} x C=1..40",
+   "ok": true
+  },
+  {
+   "data": {
+    "pairs": 775,
+    "violations": 0
+   },
+   "name": "TWIN: verbatim per-stone K0859 recursion == closed-form twin, all C<=min(r-1,30) x r<=40 plus diagonal (C,C) C<=40 (full elim sequence + survivor)",
+   "ok": true
+  },
+  {
+   "data": {
+    "missing": [],
+    "per_r": {
+     "10": {
+      "max_first_witness": 6,
+      "no_witness_in_window": 0,
+      "proper": 47
+     },
+     "11": {
+      "max_first_witness": 10,
+      "no_witness_in_window": 0,
+      "proper": 95
+     },
+     "12": {
+      "max_first_witness": 10,
+      "no_witness_in_window": 0,
+      "proper": 95
+     },
+     "13": {
+      "max_first_witness": 9,
+      "no_witness_in_window": 0,
+      "proper": 191
+     },
+     "14": {
+      "max_first_witness": 9,
+      "no_witness_in_window": 0,
+      "proper": 191
+     },
+     "15": {
+      "max_first_witness": 9,
+      "no_witness_in_window": 0,
+      "proper": 191
+     },
+     "16": {
+      "max_first_witness": 8,
+      "no_witness_in_window": 0,
+      "proper": 239
+     },
+     "17": {
+      "max_first_witness": 12,
+      "no_witness_in_window": 0,
+      "proper": 479
+     },
+     "18": {
+      "max_first_witness": 12,
+      "no_witness_in_window": 0,
+      "proper": 479
+     },
+     "19": {
+      "max_first_witness": 9,
+      "no_witness_in_window": 0,
+      "proper": 959
+     },
+     "2": {
+      "max_first_witness": 1,
+      "no_witness_in_window": 0,
+      "proper": 1
+     },
+     "20": {
+      "max_first_witness": 9,
+      "no_witness_in_window": 0,
+      "proper": 959
+     },
+     "21": {
+      "max_first_witness": 9,
+      "no_witness_in_window": 0,
+      "proper": 959
+     },
+     "22": {
+      "max_first_witness": 9,
+      "no_witness_in_window": 0,
+      "proper": 959
+     },
+     "23": {
+      "max_first_witness": 8,
+      "no_witness_in_window": 0,
+      "proper": 1919
+     },
+     "24": {
+      "max_first_witness": 8,
+      "no_witness_in_window": 0,
+      "proper": 1919
+     },
+     "3": {
+      "max_first_witness": 1,
+      "no_witness_in_window": 0,
+      "proper": 3
+     },
+     "4": {
+      "max_first_witness": 2,
+      "no_witness_in_window": 0,
+      "proper": 5
+     },
+     "5": {
+      "max_first_witness": 3,
+      "no_witness_in_window": 0,
+      "proper": 11
+     },
+     "6": {
+      "max_first_witness": 3,
+      "no_witness_in_window": 0,
+      "proper": 11
+     },
+     "7": {
+      "max_first_witness": 3,
+      "no_witness_in_window": 0,
+      "proper": 23
+     },
+     "8": {
+      "max_first_witness": 6,
+      "no_witness_in_window": 0,
+      "proper": 31
+     },
+     "9": {
+      "max_first_witness": 6,
+      "no_witness_in_window": 0,
+      "proper": 47
+     }
+    },
+    "total_divisors": 9813
+   },
+   "name": "WITCONN: bounded-witness connection (finite), r=2..24 every proper divisor d of Q(r) has a witness C in [1,r-1] against window values S(C,r)=P(C)",
+   "ok": true
+  }
+ ],
+ "date": "2026-11-17",
+ "follows": "K0859 (theorem D counting recursion, the object), K0919 (E6 finite plateau observation C<=24 and the P(C) pin C=1..40 that this experiment proves universally and reproduces exactly), K0925 (bounded-witness observation wit_max_sv <= r-1, r<=32; the window reformulation [1,r-1] of that conjecture is connected here and machine-confirmed for r<=24)",
+ "item": "K0926",
+ "title": "Plateau universality E6U: S(C,r) = S(C,C) = P(C) for every r >= C (universal proof via the zero-stone cascade lemma CAS and the merge coupling), closing the K0919 E6 finite observation"
+}
