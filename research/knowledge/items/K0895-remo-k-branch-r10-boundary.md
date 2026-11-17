@@ -1,6 +1,6 @@
 ---
 id: K0895
-title: 3枝REMO決定性のr=10境界 — 定理I r=10（非坍縮キーはr=9と完全同一の7族34個・新規0・STASIS: r=9→r=10で決定性分類が全プロファイル不動の列不動点・FATE56初の無事象列・剰余算術r=10初計数55/330/330）
+title: 3枝REMO決定性のr=10境界 — 定理I r=10（非坍縮キーはr=9と完全同一の7族34個・新規0・STASIS：r=9→r=10で決定性分類が全プロファイル不動の列不動点・FATE56初の無事象列・剰余算術r=10初計数55/330/330）
 kind: proposition
 status: proved
 topics: [variants, maximal-safe, strategy-length, multiplayer]

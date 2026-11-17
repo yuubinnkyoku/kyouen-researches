@@ -1,6 +1,6 @@
 ---
 id: K0898
-title: 3枝REMO決定性のr=12境界 — 定理I r=12（非坍縮キーはr=9/r=10/r=11と完全同一の7族34個・新規0・STASIS4: 4列連続決定性分類不動点＋全ラベル不動点（r=11↔r=12でdetフラグ・生存者mask・第1敗者mask全て差0・新種）・FATE56 3列連続無事象・剰余算術r=12初計数55/330/330（分割はr=10/r=11と同一））
+title: 3枝REMO決定性のr=12境界 — 定理I r=12（非坍縮キーはr=9/r=10/r=11と完全同一の7族34個・新規0・STASIS4：4列連続決定性分類不動点＋全ラベル不動点（r=11↔r=12でdetフラグ・生存者mask・第1敗者mask全て差0・新種）・FATE56 3列連続無事象・剰余算術r=12初計数55/330/330（分割はr=10/r=11と同一））
 kind: proposition
 status: proved
 topics: [variants, maximal-safe, strategy-length, multiplayer]

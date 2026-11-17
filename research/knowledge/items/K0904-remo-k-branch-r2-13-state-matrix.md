@@ -47,7 +47,7 @@ artifacts:
   role: verifier
   note: 自己完結検証器（stdlibのみ・決定的・新規スイープなし・13 committed列をsha256ピンで読み列挙はverbatim・8機械チェック・二重実行で監査byte同一）
 - path: research/experiments/remo-k-branch-cap10-r2-13-matrix-20261117/output/remo_k_branch_cap10_r2_13_matrix_audit.json
-  role: audit
+  role: data
   note: 監査JSON（8機械チェック・all_ok=true・sha256 51c9e080…）
 - path: research/experiments/remo-k-branch-cap10-r2-13-matrix-20261117/output/matrix_r2_13.jsonl
   role: data

@@ -20,7 +20,7 @@ relations:
   note: 補題FL（fl={C_i mod r}・正準領域）の根における直接再導出（L4・到達可能性ステップは共有原子容量C_j−e_j<C_jまたはexcl_Y初手でe_j ≥ 1が本質的）とcommitted列での冗長アンカー（J2・79,315対違反0）
 - type: extends
   target: K0864
-  note: 補題FLの成立域を確定: {C_i mod r}形は正準領域（単一原子非空e_j ≥ 1）に限り、広い領域（C_i ≥ 1のみ）では反例atoms=(0,0,0,0,1,1,0)（sizes (1,1,2)）でE={1}⊊{1,1,2}・fl≠{C_i mod r}。精緻化形(ii′) fl(r)={c mod r : c∈E}（E=第1飽和可能枝容量集合・盤面のみで決まるr非依存）が広域の正しい形
+  note: 補題FLの成立域を確定：{C_i mod r}形は正準領域（単一原子非空e_j ≥ 1）に限り、広い領域（C_i ≥ 1のみ）では反例atoms=(0,0,0,0,1,1,0)（sizes (1,1,2)）でE={1}⊊{1,1,2}・fl≠{C_i mod r}。精緻化形(ii′) fl(r)={c mod r：c∈E}（E=第1飽和可能枝容量集合・盤面のみで決まるr非依存）が広域の正しい形
 - type: depends_on
   target: K0898
   note: r=12 committed列（packed記録・J0-J4で5列比較の相手側）
@@ -50,7 +50,7 @@ artifacts:
   role: verifier
   note: 自己完結検証器（stdlibのみ・決定的・新規スイープなし・head+K0902機構verbatim+tailの二重assemble byte同一）。7機械チェック（B1/J0/J1/J2/J3/J4/SG）+live 9項目（L0/J5/J5b/J6/J7a/J7b/J8/J9/L9）・新規独立実装の第1イベントカスケードシミュレータ（LC1/LC2）と部分ゲームDFS（L3/L4接着）・約95秒・二重実行で監査byte同一
 - path: research/experiments/remo-theorem-j-proof-20261117/output/theorem_j_audit.json
-  role: audit
+  role: data
   note: 監査JSON（sha256 60544b07…・検証器自身のsha256・5列のpacked sha256込み）
 evidence: 'verify_theorem_j.py全チェック合格（二重assemble byte同一・二重実行で監査JSON byte同一・約95秒）。機械チェック: B1 Burnside (84494,3478,125)→15,863。J0 5つのcommitted packed列 r=9..13（K0893/K0895/K0897/K0898/K0902）完全性（各15,863・添字連続・states>0）・sha256記録。J1 sv/detがr ≥ max(M,2)の全committed列で不変（適格71,987比較・違反0・σ違反0・M分布4,330/4,205/7,328）。J2 fl={C_i mod r}が5列×15,863=79,315対で違反0。J3 r > Mでfl不変（60,454対・違反0）。J4 K0902 ARITH集合等式の再導出（r13↔r10 fl差=maxC=10集合7,328・r13↔r9 fl差=maxC≥9集合11,533・r13↔r9 sv差=同一7,328集合・他sv差0）。SG 状態数非不変ガード（741,630 vs 666,030）。live: L0 cap≤7全域2,048判定 mask twin==committed r=13記録。J5 cap≤7×r三つ組 sv/det不変+FL+σ（6,144判定違反0）。J5b cap≤5 verbatim==mask twin（1,038判定）。J6 r=M−1鋭さ（2,022/2,041変化・witness記録）。J7a k=2正準全域56プロファイル・J7b k=4電池22プロファイル。J8 サイズ11/12アンカー14プロファイル×r∈{M,M+1,M+2}（42判定・r=13,14はcommitted列の外の新アンカー・N≤17）。J9 カスケードシミュレータ（独立実装）: プレイ9,684（正準・cap≤5全域346）+2,581（特別電池259・空単一原子k=2/k=3/k=4）でpost-cascade正規化結果の全r同一・正準プレイ剛体形（C1′）違反0・特別電池の剛体形違反91プレイ（すべてe_j=0起因・witness記録）・根fl再導出（正準{C_i mod r}・特別はE精緻化形でFL領域証人atoms (0,0,0,0,1,1,0) sizes (1,1,2) E={1}⊊{1,1,2}を自動検出）・特別電池259プロファイルでsv/detのr不変とσ≤M−1を直接検証（広域版(i)(iii)の有限確認）。L9 接着検証: シミュレータ+部分ゲームDFSの根値がmask twin・verbatimエンジンと全一致（cap≤4全域117+k=2電池56+k=4電池22=195対・3エンジン一致）。検証器は証明の文章を検証するものではなく、定理の有限予測の全面的再導出と証明中間対象の独立実装検証である。全称証明本体はreport.mdのL1-L4'
 scope: 'REMO計数ゲーム（K0859規則・K0861定理E′の軌道簡約ゲーム）のk枝atomプロファイル（k ≥ 1任意・枝容量C_i ≥ 1・M=max C_i）とr ≥ 2人について: 正準領域（すべての単一原子が非空e_j ≥ 1・committed列と同一領域）で(i) sv/detはすべてのr ≥ max(M,2)で一定、(ii) fl(r)={C_i mod r}（ゆえにr > Mで一定値{C_i}）、(iii) 可能生存者ラベルσ ≤ M−1。広い領域（単一原子が空を許すC_i ≥ 1のみ）では(i)(iii)はそのまま成立し(ii)は精緻化形(ii′) fl(r)={c mod r : c∈E}（E=第1飽和可能枝容量集合・r非依存・正準領域でE={C_i}）になる。定理E′経由でプロファイルを実現する任意の盤面に全称的に及ぶ。状態数・順位・消滅順序のr不変性は主張しない。r < max(M,2)は範囲外'

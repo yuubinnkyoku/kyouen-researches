@@ -1,6 +1,6 @@
 ---
 id: K0902
-title: 3枝REMO決定性のr=13不動列＋定理J（K0906で全称証明）— 5列連続決定性分類不動点（r=9..13）・3列連続全ラベル不動点（r=11..13）・ARITH（FL wraparound集合等式: r13↔r10差=maxC=10集合7,328・r13↔r9差=maxC≥9集合11,533）・r=14/17スポット一致（L5）・補題C1（カスケード停止・証明付き）・定理J（sv/detがr≥max(M,2)で一定・fl={C_i mod r}・σ≤M−1）は本項で予想として定式化されK0906で全称証明
+title: 3枝REMO決定性のr=13不動列＋定理J（K0906で全称証明）— 5列連続決定性分類不動点（r=9..13）・3列連続全ラベル不動点（r=11..13）・ARITH（FL wraparound集合等式：r13↔r10差=maxC=10集合7,328・r13↔r9差=maxC≥9集合11,533）・r=14/17スポット一致（L5）・補題C1（カスケード停止・証明付き）・定理J（sv/detがr≥max(M,2)で一定・fl={C_i mod r}・σ≤M−1）は本項で予想として定式化されK0906で全称証明
 kind: proposition
 status: computed
 topics: [variants, maximal-safe, strategy-length, multiplayer]
@@ -47,7 +47,7 @@ artifacts:
   role: data
   note: r=13完全スイープpacked記録（15863レコード・[i, sv_mask, fl_mask, states]形式）
 - path: research/experiments/remo-k-branch-cap10-r13-invariance-20261117/output/remo_k_branch_cap10_r13_invariance_audit.json
-  role: audit
+  role: data
   note: 監査JSON（13機械チェック・検証器run()がbyte照合）
 ---
 

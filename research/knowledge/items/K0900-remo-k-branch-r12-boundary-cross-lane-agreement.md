@@ -33,13 +33,13 @@ artifacts:
   note: 検証器監査JSON（2回実行byte同一・committed fileとのbyte照合をrun()が実施）
 - path: research/experiments/remo-k-branch-cap10-r10-boundary-20261117/output/js_cap10_r10.jsonl
   role: data
-  note: 修正(a)適用（2026-11-17・plain .jsonl版）: K0895実験dirのfull形式記録（committed packed記録+正準列挙からの可逆展開・atomsはindexの正準列挙の純関数）。正準化sha256は出版ピンfc5ed900…と一致・raw sha256 18c66349…（2,047,234 B・push後byte照合済み）
+  note: 修正(a)適用（2026-11-17・plain .jsonl版）：K0895実験dirのfull形式記録（committed packed記録+正準列挙からの可逆展開・atomsはindexの正準列挙の純関数）。正準化sha256は出版ピンfc5ed900…と一致・raw sha256 18c66349…（2,047,234 B・push後byte照合済み）
 - path: research/experiments/remo-k-branch-cap10-r11-boundary-20261117/output/js_cap10_r11.jsonl
   role: data
-  note: 修正(a)適用: K0897実験dirのfull形式記録（同一の可逆展開）。正準化sha256は出版ピン4d824a87…と一致・raw sha256 3d5176e3…（2,055,269 B・push後byte照合済み）
+  note: 修正(a)適用：K0897実験dirのfull形式記録（同一の可逆展開）。正準化sha256は出版ピン4d824a87…と一致・raw sha256 3d5176e3…（2,055,269 B・push後byte照合済み）
 - path: research/experiments/remo-k-branch-cap10-r12-boundary-20261117/output/js_cap10_r12.jsonl
   role: data
-  note: 修正(a)適用: K0898実験dirのfull形式記録（同一の可逆展開）。正準化sha256は出版ピン0cfdd64c…と一致・raw sha256 3b26294c…（2,055,811 B・push後byte照合済み）
+  note: 修正(a)適用：K0898実験dirのfull形式記録（同一の可逆展開）。正準化sha256は出版ピン0cfdd64c…と一致・raw sha256 3b26294c…（2,055,811 B・push後byte照合済み）
 scope: 'K0898が確定した有限パラメータ領域（3枝合成族・枝サイズ≤10・15,863正規形プロファイル・715キー・r=12）について、(1)並走レーンによる同領域の独立した完全スイープ実行がK0898出版packed記録とbyte単位で一致すること、ならびにその記録から決定性センサス（一様決定98・一様非決定583・mixed 34）・34キー境界集合・per-key分割表・max_states 666,030・K0897 r=11 packed記録とのdetermined/生存者mask/第1敗者mask 0/0/0差分（STASIS4）がcommit状態から再導出されて出版値と一致すること、(2)K0893/K0895/K0897/K0898の4実験ディレクトリについて、committed監査JSONがcommitされたrepo状態（packed記録のみ・full形式・.gzなし）からbyte再現可能か否かを機械判定した結果（K0893は再現可能・K0895/K0897/K0898はformatフィールド2箇所のみの差で再現不能・両バージョンとも機械チェックall_ok）と、その出版手順上の原因・workflow audit stepへの影響・修正recipeの提示。r=9/10/11の再スイープ、監査欠陥の修正実施自体、枝サイズ11,12×r=9..12、r≥13、順位決定性、一般則の全称昇格は含まない'
 evidence: '検証器check_k0898_cross_lane_agreement.pyの7機械チェック全合格（2回実行で監査JSON byte同一）。C2: 独立実行packed記録（本項実験dirにcommit・15,863レコード）とK0898 committed packed記録の全文byte比較で一致・sha256は出版ピン0835a06f…と同一。C3: 独立記録+正準列挙から(sizes,gamma)キー分類を再導出し715/98/583/34・34キー境界集合・per-key分割表・max_states 666,030がK0898出版値と完全一致。C4: K0897 committed r=11 packed記録とのdeterminedフラグ・生存者mask・第1敗者mask差分が0/0/0。C5/C6: 4実験のcommitted監査を新規checkout状態（packedのみ）から再生成し、K0893はbyte一致（f407faee…対照ピン）・K0895/K0897/K0898は再生成監査がcommitted監査とformatフィールド2箇所（"full"→"packed"）を除き深比較で完全一致し両all_ok=true・検証器run()のbyte比較はFATALでlive check前に終了することを固定。独立実行のfull記録はGitHub pushトランスポートのサイズ制限のためcommitしないが、ローカルではK0898検証器の.gz経路でcommitted監査（249ec902…）がbyte再生成されることを確認済み（report.md）。本項は検証記録であり新たな数学的主張をしない'
 ---
