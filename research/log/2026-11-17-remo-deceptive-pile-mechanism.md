@@ -36,7 +36,7 @@ P_0の機構の特徴づけ」に着手。(1,1,p)|0は単独アトム3つの
   （stdlibのみ・決定的・5機械チェック
   engine_cross_88 / spf_law_p100 / deceptive_window_is_primes /
   single_stretch_p40 / prime_r_ge_p_sv01）全合格・assemble
-  二重実行で監査byte同一（sha256 8134c6b4…）。環境リセット後の
+  二重実行で監査byte同一（sha256 ba354378…）。環境リセット後の
   再実行でもAUDIT PASSEDと出版JSON byte同一を確認。
 - **engine交差88列**: シミュレータがピン済みK0912 engine
   （mask_engine_fast2.js sha256 b904760e…）の(det,sv)を

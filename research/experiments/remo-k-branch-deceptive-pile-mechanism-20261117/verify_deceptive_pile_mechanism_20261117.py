@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""K0921 audit: pile-game reduction and the spf law for the deceptive
+"""K0923 audit: pile-game reduction and the spf law for the deceptive
 key (1,1,p)|gamma=0 (3-branch REMO determinacy).
 
 Self-contained verifier. Deterministic (no randomness, no wall clock,
@@ -216,7 +216,7 @@ def assemble_audit():
     audit = {
         "meta": {
             "date": "2026-11-17",
-            "item": "K0921",
+            "item": "K0923",
             "claim": ("(1,1,p)|0 reduces to the pile game (lemmas R1-R4, "
                       "proved); spf law det <=> r < spf(p) machine-verified "
                       "for p <= 100; deceptive window = primes exactly "
