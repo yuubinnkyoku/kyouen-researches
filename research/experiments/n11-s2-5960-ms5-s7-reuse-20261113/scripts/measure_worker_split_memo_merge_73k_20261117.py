@@ -73,7 +73,7 @@ import os
 import subprocess
 import sys
 
-from worker_memo_merge import combine_values, conflict_kind
+from worker_memo_merge import bound_at_least, combine_values, conflict_kind
 
 HERE = os.path.dirname(os.path.abspath(__file__)) or "."
 OUT = os.path.join(HERE, "output")
@@ -495,8 +495,8 @@ def record_identity_pass(seedrun_tag, seed_path):
                 fnw, fnl = int(ffd[6]), int(ffd[7])
                 okw = win == 255 or fw <= win
                 okl = lose == 255 or fl <= lose
-                oknw = nowin == 255 or fnw >= nowin
-                oknl = nolose == 255 or fnl >= nolose
+                oknw = bound_at_least(fnw, nowin)
+                oknl = bound_at_least(fnl, nolose)
                 if not (okw and okl and oknw and oknl):
                     viol.append(" ".join(ks))
                 present += 1
