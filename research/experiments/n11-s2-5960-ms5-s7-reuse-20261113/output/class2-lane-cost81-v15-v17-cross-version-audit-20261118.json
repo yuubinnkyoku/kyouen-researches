@@ -1,0 +1,1172 @@
+{
+  "schema": "n11-class2-lane-cost81-v15-v17-cross-version-audit-20261118-v1",
+  "date": "2026-11-18",
+  "status": "PASS",
+  "source_main_head_before_audit": "b1ba66fdecc912e51de777fab02cbe2930bf1b44",
+  "target": {
+    "s6_child": "00000000020000003800000080008000",
+    "s5_parent": "00000000020000003800000080000000",
+    "legal_candidates": 81,
+    "depth": 10,
+    "cap_per_bit": 1000000000,
+    "andclose": true
+  },
+  "input_git_blob_sha": {
+    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class4-lane-cost81-sweep-20261114.json": "96d3ba0554af684d8f03f8a5008db8a88f24c6b3",
+    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost81-inflight-20261118.json": "5dc331070094343d803fe9d1e1b1222ea4e60b73",
+    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost81-raw-batches-1-9-audit-20261118.json": "f90bdccdc25e2f11cbb3af1b152318d994e5761a",
+    "research/experiments/n11-head1410-receipt-unclosability-census-20261116/output/n11-head1410-receipt-unclosability-census-20261116.json": "9c251da3138c5cb0516e097be5e5d0427dfaf5f0",
+    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost81-v15-crosscheck-a-20261118.jsonl": "f42e202a83c81e088ba5e503ab4c7747dc6fe508",
+    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost81-det-batch1-20261118.jsonl": "bb3f35d6220a69a4d3b3b30b6358c0123a1eb3d8",
+    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost81-det-batch8-20261118.jsonl": "18e71d316e9372c69b846126411a1280f63297e4",
+    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/class4_child1_runner.ts": "8744fc65b6b7cac6bd561403ce4c749e01c51359",
+    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/class4_child1_runner_v17.ts": "c132cc6425eee3feaeef1d697dd74f968cfedb59",
+    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost81-raw-batch1-20261118.jsonl": "de9b0820371c00340bd9f652168563acfd24ea3f",
+    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost81-raw-batch2-20261118.jsonl": "f2650a2a767df12f5db2b69c03d93900f086abb8",
+    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost81-raw-batch3-20261118.jsonl": "7cd92c1e5a38a9a6ea45f0dcfcff7c8e5a99467d",
+    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost81-raw-batch4-20261118.jsonl": "8ef37f89a268c522c8f957098e9366b3a80a76f3",
+    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost81-raw-batch5-20261118.jsonl": "6391794c1ab54794fb6b0de7cd70aa1f194d4938",
+    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost81-raw-batch6-20261118.jsonl": "afbae8f0d1d46a9b4e0ea4355320c8cb58ac98a4",
+    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost81-raw-batch7-20261118.jsonl": "4f2a413142ee11b54ad90d9f0fbc5784f672916c",
+    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost81-raw-batch8-20261118.jsonl": "8e515436a3db86baa46f819eba78cde3aba20e8f",
+    "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost81-raw-batch9-confirmation-20261118.jsonl": "a1700d71e02f66c2a61c07350fe1229ce9f2317a"
+  },
+  "old_v15": {
+    "source": "class4-lane-cost81-sweep-20261114.json",
+    "total_candidate_nodes": 325836995,
+    "candidate_count": 81,
+    "verdicts": {
+      "win7_d10": 0,
+      "refuted_d10": 81,
+      "capped": 0
+    },
+    "runner_blob_sha": "8744fc65b6b7cac6bd561403ce4c749e01c51359"
+  },
+  "fresh_v17": {
+    "source": "class2-lane-cost81 raw batches 1-9",
+    "total_candidate_nodes": 86480711,
+    "candidate_count": 81,
+    "verdicts": {
+      "win7_d10": 0,
+      "refuted_d10": 81,
+      "capped": 0
+    },
+    "pilot_controls": {
+      "count": 9,
+      "nodes_each": 3402
+    },
+    "runner_blob_sha": "c132cc6425eee3feaeef1d697dd74f968cfedb59"
+  },
+  "cross_version": {
+    "bit_set_agreement": "81/81",
+    "verdict_agreement": "81/81",
+    "old_v15_nodes": 325836995,
+    "fresh_v17_nodes": 86480711,
+    "node_reduction": 239356284,
+    "node_reduction_percent": 73.45890358,
+    "old_v15_over_v17_node_ratio": 3.76774186,
+    "per_bit_ratio": {
+      "min": 1.58083708,
+      "median": 4.74860418,
+      "max": 8.49010984
+    },
+    "v15_confirmation": {
+      "count": 15,
+      "historical_node_exact_matches": 15
+    },
+    "determinism": {
+      "batch1_field_identical_except_ms": true,
+      "batch8_field_identical_except_ms": true
+    },
+    "performance_caveat": "This is a node-count comparison across v15 and v17, not an apples-to-apples runtime benchmark. v17 repairs the known fbtOR probe-exhaustion drop; the historical v15 run is retained only as a consistency baseline and is not promoted to proof."
+  },
+  "k0865_prediction": {
+    "parent_class": 4,
+    "parent_classification": "all_remaining_sterile",
+    "remaining_s6_orbits_at_head1410": 18,
+    "remaining_s7_edge_cost_at_head1410": 1460,
+    "sterile_refs": 18,
+    "cost81_child_is_one_of_18": true,
+    "interpretation": "The fresh v17 sweep revalidates one historical K0865 STERILE prediction; it is not a newly discovered S6 row and does not change the head-1410 census."
+  },
+  "independent_d4": {
+    "method": "BigInt bitboard; eight explicit D4 coordinate transforms; canonical minimum 32-hex representation",
+    "root_canons_recomputed": 81,
+    "unique_root_canons": 81,
+    "matches_existing_v17_audit": "81/81",
+    "roots": [
+      {
+        "bit": 0,
+        "root_hex": "00000000020000003800000080008001",
+        "root_canon": "00000000020000003800000080008001"
+      },
+      {
+        "bit": 2,
+        "root_hex": "00000000020000003800000080008004",
+        "root_canon": "00000000020000003800000080008004"
+      },
+      {
+        "bit": 3,
+        "root_hex": "00000000020000003800000080008008",
+        "root_canon": "00000000020000003800000080008008"
+      },
+      {
+        "bit": 4,
+        "root_hex": "00000000020000003800000080008010",
+        "root_canon": "00000000020000003800000080008010"
+      },
+      {
+        "bit": 6,
+        "root_hex": "00000000020000003800000080008040",
+        "root_canon": "00000000020000003800000080008040"
+      },
+      {
+        "bit": 7,
+        "root_hex": "00000000020000003800000080008080",
+        "root_canon": "00000000020000003800000080008080"
+      },
+      {
+        "bit": 8,
+        "root_hex": "00000000020000003800000080008100",
+        "root_canon": "00000000020000003800000080008100"
+      },
+      {
+        "bit": 10,
+        "root_hex": "00000000020000003800000080008400",
+        "root_canon": "00000000020000003800000080008400"
+      },
+      {
+        "bit": 11,
+        "root_hex": "00000000020000003800000080008800",
+        "root_canon": "00000000020000003800000080008800"
+      },
+      {
+        "bit": 12,
+        "root_hex": "00000000020000003800000080009000",
+        "root_canon": "00000000020000003800000080009000"
+      },
+      {
+        "bit": 14,
+        "root_hex": "0000000002000000380000008000c000",
+        "root_canon": "0000000002000000380000008000c000"
+      },
+      {
+        "bit": 19,
+        "root_hex": "00000000020000003800000080088000",
+        "root_canon": "00000000020000003800000080088000"
+      },
+      {
+        "bit": 21,
+        "root_hex": "00000000020000003800000080208000",
+        "root_canon": "00000000020000003800000080208000"
+      },
+      {
+        "bit": 26,
+        "root_hex": "00000000020000003800000084008000",
+        "root_canon": "00000000020000003800000084008000"
+      },
+      {
+        "bit": 27,
+        "root_hex": "00000000020000003800000088008000",
+        "root_canon": "00000000020000003800000088008000"
+      },
+      {
+        "bit": 28,
+        "root_hex": "00000000020000003800000090008000",
+        "root_canon": "00000000020000003800000090008000"
+      },
+      {
+        "bit": 30,
+        "root_hex": "000000000200000038000000c0008000",
+        "root_canon": "000000000200000038000000c0008000"
+      },
+      {
+        "bit": 32,
+        "root_hex": "00000000020000003800000180008000",
+        "root_canon": "00000000020000003800000180008000"
+      },
+      {
+        "bit": 33,
+        "root_hex": "00000000020000003800000280008000",
+        "root_canon": "00000000020000003800000280008000"
+      },
+      {
+        "bit": 34,
+        "root_hex": "00000000020000003800000480008000",
+        "root_canon": "00000000020000003800000480008000"
+      },
+      {
+        "bit": 35,
+        "root_hex": "00000000020000003800000880008000",
+        "root_canon": "00000000020000003800000880008000"
+      },
+      {
+        "bit": 36,
+        "root_hex": "00000000020000003800001080008000",
+        "root_canon": "00000000020000003800001080008000"
+      },
+      {
+        "bit": 37,
+        "root_hex": "00000000020000003800002080008000",
+        "root_canon": "00000000020000003800002080008000"
+      },
+      {
+        "bit": 38,
+        "root_hex": "00000000020000003800004080008000",
+        "root_canon": "00000000020000003800004080008000"
+      },
+      {
+        "bit": 39,
+        "root_hex": "00000000020000003800008080008000",
+        "root_canon": "00000000020000003800008080008000"
+      },
+      {
+        "bit": 40,
+        "root_hex": "00000000020000003800010080008000",
+        "root_canon": "00000000020000003800010080008000"
+      },
+      {
+        "bit": 41,
+        "root_hex": "00000000020000003800020080008000",
+        "root_canon": "00000000020000003800020080008000"
+      },
+      {
+        "bit": 42,
+        "root_hex": "00000000020000003800040080008000",
+        "root_canon": "00000000020000003800040080008000"
+      },
+      {
+        "bit": 43,
+        "root_hex": "00000000020000003800080080008000",
+        "root_canon": "00000000020000003800080080008000"
+      },
+      {
+        "bit": 44,
+        "root_hex": "00000000020000003800100080008000",
+        "root_canon": "00000000020000003800100080008000"
+      },
+      {
+        "bit": 45,
+        "root_hex": "00000000020000003800200080008000",
+        "root_canon": "00000000020000003800200080008000"
+      },
+      {
+        "bit": 46,
+        "root_hex": "00000000020000003800400080008000",
+        "root_canon": "00000000020000003800400080008000"
+      },
+      {
+        "bit": 48,
+        "root_hex": "00000000020000003801000080008000",
+        "root_canon": "00000000020000003801000080008000"
+      },
+      {
+        "bit": 49,
+        "root_hex": "00000000020000003802000080008000",
+        "root_canon": "00000000020000003802000080008000"
+      },
+      {
+        "bit": 50,
+        "root_hex": "00000000020000003804000080008000",
+        "root_canon": "00000000020000003804000080008000"
+      },
+      {
+        "bit": 54,
+        "root_hex": "00000000020000003840000080008000",
+        "root_canon": "00000000020000003840000080008000"
+      },
+      {
+        "bit": 66,
+        "root_hex": "00000000020000043800000080008000",
+        "root_canon": "00000000020000043800000080008000"
+      },
+      {
+        "bit": 67,
+        "root_hex": "00000000020000083800000080008000",
+        "root_canon": "00000000020000083800000080008000"
+      },
+      {
+        "bit": 69,
+        "root_hex": "00000000020000203800000080008000",
+        "root_canon": "00000000020000203800000080008000"
+      },
+      {
+        "bit": 70,
+        "root_hex": "00000000020000403800000080008000",
+        "root_canon": "00000000020000403800000080008000"
+      },
+      {
+        "bit": 71,
+        "root_hex": "00000000020000803800000080008000",
+        "root_canon": "00000000020000803800000080008000"
+      },
+      {
+        "bit": 72,
+        "root_hex": "00000000020001003800000080008000",
+        "root_canon": "00000000020001003800000080008000"
+      },
+      {
+        "bit": 74,
+        "root_hex": "00000000020004003800000080008000",
+        "root_canon": "00000000020004003800000080008000"
+      },
+      {
+        "bit": 75,
+        "root_hex": "00000000020008003800000080008000",
+        "root_canon": "00000000020008003800000080008000"
+      },
+      {
+        "bit": 76,
+        "root_hex": "00000000020010003800000080008000",
+        "root_canon": "00000000020010003800000080008000"
+      },
+      {
+        "bit": 77,
+        "root_hex": "00000000020020003800000080008000",
+        "root_canon": "00000000020020003800000080008000"
+      },
+      {
+        "bit": 78,
+        "root_hex": "00000000020040003800000080008000",
+        "root_canon": "00000000020040003800000080008000"
+      },
+      {
+        "bit": 79,
+        "root_hex": "00000000020080003800000080008000",
+        "root_canon": "00000000020080003800000080008000"
+      },
+      {
+        "bit": 80,
+        "root_hex": "00000000020100003800000080008000",
+        "root_canon": "00000000020100003800000080008000"
+      },
+      {
+        "bit": 81,
+        "root_hex": "00000000020200003800000080008000",
+        "root_canon": "00000000020200003800000080008000"
+      },
+      {
+        "bit": 82,
+        "root_hex": "00000000020400003800000080008000",
+        "root_canon": "00000000020400003800000080008000"
+      },
+      {
+        "bit": 83,
+        "root_hex": "00000000020800003800000080008000",
+        "root_canon": "00000000020800003800000080008000"
+      },
+      {
+        "bit": 84,
+        "root_hex": "00000000021000003800000080008000",
+        "root_canon": "00000000021000003800000080008000"
+      },
+      {
+        "bit": 85,
+        "root_hex": "00000000022000003800000080008000",
+        "root_canon": "00000000022000003800000080008000"
+      },
+      {
+        "bit": 86,
+        "root_hex": "00000000024000003800000080008000",
+        "root_canon": "00000000024000003800000080008000"
+      },
+      {
+        "bit": 87,
+        "root_hex": "00000000028000003800000080008000",
+        "root_canon": "00000000028000003800000080008000"
+      },
+      {
+        "bit": 88,
+        "root_hex": "00000000030000003800000080008000",
+        "root_canon": "00000000030000003800000080008000"
+      },
+      {
+        "bit": 90,
+        "root_hex": "00000000060000003800000080008000",
+        "root_canon": "00000000060000003800000080008000"
+      },
+      {
+        "bit": 91,
+        "root_hex": "000000000a0000003800000080008000",
+        "root_canon": "000000000a0000003800000080008000"
+      },
+      {
+        "bit": 92,
+        "root_hex": "00000000120000003800000080008000",
+        "root_canon": "00000000120000003800000080008000"
+      },
+      {
+        "bit": 93,
+        "root_hex": "00000000220000003800000080008000",
+        "root_canon": "00000000220000003800000080008000"
+      },
+      {
+        "bit": 94,
+        "root_hex": "00000000420000003800000080008000",
+        "root_canon": "00000000420000003800000080008000"
+      },
+      {
+        "bit": 95,
+        "root_hex": "00000000820000003800000080008000",
+        "root_canon": "00000000820000003800000080008000"
+      },
+      {
+        "bit": 99,
+        "root_hex": "00000008020000003800000080008000",
+        "root_canon": "00000008020000003800000080008000"
+      },
+      {
+        "bit": 101,
+        "root_hex": "00000020020000003800000080008000",
+        "root_canon": "00000020000000801002200080080000"
+      },
+      {
+        "bit": 102,
+        "root_hex": "00000040020000003800000080008000",
+        "root_canon": "00000020000000801002240000080000"
+      },
+      {
+        "bit": 103,
+        "root_hex": "00000080020000003800000080008000",
+        "root_canon": "00000020000000801022200000080000"
+      },
+      {
+        "bit": 104,
+        "root_hex": "00000100020000003800000080008000",
+        "root_canon": "00000020000000811002200000080000"
+      },
+      {
+        "bit": 105,
+        "root_hex": "00000200020000003800000080008000",
+        "root_canon": "00000020000008801002200000080000"
+      },
+      {
+        "bit": 106,
+        "root_hex": "00000400020000003800000080008000",
+        "root_canon": "00000020000008801002000400080000"
+      },
+      {
+        "bit": 108,
+        "root_hex": "00001000020000003800000080008000",
+        "root_canon": "00000012000000003800000000820000"
+      },
+      {
+        "bit": 109,
+        "root_hex": "00002000020000003800000080008000",
+        "root_canon": "0000000a000000003800000000820000"
+      },
+      {
+        "bit": 110,
+        "root_hex": "00004000020000003800000080008000",
+        "root_canon": "00000020000000801002200000080400"
+      },
+      {
+        "bit": 112,
+        "root_hex": "00010000020000003800000080008000",
+        "root_canon": "00000020000000801002200100080000"
+      },
+      {
+        "bit": 113,
+        "root_hex": "00020000020000003800000080008000",
+        "root_canon": "00000020000000801002280000080000"
+      },
+      {
+        "bit": 114,
+        "root_hex": "00040000020000003800000080008000",
+        "root_canon": "00000020000000801042200000080000"
+      },
+      {
+        "bit": 115,
+        "root_hex": "00080000020000003800000080008000",
+        "root_canon": "00000020000000821002200000080000"
+      },
+      {
+        "bit": 116,
+        "root_hex": "00100000020000003800000080008000",
+        "root_canon": "00000020000008801002100000080000"
+      },
+      {
+        "bit": 117,
+        "root_hex": "00200000020000003800000080008000",
+        "root_canon": "00000020000008801002000200080000"
+      },
+      {
+        "bit": 118,
+        "root_hex": "00400000020000003800000080008000",
+        "root_canon": "00000020000008801002000000480000"
+      },
+      {
+        "bit": 120,
+        "root_hex": "01000000020000003800000080008000",
+        "root_canon": "00000020000008801002000000080001"
+      }
+    ]
+  },
+  "per_bit": [
+    {
+      "bit": 0,
+      "old_v15_nodes": 7672710,
+      "fresh_v17_nodes": 2929812,
+      "node_ratio_v15_over_v17": 2.61884039,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 2,
+      "old_v15_nodes": 5051687,
+      "fresh_v17_nodes": 1189469,
+      "node_ratio_v15_over_v17": 4.24701022,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 3,
+      "old_v15_nodes": 5868488,
+      "fresh_v17_nodes": 1759101,
+      "node_ratio_v15_over_v17": 3.33607223,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 4,
+      "old_v15_nodes": 1636534,
+      "fresh_v17_nodes": 378121,
+      "node_ratio_v15_over_v17": 4.32806959,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 6,
+      "old_v15_nodes": 2794687,
+      "fresh_v17_nodes": 528591,
+      "node_ratio_v15_over_v17": 5.28704991,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 7,
+      "old_v15_nodes": 9989449,
+      "fresh_v17_nodes": 2313454,
+      "node_ratio_v15_over_v17": 4.31798039,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 8,
+      "old_v15_nodes": 9701707,
+      "fresh_v17_nodes": 4624505,
+      "node_ratio_v15_over_v17": 2.09789091,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 10,
+      "old_v15_nodes": 4051247,
+      "fresh_v17_nodes": 935686,
+      "node_ratio_v15_over_v17": 4.32970783,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 11,
+      "old_v15_nodes": 1723895,
+      "fresh_v17_nodes": 339684,
+      "node_ratio_v15_over_v17": 5.07499617,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 12,
+      "old_v15_nodes": 1065063,
+      "fresh_v17_nodes": 173131,
+      "node_ratio_v15_over_v17": 6.15177525,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 14,
+      "old_v15_nodes": 7343307,
+      "fresh_v17_nodes": 2430110,
+      "node_ratio_v15_over_v17": 3.02180025,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 19,
+      "old_v15_nodes": 3514756,
+      "fresh_v17_nodes": 672963,
+      "node_ratio_v15_over_v17": 5.2228072,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 21,
+      "old_v15_nodes": 2037616,
+      "fresh_v17_nodes": 293670,
+      "node_ratio_v15_over_v17": 6.93845473,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 26,
+      "old_v15_nodes": 754180,
+      "fresh_v17_nodes": 162217,
+      "node_ratio_v15_over_v17": 4.64920446,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 27,
+      "old_v15_nodes": 2772649,
+      "fresh_v17_nodes": 381937,
+      "node_ratio_v15_over_v17": 7.25944069,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 28,
+      "old_v15_nodes": 1169928,
+      "fresh_v17_nodes": 230954,
+      "node_ratio_v15_over_v17": 5.06563212,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 30,
+      "old_v15_nodes": 4026132,
+      "fresh_v17_nodes": 867509,
+      "node_ratio_v15_over_v17": 4.6410262,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 32,
+      "old_v15_nodes": 2264620,
+      "fresh_v17_nodes": 318439,
+      "node_ratio_v15_over_v17": 7.11162891,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 33,
+      "old_v15_nodes": 8682212,
+      "fresh_v17_nodes": 2463669,
+      "node_ratio_v15_over_v17": 3.52409841,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 34,
+      "old_v15_nodes": 1088962,
+      "fresh_v17_nodes": 175104,
+      "node_ratio_v15_over_v17": 6.21894417,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 35,
+      "old_v15_nodes": 5001107,
+      "fresh_v17_nodes": 1114196,
+      "node_ratio_v15_over_v17": 4.48853433,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 36,
+      "old_v15_nodes": 1810055,
+      "fresh_v17_nodes": 327280,
+      "node_ratio_v15_over_v17": 5.53060071,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 37,
+      "old_v15_nodes": 8532100,
+      "fresh_v17_nodes": 2324871,
+      "node_ratio_v15_over_v17": 3.66992405,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 38,
+      "old_v15_nodes": 3520643,
+      "fresh_v17_nodes": 764192,
+      "node_ratio_v15_over_v17": 4.60701368,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 39,
+      "old_v15_nodes": 2953961,
+      "fresh_v17_nodes": 643245,
+      "node_ratio_v15_over_v17": 4.59227977,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 40,
+      "old_v15_nodes": 6687592,
+      "fresh_v17_nodes": 1956399,
+      "node_ratio_v15_over_v17": 3.41831702,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 41,
+      "old_v15_nodes": 8967664,
+      "fresh_v17_nodes": 3386122,
+      "node_ratio_v15_over_v17": 2.64835821,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 42,
+      "old_v15_nodes": 7882532,
+      "fresh_v17_nodes": 2143719,
+      "node_ratio_v15_over_v17": 3.67703603,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 43,
+      "old_v15_nodes": 3176990,
+      "fresh_v17_nodes": 758135,
+      "node_ratio_v15_over_v17": 4.19053335,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 44,
+      "old_v15_nodes": 4878768,
+      "fresh_v17_nodes": 1231161,
+      "node_ratio_v15_over_v17": 3.96273761,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 45,
+      "old_v15_nodes": 2297712,
+      "fresh_v17_nodes": 289437,
+      "node_ratio_v15_over_v17": 7.93855658,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 46,
+      "old_v15_nodes": 3449912,
+      "fresh_v17_nodes": 817512,
+      "node_ratio_v15_over_v17": 4.2200139,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 48,
+      "old_v15_nodes": 6697057,
+      "fresh_v17_nodes": 1006274,
+      "node_ratio_v15_over_v17": 6.65530164,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 49,
+      "old_v15_nodes": 2134319,
+      "fresh_v17_nodes": 296606,
+      "node_ratio_v15_over_v17": 7.19580521,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 50,
+      "old_v15_nodes": 2849665,
+      "fresh_v17_nodes": 498279,
+      "node_ratio_v15_over_v17": 5.71901485,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 54,
+      "old_v15_nodes": 16943798,
+      "fresh_v17_nodes": 3646701,
+      "node_ratio_v15_over_v17": 4.64633596,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 66,
+      "old_v15_nodes": 2523302,
+      "fresh_v17_nodes": 567858,
+      "node_ratio_v15_over_v17": 4.44354398,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 67,
+      "old_v15_nodes": 6295603,
+      "fresh_v17_nodes": 2026331,
+      "node_ratio_v15_over_v17": 3.10689764,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 69,
+      "old_v15_nodes": 3035075,
+      "fresh_v17_nodes": 572958,
+      "node_ratio_v15_over_v17": 5.29720329,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 70,
+      "old_v15_nodes": 3080445,
+      "fresh_v17_nodes": 486599,
+      "node_ratio_v15_over_v17": 6.33056172,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 71,
+      "old_v15_nodes": 889152,
+      "fresh_v17_nodes": 169996,
+      "node_ratio_v15_over_v17": 5.23042895,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 72,
+      "old_v15_nodes": 3430526,
+      "fresh_v17_nodes": 612815,
+      "node_ratio_v15_over_v17": 5.59797981,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 74,
+      "old_v15_nodes": 3561203,
+      "fresh_v17_nodes": 673918,
+      "node_ratio_v15_over_v17": 5.28432688,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 75,
+      "old_v15_nodes": 6336158,
+      "fresh_v17_nodes": 2046335,
+      "node_ratio_v15_over_v17": 3.09634444,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 76,
+      "old_v15_nodes": 2571122,
+      "fresh_v17_nodes": 532531,
+      "node_ratio_v15_over_v17": 4.82811705,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 77,
+      "old_v15_nodes": 1810166,
+      "fresh_v17_nodes": 265096,
+      "node_ratio_v15_over_v17": 6.82834143,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 78,
+      "old_v15_nodes": 650376,
+      "fresh_v17_nodes": 152108,
+      "node_ratio_v15_over_v17": 4.27575144,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 79,
+      "old_v15_nodes": 6760067,
+      "fresh_v17_nodes": 2899350,
+      "node_ratio_v15_over_v17": 2.33158018,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 80,
+      "old_v15_nodes": 1266320,
+      "fresh_v17_nodes": 172981,
+      "node_ratio_v15_over_v17": 7.32057278,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 81,
+      "old_v15_nodes": 1400385,
+      "fresh_v17_nodes": 205306,
+      "node_ratio_v15_over_v17": 6.8209648,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 82,
+      "old_v15_nodes": 3077253,
+      "fresh_v17_nodes": 1576735,
+      "node_ratio_v15_over_v17": 1.9516615,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 83,
+      "old_v15_nodes": 8906800,
+      "fresh_v17_nodes": 2741726,
+      "node_ratio_v15_over_v17": 3.24861055,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 84,
+      "old_v15_nodes": 6081516,
+      "fresh_v17_nodes": 1489959,
+      "node_ratio_v15_over_v17": 4.08166668,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 85,
+      "old_v15_nodes": 3060440,
+      "fresh_v17_nodes": 541838,
+      "node_ratio_v15_over_v17": 5.64825649,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 86,
+      "old_v15_nodes": 3581334,
+      "fresh_v17_nodes": 689192,
+      "node_ratio_v15_over_v17": 5.19642422,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 87,
+      "old_v15_nodes": 7073684,
+      "fresh_v17_nodes": 1116479,
+      "node_ratio_v15_over_v17": 6.33570717,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 88,
+      "old_v15_nodes": 6175216,
+      "fresh_v17_nodes": 3906295,
+      "node_ratio_v15_over_v17": 1.58083708,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 90,
+      "old_v15_nodes": 1198318,
+      "fresh_v17_nodes": 204993,
+      "node_ratio_v15_over_v17": 5.84565327,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 91,
+      "old_v15_nodes": 1081267,
+      "fresh_v17_nodes": 213976,
+      "node_ratio_v15_over_v17": 5.05321625,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 92,
+      "old_v15_nodes": 403788,
+      "fresh_v17_nodes": 72026,
+      "node_ratio_v15_over_v17": 5.60614223,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 93,
+      "old_v15_nodes": 1497978,
+      "fresh_v17_nodes": 176438,
+      "node_ratio_v15_over_v17": 8.49010984,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 94,
+      "old_v15_nodes": 3320694,
+      "fresh_v17_nodes": 517691,
+      "node_ratio_v15_over_v17": 6.41443255,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 95,
+      "old_v15_nodes": 2943884,
+      "fresh_v17_nodes": 557118,
+      "node_ratio_v15_over_v17": 5.28413011,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 99,
+      "old_v15_nodes": 5064518,
+      "fresh_v17_nodes": 1370103,
+      "node_ratio_v15_over_v17": 3.69645056,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 101,
+      "old_v15_nodes": 893884,
+      "fresh_v17_nodes": 167789,
+      "node_ratio_v15_over_v17": 5.32742909,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 102,
+      "old_v15_nodes": 1753238,
+      "fresh_v17_nodes": 366891,
+      "node_ratio_v15_over_v17": 4.77863453,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 103,
+      "old_v15_nodes": 10401395,
+      "fresh_v17_nodes": 3110647,
+      "node_ratio_v15_over_v17": 3.34380436,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 104,
+      "old_v15_nodes": 967597,
+      "fresh_v17_nodes": 188127,
+      "node_ratio_v15_over_v17": 5.14331808,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 105,
+      "old_v15_nodes": 4280468,
+      "fresh_v17_nodes": 2535077,
+      "node_ratio_v15_over_v17": 1.68849625,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 106,
+      "old_v15_nodes": 2326216,
+      "fresh_v17_nodes": 421010,
+      "node_ratio_v15_over_v17": 5.52532244,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 108,
+      "old_v15_nodes": 6483614,
+      "fresh_v17_nodes": 1493859,
+      "node_ratio_v15_over_v17": 4.34017802,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 109,
+      "old_v15_nodes": 3749261,
+      "fresh_v17_nodes": 901334,
+      "node_ratio_v15_over_v17": 4.15967999,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 110,
+      "old_v15_nodes": 3226647,
+      "fresh_v17_nodes": 703448,
+      "node_ratio_v15_over_v17": 4.58690195,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 112,
+      "old_v15_nodes": 2703746,
+      "fresh_v17_nodes": 569377,
+      "node_ratio_v15_over_v17": 4.74860418,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 113,
+      "old_v15_nodes": 5079334,
+      "fresh_v17_nodes": 1100686,
+      "node_ratio_v15_over_v17": 4.61469847,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 114,
+      "old_v15_nodes": 1220027,
+      "fresh_v17_nodes": 191430,
+      "node_ratio_v15_over_v17": 6.37322781,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 115,
+      "old_v15_nodes": 1327014,
+      "fresh_v17_nodes": 267966,
+      "node_ratio_v15_over_v17": 4.95217304,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 116,
+      "old_v15_nodes": 2017271,
+      "fresh_v17_nodes": 423583,
+      "node_ratio_v15_over_v17": 4.7623984,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 117,
+      "old_v15_nodes": 4242330,
+      "fresh_v17_nodes": 1042238,
+      "node_ratio_v15_over_v17": 4.07040426,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 118,
+      "old_v15_nodes": 5758432,
+      "fresh_v17_nodes": 1827991,
+      "node_ratio_v15_over_v17": 3.15014242,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    },
+    {
+      "bit": 120,
+      "old_v15_nodes": 1336227,
+      "fresh_v17_nodes": 238252,
+      "node_ratio_v15_over_v17": 5.60846079,
+      "old_v15_verdict": "REFUTED-D10",
+      "fresh_v17_verdict": "REFUTED-D10"
+    }
+  ],
+  "checks": {
+    "pinned_inputs_match_git_blobs": true,
+    "old_v15_81_candidates_refuted_uncapped": true,
+    "v17_81_raw_candidates_complete_unique": true,
+    "old_v15_and_new_v17_bit_sets_match_81_of_81": true,
+    "old_v15_and_new_v17_verdicts_match_81_of_81": true,
+    "all_v17_terminal_ranges_are_13_to_17": true,
+    "all_v17_candidates_are_andclose_and_uncapped": true,
+    "v17_pilot_controls_9_of_9_at_3402": true,
+    "v17_node_sum_matches_claim_and_audit": true,
+    "det_batch1_and_batch8_match_except_elapsed_ms": true,
+    "v15_confirmation_15_of_15_matches_historical_v15_nodes": true,
+    "independent_bigint_d4_canons_match_audit_81_of_81": true,
+    "all_81_root_d4_canons_are_distinct": true,
+    "k0865_parent_predicts_all_18_rows_sterile_and_includes_cost81": true
+  },
+  "interpretation_guard": "REFUTED-D10 means no first-player win within depth 10 from each individual seven-stone root; it is not a LOSS proof. The cost81 row has no WIN7-D10 certificate, so no receipt fold or new manifest row closure occurs. The standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+}
