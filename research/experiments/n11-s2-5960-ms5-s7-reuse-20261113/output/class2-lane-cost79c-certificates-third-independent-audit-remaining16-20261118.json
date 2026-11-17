@@ -1,0 +1,767 @@
+{
+  "schema": "n11-cost79c-certificates-bigint-general-circle-audit-remaining16-20261118-v1",
+  "date": "2026-11-18",
+  "base_main_before_audit": "99ebd380c0ef3adbc45dadfb3ce82d2556b3920b",
+  "method": "BigInt general-circle equations (3x3 Cramer coefficients) build the circle or degenerate line through each triple of stones and integer-evaluate all 121 cells; the search engine, verdict cache and 4x4 Bareiss certificate checker are never called; every legal loser first move is enumerated per root and the full AND/OR tree re-walked independently. Same verification logic as the parallel-lane bits [1,2,21] audit; extended here with a published-subroots/rootcheck metadata replay on all sixteen bits and a manifest d4_canon_root equality check per bit.",
+  "certificates": [
+    {
+      "bit": 17,
+      "root": "00000000000000c09002000200020000",
+      "rows": 74600,
+      "rootMobility": 68,
+      "rootCanon": "00000000000000c09002000200020000",
+      "parts": [
+        {
+          "git_blob_sha": "0ca2f096cac1223307070f1c4fc4eb8c0ef82ce8",
+          "bytes": 898449
+        },
+        {
+          "git_blob_sha": "ffd40388aff819c9ab43ad5c6e7339aaed692f0a",
+          "bytes": 896706
+        },
+        {
+          "git_blob_sha": "699a34e9ba4d015ec61f5be8e35e2adcb31de89f",
+          "bytes": 895185
+        }
+      ],
+      "certificate_bytes": 2690340,
+      "subroot_count": 68,
+      "subrootSeen": 153245,
+      "winnerStates": 98360,
+      "loserStates": 27988,
+      "opponentEdges": 134091,
+      "terminals": 26897,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "union": {
+        "consumed": 74600,
+        "missing": 0,
+        "extra": 0
+      }
+    },
+    {
+      "bit": 26,
+      "root": "00000000000000c09002000204000000",
+      "rows": 59195,
+      "rootMobility": 59,
+      "rootCanon": "00000000000000c09002000204000000",
+      "parts": [
+        {
+          "git_blob_sha": "56a7c0c8e12b0bd9ad31e8f2cef88ad44d50e9bc",
+          "bytes": 1069997
+        },
+        {
+          "git_blob_sha": "396eb7b76e31483238df6e55b7e2f3131b7e896e",
+          "bytes": 1068267
+        }
+      ],
+      "certificate_bytes": 2138264,
+      "subroot_count": 59,
+      "subrootSeen": 124610,
+      "winnerStates": 80281,
+      "loserStates": 23537,
+      "opponentEdges": 111707,
+      "terminals": 20792,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "union": {
+        "consumed": 59195,
+        "missing": 0,
+        "extra": 0
+      }
+    },
+    {
+      "bit": 28,
+      "root": "00000000000000c09002000210000000",
+      "rows": 61126,
+      "rootMobility": 65,
+      "rootCanon": "00000000000000c09002000210000000",
+      "parts": [
+        {
+          "git_blob_sha": "43e614091cbc05cb963acfedafe52167b35401d4",
+          "bytes": 1102396
+        },
+        {
+          "git_blob_sha": "cac377bb326aad3f5ee444dbccad890faaf5460b",
+          "bytes": 1100375
+        }
+      ],
+      "certificate_bytes": 2202771,
+      "subroot_count": 65,
+      "subrootSeen": 133266,
+      "winnerStates": 85608,
+      "loserStates": 24777,
+      "opponentEdges": 117699,
+      "terminals": 22881,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "union": {
+        "consumed": 61126,
+        "missing": 0,
+        "extra": 0
+      }
+    },
+    {
+      "bit": 29,
+      "root": "00000000000000c09002000220000000",
+      "rows": 58957,
+      "rootMobility": 61,
+      "rootCanon": "00000000000000c09002000220000000",
+      "parts": [
+        {
+          "git_blob_sha": "a2da8d0eaa00be5dcbf80c1c1eac8443d939584b",
+          "bytes": 1064962
+        },
+        {
+          "git_blob_sha": "b7584c43d26c9943863555644eee6dadafb32de7",
+          "bytes": 1061854
+        }
+      ],
+      "certificate_bytes": 2126816,
+      "subroot_count": 61,
+      "subrootSeen": 123689,
+      "winnerStates": 80101,
+      "loserStates": 24358,
+      "opponentEdges": 113469,
+      "terminals": 19230,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "union": {
+        "consumed": 58957,
+        "missing": 0,
+        "extra": 0
+      }
+    },
+    {
+      "bit": 30,
+      "root": "00000000000000c09002000240000000",
+      "rows": 35813,
+      "rootMobility": 52,
+      "rootCanon": "00000000000000c09002000240000000",
+      "parts": [
+        {
+          "git_blob_sha": "30c0fdcf34ad53394986aae64ba007025fd7d967",
+          "bytes": 648172
+        },
+        {
+          "git_blob_sha": "ceae1f5bbd02619310cd7f41f08884cf87b27c90",
+          "bytes": 646087
+        }
+      ],
+      "certificate_bytes": 1294259,
+      "subroot_count": 52,
+      "subrootSeen": 75616,
+      "winnerStates": 48829,
+      "loserStates": 14928,
+      "opponentEdges": 68740,
+      "terminals": 11859,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "union": {
+        "consumed": 35813,
+        "missing": 0,
+        "extra": 0
+      }
+    },
+    {
+      "bit": 31,
+      "root": "00000000000000c09002000280000000",
+      "rows": 41791,
+      "rootMobility": 57,
+      "rootCanon": "00000000000000c09002000280000000",
+      "parts": [
+        {
+          "git_blob_sha": "fe416625ead11b8b9233fea107cd536706a3eb04",
+          "bytes": 754193
+        },
+        {
+          "git_blob_sha": "e029b6662543604db8baf1a4a93936cdd2ab1303",
+          "bytes": 752252
+        }
+      ],
+      "certificate_bytes": 1506445,
+      "subroot_count": 57,
+      "subrootSeen": 89260,
+      "winnerStates": 57369,
+      "loserStates": 16384,
+      "opponentEdges": 79243,
+      "terminals": 15507,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "union": {
+        "consumed": 41791,
+        "missing": 0,
+        "extra": 0
+      }
+    },
+    {
+      "bit": 47,
+      "root": "00000000000000c09002800200000000",
+      "rows": 65560,
+      "rootMobility": 61,
+      "rootCanon": "00000000000000c09002800200000000",
+      "parts": [
+        {
+          "git_blob_sha": "e13b7ed4f7712fe05bd0745409e599dce1a94216",
+          "bytes": 1182541
+        },
+        {
+          "git_blob_sha": "b5249671630035bede49a80beab9f1ba2a23a234",
+          "bytes": 1178636
+        }
+      ],
+      "certificate_bytes": 2361177,
+      "subroot_count": 61,
+      "subrootSeen": 138108,
+      "winnerStates": 88876,
+      "loserStates": 25863,
+      "opponentEdges": 123040,
+      "terminals": 23369,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "union": {
+        "consumed": 65560,
+        "missing": 0,
+        "extra": 0
+      }
+    },
+    {
+      "bit": 58,
+      "root": "00000000000000c09402000200000000",
+      "rows": 39363,
+      "rootMobility": 56,
+      "rootCanon": "00000000000000c09402000200000000",
+      "parts": [
+        {
+          "git_blob_sha": "202b07e24395110d609f09693132cd7b23c08ee4",
+          "bytes": 711296
+        },
+        {
+          "git_blob_sha": "1e075390f54670f884fde02ee33dd13457132b97",
+          "bytes": 708288
+        }
+      ],
+      "certificate_bytes": 1419584,
+      "subroot_count": 56,
+      "subrootSeen": 91734,
+      "winnerStates": 59547,
+      "loserStates": 18413,
+      "opponentEdges": 84417,
+      "terminals": 13774,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "union": {
+        "consumed": 39363,
+        "missing": 0,
+        "extra": 0
+      }
+    },
+    {
+      "bit": 62,
+      "root": "00000000000000c0d002000200000000",
+      "rows": 60432,
+      "rootMobility": 59,
+      "rootCanon": "00000000000000c0d002000200000000",
+      "parts": [
+        {
+          "git_blob_sha": "ec0fd189aae6635616140e934187ea282291571b",
+          "bytes": 1091584
+        },
+        {
+          "git_blob_sha": "12f50badbff21410ea36344aa04e6502a175c4f3",
+          "bytes": 1088592
+        }
+      ],
+      "certificate_bytes": 2180176,
+      "subroot_count": 59,
+      "subrootSeen": 123708,
+      "winnerStates": 80077,
+      "loserStates": 24138,
+      "opponentEdges": 112245,
+      "terminals": 19493,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "union": {
+        "consumed": 60432,
+        "missing": 0,
+        "extra": 0
+      }
+    },
+    {
+      "bit": 91,
+      "root": "00000000080000c09002000200000000",
+      "rows": 48379,
+      "rootMobility": 61,
+      "rootCanon": "00000000000020809003000002000000",
+      "parts": [
+        {
+          "git_blob_sha": "4c86a5d511dd347aed72f0cfa1f860560f9ef157",
+          "bytes": 874651
+        },
+        {
+          "git_blob_sha": "d30787a2d9ddf9e71a93320b208f45d2e9bcb803",
+          "bytes": 871247
+        }
+      ],
+      "certificate_bytes": 1745898,
+      "subroot_count": 61,
+      "subrootSeen": 99568,
+      "winnerStates": 64304,
+      "loserStates": 18981,
+      "opponentEdges": 89337,
+      "terminals": 16283,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "union": {
+        "consumed": 48379,
+        "missing": 0,
+        "extra": 0
+      }
+    },
+    {
+      "bit": 96,
+      "root": "00000001000000c09002000200000000",
+      "rows": 64333,
+      "rootMobility": 63,
+      "rootCanon": "00000000000020809003000040000000",
+      "parts": [
+        {
+          "git_blob_sha": "5443b26a34cac8273d1c5976d25b3ce1df1b47b6",
+          "bytes": 1161262
+        },
+        {
+          "git_blob_sha": "99344221c755134569bf0d8399905d191cdcd9cc",
+          "bytes": 1158186
+        }
+      ],
+      "certificate_bytes": 2319448,
+      "subroot_count": 63,
+      "subrootSeen": 140603,
+      "winnerStates": 90321,
+      "loserStates": 26399,
+      "opponentEdges": 125074,
+      "terminals": 23883,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "union": {
+        "consumed": 64333,
+        "missing": 0,
+        "extra": 0
+      }
+    },
+    {
+      "bit": 100,
+      "root": "00000010000000c09002000200000000",
+      "rows": 54360,
+      "rootMobility": 60,
+      "rootCanon": "00000000000020809003000000001000",
+      "parts": [
+        {
+          "git_blob_sha": "5ce198f9278623db2c3934918466a21239d60542",
+          "bytes": 980303
+        },
+        {
+          "git_blob_sha": "a820917fdb7368c197fa8ff61e220311379260ca",
+          "bytes": 977280
+        }
+      ],
+      "certificate_bytes": 1957583,
+      "subroot_count": 60,
+      "subrootSeen": 113286,
+      "winnerStates": 73002,
+      "loserStates": 22051,
+      "opponentEdges": 102197,
+      "terminals": 18233,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "union": {
+        "consumed": 54360,
+        "missing": 0,
+        "extra": 0
+      }
+    },
+    {
+      "bit": 109,
+      "root": "00002000000000c09002000200000000",
+      "rows": 56579,
+      "rootMobility": 62,
+      "rootCanon": "00000000000020809003000000200000",
+      "parts": [
+        {
+          "git_blob_sha": "f5da90088725fd88e1886f78e88dab9b3144c680",
+          "bytes": 1018742
+        },
+        {
+          "git_blob_sha": "89f7616805a90a2d49044636c759f33a4e9ca9dc",
+          "bytes": 1016474
+        }
+      ],
+      "certificate_bytes": 2035216,
+      "subroot_count": 62,
+      "subrootSeen": 125861,
+      "winnerStates": 80928,
+      "loserStates": 23742,
+      "opponentEdges": 110997,
+      "terminals": 21191,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "union": {
+        "consumed": 56579,
+        "missing": 0,
+        "extra": 0
+      }
+    },
+    {
+      "bit": 113,
+      "root": "00020000000000c09002000200000000",
+      "rows": 57273,
+      "rootMobility": 63,
+      "rootCanon": "00000000000020809003000000000008",
+      "parts": [
+        {
+          "git_blob_sha": "d69f5aeae23e8d27e6a2b7e76a9d7b441121eb4b",
+          "bytes": 1033173
+        },
+        {
+          "git_blob_sha": "5f0ee5a269f786c29e271957cde50b64c9992a7d",
+          "bytes": 1030328
+        }
+      ],
+      "certificate_bytes": 2063501,
+      "subroot_count": 63,
+      "subrootSeen": 125131,
+      "winnerStates": 80327,
+      "loserStates": 22627,
+      "opponentEdges": 109143,
+      "terminals": 22177,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "union": {
+        "consumed": 57273,
+        "missing": 0,
+        "extra": 0
+      }
+    },
+    {
+      "bit": 117,
+      "root": "00200000000000c09002000200000000",
+      "rows": 80970,
+      "rootMobility": 68,
+      "rootCanon": "00000000000020809003000000000080",
+      "parts": [
+        {
+          "git_blob_sha": "d3948c04b50409f6d6a4280cc41b961596e6599b",
+          "bytes": 973348
+        },
+        {
+          "git_blob_sha": "a6bb5b001e66ef4e6cb3060cf4c90470a784f5ae",
+          "bytes": 971329
+        },
+        {
+          "git_blob_sha": "17cc17b6b8b5b29785f12f5a0033b497904b82ce",
+          "bytes": 970144
+        }
+      ],
+      "certificate_bytes": 2914821,
+      "subroot_count": 68,
+      "subrootSeen": 161452,
+      "winnerStates": 103734,
+      "loserStates": 30504,
+      "opponentEdges": 143739,
+      "terminals": 27214,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "union": {
+        "consumed": 80970,
+        "missing": 0,
+        "extra": 0
+      }
+    },
+    {
+      "bit": 120,
+      "root": "01000000000000c09002000200000000",
+      "rows": 74776,
+      "rootMobility": 68,
+      "rootCanon": "00000000000020809003000000000400",
+      "parts": [
+        {
+          "git_blob_sha": "8b84cfcb2f5b16bd750889077cc6731f9225eb23",
+          "bytes": 898829
+        },
+        {
+          "git_blob_sha": "56807ca9799b6f3fa6f553ff8c7573e06e47ab7b",
+          "bytes": 896817
+        },
+        {
+          "git_blob_sha": "6a8b09baf9c2146575131b782dc386cb0229e0e3",
+          "bytes": 895660
+        }
+      ],
+      "certificate_bytes": 2691306,
+      "subroot_count": 68,
+      "subrootSeen": 150132,
+      "winnerStates": 96202,
+      "loserStates": 28158,
+      "opponentEdges": 130523,
+      "terminals": 25772,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "union": {
+        "consumed": 74776,
+        "missing": 0,
+        "extra": 0
+      }
+    }
+  ],
+  "totals": {
+    "certificates": 16,
+    "rows": 933507,
+    "root_replies": 983,
+    "subroot_seen": 1969269,
+    "winner_states": 1267866,
+    "loser_states": 372848,
+    "opponent_edges": 1755661,
+    "terminals": 328555
+  },
+  "subroot_crosschecks": [
+    {
+      "bit": 17,
+      "subroots_published": 68,
+      "subroots_recomputed": 68,
+      "all_equal": true,
+      "rootcheck_stones": 7,
+      "rootcheck_loserMobility": 68
+    },
+    {
+      "bit": 26,
+      "subroots_published": 59,
+      "subroots_recomputed": 59,
+      "all_equal": true,
+      "rootcheck_stones": 7,
+      "rootcheck_loserMobility": 59
+    },
+    {
+      "bit": 28,
+      "subroots_published": 65,
+      "subroots_recomputed": 65,
+      "all_equal": true,
+      "rootcheck_stones": 7,
+      "rootcheck_loserMobility": 65
+    },
+    {
+      "bit": 29,
+      "subroots_published": 61,
+      "subroots_recomputed": 61,
+      "all_equal": true,
+      "rootcheck_stones": 7,
+      "rootcheck_loserMobility": 61
+    },
+    {
+      "bit": 30,
+      "subroots_published": 52,
+      "subroots_recomputed": 52,
+      "all_equal": true,
+      "rootcheck_stones": 7,
+      "rootcheck_loserMobility": 52
+    },
+    {
+      "bit": 31,
+      "subroots_published": 57,
+      "subroots_recomputed": 57,
+      "all_equal": true,
+      "rootcheck_stones": 7,
+      "rootcheck_loserMobility": 57
+    },
+    {
+      "bit": 47,
+      "subroots_published": 61,
+      "subroots_recomputed": 61,
+      "all_equal": true,
+      "rootcheck_stones": 7,
+      "rootcheck_loserMobility": 61
+    },
+    {
+      "bit": 58,
+      "subroots_published": 56,
+      "subroots_recomputed": 56,
+      "all_equal": true,
+      "rootcheck_stones": 7,
+      "rootcheck_loserMobility": 56
+    },
+    {
+      "bit": 62,
+      "subroots_published": 59,
+      "subroots_recomputed": 59,
+      "all_equal": true,
+      "rootcheck_stones": 7,
+      "rootcheck_loserMobility": 59
+    },
+    {
+      "bit": 91,
+      "subroots_published": 61,
+      "subroots_recomputed": 61,
+      "all_equal": true,
+      "rootcheck_stones": 7,
+      "rootcheck_loserMobility": 61
+    },
+    {
+      "bit": 96,
+      "subroots_published": 63,
+      "subroots_recomputed": 63,
+      "all_equal": true,
+      "rootcheck_stones": 7,
+      "rootcheck_loserMobility": 63
+    },
+    {
+      "bit": 100,
+      "subroots_published": 60,
+      "subroots_recomputed": 60,
+      "all_equal": true,
+      "rootcheck_stones": 7,
+      "rootcheck_loserMobility": 60
+    },
+    {
+      "bit": 109,
+      "subroots_published": 62,
+      "subroots_recomputed": 62,
+      "all_equal": true,
+      "rootcheck_stones": 7,
+      "rootcheck_loserMobility": 62
+    },
+    {
+      "bit": 113,
+      "subroots_published": 63,
+      "subroots_recomputed": 63,
+      "all_equal": true,
+      "rootcheck_stones": 7,
+      "rootcheck_loserMobility": 63
+    },
+    {
+      "bit": 117,
+      "subroots_published": 68,
+      "subroots_recomputed": 68,
+      "all_equal": true,
+      "rootcheck_stones": 7,
+      "rootcheck_loserMobility": 68
+    },
+    {
+      "bit": 120,
+      "subroots_published": 68,
+      "subroots_recomputed": 68,
+      "all_equal": true,
+      "rootcheck_stones": 7,
+      "rootcheck_loserMobility": 68
+    }
+  ],
+  "metadata_pins": {
+    "17": {
+      "subroots": "faab0a2c54141e88ab4a94b2dd9654fd8712174e",
+      "rootcheck": "e6f72460a9f5580cf7b5bc45ceb19db60b67d314"
+    },
+    "26": {
+      "subroots": "e857566cffcc0604ca2a867cca245553f0881423",
+      "rootcheck": "4c4aa2486b853421858f2cc0058549cdd9994ea1"
+    },
+    "28": {
+      "subroots": "5d6bf03661a43c4d42fbab7902337a6adb29a0f5",
+      "rootcheck": "d541cc7bc2f788d0503c87c6e980bd9a1b2dac9c"
+    },
+    "29": {
+      "subroots": "0fa61303949a8d01464f56cf2d6310c5455f19cf",
+      "rootcheck": "0f9d0791c2c13493bbc933355def00a5d5878acc"
+    },
+    "30": {
+      "subroots": "90b7e46bdd8d0ec7885ec434b76c4dd5a5c06d84",
+      "rootcheck": "9418474c8a480407b425edf8562bc46435aca76e"
+    },
+    "31": {
+      "subroots": "de7f16563114e9f6f034fa59fc636d2b83b8321f",
+      "rootcheck": "738e591916a9d0a50d9ccff4358e1e034523bef8"
+    },
+    "47": {
+      "subroots": "ad755e7fa3aade7bb354e03a40ec3d69329d726c",
+      "rootcheck": "6a7000d42f7915dac29a08dbfbc97e57a55c15ae"
+    },
+    "58": {
+      "subroots": "f268c70d68e47c8593f620ff219699ad57d42212",
+      "rootcheck": "4da1cfaebc6468d3c995def7b305973d9dd19abb"
+    },
+    "62": {
+      "subroots": "cf796d6c276cc2b0ced1323f363bfa4e19110844",
+      "rootcheck": "b2c4ca1d7257245a0f9038362b42bac97e7dcd2a"
+    },
+    "91": {
+      "subroots": "7b07a807f12b19d06af1fcdc89eea9556f95cdd6",
+      "rootcheck": "08ef409d431a66683a4af644b20362d007991db3"
+    },
+    "96": {
+      "subroots": "993f4517be446d5015d753a2402abf339a436366",
+      "rootcheck": "5a4e3843cb6c2ca076b289e49d0412c4079939e6"
+    },
+    "100": {
+      "subroots": "0cfed0c2e3f05b6b0271c7fb18cdd9758d5d003e",
+      "rootcheck": "e278009edaef739f95fa89c3d046c524ddd84000"
+    },
+    "109": {
+      "subroots": "c84f14b1e1a174fb7d92ed921b594fa5600bc625",
+      "rootcheck": "7ac41a95bf4482c76786382bd67e8e8b4961d5ca"
+    },
+    "113": {
+      "subroots": "a7d633160385b529b214038aad6a940393fa119d",
+      "rootcheck": "12f9b116512197bdeaca0f546612b46e5c610c5e"
+    },
+    "117": {
+      "subroots": "61418245cc2ac424779a7e92f1edfc1a47a6fda4",
+      "rootcheck": "41d3e4cef5920a4728f1fb71d50f92b064e7c94b"
+    },
+    "120": {
+      "subroots": "fb5f8c9c3847254e1e8fa67fb4e0a650f5607fb8",
+      "rootcheck": "b5c433ad826b07ea08063514f46347b5b6ce6484"
+    }
+  },
+  "parser_checks": {
+    "header_and_root": true,
+    "strictly_sorted_unique_rows": true,
+    "all_moves_in_range": true,
+    "part_boundary_checked": true
+  },
+  "all_pass": true,
+  "runtime_ms": 142134,
+  "geometry_cache": {
+    "triple_masks": 57169,
+    "legal_positions": 1063108
+  },
+  "interpretation_guard": "Sixteen individual seven-stone WIN7 roots only (the remaining cost79c certificates after the parallel-lane audit of bits [1,2,21]). REFUTED-D10 is not a LOSS proof; no receipt fold was performed. Standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+}
