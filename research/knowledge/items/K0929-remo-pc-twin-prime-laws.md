@@ -1,11 +1,11 @@
 ---
 id: K0929
 kind: proposition
-status: conjectured
+status: proved
 title: 一様盤P(C)の双子素数法則（P(C)=1 は C 素数と同値、P(C)=C-1 は C+1 素数と同値）
 relations:
   - depends_on: [K0859, K0922]
-  - connects: [K0919, K0926, K0928]
+  - connects: [K0919, K0926, K0928, K0937, K0939]
 artifacts:
   - research/experiments/remo-pc-twin-laws-20261117/report.md
   - research/experiments/remo-pc-twin-laws-20261117/verify_pc_twin_laws.py
@@ -18,7 +18,14 @@ date: 2026-11-17
 tags: [remo, uniform-board, counting-recursion, survivor, primes, conjecture, machine-evidence]
 ---
 
-## 主張（予想。すべて有限機械範囲の観察に基づく）
+## 昇格（2026-11-18）: LAW1/LAW2は全称定理化
+
+K0939のEND-SIEVE/SIEVE-PRIME全称証明（+K0937合成数側TWIN-COMP-GEN・
+K0928定理RED・ピンP(2)=1）により、LAW1/LAW2の完全iff
+「P(C)=1 ⟺ C素数」「P(C)=C−1 ⟺ C+1素数」（C≥2）は**全称定理**と
+なった。V予想・U予想も定理化。証明チェーンと機械監査はK0939参照。
+
+## 主張（出版時点では予想。すべて有限機械範囲の観察に基づく）
 
 K0922 は C <= 300 で「P(C) = 1 となる C のリストが素数とほぼ一致」することを
 観察し、また「P(C) = C-1 となる C が61個ある（構造未同定）」ことを記録した。

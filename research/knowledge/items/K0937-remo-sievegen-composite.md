@@ -16,7 +16,7 @@ date: 2026-11-18
 tags: [remo, uniform-board, counting-recursion, ladder, stretch, watched-tracking, sieve, invariant, twin-laws, machine-evidence]
 ---
 
-## 主張（すべてK0928のpot力学上。合成数側は全称証明・素数側は予想として分離）
+## 主張（すべてK0928のpot力学上。合成数側は本項で全称証明・素数側はK0939で全称証明）
 
 ### 定理INV-TRACK（不変量・全称）
 
@@ -65,14 +65,18 @@ stretch-2で死亡済み）。これによりK0936の系SIEVE-COMPOSITE（spf∈
   （P(3)=P(5)=P(7)=1・P(2)=1・P(4)=3・P(6)=5）と合わせ、
   「P(C)=1 ⟹ C素数」「P(C)=C−1 ⟹ C+1素数」はmod類制限なしの全称定理。
 
-### 定理（素数側ladder部分）と予想SIEVE-PRIME（OPEN）
+### 定理（素数側ladder部分）と定理SIEVE-PRIME（K0939で証明済み）
 
 N素数なら監視は**すべてのt≥1 stretchを生存する**（死亡⟺(w+1)|Nだが
 t≥1 stretchではw+1=NがT恒等式と矛盾）。素数ゲームは必ずt=0 endgame
 （n≤w）に入るため、残るOPENは**t=0エンドゲームが監視を殺さないこと**
-（= survivor）に正確に特定された。予想SIEVE-PRIMEとして明示し、
+（= survivor）に正確に特定された。出版時は予想SIEVE-PRIMEとして明示し、
 m≤2600両側の新鮮engineで全素数ゲーム（deathなし・survivor==監視）を
-機械確認済み。逆方向（C素数⟹P(C)=1）はこの予想に依存しOPEN。
+機械確認済みだったが、**K0939で全称証明された**（エンドゲームは
+END-INV・ENTRY-LOCの下で約数篩END-SIEVEで、family状態上で監視生存⟺
+N素数。N素数ならV(m)=0・U(m)=m−1）。これにより逆方向（C素数⟹
+P(C)=1）を含む双子法則LAW1/LAW2の完全iffが全称定理化した
+（K0929・K0939参照）。
 
 ## t=1レジームのWATCH-MAP拡張（実装ギャップの解消）
 
@@ -108,8 +112,8 @@ m≤200,000（N≤400,003・stretch≤630）へ、engineアンカーはm≤2,600
 - 一様盤・ゼロリセット・K0859再帰（K0928定理RED経由）のみ。非一様盤・
   11×11空盤・二石root {49,60}/{59,60}・S2 {59,60}・class1/2/4は一切
   言及しない（**UNKNOWN不変**）。
-- 素数側は**予想**（SIEVE-PRIME）。合成側のみ全称定理。「C素数⟹
-  P(C)=1」は未証明のまま。
+- 素数側は本項出版時点では**予想**（SIEVE-PRIME）だったが、**K0939で
+  全称証明済み**（エンドゲームEND-SIEVE理論）。「C素数⟹P(C)=1」は定理。
 - t=1の非INV窓ケースのa2公式は主張しない（観測270偏差を記録）。
 - t=1ではK0935 (e)のa=r+1判定は一般に偽（上記反例）。本項の死亡判定は
   (e)に依存しない排出集合判定。
