@@ -441,5 +441,10 @@
     "node_sum_and_partition_recomputed_from_published_per_bit_table": true,
     "this_audit_does_not_rerun_or_independently_verify_the_search_engine": true
   },
-  "interpretation_guard": "WIN7-D10 applies only to each individual 7-stone root within depth 10; REFUTED-D10 is not a LOSS proof; no receipt row is closed by this audit; standard 11x11 remains UNKNOWN."
+  "interpretation_guard": "WIN7-D10 applies only to each individual 7-stone root within depth 10; REFUTED-D10 is not a LOSS proof; no receipt row is closed by this audit; standard 11x11 remains UNKNOWN.",
+  "audit_implementation": {
+    "executed": "JavaScript BigInt implementation in the analysis tool, using the K0868 det4 expansion, against the exact GitHub-fetched source bytes pinned above",
+    "replay_script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost73k_concurrent_record_20261117.py",
+    "replay_script_execution": "not executed in the repository workspace during this run; it is committed for deterministic replay"
+  }
 }
