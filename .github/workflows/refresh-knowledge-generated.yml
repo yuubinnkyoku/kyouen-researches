@@ -241,6 +241,10 @@ jobs:
         run: |
           uv run --locked python research/experiments/vertical-fiber-two-token-z6-y12-boundary-20261117/verify_z6_y12.py
           git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y12-boundary-20261117/output/audit.json
+      - name: Audit K0897 three-branch REMO cap10 r=11 boundary
+        run: |
+          uv run --locked python research/experiments/remo-k-branch-cap10-r11-boundary-20261117/verify_remo_k_branch_cap10_r11_boundary.py
+          git diff --exit-code -- research/experiments/remo-k-branch-cap10-r11-boundary-20261117/output/remo_k_branch_cap10_r11_boundary_audit.json
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python tools/knowledge/build.py
@@ -536,3 +540,4 @@ jobs:
 # Refresh generated views for K0894 two-token z=6,y=11 full Grundy slice (2026-11-17).
 # Refresh generated views for K0895 three-branch REMO cap10 r=10 boundary (Theorem I r=10 identical 34-key boundary with r=9, STASIS column fixpoint, FATE56 no-event column, residue census 55/330/330) (2026-11-17).
 # Refresh generated views for K0896 two-token z=6,y=12 full Grundy slice (2026-11-17).
+# Refresh generated views for K0897 three-branch REMO cap10 r=11 boundary (Theorem I r=11 identical 34-key boundary with r=9/r=10, STASIS3 three-column det-flag fixpoint with the new survivor-mask full-column fixpoint vs r=10, FATE56 second consecutive no-event column, residue census 55/330/330 with the identical split to r=10) (2026-11-17).
