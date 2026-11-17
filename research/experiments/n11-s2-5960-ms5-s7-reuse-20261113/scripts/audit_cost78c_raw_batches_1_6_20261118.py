@@ -10,7 +10,8 @@ OUT=EXPERIMENT/"output"
 BASE_MAIN="232dd35d9a4de98baca7a7c77e0357d9908408a6"
 SOURCE_COMMITS=["c368cbe8bfa72462d480bc2e9dc7c7152907c339","500f8c86e53b0a49695fe5db9d31dcd9e6b9401d"]
 PINS={
- "claim":("class2-lane-cost78c-inflight-20261117.json","7c38b88e33d1c176bdedf582bea7138cfa6a067a"),
+ "claim":("class2-lane-cost78c-inflight-20261117-v1-archive.json","7c38b88e33d1c176bdedf582bea7138cfa6a067a"),
+ "claim_v2":("class2-lane-cost78c-inflight-20261118-v2-archive.json","8b7f055b2cc881d9b816532fb1450e7f88455ef7"),
  "census":("class2-lane-next-target-presweep-1473-v11-20261117.json","1e2b6a2b688db1a93098edea62b5793b54efaaba"),
  "geometry":("class2-lane-cost78c-claim-structure-audit-20261118.json","ff11e54923b0b88941e4a50c5770f09e74863013"),
  "batch1":("class2-lane-cost78c-raw-batch1-20261117.jsonl","e7eaa4b466a71630b956ffba792f2bde1dd28957"),
@@ -40,6 +41,7 @@ def canon(mask:int)->int: return min(images(mask))
 def hx(mask:int)->str: return f"{mask:032x}"
 def main()->None:
  claim=json.loads(read_pin("claim"))
+ claim_v2=json.loads(read_pin("claim_v2"))
  census=json.loads(read_pin("census"))
  geometry=json.loads(read_pin("geometry"))
  batches=[[json.loads(line) for line in read_pin(f"batch{i}").decode().splitlines() if line.strip()] for i in range(1,7)]
@@ -71,6 +73,11 @@ def main()->None:
   and selected["sweep_bits"]==claim["engine_candidate_bits"]["open_bits"]
   and [x["bit"] for x in selected["confirmation_bits"]]==claim["engine_candidate_bits"]["confirmation_bits"])
  stale="batches_run 0" in claim["status"]
+ claim_v2_ok=(claim_v2["batches_run"]==6 and claim_v2["open_bits_completed"]==54
+  and claim_v2["open_bits_remaining"]==12
+  and claim_v2["actual_execution"]["win7_d10_bits"]==[1,4,9,30,49,69,75,79,100]
+  and len(claim_v2["actual_execution"]["refuted_d10_bits"])==45
+  and claim_v2["actual_execution"]["audit_git_blob_sha"]=="d8e5f9b70a0f2e3b027ded8322fa1a083193f73f")
  checks={
   "six_batches_nine_bits_each":{"ok":all(len(b)==10 and sum(isinstance(r.get("bit"),int) for r in b)==9 for b in batches),"record_counts":[len(b) for b in batches]},
   "exact_open_prefix_54":{"ok":bits==expected,"bits":bits,"expected":expected},
@@ -88,9 +95,11 @@ def main()->None:
   "geometry_audit_prior_pass":{"ok":geometry["all_pass"] and all(r["bit"] in geometry["geometry"]["legal_candidate_bits"] for r in rows)},
   "census_selection_matches_claim":{"ok":census_ok,"chain_head":census["chain_head"],"selected":selected["s6_hex"]},
   "claim_stale_vs_published_raw":{"ok":stale and len(batches)==6,"claim_says_batches_run_zero":stale,"raw_batches":6},
+  "claim_v2_reconciles_raw_batches":{"ok":claim_v2_ok,"batches_run":claim_v2["batches_run"],
+   "open_bits_completed":claim_v2["open_bits_completed"],"open_bits_remaining":claim_v2["open_bits_remaining"]},
  }
  assert all(x["ok"] for x in checks.values()),checks
- pins={"claim":PINS["claim"][1],"census":PINS["census"][1],"geometry":PINS["geometry"][1],**{f"batch{i}":PINS[f"batch{i}"][1] for i in range(1,7)}}
+ pins={"claim":PINS["claim"][1],"claim_v2":PINS["claim_v2"][1],"census":PINS["census"][1],"geometry":PINS["geometry"][1],**{f"batch{i}":PINS[f"batch{i}"][1] for i in range(1,7)}}
  result={
   "schema":"n11-cost78c-raw-batches-1-6-audit-20261118-v1","date":"2026-11-18",
   "base_main_before_audit":BASE_MAIN,"source_commits":SOURCE_COMMITS,
@@ -100,7 +109,13 @@ def main()->None:
   "batch_summaries":batch_summaries,"per_bit":per_bit,
   "totals":{"candidate_bits":len(rows),"candidate_nodes":candidate_nodes,"pilot_controls":len(pilots),"pilot_nodes":pilot_nodes,
    "all_nodes":candidate_nodes+pilot_nodes,"win7_d10_bits":[x["bit"] for x in wins],"refuted_d10_bits":[x["bit"] for x in refuted],"capped_bits":[r["bit"] for r in rows if r["capped"] is True]},
-  "claim_reconciliation":{"claim_status":claim["status"],"batches_run_text_says_zero":stale,"raw_batches_present":6,"claim_not_updated_in_this_audit":True},
+  "claim_reconciliation":{"claim_status_at_audit":claim["status"],"batches_run_text_says_zero":stale,
+   "raw_batches_present":6,"claim_v1_not_updated_at_audit_time":True,
+   "claim_v2_status":claim_v2["status"],"claim_v2_batches_run":claim_v2["batches_run"],
+   "claim_v2_open_bits_remaining":claim_v2["open_bits_remaining"],
+   "claim_v2_archive_blob_sha":PINS["claim_v2"][1],
+   "claim_v2_current_path":"research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-inflight-20261117.json",
+   "claim_v2_commit_sha":"275a37b8e3cb76d28224659e68e6e73f41fed76b"},
   "independent_checks":{"v15_crosscheck":"NOT RUN","certificate_extraction":"NOT RUN","receipt_fold":"NOT RUN"},
   "checks":checks,"all_pass":True,"failures":[],
   "interpretation_guard":"These are v17 raw per-root depth-10 results for the first 54 of 66 open candidate bits only. loss=true maps to WIN7-D10 under the pinned claim semantics; loss=false with capped=false maps to REFUTED-D10, not a LOSS proof. No independent v15 cross-check or certificate extraction is included here. No S6 row or family row is closed by these raw batches. Standard 11x11 remains UNKNOWN."
