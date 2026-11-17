@@ -1,0 +1,32 @@
+{
+ "schema": "n11-class2-lane-fixb-worker-split-memo-merge-73k-claim-20261117-v1",
+ "date": "2026-11-17",
+ "lane": "n11 class2-lane long-term (cost73k)",
+ "status": "CLAIMED_IN_PROGRESS",
+ "claim": "Measure the fixB engine (both K0907 memo bugs fixed: Int32Array memo keys + sentinel-aware negative bounds) in the K0909 worker-split merge configuration, in this session.",
+ "base_head": "7153fe5827d6d55b64877d9de9b91b9bf9bb616b",
+ "design_pins": {
+  "extractor_git_blob": "52bcaf509ea12fad4c936501d30d26b5b66c0085",
+  "worker_split_driver_git_blob": "2a95d9527afa3c1a24685b697c822f451aae58a5",
+  "legal_git_blob": "8e97082c42838c7a4a4b6d2dd235276c8d43ab9a",
+  "manifest_git_blob": "0892aed07d187ae2fb3b4b90a21c7adbc1002b62",
+  "fixb_battery_script_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/measure_fresh_battery_fixed_memo_73k_20261117.py",
+  "fixb_battery_output_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-fixed-memo-battery-73k-20261117.json",
+  "published_2way_orchestrator_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/measure_worker_split_memo_merge_73k_20261117.py"
+ },
+ "planned_stages": [
+  "build fixB ms23/ms24 variants = verbatim extractor + MS substitution + Int32Array memo keys + sentinel-aware nowin/nolose updates + the published dump/seed export block (line-level changes asserted by exact counts, blob-pinned base)",
+  "fixB band ms23 single-process reference run (all 22 bits, memo carried): first fixB band-wide measurement, per-bit series, final occupied, full KYOENWM1 dump",
+  "fixB 2-way worker split at the published 73/76 bit boundary (A: bits<=73, B: bits>=76, fresh processes, MS=1<<23), per-bit nodes, KYOENWM1 dumps, certificate byte-identity gates",
+  "dump structure analysis: duplicate-key census on the fixed engine (expect records==distinct, max copies 1: full-band confirmation of the K0907 bug-A mechanism)",
+  "sort-based distinct+merge with LIVE nowin/nolose bounds: internal and cross conflict detection (win_and_lose, win_le_nowin, lose_le_nolose) exercised naturally for the first time, merged KYOENWM2 seed, merge determinism",
+  "fixB merged-seed seedrun at MS=1<<24 (all 22 bits): seed insertion failures vs the light-sim prediction, record-identity gate, certificates 22/22 byte-identical",
+  "unseeded fixB band ms24 reference run for the seed-benefit ratio",
+  "band-table vs merged-table distinct-set comparison (merge non-closure under the fixed engine)"
+ ],
+ "batches_run": 0,
+ "non_overlap": "The 8-way verbatim worker-split claim (b8c76a4d) and the hybrid seed union measurement claim (da276db1) by parallel sessions are NOT touched; this claim is the fixB engine axis only. The cost74i sweep claim (7153fe58) and the r=9/r=10 REMO lanes are not touched. Adoption of fixB as a production extractor remains a separate lane decision; this work is measurement only.",
+ "interpretation_guard": "Claim in progress; no measurement batches completed yet. No new WIN/LOSS verdicts, no certificate byte changes, no manifest closures. Standard 11x11 remains UNKNOWN.",
+ "session_note": "Executed in the agent execution environment (Node 22.20.0, Python 3.12.14, same environment class as the published K0909/K0907 measurements). All inputs are rebuilt from pinned blobs; the orchestrator is resumable with checkpointed state.",
+ "last_checked_main": "7153fe5827d6d55b64877d9de9b91b9bf9bb616b"
+}
