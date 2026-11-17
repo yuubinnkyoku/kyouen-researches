@@ -486,7 +486,7 @@ def assemble_audit(no_cache):
            } for r in R_REPRO})
 
     audit = {
-        "item": "K0921",
+        "item": "K0922",
         "title": "Minimal period of the uniform-board REMO counting "
                  "recursion is exactly lcm(1..r) for every r = 10..16 "
                  "(machine, both columns; with LEMMA DIV the necessity "

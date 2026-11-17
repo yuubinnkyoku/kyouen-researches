@@ -1,7 +1,7 @@
 # 一様盤REMO計数再帰の最小周期（r=2..16・両列・割り切り補題DIV）
 
 実験: `remo-uniform-minimal-period-20261117`（2026-11-17）
-対応項目: K0921
+対応項目: K0922
 
 ## 命題
 
@@ -107,4 +107,4 @@ python3 verify_remo_uniform_minimal_period.py --no-cache  # 全再計算・約5-
 新規スイープなし・決定的）。assemble二重実行でbyte同一。
 2回の別プロセス実行（うち1回は `--no-cache` 全再計算・実行環境
 リセットを1回挟む）で監査JSON byte同一を確認
-（監査JSON sha256 `f4a00357…`・12,211 bytes）。
+（監査JSON sha256 `3c9ee621…`・12,211 bytes）。
