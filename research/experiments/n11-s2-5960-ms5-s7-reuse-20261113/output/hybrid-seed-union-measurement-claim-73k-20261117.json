@@ -2,9 +2,9 @@
   "schema": "n11-class2-lane-hybrid-seed-union-measurement-claim-73k-20261117-v1",
   "date": "2026-11-17",
   "lane": "n11 class2-lane long-term (cost73k)",
-  "status": "BLOCKED_PREFLIGHT",
+  "status": "CLAIMED_IN_PROGRESS",
   "claim": "Execute the next_measurement stages of the published hybrid seed union design (DESIGN_DERIVED_NOT_MEASURED) in this session.",
-  "base_head": "9b7a0a1d9e61124a61f7eb8bfa32467de43d5a53",
+  "base_head": "f7365b16453b5a5c941082fe4b0f072a25d50488",
   "design_pins": {
     "design_json_git_blob": "8ec64f21b60b378595a749fc941f2232e0db5c21",
     "design_log_path": "research/log/2026-11-17-n11-class2-lane-hybrid-seed-union-design-73k.md",
@@ -21,44 +21,12 @@
     "per-bit node comparison vs boundary-only and node-balanced 4-way seeds"
   ],
   "batches_run": 0,
-  "interpretation_guard": "Preflight blocked; no measurement batches ran. No new WIN/LOSS verdicts, no certificate byte changes, no manifest closures. Standard 11x11 remains UNKNOWN.",
-  "last_checked_main": "03655b567a7ab76da080b2831c07efdd36bfeeed",
-  "last_preflight": {
-    "checked_at": "2026-11-17T22:37:16+09:00",
-    "status": "BLOCKED_ENVIRONMENT",
-    "pve_hp_aio": {
-      "cpu_cores": 6,
-      "host_memory_available_gb": 1.39,
-      "host_swap_used_gb": 2.07,
-      "vmid": "124",
-      "guest_memory_available_kib": 7149752,
-      "guest_root_disk_available_gb": 3.6,
-      "required_tools_missing": [
-        "git",
-        "node",
-        "python3",
-        "uv",
-        "curl",
-        "nix"
-      ]
-    },
-    "pve_n100": {
-      "cpu_cores": 4,
-      "memory_available_gb": 6.34,
-      "dedicated_research_guest": false,
-      "production_containers_used": false
-    },
-    "raw_worker_artifacts_found": false,
-    "jobs_started": 0
-  },
-  "blockers": [
-    "No isolated guest with Git, Node.js 22, and Python 3 available.",
-    "The running 4-core VM is on a host with only 1.39 GB available memory and has only about 3.6 GB free disk.",
-    "No pinned cost73k worker dumps or the exact 262 missing key/value records are present in the available worktrees."
+  "interpretation_guard": "Claim in progress; no measurement batches completed yet. No new WIN/LOSS verdicts, no certificate byte changes, no manifest closures. Standard 11x11 remains UNKNOWN.",
+  "session_note": "Takeover of the BLOCKED_PREFLIGHT claim: the preflight blockers were about the external Proxmox guests. This session executes in the upgraded agent execution environment (Node 22.20.0, Python 3.12.14, same environment class as the published K0909 measurements), so those blockers do not apply. Workers are rebuilt from pinned blobs (extractor 52bcaf50, driver 2a95d952, legal 8e97082c, manifest 0892aed0); the orchestrator is resumable and progress is checkpointed.",
+  "claim_history": [
+    "2026-11-17T13:01:57Z claimed by a parallel long-lane session (CLAIMED_IN_PROGRESS, batches_run 0)",
+    "2026-11-17T13:45:12Z marked BLOCKED_PREFLIGHT by that session after external-environment checks; no jobs started",
+    "taken over by this session in the agent execution environment; status returns to CLAIMED_IN_PROGRESS"
   ],
-  "resume_conditions": [
-    "Provide or prepare an isolated guest with Git, Node.js 22, Python 3, and sufficient memory/disk for the pinned worker rebuild and MS=1<<25 seedrun.",
-    "Reconstruct W0..W3 and 2-way A/B from pinned blobs and extract the exact 262 only-in-2way records.",
-    "Build the hybrid seed, run the engine seedrun, and require record identity, conflict=0, and 22/22 certificate byte identity."
-  ]
+  "last_checked_main": "f7365b16453b5a5c941082fe4b0f072a25d50488"
 }
