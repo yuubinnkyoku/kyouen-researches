@@ -1,0 +1,144 @@
+{
+  "schema": "n11-class2-lane-hybrid-seed-union-independent-verification-73k-20261117-v1",
+  "date": "2026-11-17",
+  "lane": "n11 class2-lane long-term (cost73k)",
+  "purpose": "Independent artifact-level verification of the completed hybrid seed union measurement by the claim-holding session. Two concurrent long-lane sessions had independently executed the full pipeline in the shared durable scratch; this session verified every artifact directly (file bytes, structure, certificates, record identity, per-bit arithmetic, cross-run agreement) before publication.",
+  "claim_context": {
+    "claim_json": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/hybrid-seed-union-measurement-claim-73k-20261117.json",
+    "history": [
+      "2026-11-17T13:01:57Z claimed by a parallel long-lane session (CLAIMED_IN_PROGRESS, batches_run 0)",
+      "2026-11-17T13:45:12Z marked BLOCKED_PREFLIGHT by that session (external Proxmox guest environment; no jobs started)",
+      "2026-11-17T14:06:02Z claim taken over in the agent execution environment (commit da276db1)",
+      "the takeover session started its own full run; all six workers completed byte-identically to the published values, then a polling-command timeout reset the execution environment and destroyed the volatile workspace (recorded as experimental fact; worker values survived in the durable progress log)",
+      "two other concurrent hourly-lane sessions completed the full measurement independently in the shared durable scratch (outputs finalized 14:10:02Z and 14:10:41Z, gates_all_pass=True in both)",
+      "this session (post-reset) verified both completed runs' artifacts and publishes the measurement on behalf of the claim"
+    ]
+  },
+  "runs_verified": [
+    {
+      "output": "output/hybrid-seed-union-73k-20261117.json",
+      "orchestrator": "scripts/measure_hybrid_seed_union_73k_20261117.py",
+      "completed": "2026-11-17T14:10:02Z",
+      "gates_all_pass": true,
+      "lines": 824
+    },
+    {
+      "output": "output/hybrid-seed-union-measurement-73k-20261117.json",
+      "orchestrator": "scripts/measure_hybrid_seed_union_73k_independent_20261117.py",
+      "completed": "2026-11-17T14:10:41Z",
+      "gates_all_pass": true,
+      "lines": 957,
+      "note": "independently written orchestrator (different implementation, different output schema); additionally re-ran the published boundary MS=1<<24 FINAL4 seedrun inside the same pipeline as an in-run anchor (76,599,320 nodes, seed failed 14,657, 22/22 certificates byte-identical, per-bit values match the published boundary measurement)"
+    }
+  ],
+  "file_checks": {
+    "seed2_only_262": {
+      "lines": 262,
+      "bytes": 13356,
+      "md5": "1d97a0d2167506168faae5f3898ff952",
+      "sha256": "8195de517e9a95313b8f5d98f88141e01c90af1beb1728cac4cd7f43168d0728",
+      "matches_run_outputs": true,
+      "deterministic_reextraction_byte_identical": true
+    },
+    "hybrid_seed": {
+      "lines_total": 4975528,
+      "records": 4975527,
+      "bytes": 253874013,
+      "md5": "d24198ea37b31ffbd85ead4ba230560b",
+      "sha256": "c4f76b07cdacf61ebc664d2a4dc49d315a26ee096b3512ebe310168dc80385a6",
+      "header": "single KYOENWM2 header line (the published FINAL4 header verbatim)",
+      "tail_last_262_records_byte_identical_to_seed2_only_file": true,
+      "tail_bytes": 13356,
+      "extra_bytes_arithmetic": "253874013 - 253860657 = 13356 (hybrid = published FINAL4 seed bytes || 262-record file bytes, i.e. the byte-prefix property of the design)",
+      "prefix_final4_records": 4975265,
+      "prefix_strictly_key_sorted": true,
+      "prefix_sort_violations": 0,
+      "initial_load_factor_ms_1_25": 0.1482822597026825,
+      "load_factor_matches_design": true
+    }
+  },
+  "certificate_check": {
+    "byte_identical_vs_published": "22/22",
+    "method": "cmp against research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/class2-lane-cost73k-certificates (19 certificates stored as part1of2+part2of2 concatenated, 3 stored whole)"
+  },
+  "seedrun25h_checks": {
+    "total_nodes": 72761010,
+    "per_bit_count": 22,
+    "per_bit_sum_equals_total": true,
+    "final_occupied": 14065965,
+    "seed": {"seeded": 4975527, "inserted": 4975507, "failed": 20},
+    "wall_ms": 241542,
+    "byte_identical_certificates": 22,
+    "vs_nb4_seedrun25_nodes": 72745351,
+    "vs_nb4_seedrun25_ratio": 1.0002152577420378,
+    "vs_final4_seedrun24_nodes": 76599320,
+    "vs_final4_seedrun24_ratio": 0.9498910695290768,
+    "vs_nb4_seedrun24_nodes": 76903818,
+    "vs_nb4_seedrun24_ratio": 0.9461300087857797,
+    "vs_twoway_seedrun24_nodes": 85747496,
+    "vs_twoway_seedrun24_ratio": 0.8485496765993027,
+    "bit95_nodes": 11857737,
+    "bit95_memo_state_invariant_confirmed_again": true
+  },
+  "sim_checks": {
+    "ms24_failed": 14657,
+    "ms24_note": "equals the published boundary FINAL4 seedrun24 anchor exactly and stays under the design upper bound 14,919 (the appended 262 records do not add a single failure at MS=1<<24)",
+    "ms25_failed": 20,
+    "ms25_equals_engine_seed_failed": true,
+    "ms26_failed": 0
+  },
+  "record_identity_recomputed": {
+    "method": "independent implementation: the hybrid seed records re-sorted by key, then a single streaming key+value merge against the key-sorted distinct-combined final dump (a global sort avoids the unordered-tail pitfall)",
+    "present": 4975507,
+    "missing": 20,
+    "value_violations": 0,
+    "missing_keys_equal_run_a_missing_keys": true,
+    "missing_keys_equal_missing_true_txt": true,
+    "seedrun_dump_stats": {"records": 14065965, "distinct": 5437008, "dup_keys": 884043, "max_copies": 64, "conflicts": {}},
+    "missing_equals_seed_failed": true
+  },
+  "cross_run_agreement": {
+    "hybrid_seed_md5": "d24198ea37b31ffbd85ead4ba230560b",
+    "hybrid_seed_sha256": "c4f76b07cdacf61ebc664d2a4dc49d315a26ee096b3512ebe310168dc80385a6",
+    "hybrid_seed_bytes": 253874013,
+    "hybrid_key_count": 4975527,
+    "tail262_sha256": "8195de517e9a95313b8f5d98f88141e01c90af1beb1728cac4cd7f43168d0728",
+    "partition": {"shared": 4291637, "only_in_final4": 683628, "only_in_seed2": 262, "value_violations": 0},
+    "total_nodes": 72761010,
+    "per_bit_nodes_identical_22_of_22": true,
+    "final_occupied": 14065965,
+    "seed_stats_identical": {"seeded": 4975527, "inserted": 4975507, "failed": 20},
+    "record_identity_identical": {"present": 4975507, "missing": 20, "value_violations": 0},
+    "certificate_byte_identity_22_of_22": true
+  },
+  "worker_stage_reproduction_by_claim_session": {
+    "note": "the claim session's own run in the volatile workspace, before the environment reset; all six workers and all six distinct passes matched the published and boundary-measurement values exactly",
+    "workerA": {"total_nodes": 48482011, "final_occupied": 5263320, "certs_byte_identical": "11/11", "distinct": 2619833},
+    "workerB": {"total_nodes": 71480136, "final_occupied": 6242804, "certs_byte_identical": "11/11", "distinct": 2554155},
+    "w0": {"total_nodes": 27424708, "final_occupied": 3705871, "certs_byte_identical": "6/6", "distinct": 1869417},
+    "w1": {"total_nodes": 20252951, "final_occupied": 3180413, "certs_byte_identical": "5/5", "distinct": 1480715},
+    "w2": {"total_nodes": 36575507, "final_occupied": 4869649, "certs_byte_identical": "6/6", "distinct": 1823669},
+    "w3": {"total_nodes": 27700017, "final_occupied": 3916795, "certs_byte_identical": "5/5", "distinct": 1780518}
+  },
+  "incidents_recorded_as_experimental_facts": [
+    "claim session environment reset: a sleep-300 polling command hit the 300-second hard cap; the volatile workspace was destroyed; all durable-progress checkpoints survived",
+    "run A first record-identity pass mis-compared the seed because the hybrid seed file is a FINAL4-sorted prefix with an unordered 262-record tail appended; a naive single sorted merge join reported missing 282 (= 20 true failed inserts + 262 tail records); fixed by sorting the seed records before the external merge; the archived .run1.json is byte-identical (md5 9da5ccc80d02cfa86ae8a72a56f3303d) to the final JSON",
+    "run B encoded the same lesson structurally from the start: prefix merge join on the FINAL4 part (present 4,975,245 / missing 20 / violations 0) plus a tail hash join on the 262 appended records (present 262 / missing 0 / violations 0)",
+    "seed-tail concatenation is now a documented verification pitfall for any future concatenated-seed record-identity gate"
+  ],
+  "gates": {
+    "seed2_only_262_file_matches": true,
+    "hybrid_seed_file_matches": true,
+    "hybrid_tail_bytes_identical": true,
+    "hybrid_prefix_sorted": true,
+    "hybrid_load_factor_matches_design": true,
+    "certs_22_of_22_byte_identical": true,
+    "seedrun_per_bit_sum_equals_total": true,
+    "sim25_equals_engine_failed": true,
+    "record_identity_missing_equals_failed": true,
+    "record_identity_no_violations": true,
+    "cross_run_full_agreement": true,
+    "all_gates_pass": true
+  },
+  "interpretation_guard": "MEASUREMENT AND VERIFICATION ONLY. No new WIN/LOSS verdicts; no manifest row opened or closed; certificate bytes unchanged (the 22/22 byte-identity gates re-derive the published certificates). The repo-verbatim extractor is unmodified in the repo (published determinism chains). WIN7-D10 proves a first-player win within depth 10 from the individual 7-stone roots only; REFUTED-D10 is not a LOSS proof. The 11x11 empty board, both two-stone roots {49,60} and {59,60}, S2 {59,60} and classes 1/2/4 all remain UNKNOWN."
+}

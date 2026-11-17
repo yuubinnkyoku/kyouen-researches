@@ -1,0 +1,327 @@
+{
+ "cascade_merge": {
+  "cross_conflicts": {},
+  "final_occupied_after": 4975265,
+  "final_seed_md5": "35ccec0eb01e9b1b3719fa7e0c6ff4e9",
+  "final_shared": 1137932,
+  "m01_occupied_after": 2877187,
+  "m23_occupied_after": 3236010
+ },
+ "cleanup_facts": {
+  "drop_caches": "ok",
+  "removed_bytes": 4605086000
+ },
+ "date": "2026-11-17",
+ "distinct_pass": {
+  "w0": {
+   "conflicts": {},
+   "distinct": 1869417,
+   "dup_keys": 229261,
+   "max_copies": 64,
+   "records": 3705871
+  },
+  "w1": {
+   "conflicts": {},
+   "distinct": 1480715,
+   "dup_keys": 186951,
+   "max_copies": 64,
+   "records": 3180413
+  },
+  "w2": {
+   "conflicts": {},
+   "distinct": 1823669,
+   "dup_keys": 348428,
+   "max_copies": 64,
+   "records": 4869649
+  },
+  "w3": {
+   "conflicts": {},
+   "distinct": 1780518,
+   "dup_keys": 263480,
+   "max_copies": 64,
+   "records": 3916795
+  },
+  "workerA": {
+   "conflicts": {},
+   "distinct": 2619833,
+   "dup_keys": 325765,
+   "max_copies": 64,
+   "records": 5263320
+  },
+  "workerB": {
+   "conflicts": {},
+   "distinct": 2554155,
+   "dup_keys": 428403,
+   "max_copies": 64,
+   "records": 6242804
+  }
+ },
+ "final4_vs_seed2": {
+  "only_in_final4": 683628,
+  "only_in_seed2": 262,
+  "shared": 4291637,
+  "value_violations": 0
+ },
+ "gates": {
+  "bit95_nodes_invariant_11857737": true,
+  "cascade_cross_conflicts_zero": true,
+  "final4_vs_seed2_only_in_final4": true,
+  "final4_vs_seed2_only_in_seed2_262": true,
+  "final4_vs_seed2_shared": true,
+  "final4_vs_seed2_value_violations_zero": true,
+  "hybrid_byte_prefix_gate": true,
+  "hybrid_extract_count_262": true,
+  "hybrid_extract_deterministic": true,
+  "hybrid_record_count_4975527": true,
+  "hybrid_size_sum_gate": true,
+  "internal_conflicts_zero": true,
+  "merge2_deterministic": true,
+  "merge4_deterministic": true,
+  "pairwise_cross_conflicts_zero": true,
+  "record_identity_missing_equals_seed_failed": true,
+  "record_identity_no_violations": true,
+  "record_identity_present_equals_inserted": true,
+  "repro_final4_occupied_after": true,
+  "repro_final4_seed_md5": true,
+  "repro_merged2_occupied_after": true,
+  "repro_merged2_seed_md5": true,
+  "repro_merged2_shared": true,
+  "repro_workerA_occ": true,
+  "repro_workerA_per_bit_nodes": true,
+  "repro_workerA_per_bit_occ": true,
+  "repro_workerA_total": true,
+  "repro_workerB_occ": true,
+  "repro_workerB_per_bit_nodes": true,
+  "repro_workerB_per_bit_occ": true,
+  "repro_workerB_total": true,
+  "seedrun25_byte_identical_22": true,
+  "seedrun25_seed_failed_equals_sim25": true,
+  "seedrun25_seed_failure_below_0.1pct": true,
+  "sim24_within_design_upper_bound": true,
+  "sim25_failure_below_0.1pct": true,
+  "w0_final_occ": true,
+  "w0_per_bit_nodes": true,
+  "w0_per_bit_occ": true,
+  "w0_total": true,
+  "w2_final_occ": true,
+  "w2_per_bit_nodes": true,
+  "w2_per_bit_occ": true,
+  "w2_total": true,
+  "worker_byte_identical_A": true,
+  "worker_byte_identical_B": true,
+  "worker_byte_identical_w0": true,
+  "worker_byte_identical_w1": true,
+  "worker_byte_identical_w2": true,
+  "worker_byte_identical_w3": true
+ },
+ "gates_all_pass": true,
+ "hybrid_extract": {
+  "count": 262,
+  "deterministic": true,
+  "first_keys": [
+   "00000400 1206000b 80000080 00050400",
+   "00000400 12060080 09000082 00050400",
+   "00000400 12061000 00000a80 00220404",
+   "00000400 12061008 00000080 00300c00",
+   "00000400 12061008 01000080 00300c00"
+  ],
+  "last_keys": [
+   "84004400 12460000 00000084 00010000",
+   "84004400 12460000 01000084 00010000",
+   "84004400 13060000 00800084 00410000"
+  ],
+  "md5": "1d97a0d2167506168faae5f3898ff952",
+  "sha256": "8195de517e9a95313b8f5d98f88141e01c90af1beb1728cac4cd7f43168d0728"
+ },
+ "hybrid_seed": {
+  "byte_prefix_gate": true,
+  "extra_bytes": 13356,
+  "final4_bytes": 253860657,
+  "header_note": "the single header line is the FINAL4 header verbatim (A=m01 B=m23); the appended 262 records come after the FINAL4 records, so the hybrid file is byte-prefix-identical to the published-boundary FINAL4 seed file",
+  "hybrid_bytes": 253874013,
+  "initial_load_factor_ms_1_25": 0.1482822597026825,
+  "key_count": 4975527,
+  "md5": "d24198ea37b31ffbd85ead4ba230560b",
+  "sha256": "c4f76b07cdacf61ebc664d2a4dc49d315a26ee096b3512ebe310168dc80385a6",
+  "size_sum_gate": true
+ },
+ "inputs": {
+  "boundary_json_blob": "b97c9334f04f98f6ba7bb8a4c8b1de9689810d5e",
+  "boundary_orchestrator_blob": "5ac1e3c0ec47ec3f9ae63ed709362feb5a1df213",
+  "design_json_blob": "8ec64f21b60b378595a749fc941f2232e0db5c21",
+  "driver_blob": "2a95d9527afa3c1a24685b697c822f451aae58a5",
+  "engine_variants": "verbatim + MS line substitution + dump/seed export block only; ms25 variant additionally fsync-hardened dumpMemo (bytes unchanged); no key-sign or negative-bound fixes",
+  "extractor_blob": "52bcaf509ea12fad4c936501d30d26b5b66c0085",
+  "legal_blob": "8e97082c42838c7a4a4b6d2dd235276c8d43ab9a",
+  "manifest_blob": "0892aed07d187ae2fb3b4b90a21c7adbc1002b62",
+  "seedrun_ms": 25,
+  "worker_ms": 23
+ },
+ "interpretation_guard": "MEASUREMENT ONLY. No new WIN/LOSS verdicts; no manifest row opened or closed; certificate bytes unchanged. The repo-verbatim extractor is unmodified in the repo (published determinism chains). WIN7-D10 proves a first-player win within depth 10 from the individual 7-stone roots only; REFUTED-D10 is not a LOSS proof. The 11x11 empty board, both two-stone roots {49,60} and {59,60}, S2 {59,60} and classes 1/2/4 all remain UNKNOWN.",
+ "lane": "n11 class2-lane long-term (cost73k)",
+ "purpose": "Hybrid seed union measurement (K0909 follow-up; executes the published DESIGN_DERIVED_NOT_MEASURED next_measurement): rebuild the published boundary 4-way pipeline from pinned blobs, extract the 262 only-in-2way records, build the hybrid union seed, simulate MS=1<<24/25/26 insertion failures, and run the full 22-bit band with the verbatim engine at MS=1<<25 seeded from the hybrid file.",
+ "record_identity": {
+  "identity_method": "external_sort_merge",
+  "missing": 20,
+  "missing_keys": [
+   "21000400 12060202 00000080 00000000",
+   "21000400 12060202 08000080 00000000",
+   "21000400 12060202 40000080 00000000",
+   "21000401 12060200 09000080 00200000",
+   "22200400 12060202 00800080 00000000",
+   "22200400 12060202 40800080 00000000",
+   "30200401 12060000 00800880 00000000",
+   "30200401 12060000 02800880 00000000",
+   "80200401 1a060800 10000080 00000000",
+   "80200401 52060000 00000880 00000000",
+   "80200401 52060800 00000080 00000000",
+   "80200401 52060800 10000080 00000000",
+   "82200401 12060800 00000080 00000000",
+   "82200401 12060800 10000080 00000000",
+   "82200401 1a060800 10000080 00000000",
+   "84200401 12060800 00000080 00000000",
+   "84200401 52060000 00000880 00000000",
+   "84200401 52060800 00000080 00000000",
+   "90000480 1a060400 00000080 00000004",
+   "90200401 1a060000 10000080 00000000"
+  ],
+  "present": 4975507,
+  "seedrun_dump_stats": {
+   "conflicts": {},
+   "distinct": 5437008,
+   "dup_keys": 884043,
+   "max_copies": 64,
+   "records": 14065965
+  },
+  "value_violations": 0
+ },
+ "repro_2way": {
+  "merge_deterministic": true,
+  "merge_occupied_after": 4291899,
+  "merge_shared": 882089,
+  "seed_md5": "e7c2c17e7a91d8ea17f433f3bb482f29",
+  "workerA_total_nodes": 48482011,
+  "workerB_total_nodes": 71480136
+ },
+ "schema": "n11-class2-lane-hybrid-seed-union-measurement-73k-20261117-v2",
+ "seedrun25_hybrid": {
+  "byte_identical": 22,
+  "final_occupied": 14065965,
+  "load_factor_final": 0.4191984236240387,
+  "per_bit_nodes": {
+   "0": 2602793,
+   "103": 3679980,
+   "105": 2290667,
+   "11": 1695972,
+   "112": 3088399,
+   "117": 5354456,
+   "15": 5209346,
+   "35": 3038928,
+   "39": 1168474,
+   "41": 773641,
+   "44": 2505714,
+   "58": 2205127,
+   "62": 1192982,
+   "7": 2804749,
+   "73": 4763454,
+   "76": 2325919,
+   "87": 4677740,
+   "89": 2877560,
+   "94": 3336800,
+   "95": 11857737,
+   "97": 1896429,
+   "98": 3414143
+  },
+  "per_bit_ratio_vs_final4_seedrun24": {
+   "0": 0.9412454140923203,
+   "103": 0.9336486782710356,
+   "105": 0.9473932145865999,
+   "11": 0.9558810765112019,
+   "112": 0.9589856807282133,
+   "117": 0.9338593009802072,
+   "15": 0.9350538809428249,
+   "35": 0.9273127067736626,
+   "39": 0.9843809761300204,
+   "41": 0.9244248639903261,
+   "44": 0.984845947953637,
+   "58": 0.9725234935795095,
+   "62": 0.8961279626940732,
+   "7": 0.9255149524463829,
+   "73": 0.9380983056168083,
+   "76": 0.9281830284243006,
+   "87": 0.949601918473017,
+   "89": 0.9411098290698922,
+   "94": 0.9042896848969963,
+   "95": 1.0,
+   "97": 0.9275337438795888,
+   "98": 0.9641641902277834
+  },
+  "per_bit_ratio_vs_nb4_seedrun25": {
+   "0": 0.9939871027267888,
+   "103": 1.0294522864455364,
+   "105": 1.0345722002420827,
+   "11": 0.984493964070021,
+   "112": 1.0415135202217383,
+   "117": 1.0335259303353983,
+   "15": 0.991007145659053,
+   "35": 1.0001484296244467,
+   "39": 1.0022395427250028,
+   "41": 0.8550569584088118,
+   "44": 0.9992713977558094,
+   "58": 1.0066581695306458,
+   "62": 0.9758607827290485,
+   "7": 1.001196545866223,
+   "73": 1.000085029568245,
+   "76": 0.8682469610298081,
+   "87": 0.8685635132914501,
+   "89": 1.2578045637574504,
+   "94": 1.1993209790237438,
+   "95": 1.0,
+   "97": 1.1080566593689363,
+   "98": 0.8705597638214698
+  },
+  "published_reference": {
+   "final4_seedrun24_nodes": 76599320,
+   "nb4_seedrun24_nodes": 76903818,
+   "nb4_seedrun25_nodes": 72745351,
+   "twoway_seedrun24_nodes": 85747496
+  },
+  "seed": {
+   "failed": 20,
+   "inserted": 4975507,
+   "seeded": 4975527
+  },
+  "total_nodes": 72761010,
+  "vs_final4_seedrun24_nodes": 0.9498910695290768,
+  "vs_nb4_seedrun24_nodes": 0.9461300087857797,
+  "vs_nb4_seedrun25_nodes": 1.0002152577420378,
+  "vs_twoway_seedrun24_nodes": 0.8485496765993027
+ },
+ "sim": {
+  "ms24": {
+   "design_upper_bound": 14919,
+   "failed": 14657,
+   "seeded": 4975527
+  },
+  "ms25": {
+   "failed": 20,
+   "inserted": 4975507,
+   "load_factor": 0.14828166365623474,
+   "max_cluster": 71,
+   "own_cluster_ge64": 9,
+   "seeded": 4975527,
+   "spill_over_lt64": 11
+  },
+  "ms26": {
+   "failed": 0,
+   "seeded": 4975527
+  }
+ },
+ "workers_4way": {
+  "w0_total_nodes": 27424708,
+  "w1_total_nodes": 20252951,
+  "w2_total_nodes": 36575507,
+  "w3_total_nodes": 27700017,
+  "workers4_total_nodes": 111953183
+ }
+}
