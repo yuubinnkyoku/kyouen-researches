@@ -1,0 +1,50 @@
+{
+  "boards": {
+    "canonical_unique_states": 2181,
+    "labelled_unique_states": 67015,
+    "rows": [
+      {"canonical_cache_states":3,"grundy_counts":{"0":2,"1":2},"labelled_cache_states":4,"m":1,"safe_states":4,"w":2},
+      {"canonical_cache_states":4,"grundy_counts":{"0":4,"1":2},"labelled_cache_states":6,"m":2,"safe_states":6,"w":2},
+      {"canonical_cache_states":4,"grundy_counts":{"0":4,"1":2},"labelled_cache_states":6,"m":3,"safe_states":6,"w":2},
+      {"canonical_cache_states":4,"grundy_counts":{"0":4,"1":2},"labelled_cache_states":6,"m":4,"safe_states":6,"w":2},
+      {"canonical_cache_states":4,"grundy_counts":{"0":4,"1":2},"labelled_cache_states":6,"m":5,"safe_states":6,"w":2},
+      {"canonical_cache_states":4,"grundy_counts":{"0":4,"1":2},"labelled_cache_states":6,"m":6,"safe_states":6,"w":2},
+      {"canonical_cache_states":4,"grundy_counts":{"0":4,"1":2},"labelled_cache_states":6,"m":7,"safe_states":6,"w":2},
+      {"canonical_cache_states":4,"grundy_counts":{"0":4,"1":2},"labelled_cache_states":6,"m":8,"safe_states":6,"w":2},
+      {"canonical_cache_states":4,"grundy_counts":{"0":4,"1":4},"labelled_cache_states":8,"m":1,"safe_states":8,"w":3},
+      {"canonical_cache_states":9,"grundy_counts":{"0":13,"1":13},"labelled_cache_states":26,"m":2,"safe_states":26,"w":3},
+      {"canonical_cache_states":13,"grundy_counts":{"0":25,"1":19},"labelled_cache_states":44,"m":3,"safe_states":44,"w":3},
+      {"canonical_cache_states":17,"grundy_counts":{"0":26,"1":27,"2":9},"labelled_cache_states":62,"m":4,"safe_states":62,"w":3},
+      {"canonical_cache_states":21,"grundy_counts":{"0":43,"1":37},"labelled_cache_states":80,"m":5,"safe_states":80,"w":3},
+      {"canonical_cache_states":25,"grundy_counts":{"0":44,"1":45,"2":9},"labelled_cache_states":98,"m":6,"safe_states":98,"w":3},
+      {"canonical_cache_states":29,"grundy_counts":{"0":61,"1":55},"labelled_cache_states":116,"m":7,"safe_states":116,"w":3},
+      {"canonical_cache_states":33,"grundy_counts":{"0":62,"1":63,"2":9},"labelled_cache_states":134,"m":8,"safe_states":134,"w":3},
+      {"canonical_cache_states":5,"grundy_counts":{"0":8,"1":8},"labelled_cache_states":16,"m":1,"safe_states":16,"w":4},
+      {"canonical_cache_states":15,"grundy_counts":{"0":41,"1":40},"labelled_cache_states":81,"m":2,"safe_states":81,"w":4},
+      {"canonical_cache_states":28,"grundy_counts":{"0":117,"1":104},"labelled_cache_states":221,"m":3,"safe_states":221,"w":4},
+      {"canonical_cache_states":45,"grundy_counts":{"0":181,"1":172,"2":44,"3":36},"labelled_cache_states":433,"m":4,"safe_states":433,"w":4},
+      {"canonical_cache_states":66,"grundy_counts":{"0":365,"1":352},"labelled_cache_states":717,"m":5,"safe_states":717,"w":4},
+      {"canonical_cache_states":91,"grundy_counts":{"0":465,"1":456,"2":80,"3":72},"labelled_cache_states":1073,"m":6,"safe_states":1073,"w":4},
+      {"canonical_cache_states":120,"grundy_counts":{"0":757,"1":744},"labelled_cache_states":1501,"m":7,"safe_states":1501,"w":4},
+      {"canonical_cache_states":153,"grundy_counts":{"0":893,"1":884,"2":116,"3":108},"labelled_cache_states":2001,"m":8,"safe_states":2001,"w":4},
+      {"canonical_cache_states":6,"grundy_counts":{"0":16,"1":16},"labelled_cache_states":32,"m":1,"safe_states":32,"w":5},
+      {"canonical_cache_states":21,"grundy_counts":{"0":122,"1":121},"labelled_cache_states":243,"m":2,"safe_states":243,"w":5},
+      {"canonical_cache_states":49,"grundy_counts":{"0":496,"1":472},"labelled_cache_states":968,"m":3,"safe_states":968,"w":5},
+      {"canonical_cache_states":94,"grundy_counts":{"0":1067,"1":1066,"2":220,"3":220},"labelled_cache_states":2573,"m":4,"safe_states":2573,"w":5},
+      {"canonical_cache_states":160,"grundy_counts":{"0":2721,"1":2697},"labelled_cache_states":5418,"m":5,"safe_states":5418,"w":5},
+      {"canonical_cache_states":251,"grundy_counts":{"0":4132,"1":4131,"2":800,"3":800},"labelled_cache_states":9863,"m":6,"safe_states":9863,"w":5},
+      {"canonical_cache_states":371,"grundy_counts":{"0":8146,"1":8122},"labelled_cache_states":16268,"m":7,"safe_states":16268,"w":5},
+      {"canonical_cache_states":524,"grundy_counts":{"0":10757,"1":10756,"2":1740,"3":1740},"labelled_cache_states":24993,"m":8,"safe_states":24993,"w":5}
+    ],
+    "safe_state_queries_per_engine": 67015
+  },
+  "maximum_checks": 32,
+  "mismatches": 0,
+  "residual": {
+    "0": {"cache_states":30780,"states":30780},
+    "1": {"cache_states":30780,"states":30780}
+  },
+  "scope": "finite audit only; universal validity is supplied by the induction proof in report.md",
+  "theorem": "t=3, q=3w-3, pure-fiber all-safe-state Grundy classification",
+  "verifier_sha256": "7e2d66002fdd02a6f064e22e07d635103e6ed915f2ae1438f4a2126c704bf9e3"
+}
