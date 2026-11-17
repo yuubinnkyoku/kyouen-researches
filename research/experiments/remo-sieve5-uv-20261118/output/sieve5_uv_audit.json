@@ -1,0 +1,89 @@
+{
+  "all_ok": true,
+  "checks": {
+    "FRESHFAILS": {
+      "first": [],
+      "ok": true,
+      "total": 0
+    },
+    "FRESHPIN": {
+      "count": 1396,
+      "mismatches": 0,
+      "ok": true
+    },
+    "PIN": {
+      "ok": true,
+      "p_sha256": "58a414bc",
+      "uv_sha256": "8a3b318b"
+    },
+    "REDFRESH": {
+      "count": 1396,
+      "mismatches": 0,
+      "ok": true
+    },
+    "REDRECON": {
+      "count": 7998,
+      "mismatches": 0,
+      "ok": true
+    },
+    "S4BREAK": {
+      "count": 723,
+      "mismatches": 0,
+      "ok": true
+    },
+    "S5U": {
+      "count": 465,
+      "mismatches": 0,
+      "ok": true
+    },
+    "S5V": {
+      "count": 465,
+      "mismatches": 0,
+      "ok": true
+    },
+    "SIEVE3": {
+      "count": 1396,
+      "mismatches": 0,
+      "ok": true
+    },
+    "SPF": {
+      "count": 1396,
+      "mismatches": 0,
+      "ok": true
+    },
+    "TWIN30": {
+      "first": [],
+      "law1_census": {
+        "3": 267,
+        "5": 267,
+        "9": 267,
+        "15": 267,
+        "21": 266,
+        "25": 266,
+        "27": 266
+      },
+      "law2_census": {
+        "2": 267,
+        "4": 267,
+        "8": 267,
+        "14": 267,
+        "20": 267,
+        "24": 266,
+        "26": 266
+      },
+      "ok": true,
+      "violations": 0
+    }
+  },
+  "experiment": "remo-sieve5-uv-20261118",
+  "item": "K0932",
+  "m_fresh": 700,
+  "pins": {
+    "pc_p8000.json": "58a414bc31fb6266cc2d0e10000436e50f396135847bab5a32163cffff0b975e",
+    "pc_uv8000.json": "8a3b318bd26b8197c66fd55d79007654d2926a18af165132af8c194bc76d8ae2"
+  },
+  "scripts_sha256": {
+    "audit_build.py": "8956f26e6f641ed493f6548832280a2685409e9c5170f0a39d753203c1a68a90",
+    "sieve5_verify.py": "c49b52a320c3f525ce52f0b99ebe379dc11c484ce62ce9f08a6fe8bea992fdab"
+  }
+}
