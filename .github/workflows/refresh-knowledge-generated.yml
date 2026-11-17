@@ -261,6 +261,10 @@ jobs:
         run: |
           uv run --locked python research/experiments/remo-k-branch-cap10-r12-boundary-independent-check-20261117/check_k0898_cross_lane_agreement.py
           git diff --exit-code -- research/experiments/remo-k-branch-cap10-r12-boundary-independent-check-20261117/output/check_k0898_cross_lane_agreement_audit.json
+      - name: Audit K0902 three-branch REMO cap10 r=13 invariance
+        run: |
+          uv run --locked python research/experiments/remo-k-branch-cap10-r13-invariance-20261117/verify_remo_k_branch_cap10_r13_invariance.py
+          git diff --exit-code -- research/experiments/remo-k-branch-cap10-r13-invariance-20261117/output/remo_k_branch_cap10_r13_invariance_audit.json
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python tools/knowledge/build.py
@@ -563,3 +567,4 @@ jobs:
 # Refresh generated views for K0901 two-token z=6,y=14 full Grundy slice (2026-11-17).
 
 # Refresh generated views after K0901 y=14 index-label correction (2026-11-17).
+# Refresh generated views for K0902 three-branch REMO cap10 r=13 invariance (STASIS5 five-column classification fixpoint, three-column full-label fixpoint r=11..13, ARITH wraparound set equalities, Theorem J conjecture, Lemma C1, live L5 r=14/17 spot checks) (2026-11-17).
