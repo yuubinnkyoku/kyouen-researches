@@ -3,7 +3,7 @@
 
 Independent Python standard-library re-derivation of the cost-64h sweep facts
 from the eight raw batch JSONLs:
-  - candidate legality re-derived with scripts/legal_candidates.py (exact
+  - candidate legality re-derived with research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/legal_candidates.py (exact
     Bareiss 4x4 determinants, no floating point);
   - child safety (no 4-concyclic subset among the six stones) re-checked with
     the same determinant code over all 15 quadruples;
@@ -182,7 +182,7 @@ def main():
         "date": "2026-11-16",
         "independent_method": (
             "Python standard library re-derivation from raw batch JSONLs; "
-            "candidate legality cross-checked by scripts/legal_candidates.py "
+            "candidate legality cross-checked by research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/legal_candidates.py "
             "(exact Bareiss 4x4 determinants, no floating point); D4 "
             "canonicalization via the repo-standard canon imported verbatim "
             "from fold_projection_head1450_tool_20261116.py; open-parent "

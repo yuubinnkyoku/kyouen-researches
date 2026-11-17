@@ -94,7 +94,7 @@ def main() -> None:
                 "v15_crosscheck_a": "8ab7adcb37112cbcc442152a24d5ef27d7bb9c5d",
                 "v15_crosscheck_b": "61615975997c8599be39931069fab6a380447790"
             },
-            "raw_audit_json": "class2-lane-cost72d-raw-sweep-audit-20261117.json (git blob 6247569a7dca86053943701a3ae099e704e0cb31); audit script scripts/audit_cost72d_raw_batches_20261117.py (git blob 8d97fc10d499fe14c1a6fdd4e90003fbcf0f3d63)"
+            "raw_audit_json": "class2-lane-cost72d-raw-sweep-audit-20261117.json (git blob 6247569a7dca86053943701a3ae099e704e0cb31); audit script research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost72d_raw_batches_20261117.py (git blob 8d97fc10d499fe14c1a6fdd4e90003fbcf0f3d63)"
         }
     }
     d["certificates"] = {

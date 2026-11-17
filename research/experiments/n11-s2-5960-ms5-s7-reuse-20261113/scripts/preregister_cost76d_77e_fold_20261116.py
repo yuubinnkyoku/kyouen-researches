@@ -654,7 +654,7 @@ def main():
         "schema": "n11-class2-lane-cost76d-77e-fold-preregistration-20261116-v1",
         "date": "2026-11-16",
         "method": (
-            "pre-registration computed with scripts/fold_projection_"
+            "pre-registration computed with research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/fold_projection_"
             "head1450_tool_20261116.py (blob 49fcd8ae..., published in the "
             "same commit) and independently re-derived by this script on the "
             "independently reconstructed basis head 1450 (764 published "

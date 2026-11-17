@@ -73,7 +73,7 @@ H(R;(x,4);6)=
 \]
 が全 \(x\ge4,R\ge0\) で成立する。
 
-完全なA/B/C署名表と強帰納証明は[証明報告](../experiments/vertical-fiber-two-token-z6-y4-boundary-20261117/report.md)を参照する。独立有限監査は4,088,723検査・不一致0、二回実行byte-identical。有限監査は全称性の根拠ではなく、全称性は署名表・Theorem T・tail定理とR強帰納による。
+完全なA/B/C署名表と強帰納証明は[証明報告](../../experiments/vertical-fiber-two-token-z6-y4-boundary-20261117/report.md)を参照する。独立有限監査は4,088,723検査・不一致0、二回実行byte-identical。有限監査は全称性の根拠ではなく、全称性は署名表・Theorem T・tail定理とR強帰納による。
 
 ## 限界
 
