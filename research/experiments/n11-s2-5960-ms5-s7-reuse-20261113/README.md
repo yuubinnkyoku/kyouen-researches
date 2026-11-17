@@ -75,3 +75,12 @@ The fixed pilot is `loss=false` at 3,402 nodes. On child `0000000002000000380000
 
 The in-flight cost-86c and cost-62a claims still use v15. Do not combine their raw batches with v16 results. Other copies of the signed-key pattern (sweep engine, chunk prover, certificate extractors, and FBT-saturation runners) still require separate audit before reuse.
 
+## 2026-11-17 certificate extractor memo-key audit (K0907)
+
+The 2026-11-14 v16 repair note above anticipated that the certificate extractor copies carry the same signed-key and dead-sentinel defects. `class4_child1_cert_extractor_exact.ts` (blob `52bacf509ea12fad4c936501d30d26b5b66c0085`) was audited and both defects confirmed; they are performance-only (the memo can miss but never produce a wrong hit), so every published certificate, node count and verdict remains valid.
+
+A dump-only instrumentation of the verbatim engine (bit 0, first 12 loser moves, MS=1<<23, 834,262 nodes) quantified the duplicate-insertion mechanism: 216,719 stored records over 112,731 distinct keys; 16,417 keys have 2..64 copies and ALL of them are high-bit (bit 31 of words 0/1/2, i.e. positions on cells 31/63/95); no non-high-bit key is stored twice; 7 keys own their complete 64-slot probe window; every record keeps nowin=nolose=255 (the negative bounds never fire).
+
+Measured on the published cost-73k band with fresh per-bit processes at MS=1<<23 and byte-identity gates against all 22 published certificates (split files concatenated): fixing the key sign alone (fixA) gives 75,108,849 nodes (69.23% of the verbatim fresh ms23 battery, -30.8%); fixing both defects (fixB) gives 28,290,025 nodes (26.07%, -73.9%; 18.14% of the published ms18 baseline, -81.9%). Per-bit memo occupancy is identical between fixA and fixB. Deterministic: fixB bit 0 = 1,277,392 nodes on repeated runs and the verifier reproduces its audit JSON byte-identically across two full runs.
+
+The verbatim extractor is deliberately left unchanged (published determinism chains); see item K0907, the [run log](../../log/2026-11-17-n11-class2-lane-extractor-memo-sign-bug-and-fixed-battery-73k.md), [verifier](scripts/verify_extractor_memo_sign_bug_73k_20261117.py), [battery script](scripts/measure_fresh_battery_fixed_memo_73k_20261117.py), and the audit JSONs in `output/`. The remaining copies (sweep engine, chunk prover, FBT-saturation runners) are still unaudited. No verdict change: 11x11 empty root, two-stone roots, S2 {59,60}, classes 1/2/4 all remain UNKNOWN.
