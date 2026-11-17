@@ -148,6 +148,18 @@ jobs:
         run: |
           uv run --locked python research/experiments/vertical-fiber-two-token-z6-y24-boundary-20261117/verify_z6_y24.py
           git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y24-boundary-20261117/output/audit.json
+      - name: Audit K0936 two-token z=6 y=25 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y25-boundary-20261118/verify_z6_y25.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y25-boundary-20261118/output/audit.json
+      - name: Audit K0938 two-token z=6 y=26 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y26-boundary-20261118/verify_z6_y26.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y26-boundary-20261118/output/audit.json
+      - name: Audit K0940 two-token z=6 y=27 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y27-boundary-20261118/verify_z6_y27.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y27-boundary-20261118/output/audit.json
       - name: Audit K0832 t=2, q=2w-1 all-safe Grundy classification
         run: |
           uv run --locked python research/experiments/vertical-fiber-t2-q2w-minus1-grundy-20261118/verify_t2_q2w_minus1.py
