@@ -45,34 +45,23 @@ corrupted copies so every gate is exact):
      only at merge time): a W4-only key (incidence 1) with win=w<255,
      nowin=255 is corrupted to nowin=w; the merge group check must fire
      win_le_nowin at exactly this key.
-  F5 sentinel absorption (expected NOT detected, documented): keys
-     shared by W1 and W3; W3's record is corrupted to
-     nowin=4 (key where W1 has win<255) resp. nolose=2 (key where W1 has
-     lose<255).  The fully-unbound-record variant of this scenario
-     (W3 record with all four values 255) never occurs in the real
-     tables, and verbatim-engine negative bounds are always the 255
-     sentinel anyway (K0907), so the injected negative bound is always
-     the only real one and the absorption test is well-posed as-is.  The combine rule
-     nowin=max / nolose=max absorbs the injected negative bound under
-     the other workers' unbound 255, so no conflict fires, no wrong
-     value enters the merged record and the merged record stays
-     byte-identical to the clean merge output for the same key.  This is
-     the structural catchment boundary of merge-time detection: only
-     win-vs-lose contradictions (and negative-bound contradictions when
-     every worker sharing the key reports a real negative bound) are
-     detectable; a stronger same-side bound is absorbed silently by
-     design (it is not a logical contradiction).
+  F5 negative-bound retention: keys shared by W1 and W3; W3's record is
+     corrupted to nowin=4 (the selected W1 win bound is 7) resp.
+     nolose=2 (the selected W1 lose bounds are 6 and 4).  Since 255 means
+     "no bound", it must be the identity for max-bound combination, not
+     an absorbing value.  The merged records must retain nowin=4 /
+     nolose=2.  These selected values are strictly below the matching
+     positive bounds, so they must not trigger a logical conflict.
 
 Gates: F1 internal conflicts == exactly the 2 injected keys; cross
 conflicts == exactly the F2+F3 keys (win_and_lose) and F4 keys
-(win_le_nowin); the F5 keys produce no detection and their merged
-records are byte-identical to the clean merged seed records (positive
-bound kept verbatim, negative bound absorbed); the corrupted merge keeps
-the clean structural counts (occupied_after 4,985,986 / shared_total
-1,592,504 / incidence histogram), so the corruptions changed values only;
-all other keys remain conflict-free (zero false positives, via the exact
-conflict totals and samples); the natural (uncorrupted) merge conflicts
-remain zero (gated against the main measurement JSON).
+(win_le_nowin); the F5 keys retain the injected finite negative bound
+without a false conflict; the corrupted merge keeps the clean structural
+counts (occupied_after 4,985,986 / shared_total 1,592,504 / incidence
+histogram), so the corruptions changed values only; all other keys remain
+conflict-free (zero false positives, via exact conflict totals and
+samples); the natural (uncorrupted) merge conflicts remain zero (gated
+against the main measurement JSON).
 
 Interpretation guard: test only, synthetic data. No new WIN/LOSS
 verdicts, no manifest row opened or closed, certificate bytes unchanged.
@@ -381,13 +370,20 @@ def main():
                 and "lose_le_nolose" not in cross["cross_conflicts"]
                 and sorted(samples.get("win_and_lose", [])) == f2f3_expected
                 and sorted(samples.get("win_le_nowin", [])) == f4_expected)
-    f5_ok = all(fault_recs[k] == clean_recs[k] for k in f5_keys)
+    f5_ok = True
     for e in sel["F5a"]:
-        f5_ok = f5_ok and fault_recs[e["key"]][2] == 255
+        rec = fault_recs[e["key"]]
+        expected = list(clean_recs[e["key"]])
+        expected[2] = 4
+        f5_ok = f5_ok and rec == tuple(expected) and 4 < e["w1_record"][0]
     for e in sel["F5b"]:
-        f5_ok = f5_ok and fault_recs[e["key"]][3] == 255
+        rec = fault_recs[e["key"]]
+        expected = list(clean_recs[e["key"]])
+        expected[3] = 2
+        f5_ok = f5_ok and rec == tuple(expected) and 2 < e["w1_record"][1]
     f5_not_fired = all(k not in samples.get("win_and_lose", [])
                        and k not in samples.get("win_le_nowin", [])
+                       and k not in samples.get("lose_le_nolose", [])
                        for k in f5_keys)
     clean_merge = main_doc["merge4"]
     hist_f = {str(k): v for k, v in cross["incidence_histogram"].items()}
@@ -403,7 +399,7 @@ def main():
     gates = {
         "f1_internal_exactly_injected": f1_conf_ok,
         "cross_exactly_injected": cross_ok,
-        "f5_records_equal_clean_and_absorbed": f5_ok,
+        "f5_bounds_preserved_without_false_conflict": f5_ok,
         "f5_keys_not_flagged": f5_not_fired,
         "fault_merge_structure_equals_clean": structure_ok,
         "natural_merge_conflicts_zero": natural_ok,
@@ -412,10 +408,10 @@ def main():
     all_pass = all(gates.values())
 
     doc = {
-        "schema": "n11-class2-lane-fault-inject-worker-merge-conflicts-73k-20261117-v1",
+        "schema": "n11-class2-lane-fault-inject-worker-merge-conflicts-73k-20261117-v2",
         "date": "2026-11-17",
         "lane": "n11 class2-lane long-term (cost73k)",
-        "purpose": "fault-injection validation of the 4-worker memo merge conflict detector: injected contradictions must be detected exactly, absorbed corruptions documented, zero false positives",
+        "purpose": "fault-injection validation of the 4-worker memo merge conflict detector: injected contradictions detected, finite negative bounds retained across unbound sentinels, zero false positives",
         "design_note": ("streaming rewrite: the first in-memory implementation "
                         "(4 distinct tables in Python lists) was OOM-killed by "
                         "the ~1GiB cgroup limit twice before any output; this "
