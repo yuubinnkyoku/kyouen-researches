@@ -28,7 +28,12 @@ artifacts:
   - path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/fault-inject-worker-merge-conflicts-73k-20261117.json
     role: data
     note: fault注入試験JSON（7/7 gate合格・注入キーと検出サンプル完全一致・F5吸収はclean mergeと完全一致）
-
+  - path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/measure_worker_split4_boundary_memo_merge_73k_20261117.py
+    role: verifier
+    note: 境界保存4-way拡張オーケストレータ（W0..W3六pairwise+cascade merge・2-way worker同時再実行アンカー・FINAL4 vs 2-way seed鍵集合比較・FINAL4 seed seedrun）
+  - path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/worker-split4-boundary-memo-merge-73k-20261117.json
+    role: data
+    note: 境界保存4-way測定JSON（2-way出版パイプラインのbyte完全再現・全工程2回実行でbyte同一・merge非閉包only_in_seed2 262を記録）
 ---
 
 # K0909: worker分割メモmergeの安全性（cost73kバンド・verbatim engine）
@@ -131,3 +136,43 @@ cost-73kバンド（child `00000000000000801206000000000400`・22 WIN7-D10 root�
 repo-verbatim extractorはrepo上未修正のまま（出版決定性チェーン）。WIN7-D10は個別7石rootの
 深さ10以内の先手勝ちのみを証明し、REFUTED-D10はLOSS証明ではない。
 11×11空盤・二石root {49,60}/{59,60}・S2 {59,60}・class 1/2/4はいずれもUNKNOWN。
+
+## 境界保存4-way分割の独立測定（2026-11-17追記・測定のみ）
+
+同じバンドを出版2-wayと同一のbit境界（39/41・73/76・97/98）で4 workerに分割
+（W0=bits 0..39・W1=41..73・W2=76..97・W3=98..117・MS=1<<23・band内共有・
+証明書byte同一gate）し、出版2-way（workerA/B）を同一orchestrator内で再実行して
+**merged seed md5 `e7c2c17e7a91d8ea17f433f3bb482f29`・workers合計119,962,147 nodes・
+per-bit nodes/occupancy系列を全て出版値とbyte同一で再現**した上で、
+六pairwise+cascade merge・FINAL4 vs 2-way seed鍵集合比較・FINAL4 seedによる
+MS=1<<24全22 bit band実行を測定（独立環境での測定・全工程2回実行で出力JSON byte同一・
+`measure_worker_split4_boundary_memo_merge_73k_20261117.py`）:
+
+1. **4-way worker合計111,953,183 nodes**（出版2-way比0.9332・band ms23比0.9238・
+   並走のノード数均衡7/6/5/4分割112,741,501比も0.7%安い）。W0/W2は2-way接頭辞と
+   per-bit完全一致。fresh再開のoccupancy-harmはper-bitで定量: W3後半5 bitは
+   carried比−6,012,227 nodes（−17.8%・bit117単独で7,739,551 vs 10,008,242）。
+   fresh workerの先頭bitのみ逆行（bit41 +5.6%: 直前bit群のmemoを失うため）。
+2. **衝突0は境界保存4-wayでも完全**: W0..W3内部衝突0・六pairwise cross衝突0・
+   cascade（M01 shared 472,945・M23 368,177・最終merge shared 1,137,932）も0。
+   mergeは各段階2回実行でbyte同一。FINAL4 = 4,975,265 distinct keys
+   （2-way seed比+15.9%）。並走測定の全重複量（衝突0・byte同一22/22・
+   record恒等式閉包・seed失敗率0.1%超え）と独立に一致（交差検証成立）。
+3. **merge非閉包の定量（本測定の固有成果）**: FINAL4 vs 2-way seedは
+   共有4,291,637 key全て同等以上（違反0）だが、**only_in_seed2 = 262
+   （0.0061%）**: より細かい分割のmerge表は2-way merge表の厳密supersetではない。
+   verbatim memoの探索・挿入は経路依存で、unsplit workerがmemo化した位置の
+   一部は分割側で到達も挿入もされない。unionが大きいこと（+683,628 net）と
+   supersetでないことは両立し、「merge表はより完全」は濃度についてのみ成立。
+   coordinatorはmerge表を近似として扱い、より粗い構成のcacheの代替にしてはならない。
+   コストのみで健全性無影響（証明書22/22 byte同一・seedrunで再計算される）。
+4. **FINAL4 seed seedrun 76,599,320 nodes**（出版2-way seedrun比0.8933・
+   未seed band ms24比0.717・並走の76,903,818比0.4%安い）・最終占有率10,525,071
+   （負荷62.7%）。seed挿入失敗14,657件（0.295%・並走の0.324%と独立に同じ
+   0.1%予測gateを不成立化: 失敗率はseedサイズに対し超線形）。record恒等式は
+   挿入成功4,960,608 key全残存・違反0・欠損は挿入失敗14,657件ちょうど。
+5. **gates_all_pass=Falseは予測gate 2件のみ**（(a) superset予測・(b) seed失敗率
+   <0.1%）で、健全性/正確性/再現/衝突0/決定性gateは全合格。両不成立は実測事実
+   として記録し、gate定数の再設計（0.1%は大きいseedには不適切）を次回に残す。
+
+勝敗変更なし・11×11はUNKNOWN。
