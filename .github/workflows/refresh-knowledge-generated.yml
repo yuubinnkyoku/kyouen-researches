@@ -277,6 +277,10 @@ jobs:
         run: |
           uv run --locked python research/experiments/remo-k-branch-cap10-r2-13-matrix-20261117/scripts/verify_remo_k_branch_cap10_r2_13_matrix.py
           git diff --exit-code -- research/experiments/remo-k-branch-cap10-r2-13-matrix-20261117/output/remo_k_branch_cap10_r2_13_matrix_audit.json research/experiments/remo-k-branch-cap10-r2-13-matrix-20261117/output/matrix_r2_13.jsonl
+      - name: Audit K0906 Theorem J universal proof (label closure)
+        run: |
+          uv run --locked python research/experiments/remo-theorem-j-proof-20261117/verify_theorem_j.py
+          git diff --exit-code -- research/experiments/remo-theorem-j-proof-20261117/output/theorem_j_audit.json
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python tools/knowledge/build.py
@@ -585,3 +589,4 @@ jobs:
 
 # Refresh generated views for K0904 three-branch REMO cap10 r=2..13 state matrix (715x12 determinacy matrix assembled from the committed columns, Theorem J sigma<=M-1 finite verification 0 violations over all 715 keys and 15,863 profiles, onset exactly at r=M for the 34 boundary keys, the 12 two-band revival keys characterized) (2026-11-17).
 # Refresh generated views for K0905 two-token z=6,y=16 full Grundy slice (2026-11-17).
+# Refresh generated views for K0906 Theorem J universal proof by label closure (L1-L4, Lemma C1' rigid form, Lemma FL validity domain with the global refined form (ii'), cap<=10 r-lane closed unconditionally, sigma<=M-1 universal, size 11/12 anchors at r=13,14 beyond committed columns) (2026-11-17).
