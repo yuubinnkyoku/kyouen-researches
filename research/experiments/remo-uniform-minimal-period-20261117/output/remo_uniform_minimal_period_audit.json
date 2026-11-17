@@ -1,0 +1,805 @@
+{
+ "all_ok": true,
+ "checks": [
+  {
+   "data": {
+    "pin": {
+     "r10": 2520,
+     "r11": 27720,
+     "r12": 27720,
+     "r13": 360360,
+     "r14": 360360,
+     "r15": 360360,
+     "r16": 720720
+    }
+   },
+   "name": "M1: Q(r) = lcm(1..r) matches the pinned table for r = 10..16 and Q(r) divides r!",
+   "ok": true
+  },
+  {
+   "data": {
+    "r10": {
+     "anchors": -48,
+     "exhaustive": 200,
+     "mismatches": 0,
+     "pairs": 213,
+     "stratified": 61
+    },
+    "r11": {
+     "anchors": 2,
+     "exhaustive": 200,
+     "mismatches": 0,
+     "pairs": 263,
+     "stratified": 61
+    },
+    "r12": {
+     "anchors": 2,
+     "exhaustive": 200,
+     "mismatches": 0,
+     "pairs": 263,
+     "stratified": 61
+    },
+    "r13": {
+     "anchors": 7,
+     "exhaustive": 200,
+     "mismatches": 0,
+     "pairs": 268,
+     "stratified": 61
+    },
+    "r14": {
+     "anchors": 7,
+     "exhaustive": 200,
+     "mismatches": 0,
+     "pairs": 268,
+     "stratified": 61
+    },
+    "r15": {
+     "anchors": 7,
+     "exhaustive": 200,
+     "mismatches": 0,
+     "pairs": 268,
+     "stratified": 61
+    },
+    "r16": {
+     "anchors": 7,
+     "exhaustive": 200,
+     "mismatches": 0,
+     "pairs": 268,
+     "stratified": 61
+    }
+   },
+   "name": "M2: verbatim per-stone recursion == closed-form twin for r = 10..16 (all C in [1,200] exhaustive, stride-997 stratified 61 values, 8 large anchors in [Q/5, 2Q-1]; full elimination tuple AND survivor)",
+   "ok": true
+  },
+  {
+   "data": {
+    "r10": {
+     "mismatches": 0,
+     "pairs": 2520
+    },
+    "r11": {
+     "mismatches": 0,
+     "pairs": 27720
+    },
+    "r12": {
+     "mismatches": 0,
+     "pairs": 27720
+    },
+    "r13": {
+     "mismatches": 0,
+     "pairs": 360360
+    },
+    "r14": {
+     "mismatches": 0,
+     "pairs": 360360
+    },
+    "r15": {
+     "mismatches": 0,
+     "pairs": 360360
+    },
+    "r16": {
+     "mismatches": 0,
+     "pairs": 720720
+    }
+   },
+   "name": "M3: THEOREM PER anchor - E(C + Q(r), r) == E(C, r) for every r = 10..16 and ALL C in [1, Q(r)] (universal proof in the K0919 report; here a full-window machine anchor)",
+   "ok": true
+  },
+  {
+   "data": {
+    "r10": {
+     "pairs": 213,
+     "violations": 0
+    },
+    "r11": {
+     "pairs": 263,
+     "violations": 0
+    },
+    "r12": {
+     "pairs": 263,
+     "violations": 0
+    },
+    "r13": {
+     "pairs": 268,
+     "violations": 0
+    },
+    "r14": {
+     "pairs": 268,
+     "violations": 0
+    },
+    "r15": {
+     "pairs": 268,
+     "violations": 0
+    },
+    "r16": {
+     "pairs": 268,
+     "violations": 0
+    }
+   },
+   "name": "M4: uniform-offset induction data check (T = Q(r)) on the M2 sample of each r = 10..16: per-phase k/t/li/loser/turn identical, uniform offset, closed forms X_1 = T and X_h = T/(k_h+1), receipt shift X_h/k_h, loser receives exactly q_h stones; 0 violations",
+   "ok": true
+  },
+  {
+   "data": {
+    "r10": {
+     "all_proper_fail_elim": true,
+     "all_proper_fail_survivor": true,
+     "witness_max_elim": 1,
+     "witness_max_sv": 6,
+     "witness_over_Qp": {
+      "1260": [
+       1,
+       4
+      ],
+      "360": [
+       1,
+       4
+      ],
+      "504": [
+       1,
+       1
+      ],
+      "840": [
+       1,
+       6
+      ]
+     }
+    },
+    "r11": {
+     "all_proper_fail_elim": true,
+     "all_proper_fail_survivor": true,
+     "witness_max_elim": 1,
+     "witness_max_sv": 10,
+     "witness_over_Qp": {
+      "13860": [
+       1,
+       4
+      ],
+      "2520": [
+       1,
+       10
+      ],
+      "3960": [
+       1,
+       2
+      ],
+      "5544": [
+       1,
+       1
+      ],
+      "9240": [
+       1,
+       3
+      ]
+     }
+    },
+    "r12": {
+     "all_proper_fail_elim": true,
+     "all_proper_fail_survivor": true,
+     "witness_max_elim": 1,
+     "witness_max_sv": 10,
+     "witness_over_Qp": {
+      "13860": [
+       1,
+       4
+      ],
+      "2520": [
+       1,
+       10
+      ],
+      "3960": [
+       1,
+       2
+      ],
+      "5544": [
+       1,
+       1
+      ],
+      "9240": [
+       1,
+       3
+      ]
+     }
+    },
+    "r13": {
+     "all_proper_fail_elim": true,
+     "all_proper_fail_survivor": true,
+     "witness_max_elim": 1,
+     "witness_max_sv": 9,
+     "witness_over_Qp": {
+      "120120": [
+       1,
+       3
+      ],
+      "180180": [
+       1,
+       4
+      ],
+      "27720": [
+       1,
+       9
+      ],
+      "32760": [
+       1,
+       9
+      ],
+      "51480": [
+       1,
+       5
+      ],
+      "72072": [
+       1,
+       3
+      ]
+     }
+    },
+    "r14": {
+     "all_proper_fail_elim": true,
+     "all_proper_fail_survivor": true,
+     "witness_max_elim": 1,
+     "witness_max_sv": 9,
+     "witness_over_Qp": {
+      "120120": [
+       1,
+       3
+      ],
+      "180180": [
+       1,
+       4
+      ],
+      "27720": [
+       1,
+       9
+      ],
+      "32760": [
+       1,
+       9
+      ],
+      "51480": [
+       1,
+       5
+      ],
+      "72072": [
+       1,
+       3
+      ]
+     }
+    },
+    "r15": {
+     "all_proper_fail_elim": true,
+     "all_proper_fail_survivor": true,
+     "witness_max_elim": 1,
+     "witness_max_sv": 9,
+     "witness_over_Qp": {
+      "120120": [
+       1,
+       3
+      ],
+      "180180": [
+       1,
+       4
+      ],
+      "27720": [
+       1,
+       9
+      ],
+      "32760": [
+       1,
+       9
+      ],
+      "51480": [
+       1,
+       5
+      ],
+      "72072": [
+       1,
+       3
+      ]
+     }
+    },
+    "r16": {
+     "all_proper_fail_elim": true,
+     "all_proper_fail_survivor": true,
+     "witness_max_elim": 1,
+     "witness_max_sv": 8,
+     "witness_over_Qp": {
+      "102960": [
+       1,
+       3
+      ],
+      "144144": [
+       1,
+       1
+      ],
+      "240240": [
+       1,
+       6
+      ],
+      "360360": [
+       1,
+       8
+      ],
+      "55440": [
+       1,
+       5
+      ],
+      "65520": [
+       1,
+       7
+      ]
+     }
+    }
+   },
+   "name": "M5: MINIMALITY (machine, r = 10..16): every proper divisor of Q(r) fails to be a period of BOTH the elimination column and the survivor column (witness scan over the complete window [1, Q(r)]); with LEMMA DIV the minimal period of both columns is exactly Q(r) and every period is a multiple of Q(r) (necessity direction closed for r = 10..16).  r >= 17 remains OPEN",
+   "ok": true
+  },
+  {
+   "data": {
+    "P_equals_1_at_all_primes_upto_300": true,
+    "P_equals_1_at_composites": [],
+    "P_equals_C_minus_1_set": [
+     2,
+     4,
+     6,
+     10,
+     12,
+     16,
+     18,
+     22,
+     28,
+     30,
+     36,
+     40,
+     42,
+     46,
+     52,
+     58,
+     60,
+     66,
+     70,
+     72,
+     78,
+     82,
+     88,
+     96,
+     100,
+     102,
+     106,
+     108,
+     112,
+     126,
+     130,
+     136,
+     138,
+     148,
+     150,
+     156,
+     162,
+     166,
+     172,
+     178,
+     180,
+     190,
+     192,
+     196,
+     198,
+     210,
+     222,
+     226,
+     228,
+     232,
+     238,
+     240,
+     250,
+     256,
+     262,
+     268,
+     270,
+     276,
+     280,
+     282,
+     292
+    ],
+    "pin_40_matches": true,
+    "sequence_1_to_300": [
+     0,
+     1,
+     1,
+     3,
+     1,
+     5,
+     1,
+     5,
+     5,
+     9,
+     1,
+     11,
+     1,
+     5,
+     7,
+     15,
+     1,
+     17,
+     1,
+     15,
+     17,
+     21,
+     1,
+     21,
+     11,
+     15,
+     7,
+     27,
+     1,
+     29,
+     1,
+     27,
+     17,
+     21,
+     11,
+     35,
+     1,
+     5,
+     7,
+     39,
+     1,
+     41,
+     1,
+     29,
+     41,
+     45,
+     1,
+     41,
+     13,
+     39,
+     29,
+     51,
+     1,
+     35,
+     23,
+     51,
+     53,
+     57,
+     1,
+     59,
+     1,
+     5,
+     29,
+     47,
+     23,
+     65,
+     1,
+     29,
+     17,
+     69,
+     1,
+     71,
+     1,
+     5,
+     19,
+     59,
+     17,
+     77,
+     1,
+     71,
+     77,
+     81,
+     1,
+     77,
+     37,
+     41,
+     7,
+     87,
+     1,
+     81,
+     43,
+     87,
+     55,
+     59,
+     11,
+     95,
+     1,
+     39,
+     43,
+     99,
+     1,
+     101,
+     1,
+     65,
+     101,
+     105,
+     1,
+     107,
+     1,
+     75,
+     43,
+     111,
+     1,
+     105,
+     23,
+     87,
+     59,
+     63,
+     11,
+     117,
+     35,
+     39,
+     7,
+     51,
+     13,
+     125,
+     1,
+     71,
+     53,
+     129,
+     1,
+     119,
+     37,
+     41,
+     83,
+     135,
+     1,
+     137,
+     1,
+     135,
+     95,
+     99,
+     11,
+     137,
+     91,
+     95,
+     29,
+     147,
+     1,
+     149,
+     1,
+     71,
+     71,
+     123,
+     71,
+     155,
+     1,
+     5,
+     7,
+     135,
+     49,
+     161,
+     1,
+     89,
+     161,
+     165,
+     1,
+     153,
+     35,
+     137,
+     113,
+     171,
+     1,
+     107,
+     37,
+     171,
+     173,
+     177,
+     1,
+     179,
+     1,
+     107,
+     71,
+     141,
+     29,
+     165,
+     23,
+     53,
+     77,
+     189,
+     1,
+     191,
+     1,
+     5,
+     71,
+     195,
+     1,
+     197,
+     1,
+     195,
+     173,
+     177,
+     11,
+     197,
+     71,
+     75,
+     29,
+     167,
+     49,
+     209,
+     1,
+     207,
+     17,
+     21,
+     11,
+     209,
+     71,
+     75,
+     7,
+     207,
+     41,
+     221,
+     1,
+     149,
+     221,
+     225,
+     1,
+     227,
+     1,
+     87,
+     113,
+     231,
+     1,
+     225,
+     79,
+     149,
+     91,
+     237,
+     1,
+     239,
+     1,
+     107,
+     119,
+     171,
+     73,
+     227,
+     25,
+     167,
+     53,
+     249,
+     1,
+     239,
+     83,
+     87,
+     127,
+     255,
+     1,
+     203,
+     19,
+     233,
+     257,
+     261,
+     1,
+     233,
+     115,
+     255,
+     79,
+     267,
+     1,
+     269,
+     1,
+     191,
+     203,
+     207,
+     97,
+     275,
+     1,
+     5,
+     29,
+     279,
+     1,
+     281,
+     1,
+     29,
+     83,
+     167,
+     85,
+     275,
+     59,
+     279,
+     139,
+     291,
+     1,
+     189,
+     59,
+     197,
+     239,
+     243,
+     41,
+     293
+    ]
+   },
+   "name": "M6: P(C) = S(C,C) plateau sequence reproduces the K0919 E6 pin for C = 1..40 and is extended to C = 41..300 as a finite observation; P(C) == 1 holds at every prime C in [2,300] and at NO composite C in [2,300] (finite observation, no claim); the C with P(C) == C-1 are listed",
+   "ok": true
+  },
+  {
+   "data": {
+    "r2": {
+     "Q": 2,
+     "all_proper_fail_elim": true,
+     "all_proper_fail_survivor": true,
+     "proper_divisor_count": 1,
+     "witness_max_elim": 1,
+     "witness_max_sv": 1
+    },
+    "r3": {
+     "Q": 6,
+     "all_proper_fail_elim": true,
+     "all_proper_fail_survivor": true,
+     "proper_divisor_count": 3,
+     "witness_max_elim": 1,
+     "witness_max_sv": 1
+    },
+    "r4": {
+     "Q": 12,
+     "all_proper_fail_elim": true,
+     "all_proper_fail_survivor": true,
+     "proper_divisor_count": 5,
+     "witness_max_elim": 1,
+     "witness_max_sv": 2
+    },
+    "r5": {
+     "Q": 60,
+     "all_proper_fail_elim": true,
+     "all_proper_fail_survivor": true,
+     "proper_divisor_count": 11,
+     "witness_max_elim": 1,
+     "witness_max_sv": 3
+    },
+    "r6": {
+     "Q": 60,
+     "all_proper_fail_elim": true,
+     "all_proper_fail_survivor": true,
+     "proper_divisor_count": 11,
+     "witness_max_elim": 1,
+     "witness_max_sv": 3
+    },
+    "r7": {
+     "Q": 420,
+     "all_proper_fail_elim": true,
+     "all_proper_fail_survivor": true,
+     "proper_divisor_count": 23,
+     "witness_max_elim": 1,
+     "witness_max_sv": 3
+    },
+    "r8": {
+     "Q": 840,
+     "all_proper_fail_elim": true,
+     "all_proper_fail_survivor": true,
+     "proper_divisor_count": 31,
+     "witness_max_elim": 1,
+     "witness_max_sv": 6
+    },
+    "r9": {
+     "Q": 2520,
+     "all_proper_fail_elim": true,
+     "all_proper_fail_survivor": true,
+     "proper_divisor_count": 47,
+     "witness_max_elim": 1,
+     "witness_max_sv": 6
+    }
+   },
+   "name": "M7: independent reproduction of the K0919 E3 minimality for r = 2..9 (every proper divisor of Q(r) fails on both columns, witness scan over [1, Q(r)]) with the per-r witness maxima recorded; cross-checks the published r = 2..9 result",
+   "ok": true
+  }
+ ],
+ "date": "2026-11-17",
+ "follows": "K0919 (THEOREM PER, universal period proof and minimality for r = 2..9)",
+ "item": "K0921",
+ "title": "Minimal period of the uniform-board REMO counting recursion is exactly lcm(1..r) for every r = 10..16 (machine, both columns; with LEMMA DIV the necessity direction closes for these r)"
+}
