@@ -1,0 +1,272 @@
+{
+  "schema": "n11-cost79c-preflight-structural-audit-20261118-v1",
+  "date": "2026-11-18",
+  "base_main_head": "06e7bb70f392084a3ccbabb02cae621587184c3b",
+  "input_pins": {
+    "claim": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost79c-inflight-20261118.json",
+      "git_blob_sha": "6e1f2c909d66d56e19b70404751bc4efa651763e"
+    },
+    "driver": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/ev79c_batches_20261118.sh",
+      "git_blob_sha": "18252801a78263a5e421e17c4fb18e05bdc2ca4f"
+    },
+    "v17": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/class4_child1_runner_v17.ts",
+      "git_blob_sha": "c132cc6425eee3feaeef1d697dd74f968cfedb59"
+    },
+    "v15": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/class4_child1_runner.ts",
+      "git_blob_sha": "8744fc65b6b7cac6bd561403ce4c749e01c51359"
+    },
+    "cost73kManifest": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73k-certificates/class2-lane-cost73k-win7-certificates-20261117.json",
+      "git_blob_sha": "0892aed07d187ae2fb3b4b90a21c7adbc1002b62"
+    }
+  },
+  "target": {
+    "s5": "00000000000000403800000008000000",
+    "s6": "00000000000000c09002000200000000",
+    "stone_bits": [
+      33,
+      49,
+      60,
+      63,
+      70,
+      71
+    ],
+    "legal_candidates": 79,
+    "open_bits": 68,
+    "confirmation_bits": 11
+  },
+  "checks": {
+    "six_bit_reconstruction": {
+      "ok": true,
+      "detail": {
+        "computed": "00000000000000c09002000200000000",
+        "claimed": "00000000000000c09002000200000000"
+      }
+    },
+    "parent_safety": {
+      "ok": true,
+      "detail": {
+        "stones": 6,
+        "quadruples": 15
+      }
+    },
+    "independent_legal_candidate_enumeration": {
+      "ok": true,
+      "detail": {
+        "computed": 79,
+        "claimed": 79,
+        "missing": [],
+        "extra": []
+      }
+    },
+    "open_confirmation_partition": {
+      "ok": true,
+      "detail": {
+        "open": 68,
+        "confirmation": 11,
+        "union": 79
+      }
+    },
+    "batch_1_to_8_exact_cover": {
+      "ok": true,
+      "detail": {
+        "sizes": {
+          "1": 9,
+          "2": 9,
+          "3": 9,
+          "4": 9,
+          "5": 9,
+          "6": 9,
+          "7": 9,
+          "8": 5,
+          "9": 11
+        },
+        "unique": 68
+      }
+    },
+    "batch_9_confirmation_exact": {
+      "ok": true,
+      "detail": {
+        "bits": [
+          12,
+          20,
+          22,
+          65,
+          67,
+          86,
+          87,
+          94,
+          97,
+          106,
+          110
+        ]
+      }
+    },
+    "runner_parameters": {
+      "ok": true,
+      "detail": {
+        "edge_cost": 79,
+        "candidate_count": 79,
+        "depth": 10,
+        "cap": 1000000000,
+        "andclose": 1
+      }
+    },
+    "pilot_control_enforced": {
+      "ok": true,
+      "detail": "all 9 run17 batches retain the built-in pilot_d6 control"
+    },
+    "fresh_engine_per_candidate": {
+      "ok": true,
+      "detail": "fresh engine state per candidate bit"
+    },
+    "v17_fbt_saturation_repair": {
+      "ok": true,
+      "detail": "probe exhaustion computes and applies the blocking mask directly"
+    },
+    "v17_engine_pin": {
+      "ok": true,
+      "detail": {
+        "fetched": "c132cc6425eee3feaeef1d697dd74f968cfedb59",
+        "claimed": "c132cc6425eee3feaeef1d697dd74f968cfedb59"
+      }
+    },
+    "v15_engine_pin": {
+      "ok": true,
+      "detail": {
+        "fetched": "8744fc65b6b7cac6bd561403ce4c749e01c51359",
+        "claimed": "8744fc65b6b7cac6bd561403ce4c749e01c51359"
+      }
+    },
+    "11_confirmation_target_canons": {
+      "ok": true,
+      "detail": {
+        "count": 11,
+        "failed": []
+      }
+    },
+    "all_79_candidate_roots_d4_distinct": {
+      "ok": true,
+      "detail": {
+        "roots": 79,
+        "unique": 79
+      }
+    },
+    "parent_d4_stabilizer_trivial": {
+      "ok": true,
+      "detail": {
+        "transforms": [
+          0
+        ]
+      }
+    },
+    "bit110_source_cost73k_bit87_canon": {
+      "ok": true,
+      "detail": {
+        "source_root": "00000000008000801206000000000400",
+        "source_canon": "00000000000020809003000000000001",
+        "target_canon": "00000000000020809003000000000001"
+      }
+    },
+    "confirmation_expected_verdict_mix": {
+      "ok": true,
+      "detail": {
+        "refuted": 10,
+        "win": 1
+      }
+    }
+  },
+  "confirmation_target_canonicalizations": [
+    {
+      "bit": 12,
+      "root": "00000000000000c09002000200001000",
+      "canon": "00000000000000c09002000200001000",
+      "expected": "00000000000000c09002000200001000",
+      "ok": true
+    },
+    {
+      "bit": 20,
+      "root": "00000000000000c09002000200100000",
+      "canon": "00000000000000c09002000200100000",
+      "expected": "00000000000000c09002000200100000",
+      "ok": true
+    },
+    {
+      "bit": 22,
+      "root": "00000000000000c09002000200400000",
+      "canon": "00000000000000c09002000200400000",
+      "expected": "00000000000000c09002000200400000",
+      "ok": true
+    },
+    {
+      "bit": 65,
+      "root": "00000000000000c29002000200000000",
+      "canon": "00000000000000c29002000200000000",
+      "expected": "00000000000000c29002000200000000",
+      "ok": true
+    },
+    {
+      "bit": 67,
+      "root": "00000000000000c89002000200000000",
+      "canon": "00000000000000c89002000200000000",
+      "expected": "00000000000000c89002000200000000",
+      "ok": true
+    },
+    {
+      "bit": 86,
+      "root": "00000000004000c09002000200000000",
+      "canon": "00000000000020809003040000000000",
+      "expected": "00000000000020809003040000000000",
+      "ok": true
+    },
+    {
+      "bit": 87,
+      "root": "00000000008000c09002000200000000",
+      "canon": "00000000000020809003080000000000",
+      "expected": "00000000000020809003080000000000",
+      "ok": true
+    },
+    {
+      "bit": 94,
+      "root": "00000000400000c09002000200000000",
+      "canon": "00000000000020809003000010000000",
+      "expected": "00000000000020809003000010000000",
+      "ok": true
+    },
+    {
+      "bit": 97,
+      "root": "00000002000000c09002000200000000",
+      "canon": "00000000000020809003000080000000",
+      "expected": "00000000000020809003000080000000",
+      "ok": true
+    },
+    {
+      "bit": 106,
+      "root": "00000400000000c09002000200000000",
+      "canon": "00000000000020809003000000040000",
+      "expected": "00000000000020809003000000040000",
+      "ok": true
+    },
+    {
+      "bit": 110,
+      "root": "00004000000000c09002000200000000",
+      "canon": "00000000000020809003000000000001",
+      "expected": "00000000000020809003000000000001",
+      "ok": true
+    }
+  ],
+  "d4_candidate_orbits": {
+    "legal_roots": 79,
+    "unique": 79,
+    "parent_stabilizer": [
+      0
+    ]
+  },
+  "verdict_boundary": "構造事前監査のみ。6石親の安全性・合法手集合・batch分割・engine pin・11確認bitの対象側D4正準形を独立検査し、bit110はcost73k bit87 manifestとも照合した。深さ10探索、新規証明書検証、receipt foldは実行していない。他10件の転送元rootはこの監査では再取得していない。REFUTED-D10はLOSS証明ではない。",
+  "all_pass": true,
+  "failures": []
+}
