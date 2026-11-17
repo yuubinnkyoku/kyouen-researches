@@ -36,8 +36,12 @@ Neither changes any search behavior; the driver only records.
 
 Expected values measured on 2026-11-17 (embedded as regression gates):
   - band ms18 (verbatim capacity, band-wide): 205,129,712 nodes
-    (+31.54% vs published; the memo saturates inside bit 0, which alone
-    occupies 598,661 slots > 262,144), per-bit ratios 1.0000 (bit 0) up to
+    (+31.54% vs published; bit 0 alone stalls the 262,144-slot table at
+    200,697 occupied slots = 76.6% (clumped-hash insertion failures, not
+    full saturation; bit 0's distinct-position count is best estimated at
+    ~801,870 from the ms24 occupancy at 4.8% load), and the table reaches
+    literal fullness during bit 35 (5th bit), after which every later bit
+    loses intra-bit memo insertion), per-bit ratios 1.0000 (bit 0) up to
     1.7505 (bit 39); 22/22 certificates byte-identical.
   - band ms22: 142,171,197 nodes (-8.83%), final occupancy 4,067,454/4,194,304
     (96.98%, still starved - late bits degrade).
