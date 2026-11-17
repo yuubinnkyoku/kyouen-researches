@@ -1,0 +1,257 @@
+{
+ "schema": "n11-class2-lane-cost73k-raw-sweep-audit-20261117-v1",
+ "date": "2026-11-17",
+ "status": "PASS: fresh regeneration (third independent execution) of the cost73k 73-bit v17 depth-10 sweep; all 73 per-bit verdicts, node counts and capped flags identical to the published concurrent-session record; 25 WIN7-D10 / 48 REFUTED-D10 / 0 capped; 7/7 confirmation transfers, six verified against published lane sources (66i bit 10 raw-identical); det reruns field-identical; v15 cross-engine 25/25 WIN with node total equal to the record's v15 total",
+ "target": {
+  "s6_child": "00000000000000801206000000000400",
+  "stone_bits": [
+   10,
+   49,
+   50,
+   57,
+   60,
+   71
+  ],
+  "candidate_bits": 73,
+  "open_bits": 66,
+  "confirmation_bits": [
+   14,
+   23,
+   26,
+   34,
+   53,
+   55,
+   107
+  ]
+ },
+ "provenance": {
+  "original_run": "the claiming session completed this sweep at 2026-11-17 (execution A) but its local raw files were lost to a sandbox reset before publication; the concurrent session independently ran the same sweep (execution B, record published at commit 8803a3b0); this audit's raw files are a fresh regeneration (execution C) from the pinned engine source, and all three executions agree on every per-bit non-ms field (A via its lost-session agreement with B recorded before the reset, C vs B verified here 73/73)",
+  "engine": "class4_child1_runner_v17.ts, git blob c132cc6425eee3feaeef1d697dd74f968cfedb59, depth 10, cap 1e9 per bit, andclose 1, fresh engine state per candidate bit",
+  "v15_engine": "class4_child1_runner.ts, git blob 8744fc65b6b7cac6bd561403ce4c749e01c51359"
+ },
+ "pilot_checks": "9/9 raw batches + 2/2 det reruns at pilot_d6 3402; 4/4 v15 chunks at pilot_d6 5949",
+ "verdicts": {
+  "win7_d10_bits": [
+   0,
+   7,
+   11,
+   14,
+   15,
+   26,
+   35,
+   39,
+   41,
+   44,
+   55,
+   58,
+   62,
+   73,
+   76,
+   87,
+   89,
+   94,
+   95,
+   97,
+   98,
+   103,
+   105,
+   112,
+   117
+  ],
+  "win7_d10_nodes": {
+   "0": 2105074,
+   "7": 3010263,
+   "11": 1066114,
+   "14": 2316193,
+   "15": 3718618,
+   "26": 4563004,
+   "35": 2901076,
+   "39": 591964,
+   "41": 839318,
+   "44": 1743886,
+   "55": 2207258,
+   "58": 1872967,
+   "62": 654959,
+   "73": 2742442,
+   "76": 1860230,
+   "87": 2732579,
+   "89": 1245153,
+   "94": 1225545,
+   "95": 2429062,
+   "97": 1726126,
+   "98": 2145334,
+   "103": 2450696,
+   "105": 1703526,
+   "112": 2273492,
+   "117": 2731534
+  },
+  "refuted_d10_bits": [
+   3,
+   4,
+   6,
+   8,
+   13,
+   18,
+   19,
+   21,
+   22,
+   23,
+   24,
+   25,
+   28,
+   29,
+   31,
+   32,
+   33,
+   34,
+   42,
+   43,
+   52,
+   53,
+   54,
+   56,
+   59,
+   65,
+   66,
+   67,
+   75,
+   78,
+   79,
+   85,
+   86,
+   88,
+   91,
+   92,
+   96,
+   99,
+   101,
+   102,
+   106,
+   107,
+   111,
+   113,
+   114,
+   116,
+   118,
+   119
+  ],
+  "refuted_d10_count": 48,
+  "capped_count": 0,
+  "candidate_nodes_total": 128861941,
+  "total_nodes_including_pilots": 128892559,
+  "terminal_stone_range": [
+   13,
+   17
+  ],
+  "per_bit_identical_to_concurrent_record": "73/73 (loss, nodes, capped)"
+ },
+ "confirmation_bits": {
+  "bits": [
+   14,
+   23,
+   26,
+   34,
+   53,
+   55,
+   107
+  ],
+  "fresh_vs_claim_transfers": "7/7",
+  "fresh_vs_record_predictions": "7/7",
+  "sources": {
+   "14": {
+    "source": "cost73j bit 110",
+    "verified": "raw batch7 line loss=true, capped=false (verdict-level; canon-equal root, node count differs by labeling)",
+    "raw_identical": false
+   },
+   "23": {
+    "source": "pre-64h harvest (cost64d bit 110)",
+    "verified": "claim v1 census-v7 harvest resolution + published census v7 rebuilt-harvest assertions + record fresh outcome; REFUTED agreement",
+    "raw_identical": false
+   },
+   "26": {
+    "source": "cost73i bit 110",
+    "verified": "73i audit win list (verdict-level)",
+    "raw_identical": false
+   },
+   "34": {
+    "source": "cost72d bit 110",
+    "verified": "not in 72d win list, 72d capped 0 => REFUTED",
+    "raw_identical": false
+   },
+   "53": {
+    "source": "cost66i bit 10",
+    "verified": "66i raw batch2 line loss=false nodes=39808; identical absolute root hex (66i child + bit 10 == 73k child + bit 53)",
+    "raw_identical": true
+   },
+   "55": {
+    "source": "cost69j bit 110",
+    "verified": "69j audit win list (verdict-level)",
+    "raw_identical": false
+   },
+   "107": {
+    "source": "cost71e bit 110",
+    "verified": "71e audit refuted list (verdict-level)",
+    "raw_identical": false
+   }
+  }
+ },
+ "determinism_rerun": {
+  "batches": {
+   "class2-lane-cost73k-det-batch1-20261117.jsonl": {
+    "lines": 10,
+    "heaviest_bit": 6
+   },
+   "class2-lane-cost73k-det-batch7-20261117.jsonl": {
+    "lines": 10,
+    "heaviest_bit": 111
+   }
+  },
+  "result": "field-identical on every non-ms field"
+ },
+ "v15_cross_engine_check": {
+  "chunks": [
+   "a",
+   "b",
+   "c",
+   "d"
+  ],
+  "win_agreement": "25/25 loss=true",
+  "pilots": "4/4 at 5949",
+  "capped": 0,
+  "v15_nodes_total": 116892833,
+  "record_v15_nodes_total": 116892833
+ },
+ "pins": {
+  "claim_v1": "a24d3557ef23a279cc08c2d578e420f676f28f05",
+  "concurrent_record": "0cba988e2a65e9195b0a0e6a3168a518e27079fb",
+  "census_v7": "68246f3263fe6cbb49ffafa866f73b49cf3c2ebb",
+  "engine_v17": "c132cc6425eee3feaeef1d697dd74f968cfedb59",
+  "engine_v15": "8744fc65b6b7cac6bd561403ce4c749e01c51359",
+  "sources": {
+   "class2-lane-cost73j-raw-batch7-20261117.jsonl": "f5255e171547a404dd26dd6dc09785fecf9e0822",
+   "class2-lane-cost73i-raw-sweep-audit-20261117.json": "33c8c6bb2b81301354e8b796f5a4751fb52aba3b",
+   "class2-lane-cost72d-raw-sweep-audit-20261117.json": "6247569a7dca86053943701a3ae099e704e0cb31",
+   "class2-lane-cost69j-raw-audit-20261117.json": "2f6bba29ee388bdf1211400ce5599f0ba24d03e1",
+   "class2-lane-cost71e-raw-sweep-audit-20261117.json": "9f56bdb74a71ef5a647432409ffd76928702870a",
+   "class2-lane-cost66i-raw-audit-20261116.json": "f7d8bad610fe07fee6b365e711838600722737e2",
+   "class2-lane-cost66i-raw-batch2-20261116.jsonl": "540f645f49dc59e5a2226006584e2cad247b0295"
+  },
+  "raw_batches": {
+   "class2-lane-cost73k-raw-batch1-20261117.jsonl": "1fe539daf95428ea17464da98c9b0144dfb0f064",
+   "class2-lane-cost73k-raw-batch2-20261117.jsonl": "cf3053954c803211800e29601ed0db187d00e503",
+   "class2-lane-cost73k-raw-batch3-20261117.jsonl": "077b8d973b405d1f330375e68faf5de622be83e9",
+   "class2-lane-cost73k-raw-batch4-20261117.jsonl": "466aa6c0fd2136ee8a64d1a92e0ab01fad7aa8c4",
+   "class2-lane-cost73k-raw-batch5-20261117.jsonl": "a7a42d6852dbdbb8275a4124f2864e8dbf4ff617",
+   "class2-lane-cost73k-raw-batch6-20261117.jsonl": "bc15e86cba867e75460366b7fe98b030ee116517",
+   "class2-lane-cost73k-raw-batch7-20261117.jsonl": "5a2d6c16f23eda83c85fac9b7a738f9bf417ca66",
+   "class2-lane-cost73k-raw-batch8-20261117.jsonl": "e6244a9fee005228f4f6b220b425cddd7ea8e9e8",
+   "class2-lane-cost73k-raw-batch9-confirmation-20261117.jsonl": "9186d5acb83facfb906de96e4006fee9595bf472",
+   "class2-lane-cost73k-det-batch1-20261117.jsonl": "24041180bbff2b540cce02d6b046a37f39e8e4da",
+   "class2-lane-cost73k-det-batch7-20261117.jsonl": "6256a0c97e5ccc214b6c866eb34e7909b536495f",
+   "class2-lane-cost73k-v15-crosscheck-a-20261117.jsonl": "0bf71cb759a7482c526f2c40fe0f713615499544",
+   "class2-lane-cost73k-v15-crosscheck-b-20261117.jsonl": "9fd88dbb78af6b76ca493b3c394c605b4946a04d",
+   "class2-lane-cost73k-v15-crosscheck-c-20261117.jsonl": "2254643d7504d4e864fe2ab293ab9ceadff3591b",
+   "class2-lane-cost73k-v15-crosscheck-d-20261117.jsonl": "b34bded71fd7cd08807c10b23e57959d5148511c"
+  }
+ }
+}
