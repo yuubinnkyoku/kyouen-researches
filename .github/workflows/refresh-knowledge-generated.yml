@@ -293,6 +293,10 @@ jobs:
         run: |
           uv run --locked python research/experiments/vertical-fiber-two-token-z6-y22-boundary-20261117/verify_z6_y22.py
           git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y22-boundary-20261117/output/audit.json
+      - name: Audit K0917 two-token z=6 y=23 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y23-boundary-20261117/verify_z6_y23.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y23-boundary-20261117/output/audit.json
       - name: Audit K0900 r=12 boundary cross-lane agreement check
         run: |
           uv run --locked python research/experiments/remo-k-branch-cap10-r12-boundary-independent-check-20261117/check_k0898_cross_lane_agreement.py
@@ -638,3 +642,4 @@ jobs:
 # Refresh generated views for K0914 two-token z=6,y=21 full Grundy slice (2026-11-17).
 # Refresh generated views for K0915 two-token z=6,y=22 full Grundy slice (2026-11-17).
 # Refresh generated views for K0916 three-branch REMO branch-size prime dichotomy (Theorem PD: cap<=10 3-branch keys uniformly decisive at r >= max(M,2) iff Delta=0 or all branch sizes in {2,3,5,7}; det set 98 = 55 Delta=0 + 43 all-prime keys, 0 violations both directions, assembled from Theorem J universality + the committed r=2..13 packed columns; gamma-independence; 171 deceptive keys incl. the six (1,1,p)/(1,p,p) full-low-window keys; 22 exotic size-11/12 keys show the dichotomy closes exactly at cap<=10; r=14/15 probes) (2026-11-17).
+# Refresh generated views for K0917 two-token z=6,y=23 full Grundy slice (A/B/C signature induction; 6,319,398 finite audit checks, zero mismatches; 2-run byte-identical) (2026-11-17).
