@@ -1,0 +1,31 @@
+{
+  "all_pass": true,
+  "audit_scope": {
+    "direct_R": "0 <= R < x+51",
+    "direct_x": [24, 60],
+    "far_tail_samples": 2000,
+    "far_tail_seed": 20261117,
+    "signature_R": "1 <= R <= x+30",
+    "signature_x": [24, 2000],
+    "tail_offsets": [0, 64],
+    "tail_x": [24, 2000]
+  },
+  "classification": "universal proof by explicit A/B/C signature table, K0832 Theorem T, general tail theorem, and strong induction on R",
+  "counts": {
+    "choice_signatures": 2060034,
+    "direct_ordered_canonical_formula_anchors": 10323,
+    "even_parent_upper_bound": 1029523,
+    "fixed_seed_far_tail": 2000,
+    "mex_identities": 2060034,
+    "odd_parent_upper_bound": 1030511,
+    "tail": 128505,
+    "three_family_specialization": 1977,
+    "value2_locus": 1977
+  },
+  "failures": [],
+  "repeat_byte_identical": true,
+  "repeat_runs": 2,
+  "sha256_without_hash_field": "7309406f32721547689749f4b8b7c68837d7debf611a2cd1e1d3874be6b0b69d",
+  "target": "H(R;(x,24);6), x>=24, R>=0",
+  "total_checks": 6324884
+}
