@@ -1,0 +1,1358 @@
+{
+  "schema": "n11-cost78c-raw-batches-1-6-audit-20261118-v1",
+  "date": "2026-11-18",
+  "base_main_before_audit": "232dd35d9a4de98baca7a7c77e0357d9908408a6",
+  "source_commits": [
+    "c368cbe8bfa72462d480bc2e9dc7c7152907c339",
+    "500f8c86e53b0a49695fe5db9d31dcd9e6b9401d"
+  ],
+  "input_pins": {
+    "claim": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-inflight-20261117.json",
+      "git_blob_sha": "7c38b88e33d1c176bdedf582bea7138cfa6a067a"
+    },
+    "census": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-next-target-presweep-1473-v11-20261117.json",
+      "git_blob_sha": "1e2b6a2b688db1a93098edea62b5793b54efaaba"
+    },
+    "geometry": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-claim-structure-audit-20261118.json",
+      "git_blob_sha": "ff11e54923b0b88941e4a50c5770f09e74863013"
+    },
+    "batch1": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-raw-batch1-20261117.jsonl",
+      "git_blob_sha": "e7eaa4b466a71630b956ffba792f2bde1dd28957"
+    },
+    "batch2": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-raw-batch2-20261117.jsonl",
+      "git_blob_sha": "ad7212628cf663c1681a0e0ef9b700fd6019873b"
+    },
+    "batch3": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-raw-batch3-20261117.jsonl",
+      "git_blob_sha": "d5a4a4444d18592816ad7e64f492976d1567ca96"
+    },
+    "batch4": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-raw-batch4-20261117.jsonl",
+      "git_blob_sha": "2a6cfd349519500e5eee17ce50455a7d2b00faeb"
+    },
+    "batch5": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-raw-batch5-20261117.jsonl",
+      "git_blob_sha": "66d3b8544306a49d9be5030abc0ffb7f7e0dafcf"
+    },
+    "batch6": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-raw-batch6-20261117.jsonl",
+      "git_blob_sha": "9596daf578bcdb549e1f5b37e87ff246df61c183"
+    }
+  },
+  "target": {
+    "child": "00000000000000403800000008000008",
+    "stone_bits": [
+      3,
+      27,
+      59,
+      60,
+      61,
+      70
+    ],
+    "open_bits_total": 66,
+    "processed_open_bits": 54,
+    "remaining_open_bits": 12
+  },
+  "census_selection": {
+    "chain_head": "1473/174/6375/504596/4648/368510",
+    "selected_target": "00000000000000403800000008000008",
+    "edge_cost": 78,
+    "demand": {
+      "c1": 0,
+      "c2": 1,
+      "c4": 0
+    }
+  },
+  "batch_summaries": [
+    {
+      "batch": 1,
+      "record_count": 10,
+      "candidate_bits": [
+        1,
+        2,
+        4,
+        9,
+        10,
+        16,
+        17,
+        18,
+        19
+      ],
+      "candidate_nodes": 36696776,
+      "pilot_nodes": 3402,
+      "win_bits": [
+        1,
+        4,
+        9
+      ],
+      "refuted_bits": [
+        2,
+        10,
+        16,
+        17,
+        18,
+        19
+      ],
+      "capped_bits": []
+    },
+    {
+      "batch": 2,
+      "record_count": 10,
+      "candidate_bits": [
+        21,
+        23,
+        24,
+        25,
+        29,
+        30,
+        31,
+        32,
+        33
+      ],
+      "candidate_nodes": 30741077,
+      "pilot_nodes": 3402,
+      "win_bits": [
+        30
+      ],
+      "refuted_bits": [
+        21,
+        23,
+        24,
+        25,
+        29,
+        31,
+        32,
+        33
+      ],
+      "capped_bits": []
+    },
+    {
+      "batch": 3,
+      "record_count": 10,
+      "candidate_bits": [
+        35,
+        38,
+        41,
+        42,
+        43,
+        44,
+        45,
+        49,
+        52
+      ],
+      "candidate_nodes": 31031855,
+      "pilot_nodes": 3402,
+      "win_bits": [
+        49
+      ],
+      "refuted_bits": [
+        35,
+        38,
+        41,
+        42,
+        43,
+        44,
+        45,
+        52
+      ],
+      "capped_bits": []
+    },
+    {
+      "batch": 4,
+      "record_count": 10,
+      "candidate_bits": [
+        53,
+        54,
+        66,
+        68,
+        69,
+        74,
+        75,
+        76,
+        78
+      ],
+      "candidate_nodes": 22544685,
+      "pilot_nodes": 3402,
+      "win_bits": [
+        69,
+        75
+      ],
+      "refuted_bits": [
+        53,
+        54,
+        66,
+        68,
+        74,
+        76,
+        78
+      ],
+      "capped_bits": []
+    },
+    {
+      "batch": 5,
+      "record_count": 10,
+      "candidate_bits": [
+        79,
+        82,
+        83,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90
+      ],
+      "candidate_nodes": 20114212,
+      "pilot_nodes": 3402,
+      "win_bits": [
+        79
+      ],
+      "refuted_bits": [
+        82,
+        83,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90
+      ],
+      "capped_bits": []
+    },
+    {
+      "batch": 6,
+      "record_count": 10,
+      "candidate_bits": [
+        91,
+        92,
+        95,
+        96,
+        98,
+        99,
+        100,
+        101,
+        102
+      ],
+      "candidate_nodes": 23655159,
+      "pilot_nodes": 3402,
+      "win_bits": [
+        100
+      ],
+      "refuted_bits": [
+        91,
+        92,
+        95,
+        96,
+        98,
+        99,
+        101,
+        102
+      ],
+      "capped_bits": []
+    }
+  ],
+  "per_bit": [
+    {
+      "bit": 1,
+      "verdict": "WIN7-D10",
+      "nodes": 7264656,
+      "root_hex": "0000000000000040380000000800000a",
+      "root_canon": "0000000000000040380000000800000a",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 18760
+    },
+    {
+      "bit": 2,
+      "verdict": "REFUTED-D10",
+      "nodes": 2275852,
+      "root_hex": "0000000000000040380000000800000c",
+      "root_canon": "0000000000000040380000000800000c",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 7369
+    },
+    {
+      "bit": 4,
+      "verdict": "WIN7-D10",
+      "nodes": 7292768,
+      "root_hex": "00000000000000403800000008000018",
+      "root_canon": "00000000000000403800000008000018",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 19173
+    },
+    {
+      "bit": 9,
+      "verdict": "WIN7-D10",
+      "nodes": 5853782,
+      "root_hex": "00000000000000403800000008000208",
+      "root_canon": "00000000000000403800000008000208",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 15651
+    },
+    {
+      "bit": 10,
+      "verdict": "REFUTED-D10",
+      "nodes": 1783048,
+      "root_hex": "00000000000000403800000008000408",
+      "root_canon": "00000000000000403800000008000408",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 4779
+    },
+    {
+      "bit": 16,
+      "verdict": "REFUTED-D10",
+      "nodes": 5250165,
+      "root_hex": "00000000000000403800000008010008",
+      "root_canon": "00000000000000403800000008010008",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 14950
+    },
+    {
+      "bit": 17,
+      "verdict": "REFUTED-D10",
+      "nodes": 673407,
+      "root_hex": "00000000000000403800000008020008",
+      "root_canon": "00000000000000403800000008020008",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 1773
+    },
+    {
+      "bit": 18,
+      "verdict": "REFUTED-D10",
+      "nodes": 5021325,
+      "root_hex": "00000000000000403800000008040008",
+      "root_canon": "00000000000000403800000008040008",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 13487
+    },
+    {
+      "bit": 19,
+      "verdict": "REFUTED-D10",
+      "nodes": 1281773,
+      "root_hex": "00000000000000403800000008080008",
+      "root_canon": "00000000000000403800000008080008",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 3258
+    },
+    {
+      "bit": 21,
+      "verdict": "REFUTED-D10",
+      "nodes": 2948945,
+      "root_hex": "00000000000000403800000008200008",
+      "root_canon": "00000000000000403800000008200008",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 9282
+    },
+    {
+      "bit": 23,
+      "verdict": "REFUTED-D10",
+      "nodes": 800338,
+      "root_hex": "00000000000000403800000008800008",
+      "root_canon": "00000000000000403800000008800008",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 2089
+    },
+    {
+      "bit": 24,
+      "verdict": "REFUTED-D10",
+      "nodes": 949286,
+      "root_hex": "00000000000000403800000009000008",
+      "root_canon": "00000000000000403800000009000008",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 2532
+    },
+    {
+      "bit": 25,
+      "verdict": "REFUTED-D10",
+      "nodes": 9006715,
+      "root_hex": "0000000000000040380000000a000008",
+      "root_canon": "0000000000000040380000000a000008",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 24968
+    },
+    {
+      "bit": 29,
+      "verdict": "REFUTED-D10",
+      "nodes": 2152252,
+      "root_hex": "00000000000000403800000028000008",
+      "root_canon": "00000000000000403800000028000008",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 5594
+    },
+    {
+      "bit": 30,
+      "verdict": "WIN7-D10",
+      "nodes": 2011603,
+      "root_hex": "00000000000000403800000048000008",
+      "root_canon": "00000000000000403800000048000008",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 4950
+    },
+    {
+      "bit": 31,
+      "verdict": "REFUTED-D10",
+      "nodes": 641576,
+      "root_hex": "00000000000000403800000088000008",
+      "root_canon": "00000000000000403800000088000008",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 1672
+    },
+    {
+      "bit": 32,
+      "verdict": "REFUTED-D10",
+      "nodes": 7094196,
+      "root_hex": "00000000000000403800000108000008",
+      "root_canon": "00000000000000403800000108000008",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 19144
+    },
+    {
+      "bit": 33,
+      "verdict": "REFUTED-D10",
+      "nodes": 5136166,
+      "root_hex": "00000000000000403800000208000008",
+      "root_canon": "00000000000000403800000208000008",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 15017
+    },
+    {
+      "bit": 35,
+      "verdict": "REFUTED-D10",
+      "nodes": 2643113,
+      "root_hex": "00000000000000403800000808000008",
+      "root_canon": "00000000000000403800000808000008",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 7512
+    },
+    {
+      "bit": 38,
+      "verdict": "REFUTED-D10",
+      "nodes": 3731480,
+      "root_hex": "00000000000000403800004008000008",
+      "root_canon": "00000000000000403800004008000008",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 9693
+    },
+    {
+      "bit": 41,
+      "verdict": "REFUTED-D10",
+      "nodes": 9434386,
+      "root_hex": "00000000000000403800020008000008",
+      "root_canon": "00000000000000403800020008000008",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 26917
+    },
+    {
+      "bit": 42,
+      "verdict": "REFUTED-D10",
+      "nodes": 3301248,
+      "root_hex": "00000000000000403800040008000008",
+      "root_canon": "00000000000000403800040008000008",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 9520
+    },
+    {
+      "bit": 43,
+      "verdict": "REFUTED-D10",
+      "nodes": 2641069,
+      "root_hex": "00000000000000403800080008000008",
+      "root_canon": "00000000000000403800080008000008",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 7289
+    },
+    {
+      "bit": 44,
+      "verdict": "REFUTED-D10",
+      "nodes": 2285937,
+      "root_hex": "00000000000000403800100008000008",
+      "root_canon": "00000000000000403800100008000008",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 8057
+    },
+    {
+      "bit": 45,
+      "verdict": "REFUTED-D10",
+      "nodes": 749332,
+      "root_hex": "00000000000000403800200008000008",
+      "root_canon": "00000000000000403800200008000008",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 2019
+    },
+    {
+      "bit": 49,
+      "verdict": "WIN7-D10",
+      "nodes": 1818616,
+      "root_hex": "00000000000000403802000008000008",
+      "root_canon": "00000000000000403802000008000008",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 4516
+    },
+    {
+      "bit": 52,
+      "verdict": "REFUTED-D10",
+      "nodes": 4426674,
+      "root_hex": "00000000000000403810000008000008",
+      "root_canon": "00000000000000403810000008000008",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 11837
+    },
+    {
+      "bit": 53,
+      "verdict": "REFUTED-D10",
+      "nodes": 2231466,
+      "root_hex": "00000000000000403820000008000008",
+      "root_canon": "00000000000000403820000008000008",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 6672
+    },
+    {
+      "bit": 54,
+      "verdict": "REFUTED-D10",
+      "nodes": 6603707,
+      "root_hex": "00000000000000403840000008000008",
+      "root_canon": "00000000000000403840000008000008",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 23617
+    },
+    {
+      "bit": 66,
+      "verdict": "REFUTED-D10",
+      "nodes": 883928,
+      "root_hex": "00000000000000443800000008000008",
+      "root_canon": "00000000000000443800000008000008",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 2510
+    },
+    {
+      "bit": 68,
+      "verdict": "REFUTED-D10",
+      "nodes": 2676411,
+      "root_hex": "00000000000000503800000008000008",
+      "root_canon": "00000000000000503800000008000008",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 7671
+    },
+    {
+      "bit": 69,
+      "verdict": "WIN7-D10",
+      "nodes": 1161282,
+      "root_hex": "00000000000000603800000008000008",
+      "root_canon": "00000000000000603800000008000008",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 2749
+    },
+    {
+      "bit": 74,
+      "verdict": "REFUTED-D10",
+      "nodes": 693865,
+      "root_hex": "00000000000004403800000008000008",
+      "root_canon": "00000000000001103800000008000080",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 1892
+    },
+    {
+      "bit": 75,
+      "verdict": "WIN7-D10",
+      "nodes": 1264941,
+      "root_hex": "00000000000008403800000008000008",
+      "root_canon": "00000000000001083800000008000080",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 2962
+    },
+    {
+      "bit": 76,
+      "verdict": "REFUTED-D10",
+      "nodes": 3374845,
+      "root_hex": "00000000000010403800000008000008",
+      "root_canon": "00000000000001043800000008000080",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 10463
+    },
+    {
+      "bit": 78,
+      "verdict": "REFUTED-D10",
+      "nodes": 3654240,
+      "root_hex": "00000000000040403800000008000008",
+      "root_canon": "00000000000000801206000200040000",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 12312
+    },
+    {
+      "bit": 79,
+      "verdict": "WIN7-D10",
+      "nodes": 1982518,
+      "root_hex": "00000000000080403800000008000008",
+      "root_canon": "00000000000000801206000220000000",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 5173
+    },
+    {
+      "bit": 82,
+      "verdict": "REFUTED-D10",
+      "nodes": 1757523,
+      "root_hex": "00000000000400403800000008000008",
+      "root_canon": "00000000000000805206000200000000",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 4498
+    },
+    {
+      "bit": 83,
+      "verdict": "REFUTED-D10",
+      "nodes": 2555030,
+      "root_hex": "00000000000800403800000008000008",
+      "root_canon": "00000000000000a09003080000000000",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 7689
+    },
+    {
+      "bit": 85,
+      "verdict": "REFUTED-D10",
+      "nodes": 987457,
+      "root_hex": "00000000002000403800000008000008",
+      "root_canon": "00000000000021801202000020000000",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 2645
+    },
+    {
+      "bit": 86,
+      "verdict": "REFUTED-D10",
+      "nodes": 799893,
+      "root_hex": "00000000004000403800000008000008",
+      "root_canon": "00000000000021801202000000040000",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 2271
+    },
+    {
+      "bit": 87,
+      "verdict": "REFUTED-D10",
+      "nodes": 7403237,
+      "root_hex": "00000000008000403800000008000008",
+      "root_canon": "00000000000021003800000008000080",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 20540
+    },
+    {
+      "bit": 88,
+      "verdict": "REFUTED-D10",
+      "nodes": 437845,
+      "root_hex": "00000000010000403800000008000008",
+      "root_canon": "00000000000000801206000200000100",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 1175
+    },
+    {
+      "bit": 89,
+      "verdict": "REFUTED-D10",
+      "nodes": 898846,
+      "root_hex": "00000000020000403800000008000008",
+      "root_canon": "00000000000000801206000200080000",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 2549
+    },
+    {
+      "bit": 90,
+      "verdict": "REFUTED-D10",
+      "nodes": 3291863,
+      "root_hex": "00000000040000403800000008000008",
+      "root_canon": "00000000000000801206000240000000",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 8089
+    },
+    {
+      "bit": 91,
+      "verdict": "REFUTED-D10",
+      "nodes": 921082,
+      "root_hex": "00000000080000403800000008000008",
+      "root_canon": "00000000000000801206020200000000",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 2403
+    },
+    {
+      "bit": 92,
+      "verdict": "REFUTED-D10",
+      "nodes": 7966855,
+      "root_hex": "00000000100000403800000008000008",
+      "root_canon": "00000000000000801216000200000000",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 22945
+    },
+    {
+      "bit": 95,
+      "verdict": "REFUTED-D10",
+      "nodes": 520744,
+      "root_hex": "00000000800000403800000008000008",
+      "root_canon": "00000000000021801202020000000000",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 1328
+    },
+    {
+      "bit": 96,
+      "verdict": "REFUTED-D10",
+      "nodes": 324138,
+      "root_hex": "00000001000000403800000008000008",
+      "root_canon": "00000000000021801202000040000000",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 802
+    },
+    {
+      "bit": 98,
+      "verdict": "REFUTED-D10",
+      "nodes": 2187127,
+      "root_hex": "00000004000000403800000008000008",
+      "root_canon": "00000000000021801202000000000100",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 5962
+    },
+    {
+      "bit": 99,
+      "verdict": "REFUTED-D10",
+      "nodes": 8460041,
+      "root_hex": "00000008000000403800000008000008",
+      "root_canon": "00000000000000801206000200000200",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 25350
+    },
+    {
+      "bit": 100,
+      "verdict": "WIN7-D10",
+      "nodes": 2234336,
+      "root_hex": "00000010000000403800000008000008",
+      "root_canon": "00000000000000801206000200100000",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 5707
+    },
+    {
+      "bit": 101,
+      "verdict": "REFUTED-D10",
+      "nodes": 781933,
+      "root_hex": "00000020000000403800000008000008",
+      "root_canon": "00000000000000801206000280000000",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 2077
+    },
+    {
+      "bit": 102,
+      "verdict": "REFUTED-D10",
+      "nodes": 258903,
+      "root_hex": "00000040000000403800000008000008",
+      "root_canon": "00000000000000801206040200000000",
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "andclose": true,
+      "capped": false,
+      "ms": 626
+    }
+  ],
+  "totals": {
+    "candidate_bits": 54,
+    "candidate_nodes": 164783764,
+    "pilot_controls": 6,
+    "pilot_nodes": 20412,
+    "all_nodes": 164804176,
+    "win7_d10_bits": [
+      1,
+      4,
+      9,
+      30,
+      49,
+      69,
+      75,
+      79,
+      100
+    ],
+    "refuted_d10_bits": [
+      2,
+      10,
+      16,
+      17,
+      18,
+      19,
+      21,
+      23,
+      24,
+      25,
+      29,
+      31,
+      32,
+      33,
+      35,
+      38,
+      41,
+      42,
+      43,
+      44,
+      45,
+      52,
+      53,
+      54,
+      66,
+      68,
+      74,
+      76,
+      78,
+      82,
+      83,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      95,
+      96,
+      98,
+      99,
+      101,
+      102
+    ],
+    "capped_bits": []
+  },
+  "claim_reconciliation": {
+    "claim_status": "claim v1: planned; nothing has been run for this child yet (batches_run 0); the sweep will run the 66 open bits fresh at depth 10 (v17 engine, cap 1e9 per bit, andclose 1, fresh engine state per bit) plus the 12 confirmation bits [5, 13, 14, 20, 34, 46, 97, 103, 108, 110, 115, 118] re-run fresh as controls against already-known verdicts; all 12 confirmation verdicts are REFUTED-D10 (10 fourteen-map canons from cost69j bit 3, cost72d bit 3, cost64h bit 3, cost73j bit 3, cost73i bit 3, cost71e bit 87, cost66i bit 33, cost66j bit 87, cost73k bit 33, cost73l bit 87, plus 2 pre-64h harvest canons: cost64d bit 3 raw-identical and cost70b bit 48 canon-equal), so no certificate extraction is expected from the confirmation bits; no WIN7-D10 or REFUTED-D10 verdict for any open bit of this child has been observed at the time of this claim; no manifest row is closed by this claim; 11x11 UNKNOWN",
+    "batches_run_text_says_zero": true,
+    "raw_batches_present": 6,
+    "claim_not_updated_in_this_audit": true
+  },
+  "independent_checks": {
+    "v15_crosscheck": "NOT RUN",
+    "certificate_extraction": "NOT RUN",
+    "receipt_fold": "NOT RUN"
+  },
+  "checks": {
+    "six_batches_nine_bits_each": {
+      "ok": true,
+      "record_counts": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        10
+      ]
+    },
+    "exact_open_prefix_54": {
+      "ok": true,
+      "bits": [
+        1,
+        2,
+        4,
+        9,
+        10,
+        16,
+        17,
+        18,
+        19,
+        21,
+        23,
+        24,
+        25,
+        29,
+        30,
+        31,
+        32,
+        33,
+        35,
+        38,
+        41,
+        42,
+        43,
+        44,
+        45,
+        49,
+        52,
+        53,
+        54,
+        66,
+        68,
+        69,
+        74,
+        75,
+        76,
+        78,
+        79,
+        82,
+        83,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        95,
+        96,
+        98,
+        99,
+        100,
+        101,
+        102
+      ],
+      "expected": [
+        1,
+        2,
+        4,
+        9,
+        10,
+        16,
+        17,
+        18,
+        19,
+        21,
+        23,
+        24,
+        25,
+        29,
+        30,
+        31,
+        32,
+        33,
+        35,
+        38,
+        41,
+        42,
+        43,
+        44,
+        45,
+        49,
+        52,
+        53,
+        54,
+        66,
+        68,
+        69,
+        74,
+        75,
+        76,
+        78,
+        79,
+        82,
+        83,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        95,
+        96,
+        98,
+        99,
+        100,
+        101,
+        102
+      ]
+    },
+    "unique_bits": {
+      "ok": true,
+      "unique": 54
+    },
+    "pilot_controls": {
+      "ok": true,
+      "count": 6,
+      "nodes": [
+        3402,
+        3402,
+        3402,
+        3402,
+        3402,
+        3402
+      ]
+    },
+    "all_andclose": {
+      "ok": true,
+      "count": 54
+    },
+    "no_capped": {
+      "ok": true,
+      "capped": []
+    },
+    "terminal_range": {
+      "ok": true,
+      "count": 54
+    },
+    "node_sum": {
+      "ok": true,
+      "candidate_nodes": 164783764,
+      "pilot_nodes": 20412,
+      "all_nodes": 164804176
+    },
+    "nine_win_seven_d10": {
+      "ok": true,
+      "win_bits": [
+        1,
+        4,
+        9,
+        30,
+        49,
+        69,
+        75,
+        79,
+        100
+      ]
+    },
+    "forty_five_refuted_d10": {
+      "ok": true,
+      "refuted_bits": [
+        2,
+        10,
+        16,
+        17,
+        18,
+        19,
+        21,
+        23,
+        24,
+        25,
+        29,
+        31,
+        32,
+        33,
+        35,
+        38,
+        41,
+        42,
+        43,
+        44,
+        45,
+        52,
+        53,
+        54,
+        66,
+        68,
+        74,
+        76,
+        78,
+        82,
+        83,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        95,
+        96,
+        98,
+        99,
+        101,
+        102
+      ]
+    },
+    "all_54_root_canons_unique": {
+      "ok": true,
+      "unique_canons": 54
+    },
+    "winner_canons_unique_and_not_confirmation": {
+      "ok": true,
+      "winner_canons": [
+        "0000000000000040380000000800000a",
+        "00000000000000403800000008000018",
+        "00000000000000403800000008000208",
+        "00000000000000403800000048000008",
+        "00000000000000403802000008000008",
+        "00000000000000603800000008000008",
+        "00000000000001083800000008000080",
+        "00000000000000801206000220000000",
+        "00000000000000801206000200100000"
+      ],
+      "matches_confirmation": false
+    },
+    "all_roots_seven_stones": {
+      "ok": true
+    },
+    "geometry_audit_prior_pass": {
+      "ok": true
+    },
+    "census_selection_matches_claim": {
+      "ok": true,
+      "chain_head": "1473/174/6375/504596/4648/368510",
+      "selected": "00000000000000403800000008000008"
+    },
+    "claim_stale_vs_published_raw": {
+      "ok": true,
+      "claim_says_batches_run_zero": true,
+      "raw_batches": 6
+    }
+  },
+  "all_pass": true,
+  "failures": [],
+  "interpretation_guard": "These are v17 raw per-root depth-10 results for the first 54 of 66 open candidate bits only. loss=true maps to WIN7-D10 under the pinned claim semantics; loss=false with capped=false maps to REFUTED-D10, not a LOSS proof. No independent v15 cross-check or certificate extraction is included here. No S6 row or family row is closed by these raw batches. Standard 11x11 remains UNKNOWN."
+}
