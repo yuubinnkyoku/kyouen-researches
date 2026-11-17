@@ -58,6 +58,12 @@ artifacts:
   - path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/hybrid-seed-union-independent-verification-73k-20261117.json
     role: verifier
     note: claimセッションの独立検証JSON（hash・tail byte同一・証明書22/22・record恒等式独自再実装・run間完全一致・3セッション実行履歴と環境リセット記録）
+  - path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/measure_worker_split8_memo_merge_73k_20261117.py
+    role: verifier
+    note: 8-worker分割測定オーケストレータ（連続DP min-max 8分割・先頭bit fresh anchor・8-way heapq merge・sim MS掃引・MS=1<<25 seedrun・record恒等式・全gate判定）
+  - path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/worker-split8-memo-merge-73k-20261117.json
+    role: data
+    note: 8-way測定JSON（15/15 gate合格・worker合計110,639,931 nodes・merge 5,243,408 keys・seedrun25 70,538,916 nodes・seed失敗383==sim予測）
 ---
 
 # K0909: worker分割メモmergeの安全性（cost73kバンド・verbatim engine）
@@ -299,5 +305,46 @@ gate定数再設計として、N-way merge seedの容量設計規則を確定し
    record恒等式の独自再実装（seed全件sort+streaming mergeで
    present 4,975,507・missing 20・違反0・missingリスト一致）・per-bit総和・
    run間完全一致を確認して本測定をclaimとして出版した。
+
+勝敗変更なし・manifest行は閉じず・証明書bytes不変・11×11はUNKNOWN。
+
+## 8-way worker分割の測定（2026-11-17追記4・測定のみ）
+
+K0909 resume item（8-worker拡張・先頭bit逆行ペナルティの構造性・MS=1<<25設計点でのseed失敗再評価）を測定した
+（`measure_worker_split8_memo_merge_73k_20261117.py`・測定JSON 15/15 gate合格・
+独立log `2026-11-17-n11-class2-lane-worker-split8-memo-merge-73k.md`・
+claim `worker-split8-memo-merge-measurement-claim-73k-20261117.json`・
+計算前にclaimをb8c76a4dで先行取得・並走hybrid測定（1299412a/e0c13af3）とは別アイテムで重複なし）:
+
+1. **分割設計**: band ms23のper-bitノード数に対する連続DP min-max分割で22 bitを8 worker化
+   （V1=0,7,11・V2=15,35・V3=39,41,44,58・V4=62,73,76・V5=87,89,94・V6=95,97・V7=98,103,105・V8=112,117・各MS=1<<23・band内共有）。
+   V1はband ms23プレフィックスとper-bit完全一致（12,253,371 nodes・最終占有率1,882,289==BAND23_OCC[11]）。
+   他7 workerの先頭bit（15,39,62,87,95,98,112）は全て出版fresh per-bit anchorと完全一致（gate）。
+2. **worker合計110,639,931 nodes**（band ms23 121,186,659の0.9130・出版2-way 119,962,147の0.9223・
+   ノード均衡4-way 112,741,501の0.9814・境界保存4-way 111,953,183の0.9883）で、
+   2→4→8の分割数拡大が全出版構成で単調に安いことを確認（改善は逓減: 2-way→nb4で−6.0%・nb4→8-wayで−1.9%）。
+   証明書22/22 byte同一（V1..V8各3/2/4/3/3/2/3/2）。
+3. **先頭bit逆行ペナルティはN=8では構造的でない**: 先頭bitのfresh/carriedノード比は
+   V2 0.9937・V3 1.0362（唯一の逆行・bit39）・V4 0.7903・V5 0.8171・V6 1.0（bit95・memo-state-invariant）・
+   V7 0.8788・V8 0.7731で、大半の先頭bitはband-carriedよりむしろ安い
+   （fresh23合計がband23合計より小さいことと整合）。境界保存4-wayのbit41 +5.6%は普遍則ではない。
+4. **8-way heapq merge-join**: distinct合計7,914,609・occupied_after **5,243,408**
+   （出版2-way seed比+22.2%・nb4 seed比+5.2%・union増大は逓減: 2→4-way +16.2%・4→8-way +5.2%）・
+   shared 1,980,110・incidence {1:3,263,298, 2:1,422,024, 3:441,397, 4:101,479, 5:14,142, 6:1,030, 7:38, 8:0}
+   （全8 workerが同時にmemo化したキーは存在しない）・内部衝突0・cross衝突0・merge決定的（2回実行でbyte同一）・
+   seed8 md5 `8d07cd7b82a3befc07cc775ea883e2e0`。
+5. **sim MS掃引（seed8）**: 1<<24→39,409失敗（0.7516%・load 0.3102・失敗はown-cluster 7,019+spill-over 32,390・
+   最大cluster 130 key・>=64-key base 563）でknee曲線の第3点
+   4.29M→1,448・4.99M→16,137・5.24M→39,409を加え超線形性を確認。
+   1<<25→383（0.0073%・load 0.1563で0.15設計線を僅かに超えるがkneeはMSと共に動き失敗率は2桁の余裕）・
+   1<<26→0（load 0.0781・>=64-key baseなし）。
+6. **MS=1<<25 seedrun（fsync強化dump・cap 200）**: seeded 5,243,408 / inserted 5,243,025 /
+   **failed 383 == sim予測383**（0.0073%<0.1% gate）・証明書22/22 byte同一・
+   record恒等式閉包（present 5,243,025・missing==383・値違反0）・**70,538,916 nodes**
+   （nb4 seedrun25 72,745,351の0.9697・nb4 seedrun24 76,903,818の0.9172・
+   並走出版hybrid seedrun25 72,761,010の0.9695）・最終占有率14,053,298（load 0.4188）・
+   bit95は11,857,737 nodesで5度目の完全不変確認。大きい8-way union seedほどband実行が安いという
+   濃度とコストの関係がN=8まで成立し、このバンドの測定済み最安band構成となった
+   （sim==engine一致は設計較正点（4.99M）の1つ外側まで拡張）。
 
 勝敗変更なし・manifest行は閉じず・証明書bytes不変・11×11はUNKNOWN。

@@ -2,7 +2,7 @@
   "schema": "n11-class2-lane-worker-split8-memo-merge-measurement-claim-73k-20261117-v1",
   "date": "2026-11-17",
   "lane": "n11 class2-lane long-term (cost73k)",
-  "status": "CLAIMED_IN_PROGRESS",
+  "status": "COMPLETED",
   "claim": "Execute the published K0909 resume item: 8-worker node-balanced split memo merge measurement (BITS_W* extension, head-bit reverse penalty, seed failure rate re-budgeting at MS=1<<25). Distinct from the claimed hybrid-seed-union measurement (which combines existing 2-way/4-way tables); this measurement runs a NEW 8-way split.",
   "base_head": "da276db1ab2ea4824a23019015a44632953a794d",
   "inputs_pins": {
@@ -14,54 +14,15 @@
   },
   "split_design": {
     "method": "contiguous DP min-max partition of the 22 band bits by published band ms23 per-bit node counts",
-    "bits_v1": [
-      0,
-      7,
-      11
-    ],
-    "bits_v2": [
-      15,
-      35
-    ],
-    "bits_v3": [
-      39,
-      41,
-      44,
-      58
-    ],
-    "bits_v4": [
-      62,
-      73,
-      76
-    ],
-    "bits_v5": [
-      87,
-      89,
-      94
-    ],
-    "bits_v6": [
-      95,
-      97
-    ],
-    "bits_v7": [
-      98,
-      103,
-      105
-    ],
-    "bits_v8": [
-      112,
-      117
-    ],
-    "band23_weights": [
-      12253371,
-      13205358,
-      13271291,
-      14567808,
-      18608221,
-      16286927,
-      17536986,
-      15458697
-    ]
+    "bits_v1": [0, 7, 11],
+    "bits_v2": [15, 35],
+    "bits_v3": [39, 41, 44, 58],
+    "bits_v4": [62, 73, 76],
+    "bits_v5": [87, 89, 94],
+    "bits_v6": [95, 97],
+    "bits_v7": [98, 103, 105],
+    "bits_v8": [112, 117],
+    "band23_weights": [12253371, 13205358, 13271291, 14567808, 18608221, 16286927, 17536986, 15458697]
   },
   "planned_stages": [
     "run 8 fresh workers (MS=1<<23, band-carried memo, per-bit snapshots byte-identical to published certs)",
@@ -71,8 +32,41 @@
     "engine seedrun MS=1<<25 with seed8 (hardened dump fsync, cap 200): 22/22 certs byte-identical, record identity closed, seed failed == sim prediction",
     "compare workers total vs published 2-way (119,962,147) / 4-way nb (112,741,501) / band ms23 (121,186,659); head-bit fresh penalty per worker; seedrun nodes vs published ms25 node-balanced seedrun (72,745,351)"
   ],
-  "batches_run": 0,
-  "interpretation_guard": "Claim in progress; no measurement batches completed yet. No new WIN/LOSS verdicts, no certificate byte changes, no manifest closures. Standard 11x11 remains UNKNOWN.",
-  "session_note": "Executed in the upgraded agent execution environment (Node 22.20.0, Python 3.12.14, same environment class as the published K0909 measurements). Inputs reconstructed from raw-CDN pinned blobs and pin-verified; smoke test (bit 41, MS=1<<23) reproduced a byte-identical certificate.",
-  "last_checked_main": "da276db1ab2ea4824a23019015a44632953a794d"
+  "batches_run": 1,
+  "results": {
+    "workers_total_nodes": 110639931,
+    "workers_total_vs": {"band23": 0.9130, "two_way": 0.9223, "nb4": 0.9814, "boundary4": 0.9883},
+    "worker_totals_nodes": {"V1": 12253371, "V2": 13181331, "V3": 13007357, "V4": 13387472, "V5": 15825310, "V6": 16061843, "V7": 14904737, "V8": 12018510},
+    "certificates_byte_identical": "22/22 (per worker V1..V8: 3/2/4/3/3/2/3/2)",
+    "v1_band23_prefix_exact": "total 12,253,371 nodes, final occupancy 1,882,289 == BAND23_OCC[11], per-bit byte-identical",
+    "head_bit_fresh_anchors": "all 7 non-prefix worker head bits equal published fresh per-bit nodes exactly (gate)",
+    "head_bit_fresh_vs_carried": {"V2_bit15": 0.9937, "V3_bit39": 1.0362, "V4_bit62": 0.7903, "V5_bit87": 0.8171, "V6_bit95": 1.0, "V7_bit98": 0.8788, "V8_bit112": 0.7731},
+    "head_bit_note": "only reversal is bit 39 (1.0362); most fresh heads are CHEAPER than band-carried, so the boundary-4-way bit-41 reversal is not structural at N=8",
+    "merge_occupied_after": 5243408,
+    "merge_occupied_after_vs": {"two_way": 1.2217, "nb4": 1.0516},
+    "merge_shared_total": 1980110,
+    "incidence_histogram": {"1": 3263298, "2": 1422024, "3": 441397, "4": 101479, "5": 14142, "6": 1030, "7": 38, "8": 0},
+    "conflicts": {"internal": 0, "cross": 0},
+    "merge_deterministic": true,
+    "seed8_md5": "8d07cd7b82a3befc07cc775ea883e2e0",
+    "sim": {"ms24_failed": 39409, "ms24_load": 0.3102, "ms25_failed": 383, "ms25_load": 0.1563, "ms26_failed": 0, "knee_3rd_point": "4.29M->1,448 / 4.99M->16,137 / 5.24M->39,409 superlinear confirmed"},
+    "seedrun25": {
+      "total_nodes": 70538916,
+      "seeded": 5243408, "inserted": 5243025, "failed": 383,
+      "failed_equals_sim": true,
+      "certs_byte_identical": "22/22",
+      "final_occupied": 14053298, "load_factor_final": 0.4188,
+      "record_identity": "closed (present 5,243,025, missing == 383, value violations 0)",
+      "vs_nb4_seedrun25_72745351": 0.9697,
+      "vs_nb4_seedrun24_76903818": 0.9172,
+      "vs_hybrid_seedrun25_72761010": 0.9695
+    },
+    "bit95_invariant_nodes": 11857737,
+    "gates": "15/15 pass",
+    "output_json": "output/worker-split8-memo-merge-73k-20261117.json",
+    "orchestrator": "scripts/measure_worker_split8_memo_merge_73k_20261117.py"
+  },
+  "interpretation_guard": "Measurement complete. No new WIN/LOSS verdicts, no certificate byte changes, no manifest closures. 11x11 empty board, S2 {59,60}, both two-stone roots, classes 1/2/4 all remain UNKNOWN.",
+  "session_note": "Executed in the upgraded agent execution environment (Node 22.20.0, Python 3.12.14, same environment class as the published K0909 measurements). Inputs reconstructed from raw-CDN pinned blobs and pin-verified; published certificates 22/22 md5-verified before compute. The hybrid-seed-union measurement was published concurrently by a parallel lane (1299412a data, e0c13af3 docs); this 8-way run is a distinct resume item, no duplication. The fixB worker-split claim (dcfdcb25) belongs to another lane and was not touched; the cost74i sweep (claimed 7153fe58) completed at 874c5327 by its own lane.",
+  "last_checked_main": "83a6b52704d8b1cb5218ced6e2d9797472f364a6"
 }
