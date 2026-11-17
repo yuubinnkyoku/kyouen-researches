@@ -24,7 +24,7 @@ A/B/C再帰ではx=18のA/B子が正準化後に同じ(18,17)へ合流する。x
 
 ## 保存物
 
-- research/knowledge/items/K0909-two-token-z6-y18-boundary.md
+- research/knowledge/items/K0910-two-token-z6-y18-boundary.md
 - research/experiments/vertical-fiber-two-token-z6-y18-boundary-20261117/report.md
 - research/experiments/vertical-fiber-two-token-z6-y18-boundary-20261117/verify_z6_y18.py
 - research/experiments/vertical-fiber-two-token-z6-y18-boundary-20261117/output/audit.json
@@ -35,3 +35,8 @@ K0832とknowledge READMEの証明済み範囲・未解決境界をy=18まで更�
 ## 検査境界
 
 この実行ではGitHub connector経由でmainを読み書きしており、repo checkout上のuv sync、knowledge check、unittest、buildは実行していない。GitHub Actionsの結果も反映後に別途確認する。11×11 rootや長時間探索は起動していない。
+
+
+## 統合時の採番調整
+
+作業開始時点の検索ではK0909は未使用だったが、並行レーンの更新でK0909（worker分割メモmergeの安全性）が先にmainへ登録された。AGENTS.mdの採番規則に従い、既存K0909は変更せず、このy=18切片をK0910へ再採番した。READMEとK0832の参照もK0910へ更新した。
