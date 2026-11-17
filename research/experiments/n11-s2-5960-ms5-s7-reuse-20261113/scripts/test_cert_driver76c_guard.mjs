@@ -34,18 +34,19 @@ try {
   fs.writeFileSync(driverPath, driverSource);
   fs.writeFileSync(mockPath, mock);
   const cases = [
-    { mode: 'ok', expectedStatus: 0, expectedFile: true },
-    { mode: 'fatal', expectedStatus: 1, expectedFile: false },
-    { mode: 'drops', expectedStatus: 1, expectedFile: false },
-    { mode: 'missing', expectedStatus: 1, expectedFile: false },
-    { mode: 'bad-per-move', expectedStatus: 1, expectedFile: false }
+    { mode: 'ok', bit: 61, expectedStatus: 0, expectedFile: true },
+    { mode: 'fatal', bit: 61, expectedStatus: 1, expectedFile: false },
+    { mode: 'drops', bit: 61, expectedStatus: 1, expectedFile: false },
+    { mode: 'missing', bit: 61, expectedStatus: 1, expectedFile: false },
+    { mode: 'bad-per-move', bit: 61, expectedStatus: 1, expectedFile: false },
+    { mode: 'occupied-bit', bit: 60, expectedStatus: 2, expectedFile: false }
   ];
   const results = [];
   for (const c of cases) {
     const outPath = path.join(temp, c.mode + '.cert');
     const run = spawnSync(process.execPath, [
       '--experimental-strip-types', driverPath,
-      '00000000010000809002000001000000', '61', outPath
+      '00000000010000809002000001000000', String(c.bit), outPath
     ], {
       input: 'ignored header\\n0,1,2\\n',
       encoding: 'utf8',
