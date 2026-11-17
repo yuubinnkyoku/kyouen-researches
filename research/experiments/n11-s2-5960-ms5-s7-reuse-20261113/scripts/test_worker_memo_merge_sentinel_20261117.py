@@ -6,7 +6,7 @@ from worker_memo_merge import (UNBOUND, bound_at_least, combine_values, conflict
 
 class SentinelAwareMemoMergeTests(unittest.TestCase):
     def test_max_bound_is_a_join_on_all_depths(self):
-        domain = list(range(65)) + [UNBOUND]
+        domain = list(range(UNBOUND + 1))
         for a, b in itertools.product(domain, repeat=2):
             self.assertEqual(max_bound(a, b), max_bound(b, a))
             expected = b if a == UNBOUND else a if b == UNBOUND else max(a, b)
@@ -17,13 +17,13 @@ class SentinelAwareMemoMergeTests(unittest.TestCase):
                              max_bound(a, max_bound(b, c)))
 
     def test_unbound_is_identity_for_negative_bounds(self):
-        for d in range(65):
+        for d in range(UNBOUND):
             self.assertEqual(max_bound(d, UNBOUND), d)
             self.assertEqual(max_bound(UNBOUND, d), d)
         self.assertEqual(max_bound(UNBOUND, UNBOUND), UNBOUND)
 
     def test_seed_bound_comparison_respects_unbound(self):
-        domain = list(range(65)) + [UNBOUND]
+        domain = list(range(UNBOUND + 1))
         for value, required in itertools.product(domain, repeat=2):
             expected = (True if required == UNBOUND else
                         False if value == UNBOUND else value >= required)
