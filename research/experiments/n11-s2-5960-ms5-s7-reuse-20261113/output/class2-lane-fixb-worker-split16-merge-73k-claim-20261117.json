@@ -1,0 +1,33 @@
+{
+ "schema": "n11-class2-lane-fixb-worker-split16-merge-73k-claim-20261117-v1",
+ "date": "2026-11-17",
+ "lane": "n11 class2-lane long-term (cost73k)",
+ "status": "CLAIMED_IN_PROGRESS",
+ "claim": "Measure the fixB engine (both K0907 memo bugs fixed) in the K0909 16-way worker-split merge configuration: DP min-max 16-way split of the fixB band ms23 per-bit node counts (min-max 2,900,183 = bit 117 alone, the structural lower bound; 10 single-bit + 6 two-bit workers), 16 fresh workers at MS=1<<23 with band-carried memo, KYOENWM1 dump census, 16-way heapq merge with live-bound conflict detection, sim MS sweep, the MS=1<<25 design-point seedrun, and the band-table vs 16-way-merged-table comparison, in this session.",
+ "base_head": "49bf709e818bf40f216bd4ce9c3dd43ba39101ae",
+ "design_pins": {
+  "extractor_git_blob": "52bcaf509ea12fad4c936501d30d26b5b66c0085",
+  "worker_split_driver_git_blob": "2a95d9527afa3c1a24685b697c822f451aae58a5",
+  "legal_git_blob": "8e97082c42838c7a4a4b6d2dd235276c8d43ab9a",
+  "manifest_git_blob": "0892aed07d187ae2fb3b4b90a21c7adbc1002b62",
+  "fixb_2way_measurement_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/fixb-worker-split-memo-merge-73k-20261117.json",
+  "fixb_2way_orchestrator_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/measure_worker_split_fixb_memo_merge_73k_20261117.py",
+  "fixb_8way_measurement_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/fixb-worker-split8-memo-merge-73k-20261117.json",
+  "fixb_8way_orchestrator_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/measure_worker_split8_fixb_memo_merge_73k_20261117.py",
+  "verbatim_16way_measurement_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/worker-split16-memo-merge-73k-20261117.json"
+ },
+ "planned_stages": [
+  "16-way split design: DP min-max contiguous 16-partition of the 22 band bits on the fixB band ms23 per-bit node counts (min-max 2,900,183 = bit 117 alone; 10 single-bit + 6 two-bit workers), first worker = the fixB band ms23 prefix anchor (bit 0)",
+  "16 fixB workers (fresh processes, MS=1<<23, band-carried memo), per-bit nodes, KYOENWM1 dumps, certificate byte-identity gates, head-bit anchors vs the fixB fresh per-bit values",
+  "duplicate-key census on all 16 dumps (expect records == distinct, dup_keys 0, max copies 1)",
+  "16-way heapq merge-join with live nowin/nolose bounds: internal and cross conflicts, incidence histogram, merged KYOENWM2 seed, merge determinism",
+  "sim MS sweep (1<<24 / 1<<25 / 1<<26) on the 16-way merged seed with the published light simulator",
+  "MS=1<<25 design-point seedrun (all 22 bits): seed failures vs sim prediction, record-identity gate, certificates 22/22 byte-identical, node totals vs the fixB 8-way seedrun25 and the published verbatim 16-way seedrun25",
+  "band-table vs 16-way-merged-table set comparison (merge non-closure under fixB at N=16)"
+ ],
+ "batches_run": 0,
+ "non_overlap": "The published verbatim 16-way measurement (c3d9c918 claim), the published fixB 2-way measurement (dcfdcb25 claim, published d3060c8e/2ead47be), the published fixB 8-way measurement (7dca832c claim, published at 49bf709e), the cost75f sweep, the cost78c sweep and all other parallel-session claims are NOT touched; this claim is the fixB engine 16-way extension only. fixB adoption as a production extractor remains a separate lane decision; this work is measurement only.",
+ "interpretation_guard": "Claim in progress; no measurement batches completed yet. No new WIN/LOSS verdicts, no certificate byte changes, no manifest closures. Standard 11x11 remains UNKNOWN.",
+ "session_note": "Executed in the agent execution environment (Node 22.20.0, Python 3.12.14). All inputs rebuilt from pinned blobs; long jobs run fully detached via setsid (the process-group-kill workaround established in the fixB 2-way session).",
+ "last_checked_main": "49bf709e818bf40f216bd4ce9c3dd43ba39101ae"
+}
