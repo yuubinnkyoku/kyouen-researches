@@ -12,7 +12,7 @@ itself unproven: this script injects deterministic synthetic corruptions
 into copies of the real 4-worker dump/distinct tables and verifies that
 the merge machinery detects EXACTLY the injected contradictions, with
 zero false positives, and documents which corruption classes are
-structurally absorbed by the unbound-sentinel combine rules.
+finite negative bounds retained across unbound sentinels.
 
 MEMORY DESIGN (streaming everywhere): the first in-memory implementation
 of this test loaded all four distinct tables into Python lists and was
@@ -133,15 +133,12 @@ def select_scenario_keys():
             cands.append("F3")
         if set(recs) == {3} and r[3][0] < 255 and r[3][2] == 255:
             cands.append("F4")
-        # F5 absorption: verbatim-engine records never carry a real negative
-        # bound (nowin/nolose are always 255, K0907) and a record with no
-        # bound at all (win=lose=255 too) never occurs in the real tables
-        # (the F5a pre-check found 0 such keys), so the negative bound is
-        # injected into an otherwise-arbitrary W3 record; the other
-        # workers' 255 sentinels do the absorbing (max rule).
-        if (has(0) and has(2) and r[0][0] < 255 and r[0][2] == 255):
+        # F5 retention: choose shared keys where the injected negative bound is
+        # strictly weaker than W1's matching positive bound, so retention
+        # must change the merged value without creating a conflict.
+        if (has(0) and has(2) and r[0][0] > 4 and r[0][2] == 255):
             cands.append("F5a")
-        if (has(0) and has(2) and r[0][1] < 255 and r[0][3] == 255):
+        if (has(0) and has(2) and r[0][1] > 2 and r[0][3] == 255):
             cands.append("F5b")
         for sc in cands:
             if len(sel[sc]) < quotas[sc]:
@@ -298,14 +295,14 @@ def main():
         w1 = e["worker_values"]["workerW1"]
         e["orig"] = e["worker_values"]["workerW3"]
         e["injected"] = [255, 255, 4, 255]
-        e["kind"] = "absorbed_nowin"
+        e["kind"] = "retained_nowin"
         e["w1_record"] = w1
     for e in sel["F5b"]:
         subst_w3[e["key"]] = {7: 2}  # nolose -> 2
         w1 = e["worker_values"]["workerW1"]
         e["orig"] = e["worker_values"]["workerW3"]
         e["injected"] = [255, 255, 255, 2]
-        e["kind"] = "absorbed_nolose"
+        e["kind"] = "retained_nolose"
         e["w1_record"] = w1
     subst_w4 = {}
     for e in sel["F3"]:
@@ -344,7 +341,7 @@ def main():
           % (cross["cross_conflicts"], cross["occupied_after"],
              cross["shared_total"]), flush=True)
 
-    # ---- F5 absorption gate: fault merged records == clean merged records
+    # ---- F5 retention gate: injected finite bounds survive the merge
     print("[F5] extracting F5 keys from clean and fault merged seeds ...",
           flush=True)
     f5_keys = [e["key"] for e in sel["F5a"]] + [e["key"] for e in sel["F5b"]]
@@ -430,8 +427,8 @@ def main():
             "F2_cross_lose_injection": sel["F2"],
             "F3_cross_win_injection": sel["F3"],
             "F4_single_record_negative_bound": sel["F4"],
-            "F5a_absorbed_nowin": sel["F5a"],
-            "F5b_absorbed_nolose": sel["F5b"],
+            "F5a_retained_nowin": sel["F5a"],
+            "F5b_retained_nolose": sel["F5b"],
         },
         "f1_result": {
             "conflicts": f1_stats["conflicts"],
@@ -451,7 +448,7 @@ def main():
         "f5_gate": {
             "clean_records": {k: list(clean_recs[k]) for k in f5_keys},
             "fault_records": {k: list(fault_recs[k]) for k in f5_keys},
-            "equal": {k: clean_recs[k] == fault_recs[k] for k in f5_keys},
+            "matches_expected_retained_bound": {k: (fault_recs[k][2] == 4 if k in [e["key"] for e in sel["F5a"]] else fault_recs[k][3] == 2) for k in f5_keys},
         },
         "gates": gates,
         "gates_all_pass": all_pass,
