@@ -1,0 +1,371 @@
+{
+ "schema": "n11-class2-lane-cost73l-publication-geometry-audit-20261117-v1",
+ "date": "2026-11-17",
+ "result": "PASS",
+ "execution": "Executed in this run with an independent BigInt determinant/D4 implementation over the published manifest roots and claim metadata. The committed Node script is a reproducible local-checkout version; it was syntax-checked with Node 22 but not run against a local repository checkout.",
+ "source_blobs": {
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73l-certificates/class2-lane-cost73l-win7-certificates-20261117.json": "6e0a94aba212ba54bb5329fbea4643c9dcdb1ec4",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73l-inflight-20261117.json": "39cf0f9b31a28ad6358f157e2433477ab0659243",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73l-raw-sweep-audit-20261117.json": "f2ea204413b31405b9e0f54a6a3d76205ca749b9",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73l-certificates/stats.json": "d3dc8ae006109bc65619f68ed855b71d56d2eea1",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73l-certificates/det-reextraction.json": "6b1576e54759627def5a9cd137548aa974252efa",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73j-certificates/class2-lane-cost73j-win7-certificates-20261117.json": "e88710b5a2d4848be77a03ae5104e46aefc1279a",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73k-certificates/class2-lane-cost73k-win7-certificates-20261117.json": "0892aed07d187ae2fb3b4b90a21c7adbc1002b62",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73l-pins-20261117.txt": "f36f9a57790a476f552f42c1924ba25b8615a4b3",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost73l_manifest_geometry_20261117.mjs": "8a32f40f23dacd6a5948e19e12f776edb37e496a"
+ },
+ "main_head_before_report": "5698b8e315ce979fd2cfd7f328406e90d7971238",
+ "checks": {
+  "sweep": {
+   "candidates": 73,
+   "open": 66,
+   "confirmations": 7,
+   "win7_d10": 34,
+   "refuted_d10": 39,
+   "capped": 0
+  },
+  "roots": {
+   "count": 32,
+   "safe": 32,
+   "child_or_bit": 32,
+   "d4_canon_match": 32,
+   "independent_mobility_match": 32,
+   "unique_d4": 32,
+   "overlap_with_73j_73k": 0
+  },
+  "transfers": {
+   "106": {
+    "canon": "00000000010000809003000000040000",
+    "source": "cost73j bit118"
+   },
+   "110": {
+    "canon": "00000000010000809003000000000001",
+    "source": "cost73k bit98"
+   }
+  },
+  "manifest_totals": {
+   "certificates": 32,
+   "rows": 1693203,
+   "extraction_nodes": 424657112,
+   "published_bytes": 61171191,
+   "subroots": 1904
+  },
+  "deterministic_reextractions": {
+   "all_byte_identical": true,
+   "bits": [
+    1,
+    9,
+    47,
+    61,
+    64,
+    116
+   ]
+  },
+  "pin_table": {
+   "rows": 159,
+   "unique_names": 159,
+   "blob_sha": "f36f9a57790a476f552f42c1924ba25b8615a4b3"
+  }
+ },
+ "per_bit": [
+  {
+   "bit": 1,
+   "root": "00000000000000c09002000000400002",
+   "d4_canon": "00000000000000c09002000000400002",
+   "mobility": 59,
+   "rows": 50377,
+   "extraction_nodes": 11911796,
+   "certificate_bytes": 1823372
+  },
+  {
+   "bit": 2,
+   "root": "00000000000000c09002000000400004",
+   "d4_canon": "00000000000000c09002000000400004",
+   "mobility": 55,
+   "rows": 40116,
+   "extraction_nodes": 10434625,
+   "certificate_bytes": 1451230
+  },
+  {
+   "bit": 3,
+   "root": "00000000000000c09002000000400008",
+   "d4_canon": "00000000000000c09002000000400008",
+   "mobility": 62,
+   "rows": 67015,
+   "extraction_nodes": 16988371,
+   "certificate_bytes": 2423139
+  },
+  {
+   "bit": 4,
+   "root": "00000000000000c09002000000400010",
+   "d4_canon": "00000000000000c09002000000400010",
+   "mobility": 63,
+   "rows": 64430,
+   "extraction_nodes": 14334219,
+   "certificate_bytes": 2331920
+  },
+  {
+   "bit": 6,
+   "root": "00000000000000c09002000000400040",
+   "d4_canon": "00000000000000c09002000000400040",
+   "mobility": 63,
+   "rows": 63971,
+   "extraction_nodes": 15666095,
+   "certificate_bytes": 2314652
+  },
+  {
+   "bit": 8,
+   "root": "00000000000000c09002000000400100",
+   "d4_canon": "00000000000000c09002000000400100",
+   "mobility": 58,
+   "rows": 49052,
+   "extraction_nodes": 10638032,
+   "certificate_bytes": 1775404
+  },
+  {
+   "bit": 9,
+   "root": "00000000000000c09002000000400200",
+   "d4_canon": "00000000000000c09002000000400200",
+   "mobility": 67,
+   "rows": 70732,
+   "extraction_nodes": 16489294,
+   "certificate_bytes": 2560559
+  },
+  {
+   "bit": 18,
+   "root": "00000000000000c09002000000440000",
+   "d4_canon": "00000000000000c09002000000440000",
+   "mobility": 65,
+   "rows": 82404,
+   "extraction_nodes": 20672244,
+   "certificate_bytes": 2976616
+  },
+  {
+   "bit": 21,
+   "root": "00000000000000c09002000000600000",
+   "d4_canon": "00000000000000c09002000000600000",
+   "mobility": 62,
+   "rows": 47227,
+   "extraction_nodes": 9438456,
+   "certificate_bytes": 1704304
+  },
+  {
+   "bit": 23,
+   "root": "00000000000000c09002000000c00000",
+   "d4_canon": "00000000000000c09002000000c00000",
+   "mobility": 56,
+   "rows": 45805,
+   "extraction_nodes": 12319308,
+   "certificate_bytes": 1653931
+  },
+  {
+   "bit": 25,
+   "root": "00000000000000c09002000002400000",
+   "d4_canon": "00000000000000c09002000002400000",
+   "mobility": 56,
+   "rows": 56015,
+   "extraction_nodes": 18394863,
+   "certificate_bytes": 2020488
+  },
+  {
+   "bit": 28,
+   "root": "00000000000000c09002000010400000",
+   "d4_canon": "00000000000000c09002000010400000",
+   "mobility": 55,
+   "rows": 36144,
+   "extraction_nodes": 6873526,
+   "certificate_bytes": 1304664
+  },
+  {
+   "bit": 29,
+   "root": "00000000000000c09002000020400000",
+   "d4_canon": "00000000000000c09002000020400000",
+   "mobility": 56,
+   "rows": 44901,
+   "extraction_nodes": 10313436,
+   "certificate_bytes": 1625225
+  },
+  {
+   "bit": 32,
+   "root": "00000000000000c09002000100400000",
+   "d4_canon": "00000000000000c09002000100400000",
+   "mobility": 66,
+   "rows": 59751,
+   "extraction_nodes": 12508103,
+   "certificate_bytes": 2159811
+  },
+  {
+   "bit": 34,
+   "root": "00000000000000c09002000400400000",
+   "d4_canon": "00000000000000c09002000400400000",
+   "mobility": 56,
+   "rows": 50365,
+   "extraction_nodes": 12403562,
+   "certificate_bytes": 1818527
+  },
+  {
+   "bit": 41,
+   "root": "00000000000000c09002020000400000",
+   "d4_canon": "00000000000000c09002020000400000",
+   "mobility": 52,
+   "rows": 24672,
+   "extraction_nodes": 4208674,
+   "certificate_bytes": 890716
+  },
+  {
+   "bit": 42,
+   "root": "00000000000000c09002040000400000",
+   "d4_canon": "00000000000000c09002040000400000",
+   "mobility": 62,
+   "rows": 53683,
+   "extraction_nodes": 11830318,
+   "certificate_bytes": 1940356
+  },
+  {
+   "bit": 44,
+   "root": "00000000000000c09002100000400000",
+   "d4_canon": "00000000000000c09002100000400000",
+   "mobility": 58,
+   "rows": 50042,
+   "extraction_nodes": 14887701,
+   "certificate_bytes": 1809357
+  },
+  {
+   "bit": 47,
+   "root": "00000000000000c09002800000400000",
+   "d4_canon": "00000000000000c09002800000400000",
+   "mobility": 63,
+   "rows": 76323,
+   "extraction_nodes": 22283713,
+   "certificate_bytes": 2754504
+  },
+  {
+   "bit": 53,
+   "root": "00000000000000c09022000000400000",
+   "d4_canon": "00000000000000c09022000000400000",
+   "mobility": 58,
+   "rows": 45165,
+   "extraction_nodes": 11424479,
+   "certificate_bytes": 1633711
+  },
+  {
+   "bit": 54,
+   "root": "00000000000000c09042000000400000",
+   "d4_canon": "00000000000000c09042000000400000",
+   "mobility": 55,
+   "rows": 42923,
+   "extraction_nodes": 9826357,
+   "certificate_bytes": 1550196
+  },
+  {
+   "bit": 61,
+   "root": "00000000000000c0b002000000400000",
+   "d4_canon": "00000000000000c0b002000000400000",
+   "mobility": 53,
+   "rows": 28229,
+   "extraction_nodes": 3775056,
+   "certificate_bytes": 1019711
+  },
+  {
+   "bit": 62,
+   "root": "00000000000000c0d002000000400000",
+   "d4_canon": "00000000000000c0d002000000400000",
+   "mobility": 55,
+   "rows": 43253,
+   "extraction_nodes": 9964422,
+   "certificate_bytes": 1563590
+  },
+  {
+   "bit": 64,
+   "root": "00000000000000c19002000000400000",
+   "d4_canon": "00000000000000c19002000000400000",
+   "mobility": 59,
+   "rows": 55024,
+   "extraction_nodes": 22369552,
+   "certificate_bytes": 1987093
+  },
+  {
+   "bit": 66,
+   "root": "00000000000000c49002000000400000",
+   "d4_canon": "00000000000000c49002000000400000",
+   "mobility": 61,
+   "rows": 57251,
+   "extraction_nodes": 14037499,
+   "certificate_bytes": 2068497
+  },
+  {
+   "bit": 80,
+   "root": "00000000000100c09002000000400000",
+   "d4_canon": "00000000000100c09002000000400000",
+   "mobility": 54,
+   "rows": 37590,
+   "extraction_nodes": 9851145,
+   "certificate_bytes": 1357356
+  },
+  {
+   "bit": 95,
+   "root": "00000000800000c09002000000400000",
+   "d4_canon": "00000000010000809003000020000000",
+   "mobility": 59,
+   "rows": 49006,
+   "extraction_nodes": 11436328,
+   "certificate_bytes": 1770387
+  },
+  {
+   "bit": 105,
+   "root": "00000200000000c09002000000400000",
+   "d4_canon": "00000000010000809003000000020000",
+   "mobility": 61,
+   "rows": 60179,
+   "extraction_nodes": 16761836,
+   "certificate_bytes": 2172055
+  },
+  {
+   "bit": 112,
+   "root": "00010000000000c09002000000400000",
+   "d4_canon": "00000000010000809003000000000004",
+   "mobility": 63,
+   "rows": 63235,
+   "extraction_nodes": 19697224,
+   "certificate_bytes": 2280207
+  },
+  {
+   "bit": 113,
+   "root": "00020000000000c09002000000400000",
+   "d4_canon": "00000000010000809003000000000008",
+   "mobility": 59,
+   "rows": 49267,
+   "extraction_nodes": 8855424,
+   "certificate_bytes": 1777348
+  },
+  {
+   "bit": 116,
+   "root": "00100000000000c09002000000400000",
+   "d4_canon": "00000000010000809003000000000040",
+   "mobility": 67,
+   "rows": 73217,
+   "extraction_nodes": 22587921,
+   "certificate_bytes": 2638690
+  },
+  {
+   "bit": 119,
+   "root": "00800000000000c09002000000400000",
+   "d4_canon": "00000000010000809003000000000200",
+   "mobility": 66,
+   "rows": 55839,
+   "extraction_nodes": 11473533,
+   "certificate_bytes": 2013575
+  }
+ ],
+ "limitations": [
+  "The >1 MB certificate parts cannot be read through the GitHub connector in this environment; no certificate strategy body was traversed here.",
+  "The repository's certificate-publication log records 32/32 engine-free Bareiss verification. This run independently re-derived root geometry, D4 classes and mobility, but did not rerun that verifier.",
+  "Third-implementation BigInt certificate re-verification remains pending."
+ ],
+ "interpretation_guard": [
+  "WIN7-D10 proves only an individual seven-stone root within depth 10.",
+  "REFUTED-D10 is not a LOSS proof.",
+  "No receipt was folded and no manifest row was closed by this audit.",
+  "11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+ ]
+}
