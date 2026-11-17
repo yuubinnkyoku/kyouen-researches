@@ -4,11 +4,12 @@
   "base_main_before_audit": "232dd35d9a4de98baca7a7c77e0357d9908408a6",
   "source_commits": [
     "c368cbe8bfa72462d480bc2e9dc7c7152907c339",
-    "500f8c86e53b0a49695fe5db9d31dcd9e6b9401d"
+    "500f8c86e53b0a49695fe5db9d31dcd9e6b9401d",
+    "275a37b8e3cb76d28224659e68e6e73f41fed76b"
   ],
   "input_pins": {
     "claim": {
-      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-inflight-20261117.json",
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-inflight-20261117-v1-archive.json",
       "git_blob_sha": "7c38b88e33d1c176bdedf582bea7138cfa6a067a"
     },
     "census": {
@@ -42,6 +43,10 @@
     "batch6": {
       "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-raw-batch6-20261117.jsonl",
       "git_blob_sha": "9596daf578bcdb549e1f5b37e87ff246df61c183"
+    },
+    "claim_v2": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-inflight-20261118-v2-archive.json",
+      "git_blob_sha": "8b7f055b2cc881d9b816532fb1450e7f88455ef7"
     }
   },
   "target": {
@@ -1081,10 +1086,16 @@
     "capped_bits": []
   },
   "claim_reconciliation": {
-    "claim_status": "claim v1: planned; nothing has been run for this child yet (batches_run 0); the sweep will run the 66 open bits fresh at depth 10 (v17 engine, cap 1e9 per bit, andclose 1, fresh engine state per bit) plus the 12 confirmation bits [5, 13, 14, 20, 34, 46, 97, 103, 108, 110, 115, 118] re-run fresh as controls against already-known verdicts; all 12 confirmation verdicts are REFUTED-D10 (10 fourteen-map canons from cost69j bit 3, cost72d bit 3, cost64h bit 3, cost73j bit 3, cost73i bit 3, cost71e bit 87, cost66i bit 33, cost66j bit 87, cost73k bit 33, cost73l bit 87, plus 2 pre-64h harvest canons: cost64d bit 3 raw-identical and cost70b bit 48 canon-equal), so no certificate extraction is expected from the confirmation bits; no WIN7-D10 or REFUTED-D10 verdict for any open bit of this child has been observed at the time of this claim; no manifest row is closed by this claim; 11x11 UNKNOWN",
+    "claim_status_at_audit": "claim v1: planned; nothing has been run for this child yet (batches_run 0); the sweep will run the 66 open bits fresh at depth 10 (v17 engine, cap 1e9 per bit, andclose 1, fresh engine state per bit) plus the 12 confirmation bits [5, 13, 14, 20, 34, 46, 97, 103, 108, 110, 115, 118] re-run fresh as controls against already-known verdicts; all 12 confirmation verdicts are REFUTED-D10 (10 fourteen-map canons from cost69j bit 3, cost72d bit 3, cost64h bit 3, cost73j bit 3, cost73i bit 3, cost71e bit 87, cost66i bit 33, cost66j bit 87, cost73k bit 33, cost73l bit 87, plus 2 pre-64h harvest canons: cost64d bit 3 raw-identical and cost70b bit 48 canon-equal), so no certificate extraction is expected from the confirmation bits; no WIN7-D10 or REFUTED-D10 verdict for any open bit of this child has been observed at the time of this claim; no manifest row is closed by this claim; 11x11 UNKNOWN",
     "batches_run_text_says_zero": true,
     "raw_batches_present": 6,
-    "claim_not_updated_in_this_audit": true
+    "claim_v1_not_updated_at_audit_time": true,
+    "claim_v2_status": "claim v2: PARTIAL; raw sweep batches 1-6 are published and independently audited (54/66 open bits: 9 WIN7-D10 / 45 REFUTED-D10 / 0 capped, 164,783,764 candidate nodes); batches 7-8 (remaining 12 open bits) and the 12-bit confirmation batch are still pending; v15 cross-engine check, determinism reruns, certificate extraction and independent certificate verification are pending; no receipt fold or manifest closure has occurred; 11x11 UNKNOWN",
+    "claim_v2_batches_run": 6,
+    "claim_v2_open_bits_remaining": 12,
+    "claim_v2_archive_blob_sha": "8b7f055b2cc881d9b816532fb1450e7f88455ef7",
+    "claim_v2_current_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-inflight-20261117.json",
+    "claim_v2_commit_sha": "275a37b8e3cb76d28224659e68e6e73f41fed76b"
   },
   "independent_checks": {
     "v15_crosscheck": "NOT RUN",
@@ -1350,6 +1361,12 @@
       "ok": true,
       "claim_says_batches_run_zero": true,
       "raw_batches": 6
+    },
+    "claim_v2_reconciles_raw_batches": {
+      "ok": true,
+      "batches_run": 6,
+      "open_bits_completed": 54,
+      "open_bits_remaining": 12
     }
   },
   "all_pass": true,
