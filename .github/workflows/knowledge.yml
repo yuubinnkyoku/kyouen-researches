@@ -92,6 +92,34 @@ jobs:
         run: |
           uv run --locked python research/experiments/vertical-fiber-two-token-z6-y10-boundary-20261117/verify_z6_y10.py
           git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y10-boundary-20261117/output/audit.json
+      - name: Audit KK0894 two-token z=6 y=11 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y11-boundary-20261117/verify_z6_y11.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y11-boundary-20261117/output/audit.json
+      - name: Audit KK0896 two-token z=6 y=12 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y12-boundary-20261117/verify_z6_y12.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y12-boundary-20261117/output/audit.json
+      - name: Audit KK0899 two-token z=6 y=13 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y13-boundary-20261117/verify_z6_y13.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y13-boundary-20261117/output/audit.json
+      - name: Audit KK0901 two-token z=6 y=14 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y14-boundary-20261117/verify_z6_y14.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y14-boundary-20261117/output/audit.json
+      - name: Audit KK0903 two-token z=6 y=15 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y15-boundary-20261117/verify_z6_y15.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y15-boundary-20261117/output/audit.json
+      - name: Audit KK0905 two-token z=6 y=16 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y16-boundary-20261117/verify_z6_y16.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y16-boundary-20261117/output/audit.json
+      - name: Audit KK0908 two-token z=6 y=17 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y17-boundary-20261117/verify_z6_y17.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y17-boundary-20261117/output/audit.json
       - name: Audit K0832 ceiling-token stable 2-position classification
         run: uv run --locked python research/experiments/vertical-fiber-ceiling-stable-2positions-20261116/verify_ceiling.py
       - name: Audit K0832 three-token transient band 2-position conjectures
