@@ -1,0 +1,39 @@
+{
+ "schema": "n11-class2-lane-cost78c-census-v12-cross-lane-agreement-20261118-v1",
+ "date": "2026-11-18",
+ "pins": {
+  "census_v12": {
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-next-target-presweep-1473-v12-20261118.json",
+   "git_blob_sha": "8e64d55250242a557c954ad5bad8c993bacd354b",
+   "published_at": "56d81b077362e71a2cb0ec232470b25c4fd06ca9"
+  },
+  "claim_v5": {
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-inflight-20261117.json",
+   "git_blob_sha": "1850832186ba9c8715624094f05d67aa4eb10f0b"
+  },
+  "bigint_batch": {
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-certificates-bigint-independent-reverification-20261117.json",
+   "git_blob_sha": "7d97599186e6c76b8566d5f5703d71915224a129",
+   "published_at": "2d447098547c74d89b7d8147eeefe7c77fd4e4e7"
+  },
+  "manifest": {
+   "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-certificates/class2-lane-cost78c-win7-certificates-20261117.json",
+   "git_blob_sha": "b7fe519e923c6170e836f71e3f084f73219319d5"
+  }
+ },
+ "checks": {
+  "chain_head": "census v12 chain_head == claim v5 basis_head == 1473/174/6375/504596/4648/368510",
+  "verdict_map_position": "cost78c is the 15th (last) of the 15 new_verdict_maps",
+  "win_bits_agreement": "census 78c win7_d10_bits == claim v5 win7_d10_bits == BigInt batch entry bits == [1,4,9,30,49,69,75,79,100,114,116]",
+  "refuted_bits_agreement": "census 78c refuted_d10_bits == claim v5 refuted_d10_bits (67 bits), capped 0, win/refuted disjoint, union == the 78 legal_candidates",
+  "totals_agreement": "census cross_checks 78c_manifest_totals == manifest totals == claim v5 certificates.totals == BigInt batch summary (rows 614003, extraction_nodes 77967826, published_bytes 22223603, fbt_drops 0, capped 0)",
+  "bigint_roots_agreement": "all 11 BigInt-re-verified roots are child | (1 << win_bit), each verifier_status PASS and manifest_record_agreement True",
+  "next_target": "selected_target cost 79 (the census v11 runner-up), parent == the cost-78c s5 parent, sweep_bits + confirmation_bits == legal_candidates == 79"
+ },
+ "agreement": "PASS",
+ "interpretation_guard": [
+  "this check closes the agreement direction the census v12 could not reference (it was published before the BigInt batch); it creates no verdict, closes no row and changes no frontier number",
+  "the census 78c verdict map carries REFUTED-D10 for 67 bits, which are NOT LOSS proofs of those roots",
+  "11x11 empty board: UNKNOWN. Two-stone roots {49,60} and {59,60}: UNKNOWN. S2 {59,60}: UNKNOWN. Classes 1, 2 and 4: UNKNOWN"
+ ]
+}
