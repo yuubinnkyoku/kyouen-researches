@@ -1,0 +1,172 @@
+{
+ "all_ok": true,
+ "checks": [
+  {
+   "data": {
+    "N": 8000,
+    "pin_mismatches": 0,
+    "top_u_deaths": [
+     [
+      [
+       2,
+       0
+      ],
+      2666
+     ],
+     [
+      [
+       4,
+       0
+      ],
+      1066
+     ],
+     [
+      [
+       6,
+       0
+      ],
+      608
+     ],
+     [
+      [
+       10,
+       0
+      ],
+      332
+     ],
+     [
+      [
+       12,
+       0
+      ],
+      255
+     ],
+     [
+      [
+       16,
+       0
+      ],
+      178
+     ],
+     [
+      [
+       18,
+       0
+      ],
+      150
+     ],
+     [
+      [
+       22,
+       0
+      ],
+      119
+     ]
+    ],
+    "top_v_deaths": [
+     [
+      [
+       2,
+       1
+      ],
+      2666
+     ],
+     [
+      [
+       4,
+       1
+      ],
+      1066
+     ],
+     [
+      [
+       6,
+       1
+      ],
+      608
+     ],
+     [
+      [
+       10,
+       1
+      ],
+      332
+     ],
+     [
+      [
+       12,
+       1
+      ],
+      254
+     ],
+     [
+      [
+       16,
+       1
+      ],
+      178
+     ],
+     [
+      [
+       18,
+       1
+      ],
+      150
+     ],
+     [
+      [
+       22,
+       1
+      ],
+      119
+     ]
+    ],
+    "u_violations": 0,
+    "v_violations": 0
+   },
+   "name": "SIEVE: on the U/V reduced games (K0928), for all m<=8000 the watched label dies exactly at the pot-(spf-1) stretch: V label 0 dies holding spf(2m+1) (hot, delta 1) when 2m+1 is composite and survives iff prime; U label m-1 dies holding spf(2m+3)-1 (cold, delta 0) when 2m+3 is composite and survives iff prime; survivors match the committed U/V tables (K0929)",
+   "ok": true
+  },
+  {
+   "data": {
+    "checks": 3988,
+    "failures": 0,
+    "m_hi": 1000,
+    "m_lo": 4
+   },
+   "name": "STR2: stretch-2 end-state theorems on the U/V reduced games, V(m) length ceil((m-1)/3) with block losers at labels 1 mod 3 and breaking losers 0/2/3 by m mod 3, U(m) length ceil((m+1)/3) with block losers 2 mod 3 and breaking losers 3/1/0 by m mod 3, the 6-reduction to W3/H3/G3 shapes, and SIEVE3-U (U label m-1 dies in stretch 2 iff m = 0 mod 3); all survivors pinned against the committed tables",
+   "ok": true
+  },
+  {
+   "data": {
+    "checks": 8282,
+    "failures": 0,
+    "grid_lines": 18
+   },
+   "name": "LADDER: restricted unified weight ladder F(w,h;n) (first n-h players hold w, last h hold w+1 hot, pot w, ptr 0; rule applies for h=0 all r, or h>=1 with r=0 or r>=h; the open class h>=2 with 1<=r<h is skipped): grids w=2 n<=1000, w=3 n<=800, w=4 n<=250, w=5 n<=150, all h=0..w",
+   "ok": true
+  },
+  {
+   "data": {
+    "sha256": "4a7e0412cd242ebe10f8a82b581cdb23edc7aff0c4912396ab7eef7796f4c70c"
+   },
+   "name": "W3EXPLORE: deterministic W3/H3/G3 stretch-3 exploration data (end-state shapes by n mod 4, position-0 death levels) pinned by sha256",
+   "ok": true
+  }
+ ],
+ "date": "2026-11-17",
+ "follows": "K0859 (REMO counting recursion, the uniform-board survivor P(C) via theorem D), K0928 (pot formulation, Lemma E/O, Theorem RED reducing P(C) to the U/V reduced games and pinning their tables m<=8000), K0929 (twin prime laws LAW1/LAW2 as conjectures whose mod-6 composite classes this run resolves universally via STR2/SIEVE3-U), K0919/K0926 (P(C) pins C=1..40 and plateau universality anchoring the committed tables)",
+ "items": [
+  "K0931"
+ ],
+ "pins": {
+  "../remo-pc-twin-laws-20261117/data/pc_p8000.json": "58a414bc31fb6266cc2d0e10000436e50f396135847bab5a32163cffff0b975e",
+  "../remo-pc-twin-laws-20261117/data/pc_uv8000.json": "8a3b318bd26b8197c66fd55d79007654d2926a18af165132af8c194bc76d8ae2",
+  "data/w3_explore.json": "4a7e0412cd242ebe10f8a82b581cdb23edc7aff0c4912396ab7eef7796f4c70c",
+  "ladder_verify.py": "a115146f4ef72cb7e902a37a8ea689b6840a10525ed388358dbf8ef1a47b5fc1",
+  "sieve_test.py": "5ad6811bb68fae5da723f8a8d81bd4edb66b9c503bc58771bcea2cddbcd27556",
+  "theorem_verify.py": "9dee93691dcbb881509366afc4e87bdaec8aca89ea3cdbee816c76dd076639f9",
+  "w3_explore.py": "32c1b0db158e58f8874a1569d404259226e098432529f04435cb57fac3325c52"
+ },
+ "title": "U/V stretch structure for the reduced REMO games and a unified weight ladder: proved STR2-V/U (stretch-2 end states with lengths and loser classes), SIEVE3-U (U label m-1 dies in stretch-2 iff 3|m), the twin-law mod-6 resolution (LAW1 universal on composites C=3 mod 6, C>=9; LAW2 universal on composites C=2 mod 6, C>=8), the 6-reduction V/U -> W3/H3/G3, and LAD h=0 (stretch-w ladder end state for every w, frame induction proof); the restricted ladder F(w,h;n) is machine-verified on four grids (8,282 checks) with the open class h>=2, 1<=r<h excluded; the SIEVE conjecture (death level = spf-1 mechanism) is machine-verified m<=8000 with 0 violations and remains unproven in general"
+}
