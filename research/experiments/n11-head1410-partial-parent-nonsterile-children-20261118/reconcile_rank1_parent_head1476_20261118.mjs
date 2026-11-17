@@ -199,7 +199,7 @@ function main() {
     m76.certificates[0].bit === 61 &&
     m76.certificates[0].sha === c76.certificate_extraction.actual_extraction.sha256 &&
     a76.all_checks_pass === true &&
-    a76.certificate_manifest_blob_sha === c76.manifest_blob_sha);
+    a76.certificate_manifest_blob_sha === c76.certificate_extraction.manifest_blob_sha);
   check("fold.76c_parent_after", f76.parents_after[PARENT].rows_after === 2 &&
     f76.parents_after[PARENT].edge_cost_after === 135 &&
     f76.parents_after[PARENT].rows_before === 5 &&
