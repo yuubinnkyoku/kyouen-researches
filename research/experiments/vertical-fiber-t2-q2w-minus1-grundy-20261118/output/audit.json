@@ -1,11 +1,22 @@
 {
   "all_ok": true,
   "canonical": {
-    "grundy_histogram": [121483, 120169, 6149, 6024],
-    "height_range": [2, 12],
+    "grundy_histogram": [
+      121483,
+      120169,
+      6149,
+      6024
+    ],
+    "height_range": [
+      2,
+      12
+    ],
     "parameter_pairs": 88,
     "states": 253825,
-    "width_range": [1, 8]
+    "width_range": [
+      1,
+      8
+    ]
   },
   "height_one": {
     "checks": 32765,
@@ -13,15 +24,27 @@
     "ok": true
   },
   "labelled": {
-    "grundy_histogram": [444446, 444354, 48954, 48948],
+    "grundy_histogram": [
+      444446,
+      444354,
+      48954,
+      48948
+    ],
     "height_ranges": "w=1..5:m=2..7; w=6:m=2..8; w=7:m=2..5",
     "parameter_pairs": 41,
     "states": 986702,
-    "width_range": [1, 7]
+    "width_range": [
+      1,
+      7
+    ]
   },
   "residual_recurrence": {
     "checks": 604760,
-    "grundy_histogram": [306100, 298541, 119],
+    "grundy_histogram": [
+      306100,
+      298541,
+      119
+    ],
     "max_width": 120,
     "memo_states": 14758,
     "ok": true
