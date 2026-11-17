@@ -1,0 +1,539 @@
+{
+ "schema": "n11-rank1-parent-head1476-reconciliation-crosscheck-20261118-v1",
+ "date": "2026-11-18",
+ "lane": "n11 long-term lane, verification-side crosscheck session (standard 11x11 weak-resolution)",
+ "title": "independent crosscheck of the published head-1476 reconciliation of the rank-1 partial-STERILE S5 parent 00000000000000801202000040000000: pins, orbit join, fold-chain arithmetic, receipt/covers arithmetic, certificate re-hashes, mjs static check-set, and K0863 conflict scan",
+ "source_main_head": "0c9881826a2e25bf665a19804ba5655f14aa932e",
+ "reconciled_result_commit": "cb7769314a260c91ed062486b600fa98ac689ea3",
+ "reconciled_log_commit": "a99f34b89e766d642583260e502ba30264753297",
+ "inputs": {
+  "k0863.md": "c2ae353cab4a7dbcd28ec53b0f57d35ab4f26a5d",
+  "k0865.md": "6b79dbcb2db0b8c34c108c1c227be139a3f1493b",
+  "k0868.md": "b097210d0b49d7cf014cc6a554298b1e49e83384",
+  "k0865_census.json": "9c251da3138c5cb0516e097be5e5d0427dfaf5f0",
+  "rank1_script.py": "606de306c9d08bac3cc0e119a486dc59cb04de6e",
+  "rank1_output.json": "881b7c7777b313bd88ae1840e32f06f397a31e7c",
+  "worklist1410.csv": "2fee1d0718547a62e346d35f5858d7913e37c097",
+  "s5_closability1410.csv": "65215b6582de6efedfed8d77d91630edd883a2cb",
+  "claim76c.json": "678211c5a35c25cf41b4a56473942860903647f6",
+  "fold76c.json": "953beaea054989e8b1de33f48b1f2ebc13ae7e11",
+  "audit76c.json": "de79a3a7bfc6c5b8fb77db885354f01b82e023f7",
+  "manifest76c.json": "00cf337f9365b10ac1db090b9f9cf9a464b83347",
+  "claim76d.json": "ec598676317b748eb34c7d2bf4044992343c518e",
+  "claim77e.json": "36515c516c7270e1869a52d0a76285200b1e33e8",
+  "fold76d77e.json": "8d4bc622f9da22b8754f2e398e5481359656d956",
+  "verify76d77e.json": "d267fa8d93017110ff74df4520b3a8e8a47bee5b",
+  "manifest76d.json": "e8a6116aec45c19642877db85340e120d23331b3",
+  "claim66i.json": "f8556f6c054d821e845b7ebe5035b8c280d2e97b",
+  "audit66i.json": "e1fbf301bb6795432dbb015289b4a68c63095ef0",
+  "fold66i.json": "a555ee3a575df04ecddf98ce890bd8eec53dd415",
+  "reconcile_mjs.mjs": "77e9fa4a8013ba42adbebbbbe24cdeeb1b928d24",
+  "reconc.json": "6992f2dcc8b87a5409cff31c8a87134fc4283a6a"
+ },
+ "method": "fourth-implementation D4 (coordinate transforms on the 11x11 grid; canon witnessed against both published cost-76c derived canon roots), independent orbit join over the raw 6,438-row head-1410 worklist, per-receipt covers/marginal set arithmetic, head-segment delta arithmetic across the three published folds, byte-level re-hash (sha256/md5/git-blob) of all six folded WIN7-D10 certificates from pinned raw files, static extraction of the published mjs verifier check-set, K0863 conflict scan (no STERILE row under any folded root or any D4 image of its one-stone reductions); no engine, no new verdict",
+ "derived": {
+  "orbit_join_rows": [
+   {
+    "hex": "00000000000000801202000040000400",
+    "cost": 71,
+    "category": "sterile"
+   },
+   {
+    "hex": "00000000000000801282000040000000",
+    "cost": 64,
+    "category": "sterile"
+   },
+   {
+    "hex": "00000000010000809002000001000000",
+    "cost": 76,
+    "category": "transfer_partial"
+   },
+   {
+    "hex": "00000000040000003800080008000000",
+    "cost": 76,
+    "category": "win_pending"
+   },
+   {
+    "hex": "00000000040000809002000000004000",
+    "cost": 77,
+    "category": "win_pending"
+   }
+  ],
+  "join_total_cost": 364,
+  "fold_segments": [
+   {
+    "segment": "cost76d77e",
+    "head_before": "1450/174/6398/506297/4671/370211",
+    "head_after": "1452/174/6396/506144/4669/370058",
+    "closed_rows": [
+     "00000000040000003800080008000000",
+     "00000000040000809002000000004000"
+    ]
+   },
+   {
+    "segment": "cost76c_bit61",
+    "head_before": "1472/174/6376/504672/4649/368586",
+    "head_after": "1473/174/6375/504596/4648/368510",
+    "closed_rows": [
+     "00000000010000809002000001000000"
+    ]
+   },
+   {
+    "segment": "cost66i_bit19",
+    "head_before": "1473/174/6375/504596/4648/368510",
+    "head_after": "1476/174/6372/504389/4645/368303",
+    "closed_rows": [
+     "00000000000000003801000000808000",
+     "00000000000000801222000000080000",
+     "00000000000000801226000000000000"
+    ]
+   }
+  ],
+  "remaining_rows_head1476": [
+   {
+    "hex": "00000000000000801202000040000400",
+    "cost": 71,
+    "category": "sterile"
+   },
+   {
+    "hex": "00000000000000801282000040000000",
+    "cost": 64,
+    "category": "sterile"
+   }
+  ],
+  "folded_win_roots_scanned": [
+   "00000000040000003800080008080000",
+   "00000000040000003802080008000000",
+   "00000000040000809002002000004000",
+   "00000000040000a09002000000004000",
+   "0000000001000080b002000001000000",
+   "00000000000000801226000000080000"
+  ]
+ },
+ "checks": [
+  {
+   "check": "pin.k0863",
+   "pass": true,
+   "detail": "c2ae353cab4a7dbcd28ec53b0f57d35ab4f26a5d"
+  },
+  {
+   "check": "pin.k0865",
+   "pass": true,
+   "detail": "6b79dbcb2db0b8c34c108c1c227be139a3f1493b"
+  },
+  {
+   "check": "pin.k0868",
+   "pass": true,
+   "detail": "b097210d0b49d7cf014cc6a554298b1e49e83384"
+  },
+  {
+   "check": "pin.k0865_census",
+   "pass": true,
+   "detail": "9c251da3138c5cb0516e097be5e5d0427dfaf5f0"
+  },
+  {
+   "check": "pin.rank1_script",
+   "pass": true,
+   "detail": "606de306c9d08bac3cc0e119a486dc59cb04de6e"
+  },
+  {
+   "check": "pin.rank1_output",
+   "pass": true,
+   "detail": "881b7c7777b313bd88ae1840e32f06f397a31e7c"
+  },
+  {
+   "check": "pin.worklist1410",
+   "pass": true,
+   "detail": "2fee1d0718547a62e346d35f5858d7913e37c097"
+  },
+  {
+   "check": "pin.s5_closability1410",
+   "pass": true,
+   "detail": "65215b6582de6efedfed8d77d91630edd883a2cb"
+  },
+  {
+   "check": "pin.claim76c",
+   "pass": true,
+   "detail": "678211c5a35c25cf41b4a56473942860903647f6"
+  },
+  {
+   "check": "pin.fold76c",
+   "pass": true,
+   "detail": "953beaea054989e8b1de33f48b1f2ebc13ae7e11"
+  },
+  {
+   "check": "pin.audit76c",
+   "pass": true,
+   "detail": "de79a3a7bfc6c5b8fb77db885354f01b82e023f7"
+  },
+  {
+   "check": "pin.manifest76c",
+   "pass": true,
+   "detail": "00cf337f9365b10ac1db090b9f9cf9a464b83347"
+  },
+  {
+   "check": "pin.claim76d",
+   "pass": true,
+   "detail": "ec598676317b748eb34c7d2bf4044992343c518e"
+  },
+  {
+   "check": "pin.claim77e",
+   "pass": true,
+   "detail": "36515c516c7270e1869a52d0a76285200b1e33e8"
+  },
+  {
+   "check": "pin.fold76d77e",
+   "pass": true,
+   "detail": "8d4bc622f9da22b8754f2e398e5481359656d956"
+  },
+  {
+   "check": "pin.verify76d77e",
+   "pass": true,
+   "detail": "d267fa8d93017110ff74df4520b3a8e8a47bee5b"
+  },
+  {
+   "check": "pin.manifest76d",
+   "pass": true,
+   "detail": "e8a6116aec45c19642877db85340e120d23331b3"
+  },
+  {
+   "check": "pin.claim66i",
+   "pass": true,
+   "detail": "f8556f6c054d821e845b7ebe5035b8c280d2e97b"
+  },
+  {
+   "check": "pin.audit66i",
+   "pass": true,
+   "detail": "e1fbf301bb6795432dbb015289b4a68c63095ef0"
+  },
+  {
+   "check": "pin.fold66i",
+   "pass": true,
+   "detail": "a555ee3a575df04ecddf98ce890bd8eec53dd415"
+  },
+  {
+   "check": "pin.reconcile_mjs",
+   "pass": true,
+   "detail": "77e9fa4a8013ba42adbebbbbe24cdeeb1b928d24"
+  },
+  {
+   "check": "pin.reconc",
+   "pass": true,
+   "detail": "6992f2dcc8b87a5409cff31c8a87134fc4283a6a"
+  },
+  {
+   "check": "mjs.check_names_match_result",
+   "pass": true,
+   "detail": "literals=28 pin_keys=19"
+  },
+  {
+   "check": "mjs.pin_table_matches_inputs",
+   "pass": true,
+   "detail": "19"
+  },
+  {
+   "check": "mjs.parent_constant",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "mjs.result_all_pass",
+   "pass": true,
+   "detail": "47"
+  },
+  {
+   "check": "mjs.source_main_head_pinned",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "basis.k0863_proved",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "basis.k0865_head1410",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "basis.k0868_convention",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "census.parent_entry",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "census.sterile_refs",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "census.top16_rank1",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "census.totals",
+   "pass": true,
+   "detail": "{\"eff_remaining\": 12183, \"no_sterile\": 114, \"open_s5\": 174, \"partial\": 57, \"remaining_row_refs\": 12274, \"sterile_refs\": 91, \"unclosable\": 3}"
+  },
+  {
+   "check": "census.sterile_registry",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "join.worklist_rows",
+   "pass": true,
+   "detail": "6438"
+  },
+  {
+   "check": "join.parent_popcount",
+   "pass": true,
+   "detail": "5"
+  },
+  {
+   "check": "join.d4_related_rows",
+   "pass": true,
+   "detail": "[\"00000000000000801202000040000400\", \"00000000000000801282000040000000\", \"00000000010000809002000001000000\", \"00000000040000003800080008000000\", \"00000000040000809002000000004000\"]"
+  },
+  {
+   "check": "join.total_cost_364",
+   "pass": true,
+   "detail": "364"
+  },
+  {
+   "check": "join.sterile_rows_match_census",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "join.canon_implementation_witnessed",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "s5csv.parent_row",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hist.checks_29_all_pass",
+   "pass": true,
+   "detail": "29"
+  },
+  {
+   "check": "hist.summary_fields",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hist.rows_match_join",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hist.win_root_arithmetic",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "fold76d77e.receipts_bits",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "fold76d77e.covers_and_marginal_arithmetic",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "fold76d77e.rows_closed",
+   "pass": true,
+   "detail": "[\"00000000040000003800080008000000\", \"00000000040000809002000000004000\"]"
+  },
+  {
+   "check": "fold76d77e.head_segment",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "fold76d77e.parent_after",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "fold76d77e.claims_complete",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "fold76d77e.second_verification",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "fold76d77e.verify_pins_manifest76d",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "fold76d77e.certificates_rehash",
+   "pass": true,
+   "detail": "{\"76d_bit19\": {\"bytes\": 1618698, \"sha256_ok\": true, \"md5_ok\": true, \"lines\": 44812}, \"76d_bit49\": {\"bytes\": 1215488, \"sha256_ok\": true, \"md5_ok\": true, \"lines\": 33650}, \"77e_bit37\": {\"bytes\": 1695679, \"sha256_ok\": true, \"md5_ok\": true, \"lines\": 47020}, \"77e_bit69\": {\"bytes\": 1964949, \"sha256_ok\": true, \"md5_ok\": true, \"lines\": 54493}}"
+  },
+  {
+   "check": "fold76d77e.cert_blob_pins",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "fold76d77e.cert_rows",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "fold76c.receipt_bit61",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "fold76c.basis_head",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "fold76c.frontier_after",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "fold76c.parent_cumulative",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "fold76c.marginal_manifest",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "fold76c.audit_pass",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "fold76c.manifest",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "fold76c.certificate_rehash",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "fold76c.cert_rows",
+   "pass": true,
+   "detail": "30044"
+  },
+  {
+   "check": "fold76c.claim_status",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "fold66i.basis_chain",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "fold66i.frontier_after",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "fold66i.receipt_bit19",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "fold66i.marginal_costs",
+   "pass": true,
+   "detail": "[\"00000000000000003801000000808000\", \"00000000000000801222000000080000\", \"00000000000000801226000000000000\"]"
+  },
+  {
+   "check": "fold66i.does_not_touch_parent",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "fold66i.audit_pass",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "fold66i.certificate_rehash",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "fold66i.claim_partial_fold",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "conflict.sterile_rows_not_covered_by_folded_roots",
+   "pass": true,
+   "detail": "6 roots scanned"
+  },
+  {
+   "check": "reconc.historical_audit_fields",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "reconc.fold_76d77e_fields",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "reconc.fold_76c_fields",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "reconc.fold_66i_fields",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "reconc.current_parent",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "reconc.remaining_equals_join_minus_folds",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "reconc.interpretation_guard_present",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "hist.script_time_scope",
+   "pass": true,
+   "detail": ""
+  }
+ ],
+ "check_count": 84,
+ "all_pass": true,
+ "interpretation_guard": "This is a verification-side crosscheck of published bookkeeping and certificates. It creates no new engine verdict, closes no S5 parent, and proves no LOSS. The two remaining rows are STERILE, so K0863 excludes WIN7-D10 receipt closure for them; that is a depth-10 receipt-channel statement only.",
+ "unknown_status": "11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+}
