@@ -1,0 +1,651 @@
+{
+ "schema": "n11-class2-lane-cost73k-concurrent-session-sweep-record-20261117-v1",
+ "date": "2026-11-17",
+ "title": "cost73k concurrent-session fresh-sweep record: this session completed a full fresh v17 73-bit depth-10 sweep of 00000000000000801206000000000400 before noticing that a parallel session had concurrently claimed the same row and overwritten this session's claim v1 in-path; this record preserves the completed sweep's numbers for a cross-lane agreement check and does not publish the raw batch files (the canonical in-flight claim on main -- census v7 basis, blob a24d3557 -- and its lane keep the row)",
+ "situation": {
+  "this_session_claim_v1": {
+   "commit": "3b474b11",
+   "author_date": "2026-11-17T02:19:06Z",
+   "basis": "head-1472 presweep census v6 rank-2 runner-up (census v6 blob c45fc0d118b7222f1e0c5d79227adc3f7ab9d1cb)",
+   "confirmation_bits": [
+    23,
+    26,
+    34,
+    53,
+    55,
+    107
+   ],
+   "open_bit_count": 67,
+   "file": "class2-lane-cost73k-inflight-20261117.json at git blob 4ccba8ddc2cd4f8482872fcf3e493ff23e50d954"
+  },
+  "parallel_session_claim_v1": {
+   "commit": "a0987c37",
+   "author_date": "2026-11-17T02:29:31Z",
+   "basis": "head-1472 presweep census v7 rank-1 (census v7 blob 68246f3263fe6cbb49ffafa866f73b49cf3c2ebb, commit bdd394a9)",
+   "confirmation_bits": [
+    14,
+    23,
+    26,
+    34,
+    53,
+    55,
+    107
+   ],
+   "open_bit_count": 66,
+   "file": "class2-lane-cost73k-inflight-20261117.json at git blob a24d3557ef23a279cc08c2d578e420f676f28f05 (overwrote this session's claim v1 in-path; bit 14 was open at census v6 and is newly covered by the completed cost73j map in census v7)",
+   "canonical": "yes: this record leaves the parallel session's claim v1 as the in-flight claim of record and does not modify it"
+  },
+  "note": "two sessions of the same hourly lane claimed the same row within ~10 minutes; the parallel session's coordination note did not see this session's claim (its main snapshot for the claim listed the child hex only as a census ranking row); no raw batch, audit or certificate filename is published by this record"
+ },
+ "sweep_execution": {
+  "engine": "class4_child1_runner_v17.ts (blob c132cc6425eee3feaeef1d697dd74f968cfedb59), depth 10, cap 1e9 per bit, andclose 1, fresh engine state per candidate bit",
+  "child": "00000000000000801206000000000400",
+  "child_stones_bit_indices": [
+   10,
+   49,
+   50,
+   57,
+   60,
+   71
+  ],
+  "batches": "9 batches (8 sweep of 9x9+...+4 bits + 1 confirmation batch of the 6 census-v6 confirmation bits), all run fresh after this session's claim v1 (3b474b11)",
+  "pilot_controls": "9/9 batches: pilot_d6 exact {loss=false, nodes=3402, capped=false}",
+  "candidate_nodes_total": 128861941,
+  "total_nodes_including_pilots": 128892559,
+  "capped_count": 0,
+  "terminal_stone_range_all_bits": [
+   13,
+   17
+  ],
+  "determinism": "batches 1/2/3/4 executed twice through an unplanned duplicate launch (both complete runs field-identical on every non-ms field); heaviest batch 7 (24,968,847 candidate nodes) and the 6-bit confirmation batch 9 re-run in separate processes, field-identical",
+  "v15_cross_engine_check": "independent v15 runner (blob 8744fc65b6b7cac6bd561403ce4c749e01c51359) re-check of all 25 WIN bits in 4 chunks: 25/25 loss=true, 4/4 pilots 5949 exact, 0 capped; v15 nodes total 116,892,833"
+ },
+ "verdicts": {
+  "win7_d10_bits": [
+   0,
+   7,
+   11,
+   14,
+   15,
+   26,
+   35,
+   39,
+   41,
+   44,
+   55,
+   58,
+   62,
+   73,
+   76,
+   87,
+   89,
+   94,
+   95,
+   97,
+   98,
+   103,
+   105,
+   112,
+   117
+  ],
+  "refuted_d10_bits": [
+   3,
+   4,
+   6,
+   8,
+   13,
+   18,
+   19,
+   21,
+   22,
+   23,
+   24,
+   25,
+   28,
+   29,
+   31,
+   32,
+   33,
+   34,
+   42,
+   43,
+   52,
+   53,
+   54,
+   56,
+   59,
+   65,
+   66,
+   67,
+   75,
+   78,
+   79,
+   85,
+   86,
+   88,
+   91,
+   92,
+   96,
+   99,
+   101,
+   102,
+   106,
+   107,
+   111,
+   113,
+   114,
+   116,
+   118,
+   119
+  ],
+  "per_bit": {
+   "0": {
+    "loss": true,
+    "nodes": 2105074,
+    "capped": false,
+    "batch": 1
+   },
+   "3": {
+    "loss": false,
+    "nodes": 2698077,
+    "capped": false,
+    "batch": 1
+   },
+   "4": {
+    "loss": false,
+    "nodes": 927296,
+    "capped": false,
+    "batch": 1
+   },
+   "6": {
+    "loss": false,
+    "nodes": 4683949,
+    "capped": false,
+    "batch": 1
+   },
+   "7": {
+    "loss": true,
+    "nodes": 3010263,
+    "capped": false,
+    "batch": 1
+   },
+   "8": {
+    "loss": false,
+    "nodes": 396195,
+    "capped": false,
+    "batch": 1
+   },
+   "11": {
+    "loss": true,
+    "nodes": 1066114,
+    "capped": false,
+    "batch": 1
+   },
+   "13": {
+    "loss": false,
+    "nodes": 774940,
+    "capped": false,
+    "batch": 1
+   },
+   "14": {
+    "loss": true,
+    "nodes": 2316193,
+    "capped": false,
+    "batch": 1
+   },
+   "15": {
+    "loss": true,
+    "nodes": 3718618,
+    "capped": false,
+    "batch": 2
+   },
+   "18": {
+    "loss": false,
+    "nodes": 538529,
+    "capped": false,
+    "batch": 2
+   },
+   "19": {
+    "loss": false,
+    "nodes": 71964,
+    "capped": false,
+    "batch": 2
+   },
+   "21": {
+    "loss": false,
+    "nodes": 521958,
+    "capped": false,
+    "batch": 2
+   },
+   "22": {
+    "loss": false,
+    "nodes": 757717,
+    "capped": false,
+    "batch": 2
+   },
+   "23": {
+    "loss": false,
+    "nodes": 716218,
+    "capped": false,
+    "batch": 9
+   },
+   "24": {
+    "loss": false,
+    "nodes": 387931,
+    "capped": false,
+    "batch": 2
+   },
+   "25": {
+    "loss": false,
+    "nodes": 927610,
+    "capped": false,
+    "batch": 2
+   },
+   "26": {
+    "loss": true,
+    "nodes": 4563004,
+    "capped": false,
+    "batch": 9
+   },
+   "28": {
+    "loss": false,
+    "nodes": 968003,
+    "capped": false,
+    "batch": 2
+   },
+   "29": {
+    "loss": false,
+    "nodes": 103876,
+    "capped": false,
+    "batch": 2
+   },
+   "31": {
+    "loss": false,
+    "nodes": 2456184,
+    "capped": false,
+    "batch": 3
+   },
+   "32": {
+    "loss": false,
+    "nodes": 1173952,
+    "capped": false,
+    "batch": 3
+   },
+   "33": {
+    "loss": false,
+    "nodes": 6520015,
+    "capped": false,
+    "batch": 3
+   },
+   "34": {
+    "loss": false,
+    "nodes": 2581038,
+    "capped": false,
+    "batch": 9
+   },
+   "35": {
+    "loss": true,
+    "nodes": 2901076,
+    "capped": false,
+    "batch": 3
+   },
+   "39": {
+    "loss": true,
+    "nodes": 591964,
+    "capped": false,
+    "batch": 3
+   },
+   "41": {
+    "loss": true,
+    "nodes": 839318,
+    "capped": false,
+    "batch": 3
+   },
+   "42": {
+    "loss": false,
+    "nodes": 1147554,
+    "capped": false,
+    "batch": 3
+   },
+   "43": {
+    "loss": false,
+    "nodes": 828522,
+    "capped": false,
+    "batch": 3
+   },
+   "44": {
+    "loss": true,
+    "nodes": 1743886,
+    "capped": false,
+    "batch": 3
+   },
+   "52": {
+    "loss": false,
+    "nodes": 354340,
+    "capped": false,
+    "batch": 4
+   },
+   "53": {
+    "loss": false,
+    "nodes": 39808,
+    "capped": false,
+    "batch": 9
+   },
+   "54": {
+    "loss": false,
+    "nodes": 69026,
+    "capped": false,
+    "batch": 4
+   },
+   "55": {
+    "loss": true,
+    "nodes": 2207258,
+    "capped": false,
+    "batch": 9
+   },
+   "56": {
+    "loss": false,
+    "nodes": 1319083,
+    "capped": false,
+    "batch": 4
+   },
+   "58": {
+    "loss": true,
+    "nodes": 1872967,
+    "capped": false,
+    "batch": 4
+   },
+   "59": {
+    "loss": false,
+    "nodes": 346679,
+    "capped": false,
+    "batch": 4
+   },
+   "62": {
+    "loss": true,
+    "nodes": 654959,
+    "capped": false,
+    "batch": 4
+   },
+   "65": {
+    "loss": false,
+    "nodes": 807951,
+    "capped": false,
+    "batch": 4
+   },
+   "66": {
+    "loss": false,
+    "nodes": 1877263,
+    "capped": false,
+    "batch": 4
+   },
+   "67": {
+    "loss": false,
+    "nodes": 4319729,
+    "capped": false,
+    "batch": 4
+   },
+   "73": {
+    "loss": true,
+    "nodes": 2742442,
+    "capped": false,
+    "batch": 5
+   },
+   "75": {
+    "loss": false,
+    "nodes": 2573901,
+    "capped": false,
+    "batch": 5
+   },
+   "76": {
+    "loss": true,
+    "nodes": 1860230,
+    "capped": false,
+    "batch": 5
+   },
+   "78": {
+    "loss": false,
+    "nodes": 1322764,
+    "capped": false,
+    "batch": 5
+   },
+   "79": {
+    "loss": false,
+    "nodes": 132095,
+    "capped": false,
+    "batch": 5
+   },
+   "85": {
+    "loss": false,
+    "nodes": 715824,
+    "capped": false,
+    "batch": 5
+   },
+   "86": {
+    "loss": false,
+    "nodes": 983678,
+    "capped": false,
+    "batch": 5
+   },
+   "87": {
+    "loss": true,
+    "nodes": 2732579,
+    "capped": false,
+    "batch": 5
+   },
+   "88": {
+    "loss": false,
+    "nodes": 1650714,
+    "capped": false,
+    "batch": 5
+   },
+   "89": {
+    "loss": true,
+    "nodes": 1245153,
+    "capped": false,
+    "batch": 6
+   },
+   "91": {
+    "loss": false,
+    "nodes": 1736549,
+    "capped": false,
+    "batch": 6
+   },
+   "92": {
+    "loss": false,
+    "nodes": 653770,
+    "capped": false,
+    "batch": 6
+   },
+   "94": {
+    "loss": true,
+    "nodes": 1225545,
+    "capped": false,
+    "batch": 6
+   },
+   "95": {
+    "loss": true,
+    "nodes": 2429062,
+    "capped": false,
+    "batch": 6
+   },
+   "96": {
+    "loss": false,
+    "nodes": 2390222,
+    "capped": false,
+    "batch": 6
+   },
+   "97": {
+    "loss": true,
+    "nodes": 1726126,
+    "capped": false,
+    "batch": 6
+   },
+   "98": {
+    "loss": true,
+    "nodes": 2145334,
+    "capped": false,
+    "batch": 6
+   },
+   "99": {
+    "loss": false,
+    "nodes": 943347,
+    "capped": false,
+    "batch": 6
+   },
+   "101": {
+    "loss": false,
+    "nodes": 3098850,
+    "capped": false,
+    "batch": 7
+   },
+   "102": {
+    "loss": false,
+    "nodes": 813647,
+    "capped": false,
+    "batch": 7
+   },
+   "103": {
+    "loss": true,
+    "nodes": 2450696,
+    "capped": false,
+    "batch": 7
+   },
+   "105": {
+    "loss": true,
+    "nodes": 1703526,
+    "capped": false,
+    "batch": 7
+   },
+   "106": {
+    "loss": false,
+    "nodes": 3305738,
+    "capped": false,
+    "batch": 7
+   },
+   "107": {
+    "loss": false,
+    "nodes": 1195938,
+    "capped": false,
+    "batch": 9
+   },
+   "111": {
+    "loss": false,
+    "nodes": 7826307,
+    "capped": false,
+    "batch": 7
+   },
+   "112": {
+    "loss": true,
+    "nodes": 2273492,
+    "capped": false,
+    "batch": 7
+   },
+   "113": {
+    "loss": false,
+    "nodes": 2688747,
+    "capped": false,
+    "batch": 7
+   },
+   "114": {
+    "loss": false,
+    "nodes": 807844,
+    "capped": false,
+    "batch": 7
+   },
+   "116": {
+    "loss": false,
+    "nodes": 2209855,
+    "capped": false,
+    "batch": 8
+   },
+   "117": {
+    "loss": true,
+    "nodes": 2731534,
+    "capped": false,
+    "batch": 8
+   },
+   "118": {
+    "loss": false,
+    "nodes": 884427,
+    "capped": false,
+    "batch": 8
+   },
+   "119": {
+    "loss": false,
+    "nodes": 1755904,
+    "capped": false,
+    "batch": 8
+   }
+  },
+  "win7_d10_nodes": {
+   "0": 2105074,
+   "7": 3010263,
+   "11": 1066114,
+   "14": 2316193,
+   "15": 3718618,
+   "26": 4563004,
+   "35": 2901076,
+   "39": 591964,
+   "41": 839318,
+   "44": 1743886,
+   "55": 2207258,
+   "58": 1872967,
+   "62": 654959,
+   "73": 2742442,
+   "76": 1860230,
+   "87": 2732579,
+   "89": 1245153,
+   "94": 1225545,
+   "95": 2429062,
+   "97": 1726126,
+   "98": 2145334,
+   "103": 2450696,
+   "105": 1703526,
+   "112": 2273492,
+   "117": 2731534
+  }
+ },
+ "confirmation_agreement": {
+  "census_v6_claim_predictions": {
+   "23": "REFUTED-D10",
+   "26": "WIN7-D10",
+   "34": "REFUTED-D10",
+   "53": "REFUTED-D10",
+   "55": "WIN7-D10",
+   "107": "REFUTED-D10"
+  },
+  "census_v7_claim_predictions": {
+   "14": "WIN7-D10",
+   "23": "REFUTED-D10",
+   "26": "WIN7-D10",
+   "34": "REFUTED-D10",
+   "53": "REFUTED-D10",
+   "55": "WIN7-D10",
+   "107": "REFUTED-D10"
+  },
+  "fresh_outcomes": {
+   "14": "WIN7-D10",
+   "23": "REFUTED-D10",
+   "26": "WIN7-D10",
+   "34": "REFUTED-D10",
+   "53": "REFUTED-D10",
+   "55": "WIN7-D10",
+   "107": "REFUTED-D10"
+  },
+  "agreement": "7/7 census v7 predictions and 6/6 census v6 predictions confirmed by the fresh v17 results (bit 14 was run as an open bit in this session's batch 1 and came out WIN7-D10 exactly as the census v7 ten-map overlay predicted via cost73j bit 110)"
+ },
+ "local_raw_batch_md5s_not_published": {
+  "batch1": "149cb3f5a25a2bcc22f94bfa5d41d6a3",
+  "batch2": "9832877a4acc0500ac2105a504a6ff05",
+  "batch3": "01c2472cd742789ea1dbbb7055277b1b",
+  "batch4": "31c1053e54b1c8412759886fbb490d03",
+  "batch5": "dbe121372829426f2fd11c1691e26446",
+  "batch6": "7c857a58b0b082abb572185a97d0f37f",
+  "batch7": "f3040d8c1207e8118424ff817b901e5a",
+  "batch8": "1889b349db321febd7fcd26f82f1d1a6",
+  "batch9": "da45edef66deb6ca9d05e3972738b6d2"
+ },
+ "next_action": "when the parallel lane publishes the cost73k raw sweep audit / claim v2, run a cross-lane agreement check against this record: verdict sets (25 WIN / 48 REFUTED / 0 capped), per-bit node equality (fresh v17 andclose 1 runs of the same 7-stone roots are node-deterministic) and the 7 confirmation outcomes; an agreement JSON can then be published as in the cost-60c/63h cross-lane agreement precedent",
+ "interpretation_guard": "engine bookkeeping record only; WIN7-D10 proves a first-player win within depth 10 from the individual 7-stone root only; REFUTED-D10 is not a LOSS proof; no manifest row is closed; the receipt fold stays pending behind the 76c/66i/66j/69j/71e/72d/73i/73j folds; the 11x11 empty board, the two-stone roots {49,60} and {59,60}, S2 {59,60} and classes 1/2/4 remain UNKNOWN"
+}
