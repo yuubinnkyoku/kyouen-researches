@@ -1099,7 +1099,7 @@ R\ge S+|X|+z-1\implies H(R;X;z)=S\bmod2
 
 ## 2トークン族の残余2位置集合の閉形式予想（κ=1・z≥6の全体分類は未証明）
 
-**証明済みスライス:** z=0,1,2,3,4,5の全Grundy値は各高さで全称証明済み。さらにz=6,y=1,2,3,4,5,6,7,8の各切片も、[K0877](K0877-two-token-z6-y1-boundary.md)、[K0878](K0878-two-token-z6-y2-boundary.md)、[K0879](K0879-two-token-z6-y3-boundary.md)、[K0880](K0880-two-token-z6-y4-boundary.md)、[K0884](K0884-two-token-z6-y5-boundary.md)、[K0885](K0885-two-token-z6-y6-boundary.md)、[K0887](K0887-two-token-z6-y7-boundary.md)、[K0888](K0888-two-token-z6-y8-boundary.md)で全Grundy値0/1/2を全称証明した。従って以下の3族予想で未証明として残るのはz=6,y>=9とz>=7の全域である。
+**証明済みスライス:** z=0,1,2,3,4,5の全Grundy値は各高さで全称証明済み。さらにz=6,y=1,2,3,4,5,6,7,8,9の各切片も、[K0877](K0877-two-token-z6-y1-boundary.md)、[K0878](K0878-two-token-z6-y2-boundary.md)、[K0879](K0879-two-token-z6-y3-boundary.md)、[K0880](K0880-two-token-z6-y4-boundary.md)、[K0884](K0884-two-token-z6-y5-boundary.md)、[K0885](K0885-two-token-z6-y6-boundary.md)、[K0887](K0887-two-token-z6-y7-boundary.md)、[K0888](K0888-two-token-z6-y8-boundary.md)、[K0889](K0889-two-token-z6-y9-boundary.md)で全Grundy値0/1/2を全称証明した。従って以下の3族予想で未証明として残るのはz=6,y>=10とz>=7の全域である。
 
 2トークン族 \(X=(x,y)\)（\(x\ge y\ge1\)）について \(S=x+y\)、\(d=x-y\)、\(\delta=R-2y\)、\(q_o(k)\)=k以下最大奇数、\(\mathrm{smin}(d)\)=\(d+1\)以上の最小奇数、\(\delta_A(z)\)=\(z\)以上の最小奇数、\(y^*=(z-d)/2\) と置く。2位置集合 \(T(x,y,z)=\{R: H(R;(x,y);z)=2\}\) が次の3族で記述できることが予想される（有限監査による支持のみ・全称性は未証明）:
 
