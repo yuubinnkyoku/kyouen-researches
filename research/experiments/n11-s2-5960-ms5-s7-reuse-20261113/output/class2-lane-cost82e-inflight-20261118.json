@@ -1,9 +1,9 @@
 {
- "schema": "n11-class2-lane-cost82e-inflight-20261118-v1",
+ "schema": "n11-class2-lane-cost82e-inflight-20261118-v2",
  "date": "2026-11-18",
  "last_updated": "2026-11-18",
- "title": "n11 class2-lane cost82e: planned fresh 82-bit depth-10 sweep of the census v19 rank-1 row (cheapest remaining unswept/unclaimed/unexcluded row after the completed cost-82d sweep, the census v19 publication and the fully refuted cost-74i/75f/79d/79e/80e/80f/81/82d rows; band name cost82e: the class4-lane cost-82 and cost-82b bands and the class2-lane cost-82c and cost-82d bands already exist in the shared lane dir, cost82e = highest+1, searched 0 results)",
- "status": "claim v1: IN FLIGHT (long-term lane; the fresh v17 depth-10 sweep of the 82-bit census v19 rank-1 child 00000000020000003800000090000000 will be run and published batch by batch as raw JSONL with a pilot_d6 control per batch; no verdict for this child exists yet; 11x11 UNKNOWN)",
+ "title": "n11 class2-lane cost82e: fresh 82-bit depth-10 sweep of the census v19 rank-1 row COMPLETED as a cross-version REVALIDATION of a historical STERILE row (0 WIN7-D10 / 82 REFUTED-D10 / 0 capped; coordinator correction acknowledged: the child belongs to the K0865 all_remaining_sterile S5 parent, so this is not new D10 receipt-closure progress)",
+ "status": "claim v2: COMPLETED (long-term lane; the fresh v17 depth-10 sweep of the 82-bit census v19 rank-1 child 00000000020000003800000090000000 is published and independently audited (63 open + 19 confirmation: 0 WIN7-D10 / 82 REFUTED-D10 / 0 capped, 70,583,627 candidate nodes + 8x3402 pilot nodes; audit git blob 49757780129b0e7de130245306237f3f108aa79d, claim v2 = this file); coordinator correction acknowledged (commit 8c04f41e): the child belongs to the all_remaining_sterile S5 parent 00000000020000003800000080000000 (K0865: 18/18 S6 rows STERILE, edge cost 1460), so this sweep is a cross-version revalidation of the historical STERILE prediction for this row (K0863), not a new D10 receipt-closure attempt and not counted as new receipt/coverage progress; no WIN7-D10 certificate exists and the receipt fold is not needed; 11x11 UNKNOWN)",
  "claimed_by": "n11 long-term lane session (head-1473 presweep census v19 selector, post-82d, cost82e; sweep run by the same lane)",
  "s5": "00000000020000003800000080000000",
  "s6_child": "00000000020000003800000090000000",
@@ -206,7 +206,7 @@
   "prior_lane_state": "cost-74i fully refuted (census v10, row excluded), cost-75f fully refuted (census v11), cost-79c 20 WIN with 19+1 certificates published (census v13), cost-79d fully refuted (census v14), cost-79e fully refuted (census v15), cost-80e fully refuted (census v16), cost-80f fully refuted (census v17), cost-81 fully refuted (census v18), cost-82d fully refuted (census v19); the receipt folds of the WIN-bearing swept rows remain pending behind the 66i/66j/69j/71e/72d/73i/73j/73k/73l folds"
  },
  "basis_head": "1473/174/6375/504596/4648/368510 (census v19 selection basis; the canonical head after the landed cost-66i bit-19 fold is 1476/174/6372/504389/4645/368303; the ranking pool and the swept/excluded row set are unaffected by the fold)",
- "coordination_note": "latest main re-fetched immediately before this push (2026-11-18, head 122cb6c6: the presweep census v19 publication itself); no claim, raw batch, audit or census file for this child exists on main (searched: the child hex 00000000020000003800000090000000 appears only as the census v18 runner-up and the census v19 rank-1 selected target; the band name cost82e is free - searched 0 results, the cost-82 letter series in the shared lane dir has class4-lane cost-82 and cost-82b and class2-lane cost-82c and cost-82d, cost82e = highest+1)",
+ "coordination_note": "latest main re-fetched immediately before each push (2026-11-18; claim v1 published at commit 43f9e07a with the batch driver ev82e_batches_20261118.sh; the sweep was run and completed by this lane session from claim v1 before the coordinator correction landed); post-sweep coordinator correction (2026-11-18, commits 1d05b0a1/e3db912a/4ffdf3b6/8c04f41e; the v18 sterile-parent filter audit blob 60233241c6c48ab5085bf125b3edfb1cf56941a6) shows the entire v18/v19 remaining pool, including this child, belongs to K0865's all_remaining_sterile S5 parent 00000000020000003800000080000000; per the coordinator direction this sweep result is labelled a cross-version revalidation of the historical STERILE row and is not counted as new receipt/coverage progress; the census v19 script's cost82d claim pin (cffeda69) was superseded in-place by the claim v3 correction (fcf44510), the historical claim v2 blob remains available at commit 775277b5; no other claim, raw batch, audit or census file for this child exists on main",
  "planned_controls": {
   "pilot_d6": "per batch: loss=false at exactly 3,402 nodes (v17 control), else the batch is invalid",
   "determinism_rerun": "batch 1 and batch 7 re-run field-compare (ms-only differences allowed), plus a batch containing a WIN bit if any WIN bit appears",
@@ -330,12 +330,49 @@
    "kind": "census v19 twenty-two-map/harvest overlay verdict transfer (head-1473 census v19 rank-1 confirmation)"
   }
  },
- "confirmation_outcome": "pending (the 19 confirmation bits will be re-run fresh in the sweep and compared against the census v19 overlay prediction; bits 11/109 are the first cost82d-sourced transfers)",
- "next_action": "census v20 after the sweep completes: if 0 WIN7-D10, mark the cost82e row swept (fully refuted, no certificates, no fold needed) and select the next cheapest unswept/unclaimed/unexcluded row (census v19 runner-up 00000000020000003800000080000400, cost 84, open 64); if any WIN bit appears, extract and publish the certificates; 11x11 UNKNOWN",
+ "confirmation_outcome": "19/19 confirmation bits re-run fresh matched the census v19 overlay prediction (0 conflicts; per-bit transfer root canons identical; sources: pre-64h harvest x4, cost82d x2 bits 11/109 (the first cost82d-sourced transfers), cost81 x2, cost80e x2, cost79e x2, cost75f x2, cost80f x2, cost79d x2, cost74i x1)",
+ "next_action": "Per the coordinator correction (commit 8c04f41e): rebuild the target census from the current head-1473 worklist with K0865/K0863 STERILE-parent exclusions before ranking (parallel lane jurisdiction; this lane does not start it). The cost82e v17 sweep is a cross-version revalidation of the historical STERILE row 00000000020000003800000090000000, not new closure progress. Further historical-row sweeps, if any, are labelled revalidation and are not counted as new receipt/coverage results. Partial-STERILE parents may still have cross-cover value through their non-STERILE children, but cannot be fully closed by D10 receipts while a STERILE child remains. 11x11 UNKNOWN.",
  "receipt_fold": {
-  "status": "not expected (the 19 confirmation transfers are all REFUTED-D10 and the band trend 74i/75f/79d/79e/80e/80f/81/82d is 0 WIN7-D10, but the sweep decides): if 0 WIN7-D10 the row is fully refuted and no receipt fold is needed; if any WIN7-D10 appears, certificates are extracted, published and the fold is queued behind the 66i/66j/69j/71e/72d/73i/73j/73k/73l folds as with the WIN-bearing swept rows",
-  "note": "the sweep verdict decides; certificates: to be determined by the sweep"
+  "status": "not needed (0 win bits): the row is fully refuted (82/82 REFUTED-D10), so there is no WIN7-D10 certificate to fold and no manifest row of this child closes; family-row receipt accounting is unaffected, as with the fully refuted cost-74i, cost-75f, cost-79d, cost-79e, cost-80e, cost-80f, cost-81 and cost-82d rows; per the coordinator correction this fully refuted verdict revalidates the historical STERILE prediction for the row and is not counted as new receipt/coverage progress",
+  "note": "no WIN7-D10 bit exists in this sweep; certificates: not applicable"
  },
  "verdict_semantics": "loss=true => WIN7-within-depth-10 candidate (certificate rebuild target); loss=false && !capped => REFUTED-D10, no first-player win within depth 10 from this root (NOT a LOSS proof); capped => inconclusive, re-run with a higher cap; verdicts are per 7-stone root only",
- "unknown_status": "11x11 empty board: UNKNOWN. A completed sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 82 seven-stone roots of this child and closes no family row by itself; the 11x11 empty board, the two-stone roots {49,60} and {59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN regardless of this sweep"
+ "unknown_status": "11x11 empty board: UNKNOWN. A completed sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 82 seven-stone roots of this child and closes no family row by itself; the 11x11 empty board, the two-stone roots {49,60} and {59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN regardless of this sweep",
+ "actual_execution": {
+  "date": "2026-11-18",
+  "environment": "node v22.20.0, sandbox; all 8 batches + the det reruns + the v15 crosscheck run by this lane session (single-threaded runner process per batch, ~300-400k nodes/s)",
+  "batches": "7x9 open bits + 1x19 confirmation, per ev82e_batches_20261118.sh (claim v1 publishes the driver: commit 43f9e07a)",
+  "engine_run": "class4_child1_runner_v17.ts blob c132cc6425eee3feaeef1d697dd74f968cfedb59, depth 10, cap 1e9 per bit, andclose 1, fresh engine state per candidate bit, pilot_d6 control per batch",
+  "verdicts": {
+   "win7_d10_bits": [],
+   "refuted_d10_bits": "all 82 (63 open + 19 confirmation)",
+   "capped_bits": [],
+   "counts": {
+    "win7_d10": 0,
+    "refuted_d10": 82,
+    "capped": 0
+   }
+  },
+  "total_candidate_nodes": 70583627,
+  "pilot_controls": "8/8 batches open with pilot_d6 loss=false at exactly 3402 nodes",
+  "raw_files": {
+   "class2-lane-cost82e-det-batch1-20261118.jsonl": "git blob 0b1d91100d3fc18d34e4bf52f15c2f3a37104f07 (1042 bytes)",
+   "class2-lane-cost82e-det-batch7-20261118.jsonl": "git blob 7df5d8c76c670ccede6c6c1d0bb1fae2491ed840 (1057 bytes)",
+   "class2-lane-cost82e-raw-batch1-20261118.jsonl": "git blob 4f243a3ddf616a3b0d4be8f62802d44219c5af6c (1042 bytes, 16445714 candidate nodes)",
+   "class2-lane-cost82e-raw-batch2-20261118.jsonl": "git blob 41955ac97312bf2fac6c9d12f756a6fa6cb31e3d (1043 bytes, 4999537 candidate nodes)",
+   "class2-lane-cost82e-raw-batch3-20261118.jsonl": "git blob 77d0fe2be536a976ebf52ba61646c6e96a50a8b3 (1042 bytes, 4569340 candidate nodes)",
+   "class2-lane-cost82e-raw-batch4-20261118.jsonl": "git blob 85b5f4abd453ddded31cc4d5ba934b14ee97f9b2 (1045 bytes, 11494096 candidate nodes)",
+   "class2-lane-cost82e-raw-batch5-20261118.jsonl": "git blob e7be3a14629c0a8f30690323b073ec019f797df9 (1040 bytes, 3821206 candidate nodes)",
+   "class2-lane-cost82e-raw-batch6-20261118.jsonl": "git blob a169854e7772d0bd2afcc550044494f1d495d59c (1044 bytes, 4108893 candidate nodes)",
+   "class2-lane-cost82e-raw-batch7-20261118.jsonl": "git blob 0ea5e72c03ef49f1fd6753065f630e535efd031d (1057 bytes, 10848629 candidate nodes)",
+   "class2-lane-cost82e-raw-batch8-confirmation-20261118.jsonl": "git blob dc9dc8f1e5f0911337f22795279eba6191050301 (2128 bytes, 14296212 candidate nodes)",
+   "class2-lane-cost82e-v15-crosscheck-a-20261118.jsonl": "git blob 7dfff259e7793ba3f85f0f0e9e5f4d34bdde2f0e (2154 bytes)"
+  },
+  "determinism_rerun": "det1/det7 field-identical to the raw batches 1/7 (ms-only differences allowed; all verdict/node/terminal-range fields identical)",
+  "v15_crosscheck": "independent v15 runner (blob 8744fc65b6b7cac6bd561403ce4c749e01c51359) re-ran the 19 confirmation bits: pilot_d6 = 5949 nodes, 19/19 loss=false (0 conflicts), file git blob 7dfff259e7793ba3f85f0f0e9e5f4d34bdde2f0e",
+  "audit": "class2-lane-cost82e-raw-batches-1-8-audit-20261118.json (git blob 49757780129b0e7de130245306237f3f108aa79d), produced by audit_cost82e_raw_batches_20261118.py (git blob 42c9ecb7c8aef56c77d2e0c030275d49d31c4acb, adapted from the cost82d audit script blob 5d612a36530a1cf083345423f2ce2a5ba0cb615a; recomputes every per-bit root canon independently and matches the census v19 transfer root canons 19/19; the det1/det7 field-identity check and the v15 crosscheck agreement check are included in the audit script itself)"
+ },
+ "open_bits_completed": 63,
+ "open_bits_remaining": 0,
+ "batches_run": 8
 }
