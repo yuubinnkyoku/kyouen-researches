@@ -1,0 +1,1263 @@
+{
+ "all_ok": true,
+ "checks": [
+  {
+   "data": {},
+   "name": "W0: Q(r) = lcm(1..r) recomputed for r = 2..32 with Q(r) | r!, and the K0919 condition-lcm identity lcm(r, k(k+1) for k=2..r-1) == Q(r) anchored for r = 2..32",
+   "ok": true
+  },
+  {
+   "data": {
+    "r10": {
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "pairs": 47,
+     "proper": 47,
+     "sv_C1_same": 23
+    },
+    "r11": {
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "pairs": 95,
+     "proper": 95,
+     "sv_C1_same": 44
+    },
+    "r12": {
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "pairs": 95,
+     "proper": 95,
+     "sv_C1_same": 44
+    },
+    "r13": {
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "pairs": 191,
+     "proper": 191,
+     "sv_C1_same": 85
+    },
+    "r14": {
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "pairs": 191,
+     "proper": 191,
+     "sv_C1_same": 85
+    },
+    "r15": {
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "pairs": 191,
+     "proper": 191,
+     "sv_C1_same": 85
+    },
+    "r16": {
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "pairs": 239,
+     "proper": 239,
+     "sv_C1_same": 113
+    },
+    "r17": {
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "pairs": 479,
+     "proper": 479,
+     "sv_C1_same": 227
+    },
+    "r18": {
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "pairs": 479,
+     "proper": 479,
+     "sv_C1_same": 227
+    },
+    "r19": {
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "pairs": 959,
+     "proper": 959,
+     "sv_C1_same": 438
+    },
+    "r2": {
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "pairs": 1,
+     "proper": 1,
+     "sv_C1_same": 0
+    },
+    "r20": {
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "pairs": 959,
+     "proper": 959,
+     "sv_C1_same": 438
+    },
+    "r21": {
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "pairs": 959,
+     "proper": 959,
+     "sv_C1_same": 438
+    },
+    "r22": {
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "pairs": 959,
+     "proper": 959,
+     "sv_C1_same": 438
+    },
+    "r23": {
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "pairs": 1919,
+     "proper": 1919,
+     "sv_C1_same": 860
+    },
+    "r24": {
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "pairs": 1919,
+     "proper": 1919,
+     "sv_C1_same": 860
+    },
+    "r3": {
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "pairs": 3,
+     "proper": 3,
+     "sv_C1_same": 0
+    },
+    "r4": {
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "pairs": 5,
+     "proper": 5,
+     "sv_C1_same": 2
+    },
+    "r5": {
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "pairs": 11,
+     "proper": 11,
+     "sv_C1_same": 4
+    },
+    "r6": {
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "pairs": 11,
+     "proper": 11,
+     "sv_C1_same": 4
+    },
+    "r7": {
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "pairs": 23,
+     "proper": 23,
+     "sv_C1_same": 8
+    },
+    "r8": {
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "pairs": 31,
+     "proper": 31,
+     "sv_C1_same": 13
+    },
+    "r9": {
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "pairs": 47,
+     "proper": 47,
+     "sv_C1_same": 23
+    }
+   },
+   "name": "W1: witness at C=1 over ALL proper divisors of Q(r), r = 2..24 (machine count 9813): elim(E(1+d,r)) != elim(E(1,r)) always, and the first differing elimination position equals the predicted h*(d,r) exactly; survivor comparison recorded. Independently reproduces the K0924 theorem-W finite content (mutual verification with K0924 M1/M2) to r = 24",
+   "ok": true
+  },
+  {
+   "data": {
+    "r10": {
+     "d_range": 300,
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "nonmultiples": 300,
+     "per_multiples_bad": 0,
+     "per_multiples_ok": 0,
+     "r": 10
+    },
+    "r11": {
+     "d_range": 300,
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "nonmultiples": 300,
+     "per_multiples_bad": 0,
+     "per_multiples_ok": 0,
+     "r": 11
+    },
+    "r12": {
+     "d_range": 300,
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "nonmultiples": 300,
+     "per_multiples_bad": 0,
+     "per_multiples_ok": 0,
+     "r": 12
+    },
+    "r13": {
+     "d_range": 300,
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "nonmultiples": 300,
+     "per_multiples_bad": 0,
+     "per_multiples_ok": 0,
+     "r": 13
+    },
+    "r14": {
+     "d_range": 300,
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "nonmultiples": 300,
+     "per_multiples_bad": 0,
+     "per_multiples_ok": 0,
+     "r": 14
+    },
+    "r15": {
+     "d_range": 300,
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "nonmultiples": 300,
+     "per_multiples_bad": 0,
+     "per_multiples_ok": 0,
+     "r": 15
+    },
+    "r16": {
+     "d_range": 300,
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "nonmultiples": 300,
+     "per_multiples_bad": 0,
+     "per_multiples_ok": 0,
+     "r": 16
+    },
+    "r17": {
+     "d_range": 300,
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "nonmultiples": 300,
+     "per_multiples_bad": 0,
+     "per_multiples_ok": 0,
+     "r": 17
+    },
+    "r18": {
+     "d_range": 300,
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "nonmultiples": 300,
+     "per_multiples_bad": 0,
+     "per_multiples_ok": 0,
+     "r": 18
+    },
+    "r19": {
+     "d_range": 300,
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "nonmultiples": 300,
+     "per_multiples_bad": 0,
+     "per_multiples_ok": 0,
+     "r": 19
+    },
+    "r2": {
+     "d_range": 300,
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "nonmultiples": 150,
+     "per_multiples_bad": 0,
+     "per_multiples_ok": 150,
+     "r": 2
+    },
+    "r20": {
+     "d_range": 300,
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "nonmultiples": 300,
+     "per_multiples_bad": 0,
+     "per_multiples_ok": 0,
+     "r": 20
+    },
+    "r21": {
+     "d_range": 300,
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "nonmultiples": 300,
+     "per_multiples_bad": 0,
+     "per_multiples_ok": 0,
+     "r": 21
+    },
+    "r22": {
+     "d_range": 300,
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "nonmultiples": 300,
+     "per_multiples_bad": 0,
+     "per_multiples_ok": 0,
+     "r": 22
+    },
+    "r23": {
+     "d_range": 300,
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "nonmultiples": 300,
+     "per_multiples_bad": 0,
+     "per_multiples_ok": 0,
+     "r": 23
+    },
+    "r24": {
+     "d_range": 300,
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "nonmultiples": 300,
+     "per_multiples_bad": 0,
+     "per_multiples_ok": 0,
+     "r": 24
+    },
+    "r3": {
+     "d_range": 300,
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "nonmultiples": 250,
+     "per_multiples_bad": 0,
+     "per_multiples_ok": 50,
+     "r": 3
+    },
+    "r4": {
+     "d_range": 300,
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "nonmultiples": 275,
+     "per_multiples_bad": 0,
+     "per_multiples_ok": 25,
+     "r": 4
+    },
+    "r5": {
+     "d_range": 300,
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "nonmultiples": 295,
+     "per_multiples_bad": 0,
+     "per_multiples_ok": 5,
+     "r": 5
+    },
+    "r6": {
+     "d_range": 300,
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "nonmultiples": 295,
+     "per_multiples_bad": 0,
+     "per_multiples_ok": 5,
+     "r": 6
+    },
+    "r7": {
+     "d_range": 300,
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "nonmultiples": 300,
+     "per_multiples_bad": 0,
+     "per_multiples_ok": 0,
+     "r": 7
+    },
+    "r8": {
+     "d_range": 300,
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "nonmultiples": 300,
+     "per_multiples_bad": 0,
+     "per_multiples_ok": 0,
+     "r": 8
+    },
+    "r9": {
+     "d_range": 300,
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "nonmultiples": 300,
+     "per_multiples_bad": 0,
+     "per_multiples_ok": 0,
+     "r": 9
+    }
+   },
+   "name": "W2: witness at C=1 over ALL d in [1,300] with Q(r) not dividing d, r = 2..24: elim differs with first difference == h*(d,r); multiples of Q(r) in range agree exactly (PER)",
+   "ok": true
+  },
+  {
+   "data": {
+    "r10": {
+     "c_count": 46,
+     "d_count": 88,
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "pairs": 4048,
+     "per_bad": 0,
+     "per_pairs": 138,
+     "r": 10
+    },
+    "r12": {
+     "c_count": 46,
+     "d_count": 89,
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "pairs": 4094,
+     "per_bad": 0,
+     "per_pairs": 138,
+     "r": 12
+    },
+    "r14": {
+     "c_count": 46,
+     "d_count": 90,
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "pairs": 4140,
+     "per_bad": 0,
+     "per_pairs": 138,
+     "r": 14
+    },
+    "r17": {
+     "c_count": 46,
+     "d_count": 91,
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "pairs": 4186,
+     "per_bad": 0,
+     "per_pairs": 138,
+     "r": 17
+    },
+    "r2": {
+     "c_count": 45,
+     "d_count": 40,
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "pairs": 1800,
+     "per_bad": 0,
+     "per_pairs": 135,
+     "r": 2
+    },
+    "r20": {
+     "c_count": 46,
+     "d_count": 92,
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "pairs": 4232,
+     "per_bad": 0,
+     "per_pairs": 138,
+     "r": 20
+    },
+    "r24": {
+     "c_count": 46,
+     "d_count": 93,
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "pairs": 4278,
+     "per_bad": 0,
+     "per_pairs": 138,
+     "r": 24
+    },
+    "r3": {
+     "c_count": 46,
+     "d_count": 68,
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "pairs": 3128,
+     "per_bad": 0,
+     "per_pairs": 138,
+     "r": 3
+    },
+    "r4": {
+     "c_count": 46,
+     "d_count": 75,
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "pairs": 3450,
+     "per_bad": 0,
+     "per_pairs": 138,
+     "r": 4
+    },
+    "r5": {
+     "c_count": 46,
+     "d_count": 81,
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "pairs": 3726,
+     "per_bad": 0,
+     "per_pairs": 138,
+     "r": 5
+    },
+    "r6": {
+     "c_count": 46,
+     "d_count": 81,
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "pairs": 3726,
+     "per_bad": 0,
+     "per_pairs": 138,
+     "r": 6
+    },
+    "r7": {
+     "c_count": 46,
+     "d_count": 87,
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "pairs": 4002,
+     "per_bad": 0,
+     "per_pairs": 138,
+     "r": 7
+    },
+    "r8": {
+     "c_count": 46,
+     "d_count": 88,
+     "elim_equal": 0,
+     "hstar_mismatch": 0,
+     "pairs": 4048,
+     "per_bad": 0,
+     "per_pairs": 138,
+     "r": 8
+    }
+   },
+   "name": "W3: GENERALIZED witness at arbitrary C (the theorem holds at EVERY C, not just C=1): r grid {2..8,10,12,14,17,20,24} x d in [1,80] non-multiples plus Q/p plus Q+small x C in [1,40] plus anchors {Q-3,Q-1,Q+1,Q+5,2Q-1,10^6+7}: elim differs, first difference == h*(d,r); PER anchors d in {Q,2Q,3Q} give full pair equality on the same C grid",
+   "ok": true
+  },
+  {
+   "data": {
+    "r10": {
+     "pairs": 308,
+     "violations": 0
+    },
+    "r12": {
+     "pairs": 315,
+     "violations": 0
+    },
+    "r14": {
+     "pairs": 322,
+     "violations": 0
+    },
+    "r17": {
+     "pairs": 322,
+     "violations": 0
+    },
+    "r2": {
+     "pairs": 147,
+     "violations": 0
+    },
+    "r20": {
+     "pairs": 322,
+     "violations": 0
+    },
+    "r24": {
+     "pairs": 322,
+     "violations": 0
+    },
+    "r3": {
+     "pairs": 252,
+     "violations": 0
+    },
+    "r4": {
+     "pairs": 273,
+     "violations": 0
+    },
+    "r5": {
+     "pairs": 301,
+     "violations": 0
+    },
+    "r6": {
+     "pairs": 301,
+     "violations": 0
+    },
+    "r7": {
+     "pairs": 308,
+     "violations": 0
+    },
+    "r8": {
+     "pairs": 308,
+     "violations": 0
+    }
+   },
+   "name": "W4: INDUCTION DATA (every proof step machine-checked): for a stratified (r,d,C) sample the phase traces of E(C,r) and E(C+d,r) are phase-locked before h* with uniform integer count offset exactly D_h = d/(k_h+1) and ell offset exactly X_1 = d, X_h = d/(k_h+1), and at h* the loser indices differ by X_{h*} mod k_{h*} != 0; 0 violations",
+   "ok": true
+  },
+  {
+   "data": {
+    "r10": {
+     "k0922_pin_ok": true,
+     "k0922_qp_ok": true,
+     "proper": 47,
+     "sv_C1_same": 23,
+     "unwitnessed": 0,
+     "wit_argmax_over_Q": 21,
+     "wit_max_sv": 6
+    },
+    "r11": {
+     "k0922_pin_ok": true,
+     "k0922_qp_ok": true,
+     "proper": 95,
+     "sv_C1_same": 44,
+     "unwitnessed": 0,
+     "wit_argmax_over_Q": 11,
+     "wit_max_sv": 10
+    },
+    "r12": {
+     "k0922_pin_ok": true,
+     "k0922_qp_ok": true,
+     "proper": 95,
+     "sv_C1_same": 44,
+     "unwitnessed": 0,
+     "wit_argmax_over_Q": 11,
+     "wit_max_sv": 10
+    },
+    "r13": {
+     "k0922_pin_ok": true,
+     "k0922_qp_ok": true,
+     "proper": 191,
+     "sv_C1_same": 85,
+     "unwitnessed": 0,
+     "wit_argmax_over_Q": 13,
+     "wit_max_sv": 9
+    },
+    "r14": {
+     "k0922_pin_ok": true,
+     "k0922_qp_ok": true,
+     "proper": 191,
+     "sv_C1_same": 85,
+     "unwitnessed": 0,
+     "wit_argmax_over_Q": 13,
+     "wit_max_sv": 9
+    },
+    "r15": {
+     "k0922_pin_ok": true,
+     "k0922_qp_ok": true,
+     "proper": 191,
+     "sv_C1_same": 85,
+     "unwitnessed": 0,
+     "wit_argmax_over_Q": 13,
+     "wit_max_sv": 9
+    },
+    "r16": {
+     "k0922_pin_ok": true,
+     "k0922_qp_ok": true,
+     "proper": 239,
+     "sv_C1_same": 113,
+     "unwitnessed": 0,
+     "wit_argmax_over_Q": 26,
+     "wit_max_sv": 8
+    },
+    "r17": {
+     "k0922_pin_ok": true,
+     "k0922_qp_ok": true,
+     "proper": 479,
+     "sv_C1_same": 227,
+     "unwitnessed": 0,
+     "wit_argmax_over_Q": 17,
+     "wit_max_sv": 12
+    },
+    "r18": {
+     "k0922_pin_ok": true,
+     "k0922_qp_ok": true,
+     "proper": 479,
+     "sv_C1_same": 227,
+     "unwitnessed": 0,
+     "wit_argmax_over_Q": 17,
+     "wit_max_sv": 12
+    },
+    "r19": {
+     "k0922_pin_ok": true,
+     "k0922_qp_ok": true,
+     "proper": 959,
+     "sv_C1_same": 438,
+     "unwitnessed": 0,
+     "wit_argmax_over_Q": 209,
+     "wit_max_sv": 9
+    },
+    "r2": {
+     "k0922_pin_ok": true,
+     "k0922_qp_ok": true,
+     "proper": 1,
+     "sv_C1_same": 0,
+     "unwitnessed": 0,
+     "wit_argmax_over_Q": 2,
+     "wit_max_sv": 1
+    },
+    "r20": {
+     "k0922_pin_ok": true,
+     "k0922_qp_ok": true,
+     "proper": 959,
+     "sv_C1_same": 438,
+     "unwitnessed": 0,
+     "wit_argmax_over_Q": 209,
+     "wit_max_sv": 9
+    },
+    "r21": {
+     "k0922_pin_ok": true,
+     "k0922_qp_ok": true,
+     "proper": 959,
+     "sv_C1_same": 438,
+     "unwitnessed": 0,
+     "wit_argmax_over_Q": 209,
+     "wit_max_sv": 9
+    },
+    "r22": {
+     "k0922_pin_ok": true,
+     "k0922_qp_ok": true,
+     "proper": 959,
+     "sv_C1_same": 438,
+     "unwitnessed": 0,
+     "wit_argmax_over_Q": 209,
+     "wit_max_sv": 9
+    },
+    "r23": {
+     "k0922_pin_ok": true,
+     "k0922_qp_ok": true,
+     "proper": 1919,
+     "sv_C1_same": 860,
+     "unwitnessed": 0,
+     "wit_argmax_over_Q": 163438,
+     "wit_max_sv": 8
+    },
+    "r24": {
+     "k0922_pin_ok": true,
+     "k0922_qp_ok": true,
+     "proper": 1919,
+     "sv_C1_same": 860,
+     "unwitnessed": 0,
+     "wit_argmax_over_Q": 163438,
+     "wit_max_sv": 8
+    },
+    "r25": {
+     "k0922_pin_ok": true,
+     "k0922_qp_ok": true,
+     "proper": 2879,
+     "sv_C1_same": 1348,
+     "unwitnessed": 0,
+     "wit_argmax_over_Q": 5,
+     "wit_max_sv": 20
+    },
+    "r26": {
+     "k0922_pin_ok": true,
+     "k0922_qp_ok": true,
+     "proper": 2879,
+     "sv_C1_same": 1348,
+     "unwitnessed": 0,
+     "wit_argmax_over_Q": 5,
+     "wit_max_sv": 20
+    },
+    "r27": {
+     "k0922_pin_ok": true,
+     "k0922_qp_ok": true,
+     "proper": 3839,
+     "sv_C1_same": 1888,
+     "unwitnessed": 0,
+     "wit_argmax_over_Q": 15,
+     "wit_max_sv": 18
+    },
+    "r28": {
+     "k0922_pin_ok": true,
+     "k0922_qp_ok": true,
+     "proper": 3839,
+     "sv_C1_same": 1888,
+     "unwitnessed": 0,
+     "wit_argmax_over_Q": 15,
+     "wit_max_sv": 18
+    },
+    "r29": {
+     "k0922_pin_ok": true,
+     "k0922_qp_ok": true,
+     "proper": 7679,
+     "sv_C1_same": 3725,
+     "unwitnessed": 0,
+     "wit_argmax_over_Q": 29,
+     "wit_max_sv": 28
+    },
+    "r3": {
+     "k0922_pin_ok": true,
+     "k0922_qp_ok": true,
+     "proper": 3,
+     "sv_C1_same": 0,
+     "unwitnessed": 0,
+     "wit_argmax_over_Q": 6,
+     "wit_max_sv": 1
+    },
+    "r30": {
+     "k0922_pin_ok": true,
+     "k0922_qp_ok": true,
+     "proper": 7679,
+     "sv_C1_same": 3725,
+     "unwitnessed": 0,
+     "wit_argmax_over_Q": 29,
+     "wit_max_sv": 28
+    },
+    "r31": {
+     "k0922_pin_ok": true,
+     "k0922_qp_ok": true,
+     "proper": 15359,
+     "sv_C1_same": 7317,
+     "unwitnessed": 0,
+     "wit_argmax_over_Q": 29,
+     "wit_max_sv": 27
+    },
+    "r32": {
+     "k0922_pin_ok": true,
+     "k0922_qp_ok": true,
+     "proper": 18431,
+     "sv_C1_same": 9146,
+     "unwitnessed": 0,
+     "wit_argmax_over_Q": 29,
+     "wit_max_sv": 25
+    },
+    "r4": {
+     "k0922_pin_ok": true,
+     "k0922_qp_ok": true,
+     "proper": 5,
+     "sv_C1_same": 2,
+     "unwitnessed": 0,
+     "wit_argmax_over_Q": 3,
+     "wit_max_sv": 2
+    },
+    "r5": {
+     "k0922_pin_ok": true,
+     "k0922_qp_ok": true,
+     "proper": 11,
+     "sv_C1_same": 4,
+     "unwitnessed": 0,
+     "wit_argmax_over_Q": 5,
+     "wit_max_sv": 3
+    },
+    "r6": {
+     "k0922_pin_ok": true,
+     "k0922_qp_ok": true,
+     "proper": 11,
+     "sv_C1_same": 4,
+     "unwitnessed": 0,
+     "wit_argmax_over_Q": 5,
+     "wit_max_sv": 3
+    },
+    "r7": {
+     "k0922_pin_ok": true,
+     "k0922_qp_ok": true,
+     "proper": 23,
+     "sv_C1_same": 8,
+     "unwitnessed": 0,
+     "wit_argmax_over_Q": 7,
+     "wit_max_sv": 3
+    },
+    "r8": {
+     "k0922_pin_ok": true,
+     "k0922_qp_ok": true,
+     "proper": 31,
+     "sv_C1_same": 13,
+     "unwitnessed": 0,
+     "wit_argmax_over_Q": 7,
+     "wit_max_sv": 6
+    },
+    "r9": {
+     "k0922_pin_ok": true,
+     "k0922_qp_ok": true,
+     "proper": 47,
+     "sv_C1_same": 23,
+     "unwitnessed": 0,
+     "wit_argmax_over_Q": 21,
+     "wit_max_sv": 6
+    }
+   },
+   "name": "W5: SURVIVOR minimality extension (machine, r = 2..32): every proper divisor of Q(r) is rejected as a survivor-column period by a witness C <= 150 (observed max 28 at r = 29; fallback window [151,1500] never needed); with K0922 LEMMA DIV the survivor column's minimal period is exactly Q(r) for r = 2..32.  r = 2..16 wit_max and the d = Q/p [w_elim,w_sv] tables are pinned against the K0922 published audit (exact agreement)",
+   "ok": true
+  },
+  {
+   "data": {
+    "r10": {
+     "Qp_hstar": {
+      "2": 3,
+      "3": 2,
+      "5": 1,
+      "7": 4
+     },
+     "mismatch": 0,
+     "r": 10
+    },
+    "r11": {
+     "Qp_hstar": {
+      "11": 1,
+      "2": 4,
+      "3": 3,
+      "5": 2,
+      "7": 5
+     },
+     "mismatch": 0,
+     "r": 11
+    },
+    "r12": {
+     "Qp_hstar": {
+      "11": 2,
+      "2": 5,
+      "3": 4,
+      "5": 3,
+      "7": 6
+     },
+     "mismatch": 0,
+     "r": 12
+    },
+    "r13": {
+     "Qp_hstar": {
+      "11": 3,
+      "13": 1,
+      "2": 6,
+      "3": 5,
+      "5": 4,
+      "7": 7
+     },
+     "mismatch": 0,
+     "r": 13
+    },
+    "r14": {
+     "Qp_hstar": {
+      "11": 4,
+      "13": 2,
+      "2": 7,
+      "3": 6,
+      "5": 5,
+      "7": 1
+     },
+     "mismatch": 0,
+     "r": 14
+    },
+    "r15": {
+     "Qp_hstar": {
+      "11": 5,
+      "13": 3,
+      "2": 8,
+      "3": 7,
+      "5": 1,
+      "7": 2
+     },
+     "mismatch": 0,
+     "r": 15
+    },
+    "r16": {
+     "Qp_hstar": {
+      "11": 6,
+      "13": 4,
+      "2": 1,
+      "3": 8,
+      "5": 2,
+      "7": 3
+     },
+     "mismatch": 0,
+     "r": 16
+    },
+    "r17": {
+     "Qp_hstar": {
+      "11": 7,
+      "13": 5,
+      "17": 1,
+      "2": 2,
+      "3": 9,
+      "5": 3,
+      "7": 4
+     },
+     "mismatch": 0,
+     "r": 17
+    },
+    "r18": {
+     "Qp_hstar": {
+      "11": 8,
+      "13": 6,
+      "17": 2,
+      "2": 3,
+      "3": 1,
+      "5": 4,
+      "7": 5
+     },
+     "mismatch": 0,
+     "r": 18
+    },
+    "r19": {
+     "Qp_hstar": {
+      "11": 9,
+      "13": 7,
+      "17": 3,
+      "19": 1,
+      "2": 4,
+      "3": 2,
+      "5": 5,
+      "7": 6
+     },
+     "mismatch": 0,
+     "r": 19
+    },
+    "r2": {
+     "Qp_hstar": {
+      "2": 1
+     },
+     "mismatch": 0,
+     "r": 2
+    },
+    "r20": {
+     "Qp_hstar": {
+      "11": 10,
+      "13": 8,
+      "17": 4,
+      "19": 2,
+      "2": 5,
+      "3": 3,
+      "5": 1,
+      "7": 7
+     },
+     "mismatch": 0,
+     "r": 20
+    },
+    "r21": {
+     "Qp_hstar": {
+      "11": 11,
+      "13": 9,
+      "17": 5,
+      "19": 3,
+      "2": 6,
+      "3": 4,
+      "5": 2,
+      "7": 1
+     },
+     "mismatch": 0,
+     "r": 21
+    },
+    "r22": {
+     "Qp_hstar": {
+      "11": 1,
+      "13": 10,
+      "17": 6,
+      "19": 4,
+      "2": 7,
+      "3": 5,
+      "5": 3,
+      "7": 2
+     },
+     "mismatch": 0,
+     "r": 22
+    },
+    "r23": {
+     "Qp_hstar": {
+      "11": 2,
+      "13": 11,
+      "17": 7,
+      "19": 5,
+      "2": 8,
+      "23": 1,
+      "3": 6,
+      "5": 4,
+      "7": 3
+     },
+     "mismatch": 0,
+     "r": 23
+    },
+    "r24": {
+     "Qp_hstar": {
+      "11": 3,
+      "13": 12,
+      "17": 8,
+      "19": 6,
+      "2": 9,
+      "23": 2,
+      "3": 7,
+      "5": 5,
+      "7": 4
+     },
+     "mismatch": 0,
+     "r": 24
+    },
+    "r3": {
+     "Qp_hstar": {
+      "2": 2,
+      "3": 1
+     },
+     "mismatch": 0,
+     "r": 3
+    },
+    "r4": {
+     "Qp_hstar": {
+      "2": 1,
+      "3": 2
+     },
+     "mismatch": 0,
+     "r": 4
+    },
+    "r5": {
+     "Qp_hstar": {
+      "2": 2,
+      "3": 3,
+      "5": 1
+     },
+     "mismatch": 0,
+     "r": 5
+    },
+    "r6": {
+     "Qp_hstar": {
+      "2": 3,
+      "3": 1,
+      "5": 2
+     },
+     "mismatch": 0,
+     "r": 6
+    },
+    "r7": {
+     "Qp_hstar": {
+      "2": 4,
+      "3": 2,
+      "5": 3,
+      "7": 1
+     },
+     "mismatch": 0,
+     "r": 7
+    },
+    "r8": {
+     "Qp_hstar": {
+      "2": 1,
+      "3": 3,
+      "5": 4,
+      "7": 2
+     },
+     "mismatch": 0,
+     "r": 8
+    },
+    "r9": {
+     "Qp_hstar": {
+      "2": 2,
+      "3": 1,
+      "5": 5,
+      "7": 3
+     },
+     "mismatch": 0,
+     "r": 9
+    }
+   },
+   "name": "W6: h* ARITHMETIC for d = Q/p, r = 2..24: h*(Q/p) == 1 if v_p(r) == v_p(Q(r)) (condition M_1 fails), else r+1 - max{k <= r-1 : v_p(k(k+1)) == v_p(Q(r))} for every prime p | Q(r) with Q/p proper (k(k+1) | Q always, so the first failing condition in phase order is the largest k whose k(k+1) carries the FULL power of p in Q(r)); 0 mismatches",
+   "ok": true
+  },
+  {
+   "data": {
+    "r10": {
+     "mismatches": 0,
+     "pairs": 204,
+     "r": 10
+    },
+    "r11": {
+     "mismatches": 0,
+     "pairs": 204,
+     "r": 11
+    },
+    "r12": {
+     "mismatches": 0,
+     "pairs": 204,
+     "r": 12
+    },
+    "r13": {
+     "mismatches": 0,
+     "pairs": 204,
+     "r": 13
+    },
+    "r14": {
+     "mismatches": 0,
+     "pairs": 204,
+     "r": 14
+    },
+    "r15": {
+     "mismatches": 0,
+     "pairs": 204,
+     "r": 15
+    },
+    "r16": {
+     "mismatches": 0,
+     "pairs": 204,
+     "r": 16
+    },
+    "r17": {
+     "mismatches": 0,
+     "pairs": 204,
+     "r": 17
+    },
+    "r18": {
+     "mismatches": 0,
+     "pairs": 204,
+     "r": 18
+    },
+    "r19": {
+     "mismatches": 0,
+     "pairs": 204,
+     "r": 19
+    },
+    "r2": {
+     "mismatches": 0,
+     "pairs": 204,
+     "r": 2
+    },
+    "r20": {
+     "mismatches": 0,
+     "pairs": 204,
+     "r": 20
+    },
+    "r21": {
+     "mismatches": 0,
+     "pairs": 204,
+     "r": 21
+    },
+    "r22": {
+     "mismatches": 0,
+     "pairs": 204,
+     "r": 22
+    },
+    "r23": {
+     "mismatches": 0,
+     "pairs": 204,
+     "r": 23
+    },
+    "r24": {
+     "mismatches": 0,
+     "pairs": 204,
+     "r": 24
+    },
+    "r3": {
+     "mismatches": 0,
+     "pairs": 204,
+     "r": 3
+    },
+    "r4": {
+     "mismatches": 0,
+     "pairs": 204,
+     "r": 4
+    },
+    "r5": {
+     "mismatches": 0,
+     "pairs": 204,
+     "r": 5
+    },
+    "r6": {
+     "mismatches": 0,
+     "pairs": 204,
+     "r": 6
+    },
+    "r7": {
+     "mismatches": 0,
+     "pairs": 204,
+     "r": 7
+    },
+    "r8": {
+     "mismatches": 0,
+     "pairs": 204,
+     "r": 8
+    },
+    "r9": {
+     "mismatches": 0,
+     "pairs": 204,
+     "r": 9
+    }
+   },
+   "name": "TWIN: verbatim K0859 per-stone recursion == closed-form twin (the swept implementation) for r = 2..24 on C in [1,200] exhaustive plus anchors up to 2*10^5, full pair comparison; anchors the machine sweeps to the verbatim recursion (together with the K0922 M2 large anchors up to 2Q-1 for r = 10..16)",
+   "ok": true
+  }
+ ],
+ "date": "2026-11-17",
+ "follows": "K0919 (THEOREM PER, prime-power lemma), K0922 (LEMMA DIV, survivor pins r <= 16), K0924 (THEOREM W, corollary MPV: the elimination-column universal minimality; this experiment independently reproduces it, strengthens it to every C, and extends the survivor column to r = 32)",
+ "item": "K0925",
+ "title": "Survivor-column minimal period exactly Q(r) for r = 2..32 by small witnesses (every proper divisor rejected with C <= 150), with the all-C strengthening of the K0924 witness theorem and the h*(Q/p) arithmetic"
+}
