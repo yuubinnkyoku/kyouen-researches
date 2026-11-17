@@ -1,9 +1,9 @@
 {
- "schema": "n11-class2-lane-cost71e-inflight-20261117-v2",
+ "schema": "n11-class2-lane-cost71e-inflight-20261117-v3",
  "date": "2026-11-17",
  "last_updated": "2026-11-17",
  "title": "n11 class2-lane cost71e: planned fresh 71-bit depth-10 sweep of the cheapest remaining unswept/unclaimed row of the primary class-2 target family (head-1472 presweep census v5 selection, post-69j-sweep + cost64a STERILE correction)",
- "status": "claim v2: sweep complete; all 71 legal bits freshly run (8 sweep batches + 1 confirmation batch, v17, depth 10, cap 1e9, andclose 1, 0 capped); 13 WIN7-D10 bits [3,4,8,41,54,58,76,79,94,96,100,116,119] + 58 REFUTED-D10; the 3 confirmation transfers came out REFUTED-D10 as predicted by the census v5 overlay (3/3, incl. bit 20 = 64h bit 97, bit 67 = 66i bit 107, bit 97 = pre-64h harvest via cost64d bit 97 canon equivalence); determinism rerun batches 1 and 6 field-identical on every non-ms field; independent v15 cross-engine check 13/13 WIN agreement (pilot 5949 exact); stdlib raw audit v1 all checks passed; erratum: the v1 legal_candidates field was a cost78a template carry-over (78 bits, wrong child), corrected here to the recomputed 71-bit list (sweep bits, counts and verdicts unaffected); receipt fold pending behind the 76c/66i/66j/69j folds; 11x11 UNKNOWN",
+ "status": "claim v3: certificates complete; the 13 WIN7-D10 bits [3,4,8,41,54,58,76,79,94,96,100,116,119] of the completed v2 sweep were blindly extracted (extractor_exact, engine v15 inlined, FBS=1<<20, empty kill table) into 534,804 certificate rows (141,067,035 extraction nodes, 19,300,105 published bytes; fbt_drops=0, no fatal, no capped per-move on all thirteen) and independently verified engine-free (verify_bit7_win7_cert: root-check stones=7 and loser mobility = the legal_candidates.py RAW-root enumeration, all sub-roots PASS, terminal stone range [13,17], consumed union 0 missing / 0 extra on every root); bits 41/79/58 published whole, the other ten split at line boundaries into part1of2/part2of2 with README-split per bit; extraction proved deterministic: a mid-run execution-environment reset destroyed the first verified pass before publication and the fresh-environment re-extraction reproduced all five recorded pre-reset md5s (bits 41/3/4/8/54) byte-identically and re-verified all 13 (unplanned cross-environment determinism check); manifest class2-lane-cost71e-win7-certificates-20261117.json; the receipt fold stays pending behind the 76c/66i/66j/69j folds; no manifest row is closed by this claim; 11x11 UNKNOWN",
  "s5": "00000000000000403800000008000000",
  "s6_child": "00000000000000c09002000000002000",
  "s6_s7_edge_cost": 71,
@@ -219,7 +219,7 @@
   "confirmation_outcome": "the 3 confirmation bits are re-run fresh and must come out REFUTED-D10 as predicted by the census v5 overlay (any disagreement is a conflict to be reported, not folded)"
  },
  "batch_plan": "68 sweep bits in batches of at most 9 bits (planned 7x9 + 1x5) + 1 confirmation batch (bits 20,67,97); a batch exceeding the runner wall-time budget may be split, with every split part keeping its own pilot control; raw JSONL per batch pushed as completed; engine cap 1e9 per bit, andclose 1",
- "next_action": "extract the 13 WIN7-D10 certificates (cert driver duplicated from cert_driver69j for cost71e, root defenses via legal_candidates), verify them independently (root-check stones=7 + loserMobility, sub-root union, fbt_drops), publish the certificate manifest and claim v3; the receipt fold stays pending behind the 76c/66i/66j/69j folds",
+ "next_action": "receipt fold of this row stays pending behind the 76c/66i/66j/69j folds (managed by their own lanes); next fresh target for this lane: the census v5 runner-up cost-72 row 00000000000000403800000008004000 (open 67)",
  "receipt_fold": {
   "status": "pending behind the cost-76c, cost-66i, cost-66j and cost-69j folds",
   "note": "any WIN7-D10 certificates of this row fold only after the pending folds land; no manifest row is closed by this sweep or this claim"
@@ -303,5 +303,50 @@
   "defect": "the claim v1 legal_candidates field erroneously contained the 78-bit candidate list of the cost78a child (class2-lane-cost78a-inflight-20261115.json, child 00000000000000809102000000400000): a template copy-paste error in the claim generator",
   "unaffected": "candidate_count (71), engine_candidate_bits (68 open + 3 confirmation), child_stones_bit_indices, transfers and every executed bit are correct: the raw sweep bits equal the freshly recomputed legal candidates of the cost71e child, and the published stdlib audit recomputes legal_candidates itself and passed all checks",
   "correction": "v2 replaces the field with the recomputed 71-bit list of the cost71e child; claim v1 git blob f64394741142258206149e652f68e2af558b1cff carries the defect; no verdict, count or executed bit changes"
+ },
+ "certificates": {
+  "manifest": "output/class2-lane-cost71e-certificates/class2-lane-cost71e-win7-certificates-20261117.json",
+  "schema": "n11-class2-lane-cost71e-win7-certificates-20261117-v1",
+  "win7_d10_bits": [
+   3,
+   4,
+   8,
+   41,
+   54,
+   58,
+   76,
+   79,
+   94,
+   96,
+   100,
+   116,
+   119
+  ],
+  "totals": {
+   "certificates": 13,
+   "rows": 534804,
+   "extraction_nodes": 141067035,
+   "published_bytes": 19300105,
+   "fbt_drops": 0
+  },
+  "whole_file_bits": [
+   41,
+   79,
+   58
+  ],
+  "split_bits": [
+   3,
+   4,
+   8,
+   54,
+   76,
+   94,
+   96,
+   100,
+   116,
+   119
+  ],
+  "verification": "engine-free verify_bit7_win7_cert.ts per root: stones=7 root check, loser mobility = legal_candidates.py RAW-root count (41:51, 79:48, 58:48, others per manifest), all sub-roots PASS, consumed union 0 missing / 0 extra, terminal stone range [13,17]",
+  "driver": "scripts/cert_driver71e.ts (69j driver duplicated with the push-transport-mangled literal newline split repaired to String.fromCharCode(10)); ev71e.sh orchestrates; verify_cost71e_one.sh per-root orchestration"
  }
 }
