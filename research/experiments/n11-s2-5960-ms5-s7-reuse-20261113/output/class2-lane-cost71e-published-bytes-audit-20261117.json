@@ -1,0 +1,292 @@
+{
+  "schema": "n11-class2-lane-cost71e-published-bytes-audit-20261117-v1",
+  "date": "2026-11-17",
+  "source_commit": "a8ff1d814a64565491a8527a7489b97952ec9514",
+  "manifest": {
+    "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71e-certificates/class2-lane-cost71e-win7-certificates-20261117.json",
+    "git_blob_sha": "a9ddec439e1931614679c2575e4adeb5fe770d2b",
+    "certificates": 13,
+    "rows": 534804,
+    "extraction_nodes": 141067035,
+    "published_bytes": 19300105
+  },
+  "method": {
+    "source": "raw.githubusercontent.com, commit-pinned to source_commit",
+    "join_order": "part1of2 bytes followed by part2of2 bytes",
+    "tools": [
+      "wget",
+      "wc -c",
+      "sha256sum",
+      "md5sum"
+    ],
+    "execution": "low-load remote container; temporary files removed",
+    "script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost71e_published_bytes_20261117.sh"
+  },
+  "summary": {
+    "certificates": 13,
+    "split_certificates": 10,
+    "whole_certificates": 3,
+    "remote_objects": 23,
+    "split_part_size_checks": 20,
+    "joined_size_checks": 13,
+    "sha256_checks": 13,
+    "md5_checks": 13,
+    "all_pass": true,
+    "total_bytes": 19300105,
+    "frontier_changed": false,
+    "verdict_changed": false
+  },
+  "entries": [
+    {
+      "bit": 3,
+      "file": "n11_s7_00000000000000c09002000000002008.cert",
+      "storage": "split",
+      "bytes": 1299200,
+      "part_bytes": [
+        649608,
+        649592
+      ],
+      "rows": 35983,
+      "sha256": "e8d5764a7b5dac30ddd434f6615e8248126f59095793a1c7e6040b7acbca533d",
+      "md5": "cf094e2df7b17d94a05b436eab8de09a",
+      "checks": {
+        "part_sizes": "PASS",
+        "joined_bytes": "PASS",
+        "sha256": "PASS",
+        "md5": "PASS"
+      },
+      "status": "PASS"
+    },
+    {
+      "bit": 4,
+      "file": "n11_s7_00000000000000c09002000000002010.cert",
+      "storage": "split",
+      "bytes": 1838885,
+      "part_bytes": [
+        919446,
+        919439
+      ],
+      "rows": 50835,
+      "sha256": "717320b77193475c1020f1fde02f58d591b924c7390a2aedd4e8979737c840d8",
+      "md5": "8ea573a6d99c071b09df39bb4045a2c6",
+      "checks": {
+        "part_sizes": "PASS",
+        "joined_bytes": "PASS",
+        "sha256": "PASS",
+        "md5": "PASS"
+      },
+      "status": "PASS"
+    },
+    {
+      "bit": 8,
+      "file": "n11_s7_00000000000000c09002000000002100.cert",
+      "storage": "split",
+      "bytes": 1488731,
+      "part_bytes": [
+        744382,
+        744349
+      ],
+      "rows": 41209,
+      "sha256": "533531415df54d2bbe095c5d26848ad979c11239c5c1b8339d5256bd5a51cf3e",
+      "md5": "f498610883fde98a44607fec37ff9966",
+      "checks": {
+        "part_sizes": "PASS",
+        "joined_bytes": "PASS",
+        "sha256": "PASS",
+        "md5": "PASS"
+      },
+      "status": "PASS"
+    },
+    {
+      "bit": 41,
+      "file": "n11_s7_00000000000000c09002020000002000.cert",
+      "storage": "whole",
+      "bytes": 955669,
+      "part_bytes": null,
+      "rows": 26445,
+      "sha256": "98a3d7aec4e750d967469cf0865a29c5cba90e5fa9532cb8a956054a4800d06e",
+      "md5": "ff8c708f7f1c4dc32ff42e72a75134e8",
+      "checks": {
+        "part_sizes": "not_applicable",
+        "joined_bytes": "PASS",
+        "sha256": "PASS",
+        "md5": "PASS"
+      },
+      "status": "PASS"
+    },
+    {
+      "bit": 54,
+      "file": "n11_s7_00000000000000c09042000000002000.cert",
+      "storage": "split",
+      "bytes": 1707208,
+      "part_bytes": [
+        853607,
+        853601
+      ],
+      "rows": 47326,
+      "sha256": "d9d9201976610f5afc0607afa3ada22e4cd2fe1cd73d490ec6137cfc48306239",
+      "md5": "5341d200850a83b7f8678c9260a825df",
+      "checks": {
+        "part_sizes": "PASS",
+        "joined_bytes": "PASS",
+        "sha256": "PASS",
+        "md5": "PASS"
+      },
+      "status": "PASS"
+    },
+    {
+      "bit": 58,
+      "file": "n11_s7_00000000000000c09402000000002000.cert",
+      "storage": "whole",
+      "bytes": 1178240,
+      "part_bytes": null,
+      "rows": 32688,
+      "sha256": "8dfefa4c9fe29db845088850927757c7a05327077fa48f25472384c6bb1ce9ba",
+      "md5": "1e09f18f16cacf480ee7a5408ea2d268",
+      "checks": {
+        "part_sizes": "not_applicable",
+        "joined_bytes": "PASS",
+        "sha256": "PASS",
+        "md5": "PASS"
+      },
+      "status": "PASS"
+    },
+    {
+      "bit": 76,
+      "file": "n11_s7_00000000000010c09002000000002000.cert",
+      "storage": "split",
+      "bytes": 1533901,
+      "part_bytes": [
+        766956,
+        766945
+      ],
+      "rows": 42538,
+      "sha256": "398d909296b930bd5f9bf44a10eee8e8f46beff8f89a62a9ba34ab9d278891ba",
+      "md5": "9a9ea6239a5e9d0b4ec52757970c583b",
+      "checks": {
+        "part_sizes": "PASS",
+        "joined_bytes": "PASS",
+        "sha256": "PASS",
+        "md5": "PASS"
+      },
+      "status": "PASS"
+    },
+    {
+      "bit": 79,
+      "file": "n11_s7_00000000000080c09002000000002000.cert",
+      "storage": "whole",
+      "bytes": 936287,
+      "part_bytes": null,
+      "rows": 25889,
+      "sha256": "a92d11a9054b9adf5f7ffca5a5f69e3ea5b5c9939c1a1eaf90ae43b59175b4e0",
+      "md5": "aa06ba70bd3f70bd7e4b876dcb476bcc",
+      "checks": {
+        "part_sizes": "not_applicable",
+        "joined_bytes": "PASS",
+        "sha256": "PASS",
+        "md5": "PASS"
+      },
+      "status": "PASS"
+    },
+    {
+      "bit": 94,
+      "file": "n11_s7_00000000400000c09002000000002000.cert",
+      "storage": "split",
+      "bytes": 1629102,
+      "part_bytes": [
+        814565,
+        814537
+      ],
+      "rows": 45115,
+      "sha256": "ff9811c101f76edf00849d04bf5f53292dcc566ee26402e6c117b01905195687",
+      "md5": "0a37cea9cd538660fb4b3acff8a9cb91",
+      "checks": {
+        "part_sizes": "PASS",
+        "joined_bytes": "PASS",
+        "sha256": "PASS",
+        "md5": "PASS"
+      },
+      "status": "PASS"
+    },
+    {
+      "bit": 96,
+      "file": "n11_s7_00000001000000c09002000000002000.cert",
+      "storage": "split",
+      "bytes": 1709180,
+      "part_bytes": [
+        854599,
+        854581
+      ],
+      "rows": 47355,
+      "sha256": "1510b5455095727e038f14989d7b30935eb8da172897f67af0910184977ec8f5",
+      "md5": "77cffa20d368c58a010001baaec931d3",
+      "checks": {
+        "part_sizes": "PASS",
+        "joined_bytes": "PASS",
+        "sha256": "PASS",
+        "md5": "PASS"
+      },
+      "status": "PASS"
+    },
+    {
+      "bit": 100,
+      "file": "n11_s7_00000010000000c09002000000002000.cert",
+      "storage": "split",
+      "bytes": 1221794,
+      "part_bytes": [
+        610900,
+        610894
+      ],
+      "rows": 33909,
+      "sha256": "976d23ed96375820ef6831fe5e5b5e4381a47f8037be35c05668910154a216da",
+      "md5": "e44613fa7a471ddf2e0890f16ef2561a",
+      "checks": {
+        "part_sizes": "PASS",
+        "joined_bytes": "PASS",
+        "sha256": "PASS",
+        "md5": "PASS"
+      },
+      "status": "PASS"
+    },
+    {
+      "bit": 116,
+      "file": "n11_s7_00100000000000c09002000000002000.cert",
+      "storage": "split",
+      "bytes": 2016154,
+      "part_bytes": [
+        1008085,
+        1008069
+      ],
+      "rows": 55968,
+      "sha256": "a73e0070f221360812454a2aafc7d61e22b0c6f98f0cc8152e6a957825059d3d",
+      "md5": "6421c42c66c563bad61ee7494de147f3",
+      "checks": {
+        "part_sizes": "PASS",
+        "joined_bytes": "PASS",
+        "sha256": "PASS",
+        "md5": "PASS"
+      },
+      "status": "PASS"
+    },
+    {
+      "bit": 119,
+      "file": "n11_s7_00800000000000c09002000000002000.cert",
+      "storage": "split",
+      "bytes": 1785754,
+      "part_bytes": [
+        892908,
+        892846
+      ],
+      "rows": 49544,
+      "sha256": "1ecd6fbab037ca13c1b29f6b5666c2a975456cfd5c2199bb6e3c73080d3700a4",
+      "md5": "557844e8e329cfabd0e0d41755d2ee66",
+      "checks": {
+        "part_sizes": "PASS",
+        "joined_bytes": "PASS",
+        "sha256": "PASS",
+        "md5": "PASS"
+      },
+      "status": "PASS"
+    }
+  ]
+}
