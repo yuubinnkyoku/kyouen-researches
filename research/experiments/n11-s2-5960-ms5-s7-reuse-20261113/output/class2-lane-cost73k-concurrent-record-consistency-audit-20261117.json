@@ -445,6 +445,6 @@
   "audit_implementation": {
     "executed": "JavaScript BigInt implementation in the analysis tool, using the K0868 det4 expansion, against the exact GitHub-fetched source bytes pinned above",
     "replay_script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost73k_concurrent_record_20261117.py",
-    "replay_script_execution": "not executed in the repository workspace during this run; it is committed for deterministic replay"
+    "replay_script_execution": "py_compile and --skip-pins fixture execution passed; full repository-path run with source blob pins was not executed in this run"
   }
 }
