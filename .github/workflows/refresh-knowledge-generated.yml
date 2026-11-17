@@ -285,6 +285,10 @@ jobs:
         run: |
           uv run --locked python research/experiments/vertical-fiber-two-token-z6-y20-boundary-20261117/verify_z6_y20.py
           git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y20-boundary-20261117/output/audit.json
+      - name: Audit K0914 two-token z=6,y=21 full Grundy slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y21-boundary-20261117/verify_z6_y21.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y21-boundary-20261117/output/audit.json
       - name: Audit K0900 r=12 boundary cross-lane agreement check
         run: |
           uv run --locked python research/experiments/remo-k-branch-cap10-r12-boundary-independent-check-20261117/check_k0898_cross_lane_agreement.py
@@ -623,3 +627,4 @@ jobs:
 # Refresh generated views for K0912 three-branch REMO cap12 r=9 boundary (Theorem I9 size extension: the mixed 34 keys identical to K0893, zero mixed among the 650 new 11/12-branch keys, Theorem J cap<=12 r=9 machine anchor, packed single-source publication) (2026-11-17).
 # Refresh generated views for K0881 three-branch REMO cap12 r=2,7,8 size boundary backfill (Theorem I278 identical published cap<=10 boundary at r=7,8, r=2 Lemma-FL closed-form anchor over all 47595 profiles) (2026-11-17).
 # Refresh generated views for K0913 two-token z=6,y=20 full Grundy slice (2026-11-17).
+# Refresh generated views for K0914 two-token z=6,y=21 full Grundy slice (2026-11-17).
