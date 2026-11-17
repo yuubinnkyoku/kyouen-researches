@@ -725,9 +725,24 @@
     },
     "geometry_audit_prior_pass": {
       "ok": true
+    },
+    "census_selection_matches_claim": {
+      "ok": true,
+      "chain_head": "1473/174/6375/504596/4648/368510",
+      "selected": "00000000000000403800000008000008"
     }
   },
   "all_pass": true,
   "failures": [],
-  "interpretation_guard": "These are v17 raw per-root depth-10 results for the first 27 of 66 open candidate bits only. loss=true maps to WIN7-D10 under the pinned claim semantics; loss=false with capped=false maps to REFUTED-D10, not a LOSS proof. No independent v15 cross-check or certificate extraction is included here. No S6 row or family row is closed by these raw batches. Standard 11x11 remains UNKNOWN."
+  "interpretation_guard": "These are v17 raw per-root depth-10 results for the first 27 of 66 open candidate bits only. loss=true maps to WIN7-D10 under the pinned claim semantics; loss=false with capped=false maps to REFUTED-D10, not a LOSS proof. No independent v15 cross-check or certificate extraction is included here. No S6 row or family row is closed by these raw batches. Standard 11x11 remains UNKNOWN.",
+  "census_selection": {
+    "chain_head": "1473/174/6375/504596/4648/368510",
+    "selected_target": "00000000000000403800000008000008",
+    "edge_cost": 78,
+    "demand": {
+      "c1": 0,
+      "c2": 1,
+      "c4": 0
+    }
+  }
 }
