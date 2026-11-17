@@ -8,7 +8,7 @@
 
 ## 判断
 
-mainの未解決一覧ではz=6,y≥9が未証明だった。y=8のK0888をA/B/C再帰のB子に接続できるため、最小の未解決境界y=9を選んだ。K0890の番号衝突はmain上で見つからなかった。
+mainの未解決一覧ではz=6,y≥9が未証明だった。y=8のK0888をA/B/C再帰のB子に接続できるため、最小の未解決境界y=9を選んだ。作業中のK0889はREMO cap16レーンのコミットに既に現れていたため、K0890へ再採番した。
 
 ## 結果
 
@@ -26,6 +26,6 @@ verify_z6_y9.pyは順序付き再帰と降順正準化再帰を別実装し、K0
 
 ## main反映
 
-K0889、実験報告、検証器、監査JSON、本ログを追加し、K0832とknowledge READMEの証明済み範囲・未解決範囲を更新した。knowledge integrity workflowへ検証器を追加し、生成ビュー更新workflowを起動するための既存トリガーファイルにも今回の更新記録を追記した。
+K0890、実験報告、検証器、監査JSON、本ログを追加し、K0832とknowledge READMEの証明済み範囲・未解決範囲を更新した。knowledge integrity workflowへ検証器を追加し、生成ビュー更新workflowを起動するための既存トリガーファイルにも今回の更新記録を追記した。
 
 ローカルにリポジトリ全体を取得できなかったため、uv sync、knowledge check、unittest、buildは未実施。GitHub Actionsで確認する。
