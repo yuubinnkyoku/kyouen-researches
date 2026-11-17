@@ -9,7 +9,7 @@ LAD-GEN core（`ladder_gen` / `watch_dies` / `watchmap`）は出版済みK0934/K
 制限の除去。機械アンカー `sievegen_verify.py`（12チェック）と `audit_build.py`
 （2回in-process実行一致・2回コールド実行でbyte同一）が全前提を検証する。
 
-## 0. 記号と既知の部品
+## 0. 記法と既知の部品
 
 - reduced game: m人・初期保持2・初期pot V:1 / U:2・監視ラベル V:0 / U:m−1。
   N = 2m+s（V: s=1、U: s=3）。U(m)=m−1、V(m)=0 が監視生存値。
