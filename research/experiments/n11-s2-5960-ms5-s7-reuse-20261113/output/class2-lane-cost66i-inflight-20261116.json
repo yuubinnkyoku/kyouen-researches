@@ -463,9 +463,9 @@
       109
     ],
     "expected_verdicts": {
+      "23": "REFUTED-D10",
       "100": "REFUTED-D10",
-      "109": "REFUTED-D10",
-      "23": "REFUTED-D10"
+      "109": "REFUTED-D10"
     },
     "note": "63 open bits (v1 census: 64 open minus bit 100, whose root canon 00000000000000c89002000000100000 was REFUTED-D10 by the cost-64h sweep as bit 103 of child 00000000000000403800000008100000) plus 3 known-verdict bits re-run fresh for cross-agreement: bits 23/109 are v1 harvested_refuted transfers, bit 100 is a cost-64h orbit transfer; total fresh engine work 66 bits = the complete legal row",
     "open_bits": [
@@ -534,7 +534,7 @@
       120
     ]
   },
-  "last_updated": "2026-11-17",
+  "last_updated": "2026-11-18",
   "latest_canonical_head_after_cost64h_fold": [
     1472,
     174,
@@ -619,27 +619,85 @@
     119,
     120
   ],
-  "next_action": "Recompute the nine cost66i receipt marginals from head1473, recheck D4 overlap and WIN/LOSS conflicts, then fold only after all nine certificate blobs and the resulting frontier agree.",
+  "next_action": "Recompute the remaining eight cost66i receipt marginals and cross-lane WIN/LOSS conflicts against head1476; fold only positive, independently verified marginal certificates. Then continue the queued 78c receipts.",
   "planned_controls": {
     "determinism_rerun": "one batch re-run byte-compare on nodes (ms-only differences allowed): the heaviest batch and, if any WIN bit appears, a batch containing a WIN bit",
     "independent_audit": "stdlib-only re-audit of all raw batch lines (pilot exactness, cap, stone counts, canon recomputation from the child) before any verdict is treated as established",
     "v15_crosscheck": "independent v15 engine (blob 8744fc65b6b7...) re-check of all WIN bits plus anchor bits (pilot 5949), verdict agreement required"
   },
   "previous_version": {
-    "git_blob_sha": "c69f512eb9bf44530093a3ca5158d140a5adda37",
-    "path": "class2-lane-cost66i-inflight-20261116-v6-snapshot.json"
+    "path": "class2-lane-cost66i-inflight-20261116-v7-snapshot.json",
+    "git_blob_sha": "0393e86ae99cc9f6805f7c40b8b14e07329c410f"
   },
   "receipt_fold": {
-    "note": "All nine cost66i WIN7-D10 certificates are complete and verified. The sweep and old candidate-marginal audit are historical head-1452 snapshots. Cost64h folded to head1472 and cost76c bit61 then closed one additional S6 manifest row, producing head1473. Recompute the nine receipt marginals, D4 coverage, parent deltas, and WIN/LOSS conflict census from head1473; do not reuse the head1452 projection.",
-    "status": "pending; cost76c fold landed at head1473; recompute all nine cost66i receipt marginals and cross-lane conflicts against head1473 before folding"
+    "status": "partial-fold-complete; bit19 folded, 8 receipts remain",
+    "basis_head": [
+      1473,
+      174,
+      6375,
+      504596,
+      4648,
+      368510
+    ],
+    "frontier_after_bit19": [
+      1476,
+      174,
+      6372,
+      504389,
+      4645,
+      368303
+    ],
+    "folded_bits": [
+      19
+    ],
+    "remaining_win_bits": [
+      28,
+      29,
+      58,
+      88,
+      90,
+      99,
+      103,
+      112
+    ],
+    "fold_json": "class-frontier-cost66i-bit19-receipts-recompute-20261118.json",
+    "fold_json_blob_sha": "a555ee3a575df04ecddf98ce890bd8eec53dd415",
+    "fold_audit": "class2-lane-cost66i-bit19-receipt-fold-audit-20261118.json",
+    "fold_audit_blob_sha": "e1fbf301bb6795432dbb015289b4a68c63095ef0",
+    "input_snapshot": "class2-lane-cost66i-bit19-parent-incidence-input-20261118.json",
+    "input_snapshot_blob_sha": "24a750eb2967930b92023f556b14797b661678b9",
+    "script": "audit_cost66i_bit19_receipt_fold_20261118.py",
+    "script_blob_sha": "978828ffabf61319d0b093328e08344f40eb29c3",
+    "log": "2026-11-18-n11-class2-lane-cost66i-bit19-receipt-fold.md",
+    "log_blob_sha": "01966e14b8d3d073bbf32dbc45f98d83642f553a",
+    "closed_manifest_rows": 3,
+    "marginal_d4_s6_orbits": 7,
+    "affected_s5_parents": 5,
+    "parent_row_incidences": 7,
+    "parent_edge_cost_delta": 489,
+    "fully_closed_s5_parents": 0,
+    "certificate_bit19_sha256": "f87df551ab38f73fb34d756fc4be287de42f1538735e7daf6006deb05749b0ac",
+    "bigint_independent_verification": "PASS; 52/52 subroots; union 0/0",
+    "conflict_census": {
+      "cost64h_cost66i_conflicts": 0,
+      "d4_overlap_with_cost64h": 0,
+      "d4_overlap_with_cost76c": 0,
+      "cost76c_verdict_conflicts": 0
+    },
+    "note": "The fold closes three S6 manifest rows only; no S5 parent closes. Rebase the remaining eight receipt marginals and conflicts against head1476 before the next fold."
   },
   "s5": "00000000000000403800000008000000",
   "s6_child": "00000000000000801226000000000000",
   "s6_s7_edge_cost": 66,
-  "schema": "n11-class2-lane-cost66i-sweep-complete-20261117-v7",
-  "status": "sweep-complete; all 9 WIN7-D10 certificates remain independently verified; cost64h fold complete at head1472 and cost76c bit61 fold now complete at head1473; cost66i receipt fold is next but its old head1452 marginals are stale and must be recomputed",
+  "schema": "n11-class2-lane-cost66i-sweep-certificate-fold-20261118-v8",
+  "status": "sweep-complete; all 9 WIN7-D10 certificates remain independently verified; bit19 receipt folded at head1476; eight receipts remain pending",
   "title": "n11 class2-lane cost66i: fresh 66-bit depth-10 sweep of the cheapest remaining row of the primary pure class-2 target family (head-1452 census v2 selection)",
   "transfers": {
+    "23": {
+      "kind": "v1 harvest transfer",
+      "root_canon": "00000000000000801226000000800000",
+      "verdict": "REFUTED-D10"
+    },
     "100": {
       "kind": "cost-64h orbit transfer (64h bit 103)",
       "root_canon": "00000000000000c89002000000100000",
@@ -649,13 +707,16 @@
       "kind": "v1 harvest transfer",
       "root_canon": "00000000000000c89002000000000800",
       "verdict": "REFUTED-D10"
-    },
-    "23": {
-      "kind": "v1 harvest transfer",
-      "root_canon": "00000000000000801226000000800000",
-      "verdict": "REFUTED-D10"
     }
   },
   "unknown_status": "11x11 empty board: UNKNOWN. A completed sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 7-stone roots of this child. The two-stone roots {49,60} and {59,60}, S2 {59,60} and classes 1/2/4 remain UNKNOWN.",
-  "verdict_semantics": "loss=true => WIN7-within-depth-10 candidate (certificate rebuild target); loss=false && !capped => REFUTED-D10, no first-player win within depth 10 (NOT a LOSS proof of the position); capped => proves nothing either way"
+  "verdict_semantics": "loss=true => WIN7-within-depth-10 candidate (certificate rebuild target); loss=false && !capped => REFUTED-D10, no first-player win within depth 10 (NOT a LOSS proof of the position); capped => proves nothing either way",
+  "latest_canonical_head_after_cost66i_bit19_fold": [
+    1476,
+    174,
+    6372,
+    504389,
+    4645,
+    368303
+  ]
 }
