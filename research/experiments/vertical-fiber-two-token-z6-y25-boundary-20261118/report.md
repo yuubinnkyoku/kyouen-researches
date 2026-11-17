@@ -139,11 +139,11 @@ H(R;(x,25);6)=\operatorname{mex}\{A,B,C\}.
 
 監査は初期状態から2回実行し、監査JSONの内容はバイト単位で一致した。SHA-256（hashフィールドを除いた正準JSON）:
 
-2b97cd3e0c5d61b3c562e0c7ebcf103a6fb1e0afd1db3eadb229712acdd4e11a
+69011d6da53608036eb11a45316b666984dd99d00df7a078f86d871128b3ba9f
 
 検証器ファイルのSHA-256:
 
-4ffc8caabdd56b075d806784a04c7053f00855cd523eeeb46450bf1c7e67e48a
+37748c4e0ce9f67aace468987ba5d8cd2592bb0bd27dbac3a0cf2a6c0f6ded43
 
 有限監査は全称証明の代わりではない。全称性の根拠はA/B/C署名表、Theorem T、一般tail定理、R強帰納である。
 

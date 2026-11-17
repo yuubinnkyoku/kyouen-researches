@@ -16,15 +16,27 @@
   "repeat_runs": 2,
   "scope": {
     "direct_R": "0 <= R <= x+35 (z=5 and y=24 anchors also checked)",
-    "direct_x": [25, 60],
+    "direct_x": [
+      25,
+      40
+    ],
     "far_tail_samples": 5000,
     "far_tail_seed": 20261118,
     "signature_R": "1 <= R <= x+32",
-    "signature_x": [25, 2000],
-    "tail_offsets": [0, 64],
-    "tail_x": [25, 2000]
+    "signature_x": [
+      25,
+      2000
+    ],
+    "tail_offsets": [
+      0,
+      64
+    ],
+    "tail_x": [
+      25,
+      2000
+    ]
   },
-  "sha256_without_hash_field": "2b97cd3e0c5d61b3c562e0c7ebcf103a6fb1e0afd1db3eadb229712acdd4e11a",
+  "sha256_without_hash_field": "69011d6da53608036eb11a45316b666984dd99d00df7a078f86d871128b3ba9f",
   "target": "H(R;(x,25);6), x>=25, R>=0",
   "total_checks": 6333788
 }

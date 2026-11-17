@@ -169,7 +169,7 @@ def audit_once():
       "far_tail_seeded_checks":far,"mex_identities":mexes,"odd_parent_option_bound":odd_bound,
       "signature_points":sigs,"tail_checks":tail,"value2_locus_parameters":value2}
     return {"all_pass":not bad,"classification":"universal proof by explicit A/B/C signatures, Theorem T, the general tail theorem, and strong induction on R; finite checks are independent audits only",
-      "counts":counts,"failures":bad,"scope":{"direct_x":[25,60],"direct_R":"0 <= R <= x+35 (z=5 and y=24 anchors also checked)",
+      "counts":counts,"failures":bad,"scope":{"direct_x":[25,40],"direct_R":"0 <= R <= x+35 (z=5 and y=24 anchors also checked)",
       "signature_x":[25,2000],"signature_R":"1 <= R <= x+32","tail_x":[25,2000],"tail_offsets":[0,64],
       "far_tail_seed":20261118,"far_tail_samples":far},"target":"H(R;(x,25);6), x>=25, R>=0","total_checks":sum(counts.values())}
 
