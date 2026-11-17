@@ -24,6 +24,6 @@ bit別のサイズ・ハッシュは出力JSONに保存した。再現用shell s
 
 GitHub Contents APIの `fetch_file` はbit58の1,178,240-byte whole fileで本文を返さずblob SHAだけを返した。Git blob取得とraw CDN再取得で内容を回収でき、raw CDN上のSHA-256/MD5はmanifestと一致した。これは取得経路のサイズ制限であり、公開データの欠損ではない。
 
-この監査は公開バイト列の完全性だけを確認する。証明書の意味的な正しさを再検証したものではない（各rootの独立検証はcost71e完了ログの既存記録）。receipt fold・frontier・勝敗判定は変更していない。main上ではcost72dの新規sweepが27/67 open bitsまで進んでいたが、本監査はその探索結果を利用・変更していない。
+この監査は公開バイト列の完全性だけを確認する。証明書の意味的な正しさを再検証したものではない（各rootの独立検証はcost71e完了ログの既存記録）。receipt fold・frontier・勝敗判定は変更していない。監査の取得元を固定した a8ff1d814a64565491a8527a7489b97952ec9514 時点ではcost72dは27/67 open bitsだった。その後、mainには `18057d7b2661ef00eb7bdb6286d127c0de23a8f8` が着地し、67 open + 5 confirmation bitsのv17 depth-10 sweepが9 batchすべてpilot PASS・capped 0で完了、WIN7-D10 11件 [1,6,24,25,43,49,75,80,83,98,114]、REFUTED-D10 61件、confirmation 5/5となった。ただしcost72dのclaim JSONはv1/in-flightのままで、claim/auditの整合更新は未確認。今回のbyte auditはcost72dの探索結果を利用・変更していない。
 
 標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class 1/2/4は引き続きUNKNOWN。
