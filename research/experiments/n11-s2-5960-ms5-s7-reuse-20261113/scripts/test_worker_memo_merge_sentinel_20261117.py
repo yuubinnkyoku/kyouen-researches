@@ -33,13 +33,19 @@ class SentinelAwareMemoMergeTests(unittest.TestCase):
         self.assertEqual(merged, (UNBOUND, 5, UNBOUND, 6))
         self.assertEqual(conflict_kind(*merged), "lose_le_nolose")
 
-    def test_f5_information_is_preserved_not_absorbed(self):
-        nowin = combine_values(UNBOUND, UNBOUND, UNBOUND, UNBOUND,
+    def test_f5_information_is_preserved_without_false_conflict(self):
+        nowin = combine_values(7, UNBOUND, UNBOUND, UNBOUND,
                                (UNBOUND, UNBOUND, 4, UNBOUND))
-        nolose = combine_values(UNBOUND, UNBOUND, UNBOUND, UNBOUND,
-                                (UNBOUND, UNBOUND, UNBOUND, 2))
-        self.assertEqual(nowin, (UNBOUND, UNBOUND, 4, UNBOUND))
-        self.assertEqual(nolose, (UNBOUND, UNBOUND, UNBOUND, 2))
+        nolose6 = combine_values(UNBOUND, 6, UNBOUND, UNBOUND,
+                                 (UNBOUND, UNBOUND, UNBOUND, 2))
+        nolose4 = combine_values(UNBOUND, 4, UNBOUND, UNBOUND,
+                                 (UNBOUND, UNBOUND, UNBOUND, 2))
+        self.assertEqual(nowin, (7, UNBOUND, 4, UNBOUND))
+        self.assertEqual(nolose6, (UNBOUND, 6, UNBOUND, 2))
+        self.assertEqual(nolose4, (UNBOUND, 4, UNBOUND, 2))
+        self.assertIsNone(conflict_kind(*nowin))
+        self.assertIsNone(conflict_kind(*nolose6))
+        self.assertIsNone(conflict_kind(*nolose4))
 
     def test_existing_verbatim_measurement_values_are_unchanged(self):
         self.assertEqual(combine_values(3, 7, 255, 255, (5, 2, 255, 255)),
