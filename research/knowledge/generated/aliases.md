@@ -276,7 +276,23 @@
 | receipt-unclosability census | [K0865](../items/K0865-head1410-sterile-coverage-census.md) | head-1410 receipt-unclosability census — 174 個の open S5 parent 全数の STERILE 被覆分類（3 parent が残行すべて STERILE で D10 receipt 閉鎖不能・57 partial・orbit-level join） |
 | s6-s7 sweep candidate convention | [K0868](../items/K0868-n11-s6-s7-sweep-candidate-convention.md) | S6→S7 sweep候補規約の確定 — own_candidates・edge costは6石の任意の3つ組と共円にも共線にも乗らない空セル（survival moves）であり、det4整数演算で石配置から独立再導出できる |
 | survival move convention | [K0868](../items/K0868-n11-s6-s7-sweep-candidate-convention.md) | S6→S7 sweep候補規約の確定 — own_candidates・edge costは6石の任意の3つ組と共円にも共線にも乗らない空セル（survival moves）であり、det4整数演算で石配置から独立再導出できる |
+| three-branch REMO cap12 r456 size boundary | [K0876](../items/K0876-remo-k-branch-cap12-r456-boundary.md) | 3枝REMO決定性のr=4,5,6サイズ境界cap≤12拡張（非坍縮キーは出版cap≤10境界のまま） |
 | three-branch REMO cap12 size boundary | [K0875](../items/K0875-remo-k-branch-cap12-boundary.md) | 3枝REMO決定性のサイズ境界cap≤12拡張（非坍縮キーは定理Hの22個のまま） |
+| three-branch REMO cap13 size boundary | [K0882](../items/K0882-remo-k-branch-cap13-boundary.md) | 3枝REMO決定性のサイズ境界cap≤13拡張（非坍縮キーは定理Hの22個のまま） |
+| three-branch REMO cap14 size boundary | [K0883](../items/K0883-remo-k-branch-cap14-boundary.md) | 3枝REMO決定性のサイズ境界cap≤14拡張（境界は13で閉じず30新キーが出現） |
+| three-branch REMO cap15 size boundary | [K0886](../items/K0886-remo-k-branch-cap15-boundary.md) | 3枝REMO決定性のサイズ境界cap≤15拡張（15世代も新キー族は続き58新キー・γ窓0..9とndet生存者{0,1}の初出現） |
 | three-branch REMO failure-family state matrix | [K0874](../items/K0874-remo-failure-family-state-matrix.md) | 3枝REMO失敗族52キーのr=2..8状態行列と4/10族の位相構造 |
+| three-branch REMO r=9 boundary | [K0893](../items/K0893-remo-k-branch-r9-boundary.md) | 3枝REMO決定性のr=9境界 — 定理I r=9（非坍縮キーは7族34個・6/8族の存続と8/9族の復活によるFATEパターンの破れ・初の3剰余mixed族(6,8,9)・新3族のr=2..8完全休眠とr=9覚醒）・JS maskエンジンpacked符号のr≥9非単射欠陥の修正（出版済みr≤8成果は無影響） |
 | three-branch first-loser residue signature | [K0872](../items/K0872-remo-first-loser-residue-signature.md) | 3枝REMOの非坍縮キーはr=3..8で第1敗者剰余がちょうど2種類 |
-| two-token z5 Grundy-one locus | [K0873](../items/K0873-two-token-z5-grundy-one-locus.md) | 2トークン残余ゲーム z=5 のGrundy値1位置候補 |
+| two-token z5 Grundy classification | [K0873](../items/K0873-two-token-z5-grundy-one-locus.md) | 2トークン残余ゲーム z=5 の全Grundy分類 |
+| two-token z6 y1 boundary slice | [K0877](../items/K0877-two-token-z6-y1-boundary.md) | 2トークン残余ゲーム z=6・y=1境界切片の全Grundy分類 |
+| two-token z6 y10 full Grundy slice | [K0892](../items/K0892-two-token-z6-y10-boundary.md) | 2トークン残余ゲーム z=6・y=10切片の全Grundy分類 |
+| two-token z6 y11 full Grundy slice | [K0894](../items/K0894-two-token-z6-y11-boundary.md) | 2トークン残余ゲーム z=6・y=11切片の全Grundy分類 |
+| two-token z6 y2 boundary slice | [K0878](../items/K0878-two-token-z6-y2-boundary.md) | 2トークン残余ゲーム z=6・y=2境界切片の全Grundy分類 |
+| two-token z6 y3 full Grundy slice | [K0879](../items/K0879-two-token-z6-y3-boundary.md) | 2トークン残余ゲーム z=6・y=3境界切片の全Grundy分類 |
+| two-token z6 y4 boundary slice | [K0880](../items/K0880-two-token-z6-y4-boundary.md) | 2トークン残余ゲーム z=6・y=4切片の全Grundy分類 |
+| two-token z6 y5 full Grundy slice | [K0884](../items/K0884-two-token-z6-y5-boundary.md) | 2トークン残余ゲーム z=6・y=5切片の全Grundy分類 |
+| two-token z6 y6 full Grundy slice | [K0885](../items/K0885-two-token-z6-y6-boundary.md) | 2トークン残余ゲーム z=6・y=6切片の全Grundy分類 |
+| two-token z6 y7 full Grundy slice | [K0887](../items/K0887-two-token-z6-y7-boundary.md) | 2トークン残余ゲーム z=6・y=7切片の全Grundy分類 |
+| two-token z6 y8 full Grundy slice | [K0888](../items/K0888-two-token-z6-y8-boundary.md) | 2トークン残余ゲーム z=6・y=8切片の全Grundy分類 |
+| two-token z6 y9 full Grundy slice | [K0890](../items/K0890-two-token-z6-y9-boundary.md) | 2トークン残余ゲーム z=6・y=9切片の全Grundy分類 |

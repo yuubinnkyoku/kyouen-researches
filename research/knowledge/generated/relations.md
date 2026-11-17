@@ -5219,7 +5219,18 @@
 
 - → generalizes [K0824](../items/K0824-higher-dimensional-fiber-trace-reduction.md): K0824の超平面・球面に対するq>2|B|縮約を、各ファイバー上の次数が高々tである多項式超曲面へ一般化する。K0824のq=2|B|境界反例や超平面跡列挙補題を置き換えるものではない
 - → supports [K0504](../items/K0504-geometric-rule-variant-comparison.md): 底面係数次数を制限しない全多項式族ではΣ min(c_b,t)≤q−1が厳密条件。K0504のdeg f≤kなど底面方向の次数制限付きグラフは別問題であり、補間多項式の底面次数は一般に|B|−1程度まで上がるため未解決
-- ← depends_on [K0873](../items/K0873-two-token-z5-grundy-one-locus.md): 残余ゲームHの定義、偶奇上界、tail定理、2トークン再帰を使用する
+- ← depends_on [K0873](../items/K0873-two-token-z5-grundy-one-locus.md): 残余ゲームHの定義、A/B/C再帰、Theorem T、tail定理とz=4全称スライスを使用する
+- ← depends_on [K0877](../items/K0877-two-token-z6-y1-boundary.md): 残余ゲームHの再帰、Theorem T、単一トークン全z公式とtail定理を使用する
+- ← depends_on [K0878](../items/K0878-two-token-z6-y2-boundary.md): 残余ゲームHの定義、A/B/C再帰、Theorem T、tail定理を使用する
+- ← depends_on [K0879](../items/K0879-two-token-z6-y3-boundary.md): 残余ゲームHの定義、A/B/C再帰、Theorem Tとtail定理を使用する
+- ← depends_on [K0880](../items/K0880-two-token-z6-y4-boundary.md): 残余ゲームHの定義、A/B/C再帰、Theorem T、完了予算とtail定理を使用する
+- ← depends_on [K0884](../items/K0884-two-token-z6-y5-boundary.md): 残余ゲームHのA/B/C再帰、Theorem T、完了予算・tail定理を使用する
+- ← depends_on [K0885](../items/K0885-two-token-z6-y6-boundary.md): 残余ゲームHのA/B/C再帰、Theorem T、完了予算・tail定理を使用する
+- ← depends_on [K0887](../items/K0887-two-token-z6-y7-boundary.md): 残余ゲームHのA/B/C再帰、Theorem T、一般tail定理と3族位置予想を使用する
+- ← depends_on [K0888](../items/K0888-two-token-z6-y8-boundary.md): 残余ゲームHのA/B/C再帰、Theorem T、一般tail定理と3族位置予想を使用する
+- ← depends_on [K0890](../items/K0890-two-token-z6-y9-boundary.md): A/B/C再帰、Theorem T、一般tail定理、および3族値2位置予想を使用する
+- ← depends_on [K0892](../items/K0892-two-token-z6-y10-boundary.md): 残余ゲームHの定義、A/B/C再帰、Theorem Tと一般tail定理を使用する
+- ← depends_on [K0894](../items/K0894-two-token-z6-y11-boundary.md): 残余ゲームHの定義、A/B/C再帰、Theorem Tと一般tail定理を使用する
 
 ## [K0833](../items/K0833-four-six-row-q4-q5-deficient-witness-lower-bounds.md) 4〜6行 q=4,5 行欠損witness帯 — (4,4) m=4..34, (5,4) m=5..39, (6,4) m=6..46, (4,5) m=5..20, (5,5) m=5..26 全幅SAT; M_{4,4}>=35, M_{5,4}>=40, M_{6,4}>=47, M_{4,5}>=21, M_{5,5}>=27; sat3 OOM壁越えと rowY 分割・2クラス被覆で帯延伸
 
@@ -5675,6 +5686,7 @@
 - ← depends_on [K0864](../items/K0864-remo-k-branch-r-dependent-boundary.md): Δ=0プロファイルの生存者が定理D値に一致することをr=2..6で再確認・拡張し、定理D再帰をK0859出版(C,r)表84エントリと照合
 - ← depends_on [K0866](../items/K0866-remo-k-branch-r7-boundary.md): Δ=0プロファイル728個が定理D再帰にr=7で一致。K0859出版(C,r)表84エントリはr=7を含む
 - ← depends_on [K0869](../items/K0869-remo-k-branch-r8-boundary.md): Δ=0プロファイル728個が定理D再帰にr=8で一致。(C,r)表84エントリはr=8を含む
+- ← depends_on [K0893](../items/K0893-remo-k-branch-r9-boundary.md): Δ=0プロファイル728個が定理D再帰のr=9列（検証器内verbatim計算・出版表84エントリはr=2..8で一致確認）
 
 ## [K0860](../items/K0860-remo-two-branch-determinism.md) 2枝合成族でのREMO生存者決定性 — 領域計数帰約（全rで決定可能・成果は石数と枝ロックのみで決まる・全称）とr=3閉形式、r|Δの必要十分性の否定（両方向無限族・∀γ）、生存者決定的だが順位非決定的な族
 
@@ -5696,6 +5708,8 @@
 - ← depends_on [K0869](../items/K0869-remo-k-branch-r8-boundary.md): 定理E′（軌道簡約・全称）によりプロファイルverdictは実現盤面すべてに移る
 - ← depends_on [K0874](../items/K0874-remo-failure-family-state-matrix.md): 定理E′（atomプロファイルへの軌道簡約・全称）でプロファイル判定が盤に転送される
 - ← depends_on [K0875](../items/K0875-remo-k-branch-cap12-boundary.md): 定理E′（atomプロファイルへの軌道簡約・全称）でプロファイル判定が盤に転送される
+- ← depends_on [K0876](../items/K0876-remo-k-branch-cap12-r456-boundary.md): 定理E′（atomプロファイルへの軌道簡約・全称）でプロファイル判定が盤に転送される
+- ← depends_on [K0893](../items/K0893-remo-k-branch-r9-boundary.md): 定理E′（軌道簡約・全称）によりプロファイルverdictは実現盤面すべてに移る
 
 ## [K0862](../items/K0862-remo-k-branch-collapse-boundary.md) 3枝REMO決定性の坍縮境界 — 定理G（枝サイズ≤7で決定性・順位決定性・決定生存者・決定順位がすべて(sizes,γ)に坍縮しチェーン値と一致・r=2..6・全域）と定理H（枝サイズ≤10で非坍縮はサイズ8を含むちょうど22キー・r=3・完全境界）
 
@@ -5707,6 +5721,11 @@
 - ← depends_on [K0872](../items/K0872-remo-first-loser-residue-signature.md): r=3・cap<=10の非坍縮22キー完全境界
 - ← depends_on [K0874](../items/K0874-remo-failure-family-state-matrix.md): r=3・cap<=10の非坍縮22キー完全境界と22組の最小witness
 - ← depends_on [K0875](../items/K0875-remo-k-branch-cap12-boundary.md): エンジンverbatim供給・定理H（cap≤10の22非坍縮キー）・22×2最小witness・Burnside機構
+- ← depends_on [K0876](../items/K0876-remo-k-branch-cap12-r456-boundary.md): エンジン系譜（領域計数ゲーム・プロファイル列挙・Burnside機構・定理D再帰）
+- ← depends_on [K0882](../items/K0882-remo-k-branch-cap13-boundary.md): 定理Hの22キー・出版44 witness（本項でもverbatim再検証）
+- ← depends_on [K0883](../items/K0883-remo-k-branch-cap14-boundary.md): 定理Hの22キー・出版44 witness（本項でもverbatim再検証）
+- ← depends_on [K0886](../items/K0886-remo-k-branch-cap15-boundary.md): 定理Hの22キー・出版44 witness（本項でもverbatim再検証）
+- ← depends_on [K0893](../items/K0893-remo-k-branch-r9-boundary.md): 同一cap≤10領域（15863プロファイル・715キー・Burnside 15863）。r=3小枝族を含む44前失敗キーのr=9運命（FATE44）を確定
 
 ## [K0863](../items/K0863-sterile-row-depth10-unclosability.md) STERILE行depth-10閉鎖不能性定理 — 全合法候補がREFUTED-D10・0 cappedのS6行（STERILE）は自出行・cross-coverを問わずどのWIN7-D10 receipt rootにもcoverされない（位置レベル補題「X covers R ⟺ canon(X) ∈ 自出行候補のD4正準形集合」とD4判定不変性による）、best coverable class-2 S5の3行65k/70j/74hの完全route枯渇（自出行65/70/74・cross 390/420/444経路すべてがown candidateのREFUTED-D10へ(σ,t) witness付きで写像）、70j erratumの「STERILE行もcross-coverで閉鎖され得る」は過大訂正（引用先例は未sweep行かつ70g childは8 WIN7-D10の非STERILE行）
 
@@ -5723,6 +5742,13 @@
 - ← depends_on [K0872](../items/K0872-remo-first-loser-residue-signature.md): 任意枝数・任意rで可能第1敗者集合が {C_i mod r} となる全称補題FL
 - ← depends_on [K0874](../items/K0874-remo-failure-family-state-matrix.md): r=2,4,5,6境界・補題FL（全称）・r=3,4,5決定プロファイル分割の源
 - ← depends_on [K0875](../items/K0875-remo-k-branch-cap12-boundary.md): r=3 (8,8,9)/(8,9,9)分割計数の出版定数
+- ← depends_on [K0876](../items/K0876-remo-k-branch-cap12-r456-boundary.md): 定理I（cap≤10のr=4,5,6非坍縮境界）・出版分割計数・出版witness・生存者ラベル
+- ← extends [K0876](../items/K0876-remo-k-branch-cap12-r456-boundary.md): r=4,5,6のサイズ境界をcap≤10からcap≤12へ拡張し非坍縮キー集合の不変を確定
+- ← verifies [K0876](../items/K0876-remo-k-branch-cap12-r456-boundary.md): 出版cap≤10境界（キー集合・分割・生存者・ミラー交代）をcommitted records上で再現
+- ← depends_on [K0882](../items/K0882-remo-k-branch-cap13-boundary.md): 全称補題FL（可能第1敗者=={C_i mod r}）のcap≤13全プロファイルでの違反0拡張
+- ← depends_on [K0883](../items/K0883-remo-k-branch-cap14-boundary.md): 全称補題FL（可能第1敗者=={C_i mod r}）のcap≤14全プロファイルでの違反0拡張
+- ← depends_on [K0886](../items/K0886-remo-k-branch-cap15-boundary.md): 全称補題FL（可能第1敗者=={C_i mod r}）のcap≤15全プロファイルでの違反0拡張
+- ← depends_on [K0893](../items/K0893-remo-k-branch-r9-boundary.md): r依存境界のr=9拡張。補題FL（全称）のr=9冗長アンカー。エンジン欠陥はFL違反6378件として検出（K0864のFLが検出器として機能）
 
 ## [K0865](../items/K0865-head1410-sterile-coverage-census.md) head-1410 receipt-unclosability census — 174 個の open S5 parent 全数の STERILE 被覆分類（3 parent が残行すべて STERILE で D10 receipt 閉鎖不能・57 partial・orbit-level join）
 
@@ -5739,6 +5765,7 @@
 - ← depends_on [K0869](../items/K0869-remo-k-branch-r8-boundary.md): r=7境界の次のstep。r=7失敗族(4,4,9)/(4,9,9)の決定側がr=8で消滅することを確定
 - ← depends_on [K0872](../items/K0872-remo-first-loser-residue-signature.md): r=7・cap<=10の非坍縮6キー完全境界
 - ← depends_on [K0874](../items/K0874-remo-failure-family-state-matrix.md): r=7・cap<=10の非坍縮6キー境界・r=7 witness・FATE連鎖値
+- ← depends_on [K0893](../items/K0893-remo-k-branch-r9-boundary.md): r=7境界の次のstep。4/9族のr=9一様非決定坍縮を確定
 
 ## [K0867](../items/K0867-remo-k-branch-r8-prediction-refuted.md) r=8 REMO 3枝の4/10族非坍縮予想を対象族の完全検査で反証
 
@@ -5762,6 +5789,7 @@
 - → depends_on [K0867](../items/K0867-remo-k-branch-r8-prediction-refuted.md): フルスイープが(4,4,10),(4,10,10)×γ=0..3のK0867結果（一様非決定・{3,7}・計数）を独立に再現。K0867が空けた「r=8全境界」を本項が埋める
 - ← depends_on [K0872](../items/K0872-remo-first-loser-residue-signature.md): r=8・cap<=10の非坍縮10キー完全境界
 - ← depends_on [K0874](../items/K0874-remo-failure-family-state-matrix.md): r=8・cap<=10の非坍縮10キー境界・FATE・ECHO・出版compactによるr=8全レコード照合
+- ← depends_on [K0893](../items/K0893-remo-k-branch-r9-boundary.md): r=8境界の次のstep。6/8族のr=9存続（分割計数はr=8と完全同一）とFATE44の破れを確定
 
 ## [K0870](../items/K0870-p2647-113-budget-ladder-3m-20m.md) p=2647 サイズ1322 形状クラス(1,1,3) の層別19 d は 3M/10M/20M ラダーで 8 件 UNSAT に到達し、11 件は 20M でも UNKNOWN である
 
@@ -5782,10 +5810,26 @@
 - → depends_on [K0866](../items/K0866-remo-k-branch-r7-boundary.md): r=7・cap<=10の非坍縮6キー完全境界
 - → depends_on [K0869](../items/K0869-remo-k-branch-r8-boundary.md): r=8・cap<=10の非坍縮10キー完全境界
 - ← depends_on [K0875](../items/K0875-remo-k-branch-cap12-boundary.md): 第1敗者剰余レンズ（2剰余キー分類・r=3剰余対{0,2}）
+- ← depends_on [K0876](../items/K0876-remo-k-branch-cap12-r456-boundary.md): 第1敗者剰余レンズ（出版失敗剰余対 r=4:{0,1}, 5:{3,4}, 6:{2,4}）
+- ← depends_on [K0882](../items/K0882-remo-k-branch-cap13-boundary.md): 第1敗者剰余レンズ（非坍縮⇒2剰余の必要条件観察のサイズ13へのアウトオブサンプル拡張）
+- ← depends_on [K0883](../items/K0883-remo-k-branch-cap14-boundary.md): 第1敗者剰余レンズ（非坍縮⇒剰余対{0,2}の必要条件観察のサイズ14へのアウトオブサンプル拡張・52キー全部で{0,2}）
+- ← depends_on [K0886](../items/K0886-remo-k-branch-cap15-boundary.md): 第1敗者剰余レンズ（非坍縮⇒剰余対{0,2}の必要条件観察のサイズ15へのアウトオブサンプル拡張・110キー全部で{0,2}）
+- ← depends_on [K0893](../items/K0893-remo-k-branch-r9-boundary.md): r=9算術前置き57/336/322完全一致。「非坍縮キーは全て2剰余」観察がr=9で初反例（(6,8,9)×γ=0..3の3剰余{0,6,8}）
 
-## [K0873](../items/K0873-two-token-z5-grundy-one-locus.md) 2トークン残余ゲーム z=5 のGrundy値1位置候補
+## [K0873](../items/K0873-two-token-z5-grundy-one-locus.md) 2トークン残余ゲーム z=5 の全Grundy分類
 
-- → depends_on [K0832](../items/K0832-vertical-fiber-degree-reduction.md): 残余ゲームHの定義、偶奇上界、tail定理、2トークン再帰を使用する
+- → depends_on [K0832](../items/K0832-vertical-fiber-degree-reduction.md): 残余ゲームHの定義、A/B/C再帰、Theorem T、tail定理とz=4全称スライスを使用する
+- ← depends_on [K0877](../items/K0877-two-token-z6-y1-boundary.md): C子の評価にz=5全Grundy定理のy=1切片を使用する
+- ← depends_on [K0878](../items/K0878-two-token-z6-y2-boundary.md): C子の評価にz=5の全Grundy定理を使用する
+- ← depends_on [K0879](../items/K0879-two-token-z6-y3-boundary.md): C子の評価にz=5の全Grundyスライスを使用する
+- ← depends_on [K0880](../items/K0880-two-token-z6-y4-boundary.md): C子の評価にz=5の全Grundy公式を使用する
+- ← depends_on [K0884](../items/K0884-two-token-z6-y5-boundary.md): C子の評価にz=5の全Grundyスライスを使用する
+- ← depends_on [K0885](../items/K0885-two-token-z6-y6-boundary.md): C子の評価にz=5の全Grundyスライスを使用する
+- ← depends_on [K0887](../items/K0887-two-token-z6-y7-boundary.md): C子の評価にz=5の全Grundy公式を使用する
+- ← depends_on [K0888](../items/K0888-two-token-z6-y8-boundary.md): C子の評価にz=5の全Grundy公式を使用する
+- ← depends_on [K0890](../items/K0890-two-token-z6-y9-boundary.md): C子の評価にz=5の全Grundy公式を使用する
+- ← depends_on [K0892](../items/K0892-two-token-z6-y10-boundary.md): C子の評価にz=5の全Grundy公式を使用する
+- ← depends_on [K0894](../items/K0894-two-token-z6-y11-boundary.md): C子の評価にz=5の全Grundy公式を使用する
 
 ## [K0874](../items/K0874-remo-failure-family-state-matrix.md) 3枝REMO失敗族52キーのr=2..8状態行列と4/10族の位相構造
 
@@ -5795,6 +5839,7 @@
 - → depends_on [K0866](../items/K0866-remo-k-branch-r7-boundary.md): r=7・cap<=10の非坍縮6キー境界・r=7 witness・FATE連鎖値
 - → depends_on [K0867](../items/K0867-remo-k-branch-r8-prediction-refuted.md): 4/10族r=8外挿の反証（計数・0決定・集合{3,7}）
 - → depends_on [K0869](../items/K0869-remo-k-branch-r8-boundary.md): r=8・cap<=10の非坍縮10キー境界・FATE・ECHO・出版compactによるr=8全レコード照合
+- ← depends_on [K0893](../items/K0893-remo-k-branch-r9-boundary.md): 失敗族状態行列52キーのr=9列。44キーの運命をFATE44として再計算し、4/10族8キーがr=9でも一様非決定（一度もmixedにならず）を確認
 
 ## [K0875](../items/K0875-remo-k-branch-cap12-boundary.md) 3枝REMO決定性のサイズ境界cap≤12拡張（非坍縮キーは定理Hの22個のまま）
 
@@ -5802,3 +5847,132 @@
 - → depends_on [K0862](../items/K0862-remo-k-branch-collapse-boundary.md): エンジンverbatim供給・定理H（cap≤10の22非坍縮キー）・22×2最小witness・Burnside機構
 - → depends_on [K0864](../items/K0864-remo-k-branch-r-dependent-boundary.md): r=3 (8,8,9)/(8,9,9)分割計数の出版定数
 - → depends_on [K0872](../items/K0872-remo-first-loser-residue-signature.md): 第1敗者剰余レンズ（2剰余キー分類・r=3剰余対{0,2}）
+- ← depends_on [K0876](../items/K0876-remo-k-branch-cap12-r456-boundary.md): 定理H12（r=3・cap≤12）・正準形47,595プロファイル列挙・audit JSON・r=3クロスアーティファクト
+- ← extends [K0876](../items/K0876-remo-k-branch-cap12-r456-boundary.md): 定理H12の残課題「r≥4×枝サイズ11,12セル」をr=4,5,6で閉じる
+- ← depends_on [K0882](../items/K0882-remo-k-branch-cap13-boundary.md): 定理H12（cap≤12・r=3の22非坍縮キー）・Burnside/正準列挙機構・22キー構造定数
+
+## [K0876](../items/K0876-remo-k-branch-cap12-r456-boundary.md) 3枝REMO決定性のr=4,5,6サイズ境界cap≤12拡張（非坍縮キーは出版cap≤10境界のまま）
+
+- → depends_on [K0861](../items/K0861-remo-k-branch-determinism.md): 定理E′（atomプロファイルへの軌道簡約・全称）でプロファイル判定が盤に転送される
+- → depends_on [K0862](../items/K0862-remo-k-branch-collapse-boundary.md): エンジン系譜（領域計数ゲーム・プロファイル列挙・Burnside機構・定理D再帰）
+- → depends_on [K0864](../items/K0864-remo-k-branch-r-dependent-boundary.md): 定理I（cap≤10のr=4,5,6非坍縮境界）・出版分割計数・出版witness・生存者ラベル
+- → depends_on [K0872](../items/K0872-remo-first-loser-residue-signature.md): 第1敗者剰余レンズ（出版失敗剰余対 r=4:{0,1}, 5:{3,4}, 6:{2,4}）
+- → depends_on [K0875](../items/K0875-remo-k-branch-cap12-boundary.md): 定理H12（r=3・cap≤12）・正準形47,595プロファイル列挙・audit JSON・r=3クロスアーティファクト
+- → extends [K0864](../items/K0864-remo-k-branch-r-dependent-boundary.md): r=4,5,6のサイズ境界をcap≤10からcap≤12へ拡張し非坍縮キー集合の不変を確定
+- → extends [K0875](../items/K0875-remo-k-branch-cap12-boundary.md): 定理H12の残課題「r≥4×枝サイズ11,12セル」をr=4,5,6で閉じる
+- → verifies [K0864](../items/K0864-remo-k-branch-r-dependent-boundary.md): 出版cap≤10境界（キー集合・分割・生存者・ミラー交代）をcommitted records上で再現
+- ← depends_on [K0882](../items/K0882-remo-k-branch-cap13-boundary.md): r=3 packed出版レコード47,595件（順序保存部分列位置で全件再現・sha256ピン付き照合）と監査JSONのr=3 22キー分割表、ならびに検証器のverbatim供給（エンジン・列挙・mask twin・K0862 witness定数）
+- ← depends_on [K0883](../items/K0883-remo-k-branch-cap14-boundary.md): 監査JSONのr=3 22キー分割表（定理Hキーはcap≤14でも同値・sha256ピン付き照合）と検証器系譜（packed読み取り修復版）
+- ← depends_on [K0886](../items/K0886-remo-k-branch-cap15-boundary.md): 監査JSONのr=3 22キー分割表（定理Hキーはcap≤15でも同値・sha256ピン付き照合）と検証器系譜（packed読み取り修復版）
+
+## [K0877](../items/K0877-two-token-z6-y1-boundary.md) 2トークン残余ゲーム z=6・y=1境界切片の全Grundy分類
+
+- → depends_on [K0832](../items/K0832-vertical-fiber-degree-reduction.md): 残余ゲームHの再帰、Theorem T、単一トークン全z公式とtail定理を使用する
+- → depends_on [K0873](../items/K0873-two-token-z5-grundy-one-locus.md): C子の評価にz=5全Grundy定理のy=1切片を使用する
+- ← depends_on [K0878](../items/K0878-two-token-z6-y2-boundary.md): B子の評価にz=6,y=1境界切片の全Grundy定理を使用する
+
+## [K0878](../items/K0878-two-token-z6-y2-boundary.md) 2トークン残余ゲーム z=6・y=2境界切片の全Grundy分類
+
+- → depends_on [K0832](../items/K0832-vertical-fiber-degree-reduction.md): 残余ゲームHの定義、A/B/C再帰、Theorem T、tail定理を使用する
+- → depends_on [K0873](../items/K0873-two-token-z5-grundy-one-locus.md): C子の評価にz=5の全Grundy定理を使用する
+- → depends_on [K0877](../items/K0877-two-token-z6-y1-boundary.md): B子の評価にz=6,y=1境界切片の全Grundy定理を使用する
+- ← depends_on [K0879](../items/K0879-two-token-z6-y3-boundary.md): B子の評価にz=6,y=2境界切片の全Grundy公式を使用する
+
+## [K0879](../items/K0879-two-token-z6-y3-boundary.md) 2トークン残余ゲーム z=6・y=3境界切片の全Grundy分類
+
+- → depends_on [K0832](../items/K0832-vertical-fiber-degree-reduction.md): 残余ゲームHの定義、A/B/C再帰、Theorem Tとtail定理を使用する
+- → depends_on [K0873](../items/K0873-two-token-z5-grundy-one-locus.md): C子の評価にz=5の全Grundyスライスを使用する
+- → depends_on [K0878](../items/K0878-two-token-z6-y2-boundary.md): B子の評価にz=6,y=2境界切片の全Grundy公式を使用する
+- ← depends_on [K0880](../items/K0880-two-token-z6-y4-boundary.md): B子の評価にz=6,y=3全Grundy切片を使用する
+
+## [K0880](../items/K0880-two-token-z6-y4-boundary.md) 2トークン残余ゲーム z=6・y=4切片の全Grundy分類
+
+- → depends_on [K0832](../items/K0832-vertical-fiber-degree-reduction.md): 残余ゲームHの定義、A/B/C再帰、Theorem T、完了予算とtail定理を使用する
+- → depends_on [K0873](../items/K0873-two-token-z5-grundy-one-locus.md): C子の評価にz=5の全Grundy公式を使用する
+- → depends_on [K0879](../items/K0879-two-token-z6-y3-boundary.md): B子の評価にz=6,y=3全Grundy切片を使用する
+- ← depends_on [K0884](../items/K0884-two-token-z6-y5-boundary.md): B子の評価にz=6,y=4の全Grundy切片を使用する
+
+## [K0882](../items/K0882-remo-k-branch-cap13-boundary.md) 3枝REMO決定性のサイズ境界cap≤13拡張（非坍縮キーは定理Hの22個のまま）
+
+- → depends_on [K0875](../items/K0875-remo-k-branch-cap12-boundary.md): 定理H12（cap≤12・r=3の22非坍縮キー）・Burnside/正準列挙機構・22キー構造定数
+- → depends_on [K0876](../items/K0876-remo-k-branch-cap12-r456-boundary.md): r=3 packed出版レコード47,595件（順序保存部分列位置で全件再現・sha256ピン付き照合）と監査JSONのr=3 22キー分割表、ならびに検証器のverbatim供給（エンジン・列挙・mask twin・K0862 witness定数）
+- → depends_on [K0862](../items/K0862-remo-k-branch-collapse-boundary.md): 定理Hの22キー・出版44 witness（本項でもverbatim再検証）
+- → depends_on [K0872](../items/K0872-remo-first-loser-residue-signature.md): 第1敗者剰余レンズ（非坍縮⇒2剰余の必要条件観察のサイズ13へのアウトオブサンプル拡張）
+- → depends_on [K0864](../items/K0864-remo-k-branch-r-dependent-boundary.md): 全称補題FL（可能第1敗者=={C_i mod r}）のcap≤13全プロファイルでの違反0拡張
+- ← depends_on [K0883](../items/K0883-remo-k-branch-cap14-boundary.md): 定理H13（cap≤13・r=3の22非坍縮キー）・r=3 packed出版レコード77,828件（D_13部分列位置で全件再現・sha256ピン付き照合）・検証器のverbatim供給（エンジン・列挙・mask twin・K0862 witness定数）
+
+## [K0883](../items/K0883-remo-k-branch-cap14-boundary.md) 3枝REMO決定性のサイズ境界cap≤14拡張（境界は13で閉じず30新キーが出現）
+
+- → depends_on [K0882](../items/K0882-remo-k-branch-cap13-boundary.md): 定理H13（cap≤13・r=3の22非坍縮キー）・r=3 packed出版レコード77,828件（D_13部分列位置で全件再現・sha256ピン付き照合）・検証器のverbatim供給（エンジン・列挙・mask twin・K0862 witness定数）
+- → depends_on [K0876](../items/K0876-remo-k-branch-cap12-r456-boundary.md): 監査JSONのr=3 22キー分割表（定理Hキーはcap≤14でも同値・sha256ピン付き照合）と検証器系譜（packed読み取り修復版）
+- → depends_on [K0862](../items/K0862-remo-k-branch-collapse-boundary.md): 定理Hの22キー・出版44 witness（本項でもverbatim再検証）
+- → depends_on [K0872](../items/K0872-remo-first-loser-residue-signature.md): 第1敗者剰余レンズ（非坍縮⇒剰余対{0,2}の必要条件観察のサイズ14へのアウトオブサンプル拡張・52キー全部で{0,2}）
+- → depends_on [K0864](../items/K0864-remo-k-branch-r-dependent-boundary.md): 全称補題FL（可能第1敗者=={C_i mod r}）のcap≤14全プロファイルでの違反0拡張
+- ← depends_on [K0886](../items/K0886-remo-k-branch-cap15-boundary.md): 定理H14（cap≤14・r=3の52非坍縮キー）・r=3 packed出版レコード123,272件（D_14部分列位置で全件再現・sha256ピン付き照合）・検証器のverbatim供給（エンジン・列挙・mask twin・K0862 witness定数）
+
+## [K0884](../items/K0884-two-token-z6-y5-boundary.md) 2トークン残余ゲーム z=6・y=5切片の全Grundy分類
+
+- → depends_on [K0832](../items/K0832-vertical-fiber-degree-reduction.md): 残余ゲームHのA/B/C再帰、Theorem T、完了予算・tail定理を使用する
+- → depends_on [K0873](../items/K0873-two-token-z5-grundy-one-locus.md): C子の評価にz=5の全Grundyスライスを使用する
+- → depends_on [K0880](../items/K0880-two-token-z6-y4-boundary.md): B子の評価にz=6,y=4の全Grundy切片を使用する
+- ← depends_on [K0885](../items/K0885-two-token-z6-y6-boundary.md): B子の評価にz=6,y=5の全Grundy切片を使用する
+
+## [K0885](../items/K0885-two-token-z6-y6-boundary.md) 2トークン残余ゲーム z=6・y=6切片の全Grundy分類
+
+- → depends_on [K0832](../items/K0832-vertical-fiber-degree-reduction.md): 残余ゲームHのA/B/C再帰、Theorem T、完了予算・tail定理を使用する
+- → depends_on [K0873](../items/K0873-two-token-z5-grundy-one-locus.md): C子の評価にz=5の全Grundyスライスを使用する
+- → depends_on [K0884](../items/K0884-two-token-z6-y5-boundary.md): B子の評価にz=6,y=5の全Grundy切片を使用する
+- ← depends_on [K0887](../items/K0887-two-token-z6-y7-boundary.md): B子の評価にz=6,y=6全Grundy切片を使用する
+
+## [K0886](../items/K0886-remo-k-branch-cap15-boundary.md) 3枝REMO決定性のサイズ境界cap≤15拡張（15世代も新キー族は続き58新キー・γ窓0..9とndet生存者{0,1}の初出現）
+
+- → depends_on [K0883](../items/K0883-remo-k-branch-cap14-boundary.md): 定理H14（cap≤14・r=3の52非坍縮キー）・r=3 packed出版レコード123,272件（D_14部分列位置で全件再現・sha256ピン付き照合）・検証器のverbatim供給（エンジン・列挙・mask twin・K0862 witness定数）
+- → depends_on [K0876](../items/K0876-remo-k-branch-cap12-r456-boundary.md): 監査JSONのr=3 22キー分割表（定理Hキーはcap≤15でも同値・sha256ピン付き照合）と検証器系譜（packed読み取り修復版）
+- → depends_on [K0862](../items/K0862-remo-k-branch-collapse-boundary.md): 定理Hの22キー・出版44 witness（本項でもverbatim再検証）
+- → depends_on [K0872](../items/K0872-remo-first-loser-residue-signature.md): 第1敗者剰余レンズ（非坍縮⇒剰余対{0,2}の必要条件観察のサイズ15へのアウトオブサンプル拡張・110キー全部で{0,2}）
+- → depends_on [K0864](../items/K0864-remo-k-branch-r-dependent-boundary.md): 全称補題FL（可能第1敗者=={C_i mod r}）のcap≤15全プロファイルでの違反0拡張
+
+## [K0887](../items/K0887-two-token-z6-y7-boundary.md) 2トークン残余ゲーム z=6・y=7切片の全Grundy分類
+
+- → depends_on [K0832](../items/K0832-vertical-fiber-degree-reduction.md): 残余ゲームHのA/B/C再帰、Theorem T、一般tail定理と3族位置予想を使用する
+- → depends_on [K0873](../items/K0873-two-token-z5-grundy-one-locus.md): C子の評価にz=5の全Grundy公式を使用する
+- → depends_on [K0885](../items/K0885-two-token-z6-y6-boundary.md): B子の評価にz=6,y=6全Grundy切片を使用する
+- ← depends_on [K0888](../items/K0888-two-token-z6-y8-boundary.md): B子の評価にz=6,y=7全Grundy切片を使用する
+
+## [K0888](../items/K0888-two-token-z6-y8-boundary.md) 2トークン残余ゲーム z=6・y=8切片の全Grundy分類
+
+- → depends_on [K0832](../items/K0832-vertical-fiber-degree-reduction.md): 残余ゲームHのA/B/C再帰、Theorem T、一般tail定理と3族位置予想を使用する
+- → depends_on [K0873](../items/K0873-two-token-z5-grundy-one-locus.md): C子の評価にz=5の全Grundy公式を使用する
+- → depends_on [K0887](../items/K0887-two-token-z6-y7-boundary.md): B子の評価にz=6,y=7全Grundy切片を使用する
+- ← depends_on [K0890](../items/K0890-two-token-z6-y9-boundary.md): B子の評価にz=6,y=8全Grundy切片を使用する
+
+## [K0890](../items/K0890-two-token-z6-y9-boundary.md) 2トークン残余ゲーム z=6・y=9切片の全Grundy分類
+
+- → depends_on [K0832](../items/K0832-vertical-fiber-degree-reduction.md): A/B/C再帰、Theorem T、一般tail定理、および3族値2位置予想を使用する
+- → depends_on [K0873](../items/K0873-two-token-z5-grundy-one-locus.md): C子の評価にz=5の全Grundy公式を使用する
+- → depends_on [K0888](../items/K0888-two-token-z6-y8-boundary.md): B子の評価にz=6,y=8全Grundy切片を使用する
+- ← depends_on [K0892](../items/K0892-two-token-z6-y10-boundary.md): B子の評価にz=6,y=9全Grundy切片を使用する
+
+## [K0892](../items/K0892-two-token-z6-y10-boundary.md) 2トークン残余ゲーム z=6・y=10切片の全Grundy分類
+
+- → depends_on [K0832](../items/K0832-vertical-fiber-degree-reduction.md): 残余ゲームHの定義、A/B/C再帰、Theorem Tと一般tail定理を使用する
+- → depends_on [K0873](../items/K0873-two-token-z5-grundy-one-locus.md): C子の評価にz=5の全Grundy公式を使用する
+- → depends_on [K0890](../items/K0890-two-token-z6-y9-boundary.md): B子の評価にz=6,y=9全Grundy切片を使用する
+- ← depends_on [K0894](../items/K0894-two-token-z6-y11-boundary.md): B子の評価にz=6,y=10全Grundy切片を使用する
+
+## [K0893](../items/K0893-remo-k-branch-r9-boundary.md) 3枝REMO決定性のr=9境界 — 定理I r=9（非坍縮キーは7族34個・6/8族の存続と8/9族の復活によるFATEパターンの破れ・初の3剰余mixed族(6,8,9)・新3族のr=2..8完全休眠とr=9覚醒）・JS maskエンジンpacked符号のr≥9非単射欠陥の修正（出版済みr≤8成果は無影響）
+
+- → depends_on [K0864](../items/K0864-remo-k-branch-r-dependent-boundary.md): r依存境界のr=9拡張。補題FL（全称）のr=9冗長アンカー。エンジン欠陥はFL違反6378件として検出（K0864のFLが検出器として機能）
+- → depends_on [K0862](../items/K0862-remo-k-branch-collapse-boundary.md): 同一cap≤10領域（15863プロファイル・715キー・Burnside 15863）。r=3小枝族を含む44前失敗キーのr=9運命（FATE44）を確定
+- → depends_on [K0861](../items/K0861-remo-k-branch-determinism.md): 定理E′（軌道簡約・全称）によりプロファイルverdictは実現盤面すべてに移る
+- → depends_on [K0859](../items/K0859-elimination-continuation-rules.md): Δ=0プロファイル728個が定理D再帰のr=9列（検証器内verbatim計算・出版表84エントリはr=2..8で一致確認）
+- → depends_on [K0866](../items/K0866-remo-k-branch-r7-boundary.md): r=7境界の次のstep。4/9族のr=9一様非決定坍縮を確定
+- → depends_on [K0869](../items/K0869-remo-k-branch-r8-boundary.md): r=8境界の次のstep。6/8族のr=9存続（分割計数はr=8と完全同一）とFATE44の破れを確定
+- → depends_on [K0872](../items/K0872-remo-first-loser-residue-signature.md): r=9算術前置き57/336/322完全一致。「非坍縮キーは全て2剰余」観察がr=9で初反例（(6,8,9)×γ=0..3の3剰余{0,6,8}）
+- → depends_on [K0874](../items/K0874-remo-failure-family-state-matrix.md): 失敗族状態行列52キーのr=9列。44キーの運命をFATE44として再計算し、4/10族8キーがr=9でも一様非決定（一度もmixedにならず）を確認
+
+## [K0894](../items/K0894-two-token-z6-y11-boundary.md) 2トークン残余ゲーム z=6・y=11切片の全Grundy分類
+
+- → depends_on [K0832](../items/K0832-vertical-fiber-degree-reduction.md): 残余ゲームHの定義、A/B/C再帰、Theorem Tと一般tail定理を使用する
+- → depends_on [K0873](../items/K0873-two-token-z5-grundy-one-locus.md): C子の評価にz=5の全Grundy公式を使用する
+- → depends_on [K0892](../items/K0892-two-token-z6-y10-boundary.md): B子の評価にz=6,y=10全Grundy切片を使用する

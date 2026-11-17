@@ -9755,6 +9755,12 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64a-inflight-20261116.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64a-inflight-20261116.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): cost64a child 00000000000000801282000040000000 はsterile（64/64 REFUTED-D10・0 WIN・38,157,151 nodes）
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64h-certificate-third-verification-20261116.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64h-certificate-third-verification-20261116.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 公開済み6証明書を第三実装で6/6検証。271 subroots、136,261 strategy rows、union missing/extra 0、終端13..17石
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64h-k0863-out-of-sample-audit-20261116.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64h-k0863-out-of-sample-audit-20261116.json)
+
+- [K0863](../items/K0863-sterile-row-depth10-unclosability.md) (data): 10 checks PASS。64候補のD4 class 64・verdict conflict 0・WIN root 23 class、STERILE 35行とのcover overlap 0
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-bit7-independent-audit-20261115.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65e-bit7-independent-audit-20261115.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): cost65e bit7証明書のBigInt独立検査、D4親被覆、重複・衝突監査とfrontier差分
@@ -10047,6 +10053,9 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_class2_third_counterexample.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_class2_third_counterexample.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): 64証明書による六石LOSSと3つの五石SECOND_WIN、残作業を2幾何判定で照合
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost64h_k0863_out_of_sample_20261116.mjs](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost64h_k0863_out_of_sample_20261116.mjs)
+
+- [K0863](../items/K0863-sterile-row-depth10-unclosability.md) (verifier): cost-64hの23 WIN7-D10 rootとK0863 STERILE censusの独立out-of-sample照合。BigInt Bareiss幾何・D4正準化・raw/v15照合を再実装し、35 STERILE行/2,628候補との重複0を確認
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost67c_certificates_third_independent_20261115.mjs](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost67c_certificates_third_independent_20261115.mjs)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): cost67cの2 WIN7証明書を有理中心分子＋共線分岐の別実装で全戦略木再生。D4親liftとS6 worklist所属も照合
@@ -10233,6 +10242,9 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/verify_class2_third_loss.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/verify_class2_third_loss.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): さらに別の六石位置の全64七石子に対するLOSS7証明書を独立検査
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/verify_cost64h_certificate_bareiss_independent_20261116.mjs](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/verify_cost64h_certificate_bareiss_independent_20261116.mjs)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): cost-64h WIN7証明書を直接BigInt 4x4 Bareissで全応手再生する第三独立検証器。既存BigInt余因子展開・Number Bareiss実装をimportしない
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/verify_cost73d_win7_certificate_independent.mjs](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/verify_cost73d_win7_certificate_independent.mjs)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): 円・直線の整数方程式を使う独立幾何実装でbit48証明書の全59 sub-rootを検査
@@ -13935,6 +13947,24 @@
 ## [research/experiments/remo-first-loser-residue-signature-20261116/verify_first_loser_residue_signature.py](../../../research/experiments/remo-first-loser-residue-signature-20261116/verify_first_loser_residue_signature.py)
 
 - [K0872](../items/K0872-remo-first-loser-residue-signature.md) (verifier): 715キー列挙、非坍縮一覧の剰余署名、r=9の事前整理を再現する標準ライブラリ検証器
+## [research/experiments/remo-k-branch-cap10-r9-boundary-20261117/mask_engine_fast_r9.js](../../../research/experiments/remo-k-branch-cap10-r9-boundary-20261117/mask_engine_fast_r9.js)
+
+- [K0893](../items/K0893-remo-k-branch-r9-boundary.md) (solver): K0876/K0881出版エンジンのpack符号8ビットシフトをrに一般化した修正版（r≥9でP_8第1敗者ビットがP_0生存者ビットと衝突する非単射欠陥を修正）。r≤8では復号ビット同一・K0881出版packedレコードとの回帰照合 r=2全47595件+r=7 6300件+r=8 3300件で不一致0
+## [research/experiments/remo-k-branch-cap10-r9-boundary-20261117/output/js_cap10_r9.packed.jsonl](../../../research/experiments/remo-k-branch-cap10-r9-boundary-20261117/output/js_cap10_r9.packed.jsonl)
+
+- [K0893](../items/K0893-remo-k-branch-r9-boundary.md) (data): r=9完全スイープのpacked記録15,863レコード（[i, sv_mask, fl_mask, states]・atomsは正準列挙のiの純関数）。修正版エンジンで生成・FL違反0
+## [research/experiments/remo-k-branch-cap10-r9-boundary-20261117/output/remo_k_branch_cap10_r9_boundary_audit.json](../../../research/experiments/remo-k-branch-cap10-r9-boundary-20261117/output/remo_k_branch_cap10_r9_boundary_audit.json)
+
+- [K0893](../items/K0893-remo-k-branch-r9-boundary.md) (data): 監査JSON（sha256 f407faee7280a95d5674128fa4ba7c9fced8923d710a657eb16cfac0bae289d8）。検証器run()がcommitted fileとコールド再生成のbyte照合を行う
+## [research/experiments/remo-k-branch-cap10-r9-boundary-20261117/pack_records_r9.py](../../../research/experiments/remo-k-branch-cap10-r9-boundary-20261117/pack_records_r9.py)
+
+- [K0893](../items/K0893-remo-k-branch-r9-boundary.md) (solver): full→packed出版形式の決定的パッキングscript
+## [research/experiments/remo-k-branch-cap10-r9-boundary-20261117/report.md](../../../research/experiments/remo-k-branch-cap10-r9-boundary-20261117/report.md)
+
+- [K0893](../items/K0893-remo-k-branch-r9-boundary.md) (proof): 定理I r=9（7族34キー・分割計数・生存者構造）・FATE44（22存続/22坍縮・初の族復活）・ECHO9（新族のr=2..8完全休眠）・剰余レンズ初反例・FL9/G′9/D0アンカー・エンジン欠陥修正の説明・限界
+## [research/experiments/remo-k-branch-cap10-r9-boundary-20261117/verify_remo_k_branch_cap10_r9_boundary.py](../../../research/experiments/remo-k-branch-cap10-r9-boundary-20261117/verify_remo_k_branch_cap10_r9_boundary.py)
+
+- [K0893](../items/K0893-remo-k-branch-r9-boundary.md) (verifier): 自己完結・決定的・stdlibのみ。11機械チェック全合格・assemble二重実行byte同一。live checks（cap≤7全域2048のverbatim==twin==JS・stride 32サンプル496・34 witness群+44 FATEチェーンverbatim再実行・146判定のJS突合）。CIコールド実行約7分
 ## [research/experiments/remo-k-branch-cap12-boundary-20261116/output/remo_k_branch_cap12_boundary_audit.json](../../../research/experiments/remo-k-branch-cap12-boundary-20261116/output/remo_k_branch_cap12_boundary_audit.json)
 
 - [K0875](../items/K0875-remo-k-branch-cap12-boundary.md) (data): 22キー分割・witness・新キーセンサス・det_map全記録と機械チェック19件
@@ -13944,6 +13974,96 @@
 ## [research/experiments/remo-k-branch-cap12-boundary-20261116/verify_remo_k_branch_cap12_boundary.py](../../../research/experiments/remo-k-branch-cap12-boundary-20261116/verify_remo_k_branch_cap12_boundary.py)
 
 - [K0875](../items/K0875-remo-k-branch-cap12-boundary.md) (verifier): cap≤12完全スイープ・出版定数埋込み・二重実行バイト同一・stdlibのみの検証器
+## [research/experiments/remo-k-branch-cap12-r456-boundary-20261116/mask_engine_fast.js](../../../research/experiments/remo-k-branch-cap12-r456-boundary-20261116/mask_engine_fast.js)
+
+- [K0876](../items/K0876-remo-k-branch-cap12-r456-boundary.md) (solver): r=3..6の決定的maskエンジン（savedCol退避バグ修正済み）・正準形プロファイル列挙は検証器内蔵のdirect_constrained(12)で再現
+## [research/experiments/remo-k-branch-cap12-r456-boundary-20261116/output/js_cap12_r3.packed.jsonl](../../../research/experiments/remo-k-branch-cap12-r456-boundary-20261116/output/js_cap12_r3.packed.jsonl)
+
+- [K0876](../items/K0876-remo-k-branch-cap12-r456-boundary.md) (data): r=3決定的sweepレコード47,595件・packed形式[i,sv_mask,fl_mask,states]（K0875クロスアーティファクト照合済み・sha256 ea7c6628）
+## [research/experiments/remo-k-branch-cap12-r456-boundary-20261116/output/js_cap12_r4.packed.jsonl](../../../research/experiments/remo-k-branch-cap12-r456-boundary-20261116/output/js_cap12_r4.packed.jsonl)
+
+- [K0876](../items/K0876-remo-k-branch-cap12-r456-boundary.md) (data): r=4決定的sweepレコード47,595件・packed形式（sha256 04caba43）
+## [research/experiments/remo-k-branch-cap12-r456-boundary-20261116/output/js_cap12_r5.packed.jsonl](../../../research/experiments/remo-k-branch-cap12-r456-boundary-20261116/output/js_cap12_r5.packed.jsonl)
+
+- [K0876](../items/K0876-remo-k-branch-cap12-r456-boundary.md) (data): r=5決定的sweepレコード47,595件・packed形式（sha256 c6dddad7）
+## [research/experiments/remo-k-branch-cap12-r456-boundary-20261116/output/js_cap12_r6.packed.jsonl](../../../research/experiments/remo-k-branch-cap12-r456-boundary-20261116/output/js_cap12_r6.packed.jsonl)
+
+- [K0876](../items/K0876-remo-k-branch-cap12-r456-boundary.md) (data): r=6決定的sweepレコード47,595件・packed形式（sha256 65f1cb32・環境リセット挟み独立2回でbyte-identical）
+## [research/experiments/remo-k-branch-cap12-r456-boundary-20261116/output/remo_k_branch_cap12_r456_boundary_audit.json](../../../research/experiments/remo-k-branch-cap12-r456-boundary-20261116/output/remo_k_branch_cap12_r456_boundary_audit.json)
+
+- [K0876](../items/K0876-remo-k-branch-cap12-r456-boundary.md) (data): 40機械チェック・r=3..6センサス・分割・剰余レンズ・アンカーの全記録（修復版・sha256 19b4d833）
+## [research/experiments/remo-k-branch-cap12-r456-boundary-20261116/pack_records.py](../../../research/experiments/remo-k-branch-cap12-r456-boundary-20261116/pack_records.py)
+
+- [K0876](../items/K0876-remo-k-branch-cap12-r456-boundary.md) (solver): full形式レコード→packed出版形式の決定的packer（初回pushの輸送障害に対する修復で使用）
+## [research/experiments/remo-k-branch-cap12-r456-boundary-20261116/report.md](../../../research/experiments/remo-k-branch-cap12-r456-boundary-20261116/report.md)
+
+- [K0876](../items/K0876-remo-k-branch-cap12-r456-boundary.md) (data): 定理I12主張・センサス表・剰余レンズ・アンカー・savedColバグ修正記録・限界
+## [research/experiments/remo-k-branch-cap12-r456-boundary-20261116/verify_remo_k_branch_cap12_r456_boundary.py](../../../research/experiments/remo-k-branch-cap12-r456-boundary-20261116/verify_remo_k_branch_cap12_r456_boundary.py)
+
+- [K0876](../items/K0876-remo-k-branch-cap12-r456-boundary.md) (verifier): committed records照合（packed出版形式対応・full形式優先）・Python twin live checks・出版定数埋込み・40機械チェック・assemble二重バイト同一
+## [research/experiments/remo-k-branch-cap13-boundary-20261116/mask_engine_fast.js](../../../research/experiments/remo-k-branch-cap13-boundary-20261116/mask_engine_fast.js)
+
+- [K0882](../items/K0882-remo-k-branch-cap13-boundary.md) (solver): 決定的JavaScript maskエンジン（K0876系譜・r=3・正準cap≤13列挙77,828プロファイル一括スイープ）
+## [research/experiments/remo-k-branch-cap13-boundary-20261116/output/js_cap13_r3.packed.jsonl](../../../research/experiments/remo-k-branch-cap13-boundary-20261116/output/js_cap13_r3.packed.jsonl)
+
+- [K0882](../items/K0882-remo-k-branch-cap13-boundary.md) (data): r=3決定的sweepレコード77,828件・packed出版形式 [i, sv_mask, fl_mask, states]（sha256 47a5eb34f738dc60a74d4ef0c66e54032d7c79f2e3413b47c40dbc56c07df5fd・atomsは検証器内の正準列挙で無損失再構成）
+## [research/experiments/remo-k-branch-cap13-boundary-20261116/output/remo_k_branch_cap13_boundary_audit.json](../../../research/experiments/remo-k-branch-cap13-boundary-20261116/output/remo_k_branch_cap13_boundary_audit.json)
+
+- [K0882](../items/K0882-remo-k-branch-cap13-boundary.md) (data): 19機械チェック・cap13センサス・22キー分割・剰余レンズ・K0876交差照合の全記録
+## [research/experiments/remo-k-branch-cap13-boundary-20261116/pack_records.py](../../../research/experiments/remo-k-branch-cap13-boundary-20261116/pack_records.py)
+
+- [K0882](../items/K0882-remo-k-branch-cap13-boundary.md) (solver): full→packed出版形式の決定的パッキングscript（再実行でbyte同一を確認済み）
+## [research/experiments/remo-k-branch-cap13-boundary-20261116/report.md](../../../research/experiments/remo-k-branch-cap13-boundary-20261116/report.md)
+
+- [K0882](../items/K0882-remo-k-branch-cap13-boundary.md) (data): 定理H13主張・Burnside対照表・交差アーティファクト照合・限界
+## [research/experiments/remo-k-branch-cap13-boundary-20261116/verify_remo_k_branch_cap13_boundary.py](../../../research/experiments/remo-k-branch-cap13-boundary-20261116/verify_remo_k_branch_cap13_boundary.py)
+
+- [K0882](../items/K0882-remo-k-branch-cap13-boundary.md) (verifier): committed packed records照合・K0876出版レコード・監査との交差照合・Python twin live checks・19機械チェック・assemble二重実行byte同一・stdlibのみ
+## [research/experiments/remo-k-branch-cap14-boundary-20261116/mask_engine_fast.js](../../../research/experiments/remo-k-branch-cap14-boundary-20261116/mask_engine_fast.js)
+
+- [K0883](../items/K0883-remo-k-branch-cap14-boundary.md) (solver): 決定的JavaScript maskエンジン（K0876系譜・r=3・正準cap≤14列挙123,272プロファイル一括スイープ・324.6秒）
+## [research/experiments/remo-k-branch-cap14-boundary-20261116/output/js_cap14_r3.packed.jsonl.part1of2](../../../research/experiments/remo-k-branch-cap14-boundary-20261116/output/js_cap14_r3.packed.jsonl.part1of2)
+
+- [K0883](../items/K0883-remo-k-branch-cap14-boundary.md) (data): r=3決定的sweepレコード前半61,636件（sha256 f627814d1c8b484d5aab36f6054005b757e49f3e53f491c141e5d9fa5dad5d5d）
+## [research/experiments/remo-k-branch-cap14-boundary-20261116/output/js_cap14_r3.packed.jsonl.part2of2](../../../research/experiments/remo-k-branch-cap14-boundary-20261116/output/js_cap14_r3.packed.jsonl.part2of2)
+
+- [K0883](../items/K0883-remo-k-branch-cap14-boundary.md) (data): r=3決定的sweepレコード後半61,636件（sha256 7848e20cfc142db1e3e8fbb754503c15405ef57af5f252f5c5fba009c833d6d0）。join byte正確でpacked blob（123,272件・sha256 710f328936340c2a2ab4316cde4316942a677207dd29ec1dc52af7c9cb786644）と一致
+## [research/experiments/remo-k-branch-cap14-boundary-20261116/output/remo_k_branch_cap14_boundary_audit.json](../../../research/experiments/remo-k-branch-cap14-boundary-20261116/output/remo_k_branch_cap14_boundary_audit.json)
+
+- [K0883](../items/K0883-remo-k-branch-cap14-boundary.md) (data): 21機械チェック・cap14センサス・52キー分割・剰余レンズ・K0882/K0876交差照合の全記録
+## [research/experiments/remo-k-branch-cap14-boundary-20261116/pack_records.py](../../../research/experiments/remo-k-branch-cap14-boundary-20261116/pack_records.py)
+
+- [K0883](../items/K0883-remo-k-branch-cap14-boundary.md) (solver): full→packed出版形式の決定的パッキングscript
+## [research/experiments/remo-k-branch-cap14-boundary-20261116/report.md](../../../research/experiments/remo-k-branch-cap14-boundary-20261116/report.md)
+
+- [K0883](../items/K0883-remo-k-branch-cap14-boundary.md) (data): 定理H14主張・Burnside対照表・K0882交差照合・置換対応の有限観察・限界
+## [research/experiments/remo-k-branch-cap14-boundary-20261116/verify_remo_k_branch_cap14_boundary.py](../../../research/experiments/remo-k-branch-cap14-boundary-20261116/verify_remo_k_branch_cap14_boundary.py)
+
+- [K0883](../items/K0883-remo-k-branch-cap14-boundary.md) (verifier): committed packed records（part1of2/part2of2・per-part shaピン）照合・K0882出版レコード・K0876監査との交差照合・Python twin live checks・21機械チェック・assemble二重実行byte同一・stdlibのみ
+## [research/experiments/remo-k-branch-cap15-boundary-20261116/mask_engine_fast.js](../../../research/experiments/remo-k-branch-cap15-boundary-20261116/mask_engine_fast.js)
+
+- [K0886](../items/K0886-remo-k-branch-cap15-boundary.md) (solver): 決定的JavaScript maskエンジン（K0876系譜・main出版K0883実験とsha同一・r=3・正準cap≤15列挙189,864プロファイル一括スイープ）
+## [research/experiments/remo-k-branch-cap15-boundary-20261116/output/js_cap15_r3.packed.jsonl.part1of3](../../../research/experiments/remo-k-branch-cap15-boundary-20261116/output/js_cap15_r3.packed.jsonl.part1of3)
+
+- [K0886](../items/K0886-remo-k-branch-cap15-boundary.md) (data): r=3決定的sweepレコード第1部63,288件（sha256 ddda26c93cfc7bc6830f0f6f8a338f854e0cd7b25b6bc598489a8662381b1b34）
+## [research/experiments/remo-k-branch-cap15-boundary-20261116/output/js_cap15_r3.packed.jsonl.part2of3](../../../research/experiments/remo-k-branch-cap15-boundary-20261116/output/js_cap15_r3.packed.jsonl.part2of3)
+
+- [K0886](../items/K0886-remo-k-branch-cap15-boundary.md) (data): r=3決定的sweepレコード第2部63,288件（sha256 2c30fe0bcf39330b1112deea71b913c5bcf79e2eaa16c0525ca67b3bea44a2d7）
+## [research/experiments/remo-k-branch-cap15-boundary-20261116/output/js_cap15_r3.packed.jsonl.part3of3](../../../research/experiments/remo-k-branch-cap15-boundary-20261116/output/js_cap15_r3.packed.jsonl.part3of3)
+
+- [K0886](../items/K0886-remo-k-branch-cap15-boundary.md) (data): r=3決定的sweepレコード第3部63,288件（sha256 efa6b55d113378bf7c5ae454882612749b160565ee184a9bfe12c3cabfce1e1f）。3部join byte正確でpacked blob（189,864件・sha256 7c44da46cc65fbc9a88b93c2e26b2a18531738a7da5e5fcce084d5966c002db4）と一致
+## [research/experiments/remo-k-branch-cap15-boundary-20261116/output/remo_k_branch_cap15_boundary_audit.json](../../../research/experiments/remo-k-branch-cap15-boundary-20261116/output/remo_k_branch_cap15_boundary_audit.json)
+
+- [K0886](../items/K0886-remo-k-branch-cap15-boundary.md) (data): 24機械チェック・cap15センサス・110キー構造・ndet生存者集合・剰余レンズ・K0883/K0876交差照合の全記録
+## [research/experiments/remo-k-branch-cap15-boundary-20261116/pack_records.py](../../../research/experiments/remo-k-branch-cap15-boundary-20261116/pack_records.py)
+
+- [K0886](../items/K0886-remo-k-branch-cap15-boundary.md) (solver): full→packed出版形式の決定的パッキングscript（行境界3分割付き）
+## [research/experiments/remo-k-branch-cap15-boundary-20261116/report.md](../../../research/experiments/remo-k-branch-cap15-boundary-20261116/report.md)
+
+- [K0886](../items/K0886-remo-k-branch-cap15-boundary.md) (data): 定理H15主張・Burnside対照表・K0883交差照合・置換対応とγ窓拡張の有限観察・限界
+## [research/experiments/remo-k-branch-cap15-boundary-20261116/verify_remo_k_branch_cap15_boundary.py](../../../research/experiments/remo-k-branch-cap15-boundary-20261116/verify_remo_k_branch_cap15_boundary.py)
+
+- [K0886](../items/K0886-remo-k-branch-cap15-boundary.md) (verifier): committed packed records（part1of3/part2of3/part3of3・per-part shaピン）照合・K0883出版レコード・K0876/K0883監査との交差照合・Python twin live checks・24機械チェック・assemble二重実行byte同一・stdlibのみ
 ## [research/experiments/remo-k-branch-collapse-boundary-20261116/output/remo_k_branch_boundary_audit.json](../../../research/experiments/remo-k-branch-collapse-boundary-20261116/output/remo_k_branch_boundary_audit.json)
 
 - [K0862](../items/K0862-remo-k-branch-collapse-boundary.md) (data): cap≤7全域r=2..6統計・cap≤10 r=3完全(sizes,γ)決定性マップ693キー+22非坍縮キー全witness・Δ=0確認・F′全チェーン照合。sha256 7dfabd501f389f92f20ed85500708f4edfde63e969358008db05bcf967c6d7bb
@@ -15540,27 +15660,167 @@
 ## [research/experiments/vertical-fiber-two-token-z4-slice-20261116/verify_z4_conjecture.py](../../../research/experiments/vertical-fiber-two-token-z4-slice-20261116/verify_z4_conjecture.py)
 
 - [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (verifier): cap付き多重集合再帰・capなしラベル再帰・閉形式のみからの帰納ステップ照合・tail・アンカーの独立監査器
+## [research/experiments/vertical-fiber-two-token-z5-full-grundy-20261117/output/audit.json](../../../research/experiments/vertical-fiber-two-token-z5-full-grundy-20261117/output/audit.json)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (data): 857,466署名・2,021,000境界式・44,793 tail点、不一致0
+- [K0873](../items/K0873-two-token-z5-grundy-one-locus.md) (data): 857,466選択肢署名・2,021,000境界式・44,793 tail検査、不一致0
+## [research/experiments/vertical-fiber-two-token-z5-full-grundy-20261117/report.md](../../../research/experiments/vertical-fiber-two-token-z5-full-grundy-20261117/report.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (proof): z=5・2トークン族の全Grundy値0/1/2を全x,y,Rで決定するR強帰納証明
+- [K0873](../items/K0873-two-token-z5-grundy-one-locus.md) (proof): 固定z=5・全x,y,RのGrundy値0/1/2をR強帰納とA/A/C選択肢署名表で分類する全称証明
+## [research/experiments/vertical-fiber-two-token-z5-full-grundy-20261117/verify_z5_full.py](../../../research/experiments/vertical-fiber-two-token-z5-full-grundy-20261117/verify_z5_full.py)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (verifier): z=5 A/A/C選択肢署名表・mex・境界・tailを独立監査
+- [K0873](../items/K0873-two-token-z5-grundy-one-locus.md) (verifier): z=4公式・z=5帰納候補・y=1境界から全A/A/C選択肢署名を再構成する独立監査器
 ## [research/experiments/vertical-fiber-two-token-z5-value1-locus-20261116/output/audit.json](../../../research/experiments/vertical-fiber-two-token-z5-value1-locus-20261116/output/audit.json)
 
 - [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (data): x≤100の555,500状態・固定seed散点200件・不一致0の監査集計
-- [K0873](../items/K0873-two-token-z5-grundy-one-locus.md) (data): 555,500全格子状態・200散点・二方式一致0の監査集計
 ## [research/experiments/vertical-fiber-two-token-z5-value1-locus-20261116/report.md](../../../research/experiments/vertical-fiber-two-token-z5-value1-locus-20261116/report.md)
 
 - [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (data): z=5の2トークン族におけるGrundy値1位置の差d別区間予想・有限監査・未証明境界
-- [K0873](../items/K0873-two-token-z5-grundy-one-locus.md) (data): z=5・2トークン族の値1位置の差d別区間候補と有限監査・証明境界
+- [K0873](../items/K0873-two-token-z5-grundy-one-locus.md) (source): 定理化前の値1位置有限抽出記録
 ## [research/experiments/vertical-fiber-two-token-z5-value1-locus-20261116/verify_z5_value1.py](../../../research/experiments/vertical-fiber-two-token-z5-value1-locus-20261116/verify_z5_value1.py)
 
 - [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (verifier): 正準切り詰め再帰と順序付き再帰による値1・既存値2候補の独立有限監査
-- [K0873](../items/K0873-two-token-z5-grundy-one-locus.md) (verifier): 正準切り詰め再帰と順序付き再帰による値1・既存値2候補の独立有限監査
 ## [research/experiments/vertical-fiber-two-token-z5-value2-locus-20261116/output/audit.json](../../../research/experiments/vertical-fiber-two-token-z5-value2-locus-20261116/output/audit.json)
 
 - [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (data): z=5値2位置候補の有限監査集計（二回実行byte-identical）
 ## [research/experiments/vertical-fiber-two-token-z5-value2-locus-20261116/report.md](../../../research/experiments/vertical-fiber-two-token-z5-value2-locus-20261116/report.md)
 
-- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (source): z=5の2トークン族でGrundy値2を取る残容量集合の有限抽出と閉形式候補（全称性未証明）
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (source): z=5全分類の定理化前に作成した値2位置の有限抽出記録（現在の定理正本はK0873）
+- [K0873](../items/K0873-two-token-z5-grundy-one-locus.md) (source): 定理化前の値2位置有限抽出記録
 ## [research/experiments/vertical-fiber-two-token-z5-value2-locus-20261116/verify_z5_value2.py](../../../research/experiments/vertical-fiber-two-token-z5-value2-locus-20261116/verify_z5_value2.py)
 
 - [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (verifier): 正準cap再帰と順序付き非cap再帰による555,500状態・200散点の独立監査
+## [research/experiments/vertical-fiber-two-token-z5-y1-boundary-20261116/report.md](../../../research/experiments/vertical-fiber-two-token-z5-y1-boundary-20261116/report.md)
+
+- [K0873](../items/K0873-two-token-z5-grundy-one-locus.md) (proof): y=1境界切片の全x,R全称証明
+## [research/experiments/vertical-fiber-two-token-z5-y1-boundary-20261116/verify_z5_y1.py](../../../research/experiments/vertical-fiber-two-token-z5-y1-boundary-20261116/verify_z5_y1.py)
+
+- [K0873](../items/K0873-two-token-z5-grundy-one-locus.md) (verifier): y=1境界証明の独立有限監査器
+## [research/experiments/vertical-fiber-two-token-z6-y1-boundary-20261117/output/audit.json](../../../research/experiments/vertical-fiber-two-token-z6-y1-boundary-20261117/output/audit.json)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (data): 2,096,420照合・不一致0・二回実行byte-identical
+- [K0877](../items/K0877-two-token-z6-y1-boundary.md) (data): 2,096,420照合・不一致0・二回実行byte-identical
+## [research/experiments/vertical-fiber-two-token-z6-y1-boundary-20261117/report.md](../../../research/experiments/vertical-fiber-two-token-z6-y1-boundary-20261117/report.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (proof): z=6・y=1境界切片の全x,R Grundy分類をA/B/C選択肢署名表とR強帰納で証明
+- [K0877](../items/K0877-two-token-z6-y1-boundary.md) (proof): 固定z=6・y=1・全x,RのGrundy値0/1/2をR強帰納とA/B/C選択肢署名表で分類する全称証明
+## [research/experiments/vertical-fiber-two-token-z6-y1-boundary-20261117/verify_z6_y1.py](../../../research/experiments/vertical-fiber-two-token-z6-y1-boundary-20261117/verify_z6_y1.py)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (verifier): z=7単一トークン・z=5二トークン境界公式から選択肢を再構成する独立監査器
+- [K0877](../items/K0877-two-token-z6-y1-boundary.md) (verifier): 単一トークンz=7・二トークンz=5境界公式からA/B/C選択肢を再構成し、候補式と署名表を照合する独立監査器
+## [research/experiments/vertical-fiber-two-token-z6-y10-boundary-20261117/output/audit.json](../../../research/experiments/vertical-fiber-two-token-z6-y10-boundary-20261117/output/audit.json)
+
+- [K0892](../items/K0892-two-token-z6-y10-boundary.md) (data): 6,242,702検査・不一致0。有限監査であり全称証明とは区別する
+## [research/experiments/vertical-fiber-two-token-z6-y10-boundary-20261117/report.md](../../../research/experiments/vertical-fiber-two-token-z6-y10-boundary-20261117/report.md)
+
+- [K0892](../items/K0892-two-token-z6-y10-boundary.md) (proof): z=6,y=10切片の全x,R分類をA/B/C選択肢署名表とR強帰納で証明
+## [research/experiments/vertical-fiber-two-token-z6-y10-boundary-20261117/verify_z6_y10.py](../../../research/experiments/vertical-fiber-two-token-z6-y10-boundary-20261117/verify_z6_y10.py)
+
+- [K0892](../items/K0892-two-token-z6-y10-boundary.md) (verifier): 二方式直接再帰、z=5/z=6,y=9アンカー、全署名・mex・tailを独立監査
+## [research/experiments/vertical-fiber-two-token-z6-y11-boundary-20261117/output/audit.json](../../../research/experiments/vertical-fiber-two-token-z6-y11-boundary-20261117/output/audit.json)
+
+- [K0894](../items/K0894-two-token-z6-y11-boundary.md) (data): 6,245,765検査・不一致0・二回実行byte-identical。有限監査であり全称証明とは区別する
+## [research/experiments/vertical-fiber-two-token-z6-y11-boundary-20261117/report.md](../../../research/experiments/vertical-fiber-two-token-z6-y11-boundary-20261117/report.md)
+
+- [K0894](../items/K0894-two-token-z6-y11-boundary.md) (proof): z=6,y=11切片の全x,R分類をA/B/C選択肢署名表とR強帰納で証明
+## [research/experiments/vertical-fiber-two-token-z6-y11-boundary-20261117/verify_z6_y11.py](../../../research/experiments/vertical-fiber-two-token-z6-y11-boundary-20261117/verify_z6_y11.py)
+
+- [K0894](../items/K0894-two-token-z6-y11-boundary.md) (verifier): 二方式直接再帰、z=5/z=6,y=10アンカー、全署名・mex・tailを独立監査
+## [research/experiments/vertical-fiber-two-token-z6-y2-boundary-20261117/output/audit.json](../../../research/experiments/vertical-fiber-two-token-z6-y2-boundary-20261117/output/audit.json)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (data): 4,165,275検査・不一致0・二回実行byte-identical
+- [K0878](../items/K0878-two-token-z6-y2-boundary.md) (data): 4,165,275検査・不一致0・二回実行byte-identical
+## [research/experiments/vertical-fiber-two-token-z6-y2-boundary-20261117/report.md](../../../research/experiments/vertical-fiber-two-token-z6-y2-boundary-20261117/report.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (proof): z=6・y=2境界切片の全x,R Grundy分類をA/B/C選択肢署名表とR強帰納で証明
+- [K0878](../items/K0878-two-token-z6-y2-boundary.md) (proof): 固定z=6・y=2・全x≥2,R≥0のGrundy値0/1/2をA/B/C選択肢署名表とR強帰納で分類する全称証明
+## [research/experiments/vertical-fiber-two-token-z6-y2-boundary-20261117/verify_z6_y2.py](../../../research/experiments/vertical-fiber-two-token-z6-y2-boundary-20261117/verify_z6_y2.py)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (verifier): z=5全式・z=6,y=1全式から選択肢を再構成し直接再帰とmexを照合する独立監査器
+- [K0878](../items/K0878-two-token-z6-y2-boundary.md) (verifier): z=5全式とz=6,y=1全式からA/B/C子を再構成し、直接再帰・mex・署名表を独立監査する標準ライブラリ検証器
+## [research/experiments/vertical-fiber-two-token-z6-y3-boundary-20261117/output/audit.json](../../../research/experiments/vertical-fiber-two-token-z6-y3-boundary-20261117/output/audit.json)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (data): 4,120,238検査・不一致0・二回実行byte-identical
+- [K0879](../items/K0879-two-token-z6-y3-boundary.md) (data): 4,120,238検査・不一致0・二回実行byte-identical
+## [research/experiments/vertical-fiber-two-token-z6-y3-boundary-20261117/report.md](../../../research/experiments/vertical-fiber-two-token-z6-y3-boundary-20261117/report.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (proof): z=6・y=3境界切片の全x,R Grundy分類をA/B/C選択肢署名表とR強帰納で証明
+- [K0879](../items/K0879-two-token-z6-y3-boundary.md) (proof): 固定z=6,y=3・全x,RのGrundy値0/1/2をA/B/C選択肢署名表とR強帰納で分類する全称証明
+## [research/experiments/vertical-fiber-two-token-z6-y3-boundary-20261117/verify_z6_y3.py](../../../research/experiments/vertical-fiber-two-token-z6-y3-boundary-20261117/verify_z6_y3.py)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (verifier): 生のトークン再帰とz=5・z=6,y=2アンカーからのA/B/C再構成を分離した独立有限監査器
+- [K0879](../items/K0879-two-token-z6-y3-boundary.md) (verifier): 生のトークン再帰とz=5・z=6,y=2アンカーからのA/B/C再構成を分離した独立有限監査器
+## [research/experiments/vertical-fiber-two-token-z6-y4-boundary-20261117/output/audit.json](../../../research/experiments/vertical-fiber-two-token-z6-y4-boundary-20261117/output/audit.json)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (data): 4,088,723検査・不一致0・二回実行byte-identical
+- [K0880](../items/K0880-two-token-z6-y4-boundary.md) (data): 4,088,723検査・不一致0・二回実行byte-identical
+## [research/experiments/vertical-fiber-two-token-z6-y4-boundary-20261117/report.md](../../../research/experiments/vertical-fiber-two-token-z6-y4-boundary-20261117/report.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (proof): z=6・y=4境界切片の全x,R Grundy分類をA/B/C選択肢署名表とR強帰納で証明
+- [K0880](../items/K0880-two-token-z6-y4-boundary.md) (proof): 固定z=6,y=4・全x≥4,R≥0の値0/1/2をA/B/C署名表とR強帰納で分類する全称証明
+## [research/experiments/vertical-fiber-two-token-z6-y4-boundary-20261117/verify_z6_y4.py](../../../research/experiments/vertical-fiber-two-token-z6-y4-boundary-20261117/verify_z6_y4.py)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (verifier): z=5全式・z=6,y=3全式からA/B/Cを再構成し、順序付き/正準化再帰とmexを独立監査
+- [K0880](../items/K0880-two-token-z6-y4-boundary.md) (verifier): 順序付き/正準化の二再帰、z=5・z=6,y=3アンカー、A/B/C署名とmexを照合する独立有限監査器
+## [research/experiments/vertical-fiber-two-token-z6-y5-boundary-20261117/output/audit.json](../../../research/experiments/vertical-fiber-two-token-z6-y5-boundary-20261117/output/audit.json)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (data): 6,205,577検査・不一致0・二回実行byte-identical
+- [K0884](../items/K0884-two-token-z6-y5-boundary.md) (data): 6,205,577検査・不一致0・二回実行byte-identical
+## [research/experiments/vertical-fiber-two-token-z6-y5-boundary-20261117/report.md](../../../research/experiments/vertical-fiber-two-token-z6-y5-boundary-20261117/report.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (proof): z=6・y=5切片の全x,R Grundy分類をA/B/C選択肢署名表とR強帰納で証明
+- [K0884](../items/K0884-two-token-z6-y5-boundary.md) (proof): 固定z=6,y=5・全x,RのGrundy値0/1/2をA/B/C選択肢署名表とR強帰納で分類する全称証明
+## [research/experiments/vertical-fiber-two-token-z6-y5-boundary-20261117/verify_z6_y5.py](../../../research/experiments/vertical-fiber-two-token-z6-y5-boundary-20261117/verify_z6_y5.py)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (verifier): z=5・z=6,y=4アンカーと二方式再帰から署名表・mex・tailを独立監査
+- [K0884](../items/K0884-two-token-z6-y5-boundary.md) (verifier): z=5・z=6,y=4アンカーと二方式再帰から署名表・mex・tailを独立監査する検証器
+## [research/experiments/vertical-fiber-two-token-z6-y6-boundary-20261117/output/audit.json](../../../research/experiments/vertical-fiber-two-token-z6-y6-boundary-20261117/output/audit.json)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (data): 6,216,410検査・不一致0・二回実行byte-identical
+- [K0885](../items/K0885-two-token-z6-y6-boundary.md) (data): 6,216,410検査・不一致0・二回実行byte-identical
+## [research/experiments/vertical-fiber-two-token-z6-y6-boundary-20261117/report.md](../../../research/experiments/vertical-fiber-two-token-z6-y6-boundary-20261117/report.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (proof): z=6,y=6切片の全x,R Grundy分類をA/B/C選択肢署名表とR強帰納で証明
+- [K0885](../items/K0885-two-token-z6-y6-boundary.md) (proof): 固定z=6,y=6・全x,RのGrundy値0/1/2をA/B/C選択肢署名表とR強帰納で分類する全称証明
+## [research/experiments/vertical-fiber-two-token-z6-y6-boundary-20261117/verify_z6_y6.py](../../../research/experiments/vertical-fiber-two-token-z6-y6-boundary-20261117/verify_z6_y6.py)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (verifier): K0873/K0884の既証明公式を読み込み、二方式再帰・署名・mex・tailを独立監査
+- [K0885](../items/K0885-two-token-z6-y6-boundary.md) (verifier): K0873/K0884の既証明公式を読み込み、二方式再帰・署名・mex・tailを独立監査
+## [research/experiments/vertical-fiber-two-token-z6-y7-boundary-20261117/output/audit.json](../../../research/experiments/vertical-fiber-two-token-z6-y7-boundary-20261117/output/audit.json)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (data): 6,219,806検査・不一致0・二回実行byte-identical
+- [K0887](../items/K0887-two-token-z6-y7-boundary.md) (data): 6,219,806検査・不一致0・二回実行byte-identical
+## [research/experiments/vertical-fiber-two-token-z6-y7-boundary-20261117/report.md](../../../research/experiments/vertical-fiber-two-token-z6-y7-boundary-20261117/report.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (proof): z=6・y=7切片の全x,R Grundy分類をA/B/C選択肢署名表とR強帰納で証明
+- [K0887](../items/K0887-two-token-z6-y7-boundary.md) (proof): z=6,y=7切片の全x,R分類をA/B/C選択肢署名表とR強帰納で証明
+## [research/experiments/vertical-fiber-two-token-z6-y7-boundary-20261117/verify_z6_y7.py](../../../research/experiments/vertical-fiber-two-token-z6-y7-boundary-20261117/verify_z6_y7.py)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (verifier): z=5・z=6,y=6アンカーと二方式再帰から署名・mex・tailを独立監査
+- [K0887](../items/K0887-two-token-z6-y7-boundary.md) (verifier): 生の順序付き再帰・正準化再帰、z=5/z=6,y=6アンカー、全署名・mex・tailを独立監査
+## [research/experiments/vertical-fiber-two-token-z6-y8-boundary-20261117/output/audit.json](../../../research/experiments/vertical-fiber-two-token-z6-y8-boundary-20261117/output/audit.json)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (data): 6,229,190検査・不一致0・二回実行byte-identical
+- [K0888](../items/K0888-two-token-z6-y8-boundary.md) (data): 6,229,190検査・不一致0・二回実行byte-identical
+## [research/experiments/vertical-fiber-two-token-z6-y8-boundary-20261117/report.md](../../../research/experiments/vertical-fiber-two-token-z6-y8-boundary-20261117/report.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (proof): z=6,y=8切片の全x,R Grundy分類をA/B/C選択肢署名表とR強帰納で証明
+- [K0888](../items/K0888-two-token-z6-y8-boundary.md) (proof): z=6,y=8切片の全x,R分類をA/B/C選択肢署名表とR強帰納で証明
+## [research/experiments/vertical-fiber-two-token-z6-y8-boundary-20261117/verify_z6_y8.py](../../../research/experiments/vertical-fiber-two-token-z6-y8-boundary-20261117/verify_z6_y8.py)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (verifier): K0887の二方式再帰とz=5/z=6,y=7アンカーを使い、新切片の式・署名・mex・tailを独立監査
+- [K0888](../items/K0888-two-token-z6-y8-boundary.md) (verifier): K0887の二方式再帰とz=5/z=6,y=7アンカーを使い、新切片の式・署名・mex・tailを独立監査
+## [research/experiments/vertical-fiber-two-token-z6-y9-boundary-20261117/output/audit.json](../../../research/experiments/vertical-fiber-two-token-z6-y9-boundary-20261117/output/audit.json)
+
+- [K0890](../items/K0890-two-token-z6-y9-boundary.md) (data): 6,232,997検査・不一致0。有限監査であり全称証明とは区別する
+## [research/experiments/vertical-fiber-two-token-z6-y9-boundary-20261117/report.md](../../../research/experiments/vertical-fiber-two-token-z6-y9-boundary-20261117/report.md)
+
+- [K0890](../items/K0890-two-token-z6-y9-boundary.md) (proof): z=6,y=9切片の全x,R分類をA/B/C選択肢署名表とR強帰納で証明
+## [research/experiments/vertical-fiber-two-token-z6-y9-boundary-20261117/verify_z6_y9.py](../../../research/experiments/vertical-fiber-two-token-z6-y9-boundary-20261117/verify_z6_y9.py)
+
+- [K0890](../items/K0890-two-token-z6-y9-boundary.md) (verifier): 二方式の直接再帰、z=5/z=6,y=8アンカー、全署名・mex・tailを独立監査
 ## [research/experiments/width17-20-circle-point-bound-20261112/output/width17_20_circle_bound.json](../../../research/experiments/width17-20-circle-point-bound-20261112/output/width17_20_circle_bound.json)
 
 - [K0778](../items/K0778-width17-20-circle-point-bounds.md) (data): 全数値の機械出力
@@ -16458,6 +16718,12 @@
 ## [research/log/2026-11-16-n11-class2-lane-cost64a-sterile-and-cost65m-sweep-certificates-fold.md](../../../research/log/2026-11-16-n11-class2-lane-cost64a-sterile-and-cost65m-sweep-certificates-fold.md)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): cost64a sterile確定とcost65mのsweep・8証明書抽出・二独立検証・第二候補S5 10→9行fold
+## [research/log/2026-11-16-n11-class2-lane-cost64h-k0863-out-of-sample-audit.md](../../../research/log/2026-11-16-n11-class2-lane-cost64h-k0863-out-of-sample-audit.md)
+
+- [K0863](../items/K0863-sterile-row-depth10-unclosability.md) (log): 監査方法・結果・限界・次の証明書抽出作業
+## [research/log/2026-11-16-n11-class2-lane-cost64h-third-certificate-verification.md](../../../research/log/2026-11-16-n11-class2-lane-cost64h-third-certificate-verification.md)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (source): 第三独立検証の方法・全証明書統計・未foldとUNKNOWNの境界
 ## [research/log/2026-11-16-n11-class2-lane-cost65f-win2-structural-audit.md](../../../research/log/2026-11-16-n11-class2-lane-cost65f-win2-structural-audit.md)
 
 - [K0868](../items/K0868-n11-s6-s7-sweep-candidate-convention.md) (log): 規約確定とbits 20/21構造監査のログ
@@ -16527,10 +16793,54 @@
 ## [research/log/2026-11-16-vertical-fiber-two-token-z5-value1-locus.md](../../../research/log/2026-11-16-vertical-fiber-two-token-z5-value1-locus.md)
 
 - [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (log): z=5の値1位置候補の抽出・有限監査・証明課題
-- [K0873](../items/K0873-two-token-z5-grundy-one-locus.md) (log): 既存z=5値2予想との重複を避けた値1位置の抽出・有限監査・次の証明課題
 ## [research/log/2026-11-16-vertical-fiber-two-token-z5-value2-locus.md](../../../research/log/2026-11-16-vertical-fiber-two-token-z5-value2-locus.md)
 
 - [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (log): z=4既存予想との重複を避けたz=5抽出の選定・監査・限界
+## [research/log/2026-11-17-vertical-fiber-two-token-z5-full-grundy.md](../../../research/log/2026-11-17-vertical-fiber-two-token-z5-full-grundy.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (log): z=5全分類の選定・全称証明・独立監査・未解決範囲
+- [K0873](../items/K0873-two-token-z5-grundy-one-locus.md) (log): 最新main・未解決一覧との照合、z=5全分類のR強帰納証明と監査記録
+## [research/log/2026-11-17-vertical-fiber-two-token-z6-y1-boundary.md](../../../research/log/2026-11-17-vertical-fiber-two-token-z6-y1-boundary.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (log): z=6境界切片の選定・全称証明・独立監査・限界
+- [K0877](../items/K0877-two-token-z6-y1-boundary.md) (log): 最新main・未解決範囲との照合、z=6境界切片の選定・証明・監査・限界
+## [research/log/2026-11-17-vertical-fiber-two-token-z6-y10-boundary.md](../../../research/log/2026-11-17-vertical-fiber-two-token-z6-y10-boundary.md)
+
+- [K0892](../items/K0892-two-token-z6-y10-boundary.md) (log): 最新main・未解決範囲との照合、z=6,y=10切片の証明・監査・限界
+## [research/log/2026-11-17-vertical-fiber-two-token-z6-y11-boundary.md](../../../research/log/2026-11-17-vertical-fiber-two-token-z6-y11-boundary.md)
+
+- [K0894](../items/K0894-two-token-z6-y11-boundary.md) (log): 最新main・未解決範囲との照合、z=6,y=11切片の証明・監査・限界
+## [research/log/2026-11-17-vertical-fiber-two-token-z6-y2-boundary.md](../../../research/log/2026-11-17-vertical-fiber-two-token-z6-y2-boundary.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (log): z=6,y=2切片の選定・証明・監査・限界
+- [K0878](../items/K0878-two-token-z6-y2-boundary.md) (log): 最新main・未解決範囲との照合、z=6,y=2切片の証明・監査・限界
+## [research/log/2026-11-17-vertical-fiber-two-token-z6-y3-boundary.md](../../../research/log/2026-11-17-vertical-fiber-two-token-z6-y3-boundary.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (log): z=6,y=3切片の選定・証明・監査・限界
+- [K0879](../items/K0879-two-token-z6-y3-boundary.md) (log): 最新main・未解決範囲との照合、z=6,y=3切片の証明・監査・限界
+## [research/log/2026-11-17-vertical-fiber-two-token-z6-y4-boundary.md](../../../research/log/2026-11-17-vertical-fiber-two-token-z6-y4-boundary.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (log): z=6,y=4切片の選定・全称証明・独立監査・限界
+- [K0880](../items/K0880-two-token-z6-y4-boundary.md) (log): 最新main・未解決事項との照合、z=6,y=4切片の発見・証明・監査・限界
+## [research/log/2026-11-17-vertical-fiber-two-token-z6-y5-boundary.md](../../../research/log/2026-11-17-vertical-fiber-two-token-z6-y5-boundary.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (log): z=6,y=5切片の選定・全称証明・独立監査・限界
+- [K0884](../items/K0884-two-token-z6-y5-boundary.md) (log): 最新main・未解決事項との照合、z=6,y=5切片の証明・監査・限界
+## [research/log/2026-11-17-vertical-fiber-two-token-z6-y6-boundary.md](../../../research/log/2026-11-17-vertical-fiber-two-token-z6-y6-boundary.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (log): 最新main・未解決事項との照合、z=6,y=6切片の全称証明・独立監査・限界
+- [K0885](../items/K0885-two-token-z6-y6-boundary.md) (log): 最新main・未解決事項との照合、z=6,y=6切片の全称証明・独立監査・限界
+## [research/log/2026-11-17-vertical-fiber-two-token-z6-y7-boundary.md](../../../research/log/2026-11-17-vertical-fiber-two-token-z6-y7-boundary.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (log): z=6,y=7切片の選定・全称証明・独立監査・限界
+- [K0887](../items/K0887-two-token-z6-y7-boundary.md) (log): 最新main・既存未解決範囲との照合、z=6,y=7切片の証明・独立監査・限界
+## [research/log/2026-11-17-vertical-fiber-two-token-z6-y8-boundary.md](../../../research/log/2026-11-17-vertical-fiber-two-token-z6-y8-boundary.md)
+
+- [K0832](../items/K0832-vertical-fiber-degree-reduction.md) (log): z=6,y=8切片の選定・全称証明・独立監査・限界
+- [K0888](../items/K0888-two-token-z6-y8-boundary.md) (log): 最新main・未解決範囲との照合、z=6,y=8切片の証明・独立監査・限界
+## [research/log/2026-11-17-vertical-fiber-two-token-z6-y9-boundary.md](../../../research/log/2026-11-17-vertical-fiber-two-token-z6-y9-boundary.md)
+
+- [K0890](../items/K0890-two-token-z6-y9-boundary.md) (log): 最新main・未解決範囲との照合、z=6,y=9切片の証明・監査・限界
 ## [research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md](../../../research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md)
 
 - [K0092](../items/K0092-n11-dfpn-search-status.md) (source): 命題・対象範囲・根拠を記した出典
