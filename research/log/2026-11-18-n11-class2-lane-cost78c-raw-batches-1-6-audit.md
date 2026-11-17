@@ -31,3 +31,10 @@ v15 cross-engine照合、9候補の証明書抽出・独立検証、receipt fold
 監査値の実計算は独立JavaScript整数実装で行い、Python標準ライブラリ版は固定入力pin付きの再現器として公開した。このrunではPython版そのものは起動していない。
 
 標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class 1/2/4は引き続き UNKNOWN。
+
+
+## claim履歴の保全と同期
+
+raw batch監査後、claim v1の `batches_run 0` が誤ったまま残らないよう、pin済みraw batch 1–6の集計だけを反映したclaim v2をmainへ直接反映した（commit `275a37b8e3cb76d28224659e68e6e73f41fed76b`）。v1とv2の元blobをそれぞれ `*-v1-archive.json` / `*-v2-archive.json` として保存し、Git blob SHAが元の `7c38b88e...` / `8b7f055b...` と完全一致することを確認。再現スクリプトと監査JSONはこの2つの固定archiveを読むため、今後のclaim更新で過去の監査入力が変わらない。
+
+claim v2は `batches_run=6`、54/66 open bits、9 WIN7-D10・45 REFUTED-D10・0 capped、候補節点164,783,764を記録。残り12 open bits、12 confirmation controls、v15照合、証明書抽出・独立検証、receipt foldは未完了。
