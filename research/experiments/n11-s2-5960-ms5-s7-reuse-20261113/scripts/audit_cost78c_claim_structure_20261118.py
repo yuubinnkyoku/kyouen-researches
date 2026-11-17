@@ -123,7 +123,7 @@ def main() -> None:
 
     listed = sorted(claim["legal_candidates"])
     check("det4_legal_set_matches_claim", legal == listed,
-          derived_count=len(legal), claim_count=len(listed))
+          derived=len(legal), claimed=len(listed))
     check("all_empty_cells_partitioned", len(legal) + len(forbidden) == 115,
           empty=115, legal=len(legal), forbidden=len(forbidden))
 
@@ -133,16 +133,13 @@ def main() -> None:
     check("open_confirmation_disjoint", len(union) == len(set(union)),
           open=len(open_bits), confirmation=len(confirmation_bits))
     check("open_plus_confirmation_equals_legal", union == legal,
-          union_count=len(union), legal_count=len(legal))
+          union=len(union), legal=len(legal))
     check("candidate_counts",
           claim["candidate_count"] == claim["s6_s7_edge_cost"] == len(legal) == 78
-          and len(open_bits) == 66 and len(confirmation_bits) == 12,
-          candidate_count=claim["candidate_count"], edge_cost=claim["s6_s7_edge_cost"])
+          and len(open_bits) == 66 and len(confirmation_bits) == 12)
 
     transfers = claim["transfers"]
     transfer_bits = sorted(map(int, transfers))
-    check("transfer_bits_match_confirmation", transfer_bits == confirmation_bits,
-          transfer_bits=transfer_bits)
     target_transfer_checks = []
     for bit in confirmation_bits:
         item = transfers[str(bit)]
@@ -186,12 +183,14 @@ def main() -> None:
             relation = "D4-canon-equal"
         source_checks.append({
             "target_bit": target_bit, "source": name, "source_bit": source_bit,
-            "verdict_ok": verdict_ok, "canon_or_identity_ok": root_relation_ok,
-            "identity": relation,
+            "verdict_ok": verdict_ok, "root_relation_ok": root_relation_ok,
+            "relation": relation,
         })
     check("all_12_transfer_sources_verified",
-          len(source_checks) == 12 and all(x["verdict_ok"] and x["canon_or_identity_ok"] for x in source_checks),
-          count=len(source_checks), checks=source_checks)
+          len(source_checks) == 12 and all(x["verdict_ok"] and x["root_relation_ok"] for x in source_checks),
+          count=len(source_checks))
+    check("transfer_bits_match_confirmation", transfer_bits == confirmation_bits,
+          transfer_bits=transfer_bits)
 
     selected = census["selected_target"]
     census_ok = (
