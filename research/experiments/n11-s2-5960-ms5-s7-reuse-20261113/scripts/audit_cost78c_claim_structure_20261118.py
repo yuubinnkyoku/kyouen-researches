@@ -105,9 +105,6 @@ def main() -> None:
     stones = claim["child_stones_bit_indices"]
     stone_mask = sum(1 << b for b in stones)
     check("child_hex_matches_stones", child == stone_mask, hex=claim["s6_child"], stones=stones)
-    check("k0868_definition_pin_and_terms",
-          all(term in k0868_text for term in ("det4", "own_candidates", "共線")))
-
     triples = [
         (stones[i], stones[j], stones[k])
         for i in range(len(stones))
@@ -139,7 +136,8 @@ def main() -> None:
           union_count=len(union), legal_count=len(legal))
     check("candidate_counts",
           claim["candidate_count"] == claim["s6_s7_edge_cost"] == len(legal) == 78
-          and len(open_bits) == 66 and len(confirmation_bits) == 12)
+          and len(open_bits) == 66 and len(confirmation_bits) == 12,
+          candidate_count=claim["candidate_count"], edge_cost=claim["s6_s7_edge_cost"])
 
     transfers = claim["transfers"]
     transfer_bits = sorted(map(int, transfers))
@@ -188,12 +186,12 @@ def main() -> None:
             relation = "D4-canon-equal"
         source_checks.append({
             "target_bit": target_bit, "source": name, "source_bit": source_bit,
-            "verdict_ok": verdict_ok, "root_relation_ok": root_relation_ok,
-            "relation": relation,
+            "verdict_ok": verdict_ok, "canon_or_identity_ok": root_relation_ok,
+            "identity": relation,
         })
     check("all_12_transfer_sources_verified",
-          len(source_checks) == 12 and all(x["verdict_ok"] and x["root_relation_ok"] for x in source_checks),
-          count=len(source_checks))
+          len(source_checks) == 12 and all(x["verdict_ok"] and x["canon_or_identity_ok"] for x in source_checks),
+          count=len(source_checks), checks=source_checks)
 
     selected = census["selected_target"]
     census_ok = (
@@ -208,13 +206,15 @@ def main() -> None:
           selected=selected["s6_hex"])
     check("confirmation_prediction_all_refuted",
           all(v == "REFUTED-D10" for v in claim["engine_candidate_bits"]["confirmation_verdicts_predicted"].values()))
+    check("k0868_definition_pin_and_terms",
+          all(term in k0868_text for term in ("det4", "own_candidates", "共線")))
 
     input_pins = {
         "claim": {"path": f"{EXPERIMENT.relative_to(ROOT)}/output/{PINS['claim'][0]}", "git_blob_sha": PINS["claim"][1]},
         "census": {"path": f"{EXPERIMENT.relative_to(ROOT)}/output/{PINS['census'][0]}", "git_blob_sha": PINS["census"][1]},
         "cost64d": {"path": f"{EXPERIMENT.relative_to(ROOT)}/output/{PINS['cost64d'][0]}", "git_blob_sha": PINS["cost64d"][1]},
         "cost70b": {"path": f"{EXPERIMENT.relative_to(ROOT)}/output/{PINS['cost70b'][0]}", "git_blob_sha": PINS["cost70b"][1]},
-        "cost70b_batch5": {"path": f"{EXPERIMENT.relative_to(ROOT)}/output/{PINS['cost70b_batch5'][0]}", "git_blob_sha": PINS["cost70b_batch5"][1]},
+        "batch5": {"path": f"{EXPERIMENT.relative_to(ROOT)}/output/{PINS['cost70b_batch5'][0]}", "git_blob_sha": PINS["cost70b_batch5"][1]},
         "k0868": {"path": K0868[0], "git_blob_sha": K0868[1]},
     }
     result = {
