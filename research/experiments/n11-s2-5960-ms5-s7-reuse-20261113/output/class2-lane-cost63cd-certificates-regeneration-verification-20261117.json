@@ -1,0 +1,1480 @@
+{
+ "schema": "n11-class2-lane-cost63cd-certificates-regeneration-verification-20261117-v1",
+ "date": "2026-11-17",
+ "method": {
+  "gap_closed": "the two WIN7-D10 certificates documented by the 2026-11-14 cost-63c/63d sweep records were never pushed (push_note: deferred; bytes existed only as per-entry records); this run regenerates both from the repo-verbatim extractor and publishes the bytes",
+  "reconstruction": "the 2026-11-14 extraction used the extractor CLI whose default KILL_BIT7 session-6 preference table was active; a blind (empty kill table) extraction was tested first and does NOT reproduce the bytes (63c bit46 blind union 43,473 rows vs recorded 45,337); the KILL_BIT7-pref per-move reconstruction reproduces both certificates byte-identically (md5, rows) and node-exactly for 63c (per-move node sum 14,524,021 = recorded extraction_nodes)",
+  "partition_note": "63d recorded extraction_nodes 9,616,344 came from the original batch partition (memo table shared across moves inside one process); the per-move regeneration sums to 14,424,015 nodes; the row set and certificate bytes are partition-invariant (observed previously and re-confirmed here by md5)",
+  "verifiers": "both engine-free verifiers: repo Bareiss verify_bit7_win7_cert.ts (per-sub-root batches, --consumed-out, consumed union == row set 0/0 both directions, terminal range [13,17]) and the third-implementation BigInt verify_win7_certificate_bigint_independent.mjs; full cross-agreement of the per-sub-root stat sums",
+  "pins": "all five repo inputs (extractor, driver, both verifiers, sweep records) asserted by git blob sha before use; sweep-record expectations inlined and asserted against the pinned sweep record bytes"
+ },
+ "entries": [
+  {
+   "band": "63c",
+   "bit": 46,
+   "root_hex": "000000000000008090a2400000000000",
+   "sweep_record": "../output/class2-lane-cost63c-sweep-20261114.json",
+   "sweep_record_blob_sha": "5770b951ecf5529c748964ea59de3e063bf2fcbc",
+   "sweep_record_field_agreement_asserted": true,
+   "regeneration": {
+    "method": "repo-verbatim extractor CLI engine via cert_driver63cd.ts (class4_child1_cert_extractor_exact.ts, FBS=1<<20, probe96, CLI-default KILL_BIT7 pref table), one process per move, 4 workers, sort -u merge, header+root prepend",
+    "per_move_processes": 52,
+    "per_move_node_sum": 14524021,
+    "per_move_fbt_drops": 0,
+    "per_move_fatal": 0,
+    "per_move": {
+     "0": {
+      "nodes": 367560,
+      "rows": 1511
+     },
+     "1": {
+      "nodes": 64440,
+      "rows": 975
+     },
+     "3": {
+      "nodes": 93803,
+      "rows": 1035
+     },
+     "4": {
+      "nodes": 188473,
+      "rows": 1514
+     },
+     "6": {
+      "nodes": 876606,
+      "rows": 1223
+     },
+     "7": {
+      "nodes": 237145,
+      "rows": 1030
+     },
+     "10": {
+      "nodes": 371895,
+      "rows": 896
+     },
+     "12": {
+      "nodes": 224146,
+      "rows": 1334
+     },
+     "13": {
+      "nodes": 144231,
+      "rows": 903
+     },
+     "14": {
+      "nodes": 238447,
+      "rows": 1383
+     },
+     "18": {
+      "nodes": 333904,
+      "rows": 1433
+     },
+     "23": {
+      "nodes": 149781,
+      "rows": 903
+     },
+     "26": {
+      "nodes": 301485,
+      "rows": 1353
+     },
+     "28": {
+      "nodes": 552037,
+      "rows": 1105
+     },
+     "29": {
+      "nodes": 694914,
+      "rows": 1719
+     },
+     "30": {
+      "nodes": 133357,
+      "rows": 1110
+     },
+     "32": {
+      "nodes": 169833,
+      "rows": 1446
+     },
+     "33": {
+      "nodes": 566605,
+      "rows": 2264
+     },
+     "34": {
+      "nodes": 931379,
+      "rows": 1949
+     },
+     "42": {
+      "nodes": 148318,
+      "rows": 1606
+     },
+     "43": {
+      "nodes": 148318,
+      "rows": 1606
+     },
+     "67": {
+      "nodes": 417626,
+      "rows": 1719
+     },
+     "76": {
+      "nodes": 116111,
+      "rows": 1226
+     },
+     "77": {
+      "nodes": 436835,
+      "rows": 1181
+     },
+     "78": {
+      "nodes": 386810,
+      "rows": 1520
+     },
+     "81": {
+      "nodes": 169833,
+      "rows": 1446
+     },
+     "87": {
+      "nodes": 204204,
+      "rows": 1597
+     },
+     "88": {
+      "nodes": 56567,
+      "rows": 846
+     },
+     "89": {
+      "nodes": 106274,
+      "rows": 1136
+     },
+     "92": {
+      "nodes": 207262,
+      "rows": 1105
+     },
+     "95": {
+      "nodes": 588342,
+      "rows": 1600
+     },
+     "96": {
+      "nodes": 91555,
+      "rows": 992
+     },
+     "98": {
+      "nodes": 62957,
+      "rows": 974
+     },
+     "99": {
+      "nodes": 601712,
+      "rows": 1160
+     },
+     "100": {
+      "nodes": 273295,
+      "rows": 1039
+     },
+     "101": {
+      "nodes": 89077,
+      "rows": 1006
+     },
+     "102": {
+      "nodes": 220815,
+      "rows": 1254
+     },
+     "103": {
+      "nodes": 30613,
+      "rows": 443
+     },
+     "105": {
+      "nodes": 383749,
+      "rows": 1169
+     },
+     "106": {
+      "nodes": 302893,
+      "rows": 1998
+     },
+     "107": {
+      "nodes": 455978,
+      "rows": 2121
+     },
+     "108": {
+      "nodes": 181309,
+      "rows": 1673
+     },
+     "109": {
+      "nodes": 118698,
+      "rows": 1028
+     },
+     "111": {
+      "nodes": 85288,
+      "rows": 1049
+     },
+     "112": {
+      "nodes": 262260,
+      "rows": 1606
+     },
+     "113": {
+      "nodes": 187429,
+      "rows": 541
+     },
+     "114": {
+      "nodes": 161266,
+      "rows": 1192
+     },
+     "116": {
+      "nodes": 327948,
+      "rows": 1785
+     },
+     "117": {
+      "nodes": 161092,
+      "rows": 1096
+     },
+     "118": {
+      "nodes": 307824,
+      "rows": 2919
+     },
+     "119": {
+      "nodes": 369247,
+      "rows": 488
+     },
+     "120": {
+      "nodes": 222475,
+      "rows": 1406
+     }
+    }
+   },
+   "byte_identical_to_20261114_record": true,
+   "whole_bytes": 1639652,
+   "whole_md5": "01bcaabc9d20d20e6215826e22c01181",
+   "whole_sha256": "485fdea26c0b56685bd6443bc1c03b4fad34011be55063265f4338f02e27bba9",
+   "whole_git_blob_sha": "c2d8ca6ad8a77b3b898b78a834b9ed35882277a2",
+   "rows": 45337,
+   "sub_roots_pass": 52,
+   "loser_mobility": 52,
+   "terminal_stone_range": [
+    13,
+    17
+   ],
+   "bareiss_verifier": {
+    "rootcheck": {
+     "stones": 7,
+     "loserMobility": 52
+    },
+    "subroots_all_pass": true,
+    "consumed_union_minus_cert": 0,
+    "cert_minus_consumed_union": 0,
+    "per_subroot_stats": {
+     "m0": {
+      "seen": 2357,
+      "terminals": 470,
+      "opponentEdges": 2037,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m1": {
+      "seen": 1507,
+      "terminals": 248,
+      "opponentEdges": 1379,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m3": {
+      "seen": 1578,
+      "terminals": 287,
+      "opponentEdges": 1375,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m4": {
+      "seen": 2359,
+      "terminals": 433,
+      "opponentEdges": 1995,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m6": {
+      "seen": 1904,
+      "terminals": 324,
+      "opponentEdges": 1716,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m7": {
+      "seen": 1603,
+      "terminals": 262,
+      "opponentEdges": 1468,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m10": {
+      "seen": 1387,
+      "terminals": 227,
+      "opponentEdges": 1245,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m12": {
+      "seen": 2074,
+      "terminals": 367,
+      "opponentEdges": 1822,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m13": {
+      "seen": 1384,
+      "terminals": 235,
+      "opponentEdges": 1328,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m14": {
+      "seen": 2141,
+      "terminals": 395,
+      "opponentEdges": 1845,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m18": {
+      "seen": 2225,
+      "terminals": 395,
+      "opponentEdges": 1999,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m23": {
+      "seen": 1384,
+      "terminals": 235,
+      "opponentEdges": 1328,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m26": {
+      "seen": 2089,
+      "terminals": 313,
+      "opponentEdges": 1999,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m28": {
+      "seen": 1693,
+      "terminals": 232,
+      "opponentEdges": 1660,
+      "range": [
+       15,
+       17
+      ]
+     },
+     "m29": {
+      "seen": 2604,
+      "terminals": 283,
+      "opponentEdges": 2693,
+      "range": [
+       15,
+       17
+      ]
+     },
+     "m30": {
+      "seen": 1708,
+      "terminals": 321,
+      "opponentEdges": 1453,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m32": {
+      "seen": 2268,
+      "terminals": 444,
+      "opponentEdges": 1957,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m33": {
+      "seen": 3439,
+      "terminals": 390,
+      "opponentEdges": 3448,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m34": {
+      "seen": 2998,
+      "terminals": 426,
+      "opponentEdges": 2757,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m42": {
+      "seen": 2516,
+      "terminals": 483,
+      "opponentEdges": 2181,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m43": {
+      "seen": 2516,
+      "terminals": 483,
+      "opponentEdges": 2181,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m67": {
+      "seen": 2604,
+      "terminals": 283,
+      "opponentEdges": 2693,
+      "range": [
+       15,
+       17
+      ]
+     },
+     "m76": {
+      "seen": 1905,
+      "terminals": 351,
+      "opponentEdges": 1711,
+      "range": [
+       15,
+       17
+      ]
+     },
+     "m77": {
+      "seen": 1855,
+      "terminals": 329,
+      "opponentEdges": 1551,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m78": {
+      "seen": 2380,
+      "terminals": 394,
+      "opponentEdges": 2127,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m81": {
+      "seen": 2268,
+      "terminals": 444,
+      "opponentEdges": 1957,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m87": {
+      "seen": 2458,
+      "terminals": 368,
+      "opponentEdges": 2297,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m88": {
+      "seen": 1310,
+      "terminals": 192,
+      "opponentEdges": 1235,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m89": {
+      "seen": 1745,
+      "terminals": 259,
+      "opponentEdges": 1630,
+      "range": [
+       15,
+       17
+      ]
+     },
+     "m92": {
+      "seen": 1693,
+      "terminals": 232,
+      "opponentEdges": 1660,
+      "range": [
+       15,
+       17
+      ]
+     },
+     "m95": {
+      "seen": 2511,
+      "terminals": 515,
+      "opponentEdges": 2064,
+      "range": [
+       15,
+       17
+      ]
+     },
+     "m96": {
+      "seen": 1550,
+      "terminals": 255,
+      "opponentEdges": 1420,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m98": {
+      "seen": 1514,
+      "terminals": 249,
+      "opponentEdges": 1368,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m99": {
+      "seen": 1798,
+      "terminals": 251,
+      "opponentEdges": 1699,
+      "range": [
+       15,
+       17
+      ]
+     },
+     "m100": {
+      "seen": 1621,
+      "terminals": 297,
+      "opponentEdges": 1460,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m101": {
+      "seen": 1537,
+      "terminals": 205,
+      "opponentEdges": 1438,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m102": {
+      "seen": 1940,
+      "terminals": 321,
+      "opponentEdges": 1815,
+      "range": [
+       15,
+       17
+      ]
+     },
+     "m103": {
+      "seen": 676,
+      "terminals": 64,
+      "opponentEdges": 671,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m105": {
+      "seen": 1799,
+      "terminals": 275,
+      "opponentEdges": 1636,
+      "range": [
+       15,
+       17
+      ]
+     },
+     "m106": {
+      "seen": 3110,
+      "terminals": 551,
+      "opponentEdges": 2719,
+      "range": [
+       15,
+       17
+      ]
+     },
+     "m107": {
+      "seen": 3283,
+      "terminals": 512,
+      "opponentEdges": 3036,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m108": {
+      "seen": 2604,
+      "terminals": 439,
+      "opponentEdges": 2294,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m109": {
+      "seen": 1593,
+      "terminals": 282,
+      "opponentEdges": 1360,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m111": {
+      "seen": 1651,
+      "terminals": 279,
+      "opponentEdges": 1509,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m112": {
+      "seen": 2493,
+      "terminals": 443,
+      "opponentEdges": 2213,
+      "range": [
+       15,
+       17
+      ]
+     },
+     "m113": {
+      "seen": 842,
+      "terminals": 130,
+      "opponentEdges": 768,
+      "range": [
+       13,
+       15
+      ]
+     },
+     "m114": {
+      "seen": 1826,
+      "terminals": 263,
+      "opponentEdges": 1638,
+      "range": [
+       15,
+       17
+      ]
+     },
+     "m116": {
+      "seen": 2751,
+      "terminals": 396,
+      "opponentEdges": 2589,
+      "range": [
+       15,
+       17
+      ]
+     },
+     "m117": {
+      "seen": 1732,
+      "terminals": 328,
+      "opponentEdges": 1465,
+      "range": [
+       13,
+       15
+      ]
+     },
+     "m118": {
+      "seen": 4516,
+      "terminals": 705,
+      "opponentEdges": 4311,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m119": {
+      "seen": 749,
+      "terminals": 77,
+      "opponentEdges": 768,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m120": {
+      "seen": 2201,
+      "terminals": 405,
+      "opponentEdges": 1879,
+      "range": [
+       13,
+       17
+      ]
+     }
+    },
+    "sum_seen": 106249,
+    "sum_terminals": 17347,
+    "sum_opponent_edges": 96847
+   },
+   "bigint_verifier": {
+    "verdict": "WIN7 certificate independently verified",
+    "strategy_rows": 45337,
+    "subroots_passed": 52,
+    "root_mobility": 52,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "terminal_count": 17347,
+    "visited_states_across_subroots": 106249,
+    "loser_reply_edges": 96847,
+    "winner_states": 68613,
+    "loser_states": 20289,
+    "union_missing": 0,
+    "union_extra": 0
+   },
+   "published_parts": {
+    "part1of2_bytes": 819839,
+    "part2of2_bytes": 819813,
+    "part1of2_md5": "f31eb74ecd4762a0b91127ef2f36a0ac",
+    "part2of2_md5": "68a5c3a495a35a266cfda9b3a3784ebc",
+    "joined_equals_regenerated_whole": true
+   },
+   "sidecar_agreement": true
+  },
+  {
+   "band": "63d",
+   "bit": 70,
+   "root_hex": "00000000000000c09082000000080000",
+   "sweep_record": "../output/class2-lane-cost63d-sweep-20261114.json",
+   "sweep_record_blob_sha": "91dbb822aa906def5ef118963bfc53a24d1e32d4",
+   "sweep_record_field_agreement_asserted": true,
+   "regeneration": {
+    "method": "repo-verbatim extractor CLI engine via cert_driver63cd.ts (class4_child1_cert_extractor_exact.ts, FBS=1<<20, probe96, CLI-default KILL_BIT7 pref table), one process per move, 4 workers, sort -u merge, header+root prepend",
+    "per_move_processes": 49,
+    "per_move_node_sum": 14424015,
+    "per_move_fbt_drops": 0,
+    "per_move_fatal": 0,
+    "per_move": {
+     "0": {
+      "nodes": 486070,
+      "rows": 1112
+     },
+     "1": {
+      "nodes": 487921,
+      "rows": 779
+     },
+     "2": {
+      "nodes": 37656,
+      "rows": 618
+     },
+     "3": {
+      "nodes": 881601,
+      "rows": 2886
+     },
+     "6": {
+      "nodes": 868231,
+      "rows": 1671
+     },
+     "7": {
+      "nodes": 220599,
+      "rows": 1628
+     },
+     "8": {
+      "nodes": 260230,
+      "rows": 901
+     },
+     "9": {
+      "nodes": 69349,
+      "rows": 800
+     },
+     "13": {
+      "nodes": 406162,
+      "rows": 1594
+     },
+     "14": {
+      "nodes": 239958,
+      "rows": 1214
+     },
+     "18": {
+      "nodes": 97880,
+      "rows": 875
+     },
+     "23": {
+      "nodes": 564385,
+      "rows": 1909
+     },
+     "26": {
+      "nodes": 187629,
+      "rows": 1367
+     },
+     "29": {
+      "nodes": 105186,
+      "rows": 841
+     },
+     "30": {
+      "nodes": 416867,
+      "rows": 1200
+     },
+     "32": {
+      "nodes": 91226,
+      "rows": 946
+     },
+     "33": {
+      "nodes": 56885,
+      "rows": 641
+     },
+     "34": {
+      "nodes": 1596029,
+      "rows": 870
+     },
+     "41": {
+      "nodes": 129196,
+      "rows": 875
+     },
+     "45": {
+      "nodes": 105377,
+      "rows": 1184
+     },
+     "54": {
+      "nodes": 274345,
+      "rows": 1376
+     },
+     "68": {
+      "nodes": 346627,
+      "rows": 927
+     },
+     "76": {
+      "nodes": 34083,
+      "rows": 612
+     },
+     "77": {
+      "nodes": 120313,
+      "rows": 741
+     },
+     "78": {
+      "nodes": 78998,
+      "rows": 982
+     },
+     "81": {
+      "nodes": 91226,
+      "rows": 946
+     },
+     "85": {
+      "nodes": 285611,
+      "rows": 689
+     },
+     "86": {
+      "nodes": 596418,
+      "rows": 1907
+     },
+     "87": {
+      "nodes": 321339,
+      "rows": 2194
+     },
+     "88": {
+      "nodes": 160281,
+      "rows": 1221
+     },
+     "89": {
+      "nodes": 67418,
+      "rows": 927
+     },
+     "92": {
+      "nodes": 228213,
+      "rows": 1360
+     },
+     "94": {
+      "nodes": 99610,
+      "rows": 913
+     },
+     "95": {
+      "nodes": 596111,
+      "rows": 761
+     },
+     "98": {
+      "nodes": 441068,
+      "rows": 1530
+     },
+     "100": {
+      "nodes": 32256,
+      "rows": 487
+     },
+     "101": {
+      "nodes": 97511,
+      "rows": 622
+     },
+     "102": {
+      "nodes": 161569,
+      "rows": 1001
+     },
+     "105": {
+      "nodes": 101901,
+      "rows": 733
+     },
+     "106": {
+      "nodes": 142276,
+      "rows": 935
+     },
+     "110": {
+      "nodes": 165924,
+      "rows": 1561
+     },
+     "111": {
+      "nodes": 456451,
+      "rows": 1148
+     },
+     "112": {
+      "nodes": 203378,
+      "rows": 1295
+     },
+     "113": {
+      "nodes": 250263,
+      "rows": 757
+     },
+     "114": {
+      "nodes": 231135,
+      "rows": 1068
+     },
+     "116": {
+      "nodes": 72877,
+      "rows": 723
+     },
+     "117": {
+      "nodes": 1321296,
+      "rows": 1004
+     },
+     "119": {
+      "nodes": 21107,
+      "rows": 652
+     },
+     "120": {
+      "nodes": 115973,
+      "rows": 1230
+     }
+    }
+   },
+   "byte_identical_to_20261114_record": true,
+   "whole_bytes": 1415650,
+   "whole_md5": "63a3cb44f1cfc7262509214a9f24d3ca",
+   "whole_sha256": "46acdf5eab5f37b0298fe353b419f33971d2a2164ff3d5d1ddcda6658d8a73dd",
+   "whole_git_blob_sha": "f6ed675d6acd1b7db6c45e97de62d5c5d70cbfe0",
+   "rows": 39213,
+   "sub_roots_pass": 49,
+   "loser_mobility": 49,
+   "terminal_stone_range": [
+    13,
+    17
+   ],
+   "bareiss_verifier": {
+    "rootcheck": {
+     "stones": 7,
+     "loserMobility": 49
+    },
+    "subroots_all_pass": true,
+    "consumed_union_minus_cert": 0,
+    "cert_minus_consumed_union": 0,
+    "per_subroot_stats": {
+     "m0": {
+      "seen": 1714,
+      "terminals": 270,
+      "opponentEdges": 1575,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m1": {
+      "seen": 1191,
+      "terminals": 163,
+      "opponentEdges": 1180,
+      "range": [
+       15,
+       17
+      ]
+     },
+     "m2": {
+      "seen": 950,
+      "terminals": 126,
+      "opponentEdges": 968,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m3": {
+      "seen": 4429,
+      "terminals": 605,
+      "opponentEdges": 4225,
+      "range": [
+       15,
+       17
+      ]
+     },
+     "m6": {
+      "seen": 2570,
+      "terminals": 322,
+      "opponentEdges": 2604,
+      "range": [
+       15,
+       17
+      ]
+     },
+     "m7": {
+      "seen": 2494,
+      "terminals": 318,
+      "opponentEdges": 2450,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m8": {
+      "seen": 1381,
+      "terminals": 209,
+      "opponentEdges": 1269,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m9": {
+      "seen": 1248,
+      "terminals": 194,
+      "opponentEdges": 1138,
+      "range": [
+       15,
+       17
+      ]
+     },
+     "m13": {
+      "seen": 2418,
+      "terminals": 256,
+      "opponentEdges": 2476,
+      "range": [
+       15,
+       17
+      ]
+     },
+     "m14": {
+      "seen": 1844,
+      "terminals": 277,
+      "opponentEdges": 1670,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m18": {
+      "seen": 1349,
+      "terminals": 218,
+      "opponentEdges": 1223,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m23": {
+      "seen": 2881,
+      "terminals": 324,
+      "opponentEdges": 2871,
+      "range": [
+       15,
+       17
+      ]
+     },
+     "m26": {
+      "seen": 2093,
+      "terminals": 279,
+      "opponentEdges": 1985,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m29": {
+      "seen": 1288,
+      "terminals": 207,
+      "opponentEdges": 1218,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m30": {
+      "seen": 1853,
+      "terminals": 306,
+      "opponentEdges": 1708,
+      "range": [
+       15,
+       17
+      ]
+     },
+     "m32": {
+      "seen": 1471,
+      "terminals": 229,
+      "opponentEdges": 1401,
+      "range": [
+       15,
+       17
+      ]
+     },
+     "m33": {
+      "seen": 981,
+      "terminals": 135,
+      "opponentEdges": 949,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m34": {
+      "seen": 1340,
+      "terminals": 164,
+      "opponentEdges": 1305,
+      "range": [
+       15,
+       17
+      ]
+     },
+     "m41": {
+      "seen": 1349,
+      "terminals": 218,
+      "opponentEdges": 1223,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m45": {
+      "seen": 1808,
+      "terminals": 240,
+      "opponentEdges": 1763,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m54": {
+      "seen": 2145,
+      "terminals": 375,
+      "opponentEdges": 1904,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m68": {
+      "seen": 1425,
+      "terminals": 189,
+      "opponentEdges": 1324,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m76": {
+      "seen": 956,
+      "terminals": 132,
+      "opponentEdges": 952,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m77": {
+      "seen": 1153,
+      "terminals": 205,
+      "opponentEdges": 1082,
+      "range": [
+       13,
+       15
+      ]
+     },
+     "m78": {
+      "seen": 1507,
+      "terminals": 261,
+      "opponentEdges": 1320,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m81": {
+      "seen": 1471,
+      "terminals": 229,
+      "opponentEdges": 1401,
+      "range": [
+       15,
+       17
+      ]
+     },
+     "m85": {
+      "seen": 1054,
+      "terminals": 169,
+      "opponentEdges": 960,
+      "range": [
+       15,
+       17
+      ]
+     },
+     "m86": {
+      "seen": 2958,
+      "terminals": 456,
+      "opponentEdges": 2693,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m87": {
+      "seen": 3328,
+      "terminals": 394,
+      "opponentEdges": 3193,
+      "range": [
+       15,
+       17
+      ]
+     },
+     "m88": {
+      "seen": 1889,
+      "terminals": 332,
+      "opponentEdges": 1746,
+      "range": [
+       15,
+       17
+      ]
+     },
+     "m89": {
+      "seen": 1425,
+      "terminals": 189,
+      "opponentEdges": 1324,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m92": {
+      "seen": 2129,
+      "terminals": 371,
+      "opponentEdges": 1890,
+      "range": [
+       15,
+       17
+      ]
+     },
+     "m94": {
+      "seen": 1412,
+      "terminals": 249,
+      "opponentEdges": 1272,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m95": {
+      "seen": 1184,
+      "terminals": 213,
+      "opponentEdges": 1060,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m98": {
+      "seen": 2384,
+      "terminals": 374,
+      "opponentEdges": 2223,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m100": {
+      "seen": 732,
+      "terminals": 81,
+      "opponentEdges": 786,
+      "range": [
+       15,
+       17
+      ]
+     },
+     "m101": {
+      "seen": 956,
+      "terminals": 159,
+      "opponentEdges": 884,
+      "range": [
+       15,
+       17
+      ]
+     },
+     "m102": {
+      "seen": 1567,
+      "terminals": 302,
+      "opponentEdges": 1329,
+      "range": [
+       15,
+       17
+      ]
+     },
+     "m105": {
+      "seen": 1109,
+      "terminals": 131,
+      "opponentEdges": 1122,
+      "range": [
+       15,
+       17
+      ]
+     },
+     "m106": {
+      "seen": 1449,
+      "terminals": 249,
+      "opponentEdges": 1316,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m110": {
+      "seen": 2401,
+      "terminals": 325,
+      "opponentEdges": 2244,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m111": {
+      "seen": 1786,
+      "terminals": 305,
+      "opponentEdges": 1550,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m112": {
+      "seen": 1988,
+      "terminals": 317,
+      "opponentEdges": 1809,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m113": {
+      "seen": 1148,
+      "terminals": 113,
+      "opponentEdges": 1164,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m114": {
+      "seen": 1638,
+      "terminals": 228,
+      "opponentEdges": 1551,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m116": {
+      "seen": 1129,
+      "terminals": 188,
+      "opponentEdges": 991,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m117": {
+      "seen": 1549,
+      "terminals": 235,
+      "opponentEdges": 1403,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m119": {
+      "seen": 1028,
+      "terminals": 174,
+      "opponentEdges": 1048,
+      "range": [
+       13,
+       17
+      ]
+     },
+     "m120": {
+      "seen": 1899,
+      "terminals": 299,
+      "opponentEdges": 1706,
+      "range": [
+       13,
+       17
+      ]
+     }
+    },
+    "sum_seen": 83451,
+    "sum_terminals": 12304,
+    "sum_opponent_edges": 78448
+   },
+   "bigint_verifier": {
+    "verdict": "WIN7 certificate independently verified",
+    "strategy_rows": 39213,
+    "subroots_passed": 49,
+    "root_mobility": 49,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "terminal_count": 12304,
+    "visited_states_across_subroots": 83451,
+    "loser_reply_edges": 78448,
+    "winner_states": 54213,
+    "loser_states": 16934,
+    "union_missing": 0,
+    "union_extra": 0
+   },
+   "published_parts": {
+    "part1of2_bytes": 707859,
+    "part2of2_bytes": 707791,
+    "part1of2_md5": "caaafe7fd8b99139d9541903d94ee35e",
+    "part2of2_md5": "1a6172cbf97d01b8fdc337c2418a2a55",
+    "joined_equals_regenerated_whole": true
+   },
+   "sidecar_agreement": true
+  }
+ ],
+ "summary": {
+  "certificates": 2,
+  "regeneration_byte_identical": 2,
+  "regeneration_mismatch": 0,
+  "bareiss_pass": 2,
+  "bigint_pass": 2,
+  "sidecar_agreement_fail": 0,
+  "total_rows": 84550,
+  "total_sub_roots": 101,
+  "total_bytes": 3055302,
+  "total_regeneration_nodes": 28948036
+ },
+ "interpretation_guard": [
+  "the head-1452 census v3 carried these two records as receiptcert-only with bytes absent from main; after this publication the bytes are on main and independently re-verified (both verifiers) - a bookkeeping/evidence upgrade only, no frontier number changes and no manifest row closes",
+  "the 62 REFUTED-D10 bits of each of the two bands are not LOSS proofs and are untouched by this run",
+  "a WIN7-D10 certificate proves only that its individual 7-stone root is a first-player win within depth 10",
+  "11x11 empty board, two-stone root {49,60}, S2 {59,60}, class 1, class 2 and class 4 all remain UNKNOWN"
+ ]
+}
