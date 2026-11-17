@@ -106,7 +106,20 @@ def main() -> None:
         "all_roots_seven_stones": {"ok": all((child | (1<<r["bit"])).bit_count()==7 for r in rows)},
         "geometry_audit_prior_pass": {"ok":geometry["all_pass"] and all(r["bit"] in geometry["geometry"]["legal_candidate_bits"] for r in rows)},
     }
-    assert all(x["ok"] for x in checks.values()), checks
+    selected = census["selected_target"]
+    census_ok = (
+        selected["s6_hex"] == claim["s6_child"]
+        and selected["cost"] == claim["s6_s7_edge_cost"] == 78
+        and selected["legal_candidates"] == 78
+        and selected["demand"] == claim["demand"]
+        and selected["sweep_bits"] == claim["engine_candidate_bits"]["open_bits"]
+        and [x["bit"] for x in selected["confirmation_bits"]] == claim["engine_candidate_bits"]["confirmation_bits"]
+    )
+    checks["census_selection_matches_claim"] = {
+        "ok": census_ok, "chain_head": census["chain_head"],
+        "selected": selected["s6_hex"],
+    }
+    assert census_ok, checks
     stale = "batches_run 0" in claim["status"]
     result = {
         "schema":"n11-cost78c-raw-batches-1-3-audit-20261118-v1",
