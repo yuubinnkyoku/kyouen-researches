@@ -53,9 +53,9 @@ def write_json(path: Path, obj) -> bytes:
 
 def main():
     raw = INPUT.read_bytes()
-    require({}, "input_blob_sha", git_blob_sha(raw) == INPUT_BLOB_SHA)
-    x = json.loads(raw)
     checks = {}
+    require(checks, "input_blob_sha", git_blob_sha(raw) == INPUT_BLOB_SHA)
+    x = json.loads(raw)
     require(checks, "input_schema", x["schema"] == "n11-class2-lane-cost66i-bit19-parent-incidence-input-20261118-v1")
 
     open_parents = x["open_s5_parents"]
