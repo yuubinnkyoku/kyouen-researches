@@ -1,0 +1,555 @@
+{
+ "schema": "n11-class2-lane-fault-inject-worker-merge-conflicts-73k-20261117-v1",
+ "date": "2026-11-17",
+ "lane": "n11 class2-lane long-term (cost73k)",
+ "purpose": "fault-injection validation of the 4-worker memo merge conflict detector: injected contradictions must be detected exactly, absorbed corruptions documented, zero false positives",
+ "design_note": "streaming rewrite: the first in-memory implementation (4 distinct tables in Python lists) was OOM-killed by the ~1GiB cgroup limit twice before any output; this version uses one heap-merge selection pass, streaming table copies, and the orchestrator's external-sort distinct_pass and streaming merge_pass_nway",
+ "inputs": {
+  "measurement_json": "output/worker-split4-memo-merge-73k-20261117.json",
+  "distinct_tables": [
+   "workerW1.distinct.txt",
+   "workerW2.distinct.txt",
+   "workerW3.distinct.txt",
+   "workerW4.distinct.txt"
+  ],
+  "raw_dump_for_F1": "workerW2.dump.txt",
+  "clean_merged_seed": "merged_seed4.kyoenwm2"
+ },
+ "selection_groups_scanned": 4985986,
+ "scenarios": {
+  "F1_internal_duplicate": [
+   {
+    "key": "00000400 12060000 00000280 00100401",
+    "worker_values": {
+     "workerW2": [
+      7,
+      255,
+      255,
+      255
+     ]
+    },
+    "orig": [
+     7,
+     255,
+     255,
+     255
+    ],
+    "injected": [
+     255,
+     3,
+     255,
+     255
+    ],
+    "kind": "win_and_lose",
+    "mode": "internal_duplicate"
+   },
+   {
+    "key": "00000400 12060000 00000280 00100402",
+    "worker_values": {
+     "workerW2": [
+      7,
+      255,
+      255,
+      255
+     ],
+     "workerW3": [
+      7,
+      255,
+      255,
+      255
+     ]
+    },
+    "orig": [
+     7,
+     255,
+     255,
+     255
+    ],
+    "injected": [
+     255,
+     3,
+     255,
+     255
+    ],
+    "kind": "win_and_lose",
+    "mode": "internal_duplicate"
+   }
+  ],
+  "F2_cross_lose_injection": [
+   {
+    "key": "00000400 12060008 00000280 0000000a",
+    "worker_values": {
+     "workerW1": [
+      7,
+      255,
+      255,
+      255
+     ],
+     "workerW2": [
+      7,
+      255,
+      255,
+      255
+     ],
+     "workerW3": [
+      7,
+      255,
+      255,
+      255
+     ]
+    },
+    "orig": [
+     7,
+     255,
+     255,
+     255
+    ],
+    "injected": [
+     7,
+     3,
+     255,
+     255
+    ],
+    "kind": "win_and_lose",
+    "mode": "cross_lose_injection"
+   },
+   {
+    "key": "00000400 12060008 00000280 00000022",
+    "worker_values": {
+     "workerW1": [
+      7,
+      255,
+      255,
+      255
+     ],
+     "workerW2": [
+      7,
+      255,
+      255,
+      255
+     ],
+     "workerW3": [
+      7,
+      255,
+      255,
+      255
+     ]
+    },
+    "orig": [
+     7,
+     255,
+     255,
+     255
+    ],
+    "injected": [
+     7,
+     3,
+     255,
+     255
+    ],
+    "kind": "win_and_lose",
+    "mode": "cross_lose_injection"
+   }
+  ],
+  "F3_cross_win_injection": [
+   {
+    "key": "00000400 12060000 00000080 00000282",
+    "worker_values": {
+     "workerW3": [
+      255,
+      8,
+      255,
+      255
+     ],
+     "workerW4": [
+      255,
+      8,
+      255,
+      255
+     ]
+    },
+    "orig": [
+     255,
+     8,
+     255,
+     255
+    ],
+    "injected": [
+     2,
+     8,
+     255,
+     255
+    ],
+    "kind": "win_and_lose",
+    "mode": "cross_win_injection"
+   },
+   {
+    "key": "00000400 12060000 00000280 00010026",
+    "worker_values": {
+     "workerW3": [
+      255,
+      6,
+      255,
+      255
+     ],
+     "workerW4": [
+      255,
+      6,
+      255,
+      255
+     ]
+    },
+    "orig": [
+     255,
+     6,
+     255,
+     255
+    ],
+    "injected": [
+     2,
+     6,
+     255,
+     255
+    ],
+    "kind": "win_and_lose",
+    "mode": "cross_win_injection"
+   }
+  ],
+  "F4_single_record_negative_bound": [
+   {
+    "key": "00000400 12060000 00000080 00000621",
+    "worker_values": {
+     "workerW4": [
+      7,
+      255,
+      255,
+      255
+     ]
+    },
+    "orig": [
+     7,
+     255,
+     255,
+     255
+    ],
+    "injected": [
+     7,
+     255,
+     7,
+     255
+    ],
+    "kind": "win_le_nowin",
+    "mode": "single_record_negative_bound"
+   },
+   {
+    "key": "00000400 12060000 00000080 00000e01",
+    "worker_values": {
+     "workerW4": [
+      7,
+      255,
+      255,
+      255
+     ]
+    },
+    "orig": [
+     7,
+     255,
+     255,
+     255
+    ],
+    "injected": [
+     7,
+     255,
+     7,
+     255
+    ],
+    "kind": "win_le_nowin",
+    "mode": "single_record_negative_bound"
+   }
+  ],
+  "F5a_absorbed_nowin": [
+   {
+    "key": "00000400 12060008 00000280 00000042",
+    "worker_values": {
+     "workerW1": [
+      7,
+      255,
+      255,
+      255
+     ],
+     "workerW2": [
+      7,
+      255,
+      255,
+      255
+     ],
+     "workerW3": [
+      7,
+      255,
+      255,
+      255
+     ]
+    },
+    "orig": [
+     7,
+     255,
+     255,
+     255
+    ],
+    "injected": [
+     255,
+     255,
+     4,
+     255
+    ],
+    "kind": "absorbed_nowin",
+    "w1_record": [
+     7,
+     255,
+     255,
+     255
+    ]
+   },
+   {
+    "key": "00000400 12060008 00000280 00000082",
+    "worker_values": {
+     "workerW1": [
+      7,
+      255,
+      255,
+      255
+     ],
+     "workerW2": [
+      7,
+      255,
+      255,
+      255
+     ],
+     "workerW3": [
+      7,
+      255,
+      255,
+      255
+     ]
+    },
+    "orig": [
+     7,
+     255,
+     255,
+     255
+    ],
+    "injected": [
+     255,
+     255,
+     4,
+     255
+    ],
+    "kind": "absorbed_nowin",
+    "w1_record": [
+     7,
+     255,
+     255,
+     255
+    ]
+   }
+  ],
+  "F5b_absorbed_nolose": [
+   {
+    "key": "00000400 12060008 00000280 00040402",
+    "worker_values": {
+     "workerW1": [
+      255,
+      6,
+      255,
+      255
+     ],
+     "workerW2": [
+      255,
+      6,
+      255,
+      255
+     ],
+     "workerW3": [
+      255,
+      6,
+      255,
+      255
+     ]
+    },
+    "orig": [
+     255,
+     6,
+     255,
+     255
+    ],
+    "injected": [
+     255,
+     255,
+     255,
+     2
+    ],
+    "kind": "absorbed_nolose",
+    "w1_record": [
+     255,
+     6,
+     255,
+     255
+    ]
+   },
+   {
+    "key": "00000400 12060008 01004280 00100042",
+    "worker_values": {
+     "workerW1": [
+      255,
+      4,
+      255,
+      255
+     ],
+     "workerW2": [
+      255,
+      4,
+      255,
+      255
+     ],
+     "workerW3": [
+      255,
+      4,
+      255,
+      255
+     ]
+    },
+    "orig": [
+     255,
+     4,
+     255,
+     255
+    ],
+    "injected": [
+     255,
+     255,
+     255,
+     2
+    ],
+    "kind": "absorbed_nolose",
+    "w1_record": [
+     255,
+     4,
+     255,
+     255
+    ]
+   }
+  ]
+ },
+ "f1_result": {
+  "conflicts": {
+   "win_and_lose": 2
+  },
+  "conflict_samples": {
+   "win_and_lose": [
+    "00000400 12060000 00000280 00100401",
+    "00000400 12060000 00000280 00100402"
+   ]
+  },
+  "records": 4026736,
+  "distinct": 1793658,
+  "dup_keys": 252475,
+  "max_copies": 64
+ },
+ "cross_result": {
+  "cross_conflicts": {
+   "win_and_lose": 4,
+   "win_le_nowin": 2
+  },
+  "conflict_samples": {
+   "win_and_lose": [
+    "00000400 12060000 00000080 00000282",
+    "00000400 12060000 00000280 00010026",
+    "00000400 12060008 00000280 0000000a",
+    "00000400 12060008 00000280 00000022"
+   ],
+   "win_le_nowin": [
+    "00000400 12060000 00000080 00000621",
+    "00000400 12060000 00000080 00000e01"
+   ]
+  },
+  "occupied_after": 4985986,
+  "shared_total": 1592504,
+  "incidence_histogram": {
+   "1": 3393482,
+   "2": 1306914,
+   "3": 265352,
+   "4": 20238
+  }
+ },
+ "f5_gate": {
+  "clean_records": {
+   "00000400 12060008 00000280 00000042": [
+    7,
+    255,
+    255,
+    255
+   ],
+   "00000400 12060008 00000280 00000082": [
+    7,
+    255,
+    255,
+    255
+   ],
+   "00000400 12060008 00000280 00040402": [
+    255,
+    6,
+    255,
+    255
+   ],
+   "00000400 12060008 01004280 00100042": [
+    255,
+    4,
+    255,
+    255
+   ]
+  },
+  "fault_records": {
+   "00000400 12060008 00000280 00000042": [
+    7,
+    255,
+    255,
+    255
+   ],
+   "00000400 12060008 00000280 00000082": [
+    7,
+    255,
+    255,
+    255
+   ],
+   "00000400 12060008 00000280 00040402": [
+    255,
+    6,
+    255,
+    255
+   ],
+   "00000400 12060008 01004280 00100042": [
+    255,
+    4,
+    255,
+    255
+   ]
+  },
+  "equal": {
+   "00000400 12060008 00000280 00000042": true,
+   "00000400 12060008 00000280 00000082": true,
+   "00000400 12060008 00000280 00040402": true,
+   "00000400 12060008 01004280 00100042": true
+  }
+ },
+ "gates": {
+  "f1_internal_exactly_injected": true,
+  "cross_exactly_injected": true,
+  "f5_records_equal_clean_and_absorbed": true,
+  "f5_keys_not_flagged": true,
+  "fault_merge_structure_equals_clean": true,
+  "natural_merge_conflicts_zero": true,
+  "substitution_counts_exact": true
+ },
+ "gates_all_pass": true,
+ "interpretation_guard": "Test only, synthetic corruption of measurement artifacts. No new WIN/LOSS verdicts, no manifest row opened or closed, certificate bytes unchanged, the natural merged seed is not affected. WIN7-D10 proves a first-player win within depth 10 from the individual 7-stone roots only; REFUTED-D10 is not a LOSS proof. The 11x11 empty board, both two-stone roots {49,60} and {59,60}, S2 {59,60} and classes 1/2/4 all remain UNKNOWN."
+}
