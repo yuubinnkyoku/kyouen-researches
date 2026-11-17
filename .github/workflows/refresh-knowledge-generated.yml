@@ -313,6 +313,10 @@ jobs:
         run: |
           uv run --locked python research/experiments/vertical-fiber-two-token-z6-y27-boundary-20261118/verify_z6_y27.py
           git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y27-boundary-20261118/output/audit.json
+      - name: Audit K0942 two-token z=6 y=28 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y28-boundary-20261118/verify_z6_y28.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y28-boundary-20261118/output/audit.json
       - name: Audit K0900 r=12 boundary cross-lane agreement check
         run: |
           uv run --locked python research/experiments/remo-k-branch-cap10-r12-boundary-independent-check-20261117/check_k0898_cross_lane_agreement.py
@@ -667,3 +671,5 @@ jobs:
 # Refresh generated views for K0832 t=2, q=2w-1 all-safe pure-fiber Grundy classification (2026-11-18).
 
 # Refresh generated views for K0940 z=6,y=27 two-token full Grundy slice and audit wiring (2026-11-18).
+
+# Refresh generated views for K0942 z=6,y=28 two-token full Grundy slice and audit wiring (2026-11-18).

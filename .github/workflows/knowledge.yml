@@ -160,6 +160,10 @@ jobs:
         run: |
           uv run --locked python research/experiments/vertical-fiber-two-token-z6-y27-boundary-20261118/verify_z6_y27.py
           git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y27-boundary-20261118/output/audit.json
+      - name: Audit K0942 two-token z=6 y=28 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y28-boundary-20261118/verify_z6_y28.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y28-boundary-20261118/output/audit.json
       - name: Audit K0832 t=2, q=2w-1 all-safe Grundy classification
         run: |
           uv run --locked python research/experiments/vertical-fiber-t2-q2w-minus1-grundy-20261118/verify_t2_q2w_minus1.py

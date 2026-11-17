@@ -1,0 +1,30 @@
+{
+  "all_pass": true,
+  "classification": "universal proof by induction on x using explicit A/B/C signatures, K0940, K0873, K0832 Theorem T, and the general tail theorem; finite checks are independent audits only",
+  "counts": {
+    "direct_formula_and_two_engine_checks": 17622,
+    "even_parent_upper_bound": 1033359,
+    "far_tail_seeded_checks": 5000,
+    "mex_identities": 2067704,
+    "odd_parent_option_bound": 1034345,
+    "signature_points": 2067704,
+    "tail_checks": 128245,
+    "value2_locus_parameters": 1973
+  },
+  "failures": [],
+  "repeat_byte_identical": true,
+  "repeat_runs": 2,
+  "scope": {
+    "direct_R": "0 <= R < x+45 (target and y=27/z=5 anchors)",
+    "direct_x": [28, 60],
+    "far_tail_samples": 5000,
+    "far_tail_seed": 20261118,
+    "signature_R": "1 <= R < x+35",
+    "signature_x": [28, 2000],
+    "tail_offsets": [0, 64],
+    "tail_x": [28, 2000]
+  },
+  "sha256_without_hash_field": "d924b475edcf7f5cf3ecfe418ca9e7b8ca2601d94981fd5fa82e57ca2aff9b84",
+  "target": "H(R;(x,28);6), x>=28, R>=0",
+  "total_checks": 6355952
+}
