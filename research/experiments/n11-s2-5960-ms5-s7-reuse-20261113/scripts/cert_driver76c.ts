@@ -20,6 +20,14 @@ if (!/^[0-9a-f]{32}$/i.test(child) ||
   process.stderr.write('usage: cert_driver76c.ts <raw-child-hex> <bit> <output-path>' + NL);
   process.exit(2);
 }
+const childMask = BigInt('0x' + child);
+let childStones = 0;
+for (let v = childMask; v !== 0n; v &= v - 1n) childStones++;
+if (childStones !== 6 || (childMask >> 121n) !== 0n ||
+    ((childMask >> BigInt(bit)) & 1n) !== 0n) {
+  process.stderr.write('refusing certificate output: child must contain exactly six in-board stones and the selected bit must be empty' + NL);
+  process.exit(2);
+}
 
 let input = '';
 process.stdin.setEncoding('utf8');
