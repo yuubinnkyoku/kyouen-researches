@@ -159,7 +159,7 @@ function main() {
 
   check("basis.source_main_head", SOURCE_MAIN_HEAD.length === 40, SOURCE_MAIN_HEAD);
   check("basis.k0863_proved", k0863Text.includes("status: proved") && k0863Text.includes("どのWIN7-D10 receipt rootにもcoverされない"));
-  check("basis.k0865_historical_head1410", k0865Text.includes("head-1410") && census.head_state?.solved_s6_in_manifest === 1410);
+  check("basis.k0865_historical_head1410", k0865Text.includes("head-1410") && census.head_state?.solved_manifest_rows === 1410);
   check("basis.k0868_survival_convention", k0868Text.includes("own_candidates") && k0868Text.includes("edge cost"));
   check("historical.audit_29_checks", rank1.all_checks_pass === true && rank1.checks.length === 29, rank1.checks.length);
   check("historical.audit_rank1_parent", rank1.summary.parent === PARENT && rank1.summary.remaining_rows === 5);
@@ -199,7 +199,7 @@ function main() {
     m76.certificates[0].bit === 61 &&
     m76.certificates[0].sha === c76.certificate_extraction.actual_extraction.sha256 &&
     a76.all_checks_pass === true &&
-    a76.certificate_manifest_blob_sha === c76.certificate_extraction.manifest_blob_sha);
+    a76.certificate_manifest_blob_sha === c76.manifest_blob_sha);
   check("fold.76c_parent_after", f76.parents_after[PARENT].rows_after === 2 &&
     f76.parents_after[PARENT].edge_cost_after === 135 &&
     f76.parents_after[PARENT].rows_before === 5 &&
