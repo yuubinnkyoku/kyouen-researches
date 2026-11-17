@@ -1,7 +1,7 @@
 import itertools
 import unittest
 
-from worker_memo_merge import UNBOUND, combine_values, conflict_kind, max_bound
+from worker_memo_merge import (UNBOUND, bound_at_least, combine_values, conflict_kind, max_bound)
 
 
 class SentinelAwareMemoMergeTests(unittest.TestCase):
@@ -21,6 +21,16 @@ class SentinelAwareMemoMergeTests(unittest.TestCase):
             self.assertEqual(max_bound(d, UNBOUND), d)
             self.assertEqual(max_bound(UNBOUND, d), d)
         self.assertEqual(max_bound(UNBOUND, UNBOUND), UNBOUND)
+
+    def test_seed_bound_comparison_respects_unbound(self):
+        domain = list(range(65)) + [UNBOUND]
+        for value, required in itertools.product(domain, repeat=2):
+            expected = (True if required == UNBOUND else
+                        False if value == UNBOUND else value >= required)
+            self.assertEqual(bound_at_least(value, required), expected)
+        self.assertFalse(bound_at_least(UNBOUND, 4))
+        self.assertTrue(bound_at_least(6, 4))
+        self.assertTrue(bound_at_least(UNBOUND, UNBOUND))
 
     def test_cross_worker_contradictions_are_not_hidden(self):
         merged = combine_values(3, UNBOUND, UNBOUND, UNBOUND,
