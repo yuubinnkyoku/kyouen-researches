@@ -82,6 +82,12 @@ artifacts:
   - path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/fixb-worker-split8-memo-merge-73k-20261117.json
     role: data
     note: fixB 8-way測定JSON（workers 27,878,487 nodes・merge 5,773,620 keys・衝突0・incidence 8は0・seed失敗10,842==sim予測・seedrun25 5,235,505 nodes・record恒等式閉包）
+  - path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/measure_worker_split16_fixb_memo_merge_73k_20261117.py
+    role: verifier
+    note: fixB 16-way worker分割merge測定オーケストレータ（band23 per-bit DP min-max 16分割・min-max 2,900,183=bit117単独・16-way merge-join・sim MS掃引・設計点ms25 seedrun・band表vs merged表比較・全gate判定）
+  - path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/fixb-worker-split16-memo-merge-73k-20261117.json
+    role: data
+    note: fixB 16-way測定JSON（workers 28,281,063 nodes・merge 5,794,358 keys・衝突0・incidence 8は9・seed失敗14,354==sim予測・seedrun25 5,197,507 nodes・record恒等式閉包）
 ---
 
 # K0909: worker分割メモmergeの安全性（cost73kバンド・verbatim engine）
@@ -447,5 +453,20 @@ fixBでの2-way測定（追記5）を出版verbatim 8-way構成（追記4）に�
 **解釈**: fixBでは「worker合計は2-way比1.0015で増えないが、unionは+5.4%拡大しseedrun25は0.872に下がる」という非自明なトレードオフが成立する。細分割はworkerコスト削減ではなくseed充実（union拡大）の手段として機能し、seedrun段階で回収される。coordinator設計では、worker数の選択はseed容量とkneeの距離とセットで評価すべきである。
 
 **再現実験の記録**: 本測定は同一セッション内で2回完全実行された。1回目は全gate検証まで完走した後、出版push直前の実行環境リセットでworkdir・成果物・出版編集を喪失した。入力をrepoのpin済み blobから再構築（extractor 52bcaf50・driver 2a95d952・legal 8e97082c・manifest 0892aed0すべてblob同一を再検証）して2回目を完全実行し、workers・merge・sim・seedrun25・record恒等式・band_vs_merged8の全数値が1回目の記録値と完全一致した。出版されたscript・JSONは2回目の実行によるものであり、同時に環境リセットを跨ぐ決定性の実証例となる（全アームの決定的実行・証明書byte同一・gate同一）。
+
+勝敗変更なし・manifest行は閉じず・証明書bytes不変・repo-verbatim extractorはrepo上未修正・fixBの本番採用は別レーン判断・11×11はUNKNOWN。
+
+## fixBエンジンでの16-way worker分割memo merge測定（2026-11-17追記8・測定のみ）
+
+fixBでの2-way（追記5）・8-way（追記7）測定を出版verbatim 16-way構成（追記6）に対応する16-worker構成に拡張した（`measure_worker_split16_fixb_memo_merge_73k_20261117.py`・測定JSON `fixb-worker-split16-memo-merge-73k-20261117.json`・log `2026-11-17-n11-class2-lane-fixb-worker-split16-memo-merge-73k.md`・claim 273fb094）。22 band bitをfixB band ms23 per-bitノード数のDP min-max 16分割（min-max値2,900,183 = bit 117単独・構造的下界そのもの・10単独bit worker＋6個2-bit worker）で分割し、V1=band23プレフィックス（bit 0）、他15 workerはfreshプロセス・MS=1<<23・band内共有。orchestratorは出版fixB 8-wayスクリプトの変換で新規実装は16-way GROUPSとseed名のみ。並走cost75f/cost78c等とは別軸:
+
+1. **16-way workers**: 合計**28,281,063 nodes**（v1 1,277,392 + v2 1,591,792 + v3 865,968 + v4 2,032,584 + v5 2,018,925 + v6 1,919,972 + v7 1,862,433 + v8 2,822,481 + v9 1,708,980 + v10 989,258 + v11 1,097,336 + v12 1,415,400 + v13 2,702,545 + v14 1,679,848 + v15 2,411,237 + v16 1,884,912）。fixB band23比0.9881・fixB 2-way比1.0159・**fixB 8-way比1.0144（+1.4%）**・verbatim 16-way比0.2599・**fixB fresh battery 28,290,025の0.9997**。fixBでは細分割のworkerコストは2→8→16で単調増加に転じfresh床に収束する（追記7の「worker利得消滅」の延長で、N=16では分割の帯域幅減少がコスト増として現れる）。V1はbit 0のper-bit・占有率ともband23プレフィックスと完全一致、他15先頭bitはfixB fresh battery anchorと完全一致（15/15）、全worker証明書byte同一。
+2. **重複キーcensus**: 16 dumpすべてでrecords == distinct（dup_keys=0・max_copies=1）。
+3. **live bound 16-way merge**: shared 2,369,039・occupied_after **5,794,358**（fixB 8-way 5,773,620の+0.36%で**unionはN=8でほぼ飽和**・2-way 5,479,157比+5.75%・verbatim 16-way 5,404,082の1.0722倍）・incidence {1:3,425,319, 2:1,654,929, 3:540,872, 4:143,585, 5:26,303, 6:3,100, 7:241, **8:9**, 9..16:0}（incidence 8はfixBで初出現〔9 key〕・全16 worker同時memo化キーは存在せず）・内部/cross衝突0・決定的（2回実行でbyte同一）。
+4. **sim MS掃引**: 1<<24→164,898（2.8458%・load 0.3355）・1<<25→14,354（0.2477%・load 0.1723）・1<<26→177（3.1e-5・load 0.0863）。
+5. **設計点 MS=1<<25 seedrun**: **5,197,507 nodes**・seed失敗14,354 == sim予測完全一致（sim==engine一致を5.79M-key seed領域まで拡張）・record恒等式閉包（present 5,780,004 == inserted・missing == failed・違反0）・証明書22/22 byte同一・占有率5,857,373。fixB 8-way seedrun25 5,235,505比**0.9927（−0.7%）でseed充実の利得はほぼ枯渇**・fixB 2-way 6,005,236比0.8655・**verbatim 16-way seedrun25 68,006,820比0.0764 = 13.1倍安い**でエンジン・分割構成横断の測定済み最安band実行（追記7の記録を更新）。0.2477%での0.1%事前gate不成立はknee設計どおり（正しい設計点はMS=1<<26・sim予測177失敗・engineはcgroup内で1<<26不可のためsimが担う）。失敗は性能のみで健全性に無影響。
+6. **band表 vs 16-way merged表**: shared 5,028,439・only_in_band **14**（2-way 677 → 8-way 48 → **16-way 14**でband表の0.00028%まで縮小）・only_in_merged 765,919・共有キー値矛盾0。merge表はband表のsupersetではないという結論（追記4・5・7）はN=16でも修正されないが、unionはband表の実質完全被覆に漸近する。
+
+**解釈（fixB worker数曲線の完成）**: worker合計は2-way 27,837,399 → 8-way 27,878,487（+0.15%）→ 16-way 28,281,063（+1.4%）と単調増加しfixB fresh battery 28,290,025の0.9997に収束、unionは5,479,157 → 5,773,620（+5.4%）→ 5,794,358（+0.36%）でN=8近傍で飽和、seedrun25利得は−12.8% → **−0.7%**でほぼ枯渇、一方MS=1<<25 seed失敗は19 → 10,842 → 14,354と増え続ける。**fixBではこのバンドの実用worker数はN=8近傍が最適**で、N=16は「worker +1.4%・seed失敗+32%」に対して「seedrun −0.7%」しか返さない。coordinator設計規則への反映: 修正エンジンではworker数の評価軸に、seed負荷とkneeの距離（追記2の規則・追記6のN=16拡張）に加えて**union飽和点（このバンドではN≈8）**を加えるべきである。
 
 勝敗変更なし・manifest行は閉じず・証明書bytes不変・repo-verbatim extractorはrepo上未修正・fixBの本番採用は別レーン判断・11×11はUNKNOWN。
