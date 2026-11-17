@@ -2,7 +2,7 @@
 
 ## Source state
 
-作業開始時の最新 main は `8803a3b01ef5932a246ead2f67f31b1438c768ac`。作業前に `AGENTS.md`、`research/knowledge/README.md)、K0023、K0863、K0865、K0868、およびcost73kのclaim・census v7・concurrent-session record・既存ログを再取得した。
+作業開始時の最新 main は `8803a3b01ef5932a246ead2f67f31b1438c768ac`。作業前に `AGENTS.md`、`research/knowledge/README.md`、K0023、K0863、K0865、K0868、およびcost73kのclaim・census v7・concurrent-session record・既存ログを再取得した。
 
 - canonical claim: `class2-lane-cost73k-inflight-20261117.json`、Git blob `a24d3557ef23a279cc08c2d578e420f676f28f05`（commit `a0987c37`）
 - census v7: Git blob `68246f3263fe6cbb49ffafa866f73b49cf3c2ebb`（commit `bdd394a9`）
