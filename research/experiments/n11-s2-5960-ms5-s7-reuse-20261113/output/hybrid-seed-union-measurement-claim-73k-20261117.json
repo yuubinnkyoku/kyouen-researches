@@ -1,0 +1,25 @@
+{
+  "schema": "n11-class2-lane-hybrid-seed-union-measurement-claim-73k-20261117-v1",
+  "date": "2026-11-17",
+  "lane": "n11 class2-lane long-term (cost73k)",
+  "status": "CLAIMED_IN_PROGRESS",
+  "claim": "Execute the next_measurement stages of the published hybrid seed union design (DESIGN_DERIVED_NOT_MEASURED) in this session.",
+  "base_head": "9b7a0a1d9e61124a61f7eb8bfa32467de43d5a53",
+  "design_pins": {
+    "design_json_git_blob": "8ec64f21b60b378595a749fc941f2232e0db5c21",
+    "design_log_path": "research/log/2026-11-17-n11-class2-lane-hybrid-seed-union-design-73k.md",
+    "boundary_4way_measurement_git_blob": "b97c9334f04f98f6ba7bb8a4c8b1de9689810d5e",
+    "boundary_4way_orchestrator_git_blob": "5ac1e3c0ec47ec3f9ae63ed709362feb5a1df213"
+  },
+  "planned_stages": [
+    "reconstruct boundary 4-way workers W0..W3 and published 2-way workers A/B from pinned blobs",
+    "rebuild FINAL4 (4,975,265 keys) and 2-way seed (4,291,899 keys), reproduce published md5s",
+    "extract the 262 only-in-2way records, pin their keys and count",
+    "build hybrid seed (FINAL4 order preserved + 262 appended, single KYOENWM2 header)",
+    "sim prediction with light_sim_seed_73k.mjs at MS=1<<25",
+    "engine seedrun MS=1<<25, record identity, conflict 0, certs 22/22 byte identity gate",
+    "per-bit node comparison vs boundary-only and node-balanced 4-way seeds"
+  ],
+  "batches_run": 0,
+  "interpretation_guard": "Claim only. No measurement values yet. No new WIN/LOSS verdicts, no certificate byte changes, no manifest closures. Standard 11x11 remains UNKNOWN."
+}
