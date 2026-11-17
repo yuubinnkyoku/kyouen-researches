@@ -2,7 +2,7 @@
  "schema": "n11-class2-lane-fixb-worker-split8-merge-73k-claim-20261117-v1",
  "date": "2026-11-17",
  "lane": "n11 class2-lane long-term (cost73k)",
- "status": "CLAIMED_IN_PROGRESS",
+ "status": "COMPLETED",
  "claim": "Measure the fixB engine (both K0907 memo bugs fixed) in the K0909 8-way worker-split merge configuration: DP min-max 8-way split of the fixB band ms23 per-bit node counts, 8 fresh workers at MS=1<<23 with band-carried memo, KYOENWM1 dump census, 8-way heapq merge with live-bound conflict detection, sim MS sweep, and the MS=1<<25 design-point seedrun, in this session.",
  "base_head": "2ead47becd696e38c4b9bfe7372c41ddc8c8d508",
  "design_pins": {
@@ -23,9 +23,10 @@
   "MS=1<<25 design-point seedrun (all 22 bits): seed failures vs sim prediction, record-identity gate, certificates 22/22 byte-identical, node totals vs the fixB 2-way seedrun25 and the published verbatim 8-way seedrun25",
   "band-table vs 8-way-merged-table set comparison (merge non-closure under fixB at N=8)"
  ],
- "batches_run": 0,
- "non_overlap": "The published verbatim 8-way measurement (b8c76a4d/175048ff), the completed fixB 2-way measurement (dcfdcb25 claim, published d3060c8e/2ead47be), the cost75f sweep and all other parallel-session claims are NOT touched; this claim is the fixB engine 8-way extension only. fixB adoption as a production extractor remains a separate lane decision; this work is measurement only.",
- "interpretation_guard": "Claim in progress; no measurement batches completed yet. No new WIN/LOSS verdicts, no certificate byte changes, no manifest closures. Standard 11x11 remains UNKNOWN.",
- "session_note": "Executed in the agent execution environment (Node 22.20.0, Python 3.12.14). All inputs rebuilt from pinned blobs; long jobs run fully detached via setsid (the process-group-kill workaround established in the fixB 2-way session).",
- "last_checked_main": "2ead47becd696e38c4b9bfe7372c41ddc8c8d508"
+ "batches_run": 8,
+ "non_overlap": "The published verbatim 8-way measurement (b8c76a4d/175048ff), the published verbatim 16-way measurement (c3d9c918 claim), the completed fixB 2-way measurement (dcfdcb25 claim, published d3060c8e/2ead47be), the cost75f sweep and all other parallel-session claims are NOT touched; this claim is the fixB engine 8-way extension only. fixB adoption as a production extractor remains a separate lane decision; this work is measurement only.",
+ "interpretation_guard": "Measurement completed. No new WIN/LOSS verdicts, no certificate byte changes, no manifest row opened or closed. The repo-verbatim extractor stays unmodified; fixB adoption as a production extractor remains a separate lane decision. Standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60} and classes 1/2/4 all remain UNKNOWN.",
+ "session_note": "Executed in the agent execution environment (Node 22.20.0, Python 3.12.14). All inputs rebuilt from pinned blobs (extractor 52bcaf50, driver 2a95d952, legal 8e97082c, manifest 0892aed0, all re-verified byte-identical after the reset); long jobs run fully detached via setsid (the process-group-kill workaround established in the fixB 2-way session).",
+ "last_checked_main": "867a131cc546b2702cbeccd6f1986329b04a6e77",
+ "headline": "fixB 8-way workers 27,878,487 nodes (fixB 2-way ratio 1.0015: the finer split worker gain vanishes under fixB); live-bound 8-way merge occupied_after 5,773,620 keys, incidence 8 = 0, conflicts 0, deterministic; design-point MS=1<<25 seedrun 5,235,505 nodes with seed failures 10,842 == sim prediction exactly (record identity closed, 22/22 byte-identical; 0.872 of the fixB 2-way seedrun25 and 0.0742 = 13.5x cheaper than the best verbatim configuration, the cheapest measured band run across engines and splits; the 0.1878% rate fails the <0.1% MS=1<<25 pre-gate as the published knee design predicts, MS=1<<26 design point carried by the simulator); band vs 8-way merged table: only_in_band 48 (down from 677), only_in_merged 745,215, zero conflicts. Executed twice in full: the first run was lost to an execution-environment reset right before publication; the second run from re-verified pinned inputs reproduced every number exactly (cross-environment determinism replication), and the published script/JSON are from the second run."
 }

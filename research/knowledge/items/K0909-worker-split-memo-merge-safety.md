@@ -76,6 +76,12 @@ artifacts:
   - path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/worker-split16-memo-merge-73k-20261117.json
     role: data
     note: 16-way測定JSON（15/15 gate合格・worker合計108,802,603 nodes・merge 5,404,082 keys・seedrun25 68,006,820 nodes・seed失敗2,285==sim予測）
+  - path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/measure_worker_split8_fixb_memo_merge_73k_20261117.py
+    role: verifier
+    note: fixB 8-way worker分割merge測定オーケストレータ（band23 per-bit DP min-max 8分割・V1=band23プレフィックス・8-way merge-join・sim MS掃引・設計点ms25 seedrun・band表vs merged表比較・全gate判定）
+  - path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/fixb-worker-split8-memo-merge-73k-20261117.json
+    role: data
+    note: fixB 8-way測定JSON（workers 27,878,487 nodes・merge 5,773,620 keys・衝突0・incidence 8は0・seed失敗10,842==sim予測・seedrun25 5,235,505 nodes・record恒等式閉包）
 ---
 
 # K0909: worker分割メモmergeの安全性（cost73kバンド・verbatim engine）
@@ -426,3 +432,20 @@ claim `class2-lane-worker-split16-merge-73k-claim-20261117.json`・
    適用範囲がN=16まで拡張された。
 
 勝敗変更なし・manifest行は1行も閉じず・証明書bytes不変・repo-verbatim extractorはrepo上未修正・11×11はUNKNOWN。
+
+## fixBエンジンでの8-way worker分割memo merge測定（2026-11-17追記7・測定のみ）
+
+fixBでの2-way測定（追記5）を出版verbatim 8-way構成（追記4）に対応する8-worker構成に拡張した（`measure_worker_split8_fixb_memo_merge_73k_20261117.py`・測定JSON `fixb-worker-split8-memo-merge-73k-20261117.json`・log `2026-11-17-n11-class2-lane-fixb-worker-split8-memo-merge-73k.md`・claim 7dca832c）。22 band bitをfixB band ms23 per-bitノード数のDP min-max（min-max値4,168,242）で連続8分割し、V1=band23プレフィックスアンカー、他7 workerはfreshプロセス・MS=1<<23・band内共有。orchestratorは出版fixB 2-wayモジュールをimportlibで再利用し新規実装は8-way merge-joinのみ。並走verbatim 16-way・cost78c claimとは別軸:
+
+1. **8-way workers**: 合計**27,878,487 nodes**（v1 3,679,556 + v2 4,572,322 + v3 4,612,979 + v4 2,844,107 + v5 2,126,338 + v6 4,090,605 + v7 4,067,668 + v8 1,884,912）。fixB band23比0.9741・**fixB 2-way 27,837,399比1.0015**・verbatim 8-way比0.2520。**fixBでは8-way細分割のworker利得が消滅する**（verbatimでは8-wayは2-way比0.9223で利得があった）。K0907 bug A/Bが後半bit汚染を介した分割利得の主因だったことを裏付ける。V1はper-bit・占有率ともband23プレフィックスと完全一致、V2〜V8先頭bitはfixB fresh battery anchorと完全一致、全worker証明書byte同一。
+2. **重複キーcensus**: 8 dumpすべてでrecords == distinct（dup_keys=0・max_copies=1）。live bound被覆はnowin 11-12%・nolose 39-40%・win_and_lose=0・all_unbound=0。
+3. **live bound 8-way merge**: shared 2,270,338・occupied_after **5,773,620**（fixB 2-way 5,479,157の1.0537倍）・incidence {1: 3,503,282, 2: 1,672,101, 3: 493,437, 4: 95,044, 5: 9,342, 6: 409, 7: 5, **8: 0**}（全8 worker共有キーは存在しない）・内部/cross衝突0・決定的（md5 aa1adb87…、2回実行で同一）。
+4. **sim MS掃引**: 1<<24→151,445（2.623%・load 0.3351）・1<<25→10,842（0.1878%・load 0.1717）・1<<26→92（1.59e-5・load 0.0860）。
+5. **設計点 MS=1<<25 seedrun**: **5,235,505 nodes**・seed失敗10,842 == sim予測完全一致・record恒等式閉包（present 5,762,778 == inserted・missing == failed・違反0）・証明書22/22 byte同一・占有率5,853,231。fixB 2-way seedrun25 6,005,236比**0.872**・**verbatim最良8-way seedrun25 70,538,916比0.0742 = 13.5倍安い**でエンジン・分割構成横断の測定済み最安band実行（追記5の記録を更新）。sim==engine完全一致は5.77M-key seed領域まで拡張。0.1%事前gate不成立（0.1878%）は出版knee設計のとおりで、正しい設計点はMS=1<<26（sim予測92失敗・engineはcgroup内で1<<26不可のためsimが担う、は出版済み記述どおり）。失敗は性能のみで健全性に無影響。
+6. **band表 vs 8-way merged表**: shared 5,028,405・only_in_band **48**（2-wayの677から縮小・band表の0.00095%）・only_in_merged 745,215（2-wayの451,381の1.65倍）・共有キー値矛盾0。8-way unionはband表を実質覆いつつ745,215 keysの新規領域を加える。merge表はband表のsupersetではないという結論（追記4・5）はN=8でも修正されない。
+
+**解釈**: fixBでは「worker合計は2-way比1.0015で増えないが、unionは+5.4%拡大しseedrun25は0.872に下がる」という非自明なトレードオフが成立する。細分割はworkerコスト削減ではなくseed充実（union拡大）の手段として機能し、seedrun段階で回収される。coordinator設計では、worker数の選択はseed容量とkneeの距離とセットで評価すべきである。
+
+**再現実験の記録**: 本測定は同一セッション内で2回完全実行された。1回目は全gate検証まで完走した後、出版push直前の実行環境リセットでworkdir・成果物・出版編集を喪失した。入力をrepoのpin済み blobから再構築（extractor 52bcaf50・driver 2a95d952・legal 8e97082c・manifest 0892aed0すべてblob同一を再検証）して2回目を完全実行し、workers・merge・sim・seedrun25・record恒等式・band_vs_merged8の全数値が1回目の記録値と完全一致した。出版されたscript・JSONは2回目の実行によるものであり、同時に環境リセットを跨ぐ決定性の実証例となる（全アームの決定的実行・証明書byte同一・gate同一）。
+
+勝敗変更なし・manifest行は閉じず・証明書bytes不変・repo-verbatim extractorはrepo上未修正・fixBの本番採用は別レーン判断・11×11はUNKNOWN。
