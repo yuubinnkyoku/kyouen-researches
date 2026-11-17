@@ -1,0 +1,3207 @@
+{
+ "all_ok": true,
+ "checks": [
+  {
+   "data": {
+    "committed": {
+     "r2": {
+      "index_contiguous": true,
+      "lines": 47595,
+      "sha256": "1fd9dbf4cb6699c26bab7f6b34a900f5877d3408603a02a2dd121ca71ef8e951"
+     },
+     "r3": {
+      "index_contiguous": true,
+      "lines": 47595,
+      "sha256": "ea7c66286f728a52d5696d627ce1faf7705e77f9e4222493221f3a4fe79ed134"
+     },
+     "r4": {
+      "index_contiguous": true,
+      "lines": 47595,
+      "sha256": "04caba43a7c0f7124db1ea81fcad4f170de04bd041699f6659e42f786e9a40b4"
+     },
+     "r5": {
+      "index_contiguous": true,
+      "lines": 47595,
+      "sha256": "c6dddad7a4ce39d3ebc8765187b0f16961720654918d74f54e608e12975ea693"
+     },
+     "r6": {
+      "index_contiguous": true,
+      "lines": 47595,
+      "sha256": "65f1cb32a9ecae6bd258056dfe8ab7c59d376d570f1d11c647b6823fd2467f1d"
+     },
+     "r7": {
+      "index_contiguous": true,
+      "lines": 47595,
+      "sha256": "50eb7c1ba41825dcbf726258cb2c6878a324d58bb17a708cb587d9d2b3b79c78"
+     },
+     "r8": {
+      "index_contiguous": true,
+      "lines": 47595,
+      "sha256": "0a884b490e28c281166754c1e82aaa73f7515580dea05b4ce023e8a1f079e8dc"
+     },
+     "r9": {
+      "index_contiguous": true,
+      "lines": 47595,
+      "sha256": "02e771cda84ae5178ee67a905cc9c2148e0c186790cf0562f569d9923110f32d"
+     }
+    },
+    "new": {
+     "d0_r11": {
+      "indices_unique": true,
+      "lines": 12,
+      "r": 11,
+      "sha256": "ec7001cfa110c522b661d8adbf7708a28fe98a06351ec3922ab46cc647db871c"
+     },
+     "ex12_r10": {
+      "indices_unique": true,
+      "lines": 20,
+      "r": 10,
+      "sha256": "bfc7fafee9e842db30094a15f1b310e04af8b119c408791acfc0c49d2af48708"
+     },
+     "ex12_r11": {
+      "indices_unique": true,
+      "lines": 20,
+      "r": 11,
+      "sha256": "b42cb9825983d8f2ea8b811777b51bdc268260bc69cc40e7283dd06cc059c35d"
+     },
+     "j13_anchor": {
+      "indices_unique": true,
+      "lines": 15,
+      "r": 13,
+      "sha256": "888e6397d9e7d1c9658d814618591e9721575935305c9396667a3b79433fa8a0"
+     },
+     "others11_r10": {
+      "indices_unique": true,
+      "lines": 222,
+      "r": 10,
+      "sha256": "bc5080e0952c22add374eddd8ef36c3ee98747322efc547a07c034bccf624cba"
+     },
+     "others12_r11": {
+      "indices_unique": true,
+      "lines": 332,
+      "r": 11,
+      "sha256": "26ee9f4515ac137bce29f3aaa03b8454347aa8cd414a74f393f920041b8671a6"
+     },
+     "r10_focus": {
+      "indices_unique": true,
+      "lines": 1619,
+      "r": 10,
+      "sha256": "3face607a59c559941bcb58d2b1bdaea05132c33a1af8a891ab254983a445ac1"
+     },
+     "r11_focus": {
+      "indices_unique": true,
+      "lines": 1619,
+      "r": 11,
+      "sha256": "8daa1cfa634af48a511fcfb1c9389eda03c05fd2deee501829caf99235c2daeb"
+     },
+     "r11_witness": {
+      "indices_unique": true,
+      "lines": 222,
+      "r": 11,
+      "sha256": "651ac851c4ea1326ae14e3da73154d4411fff66b03937c64af7f883c02a18ff3"
+     },
+     "r12_d0anchor": {
+      "indices_unique": true,
+      "lines": 12,
+      "r": 12,
+      "sha256": "2ff4dc5cc56c8beb2509371c231553b001894f7795372f58e1c8e26786ebc5f6"
+     },
+     "r12_witness": {
+      "indices_unique": true,
+      "lines": 352,
+      "r": 12,
+      "sha256": "73b9b0a0c59ca0f58dc12ebc9ee396b57ae72c7a4c1632486868565657cd6fe4"
+     }
+    }
+   },
+   "name": "PIN: 8 committed + 11 new columns sha256/shape",
+   "ok": true
+  },
+  {
+   "data": {
+    "fix": [
+     261749,
+     7805,
+     203
+    ],
+    "keys": 1365,
+    "new_keys": 650,
+    "new_profiles": 31732,
+    "orbits": 47595
+   },
+   "name": "B: Burnside cap12 (261749,7805,203)->47595 orbits; 1365 keys / 650 new keys / 31732 new profiles",
+   "ok": true
+  },
+  {
+   "data": {
+    "delta0": 23,
+    "exotic11": 2,
+    "exotic12": 20,
+    "others11": 222,
+    "others12": 332,
+    "prime_non_delta0": 51
+   },
+   "name": "TAX: 650 = 23 d0 + 51 prime-nD0 + 2 exotic11 + 20 exotic12 + 222 others11 + 332 others12",
+   "ok": true
+  },
+  {
+   "data": {
+    "exotic11_profiles": 12,
+    "keys": 64,
+    "prime11_profiles": 1607
+   },
+   "name": "FOC: r=11/r=10 focus columns cover ALL profiles of the 64 keys (1619 = 1607 prime-11 + 12 exotic11)",
+   "ok": true
+  },
+  {
+   "data": {
+    "chain_survivor": 1,
+    "chain_survivors": {
+     "11,11,11|0": [
+      1
+     ],
+     "11,11,11|1": [
+      1
+     ],
+     "11,11,11|10": [
+      1
+     ],
+     "11,11,11|2": [
+      1
+     ],
+     "11,11,11|3": [
+      1
+     ],
+     "11,11,11|4": [
+      1
+     ],
+     "11,11,11|5": [
+      1
+     ],
+     "11,11,11|6": [
+      1
+     ],
+     "11,11,11|7": [
+      1
+     ],
+     "11,11,11|8": [
+      1
+     ],
+     "11,11,11|9": [
+      1
+     ],
+     "2,11,11|0": [
+      1
+     ],
+     "2,11,11|1": [
+      1
+     ],
+     "2,2,11|0": [
+      1
+     ],
+     "2,2,11|1": [
+      1
+     ],
+     "2,3,11|0": [
+      1
+     ],
+     "2,3,11|1": [
+      1
+     ],
+     "2,5,11|0": [
+      1
+     ],
+     "2,5,11|1": [
+      1
+     ],
+     "2,7,11|0": [
+      1
+     ],
+     "2,7,11|1": [
+      1
+     ],
+     "3,11,11|0": [
+      1
+     ],
+     "3,11,11|1": [
+      1
+     ],
+     "3,11,11|2": [
+      1
+     ],
+     "3,3,11|0": [
+      1
+     ],
+     "3,3,11|1": [
+      1
+     ],
+     "3,3,11|2": [
+      1
+     ],
+     "3,5,11|0": [
+      1
+     ],
+     "3,5,11|1": [
+      1
+     ],
+     "3,5,11|2": [
+      1
+     ],
+     "3,7,11|0": [
+      1
+     ],
+     "3,7,11|1": [
+      1
+     ],
+     "3,7,11|2": [
+      1
+     ],
+     "5,11,11|0": [
+      1
+     ],
+     "5,11,11|1": [
+      1
+     ],
+     "5,11,11|2": [
+      1
+     ],
+     "5,11,11|3": [
+      1
+     ],
+     "5,11,11|4": [
+      1
+     ],
+     "5,5,11|0": [
+      1
+     ],
+     "5,5,11|1": [
+      1
+     ],
+     "5,5,11|2": [
+      1
+     ],
+     "5,5,11|3": [
+      1
+     ],
+     "5,5,11|4": [
+      1
+     ],
+     "5,7,11|0": [
+      1
+     ],
+     "5,7,11|1": [
+      1
+     ],
+     "5,7,11|2": [
+      1
+     ],
+     "5,7,11|3": [
+      1
+     ],
+     "5,7,11|4": [
+      1
+     ],
+     "7,11,11|0": [
+      1
+     ],
+     "7,11,11|1": [
+      1
+     ],
+     "7,11,11|2": [
+      1
+     ],
+     "7,11,11|3": [
+      1
+     ],
+     "7,11,11|4": [
+      1
+     ],
+     "7,11,11|5": [
+      1
+     ],
+     "7,11,11|6": [
+      1
+     ],
+     "7,7,11|0": [
+      1
+     ],
+     "7,7,11|1": [
+      1
+     ],
+     "7,7,11|2": [
+      1
+     ],
+     "7,7,11|3": [
+      1
+     ],
+     "7,7,11|4": [
+      1
+     ],
+     "7,7,11|5": [
+      1
+     ],
+     "7,7,11|6": [
+      1
+     ]
+    },
+    "profile_survivor_mismatches": 0,
+    "uniform_det_keys": 62
+   },
+   "name": "S1: 62 prime-11 keys (incl (11,11,11)xG) UNIFORM_DET at r=11 with chain survivor P_1 (G' finite anchor)",
+   "ok": true
+  },
+  {
+   "data": {
+    "keys": [
+     "1,11,11|0",
+     "1,1,11|0"
+    ],
+    "sv_masks": [
+     3
+    ]
+   },
+   "name": "S2: exotic11 (1,1,11)|0,(1,11,11)|0 UNIFORM_NDET at r=11 (sv mask 0b11)",
+   "ok": true
+  },
+  {
+   "data": {
+    "det10": 13,
+    "mixed10": 0,
+    "ndet10": 51
+   },
+   "name": "O1: r=10 focus = 13 uniform-det (11 d0_11 + 2 exotic11) / 51 uniform-ndet (prime-11 dormant) / 0 mixed",
+   "ok": true
+  },
+  {
+   "data": {
+    "det_columns_r2_r10": 9,
+    "family": "(1,1,p),(1,p,p) p in {3,5,7} (K0916) + p=11",
+    "profiles": 12,
+    "violations": 0
+   },
+   "name": "EX11: exotic11 deceptive window r=2..10 (12 profiles x 9 columns all det), flip to uniform-ndet exactly at r=M=11; deception family extends to p=11 (6->8 keys)",
+   "ok": true
+  },
+  {
+   "data": {
+    "ndet_by_r": {
+     "r10": 1271,
+     "r2": 90,
+     "r3": 273,
+     "r4": 273,
+     "r5": 704,
+     "r6": 704,
+     "r7": 1271,
+     "r8": 1271,
+     "r9": 1271
+    },
+    "profiles": 1271
+   },
+   "name": "P11: prime-11 dormancy is graded below M: mixed at r=2..6 (90/273/273/704/704 of 1271 ndet), uniform-ndet at r=7..10, uniform-det at r=11=M (onset at M)",
+   "ok": true
+  },
+  {
+   "data": {
+    "profile_columns": 6944,
+    "violations": 0
+   },
+   "name": "D0C: Delta=0 profiles det with Theorem-D survivor on committed r=2..9 (both (11,11,11) and (12,12,12)) and focus r=10/r=11 ((11,11,11))",
+   "ok": true
+  },
+  {
+   "data": {
+    "anchors": 24,
+    "r11_survivor": 10,
+    "r12_survivor": 11
+   },
+   "name": "D0: (12,12,12)xG=0..11 cheapest anchors det with Theorem-D survivor P_11 at r=12 / P_10 at r=11 (full uniformity of Delta=0 rests on Theorem D, universal)",
+   "ok": true
+  },
+  {
+   "data": {
+    "committed_violations": 0,
+    "keys": 20,
+    "profiles": 1425,
+    "r10_det": 20,
+    "r11_ndet": 20,
+    "r12_ndet": 20
+   },
+   "name": "EX12: exotic12 (10,10,12),(10,12,12)xG=0..9: all 1425 profiles det on committed r=2..9; cheapest det at r=10; cheapest NON-det at r=11 (=M-1, sub-window flip) and r=12 (=M, dichotomy side)",
+   "ok": true
+  },
+  {
+   "data": {
+    "r11_ndet": 222,
+    "r12_ndet": 352,
+    "selection_violations": 0
+   },
+   "name": "N1/N2: witness scans r=12 (352 = 20 exotic12 + 332 others12) and r=11 (222 others11): every witness NON-det and every witness IS the cheapest profile (states@r9 asc, canon tiebreak) re-derived from the committed r=9 column",
+   "ok": true
+  },
+  {
+   "data": {
+    "covered": 650,
+    "gamma_mixed_multisets": 0,
+    "multisets": 144
+   },
+   "name": "C1: 64 focus + 222 + 352 + 12 anchor keys == 650 distinct new keys exactly; fixed-point status is gamma-independent (144 multisets, 0 mixed)",
+   "ok": true
+  },
+  {
+   "data": {
+    "both_direction_violations": 0,
+    "det_keys": [
+     {
+      "class": "delta0",
+      "key": "11,11,11|0",
+      "survivor": 1
+     },
+     {
+      "class": "delta0",
+      "key": "11,11,11|1",
+      "survivor": 1
+     },
+     {
+      "class": "delta0",
+      "key": "11,11,11|10",
+      "survivor": 1
+     },
+     {
+      "class": "delta0",
+      "key": "11,11,11|2",
+      "survivor": 1
+     },
+     {
+      "class": "delta0",
+      "key": "11,11,11|3",
+      "survivor": 1
+     },
+     {
+      "class": "delta0",
+      "key": "11,11,11|4",
+      "survivor": 1
+     },
+     {
+      "class": "delta0",
+      "key": "11,11,11|5",
+      "survivor": 1
+     },
+     {
+      "class": "delta0",
+      "key": "11,11,11|6",
+      "survivor": 1
+     },
+     {
+      "class": "delta0",
+      "key": "11,11,11|7",
+      "survivor": 1
+     },
+     {
+      "class": "delta0",
+      "key": "11,11,11|8",
+      "survivor": 1
+     },
+     {
+      "class": "delta0",
+      "key": "11,11,11|9",
+      "survivor": 1
+     },
+     {
+      "class": "delta0",
+      "key": "12,12,12|0",
+      "survivor": 11
+     },
+     {
+      "class": "delta0",
+      "key": "12,12,12|1",
+      "survivor": 11
+     },
+     {
+      "class": "delta0",
+      "key": "12,12,12|10",
+      "survivor": 11
+     },
+     {
+      "class": "delta0",
+      "key": "12,12,12|11",
+      "survivor": 11
+     },
+     {
+      "class": "delta0",
+      "key": "12,12,12|2",
+      "survivor": 11
+     },
+     {
+      "class": "delta0",
+      "key": "12,12,12|3",
+      "survivor": 11
+     },
+     {
+      "class": "delta0",
+      "key": "12,12,12|4",
+      "survivor": 11
+     },
+     {
+      "class": "delta0",
+      "key": "12,12,12|5",
+      "survivor": 11
+     },
+     {
+      "class": "delta0",
+      "key": "12,12,12|6",
+      "survivor": 11
+     },
+     {
+      "class": "delta0",
+      "key": "12,12,12|7",
+      "survivor": 11
+     },
+     {
+      "class": "delta0",
+      "key": "12,12,12|8",
+      "survivor": 11
+     },
+     {
+      "class": "delta0",
+      "key": "12,12,12|9",
+      "survivor": 11
+     },
+     {
+      "class": "prime",
+      "key": "2,11,11|0",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "2,11,11|1",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "2,2,11|0",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "2,2,11|1",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "2,3,11|0",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "2,3,11|1",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "2,5,11|0",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "2,5,11|1",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "2,7,11|0",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "2,7,11|1",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "3,11,11|0",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "3,11,11|1",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "3,11,11|2",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "3,3,11|0",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "3,3,11|1",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "3,3,11|2",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "3,5,11|0",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "3,5,11|1",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "3,5,11|2",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "3,7,11|0",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "3,7,11|1",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "3,7,11|2",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "5,11,11|0",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "5,11,11|1",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "5,11,11|2",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "5,11,11|3",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "5,11,11|4",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "5,5,11|0",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "5,5,11|1",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "5,5,11|2",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "5,5,11|3",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "5,5,11|4",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "5,7,11|0",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "5,7,11|1",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "5,7,11|2",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "5,7,11|3",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "5,7,11|4",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "7,11,11|0",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "7,11,11|1",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "7,11,11|2",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "7,11,11|3",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "7,11,11|4",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "7,11,11|5",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "7,11,11|6",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "7,7,11|0",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "7,7,11|1",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "7,7,11|2",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "7,7,11|3",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "7,7,11|4",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "7,7,11|5",
+      "survivor": 1
+     },
+     {
+      "class": "prime",
+      "key": "7,7,11|6",
+      "survivor": 1
+     }
+    ],
+    "det_new": 74,
+    "ndet_new": 576,
+    "ndet_witnesses": [
+     {
+      "key": "1,1,11|0",
+      "witness_canon": 4469
+     },
+     {
+      "key": "1,1,12|0",
+      "witness_canon": 4503
+     },
+     {
+      "key": "1,10,11|0",
+      "witness_canon": 19509
+     },
+     {
+      "key": "1,10,12|0",
+      "witness_canon": 19519
+     },
+     {
+      "key": "1,11,11|0",
+      "witness_canon": 75
+     },
+     {
+      "key": "1,11,12|0",
+      "witness_canon": 19527
+     },
+     {
+      "key": "1,12,12|0",
+      "witness_canon": 19529
+     },
+     {
+      "key": "1,2,11|0",
+      "witness_canon": 10083
+     },
+     {
+      "key": "1,2,12|0",
+      "witness_canon": 10125
+     },
+     {
+      "key": "1,3,11|0",
+      "witness_canon": 13923
+     },
+     {
+      "key": "1,3,12|0",
+      "witness_canon": 13961
+     },
+     {
+      "key": "1,4,11|0",
+      "witness_canon": 16399
+     },
+     {
+      "key": "1,4,12|0",
+      "witness_canon": 16433
+     },
+     {
+      "key": "1,5,11|0",
+      "witness_canon": 17897
+     },
+     {
+      "key": "1,5,12|0",
+      "witness_canon": 17927
+     },
+     {
+      "key": "1,6,11|0",
+      "witness_canon": 18741
+     },
+     {
+      "key": "1,6,12|0",
+      "witness_canon": 18767
+     },
+     {
+      "key": "1,7,11|0",
+      "witness_canon": 19180
+     },
+     {
+      "key": "1,7,12|0",
+      "witness_canon": 19202
+     },
+     {
+      "key": "1,8,11|0",
+      "witness_canon": 19388
+     },
+     {
+      "key": "1,8,12|0",
+      "witness_canon": 19406
+     },
+     {
+      "key": "1,9,11|0",
+      "witness_canon": 19476
+     },
+     {
+      "key": "1,9,12|0",
+      "witness_canon": 19490
+     },
+     {
+      "key": "10,10,11|0",
+      "witness_canon": 47570
+     },
+     {
+      "key": "10,10,11|1",
+      "witness_canon": 47495
+     },
+     {
+      "key": "10,10,11|2",
+      "witness_canon": 47281
+     },
+     {
+      "key": "10,10,11|3",
+      "witness_canon": 46760
+     },
+     {
+      "key": "10,10,11|4",
+      "witness_canon": 45631
+     },
+     {
+      "key": "10,10,11|5",
+      "witness_canon": 43390
+     },
+     {
+      "key": "10,10,11|6",
+      "witness_canon": 39241
+     },
+     {
+      "key": "10,10,11|7",
+      "witness_canon": 31984
+     },
+     {
+      "key": "10,10,11|8",
+      "witness_canon": 19874
+     },
+     {
+      "key": "10,10,11|9",
+      "witness_canon": 457
+     },
+     {
+      "key": "10,10,12|0",
+      "witness_canon": 47577
+     },
+     {
+      "key": "10,10,12|1",
+      "witness_canon": 47514
+     },
+     {
+      "key": "10,10,12|2",
+      "witness_canon": 47321
+     },
+     {
+      "key": "10,10,12|3",
+      "witness_canon": 46836
+     },
+     {
+      "key": "10,10,12|4",
+      "witness_canon": 45761
+     },
+     {
+      "key": "10,10,12|5",
+      "witness_canon": 43600
+     },
+     {
+      "key": "10,10,12|6",
+      "witness_canon": 39561
+     },
+     {
+      "key": "10,10,12|7",
+      "witness_canon": 32454
+     },
+     {
+      "key": "10,10,12|8",
+      "witness_canon": 20539
+     },
+     {
+      "key": "10,10,12|9",
+      "witness_canon": 1374
+     },
+     {
+      "key": "10,11,11|0",
+      "witness_canon": 47580
+     },
+     {
+      "key": "10,11,11|1",
+      "witness_canon": 47528
+     },
+     {
+      "key": "10,11,11|2",
+      "witness_canon": 47365
+     },
+     {
+      "key": "10,11,11|3",
+      "witness_canon": 46944
+     },
+     {
+      "key": "10,11,11|4",
+      "witness_canon": 45991
+     },
+     {
+      "key": "10,11,11|5",
+      "witness_canon": 44040
+     },
+     {
+      "key": "10,11,11|6",
+      "witness_canon": 40341
+     },
+     {
+      "key": "10,11,11|7",
+      "witness_canon": 33754
+     },
+     {
+      "key": "10,11,11|8",
+      "witness_canon": 22604
+     },
+     {
+      "key": "10,11,11|9",
+      "witness_canon": 4524
+     },
+     {
+      "key": "10,11,12|0",
+      "witness_canon": 47585
+     },
+     {
+      "key": "10,11,12|1",
+      "witness_canon": 47542
+     },
+     {
+      "key": "10,11,12|2",
+      "witness_canon": 47397
+     },
+     {
+      "key": "10,11,12|3",
+      "witness_canon": 47006
+     },
+     {
+      "key": "10,11,12|4",
+      "witness_canon": 46101
+     },
+     {
+      "key": "10,11,12|5",
+      "witness_canon": 44220
+     },
+     {
+      "key": "10,11,12|6",
+      "witness_canon": 40621
+     },
+     {
+      "key": "10,11,12|7",
+      "witness_canon": 34169
+     },
+     {
+      "key": "10,11,12|8",
+      "witness_canon": 23199
+     },
+     {
+      "key": "10,11,12|9",
+      "witness_canon": 5350
+     },
+     {
+      "key": "10,12,12|0",
+      "witness_canon": 47587
+     },
+     {
+      "key": "10,12,12|1",
+      "witness_canon": 47555
+     },
+     {
+      "key": "10,12,12|2",
+      "witness_canon": 47444
+     },
+     {
+      "key": "10,12,12|3",
+      "witness_canon": 47134
+     },
+     {
+      "key": "10,12,12|4",
+      "witness_canon": 46393
+     },
+     {
+      "key": "10,12,12|5",
+      "witness_canon": 44810
+     },
+     {
+      "key": "10,12,12|6",
+      "witness_canon": 41711
+     },
+     {
+      "key": "10,12,12|7",
+      "witness_canon": 36049
+     },
+     {
+      "key": "10,12,12|8",
+      "witness_canon": 26269
+     },
+     {
+      "key": "10,12,12|9",
+      "witness_canon": 10145
+     },
+     {
+      "key": "11,11,12|0",
+      "witness_canon": 47591
+     },
+     {
+      "key": "11,11,12|1",
+      "witness_canon": 47571
+     },
+     {
+      "key": "11,11,12|10",
+      "witness_canon": 458
+     },
+     {
+      "key": "11,11,12|2",
+      "witness_canon": 47496
+     },
+     {
+      "key": "11,11,12|3",
+      "witness_canon": 47282
+     },
+     {
+      "key": "11,11,12|4",
+      "witness_canon": 46761
+     },
+     {
+      "key": "11,11,12|5",
+      "witness_canon": 45632
+     },
+     {
+      "key": "11,11,12|6",
+      "witness_canon": 43391
+     },
+     {
+      "key": "11,11,12|7",
+      "witness_canon": 39242
+     },
+     {
+      "key": "11,11,12|8",
+      "witness_canon": 31985
+     },
+     {
+      "key": "11,11,12|9",
+      "witness_canon": 19875
+     },
+     {
+      "key": "11,12,12|0",
+      "witness_canon": 47593
+     },
+     {
+      "key": "11,12,12|1",
+      "witness_canon": 47581
+     },
+     {
+      "key": "11,12,12|10",
+      "witness_canon": 4525
+     },
+     {
+      "key": "11,12,12|2",
+      "witness_canon": 47529
+     },
+     {
+      "key": "11,12,12|3",
+      "witness_canon": 47366
+     },
+     {
+      "key": "11,12,12|4",
+      "witness_canon": 46945
+     },
+     {
+      "key": "11,12,12|5",
+      "witness_canon": 45992
+     },
+     {
+      "key": "11,12,12|6",
+      "witness_canon": 44041
+     },
+     {
+      "key": "11,12,12|7",
+      "witness_canon": 40342
+     },
+     {
+      "key": "11,12,12|8",
+      "witness_canon": 33755
+     },
+     {
+      "key": "11,12,12|9",
+      "witness_canon": 22605
+     },
+     {
+      "key": "2,10,11|0",
+      "witness_canon": 31711
+     },
+     {
+      "key": "2,10,11|1",
+      "witness_canon": 19447
+     },
+     {
+      "key": "2,10,12|0",
+      "witness_canon": 31721
+     },
+     {
+      "key": "2,10,12|1",
+      "witness_canon": 19477
+     },
+     {
+      "key": "2,11,12|0",
+      "witness_canon": 31729
+     },
+     {
+      "key": "2,11,12|1",
+      "witness_canon": 19510
+     },
+     {
+      "key": "2,12,12|0",
+      "witness_canon": 31731
+     },
+     {
+      "key": "2,12,12|1",
+      "witness_canon": 19523
+     },
+     {
+      "key": "2,2,12|0",
+      "witness_canon": 22585
+     },
+     {
+      "key": "2,2,12|1",
+      "witness_canon": 4470
+     },
+     {
+      "key": "2,3,12|0",
+      "witness_canon": 26251
+     },
+     {
+      "key": "2,3,12|1",
+      "witness_canon": 10084
+     },
+     {
+      "key": "2,4,11|0",
+      "witness_canon": 28623
+     },
+     {
+      "key": "2,4,11|1",
+      "witness_canon": 13834
+     },
+     {
+      "key": "2,4,12|0",
+      "witness_canon": 28657
+     },
+     {
+      "key": "2,4,12|1",
+      "witness_canon": 13924
+     },
+     {
+      "key": "2,5,12|0",
+      "witness_canon": 30132
+     },
+     {
+      "key": "2,5,12|1",
+      "witness_canon": 16400
+     },
+     {
+      "key": "2,6,11|0",
+      "witness_canon": 30943
+     },
+     {
+      "key": "2,6,11|1",
+      "witness_canon": 17828
+     },
+     {
+      "key": "2,6,12|0",
+      "witness_canon": 30969
+     },
+     {
+      "key": "2,6,12|1",
+      "witness_canon": 17898
+     },
+     {
+      "key": "2,7,12|0",
+      "witness_canon": 31404
+     },
+     {
+      "key": "2,7,12|1",
+      "witness_canon": 18742
+     },
+     {
+      "key": "2,8,11|0",
+      "witness_canon": 31590
+     },
+     {
+      "key": "2,8,11|1",
+      "witness_canon": 19131
+     },
+     {
+      "key": "2,8,12|0",
+      "witness_canon": 31608
+     },
+     {
+      "key": "2,8,12|1",
+      "witness_canon": 19181
+     },
+     {
+      "key": "2,9,11|0",
+      "witness_canon": 31678
+     },
+     {
+      "key": "2,9,11|1",
+      "witness_canon": 19349
+     },
+     {
+      "key": "2,9,12|0",
+      "witness_canon": 31692
+     },
+     {
+      "key": "2,9,12|1",
+      "witness_canon": 19389
+     },
+     {
+      "key": "3,10,11|0",
+      "witness_canon": 39039
+     },
+     {
+      "key": "3,10,11|1",
+      "witness_canon": 31649
+     },
+     {
+      "key": "3,10,11|2",
+      "witness_canon": 19280
+     },
+     {
+      "key": "3,10,12|0",
+      "witness_canon": 39049
+     },
+     {
+      "key": "3,10,12|1",
+      "witness_canon": 31679
+     },
+     {
+      "key": "3,10,12|2",
+      "witness_canon": 19350
+     },
+     {
+      "key": "3,11,12|0",
+      "witness_canon": 39057
+     },
+     {
+      "key": "3,11,12|1",
+      "witness_canon": 31712
+     },
+     {
+      "key": "3,11,12|2",
+      "witness_canon": 19448
+     },
+     {
+      "key": "3,12,12|0",
+      "witness_canon": 39059
+     },
+     {
+      "key": "3,12,12|1",
+      "witness_canon": 31725
+     },
+     {
+      "key": "3,12,12|2",
+      "witness_canon": 19496
+     },
+     {
+      "key": "3,3,12|0",
+      "witness_canon": 33737
+     },
+     {
+      "key": "3,3,12|1",
+      "witness_canon": 22555
+     },
+     {
+      "key": "3,3,12|2",
+      "witness_canon": 4396
+     },
+     {
+      "key": "3,4,11|0",
+      "witness_canon": 35999
+     },
+     {
+      "key": "3,4,11|1",
+      "witness_canon": 26125
+     },
+     {
+      "key": "3,4,11|2",
+      "witness_canon": 9800
+     },
+     {
+      "key": "3,4,12|0",
+      "witness_canon": 36033
+     },
+     {
+      "key": "3,4,12|1",
+      "witness_canon": 26214
+     },
+     {
+      "key": "3,4,12|2",
+      "witness_canon": 9986
+     },
+     {
+      "key": "3,5,12|0",
+      "witness_canon": 37470
+     },
+     {
+      "key": "3,5,12|1",
+      "witness_canon": 28624
+     },
+     {
+      "key": "3,5,12|2",
+      "witness_canon": 13835
+     },
+     {
+      "key": "3,6,11|0",
+      "witness_canon": 38272
+     },
+     {
+      "key": "3,6,11|1",
+      "witness_canon": 30033
+     },
+     {
+      "key": "3,6,11|2",
+      "witness_canon": 16171
+     },
+     {
+      "key": "3,6,12|0",
+      "witness_canon": 38298
+     },
+     {
+      "key": "3,6,12|1",
+      "witness_canon": 30103
+     },
+     {
+      "key": "3,6,12|2",
+      "witness_canon": 16321
+     },
+     {
+      "key": "3,7,12|0",
+      "witness_canon": 38732
+     },
+     {
+      "key": "3,7,12|1",
+      "witness_canon": 30944
+     },
+     {
+      "key": "3,7,12|2",
+      "witness_canon": 17829
+     },
+     {
+      "key": "3,8,11|0",
+      "witness_canon": 38918
+     },
+     {
+      "key": "3,8,11|1",
+      "witness_canon": 31333
+     },
+     {
+      "key": "3,8,11|2",
+      "witness_canon": 18573
+     },
+     {
+      "key": "3,8,12|0",
+      "witness_canon": 38936
+     },
+     {
+      "key": "3,8,12|1",
+      "witness_canon": 31383
+     },
+     {
+      "key": "3,8,12|2",
+      "witness_canon": 18683
+     },
+     {
+      "key": "3,9,11|0",
+      "witness_canon": 39006
+     },
+     {
+      "key": "3,9,11|1",
+      "witness_canon": 31551
+     },
+     {
+      "key": "3,9,11|2",
+      "witness_canon": 19042
+     },
+     {
+      "key": "3,9,12|0",
+      "witness_canon": 39020
+     },
+     {
+      "key": "3,9,12|1",
+      "witness_canon": 31591
+     },
+     {
+      "key": "3,9,12|2",
+      "witness_canon": 19132
+     },
+     {
+      "key": "4,10,11|0",
+      "witness_canon": 43244
+     },
+     {
+      "key": "4,10,11|1",
+      "witness_canon": 38977
+     },
+     {
+      "key": "4,10,11|2",
+      "witness_canon": 31482
+     },
+     {
+      "key": "4,10,11|3",
+      "witness_canon": 18903
+     },
+     {
+      "key": "4,10,12|0",
+      "witness_canon": 43254
+     },
+     {
+      "key": "4,10,12|1",
+      "witness_canon": 39007
+     },
+     {
+      "key": "4,10,12|2",
+      "witness_canon": 31552
+     },
+     {
+      "key": "4,10,12|3",
+      "witness_canon": 19043
+     },
+     {
+      "key": "4,11,11|0",
+      "witness_canon": 43257
+     },
+     {
+      "key": "4,11,11|1",
+      "witness_canon": 39025
+     },
+     {
+      "key": "4,11,11|2",
+      "witness_canon": 31615
+     },
+     {
+      "key": "4,11,11|3",
+      "witness_canon": 19211
+     },
+     {
+      "key": "4,11,12|0",
+      "witness_canon": 43262
+     },
+     {
+      "key": "4,11,12|1",
+      "witness_canon": 39040
+     },
+     {
+      "key": "4,11,12|2",
+      "witness_canon": 31650
+     },
+     {
+      "key": "4,11,12|3",
+      "witness_canon": 19281
+     },
+     {
+      "key": "4,12,12|0",
+      "witness_canon": 43264
+     },
+     {
+      "key": "4,12,12|1",
+      "witness_canon": 39053
+     },
+     {
+      "key": "4,12,12|2",
+      "witness_canon": 31698
+     },
+     {
+      "key": "4,12,12|3",
+      "witness_canon": 19414
+     },
+     {
+      "key": "4,4,11|0",
+      "witness_canon": 40301
+     },
+     {
+      "key": "4,4,11|1",
+      "witness_canon": 33649
+     },
+     {
+      "key": "4,4,11|2",
+      "witness_canon": 22370
+     },
+     {
+      "key": "4,4,11|3",
+      "witness_canon": 4058
+     },
+     {
+      "key": "4,4,12|0",
+      "witness_canon": 40326
+     },
+     {
+      "key": "4,4,12|1",
+      "witness_canon": 33710
+     },
+     {
+      "key": "4,4,12|2",
+      "witness_canon": 22488
+     },
+     {
+      "key": "4,4,12|3",
+      "witness_canon": 4266
+     },
+     {
+      "key": "4,5,11|0",
+      "witness_canon": 41667
+     },
+     {
+      "key": "4,5,11|1",
+      "witness_canon": 35921
+     },
+     {
+      "key": "4,5,11|2",
+      "witness_canon": 25960
+     },
+     {
+      "key": "4,5,11|3",
+      "witness_canon": 9497
+     },
+     {
+      "key": "4,5,12|0",
+      "witness_canon": 41697
+     },
+     {
+      "key": "4,5,12|1",
+      "witness_canon": 36000
+     },
+     {
+      "key": "4,5,12|2",
+      "witness_canon": 26126
+     },
+     {
+      "key": "4,5,12|3",
+      "witness_canon": 9801
+     },
+     {
+      "key": "4,6,11|0",
+      "witness_canon": 42480
+     },
+     {
+      "key": "4,6,11|1",
+      "witness_canon": 37371
+     },
+     {
+      "key": "4,6,11|2",
+      "witness_canon": 28396
+     },
+     {
+      "key": "4,6,11|3",
+      "witness_canon": 13391
+     },
+     {
+      "key": "4,6,12|0",
+      "witness_canon": 42506
+     },
+     {
+      "key": "4,6,12|1",
+      "witness_canon": 37441
+     },
+     {
+      "key": "4,6,12|2",
+      "witness_canon": 28545
+     },
+     {
+      "key": "4,6,12|3",
+      "witness_canon": 13667
+     },
+     {
+      "key": "4,7,11|0",
+      "witness_canon": 42915
+     },
+     {
+      "key": "4,7,11|1",
+      "witness_canon": 38213
+     },
+     {
+      "key": "4,7,11|2",
+      "witness_canon": 29904
+     },
+     {
+      "key": "4,7,11|3",
+      "witness_canon": 15928
+     },
+     {
+      "key": "4,7,12|0",
+      "witness_canon": 42937
+     },
+     {
+      "key": "4,7,12|1",
+      "witness_canon": 38273
+     },
+     {
+      "key": "4,7,12|2",
+      "witness_canon": 30034
+     },
+     {
+      "key": "4,7,12|3",
+      "witness_canon": 16172
+     },
+     {
+      "key": "4,8,11|0",
+      "witness_canon": 43123
+     },
+     {
+      "key": "4,8,11|1",
+      "witness_canon": 38661
+     },
+     {
+      "key": "4,8,11|2",
+      "witness_canon": 30775
+     },
+     {
+      "key": "4,8,11|3",
+      "witness_canon": 17490
+     },
+     {
+      "key": "4,8,12|0",
+      "witness_canon": 43141
+     },
+     {
+      "key": "4,8,12|1",
+      "witness_canon": 38711
+     },
+     {
+      "key": "4,8,12|2",
+      "witness_canon": 30885
+     },
+     {
+      "key": "4,8,12|3",
+      "witness_canon": 17700
+     },
+     {
+      "key": "4,9,11|0",
+      "witness_canon": 43211
+     },
+     {
+      "key": "4,9,11|1",
+      "witness_canon": 38879
+     },
+     {
+      "key": "4,9,11|2",
+      "witness_canon": 31244
+     },
+     {
+      "key": "4,9,11|3",
+      "witness_canon": 18399
+     },
+     {
+      "key": "4,9,12|0",
+      "witness_canon": 43225
+     },
+     {
+      "key": "4,9,12|1",
+      "witness_canon": 38919
+     },
+     {
+      "key": "4,9,12|2",
+      "witness_canon": 31334
+     },
+     {
+      "key": "4,9,12|3",
+      "witness_canon": 18574
+     },
+     {
+      "key": "5,10,11|0",
+      "witness_canon": 45526
+     },
+     {
+      "key": "5,10,11|1",
+      "witness_canon": 43182
+     },
+     {
+      "key": "5,10,11|2",
+      "witness_canon": 38810
+     },
+     {
+      "key": "5,10,11|3",
+      "witness_canon": 31105
+     },
+     {
+      "key": "5,10,11|4",
+      "witness_canon": 18148
+     },
+     {
+      "key": "5,10,12|0",
+      "witness_canon": 45536
+     },
+     {
+      "key": "5,10,12|1",
+      "witness_canon": 43212
+     },
+     {
+      "key": "5,10,12|2",
+      "witness_canon": 38880
+     },
+     {
+      "key": "5,10,12|3",
+      "witness_canon": 31245
+     },
+     {
+      "key": "5,10,12|4",
+      "witness_canon": 18400
+     },
+     {
+      "key": "5,11,12|0",
+      "witness_canon": 45544
+     },
+     {
+      "key": "5,11,12|1",
+      "witness_canon": 43245
+     },
+     {
+      "key": "5,11,12|2",
+      "witness_canon": 38978
+     },
+     {
+      "key": "5,11,12|3",
+      "witness_canon": 31483
+     },
+     {
+      "key": "5,11,12|4",
+      "witness_canon": 18904
+     },
+     {
+      "key": "5,12,12|0",
+      "witness_canon": 45546
+     },
+     {
+      "key": "5,12,12|1",
+      "witness_canon": 43258
+     },
+     {
+      "key": "5,12,12|2",
+      "witness_canon": 39026
+     },
+     {
+      "key": "5,12,12|3",
+      "witness_canon": 31616
+     },
+     {
+      "key": "5,12,12|4",
+      "witness_canon": 19212
+     },
+     {
+      "key": "5,5,12|0",
+      "witness_canon": 44027
+     },
+     {
+      "key": "5,5,12|1",
+      "witness_canon": 40302
+     },
+     {
+      "key": "5,5,12|2",
+      "witness_canon": 33650
+     },
+     {
+      "key": "5,5,12|3",
+      "witness_canon": 22371
+     },
+     {
+      "key": "5,5,12|4",
+      "witness_canon": 4059
+     },
+     {
+      "key": "5,6,11|0",
+      "witness_canon": 44772
+     },
+     {
+      "key": "5,6,11|1",
+      "witness_canon": 41599
+     },
+     {
+      "key": "5,6,11|2",
+      "witness_canon": 35776
+     },
+     {
+      "key": "5,6,11|3",
+      "witness_canon": 25692
+     },
+     {
+      "key": "5,6,11|4",
+      "witness_canon": 9046
+     },
+     {
+      "key": "5,6,12|0",
+      "witness_canon": 44798
+     },
+     {
+      "key": "5,6,12|1",
+      "witness_canon": 41668
+     },
+     {
+      "key": "5,6,12|2",
+      "witness_canon": 35922
+     },
+     {
+      "key": "5,6,12|3",
+      "witness_canon": 25961
+     },
+     {
+      "key": "5,6,12|4",
+      "witness_canon": 9498
+     },
+     {
+      "key": "5,7,12|0",
+      "witness_canon": 45220
+     },
+     {
+      "key": "5,7,12|1",
+      "witness_canon": 42481
+     },
+     {
+      "key": "5,7,12|2",
+      "witness_canon": 37372
+     },
+     {
+      "key": "5,7,12|3",
+      "witness_canon": 28397
+     },
+     {
+      "key": "5,7,12|4",
+      "witness_canon": 13392
+     },
+     {
+      "key": "5,8,11|0",
+      "witness_canon": 45405
+     },
+     {
+      "key": "5,8,11|1",
+      "witness_canon": 42866
+     },
+     {
+      "key": "5,8,11|2",
+      "witness_canon": 38104
+     },
+     {
+      "key": "5,8,11|3",
+      "witness_canon": 29696
+     },
+     {
+      "key": "5,8,11|4",
+      "witness_canon": 15569
+     },
+     {
+      "key": "5,8,12|0",
+      "witness_canon": 45423
+     },
+     {
+      "key": "5,8,12|1",
+      "witness_canon": 42916
+     },
+     {
+      "key": "5,8,12|2",
+      "witness_canon": 38214
+     },
+     {
+      "key": "5,8,12|3",
+      "witness_canon": 29905
+     },
+     {
+      "key": "5,8,12|4",
+      "witness_canon": 15929
+     },
+     {
+      "key": "5,9,11|0",
+      "witness_canon": 45493
+     },
+     {
+      "key": "5,9,11|1",
+      "witness_canon": 43084
+     },
+     {
+      "key": "5,9,11|2",
+      "witness_canon": 38572
+     },
+     {
+      "key": "5,9,11|3",
+      "witness_canon": 30601
+     },
+     {
+      "key": "5,9,11|4",
+      "witness_canon": 17184
+     },
+     {
+      "key": "5,9,12|0",
+      "witness_canon": 45507
+     },
+     {
+      "key": "5,9,12|1",
+      "witness_canon": 43124
+     },
+     {
+      "key": "5,9,12|2",
+      "witness_canon": 38662
+     },
+     {
+      "key": "5,9,12|3",
+      "witness_canon": 30776
+     },
+     {
+      "key": "5,9,12|4",
+      "witness_canon": 17491
+     },
+     {
+      "key": "6,10,11|0",
+      "witness_canon": 46686
+     },
+     {
+      "key": "6,10,11|1",
+      "witness_canon": 45464
+     },
+     {
+      "key": "6,10,11|2",
+      "witness_canon": 43015
+     },
+     {
+      "key": "6,10,11|3",
+      "witness_canon": 38433
+     },
+     {
+      "key": "6,10,11|4",
+      "witness_canon": 30351
+     },
+     {
+      "key": "6,10,11|5",
+      "witness_canon": 16769
+     },
+     {
+      "key": "6,10,12|0",
+      "witness_canon": 46696
+     },
+     {
+      "key": "6,10,12|1",
+      "witness_canon": 45494
+     },
+     {
+      "key": "6,10,12|2",
+      "witness_canon": 43085
+     },
+     {
+      "key": "6,10,12|3",
+      "witness_canon": 38573
+     },
+     {
+      "key": "6,10,12|4",
+      "witness_canon": 30602
+     },
+     {
+      "key": "6,10,12|5",
+      "witness_canon": 17185
+     },
+     {
+      "key": "6,11,11|0",
+      "witness_canon": 46699
+     },
+     {
+      "key": "6,11,11|1",
+      "witness_canon": 45512
+     },
+     {
+      "key": "6,11,11|2",
+      "witness_canon": 43148
+     },
+     {
+      "key": "6,11,11|3",
+      "witness_canon": 38741
+     },
+     {
+      "key": "6,11,11|4",
+      "witness_canon": 30980
+     },
+     {
+      "key": "6,11,11|5",
+      "witness_canon": 17940
+     },
+     {
+      "key": "6,11,12|0",
+      "witness_canon": 46704
+     },
+     {
+      "key": "6,11,12|1",
+      "witness_canon": 45527
+     },
+     {
+      "key": "6,11,12|2",
+      "witness_canon": 43183
+     },
+     {
+      "key": "6,11,12|3",
+      "witness_canon": 38811
+     },
+     {
+      "key": "6,11,12|4",
+      "witness_canon": 31106
+     },
+     {
+      "key": "6,11,12|5",
+      "witness_canon": 18149
+     },
+     {
+      "key": "6,12,12|0",
+      "witness_canon": 46706
+     },
+     {
+      "key": "6,12,12|1",
+      "witness_canon": 45540
+     },
+     {
+      "key": "6,12,12|2",
+      "witness_canon": 43231
+     },
+     {
+      "key": "6,12,12|3",
+      "witness_canon": 38944
+     },
+     {
+      "key": "6,12,12|4",
+      "witness_canon": 31414
+     },
+     {
+      "key": "6,12,12|5",
+      "witness_canon": 18779
+     },
+     {
+      "key": "6,6,11|0",
+      "witness_canon": 45961
+     },
+     {
+      "key": "6,6,11|1",
+      "witness_canon": 43959
+     },
+     {
+      "key": "6,6,11|2",
+      "witness_canon": 40157
+     },
+     {
+      "key": "6,6,11|3",
+      "witness_canon": 33382
+     },
+     {
+      "key": "6,6,11|4",
+      "witness_canon": 21920
+     },
+     {
+      "key": "6,6,11|5",
+      "witness_canon": 3350
+     },
+     {
+      "key": "6,6,12|0",
+      "witness_canon": 45980
+     },
+     {
+      "key": "6,6,12|1",
+      "witness_canon": 44006
+     },
+     {
+      "key": "6,6,12|2",
+      "witness_canon": 40249
+     },
+     {
+      "key": "6,6,12|3",
+      "witness_canon": 33546
+     },
+     {
+      "key": "6,6,12|4",
+      "witness_canon": 22186
+     },
+     {
+      "key": "6,6,12|5",
+      "witness_canon": 3760
+     },
+     {
+      "key": "6,7,11|0",
+      "witness_canon": 46361
+     },
+     {
+      "key": "6,7,11|1",
+      "witness_canon": 44714
+     },
+     {
+      "key": "6,7,11|2",
+      "witness_canon": 41474
+     },
+     {
+      "key": "6,7,11|3",
+      "witness_canon": 35543
+     },
+     {
+      "key": "6,7,11|4",
+      "witness_canon": 25297
+     },
+     {
+      "key": "6,7,11|5",
+      "witness_canon": 8421
+     },
+     {
+      "key": "6,7,12|0",
+      "witness_canon": 46383
+     },
+     {
+      "key": "6,7,12|1",
+      "witness_canon": 44773
+     },
+     {
+      "key": "6,7,12|2",
+      "witness_canon": 41600
+     },
+     {
+      "key": "6,7,12|3",
+      "witness_canon": 35777
+     },
+     {
+      "key": "6,7,12|4",
+      "witness_canon": 25693
+     },
+     {
+      "key": "6,7,12|5",
+      "witness_canon": 9047
+     },
+     {
+      "key": "6,8,11|0",
+      "witness_canon": 46565
+     },
+     {
+      "key": "6,8,11|1",
+      "witness_canon": 45149
+     },
+     {
+      "key": "6,8,11|2",
+      "witness_canon": 42313
+     },
+     {
+      "key": "6,8,11|3",
+      "witness_canon": 37038
+     },
+     {
+      "key": "6,8,11|4",
+      "witness_canon": 27804
+     },
+     {
+      "key": "6,8,11|5",
+      "witness_canon": 12420
+     },
+     {
+      "key": "6,8,12|0",
+      "witness_canon": 46583
+     },
+     {
+      "key": "6,8,12|1",
+      "witness_canon": 45199
+     },
+     {
+      "key": "6,8,12|2",
+      "witness_canon": 42422
+     },
+     {
+      "key": "6,8,12|3",
+      "witness_canon": 37244
+     },
+     {
+      "key": "6,8,12|4",
+      "witness_canon": 28157
+     },
+     {
+      "key": "6,8,12|5",
+      "witness_canon": 12984
+     },
+     {
+      "key": "6,9,11|0",
+      "witness_canon": 46653
+     },
+     {
+      "key": "6,9,11|1",
+      "witness_canon": 45366
+     },
+     {
+      "key": "6,9,11|2",
+      "witness_canon": 42777
+     },
+     {
+      "key": "6,9,11|3",
+      "witness_canon": 37931
+     },
+     {
+      "key": "6,9,11|4",
+      "witness_canon": 29393
+     },
+     {
+      "key": "6,9,11|5",
+      "witness_canon": 15077
+     },
+     {
+      "key": "6,9,12|0",
+      "witness_canon": 46667
+     },
+     {
+      "key": "6,9,12|1",
+      "witness_canon": 45406
+     },
+     {
+      "key": "6,9,12|2",
+      "witness_canon": 42867
+     },
+     {
+      "key": "6,9,12|3",
+      "witness_canon": 38105
+     },
+     {
+      "key": "6,9,12|4",
+      "witness_canon": 29697
+     },
+     {
+      "key": "6,9,12|5",
+      "witness_canon": 15570
+     },
+     {
+      "key": "7,10,11|0",
+      "witness_canon": 47228
+     },
+     {
+      "key": "7,10,11|1",
+      "witness_canon": 46624
+     },
+     {
+      "key": "7,10,11|2",
+      "witness_canon": 45297
+     },
+     {
+      "key": "7,10,11|3",
+      "witness_canon": 42639
+     },
+     {
+      "key": "7,10,11|4",
+      "witness_canon": 37684
+     },
+     {
+      "key": "7,10,11|5",
+      "witness_canon": 28985
+     },
+     {
+      "key": "7,10,11|6",
+      "witness_canon": 14442
+     },
+     {
+      "key": "7,10,12|0",
+      "witness_canon": 47238
+     },
+     {
+      "key": "7,10,12|1",
+      "witness_canon": 46654
+     },
+     {
+      "key": "7,10,12|2",
+      "witness_canon": 45367
+     },
+     {
+      "key": "7,10,12|3",
+      "witness_canon": 42778
+     },
+     {
+      "key": "7,10,12|4",
+      "witness_canon": 37932
+     },
+     {
+      "key": "7,10,12|5",
+      "witness_canon": 29394
+     },
+     {
+      "key": "7,10,12|6",
+      "witness_canon": 15078
+     },
+     {
+      "key": "7,11,12|0",
+      "witness_canon": 47246
+     },
+     {
+      "key": "7,11,12|1",
+      "witness_canon": 46687
+     },
+     {
+      "key": "7,11,12|2",
+      "witness_canon": 45465
+     },
+     {
+      "key": "7,11,12|3",
+      "witness_canon": 43016
+     },
+     {
+      "key": "7,11,12|4",
+      "witness_canon": 38434
+     },
+     {
+      "key": "7,11,12|5",
+      "witness_canon": 30352
+     },
+     {
+      "key": "7,11,12|6",
+      "witness_canon": 16770
+     },
+     {
+      "key": "7,12,12|0",
+      "witness_canon": 47248
+     },
+     {
+      "key": "7,12,12|1",
+      "witness_canon": 46700
+     },
+     {
+      "key": "7,12,12|2",
+      "witness_canon": 45513
+     },
+     {
+      "key": "7,12,12|3",
+      "witness_canon": 43149
+     },
+     {
+      "key": "7,12,12|4",
+      "witness_canon": 38742
+     },
+     {
+      "key": "7,12,12|5",
+      "witness_canon": 30981
+     },
+     {
+      "key": "7,12,12|6",
+      "witness_canon": 17941
+     },
+     {
+      "key": "7,7,12|0",
+      "witness_canon": 46935
+     },
+     {
+      "key": "7,7,12|1",
+      "witness_canon": 45962
+     },
+     {
+      "key": "7,7,12|2",
+      "witness_canon": 43960
+     },
+     {
+      "key": "7,7,12|3",
+      "witness_canon": 40158
+     },
+     {
+      "key": "7,7,12|4",
+      "witness_canon": 33383
+     },
+     {
+      "key": "7,7,12|5",
+      "witness_canon": 21921
+     },
+     {
+      "key": "7,7,12|6",
+      "witness_canon": 3351
+     },
+     {
+      "key": "7,8,11|0",
+      "witness_canon": 47108
+     },
+     {
+      "key": "7,8,11|1",
+      "witness_canon": 46313
+     },
+     {
+      "key": "7,8,11|2",
+      "witness_canon": 44609
+     },
+     {
+      "key": "7,8,11|3",
+      "witness_canon": 41276
+     },
+     {
+      "key": "7,8,11|4",
+      "witness_canon": 35204
+     },
+     {
+      "key": "7,8,11|5",
+      "witness_canon": 24756
+     },
+     {
+      "key": "7,8,11|6",
+      "witness_canon": 7602
+     },
+     {
+      "key": "7,8,12|0",
+      "witness_canon": 47126
+     },
+     {
+      "key": "7,8,12|1",
+      "witness_canon": 46362
+     },
+     {
+      "key": "7,8,12|2",
+      "witness_canon": 44715
+     },
+     {
+      "key": "7,8,12|3",
+      "witness_canon": 41475
+     },
+     {
+      "key": "7,8,12|4",
+      "witness_canon": 35544
+     },
+     {
+      "key": "7,8,12|5",
+      "witness_canon": 25298
+     },
+     {
+      "key": "7,8,12|6",
+      "witness_canon": 8422
+     },
+     {
+      "key": "7,9,11|0",
+      "witness_canon": 47195
+     },
+     {
+      "key": "7,9,11|1",
+      "witness_canon": 46526
+     },
+     {
+      "key": "7,9,11|2",
+      "witness_canon": 45061
+     },
+     {
+      "key": "7,9,11|3",
+      "witness_canon": 42143
+     },
+     {
+      "key": "7,9,11|4",
+      "witness_canon": 36742
+     },
+     {
+      "key": "7,9,11|5",
+      "witness_canon": 27325
+     },
+     {
+      "key": "7,9,11|6",
+      "witness_canon": 11687
+     },
+     {
+      "key": "7,9,12|0",
+      "witness_canon": 47209
+     },
+     {
+      "key": "7,9,12|1",
+      "witness_canon": 46566
+     },
+     {
+      "key": "7,9,12|2",
+      "witness_canon": 45150
+     },
+     {
+      "key": "7,9,12|3",
+      "witness_canon": 42314
+     },
+     {
+      "key": "7,9,12|4",
+      "witness_canon": 37039
+     },
+     {
+      "key": "7,9,12|5",
+      "witness_canon": 27805
+     },
+     {
+      "key": "7,9,12|6",
+      "witness_canon": 12421
+     },
+     {
+      "key": "8,10,11|0",
+      "witness_canon": 47457
+     },
+     {
+      "key": "8,10,11|1",
+      "witness_canon": 47166
+     },
+     {
+      "key": "8,10,11|2",
+      "witness_canon": 46458
+     },
+     {
+      "key": "8,10,11|3",
+      "witness_canon": 44926
+     },
+     {
+      "key": "8,10,11|4",
+      "witness_canon": 41903
+     },
+     {
+      "key": "8,10,11|5",
+      "witness_canon": 36347
+     },
+     {
+      "key": "8,10,11|6",
+      "witness_canon": 26712
+     },
+     {
+      "key": "8,10,11|7",
+      "witness_canon": 10778
+     },
+     {
+      "key": "8,10,12|0",
+      "witness_canon": 47467
+     },
+     {
+      "key": "8,10,12|1",
+      "witness_canon": 47196
+     },
+     {
+      "key": "8,10,12|2",
+      "witness_canon": 46527
+     },
+     {
+      "key": "8,10,12|3",
+      "witness_canon": 45062
+     },
+     {
+      "key": "8,10,12|4",
+      "witness_canon": 42144
+     },
+     {
+      "key": "8,10,12|5",
+      "witness_canon": 36743
+     },
+     {
+      "key": "8,10,12|6",
+      "witness_canon": 27326
+     },
+     {
+      "key": "8,10,12|7",
+      "witness_canon": 11688
+     },
+     {
+      "key": "8,11,11|0",
+      "witness_canon": 47470
+     },
+     {
+      "key": "8,11,11|1",
+      "witness_canon": 47214
+     },
+     {
+      "key": "8,11,11|2",
+      "witness_canon": 46590
+     },
+     {
+      "key": "8,11,11|3",
+      "witness_canon": 45229
+     },
+     {
+      "key": "8,11,11|4",
+      "witness_canon": 42517
+     },
+     {
+      "key": "8,11,11|5",
+      "witness_canon": 37483
+     },
+     {
+      "key": "8,11,11|6",
+      "witness_canon": 28672
+     },
+     {
+      "key": "8,11,11|7",
+      "witness_canon": 13978
+     },
+     {
+      "key": "8,11,12|0",
+      "witness_canon": 47475
+     },
+     {
+      "key": "8,11,12|1",
+      "witness_canon": 47229
+     },
+     {
+      "key": "8,11,12|2",
+      "witness_canon": 46625
+     },
+     {
+      "key": "8,11,12|3",
+      "witness_canon": 45298
+     },
+     {
+      "key": "8,11,12|4",
+      "witness_canon": 42640
+     },
+     {
+      "key": "8,11,12|5",
+      "witness_canon": 37685
+     },
+     {
+      "key": "8,11,12|6",
+      "witness_canon": 28986
+     },
+     {
+      "key": "8,11,12|7",
+      "witness_canon": 14443
+     },
+     {
+      "key": "8,12,12|0",
+      "witness_canon": 47477
+     },
+     {
+      "key": "8,12,12|1",
+      "witness_canon": 47242
+     },
+     {
+      "key": "8,12,12|2",
+      "witness_canon": 46673
+     },
+     {
+      "key": "8,12,12|3",
+      "witness_canon": 45431
+     },
+     {
+      "key": "8,12,12|4",
+      "witness_canon": 42947
+     },
+     {
+      "key": "8,12,12|5",
+      "witness_canon": 38310
+     },
+     {
+      "key": "8,12,12|6",
+      "witness_canon": 30146
+     },
+     {
+      "key": "8,12,12|7",
+      "witness_canon": 16449
+     },
+     {
+      "key": "8,8,11|0",
+      "witness_canon": 47345
+     },
+     {
+      "key": "8,8,11|1",
+      "witness_canon": 46887
+     },
+     {
+      "key": "8,8,11|2",
+      "witness_canon": 45857
+     },
+     {
+      "key": "8,8,11|3",
+      "witness_canon": 43762
+     },
+     {
+      "key": "8,8,11|4",
+      "witness_canon": 39819
+     },
+     {
+      "key": "8,8,11|5",
+      "witness_canon": 32842
+     },
+     {
+      "key": "8,8,11|6",
+      "witness_canon": 21102
+     },
+     {
+      "key": "8,8,11|7",
+      "witness_canon": 2162
+     },
+     {
+      "key": "8,8,12|0",
+      "witness_canon": 47358
+     },
+     {
+      "key": "8,8,12|1",
+      "witness_canon": 46920
+     },
+     {
+      "key": "8,8,12|2",
+      "witness_canon": 45923
+     },
+     {
+      "key": "8,8,12|3",
+      "witness_canon": 43882
+     },
+     {
+      "key": "8,8,12|4",
+      "witness_canon": 40017
+     },
+     {
+      "key": "8,8,12|5",
+      "witness_canon": 33152
+     },
+     {
+      "key": "8,8,12|6",
+      "witness_canon": 21562
+     },
+     {
+      "key": "8,8,12|7",
+      "witness_canon": 2822
+     },
+     {
+      "key": "8,9,11|0",
+      "witness_canon": 47424
+     },
+     {
+      "key": "8,9,11|1",
+      "witness_canon": 47070
+     },
+     {
+      "key": "8,9,11|2",
+      "witness_canon": 46228
+     },
+     {
+      "key": "8,9,11|3",
+      "witness_canon": 44446
+     },
+     {
+      "key": "8,9,11|4",
+      "witness_canon": 40993
+     },
+     {
+      "key": "8,9,11|5",
+      "witness_canon": 34747
+     },
+     {
+      "key": "8,9,11|6",
+      "witness_canon": 24057
+     },
+     {
+      "key": "8,9,11|7",
+      "witness_canon": 6578
+     },
+     {
+      "key": "8,9,12|0",
+      "witness_canon": 47438
+     },
+     {
+      "key": "8,9,12|1",
+      "witness_canon": 47109
+     },
+     {
+      "key": "8,9,12|2",
+      "witness_canon": 46314
+     },
+     {
+      "key": "8,9,12|3",
+      "witness_canon": 44610
+     },
+     {
+      "key": "8,9,12|4",
+      "witness_canon": 41277
+     },
+     {
+      "key": "8,9,12|5",
+      "witness_canon": 35205
+     },
+     {
+      "key": "8,9,12|6",
+      "witness_canon": 24757
+     },
+     {
+      "key": "8,9,12|7",
+      "witness_canon": 7603
+     },
+     {
+      "key": "9,10,11|0",
+      "witness_canon": 47541
+     },
+     {
+      "key": "9,10,11|1",
+      "witness_canon": 47396
+     },
+     {
+      "key": "9,10,11|2",
+      "witness_canon": 47005
+     },
+     {
+      "key": "9,10,11|3",
+      "witness_canon": 46100
+     },
+     {
+      "key": "9,10,11|4",
+      "witness_canon": 44219
+     },
+     {
+      "key": "9,10,11|5",
+      "witness_canon": 40620
+     },
+     {
+      "key": "9,10,11|6",
+      "witness_canon": 34168
+     },
+     {
+      "key": "9,10,11|7",
+      "witness_canon": 23198
+     },
+     {
+      "key": "9,10,11|8",
+      "witness_canon": 5349
+     },
+     {
+      "key": "9,10,12|0",
+      "witness_canon": 47551
+     },
+     {
+      "key": "9,10,12|1",
+      "witness_canon": 47425
+     },
+     {
+      "key": "9,10,12|2",
+      "witness_canon": 47071
+     },
+     {
+      "key": "9,10,12|3",
+      "witness_canon": 46229
+     },
+     {
+      "key": "9,10,12|4",
+      "witness_canon": 44447
+     },
+     {
+      "key": "9,10,12|5",
+      "witness_canon": 40994
+     },
+     {
+      "key": "9,10,12|6",
+      "witness_canon": 34748
+     },
+     {
+      "key": "9,10,12|7",
+      "witness_canon": 24058
+     },
+     {
+      "key": "9,10,12|8",
+      "witness_canon": 6579
+     },
+     {
+      "key": "9,11,11|0",
+      "witness_canon": 47554
+     },
+     {
+      "key": "9,11,11|1",
+      "witness_canon": 47443
+     },
+     {
+      "key": "9,11,11|2",
+      "witness_canon": 47133
+     },
+     {
+      "key": "9,11,11|3",
+      "witness_canon": 46392
+     },
+     {
+      "key": "9,11,11|4",
+      "witness_canon": 44809
+     },
+     {
+      "key": "9,11,11|5",
+      "witness_canon": 41710
+     },
+     {
+      "key": "9,11,11|6",
+      "witness_canon": 36048
+     },
+     {
+      "key": "9,11,11|7",
+      "witness_canon": 26268
+     },
+     {
+      "key": "9,11,11|8",
+      "witness_canon": 10144
+     },
+     {
+      "key": "9,11,12|0",
+      "witness_canon": 47559
+     },
+     {
+      "key": "9,11,12|1",
+      "witness_canon": 47458
+     },
+     {
+      "key": "9,11,12|2",
+      "witness_canon": 47167
+     },
+     {
+      "key": "9,11,12|3",
+      "witness_canon": 46459
+     },
+     {
+      "key": "9,11,12|4",
+      "witness_canon": 44927
+     },
+     {
+      "key": "9,11,12|5",
+      "witness_canon": 41904
+     },
+     {
+      "key": "9,11,12|6",
+      "witness_canon": 36348
+     },
+     {
+      "key": "9,11,12|7",
+      "witness_canon": 26713
+     },
+     {
+      "key": "9,11,12|8",
+      "witness_canon": 10779
+     },
+     {
+      "key": "9,12,12|0",
+      "witness_canon": 47561
+     },
+     {
+      "key": "9,12,12|1",
+      "witness_canon": 47471
+     },
+     {
+      "key": "9,12,12|2",
+      "witness_canon": 47215
+     },
+     {
+      "key": "9,12,12|3",
+      "witness_canon": 46591
+     },
+     {
+      "key": "9,12,12|4",
+      "witness_canon": 45230
+     },
+     {
+      "key": "9,12,12|5",
+      "witness_canon": 42518
+     },
+     {
+      "key": "9,12,12|6",
+      "witness_canon": 37484
+     },
+     {
+      "key": "9,12,12|7",
+      "witness_canon": 28673
+     },
+     {
+      "key": "9,12,12|8",
+      "witness_canon": 13979
+     },
+     {
+      "key": "9,9,11|0",
+      "witness_canon": 47513
+     },
+     {
+      "key": "9,9,11|1",
+      "witness_canon": 47320
+     },
+     {
+      "key": "9,9,11|2",
+      "witness_canon": 46835
+     },
+     {
+      "key": "9,9,11|3",
+      "witness_canon": 45760
+     },
+     {
+      "key": "9,9,11|4",
+      "witness_canon": 43599
+     },
+     {
+      "key": "9,9,11|5",
+      "witness_canon": 39560
+     },
+     {
+      "key": "9,9,11|6",
+      "witness_canon": 32453
+     },
+     {
+      "key": "9,9,11|7",
+      "witness_canon": 20538
+     },
+     {
+      "key": "9,9,11|8",
+      "witness_canon": 1373
+     },
+     {
+      "key": "9,9,12|0",
+      "witness_canon": 47523
+     },
+     {
+      "key": "9,9,12|1",
+      "witness_canon": 47346
+     },
+     {
+      "key": "9,9,12|2",
+      "witness_canon": 46888
+     },
+     {
+      "key": "9,9,12|3",
+      "witness_canon": 45858
+     },
+     {
+      "key": "9,9,12|4",
+      "witness_canon": 43763
+     },
+     {
+      "key": "9,9,12|5",
+      "witness_canon": 39820
+     },
+     {
+      "key": "9,9,12|6",
+      "witness_canon": 32843
+     },
+     {
+      "key": "9,9,12|7",
+      "witness_canon": 21103
+     },
+     {
+      "key": "9,9,12|8",
+      "witness_canon": 2163
+     }
+    ]
+   },
+   "name": "PD12: THEOREM (cap<=12 fixed point, 650 new keys): uniformly det at r >= max(M,2) <=> Delta=0 or all sizes in {2,3,5,7,11}; det 74 = 23 d0 + 51 prime (62 all-prime incl 11 overlap), witness side 576; combined with K0916 (98 cap<=10 det keys) the cap<=12 dichotomy closes at 172 det keys; Theorem J (K0906) extends each r=M column to all r >= max(M,2); Theorem E' (K0861) transfers to boards",
+   "ok": true
+  },
+  {
+   "data": {
+    "records": 4445,
+    "violations": 0
+   },
+   "name": "FL1: first-losers == OR{1<<(C_i mod r)} on all 4445 new records (r=10/11/12/13 columns)",
+   "ok": true
+  },
+  {
+   "data": {
+    "mismatches": 0,
+    "sources": {
+     "10083": 11,
+     "12421": 12,
+     "16400": 12,
+     "22554": 11,
+     "26125": 11,
+     "26213": 11,
+     "30102": 11,
+     "33709": 11,
+     "38104": 11,
+     "38310": 12,
+     "38433": 11,
+     "40341": 11,
+     "4469": 11,
+     "46527": 12,
+     "47577": 12
+    }
+   },
+   "name": "J13: 15 r=13 anchor records (10 witnesses + 5 prime-11 light) have sv mask identical to their r=11/r=12 source records (Theorem J finite anchor beyond the window)",
+   "ok": true
+  },
+  {
+   "data": {
+    "mismatches": 0,
+    "nodes_eq_states": 1710,
+    "records": 1710,
+    "states_cap": 100000
+   },
+   "name": "LIVE: Python mask twin (independent implementation, verbatim K0912 block) recomputes every witness/probe/anchor record (1007) plus focus samples (exotic11 all, d0_11 and prime-11 under the states cap with chain records): verdict equality on all 1710 records AND twin state count == engine states on every record",
+   "ok": true
+  }
+ ],
+ "meta": {
+  "columns_committed": [
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "columns_new": [
+   "d0_r11",
+   "ex12_r10",
+   "ex12_r11",
+   "j13_anchor",
+   "others11_r10",
+   "others12_r11",
+   "r10_focus",
+   "r11_focus",
+   "r11_witness",
+   "r12_d0anchor",
+   "r12_witness"
+  ],
+  "engine": "mask_engine_fast2.js sha256 b904760e109e9adf1689b91e7dcbb1aa530704af322ee7808e2304d0377586de",
+  "theorem": "prime dichotomy cap<=12 (PD12)"
+ }
+}
