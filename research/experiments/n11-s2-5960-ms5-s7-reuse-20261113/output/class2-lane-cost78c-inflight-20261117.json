@@ -1,9 +1,9 @@
 {
- "schema": "n11-class2-lane-cost78c-inflight-20261118-v3",
+ "schema": "n11-class2-lane-cost78c-inflight-20261118-v4",
  "date": "2026-11-17",
  "last_updated": "2026-11-18",
- "title": "n11 class2-lane cost78c: completed 78-bit depth-10 sweep of the census v11 rank-1 row - 11 WIN7-D10 / 67 REFUTED-D10 / 0 capped (first WIN-bearing row of the presweep-1473 band; certificate extraction pending)",
- "status": "claim v3: COMPLETED; the full 78-bit v17 depth-10 sweep is published and independently audited (66 open bits + 12 confirmation controls: 11 WIN7-D10 [1, 4, 9, 30, 49, 69, 75, 79, 100, 114, 116] / 67 REFUTED-D10 / 0 capped, 238,626,461 candidate nodes); the 12/12 confirmation transfers are re-verified with independent D4 canon re-derivation of both sides (6 raw-identical, 6 canon-equal only); det reruns of batches 1 and 8 are field-identical across two sandbox lifetimes and the reconstructed batch driver re-ran batch 8 field-identically in a third session; v15 cross-engine 17/17 verdict agreement (16 loss=false + 1 loss=true at WIN bit 116), 2/2 pilots at 5949; certificate extraction, verification and publication for the 11 WIN7-D10 roots are pending; no receipt fold or manifest closure has occurred; 11x11 UNKNOWN",
+ "title": "n11 class2-lane cost78c: completed 78-bit depth-10 sweep of the census v11 rank-1 row - 11 WIN7-D10 / 67 REFUTED-D10 / 0 capped, all 11 WIN7 certificates extracted, independently verified and published (first WIN-bearing row of the presweep-1473 band)",
+ "status": "claim v4: COMPLETED + CERTIFICATES PUBLISHED; the full 78-bit v17 depth-10 sweep is published and independently audited (66 open bits + 12 confirmation controls: 11 WIN7-D10 [1, 4, 9, 30, 49, 69, 75, 79, 100, 114, 116] / 67 REFUTED-D10 / 0 capped, 238,626,461 candidate nodes); all 11 WIN7-D10 certificates are extracted (blind extraction, extractor_exact_ms23, fbt_drops=0 on all eleven, no capped per-move), independently verified (verify_bit7_win7_cert.ts, engine-free: root-check stones=7 + loser mobility == legal_candidates.py enumeration, all sub-roots PASS, consumed-union == cert rows 0 missing / 0 extra on every root) and published (band commits b359756f..97650e27, manifest class2-lane-cost78c-win7-certificates-20261117.json git blob b7fe519e923c6170e836f71e3f084f73219319d5; 614,003 rows, 77,967,826 extraction nodes, 22,223,603 published bytes; 10 two-way line-boundary splits + bit 116 three-way split for the publication transport size limit); determinism: fresh-process re-extraction byte-identical on bits 69 and 116; no receipt fold or manifest closure has occurred (pending behind the 66i/66j/69j/71e/72d/73i/73j/73k/73l folds); 11x11 UNKNOWN",
  "basis_head": "1473/174/6375/504596/4648/368510 (canonical head after the landed cost64h and cost76c bit61 folds; the completed cost74i and cost75f sweeps produced no receipts and change nothing; the pending 66i/66j/69j/71e/72d/73i/73j/73k/73l receipt folds do not change the head)",
  "claimed_by": "n11 long-term lane session (head-1473 presweep census v11 selector, post-75f, cost78c)",
  "coordination_note": "latest main re-fetched immediately before this push (2026-11-17, head cea8c4fb: the census v11 publication); no claim, raw batch, audit or census file for this child exists on main (searched: child hex 00000000000000403800000008000008, cost78c, presweep-1473 v11); the cost-78 label family already uses 78a (class2-lane certificates) and 78b (class4-lane), so this row is claimed as cost78c per the highest+1 convention; the parallel lanes hold the 66i receipt fold (margins rebased at head 1473, bit19 next), the pending 73i certificate publication, and the cost73k measurement claims (worker-split memo merge, hybrid seed union; follow-up work); this claim does not touch any of those Claim v2 reconciliation: raw batches 1-6 were already published on main but claim v1 still said batches_run 0. This update records only those pinned files; it does not touch the separate worker-split16 claim or any pending receipt-fold lane. Claim v3 reconciliation: raw batches 7-9 landed at a8cd1012 and the det reruns + v15 crosschecks at 867a131c; this update completes the claim from the PARTIAL v2 (archived at output/class2-lane-cost78c-inflight-20261118-v2-archive.json) with the full-sweep audit published together with this claim (output/class2-lane-cost78c-raw-sweep-audit-20261117.json, git blob 8e3ee7aa1827ae70b099d6a7c34d122f944b2fa3); the parallel batches-1-6 audit (output/class2-lane-cost78c-raw-batches-1-6-audit-20261118.json, git blob d8e5f9b70a0f2e3b027ded8322fa1a083193f73f, all_pass) agrees bit-exactly with the 9 WIN7-D10 bits it covered.",
@@ -207,14 +207,28 @@
   119,
   120
  ],
- "next_action": "Extract certificates for the 11 WIN7-D10 bits [1, 4, 9, 30, 49, 69, 75, 79, 100, 114, 116] (73l-band pipeline: extraction -> independent verification -> publication), then prepare the receipt fold only after the pending 66i/66j/69j/71e/72d/73i/73j/73k/73l folds land; the next census (v12) then marks this row swept.",
+ "next_action": "Receipt fold of this row stays pending behind the 66i/66j/69j/71e/72d/73i/73j/73k/73l folds (managed by their own lanes); the next census (v12) marks this row swept (11 WIN7-D10 with published certificates + 67 REFUTED-D10) and selects the next target (census v11 runner-up cost 79, open 69); optional follow-up: BigInt independent third-implementation re-verification of the 11 certificates",
  "planned_controls": "All nine batches (7x9 open + 1x3 open + 1x12 confirmation) are published and audited; pilot_d6=3402 in 9/9 raw batches and 2/2 det reruns, pilot_d6=5949 in 2/2 v15 chunks; determinism reruns (batches 1 and 8) field-identical across two sandbox lifetimes plus a third-session rerun of batch 8 from the reconstructed driver; v15 cross-engine checks 17/17. Remaining control: certificate extraction and independent verification of the 11 WIN7-D10 roots.",
  "receipt_fold": {
   "status": "pending behind the cost-66i, cost-66j, cost-69j, cost-71e, cost-72d, cost-73i, cost-73j, cost-73k and cost-73l folds (the completed cost74i and cost75f rows needed none)",
   "note": "any WIN7-D10 certificates of this row fold only after the pending folds land; no manifest row is closed by this sweep or this claim"
  },
  "certificates": {
-  "status": "pending: the 11 WIN7-D10 roots [1, 4, 9, 30, 49, 69, 75, 79, 100, 114, 116] require certificate extraction via the 73l-band pipeline (extraction -> independent verification -> publication) before any receipt fold; no certificate for this child has been extracted or published yet"
+  "status": "complete: 11 WIN7-D10 certificates published (band commits b359756f..97650e27; 10 two-way line-boundary splits + bit 116 three-way split), manifest class2-lane-cost78c-win7-certificates-20261117.json (git blob b7fe519e923c6170e836f71e3f084f73219319d5); every certificate independently verified engine-free (root-check + all sub-roots + consumed-union 0 missing / 0 extra); determinism re-extraction byte-identical on bits [69, 116]",
+  "manifest": "class2-lane-cost78c-win7-certificates-20261117.json",
+  "manifest_blob_sha": "b7fe519e923c6170e836f71e3f084f73219319d5",
+  "totals": {
+   "certificates": 11,
+   "rows": 614003,
+   "extraction_nodes": 77967826,
+   "published_bytes": 22223603,
+   "fbt_drops_total": 0,
+   "capped_per_move_total": 0
+  },
+  "determinism_sample_bits": [
+   69,
+   116
+  ]
  },
  "s5": "00000000000000403800000008000000",
  "s6_child": "00000000000000403800000008000008",
@@ -295,7 +309,7 @@
  },
  "unknown_status": "11x11 empty board: UNKNOWN. A completed sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 78 seven-stone roots of this child and closes no family row by itself; the 11x11 empty board, the two-stone roots {49,60} and {59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN regardless of this sweep's outcome",
  "verdict_semantics": "loss=true => WIN7-within-depth-10 candidate (certificate rebuild target); loss=false && !capped => REFUTED-D10, no first-player win within depth 10 from this root (NOT a LOSS proof); capped => inconclusive, re-run with a higher cap; verdicts are per 7-stone root only",
- "interpretation_guard": "Completed raw sweep bookkeeping only. The eleven WIN7-D10 labels are v17 per-root depth-10 results pending certificate extraction, verification and publication (v15 cross-engine checks done); WIN7-D10 proves a first-player win within depth 10 from the individual 7-stone root only. REFUTED-D10 is not a LOSS proof. No S6 row or class family is closed; standard 11x11 remains UNKNOWN.",
+ "interpretation_guard": "Completed raw sweep + published certificate bookkeeping. The eleven WIN7-D10 roots are certificate-backed first-player wins within depth 10 from the individual 7-stone roots only. REFUTED-D10 is not a LOSS proof. No S6 row or class family is closed; standard 11x11 remains UNKNOWN.",
  "batches_run": 9,
  "open_bits_completed": 66,
  "open_bits_remaining": 0,
@@ -459,8 +473,8 @@
   "audit_all_pass": true,
   "v15_cross_engine": "17/17 verdict agreement (chunk a: 12 confirmation bits; chunk b: 5 heaviest bits [34, 116, 41, 25, 99]); 16 loss=false + 1 loss=true at WIN bit 116; 2/2 pilots at 5949; v15 nodes 150,314,380",
   "determinism_reruns": "PENDING",
-  "certificate_extraction": "PENDING: 11 WIN7-D10 bits [1, 4, 9, 30, 49, 69, 75, 79, 100, 114, 116]",
-  "certificate_verification": "PENDING",
+  "certificate_extraction": "COMPLETE: 11/11 WIN7-D10 bits [1, 4, 9, 30, 49, 69, 75, 79, 100, 114, 116] blind-extracted (cert_driver78c.ts + extractor_exact_ms23, per-bit fresh process, 77,967,826 extraction nodes, 614,003 rows, fbt_drops 0 on all eleven); published in the band commits b359756f..97650e27",
+  "certificate_verification": "COMPLETE: engine-free verification PASS on all 11 (verify_cost78c_one.sh orchestrating verify_bit7_win7_cert.ts: root-check stones=7, loser mobility == independent legal_candidates.py enumeration on the RAW root, all sub-roots PASS, consumed-winner-state union == certificate row set 0 missing / 0 extra on every root); fresh-process re-extraction byte-identical on bits 69 and 116",
   "win7_d10_nodes": {
    "1": 7264656,
    "4": 7292768,
