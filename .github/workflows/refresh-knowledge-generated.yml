@@ -225,6 +225,10 @@ jobs:
         run: |
           uv run --locked python research/experiments/remo-k-branch-cap15-boundary-20261116/verify_remo_k_branch_cap15_boundary.py
           git diff --exit-code -- research/experiments/remo-k-branch-cap15-boundary-20261116/output/remo_k_branch_cap15_boundary_audit.json
+      - name: Audit K0893 three-branch REMO cap10 r=9 boundary
+        run: |
+          uv run --locked python research/experiments/remo-k-branch-cap10-r9-boundary-20261117/verify_remo_k_branch_cap10_r9_boundary.py
+          git diff --exit-code -- research/experiments/remo-k-branch-cap10-r9-boundary-20261117/output/remo_k_branch_cap10_r9_boundary_audit.json
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python tools/knowledge/build.py
@@ -516,3 +520,4 @@ jobs:
 # Refresh generated views for K0888 two-token z=6,y=8 full Grundy slice (2026-11-17).
 # Refresh generated knowledge views for K0890 z=6,y=9 full Grundy slice (2026-11-17).
 # Refresh generated views for K0892 two-token z=6,y=10 full Grundy slice (2026-11-17).
+# Refresh generated views for K0893 three-branch REMO cap10 r=9 boundary (Theorem I r=9 exact 7-family 34-key boundary, FATE44 break with the first family revival, ECHO9 dormant new families, first three-residue mixed family (6,8,9) breaking the K0872 residue lens, JS mask engine pack-encoding r>=9 defect fix; published r<=8 records unaffected) (2026-11-17).
