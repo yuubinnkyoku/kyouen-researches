@@ -7,7 +7,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parents[1]
 OUT = HERE / "output"
 INPUT = OUT / "class2-lane-cost66i-bit19-parent-incidence-input-20261118.json"
-INPUT_BLOB_SHA = "1c6514cf8c5268e06e32743def489ce2573e7ce2"
+INPUT_BLOB_SHA = "24a750eb2967930b92023f556b14797b661678b9"
 
 
 def git_blob_sha(data: bytes) -> str:
