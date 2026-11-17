@@ -31,6 +31,15 @@ artifacts:
 - path: research/experiments/remo-k-branch-cap10-r12-boundary-independent-check-20261117/output/check_k0898_cross_lane_agreement_audit.json
   role: data
   note: 検証器監査JSON（2回実行byte同一・committed fileとのbyte照合をrun()が実施）
+- path: research/experiments/remo-k-branch-cap10-r10-boundary-20261117/output/js_cap10_r10.jsonl
+  role: data
+  note: 修正(a)適用（2026-11-17・plain .jsonl版）: K0895実験dirのfull形式記録（committed packed記録+正準列挙からの可逆展開・atomsはindexの正準列挙の純関数）。正準化sha256は出版ピンfc5ed900…と一致・raw sha256 18c66349…（2,047,234 B・push後byte照合済み）
+- path: research/experiments/remo-k-branch-cap10-r11-boundary-20261117/output/js_cap10_r11.jsonl
+  role: data
+  note: 修正(a)適用: K0897実験dirのfull形式記録（同一の可逆展開）。正準化sha256は出版ピン4d824a87…と一致・raw sha256 3d5176e3…（2,055,269 B・push後byte照合済み）
+- path: research/experiments/remo-k-branch-cap10-r12-boundary-20261117/output/js_cap10_r12.jsonl
+  role: data
+  note: 修正(a)適用: K0898実験dirのfull形式記録（同一の可逆展開）。正準化sha256は出版ピン0cfdd64c…と一致・raw sha256 3b26294c…（2,055,811 B・push後byte照合済み）
 scope: 'K0898が確定した有限パラメータ領域（3枝合成族・枝サイズ≤10・15,863正規形プロファイル・715キー・r=12）について、(1)並走レーンによる同領域の独立した完全スイープ実行がK0898出版packed記録とbyte単位で一致すること、ならびにその記録から決定性センサス（一様決定98・一様非決定583・mixed 34）・34キー境界集合・per-key分割表・max_states 666,030・K0897 r=11 packed記録とのdetermined/生存者mask/第1敗者mask 0/0/0差分（STASIS4）がcommit状態から再導出されて出版値と一致すること、(2)K0893/K0895/K0897/K0898の4実験ディレクトリについて、committed監査JSONがcommitされたrepo状態（packed記録のみ・full形式・.gzなし）からbyte再現可能か否かを機械判定した結果（K0893は再現可能・K0895/K0897/K0898はformatフィールド2箇所のみの差で再現不能・両バージョンとも機械チェックall_ok）と、その出版手順上の原因・workflow audit stepへの影響・修正recipeの提示。r=9/10/11の再スイープ、監査欠陥の修正実施自体、枝サイズ11,12×r=9..12、r≥13、順位決定性、一般則の全称昇格は含まない'
 evidence: '検証器check_k0898_cross_lane_agreement.pyの7機械チェック全合格（2回実行で監査JSON byte同一）。C2: 独立実行packed記録（本項実験dirにcommit・15,863レコード）とK0898 committed packed記録の全文byte比較で一致・sha256は出版ピン0835a06f…と同一。C3: 独立記録+正準列挙から(sizes,gamma)キー分類を再導出し715/98/583/34・34キー境界集合・per-key分割表・max_states 666,030がK0898出版値と完全一致。C4: K0897 committed r=11 packed記録とのdeterminedフラグ・生存者mask・第1敗者mask差分が0/0/0。C5/C6: 4実験のcommitted監査を新規checkout状態（packedのみ）から再生成し、K0893はbyte一致（f407faee…対照ピン）・K0895/K0897/K0898は再生成監査がcommitted監査とformatフィールド2箇所（"full"→"packed"）を除き深比較で完全一致し両all_ok=true・検証器run()のbyte比較はFATALでlive check前に終了することを固定。独立実行のfull記録はGitHub pushトランスポートのサイズ制限のためcommitしないが、ローカルではK0898検証器の.gz経路でcommitted監査（249ec902…）がbyte再生成されることを確認済み（report.md）。本項は検証記録であり新たな数学的主張をしない'
 ---
@@ -76,6 +85,35 @@ K0898出版（別レーン・2026-11-17 03:59-04:01Z着地）と、同出版を
   （format_only_difference）でも通り、観測状態を監査JSONに記録する。
   修正自体は所管レーンのitemとピンを変更するため本項では実施しない。
 
+## 修正実施（2026-11-17・所管レーン）
+
+K0900が提示した修正recipe (a)を所管レーン（K0895/K0897/K0898の
+出版元）が実施した。ただし当初の.gz案はGitHub Appのpush transportが
+contentをUTF-8文字列として扱いバイナリを必ず化けることが実証された
+ため（r=10の.gz 175,061 Bがremoteで263,113 Bに化け・即時削除）、
+ASCII-onlyのplain .jsonlとしてcommitする形に調整した:
+
+- **full形式記録のplain `.jsonl` commit**: 3実験dirの
+  `output/js_cap10_rN.jsonl`をcommit。内容はcommitted packed記録の
+  可逆展開（packed記録が[index, 生存者mask, 第1敗者mask, states]を
+  保持しatomsはindexの正準列挙の純関数であるため、full記録は
+  committed packed記録から情報を落とさず復元できる）。展開の正しさは、
+  正準化sha256（json.dumps(rec, sort_keys=True)結合のsha256）が
+  3実験ともcommitted監査の出版ピン（r=10: fc5ed900…・r=11:
+  4d824a87…・r=12: 0cfdd64c…）と完全一致することで機械確認済み。
+  load_jsonlは.gz→plain .jsonl→packedの順で読むため、fresh
+  checkoutからformat:"full"監査がbyte再現可能になり、
+  K0895/K0897/K0898のworkflow audit stepはgreenになる。
+- **本項監査JSONの再生成**: 修正後のrepo状態ではC5 committed-audit
+  再現性スキャンが4実験ともbyte_identicalを観測する
+  （r=10: 8b375257…・r=11: a437de75…・r=12: 249ec902…・r=9対照:
+  f407faee…と出版ピン同一）ため、committed監査JSON（欠陥状態の
+  format_only_differenceを記録・sha256 b66bfb12e4119defbfb98710dc3dc95235cc67505189a06096b5000e2071b4bb）を修正後状態で再生成
+  したもの（sha256 3cc276536f65fecb92e6390eebc113191adbe73235eec72d622882fe7a677f5c）に差し替えた。検証器は両状態を受け付ける
+  設計のためC1-C7の機械チェック内容は不変（全合格）で、scan
+  エントリのstateラベルのみがformat_only_differenceから
+  byte_identicalに変化する。
+
 ## 限界
 
 - 独立再実行はr=12・cap≤10に限る（r=9/10/11の再スイープは不要・
@@ -83,8 +121,9 @@ K0898出版（別レーン・2026-11-17 03:59-04:01Z着地）と、同出版を
 - 独立実行full記録のsha256_uncompressed再現確認はローカル観察
   （full記録がcommitされていないためcommit状態からは再検証不能。
   修正(a)が取られれば恒常的に再検証可能）。
-- 監査再現性欠陥の修正実施、枝サイズ11,12×r=9..12、r≥13、順位
-  決定性、「r≥9で境界が定常」という全称主張は本項でも未解決。
+- 監査再現性欠陥の修正は2026-11-17に実施済み（上記「修正実施」・
+  plain .jsonl版）。枝サイズ11,12×r=9..12、r≥13、順位決定性、
+  「r≥9で境界が定常」という全称主張は本項でも未解決。
 
 ## 再現
 
