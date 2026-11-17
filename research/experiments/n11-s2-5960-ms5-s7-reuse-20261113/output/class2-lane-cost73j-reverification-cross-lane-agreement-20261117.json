@@ -1,0 +1,41 @@
+{
+  "schema": "n11-class2-lane-cost73j-reverification-cross-lane-agreement-20261117-v1",
+  "date": "2026-11-17",
+  "method": "Machine comparison of two independent BigInt bytes reverifications of the 16 cost73j WIN7-D10 certificates (class2-lane-cost73j). Lane A: reverification JSON published to main by a concurrent lane (fetched from main raw, pin.commit 8803a3b01ef5932a246ead2f67f31b1438c768ac). Lane B: this lane's independent reverification JSON (separately written verifier, separate mirror fetched from the same band at pin commit 6758f03e485c6896d5101d3a4d31bc59fb9537e9). All 16 entries compared field-by-field on the 36 common scalar fields plus the nested per-part pin blocks (pinned_blob_sha and bytes for each split part).",
+  "lane_a": {
+    "source": "main raw fetch of the published reverification JSON",
+    "schema": "n11-class2-lane-cost73j-certificates-bigint-independent-reverification-20261117-v1",
+    "pin_commit": "8803a3b01ef5932a246ead2f67f31b1438c768ac",
+    "entries": 16
+  },
+  "lane_b": {
+    "source": "this lane's local independent reverification (script reverify_cost73j_certificates_bigint_20261117.py, run twice byte-identical)",
+    "schema": "n11-class2-lane-cost73j-certificates-bigint-independent-reverification-20261117-v1",
+    "pin_commit": "6758f03e485c6896d5101d3a4d31bc59fb9537e9",
+    "entries": 16
+  },
+  "bits_compared": [
+    0,
+    1,
+    6,
+    29,
+    44,
+    49,
+    52,
+    69,
+    74,
+    82,
+    87,
+    91,
+    98,
+    100,
+    110,
+    118
+  ],
+  "entries_compared": 16,
+  "field_checks_total": 632,
+  "mismatch_count": 0,
+  "mismatches": [],
+  "verdict": "AGREEMENT",
+  "interpretation_guard": "This agreement record concerns only the independent reproducibility of the cost73j certificate reverification (16 seven-stone roots, depth-10 subtree proof of first-player win). It does not decide the 11x11 empty board or any two-stone root; the 11x11 game value remains UNKNOWN. REFUTED-D10 is not a LOSS proof at any larger scope."
+}
