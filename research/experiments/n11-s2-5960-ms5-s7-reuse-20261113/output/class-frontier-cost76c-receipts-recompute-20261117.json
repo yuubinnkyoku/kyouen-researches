@@ -1,0 +1,161 @@
+{
+  "baseline_record": {
+    "frontier_before": {
+      "cost_needed_by_open_classes": 368586,
+      "remaining_s5_orbits": 174,
+      "s6_needed_by_open_classes": 4649,
+      "solved_s6_in_manifest": 1472,
+      "sum_remaining_cost": 504672,
+      "unique_remaining_s6": 6376
+    }
+  },
+  "basis_head": 1472,
+  "certificate_manifest": {
+    "git_blob_sha": "00cf337f9365b10ac1db090b9f9cf9a464b83347",
+    "path": "class2-lane-cost76c-certificates/class2-lane-cost76c-win7-certificates-20261117.json"
+  },
+  "conflict_census": {
+    "cost64h_cross_source_conflicts": 0,
+    "d4_root_overlap_with_cost64h": 0,
+    "marginal_row_overlap_with_cost64h_closed_rows": 0,
+    "verdict_conflicts": 0
+  },
+  "date": "2026-11-17",
+  "frontier_after_cost76c": {
+    "cost_needed_by_open_classes": 368510,
+    "remaining_s5_orbits": 174,
+    "s6_needed_by_open_classes": 4648,
+    "solved_s6_in_manifest": 1473,
+    "sum_remaining_cost": 504596,
+    "unique_remaining_s6": 6375
+  },
+  "interpretation_guard": "Bookkeeping fold over one independently verified WIN7-D10 receipt. It closes one S6 manifest row and reduces open frontier demand; it creates no new engine verdict and closes no S5 parent. The 11x11 empty board and all requested smaller roots/classes remain UNKNOWN.",
+  "parent_count_fully_closed": 0,
+  "parent_edge_cost_delta": 458,
+  "parent_row_incidences": 6,
+  "parents_after": {
+    "00000000000000003800000208000000": {
+      "classes": 2,
+      "cost64h_preapplied": false,
+      "edge_cost_after": 5282,
+      "edge_cost_before": 5358,
+      "lost_edge_cost": 76,
+      "lost_rows": 1,
+      "lost_rows_hexes": [
+        "00000000040000003800080008000000"
+      ],
+      "rows_after": 64,
+      "rows_before": 65,
+      "s5_hex": "00000000000000003800000208000000"
+    },
+    "00000000000000801202000000040000": {
+      "classes": 2,
+      "cost64h_preapplied": true,
+      "edge_cost_after": 5725,
+      "edge_cost_before": 5802,
+      "lost_edge_cost": 77,
+      "lost_rows": 1,
+      "lost_rows_hexes": [
+        "00000000040000809002000000004000"
+      ],
+      "rows_after": 69,
+      "rows_before": 70,
+      "s5_hex": "00000000000000801202000000040000"
+    },
+    "00000000000000801202000040000000": {
+      "classes": 2,
+      "cost64h_preapplied": false,
+      "edge_cost_after": 135,
+      "edge_cost_before": 364,
+      "lost_edge_cost": 229,
+      "lost_rows": 3,
+      "lost_rows_hexes": [
+        "00000000010000809002000001000000",
+        "00000000040000003800080008000000",
+        "00000000040000809002000000004000"
+      ],
+      "rows_after": 2,
+      "rows_before": 5,
+      "s5_hex": "00000000000000801202000040000000"
+    },
+    "00000000000000801202000100000000": {
+      "classes": 2,
+      "cost64h_preapplied": false,
+      "edge_cost_after": 5682,
+      "edge_cost_before": 5758,
+      "lost_edge_cost": 76,
+      "lost_rows": 1,
+      "lost_rows_hexes": [
+        "00000000010000809002000001000000"
+      ],
+      "rows_after": 68,
+      "rows_before": 69,
+      "s5_hex": "00000000000000801202000100000000"
+    }
+  },
+  "receipts": [
+    {
+      "bit": 61,
+      "certificate": {
+        "bytes": 1083833,
+        "git_blob_sha": "374e27eb9a23475b84ec0ca5937d9d98e35a6a71",
+        "loser_reply_edges": 62162,
+        "md5": "6a38f91cb3ec26e5bb7dd4fa937c5e42",
+        "path": "class2-lane-cost76c-certificates/n11_s7_0000000001000080b002000001000000.cert",
+        "root_mobility": 55,
+        "sha256": "91c69354d5f300a367756ca2dd430bc2f093dea8c0a188e7ee5d8b0b749c0f06",
+        "strategy_rows": 30042,
+        "subroots_passed": 55,
+        "terminal_count": 10187,
+        "terminal_range": [
+          13,
+          17
+        ],
+        "union_extra": 0,
+        "union_missing": 0,
+        "visited_states": 67865
+      },
+      "d4_canon_root": "0000000001000080b002000001000000",
+      "extraction_nodes": 1325278,
+      "fatal": null,
+      "fbt_drops": 0,
+      "marginal_d4_s6_orbits": 5,
+      "marginal_manifest_hexes": [
+        "00000000000000803800000001000100",
+        "0000000001000000b002000001000000",
+        "00000000010000809002000001000000",
+        "0000000001000080a002000001000000",
+        "0000000001000080b000000001000000"
+      ],
+      "marginal_manifest_rows": 1,
+      "root_hex": "0000000001000080b002000001000000"
+    }
+  ],
+  "schema": "n11-class2-lane-cost76c-receipts-recompute-20261117-v1",
+  "source_blob_pins": {
+    "audit64h": "7edbfbf3a3d245ca21f03913e01e816bb0d9c868",
+    "bareiss_verifier": "2960afabdf7c1a7012d223974b65f1423e6890da",
+    "bigint_verifier": "62b5d9413daafb172f6e10249976ee6808f7b454",
+    "claim_v7_snapshot": "215115c61896117af774128428c4738ad8dda925",
+    "driver": "3aae6b6ce133b2a3fb13796ad303e2a57823f05a",
+    "extractor": "5518d375fc6b4a7a14c22a1a65586f0c1c5731c0",
+    "fold64h": "1633be292f6f1862c895009eac29d398d0be7738",
+    "fold_script": "7636d3b61f2849f6e25d105eb07b0cf28179c101",
+    "head1472": "3ee5703c8cabf738eaecefb17a759c78c4a34e61",
+    "legal_candidates": "8e97082c42838c7a4a4b6d2dd235276c8d43ab9a",
+    "marginals": "3469cf3649ae3ab859edb33bf944ff0f13f229b0",
+    "v17_audit": "235f964365a7ab33e33986c915fc7f6861e4d686"
+  },
+  "status": "fold-complete",
+  "totals": {
+    "marginal_d4_s6_orbits": 5,
+    "marginal_manifest_rows": 1,
+    "receipts": 1,
+    "total_certificate_bytes": 1083833,
+    "total_extraction_nodes": 1325278,
+    "total_loser_reply_edges": 62162,
+    "total_strategy_rows": 30042,
+    "total_terminals": 10187,
+    "total_visited_states": 67865
+  }
+}

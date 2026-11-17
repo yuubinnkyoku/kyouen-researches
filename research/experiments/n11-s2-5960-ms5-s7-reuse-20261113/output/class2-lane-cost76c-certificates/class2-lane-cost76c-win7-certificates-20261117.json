@@ -1,0 +1,121 @@
+{
+  "basis": "cost76c v17 sweep: 76 candidates, WIN7-D10 bits 61/99, bit113 REFUTED-D10; bit61 is the first manifest-closing candidate.",
+  "certificates": [
+    {
+      "bit": 61,
+      "bytes": 1083833,
+      "certificate_split": "1083833 bytes below the 1200000-byte whole-file threshold; published whole",
+      "d4_canon_root": "0000000001000080b002000001000000",
+      "depth": 10,
+      "extraction_nodes": 1325278,
+      "fatal": null,
+      "fbt_drops": 0,
+      "file": "n11_s7_0000000001000080b002000001000000.cert",
+      "git_blob_sha": "374e27eb9a23475b84ec0ca5937d9d98e35a6a71",
+      "loser_mobility": 55,
+      "md5": "6a38f91cb3ec26e5bb7dd4fa937c5e42",
+      "raw_is_canon": true,
+      "root": "0000000001000080b002000001000000",
+      "rows": 30042,
+      "sha256": "91c69354d5f300a367756ca2dd430bc2f093dea8c0a188e7ee5d8b0b749c0f06",
+      "split_cut_byte": null,
+      "storage": "whole file",
+      "subroots": 55,
+      "subroots_pass": 55,
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "union_extra": 0,
+      "union_missing": 0,
+      "verdict": "WIN7"
+    }
+  ],
+  "date": "2026-11-17",
+  "method": "Fail-closed cert_driver76c.ts; exact raw-root legal-defense list; 55 uncapped subroots; FBT drops 0; engine-free Bareiss and independent BigInt verifiers pass; fresh-process byte-identical rerun.",
+  "s5_parent_hex": "00000000000000801202000040000000",
+  "s6_child_hex": "00000000010000809002000001000000",
+  "s6_s7_edge_cost": 76,
+  "schema": "n11-class2-lane-cost76c-win7-certificates-20261117-v1",
+  "source_blob_pins": {
+    "audit64h": "7edbfbf3a3d245ca21f03913e01e816bb0d9c868",
+    "bareiss_verifier": "2960afabdf7c1a7012d223974b65f1423e6890da",
+    "bigint_verifier": "62b5d9413daafb172f6e10249976ee6808f7b454",
+    "claim_v7_snapshot": "215115c61896117af774128428c4738ad8dda925",
+    "driver": "3aae6b6ce133b2a3fb13796ad303e2a57823f05a",
+    "extractor": "5518d375fc6b4a7a14c22a1a65586f0c1c5731c0",
+    "fold64h": "1633be292f6f1862c895009eac29d398d0be7738",
+    "fold_script": "7636d3b61f2849f6e25d105eb07b0cf28179c101",
+    "head1472": "3ee5703c8cabf738eaecefb17a759c78c4a34e61",
+    "legal_candidates": "8e97082c42838c7a4a4b6d2dd235276c8d43ab9a",
+    "marginals": "3469cf3649ae3ab859edb33bf944ff0f13f229b0",
+    "v17_audit": "235f964365a7ab33e33986c915fc7f6861e4d686"
+  },
+  "totals": {
+    "capped_per_move_total": 0,
+    "certificates": 1,
+    "extraction_nodes": 1325278,
+    "fbt_drops_total": 0,
+    "published_bytes": 1083833,
+    "rows": 30042
+  },
+  "unknown_status": "11x11 empty board UNKNOWN; this proves only the individual seven-stone root. REFUTED-D10 is not a LOSS proof; two-stone roots, S2, and classes 1/2/4 remain UNKNOWN.",
+  "verification": {
+    "bareiss": {
+      "consumed_entries": 43837,
+      "consumed_unique": 30042,
+      "method": "verify_bit7_win7_cert.ts; exact Bareiss 4x4; engine-free",
+      "root_check": {
+        "loserMobility": 55,
+        "stones": 7
+      },
+      "rows": 30042,
+      "subroots": 55,
+      "sum_opponent_edges": 62162,
+      "sum_seen": 67865,
+      "sum_terminals": 10187,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "union_extra": 0,
+      "union_missing": 0
+    },
+    "bigint": {
+      "consumed_winner_rows": 30042,
+      "forbidden_triple_cache_entries": 20856,
+      "legal_state_cache_entries": 45680,
+      "loser_reply_edges": 62162,
+      "loser_states": 13841,
+      "method": "BigInt 3x3 cofactor expansion of the exact lifted determinant [x²+y²,x,y,1]; no floating point",
+      "root_hex": "0000000001000080b002000001000000",
+      "root_mobility": 55,
+      "root_safe": true,
+      "root_stones": 7,
+      "rows_sorted_unique": true,
+      "strategy_rows": 30042,
+      "subroots_passed": 55,
+      "terminal_count": 10187,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "union_extra": 0,
+      "union_missing": 0,
+      "verdict": "WIN7 certificate independently verified",
+      "visited_states_across_subroots": 67865,
+      "winner_states": 43837
+    },
+    "cross_agreement": {
+      "opponent_edges": true,
+      "seen": true,
+      "terminals": true
+    },
+    "fresh_process": {
+      "byte_identical": true,
+      "git_blob_sha": "374e27eb9a23475b84ec0ca5937d9d98e35a6a71",
+      "md5": "6a38f91cb3ec26e5bb7dd4fa937c5e42",
+      "sha256": "91c69354d5f300a367756ca2dd430bc2f093dea8c0a188e7ee5d8b0b749c0f06"
+    }
+  }
+}
