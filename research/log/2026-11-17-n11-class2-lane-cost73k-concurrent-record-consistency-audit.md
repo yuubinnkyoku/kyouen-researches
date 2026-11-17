@@ -13,7 +13,7 @@
 
 ## Independent record-level checks
 
-K0868のdet4展開を用い、既存 `legal_candidates.py` とは別のJavaScript BigInt実装で6石配置から候補を再導出した。再現用Pythonスクリプトも同じ判定を実装して追加したが、この実行環境ではそのスクリプト自体の実行までは行っていない。
+K0868のdet4展開を用い、既存 `legal_candidates.py` とは別のJavaScript BigInt実装で6石配置から候補を再導出した。再現用Pythonスクリプトも追加し、取得したper-bit表等から作った最小fixtureに対する `--skip-pins` 試験で `py_compile` と実行の両方がPASSした。ただし、リポジトリ全体の実ファイルを置いた状態でのblob pin付き実行は未実施。実データへの本監査は、同じ判定をJavaScript BigIntでGitHub取得bytesに対して実行した。
 
 - child: `00000000000000801206000000000400`
 - 石bit: [10, 49, 50, 57, 60, 71]
