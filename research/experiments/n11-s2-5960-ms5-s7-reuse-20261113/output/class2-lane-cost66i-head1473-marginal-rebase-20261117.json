@@ -1,0 +1,448 @@
+{
+  "basis_head": [
+    1473,
+    174,
+    6375,
+    504596,
+    4648,
+    368510
+  ],
+  "best_next_certificate_fold_candidate": {
+    "bit": 19,
+    "edge_cost_sum": 207,
+    "new_manifest_rows": 3,
+    "reason": "largest sequential marginal at head1473; certificate has the independent BigInt verification recorded in the bit19 audit"
+  },
+  "candidate_root_d4_recheck": [
+    {
+      "bit": 19,
+      "covered_s6_orbits": 7,
+      "d4_canon_root": "00000000000000801226000000080000",
+      "root": "00000000000000801226000000080000"
+    },
+    {
+      "bit": 28,
+      "covered_s6_orbits": 7,
+      "d4_canon_root": "00000000000000801226000010000000",
+      "root": "00000000000000801226000010000000"
+    },
+    {
+      "bit": 29,
+      "covered_s6_orbits": 7,
+      "d4_canon_root": "00000000000000801226000020000000",
+      "root": "00000000000000801226000020000000"
+    },
+    {
+      "bit": 58,
+      "covered_s6_orbits": 7,
+      "d4_canon_root": "00000000000000801626000000000000",
+      "root": "00000000000000801626000000000000"
+    },
+    {
+      "bit": 88,
+      "covered_s6_orbits": 7,
+      "d4_canon_root": "00000000000000c89002000100000000",
+      "root": "00000000010000801226000000000000"
+    },
+    {
+      "bit": 90,
+      "covered_s6_orbits": 7,
+      "d4_canon_root": "00000000000000c89002000040000000",
+      "root": "00000000040000801226000000000000"
+    },
+    {
+      "bit": 99,
+      "covered_s6_orbits": 7,
+      "d4_canon_root": "00000000000000c89002000000200000",
+      "root": "00000008000000801226000000000000"
+    },
+    {
+      "bit": 103,
+      "covered_s6_orbits": 7,
+      "d4_canon_root": "00000000000000c89002000000020000",
+      "root": "00000080000000801226000000000000"
+    },
+    {
+      "bit": 112,
+      "covered_s6_orbits": 7,
+      "d4_canon_root": "00000000000000c89002000000000100",
+      "root": "00010000000000801226000000000000"
+    }
+  ],
+  "closed_since_old_projection": {
+    "cost64h_manifest_rows": [
+      "00000000000000003800100008100000",
+      "00000000000000103800000008100000",
+      "00000000000000403800000008100000",
+      "00000000000000503800000008000000",
+      "00000000000000801202000000001200",
+      "00000000000000801202000000001400",
+      "00000000000000801206000000000080",
+      "00000000000000801206000000080000",
+      "0000000000000080120a000000001000",
+      "00000000000000801242000000001000",
+      "00000000000000849003000000000000",
+      "00000000000000c09002000004000000",
+      "00000000000020003800000008100000",
+      "00000000000020809002000000100000",
+      "00000000000040003800000008100000",
+      "00000000000080003800000008100000",
+      "00000000000080809002000000100000",
+      "00000000020000003800000008100000",
+      "00000000020000403800000000100000",
+      "00000000020000809002000000100000"
+    ],
+    "cost64h_unique_rows": 20,
+    "cost76c_manifest_row": "00000000010000809002000001000000",
+    "cost76c_manifest_rows": 1,
+    "overlap_with_cost66i_candidates": [
+      {
+        "bit": 19,
+        "closed_rows": [
+          "00000000000000801206000000080000"
+        ]
+      },
+      {
+        "bit": 28,
+        "closed_rows": [
+          "00000000000000503800000008000000"
+        ]
+      },
+      {
+        "bit": 29,
+        "closed_rows": []
+      },
+      {
+        "bit": 58,
+        "closed_rows": []
+      },
+      {
+        "bit": 88,
+        "closed_rows": []
+      },
+      {
+        "bit": 90,
+        "closed_rows": []
+      },
+      {
+        "bit": 99,
+        "closed_rows": []
+      },
+      {
+        "bit": 103,
+        "closed_rows": []
+      },
+      {
+        "bit": 112,
+        "closed_rows": []
+      }
+    ]
+  },
+  "combined_fold_order": [
+    19,
+    28,
+    29,
+    58,
+    88,
+    90,
+    99,
+    103,
+    112
+  ],
+  "combined_sequential_marginals_at_head1473": [
+    {
+      "bit": 19,
+      "edge_cost_sum": 207,
+      "head1473_sequential_new_rows": [
+        "00000000000000003801000000808000",
+        "00000000000000801222000000080000",
+        "00000000000000801226000000000000"
+      ],
+      "row_count": 3
+    },
+    {
+      "bit": 28,
+      "edge_cost_sum": 74,
+      "head1473_sequential_new_rows": [
+        "00000000000000801222000010000000"
+      ],
+      "row_count": 1
+    },
+    {
+      "bit": 29,
+      "edge_cost_sum": 0,
+      "head1473_sequential_new_rows": [],
+      "row_count": 0
+    },
+    {
+      "bit": 58,
+      "edge_cost_sum": 0,
+      "head1473_sequential_new_rows": [],
+      "row_count": 0
+    },
+    {
+      "bit": 88,
+      "edge_cost_sum": 83,
+      "head1473_sequential_new_rows": [
+        "00000000000000889002000100000000"
+      ],
+      "row_count": 1
+    },
+    {
+      "bit": 90,
+      "edge_cost_sum": 0,
+      "head1473_sequential_new_rows": [],
+      "row_count": 0
+    },
+    {
+      "bit": 99,
+      "edge_cost_sum": 77,
+      "head1473_sequential_new_rows": [
+        "00000000000000889002000000200000"
+      ],
+      "row_count": 1
+    },
+    {
+      "bit": 103,
+      "edge_cost_sum": 73,
+      "head1473_sequential_new_rows": [
+        "00000000000000889002000000020000"
+      ],
+      "row_count": 1
+    },
+    {
+      "bit": 112,
+      "edge_cost_sum": 0,
+      "head1473_sequential_new_rows": [],
+      "row_count": 0
+    }
+  ],
+  "conflict_boundary": {
+    "cost64h_cross_lane_conflicts": 0,
+    "cost64h_d4_overlap_with_cost66i": [],
+    "cost64h_d4_overlap_with_cost76c": []
+  },
+  "date": "2026-11-17",
+  "interpretation_guard": "This is a set-theoretic rebase of already published D4 candidate projections from head1452 to head1473, not a fresh engine search or a new verdict. No receipt is folded by this audit. REFUTED-D10 is not a LOSS proof. The standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN.",
+  "projected_frontier_after_bit19_only": {
+    "cost_needed_by_open_classes": 368303,
+    "remaining_s5_orbits": "not projected; requires parent-incidence closure audit",
+    "s6_needed_by_open_classes": 4645,
+    "solved_s6_in_manifest": 1476,
+    "sum_remaining_cost": 504389,
+    "unique_remaining_s6": 6372
+  },
+  "projected_frontier_if_all_nine_receipts_folded": {
+    "cost_needed_by_open_classes": 367996,
+    "remaining_s5_orbits": "not projected; requires parent-incidence closure audit",
+    "s6_needed_by_open_classes": 4641,
+    "solved_s6_in_manifest": 1480,
+    "sum_remaining_cost": 504082,
+    "unique_remaining_s6": 6368
+  },
+  "schema": "n11-class2-lane-cost66i-head1473-marginal-rebase-20261117-v1",
+  "single_candidate_marginals_at_head1473": [
+    {
+      "bit": 19,
+      "closed_rows": [
+        "00000000000000801206000000080000"
+      ],
+      "covered_s6_orbits": 7,
+      "d4_canon_root": "00000000000000801226000000080000",
+      "head1473_single_candidate_rows": [
+        "00000000000000003801000000808000",
+        "00000000000000801222000000080000",
+        "00000000000000801226000000000000"
+      ],
+      "old_manifest_marginal_rows": 4,
+      "root": "00000000000000801226000000080000",
+      "row_count": 3
+    },
+    {
+      "bit": 28,
+      "closed_rows": [
+        "00000000000000503800000008000000"
+      ],
+      "covered_s6_orbits": 7,
+      "d4_canon_root": "00000000000000801226000010000000",
+      "head1473_single_candidate_rows": [
+        "00000000000000801222000010000000",
+        "00000000000000801226000000000000"
+      ],
+      "old_manifest_marginal_rows": 3,
+      "root": "00000000000000801226000010000000",
+      "row_count": 2
+    },
+    {
+      "bit": 29,
+      "closed_rows": [],
+      "covered_s6_orbits": 7,
+      "d4_canon_root": "00000000000000801226000020000000",
+      "head1473_single_candidate_rows": [
+        "00000000000000801226000000000000"
+      ],
+      "old_manifest_marginal_rows": 1,
+      "root": "00000000000000801226000020000000",
+      "row_count": 1
+    },
+    {
+      "bit": 58,
+      "closed_rows": [],
+      "covered_s6_orbits": 7,
+      "d4_canon_root": "00000000000000801626000000000000",
+      "head1473_single_candidate_rows": [
+        "00000000000000801226000000000000"
+      ],
+      "old_manifest_marginal_rows": 1,
+      "root": "00000000000000801626000000000000",
+      "row_count": 1
+    },
+    {
+      "bit": 88,
+      "closed_rows": [],
+      "covered_s6_orbits": 7,
+      "d4_canon_root": "00000000000000c89002000100000000",
+      "head1473_single_candidate_rows": [
+        "00000000000000801226000000000000",
+        "00000000000000889002000100000000"
+      ],
+      "old_manifest_marginal_rows": 2,
+      "root": "00000000010000801226000000000000",
+      "row_count": 2
+    },
+    {
+      "bit": 90,
+      "closed_rows": [],
+      "covered_s6_orbits": 7,
+      "d4_canon_root": "00000000000000c89002000040000000",
+      "head1473_single_candidate_rows": [
+        "00000000000000801226000000000000"
+      ],
+      "old_manifest_marginal_rows": 1,
+      "root": "00000000040000801226000000000000",
+      "row_count": 1
+    },
+    {
+      "bit": 99,
+      "closed_rows": [],
+      "covered_s6_orbits": 7,
+      "d4_canon_root": "00000000000000c89002000000200000",
+      "head1473_single_candidate_rows": [
+        "00000000000000801226000000000000",
+        "00000000000000889002000000200000"
+      ],
+      "old_manifest_marginal_rows": 2,
+      "root": "00000008000000801226000000000000",
+      "row_count": 2
+    },
+    {
+      "bit": 103,
+      "closed_rows": [],
+      "covered_s6_orbits": 7,
+      "d4_canon_root": "00000000000000c89002000000020000",
+      "head1473_single_candidate_rows": [
+        "00000000000000801226000000000000",
+        "00000000000000889002000000020000"
+      ],
+      "old_manifest_marginal_rows": 2,
+      "root": "00000080000000801226000000000000",
+      "row_count": 2
+    },
+    {
+      "bit": 112,
+      "closed_rows": [],
+      "covered_s6_orbits": 7,
+      "d4_canon_root": "00000000000000c89002000000000100",
+      "head1473_single_candidate_rows": [
+        "00000000000000801226000000000000"
+      ],
+      "old_manifest_marginal_rows": 1,
+      "root": "00010000000000801226000000000000",
+      "row_count": 1
+    }
+  ],
+  "source_pins": {
+    "bit19_bigint_audit": "ef1cefe30f6e030a1a0c5a76339d75f3a9514d7d",
+    "cert_manifest": "8a85ecef573bb6234b2ee1d9f7cb747926bd26ca",
+    "claim76c": "678211c5a35c25cf41b4a56473942860903647f6",
+    "fold64h": "1633be292f6f1862c895009eac29d398d0be7738",
+    "fold76c": "953beaea054989e8b1de33f48b1f2ebc13ae7e11",
+    "marginals": "3343325ae7820d3531fd7b877accb86e39da28a3",
+    "worklist": "2fee1d0718547a62e346d35f5858d7913e37c097"
+  },
+  "union_edge_cost": 514,
+  "union_of_new_manifest_rows": [
+    {
+      "category": "unswept",
+      "edge_cost": 66,
+      "engine_refuted_d10": 0,
+      "engine_win7_d10": 0,
+      "hex": "00000000000000003801000000808000",
+      "open_candidates_after_transfers": 66,
+      "open_parents": 2,
+      "transferred_refuted_d10": 0
+    },
+    {
+      "category": "unswept",
+      "edge_cost": 75,
+      "engine_refuted_d10": 0,
+      "engine_win7_d10": 0,
+      "hex": "00000000000000801222000000080000",
+      "open_candidates_after_transfers": 75,
+      "open_parents": 3,
+      "transferred_refuted_d10": 0
+    },
+    {
+      "category": "unswept",
+      "edge_cost": 66,
+      "engine_refuted_d10": 0,
+      "engine_win7_d10": 0,
+      "hex": "00000000000000801226000000000000",
+      "open_candidates_after_transfers": 66,
+      "open_parents": 2,
+      "transferred_refuted_d10": 0
+    },
+    {
+      "category": "unswept",
+      "edge_cost": 74,
+      "engine_refuted_d10": 0,
+      "engine_win7_d10": 0,
+      "hex": "00000000000000801222000010000000",
+      "open_candidates_after_transfers": 74,
+      "open_parents": 2,
+      "transferred_refuted_d10": 0
+    },
+    {
+      "category": "unswept",
+      "edge_cost": 83,
+      "engine_refuted_d10": 0,
+      "engine_win7_d10": 0,
+      "hex": "00000000000000889002000100000000",
+      "open_candidates_after_transfers": 83,
+      "open_parents": 2,
+      "transferred_refuted_d10": 0
+    },
+    {
+      "category": "unswept",
+      "edge_cost": 77,
+      "engine_refuted_d10": 0,
+      "engine_win7_d10": 0,
+      "hex": "00000000000000889002000000200000",
+      "open_candidates_after_transfers": 77,
+      "open_parents": 2,
+      "transferred_refuted_d10": 0
+    },
+    {
+      "category": "unswept",
+      "edge_cost": 73,
+      "engine_refuted_d10": 0,
+      "engine_win7_d10": 0,
+      "hex": "00000000000000889002000000020000",
+      "open_candidates_after_transfers": 73,
+      "open_parents": 2,
+      "transferred_refuted_d10": 0
+    }
+  ],
+  "union_rows": 7
+}
+
