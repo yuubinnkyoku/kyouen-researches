@@ -1,0 +1,78 @@
+{
+  "schema": "n11-class2-lane-worker-split8-memo-merge-measurement-claim-73k-20261117-v1",
+  "date": "2026-11-17",
+  "lane": "n11 class2-lane long-term (cost73k)",
+  "status": "CLAIMED_IN_PROGRESS",
+  "claim": "Execute the published K0909 resume item: 8-worker node-balanced split memo merge measurement (BITS_W* extension, head-bit reverse penalty, seed failure rate re-budgeting at MS=1<<25). Distinct from the claimed hybrid-seed-union measurement (which combines existing 2-way/4-way tables); this measurement runs a NEW 8-way split.",
+  "base_head": "da276db1ab2ea4824a23019015a44632953a794d",
+  "inputs_pins": {
+    "extractor_git_blob": "52bcaf509ea12fad4c936501d30d26b5b66c0085",
+    "driver_git_blob": "2a95d9527afa3c1a24685b697c822f451aae58a5",
+    "legal_git_blob": "8e97082c42838c7a4a4b6d2dd235276c8d43ab9a",
+    "manifest_git_blob": "0892aed07d187ae2fb3b4b90a21c7adbc1002b62",
+    "published_cert_md5": "22/22 match manifest"
+  },
+  "split_design": {
+    "method": "contiguous DP min-max partition of the 22 band bits by published band ms23 per-bit node counts",
+    "bits_v1": [
+      0,
+      7,
+      11
+    ],
+    "bits_v2": [
+      15,
+      35
+    ],
+    "bits_v3": [
+      39,
+      41,
+      44,
+      58
+    ],
+    "bits_v4": [
+      62,
+      73,
+      76
+    ],
+    "bits_v5": [
+      87,
+      89,
+      94
+    ],
+    "bits_v6": [
+      95,
+      97
+    ],
+    "bits_v7": [
+      98,
+      103,
+      105
+    ],
+    "bits_v8": [
+      112,
+      117
+    ],
+    "band23_weights": [
+      12253371,
+      13205358,
+      13271291,
+      14567808,
+      18608221,
+      16286927,
+      17536986,
+      15458697
+    ]
+  },
+  "planned_stages": [
+    "run 8 fresh workers (MS=1<<23, band-carried memo, per-bit snapshots byte-identical to published certs)",
+    "distinct passes with internal conflict counts; 8-way heapq merge-join (incidence histogram up to 8, cross conflicts)",
+    "merged seed8: size, md5, merge determinism (byte-identical repeat)",
+    "sim MS=1<<24 / 1<<25 / 1<<26 on seed8 (knee curve 3rd point beyond the published 4.29M/4.99M seeds; design-load ~0.15 boundary test)",
+    "engine seedrun MS=1<<25 with seed8 (hardened dump fsync, cap 200): 22/22 certs byte-identical, record identity closed, seed failed == sim prediction",
+    "compare workers total vs published 2-way (119,962,147) / 4-way nb (112,741,501) / band ms23 (121,186,659); head-bit fresh penalty per worker; seedrun nodes vs published ms25 node-balanced seedrun (72,745,351)"
+  ],
+  "batches_run": 0,
+  "interpretation_guard": "Claim in progress; no measurement batches completed yet. No new WIN/LOSS verdicts, no certificate byte changes, no manifest closures. Standard 11x11 remains UNKNOWN.",
+  "session_note": "Executed in the upgraded agent execution environment (Node 22.20.0, Python 3.12.14, same environment class as the published K0909 measurements). Inputs reconstructed from raw-CDN pinned blobs and pin-verified; smoke test (bit 41, MS=1<<23) reproduced a byte-identical certificate.",
+  "last_checked_main": "da276db1ab2ea4824a23019015a44632953a794d"
+}
