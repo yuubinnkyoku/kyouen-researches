@@ -1,10 +1,10 @@
 ---
 id: K0907
-title: 証明書extractorの符号付きmemoキーと死んだ負境界の検証（K0906 v16 repairの予告したextractor監査）— 重複挿入機構の定量（high-bitキーのみ・最大64コピー・私有窓）とcost-73k帯修正battery（fixB −73.9%・全22証明書byte同一・健全性無影響）
+title: 証明書extractorの符号付きmemoキーと死んだ負境界の検証（K0906 v16 repairの予告したextractor監査）— 重複挿入機構の定量（high-bitキーのみ・最大64コピー・私有窓）とcost-73k帯修正battery（fixB −73.9%・全22証明書byte同一・健全性無影響）と残り全エンジンコピーの構造監査完了（バグ持ち6コピー・修正済み3コピー・v17掃引エンジンは両fix済み）
 kind: verification
 status: verified
 topics: [certificates, verification, search-methods]
-aliases: [certificate extractor memo sign bug, extractor dead negative bounds, duplicate memo insertion mechanism, fixed-memo battery cost73k, KYOENSLT memo dump]
+aliases: [certificate extractor memo sign bug, extractor dead negative bounds, duplicate memo insertion mechanism, fixed-memo battery cost73k, KYOENSLT memo dump, extractor copies memo defect audit, v17 sweep engine memo fixed]
 relations: []
 artifacts:
 - path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/verify_extractor_memo_sign_bug_73k_20261117.py
@@ -19,8 +19,14 @@ artifacts:
 - path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-fixed-memo-battery-73k-20261117.json
   role: data
   note: 修正battery出版JSON（per-bit nodes/ratio/occupied/byte同一/md5・verbatim fresh ms23対比（総和108,499,241）・出版ms18 baseline対比（155,946,109）・10 gate・interpretation guard）
-evidence: 'verify_extractor_memo_sign_bug_73k_20261117.py: 24/24チェック合格・2回実行で監査JSON byte同一。bug A（符号キー）: mK0..mK3がUint32Arrayで比較相手M0..M3はint32 JS数値。cell 31/63/95を含む位置はword 0/1/2のbit 31が立ちM0..M2が負になるため格納された符号なし値との===比較が永久不成立・memoFindが該当位置を見つけられずmemoEntryが訪問のたびに次の空きslotへ重複挿入する（上限64コピー=キー自身の64スロット探査窓の全占有）。bit0先頭12手dump（834,262 nodes・MS=1<<23）で216,719レコード/112,731 distinctキー/16,417重複キーを観測し、重複キーは全てbit31 high-bit（非high-bitキーの重複は0）・最大64コピー・64コピーキーは7個でspan 63の私有窓・全コピーが64スロット探査窓内（window fit・連続runは主張せず初版の過大主張はFAIL gateが補正）・125,293レコード（57.81%）がhigh-bit。この重複挿入は出版ms18帯測定のbit-0停滞（clumped-hash insertion failures・占有76.6%）と整合する具体的機構。bug B（死んだ負境界）: `if(h>=0&&d>mNoWin[h]) mNoWin[h]=d;`（mNoLose版も）はsentinel 255との比較方向が逆でdepth<=64では一度も発火せず、全216,719レコードでnowin=nolose=255・memoFindの両負境界ショートカットが死んでいる。両bugともmemoは最適化のみでサウンド性無影響（見逃しのみを生じ、誤ったhitはない）。battery: fixA（bug Aのみ・正確1行修正）は22 bit fresh process MS=1<<23で75,108,849 nodes=verbatim fresh ms23総和108,499,241の0.6923（−30.8%）・22/22証明書byte同一・wall 198.6s。fixB（両bug修正）は28,290,025 nodes=0.2607（−73.9%・3.83倍）かつ出版ms18 baseline 155,946,109の0.1814（−81.9%・5.51倍）・22/22 byte同一・wall 128.5s・bit0 1,277,392 nodesは2回実行で一致（決定性gate）・bit95は11,857,737の0.119に相当する1,415,400。fixA==fixBのper-bit occupiedが全22 bitで一致（重複挿入除去がエントリ集合を確定させ、負境界修正は既存エントリに境界値を与えるのみでノード再探索を潰すという解釈と整合）。byte同一は出版証明書の再出版ではなくgateであり、repo-verbatim extractorは出版決定性連鎖のため意図的に未修正のまま（修正採用は別レーン判断）。全出版verdict・ノード数はverbatim値として有効'
-scope: 'class4_child1_cert_extractor_exact.ts（git blob 52bacf509ea12fad4c936501d30d26b5b66c0085）のmemo実装に関する実装検証と性能測定。2026-11-14のv15→v16 runner repair（log 2026-11-14-n11-class4-lane-v16-memo-key-repair.md・milestone-5実験README）が「certificate extractor copiesは再利用前に別途監査せよ」と予告したうちの証明書extractor 1コピーに対する監査の完了。sweep engine・chunk prover・FBT-saturation runner等の他コピーは本項の範囲外で未監査のまま。測定はcost-73k WIN7-D10帯（S6 child 00000000000000801206000000000400・22 bit・fresh process MS=1<<23・kill table空）に限定した有限測定であり、無界の性能主張ではない。勝敗への影響はゼロ（memoは最適化のみ）'
+- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_extractor_copies_memo_defects_20261117.py
+  role: verifier
+  note: 残り全コピー監査スクリプト（stdlib+Node・決定的・2回実行で出力JSON byte同一）。9ファイルのgit blob pin検証・memoFind/memoEntryブロックの空白正規化token比較（extractor族3本同一・sweep-side族3本同一・両バグ持ち族は完全空白除去後に同一=textualに同一機構）・bugパターン計数（符号比較2箇所・死んだ負境界更新行nowin/nolose各1行・修正版sentinel対応形の存在）・ms23==exactの1行差assert・node -e符号demo（Uint32Array格納は+2^32で読み戻り===不成立・Int32Array成立）。
+- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-extractor-copies-memo-defect-audit-20261117.json
+  role: data
+  note: 全コピー監査JSON（9エントリ・家族token同一性・bug A/B分類・consumer履歴・解釈境界）。
+evidence: 'verify_extractor_memo_sign_bug_73k_20261117.py: 24/24チェック合格・2回実行で監査JSON byte同一。bug A（符号キー）: mK0..mK3がUint32Arrayで比較相手M0..M3はint32 JS数値。cell 31/63/95を含む位置はword 0/1/2のbit 31が立ちM0..M2が負になるため格納された符号なし値との===比較が永久不成立・memoFindが該当位置を見つけられずmemoEntryが訪問のたびに次の空きslotへ重複挿入する（上限64コピー=キー自身の64スロット探査窓の全占有）。bit0先頭12手dump（834,262 nodes・MS=1<<23）で216,719レコード/112,731 distinctキー/16,417重複キーを観測し、重複キーは全てbit31 high-bit（非high-bitキーの重複は0）・最大64コピー・64コピーキーは7個でspan 63の私有窓・全コピーが64スロット探査窓内（window fit・連続runは主張せず初版の過大主張はFAIL gateが補正）・125,293レコード（57.81%）がhigh-bit。この重複挿入は出版ms18帯測定のbit-0停滞（clumped-hash insertion failures・占有76.6%）と整合する具体的機構。bug B（死んだ負境界）: `if(h>=0&&d>mNoWin[h]) mNoWin[h]=d;`（mNoLose版も）はsentinel 255との比較方向が逆でdepth<=64では一度も発火せず、全216,719レコードでnowin=nolose=255・memoFindの両負境界ショートカットが死んでいる。両bugともmemoは最適化のみでサウンド性無影響（見逃しのみを生じ、誤ったhitはない）。battery: fixA（bug Aのみ・正確1行修正）は22 bit fresh process MS=1<<23で75,108,849 nodes=verbatim fresh ms23総和108,499,241の0.6923（−30.8%）・22/22証明書byte同一・wall 198.6s。fixB（両bug修正）は28,290,025 nodes=0.2607（−73.9%・3.83倍）かつ出版ms18 baseline 155,946,109の0.1814（−81.9%・5.51倍）・22/22 byte同一・wall 128.5s・bit0 1,277,392 nodesは2回実行で一致（決定性gate）・bit95は11,857,737の0.119に相当する1,415,400。fixA==fixBのper-bit occupiedが全22 bitで一致（重複挿入除去がエントリ集合を確定させ、負境界修正は既存エントリに境界値を与えるのみでノード再探索を潰すという解釈と整合）。byte同一は出版証明書の再出版ではなくgateであり、repo-verbatim extractorは出版決定性連鎖のため意図的に未修正のまま（修正採用は別レーン判断）。全出版verdict・ノード数はverbatim値として有効'. 2026-11-17追記: 残り全エンジンコピーの構造監査を完了 （audit_extractor_copies_memo_defects_20261117.py・2回実行byte同一）。bug A+Bは extractor族3本 （cert_extractor 6716075d…・exact 52bcaf50…・exact_ms23 c267f260…（exactとちょうど1行差=MS行））と sweep-side族3本（v15 sweep_engine bd6a650a…・chunk_prover fc74d215…・FBT runner 8744fc65…・いずれも 2026-11-13 batch1世代）の計6コピーに存在し、両族のmemoブロックは空白除去後に完全同一のため K0907のdump定量機構がそのまま全コピーに妥当。修正済みは runner_v16 0a4a86f6…・runner_v17 c132cc64… （両fix・memoブロック同一）と extractor_exact_v16 5518d375… の3コピー。出版73i/73j/73k/73l raw掃引で 使用したv17エンジンは両fix済みのため掃引側のMS容量測定の利得は純容量効果。全コピーで性能のみで サウンド性無影響は不変
+scope: 'class4_child1_cert_extractor_exact.ts（git blob 52bacf509ea12fad4c936501d30d26b5b66c0085）のmemo実装に関する実装検証と性能測定。2026-11-14のv15→v16 runner repair（log 2026-11-14-n11-class4-lane-v16-memo-key-repair.md・milestone-5実験README）が「certificate extractor copiesは再利用前に別途監査せよ」と予告したうちの証明書extractor 1コピーに対する監査の完了。2026-11-17追記でclass4_child1系エンジンコピー9本（extractor 3・sweep-side 3・修正済み3）の監査が完了し、「他コピーは未監査」の限界は閉じた（bug A+Bはbatch1世代の6コピーに存在・v16/v17 runnerとv16 extractorは修正済み）。測定はcost-73k WIN7-D10帯（S6 child 00000000000000801206000000000400・22 bit・fresh process MS=1<<23・kill table空）に限定した有限測定であり、無界の性能主張ではない。勝敗への影響はゼロ（memoは最適化のみ）'
 ---
 
 # 証明書extractorの符号付きmemoキーと死んだ負境界の検証
@@ -92,8 +98,11 @@ verbatim engineに検索挙動を変えないdump出口を注入し、bit0先頭
   （ノード数はbug込みのverbatim値）。
 - repo-verbatim extractorは出版決定性連鎖のため意図的に未修正。
   修正の採用（新規抽出のfixB化）は別レーン判断で、本項は測定のみ。
-- 他コピー（sweep engine・chunk prover・FBT-saturation runner）は
-  依然として未監査。
+- 他コピー監査は2026-11-17に完了: sweep engine・chunk prover・
+  FBT-saturation runnerとextractor族残り2本の計6コピーに同一2欠陥、
+  v16/v17 runnerとv16 extractorの3コピーは両fix済み（構造監査・token
+  同一性・blob pin。コピー個別のdump定量や修正battery測定は実施せず、
+  K0907の機構定量がtoken同一性を通じて妥当するという根拠）。
 - 測定はcost-73k帯（22 bit・depth 10・kill table空）の有限測定。
 - WIN7-D10は個別7石rootの深さ10以内の先手勝ちのみ、REFUTED-D10は
   LOSS証明ではない。**11×11空盤・二石root {49,60}/{59,60}・S2 {59,60}・

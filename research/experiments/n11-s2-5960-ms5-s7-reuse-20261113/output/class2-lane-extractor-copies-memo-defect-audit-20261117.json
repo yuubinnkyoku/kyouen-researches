@@ -1,0 +1,179 @@
+{
+ "schema": "n11-class2-lane-extractor-copies-memo-defect-audit-20261117-v1",
+ "date": "2026-11-17",
+ "basis": "K0907 (item K0907-extractor-memo-sign-bug-and-dead-negative-bounds.md, verifier verify_extractor_memo_sign_bug_73k_20261117.py) verified both memo defects for class4_child1_cert_extractor_exact.ts (blob 52bacf50...) and explicitly left the other copies unaudited; this audit closes that limitation for all class4_child1 engine copies in the experiment scripts dir",
+ "method": {
+  "pins": "all nine source files fetched from the commit-pinned raw CDN mirror and asserted against the GitHub git blob shas of main",
+  "blocks": "memoFind/memoEntry extracted per file and compared whitespace-normalized: the three extractor-family copies are identical, the three sweep-side copies are identical, and the two buggy families are identical to each other after full whitespace removal (token equality), so the K0907 dump-quantified mechanism applies verbatim to every buggy copy",
+  "patterns": "bug A present = memoFind/memoEntry compare mK0[h]===M0 without >>>0 (exactly 2 comparison sites per file); fixed = mK0[h]===(M0>>>0). bug B present = exactly one dead nowin update 'd>mNoWin[h]) mNoWin[h]=d;' and one dead nolose twin; fixed = sentinel-aware '(mNoWin[h]===255||d>mNoWin[h])' style. All nine copies declare the key arrays as Uint32Array (the fixed copies repair the comparison, not the array type)",
+  "demo": "node -e sign demo: storing an int32 with bit 31 set into Uint32Array reads back as value+2^32, so === against the original negative value is false (Int32Array compares true). This is the no-false-hit direction: a stored key can only compare equal to a non-negative operand, so a miss is the worst outcome and no wrong memo hit is possible",
+  "ms23": "class4_child1_cert_extractor_exact_ms23.ts differs from class4_child1_cert_extractor_exact.ts in exactly one line (MS=1<<18 -> 1<<23), asserted line by line, so K0907's audit of exact.ts covers the ms23 variant used for the published 73k/73l certificate bands"
+ },
+ "entries": [
+  {
+   "file": "class4_child1_cert_extractor.ts",
+   "git_blob_sha": "6716075d2c4f2e49c3d4570b2314449de121db0d",
+   "family": "extractor",
+   "memo_find_block_sha256": "1f8b529b0e1ad802f215d225f450fe947768de92cf516fef90b96ccfe991a23e",
+   "memo_entry_block_sha256": "b172f4a19ad78bd1c6840096c082483194ccfcf468cc862f5a83ade7abb1be8e",
+   "memo_find_block": "function memoFind(){ let h=mHash(); for(let n=0;n<64;n++){ if(mOcc[h]===0)return -1; if(mK0[h]===M0&&mK1[h]===M1&&mK2[h]===M2&&mK3[h]===M3)return h; h=(h+1)&MM; } return -1; }",
+   "memo_entry_block": "function memoEntry(){ let h=mHash(); for(let n=0;n<64;n++){ if(mOcc[h]===0){ mOcc[h]=1; mK0[h]=M0; mK1[h]=M1; mK2[h]=M2; mK3[h]=M3; mWin[h]=255; mLose[h]=255; mNoWin[h]=255; mNoLose[h]=255; return h; } if(mK0[h]===M0&&mK1[h]===M1&&mK2[h]===M2&&mK3[h]===M3)return h; h=(h+1)&MM; } return -1; }",
+   "uint32array_keys": true,
+   "ms_shift": 18,
+   "bug_a_signed_memo_key": true,
+   "bug_b_dead_negative_bounds": true
+  },
+  {
+   "file": "class4_child1_cert_extractor_exact.ts",
+   "git_blob_sha": "52bcaf509ea12fad4c936501d30d26b5b66c0085",
+   "family": "extractor",
+   "memo_find_block_sha256": "1f8b529b0e1ad802f215d225f450fe947768de92cf516fef90b96ccfe991a23e",
+   "memo_entry_block_sha256": "b172f4a19ad78bd1c6840096c082483194ccfcf468cc862f5a83ade7abb1be8e",
+   "memo_find_block": "function memoFind(){ let h=mHash(); for(let n=0;n<64;n++){ if(mOcc[h]===0)return -1; if(mK0[h]===M0&&mK1[h]===M1&&mK2[h]===M2&&mK3[h]===M3)return h; h=(h+1)&MM; } return -1; }",
+   "memo_entry_block": "function memoEntry(){ let h=mHash(); for(let n=0;n<64;n++){ if(mOcc[h]===0){ mOcc[h]=1; mK0[h]=M0; mK1[h]=M1; mK2[h]=M2; mK3[h]=M3; mWin[h]=255; mLose[h]=255; mNoWin[h]=255; mNoLose[h]=255; return h; } if(mK0[h]===M0&&mK1[h]===M1&&mK2[h]===M2&&mK3[h]===M3)return h; h=(h+1)&MM; } return -1; }",
+   "uint32array_keys": true,
+   "ms_shift": 18,
+   "bug_a_signed_memo_key": true,
+   "bug_b_dead_negative_bounds": true
+  },
+  {
+   "file": "class4_child1_cert_extractor_exact_ms23.ts",
+   "git_blob_sha": "c267f260d1d6fcc49ed5367509e854c81822497e",
+   "family": "extractor",
+   "memo_find_block_sha256": "1f8b529b0e1ad802f215d225f450fe947768de92cf516fef90b96ccfe991a23e",
+   "memo_entry_block_sha256": "b172f4a19ad78bd1c6840096c082483194ccfcf468cc862f5a83ade7abb1be8e",
+   "memo_find_block": "function memoFind(){ let h=mHash(); for(let n=0;n<64;n++){ if(mOcc[h]===0)return -1; if(mK0[h]===M0&&mK1[h]===M1&&mK2[h]===M2&&mK3[h]===M3)return h; h=(h+1)&MM; } return -1; }",
+   "memo_entry_block": "function memoEntry(){ let h=mHash(); for(let n=0;n<64;n++){ if(mOcc[h]===0){ mOcc[h]=1; mK0[h]=M0; mK1[h]=M1; mK2[h]=M2; mK3[h]=M3; mWin[h]=255; mLose[h]=255; mNoWin[h]=255; mNoLose[h]=255; return h; } if(mK0[h]===M0&&mK1[h]===M1&&mK2[h]===M2&&mK3[h]===M3)return h; h=(h+1)&MM; } return -1; }",
+   "uint32array_keys": true,
+   "ms_shift": 23,
+   "bug_a_signed_memo_key": true,
+   "bug_b_dead_negative_bounds": true
+  },
+  {
+   "file": "class4_child1_sweep_engine.ts",
+   "git_blob_sha": "bd6a650aafbcea2fde30d84cd52717fcb718fba0",
+   "family": "sweep-side",
+   "memo_find_block_sha256": "8a306c3e3d766933589ddb8e1963db98eaaeabac01716b59d2aeb67742769173",
+   "memo_entry_block_sha256": "b3fee18e417962acd507ff734cfa5a8524bba5f2c62ca9298520db284227547d",
+   "memo_find_block": "function memoFind() { let h=mHash(); for(let n=0;n<64;n++){ if(mOcc[h]===0)return -1; if(mK0[h]===M0&&mK1[h]===M1&&mK2[h]===M2&&mK3[h]===M3)return h; h=(h+1)&MM; } return -1; }",
+   "memo_entry_block": "function memoEntry() { let h=mHash(); for(let n=0;n<64;n++){ if(mOcc[h]===0){ mOcc[h]=1; mK0[h]=M0; mK1[h]=M1; mK2[h]=M2; mK3[h]=M3; mWin[h]=255; mLose[h]=255; mNoWin[h]=255; mNoLose[h]=255; return h; } if(mK0[h]===M0&&mK1[h]===M1&&mK2[h]===M2&&mK3[h]===M3)return h; h=(h+1)&MM; } return -1; }",
+   "uint32array_keys": true,
+   "ms_shift": 18,
+   "bug_a_signed_memo_key": true,
+   "bug_b_dead_negative_bounds": true
+  },
+  {
+   "file": "class4_child1_chunk_prover.ts",
+   "git_blob_sha": "fc74d2156290175dacecd9d9413eb6fbda452e62",
+   "family": "sweep-side",
+   "memo_find_block_sha256": "8a306c3e3d766933589ddb8e1963db98eaaeabac01716b59d2aeb67742769173",
+   "memo_entry_block_sha256": "b3fee18e417962acd507ff734cfa5a8524bba5f2c62ca9298520db284227547d",
+   "memo_find_block": "function memoFind() { let h=mHash(); for(let n=0;n<64;n++){ if(mOcc[h]===0)return -1; if(mK0[h]===M0&&mK1[h]===M1&&mK2[h]===M2&&mK3[h]===M3)return h; h=(h+1)&MM; } return -1; }",
+   "memo_entry_block": "function memoEntry() { let h=mHash(); for(let n=0;n<64;n++){ if(mOcc[h]===0){ mOcc[h]=1; mK0[h]=M0; mK1[h]=M1; mK2[h]=M2; mK3[h]=M3; mWin[h]=255; mLose[h]=255; mNoWin[h]=255; mNoLose[h]=255; return h; } if(mK0[h]===M0&&mK1[h]===M1&&mK2[h]===M2&&mK3[h]===M3)return h; h=(h+1)&MM; } return -1; }",
+   "uint32array_keys": true,
+   "ms_shift": 18,
+   "bug_a_signed_memo_key": true,
+   "bug_b_dead_negative_bounds": true
+  },
+  {
+   "file": "class4_child1_runner.ts",
+   "git_blob_sha": "8744fc65b6b7cac6bd561403ce4c749e01c51359",
+   "family": "sweep-side",
+   "memo_find_block_sha256": "8a306c3e3d766933589ddb8e1963db98eaaeabac01716b59d2aeb67742769173",
+   "memo_entry_block_sha256": "b3fee18e417962acd507ff734cfa5a8524bba5f2c62ca9298520db284227547d",
+   "memo_find_block": "function memoFind() { let h=mHash(); for(let n=0;n<64;n++){ if(mOcc[h]===0)return -1; if(mK0[h]===M0&&mK1[h]===M1&&mK2[h]===M2&&mK3[h]===M3)return h; h=(h+1)&MM; } return -1; }",
+   "memo_entry_block": "function memoEntry() { let h=mHash(); for(let n=0;n<64;n++){ if(mOcc[h]===0){ mOcc[h]=1; mK0[h]=M0; mK1[h]=M1; mK2[h]=M2; mK3[h]=M3; mWin[h]=255; mLose[h]=255; mNoWin[h]=255; mNoLose[h]=255; return h; } if(mK0[h]===M0&&mK1[h]===M1&&mK2[h]===M2&&mK3[h]===M3)return h; h=(h+1)&MM; } return -1; }",
+   "uint32array_keys": true,
+   "ms_shift": 18,
+   "bug_a_signed_memo_key": true,
+   "bug_b_dead_negative_bounds": true
+  },
+  {
+   "file": "class4_child1_runner_v16.ts",
+   "git_blob_sha": "0a4a86f6828dc010c89ff17596054336a6b6091f",
+   "family": "repaired",
+   "memo_find_block_sha256": "3c0d60eff6cc6f1d8a1f401c94c7d8dd26f9d15552cb3dc30c8eafc9e785c4b4",
+   "memo_entry_block_sha256": "115b1c8d5ec245087e11082a9905d731aa56e401515a7dc3c508b0f6cb34ffa6",
+   "memo_find_block": "function memoFind() { let h=mHash(); for(let n=0;n<64;n++){ if(mOcc[h]===0)return -1; if(mK0[h]===(M0>>>0)&&mK1[h]===(M1>>>0)&&mK2[h]===(M2>>>0)&&mK3[h]===(M3>>>0))return h; h=(h+1)&MM; } return -1; }",
+   "memo_entry_block": "function memoEntry() { let h=mHash(); for(let n=0;n<64;n++){ if(mOcc[h]===0){ mOcc[h]=1; mK0[h]=M0; mK1[h]=M1; mK2[h]=M2; mK3[h]=M3; mWin[h]=255; mLose[h]=255; mNoWin[h]=255; mNoLose[h]=255; return h; } if(mK0[h]===(M0>>>0)&&mK1[h]===(M1>>>0)&&mK2[h]===(M2>>>0)&&mK3[h]===(M3>>>0))return h; h=(h+1)&MM; } return -1; }",
+   "uint32array_keys": true,
+   "ms_shift": 18,
+   "bug_a_signed_memo_key": false,
+   "bug_b_dead_negative_bounds": false
+  },
+  {
+   "file": "class4_child1_runner_v17.ts",
+   "git_blob_sha": "c132cc6425eee3feaeef1d697dd74f968cfedb59",
+   "family": "repaired",
+   "memo_find_block_sha256": "3c0d60eff6cc6f1d8a1f401c94c7d8dd26f9d15552cb3dc30c8eafc9e785c4b4",
+   "memo_entry_block_sha256": "115b1c8d5ec245087e11082a9905d731aa56e401515a7dc3c508b0f6cb34ffa6",
+   "memo_find_block": "function memoFind() { let h=mHash(); for(let n=0;n<64;n++){ if(mOcc[h]===0)return -1; if(mK0[h]===(M0>>>0)&&mK1[h]===(M1>>>0)&&mK2[h]===(M2>>>0)&&mK3[h]===(M3>>>0))return h; h=(h+1)&MM; } return -1; }",
+   "memo_entry_block": "function memoEntry() { let h=mHash(); for(let n=0;n<64;n++){ if(mOcc[h]===0){ mOcc[h]=1; mK0[h]=M0; mK1[h]=M1; mK2[h]=M2; mK3[h]=M3; mWin[h]=255; mLose[h]=255; mNoWin[h]=255; mNoLose[h]=255; return h; } if(mK0[h]===(M0>>>0)&&mK1[h]===(M1>>>0)&&mK2[h]===(M2>>>0)&&mK3[h]===(M3>>>0))return h; h=(h+1)&MM; } return -1; }",
+   "uint32array_keys": true,
+   "ms_shift": 18,
+   "bug_a_signed_memo_key": false,
+   "bug_b_dead_negative_bounds": false
+  },
+  {
+   "file": "class4_child1_cert_extractor_exact_v16.ts",
+   "git_blob_sha": "5518d375fc6b4a7a14c22a1a65586f0c1c5731c0",
+   "family": "repaired",
+   "memo_find_block_sha256": "271355523ffbaf5f935351fdb3912ca86d4ab7379b8f7e8cc6395f6d8c04b96d",
+   "memo_entry_block_sha256": "f681934ee66448d3a1b28b9314f1a11f675b109221cbd94a34c2a5a3b05686ae",
+   "memo_find_block": "function memoFind(){ let h=mHash(); for(let n=0;n<64;n++){ if(mOcc[h]===0)return -1; if(mK0[h]===(M0>>>0)&&mK1[h]===(M1>>>0)&&mK2[h]===(M2>>>0)&&mK3[h]===(M3>>>0))return h; h=(h+1)&MM; } return -1; }",
+   "memo_entry_block": "function memoEntry(){ let h=mHash(); for(let n=0;n<64;n++){ if(mOcc[h]===0){ mOcc[h]=1; mK0[h]=M0; mK1[h]=M1; mK2[h]=M2; mK3[h]=M3; mWin[h]=255; mLose[h]=255; mNoWin[h]=255; mNoLose[h]=255; return h; } if(mK0[h]===(M0>>>0)&&mK1[h]===(M1>>>0)&&mK2[h]===(M2>>>0)&&mK3[h]===(M3>>>0))return h; h=(h+1)&MM; } return -1; }",
+   "uint32array_keys": true,
+   "ms_shift": 18,
+   "bug_a_signed_memo_key": false,
+   "bug_b_dead_negative_bounds": false
+  }
+ ],
+ "consumer_history": {
+  "class4_child1_sweep_engine.ts": "added 2026-11-13 (commit 449d0941a, class4-batch1 sandbox sweep engine v15)",
+  "class4_child1_chunk_prover.ts": "added 2026-11-13 (commit e55d8225c, class4-batch1 chunk prover)",
+  "class4_child1_runner.ts": "added 2026-11-13 (commit 3b0603fa4, class4-batch1 external runner; transport repair 2a1af3a79 restored identical bytes)",
+  "class4_child1_cert_extractor.ts": "added 2026-11-13 (commit 761b6ea7c, class4-batch1 certificate extractor)",
+  "class4_child1_runner_v16.ts": "added 2026-11-14 (commit c56ead53f: unsigned TT keys + sentinel-aware bounds)",
+  "class4_child1_runner_v17.ts": "added 2026-11-16 (commit b0c2985f7); the engine of the published cost-73i/73j/73k/73l raw sweeps and of the memo-capacity measurement",
+  "class4_child1_cert_extractor_exact_v16.ts": "added 2026-11-14 (repaired extractor; not used for published certificates)"
+ },
+ "summary": {
+  "files_audited": 9,
+  "bug_a_and_b_present": [
+   "class4_child1_cert_extractor.ts",
+   "class4_child1_cert_extractor_exact.ts",
+   "class4_child1_cert_extractor_exact_ms23.ts",
+   "class4_child1_chunk_prover.ts",
+   "class4_child1_runner.ts",
+   "class4_child1_sweep_engine.ts"
+  ],
+  "both_bugs_fixed": [
+   "class4_child1_cert_extractor_exact_v16.ts",
+   "class4_child1_runner_v16.ts",
+   "class4_child1_runner_v17.ts"
+  ],
+  "extractor_family_token_identical": true,
+  "sweep_family_token_identical": true,
+  "buggy_families_whitespace_identical": true,
+  "ms23_single_line_diff": {
+   "line_index": 76,
+   "exact": "const MS=1<<18, MM=MS-1;",
+   "ms23": "const MS=1<<23, MM=MS-1;"
+  },
+  "node_sign_demo": {
+   "stored_uint32": 2235736064,
+   "signed_value": -2059231232,
+   "uint32_equal": false,
+   "int32_equal": true
+  },
+  "published_sweep_engine_v17_is_fixed": true
+ },
+ "interpretation_guard": [
+  "both defects are performance-only in every copy: bug A can only cause memo misses and duplicate insertions (a stored unsigned key never compares equal to a negative signed operand and can only match a genuinely equal key), bug B only leaves the negative-bound shortcuts permanently dead; no published verdict, node count or certificate byte is invalidated, and node counts remain the verbatim values",
+  "the published cost-73i/73j/73k/73l raw sweeps were produced by class4_child1_runner_v17 (blob c132cc64), which already carries both fixes; the sweep-side memo-capacity gains measured for v17 at MS=1<<23 are pure capacity effects, not sign-bug effects",
+  "the buggy copies are the 2026-11-13 class4-batch1-era engines (v15 sweep engine, chunk prover, FBT-saturation external runner) and the verbatim extractor family; all outputs they produced remain valid with bug-inclusive node counts",
+  "the repo-verbatim extractors stay unrepaired on purpose for the published determinism chain; the fixed variants (v16 extractor: both fixes, runner v16/v17) are the measured-only or going-forward engines per the K0907 battery",
+  "this audit changes no verdict, closes no manifest row, and moves no frontier number; the receipt folds stay pending behind their own lanes",
+  "WIN7-D10 certificates prove only individual 7-stone roots within depth 10; REFUTED-D10 is not a LOSS proof; 11x11 empty board, two-stone roots {49,60} and {59,60}, S2 {59,60}, class 1, class 2 and class 4 all remain UNKNOWN"
+ ]
+}
