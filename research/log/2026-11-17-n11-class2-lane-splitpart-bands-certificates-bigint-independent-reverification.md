@@ -27,7 +27,7 @@ it completes the five bands 63g/72b/74d/77c/77d end to end (61 records).
    (`62b5d9413daafb172f6e10249976ee6808f7b454`);
 3. per-part manifest agreement for 72b/74d: bytes/md5/git_blob_sha (plus
    line counts for 72b) against the `storage.parts` metadata;
-   part1 asserted to end on a line boundary;
+   part1 asserted to end on a line boundary (`\n`);
 4. reconstruct each certificate as the exact part1+part2 concatenation and
    assert the joined md5 against the record (72b: manifest cross-agreed
    with receipts; 74d: manifest, the receipts record only root_hex for
