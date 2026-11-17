@@ -43,7 +43,7 @@ d7bfeee9/41544af1・2026-11-17 03:59-04:01Z）。数学的内容の重複
   commit（load_jsonlは.gzを優先・format:"full"監査が再現可能になり
   workflow stepも通過）または (b) packed状態で監査を再生成して
   commitし直しitemのpinned sha256を更新。修正は所管レーンのitemと
-  ビンを変更するため本項では実施せずrecipe提示に留める。
+  ピンを変更するため本項では実施せずrecipe提示に留める。
 
 ## 検証
 
