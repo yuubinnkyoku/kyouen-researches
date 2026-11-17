@@ -25,7 +25,7 @@ band-wide memo carried within each worker, KYOENWM1 full-table dumps).
 Offline merge (sort-based, streaming, no sqlite), all rules identical to
 the published K0909 pipeline:
   1. per-worker dump externally sorted by key, stream-deduplicated
-     (win=min lose=min nowin=max nolose=max), internal conflicts counted;
+     (win/lose=min; nowin/nolose=max over finite bounds; 255 is identity), internal conflicts counted;
   2. all SIX pairwise merges among W0..W3 counted (shared keys, cross
      conflicts);
   3. cascade: M01 = merge(W0,W1), M23 = merge(W2,W3),
@@ -36,7 +36,7 @@ the published K0909 pipeline:
   5. subset/monotonicity check of FINAL4 vs the reproduced 2-way seed:
      every 2-way key must be present in FINAL4 (only_in_2way == 0) with
      equal-or-stronger combined values (win<=, lose<=, nowin>=, nolose>=
-     under the published 255-sentinel comparison rules).
+     with 255 treated as absence (not as a numeric bound)).
 
 Seedrun: the verbatim engine at MS=1<<24 seeds its memo from FINAL4
 (insertion in file order through the engine's own memoEntry(), verbatim
@@ -78,7 +78,7 @@ import os
 import subprocess
 import sys
 
-from worker_memo_merge import combine_values, conflict_kind
+from worker_memo_merge import bound_at_least, combine_values, conflict_kind
 
 HERE = os.path.dirname(os.path.abspath(__file__)) or "."
 CERTDIR = os.path.join(HERE, "class2-lane-cost73k-certificates")
@@ -536,8 +536,8 @@ def compare_final4_vs_seed2(seed4_path, seed2_path):
                 nw2, nl2 = int(f2d[6]), int(f2d[7])
                 okw = w2 == 255 or w4 <= w2
                 okl = l2 == 255 or l4 <= l2
-                oknw = nw2 == 255 or nw4 >= nw2
-                oknl = nl2 == 255 or nl4 >= nl2
+                oknw = bound_at_least(nw4, nw2)
+                oknl = bound_at_least(nl4, nl2)
                 if not (okw and okl and oknw and oknl):
                     viol.append(" ".join(k2))
                 shared += 1
@@ -580,8 +580,8 @@ def record_identity_pass(seedrun_tag, seed_path):
                 fnw, fnl = int(ffd[6]), int(ffd[7])
                 okw = win == 255 or fw <= win
                 okl = lose == 255 or fl <= lose
-                oknw = nowin == 255 or fnw >= nowin
-                oknl = nolose == 255 or fnl >= nolose
+                oknw = bound_at_least(fnw, nowin)
+                oknl = bound_at_least(fnl, nolose)
                 if not (okw and okl and oknw and oknl):
                     viol.append(" ".join(ks))
                 present += 1
