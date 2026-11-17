@@ -41,48 +41,24 @@
    "detail": {
     "r10": {
      "check_ok": true,
-     "committed_format_fields": [
-      "full",
-      "full"
-     ],
      "committed_sha256": "8b37525729eb869b2fe8eb383d10331d4249c91135b128ff08c88bd8ca022dfa",
      "regenerated_all_ok": true,
-     "regenerated_format_fields": [
-      "packed",
-      "packed"
-     ],
-     "regenerated_sha256": "87d73c4a124523d63ef1518dd843379d64d942343b4c4acaf388780f80c20e4e",
-     "state": "format_only_difference"
+     "regenerated_sha256": "8b37525729eb869b2fe8eb383d10331d4249c91135b128ff08c88bd8ca022dfa",
+     "state": "byte_identical"
     },
     "r11": {
      "check_ok": true,
-     "committed_format_fields": [
-      "full",
-      "full"
-     ],
      "committed_sha256": "a437de751047de99b5c466ca87f7c0ad9abfd31da82108d954b08423c048cb5d",
      "regenerated_all_ok": true,
-     "regenerated_format_fields": [
-      "packed",
-      "packed"
-     ],
-     "regenerated_sha256": "9153233085d73241bd83cb7b39169814f6b052cc7587c8733357c57c60326a1b",
-     "state": "format_only_difference"
+     "regenerated_sha256": "a437de751047de99b5c466ca87f7c0ad9abfd31da82108d954b08423c048cb5d",
+     "state": "byte_identical"
     },
     "r12": {
      "check_ok": true,
-     "committed_format_fields": [
-      "full",
-      "full"
-     ],
      "committed_sha256": "249ec902ba56bee625a87b939655ad23c989d0c47bc54649e6de7314d717cea4",
      "regenerated_all_ok": true,
-     "regenerated_format_fields": [
-      "packed",
-      "packed"
-     ],
-     "regenerated_sha256": "600bd0873665943eb59a5eb3affa8f9fe051b009a12ae2ff165d996cd81fb067",
-     "state": "format_only_difference"
+     "regenerated_sha256": "249ec902ba56bee625a87b939655ad23c989d0c47bc54649e6de7314d717cea4",
+     "state": "byte_identical"
     },
     "r9": {
      "check_ok": true,
@@ -97,9 +73,9 @@
   },
   {
    "detail": {
-    "r10": "format_only_difference",
-    "r11": "format_only_difference",
-    "r12": "format_only_difference",
+    "r10": "byte_identical",
+    "r11": "byte_identical",
+    "r12": "byte_identical",
     "r9": "byte_identical"
    },
    "name": "C6 defect pinning: in the defect state the regenerated audit equals the committed audit except exactly the two 'format' fields (committed 'full' from the pre-publication local state vs fresh-checkout 'packed'), all_ok=true in both versions",
