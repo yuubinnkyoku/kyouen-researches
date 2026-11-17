@@ -63,11 +63,25 @@ parent分類にゲーム理論的値の主張は無い。
 - 11x11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class 1/2/4はいずれも
   **UNKNOWN** のまま。
 
+## フォローアップ（同日・同experiment）: own_closable parentとの重複
+
+`audit_nonsterile_own_closable_overlap_20261118.py`（blob `4419fb9d984b662c5ede106ece308ad0a4de94e2`・
+出力blob `92056ad9fb23a8d390e3a0d735b5558336f8b003`・6 checks all PASS・二重実行byte-identical）。
+
+- 3,555行のうち **2,609行 (73.4%) が少なくとも1つのown_closable parentにも所属**。
+  partial parent候補の大部分はown-closable閉鎖経路が消費し得る行と重なる。
+- **946行がpartial-only候補**（どのown_closable parentにも非所属）。profile hist:
+  np1_no1 2,454 / np2_no0 612 / np1_no0 301 / np1_no2 91 / np2_no1 64 / np3_no0 33。
+  **33行の3-parent行は全てpartial-only**。
+- per-parent own-share中央値60.9%。**57 parent中45 parentで最小cost候補がown_closableと共有**
+  （12 parentの最小候補はpartial-only）。
+- この追加も候補の簿記であり、sweep予定・closure・verdictの主張を含まない。
+
 ## 次の一手
 
 - 並走のSTERILEフィルタ付きcensus再構築の出版を待ち、出版されたら検証側に回る
   （本auditのjoin再現・91 refs構造チェックはhead-1410系の検証に再利用可能）。
-- min child cost順位表・3-parent共有行33行は、将来のcross-cover候補選択
+- min child cost順位表・3-parent共有行33行・partial-only 946行は、将来のcross-cover候補選択
   （coordinatorのcertificate候補集中）への直接入力になる。ただし実際のsweep優先度は
   class demand構造（{c1,c2,c4}需要）と突き合わせて決めるべきで、本表単独では
   決めない。

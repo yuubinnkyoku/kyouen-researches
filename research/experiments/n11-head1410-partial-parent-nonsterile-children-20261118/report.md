@@ -86,3 +86,27 @@ python3 research/experiments/n11-head1410-partial-parent-nonsterile-children-202
 
 repo rootから実行。入力はrepo内の既出版4ファイル（pin検証込み）。出力は決定的で
 （sort込み）、二重実行でbyte-identicalであることを確認済み。
+
+## フォローアップ: own_closable parentとの重複 (同日)
+
+`audit_nonsterile_own_closable_overlap_20261118.py`（blob `4419fb9d984b662c5ede106ece308ad0a4de94e2`）が、
+3,555行のそれぞれについて114 own_closable (no_sterile) parentとのorbit重複を計算する
+（出力 `nonsterile-own-closable-overlap-20261118.json`・blob `92056ad9fb23a8d390e3a0d735b5558336f8b003`・
+6 checks all PASS・二重実行byte-identical）。チェックは3入力のpin検証・出版集合との一致
+（57 parent / 3,555行）・全3,555行でjoin再現（関連parent数 == worklist open_parents・
+partial所属 == 出版membership）・parent分類の分割健全性。
+
+- **2,609行 (73.4%) が少なくとも1つのown_closable parentにも所属**: partial parentの
+  D10候補作業の大部分は、own-closable閉鎖経路が消費し得る行と重なる。
+- **946行がpartial-only候補**: どのown_closable parentにも属さず、own-closable経路だけを
+  進めても触れない行。profile histogramは np1_no1 2,454 / np2_no0 612 / np1_no0 301 /
+  np1_no2 91 / np2_no1 64 / np3_no0 33（np = partial所属数・no = own所属数）。
+  **33行の3-parent行は全てpartial-only**である。
+- per-parentのown-share中央値は60.9%（最低33.3% = effCost 229第1位parentの3行中1行、
+  最高82.1%）。**57 parent中45 parentで最小cost候補行がown_closableと共有**、
+  12 parentの最小候補はpartial-only。
+- special 13行のprofileも出版（win_receipt_scheduled 9行中のown所属等）。
+
+own_closableとの共有は「行が両方のparent型の行集合に乗っている」ことであり、sweep予定の
+保証ではない。本フォローアップも候補の簿記であり、closure・coverage・verdictの主張を
+含まない。
