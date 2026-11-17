@@ -197,7 +197,7 @@ function main() {
     f76.receipts[0].bit === 61 && f76.receipts[0].certificate.git_blob_sha === c76.certificate_extraction.actual_extraction.git_blob_sha);
   check("fold.76c_manifest_and_audit", m76.certificates.length === 1 &&
     m76.certificates[0].bit === 61 &&
-    m76.certificates[0].sha === c76.certificate_extraction.actual_extraction.sha256 &&
+    m76.certificates[0].sha256 === c76.certificate_extraction.actual_extraction.sha256 &&
     a76.all_checks_pass === true &&
     a76.certificate_manifest_blob_sha === c76.certificate_extraction.manifest_blob_sha);
   check("fold.76c_parent_after", f76.parents_after[PARENT].rows_after === 2 &&
