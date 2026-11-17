@@ -261,6 +261,10 @@ jobs:
         run: |
           uv run --locked python research/experiments/vertical-fiber-two-token-z6-y15-boundary-20261117/verify_z6_y15.py
           git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y15-boundary-20261117/output/audit.json
+      - name: Audit K0905 two-token z=6,y=16 full Grundy slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y16-boundary-20261117/verify_z6_y16.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y16-boundary-20261117/output/audit.json
       - name: Audit K0900 r=12 boundary cross-lane agreement check
         run: |
           uv run --locked python research/experiments/remo-k-branch-cap10-r12-boundary-independent-check-20261117/check_k0898_cross_lane_agreement.py
@@ -580,3 +584,4 @@ jobs:
 # Refresh generated views after the K0900 recipe (a) fix landing (full-format plain .jsonl committed for r=10/11/12, cross-lane audit regenerated in the post-fix state sha256 3cc27653..., fresh-checkout byte reproducibility restored for the K0895/K0897/K0898 audit steps) (2026-11-17).
 
 # Refresh generated views for K0904 three-branch REMO cap10 r=2..13 state matrix (715x12 determinacy matrix assembled from the committed columns, Theorem J sigma<=M-1 finite verification 0 violations over all 715 keys and 15,863 profiles, onset exactly at r=M for the 34 boundary keys, the 12 two-band revival keys characterized) (2026-11-17).
+# Refresh generated views for K0905 two-token z=6,y=16 full Grundy slice (2026-11-17).
