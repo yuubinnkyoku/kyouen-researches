@@ -1,0 +1,59 @@
+{
+  "all_ok": true,
+  "checks": [
+    {
+      "maximum_seen": 3,
+      "mismatches": 0,
+      "name": "labelled direct recurrence versus closed form",
+      "parameter_pairs": 40,
+      "range": "w=1..5, m=1..8",
+      "states": 110018
+    },
+    {
+      "maximum_seen": 3,
+      "mismatches": 0,
+      "name": "canonical-multiset direct recurrence versus closed form",
+      "parameter_pairs": 100,
+      "range": "w=1..10, m=3..12",
+      "states": 1958310
+    },
+    {
+      "maximum_seen": 2,
+      "mismatches": 0,
+      "name": "residual recurrence versus residual closed form",
+      "range": "z=0,1; e0+e1+e2<=15; 3e0+2e1+e2>=2",
+      "states": 1628
+    }
+  ],
+  "finite_audit_is_not_the_universal_proof": true,
+  "item": "K0927",
+  "residual_table_z1": [
+    {"H": 0, "e0": 0, "e1": 1, "e2": 0},
+    {"H": 1, "e0": 1, "e1": 0, "e2": 0},
+    {"H": 0, "e0": 0, "e1": 0, "e2": 2},
+    {"H": 2, "e0": 0, "e1": 1, "e2": 1},
+    {"H": 0, "e0": 0, "e1": 2, "e2": 0},
+    {"H": 1, "e0": 1, "e1": 0, "e2": 1},
+    {"H": 2, "e0": 1, "e1": 1, "e2": 0},
+    {"H": 0, "e0": 2, "e1": 0, "e2": 0},
+    {"H": 0, "e0": 0, "e1": 0, "e2": 3},
+    {"H": 1, "e0": 0, "e1": 1, "e2": 2},
+    {"H": 0, "e0": 0, "e1": 2, "e2": 1},
+    {"H": 1, "e0": 0, "e1": 3, "e2": 0},
+    {"H": 2, "e0": 1, "e1": 0, "e2": 2},
+    {"H": 1, "e0": 1, "e1": 1, "e2": 1},
+    {"H": 0, "e0": 1, "e1": 2, "e2": 0},
+    {"H": 0, "e0": 2, "e1": 0, "e2": 1},
+    {"H": 1, "e0": 2, "e1": 1, "e2": 0},
+    {"H": 0, "e0": 3, "e1": 0, "e2": 0}
+  ],
+  "scope": "pure fiber game, degree threshold t=3, width w>=1, height m>=1, q=3w-1",
+  "title": "t=3, q=3w-1: all-safe-position Grundy classification",
+  "totals": {
+    "all_checks": 2069956,
+    "direct_states": 2068328,
+    "mismatches": 0,
+    "parameter_pairs": 140,
+    "residual_states": 1628
+  }
+}
