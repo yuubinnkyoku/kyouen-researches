@@ -27,7 +27,7 @@ K0868 = (ROOT / "research/knowledge/items/K0868-n11-s6-s7-sweep-candidate-conven
 
 
 def git_blob_sha(data: bytes) -> str:
-    return hashlib.sha1(b"blob " + str(len(data)).encode() + b"\\0" + data).hexdigest()
+    return hashlib.sha1(b"blob " + str(len(data)).encode() + b"\0" + data).hexdigest()
 
 
 def read_pinned(path: Path, expected: str) -> bytes:
@@ -226,7 +226,7 @@ def main() -> None:
         ),
     }
     target = OUT / "class2-lane-cost78c-claim-structure-audit-20261118.json"
-    target.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+    target.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({"all_pass": True, "legal": len(legal), "forbidden": len(forbidden),
                       "partition": len(open_bits) + len(confirmation_bits),
                       "target_canons": len(target_transfer_checks),
