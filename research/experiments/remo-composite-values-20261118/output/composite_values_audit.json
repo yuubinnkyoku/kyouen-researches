@@ -1,0 +1,57 @@
+{
+ "all_ok": true,
+ "checks": {
+  "death": {
+   "count": 12277,
+   "fail_count": 0,
+   "fails": [],
+   "ok": true
+  },
+  "egame": {
+   "count": 8238,
+   "fail_count": 0,
+   "fails": [],
+   "ok": true
+  },
+  "engine": {
+   "count": 1200,
+   "fail_count": 0,
+   "fails": [],
+   "ok": true
+  },
+  "fullrepro": {
+   "count": 16000,
+   "fail_count": 0,
+   "fails": [],
+   "ok": true
+  },
+  "p2obs": {
+   "collapse_deaths": 29,
+   "fail_count": 0,
+   "fails": [],
+   "ok": true,
+   "u_p2_games": 29,
+   "v_p2_games": 29
+  },
+  "pin": {
+   "ok": true,
+   "p_sha256": "58a414bc",
+   "uv_sha256": "8a3b318b"
+  },
+  "struct": {
+   "count": 2141,
+   "fail_count": 0,
+   "fails": [],
+   "ok": true
+  }
+ },
+ "cold_runs_byte_identical": true,
+ "first_fails": {},
+ "region": {
+  "death_fullrepro_p2obs_m_hi": 8000,
+  "egame_k_hi": 50,
+  "engine_m_hi": 600,
+  "struct_m_hi": 1500
+ },
+ "runs_identical": true
+}
