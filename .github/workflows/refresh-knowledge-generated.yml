@@ -18,6 +18,10 @@ jobs:
           fetch-depth: 0
       - uses: astral-sh/setup-uv@v6
       - run: uv sync --locked
+      - name: Audit K0962 t=2 q=9 pure-fiber all-Grundy theorem
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-t2-q9-grundy-20261118/verify_t2_q9.py
+          git diff --exit-code -- research/experiments/vertical-fiber-t2-q9-grundy-20261118/output/audit.json
       - name: Audit quantitative circle-density modular checker
         run: python research/experiments/fixed-width/scripts/verify_quantitative_density.py
       - name: Audit prime-avoidance finite checks
@@ -681,3 +685,4 @@ jobs:
 # Refresh generated views for K0953 z=6,y=31 two-token full Grundy slice (6,387,245 finite audit checks; zero mismatches; two byte-identical runs; 2026-11-18).
 # Refresh generated views for K0955 z=6,y=32 two-token full Grundy slice (2,075,326 signature/mex checks, 16,878 direct checks, 126,016 tail checks; zero mismatches; two byte-identical runs; 2026-11-18).
 # Refresh generated views after completing the K0955 knowledge item body (2026-11-18).
+# Refresh generated views for K0962 t=2 q=9 pure-fiber all-Grundy theorem (285 residual cells, 2,158,926 labeled states, zero mismatches; 2026-11-18).
