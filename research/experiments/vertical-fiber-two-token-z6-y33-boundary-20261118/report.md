@@ -139,8 +139,8 @@ T_y(x)\setminus\{1,3,5\}=
 
 直接再帰は \(33\le x\le56,\ 0\le R\le x+50\)。署名・mexは \(33\le x\le2000,\ 1\le R<x+40\)。tailは同じx範囲で閾値から63先まで。独立プロセス2回の監査JSONはバイト単位で一致した。
 
-- verifier SHA-256: 06100fc91fbf31e3f68a013ad504b55493a918851a1c677183d0c0cba44f9245
-- audit SHA-256: b6ff45212487172f6546f0ce4e98c0b04b202db05e6bf0eb348ec8956a01e459
+- verifier SHA-256: 433c49a6530e182255aac0952ed4d3c3485d3c35ff1a2e091611c99f12c69bf7
+- audit SHA-256: 40a3b79315eb78029bfcdcf62e5f0d5f91ff9a55f8ad7df822f3c7fda80746b1
 
 有限監査は全称証明の代わりではない。全称性はx帰納、明示した署名表、K0955/K0873/K0832の既証明結果による。
 
