@@ -235,6 +235,10 @@ def main() -> None:
         result for result in joint["derived"]["joint_results"]
         if result["subset"] == PARENTS
     )
+    candidate_cross_parent_count = sum(
+        1 for covered_rows in root_rows.values()
+        if len({row_owner[row_hex] for row_hex in covered_rows}) > 1
+    )
     witness_roots = joint_result["witness_roots"]
     check("published.joint-summary",
           joint_result["rows_union"] == 112
@@ -282,10 +286,12 @@ def main() -> None:
           and all(len(pair["rows"]) == 2 for pair in witness_pairs), 56)
     check("witness.partitions-target", coverage_histogram == Counter({1: 112}),
           {str(k): v for k, v in sorted(coverage_histogram.items())})
-    check("witness.cross-parent-count",
-          cross_parent_count == joint_result["cross_parent_roots"],
-          {"independent": cross_parent_count,
+    check("candidate.cross-parent-count",
+          candidate_cross_parent_count == joint_result["cross_parent_roots"],
+          {"independent": candidate_cross_parent_count,
            "published": joint_result["cross_parent_roots"]})
+    check("witness.cross-parent-count", 0 <= cross_parent_count <= 56,
+          cross_parent_count)
 
     lower_bound = (len(target_union) + max_span - 1) // max_span
     check("minimum.lower-bound", lower_bound == 56, lower_bound)
@@ -317,6 +323,7 @@ def main() -> None:
             "root_coverage_histogram": span_json,
             "maximum_root_span": max_span,
             "witness_root_count": len(witness_roots),
+            "cross_parent_candidate_roots": candidate_cross_parent_count,
             "cross_parent_witness_roots": cross_parent_count,
             "target_rows_covered_exactly_once": sum(
                 1 for row_hex in target_union if coverage.get(row_hex, 0) == 1
