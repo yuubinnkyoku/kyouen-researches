@@ -70,3 +70,5 @@ knowledge READMEと両knowledge workflowへの登録は続けて反映する。g
 - knowledge READMEのz=6切片一覧をy=33まで延長し、未解決範囲をy≥34へ更新。K0873/K0944/K0947/K0953/K0955の現在の未解決記述もy≥34へ揃え、K0947/K0953/K0955の横断観察を8切片へ更新。
 - knowledge integrity workflowとgenerated-view refresh workflowの両方にK0967検証器を登録。生成領域は直接編集していない。
 - GitHub Actionsはpush連鎖後の最新runを確認する。uv sync、knowledge check、unittest、buildの成功はまだ未確認。
+
+- さらにknowledge検索で見つかったz=6二トークン切片の既存K項目23件すべてについて、現在の未解決下限をy≥34へ揃えた（K0880、K0892、K0894、K0896、K0899、K0901、K0903、K0905、K0908、K0910、K0911、K0913、K0914、K0915、K0917、K0918、K0936、K0938、K0940、K0944、K0947、K0953、K0955）。歴史的なexperiment/logは変更していない。
