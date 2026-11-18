@@ -171,3 +171,30 @@ census entryとの全フィールド一致を確認した上で、**receipt chan
 
 parent closureはmanifest作業であり、本auditはparent閉鎖を主張しない。fold適用・
 sweepはsweep-lane管轄のまま。11×11空盤・二石root・S2・class 1/2/4はいずれもUNKNOWNのまま。
+
+## フォローアップ4: runner-up parent最小coverのtop-k ban生存曲線の完全化 (同日)
+
+`runnerup29_survival_curve_20261118.py`（point/assembleモード）が、29行runner-up parent
+`00000000000000003800000009000000`の総45,949,721,018,967,524最小coverについて、
+**membership上位k本（k=0..12・すべてpair root・12 pair typeすべて異なる）をbanした
+ときの生存最小cover数を全13点厳密決定した**。出版済み部分曲線（`95b11316`・
+k∈{0..8,10,12}）の**欠落2点k=9（27,080,952,234,392,986）・k=11（23,722,672,563,006,232）を
+新規確定**し、**既出版11点はtotal/A/B/memo/gets全フィールド完全再現・ban順完全一致**
+（出力`runnerup29-survival-curve-20261118.json`・35 checks all PASS・二重実行byte-identical）。
+方法は出版偶数/奇数r frameworkのban後重み縮約（A2+B2・PmLazy pm供給・k=0点は出版
+総数/A/Bのスクラッチ完全再現・k=1 marginalは出版membership・k=2 killは出版top-2 joint
+による包含排除と厳密一致、詳細は `research/log/2026-11-18-n11-runnerup29-survival-curve.md`）。
+
+- **上位12 root banでも21,963,916,318,152,072本（47.8%）が生存**（kill 52.20%）。cover
+  計画空間の冗長性は高く、上位root集中型のelimination戦略だけではこのparentの最小cover
+  計画は尽きない。
+- **naive membership単純和はkillを過大評価する**: k=12でnaive 60.54% vs 厳密52.20%
+  （差8.34ポイント・3.83e15 coversのjoint重複）。k=10のnaive 50.69%は出版top-10
+  単純和と一致し、今回の測定がその真の意味付けを確定した。
+- marginal killは全点「最後にbanしたrootの出版membership」以下で、以前のbanとの重複
+  （非負）を引いた分だけ効く。survivalは全点正。実装検証は出版cost-12 outputの全1,151
+  singleton membership完全再現（0不一致）と出版ban生存曲線（blob `92db40a2`）11点再現。
+
+生存曲線はcover計画の組合せ論であり、探索コストでもverdictでもなく、ban rootの
+REFUTED化可能性も主張しない。REFUTED-D10とSTERILEはLOSS証明ではない。11×11空盤・
+二石root・S2・class 1/2/4はいずれもUNKNOWNのまま。

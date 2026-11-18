@@ -1,0 +1,688 @@
+{
+  "schema": "n11-runnerup29-survival-curve-20261118-v1",
+  "date": "2026-11-18",
+  "lane": "n11 long lane (verification side)",
+  "title": "Exact survival curve of the 45,949,721,018,967,524 minimum covers of the 29-row runner-up target 00000000000000003800000009000000 under top-k root bans (k=0..12), joint overlaps included",
+  "inputs": {
+    "worklist": {
+      "path": "research/experiments/n11-class2-lane-closability-ranking-20261116/output/class-frontier-remaining-s6-worklist-1410-20261116.csv",
+      "git_blob_sha1": "2fee1d0718547a62e346d35f5858d7913e37c097"
+    },
+    "census": {
+      "path": "research/experiments/n11-head1410-receipt-unclosability-census-20261116/output/n11-head1410-receipt-unclosability-census-20261116.json",
+      "git_blob_sha1": "9c251da3138c5cb0516e097be5e5d0427dfaf5f0"
+    },
+    "ledger": {
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/fold-chain-ledger-1410-1476-crosscheck-20261118.json",
+      "git_blob_sha1": "e8785d509e8a11a37c0d03cc450455a14708c34d"
+    },
+    "cover_table": {
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/parent-minimum-cover-cost-table-20261118.json",
+      "git_blob_sha1": "4e4a911d0e05779437d4a8e97685a8feb66c0d25"
+    },
+    "published_cost12_output": {
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/cost12-parent-cover-membership-20261118.json",
+      "git_blob_sha1": "c05de9d0ca194b6c7760b7370886cdc6ec5d218c"
+    },
+    "published_runnerup29_output": {
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/runnerup29-cover-membership-20261118.json",
+      "git_blob_sha1": "05f54eb58baad66403b327696b9a63f7433a13c3"
+    },
+    "published_ban_survival_output": {
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/runnerup29-ban-survival-curve-20261118.json",
+      "git_blob_sha1": "92db40a2560d6b2b1f4b65bc735f31bfc88b2c5e"
+    },
+    "candidate_roots": {
+      "path": "(regenerated) output/global-candidate-roots-20261118.jsonl",
+      "regenerated_by": "enumerate_global_candidate_roots_20261118.py"
+    }
+  },
+  "method": "Published even/odd-r cover framework with reduced weights per ban level (identical semantics to the cost-12 survival curve): surviving(k) = A2 + B2 over the reduced system, pm values supplied by the shared-memo anchored lazy matching DP (state cap 6M; each curve point computed in its own invocation because this environment kills long-lived background processes). The k=0 point is a full from-scratch recomputation of the published total/A/B; k=1 and k=2 reproduce the published membership and membership+joint inclusion-exclusion identities exactly.",
+  "derived": {
+    "rows": 29,
+    "minimum_size": 15,
+    "total_minimum_covers": 45949721018967524,
+    "survival_curve_banning_topk": [
+      {
+        "k": 0,
+        "banned_root": "00000000000000801202000001100100",
+        "banned_rows": [
+          11,
+          16
+        ],
+        "banned_published_membership": 2410014432522432,
+        "last_banned_root": null,
+        "last_banned_rows": null,
+        "last_banned_published_membership": null,
+        "surviving_covers": 45949721018967524,
+        "type_A_surviving": 37317784435384705,
+        "type_B_surviving": 8631936583582819,
+        "killed_covers": 0,
+        "killed_share": 0.0,
+        "marginal_kill": 0,
+        "marginal_overlap_with_earlier_bans": null,
+        "naive_simple_sum_killed": 0,
+        "naive_simple_sum_share": 0.0,
+        "joint_overlap_returned": 0,
+        "pm_memo_states": 3523948,
+        "pm_gets": 8123
+      },
+      {
+        "k": 1,
+        "banned_root": "00000000000000801202000001100008",
+        "banned_rows": [
+          4,
+          16
+        ],
+        "banned_published_membership": 2401081434311121,
+        "last_banned_root": "00000000000000801202000001100100",
+        "last_banned_rows": [
+          11,
+          16
+        ],
+        "last_banned_published_membership": 2410014432522432,
+        "surviving_covers": 43539706586445092,
+        "type_A_surviving": 35386897890413195,
+        "type_B_surviving": 8152808696031897,
+        "killed_covers": 2410014432522432,
+        "killed_share": 0.05244894591476639,
+        "marginal_kill": 2410014432522432,
+        "marginal_overlap_with_earlier_bans": 0,
+        "naive_simple_sum_killed": 2410014432522432,
+        "naive_simple_sum_share": 0.05244894591476639,
+        "joint_overlap_returned": 0,
+        "pm_memo_states": 3523928,
+        "pm_gets": 8082
+      },
+      {
+        "k": 2,
+        "banned_root": "00000000240000003800400000100000",
+        "banned_rows": [
+          10,
+          28
+        ],
+        "banned_published_membership": 2374606991987016,
+        "last_banned_root": "00000000000000801202000001100008",
+        "last_banned_rows": [
+          4,
+          16
+        ],
+        "last_banned_published_membership": 2401081434311121,
+        "surviving_covers": 41140118223522881,
+        "type_A_surviving": 33462787867189176,
+        "type_B_surviving": 7677330356333705,
+        "killed_covers": 4809602795444643,
+        "killed_share": 0.10467099013417934,
+        "marginal_kill": 2399588362922211,
+        "marginal_overlap_with_earlier_bans": 1493071388910,
+        "naive_simple_sum_killed": 4811095866833553,
+        "naive_simple_sum_share": 0.104703483724038,
+        "joint_overlap_returned": 1493071388910,
+        "pm_memo_states": 3523908,
+        "pm_gets": 8042
+      },
+      {
+        "k": 3,
+        "banned_root": "00000000000000103800000209000000",
+        "banned_rows": [
+          4,
+          10
+        ],
+        "banned_published_membership": 2372269661105984,
+        "last_banned_root": "00000000240000003800400000100000",
+        "last_banned_rows": [
+          10,
+          28
+        ],
+        "last_banned_published_membership": 2374606991987016,
+        "surviving_covers": 39008287432534448,
+        "type_A_surviving": 31751063713550387,
+        "type_B_surviving": 7257223718984061,
+        "killed_covers": 6941433586433076,
+        "killed_share": 0.1510658483338284,
+        "marginal_kill": 2131830790988433,
+        "marginal_overlap_with_earlier_bans": 242776200998583,
+        "naive_simple_sum_killed": 7185702858820569,
+        "naive_simple_sum_share": 0.15638186042205549,
+        "joint_overlap_returned": 244269272387493,
+        "pm_memo_states": 3523885,
+        "pm_gets": 8001
+      },
+      {
+        "k": 4,
+        "banned_root": "00000000000000801202000801100000",
+        "banned_rows": [
+          3,
+          16
+        ],
+        "banned_published_membership": 2307586817669557,
+        "last_banned_root": "00000000000000103800000209000000",
+        "last_banned_rows": [
+          4,
+          10
+        ],
+        "last_banned_published_membership": 2372269661105984,
+        "surviving_covers": 36760423019767177,
+        "type_A_surviving": 29947175119759074,
+        "type_B_surviving": 6813247900008103,
+        "killed_covers": 9189297999200347,
+        "killed_share": 0.19998593670257778,
+        "marginal_kill": 2247864412767271,
+        "marginal_overlap_with_earlier_bans": 124405248338713,
+        "naive_simple_sum_killed": 9557972519926553,
+        "naive_simple_sum_share": 0.2080093699803124,
+        "joint_overlap_returned": 368674520726206,
+        "pm_memo_states": 3523872,
+        "pm_gets": 7962
+      },
+      {
+        "k": 5,
+        "banned_root": "00000000240000003820000000001000",
+        "banned_rows": [
+          9,
+          16
+        ],
+        "banned_published_membership": 2302605626418199,
+        "last_banned_root": "00000000000000801202000801100000",
+        "last_banned_rows": [
+          3,
+          16
+        ],
+        "last_banned_published_membership": 2307586817669557,
+        "surviving_covers": 34701060306340041,
+        "type_A_surviving": 28289921771208610,
+        "type_B_surviving": 6411138535131431,
+        "killed_covers": 11248660712627483,
+        "killed_share": 0.24480367808945266,
+        "marginal_kill": 2059362713427136,
+        "marginal_overlap_with_earlier_bans": 248224104242421,
+        "naive_simple_sum_killed": 11865559337596110,
+        "naive_simple_sum_share": 0.2582291921358596,
+        "joint_overlap_returned": 616898624968627,
+        "pm_memo_states": 3523853,
+        "pm_gets": 7922
+      },
+      {
+        "k": 6,
+        "banned_root": "0000000000000010380000000b000000",
+        "banned_rows": [
+          3,
+          10
+        ],
+        "banned_published_membership": 2286340003460601,
+        "last_banned_root": "00000000240000003820000000001000",
+        "last_banned_rows": [
+          9,
+          16
+        ],
+        "last_banned_published_membership": 2302605626418199,
+        "surviving_covers": 32629123694539810,
+        "type_A_surviving": 26623548733185650,
+        "type_B_surviving": 6005574961354160,
+        "killed_covers": 13320597324427714,
+        "killed_share": 0.2898950641926449,
+        "marginal_kill": 2071936611800231,
+        "marginal_overlap_with_earlier_bans": 230669014617968,
+        "naive_simple_sum_killed": 14168164964014309,
+        "naive_simple_sum_share": 0.30834060903581656,
+        "joint_overlap_returned": 847567639586595,
+        "pm_memo_states": 3523841,
+        "pm_gets": 7883
+      },
+      {
+        "k": 7,
+        "banned_root": "00000000000000801202020011000000",
+        "banned_rows": [
+          10,
+          18
+        ],
+        "banned_published_membership": 2285578329949300,
+        "last_banned_root": "0000000000000010380000000b000000",
+        "last_banned_rows": [
+          3,
+          10
+        ],
+        "last_banned_published_membership": 2286340003460601,
+        "surviving_covers": 30703672731318656,
+        "type_A_surviving": 25072497332805361,
+        "type_B_surviving": 5631175398513295,
+        "killed_covers": 15246048287648868,
+        "killed_share": 0.33179849517161314,
+        "marginal_kill": 1925450963221154,
+        "marginal_overlap_with_earlier_bans": 360889040239447,
+        "naive_simple_sum_killed": 16454504967474910,
+        "naive_simple_sum_share": 0.3580980385209015,
+        "joint_overlap_returned": 1208456679826042,
+        "pm_memo_states": 3523815,
+        "pm_gets": 7844
+      },
+      {
+        "k": 8,
+        "banned_root": "00000000000000103800000009800000",
+        "banned_rows": [
+          2,
+          10
+        ],
+        "banned_published_membership": 2276284659005392,
+        "last_banned_root": "00000000000000801202020011000000",
+        "last_banned_rows": [
+          10,
+          18
+        ],
+        "last_banned_published_membership": 2285578329949300,
+        "surviving_covers": 28891341236187996,
+        "type_A_surviving": 23611337011024255,
+        "type_B_surviving": 5280004225163741,
+        "killed_covers": 17058379782779528,
+        "killed_share": 0.37124011646856403,
+        "marginal_kill": 1812331495130660,
+        "marginal_overlap_with_earlier_bans": 473246834818640,
+        "naive_simple_sum_killed": 18740083297424210,
+        "naive_simple_sum_share": 0.40783889176799387,
+        "joint_overlap_returned": 1681703514644682,
+        "pm_memo_states": 3523791,
+        "pm_gets": 7805
+      },
+      {
+        "k": 9,
+        "banned_root": "00000000000000805202000001100000",
+        "banned_rows": [
+          16,
+          22
+        ],
+        "banned_published_membership": 2274260822084752,
+        "last_banned_root": "00000000000000103800000009800000",
+        "last_banned_rows": [
+          2,
+          10
+        ],
+        "last_banned_published_membership": 2276284659005392,
+        "surviving_covers": 27080952234392986,
+        "type_A_surviving": 22151316906799963,
+        "type_B_surviving": 4929635327593023,
+        "killed_covers": 18868768784574538,
+        "killed_share": 0.4106394634427862,
+        "marginal_kill": 1810389001795010,
+        "marginal_overlap_with_earlier_bans": 465895657210382,
+        "naive_simple_sum_killed": 21016367956429602,
+        "naive_simple_sum_share": 0.45737748761857083,
+        "joint_overlap_returned": 2147599171855064,
+        "pm_memo_states": 3523769,
+        "pm_gets": 7767
+      },
+      {
+        "k": 10,
+        "banned_root": "00000000000000801212000011000000",
+        "banned_rows": [
+          10,
+          21
+        ],
+        "banned_published_membership": 2269834546616206,
+        "last_banned_root": "00000000000000805202000001100000",
+        "last_banned_rows": [
+          16,
+          22
+        ],
+        "last_banned_published_membership": 2274260822084752,
+        "surviving_covers": 25408316640170202,
+        "type_A_surviving": 20798799496221779,
+        "type_B_surviving": 4609517143948423,
+        "killed_covers": 20541404378797322,
+        "killed_share": 0.4470408943357472,
+        "marginal_kill": 1672635594222784,
+        "marginal_overlap_with_earlier_bans": 601625227861968,
+        "naive_simple_sum_killed": 23290628778514354,
+        "naive_simple_sum_share": 0.506872038872668,
+        "joint_overlap_returned": 2749224399717032,
+        "pm_memo_states": 3523751,
+        "pm_gets": 7729
+      },
+      {
+        "k": 11,
+        "banned_root": "00000000000000805202000011000000",
+        "banned_rows": [
+          10,
+          22
+        ],
+        "banned_published_membership": 2255550973323658,
+        "last_banned_root": "00000000000000801212000011000000",
+        "last_banned_rows": [
+          10,
+          21
+        ],
+        "last_banned_published_membership": 2269834546616206,
+        "surviving_covers": 23722672563006232,
+        "type_A_surviving": 19438326852686409,
+        "type_B_surviving": 4284345710319823,
+        "killed_covers": 22227048455961292,
+        "killed_share": 0.4837254277732441,
+        "marginal_kill": 1685644077163970,
+        "marginal_overlap_with_earlier_bans": 584190469452236,
+        "naive_simple_sum_killed": 25560463325130560,
+        "naive_simple_sum_share": 0.5562702614577244,
+        "joint_overlap_returned": 3333414869169268,
+        "pm_memo_states": 3523729,
+        "pm_gets": 7692
+      },
+      {
+        "k": 12,
+        "banned_root": null,
+        "banned_rows": null,
+        "banned_published_membership": null,
+        "last_banned_root": "00000000000000805202000011000000",
+        "last_banned_rows": [
+          10,
+          22
+        ],
+        "last_banned_published_membership": 2255550973323658,
+        "surviving_covers": 21963916318152072,
+        "type_A_surviving": 18015508424607623,
+        "type_B_surviving": 3948407893544449,
+        "killed_covers": 23985804700815452,
+        "killed_share": 0.5220010953040255,
+        "marginal_kill": 1758756244854160,
+        "marginal_overlap_with_earlier_bans": 496794728469498,
+        "naive_simple_sum_killed": 27816014298454218,
+        "naive_simple_sum_share": 0.6053576318117815,
+        "joint_overlap_returned": 3830209597638766,
+        "pm_memo_states": 3523703,
+        "pm_gets": 7657
+      }
+    ],
+    "ban_order": [
+      {
+        "root": "00000000000000801202000001100100",
+        "rows_covered": [
+          11,
+          16
+        ],
+        "published_membership": 2410014432522432,
+        "published_rank": 1
+      },
+      {
+        "root": "00000000000000801202000001100008",
+        "rows_covered": [
+          4,
+          16
+        ],
+        "published_membership": 2401081434311121,
+        "published_rank": 2
+      },
+      {
+        "root": "00000000240000003800400000100000",
+        "rows_covered": [
+          10,
+          28
+        ],
+        "published_membership": 2374606991987016,
+        "published_rank": 3
+      },
+      {
+        "root": "00000000000000103800000209000000",
+        "rows_covered": [
+          4,
+          10
+        ],
+        "published_membership": 2372269661105984,
+        "published_rank": 4
+      },
+      {
+        "root": "00000000000000801202000801100000",
+        "rows_covered": [
+          3,
+          16
+        ],
+        "published_membership": 2307586817669557,
+        "published_rank": 5
+      },
+      {
+        "root": "00000000240000003820000000001000",
+        "rows_covered": [
+          9,
+          16
+        ],
+        "published_membership": 2302605626418199,
+        "published_rank": 6
+      },
+      {
+        "root": "0000000000000010380000000b000000",
+        "rows_covered": [
+          3,
+          10
+        ],
+        "published_membership": 2286340003460601,
+        "published_rank": 7
+      },
+      {
+        "root": "00000000000000801202020011000000",
+        "rows_covered": [
+          10,
+          18
+        ],
+        "published_membership": 2285578329949300,
+        "published_rank": 8
+      },
+      {
+        "root": "00000000000000103800000009800000",
+        "rows_covered": [
+          2,
+          10
+        ],
+        "published_membership": 2276284659005392,
+        "published_rank": 9
+      },
+      {
+        "root": "00000000000000805202000001100000",
+        "rows_covered": [
+          16,
+          22
+        ],
+        "published_membership": 2274260822084752,
+        "published_rank": 10
+      },
+      {
+        "root": "00000000000000801212000011000000",
+        "rows_covered": [
+          10,
+          21
+        ],
+        "published_membership": 2269834546616206,
+        "published_rank": 11
+      },
+      {
+        "root": "00000000000000805202000011000000",
+        "rows_covered": [
+          10,
+          22
+        ],
+        "published_membership": 2255550973323658,
+        "published_rank": 12
+      }
+    ],
+    "validation": {
+      "cost12_singleton_memberships_checked": 1151,
+      "cost12_singleton_mismatches": 0
+    }
+  },
+  "checks": [
+    {
+      "name": "val12.singleton_memberships",
+      "pass": true,
+      "detail": "{\"checked\": 1151, \"mismatches\": 0}"
+    },
+    {
+      "name": "rows",
+      "pass": true,
+      "detail": "29"
+    },
+    {
+      "name": "candidates",
+      "pass": true,
+      "detail": "2203"
+    },
+    {
+      "name": "distinct_roots",
+      "pass": true,
+      "detail": "1854"
+    },
+    {
+      "name": "span_histogram",
+      "pass": true,
+      "detail": "{\"1\": 1505, \"2\": 349}"
+    },
+    {
+      "name": "pair_types",
+      "pass": true,
+      "detail": "349"
+    },
+    {
+      "name": "pair_type_multiplicity_histogram",
+      "pass": true,
+      "detail": "{\"1\": 349}"
+    },
+    {
+      "name": "exact15",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "parity_odd",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "root_set_matches_published",
+      "pass": true,
+      "detail": "{\"rebuilt\": 1854, \"published\": 1854}"
+    },
+    {
+      "name": "per_row_singleton_root_count",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "per_row_pair_root_degree",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "per_row_cover_options",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "published_top50_order_matches_membership_sort",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "published_top50_memberships_match_table",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "ban_order_all_pair_roots",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "ban_order_distinct_pair_types",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "points_complete",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "k0.total_reproduced",
+      "pass": true,
+      "detail": "{\"rebuilt\": \"45949721018967524\", \"published\": \"45949721018967524\"}"
+    },
+    {
+      "name": "k0.A_reproduced",
+      "pass": true,
+      "detail": "{\"rebuilt\": \"37317784435384705\"}"
+    },
+    {
+      "name": "k0.B_reproduced",
+      "pass": true,
+      "detail": "{\"rebuilt\": \"8631936583582819\"}"
+    },
+    {
+      "name": "survival.k1_marginal_equals_membership",
+      "pass": true,
+      "detail": "{\"marginal\": \"2410014432522432\", \"membership\": \"2410014432522432\"}"
+    },
+    {
+      "name": "k2.joint_lookup_found",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "survival.k2_killed_equals_inclusion_exclusion",
+      "pass": true,
+      "detail": "{\"direct\": \"4809602795444643\", \"inclusion_exclusion\": \"4809602795444643\", \"joint\": \"1493071388910\"}"
+    },
+    {
+      "name": "survival.monotone",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "survival.marginal_nonnegative",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "survival.marginal_bounded_by_last_membership",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "survival.k2_marginal_gap_equals_published_joint",
+      "pass": true,
+      "detail": "{\"gap\": \"1493071388910\", \"joint\": \"1493071388910\"}"
+    },
+    {
+      "name": "survival.marginal_overlap_nonnegative",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "survival.exact_kill_le_naive_sum",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "survival.overlap_nonnegative",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "survival.k12_positive",
+      "pass": true,
+      "detail": "21963916318152072"
+    },
+    {
+      "name": "published_ban_survival_11_points_reproduced_exactly",
+      "pass": true,
+      "detail": "{\"published_points\": 11, \"mismatches\": 0}"
+    },
+    {
+      "name": "published_ban_survival_ban_order_matches",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "new_points_are_k9_and_k11",
+      "pass": true,
+      "detail": "{\"published\": [0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 12]}"
+    }
+  ],
+  "check_count": 35,
+  "all_pass": true,
+  "interpretation_guard": "Cover-plan combinatorics only. The survival curve counts minimum cover plans that avoid the banned roots; it is not a search cost and implies nothing about WIN/REFUTED outcomes of any root. REFUTED-D10 and STERILE are not LOSS proofs.",
+  "unknown_status": "Standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+}
