@@ -26,16 +26,18 @@ mobility入力 `b35d54a0ced182153802247452a593096a0acf81`、residual witness `a8
 
 既存JSONと、全rootの明細・応手数分布・pairwise overlap集合・最大共有状態一覧・集計値を照合し、一致した。pairwise overlapは並び順に依存しない集合比較で確認した。
 
-## 修復
+## 修復と実行確認
 
-- 再現スクリプトblob: `8b27743bf7fb99aca7ba6eeb61b175b0dedcd505`
-- 再計算JSON blob: `429553bae0511f3753af408024563fb4c6898121`
-- 分析基準main: `45bc836d631b2733ef3922a45e737829c5210b8d`
-- 入力側source main: `317f6af8c9810941bda38b5cf355a8f27ce3aa65`
+修正版スクリプトblob: `1ac095ee7e6378d6520cb360a58a1797ea86b90a`  
+再計算JSON blob: `f631574b5701bd8f441d2c552ba001814246ef69`  
+分析基準main: `55e87206340e87c2bb4e5214dc3d8943fe3b948d`  
+入力側source main: `317f6af8c9810941bda38b5cf355a8f27ce3aa65`
 
-修正内容は構文、出力先、JSON schemaの一致に限定した。探索器・verdict・certificate・receiptは変更していない。
+修正したのは構文、出力先、Git blobのNUL区切り、JSON schema、検査名、分析基準headである。Git blob headerの区切りは実際のNUL byteでなければならない。二重エスケープされた `\\0` は文字列の「\0」であり、Git blob SHA-1とは一致しない。最初のNode実行で入力SHA検査が失敗したため、この点も修正した。
 
-スクリプト本文は構文検査を通し、同じ固定入力に対する独立再計算で全数値を照合した。ただし、この実行環境にはGitHub checkoutもNode.js実行環境もなく、修正後のNodeスクリプト自体をcheckout上で起動したとは主張しない。GitHub Actionsの結果も未確認である。
+接続Proxmoxの専用runner `kyouen-80f-runner`（1 vCPU・4 GiB RAM、Node v22.23.5）に、GitHubの固定commitからスクリプトと6入力を取得した。Pythonで6/6のGit blob SHA-1を確認し、`node --check` の後にNodeスクリプトを2回実行した。両回とも15/15 checks PASS。2回目は7.297秒で、生成JSONは保存済みJSONとbyte-identicalだった。生成物のGit blob SHA-1は `f631574b5701bd8f441d2c552ba001814246ef69`、SHA-256は `2e50e310936ba4ac5aa0adc9a11f4fbc579b8ce4828e79ead649348cff7ad646`。
+
+runnerの空き容量は実行前後とも約403 MiB。1 CPUのみ使用し、重い探索は起動していない。GitHub Actionsの状態は別途確認できておらず、この検証は専用runner上のNode実行である。
 
 ## 意味と限界
 
