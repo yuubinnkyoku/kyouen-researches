@@ -32,7 +32,7 @@ Aはx外帰納、BはK0984、CはK0979。x=3では二つのトークン減少手
 - Theorem T拡張格子: 2,050,947件
 - 合計: 8,164,676件、不一致0
 - 二回実行の監査JSONはバイト単位で一致
-- verifier SHA-256: 068d5f91cd4c75a609029cf0ea50e48dbdf9eaa2b1c3a20987b52292d8032d51
+- verifier SHA-256: 9c6115e3a9035f70c1210e0148507982a16d0db1bb75b9da8541536f77d3d445
 - audit内部hash: e1dc7880a3663ff0aa614da4380f9ddd517c2c6a83d9e4f17c0e2e203c169f9d
 
 有限監査は証明の代替ではない。全称性は外帰納と全域を覆う署名表による。
