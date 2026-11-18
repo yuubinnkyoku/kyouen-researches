@@ -62,6 +62,16 @@ energy + Melchior による全称証明・SAT に依らない）。witness-free 
 - 2026-11-15 (追記): 実行環境の長時間障害（アップグレード環境が一時利用不能）により
   m=50 の実行が中断。m=50 以降と m=38, 39 は環境復旧後に再開する。
   生 kissat ログは環境復旧後に batch push する。
+- **2026-11-18: レーン再開（resume）。** 再開時較正: m=35 def-mode CNF を再生成し
+  meta が既存 record と完全一致（vars 9604・clauses 34349・curves 244）・
+  kissat 再実行で **conflicts 2,809,004 が既存 record と bit-exact 一致**
+  （process-time 112.5s・`output/raw/kissat-5x35-q7-def-recal.txt`）。
+  決定性の錨が再確認された状態で **m=38, 39 がともに UNSAT**（rc=20・
+  conflicts 2,337,347 / 2,257,859・90.7s / 90.1s・curves 271 / 280 は
+  どちらも第三系全帯予測表と一致・生ログ `output/raw/`）。
+  **witness-free 幅集合が {19,...,49} に拡大し、鋭い形は
+  M_{5,7} = 19 または M_{5,7} ≥ 51。** 掃引は引き続き m=50..157 へ
+  （driver: `scripts/sweep_driver_5xq7.sh`・resume-safe・records.jsonl 重複回避）。
 
 ## 並走協調ノート
 
