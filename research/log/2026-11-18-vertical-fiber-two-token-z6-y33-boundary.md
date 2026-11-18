@@ -72,3 +72,6 @@ knowledge READMEと両knowledge workflowへの登録は続けて反映する。g
 - GitHub Actionsはpush連鎖後の最新runを確認する。uv sync、knowledge check、unittest、buildの成功はまだ未確認。
 
 - さらにknowledge検索で見つかったz=6二トークン切片の既存K項目23件すべてについて、現在の未解決下限をy≥34へ揃えた（K0880、K0892、K0894、K0896、K0899、K0901、K0903、K0905、K0908、K0910、K0911、K0913、K0914、K0915、K0917、K0918、K0936、K0938、K0940、K0944、K0947、K0953、K0955）。歴史的なexperiment/logは変更していない。
+
+- K0967正本にT33/P33の明示閉形式とy=26..33共通値2位置式を追記し、証明報告への参照だけに依存しない形へ整えた。
+- 最終確認時のmainはK0967正本の式追記後。combined statusは空配列で、generated/summary.mdも旧版（K0967未反映）のまま。GitHub Actions成功は確認できていないため、generated再生成・uv sync・knowledge check・unittest・buildは未完了として扱う。生成物を手作業で編集していない。
