@@ -184,6 +184,10 @@ jobs:
         run: |
           uv run --locked python research/experiments/vertical-fiber-t2-q8-grundy-20261118/verify_t2_q8.py
           git diff --exit-code -- research/experiments/vertical-fiber-t2-q8-grundy-20261118/output/audit.json
+      - name: Audit K0962 t=2 q=9 pure-fiber all-Grundy theorem
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-t2-q9-grundy-20261118/verify_t2_q9.py
+          git diff --exit-code -- research/experiments/vertical-fiber-t2-q9-grundy-20261118/output/audit.json
       - name: Audit K0832 t=2, q=2w-1 all-safe Grundy classification
         run: |
           uv run --locked python research/experiments/vertical-fiber-t2-q2w-minus1-grundy-20261118/verify_t2_q2w_minus1.py
