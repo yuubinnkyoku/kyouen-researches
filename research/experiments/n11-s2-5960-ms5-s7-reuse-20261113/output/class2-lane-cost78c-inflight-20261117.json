@@ -1,495 +1,594 @@
 {
- "schema": "n11-class2-lane-cost78c-inflight-20261118-v5",
- "date": "2026-11-17",
- "last_updated": "2026-11-18",
- "title": "n11 class2-lane cost78c: completed 78-bit depth-10 sweep of the census v11 rank-1 row - 11 WIN7-D10 / 67 REFUTED-D10 / 0 capped, all 11 WIN7 certificates extracted, independently verified and published (first WIN-bearing row of the presweep-1473 band)",
- "status": "claim v5: COMPLETED + CERTIFICATES PUBLISHED (pin-provenance correction over claim v4: the parallel batches-1-6 audit was republished by its own lane at commit 321ccf06 with claim-v1/v2 provenance records added, changing its git blob from d8e5f9b70a0f2e3b027ded8322fa1a083193f73f to 7460b42bb8846ad6e5e3249b3a78d39aa3e94ffa with every per-bit verdict record, the totals, the batch summaries and all_pass unchanged; this claim pins the current blob and adds no new computation); the full 78-bit v17 depth-10 sweep is published and independently audited (66 open bits + 12 confirmation controls: 11 WIN7-D10 [1, 4, 9, 30, 49, 69, 75, 79, 100, 114, 116] / 67 REFUTED-D10 / 0 capped, 238,626,461 candidate nodes); all 11 WIN7-D10 certificates are extracted (blind extraction, extractor_exact_ms23, fbt_drops=0 on all eleven, no capped per-move), independently verified (verify_bit7_win7_cert.ts, engine-free: root-check stones=7 + loser mobility == legal_candidates.py enumeration, all sub-roots PASS, consumed-union == cert rows 0 missing / 0 extra on every root) and published (band commits b359756f..97650e27, manifest class2-lane-cost78c-win7-certificates-20261117.json git blob b7fe519e923c6170e836f71e3f084f73219319d5; 614,003 rows, 77,967,826 extraction nodes, 22,223,603 published bytes; 10 two-way line-boundary splits + bit 116 three-way split for the publication transport size limit); determinism: fresh-process re-extraction byte-identical on bits 69 and 116; no receipt fold or manifest closure has occurred (pending behind the 66i/66j/69j/71e/72d/73i/73j/73k/73l folds); 11x11 UNKNOWN",
- "basis_head": "1473/174/6375/504596/4648/368510 (canonical head after the landed cost64h and cost76c bit61 folds; the completed cost74i and cost75f sweeps produced no receipts and change nothing; the pending 66i/66j/69j/71e/72d/73i/73j/73k/73l receipt folds do not change the head)",
- "claimed_by": "n11 long-term lane session (head-1473 presweep census v11 selector, post-75f, cost78c)",
- "coordination_note": "latest main re-fetched immediately before this push (2026-11-17, head cea8c4fb: the census v11 publication); no claim, raw batch, audit or census file for this child exists on main (searched: child hex 00000000000000403800000008000008, cost78c, presweep-1473 v11); the cost-78 label family already uses 78a (class2-lane certificates) and 78b (class4-lane), so this row is claimed as cost78c per the highest+1 convention; the parallel lanes hold the 66i receipt fold (margins rebased at head 1473, bit19 next), the pending 73i certificate publication, and the cost73k measurement claims (worker-split memo merge, hybrid seed union; follow-up work); this claim does not touch any of those Claim v2 reconciliation: raw batches 1-6 were already published on main but claim v1 still said batches_run 0. This update records only those pinned files; it does not touch the separate worker-split16 claim or any pending receipt-fold lane. Claim v3 reconciliation: raw batches 7-9 landed at a8cd1012 and the det reruns + v15 crosschecks at 867a131c; this update completes the claim from the PARTIAL v2 (archived at output/class2-lane-cost78c-inflight-20261118-v2-archive.json) with the full-sweep audit published together with this claim (output/class2-lane-cost78c-raw-sweep-audit-20261117.json, git blob 8e3ee7aa1827ae70b099d6a7c34d122f944b2fa3); the parallel batches-1-6 audit (output/class2-lane-cost78c-raw-batches-1-6-audit-20261118.json, git blob 7460b42bb8846ad6e5e3249b3a78d39aa3e94ffa at the lane's 321ccf06 republication, a provenance-only diff from the d8e5f9b7 version reconciled during claim v3 - per-bit verdict records, totals, batch summaries and all_pass identical; all_pass) agrees bit-exactly with the 9 WIN7-D10 bits it covered.",
- "candidate_count": 78,
- "child_stones_bit_indices": [
-  3,
-  27,
-  59,
-  60,
-  61,
-  70
- ],
- "demand": {
-  "c1": 0,
-  "c2": 1,
-  "c4": 0
- },
- "demand_verification": "row demand {c1:0, c2:1, c4:0} carried from the published head-1452 v1 census row tables through the head-1472 presweep censuses and the head-1473 censuses v8..v11, and re-verified bit-exactly by the census v11 run (all 39 family rows recomputed bit-exactly, v10 published values reproduced 39/39)",
- "engine": {
-  "script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/class4_child1_runner_v17.ts",
-  "blob_sha": "c132cc6425eee3feaeef1d697dd74f968cfedb59",
-  "note": "v17 = the fbt-saturation-repaired runner; depth 10, cap 1e9 per bit, andclose 1, fresh engine state per candidate bit, pilot_d6 control per batch (expected nodes 3402)"
- },
- "engine_candidate_bits": {
-  "open_bits": [
-   1,
-   2,
-   4,
-   9,
-   10,
-   16,
-   17,
-   18,
-   19,
-   21,
-   23,
-   24,
-   25,
-   29,
-   30,
-   31,
-   32,
-   33,
-   35,
-   38,
-   41,
-   42,
-   43,
-   44,
-   45,
-   49,
-   52,
-   53,
-   54,
-   66,
-   68,
-   69,
-   74,
-   75,
-   76,
-   78,
-   79,
-   82,
-   83,
-   85,
-   86,
-   87,
-   88,
-   89,
-   90,
-   91,
-   92,
-   95,
-   96,
-   98,
-   99,
-   100,
-   101,
-   102,
-   105,
-   106,
-   107,
-   109,
-   111,
-   112,
-   113,
-   114,
-   116,
-   117,
-   119,
-   120
+  "schema": "n11-class2-lane-cost78c-inflight-20261118-v5",
+  "date": "2026-11-17",
+  "last_updated": "2026-11-18",
+  "title": "n11 class2-lane cost78c: completed 78-bit depth-10 sweep of the census v11 rank-1 row - 11 WIN7-D10 / 67 REFUTED-D10 / 0 capped, all 11 WIN7 certificates extracted, independently verified and published (first WIN-bearing row of the presweep-1473 band)",
+  "status": "claim v5: COMPLETED + CERTIFICATES PUBLISHED (pin-provenance correction over claim v4: the parallel batches-1-6 audit was republished by its own lane at commit 321ccf06 with claim-v1/v2 provenance records added, changing its git blob from d8e5f9b70a0f2e3b027ded8322fa1a083193f73f to 7460b42bb8846ad6e5e3249b3a78d39aa3e94ffa with every per-bit verdict record, the totals, the batch summaries and all_pass unchanged; this claim pins the current blob and adds no new computation); the full 78-bit v17 depth-10 sweep is published and independently audited (66 open bits + 12 confirmation controls: 11 WIN7-D10 [1, 4, 9, 30, 49, 69, 75, 79, 100, 114, 116] / 67 REFUTED-D10 / 0 capped, 238,626,461 candidate nodes); all 11 WIN7-D10 certificates are extracted (blind extraction, extractor_exact_ms23, fbt_drops=0 on all eleven, no capped per-move), independently verified (verify_bit7_win7_cert.ts, engine-free: root-check stones=7 + loser mobility == legal_candidates.py enumeration, all sub-roots PASS, consumed-union == cert rows 0 missing / 0 extra on every root) and published (band commits b359756f..97650e27, manifest class2-lane-cost78c-win7-certificates-20261117.json git blob b7fe519e923c6170e836f71e3f084f73219319d5; 614,003 rows, 77,967,826 extraction nodes, 22,223,603 published bytes; 10 two-way line-boundary splits + bit 116 three-way split for the publication transport size limit); determinism: fresh-process re-extraction byte-identical on bits 69 and 116; no receipt fold or manifest closure has occurred (pending behind the 66i/66j/69j/71e/72d/73i/73j/73k/73l folds); 11x11 UNKNOWN",
+  "basis_head": "1473/174/6375/504596/4648/368510 (canonical head after the landed cost64h and cost76c bit61 folds; the completed cost74i and cost75f sweeps produced no receipts and change nothing; the pending 66i/66j/69j/71e/72d/73i/73j/73k/73l receipt folds do not change the head)",
+  "claimed_by": "n11 long-term lane session (head-1473 presweep census v11 selector, post-75f, cost78c)",
+  "coordination_note": "latest main re-fetched immediately before this push (2026-11-17, head cea8c4fb: the census v11 publication); no claim, raw batch, audit or census file for this child exists on main (searched: child hex 00000000000000403800000008000008, cost78c, presweep-1473 v11); the cost-78 label family already uses 78a (class2-lane certificates) and 78b (class4-lane), so this row is claimed as cost78c per the highest+1 convention; the parallel lanes hold the 66i receipt fold (margins rebased at head 1473, bit19 next), the pending 73i certificate publication, and the cost73k measurement claims (worker-split memo merge, hybrid seed union; follow-up work); this claim does not touch any of those Claim v2 reconciliation: raw batches 1-6 were already published on main but claim v1 still said batches_run 0. This update records only those pinned files; it does not touch the separate worker-split16 claim or any pending receipt-fold lane. Claim v3 reconciliation: raw batches 7-9 landed at a8cd1012 and the det reruns + v15 crosschecks at 867a131c; this update completes the claim from the PARTIAL v2 (archived at output/class2-lane-cost78c-inflight-20261118-v2-archive.json) with the full-sweep audit published together with this claim (output/class2-lane-cost78c-raw-sweep-audit-20261117.json, git blob 8e3ee7aa1827ae70b099d6a7c34d122f944b2fa3); the parallel batches-1-6 audit (output/class2-lane-cost78c-raw-batches-1-6-audit-20261118.json, git blob 7460b42bb8846ad6e5e3249b3a78d39aa3e94ffa at the lane's 321ccf06 republication, a provenance-only diff from the d8e5f9b7 version reconciled during claim v3 - per-bit verdict records, totals, batch summaries and all_pass identical; all_pass) agrees bit-exactly with the 9 WIN7-D10 bits it covered.",
+  "candidate_count": 78,
+  "child_stones_bit_indices": [
+    3,
+    27,
+    59,
+    60,
+    61,
+    70
   ],
-  "confirmation_bits": [
-   5,
-   13,
-   14,
-   20,
-   34,
-   46,
-   97,
-   103,
-   108,
-   110,
-   115,
-   118
+  "demand": {
+    "c1": 0,
+    "c2": 1,
+    "c4": 0
+  },
+  "demand_verification": "row demand {c1:0, c2:1, c4:0} carried from the published head-1452 v1 census row tables through the head-1472 presweep censuses and the head-1473 censuses v8..v11, and re-verified bit-exactly by the census v11 run (all 39 family rows recomputed bit-exactly, v10 published values reproduced 39/39)",
+  "engine": {
+    "script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/class4_child1_runner_v17.ts",
+    "blob_sha": "c132cc6425eee3feaeef1d697dd74f968cfedb59",
+    "note": "v17 = the fbt-saturation-repaired runner; depth 10, cap 1e9 per bit, andclose 1, fresh engine state per candidate bit, pilot_d6 control per batch (expected nodes 3402)"
+  },
+  "engine_candidate_bits": {
+    "open_bits": [
+      1,
+      2,
+      4,
+      9,
+      10,
+      16,
+      17,
+      18,
+      19,
+      21,
+      23,
+      24,
+      25,
+      29,
+      30,
+      31,
+      32,
+      33,
+      35,
+      38,
+      41,
+      42,
+      43,
+      44,
+      45,
+      49,
+      52,
+      53,
+      54,
+      66,
+      68,
+      69,
+      74,
+      75,
+      76,
+      78,
+      79,
+      82,
+      83,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      95,
+      96,
+      98,
+      99,
+      100,
+      101,
+      102,
+      105,
+      106,
+      107,
+      109,
+      111,
+      112,
+      113,
+      114,
+      116,
+      117,
+      119,
+      120
+    ],
+    "confirmation_bits": [
+      5,
+      13,
+      14,
+      20,
+      34,
+      46,
+      97,
+      103,
+      108,
+      110,
+      115,
+      118
+    ],
+    "confirmation_verdicts_predicted": {
+      "5": "REFUTED-D10",
+      "13": "REFUTED-D10",
+      "14": "REFUTED-D10",
+      "20": "REFUTED-D10",
+      "34": "REFUTED-D10",
+      "46": "REFUTED-D10",
+      "97": "REFUTED-D10",
+      "103": "REFUTED-D10",
+      "108": "REFUTED-D10",
+      "110": "REFUTED-D10",
+      "115": "REFUTED-D10",
+      "118": "REFUTED-D10"
+    },
+    "open_bit_count": 66,
+    "confirmation_bit_count": 12
+  },
+  "legal_candidates": [
+    1,
+    2,
+    4,
+    5,
+    9,
+    10,
+    13,
+    14,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    23,
+    24,
+    25,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    38,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    49,
+    52,
+    53,
+    54,
+    66,
+    68,
+    69,
+    74,
+    75,
+    76,
+    78,
+    79,
+    82,
+    83,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120
   ],
-  "confirmation_verdicts_predicted": {
-   "5": "REFUTED-D10",
-   "13": "REFUTED-D10",
-   "14": "REFUTED-D10",
-   "20": "REFUTED-D10",
-   "34": "REFUTED-D10",
-   "46": "REFUTED-D10",
-   "97": "REFUTED-D10",
-   "103": "REFUTED-D10",
-   "108": "REFUTED-D10",
-   "110": "REFUTED-D10",
-   "115": "REFUTED-D10",
-   "118": "REFUTED-D10"
+  "next_action": "Receipt fold of this row stays pending behind the 66i/66j/69j/71e/72d/73i/73j/73k/73l folds (managed by their own lanes); the next census (v12) marks this row swept (11 WIN7-D10 with published certificates + 67 REFUTED-D10) and selects the next target (census v11 runner-up cost 79, open 69); optional follow-up: BigInt independent third-implementation re-verification of the 11 certificates",
+  "planned_controls": "All nine batches (7x9 open + 1x3 open + 1x12 confirmation) are published and audited; pilot_d6=3402 in 9/9 raw batches and 2/2 det reruns, pilot_d6=5949 in 2/2 v15 chunks; determinism reruns (batches 1 and 8) field-identical across two sandbox lifetimes plus a third-session rerun of batch 8 from the reconstructed driver; v15 cross-engine checks 17/17. Remaining control: certificate extraction and independent verification of the 11 WIN7-D10 roots.",
+  "receipt_fold": {
+    "status": "COMPLETED in combined cost78c+cost79c receipt fold",
+    "fold_record_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost78c-79c-receipts-recompute-20261118.json",
+    "fold_record_git_blob_sha1": "7e6144cc4bc92c34faa14bed3058cde64fb3880e",
+    "chain_head_before": {
+      "solved_s6_in_manifest": 1589,
+      "remaining_s5_orbits": 174,
+      "unique_remaining_s6": 6259,
+      "sum_remaining_cost": 495507,
+      "s6_needed_by_open_classes": 4543,
+      "cost_needed_by_open_classes": 360227
+    },
+    "chain_head_after": {
+      "solved_s6_in_manifest": 1608,
+      "remaining_s5_orbits": 173,
+      "unique_remaining_s6": 6240,
+      "sum_remaining_cost": 493965,
+      "s6_needed_by_open_classes": 4524,
+      "cost_needed_by_open_classes": 358685,
+      "parent_row_incidence": 11886
+    },
+    "band_contribution": {
+      "certificates": 11,
+      "new_s6_rows": 5,
+      "new_edge_cost": 387,
+      "row_root_pairs": 15,
+      "marginal_by_bit": [
+        {
+          "bit": 1,
+          "marginal": 2,
+          "rows": [
+            "0000000000000000380000000800000a",
+            "00000000000000403800000008000008"
+          ]
+        },
+        {
+          "bit": 4,
+          "marginal": 1,
+          "rows": [
+            "00000000000000003800000008000018"
+          ]
+        },
+        {
+          "bit": 9,
+          "marginal": 0,
+          "rows": []
+        },
+        {
+          "bit": 30,
+          "marginal": 0,
+          "rows": []
+        },
+        {
+          "bit": 49,
+          "marginal": 0,
+          "rows": []
+        },
+        {
+          "bit": 69,
+          "marginal": 0,
+          "rows": []
+        },
+        {
+          "bit": 75,
+          "marginal": 0,
+          "rows": []
+        },
+        {
+          "bit": 79,
+          "marginal": 0,
+          "rows": []
+        },
+        {
+          "bit": 100,
+          "marginal": 0,
+          "rows": []
+        },
+        {
+          "bit": 114,
+          "marginal": 1,
+          "rows": [
+            "00000000000000801242000200000000"
+          ]
+        },
+        {
+          "bit": 116,
+          "marginal": 1,
+          "rows": [
+            "00000000000000849002080000000000"
+          ]
+        }
+      ]
+    },
+    "parent_closure": {
+      "parent": "00000000000000403800000008000000",
+      "rows_before": 1,
+      "rows_after": 0,
+      "cost_before": 78,
+      "cost_after": 0,
+      "closed_by_bit": 1
+    },
+    "note": "Combined fold scans 30 published certificate roots against the 6,259 open rows at head 1589. The cost78c child was the final row of its S5 parent; the combined fold closes 19 unique S6 row orbits and removes edge cost 1,542. No new engine verdict is created."
   },
-  "open_bit_count": 66,
-  "confirmation_bit_count": 12
- },
- "legal_candidates": [
-  1,
-  2,
-  4,
-  5,
-  9,
-  10,
-  13,
-  14,
-  16,
-  17,
-  18,
-  19,
-  20,
-  21,
-  23,
-  24,
-  25,
-  29,
-  30,
-  31,
-  32,
-  33,
-  34,
-  35,
-  38,
-  41,
-  42,
-  43,
-  44,
-  45,
-  46,
-  49,
-  52,
-  53,
-  54,
-  66,
-  68,
-  69,
-  74,
-  75,
-  76,
-  78,
-  79,
-  82,
-  83,
-  85,
-  86,
-  87,
-  88,
-  89,
-  90,
-  91,
-  92,
-  95,
-  96,
-  97,
-  98,
-  99,
-  100,
-  101,
-  102,
-  103,
-  105,
-  106,
-  107,
-  108,
-  109,
-  110,
-  111,
-  112,
-  113,
-  114,
-  115,
-  116,
-  117,
-  118,
-  119,
-  120
- ],
- "next_action": "Receipt fold of this row stays pending behind the 66i/66j/69j/71e/72d/73i/73j/73k/73l folds (managed by their own lanes); the next census (v12) marks this row swept (11 WIN7-D10 with published certificates + 67 REFUTED-D10) and selects the next target (census v11 runner-up cost 79, open 69); optional follow-up: BigInt independent third-implementation re-verification of the 11 certificates",
- "planned_controls": "All nine batches (7x9 open + 1x3 open + 1x12 confirmation) are published and audited; pilot_d6=3402 in 9/9 raw batches and 2/2 det reruns, pilot_d6=5949 in 2/2 v15 chunks; determinism reruns (batches 1 and 8) field-identical across two sandbox lifetimes plus a third-session rerun of batch 8 from the reconstructed driver; v15 cross-engine checks 17/17. Remaining control: certificate extraction and independent verification of the 11 WIN7-D10 roots.",
- "receipt_fold": {
-  "status": "pending behind the cost-66i, cost-66j, cost-69j, cost-71e, cost-72d, cost-73i, cost-73j, cost-73k and cost-73l folds (the completed cost74i and cost75f rows needed none)",
-  "note": "any WIN7-D10 certificates of this row fold only after the pending folds land; no manifest row is closed by this sweep or this claim"
- },
- "certificates": {
-  "status": "complete: 11 WIN7-D10 certificates published (band commits b359756f..97650e27; 10 two-way line-boundary splits + bit 116 three-way split), manifest class2-lane-cost78c-win7-certificates-20261117.json (git blob b7fe519e923c6170e836f71e3f084f73219319d5); every certificate independently verified engine-free (root-check + all sub-roots + consumed-union 0 missing / 0 extra); determinism re-extraction byte-identical on bits [69, 116]",
-  "manifest": "class2-lane-cost78c-win7-certificates-20261117.json",
-  "manifest_blob_sha": "b7fe519e923c6170e836f71e3f084f73219319d5",
-  "totals": {
-   "certificates": 11,
-   "rows": 614003,
-   "extraction_nodes": 77967826,
-   "published_bytes": 22223603,
-   "fbt_drops_total": 0,
-   "capped_per_move_total": 0
+  "certificates": {
+    "status": "complete: 11 WIN7-D10 certificates published (band commits b359756f..97650e27; 10 two-way line-boundary splits + bit 116 three-way split), manifest class2-lane-cost78c-win7-certificates-20261117.json (git blob b7fe519e923c6170e836f71e3f084f73219319d5); every certificate independently verified engine-free (root-check + all sub-roots + consumed-union 0 missing / 0 extra); determinism re-extraction byte-identical on bits [69, 116]",
+    "manifest": "class2-lane-cost78c-win7-certificates-20261117.json",
+    "manifest_blob_sha": "b7fe519e923c6170e836f71e3f084f73219319d5",
+    "totals": {
+      "certificates": 11,
+      "rows": 614003,
+      "extraction_nodes": 77967826,
+      "published_bytes": 22223603,
+      "fbt_drops_total": 0,
+      "capped_per_move_total": 0
+    },
+    "determinism_sample_bits": [
+      69,
+      116
+    ]
   },
-  "determinism_sample_bits": [
-   69,
-   116
-  ]
- },
- "s5": "00000000000000403800000008000000",
- "s6_child": "00000000000000403800000008000008",
- "s6_s7_edge_cost": 78,
- "transfers": {
-  "5": {
-   "root_canon": "00000000000000403800000008000028",
-   "verdict": "REFUTED-D10",
-   "source": "cost69j bit 3",
-   "kind": "census v11 fourteen-map/harvest overlay verdict transfer (head-1473 census v11 rank-1 confirmation)"
+  "s5": "00000000000000403800000008000000",
+  "s6_child": "00000000000000403800000008000008",
+  "s6_s7_edge_cost": 78,
+  "transfers": {
+    "5": {
+      "root_canon": "00000000000000403800000008000028",
+      "verdict": "REFUTED-D10",
+      "source": "cost69j bit 3",
+      "kind": "census v11 fourteen-map/harvest overlay verdict transfer (head-1473 census v11 rank-1 confirmation)"
+    },
+    "13": {
+      "root_canon": "00000000000000403800000008002008",
+      "verdict": "REFUTED-D10",
+      "source": "pre-64h harvest (cost64d inflight record 2026-11-16; raw-identical bit 3)",
+      "kind": "census v11 fourteen-map/harvest overlay verdict transfer (head-1473 census v11 rank-1 confirmation)"
+    },
+    "14": {
+      "root_canon": "00000000000000403800000008004008",
+      "verdict": "REFUTED-D10",
+      "source": "cost72d bit 3",
+      "kind": "census v11 fourteen-map/harvest overlay verdict transfer (head-1473 census v11 rank-1 confirmation)"
+    },
+    "20": {
+      "root_canon": "00000000000000403800000008100008",
+      "verdict": "REFUTED-D10",
+      "source": "cost64h bit 3",
+      "kind": "census v11 fourteen-map/harvest overlay verdict transfer (head-1473 census v11 rank-1 confirmation)"
+    },
+    "34": {
+      "root_canon": "00000000000000403800000408000008",
+      "verdict": "REFUTED-D10",
+      "source": "cost73j bit 3",
+      "kind": "census v11 fourteen-map/harvest overlay verdict transfer (head-1473 census v11 rank-1 confirmation)"
+    },
+    "46": {
+      "root_canon": "00000000000000403800400008000008",
+      "verdict": "REFUTED-D10",
+      "source": "cost73i bit 3",
+      "kind": "census v11 fourteen-map/harvest overlay verdict transfer (head-1473 census v11 rank-1 confirmation)"
+    },
+    "97": {
+      "root_canon": "00000000000021801202000000080000",
+      "verdict": "REFUTED-D10",
+      "source": "cost71e bit 87",
+      "kind": "census v11 fourteen-map/harvest overlay verdict transfer (head-1473 census v11 rank-1 confirmation)"
+    },
+    "103": {
+      "root_canon": "00000000000000801226000200000000",
+      "verdict": "REFUTED-D10",
+      "source": "cost66i bit 33",
+      "kind": "census v11 fourteen-map/harvest overlay verdict transfer (head-1473 census v11 rank-1 confirmation)"
+    },
+    "108": {
+      "root_canon": "00000000000021801202000000100000",
+      "verdict": "REFUTED-D10",
+      "source": "cost66j bit 87",
+      "kind": "census v11 fourteen-map/harvest overlay verdict transfer (head-1473 census v11 rank-1 confirmation)"
+    },
+    "110": {
+      "root_canon": "00000000000000801206000200000400",
+      "verdict": "REFUTED-D10",
+      "source": "cost73k bit 33",
+      "kind": "census v11 fourteen-map/harvest overlay verdict transfer (head-1473 census v11 rank-1 confirmation)"
+    },
+    "115": {
+      "root_canon": "00000000000000809083080000000000",
+      "verdict": "REFUTED-D10",
+      "source": "pre-64h harvest (cost70b sweep record 2026-11-14, canon-equal bit 48)",
+      "kind": "census v11 fourteen-map/harvest overlay verdict transfer (head-1473 census v11 rank-1 confirmation)"
+    },
+    "118": {
+      "root_canon": "00000000000021801202000100000000",
+      "verdict": "REFUTED-D10",
+      "source": "cost73l bit 87",
+      "kind": "census v11 fourteen-map/harvest overlay verdict transfer (head-1473 census v11 rank-1 confirmation)"
+    }
   },
-  "13": {
-   "root_canon": "00000000000000403800000008002008",
-   "verdict": "REFUTED-D10",
-   "source": "pre-64h harvest (cost64d inflight record 2026-11-16; raw-identical bit 3)",
-   "kind": "census v11 fourteen-map/harvest overlay verdict transfer (head-1473 census v11 rank-1 confirmation)"
-  },
-  "14": {
-   "root_canon": "00000000000000403800000008004008",
-   "verdict": "REFUTED-D10",
-   "source": "cost72d bit 3",
-   "kind": "census v11 fourteen-map/harvest overlay verdict transfer (head-1473 census v11 rank-1 confirmation)"
-  },
-  "20": {
-   "root_canon": "00000000000000403800000008100008",
-   "verdict": "REFUTED-D10",
-   "source": "cost64h bit 3",
-   "kind": "census v11 fourteen-map/harvest overlay verdict transfer (head-1473 census v11 rank-1 confirmation)"
-  },
-  "34": {
-   "root_canon": "00000000000000403800000408000008",
-   "verdict": "REFUTED-D10",
-   "source": "cost73j bit 3",
-   "kind": "census v11 fourteen-map/harvest overlay verdict transfer (head-1473 census v11 rank-1 confirmation)"
-  },
-  "46": {
-   "root_canon": "00000000000000403800400008000008",
-   "verdict": "REFUTED-D10",
-   "source": "cost73i bit 3",
-   "kind": "census v11 fourteen-map/harvest overlay verdict transfer (head-1473 census v11 rank-1 confirmation)"
-  },
-  "97": {
-   "root_canon": "00000000000021801202000000080000",
-   "verdict": "REFUTED-D10",
-   "source": "cost71e bit 87",
-   "kind": "census v11 fourteen-map/harvest overlay verdict transfer (head-1473 census v11 rank-1 confirmation)"
-  },
-  "103": {
-   "root_canon": "00000000000000801226000200000000",
-   "verdict": "REFUTED-D10",
-   "source": "cost66i bit 33",
-   "kind": "census v11 fourteen-map/harvest overlay verdict transfer (head-1473 census v11 rank-1 confirmation)"
-  },
-  "108": {
-   "root_canon": "00000000000021801202000000100000",
-   "verdict": "REFUTED-D10",
-   "source": "cost66j bit 87",
-   "kind": "census v11 fourteen-map/harvest overlay verdict transfer (head-1473 census v11 rank-1 confirmation)"
-  },
-  "110": {
-   "root_canon": "00000000000000801206000200000400",
-   "verdict": "REFUTED-D10",
-   "source": "cost73k bit 33",
-   "kind": "census v11 fourteen-map/harvest overlay verdict transfer (head-1473 census v11 rank-1 confirmation)"
-  },
-  "115": {
-   "root_canon": "00000000000000809083080000000000",
-   "verdict": "REFUTED-D10",
-   "source": "pre-64h harvest (cost70b sweep record 2026-11-14, canon-equal bit 48)",
-   "kind": "census v11 fourteen-map/harvest overlay verdict transfer (head-1473 census v11 rank-1 confirmation)"
-  },
-  "118": {
-   "root_canon": "00000000000021801202000100000000",
-   "verdict": "REFUTED-D10",
-   "source": "cost73l bit 87",
-   "kind": "census v11 fourteen-map/harvest overlay verdict transfer (head-1473 census v11 rank-1 confirmation)"
+  "unknown_status": "11x11 empty board: UNKNOWN. A completed sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 78 seven-stone roots of this child and closes no family row by itself; the 11x11 empty board, the two-stone roots {49,60} and {59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN regardless of this sweep's outcome",
+  "verdict_semantics": "loss=true => WIN7-within-depth-10 candidate (certificate rebuild target); loss=false && !capped => REFUTED-D10, no first-player win within depth 10 from this root (NOT a LOSS proof); capped => inconclusive, re-run with a higher cap; verdicts are per 7-stone root only",
+  "interpretation_guard": "Completed raw sweep + published certificate bookkeeping. The eleven WIN7-D10 roots are certificate-backed first-player wins within depth 10 from the individual 7-stone roots only. REFUTED-D10 is not a LOSS proof. No S6 row or class family is closed; standard 11x11 remains UNKNOWN.",
+  "batches_run": 9,
+  "open_bits_completed": 66,
+  "open_bits_remaining": 0,
+  "actual_execution": {
+    "batches_completed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "raw_batch_files": [
+      {
+        "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-raw-batch1-20261117.jsonl",
+        "git_blob_sha": "e7eaa4b466a71630b956ffba792f2bde1dd28957"
+      },
+      {
+        "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-raw-batch2-20261117.jsonl",
+        "git_blob_sha": "ad7212628cf663c1681a0e0ef9b700fd6019873b"
+      },
+      {
+        "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-raw-batch3-20261117.jsonl",
+        "git_blob_sha": "d5a4a4444d18592816ad7e64f492976d1567ca96"
+      },
+      {
+        "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-raw-batch4-20261117.jsonl",
+        "git_blob_sha": "2a6cfd349519500e5eee17ce50455a7d2b00faeb"
+      },
+      {
+        "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-raw-batch5-20261117.jsonl",
+        "git_blob_sha": "66d3b8544306a49d9be5030abc0ffb7f7e0dafcf"
+      },
+      {
+        "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-raw-batch6-20261117.jsonl",
+        "git_blob_sha": "9596daf578bcdb549e1f5b37e87ff246df61c183"
+      },
+      {
+        "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-raw-batch7-20261117.jsonl",
+        "git_blob_sha": "f47f3e4223e609082ba3cf92b37ed14dee0d0250"
+      },
+      {
+        "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-raw-batch8-20261117.jsonl",
+        "git_blob_sha": "9062e781c8f9cb82d9ec2588fa2142f25c22d397"
+      },
+      {
+        "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-raw-batch9-confirmation-20261117.jsonl",
+        "git_blob_sha": "1b39bcc49514d8b15255f6a2a64e433ccac71002"
+      },
+      {
+        "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-det-batch1-20261117.jsonl",
+        "git_blob_sha": "9441ccd9d20da378bfafbda098b108525e6dfe4a"
+      },
+      {
+        "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-det-batch8-20261117.jsonl",
+        "git_blob_sha": "f4ac21ad0a6dfe86a24c360e257be3c3e00143db"
+      },
+      {
+        "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-v15-crosscheck-a-20261117.jsonl",
+        "git_blob_sha": "971dafbd5f7ce237b8a11c0575a3450c5233f421"
+      },
+      {
+        "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-v15-crosscheck-b-20261117.jsonl",
+        "git_blob_sha": "7aa69943dae79ef686adc4080790ca1882cefc7d"
+      }
+    ],
+    "win7_d10_bits": [
+      1,
+      4,
+      9,
+      30,
+      49,
+      69,
+      75,
+      79,
+      100,
+      114,
+      116
+    ],
+    "refuted_d10_bits": [
+      2,
+      5,
+      10,
+      13,
+      14,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      23,
+      24,
+      25,
+      29,
+      31,
+      32,
+      33,
+      34,
+      35,
+      38,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      52,
+      53,
+      54,
+      66,
+      68,
+      74,
+      76,
+      78,
+      82,
+      83,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      95,
+      96,
+      97,
+      98,
+      99,
+      101,
+      102,
+      103,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      115,
+      117,
+      118,
+      119,
+      120
+    ],
+    "capped_bits": [],
+    "candidate_nodes": 238626461,
+    "pilot_controls": "9/9 raw batches + 2/2 det reruns at pilot_d6 3402; 2/2 v15 chunks at pilot_d6 5949",
+    "pilot_nodes": 49320,
+    "total_nodes_including_pilots": 238675781,
+    "all_54_d4_root_canons_unique": "superseded: all 78 root canons of the full sweep are unique (78/78)",
+    "winner_canons_distinct_from_confirmation_canons": true,
+    "audit_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-raw-sweep-audit-20261117.json",
+    "audit_git_blob_sha": "8e3ee7aa1827ae70b099d6a7c34d122f944b2fa3",
+    "audit_all_pass": true,
+    "v15_cross_engine": "17/17 verdict agreement (chunk a: 12 confirmation bits; chunk b: 5 heaviest bits [34, 116, 41, 25, 99]); 16 loss=false + 1 loss=true at WIN bit 116; 2/2 pilots at 5949; v15 nodes 150,314,380",
+    "determinism_reruns": "PENDING",
+    "certificate_extraction": "COMPLETE: 11/11 WIN7-D10 bits [1, 4, 9, 30, 49, 69, 75, 79, 100, 114, 116] blind-extracted (cert_driver78c.ts + extractor_exact_ms23, per-bit fresh process, 77,967,826 extraction nodes, 614,003 rows, fbt_drops 0 on all eleven); published in the band commits b359756f..97650e27",
+    "certificate_verification": "COMPLETE: engine-free verification PASS on all 11 (verify_cost78c_one.sh orchestrating verify_bit7_win7_cert.ts: root-check stones=7, loser mobility == independent legal_candidates.py enumeration on the RAW root, all sub-roots PASS, consumed-winner-state union == certificate row set 0 missing / 0 extra on every root); fresh-process re-extraction byte-identical on bits 69 and 116",
+    "win7_d10_nodes": {
+      "1": 7264656,
+      "4": 7292768,
+      "9": 5853782,
+      "30": 2011603,
+      "49": 1818616,
+      "69": 1161282,
+      "75": 1264941,
+      "79": 1982518,
+      "100": 2234336,
+      "114": 5630090,
+      "116": 9489167
+    },
+    "confirmation_outcome": "12/12 confirmation bits REFUTED-D10 as predicted; every transfer re-verified by re-reading the source raw batch line and re-deriving the D4 canon of both sides (6 raw-identical: bits 5/13/14/20/34/46 = cost69j/cost64d/cost72d/cost64h/cost73j/cost73i bit 3; 6 canon-equal only: bits 97/103/108/110/115/118 = cost71e bit 87, cost66i bit 33, cost66j bit 87, cost73k bit 33, cost70b bit 48, cost73l bit 87)",
+    "determinism_rerun": "batch 1 (bits 1,2,4,9,10,16,17,18,19; first sandbox session) and batch 8 (bits 117,119,120; post-reset session) rerun field-identical on every non-ms field; the post-reset reconstructed batch driver re-ran batch 8 field-identically in a third session (cross-session determinism across three sandbox lifetimes)",
+    "parallel_independent_audits": "batches-1-6 audit output/class2-lane-cost78c-raw-batches-1-6-audit-20261118.json (git blob 7460b42bb8846ad6e5e3249b3a78d39aa3e94ffa at the 321ccf06 republication, provenance-only diff from d8e5f9b7, all_pass, 9 WIN / 45 REFUTED / 0 capped agreeing bit-exactly) and the claim-structure audit (scripts/audit_cost78c_claim_structure_20261118.py)"
   }
- },
- "unknown_status": "11x11 empty board: UNKNOWN. A completed sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 78 seven-stone roots of this child and closes no family row by itself; the 11x11 empty board, the two-stone roots {49,60} and {59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN regardless of this sweep's outcome",
- "verdict_semantics": "loss=true => WIN7-within-depth-10 candidate (certificate rebuild target); loss=false && !capped => REFUTED-D10, no first-player win within depth 10 from this root (NOT a LOSS proof); capped => inconclusive, re-run with a higher cap; verdicts are per 7-stone root only",
- "interpretation_guard": "Completed raw sweep + published certificate bookkeeping. The eleven WIN7-D10 roots are certificate-backed first-player wins within depth 10 from the individual 7-stone roots only. REFUTED-D10 is not a LOSS proof. No S6 row or class family is closed; standard 11x11 remains UNKNOWN.",
- "batches_run": 9,
- "open_bits_completed": 66,
- "open_bits_remaining": 0,
- "actual_execution": {
-  "batches_completed": [
-   1,
-   2,
-   3,
-   4,
-   5,
-   6,
-   7,
-   8,
-   9
-  ],
-  "raw_batch_files": [
-   {
-    "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-raw-batch1-20261117.jsonl",
-    "git_blob_sha": "e7eaa4b466a71630b956ffba792f2bde1dd28957"
-   },
-   {
-    "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-raw-batch2-20261117.jsonl",
-    "git_blob_sha": "ad7212628cf663c1681a0e0ef9b700fd6019873b"
-   },
-   {
-    "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-raw-batch3-20261117.jsonl",
-    "git_blob_sha": "d5a4a4444d18592816ad7e64f492976d1567ca96"
-   },
-   {
-    "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-raw-batch4-20261117.jsonl",
-    "git_blob_sha": "2a6cfd349519500e5eee17ce50455a7d2b00faeb"
-   },
-   {
-    "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-raw-batch5-20261117.jsonl",
-    "git_blob_sha": "66d3b8544306a49d9be5030abc0ffb7f7e0dafcf"
-   },
-   {
-    "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-raw-batch6-20261117.jsonl",
-    "git_blob_sha": "9596daf578bcdb549e1f5b37e87ff246df61c183"
-   },
-   {
-    "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-raw-batch7-20261117.jsonl",
-    "git_blob_sha": "f47f3e4223e609082ba3cf92b37ed14dee0d0250"
-   },
-   {
-    "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-raw-batch8-20261117.jsonl",
-    "git_blob_sha": "9062e781c8f9cb82d9ec2588fa2142f25c22d397"
-   },
-   {
-    "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-raw-batch9-confirmation-20261117.jsonl",
-    "git_blob_sha": "1b39bcc49514d8b15255f6a2a64e433ccac71002"
-   },
-   {
-    "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-det-batch1-20261117.jsonl",
-    "git_blob_sha": "9441ccd9d20da378bfafbda098b108525e6dfe4a"
-   },
-   {
-    "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-det-batch8-20261117.jsonl",
-    "git_blob_sha": "f4ac21ad0a6dfe86a24c360e257be3c3e00143db"
-   },
-   {
-    "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-v15-crosscheck-a-20261117.jsonl",
-    "git_blob_sha": "971dafbd5f7ce237b8a11c0575a3450c5233f421"
-   },
-   {
-    "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-v15-crosscheck-b-20261117.jsonl",
-    "git_blob_sha": "7aa69943dae79ef686adc4080790ca1882cefc7d"
-   }
-  ],
-  "win7_d10_bits": [
-   1,
-   4,
-   9,
-   30,
-   49,
-   69,
-   75,
-   79,
-   100,
-   114,
-   116
-  ],
-  "refuted_d10_bits": [
-   2,
-   5,
-   10,
-   13,
-   14,
-   16,
-   17,
-   18,
-   19,
-   20,
-   21,
-   23,
-   24,
-   25,
-   29,
-   31,
-   32,
-   33,
-   34,
-   35,
-   38,
-   41,
-   42,
-   43,
-   44,
-   45,
-   46,
-   52,
-   53,
-   54,
-   66,
-   68,
-   74,
-   76,
-   78,
-   82,
-   83,
-   85,
-   86,
-   87,
-   88,
-   89,
-   90,
-   91,
-   92,
-   95,
-   96,
-   97,
-   98,
-   99,
-   101,
-   102,
-   103,
-   105,
-   106,
-   107,
-   108,
-   109,
-   110,
-   111,
-   112,
-   113,
-   115,
-   117,
-   118,
-   119,
-   120
-  ],
-  "capped_bits": [],
-  "candidate_nodes": 238626461,
-  "pilot_controls": "9/9 raw batches + 2/2 det reruns at pilot_d6 3402; 2/2 v15 chunks at pilot_d6 5949",
-  "pilot_nodes": 49320,
-  "total_nodes_including_pilots": 238675781,
-  "all_54_d4_root_canons_unique": "superseded: all 78 root canons of the full sweep are unique (78/78)",
-  "winner_canons_distinct_from_confirmation_canons": true,
-  "audit_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-raw-sweep-audit-20261117.json",
-  "audit_git_blob_sha": "8e3ee7aa1827ae70b099d6a7c34d122f944b2fa3",
-  "audit_all_pass": true,
-  "v15_cross_engine": "17/17 verdict agreement (chunk a: 12 confirmation bits; chunk b: 5 heaviest bits [34, 116, 41, 25, 99]); 16 loss=false + 1 loss=true at WIN bit 116; 2/2 pilots at 5949; v15 nodes 150,314,380",
-  "determinism_reruns": "PENDING",
-  "certificate_extraction": "COMPLETE: 11/11 WIN7-D10 bits [1, 4, 9, 30, 49, 69, 75, 79, 100, 114, 116] blind-extracted (cert_driver78c.ts + extractor_exact_ms23, per-bit fresh process, 77,967,826 extraction nodes, 614,003 rows, fbt_drops 0 on all eleven); published in the band commits b359756f..97650e27",
-  "certificate_verification": "COMPLETE: engine-free verification PASS on all 11 (verify_cost78c_one.sh orchestrating verify_bit7_win7_cert.ts: root-check stones=7, loser mobility == independent legal_candidates.py enumeration on the RAW root, all sub-roots PASS, consumed-winner-state union == certificate row set 0 missing / 0 extra on every root); fresh-process re-extraction byte-identical on bits 69 and 116",
-  "win7_d10_nodes": {
-   "1": 7264656,
-   "4": 7292768,
-   "9": 5853782,
-   "30": 2011603,
-   "49": 1818616,
-   "69": 1161282,
-   "75": 1264941,
-   "79": 1982518,
-   "100": 2234336,
-   "114": 5630090,
-   "116": 9489167
-  },
-  "confirmation_outcome": "12/12 confirmation bits REFUTED-D10 as predicted; every transfer re-verified by re-reading the source raw batch line and re-deriving the D4 canon of both sides (6 raw-identical: bits 5/13/14/20/34/46 = cost69j/cost64d/cost72d/cost64h/cost73j/cost73i bit 3; 6 canon-equal only: bits 97/103/108/110/115/118 = cost71e bit 87, cost66i bit 33, cost66j bit 87, cost73k bit 33, cost70b bit 48, cost73l bit 87)",
-  "determinism_rerun": "batch 1 (bits 1,2,4,9,10,16,17,18,19; first sandbox session) and batch 8 (bits 117,119,120; post-reset session) rerun field-identical on every non-ms field; the post-reset reconstructed batch driver re-ran batch 8 field-identically in a third session (cross-session determinism across three sandbox lifetimes)",
-  "parallel_independent_audits": "batches-1-6 audit output/class2-lane-cost78c-raw-batches-1-6-audit-20261118.json (git blob 7460b42bb8846ad6e5e3249b3a78d39aa3e94ffa at the 321ccf06 republication, provenance-only diff from d8e5f9b7, all_pass, 9 WIN / 45 REFUTED / 0 capped agreeing bit-exactly) and the claim-structure audit (scripts/audit_cost78c_claim_structure_20261118.py)"
- }
 }
