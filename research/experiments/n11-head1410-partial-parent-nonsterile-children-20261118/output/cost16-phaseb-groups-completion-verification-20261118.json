@@ -1,0 +1,169 @@
+{
+  "schema": "n11-cost16-phaseb-groups-completion-verification-20261118-v1",
+  "date": "2026-11-18",
+  "lane": "n11 long lane (verification side)",
+  "title": "Completion verification of the 425 pair-root memberships (A/B split) for the 31-row cost-16 parent 00000000000000003800000008001000: cross-lane identity sum(b_part)==16*B16, design-13 reconciliation with the resolved (4,29) transcription error, direct-mode B_d spot checks, aggregate self-consistency",
+  "inputs": {
+    "phase_a_output": {
+      "git_blob_sha1": "fe4b4b559fd8c3fdc9bc9b9f40a048fc3217c55b"
+    },
+    "b16_slice_output": {
+      "git_blob_sha1": "883275fba179c28988b5bfd3aaa3fab79be9be7c"
+    },
+    "groups_jsonl": {
+      "records": 425,
+      "summaries": 26
+    },
+    "direct_jsonl": {
+      "rows": [
+        2,
+        18
+      ]
+    },
+    "aggregate_output": "cost16-b-phase-groups-20261118.json",
+    "parent_pickle": "(regenerable via cost16_parent_membership_20261118.load_parent from the pinned cover table and the regenerated candidate JSONL)"
+  },
+  "headline": {
+    "A16": 2305787291293934388,
+    "B16": 660663050386546968,
+    "total": 2966450341680481356,
+    "sum_a_part": "34586809369409015820",
+    "sum_b_part": "10570608806184751488",
+    "cross_lane_check": "sum(b_part)/16 == published B16 (exact)",
+    "membership_max": 136382599145473665,
+    "membership_min": 1415501771326047,
+    "pair_min": "87624228102165001",
+    "singleton_max": "1798095446108235"
+  },
+  "checks": [
+    {
+      "name": "pin.phase_a_output",
+      "pass": true,
+      "detail": "fe4b4b559fd8c3fdc9bc9b9f40a048fc3217c55b"
+    },
+    {
+      "name": "pin.b16_output",
+      "pass": true,
+      "detail": "883275fba179c28988b5bfd3aaa3fab79be9be7c"
+    },
+    {
+      "name": "pins.A16_B16_match_published",
+      "pass": true,
+      "detail": "{\"A16\": 2305787291293934388, \"B16\": 660663050386546968}"
+    },
+    {
+      "name": "struct.parent_shape",
+      "pass": true,
+      "detail": "{\"r\": 31, \"k\": 16}"
+    },
+    {
+      "name": "struct.roots_histogram",
+      "pass": true,
+      "detail": "{\"1\": 1483, \"2\": 425}"
+    },
+    {
+      "name": "jsonl.no_duplicates",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "name": "jsonl.records_425",
+      "pass": true,
+      "detail": "425"
+    },
+    {
+      "name": "jsonl.root_set_matches_structure",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "name": "jsonl.pair_consistent",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "identity.sum_a_eq_15A16",
+      "pass": true,
+      "detail": "{\"sum_a\": \"34586809369409015820\", \"15*A16\": \"34586809369409015820\"}"
+    },
+    {
+      "name": "identity.sum_b_eq_16B16_cross_lane",
+      "pass": true,
+      "detail": "{\"sum_b\": \"10570608806184751488\", \"16*B16\": \"10570608806184751488\"}"
+    },
+    {
+      "name": "design13.twelve_exact",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "design13.a_part_429_matches",
+      "pass": true,
+      "detail": "83754150371345030"
+    },
+    {
+      "name": "design13.b_part_429_transcription_error",
+      "pass": true,
+      "detail": "{\"jsonl_b\": \"25742823159389724\", \"table_b\": \"25742803159389724\", \"delta\": 20000000000}"
+    },
+    {
+      "name": "dup.removed_08_copy_identical",
+      "pass": true,
+      "detail": "{\"kept\": [84443033500707374, 25797556390267152], \"pre\": [84443033500707374, 25797556390267152]}"
+    },
+    {
+      "name": "direct.b_d_rows_present",
+      "pass": true,
+      "detail": "[2, 18]"
+    },
+    {
+      "name": "direct.b_d_18_matches_slice",
+      "pass": true,
+      "detail": "{\"direct\": \"18319351945126110\", \"slice\": \"18319351945126110\"}"
+    },
+    {
+      "name": "direct.b_d_2_matches_slice",
+      "pass": true,
+      "detail": "{\"direct\": \"23475415507703040\", \"slice\": \"23475415507703040\"}"
+    },
+    {
+      "name": "aggregate.all_pass",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "aggregate.total",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "aggregate.membership_map_consistent",
+      "pass": true,
+      "detail": "{\"n\": 1908, \"sum\": \"47463205466887701696\"}"
+    },
+    {
+      "name": "aggregate.witness_positive",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "aggregate.all_roots_positive",
+      "pass": true,
+      "detail": "1415501771326047"
+    },
+    {
+      "name": "aggregate.top50_sorted_all_pair",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "membership.pair_dominance",
+      "pass": true,
+      "detail": "{\"pair_min\": \"87624228102165001\", \"singleton_max\": \"1798095446108235\", \"ratio\": 48.73168901674118}"
+    }
+  ],
+  "check_count": 25,
+  "all_pass": true,
+  "interpretation_guard": "Membership counts are counts of alternative minimum certificate-cover plans, not search costs or verdicts. REFUTED-D10 and STERILE are not LOSS proofs.",
+  "unknown_status": "Standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+}
