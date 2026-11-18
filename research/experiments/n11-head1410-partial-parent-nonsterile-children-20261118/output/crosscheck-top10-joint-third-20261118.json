@@ -1,0 +1,80 @@
+{
+  "schema": "n11-cost16-top10-joint-third-impl-crosscheck-20261118-v1",
+  "date": "2026-11-18",
+  "lane": "n11 long lane (verification side)",
+  "title": "Third-implementation cross-check of the published top-10 joint memberships (45 combos, A/B split) for the 31-row cost-16 parent: independent MyPm counter + independently wired formulas, anchored on published per-row pm / 1-type a,b / B_d values before the joints",
+  "inputs": {
+    "published_joint": {
+      "commit": "537a4458",
+      "jsonl": "cost16-top10-joint-20261118.jsonl"
+    },
+    "phase_a_output": {
+      "git_blob_sha1": "fe4b4b559fd8c3fdc9bc9b9f40a048fc3217c55b"
+    },
+    "b16_slice_output": {
+      "git_blob_sha1": "883275fba179c28988b5bfd3aaa3fab79be9be7c"
+    },
+    "groups_aggregate": "cost16-b-phase-groups-20261118.json",
+    "parent_pickle": "(regenerable via the canonical loader from the pinned cover table + regenerated candidate JSONL)"
+  },
+  "headline": {
+    "combos_matched": "45/45 (joint_A, joint_B, joint, shared_row)",
+    "anchors": "per-row pm 31/31, 1-type a/b 3/3, direct B_d 2/2",
+    "shared_row_pairs_joint_A_zero": true,
+    "k2_kill_exact": "262073639571350318"
+  },
+  "checks": [
+    {
+      "name": "anchors.all_pass",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "combos.count_45",
+      "pass": true,
+      "detail": 45
+    },
+    {
+      "name": "combos.set_match",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "combos.all_match",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "shared_row.joint_A_zero",
+      "pass": true,
+      "detail": 22
+    },
+    {
+      "name": "bounds.mate_capacity_10x",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "bounds.joint_le_min_membership",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "survival.k1_share",
+      "pass": true,
+      "detail": 4.597501506403559
+    },
+    {
+      "name": "survival.k2_value",
+      "pass": true,
+      "detail": {
+        "k2_mine": "262073639571350318",
+        "k2_pub": "262073639571350318"
+      }
+    }
+  ],
+  "check_count": 9,
+  "all_pass": true,
+  "interpretation_guard": "Joint memberships are counts of alternative minimum certificate-cover plans, not search costs or verdicts. REFUTED-D10 and STERILE are not LOSS proofs.",
+  "unknown_status": "Standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+}
