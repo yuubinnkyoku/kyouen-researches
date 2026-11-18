@@ -405,6 +405,10 @@ jobs:
         run: |
           uv run --locked python research/experiments/vertical-fiber-two-token-z9-y5-boundary-20261119/verify_z9_y5.py
           git diff --exit-code -- research/experiments/vertical-fiber-two-token-z9-y5-boundary-20261119/output/audit.json
+      - name: Audit K0993 two-token z=8 y=6 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z8-y6-boundary-20261119/verify_z8_y6.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z8-y6-boundary-20261119/output/audit.json
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python tools/knowledge/build.py
@@ -768,3 +772,4 @@ jobs:
 # Refresh generated views for K0990 z=9,y=4 two-token full Grundy slice (A/B/C x-induction, 8,180,398 audit checks, zero mismatches, two byte-identical runs; 2026-11-19).
 # Refresh generated views for K0991 z=8,y=5 two-token full Grundy slice (A/B/C x-induction, 8,180,128 audit checks, zero mismatches, two byte-identical runs; 2026-11-19).
 # Refresh generated views for K0992 z=9,y=5 two-token full Grundy slice (A/B/C x-induction, 8,186,116 audit checks, zero mismatches, two byte-identical runs; 2026-11-19).
+# Refresh generated views for K0993 z=8,y=6 two-token full Grundy slice (A/B/C x-induction, 8,185,835 audit checks, zero mismatches, two byte-identical runs; 2026-11-19).
