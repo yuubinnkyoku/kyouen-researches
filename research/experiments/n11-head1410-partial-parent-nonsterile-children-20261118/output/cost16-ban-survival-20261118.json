@@ -1,6 +1,6 @@
 {
  "all_pass": true,
- "check_count": 9,
+ "check_count": 11,
  "checks": [
   {
    "detail": "{\"A\": \"2305787291293934388\", \"B\": \"660663050386546968\"}",
@@ -33,12 +33,22 @@
    "pass": true
   },
   {
+   "detail": "{\"b_slices\": 31, \"a_phase\": true}",
+   "name": "k11.slices_complete",
+   "pass": true
+  },
+  {
+   "detail": "{\"b_slices\": 31, \"a_phase\": true}",
+   "name": "k12.slices_complete",
+   "pass": true
+  },
+  {
    "detail": "{\"cross_checked_k\": [4, 8, 10], \"method\": \"direct ban recomputation (this script, PmLazy per-d slices) vs published I-E curve (cost16-survival-k10, MyPm joint recombination)\"}",
    "name": "k10_curve_cross_validation",
    "pass": true
   },
   {
-   "detail": "[\"2966450341680481356\", \"2830067742535007691\", \"2704376702109131038\", \"2453842390618094434\", \"2001925712552127087\", \"1789978398755093008\"]",
+   "detail": "[\"2966450341680481356\", \"2830067742535007691\", \"2704376702109131038\", \"2453842390618094434\", \"2001925712552127087\", \"1789978398755093008\", \"1684364881947656288\", \"1592021370388208692\"]",
    "name": "monotone_nonincreasing",
    "pass": true
   },
@@ -146,6 +156,53 @@
     "total": 1789978398755093008,
     "type_A": 1400734279274103379,
     "type_B": 389244119480989629
+   },
+   {
+    "banned_roots": [
+     "00000000000000801202020000081000",
+     "00000000000000801202010000101000",
+     "00000000000000801202020000001002",
+     "00000000000000801202020000001001",
+     "00000000000000889002001000100000",
+     "00000000000000801282010000001000",
+     "00000010001000801202000000000400",
+     "00000000000100003800000008001200",
+     "00000000000000801282020000001000",
+     "00000000080000003800000008001200",
+     "00000010002000801202000000000400"
+    ],
+    "k": 11,
+    "kill_share": 0.432195,
+    "killed": 1282085459732825068,
+    "source": "recomputed",
+    "surviving_share": 0.567805,
+    "total": 1684364881947656288,
+    "type_A": 1319225112917587991,
+    "type_B": 365139769030068297
+   },
+   {
+    "banned_roots": [
+     "00000000000000801202020000081000",
+     "00000000000000801202010000101000",
+     "00000000000000801202020000001002",
+     "00000000000000801202020000001001",
+     "00000000000000889002001000100000",
+     "00000000000000801282010000001000",
+     "00000010001000801202000000000400",
+     "00000000000100003800000008001200",
+     "00000000000000801282020000001000",
+     "00000000080000003800000008001200",
+     "00000010002000801202000000000400",
+     "00000000000000801222010000001000"
+    ],
+    "k": 12,
+    "kill_share": 0.463324,
+    "killed": 1374428971292272664,
+    "source": "recomputed",
+    "surviving_share": 0.536676,
+    "total": 1592021370388208692,
+    "type_A": 1247882269674605395,
+    "type_B": 344139100713603297
    }
   ],
   "naive_membership_sum_vs_exact_kill": [
@@ -173,6 +230,16 @@
     "exact_kill": 1176471942925388348,
     "k": 10,
     "sum_membership_topk": 1311966018287222333
+   },
+   {
+    "exact_kill": 1282085459732825068,
+    "k": 11,
+    "sum_membership_topk": 1441555189552911817
+   },
+   {
+    "exact_kill": 1374428971292272664,
+    "k": 12,
+    "sum_membership_topk": 1567283598387321275
    }
   ],
   "rows": 31,
@@ -181,23 +248,23 @@
  "inputs": {
   "candidate_roots": {
    "path": "(regenerated) output/global-candidate-roots-20261118.jsonl",
-   "regenerated_by": "enumerate_global_candidate_roots_20261118.py"
+    "regenerated_by": "enumerate_global_candidate_roots_20261118.py"
   },
   "cover_table": {
    "git_blob_sha1": "4e4a911d0e05779437d4a8e97685a8feb66c0d25",
-   "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/parent-minimum-cover-cost-table-20261118.json"
+    "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/parent-minimum-cover-cost-table-20261118.json"
   },
   "phase_a_output": {
    "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/cost16-a-phase-20261118.json"
   },
   "phase_b_groups_aggregate": {
    "git_blob_sha1": "31bdefdb2e2cc90b706cbb8090e98eb5eece4d87",
-   "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/cost16-b-phase-groups-20261118.json"
+    "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/cost16-b-phase-groups-20261118.json"
   },
   "top10_joint_output": {
    "git_blob_sha1": "df52b55a81460a60b11030be8bf5c805bfdeb7c5",
-   "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/cost16-top10-joint-20261118.json",
-   "sha256": "b84e5c3c12e508e2fd490dd18f35a48020ce66ab0ad5c989220a20eaeaec80fb"
+    "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/cost16-top10-joint-20261118.json",
+    "sha256": "b84e5c3c12e508e2fd490dd18f35a48020ce66ab0ad5c989220a20eaeaec80fb"
   }
  },
  "interpretation_guard": "Cover-plan combinatorics only. The survival curve counts alternative minimum cover plans avoiding the banned roots; it is not a search cost and implies nothing about WIN/REFUTED verdicts of the banned roots. REFUTED-D10 and STERILE are not LOSS proofs.",

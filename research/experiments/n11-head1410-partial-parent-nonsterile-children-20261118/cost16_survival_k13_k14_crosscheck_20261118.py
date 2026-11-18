@@ -10,7 +10,7 @@ Two independent layers, no experiment-script imports:
      (grand-total identity, monotonicity, marginal chain, A/B split,
      share percentages, reproduce anchors, cross-publication series
      consistency, and the independent per-d-slice survive anchors
-     at k=4/8/10);
+     at k=4/8/10 plus the k=11/12 A/B split anchors);
   2. structure layer: a fresh re-derivation of the structural census
      (shared/disjoint new pairs, b_only/zero/disjoint new triples and
      quads, full triple census, all-C(N,5) 5-subsets zero) from the
@@ -46,14 +46,27 @@ PINS = {
     "agg": ("cost16-b-phase-groups-20261118.json", "31bdefdb2e2cc90b706cbb8090e98eb5eece4d87"),
 }
 # Independent anchors: survive totals recomputed per-d-slice from scratch
-# (commit 33abfdb8, script cost16_ban_survival_20261118.py, 9-check JSON).
-DIRECT_SURVIVE = {4: 2453842390618094434, 8: 2001925712552127087, 10: 1789978398755093008}
+# with the ban-survival runner (script cost16_ban_survival_20261118.py,
+# point/assemble modes; k=4/8/10 from commit 33abfdb8, k=11/12 extended on
+# 2026-11-18, assemble 11-check JSON all_pass).
+DIRECT_SURVIVE = {4: 2453842390618094434, 8: 2001925712552127087,
+                   10: 1789978398755093008, 11: 1684364881947656288,
+                   12: 1592021370388208692}
+# Same direct recomputation, A-type / B-type split (exact integers from the
+# per-d-slice B sums; independently confirms the published kill_A/kill_B
+# split at every direct anchor, including the first two points k=11/12
+# beyond the k=10 inclusion-exclusion curve range).
+DIRECT_SPLIT = {
+    4: (1912189176067079977, 541653214551014457),
+    8: (1564239038548375836, 437686674003751251),
+    10: (1400734279274103379, 389244119480989629),
+    11: (1319225112917587991, 365139769030068297),
+    12: (1247882269674605395, 344139100713603297),
+}
 QUINTS = {15: 3003, 16: 4368, 17: 6188, 18: 8568, 19: 11628, 20: 15504, 21: 20349}
-
 
 def git_blob_sha1(data: bytes) -> str:
     return hashlib.sha1(b"blob %d\x00" % len(data) + data).hexdigest()
-
 
 def fetch(name: str, want_sha: str, local_dir: str | None) -> dict:
     if local_dir:
@@ -77,7 +90,6 @@ def fetch(name: str, want_sha: str, local_dir: str | None) -> dict:
         raise RuntimeError(f"{name}: blob sha1 {got} != pinned {want_sha}")
     return json.loads(data)
 
-
 def classify(rows, combo):
     """Row-multiplicity classifier, written independently for this
     cross-check (same definition as the k14 publication): 'zero' for a
@@ -95,7 +107,6 @@ def classify(rows, combo):
     if len(twos) == 1:
         return "b_only"
     return "disjoint"
-
 
 def main() -> int:
     ap = argparse.ArgumentParser()
@@ -160,9 +171,15 @@ def main() -> int:
     checks.append(("marginal_chain_k14_k21_matches_published", chain_ok, None))
     checks.append(("marginal_le_membership_k14_k21", m_ok,
                    "mN from pinned aggregate, independent of published detail"))
-    # 5. independent direct-recomputation anchors (survive totals)
-    checks.append(("survive_totals_match_direct_recompute_k4k8k10",
-                   all(A[k] + B[k] == DIRECT_SURVIVE[k] for k in DIRECT_SURVIVE), None))
+    # 5. independent direct-recomputation anchors (survive totals + A/B split)
+    checks.append(("survive_totals_match_direct_recompute_k4k8k10k11k12",
+                   all(A[k] + B[k] == DIRECT_SURVIVE[k] for k in DIRECT_SURVIVE),
+                   sorted(DIRECT_SURVIVE)))
+    checks.append(("A_B_split_matches_direct_recompute_k4k8k10k11k12",
+                   all(A[k] == DIRECT_SPLIT[k][0] and B[k] == DIRECT_SPLIT[k][1]
+                       for k in DIRECT_SPLIT),
+                   {k: (str(DIRECT_SPLIT[k][0]), str(DIRECT_SPLIT[k][1]))
+                    for k in DIRECT_SPLIT}))
     # 6. A/B kill split identity
     checks.append(("kill_A_plus_kill_B_identity",
                    all(kA[k] + kB[k] == kill[k] for k in kA), f"k=1..{max(kA)}"))
@@ -294,7 +311,6 @@ def main() -> int:
     print(f"grand total = {T}")
     print("kill(k)% =", {k: round(kill[k] / T * 100, 4) for k in sorted(kill)})
     return 0 if n_fail == 0 else 1
-
 
 if __name__ == "__main__":
     sys.exit(main())
