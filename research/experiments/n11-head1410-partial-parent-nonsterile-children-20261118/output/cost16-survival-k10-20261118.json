@@ -1,0 +1,771 @@
+{
+ "all_pass": true,
+ "check_count": 13,
+ "checks": [
+  {
+   "detail": {
+    "0": [
+     15,
+     19
+    ],
+    "1": [
+     16,
+     18
+    ],
+    "2": [
+     5,
+     19
+    ],
+    "3": [
+     0,
+     19
+    ],
+    "4": [
+     18,
+     24
+    ],
+    "5": [
+     1,
+     18
+    ],
+    "6": [
+     18,
+     30
+    ],
+    "7": [
+     4,
+     18
+    ],
+    "8": [
+     1,
+     19
+    ],
+    "9": [
+     4,
+     19
+    ]
+   },
+   "name": "top10.hub_rows_18_19",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "pairs45.pub_eq_third_impl",
+   "pass": true
+  },
+  {
+   "detail": 120,
+   "name": "triples.count_120",
+   "pass": true
+  },
+  {
+   "detail": {
+    "b_only": 84,
+    "zero2x2": 16,
+    "zero3x": 20
+   },
+   "name": "triples.no_disjoint",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "triples.classification_recheck",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "triples.le_min_pairs",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "quads210.all_structural_zero",
+   "pass": true
+  },
+  {
+   "detail": "each top-10 root contains row 18 or 19 -> any 4-subset has a >=3x row or two 2x rows; higher orders follow by monotonicity (contain a 4-subset)",
+   "name": "quads.pigeonhole_note",
+   "pass": true
+  },
+  {
+   "detail": 4.597501506403559,
+   "name": "survival.k1_share",
+   "pass": true
+  },
+  {
+   "detail": {
+    "k2_mine": "262073639571350318"
+   },
+   "name": "survival.k2_value",
+   "pass": true
+  },
+  {
+   "detail": {
+    "k3": "387549592794774207",
+    "k4": "512607951062386922"
+   },
+   "name": "survival.k34_reproduce",
+   "pass": true
+  },
+  {
+   "detail": [
+    "136382599145473665",
+    "262073639571350318",
+    "387549592794774207",
+    "512607951062386922",
+    "626313457466409980",
+    "739264244113852661",
+    "851818770630959725",
+    "964524629128354269",
+    "1070585147044717848",
+    "1176471942925388348"
+   ],
+   "name": "survival.k_monotone",
+   "pass": true
+  },
+  {
+   "detail": {
+    "k10_minus_k9": "105886795880670500",
+    "k2_minus_k1": "125691040425876653",
+    "k3_minus_k2": "125475953223423889",
+    "k4_minus_k3": "125058358267612715",
+    "k5_minus_k4": "113705506404023058",
+    "k6_minus_k5": "112950786647442681",
+    "k7_minus_k6": "112554526517107064",
+    "k8_minus_k7": "112705858497394544",
+    "k9_minus_k8": "106060517916363579"
+   },
+   "name": "survival.marginals",
+   "pass": true
+  }
+ ],
+ "date": "2026-11-18",
+ "inputs": {
+  "groups_aggregate": {
+   "git_blob_sha1": "31bdefdb2e2cc90b706cbb8090e98eb5eece4d87"
+  },
+  "parent_pickle": "(regenerable via the canonical loader)",
+  "published_joint_jsonl": {
+   "commit": "537a4458",
+   "git_blob_sha1": "95194096b2dcb547b5b77fb846795edbc5c43e05"
+  },
+  "third_impl_crosscheck": "crosscheck-top10-joint-third-20261118.jsonl (45/45 match)"
+ },
+ "interpretation_guard": "Survival points count minimum cover plans containing at least one banned root. They are cover-plan combinatorics, not search costs or verdicts. REFUTED-D10 and STERILE are not LOSS proofs.",
+ "lane": "n11 long lane (verification side)",
+ "schema": "n11-cost16-survival-k10-20261118-v1",
+ "structure": {
+  "hub_property": "every top-10 root contains row 18 or 19",
+  "quad_note": "all 210 4-subsets verified structurally impossible; quints and higher vanish by monotonicity",
+  "top10": [
+   {
+    "idx": 0,
+    "membership": "136382599145473665",
+    "rows": [
+     15,
+     19
+    ]
+   },
+   {
+    "idx": 1,
+    "membership": "131338625113685045",
+    "rows": [
+     16,
+     18
+    ]
+   },
+   {
+    "idx": 2,
+    "membership": "131193651194526061",
+    "rows": [
+     5,
+     19
+    ]
+   },
+   {
+    "idx": 3,
+    "membership": "130846010346453710",
+    "rows": [
+     0,
+     19
+    ]
+   },
+   {
+    "idx": 4,
+    "membership": "130840094188676484",
+    "rows": [
+     18,
+     24
+    ]
+   },
+   {
+    "idx": 5,
+    "membership": "130724343075609075",
+    "rows": [
+     1,
+     18
+    ]
+   },
+   {
+    "idx": 6,
+    "membership": "130306938976403837",
+    "rows": [
+     18,
+     30
+    ]
+   },
+   {
+    "idx": 7,
+    "membership": "130270503069801695",
+    "rows": [
+     4,
+     18
+    ]
+   },
+   {
+    "idx": 8,
+    "membership": "130258761718822635",
+    "rows": [
+     1,
+     19
+    ]
+   },
+   {
+    "idx": 9,
+    "membership": "129804491457770126",
+    "rows": [
+     4,
+     19
+    ]
+   }
+  ],
+  "triple_census": {
+   "b_only": 84,
+   "zero2x2": 16,
+   "zero3x": 20
+  }
+ },
+ "title": "Exact survival curve k=1..10 for the 31-row cost-16 parent (bans of the top-k pair roots by membership), via inclusion-exclusion whose higher-order terms collapse: every top-10 root contains hub row 18 or 19, so no triple is disjoint (joint_A=0 everywhere), every 4-subset is structurally impossible (>=3x row or two 2x rows), and each surviving triple is B-type-only pm(V \\ union) on a 26-row set, computed with the independent MyPm counter (third-implementation lineage, no PmLazy import)",
+ "unknown_status": "Standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN.",
+ "values": {
+  "kill": {
+   "k1": "136382599145473665",
+   "k10": "1176471942925388348",
+   "k2": "262073639571350318",
+   "k3": "387549592794774207",
+   "k4": "512607951062386922",
+   "k5": "626313457466409980",
+   "k6": "739264244113852661",
+   "k7": "851818770630959725",
+   "k8": "964524629128354269",
+   "k9": "1070585147044717848"
+  },
+  "kill_share_percent": {
+   "k1": 4.597502,
+   "k10": 39.65925,
+   "k2": 8.834587,
+   "k3": 13.064422,
+   "k4": 17.28018,
+   "k5": 21.113229,
+   "k6": 24.920837,
+   "k7": 28.715086,
+   "k8": 32.514437,
+   "k9": 36.089771
+  },
+  "marginals": {
+   "k10_minus_k9": "105886795880670500",
+   "k2_minus_k1": "125691040425876653",
+   "k3_minus_k2": "125475953223423889",
+   "k4_minus_k3": "125058358267612715",
+   "k5_minus_k4": "113705506404023058",
+   "k6_minus_k5": "112950786647442681",
+   "k7_minus_k6": "112554526517107064",
+   "k8_minus_k7": "112705858497394544",
+   "k9_minus_k8": "106060517916363579"
+  },
+  "surviving_after_top10_bans": "1789978398755093008",
+  "total_minimum_covers": "2966450341680481356",
+  "triples": {
+   "012": {
+    "class": "b_only",
+    "joint": "3303738612720"
+   },
+   "013": {
+    "class": "b_only",
+    "joint": "3450217239780"
+   },
+   "014": {
+    "class": "b_only",
+    "joint": "3443301687480"
+   },
+   "015": {
+    "class": "b_only",
+    "joint": "3428050518330"
+   },
+   "016": {
+    "class": "b_only",
+    "joint": "3429258713850"
+   },
+   "017": {
+    "class": "b_only",
+    "joint": "3604287664410"
+   },
+   "018": {
+    "class": "b_only",
+    "joint": "3428050518330"
+   },
+   "019": {
+    "class": "b_only",
+    "joint": "3604287664410"
+   },
+   "023": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "024": {
+    "class": "b_only",
+    "joint": "3442963152630"
+   },
+   "025": {
+    "class": "b_only",
+    "joint": "3436116672360"
+   },
+   "026": {
+    "class": "b_only",
+    "joint": "3596358392430"
+   },
+   "027": {
+    "class": "b_only",
+    "joint": "3443729017770"
+   },
+   "028": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "029": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "034": {
+    "class": "b_only",
+    "joint": "3604213322280"
+   },
+   "035": {
+    "class": "b_only",
+    "joint": "3597392213580"
+   },
+   "036": {
+    "class": "b_only",
+    "joint": "3596358392430"
+   },
+   "037": {
+    "class": "b_only",
+    "joint": "3597746632470"
+   },
+   "038": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "039": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "045": {
+    "class": "b_only",
+    "joint": "3581307757440"
+   },
+   "046": {
+    "class": "b_only",
+    "joint": "3757571265900"
+   },
+   "047": {
+    "class": "b_only",
+    "joint": "3589083347280"
+   },
+   "048": {
+    "class": "b_only",
+    "joint": "3581307757440"
+   },
+   "049": {
+    "class": "b_only",
+    "joint": "3589083347280"
+   },
+   "056": {
+    "class": "b_only",
+    "joint": "3741096085500"
+   },
+   "057": {
+    "class": "b_only",
+    "joint": "3749945375460"
+   },
+   "058": {
+    "class": "zero2x2",
+    "joint": "0"
+   },
+   "059": {
+    "class": "b_only",
+    "joint": "3749945375460"
+   },
+   "067": {
+    "class": "b_only",
+    "joint": "3925764752520"
+   },
+   "068": {
+    "class": "b_only",
+    "joint": "3741096085500"
+   },
+   "069": {
+    "class": "b_only",
+    "joint": "3925764752520"
+   },
+   "078": {
+    "class": "b_only",
+    "joint": "3749945375460"
+   },
+   "079": {
+    "class": "zero2x2",
+    "joint": "0"
+   },
+   "089": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "123": {
+    "class": "b_only",
+    "joint": "3308957852388"
+   },
+   "124": {
+    "class": "b_only",
+    "joint": "3449117693280"
+   },
+   "125": {
+    "class": "b_only",
+    "joint": "3603191077440"
+   },
+   "126": {
+    "class": "b_only",
+    "joint": "3435823678860"
+   },
+   "127": {
+    "class": "b_only",
+    "joint": "3449489608860"
+   },
+   "128": {
+    "class": "b_only",
+    "joint": "3603191077440"
+   },
+   "129": {
+    "class": "b_only",
+    "joint": "3449489608860"
+   },
+   "134": {
+    "class": "b_only",
+    "joint": "3448313123220"
+   },
+   "135": {
+    "class": "b_only",
+    "joint": "3610410367350"
+   },
+   "136": {
+    "class": "b_only",
+    "joint": "3289345051800"
+   },
+   "137": {
+    "class": "b_only",
+    "joint": "3448730300160"
+   },
+   "138": {
+    "class": "b_only",
+    "joint": "3610410367350"
+   },
+   "139": {
+    "class": "b_only",
+    "joint": "3448730300160"
+   },
+   "145": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "146": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "147": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "148": {
+    "class": "b_only",
+    "joint": "3595448664420"
+   },
+   "149": {
+    "class": "b_only",
+    "joint": "3441837446340"
+   },
+   "156": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "157": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "158": {
+    "class": "zero2x2",
+    "joint": "0"
+   },
+   "159": {
+    "class": "b_only",
+    "joint": "3772848736890"
+   },
+   "167": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "168": {
+    "class": "b_only",
+    "joint": "3580561371930"
+   },
+   "169": {
+    "class": "b_only",
+    "joint": "3588244176120"
+   },
+   "178": {
+    "class": "b_only",
+    "joint": "3772848736890"
+   },
+   "179": {
+    "class": "zero2x2",
+    "joint": "0"
+   },
+   "189": {
+    "class": "b_only",
+    "joint": "3772848736890"
+   },
+   "234": {
+    "class": "b_only",
+    "joint": "3295087873980"
+   },
+   "235": {
+    "class": "b_only",
+    "joint": "3456797452770"
+   },
+   "236": {
+    "class": "b_only",
+    "joint": "3302059698708"
+   },
+   "237": {
+    "class": "b_only",
+    "joint": "3162137109108"
+   },
+   "238": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "239": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "245": {
+    "class": "b_only",
+    "joint": "3595066375020"
+   },
+   "246": {
+    "class": "b_only",
+    "joint": "3594681662760"
+   },
+   "247": {
+    "class": "b_only",
+    "joint": "3281775476580"
+   },
+   "248": {
+    "class": "b_only",
+    "joint": "3595066375020"
+   },
+   "249": {
+    "class": "b_only",
+    "joint": "3281775476580"
+   },
+   "256": {
+    "class": "b_only",
+    "joint": "3764803820850"
+   },
+   "257": {
+    "class": "b_only",
+    "joint": "3595886807130"
+   },
+   "258": {
+    "class": "zero2x2",
+    "joint": "0"
+   },
+   "259": {
+    "class": "b_only",
+    "joint": "3595886807130"
+   },
+   "267": {
+    "class": "b_only",
+    "joint": "3588244176120"
+   },
+   "268": {
+    "class": "b_only",
+    "joint": "3764803820850"
+   },
+   "269": {
+    "class": "b_only",
+    "joint": "3588244176120"
+   },
+   "278": {
+    "class": "b_only",
+    "joint": "3595886807130"
+   },
+   "279": {
+    "class": "zero2x2",
+    "joint": "0"
+   },
+   "289": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "345": {
+    "class": "b_only",
+    "joint": "3603472328250"
+   },
+   "346": {
+    "class": "b_only",
+    "joint": "3433431493110"
+   },
+   "347": {
+    "class": "b_only",
+    "joint": "3281289271590"
+   },
+   "348": {
+    "class": "b_only",
+    "joint": "3603472328250"
+   },
+   "349": {
+    "class": "b_only",
+    "joint": "3281289271590"
+   },
+   "356": {
+    "class": "b_only",
+    "joint": "3603528279630"
+   },
+   "357": {
+    "class": "b_only",
+    "joint": "3603869335410"
+   },
+   "358": {
+    "class": "zero2x2",
+    "joint": "0"
+   },
+   "359": {
+    "class": "b_only",
+    "joint": "3603869335410"
+   },
+   "367": {
+    "class": "b_only",
+    "joint": "3434226561420"
+   },
+   "368": {
+    "class": "b_only",
+    "joint": "3603528279630"
+   },
+   "369": {
+    "class": "b_only",
+    "joint": "3434226561420"
+   },
+   "378": {
+    "class": "b_only",
+    "joint": "3603869335410"
+   },
+   "379": {
+    "class": "zero2x2",
+    "joint": "0"
+   },
+   "389": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "456": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "457": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "458": {
+    "class": "zero2x2",
+    "joint": "0"
+   },
+   "459": {
+    "class": "b_only",
+    "joint": "3587782100340"
+   },
+   "467": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "468": {
+    "class": "b_only",
+    "joint": "3757122455160"
+   },
+   "469": {
+    "class": "b_only",
+    "joint": "3579039126840"
+   },
+   "478": {
+    "class": "b_only",
+    "joint": "3587782100340"
+   },
+   "479": {
+    "class": "zero2x2",
+    "joint": "0"
+   },
+   "489": {
+    "class": "b_only",
+    "joint": "3587782100340"
+   },
+   "567": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "568": {
+    "class": "zero2x2",
+    "joint": "0"
+   },
+   "569": {
+    "class": "b_only",
+    "joint": "3934568675280"
+   },
+   "578": {
+    "class": "zero2x2",
+    "joint": "0"
+   },
+   "579": {
+    "class": "zero2x2",
+    "joint": "0"
+   },
+   "589": {
+    "class": "zero2x2",
+    "joint": "0"
+   },
+   "678": {
+    "class": "b_only",
+    "joint": "3934568675280"
+   },
+   "679": {
+    "class": "zero2x2",
+    "joint": "0"
+   },
+   "689": {
+    "class": "b_only",
+    "joint": "3934568675280"
+   },
+   "789": {
+    "class": "zero2x2",
+    "joint": "0"
+   }
+  }
+ }
+}
