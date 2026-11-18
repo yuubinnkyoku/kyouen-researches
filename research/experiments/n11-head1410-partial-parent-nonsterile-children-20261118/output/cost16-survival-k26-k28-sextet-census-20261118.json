@@ -1,0 +1,243 @@
+{
+  "schema": "n11-cost16-sextet-census-20261118-v1",
+  "date": "2026-11-18",
+  "lane": "n11 long lane (self execution)",
+  "title": "31-row cost-16 parent: sextet-era census closing the quint-order I-E truncation at k = 26, 27, 28",
+  "inputs": {
+    "aggregate": {
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/cost16-b-phase-groups-20261118.json",
+      "git_blob_sha1": "31bdefdb2e2cc90b706cbb8090e98eb5eece4d87"
+    },
+    "k26_result": {
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/cost16-survival-k26-20261118.json",
+      "git_blob_sha1": "1841a281ff604e7f677b8c7772a7312f6f9da5e1",
+      "commit": "3b68d6b4"
+    },
+    "k27_result": {
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/cost16-survival-k27-20261118.json",
+      "git_blob_sha1": "3dc30ad6c51cc2d7678cc8777e4af2376267ddb8",
+      "commit": "9b804a9c"
+    },
+    "rank28_preread": {
+      "commit": "e6cc8e05",
+      "note": "the parallel lane's rank-28 preread (census values identical to this lane's independent derivation) does not cover the size >= 6 censuses; this script adds and closes them"
+    }
+  },
+  "scope": {
+    "parent": "00000000000000003800000008001000",
+    "rows": 31,
+    "minimum_cover_size": 16,
+    "classifier": "zero if a row occurs at least 3 times or at least two rows occur twice; b_only if exactly one row occurs twice; disjoint if no row is repeated.  A-type covers (15 disjoint pairs + 1 disjoint singleton) touch every row exactly once; B-type covers (16 pairs) touch exactly one row twice.  A zero subset therefore fits no cover and its joint is exactly 0.",
+    "hereditary_lemma": "zero is superset-closed; all-zero C(n,6) therefore closes every size >= 6 for the top-n.",
+    "warning": "Membership and joint counts are cover-plan counts, not search costs, verdicts, or game outcomes."
+  },
+  "censuses": {
+    "k26_size6": {
+      "b_only": 0,
+      "zero": 230230,
+      "disjoint": 0,
+      "total": 230230,
+      "expected_total": 230230,
+      "total_ok": true,
+      "compared": 230230,
+      "mismatches": 0
+    },
+    "k27_size6": {
+      "b_only": 0,
+      "zero": 296010,
+      "disjoint": 0,
+      "total": 296010,
+      "expected_total": 296010,
+      "total_ok": true,
+      "compared": 296010,
+      "mismatches": 0
+    },
+    "k28_size6": {
+      "b_only": 0,
+      "zero": 376740,
+      "disjoint": 0,
+      "total": 376740,
+      "expected_total": 376740,
+      "total_ok": true,
+      "compared": 376740,
+      "mismatches": 0
+    },
+    "k28_size7": {
+      "b_only": 0,
+      "zero": 1184040,
+      "disjoint": 0,
+      "total": 1184040,
+      "expected_total": 1184040,
+      "total_ok": true,
+      "compared": 1184040,
+      "mismatches": 0
+    },
+    "k28_size8": {
+      "b_only": 0,
+      "zero": 3108105,
+      "disjoint": 0,
+      "total": 3108105,
+      "expected_total": 3108105,
+      "total_ok": true,
+      "compared": 3108105,
+      "mismatches": 0
+    }
+  },
+  "quint_blocking_stats": {
+    "top26": {
+      "quint_count": 1872,
+      "outside_root_hits_union": 39312,
+      "outside_root_fully_disjoint": 0,
+      "every_quint_union_blocks_all_outside_roots": true
+    },
+    "top27": {
+      "quint_count": 2181,
+      "outside_root_hits_union": 47982,
+      "outside_root_fully_disjoint": 0,
+      "every_quint_union_blocks_all_outside_roots": true
+    },
+    "top28": {
+      "quint_count": 2512,
+      "outside_root_hits_union": 57776,
+      "outside_root_fully_disjoint": 0,
+      "every_quint_union_blocks_all_outside_roots": true
+    }
+  },
+  "retroactive_and_prospective_closure": {
+    "kill_26": "C(26,6) all zero closes the published kill(26) quint-order truncation retroactively",
+    "kill_27": "C(27,6) all zero closes the published kill(27) quint-order truncation retroactively",
+    "kill_28": "C(28,6) all zero pre-approves the k=28 layer: the k=28 I-E may keep the k=27 quint mechanism and needs no sixth-order term",
+    "note": "the C(28,7)/C(28,8) censuses are empirical anchors one order beyond the lemma"
+  },
+  "runtime_seconds": 30.4,
+  "checks": [
+    {
+      "name": "sextet_census_k26_all_zero",
+      "pass": true,
+      "detail": {
+        "b_only": 0,
+        "zero": 230230,
+        "disjoint": 0,
+        "total": 230230,
+        "expected_total": 230230,
+        "total_ok": true,
+        "compared": 230230,
+        "mismatches": 0
+      }
+    },
+    {
+      "name": "sextet_census_k27_all_zero",
+      "pass": true,
+      "detail": {
+        "b_only": 0,
+        "zero": 296010,
+        "disjoint": 0,
+        "total": 296010,
+        "expected_total": 296010,
+        "total_ok": true,
+        "compared": 296010,
+        "mismatches": 0
+      }
+    },
+    {
+      "name": "sextet_census_k28_all_zero",
+      "pass": true,
+      "detail": {
+        "b_only": 0,
+        "zero": 376740,
+        "disjoint": 0,
+        "total": 376740,
+        "expected_total": 376740,
+        "total_ok": true,
+        "compared": 376740,
+        "mismatches": 0
+      }
+    },
+    {
+      "name": "septet_census_k28_all_zero",
+      "pass": true,
+      "detail": {
+        "b_only": 0,
+        "zero": 1184040,
+        "disjoint": 0,
+        "total": 1184040,
+        "expected_total": 1184040,
+        "total_ok": true,
+        "compared": 1184040,
+        "mismatches": 0
+      }
+    },
+    {
+      "name": "octet_census_k28_all_zero",
+      "pass": true,
+      "detail": {
+        "b_only": 0,
+        "zero": 3108105,
+        "disjoint": 0,
+        "total": 3108105,
+        "expected_total": 3108105,
+        "total_ok": true,
+        "compared": 3108105,
+        "mismatches": 0
+      }
+    },
+    {
+      "name": "published_k26_quint_era_census_context_matches",
+      "pass": true,
+      "detail": {
+        "b_only_quint_census": 1872,
+        "ie_mechanism_of_k26": "kill(k) = sum m - sum j2 + sum j3 - sum j4 + sum j5 for k <= 26; kill_A(k) = sum a - sum j2_A + sum j3_A - sum j4_A (j5_A == 0); kill_B(k) = sum b - sum j2_B + sum j3_B - sum j4_B + sum j5_B; j4_A comes from the 233 disjoint quads (first appearance), j5_B from the 1,872 b_only quints"
+      }
+    },
+    {
+      "name": "published_k27_quint_era_census_context_matches",
+      "pass": true,
+      "detail": {
+        "b_only_quint_census": 2181,
+        "ie_mechanism_of_k27": "kill(k) = sum m - sum j2 + sum j3 - sum j4 + sum j5 for k <= 27; kill_A(k) = sum a - sum j2_A + sum j3_A - sum j4_A (j5_A == 0); kill_B(k) = sum b - sum j2_B + sum j3_B - sum j4_B + sum j5_B; j4_A comes from the 255 disjoint quads (233 published at k=26, 22 new at k=27), j5_B from the 2,181 b_only quints (1,872 prev, 309 new)"
+      }
+    },
+    {
+      "name": "blocking_set_property_top26",
+      "pass": true,
+      "detail": {
+        "quint_count": 1872,
+        "outside_root_hits_union": 39312,
+        "outside_root_fully_disjoint": 0,
+        "every_quint_union_blocks_all_outside_roots": true
+      }
+    },
+    {
+      "name": "blocking_set_property_top27",
+      "pass": true,
+      "detail": {
+        "quint_count": 2181,
+        "outside_root_hits_union": 47982,
+        "outside_root_fully_disjoint": 0,
+        "every_quint_union_blocks_all_outside_roots": true
+      }
+    },
+    {
+      "name": "blocking_set_property_top28",
+      "pass": true,
+      "detail": {
+        "quint_count": 2512,
+        "outside_root_hits_union": 57776,
+        "outside_root_fully_disjoint": 0,
+        "every_quint_union_blocks_all_outside_roots": true
+      }
+    },
+    {
+      "name": "hereditary_closure_statement",
+      "pass": true,
+      "detail": {
+        "lemma": "zero is superset-closed: if subset S has a row hit >= 3 times, or two rows hit twice, every superset of S does too; and every subset of size >= 6 of the top-26/27/28 contains a 6-subset, which the census shows is zero.",
+        "consequence": "no subset of size >= 6 of the top-26/27/28 admits any A-type or B-type minimum cover, so every joint j(S) with |S| >= 6 is exactly 0 and the quint-order truncation of kill(k) for k = 26, 27, 28 is complete"
+      }
+    }
+  ],
+  "check_count": 11,
+  "all_pass": true,
+  "interpretation_guard": "Structural census of minimum-cover ban combinations only. No Pm joint value was computed here for size >= 6 subsets (they are all structurally zero); no game position was classified; no engine search was started.",
+  "unknown_status": "Standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+}
