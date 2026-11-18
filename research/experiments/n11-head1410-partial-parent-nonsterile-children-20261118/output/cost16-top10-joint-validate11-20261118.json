@@ -1,0 +1,75 @@
+{
+ "all_pass": true,
+ "check_count": 11,
+ "checks": [
+  {
+   "detail": "359610",
+   "name": "enum11.total",
+   "pass": true
+  },
+  {
+   "detail": "337020",
+   "name": "enum11.A_total",
+   "pass": true
+  },
+  {
+   "detail": "22590",
+   "name": "enum11.B_total",
+   "pass": true
+  },
+  {
+   "detail": "757",
+   "name": "enum11.pub_root_count",
+   "pass": true
+  },
+  {
+   "detail": "0",
+   "name": "enum11.pub_memberships_757",
+   "pass": true
+  },
+  {
+   "detail": "[]",
+   "name": "enum11.top10_all_pair_roots",
+   "pass": true
+  },
+  {
+   "detail": "[]",
+   "name": "enum11.top10_match_published",
+   "pass": true
+  },
+  {
+   "detail": "{\"pairs\": 75, \"mismatches\": 0}",
+   "name": "enum11.formula_joint_A_sample",
+   "pass": true
+  },
+  {
+   "detail": "{\"pairs\": 75, \"mismatches\": 0}",
+   "name": "enum11.formula_joint_B_sample",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "enum11.shared_pairs_in_sample",
+   "pass": true
+  },
+  {
+   "detail": "0",
+   "name": "enum11.pub_top10_45_joints",
+   "pass": true
+  }
+ ],
+ "date": "2026-11-18",
+ "derived": {
+  "mismatch_A": 0,
+  "mismatch_B": 0,
+  "sample_pairs_checked": 75,
+  "total_minimum_covers": 359610,
+  "type_A_total": 337020,
+  "type_B_total": 22590
+ },
+ "interpretation_guard": "Cover-plan combinatorics only. Membership and joint counts are alternative-cover counts, not search cost and not verdicts. REFUTED-D10 and STERILE are not LOSS proofs.",
+ "lane": "n11 long lane (verification side)",
+ "schema": "n11-cost16-top10-joint-validate11-20261118-v1",
+ "title": "Formula validation for pair-root joint membership on the 11-row parent: full explicit enumeration vs the 2-type a/b formula",
+ "unknown_status": "Standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+}
