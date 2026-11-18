@@ -200,6 +200,10 @@ jobs:
         run: |
           uv run --locked python research/experiments/vertical-fiber-two-token-z6-independent-uniform-20261119/verify_z6_uniform_independent.py
           git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-independent-uniform-20261119/output/audit.json
+      - name: Audit K0976 z=7 y>=4 two-token finite conjecture census
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z7-y-ge4-census-20261119/verify_z7_y_ge4.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z7-y-ge4-census-20261119/output/audit.json
       - name: Audit K0957 t=2 q=8 pure-fiber all-Grundy theorem
         run: |
           uv run --locked python research/experiments/vertical-fiber-t2-q8-grundy-20261118/verify_t2_q8.py
