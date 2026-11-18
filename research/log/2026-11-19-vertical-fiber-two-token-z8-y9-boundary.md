@@ -23,8 +23,8 @@ x=18はO[27,35]全体が署名01となる掃引行。x=19は偶数帯E[28,36]の
 - 不一致: 0
 - スクリプト内2回実行: byte-identical
 - 別プロセス再実行: 同じ監査JSON
-- verifier SHA-256: `4d6c0ca55c47062845f187160fd3607e609265d11f855a9eb084967cdeadcbbb`
-- audit SHA-256: `4a894665498b123e84aa6e2d9866e6f11665f0ceedffc080634d32f7433cec7c`
+- verifier SHA-256: `5944999a4b8dfb229cb9d765710655ad5e9d3725d50b1642ee6dba01313e51fb`
+- audit SHA-256: `a5c4619ca9fe0e13882b7b71023053f49e947aae6aec15e3b76b9944cfbad494`
 
 有限監査は全称証明の代替ではない。全称性はx外帰納と全域署名表による。
 
