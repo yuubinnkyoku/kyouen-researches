@@ -1,0 +1,1497 @@
+{
+ "all_pass": true,
+ "check_count": 31,
+ "checks": [
+  {
+   "detail": {
+    "0": [
+     15,
+     19
+    ],
+    "1": [
+     16,
+     18
+    ],
+    "10": [
+     19,
+     30
+    ],
+    "11": [
+     18,
+     23
+    ],
+    "12": [
+     11,
+     18
+    ],
+    "2": [
+     5,
+     19
+    ],
+    "3": [
+     0,
+     19
+    ],
+    "4": [
+     18,
+     24
+    ],
+    "5": [
+     1,
+     18
+    ],
+    "6": [
+     18,
+     30
+    ],
+    "7": [
+     4,
+     18
+    ],
+    "8": [
+     1,
+     19
+    ],
+    "9": [
+     4,
+     19
+    ]
+   },
+   "name": "top13.hub_rows_18_19",
+   "pass": true
+  },
+  {
+   "detail": {
+    "note": "k=14 would need the A-type 3-way formulas; not attempted here",
+    "rank14_rows": [
+     0,
+     15
+    ]
+   },
+   "name": "rank14.first_non_hub",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "top13.membership_split",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "pairs.published_45",
+   "pass": true
+  },
+  {
+   "detail": 33,
+   "name": "pairs.new_33",
+   "pass": true
+  },
+  {
+   "detail": 78,
+   "name": "pairs.complete_78",
+   "pass": true
+  },
+  {
+   "detail": {
+    "disjoint": 16,
+    "shared": 17
+   },
+   "name": "pairs.new_census",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "pairs.shared_jointA_zero",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "pairs.bounds",
+   "pass": true
+  },
+  {
+   "detail": {
+    "mismatches": 0
+   },
+   "name": "triples.published_anchor_120",
+   "pass": true
+  },
+  {
+   "detail": 166,
+   "name": "triples.new_166",
+   "pass": true
+  },
+  {
+   "detail": 286,
+   "name": "triples.complete_286",
+   "pass": true
+  },
+  {
+   "detail": {
+    "b_only": 198,
+    "disjoint": 0,
+    "zero2x2": 33,
+    "zero3x": 55
+   },
+   "name": "triples.no_disjoint",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "triples.jointA_zero",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "triples.le_min_pairs",
+   "pass": true
+  },
+  {
+   "detail": {
+    "note": "13 hub roots -> pigeonhole on rows 18/19; higher orders vanish by monotonicity",
+    "subsets": 715
+   },
+   "name": "quads715.all_structural_zero",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "split.identity_per_k",
+   "pass": true
+  },
+  {
+   "detail": "matches the published direct per-d-slice recomputation (commit 33abfdb8)",
+   "name": "split.pub_k4_k8",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "split.pub_k4_k8_from_pinned_json",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "split.monotone",
+   "pass": true
+  },
+  {
+   "detail": {
+    "k10_mine": "1176471942925388348",
+    "k10_pub": "1176471942925388348"
+   },
+   "name": "survival.reproduce_k1_k10",
+   "pass": true
+  },
+  {
+   "detail": [
+    "136382599145473665",
+    "262073639571350318",
+    "387549592794774207",
+    "512607951062386922",
+    "626313457466409980",
+    "739264244113852661",
+    "851818770630959725",
+    "964524629128354269",
+    "1070585147044717848",
+    "1176471942925388348",
+    "1282085459732825068",
+    "1374428971292272664",
+    "1465153639713678205"
+   ],
+   "name": "survival.monotone_k1_k13",
+   "pass": true
+  },
+  {
+   "detail": {
+    "k10_minus_k9": "105886795880670500",
+    "k11_minus_k10": "105613516807436720",
+    "k12_minus_k11": "92343511559447596",
+    "k13_minus_k12": "90724668421405541",
+    "k2_minus_k1": "125691040425876653",
+    "k3_minus_k2": "125475953223423889",
+    "k4_minus_k3": "125058358267612715",
+    "k5_minus_k4": "113705506404023058",
+    "k6_minus_k5": "112950786647442681",
+    "k7_minus_k6": "112554526517107064",
+    "k8_minus_k7": "112705858497394544",
+    "k9_minus_k8": "106060517916363579"
+   },
+   "name": "survival.marginals",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "survival.union_bound",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "mixed.b_survive_monotone",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "mixed.a_survive_monotone",
+   "pass": true
+  },
+  {
+   "detail": {
+    "full_singleton_ban_survive_k10": "389244119480989629",
+    "share": 13.121545
+   },
+   "name": "mixed.k10_endpoint",
+   "pass": true
+  },
+  {
+   "detail": {
+    "pairs10_plus_full_row_ban": "2577206222199491727",
+    "pairs10_plus_rows3": "1329607962843817964"
+   },
+   "name": "mixed.consistent_with_row_ban_curve",
+   "pass": true
+  },
+  {
+   "detail": "kill(all singletons + top-10 pairs) = A16 + kill_B(10)",
+   "name": "mixed.full_ban_identity",
+   "pass": true
+  },
+  {
+   "detail": {
+    "checked": [
+     [
+      0,
+      1
+     ],
+     [
+      0,
+      8
+     ],
+     [
+      4,
+      8
+     ]
+    ]
+   },
+   "name": "anchors.pairs_3",
+   "pass": true
+  },
+  {
+   "detail": {
+    "checked": [
+     [
+      0,
+      10
+     ],
+     [
+      0,
+      11
+     ],
+     [
+      5,
+      10
+     ],
+     [
+      10,
+      12
+     ],
+     [
+      11,
+      12
+     ]
+    ],
+    "note": "independent re-implementation of the joint formulas with the MyPm counter lineage"
+   },
+   "name": "cross.new_pairs_5",
+   "pass": true
+  }
+ ],
+ "date": "2026-11-18",
+ "inputs": {
+  "ban_survival_json": {
+   "commit": "33abfdb8",
+   "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/cost16-ban-survival-20261118.json",
+   "sha256": "21d332637e79661c0ca46b1da89388ab54b6be423313e823bce99828b944ba30"
+  },
+  "candidate_roots": {
+   "path": "(regenerated) output/global-candidate-roots-20261118.jsonl",
+   "regenerated_by": "enumerate_global_candidate_roots_20261118.py"
+  },
+  "groups_aggregate": {
+   "git_blob_sha1": "31bdefdb2e2cc90b706cbb8090e98eb5eece4d87",
+   "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/cost16-b-phase-groups-20261118.json"
+  },
+  "published_joint_jsonl": {
+   "commit": "537a4458",
+   "git_blob_sha1": "95194096b2dcb547b5b77fb846795edbc5c43e05",
+   "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/cost16-top10-joint-20261118.jsonl"
+  },
+  "singleton_row_ban_json": {
+   "commit": "c98cb51d",
+   "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/cost16-singleton-row-ban-20261118.json",
+   "sha256": "5a7c2ab6f981a33a1240f95138152e0730c03530e756944bd27552206ec0a676"
+  },
+  "survival_k10_json": {
+   "commit": "a59881a2",
+   "git_blob_sha1": "6be591d458e3d9b863c070b85c0196692dfe5c6d",
+   "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/cost16-survival-k10-20261118.json"
+  }
+ },
+ "interpretation_guard": "Cover-plan combinatorics only. Survival points count minimum cover plans containing at least one banned root; they are not search costs and imply nothing about WIN/REFUTED verdicts of the banned roots. REFUTED-D10 and STERILE are not LOSS proofs.",
+ "lane": "n11 long lane (verification side)",
+ "schema": "n11-cost16-survival-k13-20261118-v1",
+ "structure": {
+  "full_singleton_ban": "every A-type cover has exactly one singleton root, so banning all 1,483 singleton roots kills every A-type plan; B-type covers have no singleton, so B_survive(k) = B16 - kill_B(k) is the exact survival count under top-k pair bans + full singleton ban",
+  "hub_property": "every top-13 root contains row 18 or 19; rank 14 = 00000000000000801202000000081001 rows [0, 15] is the first non-hub root",
+  "new_pair_census": {
+   "disjoint": 16,
+   "shared_row": 17
+  },
+  "quad_note": "all 715 4-subsets verified structurally impossible; quints+ vanish by monotonicity",
+  "split_identities": "kill_A(k) = sum a_i - sum joint_A (j3_A == 0 by the hub triple census); kill_B(k) = sum b_i - sum joint_B + sum j3; validated at k=4/k=8 against the published direct per-d-slice recomputation",
+  "top13": [
+   {
+    "a_part": "104697632054161710",
+    "b_part": "31684967091311955",
+    "idx": 0,
+    "membership": "136382599145473665",
+    "root": "00000000000000801202020000081000",
+    "rows": [
+     15,
+     19
+    ]
+   },
+   {
+    "a_part": "100788657798055331",
+    "b_part": "30549967315629714",
+    "idx": 1,
+    "membership": "131338625113685045",
+    "root": "00000000000000801202010000101000",
+    "rows": [
+     16,
+     18
+    ]
+   },
+   {
+    "a_part": "100601836492929928",
+    "b_part": "30591814701596133",
+    "idx": 2,
+    "membership": "131193651194526061",
+    "root": "00000000000000801202020000001002",
+    "rows": [
+     5,
+     19
+    ]
+   },
+   {
+    "a_part": "100312553968499558",
+    "b_part": "30533456377954152",
+    "idx": 3,
+    "membership": "130846010346453710",
+    "root": "00000000000000801202020000001001",
+    "rows": [
+     0,
+     19
+    ]
+   },
+   {
+    "a_part": "100344393091217043",
+    "b_part": "30495701097459441",
+    "idx": 4,
+    "membership": "130840094188676484",
+    "root": "00000000000000889002001000100000",
+    "rows": [
+     18,
+     24
+    ]
+   },
+   {
+    "a_part": "100431777991065531",
+    "b_part": "30292565084543544",
+    "idx": 5,
+    "membership": "130724343075609075",
+    "root": "00000000000000801282010000001000",
+    "rows": [
+     1,
+     18
+    ]
+   },
+   {
+    "a_part": "99956903970108146",
+    "b_part": "30350035006295691",
+    "idx": 6,
+    "membership": "130306938976403837",
+    "root": "00000010001000801202000000000400",
+    "rows": [
+     18,
+     30
+    ]
+   },
+   {
+    "a_part": "99872150070283616",
+    "b_part": "30398352999518079",
+    "idx": 7,
+    "membership": "130270503069801695",
+    "root": "00000000000100003800000008001200",
+    "rows": [
+     4,
+     18
+    ]
+   },
+   {
+    "a_part": "100033505661062397",
+    "b_part": "30225256057760238",
+    "idx": 8,
+    "membership": "130258761718822635",
+    "root": "00000000000000801282020000001000",
+    "rows": [
+     1,
+     19
+    ]
+   },
+   {
+    "a_part": "99473159333767943",
+    "b_part": "30331332124002183",
+    "idx": 9,
+    "membership": "129804491457770126",
+    "root": "00000000080000003800000008001200",
+    "rows": [
+     4,
+     19
+    ]
+   },
+   {
+    "a_part": "99362247087302873",
+    "b_part": "30226924178386611",
+    "idx": 10,
+    "membership": "129589171265689484",
+    "root": "00000010002000801202000000000400",
+    "rows": [
+     19,
+     30
+    ]
+   },
+   {
+    "a_part": "96412798731297145",
+    "b_part": "29315610103112313",
+    "idx": 11,
+    "membership": "125728408834409458",
+    "root": "00000000000000801222010000001000",
+    "rows": [
+     18,
+     23
+    ]
+   },
+   {
+    "a_part": "96228581229826253",
+    "b_part": "29162580558324735",
+    "idx": 12,
+    "membership": "125391161788150988",
+    "root": "00000000000000801202010000009000",
+    "rows": [
+     11,
+     18
+    ]
+   }
+  ],
+  "triple_census": {
+   "b_only": 198,
+   "disjoint": 0,
+   "zero2x2": 33,
+   "zero3x": 55
+  }
+ },
+ "title": "Exact survival curve k=1..13 with exact A/B type split for the 31-row cost-16 parent 00000000000000003800000008001000: I-E extension to k=11..13 (33 new pairwise joints + 166 new triples, structural collapse verified for 13 hub roots) and the full-singleton-ban mixed curve B_survive(k) = B16 - kill_B(k)",
+ "unknown_status": "Standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN.",
+ "values": {
+  "A_survive": {
+   "k1": "2201089659239772678",
+   "k10": "1400734279274103379",
+   "k11": "1319225112917587991",
+   "k12": "1247882269674605395",
+   "k13": "1177695220165504118",
+   "k2": "2104574580015675814",
+   "k3": "2008239738475228380",
+   "k4": "1912189176067079977",
+   "k5": "1824754211028709357",
+   "k6": "1737697276534435264",
+   "k7": "1651027802902603340",
+   "k8": "1564239038548375836",
+   "k9": "1482354862862959467"
+  },
+  "B_survive_full_singleton_ban": {
+   "k0": "660663050386546968",
+   "k1": "628978083295235013",
+   "k10": "389244119480989629",
+   "k11": "365139769030068297",
+   "k12": "344139100713603297",
+   "k13": "323601481801299033",
+   "k2": "599802122093455224",
+   "k3": "570661010410478769",
+   "k4": "541653214551014457",
+   "k5": "515382673185362019",
+   "k6": "489488821032193431",
+   "k7": "463603768146918291",
+   "k8": "437686674003751251",
+   "k9": "413510331772804041"
+  },
+  "B_survive_share_percent": {
+   "k0": 22.271165,
+   "k1": 21.203055,
+   "k10": 13.121545,
+   "k11": 12.30898,
+   "k12": 11.60104,
+   "k13": 10.908711,
+   "k2": 20.219523,
+   "k3": 19.237167,
+   "k4": 18.259305,
+   "k5": 17.373717,
+   "k6": 16.500826,
+   "k7": 15.628233,
+   "k8": 14.754559,
+   "k9": 13.939567
+  },
+  "kill": {
+   "k1": "136382599145473665",
+   "k10": "1176471942925388348",
+   "k11": "1282085459732825068",
+   "k12": "1374428971292272664",
+   "k13": "1465153639713678205",
+   "k2": "262073639571350318",
+   "k3": "387549592794774207",
+   "k4": "512607951062386922",
+   "k5": "626313457466409980",
+   "k6": "739264244113852661",
+   "k7": "851818770630959725",
+   "k8": "964524629128354269",
+   "k9": "1070585147044717848"
+  },
+  "kill_A": {
+   "k1": "104697632054161710",
+   "k10": "905053012019831009",
+   "k11": "986562178376346397",
+   "k12": "1057905021619328993",
+   "k13": "1128092071128430270",
+   "k2": "201212711278258574",
+   "k3": "297547552818706008",
+   "k4": "393598115226854411",
+   "k5": "481033080265225031",
+   "k6": "568090014759499124",
+   "k7": "654759488391331048",
+   "k8": "741548252745558552",
+   "k9": "823432428430974921"
+  },
+  "kill_B": {
+   "k1": "31684967091311955",
+   "k10": "271418930905557339",
+   "k11": "295523281356478671",
+   "k12": "316523949672943671",
+   "k13": "337061568585247935",
+   "k2": "60860928293091744",
+   "k3": "90002039976068199",
+   "k4": "119009835835532511",
+   "k5": "145280377201184949",
+   "k6": "171174229354353537",
+   "k7": "197059282239628677",
+   "k8": "222976376382795717",
+   "k9": "247152718613742927"
+  },
+  "kill_share_percent": {
+   "k1": 4.597502,
+   "k10": 39.65925,
+   "k11": 43.219515,
+   "k12": 46.332445,
+   "k13": 49.390803,
+   "k2": 8.834587,
+   "k3": 13.064422,
+   "k4": 17.28018,
+   "k5": 21.113229,
+   "k6": 24.920837,
+   "k7": 28.715086,
+   "k8": 32.514437,
+   "k9": 36.089771
+  },
+  "marginals": {
+   "k10_minus_k9": "105886795880670500",
+   "k11_minus_k10": "105613516807436720",
+   "k12_minus_k11": "92343511559447596",
+   "k13_minus_k12": "90724668421405541",
+   "k2_minus_k1": "125691040425876653",
+   "k3_minus_k2": "125475953223423889",
+   "k4_minus_k3": "125058358267612715",
+   "k5_minus_k4": "113705506404023058",
+   "k6_minus_k5": "112950786647442681",
+   "k7_minus_k6": "112554526517107064",
+   "k8_minus_k7": "112705858497394544",
+   "k9_minus_k8": "106060517916363579"
+  },
+  "new_pair_joints": {
+   "0,10": {
+    "joint": "81090774423846",
+    "joint_A": "0",
+    "joint_B": "81090774423846",
+    "shared_row": true
+   },
+   "0,11": {
+    "joint": "5621075419903296",
+    "joint_A": "4252621528056666",
+    "joint_B": "1368453891846630",
+    "shared_row": false
+   },
+   "0,12": {
+    "joint": "5861288447268162",
+    "joint_A": "4440929078849892",
+    "joint_B": "1420359368418270",
+    "shared_row": false
+   },
+   "1,10": {
+    "joint": "5601451463384280",
+    "joint_A": "4235759993654493",
+    "joint_B": "1365691469729787",
+    "shared_row": false
+   },
+   "1,11": {
+    "joint": "75077876459052",
+    "joint_A": "0",
+    "joint_B": "75077876459052",
+    "shared_row": true
+   },
+   "1,12": {
+    "joint": "74785222417773",
+    "joint_A": "0",
+    "joint_B": "74785222417773",
+    "shared_row": true
+   },
+   "10,11": {
+    "joint": "5581546387428150",
+    "joint_A": "4219749178422522",
+    "joint_B": "1361797209005628",
+    "shared_row": false
+   },
+   "10,12": {
+    "joint": "5831881970499912",
+    "joint_A": "4415738074063542",
+    "joint_B": "1416143896436370",
+    "shared_row": false
+   },
+   "11,12": {
+    "joint": "71511052853754",
+    "joint_A": "0",
+    "joint_B": "71511052853754",
+    "shared_row": true
+   },
+   "2,10": {
+    "joint": "78082025827257",
+    "joint_A": "0",
+    "joint_B": "78082025827257",
+    "shared_row": true
+   },
+   "2,11": {
+    "joint": "5388050855082780",
+    "joint_A": "4071205432901928",
+    "joint_B": "1316845422180852",
+    "shared_row": false
+   },
+   "2,12": {
+    "joint": "5629280590525896",
+    "joint_A": "4259946490307631",
+    "joint_B": "1369334100218265",
+    "shared_row": false
+   },
+   "3,10": {
+    "joint": "74624892176643",
+    "joint_A": "0",
+    "joint_B": "74624892176643",
+    "shared_row": true
+   },
+   "3,11": {
+    "joint": "5383116543889212",
+    "joint_A": "4066575306355023",
+    "joint_B": "1316541237534189",
+    "shared_row": false
+   },
+   "3,12": {
+    "joint": "5624689071998190",
+    "joint_A": "4255540494424059",
+    "joint_B": "1369148577574131",
+    "shared_row": false
+   },
+   "4,10": {
+    "joint": "5822256682129758",
+    "joint_A": "4402305462052446",
+    "joint_B": "1419951220077312",
+    "shared_row": false
+   },
+   "4,11": {
+    "joint": "71776308095034",
+    "joint_A": "0",
+    "joint_B": "71776308095034",
+    "shared_row": true
+   },
+   "4,12": {
+    "joint": "74644645663242",
+    "joint_A": "0",
+    "joint_B": "74644645663242",
+    "shared_row": true
+   },
+   "5,10": {
+    "joint": "6108114533815476",
+    "joint_A": "4630829613272526",
+    "joint_B": "1477284920542950",
+    "shared_row": false
+   },
+   "5,11": {
+    "joint": "74512954486728",
+    "joint_A": "0",
+    "joint_B": "74512954486728",
+    "shared_row": true
+   },
+   "5,12": {
+    "joint": "70970725995636",
+    "joint_A": "0",
+    "joint_B": "70970725995636",
+    "shared_row": true
+   },
+   "6,10": {
+    "joint": "81079080713952",
+    "joint_A": "0",
+    "joint_B": "81079080713952",
+    "shared_row": true
+   },
+   "6,11": {
+    "joint": "74674211005884",
+    "joint_A": "0",
+    "joint_B": "74674211005884",
+    "shared_row": true
+   },
+   "6,12": {
+    "joint": "74218638360102",
+    "joint_A": "0",
+    "joint_B": "74218638360102",
+    "shared_row": true
+   },
+   "7,10": {
+    "joint": "6061731937456872",
+    "joint_A": "4584185661808020",
+    "joint_B": "1477546275648852",
+    "shared_row": false
+   },
+   "7,11": {
+    "joint": "74652260137302",
+    "joint_A": "0",
+    "joint_B": "74652260137302",
+    "shared_row": true
+   },
+   "7,12": {
+    "joint": "74348889816384",
+    "joint_A": "0",
+    "joint_B": "74348889816384",
+    "shared_row": true
+   },
+   "8,10": {
+    "joint": "77157278682456",
+    "joint_A": "0",
+    "joint_B": "77157278682456",
+    "shared_row": true
+   },
+   "8,11": {
+    "joint": "5612390678325318",
+    "joint_A": "4250784128981958",
+    "joint_B": "1361606549343360",
+    "shared_row": false
+   },
+   "8,12": {
+    "joint": "5615772035973876",
+    "joint_A": "4256770209385836",
+    "joint_B": "1359001826588040",
+    "shared_row": false
+   },
+   "9,10": {
+    "joint": "77305309405044",
+    "joint_A": "0",
+    "joint_B": "77305309405044",
+    "shared_row": true
+   },
+   "9,11": {
+    "joint": "5571090913297770",
+    "joint_A": "4209019913596452",
+    "joint_B": "1362070999701318",
+    "shared_row": false
+   },
+   "9,12": {
+    "joint": "5831529426276654",
+    "joint_A": "4412607373694016",
+    "joint_B": "1418922052582638",
+    "shared_row": false
+   }
+  },
+  "new_triples": {
+   "01011": {
+    "class": "b_only",
+    "joint": "3588744986580"
+   },
+   "01012": {
+    "class": "b_only",
+    "joint": "3747971722620"
+   },
+   "0110": {
+    "class": "b_only",
+    "joint": "3429258713850"
+   },
+   "0111": {
+    "class": "b_only",
+    "joint": "3289643678580"
+   },
+   "01112": {
+    "class": "b_only",
+    "joint": "3427356391200"
+   },
+   "0112": {
+    "class": "b_only",
+    "joint": "3434546841120"
+   },
+   "0210": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "0211": {
+    "class": "b_only",
+    "joint": "3296878656390"
+   },
+   "0212": {
+    "class": "b_only",
+    "joint": "3442635587790"
+   },
+   "0310": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "0311": {
+    "class": "b_only",
+    "joint": "3450893674080"
+   },
+   "0312": {
+    "class": "b_only",
+    "joint": "3604270643850"
+   },
+   "0410": {
+    "class": "b_only",
+    "joint": "3757571265900"
+   },
+   "0411": {
+    "class": "b_only",
+    "joint": "3289360648740"
+   },
+   "0412": {
+    "class": "b_only",
+    "joint": "3588163133160"
+   },
+   "0510": {
+    "class": "b_only",
+    "joint": "3741096085500"
+   },
+   "0511": {
+    "class": "b_only",
+    "joint": "3420860530320"
+   },
+   "0512": {
+    "class": "b_only",
+    "joint": "3413390002320"
+   },
+   "0610": {
+    "class": "zero2x2",
+    "joint": "0"
+   },
+   "0611": {
+    "class": "b_only",
+    "joint": "3588744986580"
+   },
+   "0612": {
+    "class": "b_only",
+    "joint": "3747971722620"
+   },
+   "0710": {
+    "class": "b_only",
+    "joint": "3925764752520"
+   },
+   "0711": {
+    "class": "b_only",
+    "joint": "3589083347280"
+   },
+   "0712": {
+    "class": "b_only",
+    "joint": "3756845043720"
+   },
+   "0810": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "0811": {
+    "class": "b_only",
+    "joint": "3420860530320"
+   },
+   "0812": {
+    "class": "b_only",
+    "joint": "3413390002320"
+   },
+   "0910": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "0911": {
+    "class": "b_only",
+    "joint": "3589083347280"
+   },
+   "0912": {
+    "class": "b_only",
+    "joint": "3756845043720"
+   },
+   "101112": {
+    "class": "b_only",
+    "joint": "3426365424684"
+   },
+   "11011": {
+    "class": "b_only",
+    "joint": "3275298270900"
+   },
+   "11012": {
+    "class": "b_only",
+    "joint": "3427437245130"
+   },
+   "11112": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "1210": {
+    "class": "b_only",
+    "joint": "3435823678860"
+   },
+   "1211": {
+    "class": "b_only",
+    "joint": "3302741460120"
+   },
+   "1212": {
+    "class": "b_only",
+    "joint": "3456788937888"
+   },
+   "1310": {
+    "class": "b_only",
+    "joint": "3289345051800"
+   },
+   "1311": {
+    "class": "b_only",
+    "joint": "3301982068230"
+   },
+   "1312": {
+    "class": "b_only",
+    "joint": "3456413357088"
+   },
+   "1410": {
+    "class": "b_only",
+    "joint": "3428103934560"
+   },
+   "1411": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "1412": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "1510": {
+    "class": "b_only",
+    "joint": "3580561371930"
+   },
+   "1511": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "1512": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "1610": {
+    "class": "zero2x2",
+    "joint": "0"
+   },
+   "1611": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "1612": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "1710": {
+    "class": "b_only",
+    "joint": "3588244176120"
+   },
+   "1711": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "1712": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "1810": {
+    "class": "b_only",
+    "joint": "3580561371930"
+   },
+   "1811": {
+    "class": "b_only",
+    "joint": "3433792272300"
+   },
+   "1812": {
+    "class": "b_only",
+    "joint": "3426229427670"
+   },
+   "1910": {
+    "class": "b_only",
+    "joint": "3588244176120"
+   },
+   "1911": {
+    "class": "b_only",
+    "joint": "3441837446340"
+   },
+   "1912": {
+    "class": "b_only",
+    "joint": "3610867403778"
+   },
+   "21011": {
+    "class": "b_only",
+    "joint": "3441875999100"
+   },
+   "21012": {
+    "class": "b_only",
+    "joint": "3603275432058"
+   },
+   "21112": {
+    "class": "b_only",
+    "joint": "3295495709694"
+   },
+   "2310": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "2311": {
+    "class": "b_only",
+    "joint": "3162104461254"
+   },
+   "2312": {
+    "class": "b_only",
+    "joint": "3309638250720"
+   },
+   "2410": {
+    "class": "b_only",
+    "joint": "3594681662760"
+   },
+   "2411": {
+    "class": "b_only",
+    "joint": "3148509368688"
+   },
+   "2412": {
+    "class": "b_only",
+    "joint": "3441475152570"
+   },
+   "2510": {
+    "class": "b_only",
+    "joint": "3764803820850"
+   },
+   "2511": {
+    "class": "b_only",
+    "joint": "3441857085900"
+   },
+   "2512": {
+    "class": "b_only",
+    "joint": "3434745929010"
+   },
+   "2610": {
+    "class": "zero2x2",
+    "joint": "0"
+   },
+   "2611": {
+    "class": "b_only",
+    "joint": "3441875999100"
+   },
+   "2612": {
+    "class": "b_only",
+    "joint": "3603275432058"
+   },
+   "2710": {
+    "class": "b_only",
+    "joint": "3588244176120"
+   },
+   "2711": {
+    "class": "b_only",
+    "joint": "3281775476580"
+   },
+   "2712": {
+    "class": "b_only",
+    "joint": "3441947694978"
+   },
+   "2810": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "2811": {
+    "class": "b_only",
+    "joint": "3441857085900"
+   },
+   "2812": {
+    "class": "b_only",
+    "joint": "3434745929010"
+   },
+   "2910": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "2911": {
+    "class": "b_only",
+    "joint": "3281775476580"
+   },
+   "2912": {
+    "class": "b_only",
+    "joint": "3441947694978"
+   },
+   "31011": {
+    "class": "b_only",
+    "joint": "3287860981410"
+   },
+   "31012": {
+    "class": "b_only",
+    "joint": "3441640375998"
+   },
+   "31112": {
+    "class": "b_only",
+    "joint": "3295437083970"
+   },
+   "3410": {
+    "class": "b_only",
+    "joint": "3433431493110"
+   },
+   "3411": {
+    "class": "b_only",
+    "joint": "3148023184434"
+   },
+   "3412": {
+    "class": "b_only",
+    "joint": "3441412568670"
+   },
+   "3510": {
+    "class": "b_only",
+    "joint": "3603528279630"
+   },
+   "3511": {
+    "class": "b_only",
+    "joint": "3449839516110"
+   },
+   "3512": {
+    "class": "b_only",
+    "joint": "3442681651590"
+   },
+   "3610": {
+    "class": "zero2x2",
+    "joint": "0"
+   },
+   "3611": {
+    "class": "b_only",
+    "joint": "3287860981410"
+   },
+   "3612": {
+    "class": "b_only",
+    "joint": "3441640375998"
+   },
+   "3710": {
+    "class": "b_only",
+    "joint": "3434226561420"
+   },
+   "3711": {
+    "class": "b_only",
+    "joint": "3281289271590"
+   },
+   "3712": {
+    "class": "b_only",
+    "joint": "3441889089990"
+   },
+   "3810": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "3811": {
+    "class": "b_only",
+    "joint": "3449839516110"
+   },
+   "3812": {
+    "class": "b_only",
+    "joint": "3442681651590"
+   },
+   "3910": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "3911": {
+    "class": "b_only",
+    "joint": "3281289271590"
+   },
+   "3912": {
+    "class": "b_only",
+    "joint": "3441889089990"
+   },
+   "41011": {
+    "class": "b_only",
+    "joint": "3280344663744"
+   },
+   "41012": {
+    "class": "b_only",
+    "joint": "3587105378940"
+   },
+   "41112": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "4510": {
+    "class": "b_only",
+    "joint": "3757122455160"
+   },
+   "4511": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "4512": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "4610": {
+    "class": "zero2x2",
+    "joint": "0"
+   },
+   "4611": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "4612": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "4710": {
+    "class": "b_only",
+    "joint": "3579039126840"
+   },
+   "4711": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "4712": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "4810": {
+    "class": "b_only",
+    "joint": "3757122455160"
+   },
+   "4811": {
+    "class": "b_only",
+    "joint": "3280641342540"
+   },
+   "4812": {
+    "class": "b_only",
+    "joint": "3419361959640"
+   },
+   "4910": {
+    "class": "b_only",
+    "joint": "3579039126840"
+   },
+   "4911": {
+    "class": "b_only",
+    "joint": "3134774152044"
+   },
+   "4912": {
+    "class": "b_only",
+    "joint": "3426301423020"
+   },
+   "51011": {
+    "class": "b_only",
+    "joint": "3587823243000"
+   },
+   "51012": {
+    "class": "b_only",
+    "joint": "3579526294200"
+   },
+   "51112": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "5610": {
+    "class": "zero2x2",
+    "joint": "0"
+   },
+   "5611": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "5612": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "5710": {
+    "class": "b_only",
+    "joint": "3934568675280"
+   },
+   "5711": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "5712": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "5810": {
+    "class": "zero2x2",
+    "joint": "0"
+   },
+   "5811": {
+    "class": "zero2x2",
+    "joint": "0"
+   },
+   "5812": {
+    "class": "zero2x2",
+    "joint": "0"
+   },
+   "5910": {
+    "class": "b_only",
+    "joint": "3934568675280"
+   },
+   "5911": {
+    "class": "b_only",
+    "joint": "3587782100340"
+   },
+   "5912": {
+    "class": "b_only",
+    "joint": "3587544484020"
+   },
+   "61011": {
+    "class": "zero2x2",
+    "joint": "0"
+   },
+   "61012": {
+    "class": "zero2x2",
+    "joint": "0"
+   },
+   "61112": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "6710": {
+    "class": "zero2x2",
+    "joint": "0"
+   },
+   "6711": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "6712": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "6810": {
+    "class": "zero2x2",
+    "joint": "0"
+   },
+   "6811": {
+    "class": "b_only",
+    "joint": "3587823243000"
+   },
+   "6812": {
+    "class": "b_only",
+    "joint": "3579526294200"
+   },
+   "6910": {
+    "class": "zero2x2",
+    "joint": "0"
+   },
+   "6911": {
+    "class": "b_only",
+    "joint": "3579039126840"
+   },
+   "6912": {
+    "class": "b_only",
+    "joint": "3755721300888"
+   },
+   "71011": {
+    "class": "b_only",
+    "joint": "3579039126840"
+   },
+   "71012": {
+    "class": "b_only",
+    "joint": "3755721300888"
+   },
+   "71112": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "7810": {
+    "class": "b_only",
+    "joint": "3934568675280"
+   },
+   "7811": {
+    "class": "b_only",
+    "joint": "3587782100340"
+   },
+   "7812": {
+    "class": "b_only",
+    "joint": "3587544484020"
+   },
+   "7910": {
+    "class": "zero2x2",
+    "joint": "0"
+   },
+   "7911": {
+    "class": "zero2x2",
+    "joint": "0"
+   },
+   "7912": {
+    "class": "zero2x2",
+    "joint": "0"
+   },
+   "81011": {
+    "class": "b_only",
+    "joint": "3587823243000"
+   },
+   "81012": {
+    "class": "b_only",
+    "joint": "3579526294200"
+   },
+   "81112": {
+    "class": "b_only",
+    "joint": "3266597438640"
+   },
+   "8910": {
+    "class": "zero3x",
+    "joint": "0"
+   },
+   "8911": {
+    "class": "b_only",
+    "joint": "3587782100340"
+   },
+   "8912": {
+    "class": "b_only",
+    "joint": "3587544484020"
+   },
+   "91011": {
+    "class": "b_only",
+    "joint": "3579039126840"
+   },
+   "91012": {
+    "class": "b_only",
+    "joint": "3755721300888"
+   },
+   "91112": {
+    "class": "b_only",
+    "joint": "3426301423020"
+   }
+  },
+  "total_minimum_covers": "2966450341680481356",
+  "type_A_total": "2305787291293934388",
+  "type_B_total": "660663050386546968"
+ }
+}
