@@ -1,0 +1,530 @@
+{
+  "schema": "n11-cost16-parent-shared-memo-crosscheck-20261118-v1",
+  "date": "2026-11-18",
+  "source_main_commit": "e5f2fab7b7004a79d6352e087c02230c5b5baf9e",
+  "checkpoint_commit": "d2901d15a6bd23bb2d4096322c237c002f684bca",
+  "target_parent": "00000000000000003800000008001000",
+  "inputs": {
+    "cover": {
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/parent-minimum-cover-cost-table-20261118.json",
+      "git_blob_sha1": "4e4a911d0e05779437d4a8e97685a8feb66c0d25"
+    },
+    "census": {
+      "path": "research/experiments/n11-head1410-receipt-unclosability-census-20261116/output/n11-head1410-receipt-unclosability-census-20261116.json",
+      "git_blob_sha1": "9c251da3138c5cb0516e097be5e5d35ab4f26a5d"
+    },
+    "ledger": {
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/fold-chain-ledger-1410-1476-crosscheck-20261118.json",
+      "git_blob_sha1": "e8785d509e8a11a37c0d03cc450455a14708c34d"
+    },
+    "phase_a": {
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/cost16-a-phase-20261118.json",
+      "git_blob_sha1": "fe4b4b559fd8c3fdc9bc9b9f40a048fc3217c55b"
+    },
+    "worklist": {
+      "path": "research/experiments/n11-class2-lane-closability-ranking-20261116/output/class-frontier-remaining-s6-worklist-1410-20261116.csv",
+      "git_blob_sha1": "2fee1d0718547a62e346d35f5858d7913e37c097"
+    }
+  },
+  "method": "The 31 target rows are selected from the pinned head-1410 worklist by D4 parent inclusion, after subtracting the pinned 66-row fold closure set and 35 STERILE rows. Candidate roots are regenerated with integer det4 and D4 canonicalization. For B, one memo is shared across all 31 doubled-row slices B_d=sum_{a<b in N(d)} w(d,a)w(d,b)pm(V\\\\{d,a,b}); this differs from the checkpoint's 31 fresh-memo per-d slices while preserving the exact recurrence. A is recomputed and compared row-by-row with the pinned phase-A output. Two fresh shared-memo runs are compared.",
+  "derived": {
+    "target_rows": [
+      {
+        "row": "00000000000000003800000008001001",
+        "edge_cost": 74
+      },
+      {
+        "row": "00000000000000003800000008001020",
+        "edge_cost": 65
+      },
+      {
+        "row": "00000000000000003800000008001080",
+        "edge_cost": 79
+      },
+      {
+        "row": "00000000000000003800000008001100",
+        "edge_cost": 82
+      },
+      {
+        "row": "00000000000000003800000008001200",
+        "edge_cost": 76
+      },
+      {
+        "row": "00000000000000003800000008001800",
+        "edge_cost": 73
+      },
+      {
+        "row": "00000000000000003800000008005000",
+        "edge_cost": 71
+      },
+      {
+        "row": "00000000000000003800000008011000",
+        "edge_cost": 74
+      },
+      {
+        "row": "00000000000000003800000008500000",
+        "edge_cost": 75
+      },
+      {
+        "row": "00000000000000003800000008900000",
+        "edge_cost": 76
+      },
+      {
+        "row": "00000000000000003800000808001000",
+        "edge_cost": 73
+      },
+      {
+        "row": "00000000000000003800200008001000",
+        "edge_cost": 72
+      },
+      {
+        "row": "00000000000000003800200008100000",
+        "edge_cost": 79
+      },
+      {
+        "row": "00000000000000043800000008100000",
+        "edge_cost": 84
+      },
+      {
+        "row": "00000000000000083800000008100000",
+        "edge_cost": 74
+      },
+      {
+        "row": "00000000000000801202000000081000",
+        "edge_cost": 66
+      },
+      {
+        "row": "00000000000000801202000000101000",
+        "edge_cost": 71
+      },
+      {
+        "row": "00000000000000801202000020001000",
+        "edge_cost": 74
+      },
+      {
+        "row": "00000000000000801202010000001000",
+        "edge_cost": 64
+      },
+      {
+        "row": "00000000000000801202020000001000",
+        "edge_cost": 66
+      },
+      {
+        "row": "00000000000000801202040000001000",
+        "edge_cost": 82
+      },
+      {
+        "row": "00000000000000801202080000001000",
+        "edge_cost": 79
+      },
+      {
+        "row": "00000000000000801212000000001000",
+        "edge_cost": 78
+      },
+      {
+        "row": "00000000000000801222000000001000",
+        "edge_cost": 76
+      },
+      {
+        "row": "00000000000000889002000000100000",
+        "edge_cost": 74
+      },
+      {
+        "row": "00000000000000909002000000100000",
+        "edge_cost": 79
+      },
+      {
+        "row": "00000000000040809002000000100000",
+        "edge_cost": 82
+      },
+      {
+        "row": "00000000010000003800000008100000",
+        "edge_cost": 80
+      },
+      {
+        "row": "00000000010000809002000000100000",
+        "edge_cost": 81
+      },
+      {
+        "row": "00000008000000003800000008100000",
+        "edge_cost": 81
+      },
+      {
+        "row": "00000010000000801202000000000400",
+        "edge_cost": 73
+      }
+    ],
+    "target_row_count": 31,
+    "candidate_occurrences": 2333,
+    "distinct_D4_roots": 1908,
+    "root_coverage_histogram": {
+      "1": 1483,
+      "2": 425
+    },
+    "pair_types": 425,
+    "pair_type_multiplicity_histogram": {
+      "1": 425
+    },
+    "singleton_root_count": 1483,
+    "A16": 2305787291293934388,
+    "A16_per_row_pm": {
+      "0": 1653308795286330,
+      "1": 1633667531950608,
+      "2": 1415501771326047,
+      "3": 1415501771326047,
+      "4": 1642191620360697,
+      "5": 1656435361289220,
+      "6": 1588514963738622,
+      "7": 1515076266220878,
+      "8": 1514782563044328,
+      "9": 1517283706254840,
+      "10": 1466395627763037,
+      "11": 1571220486875283,
+      "12": 1514791930427004,
+      "13": 1415501771326047,
+      "14": 1517065529197626,
+      "15": 1717011697072743,
+      "16": 1650691554122205,
+      "17": 1462445387422791,
+      "18": 1798095446108235,
+      "19": 1790912116327797,
+      "20": 1517396622107139,
+      "21": 1513513415712273,
+      "22": 1523350516656960,
+      "23": 1582419706785732,
+      "24": 1644776550905100,
+      "25": 1523071096142418,
+      "26": 1515232273372242,
+      "27": 1469253029467884,
+      "28": 1462392051909750,
+      "29": 1521856299364719,
+      "30": 1636675326867525
+    },
+    "B16": 660663050386546968,
+    "total_minimum_covers": 2966450341680481356,
+    "type_A_share": 0.7772883499501684,
+    "type_B_share": 0.22271165004983168,
+    "B_by_doubled_row": [
+      {
+        "double_row_index": 0,
+        "degree": 26,
+        "anchors": 325,
+        "B_d": 19989813118410060,
+        "shared_memo_states_after": 3524183
+      },
+      {
+        "double_row_index": 1,
+        "degree": 26,
+        "anchors": 325,
+        "B_d": 20231480588424789,
+        "shared_memo_states_after": 3524730
+      },
+      {
+        "double_row_index": 2,
+        "degree": 30,
+        "anchors": 435,
+        "B_d": 23475415507703040,
+        "shared_memo_states_after": 3528388
+      },
+      {
+        "double_row_index": 3,
+        "degree": 30,
+        "anchors": 435,
+        "B_d": 23475415507703040,
+        "shared_memo_states_after": 3549216
+      },
+      {
+        "double_row_index": 4,
+        "degree": 26,
+        "anchors": 325,
+        "B_d": 20126168376317970,
+        "shared_memo_states_after": 3632461
+      },
+      {
+        "double_row_index": 5,
+        "degree": 26,
+        "anchors": 325,
+        "B_d": 19949644933307451,
+        "shared_memo_states_after": 3877642
+      },
+      {
+        "double_row_index": 6,
+        "degree": 27,
+        "anchors": 351,
+        "B_d": 20837648422422600,
+        "shared_memo_states_after": 4413444
+      },
+      {
+        "double_row_index": 7,
+        "degree": 28,
+        "anchors": 378,
+        "B_d": 21877571800568925,
+        "shared_memo_states_after": 5294456
+      },
+      {
+        "double_row_index": 8,
+        "degree": 28,
+        "anchors": 378,
+        "B_d": 21881632103807445,
+        "shared_memo_states_after": 6392243
+      },
+      {
+        "double_row_index": 9,
+        "degree": 28,
+        "anchors": 378,
+        "B_d": 21846032764844793,
+        "shared_memo_states_after": 7440836
+      },
+      {
+        "double_row_index": 10,
+        "degree": 29,
+        "anchors": 406,
+        "B_d": 22633134813509241,
+        "shared_memo_states_after": 8225519
+      },
+      {
+        "double_row_index": 11,
+        "degree": 27,
+        "anchors": 351,
+        "B_d": 21065935137217452,
+        "shared_memo_states_after": 8706060
+      },
+      {
+        "double_row_index": 12,
+        "degree": 28,
+        "anchors": 378,
+        "B_d": 21881518331587500,
+        "shared_memo_states_after": 8964208
+      },
+      {
+        "double_row_index": 13,
+        "degree": 30,
+        "anchors": 435,
+        "B_d": 23475415507703040,
+        "shared_memo_states_after": 9095180
+      },
+      {
+        "double_row_index": 14,
+        "degree": 28,
+        "anchors": 378,
+        "B_d": 21848904683811324,
+        "shared_memo_states_after": 9160643
+      },
+      {
+        "double_row_index": 15,
+        "degree": 25,
+        "anchors": 300,
+        "B_d": 19220589083360616,
+        "shared_memo_states_after": 9193269
+      },
+      {
+        "double_row_index": 16,
+        "degree": 26,
+        "anchors": 325,
+        "B_d": 20024592896488569,
+        "shared_memo_states_after": 9209594
+      },
+      {
+        "double_row_index": 17,
+        "degree": 29,
+        "anchors": 406,
+        "B_d": 22694405566544229,
+        "shared_memo_states_after": 9217879
+      },
+      {
+        "double_row_index": 18,
+        "degree": 24,
+        "anchors": 276,
+        "B_d": 18319351945126110,
+        "shared_memo_states_after": 9222074
+      },
+      {
+        "double_row_index": 19,
+        "degree": 24,
+        "anchors": 276,
+        "B_d": 18393925676301009,
+        "shared_memo_states_after": 9224122
+      },
+      {
+        "double_row_index": 20,
+        "degree": 28,
+        "anchors": 378,
+        "B_d": 21844463670173823,
+        "shared_memo_states_after": 9225194
+      },
+      {
+        "double_row_index": 21,
+        "degree": 28,
+        "anchors": 378,
+        "B_d": 21900956177685741,
+        "shared_memo_states_after": 9225773
+      },
+      {
+        "double_row_index": 22,
+        "degree": 28,
+        "anchors": 378,
+        "B_d": 21760907863912257,
+        "shared_memo_states_after": 9226072
+      },
+      {
+        "double_row_index": 23,
+        "degree": 27,
+        "anchors": 351,
+        "B_d": 20916496069670628,
+        "shared_memo_states_after": 9226252
+      },
+      {
+        "double_row_index": 24,
+        "degree": 26,
+        "anchors": 325,
+        "B_d": 20094318085122831,
+        "shared_memo_states_after": 9226378
+      },
+      {
+        "double_row_index": 25,
+        "degree": 28,
+        "anchors": 378,
+        "B_d": 21764499528802476,
+        "shared_memo_states_after": 9226469
+      },
+      {
+        "double_row_index": 26,
+        "degree": 28,
+        "anchors": 378,
+        "B_d": 21875642092233507,
+        "shared_memo_states_after": 9226542
+      },
+      {
+        "double_row_index": 27,
+        "degree": 29,
+        "anchors": 406,
+        "B_d": 22590034030095750,
+        "shared_memo_states_after": 9226606
+      },
+      {
+        "double_row_index": 28,
+        "degree": 29,
+        "anchors": 406,
+        "B_d": 22695213659555052,
+        "shared_memo_states_after": 9226664
+      },
+      {
+        "double_row_index": 29,
+        "degree": 28,
+        "anchors": 378,
+        "B_d": 21778554803188839,
+        "shared_memo_states_after": 9226712
+      },
+      {
+        "double_row_index": 30,
+        "degree": 26,
+        "anchors": 325,
+        "B_d": 20193367640946861,
+        "shared_memo_states_after": 9226801
+      }
+    ],
+    "B_anchor_total": 11267,
+    "B_anchor_min": 276,
+    "B_anchor_max": 435,
+    "shared_memo_states_after_B": 9226801,
+    "shared_memo_states_after_A": 9226842,
+    "two_fresh_memo_runs_identical": true,
+    "row_subset_sha256": "f4fd56f45a7600f2b929cf3dd77a86abfaedade0128f12ac320d96943e5f3797"
+  },
+  "checks": [
+    {
+      "name": "target_rows_exact",
+      "pass": true,
+      "detail": "31"
+    },
+    {
+      "name": "target_rows_count",
+      "pass": true,
+      "detail": "31"
+    },
+    {
+      "name": "target_edge_cost",
+      "pass": true,
+      "detail": "2333"
+    },
+    {
+      "name": "cover_table_anchor",
+      "pass": true,
+      "detail": "{\"hex\":\"00000000000000003800000008001000\",\"classes\":2,\"classification\":\"no_sterile\",\"rows_r\":31,\"candidates\":2333,\"distinct_roots\":1908,\"span_histogram\":{\"1\":1483,\"2\":425},\"maxspan\":2,\"lower_bound\":16,\"witness_size\":16,\"exact\":true,\"method\":\"matching_plus_singleton\",\"witness_roots\":[\"00000000000000003800000008001021\",\"00000000000000003800000008001180\",\"00000000000000003800000008005200\",\"00000000000000003800000008011800\",\"00000000000000003800000008d00000\",\"00000000000000003800200808001000\",\"00000000000000043800200008100000\",\"00000000000000801202000020101000\",\"00000000000000801202050000001000\",\"000000000000008012020a0000001000\",\"00000000000000801232000000001000\",\"00000000000000989002000000100000\",\"00000000020008003800000008001000\",\"00000010000000801202000000000408\",\"00000010000000801202000100000200\",\"00000010000000801202040000000100\"]}"
+    },
+    {
+      "name": "candidate_counts_match_worklist",
+      "pass": true,
+      "detail": "31"
+    },
+    {
+      "name": "distinct_roots",
+      "pass": true,
+      "detail": "1908"
+    },
+    {
+      "name": "root_coverage_histogram",
+      "pass": true,
+      "detail": "{\"1\":1483,\"2\":425}"
+    },
+    {
+      "name": "pair_types",
+      "pass": true,
+      "detail": "425"
+    },
+    {
+      "name": "pair_multiplicity_one",
+      "pass": true,
+      "detail": "{\"1\":425}"
+    },
+    {
+      "name": "two_fresh_memo_runs_identical",
+      "pass": true,
+      "detail": "all A/B values, anchors and memo counts"
+    },
+    {
+      "name": "A16_matches_published",
+      "pass": true,
+      "detail": "2305787291293934388"
+    },
+    {
+      "name": "A16_per_row_matches_published",
+      "pass": true,
+      "detail": "31"
+    },
+    {
+      "name": "B16_matches_checkpoint",
+      "pass": true,
+      "detail": "660663050386546968"
+    },
+    {
+      "name": "total_matches_checkpoint",
+      "pass": true,
+      "detail": "2966450341680481356"
+    },
+    {
+      "name": "B_slices_complete",
+      "pass": true,
+      "detail": "31"
+    },
+    {
+      "name": "B_anchor_range",
+      "pass": true,
+      "detail": "[276,435]"
+    },
+    {
+      "name": "B_anchor_total",
+      "pass": true,
+      "detail": "11267"
+    },
+    {
+      "name": "memo_below_cap",
+      "pass": true,
+      "detail": "[9226801,9226842]"
+    }
+  ],
+  "check_count": 18,
+  "all_pass": true,
+  "interpretation_guard": "Finite cover-plan combinatorics only. These totals count minimum certificate-cover plans for the candidate-root graph; they are not search costs, engine verdicts, WIN7-D10 certificates, or a game-theoretic value. No S5 parent was closed. REFUTED-D10 and STERILE are not LOSS proofs.",
+  "unknown_status": "Standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+}
