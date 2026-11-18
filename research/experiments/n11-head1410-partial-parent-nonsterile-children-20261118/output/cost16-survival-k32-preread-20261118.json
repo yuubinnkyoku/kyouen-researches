@@ -1,0 +1,828 @@
+{
+ "schema": "n11-cost16-k32-preread-20261118-v1",
+ "date": "2026-11-18",
+ "lane": "n11 long lane (verification side)",
+ "title": "31-row cost-16 parent: rank-32 structural preread",
+ "language_note": "pure Python with exact integer serialization; the k=31 preread JSON (commit 188106bb) printed membership/a_part/b_part through Node's double-rounded Number display and required an erratum block in the k=31 result JSON; this preread asserts the exact aggregate integers round-trip through JSON (final check).",
+ "inputs": {
+  "aggregate": {
+   "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/cost16-b-phase-groups-20261118.json",
+   "git_blob_sha1": "31bdefdb2e2cc90b706cbb8090e98eb5eece4d87"
+  },
+  "k30_result": {
+   "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/cost16-survival-k30-20261118.json",
+   "git_blob_sha1": "9c24e7a30ad213d3b7675e620ec606b00f73a330",
+   "commit": "f6a08dc5"
+  },
+  "k31_result": {
+   "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/cost16-survival-k31-20261118.json",
+   "git_blob_sha1": "0d9f67ee69ad4fb8aa37904ddbf6666745786807",
+   "commit": "5da4cc6c"
+  },
+  "k31_publication": "script+log cf8d7dcc, result JSON 5da4cc6c, record JSONL a4bef2aa, log bb0d6e3b"
+ },
+ "scope": {
+  "parent": "00000000000000003800000008001000",
+  "rows": 31,
+  "minimum_cover_size": 16,
+  "top50_rank": 32,
+  "rank_convention": "top50_by_membership; 1-based rank 32"
+ },
+ "rank30_regression": {
+  "root": "00000000080008003800000008001000",
+  "rows": [
+   14,
+   19
+  ],
+  "membership": 120210131097430568,
+  "prior_hits": {
+   "14": 1,
+   "19": 7
+  },
+  "prior_hit_indices": {
+   "14": [
+    18
+   ],
+   "19": [
+    0,
+    2,
+    3,
+    8,
+    9,
+    10,
+    15
+   ]
+  },
+  "new_census": {
+   "pair": {
+    "b_only": 8,
+    "zero": 0,
+    "disjoint": 21,
+    "total": 29,
+    "expected_total": 29
+   },
+   "triple": {
+    "b_only": 248,
+    "zero": 56,
+    "disjoint": 102,
+    "total": 406,
+    "expected_total": 406
+   },
+   "quad": {
+    "b_only": 1302,
+    "zero": 2241,
+    "disjoint": 111,
+    "total": 3654,
+    "expected_total": 3654
+   },
+   "quint": {
+    "b_only": 1328,
+    "zero": 22423,
+    "disjoint": 0,
+    "total": 23751,
+    "expected_total": 23751
+   }
+  },
+  "new_quint_double_row_histogram": {
+   "15": 187,
+   "16": 49,
+   "18": 630,
+   "19": 462
+  },
+  "new_triple_double_row_histogram": {
+   "0": 1,
+   "4": 1,
+   "14": 7,
+   "15": 10,
+   "16": 3,
+   "18": 91,
+   "19": 133,
+   "24": 1,
+   "30": 1
+  },
+  "new_quad_double_row_histogram": {
+   "0": 13,
+   "4": 2,
+   "14": 9,
+   "15": 144,
+   "16": 26,
+   "18": 572,
+   "19": 532,
+   "24": 2,
+   "30": 2
+  },
+  "full_triples": {
+   "counts": {
+    "b_only": 2452,
+    "zero": 815,
+    "disjoint": 793
+   },
+   "total": 4060,
+   "double_row_histogram": {
+    "0": 54,
+    "1": 7,
+    "4": 30,
+    "5": 19,
+    "11": 7,
+    "14": 7,
+    "15": 293,
+    "16": 47,
+    "18": 1435,
+    "19": 514,
+    "24": 9,
+    "30": 30
+   }
+  },
+  "full_quints": {
+   "counts": {
+    "b_only": 5968,
+    "zero": 136538,
+    "disjoint": 0
+   },
+   "total": 142506,
+   "double_row_histogram": {
+    "15": 925,
+    "16": 221,
+    "18": 3536,
+    "19": 1286
+   }
+  },
+  "sextet_census": {
+   "total": 593775,
+   "counts": {
+    "b_only": 0,
+    "zero": 593775,
+    "disjoint": 0
+   }
+  },
+  "classifier_comparisons": 768181,
+  "mismatches": 0
+ },
+ "rank31_regression": {
+  "root": "00000000000040809002001000100000",
+  "rows": [
+   18,
+   26
+  ],
+  "membership": 120181378067473629,
+  "prior_hits": {
+   "18": 15,
+   "26": 0
+  },
+  "prior_hit_indices": {
+   "18": [
+    1,
+    4,
+    5,
+    6,
+    7,
+    11,
+    12,
+    18,
+    19,
+    20,
+    21,
+    23,
+    24,
+    26,
+    27
+   ],
+   "26": []
+  },
+  "new_census": {
+   "pair": {
+    "b_only": 15,
+    "zero": 0,
+    "disjoint": 15,
+    "total": 30,
+    "expected_total": 30
+   },
+   "triple": {
+    "b_only": 265,
+    "zero": 115,
+    "disjoint": 55,
+    "total": 435,
+    "expected_total": 435
+   },
+   "quad": {
+    "b_only": 986,
+    "zero": 3025,
+    "disjoint": 49,
+    "total": 4060,
+    "expected_total": 4060
+   },
+   "quint": {
+    "b_only": 819,
+    "zero": 26586,
+    "disjoint": 0,
+    "total": 27405,
+    "expected_total": 27405
+   }
+  },
+  "new_quint_double_row_histogram": {
+   "15": 78,
+   "16": 18,
+   "18": 613,
+   "19": 110
+  },
+  "new_triple_double_row_histogram": {
+   "0": 3,
+   "4": 1,
+   "5": 1,
+   "15": 15,
+   "16": 1,
+   "18": 215,
+   "19": 28,
+   "30": 1
+  },
+  "new_quad_double_row_histogram": {
+   "0": 11,
+   "4": 2,
+   "5": 5,
+   "15": 83,
+   "16": 10,
+   "18": 744,
+   "19": 129,
+   "30": 2
+  },
+  "full_triples": {
+   "counts": {
+    "b_only": 2717,
+    "zero": 930,
+    "disjoint": 848
+   },
+   "total": 4495,
+   "double_row_histogram": {
+    "0": 57,
+    "1": 7,
+    "4": 31,
+    "5": 20,
+    "11": 7,
+    "14": 7,
+    "15": 308,
+    "16": 48,
+    "18": 1650,
+    "19": 542,
+    "24": 9,
+    "30": 31
+   }
+  },
+  "full_quints": {
+   "counts": {
+    "b_only": 6787,
+    "zero": 163124,
+    "disjoint": 0
+   },
+   "total": 169911,
+   "double_row_histogram": {
+    "15": 1003,
+    "16": 239,
+    "18": 4149,
+    "19": 1396
+   }
+  },
+  "sextet_census": {
+   "total": 736281,
+   "counts": {
+    "b_only": 0,
+    "zero": 736281,
+    "disjoint": 0
+   }
+  },
+  "classifier_comparisons": 942617,
+  "mismatches": 0
+ },
+ "rank32": {
+  "root": "00000000000000801222000000081000",
+  "rows": [
+   15,
+   23
+  ],
+  "membership": 120146272057315812,
+  "a_part": 92121445452103947,
+  "b_part": 28024826605211865,
+  "prior_hits": {
+   "15": 6,
+   "23": 1
+  },
+  "prior_hit_indices": {
+   "15": [
+    0,
+    13,
+    14,
+    16,
+    17,
+    22
+   ],
+   "23": [
+    11
+   ]
+  },
+  "note": "rank-32 (15,23) is a mid-hub root: row 15 is covered by 6 prior top roots (indices 0,13,14,16,17,22), while row 23 has exactly one prior sharer (index 11), so rank-32 is the first rank where row 23 doubles: b_only records with doubled row 23 appear in the triple layer (9 records) and the quad layer (12 records), but never in the quint layer (a row-23 quint would need three further roots avoiding every doubled-row family, which does not exist in the top-32). The new pair census is 7 shared / 24 disjoint.",
+  "new_census": {
+   "pair": {
+    "shared": 7,
+    "disjoint": 24,
+    "total": 31,
+    "expected_total": 31
+   },
+   "triple": {
+    "b_only": 275,
+    "zero": 50,
+    "disjoint": 140,
+    "total": 465,
+    "expected_total": 465
+   },
+   "quad": {
+    "b_only": 1878,
+    "zero": 2459,
+    "disjoint": 158,
+    "total": 4495,
+    "expected_total": 4495
+   },
+   "quint": {
+    "b_only": 2010,
+    "zero": 29455,
+    "disjoint": 0,
+    "total": 31465,
+    "expected_total": 31465
+   }
+  },
+  "new_quint_double_row_histogram": {
+   "15": 613,
+   "16": 65,
+   "18": 962,
+   "19": 370
+  },
+  "new_triple_double_row_histogram": {
+   "0": 1,
+   "1": 1,
+   "4": 1,
+   "5": 1,
+   "11": 1,
+   "14": 1,
+   "15": 130,
+   "16": 3,
+   "18": 105,
+   "19": 21,
+   "23": 9,
+   "30": 1
+  },
+  "new_quad_double_row_histogram": {
+   "0": 14,
+   "1": 2,
+   "4": 2,
+   "5": 14,
+   "11": 2,
+   "14": 2,
+   "15": 635,
+   "16": 31,
+   "18": 847,
+   "19": 315,
+   "23": 12,
+   "30": 2
+  },
+  "b_only_quint_four_subset_profiles": {
+   "3/2/0": 2010
+  },
+  "disjoint_quad_count": 158,
+  "disjoint_quad_union_sizes": {
+   "8": 158
+  },
+  "cumulative_disjoint_quads": 820,
+  "full_triples": {
+   "counts": {
+    "b_only": 2992,
+    "zero": 980,
+    "disjoint": 988
+   },
+   "total": 4960,
+   "double_row_histogram": {
+    "0": 58,
+    "1": 8,
+    "4": 32,
+    "5": 21,
+    "11": 8,
+    "14": 8,
+    "15": 438,
+    "16": 51,
+    "18": 1755,
+    "19": 563,
+    "23": 9,
+    "24": 9,
+    "30": 32
+   },
+   "compared": 4960,
+   "mismatches": 0
+  },
+  "full_quints": {
+   "counts": {
+    "b_only": 8797,
+    "zero": 192579,
+    "disjoint": 0
+   },
+   "total": 201376,
+   "double_row_histogram": {
+    "15": 1616,
+    "16": 304,
+    "18": 5111,
+    "19": 1766
+   },
+   "compared": 201376,
+   "mismatches": 0
+  },
+  "sextet_census": {
+   "total": 906192,
+   "counts": {
+    "b_only": 0,
+    "zero": 906192,
+    "disjoint": 0
+   },
+   "compared": 906192,
+   "mismatches": 0
+  }
+ },
+ "checks": [
+  {
+   "name": "top50_has_50_unique_pair_roots",
+   "pass": true,
+   "detail": {
+    "len": 50
+   }
+  },
+  {
+   "name": "k31_declares_pinned_k30_input",
+   "pass": true,
+   "detail": {
+    "declared": "9c24e7a30ad213d3b7675e620ec606b00f73a330",
+    "pinned": "9c24e7a30ad213d3b7675e620ec606b00f73a330"
+   }
+  },
+  {
+   "name": "rank30_root_matches_published",
+   "pass": true,
+   "detail": {
+    "root": "00000000080008003800000008001000",
+    "rows": [
+     14,
+     19
+    ],
+    "membership": 120210131097430568
+   }
+  },
+  {
+   "name": "rank30_new_census_matches_published",
+   "pass": true,
+   "detail": {
+    "pair": {
+     "shared": 8,
+     "disjoint": 21
+    },
+    "triple": {
+     "b_only": 248,
+     "zero": 56,
+     "disjoint": 102
+    },
+    "quad": {
+     "b_only": 1302,
+     "zero": 2241,
+     "disjoint": 111
+    },
+    "quint": {
+     "b_only": 1328,
+     "zero": 22423,
+     "disjoint": 0
+    }
+   }
+  },
+  {
+   "name": "rank30_full_census_matches_published",
+   "pass": true,
+   "detail": {
+    "full_triples": {
+     "b_only": 2452,
+     "zero": 815,
+     "disjoint": 793
+    },
+    "full_quints": {
+     "b_only": 5968,
+     "zero": 136538,
+     "disjoint": 0
+    },
+    "double_rows": {
+     "15": 925,
+     "16": 221,
+     "18": 3536,
+     "19": 1286
+    },
+    "quints_zero_synth": 22423
+   }
+  },
+  {
+   "name": "rank30_sextet_census_all_zero_published",
+   "pass": true,
+   "detail": {
+    "b_only": 0,
+    "zero": 593775,
+    "disjoint": 0
+   }
+  },
+  {
+   "name": "rank30_two_classifiers_agree",
+   "pass": true,
+   "detail": {
+    "comparisons": 768181,
+    "mismatches": 0
+   }
+  },
+  {
+   "name": "rank31_root_matches_published",
+   "pass": true,
+   "detail": {
+    "root": "00000000000040809002001000100000",
+    "rows": [
+     18,
+     26
+    ],
+    "membership": 120181378067473629
+   }
+  },
+  {
+   "name": "rank31_new_census_matches_published",
+   "pass": true,
+   "detail": {
+    "pair": {
+     "shared": 15,
+     "disjoint": 15
+    },
+    "triple": {
+     "b_only": 265,
+     "zero": 115,
+     "disjoint": 55
+    },
+    "quad": {
+     "b_only": 986,
+     "zero": 3025,
+     "disjoint": 49
+    },
+    "quint": {
+     "b_only": 819,
+     "zero": 26586,
+     "disjoint": 0
+    }
+   }
+  },
+  {
+   "name": "rank31_full_census_matches_published",
+   "pass": true,
+   "detail": {
+    "full_triples": {
+     "b_only": 2717,
+     "zero": 930,
+     "disjoint": 848
+    },
+    "full_quints": {
+     "b_only": 6787,
+     "zero": 163124,
+     "disjoint": 0
+    },
+    "double_rows": {
+     "15": 1003,
+     "16": 239,
+     "18": 4149,
+     "19": 1396
+    },
+    "quints_zero_synth": 26586
+   }
+  },
+  {
+   "name": "rank31_sextet_census_all_zero_published",
+   "pass": true,
+   "detail": {
+    "b_only": 0,
+    "zero": 736281,
+    "disjoint": 0
+   }
+  },
+  {
+   "name": "rank31_two_classifiers_agree",
+   "pass": true,
+   "detail": {
+    "comparisons": 942617,
+    "mismatches": 0
+   }
+  },
+  {
+   "name": "quint_census_k31_prev_layer_equals_k30_published",
+   "pass": true,
+   "detail": {
+    "new_b_only": 819,
+    "full_k31": {
+     "b_only": 6787,
+     "zero": 163124,
+     "disjoint": 0
+    },
+    "published_k30": {
+     "b_only": 5968,
+     "disjoint": 0,
+     "zero": 136538
+    }
+   }
+  },
+  {
+   "name": "rank31_membership_split_identity",
+   "pass": true,
+   "detail": {
+    "membership": 120181378067473629,
+    "a_part": 92082202719887124,
+    "b_part": 28099175347586505
+   }
+  },
+  {
+   "name": "rank31_published_marginal_uses_exact_m31",
+   "pass": true,
+   "detail": {
+    "k31_minus_k30": "52914484706624166",
+    "m31": "120181378067473629"
+   }
+  },
+  {
+   "name": "rank32_root_matches_top50",
+   "pass": true,
+   "detail": {
+    "root": "00000000000000801222000000081000",
+    "rows": [
+     15,
+     23
+    ]
+   }
+  },
+  {
+   "name": "rank32_prior_hits_recorded",
+   "pass": true,
+   "detail": {
+    "15": [
+     0,
+     13,
+     14,
+     16,
+     17,
+     22
+    ],
+    "23": [
+     11
+    ]
+   }
+  },
+  {
+   "name": "rank32_membership_split_identity",
+   "pass": true,
+   "detail": {
+    "membership": 120146272057315812,
+    "a_part": 92121445452103947,
+    "b_part": 28024826605211865
+   }
+  },
+  {
+   "name": "rank32_new_pair_census",
+   "pass": true,
+   "detail": {
+    "shared": 7,
+    "disjoint": 24,
+    "total": 31
+   }
+  },
+  {
+   "name": "rank32_new_triple_census",
+   "pass": true,
+   "detail": {
+    "b_only": 275,
+    "zero": 50,
+    "disjoint": 140
+   }
+  },
+  {
+   "name": "rank32_new_quad_census",
+   "pass": true,
+   "detail": {
+    "b_only": 1878,
+    "zero": 2459,
+    "disjoint": 158
+   }
+  },
+  {
+   "name": "rank32_new_quint_census",
+   "pass": true,
+   "detail": {
+    "b_only": 2010,
+    "zero": 29455,
+    "disjoint": 0,
+    "records": 2010
+   }
+  },
+  {
+   "name": "rank32_new_quint_double_rows",
+   "pass": true,
+   "detail": {
+    "15": 613,
+    "16": 65,
+    "18": 962,
+    "19": 370
+   }
+  },
+  {
+   "name": "rank32_b_only_quint_profiles",
+   "pass": true,
+   "detail": {
+    "3/2/0": 2010
+   }
+  },
+  {
+   "name": "rank32_disjoint_quads_union8",
+   "pass": true,
+   "detail": {
+    "disjoint_quad_count": 158,
+    "union_sizes": {
+     "8": 158
+    },
+    "cumulative_disjoint_quads": 820
+   }
+  },
+  {
+   "name": "rank32_full_census_totals",
+   "pass": true,
+   "detail": {
+    "full_triples": {
+     "b_only": 2992,
+     "zero": 980,
+     "disjoint": 988
+    },
+    "full_quints": {
+     "b_only": 8797,
+     "zero": 192579,
+     "disjoint": 0
+    },
+    "quint_double_rows": {
+     "15": 1616,
+     "16": 304,
+     "18": 5111,
+     "19": 1766
+    }
+   }
+  },
+  {
+   "name": "rank32_quint_era_continuation",
+   "pass": true,
+   "detail": {
+    "prev_b_only": 6787,
+    "new_b_only": 2010,
+    "full_b_only": 8797,
+    "prev_zero": 163124,
+    "new_zero": 29455,
+    "full_zero": 192579
+   }
+  },
+  {
+   "name": "rank32_sextet_census_all_zero",
+   "pass": true,
+   "detail": {
+    "total": 906192,
+    "b_only": 0,
+    "zero": 906192,
+    "disjoint": 0
+   }
+  },
+  {
+   "name": "rank32_expected_totals",
+   "pass": true,
+   "detail": {
+    "C31_2": 465,
+    "C31_3": 4495,
+    "C31_4": 31465,
+    "C32_3": 4960,
+    "C32_5": 201376,
+    "C32_6": 906192
+   }
+  },
+  {
+   "name": "rank32_two_classifiers_agree",
+   "pass": true,
+   "detail": {
+    "comparisons": 1148984,
+    "mismatches": 0
+   }
+  },
+  {
+   "name": "rank32_exact_integer_json_serialization",
+   "pass": true,
+   "detail": {
+    "membership": 120146272057315812,
+    "a_part": 92121445452103947,
+    "b_part": 28024826605211865
+   }
+  }
+ ],
+ "check_count": 31,
+ "all_pass": true,
+ "unknown_status": "Standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN; cover-plan combinatorics only, no verdict is produced."
+}
