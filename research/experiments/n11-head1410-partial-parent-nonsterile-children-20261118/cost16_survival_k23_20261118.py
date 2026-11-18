@@ -2,11 +2,13 @@
 """Survival-curve extension to k=23 for the 31-row cost-16 parent
 00000000000000003800000008001000.
 
-rank-23 root (6,15) is the fifth non-hub root (row 15).
-Structure verified from the pinned aggregate before writing any
-pm value:
+rank-23 root (6,15) is the fifth non-hub root (row 15), after the
+four hub roots (14,18)/(18,29)/(7,18)/(9,18).  Structure verified
+from the pinned aggregate before writing any pm value:
 
-  * 22 new pairs (with rank-23): 5 shared-row, 17 disjoint;
+  * 22 new pairs (with rank-23): 5 shared-row (the five row-15
+    roots (15,19)/(0,15)/(15,24)/(4,15)/(15,30) pairwise share
+    row 15; no top-22 root contains row 6), 17 disjoint;
   * 231 new triples (with rank-23): 147 b_only, 22 zero, 62
     disjoint (A-type 3-way term, same formulas as the k=14..k=22
     publications);
@@ -15,9 +17,9 @@ pm value:
   * ALL 33,649 5-subsets of the top-23 are structurally zero: the
     non-hub roots (0,15)/(15,24)/(4,15)/(15,30)/(6,15) all contain
     row 15, so a 5-subset with <= 2 hub roots needs at least three
-    non-hub roots, triple-covering row 15; otherwise >= 3 hub roots
-    force a 3x hub row or two 2x rows among hub rows 18/19.  So the
-    I-E still terminates at quads:
+    non-hub roots, triple-covering row 15; otherwise >= 3 hub
+    roots force a 3x hub row or two 2x rows among hub rows 18/19.
+    So the I-E still terminates at quads:
       kill(k) = sum m - sum j2 + sum j3 - sum j4   (k <= 23)
       kill_A(k) = sum a - sum j2_A + sum j3_A        (j4_A == 0)
       kill_B(k) = sum b - sum j2_B + sum j3_B - sum j4_B
@@ -30,11 +32,11 @@ assembled k=23 machinery must reproduce the pinned k=22 publication
 Cover-plan combinatorics only.  No engine run, no verdict.
 
 Usage:
-  python3 cost16_survival_k22_20261118.py pairs [BUDGET]
-  python3 cost16_survival_k22_20261118.py triples [SLICE]
-  python3 cost16_survival_k22_20261118.py quads [SLICE]
-  python3 cost16_survival_k22_20261118.py cross
-  python3 cost16_survival_k22_20261118.py finalize
+  python3 cost16_survival_k23_20261118.py pairs [BUDGET]
+  python3 cost16_survival_k23_20261118.py triples [SLICE]
+  python3 cost16_survival_k23_20261118.py quads [SLICE]
+  python3 cost16_survival_k23_20261118.py cross
+  python3 cost16_survival_k23_20261118.py finalize
 """
 import hashlib
 import itertools
@@ -264,8 +266,7 @@ def load_k22_base():
         c = tuple(int(x) for x in key.split(","))
         quads[c] = {"class": v["class"], "joint": int(v["joint"])}
     assert len(quads) == 6600
-    return (k13, k14, k15, k16, k17, k18, k19, k20, k21, k22,
-            pairs, triples, quads)
+    return k13, k14, k15, k16, k17, k18, k19, k20, k21, k22, pairs, triples, quads
 
 
 classify = k14m.classify
@@ -592,7 +593,7 @@ def finalize_mode():
     chk("cross.quads_2", len(c4) == 2
         and all(e["match"] for e in c4.values()))
 
-    # ---- kill(k) k=1..16
+    # ---- kill(k) k=1..23
     kill = {}
     killA = {}
     killB = {}
@@ -649,9 +650,9 @@ def finalize_mode():
         "date": "2026-11-18",
         "lane": "n11 long lane (verification side)",
         "title": ("Exact survival curve extended to k=23 for the "
-                  "31-row cost-16 parent: fifth non-hub root "
-                  "(6,15); 62 new disjoint triples (A-type 3-way "
-                  "terms) and 636 new B-type-only quads; I-E "
+                  "31-row cost-16 parent: fifth non-hub root (6,15) "
+                  "on row 15; 62 new disjoint triples (A-type "
+                  "3-way terms) and 636 new B-type-only quads; I-E "
                   "verified to still terminate at quads (all 33,649 "
                   "5-subsets structurally zero)"),
         "inputs": {
