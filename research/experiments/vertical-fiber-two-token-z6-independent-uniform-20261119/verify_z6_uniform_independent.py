@@ -761,7 +761,7 @@ def main():
     for y in range(26, 44, 2):
         for d in (0, 1, 5, 8, 9, 11, 30, 41):
             x = y + d
-            for r in range(x + y + 7, x + y + 48)
+            for r in range(x + y + 7, x + y + 48):
                 n += 1
                 if H6(y, x, r) != (x + y) & 1:
                     failures.append(("tail_parity", y, x, r))
