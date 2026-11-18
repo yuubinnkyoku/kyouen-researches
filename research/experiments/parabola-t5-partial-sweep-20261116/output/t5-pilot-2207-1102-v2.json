@@ -1,0 +1,58 @@
+{
+ "p": 2207,
+ "h": 1103,
+ "size": 1102,
+ "class": [
+  1,
+  1,
+  3
+ ],
+ "budget": 100000,
+ "wall_limit": 300.0,
+ "mode": "fresh-each",
+ "order": [
+  1103,
+  1097,
+  1096,
+  1083,
+  1059,
+  276,
+  368,
+  551,
+  735,
+  827
+ ],
+ "vars": 14320,
+ "clauses": 62713,
+ "kept_edges": 31868,
+ "records": [
+  {
+   "d": 1103,
+   "k": 0,
+   "sat": null,
+   "unknown": true,
+   "seconds": 53.313,
+   "budget": 100000,
+   "unit_conflict": false,
+   "conflicts": 100000,
+   "decisions": 433276,
+   "propagations": 71270353,
+   "wall_timeout": false,
+   "total_seconds": 53.482
+  },
+  {
+   "d": 1097,
+   "k": 6,
+   "sat": null,
+   "unknown": true,
+   "seconds": 47.399,
+   "budget": 100000,
+   "unit_conflict": false,
+   "conflicts": 100001,
+   "decisions": 309482,
+   "propagations": 68887809,
+   "wall_timeout": false,
+   "total_seconds": 47.676
+  }
+ ]
+}
