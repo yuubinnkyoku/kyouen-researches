@@ -1,0 +1,3919 @@
+{
+ "schema": "n11-class2-lane-receipt-harvest-global-fold-20261118-v1",
+ "date": "2026-11-18",
+ "status": "fold-complete",
+ "basis_head": {
+  "solved_s6_in_manifest": 1476,
+  "remaining_s5_orbits": 174,
+  "unique_remaining_s6": 6372,
+  "sum_remaining_cost": 504389,
+  "s6_needed_by_open_classes": 4645,
+  "cost_needed_by_open_classes": 368303
+ },
+ "frontier_after_receipt_harvest_global_fold": {
+  "solved_s6_in_manifest": 1589,
+  "remaining_s5_orbits": 174,
+  "unique_remaining_s6": 6259,
+  "sum_remaining_cost": 495507,
+  "s6_needed_by_open_classes": 4543,
+  "cost_needed_by_open_classes": 360227
+ },
+ "method": {
+  "harvest_rebuild": "79 pinned sources; 3548 canons (353 WIN7-D10 / 3195 REFUTED-D10), equal to census v1 published totals",
+  "win_roots_scanned": 482,
+  "row_closability_rule": "open S6 row R is closable iff some published WIN7-D10 root X (7 stones) has a D4 transform sigma with R a subset of sigma(X) (one-stone reduction); receipt = orbit-level certificate transfer",
+  "why_not_found_earlier": "previous folds scanned per-band receipts against one parent's top rows at a time; no prior fold scanned the full published WIN-root set against the full open worklist"
+ },
+ "receipts_by_row": [
+  {
+   "row_hex": "00000000000000003800000008000022",
+   "cost": 65,
+   "category": "unswept",
+   "demand": {
+    "c1": 1,
+    "c2": 1,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000003800000000000022",
+    "00000000000000003800000008000002"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000403800000008000022",
+     "source": "cost69j bit 1 manifest",
+     "transform": 0,
+     "extra_bit": 70
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000003800000008004040",
+   "cost": 74,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 1,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000003800000008000010"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000403800000008004040",
+     "source": "cost72d bit 6 manifest",
+     "transform": 0,
+     "extra_bit": 70
+    }
+   ]
+  },
+  {
+   "row_hex": "0000000000000000380000000a004000",
+   "cost": 71,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 1,
+    "c4": 0
+   },
+   "parents": [
+    "0000000000000000380000000a000000"
+   ],
+   "receipts": [
+    {
+     "root": "0000000000000040380000000a004000",
+     "source": "cost72d bit 25 manifest",
+     "transform": 0,
+     "extra_bit": 70
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000003800000208040000",
+   "cost": 83,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 1,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000003800000208000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000403800080008004000",
+     "source": "cost72d bit 43 manifest",
+     "transform": 4,
+     "extra_bit": 72
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000003800000408000002",
+   "cost": 80,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000003800000008000002",
+    "00000000000000003800000408000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000403800000408000002",
+     "source": "cost73j bit 1 manifest",
+     "transform": 0,
+     "extra_bit": 70
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000003800000428000000",
+   "cost": 84,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "0000000000000000380000000a000000",
+    "00000000000000003800000408000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000403800000428000000",
+     "source": "cost73j bit 29 manifest",
+     "transform": 0,
+     "extra_bit": 70
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000003800100408000000",
+   "cost": 87,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000003800000408000000",
+    "00000000000000003800100008000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000403800100408000000",
+     "source": "cost73j bit 44 manifest",
+     "transform": 0,
+     "extra_bit": 70
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000003800400008000002",
+   "cost": 79,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000003800000008000002",
+    "00000000000000003800400008000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000403800400008000002",
+     "source": "cost73i bit 1 manifest",
+     "transform": 0,
+     "extra_bit": 70
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000003800400008000020",
+   "cost": 72,
+   "category": "unswept",
+   "demand": {
+    "c1": 1,
+    "c2": 1,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000003800400000000020",
+    "00000000000000003800400008000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000403810000008000020",
+     "source": "cost69j bit 52 manifest",
+     "transform": 4,
+     "extra_bit": 72
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000003800400008000200",
+   "cost": 78,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000003800000008000002",
+    "00000000000000003800400008000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000403800400008000200",
+     "source": "cost73i bit 9 manifest",
+     "transform": 0,
+     "extra_bit": 70
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000003800400008040000",
+   "cost": 77,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 1,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000003800400008000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000403800400008040000",
+     "source": "cost73i bit 18 manifest",
+     "transform": 0,
+     "extra_bit": 70
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000003800400028000000",
+   "cost": 78,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "0000000000000000380000000a000000",
+    "00000000000000003800400008000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000403800400028000000",
+     "source": "cost73i bit 29 manifest",
+     "transform": 0,
+     "extra_bit": 70
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000003800440008000000",
+   "cost": 85,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000003800000408000000",
+    "00000000000000003800400008000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000403810000408000000",
+     "source": "cost73j bit 52 manifest",
+     "transform": 4,
+     "extra_bit": 72
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000003801000080001000",
+   "cost": 71,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 0,
+    "c4": 2
+   },
+   "parents": [
+    "00000000000000003800000000900000",
+    "00000000000000003801000080000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000200000003801000080001000",
+     "source": "cost71e bit 100 manifest",
+     "transform": 0,
+     "extra_bit": 93
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000003801004080000000",
+   "cost": 82,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 0,
+    "c4": 2
+   },
+   "parents": [
+    "00000000000000003800004000800000",
+    "00000000000000003801000080000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000c09402000000002000",
+     "source": "cost71e bit 58 manifest",
+     "transform": 3,
+     "extra_bit": 93
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000003804100000800000",
+   "cost": 83,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 0,
+    "c4": 2
+   },
+   "parents": [
+    "00000000000000003800100000800000",
+    "00000000000000003801000080000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000c09002000000002010",
+     "source": "cost71e bit 4 manifest",
+     "transform": 6,
+     "extra_bit": 93
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000003810100008000000",
+   "cost": 85,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000003800100008000000",
+    "00000000000000003800400008000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000403840400008000000",
+     "source": "cost73i bit 54 manifest",
+     "transform": 4,
+     "extra_bit": 72
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000043801000080000000",
+   "cost": 84,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 0,
+    "c4": 2
+   },
+   "parents": [
+    "00000000000000003801000080000000",
+    "00000000000000043800000080000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000020001003840000008000000",
+     "source": "cost71e bit 116 manifest",
+     "transform": 2,
+     "extra_bit": 93
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000083800000008000020",
+   "cost": 66,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 1,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000083800000008000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000c29002000000008000",
+     "source": "cost69j bit 75 manifest",
+     "transform": 1,
+     "extra_bit": 72
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000103800040008000000",
+   "cost": 81,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000003800000408000000",
+    "00000000000000103800000008000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000001103800040008000000",
+     "source": "cost73j bit 74 manifest",
+     "transform": 0,
+     "extra_bit": 72
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000103801000080000000",
+   "cost": 71,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 0,
+    "c4": 2
+   },
+   "parents": [
+    "00000000000000003801000080000000",
+    "00000000000000103800000080000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000020001003810000008000000",
+     "source": "cost73i bit97 (third-implementation audit 12/12 PASS)",
+     "transform": 2,
+     "extra_bit": 93
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000403800000000000022",
+   "cost": 75,
+   "category": "unswept",
+   "demand": {
+    "c1": 2,
+    "c2": 0,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000003800000000000022",
+    "00000000000000403800000000000020"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000403800000008000022",
+     "source": "cost69j bit 1 manifest",
+     "transform": 0,
+     "extra_bit": 27
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000403800000008000020",
+   "cost": 69,
+   "category": "unswept",
+   "demand": {
+    "c1": 1,
+    "c2": 1,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000403800000000000020",
+    "00000000000000403800000008000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000403800000008000022",
+     "source": "cost69j bit 1 manifest",
+     "transform": 0,
+     "extra_bit": 1
+    },
+    {
+     "root": "00000000000000403810000008000020",
+     "source": "cost69j bit 52 manifest",
+     "transform": 0,
+     "extra_bit": 52
+    },
+    {
+     "root": "00000000000000c29002000000008000",
+     "source": "cost69j bit 75 manifest",
+     "transform": 7,
+     "extra_bit": 75
+    },
+    {
+     "root": "00000000000000c29002000000000002",
+     "source": "cost69j bit 109 manifest",
+     "transform": 7,
+     "extra_bit": 109
+    },
+    {
+     "root": "00000000000000801286000000000400",
+     "source": "cost69j bit 110 manifest",
+     "transform": 6,
+     "extra_bit": 110
+    },
+    {
+     "root": "000000000000008012c6000000000000",
+     "source": "cost69j bit 114 manifest",
+     "transform": 6,
+     "extra_bit": 114
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000403800000008004000",
+   "cost": 72,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 1,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000403800000008000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000403800000008004002",
+     "source": "cost72d bit 1 manifest",
+     "transform": 0,
+     "extra_bit": 1
+    },
+    {
+     "root": "00000000000000403800000008004040",
+     "source": "cost72d bit 6 manifest",
+     "transform": 0,
+     "extra_bit": 6
+    },
+    {
+     "root": "00000000000000403800000009004000",
+     "source": "cost72d bit 24 manifest",
+     "transform": 0,
+     "extra_bit": 24
+    },
+    {
+     "root": "0000000000000040380000000a004000",
+     "source": "cost72d bit 25 manifest",
+     "transform": 0,
+     "extra_bit": 25
+    },
+    {
+     "root": "00000000000000403800080008004000",
+     "source": "cost72d bit 43 manifest",
+     "transform": 0,
+     "extra_bit": 43
+    },
+    {
+     "root": "00000000000000403802000008004000",
+     "source": "cost72d bit 49 manifest",
+     "transform": 0,
+     "extra_bit": 49
+    },
+    {
+     "root": "00000000000001083800000008040000",
+     "source": "cost72d bit 75 manifest",
+     "transform": 4,
+     "extra_bit": 75
+    },
+    {
+     "root": "00000000000000801206010400000000",
+     "source": "cost72d bit 80 manifest",
+     "transform": 6,
+     "extra_bit": 80
+    },
+    {
+     "root": "00000000000000a09003040000000000",
+     "source": "cost72d bit 83 manifest",
+     "transform": 1,
+     "extra_bit": 83
+    },
+    {
+     "root": "00000000000041801202000000000100",
+     "source": "cost72d bit 98 manifest",
+     "transform": 3,
+     "extra_bit": 98
+    },
+    {
+     "root": "00000000000000801246000400000000",
+     "source": "cost72d bit 114 manifest",
+     "transform": 6,
+     "extra_bit": 114
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000403800000008200000",
+   "cost": 79,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000003800000008000800",
+    "00000000000000403800000008000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000c09002000000001200",
+     "source": "cost66j bit9 (BigInt re-verification 15/15 PASS)",
+     "transform": 7,
+     "extra_bit": 108
+    },
+    {
+     "root": "00000000000000c09002000000400200",
+     "source": "cost73l bit 9 manifest",
+     "transform": 7,
+     "extra_bit": 118
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000403800000408000000",
+   "cost": 73,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000003800000408000000",
+    "00000000000000403800000008000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000403800000408000001",
+     "source": "cost73j bit 0 manifest",
+     "transform": 0,
+     "extra_bit": 0
+    },
+    {
+     "root": "00000000000000403800000408000002",
+     "source": "cost73j bit 1 manifest",
+     "transform": 0,
+     "extra_bit": 1
+    },
+    {
+     "root": "00000000000000403800000408000040",
+     "source": "cost73j bit 6 manifest",
+     "transform": 0,
+     "extra_bit": 6
+    },
+    {
+     "root": "00000000000000403800000428000000",
+     "source": "cost73j bit 29 manifest",
+     "transform": 0,
+     "extra_bit": 29
+    },
+    {
+     "root": "00000000000000403800100408000000",
+     "source": "cost73j bit 44 manifest",
+     "transform": 0,
+     "extra_bit": 44
+    },
+    {
+     "root": "00000000000000403802000408000000",
+     "source": "cost73j bit 49 manifest",
+     "transform": 0,
+     "extra_bit": 49
+    },
+    {
+     "root": "00000000000000403810000408000000",
+     "source": "cost73j bit 52 manifest",
+     "transform": 0,
+     "extra_bit": 52
+    },
+    {
+     "root": "00000000000000603800000408000000",
+     "source": "cost73j bit 69 manifest",
+     "transform": 0,
+     "extra_bit": 69
+    },
+    {
+     "root": "00000000000001103800040008000000",
+     "source": "cost73j bit 74 manifest",
+     "transform": 4,
+     "extra_bit": 74
+    },
+    {
+     "root": "00000000000000805206000000004000",
+     "source": "cost73j bit 82 manifest",
+     "transform": 6,
+     "extra_bit": 82
+    },
+    {
+     "root": "00000000000021003800040008000000",
+     "source": "cost73j bit 87 manifest",
+     "transform": 4,
+     "extra_bit": 87
+    },
+    {
+     "root": "00000000000000801206020000004000",
+     "source": "cost73j bit 91 manifest",
+     "transform": 6,
+     "extra_bit": 91
+    },
+    {
+     "root": "00000000010001003800040008000000",
+     "source": "cost73j bit 98 manifest",
+     "transform": 4,
+     "extra_bit": 98
+    },
+    {
+     "root": "00000000000000801206000000104000",
+     "source": "cost73j bit 100 manifest",
+     "transform": 6,
+     "extra_bit": 100
+    },
+    {
+     "root": "00000000000000801206000000004400",
+     "source": "cost73j bit 110 manifest",
+     "transform": 6,
+     "extra_bit": 110
+    },
+    {
+     "root": "00000000010000809003000000040000",
+     "source": "cost73j bit 118 manifest",
+     "transform": 1,
+     "extra_bit": 118
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000403800400008000000",
+   "cost": 73,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000003800400008000000",
+    "00000000000000403800000008000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000020001003810000008000000",
+     "source": "cost73i bit97 (third-implementation audit 12/12 PASS)",
+     "transform": 4,
+     "extra_bit": 97
+    },
+    {
+     "root": "00000000000000403800400008000002",
+     "source": "cost73i bit 1 manifest",
+     "transform": 0,
+     "extra_bit": 1
+    },
+    {
+     "root": "00000000000000403800400008000200",
+     "source": "cost73i bit 9 manifest",
+     "transform": 0,
+     "extra_bit": 9
+    },
+    {
+     "root": "00000000000000403800400008000800",
+     "source": "cost73i bit 11 manifest",
+     "transform": 0,
+     "extra_bit": 11
+    },
+    {
+     "root": "00000000000000403800400008040000",
+     "source": "cost73i bit 18 manifest",
+     "transform": 0,
+     "extra_bit": 18
+    },
+    {
+     "root": "00000000000000403800400028000000",
+     "source": "cost73i bit 29 manifest",
+     "transform": 0,
+     "extra_bit": 29
+    },
+    {
+     "root": "00000000000000403800404008000000",
+     "source": "cost73i bit 38 manifest",
+     "transform": 0,
+     "extra_bit": 38
+    },
+    {
+     "root": "00000000000000403840400008000000",
+     "source": "cost73i bit 54 manifest",
+     "transform": 0,
+     "extra_bit": 54
+    },
+    {
+     "root": "00000000000000805206000004000000",
+     "source": "cost73i bit 82 manifest",
+     "transform": 6,
+     "extra_bit": 82
+    },
+    {
+     "root": "00000000000000801206000004100000",
+     "source": "cost73i bit 100 manifest",
+     "transform": 6,
+     "extra_bit": 100
+    },
+    {
+     "root": "00000000000000801206000004000400",
+     "source": "cost73i bit 110 manifest",
+     "transform": 6,
+     "extra_bit": 110
+    },
+    {
+     "root": "00000000000000801206000004200000",
+     "source": "cost73i bit 111 manifest",
+     "transform": 6,
+     "extra_bit": 111
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000403810000000000020",
+   "cost": 77,
+   "category": "unswept",
+   "demand": {
+    "c1": 2,
+    "c2": 0,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000003800400000000020",
+    "00000000000000403800000000000020"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000403810000008000020",
+     "source": "cost69j bit 52 manifest",
+     "transform": 0,
+     "extra_bit": 27
+    }
+   ]
+  },
+  {
+   "row_hex": "000000000000008010c6000000000000",
+   "cost": 76,
+   "category": "unswept",
+   "demand": {
+    "c1": 2,
+    "c2": 0,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000403800000000000020",
+    "000000000000008010c2000000000000"
+   ],
+   "receipts": [
+    {
+     "root": "000000000000008012c6000000000000",
+     "source": "cost69j bit 114 manifest",
+     "transform": 0,
+     "extra_bit": 57
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000801202000000000401",
+   "cost": 82,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000003800000008000001",
+    "00000000000000801202000000000400"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000801206000000000401",
+     "source": "cost73k bit 0 manifest",
+     "transform": 0,
+     "extra_bit": 50
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000801202000000000480",
+   "cost": 78,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000801202000000000080",
+    "00000000000000801202000000000400"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000801206000000000480",
+     "source": "cost73k bit 7 manifest",
+     "transform": 0,
+     "extra_bit": 50
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000801202000000000c00",
+   "cost": 81,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000003800000008000002",
+    "00000000000000801202000000000400"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000801206000000000c00",
+     "source": "cost73k bit 11 manifest",
+     "transform": 0,
+     "extra_bit": 50
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000801202000000004400",
+   "cost": 89,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000003800000408000000",
+    "00000000000000801202000000000400"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000801206000000004400",
+     "source": "cost73j bit 110 manifest",
+     "transform": 0,
+     "extra_bit": 50
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000801202000000008400",
+   "cost": 84,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000003800200008000000",
+    "00000000000000801202000000000400"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000801206000000008400",
+     "source": "cost73k bit 15 manifest",
+     "transform": 0,
+     "extra_bit": 50
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000801202000000080004",
+   "cost": 72,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 2
+   },
+   "parents": [
+    "00000000000000003800000008400000",
+    "00000000000000801002000000002100",
+    "00000000000000801202000000080000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000c09002000000002100",
+     "source": "cost71e bit 8 manifest",
+     "transform": 4,
+     "extra_bit": 72
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000801202000000080040",
+   "cost": 83,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 2
+   },
+   "parents": [
+    "00000000000000003800100000800000",
+    "00000000000000043800000008000000",
+    "00000000000000801202000000080000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000c09002000000002010",
+     "source": "cost71e bit 4 manifest",
+     "transform": 4,
+     "extra_bit": 72
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000801202000000100002",
+   "cost": 78,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000003800000008000800",
+    "00000000000000801202000000100000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000c09002000000001200",
+     "source": "cost66j bit9 (BigInt re-verification 15/15 PASS)",
+     "transform": 4,
+     "extra_bit": 72
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000801202000000100008",
+   "cost": 81,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000003800000208000000",
+    "00000000000000801202000000100000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000c09002000000001080",
+     "source": "cost66j bit 7 manifest",
+     "transform": 4,
+     "extra_bit": 72
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000801202000001100000",
+   "cost": 71,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000003800000009000000",
+    "00000000000000801202000000100000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000c09002000040001000",
+     "source": "cost66j bit 30 manifest",
+     "transform": 4,
+     "extra_bit": 72
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000801202000004000400",
+   "cost": 82,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000003800400008000000",
+    "00000000000000801202000000000400"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000801206000004000400",
+     "source": "cost73i bit 110 manifest",
+     "transform": 0,
+     "extra_bit": 50
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000801202000100000002",
+   "cost": 88,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000003800000008000800",
+    "00000000000000801202000100000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000c09002000000400200",
+     "source": "cost73l bit 9 manifest",
+     "transform": 4,
+     "extra_bit": 72
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000801202000100000010",
+   "cost": 91,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000003800100008000000",
+    "00000000000000801202000100000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000c09002000000400040",
+     "source": "cost73l bit 6 manifest",
+     "transform": 4,
+     "extra_bit": 72
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000801202000100000100",
+   "cost": 88,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000801202000000000100",
+    "00000000000000801202000100000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000c09002000000400004",
+     "source": "cost73l bit 2 manifest",
+     "transform": 4,
+     "extra_bit": 72
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000801202000100000200",
+   "cost": 90,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000801202000000000200",
+    "00000000000000801202000100000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000c09002000000400002",
+     "source": "cost73l bit 1 manifest",
+     "transform": 4,
+     "extra_bit": 72
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000801202000100000800",
+   "cost": 82,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000003800000008000002",
+    "00000000000000801202000100000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000c09002000000600000",
+     "source": "cost73l bit 21 manifest",
+     "transform": 4,
+     "extra_bit": 72
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000801202000100004000",
+   "cost": 90,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000003800000408000000",
+    "00000000000000801202000100000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000c09002000000440000",
+     "source": "cost73l bit 18 manifest",
+     "transform": 4,
+     "extra_bit": 72
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000801202000104000000",
+   "cost": 83,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000003800400008000000",
+    "00000000000000801202000100000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000c09002000010400000",
+     "source": "cost73l bit 28 manifest",
+     "transform": 4,
+     "extra_bit": 72
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000801202000120000000",
+   "cost": 83,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000801202000020000000",
+    "00000000000000801202000100000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000c09002000002400000",
+     "source": "cost73l bit 25 manifest",
+     "transform": 4,
+     "extra_bit": 72
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000801202000180000000",
+   "cost": 85,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000801202000080000000",
+    "00000000000000801202000100000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000c09002000000c00000",
+     "source": "cost73l bit 23 manifest",
+     "transform": 4,
+     "extra_bit": 72
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000801202000500000000",
+   "cost": 83,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 1,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000801202000100000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000c09002040000400000",
+     "source": "cost73l bit 42 manifest",
+     "transform": 4,
+     "extra_bit": 72
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000801202000800080000",
+   "cost": 72,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 2
+   },
+   "parents": [
+    "0000000000000000380000000a000000",
+    "00000000000000801002000800080000",
+    "00000000000000801202000000080000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000c09002020000002000",
+     "source": "cost71e bit 41 manifest",
+     "transform": 4,
+     "extra_bit": 72
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000801202000900000000",
+   "cost": 83,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "0000000000000000380000000a000000",
+    "00000000000000801202000100000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000c09002020000400000",
+     "source": "cost73l bit 41 manifest",
+     "transform": 4,
+     "extra_bit": 72
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000801202010400000000",
+   "cost": 71,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 1,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000801202010000000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000801206010400000000",
+     "source": "cost72d bit 80 manifest",
+     "transform": 0,
+     "extra_bit": 50
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000801202020000000400",
+   "cost": 72,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000801202000000000400",
+    "00000000000000801202020000000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000801206020000000400",
+     "source": "cost73k bit 41 manifest",
+     "transform": 0,
+     "extra_bit": 50
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000801202020000004000",
+   "cost": 73,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000003800000408000000",
+    "00000000000000801202020000000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000801206020000004000",
+     "source": "cost73j bit 91 manifest",
+     "transform": 0,
+     "extra_bit": 50
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000801202100000000400",
+   "cost": 81,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000003800000008000010",
+    "00000000000000801202000000000400"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000801206100000000400",
+     "source": "cost73k bit 44 manifest",
+     "transform": 0,
+     "extra_bit": 50
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000801202100000080000",
+   "cost": 78,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 2
+   },
+   "parents": [
+    "00000000000000003800000008000010",
+    "00000000000000801002100000080000",
+    "00000000000000801202000000080000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000c09042000000002000",
+     "source": "cost71e bit 54 manifest",
+     "transform": 4,
+     "extra_bit": 72
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000801202100100000000",
+   "cost": 82,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000003800000008000010",
+    "00000000000000801202000100000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000c09042000000400000",
+     "source": "cost73l bit 54 manifest",
+     "transform": 4,
+     "extra_bit": 72
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000801202200100000000",
+   "cost": 76,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000003800000008008000",
+    "00000000000000801202000100000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000c09022000000400000",
+     "source": "cost73l bit 53 manifest",
+     "transform": 4,
+     "extra_bit": 72
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000801206000000000400",
+   "cost": 73,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000403800000008000000",
+    "00000000000000801202000000000400"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000801286000000000400",
+     "source": "cost69j bit 110 manifest",
+     "transform": 0,
+     "extra_bit": 55
+    },
+    {
+     "root": "00000000000000801206000004000400",
+     "source": "cost73i bit 110 manifest",
+     "transform": 0,
+     "extra_bit": 26
+    },
+    {
+     "root": "00000000000000801206000000004400",
+     "source": "cost73j bit 110 manifest",
+     "transform": 0,
+     "extra_bit": 14
+    },
+    {
+     "root": "00000000000000801206000000000401",
+     "source": "cost73k bit 0 manifest",
+     "transform": 0,
+     "extra_bit": 0
+    },
+    {
+     "root": "00000000000000801206000000000480",
+     "source": "cost73k bit 7 manifest",
+     "transform": 0,
+     "extra_bit": 7
+    },
+    {
+     "root": "00000000000000801206000000000c00",
+     "source": "cost73k bit 11 manifest",
+     "transform": 0,
+     "extra_bit": 11
+    },
+    {
+     "root": "00000000000000801206000000008400",
+     "source": "cost73k bit 15 manifest",
+     "transform": 0,
+     "extra_bit": 15
+    },
+    {
+     "root": "00000000000000801206000800000400",
+     "source": "cost73k bit 35 manifest",
+     "transform": 0,
+     "extra_bit": 35
+    },
+    {
+     "root": "00000000000000801206008000000400",
+     "source": "cost73k bit 39 manifest",
+     "transform": 0,
+     "extra_bit": 39
+    },
+    {
+     "root": "00000000000000801206020000000400",
+     "source": "cost73k bit 41 manifest",
+     "transform": 0,
+     "extra_bit": 41
+    },
+    {
+     "root": "00000000000000801206100000000400",
+     "source": "cost73k bit 44 manifest",
+     "transform": 0,
+     "extra_bit": 44
+    },
+    {
+     "root": "00000000000000801606000000000400",
+     "source": "cost73k bit 58 manifest",
+     "transform": 0,
+     "extra_bit": 58
+    },
+    {
+     "root": "00000000000000805206000000000400",
+     "source": "cost73k bit 62 manifest",
+     "transform": 0,
+     "extra_bit": 62
+    },
+    {
+     "root": "00000000000000a09003000000000001",
+     "source": "cost73k bit 73 manifest",
+     "transform": 4,
+     "extra_bit": 73
+    },
+    {
+     "root": "00000000000000849003000000000001",
+     "source": "cost73k bit 76 manifest",
+     "transform": 4,
+     "extra_bit": 76
+    },
+    {
+     "root": "00000000000020809003000000000001",
+     "source": "cost73k bit 87 manifest",
+     "transform": 4,
+     "extra_bit": 87
+    },
+    {
+     "root": "00000000020000801206000000000400",
+     "source": "cost73k bit 89 manifest",
+     "transform": 0,
+     "extra_bit": 89
+    },
+    {
+     "root": "00000000100000809003000000000001",
+     "source": "cost73k bit 94 manifest",
+     "transform": 4,
+     "extra_bit": 94
+    },
+    {
+     "root": "00000000080000809003000000000001",
+     "source": "cost73k bit 95 manifest",
+     "transform": 4,
+     "extra_bit": 95
+    },
+    {
+     "root": "00000000020000809003000000000001",
+     "source": "cost73k bit 97 manifest",
+     "transform": 4,
+     "extra_bit": 97
+    },
+    {
+     "root": "00000000010000809003000000000001",
+     "source": "cost73k bit 98 manifest",
+     "transform": 4,
+     "extra_bit": 98
+    },
+    {
+     "root": "00000000200000083804000000000400",
+     "source": "cost73k bit 103 manifest",
+     "transform": 7,
+     "extra_bit": 103
+    },
+    {
+     "root": "00000000200000003804200000000400",
+     "source": "cost73k bit 105 manifest",
+     "transform": 7,
+     "extra_bit": 105
+    },
+    {
+     "root": "00000000210000003804000000000400",
+     "source": "cost73k bit 112 manifest",
+     "transform": 7,
+     "extra_bit": 112
+    },
+    {
+     "root": "00000000200000003801080000000001",
+     "source": "cost73k bit 117 manifest",
+     "transform": 3,
+     "extra_bit": 117
+    }
+   ]
+  },
+  {
+   "row_hex": "0000000000000080120a000100000000",
+   "cost": 80,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000801202000100000000",
+    "0000000000000080120a000000000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000c09002800000400000",
+     "source": "cost73l bit 47 manifest",
+     "transform": 4,
+     "extra_bit": 72
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000801222000010000000",
+   "cost": 74,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000103800000008000000",
+    "00000000000000801222000000000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000801226000010000000",
+     "source": "cost66i bit 28 manifest",
+     "transform": 0,
+     "extra_bit": 50
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000801222000400000000",
+   "cost": 75,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 1,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000801222000000000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000803222000400000000",
+     "source": "pre-64h harvest: class2-lane-cost68c-inflight-20261114.json,class2-lane-cost68c-sweep-20261114.json",
+     "transform": 0,
+     "extra_bit": 61
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000801242000100000000",
+   "cost": 87,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000801202000100000000",
+    "00000000000000801242000000000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000c09002100000400000",
+     "source": "cost73l bit 44 manifest",
+     "transform": 4,
+     "extra_bit": 72
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000801242000400000000",
+   "cost": 80,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 1,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000801242000000000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000801246000400000000",
+     "source": "cost72d bit 114 manifest",
+     "transform": 0,
+     "extra_bit": 50
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000801282000000000200",
+   "cost": 75,
+   "category": "unswept",
+   "demand": {
+    "c1": 1,
+    "c2": 1,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000801082000000000200",
+    "00000000000000801202000000000200"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000c29002000000000002",
+     "source": "cost69j bit 109 manifest",
+     "transform": 4,
+     "extra_bit": 72
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000801282000000000400",
+   "cost": 73,
+   "category": "unswept",
+   "demand": {
+    "c1": 1,
+    "c2": 1,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000801082000000000400",
+    "00000000000000801202000000000400"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000801286000000000400",
+     "source": "cost69j bit 110 manifest",
+     "transform": 0,
+     "extra_bit": 50
+    }
+   ]
+  },
+  {
+   "row_hex": "000000000000008012c2000000000000",
+   "cost": 73,
+   "category": "unswept",
+   "demand": {
+    "c1": 1,
+    "c2": 1,
+    "c4": 0
+   },
+   "parents": [
+    "000000000000008010c2000000000000",
+    "00000000000000801242000000000000"
+   ],
+   "receipts": [
+    {
+     "root": "000000000000008012c6000000000000",
+     "source": "cost69j bit 114 manifest",
+     "transform": 0,
+     "extra_bit": 50
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000801302000100000000",
+   "cost": 81,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 1,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000801202000100000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000c19002000000400000",
+     "source": "cost73l bit 64 manifest",
+     "transform": 4,
+     "extra_bit": 72
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000805202000000080000",
+   "cost": 64,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 1,
+    "c4": 2
+   },
+   "parents": [
+    "00000000000000003800004000800000",
+    "00000000000000801202000000080000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000c09402000000002000",
+     "source": "cost71e bit 58 manifest",
+     "transform": 4,
+     "extra_bit": 72
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000841202000000080000",
+   "cost": 76,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 2
+   },
+   "parents": [
+    "00000000000000003800000008000010",
+    "00000000000000801202000000080000",
+    "00000000000000841002000000080000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000001841202000000080000",
+     "source": "cost71e bit 76 manifest",
+     "transform": 0,
+     "extra_bit": 72
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000849002000000001000",
+   "cost": 77,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000801202000000100000",
+    "00000000000000801242000000000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000c49002000000001000",
+     "source": "cost66j bit 66 manifest",
+     "transform": 0,
+     "extra_bit": 70
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000849002000000400000",
+   "cost": 86,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000801202000100000000",
+    "00000000000000801242000000000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000c49002000000400000",
+     "source": "cost73l bit 66 manifest",
+     "transform": 0,
+     "extra_bit": 70
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000889002000000020000",
+   "cost": 73,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000003800200008000000",
+    "00000000000000801222000000000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000c89002000000020000",
+     "source": "cost66i bit 103 manifest",
+     "transform": 0,
+     "extra_bit": 70
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000889002000000200000",
+   "cost": 77,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000003800000008000002",
+    "00000000000000801222000000000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000c89002000000200000",
+     "source": "cost66i bit 99 manifest",
+     "transform": 0,
+     "extra_bit": 70
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000889002000100000000",
+   "cost": 83,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000003800000008000004",
+    "00000000000000801222000000000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000c89002000100000000",
+     "source": "cost66i bit 88 manifest",
+     "transform": 0,
+     "extra_bit": 70
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000a09002000000000001",
+   "cost": 79,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000801202000000000400",
+    "0000000000000080120a000000000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000a09003000000000001",
+     "source": "cost73k bit 73 manifest",
+     "transform": 0,
+     "extra_bit": 48
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000c01002000000002100",
+   "cost": 81,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 0,
+    "c4": 2
+   },
+   "parents": [
+    "00000000000000003801000080000000",
+    "00000000000000801002000000002100"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000c09002000000002100",
+     "source": "cost71e bit 8 manifest",
+     "transform": 0,
+     "extra_bit": 63
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000c01002020000002000",
+   "cost": 63,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 0,
+    "c4": 2
+   },
+   "parents": [
+    "00000000000000003801000080000000",
+    "00000000000000801002000800080000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000c09002020000002000",
+     "source": "cost71e bit 41 manifest",
+     "transform": 0,
+     "extra_bit": 63
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000c01042000000002000",
+   "cost": 74,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 0,
+    "c4": 2
+   },
+   "parents": [
+    "00000000000000003801000080000000",
+    "00000000000000801002100000080000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000c09042000000002000",
+     "source": "cost71e bit 54 manifest",
+     "transform": 0,
+     "extra_bit": 63
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000c09002000000001000",
+   "cost": 66,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000403800000008000000",
+    "00000000000000801202000000100000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000c09002000000001080",
+     "source": "cost66j bit 7 manifest",
+     "transform": 0,
+     "extra_bit": 7
+    },
+    {
+     "root": "00000000000000c09002000000001200",
+     "source": "cost66j bit9 (BigInt re-verification 15/15 PASS)",
+     "transform": 0,
+     "extra_bit": 9
+    },
+    {
+     "root": "00000000000000c09002000040001000",
+     "source": "cost66j bit 30 manifest",
+     "transform": 0,
+     "extra_bit": 30
+    },
+    {
+     "root": "00000000000000c49002000000001000",
+     "source": "cost66j bit 66 manifest",
+     "transform": 0,
+     "extra_bit": 66
+    },
+    {
+     "root": "00000000000040c09002000000001000",
+     "source": "cost66j bit 78 manifest",
+     "transform": 0,
+     "extra_bit": 78
+    },
+    {
+     "root": "00000000000080c09002000000001000",
+     "source": "cost66j bit 79 manifest",
+     "transform": 0,
+     "extra_bit": 79
+    },
+    {
+     "root": "00000000100000c09002000000001000",
+     "source": "cost66j bit 92 manifest",
+     "transform": 0,
+     "extra_bit": 92
+    },
+    {
+     "root": "00000000040001801202000000100000",
+     "source": "cost66j bit 96 manifest",
+     "transform": 4,
+     "extra_bit": 96
+    },
+    {
+     "root": "00000000200000003801100000100000",
+     "source": "cost66j bit 114 manifest",
+     "transform": 1,
+     "extra_bit": 114
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000c09002000000002000",
+   "cost": 71,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 2
+   },
+   "parents": [
+    "00000000000000003801000080000000",
+    "00000000000000403800000008000000",
+    "00000000000000801202000000080000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000c09002000000002008",
+     "source": "cost71e bit 3 manifest",
+     "transform": 0,
+     "extra_bit": 3
+    },
+    {
+     "root": "00000000000000c09002000000002010",
+     "source": "cost71e bit 4 manifest",
+     "transform": 0,
+     "extra_bit": 4
+    },
+    {
+     "root": "00000000000000c09002000000002100",
+     "source": "cost71e bit 8 manifest",
+     "transform": 0,
+     "extra_bit": 8
+    },
+    {
+     "root": "00000000000000c09002020000002000",
+     "source": "cost71e bit 41 manifest",
+     "transform": 0,
+     "extra_bit": 41
+    },
+    {
+     "root": "00000000000000c09042000000002000",
+     "source": "cost71e bit 54 manifest",
+     "transform": 0,
+     "extra_bit": 54
+    },
+    {
+     "root": "00000000000000c09402000000002000",
+     "source": "cost71e bit 58 manifest",
+     "transform": 0,
+     "extra_bit": 58
+    },
+    {
+     "root": "00000000000001841202000000080000",
+     "source": "cost71e bit 76 manifest",
+     "transform": 4,
+     "extra_bit": 76
+    },
+    {
+     "root": "00000000000080c09002000000002000",
+     "source": "cost71e bit 79 manifest",
+     "transform": 0,
+     "extra_bit": 79
+    },
+    {
+     "root": "00000000020001003810000008000000",
+     "source": "cost73i bit97 (third-implementation audit 12/12 PASS)",
+     "transform": 3,
+     "extra_bit": 94
+    },
+    {
+     "root": "00000000020001003800000048000000",
+     "source": "cost71e bit 96 manifest",
+     "transform": 3,
+     "extra_bit": 96
+    },
+    {
+     "root": "00000000200000003801000080001000",
+     "source": "cost71e bit 100 manifest",
+     "transform": 1,
+     "extra_bit": 100
+    },
+    {
+     "root": "00000000020001003840000008000000",
+     "source": "cost71e bit 116 manifest",
+     "transform": 3,
+     "extra_bit": 116
+    },
+    {
+     "root": "00000000020001003800000008200000",
+     "source": "cost71e bit 119 manifest",
+     "transform": 3,
+     "extra_bit": 119
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000c09002000000400000",
+   "cost": 73,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000403800000008000000",
+    "00000000000000801202000100000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000010000809003000000040000",
+     "source": "cost73j bit 118 manifest",
+     "transform": 5,
+     "extra_bit": 106
+    },
+    {
+     "root": "00000000010000809003000000000001",
+     "source": "cost73k bit 98 manifest",
+     "transform": 5,
+     "extra_bit": 110
+    },
+    {
+     "root": "00000000000000c09002000000400002",
+     "source": "cost73l bit 1 manifest",
+     "transform": 0,
+     "extra_bit": 1
+    },
+    {
+     "root": "00000000000000c09002000000400004",
+     "source": "cost73l bit 2 manifest",
+     "transform": 0,
+     "extra_bit": 2
+    },
+    {
+     "root": "00000000000000c09002000000400008",
+     "source": "cost73l bit 3 manifest",
+     "transform": 0,
+     "extra_bit": 3
+    },
+    {
+     "root": "00000000000000c09002000000400010",
+     "source": "cost73l bit 4 manifest",
+     "transform": 0,
+     "extra_bit": 4
+    },
+    {
+     "root": "00000000000000c09002000000400040",
+     "source": "cost73l bit 6 manifest",
+     "transform": 0,
+     "extra_bit": 6
+    },
+    {
+     "root": "00000000000000c09002000000400100",
+     "source": "cost73l bit 8 manifest",
+     "transform": 0,
+     "extra_bit": 8
+    },
+    {
+     "root": "00000000000000c09002000000400200",
+     "source": "cost73l bit 9 manifest",
+     "transform": 0,
+     "extra_bit": 9
+    },
+    {
+     "root": "00000000000000c09002000000440000",
+     "source": "cost73l bit 18 manifest",
+     "transform": 0,
+     "extra_bit": 18
+    },
+    {
+     "root": "00000000000000c09002000000600000",
+     "source": "cost73l bit 21 manifest",
+     "transform": 0,
+     "extra_bit": 21
+    },
+    {
+     "root": "00000000000000c09002000000c00000",
+     "source": "cost73l bit 23 manifest",
+     "transform": 0,
+     "extra_bit": 23
+    },
+    {
+     "root": "00000000000000c09002000002400000",
+     "source": "cost73l bit 25 manifest",
+     "transform": 0,
+     "extra_bit": 25
+    },
+    {
+     "root": "00000000000000c09002000010400000",
+     "source": "cost73l bit 28 manifest",
+     "transform": 0,
+     "extra_bit": 28
+    },
+    {
+     "root": "00000000000000c09002000020400000",
+     "source": "cost73l bit 29 manifest",
+     "transform": 0,
+     "extra_bit": 29
+    },
+    {
+     "root": "00000000000000c09002000100400000",
+     "source": "cost73l bit 32 manifest",
+     "transform": 0,
+     "extra_bit": 32
+    },
+    {
+     "root": "00000000000000c09002000400400000",
+     "source": "cost73l bit 34 manifest",
+     "transform": 0,
+     "extra_bit": 34
+    },
+    {
+     "root": "00000000000000c09002020000400000",
+     "source": "cost73l bit 41 manifest",
+     "transform": 0,
+     "extra_bit": 41
+    },
+    {
+     "root": "00000000000000c09002040000400000",
+     "source": "cost73l bit 42 manifest",
+     "transform": 0,
+     "extra_bit": 42
+    },
+    {
+     "root": "00000000000000c09002100000400000",
+     "source": "cost73l bit 44 manifest",
+     "transform": 0,
+     "extra_bit": 44
+    },
+    {
+     "root": "00000000000000c09002800000400000",
+     "source": "cost73l bit 47 manifest",
+     "transform": 0,
+     "extra_bit": 47
+    },
+    {
+     "root": "00000000000000c09022000000400000",
+     "source": "cost73l bit 53 manifest",
+     "transform": 0,
+     "extra_bit": 53
+    },
+    {
+     "root": "00000000000000c09042000000400000",
+     "source": "cost73l bit 54 manifest",
+     "transform": 0,
+     "extra_bit": 54
+    },
+    {
+     "root": "00000000000000c0b002000000400000",
+     "source": "cost73l bit 61 manifest",
+     "transform": 0,
+     "extra_bit": 61
+    },
+    {
+     "root": "00000000000000c0d002000000400000",
+     "source": "cost73l bit 62 manifest",
+     "transform": 0,
+     "extra_bit": 62
+    },
+    {
+     "root": "00000000000000c19002000000400000",
+     "source": "cost73l bit 64 manifest",
+     "transform": 0,
+     "extra_bit": 64
+    },
+    {
+     "root": "00000000000000c49002000000400000",
+     "source": "cost73l bit 66 manifest",
+     "transform": 0,
+     "extra_bit": 66
+    },
+    {
+     "root": "00000000000100c09002000000400000",
+     "source": "cost73l bit 80 manifest",
+     "transform": 0,
+     "extra_bit": 80
+    },
+    {
+     "root": "00000000010000809003000020000000",
+     "source": "cost73l bit 95 manifest",
+     "transform": 5,
+     "extra_bit": 95
+    },
+    {
+     "root": "00000000010000809003000000020000",
+     "source": "cost73l bit 105 manifest",
+     "transform": 5,
+     "extra_bit": 105
+    },
+    {
+     "root": "00000000010000809003000000000004",
+     "source": "cost73l bit 112 manifest",
+     "transform": 5,
+     "extra_bit": 112
+    },
+    {
+     "root": "00000000010000809003000000000008",
+     "source": "cost73l bit 113 manifest",
+     "transform": 5,
+     "extra_bit": 113
+    },
+    {
+     "root": "00000000010000809003000000000040",
+     "source": "cost73l bit 116 manifest",
+     "transform": 5,
+     "extra_bit": 116
+    },
+    {
+     "root": "00000000010000809003000000000200",
+     "source": "cost73l bit 119 manifest",
+     "transform": 5,
+     "extra_bit": 119
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000c09002000200000000",
+   "cost": 79,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000403800000008000000",
+    "00000000000000801202080000000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000020809003000000000001",
+     "source": "cost73k bit 87 manifest",
+     "transform": 5,
+     "extra_bit": 110
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000c21002000000000002",
+   "cost": 79,
+   "category": "unswept",
+   "demand": {
+    "c1": 2,
+    "c2": 0,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000403800000000000020",
+    "00000000000000801082000000000200"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000c29002000000000002",
+     "source": "cost69j bit 109 manifest",
+     "transform": 0,
+     "extra_bit": 63
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000000c21002000000008000",
+   "cost": 72,
+   "category": "unswept",
+   "demand": {
+    "c1": 1,
+    "c2": 0,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000403800000000000020"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000000c29002000000008000",
+     "source": "cost69j bit 75 manifest",
+     "transform": 0,
+     "extra_bit": 63
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000001841002000000080000",
+   "cost": 70,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 0,
+    "c4": 2
+   },
+   "parents": [
+    "00000000000000003801000080000000",
+    "00000000000000841002000000080000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000001841202000000080000",
+     "source": "cost71e bit 76 manifest",
+     "transform": 0,
+     "extra_bit": 57
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000020003800040008000000",
+   "cost": 81,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000003800000408000000",
+    "00000000000000801202000000000080"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000021003800040008000000",
+     "source": "cost73j bit 87 manifest",
+     "transform": 0,
+     "extra_bit": 72
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000020809002000000000001",
+   "cost": 87,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000801202000000000400",
+    "00000000000000801202080000000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000020809003000000000001",
+     "source": "cost73k bit 87 manifest",
+     "transform": 0,
+     "extra_bit": 48
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000080003800000008000200",
+   "cost": 70,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000003800000008000002",
+    "00000000000000801202000020000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000080803800000008000200",
+     "source": "pre-64h harvest: class2-lane-cost67b-inflight-20261114.json,class2-lane-cost67b-sweep-20261114.json",
+     "transform": 0,
+     "extra_bit": 71
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000080809002000000002000",
+   "cost": 68,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 2
+   },
+   "parents": [
+    "00000000000000003800000020800000",
+    "00000000000000801202000000080000",
+    "00000000000000801202020000000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000080c09002000000002000",
+     "source": "cost71e bit 79 manifest",
+     "transform": 0,
+     "extra_bit": 70
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000000100809002000000400000",
+   "cost": 80,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000801202000100000000",
+    "00000000000000801202010000000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000000100c09002000000400000",
+     "source": "cost73l bit 80 manifest",
+     "transform": 0,
+     "extra_bit": 70
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000010000003800040008000000",
+   "cost": 89,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000003800000408000000",
+    "00000000000000801202000000000100"
+   ],
+   "receipts": [
+    {
+     "root": "00000000010001003800040008000000",
+     "source": "cost73j bit 98 manifest",
+     "transform": 0,
+     "extra_bit": 72
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000010000809002000000000001",
+   "cost": 87,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000801202000000000400",
+    "00000000000000801202000100000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000010000809003000000000001",
+     "source": "cost73k bit 98 manifest",
+     "transform": 0,
+     "extra_bit": 48
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000010000809002000000000004",
+   "cost": 88,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000801202000000000100",
+    "00000000000000801202000100000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000010000809003000000000004",
+     "source": "cost73l bit 112 manifest",
+     "transform": 0,
+     "extra_bit": 48
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000010000809002000000000008",
+   "cost": 82,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000801202000000000080",
+    "00000000000000801202000100000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000010000809003000000000008",
+     "source": "cost73l bit 113 manifest",
+     "transform": 0,
+     "extra_bit": 48
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000010000809002000000000040",
+   "cost": 91,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000003800100008000000",
+    "00000000000000801202000100000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000010000809003000000000040",
+     "source": "cost73l bit 116 manifest",
+     "transform": 0,
+     "extra_bit": 48
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000010000809002000000000200",
+   "cost": 88,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000003800000008000800",
+    "00000000000000801202000100000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000010000809003000000000200",
+     "source": "cost73l bit 119 manifest",
+     "transform": 0,
+     "extra_bit": 48
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000010000809002000000020000",
+   "cost": 83,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000003800200008000000",
+    "00000000000000801202000100000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000010000809003000000020000",
+     "source": "cost73l bit 105 manifest",
+     "transform": 0,
+     "extra_bit": 48
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000010000809002000020000000",
+   "cost": 82,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000003800000808000000",
+    "00000000000000801202000100000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000010000809003000020000000",
+     "source": "cost73l bit 95 manifest",
+     "transform": 0,
+     "extra_bit": 48
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000020000003800000008200000",
+   "cost": 79,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 2
+   },
+   "parents": [
+    "00000000000000003800000008000800",
+    "00000000000000801202000000080000",
+    "00000000020000003800000000200000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000020001003800000008200000",
+     "source": "cost71e bit 119 manifest",
+     "transform": 0,
+     "extra_bit": 72
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000020000003800000048000000",
+   "cost": 79,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 2
+   },
+   "parents": [
+    "00000000000000003800000009000000",
+    "00000000000000801202000000080000",
+    "00000000020000003800000040000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000020001003800000048000000",
+     "source": "cost71e bit 96 manifest",
+     "transform": 0,
+     "extra_bit": 72
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000020000003810000008000000",
+   "cost": 76,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 2
+   },
+   "parents": [
+    "00000000000000003800400008000000",
+    "00000000000000103800000080000000",
+    "00000000000000801202000000080000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000020001003810000008000000",
+     "source": "cost73i bit97 (third-implementation audit 12/12 PASS)",
+     "transform": 0,
+     "extra_bit": 72
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000020000003840000008000000",
+   "cost": 84,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 2
+   },
+   "parents": [
+    "00000000000000003800100008000000",
+    "00000000000000043800000080000000",
+    "00000000000000801202000000080000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000020001003840000008000000",
+     "source": "cost71e bit 116 manifest",
+     "transform": 0,
+     "extra_bit": 72
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000020000809002000000000001",
+   "cost": 84,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000801202000000000400",
+    "00000000000000801202000080000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000020000809003000000000001",
+     "source": "cost73k bit 97 manifest",
+     "transform": 0,
+     "extra_bit": 48
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000020001003800000000200000",
+   "cost": 83,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 0,
+    "c4": 2
+   },
+   "parents": [
+    "00000000000000003801000080000000",
+    "00000000020000003800000000200000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000020001003800000008200000",
+     "source": "cost71e bit 119 manifest",
+     "transform": 0,
+     "extra_bit": 27
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000020001003800000040000000",
+   "cost": 71,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 0,
+    "c4": 2
+   },
+   "parents": [
+    "00000000000000003801000080000000",
+    "00000000020000003800000040000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000020001003800000048000000",
+     "source": "cost71e bit 96 manifest",
+     "transform": 0,
+     "extra_bit": 27
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000040000801202000000100000",
+   "cost": 68,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000003800000009000000",
+    "00000000000000801202000000100000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000040001801202000000100000",
+     "source": "cost66j bit 96 manifest",
+     "transform": 0,
+     "extra_bit": 72
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000080000809002000000000001",
+   "cost": 82,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000801202000000000400",
+    "00000000000000801202000020000000"
+   ],
+   "receipts": [
+    {
+     "root": "00000000080000809003000000000001",
+     "source": "cost73k bit 95 manifest",
+     "transform": 0,
+     "extra_bit": 48
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000200000003800000200000400",
+   "cost": 81,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000801202000000000080",
+    "00000000000000801202000000000400"
+   ],
+   "receipts": [
+    {
+     "root": "00000000200000003801080000000001",
+     "source": "cost73k bit 117 manifest",
+     "transform": 4,
+     "extra_bit": 50
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000200000003800200000000400",
+   "cost": 81,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000083800000008000000",
+    "00000000000000801202000000000400"
+   ],
+   "receipts": [
+    {
+     "root": "00000000200000003804200000000400",
+     "source": "cost73k bit 105 manifest",
+     "transform": 0,
+     "extra_bit": 50
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000200000083800000000000400",
+   "cost": 83,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000003800200008000000",
+    "00000000000000801202000000000400"
+   ],
+   "receipts": [
+    {
+     "root": "00000000200000083804000000000400",
+     "source": "cost73k bit 103 manifest",
+     "transform": 0,
+     "extra_bit": 50
+    }
+   ]
+  },
+  {
+   "row_hex": "00000000210000003800000000000400",
+   "cost": 79,
+   "category": "unswept",
+   "demand": {
+    "c1": 0,
+    "c2": 2,
+    "c4": 0
+   },
+   "parents": [
+    "00000000000000003800000008400000",
+    "00000000000000801202000000000400"
+   ],
+   "receipts": [
+    {
+     "root": "00000000210000003804000000000400",
+     "source": "cost73k bit 112 manifest",
+     "transform": 0,
+     "extra_bit": 50
+    }
+   ]
+  }
+ ],
+ "totals": {
+  "rows_closed": 113,
+  "dual_fold_rows": 7,
+  "global_scan_rows": 106,
+  "s6_edge_cost_removed": 8882,
+  "needed_rows_closed": 102,
+  "needed_cost_removed": 8076
+ },
+ "parents_after": {
+  "00000000000000003800000000000022": {
+   "s5_hex": "00000000000000003800000000000022",
+   "classes": 1,
+   "rows_before": 53,
+   "rows_after": 51,
+   "edge_cost_before": 4048,
+   "edge_cost_after": 3908,
+   "lost_rows": 2,
+   "lost_edge_cost": 140
+  },
+  "00000000000000003800000000900000": {
+   "s5_hex": "00000000000000003800000000900000",
+   "classes": 4,
+   "rows_before": 81,
+   "rows_after": 80,
+   "edge_cost_before": 6577,
+   "edge_cost_after": 6506,
+   "lost_rows": 1,
+   "lost_edge_cost": 71
+  },
+  "00000000000000003800000008000001": {
+   "s5_hex": "00000000000000003800000008000001",
+   "classes": 2,
+   "rows_before": 47,
+   "rows_after": 46,
+   "edge_cost_before": 3803,
+   "edge_cost_after": 3721,
+   "lost_rows": 1,
+   "lost_edge_cost": 82
+  },
+  "00000000000000003800000008000002": {
+   "s5_hex": "00000000000000003800000008000002",
+   "classes": 2,
+   "rows_before": 39,
+   "rows_after": 31,
+   "edge_cost_before": 2962,
+   "edge_cost_after": 2350,
+   "lost_rows": 8,
+   "lost_edge_cost": 612
+  },
+  "00000000000000003800000008000004": {
+   "s5_hex": "00000000000000003800000008000004",
+   "classes": 2,
+   "rows_before": 65,
+   "rows_after": 64,
+   "edge_cost_before": 5377,
+   "edge_cost_after": 5294,
+   "lost_rows": 1,
+   "lost_edge_cost": 83
+  },
+  "00000000000000003800000008000010": {
+   "s5_hex": "00000000000000003800000008000010",
+   "classes": 2,
+   "rows_before": 52,
+   "rows_after": 47,
+   "edge_cost_before": 3922,
+   "edge_cost_after": 3531,
+   "lost_rows": 5,
+   "lost_edge_cost": 391
+  },
+  "00000000000000003800000008000800": {
+   "s5_hex": "00000000000000003800000008000800",
+   "classes": 2,
+   "rows_before": 46,
+   "rows_after": 41,
+   "edge_cost_before": 3692,
+   "edge_cost_after": 3280,
+   "lost_rows": 5,
+   "lost_edge_cost": 412
+  },
+  "00000000000000003800000008008000": {
+   "s5_hex": "00000000000000003800000008008000",
+   "classes": 2,
+   "rows_before": 49,
+   "rows_after": 48,
+   "edge_cost_before": 3491,
+   "edge_cost_after": 3415,
+   "lost_rows": 1,
+   "lost_edge_cost": 76
+  },
+  "00000000000000003800000008400000": {
+   "s5_hex": "00000000000000003800000008400000",
+   "classes": 2,
+   "rows_before": 42,
+   "rows_after": 40,
+   "edge_cost_before": 3127,
+   "edge_cost_after": 2976,
+   "lost_rows": 2,
+   "lost_edge_cost": 151
+  },
+  "00000000000000003800000009000000": {
+   "s5_hex": "00000000000000003800000009000000",
+   "classes": 2,
+   "rows_before": 29,
+   "rows_after": 26,
+   "edge_cost_before": 2203,
+   "edge_cost_after": 1985,
+   "lost_rows": 3,
+   "lost_edge_cost": 218
+  },
+  "0000000000000000380000000a000000": {
+   "s5_hex": "0000000000000000380000000a000000",
+   "classes": 2,
+   "rows_before": 51,
+   "rows_after": 46,
+   "edge_cost_before": 3843,
+   "edge_cost_after": 3455,
+   "lost_rows": 5,
+   "lost_edge_cost": 388
+  },
+  "00000000000000003800000020800000": {
+   "s5_hex": "00000000000000003800000020800000",
+   "classes": 4,
+   "rows_before": 76,
+   "rows_after": 75,
+   "edge_cost_before": 5744,
+   "edge_cost_after": 5676,
+   "lost_rows": 1,
+   "lost_edge_cost": 68
+  },
+  "00000000000000003800000208000000": {
+   "s5_hex": "00000000000000003800000208000000",
+   "classes": 2,
+   "rows_before": 64,
+   "rows_after": 62,
+   "edge_cost_before": 5282,
+   "edge_cost_after": 5118,
+   "lost_rows": 2,
+   "lost_edge_cost": 164
+  },
+  "00000000000000003800000408000000": {
+   "s5_hex": "00000000000000003800000408000000",
+   "classes": 2,
+   "rows_before": 55,
+   "rows_after": 44,
+   "edge_cost_before": 4550,
+   "edge_cost_after": 3638,
+   "lost_rows": 11,
+   "lost_edge_cost": 912
+  },
+  "00000000000000003800000808000000": {
+   "s5_hex": "00000000000000003800000808000000",
+   "classes": 2,
+   "rows_before": 51,
+   "rows_after": 50,
+   "edge_cost_before": 3825,
+   "edge_cost_after": 3743,
+   "lost_rows": 1,
+   "lost_edge_cost": 82
+  },
+  "00000000000000003800004000800000": {
+   "s5_hex": "00000000000000003800004000800000",
+   "classes": 4,
+   "rows_before": 83,
+   "rows_after": 81,
+   "edge_cost_before": 6761,
+   "edge_cost_after": 6615,
+   "lost_rows": 2,
+   "lost_edge_cost": 146
+  },
+  "00000000000000003800100000800000": {
+   "s5_hex": "00000000000000003800100000800000",
+   "classes": 4,
+   "rows_before": 85,
+   "rows_after": 83,
+   "edge_cost_before": 7090,
+   "edge_cost_after": 6924,
+   "lost_rows": 2,
+   "lost_edge_cost": 166
+  },
+  "00000000000000003800100008000000": {
+   "s5_hex": "00000000000000003800100008000000",
+   "classes": 2,
+   "rows_before": 64,
+   "rows_after": 59,
+   "edge_cost_before": 5336,
+   "edge_cost_after": 4898,
+   "lost_rows": 5,
+   "lost_edge_cost": 438
+  },
+  "00000000000000003800200008000000": {
+   "s5_hex": "00000000000000003800200008000000",
+   "classes": 2,
+   "rows_before": 62,
+   "rows_after": 58,
+   "edge_cost_before": 4817,
+   "edge_cost_after": 4494,
+   "lost_rows": 4,
+   "lost_edge_cost": 323
+  },
+  "00000000000000003800400000000020": {
+   "s5_hex": "00000000000000003800400000000020",
+   "classes": 1,
+   "rows_before": 77,
+   "rows_after": 75,
+   "edge_cost_before": 6018,
+   "edge_cost_after": 5869,
+   "lost_rows": 2,
+   "lost_edge_cost": 149
+  },
+  "00000000000000003800400008000000": {
+   "s5_hex": "00000000000000003800400008000000",
+   "classes": 2,
+   "rows_before": 55,
+   "rows_after": 44,
+   "edge_cost_before": 4375,
+   "edge_cost_after": 3507,
+   "lost_rows": 11,
+   "lost_edge_cost": 868
+  },
+  "00000000000000003801000080000000": {
+   "s5_hex": "00000000000000003801000080000000",
+   "classes": 4,
+   "rows_before": 75,
+   "rows_after": 63,
+   "edge_cost_before": 5623,
+   "edge_cost_after": 4719,
+   "lost_rows": 12,
+   "lost_edge_cost": 904
+  },
+  "00000000000000043800000008000000": {
+   "s5_hex": "00000000000000043800000008000000",
+   "classes": 2,
+   "rows_before": 66,
+   "rows_after": 65,
+   "edge_cost_before": 5547,
+   "edge_cost_after": 5464,
+   "lost_rows": 1,
+   "lost_edge_cost": 83
+  },
+  "00000000000000043800000080000000": {
+   "s5_hex": "00000000000000043800000080000000",
+   "classes": 4,
+   "rows_before": 91,
+   "rows_after": 89,
+   "edge_cost_before": 7813,
+   "edge_cost_after": 7645,
+   "lost_rows": 2,
+   "lost_edge_cost": 168
+  },
+  "00000000000000083800000008000000": {
+   "s5_hex": "00000000000000083800000008000000",
+   "classes": 2,
+   "rows_before": 49,
+   "rows_after": 47,
+   "edge_cost_before": 3683,
+   "edge_cost_after": 3536,
+   "lost_rows": 2,
+   "lost_edge_cost": 147
+  },
+  "00000000000000103800000008000000": {
+   "s5_hex": "00000000000000103800000008000000",
+   "classes": 2,
+   "rows_before": 56,
+   "rows_after": 54,
+   "edge_cost_before": 4214,
+   "edge_cost_after": 4059,
+   "lost_rows": 2,
+   "lost_edge_cost": 155
+  },
+  "00000000000000103800000080000000": {
+   "s5_hex": "00000000000000103800000080000000",
+   "classes": 4,
+   "rows_before": 84,
+   "rows_after": 82,
+   "edge_cost_before": 6611,
+   "edge_cost_after": 6464,
+   "lost_rows": 2,
+   "lost_edge_cost": 147
+  },
+  "00000000000000403800000000000020": {
+   "s5_hex": "00000000000000403800000000000020",
+   "classes": 1,
+   "rows_before": 79,
+   "rows_after": 73,
+   "edge_cost_before": 6129,
+   "edge_cost_after": 5681,
+   "lost_rows": 6,
+   "lost_edge_cost": 448
+  },
+  "00000000000000403800000008000000": {
+   "s5_hex": "00000000000000403800000008000000",
+   "classes": 2,
+   "rows_before": 11,
+   "rows_after": 1,
+   "edge_cost_before": 806,
+   "edge_cost_after": 78,
+   "lost_rows": 10,
+   "lost_edge_cost": 728
+  },
+  "00000000000000801002000000002100": {
+   "s5_hex": "00000000000000801002000000002100",
+   "classes": 4,
+   "rows_before": 88,
+   "rows_after": 86,
+   "edge_cost_before": 7260,
+   "edge_cost_after": 7107,
+   "lost_rows": 2,
+   "lost_edge_cost": 153
+  },
+  "00000000000000801002000800080000": {
+   "s5_hex": "00000000000000801002000800080000",
+   "classes": 4,
+   "rows_before": 76,
+   "rows_after": 74,
+   "edge_cost_before": 5340,
+   "edge_cost_after": 5205,
+   "lost_rows": 2,
+   "lost_edge_cost": 135
+  },
+  "00000000000000801002100000080000": {
+   "s5_hex": "00000000000000801002100000080000",
+   "classes": 4,
+   "rows_before": 84,
+   "rows_after": 82,
+   "edge_cost_before": 6763,
+   "edge_cost_after": 6611,
+   "lost_rows": 2,
+   "lost_edge_cost": 152
+  },
+  "00000000000000801082000000000200": {
+   "s5_hex": "00000000000000801082000000000200",
+   "classes": 1,
+   "rows_before": 69,
+   "rows_after": 67,
+   "edge_cost_before": 5718,
+   "edge_cost_after": 5564,
+   "lost_rows": 2,
+   "lost_edge_cost": 154
+  },
+  "00000000000000801082000000000400": {
+   "s5_hex": "00000000000000801082000000000400",
+   "classes": 1,
+   "rows_before": 74,
+   "rows_after": 73,
+   "edge_cost_before": 5951,
+   "edge_cost_after": 5878,
+   "lost_rows": 1,
+   "lost_edge_cost": 73
+  },
+  "000000000000008010c2000000000000": {
+   "s5_hex": "000000000000008010c2000000000000",
+   "classes": 1,
+   "rows_before": 79,
+   "rows_after": 77,
+   "edge_cost_before": 6307,
+   "edge_cost_after": 6158,
+   "lost_rows": 2,
+   "lost_edge_cost": 149
+  },
+  "00000000000000801202000000000080": {
+   "s5_hex": "00000000000000801202000000000080",
+   "classes": 2,
+   "rows_before": 50,
+   "rows_after": 46,
+   "edge_cost_before": 3784,
+   "edge_cost_after": 3462,
+   "lost_rows": 4,
+   "lost_edge_cost": 322
+  },
+  "00000000000000801202000000000100": {
+   "s5_hex": "00000000000000801202000000000100",
+   "classes": 2,
+   "rows_before": 59,
+   "rows_after": 56,
+   "edge_cost_before": 4865,
+   "edge_cost_after": 4600,
+   "lost_rows": 3,
+   "lost_edge_cost": 265
+  },
+  "00000000000000801202000000000200": {
+   "s5_hex": "00000000000000801202000000000200",
+   "classes": 2,
+   "rows_before": 63,
+   "rows_after": 61,
+   "edge_cost_before": 5161,
+   "edge_cost_after": 4996,
+   "lost_rows": 2,
+   "lost_edge_cost": 165
+  },
+  "00000000000000801202000000000400": {
+   "s5_hex": "00000000000000801202000000000400",
+   "classes": 2,
+   "rows_before": 66,
+   "rows_after": 47,
+   "edge_cost_before": 5436,
+   "edge_cost_after": 3898,
+   "lost_rows": 19,
+   "lost_edge_cost": 1538
+  },
+  "00000000000000801202000000080000": {
+   "s5_hex": "00000000000000801202000000080000",
+   "classes": 6,
+   "rows_before": 62,
+   "rows_after": 50,
+   "edge_cost_before": 4767,
+   "edge_cost_after": 3865,
+   "lost_rows": 12,
+   "lost_edge_cost": 902
+  },
+  "00000000000000801202000000100000": {
+   "s5_hex": "00000000000000801202000000100000",
+   "classes": 2,
+   "rows_before": 45,
+   "rows_after": 39,
+   "edge_cost_before": 3305,
+   "edge_cost_after": 2864,
+   "lost_rows": 6,
+   "lost_edge_cost": 441
+  },
+  "00000000000000801202000020000000": {
+   "s5_hex": "00000000000000801202000020000000",
+   "classes": 2,
+   "rows_before": 44,
+   "rows_after": 41,
+   "edge_cost_before": 3348,
+   "edge_cost_after": 3113,
+   "lost_rows": 3,
+   "lost_edge_cost": 235
+  },
+  "00000000000000801202000080000000": {
+   "s5_hex": "00000000000000801202000080000000",
+   "classes": 2,
+   "rows_before": 37,
+   "rows_after": 35,
+   "edge_cost_before": 2825,
+   "edge_cost_after": 2656,
+   "lost_rows": 2,
+   "lost_edge_cost": 169
+  },
+  "00000000000000801202000100000000": {
+   "s5_hex": "00000000000000801202000100000000",
+   "classes": 2,
+   "rows_before": 68,
+   "rows_after": 42,
+   "edge_cost_before": 5682,
+   "edge_cost_after": 3490,
+   "lost_rows": 26,
+   "lost_edge_cost": 2192
+  },
+  "00000000000000801202010000000000": {
+   "s5_hex": "00000000000000801202010000000000",
+   "classes": 2,
+   "rows_before": 46,
+   "rows_after": 44,
+   "edge_cost_before": 3368,
+   "edge_cost_after": 3217,
+   "lost_rows": 2,
+   "lost_edge_cost": 151
+  },
+  "00000000000000801202020000000000": {
+   "s5_hex": "00000000000000801202020000000000",
+   "classes": 2,
+   "rows_before": 47,
+   "rows_after": 44,
+   "edge_cost_before": 3231,
+   "edge_cost_after": 3018,
+   "lost_rows": 3,
+   "lost_edge_cost": 213
+  },
+  "00000000000000801202080000000000": {
+   "s5_hex": "00000000000000801202080000000000",
+   "classes": 2,
+   "rows_before": 72,
+   "rows_after": 70,
+   "edge_cost_before": 5970,
+   "edge_cost_after": 5804,
+   "lost_rows": 2,
+   "lost_edge_cost": 166
+  },
+  "0000000000000080120a000000000000": {
+   "s5_hex": "0000000000000080120a000000000000",
+   "classes": 2,
+   "rows_before": 40,
+   "rows_after": 38,
+   "edge_cost_before": 2965,
+   "edge_cost_after": 2806,
+   "lost_rows": 2,
+   "lost_edge_cost": 159
+  },
+  "00000000000000801222000000000000": {
+   "s5_hex": "00000000000000801222000000000000",
+   "classes": 2,
+   "rows_before": 68,
+   "rows_after": 63,
+   "edge_cost_before": 5204,
+   "edge_cost_after": 4822,
+   "lost_rows": 5,
+   "lost_edge_cost": 382
+  },
+  "00000000000000801242000000000000": {
+   "s5_hex": "00000000000000801242000000000000",
+   "classes": 2,
+   "rows_before": 50,
+   "rows_after": 45,
+   "edge_cost_before": 3981,
+   "edge_cost_after": 3578,
+   "lost_rows": 5,
+   "lost_edge_cost": 403
+  },
+  "00000000000000841002000000080000": {
+   "s5_hex": "00000000000000841002000000080000",
+   "classes": 4,
+   "rows_before": 82,
+   "rows_after": 80,
+   "edge_cost_before": 6591,
+   "edge_cost_after": 6445,
+   "lost_rows": 2,
+   "lost_edge_cost": 146
+  },
+  "00000000020000003800000000200000": {
+   "s5_hex": "00000000020000003800000000200000",
+   "classes": 4,
+   "rows_before": 85,
+   "rows_after": 83,
+   "edge_cost_before": 7020,
+   "edge_cost_after": 6858,
+   "lost_rows": 2,
+   "lost_edge_cost": 162
+  },
+  "00000000020000003800000040000000": {
+   "s5_hex": "00000000020000003800000040000000",
+   "classes": 4,
+   "rows_before": 82,
+   "rows_after": 80,
+   "edge_cost_before": 6282,
+   "edge_cost_after": 6132,
+   "lost_rows": 2,
+   "lost_edge_cost": 150
+  }
+ },
+ "parent_row_incidences": 225,
+ "parent_edge_cost_delta": 17697,
+ "parent_count_fully_closed": 0,
+ "notable_parent": {
+  "s5_hex": "00000000000000403800000008000000",
+  "classes": 2,
+  "rows_before": 12,
+  "rows_after": 1,
+  "rows_after_hexes": [
+   "00000000000000403800000008000008"
+  ],
+  "edge_cost_before": 806,
+  "edge_cost_after": 78
+ },
+ "controls": {
+  "C1_already_folded_66i_bit19_root_closes_no_open_row": "PASS (0 rows)",
+  "C2_66i_bit19_fold_rows_consistent_with_ledger": "PASS",
+  "C3_sample_receipt_transforms_valid_5_of_5": "PASS",
+  "C4_sterile_registry_overlap": "PASS (0 of 35)",
+  "frontier_before_match": "head-1476 six-tuple independently re-derived and equal to published"
+ },
+ "conflict_census": {
+  "verdict_conflicts_among_sources": 0,
+  "overlap_with_sterile_registry": 0
+ },
+ "source_blob_pins": {
+  "research/experiments/n11-class2-lane-closability-ranking-20261116/output/class-frontier-remaining-s6-worklist-1410-20261116.csv": "2fee1d0718547a62e346d35f5858d7913e37c097",
+  "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/fold-chain-ledger-1410-1476-crosscheck-20261118.json": "e8785d509e8a11a37c0d03cc450455a14708c34d",
+  "research/experiments/n11-head1410-receipt-unclosability-census-20261116/output/n11-head1410-receipt-unclosability-census-20261116.json": "9c251da3138c5cb0516e097be5e5d0427dfaf5f0",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost64h-receipts-recompute-20261117.json": "1633be292f6f1862c895009eac29d398d0be7738",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost76c-receipts-recompute-20261117.json": "cb875a1da69eff1a80341e563130faa618706f48",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost56a-inflight-20261114.json": "59c0c0403cc1c5bb65d25deb525b66262f463d31",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost56a-sweep-20261114.json": "e872dc5261f86d3afbe48b5fd41f327a1707e9c2",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost58b-inflight-20261114.json": "f05e64d28c93970765fb56886de5dd3587042279",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost58b-sweep-20261114.json": "01c2ea69defbcbf066206542ce7ac2090cfa34f1",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost60b-inflight-20261114.json": "1cf7c6bba86f7bbd6216ae70ff18cd86a48ead28",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost60b-sweep-20261114.json": "24aff1eb05966f2ac2e63099ef4e9bb5024ae587",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost60c-inflight-20261116.json": "5b9df50226f5420c03af39813c55b247992deaf6",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61d-inflight-20261114.json": "64bb94480d2a73efa818c735d8230ae0ddaf545f",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61d-sweep-20261114.json": "8b265a584eb789d3aaaa0d3a2ec6bcc43b748175",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61e-inflight-20261114.json": "04aba0a2ebe9e02cc599fcc474d8d37c60f8614e",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61e-sweep-20261114.json": "30aff27f50bd50475d5dec40cb680ed2fe5b5198",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61f-inflight-20261114.json": "6bd286048f30b4f0f803b5c7fca64c33780eba53",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost61f-sweep-20261114.json": "a2a721045da9cf08607239ea7e6636fb73c8165d",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost62a-inflight-20261114.json": "863e4765edbc9d88f62b38fc75a287de730adcca",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost62a-sweep-20261114.json": "08897d6cee0e163327833536222eb8d4662b44e8",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost62b-inflight-20261116.json": "3dcf41ecd2cc63ea2ade84d5454ebcc22df36d13",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost63a-inflight-20261114.json": "e4900c801d32477a39828d9640e2a43ec183de53",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost63a-sweep-20261114.json": "afc4fb9598a8e3ee4feb8eab7d316a57d715f04d",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost63c-sweep-20261114.json": "5770b951ecf5529c748964ea59de3e063bf2fcbc",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost63d-sweep-20261114.json": "91dbb822aa906def5ef118963bfc53a24d1e32d4",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost63e-inflight-20261114.json": "1b3bfbd50086e0d180a3b61e7a3f2df2129e1f2d",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost63e-sweep-20261114.json": "15a41876a523655c545fe34eb8f725386f610fad",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost63f-inflight-20261115.json": "fe8afecf3727eee5ff8ec4d6829551348275c7db",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost63g-inflight-20261115.json": "1844f9d25f15dbc6717b13178cb18459894fdade",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost63g-sweep-audit-20261115.json": "9603730b745413e5a99e10a2fecd48075f81ba2c",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64-sweep-20261114.json": "28075338db83a75c832e133e330e5186d2e8a3d5",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64b-inflight-20261114.json": "42bd3ca649fa7a093019b96131bc866f2bd5eddf",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64b-sweep-20261114.json": "ab1ef84ddc240038dd9b8f8437d07b0c65946d0f",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64c-inflight-20261116.json": "9565b7926205a6ebb0db578f11023777d402c6dc",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64d-inflight-20261116.json": "e3cf7378a08b156c5c0299c52e4ccbcd59de9236",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64e-inflight-20261116.json": "55c51c924a08fe69bfd24221f01d272db6beab2c",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64f-inflight-20261116.json": "b43303e88f04949cb037fafaf7d898885af6eada",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64g-inflight-20261116.json": "125a728eaf2eb45036875823efb68149ee9e1677",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost64g-sweep-audit-20261116.json": "fc45acbd9d19ad662393d36ffdd36ff58215b5a7",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65j-inflight-20261115.json": "7a4c900710e3ddb34fb9e272e8e673815e13a4f3",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65k-inflight-20261115.json": "808c1285552c59a1c3e8ddacfd45053553c4d1b5",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65n-inflight-20261116.json": "ae35e76c43a692807203779e8970b03f285ed141",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost65n-sweep-audit-20261116.json": "6b7d3579b2df28c0bffe68d8d994904a1bb80d86",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost66c-inflight-20261116.json": "5e89637b748cbc70838723edbbfeda907af78da5",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost66i-win7-certificates-20261116.json": "8a85ecef573bb6234b2ee1d9f7cb747926bd26ca",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost66j-win7-certificates-20261117.json": "b0af082044f669cdc7d5e633544069173938f7cb",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost67-sweep-20261114.json": "c9e5e85fd74fac5cccebad19015485132dc82a2d",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost67b-inflight-20261114.json": "160e3313857e8f36463941f82cecf0da4ac56aa9",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost67b-sweep-20261114.json": "42b8c9f8dad8a32feeb73cbeb5bcb27890848d0c",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost67c-inflight-20261115.json": "728f929d999fba6d0bed8e037b573d528f99616e",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost67c-sweep-audit-20261115.json": "bc550429f32a3795a4288108f614cacbfcbefed9",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost68b-sweep-20261114.json": "12fd849082f037ff074ef96e0e00d09fe94cf669",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost68c-inflight-20261114.json": "4c425bd24e786f57670d84ddfe771d56236f7cb2",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost68c-sweep-20261114.json": "898698ba5a1fcd91e3e8cd4ae6e79ffa5e5998d5",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost68d-sweep-20261115.json": "35b5321dcccaac88d428cc283211b8b05cf926a2",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost69a-sweep-20261114.json": "7b1c81e70e61001eaf079d6ab79cced6e90cacdd",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost69c-sweep-20261114.json": "490a0563b94f2a268c5bfead35cfa93e85c08799",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost69e-inflight-20261114.json": "2a64db5b56f173e310f5786dc03f5ac9c1fbd7ee",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost69e-sweep-20261114.json": "0c32792d50dd07f89dd915c92be2b7124f0ddebf",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost69h-inflight-20261115.json": "31e3314118557cf5e14062e2931ecfd603445f3f",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost69j-win7-certificates-20261117.json": "5e8e72faa1175ffa364849d8d90b73813406fa61",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70b-sweep-20261114.json": "d0eb4d23f674d218b23065ca72d4b63b58a9eeea",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70c-sweep-20261115.json": "03b4c3bf57690ee0c5e05ea10173aacc273e979e",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70d-inflight-20261115.json": "a86db7d4a8be671c7de708d6f6e031c9013be8c8",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70e-inflight-20261115.json": "9c27cff582e84159aace369b60cfe4543e788bbf",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70g-inflight-20261115.json": "b605ffe3efd3ba847f95d9fcbe512afd6538b7e3",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70g-sweep-20261115.json": "cdf18715258a252d84a3891a322be4e64e968fce",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70j-inflight-20261116.json": "df936bc1bba81c5d4351f870ae597b7bf4d33ce9",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71-sweep-20261114.json": "67a264b654767fce21677e3d5439ee1eb8fd0c8b",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71b-sweep-20261115.json": "942c6d15dfe7f5c6cd6259bcfbdba610d93c0f4b",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71d-inflight-20261116.json": "c044637826d8a859c96ca3c8c0a701e27b6c49f0",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71e-certificates/class2-lane-cost71e-win7-certificates-20261117.json": "a9ddec439e1931614679c2575e4adeb5fe770d2b",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72b-inflight-20261115.json": "b1c135c539e20c0ae94cdc2e66d769911af5eb7d",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72b-sweep-20261115.json": "2d27ad7ad6149687f0ecb5aeba1573dbd343bf36",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72c-inflight-20261115.json": "f4b9a0d11fa947d758348a4faf4f3094b1f7af83",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72d-certificates/class2-lane-cost72d-win7-certificates-20261117.json": "b350b714079efb37a15cee812f4657e3682d1a3c",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73f-inflight-20261115.json": "8cff8d716f49d67b0861afee5853c1e4266f933f",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73g-inflight-20261115.json": "1c28b2a1f981f3c6cae52897486cc5666e3b3f9d",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73h-inflight-20261115.json": "d19b630eafbe661f0652e93bca8a933570a671eb",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73i-certificates/class2-lane-cost73i-win7-certificates-20261118.json": "8a766a4225c418cb5eae297404de71d7f402c103",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73j-certificates/class2-lane-cost73j-win7-certificates-20261117.json": "e88710b5a2d4848be77a03ae5104e46aefc1279a",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73k-certificates/class2-lane-cost73k-win7-certificates-20261117.json": "0892aed07d187ae2fb3b4b90a21c7adbc1002b62",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost73l-certificates/class2-lane-cost73l-win7-certificates-20261117.json": "6e0a94aba212ba54bb5329fbea4643c9dcdb1ec4",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74d-inflight-20261115.json": "59fe55e3295854d2e8070964750c4998f28316e2",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74f-inflight-20261115.json": "c3f8d9fe89e81b449b7267d544b4424ca0e4ef40",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost74h-inflight-20261115.json": "8465cd1906ada0f0b82c17b9ab8f591232890b48",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost75b-sweep-20261115.json": "32727991aa8eb79bd76e793beca25d188bf94a2b",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost75c-sweep-20261115.json": "a728b16b0d6c99ab5789b10751a625e2abd2a7e4",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76a-inflight-20261115.json": "475f1b493b9eb8a668a11f850ac9e587fb4b5a29",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76d-raw-batch1-20261116.jsonl": "d3c9ae3690c7c74e2b85fb4a84e0b02bb0ee06fb",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76d-raw-batch10-20261116.jsonl": "8855f2d6f3821c1cd7d7e33eed6d17a63ecac3ee",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76d-raw-batch2-20261116.jsonl": "9144839aefc28cf4fd78710b1c130c0a0fe80f16",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76d-raw-batch3-20261116.jsonl": "8dae0d02ceea0b80ba1ecb0f853778b7dc158c23",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76d-raw-batch4-20261116.jsonl": "3c1e4557b97cc7f5cb2eb51cb79a9b02254ff11f",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76d-raw-batch5-20261116.jsonl": "c0c152d58a16aa9377ef8f365508699e32c71c94",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76d-raw-batch6-20261116.jsonl": "dbf10a3064c52472fddfc204fa4f0c00eaf6772e",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76d-raw-batch7-20261116.jsonl": "57c0eda0ffd3023ef44862c83c2eb547c7e4c584",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76d-raw-batch8-20261116.jsonl": "f4862407930d5658987dc4bc1fe9766c204ecf0e",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost76d-raw-batch9-20261116.jsonl": "bc32bed989265468841bb076ccfa6328e94514e3",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost77e-raw-batch1-20261116.jsonl": "2034e39709d598827d912074b15dc6a61df2d5ad",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost77e-raw-batch10-20261116.jsonl": "d9f4fa3c5aa85fe9e408f45a88396d1edcb535c2",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost77e-raw-batch2-20261116.jsonl": "cb883d07206e0f5ff4935ff4d36bbbf4addb7202",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost77e-raw-batch3-20261116.jsonl": "a64d7a19456c11f79e473f9df08c785007867d75",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost77e-raw-batch4-20261116.jsonl": "32d9d9582a848c0e65e91c56dfdab40de2fa74ee",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost77e-raw-batch5-20261116.jsonl": "489f13e374f267fbc0a3a798e631e4fb543b4fc7",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost77e-raw-batch6-20261116.jsonl": "5846d0470e43dc2ce49cecace0e6d628ff795765",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost77e-raw-batch7-20261116.jsonl": "106ac2387f7d302dfcc5963abf26ca20174ec2bb",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost77e-raw-batch8-20261116.jsonl": "3956be4dcc89009f07fd6e6ddb1eba8d186a8b54",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost77e-raw-batch9-20261116.jsonl": "59df74f2902e8b45dadcef9ee451c27fbe3ff953",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost77e-sweep-20261116.json": "57afde38509ae3c10df0c6c38883c9b5d4fc67a5",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78a-inflight-20261115.json": "468b6d4986cba54e1297eecdcdf19bb1b52322ac",
+  "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-next-target-presweep-1452-20261116.json": "0d9a94a272de9fe45708757f17bfea60239a3c9b"
+ },
+ "certificate_manifest": {
+  "pre-64h harvest WIN canons": "each canon inherits its published per-band WIN7-D10 certificate manifest (see source_blob_pins; per-band audits: BigInt rational / third-implementation, published separately)",
+  "post-64h manifests": "cost66i/66j/69j/71e/72d/73i/73j/73k/73l WIN7 certificate manifests as pinned",
+  "dual roots": {
+   "cost73i_bit97": "root 00000000020001003810000008000000; third-implementation audit 12/12 PASS (sha256 bf310fe5..., record pinned)",
+   "cost66j_bit9": "root 00000000000000c09002000000001200; BigInt re-verification 15/15 PASS (sha256 b2686e22..., record pinned)"
+  },
+  "independent_verifiability": "the fold adds no new engine verdict; every receipt is a published WIN7-D10 certificate; this audit re-derives the full fold from the pinned sources without any engine run"
+ },
+ "input_snapshot": "none needed: the audit re-derives all inputs from source_blob_pins (harvest from 79 census-v1 sources, worklist-1410 CSV minus fold-chain ledger closed rows)",
+ "interpretation_guard": "Bookkeeping fold over published, independently verified WIN7-D10 receipts. It closes 113 S6 manifest rows and reduces open frontier demand; it closes no S5 parent fully, creates no new engine verdict, and does not solve the standard 11x11 empty board (11x11 remains UNKNOWN).",
+ "next_action": "Sweep the last open row 00000000000000403800000008000008 (cost 78) of class-2 parent 00000000000000403800000008000000 per census v20; a WIN bit there completes the first fully receipt-closed S5 parent, an all-REFUTED result makes the parent D10-unclosable."
+}

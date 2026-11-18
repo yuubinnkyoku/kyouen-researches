@@ -1,0 +1,229 @@
+{
+ "schema": "n11-class2-lane-next-target-presweep-1589-v20-20261118-v1",
+ "date": "2026-11-18",
+ "status": "target-selected",
+ "basis_head": {
+  "solved_s6_in_manifest": 1589,
+  "remaining_s5_orbits": 174,
+  "unique_remaining_s6": 6259,
+  "sum_remaining_cost": 495507,
+  "s6_needed_by_open_classes": 4543,
+  "cost_needed_by_open_classes": 360227
+ },
+ "basis_record": "class-frontier-receipt-harvest-global-fold-20261118.json (this script re-derives it via the audit module before ranking)",
+ "pool_definition": {
+  "base": "all worklist-1410 rows minus fold-chain-ledger closed rows minus the 113 receipt-harvest global-fold rows (head 1589)",
+  "excluded": "35 STERILE rows (category=sterile), 1 transfer_partial row (00000000000000801222000000800000, parents both partial_sterile, 3 transferred refuted bits awaiting engine confirmation - watch item, not a sweep target)",
+  "sterile_parent_exclusion": {
+   "fully_sterile_parents_at_1589": [
+    {
+     "s5_hex": "00000000000000801202000000200000",
+     "classes": 2,
+     "rows": 3,
+     "cost": 209,
+     "head1410_classification": "all_remaining_sterile"
+    },
+    {
+     "s5_hex": "00000000000000801202000040000000",
+     "classes": 2,
+     "rows": 2,
+     "cost": 135,
+     "head1410_classification": "partial_sterile"
+    },
+    {
+     "s5_hex": "00000000000000809082000000000000",
+     "classes": 3,
+     "rows": 10,
+     "cost": 698,
+     "head1410_classification": "all_remaining_sterile"
+    },
+    {
+     "s5_hex": "00000000020000003800000080000000",
+     "classes": 4,
+     "rows": 18,
+     "cost": 1460,
+     "head1410_classification": "all_remaining_sterile"
+    }
+   ],
+   "rows_excluded": 33,
+   "cost_excluded": 2502
+  }
+ },
+ "overlay_note": "open_bits_upper_bound uses the pre-64h harvest overlay only (78 sources + 76d/77e); the 22 post-64h verdict maps are not bit-folded here; sweep protocol re-runs confirmation bits fresh, so post-64h overlap does not affect target cost accounting",
+ "ranking_policy": {
+  "base": "cheapest cost, then fewest open bits, then hex",
+  "override": "parent-closure-first (coordinator certificate-candidate concentration): a sweep that can complete an S5 parent's row set takes precedence; rationale: only a fully closed parent reduces remaining_s5_orbits (174) and extends manifest secured coverage",
+  "eligible_rows": 6223,
+  "cheapest_20": [
+   {
+    "row": "00000000000002901002000000002000",
+    "cost": 50,
+    "legal_bits": 50,
+    "harvest_known_refuted": 0,
+    "open_bits_upper_bound": 50
+   },
+   {
+    "row": "00000000000000801802000800080000",
+    "cost": 55,
+    "legal_bits": 55,
+    "harvest_known_refuted": 1,
+    "open_bits_upper_bound": 54
+   },
+   {
+    "row": "00000000001080801002000000080000",
+    "cost": 56,
+    "legal_bits": 56,
+    "harvest_known_refuted": 0,
+    "open_bits_upper_bound": 56
+   },
+   {
+    "row": "00000000000000003800001001800000",
+    "cost": 57,
+    "legal_bits": 57,
+    "harvest_known_refuted": 1,
+    "open_bits_upper_bound": 56
+   },
+   {
+    "row": "00000000000000003800002000802000",
+    "cost": 57,
+    "legal_bits": 57,
+    "harvest_known_refuted": 0,
+    "open_bits_upper_bound": 57
+   },
+   {
+    "row": "00000000000080809002000000080000",
+    "cost": 58,
+    "legal_bits": 58,
+    "harvest_known_refuted": 2,
+    "open_bits_upper_bound": 56
+   },
+   {
+    "row": "00000000000000003800000003800000",
+    "cost": 58,
+    "legal_bits": 58,
+    "harvest_known_refuted": 1,
+    "open_bits_upper_bound": 57
+   },
+   {
+    "row": "00000000000000901002020000002000",
+    "cost": 58,
+    "legal_bits": 58,
+    "harvest_known_refuted": 0,
+    "open_bits_upper_bound": 58
+   },
+   {
+    "row": "00000000000080809002000020000000",
+    "cost": 59,
+    "legal_bits": 59,
+    "harvest_known_refuted": 1,
+    "open_bits_upper_bound": 58
+   },
+   {
+    "row": "00000000000000801002000880080000",
+    "cost": 59,
+    "legal_bits": 59,
+    "harvest_known_refuted": 0,
+    "open_bits_upper_bound": 59
+   },
+   {
+    "row": "00000000000000801002100000102000",
+    "cost": 59,
+    "legal_bits": 59,
+    "harvest_known_refuted": 0,
+    "open_bits_upper_bound": 59
+   },
+   {
+    "row": "00000000000000801012200000002000",
+    "cost": 59,
+    "legal_bits": 59,
+    "harvest_known_refuted": 0,
+    "open_bits_upper_bound": 59
+   },
+   {
+    "row": "00000000000000801802010000080000",
+    "cost": 59,
+    "legal_bits": 59,
+    "harvest_known_refuted": 0,
+    "open_bits_upper_bound": 59
+   },
+   {
+    "row": "00000000000000a0100a000000080000",
+    "cost": 59,
+    "legal_bits": 59,
+    "harvest_known_refuted": 0,
+    "open_bits_upper_bound": 59
+   },
+   {
+    "row": "00000000000002881002000000002000",
+    "cost": 59,
+    "legal_bits": 59,
+    "harvest_known_refuted": 0,
+    "open_bits_upper_bound": 59
+   },
+   {
+    "row": "00000000000080801002000000081000",
+    "cost": 59,
+    "legal_bits": 59,
+    "harvest_known_refuted": 0,
+    "open_bits_upper_bound": 59
+   },
+   {
+    "row": "00000000000000003800001800800000",
+    "cost": 60,
+    "legal_bits": 60,
+    "harvest_known_refuted": 0,
+    "open_bits_upper_bound": 60
+   },
+   {
+    "row": "00000000000000003800002004800000",
+    "cost": 60,
+    "legal_bits": 60,
+    "harvest_known_refuted": 0,
+    "open_bits_upper_bound": 60
+   },
+   {
+    "row": "00000000000000801002000000902000",
+    "cost": 60,
+    "legal_bits": 60,
+    "harvest_known_refuted": 0,
+    "open_bits_upper_bound": 60
+   },
+   {
+    "row": "00000000000000801002000020802000",
+    "cost": 60,
+    "legal_bits": 60,
+    "harvest_known_refuted": 0,
+    "open_bits_upper_bound": 60
+   }
+  ]
+ },
+ "selected_target": {
+  "row_hex": "00000000000000403800000008000008",
+  "band_cost": 78,
+  "legal_bits": 78,
+  "category": "unswept",
+  "open_parents": [
+   "00000000000000403800000008000000"
+  ],
+  "parent_classes": 2,
+  "parent_rows_before_fold": 12,
+  "parent_rows_after_fold": 1,
+  "parent_edge_cost_after_fold": 78,
+  "harvest_known_win_bits": 0,
+  "harvest_confirmation_bits": [
+   13,
+   115
+  ],
+  "fresh_bits": 76,
+  "expected_nodes_upper_bound": "78 bits x cap 1e9; the 82d/82e rows of similar cost completed at ~1.2e8 candidate nodes total",
+  "outcome_if_win": "first fully receipt-closed S5 parent; remaining_s5_orbits 174 -> 173; certificate extraction per cert_driver protocol, then receipt fold of the new root",
+  "outcome_if_all_refuted": "row STERILE; parent 00000000000000403800000008000000 D10-unclosable (definitive negative structural fact); revalidation band like 82d/82e"
+ },
+ "controls": {
+  "fold_rederivation": "PASS (audit module assertions all green)",
+  "eligible_pool_size": 6223,
+  "target_consistency": "PASS (no known WIN bit, 2 confirmation bits, single open parent, cost 78)"
+ },
+ "interpretation_guard": "Census and target selection only; no new engine verdict; the 11x11 empty board remains UNKNOWN.",
+ "next_action": "Sweep 00000000000000403800000008000008 (cost 78) in 9-bit batches per the ev82e protocol: v17 runner, v15 crosscheck, deterministic re-run of disagreements, cap 1e9 per bit, andclose 1, terminal range [13,17], raw JSONL published; band name to be assigned from the next free cost-78 slot (78a/78c used)."
+}
