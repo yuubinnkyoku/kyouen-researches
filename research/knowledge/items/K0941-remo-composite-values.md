@@ -5,7 +5,7 @@ status: proved
 title: 合成NのV(m)/U(m)完全決定（LADDER-ONLY・死の二分法・E-game閉包・ラベル合成）と全m値の純算術化
 relations:
   - depends_on: [K0928, K0934, K0935, K0937, K0939]
-  - connects: [K0929, K0931, K0933, K0936, K0922, K0919]
+  - connects: [K0929, K0931, K0933, K0936, K0922, K0919, K0943]
 artifacts:
   - research/experiments/remo-composite-values-20261118/report.md
   - research/experiments/remo-composite-values-20261118/sievegen_core.py
@@ -91,9 +91,9 @@ sievegen_core.pyはK0937 committed版のbyte同一コピー
 - **ENGINE**: m≤600両側1,200ゲーム: 新鮮python engine play_fullの
   生存者ラベル==predict（素数・合成の全mで値レベル一致。
   K0939が監視生死のみ検証していたのを強化）。
-- **P2OBS**（観察・全称証明なし）: U崩壊死(t,h,r)=(1,0,0)⟺N=spf(N)²
+- **P2OBS**（当時は観察・K0943で全称証明へ昇格）: U崩壊死(t,h,r)=(1,0,0)⟺N=spf(N)²
   （29例↔29例の全単射）・V側N=p²の死亡stretch状態は常に(n,t,r,h)=(p,1,0,1)
-  （m≤8,000・違反0）。
+  （m≤8,000・違反0）。K0943の系P2が両方向を全称証明（m≤30,000・52↔52で機械確認）。
 
 audit_build.pyはrun_checksを1回in-process実行し、さらに
 composite_verify.py（内部でrun_checksを2回実行してin-process決定性を検証）
@@ -108,7 +108,7 @@ composite_verify.py（内部でrun_checksを2回実行してin-process決定性�
 - σ_E/σ_Zの閉形式は主張しない（再帰が決定結果）。
   σ_Z(3,K)（K偶数・K≤4,000）の値1位置は豊富（4,8,12,28,40,52,72,…）で
   単純な倍数構造には乗らない。
-- P2OBSはm≤8,000の機械観察（全称証明は次課題・p²軌道のh-walk記述が必要）。
+- P2OBSはK0943（STATE-CF・DS-CF・P2）で全称証明済み（h-walk記述は不要だった）。
 - 定理B/C/Dの紙上証明はK0934（LAD-GEN）・K0939（ENTRY-LOC・END-INV遷移）・
   K0937（死亡合同式・INV-TRACK）の出版済み証明に依存する。機械アンカーは
   この依存構造込みで16,000値再構成+2,141ゲーム構造照合+8,238状態照合を
