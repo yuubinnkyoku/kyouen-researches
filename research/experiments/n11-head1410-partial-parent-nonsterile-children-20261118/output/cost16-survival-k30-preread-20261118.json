@@ -1,0 +1,288 @@
+{
+  "schema": "n11-cost16-k30-preread-20261118-v1",
+  "date": "2026-11-18",
+  "lane": "n11 long lane (verification side)",
+  "title": "31-row cost-16 parent: rank-30 structural preread",
+  "inputs": {
+    "aggregate": {
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/cost16-b-phase-groups-20261118.json",
+      "git_blob_sha1": "31bdefdb2e2cc90b706cbb8090e98eb5eece4d87"
+    },
+    "k27_result": {
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/cost16-survival-k27-20261118.json",
+      "git_blob_sha1": "3dc30ad6c51cc2d7678cc8777e4af2376267ddb8"
+    },
+    "k28_result": {
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/cost16-survival-k28-20261118.json",
+      "git_blob_sha1": "99db3a9a48d044727b3a4d83fb7fc97daa7513d2"
+    },
+    "rank29_anchor": "research/log/2026-11-18-n11-cost16-survival-k29-preread.md"
+  },
+  "scope": {
+    "parent": "00000000000000003800000008001000",
+    "rows": 31,
+    "minimum_cover_size": 16,
+    "top50_rank": 30,
+    "rank_convention": "top50_by_membership; 1-based rank 30"
+  },
+  "rank29_regression": {
+    "new_census": {
+      "pair": {
+        "b_only": 4,
+        "zero": 0,
+        "disjoint": 24,
+        "total": 28,
+        "expected_total": 28
+      },
+      "triple": {
+        "b_only": 195,
+        "zero": 32,
+        "disjoint": 151,
+        "total": 378,
+        "expected_total": 378
+      },
+      "quad": {
+        "b_only": 1516,
+        "zero": 1535,
+        "disjoint": 225,
+        "total": 3276,
+        "expected_total": 3276
+      },
+      "quint": {
+        "b_only": 2128,
+        "zero": 18347,
+        "disjoint": 0,
+        "total": 20475,
+        "expected_total": 20475
+      }
+    },
+    "new_quint_double_row_histogram": {
+      "15": 283,
+      "16": 172,
+      "18": 1297,
+      "19": 376
+    },
+    "full_triples": {
+      "b_only": 2204,
+      "zero": 759,
+      "disjoint": 691
+    },
+    "full_quints": {
+      "b_only": 4640,
+      "zero": 114115,
+      "disjoint": 0
+    },
+    "full_quint_double_row_histogram": {
+      "15": 738,
+      "16": 172,
+      "18": 2906,
+      "19": 824
+    },
+    "classifier_comparisons": 146566,
+    "mismatches": 0
+  },
+  "rank30": {
+    "root": "00000000080008003800000008001000",
+    "rows": [
+      14,
+      19
+    ],
+    "prior_hits": {
+      "14": 1,
+      "19": 7
+    },
+    "new_census": {
+      "pair": {
+        "b_only": 8,
+        "zero": 0,
+        "disjoint": 21,
+        "total": 29,
+        "expected_total": 29
+      },
+      "triple": {
+        "b_only": 248,
+        "zero": 56,
+        "disjoint": 102,
+        "total": 406,
+        "expected_total": 406
+      },
+      "quad": {
+        "b_only": 1302,
+        "zero": 2241,
+        "disjoint": 111,
+        "total": 3654,
+        "expected_total": 3654
+      },
+      "quint": {
+        "b_only": 1328,
+        "zero": 22423,
+        "disjoint": 0,
+        "total": 23751,
+        "expected_total": 23751
+      }
+    },
+    "new_quint_double_row_histogram": {
+      "15": 187,
+      "16": 49,
+      "18": 630,
+      "19": 462
+    },
+    "b_only_quint_four_subset_profiles": {
+      "3/2/0": 1328
+    },
+    "disjoint_quad_count": 111,
+    "disjoint_quad_union_sizes": [
+      8
+    ],
+    "full_triples": {
+      "counts": {
+        "b_only": 2452,
+        "zero": 815,
+        "disjoint": 793
+      },
+      "total": 4060,
+      "double_row_histogram": {
+        "0": 54,
+        "1": 7,
+        "4": 30,
+        "5": 19,
+        "11": 7,
+        "14": 7,
+        "15": 293,
+        "16": 47,
+        "18": 1435,
+        "19": 514,
+        "24": 9,
+        "30": 30
+      },
+      "compared": 4060,
+      "mismatches": 0
+    },
+    "full_quints": {
+      "counts": {
+        "b_only": 5968,
+        "zero": 136538,
+        "disjoint": 0
+      },
+      "total": 142506,
+      "double_row_histogram": {
+        "15": 925,
+        "16": 221,
+        "18": 3536,
+        "19": 1286
+      },
+      "compared": 142506,
+      "mismatches": 0
+    }
+  },
+  "checks": [
+    {
+      "name": "top50_has_50_unique_pair_roots",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "name": "rank28_root_matches_published",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "name": "rank28_new_census_matches_published",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "name": "rank28_full_census_matches_published",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "name": "rank28_two_classifiers_agree",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "name": "rank29_root_matches_log_anchor",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "name": "rank29_new_census_matches_log_anchor",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "name": "rank29_full_census_matches_log_anchor",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "name": "rank29_two_classifiers_agree",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "name": "rank30_root_matches_top50",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "name": "rank30_prior_hits_match",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "name": "rank30_new_pair_census",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "name": "rank30_new_triple_census",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "name": "rank30_new_quad_census",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "name": "rank30_new_quint_census",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "name": "rank30_two_classifiers_agree",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "name": "rank30_full_census_totals",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "name": "rank30_full_minus_new_equals_rank29",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "name": "rank30_quint_histogram_increment_matches",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "name": "rank30_disjoint_quad_unions_all_size8",
+      "pass": true,
+      "detail": {}
+    },
+    {
+      "name": "rank30_b_only_quint_profiles_partition",
+      "pass": true,
+      "detail": {}
+    }
+  ],
+  "check_count": 21,
+  "all_pass": true,
+  "interpretation_guard": "Structural overlap census only. It is not a Pm survival value, game verdict, certificate, or closure claim. Standard 11x11 empty board, two-stone roots, S2, and classes 1/2/4 remain UNKNOWN."
+}
