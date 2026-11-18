@@ -1,0 +1,69 @@
+{
+  "all_pass": true,
+  "classification": "universal proof by strong induction on y with an outer induction on x, explicit parametric A/B/C signature bands in (y,d), K0996, K0976, K0832 Theorem T and the general tail; finite checks are independent audits only",
+  "counts": {
+    "direct_formula_two_engines": 6856,
+    "engine_tail": 192,
+    "even_parent_bound": 1219444,
+    "independent_anchor_direct": 9090,
+    "mex_identity": 2444913,
+    "odd_parent_bound": 1225469,
+    "signature_coverage_and_identity": 2444913,
+    "small_y_engine_corroboration": 1746,
+    "tail_formula": 34604,
+    "tail_signature": 28968,
+    "y7_slice_reproduction": 54243,
+    "y8_slice_reproduction": 55377,
+    "y9_slice_reproduction_K0999": 55626
+  },
+  "failures": [],
+  "repeat_byte_identical": true,
+  "repeat_runs": 2,
+  "scope": {
+    "anchor_K0976_y": [
+      9,
+      12
+    ],
+    "anchor_K0996_x": [
+      8,
+      40
+    ],
+    "bands_d": [
+      0,
+      200
+    ],
+    "bands_y": "all y in 9..150 plus 9..40 deep-d, samples at 200,500,1000",
+    "direct_R": "0 <= R <= x+y+10",
+    "direct_y": [
+      9,
+      12,
+      15,
+      20
+    ],
+    "signature_R": "1 <= R <= x+y+8",
+    "small_y_engine": "y in (5,6), y<=x<=30, R <= x+y+10",
+    "tail_signature_y": [
+      9,
+      150
+    ],
+    "tail_y": [
+      9,
+      219
+    ],
+    "y7_reproduction_x": [
+      7,
+      300
+    ],
+    "y8_reproduction_x": [
+      8,
+      300
+    ],
+    "y9_reproduction_K0999_x": [
+      9,
+      300
+    ]
+  },
+  "sha256_without_hash_field": "4ca3561274afff0c0fb2dd8d622962ff2e60c8c3a1149960cbda812e6bc5495b",
+  "target": "H(R;(x,y);8), all x>=y>=9, R>=0",
+  "total_checks": 7581441
+}
