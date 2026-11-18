@@ -62,3 +62,11 @@ y=26..33の8切片すべてで、値2の追加位置は
 - audit: `research/experiments/vertical-fiber-two-token-z6-y33-boundary-20261118/output/audit.json`
 
 knowledge READMEと両knowledge workflowへの登録は続けて反映する。generatedとroot READMEは直接編集しない。repo全体のuv sync / knowledge check / unittest / buildはこの実行環境から未実行であり、GitHub Actionsの完了を確認する。
+
+## 最終固定値と登録
+
+- committed verifierのSHA-256をGitHub上の実ファイルから再計算し、`433c49a6530e182255aac0952ed4d3c3485d3c35ff1a2e091611c99f12c69bf7`を確認。
+- audit.jsonの正準JSON自己ハッシュを再計算し、`40a3b79315eb78029bfcdcf62e5f0d5f91ff9a55f8ad7df822f3c7fda80746b1`と一致。audit内のverifier hashとも一致。
+- knowledge READMEのz=6切片一覧をy=33まで延長し、未解決範囲をy≥34へ更新。K0873/K0944/K0947/K0953/K0955の現在の未解決記述もy≥34へ揃え、K0947/K0953/K0955の横断観察を8切片へ更新。
+- knowledge integrity workflowとgenerated-view refresh workflowの両方にK0967検証器を登録。生成領域は直接編集していない。
+- GitHub Actionsはpush連鎖後の最新runを確認する。uv sync、knowledge check、unittest、buildの成功はまだ未確認。
