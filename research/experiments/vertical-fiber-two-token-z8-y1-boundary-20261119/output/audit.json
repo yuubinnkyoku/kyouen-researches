@@ -1,0 +1,67 @@
+{
+  "all_ok": true,
+  "checks": {
+    "V1_direct_vs_cand": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 4230
+    },
+    "V2_direct_vs_anchor_mex": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 4230
+    },
+    "V3_band_table": {
+      "bad_coverage": 0,
+      "bad_mex": 0,
+      "bad_sig": 0,
+      "ex_cov": null,
+      "ex_mex": null,
+      "ex_sig": null,
+      "ok": true,
+      "points": 2053000
+    },
+    "V4_single_z9_anchor": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 2000
+    },
+    "V5_k0977_transfer": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 4230
+    },
+    "V6_tail_parity": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 20000,
+      "tail": "cand(x,R) == (x+1) mod 2 for R >= x+10"
+    },
+    "V7_height_only_reduction": {
+      "bad": 0,
+      "example": null,
+      "note": "R in [1,9]: cand(x,R) == v_single(x+1, 8, R)",
+      "ok": true,
+      "points": 4500
+    },
+    "V8_scatter_seed12345": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 20000
+    },
+    "V9_theorem_T_parity": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 2057000
+    }
+  },
+  "fail": [],
+  "n_points": 4164960
+}
