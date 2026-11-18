@@ -13,6 +13,18 @@ artifacts:
   - research/experiments/remo-hit-prime-pair-20261118/composite_core.py
   - research/experiments/remo-hit-prime-pair-20261118/sievegen_core.py
   - research/experiments/remo-hit-prime-pair-20261118/output/hitpair_audit.json
+  - research/experiments/remo-hit-prime-pair-20261118/pkill_tight_sweep.py
+  - research/experiments/remo-hit-prime-pair-20261118/pkill_tight_deep.py
+  - research/experiments/remo-hit-prime-pair-20261118/kappa_density.py
+  - research/experiments/remo-hit-prime-pair-20261118/pkill_class_probe.py
+  - research/experiments/remo-hit-prime-pair-20261118/output/pkill_tight_tier1_slim.json
+  - research/experiments/remo-hit-prime-pair-20261118/output/pkill_tight_tier2.json
+  - research/experiments/remo-hit-prime-pair-20261118/output/pkill_tight_tier3.json
+  - research/experiments/remo-hit-prime-pair-20261118/output/pkill_tight_tier4_slim.json
+  - research/experiments/remo-hit-prime-pair-20261118/output/pkill_tight_tier5_slim.json
+  - research/experiments/remo-hit-prime-pair-20261118/output/kappa_density_slim.json
+  - research/experiments/remo-hit-prime-pair-20261118/output/sparse_classes_le2.json
+  - research/experiments/remo-hit-prime-pair-20261118/output/pkill_probe_deep.json
 date: 2026-11-18
 tags: [remo, uniform-board, josephus, closed-form, prime, twin-prime, hardy-littlewood, machine-evidence]
 ---
@@ -43,6 +55,17 @@ K0949 PARITY（κ奇）はここに包含（Y偶⟹合成⟹≠M²）。
 ### 補題P-KILL（全称・剰余死刑令）: M≥3素数・p素数・p|M+1 なら
 **κ ≡ p−1 (mod p) ⟹ σ_Z(M,K)≠1**（p | Y=(M+1)(s+1)+κ+1 でspf(Y)≤p<M）。
 p=2がK0949 PARITY。
+
+### 補題P-FACTOR（全称・フォローアップ）: M素数・p素数・p|M+1・κ ≡ p−2 (mod p) なら
+**クラス内の全Yで p | MY−1**（M ≡ −1 (mod p)・κ ≡ −2 ⟹
+Y=(M+1)(s+1)+κ+1 ≡ κ+1 ≡ −1 (mod p) ⟹ MY−1 ≡ (−1)(−1)−1 = 0）。
+
+### 系WINDOW-RECURSION（全称・フォローアップ）: M素数・p | MY−1 なら
+**[M,k₀]内約数dの存在 ⟺ (MY−1)/p が[M/p,k₀/p]内に約数を持つ**。
+d=pd′対応は全射でd′∈[M/p,k₀/p]（M | MY−1よりd=Mは除外され、
+d>M ⟹ d′>M/p・d≤k₀ ⟹ d′≤k₀/p、逆方向も同型）。κ ≡ p−2 (mod p)の
+クラス判定はM/pスケールの同型な約数存在問題へ再帰縮約される
+（Y-FACTORの(a)節がp−2型クラスでは1段小さいMで書き直せる）。
 
 ### 系DIV-LAW-35（全称・K0946有限観察のM∈{2,3,5}側昇格）:
 素数M∈{2,3,5}のmain regimeヒットは全てκ=0、すなわち**(M+1)|K**。
@@ -112,13 +135,43 @@ K0945 deep_census.json。**cold 2回実行byte同一
 - 深部spot（監査外）: engineがK≈4×10⁵・10⁶点でPAIR-2/3予言に一致、
   σ_Z(173,29928)=1・σ_Z(199,39600)=0。
 
+## フォローアップ掃引（同日・監査外の決定的実験・report.md §9参照）
+
+監査JSON（sha ac5eed8d…・§1–8）の後に実施した追加掃引。
+**全て同梱スクリプト（pkill_tight_sweep.py等）で再生成可能な
+決定的実験**であり、監査shaには含まれない。
+
+- **P-KILL-TIGHT掃引（反例なし）**: 素数M≤200（46個）×K≤10⁷・
+  M≤1000（168個）×K≤2×10⁵・M≤2000（303個）×K≤2×10⁵で
+  **live κ剰余クラスの反例は0件**（全クラスがK内に初回ヒットを持つ）。
+  M≤200での初回ヒット位置の最大は14,896（M=181）。ただし**初回ヒットは
+  Mと共に増大傾向**で、固定K検査では不十分なクラスが出始める:
+  M≤2000×K≤2×10⁵で2クラスのみ未達（(1367,κ=682)・(1741,κ=648)）だが、
+  K≤10⁷拡張で**それぞれ215,458・220,140に初回ヒットが存在**。
+  結論: P-KILL-TIGHTへの反例は見つかっていないが、
+  「初回ヒットの遅さはMと共に増える」ため固定Kの反例探索には
+  KをMの関数として取る必要がある（観察）。
+- **κ密度と疎尾部（SPARSE-TAIL・有限観察）**: M≤2000・103,183 live κクラス中、
+  p−2型（P-FACTOR該当）は28.6%。平均ヒット数はp−2型22.2 vs 非p−2型21.8
+  （有意差なし）だが**極端な疎尾部はp−2型に濃縮**（cnt≤2の69クラス中48=69.6%・
+  cnt=1の10クラス中8=80%がp−2型）。最稀クラス(991,κ=494)はK≤10⁷で
+  117ヒット（通常クラスの約1/4.6）・殺し約数は[M,2M]帯に集中。
+  cnt=1クラスの深部プローブ（(1231,614)=120・(1723,860)=69・(1783,772)=284ヒット・
+  K≤10⁷）は全て健全（P-KILL-TIGHTと整合）。
+- **engine追加照合**: M∈{29,31,37,41,43,47,53}×K≤2500で
+  arith_hitとengine σ_Zが不一致0（ARITH-GRIDのM拡張）・
+  M∈{419,991,997}×K∈(M,M+400]でも不一致0。
+
 ## 範囲と限界
 
 - 一様盤・K0928定理RED経由の設定のみ。**11×11空盤・二石root {49,60}/{59,60}・
   S2 {59,60}・class1/2/4には一切言及しない（UNKNOWN不変）**。
 - 定理群は紙上全称証明つき（K0946/K0948/K0949出版定理の組立）。
   機械検証は有限アンカーで全称性の根拠は紙上証明のみ。
-- HL型密度漸近・P-KILL-TIGHT・「冪減衰=1/ln²fitting産物」は**観察・予想**
+- P-FACTOR・WINDOW-RECURSIONは紙上全称証明つき（フォローアップ）。
+  P-KILL-TIGHT自体は**依然予想**（M≤2000×K≤10⁷級で反例なし・
+  初回ヒットの増大傾向は観察）。疎尾部のp−2型濃縮は有限観察。
+- HL型密度漸近・「冪減衰=1/ln²fitting産物」は**観察・予想**
   （双子素数予想クラス・未証明）。一般M（M≥5）のU_M密度閉形式はOPEN。
 - `uv run check/build`・unittestは本環境にcloneとuvがないため未実施
   （歴代remo項目と同じ扱い）。generated/とroot READMEは未編集。
