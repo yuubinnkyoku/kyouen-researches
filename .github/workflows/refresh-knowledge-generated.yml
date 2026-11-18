@@ -30,6 +30,14 @@ jobs:
         run: |
           uv run --locked python research/experiments/vertical-fiber-two-token-z6-y33-boundary-20261118/verify_z6_y33.py
           git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y33-boundary-20261118/output/audit.json
+      - name: Audit K0969 t=2 q=11 pure-fiber all-Grundy theorem
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-t2-q11-grundy-20261118/verify_t2_q11.py
+          git diff --exit-code -- research/experiments/vertical-fiber-t2-q11-grundy-20261118/output/audit.json
+      - name: Audit K0970 two-token z=6 y=34 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y34-boundary-20261118/verify_z6_y34.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y34-boundary-20261118/output/audit.json
       - name: Audit quantitative circle-density modular checker
         run: python research/experiments/fixed-width/scripts/verify_quantitative_density.py
       - name: Audit prime-avoidance finite checks
@@ -703,3 +711,5 @@ jobs:
 # Refresh generated views after K0964 value-1 witness clarification (2026-11-18).
 # Refresh generated views after K0964 committed hash correction (2026-11-18).
 # Refresh generated views after K0964 audit/report hash reconciliation (2026-11-18).
+
+# Refresh generated views for K0970 z=6,y=34 two-token full Grundy slice (2,079,119 signature/mex checks; zero mismatches; verifier hash pinned; 2026-11-18).
