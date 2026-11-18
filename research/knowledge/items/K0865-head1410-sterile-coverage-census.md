@@ -97,6 +97,10 @@ K0001/K0868の整数det4規約で49本を二手先まで展開した。BigIntの
 浅い9石層での共有cache利得は限定的（重複0.415%）。最大共有pairを同じworker/cache shardに寄せる余地はあるが、深い層の共有率は未測定。8石子に終局がないことは即時勝ち手がないというだけで、rootのLOSSを意味しない。新しいverdict/certificate/receiptはなく、11×11空盤・二石root・S2・class 1/2/4はUNKNOWNのまま。詳細は研究ログ、再現スクリプト、結果JSONを参照。
 
 
-## 2026-11-19 追記: 49-root二手先frontier再現器の修復
+## 2026-11-19 追記: 49-root二手先frontier再現器の修復とNode実行確認
 
-同じmainに保存されていた再現スクリプトに、検査配列の構文誤りと未定義の出力変数があり、そのままでは実行できなかった。またsummaryキー・行列式メタデータ・検査名が既存結果JSONとずれていた。これらを修正し、固定したmobility/residual入力から49 rootを独立再計算した。28,553個の3点組×121点についてBigInt三項余因子展開と六項Leibniz展開が3,454,913件すべて一致し、全root明細、応手数分布、root間D4共有集合、最大共有証人、summaryが既存結果と一致した。修正版スクリプトblobは `8b27743bf7fb99aca7ba6eeb61b175b0dedcd505`、再計算JSON blobは `429553bae0511f3753af408024563fb4c6898121`。詳細は[修復ログ](../../log/2026-11-19-n11-49-root-two-ply-reproduction-repair.md)。この回は接続JavaScript環境での独立再計算と構文検査であり、checkout上でNodeスクリプト自体を実行したとは主張しない。新しいverdict/certificate/receiptはなく、49本は候補のまま。標準11×11空盤・二石root・S2・class 1/2/4は引き続き **UNKNOWN**。
+再現スクリプトには検査配列の構文誤り、未定義の出力変数、JSON schema不一致があり、そのままでは実行不能だった。さらにGit blob SHA-1のheader区切りが二重エスケープされ、NUL byteではなく文字列 `\0` を渡していた。これらを修正し、検査名・分析基準headも出力JSONと一致させた。
+
+接続Proxmox runner `kyouen-80f-runner`（1 vCPU、4 GiB RAM、Node v22.23.5）で、固定commitからスクリプトと入力6ファイルを取得。6/6のGit blob SHA-1 pin、`node --check`、Node実行2回、15/15 checks、既存JSONとのbyte-identicalを確認した。2回目の実行時間は7.297秒。修正版スクリプトblobは `1ac095ee7e6378d6520cb360a58a1797ea86b90a`、結果JSON blobは `f631574b5701bd8f441d2c552ba001814246ef69`、結果JSON SHA-256は `2e50e310936ba4ac5aa0adc9a11f4fbc579b8ce4828e79ead649348cff7ad646`。詳細は[修復・実行ログ](../../log/2026-11-19-n11-49-root-two-ply-reproduction-repair.md)。
+
+これは49候補rootの二手先構造の再現性検証であり、DFPN探索ではない。303共有類（0.414733%）は9石層だけの重複で、深い探索のcache利得や実測費用を示さない。新しいWIN/LOSS verdict、certificate、receipt、manifest閉鎖は0。49本は候補rootのまま。標準11×11空盤、二石root `{49,60}`/`{59,60}`、S2 `{59,60}`、class 1/2/4は **UNKNOWN**。
