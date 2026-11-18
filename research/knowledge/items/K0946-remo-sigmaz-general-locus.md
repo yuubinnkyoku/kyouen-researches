@@ -2,10 +2,10 @@
 id: K0946
 kind: proposition
 status: proved
-title: σ_Z(M,·) 値1軌跡の一般構造（RUN-UNIV・ONE-CHAR-GENERAL・EXCL-1/2・M1-EMPTY・DEG）と素数M法則（PRIME-M・PARITY予想）
+title: σ_Z(M,·) 値1軌跡の一般構造（RUN-UNIV・ONE-CHAR-GENERAL・EXCL-1/2・M1-EMPTY・DEG）と素数M法則（PRIME-M・PARITY・EXCL-1はK0948/K0949で全称証明）
 relations:
   - depends_on: [K0941, K0945]
-  - connects: [K0937, K0943]
+  - connects: [K0937, K0943, K0948, K0949]
 artifacts:
   - research/experiments/remo-sigmaz-general-locus-20261118/report.md
   - research/experiments/remo-sigmaz-general-locus-20261118/sigma_locus_core.js
@@ -50,14 +50,17 @@ fold寄与c=M+1定数）で、run中のkの最小値はk_t+1 ≥ M+2 > Mのた�
 第1フェーズはbumpでσ_tail=(M+1+I) mod k_t（I∈[0,k_t−2]）だが、=Mには
 I ≡ −1 (mod k_t)が必要でI=k_t−1しかなく範囲外。∎
 
-### 系EXCL-1（κ=M除外の帰着形）とU0-NEVER（機械検証・未証明）
+### 系EXCL-1（κ=M除外・全称）とU0-NEVER（K0948で全称証明）
 
-**K ≡ M (mod M+1), K>M の除外 ⟺ U0-NEVER: σ_E(M+1; Mt−1, 0) ≠ 0 (∀t≥2)**
-（t=s+2）。tail E(M;M,M(s+1))の第1フェーズbumpでσ_tail=M+1 ⟺ 継続位置
-I=0、bump後状態は均一game E(M+1; M(s+2)−1, 0)。U0-NEVER自体は
-未証明で、JS naive 1,769状態・pinned core 315状態の機械検証で違反0。
-参考: σ_E(P;n,0)=0の解は存在する（P≤24・n≤300で100解）が
-n ≡ −1 (mod P−1) を満たすものは0件。
+**K ≡ M (mod M+1), K>M なら σ_Z(M,K) ≠ 1**（t=s+2）。tail
+E(M;M,M(s+1))の第1フェーズbumpでσ_tail=M+1 ⟺ 継続位置I=0、bump後状態は
+均一game E(M+1; M(s+2)−1, 0)。U0-NEVER（σ_E(M+1;Mt−1,0)≠0 ∀t≥2）は
+**K0948定理U0-CLASSIFYの系として全称証明**（n+1=Mt合成の即時帰結。
+本項出版時点ではJS naive 1,769状態・pinned core 315状態の機械検証だった）。
+参考: σ_E(P;n,0)=0の解は存在する（P≤24・n≤300で100解）。K0948系ZERO-SETに
+より零点集合は{n≥1: n+1素数∧spf(P)≥n+1}={p−1: p素数≤spf(P)}と完全決定され、
+n ≡ −1 (mod P−1) を満たす零は(P,n)=(2,1),(3,1)のn=1のみでn≥2では0件
+（出版観察と整合）。
 
 ### 系M1-EMPTY（全称）・補題DEG（退化閉形式・全称）
 
@@ -65,17 +68,21 @@ n ≡ −1 (mod P−1) を満たすものは0件。
 - **σ_Z(M,2)=1 ⟺ M偶数**・**σ_Z(M,3)=1 ⟺ M ≡ 2 (mod 3)**・
   **σ_Z(M,M−1) ≠ 1 (M≥3)**（いずれも閉形式の直接計算・紙上証明）。
 
-## 予想（機械検証・全称主張しない）
+## 軌跡法則（PRIME-M・PARITYはK0949で全称証明・残りは有限観察）
 
-- **PRIME-M**: 非退化軌跡 {K>M : σ_Z(M,K)=1} 非空 ⟹ M素数。
+- **PRIME-M（K0949で全称証明・定理昇格）**: 非退化軌跡 {K>M : σ_Z(M,K)=1}
+  非空 ⟹ M素数。機構はK0949 RELAY-REDUCE+P′-SIMPLIFY（合成Mは
+  spf(P′)≤spf(M)<k_Tで自動失敗）。本項出版時の機械証拠:
   M≤40完全支持（K≤10⁵: 素数{2,3,5,7,11,13,17,19,23,29,31,37}全て非空・
   合成数とM=1全て空。深部: M∈{2,3,5,7} K≤10⁶非空・M=8,9 K≤4×10⁵・
   M=15,25 K≤3×10⁵ 空）。前段階の「M+1素数⟹空」観察は一般化不能と確定
   （M=8,9,14,15はM+1合成でも空。分類変数はM自身の素性）。
-- **PARITY**: 素数M≥3の非退化ヒットは全て偶数（M=2の奇数ヒットはK=3のみ）。
-  M≤40全素数（K≤10⁵）・M∈{3,5,7}（K≤10⁶）で違反0。M奇素数では
-  偶数K ⟺ 偶数κで、EXCL-2と合わせて許容κは偶数のみになる。
-- **divisibility lawの再評価**: (M+1)|KはM∈{2,3,5}のみ（K≤10⁶違反0）。
+- **PARITY（K0949で全称証明・定理昇格）**: 素数M≥3の非退化ヒットは全て偶数
+  （M=2の奇数ヒットはK=3のみ）。機構はκ奇⟹Y偶⟹spf(Y)=2<M（K0949）。
+  本項出版時の機械証拠: M≤40全素数（K≤10⁵）・M∈{3,5,7}（K≤10⁶）で違反0。
+  M奇素数では偶数K ⟺ 偶数κで、EXCL-2と合わせて許容κは偶数のみになる。
+- **divisibility lawの再評価（有限観察のまま）**: (M+1)|KはM∈{2,3,5}のみ
+  （K≤10⁶違反0）。
   素数M≥7では偽（最初の非整除ヒット: M=7→K=10, 11→16, 13→16, 17→22,
   19→22, 23→28, 29→36, 31→36, 37→40）。
 - 残差スペクトラム（κ別ヒット分布・M≤40 K≤10⁵・fast engine）を report.md に
@@ -85,9 +92,9 @@ n ≡ −1 (mod P−1) を満たすものは0件。
 ## 応用（K0941 THM-B死後状態Z(w+1, n−t)への必要条件）
 
 - **証明済み（全称）**: n−t > w+1 なら n−t ≢ w, w+1 (mod w+2)
-  （EXCL-2: κ=w・EXCL-1+U0-NEVER: κ=w+1）。
-- **予想（PRIME-M経由）**: w+1合成なら σ_Z(w+1, n−t) ≠ 1、すなわち
-  死後frame位置1は合成NのV値に現れない（機械検証の必要条件）。
+  （EXCL-2: κ=w・EXCL-1+U0-NEVER: κ=w+1・後者はK0948で全称証明）。
+- **証明済み（K0949定理PRIME-M経由・全称）**: w+1合成なら
+  σ_Z(w+1, n−t) ≠ 1、すなわち死後frame位置1は合成NのV値に現れない。
 - n−t ≤ w+1 は退化レジームでDEG補題族が適用される。
 
 ## 機械的証拠（audit_build.py・output/sigma_locus_audit.json・all_ok=true）
@@ -122,8 +129,9 @@ M横断の軌跡法則（PRIME-M・PARITY・スペクトラム）にある。
 
 - 一様盤・K0928定理RED経由の設定のみ。**11×11空盤・二石root
   {49,60}/{59,60}・S2 {59,60}・class1/2/4には一切言及しない（UNKNOWN不変）**。
-- PRIME-M・PARITY・U0-NEVERは予想であり、機械検証範囲（M≤40主にK≤10⁵・
-  深部は個別記録）を超える全称主張はしない。fast engineとpinned coreの
+- U0-NEVER・PRIME-M・PARITYはK0948/K0949で全称証明された（本項出版時点では
+  予想）。本項自体の機械検証範囲（M≤40主にK≤10⁵・
+  深部は個別記録）を超える全称主張はそれらの項目に依拠する。fast engineとpinned coreの
   直接照合はK≤1200（全M）・K≤6000（M∈{2,3,5,7}）・K≤20000（素数
   M∈{2,…,23}のclassify）で行った。
 - `uv run check/build`・unittestは本環境にcloneとuvがないため未実施
@@ -132,9 +140,13 @@ M横断の軌跡法則（PRIME-M・PARITY・スペクトラム）にある。
 
 ## 次課題
 
-1. U0-NEVER（σ_E(M+1; Mt−1, 0) ≠ 0）の全称証明 → EXCL-1昇格。
-2. PRIME-Mの機構: tail→bump→E(M+1;·,·)連分数様再帰の各段の合同条件の
-   書き下ろしとM合成の障害物の同定。
-3. PARITY法則の証明（奇素数Mで奇数κが全滅する機構）。
+1. U0-NEVER（σ_E(M+1; Mt−1, 0) ≠ 0）の全称証明 → **完了（K0948・EXCL-1昇格）**。
+2. PRIME-Mの機構 → **完了（K0949）**: 「連分数様再帰」は追跡固定点性+1段
+   リレー（RELAY-REDUCE）に崩壊し、M合成の障害物はspf(P′)≤spf(M)<k_Tの
+   自動失敗と確定。
+3. PARITY法則の証明 → **完了（K0949）**: κ奇⟹Y偶⟹spf(Y)=2<Mで
+   SIMPLE-CHARのspf節不成立。
 4. 一般Mの U_M={u : σ_E(M; 0, M(u+1))=1} の冪減衰構造の比較
-   （K0945 U（M=3, 3,658要素）の一般化）。
+   （K0945 U（M=3, 3,658要素）の一般化）— 未解決。
+5. K0949系SIMPLE-CHAR（値1判定の純算術化）の先の、各Mの値1位置の分布則・
+   密度の閉形式 — 未解決。

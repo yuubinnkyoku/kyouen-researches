@@ -1,0 +1,140 @@
+{
+ "all_ok": true,
+ "checks": {
+  "CENSCOMP": {
+   "Kmax": 200000,
+   "all_clause_pass_kTgtM": 0,
+   "composite_M": [
+    4,
+    6,
+    8,
+    9,
+    10,
+    25,
+    49
+   ],
+   "ok": true,
+   "per_M": {
+    "4": {
+     "hits": 0,
+     "kTprime_gtM": 7178,
+     "max_spf": 2,
+     "spfM": 2
+    },
+    "6": {
+     "hits": 0,
+     "kTprime_gtM": 7975,
+     "max_spf": 2,
+     "spfM": 2
+    },
+    "8": {
+     "hits": 0,
+     "kTprime_gtM": 7986,
+     "max_spf": 2,
+     "spfM": 2
+    },
+    "9": {
+     "hits": 0,
+     "kTprime_gtM": 14554,
+     "max_spf": 3,
+     "spfM": 3
+    },
+    "10": {
+     "hits": 0,
+     "kTprime_gtM": 8622,
+     "max_spf": 2,
+     "spfM": 2
+    },
+    "25": {
+     "hits": 0,
+     "kTprime_gtM": 19463,
+     "max_spf": 5,
+     "spfM": 5
+    },
+    "49": {
+     "hits": 0,
+     "kTprime_gtM": 22884,
+     "max_spf": 7,
+     "spfM": 7
+    }
+   },
+   "psim_violations": 0
+  },
+  "CENSPRIME": {
+   "Kmax": 200000,
+   "hits_all_kTeqM": {
+    "3": 2057,
+    "5": 2005,
+    "7": 2603,
+    "11": 3003,
+    "13": 3220,
+    "17": 3475,
+    "19": 3629,
+    "23": 3739
+   },
+   "ok": true,
+   "pass_kTgtM": 0,
+   "prime_M": [
+    3,
+    5,
+    7,
+    11,
+    13,
+    17,
+    19,
+    23
+   ],
+   "total_hits": 23731
+  },
+  "ONECHAR": {
+   "hits_checked": 656,
+   "ok": true,
+   "violations": 0
+  },
+  "PARITY": {
+   "M2_hits_total": 2024,
+   "odd_hits_M2": [
+    3
+   ],
+   "odd_hits_primeM3": [],
+   "ok": true
+  },
+  "PIN": {
+   "ok": true
+  },
+  "PRIMEM": {
+   "composite_states": 13406,
+   "ok": true,
+   "violations": 0
+  },
+  "PSIM": {
+   "kTeqM_states": 10035,
+   "kTeqM_violations": 0,
+   "kTgtM_states": 7378,
+   "kTgtM_violations": 0,
+   "ok": true
+  },
+  "RELAY": {
+   "grid_hits": 3183,
+   "grid_mismatch": 0,
+   "grid_states": 56304,
+   "ok": true,
+   "rnd_mismatch": 0,
+   "rnd_states": 4000
+  },
+  "VOCE": {
+   "engine_hits": 656,
+   "mismatches": 0,
+   "ok": true,
+   "rnd_mismatches": 0,
+   "rnd_states": 1500,
+   "states": 43036
+  },
+  "VOCFF": {
+   "mismatches": 0,
+   "ok": true,
+   "states": 116181
+  }
+ },
+ "experiment": "remo-relay-prime-m-20261118"
+}
