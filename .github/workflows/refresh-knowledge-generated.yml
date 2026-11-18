@@ -377,6 +377,10 @@ jobs:
         run: |
           uv run --locked python research/experiments/remo-k-branch-prime-dichotomy-20261117/verify_prime_dichotomy_cap10_20261117.py
           git diff --exit-code -- research/experiments/remo-k-branch-prime-dichotomy-20261117/output/prime_dichotomy_cap10_audit.json
+      - name: Audit K0986 two-token z=8 y=3 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z8-y3-boundary-20261119/verify_z8_y3.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z8-y3-boundary-20261119/output/audit.json
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python tools/knowledge/build.py
