@@ -1,0 +1,50 @@
+{
+  "all_pass": true,
+  "classification": "universal proof by induction on x using explicit A/B/C signature bands, K0989, K0987, K0832 Theorem T and the general high-R tail; finite checks are independent audits only",
+  "counts": {
+    "Theorem_T_formula_grid": 2054913,
+    "direct_formula_two_engines": 8322,
+    "even_parent_bound": 1012978,
+    "independent_BC_anchor_direct": 8322,
+    "mex_identity": 2026955,
+    "odd_parent_bound": 1013977,
+    "signature_coverage_and_identity": 2026955,
+    "tail_formula": 19988,
+    "tail_signature": 7988
+  },
+  "failures": [],
+  "repeat_byte_identical": true,
+  "repeat_runs": 2,
+  "scope": {
+    "direct_R": "0 <= R <= x+40",
+    "direct_x": [
+      4,
+      60
+    ],
+    "signature_R": "1 <= R <= x+13",
+    "signature_x": [
+      4,
+      2000
+    ],
+    "tail_offsets": [
+      0,
+      3
+    ],
+    "tail_signature_x": [
+      4,
+      2000
+    ],
+    "tail_x": [
+      4,
+      5000
+    ],
+    "theorem_R": "0 <= R <= x+26",
+    "theorem_x": [
+      4,
+      2000
+    ]
+  },
+  "sha256_without_hash_field": "e0ee2ce55df25e5e0c1ec83ad09fb455dc4c1d6fc64692cc47f00cafb4c7feea",
+  "target": "H(R;(x,4);9), x>=4, R>=0",
+  "total_checks": 8180398
+}
