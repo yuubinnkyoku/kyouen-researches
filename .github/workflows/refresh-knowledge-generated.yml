@@ -46,6 +46,10 @@ jobs:
         run: |
           uv run --locked python research/experiments/vertical-fiber-two-token-z6-y36-boundary-20261119/verify_z6_y36.py
           git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y36-boundary-20261119/output/audit.json
+      - name: Audit K0975 z=6 uniform two-token formula independent verification
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-independent-uniform-20261119/verify_z6_uniform_independent.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-independent-uniform-20261119/output/audit.json
       - name: Audit quantitative circle-density modular checker
         run: python research/experiments/fixed-width/scripts/verify_quantitative_density.py
       - name: Audit prime-avoidance finite checks
