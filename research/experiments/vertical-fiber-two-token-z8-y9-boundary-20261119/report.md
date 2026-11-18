@@ -123,10 +123,10 @@ K0832のTheorem Tにより、奇数 \(R\) の親値は2以下、偶数 \(R\) の
 - 署名表: \(9\le x\le2000,\ 1\le R\le x+17\)
 - tail: \(9\le x\le5000,\ R=x+18,\ldots,x+21\)
 - Theorem T格子: \(9\le x\le2000,\ 0\le R\le x+28\)
-- verifier SHA-256: `4d6c0ca55c47062845f187160fd3607e609265d11f855a9eb084967cdeadcbbb`
-- verifier Git blob SHA-1: `e3d9bfc50ca917f0aa977d9995439961ea5409c8`
-- audit JSON SHA-256: `4a894665498b123e84aa6e2d9866e6f11665f0ceedffc080634d32f7433cec7c`
-- audit JSON Git blob SHA-1: `cc0e041a890270c8196fe4bd38af45c24168e1f5`
+- verifier SHA-256: `5944999a4b8dfb229cb9d765710655ad5e9d3725d50b1642ee6dba01313e51fb`
+- verifier Git blob SHA-1: `7e45ca139918d322b08742afa8ce253947c17a84`
+- audit JSON SHA-256: `a5c4619ca9fe0e13882b7b71023053f49e947aae6aec15e3b76b9944cfbad494`
+- audit JSON Git blob SHA-1: `b0f2dfa3ac1b9d98d23fb10bd2fed1acea7ed86b`
 - audit内部hash: `0a0cdf083e3f7a72e8500c92779381145ae33b80a3add5b0b73c07354d83a106`
 
 検証器は独立プロセスでも再実行し、同じ監査JSONを生成した。スクリプト内部でも監査全体を2回実行し、結果のバイト列が一致することを確認した。有限監査は全称性の根拠ではない。全称性はx外帰納、全域署名帯表、K0832・K0996・K0976による。
