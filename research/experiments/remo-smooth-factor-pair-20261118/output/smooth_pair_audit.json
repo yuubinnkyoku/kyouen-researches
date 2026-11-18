@@ -1,0 +1,45 @@
+{
+  "all_ok": true,
+  "checks": {
+    "EXACT_TAIL_GRID": {
+      "dead_hits": 0,
+      "dead_states": 2838,
+      "e_gt_1_hit_count": 91,
+      "finite_branch_counts_by_e": {
+        "1": 145,
+        "2": 33,
+        "3": 26,
+        "4": 6,
+        "5": 16,
+        "6": 5,
+        "7": 3,
+        "8": 2
+      },
+      "live_hits": 236,
+      "live_states": 1704,
+      "mismatches_vs_direct_sigma_Z": 0,
+      "ok": true,
+      "prime_M": [
+        2,
+        3,
+        5,
+        7,
+        11,
+        13,
+        17
+      ],
+      "smooth_part_vs_direct_divisor_mismatches": 0,
+      "states": 4542,
+      "t_range": "max(M,3) <= t <= 100"
+    },
+    "LOCAL_ADMISSIBILITY": {
+      "live_residue_pairs": 385,
+      "obstructions": 0,
+      "ok": true,
+      "prime_M_le_97_count": 25,
+      "prime_moduli_le_1000": 1000,
+      "prime_modulus_checks": 64680
+    }
+  },
+  "experiment": "remo-smooth-factor-pair-20261118"
+}
