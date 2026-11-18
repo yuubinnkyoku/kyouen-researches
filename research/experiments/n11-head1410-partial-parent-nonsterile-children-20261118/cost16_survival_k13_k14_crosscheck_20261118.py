@@ -4,8 +4,10 @@ cost-16 survival-curve extensions k=13 (commit 3a1b9481), k=14 (dc8cb4a4),
 k=15 (commit be21591ef), k=16 (b39202a4), k=17 (5b4b4f99), k=18 (2c307c6a),
 k=19 (00c4a352), k=20 (52501cad), k=21 (e3efa46a), k=22
 (d9d48bd6), k=23 (c0179112), k=24 (b89cd0f5), k=25
-(9c41b23a), and k=26 (674cdf06 result JSON 3b68d6b4,
-per-record JSONL d974042f), verification lane.
+(9c41b23a), k=26 (674cdf06 result JSON 3b68d6b4,
+per-record JSONL d974042f), and k=27 (script+log 16ca07d0,
+result JSON 9b804a9c, per-record JSONL d43eb059), verification
+lane.
 
 Three independent layers, no experiment-script imports:
 
@@ -17,18 +19,20 @@ Three independent layers, no experiment-script imports:
   2. structure layer: a fresh re-derivation of the structural census
      (shared/disjoint new pairs, b_only/zero/disjoint new triples and
      quads, full triple census, all-C(N,5) 5-subsets zero up to k=25,
-     and the k=26 5-subset census, the first that is not all-zero)
+     and the k=26/k=27 5-subset censuses, the first ranks that are
+     not all-zero, with the new-sensitive prev/new split)
      from the pinned phase-B aggregate with an inline row-multiplicity
      classifier, compared against the published structure fields;
-  3. record layer (k=26): the per-record JSONL is fetched at its own
-     pinned git blob sha1, every joint record is re-classified with the
-     same independent classifier, the new pairs / triples / quads and
-     the b_only quint set are checked for combinatorial completeness,
+  3. record layer (k=26 and k=27): each per-record JSONL is fetched
+     at its own pinned git blob sha1, every joint record is
+     re-classified with the same independent classifier, the new
+     pairs / triples / quads and the recorded new b_only quint set
+     are checked for combinatorial completeness,
      and the marginal inclusion-exclusion identities (total, A-type,
      B-type) are re-summed from the record joints alone.
 
 Fetches the published output JSONs (and, for layer 3, the k=26
-per-record JSONL) at their pinned git blob sha1s
+and k=27 per-record JSONLs) at their pinned git blob sha1s
 (via the jsdelivr mirror with a raw.githubusercontent.com fallback).
 No recomputation of pm values: every value check is exact BigInt
 arithmetic over the published numbers.
@@ -60,12 +64,19 @@ PINS = {
     "k24": ("cost16-survival-k24-20261118.json", "a0955297355beef8b2cf2560afebb0001fcf880b"),
     "k25": ("cost16-survival-k25-20261118.json", "c69b63354314537880006bea4590d99fe1921b62"),
     "k26": ("cost16-survival-k26-20261118.json", "1841a281ff604e7f677b8c7772a7312f6f9da5e1"),
+    "k27": ("cost16-survival-k27-20261118.json", "3dc30ad6c51cc2d7678cc8777e4af2376267ddb8"),
     "agg": ("cost16-b-phase-groups-20261118.json", "31bdefdb2e2cc90b706cbb8090e98eb5eece4d87"),
 }
 # k=26 per-record JSONL (published 2026-11-18, commit d974042f): 4,513
 # records = pair 25 + triple 300 + quad 2,300 + quint 1,872 (b_only only;
 # the 10,778 new zero quints are structural, joint 0) + anchors 8 + cross 8.
 JSONL_K26 = ("cost16-survival-k26-20261118.jsonl", "e39f9c2d0cde767bad9b0dbdc74df7439177d6ca")
+# k=27 per-record JSONL (published 2026-11-18, commit d43eb059): 3,278
+# records = pair 26 + triple 325 + quad 2,600 + quint 309 (new b_only
+# only; the 14,641 new zero quints are structural, joint 0) + anchors 10
+# (anchor4 = the two published k=26 disjoint quads x both lineages)
+# + cross 8.
+JSONL_K27 = ("cost16-survival-k27-20261118.jsonl", "9674ab19e14a41836e065ee4b1d5042ab94eb18b")
 # Independent anchors: survive totals recomputed per-d-slice from scratch
 # with the ban-survival runner (script cost16_ban_survival_20261118.py,
 # point/assemble modes; k=4/8/10 from commit 33abfdb8, k=11/12 extended on
@@ -85,10 +96,13 @@ DIRECT_SPLIT = {
     12: (1247882269674605395, 344139100713603297),
 }
 # 5-subset counts are machine-derived with math.comb (no hand-written
-# table): C(15..25,5) = 3003..53130, all verified zero-valued; k=26 is
-# the first census that is not all-zero (C(26,5) = 65,780 with 1,872
-# b_only / 63,908 zero / 0 disjoint), so its quints check is
-# census-based instead of the quints.all_zero anchors used at k<=25.
+# table): C(15..25,5) = 3003..53130, all verified zero-valued; k=26 and
+# k=27 are the first censuses that are not all-zero (C(26,5) = 65,780
+# with 1,872 b_only / 63,908 zero / 0 disjoint; C(27,5) = 80,730 with
+# 2,181 b_only / 78,549 zero / 0 disjoint, of which the rank-27-new
+# 5-subsets are 309 b_only / 14,641 zero / 0 disjoint), so their
+# quints checks are census-based instead of the quints.all_zero
+# anchors used at k<=25.
 
 
 def git_blob_sha1(data: bytes) -> str:
@@ -181,7 +195,7 @@ def main() -> int:
     rows = {i: tuple(e["rows_covered"]) for i, e in enumerate(top)}
     mem = [e["membership"] for e in top]
 
-    V = js["k26"]["values"]  # contains the full k=1..26 series
+    V = js["k27"]["values"]  # contains the full k=1..27 series
     kill = {int(k[1:]): int(v) for k, v in V["kill"].items()}
     A = {int(k[1:]): int(v) for k, v in V["A_survive"].items()}
     B = {int(k[1:]): int(v) for k, v in V["B_survive_full_singleton_ban"].items()}
@@ -189,7 +203,7 @@ def main() -> int:
     ksh = {int(k[1:]): v for k, v in V["kill_share_percent"].items()}
     kA = {int(k[1:]): int(v) for k, v in V["kill_A"].items()}
     kB = {int(k[1:]): int(v) for k, v in V["kill_B"].items()}
-    K = 26
+    K = 27
     checks = []
 
     # 1. grand-total identity, constant across all k
@@ -224,8 +238,8 @@ def main() -> int:
             continue
         chain_ok = chain_ok and marg[n - 1] == int(det["k%d_minus_k%d" % (n, n - 1)])
         m_ok = m_ok and int(det["m%d" % n]) == mem[n - 1] and marg[n - 1] <= mem[n - 1]
-    checks.append(("marginal_chain_k14_k26_matches_published", chain_ok, None))
-    checks.append(("marginal_le_membership_k14_k26", m_ok,
+    checks.append((f"marginal_chain_k14_k{K}_matches_published", chain_ok, None))
+    checks.append((f"marginal_le_membership_k14_k{K}", m_ok,
                    "mN from pinned aggregate, independent of published detail"))
     # 5. independent direct-recomputation anchors (survive totals + A/B split)
     checks.append(("survive_totals_match_direct_recompute_k4k8k10k11k12",
@@ -272,11 +286,11 @@ def main() -> int:
         rep_ok = rep_ok and any(
             c["name"] == "reproduce_k1_%d" % (n - 1) and c["pass"]
             for c in js["k%d" % n]["checks"])
-    checks.append(("k16_k26_reproduce_anchors_all_pass", rep_ok, None))
-    # 10. quints all-zero anchors as published (k=15..k=25 only: at k=26
-    # the first non-zero quint census appears and is handled below)
+    checks.append((f"k16_k{K}_reproduce_anchors_all_pass", rep_ok, None))
+    # 10. quints all-zero anchors as published (k=15..k=25 only: at
+    # k>=26 non-zero quint censuses appear and are handled below)
     q_ok = True
-    for n in range(15, K):
+    for n in range(15, 26):
         q_ok = q_ok and any(
             c["name"] == "quints.all_zero_%d" % math.comb(n, 5) and c["pass"]
             for c in js["k%d" % n]["checks"])
@@ -298,7 +312,7 @@ def main() -> int:
                 or int(rk["b_part"]) != memB[top[idx]["root"]]:
             s_ok = False
             s_bad.append((tag, "membership split"))
-    checks.append(("rank_root_fields_match_aggregate_k16_k26", s_ok, s_bad[:4]))
+    checks.append((f"rank_root_fields_match_aggregate_k16_k{K}", s_ok, s_bad[:4]))
     pc_ok = True
     pc_bad = []
     for n in range(16, K + 1):
@@ -310,7 +324,7 @@ def main() -> int:
         if det is None or det["shared"] != shared or det["disjoint"] != (n - 1) - shared:
             pc_ok = False
             pc_bad.append((n, shared, det))
-    checks.append(("new_pair_census_rederived_k16_k26", pc_ok, pc_bad[:4]))
+    checks.append((f"new_pair_census_rederived_k16_k{K}", pc_ok, pc_bad[:4]))
     tc_ok = True
     tc_bad = []
     for n in range(16, K + 1):
@@ -321,7 +335,7 @@ def main() -> int:
         if cen != pub:
             tc_ok = False
             tc_bad.append((n, cen, pub))
-    checks.append(("full_triple_census_rederived_k16_k26", tc_ok, tc_bad[:4]))
+    checks.append((f"full_triple_census_rederived_k16_k{K}", tc_ok, tc_bad[:4]))
     qc_ok = True
     qc_bad = []
     for n in range(16, K + 1):
@@ -339,10 +353,10 @@ def main() -> int:
         if not ok:
             qc_ok = False
             qc_bad.append((n, cen, pub))
-    checks.append(("new_quad_census_rederived_k16_k26", qc_ok, qc_bad[:4]))
+    checks.append((f"new_quad_census_rederived_k16_k{K}", qc_ok, qc_bad[:4]))
     n5_ok = True
     n5_bad = []
-    for n in range(15, K):
+    for n in range(15, 26):
         cnt = 0
         for c in itertools.combinations(range(n), 5):
             cnt += 1
@@ -354,27 +368,47 @@ def main() -> int:
             n5_bad.append((n, "count", cnt))
     checks.append(("quints_rederived_all_zero_k15_k25", n5_ok,
                    "machine.comb counts 3003..53130 at k=15..25, bad %s" % (n5_bad[:4],)))
-    # k=26 quint census: the first non-all-zero 5-subset census.
-    # Machine re-derivation over all C(26,5)=65,780 5-subsets with the
-    # independent classifier, including the b_only double-row histogram.
-    q26 = {"b_only": 0, "zero": 0, "disjoint": 0}
-    q26_twos = {}
-    q26_b_only = set()
-    for c in itertools.combinations(range(26), 5):
-        cl, two = classify2(rows, c)
-        q26[cl] += 1
-        if cl == "b_only":
-            q26_twos[two] = q26_twos.get(two, 0) + 1
-            q26_b_only.add(c)
-    str26 = js["k26"]["structure"]
-    checks.append(("quint_census_k26_machine_rederived_C265_65780",
-                   math.comb(26, 5) == 65780 and q26 == str26["quint_census_k26"]
-                   and q26["b_only"] + q26["zero"] + q26["disjoint"] == 65780
-                   and int(str26["quints_zero_synth_count"]) == math.comb(25, 4) - q26["b_only"],
-                   (q26, q26_twos)))
-    checks.append(("quint_b_only_double_rows_k26_machine_rederived",
-                   q26_twos == {int(k): v for k, v in str26["quint_b_only_double_rows"].items()},
-                   q26_twos))
+    # k=26 and k=27 quint censuses: the first non-all-zero 5-subset
+    # censuses. Machine re-derivation over all C(n,5) 5-subsets with
+    # the independent classifier, including the b_only double-row
+    # histogram and the new-sensitive split (b_only 5-subsets that
+    # contain the new rank n-1 are the recorded new-b_only layer).
+    q_new_b_only = {}
+    q_full = {}
+    for n in (26, 27):
+        qn = {"b_only": 0, "zero": 0, "disjoint": 0}
+        qn_twos = {}
+        for c in itertools.combinations(range(n), 5):
+            cl, two = classify2(rows, c)
+            qn[cl] += 1
+            if cl == "b_only":
+                qn_twos[two] = qn_twos.get(two, 0) + 1
+                if (n - 1) in c:
+                    q_new_b_only.setdefault(n, set()).add(c)
+        q_full[n] = qn
+        q_new_b_only.setdefault(n, set())
+        strn = js["k%d" % n]["structure"]
+        checks.append((f"quint_census_k{n}_machine_rederived_C{n}5_{math.comb(n, 5)}",
+                       qn["b_only"] + qn["zero"] + qn["disjoint"] == math.comb(n, 5)
+                       and qn == strn["quint_census_k%d" % n]
+                       and int(strn["quints_zero_synth_count"]) == math.comb(n - 1, 4) - len(q_new_b_only[n]),
+                       (qn, qn_twos)))
+        checks.append((f"quint_b_only_double_rows_k{n}_machine_rederived",
+                       qn_twos == {int(k): v for k, v in strn["quint_b_only_double_rows"].items()},
+                       qn_twos))
+    # k=27 splits onto the published k=26 census exactly in the prev
+    # layer: full(k27) minus the rank-27-new 5-subsets (C(26,4)=14,950
+    # counted as new b_only + new zero) must equal the k=26 census.
+    checks.append(("quint_census_k27_prev_layer_equals_published_k26_census",
+                   q_full[27]["b_only"] - len(q_new_b_only[27]) == q_full[26]["b_only"]
+                   and q_full[27]["zero"] - (math.comb(26, 4) - len(q_new_b_only[27])) == q_full[26]["zero"]
+                   and q_full[27]["disjoint"] == q_full[26]["disjoint"] == 0,
+                   (len(q_new_b_only[27]), q_full[27], q_full[26])))
+    # k=26 is all-new: every b_only 5-subset of the C(26,5) census
+    # contains the rank-26 root (published as such), so the full
+    # census b_only set equals the new layer (len 1,872).
+    checks.append(("k26_all_census_b_only_contain_rank26",
+                   len(q_new_b_only[26]) == q_full[26]["b_only"], len(q_new_b_only[26])))
     # ---- cross-publication series consistency (no history rewrite)
     xs_ok = True
     xs_bad = []
@@ -386,116 +420,129 @@ def main() -> int:
                 if k <= K and int(vv) != ref[k]:
                     xs_ok = False
                     xs_bad.append((n, key, kk))
-    checks.append(("kill_series_consistent_across_publications_k13_k26", xs_ok, xs_bad[:4]))
+    checks.append((f"kill_series_consistent_across_publications_k13_k{K}", xs_ok, xs_bad[:4]))
 
-    # ---- record layer (k=26): the per-record JSONL is fetched at its own
-    # pinned blob sha1; every joint record is re-classified with the same
-    # independent classifier, the new pairs / triples / quads and the
-    # b_only quint set are checked for combinatorial completeness, and
-    # the marginal inclusion-exclusion identities are re-summed from the
-    # record joints alone (no experiment-script imports, no pm calls).
-    jl = fetch_lines(*JSONL_K26, args.local)
-    kinds = {}
-    rec = {"pair": [], "triple": [], "quad": [], "quint": []}
-    rl_ok = True
-    for r in jl:
-        k = r["kind"]
-        kinds[k] = kinds.get(k, 0) + 1
-        if k in rec:
-            rec[k].append(r)
-        elif k.startswith("anchor") or k.startswith("cross"):
-            # anchor4 records carry no match field (the two lineages are
-            # the two records; agreement re-derived separately below)
-            rl_ok = rl_ok and r.get("match", True) is True
-        else:
-            rl_ok = False
-    checks.append(("jsonl_record_kind_counts_4513",
-                   kinds == {"pair": 25, "triple": 300, "quad": 2300, "quint": 1872,
-                             "anchor2": 4, "anchor3": 2, "anchor4": 2,
-                             "cross3": 2, "cross4": 2, "cross5": 2, "crossq4": 2}
-                   and len(jl) == 4513, kinds))
-    checks.append(("jsonl_anchor_cross_records_all_match", rl_ok, None))
-    # anchor4 records carry no "match" field: the two lineages are the two
-    # records themselves, so the agreement is re-derived here (both
-    # lineages present with identical A/B joints per combo).
-    a4 = {}
-    a4_ok = True
-    for r in jl:
-        if r["kind"] == "anchor4":
-            key = tuple(sorted(r["combo"]))
-            a4.setdefault(key, {})[r["lineage"]] = (int(r["joint_A"]), int(r["joint_B"]))
-        elif r["kind"].startswith("anchor") or r["kind"].startswith("cross"):
-            if r.get("union") is not None:
-                u = set()
-                for i in r["combo"]:
-                    u |= set(rows[i])
-                if sorted(r["union"]) != sorted(u):
-                    a4_ok = False
-    a4_ok = a4_ok and all(
-        sorted(v) == ["lazypm", "mypm"] for v in a4.values()) and all(
-        len({v["lazypm"], v["mypm"]}) == 1 for v in a4.values()) and len(a4) == 1
-    checks.append(("jsonl_anchor4_two_lineage_agreement_1x8_union_rederived", a4_ok, None))
-    p_ok = True
-    for r in rec["pair"]:
-        i, j = r["idx_i"], r["idx_j"]
-        if j != 25 or not (0 <= i <= 24):
-            p_ok = False
-        elif r["shared_row"] != bool(set(rows[i]) & set(rows[j])):
-            p_ok = False
-        elif int(r["joint"]) != int(r["joint_A"]) + int(r["joint_B"]):
-            p_ok = False
-    checks.append(("jsonl_pairs_are_exactly_the_25_new_pairs", p_ok
-                   and sorted(r["idx_i"] for r in rec["pair"]) == list(range(25)), None))
-    # records store combos as (25, sorted others); classify is
-    # order-independent so we normalize with sorted() everywhere
-    cl_ok = True
-    for kind in ("triple", "quad", "quint"):
-        for r in rec[kind]:
-            combo = tuple(sorted(r["combo"]))
-            if 25 not in combo or r["class"] != classify(rows, combo) \
-                    or (r["class"] == "zero" and int(r.get("joint", 0)) != 0):
-                cl_ok = False
-    checks.append(("jsonl_joint_records_reclassified_independently", cl_ok, None))
-    t_ex = {tuple(sorted((25,) + c)) for c in itertools.combinations(range(25), 2)}
-    q_ex = {tuple(sorted((25,) + c)) for c in itertools.combinations(range(25), 3)}
-    checks.append(("jsonl_new_triples_quads_combinatorially_complete",
-                   {tuple(sorted(r["combo"])) for r in rec["triple"]} == t_ex
-                   and {tuple(sorted(r["combo"])) for r in rec["quad"]} == q_ex,
-                   (len(t_ex), len(q_ex))))
-    checks.append(("jsonl_quints_are_exactly_the_b_only_set",
-                   {tuple(sorted(r["combo"])) for r in rec["quint"]} == q26_b_only, len(q26_b_only)))
-    qc2 = {"b_only": 0, "zero": 0, "disjoint": 0}
-    for r in rec["quad"]:
-        qc2[r["class"]] += 1
-    checks.append(("jsonl_quad_record_census_matches_structure", qc2 == str26["new_quad_census"], qc2))
-    # marginal inclusion-exclusion identities from the record joints alone
-    s2 = sum(int(r["joint"]) for r in rec["pair"])
-    s3 = sum(int(r["joint"]) for r in rec["triple"])
-    s4 = sum(int(r["joint"]) for r in rec["quad"])
-    s5 = sum(int(r["joint"]) for r in rec["quint"])
-    root26 = top[25]["root"]
-    m26, m26a, m26b = int(mem[25]), int(memA[root26]), int(memB[root26])
-    checks.append(("jsonl_ie_marginal_identity_k26_total",
-                   m26 - s2 + s3 - s4 + s5 == kill[26] - kill[25],
-                   (m26 - s2 + s3 - s4 + s5, kill[26] - kill[25])))
-    s2a = sum(int(r["joint_A"]) for r in rec["pair"])
-    s2b = sum(int(r["joint_B"]) for r in rec["pair"])
-    s3a = sum(int(r["joint_A"]) for r in rec["triple"])
-    s3b = sum(int(r["joint_B"]) for r in rec["triple"])
-    s4a = s4b = 0
-    for r in rec["quad"]:
-        if r["class"] == "disjoint":
-            s4a += int(r["joint_A"])
-            s4b += int(r["joint_B"])
-        elif r["class"] == "b_only":
-            s4b += int(r["joint"])
-    s5b = sum(int(r["joint_B"]) for r in rec["quint"])
-    checks.append(("jsonl_ie_marginal_identity_k26_A_type",
-                   m26a - s2a + s3a - s4a == kA[26] - kA[25],
-                   (m26a - s2a + s3a - s4a, kA[26] - kA[25])))
-    checks.append(("jsonl_ie_marginal_identity_k26_B_type",
-                   m26b - s2b + s3b - s4b + s5b == kB[26] - kB[25],
-                   (m26b - s2b + s3b - s4b + s5b, kB[26] - kB[25])))
+    # ---- record layer (k=26 and k=27): each per-record JSONL is fetched
+    # at its own pinned blob sha1; every joint record is re-classified
+    # with the same independent classifier, the new pairs / triples /
+    # quads and the recorded new b_only quint set are checked for
+    # combinatorial completeness, and the marginal inclusion-exclusion
+    # identities are re-summed from the record joints alone (no
+    # experiment-script imports, no pm calls). anchor4 agreement is
+    # re-derived from the two lineage records per combo; at k=26 the
+    # single anchor4 combo is the published (25,3,4,16), at k=27 the
+    # two combos are the published (25,3,4,16)/(25,3,4,17) disjoint
+    # quads of the k=26 record layer.
+    for n, pin, a4c in ((26, JSONL_K26, 1), (27, JSONL_K27, 2)):
+        jl = fetch_lines(*pin, args.local)
+        new = n - 1
+        kinds = {}
+        rec = {"pair": [], "triple": [], "quad": [], "quint": []}
+        rl_ok = True
+        for r in jl:
+            k = r["kind"]
+            kinds[k] = kinds.get(k, 0) + 1
+            if k in rec:
+                rec[k].append(r)
+            elif k.startswith("anchor") or k.startswith("cross"):
+                # anchor4 records carry no match field (the two lineages
+                # are the two records; agreement re-derived separately)
+                rl_ok = rl_ok and r.get("match", True) is True
+            else:
+                rl_ok = False
+        kinds_exp = {"pair": new, "triple": math.comb(new, 2), "quad": math.comb(new, 3),
+                     "quint": len(q_new_b_only[n]), "anchor2": 4, "anchor3": 2,
+                     "anchor4": 2 * a4c, "cross3": 2, "cross4": 2,
+                     "cross5": 2, "crossq4": 2}
+        checks.append((f"jsonl_record_kind_counts_k{n}_{len(jl)}",
+                       kinds == kinds_exp and len(jl) == sum(kinds_exp.values()), kinds))
+        checks.append((f"jsonl_anchor_cross_records_all_match_k{n}", rl_ok, None))
+        # anchor4 records carry no "match" field: the two lineages are
+        # the two records themselves, so the agreement is re-derived
+        # here (both lineages present per combo, identical A/B joints,
+        # union rows re-derived from the aggregate where present).
+        a4 = {}
+        a4_ok = True
+        for r in jl:
+            if r["kind"] == "anchor4":
+                key = tuple(sorted(r["combo"]))
+                a4.setdefault(key, {})[r["lineage"]] = (int(r["joint_A"]), int(r["joint_B"]))
+            elif r["kind"].startswith("anchor") or r["kind"].startswith("cross"):
+                if r.get("union") is not None:
+                    u = set()
+                    for i in r["combo"]:
+                        u |= set(rows[i])
+                    if sorted(r["union"]) != sorted(u):
+                        a4_ok = False
+        a4_ok = a4_ok and len(a4) == a4c and all(
+            sorted(v) == ["lazypm", "mypm"] for v in a4.values()) and all(
+            len({v["lazypm"], v["mypm"]}) == 1 for v in a4.values())
+        checks.append((f"jsonl_anchor4_two_lineage_agreement_{a4c}x8_union_rederived_k{n}",
+                       a4_ok, None))
+        p_ok = True
+        for r in rec["pair"]:
+            i, j = r["idx_i"], r["idx_j"]
+            if j != new or not (0 <= i <= new - 1):
+                p_ok = False
+            elif r["shared_row"] != bool(set(rows[i]) & set(rows[j])):
+                p_ok = False
+            elif int(r["joint"]) != int(r["joint_A"]) + int(r["joint_B"]):
+                p_ok = False
+        checks.append((f"jsonl_pairs_are_exactly_the_{new}_new_pairs",
+                       p_ok and sorted(r["idx_i"] for r in rec["pair"]) == list(range(new)),
+                       None))
+        # records store combos as (new, sorted others); classify is
+        # order-independent so we normalize with sorted() everywhere
+        cl_ok = True
+        for kind in ("triple", "quad", "quint"):
+            for r in rec[kind]:
+                combo = tuple(sorted(r["combo"]))
+                if new not in combo or r["class"] != classify(rows, combo) \
+                        or (r["class"] == "zero" and int(r.get("joint", 0)) != 0):
+                    cl_ok = False
+        checks.append((f"jsonl_joint_records_reclassified_independently_k{n}", cl_ok, None))
+        t_ex = {tuple(sorted((new,) + c)) for c in itertools.combinations(range(new), 2)}
+        q_ex = {tuple(sorted((new,) + c)) for c in itertools.combinations(range(new), 3)}
+        checks.append((f"jsonl_new_triples_quads_combinatorially_complete_k{n}",
+                       {tuple(sorted(r["combo"])) for r in rec["triple"]} == t_ex
+                       and {tuple(sorted(r["combo"])) for r in rec["quad"]} == q_ex,
+                       (len(t_ex), len(q_ex))))
+        checks.append((f"jsonl_quints_are_exactly_the_new_b_only_set_k{n}",
+                       {tuple(sorted(r["combo"])) for r in rec["quint"]} == q_new_b_only[n],
+                       len(q_new_b_only[n])))
+        qc2 = {"b_only": 0, "zero": 0, "disjoint": 0}
+        for r in rec["quad"]:
+            qc2[r["class"]] += 1
+        checks.append((f"jsonl_quad_record_census_matches_structure_k{n}",
+                       qc2 == js["k%d" % n]["structure"]["new_quad_census"], qc2))
+        # marginal inclusion-exclusion identities from the record joints
+        s2 = sum(int(r["joint"]) for r in rec["pair"])
+        s3 = sum(int(r["joint"]) for r in rec["triple"])
+        s4 = sum(int(r["joint"]) for r in rec["quad"])
+        s5 = sum(int(r["joint"]) for r in rec["quint"])
+        rootn = top[new]["root"]
+        mn, mna, mnb = int(mem[new]), int(memA[rootn]), int(memB[rootn])
+        checks.append((f"jsonl_ie_marginal_identity_k{n}_total",
+                       mn - s2 + s3 - s4 + s5 == kill[n] - kill[n - 1],
+                       (mn - s2 + s3 - s4 + s5, kill[n] - kill[n - 1])))
+        s2a = sum(int(r["joint_A"]) for r in rec["pair"])
+        s2b = sum(int(r["joint_B"]) for r in rec["pair"])
+        s3a = sum(int(r["joint_A"]) for r in rec["triple"])
+        s3b = sum(int(r["joint_B"]) for r in rec["triple"])
+        s4a = s4b = 0
+        for r in rec["quad"]:
+            if r["class"] == "disjoint":
+                s4a += int(r["joint_A"])
+                s4b += int(r["joint_B"])
+            elif r["class"] == "b_only":
+                s4b += int(r["joint"])
+        s5b = sum(int(r["joint_B"]) for r in rec["quint"])
+        checks.append((f"jsonl_ie_marginal_identity_k{n}_A_type",
+                       mna - s2a + s3a - s4a == kA[n] - kA[n - 1],
+                       (mna - s2a + s3a - s4a, kA[n] - kA[n - 1])))
+        checks.append((f"jsonl_ie_marginal_identity_k{n}_B_type",
+                       mnb - s2b + s3b - s4b + s5b == kB[n] - kB[n - 1],
+                       (mnb - s2b + s3b - s4b + s5b, kB[n] - kB[n - 1])))
 
 
     n_fail = 0
