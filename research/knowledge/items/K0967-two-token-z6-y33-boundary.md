@@ -21,7 +21,7 @@ artifacts:
   note: z=6,y=33切片の全x,R分類、選択肢署名表、xに関する帰納証明
 - path: research/experiments/vertical-fiber-two-token-z6-y33-boundary-20261118/verify_z6_y33.py
   role: verifier
-  note: 順序付き・降順正準化の二方式直接再帰、y=32/z=5アンカー、全署名・mex・tailの独立監査
+  note: 順序付き・降順正準化の二方式直接再帰、y=32/z=5アンカー、全署名・mex・tailの独立監査。SHA-256 433c49a6…
 - path: research/experiments/vertical-fiber-two-token-z6-y33-boundary-20261118/output/audit.json
   role: data
   note: 2,077,224署名・mex、4,584直接再帰呼び出し、5,160帰納再帰、125,952 tail検査、不一致0、二回実行byte-identical。有限監査であり全称証明とは区別する
