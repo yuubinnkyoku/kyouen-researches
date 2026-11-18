@@ -5,9 +5,11 @@ k=15 (commit be21591ef), k=16 (b39202a4), k=17 (5b4b4f99), k=18 (2c307c6a),
 k=19 (00c4a352), k=20 (52501cad), k=21 (e3efa46a), k=22
 (d9d48bd6), k=23 (c0179112), k=24 (b89cd0f5), k=25
 (9c41b23a), k=26 (674cdf06 result JSON 3b68d6b4,
-per-record JSONL d974042f), and k=27 (script+log 16ca07d0,
-result JSON 9b804a9c, per-record JSONL d43eb059), verification
-lane.
+per-record JSONL d974042f), k=27 (script+log 16ca07d0,
+result JSON 9b804a9c, per-record JSONL d43eb059), k=28 (script+log
+a6010eef, result JSON efc500fa, per-record JSONL 42182831), and
+k=29 (script+log f6966f18, result JSON 29fb9f92, per-record JSONL
+40f74ef1), verification lane.
 
 Three independent layers, no experiment-script imports:
 
@@ -19,21 +21,23 @@ Three independent layers, no experiment-script imports:
   2. structure layer: a fresh re-derivation of the structural census
      (shared/disjoint new pairs, b_only/zero/disjoint new triples and
      quads, full triple census, all-C(N,5) 5-subsets zero up to k=25,
-     and the k=26/k=27 5-subset censuses, the first ranks that are
+     and the k=26..k=29 5-subset censuses, the first ranks that are
      not all-zero, with the new-sensitive prev/new split)
      from the pinned phase-B aggregate with an inline row-multiplicity
      classifier, compared against the published structure fields;
-  3. record layer (k=26 and k=27): each per-record JSONL is fetched
-     at its own pinned git blob sha1, every joint record is
+  3. record layer (k=26 through k=29): each per-record JSONL is
+     fetched at its own pinned git blob sha1, every joint record is
      re-classified with the same independent classifier, the new
      pairs / triples / quads and the recorded new b_only quint set
      are checked for combinatorial completeness,
      and the marginal inclusion-exclusion identities (total, A-type,
      B-type) are re-summed from the record joints alone.
 
-Fetches the published output JSONs (and, for layer 3, the k=26
-and k=27 per-record JSONLs) at their pinned git blob sha1s
-(via the jsdelivr mirror with a raw.githubusercontent.com fallback).
+Fetches the published output JSONs (and, for layer 3, the
+k=26..k=29 per-record JSONLs) at their pinned git blob sha1s
+(via the jsdelivr mirror with a raw.githubusercontent.com fallback;
+a mirror serving stale-but-wrong bytes fails the sha1 check and the
+next mirror is tried).
 No recomputation of pm values: every value check is exact BigInt
 arithmetic over the published numbers.
 
@@ -65,6 +69,8 @@ PINS = {
     "k25": ("cost16-survival-k25-20261118.json", "c69b63354314537880006bea4590d99fe1921b62"),
     "k26": ("cost16-survival-k26-20261118.json", "1841a281ff604e7f677b8c7772a7312f6f9da5e1"),
     "k27": ("cost16-survival-k27-20261118.json", "3dc30ad6c51cc2d7678cc8777e4af2376267ddb8"),
+    "k28": ("cost16-survival-k28-20261118.json", "99db3a9a48d044727b3a4d83fb7fc97daa7513d2"),
+    "k29": ("cost16-survival-k29-20261118.json", "795665316c300a186979bafd2817b6961de2de60"),
     "agg": ("cost16-b-phase-groups-20261118.json", "31bdefdb2e2cc90b706cbb8090e98eb5eece4d87"),
 }
 # k=26 per-record JSONL (published 2026-11-18, commit d974042f): 4,513
@@ -95,6 +101,18 @@ DIRECT_SPLIT = {
     11: (1319225112917587991, 365139769030068297),
     12: (1247882269674605395, 344139100713603297),
 }
+# k=28 per-record JSONL (published 2026-11-18, commit 42182831): 3,652
+# records = pair 27 + triple 351 + quad 2,925 + quint 331 (new b_only
+# only; the 17,219 new zero quints are structural, joint 0) + anchors 10
+# (anchor4 = the two published k=27 disjoint quads x both lineages)
+# + cross 8.
+JSONL_K28 = ("cost16-survival-k28-20261118.jsonl", "6316793b94fe7e95c3d91e283a4229cc7c7f5730")
+# k=29 per-record JSONL (published 2026-11-18, commit 40f74ef1): 5,828
+# records = pair 28 + triple 378 + quad 3,276 + quint 2,128 (new b_only
+# only; the 18,347 new zero quints are structural, joint 0) + anchors 10
+# (anchor4 = the two published k=28 disjoint quads x both lineages)
+# + cross 8.
+JSONL_K29 = ("cost16-survival-k29-20261118.jsonl", "7b2afe8559de6d94a82a4b0d3f62208572b51910")
 # 5-subset counts are machine-derived with math.comb (no hand-written
 # table): C(15..25,5) = 3003..53130, all verified zero-valued; k=26 and
 # k=27 are the first censuses that are not all-zero (C(26,5) = 65,780
@@ -102,7 +120,12 @@ DIRECT_SPLIT = {
 # 2,181 b_only / 78,549 zero / 0 disjoint, of which the rank-27-new
 # 5-subsets are 309 b_only / 14,641 zero / 0 disjoint), so their
 # quints checks are census-based instead of the quints.all_zero
-# anchors used at k<=25.
+# anchors used at k<=25; k=28 (C(28,5) = 98,280: 2,512 b_only /
+# 95,768 zero / 0 disjoint) and k=29 (C(29,5) = 118,755: 4,640
+# b_only / 114,115 zero / 0 disjoint, the rank-29-new layer being
+# 2,128 b_only / 18,347 zero) continue the same census-based
+# treatment, with row 16 joining the double-row family {15,16,18,19}
+# at k=29.
 
 
 def git_blob_sha1(data: bytes) -> str:
@@ -118,14 +141,21 @@ def fetch_bytes(name: str, want_sha: str, local_dir: str | None) -> bytes:
             f"https://raw.githubusercontent.com/{REPO}/main/{PATH}/{name}",
         ]
         data = None
+        shas = []
         for u in urls:
             try:
                 data = urllib.request.urlopen(u, timeout=60).read()
-                break
             except Exception:
                 continue
+            got = git_blob_sha1(data)
+            if got == want_sha:
+                break
+            shas.append((u.split("/")[2], got))
+            data = None
         if data is None:
-            raise RuntimeError(f"could not fetch {name}")
+            raise RuntimeError(f"could not fetch {name} at pinned sha "
+                               f"{want_sha} (mirror results: {shas})")
+        return data
     got = git_blob_sha1(data)
     if got != want_sha:
         raise RuntimeError(f"{name}: blob sha1 {got} != pinned {want_sha}")
@@ -195,7 +225,7 @@ def main() -> int:
     rows = {i: tuple(e["rows_covered"]) for i, e in enumerate(top)}
     mem = [e["membership"] for e in top]
 
-    V = js["k27"]["values"]  # contains the full k=1..27 series
+    V = js["k29"]["values"]  # contains the full k=1..29 series
     kill = {int(k[1:]): int(v) for k, v in V["kill"].items()}
     A = {int(k[1:]): int(v) for k, v in V["A_survive"].items()}
     B = {int(k[1:]): int(v) for k, v in V["B_survive_full_singleton_ban"].items()}
@@ -203,7 +233,7 @@ def main() -> int:
     ksh = {int(k[1:]): v for k, v in V["kill_share_percent"].items()}
     kA = {int(k[1:]): int(v) for k, v in V["kill_A"].items()}
     kB = {int(k[1:]): int(v) for k, v in V["kill_B"].items()}
-    K = 27
+    K = 29
     checks = []
 
     # 1. grand-total identity, constant across all k
@@ -375,7 +405,7 @@ def main() -> int:
     # contain the new rank n-1 are the recorded new-b_only layer).
     q_new_b_only = {}
     q_full = {}
-    for n in (26, 27):
+    for n in (26, 27, 28, 29):
         qn = {"b_only": 0, "zero": 0, "disjoint": 0}
         qn_twos = {}
         for c in itertools.combinations(range(n), 5):
@@ -396,14 +426,16 @@ def main() -> int:
         checks.append((f"quint_b_only_double_rows_k{n}_machine_rederived",
                        qn_twos == {int(k): v for k, v in strn["quint_b_only_double_rows"].items()},
                        qn_twos))
-    # k=27 splits onto the published k=26 census exactly in the prev
-    # layer: full(k27) minus the rank-27-new 5-subsets (C(26,4)=14,950
-    # counted as new b_only + new zero) must equal the k=26 census.
-    checks.append(("quint_census_k27_prev_layer_equals_published_k26_census",
-                   q_full[27]["b_only"] - len(q_new_b_only[27]) == q_full[26]["b_only"]
-                   and q_full[27]["zero"] - (math.comb(26, 4) - len(q_new_b_only[27])) == q_full[26]["zero"]
-                   and q_full[27]["disjoint"] == q_full[26]["disjoint"] == 0,
-                   (len(q_new_b_only[27]), q_full[27], q_full[26])))
+    # consecutive-era prev-layer identities: full(k) minus the
+    # rank-k-new 5-subsets (C(k-1,4) counted as new b_only + new
+    # zero) must equal the full census of the previous rank, for
+    # the whole quint era k=27..29.
+    for n, m in ((27, 26), (28, 27), (29, 28)):
+        checks.append((f"quint_census_k{n}_prev_layer_equals_published_k{m}_census",
+                       q_full[n]["b_only"] - len(q_new_b_only[n]) == q_full[m]["b_only"]
+                       and q_full[n]["zero"] - (math.comb(n - 1, 4) - len(q_new_b_only[n])) == q_full[m]["zero"]
+                       and q_full[n]["disjoint"] == q_full[m]["disjoint"] == 0,
+                       (len(q_new_b_only[n]), q_full[n], q_full[m])))
     # k=26 is all-new: every b_only 5-subset of the C(26,5) census
     # contains the rank-26 root (published as such), so the full
     # census b_only set equals the new layer (len 1,872).
@@ -433,7 +465,8 @@ def main() -> int:
     # single anchor4 combo is the published (25,3,4,16), at k=27 the
     # two combos are the published (25,3,4,16)/(25,3,4,17) disjoint
     # quads of the k=26 record layer.
-    for n, pin, a4c in ((26, JSONL_K26, 1), (27, JSONL_K27, 2)):
+    for n, pin, a4c in ((26, JSONL_K26, 1), (27, JSONL_K27, 2),
+                         (28, JSONL_K28, 2), (29, JSONL_K29, 2)):
         jl = fetch_lines(*pin, args.local)
         new = n - 1
         kinds = {}
