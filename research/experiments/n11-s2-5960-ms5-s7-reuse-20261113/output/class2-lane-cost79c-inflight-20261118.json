@@ -296,8 +296,163 @@
   "driver_script": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/ev79c_batches_20261118.sh",
   "next_action": "cost79c sweep and certificates complete; next target selection per census v12 ranking after this row is marked swept; receipt fold of this row stays pending behind the parallel-lane folds",
   "receipt_fold": {
-    "status": "pending behind the cost-66i (8 receipts remaining after the landed bit-19 fold), cost-66j, cost-69j, cost-71e, cost-72d, cost-73i, cost-73j, cost-73k and cost-73l folds",
-    "note": "any WIN7-D10 certificates of this row fold only after the pending folds land; no manifest row is closed by this sweep or this claim"
+    "status": "COMPLETED in combined cost78c+cost79c receipt fold",
+    "fold_record_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost78c-79c-receipts-recompute-20261118.json",
+    "fold_record_git_blob_sha1": "7e6144cc4bc92c34faa14bed3058cde64fb3880e",
+    "chain_head_before": {
+      "solved_s6_in_manifest": 1589,
+      "remaining_s5_orbits": 174,
+      "unique_remaining_s6": 6259,
+      "sum_remaining_cost": 495507,
+      "s6_needed_by_open_classes": 4543,
+      "cost_needed_by_open_classes": 360227
+    },
+    "chain_head_after": {
+      "solved_s6_in_manifest": 1608,
+      "remaining_s5_orbits": 173,
+      "unique_remaining_s6": 6240,
+      "sum_remaining_cost": 493965,
+      "s6_needed_by_open_classes": 4524,
+      "cost_needed_by_open_classes": 358685,
+      "parent_row_incidence": 11886
+    },
+    "band_contribution": {
+      "certificates": 19,
+      "new_s6_rows": 14,
+      "new_edge_cost": 1155,
+      "row_root_pairs": 14,
+      "roots_with_no_new_open_row": 5,
+      "marginal_by_bit": [
+        {
+          "bit": 1,
+          "marginal": 1,
+          "rows": [
+            "00000000000000801202080000000200"
+          ]
+        },
+        {
+          "bit": 2,
+          "marginal": 1,
+          "rows": [
+            "00000000000000801202080000000100"
+          ]
+        },
+        {
+          "bit": 17,
+          "marginal": 1,
+          "rows": [
+            "00000000000000801202080000008000"
+          ]
+        },
+        {
+          "bit": 21,
+          "marginal": 1,
+          "rows": [
+            "00000000000000801202080000000800"
+          ]
+        },
+        {
+          "bit": 26,
+          "marginal": 1,
+          "rows": [
+            "00000000000000801202080010000000"
+          ]
+        },
+        {
+          "bit": 28,
+          "marginal": 1,
+          "rows": [
+            "00000000000000801202080004000000"
+          ]
+        },
+        {
+          "bit": 29,
+          "marginal": 1,
+          "rows": [
+            "00000000000000801202080002000000"
+          ]
+        },
+        {
+          "bit": 30,
+          "marginal": 1,
+          "rows": [
+            "00000000000000801202080001000000"
+          ]
+        },
+        {
+          "bit": 31,
+          "marginal": 0,
+          "rows": []
+        },
+        {
+          "bit": 47,
+          "marginal": 0,
+          "rows": []
+        },
+        {
+          "bit": 58,
+          "marginal": 1,
+          "rows": [
+            "00000000000000805202080000000000"
+          ]
+        },
+        {
+          "bit": 62,
+          "marginal": 0,
+          "rows": []
+        },
+        {
+          "bit": 91,
+          "marginal": 1,
+          "rows": [
+            "00000000000020809002000002000000"
+          ]
+        },
+        {
+          "bit": 96,
+          "marginal": 0,
+          "rows": []
+        },
+        {
+          "bit": 100,
+          "marginal": 1,
+          "rows": [
+            "00000000000020809002000000001000"
+          ]
+        },
+        {
+          "bit": 109,
+          "marginal": 1,
+          "rows": [
+            "00000000000020809002000000200000"
+          ]
+        },
+        {
+          "bit": 113,
+          "marginal": 1,
+          "rows": [
+            "00000000000020809002000000000008"
+          ]
+        },
+        {
+          "bit": 117,
+          "marginal": 0,
+          "rows": []
+        },
+        {
+          "bit": 120,
+          "marginal": 1,
+          "rows": [
+            "00000000000020809002000000000400"
+          ]
+        }
+      ]
+    },
+    "parent_closure": {
+      "fully_closed_parent_count": 0,
+      "note": "The cost79c child row itself was already closed by the preceding global fold; its 19 new certificates cross-cover 14 other open S6 rows."
+    },
+    "note": "The 20th cost79c WIN bit (110) is canon-equal to the existing cost73k bit 87 certificate and is not duplicated. The 19 new cost79c certificates add 14 open S6 row receipts in the combined fold; no new engine verdict is created."
   },
   "verdict_semantics": "loss=true => WIN7-within-depth-10 candidate (certificate rebuild target); loss=false && !capped => REFUTED-D10, no first-player win within depth 10 from this root (NOT a LOSS proof); capped => inconclusive, re-run with a higher cap; verdicts are per 7-stone root only",
   "unknown_status": "11x11 empty board: UNKNOWN. A completed sweep proves only WIN7-D10/REFUTED-D10 verdicts for the 79 seven-stone roots of this child and closes no family row by itself; the 11x11 empty board, the two-stone roots {49,60} and {59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN regardless of this sweep's outcome",
