@@ -1,4 +1,19 @@
 {
+  "amendment_20261118": {
+    "amended_by": "verification-side long-term lane (2026-11-18)",
+    "basis": "fold-chain ledger crosscheck commit aa3af62b6394699d42fe08a62bc8c5032717545a (research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/fold-chain-ledger-1410-1476-crosscheck-20261118.json, git blob e8785d509e8a11a37c0d03cc450455a14708c34d) and per-parent bookkeeping crosscheck commit 376e4f44c791cfae345de564ee8a414ee0c8afa1",
+    "finding": "the parents_after entry for S5 parent 00000000000000801202000000040000 (B) re-lists the 77e row 00000000040000809002000000004000 (closed by the cost76d77e fold at head-1452) as a new loss on the post-cost64h baseline of 70 rows / 5802 edge cost, recording rows_after 69 / edge_cost_after 5725. The cost76c WIN row is a D4 child of parents P and E only, so the cost76c fold removes no row from B.",
+    "corrected_entry_00000000000000801202000000040000": {
+      "lost_rows": 0,
+      "lost_rows_hexes": [],
+      "lost_edge_cost": 0,
+      "rows_after": 70,
+      "edge_cost_after": 5802
+    },
+    "aggregate_fields_note": "parent_edge_cost_delta 458 and parent_row_incidences 6 as originally recorded include the spurious B loss of 77 / 1 row; the chain-correct cost76c marginal per-parent values are 381 and 5. All other fields of the original record are unchanged and are superseded only where stated in this amendment.",
+    "global_arithmetic_unaffected": "the fold closes exactly one S6 row once; the global head arithmetic (1473 / 6375 / 504596) after this fold is unaffected (verified in the ledger crosscheck).",
+    "unknown_status": "REFUTED-D10 and STERILE are not LOSS proofs. The standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+  },
   "baseline_record": {
     "frontier_before": {
       "cost_needed_by_open_classes": 368586,
