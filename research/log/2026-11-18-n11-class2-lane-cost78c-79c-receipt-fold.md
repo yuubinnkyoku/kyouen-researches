@@ -46,9 +46,9 @@ cost79cの子行 00000000000000c09002000200000000 自体は既存global foldで�
 
 - 開始main: 62279f626e5f11f58b136861c4c8662e146c3c21
 - 再現スクリプト: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/fold_cost78c_79c_receipts_20261118.mjs（blob 17f543a11b74bf88f3c4234fcb4c93c5199dbba9）
-- fold record: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost78c-79c-receipts-recompute-20261118.json（blob 7e6144a6a...）
-- cost78c claim: receipt_fold を COMPLETED に更新。commit e5793e4b26d57eb28fb3e2a6fe5b8db62e535f68 の直前に反映
-- cost79c claim: receipt_fold を COMPLETED に更新。commit e5793e4b26d57eb28fb3e2a6fe5b8db62e535f68 の直前に反映
+- fold record: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost78c-79c-receipts-recompute-20261118.json（blob 7e6144cc4bc92c34faa14bed3058cde64fb3880e）
+- cost78c claim: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost78c-inflight-20261117.json（blob 626409d50d0a7bb1b925ebecbff7dbee9adfa398、receipt_fold=COMPLETED）
+- cost79c claim: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost79c-inflight-20261118.json（blob 054923a47ea0387b25f734222c499e60c054109b、receipt_fold=COMPLETED）
 
 この実行では固定blobの内容をV8のJavaScript整数実装で再計算した。公開Nodeスクリプトは通常のcheckoutで再実行するためのものだが、この実行環境ではcheckout上で同スクリプト自体は起動していない。計算結果は二方向のD4照合、既存の独立証明書検査、head-1589の基準値再計算で照合した。
 
