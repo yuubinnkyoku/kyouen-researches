@@ -3,8 +3,8 @@
 cost-16 survival-curve extensions k=13 (commit 3a1b9481), k=14 (dc8cb4a4),
 k=15 (commit be21591ef), k=16 (b39202a4), k=17 (5b4b4f99), k=18 (2c307c6a),
 k=19 (00c4a352), k=20 (52501cad), k=21 (e3efa46a), k=22
-(d9d48bd6), k=23 (c0179112), and k=24 (b89cd0f5), verification
-lane.
+(d9d48bd6), k=23 (c0179112), k=24 (b89cd0f5), and k=25
+(9c41b23a), verification lane.
 
 Two independent layers, no experiment-script imports:
 
@@ -48,6 +48,7 @@ PINS = {
     "k22": ("cost16-survival-k22-20261118.json", "c1e9598ba79b7dc424a8d975b9b93179e4a13abf"),
     "k23": ("cost16-survival-k23-20261118.json", "fc60c3660c42e71a92ddf2964d11656b9aa263c9"),
     "k24": ("cost16-survival-k24-20261118.json", "a0955297355beef8b2cf2560afebb0001fcf880b"),
+    "k25": ("cost16-survival-k25-20261118.json", "c69b63354314537880006bea4590d99fe1921b62"),
     "agg": ("cost16-b-phase-groups-20261118.json", "31bdefdb2e2cc90b706cbb8090e98eb5eece4d87"),
 }
 # Independent anchors: survive totals recomputed per-d-slice from scratch
@@ -69,7 +70,7 @@ DIRECT_SPLIT = {
     12: (1247882269674605395, 344139100713603297),
 }
 QUINTS = {15: 3003, 16: 4368, 17: 6188, 18: 8568, 19: 11628, 20: 15504,
-           21: 20349, 22: 26334, 23: 33649, 24: 42504}
+           21: 20349, 22: 26334, 23: 33649, 24: 42504, 25: 53130}
 
 
 def git_blob_sha1(data: bytes) -> str:
@@ -135,7 +136,7 @@ def main() -> int:
     rows = {i: tuple(e["rows_covered"]) for i, e in enumerate(top)}
     mem = [e["membership"] for e in top]
 
-    V = js["k24"]["values"]  # contains the full k=1..24 series
+    V = js["k25"]["values"]  # contains the full k=1..25 series
     kill = {int(k[1:]): int(v) for k, v in V["kill"].items()}
     A = {int(k[1:]): int(v) for k, v in V["A_survive"].items()}
     B = {int(k[1:]): int(v) for k, v in V["B_survive_full_singleton_ban"].items()}
@@ -143,7 +144,7 @@ def main() -> int:
     ksh = {int(k[1:]): v for k, v in V["kill_share_percent"].items()}
     kA = {int(k[1:]): int(v) for k, v in V["kill_A"].items()}
     kB = {int(k[1:]): int(v) for k, v in V["kill_B"].items()}
-    K = 24
+    K = 25
     checks = []
 
     # 1. grand-total identity, constant across all k
@@ -178,8 +179,8 @@ def main() -> int:
             continue
         chain_ok = chain_ok and marg[n - 1] == int(det["k%d_minus_k%d" % (n, n - 1)])
         m_ok = m_ok and int(det["m%d" % n]) == mem[n - 1] and marg[n - 1] <= mem[n - 1]
-    checks.append(("marginal_chain_k14_k24_matches_published", chain_ok, None))
-    checks.append(("marginal_le_membership_k14_k24", m_ok,
+    checks.append(("marginal_chain_k14_k25_matches_published", chain_ok, None))
+    checks.append(("marginal_le_membership_k14_k25", m_ok,
                    "mN from pinned aggregate, independent of published detail"))
     # 5. independent direct-recomputation anchors (survive totals + A/B split)
     checks.append(("survive_totals_match_direct_recompute_k4k8k10k11k12",
@@ -226,15 +227,15 @@ def main() -> int:
         rep_ok = rep_ok and any(
             c["name"] == "reproduce_k1_%d" % (n - 1) and c["pass"]
             for c in js["k%d" % n]["checks"])
-    checks.append(("k16_k24_reproduce_anchors_all_pass", rep_ok, None))
+    checks.append(("k16_k25_reproduce_anchors_all_pass", rep_ok, None))
     # 10. quints all-zero anchors as published
     q_ok = True
     for n in range(15, K + 1):
         q_ok = q_ok and any(
             c["name"] == "quints.all_zero_%d" % QUINTS[n] and c["pass"]
             for c in js["k%d" % n]["checks"])
-    checks.append(("quints_all_zero_published_k15_k24", q_ok,
-                   "checks quints.all_zero_3003..42504 in each publication"))
+    checks.append(("quints_all_zero_published_k15_k25", q_ok,
+                   "checks quints.all_zero_3003..53130 in each publication"))
 
     # ---- structure layer: independent re-derivation from the aggregate
     s_ok = True
@@ -251,7 +252,7 @@ def main() -> int:
                 or int(rk["b_part"]) != memB[top[idx]["root"]]:
             s_ok = False
             s_bad.append((tag, "membership split"))
-    checks.append(("rank_root_fields_match_aggregate_k16_k24", s_ok, s_bad[:4]))
+    checks.append(("rank_root_fields_match_aggregate_k16_k25", s_ok, s_bad[:4]))
     pc_ok = True
     pc_bad = []
     for n in range(16, K + 1):
@@ -263,7 +264,7 @@ def main() -> int:
         if det is None or det["shared"] != shared or det["disjoint"] != (n - 1) - shared:
             pc_ok = False
             pc_bad.append((n, shared, det))
-    checks.append(("new_pair_census_rederived_k16_k24", pc_ok, pc_bad[:4]))
+    checks.append(("new_pair_census_rederived_k16_k25", pc_ok, pc_bad[:4]))
     tc_ok = True
     tc_bad = []
     for n in range(16, K + 1):
@@ -274,7 +275,7 @@ def main() -> int:
         if cen != pub:
             tc_ok = False
             tc_bad.append((n, cen, pub))
-    checks.append(("full_triple_census_rederived_k16_k24", tc_ok, tc_bad[:4]))
+    checks.append(("full_triple_census_rederived_k16_k25", tc_ok, tc_bad[:4]))
     qc_ok = True
     qc_bad = []
     for n in range(16, K + 1):
@@ -285,7 +286,7 @@ def main() -> int:
         if cen["disjoint"] != 0 or pub["b_only"] != cen["b_only"] or pub["zero"] != cen["zero"]:
             qc_ok = False
             qc_bad.append((n, cen, pub))
-    checks.append(("new_quad_census_rederived_k16_k24", qc_ok, qc_bad[:4]))
+    checks.append(("new_quad_census_rederived_k16_k25", qc_ok, qc_bad[:4]))
     n5_ok = True
     n5_bad = []
     for n in range(15, K + 1):
@@ -298,7 +299,7 @@ def main() -> int:
         if cnt != QUINTS[n]:
             n5_ok = False
             n5_bad.append((n, "count", cnt))
-    checks.append(("quints_rederived_all_zero_k15_k24", n5_ok,
+    checks.append(("quints_rederived_all_zero_k15_k25", n5_ok,
                    "C(N,5) counts %s, bad %s" % (QUINTS, n5_bad[:4])))
     # ---- cross-publication series consistency (no history rewrite)
     xs_ok = True
@@ -311,7 +312,7 @@ def main() -> int:
                 if k <= K and int(vv) != ref[k]:
                     xs_ok = False
                     xs_bad.append((n, key, kk))
-    checks.append(("kill_series_consistent_across_publications_k13_k24", xs_ok, xs_bad[:4]))
+    checks.append(("kill_series_consistent_across_publications_k13_k25", xs_ok, xs_bad[:4]))
 
     n_fail = 0
     for name, ok, extra in checks:
