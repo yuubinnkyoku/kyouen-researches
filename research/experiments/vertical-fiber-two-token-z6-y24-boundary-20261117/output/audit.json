@@ -2,13 +2,25 @@
   "all_pass": true,
   "audit_scope": {
     "direct_R": "0 <= R < x+51",
-    "direct_x": [24, 60],
+    "direct_x": [
+      24,
+      60
+    ],
     "far_tail_samples": 2000,
     "far_tail_seed": 20261117,
     "signature_R": "1 <= R <= x+30",
-    "signature_x": [24, 2000],
-    "tail_offsets": [0, 64],
-    "tail_x": [24, 2000]
+    "signature_x": [
+      24,
+      2000
+    ],
+    "tail_offsets": [
+      0,
+      64
+    ],
+    "tail_x": [
+      24,
+      2000
+    ]
   },
   "classification": "universal proof by explicit A/B/C signature table, K0832 Theorem T, general tail theorem, and strong induction on R",
   "counts": {
