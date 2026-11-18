@@ -34,6 +34,10 @@ ban対象（k=8まで）: (15,19) / (16,18) / (5,19) / (0,19) / (18,24) / (1,18)
 - 入力pin: cover表 `4e4a911d…`・phase-B groups aggregate `31bdefdb…`・top-10 joint出力 `df52b55a…`（sha256 `b84e5c3c…`）をbyte-exact検証。
 - **並走laneのdirect-mode B_d表（commit `08a0d111`出版）の着地検証も本セッションで実施**: 出版JSONL 31 recordのΣ contrib == B16 == 660,663,050,386,546,968 が厳密一致、かつ全31行のper-d contribが出版phase-total出力の b_slices と完全一致（2計算mode間の独立交叉検証）。
 
+## 並走k=1..10曲線との交叉検証（2独立手法の完全一致）
+
+出版直後のmain確認で、並走laneが包含排除の構造的崩壊（top-10全rootがハブ行18/19を含む → disjoint triple不在・全210 4-subset構造的不能 → kill(k)=Σm−Σj2+Σj3で完結）による生存曲線k=1..10厳密決定（commit `a59881a2`・出力 `cost16-survival-k10-20261118.json`・独立MyPm counter）を07:00に出版済み、さらにsingleton行ban拡張（`c98cb51d`）を07:04に出版済みであることが判明した。**本計算（ban下での全再計算・per-d slice・PmLazy）と並走（包含排除・joint再結合・MyPm）は手法として完全に独立しており、kill(4) = 512,607,951,062,386,922 と kill(8) = 964,524,629,128,354,269 が両者で厳密一致**した。これは並走のI-E打ち切り機構（quad以上の項が構造的にゼロという主張を含む）が、2点で独立な全再計算により確認されたことを意味する。逆に並走曲線は本logのk=4/k=8点を包含しており、31行cost-16 parentの生存曲線k=0..10は2独立手法で確定済みとなった。
+
 ## 解釈上の注意
 
 生存曲線はban回避の代替最小cover計画の組合せ数であって、探索コストでもWIN/REFUTED verdictでもない。membership上位banで残ったcover計画の存在は、それらの根の証明上の役割には何も含意しない。REFUTED-D10・STERILE は LOSS 証明ではない。
