@@ -440,27 +440,32 @@
   },
   "checks": [
     {
-      "name": "worklist_count",
+      "name": "worklist.count",
       "pass": true,
       "detail": 6438
     },
     {
-      "name": "open_rows",
+      "name": "worklist.unique",
       "pass": true,
-      "detail": 6337
+      "detail": 6438
     },
     {
-      "name": "closed_rows",
+      "name": "closed.rows",
       "pass": true,
       "detail": 66
     },
     {
-      "name": "sterile_rows",
+      "name": "sterile.rows",
       "pass": true,
       "detail": 35
     },
     {
-      "name": "parent_row_counts",
+      "name": "open.rows",
+      "pass": true,
+      "detail": 6337
+    },
+    {
+      "name": "parent.row-counts",
       "pass": true,
       "detail": [
         11,
@@ -471,22 +476,27 @@
       ]
     },
     {
-      "name": "target_union",
+      "name": "parent.targets-disjoint",
       "pass": true,
       "detail": 112
     },
     {
-      "name": "candidate_occurrences",
+      "name": "target.rows-safe",
+      "pass": true,
+      "detail": 112
+    },
+    {
+      "name": "candidate.occurrences",
       "pass": true,
       "detail": 8199
     },
     {
-      "name": "distinct_roots",
+      "name": "candidate.distinct-roots",
       "pass": true,
       "detail": 6542
     },
     {
-      "name": "span_histogram",
+      "name": "candidate.span-histogram",
       "pass": true,
       "detail": {
         "1": 4885,
@@ -494,7 +504,7 @@
       }
     },
     {
-      "name": "candidate_max_span",
+      "name": "candidate.max-span",
       "pass": true,
       "detail": {
         "1": 4885,
@@ -502,12 +512,12 @@
       }
     },
     {
-      "name": "candidate_safety",
+      "name": "candidate.all-roots-safe",
       "pass": true,
       "detail": 6542
     },
     {
-      "name": "published_joint_summary",
+      "name": "published.joint-summary",
       "pass": true,
       "detail": {
         "rows": 112,
@@ -518,7 +528,34 @@
       }
     },
     {
-      "name": "candidate_cross_parent_roots",
+      "name": "witness.count",
+      "pass": true,
+      "detail": 56
+    },
+    {
+      "name": "witness.unique",
+      "pass": true,
+      "detail": 56
+    },
+    {
+      "name": "witness.roots-safe",
+      "pass": true,
+      "detail": 56
+    },
+    {
+      "name": "witness.each-covers-two",
+      "pass": true,
+      "detail": 56
+    },
+    {
+      "name": "witness.partitions-target",
+      "pass": true,
+      "detail": {
+        "1": 112
+      }
+    },
+    {
+      "name": "candidate.cross-parent-count",
       "pass": true,
       "detail": {
         "independent": 49,
@@ -526,39 +563,22 @@
       }
     },
     {
-      "name": "witness_count",
-      "pass": true,
-      "detail": 56
-    },
-    {
-      "name": "witness_unique",
-      "pass": true,
-      "detail": 56
-    },
-    {
-      "name": "witness_partition",
-      "pass": true,
-      "detail": {
-        "1": 112
-      }
-    },
-    {
-      "name": "witness_cross_parent_roots",
+      "name": "witness.cross-parent-count",
       "pass": true,
       "detail": 10
     },
     {
-      "name": "minimum_lower_bound",
+      "name": "minimum.lower-bound",
       "pass": true,
       "detail": 56
     },
     {
-      "name": "minimum_attained",
+      "name": "minimum.witness-attains-bound",
       "pass": true,
       "detail": 56
     }
   ],
-  "check_count": 19,
+  "check_count": 23,
   "all_pass": true,
   "interpretation_guard": "This proves the exact minimum size of the candidate-root cover for the 112-row union only. It does not prove that any selected root has a WIN7-D10 certificate, does not close an S5 parent, and does not assign LOSS to REFUTED-D10 or STERILE rows.",
   "unknown_status": "Standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
