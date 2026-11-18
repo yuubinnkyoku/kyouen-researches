@@ -1,0 +1,40 @@
+{
+  "audit_sha256": "ec8e818dfbb4a4eda564d4d1320a02a1d00d3bd1a82b002023312bac93d5d169",
+  "cache": {
+    "canonical_states": 780396,
+    "induction_states": 5451,
+    "ordered_states": 1026131
+  },
+  "checks": {
+    "ABC_signatures": 2081011,
+    "even_parent_value_bound": 1040014,
+    "independent_ABC_recurrence": 5451,
+    "mex_equals_closed_formula": 2081011,
+    "odd_parent_child_bound": 1040997,
+    "ordered_and_canonical_direct_calls": 5160,
+    "tail_parity": 125824,
+    "x_parameters": 1966
+  },
+  "failure_count": 0,
+  "failures": [],
+  "range": {
+    "direct_r": "0..x+60",
+    "direct_x": [
+      35,
+      58
+    ],
+    "induction_r": "0..x+60",
+    "induction_x": [
+      35,
+      80
+    ],
+    "signature_r": "1..x+41",
+    "signature_x": [
+      35,
+      2000
+    ],
+    "tail_r": "x+42..x+105"
+  },
+  "schema": "kyouen-z6-y35-audit-v1",
+  "verifier_sha256": "da030f8c90d5c4e9bb5ac0e61a5d2be016a8d768fb6b40468f1106e1afb5b037"
+}
