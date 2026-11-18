@@ -41,7 +41,7 @@ PINS = {
     "worklist": "2fee1d0718547a62e346d35f5858d7913e37c097",
     "census": "9c251da3138c5cb0516e097be5e5d0427dfaf5f0",
     "ledger": "e8785d509e8a11a37c0d03cc450455a14708c34d",
-    "published": "8e870809251fdc27701518d66d6b8a65ec6798c7",
+    "published": "28a0993d7192e599a95ab93becb5dc0d983a8d35",
 }
 
 TRANSFORMS = [

@@ -31,7 +31,7 @@ INPUTS = {
     "ledger": ("research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/fold-chain-ledger-1410-1476-crosscheck-20261118.json",
                "e8785d509e8a11a37c0d03cc450455a14708c34d"),
     "head1476": ("research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/head1476-parent-census-and-class2-cover-20261118.json",
-                 "8e870809251fdc27701518d66d6b8a65ec6798c7"),
+                 "28a0993d7192e599a95ab93becb5dc0d983a8d35"),
 }
 TARGET_PARENT = "00000000000000403800000008000000"
 N = 11

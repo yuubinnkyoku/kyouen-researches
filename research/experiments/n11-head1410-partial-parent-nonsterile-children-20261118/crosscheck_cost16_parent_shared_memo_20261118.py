@@ -38,7 +38,7 @@ PINS = {
     "census": (
         "research/experiments/n11-head1410-receipt-unclosability-census-20261116/"
         "output/n11-head1410-receipt-unclosability-census-20261116.json",
-        "9c251da3138c5cb0516e097be5e5d35ab4f26a5d",
+        "9c251da3138c5cb0516e097be5e5d0427dfaf5f0",
     ),
     "ledger": (
         "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/"

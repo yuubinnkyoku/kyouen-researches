@@ -1,4 +1,14 @@
 {
+  "amendment_20261118_census_pin_correction": {
+    "amended_by": "n11 long lane (verification side)",
+    "date": "2026-11-18",
+    "finding": "The published inputs.census.git_blob_sha1 value 9c251da3138c5cb0516e097be5e5d35ab4f26a5d is not the git blob SHA-1 of any file in this repository. It is a splice of the first 29 hex characters of the census file's git blob SHA-1 with the last 11 hex characters of the K0863 knowledge item's git blob SHA-1 (c2ae353cab4a7dbcd28ec53b0f57d35ab4f26a5d). The correct git blob SHA-1 of research/experiments/n11-head1410-receipt-unclosability-census-20261116/output/n11-head1410-receipt-unclosability-census-20261116.json is 9c251da3138c5cb0516e097be5e5d0427dfaf5f0 (single-commit file history on main; the same correct pin is used by all earlier publications of this experiment). The published verifier crosscheck_cost16_parent_shared_memo_20261118.py carried the same spliced pin and would abort at the census pin check on a repo checkout; the script pin was corrected in place in the same commit as this amendment. The A16/B16/total values in this record are unaffected by the pin defect: they agree with the checkpoint computation and the pinned phase-A output, and are re-verified by an independent implementation in the companion experiment of the same commit.",
+    "corrected_git_blob_sha1": "9c251da3138c5cb0516e097be5e5d0427dfaf5f0",
+    "published_spliced_git_blob_sha1": "9c251da3138c5cb0516e097be5e5d35ab4f26a5d",
+    "splice_decomposition": "census_blob_sha1[:29] + k0863_item_blob_sha1[29:]",
+    "derived_values_affected": false,
+    "original_fields_preserved_verbatim": true
+  },
   "schema": "n11-cost16-parent-shared-memo-crosscheck-20261118-v1",
   "date": "2026-11-18",
   "source_main_commit": "e5f2fab7b7004a79d6352e087c02230c5b5baf9e",

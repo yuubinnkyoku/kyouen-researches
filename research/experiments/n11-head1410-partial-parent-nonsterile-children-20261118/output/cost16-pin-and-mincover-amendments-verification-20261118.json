@@ -1,0 +1,239 @@
+{
+  "all_pass": true,
+  "check_count": 30,
+  "checks": [
+    {
+      "detail": "9c251da3138c5cb0516e097be5e5d0427dfaf5f0",
+      "name": "census_input.blob_correct",
+      "pass": true
+    },
+    {
+      "detail": "9c251da3138c5cb0516e097be5e5d35ab4f26a5d",
+      "name": "census_input.blob_is_not_spliced_pin",
+      "pass": true
+    },
+    {
+      "detail": "census[:29] + k0863_item[29:] = 9c251da3138c5cb0516e097be5e5d35ab4f26a5d",
+      "name": "splice.is_census_head_plus_k0863_tail",
+      "pass": true
+    },
+    {
+      "detail": "8e870809251fdc27701518d66d6b8a65ec6798c7",
+      "name": "census_record.reconstructs_original_blob",
+      "pass": true
+    },
+    {
+      "detail": "[\"amendment_20261118_minimum_cover_count\", \"schema\", \"date\"]",
+      "name": "census_record.amended_parses",
+      "pass": true
+    },
+    {
+      "detail": "all non-amendment top-level fields deep-equal the reconstructed original",
+      "name": "census_record.original_fields_preserved",
+      "pass": true
+    },
+    {
+      "detail": "{\"total\": 359610, \"partition\": 337020, \"overlapping\": 22590}",
+      "name": "census_record.corrected_total_value",
+      "pass": true
+    },
+    {
+      "detail": "derived.candidate_cover.all_minimum_cover_sets preserved verbatim at 337020, now annotated",
+      "name": "census_record.published_field_still_present",
+      "pass": true
+    },
+    {
+      "detail": "fdee94dfc60fb833b188c4f2b41c7f292263076b",
+      "name": "census_record.evidence_pin_matches_crosscheck_file",
+      "pass": true
+    },
+    {
+      "detail": "crosscheck finding F1 totals agree with the amendment values",
+      "name": "census_record.evidence_finding_numbers_agree",
+      "pass": true
+    },
+    {
+      "detail": "b70689ea6b2177b2a86909939737f57c5ed637c9",
+      "name": "cost16_record.reconstructs_original_blob",
+      "pass": true
+    },
+    {
+      "detail": "all non-amendment top-level fields deep-equal the reconstructed original",
+      "name": "cost16_record.original_fields_preserved",
+      "pass": true
+    },
+    {
+      "detail": "9c251da3138c5cb0516e097be5e5d0427dfaf5f0",
+      "name": "cost16_record.corrected_pin_is_actual_census_blob",
+      "pass": true
+    },
+    {
+      "detail": "9c251da3138c5cb0516e097be5e5d35ab4f26a5d",
+      "name": "cost16_record.spliced_pin_documented",
+      "pass": true
+    },
+    {
+      "detail": "{\"A16\": 2305787291293934388, \"B16\": 660663050386546968}",
+      "name": "cost16_record.derived_values_unchanged",
+      "pass": true
+    },
+    {
+      "detail": "1",
+      "name": "fixed_script.correct_pin_once",
+      "pass": true
+    },
+    {
+      "detail": "0",
+      "name": "fixed_script.spliced_pin_gone",
+      "pass": true
+    },
+    {
+      "detail": "worklist/census/ledger/cover/phase_a",
+      "name": "fixed_script.all_five_pins_match_files",
+      "pass": true
+    },
+    {
+      "detail": "head1476 record pin updated to the amended blob",
+      "name": "repin.membership11_script",
+      "pass": true
+    },
+    {
+      "detail": "head1476 record pin updated to the amended blob",
+      "name": "repin.elimination_script",
+      "pass": true
+    },
+    {
+      "detail": "head1476 record pin updated to the amended blob",
+      "name": "repin.head1476_crosscheck_script",
+      "pass": true
+    },
+    {
+      "detail": "11",
+      "name": "recompute.rows_match_published_membership",
+      "pass": true
+    },
+    {
+      "detail": "757",
+      "name": "recompute.roots_757",
+      "pass": true
+    },
+    {
+      "detail": "{\"1\": 708, \"2\": 49}",
+      "name": "recompute.span_histogram",
+      "pass": true
+    },
+    {
+      "detail": "806",
+      "name": "recompute.candidates_806",
+      "pass": true
+    },
+    {
+      "detail": "337020",
+      "name": "recompute.partition_covers_337020",
+      "pass": true
+    },
+    {
+      "detail": "22590",
+      "name": "recompute.overlapping_covers_22590",
+      "pass": true
+    },
+    {
+      "detail": "359610",
+      "name": "recompute.total_359610",
+      "pass": true
+    },
+    {
+      "detail": "[337020, 22590, 359610]",
+      "name": "recompute.matches_published_cover_space",
+      "pass": true
+    },
+    {
+      "detail": "11/11 per-row weighted perfect matchings of the 10-row complements",
+      "name": "recompute.per_row_singleton_pm_matches_ways10",
+      "pass": true
+    }
+  ],
+  "date": "2026-11-18",
+  "derived": {
+    "census_input_git_blob_sha1": "9c251da3138c5cb0516e097be5e5d0427dfaf5f0",
+    "census_record_amended_git_blob_sha1": "28a0993d7192e599a95ab93becb5dc0d983a8d35",
+    "corrected_total_minimum_covers_11row": 359610,
+    "cost16_A16_unchanged": 2305787291293934388,
+    "cost16_B16_unchanged": 660663050386546968,
+    "cost16_record_amended_git_blob_sha1": "41d37ed863a85c8a9bdadaf0f39bb6d1a452c60d",
+    "cost16_total_unchanged": 2966450341680481356,
+    "k0863_item_git_blob_sha1": "c2ae353cab4a7dbcd28ec53b0f57d35ab4f26a5d",
+    "overlapping_covers_11row": 22590,
+    "partition_covers_11row": 337020,
+    "splice_decomposition": "census_blob_sha1[:29] + k0863_item_blob_sha1[29:]",
+    "spliced_pin": "9c251da3138c5cb0516e097be5e5d35ab4f26a5d"
+  },
+  "inputs": {
+    "census": {
+      "git_blob_sha1": "9c251da3138c5cb0516e097be5e5d0427dfaf5f0",
+      "path": "research/experiments/n11-head1410-receipt-unclosability-census-20261116/output/n11-head1410-receipt-unclosability-census-20261116.json"
+    },
+    "census_crosscheck": {
+      "git_blob_sha1": "fdee94dfc60fb833b188c4f2b41c7f292263076b",
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/crosscheck-head1476-parent-census-and-class2-cover-20261118.json"
+    },
+    "census_record_amended": {
+      "git_blob_sha1": "28a0993d7192e599a95ab93becb5dc0d983a8d35",
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/head1476-parent-census-and-class2-cover-20261118.json"
+    },
+    "cost16_amended": {
+      "git_blob_sha1": "41d37ed863a85c8a9bdadaf0f39bb6d1a452c60d",
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/cost16-shared-memo-crosscheck-20261118.json"
+    },
+    "cost16_script_fixed": {
+      "git_blob_sha1": "e5a47f7a10354add46ab9577358e1fb98bd81e51",
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/crosscheck_cost16_parent_shared_memo_20261118.py"
+    },
+    "cover": {
+      "git_blob_sha1": "4e4a911d0e05779437d4a8e97685a8feb66c0d25",
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/parent-minimum-cover-cost-table-20261118.json"
+    },
+    "elimination_script": {
+      "git_blob_sha1": "fa810590ccad5027f785f2a4d4aab0bb3cd17148",
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/analyze_minimum_cover_elimination_structure_20261118.py"
+    },
+    "head1476_crosscheck_script": {
+      "git_blob_sha1": "c6ebb06c4c7b5a7385a1ad92d90c85d37d264bb2",
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/crosscheck_head1476_census_and_class2_cover_20261118.py"
+    },
+    "k0863_item": {
+      "git_blob_sha1": "c2ae353cab4a7dbcd28ec53b0f57d35ab4f26a5d",
+      "path": "research/knowledge/items/K0863-sterile-row-depth10-unclosability.md"
+    },
+    "ledger": {
+      "git_blob_sha1": "e8785d509e8a11a37c0d03cc450455a14708c34d",
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/fold-chain-ledger-1410-1476-crosscheck-20261118.json"
+    },
+    "membership11": {
+      "git_blob_sha1": "ab1e655f4a89a677e57515cdbacfe56894323013",
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/minimum-cover-root-membership-20261118.json"
+    },
+    "membership11_script": {
+      "git_blob_sha1": "b8e378c7c5699addf63a1f1ffbbf515630411022",
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/count_minimum_cover_root_membership_20261118.py"
+    },
+    "phase_a": {
+      "git_blob_sha1": "fe4b4b559fd8c3fdc9bc9b9f40a048fc3217c55b",
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/cost16-a-phase-20261118.json"
+    },
+    "worklist": {
+      "git_blob_sha1": "2fee1d0718547a62e346d35f5858d7913e37c097",
+      "path": "research/experiments/n11-class2-lane-closability-ranking-20261116/output/class-frontier-remaining-s6-worklist-1410-20261116.csv"
+    }
+  },
+  "interpretation_guard": "Finite bookkeeping and combinatorial verification only. The amendments correct an input-pin transcription defect and annotate a cover-count labeling error; no engine was run, no S5 parent was closed, and no game-theoretic value changed. REFUTED-D10 and STERILE are not LOSS proofs.",
+  "lane": "n11 long lane (verification side)",
+  "method": "All statements are re-derived from files at their repo paths with git blob SHA-1 pins. The two amended records are shown to be pure textual inserts: the pre-amendment record is reconstructed by removing the amendment block and pinned at its original git blob; every non-amendment field is compared deep-equal against the reconstructed original. The spliced census pin is shown to be census_blob[:29] + k0863_item_blob[29:]. The 11-row class-2 cover totals are recomputed independently from the pinned worklist/census/ledger by weighted perfect-matching counting (partition shape A and overlapping six-pair shape B) and crosschecked against the published root-membership output.",
+  "original_blobs": {
+    "cost16_shared_memo_record_pre_amendment": "b70689ea6b2177b2a86909939737f57c5ed637c9",
+    "head1476_census_record_pre_amendment": "8e870809251fdc27701518d66d6b8a65ec6798c7"
+  },
+  "schema": "n11-cost16-pin-and-mincover-amendments-verification-20261118-v1",
+  "title": "Verification-side audit of the 2026-11-18 amendments: census-input pin splice correction and head-1476 minimum-cover count annotation",
+  "unknown_status": "Standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+}
