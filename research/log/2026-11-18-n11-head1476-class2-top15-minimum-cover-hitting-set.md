@@ -50,7 +50,7 @@ All three roots cover the common target row `00000000000000c09002000000001000`; 
 - The published prior curve k=0..12 is reproduced exactly.
 - Membership identity: sum of all 757 root memberships = 6 × 359,610.
 - Forced-inclusion DP verifies each of ranks 13–15 contributes 4,875 residual covers; all three pairwise intersections and the triple intersection are zero.
-- 18 checks pass in the in-memory run. The computation used the pinned GitHub file contents in the available V8 execution environment. The published `.mjs` is a local reproduction script; it was not executed from a repository checkout in this run.
+- 19 checks pass in the in-memory run. The computation used the pinned GitHub file contents in the available V8 execution environment. The published `.mjs` is a local reproduction script; it was not executed from a repository checkout in this run.
 
 ## Interpretation boundary
 
