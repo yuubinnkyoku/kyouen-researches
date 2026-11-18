@@ -1,0 +1,305 @@
+{
+  "schema": "n11-runnerup29-ban-survival-curve-20261118-v1",
+  "date": "2026-11-18",
+  "lane": "n11 long lane (verification side)",
+  "title": "Exact ban-survival curve for the 29-row runner-up target 00000000000000003800000009000000 (ban top-k membership pair roots, recompute exact A/B minimum cover totals)",
+  "inputs": {
+    "cover_table": {
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/parent-minimum-cover-cost-table-20261118.json",
+      "git_blob_sha1": "4e4a911d0e05779437d4a8e97685a8feb66c0d25"
+    },
+    "published_membership_output": {
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/runnerup29-cover-membership-20261118.json",
+      "git_blob_sha1": "05f54eb58baad66403b327696b9a63f7433a13c3"
+    },
+    "candidate_roots": {
+      "path": "(regenerated) output/global-candidate-roots-20261118.jsonl",
+      "regenerated_by": "enumerate_global_candidate_roots_20261118.py"
+    }
+  },
+  "method": "For each k, the top-k membership pair roots (published ranking) are banned by deleting their pair type (all multiplicities are 1), and the exact A-type and B-type minimum cover totals are recomputed from scratch with a fresh shared-memo anchored lazy matching DP. k=0 reproduces the published total; k=1 and k=2 match the membership/inclusion-exclusion predictions from the published membership and joint values, giving two independent validations of the ban machinery.",
+  "derived": {
+    "rows": 29,
+    "ban_points": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      12
+    ],
+    "baseline_total": 45949721018967524,
+    "curve": [
+      {
+        "k": 0,
+        "banned_roots": [],
+        "type_A": 37317784435384705,
+        "type_B": 8631936583582819,
+        "total": 45949721018967524,
+        "kill_share": 0.0,
+        "memo_states": 3523948,
+        "pm_gets": 8123
+      },
+      {
+        "k": 1,
+        "banned_roots": [
+          "00000000000000801202000001100100"
+        ],
+        "type_A": 35386897890413195,
+        "type_B": 8152808696031897,
+        "total": 43539706586445092,
+        "kill_share": 0.052449,
+        "memo_states": 3523928,
+        "pm_gets": 8082
+      },
+      {
+        "k": 2,
+        "banned_roots": [
+          "00000000000000801202000001100100",
+          "00000000000000801202000001100008"
+        ],
+        "type_A": 33462787867189176,
+        "type_B": 7677330356333705,
+        "total": 41140118223522881,
+        "kill_share": 0.104671,
+        "memo_states": 3523908,
+        "pm_gets": 8042
+      },
+      {
+        "k": 3,
+        "banned_roots": [
+          "00000000000000801202000001100100",
+          "00000000000000801202000001100008",
+          "00000000240000003800400000100000"
+        ],
+        "type_A": 31751063713550387,
+        "type_B": 7257223718984061,
+        "total": 39008287432534448,
+        "kill_share": 0.151066,
+        "memo_states": 3523885,
+        "pm_gets": 8001
+      },
+      {
+        "k": 4,
+        "banned_roots": [
+          "00000000000000801202000001100100",
+          "00000000000000801202000001100008",
+          "00000000240000003800400000100000",
+          "00000000000000103800000209000000"
+        ],
+        "type_A": 29947175119759074,
+        "type_B": 6813247900008103,
+        "total": 36760423019767177,
+        "kill_share": 0.199986,
+        "memo_states": 3523872,
+        "pm_gets": 7962
+      },
+      {
+        "k": 5,
+        "banned_roots": [
+          "00000000000000801202000001100100",
+          "00000000000000801202000001100008",
+          "00000000240000003800400000100000",
+          "00000000000000103800000209000000",
+          "00000000000000801202000801100000"
+        ],
+        "type_A": 28289921771208610,
+        "type_B": 6411138535131431,
+        "total": 34701060306340041,
+        "kill_share": 0.244804,
+        "memo_states": 3523853,
+        "pm_gets": 7922
+      },
+      {
+        "k": 6,
+        "banned_roots": [
+          "00000000000000801202000001100100",
+          "00000000000000801202000001100008",
+          "00000000240000003800400000100000",
+          "00000000000000103800000209000000",
+          "00000000000000801202000801100000",
+          "00000000240000003820000000001000"
+        ],
+        "type_A": 26623548733185650,
+        "type_B": 6005574961354160,
+        "total": 32629123694539810,
+        "kill_share": 0.289895,
+        "memo_states": 3523841,
+        "pm_gets": 7883
+      },
+      {
+        "k": 7,
+        "banned_roots": [
+          "00000000000000801202000001100100",
+          "00000000000000801202000001100008",
+          "00000000240000003800400000100000",
+          "00000000000000103800000209000000",
+          "00000000000000801202000801100000",
+          "00000000240000003820000000001000",
+          "0000000000000010380000000b000000"
+        ],
+        "type_A": 25072497332805361,
+        "type_B": 5631175398513295,
+        "total": 30703672731318656,
+        "kill_share": 0.331798,
+        "memo_states": 3523815,
+        "pm_gets": 7844
+      },
+      {
+        "k": 8,
+        "banned_roots": [
+          "00000000000000801202000001100100",
+          "00000000000000801202000001100008",
+          "00000000240000003800400000100000",
+          "00000000000000103800000209000000",
+          "00000000000000801202000801100000",
+          "00000000240000003820000000001000",
+          "0000000000000010380000000b000000",
+          "00000000000000801202020011000000"
+        ],
+        "type_A": 23611337011024255,
+        "type_B": 5280004225163741,
+        "total": 28891341236187996,
+        "kill_share": 0.37124,
+        "memo_states": 3523791,
+        "pm_gets": 7805
+      },
+      {
+        "k": 10,
+        "banned_roots": [
+          "00000000000000801202000001100100",
+          "00000000000000801202000001100008",
+          "00000000240000003800400000100000",
+          "00000000000000103800000209000000",
+          "00000000000000801202000801100000",
+          "00000000240000003820000000001000",
+          "0000000000000010380000000b000000",
+          "00000000000000801202020011000000",
+          "00000000000000103800000009800000",
+          "00000000000000805202000001100000"
+        ],
+        "type_A": 20798799496221779,
+        "type_B": 4609517143948423,
+        "total": 25408316640170202,
+        "kill_share": 0.447041,
+        "memo_states": 3523751,
+        "pm_gets": 7729
+      },
+      {
+        "k": 12,
+        "banned_roots": [
+          "00000000000000801202000001100100",
+          "00000000000000801202000001100008",
+          "00000000240000003800400000100000",
+          "00000000000000103800000209000000",
+          "00000000000000801202000801100000",
+          "00000000240000003820000000001000",
+          "0000000000000010380000000b000000",
+          "00000000000000801202020011000000",
+          "00000000000000103800000009800000",
+          "00000000000000805202000001100000",
+          "00000000000000801212000011000000",
+          "00000000000000805202000011000000"
+        ],
+        "type_A": 18015508424607623,
+        "type_B": 3948407893544449,
+        "total": 21963916318152072,
+        "kill_share": 0.522001,
+        "memo_states": 3523703,
+        "pm_gets": 7657
+      }
+    ],
+    "naive_membership_sum_vs_exact": {
+      "k": 12,
+      "sum_membership_top12": 27816014298454218,
+      "sum_share_of_total": 0.605358,
+      "exact_survival_share": 0.477999
+    }
+  },
+  "checks": [
+    {
+      "name": "rows",
+      "pass": true,
+      "detail": "29"
+    },
+    {
+      "name": "candidates",
+      "pass": true,
+      "detail": "2203"
+    },
+    {
+      "name": "roots",
+      "pass": true,
+      "detail": "1854"
+    },
+    {
+      "name": "all_pair_types_mult1",
+      "pass": true,
+      "detail": "{\"types\": 349}"
+    },
+    {
+      "name": "published_total",
+      "pass": true,
+      "detail": "45949721018967524"
+    },
+    {
+      "name": "ban_set_all_pair_roots",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "name": "ban_roots_in_parent",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "joint_top2_found",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "baseline_reproduces_published",
+      "pass": true,
+      "detail": "{\"recomputed\": \"45949721018967524\", \"published\": \"45949721018967524\"}"
+    },
+    {
+      "name": "baseline_split",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "k1_independence",
+      "pass": true,
+      "detail": "{\"recomputed\": \"43539706586445092\", \"total_minus_mem\": \"43539706586445092\"}"
+    },
+    {
+      "name": "k2_independence",
+      "pass": true,
+      "detail": "{\"recomputed\": \"41140118223522881\", \"incl_excl\": \"41140118223522881\"}"
+    },
+    {
+      "name": "strictly_decreasing",
+      "pass": true,
+      "detail": "[\"45949721018967524\", \"43539706586445092\", \"41140118223522881\", \"39008287432534448\", \"36760423019767177\", \"34701060306340041\", \"32629123694539810\", \"30703672731318656\", \"28891341236187996\", \"25408316640170202\", \"21963916318152072\"]"
+    },
+    {
+      "name": "kill_shares_monotone",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "k12_union_bound",
+      "pass": true,
+      "detail": "{\"exact\": \"21963916318152072\", \"union_bound\": \"18133706720513306\"}"
+    }
+  ],
+  "check_count": 15,
+  "all_pass": true,
+  "interpretation_guard": "Cover-plan combinatorics only. The survival curve counts alternative minimum cover plans avoiding the banned roots; it is not a search cost and implies nothing about WIN/REFUTED verdicts of the banned roots. REFUTED-D10 and STERILE are not LOSS proofs.",
+  "unknown_status": "Standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+}
