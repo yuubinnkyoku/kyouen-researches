@@ -9,8 +9,9 @@ per-record JSONL d974042f), k=27 (script+log 16ca07d0,
 result JSON 9b804a9c, per-record JSONL d43eb059), k=28 (script+log
 a6010eef, result JSON efc500fa, per-record JSONL 42182831), k=29
 (script+log f6966f18, result JSON 29fb9f92, per-record JSONL
-40f74ef1), and k=30 (script+log 69b4e029, result JSON f6a08dc5,
-per-record JSONL b3b5ee32), verification lane.
+40f74ef1), k=30 (script+log 69b4e029, result JSON f6a08dc5,
+per-record JSONL b3b5ee32), and k=31 (script+log cf8d7dcc,
+result JSON 5da4cc6c, per-record JSONL a4bef2aa), verification lane.
 
 Three independent layers, no experiment-script imports:
 
@@ -22,11 +23,11 @@ Three independent layers, no experiment-script imports:
   2. structure layer: a fresh re-derivation of the structural census
      (shared/disjoint new pairs, b_only/zero/disjoint new triples and
      quads, full triple census, all-C(N,5) 5-subsets zero up to k=25,
-     and the k=26..k=30 5-subset censuses, the first ranks that are
+     and the k=26..k=31 5-subset censuses, the first ranks that are
      not all-zero, with the new-sensitive prev/new split)
      from the pinned phase-B aggregate with an inline row-multiplicity
      classifier, compared against the published structure fields;
-  3. record layer (k=26 through k=30): each per-record JSONL is
+  3. record layer (k=26 through k=31): each per-record JSONL is
      fetched at its own pinned git blob sha1, every joint record is
      re-classified with the same independent classifier, the new
      pairs / triples / quads and the recorded new b_only quint set
@@ -35,7 +36,7 @@ Three independent layers, no experiment-script imports:
      B-type) are re-summed from the record joints alone.
 
 Fetches the published output JSONs (and, for layer 3, the
-k=26..k=30 per-record JSONLs) at their pinned git blob sha1s
+k=26..k=31 per-record JSONLs) at their pinned git blob sha1s
 (via the jsdelivr mirror with a raw.githubusercontent.com fallback;
 a mirror serving stale-but-wrong bytes fails the sha1 check and the
 next mirror is tried).
@@ -73,6 +74,7 @@ PINS = {
     "k28": ("cost16-survival-k28-20261118.json", "99db3a9a48d044727b3a4d83fb7fc97daa7513d2"),
     "k29": ("cost16-survival-k29-20261118.json", "795665316c300a186979bafd2817b6961de2de60"),
     "k30": ("cost16-survival-k30-20261118.json", "9c24e7a30ad213d3b7675e620ec606b00f73a330"),
+    "k31": ("cost16-survival-k31-20261118.json", "0d9f67ee69ad4fb8aa37904ddbf6666745786807"),
     "agg": ("cost16-b-phase-groups-20261118.json", "31bdefdb2e2cc90b706cbb8090e98eb5eece4d87"),
 }
 # k=26 per-record JSONL (published 2026-11-18, commit d974042f): 4,513
@@ -121,6 +123,12 @@ JSONL_K29 = ("cost16-survival-k29-20261118.jsonl", "7b2afe8559de6d94a82a4b0d3f62
 # (anchor4 = the two published k=29 disjoint quads x both lineages)
 # + cross 8.
 JSONL_K30 = ("cost16-survival-k30-20261118.jsonl", "98062c66b522e8df6604cd508427f37b2fbe8220")
+# k=31 per-record JSONL (published 2026-11-18, commit a4bef2aa): 5,362
+# records = pair 30 + triple 435 + quad 4,060 + quint 819 (new b_only
+# only; the 26,586 new zero quints are structural, joint 0) + anchors 10
+# (anchor4 = the two published (4,13,25,29)/(4,16,25,29) disjoint quads
+# of the k=30 record layer x both lineages) + cross 8.
+JSONL_K31 = ("cost16-survival-k31-20261118.jsonl", "d308b6d537e8606dadef33c52cdade6cda109320")
 # 5-subset counts are machine-derived with math.comb (no hand-written
 # table): C(15..25,5) = 3003..53130, all verified zero-valued; k=26 and
 # k=27 are the first censuses that are not all-zero (C(26,5) = 65,780
@@ -137,7 +145,15 @@ JSONL_K30 = ("cost16-survival-k30-20261118.jsonl", "98062c66b522e8df6604cd508427
 # b_only / 22,423 zero) continue the census-based treatment.  At
 # k=30 the quint double-row family stays {15,16,18,19}: row 14
 # enters the quad double-row family for the first time (9 b_only
-# quads) but never the quint one.
+# quads) but never the quint one.  k=31 (C(31,5) = 169,911:
+# 6,787 b_only / 163,124 zero / 0 disjoint, the rank-31-new layer
+# being 819 b_only / 26,586 zero, cumulative double rows
+# 15:1003 / 16:239 / 18:4149 / 19:1396) is the hub-band (18,26)
+# rank: row 26 receives its first-ever cover there, so it never
+# enters any double-row family, and the k=31 record layer is the
+# first whose new pair census is evenly split 15 shared / 15
+# disjoint (the rank-31 root is the only new-pair member with no
+# doubled row).
 
 
 def git_blob_sha1(data: bytes) -> str:
@@ -237,7 +253,7 @@ def main() -> int:
     rows = {i: tuple(e["rows_covered"]) for i, e in enumerate(top)}
     mem = [e["membership"] for e in top]
 
-    V = js["k30"]["values"]  # contains the full k=1..30 series
+    V = js["k31"]["values"]  # contains the full k=1..31 series
     kill = {int(k[1:]): int(v) for k, v in V["kill"].items()}
     A = {int(k[1:]): int(v) for k, v in V["A_survive"].items()}
     B = {int(k[1:]): int(v) for k, v in V["B_survive_full_singleton_ban"].items()}
@@ -245,7 +261,7 @@ def main() -> int:
     ksh = {int(k[1:]): v for k, v in V["kill_share_percent"].items()}
     kA = {int(k[1:]): int(v) for k, v in V["kill_A"].items()}
     kB = {int(k[1:]): int(v) for k, v in V["kill_B"].items()}
-    K = 30
+    K = 31
     checks = []
 
     # 1. grand-total identity, constant across all k
@@ -417,7 +433,7 @@ def main() -> int:
     # contain the new rank n-1 are the recorded new-b_only layer).
     q_new_b_only = {}
     q_full = {}
-    for n in (26, 27, 28, 29, 30):
+    for n in (26, 27, 28, 29, 30, 31):
         qn = {"b_only": 0, "zero": 0, "disjoint": 0}
         qn_twos = {}
         for c in itertools.combinations(range(n), 5):
@@ -441,8 +457,8 @@ def main() -> int:
     # consecutive-era prev-layer identities: full(k) minus the
     # rank-k-new 5-subsets (C(k-1,4) counted as new b_only + new
     # zero) must equal the full census of the previous rank, for
-    # the whole quint era k=27..30.
-    for n, m in ((27, 26), (28, 27), (29, 28), (30, 29)):
+    # the whole quint era k=27..31.
+    for n, m in ((27, 26), (28, 27), (29, 28), (30, 29), (31, 30)):
         checks.append((f"quint_census_k{n}_prev_layer_equals_published_k{m}_census",
                        q_full[n]["b_only"] - len(q_new_b_only[n]) == q_full[m]["b_only"]
                        and q_full[n]["zero"] - (math.comb(n - 1, 4) - len(q_new_b_only[n])) == q_full[m]["zero"]
@@ -466,7 +482,7 @@ def main() -> int:
                     xs_bad.append((n, key, kk))
     checks.append((f"kill_series_consistent_across_publications_k13_k{K}", xs_ok, xs_bad[:4]))
 
-    # ---- record layer (k=26 through k=30): each per-record JSONL is fetched
+    # ---- record layer (k=26 through k=31): each per-record JSONL is fetched
     # at its own pinned blob sha1; every joint record is re-classified
     # with the same independent classifier, the new pairs / triples /
     # quads and the recorded new b_only quint set are checked for
@@ -476,12 +492,12 @@ def main() -> int:
     # re-derived from the two lineage records per combo; at k=26 the
     # single anchor4 combo is the published (25,3,4,16), at k=27 the
     # two combos are the published (25,3,4,16)/(25,3,4,17) disjoint
-    # quads of the k=26 record layer, and k=28/k=29/k=30 likewise
+    # quads of the k=26 record layer, and k=28/k=29/k=30/k=31 likewise
     # anchor on the two published disjoint quads of the previous
-    # rank's record layer.
+    # rank's record layer (at k=31: (4,13,25,29)/(4,16,25,29)).
     for n, pin, a4c in ((26, JSONL_K26, 1), (27, JSONL_K27, 2),
                          (28, JSONL_K28, 2), (29, JSONL_K29, 2),
-                         (30, JSONL_K30, 2)):
+                         (30, JSONL_K30, 2), (31, JSONL_K31, 2)):
         jl = fetch_lines(*pin, args.local)
         new = n - 1
         kinds = {}
