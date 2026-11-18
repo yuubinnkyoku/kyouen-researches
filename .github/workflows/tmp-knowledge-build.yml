@@ -1,0 +1,23 @@
+name: Temporary knowledge view regeneration
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/tmp-knowledge-build.yml
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync --locked
+      - run: uv run --locked python tools/knowledge/build.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: generated-knowledge-views
+          path: |
+            README.md
+            research/knowledge/generated/
+          if-no-files-found: error

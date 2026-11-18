@@ -22,7 +22,6 @@ artifacts:
 - path: research/log/2026-11-18-vertical-fiber-t2-q12-grundy.md
   role: log
   note: 最新main・既存q=8..11成果との重複確認、q=12分類の証明・監査・限界
-date: 2026-11-18
 scope: >-
   底面跡制約なし・次数上限t=2・禁止点数q=12の純ファイバーゲーム。
   全幅w>=1、全高さm>=2、全安全占有局面のGrundy値を分類する。
