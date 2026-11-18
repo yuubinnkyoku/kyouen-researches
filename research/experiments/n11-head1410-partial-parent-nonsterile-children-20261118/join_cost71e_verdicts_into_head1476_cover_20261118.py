@@ -145,7 +145,7 @@ def main() -> None:
         raise AssertionError("cost71e legal candidate list is not 71 unique bits")
     if raw_audit["verdicts"]["capped_count"] != 0:
         raise AssertionError("cost71e raw audit reports capped candidates")
-    if raw_audit["rawPins"] != claim["actual_execution"]["raw_outputs"]["raw_batch_blob_pins"]:
+    if raw_audit["raw_batch_pins"] != claim["actual_execution"]["raw_outputs"]["raw_batch_blob_pins"]:
         raise AssertionError("claim/raw-audit raw batch pins differ")
     if raw_audit["verdicts"]["win7_d10_bits"] != claim["actual_execution"]["results"]["win7_d10_bits"]:
         raise AssertionError("claim/raw-audit WIN bit lists differ")
