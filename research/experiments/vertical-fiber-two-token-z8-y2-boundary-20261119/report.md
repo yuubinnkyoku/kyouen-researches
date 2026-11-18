@@ -131,7 +131,6 @@ mex対応は
 - tail: \(2\le x\le5000,\ R=x+11,\ldots,x+14\)
 - 遠方tail: seed 20261119、5,000標本
 - 検証器: verify_z8_y2.py
-- 検証器SHA-256: cac45cc63da1a9dd52d45da93acfcf354833b46149306cc344fd405831d20ea8
 - 監査JSON SHA-256: 59b9252bdca632439f2aade734b44165630ec8a56858b943f1f1ebdbd3f8979c
 - 監査JSON内部hash（hash欄を除く）: 05fafac527cd57541a1e4516bbb4f4e30447246784f9c7bffac1f179b2813643
 - 監査を2回実行し、内容はbyte-identical。
