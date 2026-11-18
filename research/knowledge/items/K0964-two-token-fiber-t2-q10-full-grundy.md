@@ -25,7 +25,6 @@ artifacts:
 - path: research/log/2026-11-18-vertical-fiber-t2-q10-grundy.md
   role: log
   note: q=9既存成果との差分、全称証明・独立監査・限界
-date: 2026-11-18
 scope: >-
   底面跡制約なしの純ファイバーゲーム。幅w>=1、高さm>=2、次数上限t=2、禁止点数q=10。安全条件はΣ_b min(c_b,2)<=9。
 evidence: >-
