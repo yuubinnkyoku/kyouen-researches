@@ -79,6 +79,29 @@ energy + Melchior による全称証明・SAT に依らない）。witness-free 
   M_{5,7} = 19 または M_{5,7} ≥ 61。** records.jsonl 26行（m=35..60・38,39込み）・
   生ログは `output/raw/` に逐次追記。driver: `scripts/sweep_driver_5xq7.sh`
   （resume-safe・records.jsonl 重複回避・curves 予測表照合込み）。
+- **2026-11-18 (同日継続2): m=61 UNSAT・m=62 def INDET→rowY 分割で完全決着。**
+  m=61: def-mode UNSAT（conflicts 3,353,888・203.5s・curves 528 = 予測表）。
+  m=62: def-mode は 230s cap で INDET（~3.8M conflicts）に到達したため、
+  レーンの事前プロトコル通り **rowY=0/1/2 行固定分割**（V-鏡像 y↔4-y で
+  3クラスが全5行を被覆・K0829 と同一の被覆論の w=5 版・`--rowY=Y` は
+  「行Yが欠損」単位節で def 節 ∨_y ¬rowFull(y) のクラス分割）で決着:
+  **rowY=2: 67,141 conflicts・4.0s / rowY=1: 461,909・27.3s / rowY=0:
+  1,024,449・57.3s、すべて UNSAT → 5×62 欠損極大非存在の完全証明。**
+  分割3クラス合計は def 1インスタンスの数十分の一で、難しいクラスは
+  外側行 Y=0 のみ（順に 27s < 57s）。記録は `output/records-split.jsonl`
+  （スキーマに mode:"rowfixed"・rowY を追加）・生ログは
+  `output/raw/kissat-5x<M>-q7-rowY<y>.txt`。
+- **2026-11-18 (同日継続3): 環境リセットをはさんで m=62,63.. の分割を
+  bit-exact 再現。** 実行環境がスイープ中にリセットされ未pushの
+  m=62..65 分割記録が失われたため、スタック（kissat md5
+  3a5eba830aa6008a604fcc9bbe99a325・genfast3 blob・sat/sat2）を
+  46f7f73f の raw から再構築し **m=62, 63 の分割を再実行したところ
+  conflicts が環境リセット前と全桁一致**（m=62: 67,141/461,909/1,024,449・
+  m=63: 69,715/442,102/1,287,619）。これは決定性の主張を2環境で
+  実証した追加検証として記録に値する。以後は小幅ごとに checkpoint push
+  して環境リセット被害を最小化する。引き続き **m=64 以降は分割
+  ファースト**（def INDET を270s待ってから分割する2度手間を省く）で
+  掃引し、 records-split.jsonl に追記する。
 
 ## 並走協調ノート
 
