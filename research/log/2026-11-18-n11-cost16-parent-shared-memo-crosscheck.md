@@ -28,12 +28,12 @@ worklistからD4 parent包含で31行を再抽出し、66 fold-closed行と35 ST
 | pair typeの重複度 | 全て1 |
 
 B型を、二重被覆される行dごとに
-`B_d = Σ_{a<b in N(d)} w(d,a)w(d,b) pm(V\\{d,a,b})`
+`B_d = Σ_{a<b in N(d)} w(d,a)w(d,b) pm(V minus {d,a,b})`
 と分解した。checkpointの31 fresh-memo sliceとは異なり、今回は**31個のd slice間で1つのmemoを共有**した。これにより同じ部分マッチング状態を繰り返し計算せず、B全体を9,226,801状態で計算できた。Aの31行pmも同じmemoから再計算した。
 
 ## 結果
 
-<badge color="success">17/17 checks PASS</badge>
+**18/18 checks PASS**
 
 - A16 = **2,305,787,291,293,934,388**。既刊phase-Aの31行全pm値と31/31一致。
 - B16 = **660,663,050,386,546,968**。checkpointの値と完全一致。
@@ -48,7 +48,7 @@ checkpointのB16総数を、異なるmemo共有方式で再現できた。31個�
 
 - verifier: `research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/crosscheck_cost16_parent_shared_memo_20261118.py`
 - output: `research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/cost16-shared-memo-crosscheck-20261118.json`
-- output SHA-256: `583be6807768b224396b8cf2ef4bfda9743415baf457919a5439cffadd76ea86`
+- output Git blob SHA-1: `b70689ea6b2177b2a86909939737f57c5ed637c9`
 
 実計算は、GitHubから取得した上記pin一致入力から抽出した31行を使い、利用可能なPython実行環境で2回実施した。公開verifierはrepo checkout上で5入力pinから行集合を再抽出し、候補列挙・共有memo計算・二重再計算を行う標準ライブラリのみの再現用scriptである。今回の実計算をrepo checkout上でこのscript自体から実行したとは主張しない。
 
