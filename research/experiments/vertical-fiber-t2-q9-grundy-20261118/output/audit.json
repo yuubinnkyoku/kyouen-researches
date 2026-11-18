@@ -1,80 +1,228 @@
 {
-  "audit_note": "Finite recursive-mex checks support the formula; all-parameter scope follows from the saturation-chain decomposition and the 285-cell odd-height residual table proof.",
-  "even_height_residual_formula": {
+  "scope": {
+    "game": "pure fiber game; degree bound t=2; forbidden-point count q=9; no base-trace constraints",
+    "safe_condition": "sum_b min(c_b,2) <= 8",
+    "width_range": [
+      1,
+      8
+    ],
+    "height_range": [
+      2,
+      8
+    ],
+    "parameter_pairs": 56,
+    "claim": "finite audit only; all-parameter theorem is proved in report.md"
+  },
+  "odd_height_residual_table": {
+    "row_convention": "fixed R; row e=0..R; character index ell=0..R",
+    "rows": {
+      "0": [
+        "0"
+      ],
+      "1": [
+        "00",
+        "12"
+      ],
+      "2": [
+        "000",
+        "111",
+        "010"
+      ],
+      "3": [
+        "0000",
+        "1111",
+        "0020",
+        "0212"
+      ],
+      "4": [
+        "00000",
+        "11111",
+        "00000",
+        "10111",
+        "00010"
+      ],
+      "5": [
+        "000000",
+        "111111",
+        "000000",
+        "112111",
+        "100020",
+        "120212"
+      ],
+      "6": [
+        "0000000",
+        "1111111",
+        "0000000",
+        "1111111",
+        "0100000",
+        "1110111",
+        "0100010"
+      ],
+      "7": [
+        "00000000",
+        "11111111",
+        "00000000",
+        "11111111",
+        "00200000",
+        "01112111",
+        "00100020",
+        "02120212"
+      ],
+      "8": [
+        "000000000",
+        "111111111",
+        "000000000",
+        "111111111",
+        "000000000",
+        "101111111",
+        "000100000",
+        "101110111",
+        "000100010"
+      ]
+    },
+    "cells_checked_against_recurrence": 285,
     "direct_recursive_checks": 8649,
+    "mismatches": 0
+  },
+  "even_height_residual_formula": {
     "formula": "min(R,2e+ell) mod 2",
+    "direct_recursive_checks": 8649,
     "mismatches": 0
   },
   "game_audit": {
+    "canonical_multiset_states": 8848,
+    "labeled_vector_states": 2158926,
     "canonical_grundy_histogram": {
       "0": 4308,
       "1": 3932,
       "2": 328,
       "3": 280
     },
-    "canonical_multiset_states": 8848,
     "labeled_grundy_histogram": {
       "0": 972049,
       "1": 968629,
       "2": 109316,
       "3": 108932
     },
-    "labeled_vector_states": 2158926,
     "maximum_by_width_height": {
-      "1": [1,1,1,1,1,1,1],
-      "2": [1,1,1,1,1,1,1],
-      "3": [1,1,1,1,1,1,1],
-      "4": [1,1,1,1,1,1,1],
-      "5": [1,3,1,3,1,3,1],
-      "6": [1,3,1,3,1,3,1],
-      "7": [1,3,1,3,1,3,1],
-      "8": [1,3,1,3,1,3,1]
+      "1": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "2": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "3": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "4": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "5": [
+        1,
+        3,
+        1,
+        3,
+        1,
+        3,
+        1
+      ],
+      "6": [
+        1,
+        3,
+        1,
+        3,
+        1,
+        3,
+        1
+      ],
+      "7": [
+        1,
+        3,
+        1,
+        3,
+        1,
+        3,
+        1
+      ],
+      "8": [
+        1,
+        3,
+        1,
+        3,
+        1,
+        3,
+        1
+      ]
     }
   },
   "minimum_width_grundy_3_witness": {
-    "children": [
-      {
-        "grundy": 2,
-        "occupancy": [3,3,3,1,0]
-      },
-      {
-        "grundy": 0,
-        "occupancy": [3,3,2,2,0]
-      },
-      {
-        "grundy": 1,
-        "occupancy": [3,3,2,1,1]
-      }
+    "width": 5,
+    "height": 3,
+    "occupancy": [
+      3,
+      3,
+      2,
+      1,
+      0
     ],
     "grundy": 3,
-    "occupancy": [3,3,2,1,0],
-    "width": 5,
-    "height": 3
+    "children": [
+      {
+        "occupancy": [
+          3,
+          3,
+          3,
+          1,
+          0
+        ],
+        "grundy": 2
+      },
+      {
+        "occupancy": [
+          3,
+          3,
+          2,
+          2,
+          0
+        ],
+        "grundy": 0
+      },
+      {
+        "occupancy": [
+          3,
+          3,
+          2,
+          1,
+          1
+        ],
+        "grundy": 1
+      }
+    ]
   },
-  "odd_height_residual_table": {
-    "cells_checked_against_recurrence": 285,
-    "direct_recursive_checks": 8649,
-    "mismatches": 0,
-    "row_convention": "fixed R; row e=0..R; character index ell=0..R",
-    "rows": {
-      "0": ["0"],
-      "1": ["00", "12"],
-      "2": ["000", "111", "010"],
-      "3": ["0000", "1111", "0020", "0212"],
-      "4": ["00000", "11111", "00000", "10111", "00010"],
-      "5": ["000000", "111111", "000000", "112111", "100020", "120212"],
-      "6": ["0000000", "1111111", "0000000", "1111111", "0100000", "1110111", "0100010"],
-      "7": ["00000000", "11111111", "00000000", "11111111", "00200000", "01112111", "00100020", "02120212"],
-      "8": ["000000000", "111111111", "000000000", "111111111", "000000000", "101111111", "000100000", "101110111", "000100010"]
-    }
-  },
-  "scope": {
-    "claim": "finite audit only; all-parameter theorem is proved in report.md",
-    "game": "pure fiber game; degree bound t=2; forbidden-point count q=9; no base-trace constraints",
-    "height_range": [2,8],
-    "parameter_pairs": 56,
-    "safe_condition": "sum_b min(c_b,2) <= 8",
-    "width_range": [1,8]
-  },
-  "verifier_sha256": "2d5012276f760543e7ebb2116f40bc583325917523eca5d7120660f76ac713bc"
+  "verifier_sha256": "2d5012276f760543e7ebb2116f40bc583325917523eca5d7120660f76ac713bc",
+  "audit_note": "Finite recursive-mex checks support the formula; all-parameter scope follows from the saturation-chain decomposition and the 285-cell odd-height residual table proof."
 }
