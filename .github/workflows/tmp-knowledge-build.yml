@@ -1,4 +1,5 @@
 name: Temporary knowledge view regeneration
+# Retry after repairing the existing broken Markdown links.
 on:
   push:
     branches: [main]
