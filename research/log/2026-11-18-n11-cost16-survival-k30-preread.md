@@ -36,7 +36,7 @@ B型quintの二重行別内訳は row 15:187、row 16:49、row 18:630、row 19:4
 - 全 `C(30,5)=142,506` quint: B型5,968 / zero型136,538 / disjoint型0
 - 全quintの二重行別内訳: row 15:925、row 16:221、row 18:3,536、row 19:1,286
 
-全層からrank-30新層を引くとrank-29までの全層censusへ戻り、quintの二重行ヒストグラム差分もrank-30新層の値と一致した。rank-28の出版値とrank-29 preread logも回帰照合した。
+全層からrank-30新層を引くとrank-29までの全層censusへ戻り、quintの二重行ヒストグラム差分もrank-30新層の値と一致した。rank-28の出版値とrank-29 preread logも回帰照合した。k28 JSONがk27 JSONの固定blobを入力として宣言していることも検査した。
 
 ## rank-29との比較
 
@@ -44,7 +44,7 @@ rank-29はdisjoint pair 24、disjoint quad 225、B型quint 2,128だった。rank
 
 ## 検証と実装上の注意
 
-- 20項目すべてPASS。
+- 22項目すべてPASS。
 - rank-28の出版census、rank-29 prereadの新層・全層censusを再現。
 - rank-29/30の新層および全層でMap分類とBigInt bitset分類が一致。
 - rank-30の全quint censusから新層を引いた差分がrank-29全quint censusと一致。
