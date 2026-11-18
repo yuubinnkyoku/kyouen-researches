@@ -59,6 +59,10 @@ JOINT_SHA256 = ("b84e5c3c12e508e2fd490dd18f35a48020ce66ab0ad5c98"
 PHASE_A_REL = ("research/experiments/n11-head1410-partial-parent-"
                "nonsterile-children-20261118/output/"
                "cost16-a-phase-20261118.json")
+K10_REL = ("research/experiments/n11-head1410-partial-parent-"
+           "nonsterile-children-20261118/output/"
+           "cost16-survival-k10-20261118.json")
+K10_PIN = ("6be591d458e3d9b863c070b85c0196692dfe5c6d")
 JSONL = os.path.join(HERE, "output", "cost16-ban-survival-20261118.jsonl")
 
 
@@ -261,6 +265,29 @@ def mode_assemble():
               curve[2]["total"] == k2_pred,
               {"recomputed": str(curve[2]["total"]),
                "prediction": str(k2_pred)})
+    # cross-validation against the published parallel-lane I-E survival
+    # curve k=1..10 (independent method: inclusion-exclusion with joint
+    # recombination, MyPm counter) for every overlapping recomputed k
+    k10 = json.loads(base.read_pinned(K10_REL, K10_PIN))
+    k10_kill = {int(k[1:]): int(v)
+                for k, v in k10["values"]["kill"].items()}
+    xk = []
+    xok = True
+    for k in sorted(curve):
+        if k in k10_kill:
+            mine = curve[k]["total"]
+            theirs = pub_total - k10_kill[k]
+            xk.append(k)
+            if mine != theirs:
+                xok = False
+                print("k10-curve MISMATCH at k=%d: %d vs %d" %
+                      (k, mine, theirs), flush=True)
+    check("k10_curve_cross_validation",
+          xok and len(xk) >= 2,
+          {"cross_checked_k": xk,
+           "method": ("direct ban recomputation (this script, PmLazy "
+                      "per-d slices) vs published I-E curve "
+                      "(cost16-survival-k10, MyPm joint recombination)")})
     series = []
     for k in sorted(set(list(derived_points) + list(curve))):
         if k in curve:
