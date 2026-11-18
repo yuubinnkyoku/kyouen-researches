@@ -108,6 +108,8 @@ composite_verify.py（内部でrun_checksを2回実行してin-process決定性�
 - σ_E/σ_Zの閉形式は主張しない（再帰が決定結果）。
   σ_Z(3,K)（K偶数・K≤4,000）の値1位置は豊富（4,8,12,28,40,52,72,…）で
   単純な倍数構造には乗らない。
+  → K0945でONE-CHAR全称特徴付け（σ_Z(3,K)=1 ⟺ σ_E(3;K mod 4, 3⌊K/4⌋)=K mod 4+1）・
+  A2-NEVER（K≡2 (mod 4)は全称的に値1を取らない）・fold分解（RUN-3/FOLD）・FAST算法が出版された。
 - P2OBSはK0943（STATE-CF・DS-CF・P2）で全称証明済み（h-walk記述は不要だった）。
 - 定理B/C/Dの紙上証明はK0934（LAD-GEN）・K0939（ENTRY-LOC・END-INV遷移）・
   K0937（死亡合同式・INV-TRACK）の出版済み証明に依存する。機械アンカーは
