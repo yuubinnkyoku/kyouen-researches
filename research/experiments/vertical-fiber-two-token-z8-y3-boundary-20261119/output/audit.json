@@ -1,0 +1,30 @@
+{
+  "all_pass": true,
+  "counts": {
+    "Theorem_T_formula_grid": 2050947,
+    "direct_formula_two_engines": 8410,
+    "even_parent_bound": 1010988,
+    "independent_BC_anchor_direct": 8410,
+    "mex_identity": 2022975,
+    "odd_parent_bound": 1011987,
+    "signature_coverage_and_identity": 2022975,
+    "tail_formula": 19992,
+    "tail_signature": 7992
+  },
+  "failures": [],
+  "repeat_byte_identical": true,
+  "repeat_runs": 2,
+  "scope": {
+    "direct_R": "0<=R<=x+40",
+    "direct_x": [3, 60],
+    "signature_R": "1<=R<=x+11",
+    "signature_x": [3, 2000],
+    "tail_offsets": [0, 3],
+    "tail_signature_x": [3, 2000],
+    "tail_x": [3, 5000],
+    "theorem_R": "0<=R<=x+24",
+    "theorem_x": [3, 2000]
+  },
+  "sha256_without_hash_field": "e1dc7880a3663ff0aa614da4380f9ddd517c2c6a83d9e4f17c0e2e203c169f9d",
+  "total_checks": 8164676
+}
