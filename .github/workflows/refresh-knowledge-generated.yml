@@ -38,6 +38,14 @@ jobs:
         run: |
           uv run --locked python research/experiments/vertical-fiber-two-token-z6-y34-boundary-20261118/verify_z6_y34.py
           git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y34-boundary-20261118/output/audit.json
+      - name: Audit K0972 two-token z=6 y=35 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y35-boundary-20261118/verify_z6_y35.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y35-boundary-20261118/output/audit.json
+      - name: Audit K0973 two-token z=6 y=36 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y36-boundary-20261119/verify_z6_y36.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y36-boundary-20261119/output/audit.json
       - name: Audit quantitative circle-density modular checker
         run: python research/experiments/fixed-width/scripts/verify_quantitative_density.py
       - name: Audit prime-avoidance finite checks
@@ -715,3 +723,5 @@ jobs:
 # Refresh generated views for K0970 z=6,y=34 two-token full Grundy slice (2,079,119 signature/mex checks; zero mismatches; verifier hash pinned; 2026-11-18).
 
 # Retry generated-view refresh after reconciling K0918 and K0962 deterministic audit formatting (2026-11-18).
+
+# Refresh generated views for K0973 z=6,y=36 two-token full Grundy slice (2,082,900 signature/mex checks, 5,208 direct calls, 123,795 tail checks; zero mismatches; two byte-identical runs; 2026-11-19).
