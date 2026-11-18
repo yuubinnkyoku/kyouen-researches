@@ -115,5 +115,6 @@ pinned cores（K0948と同一sha・監査PIN照合）。cold 2回実行byte同�
   機械検証範囲を超える全称主張は紙上証明に基づくもののみ。
 - 一般Mの U_M={u : σ_E(M;0,M(u+1))=1} の密度・冪減衰構造（K0946次課題4）は
   本項では扱わない（SIMPLE-CHARは値1の判定を与えるが分布則はOPEN）。
+  （K0950でM=2,3は素数対へ完全還元・一般MはK0-FAMILY式+U_M掃引へ進展。）
 - `uv run check/build`・unittestは本環境にcloneとuvがないため未実施
   （歴代remo項目と同じ扱い）。generated/とroot READMEは未編集。
