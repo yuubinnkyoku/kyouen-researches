@@ -1,0 +1,69 @@
+{
+ "instance": "ctrl_c3_7x30 (7,30,6) class {3} end-to-end control",
+ "date": "2026-11-18T09:35:00Z",
+ "cnf_md5": "09e969b9461e413551f61f76bff817ce",
+ "cnf_md5_matches_published_pin": true,
+ "kissat": {
+  "result": "SAT",
+  "conflicts": 2670296,
+  "published_conflicts": 2670296,
+  "conflicts_bit_exact": true,
+  "sec": 1051.4,
+  "published_sec": 497,
+  "note": "conflicts identical (kissat determinism); wall time longer on this environment (2 CPU, shared early phase); wall time not claimed bit-exact"
+ },
+ "decode": {
+  "parser": "parse_model.py (seven-row-q6-m31-frontier-20261115, md5 c1cef8f80fb11a66c782c3940931b1eb)",
+  "nStones": 34,
+  "rows": [
+   5,
+   5,
+   5,
+   4,
+   5,
+   5,
+   5
+  ],
+  "row3_cols": [
+   12,
+   23,
+   27,
+   29
+  ],
+  "identical_to_published_witness": "research/experiments/seven-row-q6-m30-class-split-20261115/output/c3.witness.json"
+ },
+ "verify": {
+  "verify_witness_py": {
+   "ok": true,
+   "n": 34,
+   "rows": [
+    5,
+    5,
+    5,
+    4,
+    5,
+    5,
+    5
+   ],
+   "min_row": 4
+  },
+  "verify_witness_det_js": {
+   "ok": true,
+   "n": 34,
+   "rows": [
+    5,
+    5,
+    5,
+    4,
+    5,
+    5,
+    5
+   ],
+   "min_row": 4,
+   "maxLine": 5,
+   "maxCircle": 5,
+   "uncovered": 0
+  }
+ },
+ "verdict": "PASS - encoder/CNF/kissat/decode/verify chain reproduced end-to-end; lane toolchain calibrated for the c3_7x32 main instance"
+}
