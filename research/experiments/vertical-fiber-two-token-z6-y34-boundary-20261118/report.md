@@ -140,8 +140,8 @@ T_y(x)\setminus\{1,3,5\}=
 
 直接再帰は \(34\le x\le57,\ 0\le R\le x+55\)。独立A/B/C再帰は \(34\le x\le80,\ 0\le R\le x+55\)。署名・mexは \(34\le x\le2000,\ 1\le R<x+41\)。tailは同じx範囲で閾値から63先まで。独立プロセス2回の監査JSONはバイト単位で一致した。
 
-- verifier SHA-256: d1af3ac2c1572960d16b7c068b4a864c10408413b76a46a74a552ce8a2c533af
-- audit file SHA-256: d8d58eaae00249be874760893fc6ded9170a27779fd3be70cfb2c25accd22f86
+- verifier SHA-256: 3edce9401c5aee099f1899e488f710f888c590f8b5f604d9936cd7c489b19eef
+- audit file SHA-256: 17819d08f4385abad36af02625bb398deb0122eb2e386f9a94d31ab6f5274a24
 
 有限監査は全称証明の代わりではない。全称性はx帰納、明示した署名表、K0967/K0873/K0832の既証明結果による。
 

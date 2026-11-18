@@ -32,8 +32,8 @@ verify_z6_y34.pyを独立プロセスで2回実行し、audit.jsonがバイト�
 - 偶数親の値上界: 1,039,068件、違反0
 - tail: 125,888件、違反0
 
-verifier SHA-256: d1af3ac2c1572960d16b7c068b4a864c10408413b76a46a74a552ce8a2c533af  
-audit file SHA-256: d8d58eaae00249be874760893fc6ded9170a27779fd3be70cfb2c25accd22f86
+verifier SHA-256: 3edce9401c5aee099f1899e488f710f888c590f8b5f604d9936cd7c489b19eef  
+audit file SHA-256: 17819d08f4385abad36af02625bb398deb0122eb2e386f9a94d31ab6f5274a24
 
 有限監査は全称性の根拠ではない。全称性は帰納証明・明示署名表・既証明アンカーによる。
 
