@@ -9,7 +9,7 @@ const MP="research/experiments/n11-head1410-residual-cover-after-receipt-fold-20
 const RP="research/experiments/n11-head1410-residual-cover-after-receipt-fold-20261119/output/five-parent-residual-49-cover-20261119.json";
 const KP="research/knowledge/items/K0001-complete-call-rules.md",CP="research/knowledge/items/K0868-n11-s6-s7-sweep-candidate-convention.md";
 const OP="research/experiments/n11-head1410-residual-cover-after-receipt-fold-20261119/output/49-root-two-ply-frontier-20261119.json";
-const MAIN="673eb9078ba311b7dc93140a2d5bc6d8d71b72f0";
+const MAIN="55e87206340e87c2bb4e5214dc3d8943fe3b948d";
 const PIN={m:"b35d54a0ced182153802247452a593096a0acf81",r:"a8eaf00bd6494eda50a68e7d06498bed833a7688",k:"ef7483e011d72e0048d667313b6c996d3472729f",c:"b097210d0b49d7cf014cc6a554298b1e49e83384"};
 function need(x,s){if(!x)throw Error(s);}
 function sha(s){const b=Buffer.from(s,"utf8");return createHash("sha1").update(Buffer.concat([Buffer.from("blob "+b.length+"\0"),b])).digest("hex");}
