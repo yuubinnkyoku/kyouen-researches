@@ -290,7 +290,7 @@ def main() -> None:
           candidate_cross_parent_count == joint_result["cross_parent_roots"],
           {"independent": candidate_cross_parent_count,
            "published": joint_result["cross_parent_roots"]})
-    check("witness.cross-parent-count", 0 <= cross_parent_count <= 56,
+    check("witness.cross-parent-count", cross_parent_count == 10,
           cross_parent_count)
 
     lower_bound = (len(target_union) + max_span - 1) // max_span
