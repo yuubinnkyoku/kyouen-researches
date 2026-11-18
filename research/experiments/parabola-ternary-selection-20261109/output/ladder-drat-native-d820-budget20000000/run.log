@@ -1,0 +1,72 @@
+c opening file to write 'proof.drat'
+c opening file to read 'input.cnf'
+c found 'p cnf 7926 68404' header
+c parsed 68404 clauses in 0.03 seconds process time
+c DRAT proof file 'proof.drat' closed
+c DRAT 19610968 added clauses 50.06%
+c DRAT 19564515 deleted clauses 49.94%
+c DRAT 2367583553 bytes (2257.90 MB)
+c --- [ run-time profiling ] -------------------------------------------------
+c 
+c process time taken by individual solving procedures
+c (percentage relative to process time for solving)
+c 
+c      4622.67   96.20% search
+c      2280.84   47.47% unstable
+c      2131.70   44.36% stable
+c       210.09    4.37% walk
+c       182.54    3.80% simplify
+c       100.40    2.09% vivify
+c        49.39    1.03% subsume
+c        20.49    0.43% sweep
+c         5.41    0.11% probe
+c         2.32    0.05% ternary
+c         0.89    0.02% elim
+c         0.40    0.01% congruence
+c         0.27    0.01% backbone
+c         0.04    0.00% lucky
+c         0.03    0.00% parse
+c   =================================
+c      4805.21  100.00% solve
+c 
+c last line shows process time for solving
+c (percentage relative to total process time)
+c 
+c --- [ statistics ] ---------------------------------------------------------
+c 
+c chronological:           3128773        16.09 %  of conflicts
+c conflicts:              19442067      4046.04    per second
+c backbone:                8329087    105085.63 %  of vars
+c decisions:              26858859      5589.53    per second
+c eliminated:                 4437        55.98 %  of all variables
+c fixed:                      1685        21.26 %  of all variables
+c learned:                19123689        98.36 %  per conflict
+c learned_lits:         1363800007       100.00 %  learned literals
+c minimized:                     0         0.00 %  learned literals
+c shrunken:              415281921        30.45 %  learned literals
+c minishrunken:          379086333        27.80 %  learned literals
+c otfs:                      13400         0.07 %  of conflict
+c propagations:         7331770171         1.53 M  per second
+c reduced:                15755581        81.04 %  per conflict
+c rephased:                    196     99194.22    interval
+c restarts:                 598535        32.48    interval
+c stabilizing:                  40        51.08 %  of conflicts
+c substituted:                   9         0.11 %  of all variables
+c subsumed:                2732996        14.15 %  of all clauses
+c strengthened:             229459         1.19 %  of all clauses
+c ticks:              146660201810        21.77    propagation
+c vivified:                  86220         0.45 %  of all clauses
+c walked:                       64    303782.30    interval
+c weakened:                  20328         2.82    average size
+c congruence:                   26    747771.81    interval
+c 
+c seconds are measured in process time for solving
+c 
+c --- [ glue usage ] ---------------------------------------------------------
+c 
+c focused glue 2 used 42366597 clauses 30.10% accumulated 75.06% tier1
+c focused glue 3 used 15098718 clauses 10.72% accumulated 85.78% tier2
+c 
+c stable glue 2 used 41072100 clauses 27.01% accumulated 70.27% tier1
+c stable glue 3 used 15049247 clauses 9.897% accumulated 80.17% tier2
+c 
