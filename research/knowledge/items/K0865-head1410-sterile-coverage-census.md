@@ -36,6 +36,16 @@ artifacts:
   role: log
   note: 49-root監査の別環境再現、cost63f証明書監査とCI出力差分の再検査
 
+- path: research/experiments/n11-head1410-residual-cover-after-receipt-fold-20261119/scripts/audit_49_root_two_ply_frontier_20261119.mjs
+  role: verifier
+  note: 49候補rootの二手先frontierをBigInt二方式のdet4とD4正準化で全数集計する再現器
+- path: research/experiments/n11-head1410-residual-cover-after-receipt-fold-20261119/output/49-root-two-ply-frontier-20261119.json
+  role: data
+  note: 2,985子・146,118順序付き二手目・73,059局面・72,756 D4類・303 root間重複
+- path: research/log/2026-11-19-n11-49-root-two-ply-frontier.md
+  role: log
+  note: 二手先frontier、D4共有cache、coordinator候補順位と証明境界
+
 scope: "2026-11-16に算出した n11 class-lane の post-cost-60c 正準 head 1410 に対する履歴スナップショット（174 open S5 parent、MS5 S6 manifest 7867 行・orbit 重複なし、35 STERILE 行）。cost-65j fold は後続作業として head 1410 から 1419 へ適用済みであり、本 census の基準 head は 1410 のまま。"
 evidence: "orbit-level census: 全 174×7867 ペアで ∃σ∈D4: σ(P) ⊂ R を判定。コントロール: CA manifest 7867 行・cost 総和 615497・orbit 重複なし、CB 174 S5 canon 重複なし、CC cost-60c fold の parent-row 6 ペア全件 orbit-related、CD 62b 行の出版 claim 記載 parent が census の open parents に全件含まれ demand {c1:1,c2:1,c4:0} も完全一致、CE 既知 anchor 3 件（rem 3/209・10/698・18/1460）が出版値と精密一致、CF 違反 0、CG pending-65j 34 orbit が STERILE と非交差、CI cover precheck bits {21,109}・62 合法手 bit 集合・両 cover root hex が出版 claim v2 と一致"
 ---
@@ -73,3 +83,12 @@ head-1410の5親joint target 112行を後続receiptに照合すると、head-158
 K0863の8,964 engine verdict（REFUTED-D10 8,305・WIN7-D10 659）と115 transfer（全てREFUTED-D10）を含む133個の6石child universeに対し、49本それぞれの7削除子をD4正準形で照合した。48本は該当child orbitなし。残る1本 `00000000000000909002200080000000` はchild `00000000000000801222000000800000` のbit74に対応するが、engine verdictは0件、transfer bitsは55/65/109のみで、bit74はopen。よって49本すべてがこの公開indexでは未判定である。これはraw 1,064ファイルを再走査した結果ではなく、scan生成器が全claims/sweeps/auditsから構成する133 child universeを使った候補側の完全非所属証明である。
 
 同じ49 rootの合法次手数をdet4で再計算した。BigInt BareissとLeibnizの2方式はroot安全性1,715四点組と候補次手153,988判定で完全一致。次手数は47〜77（平均60.918367・中央値62）。最小47のrootは `00000000000000821082000010800000` で2行を被覆する。49本すべてD4 orbit size 8で、root自身の対称性による枝の併合はない。これは分岐構造の測定であって探索node数・費用ではない。再現資料は[監査ログ](../../log/2026-11-19-n11-49-root-cache-exclusion-and-mobility.md)、[スクリプト](../../experiments/n11-head1410-residual-cover-after-receipt-fold-20261119/scripts/audit_49_root_cache_exclusion_and_mobility_20261119.mjs)、[結果JSON](../../experiments/n11-head1410-residual-cover-after-receipt-fold-20261119/output/49-root-cache-exclusion-mobility-20261119.json)。標準11×11空盤・二石root・S2・class 1/2/4は引き続き **UNKNOWN**。
+
+
+## 2026-11-19 追記: 49-rootの二手先frontierとroot間D4共有
+
+K0001/K0868の整数det4規約で49本を二手先まで展開した。BigIntの三項余因子展開と六項Leibniz展開を28,553個の3点組×121点（3,454,913件/方式）で照合し、全49本の一手候補集合も既存mobility censusと一致した。対象rootは2行被覆48本と1行singleton 1本。2,985個の8石子は全て28〜73手を持ち、終局子は0。順序付き二手目146,118件は、順序交換を除いた9石局面73,059個に対応する。
+
+各root内では9石frontierのD4重複は0。49本横断では73,059 membershipが72,756正準類にまとまり、303類だけが別rootと共有された（0.4147%、全て2 root共有、213 root pair）。最大共有はroot 00000000000000801202020001001000 と 00000000010000809002000040100000 の47類で、各frontier 1,061/1,707類・和集合2,721類。共有hex一覧は結果JSONに保存。最小一手分岐47のroot 00000000000000821082000010800000 は二手先でも最小881局面で、最初の小probe候補を維持する。ただしこれは実DFPN費用ではない。
+
+浅い9石層での共有cache利得は限定的（重複0.415%）。最大共有pairを同じworker/cache shardに寄せる余地はあるが、深い層の共有率は未測定。8石子に終局がないことは即時勝ち手がないというだけで、rootのLOSSを意味しない。新しいverdict/certificate/receiptはなく、11×11空盤・二石root・S2・class 1/2/4はUNKNOWNのまま。詳細は研究ログ、再現スクリプト、結果JSONを参照。

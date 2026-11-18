@@ -1,0 +1,4699 @@
+{
+  "schema": "n11-five-parent-49-root-two-ply-frontier-20261119-v1",
+  "date": "2026-11-19",
+  "status": "exact-two-ply-structural-census",
+  "analysis_main_head": "b2c52eb93fcc9f5f48791fc37829aee9cf8e504a",
+  "source_main_head": "317f6af8c9810941bda38b5cf355a8f27ce3aa65",
+  "input_pins": {
+    "mobility": {
+      "path": "research/experiments/n11-head1410-residual-cover-after-receipt-fold-20261119/output/49-root-cache-exclusion-mobility-20261119.json",
+      "git_blob_sha1": "b35d54a0ced182153802247452a593096a0acf81"
+    },
+    "residual": {
+      "path": "research/experiments/n11-head1410-residual-cover-after-receipt-fold-20261119/output/five-parent-residual-49-cover-20261119.json",
+      "git_blob_sha1": "a8eaf00bd6494eda50a68e7d06498bed833a7688"
+    },
+    "rules": {
+      "path": "research/knowledge/items/K0001-complete-call-rules.md",
+      "git_blob_sha1": "ef7483e011d72e0048d667313b6c996d3472729f"
+    },
+    "convention": {
+      "path": "research/knowledge/items/K0868-n11-s6-s7-sweep-candidate-convention.md",
+      "git_blob_sha1": "b097210d0b49d7cf014cc6a554298b1e49e83384"
+    }
+  },
+  "reproduction_script": {
+    "path": "research/experiments/n11-head1410-residual-cover-after-receipt-fold-20261119/scripts/audit_49_root_two_ply_frontier_20261119.mjs",
+    "git_blob_sha1": "1953bd2185f7df5df9605876963e206d4bf10092"
+  },
+  "determinant": {
+    "representation": "BigInt exact arithmetic on rows [x^2+y^2,x,y,1], after subtracting the first row",
+    "independent_expansions": [
+      "three-term cofactor expansion",
+      "six-term Leibniz expansion"
+    ],
+    "unique_triples": 28553,
+    "point_checks_per_expansion": 3454913,
+    "all_agree": true
+  },
+  "summary": {
+    "roots": 49,
+    "coverage_histogram": {
+      "1": 1,
+      "2": 48
+    },
+    "eight_stone_children": 2985,
+    "ordered_second_moves": 146118,
+    "unordered_nine_stone_positions": 73059,
+    "total_per_root_frontier_memberships": 73059,
+    "global_unique_d4_classes": 72756,
+    "cross_root_duplicate_memberships": 303,
+    "cross_root_duplicate_rate_percent": 0.414733,
+    "multiplicity_histogram": {
+      "1": 72453,
+      "2": 303
+    },
+    "nonempty_root_pair_overlaps": 213,
+    "largest_pair_overlap": 47,
+    "maximum_root_multiplicity": 2,
+    "terminal_eight_stone_children": 0,
+    "min_replies": 28,
+    "max_replies": 73,
+    "within_root_d4_merges": 0
+  },
+  "reply_histogram": {
+    "28": 1,
+    "29": 1,
+    "31": 6,
+    "32": 12,
+    "33": 14,
+    "34": 19,
+    "35": 37,
+    "36": 49,
+    "37": 46,
+    "38": 71,
+    "39": 73,
+    "40": 94,
+    "41": 117,
+    "42": 126,
+    "43": 128,
+    "44": 126,
+    "45": 128,
+    "46": 131,
+    "47": 147,
+    "48": 140,
+    "49": 136,
+    "50": 141,
+    "51": 156,
+    "52": 128,
+    "53": 124,
+    "54": 117,
+    "55": 92,
+    "56": 103,
+    "57": 80,
+    "58": 81,
+    "59": 70,
+    "60": 69,
+    "61": 54,
+    "62": 38,
+    "63": 26,
+    "64": 21,
+    "65": 23,
+    "66": 21,
+    "67": 14,
+    "68": 9,
+    "69": 5,
+    "70": 4,
+    "71": 1,
+    "72": 4,
+    "73": 2
+  },
+  "per_root": [
+    {
+      "input_first_ply_rank": 1,
+      "root": "00000000000000821082000010800000",
+      "covered_rows": [
+        "00000000000000821082000000800000",
+        "00000000000000821082000004000000"
+      ],
+      "first_moves": 47,
+      "ordered_second_moves": 1762,
+      "unique_9stone_positions": 881,
+      "d4_classes": 881,
+      "within_root_d4_merges": 0,
+      "min_replies": 28,
+      "max_replies": 43,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 1
+    },
+    {
+      "input_first_ply_rank": 2,
+      "root": "00000000000000805212000001000000",
+      "covered_rows": [
+        "00000000000000801212000001000000",
+        "00000000000000805202000001000000"
+      ],
+      "first_moves": 49,
+      "ordered_second_moves": 1914,
+      "unique_9stone_positions": 957,
+      "d4_classes": 957,
+      "within_root_d4_merges": 0,
+      "min_replies": 29,
+      "max_replies": 44,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 2
+    },
+    {
+      "input_first_ply_rank": 3,
+      "root": "00000000000000003800000209800000",
+      "covered_rows": [
+        "00000000000000003800000009800000",
+        "00000000000000003800000209000000"
+      ],
+      "first_moves": 51,
+      "ordered_second_moves": 2122,
+      "unique_9stone_positions": 1061,
+      "d4_classes": 1061,
+      "within_root_d4_merges": 0,
+      "min_replies": 31,
+      "max_replies": 50,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 5
+    },
+    {
+      "input_first_ply_rank": 4,
+      "root": "00000000000000801202010020001000",
+      "covered_rows": [
+        "00000000000000801202000020001000",
+        "00000000000000801202010000001000"
+      ],
+      "first_moves": 51,
+      "ordered_second_moves": 2122,
+      "unique_9stone_positions": 1061,
+      "d4_classes": 1061,
+      "within_root_d4_merges": 0,
+      "min_replies": 32,
+      "max_replies": 50,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 6
+    },
+    {
+      "input_first_ply_rank": 5,
+      "root": "00000000000000801202020001001000",
+      "covered_rows": [
+        "00000000000000801202020000001000",
+        "00000000000000801202020001000000"
+      ],
+      "first_moves": 51,
+      "ordered_second_moves": 2122,
+      "unique_9stone_positions": 1061,
+      "d4_classes": 1061,
+      "within_root_d4_merges": 0,
+      "min_replies": 33,
+      "max_replies": 48,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 7
+    },
+    {
+      "input_first_ply_rank": 6,
+      "root": "00000000000000821082000000100800",
+      "covered_rows": [
+        "00000000000000821082000000000800",
+        "00000000000000821082000000001000"
+      ],
+      "first_moves": 51,
+      "ordered_second_moves": 2054,
+      "unique_9stone_positions": 1027,
+      "d4_classes": 1027,
+      "within_root_d4_merges": 0,
+      "min_replies": 32,
+      "max_replies": 47,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 3
+    },
+    {
+      "input_first_ply_rank": 7,
+      "root": "00000000000000821082600000000000",
+      "covered_rows": [
+        "00000000000000821082200000000000",
+        "00000000000000821082400000000000"
+      ],
+      "first_moves": 51,
+      "ordered_second_moves": 2072,
+      "unique_9stone_positions": 1036,
+      "d4_classes": 1036,
+      "within_root_d4_merges": 0,
+      "min_replies": 33,
+      "max_replies": 47,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 4
+    },
+    {
+      "input_first_ply_rank": 8,
+      "root": "00000010000000801282000000000400",
+      "covered_rows": [
+        "00000000000000003800000008001020",
+        "00000010000000801202000000000400"
+      ],
+      "first_moves": 51,
+      "ordered_second_moves": 2144,
+      "unique_9stone_positions": 1072,
+      "d4_classes": 1072,
+      "within_root_d4_merges": 0,
+      "min_replies": 34,
+      "max_replies": 49,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 8
+    },
+    {
+      "input_first_ply_rank": 9,
+      "root": "00000000000000003800200808001000",
+      "covered_rows": [
+        "00000000000000003800000808001000",
+        "00000000000000003800200008001000"
+      ],
+      "first_moves": 54,
+      "ordered_second_moves": 2328,
+      "unique_9stone_positions": 1164,
+      "d4_classes": 1164,
+      "within_root_d4_merges": 0,
+      "min_replies": 31,
+      "max_replies": 52,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 12
+    },
+    {
+      "input_first_ply_rank": 10,
+      "root": "00000000000000801202000000901000",
+      "covered_rows": [
+        "00000000000000801202000000101000",
+        "00000000000000801202000000900000"
+      ],
+      "first_moves": 54,
+      "ordered_second_moves": 2410,
+      "unique_9stone_positions": 1205,
+      "d4_classes": 1205,
+      "within_root_d4_merges": 0,
+      "min_replies": 36,
+      "max_replies": 50,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 14
+    },
+    {
+      "input_first_ply_rank": 11,
+      "root": "00000000000000821086800000000000",
+      "covered_rows": [
+        "00000000000000821082800000000000",
+        "00000000000000821083000000000000"
+      ],
+      "first_moves": 54,
+      "ordered_second_moves": 2220,
+      "unique_9stone_positions": 1110,
+      "d4_classes": 1110,
+      "within_root_d4_merges": 0,
+      "min_replies": 31,
+      "max_replies": 50,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 9
+    },
+    {
+      "input_first_ply_rank": 12,
+      "root": "00000000000000a89002000080000000",
+      "covered_rows": [
+        "00000000000000889002000080000000",
+        "00000000000000a09002000080000000"
+      ],
+      "first_moves": 54,
+      "ordered_second_moves": 2344,
+      "unique_9stone_positions": 1172,
+      "d4_classes": 1172,
+      "within_root_d4_merges": 0,
+      "min_replies": 34,
+      "max_replies": 50,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 13
+    },
+    {
+      "input_first_ply_rank": 13,
+      "root": "00000000020008003800000008001000",
+      "covered_rows": [
+        "00000000000000083800000008100000",
+        "00000000000000801202000000081000"
+      ],
+      "first_moves": 54,
+      "ordered_second_moves": 2262,
+      "unique_9stone_positions": 1131,
+      "d4_classes": 1131,
+      "within_root_d4_merges": 0,
+      "min_replies": 31,
+      "max_replies": 51,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 10
+    },
+    {
+      "input_first_ply_rank": 14,
+      "root": "00000000000000821082000000042000",
+      "covered_rows": [
+        "00000000000000821082000000002000",
+        "00000000000000821082000000004000"
+      ],
+      "first_moves": 55,
+      "ordered_second_moves": 2320,
+      "unique_9stone_positions": 1160,
+      "d4_classes": 1160,
+      "within_root_d4_merges": 0,
+      "min_replies": 34,
+      "max_replies": 51,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 11
+    },
+    {
+      "input_first_ply_rank": 15,
+      "root": "000000000000000038000000080020c0",
+      "covered_rows": [
+        "00000000000000003800000008002040",
+        "00000000000000003800000008002080"
+      ],
+      "first_moves": 56,
+      "ordered_second_moves": 2528,
+      "unique_9stone_positions": 1264,
+      "d4_classes": 1264,
+      "within_root_d4_merges": 0,
+      "min_replies": 35,
+      "max_replies": 53,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 16
+    },
+    {
+      "input_first_ply_rank": 16,
+      "root": "00000000020000801202000800100000",
+      "covered_rows": [
+        "0000000000000000380000000a080000",
+        "00000000020000801202000000100000"
+      ],
+      "first_moves": 56,
+      "ordered_second_moves": 2478,
+      "unique_9stone_positions": 1239,
+      "d4_classes": 1239,
+      "within_root_d4_merges": 0,
+      "min_replies": 31,
+      "max_replies": 53,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 15
+    },
+    {
+      "input_first_ply_rank": 17,
+      "root": "00000000000000003800000008011800",
+      "covered_rows": [
+        "00000000000000003800000008001800",
+        "00000000000000003800000008011000"
+      ],
+      "first_moves": 57,
+      "ordered_second_moves": 2700,
+      "unique_9stone_positions": 1350,
+      "d4_classes": 1350,
+      "within_root_d4_merges": 0,
+      "min_replies": 36,
+      "max_replies": 54,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 21
+    },
+    {
+      "input_first_ply_rank": 18,
+      "root": "0000000000000000380010000a002000",
+      "covered_rows": [
+        "0000000000000000380000000a002000",
+        "00000000000000003800100008002000"
+      ],
+      "first_moves": 57,
+      "ordered_second_moves": 2626,
+      "unique_9stone_positions": 1313,
+      "d4_classes": 1313,
+      "within_root_d4_merges": 0,
+      "min_replies": 35,
+      "max_replies": 55,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 18
+    },
+    {
+      "input_first_ply_rank": 19,
+      "root": "00000000000000801202050001000000",
+      "covered_rows": [
+        "00000000000000801202010001000000",
+        "00000000000000801202040001000000"
+      ],
+      "first_moves": 58,
+      "ordered_second_moves": 2652,
+      "unique_9stone_positions": 1326,
+      "d4_classes": 1326,
+      "within_root_d4_merges": 0,
+      "min_replies": 35,
+      "max_replies": 53,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 19
+    },
+    {
+      "input_first_ply_rank": 20,
+      "root": "00000000000000821082000000000005",
+      "covered_rows": [
+        "00000000000000821082000000000001",
+        "00000000000000821082000000000004"
+      ],
+      "first_moves": 58,
+      "ordered_second_moves": 2620,
+      "unique_9stone_positions": 1310,
+      "d4_classes": 1310,
+      "within_root_d4_merges": 0,
+      "min_replies": 33,
+      "max_replies": 55,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 17
+    },
+    {
+      "input_first_ply_rank": 21,
+      "root": "00000000000000821082000000420000",
+      "covered_rows": [
+        "00000000000000821082000000008000",
+        "00000000000000821082000000400000"
+      ],
+      "first_moves": 59,
+      "ordered_second_moves": 2658,
+      "unique_9stone_positions": 1329,
+      "d4_classes": 1329,
+      "within_root_d4_merges": 0,
+      "min_replies": 35,
+      "max_replies": 54,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 20
+    },
+    {
+      "input_first_ply_rank": 22,
+      "root": "00000000000000909002200080000000",
+      "covered_rows": [
+        "00000000000000801222000000800000",
+        "00000000000000909002000080000000"
+      ],
+      "first_moves": 60,
+      "ordered_second_moves": 2894,
+      "unique_9stone_positions": 1447,
+      "d4_classes": 1447,
+      "within_root_d4_merges": 0,
+      "min_replies": 37,
+      "max_replies": 56,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 22
+    },
+    {
+      "input_first_ply_rank": 23,
+      "root": "00000000000000003800000008002110",
+      "covered_rows": [
+        "00000000000000003800000008002010",
+        "00000000000000003800000008002100"
+      ],
+      "first_moves": 61,
+      "ordered_second_moves": 3018,
+      "unique_9stone_positions": 1509,
+      "d4_classes": 1509,
+      "within_root_d4_merges": 0,
+      "min_replies": 37,
+      "max_replies": 58,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 24
+    },
+    {
+      "input_first_ply_rank": 24,
+      "root": "00000000000000801202040000880000",
+      "covered_rows": [
+        "00000000000000801202000000880000",
+        "00000000000000801202040000800000"
+      ],
+      "first_moves": 61,
+      "ordered_second_moves": 2944,
+      "unique_9stone_positions": 1472,
+      "d4_classes": 1472,
+      "within_root_d4_merges": 0,
+      "min_replies": 37,
+      "max_replies": 58,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 23
+    },
+    {
+      "input_first_ply_rank": 25,
+      "root": "00000000000000003800000008005200",
+      "covered_rows": [
+        "00000000000000003800000008001200",
+        "00000000000000003800000008005000"
+      ],
+      "first_moves": 62,
+      "ordered_second_moves": 3078,
+      "unique_9stone_positions": 1539,
+      "d4_classes": 1539,
+      "within_root_d4_merges": 0,
+      "min_replies": 36,
+      "max_replies": 59,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 25
+    },
+    {
+      "input_first_ply_rank": 26,
+      "root": "00000000000000003800000008d00000",
+      "covered_rows": [
+        "00000000000000003800000008500000",
+        "00000000000000003800000008900000"
+      ],
+      "first_moves": 62,
+      "ordered_second_moves": 3110,
+      "unique_9stone_positions": 1555,
+      "d4_classes": 1555,
+      "within_root_d4_merges": 0,
+      "min_replies": 39,
+      "max_replies": 59,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 27
+    },
+    {
+      "input_first_ply_rank": 27,
+      "root": "00000000000000003800000268000000",
+      "covered_rows": [
+        "0000000000000000380000000b000000",
+        "00000000000000003800000248000000"
+      ],
+      "first_moves": 63,
+      "ordered_second_moves": 3120,
+      "unique_9stone_positions": 1560,
+      "d4_classes": 1560,
+      "within_root_d4_merges": 0,
+      "min_replies": 40,
+      "max_replies": 60,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 28
+    },
+    {
+      "input_first_ply_rank": 28,
+      "root": "000000000000a0003800000048000000",
+      "covered_rows": [
+        "00000000000020003800000048000000",
+        "00000000000080003800000048000000"
+      ],
+      "first_moves": 63,
+      "ordered_second_moves": 3148,
+      "unique_9stone_positions": 1574,
+      "d4_classes": 1574,
+      "within_root_d4_merges": 0,
+      "min_replies": 33,
+      "max_replies": 61,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 29
+    },
+    {
+      "input_first_ply_rank": 29,
+      "root": "00000000040000801202000080080000",
+      "covered_rows": [
+        "00000000020000809002000040000000"
+      ],
+      "first_moves": 63,
+      "ordered_second_moves": 3088,
+      "unique_9stone_positions": 1544,
+      "d4_classes": 1544,
+      "within_root_d4_merges": 0,
+      "min_replies": 38,
+      "max_replies": 58,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 26
+    },
+    {
+      "input_first_ply_rank": 30,
+      "root": "00000000000000801202000000800300",
+      "covered_rows": [
+        "00000000000000801202000000800100",
+        "00000000000000801202000000800200"
+      ],
+      "first_moves": 64,
+      "ordered_second_moves": 3258,
+      "unique_9stone_positions": 1629,
+      "d4_classes": 1629,
+      "within_root_d4_merges": 0,
+      "min_replies": 34,
+      "max_replies": 61,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 32
+    },
+    {
+      "input_first_ply_rank": 31,
+      "root": "00000000000000043800000409000000",
+      "covered_rows": [
+        "00000000000000003800000409000000",
+        "00000000000000043800000009000000"
+      ],
+      "first_moves": 65,
+      "ordered_second_moves": 3272,
+      "unique_9stone_positions": 1636,
+      "d4_classes": 1636,
+      "within_root_d4_merges": 0,
+      "min_replies": 37,
+      "max_replies": 62,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 33
+    },
+    {
+      "input_first_ply_rank": 32,
+      "root": "00000000000000083820000048000000",
+      "covered_rows": [
+        "00000000000000003800200009000000",
+        "00000000000000083800000048000000"
+      ],
+      "first_moves": 65,
+      "ordered_second_moves": 3196,
+      "unique_9stone_positions": 1598,
+      "d4_classes": 1598,
+      "within_root_d4_merges": 0,
+      "min_replies": 32,
+      "max_replies": 62,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 31
+    },
+    {
+      "input_first_ply_rank": 33,
+      "root": "00000000000000801202000001000500",
+      "covered_rows": [
+        "00000000000000801202000001000100",
+        "00000000000000801202000001000400"
+      ],
+      "first_moves": 65,
+      "ordered_second_moves": 3340,
+      "unique_9stone_positions": 1670,
+      "d4_classes": 1670,
+      "within_root_d4_merges": 0,
+      "min_replies": 39,
+      "max_replies": 62,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 35
+    },
+    {
+      "input_first_ply_rank": 34,
+      "root": "000000000000008012020000010c0000",
+      "covered_rows": [
+        "00000000000000801202000001040000",
+        "00000000000000801202000001080000"
+      ],
+      "first_moves": 65,
+      "ordered_second_moves": 3184,
+      "unique_9stone_positions": 1592,
+      "d4_classes": 1592,
+      "within_root_d4_merges": 0,
+      "min_replies": 33,
+      "max_replies": 63,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 30
+    },
+    {
+      "input_first_ply_rank": 35,
+      "root": "00000000010000809002000040100000",
+      "covered_rows": [
+        "00000000010000809002000000100000",
+        "00000000010000809002000040000000"
+      ],
+      "first_moves": 65,
+      "ordered_second_moves": 3414,
+      "unique_9stone_positions": 1707,
+      "d4_classes": 1707,
+      "within_root_d4_merges": 0,
+      "min_replies": 43,
+      "max_replies": 61,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 37
+    },
+    {
+      "input_first_ply_rank": 36,
+      "root": "00000000000000143800000008080000",
+      "covered_rows": [
+        "00000000000000043800000008080000",
+        "00000000000000103800000008080000"
+      ],
+      "first_moves": 66,
+      "ordered_second_moves": 3530,
+      "unique_9stone_positions": 1765,
+      "d4_classes": 1765,
+      "within_root_d4_merges": 0,
+      "min_replies": 38,
+      "max_replies": 65,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 41
+    },
+    {
+      "input_first_ply_rank": 37,
+      "root": "00000000000000801202000000840400",
+      "covered_rows": [
+        "00000000000000801202000000800400",
+        "00000000000000801202000000840000"
+      ],
+      "first_moves": 66,
+      "ordered_second_moves": 3476,
+      "unique_9stone_positions": 1738,
+      "d4_classes": 1738,
+      "within_root_d4_merges": 0,
+      "min_replies": 38,
+      "max_replies": 63,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 39
+    },
+    {
+      "input_first_ply_rank": 38,
+      "root": "00000000000000801202000011000200",
+      "covered_rows": [
+        "00000000000000103800000009000000",
+        "00000000000000801202000001000200"
+      ],
+      "first_moves": 66,
+      "ordered_second_moves": 3314,
+      "unique_9stone_positions": 1657,
+      "d4_classes": 1657,
+      "within_root_d4_merges": 0,
+      "min_replies": 33,
+      "max_replies": 64,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 34
+    },
+    {
+      "input_first_ply_rank": 39,
+      "root": "00000000000000821082000600000000",
+      "covered_rows": [
+        "00000000000000821082000200000000",
+        "00000000000000821082000400000000"
+      ],
+      "first_moves": 66,
+      "ordered_second_moves": 3400,
+      "unique_9stone_positions": 1700,
+      "d4_classes": 1700,
+      "within_root_d4_merges": 0,
+      "min_replies": 41,
+      "max_replies": 61,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 36
+    },
+    {
+      "input_first_ply_rank": 40,
+      "root": "00000000000000989002000000100000",
+      "covered_rows": [
+        "00000000000000889002000000100000",
+        "00000000000000909002000000100000"
+      ],
+      "first_moves": 66,
+      "ordered_second_moves": 3472,
+      "unique_9stone_positions": 1736,
+      "d4_classes": 1736,
+      "within_root_d4_merges": 0,
+      "min_replies": 40,
+      "max_replies": 62,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 38
+    },
+    {
+      "input_first_ply_rank": 41,
+      "root": "00000000000000801232000000001000",
+      "covered_rows": [
+        "00000000000000801212000000001000",
+        "00000000000000801222000000001000"
+      ],
+      "first_moves": 67,
+      "ordered_second_moves": 3590,
+      "unique_9stone_positions": 1795,
+      "d4_classes": 1795,
+      "within_root_d4_merges": 0,
+      "min_replies": 42,
+      "max_replies": 63,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 42
+    },
+    {
+      "input_first_ply_rank": 42,
+      "root": "00000000000000821082000000000018",
+      "covered_rows": [
+        "00000000000000821082000000000008",
+        "00000000000000821082000000000010"
+      ],
+      "first_moves": 67,
+      "ordered_second_moves": 3486,
+      "unique_9stone_positions": 1743,
+      "d4_classes": 1743,
+      "within_root_d4_merges": 0,
+      "min_replies": 41,
+      "max_replies": 63,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 40
+    },
+    {
+      "input_first_ply_rank": 43,
+      "root": "00000008000000003800000008100400",
+      "covered_rows": [
+        "00000000000000003800000008001001",
+        "00000008000000003800000008100000"
+      ],
+      "first_moves": 70,
+      "ordered_second_moves": 3964,
+      "unique_9stone_positions": 1982,
+      "d4_classes": 1982,
+      "within_root_d4_merges": 0,
+      "min_replies": 46,
+      "max_replies": 66,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 43
+    },
+    {
+      "input_first_ply_rank": 44,
+      "root": "00000000000000003800000009040004",
+      "covered_rows": [
+        "00000000000000003800000009000004",
+        "00000000000000003800000009040000"
+      ],
+      "first_moves": 71,
+      "ordered_second_moves": 3974,
+      "unique_9stone_positions": 1987,
+      "d4_classes": 1987,
+      "within_root_d4_merges": 0,
+      "min_replies": 40,
+      "max_replies": 67,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 44
+    },
+    {
+      "input_first_ply_rank": 45,
+      "root": "00000010000000801202040000000100",
+      "covered_rows": [
+        "00000000000040809002000000100000",
+        "00000000010000003800000008100000"
+      ],
+      "first_moves": 71,
+      "ordered_second_moves": 3990,
+      "unique_9stone_positions": 1995,
+      "d4_classes": 1995,
+      "within_root_d4_merges": 0,
+      "min_replies": 39,
+      "max_replies": 67,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 45
+    },
+    {
+      "input_first_ply_rank": 46,
+      "root": "00000000010020809002000080000000",
+      "covered_rows": [
+        "00000000000020809002000080000000",
+        "00000000010000809002000080000000"
+      ],
+      "first_moves": 72,
+      "ordered_second_moves": 4100,
+      "unique_9stone_positions": 2050,
+      "d4_classes": 2050,
+      "within_root_d4_merges": 0,
+      "min_replies": 35,
+      "max_replies": 67,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 46
+    },
+    {
+      "input_first_ply_rank": 47,
+      "root": "00000000000000003800000008001180",
+      "covered_rows": [
+        "00000000000000003800000008001080",
+        "00000000000000003800000008001100"
+      ],
+      "first_moves": 74,
+      "ordered_second_moves": 4430,
+      "unique_9stone_positions": 2215,
+      "d4_classes": 2215,
+      "within_root_d4_merges": 0,
+      "min_replies": 43,
+      "max_replies": 70,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 48
+    },
+    {
+      "input_first_ply_rank": 48,
+      "root": "000000000000008012020c0000001000",
+      "covered_rows": [
+        "00000000000000801202040000001000",
+        "00000000000000801202080000001000"
+      ],
+      "first_moves": 74,
+      "ordered_second_moves": 4222,
+      "unique_9stone_positions": 2111,
+      "d4_classes": 2111,
+      "within_root_d4_merges": 0,
+      "min_replies": 39,
+      "max_replies": 72,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 47
+    },
+    {
+      "input_first_ply_rank": 49,
+      "root": "00000000000000043800200008100000",
+      "covered_rows": [
+        "00000000000000003800200008100000",
+        "00000000000000043800000008100000"
+      ],
+      "first_moves": 77,
+      "ordered_second_moves": 4648,
+      "unique_9stone_positions": 2324,
+      "d4_classes": 2324,
+      "within_root_d4_merges": 0,
+      "min_replies": 40,
+      "max_replies": 73,
+      "terminal_children": 0,
+      "rank_by_two_ply_frontier": 49
+    }
+  ],
+  "pairwise_overlap": [
+    {
+      "roots": [
+        "00000000000000801202020001001000",
+        "00000000010000809002000040100000"
+      ],
+      "rows": [
+        [
+          "00000000000000801202020000001000",
+          "00000000000000801202020001000000"
+        ],
+        [
+          "00000000010000809002000000100000",
+          "00000000010000809002000040000000"
+        ]
+      ],
+      "shared_d4_positions": 47
+    },
+    {
+      "roots": [
+        "00000000000000821082000000000005",
+        "00000000000000821082000600000000"
+      ],
+      "rows": [
+        [
+          "00000000000000821082000000000001",
+          "00000000000000821082000000000004"
+        ],
+        [
+          "00000000000000821082000200000000",
+          "00000000000000821082000400000000"
+        ]
+      ],
+      "shared_d4_positions": 4
+    },
+    {
+      "roots": [
+        "00000000000000821082000000100800",
+        "00000000000000821082000000000018"
+      ],
+      "rows": [
+        [
+          "00000000000000821082000000000800",
+          "00000000000000821082000000001000"
+        ],
+        [
+          "00000000000000821082000000000008",
+          "00000000000000821082000000000010"
+        ]
+      ],
+      "shared_d4_positions": 4
+    },
+    {
+      "roots": [
+        "00000000000000821082000600000000",
+        "00000000000000821082000000000018"
+      ],
+      "rows": [
+        [
+          "00000000000000821082000200000000",
+          "00000000000000821082000400000000"
+        ],
+        [
+          "00000000000000821082000000000008",
+          "00000000000000821082000000000010"
+        ]
+      ],
+      "shared_d4_positions": 4
+    },
+    {
+      "roots": [
+        "00000000000000821086800000000000",
+        "00000000000000821082000000000018"
+      ],
+      "rows": [
+        [
+          "00000000000000821082800000000000",
+          "00000000000000821083000000000000"
+        ],
+        [
+          "00000000000000821082000000000008",
+          "00000000000000821082000000000010"
+        ]
+      ],
+      "shared_d4_positions": 4
+    },
+    {
+      "roots": [
+        "00000000000000821086800000000000",
+        "00000000000000821082000600000000"
+      ],
+      "rows": [
+        [
+          "00000000000000821082800000000000",
+          "00000000000000821083000000000000"
+        ],
+        [
+          "00000000000000821082000200000000",
+          "00000000000000821082000400000000"
+        ]
+      ],
+      "shared_d4_positions": 4
+    },
+    {
+      "roots": [
+        "00000000000000821082000000042000",
+        "00000000000000821082000000000005"
+      ],
+      "rows": [
+        [
+          "00000000000000821082000000002000",
+          "00000000000000821082000000004000"
+        ],
+        [
+          "00000000000000821082000000000001",
+          "00000000000000821082000000000004"
+        ]
+      ],
+      "shared_d4_positions": 3
+    },
+    {
+      "roots": [
+        "00000000000000821082000000042000",
+        "00000000000000821082000000000018"
+      ],
+      "rows": [
+        [
+          "00000000000000821082000000002000",
+          "00000000000000821082000000004000"
+        ],
+        [
+          "00000000000000821082000000000008",
+          "00000000000000821082000000000010"
+        ]
+      ],
+      "shared_d4_positions": 3
+    },
+    {
+      "roots": [
+        "00000000000000821082000000042000",
+        "00000000000000821082000000420000"
+      ],
+      "rows": [
+        [
+          "00000000000000821082000000002000",
+          "00000000000000821082000000004000"
+        ],
+        [
+          "00000000000000821082000000008000",
+          "00000000000000821082000000400000"
+        ]
+      ],
+      "shared_d4_positions": 3
+    },
+    {
+      "roots": [
+        "00000000000000821082000000042000",
+        "00000000000000821082000600000000"
+      ],
+      "rows": [
+        [
+          "00000000000000821082000000002000",
+          "00000000000000821082000000004000"
+        ],
+        [
+          "00000000000000821082000200000000",
+          "00000000000000821082000400000000"
+        ]
+      ],
+      "shared_d4_positions": 3
+    },
+    {
+      "roots": [
+        "00000000000000821082000000100800",
+        "00000000000000821082000600000000"
+      ],
+      "rows": [
+        [
+          "00000000000000821082000000000800",
+          "00000000000000821082000000001000"
+        ],
+        [
+          "00000000000000821082000200000000",
+          "00000000000000821082000400000000"
+        ]
+      ],
+      "shared_d4_positions": 3
+    },
+    {
+      "roots": [
+        "00000000000000821082000000420000",
+        "00000000000000821082000000000018"
+      ],
+      "rows": [
+        [
+          "00000000000000821082000000008000",
+          "00000000000000821082000000400000"
+        ],
+        [
+          "00000000000000821082000000000008",
+          "00000000000000821082000000000010"
+        ]
+      ],
+      "shared_d4_positions": 3
+    },
+    {
+      "roots": [
+        "00000000000000821082000010800000",
+        "00000000000000821082000600000000"
+      ],
+      "rows": [
+        [
+          "00000000000000821082000000800000",
+          "00000000000000821082000004000000"
+        ],
+        [
+          "00000000000000821082000200000000",
+          "00000000000000821082000400000000"
+        ]
+      ],
+      "shared_d4_positions": 3
+    },
+    {
+      "roots": [
+        "00000000000000821082600000000000",
+        "00000000000000821082000000042000"
+      ],
+      "rows": [
+        [
+          "00000000000000821082200000000000",
+          "00000000000000821082400000000000"
+        ],
+        [
+          "00000000000000821082000000002000",
+          "00000000000000821082000000004000"
+        ]
+      ],
+      "shared_d4_positions": 3
+    },
+    {
+      "roots": [
+        "00000000000000821082600000000000",
+        "00000000000000821082000600000000"
+      ],
+      "rows": [
+        [
+          "00000000000000821082200000000000",
+          "00000000000000821082400000000000"
+        ],
+        [
+          "00000000000000821082000200000000",
+          "00000000000000821082000400000000"
+        ]
+      ],
+      "shared_d4_positions": 3
+    },
+    {
+      "roots": [
+        "00000000000000821082000000000005",
+        "00000000000000821082000000000018"
+      ],
+      "rows": [
+        [
+          "00000000000000821082000000000001",
+          "00000000000000821082000000000004"
+        ],
+        [
+          "00000000000000821082000000000008",
+          "00000000000000821082000000000010"
+        ]
+      ],
+      "shared_d4_positions": 2
+    },
+    {
+      "roots": [
+        "00000000000000821082000000000005",
+        "00000000000000821082000000420000"
+      ],
+      "rows": [
+        [
+          "00000000000000821082000000000001",
+          "00000000000000821082000000000004"
+        ],
+        [
+          "00000000000000821082000000008000",
+          "00000000000000821082000000400000"
+        ]
+      ],
+      "shared_d4_positions": 2
+    },
+    {
+      "roots": [
+        "00000000000000821082000000100800",
+        "00000000000000821082600000000000"
+      ],
+      "rows": [
+        [
+          "00000000000000821082000000000800",
+          "00000000000000821082000000001000"
+        ],
+        [
+          "00000000000000821082200000000000",
+          "00000000000000821082400000000000"
+        ]
+      ],
+      "shared_d4_positions": 2
+    },
+    {
+      "roots": [
+        "00000000000000821082000000420000",
+        "00000000000000821082000600000000"
+      ],
+      "rows": [
+        [
+          "00000000000000821082000000008000",
+          "00000000000000821082000000400000"
+        ],
+        [
+          "00000000000000821082000200000000",
+          "00000000000000821082000400000000"
+        ]
+      ],
+      "shared_d4_positions": 2
+    },
+    {
+      "roots": [
+        "00000000000000821082000010800000",
+        "00000000000000821082000000000018"
+      ],
+      "rows": [
+        [
+          "00000000000000821082000000800000",
+          "00000000000000821082000004000000"
+        ],
+        [
+          "00000000000000821082000000000008",
+          "00000000000000821082000000000010"
+        ]
+      ],
+      "shared_d4_positions": 2
+    },
+    {
+      "roots": [
+        "00000000000000821082000010800000",
+        "00000000000000821082000000420000"
+      ],
+      "rows": [
+        [
+          "00000000000000821082000000800000",
+          "00000000000000821082000004000000"
+        ],
+        [
+          "00000000000000821082000000008000",
+          "00000000000000821082000000400000"
+        ]
+      ],
+      "shared_d4_positions": 2
+    },
+    {
+      "roots": [
+        "00000000000000821082600000000000",
+        "00000000000000821082000000000005"
+      ],
+      "rows": [
+        [
+          "00000000000000821082200000000000",
+          "00000000000000821082400000000000"
+        ],
+        [
+          "00000000000000821082000000000001",
+          "00000000000000821082000000000004"
+        ]
+      ],
+      "shared_d4_positions": 2
+    },
+    {
+      "roots": [
+        "00000000000000821082600000000000",
+        "00000000000000821082000000000018"
+      ],
+      "rows": [
+        [
+          "00000000000000821082200000000000",
+          "00000000000000821082400000000000"
+        ],
+        [
+          "00000000000000821082000000000008",
+          "00000000000000821082000000000010"
+        ]
+      ],
+      "shared_d4_positions": 2
+    },
+    {
+      "roots": [
+        "00000000000000821082600000000000",
+        "00000000000000821082000000420000"
+      ],
+      "rows": [
+        [
+          "00000000000000821082200000000000",
+          "00000000000000821082400000000000"
+        ],
+        [
+          "00000000000000821082000000008000",
+          "00000000000000821082000000400000"
+        ]
+      ],
+      "shared_d4_positions": 2
+    },
+    {
+      "roots": [
+        "00000000000000821086800000000000",
+        "00000000000000821082000000000005"
+      ],
+      "rows": [
+        [
+          "00000000000000821082800000000000",
+          "00000000000000821083000000000000"
+        ],
+        [
+          "00000000000000821082000000000001",
+          "00000000000000821082000000000004"
+        ]
+      ],
+      "shared_d4_positions": 2
+    },
+    {
+      "roots": [
+        "00000000000000821086800000000000",
+        "00000000000000821082000000420000"
+      ],
+      "rows": [
+        [
+          "00000000000000821082800000000000",
+          "00000000000000821083000000000000"
+        ],
+        [
+          "00000000000000821082000000008000",
+          "00000000000000821082000000400000"
+        ]
+      ],
+      "shared_d4_positions": 2
+    },
+    {
+      "roots": [
+        "00000000000000003800000008001180",
+        "00000000000000043800200008100000"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000008001080",
+          "00000000000000003800000008001100"
+        ],
+        [
+          "00000000000000003800200008100000",
+          "00000000000000043800000008100000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000003800000008001180",
+        "000000000000008012020c0000001000"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000008001080",
+          "00000000000000003800000008001100"
+        ],
+        [
+          "00000000000000801202040000001000",
+          "00000000000000801202080000001000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "000000000000000038000000080020c0",
+        "00000000000000003800000008001180"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000008002040",
+          "00000000000000003800000008002080"
+        ],
+        [
+          "00000000000000003800000008001080",
+          "00000000000000003800000008001100"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "000000000000000038000000080020c0",
+        "00000000000000801202000000800300"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000008002040",
+          "00000000000000003800000008002080"
+        ],
+        [
+          "00000000000000801202000000800100",
+          "00000000000000801202000000800200"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "000000000000000038000000080020c0",
+        "00000000000000801202000000840400"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000008002040",
+          "00000000000000003800000008002080"
+        ],
+        [
+          "00000000000000801202000000800400",
+          "00000000000000801202000000840000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "000000000000000038000000080020c0",
+        "00000000000000801202040000880000"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000008002040",
+          "00000000000000003800000008002080"
+        ],
+        [
+          "00000000000000801202000000880000",
+          "00000000000000801202040000800000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "000000000000000038000000080020c0",
+        "00000000000000909002200080000000"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000008002040",
+          "00000000000000003800000008002080"
+        ],
+        [
+          "00000000000000801222000000800000",
+          "00000000000000909002000080000000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "000000000000000038000000080020c0",
+        "00000000010020809002000080000000"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000008002040",
+          "00000000000000003800000008002080"
+        ],
+        [
+          "00000000000020809002000080000000",
+          "00000000010000809002000080000000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000003800000008002110",
+        "00000000000000143800000008080000"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000008002010",
+          "00000000000000003800000008002100"
+        ],
+        [
+          "00000000000000043800000008080000",
+          "00000000000000103800000008080000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000003800000008002110",
+        "00000000000000801202000000800300"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000008002010",
+          "00000000000000003800000008002100"
+        ],
+        [
+          "00000000000000801202000000800100",
+          "00000000000000801202000000800200"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000003800000008002110",
+        "00000000000000801202000000840400"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000008002010",
+          "00000000000000003800000008002100"
+        ],
+        [
+          "00000000000000801202000000800400",
+          "00000000000000801202000000840000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000003800000008002110",
+        "00000000000000801202040000880000"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000008002010",
+          "00000000000000003800000008002100"
+        ],
+        [
+          "00000000000000801202000000880000",
+          "00000000000000801202040000800000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000003800000008002110",
+        "00000000010020809002000080000000"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000008002010",
+          "00000000000000003800000008002100"
+        ],
+        [
+          "00000000000020809002000080000000",
+          "00000000010000809002000080000000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000003800000008005200",
+        "00000000000000003800000008001180"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000008001200",
+          "00000000000000003800000008005000"
+        ],
+        [
+          "00000000000000003800000008001080",
+          "00000000000000003800000008001100"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000003800000008005200",
+        "00000000000000043800200008100000"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000008001200",
+          "00000000000000003800000008005000"
+        ],
+        [
+          "00000000000000003800200008100000",
+          "00000000000000043800000008100000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000003800000008005200",
+        "00000000000000801232000000001000"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000008001200",
+          "00000000000000003800000008005000"
+        ],
+        [
+          "00000000000000801212000000001000",
+          "00000000000000801222000000001000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000003800000008005200",
+        "00000000010000809002000040100000"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000008001200",
+          "00000000000000003800000008005000"
+        ],
+        [
+          "00000000010000809002000000100000",
+          "00000000010000809002000040000000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000003800000008005200",
+        "00000010000000801202040000000100"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000008001200",
+          "00000000000000003800000008005000"
+        ],
+        [
+          "00000000000040809002000000100000",
+          "00000000010000003800000008100000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000003800000008011800",
+        "00000000000000003800000008001180"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000008001800",
+          "00000000000000003800000008011000"
+        ],
+        [
+          "00000000000000003800000008001080",
+          "00000000000000003800000008001100"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000003800000008011800",
+        "00000000000000003800000008d00000"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000008001800",
+          "00000000000000003800000008011000"
+        ],
+        [
+          "00000000000000003800000008500000",
+          "00000000000000003800000008900000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000003800000008011800",
+        "000000000000008012020c0000001000"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000008001800",
+          "00000000000000003800000008011000"
+        ],
+        [
+          "00000000000000801202040000001000",
+          "00000000000000801202080000001000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000003800000008011800",
+        "00000000000000801232000000001000"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000008001800",
+          "00000000000000003800000008011000"
+        ],
+        [
+          "00000000000000801212000000001000",
+          "00000000000000801222000000001000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000003800000008011800",
+        "00000000000000989002000000100000"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000008001800",
+          "00000000000000003800000008011000"
+        ],
+        [
+          "00000000000000889002000000100000",
+          "00000000000000909002000000100000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000003800000008011800",
+        "00000000010000809002000040100000"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000008001800",
+          "00000000000000003800000008011000"
+        ],
+        [
+          "00000000010000809002000000100000",
+          "00000000010000809002000040000000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000003800000008011800",
+        "00000010000000801202040000000100"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000008001800",
+          "00000000000000003800000008011000"
+        ],
+        [
+          "00000000000040809002000000100000",
+          "00000000010000003800000008100000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000003800000008d00000",
+        "00000000000000989002000000100000"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000008500000",
+          "00000000000000003800000008900000"
+        ],
+        [
+          "00000000000000889002000000100000",
+          "00000000000000909002000000100000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000003800000008d00000",
+        "00000010000000801202040000000100"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000008500000",
+          "00000000000000003800000008900000"
+        ],
+        [
+          "00000000000040809002000000100000",
+          "00000000010000003800000008100000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000003800000209800000",
+        "00000000000000003800000009040004"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000009800000",
+          "00000000000000003800000209000000"
+        ],
+        [
+          "00000000000000003800000009000004",
+          "00000000000000003800000009040000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000003800000209800000",
+        "00000000000000043800000409000000"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000009800000",
+          "00000000000000003800000209000000"
+        ],
+        [
+          "00000000000000003800000409000000",
+          "00000000000000043800000009000000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000003800000209800000",
+        "00000000000000801202000011000200"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000009800000",
+          "00000000000000003800000209000000"
+        ],
+        [
+          "00000000000000103800000009000000",
+          "00000000000000801202000001000200"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000003800000209800000",
+        "000000000000a0003800000048000000"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000009800000",
+          "00000000000000003800000209000000"
+        ],
+        [
+          "00000000000020003800000048000000",
+          "00000000000080003800000048000000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000003800000209800000",
+        "00000000040000801202000080080000"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000009800000",
+          "00000000000000003800000209000000"
+        ],
+        [
+          "00000000020000809002000040000000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000003800000268000000",
+        "00000000000000003800000009040004"
+      ],
+      "rows": [
+        [
+          "0000000000000000380000000b000000",
+          "00000000000000003800000248000000"
+        ],
+        [
+          "00000000000000003800000009000004",
+          "00000000000000003800000009040000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000003800000268000000",
+        "00000000000000083820000048000000"
+      ],
+      "rows": [
+        [
+          "0000000000000000380000000b000000",
+          "00000000000000003800000248000000"
+        ],
+        [
+          "00000000000000003800200009000000",
+          "00000000000000083800000048000000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000003800000268000000",
+        "000000000000008012020000010c0000"
+      ],
+      "rows": [
+        [
+          "0000000000000000380000000b000000",
+          "00000000000000003800000248000000"
+        ],
+        [
+          "00000000000000801202000001040000",
+          "00000000000000801202000001080000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000003800000268000000",
+        "00000000000000801202000011000200"
+      ],
+      "rows": [
+        [
+          "0000000000000000380000000b000000",
+          "00000000000000003800000248000000"
+        ],
+        [
+          "00000000000000103800000009000000",
+          "00000000000000801202000001000200"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000003800000268000000",
+        "000000000000a0003800000048000000"
+      ],
+      "rows": [
+        [
+          "0000000000000000380000000b000000",
+          "00000000000000003800000248000000"
+        ],
+        [
+          "00000000000020003800000048000000",
+          "00000000000080003800000048000000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000003800000268000000",
+        "00000000010000809002000040100000"
+      ],
+      "rows": [
+        [
+          "0000000000000000380000000b000000",
+          "00000000000000003800000248000000"
+        ],
+        [
+          "00000000010000809002000000100000",
+          "00000000010000809002000040000000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000003800000268000000",
+        "00000000040000801202000080080000"
+      ],
+      "rows": [
+        [
+          "0000000000000000380000000b000000",
+          "00000000000000003800000248000000"
+        ],
+        [
+          "00000000020000809002000040000000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "0000000000000000380010000a002000",
+        "00000000000000003800000008002110"
+      ],
+      "rows": [
+        [
+          "0000000000000000380000000a002000",
+          "00000000000000003800100008002000"
+        ],
+        [
+          "00000000000000003800000008002010",
+          "00000000000000003800000008002100"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "0000000000000000380010000a002000",
+        "00000000000000143800000008080000"
+      ],
+      "rows": [
+        [
+          "0000000000000000380000000a002000",
+          "00000000000000003800100008002000"
+        ],
+        [
+          "00000000000000043800000008080000",
+          "00000000000000103800000008080000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "0000000000000000380010000a002000",
+        "00000000000000801202000000800300"
+      ],
+      "rows": [
+        [
+          "0000000000000000380000000a002000",
+          "00000000000000003800100008002000"
+        ],
+        [
+          "00000000000000801202000000800100",
+          "00000000000000801202000000800200"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "0000000000000000380010000a002000",
+        "00000000000000801202000000840400"
+      ],
+      "rows": [
+        [
+          "0000000000000000380000000a002000",
+          "00000000000000003800100008002000"
+        ],
+        [
+          "00000000000000801202000000800400",
+          "00000000000000801202000000840000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "0000000000000000380010000a002000",
+        "00000000000000801202040000880000"
+      ],
+      "rows": [
+        [
+          "0000000000000000380000000a002000",
+          "00000000000000003800100008002000"
+        ],
+        [
+          "00000000000000801202000000880000",
+          "00000000000000801202040000800000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "0000000000000000380010000a002000",
+        "00000000010020809002000080000000"
+      ],
+      "rows": [
+        [
+          "0000000000000000380000000a002000",
+          "00000000000000003800100008002000"
+        ],
+        [
+          "00000000000020809002000080000000",
+          "00000000010000809002000080000000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000003800200808001000",
+        "00000000000000003800000008001180"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000808001000",
+          "00000000000000003800200008001000"
+        ],
+        [
+          "00000000000000003800000008001080",
+          "00000000000000003800000008001100"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000003800200808001000",
+        "00000000000000003800000008005200"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000808001000",
+          "00000000000000003800200008001000"
+        ],
+        [
+          "00000000000000003800000008001200",
+          "00000000000000003800000008005000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000003800200808001000",
+        "000000000000008012020c0000001000"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000808001000",
+          "00000000000000003800200008001000"
+        ],
+        [
+          "00000000000000801202040000001000",
+          "00000000000000801202080000001000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000003800200808001000",
+        "00000000000000801232000000001000"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000808001000",
+          "00000000000000003800200008001000"
+        ],
+        [
+          "00000000000000801212000000001000",
+          "00000000000000801222000000001000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000003800200808001000",
+        "00000000000000989002000000100000"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000808001000",
+          "00000000000000003800200008001000"
+        ],
+        [
+          "00000000000000889002000000100000",
+          "00000000000000909002000000100000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000003800200808001000",
+        "00000000020008003800000008001000"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000808001000",
+          "00000000000000003800200008001000"
+        ],
+        [
+          "00000000000000083800000008100000",
+          "00000000000000801202000000081000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000003800200808001000",
+        "00000008000000003800000008100400"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000808001000",
+          "00000000000000003800200008001000"
+        ],
+        [
+          "00000000000000003800000008001001",
+          "00000008000000003800000008100000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000003800200808001000",
+        "00000010000000801202040000000100"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000808001000",
+          "00000000000000003800200008001000"
+        ],
+        [
+          "00000000000040809002000000100000",
+          "00000000010000003800000008100000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000043800000409000000",
+        "00000000000000003800000009040004"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000409000000",
+          "00000000000000043800000009000000"
+        ],
+        [
+          "00000000000000003800000009000004",
+          "00000000000000003800000009040000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000043800000409000000",
+        "00000000000000801202000001000500"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000409000000",
+          "00000000000000043800000009000000"
+        ],
+        [
+          "00000000000000801202000001000100",
+          "00000000000000801202000001000400"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000083820000048000000",
+        "00000000000000003800000009040004"
+      ],
+      "rows": [
+        [
+          "00000000000000003800200009000000",
+          "00000000000000083800000048000000"
+        ],
+        [
+          "00000000000000003800000009000004",
+          "00000000000000003800000009040000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000083820000048000000",
+        "000000000000008012020000010c0000"
+      ],
+      "rows": [
+        [
+          "00000000000000003800200009000000",
+          "00000000000000083800000048000000"
+        ],
+        [
+          "00000000000000801202000001040000",
+          "00000000000000801202000001080000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000083820000048000000",
+        "00000000010000809002000040100000"
+      ],
+      "rows": [
+        [
+          "00000000000000003800200009000000",
+          "00000000000000083800000048000000"
+        ],
+        [
+          "00000000010000809002000000100000",
+          "00000000010000809002000040000000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000143800000008080000",
+        "00000000000000043800200008100000"
+      ],
+      "rows": [
+        [
+          "00000000000000043800000008080000",
+          "00000000000000103800000008080000"
+        ],
+        [
+          "00000000000000003800200008100000",
+          "00000000000000043800000008100000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000143800000008080000",
+        "00000000000000801202000011000200"
+      ],
+      "rows": [
+        [
+          "00000000000000043800000008080000",
+          "00000000000000103800000008080000"
+        ],
+        [
+          "00000000000000103800000009000000",
+          "00000000000000801202000001000200"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000143800000008080000",
+        "00000000010020809002000080000000"
+      ],
+      "rows": [
+        [
+          "00000000000000043800000008080000",
+          "00000000000000103800000008080000"
+        ],
+        [
+          "00000000000020809002000080000000",
+          "00000000010000809002000080000000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202000000800300",
+        "00000000000000143800000008080000"
+      ],
+      "rows": [
+        [
+          "00000000000000801202000000800100",
+          "00000000000000801202000000800200"
+        ],
+        [
+          "00000000000000043800000008080000",
+          "00000000000000103800000008080000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202000000800300",
+        "00000000010020809002000080000000"
+      ],
+      "rows": [
+        [
+          "00000000000000801202000000800100",
+          "00000000000000801202000000800200"
+        ],
+        [
+          "00000000000020809002000080000000",
+          "00000000010000809002000080000000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202000000840400",
+        "00000000010020809002000080000000"
+      ],
+      "rows": [
+        [
+          "00000000000000801202000000800400",
+          "00000000000000801202000000840000"
+        ],
+        [
+          "00000000000020809002000080000000",
+          "00000000010000809002000080000000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202000000901000",
+        "00000000000000003800000008001180"
+      ],
+      "rows": [
+        [
+          "00000000000000801202000000101000",
+          "00000000000000801202000000900000"
+        ],
+        [
+          "00000000000000003800000008001080",
+          "00000000000000003800000008001100"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202000000901000",
+        "000000000000000038000000080020c0"
+      ],
+      "rows": [
+        [
+          "00000000000000801202000000101000",
+          "00000000000000801202000000900000"
+        ],
+        [
+          "00000000000000003800000008002040",
+          "00000000000000003800000008002080"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202000000901000",
+        "0000000000000000380010000a002000"
+      ],
+      "rows": [
+        [
+          "00000000000000801202000000101000",
+          "00000000000000801202000000900000"
+        ],
+        [
+          "0000000000000000380000000a002000",
+          "00000000000000003800100008002000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202000000901000",
+        "00000000000000043800200008100000"
+      ],
+      "rows": [
+        [
+          "00000000000000801202000000101000",
+          "00000000000000801202000000900000"
+        ],
+        [
+          "00000000000000003800200008100000",
+          "00000000000000043800000008100000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202000000901000",
+        "00000000000000143800000008080000"
+      ],
+      "rows": [
+        [
+          "00000000000000801202000000101000",
+          "00000000000000801202000000900000"
+        ],
+        [
+          "00000000000000043800000008080000",
+          "00000000000000103800000008080000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202000000901000",
+        "00000000000000801202000000800300"
+      ],
+      "rows": [
+        [
+          "00000000000000801202000000101000",
+          "00000000000000801202000000900000"
+        ],
+        [
+          "00000000000000801202000000800100",
+          "00000000000000801202000000800200"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202000000901000",
+        "00000000000000801202000000840400"
+      ],
+      "rows": [
+        [
+          "00000000000000801202000000101000",
+          "00000000000000801202000000900000"
+        ],
+        [
+          "00000000000000801202000000800400",
+          "00000000000000801202000000840000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202000000901000",
+        "000000000000008012020c0000001000"
+      ],
+      "rows": [
+        [
+          "00000000000000801202000000101000",
+          "00000000000000801202000000900000"
+        ],
+        [
+          "00000000000000801202040000001000",
+          "00000000000000801202080000001000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202000000901000",
+        "00000000000000801232000000001000"
+      ],
+      "rows": [
+        [
+          "00000000000000801202000000101000",
+          "00000000000000801202000000900000"
+        ],
+        [
+          "00000000000000801212000000001000",
+          "00000000000000801222000000001000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202000000901000",
+        "00000000000000909002200080000000"
+      ],
+      "rows": [
+        [
+          "00000000000000801202000000101000",
+          "00000000000000801202000000900000"
+        ],
+        [
+          "00000000000000801222000000800000",
+          "00000000000000909002000080000000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202000000901000",
+        "00000000000000989002000000100000"
+      ],
+      "rows": [
+        [
+          "00000000000000801202000000101000",
+          "00000000000000801202000000900000"
+        ],
+        [
+          "00000000000000889002000000100000",
+          "00000000000000909002000000100000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202000000901000",
+        "00000000000000a89002000080000000"
+      ],
+      "rows": [
+        [
+          "00000000000000801202000000101000",
+          "00000000000000801202000000900000"
+        ],
+        [
+          "00000000000000889002000080000000",
+          "00000000000000a09002000080000000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202000000901000",
+        "00000000010020809002000080000000"
+      ],
+      "rows": [
+        [
+          "00000000000000801202000000101000",
+          "00000000000000801202000000900000"
+        ],
+        [
+          "00000000000020809002000080000000",
+          "00000000010000809002000080000000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202000000901000",
+        "00000010000000801202040000000100"
+      ],
+      "rows": [
+        [
+          "00000000000000801202000000101000",
+          "00000000000000801202000000900000"
+        ],
+        [
+          "00000000000040809002000000100000",
+          "00000000010000003800000008100000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202000001000500",
+        "00000000000000003800000009040004"
+      ],
+      "rows": [
+        [
+          "00000000000000801202000001000100",
+          "00000000000000801202000001000400"
+        ],
+        [
+          "00000000000000003800000009000004",
+          "00000000000000003800000009040000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202000001000500",
+        "000000000000008012020000010c0000"
+      ],
+      "rows": [
+        [
+          "00000000000000801202000001000100",
+          "00000000000000801202000001000400"
+        ],
+        [
+          "00000000000000801202000001040000",
+          "00000000000000801202000001080000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "000000000000008012020000010c0000",
+        "00000000000000003800000009040004"
+      ],
+      "rows": [
+        [
+          "00000000000000801202000001040000",
+          "00000000000000801202000001080000"
+        ],
+        [
+          "00000000000000003800000009000004",
+          "00000000000000003800000009040000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "000000000000008012020000010c0000",
+        "00000000010000809002000040100000"
+      ],
+      "rows": [
+        [
+          "00000000000000801202000001040000",
+          "00000000000000801202000001080000"
+        ],
+        [
+          "00000000010000809002000000100000",
+          "00000000010000809002000040000000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202000011000200",
+        "00000000000000003800000009040004"
+      ],
+      "rows": [
+        [
+          "00000000000000103800000009000000",
+          "00000000000000801202000001000200"
+        ],
+        [
+          "00000000000000003800000009000004",
+          "00000000000000003800000009040000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202010020001000",
+        "00000000000000003800000008001180"
+      ],
+      "rows": [
+        [
+          "00000000000000801202000020001000",
+          "00000000000000801202010000001000"
+        ],
+        [
+          "00000000000000003800000008001080",
+          "00000000000000003800000008001100"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202010020001000",
+        "00000000000000003800000008d00000"
+      ],
+      "rows": [
+        [
+          "00000000000000801202000020001000",
+          "00000000000000801202010000001000"
+        ],
+        [
+          "00000000000000003800000008500000",
+          "00000000000000003800000008900000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202010020001000",
+        "00000000000000043800200008100000"
+      ],
+      "rows": [
+        [
+          "00000000000000801202000020001000",
+          "00000000000000801202010000001000"
+        ],
+        [
+          "00000000000000003800200008100000",
+          "00000000000000043800000008100000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202010020001000",
+        "00000000000000801202000000901000"
+      ],
+      "rows": [
+        [
+          "00000000000000801202000020001000",
+          "00000000000000801202010000001000"
+        ],
+        [
+          "00000000000000801202000000101000",
+          "00000000000000801202000000900000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202010020001000",
+        "000000000000008012020c0000001000"
+      ],
+      "rows": [
+        [
+          "00000000000000801202000020001000",
+          "00000000000000801202010000001000"
+        ],
+        [
+          "00000000000000801202040000001000",
+          "00000000000000801202080000001000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202010020001000",
+        "00000000000000989002000000100000"
+      ],
+      "rows": [
+        [
+          "00000000000000801202000020001000",
+          "00000000000000801202010000001000"
+        ],
+        [
+          "00000000000000889002000000100000",
+          "00000000000000909002000000100000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202010020001000",
+        "00000010000000801202040000000100"
+      ],
+      "rows": [
+        [
+          "00000000000000801202000020001000",
+          "00000000000000801202010000001000"
+        ],
+        [
+          "00000000000040809002000000100000",
+          "00000000010000003800000008100000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202010020001000",
+        "00000010000000801282000000000400"
+      ],
+      "rows": [
+        [
+          "00000000000000801202000020001000",
+          "00000000000000801202010000001000"
+        ],
+        [
+          "00000000000000003800000008001020",
+          "00000010000000801202000000000400"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202020001001000",
+        "00000000000000003800000008001180"
+      ],
+      "rows": [
+        [
+          "00000000000000801202020000001000",
+          "00000000000000801202020001000000"
+        ],
+        [
+          "00000000000000003800000008001080",
+          "00000000000000003800000008001100"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202020001001000",
+        "00000000000000003800000008011800"
+      ],
+      "rows": [
+        [
+          "00000000000000801202020000001000",
+          "00000000000000801202020001000000"
+        ],
+        [
+          "00000000000000003800000008001800",
+          "00000000000000003800000008011000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202020001001000",
+        "00000000000000003800000009040004"
+      ],
+      "rows": [
+        [
+          "00000000000000801202020000001000",
+          "00000000000000801202020001000000"
+        ],
+        [
+          "00000000000000003800000009000004",
+          "00000000000000003800000009040000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202020001001000",
+        "00000000000000003800000268000000"
+      ],
+      "rows": [
+        [
+          "00000000000000801202020000001000",
+          "00000000000000801202020001000000"
+        ],
+        [
+          "0000000000000000380000000b000000",
+          "00000000000000003800000248000000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202020001001000",
+        "00000000000000043800000409000000"
+      ],
+      "rows": [
+        [
+          "00000000000000801202020000001000",
+          "00000000000000801202020001000000"
+        ],
+        [
+          "00000000000000003800000409000000",
+          "00000000000000043800000009000000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202020001001000",
+        "00000000000000043800200008100000"
+      ],
+      "rows": [
+        [
+          "00000000000000801202020000001000",
+          "00000000000000801202020001000000"
+        ],
+        [
+          "00000000000000003800200008100000",
+          "00000000000000043800000008100000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202020001001000",
+        "00000000000000083820000048000000"
+      ],
+      "rows": [
+        [
+          "00000000000000801202020000001000",
+          "00000000000000801202020001000000"
+        ],
+        [
+          "00000000000000003800200009000000",
+          "00000000000000083800000048000000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202020001001000",
+        "00000000000000801202000001000500"
+      ],
+      "rows": [
+        [
+          "00000000000000801202020000001000",
+          "00000000000000801202020001000000"
+        ],
+        [
+          "00000000000000801202000001000100",
+          "00000000000000801202000001000400"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202020001001000",
+        "000000000000008012020000010c0000"
+      ],
+      "rows": [
+        [
+          "00000000000000801202020000001000",
+          "00000000000000801202020001000000"
+        ],
+        [
+          "00000000000000801202000001040000",
+          "00000000000000801202000001080000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202020001001000",
+        "00000000000000801202000011000200"
+      ],
+      "rows": [
+        [
+          "00000000000000801202020000001000",
+          "00000000000000801202020001000000"
+        ],
+        [
+          "00000000000000103800000009000000",
+          "00000000000000801202000001000200"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202020001001000",
+        "000000000000008012020c0000001000"
+      ],
+      "rows": [
+        [
+          "00000000000000801202020000001000",
+          "00000000000000801202020001000000"
+        ],
+        [
+          "00000000000000801202040000001000",
+          "00000000000000801202080000001000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202020001001000",
+        "00000000020008003800000008001000"
+      ],
+      "rows": [
+        [
+          "00000000000000801202020000001000",
+          "00000000000000801202020001000000"
+        ],
+        [
+          "00000000000000083800000008100000",
+          "00000000000000801202000000081000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202020001001000",
+        "00000000040000801202000080080000"
+      ],
+      "rows": [
+        [
+          "00000000000000801202020000001000",
+          "00000000000000801202020001000000"
+        ],
+        [
+          "00000000020000809002000040000000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202020001001000",
+        "00000010000000801202040000000100"
+      ],
+      "rows": [
+        [
+          "00000000000000801202020000001000",
+          "00000000000000801202020001000000"
+        ],
+        [
+          "00000000000040809002000000100000",
+          "00000000010000003800000008100000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202040000880000",
+        "00000000000000143800000008080000"
+      ],
+      "rows": [
+        [
+          "00000000000000801202000000880000",
+          "00000000000000801202040000800000"
+        ],
+        [
+          "00000000000000043800000008080000",
+          "00000000000000103800000008080000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202040000880000",
+        "00000000000000801202000000800300"
+      ],
+      "rows": [
+        [
+          "00000000000000801202000000880000",
+          "00000000000000801202040000800000"
+        ],
+        [
+          "00000000000000801202000000800100",
+          "00000000000000801202000000800200"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202040000880000",
+        "00000000000000801202000000840400"
+      ],
+      "rows": [
+        [
+          "00000000000000801202000000880000",
+          "00000000000000801202040000800000"
+        ],
+        [
+          "00000000000000801202000000800400",
+          "00000000000000801202000000840000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202040000880000",
+        "00000000010020809002000080000000"
+      ],
+      "rows": [
+        [
+          "00000000000000801202000000880000",
+          "00000000000000801202040000800000"
+        ],
+        [
+          "00000000000020809002000080000000",
+          "00000000010000809002000080000000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202040000880000",
+        "00000000040000801202000080080000"
+      ],
+      "rows": [
+        [
+          "00000000000000801202000000880000",
+          "00000000000000801202040000800000"
+        ],
+        [
+          "00000000020000809002000040000000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202050001000000",
+        "00000000000000003800000009040004"
+      ],
+      "rows": [
+        [
+          "00000000000000801202010001000000",
+          "00000000000000801202040001000000"
+        ],
+        [
+          "00000000000000003800000009000004",
+          "00000000000000003800000009040000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202050001000000",
+        "00000000000000043800000409000000"
+      ],
+      "rows": [
+        [
+          "00000000000000801202010001000000",
+          "00000000000000801202040001000000"
+        ],
+        [
+          "00000000000000003800000409000000",
+          "00000000000000043800000009000000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202050001000000",
+        "00000000000000083820000048000000"
+      ],
+      "rows": [
+        [
+          "00000000000000801202010001000000",
+          "00000000000000801202040001000000"
+        ],
+        [
+          "00000000000000003800200009000000",
+          "00000000000000083800000048000000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202050001000000",
+        "000000000000008012020000010c0000"
+      ],
+      "rows": [
+        [
+          "00000000000000801202010001000000",
+          "00000000000000801202040001000000"
+        ],
+        [
+          "00000000000000801202000001040000",
+          "00000000000000801202000001080000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202050001000000",
+        "00000000000000801202000011000200"
+      ],
+      "rows": [
+        [
+          "00000000000000801202010001000000",
+          "00000000000000801202040001000000"
+        ],
+        [
+          "00000000000000103800000009000000",
+          "00000000000000801202000001000200"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202050001000000",
+        "000000000000008012020c0000001000"
+      ],
+      "rows": [
+        [
+          "00000000000000801202010001000000",
+          "00000000000000801202040001000000"
+        ],
+        [
+          "00000000000000801202040000001000",
+          "00000000000000801202080000001000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801202050001000000",
+        "00000000010000809002000040100000"
+      ],
+      "rows": [
+        [
+          "00000000000000801202010001000000",
+          "00000000000000801202040001000000"
+        ],
+        [
+          "00000000010000809002000000100000",
+          "00000000010000809002000040000000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "000000000000008012020c0000001000",
+        "00000000000000043800200008100000"
+      ],
+      "rows": [
+        [
+          "00000000000000801202040000001000",
+          "00000000000000801202080000001000"
+        ],
+        [
+          "00000000000000003800200008100000",
+          "00000000000000043800000008100000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801232000000001000",
+        "00000000000000003800000008001180"
+      ],
+      "rows": [
+        [
+          "00000000000000801212000000001000",
+          "00000000000000801222000000001000"
+        ],
+        [
+          "00000000000000003800000008001080",
+          "00000000000000003800000008001100"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801232000000001000",
+        "00000000000000043800200008100000"
+      ],
+      "rows": [
+        [
+          "00000000000000801212000000001000",
+          "00000000000000801222000000001000"
+        ],
+        [
+          "00000000000000003800200008100000",
+          "00000000000000043800000008100000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801232000000001000",
+        "000000000000008012020c0000001000"
+      ],
+      "rows": [
+        [
+          "00000000000000801212000000001000",
+          "00000000000000801222000000001000"
+        ],
+        [
+          "00000000000000801202040000001000",
+          "00000000000000801202080000001000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000801232000000001000",
+        "00000008000000003800000008100400"
+      ],
+      "rows": [
+        [
+          "00000000000000801212000000001000",
+          "00000000000000801222000000001000"
+        ],
+        [
+          "00000000000000003800000008001001",
+          "00000008000000003800000008100000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000805212000001000000",
+        "00000000000000003800000268000000"
+      ],
+      "rows": [
+        [
+          "00000000000000801212000001000000",
+          "00000000000000805202000001000000"
+        ],
+        [
+          "0000000000000000380000000b000000",
+          "00000000000000003800000248000000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000805212000001000000",
+        "00000000000000083820000048000000"
+      ],
+      "rows": [
+        [
+          "00000000000000801212000001000000",
+          "00000000000000805202000001000000"
+        ],
+        [
+          "00000000000000003800200009000000",
+          "00000000000000083800000048000000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000805212000001000000",
+        "00000000000000801232000000001000"
+      ],
+      "rows": [
+        [
+          "00000000000000801212000001000000",
+          "00000000000000805202000001000000"
+        ],
+        [
+          "00000000000000801212000000001000",
+          "00000000000000801222000000001000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000805212000001000000",
+        "00000000010000809002000040100000"
+      ],
+      "rows": [
+        [
+          "00000000000000801212000001000000",
+          "00000000000000805202000001000000"
+        ],
+        [
+          "00000000010000809002000000100000",
+          "00000000010000809002000040000000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000821082000000100800",
+        "00000000000000821082000000000005"
+      ],
+      "rows": [
+        [
+          "00000000000000821082000000000800",
+          "00000000000000821082000000001000"
+        ],
+        [
+          "00000000000000821082000000000001",
+          "00000000000000821082000000000004"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000821082000000100800",
+        "00000000000000821082000000042000"
+      ],
+      "rows": [
+        [
+          "00000000000000821082000000000800",
+          "00000000000000821082000000001000"
+        ],
+        [
+          "00000000000000821082000000002000",
+          "00000000000000821082000000004000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000821082000000100800",
+        "00000000000000821082000000420000"
+      ],
+      "rows": [
+        [
+          "00000000000000821082000000000800",
+          "00000000000000821082000000001000"
+        ],
+        [
+          "00000000000000821082000000008000",
+          "00000000000000821082000000400000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000821082000010800000",
+        "00000000000000821082000000100800"
+      ],
+      "rows": [
+        [
+          "00000000000000821082000000800000",
+          "00000000000000821082000004000000"
+        ],
+        [
+          "00000000000000821082000000000800",
+          "00000000000000821082000000001000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000821082000010800000",
+        "00000000000000821082600000000000"
+      ],
+      "rows": [
+        [
+          "00000000000000821082000000800000",
+          "00000000000000821082000004000000"
+        ],
+        [
+          "00000000000000821082200000000000",
+          "00000000000000821082400000000000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000821082000010800000",
+        "00000000000000821086800000000000"
+      ],
+      "rows": [
+        [
+          "00000000000000821082000000800000",
+          "00000000000000821082000004000000"
+        ],
+        [
+          "00000000000000821082800000000000",
+          "00000000000000821083000000000000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000909002200080000000",
+        "00000000000000003800000008002110"
+      ],
+      "rows": [
+        [
+          "00000000000000801222000000800000",
+          "00000000000000909002000080000000"
+        ],
+        [
+          "00000000000000003800000008002010",
+          "00000000000000003800000008002100"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000909002200080000000",
+        "00000000000000143800000008080000"
+      ],
+      "rows": [
+        [
+          "00000000000000801222000000800000",
+          "00000000000000909002000080000000"
+        ],
+        [
+          "00000000000000043800000008080000",
+          "00000000000000103800000008080000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000909002200080000000",
+        "00000000000000801202000000800300"
+      ],
+      "rows": [
+        [
+          "00000000000000801222000000800000",
+          "00000000000000909002000080000000"
+        ],
+        [
+          "00000000000000801202000000800100",
+          "00000000000000801202000000800200"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000909002200080000000",
+        "00000000000000801202000000840400"
+      ],
+      "rows": [
+        [
+          "00000000000000801222000000800000",
+          "00000000000000909002000080000000"
+        ],
+        [
+          "00000000000000801202000000800400",
+          "00000000000000801202000000840000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000909002200080000000",
+        "00000000010020809002000080000000"
+      ],
+      "rows": [
+        [
+          "00000000000000801222000000800000",
+          "00000000000000909002000080000000"
+        ],
+        [
+          "00000000000020809002000080000000",
+          "00000000010000809002000080000000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000989002000000100000",
+        "00000000000000003800000008001180"
+      ],
+      "rows": [
+        [
+          "00000000000000889002000000100000",
+          "00000000000000909002000000100000"
+        ],
+        [
+          "00000000000000003800000008001080",
+          "00000000000000003800000008001100"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000989002000000100000",
+        "00000000000000043800200008100000"
+      ],
+      "rows": [
+        [
+          "00000000000000889002000000100000",
+          "00000000000000909002000000100000"
+        ],
+        [
+          "00000000000000003800200008100000",
+          "00000000000000043800000008100000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000989002000000100000",
+        "00000008000000003800000008100400"
+      ],
+      "rows": [
+        [
+          "00000000000000889002000000100000",
+          "00000000000000909002000000100000"
+        ],
+        [
+          "00000000000000003800000008001001",
+          "00000008000000003800000008100000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000989002000000100000",
+        "00000010000000801202040000000100"
+      ],
+      "rows": [
+        [
+          "00000000000000889002000000100000",
+          "00000000000000909002000000100000"
+        ],
+        [
+          "00000000000040809002000000100000",
+          "00000000010000003800000008100000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000a89002000080000000",
+        "00000000000000003800000008002110"
+      ],
+      "rows": [
+        [
+          "00000000000000889002000080000000",
+          "00000000000000a09002000080000000"
+        ],
+        [
+          "00000000000000003800000008002010",
+          "00000000000000003800000008002100"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000a89002000080000000",
+        "0000000000000000380010000a002000"
+      ],
+      "rows": [
+        [
+          "00000000000000889002000080000000",
+          "00000000000000a09002000080000000"
+        ],
+        [
+          "0000000000000000380000000a002000",
+          "00000000000000003800100008002000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000a89002000080000000",
+        "00000000000000143800000008080000"
+      ],
+      "rows": [
+        [
+          "00000000000000889002000080000000",
+          "00000000000000a09002000080000000"
+        ],
+        [
+          "00000000000000043800000008080000",
+          "00000000000000103800000008080000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000a89002000080000000",
+        "00000000000000801202000000840400"
+      ],
+      "rows": [
+        [
+          "00000000000000889002000080000000",
+          "00000000000000a09002000080000000"
+        ],
+        [
+          "00000000000000801202000000800400",
+          "00000000000000801202000000840000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000000000a89002000080000000",
+        "00000000010020809002000080000000"
+      ],
+      "rows": [
+        [
+          "00000000000000889002000080000000",
+          "00000000000000a09002000080000000"
+        ],
+        [
+          "00000000000020809002000080000000",
+          "00000000010000809002000080000000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "000000000000a0003800000048000000",
+        "00000000000000043800000409000000"
+      ],
+      "rows": [
+        [
+          "00000000000020003800000048000000",
+          "00000000000080003800000048000000"
+        ],
+        [
+          "00000000000000003800000409000000",
+          "00000000000000043800000009000000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "000000000000a0003800000048000000",
+        "00000000000000083820000048000000"
+      ],
+      "rows": [
+        [
+          "00000000000020003800000048000000",
+          "00000000000080003800000048000000"
+        ],
+        [
+          "00000000000000003800200009000000",
+          "00000000000000083800000048000000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "000000000000a0003800000048000000",
+        "00000000000000801202000001000500"
+      ],
+      "rows": [
+        [
+          "00000000000020003800000048000000",
+          "00000000000080003800000048000000"
+        ],
+        [
+          "00000000000000801202000001000100",
+          "00000000000000801202000001000400"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "000000000000a0003800000048000000",
+        "00000000010000809002000040100000"
+      ],
+      "rows": [
+        [
+          "00000000000020003800000048000000",
+          "00000000000080003800000048000000"
+        ],
+        [
+          "00000000010000809002000000100000",
+          "00000000010000809002000040000000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000010000809002000040100000",
+        "00000000000000003800000008001180"
+      ],
+      "rows": [
+        [
+          "00000000010000809002000000100000",
+          "00000000010000809002000040000000"
+        ],
+        [
+          "00000000000000003800000008001080",
+          "00000000000000003800000008001100"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000010000809002000040100000",
+        "00000000000000003800000009040004"
+      ],
+      "rows": [
+        [
+          "00000000010000809002000000100000",
+          "00000000010000809002000040000000"
+        ],
+        [
+          "00000000000000003800000009000004",
+          "00000000000000003800000009040000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000010000809002000040100000",
+        "00000000000000043800200008100000"
+      ],
+      "rows": [
+        [
+          "00000000010000809002000000100000",
+          "00000000010000809002000040000000"
+        ],
+        [
+          "00000000000000003800200008100000",
+          "00000000000000043800000008100000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000010000809002000040100000",
+        "00000000000000801202000011000200"
+      ],
+      "rows": [
+        [
+          "00000000010000809002000000100000",
+          "00000000010000809002000040000000"
+        ],
+        [
+          "00000000000000103800000009000000",
+          "00000000000000801202000001000200"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000010000809002000040100000",
+        "00000000000000801232000000001000"
+      ],
+      "rows": [
+        [
+          "00000000010000809002000000100000",
+          "00000000010000809002000040000000"
+        ],
+        [
+          "00000000000000801212000000001000",
+          "00000000000000801222000000001000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000010000809002000040100000",
+        "00000000000000989002000000100000"
+      ],
+      "rows": [
+        [
+          "00000000010000809002000000100000",
+          "00000000010000809002000040000000"
+        ],
+        [
+          "00000000000000889002000000100000",
+          "00000000000000909002000000100000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000010000809002000040100000",
+        "00000010000000801202040000000100"
+      ],
+      "rows": [
+        [
+          "00000000010000809002000000100000",
+          "00000000010000809002000040000000"
+        ],
+        [
+          "00000000000040809002000000100000",
+          "00000000010000003800000008100000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000010020809002000080000000",
+        "00000000000000003800000008001180"
+      ],
+      "rows": [
+        [
+          "00000000000020809002000080000000",
+          "00000000010000809002000080000000"
+        ],
+        [
+          "00000000000000003800000008001080",
+          "00000000000000003800000008001100"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000020000801202000800100000",
+        "00000000000000003800000268000000"
+      ],
+      "rows": [
+        [
+          "0000000000000000380000000a080000",
+          "00000000020000801202000000100000"
+        ],
+        [
+          "0000000000000000380000000b000000",
+          "00000000000000003800000248000000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000020000801202000800100000",
+        "00000000000000909002200080000000"
+      ],
+      "rows": [
+        [
+          "0000000000000000380000000a080000",
+          "00000000020000801202000000100000"
+        ],
+        [
+          "00000000000000801222000000800000",
+          "00000000000000909002000080000000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000020000801202000800100000",
+        "00000000010020809002000080000000"
+      ],
+      "rows": [
+        [
+          "0000000000000000380000000a080000",
+          "00000000020000801202000000100000"
+        ],
+        [
+          "00000000000020809002000080000000",
+          "00000000010000809002000080000000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000020008003800000008001000",
+        "00000000000000003800000008001180"
+      ],
+      "rows": [
+        [
+          "00000000000000083800000008100000",
+          "00000000000000801202000000081000"
+        ],
+        [
+          "00000000000000003800000008001080",
+          "00000000000000003800000008001100"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000020008003800000008001000",
+        "00000000000000003800000008005200"
+      ],
+      "rows": [
+        [
+          "00000000000000083800000008100000",
+          "00000000000000801202000000081000"
+        ],
+        [
+          "00000000000000003800000008001200",
+          "00000000000000003800000008005000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000020008003800000008001000",
+        "00000000000000043800200008100000"
+      ],
+      "rows": [
+        [
+          "00000000000000083800000008100000",
+          "00000000000000801202000000081000"
+        ],
+        [
+          "00000000000000003800200008100000",
+          "00000000000000043800000008100000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000020008003800000008001000",
+        "00000000000000083820000048000000"
+      ],
+      "rows": [
+        [
+          "00000000000000083800000008100000",
+          "00000000000000801202000000081000"
+        ],
+        [
+          "00000000000000003800200009000000",
+          "00000000000000083800000048000000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000020008003800000008001000",
+        "000000000000008012020000010c0000"
+      ],
+      "rows": [
+        [
+          "00000000000000083800000008100000",
+          "00000000000000801202000000081000"
+        ],
+        [
+          "00000000000000801202000001040000",
+          "00000000000000801202000001080000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000020008003800000008001000",
+        "00000000000000801232000000001000"
+      ],
+      "rows": [
+        [
+          "00000000000000083800000008100000",
+          "00000000000000801202000000081000"
+        ],
+        [
+          "00000000000000801212000000001000",
+          "00000000000000801222000000001000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000020008003800000008001000",
+        "00000000000000989002000000100000"
+      ],
+      "rows": [
+        [
+          "00000000000000083800000008100000",
+          "00000000000000801202000000081000"
+        ],
+        [
+          "00000000000000889002000000100000",
+          "00000000000000909002000000100000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000020008003800000008001000",
+        "00000000010000809002000040100000"
+      ],
+      "rows": [
+        [
+          "00000000000000083800000008100000",
+          "00000000000000801202000000081000"
+        ],
+        [
+          "00000000010000809002000000100000",
+          "00000000010000809002000040000000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000020008003800000008001000",
+        "00000008000000003800000008100400"
+      ],
+      "rows": [
+        [
+          "00000000000000083800000008100000",
+          "00000000000000801202000000081000"
+        ],
+        [
+          "00000000000000003800000008001001",
+          "00000008000000003800000008100000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000040000801202000080080000",
+        "00000000000000003800000009040004"
+      ],
+      "rows": [
+        [
+          "00000000020000809002000040000000"
+        ],
+        [
+          "00000000000000003800000009000004",
+          "00000000000000003800000009040000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000040000801202000080080000",
+        "00000000000000043800000409000000"
+      ],
+      "rows": [
+        [
+          "00000000020000809002000040000000"
+        ],
+        [
+          "00000000000000003800000409000000",
+          "00000000000000043800000009000000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000000040000801202000080080000",
+        "00000000010000809002000040100000"
+      ],
+      "rows": [
+        [
+          "00000000020000809002000040000000"
+        ],
+        [
+          "00000000010000809002000000100000",
+          "00000000010000809002000040000000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000008000000003800000008100400",
+        "00000000000000003800000008001180"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000008001001",
+          "00000008000000003800000008100000"
+        ],
+        [
+          "00000000000000003800000008001080",
+          "00000000000000003800000008001100"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000008000000003800000008100400",
+        "00000000000000043800200008100000"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000008001001",
+          "00000008000000003800000008100000"
+        ],
+        [
+          "00000000000000003800200008100000",
+          "00000000000000043800000008100000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000008000000003800000008100400",
+        "000000000000008012020c0000001000"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000008001001",
+          "00000008000000003800000008100000"
+        ],
+        [
+          "00000000000000801202040000001000",
+          "00000000000000801202080000001000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000008000000003800000008100400",
+        "00000010000000801202040000000100"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000008001001",
+          "00000008000000003800000008100000"
+        ],
+        [
+          "00000000000040809002000000100000",
+          "00000000010000003800000008100000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000010000000801202040000000100",
+        "00000000000000003800000008001180"
+      ],
+      "rows": [
+        [
+          "00000000000040809002000000100000",
+          "00000000010000003800000008100000"
+        ],
+        [
+          "00000000000000003800000008001080",
+          "00000000000000003800000008001100"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000010000000801202040000000100",
+        "00000000000000043800200008100000"
+      ],
+      "rows": [
+        [
+          "00000000000040809002000000100000",
+          "00000000010000003800000008100000"
+        ],
+        [
+          "00000000000000003800200008100000",
+          "00000000000000043800000008100000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000010000000801282000000000400",
+        "00000000000000003800000008001180"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000008001020",
+          "00000010000000801202000000000400"
+        ],
+        [
+          "00000000000000003800000008001080",
+          "00000000000000003800000008001100"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000010000000801282000000000400",
+        "00000000000000003800000008005200"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000008001020",
+          "00000010000000801202000000000400"
+        ],
+        [
+          "00000000000000003800000008001200",
+          "00000000000000003800000008005000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000010000000801282000000000400",
+        "00000000000000003800000008d00000"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000008001020",
+          "00000010000000801202000000000400"
+        ],
+        [
+          "00000000000000003800000008500000",
+          "00000000000000003800000008900000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000010000000801282000000000400",
+        "00000000000000043800200008100000"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000008001020",
+          "00000010000000801202000000000400"
+        ],
+        [
+          "00000000000000003800200008100000",
+          "00000000000000043800000008100000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000010000000801282000000000400",
+        "000000000000008012020c0000001000"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000008001020",
+          "00000010000000801202000000000400"
+        ],
+        [
+          "00000000000000801202040000001000",
+          "00000000000000801202080000001000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000010000000801282000000000400",
+        "00000000000000801232000000001000"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000008001020",
+          "00000010000000801202000000000400"
+        ],
+        [
+          "00000000000000801212000000001000",
+          "00000000000000801222000000001000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000010000000801282000000000400",
+        "00000000000000989002000000100000"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000008001020",
+          "00000010000000801202000000000400"
+        ],
+        [
+          "00000000000000889002000000100000",
+          "00000000000000909002000000100000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    },
+    {
+      "roots": [
+        "00000010000000801282000000000400",
+        "00000010000000801202040000000100"
+      ],
+      "rows": [
+        [
+          "00000000000000003800000008001020",
+          "00000010000000801202000000000400"
+        ],
+        [
+          "00000000000040809002000000100000",
+          "00000000010000003800000008100000"
+        ]
+      ],
+      "shared_d4_positions": 1
+    }
+  ],
+  "largest_pair": {
+    "roots": [
+      "00000000000000801202020001001000",
+      "00000000010000809002000040100000"
+    ],
+    "rows": [
+      [
+        "00000000000000801202020000001000",
+        "00000000000000801202020001000000"
+      ],
+      [
+        "00000000010000809002000000100000",
+        "00000000010000809002000040000000"
+      ]
+    ],
+    "shared_d4_positions": 47,
+    "union_d4_positions": 2721,
+    "shared_states": [
+      "00000000010000809002000840100001",
+      "00000000010000809002000840100002",
+      "00000000010000809002000840100004",
+      "00000000010000809002000840100010",
+      "00000000010000809002000840100080",
+      "00000000010000809002000840100200",
+      "00000000010000809002000840102000",
+      "00000000010000809002000840104000",
+      "00000000010000809002000840120000",
+      "00000000010000809002000840140000",
+      "00000000010000809002000840900000",
+      "00000000010000809002000842100000",
+      "00000000010000809002000844100000",
+      "00000000010000809002000940100000",
+      "00000000010000809002000c40100000",
+      "00000000010000809002020840100000",
+      "00000000010000809002080840100000",
+      "00000000010000809002100840100000",
+      "00000000010000809102000840100000",
+      "00000000010000809802000840100000",
+      "0000000001000080b002000840100000",
+      "0000000001000080d002000840100000",
+      "00000000010000819002000840100000",
+      "00000000010000a09002000840100000",
+      "00000000010010809002000840100000",
+      "00000000010020809002000840100000",
+      "00000000010040809002000840100000",
+      "00000000014000809002000840100000",
+      "00000000018000809002000840100000",
+      "00000000030000809002000840100000",
+      "00000000110000809002000840100000",
+      "00000000810000809002000840100000",
+      "00000004010000801202020001001000",
+      "00000008010000809002000840100000",
+      "0000000c000000801202020001001000",
+      "00000010042000801202000100000004",
+      "00000010042000801202000100000008",
+      "00000010042000801202000100000010",
+      "00000010042000801202000100000040",
+      "00000010042000801202000100000080",
+      "00000010042000801202000100000100",
+      "00000010042000801202000100000200",
+      "00000010042000801202000100004000",
+      "00000010042000801202000100008000",
+      "00000010042000801202000100020000",
+      "00000010042000801202000100040000",
+      "00000010042000801202000100080000"
+    ]
+  },
+  "checks": [
+    {
+      "name": "49 roots",
+      "pass": true
+    },
+    {
+      "name": "48 pair roots + 1 singleton",
+      "pass": true
+    },
+    {
+      "name": "2,985 eight-stone children",
+      "pass": true
+    },
+    {
+      "name": "146,118 ordered second moves",
+      "pass": true
+    },
+    {
+      "name": "73,059 unordered nine-stone positions",
+      "pass": true
+    },
+    {
+      "name": "no terminal eight-stone child",
+      "pass": true
+    },
+    {
+      "name": "reply range 28..73",
+      "pass": true
+    },
+    {
+      "name": "no within-root D4 merges",
+      "pass": true
+    },
+    {
+      "name": "72,756 global D4 classes",
+      "pass": true
+    },
+    {
+      "name": "303 cross-root duplicates",
+      "pass": true
+    },
+    {
+      "name": "shared multiplicity exactly two",
+      "pass": true
+    },
+    {
+      "name": "213 overlapping root pairs",
+      "pass": true
+    },
+    {
+      "name": "largest pair overlap 47",
+      "pass": true
+    },
+    {
+      "name": "28,553 unique triples",
+      "pass": true
+    },
+    {
+      "name": "3,454,913 checks per expansion",
+      "pass": true
+    }
+  ],
+  "check_count": 15,
+  "all_pass": true,
+  "interpretation_guard": [
+    "No candidate root has a one-move terminal child; this does not prove that any root is losing.",
+    "The 49 roots remain candidate receipt roots, not WIN7-D10 certificates.",
+    "Two-ply frontier counts are not DFPN node counts, run time, or proof cost.",
+    "The 303 shared D4 classes measure only this 9-stone frontier; deeper cache benefit may differ.",
+    "REFUTED-D10 is not a LOSS proof; standard 11x11 remains UNKNOWN."
+  ]
+}
