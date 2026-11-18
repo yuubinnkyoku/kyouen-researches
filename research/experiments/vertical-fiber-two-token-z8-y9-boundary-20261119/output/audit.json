@@ -17,14 +17,32 @@
   "repeat_runs": 2,
   "scope": {
     "direct_R": "0 <= R <= x+41",
-    "direct_x": [9, 61],
+    "direct_x": [
+      9,
+      61
+    ],
     "signature_R": "1 <= R <= x+17",
-    "signature_x": [9, 2000],
-    "tail_offsets": [0, 3],
-    "tail_signature_x": [9, 2000],
-    "tail_x": [9, 5000],
+    "signature_x": [
+      9,
+      2000
+    ],
+    "tail_offsets": [
+      0,
+      3
+    ],
+    "tail_signature_x": [
+      9,
+      2000
+    ],
+    "tail_x": [
+      9,
+      5000
+    ],
     "theorem_R": "0 <= R <= x+28",
-    "theorem_x": [9, 2000]
+    "theorem_x": [
+      9,
+      2000
+    ]
   },
   "sha256_without_hash_field": "0a0cdf083e3f7a72e8500c92779381145ae33b80a3add5b0b73c07354d83a106",
   "target": "H(R;(x,9);8), x>=9, R>=0",
