@@ -75,3 +75,5 @@ knowledge READMEと両knowledge workflowへの登録は続けて反映する。g
 
 - K0967正本にT33/P33の明示閉形式とy=26..33共通値2位置式を追記し、証明報告への参照だけに依存しない形へ整えた。
 - 最終確認時のmainはK0967正本の式追記後。combined statusは空配列で、generated/summary.mdも旧版（K0967未反映）のまま。GitHub Actions成功は確認できていないため、generated再生成・uv sync・knowledge check・unittest・buildは未完了として扱う。生成物を手作業で編集していない。
+
+- GitHub mainから取得した実際のverify_z6_y33.py（UTF-8 10,527 bytes・SHA-256 433c49a6…）をローカルへ完全一致で再構成して実行。2回ともexit 0、出力audit.jsonはバイト単位で一致し、main上のaudit.jsonと全内容・自己hashが一致した。これにより先のローカル類似版ではなく、コミット済み検証器そのものの再実行を確認した。
