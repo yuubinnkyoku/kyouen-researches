@@ -2,7 +2,7 @@
 
 ## 基準
 
-49-root監査の開始時mainは `317f6af8c9810941bda38b5cf355a8f27ce3aa65`。その後、並行するn11 cost-16 laneがrank-30生存曲線を追加した（main `69b4e02966d9cf6b9bd07fc7680b2eb165557247`）。これは別の31行親局面のcover-plan計数で、今回固定した49-root witness/K0863 indexを変更しない。root `AGENTS.md`、knowledge README、K0863/K0865/K0868、5親97行の49-root witnessと直近logを確認した。
+49-root監査の開始時mainは `317f6af8c9810941bda38b5cf355a8f27ce3aa65`。その後、並行するn11 cost-16 laneがrank-30生存曲線を追加した（main `69b4e02966d9cf6b9bd07fc7680b2eb165557247` と、そのrecord JSONLを追加した `b3b5ee326c1eafb46a51a33b7de90e6440fece4f`）。これは別の31行親局面のcover-plan計数で、今回固定した49-root witness/K0863 indexを変更しない。root `AGENTS.md`、knowledge README、K0863/K0865/K0868、5親97行の49-root witnessと直近logを確認した。
 
 ## 1. 8,964 verdict indexへの完全な非所属監査
 
@@ -33,8 +33,8 @@ BigInt Bareiss消去とBigInt Leibniz展開の独立2方式で、root安全性�
 
 ## 3. 再現資料
 
-- 再現スクリプト: `../experiments/n11-head1410-residual-cover-after-receipt-fold-20261119/scripts/audit_49_root_cache_exclusion_and_mobility_20261119.mjs`（blob `9b5b255f4702315f0d7d1db12fec79aafd4b2bdc`）
-- 結果JSON: `../experiments/n11-head1410-residual-cover-after-receipt-fold-20261119/output/49-root-cache-exclusion-mobility-20261119.json`（blob `466fb0ff04cd5241945e06eefa255c75a4609372`）
+- 再現スクリプト: `../experiments/n11-head1410-residual-cover-after-receipt-fold-20261119/scripts/audit_49_root_cache_exclusion_and_mobility_20261119.mjs`（blob `337b12ac086ddafaca262f12c14a375591c7c799`）
+- 結果JSON: `../experiments/n11-head1410-residual-cover-after-receipt-fold-20261119/output/49-root-cache-exclusion-mobility-20261119.json`（blob `b35d54a0ced182153802247452a593096a0acf81`）
 - 入力はK0863 scan、49-root witness、scan生成器、K0868をGit blob SHAで固定。
 
 この回は固定入力をV8上で独立再計算した。公開Nodeスクリプトはrepo checkout上では起動していない。push後のknowledge integrity workflowによる検査結果は別途確認する。
