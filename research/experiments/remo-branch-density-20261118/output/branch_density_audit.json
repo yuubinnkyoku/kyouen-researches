@@ -1,0 +1,131 @@
+{
+ "all_adm": {
+  "branches": 47907,
+  "fixed_divisor_violations": 0,
+  "live_classes": 1546,
+  "nu_pair_cross_checks": 54556,
+  "nu_pair_vs_obstructed_mismatches": 0,
+  "q_max": 1000
+ },
+ "all_ok": true,
+ "branch_exact": {
+  "hits": 213,
+  "mismatches": 0,
+  "states": 3898
+ },
+ "census_anchors": {
+  "all_match": true,
+  "n_M": 8,
+  "ratio_max": 1.0114,
+  "ratio_min": 0.9776,
+  "totals": {
+   "3": [
+    2057,
+    2057
+   ],
+   "5": [
+    2005,
+    2005
+   ],
+   "7": [
+    2603,
+    2603
+   ],
+   "11": [
+    3003,
+    3003
+   ],
+   "13": [
+    3220,
+    3220
+   ],
+   "17": [
+    3475,
+    3475
+   ],
+   "19": [
+    3629,
+    3629
+   ],
+   "23": [
+    3739,
+    3739
+   ]
+  }
+ },
+ "experiment": "remo-branch-density-20261118",
+ "ss_anchors": {
+  "SS2": 3.960971,
+  "SS2_published": 3.960971,
+  "SS3": 5.281295,
+  "SS3_published": 5.281295
+ },
+ "ss_form": {
+  "branches": 1154,
+  "nu_case_vs_nu_pair_mismatches": 0,
+  "q_max": 1000,
+  "spot_max_rel_diff": 3.4781997438853005e-07,
+  "spot_ss_checks": 129
+ },
+ "stage_digests": {
+  "census.json": "292bba55ebd8b934e5d4bb0affd57152b11ddd1b5af2b8a424724c083792bbf9",
+  "firsthit_headline": {
+   "n_classes": 1546,
+   "n_pre_tail_first_hits": 1545,
+   "n_t_hat_finite": 1546
+  },
+  "firsthit_pred.json": "71ab1734186f9578250d7931da2012800558c3f995b75bc92b5f67443f85b73c",
+  "starvation.json": "61b3ba3ebaf15e7ea42c5a80b5912847f7de0c5409ba85a11bcf4e83d28f1064",
+  "starvation_headline": {
+   "median_C_over_M": 0.077,
+   "n_classes": 69,
+   "n_p_minus_2": 48,
+   "n_p_minus_2_frac": 0.6957,
+   "n_single_branch": 13,
+   "n_single_branch_frac": 0.1884
+  },
+  "um_sweep.json": "185f13d691d81a0fdb37cd21148b82fda654053f35dfdb6a620b4384ba89dfdb"
+ },
+ "um_anchors": {
+  "anchor_checks": [
+   {
+    "M": 3,
+    "U": 100000,
+    "anchor": 3658,
+    "exact": 3658,
+    "match": true,
+    "note": "published 3658"
+   },
+   {
+    "M": 3,
+    "U": 1000000,
+    "anchor": 25860,
+    "exact": 25860,
+    "match": true,
+    "note": "published 25860"
+   },
+   {
+    "M": 2,
+    "U": 66666,
+    "anchor": 2025,
+    "exact": 2025,
+    "match": true,
+    "note": "published 2024 +1 special"
+   },
+   {
+    "M": 2,
+    "U": 333333,
+    "anchor": 7751,
+    "exact": 7751,
+    "match": true,
+    "note": "published 7750 +1 special"
+   }
+  ],
+  "bh_ratio_in_095_1025": true,
+  "bh_ratio_max": 1.0242,
+  "bh_ratio_min": 0.9501,
+  "n_seam_mismatch": 0,
+  "n_seam_states": 943,
+  "n_sweep_rows": 23
+ }
+}
