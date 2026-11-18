@@ -20,7 +20,7 @@ const PIN = {
   convention: "b097210d0b49d7cf014cc6a554298b1e49e83384"
 };
 const SOURCE_MAIN_HEAD = "317f6af8c9810941bda38b5cf355a8f27ce3aa65";
-const PUBLICATION_MAIN_HEAD_BEFORE_RESULT = "69b4e02966d9cf6b9bd07fc7680b2eb165557247";
+const PUBLICATION_MAIN_HEAD_BEFORE_RESULT = "b3b5ee326c1eafb46a51a33b7de90e6440fece4f";
 
 function need(condition, message) {
   if (!condition) throw new Error(message);
