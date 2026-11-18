@@ -32,6 +32,7 @@ PIN_UV = os.path.join(HERE, "..", "remo-pc-twin-laws-20261117",
 PIN_P = os.path.join(HERE, "..", "remo-pc-twin-laws-20261117",
                      "data", "pc_p8000.json")
 
+
 def spf(n):
     if n < 2:
         return n
@@ -42,8 +43,10 @@ def spf(n):
         d += 1
     return n
 
+
 def isprime(n):
     return n >= 2 and spf(n) == n
+
 
 # ------------- LAD-GEN core: verbatim from the published K0934/K0935 ----
 # (research/experiments/ladder-gen-20261118/ladder_gen_verify.py,
@@ -90,6 +93,7 @@ def ladder_gen(w, h, n):
             "break_phase": break_phase, "n2": n2, "h2": h2,
             "collapse": collapse, "elim": elim}
 
+
 def watch_dies(w, h, n, a):
     g = ladder_gen(w, h, n)
     if g is None or n < 2 * w + 2 or not (1 <= a <= w + 1):
@@ -102,6 +106,7 @@ def watch_dies(w, h, n, a):
         return {"dies": True, "phase": t,
                 "held": w if a >= h + 1 else w + 1}
     return {"dies": False, "phase": None, "held": None}
+
 
 def watchmap(w, h, n, a):
     g = ladder_gen(w, h, n)
@@ -118,7 +123,9 @@ def watchmap(w, h, n, a):
         return w + a - 1  # a <= w; a = w+1 is the dead exception
     return (a + w - r) if a <= r else (a + w - r - 1)
 
+
 # ------------- U/V game engine (K0928 Lemma P phase rule) --------------
+
 def play_full(m, pot0, watch):
     """Play U(m) (pot0=2, watch=m-1) or V(m) (pot0=1, watch=0).
 
@@ -164,7 +171,9 @@ def play_full(m, pot0, watch):
     return {"survivor": active[0] if active else watch,
             "stretches": stretches, "death": death}
 
+
 # ------------- new: positional mini-engine for ONE stretch --------------
+
 def stretch_sim(w, h, n, a):
     """Simulate the single stretch-w starting from the canonical circle
     F(w,h;n) (holdings [w]^(n-h)+[w+1]^h, pot=w, ptr at position 0) with
@@ -211,7 +220,9 @@ def stretch_sim(w, h, n, a):
     return {"n2": n2, "holdings": holdings, "a2": a2, "phases": phases,
             "died": died, "collapse": collapse}
 
+
 # ------------- new: O(1) death test (LAD-GEN (d) without block lists) ----
+
 def death_fast(w, h, n, a):
     """O(1) replica of the LAD-GEN elimination-set membership test with
     phase and held, incl. collapse (block-1 deaths keep w; the collapse
@@ -246,7 +257,9 @@ def death_fast(w, h, n, a):
         return "dies", {"phase": J + 1, "held": w + 1}
     return "alive", None
 
+
 # ------------- new: WATCH-MAP extended to t=1 ---------------------------
+
 def watchmap_ext(w, h, n, a):
     """Surviving watched distance across the stretch-w boundary, valid
     for every t >= 1 (non-collapse, watched alive, 1 <= a <= w+1). For
@@ -268,6 +281,7 @@ def watchmap_ext(w, h, n, a):
     n2 = n - t - 1
     return (a + w - r) if a <= r else (a + w - r - 1)
 
+
 def ladder_n2h2(w, h, n):
     t, r = divmod(n, w + 1)
     if t < 1 or h > w:
@@ -278,7 +292,9 @@ def ladder_n2h2(w, h, n):
         return n - t, h - 1 - r
     return n - t - 1, h + w - r
 
+
 # ------------- new: unbounded pure-arithmetic tracker -------------------
+
 def track_gen(side, m, step_cap=100000):
     """Trajectory of the watched from the base state through stretches
     2, 3, ... by pure arithmetic. V: F(2,1;m-1), a=1. U: F(2,0;m), a=1.

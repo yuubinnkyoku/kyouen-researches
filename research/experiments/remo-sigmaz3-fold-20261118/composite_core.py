@@ -26,6 +26,7 @@ from sievegen_core import track_gen, isprime, spf
 
 
 # ---------- THM-C: E-game / uniform-game survivor position --------------
+
 def sigma_E(P, alpha, beta):
     """Survivor frame position of the E-game E(P;alpha,beta):
     k=alpha+beta players, ptr-frame circle [P]^alpha+[P+1]^beta, pot P.
@@ -49,6 +50,7 @@ def sigma_E(P, alpha, beta):
         sig = (r + 1 + sig) % k
     return sig
 
+
 def sigma_Z(M, K):
     """Survivor frame position of the uniform game Z(M,K):
     K players all holding M, pot M.  One phase -> E(M+q; K-1-r, r)."""
@@ -58,7 +60,9 @@ def sigma_Z(M, K):
     # Z phase: loser at position r; new frame starts at r+1
     return (r + 1 + sigma_E(M + q, K - 1 - r, r)) % K
 
+
 # ---------- THM-D: death-stretch frame -> label map ---------------------
+
 def _walk(LS, origin, removed, n):
     """Labels in frame order: circle positions origin, origin+1, ... mod n,
     skipping removed positions."""
@@ -69,6 +73,7 @@ def _walk(LS, origin, removed, n):
             out.append(LS[p])
         p = (p + 1) % n
     return out
+
 
 def _stretch_removals(w, n, t, r, h):
     """Removals (fixed-frame positions) and new-frame origin of ONE
@@ -84,6 +89,7 @@ def _stretch_removals(w, n, t, r, h):
     removed = set(j * (w + 1) - 1 for j in range(1, J + 1))
     removed.add(bl)
     return removed, (bl + 1) % n
+
 
 def death_frame(side, m, steps, death):
     """Label list (frame order) + post-death game entry for the composite
@@ -125,6 +131,7 @@ def death_frame(side, m, steps, death):
     frame = _walk(LS, (bl + 1) % n, removed, n)
     return frame, ('E', w + 1, n - t - 1 - w, w)
 
+
 def predict_composite(side, m):
     """Pure-arithmetic V(m)/U(m) for composite N. Returns
     (value, info) or (None, info) if the tracker does not report a
@@ -147,6 +154,7 @@ def predict_composite(side, m):
                  'entry': entry, 'sigma': sig,
                  'frame_len': len(frame)})
     return frame[sig], info
+
 
 def predict(side, m):
     """Pure-arithmetic V(m) (side 'V') / U(m) (side 'U') for ALL m >= 1.
