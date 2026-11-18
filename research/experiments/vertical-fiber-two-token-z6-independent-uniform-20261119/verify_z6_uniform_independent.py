@@ -319,7 +319,7 @@ def k974_P(x, y, r):
     d = x - y
     S = x + y
     if d == 0:
-        return O(r, 7,  * y + 1)
+        return O(r, 7, 2 * y + 1)
     if d == 1:
         return O(r, 7) or E(r, 2 * y + 4)
     if d == 2:
@@ -420,7 +420,7 @@ def verify_region_L(failures, counts):
     """
     for r in range(1, 13):
         for d in range(0, 152):
-            for y in (27, 28, 60): 
+            for y in (27, 28, 60):
                 x = y + d
                 m = mex(children6(y, x, r))
                 cl = H6(y, x, r)
@@ -465,8 +465,7 @@ def verify_transient_d(failures, counts):
     (t <= d+6) x (region A via y choice). All parent and child claim/h5 atoms
     are t-vs-constant with constants in [-60, d+11], so the sweeps cover
     every t. Below-interval constancy is asserted per t-parity at three
-    depths (incl. t = -10**9).
-    """
+    depths (incl. t = -10**9)."""
     for d in range(0, 9):
         bt = set(range(-60, d + 12))
         bt |= set(K_ODD.values())
@@ -514,8 +513,7 @@ def verify_class_grid(failures, counts, dmin, dparity, label):
     invariant under A/B children (u_child = u), so a feasible box has a
     constant child pattern, asserted at up to 3 reps; every point of the
     class region (u >= -6 i.e. below tail, d >= dmin, r >= 13) lies in
-    exactly one box.
-    """
+    exactly one box."""
     gt = list(range(-40, 45))
     gu = list(range(-20, 14))
     t_iv = [(None, gt[0] - 1, "below")] + [(c, c, "singleton") for c in gt] + [(gt[-1] + 1, None, "above")]
@@ -763,7 +761,7 @@ def main():
     for y in range(26, 44, 2):
         for d in (0, 1, 5, 8, 9, 11, 30, 41):
             x = y + d
-            for r in range(x + y + 7, x + y + )
+            for r in range(x + y + 7, x + y + 48)
                 n += 1
                 if H6(y, x, r) != (x + y) & 1:
                     failures.append(("tail_parity", y, x, r))
