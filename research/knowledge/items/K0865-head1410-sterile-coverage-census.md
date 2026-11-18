@@ -46,6 +46,9 @@ artifacts:
   role: log
   note: 二手先frontier、D4共有cache、coordinator候補順位と証明境界
 
+- path: research/log/2026-11-19-n11-49-root-two-ply-reproduction-repair.md
+  role: log
+  note: 二手先frontier再現器の構文・出力先・JSON schema不整合を修正し、固定入力の全数再計算で旧結果を照合
 scope: "2026-11-16に算出した n11 class-lane の post-cost-60c 正準 head 1410 に対する履歴スナップショット（174 open S5 parent、MS5 S6 manifest 7867 行・orbit 重複なし、35 STERILE 行）。cost-65j fold は後続作業として head 1410 から 1419 へ適用済みであり、本 census の基準 head は 1410 のまま。"
 evidence: "orbit-level census: 全 174×7867 ペアで ∃σ∈D4: σ(P) ⊂ R を判定。コントロール: CA manifest 7867 行・cost 総和 615497・orbit 重複なし、CB 174 S5 canon 重複なし、CC cost-60c fold の parent-row 6 ペア全件 orbit-related、CD 62b 行の出版 claim 記載 parent が census の open parents に全件含まれ demand {c1:1,c2:1,c4:0} も完全一致、CE 既知 anchor 3 件（rem 3/209・10/698・18/1460）が出版値と精密一致、CF 違反 0、CG pending-65j 34 orbit が STERILE と非交差、CI cover precheck bits {21,109}・62 合法手 bit 集合・両 cover root hex が出版 claim v2 と一致"
 ---
@@ -92,3 +95,8 @@ K0001/K0868の整数det4規約で49本を二手先まで展開した。BigIntの
 各root内では9石frontierのD4重複は0。49本横断では73,059 membershipが72,756正準類にまとまり、303類だけが別rootと共有された（0.4147%、全て2 root共有、213 root pair）。最大共有はroot 00000000000000801202020001001000 と 00000000010000809002000040100000 の47類で、各frontier 1,061/1,707類・和集合2,721類。共有hex一覧は結果JSONに保存。最小一手分岐47のroot 00000000000000821082000010800000 は二手先でも最小881局面で、最初の小probe候補を維持する。ただしこれは実DFPN費用ではない。
 
 浅い9石層での共有cache利得は限定的（重複0.415%）。最大共有pairを同じworker/cache shardに寄せる余地はあるが、深い層の共有率は未測定。8石子に終局がないことは即時勝ち手がないというだけで、rootのLOSSを意味しない。新しいverdict/certificate/receiptはなく、11×11空盤・二石root・S2・class 1/2/4はUNKNOWNのまま。詳細は研究ログ、再現スクリプト、結果JSONを参照。
+
+
+## 2026-11-19 追記: 49-root二手先frontier再現器の修復
+
+同じmainに保存されていた再現スクリプトに、検査配列の構文誤りと未定義の出力変数があり、そのままでは実行できなかった。またsummaryキー・行列式メタデータ・検査名が既存結果JSONとずれていた。これらを修正し、固定したmobility/residual入力から49 rootを独立再計算した。28,553個の3点組×121点についてBigInt三項余因子展開と六項Leibniz展開が3,454,913件すべて一致し、全root明細、応手数分布、root間D4共有集合、最大共有証人、summaryが既存結果と一致した。修正版スクリプトblobは `8b27743bf7fb99aca7ba6eeb61b175b0dedcd505`、再計算JSON blobは `429553bae0511f3753af408024563fb4c6898121`。詳細は[修復ログ](../../log/2026-11-19-n11-49-root-two-ply-reproduction-repair.md)。この回は接続JavaScript環境での独立再計算と構文検査であり、checkout上でNodeスクリプト自体を実行したとは主張しない。新しいverdict/certificate/receiptはなく、49本は候補のまま。標準11×11空盤・二石root・S2・class 1/2/4は引き続き **UNKNOWN**。
