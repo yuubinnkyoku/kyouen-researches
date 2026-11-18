@@ -180,6 +180,10 @@ jobs:
         run: |
           uv run --locked python research/experiments/vertical-fiber-two-token-z6-y32-boundary-20261118/verify_z6_y32.py
           git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y32-boundary-20261118/output/audit.json
+      - name: Audit K0967 two-token z=6 y=33 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z6-y33-boundary-20261118/verify_z6_y33.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z6-y33-boundary-20261118/output/audit.json
       - name: Audit K0957 t=2 q=8 pure-fiber all-Grundy theorem
         run: |
           uv run --locked python research/experiments/vertical-fiber-t2-q8-grundy-20261118/verify_t2_q8.py
