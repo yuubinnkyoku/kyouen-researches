@@ -45,3 +45,10 @@ head-1410 の 174 個の open S5 parent のうち、
 ## 境界
 
 STERILE は「その行自身からの D10 WIN7 receipt では閉じられない」ことであり、その局面の LOSS 証明ではない。receipt-unclosable も勝敗の判定ではなく、cross-cover（隣接 child 経由）や depth 10 を超える証拠の可能性は残る。solved head 1410 は manifest 被覆の簿記である。11×11 空盤・二石 root {49,60}/{59,60}・S2 {59,60}・class 1/2/4 はすべて UNKNOWN のまま。
+
+
+## 2026-11-19 追記: head-1608後の5親joint targetをreceipt-awareに再被覆
+
+head-1410の5親joint target 112行を後続receiptに照合すると、head-1589 global foldが13行、cost78c/79c foldが追加2行を閉じており、未閉鎖は97行だった。候補rootの最大被覆数は2行なので下界は49本。31個の公開subset witnessから得た117候補を既知verdictに照合し、既知REFUTED 5本を除外した残余グラフで最大マッチング48、singleton 1本を構成。これにより残97行の最小候補root coverは**49本（48 pair + 1 singleton）**と確定した。49本すべて7石・D4正準・det4非零を独立再検査し、97行を重複なく被覆する。
+
+この照合で利用した既知verdictはREFUTED-D10 236 root、WIN7-D10 156 root（head1476 cost71e、cost73j、cost78c/79cおよびreceipt foldの明示資料）。候補poolとの交差はREFUTED 5、WIN 0。**8,964件のper-root cache全体とのjoinは未完了**であり、49本は探索候補であってWIN証明書ではない。詳細は[監査ログ](../../log/2026-11-19-n11-five-parent-residual-49-root-cover.md)、[再現スクリプト](../../experiments/n11-head1410-residual-cover-after-receipt-fold-20261119/scripts/audit_five_parent_residual_49_cover_20261119.mjs)、[結果JSON](../../experiments/n11-head1410-residual-cover-after-receipt-fold-20261119/output/five-parent-residual-49-cover-20261119.json)。標準11×11空盤・二石root・S2・class 1/2/4は引き続き **UNKNOWN**。
