@@ -190,6 +190,10 @@ jobs:
         run: |
           uv run --locked python research/experiments/remo-first-loser-residue-signature-20261116/verify_first_loser_residue_signature.py
           git diff --exit-code -- research/experiments/remo-first-loser-residue-signature-20261116/output/audit.json
+      - name: Audit K0952 REMO M-smooth finite prime-pair tail
+        run: |
+          uv run --locked python research/experiments/remo-smooth-factor-pair-20261118/verify_smooth_pair.py
+          git diff --exit-code -- research/experiments/remo-smooth-factor-pair-20261118/output/smooth_pair_audit.json
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python research/experiments/graph-star-fixed-q-count-complexity-20261102/verify.py
