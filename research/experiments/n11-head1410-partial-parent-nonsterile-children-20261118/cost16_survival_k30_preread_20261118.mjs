@@ -17,7 +17,7 @@ const INPUTS = {
 const OUT = path.join(EXP, "output/cost16-survival-k30-preread-20261118.json");
 
 function gitBlobSha1(bytes) {
-  const header = Buffer.from("blob " + bytes.length + "\\0");
+  const header = Buffer.from("blob " + bytes.length + "\0");
   return crypto.createHash("sha1").update(Buffer.concat([header, bytes])).digest("hex");
 }
 function loadPinned(spec) {
@@ -140,6 +140,7 @@ for (const [r, v] of Object.entries(f30q.hist)) {
 const checks = [];
 const add = (name, pass, detail = {}) => checks.push({ name, pass, detail });
 add("top50_has_50_unique_pair_roots", top50.length === 50 && new Set(top50.map(x => x.root)).size === 50 && top50.every(x => x.rows_covered.length === 2));
+add("k28_declares_pinned_k27_input", k28.inputs.survival_k27_json.git_blob_sha1 === INPUTS.k27.sha);
 add("rank28_root_matches_published", top[27].root === k28.structure.rank28_root.root && same({ rows: rows[27] }, { rows: k28.structure.rank28_root.rows }));
 add("rank28_new_census_matches_published", c28.result.pair.b_only === 14 && c28.result.pair.zero === 0 && c28.result.pair.disjoint === 13 && c28.result.triple.b_only === 214 && c28.result.triple.zero === 99 && c28.result.triple.disjoint === 38 && c28.result.quad.b_only === 626 && c28.result.quad.zero === 2277 && c28.result.quad.disjoint === 22 && c28.result.quint.b_only === 331 && c28.result.quint.zero === 17219 && c28.result.quint.disjoint === 0);
 add("rank28_full_census_matches_published", f28t.counts.b_only === k28.structure.triple_census_k28.b_only && f28t.counts.zero === k28.structure.triple_census_k28.zero && f28t.counts.disjoint === k28.structure.triple_census_k28.disjoint && f28q.counts.b_only === k28.structure.quint_census_k28.b_only && f28q.counts.zero === k28.structure.quint_census_k28.zero && f28q.counts.disjoint === k28.structure.quint_census_k28.disjoint && same(f28q.hist, k28.structure.quint_b_only_double_rows));
@@ -201,5 +202,5 @@ const output = {
 };
 if (!output.all_pass) throw new Error("one or more checks failed");
 fs.mkdirSync(path.dirname(OUT), { recursive: true });
-fs.writeFileSync(OUT, JSON.stringify(output, null, 2) + "\\n");
-process.stdout.write(JSON.stringify({ all_pass: output.all_pass, check_count: output.check_count, output: OUT }) + "\\n");
+fs.writeFileSync(OUT, JSON.stringify(output, null, 2) + "\n");
+process.stdout.write(JSON.stringify({ all_pass: output.all_pass, check_count: output.check_count, output: OUT }) + "\n");
