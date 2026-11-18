@@ -70,8 +70,15 @@ energy + Melchior による全称証明・SAT に依らない）。witness-free 
   conflicts 2,337,347 / 2,257,859・90.7s / 90.1s・curves 271 / 280 は
   どちらも第三系全帯予測表と一致・生ログ `output/raw/`）。
   **witness-free 幅集合が {19,...,49} に拡大し、鋭い形は
-  M_{5,7} = 19 または M_{5,7} ≥ 51。** 掃引は引き続き m=50..157 へ
-  （driver: `scripts/sweep_driver_5xq7.sh`・resume-safe・records.jsonl 重複回避）。
+  M_{5,7} = 19 または M_{5,7} ≥ 51。**
+- **2026-11-18 (同日継続): 帯掃引 m=50..60 の11幅すべて UNSAT**（rc=20・
+  curves 391,402,413,424,435,446,457,468,483,498,513 は全て第三系全帯予測表と
+  一致・conflicts 1,675,003..3,343,973・32..192s/幅は単 sensitive 直列実行
+  ・並行2実験は実行環境のCPU総枠で230s capに到達するため直列で実施）。
+  **witness-free 幅集合は {19,...,60} 連続42幅。鋭い形は
+  M_{5,7} = 19 または M_{5,7} ≥ 61。** records.jsonl 26行（m=35..60・38,39込み）・
+  生ログは `output/raw/` に逐次追記。driver: `scripts/sweep_driver_5xq7.sh`
+  （resume-safe・records.jsonl 重複回避・curves 予測表照合込み）。
 
 ## 並走協調ノート
 
