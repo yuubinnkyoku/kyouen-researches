@@ -429,6 +429,10 @@ jobs:
         run: |
           uv run --locked python research/experiments/vertical-fiber-two-token-z9-y8-boundary-20261119/verify_z9_y8.py
           git diff --exit-code -- research/experiments/vertical-fiber-two-token-z9-y8-boundary-20261119/output/audit.json
+      - name: Audit K0999 two-token z=8 y=9 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z8-y9-boundary-20261119/verify_z8_y9.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z8-y9-boundary-20261119/output/audit.json
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python tools/knowledge/build.py
@@ -804,3 +808,5 @@ jobs:
 # Refresh generated views for K0998 z=9,y=8 two-token full Grundy slice (A/B/C x-induction, 8,207,172 audit checks, zero mismatches, two byte-identical runs; 2026-11-19).
 
 # Refresh generated views after all K0998 source artifacts and the canonical audit JSON were committed (2026-11-19).
+
+# Refresh generated views after K0999 source artifacts and canonical audit JSON were committed (2026-11-19).
