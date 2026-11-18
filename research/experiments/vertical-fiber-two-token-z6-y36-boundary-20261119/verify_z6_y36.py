@@ -304,7 +304,7 @@ def audit_once():
             else:
                 even_bound_count += 1
                 if value > 1:
-                    failures.append(("even-parent-value-bound", x, r, value, actual))
+                    failures.append(("even-parent-bound", x, r, value, actual))
             if value == 2:
                 twos.add(r)
         parameter_count += 1
