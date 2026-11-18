@@ -1,4 +1,23 @@
 {
+  "amendment_20261118_minimum_cover_count": {
+    "amended_by": "n11 long lane (verification side)",
+    "date": "2026-11-18",
+    "finding": "The published derived.candidate_cover.all_minimum_cover_sets value 337020 counts only the partition-shaped minimum 6-root covers (5 disjoint pair roots + 1 singleton root). Minimum covers of the overlapping shape (6 pair roots with exactly one doubly-covered row) also exist and were not counted: 22590 of them. The correct total number of minimum 6-root covers is 359610. The minimum cover size (6), the lower bound, the lexicographic first cover, and all planning decisions are unaffected.",
+    "corrected_total": 359610,
+    "published_partition_component": 337020,
+    "overlapping_component": 22590,
+    "affected_published_fields": [
+      "derived.candidate_cover.all_minimum_cover_sets",
+      "checks entry named target.minimum_cover_count"
+    ],
+    "evidence": {
+      "crosscheck_result_json": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/crosscheck-head1476-parent-census-and-class2-cover-20261118.json",
+      "git_blob_sha1": "fdee94dfc60fb833b188c4f2b41c7f292263076b",
+      "finding_id": "F1",
+      "method": "2^11 weighted counting DP over the 757 pinned D4 roots (359610 total minimum covers) plus an independent partition/overlapping decomposition (337020 + 22590), three-way agreement"
+    },
+    "original_fields_preserved_verbatim": true
+  },
   "schema": "n11-head1476-parent-census-and-class2-cover-20261118-v1",
   "date": "2026-11-18",
   "lane": "standard 11x11 weak-resolution, S2{59,60} class2 long-term lane",
