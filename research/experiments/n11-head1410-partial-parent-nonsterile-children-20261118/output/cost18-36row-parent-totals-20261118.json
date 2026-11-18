@@ -1,0 +1,181 @@
+{
+ "schema": "n11-cost18-36row-parent-totals-20261118-v1",
+ "date": "2026-11-18",
+ "lane": "n11 long lane (verification side)",
+ "title": "Exact minimum-cover totals (or frontier cap measurements) for the two cost-18 36-row parents, cover-table ranks 6/7: even-r perfect-matching semantics with PmLazy anchored DP and algebraic perfect-matching confirmation",
+ "inputs": {
+  "cover_table": {
+   "git_blob_sha1": "4e4a911d0e05779437d4a8e97685a8feb66c0d25"
+  },
+  "candidate_roots_jsonl": {
+   "git_blob_sha1": "89b24065d0588b0891395c9283e3a5b3d5551595"
+  }
+ },
+ "method": "Even r = 36: every minimum cover is an exact perfect matching of 18 pair roots (18 pair roots cover at most 36 rows; any double-covered row leaves some row uncovered; 17 pairs + 1 singleton cover only 35 rows), so the total minimum-cover count is pm(full) over the weighted pair graph. Perfect matching confirmed at 18 by Tutte-matrix rank over GF(1000000007) and GF(998244353) (algebraic, independent of the combinatorial DP). pm(full) computed with PmLazy (same machinery validated against two independent implementations on the 31-row cost-16 parent) under a 8000000-state cap; if the anchored tree exceeds the cap the script records the frontier measurement (states at cap) instead of a total.",
+ "derived": {
+  "parents": [
+   {
+    "hex": "00000000000000003802000000000020",
+    "rows": 36,
+    "candidates": 2679,
+    "distinct_roots": 1582,
+    "span_histogram": {
+     "1": 485,
+     "2": 1097
+    },
+    "pair_types": 609,
+    "pair_type_multiplicity_histogram": {
+     "1": 121,
+     "2": 488
+    },
+    "singleton_root_count": 485,
+    "max_matching_tutte": 18,
+    "perfect_matching_confirmed": true,
+    "minimum_cover_semantics": "even r: every minimum cover is an exact perfect matching of 18 pair roots; a double-covered row would leave a row uncovered",
+    "cap": 8000000,
+    "cap_exceeded": true,
+    "states_at_cap": 8000007,
+    "memo_states": 1,
+    "total_minimum_covers": null,
+    "degree_min_max": [
+     51,
+     68
+    ]
+   },
+   {
+    "hex": "00000000000000805082000000000000",
+    "rows": 36,
+    "candidates": 2526,
+    "distinct_roots": 1412,
+    "span_histogram": {
+     "1": 298,
+     "2": 1114
+    },
+    "pair_types": 620,
+    "pair_type_multiplicity_histogram": {
+     "1": 126,
+     "2": 494
+    },
+    "singleton_root_count": 298,
+    "max_matching_tutte": 18,
+    "perfect_matching_confirmed": true,
+    "minimum_cover_semantics": "even r: every minimum cover is an exact perfect matching of 18 pair roots; a double-covered row would leave a row uncovered",
+    "cap": 8000000,
+    "cap_exceeded": true,
+    "states_at_cap": 8000002,
+    "memo_states": 1,
+    "total_minimum_covers": null,
+    "degree_min_max": [
+     54,
+     69
+    ]
+   }
+  ]
+ },
+ "checks": [
+  {
+   "name": "jsonl.pin",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "struct.00000020.rows",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "struct.00000020.candidates",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "struct.00000020.roots",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "struct.00000020.span",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "struct.00000020.cost18",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "struct.00000020.even_parity",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "tutte.00000020.fields_agree",
+   "pass": true,
+   "detail": "{\"m1\": 18, \"m2\": 18}"
+  },
+  {
+   "name": "tutte.00000020.perfect_matching",
+   "pass": true,
+   "detail": "18"
+  },
+  {
+   "name": "tutte.00000020.no_isolated_rows",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "name": "struct.00000000.rows",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "struct.00000000.candidates",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "struct.00000000.roots",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "struct.00000000.span",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "struct.00000000.cost18",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "struct.00000000.even_parity",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "tutte.00000000.fields_agree",
+   "pass": true,
+   "detail": "{\"m1\": 18, \"m2\": 18}"
+  },
+  {
+   "name": "tutte.00000000.perfect_matching",
+   "pass": true,
+   "detail": "18"
+  },
+  {
+   "name": "tutte.00000000.no_isolated_rows",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "name": "cover_table.ranks_6_7",
+   "pass": true,
+   "detail": ""
+  }
+ ],
+ "check_count": 20,
+ "all_pass": true,
+ "interpretation_guard": "Cover-plan combinatorics only. Totals count minimum cover plans of the candidate-root system; they are not search costs and imply nothing about WIN/REFUTED outcomes of any root. REFUTED-D10 and STERILE are not LOSS proofs.",
+ "unknown_status": "Standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+}
