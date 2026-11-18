@@ -25,6 +25,8 @@ artifacts:
   - research/experiments/remo-hit-prime-pair-20261118/output/kappa_density_slim.json
   - research/experiments/remo-hit-prime-pair-20261118/output/sparse_classes_le2.json
   - research/experiments/remo-hit-prime-pair-20261118/output/pkill_probe_deep.json
+  - research/experiments/remo-hit-prime-pair-20261118/firsthit_growth.py
+  - research/experiments/remo-hit-prime-pair-20261118/output/firsthit_growth.json
 date: 2026-11-18
 tags: [remo, uniform-board, josephus, closed-form, prime, twin-prime, hardy-littlewood, machine-evidence]
 ---
@@ -161,6 +163,14 @@ K0945 deep_census.json。**cold 2回実行byte同一
 - **engine追加照合**: M∈{29,31,37,41,43,47,53}×K≤2500で
   arith_hitとengine σ_Zが不一致0（ARITH-GRIDのM拡張）・
   M∈{419,991,997}×K∈(M,M+400]でも不一致0。
+- **FIRSTHIT-GROWTH（有限観察・firsthit_growth.py）**: F(M)=live κクラスの
+  初回ヒット最大値が303素数（M≤2000）全てで確定。tier3完全データでは
+  F ~ 1.767·M^1.509（R²=0.899）・モデル比較はA·M^1.509(0.899) >
+  A·M·lnM(0.886) > A·M·ln²M(0.871・A₂≈0.96) > A·M(0.797)。
+  **M≥100でF ≤ 6.2·M·ln²M・M≥1000でF ≤ 3.03·M·ln²M**（最大比3.02が
+  遅いクラス(1367,682)=215,458そのもの）。実務則: K(M)=7·M·ln²Mで
+  M≤2000全素数のtight検査に十分（固定K=2×10⁵の失敗M∈{1367,1741}と整合）。
+  いずれも有限観察で、大きなMでのln²M因子分離はOPEN。
 
 ## 範囲と限界
 
@@ -170,7 +180,8 @@ K0945 deep_census.json。**cold 2回実行byte同一
   機械検証は有限アンカーで全称性の根拠は紙上証明のみ。
 - P-FACTOR・WINDOW-RECURSIONは紙上全称証明つき（フォローアップ）。
   P-KILL-TIGHT自体は**依然予想**（M≤2000×K≤10⁷級で反例なし・
-  初回ヒットの増大傾向は観察）。疎尾部のp−2型濃縮は有限観察。
+  初回ヒットの増大傾向はF≤6.2·M·ln²M（M≥100・有限観察）と定量化）。
+  疎尾部のp−2型濃縮とFIRSTHIT-GROWTHの冪則・包絡は有限観察。
 - HL型密度漸近・「冪減衰=1/ln²fitting産物」は**観察・予想**
   （双子素数予想クラス・未証明）。一般M（M≥5）のU_M密度閉形式はOPEN。
 - `uv run check/build`・unittestは本環境にcloneとuvがないため未実施
