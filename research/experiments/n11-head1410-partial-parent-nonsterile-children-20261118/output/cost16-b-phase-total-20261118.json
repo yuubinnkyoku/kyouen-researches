@@ -1,0 +1,664 @@
+{
+  "schema": "n11-cost16-parent-b-phase-total-20261118-v1",
+  "date": "2026-11-18",
+  "lane": "n11 long lane (verification side)",
+  "title": "Exact B-type total and full minimum-cover total for the 31-row cost-16 parent 00000000000000003800000008001000, completing the published phase A analysis via 31 independent per-d PmLazy slices",
+  "inputs": {
+    "worklist": {
+      "path": "research/experiments/n11-class2-lane-closability-ranking-20261116/output/class-frontier-remaining-s6-worklist-1410-20261116.csv",
+      "git_blob_sha1": "2fee1d0718547a62e346d35f5858d7913e37c097"
+    },
+    "census": {
+      "path": "research/experiments/n11-head1410-receipt-unclosability-census-20261116/output/n11-head1410-receipt-unclosability-census-20261116.json",
+      "git_blob_sha1": "9c251da3138c5cb0516e097be5e5d0427dfaf5f0"
+    },
+    "ledger": {
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/fold-chain-ledger-1410-1476-crosscheck-20261118.json",
+      "git_blob_sha1": "e8785d509e8a11a37c0d03cc450455a14708c34d"
+    },
+    "cover_table": {
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/parent-minimum-cover-cost-table-20261118.json",
+      "git_blob_sha1": "4e4a911d0e05779437d4a8e97685a8feb66c0d25"
+    },
+    "published_phase_a_output": {
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/cost16-a-phase-20261118.json",
+      "git_blob_sha1": "fe4b4b559fd8c3fdc9bc9b9f40a048fc3217c55b"
+    },
+    "published_runnerup29_output": {
+      "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/runnerup29-cover-membership-20261118.json",
+      "git_blob_sha1": "05f54eb58baad66403b327696b9a63f7433a13c3"
+    },
+    "candidate_roots": {
+      "path": "(regenerated) output/global-candidate-roots-20261118.jsonl",
+      "regenerated_by": "enumerate_global_candidate_roots_20261118.py"
+    }
+  },
+  "method": "Published odd-r A/B framework. A-type total recomputed with a single shared-memo PmLazy singleton phase (state cap 5M) and validated against the published phase A output (total, all 31 per-row pm values, memo states). B-type total computed as 31 independent per-d slices B_d = sum_{a<b in N(d)} w(d,a) w(d,b) pm(V\\{d,a,b}), each slice with its own fresh PmLazy memo (state cap 5M): the slice design keeps every phase within the singleton-phase memory profile that previously OOM-killed the unsliced pair-membership phase. Anchor state-space measurements quantify the 29->31 row scaling (fresh-memo pm(V\\{s}) and pm(V\\{d,a,b}) anchor trees on both parents). The implementation is additionally validated by reproducing all 1,505 published runner-up singleton memberships. This environment kills long-lived background processes, so every phase is checkpointed per anchor/slice and re-invocable. The final JSON embeds only deterministic fields (timing stripped) so double runs are byte-comparable.",
+  "derived": {
+    "rows": 31,
+    "candidates": 2333,
+    "distinct_roots": 1908,
+    "span_histogram": {
+      "1": 1483,
+      "2": 425
+    },
+    "pair_types": 425,
+    "pair_type_multiplicity_histogram": {
+      "1": 425
+    },
+    "minimum_size": 16,
+    "parity": "odd",
+    "type_A_total": 2305787291293934388,
+    "type_B_total": 660663050386546968,
+    "total_minimum_covers": 2966450341680481356,
+    "type_A_share": 0.7772883499501684,
+    "type_B_share": 0.22271165004983168,
+    "b_slices": [
+      {
+        "d": 0,
+        "b_d": 19989813118410060,
+        "anchors": 325,
+        "memo_states": 3524183,
+        "pm_gets": 325
+      },
+      {
+        "d": 1,
+        "b_d": 20231480588424789,
+        "anchors": 325,
+        "memo_states": 3524157,
+        "pm_gets": 325
+      },
+      {
+        "d": 2,
+        "b_d": 23475415507703040,
+        "anchors": 435,
+        "memo_states": 3524540,
+        "pm_gets": 435
+      },
+      {
+        "d": 3,
+        "b_d": 23475415507703040,
+        "anchors": 435,
+        "memo_states": 3524540,
+        "pm_gets": 435
+      },
+      {
+        "d": 4,
+        "b_d": 20126168376317970,
+        "anchors": 325,
+        "memo_states": 3524006,
+        "pm_gets": 325
+      },
+      {
+        "d": 5,
+        "b_d": 19949644933307451,
+        "anchors": 325,
+        "memo_states": 3523382,
+        "pm_gets": 325
+      },
+      {
+        "d": 6,
+        "b_d": 20837648422422600,
+        "anchors": 351,
+        "memo_states": 3524055,
+        "pm_gets": 351
+      },
+      {
+        "d": 7,
+        "b_d": 21877571800568925,
+        "anchors": 378,
+        "memo_states": 3524484,
+        "pm_gets": 378
+      },
+      {
+        "d": 8,
+        "b_d": 21881632103807445,
+        "anchors": 378,
+        "memo_states": 3524456,
+        "pm_gets": 378
+      },
+      {
+        "d": 9,
+        "b_d": 21846032764844793,
+        "anchors": 378,
+        "memo_states": 3524134,
+        "pm_gets": 378
+      },
+      {
+        "d": 10,
+        "b_d": 22633134813509241,
+        "anchors": 406,
+        "memo_states": 3524512,
+        "pm_gets": 406
+      },
+      {
+        "d": 11,
+        "b_d": 21065935137217452,
+        "anchors": 351,
+        "memo_states": 3524430,
+        "pm_gets": 351
+      },
+      {
+        "d": 12,
+        "b_d": 21881518331587500,
+        "anchors": 378,
+        "memo_states": 3524456,
+        "pm_gets": 378
+      },
+      {
+        "d": 13,
+        "b_d": 23475415507703040,
+        "anchors": 435,
+        "memo_states": 3524540,
+        "pm_gets": 435
+      },
+      {
+        "d": 14,
+        "b_d": 21848904683811324,
+        "anchors": 378,
+        "memo_states": 3524134,
+        "pm_gets": 378
+      },
+      {
+        "d": 15,
+        "b_d": 19220589083360616,
+        "anchors": 300,
+        "memo_states": 3523332,
+        "pm_gets": 300
+      },
+      {
+        "d": 16,
+        "b_d": 20024592896488569,
+        "anchors": 325,
+        "memo_states": 3523883,
+        "pm_gets": 325
+      },
+      {
+        "d": 17,
+        "b_d": 22694405566544229,
+        "anchors": 406,
+        "memo_states": 3524511,
+        "pm_gets": 406
+      },
+      {
+        "d": 18,
+        "b_d": 18319351945126110,
+        "anchors": 276,
+        "memo_states": 3523494,
+        "pm_gets": 276
+      },
+      {
+        "d": 19,
+        "b_d": 18393925676301009,
+        "anchors": 276,
+        "memo_states": 3522873,
+        "pm_gets": 276
+      },
+      {
+        "d": 20,
+        "b_d": 21844463670173823,
+        "anchors": 378,
+        "memo_states": 3524456,
+        "pm_gets": 378
+      },
+      {
+        "d": 21,
+        "b_d": 21900956177685741,
+        "anchors": 378,
+        "memo_states": 3524456,
+        "pm_gets": 378
+      },
+      {
+        "d": 22,
+        "b_d": 21760907863912257,
+        "anchors": 378,
+        "memo_states": 3524134,
+        "pm_gets": 378
+      },
+      {
+        "d": 23,
+        "b_d": 20916496069670628,
+        "anchors": 351,
+        "memo_states": 3524352,
+        "pm_gets": 351
+      },
+      {
+        "d": 24,
+        "b_d": 20094318085122831,
+        "anchors": 325,
+        "memo_states": 3523884,
+        "pm_gets": 325
+      },
+      {
+        "d": 25,
+        "b_d": 21764499528802476,
+        "anchors": 378,
+        "memo_states": 3524456,
+        "pm_gets": 378
+      },
+      {
+        "d": 26,
+        "b_d": 21875642092233507,
+        "anchors": 378,
+        "memo_states": 3524456,
+        "pm_gets": 378
+      },
+      {
+        "d": 27,
+        "b_d": 22590034030095750,
+        "anchors": 406,
+        "memo_states": 3524511,
+        "pm_gets": 406
+      },
+      {
+        "d": 28,
+        "b_d": 22695213659555052,
+        "anchors": 406,
+        "memo_states": 3524511,
+        "pm_gets": 406
+      },
+      {
+        "d": 29,
+        "b_d": 21778554803188839,
+        "anchors": 378,
+        "memo_states": 3524134,
+        "pm_gets": 378
+      },
+      {
+        "d": 30,
+        "b_d": 20193367640946861,
+        "anchors": 325,
+        "memo_states": 3524330,
+        "pm_gets": 325
+      }
+    ],
+    "b_slice_memo_states_max": 3524540,
+    "b_slice_anchor_count_min": 276,
+    "b_slice_anchor_count_max": 435,
+    "a_phase": {
+      "rows": 31,
+      "type_A_total": 2305787291293934388,
+      "per_row_pm": {
+        "0": 1653308795286330,
+        "1": 1633667531950608,
+        "2": 1415501771326047,
+        "3": 1415501771326047,
+        "4": 1642191620360697,
+        "5": 1656435361289220,
+        "6": 1588514963738622,
+        "7": 1515076266220878,
+        "8": 1514782563044328,
+        "9": 1517283706254840,
+        "10": 1466395627763037,
+        "11": 1571220486875283,
+        "12": 1514791930427004,
+        "13": 1415501771326047,
+        "14": 1517065529197626,
+        "15": 1717011697072743,
+        "16": 1650691554122205,
+        "17": 1462445387422791,
+        "18": 1798095446108235,
+        "19": 1790912116327797,
+        "20": 1517396622107139,
+        "21": 1513513415712273,
+        "22": 1523350516656960,
+        "23": 1582419706785732,
+        "24": 1644776550905100,
+        "25": 1523071096142418,
+        "26": 1515232273372242,
+        "27": 1469253029467884,
+        "28": 1462392051909750,
+        "29": 1521856299364719,
+        "30": 1636675326867525
+      },
+      "w1": {
+        "0": 48,
+        "1": 39,
+        "2": 49,
+        "3": 52,
+        "4": 50,
+        "5": 47,
+        "6": 44,
+        "7": 46,
+        "8": 47,
+        "9": 48,
+        "10": 44,
+        "11": 45,
+        "12": 51,
+        "13": 54,
+        "14": 46,
+        "15": 41,
+        "16": 45,
+        "17": 45,
+        "18": 40,
+        "19": 42,
+        "20": 54,
+        "21": 51,
+        "22": 50,
+        "23": 49,
+        "24": 48,
+        "25": 51,
+        "26": 54,
+        "27": 51,
+        "28": 52,
+        "29": 53,
+        "30": 47
+      },
+      "memo_states": 3524561,
+      "pm_gets": 31
+    },
+    "measurements": {
+      "baseline29_singleton_anchor_states": {
+        "0": 514212,
+        "1": 514215,
+        "2": 514225,
+        "3": 514222,
+        "4": 514223,
+        "5": 514223,
+        "6": 514223,
+        "7": 514227,
+        "8": 514223,
+        "9": 514223,
+        "10": 514223,
+        "11": 514223,
+        "12": 514223,
+        "13": 514223,
+        "14": 514227,
+        "15": 514223,
+        "16": 514227,
+        "17": 514223,
+        "18": 514223,
+        "19": 514223,
+        "20": 514223,
+        "21": 514227,
+        "22": 514224,
+        "23": 514224,
+        "24": 514223,
+        "25": 514223,
+        "26": 514223,
+        "27": 514223,
+        "28": 514223
+      },
+      "baseline29_b_phase_anchor_states": {
+        "0": 196342,
+        "1": 196342,
+        "2": 196342,
+        "3": 196393,
+        "4": 196399,
+        "5": 196373,
+        "6": 196373,
+        "7": 196380,
+        "8": 196372,
+        "9": 196375,
+        "10": 196372,
+        "11": 196398,
+        "12": 196372,
+        "13": 196372,
+        "14": 196380,
+        "15": 196372,
+        "16": 196380,
+        "17": 196375,
+        "18": 196372,
+        "19": 196398,
+        "20": 196372,
+        "21": 196380,
+        "22": 196388,
+        "23": 196388,
+        "24": 196372,
+        "25": 196372,
+        "26": 196372,
+        "27": 196372,
+        "28": 196375
+      },
+      "target31_singleton_anchor_states": {
+        "0": 1346254,
+        "1": 1346258,
+        "2": 1346247,
+        "3": 1346247,
+        "4": 1346251,
+        "5": 1346251,
+        "6": 1346244,
+        "7": 1346251,
+        "8": 1346244,
+        "9": 1346244,
+        "10": 1346251,
+        "11": 1346251,
+        "12": 1346244,
+        "13": 1346244,
+        "14": 1346244,
+        "15": 1346251,
+        "16": 1346244,
+        "17": 1346244,
+        "18": 1346251,
+        "19": 1346244,
+        "20": 1346244,
+        "21": 1346244,
+        "22": 1346244,
+        "23": 1346244,
+        "24": 1346244,
+        "25": 1346244,
+        "26": 1346244,
+        "27": 1346244,
+        "28": 1346244,
+        "29": 1346244,
+        "30": 1346251
+      },
+      "target31_b_phase_anchor_states": {
+        "0": 514228,
+        "1": 514228,
+        "2": 514228,
+        "3": 514228,
+        "4": 514224,
+        "5": 514225,
+        "6": 514229,
+        "7": 514222,
+        "8": 514229,
+        "9": 514229,
+        "10": 514222,
+        "11": 514222,
+        "12": 514229,
+        "13": 514229,
+        "14": 514229,
+        "15": 514222,
+        "16": 514229,
+        "17": 514229,
+        "18": 514224,
+        "19": 514229,
+        "20": 514229,
+        "21": 514229,
+        "22": 514229,
+        "23": 514229,
+        "24": 514229,
+        "25": 514229,
+        "26": 514229,
+        "27": 514229,
+        "28": 514229,
+        "29": 514229,
+        "30": 514224
+      },
+      "baseline29_singleton_anchor_min_max": [
+        514212,
+        514227
+      ],
+      "target31_singleton_anchor_min_max": [
+        1346244,
+        1346258
+      ],
+      "baseline29_b_phase_anchor_min_max": [
+        196342,
+        196399
+      ],
+      "target31_b_phase_anchor_min_max": [
+        514222,
+        514229
+      ],
+      "singleton_anchor_growth_ratio": 2.618071923642389,
+      "b_phase_anchor_growth_ratio": 2.619011724440008
+    },
+    "validation": {
+      "runnerup29_singleton_memberships_checked": 1505,
+      "runnerup29_mismatches": 0
+    }
+  },
+  "checks": [
+    {
+      "name": "rows",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "candidates",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "distinct_roots",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "span_histogram",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "pair_types",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "pair_type_multiplicity_histogram",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "exact16",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "parity_odd",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "per_row_singleton_root_count",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "per_row_pair_root_degree",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "per_row_cover_options",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "a16.published_total_reproduced",
+      "pass": true,
+      "detail": "{\"rebuilt\": \"2305787291293934388\", \"published\": \"2305787291293934388\"}"
+    },
+    {
+      "name": "a16.per_row_pm_reproduced",
+      "pass": true,
+      "detail": "{\"mismatches\": []}"
+    },
+    {
+      "name": "a16.singleton_membership_sum_identity",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "a16.memo_states_match_published_scaling",
+      "pass": true,
+      "detail": "{\"memo\": 3524561}"
+    },
+    {
+      "name": "b.slices_complete",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "b16.slice_sum_identity",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "b_slice.anchor_counts_match_degree_binomial",
+      "pass": true,
+      "detail": "{\"max_anchors\": 435}"
+    },
+    {
+      "name": "b16.positive",
+      "pass": true,
+      "detail": "660663050386546968"
+    },
+    {
+      "name": "b_slice.anchor_counts_in_range",
+      "pass": true,
+      "detail": "{\"min\": 276, \"max\": 435}"
+    },
+    {
+      "name": "b_slice.memo_within_cap",
+      "pass": true,
+      "detail": "{\"max\": 3524540}"
+    },
+    {
+      "name": "b16.lt_a16",
+      "pass": true,
+      "detail": "{\"A\": \"2305787291293934388\", \"B\": \"660663050386546968\"}"
+    },
+    {
+      "name": "total.identity",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "shares.a_dominates",
+      "pass": true,
+      "detail": "{\"A\": 0.7773, \"B\": 0.2227}"
+    },
+    {
+      "name": "measure.complete",
+      "pass": true,
+      "detail": "{\"b29_sa\": 29, \"t31_sa\": 31, \"b29_ba\": 29, \"t31_ba\": 31}"
+    },
+    {
+      "name": "measure.baseline29_singleton_anchor_near_published",
+      "pass": true,
+      "detail": "{\"min\": 514212, \"max\": 514227}"
+    },
+    {
+      "name": "measure.target31_singleton_anchor_range",
+      "pass": true,
+      "detail": "{\"min\": 1346244, \"max\": 1346258}"
+    },
+    {
+      "name": "measure.singleton_anchor_growth_ratio",
+      "pass": true,
+      "detail": "{\"ratio\": 2.6181}"
+    },
+    {
+      "name": "measure.target31_b_anchor_matches_baseline29_singleton_scale",
+      "pass": true,
+      "detail": "{\"t31_ba\": [514222, 514229], \"b29_sa\": [514212, 514227]}"
+    },
+    {
+      "name": "measure.b_phase_anchor_growth_ratio",
+      "pass": true,
+      "detail": "{\"ratio\": 2.619}"
+    },
+    {
+      "name": "val.runnerup29_singleton_memberships",
+      "pass": true,
+      "detail": "{\"checked\": 1505, \"mismatches\": 0}"
+    }
+  ],
+  "check_count": 31,
+  "all_pass": true,
+  "interpretation_guard": "Cover-plan combinatorics only. The totals count minimum cover plans of the candidate-root system; they are not search costs and imply nothing about WIN/REFUTED outcomes of any root. REFUTED-D10 and STERILE are not LOSS proofs.",
+  "unknown_status": "Standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+}
