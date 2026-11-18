@@ -65,8 +65,10 @@ DIRECT_SPLIT = {
 }
 QUINTS = {15: 3003, 16: 4368, 17: 6188, 18: 8568, 19: 11628, 20: 15504, 21: 20349}
 
+
 def git_blob_sha1(data: bytes) -> str:
     return hashlib.sha1(b"blob %d\x00" % len(data) + data).hexdigest()
+
 
 def fetch(name: str, want_sha: str, local_dir: str | None) -> dict:
     if local_dir:
@@ -90,6 +92,7 @@ def fetch(name: str, want_sha: str, local_dir: str | None) -> dict:
         raise RuntimeError(f"{name}: blob sha1 {got} != pinned {want_sha}")
     return json.loads(data)
 
+
 def classify(rows, combo):
     """Row-multiplicity classifier, written independently for this
     cross-check (same definition as the k14 publication): 'zero' for a
@@ -107,6 +110,7 @@ def classify(rows, combo):
     if len(twos) == 1:
         return "b_only"
     return "disjoint"
+
 
 def main() -> int:
     ap = argparse.ArgumentParser()
@@ -311,6 +315,7 @@ def main() -> int:
     print(f"grand total = {T}")
     print("kill(k)% =", {k: round(kill[k] / T * 100, 4) for k in sorted(kill)})
     return 0 if n_fail == 0 else 1
+
 
 if __name__ == "__main__":
     sys.exit(main())

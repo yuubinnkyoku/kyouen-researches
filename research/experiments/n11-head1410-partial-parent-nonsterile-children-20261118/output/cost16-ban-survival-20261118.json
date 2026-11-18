@@ -248,23 +248,23 @@
  "inputs": {
   "candidate_roots": {
    "path": "(regenerated) output/global-candidate-roots-20261118.jsonl",
-    "regenerated_by": "enumerate_global_candidate_roots_20261118.py"
+   "regenerated_by": "enumerate_global_candidate_roots_20261118.py"
   },
   "cover_table": {
    "git_blob_sha1": "4e4a911d0e05779437d4a8e97685a8feb66c0d25",
-    "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/parent-minimum-cover-cost-table-20261118.json"
+   "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/parent-minimum-cover-cost-table-20261118.json"
   },
   "phase_a_output": {
    "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/cost16-a-phase-20261118.json"
   },
   "phase_b_groups_aggregate": {
    "git_blob_sha1": "31bdefdb2e2cc90b706cbb8090e98eb5eece4d87",
-    "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/cost16-b-phase-groups-20261118.json"
+   "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/cost16-b-phase-groups-20261118.json"
   },
   "top10_joint_output": {
    "git_blob_sha1": "df52b55a81460a60b11030be8bf5c805bfdeb7c5",
-    "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/cost16-top10-joint-20261118.json",
-    "sha256": "b84e5c3c12e508e2fd490dd18f35a48020ce66ab0ad5c989220a20eaeaec80fb"
+   "path": "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/cost16-top10-joint-20261118.json",
+   "sha256": "b84e5c3c12e508e2fd490dd18f35a48020ce66ab0ad5c989220a20eaeaec80fb"
   }
  },
  "interpretation_guard": "Cover-plan combinatorics only. The survival curve counts alternative minimum cover plans avoiding the banned roots; it is not a search cost and implies nothing about WIN/REFUTED verdicts of the banned roots. REFUTED-D10 and STERILE are not LOSS proofs.",
