@@ -204,6 +204,22 @@ jobs:
         run: |
           uv run --locked python research/experiments/vertical-fiber-two-token-z7-y-ge4-census-20261119/verify_z7_y_ge4.py
           git diff --exit-code -- research/experiments/vertical-fiber-two-token-z7-y-ge4-census-20261119/output/audit.json
+      - name: Audit K0977 two-token z=7 y=1 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z7-y1-boundary-20261119/verify_z7_y1.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z7-y1-boundary-20261119/output/audit.json
+      - name: Audit K0978 two-token z=7 y=2 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z7-y2-boundary-20261119/verify_z7_y2.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z7-y2-boundary-20261119/output/audit.json
+      - name: Audit K0979 two-token z=7 y=3 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z7-y3-boundary-20261118/verify_z7_y3.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z7-y3-boundary-20261118/output/audit.json
+      - name: Audit K0976 z=7 y>=4 full two-token Grundy theorem
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z7-y-ge4-proof-20261119/verify_z7_y_ge4_proof.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z7-y-ge4-proof-20261119/output/audit.json
       - name: Audit K0957 t=2 q=8 pure-fiber all-Grundy theorem
         run: |
           uv run --locked python research/experiments/vertical-fiber-t2-q8-grundy-20261118/verify_t2_q8.py

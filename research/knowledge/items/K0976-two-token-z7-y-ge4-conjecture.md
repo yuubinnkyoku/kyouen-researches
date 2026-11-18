@@ -1,39 +1,59 @@
 ---
 id: K0976
-title: 2トークン残余ゲーム z=7・y≥4 の全Grundy閉形式予想
+title: 2トークン残余ゲーム z=7・全y≥4の全Grundy閉形式
 kind: proposition
-status: conjectured
+status: proved
 topics: [grundy, residual-games]
-aliases: [two-token z7 y>=4 all-Grundy formula conjecture]
+aliases: [two-token z7 y>=4 all-Grundy formula]
 relations:
 - type: depends_on
   target: K0832
-  note: 残余再帰、Theorem T、一般tail定理を使う
+  note: 残余再帰、Theorem T、高さのみ縮約、高R tailを使用する
+- type: depends_on
+  target: K0979
+  note: y=4のB子・対角基底にz=7,y=3全称公式を使用する
+- type: depends_on
+  target: K0974
+  note: C子にz=6・全y≥4の全Grundy公式を使用する
 artifacts:
 - path: research/experiments/vertical-fiber-two-token-z7-y-ge4-census-20261119/report.md
   role: source
-  note: z=7・y>=4の値0/1/2閉形式候補と有限監査の範囲・限界
-- path: research/experiments/vertical-fiber-two-token-z7-y-ge4-census-20261119/verify_z7_y_ge4.py
+  note: 証明前の閉形式候補と有限完全再帰センサス。歴史的な候補抽出記録として保持する
+- path: research/experiments/vertical-fiber-two-token-z7-y-ge4-proof-20261119/report.md
+  role: proof
+  note: y=3境界を基底とするS=x+y強帰納、d=0..8・d≥9のA/B/C署名表による全称証明
+- path: research/experiments/vertical-fiber-two-token-z7-y-ge4-proof-20261119/verify_z7_y_ge4_proof.py
   role: verifier
-  note: 正準多重集合再帰と順序付き再帰の二方式で候補式を照合する有限検証器
-- path: research/experiments/vertical-fiber-two-token-z7-y-ge4-census-20261119/output/audit.json
+  note: K0979・K0974アンカーからのA/B/C再構成、署名帯表、mex、tailを独立監査する検証器
+- path: research/experiments/vertical-fiber-two-token-z7-y-ge4-proof-20261119/output/audit.json
   role: data
-  note: 918,918状態・tail23,562点・境界2点、不一致0、二回実行byte-identical
-- path: research/log/2026-11-19-vertical-fiber-two-token-z7-y-ge4-census.md
+  note: 1,051,095検査・不一致0・独立2回実行byte-identical。有限監査であり全称証明とは区別する
+- path: research/log/2026-11-19-vertical-fiber-two-token-z7-y-ge4-proof.md
   role: log
-  note: 最新main・既存未解決事項の確認、候補式抽出、有限監査、証明未了の判断記録
+  note: 最新main・未解決範囲との照合、K0976候補式の全称証明と監査・限界
 date: 2026-11-19
 scope: >-
-  κ=1残余ゲームH(R;(x,y);z)の2トークン族、z=7、全x>=y>=4、全R>=0に対するGrundy値0/1/2の閉形式候補。statusはconjecturedであり、全称命題として採用しない。
+  κ=1残余ゲームH(R;(x,y);7)の2トークン族、全x≥y≥4・全R≥0。Grundy値0/1/2を全て閉形式で分類する。
 evidence: >-
-  降順正準多重集合再帰と順序を保つラベル付き再帰を別々に実行。y=4..80、d=x-y=0..50、R=0..x+y+7の各459,459状態で候補式と一致。さらに各組のtail点R=S+8,S+9,S+20を各11,781点ずつ照合し、境界H(7;(3,3);7)=0も両方式で確認。合計918,918有限状態・23,562 tail点・境界2点で不一致0、二回実行byte-identical。有限範囲外の全称性は未証明。
+  S=x+yに関する強帰納。y=4ではB子をK0979、C子をK0974で評価し、A子は同じyのS-1帰納（d=0ではA/Bが同一子へ合流）。y≥5ではA/B子がS-1でy≥4に留まり、C子はK0974で閉じる。d=0,y=4の例外行、d=0,y≥5、d=1..8、d≥9のA/B/C署名表が全1≤R≤S+7を被覆し、K0832のTheorem Tでmexが一意に決まる。R≥S+8はtail H=S mod 2。独立監査は1,051,095検査・不一致0・二回実行byte-identical。有限監査は証明の代わりではなく、全称性はS強帰納・署名表・既証明アンカーによる。
 ---
 
-## 予想
+## 定理
 
-S=x+y、d=x-yとする。O[a,b]とE[a,b]はそれぞれ区間内の奇数集合・偶数集合。
+\(S=x+y\)、\(d=x-y\) とし、\(O[a,b]\)・\(E[a,b]\) は区間内の奇数・偶数、\(I[a,\infty)\) は \(a\) 以上の全整数とする。全 \(x\ge y\ge4\)、\(R\ge0\) について
 
-値2位置:
+\[
+H(R;(x,y);7)=
+\begin{cases}
+2,&R\in T_y(x),\\
+1,&R\in P_y(x),\\
+S\bmod2,&R\ge S+8,\\
+0,&\text{otherwise},
+\end{cases}
+\]
+
+ただし \(0\le R\le S+7\) では
+
 \[
 T_y(x)=\{1,3,5,7\}\cup
 \begin{cases}
@@ -41,11 +61,10 @@ T_y(x)=\{1,3,5,7\}\cup
 \{2y+7\}&d=7,\\
 \{2y+7,2y+9,2y+11,2y+13,2y+15\}&d=8,\\
 \{2y+7\}&d\ge9,\\
-\varnothing&\text{otherwise}.
+\varnothing&\text{otherwise},
 \end{cases}
 \]
 
-値1位置:
 \[
 P_y(x)=
 \begin{cases}
@@ -62,17 +81,55 @@ E[8,2y+6]\cup O[2y+9,\min(2y+2d-3,S+7)]&d\ge9.
 \end{cases}
 \]
 
-全てのx>=y>=4、0<=R<=S+7で
+## 証明
+
+\(S=x+y\) に関する強帰納を行う。\(R=0\) は終局で値0。\(d=x-y\ge1\) の選択肢は
 \[
-H(R;(x,y);7)=
-\begin{cases}
-2&R\in T_y(x),\\
-1&R\in P_y(x),\\
-0&\text{otherwise}
-\end{cases}
+A=H(R-1;(x-1,y);7),\quad
+B=H(R-1;(x,y-1);7),\quad
+C=1\oplus H(R-1;(x,y);6).
 \]
-と予想する。tail R>=S+8ではK0832によりH=S mod 2。
+Aは同じyの族で和がS-1。Bはy=4ならK0979、y≥5なら和S-1の帰納仮説。CはK0974のz=6・全y≥4公式で評価できる。d=0ではA/Bが同じ(y,y-1)子に合流し、y=4はK0979、y≥5は帰納仮説で閉じる。最小S=8もこの対角合流で処理できる。
 
-## 根拠と限界
+K0832のTheorem Tにより、偶数残容量の親の値は高々1。奇数親では子の残容量が偶数なのでA/B子は0/1、C子も1⊕{0,1}⊆{0,1}。したがって奇数親の署名は01,0,1のみでmexは2,1,0。偶数親は署名が0を含めば1、含まなければ0である。
 
-二方式の有限完全再帰監査は候補式を支持するが、y>80またはd>50を含む全称証明ではない。y=3ではH(7;(3,3);7)=0となり、基本ラダーの単純延長も成立しない。全称証明に必要なy=1,2,3の基底切片とA/B/C署名表は未完成である。
+署名は子Grundy値集合を昇順に連結したもの（例023={0,2,3}）。各区間は指定偶奇だけを走り、表は全1≤R≤S+7を過不足なく覆う。
+
+| d | 奇数Rの署名 | 偶数Rの署名 |
+|---:|---|---|
+| 0, y=4 | O[1,7]:01; O[9,15]:1 | E[2,6]:23; E[8,10]:02; {12}:13; {14}:1 |
+| 0, y≥5 | O[1,7]:01; O[9,2y+7]:1 | E[2,6]:23; {8}:02; E[10,2y+2]:0; {2y+4}:13; {2y+6}:1 |
+| 1 | O[1,7]:01; O[9,2y+3]:1; O[2y+5,2y+7]:0 | E[2,6]:23; {8}:02; E[10,2y+8]:0 |
+| 2 | O[1,7]:01; O[9,2y+9]:1 | E[2,6]:23; {8}:02; E[10,2y+2]:0; {2y+4}:02; E[2y+6,2y+8]:1 |
+| 3 | O[1,7]:01; O[9,2y+3]:1; {2y+5}:01; O[2y+7,2y+9]:0 | E[2,6]:23; {8}:02; E[10,2y+10]:0 |
+| 4 | O[1,7]:01; O[9,2y+11]:1 | E[2,6]:23; {8}:02; E[10,2y+4]:0; {2y+6}:123; E[2y+8,2y+10]:1 |
+| 5 | O[1,7]:01; O[9,2y+5]:1; O[2y+7,2y+11]:0 | E[2,6]:23; {8}:02; E[10,2y+12]:0 |
+| 6 | O[1,7]:01; O[9,2y+13]:1 | E[2,6]:23; {8}:02; E[10,2y+4]:0; {2y+6}:02; E[2y+8,2y+12]:1 |
+| 7 | O[1,7]:01; O[9,2y+5]:1; {2y+7}:01; O[2y+9,2y+13]:0 | E[2,6]:23; {8}:02; E[10,2y+4]:0; {2y+6}:02; E[2y+8,2y+14]:023 |
+| 8 | O[1,7]:01; O[9,2y+5]:1; O[2y+7,2y+15]:01 | E[2,6]:23; {8}:02; E[10,2y+4]:0; {2y+6}:02; {2y+8}:123; E[2y+10,2y+14]:1 |
+| d≥9 | O[1,7]:01; O[9,2y+5]:1; {2y+7}:01; O[2y+9,min(2y+2d-3,S+7)]:0 | E[2,6]:23; {8}:02; E[10,2y+4]:0; {2y+6}:02; {2y+8}:123; E[2y+10,S+7]:(12 if d=9, 1 if d≥10) |
+
+各行はAに帰納公式、BにK0979または帰納公式、CにK0974を代入して得られる。端点は2y、S=2y+dとその一次式だけで書かれるため、各行は全ての許されるy,dに一様に成り立つ。d=9の偶数帯だけ署名12となるが、mexはd≥10の署名1と同じ0。表にmexを適用するとT/P式が得られる。残るR≥S+8はK0832の一般tail H=S mod 2で閉じる。∎
+
+## 独立監査
+
+標準ライブラリのみの検証器で、正準多重集合の直接再帰とK0979・K0974アンカーからのA/B/C再構成を分離した。
+
+| 検査 | 件数 | 不一致 |
+|---|---:|---:|
+| 直接再帰×閉形式 | 5,880 | 0 |
+| 直接再帰×A/B/C mex | 5,880 | 0 |
+| K0979アンカー×直接再帰 | 4,205 | 0 |
+| K0974アンカー×直接再帰 | 5,880 | 0 |
+| 署名表の被覆・署名・mex | 520,987 | 0 |
+| tail | 29,820 | 0 |
+| 高さのみ縮約R≤8 | 54,963 | 0 |
+| Theorem T偶奇 | 420,980 | 0 |
+| 固定seed散点 | 2,500 | 0 |
+
+合計1,051,095検査、不一致0。独立プロセス2回の監査JSONはバイト単位で一致した。有限監査は全称性の根拠ではなく、全称性はS強帰納、全差を覆う署名表、K0832・K0979・K0974の既証明アンカーによる。
+
+- verifier SHA-256: b504933aaec18bf159876a9c96bcd622bcc0804ac06f0a037ae4cd05cffe37b9
+- audit SHA-256: 681dcd0c3751a9e3d9c9407e3a2bd949d038b98aa51391452fc3cd7e083ba768
+
+K0977・K0978・K0979のy=1,2,3と合わせ、2トークン族のz=7は全y≥1で証明済み。z≥8、全高さ統一式、標準二次元盤の固定幅・q点安定化長は未解決。

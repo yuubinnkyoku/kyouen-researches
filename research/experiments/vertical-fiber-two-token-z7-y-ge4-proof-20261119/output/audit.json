@@ -1,0 +1,60 @@
+{
+  "all_passed": true,
+  "checks": {
+    "K0974_anchor_vs_direct": {
+      "mismatches": 0,
+      "points": 5880,
+      "range": "4<=y<=10, 0<=d<=15, 0<=R<=S+30"
+    },
+    "K0979_anchor_vs_direct": {
+      "mismatches": 0,
+      "points": 4205,
+      "range": "3<=x<=60, 0<=R<=x+40"
+    },
+    "direct_vs_ABC_mex": {
+      "mismatches": 0,
+      "points": 5880,
+      "range": "4<=y<=10, 0<=d<=15, 0<=R<=S+30"
+    },
+    "direct_vs_closed_form": {
+      "mismatches": 0,
+      "points": 5880,
+      "range": "4<=y<=10, 0<=d<=15, 0<=R<=S+30"
+    },
+    "height_only_reduction": {
+      "mismatches": 0,
+      "points": 54963,
+      "range": "4<=y<=200, 0<=d<=30, 0<=R<=8"
+    },
+    "seeded_direct_samples": {
+      "mismatches": 0,
+      "points": 2500,
+      "range": "4<=y<=30, d<=40, R<=S+30, seed=20261119"
+    },
+    "symbolic_band_cover_signature_mex": {
+      "coverage_errors": 0,
+      "mex_errors": 0,
+      "points": 520987,
+      "range": "4<=y<=100, 0<=d<=40, 1<=R<=S+7",
+      "signature_errors": 0
+    },
+    "tail": {
+      "mismatches": 0,
+      "points": 29820,
+      "range": "4<=y<=500, d in {0..11,20,50,100}, R=S+8..S+11"
+    },
+    "theorem_T_parity": {
+      "even_parent_gt1": 0,
+      "odd_parent_gt2": 0,
+      "points": 420980,
+      "range": "4<=y<=100, 0<=d<=30, 0<=R<=S+20"
+    }
+  },
+  "direct_cache": {
+    "hits": 1650458,
+    "misses": 909032
+  },
+  "target": "H(R;(x,y);7), x>=y>=4, R>=0",
+  "total_points": 1051095,
+  "verifier": "verify_z7_y_ge4_proof.py"
+}
