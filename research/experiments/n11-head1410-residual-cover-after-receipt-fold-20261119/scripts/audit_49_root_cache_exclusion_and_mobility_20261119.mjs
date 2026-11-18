@@ -20,6 +20,7 @@ const PIN = {
   convention: "b097210d0b49d7cf014cc6a554298b1e49e83384"
 };
 const SOURCE_MAIN_HEAD = "317f6af8c9810941bda38b5cf355a8f27ce3aa65";
+const PUBLICATION_MAIN_HEAD_BEFORE_RESULT = "69b4e02966d9cf6b9bd07fc7680b2eb165557247";
 
 function need(condition, message) {
   if (!condition) throw new Error(message);
@@ -169,7 +170,9 @@ const scan = JSON.parse(scanText);
 const residual = JSON.parse(residualText);
 const checks = [];
 function check(name, pass, detail = null) {
-  checks.push({ name, pass: !!pass, detail });
+  const item = { name, pass: !!pass };
+  if (detail !== null) item.detail = detail;
+  checks.push(item);
   need(!!pass, "check failed: " + name);
 }
 
@@ -384,6 +387,7 @@ const result = {
   date: "2026-11-19",
   status: "all-49-unresolved-in-published-verdict-index",
   source_main_head: SOURCE_MAIN_HEAD,
+  publication_main_head_before_result: PUBLICATION_MAIN_HEAD_BEFORE_RESULT,
   prior_residual_audit_source_main_head: residual.source_main_head,
   input_pins: {
     scan: { path: SCAN_PATH, git_blob_sha1: PIN.scan },
