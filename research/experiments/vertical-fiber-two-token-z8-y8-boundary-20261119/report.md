@@ -1,7 +1,7 @@
 # 2トークン残余ゲーム z=8・y=8 の全Grundy分類（K0996）
 
 - 日付: 2026-11-19
-- 作業開始時main: 71f76c0b85e4ba08fd570cf2c477e674a3dbaeba（K0995の出版コミット）
+- 作業開始時main: 71d6f07c3ea9b868cff99d22fa4e5fabf87caffd（K0995を含むmain）
 - 対象: H(R;(x,8);8)、全 x>=8・R>=0
 - 状態: **全称定理**
 - 依存: K0832（再帰・Theorem T・高R tail）、K0995（z=8,y=7）、K0976（z=7,y>=4）
@@ -123,7 +123,7 @@ R>=x+17ではK0832の高R tailを各子に適用できる。A・Bの子はとも
 - tail: 8<=x<=5000、R=x+17..x+20
 - tail署名: 8<=x<=2000、同じ4点
 - Theorem T格子: 8<=x<=2000、0<=R<=x+28
-- verifier SHA-256: add2892bc8744bcaa40853d29df8c95084396137ae02966d06b7da24ca003d8f
+- verifier Git blob SHA-1: 623cea8a33385f98da215cf107bb76ce051a91c4
 - audit JSON SHA-256: 89b8d5846816497bdd0341dd0bbdb365b667505db9978eae6632bd1feeec73c1
 - audit内部hash: 91dd1b38e4bda587fef423b99b12a1aa212efea1bf88b4ac5cdfd6c73a120ba8
 

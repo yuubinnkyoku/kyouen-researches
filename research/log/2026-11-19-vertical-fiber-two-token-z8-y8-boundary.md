@@ -2,7 +2,7 @@
 
 ## 作業開始時の状態
 
-- 2026-11-19、最新main: 71f76c0b85e4ba08fd570cf2c477e674a3dbaeba
+- 2026-11-19、最新main: 71d6f07c3ea9b868cff99d22fa4e5fabf87caffd
 - AGENTS.md: main直接反映、知識の正本はresearch/knowledge/items、generatedとroot READMEは直接編集禁止、検証器・証明・有限計算を区別する方針を確認
 - research/knowledge/README.md: z=8の未解決範囲はy>=8、z=9はy>=7。z=8,y=7のK0995が直近の完了項目
 - 重複回避: K0995のA/B/C帰納構造を次のy=8へ一段延長する対象を選択
@@ -27,7 +27,7 @@ x=8ではA=Bが同一の(8,7)子へ合流。x>=9ではAを外帰納、BをK0995�
 
 - 検証器: research/experiments/vertical-fiber-two-token-z8-y8-boundary-20261119/verify_z8_y8.py
 - 監査: 8,201,193検査、不一致0、独立プロセス2回でbyte-identical
-- verifier SHA-256: add2892bc8744bcaa40853d29df8c95084396137ae02966d06b7da24ca003d8f
+- verifier Git blob SHA-1: 623cea8a33385f98da215cf107bb76ce051a91c4
 - audit JSON SHA-256: 89b8d5846816497bdd0341dd0bbdb365b667505db9978eae6632bd1feeec73c1
 - audit内部hash: 91dd1b38e4bda587fef423b99b12a1aa212efea1bf88b4ac5cdfd6c73a120ba8
 
