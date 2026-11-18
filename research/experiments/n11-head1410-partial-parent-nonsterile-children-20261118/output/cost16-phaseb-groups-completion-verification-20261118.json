@@ -16,8 +16,37 @@
     },
     "direct_jsonl": {
       "rows": [
+        0,
+        1,
         2,
-        18
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
       ]
     },
     "aggregate_output": "cost16-b-phase-groups-20261118.json",
@@ -112,19 +141,19 @@
       "detail": "{\"kept\": [84443033500707374, 25797556390267152], \"pre\": [84443033500707374, 25797556390267152]}"
     },
     {
-      "name": "direct.b_d_rows_present",
+      "name": "direct.rows_0_30_present",
       "pass": true,
-      "detail": "[2, 18]"
+      "detail": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]"
     },
     {
-      "name": "direct.b_d_18_matches_slice",
+      "name": "direct.all_31_b_d_match_published_slices",
       "pass": true,
-      "detail": "{\"direct\": \"18319351945126110\", \"slice\": \"18319351945126110\"}"
+      "detail": "{}"
     },
     {
-      "name": "direct.b_d_2_matches_slice",
+      "name": "direct.sum_eq_B16",
       "pass": true,
-      "detail": "{\"direct\": \"23475415507703040\", \"slice\": \"23475415507703040\"}"
+      "detail": "{\"sum_direct\": \"660663050386546968\", \"B16\": \"660663050386546968\"}"
     },
     {
       "name": "aggregate.all_pass",

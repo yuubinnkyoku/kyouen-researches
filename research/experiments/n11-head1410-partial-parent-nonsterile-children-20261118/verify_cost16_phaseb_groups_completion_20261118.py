@@ -14,8 +14,8 @@ Verifies, from the published/pinned artifacts and the final groups JSONL, that
       computation epochs agree on it),
   (d) the duplicate (0,8) record removed from the publication JSONL was
       value-identical to the kept copy (deterministic recompute across epochs),
-  (e) the direct-mode B_d contributions independently reproduce two published
-      per-d slice values (d=18 bottleneck, d=2 hub),
+  (e) the direct-mode B_d contributions independently reproduce all 31 published
+      per-d slice values (rows 0..30, fresh memo each, sum == B16),
   (f) aggregate output self-consistency: total == A16 + B16, all roots positive,
       witness roots positive with the published A-split, top-50 all pair roots.
 
@@ -177,11 +177,13 @@ def main():
         for line in f:
             e = json.loads(line)
             direct[e["d"]] = e["contrib"]
-    check("direct.b_d_rows_present", sorted(direct) == [2, 18], sorted(direct))
-    check("direct.b_d_18_matches_slice", direct.get(18) == bd[18],
-          {"direct": str(direct.get(18)), "slice": str(bd[18])})
-    check("direct.b_d_2_matches_slice", direct.get(2) == bd[2],
-          {"direct": str(direct.get(2)), "slice": str(bd[2])})
+    check("direct.rows_0_30_present", sorted(direct) == list(range(31)),
+          sorted(direct))
+    check("direct.all_31_b_d_match_published_slices",
+          all(direct[d] == bd[d] for d in range(31)),
+          {d: [direct.get(d), bd[d]] for d in range(31) if direct.get(d) != bd[d]})
+    check("direct.sum_eq_B16", sum(direct.values()) == B16,
+          {"sum_direct": str(sum(direct.values())), "B16": str(B16)})
 
     agg = json.load(open(AGG_PATH))
     check("aggregate.all_pass", agg["all_pass"] and agg["check_count"] == 9)
