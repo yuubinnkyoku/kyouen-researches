@@ -1,0 +1,350 @@
+{
+ "schema": "n11-five-parent-seventeenth-win7-receipt-fold-20261120-v1",
+ "date": "2026-11-20",
+ "status": "fold-complete",
+ "receipt_ordinal": "seventeenth (fold10)",
+ "single_owner_note": "research/log/2026-11-20-n11-fold10-single-owner-note.md",
+ "previous_fold": {
+  "record": "research/experiments/n11-residual78-windfall4-receipt-fold-20261120/output/windfall4-thirteenth-sixteenth-win7-receipt-fold-20261120.json (sha256 24db2352ad0d94ee4a76ec3de294f02cbdac7899f0b6ef64ea695d261017cdc2)",
+  "frontier_after": {
+   "solved_s6_in_manifest": 1639,
+   "remaining_s5_orbits": 173,
+   "unique_remaining_s6": 6209,
+   "sum_remaining_cost": 491722,
+   "s6_needed_by_open_classes": 4509,
+   "cost_needed_by_open_classes": 357583,
+   "parent_row_incidence": 11818
+  }
+ },
+ "certificate_source": {
+  "record": "research/experiments/n11-residual78-seventeenth-win7-cert-extract-20261120 (seventeenth WIN7 cert extract + triple verification, 38 gates)",
+  "verification_sha256": "c1073bae1d056db7f56d04a77fd9889d1e297a82a07537ddcd02c00d329dbabc",
+  "certificate_path": "research/experiments/n11-residual78-seventeenth-win7-cert-extract-20261120/certs/win7-root-00004000000000821082000000000100-20261120.n11 (commit b7a6db5fb0)",
+  "certificate_sha256": "21dd2f0e9f0b8ec22e917fce5a732835098baf37570a227bebacacb4c13807c8",
+  "discovery": "K1069 39-live-witness depth-10 sweep (WIN 1 / REFUTED 38 / CAPPED 0; root andclose1 1,576,372 nodes / andclose0 2,544,178 nodes, both uncapped, terminal [13,17]); independent byte-exact re-extraction lane log research/log/2026-11-20-n11-seventeenth-cert-body-published.md"
+ },
+ "source_blob_pins": {
+  "inputs/worklist.csv": "2fee1d0718547a62e346d35f5858d7913e37c097",
+  "inputs/ledger.json": "e8785d509e8a11a37c0d03cc450455a14708c34d",
+  "inputs/globalFold.json": "753a4bf4d0e11bea894111f9fa43bcff5e9ab7dc",
+  "inputs/previousCostFold.json": "7e6144cc4bc92c34faa14bed3058cde64fb3880e",
+  "inputs/firstFoldTarball.tar.gz": "fa5f26a9dc9bd2fb8222aa8ba0431d7578043019",
+  "inputs/census.json": "9c251da3138c5cb0516e097be5e5d0427dfaf5f0",
+  "inputs/audit.json": "7cdc7c9ef341b5d9759923b3fc4986231c48895f",
+  "ex48/output/secondThirdFold.json": "7923a0fe5331d1f7c896748031c4071b68fcc13a",
+  "fold4rec/fold4.json": "38715413d6dd23b97717c92d73d8b4a0af807cda",
+  "fold56rec/fold56.json": "134796a7de1e472c26e35defd7340d208a10b9b0",
+  "fold9/output/ninth-twelfth-win7-receipt-fold-20261119.json": "5b1a30f9b56230382d502aa66ea89d3083b16dd2",
+  "fold_fourth_fifth_sixth.py": "d8068a8eea48fde5203ac6342abd4df2bd584b99"
+ },
+ "source_sha256_pins": {
+  "foldv2/output/seventh-win7-receipt-fold-20261119.json": "f1baf15942d3efeaa3ca75c4d803148239269715e297aaf9b00042611543b737",
+  "foldv2/output/eighth-win7-receipt-fold-20261119.json": "afcf7d0ad0d6ca1edf31e150a7ba840f802a6382506f4a662b4e13567fbd30a2",
+  "resolve6/output/post-saturation-full-cache-join-resolve6-20261120.json": "e85d4bfb867a193f2b3cdb23ec9e15679359c9f337fcd97eb5c62473b90c281a",
+  "fs13/output/windfall4-thirteenth-sixteenth-win7-receipt-fold-20261120.json": "24db2352ad0d94ee4a76ec3de294f02cbdac7899f0b6ef64ea695d261017cdc2",
+  "sv17pub/output/seventeenth-cert-triple-verification-20261120.json": "c1073bae1d056db7f56d04a77fd9889d1e297a82a07537ddcd02c00d329dbabc",
+  "sv17pub/certs/win7-root-00004000000000821082000000000100-20261120.n11": "21dd2f0e9f0b8ec22e917fce5a732835098baf37570a227bebacacb4c13807c8"
+ },
+ "receipt_count": 1,
+ "receipts": [
+  {
+   "root": "00004000000000821082000000000100",
+   "raw_root_hex": "00004000000000821082000000000100",
+   "receipt": "seventeenth",
+   "lane_bit": 8,
+   "lane_child_hex": "00004000000000821082000000000000",
+   "raw_root_is_d4_canonical": true,
+   "legal_next_moves": 60,
+   "covered_s6_rows": [
+    "00000000000000821082000000000001",
+    "00000000000000821082000000000004",
+    "00004000000000003800000100000020"
+   ],
+   "covered_five_parent_target_rows": [
+    "00000000000000821082000000000001",
+    "00000000000000821082000000000004"
+   ],
+   "extra_s6_rows_not_in_target": [
+    "00004000000000003800000100000020"
+   ],
+   "unique_strategy_rows": 49591,
+   "extraction_nodes": 4250297,
+   "extraction_rerun_byte_identical": true,
+   "closed_edge_cost": 225,
+   "certificate_sha256": "21dd2f0e9f0b8ec22e917fce5a732835098baf37570a227bebacacb4c13807c8",
+   "certificate_bytes": 1791541,
+   "affected_parents": 5,
+   "parent_deltas": [
+    {
+     "parent_hex": "00000000000000003800000000000021",
+     "classes": 1,
+     "rows_before": 59,
+     "rows_closed": 1,
+     "rows_after": 58
+    },
+    {
+     "parent_hex": "00000000000000003800000000400020",
+     "classes": 1,
+     "rows_before": 69,
+     "rows_closed": 2,
+     "rows_after": 67
+    },
+    {
+     "parent_hex": "00000000000000801082000000000100",
+     "classes": 1,
+     "rows_before": 76,
+     "rows_closed": 1,
+     "rows_after": 75
+    },
+    {
+     "parent_hex": "00000000000000801082000000000400",
+     "classes": 1,
+     "rows_before": 73,
+     "rows_closed": 2,
+     "rows_after": 71
+    },
+    {
+     "parent_hex": "00000000000000821082000000000000",
+     "classes": 1,
+     "rows_before": 8,
+     "rows_closed": 2,
+     "rows_after": 6
+    }
+   ],
+   "sweep_provenance": {
+    "nodes_andclose_1": 1576372,
+    "nodes_andclose_0": 2544178,
+    "capped": false,
+    "terminal_stone_range": [
+     13,
+     17
+    ],
+    "determinism_rerun_node_exact": true
+   },
+   "independent_verification": {
+    "bigint_3x3": {
+     "subroots_passed": 60,
+     "union_missing": 0,
+     "union_extra": 0,
+     "terminal_range": [
+      13,
+      17
+     ]
+    },
+    "ts_bareiss_4x4": {
+     "subroots": 60,
+     "union_missing": 0,
+     "union_extra": 0,
+     "terminals": 17157
+    },
+    "python_exact_bareiss_full_replay": {
+     "subroots_passed": 60,
+     "consumed_rows": 49591,
+     "visited_winner_states": 150963,
+     "terminal_stone_range": [
+      13,
+      15,
+      17
+     ]
+    },
+    "cross_method_union_exact": true,
+    "certificate_union_exact": true,
+    "source_record": "research/experiments/n11-residual78-seventeenth-win7-cert-extract-20261120"
+   }
+  }
+ ],
+ "frontier_before": {
+  "solved_s6_in_manifest": 1639,
+  "remaining_s5_orbits": 173,
+  "unique_remaining_s6": 6209,
+  "sum_remaining_cost": 491722,
+  "s6_needed_by_open_classes": 4509,
+  "cost_needed_by_open_classes": 357583,
+  "parent_row_incidence": 11818
+ },
+ "frontier_after": {
+  "solved_s6_in_manifest": 1642,
+  "remaining_s5_orbits": 173,
+  "unique_remaining_s6": 6206,
+  "sum_remaining_cost": 491497,
+  "s6_needed_by_open_classes": 4509,
+  "cost_needed_by_open_classes": 357583,
+  "parent_row_incidence": 11810
+ },
+ "new_receipt_coverage": {
+  "unique_s6_rows": 3,
+  "closed_edge_cost": 225,
+  "rows": [
+   {
+    "row_hex": "00000000000000821082000000000001",
+    "cost": 66,
+    "category": "unswept",
+    "demand": {
+     "c1": 3,
+     "c2": 0,
+     "c4": 0
+    },
+    "parents": [
+     "00000000000000003800000000000021",
+     "00000000000000801082000000000400",
+     "00000000000000821082000000000000"
+    ],
+    "receipt": {
+     "root": "00004000000000821082000000000100",
+     "verdict": "WIN7-D10"
+    }
+   },
+   {
+    "row_hex": "00000000000000821082000000000004",
+    "cost": 73,
+    "category": "unswept",
+    "demand": {
+     "c1": 3,
+     "c2": 0,
+     "c4": 0
+    },
+    "parents": [
+     "00000000000000003800000000400020",
+     "00000000000000801082000000000100",
+     "00000000000000821082000000000000"
+    ],
+    "receipt": {
+     "root": "00004000000000821082000000000100",
+     "verdict": "WIN7-D10"
+    }
+   },
+   {
+    "row_hex": "00004000000000003800000100000020",
+    "cost": 86,
+    "category": "unswept",
+    "demand": {
+     "c1": 2,
+     "c2": 0,
+     "c4": 0
+    },
+    "parents": [
+     "00000000000000003800000000400020",
+     "00000000000000801082000000000400"
+    ],
+    "receipt": {
+     "root": "00004000000000821082000000000100",
+     "verdict": "WIN7-D10"
+    }
+   }
+  ]
+ },
+ "parent_closure": {
+  "fully_closed_parent_count": 0,
+  "affected_unique_parents": 5
+ },
+ "five_parent_target_after": {
+  "closed_target_rows_total": 40,
+  "residual_target_rows": 72,
+  "residual_row_hex_after": [
+   "00000000000000003800000008001001",
+   "00000000000000003800000008001020",
+   "00000000000000003800000008001080",
+   "00000000000000003800000008001100",
+   "00000000000000003800000008001800",
+   "00000000000000003800000008002010",
+   "00000000000000003800000008002040",
+   "00000000000000003800000008002080",
+   "00000000000000003800000008002100",
+   "00000000000000003800000008005000",
+   "00000000000000003800000008011000",
+   "00000000000000003800000008500000",
+   "00000000000000003800000008900000",
+   "00000000000000003800000009000004",
+   "00000000000000003800000009040000",
+   "00000000000000003800000009800000",
+   "0000000000000000380000000a002000",
+   "0000000000000000380000000a080000",
+   "00000000000000003800000209000000",
+   "00000000000000003800000248000000",
+   "00000000000000003800000409000000",
+   "00000000000000003800000808001000",
+   "00000000000000003800100008002000",
+   "00000000000000003800200008001000",
+   "00000000000000003800200008100000",
+   "00000000000000003800200009000000",
+   "00000000000000043800000008080000",
+   "00000000000000043800000008100000",
+   "00000000000000043800000009000000",
+   "00000000000000083800000008100000",
+   "00000000000000083800000048000000",
+   "00000000000000103800000008080000",
+   "00000000000000103800000009000000",
+   "00000000000000801202000000081000",
+   "00000000000000801202000000101000",
+   "00000000000000801202000000800100",
+   "00000000000000801202000000800200",
+   "00000000000000801202000000800400",
+   "00000000000000801202000000840000",
+   "00000000000000801202000000880000",
+   "00000000000000801202000000900000",
+   "00000000000000801202000001000100",
+   "00000000000000801202000001000400",
+   "00000000000000801202000001080000",
+   "00000000000000801202000020001000",
+   "00000000000000801202020000001000",
+   "00000000000000801202040000001000",
+   "00000000000000801202040000800000",
+   "00000000000000801212000000001000",
+   "00000000000000801212000001000000",
+   "00000000000000801222000000001000",
+   "00000000000000801222000000800000",
+   "00000000000000821082000000000008",
+   "00000000000000821082000000000010",
+   "00000000000000821082000000000800",
+   "00000000000000821082000000001000",
+   "00000000000000821082800000000000",
+   "00000000000000821083000000000000",
+   "00000000000000889002000000100000",
+   "00000000000000889002000080000000",
+   "00000000000000909002000000100000",
+   "00000000000000909002000080000000",
+   "00000000000000a09002000080000000",
+   "00000000000020809002000080000000",
+   "00000000000040809002000000100000",
+   "00000000000080003800000048000000",
+   "00000000010000809002000000100000",
+   "00000000010000809002000040000000",
+   "00000000010000809002000080000000",
+   "00000000020000801202000000100000",
+   "00000008000000003800000008100000",
+   "00000010000000801202000000000400"
+  ]
+ },
+ "witness_plan_impact": {
+  "note": "Observation only. The 39-root live witness plan covered all 78 pre-windfall rows; after the seventeenth fold the covered witness root is retired and the plan degrades by exactly the 2 closed rows.",
+  "retired_witness_root": "00004000000000821082000000000100",
+  "rows_of_retired_root": [
+   "00000000000000821082000000000001",
+   "00000000000000821082000000000004"
+  ]
+ },
+ "verdict_join_summary": {
+  "join_basis": "resolve6 published full-universe cache join (win/refuted conflicts 0) + K1069 depth-10 both-order sweep of the 39 live witness roots",
+  "receipt_root_is": "certificate-backed WIN7-D10 (seventeenth triple verification: TS Bareiss 4x4 sub-root decomposition, pure-python exact Bareiss full replay, BigInt 3x3; independent byte-exact re-extraction by a second lane)"
+ },
+ "controls": {
+  "base_frontier_recomputed": true,
+  "chain_frontiers_recomputed_each_step": true,
+  "post_ninth_twelfth_frontier_matches_published_6213_492021": true,
+  "thirteenth_sixteenth_frontier_matches_published_6209_491722": true,
+  "seventeenth_cert_38_gates_rechecked": true,
+  "receipt_rows_rederived_from_d4_images_and_canonical_frontier": true,
+  "rederived_rows_match_published_coverage_claim": true,
+  "all_receipt_rows_were_open_before": true,
+  "legal_move_count_independently_rederived": true,
+  "certificates_sha256_verified": true,
+  "win_loss_conflict_scan_against_published_verdict_universe": true
+ },
+ "interpretation_guard": [
+  "WIN7-D10 proves a first-player win within depth 10 only from the seven-stone root of this receipt.",
+  "The receipt closes its S6 rows in the frontier but proves nothing about the empty board or any two-stone root.",
+  "REFUTED-D10 witnesses are NOT LOSS proofs.",
+  "The remaining residual five-parent target rows (72) are a conditional depth-10 sweep/accounting state, not certificates.",
+  "The standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+ ]
+}
