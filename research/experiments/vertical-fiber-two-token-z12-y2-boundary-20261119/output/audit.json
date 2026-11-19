@@ -1,0 +1,52 @@
+{
+  "all_pass": true,
+  "classification": "universal proof by x-induction and complete A/B/C signature bands",
+  "counts": {
+    "A_B_C_signature_coverage_identity_mex_and_Theorem_T": 4543485,
+    "B_C_child_anchor_direct_checks": 25912,
+    "Theorem_T_formula_grid": 4576474,
+    "fixed_seed_ABC_scatter": 25000,
+    "general_tail": 39996,
+    "height_only_reduction_R_le_13": 13986,
+    "ordered_and_canonical_direct_vs_formula": 12956
+  },
+  "failure_count": 0,
+  "finite_audit_role": "independent ordered/canonical recursion, child anchors, band coverage/signature/mex, low-R reduction, tail, parity, and fixed-seed scatter checks only",
+  "first_failures": [],
+  "scope": {
+    "anchor_R": "0 <= R <= x+40",
+    "anchor_x": [
+      2,
+      80
+    ],
+    "direct_R": "0 <= R <= x+40",
+    "direct_x": [
+      2,
+      80
+    ],
+    "low_R": "0 <= R <= 13",
+    "low_x": [
+      2,
+      1000
+    ],
+    "scatter_points": 25000,
+    "scatter_seed": 20261119,
+    "signature_R": "1 <= R <= x+14",
+    "signature_x": [
+      2,
+      3000
+    ],
+    "tail_R": "x+15 <= R <= x+18",
+    "tail_x": [
+      2,
+      10000
+    ],
+    "theorem_grid_R": "0 <= R <= x+24",
+    "theorem_grid_x": [
+      2,
+      3000
+    ]
+  },
+  "target": "H(R;(x,2);12), x>=2, R>=0",
+  "total_checks": 9237809
+}
