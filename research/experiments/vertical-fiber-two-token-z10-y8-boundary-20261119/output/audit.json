@@ -1,0 +1,39 @@
+{
+  "all_pass": true,
+  "classification": "universal proof by x-induction using explicit A/B/C signature bands, K1009, K0998, K0832 Theorem T, height-only reduction and the general high-R tail; finite checks are independent audits only",
+  "counts": {
+    "K1002_agreement_grid": 2050797,
+    "Theorem_T_formula_grid": 2050797,
+    "direct_formula_two_engines": 7950,
+    "even_parent_bound": 1017925,
+    "height_only_reduction": 5423,
+    "independent_BC_anchor_direct": 7950,
+    "mex_identity": 2036846,
+    "odd_parent_bound": 1018921,
+    "signature_coverage_and_identity": 2036846,
+    "tail_formula": 19972,
+    "tail_signature": 7972
+  },
+  "failures": [],
+  "repeat_byte_identical": true,
+  "repeat_runs": 2,
+  "scope": {
+    "K1002_agreement_R": "0 <= R <= x+24",
+    "K1002_agreement_x": [8, 2000],
+    "direct_R": "0 <= R <= x+40",
+    "direct_x": [8, 60],
+    "height_only_R": "1 <= R <= 11",
+    "height_only_x": [8, 500],
+    "signature_R": "1 <= R <= x+18",
+    "signature_x": [8, 2000],
+    "tail_R": "x+19 <= R <= x+22",
+    "tail_signature_R": "x+19 <= R <= x+22",
+    "tail_signature_x": [8, 2000],
+    "tail_x": [8, 5000],
+    "theorem_R": "0 <= R <= x+24",
+    "theorem_x": [8, 2000]
+  },
+  "sha256_without_hash_field": "a2dfe92cf133e7bcb293a7b92698a3d17ff454a9d348f6754e3eed8bd73bd304",
+  "target": "H(R;(x,8);10), x>=8, R>=0",
+  "total_checks": 10261399
+}
