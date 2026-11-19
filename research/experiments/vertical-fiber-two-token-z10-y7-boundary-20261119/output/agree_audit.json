@@ -1,0 +1,41 @@
+{
+  "all_pass": true,
+  "classification": "agreement of the proved K1009 y=7 slice with the K1002 y>=6 uniform candidate: ZERO mismatches on the audited grid (y=7 is the second row of the candidate's claimed domain; the leading row y=6 was proved in K1008); the identity beyond the grid follows from the closed-form band structure (each d-regime reduces to identical set expressions)",
+  "expected_mismatches": [],
+  "grid": {
+    "R": [
+      0,
+      "x+21"
+    ],
+    "checks": 2042853,
+    "x": [
+      7,
+      2000
+    ]
+  },
+  "height_only": {
+    "R": [
+      1,
+      11
+    ],
+    "checks": 5434,
+    "x": [
+      7,
+      500
+    ]
+  },
+  "mismatches_observed": [],
+  "repeat_byte_identical": true,
+  "repeat_runs": 2,
+  "sha256_without_hash_field": "24da422539818530e9f17cb002d771b51a64a9a24afb5d9d582e0c6b20e4d892",
+  "tail": {
+    "R": "x+18..x+22",
+    "checks": 24970,
+    "x": [
+      7,
+      5000
+    ]
+  },
+  "target": "agreement K1009 (K1002 on y=7 slice)",
+  "total_checks": 2073257
+}
