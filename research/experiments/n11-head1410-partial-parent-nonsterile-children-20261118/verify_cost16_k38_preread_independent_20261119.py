@@ -266,10 +266,11 @@ def compare_layer(label, derived, published, checks):
         return (got == expected
                 and int(nc[section]["total"]) == sum(expected.values())
                 and int(nc[section]["expected_total"]) == sum(expected.values()))
+    pair_total = int(nc["pair"]["total"])
+    pair_expected = int(nc["pair"]["expected_total"])
     ck("new_pair_triple_quad_quint_censuses",
        pair == derived["new_pair"]
-       and int(nc["pair"]["total"]) == len(derived["prior_hit_indices"]) + 0
-          + (int(nc["pair"]["total"]) - len(derived["prior_hit_indices"]))
+       and pair_total == pair_expected == sum(pair.values())
        and census_field("triple", derived["new_triple"])
        and census_field("quad", derived["new_quad"])
        and census_field("quint", derived["new_quint"]),
@@ -427,6 +428,16 @@ def main() -> int:
        {"counts": sextets, "total": math.comb(38, 6),
         "implied_rank36_total": math.comb(36, 6),
         "implied_rank37_total": math.comb(37, 6)})
+    for n, pub in (
+        (36, k38pre["rank36_regression"]),
+        (37, k38pre["rank37_regression"]),
+        (38, k38pre["rank38"]),
+    ):
+        expected_six = {"b_only": 0, "zero": math.comb(n, 6), "disjoint": 0}
+        ck(f"rank{n}_published_sextet_subset_of_rank38_all_zero",
+           normalize_counts(pub["sextet_census"]["counts"]) == expected_six
+           and int(pub["sextet_census"]["total"]) == math.comb(n, 6),
+           {"counts": expected_six, "total": math.comb(n, 6)})
 
     # Era continuity: full(n) - new(n) equals full(n-1), exact for both
     # b_only and zero quint classes.  Disjoint quints remain absent.
