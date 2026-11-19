@@ -49,6 +49,9 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/output/inversive_plane.json
   role: data
   note: q=3,5 の反転平面ゲーム全値
+- path: research/experiments/finite-field-kyouen-20261120/DET_AREA_POWER.md
+  role: source
+  note: Area*power<=a^4/4の鋭い上界
 - path: research/experiments/finite-field-kyouen-20261120/DET_GAMMA_AREA.md
   role: proof
   note: gamma=-2*Areaの証明と|gamma|<=a^2
