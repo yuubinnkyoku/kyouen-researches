@@ -74,6 +74,12 @@ jobs:
         run: |
           uv run --locked python research/experiments/vertical-fiber-two-token-z10-y4-boundary-20261119/verify_z10_y4.py
           git diff --exit-code -- research/experiments/vertical-fiber-two-token-z10-y4-boundary-20261119/output/audit.json
+      - name: Audit K1007 two-token z=10 y=5 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z10-y5-boundary-20261119/verify_z10_y5.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z10-y5-boundary-20261119/output/audit.json
+          uv run --locked python research/experiments/vertical-fiber-two-token-z10-y5-boundary-20261119/agree_k1002_y5.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z10-y5-boundary-20261119/output/agree_audit.json
       - name: Audit quantitative circle-density modular checker
         run: python research/experiments/fixed-width/scripts/verify_quantitative_density.py
       - name: Audit prime-avoidance finite checks
@@ -858,3 +864,6 @@ jobs:
 
 # Refresh generated views for K1006 z=10 y=4 two-token boundary slice full Grundy theorem (x-outer induction, 8,187,862 audit checks, zero mismatches, two byte-identical runs; 2026-11-19).
 # Refresh generated knowledge after K1006 publication; z=10 y=5 slice and the y>=6 uniform conjecture remain open (2026-11-19).
+
+# Refresh generated views for K1007 z=10 y=5 two-token boundary slice full Grundy theorem (x-outer induction, 8,193,568 audit checks, zero mismatches, two byte-identical runs; plus K1002-agreement audit, 2,073,342 checks with mismatches exactly the two h=z diagonal points (5,11),(5,13); 2026-11-19).
+# Refresh generated knowledge after K1007 publication; the z=10 y>=6 uniform conjecture remains open, but the y-strong-induction trinity for the y=6 row is now assembled (2026-11-19).
