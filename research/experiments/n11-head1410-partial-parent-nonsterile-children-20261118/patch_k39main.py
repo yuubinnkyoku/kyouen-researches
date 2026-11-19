@@ -1309,3 +1309,656 @@ rep(r'''    # ---- quints (415,741 top-37 zeros + 20,156 prev b_only +
         or (37 in c)
         for c in j5
         if j5[c]["class"] == "b_only" and IDX38 not in c))
+    chk("quints.disjoint_union_size_10", all(
+        len(done5[c]["union"]) == 10
+        for c in j5 if j5[c]["class"] == "disjoint"))
+    chk("quints.bounds", all(
+        j5[c]["joint"] <= min(
+            j4[tuple(sorted(set(c) - {x}))]["joint"] for x in c)
+        for c in j5 if j5[c]["joint"]))
+    # new-era double-row histogram (machine-derived from the
+    # 14,166 computed records; the 508 disjoint records have no
+    # doubled row, so the histogram counts b_only records only):
+    # rows 5 and 24 double for the first time in the quint layer
+    # (763 and 179 records -- the first generation with two new
+    # double rows at once); the preread new_quint histogram
+    # agrees
+    new5_dbl = {}
+    for c, e in done5.items():
+        if e["class"] != "b_only":
+            continue
+        cnt = Counter(r for i in c for r in rows[i])
+        d = [r for r, v in cnt.items() if v == 2][0]
+        new5_dbl[d] = new5_dbl.get(d, 0) + 1
+    chk("quints.new_era_double_rows",
+        new5_dbl == {0: 198, 1: 4, 4: 26, 5: 763, 7: 4, 8: 4, 9: 4,
+                     11: 4, 14: 4, 15: 1561, 16: 38, 18: 6562,
+                     19: 4267, 23: 10, 24: 179, 29: 4, 30: 26},
+        new5_dbl)
+    # every b_only quint has exactly three b_only 4-subsets
+    # (remove one of the three fresh roots) and two disjoint
+    # 4-subsets (remove one of the two doubled-row sharers);
+    # every disjoint quint has five disjoint 4-subsets (the
+    # first disjoint quints ever, machine-verified for all 508);
+    # every disjoint quad has four disjoint 3-subsets
+    sub_ok = True
+    for c in j5:
+        if j5[c]["class"] not in ("b_only", "disjoint"):
+            continue
+        kinds = [j4[tuple(sorted(set(c) - {x}))]["class"] for x in c]
+        if j5[c]["class"] == "b_only":
+            if sorted(kinds) != ["b_only", "b_only", "b_only",
+                                 "disjoint", "disjoint"]:
+                sub_ok = False
+        else:
+            if set(kinds) != {"disjoint"}:
+                sub_ok = False
+    for c in j4:
+        if j4[c]["class"] != "disjoint":
+            continue
+        kinds = [j3[tuple(sorted(set(c) - {x}))]["class"] for x in c]
+        if set(kinds) != {"disjoint"}:
+            sub_ok = False
+    chk("quints.subset_structure", sub_ok)
+    chk("quints.disjoint_A_terms", all(
+        done5[c]["joint_A"] > 0
+        for c in j5 if j5[c]["class"] == "disjoint"))''', 1)
+
+rep(r'''    # ---- sextets: the quint-order I-E truncation stays closed at
+    # k=38.  The published sextet census (commit 583b0bf1) proved
+    # C(26,6)/C(27,6)/C(28,6) all zero, and the k=29/k=30/k=31/
+    # k=32/k=33/k=34/k=35/k=36/k=37 publications reclassified
+    # C(29,6)/C(30,6)/C(31,6)/C(32,6)/C(33,6)/C(34,6)/C(35,6)/
+    # C(36,6)/C(37,6) all zero (zero is superset-closed); a
+    # 6-subset of the top-38 either lies inside the top-37
+    # (already zero) or contains the rank-38 root, so the full
+    # C(38,6) reclassification here closes the k=38 truncation
+    # (also cross-checked against the k=38 preread sextet
+    # census, commit 75fabfd0).
+    cen6 = {"b_only": 0, "zero": 0, "disjoint": 0}
+    n6 = 0
+    for c in itertools.combinations(range(K), 6):
+        n6 += 1
+        cen6[classify(rows, c)[0]] += 1
+    chk("sextet_census_k38",
+        n6 == 2760681 and cen6 == {"b_only": 0, "zero": 2760681,
+                                   "disjoint": 0}, cen6)
+    chk("preread_match.sextet_census", cen6 == {
+        "b_only": pre["rank38"]["sextet_census"]["counts"]["b_only"],
+        "zero": pre["rank38"]["sextet_census"]["counts"]["zero"],
+        "disjoint":
+            pre["rank38"]["sextet_census"]["counts"]["disjoint"]})''',
+    r'''    # ---- sextets: the level-6 I-E term breaks open at k=39.
+    # The published k=26..k=38 sextet censuses proved C(k,6) all
+    # zero for every k <= 38 (zero is superset-closed); at k=39
+    # the full C(39,6)=3,262,623 census is 5,852 b_only /
+    # 3,256,771 zero / 0 disjoint -- the first non-zero sextet
+    # layer ever, all 5,852 containing the rank-39 root -- and
+    # the k=39 preread's level-7 closure scan (99,122 candidate
+    # monotone 7-extensions of the 5,852 b_only sextets, all
+    # zero; commit 848727f1) pins the I-E truncation at level 6.
+    j6 = {}
+    n6 = 0
+    cen6 = {"b_only": 0, "zero": 0, "disjoint": 0}
+    dbl6 = {}
+    for c in itertools.combinations(range(K), 6):
+        n6 += 1
+        kind, union = classify(rows, c)
+        cen6[kind] += 1
+        if kind == "zero":
+            j6[c] = {"class": "zero", "joint": 0, "A": 0, "B": 0}
+            continue
+        if kind == "disjoint":
+            raise AssertionError(("disjoint sextet at k=39, but "
+                                  "the preread census pins 0", c))
+        assert kind == "b_only", (c, kind)
+        # the k=26..k=38 censuses were disjoint- and b_only-zero,
+        # so every b_only sextet must contain rank-39
+        assert IDX38 in c, ("prev-era b_only sextet", c)
+        assert c in done6, ("missing new b_only sextet record", c)
+        cnt = Counter(r for i in c for r in rows[i])
+        d = [r for r, v in cnt.items() if v == 2][0]
+        dbl6[d] = dbl6.get(d, 0) + 1
+        j6v = done6[c]["joint"]
+        j6[c] = {"class": "b_only", "joint": j6v,
+                 "A": 0, "B": j6v}
+    chk("sextet_census_k39",
+        n6 == 3262623 and cen6 == {"b_only": 5852, "zero": 3256771,
+                                   "disjoint": 0}, cen6)
+    chk("preread_match.sextet_census", cen6 == {
+        "b_only": pre["rank39"]["sextet_census"]["counts"]["b_only"],
+        "zero": pre["rank39"]["sextet_census"]["counts"]["zero"],
+        "disjoint":
+            pre["rank39"]["sextet_census"]["counts"]["disjoint"]})
+    chk("sextets.double_rows_hist",
+        dbl6 == {15: 682, 18: 3147, 19: 2023}, dbl6)
+    # every b_only sextet has four b_only 5-subsets and two
+    # disjoint 5-subsets (machine-verified for all 5,852)
+    sub6_ok = True
+    for c in j6:
+        if j6[c]["class"] != "b_only":
+            continue
+        kinds = [j5[tuple(sorted(set(c) - {x}))]["class"] for x in c]
+        if sorted(kinds) != ["b_only", "b_only", "b_only",
+                            "b_only", "disjoint", "disjoint"]:
+            sub6_ok = False
+    chk("sextets.subset_structure", sub6_ok)
+    chk("sextets.bounds", all(
+        j6[c]["joint"] <= min(
+            j5[tuple(sorted(set(c) - {x}))]["joint"] for x in c)
+        for c in j6 if j6[c]["joint"]))''', 1)
+
+rep(r'''    c3 = done("cross3", lambda e: (tuple(e["combo"]), e["lineage"]))
+    c4 = done("cross4", lambda e: (tuple(e["combo"]), e["lineage"]))
+    cq4 = done("crossq4", lambda e: (tuple(e["combo"]),
+                                      e["lineage"]))
+    c5 = done("cross5", lambda e: (tuple(e["combo"]), e["lineage"]))
+    chk("cross.triples_2", len(c3) == 2
+        and all(e["match"] for e in c3.values()))
+    chk("cross.quads_2", len(c4) == 2
+        and all(e["match"] for e in c4.values()))
+    chk("cross.disjoint_quads_2", len(cq4) == 2
+        and all(e["match"] for e in cq4.values()))
+    chk("cross.quints_2", len(c5) == 2
+        and all(e["match"] for e in c5.values()))''',
+    r'''    c3 = done("cross3", lambda e: (tuple(e["combo"]), e["lineage"]))
+    c4 = done("cross4", lambda e: (tuple(e["combo"]), e["lineage"]))
+    cq4 = done("crossq4", lambda e: (tuple(e["combo"]),
+                                      e["lineage"]))
+    c5 = done("cross5", lambda e: (tuple(e["combo"]), e["lineage"]))
+    cq5 = done("crossq5", lambda e: (tuple(e["combo"]),
+                                      e["lineage"]))
+    c6 = done("cross6", lambda e: (tuple(e["combo"]), e["lineage"]))
+    chk("cross.triples_2", len(c3) == 2
+        and all(e["match"] for e in c3.values()))
+    chk("cross.quads_2", len(c4) == 2
+        and all(e["match"] for e in c4.values()))
+    chk("cross.disjoint_quads_2", len(cq4) == 2
+        and all(e["match"] for e in cq4.values()))
+    chk("cross.quints_2", len(c5) == 2
+        and all(e["match"] for e in c5.values()))
+    cq5_ok = len(cq5) == 4
+    if cq5_ok:
+        by_quint = {}
+        for e in cq5.values():
+            key = tuple(sorted(e["combo"]))
+            by_quint.setdefault(key, {})[e["lineage"]] = e
+        keys5 = sorted(by_quint)
+        cq5_ok = (len(keys5) == 2)
+        for key in keys5:
+            by_lin = by_quint[key]
+            if not (set(by_lin) == {"lazypm", "mypm"}
+                    and by_lin["lazypm"]["joint_A"]
+                    == by_lin["mypm"]["joint_A"]
+                    and by_lin["lazypm"]["joint_B"]
+                    == by_lin["mypm"]["joint_B"]
+                    and by_lin["lazypm"]["joint_A"]
+                    == by_lin["lazypm"]["ref_A"]
+                    and by_lin["lazypm"]["joint_B"]
+                    == by_lin["lazypm"]["ref_B"]):
+                cq5_ok = False
+    chk("cross.disjoint_quints_2x2", cq5_ok)
+    chk("cross.sextets_2", len(c6) == 2
+        and all(e["match"] for e in c6.values()))''', 1)
+
+rep(r'''    # ---- kill(k) k=1..34 with the fifth-order I-E''',
+    r'''    # ---- kill(k) k=1..39 with the sixth-order I-E (the
+    #      level-6 term is B-only: j6_A == 0 for every sextet)''', 1)
+
+rep(r'''        for c in itertools.combinations(range(k), 5):
+            v += j5[c]["joint"]
+            vA += j5[c]["A"]
+            vB += j5[c]["B"]
+        kill[k] = v''',
+    r'''        for c in itertools.combinations(range(k), 5):
+            v += j5[c]["joint"]
+            vA += j5[c]["A"]
+            vB += j5[c]["B"]
+        for c in itertools.combinations(range(k), 6):
+            v -= j6[c]["joint"]
+            vA -= j6[c]["A"]
+            vB -= j6[c]["B"]
+        kill[k] = v''', 1)
+
+rep(r'''    chk("reproduce_k1_37",
+        all(kill[k] == int(k37j["values"]["kill"]["k%d" % k])
+            for k in range(1, 38)))
+    chk("split.reproduce_k1_37",
+        all(killA[k] == int(k37j["values"]["kill_A"]["k%d" % k])
+            and killB[k] == int(k37j["values"]["kill_B"]["k%d" % k])
+            for k in range(1, 38)))''',
+    r'''    chk("reproduce_k1_38",
+        all(kill[k] == int(k38j["values"]["kill"]["k%d" % k])
+            for k in range(1, 39)))
+    chk("split.reproduce_k1_38",
+        all(killA[k] == int(k38j["values"]["kill_A"]["k%d" % k])
+            and killB[k] == int(k38j["values"]["kill_B"]["k%d" % k])
+            for k in range(1, 39)))''', 1)
+
+rep(r'''    chk("survival.marginal",
+        0 <= kill[K] - kill[K - 1] <= mem[K - 1],
+        {"k38_minus_k37": str(kill[K] - kill[K - 1]),
+         "m38": str(mem[K - 1])})''',
+    r'''    chk("survival.marginal",
+        0 <= kill[K] - kill[K - 1] <= mem[K - 1],
+        {"k39_minus_k38": str(kill[K] - kill[K - 1]),
+         "m39": str(mem[K - 1])})''', 1)
+
+rep(r'''    new5 = {c: e for c, e in done5.items()}''',
+    r'''    new5 = {c: e for c, e in done5.items()
+            if e["class"] == "b_only"}
+    new5d = {c: e for c, e in done5.items()
+             if e["class"] == "disjoint"}''', 1)
+
+rep(r'''        "schema": "n11-cost16-survival-k38-20261119-v1",''',
+    r'''        "schema": "n11-cost16-survival-k39-20261119-v1",''', 1)
+
+rep(r'''        "title": ("Exact survival curve extended to k=38 for the "
+                  "31-row cost-16 parent: rank-38 (19,29) has no "
+                  "fresh row -- row 29 arrives with a single prior "
+                  "sharer and doubles for the first time in the "
+                  "triple layer (8 records) and the quad layer "
+                  "(11 records) but never in the quint layer (the "
+                  "same single-share pattern as row 7 at rank-33 "
+                  "row 9 at rank-34 and row 8 at rank-37), while "
+                  "row 19 becomes a twelve-sharer hub band row, "
+                  "the new pair census is 13 shared / 24 disjoint "
+                  "(the shared pairs are exactly the twelve "
+                  "row-19 sharers plus the one row-29 sharer, "
+                  "index 19), and the quint era opened at k=26 "
+                  "continues with 2,868 new non-zero b_only "
+                  "quints of the C(38,5)=501,942 5-subsets on top "
+                  "of the 20,156 published ones (the quint "
+                  "double-row histogram stays within the four "
+                  "hub rows 15/16/18/19: 15:3463 / 16:687 / "
+                  "18:11303 / 19:7571) and the A-type 4-way term "
+                  "grows to 1,677 (157 new disjoint quads on top "
+                  "of the 1,520 published); 133 new disjoint "
+                  "triples, 24 new disjoint pairs and 13 shared "
+                  "ones; the full C(38,6)=2,760,681 sextet census "
+                  "is all zero so the I-E stays closed at the "
+                  "fifth order"),''',
+    r'''        "title": ("Exact survival curve extended to k=39 for the "
+                  "31-row cost-16 parent: rank-39 (5,24) has no "
+                  "fresh row and no single-sharer row -- both "
+                  "rows arrive with exactly two prior sharers "
+                  "(row 5 via indices 2 and 25, row 24 via "
+                  "indices 4 and 14) and double together for the "
+                  "first time in the triple (54 and 46 records), "
+                  "quad (391 and 259 records) and quint (763 and "
+                  "179 records) layers -- the first generation "
+                  "whose double-row family gains two rows at "
+                  "once; the new pair census is 4 shared / 34 "
+                  "disjoint (the shared pairs are exactly the "
+                  "four prior sharers of rows 5 and 24), 1,009 "
+                  "new disjoint quads extend the A-type 4-way "
+                  "term to 2,686, the first disjoint quints ever "
+                  "appear (508, all 10-row unions) opening the "
+                  "A-type 5-way term, and the sextet layer turns "
+                  "non-zero for the first time (5,852 b_only "
+                  "among the C(39,6)=3,262,623 6-subsets, all "
+                  "containing rank-39) opening the B-type 6-way "
+                  "term with the preread level-7 closure pinning "
+                  "the I-E truncation at level 6"),''', 1)
+
+rep(r'''            "k38_preread": {"path": K38_PREREAD_REL,
+                            "git_blob_sha1": K38_PREREAD_PIN,
+                            "commit": K38_PREREAD_COMMIT},''',
+    r'''            "k38_preread": {"path": K38_PREREAD_REL,
+                            "git_blob_sha1": K38_PREREAD_PIN,
+                            "commit": K38_PREREAD_COMMIT},
+            "survival_k38_json": {"path": K38_JSON_REL,
+                                  "git_blob_sha1": K38_JSON_PIN,
+                                  "commit": K38_JSON_COMMIT},
+            "k39_preread": {"path": K39_PREREAD_REL,
+                            "git_blob_sha1": K39_PREREAD_PIN,
+                            "commit": K39_PREREAD_COMMIT},''', 1)
+
+rep(r'''            "rank38_root": {"root": top[IDX38]["root"],
+                            "rows": list(rows[IDX38]),
+                            "membership": str(mem[IDX38]),
+                            "a_part": str(ap[IDX38]),
+                            "b_part": str(bp[IDX38]),
+                            "note": "rank-38 (19,29): row 29 "
+                                    "has a single prior sharer "
+                                    "among the top-37 (index 19, "
+                                    "the rank-20 root (18,29)), "
+                                    "so it doubles for the first "
+                                    "time in the triple and quad "
+                                    "layers but never in the "
+                                    "quint layer (the same "
+                                    "single-share pattern as "
+                                    "row 7 at rank-33, row 9 at "
+                                    "rank-34 and row 8 at "
+                                    "rank-37), while row 19 is "
+                                    "now a twelve-sharer hub "
+                                    "band row (indices 0,2,3,8,"
+                                    "9,10,15,29,32,33,35,36); 24 "
+                                    "disjoint and 13 shared "
+                                    "partners"},''',
+    r'''            "rank39_root": {"root": top[IDX38]["root"],
+                            "rows": list(rows[IDX38]),
+                            "membership": str(mem[IDX38]),
+                            "a_part": str(ap[IDX38]),
+                            "b_part": str(bp[IDX38]),
+                            "note": "rank-39 (5,24): the first "
+                                    "two-sharer/two-sharer root "
+                                    "with no fresh row and no "
+                                    "single-sharer row (row 5 "
+                                    "has the prior sharers "
+                                    "index 2 = the rank-3 root "
+                                    "(5,19) and index 25 = the "
+                                    "rank-26 root (5,16); row "
+                                    "24 has index 4 = the "
+                                    "rank-5 root (18,24) and "
+                                    "index 14 = the rank-15 root "
+                                    "(15,24)); 4 shared and 34 "
+                                    "disjoint partners"},''', 1)
+
+rep(r'''            "preread_exact_integers": (
+                {"note": "the k=38 preread (commit 75fabfd0) is "
+                         "pure Python with exact integer "
+                         "serialization (same toolchain as the "
+                         "k=32/k=33/k=34/k=35/k=36/k=37 prereads, "
+                         "commits 490a3e44 / 67068e07 / "
+                         "2a14f351 / 90fc51c9 / 67985e92c9 / "
+                         "98321003), it carries 34 checks all "
+                         "pass, and it needs no big-integer "
+                         "erratum; its membership/a_part/b_part "
+                         "(119940649042609991 / 91876760891572775 / "
+                         "28063888151037216) equal the pinned "
+                         "aggregate exactly (asserted at load); "
+                         "the structural fields (rows, hex, prior "
+                         "hit indices, censuses, histograms) are "
+                         "cross-checked at load and by the "
+                         "preread_match.* finalize checks"}),"triple_census_k38": cen,''',
+    r'''            "preread_exact_integers": (
+                {"note": "the k=39 preread (commit 848727f1) is "
+                         "pure Python with exact integer "
+                         "serialization (same toolchain as the "
+                         "k=32/k=33/k=34/k=35/k=36/k=37/k=38 "
+                         "prereads, commits 490a3e44 / 67068e07 / "
+                         "2a14f351 / 90fc51c9 / 67985e92c9 / "
+                         "98321003 / 75fabfd0), it carries 35 "
+                         "checks all pass, and it needs no "
+                         "big-integer erratum; its "
+                         "membership/a_part/b_part "
+                         "(119883868794265826 / 91824665662421012 "
+                         "/ 28059203131844814) equal the pinned "
+                         "aggregate exactly (asserted at load); "
+                         "the structural fields (rows, hex, prior "
+                         "hit indices, censuses, histograms, the "
+                         "disjoint quint/sextet tallies, the "
+                         "level-7 septet closure) are "
+                         "cross-checked at load and by the "
+                         "preread_match.* finalize checks"}),
+            "triple_census_k39": cen,''', 1)
+
+rep(r'''            "new_quint_census": {"b_only": 2868, "zero": 63177,
+                                 "disjoint": 0},''',
+    r'''            "new_quint_census": {"b_only": 13658,
+                                 "zero": 59649,
+                                 "disjoint": 508},''', 1)
+
+rep(r'''            "quint_census_k38": cen5,''',
+    r'''            "quint_census_k39": cen5,''', 1)
+
+rep(r'''            "new_quad_b_only_double_row_histogram": (
+                {"note": "row 29 doubles here for the first time "
+                         "in the quad layer (11 records; single "
+                         "prior sharer, the same single-share "
+                         "pattern as row 7 at rank-33, row 9 at "
+                         "rank-34 and row 8 at rank-37), while "
+                         "row 19 is the dominant new double row "
+                         "(1,339 of the 2,519 new b_only quads), "
+                         "machine-derived from the computed new "
+                         "quads in this finalize",
+                 "histogram": quad_dbl_hist}),''',
+    r'''            "new_quad_b_only_double_row_histogram": (
+                {"note": "rows 5 and 24 double here for the first "
+                         "time in the quad layer (391 and 259 "
+                         "records, the first generation with two "
+                         "new double rows at once), while row 19 "
+                         "stays the dominant new double row "
+                         "(1,257 of the 4,398 new b_only quads) "
+                         "and row 18 follows with 1,965, "
+                         "machine-derived from the computed new "
+                         "quads in this finalize",
+                 "histogram": quad_dbl_hist}),''', 1)
+
+rep(r'''            "new_triple_b_only_double_row_histogram": (
+                {"note": "computed fact: 120 of the 420 new b_only "
+                         "triples double row 18, 269 double "
+                         "row 19 and 8 double row 29 (row 29's "
+                         "first doubling, mirroring row 7 at "
+                         "rank-33, row 9 at rank-34 and row 8 at "
+                         "rank-37); rows 21 and 22 never double",
+                 "histogram": triple_dbl_hist}),''',
+    r'''            "new_triple_b_only_double_row_histogram": (
+                {"note": "computed fact: 120 of the 319 new b_only "
+                         "triples double row 18, 66 double row 19 "
+                         "and rows 5 and 24 double here for the "
+                         "first time in the triple layer (54 and "
+                         "46 records, the first generation with "
+                         "two new double rows at once), alongside "
+                         "15 records of row 15",
+                 "histogram": triple_dbl_hist}),''', 1)
+
+rep(r'''            "sextet_census_k38": cen6,''',
+    r'''            "sextet_census_k39": cen6,
+            "new_sextet_census": {"b_only": 5852, "zero": 496090,
+                                  "disjoint": 0},
+            "quint_disjoint_count": 508,
+            "quint_disjoint_union_sizes": {"10": 508},
+            "sextet_b_only_double_rows": dbl6,
+            "septet_zero_closure": (
+                {"note": "the k=39 preread level-7 closure scan "
+                         "(commit 848727f1) enumerated the "
+                         "99,122 candidate monotone 7-extensions "
+                         "of the 5,852 b_only sextets and found "
+                         "all zero (non_zero_class_seven_combos "
+                         "== 0), pinning the marginal I-E "
+                         "truncation at level 6"}),''', 1)
+
+rep(r'''            "quints_zero_synth_count": 63177,''',
+    r'''            "quints_zero_synth_count": 59649,''', 1)
+
+rep(r'''            "quints_jsonl_note": ("zero quints are structural "
+                                  "(classify from the pinned "
+                                  "aggregate) and are not appended "
+                                  "to the JSONL; finalize "
+                                  "reclassifies all 501,942 "
+                                  "5-subsets and asserts the exact "
+                                  "census and the presence of every "
+                                  "b_only record; the full "
+                                  "C(38,6) sextet census is "
+                                  "reclassified and asserted "
+                                  "all-zero (truncation "
+                                  "justification)"),''',
+    r'''            "quints_jsonl_note": ("zero quints are structural "
+                                  "(classify from the pinned "
+                                  "aggregate) and are not appended "
+                                  "to the JSONL; finalize "
+                                  "reclassifies all 575,757 "
+                                  "5-subsets and asserts the exact "
+                                  "census and the presence of every "
+                                  "b_only and disjoint record; the "
+                                  "full C(39,6)=3,262,623 sextet "
+                                  "census is reclassified and "
+                                  "asserted at 5,852 b_only / "
+                                  "3,256,771 zero / 0 disjoint "
+                                  "(level-6 truncation "
+                                  "justification)"),''', 1)
+
+rep(r'''            "ie_mechanism": ("kill(k) = sum m - sum j2 + sum j3 - "
+                             "sum j4 + sum j5 for k <= 38; "
+                             "kill_A(k) = sum a - sum j2_A + "
+                             "sum j3_A - sum j4_A (j5_A == 0); "
+                             "kill_B(k) = sum b - sum j2_B + "
+                             "sum j3_B - sum j4_B + sum j5_B; "
+                             "j4_A comes from the 1,677 disjoint "
+                             "quads (1,520 published at k=37, 157 "
+                             "new at k=38), j5_B from the 23,024 "
+                             "b_only quints (20,156 prev, 2,868 "
+                             "new); the sixth order stays "
+                             "structurally zero (sextet_census_k38)"),''',
+    r'''            "ie_mechanism": ("kill(k) = sum m - sum j2 + sum j3 - "
+                             "sum j4 + sum j5 - sum j6 for "
+                             "k <= 39; kill_A(k) = sum a - "
+                             "sum j2_A + sum j3_A - sum j4_A + "
+                             "sum j5_A (j6_A == 0); kill_B(k) = "
+                             "sum b - sum j2_B + sum j3_B - "
+                             "sum j4_B + sum j5_B - sum j6_B; "
+                             "j4_A comes from the 2,686 disjoint "
+                             "quads (1,677 published at k=38, "
+                             "1,009 new at k=39), j5_A from the "
+                             "508 new disjoint quints at "
+                             "|union|=10 (the first disjoint "
+                             "quints ever), j5_B from the 36,682 "
+                             "b_only quints (23,024 prev, 13,658 "
+                             "new), j6_B from the 5,852 new b_only "
+                             "sextets; the seventh order stays "
+                             "structurally zero "
+                             "(septet_zero_closure)"),''', 1)
+
+rep(r'''            "formulas": {
+                "j4_A_disjoint": ("sum_{s not in union} w1[s] * "
+                                  "pm(V \\ union \\ {s}) at "
+                                  "|union|=8, same union-mask "
+                                  "machinery as k=14, validated by "
+                                  "anchor regression and both pm "
+                                  "lineages"),
+                "j4_B_disjoint": ("two-case (doubled row inside / "
+                                  "outside the union) at |union|=8"),
+                "j5_B_b_only": ("pm(V \\ union) on the 22-row "
+                               "residual, the b_only-quad pattern"),''',
+    r'''            "formulas": {
+                "j4_A_disjoint": ("sum_{s not in union} w1[s] * "
+                                  "pm(V \\ union \\ {s}) at "
+                                  "|union|=8, same union-mask "
+                                  "machinery as k=14, validated by "
+                                  "anchor regression and both pm "
+                                  "lineages"),
+                "j4_B_disjoint": ("two-case (doubled row inside / "
+                                  "outside the union) at |union|=8"),
+                "j5_A_disjoint": ("sum_{s not in union} w1[s] * "
+                                  "pm(V \\ union \\ {s}) at "
+                                  "|union|=10, the same union-mask "
+                                  "machinery extended one level "
+                                  "(no published |union|>8 record "
+                                  "exists to anchor on: re-anchored "
+                                  "on the published |union|=8 chain "
+                                  "and cross-checked with both pm "
+                                  "lineages, crossq5)"),
+                "j5_B_b_only": ("pm(V \\ union) on the 22-row "
+                                "residual, the b_only-quad pattern"),
+                "j6_B_b_only": ("pm(V \\ union) on the 20-row "
+                                "residual for the 5,852 b_only "
+                                "sextets (11-row unions)"),''', 1)
+
+rep(r'''            "marginal_k38": str(kill[K] - kill[K - 1]),''',
+    r'''            "marginal_k39": str(kill[K] - kill[K - 1]),''', 1)
+
+rep(r'''                for c in sorted(new5)},
+        },''',
+    r'''                for c in sorted(new5)},
+            "new_quints_disjoint": {
+                "%d,%d,%d,%d,%d" % c: {"class": "disjoint",
+                                        "union": done5[c]["union"],
+                                        "joint_A": str(j5[c]["A"]),
+                                        "joint_B": str(j5[c]["B"]),
+                                        "joint": str(j5[c]["joint"])}
+                for c in sorted(new5d)},
+            "new_sextets_b_only": {
+                "%d,%d,%d,%d,%d,%d" % c: {"class": "b_only",
+                                          "union": done6[c]["union"],
+                                          "joint_A": "0",
+                                          "joint_B": str(j6[c]["B"]),
+                                          "joint": str(j6[c]["joint"])}
+                for c in sorted(done6)},
+        },''', 1)
+
+rep(r'''    if mode == "quints":
+        sl = int(sys.argv[2]) if len(sys.argv) > 2 else 0
+        return mode_quints(sl)
+    if mode == "anchor":''',
+    r'''    if mode == "quints":
+        sl = int(sys.argv[2]) if len(sys.argv) > 2 else 0
+        return mode_quints(sl)
+    if mode == "sextets":
+        sl = int(sys.argv[2]) if len(sys.argv) > 2 else 0
+        return mode_sextets(sl)
+    if mode == "anchor":''', 1)
+
+rep(r'''    print("usage: pairs [BUDGET] | triples [SLICE] | quads [SLICE] | "
+          "quints [SLICE] | anchor | cross | finalize")''',
+    r'''    print("usage: pairs [BUDGET] | triples [SLICE] | quads [SLICE] | "
+          "quints [SLICE] | sextets [SLICE] | anchor | cross | "
+          "finalize")''', 1)
+
+rep(r'''IDX38''',
+    r'''IDX39''', 42)
+
+rep(r'''load_top38''',
+    r'''load_top39''', 9)
+
+
+def sub(src):
+    for old, new, count in reps:
+        got = src.count(old)
+        if got != count:
+            raise SystemExit(f"FAIL anchor x{got} != {count}: {old[:100]!r}")
+        src = src.replace(old, new)
+    return src
+
+
+def main() -> int:
+    src = open(SRC, encoding="utf-8").read()
+    base_bytes = open(SRC, "rb").read()
+    blob = hashlib.sha1(b"blob %d\x00" % len(base_bytes)
+                  + base_bytes).hexdigest()
+    sha256 = hashlib.sha256(base_bytes).hexdigest()
+    if blob != EXPECT_BASE_BLOB:
+        raise SystemExit(f"FAIL base blob {blob}")
+    if sha256 != EXPECT_BASE_SHA256:
+        raise SystemExit(f"FAIL base sha256 {sha256}")
+    out = sub(src)
+    # residual sanity probes
+    for stale in (
+                  'IDX38',
+                  'M38',
+                  'load_top38',
+                  'load_k38_base',
+                  'pre["rank38"]["',
+                  'k37ja',
+                  'reproduce_k1_37',
+                  '"marginal_k38"',
+                  '"triple_census_k38"',
+                  '"quint_census_k38"',
+                  '"sextet_census_k38"',
+                  'quints.census_501942',
+                  'done %d/37',
+                  'done %d/666',
+                  '%d/7770',
+                  'len(combos) == 666',
+                  'len(combos) == 7770',
+                  'len(combos) == 66045',
+                  '== 20156',
+                  'quints_zero_synth_count\\": 63177',
+    ):
+        if stale in out:
+            raise SystemExit(f"FAIL stale token {stale!r} survived")
+    assert out.count("119940649042609991") == 2, \
+        out.count("119940649042609991")
+    assert out.count("119883868794265826") == 3
+    open(DST, "w", encoding="utf-8").write(out)
+    data = open(DST, "rb").read()
+    print("wrote", DST, len(data), "bytes")
+    print("git_blob_sha1:", hashlib.sha1(
+        b"blob %d\x00" % len(data) + data).hexdigest())
+    print("sha256:", hashlib.sha256(data).hexdigest())
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
