@@ -39,9 +39,26 @@ K1057 resolve5 の条件付き計画（39 pair witness・残余78行完全被覆
 - 78 probe 完走（worker0 40・worker1 38）。pilot_d6 は全 probe で合格（3,402 nodes・loss=false）。
 - **WIN 0 / REFUTED 39 / CAPPED 0 / 順序矛盾 0**、総nodes 115,940,695、最大単一probe 9,930,490 nodes。
 - 帰結: 78行は1行も閉じず、frontier 6,213行/492,021・solved S6 1,635・5親target 34/112不変
-  （K1057 fold後のまま）。43-pair掃引のdeflation後に再結合した39 fresh pairの全滅により、
-  残余78行へのadd-one-stone・depth-10レーンのfresh候補供給はこのスコープで枯渇。
-- 分類は assemble39.py（生記録から独立組立・GATE: 両順序・uncapped・pilot・partition一致）。
+  （K1057 fold後のまま）。選択39-root計画は全件消費されたが、候補pool自体は枯渇して
+  いない（fresh-safe 4,728本のうち掃引外4,689本・706 pair辺のうち未選択667辺。
+  下記「追試」と候補供給範囲監査 n11-residual78-witness39-candidate-supply-scope-audit-20261120 参照）。
+- 分類は assemb
+le39.py（生記録から独立組立・GATE: 両順序・uncapped・pilot・partition一致）。
 - K1059 item / research/log/2026-11-19-n11-residual78-39witness-d10-sweep.md 参照。
-- 次の選択肢: depth>10コスト測定（数rootの深さ別nodes傾向）、add-two-stones拡張census、
-  残余78行の幾何構造解析、並走 n11-residual-86-row-min-cover レーンとの視点統合。
+- 次の選択肢: resolve6再照合（39 dead root除外後のmatching再計算・全体cache結合）、
+  add-two-stones拡張census、残余78行の幾何構造解析、並走 n11-residual-86-row-min-cover
+  レーンとの視点統合。
+
+## 追試: 深さ飽和audit（depth-saturation/・2026-11-19）
+
+- 同じ39 root・同じ分解・同じrunner v17でdepth 12・14（差があった6分岐は16）を
+  全78 probe再実行。全probe loss=false・uncapped・pilot合格。
+- **72/78分岐はd12==d14のnode数完全一致、残余6分岐（root 5個・うち1個両順序）も
+  d14==d16完全一致**（d12総nodes 134,902,159 = d10比+16.4%）。
+- **runner v17の移動モデル・終端規則のもとで39 rootの探索木は深さ14以内に飽和し、
+  全深さで先手勝ちなし。この39 rootは閉鎖witnessとして永久使用不能。**
+- 初期版の「fresh候補供給はこのスコープで枯渇」は訂正済み（39本はmatchingの選択。
+  poolは枯渇していない。次はresolve6再照合）。
+- 詳細・全成果物は depth-saturation/README.md・depth-saturation-audit-20261119.json
+  （SHA-256 46afc523…）。飽和も行のゲーム理論的値には言及しない。78行は1行も閉じず、
+  **標準11×11空盤・二石root・S2・class 1/2/4はUNKNOWNのまま。**
