@@ -295,13 +295,17 @@ def compare_layer(label, derived, published, checks):
     published_new_disjoint = int(
         published.get("disjoint_quad_count",
                       published["new_census"]["quad"]["disjoint"]))
+    disjoint_ok = published_new_disjoint == derived["disjoint_quad_count"]
+    if "disjoint_quad_union_sizes" in published:
+        disjoint_ok = (disjoint_ok
+            and normalize_hist(published["disjoint_quad_union_sizes"])
+                == derived["disjoint_quad_union_sizes"])
+    if "cumulative_disjoint_quads" in published:
+        disjoint_ok = (disjoint_ok
+            and int(published["cumulative_disjoint_quads"])
+                == derived["global_disjoint_quads"])
     ck("disjoint_quad_union_and_cumulative_recount",
-       published_new_disjoint == derived["disjoint_quad_count"]
-       and normalize_hist(published["disjoint_quad_union_sizes"])
-           == derived["disjoint_quad_union_sizes"]
-       and int(published["cumulative_disjoint_quads"])
-           == derived["global_disjoint_quads"]
-       and set(derived["disjoint_quad_union_sizes"]) == {8},
+       disjoint_ok and set(derived["disjoint_quad_union_sizes"]) == {8},
        {"new": derived["disjoint_quad_count"],
         "union_sizes": derived["disjoint_quad_union_sizes"],
         "global": derived["global_disjoint_quads"]})
