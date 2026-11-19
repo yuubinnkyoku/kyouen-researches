@@ -1,0 +1,99 @@
+[
+  {
+    "points": 4,
+    "empty_grundy": 1,
+    "first_move_grundy": {
+      "0": 4
+    },
+    "winning_first_moves": 4,
+    "all_first_moves_win": true,
+    "no_first_move_wins": false,
+    "consistent": true,
+    "board": "2x2 integer"
+  },
+  {
+    "points": 9,
+    "empty_grundy": 1,
+    "first_move_grundy": {
+      "0": 9
+    },
+    "winning_first_moves": 9,
+    "all_first_moves_win": true,
+    "no_first_move_wins": false,
+    "consistent": true,
+    "board": "3x3 integer"
+  },
+  {
+    "points": 16,
+    "empty_grundy": 0,
+    "first_move_grundy": {
+      "1": 16
+    },
+    "winning_first_moves": 0,
+    "all_first_moves_win": false,
+    "no_first_move_wins": true,
+    "consistent": true,
+    "board": "4x4 integer"
+  },
+  {
+    "points": 25,
+    "empty_grundy": 1,
+    "first_move_grundy": {
+      "0": 9,
+      "3": 16
+    },
+    "winning_first_moves": 9,
+    "all_first_moves_win": false,
+    "no_first_move_wins": false,
+    "consistent": true,
+    "board": "5x5 integer"
+  },
+  {
+    "points": 9,
+    "empty_grundy": 1,
+    "first_move_grundy": {
+      "0": 9
+    },
+    "winning_first_moves": 9,
+    "all_first_moves_win": true,
+    "no_first_move_wins": false,
+    "consistent": true,
+    "board": "AG(2,3)"
+  },
+  {
+    "points": 25,
+    "empty_grundy": 1,
+    "first_move_grundy": {
+      "0": 25
+    },
+    "winning_first_moves": 25,
+    "all_first_moves_win": true,
+    "no_first_move_wins": false,
+    "consistent": true,
+    "board": "AG(2,5)"
+  },
+  {
+    "points": 10,
+    "empty_grundy": 1,
+    "first_move_grundy": {
+      "0": 10
+    },
+    "winning_first_moves": 10,
+    "all_first_moves_win": true,
+    "no_first_move_wins": false,
+    "consistent": true,
+    "board": "inversive q=3"
+  },
+  {
+    "points": 26,
+    "empty_grundy": 1,
+    "first_move_grundy": {
+      "0": 26
+    },
+    "winning_first_moves": 26,
+    "all_first_moves_win": true,
+    "no_first_move_wins": false,
+    "consistent": true,
+    "board": "inversive q=5"
+  }
+]
