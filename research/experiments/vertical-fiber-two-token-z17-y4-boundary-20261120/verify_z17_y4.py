@@ -2,7 +2,7 @@
 """Independent checks for the z=17, y=4 two-token Grundy classification.
 
 The proof itself is the x-induction and the complete A/B/C signature bands in
-report.md. This verifier checks the child anchors, the parent closed form,
+report.md. This verifier uses the published child closed forms and checks the parent classification,
 all displayed signature bands, the induction step on a large finite box, and
 a separate memoized recursion.
 """
