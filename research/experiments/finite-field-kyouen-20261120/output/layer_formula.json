@@ -1,0 +1,101 @@
+[
+  {
+    "q": 3,
+    "points": 10,
+    "circles": 30,
+    "circle_size": 4,
+    "layers": {
+      "0": {
+        "exact": 1,
+        "disjoint_formula": 1,
+        "match": true
+      },
+      "1": {
+        "exact": 10,
+        "disjoint_formula": 10,
+        "match": true
+      },
+      "2": {
+        "exact": 45,
+        "disjoint_formula": 45,
+        "match": true
+      },
+      "3": {
+        "exact": 120,
+        "disjoint_formula": 120,
+        "match": true
+      },
+      "4": {
+        "exact": 180,
+        "disjoint_formula": 180,
+        "match": true
+      },
+      "5": {
+        "exact": 72,
+        "disjoint_formula": 72,
+        "match": true
+      }
+    },
+    "formula_valid_through_k": 5,
+    "overlap_witness": {
+      "circle1": [
+        0,
+        4,
+        8,
+        9
+      ],
+      "circle2": [
+        0,
+        5,
+        7,
+        9
+      ],
+      "union_size": 6
+    }
+  },
+  {
+    "q": 5,
+    "points": 26,
+    "circles": 130,
+    "circle_size": 6,
+    "layers": {
+      "0": {
+        "exact": 1,
+        "disjoint_formula": 1,
+        "match": true
+      },
+      "1": {
+        "exact": 26,
+        "disjoint_formula": 26,
+        "match": true
+      },
+      "2": {
+        "exact": 325,
+        "disjoint_formula": 325,
+        "match": true
+      },
+      "3": {
+        "exact": 2600,
+        "disjoint_formula": 2600,
+        "match": true
+      },
+      "4": {
+        "exact": 13000,
+        "disjoint_formula": 13000,
+        "match": true
+      },
+      "5": {
+        "exact": 26000,
+        "disjoint_formula": 26000,
+        "match": true
+      },
+      "6": {
+        "exact": 5200,
+        "disjoint_formula": -156000,
+        "match": false
+      }
+    },
+    "formula_valid_through_k": 5,
+    "overlap_witness": null
+  }
+]
