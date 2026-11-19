@@ -1,0 +1,664 @@
+{
+ "schema": "n11-five-parent-windfall4-thirteenth-sixteenth-win7-receipt-fold-20261120-v1",
+ "date": "2026-11-20",
+ "status": "fold-complete",
+ "source_main_head_before": "68b04984f22fe907120ded2deaf5b03182108fd7",
+ "previous_fold": {
+  "record": "fold/output/ninth-twelfth-win7-receipt-fold-20261119.json of n11-stranded86-add-one-stone-expansion-d10-sweep-20261119 (sha256 ee002d792345cf3e2f90fda43a0d6a3d4bf6ed29d3280653491b3dd83f42e67a)",
+  "frontier_after": {
+   "solved_s6_in_manifest": 1635,
+   "remaining_s5_orbits": 173,
+   "unique_remaining_s6": 6213,
+   "sum_remaining_cost": 492021,
+   "s6_needed_by_open_classes": 4513,
+   "cost_needed_by_open_classes": 357882,
+   "parent_row_incidence": 11826
+  },
+  "closed_target_rows_total": 34,
+  "residual_target_rows": 78,
+  "coverage_rederived_in_this_run_by_geometry": [
+   "ninth root 00000000000000801202000001040200: re-derived 2 S6 rows (2 target rows)",
+   "tenth root 00000000000000821082040200000000: re-derived 3 S6 rows (2 target rows)",
+   "eleventh root 00000000000000821092200000000000: re-derived 2 S6 rows (2 target rows)",
+   "twelfth root 00000000001020003800000048000000: re-derived 2 S6 rows (2 target rows)"
+  ]
+ },
+ "windfall_source": {
+  "verdict_join_record": "research/experiments/n11-residual78-cache-join-resolve6-20261120/output/post-saturation-full-cache-join-resolve6-20261120.json (sha256 e85d4bfb867a193f2b3cdb23ec9e15679359c9f337fcd97eb5c62473b90c281a; K1063)",
+  "certificate_record": "research/experiments/n11-residual78-windfall4-cert-extract-20261120/output/windfall4-cert-triple-verification-20261120.json (sha256 a3ca1b3dfd2fcdbd28fc88a6f993c4ff5ad81ee92d4a22800ff2f6477c476feb; K1066)",
+  "lane_sweep_record": "class2-lane-cost65h-sweep-20261114.json (cost65h lane; raw bit_line provenance through the K0863 cache corpus join)"
+ },
+ "source_blob_pins": {
+  "worklist": "2fee1d0718547a62e346d35f5858d7913e37c097",
+  "ledger": "e8785d509e8a11a37c0d03cc450455a14708c34d",
+  "census": "9c251da3138c5cb0516e097be5e5d0427dfaf5f0",
+  "globalFold": "753a4bf4d0e11bea894111f9fa43bcff5e9ab7dc",
+  "previousCostFold": "7e6144cc4bc92c34faa14bed3058cde64fb3880e",
+  "firstFoldTarball": "fa5f26a9dc9bd2fb8222aa8ba0431d7578043019",
+  "cover49_49c": "a8eaf00bd6494eda50a68e7d06498bed833a7688",
+  "head1476": "65d0c7ce0200638a50db5451b11b8cb88ec64b5d",
+  "cost78c": "626409d50d0a7bb1b925ebecbff7dbee9adfa398",
+  "cost79c": "054923a47ea0387b25f734222c499e60c054109b",
+  "cost73j": "74fc3417391e30cf4cff9c2ffce059dce529ed86",
+  "sweep48": "37aba599d0b69275225bf231d56cb18feed14090",
+  "fold23": "7923a0fe5331d1f7c896748031c4071b68fcc13a",
+  "coverResolve1": "600b23d339888ea0e693742da2b2ae9c372a9faf0",
+  "joint": "40581746dc3304bdaff4b1934fd6f1d3d2981ea5",
+  "audit": "7cdc7c9ef341b5d9759923b3fc4986231c48895f",
+  "fold4_record": "38715413d6dd23b97717c92d73d8b4a0af807cda",
+  "fold56_record": "134796a7de1e472c26e35defd7340d208a10b9b0",
+  "fold7_sha256": "f1baf15942d3efeaa3ca75c4d803148239269715e297aaf9b00042611543b737",
+  "fold8_sha256": "afcf7d0ad0d6ca1edf31e150a7ba840f802a6382506f4a662b4e13567fbd30a2",
+  "resolve4_sha256": "2ad70afba4236375925dfd13230bb599b2d38f93631d6ded266fd77d34432e09",
+  "resolve5_sha256": "5a2f4815c1d5fbbf40a76f839425a6e3750673bb37a60b64aca8ff03e5aeef9e",
+  "fold9_sha256": "ee002d792345cf3e2f90fda43a0d6a3d4bf6ed29d3280653491b3dd83f42e67a",
+  "sweep35_sha256": "8b7ba7d6b6fbfef057267e95c66efc036779c7d90ec918ec8beaa6a6618b95a5",
+  "resolve6_sha256": "e85d4bfb867a193f2b3cdb23ec9e15679359c9f337fcd97eb5c62473b90c281a",
+  "k1066_verify_sha256": "a3ca1b3dfd2fcdbd28fc88a6f993c4ff5ad81ee92d4a22800ff2f6477c476feb",
+  "cert_bit40_sha256": "02778cf535bb3a269496f8b1cf0064fbadeb3b302bc4476d6b2d1c391bc37a34",
+  "cert_bit43_sha256": "27e60fdca5eeed3fb1c188edd35a2d6ba3212df2b16cd309f4247b902e366d7b",
+  "cert_bit99_sha256": "04f545c8861015ff15ba8506322b9e78574cd523c54100d9bff424cd587f59ed",
+  "cert_bit118_sha256": "05356cbc162adc318b9c208e607ebff872deda1d266541b1585b83ea7a38cdf5"
+ },
+ "receipt_count": 4,
+ "receipts": [
+  {
+   "root": "00000000000000803202010000001000",
+   "canonical_root_hex": "00000000000000803202010000001000",
+   "bit": 40,
+   "receipt": "thirteenth",
+   "child_hex": "00000000000000803202000000001000",
+   "added_bit": 40,
+   "legal_next_moves": 48,
+   "covered_s6_rows": [
+    "00000000000000801202010000001000"
+   ],
+   "covered_five_parent_target_rows": [
+    "00000000000000801202010000001000"
+   ],
+   "extra_s6_rows_not_in_target": [],
+   "unique_strategy_rows": 31189,
+   "extraction_nodes_run1_rerun": 3074926,
+   "fbt_drops": 0,
+   "closed_edge_cost": 64,
+   "certificate": {
+    "file": "certs/win7-root-00000000000000803202010000001000-20261120.n11",
+    "bytes": 1128053,
+    "sha256": "02778cf535bb3a269496f8b1cf0064fbadeb3b302bc4476d6b2d1c391bc37a34",
+    "published_at": "research/experiments/n11-residual78-windfall4-cert-extract-20261120/certs/certs/win7-root-00000000000000803202010000001000-20261120.n11"
+   },
+   "verdict_basis": {
+    "kind": "single-order depth-10 engine verdict (andclose=1, uncapped loss=true) with triple-independent certificate verification",
+    "raw_bit_line": {
+     "file": "class2-lane-cost65h-raw-batch3-20261114.jsonl",
+     "nodes": 1105860
+    },
+    "runner_v16_fresh_nodes": 1105860,
+    "determinism_rerun_note": "bits 43 (WIN7, 3,269,824), 102 (WIN7, 3,354,664) and 87 (REFUTED, 532,826) re-solved fresh in a separate process after the sweep: node counts identical (class2-lane-cost65h-v16-determinism-rerun-20261",
+    "lane_sweep_record": "class2-lane-cost65h-sweep-20261114.json"
+   },
+   "independent_verification": {
+    "ts_bareiss": {
+     "subroots": 48,
+     "seen": 72731,
+     "terminals": 11369,
+     "opponent_edges": 65515,
+     "union_missing": 0,
+     "union_extra": 0
+    },
+    "python_bareiss_replay": {
+     "subroots_passed": 48,
+     "terminal_stone_range": [
+      13,
+      15,
+      17
+     ],
+     "visited_winner_states": 119199,
+     "union_missing": 0,
+     "union_extra": 0
+    },
+    "bigint": {
+     "subroots_passed": 48,
+     "visited_states": 72731,
+     "terminal_count": 11369,
+     "loser_reply_edges": 65515,
+     "terminal_range": [
+      13,
+      17
+     ],
+     "union_missing": 0,
+     "union_extra": 0
+    },
+    "cross_method_state_flow_equal": true,
+    "certificate_union_exact": true,
+    "k1066_record": "research/experiments/n11-residual78-windfall4-cert-extract-20261120/output/windfall4-cert-triple-verification-20261120.json (sha256 a3ca1b3df...; 50 gates pass)",
+    "pilot_control": {
+     "control": "pilot_d6",
+     "nodes": 3402,
+     "loss": false,
+     "capped": false
+    }
+   },
+   "affected_parents": 2,
+   "parent_deltas": [
+    {
+     "parent_hex": "00000000000000003800000008001000",
+     "classes": 2,
+     "rows_before": 31,
+     "rows_closed": 1,
+     "rows_after": 30
+    },
+    {
+     "parent_hex": "00000000000000801202010000000000",
+     "classes": 2,
+     "rows_before": 43,
+     "rows_closed": 1,
+     "rows_after": 42
+    }
+   ]
+  },
+  {
+   "root": "00000000000000803202080000001000",
+   "canonical_root_hex": "00000000000000803202080000001000",
+   "bit": 43,
+   "receipt": "fourteenth",
+   "child_hex": "00000000000000803202000000001000",
+   "added_bit": 43,
+   "legal_next_moves": 58,
+   "covered_s6_rows": [
+    "00000000000000801202080000001000"
+   ],
+   "covered_five_parent_target_rows": [
+    "00000000000000801202080000001000"
+   ],
+   "extra_s6_rows_not_in_target": [],
+   "unique_strategy_rows": 51767,
+   "extraction_nodes_run1_rerun": 7700023,
+   "fbt_drops": 0,
+   "closed_edge_cost": 79,
+   "certificate": {
+    "file": "certs/win7-root-00000000000000803202080000001000-20261120.n11",
+    "bytes": 1867637,
+    "sha256": "27e60fdca5eeed3fb1c188edd35a2d6ba3212df2b16cd309f4247b902e366d7b",
+    "published_at": "research/experiments/n11-residual78-windfall4-cert-extract-20261120/certs/certs/win7-root-00000000000000803202080000001000-20261120.n11"
+   },
+   "verdict_basis": {
+    "kind": "single-order depth-10 engine verdict (andclose=1, uncapped loss=true) with triple-independent certificate verification",
+    "raw_bit_line": {
+     "file": "class2-lane-cost65h-raw-batch4-20261114.jsonl",
+     "nodes": 3269824
+    },
+    "runner_v16_fresh_nodes": 3269824,
+    "determinism_rerun_note": "bits 43 (WIN7, 3,269,824), 102 (WIN7, 3,354,664) and 87 (REFUTED, 532,826) re-solved fresh in a separate process after the sweep: node counts identical (class2-lane-cost65h-v16-determinism-rerun-20261",
+    "lane_sweep_record": "class2-lane-cost65h-sweep-20261114.json"
+   },
+   "independent_verification": {
+    "ts_bareiss": {
+     "subroots": 58,
+     "seen": 114670,
+     "terminals": 17067,
+     "opponent_edges": 104803,
+     "union_missing": 0,
+     "union_extra": 0
+    },
+    "python_bareiss_replay": {
+     "subroots_passed": 58,
+     "terminal_stone_range": [
+      13,
+      15,
+      17
+     ],
+     "visited_winner_states": 194299,
+     "union_missing": 0,
+     "union_extra": 0
+    },
+    "bigint": {
+     "subroots_passed": 58,
+     "visited_states": 114670,
+     "terminal_count": 17067,
+     "loser_reply_edges": 104803,
+     "terminal_range": [
+      13,
+      17
+     ],
+     "union_missing": 0,
+     "union_extra": 0
+    },
+    "cross_method_state_flow_equal": true,
+    "certificate_union_exact": true,
+    "k1066_record": "research/experiments/n11-residual78-windfall4-cert-extract-20261120/output/windfall4-cert-triple-verification-20261120.json (sha256 a3ca1b3df...; 50 gates pass)",
+    "pilot_control": {
+     "control": "pilot_d6",
+     "nodes": 3402,
+     "loss": false,
+     "capped": false
+    }
+   },
+   "affected_parents": 2,
+   "parent_deltas": [
+    {
+     "parent_hex": "00000000000000003800000008001000",
+     "classes": 2,
+     "rows_before": 30,
+     "rows_closed": 1,
+     "rows_after": 29
+    },
+    {
+     "parent_hex": "00000000000000801202080000000000",
+     "classes": 2,
+     "rows_before": 56,
+     "rows_closed": 1,
+     "rows_after": 55
+    }
+   ]
+  },
+  {
+   "root": "00000008000000803202000000001000",
+   "canonical_root_hex": "00000000000000803800000008001200",
+   "bit": 99,
+   "receipt": "fifteenth",
+   "child_hex": "00000000000000803202000000001000",
+   "added_bit": 99,
+   "legal_next_moves": 52,
+   "covered_s6_rows": [
+    "00000000000000003800000008001200"
+   ],
+   "covered_five_parent_target_rows": [
+    "00000000000000003800000008001200"
+   ],
+   "extra_s6_rows_not_in_target": [],
+   "unique_strategy_rows": 36625,
+   "extraction_nodes_run1_rerun": 3355354,
+   "fbt_drops": 0,
+   "closed_edge_cost": 76,
+   "certificate": {
+    "file": "certs/win7-root-00000008000000803202000000001000-20261120.n11",
+    "bytes": 1322402,
+    "sha256": "04f545c8861015ff15ba8506322b9e78574cd523c54100d9bff424cd587f59ed",
+    "published_at": "research/experiments/n11-residual78-windfall4-cert-extract-20261120/certs/certs/win7-root-00000008000000803202000000001000-20261120.n11"
+   },
+   "verdict_basis": {
+    "kind": "single-order depth-10 engine verdict (andclose=1, uncapped loss=true) with triple-independent certificate verification",
+    "raw_bit_line": {
+     "file": "class2-lane-cost65h-raw-batch7-20261114.jsonl",
+     "nodes": 1114855
+    },
+    "runner_v16_fresh_nodes": 1114855,
+    "determinism_rerun_note": "bits 43 (WIN7, 3,269,824), 102 (WIN7, 3,354,664) and 87 (REFUTED, 532,826) re-solved fresh in a separate process after the sweep: node counts identical (class2-lane-cost65h-v16-determinism-rerun-20261",
+    "lane_sweep_record": "class2-lane-cost65h-sweep-20261114.json"
+   },
+   "independent_verification": {
+    "ts_bareiss": {
+     "subroots": 52,
+     "seen": 86299,
+     "terminals": 12758,
+     "opponent_edges": 78773,
+     "union_missing": 0,
+     "union_extra": 0
+    },
+    "python_bareiss_replay": {
+     "subroots_passed": 52,
+     "terminal_stone_range": [
+      13,
+      15,
+      17
+     ],
+     "visited_winner_states": 144796,
+     "union_missing": 0,
+     "union_extra": 0
+    },
+    "bigint": {
+     "subroots_passed": 52,
+     "visited_states": 86299,
+     "terminal_count": 12758,
+     "loser_reply_edges": 78773,
+     "terminal_range": [
+      13,
+      17
+     ],
+     "union_missing": 0,
+     "union_extra": 0
+    },
+    "cross_method_state_flow_equal": true,
+    "certificate_union_exact": true,
+    "k1066_record": "research/experiments/n11-residual78-windfall4-cert-extract-20261120/output/windfall4-cert-triple-verification-20261120.json (sha256 a3ca1b3df...; 50 gates pass)",
+    "pilot_control": {
+     "control": "pilot_d6",
+     "nodes": 3402,
+     "loss": false,
+     "capped": false
+    }
+   },
+   "affected_parents": 2,
+   "parent_deltas": [
+    {
+     "parent_hex": "00000000000000003800000008000002",
+     "classes": 2,
+     "rows_before": 28,
+     "rows_closed": 1,
+     "rows_after": 27
+    },
+    {
+     "parent_hex": "00000000000000003800000008001000",
+     "classes": 2,
+     "rows_before": 29,
+     "rows_closed": 1,
+     "rows_after": 28
+    }
+   ]
+  },
+  {
+   "root": "00400000000000803202000000001000",
+   "canonical_root_hex": "00000000010000803800000008100000",
+   "bit": 118,
+   "receipt": "sixteenth",
+   "child_hex": "00000000000000803202000000001000",
+   "added_bit": 118,
+   "legal_next_moves": 56,
+   "covered_s6_rows": [
+    "00000000010000003800000008100000"
+   ],
+   "covered_five_parent_target_rows": [
+    "00000000010000003800000008100000"
+   ],
+   "extra_s6_rows_not_in_target": [],
+   "unique_strategy_rows": 55838,
+   "extraction_nodes_run1_rerun": 6137302,
+   "fbt_drops": 0,
+   "closed_edge_cost": 80,
+   "certificate": {
+    "file": "certs/win7-root-00400000000000803202000000001000-20261120.n11",
+    "bytes": 2013560,
+    "sha256": "05356cbc162adc318b9c208e607ebff872deda1d266541b1585b83ea7a38cdf5",
+    "published_at": "research/experiments/n11-residual78-windfall4-cert-extract-20261120/certs/certs/win7-root-00400000000000803202000000001000-20261120.n11"
+   },
+   "verdict_basis": {
+    "kind": "single-order depth-10 engine verdict (andclose=1, uncapped loss=true) with triple-independent certificate verification",
+    "raw_bit_line": {
+     "file": "class2-lane-cost65h-raw-batch8-20261114.jsonl",
+     "nodes": 2307338
+    },
+    "runner_v16_fresh_nodes": 2307338,
+    "determinism_rerun_note": "bits 43 (WIN7, 3,269,824), 102 (WIN7, 3,354,664) and 87 (REFUTED, 532,826) re-solved fresh in a separate process after the sweep: node counts identical (class2-lane-cost65h-v16-determinism-rerun-20261",
+    "lane_sweep_record": "class2-lane-cost65h-sweep-20261114.json"
+   },
+   "independent_verification": {
+    "ts_bareiss": {
+     "subroots": 56,
+     "seen": 113248,
+     "terminals": 16355,
+     "opponent_edges": 104535,
+     "union_missing": 0,
+     "union_extra": 0
+    },
+    "python_bareiss_replay": {
+     "subroots_passed": 56,
+     "terminal_stone_range": [
+      13,
+      15,
+      17
+     ],
+     "visited_winner_states": 190971,
+     "union_missing": 0,
+     "union_extra": 0
+    },
+    "bigint": {
+     "subroots_passed": 56,
+     "visited_states": 113248,
+     "terminal_count": 16355,
+     "loser_reply_edges": 104535,
+     "terminal_range": [
+      13,
+      17
+     ],
+     "union_missing": 0,
+     "union_extra": 0
+    },
+    "cross_method_state_flow_equal": true,
+    "certificate_union_exact": true,
+    "k1066_record": "research/experiments/n11-residual78-windfall4-cert-extract-20261120/output/windfall4-cert-triple-verification-20261120.json (sha256 a3ca1b3df...; 50 gates pass)",
+    "pilot_control": {
+     "control": "pilot_d6",
+     "nodes": 3402,
+     "loss": false,
+     "capped": false
+    }
+   },
+   "affected_parents": 2,
+   "parent_deltas": [
+    {
+     "parent_hex": "00000000000000003800000008001000",
+     "classes": 2,
+     "rows_before": 28,
+     "rows_closed": 1,
+     "rows_after": 27
+    },
+    {
+     "parent_hex": "00000000000000801202000000000100",
+     "classes": 2,
+     "rows_before": 55,
+     "rows_closed": 1,
+     "rows_after": 54
+    }
+   ]
+  }
+ ],
+ "processing_notes": [
+  "thirteenth bit 40 raw root 00000000000000803202010000001000 (canonical 00000000000000803202010000001000): closed 1 S6 rows (1 target rows), cost 64",
+  "fourteenth bit 43 raw root 00000000000000803202080000001000 (canonical 00000000000000803202080000001000): closed 1 S6 rows (1 target rows), cost 79",
+  "fifteenth bit 99 raw root 00000008000000803202000000001000 (canonical 00000000000000803800000008001200): closed 1 S6 rows (1 target rows), cost 76",
+  "sixteenth bit 118 raw root 00400000000000803202000000001000 (canonical 00000000010000803800000008100000): closed 1 S6 rows (1 target rows), cost 80"
+ ],
+ "frontier_before": {
+  "solved_s6_in_manifest": 1635,
+  "remaining_s5_orbits": 173,
+  "unique_remaining_s6": 6213,
+  "sum_remaining_cost": 492021,
+  "s6_needed_by_open_classes": 4513,
+  "cost_needed_by_open_classes": 357882,
+  "parent_row_incidence": 11826
+ },
+ "frontier_after": {
+  "solved_s6_in_manifest": 1639,
+  "remaining_s5_orbits": 173,
+  "unique_remaining_s6": 6209,
+  "sum_remaining_cost": 491722,
+  "s6_needed_by_open_classes": 4509,
+  "cost_needed_by_open_classes": 357583,
+  "parent_row_incidence": 11818
+ },
+ "new_receipt_coverage": {
+  "unique_s6_rows": 4,
+  "closed_edge_cost": 299,
+  "rows": [
+   {
+    "row_hex": "00000000000000003800000008001200",
+    "cost": 76,
+    "category": "unswept",
+    "demand": {
+     "c1": 0,
+     "c2": 2,
+     "c4": 0
+    },
+    "parents": [
+     "00000000000000003800000008000002",
+     "00000000000000003800000008001000"
+    ],
+    "receipt": {
+     "root": "00000008000000803202000000001000",
+     "verdict": "WIN7-D10 (certificate-backed)"
+    }
+   },
+   {
+    "row_hex": "00000000000000801202010000001000",
+    "cost": 64,
+    "category": "unswept",
+    "demand": {
+     "c1": 0,
+     "c2": 2,
+     "c4": 0
+    },
+    "parents": [
+     "00000000000000003800000008001000",
+     "00000000000000801202010000000000"
+    ],
+    "receipt": {
+     "root": "00000000000000803202010000001000",
+     "verdict": "WIN7-D10 (certificate-backed)"
+    }
+   },
+   {
+    "row_hex": "00000000000000801202080000001000",
+    "cost": 79,
+    "category": "unswept",
+    "demand": {
+     "c1": 0,
+     "c2": 2,
+     "c4": 0
+    },
+    "parents": [
+     "00000000000000003800000008001000",
+     "00000000000000801202080000000000"
+    ],
+    "receipt": {
+     "root": "00000000000000803202080000001000",
+     "verdict": "WIN7-D10 (certificate-backed)"
+    }
+   },
+   {
+    "row_hex": "00000000010000003800000008100000",
+    "cost": 80,
+    "category": "unswept",
+    "demand": {
+     "c1": 0,
+     "c2": 2,
+     "c4": 0
+    },
+    "parents": [
+     "00000000000000003800000008001000",
+     "00000000000000801202000000000100"
+    ],
+    "receipt": {
+     "root": "00400000000000803202000000001000",
+     "verdict": "WIN7-D10 (certificate-backed)"
+    }
+   }
+  ]
+ },
+ "verdict_basis_note": "Each windfall receipt is a depth-10 single-order (andclose=1) engine WIN verdict whose certificate was extracted blind from the raw maxbit-child root and triple-verified (TS Bareiss 4x4 subroot decomposition, exact python Bareiss replay, BigInt 3x3 cofactor), with the fresh runner v16 solve reproducing the published raw bit_line nodes node-exact. The dual-ordering requirement of the sweep-43 receipts does not apply to this variant: the receipt here is the certificate itself, not an order-duality verdict.",
+ "controls": {
+  "base_frontier_recomputed": true,
+  "chain_frontiers_recomputed_each_step": true,
+  "open_frontier_matches_published_6222_492688": true,
+  "post_twelfth_frontier_matches_published_6213_492021": true,
+  "fold9_record_sha256_pinned": true,
+  "fold9_ninth_twelfth_coverage_rederived_by_geometry_from_sweep43_win_roots": true,
+  "receipt_rows_rederived_from_all_8_d4_images": true,
+  "receipt_target_rows_match_resolve6_and_k1066_records": true,
+  "all_receipt_rows_were_open_before_their_receipt": true,
+  "receipts_disjoint_from_all_previous_folds": true,
+  "raw_root_maxbit_child_convention_gated": true,
+  "canonical_mapping_gated_for_noncanonical_raw_roots": true,
+  "legal_move_lists_independently_rederived": true,
+  "certificates_sha256_verified_against_published_k1066": true,
+  "extraction_determinism_run1_rerun_gated": true,
+  "triple_independent_verification_gates_repassed": true,
+  "cross_method_state_flow_equal_all_four": true,
+  "runner_v16_fresh_nodes_node_exact_vs_published_bit_line": true,
+  "k1066_fifty_gates_all_pass": true,
+  "resolve6_record_sha256_pinned": true,
+  "win_loss_conflict_scan_against_published_verdict_universe": true
+ },
+ "interpretation_guard": [
+  "WIN7-D10 proves a first-player win within depth 10 only from the individual seven-stone roots of these receipts.",
+  "The receipts close their S6 rows in the frontier but prove nothing about the empty board or any two-stone root.",
+  "REFUTED-D10 verdicts are NOT LOSS proofs; pn/dn counts and solved counts are not game outcomes.",
+  "A fold is row-coverage bookkeeping under the depth-10 receipt framework; the residual 74 target rows are covered by the (still conditional) resolve5 witness plan until their own receipts are published.",
+  "The standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+ ],
+ "parent_closure": {
+  "fully_closed_parent_count": 0,
+  "affected_unique_parents": 5
+ },
+ "five_parent_target_after": {
+  "framework": "five-parent target union (112 rows; 26 closed through the eighth receipt, 34 through the twelfth, 38 through the sixteenth)",
+  "closed_target_rows_total": 38,
+  "residual_target_rows": 74,
+  "residual_row_hex_after": [
+   "00000000000000003800000008001001",
+   "00000000000000003800000008001020",
+   "00000000000000003800000008001080",
+   "00000000000000003800000008001100",
+   "00000000000000003800000008001800",
+   "00000000000000003800000008002010",
+   "00000000000000003800000008002040",
+   "00000000000000003800000008002080",
+   "00000000000000003800000008002100",
+   "00000000000000003800000008005000",
+   "00000000000000003800000008011000",
+   "00000000000000003800000008500000",
+   "00000000000000003800000008900000",
+   "00000000000000003800000009000004",
+   "00000000000000003800000009040000",
+   "00000000000000003800000009800000",
+   "0000000000000000380000000a002000",
+   "0000000000000000380000000a080000",
+   "00000000000000003800000209000000",
+   "00000000000000003800000248000000",
+   "00000000000000003800000409000000",
+   "00000000000000003800000808001000",
+   "00000000000000003800100008002000",
+   "00000000000000003800200008001000",
+   "00000000000000003800200008100000",
+   "00000000000000003800200009000000",
+   "00000000000000043800000008080000",
+   "00000000000000043800000008100000",
+   "00000000000000043800000009000000",
+   "00000000000000083800000008100000",
+   "00000000000000083800000048000000",
+   "00000000000000103800000008080000",
+   "00000000000000103800000009000000",
+   "00000000000000801202000000081000",
+   "00000000000000801202000000101000",
+   "00000000000000801202000000800100",
+   "00000000000000801202000000800200",
+   "00000000000000801202000000800400",
+   "00000000000000801202000000840000",
+   "00000000000000801202000000880000",
+   "00000000000000801202000000900000",
+   "00000000000000801202000001000100",
+   "00000000000000801202000001000400",
+   "00000000000000801202000001080000",
+   "00000000000000801202000020001000",
+   "00000000000000801202020000001000",
+   "00000000000000801202040000001000",
+   "00000000000000801202040000800000",
+   "00000000000000801212000000001000",
+   "00000000000000801212000001000000",
+   "00000000000000801222000000001000",
+   "00000000000000801222000000800000",
+   "00000000000000821082000000000001",
+   "00000000000000821082000000000004",
+   "00000000000000821082000000000008",
+   "00000000000000821082000000000010",
+   "00000000000000821082000000000800",
+   "00000000000000821082000000001000",
+   "00000000000000821082800000000000",
+   "00000000000000821083000000000000",
+   "00000000000000889002000000100000",
+   "00000000000000889002000080000000",
+   "00000000000000909002000000100000",
+   "00000000000000909002000080000000",
+   "00000000000000a09002000080000000",
+   "00000000000020809002000080000000",
+   "00000000000040809002000000100000",
+   "00000000000080003800000048000000",
+   "00000000010000809002000000100000",
+   "00000000010000809002000040000000",
+   "00000000010000809002000080000000",
+   "00000000020000801202000000100000",
+   "00000008000000003800000008100000",
+   "00000010000000801202000000000400"
+  ]
+ }
+}
