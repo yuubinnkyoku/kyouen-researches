@@ -574,6 +574,12 @@ jobs:
           git diff --exit-code -- research/experiments/vertical-fiber-two-token-z17-y4-second-verification-20261120/output/audit.json
           uv run --locked python research/experiments/vertical-fiber-two-token-z17-y4-second-verification-20261120/census_z17_y4_second.py
           git diff --exit-code -- research/experiments/vertical-fiber-two-token-z17-y4-second-verification-20261120/output/census.txt
+      - name: Audit K1080 two-token z=17 y=5 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z17-y5-boundary-20261120/verify_z17_y5.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z17-y5-boundary-20261120/output/audit.json
+          uv run --locked python research/experiments/vertical-fiber-two-token-z17-y5-boundary-20261120/census_z17_y5.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z17-y5-boundary-20261120/output/census.txt
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python research/experiments/graph-star-fixed-q-count-complexity-20261102/verify.py
