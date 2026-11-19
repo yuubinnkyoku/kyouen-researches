@@ -155,8 +155,8 @@ verify_z17_y4.py はK1067・K1064の公表閉形式を子局面として用い�
 
 署名帯の穴0・不一致0・全監査不一致0。同一スクリプトを二つの作業ディレクトリから実行し、audit.json はbyte-identicalだった。
 
-- verifier SHA-256: e03b0309ea57fe3d85b31a6f052f1fe3de0117e6d19c2c9ab853cb0d72101f95
-- audit SHA-256: d0ac9ba25248c071058dd8dc492284a8696a3e28494c1a821f4afa54e154e3c9
+- verifier SHA-256: 49796741b92cf0c7e52f23ea90884b1ca302d65ea2c24f50fc29daa439c6b838
+- audit SHA-256: 4bf36ec1c80eba7bf9cf8b17ff6bdd940cf9b57a27332c014277b5f29ad804fb
 
 有限監査は全称証明の代わりではない。全称性はx外帰納と、全Rを互いに素に被覆する記号的署名帯表による。閉包掃引は帰納ステップの有限機械照合である。
 
