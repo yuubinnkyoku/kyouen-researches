@@ -1,0 +1,165 @@
+{
+  "finite_field": {
+    "AG(2,3)": {
+      "distinct_circles": 18,
+      "circle_size_distribution": {
+        "4": 18
+      },
+      "max_circle_size": 4,
+      "points": 9,
+      "forbidden_quads": 18,
+      "safe_sets": 274,
+      "layer_sizes": {
+        "0": 1,
+        "1": 9,
+        "2": 36,
+        "3": 84,
+        "4": 108,
+        "5": 36
+      },
+      "max_safe_size": 5,
+      "min_maximal_size": 5,
+      "empty_grundy": 1,
+      "empty_outcome": "N(first-player-win)",
+      "grundy_distribution": {
+        "0": 129,
+        "1": 145
+      },
+      "max_grundy": 1,
+      "first_move_grundy_distribution": {
+        "0": 9
+      },
+      "first_moves_winning": 9
+    },
+    "AG(2,5)": {
+      "distinct_circles": 125,
+      "circle_size_distribution": {
+        "4": 100,
+        "9": 25
+      },
+      "max_circle_size": 9,
+      "points": 25,
+      "forbidden_quads": 3150,
+      "safe_sets": 29226,
+      "layer_sizes": {
+        "0": 1,
+        "1": 25,
+        "2": 300,
+        "3": 2300,
+        "4": 9500,
+        "5": 15500,
+        "6": 1600
+      },
+      "max_safe_size": 6,
+      "min_maximal_size": 3,
+      "empty_grundy": 1,
+      "empty_outcome": "N(first-player-win)",
+      "grundy_distribution": {
+        "0": 11825,
+        "1": 9301,
+        "2": 8100
+      },
+      "max_grundy": 2,
+      "first_move_grundy_distribution": {
+        "0": 25
+      },
+      "first_moves_winning": 25
+    }
+  },
+  "integer_grid": {
+    "3x3": {
+      "points": 9,
+      "forbidden_quads": 14,
+      "safe_sets": 298,
+      "layer_sizes": {
+        "0": 1,
+        "1": 9,
+        "2": 36,
+        "3": 84,
+        "4": 112,
+        "5": 56
+      },
+      "max_safe_size": 5,
+      "min_maximal_size": 5,
+      "empty_grundy": 1,
+      "empty_outcome": "N(first-player-win)",
+      "grundy_distribution": {
+        "0": 149,
+        "1": 149
+      },
+      "max_grundy": 1,
+      "first_move_grundy_distribution": {
+        "0": 9
+      },
+      "first_moves_winning": 9
+    },
+    "4x4": {
+      "points": 16,
+      "forbidden_quads": 194,
+      "safe_sets": 5811,
+      "layer_sizes": {
+        "0": 1,
+        "1": 16,
+        "2": 120,
+        "3": 560,
+        "4": 1626,
+        "5": 2360,
+        "6": 1064,
+        "7": 64
+      },
+      "max_safe_size": 7,
+      "min_maximal_size": 5,
+      "empty_grundy": 0,
+      "empty_outcome": "P(second-player-win)",
+      "grundy_distribution": {
+        "0": 1825,
+        "1": 2192,
+        "2": 1124,
+        "3": 574,
+        "4": 88,
+        "5": 8
+      },
+      "max_grundy": 5,
+      "first_move_grundy_distribution": {
+        "1": 16
+      },
+      "first_moves_winning": 0
+    },
+    "5x5": {
+      "points": 25,
+      "forbidden_quads": 826,
+      "safe_sets": 151394,
+      "layer_sizes": {
+        "0": 1,
+        "1": 25,
+        "2": 300,
+        "3": 2300,
+        "4": 11824,
+        "5": 37272,
+        "6": 59192,
+        "7": 35208,
+        "8": 5172,
+        "9": 100
+      },
+      "max_safe_size": 9,
+      "min_maximal_size": 5,
+      "empty_grundy": 1,
+      "empty_outcome": "N(first-player-win)",
+      "grundy_distribution": {
+        "0": 40325,
+        "1": 46885,
+        "2": 31096,
+        "3": 25376,
+        "4": 6392,
+        "5": 1248,
+        "6": 72
+      },
+      "max_grundy": 6,
+      "first_move_grundy_distribution": {
+        "0": 9,
+        "3": 16
+      },
+      "first_moves_winning": 9
+    }
+  }
+}
