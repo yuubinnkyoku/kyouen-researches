@@ -143,8 +143,8 @@ verify_z15_y5.pyは順序保持再帰と降順正準化再帰を別々に実装�
 
 同一プロセス内2回実行でaudit.jsonはbyte-identical。別プロセス・別cwdでの再実行も出版予定のaudit.jsonとバイト単位で一致した。
 
-- verifier SHA-256: 3897aef93a7798983004ac4e2d09c4aee20aff078f042a1441a230e482f2d15b
-- audit.json SHA-256: 3b96ddc00dbcf839a7c0bd5268b2d8443325f4de721076fced34f86703c20643
+- verifier SHA-256: 64d1a71648e018c524dbd02208a377a4ee3366403bf2db11d53c6fe625fa832a
+- audit.json SHA-256: 90247d46bf7ade12b991165b09cb861ffa4bd38e6f8aaecfec82651a617b0afd
 - hash除外audit SHA-256: 630be3c1f7a74c98bcdc275e86fe8b7b6c15a3f67d95be2da40e6b35b8802fc6
 
 有限監査は閉形式の転写・実装照合であり、全称性そのものではない。全称性はx外帰納と全R署名帯表が担う。
