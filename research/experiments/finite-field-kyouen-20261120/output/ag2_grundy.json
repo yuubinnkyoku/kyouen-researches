@@ -1,0 +1,74 @@
+[
+  {
+    "q": 3,
+    "points": 9,
+    "circles": 18,
+    "lines": 12,
+    "blocks": 30,
+    "safe_sets": 274,
+    "layer_sizes": {
+      "0": 1,
+      "1": 9,
+      "2": 36,
+      "3": 84,
+      "4": 108,
+      "5": 36
+    },
+    "max_safe_size": 5,
+    "empty_grundy": 1,
+    "grundy_distribution": {
+      "0": 129,
+      "1": 145
+    },
+    "max_grundy": 1,
+    "first_move_grundy": {
+      "0": 9
+    },
+    "winning_first_moves": 9
+  },
+  {
+    "q": 5,
+    "points": 25,
+    "circles": 125,
+    "lines": 30,
+    "blocks": 155,
+    "safe_sets": 29226,
+    "layer_sizes": {
+      "0": 1,
+      "1": 25,
+      "2": 300,
+      "3": 2300,
+      "4": 9500,
+      "5": 15500,
+      "6": 1600
+    },
+    "max_safe_size": 6,
+    "empty_grundy": 1,
+    "grundy_distribution": {
+      "0": 11825,
+      "1": 9301,
+      "2": 8100
+    },
+    "max_grundy": 2,
+    "first_move_grundy": {
+      "0": 25
+    },
+    "winning_first_moves": 25
+  },
+  {
+    "q": 7,
+    "points": 49,
+    "circles": 294,
+    "lines": 56,
+    "layer_counts_k_le_5_exact": {
+      "0": 1,
+      "1": 49,
+      "2": 1176,
+      "3": 18424,
+      "4": 189336,
+      "5": 963144
+    },
+    "K_lower_greedy": 6,
+    "K_upper_counting": 13
+  }
+]
