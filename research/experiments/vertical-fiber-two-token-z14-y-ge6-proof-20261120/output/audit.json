@@ -1,0 +1,19 @@
+{
+  "counts": {
+    "K1047_B_child_anchor": 1540,
+    "K1061_C_child_anchor": 6321,
+    "dual_direct_engine_vs_closed_form": 10633,
+    "fixed_seed_scatter": 1000,
+    "lowR_single_token_corollary": 201495,
+    "symbolic_band_coverage_signature_mex": 1631150,
+    "tail_direct_engine": 480
+  },
+  "finite_audit_only": true,
+  "first_failure": null,
+  "mismatch_count": 0,
+  "proof_boundary": "Universal claim rests on y-strong induction, x-outer induction, and the complete symbolic A/B/C signature-band table; finite checks are cross-validation only.",
+  "seed": 20261120,
+  "sha256_without_self": "0922d5c46b89841e6b492d34db00a7a17ca19eda2431e6fd51836d6135e5e359",
+  "theorem": "H(R;(x,y);14), x>=y>=6, R>=0: full Grundy classification",
+  "total_checks": 1852619
+}
