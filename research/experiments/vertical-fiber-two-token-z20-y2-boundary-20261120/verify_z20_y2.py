@@ -501,7 +501,7 @@ def audit_once():
         "classification": "universal proof by x-induction and complete A/B/C signature bands",
         "finite_audit_role": "independent ordered/canonical recursion, child anchors, band coverage/signature/mex, low-R reduction, tail, parity, and fixed-seed scatter checks only",
         "scope": {
-            "target": "H(R;(x,2);19), x>=2, R>=0",
+            "target": "H(R;(x,2);20), x>=2, R>=0",
             "anchor_R": "0 <= R <= x+40",
             "anchor_x": [2, 60],
             "direct_R": "0 <= R <= x+40",

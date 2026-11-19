@@ -148,10 +148,10 @@ verify_z20_y2.py は順序保持再帰と降順正準化再帰を別実装し、
 | **合計** | **3,603,133** |
 
 不一致0。検証器SHA-256:
-c4d422c75e9bd3500ff9efd2eb00053d82028f5e707f89b768363e27996e536b
+e9ef57b6bcc36491bff0be4802baea46c1ec8423cc909737a7db421ff9dbf05e
 
 監査JSON SHA-256:
-d8c29dad5ac8c0d2ba11f7fb53b631325ea11945ef5910fcd00ba39c218ea74c
+fd3e911b43ca339734e4ff0ce36d1275e8a23731902fa200059be1dd841bd5ef
 
 同一プロセスで2回実行し、別プロセス・別cwdでも監査JSONはbyte-identicalであった。
 
