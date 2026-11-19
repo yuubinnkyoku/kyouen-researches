@@ -276,17 +276,17 @@ for (const [root, item] of candidates) {
   need(item.covered.size >= 1 && item.covered.size <= 2, "candidate span outside 1..2: " + root);
 }
 const coverage = { one_row: 0, two_rows: 0 };
-const candidateStatus = { refuted_d10: 0, win7_d10: 0, not_in_join: 0 };
+const candidateStatus = { refuted_d10: 0, win7_d10: 0, not_in_pinned_join: 0 };
 for (const [root, item] of candidates) {
   if (item.covered.size === 1) coverage.one_row++;
   else coverage.two_rows++;
   if (knownWin.has(root)) candidateStatus.win7_d10++;
   else if (knownRefuted.has(root)) candidateStatus.refuted_d10++;
-  else candidateStatus.not_in_join++;
+  else candidateStatus.not_in_pinned_join++;
 }
 need(candidates.size === 5247 && coverage.one_row === 4153 && coverage.two_rows === 1094,
      "candidate census mismatch");
-need(candidateStatus.refuted_d10 === 110 && candidateStatus.win7_d10 === 0 && candidateStatus.not_in_join === 5137,
+need(candidateStatus.refuted_d10 === 110 && candidateStatus.win7_d10 === 0 && candidateStatus.not_in_pinned_join === 5137,
      "candidate known-verdict classification mismatch");
 
 const scanTargetSet = new Set(Object.keys(data.scan.targets).map(h => d4Canon(BigInt("0x" + h))));
@@ -309,13 +309,13 @@ for (const item of data.joint.derived.joint_results)
   for (const root of item.witness_roots) pool.add(d4Canon(BigInt("0x" + root)));
 need(pool.size === 117, "117-root pool reconstruction mismatch");
 const poolOverlap = [...candidates.keys()].filter(root => pool.has(root));
-const poolStatus = { refuted_d10: 0, win7_d10: 0, not_in_join: 0 };
+const poolStatus = { refuted_d10: 0, win7_d10: 0, not_in_pinned_join: 0 };
 for (const root of pool) {
   if (knownWin.has(root)) poolStatus.win7_d10++;
   else if (knownRefuted.has(root)) poolStatus.refuted_d10++;
-  else poolStatus.not_in_join++;
+  else poolStatus.not_in_pinned_join++;
 }
-need(poolStatus.refuted_d10 === 109 && poolStatus.win7_d10 === 8 && poolStatus.not_in_join === 0,
+need(poolStatus.refuted_d10 === 109 && poolStatus.win7_d10 === 8 && poolStatus.not_in_pinned_join === 0,
      "117-root pool verdict join mismatch");
 
 const selectedRoots = [
@@ -420,9 +420,6 @@ const selectedRows = [...coveredBy.keys()].sort();
 const lowerBound = Math.ceil(residualRows.length / 2);
 need(lowerBound === 43, "minimum-cover lower bound mismatch");
 need(selectedRoots.length === lowerBound, "selected cover does not attain lower bound");
-const sortedCandidates = [...candidates.keys()].sort();
-const candidateHash = createHash("sha256").update(sortedCandidates.join("\n") + "\n").digest("hex");
-const selectedHash = createHash("sha256").update(JSON.stringify(selected)).digest("hex");
 const record = {
   schema: "n11-residual-86-minimum-candidate-cover-20261120-v1",
   date: "2026-11-20",
@@ -434,14 +431,13 @@ const record = {
     legal_extensions: perRow.reduce((s, x) => s + x.legal_extensions, 0),
     min_legal_extensions_per_row: Math.min(...perRow.map(x => x.legal_extensions)),
     max_legal_extensions_per_row: Math.max(...perRow.map(x => x.legal_extensions)),
-    rows_with_legal_extension_counts: perRow
   },
   candidate_universe: {
     d4_canonical_roots: candidates.size,
     coverage_span_distribution: coverage,
     maximum_residual_rows_covered_by_one_root: 2,
-    sorted_root_set_sha256: candidateHash,
-    candidate_verdict_join: candidateStatus
+    candidate_verdict_join: candidateStatus,
+    candidate_verdict_join_note: "not_in_pinned_join is not a game-theoretic UNKNOWN; selected roots are separately excluded from the full K0863 cache parent universe and its transfers"
   },
   known_verdict_join: {
     explicit_sources_before_k0863_transfers: baseJoin,
@@ -482,7 +478,6 @@ const record = {
     selected_roots: selected.length,
     covered_rows: selectedRows.length,
     exact_cover: true,
-    selected_cover_sha256: selectedHash,
     selected_roots: selected
   },
   selected_root_mobility: {
