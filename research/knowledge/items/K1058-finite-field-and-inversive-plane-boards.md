@@ -52,6 +52,9 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/scripts/ag2_fast_target.py
   role: solver
   note: AG(2,q)の対称性利用高速完全探索
+- path: research/experiments/finite-field-kyouen-20261120/DET_LINEAR_GAP.md
+  role: source
+  note: 線形ギャップ不等式（c>=7/2）
 - path: research/experiments/finite-field-kyouen-20261120/DET_MONOTONE.md
   role: source
   note: 積の最大は最大面積で達成される（a<=9）
@@ -211,7 +214,7 @@ a 偶数なら `(0,0),(a,0),(a/2,a/2)`（Area=a²/4, power=a²）。
 外接円公式 `Area·R² = |u|²|v|²|u−v|²/(8|u×v|)` が使える。中心は
 `O = ((|u|²v_y − |v|²u_y)/(2c), (|v|²u_x − |u|²v_x)/(2c))`（`c=|u×v|`）。
 四点 `{0,u,v,O}` のバウンディングボックスが一辺 a に収まる条件の下で、`Area·R²` の最大は
-**a ≤ 9 でちょうど `a⁴/4`** になる（極値は正方形の3角を結ぶ直角三角形）。`n`積は面積について単調ではないが、**最大は常に最大面積 `a²/2` で達成される**（a ≤ 9 の全数）。
+**a ≤ 9 でちょうど `a⁴/4`** になる（極値は正方形の3角を結ぶ直角三角形）。`n`積は面積について単調ではないが、**最大は常に最大面積 `a²/2` で達成される**（a ≤ 9 の全数）。`n`さらに線形ギャップ不等式 `Area·R² ≤ a⁴/4 − c·(a²/2 − Area)` が `c ≥ 7/2` で成立する（a ≤ 8）。`n`これが示せれば「面積が最大でない場合」の評価が従う。
 
 **連続緩和との関係**：四点目を実数に許した連続最大は `a⁴/2 + [a奇数]/2` で、
 格子最大 `a²⌊a²/2⌋` との差は **a 奇数でちょうど 1**、a 偶数で 0 である（a ≤ 8 の全数計算）。
