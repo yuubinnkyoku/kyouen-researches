@@ -16,13 +16,25 @@
   "repeat_runs": 2,
   "scope": {
     "direct_R": "0 <= R <= x+50 (target and y=30/z=5 anchors)",
-    "direct_x": [31, 80],
+    "direct_x": [
+      31,
+      80
+    ],
     "far_tail_samples": 5000,
     "far_tail_seed": 20261118,
     "signature_R": "1 <= R < x+38",
-    "signature_x": [31, 2000],
-    "tail_offsets": [0, 64],
-    "tail_x": [31, 2000]
+    "signature_x": [
+      31,
+      2000
+    ],
+    "tail_offsets": [
+      0,
+      64
+    ],
+    "tail_x": [
+      31,
+      2000
+    ]
   },
   "sha256_without_hash_field": "4bd0cbd6f40fb561ec85bb9cbd2e88096efa3a01e72d203d7db65e7672cee7ce",
   "target": "H(R;(x,31);6), x>=31, R>=0",
