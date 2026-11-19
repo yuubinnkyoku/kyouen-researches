@@ -1,0 +1,112 @@
+{
+  "schema": "n11-k1038-witness-remaining-3-root-depth10-sweep-20261119-v1",
+  "date": "2026-11-19",
+  "status": "sweep-complete",
+  "source_main_head_before_k1039": "d3a6e69fee8ce7873e21499e0dac999313b97b1e",
+  "k1039_main_head": "51f474141ac79f558b2980c93e6564e197905380",
+  "purpose": "K1038 witness_sweep_plan.untested_witness_roots 26 rootのうちK1039が23 root判定済み。残り3 rootを同protocol（runner v17・両AND順序・cap 30M均一・pilot_d6制御）で判定し、K1038 witness全rootのdepth-10判定を完了させる。",
+  "input_pins": {
+    "k1038_refold": {
+      "path": "research/experiments/n11-head1410-fourth-win7-receipt-fold-20261119/output/refuted-excluded-cover-refold-after-fourth-receipt-20261119.json",
+      "published_at_commit": "d3a6e69fee8ce7873e21499e0dac999313b97b1e"
+    },
+    "k1039_sweep": {
+      "path": "research/experiments/n11-head1410-witness-28-root-full-depth10-sweep-20261119/output/witness-28-root-depth10-sweep-20261119.json",
+      "git_blob_sha1": "a4e5d6f8ef180b0b7910ea90bf240c1a3a773134"
+    },
+    "k1039_probe_records": {
+      "path": "research/experiments/n11-head1410-witness-28-root-full-depth10-sweep-20261119/output/witness-28-root-depth10-probe-records-20261119.jsonl",
+      "git_blob_sha1": "9a1765ef7c08fc96c397c8fb14c32434d433b0be"
+    },
+    "k1033_cover_resolve": {
+      "path": "research/experiments/n11-head1410-residual-48-root-sweep-two-win-receipts-20261119/output/five-parent-refuted-excluded-cover-resolve-20261119.json",
+      "git_blob_sha1": "600b23d39888ea0e693742da4b2ae937a9faf0"
+    }
+  },
+  "engine": {
+    "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/class4_child1_runner_v17.ts",
+    "git_blob_sha1": "c132cc6425eee3feaeef1d697dd74f968cfedb59",
+    "depth": 10,
+    "cap": 30000000,
+    "andclose_orderings": [
+      "andclose1",
+      "andclose0"
+    ]
+  },
+  "probe_records": {
+    "path": "research/experiments/n11-head1410-k1038-witness-remaining-3-root-depth10-sweep-20261119/output/k1038-witness-remaining-3-root-depth10-probe-records-20261119.jsonl",
+    "records": 6
+  },
+  "classification_rule": "両順序でuncapped loss=true → WIN7-D10 / 両順序でuncapped loss=false → REFUTED-D10 / それ以外 → CAPPED",
+  "classification": {
+    "counted_roots": 3,
+    "win7_d10": {
+      "count": 0,
+      "roots": []
+    },
+    "refuted_d10": {
+      "count": 3,
+      "roots": [
+        "00000000000000403800000008100020",
+        "00000000020000801202000100100000",
+        "00000000000000889002000080100000"
+      ]
+    },
+    "capped": {
+      "count": 0,
+      "roots": []
+    }
+  },
+  "k1038_witness_grand_total": {
+    "note": "K1039（23 root判定: WIN 2・REFUTED 21）と本sweep（3 root判定: REFUTED 3）の合算でK1038 26-root witness全root判定完了",
+    "win7_d10": 2,
+    "refuted_d10": 24,
+    "capped": 0
+  },
+  "totals": {
+    "nodes_andclose1": 554728,
+    "nodes_andclose0": 1502205
+  },
+  "receipt_coverage_consequence": {
+    "k1038_witness_rows_total": 49,
+    "certified_win_root_rows": 2,
+    "note": "K1038 witness 26 rootの被覆49行のうち、証明書つき2 WIN root（第5・第6root・foldは未実施）が担う2行（00000000000000805202000001000000・00000000020000809002000040000000）を除き、残47行はこの26-root witnessプール内のいかなる7石rootのdepth-10 WIN7 receiptでも閉じ不可（候補枯渇の体系的情報であり数学的閉鎖不能証明ではない。eligible 60候補のうちwitness外34候補は未試験のまま）。",
+    "fold_unchanged": "receipt fold・frontier簿記・再解決は本項では実施しない。K1038の簿記（frontier 6,226行/492,970・solved 1,622・5親target 23/112・stranded 40）は不変。"
+  },
+  "checks": [
+    {
+      "name": "sweep roots are exactly K1038 untested_witness_roots minus the 23 roots judged by K1039 (3 roots)",
+      "pass": true
+    },
+    {
+      "name": "every record carries a passing pilot_d6 control (loss=false, 3402 nodes)",
+      "pass": true
+    },
+    {
+      "name": "every root has both-order 30M runs, none capped",
+      "pass": true
+    },
+    {
+      "name": "no WIN/REFUTED ordering conflict (loss equal in both orderings for all 3 roots)",
+      "pass": true
+    },
+    {
+      "name": "classification totals 3 (0 WIN + 3 REFUTED + 0 CAPPED)",
+      "pass": true
+    },
+    {
+      "name": "K1038+K1039 grand total: 26 witness roots judged (WIN 2 with published certificates + REFUTED 24 + CAPPED 0)",
+      "pass": true
+    },
+    {
+      "name": "all roots are 7-stone hex (engine child assert) and K1038 root_checks stones-7 D4-canonical unsafe-0 claims are published as the certificate source",
+      "pass": true
+    }
+  ],
+  "interpretation_guard": [
+    "REFUTED-D10は7石root単位の判定（depth-10以内に先手勝ちなし・cap未到達）であり、それ以前の局面（親行・親parent）のLOSS証明ではない。",
+    "47行の候補枯渇はK1038の26-root witnessプールに限定される。eligible 60候補のwitness外34候補・プール外候補・depth>10 receiptの可能性は排除していない。",
+    "本sweepはreceipt fold・frontier簿記の更新を行わない。K1038の簿記（5親target 23/112・stranded 40）は不変。",
+    "二石root {49,60}/{59,60}・S2 {59,60}・class 1/2/4・標準11×11空盤はいずれもUNKNOWNのまま。"
+  ]
+}
