@@ -1,0 +1,342 @@
+{
+ "schema": "n11-fold9-12-resolve5-third-method-cross-check-20261119-v1",
+ "method": "exact rational circle solve (cross-multiplied) + exact line test; python3 stdlib only",
+ "gates": [
+  {
+   "name": "four receipts ninth..twelfth",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "fold receipt ninth: target rows == third-method coverage restricted to residual86",
+   "pass": true,
+   "detail": "['00000000000000801202000001000200', '00000000000000801202000001040000']"
+  },
+  {
+   "name": "fold receipt ninth: covered_s6_rows == third-method coverage over residual86+extras",
+   "pass": true,
+   "detail": "['00000000000000801202000001000200', '00000000000000801202000001040000']"
+  },
+  {
+   "name": "fold receipt ninth: extras == coverage minus residual86",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "fold receipt ninth: S6 rows partition into target + extras",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "fold receipt ninth rows == sweep43 witness rows",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "fold receipt ninth S6 rows unique",
+   "pass": true,
+   "detail": "2"
+  },
+  {
+   "name": "ninth root 7 stones",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "ninth root D4-canonical",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "ninth root safe (third method)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "fold receipt tenth: target rows == third-method coverage restricted to residual86",
+   "pass": true,
+   "detail": "['00000000000000821082000200000000', '00000000000000821082000400000000']"
+  },
+  {
+   "name": "fold receipt tenth: covered_s6_rows == third-method coverage over residual86+extras",
+   "pass": true,
+   "detail": "['00000000000000801082080400000000', '00000000000000821082000200000000', '00000000000000821082000400000000']"
+  },
+  {
+   "name": "fold receipt tenth: extras == coverage minus residual86",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "fold receipt tenth: S6 rows partition into target + extras",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "fold receipt tenth rows == sweep43 witness rows",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "fold receipt tenth S6 rows unique",
+   "pass": true,
+   "detail": "3"
+  },
+  {
+   "name": "tenth root 7 stones",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "tenth root D4-canonical",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "tenth root safe (third method)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "fold receipt eleventh: target rows == third-method coverage restricted to residual86",
+   "pass": true,
+   "detail": "['00000000000000821082200000000000', '00000000000000821082400000000000']"
+  },
+  {
+   "name": "fold receipt eleventh: covered_s6_rows == third-method coverage over residual86+extras",
+   "pass": true,
+   "detail": "['00000000000000821082200000000000', '00000000000000821082400000000000']"
+  },
+  {
+   "name": "fold receipt eleventh: extras == coverage minus residual86",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "fold receipt eleventh: S6 rows partition into target + extras",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "fold receipt eleventh rows == sweep43 witness rows",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "fold receipt eleventh S6 rows unique",
+   "pass": true,
+   "detail": "2"
+  },
+  {
+   "name": "eleventh root 7 stones",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "eleventh root D4-canonical",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "eleventh root safe (third method)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "fold receipt twelfth: target rows == third-method coverage restricted to residual86",
+   "pass": true,
+   "detail": "['00000000000000801202010001000000', '00000000000020003800000048000000']"
+  },
+  {
+   "name": "fold receipt twelfth: covered_s6_rows == third-method coverage over residual86+extras",
+   "pass": true,
+   "detail": "['00000000000000801202010001000000', '00000000000020003800000048000000']"
+  },
+  {
+   "name": "fold receipt twelfth: extras == coverage minus residual86",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "fold receipt twelfth: S6 rows partition into target + extras",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "fold receipt twelfth rows == sweep43 witness rows",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "fold receipt twelfth S6 rows unique",
+   "pass": true,
+   "detail": "2"
+  },
+  {
+   "name": "twelfth root 7 stones",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "twelfth root D4-canonical",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "twelfth root safe (third method)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "fold closed exactly 8 target rows",
+   "pass": true,
+   "detail": "8"
+  },
+  {
+   "name": "fold-receipt target rows disjoint",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "nine S6 rows closed in total (8 target + 1 extra)",
+   "pass": true,
+   "detail": "9"
+  },
+  {
+   "name": "S6 closed = 8 target + declared extras",
+   "pass": true,
+   "detail": "(1, 1)"
+  },
+  {
+   "name": "fold frontier_before republishes the K1046 post-eighth state",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "cost delta == sum of closed edge costs",
+   "pass": true,
+   "detail": "667"
+  },
+  {
+   "name": "S6 conservation across fold",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "post-twelfth frontier 1635 solved / 6213 remaining",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "solved S6 delta == number of closed S6 rows",
+   "pass": true,
+   "detail": "9"
+  },
+  {
+   "name": "five-parent target 34/112 closed, 78 residual",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "resolve5 residual78 == resolve4-86 minus fold-closed rows (third recomputation)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "residual 78 rows",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "fold record residual_after == my recomputation",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "expansion universe size == third recomputation",
+   "pass": true,
+   "detail": "(7969, 7969)"
+  },
+  {
+   "name": "witness list 39",
+   "pass": true,
+   "detail": "39"
+  },
+  {
+   "name": "witness roots: 7 stones + D4-canon + safe + coverage recomputed",
+   "pass": true,
+   "detail": "39/39"
+  },
+  {
+   "name": "witness roots distinct",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "78 residual rows covered exactly once by the 39 witnesses",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "witness coverage == residual 78 set",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "witness roots disjoint from the 43 sweep43 roots",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "name": "witness roots disjoint from the four new receipt roots",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "resolve5 counters 78/0/39",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "expansion partition sums to universe",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "fresh partition safe+unsafe",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "verdict pool 379 REFUTED / 168 WIN growth from 340/164 (+39/+4)",
+   "pass": true,
+   "detail": ""
+  }
+ ],
+ "all_pass": true,
+ "closed_target_rows_by_third_recomputation": [
+  "00000000000000801202000001000200",
+  "00000000000000801202000001040000",
+  "00000000000000801202010001000000",
+  "00000000000000821082000200000000",
+  "00000000000000821082000400000000",
+  "00000000000000821082200000000000",
+  "00000000000000821082400000000000",
+  "00000000000020003800000048000000"
+ ],
+ "closed_s6_rows_by_third_recomputation": [
+  "00000000000000801082080400000000",
+  "00000000000000801202000001000200",
+  "00000000000000801202000001040000",
+  "00000000000000801202010001000000",
+  "00000000000000821082000200000000",
+  "00000000000000821082000400000000",
+  "00000000000000821082200000000000",
+  "00000000000000821082400000000000",
+  "00000000000020003800000048000000"
+ ],
+ "residual78_consistent": true,
+ "expansion_universe_third_recomputation": 7969,
+ "witness39_structural_audit_pass": true,
+ "wall_s": 0.2
+}

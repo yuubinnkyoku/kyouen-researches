@@ -1,0 +1,230 @@
+{
+ "schema": "n11-win7-d10-third-method-verification-20261119-v1",
+ "method": "exact rational circle solve, cross-multiplied; exact line test for collinear triples; python3 stdlib only",
+ "cert_path": "win7-root-00000000001020003800000048000000-20261119.n11",
+ "gates": [
+  {
+   "name": "sha256(cert)==extraction.certificate_sha256",
+   "pass": true,
+   "detail": "6513b7d57ace489764b7c863025487b2d14313e134153a1460a039578287e37a"
+  },
+  {
+   "name": "bigint record cert sha compat",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "header",
+   "pass": true,
+   "detail": "n11-terminal-strategy-v1 original_first_WIN7 second_to_move_LOSS"
+  },
+  {
+   "name": "root line",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "root==extraction.root",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "row count==lines-2",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "rows==extraction.unique_strategy_rows",
+   "pass": true,
+   "detail": "26756"
+  },
+  {
+   "name": "rows==bigint.strategy_rows",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "rows==bareiss.rows",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "rows sorted+unique",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "third-method vs lifted-cofactor method equivalence (512 sampled triples)",
+   "pass": true,
+   "detail": "mismatches=0"
+  },
+  {
+   "name": "root has seven stones",
+   "pass": true,
+   "detail": "7"
+  },
+  {
+   "name": "root stones==bareiss root check",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "root is safe",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "root stones==bigint.root_stones",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "root mobility==extraction.legal_next_moves",
+   "pass": true,
+   "detail": "51"
+  },
+  {
+   "name": "root mobility==bigint.root_mobility",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "root mobility==bareiss.loserMobility",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "mobility bits==completed_move_list",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "completed moves==legal moves",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "winner never stuck",
+   "pass": true,
+   "detail": "0"
+  },
+  {
+   "name": "no missing winner row",
+   "pass": true,
+   "detail": "0"
+  },
+  {
+   "name": "no terminal with strategy row",
+   "pass": true,
+   "detail": "0"
+  },
+  {
+   "name": "no illegal strategy move",
+   "pass": true,
+   "detail": "0"
+  },
+  {
+   "name": "terminal stone counts are odd",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "name": "strategy/consumed union missing==0",
+   "pass": true,
+   "detail": "0"
+  },
+  {
+   "name": "strategy/consumed union extra==0",
+   "pass": true,
+   "detail": "0"
+  },
+  {
+   "name": "visited==bigint",
+   "pass": true,
+   "detail": "61065"
+  },
+  {
+   "name": "winner_states==bigint",
+   "pass": true,
+   "detail": "39578"
+  },
+  {
+   "name": "loser_states==bigint",
+   "pass": true,
+   "detail": "12296"
+  },
+  {
+   "name": "loser_reply_edges==bigint",
+   "pass": true,
+   "detail": "55923"
+  },
+  {
+   "name": "terminal_count==bigint",
+   "pass": true,
+   "detail": "9191"
+  },
+  {
+   "name": "terminal_range==bigint",
+   "pass": true,
+   "detail": "[13, 17]"
+  },
+  {
+   "name": "terminal_range==extraction",
+   "pass": true,
+   "detail": "[13, 17]"
+  },
+  {
+   "name": "terminal range within depth-10 window 13..17",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "consumed_winner_rows==bigint",
+   "pass": true,
+   "detail": "26756"
+  },
+  {
+   "name": "subroot count==bareiss",
+   "pass": true,
+   "detail": "51"
+  },
+  {
+   "name": "per-subroot stats==bareiss (all 51 subroots)",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "name": "bareiss totals==third replay",
+   "pass": true,
+   "detail": "(61065, 9191, 55923)"
+  }
+ ],
+ "root_hex": "00000000001020003800000048000000",
+ "certificate_sha256": "6513b7d57ace489764b7c863025487b2d14313e134153a1460a039578287e37a",
+ "root_stones": 7,
+ "root_mobility": 51,
+ "strategy_rows": 26756,
+ "rows_sorted_unique": true,
+ "subroots_verified": 51,
+ "visited_states_across_subroots": 61065,
+ "winner_states": 39578,
+ "loser_states": 12296,
+ "loser_reply_edges": 55923,
+ "terminal_count": 9191,
+ "terminal_range": [
+  13,
+  17
+ ],
+ "consumed_winner_rows": 26756,
+ "union_missing": 0,
+ "union_extra": 0,
+ "triple_mask_cache_entries": 18473,
+ "options_cache_entries": 40613,
+ "method_equivalence_sample": 512,
+ "method_equivalence_mismatches": 0,
+ "bigint_record_matches_exactly": true,
+ "bareiss_per_subroot_matches_exactly": true,
+ "all_gates_pass": true,
+ "failed_gates": [],
+ "wall_s": 2.8
+}
