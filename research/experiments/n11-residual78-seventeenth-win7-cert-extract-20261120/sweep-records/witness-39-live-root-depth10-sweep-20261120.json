@@ -1,0 +1,1892 @@
+{
+ "schema": "n11-stranded86-add-one-stone-witness-39-root-depth10-sweep-20261120-v1",
+ "date": "2026-11-20",
+ "status": "sweep-complete",
+ "base_record": "post-saturation-full-cache-join-resolve6-20261120.json (K1063) residual 78 rows: 39 live-witness pair candidates unjudged in the full-cache join, max matching 39 covering all 78 rows",
+ "engine": {
+  "file": "class4_child1_runner_v17 (git blob c132cc6425eee3feaeef1d697dd74f968cfedb59)",
+  "depth": 10,
+  "cap": 30000000,
+  "andclose_orderings": [
+   1,
+   0
+  ],
+  "pilot_control": "pilot_d6 (3402 nodes, loss=false, must pass before each probe)",
+  "child_convention": "RAW maxbit child (canon_hex(child) is forbidden; epoch-1 loss cause)"
+ },
+ "classification_rule": "WIN7-D10 = uncapped loss=true in both orderings; REFUTED-D10 = uncapped loss=false in both orderings; conflict otherwise",
+ "classification": {
+  "counted_roots": 39,
+  "win7_d10": {
+   "count": 1,
+   "roots": [
+    "00004000000000821082000000000100"
+   ]
+  },
+  "refuted_d10": {
+   "count": 38,
+   "roots": [
+    "00000000000000003800000008001220",
+    "00000000000000003800000008001880",
+    "00000000000000003800000008005001",
+    "00000000000000003800000008510000",
+    "00000000000000003800000009080004",
+    "00000000000000003800000009840000",
+    "0000000000000000380000000a002080",
+    "00000000000000003800000888001000",
+    "00000000000000003800200009001000",
+    "00000000000000083800000248000000",
+    "000000000000000c3800000008100000",
+    "0000000000000010380000000a080000",
+    "00000000000000801202000000880100",
+    "00000000000000801202000000900400",
+    "00000000000000801202000001000440",
+    "00000000000000801202000001004100",
+    "00000000000000801202040000101000",
+    "00000000000000801202040000800200",
+    "00000000000000801202080020001000",
+    "00000000000000801212000011000000",
+    "00000000000000801222000000840000",
+    "00000000000000801222010000001000",
+    "00000000000000821082800000000800",
+    "00000000000000821083000000001000",
+    "00000000000000889042000080000000",
+    "00000000000000909002000080000040",
+    "00000000000030809002000080000000",
+    "00000000000040809002000800100000",
+    "00000000010000809002000040000080",
+    "00000000010000889002000000100000",
+    "00000000010000a09002000080000000",
+    "00000000020000003820000008001000",
+    "00000000020000801202000000100040",
+    "00000000022000003800000009000000",
+    "00000000410000003800000008100000",
+    "00000008100000003800000008100000",
+    "00000010000000801202000000400400",
+    "00020000000000821082000000000040"
+   ]
+  },
+  "capped": {
+   "count": 0,
+   "roots": []
+  },
+  "ordering_conflicts": {
+   "count": 0,
+   "roots": []
+  }
+ },
+ "witness_records": [
+  {
+   "root": "00000000000000003800000008001220",
+   "added_bit": 5,
+   "child_hex": "3800000008001200",
+   "covered_stranded_rows": [
+    "00000000000000003800000008001020",
+    "00000000000000003800000008001200"
+   ],
+   "probe_runs": [
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 815057,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 0,
+     "seq": 0
+    },
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 671421,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 0,
+     "seq": 0
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "nodes": 3402,
+    "loss": false,
+    "all_pass": true
+   },
+   "nodes_total": 1486478
+  },
+  {
+   "root": "00000000000000003800000008001880",
+   "added_bit": 7,
+   "child_hex": "3800000008001800",
+   "covered_stranded_rows": [
+    "00000000000000003800000008001080",
+    "00000000000000003800000008001800"
+   ],
+   "probe_runs": [
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 960674,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 1,
+     "seq": 0
+    },
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 388948,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 1,
+     "seq": 0
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "nodes": 3402,
+    "loss": false,
+    "all_pass": true
+   },
+   "nodes_total": 1349622
+  },
+  {
+   "root": "00000000000000003800000008005001",
+   "added_bit": 0,
+   "child_hex": "3800000008005000",
+   "covered_stranded_rows": [
+    "00000000000000003800000008001001",
+    "00000000000000003800000008005000"
+   ],
+   "probe_runs": [
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 1569420,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 0,
+     "seq": 1
+    },
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 222826,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 0,
+     "seq": 1
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "nodes": 3402,
+    "loss": false,
+    "all_pass": true
+   },
+   "nodes_total": 1792246
+  },
+  {
+   "root": "00000000000000003800000008510000",
+   "added_bit": 16,
+   "child_hex": "3800000008500000",
+   "covered_stranded_rows": [
+    "00000000000000003800000008011000",
+    "00000000000000003800000008500000"
+   ],
+   "probe_runs": [
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 1983028,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 1,
+     "seq": 1
+    },
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 1045382,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 1,
+     "seq": 1
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "nodes": 3402,
+    "loss": false,
+    "all_pass": true
+   },
+   "nodes_total": 3028410
+  },
+  {
+   "root": "00000000000000003800000009080004",
+   "added_bit": 2,
+   "child_hex": "3800000009080000",
+   "covered_stranded_rows": [
+    "00000000000000003800000008002100",
+    "00000000000000003800000009000004"
+   ],
+   "probe_runs": [
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 3422095,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 0,
+     "seq": 2
+    },
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 5385035,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 0,
+     "seq": 2
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "nodes": 3402,
+    "loss": false,
+    "all_pass": true
+   },
+   "nodes_total": 8807130
+  },
+  {
+   "root": "00000000000000003800000009840000",
+   "added_bit": 18,
+   "child_hex": "3800000009800000",
+   "covered_stranded_rows": [
+    "00000000000000003800000009040000",
+    "00000000000000003800000009800000"
+   ],
+   "probe_runs": [
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 6009248,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 1,
+     "seq": 2
+    },
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 2710668,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 1,
+     "seq": 2
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "nodes": 3402,
+    "loss": false,
+    "all_pass": true
+   },
+   "nodes_total": 8719916
+  },
+  {
+   "root": "0000000000000000380000000a002080",
+   "added_bit": 7,
+   "child_hex": "380000000a002000",
+   "covered_stranded_rows": [
+    "00000000000000003800000008002080",
+    "0000000000000000380000000a002000"
+   ],
+   "probe_runs": [
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 296317,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 0,
+     "seq": 3
+    },
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 721070,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 0,
+     "seq": 3
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "nodes": 3402,
+    "loss": false,
+    "all_pass": true
+   },
+   "nodes_total": 1017387
+  },
+  {
+   "root": "00000000000000003800000888001000",
+   "added_bit": 12,
+   "child_hex": "3800000888000000",
+   "covered_stranded_rows": [
+    "00000000000000003800000008900000",
+    "00000000000000003800000808001000"
+   ],
+   "probe_runs": [
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 4035054,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 1,
+     "seq": 3
+    },
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 3218491,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 1,
+     "seq": 3
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "nodes": 3402,
+    "loss": false,
+    "all_pass": true
+   },
+   "nodes_total": 7253545
+  },
+  {
+   "root": "00000000000000003800200009001000",
+   "added_bit": 12,
+   "child_hex": "3800200009000000",
+   "covered_stranded_rows": [
+    "00000000000000003800200008001000",
+    "00000000000000003800200009000000"
+   ],
+   "probe_runs": [
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 995460,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 0,
+     "seq": 4
+    },
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 709262,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 0,
+     "seq": 4
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "nodes": 3402,
+    "loss": false,
+    "all_pass": true
+   },
+   "nodes_total": 1704722
+  },
+  {
+   "root": "00000000000000083800000248000000",
+   "added_bit": 27,
+   "child_hex": "83800000240000000",
+   "covered_stranded_rows": [
+    "00000000000000003800000248000000",
+    "00000000000000083800000048000000"
+   ],
+   "probe_runs": [
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 1054411,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 1,
+     "seq": 4
+    },
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 4639702,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 1,
+     "seq": 4
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "nodes": 3402,
+    "loss": false,
+    "all_pass": true
+   },
+   "nodes_total": 5694113
+  },
+  {
+   "root": "000000000000000c3800000008100000",
+   "added_bit": 20,
+   "child_hex": "c3800000008000000",
+   "covered_stranded_rows": [
+    "00000000000000043800000008100000",
+    "00000000000000083800000008100000"
+   ],
+   "probe_runs": [
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 5331645,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 0,
+     "seq": 5
+    },
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 2183218,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 0,
+     "seq": 5
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "nodes": 3402,
+    "loss": false,
+    "all_pass": true
+   },
+   "nodes_total": 7514863
+  },
+  {
+   "root": "0000000000000010380000000a080000",
+   "added_bit": 19,
+   "child_hex": "10380000000a000000",
+   "covered_stranded_rows": [
+    "0000000000000000380000000a080000",
+    "00000000000000103800000008080000"
+   ],
+   "probe_runs": [
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 942069,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 1,
+     "seq": 5
+    },
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 2092989,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 1,
+     "seq": 5
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "nodes": 3402,
+    "loss": false,
+    "all_pass": true
+   },
+   "nodes_total": 3035058
+  },
+  {
+   "root": "00000000000000801202000000880100",
+   "added_bit": 8,
+   "child_hex": "801202000000880000",
+   "covered_stranded_rows": [
+    "00000000000000801202000000800100",
+    "00000000000000801202000000880000"
+   ],
+   "probe_runs": [
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 443007,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 0,
+     "seq": 6
+    },
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 331659,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 0,
+     "seq": 6
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "nodes": 3402,
+    "loss": false,
+    "all_pass": true
+   },
+   "nodes_total": 774666
+  },
+  {
+   "root": "00000000000000801202000000900400",
+   "added_bit": 10,
+   "child_hex": "801202000000900000",
+   "covered_stranded_rows": [
+    "00000000000000801202000000800400",
+    "00000000000000801202000000900000"
+   ],
+   "probe_runs": [
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 1566491,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 1,
+     "seq": 6
+    },
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 363965,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 1,
+     "seq": 6
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "nodes": 3402,
+    "loss": false,
+    "all_pass": true
+   },
+   "nodes_total": 1930456
+  },
+  {
+   "root": "00000000000000801202000001000440",
+   "added_bit": 6,
+   "child_hex": "801202000001000400",
+   "covered_stranded_rows": [
+    "00000000000000043800000009000000",
+    "00000000000000801202000001000400"
+   ],
+   "probe_runs": [
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 1978888,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 0,
+     "seq": 7
+    },
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 3230648,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 0,
+     "seq": 7
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "nodes": 3402,
+    "loss": false,
+    "all_pass": true
+   },
+   "nodes_total": 5209536
+  },
+  {
+   "root": "00000000000000801202000001004100",
+   "added_bit": 8,
+   "child_hex": "801202000001004000",
+   "covered_stranded_rows": [
+    "00000000000000003800000409000000",
+    "00000000000000801202000001000100"
+   ],
+   "probe_runs": [
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 386191,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 1,
+     "seq": 7
+    },
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 1146709,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 1,
+     "seq": 7
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "nodes": 3402,
+    "loss": false,
+    "all_pass": true
+   },
+   "nodes_total": 1532900
+  },
+  {
+   "root": "00000000000000801202040000101000",
+   "added_bit": 12,
+   "child_hex": "801202040000100000",
+   "covered_stranded_rows": [
+    "00000000000000801202000000101000",
+    "00000000000000801202040000001000"
+   ],
+   "probe_runs": [
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 5785671,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 0,
+     "seq": 8
+    },
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 6215710,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 0,
+     "seq": 8
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "nodes": 3402,
+    "loss": false,
+    "all_pass": true
+   },
+   "nodes_total": 12001381
+  },
+  {
+   "root": "00000000000000801202040000800200",
+   "added_bit": 9,
+   "child_hex": "801202040000800000",
+   "covered_stranded_rows": [
+    "00000000000000801202000000800200",
+    "00000000000000801202040000800000"
+   ],
+   "probe_runs": [
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 980112,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 1,
+     "seq": 8
+    },
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 1582682,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 1,
+     "seq": 8
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "nodes": 3402,
+    "loss": false,
+    "all_pass": true
+   },
+   "nodes_total": 2562794
+  },
+  {
+   "root": "00000000000000801202080020001000",
+   "added_bit": 12,
+   "child_hex": "801202080020000000",
+   "covered_stranded_rows": [
+    "00000000000000801202000020001000",
+    "00000000000000801202080000001000"
+   ],
+   "probe_runs": [
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 3438184,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 0,
+     "seq": 9
+    },
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 420022,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 0,
+     "seq": 9
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "nodes": 3402,
+    "loss": false,
+    "all_pass": true
+   },
+   "nodes_total": 3858206
+  },
+  {
+   "root": "00000000000000801212000011000000",
+   "added_bit": 24,
+   "child_hex": "801212000010000000",
+   "covered_stranded_rows": [
+    "00000000000000103800000009000000",
+    "00000000000000801212000001000000"
+   ],
+   "probe_runs": [
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 745250,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 1,
+     "seq": 9
+    },
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 80554,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 1,
+     "seq": 9
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "nodes": 3402,
+    "loss": false,
+    "all_pass": true
+   },
+   "nodes_total": 825804
+  },
+  {
+   "root": "00000000000000801222000000840000",
+   "added_bit": 18,
+   "child_hex": "801222000000800000",
+   "covered_stranded_rows": [
+    "00000000000000801202000000840000",
+    "00000000000000801222000000800000"
+   ],
+   "probe_runs": [
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 776432,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 0,
+     "seq": 10
+    },
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 1391812,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 0,
+     "seq": 10
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "nodes": 3402,
+    "loss": false,
+    "all_pass": true
+   },
+   "nodes_total": 2168244
+  },
+  {
+   "root": "00000000000000801222010000001000",
+   "added_bit": 12,
+   "child_hex": "801222010000000000",
+   "covered_stranded_rows": [
+    "00000000000000801202010000001000",
+    "00000000000000801222000000001000"
+   ],
+   "probe_runs": [
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 5500602,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 1,
+     "seq": 10
+    },
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 600153,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 1,
+     "seq": 10
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "nodes": 3402,
+    "loss": false,
+    "all_pass": true
+   },
+   "nodes_total": 6100755
+  },
+  {
+   "root": "00000000000000821082800000000800",
+   "added_bit": 11,
+   "child_hex": "821082800000000000",
+   "covered_stranded_rows": [
+    "00000000000000821082000000000800",
+    "00000000000000821082800000000000"
+   ],
+   "probe_runs": [
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 890037,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 0,
+     "seq": 11
+    },
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 1323904,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 0,
+     "seq": 11
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "nodes": 3402,
+    "loss": false,
+    "all_pass": true
+   },
+   "nodes_total": 2213941
+  },
+  {
+   "root": "00000000000000821083000000001000",
+   "added_bit": 12,
+   "child_hex": "821083000000000000",
+   "covered_stranded_rows": [
+    "00000000000000821082000000001000",
+    "00000000000000821083000000000000"
+   ],
+   "probe_runs": [
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 717739,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 1,
+     "seq": 11
+    },
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 124440,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 1,
+     "seq": 11
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "nodes": 3402,
+    "loss": false,
+    "all_pass": true
+   },
+   "nodes_total": 842179
+  },
+  {
+   "root": "00000000000000889042000080000000",
+   "added_bit": 31,
+   "child_hex": "889042000000000000",
+   "covered_stranded_rows": [
+    "00000000000000003800000008002010",
+    "00000000000000889002000080000000"
+   ],
+   "probe_runs": [
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 638671,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 0,
+     "seq": 12
+    },
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 2950904,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 0,
+     "seq": 12
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "nodes": 3402,
+    "loss": false,
+    "all_pass": true
+   },
+   "nodes_total": 3589575
+  },
+  {
+   "root": "00000000000000909002000080000040",
+   "added_bit": 6,
+   "child_hex": "909002000080000000",
+   "covered_stranded_rows": [
+    "00000000000000003800100008002000",
+    "00000000000000909002000080000000"
+   ],
+   "probe_runs": [
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 588915,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 1,
+     "seq": 12
+    },
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 4088417,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 1,
+     "seq": 12
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "nodes": 3402,
+    "loss": false,
+    "all_pass": true
+   },
+   "nodes_total": 4677332
+  },
+  {
+   "root": "00000000000030809002000080000000",
+   "added_bit": 31,
+   "child_hex": "30809002000000000000",
+   "covered_stranded_rows": [
+    "00000000000000003800000008002040",
+    "00000000000020809002000080000000"
+   ],
+   "probe_runs": [
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 468290,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 0,
+     "seq": 13
+    },
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 304869,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 0,
+     "seq": 13
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "nodes": 3402,
+    "loss": false,
+    "all_pass": true
+   },
+   "nodes_total": 773159
+  },
+  {
+   "root": "00000000000040809002000800100000",
+   "added_bit": 20,
+   "child_hex": "40809002000800000000",
+   "covered_stranded_rows": [
+    "00000000000000801202020000001000",
+    "00000000000040809002000000100000"
+   ],
+   "probe_runs": [
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 12796034,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 1,
+     "seq": 13
+    },
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 218055,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 1,
+     "seq": 13
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "nodes": 3402,
+    "loss": false,
+    "all_pass": true
+   },
+   "nodes_total": 13014089
+  },
+  {
+   "root": "00000000010000809002000040000080",
+   "added_bit": 7,
+   "child_hex": "10000809002000040000000",
+   "covered_stranded_rows": [
+    "00000000000000003800000209000000",
+    "00000000010000809002000040000000"
+   ],
+   "probe_runs": [
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 14249420,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 0,
+     "seq": 14
+    },
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 2731659,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 0,
+     "seq": 14
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "nodes": 3402,
+    "loss": false,
+    "all_pass": true
+   },
+   "nodes_total": 16981079
+  },
+  {
+   "root": "00000000010000889002000000100000",
+   "added_bit": 20,
+   "child_hex": "10000889002000000000000",
+   "covered_stranded_rows": [
+    "00000000000000889002000000100000",
+    "00000000010000809002000000100000"
+   ],
+   "probe_runs": [
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 1208820,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 1,
+     "seq": 14
+    },
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 901584,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 1,
+     "seq": 14
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "nodes": 3402,
+    "loss": false,
+    "all_pass": true
+   },
+   "nodes_total": 2110404
+  },
+  {
+   "root": "00000000010000a09002000080000000",
+   "added_bit": 31,
+   "child_hex": "10000a09002000000000000",
+   "covered_stranded_rows": [
+    "00000000000000a09002000080000000",
+    "00000000010000809002000080000000"
+   ],
+   "probe_runs": [
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 1106923,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 0,
+     "seq": 15
+    },
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 1774850,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 0,
+     "seq": 15
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "nodes": 3402,
+    "loss": false,
+    "all_pass": true
+   },
+   "nodes_total": 2881773
+  },
+  {
+   "root": "00000000020000003820000008001000",
+   "added_bit": 12,
+   "child_hex": "20000003820000008000000",
+   "covered_stranded_rows": [
+    "00000000000000003800200008100000",
+    "00000000000000801202000000081000"
+   ],
+   "probe_runs": [
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 3590071,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 1,
+     "seq": 15
+    },
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 619254,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 1,
+     "seq": 15
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "nodes": 3402,
+    "loss": false,
+    "all_pass": true
+   },
+   "nodes_total": 4209325
+  },
+  {
+   "root": "00000000020000801202000000100040",
+   "added_bit": 6,
+   "child_hex": "20000801202000000100000",
+   "covered_stranded_rows": [
+    "00000000000000043800000008080000",
+    "00000000020000801202000000100000"
+   ],
+   "probe_runs": [
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 366734,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 0,
+     "seq": 16
+    },
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 201344,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 0,
+     "seq": 16
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "nodes": 3402,
+    "loss": false,
+    "all_pass": true
+   },
+   "nodes_total": 568078
+  },
+  {
+   "root": "00000000022000003800000009000000",
+   "added_bit": 24,
+   "child_hex": "22000003800000008000000",
+   "covered_stranded_rows": [
+    "00000000000000801202000001080000",
+    "00000000000080003800000048000000"
+   ],
+   "probe_runs": [
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 864772,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 1,
+     "seq": 16
+    },
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 778997,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 1,
+     "seq": 16
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "nodes": 3402,
+    "loss": false,
+    "all_pass": true
+   },
+   "nodes_total": 1643769
+  },
+  {
+   "root": "00000000410000003800000008100000",
+   "added_bit": 20,
+   "child_hex": "410000003800000008000000",
+   "covered_stranded_rows": [
+    "00000000000000801212000000001000",
+    "00000000010000003800000008100000"
+   ],
+   "probe_runs": [
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 4497275,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 0,
+     "seq": 17
+    },
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 1095706,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 0,
+     "seq": 17
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "nodes": 3402,
+    "loss": false,
+    "all_pass": true
+   },
+   "nodes_total": 5592981
+  },
+  {
+   "root": "00000008100000003800000008100000",
+   "added_bit": 20,
+   "child_hex": "8100000003800000008000000",
+   "covered_stranded_rows": [
+    "00000000000000909002000000100000",
+    "00000008000000003800000008100000"
+   ],
+   "probe_runs": [
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 6032137,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 1,
+     "seq": 17
+    },
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 211830,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 1,
+     "seq": 17
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "nodes": 3402,
+    "loss": false,
+    "all_pass": true
+   },
+   "nodes_total": 6243967
+  },
+  {
+   "root": "00000010000000801202000000400400",
+   "added_bit": 10,
+   "child_hex": "10000000801202000000400000",
+   "covered_stranded_rows": [
+    "00000000000000003800000008001100",
+    "00000010000000801202000000000400"
+   ],
+   "probe_runs": [
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 687760,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 0,
+     "seq": 18
+    },
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 5720576,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 0,
+     "seq": 18
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "nodes": 3402,
+    "loss": false,
+    "all_pass": true
+   },
+   "nodes_total": 6408336
+  },
+  {
+   "root": "00004000000000821082000000000100",
+   "added_bit": 8,
+   "child_hex": "4000000000821082000000000000",
+   "covered_stranded_rows": [
+    "00000000000000821082000000000001",
+    "00000000000000821082000000000004"
+   ],
+   "probe_runs": [
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": true,
+     "capped": false,
+     "nodes": 2544178,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 1,
+     "seq": 18
+    },
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": true,
+     "capped": false,
+     "nodes": 1576372,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 1,
+     "seq": 18
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "nodes": 3402,
+    "loss": false,
+    "all_pass": true
+   },
+   "nodes_total": 4120550
+  },
+  {
+   "root": "00020000000000821082000000000040",
+   "added_bit": 6,
+   "child_hex": "20000000000821082000000000000",
+   "covered_stranded_rows": [
+    "00000000000000821082000000000008",
+    "00000000000000821082000000000010"
+   ],
+   "probe_runs": [
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 1871416,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 0,
+     "seq": 19
+    },
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "capped": false,
+     "nodes": 3505323,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "wall_s": null,
+     "worker": 0,
+     "seq": 19
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "nodes": 3402,
+    "loss": false,
+    "all_pass": true
+   },
+   "nodes_total": 5376739
+  }
+ ],
+ "controls": {
+  "both_andclose_orderings_uncapped_all_roots": true,
+  "pilot_controls_all_pass": true,
+  "nodes_total_all_probes": 169615508,
+  "probe_wall_total_s_rounded": 0,
+  "verdict_counts": {
+   "WIN": 1,
+   "REFUTED": 38,
+   "CAPPED": 0,
+   "CONFLICT": 0
+  }
+ },
+ "interpretation_guard": [
+  "WIN7-D10 proves a first-player win within depth 10 only from the individual seven-stone root.",
+  "REFUTED-D10 is NOT a LOSS proof; it bounds first-player wins within depth 10 from that exact root only.",
+  "These 39 live witnesses are unjudged add-one-stone pair candidates selected by the resolve6 (K1063) maximum matching over the 78 residual rows; a WIN witness closes exactly its covered rows (subject to certificate extraction and fold gates). A REFUTED-D10 witness consumes the candidate without closing any row.",
+  "The standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+ ]
+}

@@ -1,0 +1,395 @@
+{
+ "added_bit": 8,
+ "certificate": {
+  "bytes": 1791541,
+  "loser_first_moves": 60,
+  "path_rel": "certs/win7-root-00004000000000821082000000000100-20261120.n11",
+  "rows": 49591,
+  "sha256": "21dd2f0e9f0b8ec22e917fce5a732835098baf37570a227bebacacb4c13807c8"
+ },
+ "child_hex": "4000000000821082000000000000",
+ "coverage_claim_pending_fold": {
+  "both_rows_open_in_fold9_residual_74": true,
+  "covered_rows_per_resolve6_matching": [
+   "00000000000000821082000000000001",
+   "00000000000000821082000000000004"
+  ],
+  "note": "row-closure accounting for these rows happens only in a fold10 receipt-fold record that re-derives the covered rows from the certificate geometry; until then the rows stay open"
+ },
+ "date": "2026-11-20",
+ "discovery": {
+  "concurrency": {
+   "note_pushed_at": "2026-11-19T20:32:07Z",
+   "single_owner_note_commit": "68b04984f22fe907120ded2deaf5b03182108fd7",
+   "single_owner_sweep_record": {
+    "commit": "e47e418496...",
+    "path_rel": "research/experiments/n11-residual78-39livewitness-depth10-sweep-20261120/output/witness-39live-root-depth10-sweep-20261120.json",
+    "per_probe_cross_check": "78/78 probes node-exact identical between this run and the single-owner run (independently loaded and compared before publication)",
+    "sha256": "22953ae16a6002d87638531f2ca9fd286f6736b834fa296e5648505ada9074dc"
+   },
+   "this_run_started": "2026-11-19T20:32:47Z (worker0)",
+   "visibility": "the note and this run's start were mutually invisible; the sweep completed before the note was seen by this lane"
+  },
+  "determinism_rerun": {
+   "andclose0": {
+    "node_exact_vs_sweep_record": true,
+    "nodes": 2544178
+   },
+   "andclose1": {
+    "node_exact_vs_sweep_record": true,
+    "nodes": 1576372
+   }
+  },
+  "kind": "39-live-witness depth-10 both-order sweep (K1063 resolve6 matching witness plan)",
+  "sweep_record_rel": "sweep-records/witness-39-live-root-depth10-sweep-20261120.json",
+  "verdicts": {
+   "capped": 0,
+   "ordering_conflicts": 0,
+   "refuted_d10": 38,
+   "win7_d10": 1
+  }
+ },
+ "extraction": {
+  "engine": "class4_child1_cert_extractor_exact_ms23.ts (repo-verbatim, git blob pinned by K1066)",
+  "fbt_drops": 0,
+  "mode": "blind (kill table empty)",
+  "rerun_certificate_sha256_local": "21dd2f0e9f0b8ec22e917fce5a732835098baf37570a227bebacacb4c13807c8",
+  "rerun_summary_numbers_identical": true,
+  "run1_nodes": 4250297,
+  "run1_rows": 49591
+ },
+ "gates": [
+  {
+   "detail": {
+    "sha256": "e85d4bfb867a193f2b3cdb23ec9e15679359c9f337fcd97eb5c62473b90c281a"
+   },
+   "gate": "pin-resolve6-sha256",
+   "pass": true
+  },
+  {
+   "detail": {
+    "sha256": "24db2352ad0d94ee4a76ec3de294f02cbdac7899f0b6ef64ea695d261017cdc2"
+   },
+   "gate": "pin-fold9-sha256",
+   "pass": true
+  },
+  {
+   "detail": {
+    "covered": [
+     "00000000000000821082000000000001",
+     "00000000000000821082000000000004"
+    ],
+    "root": "00004000000000821082000000000100",
+    "safe": true,
+    "witness_size": 39
+   },
+   "gate": "witness-selection-strict",
+   "pass": true
+  },
+  {
+   "detail": {
+    "unique_covered_rows": 78
+   },
+   "gate": "witness-plan-covers-78",
+   "pass": true
+  },
+  {
+   "gate": "fold9-residual-count-74",
+   "pass": true
+  },
+  {
+   "detail": {
+    "row1": "00000000000000821082000000000001",
+    "row2": "00000000000000821082000000000004"
+   },
+   "gate": "covered-rows-in-residual-74",
+   "pass": true
+  },
+  {
+   "detail": {
+    "windfall_roots": [
+     "00000000000000803202010000001000",
+     "00000000000000803202080000001000",
+     "00000008000000803202000000001000",
+     "00400000000000803202000000001000"
+    ]
+   },
+   "gate": "receipt-disjoint-from-windfall4",
+   "pass": true
+  },
+  {
+   "detail": {
+    "canonical": "00004000000000821082000000000100"
+   },
+   "gate": "root-d4-canonical",
+   "pass": true
+  },
+  {
+   "gate": "root-stones-7",
+   "pass": true
+  },
+  {
+   "gate": "covered-row-d4-canonical-0001",
+   "pass": true
+  },
+  {
+   "detail": {
+    "note": "the residual five-parent target rows are 6-stone S6 rows (7-stone witness roots cover them through the '8 D4 images - 1 stone' join; the fold machine re-derives the covered rows geometrically"
+   },
+   "gate": "covered-row-stones-6-0001",
+   "pass": true
+  },
+  {
+   "gate": "covered-row-d4-canonical-0004",
+   "pass": true
+  },
+  {
+   "detail": {
+    "note": "the residual five-parent target rows are 6-stone S6 rows (7-stone witness roots cover them through the '8 D4 images - 1 stone' join; the fold machine re-derives the covered rows geometrically"
+   },
+   "gate": "covered-row-stones-6-0004",
+   "pass": true
+  },
+  {
+   "gate": "child-bit-decomposition",
+   "pass": true
+  },
+  {
+   "gate": "child-is-root-minus-least-set-bit",
+   "pass": true
+  },
+  {
+   "detail": {
+    "header": "n11-terminal-strategy-v1 original_first_WIN7 second_to_move_LOSS",
+    "root_line": "root 00004000000000821082000000000100"
+   },
+   "gate": "cert-header",
+   "pass": true
+  },
+  {
+   "detail": {
+    "rows": 49591
+   },
+   "gate": "cert-rows-count-sorted-unique",
+   "pass": true
+  },
+  {
+   "detail": {
+    "fbt_drops": 0,
+    "moves": 60,
+    "nRows": 49591,
+    "sum": 4250297
+   },
+   "gate": "extraction-run1-summary",
+   "pass": true
+  },
+  {
+   "gate": "extraction-rerun-summary-identical-numbers",
+   "pass": true
+  },
+  {
+   "gate": "extraction-nodes-sum-per-move",
+   "pass": true
+  },
+  {
+   "detail": {
+    "loserMobility": 60,
+    "stones": 7
+   },
+   "gate": "ts-root-check",
+   "pass": true
+  },
+  {
+   "detail": {
+    "opponent_edges_total": 90499,
+    "seen_total": 103152,
+    "terminals_total": 17157
+   },
+   "gate": "ts-subroots-count-ranges",
+   "pass": true
+  },
+  {
+   "detail": {
+    "extra": 0,
+    "missing": 0,
+    "rows": 49591
+   },
+   "gate": "ts-union-exact",
+   "pass": true
+  },
+  {
+   "detail": {
+    "consumed_rows": 49591,
+    "strategy_rows": 49591,
+    "subroots_passed": 60,
+    "terminal_stone_range": [
+     13,
+     15,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "visited_winner_states": 150963
+   },
+   "gate": "python-bareiss-replay",
+   "pass": true
+  },
+  {
+   "detail": {
+    "loser_reply_edges": 90499,
+    "loser_states": 19783,
+    "subroots_passed": 60,
+    "terminal_count": 17157,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "winner_states": 66212
+   },
+   "gate": "bigint-3x3-cofactor",
+   "pass": true
+  },
+  {
+   "gate": "mobility-triple-consistent",
+   "pass": true
+  },
+  {
+   "detail": {
+    "capped": 0,
+    "conflicts": 0,
+    "refuted": 38,
+    "win": [
+     "00004000000000821082000000000100"
+    ]
+   },
+   "gate": "sweep-classification-39",
+   "pass": true
+  },
+  {
+   "gate": "sweep-nodes-total",
+   "pass": true
+  },
+  {
+   "detail": {
+    "andclose0_nodes": 2544178,
+    "andclose1_nodes": 1576372
+   },
+   "gate": "sweep-win-both-orders-uncapped",
+   "pass": true
+  },
+  {
+   "gate": "sweep-win-pilot-control",
+   "pass": true
+  },
+  {
+   "gate": "sweep-covered-rows-record",
+   "pass": true
+  },
+  {
+   "detail": {
+    "sha256": "22953ae16a6002d87638531f2ca9fd286f6736b834fa296e5648505ada9074dc"
+   },
+   "gate": "pin-single-owner-sweep-sha256",
+   "pass": true
+  },
+  {
+   "gate": "cross-run-classification-equal",
+   "pass": true
+  },
+  {
+   "detail": {
+    "ours": 169615508,
+    "theirs": 169615508
+   },
+   "gate": "cross-run-total-nodes-equal",
+   "pass": true
+  },
+  {
+   "detail": {
+    "ours": 14249420,
+    "theirs": 14249420
+   },
+   "gate": "cross-run-max-probe-nodes-equal",
+   "pass": true
+  },
+  {
+   "gate": "cross-run-winning-root-both-orders-in-both-runs",
+   "pass": true
+  },
+  {
+   "detail": {
+    "capped": false,
+    "loss": true,
+    "nodes": 2544178
+   },
+   "gate": "determinism-rerun-andclose0",
+   "pass": true
+  },
+  {
+   "detail": {
+    "capped": false,
+    "loss": true,
+    "nodes": 1576372
+   },
+   "gate": "determinism-rerun-andclose1",
+   "pass": true
+  }
+ ],
+ "gates_all_pass": true,
+ "gates_total": 38,
+ "interpretation_guard": [
+  "WIN7-D10 proves a first-player win within depth 10 only from this seven-stone root; the winning strategy tree is fully certified but the depth bound remains.",
+  "The certificate does not close any residual target row by itself; closure accounting happens only in a receipt fold.",
+  "REFUTED-D10 verdicts in the sweep are NOT LOSS proofs; pn/dn counts and solved counts are not game outcomes.",
+  "The standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+ ],
+ "pins": {
+  "fold9_sha256": "24db2352ad0d94ee4a76ec3de294f02cbdac7899f0b6ef64ea695d261017cdc2",
+  "resolve6_sha256": "e85d4bfb867a193f2b3cdb23ec9e15679359c9f337fcd97eb5c62473b90c281a",
+  "source_main_head_before": "ba447c8714"
+ },
+ "receipt_ordinal": "seventeenth",
+ "root_hex": "00004000000000821082000000000100",
+ "schema": "n11-seventeenth-win7-cert-triple-verification-20261120-v1",
+ "status": "triple-verified",
+ "triple_verification": {
+  "bigint": {
+   "file": "output/bigint-independent-verification-seventeenth-20261120.json",
+   "rows_sorted_unique": true,
+   "subroots_passed": 60,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "union_extra": 0,
+   "union_missing": 0
+  },
+  "cross_method_union_exact": true,
+  "pilot_control": {
+   "control": "pilot_d6",
+   "loss": false,
+   "nodes": 3402
+  },
+  "python_bareiss_replay": {
+   "file": "output/python-bareiss-replay-seventeenth-20261120.json",
+   "subroots_passed": 60,
+   "terminal_stone_range": [
+    13,
+    15,
+    17
+   ],
+   "union_extra": 0,
+   "union_missing": 0,
+   "visited_winner_states": 150963
+  },
+  "ts_bareiss": {
+   "file": "output/ts-subroot-stats-seventeenth-20261120.jsonl",
+   "opponent_edges": 90499,
+   "seen": 103152,
+   "subroots": 60,
+   "terminals": 17157,
+   "union_extra": 0,
+   "union_missing": 0
+  }
+ }
+}
