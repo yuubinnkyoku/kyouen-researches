@@ -54,6 +54,10 @@ jobs:
         run: |
           uv run --locked python research/experiments/vertical-fiber-two-token-z7-y-ge4-census-20261119/verify_z7_y_ge4.py
           git diff --exit-code -- research/experiments/vertical-fiber-two-token-z7-y-ge4-census-20261119/output/audit.json
+      - name: Audit K1002 z=10 y>=6 two-token finite conjecture census
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z10-y-ge6-census-20261119/verify_z10_y_ge6_census.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z10-y-ge6-census-20261119/output/audit.json
       - name: Audit quantitative circle-density modular checker
         run: python research/experiments/fixed-width/scripts/verify_quantitative_density.py
       - name: Audit prime-avoidance finite checks
@@ -823,3 +827,6 @@ jobs:
 # Refresh generated knowledge after K1000 publication and the z=8 family-completion frontier sync in K0998/K0999 and research/knowledge/README.md (2026-11-19).
 # Refresh generated views for K1001 uniform z=9 y>=9 two-token full Grundy theorem (y-strong induction, 7,510,492 audit checks, zero mismatches, two byte-identical runs; 2026-11-19).
 # Refresh generated knowledge after K1001 publication and the z=9 family-completion frontier sync in K0998 and research/knowledge/README.md (2026-11-19).
+
+# Refresh generated views for K1002 z=10 y>=6 two-token uniform Grundy conjecture (227,562 direct comparisons, 20,079 tail checks, zero mismatches, two byte-identical runs; 2026-11-19).
+# Refresh generated knowledge after K1002 census publication; status remains conjectured and z>=10 remains open (2026-11-19).
