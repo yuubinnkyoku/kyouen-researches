@@ -1,0 +1,111 @@
+{
+  "all_pass": true,
+  "candidate": "T2/P1/tail formula in report",
+  "canonical_cache": {
+    "currsize": 3445470,
+    "hits": 6605494,
+    "maxsize": null,
+    "misses": 3445470
+  },
+  "counts": {
+    "nimber_histogram": {
+      "0": 113390,
+      "1": 100855,
+      "2": 13317,
+      ">2": 0
+    },
+    "ordered_vs_canonical_vs_formula": 227562,
+    "parent_parity_points": {
+      "even_parent": 114333,
+      "odd_parent": 113229
+    },
+    "tail_offsets_0_through_8": 20079,
+    "value2_locus_points": 13317
+  },
+  "failure_count": 0,
+  "failures": [],
+  "finite_scope": {
+    "R": "0 <= R <= x+y+19",
+    "diagonal_offset_d": [
+      0,
+      96
+    ],
+    "y": [
+      6,
+      28
+    ]
+  },
+  "low_y_boundary_scan": {
+    "mismatches": {
+      "1": {
+        "count": 22,
+        "first": [
+          [0, 3, 0, 2],
+          [0, 5, 0, 2],
+          [0, 7, 0, 2],
+          [0, 9, 0, 2],
+          [1, 4, 1, 0],
+          [1, 5, 1, 2],
+          [1, 6, 1, 0],
+          [1, 7, 1, 2]
+        ]
+      },
+      "2": {
+        "count": 16,
+        "first": [
+          [0, 5, 0, 2],
+          [0, 7, 0, 2],
+          [0, 9, 0, 2],
+          [1, 6, 1, 0],
+          [1, 7, 1, 2],
+          [1, 8, 1, 0],
+          [1, 9, 1, 2],
+          [2, 7, 0, 2]
+        ]
+      },
+      "3": {
+        "count": 11,
+        "first": [
+          [0, 7, 0, 2],
+          [0, 9, 0, 2],
+          [0, 11, 0, 2],
+          [1, 8, 1, 0],
+          [1, 9, 1, 2],
+          [1, 10, 1, 0],
+          [2, 9, 0, 2],
+          [2, 11, 0, 1]
+        ]
+      },
+      "4": {
+        "count": 7,
+        "first": [
+          [0, 9, 0, 2],
+          [0, 11, 0, 1],
+          [0, 13, 0, 2],
+          [1, 10, 1, 0],
+          [1, 12, 1, 0],
+          [2, 11, 2, 1],
+          [2, 13, 2, 1]
+        ]
+      },
+      "5": {
+        "count": 2,
+        "first": [
+          [0, 11, 2, 1],
+          [0, 13, 2, 1]
+        ]
+      }
+    },
+    "scope": "1<=y<=5, 0<=d<=24, 0<=R<=x+y+19; compare with the unmodified y>=6 candidate"
+  },
+  "ordered_cache": {
+    "currsize": 3628422,
+    "hits": 6969389,
+    "maxsize": null,
+    "misses": 3628422
+  },
+  "repeat_byte_identical": true,
+  "repeat_runs": 2,
+  "sha256_without_hash_field": "0d84d8626be97823d5b585661b476ee5e6a2b70ba44500b3bbe60a09767021fc",
+  "target": "H(R;(x,y);10), x>=y>=6, R>=0"
+}
