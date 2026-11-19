@@ -493,6 +493,10 @@ jobs:
           git diff --exit-code -- research/experiments/vertical-fiber-two-token-z15-y5-boundary-20261120/output/audit.json
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
+      - name: Audit K1062 before refreshing generated knowledge
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z14-y-ge6-proof-20261120/verify_z14_y_ge6.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z14-y-ge6-proof-20261120/output/audit.json
       - run: uv run --locked python tools/knowledge/build.py
       - name: Commit generated views if stale
         run: |
@@ -930,3 +934,5 @@ jobs:
 # Re-run generated refresh after synchronizing K1043/K1055 frontier notes to K1056 (2026-11-20).
 
 # Re-run generated refresh after final K1043/K1045/K1055 frontier synchronization to K1056 (2026-11-20).
+
+# Refresh generated views for K1062 uniform z=14 y>=6 two-token full-Grundy theorem (1,852,619 checks, zero mismatches, two byte-identical runs; 2026-11-20).
