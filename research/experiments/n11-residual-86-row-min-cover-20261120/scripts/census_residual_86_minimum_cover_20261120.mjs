@@ -309,6 +309,7 @@ for (const item of data.joint.derived.joint_results)
   for (const root of item.witness_roots) pool.add(d4Canon(BigInt("0x" + root)));
 need(pool.size === 117, "117-root pool reconstruction mismatch");
 const poolOverlap = [...candidates.keys()].filter(root => pool.has(root));
+need(poolOverlap.length === 98, "old 117-root pool overlap mismatch");
 const poolStatus = { refuted_d10: 0, win7_d10: 0, not_in_pinned_join: 0 };
 for (const root of pool) {
   if (knownWin.has(root)) poolStatus.win7_d10++;
