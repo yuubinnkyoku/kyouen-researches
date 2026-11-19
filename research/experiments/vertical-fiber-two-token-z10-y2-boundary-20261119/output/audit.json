@@ -1,0 +1,81 @@
+{
+  "all_ok": true,
+  "checks": {
+    "V10_iterative_dp_vs_cand": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 1334
+    },
+    "V11_height_only_reduction": {
+      "bad": 0,
+      "example": null,
+      "note": "R in [1,11]: cand(x,R) == v_single(x+2, 10, R)",
+      "ok": true,
+      "points": 5489
+    },
+    "V1_direct_vs_cand": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 4189
+    },
+    "V2_direct_vs_anchor_mex": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 4189
+    },
+    "V3_band_table": {
+      "bad_coverage": 0,
+      "bad_mex": 0,
+      "bad_sig": 0,
+      "bad_val": 0,
+      "ex_cov": null,
+      "ex_mex": null,
+      "ex_sig": null,
+      "ex_val": null,
+      "ok": true,
+      "points": 2052973
+    },
+    "V4_k1003_transfer": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 4189
+    },
+    "V5_k0988_transfer": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 4189
+    },
+    "V6_tail_parity": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 19996,
+      "tail": "cand(x,R) == (x+2) mod 2 for R >= x+13"
+    },
+    "V7_wide_x_low_R_scan": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 5988
+    },
+    "V8_scatter_seed20261120": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 20000
+    },
+    "V9_theorem_T_parity": {
+      "bad": 0,
+      "example": null,
+      "ok": true,
+      "points": 2056971
+    }
+  },
+  "fail": [],
+  "n_points": 4175318
+}
