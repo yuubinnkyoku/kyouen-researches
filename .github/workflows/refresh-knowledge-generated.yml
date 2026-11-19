@@ -487,6 +487,10 @@ jobs:
         run: |
           uv run --locked python research/experiments/vertical-fiber-two-token-z15-y4-boundary-20261120/verify_z15_y4.py
           git diff --exit-code -- research/experiments/vertical-fiber-two-token-z15-y4-boundary-20261120/output/audit.json
+      - name: Audit K1049 two-token z=15 y=5 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z15-y5-boundary-20261120/verify_z15_y5.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z15-y5-boundary-20261120/output/audit.json
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python tools/knowledge/build.py
@@ -907,3 +911,5 @@ jobs:
 # Refresh generated knowledge after K1011 publication; K1002 is upgraded to proved and the z=10 two-token family is fully classified for all y>=1 (next open frontier: z>=11) (2026-11-19).
 # Re-run generated-view refresh after pinning the exact K1048 audit JSON (2026-11-20).
 # Retry after canonicalizing the pre-existing K0953 audit JSON (2026-11-20).
+
+# Refresh generated views for K1049 z=15 y=5 two-token boundary slice (x-outer induction, 4,153,734 audit checks, zero mismatches, two byte-identical runs; 2026-11-20).
