@@ -166,8 +166,8 @@ s&01&23&03&13&02&0&1&123&023&12\\\hline
 | 固定seed散点 | 5,000 | 0 |
 | **合計** | **1,973,080** | **0** |
 
-検証器SHA-256: 29e476c714bedac02bd3e871b6df7e951111825e68b11605fac4a45eafbfc9f1  
-監査JSON SHA-256: b94894a8aa908ac66fb28bc1469ed50ada3918130e4b087b95e9de0ef6630bbc
+検証器SHA-256: 131e1c6476482550079eb5d8d858d749ea006e4657602ae6cf931aaa5de3f92e  
+監査JSON SHA-256: d872a6d391eb5b93659939c461cf5fb40e237a40f72715dc0f5dffbc71f0edfc
 
 同一プロセス2回と別プロセス・別cwdで監査JSONがbyte-identical。有限監査は転写・実装照合であり、全称性は二段帰納と記号的署名帯表による。
 
