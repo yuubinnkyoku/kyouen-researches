@@ -49,6 +49,12 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/output/inversive_plane.json
   role: data
   note: q=3,5 の反転平面ゲーム全値
+- path: research/experiments/finite-field-kyouen-20261120/DET_GAMMA_AREA.md
+  role: proof
+  note: gamma=-2*Areaの証明と|gamma|<=a^2
+- path: research/experiments/finite-field-kyouen-20261120/DET_TRADEOFF.md
+  role: source
+  note: gammaとpowerの逆相関と積の上界
 - path: research/experiments/finite-field-kyouen-20261120/AG_VS_INVERSIVE.md
   role: source
   note: AG(2,8)=8と反転平面7の乖離
@@ -178,7 +184,9 @@ n=4, q=5 では 5,811 個中 2,120 個、n=5, q=5 では 151,394 個中 122,168 
 「三隅 (0,0),(a,0),(0,a) ＋ 対角点 (t,t)」で、その行列式は `−2a²t(a−t)`。
 q > D(n) の 44 通りで禁止集合の完全一致を確認した（不一致 0）。
 
-**連続緩和との関係**：四点目を実数に許した連続最大は `a⁴/2 + [a奇数]/2` で、
+**補題（証明済み）**：三点の座標から定まる係数 gamma（x²+y² の係数）は
+`gamma = −2·Area(p1,p2,p3) を満たす。三点が [0,a]² 内なら Area ≤ a²/2 なので |gamma| ≤ a²。
+`n**連続緩和との関係**：四点目を実数に許した連続最大は ⁴/2 + [a奇数]/2 で、
 格子最大 `a²⌊a²/2⌋` との差は **a 奇数でちょうど 1**、a 偶数で 0 である（a ≤ 8 の全数計算）。
 この分解により証明は「連続最大の評価」と「奇数のとき格子点で 1 下がること」の2段階に分かれる。
 なお `Delta` は `gamma` の符号で凸にも凹にもなり、凹の場合は最大が内部（円の中心付近）で
