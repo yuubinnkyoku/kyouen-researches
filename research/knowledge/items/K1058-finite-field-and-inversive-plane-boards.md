@@ -49,6 +49,15 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/output/inversive_plane.json
   role: data
   note: q=3,5 の反転平面ゲーム全値
+- path: research/experiments/finite-field-kyouen-20261120/INVERSIVE_VARIANTS.md
+  role: source
+  note: misèreとk点版の完全計算
+- path: research/experiments/finite-field-kyouen-20261120/scripts/inv_variants.py
+  role: solver
+  note: 変種の勝敗計算
+- path: research/experiments/finite-field-kyouen-20261120/FIVE_BY_FIVE_STRUCTURE.md
+  role: source
+  note: 5x5のD4軌道分解
 - path: research/experiments/finite-field-kyouen-20261120/AG2_MAX.md
   role: source
   note: AG(2,q)のK厳密値と反転平面との一致
@@ -282,10 +291,36 @@ n=4 では `Z_4` が体でなく `AG(2,4)=F_4²` と異なるため、トーラ�
 ゲーム値では n=4 が劇的に異なる：平面盤は後手必勝（K=7）だが、
 トーラス盤は先手必勝（K=4）になる。禁止四点を増やすと勝者が反転する明示例である。
 
+### 8. 変種：misère と k 点版
+
+反転平面ゲームの2変種を q ≤ 4 で完全計算した。
+
+| q | 禁止点数 | ルール | 安全局面 | K | 空盤の勝者 |
+|---:|---:|---|---:|---:|---|
+| 3 | 4 | 通常 | 428 | 5 | 先手 |
+| 3 | 4 | misère | 428 | 5 | **後手** |
+| 3 | 5 | 通常 | 1,024 | 10 | **後手** |
+| 3 | 5 | misère | 1,024 | 10 | **先手** |
+| 4 | 4 | 通常 | 4,914 | 5 | 先手 |
+| 4 | 4 | misère | 4,914 | 5 | **後手** |
+| 4 | 5 | 通常 | 48,604 | 9 | 先手 |
+| 4 | 5 | misère | 48,604 | 9 | **後手** |
+
+**misère は 4 例すべてで通常版の勝敗を反転させた**（初手の勝敗も完全に反転）。
+反転平面では全極大安全集合が同じ石数になる可能性が高く（q=3,4 の k=4 で最小極大 = 最大 = K）、
+そうなら手番数が固定されて通常版と misère 版の勝者は必ず入れ替わる。
+ただしこれは観測であって証明ではない。
+
+**k=5 版は K をほぼ倍にする**（q=3 で 5→10、q=4 で 5→9）。
+円が q+1 点しかないため、5 点そろえるのは 4 点よりずっと難しい。
+k=5 版の勝者は q に依存する（q=3 は後手必勝、q=4 は先手必勝）。
+
 ## 限界
 
 - 完全計算は q ≤ 5（反転平面の Grundy）、q ≤ 7（反転平面の K）、q ≤ 7（AG の K）、n ≤ 5（整数盤の初手）、p ≤ 13（トーラス一致）に限る。q=8,9 は 3-設計検証のみ。
-- `D(n) = a²⌊a²/2⌋` は n ≤ 7 の観測であり全称証明ではない。
+- `D(n) = a²⌊a²/2⌋` は n ≤ 12 の全数確認済みだが全称証明ではない。
 - 層サイズ公式は k ≤ 5 のみ。k ≥ 6 の一般公式は未取得。
+- misère 反転は 4 例の観測。全極大が同石数であることの証明は未取得。
+- k 点版は k ≤ 5、q ≤ 4 のみ。
 - 有限体盤・反転平面盤の勝敗と整数格子盤の勝敗の関係は、閾値 q > D(n) の外側では何も主張しない。
 - 5×5 の菱形がなぜその形になるか、負け初手の Grundy が全て 3 である理由は未解明。
