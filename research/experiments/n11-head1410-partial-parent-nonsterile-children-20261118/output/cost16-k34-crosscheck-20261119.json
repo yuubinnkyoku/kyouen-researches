@@ -1,0 +1,2093 @@
+{
+  "all_pass": true,
+  "check_count": 203,
+  "checks": [
+    {
+      "detail": 2966450341680481356,
+      "name": "grand_total_constant_k1_34",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "B0_equals_B16",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "B0_share_k0_consistent",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "kill_monotone_k1_34",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "A_survive_monotone_decreasing",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "B_survive_monotone_decreasing",
+      "pass": true
+    },
+    {
+      "detail": "k2..k13 from k13",
+      "name": "marginal_chain_k2_k34_matches_published",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "marginal_chain_k14_k34_matches_published",
+      "pass": true
+    },
+    {
+      "detail": "mN from pinned aggregate, independent of published detail",
+      "name": "marginal_le_membership_k14_k34",
+      "pass": true
+    },
+    {
+      "detail": [
+        4,
+        8,
+        10,
+        11,
+        12
+      ],
+      "name": "survive_totals_match_direct_recompute_k4k8k10k11k12",
+      "pass": true
+    },
+    {
+      "detail": {
+        "4": [
+          "1912189176067079977",
+          "541653214551014457"
+        ],
+        "8": [
+          "1564239038548375836",
+          "437686674003751251"
+        ],
+        "10": [
+          "1400734279274103379",
+          "389244119480989629"
+        ],
+        "11": [
+          "1319225112917587991",
+          "365139769030068297"
+        ],
+        "12": [
+          "1247882269674605395",
+          "344139100713603297"
+        ]
+      },
+      "name": "A_B_split_matches_direct_recompute_k4k8k10k11k12",
+      "pass": true
+    },
+    {
+      "detail": "k=1..34",
+      "name": "kill_A_plus_kill_B_identity",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "kill_A_monotone_k1_34",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "kill_B_monotone_k1_34",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "B_share_percent_consistent_k0_34",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "kill_share_percent_consistent_k1_34",
+      "pass": true
+    },
+    {
+      "detail": [
+        307687702837177515,
+        307687702837177515
+      ],
+      "name": "mixed_k14_endpoint_equals_B_survive_14",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "k13_json_reproduces_direct_k10",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "k14_json_reproduces_k13",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "k15_json_reproduces_k1_14",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "k16_k34_reproduce_anchors_all_pass",
+      "pass": true
+    },
+    {
+      "detail": "checks quints.all_zero_3003..53130 at k=15..25 (machine.comb counts)",
+      "name": "quints_all_zero_published_k15_k25",
+      "pass": true
+    },
+    {
+      "detail": [],
+      "name": "rank_root_fields_match_aggregate_k16_k34",
+      "pass": true
+    },
+    {
+      "detail": [],
+      "name": "new_pair_census_rederived_k16_k34",
+      "pass": true
+    },
+    {
+      "detail": [],
+      "name": "full_triple_census_rederived_k16_k34",
+      "pass": true
+    },
+    {
+      "detail": [],
+      "name": "new_quad_census_rederived_k16_k34",
+      "pass": true
+    },
+    {
+      "detail": "machine.comb counts 3003..53130 at k=15..25, bad []",
+      "name": "quints_rederived_all_zero_k15_k25",
+      "pass": true
+    },
+    {
+      "detail": [
+        {
+          "b_only": 1872,
+          "disjoint": 0,
+          "zero": 63908
+        },
+        {
+          "15": 379,
+          "18": 1121,
+          "19": 372
+        }
+      ],
+      "name": "quint_census_k26_machine_rederived_C265_65780",
+      "pass": true
+    },
+    {
+      "detail": {
+        "15": 379,
+        "18": 1121,
+        "19": 372
+      },
+      "name": "quint_b_only_double_rows_k26_machine_rederived",
+      "pass": true
+    },
+    {
+      "detail": [
+        {
+          "b_only": 2181,
+          "disjoint": 0,
+          "zero": 78549
+        },
+        {
+          "15": 417,
+          "18": 1354,
+          "19": 410
+        }
+      ],
+      "name": "quint_census_k27_machine_rederived_C275_80730",
+      "pass": true
+    },
+    {
+      "detail": {
+        "15": 417,
+        "18": 1354,
+        "19": 410
+      },
+      "name": "quint_b_only_double_rows_k27_machine_rederived",
+      "pass": true
+    },
+    {
+      "detail": [
+        {
+          "b_only": 2512,
+          "disjoint": 0,
+          "zero": 95768
+        },
+        {
+          "15": 455,
+          "18": 1609,
+          "19": 448
+        }
+      ],
+      "name": "quint_census_k28_machine_rederived_C285_98280",
+      "pass": true
+    },
+    {
+      "detail": {
+        "15": 455,
+        "18": 1609,
+        "19": 448
+      },
+      "name": "quint_b_only_double_rows_k28_machine_rederived",
+      "pass": true
+    },
+    {
+      "detail": [
+        {
+          "b_only": 4640,
+          "disjoint": 0,
+          "zero": 114115
+        },
+        {
+          "15": 738,
+          "16": 172,
+          "18": 2906,
+          "19": 824
+        }
+      ],
+      "name": "quint_census_k29_machine_rederived_C295_118755",
+      "pass": true
+    },
+    {
+      "detail": {
+        "15": 738,
+        "16": 172,
+        "18": 2906,
+        "19": 824
+      },
+      "name": "quint_b_only_double_rows_k29_machine_rederived",
+      "pass": true
+    },
+    {
+      "detail": [
+        {
+          "b_only": 5968,
+          "disjoint": 0,
+          "zero": 136538
+        },
+        {
+          "15": 925,
+          "16": 221,
+          "18": 3536,
+          "19": 1286
+        }
+      ],
+      "name": "quint_census_k30_machine_rederived_C305_142506",
+      "pass": true
+    },
+    {
+      "detail": {
+        "15": 925,
+        "16": 221,
+        "18": 3536,
+        "19": 1286
+      },
+      "name": "quint_b_only_double_rows_k30_machine_rederived",
+      "pass": true
+    },
+    {
+      "detail": [
+        {
+          "b_only": 6787,
+          "disjoint": 0,
+          "zero": 163124
+        },
+        {
+          "15": 1003,
+          "16": 239,
+          "18": 4149,
+          "19": 1396
+        }
+      ],
+      "name": "quint_census_k31_machine_rederived_C315_169911",
+      "pass": true
+    },
+    {
+      "detail": {
+        "15": 1003,
+        "16": 239,
+        "18": 4149,
+        "19": 1396
+      },
+      "name": "quint_b_only_double_rows_k31_machine_rederived",
+      "pass": true
+    },
+    {
+      "detail": [
+        {
+          "b_only": 8797,
+          "disjoint": 0,
+          "zero": 192579
+        },
+        {
+          "15": 1616,
+          "16": 304,
+          "18": 5111,
+          "19": 1766
+        }
+      ],
+      "name": "quint_census_k32_machine_rederived_C325_201376",
+      "pass": true
+    },
+    {
+      "detail": {
+        "15": 1616,
+        "16": 304,
+        "18": 5111,
+        "19": 1766
+      },
+      "name": "quint_b_only_double_rows_k32_machine_rederived",
+      "pass": true
+    },
+    {
+      "detail": [
+        {
+          "b_only": 10833,
+          "disjoint": 0,
+          "zero": 226503
+        },
+        {
+          "15": 1930,
+          "16": 370,
+          "18": 6008,
+          "19": 2525
+        }
+      ],
+      "name": "quint_census_k33_machine_rederived_C335_237336",
+      "pass": true
+    },
+    {
+      "detail": {
+        "15": 1930,
+        "16": 370,
+        "18": 6008,
+        "19": 2525
+      },
+      "name": "quint_b_only_double_rows_k33_machine_rederived",
+      "pass": true
+    },
+    {
+      "detail": [
+        {
+          "b_only": 13004,
+          "disjoint": 0,
+          "zero": 265252
+        },
+        {
+          "15": 2244,
+          "16": 436,
+          "18": 6905,
+          "19": 3419
+        }
+      ],
+      "name": "quint_census_k34_machine_rederived_C345_278256",
+      "pass": true
+    },
+    {
+      "detail": {
+        "15": 2244,
+        "16": 436,
+        "18": 6905,
+        "19": 3419
+      },
+      "name": "quint_b_only_double_rows_k34_machine_rederived",
+      "pass": true
+    },
+    {
+      "detail": [
+        309,
+        {
+          "b_only": 2181,
+          "disjoint": 0,
+          "zero": 78549
+        },
+        {
+          "b_only": 1872,
+          "disjoint": 0,
+          "zero": 63908
+        }
+      ],
+      "name": "quint_census_k27_prev_layer_equals_published_k26_census",
+      "pass": true
+    },
+    {
+      "detail": [
+        331,
+        {
+          "b_only": 2512,
+          "disjoint": 0,
+          "zero": 95768
+        },
+        {
+          "b_only": 2181,
+          "disjoint": 0,
+          "zero": 78549
+        }
+      ],
+      "name": "quint_census_k28_prev_layer_equals_published_k27_census",
+      "pass": true
+    },
+    {
+      "detail": [
+        2128,
+        {
+          "b_only": 4640,
+          "disjoint": 0,
+          "zero": 114115
+        },
+        {
+          "b_only": 2512,
+          "disjoint": 0,
+          "zero": 95768
+        }
+      ],
+      "name": "quint_census_k29_prev_layer_equals_published_k28_census",
+      "pass": true
+    },
+    {
+      "detail": [
+        1328,
+        {
+          "b_only": 5968,
+          "disjoint": 0,
+          "zero": 136538
+        },
+        {
+          "b_only": 4640,
+          "disjoint": 0,
+          "zero": 114115
+        }
+      ],
+      "name": "quint_census_k30_prev_layer_equals_published_k29_census",
+      "pass": true
+    },
+    {
+      "detail": [
+        819,
+        {
+          "b_only": 6787,
+          "disjoint": 0,
+          "zero": 163124
+        },
+        {
+          "b_only": 5968,
+          "disjoint": 0,
+          "zero": 136538
+        }
+      ],
+      "name": "quint_census_k31_prev_layer_equals_published_k30_census",
+      "pass": true
+    },
+    {
+      "detail": [
+        2010,
+        {
+          "b_only": 8797,
+          "disjoint": 0,
+          "zero": 192579
+        },
+        {
+          "b_only": 6787,
+          "disjoint": 0,
+          "zero": 163124
+        }
+      ],
+      "name": "quint_census_k32_prev_layer_equals_published_k31_census",
+      "pass": true
+    },
+    {
+      "detail": [
+        2036,
+        {
+          "b_only": 10833,
+          "disjoint": 0,
+          "zero": 226503
+        },
+        {
+          "b_only": 8797,
+          "disjoint": 0,
+          "zero": 192579
+        }
+      ],
+      "name": "quint_census_k33_prev_layer_equals_published_k32_census",
+      "pass": true
+    },
+    {
+      "detail": [
+        2171,
+        {
+          "b_only": 13004,
+          "disjoint": 0,
+          "zero": 265252
+        },
+        {
+          "b_only": 10833,
+          "disjoint": 0,
+          "zero": 226503
+        }
+      ],
+      "name": "quint_census_k34_prev_layer_equals_published_k33_census",
+      "pass": true
+    },
+    {
+      "detail": 1872,
+      "name": "k26_all_census_b_only_contain_rank26",
+      "pass": true
+    },
+    {
+      "detail": {
+        "b_only": 0,
+        "disjoint": 0,
+        "zero": 475020
+      },
+      "name": "sextet_census_k29_machine_rederived_C296_475020",
+      "pass": true
+    },
+    {
+      "detail": {
+        "b_only": 0,
+        "disjoint": 0,
+        "zero": 593775
+      },
+      "name": "sextet_census_k30_machine_rederived_C306_593775",
+      "pass": true
+    },
+    {
+      "detail": {
+        "b_only": 0,
+        "disjoint": 0,
+        "zero": 736281
+      },
+      "name": "sextet_census_k31_machine_rederived_C316_736281",
+      "pass": true
+    },
+    {
+      "detail": {
+        "b_only": 0,
+        "disjoint": 0,
+        "zero": 906192
+      },
+      "name": "sextet_census_k32_machine_rederived_C326_906192",
+      "pass": true
+    },
+    {
+      "detail": {
+        "b_only": 0,
+        "disjoint": 0,
+        "zero": 1107568
+      },
+      "name": "sextet_census_k33_machine_rederived_C336_1107568",
+      "pass": true
+    },
+    {
+      "detail": {
+        "b_only": 0,
+        "disjoint": 0,
+        "zero": 1344904
+      },
+      "name": "sextet_census_k34_machine_rederived_C346_1344904",
+      "pass": true
+    },
+    {
+      "detail": [],
+      "name": "kill_series_consistent_across_publications_k13_k34",
+      "pass": true
+    },
+    {
+      "detail": {
+        "anchor2": 4,
+        "anchor3": 2,
+        "anchor4": 2,
+        "cross3": 2,
+        "cross4": 2,
+        "cross5": 2,
+        "crossq4": 2,
+        "pair": 25,
+        "quad": 2300,
+        "quint": 1872,
+        "triple": 300
+      },
+      "name": "jsonl_record_kind_counts_k26_4513",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "jsonl_anchor_cross_records_all_match_k26",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "jsonl_anchor4_two_lineage_agreement_1x8_union_rederived_k26",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "jsonl_pairs_are_exactly_the_25_new_pairs",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "jsonl_joint_records_reclassified_independently_k26",
+      "pass": true
+    },
+    {
+      "detail": [
+        300,
+        2300
+      ],
+      "name": "jsonl_new_triples_quads_combinatorially_complete_k26",
+      "pass": true
+    },
+    {
+      "detail": 1872,
+      "name": "jsonl_quints_are_exactly_the_new_b_only_set_k26",
+      "pass": true
+    },
+    {
+      "detail": {
+        "b_only": 1194,
+        "disjoint": 233,
+        "zero": 873
+      },
+      "name": "jsonl_quad_record_census_matches_structure_k26",
+      "pass": true
+    },
+    {
+      "detail": [
+        31752723185483893,
+        31752723185483893
+      ],
+      "name": "jsonl_ie_marginal_identity_k26_total",
+      "pass": true
+    },
+    {
+      "detail": [
+        24859395280504936,
+        24859395280504936
+      ],
+      "name": "jsonl_ie_marginal_identity_k26_A_type",
+      "pass": true
+    },
+    {
+      "detail": [
+        6893327904978957,
+        6893327904978957
+      ],
+      "name": "jsonl_ie_marginal_identity_k26_B_type",
+      "pass": true
+    },
+    {
+      "detail": {
+        "anchor2": 4,
+        "anchor3": 2,
+        "anchor4": 4,
+        "cross3": 2,
+        "cross4": 2,
+        "cross5": 2,
+        "crossq4": 2,
+        "pair": 26,
+        "quad": 2600,
+        "quint": 309,
+        "triple": 325
+      },
+      "name": "jsonl_record_kind_counts_k27_3278",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "jsonl_anchor_cross_records_all_match_k27",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "jsonl_anchor4_two_lineage_agreement_2x8_union_rederived_k27",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "jsonl_pairs_are_exactly_the_26_new_pairs",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "jsonl_joint_records_reclassified_independently_k27",
+      "pass": true
+    },
+    {
+      "detail": [
+        325,
+        2600
+      ],
+      "name": "jsonl_new_triples_quads_combinatorially_complete_k27",
+      "pass": true
+    },
+    {
+      "detail": 309,
+      "name": "jsonl_quints_are_exactly_the_new_b_only_set_k27",
+      "pass": true
+    },
+    {
+      "detail": {
+        "b_only": 588,
+        "disjoint": 22,
+        "zero": 1990
+      },
+      "name": "jsonl_quad_record_census_matches_structure_k27",
+      "pass": true
+    },
+    {
+      "detail": [
+        59621447328185075,
+        59621447328185075
+      ],
+      "name": "jsonl_ie_marginal_identity_k27_total",
+      "pass": true
+    },
+    {
+      "detail": [
+        46492694809658099,
+        46492694809658099
+      ],
+      "name": "jsonl_ie_marginal_identity_k27_A_type",
+      "pass": true
+    },
+    {
+      "detail": [
+        13128752518526976,
+        13128752518526976
+      ],
+      "name": "jsonl_ie_marginal_identity_k27_B_type",
+      "pass": true
+    },
+    {
+      "detail": {
+        "anchor2": 4,
+        "anchor3": 2,
+        "anchor4": 4,
+        "cross3": 2,
+        "cross4": 2,
+        "cross5": 2,
+        "crossq4": 2,
+        "pair": 27,
+        "quad": 2925,
+        "quint": 331,
+        "triple": 351
+      },
+      "name": "jsonl_record_kind_counts_k28_3652",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "jsonl_anchor_cross_records_all_match_k28",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "jsonl_anchor4_two_lineage_agreement_2x8_union_rederived_k28",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "jsonl_pairs_are_exactly_the_27_new_pairs",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "jsonl_joint_records_reclassified_independently_k28",
+      "pass": true
+    },
+    {
+      "detail": [
+        351,
+        2925
+      ],
+      "name": "jsonl_new_triples_quads_combinatorially_complete_k28",
+      "pass": true
+    },
+    {
+      "detail": 331,
+      "name": "jsonl_quints_are_exactly_the_new_b_only_set_k28",
+      "pass": true
+    },
+    {
+      "detail": {
+        "b_only": 626,
+        "disjoint": 22,
+        "zero": 2277
+      },
+      "name": "jsonl_quad_record_census_matches_structure_k28",
+      "pass": true
+    },
+    {
+      "detail": [
+        59627615102262832,
+        59627615102262832
+      ],
+      "name": "jsonl_ie_marginal_identity_k28_total",
+      "pass": true
+    },
+    {
+      "detail": [
+        46499478498461827,
+        46499478498461827
+      ],
+      "name": "jsonl_ie_marginal_identity_k28_A_type",
+      "pass": true
+    },
+    {
+      "detail": [
+        13128136603801005,
+        13128136603801005
+      ],
+      "name": "jsonl_ie_marginal_identity_k28_B_type",
+      "pass": true
+    },
+    {
+      "detail": {
+        "anchor2": 4,
+        "anchor3": 2,
+        "anchor4": 4,
+        "cross3": 2,
+        "cross4": 2,
+        "cross5": 2,
+        "crossq4": 2,
+        "pair": 28,
+        "quad": 3276,
+        "quint": 2128,
+        "triple": 378
+      },
+      "name": "jsonl_record_kind_counts_k29_5828",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "jsonl_anchor_cross_records_all_match_k29",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "jsonl_anchor4_two_lineage_agreement_2x8_union_rederived_k29",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "jsonl_pairs_are_exactly_the_28_new_pairs",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "jsonl_joint_records_reclassified_independently_k29",
+      "pass": true
+    },
+    {
+      "detail": [
+        378,
+        3276
+      ],
+      "name": "jsonl_new_triples_quads_combinatorially_complete_k29",
+      "pass": true
+    },
+    {
+      "detail": 2128,
+      "name": "jsonl_quints_are_exactly_the_new_b_only_set_k29",
+      "pass": true
+    },
+    {
+      "detail": {
+        "b_only": 1516,
+        "disjoint": 225,
+        "zero": 1535
+      },
+      "name": "jsonl_quad_record_census_matches_structure_k29",
+      "pass": true
+    },
+    {
+      "detail": [
+        27332103196834517,
+        27332103196834517
+      ],
+      "name": "jsonl_ie_marginal_identity_k29_total",
+      "pass": true
+    },
+    {
+      "detail": [
+        21489874806440114,
+        21489874806440114
+      ],
+      "name": "jsonl_ie_marginal_identity_k29_A_type",
+      "pass": true
+    },
+    {
+      "detail": [
+        5842228390394403,
+        5842228390394403
+      ],
+      "name": "jsonl_ie_marginal_identity_k29_B_type",
+      "pass": true
+    },
+    {
+      "detail": {
+        "anchor2": 4,
+        "anchor3": 2,
+        "anchor4": 4,
+        "cross3": 2,
+        "cross4": 2,
+        "cross5": 2,
+        "crossq4": 2,
+        "pair": 29,
+        "quad": 3654,
+        "quint": 1328,
+        "triple": 406
+      },
+      "name": "jsonl_record_kind_counts_k30_5435",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "jsonl_anchor_cross_records_all_match_k30",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "jsonl_anchor4_two_lineage_agreement_2x8_union_rederived_k30",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "jsonl_pairs_are_exactly_the_29_new_pairs",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "jsonl_joint_records_reclassified_independently_k30",
+      "pass": true
+    },
+    {
+      "detail": [
+        406,
+        3654
+      ],
+      "name": "jsonl_new_triples_quads_combinatorially_complete_k30",
+      "pass": true
+    },
+    {
+      "detail": 1328,
+      "name": "jsonl_quints_are_exactly_the_new_b_only_set_k30",
+      "pass": true
+    },
+    {
+      "detail": {
+        "b_only": 1302,
+        "disjoint": 111,
+        "zero": 2241
+      },
+      "name": "jsonl_quad_record_census_matches_structure_k30",
+      "pass": true
+    },
+    {
+      "detail": [
+        32540616778647828,
+        32540616778647828
+      ],
+      "name": "jsonl_ie_marginal_identity_k30_total",
+      "pass": true
+    },
+    {
+      "detail": [
+        25598110010638470,
+        25598110010638470
+      ],
+      "name": "jsonl_ie_marginal_identity_k30_A_type",
+      "pass": true
+    },
+    {
+      "detail": [
+        6942506768009358,
+        6942506768009358
+      ],
+      "name": "jsonl_ie_marginal_identity_k30_B_type",
+      "pass": true
+    },
+    {
+      "detail": {
+        "anchor2": 4,
+        "anchor3": 2,
+        "anchor4": 4,
+        "cross3": 2,
+        "cross4": 2,
+        "cross5": 2,
+        "crossq4": 2,
+        "pair": 30,
+        "quad": 4060,
+        "quint": 819,
+        "triple": 435
+      },
+      "name": "jsonl_record_kind_counts_k31_5362",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "jsonl_anchor_cross_records_all_match_k31",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "jsonl_anchor4_two_lineage_agreement_2x8_union_rederived_k31",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "jsonl_pairs_are_exactly_the_30_new_pairs",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "jsonl_joint_records_reclassified_independently_k31",
+      "pass": true
+    },
+    {
+      "detail": [
+        435,
+        4060
+      ],
+      "name": "jsonl_new_triples_quads_combinatorially_complete_k31",
+      "pass": true
+    },
+    {
+      "detail": 819,
+      "name": "jsonl_quints_are_exactly_the_new_b_only_set_k31",
+      "pass": true
+    },
+    {
+      "detail": {
+        "b_only": 986,
+        "disjoint": 49,
+        "zero": 3025
+      },
+      "name": "jsonl_quad_record_census_matches_structure_k31",
+      "pass": true
+    },
+    {
+      "detail": [
+        52914484706624166,
+        52914484706624166
+      ],
+      "name": "jsonl_ie_marginal_identity_k31_total",
+      "pass": true
+    },
+    {
+      "detail": [
+        41353998417711129,
+        41353998417711129
+      ],
+      "name": "jsonl_ie_marginal_identity_k31_A_type",
+      "pass": true
+    },
+    {
+      "detail": [
+        11560486288913037,
+        11560486288913037
+      ],
+      "name": "jsonl_ie_marginal_identity_k31_B_type",
+      "pass": true
+    },
+    {
+      "detail": {
+        "anchor2": 4,
+        "anchor3": 2,
+        "anchor4": 4,
+        "cross3": 2,
+        "cross4": 2,
+        "cross5": 2,
+        "crossq4": 2,
+        "pair": 31,
+        "quad": 4495,
+        "quint": 2010,
+        "triple": 465
+      },
+      "name": "jsonl_record_kind_counts_k32_7019",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "jsonl_anchor_cross_records_all_match_k32",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "jsonl_anchor4_two_lineage_agreement_2x8_union_rederived_k32",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "jsonl_pairs_are_exactly_the_31_new_pairs",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "jsonl_joint_records_reclassified_independently_k32",
+      "pass": true
+    },
+    {
+      "detail": [
+        465,
+        4495
+      ],
+      "name": "jsonl_new_triples_quads_combinatorially_complete_k32",
+      "pass": true
+    },
+    {
+      "detail": 2010,
+      "name": "jsonl_quints_are_exactly_the_new_b_only_set_k32",
+      "pass": true
+    },
+    {
+      "detail": {
+        "b_only": 1878,
+        "disjoint": 158,
+        "zero": 2459
+      },
+      "name": "jsonl_quad_record_census_matches_structure_k32",
+      "pass": true
+    },
+    {
+      "detail": [
+        25276899310145517,
+        25276899310145517
+      ],
+      "name": "jsonl_ie_marginal_identity_k32_total",
+      "pass": true
+    },
+    {
+      "detail": [
+        19961552045305539,
+        19961552045305539
+      ],
+      "name": "jsonl_ie_marginal_identity_k32_A_type",
+      "pass": true
+    },
+    {
+      "detail": [
+        5315347264839978,
+        5315347264839978
+      ],
+      "name": "jsonl_ie_marginal_identity_k32_B_type",
+      "pass": true
+    },
+    {
+      "detail": {
+        "anchor2": 4,
+        "anchor3": 2,
+        "anchor4": 4,
+        "cross3": 2,
+        "cross4": 2,
+        "cross5": 2,
+        "crossq4": 2,
+        "pair": 32,
+        "quad": 4960,
+        "quint": 2036,
+        "triple": 496
+      },
+      "name": "jsonl_record_kind_counts_k33_7542",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "jsonl_anchor_cross_records_all_match_k33",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "jsonl_anchor4_two_lineage_agreement_2x8_union_rederived_k33",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "jsonl_pairs_are_exactly_the_32_new_pairs",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "jsonl_joint_records_reclassified_independently_k33",
+      "pass": true
+    },
+    {
+      "detail": [
+        496,
+        4960
+      ],
+      "name": "jsonl_new_triples_quads_combinatorially_complete_k33",
+      "pass": true
+    },
+    {
+      "detail": 2036,
+      "name": "jsonl_quints_are_exactly_the_new_b_only_set_k33",
+      "pass": true
+    },
+    {
+      "detail": {
+        "b_only": 1827,
+        "disjoint": 146,
+        "zero": 2987
+      },
+      "name": "jsonl_quad_record_census_matches_structure_k33",
+      "pass": true
+    },
+    {
+      "detail": [
+        27118636261489686,
+        27118636261489686
+      ],
+      "name": "jsonl_ie_marginal_identity_k33_total",
+      "pass": true
+    },
+    {
+      "detail": [
+        21418921457184846,
+        21418921457184846
+      ],
+      "name": "jsonl_ie_marginal_identity_k33_A_type",
+      "pass": true
+    },
+    {
+      "detail": [
+        5699714804304840,
+        5699714804304840
+      ],
+      "name": "jsonl_ie_marginal_identity_k33_B_type",
+      "pass": true
+    },
+    {
+      "detail": {
+        "anchor2": 4,
+        "anchor3": 2,
+        "anchor4": 4,
+        "cross3": 2,
+        "cross4": 2,
+        "cross5": 2,
+        "crossq4": 2,
+        "pair": 33,
+        "quad": 5456,
+        "quint": 2171,
+        "triple": 528
+      },
+      "name": "jsonl_record_kind_counts_k34_8206",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "jsonl_anchor_cross_records_all_match_k34",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "jsonl_anchor4_two_lineage_agreement_2x8_union_rederived_k34",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "jsonl_pairs_are_exactly_the_33_new_pairs",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "jsonl_joint_records_reclassified_independently_k34",
+      "pass": true
+    },
+    {
+      "detail": [
+        528,
+        5456
+      ],
+      "name": "jsonl_new_triples_quads_combinatorially_complete_k34",
+      "pass": true
+    },
+    {
+      "detail": 2171,
+      "name": "jsonl_quints_are_exactly_the_new_b_only_set_k34",
+      "pass": true
+    },
+    {
+      "detail": {
+        "b_only": 1944,
+        "disjoint": 146,
+        "zero": 3366
+      },
+      "name": "jsonl_quad_record_census_matches_structure_k34",
+      "pass": true
+    },
+    {
+      "detail": [
+        27288888404369940,
+        27288888404369940
+      ],
+      "name": "jsonl_ie_marginal_identity_k34_total",
+      "pass": true
+    },
+    {
+      "detail": [
+        21555877655025384,
+        21555877655025384
+      ],
+      "name": "jsonl_ie_marginal_identity_k34_A_type",
+      "pass": true
+    },
+    {
+      "detail": [
+        5733010749344556,
+        5733010749344556
+      ],
+      "name": "jsonl_ie_marginal_identity_k34_B_type",
+      "pass": true
+    },
+    {
+      "detail": [
+        15,
+        0
+      ],
+      "name": "k31preread_rank31_root_and_prior_hits_machine_rederived",
+      "pass": true
+    },
+    {
+      "detail": [
+        {
+          "b_only": 15,
+          "disjoint": 15,
+          "zero": 0
+        },
+        {
+          "b_only": 265,
+          "disjoint": 55,
+          "zero": 115
+        },
+        {
+          "b_only": 986,
+          "disjoint": 49,
+          "zero": 3025
+        },
+        {
+          "b_only": 819,
+          "disjoint": 0,
+          "zero": 26586
+        }
+      ],
+      "name": "k31preread_new_layer_censuses_machine_rederived",
+      "pass": true
+    },
+    {
+      "detail": [
+        {
+          "b_only": 8,
+          "disjoint": 21,
+          "zero": 0
+        },
+        {
+          "b_only": 248,
+          "disjoint": 102,
+          "zero": 56
+        },
+        {
+          "b_only": 1302,
+          "disjoint": 111,
+          "zero": 2241
+        },
+        {
+          "b_only": 1328,
+          "disjoint": 0,
+          "zero": 22423
+        }
+      ],
+      "name": "k31preread_rank30_regression_censuses_machine_rederived",
+      "pass": true
+    },
+    {
+      "detail": [
+        {
+          "b_only": 2717,
+          "disjoint": 848,
+          "zero": 930
+        },
+        {
+          "0": 57,
+          "1": 7,
+          "4": 31,
+          "5": 20,
+          "11": 7,
+          "14": 7,
+          "15": 308,
+          "16": 48,
+          "18": 1650,
+          "19": 542,
+          "24": 9,
+          "30": 31
+        }
+      ],
+      "name": "k31preread_full_triples_and_quints_machine_rederived",
+      "pass": true
+    },
+    {
+      "detail": [
+        {
+          "15": 78,
+          "16": 18,
+          "18": 613,
+          "19": 110
+        },
+        {
+          "3/2/0": 819
+        }
+      ],
+      "name": "k31preread_new_quint_double_rows_and_profiles_machine_rederived",
+      "pass": true
+    },
+    {
+      "detail": {
+        "b_only": 0,
+        "disjoint": 0,
+        "zero": 736281
+      },
+      "name": "k31preread_sextet_census_machine_rederived",
+      "pass": true
+    },
+    {
+      "detail": [
+        [
+          1,
+          -4,
+          -1
+        ],
+        -6
+      ],
+      "name": "k31preread_large_ints_are_double_rounded_approximations",
+      "pass": true
+    },
+    {
+      "detail": [
+        "120181378067473629",
+        "92082202719887124",
+        "28099175347586505"
+      ],
+      "name": "k31json_rank31_root_and_erratum_state_exact_aggregate_ints",
+      "pass": true
+    },
+    {
+      "detail": [
+        "preread_match.triple_census",
+        "preread_match.new_quad_census",
+        "preread_match.quint_census",
+        "preread_match.quint_double_rows",
+        "preread_match.sextet_census"
+      ],
+      "name": "k31json_preread_match_checks_all_present_and_pass",
+      "pass": true
+    },
+    {
+      "detail": [
+        6,
+        1,
+        [
+          92121445452103947,
+          28024826605211865,
+          120146272057315812
+        ]
+      ],
+      "name": "k32preread_rank32_root_prior_hits_exact_ints",
+      "pass": true
+    },
+    {
+      "detail": [
+        {
+          "disjoint": 24,
+          "expected_total": 31,
+          "shared": 7,
+          "total": 31
+        },
+        {
+          "b_only": 275,
+          "disjoint": 140,
+          "zero": 50
+        },
+        {
+          "b_only": 1878,
+          "disjoint": 158,
+          "zero": 2459
+        },
+        2010
+      ],
+      "name": "k32preread_new_layer_censuses_machine_rederived",
+      "pass": true
+    },
+    {
+      "detail": [
+        {
+          "0": 1,
+          "1": 1,
+          "4": 1,
+          "5": 1,
+          "11": 1,
+          "14": 1,
+          "15": 130,
+          "16": 3,
+          "18": 105,
+          "19": 21,
+          "23": 9,
+          "30": 1
+        },
+        {
+          "0": 14,
+          "1": 2,
+          "4": 2,
+          "5": 14,
+          "11": 2,
+          "14": 2,
+          "15": 635,
+          "16": 31,
+          "18": 847,
+          "19": 315,
+          "23": 12,
+          "30": 2
+        },
+        {
+          "15": 613,
+          "16": 65,
+          "18": 962,
+          "19": 370
+        }
+      ],
+      "name": "k32preread_new_layer_double_row_histograms_machine_rederived",
+      "pass": true
+    },
+    {
+      "detail": [
+        {
+          "3/2/0": 2010
+        },
+        158,
+        {
+          "8": 158
+        },
+        662
+      ],
+      "name": "k32preread_quint_profiles_and_disjoint_quad_fields",
+      "pass": true
+    },
+    {
+      "detail": [
+        {
+          "b_only": 2992,
+          "disjoint": 988,
+          "zero": 980
+        },
+        {
+          "0": 58,
+          "1": 8,
+          "4": 32,
+          "5": 21,
+          "11": 8,
+          "14": 8,
+          "15": 438,
+          "16": 51,
+          "18": 1755,
+          "19": 563,
+          "23": 9,
+          "24": 9,
+          "30": 32
+        }
+      ],
+      "name": "k32preread_full_triples_and_quints_machine_rederived",
+      "pass": true
+    },
+    {
+      "detail": {
+        "b_only": 0,
+        "disjoint": 0,
+        "zero": 906192
+      },
+      "name": "k32preread_sextet_census_machine_rederived",
+      "pass": true
+    },
+    {
+      "detail": [],
+      "name": "k32preread_rank30_regression_block_machine_rederived",
+      "pass": true
+    },
+    {
+      "detail": [],
+      "name": "k32preread_rank31_regression_block_machine_rederived",
+      "pass": true
+    },
+    {
+      "detail": [
+        "preread_match.triple_census",
+        "preread_match.new_quad_census",
+        "preread_match.quint_census",
+        "preread_match.quint_double_rows",
+        "preread_match.sextet_census"
+      ],
+      "name": "k32json_preread_match_checks_all_present_and_pass",
+      "pass": true
+    },
+    {
+      "detail": [
+        "120146272057315812",
+        "92121445452103947",
+        "28024826605211865"
+      ],
+      "name": "k32json_rank32_root_exactly_matches_aggregate",
+      "pass": true
+    },
+    {
+      "detail": [
+        1,
+        8,
+        [
+          92100657745931553,
+          27983159586155112,
+          120083817332086665
+        ]
+      ],
+      "name": "k33preread_rank33_root_prior_hits_exact_ints",
+      "pass": true
+    },
+    {
+      "detail": [
+        {
+          "disjoint": 23,
+          "expected_total": 32,
+          "shared": 9,
+          "total": 32
+        },
+        {
+          "b_only": 304,
+          "disjoint": 125,
+          "zero": 67
+        },
+        {
+          "b_only": 1827,
+          "disjoint": 146,
+          "zero": 2987
+        },
+        2036
+      ],
+      "name": "k33preread_new_layer_censuses_machine_rederived",
+      "pass": true
+    },
+    {
+      "detail": [
+        {
+          "0": 1,
+          "4": 1,
+          "7": 8,
+          "15": 15,
+          "16": 3,
+          "18": 105,
+          "19": 168,
+          "23": 1,
+          "24": 1,
+          "30": 1
+        },
+        {
+          "0": 14,
+          "4": 2,
+          "7": 11,
+          "15": 230,
+          "16": 30,
+          "18": 756,
+          "19": 778,
+          "23": 2,
+          "24": 2,
+          "30": 2
+        },
+        {
+          "15": 314,
+          "16": 66,
+          "18": 897,
+          "19": 759
+        }
+      ],
+      "name": "k33preread_new_layer_double_row_histograms_machine_rederived",
+      "pass": true
+    },
+    {
+      "detail": [
+        {
+          "3/2/0": 2036
+        },
+        146,
+        {
+          "8": 146
+        },
+        820
+      ],
+      "name": "k33preread_quint_profiles_and_disjoint_quad_fields",
+      "pass": true
+    },
+    {
+      "detail": [
+        {
+          "b_only": 3296,
+          "disjoint": 1113,
+          "zero": 1047
+        },
+        {
+          "0": 59,
+          "1": 8,
+          "4": 33,
+          "5": 21,
+          "7": 8,
+          "11": 8,
+          "14": 8,
+          "15": 453,
+          "16": 54,
+          "18": 1860,
+          "19": 731,
+          "23": 10,
+          "24": 10,
+          "30": 33
+        }
+      ],
+      "name": "k33preread_full_triples_and_quints_machine_rederived",
+      "pass": true
+    },
+    {
+      "detail": {
+        "b_only": 0,
+        "disjoint": 0,
+        "zero": 1107568
+      },
+      "name": "k33preread_sextet_census_machine_rederived",
+      "pass": true
+    },
+    {
+      "detail": [],
+      "name": "k33preread_rank31_regression_block_machine_rederived",
+      "pass": true
+    },
+    {
+      "detail": [],
+      "name": "k33preread_rank32_regression_block_machine_rederived",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "k33preread_rank32_regression_matches_published_k32_result",
+      "pass": true
+    },
+    {
+      "detail": [
+        "preread_match.triple_census",
+        "preread_match.new_quad_census",
+        "preread_match.quint_census",
+        "preread_match.quint_double_rows",
+        "preread_match.sextet_census"
+      ],
+      "name": "k33json_preread_match_checks_all_present_and_pass",
+      "pass": true
+    },
+    {
+      "detail": [
+        "120083817332086665",
+        "92100657745931553",
+        "27983159586155112"
+      ],
+      "name": "k33json_rank33_root_exactly_matches_aggregate",
+      "pass": true
+    },
+    {
+      "detail": [
+        1,
+        9,
+        [
+          92056115579095019,
+          28023405167444439,
+          120079520746539458
+        ]
+      ],
+      "name": "k34preread_rank34_root_prior_hits_exact_ints",
+      "pass": true
+    },
+    {
+      "detail": [
+        {
+          "disjoint": 23,
+          "expected_total": 33,
+          "shared": 10,
+          "total": 33
+        },
+        {
+          "b_only": 326,
+          "disjoint": 125,
+          "zero": 77
+        },
+        {
+          "b_only": 1944,
+          "disjoint": 146,
+          "zero": 3366
+        },
+        2171
+      ],
+      "name": "k34preread_new_layer_censuses_machine_rederived",
+      "pass": true
+    },
+    {
+      "detail": [
+        {
+          "0": 1,
+          "4": 1,
+          "9": 8,
+          "15": 15,
+          "16": 3,
+          "18": 105,
+          "19": 190,
+          "23": 1,
+          "24": 1,
+          "30": 1
+        },
+        {
+          "0": 14,
+          "4": 2,
+          "9": 11,
+          "15": 230,
+          "16": 30,
+          "18": 756,
+          "19": 895,
+          "23": 2,
+          "24": 2,
+          "30": 2
+        },
+        {
+          "15": 314,
+          "16": 66,
+          "18": 897,
+          "19": 894
+        }
+      ],
+      "name": "k34preread_new_layer_double_row_histograms_machine_rederived",
+      "pass": true
+    },
+    {
+      "detail": [
+        {
+          "3/2/0": 2171
+        },
+        146,
+        {
+          "8": 146
+        },
+        966
+      ],
+      "name": "k34preread_quint_profiles_and_disjoint_quad_fields",
+      "pass": true
+    },
+    {
+      "detail": [
+        {
+          "b_only": 3622,
+          "disjoint": 1238,
+          "zero": 1124
+        },
+        {
+          "0": 60,
+          "1": 8,
+          "4": 34,
+          "5": 21,
+          "7": 8,
+          "9": 8,
+          "11": 8,
+          "14": 8,
+          "15": 468,
+          "16": 57,
+          "18": 1965,
+          "19": 921,
+          "23": 11,
+          "24": 11,
+          "30": 34
+        }
+      ],
+      "name": "k34preread_full_triples_and_quints_machine_rederived",
+      "pass": true
+    },
+    {
+      "detail": {
+        "b_only": 0,
+        "disjoint": 0,
+        "zero": 1344904
+      },
+      "name": "k34preread_sextet_census_machine_rederived",
+      "pass": true
+    },
+    {
+      "detail": [],
+      "name": "k34preread_rank32_regression_block_machine_rederived",
+      "pass": true
+    },
+    {
+      "detail": [],
+      "name": "k34preread_rank33_regression_block_machine_rederived",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "k34preread_rank33_regression_matches_published_k33_result",
+      "pass": true
+    },
+    {
+      "detail": [
+        "preread_match.triple_census",
+        "preread_match.new_quad_census",
+        "preread_match.quint_census",
+        "preread_match.quint_double_rows",
+        "preread_match.sextet_census"
+      ],
+      "name": "k34json_preread_match_checks_all_present_and_pass",
+      "pass": true
+    },
+    {
+      "detail": [
+        "120079520746539458",
+        "92056115579095019",
+        "28023405167444439"
+      ],
+      "name": "k34json_rank34_root_exactly_matches_aggregate",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "k34preread_embedded_rank32_rank33_blocks_match_prior_prereads",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "k34json_preread_structure_matches_published_result",
+      "pass": true
+    }
+  ],
+  "date": "2026-11-19",
+  "inputs": {
+    "agg": {
+      "file": "cost16-b-phase-groups-20261118.json",
+      "git_blob_sha1": "31bdefdb2e2cc90b706cbb8090e98eb5eece4d87"
+    },
+    "k13": {
+      "file": "cost16-survival-k13-20261118.json",
+      "git_blob_sha1": "bcf680f7529a119223f362099ed89685b9e37db6"
+    },
+    "k14": {
+      "file": "cost16-survival-k14-20261118.json",
+      "git_blob_sha1": "1f0b64b1d0587333be30b412e87178dd28afec6a"
+    },
+    "k15": {
+      "file": "cost16-survival-k15-20261118.json",
+      "git_blob_sha1": "fdf99a93571c8c76d5e97325dd2e92ef4b57ce31"
+    },
+    "k16": {
+      "file": "cost16-survival-k16-20261118.json",
+      "git_blob_sha1": "c6902c85424680b98e00d959f497562b6c3ef729"
+    },
+    "k17": {
+      "file": "cost16-survival-k17-20261118.json",
+      "git_blob_sha1": "37e9e848c8b7b9c0faa0ba536eb56cb9464ef576"
+    },
+    "k18": {
+      "file": "cost16-survival-k18-20261118.json",
+      "git_blob_sha1": "f35df4f230d46c158cbc4655e325dde60878017f"
+    },
+    "k19": {
+      "file": "cost16-survival-k19-20261118.json",
+      "git_blob_sha1": "7c87ba5b0b69109b8caddf18b323b7819d4a6c26"
+    },
+    "k20": {
+      "file": "cost16-survival-k20-20261118.json",
+      "git_blob_sha1": "69c7d84edeae57d79291a9603e3a2e130b7d97bf"
+    },
+    "k21": {
+      "file": "cost16-survival-k21-20261118.json",
+      "git_blob_sha1": "5631e3f307119cdc067e7c6de24a305cd09a1109"
+    },
+    "k22": {
+      "file": "cost16-survival-k22-20261118.json",
+      "git_blob_sha1": "c1e9598ba79b7dc424a8d975b9b93179e4a13abf"
+    },
+    "k23": {
+      "file": "cost16-survival-k23-20261118.json",
+      "git_blob_sha1": "fc60c3660c42e71a92ddf2964d11656b9aa263c9"
+    },
+    "k24": {
+      "file": "cost16-survival-k24-20261118.json",
+      "git_blob_sha1": "a0955297355beef8b2cf2560afebb0001fcf880b"
+    },
+    "k25": {
+      "file": "cost16-survival-k25-20261118.json",
+      "git_blob_sha1": "c69b63354314537880006bea4590d99fe1921b62"
+    },
+    "k26": {
+      "file": "cost16-survival-k26-20261118.json",
+      "git_blob_sha1": "1841a281ff604e7f677b8c7772a7312f6f9da5e1"
+    },
+    "k27": {
+      "file": "cost16-survival-k27-20261118.json",
+      "git_blob_sha1": "3dc30ad6c51cc2d7678cc8777e4af2376267ddb8"
+    },
+    "k28": {
+      "file": "cost16-survival-k28-20261118.json",
+      "git_blob_sha1": "99db3a9a48d044727b3a4d83fb7fc97daa7513d2"
+    },
+    "k29": {
+      "file": "cost16-survival-k29-20261118.json",
+      "git_blob_sha1": "795665316c300a186979bafd2817b6961de2de60"
+    },
+    "k30": {
+      "file": "cost16-survival-k30-20261118.json",
+      "git_blob_sha1": "9c24e7a30ad213d3b7675e620ec606b00f73a330"
+    },
+    "k31": {
+      "file": "cost16-survival-k31-20261118.json",
+      "git_blob_sha1": "0d9f67ee69ad4fb8aa37904ddbf6666745786807"
+    },
+    "k31pre": {
+      "file": "cost16-survival-k31-preread-20261118.json",
+      "git_blob_sha1": "51d08148e0d449dbd4e93df77bbab0b00326491f"
+    },
+    "k32": {
+      "file": "cost16-survival-k32-20261118.json",
+      "git_blob_sha1": "6bf47e8745300ae6235180591978daf9d7fe09e5"
+    },
+    "k32pre": {
+      "file": "cost16-survival-k32-preread-20261118.json",
+      "git_blob_sha1": "6d49ab5bea27c967e15b482b33e376510c62b857"
+    },
+    "k33": {
+      "file": "cost16-survival-k33-20261118.json",
+      "git_blob_sha1": "3446e9a0aec2d4cc01cbb8f062db0a36d660a65a"
+    },
+    "k33pre": {
+      "file": "cost16-survival-k33-preread-20261118.json",
+      "git_blob_sha1": "e4346ddd7e08799b4406dcdba930de714e4f462c"
+    },
+    "k34": {
+      "file": "cost16-survival-k34-20261118.json",
+      "git_blob_sha1": "d485914cf7f6198a2fbb05b09d778ecec510343f"
+    },
+    "k34_jsonl": {
+      "file": "cost16-survival-k34-20261118.jsonl",
+      "git_blob_sha1": "8cdb7b20c1bccf932e6acc7b6324c4e81a10b47d"
+    },
+    "k34pre": {
+      "file": "cost16-survival-k34-preread-20261118.json",
+      "git_blob_sha1": "8dbb1bcbdaed9bee475f3b95932d35a9500e62cb"
+    }
+  },
+  "schema": "n11-cost16-k34-crosscheck-20261119-v1",
+  "source_main_commit": "d70014678ebcc93441b5b793d9778125c5c67dea"
+}
