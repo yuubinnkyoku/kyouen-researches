@@ -49,6 +49,12 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/output/inversive_plane.json
   role: data
   note: q=3,5 の反転平面ゲーム全値
+- path: research/experiments/finite-field-kyouen-20261120/DET_CONTINUOUS.md
+  role: source
+  note: 連続緩和の正しい値と格子との差1
+- path: research/experiments/finite-field-kyouen-20261120/scripts/det_continuous_exact.py
+  role: verifier
+  note: 凸凹場合分けによる連続最大の厳密計算
 - path: research/experiments/finite-field-kyouen-20261120/INVERSIVE_Q8.md
   role: source
   note: q=8のK=7厳密決定と高速化
@@ -162,6 +168,12 @@ n=4, q=5 では 5,811 個中 2,120 個、n=5, q=5 では 151,394 個中 122,168 
 観測値は `D(n) = a²⌊a²/2⌋`（`a=n−1`）に一致する。極値配置は常に
 「三隅 (0,0),(a,0),(0,a) ＋ 対角点 (t,t)」で、その行列式は `−2a²t(a−t)`。
 q > D(n) の 44 通りで禁止集合の完全一致を確認した（不一致 0）。
+
+**連続緩和との関係**：四点目を実数に許した連続最大は `a⁴/2 + [a奇数]/2` で、
+格子最大 `a²⌊a²/2⌋` との差は **a 奇数でちょうど 1**、a 偶数で 0 である（a ≤ 8 の全数計算）。
+この分解により証明は「連続最大の評価」と「奇数のとき格子点で 1 下がること」の2段階に分かれる。
+なお `Delta` は `gamma` の符号で凸にも凹にもなり、凹の場合は最大が内部（円の中心付近）で
+達成されるため、「最大は常に角」という素朴な議論は誤りである。
 
 **この閾値は実用上きわめて強い制約である**：D(n) は n について 4 次で増えるので、
 n=11 では D(11) ≈ 5×10^5 となり、11×11 を埋め込める有限体は巨大な体に限られる。
