@@ -112,3 +112,20 @@ depth>10である。
 [研究ログ](../../log/2026-11-20-n11-residual72-full-cache-join-candidate-supply.md)。
 
 **標準11×11空盤・二石root {49,60}/{59,60}・S2 {59,60}・class 1/2/4はすべてUNKNOWNのまま。**
+
+
+## 独立第二検証（2026-11-20）
+
+K1075の候補供給生成器をimportしない別実装で、出版済み6正本をSHA-256 pinし、残余72行の幾何と36-root witnessを再検査した。**44/44 gate PASS**。
+
+- 72行からadd-one-stone universeを独立再構築し、7,448 rootを再現。4×4 Bareiss determinantで全rootの4点組を厳密検査し、safe 4,577・unsafe 2,871を得た。被覆サイズは1行6,616 root・2行832 rootで、3行以上の被覆rootは0。
+- K1075の36 fresh witness rootは全件7石・D4正準形・safe。D4変換後の全単石削除から各rootの2行を再導出し、36本が72行を重複なくちょうど1回被覆することを確認。72頂点の上界36に達するため、**pair matching 36は最適**。
+- resolve7のretire後38 rootも独立再検査し、34 root×2行+4 root×1行=72行の割当が幾何的に一致、重複・欠落0。
+- fold9/fold10/resolve7/K1075の残余72行リストが完全一致。独立safe/unsafe総数とK1075のfresh-safe 4,109・fresh-unsafe 2,871・judged REFUTED 468・judged WIN 0の個数は算術的に一致。
+- 2回の別プロセス実行でbyte-identical。3回目の計測実行37.313秒。検証器SHA-256 `74fd3275baffb576dee2959678b85a655136dd4595fa2d39bf980c7b3a515972`、結果JSON SHA-256 `5511222b5385a2e57845b944e3607d2ac406203e4da827fb4e62b8e362b5a46d`。
+
+**限界**: K0863の1,279-file corpusとphase-2 verdict joinは再構築していない。fresh-safe 4,109のroot identity集合とpair edges 536の全辺集合はK1075正本の集計値をpinして整合確認したもので、本検証で独立列挙していない。WIN/REFUTED判定・depth-10探索・証明書・receipt・foldは新規生成していない。36-root sweepは別のsingle-owner宣言に属するため、本検証では実行していない。
+
+詳細: [独立検証器](../../experiments/n11-residual72-full-cache-join-candidate-supply-20261120/verify_candidate_supply_geometry_second_20261120.py)・[44 gate結果](../../experiments/n11-residual72-full-cache-join-candidate-supply-20261120/output/candidate-supply-second-verification-20261120.json)・[研究ログ](../../log/2026-11-20-n11-residual72-candidate-supply-independent-second-verification.md)。
+
+**標準11×11空盤・二石root {49,60}/{59,60}・S2 {59,60}・class 1/2/4はUNKNOWNのまま。** 被覆計画は勝敗証明ではなく、REFUTED-D10もLOSS証明ではない。
