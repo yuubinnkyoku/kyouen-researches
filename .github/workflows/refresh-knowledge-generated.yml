@@ -92,6 +92,10 @@ jobs:
           git diff --exit-code -- research/experiments/vertical-fiber-two-token-z10-y7-boundary-20261119/output/audit.json
           uv run --locked python research/experiments/vertical-fiber-two-token-z10-y7-boundary-20261119/agree_k1002_y7.py
           git diff --exit-code -- research/experiments/vertical-fiber-two-token-z10-y7-boundary-20261119/output/agree_audit.json
+      - name: Audit K1010 two-token z=10 y=8 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z10-y8-boundary-20261119/verify_z10_y8.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z10-y8-boundary-20261119/output/audit.json
       - name: Audit quantitative circle-density modular checker
         run: python research/experiments/fixed-width/scripts/verify_quantitative_density.py
       - name: Audit prime-avoidance finite checks
@@ -884,3 +888,5 @@ jobs:
 # Refresh generated knowledge after K1008 publication; the z=10 y>=7 uniform conjecture remains open, but the candidate's leading y=6 row is now a theorem and the y-strong-induction trinity for the y=7 row is assembled (2026-11-19).
 # Refresh generated views for K1009 z=10 y=7 two-token boundary slice full Grundy theorem (x-outer induction, 8,204,938 audit checks, zero mismatches, two byte-identical runs; plus K1002-agreement audit, 2,073,257 checks with ZERO mismatches on the y=7 slice; 2026-11-19).
 # Refresh generated knowledge after K1009 publication; the z=10 y>=8 uniform conjecture remains open, but the candidate's first two rows (y=6, y=7) are now theorems and the y-strong-induction trinity for the y=8 row is assembled (2026-11-19).
+# Refresh generated views for K1010 z=10 y=8 two-token boundary slice full Grundy theorem (x-outer induction, 10,261,399 audit checks including the integrated K1002-agreement grid, zero mismatches, two byte-identical runs; 2026-11-19).
+# Refresh generated knowledge after K1010 publication; the z=10 y>=9 uniform conjecture remains open, but the candidate's first three rows (y=6, y=7, y=8) are now theorems and the y>=9 rows have their C-child 1 xor K1001 available (2026-11-19).

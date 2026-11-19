@@ -123,7 +123,7 @@ x=8..20は有限の移行行である。x=21はA子がx=20の移行行となる�
 
 検証器を2回実行し、監査JSONがbyte-identicalとなった。有限監査は証明そのものではなく、x外帰納と署名帯表を独立に照合するものである。
 
-- 検証器 SHA-256: 6d98d451d4aa260f0f4021df4f098306f7c2a3656e65870b55480b57cccdb1a9
+- 検証器 SHA-256: 7dcd01a8e6889797da5d05dbffc77e5634342456492c2f0c13a2f1dc2cb7dbf4
 - 監査JSON SHA-256: 3ec4e33a7015a7a3b61340f43c4aa8dfc18ff74a9006149d6e00137d4db3a86e
 - 監査JSON内部ハッシュ（hash fieldを除く）: a2dfe92cf133e7bcb293a7b92698a3d17ff454a9d348f6754e3eed8bd73bd304
 

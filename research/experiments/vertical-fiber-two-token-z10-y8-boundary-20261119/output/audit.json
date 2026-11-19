@@ -19,19 +19,40 @@
   "repeat_runs": 2,
   "scope": {
     "K1002_agreement_R": "0 <= R <= x+24",
-    "K1002_agreement_x": [8, 2000],
+    "K1002_agreement_x": [
+      8,
+      2000
+    ],
     "direct_R": "0 <= R <= x+40",
-    "direct_x": [8, 60],
+    "direct_x": [
+      8,
+      60
+    ],
     "height_only_R": "1 <= R <= 11",
-    "height_only_x": [8, 500],
+    "height_only_x": [
+      8,
+      500
+    ],
     "signature_R": "1 <= R <= x+18",
-    "signature_x": [8, 2000],
+    "signature_x": [
+      8,
+      2000
+    ],
     "tail_R": "x+19 <= R <= x+22",
     "tail_signature_R": "x+19 <= R <= x+22",
-    "tail_signature_x": [8, 2000],
-    "tail_x": [8, 5000],
+    "tail_signature_x": [
+      8,
+      2000
+    ],
+    "tail_x": [
+      8,
+      5000
+    ],
     "theorem_R": "0 <= R <= x+24",
-    "theorem_x": [8, 2000]
+    "theorem_x": [
+      8,
+      2000
+    ]
   },
   "sha256_without_hash_field": "a2dfe92cf133e7bcb293a7b92698a3d17ff454a9d348f6754e3eed8bd73bd304",
   "target": "H(R;(x,8);10), x>=8, R>=0",

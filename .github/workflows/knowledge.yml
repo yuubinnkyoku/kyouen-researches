@@ -376,6 +376,10 @@ jobs:
           git diff --exit-code -- research/experiments/vertical-fiber-two-token-z10-y7-boundary-20261119/output/audit.json
           uv run --locked python research/experiments/vertical-fiber-two-token-z10-y7-boundary-20261119/agree_k1002_y7.py
           git diff --exit-code -- research/experiments/vertical-fiber-two-token-z10-y7-boundary-20261119/output/agree_audit.json
+      - name: Audit K1010 two-token z=10 y=8 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z10-y8-boundary-20261119/verify_z10_y8.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z10-y8-boundary-20261119/output/audit.json
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python research/experiments/graph-star-fixed-q-count-complexity-20261102/verify.py
