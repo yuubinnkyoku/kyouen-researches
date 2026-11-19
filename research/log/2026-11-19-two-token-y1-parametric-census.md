@@ -81,3 +81,22 @@ they govern the whole range z = 1..60 without exception.
 Finite result: z <= 60, x <= max(60, z+8), R <= x+z+6. No claim about y >= 2.
 The 11x11 problems (empty board, two-stone roots, S2, class 1/2/4) remain
 UNKNOWN (long lane).
+
+## Addendum (same day): deep-x probe
+
+`deep_probe_x.py` extends the census in the x direction: for z in
+{1, 2, 3, 4, 8, 15, 20, 31, 40, 51, 60} — tiny z, both parities, and the
+largest census z — it checks the parametric candidate with
+`x <= 200`, `R <= x + z + 6` against both raw engines.
+
+Result: **283,500 points, 0 mismatches, 0 engine disagreements, 11/11 CLEAN**.
+The x-linear band endpoints (E/O mid-band closing at `S-1` / `S`, tail onset
+`S+1` on even-x rows) stay exact at x depths 5x beyond the main census grid.
+`output/deep_probe_summary.json` byte-identical across runs.
+
+Artifacts (addendum): `deep_probe_x.py` SHA-256
+`d9c8fd62918c57185c65140ce5be2cb880e44961f409a2f4c4ae855804a7269d`,
+`output/deep_probe_summary.json` SHA-256
+`8c2c69124217d68304ec57f9211d29d045153ee594c3f365839e13f659743705`.
+Combined census totals with the addendum: 249,408 + 283,500 = 532,908 raw
+points, all clean.
