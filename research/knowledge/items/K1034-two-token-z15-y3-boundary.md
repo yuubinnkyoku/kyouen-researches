@@ -24,7 +24,13 @@ artifacts:
   note: 二つの直接mex再帰、K1032/K1030子アンカー、署名帯・mex・低R・tailの監査
 - path: research/experiments/vertical-fiber-two-token-z15-y3-boundary-20261119/output/audit.json
   role: data
-  note: 4,688,367照合・不一致0・独立プロセス2回でbyte-identical
+  note: 13,825,925照合・不一致0・二回実行byte-identicalの決定論的監査結果
+- path: research/experiments/vertical-fiber-two-token-z15-y3-boundary-20261119/census_z15_y3.py
+  role: verifier
+  note: x=3..45・R=0..x+45の生二再帰センサス（二エンジン一致・閉形式一致・tail）で行表を第三導出から照合する
+- path: research/experiments/vertical-fiber-two-token-z15-y3-boundary-20261119/output/census.txt
+  role: data
+  note: センサスの決定論的出力（二回実行byte-identical）
 - path: research/log/2026-11-19-vertical-fiber-two-token-z15-y3-boundary.md
   role: log
   note: 最新main確認、切片選定、全称化、監査、次の未解決範囲
@@ -38,6 +44,6 @@ evidence: >-
   x=3..20の過渡署名帯表とx>=21奇数/x>=22偶数の定常署名帯表が全R>=1を
   互いに素に被覆し、各帯のmexが本文のT/Pを与える。K0832からR<=16の
   高さのみ縮約、R>=x+19の一般tailも従う。二直接再帰・子アンカー・署名帯・mex・
-  Theorem T・縮約・tail・固定seed散点の監査は4,688,367点で不一致0。
+  Theorem T・縮約・tail・固定seed散点の監査は13,825,925点で不一致0。
   全称性の根拠はx外帰納と全R署名帯表であり、有限監査はその転写・実装照合である。
 ---
