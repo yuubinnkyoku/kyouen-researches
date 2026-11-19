@@ -980,7 +980,7 @@
       }
     },
     {
-      "name": "rank36_published_sextet_subset_of_rank38_all_zero",
+      "name": "k36_original_sextet_subset_of_rank38_all_zero",
       "pass": true,
       "detail": {
         "counts": {
@@ -992,7 +992,19 @@
       }
     },
     {
-      "name": "rank37_published_sextet_subset_of_rank38_all_zero",
+      "name": "k36_k38_regression_sextet_subset_of_rank38_all_zero",
+      "pass": true,
+      "detail": {
+        "counts": {
+          "b_only": 0,
+          "zero": 1947792,
+          "disjoint": 0
+        },
+        "total": 1947792
+      }
+    },
+    {
+      "name": "k37_original_sextet_subset_of_rank38_all_zero",
       "pass": true,
       "detail": {
         "counts": {
@@ -1004,7 +1016,19 @@
       }
     },
     {
-      "name": "rank38_published_sextet_subset_of_rank38_all_zero",
+      "name": "k37_k38_regression_sextet_subset_of_rank38_all_zero",
+      "pass": true,
+      "detail": {
+        "counts": {
+          "b_only": 0,
+          "zero": 2324784,
+          "disjoint": 0
+        },
+        "total": 2324784
+      }
+    },
+    {
+      "name": "k38_original_sextet_subset_of_rank38_all_zero",
       "pass": true,
       "detail": {
         "counts": {
@@ -1072,7 +1096,7 @@
       "detail": {}
     }
   ],
-  "check_count": 46,
+  "check_count": 48,
   "all_pass": true,
   "scope_guard": "This is a finite combinatorial preread verification only. It produces no game verdict, no WIN7-D10 certificate, and no receipt. Standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
 }
