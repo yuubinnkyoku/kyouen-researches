@@ -46,9 +46,35 @@
 ## 運用記録（実験事実）
 
 - 本セッション中に実行環境のリセットが1回発生し、未出版のローカル scratch
-  （sweep39予備・replica検証作業dir）を一喪失した。**repo既出版のpin
+  （sweep39予備
+・replica検証作業dir）を一喪失した。**repo既出版のpin
   （resolve5正本sha・runner v17 blob sha・census規約）のみから復旧でき、
   runnerの git blob sha1 照合（c132cc64…完全一致）で同一性を確認して掃引を
   実施した。**「重要証拠をrepoに置く」運用の有効性を示す実例。
 - K番号: 並走レーンがfinite-field研究をK1057→K1058へ繰り下げたため、
   本項は **K1059**（K1057のfollow-upとして_relation移し直し）。
+
+## 追試（2026-11-19）: 深さ飽和の確定と「候補供給枯渇」記述の撤回・訂正
+
+- REFUTED-D10はdepth-10内の完全探索のみを意味するため、depth>10に先手勝ちが隠れる
+  可能性を閉じるべく、同じ39 root・同じ(child,bit)分解・同じrunner v17（git blob
+  c132cc64…）・cap 30M・両AND順序・pilot_d6制御で depth 12・14 を全78 probe再実行した
+  （実験dir depth-saturation/ に全生記録・worker log・driver・build scriptを出版）。
+- 結果: 全probeで loss=false・uncapped・pilot合格。d12総nodes 134,902,159（d10比+16.4%）。
+  **72/78分岐はd12とd14のnode数が完全一致**。差のあった6分岐（root 5個・うち1個両順序）
+  も **depth 16再probeでd14と完全一致**（audit正本 depth-saturation-audit-20261119.json・
+  SHA-256 46afc523…）。
+- 帰結: **runner v17の移動モデル・終端規則のもとでこの39 rootの探索木は深さ14以内に
+  飽和し、全深さで先手勝ちが存在しない。この39 rootは残余78行の閉鎖witnessとして
+  永久に使用不能。**
+- 訂正: 本log初期版・実験README.txt初期版・K1059 item初期版・knowledge README該当bulletの
+  「残余78行へのfresh候補供給はこのスコープで枯渇（全行の被覆候補確実全滅の初波）」
+  という記述は誤りであった。39本はmatchingの選択に過ぎず、resolve5のfresh-safe候補
+  4,728本のうち掃引外に4,689本・706 pair辺のうち未選択667辺・78行すべてのsingleton候補が
+  残る（候補供給範囲監査 n11-residual78-witness39-candidate-supply-scope-audit-20261120
+  と整合）。正しい帰結は「選択39-root計画の全滅＋飽和による39 rootの永久使用不能」であり、
+  **次の一手は39 dead rootを除外した再照合（resolve6）**。
+- 解釈規約は不変: 飽和裏付きのREFUTEDも各rootからの先手勝ち不存在（runner移動モデル内）
+  のみを意味し、行のゲーム理論的値には言及しない。78行は1行も閉じない
+  （frontier 6,213行/492,021・solved S6 1,635・5親target 34/112不変）。
+  **標準11×11空盤・二石root {49,60}/{59,60}・S2 {59,60}・class 1/2/4はすべてUNKNOWNのまま。**
