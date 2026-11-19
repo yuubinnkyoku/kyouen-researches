@@ -1,0 +1,105 @@
+{
+  "crosscheck": "K1011 independent rerun + gap-y engine corroboration (lane B)",
+  "formula": "verify_z10_y_ge9_proof.candidate (K1002 uniform, y>=9 restriction)",
+  "engines": "independent in-file order-preserving + descending-canonical mex recursions",
+  "range": "gap y={13,14,16,17,18} d=0..30, spot y={21,25,30} d=0..12, deep (y,dmax)={(13,60),(16,60),(13,200),(18,100)}, 0<=R<=x+y+13",
+  "verifier_rerun": {
+    "rerunable_byte_identical": true,
+    "matches_published_audit_semantics": true,
+    "regenerated_audit_blob_identical": true,
+    "run_stdout_sha256": "1c8001d7c87904a5413690510ef8844c8a9929caeb58a5b524126a4fa57bd017",
+    "published_audit_json_sha256": "727ca20a3242bc19096819db6ee2255243573e722937a73c04e8ce09d9082e7e",
+    "total_checks": 7657856
+  },
+  "engine_gap": {
+    "rows": [
+      {
+        "y": 13,
+        "dmax": 30,
+        "pairs": 31,
+        "checks": 1705,
+        "failures": 0
+      },
+      {
+        "y": 14,
+        "dmax": 30,
+        "pairs": 31,
+        "checks": 1767,
+        "failures": 0
+      },
+      {
+        "y": 16,
+        "dmax": 30,
+        "pairs": 31,
+        "checks": 1891,
+        "failures": 0
+      },
+      {
+        "y": 17,
+        "dmax": 30,
+        "pairs": 31,
+        "checks": 1953,
+        "failures": 0
+      },
+      {
+        "y": 18,
+        "dmax": 30,
+        "pairs": 31,
+        "checks": 2015,
+        "failures": 0
+      },
+      {
+        "y": 21,
+        "dmax": 12,
+        "pairs": 13,
+        "checks": 806,
+        "failures": 0
+      },
+      {
+        "y": 25,
+        "dmax": 12,
+        "pairs": 13,
+        "checks": 910,
+        "failures": 0
+      },
+      {
+        "y": 30,
+        "dmax": 12,
+        "pairs": 13,
+        "checks": 1040,
+        "failures": 0
+      },
+      {
+        "y": 13,
+        "dmax": 60,
+        "pairs": 61,
+        "checks": 4270,
+        "failures": 0
+      },
+      {
+        "y": 16,
+        "dmax": 60,
+        "pairs": 61,
+        "checks": 4636,
+        "failures": 0
+      },
+      {
+        "y": 13,
+        "dmax": 200,
+        "pairs": 201,
+        "checks": 28140,
+        "failures": 0
+      },
+      {
+        "y": 18,
+        "dmax": 100,
+        "pairs": 101,
+        "checks": 10100,
+        "failures": 0
+      }
+    ],
+    "total_checks": 59233,
+    "failures": []
+  },
+  "all_pass": true
+}
