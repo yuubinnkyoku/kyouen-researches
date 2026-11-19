@@ -1,6 +1,6 @@
 ---
 id: K1059
-title: "残余78行の39-witness depth-10掃引（resolve5条件付き計画の実行）: WIN 0・REFUTED 39・CAPPED 0・順序矛盾0（総nodes 115,940,695）で add-one-stone・depth-10レーンのfresh候補供給がこのスコープで枯渇。行は閉じずfrontier不変"
+title: "残余78行の39-witness depth-10掃引（WIN 0・REFUTED 39）。選択39-root計画は消費済みだが、fresh-safe候補集合全体の枯渇は未判定"
 kind: computation
 status: computed
 topics: [certificates, verification, search-methods]
@@ -34,6 +34,13 @@ artifacts:
 - path: research/experiments/n11-residual78-39witness-depth10-sweep-20261119/output/probe-records-w1.jsonl
   role: data
   note: 生probe記録 worker1（38 record）
+- path: research/experiments/n11-residual78-witness39-candidate-supply-scope-audit-20261120/audit_candidate_supply_scope_20261120.mjs
+  role: verifier
+  note: resolve5の4,728 fresh-safe候補と39-root sweepの範囲を独立監査。4入力blob pin、D4・整数determinant安全性・削除被覆・78行pair matchingを検査
+- path: research/experiments/n11-residual78-witness39-candidate-supply-scope-audit-20261120/output/candidate-supply-scope-audit-20261120.json
+  role: data
+  note: 9 gate全合格。fresh-safe 4,728本のうちsweep39本の外に4,689本、706 pair辺のうち未選択667、78 singleton行は今回未使用。full 8,964 cache joinとpost-sweep matchingは未実施
+
 scope: >-
   K1057 resolve5 が計画した39本のfresh pair witness（残余78行の完全被覆）の
   depth-10両順序掃引の実行と分類まで。行の閉鎖・fold・二石root・空盤の
@@ -53,7 +60,7 @@ evidence: >-
   （4）帰結: REFUTED-D10はLOSS証明でないため78行は1行も閉じない。frontier・5親targetは
   K1057 fold後のまま（6,213行/492,021・solved S6 1,635・5親target 34/112・残余78行）。
   43-pair掃引のdeflation（4 WIN+39 REFUTED）後に再結合した39 fresh pairが全滅し、
-  **残余78行に対するadd-one-stone・depth-10レーンのこのスコープの候補供給は枯渇**した
+  **選択した39-root witness計画は全件REFUTED-D10で消費された**（fresh-safe候補集合全体の枯渇は未判定。追記参照）
   ことが確定した（全行の被覆候補確実全滅の初波）。
   （5）運用: セッション中の環境リセットによりローカルscratchを喪失したが、repo出版済みの
   pinのみから復旧して掃引を実施した（runnerのgit blob sha照合による同一性確認を含む）。
@@ -61,3 +68,10 @@ evidence: >-
   （6）解釈規約: REFUTED-D10はdepth-10内の先手勝ちなし完全探索のみを意味する。
   深さ>10・2石追加・他の閉鎖機構の可能性は否定しない。
   **標準11×11空盤・二石root {49,60}/{59,60}・S2 {59,60}・class 1/2/4はすべてUNKNOWNのまま。**
+
+
+## 追記: 39-root sweep後の候補供給範囲監査（2026-11-20）
+
+K1059のsweepはresolve5が選んだ39本を全てREFUTED-D10とした。この39本は互いに素なpair matchingで残余78行を覆うが、resolve5正本の事前fresh-safe候補集合は4,728本であり、今回の入力はその39本だけである。したがってこのsweep外のfresh-safe候補は4,689本。事前候補グラフには706個の異なるpair辺があり、選択matchingが使った39辺以外に667辺が残る。また78行全てにsingleton候補があり、今回の39本は全て2行pairなのでsingleton候補はこのsweepで消費されていない。
+
+これは事前候補集合に関する範囲監査であり、sweep後の最大matchingを再計算したものではない。さらにresolve5の明示verdict結合は379 REFUTED / 168 WINで、K0863の8,964-root全体cacheとの結合ではない。よって4,689本が現在も全て未判定とも、別matchingが必ず残るとも主張しない。次は全体cacheをroot単位で再構成して候補へ結合し、39 REFUTEDを除外して再解決する。詳細は[実験](../../experiments/n11-residual78-witness39-candidate-supply-scope-audit-20261120/README.md)と[研究ログ](../../log/2026-11-20-n11-residual78-candidate-supply-scope-audit.md)。
