@@ -1,0 +1,886 @@
+#!/usr/bin/env python3
+"""Rank-39 structural preread for the 31-row cost-16 parent survival lane.
+
+Deterministic pure-Python preread (exact integer arithmetic, no pm
+recomputation): re-derives the full structural census of the top-39
+pair roots from the pinned phase-B aggregate with two independent
+row-multiplicity classifiers, regresses the published rank-37 preread
+layer (pinned k37 preread JSON, commit 98321003, independent
+bit-mask-vector second-derivation lineage commit 958057fb with erratum
+059db03e) and the published rank-38 preread layer (pinned k38 preread
+JSON, commit 75fabfd018, independently verified by the bit-mask-vector
+lineage: independent verifier commit 126614cc48, result JSON commit
+f37ddd047e, log commit 5e0ef79575, 48-check audit commit e824f6029b),
+and records the rank-39 facts (root rows [5,24], prior hits,
+membership split, new pair/triple/quad/quint censuses, full
+C(39,3)/C(39,5) censuses, sextet C(39,6) census with the first b_only
+sextets and the first disjoint quint records of the whole lane
+history) needed by the k=39 main computation's load/assert chain.
+The k=36 and k=37 main result JSONs are already published (commits
+6fcea02c / a4a7ce31), the k=36/k=37 crosscheck extensions are
+published (latest 287 checks, all pass, 2026-11-19), and the k=38
+production script is published (commit 9d1b0a6a4c) with its
+cross/finalize/publish owned by a single lane per the concurrency
+note (commit 112a32470578), so the k=39 main computation pins the
+published k=38 result once it lands and regresses against it in
+addition to this preread.  Rank-39 breaks the two truncation premises
+of the k=38 marginal I-E at once: the new quint layer contains 508
+disjoint records (every published k=26..k=38 quint census had
+disjoint == 0) and the C(39,6) sextet census contains 5,852 b_only
+records (the C(38,6) census was all zero), while level 7 closes
+(every 7-combo with a non-zero 6-subset is zero), so this preread pins
+all three structural facts for the main computation.
+
+Pure Python (following the k=32..k=38 preread scripts): all
+large integers are exact and the final check asserts the exact
+aggregate integers round trip through JSON on every run.
+
+Two classifiers (dict-accumulate vs Counter-variant) must agree on
+every enumerated combination. Fully deterministic: fixed insertion
+order, no timestamps, so two runs produce byte-identical output.
+
+Fetches all inputs at pinned git blob sha1s via the jsdelivr mirror
+with a raw.githubusercontent.com fallback (a mirror serving
+stale-but-wrong bytes fails the sha1 check and the next mirror is
+tried), or from a local directory with --local DIR (sha1 checked).
+
+Usage: python3 cost16_survival_k39_preread_20261119.py [--local DIR] [--out PATH]
+"""
+import argparse
+import hashlib
+import itertools
+import json
+import math
+import sys
+import urllib.request
+from collections import Counter
+
+REPO = "yuubinnkyoku/kyouen-researches"
+PATH = "research/experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output"
+PINS = {
+    "agg": ("cost16-b-phase-groups-20261118.json", "31bdefdb2e2cc90b706cbb8090e98eb5eece4d87"),
+    "k37pre": ("cost16-survival-k37-preread-20261119.json",
+               "b98ed685e772eacbd28dc3100e9813e81c27040a"),
+    "k38pre": ("cost16-survival-k38-preread-20261119.json",
+               "3fa8297990d8e9880f386a0cfa075e3a95f226fd"),
+}
+# sha1 the pinned k38 preread must declare for the k36 preread it
+# consumed (publication chain: the k38 preread consumed the aggregate
+# and the k36/k37 preread artifacts; k37 is pinned above)
+K36PRE_SHA = "760aa396361cc7d2ea8bc371f4dd673d962f07fe"
+PARENT_ROOT = "00000000000000003800000008001000"  # 31-row cost-16 parent
+R = 31          # parent rows (fixed: new ranks ban one more pair root)
+RANK = 39      # 1-based top50 rank of the new root
+IDX = RANK - 1  # 0-based index of the new root
+
+
+def git_blob_sha1(data: bytes) -> str:
+    return hashlib.sha1(b"blob %d\x00" % len(data) + data).hexdigest()
+
+
+def fetch_bytes(name: str, want_sha: str, local_dir: str | None) -> bytes:
+    if local_dir:
+        data = open(f"{local_dir}/{name}", "rb").read()
+    else:
+        urls = [
+            f"https://cdn.jsdelivr.net/gh/{REPO}@main/{PATH}/{name}",
+            f"https://raw.githubusercontent.com/{REPO}/main/{PATH}/{name}",
+        ]
+        data = None
+        shas = []
+        for u in urls:
+            try:
+                data = urllib.request.urlopen(u, timeout=60).read()
+            except Exception:
+                continue
+            got = git_blob_sha1(data)
+            if got == want_sha:
+                break
+            shas.append((u.split("/")[2], got))
+            data = None
+        if data is None:
+            raise RuntimeError(f"could not fetch {name} at pinned sha "
+                               f"{want_sha} (mirror results: {shas})")
+        return data
+    got = git_blob_sha1(data)
+    if got != want_sha:
+        raise RuntimeError(f"{name}: blob sha1 {got} != pinned {want_sha}")
+    return data
+
+
+def fetch(name: str, want_sha: str, local_dir: str | None) -> dict:
+    return json.loads(fetch_bytes(name, want_sha, local_dir))
+
+
+# ---- classifier A: dict accumulate (same definition as the k14 publication)
+def classify_a(rows, combo):
+    c = {}
+    for i in combo:
+        for r in rows[i]:
+            c[r] = c.get(r, 0) + 1
+    if max(c.values()) >= 3:
+        return "zero", None
+    twos = [r for r, v in c.items() if v == 2]
+    if len(twos) >= 2:
+        return "zero", None
+    if len(twos) == 1:
+        return "b_only", twos[0]
+    return "disjoint", None
+
+
+# ---- classifier B: independent Counter variant (different code path)
+def classify_b(rows, combo):
+    cnt = Counter()
+    for i in combo:
+        cnt.update(rows[i])
+    if any(v >= 3 for v in cnt.values()):
+        return "zero", None
+    pair_rows = sorted(r for r, v in cnt.items() if v == 2)
+    if len(pair_rows) == 1:
+        return "b_only", pair_rows[0]
+    if not pair_rows:
+        return "disjoint", None
+    return "zero", None
+
+
+def census(rows, combos, both=True):
+    """Count classes over combos with both classifiers; returns
+    (counts, twos_histogram, comparisons, mismatches)."""
+    cen = {"b_only": 0, "zero": 0, "disjoint": 0}
+    twos = {}
+    mism = 0
+    n = 0
+    for c in combos:
+        ca, ta = classify_a(rows, c)
+        n += 1
+        if both:
+            cb, tb = classify_b(rows, c)
+            if (ca, ta) != (cb, tb):
+                mism += 1
+        cen[ca] += 1
+        if ca == "b_only":
+            twos[ta] = twos.get(ta, 0) + 1
+    return cen, dict(sorted(twos.items())), n, mism
+
+
+def new_census(rows, idx, size, both=True):
+    """Census over combinations of `size` roots that all include idx."""
+    others = range(idx)
+    return census(rows, ((idx,) + c for c in itertools.combinations(others, size - 1)), both)
+
+
+def profile_of(rows, five):
+    """4-subset profile key 'b/d/z' of a b_only quint (b_only /
+    disjoint / zero counts over its five 4-subsets)."""
+    cls = []
+    for drop in range(5):
+        sub = tuple(x for k, x in enumerate(five) if k != drop)
+        cl, _ = classify_a(rows, sub)
+        cls.append(cl)
+    return "%d/%d/%d" % (cls.count("b_only"), cls.count("disjoint"), cls.count("zero"))
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--local", default=None,
+                    help="directory with the pinned input JSONs (offline mode; sha1 still checked)")
+    ap.add_argument("--out", default="output/cost16-survival-k39-preread-20261119.json",
+                    help="output JSON path")
+    args = ap.parse_args()
+
+    agg = fetch(*PINS["agg"], args.local)
+    k37pre = fetch(*PINS["k37pre"], args.local)
+    k38pre = fetch(*PINS["k38pre"], args.local)
+    if not (k37pre.get("all_pass") and k37pre.get("check_count") == 34):
+        print("FAIL k37 preread all_pass/check_count unexpected")
+        return 1
+    if not (k38pre.get("all_pass") and k38pre.get("check_count") == 34):
+        print("FAIL k38 preread all_pass/check_count unexpected")
+        return 1
+
+    top = agg["derived"]["top50_by_membership"]
+    memA = agg["derived"]["membership_A_part_pair_roots"]
+    memB = agg["derived"]["membership_B_part_pair_roots"]
+    rows = {i: tuple(e["rows_covered"]) for i, e in enumerate(top)}
+    mem = [e["membership"] for e in top]
+
+    checks = []
+
+    def check(name, ok, detail=None):
+        checks.append({"name": name, "pass": bool(ok), "detail": detail or {}})
+
+    # 1. aggregate sanity
+    check("top50_has_50_unique_pair_roots",
+          len(top) == 50 and len({e["root"] for e in top}) == 50
+          and all(len(e["rows_covered"]) == 2 for e in top),
+          {"len": len(top)})
+    # 2. publication chain: the pinned k38 preread declares the pinned
+    #    aggregate, k36 preread and k37 preread it consumed
+    in_pins = {k: v["git_blob_sha1"] for k, v in k38pre["inputs"].items()
+               if isinstance(v, dict) and "git_blob_sha1" in v}
+    check("k38_preread_declares_pinned_inputs",
+          in_pins.get("aggregate") == PINS["agg"][1]
+          and in_pins.get("k36_preread") == K36PRE_SHA
+          and in_pins.get("k37_preread") == PINS["k37pre"][1],
+          {"declared": in_pins, "pinned_agg": PINS["agg"][1],
+           "pinned_k36pre": K36PRE_SHA, "pinned_k37pre": PINS["k37pre"][1]})
+
+    # ---- rank-37 regression (vs the pinned published k37 preread JSON)
+    reg = {}
+    n = 37
+    idx = n - 1
+    pub37 = k37pre["rank37"]
+    prior = {}
+    for r in rows[idx]:
+        prior[r] = [i for i in range(idx) if r in rows[i]]
+    pc, _, pcmp, pmis = new_census(rows, idx, 2)
+    shared = idx - pc["disjoint"]
+    tc, ttwos, tcmp, tmis = new_census(rows, idx, 3)
+    qc, qtwos, qcmp, qmis = new_census(rows, idx, 4)
+    uc, utwos, ucmp, umis = new_census(rows, idx, 5)
+    new_quint_b_only = []
+    for c in itertools.combinations(range(idx), 4):
+        cl, two = classify_a(rows, (idx,) + c)
+        if cl == "b_only":
+            new_quint_b_only.append((idx,) + c)
+    profiles = {}
+    for five in new_quint_b_only:
+        k = profile_of(rows, five)
+        profiles[k] = profiles.get(k, 0) + 1
+    dusizes = {}
+    for c in itertools.combinations(range(idx), 3):
+        combo = (idx,) + c
+        cl, _ = classify_a(rows, combo)
+        if cl == "disjoint":
+            u = set()
+            for i in combo:
+                u |= set(rows[i])
+            dusizes[len(u)] = dusizes.get(len(u), 0) + 1
+    ful3, f3twos, f3cmp, f3mis = census(rows, itertools.combinations(range(n), 3))
+    ful5, f5twos, f5cmp, f5mis = census(rows, itertools.combinations(range(n), 5))
+    six, _, s6cmp, s6mis = census(rows, itertools.combinations(range(n), 6))
+    check(f"rank{n}_root_matches_published_preread",
+          pub37["root"] == "00000000080000003800000108001000" == top[idx]["root"]
+          and sorted(pub37["rows"]) == sorted(rows[idx]) == [8, 19]
+          and int(pub37["membership"]) == int(mem[idx]) == 119973409932394637
+          and int(pub37["a_part"]) == 91996175553485330
+          and int(pub37["b_part"]) == 27977234378909307,
+          {"root": pub37["root"], "rows": sorted(rows[idx]), "membership": int(mem[idx])})
+    check(f"rank{n}_prior_hits_match_published_preread",
+          prior == {8: [23], 19: [0, 2, 3, 8, 9, 10, 15, 29, 32, 33, 35]}
+          and {k: sorted(v) for k, v in pub37["prior_hit_indices"].items()}
+          == {str(r): v for r, v in sorted(prior.items())},
+          {str(r): v for r, v in sorted(prior.items())})
+    check(f"rank{n}_new_census_matches_published_preread",
+          pub37["new_census"]["pair"]["shared"] == shared
+          and pub37["new_census"]["pair"]["disjoint"] == pc["disjoint"]
+          and pub37["new_census"]["triple"]["b_only"] == tc["b_only"]
+          and pub37["new_census"]["triple"]["zero"] == tc["zero"]
+          and pub37["new_census"]["triple"]["disjoint"] == tc["disjoint"]
+          and pub37["new_census"]["quad"]["b_only"] == qc["b_only"]
+          and pub37["new_census"]["quad"]["zero"] == qc["zero"]
+          and pub37["new_census"]["quad"]["disjoint"] == qc["disjoint"]
+          and pub37["new_census"]["quint"]["b_only"] == uc["b_only"]
+          and pub37["new_census"]["quint"]["zero"] == uc["zero"]
+          and pub37["new_census"]["quint"]["disjoint"] == uc["disjoint"]
+          and tc == {"b_only": 397, "zero": 100, "disjoint": 133}
+          and qc == {"b_only": 2394, "zero": 4589, "disjoint": 157}
+          and uc == {"b_only": 2722, "zero": 56183, "disjoint": 0},
+          {"triple": tc, "quad": qc, "quint": uc})
+    check(f"rank{n}_histograms_and_disjoint_quads_match_published_preread",
+          {int(k): v for k, v in pub37["new_triple_double_row_histogram"].items()} == ttwos
+          and {int(k): v for k, v in pub37["new_quad_double_row_histogram"].items()} == qtwos
+          and {int(k): v for k, v in pub37["new_quint_double_row_histogram"].items()} == utwos
+          and {str(k): v for k, v in pub37["b_only_quint_four_subset_profiles"].items()} == profiles
+          and profiles == {"3/2/0": uc["b_only"]}
+          and pub37["disjoint_quad_count"] == qc["disjoint"] == 157
+          and {int(k): v for k, v in pub37["disjoint_quad_union_sizes"].items()} == dusizes
+          and set(dusizes) == {8}
+          and pub37["cumulative_disjoint_quads"] == 1363 + qc["disjoint"] == 1520,
+          {"disjoint_union_sizes": dusizes, "cumulative": 1363 + qc["disjoint"]})
+    check(f"rank{n}_full_census_matches_published_preread",
+          pub37["full_triples"]["counts"] == ful3
+          and ful3 == {"b_only": 4758, "zero": 1420, "disjoint": 1592}
+          and {int(k): v for k, v in pub37["full_triples"]["double_row_histogram"].items()} == f3twos
+          and pub37["full_quints"]["counts"] == ful5
+          and ful5 == {"b_only": 20156, "zero": 415741, "disjoint": 0}
+          and {int(k): v for k, v in pub37["full_quints"]["double_row_histogram"].items()} == f5twos
+          and pub37["sextet_census"]["counts"] == six
+          and six == {"b_only": 0, "zero": math.comb(37, 6), "disjoint": 0},
+          {"full_triples": ful3, "full_quints": ful5, "sextet": six})
+    check(f"rank{n}_era_continuation_matches_k37_preread_rank36_regression",
+          ful5["b_only"] - uc["b_only"] == 17434
+          and k37pre["rank36_regression"]["full_quints"]["counts"]["b_only"] == 17434
+          and ful5["zero"] - uc["zero"] == 359558
+          and k37pre["rank36_regression"]["full_quints"]["counts"]["zero"] == 359558
+          and ful5["disjoint"] == 0,
+          {"prev_b_only": 17434,
+           "new_b_only": uc["b_only"], "full_b_only": ful5["b_only"]})
+    check(f"rank{n}_two_classifiers_agree",
+          pmis == tmis == qmis == umis == f3mis == f5mis == s6mis == 0,
+          {"comparisons": pcmp + tcmp + qcmp + ucmp + f3cmp + f5cmp + s6cmp,
+           "mismatches": pmis + tmis + qmis + umis + f3mis + f5mis + s6mis})
+    reg[n] = {
+        "root": top[idx]["root"],
+        "rows": sorted(rows[idx]),
+        "membership": int(mem[idx]),
+        "a_part": int(memA[top[idx]["root"]]),
+        "b_part": int(memB[top[idx]["root"]]),
+        "prior_hits": {str(r): len(v) for r, v in sorted(prior.items())},
+        "prior_hit_indices": {str(r): v for r, v in sorted(prior.items())},
+        "new_census": {
+            "pair": {"b_only": shared, "zero": 0, "disjoint": pc["disjoint"],
+                     "total": idx, "expected_total": idx},
+            "triple": {**tc, "total": sum(tc.values()), "expected_total": math.comb(idx, 2)},
+            "quad": {**qc, "total": sum(qc.values()), "expected_total": math.comb(idx, 3)},
+            "quint": {**uc, "total": sum(uc.values()), "expected_total": math.comb(idx, 4)},
+        },
+        "new_quint_double_row_histogram": utwos,
+        "new_triple_double_row_histogram": ttwos,
+        "new_quad_double_row_histogram": qtwos,
+        "b_only_quint_four_subset_profiles": {k: profiles[k] for k in sorted(profiles)},
+        "full_triples": {"counts": ful3, "total": math.comb(n, 3),
+                         "double_row_histogram": f3twos},
+        "full_quints": {"counts": ful5, "total": math.comb(n, 5),
+                        "double_row_histogram": f5twos},
+        "sextet_census": {"total": math.comb(n, 6), "counts": six},
+        "classifier_comparisons": idx + tcmp + qcmp + ucmp + f3cmp + f5cmp + s6cmp,
+        "mismatches": 0,
+    }
+
+    # ---- rank-38 regression (vs the pinned published k38 preread JSON)
+    n = 38
+    idx = n - 1
+    pub38 = k38pre["rank38"]
+    prior = {}
+    for r in rows[idx]:
+        prior[r] = [i for i in range(idx) if r in rows[i]]
+    pc, _, pcmp, pmis = new_census(rows, idx, 2)
+    shared = idx - pc["disjoint"]
+    tc, ttwos, tcmp, tmis = new_census(rows, idx, 3)
+    qc, qtwos, qcmp, qmis = new_census(rows, idx, 4)
+    uc, utwos, ucmp, umis = new_census(rows, idx, 5)
+    new_quint_b_only = []
+    for c in itertools.combinations(range(idx), 4):
+        cl, two = classify_a(rows, (idx,) + c)
+        if cl == "b_only":
+            new_quint_b_only.append((idx,) + c)
+    profiles = {}
+    for five in new_quint_b_only:
+        k = profile_of(rows, five)
+        profiles[k] = profiles.get(k, 0) + 1
+    dusizes = {}
+    for c in itertools.combinations(range(idx), 3):
+        combo = (idx,) + c
+        cl, _ = classify_a(rows, combo)
+        if cl == "disjoint":
+            u = set()
+            for i in combo:
+                u |= set(rows[i])
+            dusizes[len(u)] = dusizes.get(len(u), 0) + 1
+    ful3, f3twos, f3cmp, f3mis = census(rows, itertools.combinations(range(n), 3))
+    ful5, f5twos, f5cmp, f5mis = census(rows, itertools.combinations(range(n), 5))
+    six, _, s6cmp, s6mis = census(rows, itertools.combinations(range(n), 6))
+    check(f"rank{n}_root_matches_published_preread",
+          pub38["root"] == "00000008800000003800000008100000" == top[idx]["root"]
+          and sorted(pub38["rows"]) == sorted(rows[idx]) == [19, 29]
+          and int(pub38["membership"]) == int(mem[idx]) == 119940649042609991
+          and int(pub38["a_part"]) == 91876760891572775
+          and int(pub38["b_part"]) == 28063888151037216,
+          {"root": pub38["root"], "rows": sorted(rows[idx]), "membership": int(mem[idx])})
+    check(f"rank{n}_prior_hits_match_published_preread",
+          prior == {19: [0, 2, 3, 8, 9, 10, 15, 29, 32, 33, 35, 36], 29: [19]}
+          and {k: sorted(v) for k, v in pub38["prior_hit_indices"].items()}
+          == {str(r): v for r, v in sorted(prior.items())},
+          {str(r): v for r, v in sorted(prior.items())})
+    check(f"rank{n}_new_census_matches_published_preread",
+          pub38["new_census"]["pair"]["shared"] == shared
+          and pub38["new_census"]["pair"]["disjoint"] == pc["disjoint"]
+          and pub38["new_census"]["triple"]["b_only"] == tc["b_only"]
+          and pub38["new_census"]["triple"]["zero"] == tc["zero"]
+          and pub38["new_census"]["triple"]["disjoint"] == tc["disjoint"]
+          and pub38["new_census"]["quad"]["b_only"] == qc["b_only"]
+          and pub38["new_census"]["quad"]["zero"] == qc["zero"]
+          and pub38["new_census"]["quad"]["disjoint"] == qc["disjoint"]
+          and pub38["new_census"]["quint"]["b_only"] == uc["b_only"]
+          and pub38["new_census"]["quint"]["zero"] == uc["zero"]
+          and pub38["new_census"]["quint"]["disjoint"] == uc["disjoint"]
+          and tc == {"b_only": 420, "zero": 113, "disjoint": 133}
+          and qc == {"b_only": 2519, "zero": 5094, "disjoint": 157}
+          and uc == {"b_only": 2868, "zero": 63177, "disjoint": 0},
+          {"triple": tc, "quad": qc, "quint": uc})
+    check(f"rank{n}_histograms_and_disjoint_quads_match_published_preread",
+          {int(k): v for k, v in pub38["new_triple_double_row_histogram"].items()} == ttwos
+          and {int(k): v for k, v in pub38["new_quad_double_row_histogram"].items()} == qtwos
+          and {int(k): v for k, v in pub38["new_quint_double_row_histogram"].items()} == utwos
+          and {str(k): v for k, v in pub38["b_only_quint_four_subset_profiles"].items()} == profiles
+          and profiles == {"3/2/0": uc["b_only"]}
+          and pub38["disjoint_quad_count"] == qc["disjoint"] == 157
+          and {int(k): v for k, v in pub38["disjoint_quad_union_sizes"].items()} == dusizes
+          and set(dusizes) == {8}
+          and pub38["cumulative_disjoint_quads"] == 1520 + qc["disjoint"] == 1677,
+          {"disjoint_union_sizes": dusizes, "cumulative": 1520 + qc["disjoint"]})
+    check(f"rank{n}_full_census_matches_published_preread",
+          pub38["full_triples"]["counts"] == ful3
+          and ful3 == {"b_only": 5178, "zero": 1533, "disjoint": 1725}
+          and {int(k): v for k, v in pub38["full_triples"]["double_row_histogram"].items()} == f3twos
+          and pub38["full_quints"]["counts"] == ful5
+          and ful5 == {"b_only": 23024, "zero": 478918, "disjoint": 0}
+          and {int(k): v for k, v in pub38["full_quints"]["double_row_histogram"].items()} == f5twos
+          and pub38["sextet_census"]["counts"] == six
+          and six == {"b_only": 0, "zero": math.comb(38, 6), "disjoint": 0},
+          {"full_triples": ful3, "full_quints": ful5, "sextet": six})
+    check(f"rank{n}_era_continuation_matches_k38_preread_rank37_regression",
+          ful5["b_only"] - uc["b_only"] == 20156
+          and k38pre["rank37_regression"]["full_quints"]["counts"]["b_only"] == 20156
+          and ful5["zero"] - uc["zero"] == 415741
+          and k38pre["rank37_regression"]["full_quints"]["counts"]["zero"] == 415741
+          and ful5["disjoint"] == 0,
+          {"prev_b_only": 20156,
+           "new_b_only": uc["b_only"], "full_b_only": ful5["b_only"]})
+    check(f"rank{n}_two_classifiers_agree",
+          pmis == tmis == qmis == umis == f3mis == f5mis == s6mis == 0,
+          {"comparisons": pcmp + tcmp + qcmp + ucmp + f3cmp + f5cmp + s6cmp,
+           "mismatches": pmis + tmis + qmis + umis + f3mis + f5mis + s6mis})
+    reg[n] = {
+        "root": top[idx]["root"],
+        "rows": sorted(rows[idx]),
+        "membership": int(mem[idx]),
+        "a_part": int(memA[top[idx]["root"]]),
+        "b_part": int(memB[top[idx]["root"]]),
+        "prior_hits": {str(r): len(v) for r, v in sorted(prior.items())},
+        "prior_hit_indices": {str(r): v for r, v in sorted(prior.items())},
+        "new_census": {
+            "pair": {"b_only": shared, "zero": 0, "disjoint": pc["disjoint"],
+                     "total": idx, "expected_total": idx},
+            "triple": {**tc, "total": sum(tc.values()), "expected_total": math.comb(idx, 2)},
+            "quad": {**qc, "total": sum(qc.values()), "expected_total": math.comb(idx, 3)},
+            "quint": {**uc, "total": sum(uc.values()), "expected_total": math.comb(idx, 4)},
+        },
+        "new_quint_double_row_histogram": utwos,
+        "new_triple_double_row_histogram": ttwos,
+        "new_quad_double_row_histogram": qtwos,
+        "b_only_quint_four_subset_profiles": {k: profiles[k] for k in sorted(profiles)},
+        "full_triples": {"counts": ful3, "total": math.comb(n, 3),
+                         "double_row_histogram": f3twos},
+        "full_quints": {"counts": ful5, "total": math.comb(n, 5),
+                        "double_row_histogram": f5twos},
+        "sextet_census": {"total": math.comb(n, 6), "counts": six},
+        "classifier_comparisons": idx + tcmp + qcmp + ucmp + f3cmp + f5cmp + s6cmp,
+        "mismatches": 0,
+    }
+
+    # ---- rank-39 facts (all machine-derived from the pinned aggregate)
+    root = top[IDX]["root"]
+    m39 = int(mem[IDX])
+    a39 = int(memA[root])
+    b39 = int(memB[root])
+    prior = {}
+    for r in rows[IDX]:
+        prior[r] = [i for i in range(IDX) if r in rows[i]]
+
+    pc, _, pcmp, pmis = new_census(rows, IDX, 2)
+    shared = IDX - pc["disjoint"]
+    tc, ttwos, tcmp, tmis = new_census(rows, IDX, 3)
+    qc, qtwos, qcmp, qmis = new_census(rows, IDX, 4)
+    uc, utwos, ucmp, umis = new_census(rows, IDX, 5)
+    new_quint_b_only = []
+    for c in itertools.combinations(range(IDX), 4):
+        cl, two = classify_a(rows, (IDX,) + c)
+        if cl == "b_only":
+            new_quint_b_only.append((IDX,) + c)
+    profiles = {}
+    for five in new_quint_b_only:
+        k = profile_of(rows, five)
+        profiles[k] = profiles.get(k, 0) + 1
+    dusizes = {}
+    for c in itertools.combinations(range(IDX), 3):
+        combo = (IDX,) + c
+        cl, _ = classify_a(rows, combo)
+        if cl == "disjoint":
+            u = set()
+            for i in combo:
+                u |= set(rows[i])
+            dusizes[len(u)] = dusizes.get(len(u), 0) + 1
+    duq = {}
+    for c in itertools.combinations(range(IDX), 4):
+        combo = (IDX,) + c
+        cl, _ = classify_a(rows, combo)
+        if cl == "disjoint":
+            u = set()
+            for i in combo:
+                u |= set(rows[i])
+            duq[len(u)] = duq.get(len(u), 0) + 1
+    ful3, f3twos, f3cmp, f3mis = census(rows, itertools.combinations(range(RANK), 3))
+    ful5, f5twos, f5cmp, f5mis = census(rows, itertools.combinations(range(RANK), 5))
+
+    # ---- sextet pass: the C(39,6) census loses its all-zero property
+    # for the first time, so count with both classifiers AND collect
+    # the b_only records for the level-7 closure scan ----
+    six = {"b_only": 0, "zero": 0, "disjoint": 0}
+    sixtwos = {}
+    b_only_sextets = []
+    s6cmp = 0
+    s6mis = 0
+    for c in itertools.combinations(range(RANK), 6):
+        ca, ta = classify_a(rows, c)
+        cb, tb = classify_b(rows, c)
+        s6cmp += 1
+        if (ca, ta) != (cb, tb):
+            s6mis += 1
+        six[ca] += 1
+        if ca == "b_only":
+            sixtwos[ta] = sixtwos.get(ta, 0) + 1
+            b_only_sextets.append(c)
+
+    # ---- level-7 closure: zero class is upward closed (adding roots
+    # only raises row multiplicities), so every non-zero-class 7-combo
+    # must contain a non-zero-class 6-subset; disjoint sextets do not
+    # exist at k=39, so extending the 5,852 b_only sextets by one root
+    # covers every 7-combo candidate exactly ----
+    sept_checked = 0
+    sept_nonzero = 0
+    sept7cmp = 0
+    sept7mis = 0
+    seen7 = set()
+    for s in b_only_sextets:
+        sm = set(s)
+        for i in range(RANK):
+            if i in sm:
+                continue
+            c7 = tuple(sorted(s + (i,)))
+            if c7 in seen7:
+                continue
+            seen7.add(c7)
+            ca, ta = classify_a(rows, c7)
+            cb, tb = classify_b(rows, c7)
+            sept7cmp += 1
+            if (ca, ta) != (cb, tb):
+                sept7mis += 1
+            sept_checked += 1
+            if ca != "zero":
+                sept_nonzero += 1
+
+    dj39 = sum(1 for c in itertools.combinations(range(RANK), 4)
+               if classify_a(rows, c)[0] == "disjoint")
+
+    check("rank39_root_matches_top50",
+          root == "00000000000000889002000000100200"
+          and sorted(rows[IDX]) == [5, 24],
+          {"root": root, "rows": sorted(rows[IDX])})
+    check("rank39_prior_hits_recorded",
+          prior == {5: [2, 25], 24: [4, 14]},
+          {str(k): v for k, v in sorted(prior.items())})
+    check("rank39_membership_split_identity",
+          a39 + b39 == m39
+          and m39 == 119883868794265826
+          and m39 < int(reg[38]["membership"]),
+          {"membership": m39, "a_part": a39, "b_part": b39})
+    check("rank39_new_pair_census",
+          pc["disjoint"] == IDX - shared and shared == 4 and pc["disjoint"] == 34,
+          {"shared": shared, "disjoint": pc["disjoint"], "total": IDX})
+    check("rank39_new_triple_census",
+          tc["b_only"] + tc["zero"] + tc["disjoint"] == math.comb(IDX, 2)
+          and tc == {"b_only": 319, "zero": 42, "disjoint": 342}, tc)
+    check("rank39_new_quad_census",
+          qc["b_only"] + qc["zero"] + qc["disjoint"] == math.comb(IDX, 3)
+          and qc == {"b_only": 4398, "zero": 3029, "disjoint": 1009}, qc)
+    check("rank39_new_quint_census",
+          uc["b_only"] + uc["zero"] + uc["disjoint"] == math.comb(IDX, 4)
+          and uc["b_only"] == len(new_quint_b_only)
+          and uc["zero"] == math.comb(IDX, 4) - uc["b_only"] - uc["disjoint"]
+          and uc == {"b_only": 13658, "zero": 59649, "disjoint": 508},
+          {**uc, "records": len(new_quint_b_only)})
+    check("rank39_new_quint_double_rows",
+          sum(utwos.values()) == uc["b_only"] and 5 in utwos and 24 in utwos
+          and utwos == {0: 198, 1: 4, 4: 26, 5: 763, 7: 4, 8: 4, 9: 4, 11: 4,
+                        14: 4, 15: 1561, 16: 38, 18: 6562, 19: 4267, 23: 10,
+                        24: 179, 29: 4, 30: 26}, utwos)
+    check("rank39_b_only_quint_profiles",
+          profiles == {"3/2/0": uc["b_only"]}, profiles)
+    check("rank39_disjoint_quints_first_appearance",
+          # the quint disjoint class is non-empty for the first time in
+          # the lane history: every previously published new-layer and
+          # full quint census (k=26..k=38) had disjoint == 0, and the
+          # k=38 main I-E therefore carried only the b_only term j5_B
+          uc["disjoint"] == 508 and set(duq) == {10} and sum(duq.values()) == 508
+          and reg[38]["full_quints"]["counts"]["disjoint"] == 0
+          and ful5["disjoint"] == uc["disjoint"] == 508,
+          {"new_disjoint_quint_count": uc["disjoint"], "union_sizes": duq,
+           "prev_full_disjoint": reg[38]["full_quints"]["counts"]["disjoint"]})
+    check("rank39_disjoint_quads_union8",
+          sum(dusizes.values()) == qc["disjoint"] and set(dusizes) == {8}
+          and qc["disjoint"] == 1009,
+          {"disjoint_quad_count": qc["disjoint"], "union_sizes": dusizes,
+           "cumulative_disjoint_quads": 1677 + qc["disjoint"]})
+    check("rank39_cumulative_disjoint_quads_global_recount",
+          dj39 == 2686 and dj39 == 1677 + qc["disjoint"]
+          and dj39 == pub38["cumulative_disjoint_quads"] + qc["disjoint"],
+          {"global_C39_4": dj39, "prev_cumulative": pub38["cumulative_disjoint_quads"],
+           "new": qc["disjoint"]})
+    check("rank39_full_census_totals",
+          ful3["b_only"] + ful3["zero"] + ful3["disjoint"] == math.comb(RANK, 3)
+          and ful5["b_only"] + ful5["zero"] + ful5["disjoint"] == math.comb(RANK, 5)
+          and sum(f5twos.values()) == ful5["b_only"]
+          and ful3 == {"b_only": 5497, "zero": 1575, "disjoint": 2067}
+          and ful5 == {"b_only": 36682, "zero": 538567, "disjoint": 508}
+          and f3twos == {0: 69, 1: 9, 4: 41, 5: 76, 7: 9, 8: 9, 9: 9, 11: 9,
+                         14: 9, 15: 549, 16: 68, 18: 2736, 19: 1779, 23: 15,
+                         24: 60, 29: 9, 30: 41}
+          and f5twos == {0: 198, 1: 4, 4: 26, 5: 763, 7: 4, 8: 4, 9: 4, 11: 4,
+                         14: 4, 15: 5024, 16: 725, 18: 17865, 19: 11838, 23: 10,
+                         24: 179, 29: 4, 30: 26},
+          {"full_triples": ful3, "full_quints": ful5, "quint_double_rows": f5twos})
+    check("rank39_quint_era_continuation",
+          ful5["b_only"] - uc["b_only"] == reg[38]["full_quints"]["counts"]["b_only"]
+          and ful5["zero"] - uc["zero"] == reg[38]["full_quints"]["counts"]["zero"]
+          and ful5["disjoint"] == uc["disjoint"],
+          {"prev_b_only": reg[38]["full_quints"]["counts"]["b_only"],
+           "new_b_only": uc["b_only"], "full_b_only": ful5["b_only"],
+           "prev_zero": reg[38]["full_quints"]["counts"]["zero"],
+           "new_zero": uc["zero"], "full_zero": ful5["zero"],
+           "full_disjoint": ful5["disjoint"]})
+    check("rank39_two_sharer_rows_double_all_three_layers",
+          # rank-39 (5,24) has no fresh row and no single-sharer row:
+          # row 5 arrives with two prior sharers (index 2 = the rank-3
+          # root (5,19), index 25 = the rank-26 root (5,16)) and row 24
+          # with two prior sharers (index 4 = the rank-5 root (18,24),
+          # index 14 = the rank-15 root (15,24)); both double in the
+          # triple, quad AND quint layers for the first time, so the
+          # new-layer double-row family gains two rows in one
+          # generation (the single-share pattern of rows 7/9/8/29 never
+          # reached the quint layer)
+          prior == {5: [2, 25], 24: [4, 14]}
+          and ttwos == {0: 3, 1: 1, 4: 3, 5: 54, 7: 1, 8: 1, 9: 1, 11: 1, 14: 1,
+                        15: 15, 16: 1, 18: 120, 19: 66, 23: 1, 24: 46, 29: 1, 30: 3}
+          and qtwos == {0: 60, 1: 6, 4: 32, 5: 391, 7: 6, 8: 6, 9: 6, 11: 6,
+                        14: 6, 15: 333, 16: 15, 18: 1965, 19: 1257, 23: 12,
+                        24: 259, 29: 6, 30: 32}
+          and ttwos[5] == 54 and ttwos[24] == 46
+          and qtwos[5] == 391 and qtwos[24] == 259
+          and utwos[5] == 763 and utwos[24] == 179,
+          {"triple": ttwos, "quad": qtwos, "quint": utwos,
+           "row5_prior_sharers": prior[5], "row24_prior_sharers": prior[24]})
+    check("rank39_sextet_first_b_only_and_septet_zero_closure",
+          # the C(39,6) census loses its all-zero property for the
+          # first time: 5,852 b_only records, all containing the rank-39
+          # root, double rows confined to the hub band {15, 18, 19};
+          # level 7 then closes the I-E hierarchy (99,122 candidates,
+          # all zero), so the k=39 marginal I-E needs the level-6 term
+          # but truncates at level 6
+          six == {"b_only": 5852, "zero": 3256771, "disjoint": 0}
+          and six["b_only"] == len(b_only_sextets)
+          and sixtwos == {15: 682, 18: 3147, 19: 2023}
+          and all(IDX in s for s in b_only_sextets)
+          and sept_checked == 99122 and sept_nonzero == 0
+          and math.comb(RANK, 7) == 15380937,
+          {"sextet": six, "b_only_double_rows": sixtwos,
+           "septet_combos_checked": sept_checked,
+           "septet_non_zero": sept_nonzero,
+           "C39_7": math.comb(RANK, 7)})
+    check("rank39_expected_totals",
+          math.comb(RANK, 3) == 9139 and math.comb(IDX, 2) == 703
+          and math.comb(IDX, 3) == 8436 and math.comb(IDX, 4) == 73815
+          and math.comb(RANK, 5) == 575757 and math.comb(RANK, 6) == 3262623,
+          {"C38_2": math.comb(IDX, 2), "C38_3": math.comb(IDX, 3), "C38_4": math.comb(IDX, 4),
+           "C39_3": math.comb(RANK, 3), "C39_5": math.comb(RANK, 5), "C39_6": math.comb(RANK, 6)})
+    check("rank39_two_classifiers_agree",
+          pmis == tmis == qmis == umis == f3mis == f5mis == s6mis == sept7mis == 0,
+          {"comparisons": pcmp + tcmp + qcmp + ucmp + f3cmp + f5cmp + s6cmp + sept7cmp,
+           "mismatches": pmis + tmis + qmis + umis + f3mis + f5mis + s6mis + sept7mis})
+
+    rank39 = {
+        "root": root,
+        "rows": sorted(rows[IDX]),
+        "membership": m39,
+        "a_part": a39,
+        "b_part": b39,
+        "prior_hits": {str(r): len(v) for r, v in sorted(prior.items())},
+        "prior_hit_indices": {str(r): v for r, v in sorted(prior.items())},
+        "note": ("rank-39 (5,24) has no fresh row and no single-sharer "
+                 "row: both rows arrive with exactly two prior sharers "
+                 "(row 5 via index 2 = the rank-3 root (5,19) and index "
+                 "25 = the rank-26 root (5,16); row 24 via index 4 = the "
+                 "rank-5 root (18,24) and index 14 = the rank-15 root "
+                 "(15,24)), and both double in the triple, quad and "
+                 "quint layers for the first time (54/391/763 and "
+                 "46/259/179 records). The new pair census is 4 shared / "
+                 "34 disjoint -- the fewest shared of the whole "
+                 "post-fresh-row era -- and the new-layer double-row "
+                 "family gains two rows in one generation (rows 5 and 24 "
+                 "join; the quint histogram now spans 17 rows 0, 1, 4, "
+                 "5, 7, 8, 9, 11, 14, 15, 16, 18, 19, 23, 24, 29, 30). "
+                 "STRUCTURAL BREAK AT k=39: the new quint layer contains "
+                 "508 disjoint records (all with 10-row unions), the "
+                 "first disjoint quints ever (every published k=26..k=38 "
+                 "quint census had disjoint == 0, which is what let the "
+                 "k=38 marginal I-E carry only the b_only term j5_B at "
+                 "level 5), and the C(39,6)=3,262,623 sextet census "
+                 "contains 5,852 b_only records (double rows confined to "
+                 "the hub band rows 15/18/19, every record containing "
+                 "the rank-39 root), the first non-zero sextet layer "
+                 "ever (the C(38,6) census was all zero). Both premises "
+                 "of the k=38-style truncation therefore fail at k=39: "
+                 "the main computation must evaluate the level-5 "
+                 "disjoint-quint joints (j5_A, alternating level-5 sign) "
+                 "and the level-6 b_only-sextet joints (j6_B, alternating "
+                 "level-6 sign) before truncating. Level 7 closes the "
+                 "hierarchy: every C(39,7)=15,380,937 7-combo with a "
+                 "non-zero 6-subset was scanned (99,122 distinct "
+                 "candidates via the upward closure of the zero class, "
+                 "since disjoint sextets do not exist at k=39) and all "
+                 "are zero, so the I-E truncation at level 6 is "
+                 "well-defined. The 157 -> 1,009 jump in new disjoint "
+                 "quads (all 8-row unions, cumulative 2,686 = 1,677 + "
+                 "1,009 confirmed by a global C(39,4) recount) is the "
+                 "same lightly-shared-root effect as the 508 disjoint "
+                 "quints."),
+        "ie_extension": {
+            "level5_disjoint_quints": (
+                "508 records, the first ever; their class no longer "
+                "forces zero joints, so the k=38-style identity "
+                "m - sum_j2 + sum_j3 - sum_j4 + sum_j5B no longer holds "
+                "as stated: the disjoint-quint joints (j5_A) must be "
+                "evaluated with the alternating level-5 sign"),
+            "level6_b_only_sextets": (
+                "5,852 records, the first ever (all contain the rank-39 "
+                "root); their B-type joints (j6_B) must be evaluated with "
+                "the alternating level-6 sign"),
+            "level7_and_beyond": (
+                "all zero (99,122-candidate monotone extension scan), so "
+                "the marginal I-E truncates at level 6 once the two new "
+                "terms are included"),
+        },
+        "new_census": {
+            "pair": {"shared": shared, "disjoint": pc["disjoint"],
+                     "total": IDX, "expected_total": IDX},
+            "triple": {**tc, "total": sum(tc.values()), "expected_total": math.comb(IDX, 2)},
+            "quad": {**qc, "total": sum(qc.values()), "expected_total": math.comb(IDX, 3)},
+            "quint": {**uc, "total": sum(uc.values()), "expected_total": math.comb(IDX, 4)},
+        },
+        "new_quint_double_row_histogram": utwos,
+        "new_triple_double_row_histogram": ttwos,
+        "new_quad_double_row_histogram": qtwos,
+        "b_only_quint_four_subset_profiles": {k: profiles[k] for k in sorted(profiles)},
+        "disjoint_quad_count": qc["disjoint"],
+        "disjoint_quad_union_sizes": {str(k): v for k, v in sorted(dusizes.items())},
+        "cumulative_disjoint_quads": 1677 + qc["disjoint"],
+        "disjoint_quint_count": uc["disjoint"],
+        "disjoint_quint_union_sizes": {str(k): v for k, v in sorted(duq.items())},
+        "b_only_sextet_count": six["b_only"],
+        "b_only_sextet_double_row_histogram": sixtwos,
+        "b_only_sextet_all_include_new_root": all(IDX in s for s in b_only_sextets),
+        "septet_zero_closure": {
+            "C39_7_total": math.comb(RANK, 7),
+            "distinct_combos_checked": sept_checked,
+            "non_zero_class_seven_combos": sept_nonzero,
+            "method": ("zero class is upward closed (adding roots only raises "
+                       "row multiplicities), so every non-zero-class 7-combo "
+                       "must contain a non-zero-class 6-subset; disjoint "
+                       "sextets do not exist at k=39, so the extension scan "
+                       "over the 5,852 b_only sextets covers every candidate"),
+        },
+        "full_triples": {"counts": ful3, "total": math.comb(RANK, 3),
+                         "double_row_histogram": f3twos,
+                         "compared": math.comb(RANK, 3), "mismatches": f3mis},
+        "full_quints": {"counts": ful5, "total": math.comb(RANK, 5),
+                        "double_row_histogram": f5twos,
+                        "compared": math.comb(RANK, 5), "mismatches": f5mis},
+        "sextet_census": {"total": math.comb(RANK, 6), "counts": six,
+                          "compared": s6cmp, "mismatches": s6mis},
+    }
+
+    out = {
+        "schema": "n11-cost16-k39-preread-20261119-v1",
+        "date": "2026-11-19",
+        "lane": "n11 long lane (verification side)",
+        "title": "31-row cost-16 parent: rank-39 structural preread",
+        "language_note": ("pure Python with exact integer serialization (following the "
+                          "k=32..k=38 preread scripts); the rank-37 regression layer "
+                          "compares against the pinned published k=37 preread JSON and "
+                          "the rank-38 regression layer against the pinned published "
+                          "k=38 preread JSON; the k=36 and k=37 main result JSONs are "
+                          "already published (commits 6fcea02c / a4a7ce31) and the "
+                          "k=36/k=37 crosscheck extensions are published (latest 287 "
+                          "checks, all pass, 2026-11-19), while the k=38 main "
+                          "computation is published as a production script (commit "
+                          "9d1b0a6a4c) with cross/finalize/publish owned by a single "
+                          "lane (concurrency note commit 112a32470578); this preread "
+                          "replaces the single-share structural check with a two-sharer "
+                          "all-layers doubling check for rows 5 and 24 and adds two "
+                          "structural checks for the k=39 marginal I-E break (disjoint "
+                          "quint first appearance; b_only sextet first appearance with "
+                          "level-7 zero closure), so check_count goes 34 to 35."),
+        "inputs": {
+            "aggregate": {"path": f"{PATH}/cost16-b-phase-groups-20261118.json",
+                          "git_blob_sha1": PINS["agg"][1]},
+            "k37_preread": {"path": f"{PATH}/cost16-survival-k37-preread-20261119.json",
+                            "git_blob_sha1": PINS["k37pre"][1],
+                            "commit": "98321003"},
+            "k38_preread": {"path": f"{PATH}/cost16-survival-k38-preread-20261119.json",
+                            "git_blob_sha1": PINS["k38pre"][1],
+                            "commit": "75fabfd018"},
+            "k37_preread_independent_verification": (
+                "bit-mask-vector second derivation lineage (commit 958057fb, "
+                "erratum 059db03e): the independent re-derivation agreed on "
+                "every machine-derived fact"),
+            "k38_preread_independent_verification": (
+                "bit-mask-vector independent verification (independent verifier "
+                "commit 126614cc48, result JSON commit f37ddd047e, log commit "
+                "5e0ef79575, 48-check audit commit e824f6029b): the independent "
+                "re-derivation agreed on every machine-derived fact"),
+        },
+        "scope": {
+            "parent": PARENT_ROOT,
+            "rows": R,
+            "minimum_cover_size": 16,
+            "top50_rank": RANK,
+            "rank_convention": "top50_by_membership; 1-based rank 39",
+        },
+        "rank37_regression": reg[37],
+        "rank38_regression": reg[38],
+        "rank39": rank39,
+        "checks": checks,
+        "check_count": len(checks),
+        "all_pass": all(c["pass"] for c in checks),
+        "unknown_status": ("Standard 11x11 empty board, two-stone roots {49,60}/{59,60}, "
+                           "S2 {59,60}, and classes 1/2/4 remain UNKNOWN; cover-plan "
+                           "combinatorics only, no verdict is produced."),
+    }
+
+    text = json.dumps(out, indent=1, ensure_ascii=False) + "\n"
+    # final check: exact integers survive the JSON round trip
+    back = json.loads(text)
+    ok = (back["rank39"]["membership"] == m39
+          and back["rank39"]["a_part"] == a39 and back["rank39"]["b_part"] == b39
+          and back["rank37_regression"]["membership"] == int(mem[36])
+          and back["rank38_regression"]["membership"] == int(mem[37])
+          and back["rank37_regression"]["a_part"] == int(memA[top[36]["root"]])
+          and back["rank37_regression"]["b_part"] == int(memB[top[36]["root"]])
+          and back["rank38_regression"]["a_part"] == int(memA[top[37]["root"]])
+          and back["rank38_regression"]["b_part"] == int(memB[top[37]["root"]]))
+    checks.append({"name": "rank39_exact_integer_json_serialization", "pass": bool(ok),
+                   "detail": {"membership": m39, "a_part": a39, "b_part": b39}})
+    out["checks"] = checks
+    out["check_count"] = len(checks)
+    out["all_pass"] = all(c["pass"] for c in checks)
+    text = json.dumps(out, indent=1, ensure_ascii=False) + "\n"
+
+    open(args.out, "w", encoding="utf-8").write(text)
+    sha = hashlib.sha256(text.encode("utf-8")).hexdigest()
+    for c in checks:
+        print("PASS" if c["pass"] else "FAIL", c["name"])
+    print(f"--- {len(checks)} checks, {sum(0 if c['pass'] else 1 for c in checks)} failures")
+    print(f"rank-39 root {root} rows {sorted(rows[IDX])} m39 {m39} (A {a39} / B {b39})")
+    print("new census: pair %d/%d  triple %d/%d/%d  quad %d/%d/%d  quint b%d/z%d/d%d"
+          % (shared, pc["disjoint"], tc["b_only"], tc["zero"], tc["disjoint"],
+             qc["b_only"], qc["zero"], qc["disjoint"], uc["b_only"], uc["zero"], uc["disjoint"]))
+    print(f"full C(39,5): {ful5}  sextet C(39,6): {six}")
+    print(f"b_only sextets {six['b_only']} double rows {sixtwos}  septet non-zero {sept_nonzero}  disjoint quints {uc['disjoint']}")
+    print("output sha256:", sha)
+    print("size:", len(text.encode('utf-8')), "bytes")
+    return 0 if out["all_pass"] else 1
+
+
+if __name__ == "__main__":
+    sys.exit(main())
