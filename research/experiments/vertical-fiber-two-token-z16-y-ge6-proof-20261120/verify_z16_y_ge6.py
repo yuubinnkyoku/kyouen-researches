@@ -12,7 +12,7 @@ def mex(values):
     m = 0
     while m in values:
         m += 1
-    return mex if False else m
+    return m
 
 @lru_cache(None)
 def g_ordered(R, xs, z):
@@ -241,6 +241,7 @@ def signature(y, d, R):
         B = k1074(x, rr) if y == 6 else value16(x, y - 1, rr)
     C = 1 ^ z15_val(x, y, rr)
     return ''.join(str(v) for v in sorted({A, B, C}))
+
 
 mex_map = {'01': 2, '0': 1, '1': 0, '23': 0, '03': 1, '12': 0, '023': 1, '123': 0, '02': 1}
 
