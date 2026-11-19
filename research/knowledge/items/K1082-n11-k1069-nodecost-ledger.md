@@ -18,7 +18,7 @@ artifacts:
   note: 生probe記録78行（pilot_d6制御付き・全てuncapped・error 0）
 - path: research/experiments/n11-k1069-nodecost-ledger-20261120/scripts/k1069_nodecost_ledger_20261120.py
   role: verifier
-  note: membershi・SHA pin・出版per-probe pin・depth-11標本拡張クロスチェック・集計再導出のfail-closed監査機械
+  note: membership・SHA pin・出版per-probe pin・depth-11標本拡張クロスチェック・集計再導出のfail-closed監査機械
 - path: research/experiments/n11-k1069-nodecost-ledger-20261120/README.md
   role: source
   note: 手法・上位root表・丸め観察・再現手順
