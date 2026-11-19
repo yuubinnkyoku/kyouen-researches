@@ -78,3 +78,22 @@ resolve7（K1072・出版正本のみの再照合）が確定した「retire 済
 3. 39-root 計画同様、掃引で WIN が見つかった場合のみ証明書抽出
    （repo-verbatim extractor・BigInt 3x3 / Bareiss 4x4 二重検証）を宣言に従って
    別レーン展開。
+
+
+## 独立第二検証（44 gate PASS・2026-11-20）
+
+K1075生成器をimportしない別実装で、出版済み正本6件をSHA-256 pinし、残余72行のadd-one-stone universe・D4削除被覆・安全性を再導出した。安全性は4×4 Bareiss determinantで全7,448 rootの4点組を厳密整数検査した。
+
+- universe 7,448 rootを独立再構築。safe 4,577・unsafe 2,871。被覆サイズは1行6,616 root・2行832 rootで、3行以上は0。
+- K1075の36 fresh witness rootは全件7石・D4正準形・safe。各rootの被覆2行を独立再導出し、36本が72行を重複なく完全被覆。72頂点のmatching上界36に達するためmatching 36は最適。
+- resolve7の38 root assignmentも再検査し、34×2行+4×1行=72行を重複なく被覆。
+- fold9/fold10/resolve7/K1075の残余72行リストは完全一致。K1075のfresh-safe 4,109・fresh-unsafe 2,871・judged REFUTED 468・WIN 0と独立safe/unsafe総数の算術も一致。
+- 44/44 gate PASS。別プロセス2回でbyte-identical。3回目は37.313秒。検証器SHA-256 `74fd3275baffb576dee2959678b85a655136dd4595fa2d39bf980c7b3a515972`、結果SHA-256 `5511222b5385a2e57845b944e3607d2ac406203e4da827fb4e62b8e362b5a46d`。
+
+**検証境界**: K0863の1,279-file corpusとphase-2 verdict joinは再構築していない。fresh-safe 4,109のroot identity集合とpair edges 536の全辺集合はK1075正本の値をpinしており、本検証で独立列挙したものではない。WIN/REFUTED判定・depth-10探索・証明書・receipt・foldは新規生成していない。
+
+- [独立検証器](verify_candidate_supply_geometry_second_20261120.py)
+- [44 gate機械可読結果](output/candidate-supply-second-verification-20261120.json)
+- [研究ログ](../../log/2026-11-20-n11-residual72-candidate-supply-independent-second-verification.md)
+
+36-root depth-10 sweepは別のsingle-owner宣言に属するため、本レーンでは実行していない。REFUTED-D10はLOSS証明ではなく、標準11×11空盤・二石root・S2・class 1/2/4はUNKNOWNのまま。
