@@ -18,7 +18,10 @@ python3 - "$D" "$H" <<'PYEOF'
 import json, sys
 D, H = sys.argv[1], sys.argv[2]
 cert = open(f'{D}/win7-root-{H}-20261119.n11').read().splitlines()
-rows = set(cert[2:])
+# .n11のデータ行は「hex child位」形式、consumed-$H.txt は hex 行形式。
+# union比較はhex部分（先頭トークン）同士で行う。旧実装は行全体同士を
+# 比較して常に完全不一致（missing=extra=全行）となる形式不一致があった。
+rows = set(l.split()[0] for l in cert[2:] if l.strip())
 consumed = [l.strip() for l in open(f'{D}/consumed-{H}.txt') if l.strip()]
 cu = set(consumed)
 audit = {'exact_union': rows == cu, 'missing': len(rows - cu), 'extra': len(cu - rows),
