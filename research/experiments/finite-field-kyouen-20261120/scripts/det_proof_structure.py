@@ -1,55 +1,50 @@
-"""Structural lemmas for the D(n) upper bound  |Delta| <= a^2 * floor(a^2/2).
+"""Exact decomposition of D(a) = max |Delta| over the lattice square.
 
-Notation.  a = n-1, Q = [0,a]^2 (the lattice square), and for four lattice
-points p1,p2,p3,p4 in Q
+Mathematical content
+====================
+
+Let a = n-1, Q = [0,a]^2, and for four points p1,p2,p3,p4 in Q
 
     Delta(p1,p2,p3,p4) = det[[x_i, y_i, x_i^2+y_i^2, 1]] .
 
-Expanding along the last row r = (x, y, x^2+y^2, 1) gives
+Expanding along the last row r = (x, y, x^2+y^2, 1):
 
     Delta(x,y) = alpha*x + beta*y + gamma*(x^2+y^2) + delta          (L)
 
-with
+with, for the triple (p1,p2,p3),
 
     alpha = -M_1,  beta = M_2,  gamma = -M_3,  delta = M_4,
 
-where M_j is the 3x3 minor of the first three rows with column j deleted.
-In particular
+M_j being the 3x3 minor of the three rows with column j deleted.  In particular
 
-    gamma = -det[[x_i,y_i,1]] = -2 * signed area(p1,p2,p3),
-    delta =  det[[x_i,y_i,x_i^2+y_i^2]] = Delta(0,0).
+    gamma = -det[[x_i,y_i,1]]  = -2 * signed area(p1,p2,p3),
+    delta =  det[[x_i,y_i,x_i^2+y_i^2]] = Delta(p1,p2,p3,(0,0)).
 
-Consequences verified here
---------------------------
-(S1) L has no xy term, hence is a *radial* quadratic:
-         L(x,y) = gamma * ( (x-h)^2 + (y-k)^2 ) + c0,
-     with (h,k) = (-alpha/(2 gamma), -beta/(2 gamma)) the circumcentre and
-     c0 = delta - gamma (h^2+k^2).  (For gamma = 0, L is affine.)
+Because (L) has no xy term it is a *radial* quadratic:
 
-(S2) Therefore, over the *continuum* square Q, |L| is maximised either at a
-     corner of Q or at the point of Q closest to (h,k).
+    L(x,y) = gamma * ( (x-h)^2 + (y-k)^2 ) + c0,
+    (h,k) = (-alpha/(2 gamma), -beta/(2 gamma)) = circumcentre,
+    c0    = delta - (alpha^2+beta^2)/(4 gamma).
 
-(S3) Over the *lattice* points of Q, |L| is maximised either at a corner of Q
-     or at the lattice point of Q closest to (h,k).
+Hence, writing d(P) = |P-(h,k)|^2, the function |L| = |gamma| * |d - R^2| is a
+function of d alone, monotone on each side of d = R^2.  Therefore
 
-(S4) The "maximum is attained on the boundary" statement in DET_MAX_TRIPLE.md
-     is FALSE for |Delta|: for the corner triple (0,0),(a,0),(0,a) the function
-     is L = a^2 (a(x+y) - x^2 - y^2), whose absolute value is maximal at the
-     centre (a/2,a/2) with value a^4/2, not on the boundary.  This script
-     exhibits that counterexample explicitly.
+  * over the CONTINUUM square Q,  max |L| = max( |L| at the 4 corners,
+                                                 |L| at the point of Q nearest (h,k) );
+  * over the LATTICE points of Q, max |L| = max( |L| at the 4 corners,
+                                                 |L| at the lattice point of Q
+                                                      nearest (h,k) ).
 
-(S5) Consequently the correct decomposition of D(a) is
-         D(a) = max( A(a), B(a) )
-     where
-         A(a) = max over triples of max over the 4 corners of |L(c)|
-              = max over triples of |det[[x_i,y_i,x_i^2+y_i^2]]|
-                (corner case; by the dihedral symmetry of Q all four corners
-                 give the same maximum),
-         B(a) = max over triples of |L(P*)|,  P* = lattice point of Q closest
-                to the circumcentre (h,k).
+Consequently
 
-This script verifies (S1)-(S5) numerically and computes D(a), A(a), B(a)
-exactly for a range of a.
+    D(a) = max( A(a), B(a) ),
+
+    A(a) = max over triples of |Delta(triple, corner)|   (corner branch),
+    B(a) = max over triples of |L(nearest lattice point)| (interior branch).
+
+This script computes A(a), B(a), D(a) exactly (integer arithmetic) and also the
+continuous relaxation max, for a range of a.  It also verifies the coefficient
+formula against the direct 4x4 determinant.
 """
 
 from __future__ import annotations
@@ -60,9 +55,11 @@ import json
 from fractions import Fraction
 from pathlib import Path
 
+import numpy as np
+
 
 # --------------------------------------------------------------------------
-# exact linear algebra
+# exact coefficient formula, checked against the direct determinant
 # --------------------------------------------------------------------------
 def det3(m) -> int:
     return (m[0][0] * (m[1][1] * m[2][2] - m[1][2] * m[2][1])
@@ -71,10 +68,11 @@ def det3(m) -> int:
 
 
 def det4(rows) -> int:
+    """Expansion along the last column (index 3): sign (-1)^(i+3)."""
     total = 0
     for i in range(4):
         minor = [rows[j][:3] for j in range(4) if j != i]
-        total += (1 if i % 2 == 0 else -1) * det3(minor)
+        total += (1 if (i + 3) % 2 == 0 else -1) * det3(minor)
     return total
 
 
@@ -84,234 +82,160 @@ def lifted(p):
 
 
 def coeffs(p1, p2, p3):
-    """(alpha, beta, gamma, delta) with Delta(x,y) = a x + b y + c(x^2+y^2) + d."""
     rows = [lifted(p1), lifted(p2), lifted(p3)]
-    coef = []
+    out = []
     for j in range(4):
         minor = [[rows[r][c] for c in range(4) if c != j] for r in range(3)]
-        coef.append((1 if (3 + j) % 2 == 0 else -1) * det3(minor))
-    return tuple(coef)
+        out.append((1 if (3 + j) % 2 == 0 else -1) * det3(minor))
+    return tuple(out)
 
 
-def eval_L(coef, x, y):
-    alpha, beta, gamma, delta = coef
-    return alpha * x + beta * y + gamma * (x * x + y * y) + delta
-
-
-# --------------------------------------------------------------------------
-# nearest lattice point of Q to a rational point
-# --------------------------------------------------------------------------
-def clamp_int(v: Fraction, a: int) -> int:
-    """Nearest integer in [0,a] to the rational v (ties broken either way)."""
-    n = round(v)          # Fraction.__round__ -> int, ties to even
-    if n < 0:
-        return 0
-    if n > a:
-        return a
-    return n
-
-
-def nearest_lattice(h: Fraction, k: Fraction, a: int):
-    return clamp_int(h, a), clamp_int(k, a)
-
-
-# --------------------------------------------------------------------------
-# (S1) radial structure
-# --------------------------------------------------------------------------
-def check_radial(trials) -> bool:
-    """L(x,y) = gamma*((x-h)^2+(y-k)^2) + c0 with h,k rational."""
-    for (p1, p2, p3) in trials:
-        alpha, beta, gamma, delta = coeffs(p1, p2, p3)
-        if gamma == 0:
-            continue
-        h = Fraction(-alpha, 2 * gamma)
-        k = Fraction(-beta, 2 * gamma)
-        c0 = delta - gamma * (h * h + k * k)
-        for (x, y) in [(0, 0), (1, 0), (0, 1), (3, 2), (5, 5)]:
-            lhs = eval_L((alpha, beta, gamma, delta), x, y)
-            rhs = gamma * ((x - h) ** 2 + (y - k) ** 2) + c0
-            if lhs != rhs:
+def verify_coeffs(a: int) -> bool:
+    pts = [(x, y) for y in range(a + 1) for x in range(a + 1)]
+    for tri in itertools.combinations(pts, 3):
+        al, be, ga, de = coeffs(*tri)
+        for p4 in pts:
+            if p4 in tri:
+                continue
+            x, y = p4
+            pred = al * x + be * y + ga * (x * x + y * y) + de
+            direct = det4([lifted(p) for p in tri] + [lifted(p4)])
+            if pred != direct:
                 return False
     return True
 
 
 # --------------------------------------------------------------------------
-# (S2)/(S3) max over the square / over the lattice points
+# exact analysis of one a
 # --------------------------------------------------------------------------
-def max_over_lattice_exact(coef, a: int):
-    """Exact max of |L| over the lattice points of Q, plus the argmax."""
-    alpha, beta, gamma, delta = coef
-    best, arg = -1, None
-    for x in range(a + 1):
-        for y in range(a + 1):
-            v = abs(eval_L(coef, x, y))
-            if v > best:
-                best, arg = v, (x, y)
-    return best, arg
-
-
-def max_over_lattice_formula(coef, a: int):
-    """max(|L| at the 4 corners, |L| at the lattice point closest to (h,k))."""
-    alpha, beta, gamma, delta = coef
+def analyse(a: int, want_continuous: bool = True):
+    xs = np.arange(a + 1, dtype=np.int64)
+    Xg, Yg = np.meshgrid(xs, xs, indexing="ij")
+    X = Xg.ravel()
+    Y = Yg.ravel()
+    S = X * X + Y * Y
+    n = X.size
     corners = [(0, 0), (a, 0), (0, a), (a, a)]
-    best, arg = -1, None
-    for c in corners:
-        v = abs(eval_L(coef, *c))
-        if v > best:
-            best, arg = v, c
-    if gamma != 0:
-        h = Fraction(-alpha, 2 * gamma)
-        k = Fraction(-beta, 2 * gamma)
-        ps = nearest_lattice(h, k, a)
-        v = abs(eval_L(coef, *ps))
-        if v > best:
-            best, arg = v, ps
-    return best, arg
 
+    A_max = 0
+    A_arg = None
+    B_max = 0
+    B_arg = None
+    C_max = 0.0
+    C_arg = None
 
-def max_over_continuum_formula(coef, a: int):
-    """max(|L| at the 4 corners, |L| at the point of Q closest to (h,k))."""
-    alpha, beta, gamma, delta = coef
-    corners = [(0, 0), (a, 0), (0, a), (a, a)]
-    best, arg = -1, None
-    for c in corners:
-        v = abs(eval_L(coef, *c))
-        if v > best:
-            best, arg = v, c
-    if gamma != 0:
-        h = Fraction(-alpha, 2 * gamma)
-        k = Fraction(-beta, 2 * gamma)
-        hc = min(max(h, Fraction(0)), Fraction(a))
-        kc = min(max(k, Fraction(0)), Fraction(a))
-        v = abs(gamma * ((hc - h) ** 2 + (kc - k) ** 2)
-                + delta - gamma * (h * h + k * k))
-        if v > best:
-            best, arg = v, (hc, kc)
-    return best, arg
+    for i in range(n):
+        x1 = int(X[i]); y1 = int(Y[i]); s1 = int(S[i])
+        for j in range(i + 1, n):
+            x2 = int(X[j]); y2 = int(Y[j]); s2 = int(S[j])
 
+            # gamma, alpha, beta, delta are affine in (X, Y, S) for fixed p1,p2
+            gx = -(y1 - y2); gy = (x1 - x2); g0 = -(x1 * y2 - y1 * x2)
+            ay = -(s1 - s2); as_ = (y1 - y2); a0 = -(y1 * s2 - s1 * y2)
+            bx = (s1 - s2); bs = -(x1 - x2); b0 = (x1 * s2 - s1 * x2)
+            dx = (y1 * s2 - s1 * y2); dy = -(x1 * s2 - s1 * x2); ds = (x1 * y2 - y1 * x2)
 
-# --------------------------------------------------------------------------
-# decomposition of D(a)
-# --------------------------------------------------------------------------
-def analyse(a: int, verbose: bool = False):
-    pts = [(x, y) for y in range(a + 1) for x in range(a + 1)]
-    corners = [(0, 0), (a, 0), (0, a), (a, a)]
-    D = 0
-    A = 0
-    B = 0
-    argD = argA = argB = None
-    for tri in itertools.combinations(pts, 3):
-        coef = coeffs(*tri)
-        # corner part
-        cbest, carg = -1, None
-        for c in corners:
-            v = abs(eval_L(coef, *c))
-            if v > cbest:
-                cbest, carg = v, c
-        if cbest > A:
-            A, argA = cbest, (tri, carg)
-        # nearest-lattice part
-        alpha, beta, gamma, delta = coef
-        nbest = -1
-        if gamma != 0:
-            h = Fraction(-alpha, 2 * gamma)
-            k = Fraction(-beta, 2 * gamma)
-            ps = nearest_lattice(h, k, a)
-            nbest = abs(eval_L(coef, *ps))
-        if nbest > B:
-            B, argB = nbest, (tri, None)
-        m = max(cbest, nbest)
-        if m > D:
-            D, argD = m, (tri, carg if cbest >= nbest else "nearest")
+            gamma = gx * X + gy * Y + g0
+            alpha = ay * Y + as_ * S + a0
+            beta = bx * X + bs * S + b0
+            delta = dx * X + dy * Y + ds * S
+
+            # ---- corner branch (exact) ----
+            for (cx, cy) in corners:
+                v = np.abs(alpha * cx + beta * cy + gamma * (cx * cx + cy * cy) + delta)
+                k = int(np.argmax(v))
+                m = int(v[k])
+                if m > A_max:
+                    A_max = m
+                    A_arg = ((i, j, k), (cx, cy))
+
+            nz = gamma != 0
+            if not nz.any():
+                continue
+
+            gf = gamma.astype(np.float64)
+            hf = -alpha.astype(np.float64) / (2.0 * gf)
+            kf = -beta.astype(np.float64) / (2.0 * gf)
+
+            # ---- interior branch, lattice: nearest lattice point (exact) ----
+            nx0 = np.clip(np.rint(hf), 0, a).astype(np.int64)
+            ny0 = np.clip(np.rint(kf), 0, a).astype(np.int64)
+            best = np.zeros(n, dtype=np.int64)
+            for ox in (-1, 0, 1):
+                for oy in (-1, 0, 1):
+                    px = np.clip(nx0 + ox, 0, a)
+                    py = np.clip(ny0 + oy, 0, a)
+                    v = np.abs(alpha * px + beta * py + gamma * (px * px + py * py) + delta)
+                    v = np.where(nz, v, 0)
+                    best = np.maximum(best, v)
+            k = int(np.argmax(best))
+            m = int(best[k])
+            if m > B_max:
+                B_max = m
+                B_arg = ((i, j, k), (int(nx0[k]), int(ny0[k])))
+
+            # ---- continuous relaxation (float, for exploration) ----
+            if want_continuous:
+                hc = np.clip(hf, 0.0, float(a))
+                kc = np.clip(kf, 0.0, float(a))
+                v = np.abs(gamma.astype(np.float64) * (hc * hc + kc * kc)
+                           + alpha.astype(np.float64) * hc
+                           + beta.astype(np.float64) * kc
+                           + delta.astype(np.float64))
+                v = np.where(nz, v, 0.0)
+                k = int(np.argmax(v))
+                if float(v[k]) > C_max:
+                    C_max = float(v[k])
+                    C_arg = ((i, j, k), (float(hc[k]), float(kc[k])))
+
+    D = max(A_max, B_max)
     return {
         "a": a,
-        "D": D,
-        "A_corner": A,
-        "B_nearest": B,
+        "A_corner": A_max,
+        "A_arg": A_arg,
+        "B_nearest": B_max,
+        "B_arg": B_arg,
+        "D_lattice": D,
         "formula": a * a * ((a * a) // 2),
         "match": D == a * a * ((a * a) // 2),
-        "argD": argD,
-        "argA": argA,
-        "argB": argB,
+        "D_continuous_float": C_max,
+        "C_arg": C_arg,
+        "continuous_target_a4_over_2": Fraction(a ** 4, 2),
     }
 
 
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--a", type=int, nargs="+", default=list(range(1, 13)))
+    ap.add_argument("--verify-a", type=int, default=4)
     ap.add_argument("--out", type=Path, default=None)
     args = ap.parse_args()
 
-    print("=" * 78)
-    print("(S1) radial structure  L = gamma*((x-h)^2+(y-k)^2) + c0")
-    a0 = 6
-    pts0 = [(x, y) for y in range(a0 + 1) for x in range(a0 + 1)]
-    trials = list(itertools.combinations(pts0, 3))
-    print(f"    triples tested (a={a0}): {len(trials)}   radial: {check_radial(trials)}")
+    print("=" * 84)
+    print("(0) coefficient formula  Delta(x,y) = alpha x + beta y + gamma(x^2+y^2) + delta")
+    ok = verify_coeffs(args.verify_a)
+    print(f"    verified against the direct 4x4 determinant for a={args.verify_a}: {ok}")
 
     print()
-    print("=" * 78)
-    print("(S2)/(S3) max over lattice points = max(corners, nearest lattice point)")
-    ok_lat = ok_cont = True
-    for a in range(1, 8):
-        pts = [(x, y) for y in range(a + 1) for x in range(a + 1)]
-        for tri in itertools.combinations(pts, 3):
-            coef = coeffs(*tri)
-            b1, _ = max_over_lattice_exact(coef, a)
-            b2, _ = max_over_lattice_formula(coef, a)
-            if b1 != b2:
-                ok_lat = False
-                print(f"    LATTICE MISMATCH a={a} tri={tri} {b1} vs {b2}")
-            # continuum: compare with a dense rational grid
-            b3, _ = max_over_continuum_formula(coef, a)
-            grid = 0
-            N = 24
-            for i in range(N + 1):
-                for j in range(N + 1):
-                    x = Fraction(i * a, N)
-                    y = Fraction(j * a, N)
-                    v = abs(eval_L(coef, x, y))
-                    if v > grid:
-                        grid = v
-            if grid > b3:
-                ok_cont = False
-                print(f"    CONTINUUM MISMATCH a={a} tri={tri} grid={grid} formula={b3}")
-    print(f"    lattice formula correct for a<=7:  {ok_lat}")
-    print(f"    continuum formula correct for a<=7: {ok_cont}")
-
-    print()
-    print("=" * 78)
-    print("(S4) counterexample to 'max is attained on the boundary'")
-    a = 6
-    coef = coeffs((0, 0), (a, 0), (0, a))
-    print(f"    triple (0,0),(a,0),(0,a), a={a}:  coefficients {coef}")
-    print(f"    L(x,y) = {coef[2]}*(x^2+y^2) + {coef[0]}*x + {coef[1]}*y + {coef[3]}")
-    print(f"    L(0,0)={eval_L(coef,0,0)}  L(a,0)={eval_L(coef,a,0)}  "
-          f"L(0,a)={eval_L(coef,0,a)}  L(a,a)={eval_L(coef,a,a)}")
-    print(f"    L(a/2,a/2) = {eval_L(coef, Fraction(a,2), Fraction(a,2))}  "
-          f"= a^4/2 = {Fraction(a**4,2)}")
-    print(f"    -> |L| is maximal at the CENTRE, not on the boundary.")
-
-    print()
-    print("=" * 78)
-    print("(S5) exact decomposition  D(a) = max(A(a), B(a))")
-    print(f"{'a':>3} {'D(a)':>12} {'A corner':>12} {'B nearest':>12} "
-          f"{'a^2*floor(a^2/2)':>18}  match")
+    print("=" * 84)
+    print("(1) exact decomposition  D(a) = max( A(a), B(a) )")
+    print(f"{'a':>3} {'A corner':>11} {'B nearest':>11} {'D lattice':>11} "
+          f"{'a^2*floor(a^2/2)':>17} {'ok':>4} {'cont.max':>12} {'a^4/2':>10}")
     report = []
     for a in args.a:
         r = analyse(a)
         report.append(r)
-        print(f"{a:>3} {r['D']:>12} {r['A_corner']:>12} {r['B_nearest']:>12} "
-              f"{r['formula']:>18}  {'OK' if r['match'] else 'MISMATCH'}")
-        print(f"      argmax D: triple={r['argD'][0]} at {r['argD'][1]}")
-        print(f"      argmax A: triple={r['argA'][0]} at {r['argA'][1]}")
-        if r['argB'][0] is not None:
-            print(f"      argmax B: triple={r['argB'][0]}")
+        print(f"{a:>3} {r['A_corner']:>11} {r['B_nearest']:>11} {r['D_lattice']:>11} "
+              f"{r['formula']:>17} {'OK' if r['match'] else 'FAIL':>4} "
+              f"{r['D_continuous_float']:>12.3f} {float(r['continuous_target_a4_over_2']):>10.1f}")
+        print(f"      argmax A: {r['A_arg']}")
+        print(f"      argmax B: {r['B_arg']}")
+        print(f"      argmax cont: {r['C_arg']}")
 
     if args.out:
         args.out.parent.mkdir(parents=True, exist_ok=True)
-        args.out.write_text(json.dumps(report, indent=2, ensure_ascii=False,
-                                       default=str), encoding="utf-8")
+        args.out.write_text(json.dumps(report, indent=2, ensure_ascii=False, default=str),
+                            encoding="utf-8")
         print(f"\nwrote {args.out}")
 
 

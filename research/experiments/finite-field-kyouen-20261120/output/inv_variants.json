@@ -1,0 +1,196 @@
+[
+  {
+    "q": 3,
+    "forbid": 4,
+    "misere": false,
+    "points": 10,
+    "circles": 30,
+    "safe_sets": 428,
+    "layer_sizes": {
+      "0": 1,
+      "1": 10,
+      "2": 45,
+      "3": 120,
+      "4": 180,
+      "5": 72
+    },
+    "max_safe_size": 5,
+    "root_win_for_player_to_move": true,
+    "root_outcome": "first-player-win",
+    "first_move_outcomes": {
+      "loss": 10
+    }
+  },
+  {
+    "q": 3,
+    "forbid": 4,
+    "misere": true,
+    "points": 10,
+    "circles": 30,
+    "safe_sets": 428,
+    "layer_sizes": {
+      "0": 1,
+      "1": 10,
+      "2": 45,
+      "3": 120,
+      "4": 180,
+      "5": 72
+    },
+    "max_safe_size": 5,
+    "root_win_for_player_to_move": false,
+    "root_outcome": "second-player-win",
+    "first_move_outcomes": {
+      "win": 10
+    }
+  },
+  {
+    "q": 3,
+    "forbid": 5,
+    "misere": false,
+    "points": 10,
+    "circles": 30,
+    "safe_sets": 1024,
+    "layer_sizes": {
+      "0": 1,
+      "1": 10,
+      "2": 45,
+      "3": 120,
+      "4": 210,
+      "5": 252,
+      "6": 210,
+      "7": 120,
+      "8": 45,
+      "9": 10,
+      "10": 1
+    },
+    "max_safe_size": 10,
+    "root_win_for_player_to_move": false,
+    "root_outcome": "second-player-win",
+    "first_move_outcomes": {
+      "win": 10
+    }
+  },
+  {
+    "q": 3,
+    "forbid": 5,
+    "misere": true,
+    "points": 10,
+    "circles": 30,
+    "safe_sets": 1024,
+    "layer_sizes": {
+      "0": 1,
+      "1": 10,
+      "2": 45,
+      "3": 120,
+      "4": 210,
+      "5": 252,
+      "6": 210,
+      "7": 120,
+      "8": 45,
+      "9": 10,
+      "10": 1
+    },
+    "max_safe_size": 10,
+    "root_win_for_player_to_move": true,
+    "root_outcome": "first-player-win",
+    "first_move_outcomes": {
+      "loss": 10
+    }
+  },
+  {
+    "q": 4,
+    "forbid": 4,
+    "misere": false,
+    "points": 17,
+    "circles": 68,
+    "safe_sets": 4914,
+    "layer_sizes": {
+      "0": 1,
+      "1": 17,
+      "2": 136,
+      "3": 680,
+      "4": 2040,
+      "5": 2040
+    },
+    "max_safe_size": 5,
+    "root_win_for_player_to_move": true,
+    "root_outcome": "first-player-win",
+    "first_move_outcomes": {
+      "loss": 17
+    }
+  },
+  {
+    "q": 4,
+    "forbid": 4,
+    "misere": true,
+    "points": 17,
+    "circles": 68,
+    "safe_sets": 4914,
+    "layer_sizes": {
+      "0": 1,
+      "1": 17,
+      "2": 136,
+      "3": 680,
+      "4": 2040,
+      "5": 2040
+    },
+    "max_safe_size": 5,
+    "root_win_for_player_to_move": false,
+    "root_outcome": "second-player-win",
+    "first_move_outcomes": {
+      "win": 17
+    }
+  },
+  {
+    "q": 4,
+    "forbid": 5,
+    "misere": false,
+    "points": 17,
+    "circles": 68,
+    "safe_sets": 48604,
+    "layer_sizes": {
+      "0": 1,
+      "1": 17,
+      "2": 136,
+      "3": 680,
+      "4": 2380,
+      "5": 6120,
+      "6": 11560,
+      "7": 14960,
+      "8": 10710,
+      "9": 2040
+    },
+    "max_safe_size": 9,
+    "root_win_for_player_to_move": true,
+    "root_outcome": "first-player-win",
+    "first_move_outcomes": {
+      "loss": 17
+    }
+  },
+  {
+    "q": 4,
+    "forbid": 5,
+    "misere": true,
+    "points": 17,
+    "circles": 68,
+    "safe_sets": 48604,
+    "layer_sizes": {
+      "0": 1,
+      "1": 17,
+      "2": 136,
+      "3": 680,
+      "4": 2380,
+      "5": 6120,
+      "6": 11560,
+      "7": 14960,
+      "8": 10710,
+      "9": 2040
+    },
+    "max_safe_size": 9,
+    "root_win_for_player_to_move": false,
+    "root_outcome": "second-player-win",
+    "first_move_outcomes": {
+      "win": 17
+    }
+  }
+]
