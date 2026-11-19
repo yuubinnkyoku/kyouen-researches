@@ -52,6 +52,12 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/scripts/ag2_fast_target.py
   role: solver
   note: AG(2,q)の対称性利用高速完全探索
+- path: research/experiments/finite-field-kyouen-20261120/AG2_BOUNDS.md
+  role: source
+  note: 上界の比較（cross/second moment/triple）
+- path: research/experiments/finite-field-kyouen-20261120/AG2_LINE_BOUNDS.md
+  role: source
+  note: 直線制約と共線三点の限界
 - path: research/experiments/finite-field-kyouen-20261120/AG2_CROSS_GENERAL.md
   role: proof
   note: 十字ブロックによる一般上界3q^2/(2q-1)
@@ -319,7 +325,7 @@ q≡1 (mod 4) でも退化が起きる（q=5 でサイズ4の円が100個）。
 | 17 | 289 | 5,219 | — | 17 | 31 |
 | 19 | 361 | 6,878 | — | 14 | 35 |
 
-**一般上界（証明済み）**：`q ≡ 1 (mod 4)` のとき `K(AG(2,q)) ≤ ⌊3q²/(2q−1)⌋`。`n``−1` が平方なので `x²+y² = (x+iy)(x−iy)` と分解し、円の方程式が `s·t+a·s+b·t+c=0` になる。`ab=c` の退化円は`n`「列＋行」の十字（`2q−1` 点）で、これが `q²` 個ある。安全集合は各十字に高々3点なので`n``(2q−1)|S| ≤ 3q²` が従う。q=5,9,13 で十字の個数が `q²` に一致することを確認。`n``n上界は `C(k,3) ≤ q²(q−1)+q(q+1) = q³+q`（安全集合の各三点が一意に円または直線を定め、
+**一般上界（証明済み）**：`q ≡ 1 (mod 4)` のとき `K(AG(2,q)) ≤ ⌊3q²/(2q−1)⌋`。`n``−1` が平方なので `x²+y² = (x+iy)(x−iy)` と分解し、円の方程式が `s·t+a·s+b·t+c=0` になる。`ab=c` の退化円は`n`「列＋行」の十字（`2q−1` 点）で、これが `q²` 個ある。安全集合は各十字に高々3点なので`n``(2q−1)|S| ≤ 3q²` が従う。q=5,9,13 で十字の個数が `q²` に一致することを確認。`n``n**上界の比較**：単純な組合せ上界はいずれも緩い。q=7 で triple 上界13・second moment 16・直線のみ21・4点部分集合47 に対し真値は6。`n`second moment（`λ₂=q+1` は一様）は triple より弱い。直線制約だけでは q=5 で k=6 のキャップが存在するため何も排除できない。`n`十字上界が最強（q≡1 mod 4）。`n``n上界は `C(k,3) ≤ q²(q−1)+q(q+1) = q³+q`（安全集合の各三点が一意に円または直線を定め、
 そのブロックは高々3点しか持てない）。整数格子の `K_n ≈ 2n` と対照的に、有限体盤は相対的に疎である。
 
 q=7 の K=6 は固定サイズ完全探索で決定した（サイズ7が不存在、2,276,002 ノード）。
