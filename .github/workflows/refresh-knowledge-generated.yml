@@ -479,6 +479,14 @@ jobs:
         run: |
           uv run --locked python research/experiments/vertical-fiber-two-token-z8-y9-boundary-20261119/verify_z8_y9.py
           git diff --exit-code -- research/experiments/vertical-fiber-two-token-z8-y9-boundary-20261119/output/audit.json
+      - name: Audit K1047 two-token z=14 y=5 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z14-y5-boundary-20261119/verify_z14_y5.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z14-y5-boundary-20261119/output/audit.json
+      - name: Audit K1048 two-token z=15 y=4 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z15-y4-boundary-20261120/verify_z15_y4.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z15-y4-boundary-20261120/output/audit.json
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python tools/knowledge/build.py
