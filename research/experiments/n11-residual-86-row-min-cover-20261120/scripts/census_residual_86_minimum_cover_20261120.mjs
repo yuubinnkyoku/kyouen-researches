@@ -223,13 +223,23 @@ const baseJoin = {
 need(baseJoin.refuted === 340 && baseJoin.win === 164 && baseJoin.conflicts === 0, "K1046 explicit known-verdict join mismatch");
 
 const scanTransfers = new Set();
+const scanWinTransfers = new Set();
 for (const [child, target] of Object.entries(data.scan.targets)) {
-  for (const v of target.transferred?.["REFUTED-D10"] || [])
-    scanTransfers.add(d4Canon(BigInt("0x" + child) | (1n << BigInt(v.bit))));
-  for (const v of target.transferred?.["WIN7-D10"] || [])
-    scanTransfers.add(d4Canon(BigInt("0x" + child) | (1n << BigInt(v.bit))));
+  for (const v of target.transferred?.["REFUTED-D10"] || []) {
+    const root = d4Canon(BigInt("0x" + child) | (1n << BigInt(v.bit)));
+    scanTransfers.add(root);
+    knownRefuted.add(root);
+  }
+  for (const v of target.transferred?.["WIN7-D10"] || []) {
+    const root = d4Canon(BigInt("0x" + child) | (1n << BigInt(v.bit)));
+    scanTransfers.add(root);
+    scanWinTransfers.add(root);
+    knownWin.add(root);
+  }
 }
-for (const root of scanTransfers) knownRefuted.add(root);
+need(scanWinTransfers.size === 0, "unexpected K0863 WIN7-D10 transfers");
+need(data.scan.engine_map.source_conflicts.length === 0, "K0863 source conflict");
+
 const joined = {
   refuted: knownRefuted.size,
   win: knownWin.size,
@@ -394,7 +404,7 @@ need(soleTarget.engine["REFUTED-D10"] === 0 &&
      soleTarget.engine["WIN7-D10"] === 0 &&
      soleTarget.engine["UNKNOWN-CAPPED"] === 0 &&
      soleTarget.legal_count === 69 &&
-     soleTarget.open_count === 66 &&
+     soleTarget.open === 66 &&
      JSON.stringify(transferredBits) === JSON.stringify([55, 65, 109]),
      "sole target parent cache accounting mismatch");
 need(!scanTransfers.has(SOLE_SCAN_ROOT), "sole selected root is in transfer cache");
@@ -445,10 +455,10 @@ const record = {
     verdicts: poolStatus
   },
   k0863_cache_exclusion: {
-    engine_verdicts: data.scan.engine_map.total,
-    engine_refuted_d10: data.scan.engine_map.refuted,
-    engine_win7_d10: data.scan.engine_map.win,
-    engine_unknown_capped: data.scan.engine_map.unknown,
+    engine_verdicts: data.scan.engine_map.determined_bits,
+    engine_refuted_d10: data.scan.engine_map["REFUTED-D10"],
+    engine_win7_d10: data.scan.engine_map["WIN7-D10"],
+    engine_unknown_capped: data.scan.engine_map["UNKNOWN-CAPPED"],
     child_universe: Object.keys(data.scan.targets).length,
     transfer_roots: scanTransfers.size,
     candidate_roots_with_any_parent_in_child_universe: scanParentHits.size,
@@ -461,7 +471,7 @@ const record = {
       target_orientation_add_bit: 73,
       engine_counts: soleTarget.engine,
       transferred_refuted_bits: transferredBits,
-      open_count: soleTarget.open_count,
+      open_count: soleTarget.open,
       explanation: "The sole matched parent has zero engine verdicts; bit 73 is open and is not one of the three transferred REFUTED-D10 bits."
     }
   },
