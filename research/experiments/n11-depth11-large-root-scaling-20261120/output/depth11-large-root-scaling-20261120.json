@@ -1,0 +1,333 @@
+{
+ "cap": 30000000,
+ "cost_scaling": [
+  {
+   "d10": {
+    "capped": false,
+    "loss": false,
+    "ms": 512,
+    "nodes": 218055,
+    "wall_s": 0.7
+   },
+   "d11": {
+    "capped": false,
+    "loss": false,
+    "ms": 505,
+    "nodes": 218575,
+    "wall_s": 0.7
+   },
+   "label": "K1082-ledger-rank1",
+   "ordering": "andclose1",
+   "ratio_d11_d10": 1.0024,
+   "root": "00000000000040809002000800100000"
+  },
+  {
+   "d10": {
+    "capped": false,
+    "loss": false,
+    "ms": 27057,
+    "nodes": 12796034,
+    "wall_s": 27.2
+   },
+   "d11": {
+    "capped": false,
+    "loss": false,
+    "ms": 28104,
+    "nodes": 13289457,
+    "wall_s": 28.3
+   },
+   "label": "K1082-ledger-rank1",
+   "ordering": "andclose0",
+   "ratio_d11_d10": 1.0386,
+   "root": "00000000000040809002000800100000"
+  },
+  {
+   "d10": {
+    "capped": false,
+    "loss": false,
+    "ms": 13556,
+    "nodes": 6215710,
+    "wall_s": 13.7
+   },
+   "d11": {
+    "capped": false,
+    "loss": false,
+    "ms": 13794,
+    "nodes": 6393337,
+    "wall_s": 13.9
+   },
+   "label": "K1082-ledger-rank2",
+   "ordering": "andclose1",
+   "ratio_d11_d10": 1.0286,
+   "root": "00000000000000801202040000101000"
+  },
+  {
+   "d10": {
+    "capped": false,
+    "loss": false,
+    "ms": 12327,
+    "nodes": 5785671,
+    "wall_s": 12.5
+   },
+   "d11": {
+    "capped": false,
+    "loss": false,
+    "ms": 12572,
+    "nodes": 5963443,
+    "wall_s": 12.7
+   },
+   "label": "K1082-ledger-rank2",
+   "ordering": "andclose0",
+   "ratio_d11_d10": 1.0307,
+   "root": "00000000000000801202040000101000"
+  },
+  {
+   "d10": {
+    "capped": false,
+    "loss": false,
+    "ms": 12006,
+    "nodes": 5385035,
+    "wall_s": 12.2
+   },
+   "d11": {
+    "capped": false,
+    "loss": false,
+    "ms": 12342,
+    "nodes": 5522167,
+    "wall_s": 12.5
+   },
+   "label": "K1082-ledger-rank3",
+   "ordering": "andclose1",
+   "ratio_d11_d10": 1.0255,
+   "root": "00000000000000003800000009080004"
+  },
+  {
+   "d10": {
+    "capped": false,
+    "loss": false,
+    "ms": 7259,
+    "nodes": 3422095,
+    "wall_s": 7.4
+   },
+   "d11": {
+    "capped": false,
+    "loss": false,
+    "ms": 7436,
+    "nodes": 3496655,
+    "wall_s": 7.6
+   },
+   "label": "K1082-ledger-rank3",
+   "ordering": "andclose0",
+   "ratio_d11_d10": 1.0218,
+   "root": "00000000000000003800000009080004"
+  },
+  {
+   "d10": {
+    "capped": false,
+    "loss": false,
+    "ms": 5793,
+    "nodes": 2710668,
+    "wall_s": 6.0
+   },
+   "d11": {
+    "capped": false,
+    "loss": false,
+    "ms": 6446,
+    "nodes": 2803695,
+    "wall_s": 6.6
+   },
+   "label": "K1082-ledger-rank4",
+   "ordering": "andclose1",
+   "ratio_d11_d10": 1.0343,
+   "root": "00000000000000003800000009840000"
+  },
+  {
+   "d10": {
+    "capped": false,
+    "loss": false,
+    "ms": 12471,
+    "nodes": 6009248,
+    "wall_s": 12.6
+   },
+   "d11": {
+    "capped": false,
+    "loss": false,
+    "ms": 13533,
+    "nodes": 6409440,
+    "wall_s": 13.7
+   },
+   "label": "K1082-ledger-rank4",
+   "ordering": "andclose0",
+   "ratio_d11_d10": 1.0666,
+   "root": "00000000000000003800000009840000"
+  }
+ ],
+ "date": "2026-11-20",
+ "gates": [
+  {
+   "detail": {
+    "git_blob": "c132cc6425eee3feaeef1d697dd74f968cfedb59"
+   },
+   "name": "runner-blob-pin",
+   "pass": true
+  },
+  {
+   "detail": {
+    "00000000000000003800000009080004": "00000000000000003800000009080000",
+    "00000000000000003800000009840000": "00000000000000003800000009800000",
+    "00000000000000801202040000101000": "00000000000000801202040000100000",
+    "00000000000040809002000800100000": "00000000000040809002000800000000"
+   },
+   "name": "raw-child-rebuild",
+   "pass": true
+  },
+  {
+   "detail": {
+    "labels": {
+     "00000000000000003800000009080004": "REFUTED-D10",
+     "00000000000000003800000009840000": "REFUTED-D10",
+     "00000000000000801202040000101000": "REFUTED-D10",
+     "00000000000040809002000800100000": "REFUTED-D10"
+    },
+    "sha256": "22953ae16a6002d87638531f2ca9fd286f6736b834fa296e5648505ada9074dc"
+   },
+   "name": "k1069-classification-pin",
+   "pass": true
+  },
+  {
+   "detail": {
+    "ranked": [
+     "00000000000040809002000800100000",
+     "00000000000000801202040000101000",
+     "00000000000000003800000009080004",
+     "00000000000000003800000009840000"
+    ],
+    "rule": "top-4 by by_root.sum_nodes of the landed K1082 ledger, excluding the max-probe root 00000000010000809002000040000080 already measured by the pilot",
+    "sha256": "b55e5d83a0d25c06a8dcc8ffa06ce5d077bd6c225f6818423dafdf615fbf48a3"
+   },
+   "name": "ledger-selection-pin",
+   "pass": true
+  },
+  {
+   "detail": {
+    "missing": [],
+    "planned": 16,
+    "present": 16
+   },
+   "name": "all-probes-present",
+   "pass": true
+  },
+  {
+   "detail": {
+    "bad": []
+   },
+   "name": "pilot-d6-control-all-probes",
+   "pass": true
+  },
+  {
+   "detail": [
+    {
+     "ledger_nodes": 218055,
+     "loss": false,
+     "observed_nodes": 218055,
+     "ordering": "andclose1",
+     "root": "00000000000040809002000800100000",
+     "status": "exact"
+    },
+    {
+     "ledger_nodes": 12796034,
+     "loss": false,
+     "observed_nodes": 12796034,
+     "ordering": "andclose0",
+     "root": "00000000000040809002000800100000",
+     "status": "exact"
+    },
+    {
+     "ledger_nodes": 6215710,
+     "loss": false,
+     "observed_nodes": 6215710,
+     "ordering": "andclose1",
+     "root": "00000000000000801202040000101000",
+     "status": "exact"
+    },
+    {
+     "ledger_nodes": 5785671,
+     "loss": false,
+     "observed_nodes": 5785671,
+     "ordering": "andclose0",
+     "root": "00000000000000801202040000101000",
+     "status": "exact"
+    },
+    {
+     "ledger_nodes": 5385035,
+     "loss": false,
+     "observed_nodes": 5385035,
+     "ordering": "andclose1",
+     "root": "00000000000000003800000009080004",
+     "status": "exact"
+    },
+    {
+     "ledger_nodes": 3422095,
+     "loss": false,
+     "observed_nodes": 3422095,
+     "ordering": "andclose0",
+     "root": "00000000000000003800000009080004",
+     "status": "exact"
+    },
+    {
+     "ledger_nodes": 2710668,
+     "loss": false,
+     "observed_nodes": 2710668,
+     "ordering": "andclose1",
+     "root": "00000000000000003800000009840000",
+     "status": "exact"
+    },
+    {
+     "ledger_nodes": 6009248,
+     "loss": false,
+     "observed_nodes": 6009248,
+     "ordering": "andclose0",
+     "root": "00000000000000003800000009840000",
+     "status": "exact"
+    }
+   ],
+   "name": "ledger-determinism-crosscheck",
+   "pass": true
+  }
+ ],
+ "inputs": {
+  "k1069_classification": {
+   "path": "research/experiments/n11-residual78-39livewitness-depth10-sweep-20261120/output/witness-39live-root-depth10-sweep-20261120.json",
+   "sha256": "22953ae16a6002d87638531f2ca9fd286f6736b834fa296e5648505ada9074dc"
+  },
+  "ledger": {
+   "path": "research/experiments/n11-k1069-nodecost-ledger-20261120/output/k1069-nodecost-ledger-20261120.json",
+   "sha256": "b55e5d83a0d25c06a8dcc8ffa06ce5d077bd6c225f6818423dafdf615fbf48a3"
+  },
+  "selection_rule": "top-4 by by_root.sum_nodes of the landed K1082 ledger, excluding the max-probe root 00000000010000809002000040000080 already measured by the pilot",
+  "targets": {
+   "00000000000000003800000009080004": {
+    "bit": 2,
+    "label": "K1082-ledger-rank3"
+   },
+   "00000000000000003800000009840000": {
+    "bit": 18,
+    "label": "K1082-ledger-rank4"
+   },
+   "00000000000000801202040000101000": {
+    "bit": 12,
+    "label": "K1082-ledger-rank2"
+   },
+   "00000000000040809002000800100000": {
+    "bit": 20,
+    "label": "K1082-ledger-rank1"
+   }
+  }
+ },
+ "interpretation_guard": "Node counts under cap are deterministic and machine-independent cost units. Capped/timeout probes are lower bounds of cost and evidence in NO direction. This measurement changes no verdict: a depth-11 loss=false is not a closure proof nor a REFUTED-D11 classification. REFUTED-D10 is not a LOSS proof. The standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60} and classes 1/2/4 all remain UNKNOWN.",
+ "parallelism": 1,
+ "protocol": "cost measurement only; top-4 large roots of the landed K1082 ledger; depths {10,11} per (root, ordering); same runner/argv form as the K1075 sweep driver; pilot_d6 control required; depth-10 re-measurement must equal the published ledger node-exactly (fail-closed)",
+ "runner_git_blob": "c132cc6425eee3feaeef1d697dd74f968cfedb59",
+ "schema": "n11-depth11-large-root-scaling-20261120-v1",
+ "timeout_s": 280
+}
