@@ -1,0 +1,63 @@
+{
+  "schema": "n11-sixth-win7-independent-verification-rerun-20261119-v1",
+  "date": "2026-11-19",
+  "root": "00000000040000801202000080100000",
+  "certificate_sha256": "5289f152e88072d716f22d42414222162facb7486d07fd024b61fdc50ddef885",
+  "certificate_bytes": 1117575,
+  "engines": {
+    "bigint": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/verify_win7_certificate_bigint_independent.mjs",
+      "git_blob_sha1": "62b5d9413daafb172f6e10249976ee6808f7b454"
+    },
+    "bareiss": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/verify_bit7_win7_cert.ts",
+      "git_blob_sha1": "2960afabdf7c1a7012d223974b65f1423e6890da"
+    }
+  },
+  "bigint_rerun": {
+    "verdict": "WIN7 certificate independently verified",
+    "method": "BigInt 3x3 cofactor expansion of the exact lifted determinant [x²+y²,x,y,1]; no floating point",
+    "root_hex": "00000000040000801202000080100000",
+    "root_stones": 7,
+    "root_safe": true,
+    "root_mobility": 55,
+    "strategy_rows": 30984,
+    "rows_sorted_unique": true,
+    "subroots_passed": 55,
+    "consumed_winner_rows": 30984,
+    "union_missing": 0,
+    "union_extra": 0,
+    "visited_states_across_subroots": 66292,
+    "winner_states": 42537,
+    "loser_states": 12850,
+    "loser_reply_edges": 59089,
+    "terminal_count": 10905,
+    "terminal_range": [
+      13,
+      17
+    ],
+    "forbidden_triple_cache_entries": 21093,
+    "legal_state_cache_entries": 47282
+  },
+  "bareiss_rerun": {
+    "root_check": {
+      "stones": 7,
+      "loserMobility": 55
+    },
+    "subroots": 55,
+    "rows": 30984,
+    "state_flow": {
+      "seen": 66292,
+      "terminals": 10905,
+      "opponentEdges": 59089,
+      "terminal_min": 13,
+      "terminal_max": 17
+    },
+    "consumed_records": 42537,
+    "consumed_unique": 30984,
+    "union_missing": 0,
+    "union_extra": 0
+  },
+  "cross_method_state_flow_equal": true,
+  "published_values_reproduced": true
+}
