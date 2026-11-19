@@ -1,0 +1,786 @@
+{
+ "schema": "n11-five-parent-ninth-twelfth-win7-receipt-fold-20261119-v1",
+ "date": "2026-11-19",
+ "status": "fold-complete",
+ "source_main_head_before": "7d191ed173371b702550f2bfbc9b2915bf3e4dbf",
+ "previous_fold": {
+  "record": "foldv2/output/eighth-win7-receipt-fold-20261119.json (git tree of n11-117pool-d10-sweep-7th8th-win7-certs-20261119; sha256 afcf7d0a...)",
+  "frontier_after": {
+   "solved_s6_in_manifest": 1626,
+   "remaining_s5_orbits": 173,
+   "unique_remaining_s6": 6222,
+   "sum_remaining_cost": 492688,
+   "s6_needed_by_open_classes": 4517,
+   "cost_needed_by_open_classes": 358189,
+   "parent_row_incidence": 11848
+  }
+ },
+ "source_blob_pins": {
+  "worklist": "2fee1d0718547a62e346d35f5858d7913e37c097",
+  "ledger": "e8785d509e8a11a37c0d03cc450455a14708c34d",
+  "census": "9c251da3138c5cb0516e097be5e5d0427dfaf5f0",
+  "globalFold": "753a4bf4d0e11bea894111f9fa43bcff5e9ab7dc",
+  "previousCostFold": "7e6144cc4bc92c34faa14bed3058cde64fb3880e",
+  "firstFoldTarball": "fa5f26a9dc9bd2fb8222aa8ba0431d7578043019",
+  "cover49_49c": "a8eaf00bd6494eda50a68e7d06498bed833a7688",
+  "head1476": "65d0c7ce0200638a50db5451b11b8cb88ec64b5d",
+  "cost78c": "626409d50d0a7bb1b925ebecbff7dbee9adfa398",
+  "cost79c": "054923a47ea0387b25f734222c499e60c054109b",
+  "cost73j": "74fc3417391e30cf4cff9c2ffce059dce529ed86",
+  "sweep48": "37aba599d0b69275225bf231d56cb18feed14090",
+  "fold23": "7923a0fe5331d1f7c896748031c4071b68fcc13a",
+  "coverResolve": "600b23d39888ea0e693742da4b2ae9c372a9faf0",
+  "joint": "40581746dc3304bdaff4b1934fd6f1d3d2981ea5",
+  "audit": "7cdc7c9ef341b5d9759923b3fc4986231c48895f",
+  "fold4_record": "38715413d6dd23b97717c92d73d8b4a0af807cda",
+  "fold56_record": "134796a7de1e472c26e35defd7340d208a10b9b0",
+  "fold7_sha256": "f1baf15942d3efeaa3ca75c4d803148239269715e297aaf9b00042611543b737",
+  "fold8_sha256": "afcf7d0ad0d6ca1edf31e150a7ba840f802a6382506f4a662b4e13567fbd30a2",
+  "resolve4_sha256": "2ad70afba4236375925dfd13230bb599b2d38f93631d6ded266fd77d34432e09",
+  "sweep35_sha256": "8b7ba7d6b6fbfef057267e95c66efc036779c7d90ec918ec8beaa6a6618b95a5",
+  "runner_v17": "c132cc6425eee3feaeef1d697dd74f968cfedb59",
+  "extractor_v16": "5518d375fc6b4a7a14c22a1a65586f0c1c5731c0",
+  "bigintVerifier": "62b5d9413daafb172f6e10249976ee6808f7b454",
+  "bareissVerifier": "2960afabdf7c1a7012d223974b65f1423e6890da"
+ },
+ "receipt_count": 4,
+ "receipts": [
+  {
+   "root": "00000000000000801202000001040200",
+   "receipt": "ninth",
+   "added_bit": 71,
+   "child_hex": "00000000000000001202000001040200",
+   "legal_next_moves": 72,
+   "covered_s6_rows": [
+    "00000000000000801202000001000200",
+    "00000000000000801202000001040000"
+   ],
+   "covered_five_parent_target_rows": [
+    "00000000000000801202000001000200",
+    "00000000000000801202000001040000"
+   ],
+   "extra_s6_rows_not_in_target": [],
+   "unique_strategy_rows": 84928,
+   "total_nodes": 3765226,
+   "fbt_drops": 0,
+   "closed_edge_cost": 163,
+   "certificate_sha256": "503ff9dadc7a0d52cba8d75fa185273c798811e2ca1a897eee98cbd2b6cce631",
+   "certificate_bytes": 3069801,
+   "affected_parents": 3,
+   "parent_deltas": [
+    {
+     "parent_hex": "00000000000000003800000009000000",
+     "classes": 2,
+     "rows_before": 20,
+     "rows_closed": 2,
+     "rows_after": 18
+    },
+    {
+     "parent_hex": "00000000000000801202000000000200",
+     "classes": 2,
+     "rows_before": 60,
+     "rows_closed": 1,
+     "rows_after": 59
+    },
+    {
+     "parent_hex": "00000000000000801202000000040000",
+     "classes": 2,
+     "rows_before": 70,
+     "rows_closed": 1,
+     "rows_after": 69
+    }
+   ],
+   "probe_runs": [
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": true,
+     "nodes": 12383133,
+     "capped": false
+    },
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": true,
+     "nodes": 10066486,
+     "capped": false
+    }
+   ],
+   "extraction": {
+    "engine": "class4_child1_cert_extractor_exact_v16 (git blob 5518d375fc6b4a7a14c22a1a65586f0c1c5731c0)",
+    "pilot_control": {
+     "control": "pilot_d6",
+     "nodes": 3402,
+     "loss": false,
+     "all_pass": true
+    }
+   },
+   "independent_verification": {
+    "bigint": {
+     "subroots_passed": 72,
+     "union_missing": 0,
+     "union_extra": 0,
+     "visited_states": 171066,
+     "terminal_count": 27410,
+     "loser_reply_edges": 153450,
+     "terminal_range": [
+      13,
+      17
+     ]
+    },
+    "bareiss": {
+     "subroots": 72,
+     "rows": 84928,
+     "consumed_unique": 84928,
+     "seen": 171066,
+     "terminals": 27410,
+     "opponent_edges": 153450,
+     "union_missing": 0,
+     "union_extra": 0
+    },
+    "cross_method_state_flow_equal": true,
+    "certificate_union_exact": true
+   }
+  },
+  {
+   "root": "00000000000000821082040200000000",
+   "receipt": "tenth",
+   "added_bit": 71,
+   "child_hex": "00000000000000021082040200000000",
+   "legal_next_moves": 56,
+   "covered_s6_rows": [
+    "00000000000000801082080400000000",
+    "00000000000000821082000200000000",
+    "00000000000000821082000400000000"
+   ],
+   "covered_five_parent_target_rows": [
+    "00000000000000821082000200000000",
+    "00000000000000821082000400000000"
+   ],
+   "extra_s6_rows_not_in_target": [
+    "00000000000000801082080400000000"
+   ],
+   "unique_strategy_rows": 45450,
+   "total_nodes": 2536415,
+   "fbt_drops": 0,
+   "closed_edge_cost": 227,
+   "certificate_sha256": "6ba50576f3f9500d0b11ffa4a47231255e9968af40e6dcb0330c09a58fc6d426",
+   "certificate_bytes": 1641826,
+   "affected_parents": 5,
+   "parent_deltas": [
+    {
+     "parent_hex": "00000000000000003800000000000028",
+     "classes": 1,
+     "rows_before": 73,
+     "rows_closed": 1,
+     "rows_after": 72
+    },
+    {
+     "parent_hex": "00000000000000003800000000004020",
+     "classes": 1,
+     "rows_before": 77,
+     "rows_closed": 2,
+     "rows_after": 75
+    },
+    {
+     "parent_hex": "00000000000000801082040000000000",
+     "classes": 1,
+     "rows_before": 81,
+     "rows_closed": 1,
+     "rows_after": 80
+    },
+    {
+     "parent_hex": "00000000000000801082080000000000",
+     "classes": 1,
+     "rows_before": 85,
+     "rows_closed": 2,
+     "rows_after": 83
+    },
+    {
+     "parent_hex": "00000000000000821082000000000000",
+     "classes": 1,
+     "rows_before": 12,
+     "rows_closed": 2,
+     "rows_after": 10
+    }
+   ],
+   "probe_runs": [
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": true,
+     "nodes": 1865050,
+     "capped": false
+    },
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": true,
+     "nodes": 1421978,
+     "capped": false
+    }
+   ],
+   "extraction": {
+    "engine": "class4_child1_cert_extractor_exact_v16 (git blob 5518d375fc6b4a7a14c22a1a65586f0c1c5731c0)",
+    "pilot_control": {
+     "control": "pilot_d6",
+     "nodes": 3402,
+     "loss": false,
+     "all_pass": true
+    }
+   },
+   "independent_verification": {
+    "bigint": {
+     "subroots_passed": 56,
+     "union_missing": 0,
+     "union_extra": 0,
+     "visited_states": 96862,
+     "terminal_count": 15936,
+     "loser_reply_edges": 86443,
+     "terminal_range": [
+      13,
+      17
+     ]
+    },
+    "bareiss": {
+     "subroots": 56,
+     "rows": 45450,
+     "consumed_unique": 45450,
+     "seen": 96862,
+     "terminals": 15936,
+     "opponent_edges": 86443,
+     "union_missing": 0,
+     "union_extra": 0
+    },
+    "cross_method_state_flow_equal": true,
+    "certificate_union_exact": true
+   }
+  },
+  {
+   "root": "00000000000000821092200000000000",
+   "receipt": "eleventh",
+   "added_bit": 71,
+   "child_hex": "00000000000000021092200000000000",
+   "legal_next_moves": 47,
+   "covered_s6_rows": [
+    "00000000000000821082200000000000",
+    "00000000000000821082400000000000"
+   ],
+   "covered_five_parent_target_rows": [
+    "00000000000000821082200000000000",
+    "00000000000000821082400000000000"
+   ],
+   "extra_s6_rows_not_in_target": [],
+   "unique_strategy_rows": 24375,
+   "total_nodes": 702661,
+   "fbt_drops": 0,
+   "closed_edge_cost": 133,
+   "certificate_sha256": "c68e63752392d17002e4d2447b23f0f98da55348400b952c0f8dbff269a6b566",
+   "certificate_bytes": 881090,
+   "affected_parents": 5,
+   "parent_deltas": [
+    {
+     "parent_hex": "00000000000000003800000000008020",
+     "classes": 1,
+     "rows_before": 72,
+     "rows_closed": 1,
+     "rows_after": 71
+    },
+    {
+     "parent_hex": "00000000000000003800000004000020",
+     "classes": 1,
+     "rows_before": 75,
+     "rows_closed": 1,
+     "rows_after": 74
+    },
+    {
+     "parent_hex": "00000000000000801092000000000000",
+     "classes": 1,
+     "rows_before": 77,
+     "rows_closed": 1,
+     "rows_after": 76
+    },
+    {
+     "parent_hex": "000000000000008010a2000000000000",
+     "classes": 1,
+     "rows_before": 82,
+     "rows_closed": 1,
+     "rows_after": 81
+    },
+    {
+     "parent_hex": "00000000000000821082000000000000",
+     "classes": 1,
+     "rows_before": 10,
+     "rows_closed": 2,
+     "rows_after": 8
+    }
+   ],
+   "probe_runs": [
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": true,
+     "nodes": 520143,
+     "capped": false
+    },
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": true,
+     "nodes": 414254,
+     "capped": false
+    }
+   ],
+   "extraction": {
+    "engine": "class4_child1_cert_extractor_exact_v16 (git blob 5518d375fc6b4a7a14c22a1a65586f0c1c5731c0)",
+    "pilot_control": {
+     "control": "pilot_d6",
+     "nodes": 3402,
+     "loss": false,
+     "all_pass": true
+    }
+   },
+   "independent_verification": {
+    "bigint": {
+     "subroots_passed": 47,
+     "union_missing": 0,
+     "union_extra": 0,
+     "visited_states": 56207,
+     "terminal_count": 8516,
+     "loser_reply_edges": 51440,
+     "terminal_range": [
+      13,
+      17
+     ]
+    },
+    "bareiss": {
+     "subroots": 47,
+     "rows": 24375,
+     "consumed_unique": 24375,
+     "seen": 56207,
+     "terminals": 8516,
+     "opponent_edges": 51440,
+     "union_missing": 0,
+     "union_extra": 0
+    },
+    "cross_method_state_flow_equal": true,
+    "certificate_union_exact": true
+   }
+  },
+  {
+   "root": "00000000001020003800000048000000",
+   "receipt": "twelfth",
+   "added_bit": 84,
+   "child_hex": "00000000000020003800000048000000",
+   "legal_next_moves": 51,
+   "covered_s6_rows": [
+    "00000000000000801202010001000000",
+    "00000000000020003800000048000000"
+   ],
+   "covered_five_parent_target_rows": [
+    "00000000000000801202010001000000",
+    "00000000000020003800000048000000"
+   ],
+   "extra_s6_rows_not_in_target": [],
+   "unique_strategy_rows": 26756,
+   "total_nodes": 834730,
+   "fbt_drops": 0,
+   "closed_edge_cost": 144,
+   "certificate_sha256": "6513b7d57ace489764b7c863025487b2d14313e134153a1460a039578287e37a",
+   "certificate_bytes": 964213,
+   "affected_parents": 3,
+   "parent_deltas": [
+    {
+     "parent_hex": "00000000000000003800000009000000",
+     "classes": 2,
+     "rows_before": 18,
+     "rows_closed": 2,
+     "rows_after": 16
+    },
+    {
+     "parent_hex": "00000000000000801202000000000080",
+     "classes": 2,
+     "rows_before": 45,
+     "rows_closed": 1,
+     "rows_after": 44
+    },
+    {
+     "parent_hex": "00000000000000801202010000000000",
+     "classes": 2,
+     "rows_before": 44,
+     "rows_closed": 1,
+     "rows_after": 43
+    }
+   ],
+   "probe_runs": [
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": true,
+     "nodes": 658640,
+     "capped": false
+    },
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": true,
+     "nodes": 481863,
+     "capped": false
+    }
+   ],
+   "extraction": {
+    "engine": "class4_child1_cert_extractor_exact_v16 (git blob 5518d375fc6b4a7a14c22a1a65586f0c1c5731c0)",
+    "pilot_control": {
+     "control": "pilot_d6",
+     "nodes": 3402,
+     "loss": false,
+     "all_pass": true
+    }
+   },
+   "independent_verification": {
+    "bigint": {
+     "subroots_passed": 51,
+     "union_missing": 0,
+     "union_extra": 0,
+     "visited_states": 61065,
+     "terminal_count": 9191,
+     "loser_reply_edges": 55923,
+     "terminal_range": [
+      13,
+      17
+     ]
+    },
+    "bareiss": {
+     "subroots": 51,
+     "rows": 26756,
+     "consumed_unique": 26756,
+     "seen": 61065,
+     "terminals": 9191,
+     "opponent_edges": 55923,
+     "union_missing": 0,
+     "union_extra": 0
+    },
+    "cross_method_state_flow_equal": true,
+    "certificate_union_exact": true
+   }
+  }
+ ],
+ "processing_notes": [
+  "ninth root 00000000000000801202000001040200: closed 2 S6 rows (2 target rows), cost 163",
+  "tenth root 00000000000000821082040200000000: closed 3 S6 rows (2 target rows), cost 227",
+  "eleventh root 00000000000000821092200000000000: closed 2 S6 rows (2 target rows), cost 133",
+  "twelfth root 00000000001020003800000048000000: closed 2 S6 rows (2 target rows), cost 144"
+ ],
+ "frontier_before": {
+  "solved_s6_in_manifest": 1626,
+  "remaining_s5_orbits": 173,
+  "unique_remaining_s6": 6222,
+  "sum_remaining_cost": 492688,
+  "s6_needed_by_open_classes": 4517,
+  "cost_needed_by_open_classes": 358189,
+  "parent_row_incidence": 11848
+ },
+ "frontier_after": {
+  "solved_s6_in_manifest": 1635,
+  "remaining_s5_orbits": 173,
+  "unique_remaining_s6": 6213,
+  "sum_remaining_cost": 492021,
+  "s6_needed_by_open_classes": 4513,
+  "cost_needed_by_open_classes": 357882,
+  "parent_row_incidence": 11826
+ },
+ "new_receipt_coverage": {
+  "unique_s6_rows": 9,
+  "closed_edge_cost": 667,
+  "rows": [
+   {
+    "row_hex": "00000000000000801082080400000000",
+    "cost": 80,
+    "category": "unswept",
+    "demand": {
+     "c1": 2,
+     "c2": 0,
+     "c4": 0
+    },
+    "parents": [
+     "00000000000000003800000000004020",
+     "00000000000000801082080000000000"
+    ],
+    "receipt": {
+     "root": "00000000000000821082040200000000",
+     "verdict": "WIN7-D10"
+    }
+   },
+   {
+    "row_hex": "00000000000000801202000001000200",
+    "cost": 83,
+    "category": "unswept",
+    "demand": {
+     "c1": 0,
+     "c2": 2,
+     "c4": 0
+    },
+    "parents": [
+     "00000000000000003800000009000000",
+     "00000000000000801202000000000200"
+    ],
+    "receipt": {
+     "root": "00000000000000801202000001040200",
+     "verdict": "WIN7-D10"
+    }
+   },
+   {
+    "row_hex": "00000000000000801202000001040000",
+    "cost": 80,
+    "category": "unswept",
+    "demand": {
+     "c1": 0,
+     "c2": 2,
+     "c4": 0
+    },
+    "parents": [
+     "00000000000000003800000009000000",
+     "00000000000000801202000000040000"
+    ],
+    "receipt": {
+     "root": "00000000000000801202000001040200",
+     "verdict": "WIN7-D10"
+    }
+   },
+   {
+    "row_hex": "00000000000000801202010001000000",
+    "cost": 69,
+    "category": "unswept",
+    "demand": {
+     "c1": 0,
+     "c2": 2,
+     "c4": 0
+    },
+    "parents": [
+     "00000000000000003800000009000000",
+     "00000000000000801202010000000000"
+    ],
+    "receipt": {
+     "root": "00000000001020003800000048000000",
+     "verdict": "WIN7-D10"
+    }
+   },
+   {
+    "row_hex": "00000000000000821082000200000000",
+    "cost": 74,
+    "category": "unswept",
+    "demand": {
+     "c1": 3,
+     "c2": 0,
+     "c4": 0
+    },
+    "parents": [
+     "00000000000000003800000000000028",
+     "00000000000000801082080000000000",
+     "00000000000000821082000000000000"
+    ],
+    "receipt": {
+     "root": "00000000000000821082040200000000",
+     "verdict": "WIN7-D10"
+    }
+   },
+   {
+    "row_hex": "00000000000000821082000400000000",
+    "cost": 73,
+    "category": "unswept",
+    "demand": {
+     "c1": 3,
+     "c2": 0,
+     "c4": 0
+    },
+    "parents": [
+     "00000000000000003800000000004020",
+     "00000000000000801082040000000000",
+     "00000000000000821082000000000000"
+    ],
+    "receipt": {
+     "root": "00000000000000821082040200000000",
+     "verdict": "WIN7-D10"
+    }
+   },
+   {
+    "row_hex": "00000000000000821082200000000000",
+    "cost": 66,
+    "category": "unswept",
+    "demand": {
+     "c1": 3,
+     "c2": 0,
+     "c4": 0
+    },
+    "parents": [
+     "00000000000000003800000000008020",
+     "000000000000008010a2000000000000",
+     "00000000000000821082000000000000"
+    ],
+    "receipt": {
+     "root": "00000000000000821092200000000000",
+     "verdict": "WIN7-D10"
+    }
+   },
+   {
+    "row_hex": "00000000000000821082400000000000",
+    "cost": 67,
+    "category": "unswept",
+    "demand": {
+     "c1": 3,
+     "c2": 0,
+     "c4": 0
+    },
+    "parents": [
+     "00000000000000003800000004000020",
+     "00000000000000801092000000000000",
+     "00000000000000821082000000000000"
+    ],
+    "receipt": {
+     "root": "00000000000000821092200000000000",
+     "verdict": "WIN7-D10"
+    }
+   },
+   {
+    "row_hex": "00000000000020003800000048000000",
+    "cost": 75,
+    "category": "unswept",
+    "demand": {
+     "c1": 0,
+     "c2": 2,
+     "c4": 0
+    },
+    "parents": [
+     "00000000000000003800000009000000",
+     "00000000000000801202000000000080"
+    ],
+    "receipt": {
+     "root": "00000000001020003800000048000000",
+     "verdict": "WIN7-D10"
+    }
+   }
+  ]
+ },
+ "witness_sweep_record": "sweep43/output/witness-43-root-depth10-sweep-20261119.json (43 add-one-stone witnesses over the 86 stranded rows; 4 WIN / 39 REFUTED / 0 capped / 0 conflict)",
+ "verdict_join_summary": {
+  "known_refuted_roots_pre_sweep43": 340,
+  "known_win_roots_pre_sweep43": 164,
+  "known_refuted_roots_after_sweep43": 379,
+  "known_win_roots_after_sweep43": 168,
+  "join_limitation": "explicit pinned sources only (resolve4 chain plus the 43-witness sweep); not the full 8,964-entry cache join",
+  "win_loss_conflicts": 0
+ },
+ "controls": {
+  "base_frontier_recomputed": true,
+  "chain_frontiers_recomputed_each_step": true,
+  "open_frontier_matches_published_6222_492688": true,
+  "receipt_rows_rederived_from_all_8_d4_images": true,
+  "receipt_target_rows_match_sweep43_witness_records": true,
+  "all_receipt_rows_were_open_before_their_receipt": true,
+  "receipts_disjoint": true,
+  "legal_move_lists_independently_rederived": true,
+  "certificates_sha256_verified": true,
+  "bigint_independent_verification_pass_both_methods": true,
+  "bareiss_union_exact_all_four": true,
+  "cross_method_state_flow_equal_all_four": true,
+  "pilot_controls_all_four_pass": true,
+  "dual_ordering_uncapped_all_four": true,
+  "win_loss_conflict_scan_against_published_verdict_universe": true
+ },
+ "interpretation_guard": [
+  "WIN7-D10 proves a first-player win within depth 10 only from the individual seven-stone roots of these receipts.",
+  "The receipts close their S6 rows in the frontier but prove nothing about the empty board or any two-stone root.",
+  "The 39 REFUTED-D10 witnesses of the 43-witness sweep are NOT LOSS proofs.",
+  "The residual five-parent target rows (78) and any new witness plan are recorded in the post-fold cover re-solve (resolve5); witness roots are a conditional plan, not certificates.",
+  "The standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+ ],
+ "parent_closure": {
+  "fully_closed_parent_count": 0,
+  "affected_unique_parents": 14
+ },
+ "five_parent_target_after": {
+  "framework": "five-parent target union (112 rows; 26 closed through the eighth receipt, 34 through the twelfth)",
+  "closed_target_rows_total": 34,
+  "residual_target_rows": 78,
+  "residual_row_hex_after": [
+   "00000000000000003800000008001001",
+   "00000000000000003800000008001020",
+   "00000000000000003800000008001080",
+   "00000000000000003800000008001100",
+   "00000000000000003800000008001200",
+   "00000000000000003800000008001800",
+   "00000000000000003800000008002010",
+   "00000000000000003800000008002040",
+   "00000000000000003800000008002080",
+   "00000000000000003800000008002100",
+   "00000000000000003800000008005000",
+   "00000000000000003800000008011000",
+   "00000000000000003800000008500000",
+   "00000000000000003800000008900000",
+   "00000000000000003800000009000004",
+   "00000000000000003800000009040000",
+   "00000000000000003800000009800000",
+   "0000000000000000380000000a002000",
+   "0000000000000000380000000a080000",
+   "00000000000000003800000209000000",
+   "00000000000000003800000248000000",
+   "00000000000000003800000409000000",
+   "00000000000000003800000808001000",
+   "00000000000000003800100008002000",
+   "00000000000000003800200008001000",
+   "00000000000000003800200008100000",
+   "00000000000000003800200009000000",
+   "00000000000000043800000008080000",
+   "00000000000000043800000008100000",
+   "00000000000000043800000009000000",
+   "00000000000000083800000008100000",
+   "00000000000000083800000048000000",
+   "00000000000000103800000008080000",
+   "00000000000000103800000009000000",
+   "00000000000000801202000000081000",
+   "00000000000000801202000000101000",
+   "00000000000000801202000000800100",
+   "00000000000000801202000000800200",
+   "00000000000000801202000000800400",
+   "00000000000000801202000000840000",
+   "00000000000000801202000000880000",
+   "00000000000000801202000000900000",
+   "00000000000000801202000001000100",
+   "00000000000000801202000001000400",
+   "00000000000000801202000001080000",
+   "00000000000000801202000020001000",
+   "00000000000000801202010000001000",
+   "00000000000000801202020000001000",
+   "00000000000000801202040000001000",
+   "00000000000000801202040000800000",
+   "00000000000000801202080000001000",
+   "00000000000000801212000000001000",
+   "00000000000000801212000001000000",
+   "00000000000000801222000000001000",
+   "00000000000000801222000000800000",
+   "00000000000000821082000000000001",
+   "00000000000000821082000000000004",
+   "00000000000000821082000000000008",
+   "00000000000000821082000000000010",
+   "00000000000000821082000000000800",
+   "00000000000000821082000000001000",
+   "00000000000000821082800000000000",
+   "00000000000000821083000000000000",
+   "00000000000000889002000000100000",
+   "00000000000000889002000080000000",
+   "00000000000000909002000000100000",
+   "00000000000000909002000080000000",
+   "00000000000000a09002000080000000",
+   "00000000000020809002000080000000",
+   "00000000000040809002000000100000",
+   "00000000000080003800000048000000",
+   "00000000010000003800000008100000",
+   "00000000010000809002000000100000",
+   "00000000010000809002000040000000",
+   "00000000010000809002000080000000",
+   "00000000020000801202000000100000",
+   "00000008000000003800000008100000",
+   "00000010000000801202000000000400"
+  ]
+ }
+}
