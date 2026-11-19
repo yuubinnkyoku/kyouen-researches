@@ -35,7 +35,8 @@ artifacts:
 - path: research/experiments/n11-residual78-39witness-depth10-sweep-20261119/output/probe-records-w1.jsonl
   role: data
   note: 生probe記録 worker1（38 record）
-- path: research/experiments/n11-residual78-witness39-candidate-supply-scope-audit-20261120/audit_candidate_supply_scope_20261120.mjs
+- path: resear
+ch/experiments/n11-residual78-witness39-candidate-supply-scope-audit-20261120/audit_candidate_supply_scope_20261120.mjs
   role: verifier
   note: resolve5の4,728 fresh-safe候補と39-root sweepの範囲を独立監査。4入力blob pin、D4・整数determinant安全性・削除被覆・78行pair matchingを検査
 - path: research/
@@ -63,7 +64,8 @@ evidence: >-
   であることを実験確認: sweep43 root 00000000000000003800000008001081を出版時分解(bit 61)
   と代替分解(bit 0)の両方で両順序probeしnodes 3,164,139/loss=false/capped=falseが完全一致。
   （3）実行: 39 root×2順序=78 probe（worker0 40・worker1 38）。pilot_d6（3,402 nodes・
-  loss=false）は全78 probeで合格。分類GATE（両順序完走・uncapped・partition一致）通過。
+  loss=
+false）は全78 probeで合格。分類GATE（両順序完走・uncapped・partition一致）通過。
   結果: **WIN 0 / REFUTED 39 / CAPPED 0 / 順序矛盾0**、総nodes 115,940,695（最大単一probe
   9,930,490 nodes）。
   （4）帰結: REFUTED-D10はLOSS証明でないため78行は1行も閉じない。frontier・5親targetは
@@ -93,11 +95,12 @@ evidence: >-
 K1059のsweepはresolve5が選んだ39本を全てREFUTED-D10とした。この39本は互いに素なpair matchingで残余78行を覆うが、resolve5正本の事前fresh-safe候補集合は4,728本であり、今回の入力はその39本だけである
 。したがってこのsweep外のfresh-safe候補は4,689本。事前候補グラフには706個の異なるpair辺があり、選択matchingが使った39辺以外に667辺が残る。また78行全てにsingleton候補があり、今回の39本は全て2行pairなのでsingleton候補はこのsweepで消費されていない。
 
-これは事前候補集合に関する範囲監査であり、sweep後の最大matchingを再計算したものではない。さらにresolve5の明示verdict結合は379 REFUTED / 168 WINで、K0863の8,964-root全体cacheとの結合ではない。よって4,689本が現在も全て未判定とも、別matchingが必ず残るとも主張しない。次は全体cacheをroot単位で再構成して候補へ結合し、39 REFUTEDを除外して再解決する。詳細は[実験](../../experiments/n11-residual78-witness39-candidate-supply-scope-audit-20261120/README.md)と[研究ログ](../../log/2026-11-20-n11-residual78-candidate-supply-scope-audit.md)。
+これは事前候補集合に関する範囲監査であり、sweep後の最大matchingを再計算したものではない。さらにresolve5の明示verdict結合は379 REFUTED / 168 WINで、K0863の8,964-root全体cacheとの結合ではない。よって4,689本が現在も全て未判定とも、別matchingが必ず残るとも主張しない。次は全体cacheをroot単位で再構成して候補へ結合し、39 REFUTEDを除外して再解決する。詳細は[実験](../../experiments/n11-residual78-witness39-candidate-supply-scope-audit-20261120/README.md)と[研究ログ](../../log/2026-11-20-n11-residual78-candi
+date-supply-scope-audit.md)。
 
-## 追記: 39 REFUTED rootの深さ飽和audit（2026-11-19追試・display順は出版順）
+## 追記: 39 REFUTED rootの深さ飽和audit（2026-11-19追試。追記セクションは出版順に並記）
 
-dREFUTED-D10（誤記注意: depth-10の意）がdepth>10に隠れた先手勝ちを残す可能性を閉じるため、同じ39 root・同じ(child,bit)分解・同じrunner v17でdepth 12・14を全78 probe（両AND順序・cap 30M・pilot_d6制御）再実行した。全probeでloss=false・uncapped。72/78分岐はd12とd14のnode数が完全一致し、差のあった6分岐（root 5個・うち1個は両順序）もdepth 16再probeでd14と完全一致した。d12総nodes 134,902,159（d10比+16.4%）。
+REFUTED-D10がdepth>10に隠れた先手勝ちを残す可能性を閉じるため、同じ39 root・同じ(child,bit)分解・同じrunner v17でdepth 12・14を全78 probe（両AND順序・cap 30M・pilot_d6制御）再実行した。全probeでloss=false・uncapped。72/78分岐はd12とd14のnode数が完全一致し、差のあった6分岐（root 5個・うち1個は両順序）もdepth 16再probeでd14と完全一致した。d12総nodes 134,902,159（d10比+16.4%）。
 
 **runner v17の移動モデル・終端規則のもとでこの39 rootの探索木は深さ14以内に飽和し、全深さで先手勝ちが存在しない。この39 rootは残余78行の閉鎖witnessとして永久に使用不能。**候補供給範囲監査（前節）と合わせると、正しい現状は「選択39-root計画の全滅＋39 rootの永久使用不能」であり、残余78行のadd-one-stone候補poolは枯渇していない。**次の一手はこの39 dead rootを除外した再照合（resolve6: 未選択667 pair辺・fresh-safe 4,689本のK0863 8,964-root全体cacheとの結合を含む）**である。この時点で初期出版文書の「候補供給枯渇（全行の被覆候補確実全滅の初波）」記述は撤回済みとする。
 
