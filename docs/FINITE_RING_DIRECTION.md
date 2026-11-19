@@ -8,9 +8,9 @@
 
 現在の研究は次の問いに集中している。
 
-- 標準 n×n 盤の勝敗・Grundy（n≤10 解決、[K0023](knowledge/items/K0023-n11-exact-safe-layers-and-unknown-winner.md)、n=11 未決 [K0105](knowledge/items/K0105-n11-empty-root-winner-open.md)）
-- 固定幅長方形の一般定理（[K0024](knowledge/items/K0024-fixed-width-q-point-threshold.md)、[K0068](knowledge/items/K0068-standard-fixed-width-parity-threshold.md) ほか）
-- 図形変種（共面・共球・二次曲線・多項式持ち上げ、[K0504](knowledge/items/K0504-geometric-rule-variant-comparison.md)）
+- 標準 n×n 盤の勝敗・Grundy（n≤10 解決、[K0023](../research/knowledge/items/K0023-n11-exact-safe-layers-and-unknown-winner.md)、n=11 未決 [K0105](../research/knowledge/items/K0105-n11-empty-root-winner-open.md)）
+- 固定幅長方形の一般定理（[K0024](../research/knowledge/items/K0024-fixed-width-q-point-threshold.md)、[K0068](../research/knowledge/items/K0068-standard-fixed-width-parity-threshold.md) ほか）
+- 図形変種（共面・共球・二次曲線・多項式持ち上げ、[K0504](../research/knowledge/items/K0504-geometric-rule-variant-comparison.md)）
 - 最大・極大配置、再配置、証明書、探索方式
 
 これらはすべて**盤の点は実数平面上の格子点**であり、変えているのは禁止図形か盤の形である。
@@ -27,7 +27,7 @@ Delta = det[[x_i, y_i, x_i^2+y_i^2, 1]] = 0
 
 ## 2. 実証：分かったこと
 
-詳細は [K1058](knowledge/items/K1058-finite-field-and-inversive-plane-boards.md) と
+詳細は [K1058](../research/knowledge/items/K1058-finite-field-and-inversive-plane-boards.md) と
 `research/experiments/finite-field-kyouen-20261120/` にある。要点だけ記す。
 
 ### 2.1 有限体盤は q mod 4 で別ゲームになる
