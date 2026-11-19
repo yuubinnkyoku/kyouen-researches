@@ -1,0 +1,108 @@
+{
+  "schema": "n11-fifth-sixth-witness-win7-certificates-20261119-v1",
+  "source_main": "cc8be6d6dc1df9ef87dd10aae4b9103035e82754",
+  "witness_source": {
+    "cover_resolve": "research/experiments/n11-head1410-residual-48-root-sweep-two-win-receipts-20261119/output/five-parent-refuted-excluded-cover-resolve-20261119.json",
+    "cover_resolve_blob": "600b23d39888ea0e693742da4b2ae9c372a9faf0",
+    "note": "K1033のREFUTED除外後の63 eligible candidate poolから選定された28-root witness（53行）のうち、K1035（root C）の2 REFUTED候補を除く未試験25候補内で先手のdepth-10勝ちが示された2 root。同一witness内の他候補の判定は本実験の対象外。"
+  },
+  "epoch_note": "epoch-1の計算成果は出版前に実行環境消失で失われた。epoch-2は決定的パイプライン（同engine blob・同手順・昇順合法応手・killTable空）を1から再実行し、証明書・gzipのSHA-256がepoch-1の記録値と完全一致することを確認した。",
+  "roots": [
+    {
+      "name": "fifth",
+      "root": "00000000000000805202080001000000",
+      "child": "00000000000000005202080001000000",
+      "added_bit": 71,
+      "legal_next_moves": 54,
+      "completed_moves": 54,
+      "total_nodes": 5121073,
+      "strategy_rows": 55857,
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "fbt_drops": 0,
+      "certificate_sha256": "69589e76e5d2e5f22e6992929f38d9fd67f07ce1bd9fe9e3f971d32bdd635a49",
+      "certificate_bytes": 2017673,
+      "certificate_gz_sha256": "aeafc6a4fd8e6657925241d332d8000b91e7fb29e408d453c0ed45847206ff8d",
+      "certificate_gz_bytes": 247265,
+      "file_pattern": "win7-root-00000000000000805202080001000000-20261119.n11[.gz]"
+    },
+    {
+      "name": "sixth",
+      "root": "00000000040000801202000080100000",
+      "child": "00000000000000801202000080100000",
+      "added_bit": 90,
+      "legal_next_moves": 55,
+      "completed_moves": 55,
+      "total_nodes": 931581,
+      "strategy_rows": 30984,
+      "terminal_stone_range": [
+        13,
+        17
+      ],
+      "fbt_drops": 0,
+      "certificate_sha256": "5289f152e88072d716f22d42414222162facb7486d07fd024b61fdc50ddef885",
+      "certificate_bytes": 1117575,
+      "certificate_gz_sha256": "592dd6aa966afc19c23a77c9d742a6f01c3c371221ca95ffc0bb9851d158cf1d",
+      "certificate_gz_bytes": 139336,
+      "file_pattern": "win7-root-00000000040000801202000080100000-20261119.n11[.gz]"
+    }
+  ],
+  "verification": {
+    "method": "BigInt 3x3余因子展開（cacheなし）と4x4 Bareiss整数行列式（engine importなし）の二重独立検証＋全subroot消費状態の和＝証明書行集合のunion監査＋両検証器の状態流量一致チェック",
+    "fifth": {
+      "bigint_subroots_passed": 54,
+      "bigint_union_missing": 0,
+      "bigint_union_extra": 0,
+      "terminal_count": 16170,
+      "visited_states_across_subroots": 127080,
+      "loser_reply_edges": 124176,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "root_safe": true,
+      "root_mobility": 54,
+      "bareiss_union_audit": {
+        "certificate_rows": 55857,
+        "consumed_records": 82983,
+        "consumed_unique": 55857,
+        "missing": 0,
+        "extra": 0,
+        "exact_union": true
+      }
+    },
+    "sixth": {
+      "bigint_subroots_passed": 55,
+      "bigint_union_missing": 0,
+      "bigint_union_extra": 0,
+      "terminal_count": 10905,
+      "visited_states_across_subroots": 66292,
+      "loser_reply_edges": 59089,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "root_safe": true,
+      "root_mobility": 55,
+      "bareiss_union_audit": {
+        "certificate_rows": 30984,
+        "consumed_records": 42537,
+        "consumed_unique": 30984,
+        "missing": 0,
+        "extra": 0,
+        "exact_union": true
+      }
+    }
+  },
+  "input_pins": {
+    "engine": "extractor v16 git blob 5518d375fc6b4a7a14c22a1a65586f0c1c5731c0 (research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/class4_child1_cert_extractor_exact_v16.ts)",
+    "bigint_verifier": "git blob 62b5d9413daafb172f6e10249976ee6808f7b454",
+    "bareiss_verifier": "git blob 2960afabdf7c1a7012d223974b65f1423e6890da",
+    "legal_move_lists": "witness-win-roots-legal-move-lists-20261119.json（生存手規約: root stonesの任意3点と共円・共線になる空点は違法。数 53/54/55）"
+  },
+  "verification_flow": "extract_root_rec_20261119.mjs で抽出後、verify_win_roots_rec_20261119.mjs が BigInt/Bareiss 両検証・状態流量一致・union監査を実行し、全gate PASSで各 per-root json を書く。scripts/ に両driverとlegal生成器を同梱。",
+  "receipt_boundary": "本研究では証明書の出版のみを行い、receipt fold（K1033 frontier簿記の更新）は行っていない。K1033の簿記（5親target累計21/112行・残91行）は不変。",
+  "guards": "標準11×11空盤・二石root {49,60}/{59,60}・S2 {59,60}・class 1/2/4はUNKNOWN。REFUTED-D10は LOSS証明ではない。証明書は特定rootの先手WIN7-D10を意味するのみで、クラス全体・上流rootの勝敗を確定しない。"
+}
