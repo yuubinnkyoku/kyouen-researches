@@ -1,7 +1,7 @@
 # 座標環を変える研究方向：現在地（2026-11-20）
 
 `docs/FINITE_RING_DIRECTION.md` の提案から1日でどこまで進んだかの総括。
-詳細は各実験文書と [K1058](../../research/knowledge/items/K1058-finite-field-and-inversive-plane-boards.md) を参照。
+詳細は各実験文書と [K1058](../research/knowledge/items/K1058-finite-field-and-inversive-plane-boards.md) を参照。
 
 ## 1. 確立した結果（証明済み）
 
@@ -17,7 +17,7 @@ gamma = −2 · Area(p1,p2,p3)
 
 **系**：三点が `[0,a]²` 内なら `|gamma| ≤ a²`。
 
-これは [DET_GAMMA_AREA.md](../../research/experiments/finite-field-kyouen-20261120/DET_GAMMA_AREA.md) に
+これは [DET_GAMMA_AREA.md](../research/experiments/finite-field-kyouen-20261120/DET_GAMMA_AREA.md) に
 証明と数値検証（28,508 組、不一致 0）を記録した。
 
 ### 1.2 層サイズ公式（k ≤ 5）
