@@ -142,6 +142,7 @@ import hashlib
 import itertools
 import json
 import math
+import os
 import sys
 import urllib.request
 
@@ -431,6 +432,8 @@ def classify2(rows, combo):
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--local", default=None, help="directory with the published JSONs (offline mode; sha1 still checked)")
+    ap.add_argument("--out", default="output/cost16-k34-crosscheck-20261119.json",
+                    help="write deterministic machine-readable check results")
     args = ap.parse_args()
 
     js = {tag: fetch(*PINS[tag], args.local) for tag in PINS}
@@ -1546,6 +1549,63 @@ def main() -> int:
                    and j34["structure"]["rank34_root"]["root"] == top[33]["root"],
                    (str(em34), str(ea34), str(eb34))))
 
+
+    # Two closure checks added after the 201-check k=34 publication:
+    # compare the embedded regression blocks directly with their earlier
+    # preread publications, and compare the rank-34 preread's full
+    # structure fields directly with the published k=34 result JSON.
+    s34 = j34["structure"]
+    def regression_projection(block):
+        nc = block["new_census"]
+        pair = nc["pair"]
+        pair_norm = {
+            "b_only": pair.get("b_only", pair.get("shared", 0)),
+            "zero": pair.get("zero", 0),
+            "disjoint": pair["disjoint"],
+            "total": pair["total"],
+            "expected_total": pair["expected_total"],
+        }
+        def census_projection(x):
+            return {"counts": x["counts"], "total": x["total"],
+                    "double_row_histogram": x.get("double_row_histogram", {})}
+        def sextet_projection(x):
+            return {"counts": x["counts"], "total": x["total"]}
+        return {
+            "root": block["root"], "rows": block["rows"],
+            "membership": block["membership"], "a_part": block["a_part"],
+            "b_part": block["b_part"], "prior_hits": block["prior_hits"],
+            "prior_hit_indices": block["prior_hit_indices"],
+            "new_census": {
+                "pair": pair_norm,
+                "triple": nc["triple"], "quad": nc["quad"], "quint": nc["quint"],
+            },
+            "new_quint_double_row_histogram": block["new_quint_double_row_histogram"],
+            "new_triple_double_row_histogram": block["new_triple_double_row_histogram"],
+            "new_quad_double_row_histogram": block["new_quad_double_row_histogram"],
+            "full_triples": census_projection(block["full_triples"]),
+            "full_quints": census_projection(block["full_quints"]),
+            "sextet_census": sextet_projection(block["sextet_census"]),
+        }
+    checks.append(("k34preread_embedded_rank32_rank33_blocks_match_prior_prereads",
+                   regression_projection(js["k34pre"]["rank32_regression"])
+                   == regression_projection(js["k32pre"]["rank32"])
+                   and regression_projection(js["k34pre"]["rank33_regression"])
+                   == regression_projection(js["k33pre"]["rank33"]),
+                   None))
+    def published_histogram(obj):
+        return {int(k): v for k, v in obj.get("histogram", obj).items()}
+    checks.append(("k34json_preread_structure_matches_published_result",
+                   s34["new_quad_census"] == {k: nc34["quad"][k] for k in ("b_only", "zero", "disjoint")}
+                   and s34["new_quint_census"] == {k: nc34["quint"][k] for k in ("b_only", "zero", "disjoint")}
+                   and s34["quints_zero_synth_count"] == nc34["quint"]["zero"]
+                   and s34["triple_census_k34"] == ft34["counts"]
+                   and s34["quint_census_k34"] == fq34["counts"]
+                   and s34["sextet_census_k34"] == sx34["counts"]
+                   and published_histogram(s34["new_triple_b_only_double_row_histogram"]) == h_tri34
+                   and published_histogram(s34["new_quad_b_only_double_row_histogram"]) == h_quad34
+                   and {int(k): v for k, v in s34["quint_b_only_double_rows"].items()} == q_twos[34],
+                   None))
+
     n_fail = 0
     for name, ok, extra in checks:
         print(("PASS" if ok else "FAIL"), name, extra if extra is not None else "")
@@ -1553,8 +1613,26 @@ def main() -> int:
     print(f"--- {len(checks)} checks, {n_fail} failures")
     print(f"grand total = {T}")
     print("kill(k)% =", {k: round(kill[k] / T * 100, 4) for k in sorted(kill)})
+    report = {
+        "schema": "n11-cost16-k34-crosscheck-20261119-v1",
+        "date": "2026-11-19",
+        "source_main_commit": "d70014678ebcc93441b5b793d9778125c5c67dea",
+        "inputs": {
+            **{tag: {"file": name, "git_blob_sha1": sha}
+               for tag, (name, sha) in PINS.items()},
+            "k34_jsonl": {"file": JSONL_K34[0], "git_blob_sha1": JSONL_K34[1]},
+        },
+        "check_count": len(checks),
+        "all_pass": n_fail == 0,
+        "checks": [{"name": name, "pass": bool(ok), "detail": extra}
+                   for name, ok, extra in checks],
+    }
+    os.makedirs(os.path.dirname(args.out) or ".", exist_ok=True)
+    with open(args.out, "w", encoding="utf-8") as f:
+        json.dump(report, f, ensure_ascii=False, indent=2, sort_keys=True, default=str)
+        f.write("\n")
+    print("wrote", args.out)
     return 0 if n_fail == 0 else 1
 
 
-if __name__ == "__main__":
-    sys.exit(main())
+if __name__ == "__main
