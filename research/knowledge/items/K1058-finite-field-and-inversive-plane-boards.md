@@ -49,6 +49,12 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/output/inversive_plane.json
   role: data
   note: q=3,5 の反転平面ゲーム全値
+- path: research/experiments/finite-field-kyouen-20261120/DET_CENTRE_FORMULA.md
+  role: source
+  note: ラグランジュ恒等式・中心公式・バウンディングボックス条件
+- path: research/experiments/finite-field-kyouen-20261120/DET_CENTRE_CASES.md
+  role: source
+  note: 中心の内外による場合分け
 - path: research/experiments/finite-field-kyouen-20261120/DET_AREA_POWER.md
   role: source
   note: Area*power<=a^4/4の鋭い上界
@@ -188,8 +194,20 @@ n=4, q=5 では 5,811 個中 2,120 個、n=5, q=5 では 151,394 個中 122,168 
 q > D(n) の 44 通りで禁止集合の完全一致を確認した（不一致 0）。
 
 **補題（証明済み）**：三点の座標から定まる係数 gamma（x²+y² の係数）は
-`gamma = −2·Area(p1,p2,p3) を満たす。三点が [0,a]² 内なら Area ≤ a²/2 なので |gamma| ≤ a²。
-`n**連続緩和との関係**：四点目を実数に許した連続最大は ⁴/2 + [a奇数]/2 で、
+`gamma = −2·Area(p1,p2,p3)` を満たす。三点が `[0,a]²` 内なら `Area ≤ a²/2` なので `|gamma| ≤ a²`。
+
+**連続上界の核心**：`|Delta| = |gamma|·|power|` で `|gamma| = 2·Area` なので、連続上界は
+`Area · max|power| ≤ a⁴/4` と同値。a ≤ 7 の全三点で違反 0 で、最悪値がちょうど `a⁴/4` に一致する（鋭い上界）。
+最悪ケースは a 奇数なら角の直角三角形 `(0,0),(a,0),(0,a)`（Area=a²/2, power=a²/2）、
+a 偶数なら `(0,0),(a,0),(a/2,a/2)`（Area=a²/4, power=a²）。
+
+**代数的整理**：`u=p2−p1`、`v=p3−p1` とおくと、ラグランジュの恒等式 `|u|²|v|² = (u×v)² + (u·v)²` と
+外接円公式 `Area·R² = |u|²|v|²|u−v|²/(8|u×v|)` が使える。中心は
+`O = ((|u|²v_y − |v|²u_y)/(2c), (|v|²u_x − |u|²v_x)/(2c))`（`c=|u×v|`）。
+四点 `{0,u,v,O}` のバウンディングボックスが一辺 a に収まる条件の下で、`Area·R²` の最大は
+**a ≤ 7 でちょうど `a⁴/4`** になる（極値は正方形の3角を結ぶ直角三角形）。
+
+**連続緩和との関係**：四点目を実数に許した連続最大は `a⁴/2 + [a奇数]/2` で、
 格子最大 `a²⌊a²/2⌋` との差は **a 奇数でちょうど 1**、a 偶数で 0 である（a ≤ 8 の全数計算）。
 この分解により証明は「連続最大の評価」と「奇数のとき格子点で 1 下がること」の2段階に分かれる。
 なお `Delta` は `gamma` の符号で凸にも凹にもなり、凹の場合は最大が内部（円の中心付近）で
