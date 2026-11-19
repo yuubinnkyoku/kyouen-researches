@@ -1,0 +1,45 @@
+{
+  "all_pass": true,
+  "classification": "universal proof by x-induction and complete A/B/C signature bands",
+  "counts": {
+    "A_B_C_signature_coverage_identity_and_mex": 740943,
+    "B_C_child_anchor_direct_checks": 16820,
+    "Theorem_T_parity_bound": 740943,
+    "fixed_seed_ABC_scatter": 12000,
+    "formula_and_Theorem_T_grid": 752913,
+    "general_tail": 19988,
+    "general_tail_signature": 19988,
+    "height_only_reduction_R_le_13": 5558,
+    "ordered_and_canonical_direct_vs_formula": 8322
+  },
+  "failure_count": 0,
+  "finite_audit_role": "independent recurrence, child-anchor, transcription, band, mex, low-R, tail, and scatter checks only",
+  "first_failures": [],
+  "repeat_byte_identical": true,
+  "repeat_runs": 2,
+  "scope": {
+    "direct_R": "0..x+40",
+    "direct_x": [
+      4,
+      60
+    ],
+    "low_R": "0..13",
+    "scatter_points": 12000,
+    "scatter_seed": 20261119,
+    "signature_R": "1..x+17",
+    "signature_x": [
+      4,
+      1200
+    ],
+    "tail_R": "x+17..x+20",
+    "tail_x": [
+      4,
+      5000
+    ],
+    "target": "H(R;(x,4);12), x>=4, R>=0"
+  },
+  "sha256_without_hash_field": "65309ddc6613dbf4bc178a7fbda51d035f47e59dede46ae93c8b5468b9f8a7c9",
+  "theorem": "K1024 z=12 y=4 two-token residual Grundy slice",
+  "total_checks": 2317475,
+  "verifier_sha256": "d1f4b8674199d6e994902db3d73e069429cc38c10314ba2dcc4bef3a88789635"
+}
