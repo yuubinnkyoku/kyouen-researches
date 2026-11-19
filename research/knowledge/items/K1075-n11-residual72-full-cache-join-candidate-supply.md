@@ -3,11 +3,11 @@ id: K1075
 title: "残余72行のresolve6-verbatim full cache join候補供給再構築: stage-1がpublished resolve6正本と全数値一致・新規判定ちょうど39 root（WIN 1二重出典+38 REFUTED）衝突0・universe 7,448（judged WIN 0）でfresh-safe 4,109・最大matching 36が残余72行を完全1回被覆（stranded 0・全行singleton候補・1行最少52本）・windfall型第18証明書候補0根・既receiptの追加被覆0行・retire後38 live根の38/38がopen行被覆のままREFUTED-D10（resolve7の供給ゼロを行単位裏付け・34×2+4×1割当の幾何独立再検査PASS）"
 kind: computation
 status: computed
-topics: [residual-coverage]
+topics: [residual-games, search-methods, statistics]
 aliases:
   - candidate-supply rebuild over the residual 72 rows (resolve6-verbatim corpus/join/universe rebuild, single-owner lane)
   - fresh-safe pool 4,109 over universe 7,448; maximum matching 36 exactly covers the 72 residual rows, stranded 0
-  - windfall-type 18th-certificate candidates: 0 roots; receipted-WIN still covering open rows: 0 rows
+  - "windfall-type 18th-certificate candidates: 0 roots; receipted-WIN still covering open rows: 0 rows"
   - per-row fresh-safe candidate demand ranges 52..76 for every one of the 72 rows
 relations:
 - type: depends_on
@@ -42,7 +42,7 @@ artifacts:
   role: data
   note: 候補供給正本（SHA-256 49b6f85f6b51cfdd8a59c7797223da3d8797885d3c992ce67dc9dae629a883fa）・2回実行+別cwd別プロセスでbyte-identical
 - path: research/log/2026-11-20-n11-residual72-full-cache-join-candidate-supply.md
-  role: note
+  role: log
   note: 研究ログ（単一オーナー宣言・結果・次の一手）
 scope: >-
   出版済み正本（SHA-256 pin）とmain上corpus 1,272ファイルのみから残余72行の

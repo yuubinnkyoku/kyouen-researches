@@ -37,7 +37,7 @@ artifacts:
   note: 実験README（入力pin・結合構成・結果・決定論性・解釈規約・次の一手）
 - path: research/experiments/n11-residual78-witness39-candidate-supply-scope-audit-20261120/output/candidate-supply-scope-audit-20261120.json
   role: data
-  note: 事前の範囲監査（fresh-safe 4,689本/pair 667辺が残るとの予測値は本項で全て再計算され確定: fresh-safe 4,417・pair辺667。sweep39外のfresh-safeはjoin後に判定済み分を含む）
+  note: "事前の範囲監査（fresh-safe 4,689本/pair 667辺が残るとの予測値は本項で全て再計算され確定: fresh-safe 4,417・pair辺667。sweep39外のfresh-safeはjoin後に判定済み分を含む）"
 scope: >-
   K0863全体cache・post-cache掃引・published receiptをroot単位で結合した
   resolve5 universe 7,969の再照合まで。39 dead rootの除外、既知WINの残余行
