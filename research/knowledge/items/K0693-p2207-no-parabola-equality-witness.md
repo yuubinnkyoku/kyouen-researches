@@ -15,6 +15,9 @@ relations:
 - type: supports
   target: K0101
   note: p=2207の単一CNF独立監査による等号不達成が、全奇素数での等号への反例を与える
+- type: depends_on
+  target: K0974
+  note: 全1,103 d のDRAT監査（drat-trim）
 artifacts:
 - path: research/experiments/parabola-p2207-single-cnf-audit-20261110/schema.py
   role: verifier
@@ -98,8 +101,14 @@ artifacts:
 - path: research/log/2026-11-09-p2207-sample-reaudit-complete.md
   role: source
   note: 標本残り9点の逐次再監査の完了記録（標本21/21 全点VERIFIED）
+- path: research/experiments/parabola-p2207-no-equality-witness-20261107/audit_full_2207.py
+  role: verifier
+  note: 再起動耐性のある全量監査ドライバ。W31構築、pilot d=2..6 全件VERIFIED
+- path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_trim_audit_full_2207_92f0aa9575ed519d.json
+  role: data
+  note: drat-trimによる集約領収書1,082件、全件VERIFIED
 scope: 奇素数p=2207のQ_p、標準q=4、等号A(p)=(p+3)/2の不達成。任意の他素数への一般化は主張しない。
-evidence: 別経路のサイズ1105単一CNFをCardEnc非依存の独立schemaへ全照合し、全31868提供幾何節を整数4x4で検査。元DRATを固定DRAT-trim -Uと空節処理修正版LRATで受理し、採用CNF・LRAT gzipも別処理で実再生した。これにより上界1104を有限計算として独立監査済み。旧d別の修正版被覆は21/1103のままであり、単一CNFの完了と混同しない。
+evidence: 別経路のサイズ1105単一CNFをCardEnc非依存の独立schemaへ全照合し、全31868提供幾何節を整数4x4で検査。元DRATを固定DRAT-trim -Uと空節処理修正版LRATで受理し、採用CNF・LRAT gzipも別処理で実再生した。これにより上界1104を有限計算として独立監査済み。2026-11-17に独立checker drat-trim（binary sha256 92f0aa95…）による全1,103 dのDRAT監査が完了し、VERIFIED 1,082件（集約領収書 drat_trim_audit_full_2207_92f0aa9575ed519d.json）+ 標本21件（修正版増分チェッカー）= 全dでVERIFIED、SAT 0・UNKNOWN 0。監査そのものを表す項目は K0974。
 ---
 
 ## d別旧証拠の信頼境界（2026-11-09）
@@ -120,6 +129,9 @@ inventoryはレシートの整合性を検査したもので、今回DRATを再�
 上記の5件は固定snapshot時点の記録として残す。現況の確定は
 [再監査ステータスログ](../../log/2026-11-09-drat-reaudit-status-omp.md) と
 [標本再監査完了ログ](../../log/2026-11-09-p2207-sample-reaudit-complete.md) を参照。
+追記（2026-11-18）: 独立checker drat-trimによる全量監査が完了した。
+標本21件を除く1,082 dがすべてVERIFIED（SAT 0・UNKNOWN 0）で、全1,103 dが監査済みとなった。
+旧チェッカーの標本21件も修正版増分チェッカーで再監査済みである。詳細は K0974。
 
 ## 命題・範囲
 

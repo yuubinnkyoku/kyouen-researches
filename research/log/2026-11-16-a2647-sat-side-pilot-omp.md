@@ -36,8 +36,17 @@ candidate 変換 → 独立幾何検査の段には進んでいない。**これ
 
 - `research/experiments/parabola-ternary-selection-20261109/walksat.cpp`
   SHA-256 `1a3036f0389b22103d22df15847e6968f1e444770a6a70c235eb075ae993e315`
+  → **訂正（2026-11-18）**: 上記は pilot 実行時点の SHA だが、その後の 2026-11-17 の
+  編集で現行ファイルの SHA は
+  `52eacd159bb172dfa263bbd3618ffb7559b7e2040c9d879106f1c4a4e03a058e`
+  （11,825 B）となっている（W42 実測・W49 再実測）。旧版のバイトは未追跡のため
+  再取得不能。Pilot 実行・`eval-check.json` / `pilot-results.json` の内容は旧版による
+  ものである点は変わらない。
 - `research/experiments/parabola-ternary-selection-20261109/walksat_pilot.py`
   SHA-256 `31209695ae18d6b83e37a2601cee5bf1f0e204aa4ae970c22f1de51741775190`
+  → **訂正（2026-11-18）**: 同様に現行 SHA は
+  `fb584eec83623eabf52ad8342104989598d2acd939eea4a39bba49fcd13ccc25`
+  （24,380 B、2026-11-17 15:44 UTC）。
 
 新規出力ディレクトリ（既存を上書きしない）:
 `research/experiments/parabola-ternary-selection-20261109/output/walksat-pilot-20261116/`

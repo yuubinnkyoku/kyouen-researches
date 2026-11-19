@@ -21,6 +21,9 @@ relations:
 - type: depends_on
   target: K0707
   note: 旧d別監査では削除時代入失効の修正版を使用。別経路の単一CNFはRUP限定検査と空節処理修正版LRATで再検査
+- type: depends_on
+  target: K0975
+  note: 全1,625 d のDRAT監査（drat-trim + 修正版増分チェッカー）
 artifacts:
 - path: research/experiments/parabola-single-cnf-audits-20261110/check_case.py
   role: verifier
@@ -80,8 +83,17 @@ artifacts:
 - path: research/log/2026-11-09-drat-reaudit-status-omp.md
   role: source
   note: HEAD時点の修正版再監査の確定状態（3251は84/1625、計画標本65/65完了）
+- path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_trim_audit_full_3251_92f0aa9575ed519d.json
+  role: data
+  note: drat-trimによる残り1,541 d全量監査の受理記録（全VERIFIED・重複なし）
+- path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/p3251-drat-full/progress.log
+  role: source
+  note: 全量監査の進捗記録とd=781 recheck修復の記録
+- path: research/log/2026-11-18-p3251-audit-completion-knowledge-omp.md
+  role: source
+  note: 監査完了記録とK0708昇格ドラフト
 scope: 奇素数p=3251のQ_p、標準q=4、等号A(p)=(p+3)/2の不達成。他素数への一般化は主張しない。
-evidence: 別経路のサイズ1627単一CNFを27622構造節と60266真の禁止四点へ独立照合し、元DRATをRUP限定検査・空節処理修正版LRATで受理した。採用CNF・LRAT gzipの別処理実再生と全bindingも成功し、A(3251)<=1626を有限計算として独立監査済み。旧d別の修正版被覆84/1625は履歴として維持する。
+evidence: 別経路のサイズ1627単一CNFを27622構造節と60266真の禁止四点へ独立照合し、元DRATをRUP限定検査・空節処理修正版LRATで受理した。採用CNF・LRAT gzipの別処理実再生と全bindingも成功し、A(3251)<=1626を有限計算として独立監査済み。旧d別の修正版被覆84/1625は履歴として維持する。2026-11-18に全1,625 dのDRAT監査が完了した（84 dは修正版増分チェッカー、残り1,541 dはdrat-trimで全件VERIFIED、SAT 0・UNKNOWN 0、unknown.json不存在）。d=781のper-d領収書はVM再起動で0バイトになったが --ds 781 --recheck で同一proof（proof_gz_sha256 9b00b701…）を再現し修復済み。詳細は K0975。
 ---
 
 ## 命題・範囲
@@ -122,6 +134,7 @@ Git管理する採用CNF・LRAT gzipの別処理での実再生と全bindingも�
   追記（2026-11-09）: その後レシートはHEAD `a0fcb1f` 時点で84 dまで追記され、
   計画標本 `d=1,26,...,1601` は65/65完了した（残りは標本外の1541 d）。
   現況の確定は [再監査ステータスログ](../../log/2026-11-09-drat-reaudit-status-omp.md) を参照。
+  追記（2026-11-18）: 残りの標本外1,541 dもdrat-trimで全件VERIFIEDとなり、全1,625 dのDRAT監査が完了した（SAT 0・UNKNOWN 0、unknown.json不存在）。d=781のper-d領収書はVM再起動で0バイトになったが --ds 781 --recheck で同一proof（proof_gz_sha256 9b00b701…）を再現し修復済み。詳細は K0975。
 - inventoryは保存レシートの整合性・被覆を検査したもので、今回DRATを再生していない。
   旧d別全数監査は未完了だが、現在の本項は別経路の単一CNF監査により `computed` とする。
   検査器・コンパイラ依存は残り、一般健全性やLean形式証明ではない。
