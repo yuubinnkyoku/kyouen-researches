@@ -66,6 +66,10 @@ jobs:
         run: |
           uv run --locked python research/experiments/vertical-fiber-two-token-z10-y2-boundary-20261119/verify_z10_y2.py
           git diff --exit-code -- research/experiments/vertical-fiber-two-token-z10-y2-boundary-20261119/output/audit.json
+      - name: Audit K1005 two-token z=10 y=3 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z10-y3-boundary-20261119/verify_z10_y3.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z10-y3-boundary-20261119/output/audit.json
       - name: Audit quantitative circle-density modular checker
         run: python research/experiments/fixed-width/scripts/verify_quantitative_density.py
       - name: Audit prime-avoidance finite checks
@@ -844,3 +848,6 @@ jobs:
 
 # Refresh generated views for K1004 z=10 y=2 two-token boundary slice full Grundy theorem (x-outer induction, 4,175,318 audit checks, zero mismatches, two byte-identical runs; 2026-11-19).
 # Refresh generated knowledge after K1004 publication; z=10 y=3..5 slices and the y>=6 uniform conjecture remain open (2026-11-19).
+
+# Refresh generated views for K1005 z=10 y=3 two-token boundary slice full Grundy theorem (x-outer induction, 8,182,142 audit checks, zero mismatches, two byte-identical runs; 2026-11-19).
+# Refresh generated knowledge after K1005 publication; z=10 y=4..5 slices and the y>=6 uniform conjecture remain open (2026-11-19).

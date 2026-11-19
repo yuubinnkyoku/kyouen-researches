@@ -1,0 +1,57 @@
+{
+  "all_pass": true,
+  "classification": "universal proof by induction on x using explicit A/B/C signature bands, K1004, K0989, K0832 Theorem T / height-only reduction and the general high-R tail; finite checks are independent audits only",
+  "counts": {
+    "Theorem_T_formula_grid": 2050947,
+    "direct_formula_two_engines": 8410,
+    "even_parent_bound": 1012986,
+    "height_only_reduction": 5478,
+    "independent_BC_anchor_direct": 8410,
+    "mex_identity": 2026971,
+    "odd_parent_bound": 1013985,
+    "signature_coverage_and_identity": 2026971,
+    "tail_formula": 19992,
+    "tail_signature": 7992
+  },
+  "failures": [],
+  "repeat_byte_identical": true,
+  "repeat_runs": 2,
+  "scope": {
+    "direct_R": "0 <= R <= x+40",
+    "direct_x": [
+      3,
+      60
+    ],
+    "height_only_R": "1 <= R <= 11",
+    "height_only_x": [
+      3,
+      500
+    ],
+    "signature_R": "1 <= R <= x+13",
+    "signature_x": [
+      3,
+      2000
+    ],
+    "tail_R": "x+14 <= R <= x+17",
+    "tail_offsets": [
+      0,
+      3
+    ],
+    "tail_signature_x": [
+      3,
+      2000
+    ],
+    "tail_x": [
+      3,
+      5000
+    ],
+    "theorem_R": "0 <= R <= x+24",
+    "theorem_x": [
+      3,
+      2000
+    ]
+  },
+  "sha256_without_hash_field": "679fb05f5d00e9da7876081dacdddc365e4e40dbc5b6368d89941fd2c24e8843",
+  "target": "H(R;(x,3);10), x>=3, R>=0",
+  "total_checks": 8182142
+}
