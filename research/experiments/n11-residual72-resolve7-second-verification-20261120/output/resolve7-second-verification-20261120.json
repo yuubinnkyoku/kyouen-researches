@@ -1,0 +1,717 @@
+{
+ "date": "2026-11-20",
+ "gates": [
+  {
+   "detail": "bed7d33193299a0aa06ea4e076562dfa46251d20d5c3c4ca7fd231ffe854908a",
+   "name": "pin-fold10.json",
+   "pass": true
+  },
+  {
+   "detail": "a62d6d50ffe3196ad2de1ff7b1df67ff8208b2a13510cce3f13aee0e9a085054",
+   "name": "pin-fold10second.json",
+   "pass": true
+  },
+  {
+   "detail": "24db2352ad0d94ee4a76ec3de294f02cbdac7899f0b6ef64ea695d261017cdc2",
+   "name": "pin-fold9.json",
+   "pass": true
+  },
+  {
+   "detail": "6b045eaefdd59e2c0fbd0f9b4a1e876b89c3f8b03cfade8f0ab1f8192cd0a984",
+   "name": "pin-probes-w0.jsonl",
+   "pass": true
+  },
+  {
+   "detail": "4aaa4d0a691f6da40e68dbaa41a353aaf3ea518a6863aec04886c17197e00967",
+   "name": "pin-probes-w1.jsonl",
+   "pass": true
+  },
+  {
+   "detail": "2d4ff7dd40b2fc66745068f6772724f38ccd04dd2a65507af925fb85252b3032",
+   "name": "pin-probes-w2.jsonl",
+   "pass": true
+  },
+  {
+   "detail": "e04e20bdadd1cba94cd0a285ff9fb72bb9e9d0a2d5a687f1d76ceccc7d0ccb0c",
+   "name": "pin-probes-w3.jsonl",
+   "pass": true
+  },
+  {
+   "detail": "e85d4bfb867a193f2b3cdb23ec9e15679359c9f337fcd97eb5c62473b90c281a",
+   "name": "pin-resolve6.json",
+   "pass": true
+  },
+  {
+   "detail": "207f4094a906817ebb4bbc5ad9b90c203c6a334ee6c8d9a501661257a0e1ce3f",
+   "name": "pin-resolve7.json",
+   "pass": true
+  },
+  {
+   "detail": "9f0161a8a61d311534fd3a4035b1c367426691c72ad5eb44efd01a5fae37e0cc",
+   "name": "pin-roots.json",
+   "pass": true
+  },
+  {
+   "detail": "c1073bae1d056db7f56d04a77fd9889d1e297a82a07537ddcd02c00d329dbabc",
+   "name": "pin-sv17.json",
+   "pass": true
+  },
+  {
+   "detail": "22953ae16a6002d87638531f2ca9fd286f6736b834fa296e5648505ada9074dc",
+   "name": "pin-sweep39.json",
+   "pass": true
+  },
+  {
+   "detail": "records=98 unique(root,ordering)=78",
+   "name": "probes-corpus-parsed",
+   "pass": true
+  },
+  {
+   "detail": "dups=20 disagree=[]",
+   "name": "probes-duplicate-records-node-exact-agree",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "probes-cap-uniform-30000000",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "probes-control-pilot-d6-uniform",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "probes-terminal-range-13-17-uniform",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "probes-ordering-no-error",
+   "pass": true
+  },
+  {
+   "detail": "roots=39 missing=[]",
+   "name": "probes-both-orders-per-root",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "probes-andclose-field-consistent",
+   "pass": true
+  },
+  {
+   "detail": "mismatch=[]",
+   "name": "k1069-classification-rebuilt-from-raw-probes",
+   "pass": true
+  },
+  {
+   "detail": "{\"REFUTED-D10\": 38, \"WIN7-D10\": 1}",
+   "name": "k1069-rebuilt-won1-refuted38-capped0",
+   "pass": true
+  },
+  {
+   "detail": "169615508 vs 169615508",
+   "name": "k1069-total-nodes-rebuilt",
+   "pass": true
+  },
+  {
+   "detail": "{\"andclose\": false, \"bit\": 7, \"capped\": false, \"loss\": false, \"ms\": 167793, \"nodes\": 14249420, \"root\": \"0000000001000080",
+   "name": "k1069-max-probe-rebuilt",
+   "pass": true
+  },
+  {
+   "detail": "root=00000000010000809002000040000080 nodes=14249420",
+   "name": "k1069-max-probe-fields-rebuilt",
+   "pass": true
+  },
+  {
+   "detail": "2174557 vs 2174557",
+   "name": "k1069-avg-nodes-rebuilt",
+   "pass": true
+  },
+  {
+   "detail": "union=78 multi=0",
+   "name": "probes-covered-union-eq-rows78-one-cover",
+   "pass": true
+  },
+  {
+   "detail": "fail=[]",
+   "name": "roots-manifest-anatomy-and-probe-rows",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "witness-full-eq-probe-assignment",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "witness-full-cover-eq-rows-field",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "witness-roots-triple-source",
+   "pass": true
+  },
+  {
+   "detail": "dead=39 overlap=0",
+   "name": "witness-roots-disjoint-dead-root-corpus",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "row-owner-by-probe-family-eq-witness-full",
+   "pass": true
+  },
+  {
+   "detail": "00000000000000003800000008001200,00000000000000801202010000001000,00000000000000801202080000001000,00000000010000003800000008100000",
+   "name": "fold9-closes-4-in-rows78",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "fold9-cost-sum-eq-closed-edge-cost",
+   "pass": true
+  },
+  {
+   "detail": "74=74 equal=True",
+   "name": "fold9-residual74-eq-rows78-minus-closed9",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "fold9-frontier-arithmetic",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "fold9-closed-target-34-plus-4-eq-38",
+   "pass": true
+  },
+  {
+   "detail": "target=['00000000000000821082000000000001', '00000000000000821082000000000004'] extra=['00004000000000003800000100000020']",
+   "name": "fold10-closes-3-rows-2-target-1-extra",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "fold10-cost-sum-eq-closed-edge-cost",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "fold10-target-subset-residual74",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "fold10-extra-outside-residual74",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "fold10-pins-fold9-record",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "fold10-frontier-before-eq-fold9-after",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "fold10-frontier-arithmetic",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "fold10-residual72-eq-residual74-minus-target",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "fold10-closed-target-38-plus-2-eq-40",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "fold10-chain-total-78-minus4-minus2-eq-72",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "fold10-receipt-seventeenth-anatomy",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "fold10-retire-declaration-eq-seventeenth",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "retired-root-verdict-rebuilt-win",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "sv17-gates-38-all-pass",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "sv17-root-bit-child",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "sv17-claim-eq-fold10-target-and-open-in-residual74",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "fold10second-gates-31-all-pass",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "fold10second-subject-and-input-pins",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "fold10second-geometry-route-agrees-on-closed-rows",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "post-retire-38-roots-34x2-4x1",
+   "pass": true
+  },
+  {
+   "detail": "multi=[] unassigned=[]",
+   "name": "post-retire-assignment-covers-residual72-one-cover",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "fold9-closed-rows-owners-are-exactly-the-4-degraded-roots",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "live-38-all-refuted-d10-rebuilt",
+   "pass": true
+  },
+  {
+   "detail": "dead=72",
+   "name": "residual72-rows-assigned-to-refuted-d10-only-rebuilt",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "retired-root-not-in-live-assignment",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "r7-rows78-faithful",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "r7-witness-roots-faithful",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "r7-closed-by-fold9-faithful",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "r7-closed-by-fold10-target-faithful",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "r7-closed-by-fold10-extra-faithful",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "r7-residual72-faithful",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "r7-two-row-roots-faithful",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "r7-one-row-roots-faithful",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "r7-rows-per-root-faithful",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "r7-fold9-row-owners-faithful",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "r7-k1069-cross-faithful",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "r7-gates-27-all-pass-and-pins",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "r7-retired-root-and-whole-determination-set-compatible",
+   "pass": true
+  }
+ ],
+ "gates_all_pass": true,
+ "gates_total": 76,
+ "independent_routes": {
+  "routeA_classification_from_raw_probe_records": "39/39 verdicts rebuilt from the 4-worker probe-records corpus with a fresh dedup+agreement implementation and equal to sweep39.classification",
+  "routeB_witness_assignment_three_source": "39-root x 2-row one-cover plan agrees across raw probe covered_rows, roots.json, and resolve6.witness_full",
+  "routeC_fold_chain_link_by_link": "rows78 -> fold9 residual74 -> fold10 residual72 verified on the two fold records' own residual lists, plus full frontier arithmetic gates for both folds",
+  "routeD_certificate_geometry_cross_agreement": "fold10second (certificate-body geometry rederivation record) agrees on the two target rows and the extra row"
+ },
+ "input_pins": {
+  "fold10.json": "bed7d33193299a0aa06ea4e076562dfa46251d20d5c3c4ca7fd231ffe854908a",
+  "fold10second.json": "a62d6d50ffe3196ad2de1ff7b1df67ff8208b2a13510cce3f13aee0e9a085054",
+  "fold9.json": "24db2352ad0d94ee4a76ec3de294f02cbdac7899f0b6ef64ea695d261017cdc2",
+  "probes-w0.jsonl": "6b045eaefdd59e2c0fbd0f9b4a1e876b89c3f8b03cfade8f0ab1f8192cd0a984",
+  "probes-w1.jsonl": "4aaa4d0a691f6da40e68dbaa41a353aaf3ea518a6863aec04886c17197e00967",
+  "probes-w2.jsonl": "2d4ff7dd40b2fc66745068f6772724f38ccd04dd2a65507af925fb85252b3032",
+  "probes-w3.jsonl": "e04e20bdadd1cba94cd0a285ff9fb72bb9e9d0a2d5a687f1d76ceccc7d0ccb0c",
+  "resolve6.json": "e85d4bfb867a193f2b3cdb23ec9e15679359c9f337fcd97eb5c62473b90c281a",
+  "resolve7.json": "207f4094a906817ebb4bbc5ad9b90c203c6a334ee6c8d9a501661257a0e1ce3f",
+  "roots.json": "9f0161a8a61d311534fd3a4035b1c367426691c72ad5eb44efd01a5fae37e0cc",
+  "sv17.json": "c1073bae1d056db7f56d04a77fd9889d1e297a82a07537ddcd02c00d329dbabc",
+  "sweep39.json": "22953ae16a6002d87638531f2ca9fd286f6736b834fa296e5648505ada9074dc"
+ },
+ "interpretation_guard": [
+  "REFUTED-D10 is NOT a LOSS proof; it certifies no first-player win within depth-10 from that root only.",
+  "Folds and coverage are row bookkeeping and say nothing about the game-theoretic value of any row.",
+  "This second verification judges no root, closes no row, and rebuilds no candidate universe.",
+  "The rebuilt classification and assignment come from published raw records, not from new searches.",
+  "The standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+ ],
+ "rederived": {
+  "classification_rebuilt_from_raw_probes": {
+   "00000000000000003800000008001220": "REFUTED-D10",
+   "00000000000000003800000008001880": "REFUTED-D10",
+   "00000000000000003800000008005001": "REFUTED-D10",
+   "00000000000000003800000008510000": "REFUTED-D10",
+   "00000000000000003800000009080004": "REFUTED-D10",
+   "00000000000000003800000009840000": "REFUTED-D10",
+   "0000000000000000380000000a002080": "REFUTED-D10",
+   "00000000000000003800000888001000": "REFUTED-D10",
+   "00000000000000003800200009001000": "REFUTED-D10",
+   "00000000000000083800000248000000": "REFUTED-D10",
+   "000000000000000c3800000008100000": "REFUTED-D10",
+   "0000000000000010380000000a080000": "REFUTED-D10",
+   "00000000000000801202000000880100": "REFUTED-D10",
+   "00000000000000801202000000900400": "REFUTED-D10",
+   "00000000000000801202000001000440": "REFUTED-D10",
+   "00000000000000801202000001004100": "REFUTED-D10",
+   "00000000000000801202040000101000": "REFUTED-D10",
+   "00000000000000801202040000800200": "REFUTED-D10",
+   "00000000000000801202080020001000": "REFUTED-D10",
+   "00000000000000801212000011000000": "REFUTED-D10",
+   "00000000000000801222000000840000": "REFUTED-D10",
+   "00000000000000801222010000001000": "REFUTED-D10",
+   "00000000000000821082800000000800": "REFUTED-D10",
+   "00000000000000821083000000001000": "REFUTED-D10",
+   "00000000000000889042000080000000": "REFUTED-D10",
+   "00000000000000909002000080000040": "REFUTED-D10",
+   "00000000000030809002000080000000": "REFUTED-D10",
+   "00000000000040809002000800100000": "REFUTED-D10",
+   "00000000010000809002000040000080": "REFUTED-D10",
+   "00000000010000889002000000100000": "REFUTED-D10",
+   "00000000010000a09002000080000000": "REFUTED-D10",
+   "00000000020000003820000008001000": "REFUTED-D10",
+   "00000000020000801202000000100040": "REFUTED-D10",
+   "00000000022000003800000009000000": "REFUTED-D10",
+   "00000000410000003800000008100000": "REFUTED-D10",
+   "00000008100000003800000008100000": "REFUTED-D10",
+   "00000010000000801202000000400400": "REFUTED-D10",
+   "00004000000000821082000000000100": "WIN7-D10",
+   "00020000000000821082000000000040": "REFUTED-D10"
+  },
+  "fold_chain": {
+   "closed_by_fold10_extra_outside_plan": [
+    "00004000000000003800000100000020"
+   ],
+   "closed_by_fold10_target": [
+    "00000000000000821082000000000001",
+    "00000000000000821082000000000004"
+   ],
+   "closed_by_fold9": [
+    "00000000000000003800000008001200",
+    "00000000000000801202010000001000",
+    "00000000000000801202080000001000",
+    "00000000010000003800000008100000"
+   ],
+   "fold10_costs": {
+    "00000000000000821082000000000001": 66,
+    "00000000000000821082000000000004": 73,
+    "00004000000000003800000100000020": 86
+   },
+   "fold9_costs": {
+    "00000000000000003800000008001200": 76,
+    "00000000000000801202010000001000": 64,
+    "00000000000000801202080000001000": 79,
+    "00000000010000003800000008100000": 80
+   },
+   "residual72": 72,
+   "residual74": 74,
+   "rows78": 78
+  },
+  "k1069_cross": {
+   "depth10_witness_supply_from_39root_plan_for_residual72": 0,
+   "live_refuted_roots": 38,
+   "residual72_rows_with_only_refuted_d10_assignment": 72,
+   "win_root": "00004000000000821082000000000100"
+  },
+  "post_retire_assignment": {
+   "fold9_row_owners_lost": {
+    "00000000000000003800000008001200": "00000000000000003800000008001220",
+    "00000000000000801202010000001000": "00000000000000801222010000001000",
+    "00000000000000801202080000001000": "00000000000000801202080020001000",
+    "00000000010000003800000008100000": "00000000410000003800000008100000"
+   },
+   "live_roots": 38,
+   "one_row_roots": [
+    "00000000000000003800000008001220",
+    "00000000000000801202080020001000",
+    "00000000000000801222010000001000",
+    "00000000410000003800000008100000"
+   ],
+   "rows_per_root": {
+    "00000000000000003800000008001220": [
+     "00000000000000003800000008001020"
+    ],
+    "00000000000000003800000008001880": [
+     "00000000000000003800000008001080",
+     "00000000000000003800000008001800"
+    ],
+    "00000000000000003800000008005001": [
+     "00000000000000003800000008001001",
+     "00000000000000003800000008005000"
+    ],
+    "00000000000000003800000008510000": [
+     "00000000000000003800000008011000",
+     "00000000000000003800000008500000"
+    ],
+    "00000000000000003800000009080004": [
+     "00000000000000003800000008002100",
+     "00000000000000003800000009000004"
+    ],
+    "00000000000000003800000009840000": [
+     "00000000000000003800000009040000",
+     "00000000000000003800000009800000"
+    ],
+    "0000000000000000380000000a002080": [
+     "00000000000000003800000008002080",
+     "0000000000000000380000000a002000"
+    ],
+    "00000000000000003800000888001000": [
+     "00000000000000003800000008900000",
+     "00000000000000003800000808001000"
+    ],
+    "00000000000000003800200009001000": [
+     "00000000000000003800200008001000",
+     "00000000000000003800200009000000"
+    ],
+    "00000000000000083800000248000000": [
+     "00000000000000003800000248000000",
+     "00000000000000083800000048000000"
+    ],
+    "000000000000000c3800000008100000": [
+     "00000000000000043800000008100000",
+     "00000000000000083800000008100000"
+    ],
+    "0000000000000010380000000a080000": [
+     "0000000000000000380000000a080000",
+     "00000000000000103800000008080000"
+    ],
+    "00000000000000801202000000880100": [
+     "00000000000000801202000000800100",
+     "00000000000000801202000000880000"
+    ],
+    "00000000000000801202000000900400": [
+     "00000000000000801202000000800400",
+     "00000000000000801202000000900000"
+    ],
+    "00000000000000801202000001000440": [
+     "00000000000000043800000009000000",
+     "00000000000000801202000001000400"
+    ],
+    "00000000000000801202000001004100": [
+     "00000000000000003800000409000000",
+     "00000000000000801202000001000100"
+    ],
+    "00000000000000801202040000101000": [
+     "00000000000000801202000000101000",
+     "00000000000000801202040000001000"
+    ],
+    "00000000000000801202040000800200": [
+     "00000000000000801202000000800200",
+     "00000000000000801202040000800000"
+    ],
+    "00000000000000801202080020001000": [
+     "00000000000000801202000020001000"
+    ],
+    "00000000000000801212000011000000": [
+     "00000000000000103800000009000000",
+     "00000000000000801212000001000000"
+    ],
+    "00000000000000801222000000840000": [
+     "00000000000000801202000000840000",
+     "00000000000000801222000000800000"
+    ],
+    "00000000000000801222010000001000": [
+     "00000000000000801222000000001000"
+    ],
+    "00000000000000821082800000000800": [
+     "00000000000000821082000000000800",
+     "00000000000000821082800000000000"
+    ],
+    "00000000000000821083000000001000": [
+     "00000000000000821082000000001000",
+     "00000000000000821083000000000000"
+    ],
+    "00000000000000889042000080000000": [
+     "00000000000000003800000008002010",
+     "00000000000000889002000080000000"
+    ],
+    "00000000000000909002000080000040": [
+     "00000000000000003800100008002000",
+     "00000000000000909002000080000000"
+    ],
+    "00000000000030809002000080000000": [
+     "00000000000000003800000008002040",
+     "00000000000020809002000080000000"
+    ],
+    "00000000000040809002000800100000": [
+     "00000000000000801202020000001000",
+     "00000000000040809002000000100000"
+    ],
+    "00000000010000809002000040000080": [
+     "00000000000000003800000209000000",
+     "00000000010000809002000040000000"
+    ],
+    "00000000010000889002000000100000": [
+     "00000000000000889002000000100000",
+     "00000000010000809002000000100000"
+    ],
+    "00000000010000a09002000080000000": [
+     "00000000000000a09002000080000000",
+     "00000000010000809002000080000000"
+    ],
+    "00000000020000003820000008001000": [
+     "00000000000000003800200008100000",
+     "00000000000000801202000000081000"
+    ],
+    "00000000020000801202000000100040": [
+     "00000000000000043800000008080000",
+     "00000000020000801202000000100000"
+    ],
+    "00000000022000003800000009000000": [
+     "00000000000000801202000001080000",
+     "00000000000080003800000048000000"
+    ],
+    "00000000410000003800000008100000": [
+     "00000000000000801212000000001000"
+    ],
+    "00000008100000003800000008100000": [
+     "00000000000000909002000000100000",
+     "00000008000000003800000008100000"
+    ],
+    "00000010000000801202000000400400": [
+     "00000000000000003800000008001100",
+     "00000010000000801202000000000400"
+    ],
+    "00020000000000821082000000000040": [
+     "00000000000000821082000000000008",
+     "00000000000000821082000000000010"
+    ]
+   },
+   "two_row_roots": [
+    "00000000000000003800000008001880",
+    "00000000000000003800000008005001",
+    "00000000000000003800000008510000",
+    "00000000000000003800000009080004",
+    "00000000000000003800000009840000",
+    "0000000000000000380000000a002080",
+    "00000000000000003800000888001000",
+    "00000000000000003800200009001000",
+    "00000000000000083800000248000000",
+    "000000000000000c3800000008100000",
+    "0000000000000010380000000a080000",
+    "00000000000000801202000000880100",
+    "00000000000000801202000000900400",
+    "00000000000000801202000001000440",
+    "00000000000000801202000001004100",
+    "00000000000000801202040000101000",
+    "00000000000000801202040000800200",
+    "00000000000000801212000011000000",
+    "00000000000000801222000000840000",
+    "00000000000000821082800000000800",
+    "00000000000000821083000000001000",
+    "00000000000000889042000080000000",
+    "00000000000000909002000080000040",
+    "00000000000030809002000080000000",
+    "00000000000040809002000800100000",
+    "00000000010000809002000040000080",
+    "00000000010000889002000000100000",
+    "00000000010000a09002000080000000",
+    "00000000020000003820000008001000",
+    "00000000020000801202000000100040",
+    "00000000022000003800000009000000",
+    "00000008100000003800000008100000",
+    "00000010000000801202000000400400",
+    "00020000000000821082000000000040"
+   ]
+  },
+  "probe_corpus": {
+   "duplicate_records": 20,
+   "duplicate_records_at_assembly_readme": 15,
+   "duplicate_records_note": "all duplicate (root,ordering) records agree node-exact on loss/nodes/capped/bit/child/terminalStoneRange; the corpus grew by 5 duplicate records after the 39livewitness README was written (15 -> 20), consistent with the append-resume worker protocol and the additional 78/78 node-exact rerun; every record still agrees, which strengthens run-to-run determinism evidence",
+   "records": 98,
+   "unique_root_ordering_pairs": 78,
+   "workers": [
+    "probes-w0.jsonl",
+    "probes-w1.jsonl",
+    "probes-w2.jsonl",
+    "probes-w3.jsonl"
+   ]
+  },
+  "total_nodes_rebuilt": 169615508,
+  "witness_assignment_sources_agree": true
+ },
+ "resolve7_record_faithful": true,
+ "schema": "resolve7-second-verification/1",
+ "single_owner_note": "research/log/2026-11-20-n11-resolve7-second-verification-single-owner-note.md",
+ "status": "independent second verification; published records only; no search, no new judging",
+ "verification_target": {
+  "gates_total_in_target": 27,
+  "record": "research/experiments/n11-residual72-postfold-witness-recheck-20261120/output/residual72-postfold-witness-recheck-20261120.json",
+  "sha256": "207f4094a906817ebb4bbc5ad9b90c203c6a334ee6c8d9a501661257a0e1ce3f"
+ }
+}
