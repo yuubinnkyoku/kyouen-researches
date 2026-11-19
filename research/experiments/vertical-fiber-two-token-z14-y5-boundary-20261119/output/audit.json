@@ -1,0 +1,52 @@
+{
+  "all_pass": true,
+  "classification": "universal proof by x-induction and complete A/B/C signature bands",
+  "counts": {
+    "K1031_and_K1045_child_anchor_checks": 5332,
+    "Theorem_T_parity_bound": 519414,
+    "complete_signature_coverage_identity_mex": 519414,
+    "fixed_seed_child_mex_scatter": 8000,
+    "general_tail": 19984,
+    "height_only_reduction_R_le_15": 31936,
+    "ordered_and_canonical_direct_vs_formula": 2666
+  },
+  "failure_count": 0,
+  "finite_audit_role": "two direct mex recurrences, published child anchors, signature coverage/identity/mex, low-R collapse, general tail, and fixed-seed scatter only",
+  "first_failures": [],
+  "repeat_byte_identical": true,
+  "repeat_runs": 2,
+  "scope": {
+    "anchor_R": "0 <= R <= x+22",
+    "anchor_x": [
+      5,
+      35
+    ],
+    "direct_R": "0 <= R <= x+22",
+    "direct_x": [
+      5,
+      35
+    ],
+    "low_R": "0 <= R <= 15",
+    "low_x": [
+      5,
+      2000
+    ],
+    "scatter_points": 8000,
+    "scatter_seed": 20261119,
+    "signature_R": "1 <= R <= x+19",
+    "signature_x": [
+      5,
+      1000
+    ],
+    "tail_R": "x+20 <= R <= x+23",
+    "tail_x": [
+      5,
+      5000
+    ],
+    "target": "H(R;(x,5);14), x>=5, R>=0"
+  },
+  "sha256_without_hash_field": "4660daec33b57c3a6e4b20a261875828593cb03eedc5f6df3890a085c46eae44",
+  "theorem": "z=14 y=5 two-token residual Grundy slice",
+  "total_checks": 1106746,
+  "verifier_sha256": "0a4fe6923eff14432add744d1d6991f75bb82327d03376dd96fada0fc367ef30"
+}
