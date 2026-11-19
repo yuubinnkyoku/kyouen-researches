@@ -20,7 +20,7 @@
 
 verify_z14_y_ge6.py をPython 3.12で実行。二直接再帰、K1047/K1061アンカー、署名帯の被覆・子署名・mex、低R単一トークン系、tail、固定seed散点を合わせて1,852,619検査、不一致0。二回実行と別cwdの別プロセス実行でaudit.jsonがbyte-identical。
 
-- verifier SHA-256: 9c6be7e9fbbbe8d4cf682671f54ac02bd730b31702ad0966dc8dd03112df196c
+- verifier SHA-256: d34fcdd59cacae93333e900c06a42718f5cdfc1516073cc8c8c0530e624f39c4
 - audit SHA-256: a6b72231b13f36b7d6c683f44090f1cf590a90a3d7ec59dcc94fb3a80f693504
 - audit self-excluding SHA-256: 0922d5c46b89841e6b492d34db00a7a17ca19eda2431e6fd51836d6135e5e359
 
