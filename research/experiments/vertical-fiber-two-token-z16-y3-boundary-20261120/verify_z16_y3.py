@@ -208,5 +208,6 @@ if __name__=='__main__':
     result['canonical_states']=H_canonical.cache_info().currsize
     result['single_token_states']=single.cache_info().currsize
     result['verifier_sha256']=hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
-    Path(__file__).with_name('audit.json').write_text(json.dumps(result,sort_keys=True,indent=2)+'\n',encoding='utf-8')
+    (Path(__file__).parent/'output').mkdir(exist_ok=True)
+    (Path(__file__).parent/'output'/'audit.json').write_text(json.dumps(result,sort_keys=True,indent=2)+'\n',encoding='utf-8')
     print(json.dumps(result,sort_keys=True,indent=2))
