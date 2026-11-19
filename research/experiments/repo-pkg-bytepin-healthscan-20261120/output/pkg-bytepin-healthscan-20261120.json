@@ -1,0 +1,780 @@
+{
+ "date": "2026-11-20",
+ "interpretation_guard": [
+  "A mismatch breaks the CI git-diff reproduction of that audit step; it does not by itself invalidate the mathematics of the published audit.",
+  "Pin fixes belong to each package's owner lane. This scan performs no fixes.",
+  "The standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+ ],
+ "results": [
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z5-value1-locus-20261116/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z5-value1-locus-20261116/verify_z5_value1.py",
+   "verifier_sha256_actual": "41970bed902d061331758d045d74f3e34452c1502ff80d69d07f6f59977fa090"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z5-y1-boundary-20261116/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z5-y1-boundary-20261116/verify_z5_y1.py",
+   "verifier_sha256_actual": "bb8a667acec9b714ab95fc859e2cca4b6a4429f4c7975ac98cee32151d5a5830"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z5-full-grundy-20261117/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z5-full-grundy-20261117/verify_z5_full.py",
+   "verifier_sha256_actual": "0eee35e6f22c9171cae40aabcd7ec69f522532445ee93b8123265a0d9d9b39b0"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z6-y1-boundary-20261117/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z6-y1-boundary-20261117/verify_z6_y1.py",
+   "verifier_sha256_actual": "b44e67cd658e2fec2906f414b5b7f33ef62ec6a555cdc314698a41efe00a057d"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z6-y2-boundary-20261117/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z6-y2-boundary-20261117/verify_z6_y2.py",
+   "verifier_sha256_actual": "3fdd78fee9dd4bb8388f62c777eef93bf0cd1a6090e6c62be2bd0616f27ab3b9"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z6-y3-boundary-20261117/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z6-y3-boundary-20261117/verify_z6_y3.py",
+   "verifier_sha256_actual": "f63a5cc0cd315f8e37be1544765c935c64a182390ae71d3ac96f38c35cfdfe0b"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z6-y4-boundary-20261117/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z6-y4-boundary-20261117/verify_z6_y4.py",
+   "verifier_sha256_actual": "f5ee7c03ac17d20a0e8c48e2fcd0ce5aaa03693aec8c6fc979e6e0c9ce7d82d2"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z6-y5-boundary-20261117/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z6-y5-boundary-20261117/verify_z6_y5.py",
+   "verifier_sha256_actual": "56e94d54ae6ca962917ffb502776bb1936459ca08876d1c996c4065c6e94708f"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z6-y6-boundary-20261117/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z6-y6-boundary-20261117/verify_z6_y6.py",
+   "verifier_sha256_actual": "9b471650c2800dfe62e56903999d93baf38084e9e0ced98dbf8d2497038225e4"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z6-y7-boundary-20261117/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z6-y7-boundary-20261117/verify_z6_y7.py",
+   "verifier_sha256_actual": "ff45a581de93b83c6c05d6efb0579d75a4e356c270924fa4e7af79816ad329f3"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z6-y8-boundary-20261117/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z6-y8-boundary-20261117/verify_z6_y8.py",
+   "verifier_sha256_actual": "9bb9fd8a040d9bf56a5a9972e8c20ed650566374a3612abcbd3eec6c74210368"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z6-y9-boundary-20261117/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z6-y9-boundary-20261117/verify_z6_y9.py",
+   "verifier_sha256_actual": "f4ad89e11776dc4c356833723cd094d71cb3e57a9fa9cbdd6aa48e6abd99058a"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z6-y10-boundary-20261117/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z6-y10-boundary-20261117/verify_z6_y10.py",
+   "verifier_sha256_actual": "582c112e750e9b4e30bbb05f5cf727a4591b830bbe8ddf3b761b215d34a912d9"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z6-y11-boundary-20261117/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z6-y11-boundary-20261117/verify_z6_y11.py",
+   "verifier_sha256_actual": "9be0046625bf12a3b84c26ddb954915bc91ddb4e07d34a2e7f8ce0e7ff9680e7"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z6-y12-boundary-20261117/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z6-y12-boundary-20261117/verify_z6_y12.py",
+   "verifier_sha256_actual": "390f908405768e05379e64ce469c96a6f90bc775a0325e38fce1562c3e6a2931"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z6-y13-boundary-20261117/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z6-y13-boundary-20261117/verify_z6_y13.py",
+   "verifier_sha256_actual": "a88fb45f19a4103f139a2750e7e3a09eb87609552c4df5f99399fd41491844b2"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z6-y14-boundary-20261117/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z6-y14-boundary-20261117/verify_z6_y14.py",
+   "verifier_sha256_actual": "7bcbbe8c83e96088f7250edf6b1d69fe78dcff4dff153649bbe93855a3f11143"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z6-y15-boundary-20261117/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z6-y15-boundary-20261117/verify_z6_y15.py",
+   "verifier_sha256_actual": "69ca184742717048a67fdc96216d63eb14ebcdc71fb2fedf8213463f7dba2d23"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z6-y16-boundary-20261117/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z6-y16-boundary-20261117/verify_z6_y16.py",
+   "verifier_sha256_actual": "827168b411edae353aacb47de57d6fb77f1f7979117028e593c46a11f6aecb91"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z6-y17-boundary-20261117/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z6-y17-boundary-20261117/verify_z6_y17.py",
+   "verifier_sha256_actual": "3f726d25be3468dc2100938a757a805726ec66777efc76cd9defa8ab9f5a5882"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z6-y18-boundary-20261117/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z6-y18-boundary-20261117/verify_z6_y18.py",
+   "verifier_sha256_actual": "aca0f1f9ccf754accdb2c0f50bf533f9fedbaf8bb98c6948b7c75f3c27aeb2a3"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z6-y19-boundary-20261117/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z6-y19-boundary-20261117/verify_z6_y19.py",
+   "verifier_sha256_actual": "9e006f3bf9f4bf46b58efc16c87ba964c7b702dd7c1615ac5eda1473f65ec419"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z6-y20-boundary-20261117/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z6-y20-boundary-20261117/verify_z6_y20.py",
+   "verifier_sha256_actual": "8dfd7fc500b52077494741041a784b81b3c37e931c18845b94932c60497e1237"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z6-y21-boundary-20261117/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z6-y21-boundary-20261117/verify_z6_y21.py",
+   "verifier_sha256_actual": "50a90c5b8426efe844c4acba4e47e19be0b4585f87d63d95266b843c9199b776"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z6-y22-boundary-20261117/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z6-y22-boundary-20261117/verify_z6_y22.py",
+   "verifier_sha256_actual": "fdb7689306a71d3a744631c3075b551369eb19d57f0a3a565f3599f98b41ad9e"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z6-y23-boundary-20261117/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z6-y23-boundary-20261117/verify_z6_y23.py",
+   "verifier_sha256_actual": "6c6e19a5a01e4e0b1014d4f6c2c304a0c24391cba297461826a2b45af5535a03"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z6-y24-boundary-20261117/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z6-y24-boundary-20261117/verify_z6_y24.py",
+   "verifier_sha256_actual": "e7bc1ef0a9061fc9a6001d9a924d99d189456b3bd3b73179c57015361ad9f61c"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z6-y25-boundary-20261118/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z6-y25-boundary-20261118/verify_z6_y25.py",
+   "verifier_sha256_actual": "37748c4e0ce9f67aace468987ba5d8cd2592bb0bd27dbac3a0cf2a6c0f6ded43"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z6-y26-boundary-20261118/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z6-y26-boundary-20261118/verify_z6_y26.py",
+   "verifier_sha256_actual": "25d7e7d31739eda5e190dd4181315dd7d5c061ae7f0732d97ed28f0b84601ad1"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z6-y27-boundary-20261118/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z6-y27-boundary-20261118/verify_z6_y27.py",
+   "verifier_sha256_actual": "af657fe648023a2ae3b0a0b783461138dd8c630f85c6d6e96b29346c8c3cc089"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z6-y28-boundary-20261118/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z6-y28-boundary-20261118/verify_z6_y28.py",
+   "verifier_sha256_actual": "30a605e25d66b421c851fcc0bdbf14a5e2287c16f0b62cca692415e8454c57b5"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z6-y29-boundary-20261118/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z6-y29-boundary-20261118/verify_z6_y29.py",
+   "verifier_sha256_actual": "93ec32bbb74a86d452677f6e7acd228589fa0e9fb3717b6991d1b6789cacff98"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z6-y30-boundary-20261118/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z6-y30-boundary-20261118/verify_z6_y30.py",
+   "verifier_sha256_actual": "52c2c6ca7114a70dfbdb030cb991da1fa727cc2d8019a2b99b6916670cf3fd26"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z6-y31-boundary-20261118/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z6-y31-boundary-20261118/verify_z6_y31.py",
+   "verifier_sha256_actual": "e0c28693eb701468e6d2d3296b5c43cbde34406ac3755133290e832743474e0f"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z6-y32-boundary-20261118/output/audit.json",
+   "status": "match",
+   "verifier": "research/experiments/vertical-fiber-two-token-z6-y32-boundary-20261118/verify_z6_y32.py",
+   "verifier_sha256": "2d0ef97fb3c068c260077821f8faab82d424bf7c86965b553cf654ceb73fd10d"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z6-y33-boundary-20261118/output/audit.json",
+   "status": "match",
+   "verifier": "research/experiments/vertical-fiber-two-token-z6-y33-boundary-20261118/verify_z6_y33.py",
+   "verifier_sha256": "433c49a6530e182255aac0952ed4d3c3485d3c35ff1a2e091611c99f12c69bf7"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z6-y34-boundary-20261118/output/audit.json",
+   "status": "match",
+   "verifier": "research/experiments/vertical-fiber-two-token-z6-y34-boundary-20261118/verify_z6_y34.py",
+   "verifier_sha256": "3edce9401c5aee099f1899e488f710f888c590f8b5f604d9936cd7c489b19eef"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z6-y35-boundary-20261118/output/audit.json",
+   "status": "match",
+   "verifier": "research/experiments/vertical-fiber-two-token-z6-y35-boundary-20261118/verify_z6_y35.py",
+   "verifier_sha256": "da030f8c90d5c4e9bb5ac0e61a5d2be016a8d768fb6b40468f1106e1afb5b037"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z6-y36-boundary-20261119/output/audit.json",
+   "status": "match",
+   "verifier": "research/experiments/vertical-fiber-two-token-z6-y36-boundary-20261119/verify_z6_y36.py",
+   "verifier_sha256": "dcb99367edc71cb550eed8034f3c9448adcae8a14d763fc589dad0a8bda3ad51"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z6-independent-uniform-20261119/output/audit.json",
+   "status": "match",
+   "verifier": "research/experiments/vertical-fiber-two-token-z6-independent-uniform-20261119/verify_z6_uniform_independent.py",
+   "verifier_sha256": "4da6ff318c9866e6fa4c3cf29a2d5b7e2fba2717f681de4ed0ecd20f3b684be9"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z7-y-ge4-census-20261119/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z7-y-ge4-census-20261119/verify_z7_y_ge4.py",
+   "verifier_sha256_actual": "096c2567a1b870fe552f30a16c9cc6bef1d6cd53251f73bf3fa35b682263d3f2"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z7-y1-boundary-20261119/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z7-y1-boundary-20261119/verify_z7_y1.py",
+   "verifier_sha256_actual": "ab5221bca8739741dbd16ee99311f07e112a0ffadb83be2c8c8625d4ead27197"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z7-y2-boundary-20261119/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z7-y2-boundary-20261119/verify_z7_y2.py",
+   "verifier_sha256_actual": "714de38ee330d8d601b2787a2281f62e7a670827a0fdc481e9299d97053493f9"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z7-y3-boundary-20261118/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z7-y3-boundary-20261118/verify_z7_y3.py",
+   "verifier_sha256_actual": "ec249e8bab773247f564fbe7c1fda3149e90b8b907cc59ed9789d72c94a4ad45"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z7-y-ge4-proof-20261119/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z7-y-ge4-proof-20261119/verify_z7_y_ge4_proof.py",
+   "verifier_sha256_actual": "70298b5a8492bca52e0d5c4c4ada53623678cb53bc8b67085e745a38ae2868d6"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z8-y1-boundary-20261119/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z8-y1-boundary-20261119/verify_z8_y1.py",
+   "verifier_sha256_actual": "8f0a72d98631a2cc9eac617ba78b64b3e0e40f96d89ea2bfc9d27d4d550ff23b"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z8-y2-boundary-20261119/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z8-y2-boundary-20261119/verify_z8_y2.py",
+   "verifier_sha256_actual": "e4fa5d84a88bea97feecf2a8eeeb6d1b801410a6612cc55924409dc75a05d4ef"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z9-y1-boundary-20261119/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z9-y1-boundary-20261119/verify_z9_y1.py",
+   "verifier_sha256_actual": "9c644d437355a9b83a91557a51d9f7d709743f4688f17c63b3bb786ea5f2aca4"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-t2-q8-grundy-20261118/output/audit.json",
+   "status": "match",
+   "verifier": "research/experiments/vertical-fiber-t2-q8-grundy-20261118/verify_t2_q8.py",
+   "verifier_sha256": "b96bb802b749d944831d6124205fe8d789307e394e5847840e266147dc616c58"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-t2-q9-grundy-20261118/output/audit.json",
+   "status": "match",
+   "verifier": "research/experiments/vertical-fiber-t2-q9-grundy-20261118/verify_t2_q9.py",
+   "verifier_sha256": "2d5012276f760543e7ebb2116f40bc583325917523eca5d7120660f76ac713bc"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-t2-q10-grundy-20261118/output/audit.json",
+   "status": "match",
+   "verifier": "research/experiments/vertical-fiber-t2-q10-grundy-20261118/verify_t2_q10.py",
+   "verifier_sha256": "147203d8a181d51992657957d01578061191832c83a9c9cbc1540e19a3562bd2"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-t2-q11-grundy-20261118/output/audit.json",
+   "status": "match",
+   "verifier": "research/experiments/vertical-fiber-t2-q11-grundy-20261118/verify_t2_q11.py",
+   "verifier_sha256": "301bd5a3f75c457a9c139fd47e6c07ff729a782418ef584a5c70d3bcf9adf53d"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-t2-q12-grundy-20261118/output/audit.json",
+   "status": "mismatch",
+   "verifier": "research/experiments/vertical-fiber-t2-q12-grundy-20261118/verify_t2_q12.py",
+   "verifier_sha256_actual": "516d85fe6a1cd1dd32cacc1546b5f9f5b5ad15a2cd806152fe148f5ca2d17274",
+   "verifier_sha256_claimed": "51f133ae096cb5c8cf4221fbb3aaabd3ed55ae2c8c402d5f0e6b878a52899bc4"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-t2-q2w-minus1-grundy-20261118/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-t2-q2w-minus1-grundy-20261118/verify_t2_q2w_minus1.py",
+   "verifier_sha256_actual": "ca4d448980f1439bec505bb9738d2838e6ed8d148edc338b9ad66342ba8a5f17"
+  },
+  {
+   "audit": "research/experiments/remo-first-loser-residue-signature-20261116/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/remo-first-loser-residue-signature-20261116/verify_first_loser_residue_signature.py",
+   "verifier_sha256_actual": "827c6e7af89ff56aded05228789d334c18052a0a702cb3c12c3d3fed16737d21"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z8-y3-boundary-20261119/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z8-y3-boundary-20261119/verify_z8_y3.py",
+   "verifier_sha256_actual": "9c6115e3a9035f70c1210e0148507982a16d0db1bb75b9da8541536f77d3d445"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z8-y4-boundary-20261119/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z8-y4-boundary-20261119/verify_z8_y4.py",
+   "verifier_sha256_actual": "07b76046d3a4a95bc3531f1ea4ff2c40fd55147024dbc92e878ec6465102e283"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z9-y2-boundary-20261119/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z9-y2-boundary-20261119/verify_z9_y2.py",
+   "verifier_sha256_actual": "b7f9acdb588cf0b4886afe095c5b38744c6e69cae5a3a3b5d07b23268ea72f3d"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z9-y3-boundary-20261119/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z9-y3-boundary-20261119/verify_z9_y3.py",
+   "verifier_sha256_actual": "608086cfb29c0f18e8bad8c0cffc5f576fd194c9cc4cc0762bc2e3829d9240d7"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z9-y4-boundary-20261119/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z9-y4-boundary-20261119/verify_z9_y4.py",
+   "verifier_sha256_actual": "9dbaa99ad1a1373673b4c3926b3514d1f42861ef42f92befe8316762be7997ec"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z8-y5-boundary-20261119/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z8-y5-boundary-20261119/verify_z8_y5.py",
+   "verifier_sha256_actual": "7d9df0d13d34c73bcd8952fd55bb13fb3087a04e2c5d1ca78d2a3c3e00cd95b8"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z9-y5-boundary-20261119/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z9-y5-boundary-20261119/verify_z9_y5.py",
+   "verifier_sha256_actual": "fe656e8a84a76e5fe41f6d8af6d77476c49e55157c24acd6af0e1242b514b500"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z8-y6-boundary-20261119/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z8-y6-boundary-20261119/verify_z8_y6.py",
+   "verifier_sha256_actual": "73a1fde1c8e16fc76dafc84ae78d3c34c3820273f5bfa53f758d6f3fda17a408"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z9-y6-boundary-20261119/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z9-y6-boundary-20261119/verify_z9_y6.py",
+   "verifier_sha256_actual": "3bc6b781ec398df59542d5f58b68d47facf016b6627bd7031e2381edfdfd3754"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z8-y7-boundary-20261119/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z8-y7-boundary-20261119/verify_z8_y7.py",
+   "verifier_sha256_actual": "c7433ae0295a88eeb895f3d6325e1957344a8b3d2d136fbee694a18c22941228"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z8-y8-boundary-20261119/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z8-y8-boundary-20261119/verify_z8_y8.py",
+   "verifier_sha256_actual": "506da1793c40f48054da354c8f8dd5c599a8a4b4eb718ee1eeacc9c7c59ecdf8"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z9-y7-boundary-20261119/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z9-y7-boundary-20261119/verify_z9_y7.py",
+   "verifier_sha256_actual": "e31b67ec9a712594a8b97c59329c1e13ed66a705ef45f5e1754f7899215b9d46"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z9-y8-boundary-20261119/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z9-y8-boundary-20261119/verify_z9_y8.py",
+   "verifier_sha256_actual": "c3dd33802cc08ff7897534da63482c8b596d61c8c4a103c9267a98cafbe7e46b"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z8-y9-boundary-20261119/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z8-y9-boundary-20261119/verify_z8_y9.py",
+   "verifier_sha256_actual": "5944999a4b8dfb229cb9d765710655ad5e9d3725d50b1642ee6dba01313e51fb"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z8-y-ge9-proof-20261119/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z8-y-ge9-proof-20261119/verify_z8_y_ge9_proof.py",
+   "verifier_sha256_actual": "e88e5ea74d604b8771f8e2259168d4e2d5930656ed3e41effd11ccc68a688a4f"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z9-y-ge9-proof-20261119/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z9-y-ge9-proof-20261119/verify_z9_y_ge9_proof.py",
+   "verifier_sha256_actual": "db1d60c66ee668d9910a2f75f778105e87b2c6cbac219c0d9f8d89154ac08d88"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z10-y1-boundary-20261119/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z10-y1-boundary-20261119/verify_z10_y1.py",
+   "verifier_sha256_actual": "84243a90a56e11a87179b06838efce3a3091a83f893ae931d65de563f9e039fd"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z10-y2-boundary-20261119/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z10-y2-boundary-20261119/verify_z10_y2.py",
+   "verifier_sha256_actual": "d0c6fb1e120b7aeeaa230ec23230f59ca9bdd8344945892aa80c1da59386d06d"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z10-y3-boundary-20261119/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z10-y3-boundary-20261119/verify_z10_y3.py",
+   "verifier_sha256_actual": "708a50b4155092fb8d00bfcad16d43bf777593ef1a0e138cb12c2b7a76bf1ac3"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z10-y4-boundary-20261119/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z10-y4-boundary-20261119/verify_z10_y4.py",
+   "verifier_sha256_actual": "cd71dfa88f16648a3b9913d3deed4b635ec328c905948e2cb49b6a92a17041a8"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z10-y5-boundary-20261119/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z10-y5-boundary-20261119/verify_z10_y5.py",
+   "verifier_sha256_actual": "9a23509cea3c96b3b74ff3a7e93fb9ded12733aa63da60dc92d2074295cbc1bd"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z10-y6-boundary-20261119/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z10-y6-boundary-20261119/verify_z10_y6.py",
+   "verifier_sha256_actual": "66200a3049bfbebdf7f91bb853454a9353b02b3ff3962701fb5d402983ce9f83"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z10-y7-boundary-20261119/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z10-y7-boundary-20261119/verify_z10_y7.py",
+   "verifier_sha256_actual": "76471e3759ab9fb2813ce3cb58073ab194851982e0f93947e7dc5f66bcb659d9"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z10-y8-boundary-20261119/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z10-y8-boundary-20261119/verify_z10_y8.py",
+   "verifier_sha256_actual": "7dcd01a8e6889797da5d05dbffc77e5634342456492c2f0c13a2f1dc2cb7dbf4"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z10-y-ge9-proof-20261119/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z10-y-ge9-proof-20261119/verify_z10_y_ge9_proof.py",
+   "verifier_sha256_actual": "42db00b22b90e1f9893de6112723c123d9df3b7ad1ecb84c6a44d8e42c04b8d1"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z11-y1-boundary-20261119/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z11-y1-boundary-20261119/verify_z11_y1.py",
+   "verifier_sha256_actual": "2e7880cae25b2eceeafc9e3cf464be3b80d865a0a5262f4a5e3507c37193aaae"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z11-y2-boundary-20261119/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z11-y2-boundary-20261119/verify_z11_y2.py",
+   "verifier_sha256_actual": "d4c8ea56467586cec550336176009db8811d605ebbd38e25fa3da6eb6fba3a3b"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z11-y3-boundary-20261119/output/audit.json",
+   "status": "mismatch",
+   "verifier": "research/experiments/vertical-fiber-two-token-z11-y3-boundary-20261119/verify_z11_y3.py",
+   "verifier_sha256_actual": "2eab05bb13d9aed7a2d4e10bab87dfc2e383af7cfb4509370260b791b3ebf3c1",
+   "verifier_sha256_claimed": "a68bc68d0e1050b16b8cb5c455d40b4fce216cbf99a343940787dd840f7043f3"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z11-y4-boundary-20261119/output/audit.json",
+   "status": "mismatch",
+   "verifier": "research/experiments/vertical-fiber-two-token-z11-y4-boundary-20261119/verify_z11_y4.py",
+   "verifier_sha256_actual": "96c4232738b09c457895cfdcfa8dfe921a3b5c4159ec2c1785365bd30eb3be72",
+   "verifier_sha256_claimed": "395ac8dadf9cfc8404a6a9bdc98cbcbf6f034f1f1df62357c86c8cdc11f50775"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z12-y1-boundary-20261119/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z12-y1-boundary-20261119/verify_z12_y1.py",
+   "verifier_sha256_actual": "2e4cec77946d2b8ca92e31616d1d681500216250240d27f833e2c7bade8f4d9f"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z13-y1-boundary-20261119/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z13-y1-boundary-20261119/verify_z13_y1.py",
+   "verifier_sha256_actual": "3dd5a9716b440adb0d0b158ee3ec9b7042af263ee28fdd81c433182059c6a522"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z14-y1-boundary-20261119/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z14-y1-boundary-20261119/verify_z14_y1.py",
+   "verifier_sha256_actual": "f8d0ed40da458fe3b60ca3d2f640f9ac94adf677f0cae1ee84a36060d74b1db5"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z12-y2-boundary-20261119/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z12-y2-boundary-20261119/verify_z12_y2.py",
+   "verifier_sha256_actual": "96c9a3bff25758ec17aff4407678dd07290065536573cc66838f3c89cacd5c8b"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z15-y1-boundary-20261119/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z15-y1-boundary-20261119/verify_z15_y1.py",
+   "verifier_sha256_actual": "f1531f85a2ea4144fd3d8c498309c8c1412ae7e3cae87c977f2af2a5ef8ee59f"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z12-y3-boundary-20261119/output/audit.json",
+   "status": "match",
+   "verifier": "research/experiments/vertical-fiber-two-token-z12-y3-boundary-20261119/verify_z12_y3.py",
+   "verifier_sha256": "73993cd87937e9ff121c8614e26e6adc8b8ce0a6fa296f812a19b4ce29d1f053"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z16-y1-boundary-20261119/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z16-y1-boundary-20261119/verify_z16_y1.py",
+   "verifier_sha256_actual": "c764036b741c7abc786c1edf0d8228acffebb65c417740719b767eca26944f04"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-y1-parametric-proof-20261119/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-y1-parametric-proof-20261119/verify_y1_parametric_proof.py",
+   "verifier_sha256_actual": "278f7af2a6d099a987abdf8e0bdb49567675290808e0b4ce72379a6d1ae62fd8"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-y1-parametric-allz-proof-20261119/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-y1-parametric-allz-proof-20261119/verify_p1_universal.py",
+   "verifier_sha256_actual": "ca89da25b31dedf339d4277a1a8a3437b52c9a43befcc527241b18fc7f623370"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z12-y4-boundary-20261119/output/audit.json",
+   "status": "match",
+   "verifier": "research/experiments/vertical-fiber-two-token-z12-y4-boundary-20261119/verify_z12_y4.py",
+   "verifier_sha256": "d1f4b8674199d6e994902db3d73e069429cc38c10314ba2dcc4bef3a88789635"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z13-y2-boundary-20261119/output/audit.json",
+   "status": "match",
+   "verifier": "research/experiments/vertical-fiber-two-token-z13-y2-boundary-20261119/verify_z13_y2.py",
+   "verifier_sha256": "f2ea7cfe34d64dfd9b04c071dd1b85ec3065eb46a759da6ca7dc69831c72c274"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z13-y3-boundary-20261119/output/audit.json",
+   "status": "match",
+   "verifier": "research/experiments/vertical-fiber-two-token-z13-y3-boundary-20261119/verify_z13_y3.py",
+   "verifier_sha256": "1b3980ada4e13a0099164600470c5e066ba37abb7d3bd574eeb33a08b1db0a55"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z13-y4-boundary-20261119/output/audit.json",
+   "status": "match",
+   "verifier": "research/experiments/vertical-fiber-two-token-z13-y4-boundary-20261119/verify_z13_y4.py",
+   "verifier_sha256": "7f18ce186c65f77686499d9389d2c4c37252887af19f34d2672d68a6ba0e14b1"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z14-y2-boundary-20261119/output/audit.json",
+   "status": "match",
+   "verifier": "research/experiments/vertical-fiber-two-token-z14-y2-boundary-20261119/verify_z14_y2.py",
+   "verifier_sha256": "8692c22cb36befe10cf720030dbdee90287b8ab8a505389946420b99193eef8a"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z14-y3-boundary-20261119/output/audit.json",
+   "status": "match",
+   "verifier": "research/experiments/vertical-fiber-two-token-z14-y3-boundary-20261119/verify_z14_y3.py",
+   "verifier_sha256": "8fffea2e60c45c8a5533a90236e2a3ed7489d64b61d5ee20d4dbb38d27600095"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z14-y4-boundary-20261119/output/audit.json",
+   "status": "match",
+   "verifier": "research/experiments/vertical-fiber-two-token-z14-y4-boundary-20261119/verify_z14_y4.py",
+   "verifier_sha256": "b4e7cb094cc79754e6443c4b82973c6b52633c6a942b83bdcc2af447319927ed"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z15-y2-boundary-20261119/output/audit.json",
+   "status": "match",
+   "verifier": "research/experiments/vertical-fiber-two-token-z15-y2-boundary-20261119/verify_z15_y2.py",
+   "verifier_sha256": "7eae4c0701f5bccc8bec932ae48ccf172716f937fe63a047024315bb03f8079d"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z15-y3-boundary-20261119/output/audit.json",
+   "status": "match",
+   "verifier": "research/experiments/vertical-fiber-two-token-z15-y3-boundary-20261119/verify_z15_y3.py",
+   "verifier_sha256": "b128c97c178aabe4d3025019b926abdd0498dfb30909b9cf1addb1aa02ca35c0"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z11-y5-boundary-20261119/output/audit.json",
+   "status": "match",
+   "verifier": "research/experiments/vertical-fiber-two-token-z11-y5-boundary-20261119/verify_z11_y5.py",
+   "verifier_sha256": "46b3f6261a82b3b90094e9688b7a0219c37e92b406c858bfbb0d0a8e1dad2b30"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z12-y5-boundary-20261119/output/audit.json",
+   "status": "match",
+   "verifier": "research/experiments/vertical-fiber-two-token-z12-y5-boundary-20261119/verify_z12_y5.py",
+   "verifier_sha256": "6ac7ab8e87ef86f40e527764714117b2efbbffcf3134bd11a4830a32ddc8dded"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z13-y5-boundary-20261119/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z13-y5-boundary-20261119/verify_z13_y5.py",
+   "verifier_sha256_actual": "ef1de24a1d2d965f41591d8adf9b9359ef2490a3af8a0cc5456cb9bdfb359c3b"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z14-y5-boundary-20261119/output/audit.json",
+   "status": "match",
+   "verifier": "research/experiments/vertical-fiber-two-token-z14-y5-boundary-20261119/verify_z14_y5.py",
+   "verifier_sha256": "0a4fe6923eff14432add744d1d6991f75bb82327d03376dd96fada0fc367ef30"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z15-y4-boundary-20261120/output/audit.json",
+   "status": "match",
+   "verifier": "research/experiments/vertical-fiber-two-token-z15-y4-boundary-20261120/verify_z15_y4.py",
+   "verifier_sha256": "21f76dac2f3d0a2a68967b0ae298085f8c36016b1c38b206f4722ae9bf8edd21"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z15-y5-boundary-20261120/output/audit.json",
+   "status": "match",
+   "verifier": "research/experiments/vertical-fiber-two-token-z15-y5-boundary-20261120/verify_z15_y5.py",
+   "verifier_sha256": "64d1a71648e018c524dbd02208a377a4ee3366403bf2db11d53c6fe625fa832a"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z16-y3-boundary-20261120/output/audit.json",
+   "status": "match",
+   "verifier": "research/experiments/vertical-fiber-two-token-z16-y3-boundary-20261120/verify_z16_y3.py",
+   "verifier_sha256": "b61caeac98ae70e74d9a3abd2dd5b04c7c489dcb081933fc92aaeeb1d8ad4a30"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z16-y4-boundary-20261120/output/audit.json",
+   "status": "match",
+   "verifier": "research/experiments/vertical-fiber-two-token-z16-y4-boundary-20261120/verify_z16_y4.py",
+   "verifier_sha256": "923a31b8a93157a0e03565af67bb9016774209060c0a48d32a4ceb8f2334298c"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z17-y3-boundary-20261120/output/audit.json",
+   "status": "match",
+   "verifier": "research/experiments/vertical-fiber-two-token-z17-y3-boundary-20261120/verify_z17_y3.py",
+   "verifier_sha256": "0e95d733690030cae8372d6a0c7de271bfee2ba3e85afda9e8cc946dc54408d5"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z15-y-ge6-proof-20261120/output/audit.json",
+   "status": "match",
+   "verifier": "research/experiments/vertical-fiber-two-token-z15-y-ge6-proof-20261120/verify_z15_y_ge6.py",
+   "verifier_sha256": "131e1c6476482550079eb5d8d858d749ea006e4657602ae6cf931aaa5de3f92e"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z18-y2-boundary-20261120/output/audit.json",
+   "status": "match",
+   "verifier": "research/experiments/vertical-fiber-two-token-z18-y2-boundary-20261120/verify_z18_y2.py",
+   "verifier_sha256": "542510717baea35739d1c6aef9bd0a9f03374de619bf2ece07fbe1381c9f7657"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z19-y2-boundary-20261120/output/audit.json",
+   "status": "match",
+   "verifier": "research/experiments/vertical-fiber-two-token-z19-y2-boundary-20261120/verify_z19_y2.py",
+   "verifier_sha256": "2511f1915eb88e781e56cda6b177b13e079304f68a604b3e4933fc3bb75e6fa4"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z20-y2-boundary-20261120/output/audit.json",
+   "status": "match",
+   "verifier": "research/experiments/vertical-fiber-two-token-z20-y2-boundary-20261120/verify_z20_y2.py",
+   "verifier_sha256": "e9ef57b6bcc36491bff0be4802baea46c1ec8423cc909737a7db421ff9dbf05e"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z21-y2-boundary-20261120/output/audit.json",
+   "status": "match",
+   "verifier": "research/experiments/vertical-fiber-two-token-z21-y2-boundary-20261120/verify_z21_y2.py",
+   "verifier_sha256": "fb9d358b93233691d9a4e7a7b9dcd0b5691baed8fd3ba760f6e32bdb7e591da0"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z12-y-ge6-proof-20261120/output/audit.json",
+   "status": "match",
+   "verifier": "research/experiments/vertical-fiber-two-token-z12-y-ge6-proof-20261120/verify_z12_y_ge6_proof.py",
+   "verifier_sha256": "4a02431098bea2f32684239a486482ed5eb3b04acc5ab243e8d85b7cbefbd895"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z13-y-ge6-proof-20261120/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z13-y-ge6-proof-20261120/verify_z13_y_ge6_proof.py",
+   "verifier_sha256_actual": "5b634a5b54d61b35ba3d956c55f728c93fda81035e3d0b6c88028f310be765b8"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z14-y-ge6-proof-20261120/output/audit.json",
+   "status": "no-selfhash-field",
+   "verifier": "research/experiments/vertical-fiber-two-token-z14-y-ge6-proof-20261120/verify_z14_y_ge6.py",
+   "verifier_sha256_actual": "d34fcdd59cacae93333e900c06a42718f5cdfc1516073cc8c8c0530e624f39c4"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z16-y5-boundary-20261120/output/audit.json",
+   "status": "match",
+   "verifier": "research/experiments/vertical-fiber-two-token-z16-y5-boundary-20261120/verify_z16_y5.py",
+   "verifier_sha256": "2a39ced99c0123341956fa1c3f8f2d123fc8d1cda93b71261dad8e1054dcd5e3"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z17-y4-boundary-20261120/output/audit.json",
+   "status": "mismatch",
+   "verifier": "research/experiments/vertical-fiber-two-token-z17-y4-boundary-20261120/verify_z17_y4.py",
+   "verifier_sha256_actual": "a7878b8e40d116b6e5d25a6f94562a5584b8bc0374375868a1e4555a0f205d98",
+   "verifier_sha256_claimed": "388e1a47896fc2b7d3ea8f4a54c85235f3de59e2ed2cf41f7c4f77f026aaea75"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z16-y-ge6-proof-20261120/output/audit.json",
+   "status": "match",
+   "verifier": "research/experiments/vertical-fiber-two-token-z16-y-ge6-proof-20261120/verify_z16_y_ge6.py",
+   "verifier_sha256": "d07c3b0e751e93e1039559149afb600861e1fd2b04f4b54827a1243f77044d6f"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z18-y3-boundary-20261120/output/audit.json",
+   "status": "mismatch",
+   "verifier": "research/experiments/vertical-fiber-two-token-z18-y3-boundary-20261120/verify_z18_y3.py",
+   "verifier_sha256_actual": "4fecbd218fd999041a786539e4f6d42b781fa83c56649a0437c7ed00f547147f",
+   "verifier_sha256_claimed": "b7d146609c7b3023d7724b149cf6fd08d0b9adca38fc8401c71e2b0d44a04a39"
+  },
+  {
+   "audit": "research/experiments/vertical-fiber-two-token-z17-y4-second-verification-20261120/output/audit.json",
+   "status": "match",
+   "verifier": "research/experiments/vertical-fiber-two-token-z17-y4-second-verification-20261120/verify_z17_y4_second.py",
+   "verifier_sha256": "83002a3b3911a86fab240d622bdff69c218d188320e801a857af7f2336d7eb9a"
+  }
+ ],
+ "scanned_commit": "353aba77fa6e7b99d462a0605af6c9422379bcd1",
+ "schema": "repo-pkg-bytepin-healthscan-20261120-v1",
+ "single_owner_note": "research/log/2026-11-20-repo-pkg-bytepin-healthscan-single-owner-note.md",
+ "summary": {
+  "audit_steps": 124,
+  "mismatched_packages": [
+   "research/experiments/vertical-fiber-t2-q12-grundy-20261118/verify_t2_q12.py",
+   "research/experiments/vertical-fiber-two-token-z11-y3-boundary-20261119/verify_z11_y3.py",
+   "research/experiments/vertical-fiber-two-token-z11-y4-boundary-20261119/verify_z11_y4.py",
+   "research/experiments/vertical-fiber-two-token-z17-y4-boundary-20261120/verify_z17_y4.py",
+   "research/experiments/vertical-fiber-two-token-z18-y3-boundary-20261120/verify_z18_y3.py"
+  ],
+  "status_counts": {
+   "fetch-error": 0,
+   "match": 37,
+   "mismatch": 5,
+   "no-selfhash-field": 82,
+   "unparsed-step": 0
+  },
+  "verdict": "byte-pin HEALTHSCAN: 37/124 packages consistent at this pin"
+ }
+}
