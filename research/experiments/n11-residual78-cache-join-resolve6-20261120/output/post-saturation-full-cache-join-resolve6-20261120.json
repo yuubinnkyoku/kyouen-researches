@@ -1,0 +1,1077 @@
+{
+ "base_state": {
+  "dead_roots_39": [
+   "000000000000000038000000080010a0",
+   "00000000000000003800000008001101",
+   "00000000000000003800000008015000",
+   "00000000000000003800000008500002",
+   "00000000000000003800000008b00000",
+   "00000000000000003800000009800004",
+   "0000000000000000380000000a002010",
+   "0000000000000000380000000a080010",
+   "00000000000000003800000248004000",
+   "00000000000000003800000609000000",
+   "00000000000000003800220008100000",
+   "00000000000000043800000008180000",
+   "00000000000000103840000008080000",
+   "00000000000000143800000009000000",
+   "00000000000000801202000000840100",
+   "00000000000000801202000000900200",
+   "00000000000000801202000001080100",
+   "00000000000000801202000020081000",
+   "00000000000000801202040000800400",
+   "00000000000000801202090000001000",
+   "00000000000000801212020000001000",
+   "00000000000000801222000000880000",
+   "00000000000000801222040000001000",
+   "00000000000000a21086000000000000",
+   "00000000000020909002000080000000",
+   "00000000000022801202000000800000",
+   "00000000010000809002000040020000",
+   "00000000010000889002000080000000",
+   "00000000010000909002000000100000",
+   "00000000020000801202000000500000",
+   "00000000040004801202000020000000",
+   "00000000240000003820000000000001",
+   "00000008000000821082000000100000",
+   "00000010000000801202040000000200",
+   "00000010000000801222000000000100",
+   "00000010000008003800000008001000",
+   "00000010200000083800000000000400",
+   "00004000000000821082000000000004",
+   "00020000000000821082000000000010"
+  ],
+  "published_base": {
+   "five_parent_target": "34/112",
+   "frontier_cost": 492021,
+   "frontier_s6": 6213,
+   "solved_s6": 1635,
+   "source": "K1057 fold + K1059 sweep"
+  },
+  "residual_row_hex": [
+   "00000000000000003800000008001001",
+   "00000000000000003800000008001020",
+   "00000000000000003800000008001080",
+   "00000000000000003800000008001100",
+   "00000000000000003800000008001200",
+   "00000000000000003800000008001800",
+   "00000000000000003800000008002010",
+   "00000000000000003800000008002040",
+   "00000000000000003800000008002080",
+   "00000000000000003800000008002100",
+   "00000000000000003800000008005000",
+   "00000000000000003800000008011000",
+   "00000000000000003800000008500000",
+   "00000000000000003800000008900000",
+   "00000000000000003800000009000004",
+   "00000000000000003800000009040000",
+   "00000000000000003800000009800000",
+   "0000000000000000380000000a002000",
+   "0000000000000000380000000a080000",
+   "00000000000000003800000209000000",
+   "00000000000000003800000248000000",
+   "00000000000000003800000409000000",
+   "00000000000000003800000808001000",
+   "00000000000000003800100008002000",
+   "00000000000000003800200008001000",
+   "00000000000000003800200008100000",
+   "00000000000000003800200009000000",
+   "00000000000000043800000008080000",
+   "00000000000000043800000008100000",
+   "00000000000000043800000009000000",
+   "00000000000000083800000008100000",
+   "00000000000000083800000048000000",
+   "00000000000000103800000008080000",
+   "00000000000000103800000009000000",
+   "00000000000000801202000000081000",
+   "00000000000000801202000000101000",
+   "00000000000000801202000000800100",
+   "00000000000000801202000000800200",
+   "00000000000000801202000000800400",
+   "00000000000000801202000000840000",
+   "00000000000000801202000000880000",
+   "00000000000000801202000000900000",
+   "00000000000000801202000001000100",
+   "00000000000000801202000001000400",
+   "00000000000000801202000001080000",
+   "00000000000000801202000020001000",
+   "00000000000000801202010000001000",
+   "00000000000000801202020000001000",
+   "00000000000000801202040000001000",
+   "00000000000000801202040000800000",
+   "00000000000000801202080000001000",
+   "00000000000000801212000000001000",
+   "00000000000000801212000001000000",
+   "00000000000000801222000000001000",
+   "00000000000000801222000000800000",
+   "00000000000000821082000000000001",
+   "00000000000000821082000000000004",
+   "00000000000000821082000000000008",
+   "00000000000000821082000000000010",
+   "00000000000000821082000000000800",
+   "00000000000000821082000000001000",
+   "00000000000000821082800000000000",
+   "00000000000000821083000000000000",
+   "00000000000000889002000000100000",
+   "00000000000000889002000080000000",
+   "00000000000000909002000000100000",
+   "00000000000000909002000080000000",
+   "00000000000000a09002000080000000",
+   "00000000000020809002000080000000",
+   "00000000000040809002000000100000",
+   "00000000000080003800000048000000",
+   "00000000010000003800000008100000",
+   "00000000010000809002000000100000",
+   "00000000010000809002000040000000",
+   "00000000010000809002000080000000",
+   "00000000020000801202000000100000",
+   "00000008000000003800000008100000",
+   "00000010000000801202000000000400"
+  ],
+  "residual_rows": 78
+ },
+ "checks": [
+  {
+   "detail": "research/experiments/n11-stranded86-add-one-stone-expansion-d10-sweep-20261119/fold/output/post-twelfth-receipt-cover-resolve5-20261119.json",
+   "name": "pin-resolve5",
+   "pass": true
+  },
+  {
+   "detail": "research/experiments/n11-residual78-39witness-depth10-sweep-20261119/output/witness-39-root-depth10-sweep-20261119.json",
+   "name": "pin-sweep39",
+   "pass": true
+  },
+  {
+   "detail": {
+    "entries": 1279,
+    "post_scan_repaired": [
+     {
+      "file": "class2-lane-cost65j-inflight-20261115.json",
+      "reason": "missing on main"
+     },
+     {
+      "file": "class2-lane-cost69a-inflight-20261116.json",
+      "reason": "missing on main"
+     },
+     {
+      "file": "class2-lane-cost69h-raw-batch1-20261115.jsonl",
+      "reason": "missing on main"
+     },
+     {
+      "file": "class2-lane-cost69h-raw-batch2-20261115.jsonl",
+      "reason": "missing on main"
+     },
+     {
+      "file": "class2-lane-cost76c-inflight-20261116.json",
+      "reason": "missing on main"
+     },
+     {
+      "file": "class2-lane-cost76d-inflight-20261116.json",
+      "reason": "missing on main"
+     },
+     {
+      "file": "class2-lane-cost77e-inflight-20261116.json",
+      "reason": "missing on main"
+     }
+    ],
+    "verified": 1272
+   },
+   "name": "corpus-manifest",
+   "pass": true
+  },
+  {
+   "detail": {
+    "engine_bits": 8960,
+    "note": "published K0863 scan recorded 8964 bits (8305/659); the corpus repair after the scan (7 files, verdict-claimed-identical) leaves 4 fewer bits outside the 133 claim targets",
+    "refuted": 8302,
+    "win": 658
+   },
+   "name": "k0863-harvest",
+   "pass": true
+  },
+  {
+   "detail": {
+    "children": 133
+   },
+   "name": "k0863-target-children-exact",
+   "pass": true
+  },
+  {
+   "detail": {
+    "transfers": 115
+   },
+   "name": "k0863-transfers",
+   "pass": true
+  },
+  {
+   "detail": {
+    "refuted": 5,
+    "win": 1
+   },
+   "name": "sweep6",
+   "pass": true
+  },
+  {
+   "detail": {
+    "eighth_fold": 1,
+    "fifth_sixth_fold": 2,
+    "first_fold": 1,
+    "fourth_fold": 1,
+    "global_fold": 126,
+    "ninth_twelfth_fold": 4,
+    "prev_cost_fold": 30,
+    "second_third_fold": 2,
+    "seventh_fold": 1
+   },
+   "name": "receipt-roots",
+   "pass": true
+  },
+  {
+   "detail": [],
+   "name": "join-conflict-free",
+   "pass": true
+  },
+  {
+   "detail": {
+    "published": 7969,
+    "rebuilt": 7969
+   },
+   "name": "universe-size",
+   "pass": true
+  },
+  {
+   "detail": {
+    "in_universe": 39
+   },
+   "name": "dead39-excluded",
+   "pass": true
+  },
+  {
+   "detail": {
+    "evidence": [
+     {
+      "covered_residual_rows": [
+       "00000000000000801202010000001000"
+      ],
+      "d4_canonical": true,
+      "engine_entries": [
+       {
+        "bit": 40,
+        "child_hex": "00000000000000803202000000001000",
+        "lane_context": [
+         {
+          "bit_in_lane_win_bits": true,
+          "determinism_rerun_note": "bits 43 (WIN7, 3,269,824), 102 (WIN7, 3,354,664) and 87 (REFUTED, 532,826) re-solved fresh in a separate process after the sweep: node counts identical (class2-lane-cost65h-v16-determinism-rerun-20261",
+          "engine": "class4_child1_runner_v16.ts (published repo-verbatim v16 runner), depth 10, andclose=1, cap 1e9, pil",
+          "file": "class2-lane-cost65h-sweep-20261114.json",
+          "lane_verdict": "WIN7"
+         }
+        ],
+        "raw_provenance": [
+         {
+          "bit_line": {
+           "andclose": true,
+           "bit": 40,
+           "capped": false,
+           "loss": true,
+           "ms": 2347,
+           "nodes": 1105860,
+           "terminalStoneRange": [
+            13,
+            17
+           ]
+          },
+          "file": "class2-lane-cost65h-raw-batch3-20261114.jsonl",
+          "pilot_control_line": {
+           "capped": false,
+           "control": "pilot_d6",
+           "loss": false,
+           "nodes": 3402
+          }
+         }
+        ]
+       }
+      ],
+      "join_sources": [
+       "k0863-cache-engine"
+      ],
+      "popcount": 7,
+      "root": "00000000000000803202010000001000",
+      "unsafe_quadruples": 0
+     },
+     {
+      "covered_residual_rows": [
+       "00000000000000801202080000001000"
+      ],
+      "d4_canonical": true,
+      "engine_entries": [
+       {
+        "bit": 43,
+        "child_hex": "00000000000000803202000000001000",
+        "lane_context": [
+         {
+          "bit_in_lane_win_bits": true,
+          "determinism_rerun_note": "bits 43 (WIN7, 3,269,824), 102 (WIN7, 3,354,664) and 87 (REFUTED, 532,826) re-solved fresh in a separate process after the sweep: node counts identical (class2-lane-cost65h-v16-determinism-rerun-20261",
+          "engine": "class4_child1_runner_v16.ts (published repo-verbatim v16 runner), depth 10, andclose=1, cap 1e9, pil",
+          "file": "class2-lane-cost65h-sweep-20261114.json",
+          "lane_verdict": "WIN7"
+         }
+        ],
+        "raw_provenance": [
+         {
+          "bit_line": {
+           "andclose": true,
+           "bit": 43,
+           "capped": false,
+           "loss": true,
+           "ms": 7463,
+           "nodes": 3269824,
+           "terminalStoneRange": [
+            13,
+            17
+           ]
+          },
+          "file": "class2-lane-cost65h-raw-batch4-20261114.jsonl",
+          "pilot_control_line": {
+           "capped": false,
+           "control": "pilot_d6",
+           "loss": false,
+           "nodes": 3402
+          }
+         }
+        ]
+       }
+      ],
+      "join_sources": [
+       "k0863-cache-engine"
+      ],
+      "popcount": 7,
+      "root": "00000000000000803202080000001000",
+      "unsafe_quadruples": 0
+     },
+     {
+      "covered_residual_rows": [
+       "00000000000000003800000008001200"
+      ],
+      "d4_canonical": true,
+      "engine_entries": [
+       {
+        "bit": 99,
+        "child_hex": "00000000000000803202000000001000",
+        "lane_context": [
+         {
+          "bit_in_lane_win_bits": true,
+          "determinism_rerun_note": "bits 43 (WIN7, 3,269,824), 102 (WIN7, 3,354,664) and 87 (REFUTED, 532,826) re-solved fresh in a separate process after the sweep: node counts identical (class2-lane-cost65h-v16-determinism-rerun-20261",
+          "engine": "class4_child1_runner_v16.ts (published repo-verbatim v16 runner), depth 10, andclose=1, cap 1e9, pil",
+          "file": "class2-lane-cost65h-sweep-20261114.json",
+          "lane_verdict": "WIN7"
+         }
+        ],
+        "raw_provenance": [
+         {
+          "bit_line": {
+           "andclose": true,
+           "bit": 99,
+           "capped": false,
+           "loss": true,
+           "ms": 2398,
+           "nodes": 1114855,
+           "terminalStoneRange": [
+            13,
+            17
+           ]
+          },
+          "file": "class2-lane-cost65h-raw-batch7-20261114.jsonl",
+          "pilot_control_line": {
+           "capped": false,
+           "control": "pilot_d6",
+           "loss": false,
+           "nodes": 3402
+          }
+         }
+        ]
+       }
+      ],
+      "join_sources": [
+       "k0863-cache-engine"
+      ],
+      "popcount": 7,
+      "root": "00000000000000803800000008001200",
+      "unsafe_quadruples": 0
+     },
+     {
+      "covered_residual_rows": [
+       "00000000010000003800000008100000"
+      ],
+      "d4_canonical": true,
+      "engine_entries": [
+       {
+        "bit": 118,
+        "child_hex": "00000000000000803202000000001000",
+        "lane_context": [
+         {
+          "bit_in_lane_win_bits": true,
+          "determinism_rerun_note": "bits 43 (WIN7, 3,269,824), 102 (WIN7, 3,354,664) and 87 (REFUTED, 532,826) re-solved fresh in a separate process after the sweep: node counts identical (class2-lane-cost65h-v16-determinism-rerun-20261",
+          "engine": "class4_child1_runner_v16.ts (published repo-verbatim v16 runner), depth 10, andclose=1, cap 1e9, pil",
+          "file": "class2-lane-cost65h-sweep-20261114.json",
+          "lane_verdict": "WIN7"
+         }
+        ],
+        "raw_provenance": [
+         {
+          "bit_line": {
+           "andclose": true,
+           "bit": 118,
+           "capped": false,
+           "loss": true,
+           "ms": 5806,
+           "nodes": 2307338,
+           "terminalStoneRange": [
+            13,
+            17
+           ]
+          },
+          "file": "class2-lane-cost65h-raw-batch8-20261114.jsonl",
+          "pilot_control_line": {
+           "capped": false,
+           "control": "pilot_d6",
+           "loss": false,
+           "nodes": 3402
+          }
+         }
+        ]
+       }
+      ],
+      "join_sources": [
+       "k0863-cache-engine"
+      ],
+      "popcount": 7,
+      "root": "00000000010000803800000008100000",
+      "unsafe_quadruples": 0
+     }
+    ],
+    "note": "Status of the verdict-join WIN hits covering residual rows: each is a depth-10 single-order (andclose=true) engine verdict from the cost-lane raw batches in the K0863 cache corpus (raw bit_line loss=true, capped=false, terminalStoneRange present, in-file pilot_d6 control loss=false). The lane runner is the published repo-verbatim class4_child1_runner_v16.ts with depth-10 andclose=1 and an in-file pilot d6 control line; the heaviest of these bits were additionally re-solved node-exact in a separate process (determinism_rerun_node_exact in the lane sweep record). They are NOT receipt-closure certificates yet: closing their rows via the receipt-fold mechanism requires certificate extraction (child = root minus the lowest set bit) plus independent dual verification (BigInt 3x3 / Bareiss 4x4) of each extracted root.  Until then the covered rows are counted as pending-win only, and the 39-root live witness plan (maximum matching 39 over the 78 residual rows) still fully covers all residual rows, so the coverage bookkeeping of this record never depends on treating these 4 hits as closed.",
+    "rows_covered": [
+     "00000000000000003800000008001200",
+     "00000000000000801202010000001000",
+     "00000000000000801202080000001000",
+     "00000000010000003800000008100000"
+    ],
+    "win_cover_hits": 4
+   },
+   "name": "win-coverage-of-residual",
+   "pass": true
+  }
+ ],
+ "date": "2026-11-20",
+ "interpretation_guard": [
+  "REFUTED-D10 is not a LOSS proof; the depth-saturation label of the 39 dead roots is an experimental node-identity judgement inside the runner v17 move model.",
+  "A fold is row-coverage bookkeeping and says nothing about game-theoretic values.",
+  "Witness roots are a conditional depth-10 sweep plan, not certificates.",
+  "Stranded rows at this scope do not preclude closure by out-of-scope mechanisms.",
+  "The standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+ ],
+ "resolve": {
+  "greedy_leftover_rows": 0,
+  "greedy_set_cover_size": 42,
+  "matched_rows": 78,
+  "maximum_matching": 39,
+  "multi_cover_roots": {},
+  "pair_edges": 667,
+  "singleton_eligible_rows": 78,
+  "stranded_row_hex": [],
+  "stranded_rows": 0,
+  "stranded_scope_note": "stranded at THIS scope means: no remaining unjudged fresh-safe add-one-stone candidate covers the row (pair or singleton) in the full-cache join, and no known-WIN receipt covers it. It is NOT a mathematical unclosability proof; deeper expansions, other closure mechanisms, or candidates beyond this scope may still close it.",
+  "unmatched_rows": 0,
+  "unmatched_with_singleton": 0,
+  "win_cover_detail": {
+   "note": "Status of the verdict-join WIN hits covering residual rows: each is a depth-10 single-order (andclose=true) engine verdict from the cost-lane raw batches in the K0863 cache corpus (raw bit_line loss=true, capped=false, terminalStoneRange present, in-file pilot_d6 control loss=false). The lane runner is the published repo-verbatim class4_child1_runner_v16.ts with depth-10 andclose=1 and an in-file pilot d6 control line; the heaviest of these bits were additionally re-solved node-exact in a separate process (determinism_rerun_node_exact in the lane sweep record). They are NOT receipt-closure certificates yet: closing their rows via the receipt-fold mechanism requires certificate extraction (child = root minus the lowest set bit) plus independent dual verification (BigInt 3x3 / Bareiss 4x4) of each extracted root.  Until then the covered rows are counted as pending-win only, and the 39-root live witness plan (maximum matching 39 over the 78 residual rows) still fully covers all residual rows, so the coverage bookkeeping of this record never depends on treating these 4 hits as closed.",
+   "rows_covered_by_pending_win": [
+    "00000000000000003800000008001200",
+    "00000000000000801202010000001000",
+    "00000000000000801202080000001000",
+    "00000000010000003800000008100000"
+   ],
+   "status": "pending receipt closure: depth-10 engine verdicts joined from the K0863 corpus raw batches; certificate extraction and dual verification still required before any row is counted as closed by them; the 39-root live witness plan covers all 78 residual rows independently of these hits",
+   "win_cover_hits": 4
+  },
+  "witness_size": 39
+ },
+ "schema": "n11-residual78-post-saturation-full-cache-join-resolve6-20261120-v1",
+ "status": "exact-live-candidate-cover",
+ "trust_boundary": "engine depth-10 verdict soundness + D4 invariance, identical to the published sweeps and the K0863 canonical verdict cache; a broken premise surfaces as a WIN/REFUTED conflict at the same canonical root, and this run fails closed on any conflict",
+ "verdict_join": {
+  "corpus_verification": {
+   "engine_bits_rebuilt": 8960,
+   "manifest_entries": 1279,
+   "post_scan_repaired_files": [
+    {
+     "file": "class2-lane-cost65j-inflight-20261115.json",
+     "reason": "missing on main"
+    },
+    {
+     "file": "class2-lane-cost69a-inflight-20261116.json",
+     "reason": "missing on main"
+    },
+    {
+     "file": "class2-lane-cost69h-raw-batch1-20261115.jsonl",
+     "reason": "missing on main"
+    },
+    {
+     "file": "class2-lane-cost69h-raw-batch2-20261115.jsonl",
+     "reason": "missing on main"
+    },
+    {
+     "file": "class2-lane-cost76c-inflight-20261116.json",
+     "reason": "missing on main"
+    },
+    {
+     "file": "class2-lane-cost76d-inflight-20261116.json",
+     "reason": "missing on main"
+    },
+    {
+     "file": "class2-lane-cost77e-inflight-20261116.json",
+     "reason": "missing on main"
+    }
+   ],
+   "sha256_verified": 1272,
+   "target_children_exact_vs_published": true
+  },
+  "definition": "K0863 canonical cache rebuilt from the 1,279-file corpus on current main (plus the 115 published K0863 transfers) UNION post-K0863 sweep records UNION published WIN receipt roots, all D4-canon root indexed",
+  "stats": {
+   "cache_engine_roots": 7145,
+   "canonical_roots_judged": 7493,
+   "published_transfer_only_roots": 0,
+   "refuted_roots": 6707,
+   "win_refuted_conflicts": 0,
+   "win_roots": 786
+  },
+  "universe_hits": {
+   "fresh_safe": 4417,
+   "fresh_unsafe": 3102,
+   "judged_refuted": 446,
+   "judged_source_breakdown_roots": {
+    "k0863-cache-engine": 279,
+    "k0863-published-transfer": 5,
+    "k1039_sweep28": 25,
+    "k1040_sweep3": 3,
+    "sweep28": 25,
+    "sweep35": 26,
+    "sweep39_dead": 39,
+    "sweep43": 39,
+    "sweep48": 42
+   },
+   "judged_win": 4,
+   "unjudged_fresh": 7519
+  }
+ },
+ "witness_full": [
+  {
+   "covered": [
+    "00000000000000003800000008001020",
+    "00000000000000003800000008001200"
+   ],
+   "root": "00000000000000003800000008001220",
+   "rows": [
+    "00000000000000003800000008001020",
+    "00000000000000003800000008001200"
+   ],
+   "rule": "live candidate: unjudged in the full cache join (not REFUTED, not WIN, not in the 39 dead roots)",
+   "safe": true
+  },
+  {
+   "covered": [
+    "00000000000000003800000008001080",
+    "00000000000000003800000008001800"
+   ],
+   "root": "00000000000000003800000008001880",
+   "rows": [
+    "00000000000000003800000008001080",
+    "00000000000000003800000008001800"
+   ],
+   "rule": "live candidate: unjudged in the full cache join (not REFUTED, not WIN, not in the 39 dead roots)",
+   "safe": true
+  },
+  {
+   "covered": [
+    "00000000000000003800000008001001",
+    "00000000000000003800000008005000"
+   ],
+   "root": "00000000000000003800000008005001",
+   "rows": [
+    "00000000000000003800000008001001",
+    "00000000000000003800000008005000"
+   ],
+   "rule": "live candidate: unjudged in the full cache join (not REFUTED, not WIN, not in the 39 dead roots)",
+   "safe": true
+  },
+  {
+   "covered": [
+    "00000000000000003800000008011000",
+    "00000000000000003800000008500000"
+   ],
+   "root": "00000000000000003800000008510000",
+   "rows": [
+    "00000000000000003800000008011000",
+    "00000000000000003800000008500000"
+   ],
+   "rule": "live candidate: unjudged in the full cache join (not REFUTED, not WIN, not in the 39 dead roots)",
+   "safe": true
+  },
+  {
+   "covered": [
+    "00000000000000003800000008002100",
+    "00000000000000003800000009000004"
+   ],
+   "root": "00000000000000003800000009080004",
+   "rows": [
+    "00000000000000003800000008002100",
+    "00000000000000003800000009000004"
+   ],
+   "rule": "live candidate: unjudged in the full cache join (not REFUTED, not WIN, not in the 39 dead roots)",
+   "safe": true
+  },
+  {
+   "covered": [
+    "00000000000000003800000009040000",
+    "00000000000000003800000009800000"
+   ],
+   "root": "00000000000000003800000009840000",
+   "rows": [
+    "00000000000000003800000009040000",
+    "00000000000000003800000009800000"
+   ],
+   "rule": "live candidate: unjudged in the full cache join (not REFUTED, not WIN, not in the 39 dead roots)",
+   "safe": true
+  },
+  {
+   "covered": [
+    "00000000000000003800000008002080",
+    "0000000000000000380000000a002000"
+   ],
+   "root": "0000000000000000380000000a002080",
+   "rows": [
+    "00000000000000003800000008002080",
+    "0000000000000000380000000a002000"
+   ],
+   "rule": "live candidate: unjudged in the full cache join (not REFUTED, not WIN, not in the 39 dead roots)",
+   "safe": true
+  },
+  {
+   "covered": [
+    "00000000000000003800000008900000",
+    "00000000000000003800000808001000"
+   ],
+   "root": "00000000000000003800000888001000",
+   "rows": [
+    "00000000000000003800000008900000",
+    "00000000000000003800000808001000"
+   ],
+   "rule": "live candidate: unjudged in the full cache join (not REFUTED, not WIN, not in the 39 dead roots)",
+   "safe": true
+  },
+  {
+   "covered": [
+    "00000000000000003800200008001000",
+    "00000000000000003800200009000000"
+   ],
+   "root": "00000000000000003800200009001000",
+   "rows": [
+    "00000000000000003800200008001000",
+    "00000000000000003800200009000000"
+   ],
+   "rule": "live candidate: unjudged in the full cache join (not REFUTED, not WIN, not in the 39 dead roots)",
+   "safe": true
+  },
+  {
+   "covered": [
+    "00000000000000003800000248000000",
+    "00000000000000083800000048000000"
+   ],
+   "root": "00000000000000083800000248000000",
+   "rows": [
+    "00000000000000003800000248000000",
+    "00000000000000083800000048000000"
+   ],
+   "rule": "live candidate: unjudged in the full cache join (not REFUTED, not WIN, not in the 39 dead roots)",
+   "safe": true
+  },
+  {
+   "covered": [
+    "00000000000000043800000008100000",
+    "00000000000000083800000008100000"
+   ],
+   "root": "000000000000000c3800000008100000",
+   "rows": [
+    "00000000000000043800000008100000",
+    "00000000000000083800000008100000"
+   ],
+   "rule": "live candidate: unjudged in the full cache join (not REFUTED, not WIN, not in the 39 dead roots)",
+   "safe": true
+  },
+  {
+   "covered": [
+    "0000000000000000380000000a080000",
+    "00000000000000103800000008080000"
+   ],
+   "root": "0000000000000010380000000a080000",
+   "rows": [
+    "0000000000000000380000000a080000",
+    "00000000000000103800000008080000"
+   ],
+   "rule": "live candidate: unjudged in the full cache join (not REFUTED, not WIN, not in the 39 dead roots)",
+   "safe": true
+  },
+  {
+   "covered": [
+    "00000000000000801202000000800100",
+    "00000000000000801202000000880000"
+   ],
+   "root": "00000000000000801202000000880100",
+   "rows": [
+    "00000000000000801202000000800100",
+    "00000000000000801202000000880000"
+   ],
+   "rule": "live candidate: unjudged in the full cache join (not REFUTED, not WIN, not in the 39 dead roots)",
+   "safe": true
+  },
+  {
+   "covered": [
+    "00000000000000801202000000800400",
+    "00000000000000801202000000900000"
+   ],
+   "root": "00000000000000801202000000900400",
+   "rows": [
+    "00000000000000801202000000800400",
+    "00000000000000801202000000900000"
+   ],
+   "rule": "live candidate: unjudged in the full cache join (not REFUTED, not WIN, not in the 39 dead roots)",
+   "safe": true
+  },
+  {
+   "covered": [
+    "00000000000000043800000009000000",
+    "00000000000000801202000001000400"
+   ],
+   "root": "00000000000000801202000001000440",
+   "rows": [
+    "00000000000000043800000009000000",
+    "00000000000000801202000001000400"
+   ],
+   "rule": "live candidate: unjudged in the full cache join (not REFUTED, not WIN, not in the 39 dead roots)",
+   "safe": true
+  },
+  {
+   "covered": [
+    "00000000000000003800000409000000",
+    "00000000000000801202000001000100"
+   ],
+   "root": "00000000000000801202000001004100",
+   "rows": [
+    "00000000000000003800000409000000",
+    "00000000000000801202000001000100"
+   ],
+   "rule": "live candidate: unjudged in the full cache join (not REFUTED, not WIN, not in the 39 dead roots)",
+   "safe": true
+  },
+  {
+   "covered": [
+    "00000000000000801202000000101000",
+    "00000000000000801202040000001000"
+   ],
+   "root": "00000000000000801202040000101000",
+   "rows": [
+    "00000000000000801202000000101000",
+    "00000000000000801202040000001000"
+   ],
+   "rule": "live candidate: unjudged in the full cache join (not REFUTED, not WIN, not in the 39 dead roots)",
+   "safe": true
+  },
+  {
+   "covered": [
+    "00000000000000801202000000800200",
+    "00000000000000801202040000800000"
+   ],
+   "root": "00000000000000801202040000800200",
+   "rows": [
+    "00000000000000801202000000800200",
+    "00000000000000801202040000800000"
+   ],
+   "rule": "live candidate: unjudged in the full cache join (not REFUTED, not WIN, not in the 39 dead roots)",
+   "safe": true
+  },
+  {
+   "covered": [
+    "00000000000000801202000020001000",
+    "00000000000000801202080000001000"
+   ],
+   "root": "00000000000000801202080020001000",
+   "rows": [
+    "00000000000000801202000020001000",
+    "00000000000000801202080000001000"
+   ],
+   "rule": "live candidate: unjudged in the full cache join (not REFUTED, not WIN, not in the 39 dead roots)",
+   "safe": true
+  },
+  {
+   "covered": [
+    "00000000000000103800000009000000",
+    "00000000000000801212000001000000"
+   ],
+   "root": "00000000000000801212000011000000",
+   "rows": [
+    "00000000000000103800000009000000",
+    "00000000000000801212000001000000"
+   ],
+   "rule": "live candidate: unjudged in the full cache join (not REFUTED, not WIN, not in the 39 dead roots)",
+   "safe": true
+  },
+  {
+   "covered": [
+    "00000000000000801202000000840000",
+    "00000000000000801222000000800000"
+   ],
+   "root": "00000000000000801222000000840000",
+   "rows": [
+    "00000000000000801202000000840000",
+    "00000000000000801222000000800000"
+   ],
+   "rule": "live candidate: unjudged in the full cache join (not REFUTED, not WIN, not in the 39 dead roots)",
+   "safe": true
+  },
+  {
+   "covered": [
+    "00000000000000801202010000001000",
+    "00000000000000801222000000001000"
+   ],
+   "root": "00000000000000801222010000001000",
+   "rows": [
+    "00000000000000801202010000001000",
+    "00000000000000801222000000001000"
+   ],
+   "rule": "live candidate: unjudged in the full cache join (not REFUTED, not WIN, not in the 39 dead roots)",
+   "safe": true
+  },
+  {
+   "covered": [
+    "00000000000000821082000000000800",
+    "00000000000000821082800000000000"
+   ],
+   "root": "00000000000000821082800000000800",
+   "rows": [
+    "00000000000000821082000000000800",
+    "00000000000000821082800000000000"
+   ],
+   "rule": "live candidate: unjudged in the full cache join (not REFUTED, not WIN, not in the 39 dead roots)",
+   "safe": true
+  },
+  {
+   "covered": [
+    "00000000000000821082000000001000",
+    "00000000000000821083000000000000"
+   ],
+   "root": "00000000000000821083000000001000",
+   "rows": [
+    "00000000000000821082000000001000",
+    "00000000000000821083000000000000"
+   ],
+   "rule": "live candidate: unjudged in the full cache join (not REFUTED, not WIN, not in the 39 dead roots)",
+   "safe": true
+  },
+  {
+   "covered": [
+    "00000000000000003800000008002010",
+    "00000000000000889002000080000000"
+   ],
+   "root": "00000000000000889042000080000000",
+   "rows": [
+    "00000000000000003800000008002010",
+    "00000000000000889002000080000000"
+   ],
+   "rule": "live candidate: unjudged in the full cache join (not REFUTED, not WIN, not in the 39 dead roots)",
+   "safe": true
+  },
+  {
+   "covered": [
+    "00000000000000003800100008002000",
+    "00000000000000909002000080000000"
+   ],
+   "root": "00000000000000909002000080000040",
+   "rows": [
+    "00000000000000003800100008002000",
+    "00000000000000909002000080000000"
+   ],
+   "rule": "live candidate: unjudged in the full cache join (not REFUTED, not WIN, not in the 39 dead roots)",
+   "safe": true
+  },
+  {
+   "covered": [
+    "00000000000000003800000008002040",
+    "00000000000020809002000080000000"
+   ],
+   "root": "00000000000030809002000080000000",
+   "rows": [
+    "00000000000000003800000008002040",
+    "00000000000020809002000080000000"
+   ],
+   "rule": "live candidate: unjudged in the full cache join (not REFUTED, not WIN, not in the 39 dead roots)",
+   "safe": true
+  },
+  {
+   "covered": [
+    "00000000000000801202020000001000",
+    "00000000000040809002000000100000"
+   ],
+   "root": "00000000000040809002000800100000",
+   "rows": [
+    "00000000000000801202020000001000",
+    "00000000000040809002000000100000"
+   ],
+   "rule": "live candidate: unjudged in the full cache join (not REFUTED, not WIN, not in the 39 dead roots)",
+   "safe": true
+  },
+  {
+   "covered": [
+    "00000000000000003800000209000000",
+    "00000000010000809002000040000000"
+   ],
+   "root": "00000000010000809002000040000080",
+   "rows": [
+    "00000000000000003800000209000000",
+    "00000000010000809002000040000000"
+   ],
+   "rule": "live candidate: unjudged in the full cache join (not REFUTED, not WIN, not in the 39 dead roots)",
+   "safe": true
+  },
+  {
+   "covered": [
+    "00000000000000889002000000100000",
+    "00000000010000809002000000100000"
+   ],
+   "root": "00000000010000889002000000100000",
+   "rows": [
+    "00000000000000889002000000100000",
+    "00000000010000809002000000100000"
+   ],
+   "rule": "live candidate: unjudged in the full cache join (not REFUTED, not WIN, not in the 39 dead roots)",
+   "safe": true
+  },
+  {
+   "covered": [
+    "00000000000000a09002000080000000",
+    "00000000010000809002000080000000"
+   ],
+   "root": "00000000010000a09002000080000000",
+   "rows": [
+    "00000000000000a09002000080000000",
+    "00000000010000809002000080000000"
+   ],
+   "rule": "live candidate: unjudged in the full cache join (not REFUTED, not WIN, not in the 39 dead roots)",
+   "safe": true
+  },
+  {
+   "covered": [
+    "00000000000000003800200008100000",
+    "00000000000000801202000000081000"
+   ],
+   "root": "00000000020000003820000008001000",
+   "rows": [
+    "00000000000000003800200008100000",
+    "00000000000000801202000000081000"
+   ],
+   "rule": "live candidate: unjudged in the full cache join (not REFUTED, not WIN, not in the 39 dead roots)",
+   "safe": true
+  },
+  {
+   "covered": [
+    "00000000000000043800000008080000",
+    "00000000020000801202000000100000"
+   ],
+   "root": "00000000020000801202000000100040",
+   "rows": [
+    "00000000000000043800000008080000",
+    "00000000020000801202000000100000"
+   ],
+   "rule": "live candidate: unjudged in the full cache join (not REFUTED, not WIN, not in the 39 dead roots)",
+   "safe": true
+  },
+  {
+   "covered": [
+    "00000000000000801202000001080000",
+    "00000000000080003800000048000000"
+   ],
+   "root": "00000000022000003800000009000000",
+   "rows": [
+    "00000000000000801202000001080000",
+    "00000000000080003800000048000000"
+   ],
+   "rule": "live candidate: unjudged in the full cache join (not REFUTED, not WIN, not in the 39 dead roots)",
+   "safe": true
+  },
+  {
+   "covered": [
+    "00000000000000801212000000001000",
+    "00000000010000003800000008100000"
+   ],
+   "root": "00000000410000003800000008100000",
+   "rows": [
+    "00000000000000801212000000001000",
+    "00000000010000003800000008100000"
+   ],
+   "rule": "live candidate: unjudged in the full cache join (not REFUTED, not WIN, not in the 39 dead roots)",
+   "safe": true
+  },
+  {
+   "covered": [
+    "00000000000000909002000000100000",
+    "00000008000000003800000008100000"
+   ],
+   "root": "00000008100000003800000008100000",
+   "rows": [
+    "00000000000000909002000000100000",
+    "00000008000000003800000008100000"
+   ],
+   "rule": "live candidate: unjudged in the full cache join (not REFUTED, not WIN, not in the 39 dead roots)",
+   "safe": true
+  },
+  {
+   "covered": [
+    "00000000000000003800000008001100",
+    "00000010000000801202000000000400"
+   ],
+   "root": "00000010000000801202000000400400",
+   "rows": [
+    "00000000000000003800000008001100",
+    "00000010000000801202000000000400"
+   ],
+   "rule": "live candidate: unjudged in the full cache join (not REFUTED, not WIN, not in the 39 dead roots)",
+   "safe": true
+  },
+  {
+   "covered": [
+    "00000000000000821082000000000001",
+    "00000000000000821082000000000004"
+   ],
+   "root": "00004000000000821082000000000100",
+   "rows": [
+    "00000000000000821082000000000001",
+    "00000000000000821082000000000004"
+   ],
+   "rule": "live candidate: unjudged in the full cache join (not REFUTED, not WIN, not in the 39 dead roots)",
+   "safe": true
+  },
+  {
+   "covered": [
+    "00000000000000821082000000000008",
+    "00000000000000821082000000000010"
+   ],
+   "root": "00020000000000821082000000000040",
+   "rows": [
+    "00000000000000821082000000000008",
+    "00000000000000821082000000000010"
+   ],
+   "rule": "live candidate: unjudged in the full cache join (not REFUTED, not WIN, not in the 39 dead roots)",
+   "safe": true
+  }
+ ]
+}
