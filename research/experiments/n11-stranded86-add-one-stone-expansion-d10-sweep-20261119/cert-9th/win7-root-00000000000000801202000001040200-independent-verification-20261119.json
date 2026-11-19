@@ -1,0 +1,27 @@
+{
+  "verdict": "WIN7 certificate independently verified",
+  "method": "BigInt 3x3 cofactor expansion of the exact lifted determinant [x\u00b2+y\u00b2,x,y,1]; no floating point",
+  "root_hex": "00000000000000801202000001040200",
+  "root_stones": 7,
+  "root_safe": true,
+  "root_mobility": 72,
+  "strategy_rows": 84928,
+  "rows_sorted_unique": true,
+  "subroots_passed": 72,
+  "consumed_winner_rows": 84928,
+  "union_missing": 0,
+  "union_extra": 0,
+  "visited_states_across_subroots": 171066,
+  "winner_states": 110087,
+  "loser_states": 33569,
+  "loser_reply_edges": 153450,
+  "terminal_count": 27410,
+  "terminal_range": [
+    13,
+    17
+  ],
+  "forbidden_triple_cache_entries": 41349,
+  "legal_state_cache_entries": 130506,
+  "cross_method_state_flow_equal": true,
+  "certificate_union_exact": true
+}
