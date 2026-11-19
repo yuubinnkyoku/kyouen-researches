@@ -44,7 +44,7 @@ verify_z17_y4.py を作成し、次を検査した。
 | tail端点 | 9,994 |
 | 合計 | 12,693,293 |
 
-不一致0、署名帯の穴0。二つの作業ディレクトリから同じスクリプトを実行し、audit.jsonのSHA-256は d0ac9ba25248c071058dd8dc492284a8696a3e28494c1a821f4afa54e154e3c9 で一致した。verifier SHA-256は e03b0309ea57fe3d85b31a6f052f1fe3de0117e6d19c2c9ab853cb0d72101f95。
+不一致0、署名帯の穴0。二つの作業ディレクトリから同じスクリプトを実行し、audit.jsonのSHA-256は 4bf36ec1c80eba7bf9cf8b17ff6bdd940cf9b57a27332c014277b5f29ad804fb で一致した。verifier SHA-256は 49796741b92cf0c7e52f23ea90884b1ca302d65ea2c24f50fc29daa439c6b838。
 
 これは有限監査であり、全称性の根拠は署名帯表と帰納法である。GitHub上のKnowledge integrity workflowには検証器とaudit差分検査を登録する。ローカルではrepo全体の uv sync --locked、knowledge check、unittest、buildは実行できていないため、CI結果を確認する。
 
