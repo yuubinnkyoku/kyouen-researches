@@ -1,5 +1,5 @@
 ---
-id: K1057
+id: K1058
 title: 共円ゲームの有限体盤・反転平面盤への移行と転送閾値
 kind: proposition
 status: computed
