@@ -1,0 +1,1306 @@
+{
+ "schema": "n11-residual-28-root-witness-depth10-sweep-20261119-v2tolocal",
+ "date": "2026-11-19",
+ "status": "sweep-complete",
+ "engine": {
+  "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/class4_child1_runner_v17.ts (blob c132cc6425eee3feaeef1d697dd74f968cfedb59, verified)",
+  "depth": 10,
+  "caps": [
+   30000000
+  ],
+  "andclose_orderings": [
+   1,
+   0
+  ],
+  "note": "v17 probe-exhaustion fallback (no silent fbt drops); fresh engine per candidate; pilot_d6 control (loss=false, 3402 nodes) run before every probe batch"
+ },
+ "classification_rule": "WIN7-D10 = uncapped loss=true in >=1 ordering (constructive); REFUTED-D10 = uncapped loss=false in >=1 ordering and no uncapped WIN (complete no-win-within-depth-10 proof at this 7-stone root); CAPPED-30000000 = every ordering hit the cap (no verdict). Numbers/nodes are exact proofs; ms fields are observational timing only.",
+ "witness_source": {
+  "cover_resolve": "research/experiments/n11-head1410-residual-48-root-sweep-two-win-receipts-20261119/output/five-parent-refuted-excluded-cover-resolve-20261119.json",
+  "cover_resolve_blob": "600b23d39888ea0e693742da4b2ae9c372a9faf0"
+ },
+ "classification": {
+  "counted_roots": 28,
+  "win7_d10": {
+   "count": 3,
+   "roots": [
+    "00000000000000801202060001000000",
+    "00000000000000805202080001000000",
+    "00000000040000801202000080100000"
+   ]
+  },
+  "refuted_d10": {
+   "count": 25,
+   "roots": [
+    "00000000000000003800000008001021",
+    "0000000000000000380000000b080000",
+    "00000000000000003800280009000000",
+    "00000000000000083800000048100000",
+    "00000000000000801202000000840200",
+    "00000000000000801202000000880400",
+    "00000000000000801202000001040100",
+    "00000000000000801202000011000400",
+    "00000000000000801202000020101000",
+    "00000000000000801202010001080000",
+    "00000000000000801202040000900000",
+    "00000000000000801202050000001000",
+    "000000000000008012020a0000001000",
+    "00000000000000801212000001001000",
+    "00000000000000801222000000801000",
+    "00000000000000909002000080100000",
+    "00000000000020a09002000080000000",
+    "00000000000040889002000000100000",
+    "00000000010000809003000080000000",
+    "00000000010004003800000008002000",
+    "00000000020000801222000000100000",
+    "00000000040000801202000120000000",
+    "0000000a000000003800000008100000",
+    "00000010000000801202000000000404",
+    "00000010000000801202000100000100"
+   ]
+  },
+  "capped": {
+   "count": 0,
+   "roots": []
+  },
+  "incomplete": [],
+  "ordering_conflicts": [],
+  "pilot_fail_roots": []
+ },
+ "recorded_epoch1_expectation": {
+  "win": 3,
+  "refuted": 25,
+  "capped": 0,
+  "note": "epoch-1 (2026-11-19) recorded this sweep as 3 WIN + 25 REFUTED + CAPPED 0 at cap 30M uniform, but its records were lost before publication; this run re-establishes them with fresh evidence"
+ },
+ "checks": [
+  {
+   "name": "all 28 sweep roots are the published 28-root resolve witness",
+   "pass": true
+  },
+  {
+   "name": "every record carries a passing pilot_d6 control (loss=false, 3402 nodes)",
+   "pass": true
+  },
+  {
+   "name": "every counted root has both-order cap-30M runs",
+   "pass": true
+  },
+  {
+   "name": "no WIN/REFUTED ordering conflict",
+   "pass": true
+  },
+  {
+   "name": "classification totals 28",
+   "pass": true
+  },
+  {
+   "name": "the three WIN7-D10 roots are exactly the published C/D/E receipts",
+   "pass": true
+  },
+  {
+   "name": "C-root WIN node counts match published probesC values (3294339 andclose1 / 3953563 andclose0)",
+   "pass": true
+  }
+ ],
+ "interpretation_guard": [
+  "REFUTED-D10 here is a 7-stone-root-level verdict: no first-player win within depth 10 from that exact root (cap never hit). It is NOT a LOSS proof for any earlier position.",
+  "The three WIN7-D10 roots have published, dual-independently-verified certificates (K1035, K1036).",
+  "This sweep does not decide the two-stone roots {49,60}/{59,60}, S2 {59,60}, classes 1/2/4, or the 11x11 empty board; all remain UNKNOWN."
+ ],
+ "per_root": [
+  {
+   "root": "00000000000000003800000008001021",
+   "verdict": "REFUTED-D10",
+   "witness_rows": [
+    "00000000000000003800000008001001",
+    "00000000000000003800000008001020"
+   ],
+   "is_published_receipt": false,
+   "probe_runs": [
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 926192,
+     "capped": false,
+     "terminal_stone_range": [
+      15,
+      17
+     ],
+     "ms": 2246,
+     "wall": null
+    },
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 1544910,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 3329,
+     "wall": null
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "loss": true,
+    "nodes": 3402
+   }
+  },
+  {
+   "root": "0000000000000000380000000b080000",
+   "verdict": "REFUTED-D10",
+   "witness_rows": [
+    "0000000000000000380000000a080000",
+    "0000000000000000380000000b000000"
+   ],
+   "is_published_receipt": false,
+   "probe_runs": [
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 5427018,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 23779,
+     "wall": null
+    },
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 8858211,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 40097,
+     "wall": null
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "loss": true,
+    "nodes": 3402
+   }
+  },
+  {
+   "root": "00000000000000003800280009000000",
+   "verdict": "REFUTED-D10",
+   "witness_rows": [
+    "00000000000000003800000248000000",
+    "00000000000000003800200009000000"
+   ],
+   "is_published_receipt": false,
+   "probe_runs": [
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 11875215,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 52462,
+     "wall": null
+    },
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 27594510,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 186494,
+     "wall": null
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "loss": true,
+    "nodes": 3402
+   }
+  },
+  {
+   "root": "00000000000000083800000048100000",
+   "verdict": "REFUTED-D10",
+   "witness_rows": [
+    "00000000000000083800000008100000",
+    "00000000000000083800000048000000"
+   ],
+   "is_published_receipt": false,
+   "probe_runs": [
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 2246023,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 11009,
+     "wall": null
+    },
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 1816191,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 8497,
+     "wall": null
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "loss": true,
+    "nodes": 3402
+   }
+  },
+  {
+   "root": "00000000000000801202000000840200",
+   "verdict": "REFUTED-D10",
+   "witness_rows": [
+    "00000000000000801202000000800200",
+    "00000000000000801202000000840000"
+   ],
+   "is_published_receipt": false,
+   "probe_runs": [
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 900673,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 2367,
+     "wall": null
+    },
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 1953747,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 4935,
+     "wall": null
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "loss": true,
+    "nodes": 3402
+   }
+  },
+  {
+   "root": "00000000000000801202000000880400",
+   "verdict": "REFUTED-D10",
+   "witness_rows": [
+    "00000000000000801202000000800400",
+    "00000000000000801202000000880000"
+   ],
+   "is_published_receipt": false,
+   "probe_runs": [
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 2582916,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 12985,
+     "wall": null
+    },
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 527837,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 2595,
+     "wall": null
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "loss": true,
+    "nodes": 3402
+   }
+  },
+  {
+   "root": "00000000000000801202000001040100",
+   "verdict": "REFUTED-D10",
+   "witness_rows": [
+    "00000000000000801202000001000100",
+    "00000000000000801202000001040000"
+   ],
+   "is_published_receipt": false,
+   "probe_runs": [
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 2536182,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 6061,
+     "wall": null
+    },
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 953401,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 4607,
+     "wall": null
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "loss": true,
+    "nodes": 3402
+   }
+  },
+  {
+   "root": "00000000000000801202000011000400",
+   "verdict": "REFUTED-D10",
+   "witness_rows": [
+    "00000000000000103800000009000000",
+    "00000000000000801202000001000400"
+   ],
+   "is_published_receipt": false,
+   "probe_runs": [
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 199867,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 1016,
+     "wall": null
+    },
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 320576,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 1433,
+     "wall": null
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "loss": true,
+    "nodes": 3402
+   }
+  },
+  {
+   "root": "00000000000000801202000020101000",
+   "verdict": "REFUTED-D10",
+   "witness_rows": [
+    "00000000000000801202000000101000",
+    "00000000000000801202000020001000"
+   ],
+   "is_published_receipt": false,
+   "probe_runs": [
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 383014,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 1780,
+     "wall": null
+    },
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 1159405,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 5097,
+     "wall": null
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "loss": true,
+    "nodes": 3402
+   }
+  },
+  {
+   "root": "00000000000000801202010001080000",
+   "verdict": "REFUTED-D10",
+   "witness_rows": [
+    "00000000000000801202000001080000",
+    "00000000000000801202010001000000"
+   ],
+   "is_published_receipt": false,
+   "probe_runs": [
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 270131,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 1188,
+     "wall": null
+    },
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 750733,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 3510,
+     "wall": null
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "loss": true,
+    "nodes": 3402
+   }
+  },
+  {
+   "root": "00000000000000801202040000900000",
+   "verdict": "REFUTED-D10",
+   "witness_rows": [
+    "00000000000000801202000000900000",
+    "00000000000000801202040000800000"
+   ],
+   "is_published_receipt": false,
+   "probe_runs": [
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 2676976,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 12601,
+     "wall": null
+    },
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 6347402,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 29587,
+     "wall": null
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "loss": true,
+    "nodes": 3402
+   }
+  },
+  {
+   "root": "00000000000000801202050000001000",
+   "verdict": "REFUTED-D10",
+   "witness_rows": [
+    "00000000000000801202010000001000",
+    "00000000000000801202040000001000"
+   ],
+   "is_published_receipt": false,
+   "probe_runs": [
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 744638,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 3818,
+     "wall": null
+    },
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 693144,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 3579,
+     "wall": null
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "loss": true,
+    "nodes": 3402
+   }
+  },
+  {
+   "root": "00000000000000801202060001000000",
+   "verdict": "WIN7-D10",
+   "witness_rows": [
+    "00000000000000801202020001000000",
+    "00000000000000801202040001000000"
+   ],
+   "is_published_receipt": true,
+   "probe_runs": [
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": true,
+     "nodes": 3294339,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 14412,
+     "wall": null
+    },
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": true,
+     "nodes": 3953563,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 16586,
+     "wall": null
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "loss": true,
+    "nodes": 3402
+   }
+  },
+  {
+   "root": "000000000000008012020a0000001000",
+   "verdict": "REFUTED-D10",
+   "witness_rows": [
+    "00000000000000801202020000001000",
+    "00000000000000801202080000001000"
+   ],
+   "is_published_receipt": false,
+   "probe_runs": [
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 3485745,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 16674,
+     "wall": null
+    },
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 962990,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 4362,
+     "wall": null
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "loss": true,
+    "nodes": 3402
+   }
+  },
+  {
+   "root": "00000000000000801212000001001000",
+   "verdict": "REFUTED-D10",
+   "witness_rows": [
+    "00000000000000801212000000001000",
+    "00000000000000801212000001000000"
+   ],
+   "is_published_receipt": false,
+   "probe_runs": [
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 879988,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 4281,
+     "wall": null
+    },
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 2334278,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 11151,
+     "wall": null
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "loss": true,
+    "nodes": 3402
+   }
+  },
+  {
+   "root": "00000000000000801222000000801000",
+   "verdict": "REFUTED-D10",
+   "witness_rows": [
+    "00000000000000801222000000001000",
+    "00000000000000801222000000800000"
+   ],
+   "is_published_receipt": false,
+   "probe_runs": [
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 234087,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 1491,
+     "wall": null
+    },
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 714280,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 3121,
+     "wall": null
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "loss": true,
+    "nodes": 3402
+   }
+  },
+  {
+   "root": "00000000000000805202080001000000",
+   "verdict": "WIN7-D10",
+   "witness_rows": [
+    "00000000000000805202000001000000"
+   ],
+   "is_published_receipt": true,
+   "probe_runs": [
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": true,
+     "nodes": 2368036,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 11337,
+     "wall": null
+    },
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": true,
+     "nodes": 3486894,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 16233,
+     "wall": null
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "loss": true,
+    "nodes": 3402
+   }
+  },
+  {
+   "root": "00000000000000909002000080100000",
+   "verdict": "REFUTED-D10",
+   "witness_rows": [
+    "00000000000000909002000000100000",
+    "00000000000000909002000080000000"
+   ],
+   "is_published_receipt": false,
+   "probe_runs": [
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 520684,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 2482,
+     "wall": null
+    },
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 2393950,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 11688,
+     "wall": null
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "loss": true,
+    "nodes": 3402
+   }
+  },
+  {
+   "root": "00000000000020a09002000080000000",
+   "verdict": "REFUTED-D10",
+   "witness_rows": [
+    "00000000000000a09002000080000000",
+    "00000000000020809002000080000000"
+   ],
+   "is_published_receipt": false,
+   "probe_runs": [
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 1044449,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 5196,
+     "wall": null
+    },
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 8881769,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 40284,
+     "wall": null
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "loss": true,
+    "nodes": 3402
+   }
+  },
+  {
+   "root": "00000000000040889002000000100000",
+   "verdict": "REFUTED-D10",
+   "witness_rows": [
+    "00000000000000889002000000100000",
+    "00000000000040809002000000100000"
+   ],
+   "is_published_receipt": false,
+   "probe_runs": [
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 138910,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 704,
+     "wall": null
+    },
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 5765078,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 27311,
+     "wall": null
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "loss": true,
+    "nodes": 3402
+   }
+  },
+  {
+   "root": "00000000010000809003000080000000",
+   "verdict": "REFUTED-D10",
+   "witness_rows": [
+    "00000000010000809002000080000000"
+   ],
+   "is_published_receipt": false,
+   "probe_runs": [
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 613900,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 2798,
+     "wall": null
+    },
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 2546709,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 10608,
+     "wall": null
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "loss": true,
+    "nodes": 3402
+   }
+  },
+  {
+   "root": "00000000010004003800000008002000",
+   "verdict": "REFUTED-D10",
+   "witness_rows": [
+    "00000000000000103800000008080000",
+    "00000000000000801202000000800100"
+   ],
+   "is_published_receipt": false,
+   "probe_runs": [
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 820352,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 4209,
+     "wall": null
+    },
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 18883642,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 101439,
+     "wall": null
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "loss": true,
+    "nodes": 3402
+   }
+  },
+  {
+   "root": "00000000020000801222000000100000",
+   "verdict": "REFUTED-D10",
+   "witness_rows": [
+    "00000000000000889002000080000000",
+    "00000000020000801202000000100000"
+   ],
+   "is_published_receipt": false,
+   "probe_runs": [
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 261501,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 1255,
+     "wall": null
+    },
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 1671348,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 7210,
+     "wall": null
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "loss": true,
+    "nodes": 3402
+   }
+  },
+  {
+   "root": "00000000040000801202000080100000",
+   "verdict": "WIN7-D10",
+   "witness_rows": [
+    "00000000020000809002000040000000"
+   ],
+   "is_published_receipt": true,
+   "probe_runs": [
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": true,
+     "nodes": 557943,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 1229,
+     "wall": null
+    },
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": true,
+     "nodes": 676155,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 1396,
+     "wall": null
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "loss": true,
+    "nodes": 3402
+   }
+  },
+  {
+   "root": "00000000040000801202000120000000",
+   "verdict": "REFUTED-D10",
+   "witness_rows": [
+    "00000000000080003800000048000000",
+    "00000000010000809002000040000000"
+   ],
+   "is_published_receipt": false,
+   "probe_runs": [
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 312889,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 1673,
+     "wall": null
+    },
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 10698380,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 69013,
+     "wall": null
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "loss": true,
+    "nodes": 3402
+   }
+  },
+  {
+   "root": "0000000a000000003800000008100000",
+   "verdict": "REFUTED-D10",
+   "witness_rows": [
+    "00000000000000801202000000081000",
+    "00000008000000003800000008100000"
+   ],
+   "is_published_receipt": false,
+   "probe_runs": [
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 282729,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 725,
+     "wall": null
+    },
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 334500,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 763,
+     "wall": null
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "loss": true,
+    "nodes": 3402
+   }
+  },
+  {
+   "root": "00000010000000801202000000000404",
+   "verdict": "REFUTED-D10",
+   "witness_rows": [
+    "00000000000000003800000008500000",
+    "00000010000000801202000000000400"
+   ],
+   "is_published_receipt": false,
+   "probe_runs": [
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 369559,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 1724,
+     "wall": null
+    },
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 1582339,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 8563,
+     "wall": null
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "loss": true,
+    "nodes": 3402
+   }
+  },
+  {
+   "root": "00000010000000801202000100000100",
+   "verdict": "REFUTED-D10",
+   "witness_rows": [
+    "00000000010000003800000008100000",
+    "00000000010000809002000000100000"
+   ],
+   "is_published_receipt": false,
+   "probe_runs": [
+    {
+     "ordering": "andclose1",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 1188224,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 3417,
+     "wall": null
+    },
+    {
+     "ordering": "andclose0",
+     "cap": 30000000,
+     "loss": false,
+     "nodes": 2818437,
+     "capped": false,
+     "terminal_stone_range": [
+      13,
+      17
+     ],
+     "ms": 7237,
+     "wall": null
+    }
+   ],
+   "pilot_control": {
+    "control": "pilot_d6",
+    "loss": true,
+    "nodes": 3402
+   }
+  }
+ ],
+ "receipt_link": {
+  "00000000000000801202060001000000": {
+   "receipt": "fourth",
+   "published_item": "K1035",
+   "unique_strategy_rows": 50941,
+   "certificate_sha256": "f3fcf274ee72d98f4501d104f694d679cd3301e0e161a06a22c191c89ad94bae"
+  },
+  "00000000000000805202080001000000": {
+   "receipt": "fifth",
+   "published_item": "K1036",
+   "unique_strategy_rows": 55857,
+   "certificate_sha256": "69589e76e5d2e5f22e6992929f38d9fd67f07ce1bd9fe9e3f971d32bdd635a49"
+  },
+  "00000000040000801202000080100000": {
+   "receipt": "sixth",
+   "published_item": "K1036",
+   "unique_strategy_rows": 30984,
+   "certificate_sha256": "5289f152e88072d716f22d42414222162facb7486d07fd024b61fdc50ddef885"
+  }
+ }
+}
