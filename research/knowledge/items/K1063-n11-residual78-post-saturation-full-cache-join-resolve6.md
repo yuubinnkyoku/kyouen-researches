@@ -8,7 +8,7 @@ aliases:
   - execution of the K1059-declared resolve6 (39 dead roots excluded, full K0863 canonical verdict cache joined at root level)
   - corpus-verified rebuild of the K0863 engine map (1,272/1,279 manifest sha256 match, 133 target children exact vs published scan, 115 transfers, 0 WIN/REFUTED conflicts)
   - post-join cover re-solve of the 78 residual rows (fresh-safe 4,417, 667 pair edges, 78 singleton-eligible rows, maximum matching 39, stranded 0)
-  - winCOVER windfall: 4 cache WIN7-D10 roots (cost65h child bits 40/43/99/118) cover 4 residual rows as pending receipt candidates with raw-line provenance recorded
+  - "winCOVER windfall: 4 cache WIN7-D10 roots (cost65h child bits 40/43/99/118) cover 4 residual rows as pending receipt candidates with raw-line provenance recorded"
 relations:
 - type: depends_on
   target: K0001

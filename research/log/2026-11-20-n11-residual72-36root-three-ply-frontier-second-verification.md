@@ -34,6 +34,9 @@ Proxmox CT204（Debian 13・Python 3.13.5）で逐次実行。実装はPython標
 - `uv sync --locked` は成功。
 - sparse checkoutに関連する3つの実験入力ディレクトリを追加し、リポジトリ内の配置で独立検証器を再実行。19/19 gate PASS、出力SHA-256 `a6272056df6aa1dc348a00e1961a95223b4642a230a7da95a04b857bd9118b83` が別cwd実行と一致。
 - K1084のfront matterと4つのartifact pathを個別検査してPASS。新規ファイルの `git diff --check` もPASS。
-- K1084のrelation先K1075が既存front matterのYAML構文エラーで読み込めなかったため、K1075のコロンを含むaliasを引用符で囲み、topicを既存語彙の `residual-games/search-methods/statistics` に修正、artifact role `note` を許可語彙の `log` に修正した。K1075が依存するK1063にも同種の未引用コロンがあったため、該当noteだけを引用符で囲んだ。主張・数値・判定は変更していない。
+- K1084のrelation先K1075が既存front matterのYAML構文エラーで読み込めなかったため、K1075のコロンを含むaliasを引用符で囲み、topicを既存語彙の `residual-games/search-methods/statistics` に修正、artifact role `note` を許可語彙の `log` に修正した。K1075が依存するK1063にも同種の未引用コロンがあったため、該当noteとコロンを含むaliasを引用符で囲んだ。主張・数値・判定は変更していない。
 - リポジトリ全体のknowledge check/buildは成功扱いにしない。全体サイズは約3.2 GBでCT204の空き容量内に完全checkoutできず、sparse checkoutでは既存artifact欠落が大量に報告される。unit testは31件中30件通過・1件エラーで、既存20項目にaliases欠落があるためMigrationBoundaryTestsがKeyErrorになった。K1084自身のaliasesとartifact pathは個別PASS。既存の別項目のYAML/語彙エラーはこの変更では修正していない。
 - root READMEとknowledge/generatedの再生成は、全artifactを含まないsparse checkoutでは信頼できる差分を作れないため未実施。GitHub status APIでも当該commitにstatus/workflow runは返らず、CI成功とは扱わない。
+
+
+- 追加の絞り込み検査ではK1084とK1075にエラーは出なかった。K1063の残存指摘は、旧項目K1057/K1059のfront matter未整備と、このsparse checkoutに未展開の既存artifactに限られる。
