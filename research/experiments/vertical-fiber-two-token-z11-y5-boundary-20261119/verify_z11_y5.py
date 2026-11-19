@@ -1,4 +1,4 @@
-"""Independent verifier for the two-token boundary slice z=11, y=5 (K1036).
+"""Independent verifier for the two-token boundary slice z=11, y=5 (K1037).
 
 Published claim (universal theorem, proof by x-induction plus complete
 A/B/C signature-band table): for H(R;(x,5);11), all x>=5, all R>=0:
@@ -717,7 +717,7 @@ def run():
                               "on the x-induction and band-table proof, not "
                               "on this finite audit"),
         "seeds": {"scatter": SEED_SCATTER},
-        "slice": "two-token residual game z=11 y=5, all x>=5, all R>=0 (K1036)",
+        "slice": "two-token residual game z=11 y=5, all x>=5, all R>=0 (K1037)",
         "verifier_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
     }
     audit["total_checks"] = sum(counts.values())

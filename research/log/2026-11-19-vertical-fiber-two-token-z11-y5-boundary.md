@@ -4,7 +4,7 @@
 
 - 最新 `main`: `cc8be6d6dc1df9ef87dd10aae4b9103035e82754`。直近コミットでK1035（n11残余28-root witnessの第4WIN7-D10証明書）まで着地していた。
 - `AGENTS.md`を確認。mainへ直接反映し、知識の正本は`research/knowledge/items/`、実験は`research/experiments/`、履歴は`research/log/`、generatedは直接編集しない。
-- `research/knowledge/README.md`の2トークン節を確認。z=11はy=1..4（K1012..K1015）、z=13・z=14・z=15のy=2..4とz=12のy=1..4が全称証明済み。z=11・y=5は未登録で、B子K1015（z=11,y=4）・C子1⊕K1007（z=10,y=5）がともに出版済みのため着手可能だった。並走第一候補のz=15・y=4とは切片が異なるため非衝突、採番はpush直前に再確認した（K1036が空き）。
+- `research/knowledge/README.md`の2トークン節を確認。z=11はy=1..4（K1012..K1015）、z=13・z=14・z=15のy=2..4とz=12のy=1..4が全称証明済み。z=11・y=5は未登録で、B子K1015（z=11,y=4）・C子1⊕K1007（z=10,y=5）がともに出版済みのため着手可能だった。並走第一候補のz=15・y=4とは切片が異なるため非衝突、採番はpush直前に再確認した（slug `K1036-two-token-z11-y5-boundary.md` の不在のみを確認した）。
 - なお`research/knowledge/generated/`はitemsに対して旧いまま（summary.mdが872項、K0894まで）で、`tmp-knowledge-build.yml`の「broken Markdown links修理後の再生成待ち」状態。本pushでは兄弟切片と同様にgeneratedを直接編集せず、再生成レーンに任せた。
 
 ## 発見
@@ -33,10 +33,16 @@ BはK1015、CはK1007。x=5では二つの減少手が同じ多重集合(5,4)に
 
 ## 反映
 
-- 新規正本: `K1036-two-token-z11-y5-boundary.md`
+- 新規正本: `K1037-two-token-z11-y5-boundary.md`
 - 実験: `vertical-fiber-two-token-z11-y5-boundary-20261119/`（report・verify・census・audit・census.txt）
 - 本ログとknowledge READMEを更新、Knowledge integrity workflowに検証器・audit差分検査stepを追加
 - branch/PRは作らずmainへ直接反映
+
+## 再採番とREADME復元（初回反映後の追記）
+
+初回反映（commit 1e2adea1・itemをK1036-two-token-z11-y5-boundary.mdとしてpush）は、 slug列挙による採番確認の直後に並走n11レーンが `K1036-n11-witness-fifth-sixth-win7-certificates.md` を着地させており二重採番となった。 AGENTS.mdのK番号規則（main既存のK番号は変更しない・衝突した新規項目側が再採番）により、 本項をK1037へ再採番し、誤採番の旧K1036-two-token-z11-y5-boundary.mdをmainから削除、 verify/report/auditの"(K1036)"表記・id・sha一式をK1037版で再生成した（監査は再生成後に別プロセス2回実行でbyte-identical、監査JSON SHA-256 47d61b03…、検証器SHA-256 46b3f626…）。採番確認はslug推測でなくitems/直近コミットのfiles一覧で行うべきだった（K1019の先例と同じ失敗）。
+
+また本修復時に、mainのREADMEが並走K1036-n11ブレットを欠く（K1035までの状態に巻き戻った別レーンのlost-updateとみられる）ことを確認したため、 commit 1e2adea1のREADMEから当該ブレットの原文を復元して本pushに含めた。
 
 ## 残る課題
 
