@@ -1,0 +1,17 @@
+{
+  "theorem": "z17-y4-two-token-grundy",
+  "status": "pass",
+  "scope": "finite audit only; universal proof is x-induction plus complete signature bands",
+  "verifier_sha256": "e03b0309ea57fe3d85b31a6f052f1fe3de0117e6d19c2c9ab853cb0d72101f95",
+  "counts": {
+    "signature_band_checks": 6486,
+    "signature_band_gaps": 0,
+    "signature_band_mismatches": 0,
+    "direct_recursive_checks": 2961,
+    "bottom_up_checks": 8694,
+    "closure_sweep_checks": 12607431,
+    "deep_sample_checks": 57727,
+    "tail_checks": 9994
+  },
+  "bad": []
+}
