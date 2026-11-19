@@ -34,7 +34,7 @@ verify_z15_y5.pyは順序保持・降順正準化の二直接再帰、K1048/K104
 - 同一プロセス内2回実行でaudit.jsonはbyte-identical。
 - 別プロセス・別cwdでの再実行もaudit.jsonとbyte-identical。
 - verifier SHA-256: 64d1a71648e018c524dbd02208a377a4ee3366403bf2db11d53c6fe625fa832a
-- audit.json SHA-256: 90247d46bf7ade12b991165b09cb861ffa4bd38e6f8aaecfec82651a617b0afd
+- audit.json SHA-256: aa8f60fe05f70e398906f8b3920e58e328c589513b608627883d914a857f9677
 
 有限監査は証明表の転写・実装照合であり、全称性はx外帰納と全R署名帯表が担う。
 
