@@ -1,0 +1,170 @@
+[
+  {
+    "n": 3,
+    "planar_quads": 14,
+    "torus_quads": 18,
+    "common": 14,
+    "only_planar": 0,
+    "only_torus": 4,
+    "planar": {
+      "safe_sets": 298,
+      "layer_sizes": {
+        "0": 1,
+        "1": 9,
+        "2": 36,
+        "3": 84,
+        "4": 112,
+        "5": 56
+      },
+      "max_safe_size": 5,
+      "empty_grundy": 1,
+      "grundy_distribution": {
+        "0": 149,
+        "1": 149
+      },
+      "first_move_grundy": {
+        "0": 9
+      },
+      "winning_first_moves": 9
+    },
+    "torus": {
+      "safe_sets": 274,
+      "layer_sizes": {
+        "0": 1,
+        "1": 9,
+        "2": 36,
+        "3": 84,
+        "4": 108,
+        "5": 36
+      },
+      "max_safe_size": 5,
+      "empty_grundy": 1,
+      "grundy_distribution": {
+        "0": 129,
+        "1": 145
+      },
+      "first_move_grundy": {
+        "0": 9
+      },
+      "winning_first_moves": 9
+    }
+  },
+  {
+    "n": 4,
+    "planar_quads": 194,
+    "torus_quads": 924,
+    "common": 194,
+    "only_planar": 0,
+    "only_torus": 730,
+    "planar": {
+      "safe_sets": 5811,
+      "layer_sizes": {
+        "0": 1,
+        "1": 16,
+        "2": 120,
+        "3": 560,
+        "4": 1626,
+        "5": 2360,
+        "6": 1064,
+        "7": 64
+      },
+      "max_safe_size": 7,
+      "empty_grundy": 0,
+      "grundy_distribution": {
+        "0": 1825,
+        "1": 2192,
+        "2": 1124,
+        "3": 574,
+        "4": 88,
+        "5": 8
+      },
+      "first_move_grundy": {
+        "1": 16
+      },
+      "winning_first_moves": 0
+    },
+    "torus": {
+      "safe_sets": 1593,
+      "layer_sizes": {
+        "0": 1,
+        "1": 16,
+        "2": 120,
+        "3": 560,
+        "4": 896
+      },
+      "max_safe_size": 4,
+      "empty_grundy": 1,
+      "grundy_distribution": {
+        "0": 1024,
+        "1": 457,
+        "2": 112
+      },
+      "first_move_grundy": {
+        "0": 16
+      },
+      "winning_first_moves": 16
+    }
+  },
+  {
+    "n": 5,
+    "planar_quads": 826,
+    "torus_quads": 3150,
+    "common": 826,
+    "only_planar": 0,
+    "only_torus": 2324,
+    "planar": {
+      "safe_sets": 151394,
+      "layer_sizes": {
+        "0": 1,
+        "1": 25,
+        "2": 300,
+        "3": 2300,
+        "4": 11824,
+        "5": 37272,
+        "6": 59192,
+        "7": 35208,
+        "8": 5172,
+        "9": 100
+      },
+      "max_safe_size": 9,
+      "empty_grundy": 1,
+      "grundy_distribution": {
+        "0": 40325,
+        "1": 46885,
+        "2": 31096,
+        "3": 25376,
+        "4": 6392,
+        "5": 1248,
+        "6": 72
+      },
+      "first_move_grundy": {
+        "0": 9,
+        "3": 16
+      },
+      "winning_first_moves": 9
+    },
+    "torus": {
+      "safe_sets": 29226,
+      "layer_sizes": {
+        "0": 1,
+        "1": 25,
+        "2": 300,
+        "3": 2300,
+        "4": 9500,
+        "5": 15500,
+        "6": 1600
+      },
+      "max_safe_size": 6,
+      "empty_grundy": 1,
+      "grundy_distribution": {
+        "0": 11825,
+        "1": 9301,
+        "2": 8100
+      },
+      "first_move_grundy": {
+        "0": 25
+      },
+      "winning_first_moves": 25
+    }
+  }
+]
