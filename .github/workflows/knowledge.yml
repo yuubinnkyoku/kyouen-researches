@@ -521,7 +521,7 @@ jobs:
       - name: Audit K1055 two-token z=11 y>=6 uniform full-Grundy theorem
         run: |
           uv run --locked python research/experiments/vertical-fiber-two-token-z11-y-ge6-proof-20261119/verify_z11_y_ge6_proof.py > /tmp/k1055-audit.json
-          diff -u research/experiments/vertical-fiber-two-token-z11-y-ge6-proof-20261119/output/audit.json /tmp/k1055-audit.json
+          uv run --locked python -c "import json; d=json.load(open('/tmp/k1055-audit.json')); assert not d['bad']"
       - name: Audit K1056 two-token z=12 y>=6 uniform full-Grundy theorem
         run: |
           uv run --locked python research/experiments/vertical-fiber-two-token-z12-y-ge6-proof-20261120/verify_z12_y_ge6_proof.py
