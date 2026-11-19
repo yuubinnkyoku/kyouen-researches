@@ -560,6 +560,10 @@ jobs:
         run: |
           uv run --locked python research/experiments/vertical-fiber-two-token-z17-y4-boundary-20261120/verify_z17_y4.py
           git diff --exit-code -- research/experiments/vertical-fiber-two-token-z17-y4-boundary-20261120/output/audit.json
+      - name: Audit K1077 two-token z=16 y>=6 uniform full-Grundy theorem
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z16-y-ge6-proof-20261120/verify_z16_y_ge6.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z16-y-ge6-proof-20261120/output/audit.json
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python research/experiments/graph-star-fixed-q-count-complexity-20261102/verify.py

@@ -1,0 +1,23 @@
+{
+  "K1065_C_anchor": 8789,
+  "K1074_B_anchor": 15370,
+  "bad": [],
+  "claim": "H(R;(x,y);16), all x>=y>=6 and R>=0",
+  "finite_audit_scope": {
+    "K1065_C_anchor": "6<=y<=16, 0<=d<=16, 0<=R<=x+y+16",
+    "K1074_B_anchor": "6<=x<=150, 0<=R<=x+27",
+    "low_R_collapse": "6<=y<=80, 0<=d<=80, 0<=R<=22",
+    "parent_direct": "6<=y<=20, 0<=d<=30, 0<=R<=x+y+17",
+    "scatter_seed": 20261120,
+    "signature_bands": "6<=y<=80, 0<=d<=80, 1<=R<=x+y+17",
+    "tail_direct": "6<=y<=18, 0<=d<=25, x+y+17<=R<=x+y+21"
+  },
+  "fixed_seed_scatter": 5000,
+  "low_R_single_token_collapse": 139725,
+  "parent_two_recursions": 27435,
+  "proof_status": "proved_by_two_level_induction_and_symbolic_signature_bands",
+  "signature_coverage_identity_mex": 868725,
+  "tail_direct": 1690,
+  "total": 1066734,
+  "verifier_sha256": "d07c3b0e751e93e1039559149afb600861e1fd2b04f4b54827a1243f77044d6f"
+}
