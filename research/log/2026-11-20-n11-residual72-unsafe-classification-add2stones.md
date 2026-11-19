@@ -8,11 +8,22 @@
 追加した計算はすべて幾何・組合せ・出版記録の集計である。
 
 - 機械: `research/experiments/n11-residual72-unsafe-classification-add2stones-20261120/unsafe_classification_add2stones_20261120.py`
-  （SHA-256 `f5ef884622d64d981aa90b869790db4ef3143b23c5d1dc78d4fb663b65df275e`・89,094 bytes・stdlibのみ・コンパイルOK）
+  （SHA-256 `b0b0f7a85e9d3f9da9efd091a9876308e44684e1eda44bdd5f1c28c43effdce8`・89,094 bytes・stdlibのみ・コンパイルOK）
 - 正本: `research/experiments/n11-residual72-unsafe-classification-add2stones-20261120/output/residual72-unsafe-classification-add2stones-20261120.json`
   （39,221 bytes・SHA-256 `5fdd342d624abec9b8478b69b13fc63a2dbbec99d227da4740cfe068647e688e`）
-- 決定論: 3回実行（repo実験dir 2回＋別cwd別プロセス `/tmp/cwdtest` 1回）すべて同一SHA-256でbyte-identical。
-  実行時間は約2分/回（_production corpus収集込み）。
+- 決定論: 出版機械（SHA-256 `b0b0f7a85e9d3f9da9efd091a9876308e44684e1eda44bdd5f1c28c43effdce8`）
+  で2回実行（repo実験dir 1回＋別cwd別プロセス 1回）、初版機械
+  （`f5ef8846…`・後述のdocstring修正前）で3回実行（repo 2回＋別cwd 1回）、
+  計5回の独立実行すべて同一正本SHA-256（`5fdd342d…`）でbyte-identical。
+  実行時間は約2分/回（corpus収集込み）。
+  機械のdocstring修正について: 初版機械のdocstring冒頭が単一オーナー宣言
+  ノートのpathを誤って別レーンの宣言ノート名
+  （`2026-11-20-n11-residual72-candidate-supply-single-owner-note.md`）で
+  参照していたのを、本レーンの宣言ノート名
+  （`2026-11-20-n11-residual72-unsafe-classification-add2stones-single-owner-note.md`）
+  に修正した。計算コード・正本のsingle_owner_noteフィールド（正しいpath）は
+  修正前から正しく、修正は文言のみで正本の各SHA-256に影響しない（修正版の
+  2回実行で同一正本SHA-256を再確認）。
 - checks: 全39 gate PASS（failed_checks空）。
 
 ## 入力と信頼境界

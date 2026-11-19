@@ -34,7 +34,7 @@ artifacts:
   note: 実験README（入力正本のSHA pin・要約・解釈・再現方法）
 - path: research/experiments/n11-residual72-unsafe-classification-add2stones-20261120/unsafe_classification_add2stones_20261120.py
   role: verifier
-  note: corpus収集・両join再構築・era drift記録・fresh-unsafe pool identity gate・Stage A幾何分類・Stage B 8石census・Stage C plan arithmeticの全39 gate fail-closed機械（stdlibのみ・3回実行byte-identical）
+  note: corpus収集・両join再構築・era drift記録・fresh-unsafe pool identity gate・Stage A幾何分類・Stage B 8石census・Stage C plan arithmeticの全39 gate fail-closed機械（stdlibのみ・SHA-256 b0b0f7a8…・2回実行byte-identical・初版f5ef8846…込み計5回の独立実行で同一正本）
 - path: research/experiments/n11-residual72-unsafe-classification-add2stones-20261120/output/residual72-unsafe-classification-add2stones-20261120.json
   role: data
   note: 機械可読正本（SHA-256 5fdd342d…・全39 checks PASS・interpretation_guard 5文言同梱）
@@ -86,9 +86,10 @@ evidence: >-
   breakeven Fraction(36,23)を確定（add-two greedyはadd-one witness
   の23/36のprobes）。caveat: node costは7石計測ベースで8石probeは
   より高価になりうる、greedy/witness listは証明書ではなく計画、
-  REFUTED-D10はLOSS証明でない。（5）決定論: stdlibのみ、3回実行
-  （2回repo実験dir＋1回別cwd別プロセス）byte-identical（正本SHA-256
-  5fdd342d…）、全39 gate PASS・fail-closed。本項はどの行も閉じない:
+  REFUTED-D10はLOSS証明でない。（5）決定論: stdlibのみ、出版機械（docstringの宣言ノート参照誤りを
+  修正したのみで計算コード不変・SHA-256 b0b0f7a8…）2回実行（repo＋別cwd
+  別プロセス）＋初版機械3回実行、計5回の独立実行すべて同一正本SHA-256
+  5fdd342d…、全39 gate PASS・fail-closed。本項はどの行も閉じない:
   残余72行は全行openのままである。REFUTED-D10はLOSS証明ではなく、
   分類・census・被覆は候補供給の簿記である。標準11×11空盤・二石root
   {49,60}/{59,60}・S2 {59,60}・class 1/2/4 はすべて UNKNOWN のまま。

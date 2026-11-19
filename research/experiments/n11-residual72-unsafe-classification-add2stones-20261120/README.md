@@ -9,7 +9,7 @@ K1075（候補供給再構築）「次の一手」第2項の実行: 残余72行�
 
 ## ファイル
 
-- `unsafe_classification_add2stones_20261120.py`: 機械（SHA-256 `f5ef884622d64d981aa90b869790db4ef3143b23c5d1dc78d4fb663b65df275e`・stdlibのみ・repoルートから実行・約2分）
+- `unsafe_classification_add2stones_20261120.py`: 機械（SHA-256 `b0b0f7a85e9d3f9da9efd091a9876308e44684e1eda44bdd5f1c28c43effdce8`・stdlibのみ・repoルートから実行・約2分）
 - `output/residual72-unsafe-classification-add2stones-20261120.json`: 機械可読正本（39,221 bytes・SHA-256 `5fdd342d624abec9b8478b69b13fc63a2dbbec99d227da4740cfe068647e688e`・全39 checks PASS）
 
 ## 入力（すべてSHA-256 pin、fail-closed）

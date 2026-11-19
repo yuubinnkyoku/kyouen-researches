@@ -2,7 +2,7 @@
 """n11-residual72-unsafe-classification-add2stones-20261120.
 
 Single-owner lane (published single-owner note
-research/log/2026-11-20-n11-residual72-candidate-supply-single-owner-note.md):
+research/log/2026-11-20-n11-residual72-unsafe-classification-add2stones-single-owner-note.md):
 structural classification of the fresh-unsafe add-one-stone pool over the
 residual 72 rows, plus the add-two-stones candidate census over the same
 rows. Implements item 2 of the "next move" list in the K1075 README: instead
