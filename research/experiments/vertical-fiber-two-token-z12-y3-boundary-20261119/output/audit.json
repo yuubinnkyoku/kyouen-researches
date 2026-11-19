@@ -1,0 +1,59 @@
+{
+  "all_pass": true,
+  "backfill_note": "restores the missing verifier/audit artifact of the published K1021 slice; reconstructed from the published report tables and the published child closed forms K1019/K1014",
+  "classification": "universal proof by x-induction and complete A/B/C signature bands",
+  "counts": {
+    "A_B_C_signature_coverage_identity_mex_and_Theorem_T": 4621417,
+    "B_C_child_anchor_direct_checks": 26052,
+    "Theorem_T_formula_grid": 4594435,
+    "Theorem_T_parity_bound": 4621417,
+    "fixed_seed_ABC_scatter": 25000,
+    "general_tail": 39992,
+    "height_only_reduction_R_le_13": 13972,
+    "ordered_and_canonical_direct_vs_formula": 13026
+  },
+  "failure_count": 0,
+  "finite_audit_role": "independent ordered/canonical recursion, child anchors, band coverage/signature/mex, low-R reduction, tail, parity, and fixed-seed scatter checks only",
+  "first_failures": [],
+  "repeat_byte_identical": true,
+  "repeat_runs": 2,
+  "scope": {
+    "anchor_R": "0 <= R <= x+41",
+    "anchor_x": [
+      3,
+      80
+    ],
+    "direct_R": "0 <= R <= x+41",
+    "direct_x": [
+      3,
+      80
+    ],
+    "low_R": "0 <= R <= 13",
+    "low_x": [
+      3,
+      1000
+    ],
+    "scatter_points": 25000,
+    "scatter_seed": 20261123,
+    "signature_R": "1 <= R <= x+40",
+    "signature_x": [
+      3,
+      3000
+    ],
+    "tail_R": "x+16 <= R <= x+19",
+    "tail_x": [
+      3,
+      10000
+    ],
+    "target": "H(R;(x,3);12), x>=3, R>=0",
+    "theorem_grid_R": "0 <= R <= x+30",
+    "theorem_grid_x": [
+      3,
+      3000
+    ]
+  },
+  "sha256_without_hash_field": "d59c8f037858771a963061bd64af058d4802c8fe9782fe3d1df4338b6b5fc7e2",
+  "theorem": "z=12 y=3 two-token residual Grundy slice (K1021)",
+  "total_checks": 13955311,
+  "verifier_sha256": "73993cd87937e9ff121c8614e26e6adc8b8ce0a6fa296f812a19b4ce29d1f053"
+}
