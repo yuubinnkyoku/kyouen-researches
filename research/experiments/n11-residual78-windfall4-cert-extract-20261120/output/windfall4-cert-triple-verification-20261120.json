@@ -1,0 +1,1076 @@
+{
+ "checks": [
+  {
+   "detail": {
+    "capped": false,
+    "control": "pilot_d6",
+    "loss": false,
+    "nodes": 3402
+   },
+   "name": "runner-v16-pilot-d6-control",
+   "pass": true
+  },
+  {
+   "detail": {
+    "bits": [
+     40,
+     43,
+     99,
+     118
+    ]
+   },
+   "name": "runner-v16-bits",
+   "pass": true
+  },
+  {
+   "detail": {
+    "canonical_root_hex": "00000000000000803202010000001000",
+    "raw_root_hex": "00000000000000803202010000001000",
+    "resolve6_evidence_root": "00000000000000803202010000001000"
+   },
+   "name": "canonical-mapping-bit40",
+   "pass": true
+  },
+  {
+   "detail": {
+    "header": "n11-terminal-strategy-v1 original_first_WIN7 second_to_move_LOSS",
+    "root_line": "root 00000000000000803202010000001000"
+   },
+   "name": "cert-header-root-bit40",
+   "pass": true
+  },
+  {
+   "detail": {
+    "cert_sha256_run1_and_rerun_byte_identical": "02778cf535bb3a269496f8b1cf0064fbadeb3b302bc4476d6b2d1c391bc37a34",
+    "moves": 48,
+    "rerun_nodes": 3074926,
+    "rows": 31189,
+    "run1_nodes": 3074926
+   },
+   "name": "extraction-determinism-bit40",
+   "pass": true
+  },
+  {
+   "detail": [
+    13,
+    17
+   ],
+   "name": "extraction-terminal-range-bit40",
+   "pass": true
+  },
+  {
+   "detail": 48,
+   "name": "extraction-moves-bit40",
+   "pass": true
+  },
+  {
+   "detail": {
+    "loserMobility": 48,
+    "stones": 7
+   },
+   "name": "ts-root-check-bit40",
+   "pass": true
+  },
+  {
+   "detail": {
+    "moves": 48,
+    "subroots_verified": 48
+   },
+   "name": "ts-subroots-bit40",
+   "pass": true
+  },
+  {
+   "detail": {
+    "bit": 40,
+    "certificate_rows": 31189,
+    "consumed_lines": 47114,
+    "consumed_unique": 31189,
+    "exact_union": true,
+    "extra": 0,
+    "missing": 0
+   },
+   "name": "ts-union-exact-bit40",
+   "pass": true
+  },
+  {
+   "detail": {
+    "root_loser_mobility": 48,
+    "strategy_rows": 31189,
+    "subroots_passed": 48,
+    "terminal_stone_range": [
+     13,
+     15,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "visited_winner_states": 119199
+   },
+   "name": "python-bareiss-replay-bit40",
+   "pass": true
+  },
+  {
+   "detail": {
+    "loser_states": 14248,
+    "root_mobility": 48,
+    "strategy_rows": 31189,
+    "subroots_passed": 48,
+    "terminal_count": 11369,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "visited_states_across_subroots": 72731,
+    "winner_states": 47114
+   },
+   "name": "bigint-independent-bit40",
+   "pass": true
+  },
+  {
+   "detail": {
+    "fresh_nodes": 1105860,
+    "published_raw_bit_line_nodes": 1105860,
+    "raw_batch_file": "class2-lane-cost65h-raw-batch3-20261114.jsonl"
+   },
+   "name": "runner-v16-node-exact-bit40",
+   "pass": true
+  },
+  {
+   "detail": [
+    "00000000000000801202010000001000"
+   ],
+   "name": "covered-rows-match-resolve6-bit40",
+   "pass": true
+  },
+  {
+   "detail": {
+    "canonical_root_hex": "00000000000000803202080000001000",
+    "raw_root_hex": "00000000000000803202080000001000",
+    "resolve6_evidence_root": "00000000000000803202080000001000"
+   },
+   "name": "canonical-mapping-bit43",
+   "pass": true
+  },
+  {
+   "detail": {
+    "header": "n11-terminal-strategy-v1 original_first_WIN7 second_to_move_LOSS",
+    "root_line": "root 00000000000000803202080000001000"
+   },
+   "name": "cert-header-root-bit43",
+   "pass": true
+  },
+  {
+   "detail": {
+    "cert_sha256_run1_and_rerun_byte_identical": "27e60fdca5eeed3fb1c188edd35a2d6ba3212df2b16cd309f4247b902e366d7b",
+    "moves": 58,
+    "rerun_nodes": 7700023,
+    "rows": 51767,
+    "run1_nodes": 7700023
+   },
+   "name": "extraction-determinism-bit43",
+   "pass": true
+  },
+  {
+   "detail": [
+    13,
+    17
+   ],
+   "name": "extraction-terminal-range-bit43",
+   "pass": true
+  },
+  {
+   "detail": 58,
+   "name": "extraction-moves-bit43",
+   "pass": true
+  },
+  {
+   "detail": {
+    "loserMobility": 58,
+    "stones": 7
+   },
+   "name": "ts-root-check-bit43",
+   "pass": true
+  },
+  {
+   "detail": {
+    "moves": 58,
+    "subroots_verified": 58
+   },
+   "name": "ts-subroots-bit43",
+   "pass": true
+  },
+  {
+   "detail": {
+    "bit": 43,
+    "certificate_rows": 51767,
+    "consumed_lines": 74322,
+    "consumed_unique": 51767,
+    "exact_union": true,
+    "extra": 0,
+    "missing": 0
+   },
+   "name": "ts-union-exact-bit43",
+   "pass": true
+  },
+  {
+   "detail": {
+    "root_loser_mobility": 58,
+    "strategy_rows": 51767,
+    "subroots_passed": 58,
+    "terminal_stone_range": [
+     13,
+     15,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "visited_winner_states": 194299
+   },
+   "name": "python-bareiss-replay-bit43",
+   "pass": true
+  },
+  {
+   "detail": {
+    "loser_states": 23281,
+    "root_mobility": 58,
+    "strategy_rows": 51767,
+    "subroots_passed": 58,
+    "terminal_count": 17067,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "visited_states_across_subroots": 114670,
+    "winner_states": 74322
+   },
+   "name": "bigint-independent-bit43",
+   "pass": true
+  },
+  {
+   "detail": {
+    "fresh_nodes": 3269824,
+    "published_raw_bit_line_nodes": 3269824,
+    "raw_batch_file": "class2-lane-cost65h-raw-batch4-20261114.jsonl"
+   },
+   "name": "runner-v16-node-exact-bit43",
+   "pass": true
+  },
+  {
+   "detail": [
+    "00000000000000801202080000001000"
+   ],
+   "name": "covered-rows-match-resolve6-bit43",
+   "pass": true
+  },
+  {
+   "detail": {
+    "canonical_root_hex": "00000000000000803800000008001200",
+    "raw_root_hex": "00000008000000803202000000001000",
+    "resolve6_evidence_root": "00000000000000803800000008001200"
+   },
+   "name": "canonical-mapping-bit99",
+   "pass": true
+  },
+  {
+   "detail": {
+    "header": "n11-terminal-strategy-v1 original_first_WIN7 second_to_move_LOSS",
+    "root_line": "root 00000008000000803202000000001000"
+   },
+   "name": "cert-header-root-bit99",
+   "pass": true
+  },
+  {
+   "detail": {
+    "cert_sha256_run1_and_rerun_byte_identical": "04f545c8861015ff15ba8506322b9e78574cd523c54100d9bff424cd587f59ed",
+    "moves": 52,
+    "rerun_nodes": 3355354,
+    "rows": 36625,
+    "run1_nodes": 3355354
+   },
+   "name": "extraction-determinism-bit99",
+   "pass": true
+  },
+  {
+   "detail": [
+    13,
+    17
+   ],
+   "name": "extraction-terminal-range-bit99",
+   "pass": true
+  },
+  {
+   "detail": 52,
+   "name": "extraction-moves-bit99",
+   "pass": true
+  },
+  {
+   "detail": {
+    "loserMobility": 52,
+    "stones": 7
+   },
+   "name": "ts-root-check-bit99",
+   "pass": true
+  },
+  {
+   "detail": {
+    "moves": 52,
+    "subroots_verified": 52
+   },
+   "name": "ts-subroots-bit99",
+   "pass": true
+  },
+  {
+   "detail": {
+    "bit": 99,
+    "certificate_rows": 36625,
+    "consumed_lines": 55983,
+    "consumed_unique": 36625,
+    "exact_union": true,
+    "extra": 0,
+    "missing": 0
+   },
+   "name": "ts-union-exact-bit99",
+   "pass": true
+  },
+  {
+   "detail": {
+    "root_loser_mobility": 52,
+    "strategy_rows": 36625,
+    "subroots_passed": 52,
+    "terminal_stone_range": [
+     13,
+     15,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "visited_winner_states": 144796
+   },
+   "name": "python-bareiss-replay-bit99",
+   "pass": true
+  },
+  {
+   "detail": {
+    "loser_states": 17558,
+    "root_mobility": 52,
+    "strategy_rows": 36625,
+    "subroots_passed": 52,
+    "terminal_count": 12758,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "visited_states_across_subroots": 86299,
+    "winner_states": 55983
+   },
+   "name": "bigint-independent-bit99",
+   "pass": true
+  },
+  {
+   "detail": {
+    "fresh_nodes": 1114855,
+    "published_raw_bit_line_nodes": 1114855,
+    "raw_batch_file": "class2-lane-cost65h-raw-batch7-20261114.jsonl"
+   },
+   "name": "runner-v16-node-exact-bit99",
+   "pass": true
+  },
+  {
+   "detail": [
+    "00000000000000003800000008001200"
+   ],
+   "name": "covered-rows-match-resolve6-bit99",
+   "pass": true
+  },
+  {
+   "detail": {
+    "canonical_root_hex": "00000000010000803800000008100000",
+    "raw_root_hex": "00400000000000803202000000001000",
+    "resolve6_evidence_root": "00000000010000803800000008100000"
+   },
+   "name": "canonical-mapping-bit118",
+   "pass": true
+  },
+  {
+   "detail": {
+    "header": "n11-terminal-strategy-v1 original_first_WIN7 second_to_move_LOSS",
+    "root_line": "root 00400000000000803202000000001000"
+   },
+   "name": "cert-header-root-bit118",
+   "pass": true
+  },
+  {
+   "detail": {
+    "cert_sha256_run1_and_rerun_byte_identical": "05356cbc162adc318b9c208e607ebff872deda1d266541b1585b83ea7a38cdf5",
+    "moves": 56,
+    "rerun_nodes": 6137302,
+    "rows": 55838,
+    "run1_nodes": 6137302
+   },
+   "name": "extraction-determinism-bit118",
+   "pass": true
+  },
+  {
+   "detail": [
+    13,
+    17
+   ],
+   "name": "extraction-terminal-range-bit118",
+   "pass": true
+  },
+  {
+   "detail": 56,
+   "name": "extraction-moves-bit118",
+   "pass": true
+  },
+  {
+   "detail": {
+    "loserMobility": 56,
+    "stones": 7
+   },
+   "name": "ts-root-check-bit118",
+   "pass": true
+  },
+  {
+   "detail": {
+    "moves": 56,
+    "subroots_verified": 56
+   },
+   "name": "ts-subroots-bit118",
+   "pass": true
+  },
+  {
+   "detail": {
+    "bit": 118,
+    "certificate_rows": 55838,
+    "consumed_lines": 73472,
+    "consumed_unique": 55838,
+    "exact_union": true,
+    "extra": 0,
+    "missing": 0
+   },
+   "name": "ts-union-exact-bit118",
+   "pass": true
+  },
+  {
+   "detail": {
+    "root_loser_mobility": 56,
+    "strategy_rows": 55838,
+    "subroots_passed": 56,
+    "terminal_stone_range": [
+     13,
+     15,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "visited_winner_states": 190971
+   },
+   "name": "python-bareiss-replay-bit118",
+   "pass": true
+  },
+  {
+   "detail": {
+    "loser_states": 23421,
+    "root_mobility": 56,
+    "strategy_rows": 55838,
+    "subroots_passed": 56,
+    "terminal_count": 16355,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "visited_states_across_subroots": 113248,
+    "winner_states": 73472
+   },
+   "name": "bigint-independent-bit118",
+   "pass": true
+  },
+  {
+   "detail": {
+    "fresh_nodes": 2307338,
+    "published_raw_bit_line_nodes": 2307338,
+    "raw_batch_file": "class2-lane-cost65h-raw-batch8-20261114.jsonl"
+   },
+   "name": "runner-v16-node-exact-bit118",
+   "pass": true
+  },
+  {
+   "detail": [
+    "00000000010000003800000008100000"
+   ],
+   "name": "covered-rows-match-resolve6-bit118",
+   "pass": true
+  }
+ ],
+ "date": "2026-11-20",
+ "inputs": {
+  "bits": [
+   40,
+   43,
+   99,
+   118
+  ],
+  "child_hex": "00000000000000803202000000001000",
+  "resolve6_record": {
+   "path": "research/experiments/n11-residual78-cache-join-resolve6-20261120/output/post-saturation-full-cache-join-resolve6-20261120.json",
+   "sha256": "e85d4bfb867a193f2b3cdb23ec9e15679359c9f337fcd97eb5c62473b90c281a"
+  },
+  "session_tooling": {
+   "node": "v22.20.0 (--experimental-strip-types)",
+   "python": "3.12.14 (stdlib only)"
+  }
+ },
+ "interpretation_guard": [
+  "These certificates prove the game-theoretic statement for each 7-stone root: with the second mover to move, the original first mover forces a win with the loser stuck at every terminal (13-17 stones).",
+  "No residual five-parent target row is CLOSED by this record. Closure by receipts happens only in a subsequent receipt-fold record that consumes these certificates (the row-bookkeeping machine of K1057/K1063 lineage). Until that fold exists, the four covered rows stay pending-win, and the 39-root live witness plan of resolve6 still independently covers all 78 residual rows.",
+  "A WIN7 receipt root is not a statement about the value of the covered 6-stone row itself; REFUTED-D10 is not a LOSS proof; no pn/dn or solved-count is read as a verdict."
+ ],
+ "roots": [
+  {
+   "bigint_independent_verification": {
+    "consumed_winner_rows": 31189,
+    "forbidden_triple_cache_entries": 16165,
+    "legal_state_cache_entries": 47025,
+    "loser_reply_edges": 65515,
+    "loser_states": 14248,
+    "method": "BigInt 3x3 cofactor expansion of the exact lifted determinant [x\u00b2+y\u00b2,x,y,1]; no floating point",
+    "root_hex": "00000000000000803202010000001000",
+    "root_mobility": 48,
+    "root_safe": true,
+    "root_stones": 7,
+    "rows_sorted_unique": true,
+    "strategy_rows": 31189,
+    "subroots_passed": 48,
+    "terminal_count": 11369,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "verdict": "WIN7 certificate independently verified",
+    "visited_states_across_subroots": 72731,
+    "winner_states": 47114
+   },
+   "bit": 40,
+   "canonical_root_hex": "00000000000000803202010000001000",
+   "certificate": {
+    "bytes": 1128053,
+    "file": "certs/win7-root-00000000000000803202010000001000-20261120.n11",
+    "md5": "ffce96df39dadd1c8213694c4c7b64cf",
+    "sha256": "02778cf535bb3a269496f8b1cf0064fbadeb3b302bc4476d6b2d1c391bc37a34"
+   },
+   "child_hex": "00000000000000803202000000001000",
+   "covered_residual_rows": [
+    "00000000000000801202010000001000"
+   ],
+   "extraction": {
+    "driver": "scripts/cert_driver_windfall.ts",
+    "extractor": "scripts/class4_child1_cert_extractor_exact_ms23.ts (repo-verbatim; FBS=1<<20 forbidden-bit table, MS=1<<23 memo, CAP=1e9)",
+    "fatal": null,
+    "fbt_drops": 0,
+    "kill_table": "empty (blind, pref=null)",
+    "moves": 48,
+    "nodes_rerun": 3074926,
+    "nodes_run1": 3074926,
+    "rerun_byte_identical": true,
+    "rows": 31189,
+    "terminal_range": [
+     13,
+     17
+    ]
+   },
+   "python_bareiss_replay": {
+    "cert": "win7-root-00000000000000803202010000001000-20261120.n11",
+    "consumed_rows": 31189,
+    "root_hex": "00000000000000803202010000001000",
+    "root_loser_mobility": 48,
+    "root_stones": 7,
+    "strategy_rows": 31189,
+    "subroots_passed": 48,
+    "terminal_stone_range": [
+     13,
+     15,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "verdict": "WIN7 certificate independently verified (Bareiss replay, all loser replies expanded)",
+    "visited_winner_states": 119199
+   },
+   "raw_batch_provenance": {
+    "file": "class2-lane-cost65h-raw-batch3-20261114.jsonl",
+    "lane_context": [
+     {
+      "bit_in_lane_win_bits": true,
+      "determinism_rerun_note": "bits 43 (WIN7, 3,269,824), 102 (WIN7, 3,354,664) and 87 (REFUTED, 532,826) re-solved fresh in a separate process after the sweep: node counts identical (class2-lane-cost65h-v16-determinism-rerun-20261",
+      "engine": "class4_child1_runner_v16.ts (published repo-verbatim v16 runner), depth 10, andclose=1, cap 1e9, pil",
+      "file": "class2-lane-cost65h-sweep-20261114.json",
+      "lane_verdict": "WIN7"
+     }
+    ],
+    "pilot_control_line": {
+     "capped": false,
+     "control": "pilot_d6",
+     "loss": false,
+     "nodes": 3402
+    },
+    "published_bit_line": {
+     "andclose": true,
+     "bit": 40,
+     "capped": false,
+     "loss": true,
+     "ms": 2347,
+     "nodes": 1105860,
+     "terminalStoneRange": [
+      13,
+      17
+     ]
+    }
+   },
+   "raw_root_hex": "00000000000000803202010000001000",
+   "resolve6_evidence_root": "00000000000000803202010000001000",
+   "runner_v16_fresh_crosscheck": {
+    "andclose": true,
+    "bit": 40,
+    "capped": false,
+    "loss": true,
+    "ms": 2250,
+    "nodes": 1105860,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "ts_verify_bit7_win7_cert": {
+    "root_check": {
+     "loserMobility": 48,
+     "stones": 7
+    },
+    "subroots_verified": 48,
+    "union_audit": {
+     "bit": 40,
+     "certificate_rows": 31189,
+     "consumed_lines": 47114,
+     "consumed_unique": 31189,
+     "exact_union": true,
+     "extra": 0,
+     "missing": 0
+    }
+   }
+  },
+  {
+   "bigint_independent_verification": {
+    "consumed_winner_rows": 51767,
+    "forbidden_triple_cache_entries": 24407,
+    "legal_state_cache_entries": 78537,
+    "loser_reply_edges": 104803,
+    "loser_states": 23281,
+    "method": "BigInt 3x3 cofactor expansion of the exact lifted determinant [x\u00b2+y\u00b2,x,y,1]; no floating point",
+    "root_hex": "00000000000000803202080000001000",
+    "root_mobility": 58,
+    "root_safe": true,
+    "root_stones": 7,
+    "rows_sorted_unique": true,
+    "strategy_rows": 51767,
+    "subroots_passed": 58,
+    "terminal_count": 17067,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "verdict": "WIN7 certificate independently verified",
+    "visited_states_across_subroots": 114670,
+    "winner_states": 74322
+   },
+   "bit": 43,
+   "canonical_root_hex": "00000000000000803202080000001000",
+   "certificate": {
+    "bytes": 1867637,
+    "file": "certs/win7-root-00000000000000803202080000001000-20261120.n11",
+    "md5": "cecd0e282b34fbf8c147ab7686f44485",
+    "sha256": "27e60fdca5eeed3fb1c188edd35a2d6ba3212df2b16cd309f4247b902e366d7b"
+   },
+   "child_hex": "00000000000000803202000000001000",
+   "covered_residual_rows": [
+    "00000000000000801202080000001000"
+   ],
+   "extraction": {
+    "driver": "scripts/cert_driver_windfall.ts",
+    "extractor": "scripts/class4_child1_cert_extractor_exact_ms23.ts (repo-verbatim; FBS=1<<20 forbidden-bit table, MS=1<<23 memo, CAP=1e9)",
+    "fatal": null,
+    "fbt_drops": 0,
+    "kill_table": "empty (blind, pref=null)",
+    "moves": 58,
+    "nodes_rerun": 7700023,
+    "nodes_run1": 7700023,
+    "rerun_byte_identical": true,
+    "rows": 51767,
+    "terminal_range": [
+     13,
+     17
+    ]
+   },
+   "python_bareiss_replay": {
+    "cert": "win7-root-00000000000000803202080000001000-20261120.n11",
+    "consumed_rows": 51767,
+    "root_hex": "00000000000000803202080000001000",
+    "root_loser_mobility": 58,
+    "root_stones": 7,
+    "strategy_rows": 51767,
+    "subroots_passed": 58,
+    "terminal_stone_range": [
+     13,
+     15,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "verdict": "WIN7 certificate independently verified (Bareiss replay, all loser replies expanded)",
+    "visited_winner_states": 194299
+   },
+   "raw_batch_provenance": {
+    "file": "class2-lane-cost65h-raw-batch4-20261114.jsonl",
+    "lane_context": [
+     {
+      "bit_in_lane_win_bits": true,
+      "determinism_rerun_note": "bits 43 (WIN7, 3,269,824), 102 (WIN7, 3,354,664) and 87 (REFUTED, 532,826) re-solved fresh in a separate process after the sweep: node counts identical (class2-lane-cost65h-v16-determinism-rerun-20261",
+      "engine": "class4_child1_runner_v16.ts (published repo-verbatim v16 runner), depth 10, andclose=1, cap 1e9, pil",
+      "file": "class2-lane-cost65h-sweep-20261114.json",
+      "lane_verdict": "WIN7"
+     }
+    ],
+    "pilot_control_line": {
+     "capped": false,
+     "control": "pilot_d6",
+     "loss": false,
+     "nodes": 3402
+    },
+    "published_bit_line": {
+     "andclose": true,
+     "bit": 43,
+     "capped": false,
+     "loss": true,
+     "ms": 7463,
+     "nodes": 3269824,
+     "terminalStoneRange": [
+      13,
+      17
+     ]
+    }
+   },
+   "raw_root_hex": "00000000000000803202080000001000",
+   "resolve6_evidence_root": "00000000000000803202080000001000",
+   "runner_v16_fresh_crosscheck": {
+    "andclose": true,
+    "bit": 43,
+    "capped": false,
+    "loss": true,
+    "ms": 6807,
+    "nodes": 3269824,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "ts_verify_bit7_win7_cert": {
+    "root_check": {
+     "loserMobility": 58,
+     "stones": 7
+    },
+    "subroots_verified": 58,
+    "union_audit": {
+     "bit": 43,
+     "certificate_rows": 51767,
+     "consumed_lines": 74322,
+     "consumed_unique": 51767,
+     "exact_union": true,
+     "extra": 0,
+     "missing": 0
+    }
+   }
+  },
+  {
+   "bigint_independent_verification": {
+    "consumed_winner_rows": 36625,
+    "forbidden_triple_cache_entries": 19101,
+    "legal_state_cache_entries": 55237,
+    "loser_reply_edges": 78773,
+    "loser_states": 17558,
+    "method": "BigInt 3x3 cofactor expansion of the exact lifted determinant [x\u00b2+y\u00b2,x,y,1]; no floating point",
+    "root_hex": "00000008000000803202000000001000",
+    "root_mobility": 52,
+    "root_safe": true,
+    "root_stones": 7,
+    "rows_sorted_unique": true,
+    "strategy_rows": 36625,
+    "subroots_passed": 52,
+    "terminal_count": 12758,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "verdict": "WIN7 certificate independently verified",
+    "visited_states_across_subroots": 86299,
+    "winner_states": 55983
+   },
+   "bit": 99,
+   "canonical_root_hex": "00000000000000803800000008001200",
+   "certificate": {
+    "bytes": 1322402,
+    "file": "certs/win7-root-00000008000000803202000000001000-20261120.n11",
+    "md5": "ee51e2942f7b8974799b185c226cf900",
+    "sha256": "04f545c8861015ff15ba8506322b9e78574cd523c54100d9bff424cd587f59ed"
+   },
+   "child_hex": "00000000000000803202000000001000",
+   "covered_residual_rows": [
+    "00000000000000003800000008001200"
+   ],
+   "extraction": {
+    "driver": "scripts/cert_driver_windfall.ts",
+    "extractor": "scripts/class4_child1_cert_extractor_exact_ms23.ts (repo-verbatim; FBS=1<<20 forbidden-bit table, MS=1<<23 memo, CAP=1e9)",
+    "fatal": null,
+    "fbt_drops": 0,
+    "kill_table": "empty (blind, pref=null)",
+    "moves": 52,
+    "nodes_rerun": 3355354,
+    "nodes_run1": 3355354,
+    "rerun_byte_identical": true,
+    "rows": 36625,
+    "terminal_range": [
+     13,
+     17
+    ]
+   },
+   "python_bareiss_replay": {
+    "cert": "win7-root-00000008000000803202000000001000-20261120.n11",
+    "consumed_rows": 36625,
+    "root_hex": "00000008000000803202000000001000",
+    "root_loser_mobility": 52,
+    "root_stones": 7,
+    "strategy_rows": 36625,
+    "subroots_passed": 52,
+    "terminal_stone_range": [
+     13,
+     15,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "verdict": "WIN7 certificate independently verified (Bareiss replay, all loser replies expanded)",
+    "visited_winner_states": 144796
+   },
+   "raw_batch_provenance": {
+    "file": "class2-lane-cost65h-raw-batch7-20261114.jsonl",
+    "lane_context": [
+     {
+      "bit_in_lane_win_bits": true,
+      "determinism_rerun_note": "bits 43 (WIN7, 3,269,824), 102 (WIN7, 3,354,664) and 87 (REFUTED, 532,826) re-solved fresh in a separate process after the sweep: node counts identical (class2-lane-cost65h-v16-determinism-rerun-20261",
+      "engine": "class4_child1_runner_v16.ts (published repo-verbatim v16 runner), depth 10, andclose=1, cap 1e9, pil",
+      "file": "class2-lane-cost65h-sweep-20261114.json",
+      "lane_verdict": "WIN7"
+     }
+    ],
+    "pilot_control_line": {
+     "capped": false,
+     "control": "pilot_d6",
+     "loss": false,
+     "nodes": 3402
+    },
+    "published_bit_line": {
+     "andclose": true,
+     "bit": 99,
+     "capped": false,
+     "loss": true,
+     "ms": 2398,
+     "nodes": 1114855,
+     "terminalStoneRange": [
+      13,
+      17
+     ]
+    }
+   },
+   "raw_root_hex": "00000008000000803202000000001000",
+   "resolve6_evidence_root": "00000000000000803800000008001200",
+   "runner_v16_fresh_crosscheck": {
+    "andclose": true,
+    "bit": 99,
+    "capped": false,
+    "loss": true,
+    "ms": 2411,
+    "nodes": 1114855,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "ts_verify_bit7_win7_cert": {
+    "root_check": {
+     "loserMobility": 52,
+     "stones": 7
+    },
+    "subroots_verified": 52,
+    "union_audit": {
+     "bit": 99,
+     "certificate_rows": 36625,
+     "consumed_lines": 55983,
+     "consumed_unique": 36625,
+     "exact_union": true,
+     "extra": 0,
+     "missing": 0
+    }
+   }
+  },
+  {
+   "bigint_independent_verification": {
+    "consumed_winner_rows": 55838,
+    "forbidden_triple_cache_entries": 22764,
+    "legal_state_cache_entries": 84427,
+    "loser_reply_edges": 104535,
+    "loser_states": 23421,
+    "method": "BigInt 3x3 cofactor expansion of the exact lifted determinant [x\u00b2+y\u00b2,x,y,1]; no floating point",
+    "root_hex": "00400000000000803202000000001000",
+    "root_mobility": 56,
+    "root_safe": true,
+    "root_stones": 7,
+    "rows_sorted_unique": true,
+    "strategy_rows": 55838,
+    "subroots_passed": 56,
+    "terminal_count": 16355,
+    "terminal_range": [
+     13,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "verdict": "WIN7 certificate independently verified",
+    "visited_states_across_subroots": 113248,
+    "winner_states": 73472
+   },
+   "bit": 118,
+   "canonical_root_hex": "00000000010000803800000008100000",
+   "certificate": {
+    "bytes": 2013560,
+    "file": "certs/win7-root-00400000000000803202000000001000-20261120.n11",
+    "md5": "ef1aece949e7d19263e1d3bfe8eaaf2b",
+    "sha256": "05356cbc162adc318b9c208e607ebff872deda1d266541b1585b83ea7a38cdf5"
+   },
+   "child_hex": "00000000000000803202000000001000",
+   "covered_residual_rows": [
+    "00000000010000003800000008100000"
+   ],
+   "extraction": {
+    "driver": "scripts/cert_driver_windfall.ts",
+    "extractor": "scripts/class4_child1_cert_extractor_exact_ms23.ts (repo-verbatim; FBS=1<<20 forbidden-bit table, MS=1<<23 memo, CAP=1e9)",
+    "fatal": null,
+    "fbt_drops": 0,
+    "kill_table": "empty (blind, pref=null)",
+    "moves": 56,
+    "nodes_rerun": 6137302,
+    "nodes_run1": 6137302,
+    "rerun_byte_identical": true,
+    "rows": 55838,
+    "terminal_range": [
+     13,
+     17
+    ]
+   },
+   "python_bareiss_replay": {
+    "cert": "win7-root-00400000000000803202000000001000-20261120.n11",
+    "consumed_rows": 55838,
+    "root_hex": "00400000000000803202000000001000",
+    "root_loser_mobility": 56,
+    "root_stones": 7,
+    "strategy_rows": 55838,
+    "subroots_passed": 56,
+    "terminal_stone_range": [
+     13,
+     15,
+     17
+    ],
+    "union_extra": 0,
+    "union_missing": 0,
+    "verdict": "WIN7 certificate independently verified (Bareiss replay, all loser replies expanded)",
+    "visited_winner_states": 190971
+   },
+   "raw_batch_provenance": {
+    "file": "class2-lane-cost65h-raw-batch8-20261114.jsonl",
+    "lane_context": [
+     {
+      "bit_in_lane_win_bits": true,
+      "determinism_rerun_note": "bits 43 (WIN7, 3,269,824), 102 (WIN7, 3,354,664) and 87 (REFUTED, 532,826) re-solved fresh in a separate process after the sweep: node counts identical (class2-lane-cost65h-v16-determinism-rerun-20261",
+      "engine": "class4_child1_runner_v16.ts (published repo-verbatim v16 runner), depth 10, andclose=1, cap 1e9, pil",
+      "file": "class2-lane-cost65h-sweep-20261114.json",
+      "lane_verdict": "WIN7"
+     }
+    ],
+    "pilot_control_line": {
+     "capped": false,
+     "control": "pilot_d6",
+     "loss": false,
+     "nodes": 3402
+    },
+    "published_bit_line": {
+     "andclose": true,
+     "bit": 118,
+     "capped": false,
+     "loss": true,
+     "ms": 5806,
+     "nodes": 2307338,
+     "terminalStoneRange": [
+      13,
+      17
+     ]
+    }
+   },
+   "raw_root_hex": "00400000000000803202000000001000",
+   "resolve6_evidence_root": "00000000010000803800000008100000",
+   "runner_v16_fresh_crosscheck": {
+    "andclose": true,
+    "bit": 118,
+    "capped": false,
+    "loss": true,
+    "ms": 4886,
+    "nodes": 2307338,
+    "terminalStoneRange": [
+     13,
+     17
+    ]
+   },
+   "ts_verify_bit7_win7_cert": {
+    "root_check": {
+     "loserMobility": 56,
+     "stones": 7
+    },
+    "subroots_verified": 56,
+    "union_audit": {
+     "bit": 118,
+     "certificate_rows": 55838,
+     "consumed_lines": 73472,
+     "consumed_unique": 55838,
+     "exact_union": true,
+     "extra": 0,
+     "missing": 0
+    }
+   }
+  }
+ ],
+ "schema": "n11-windfall4-win7-cert-extract-triple-verify-v1 (2026-11-20)",
+ "source_main": "bd092b8df2ea24723d0497dd400066360f902314",
+ "status": "windfall-4-WIN7-roots-certificate-backed-pending-fold",
+ "unknown_status": "11x11 empty board, two-stone root {49,60}/{59,60}, S2 {59,60}, class 1/2/4: UNKNOWN",
+ "what": "Certificate extraction (blind, empty kill table) of the four resolve6 windfall WIN7-D10 roots -- the class2-lane-cost65h child 00000000000000803202000000001000 at bits 40/43/99/118 -- followed by three independent exact verifications: (1) TS number-arithmetic Bareiss 4x4 sub-root decomposition with exact consumed-union audit, (2) pure-python exact Bareiss full replay expanding every loser reply, (3) BigInt 3x3 cofactor independent verifier. Plus a fresh repo-verbatim runner v16 (depth 10, andclose=1, cap 1e9) node-exact re-solve of all four raw bit lines and the extraction rerun (byte-identical certificates)."
+}
