@@ -21,9 +21,24 @@ c4f06b23ad64ae97cb642b244f2d675cd0bf6903), and k=33
 record JSONL 594ff7882931dc8535b892db4006920e66519b1e), and k=34
 (script+log f097e6a3, result JSON b64d8fe1, per-record JSONL
 76fe66e9; pinned result JSON d485914cf7f6198a2fbb05b09d778ecec510343f,
-record JSONL 8cdb7b20c1bccf932e6acc7b6324c4e81a10b47d), verification
+record JSONL 8cdb7b20c1bccf932e6acc7b6324c4e81a10b47d), and k=35
+(script+log 141da801, log erratum bde016c4, result JSON 572b1365,
+per-record JSONL b1c73b50; pinned result JSON
+80a22ac77cdc0ba0a99643e3f1be13b71565a1b7, record JSONL
+89c15ec4fea859393dd673acde1654435f85bd01; rerun end-to-end by the
+verification lane with all values identical and 52-check finalize
+passing byte-identically twice before publication), verification
 lane.
 
+This k=35 edition also repairs the crosscheck script itself: the
+203-check k=34 version (published as commit d7001467, 87,336
+bytes) was damaged in transport to main at commit 2331d99e, which
+truncated the tail mid-statement (the file on main ends at
+`if __name__ == "__main` with no sys.exit(main()), blob
+49606fc61005f9c8652fbda4985e542f5e7ffe95, py_compile fails).  The
+tail is restored byte-exactly (the only missing bytes are the tail
+of the final if-statement) and this edition extends the same
+script to k=35 with the record and preread layers.
 Four independent layers, no experiment-script imports:
 
   1. value layer: exact BigInt arithmetic over the published numbers
@@ -34,14 +49,14 @@ Four independent layers, no experiment-script imports:
   2. structure layer: a fresh re-derivation of the structural census
      (shared/disjoint new pairs, b_only/zero/disjoint new triples and
      quads, full triple census, all-C(N,5) 5-subsets zero up to k=25,
-     and the k=26..k=34 5-subset censuses, the first ranks that are
+     and the k=26..k=35 5-subset censuses, the first ranks that are
      not all-zero, with the new-sensitive prev/new split)
      from the pinned phase-B aggregate with an inline row-multiplicity
      classifier, compared against the published structure fields;
-     the k=29..k=34 sextet (6-subset) censuses are re-derived the
+     the k=29..k=35 sextet (6-subset) censuses are re-derived the
      same way and asserted all-zero (the inclusion-exclusion
      truncation justification at those ranks);
-  3. record layer (k=26 through k=34): each per-record JSONL is
+  3. record layer (k=26 through k=35): each per-record JSONL is
      fetched at its own pinned git blob sha1, every joint record is
      re-classified with the same independent classifier, the new
      pairs / triples / quads and the recorded new b_only quint set
@@ -124,10 +139,33 @@ Four independent layers, no experiment-script imports:
      be present and passing, and its rank34_root must equal the
      aggregate exactly.
 
+  8. preread layer (k=35): the rank-35 structural preread JSON
+     (pure Python with exact integer serialization, commit
+     90fc51c9, independently verified by a second derivation
+     lineage at commit 41c4cf12) is fetched at its own pinned git
+     blob sha1 and re-derived machine-side like layers 5/6/7:
+     row 18 is now a 16-sharer hub band row and row 21 has zero
+     prior sharers (first-ever cover at rank-35), so the (18,21)
+     root can never double row 21 in any layer; all four
+     new-layer censuses (pair 16 shared / 18 disjoint), the three
+     new-layer double-row histograms, the b_only four-subset
+     profiles, the disjoint-quad fields (83 new, unions all 8,
+     cumulative 1,195 against a fresh full C(34,4) disjoint
+     count), the full triple / quint / sextet censuses (all-zero
+     1,623,160 sextets), both embedded regression blocks (rank-33
+     and rank-34) -- and, closing the same 3-system pattern as
+     layers 6/7, the preread's rank-34 regression block is
+     additionally compared field-by-field against the
+     now-published k=34 result JSON structure fields; the
+     published k=35 result JSON's preread_match.* checks must
+     all be present and passing, and its rank35_root must equal
+     the aggregate exactly.
+
 Fetches the published output JSONs (and, for layer 3, the
 k=26..k=34 per-record JSONLs; for layer 4 the k=31 preread JSON
 and for layer 5 the k=32 preread JSON and for layer 6 the k=33
-preread JSON and for layer 7 the k=34 preread JSON) at their
+preread JSON and for layer 7 the k=34 preread JSON and for layer 8
+the k=35 preread JSON) at their
 pinned git blob sha1s
 (via the jsdelivr mirror with a raw.githubusercontent.com fallback;
 a mirror serving stale-but-wrong bytes fails the sha1 check and the
@@ -215,6 +253,23 @@ PINS = {
     # serialization; cross-checked machine-side below (layer 7).
     "k34pre": ("cost16-survival-k34-preread-20261118.json",
                "8dbb1bcbdaed9bee475f3b95932d35a9500e62cb"),
+    # k=35 (published 2026-11-19, commit 572b1365): the published
+    # result JSON of the k=35 main computation (script+log commit
+    # 141da801, log erratum bde016c4, record JSONL commit b1c73b50),
+    # whose 8,192-record layer and preread layer (commit 90fc51c9)
+    # are cross-checked below (record layer + preread layer 8);
+    # rerun end-to-end by the verification lane before publication
+    # with all values identical (52-check finalize all pass,
+    # byte-identical across two runs).
+    "k35": ("cost16-survival-k35-20261118.json",
+            "80a22ac77cdc0ba0a99643e3f1be13b71565a1b7"),
+    # k=35 rank-35 structural preread (published 2026-11-19,
+    # commit 90fc51c9): pure Python with exact integer
+    # serialization; cross-checked machine-side below (layer 8),
+    # and independently verified by a second derivation lineage
+    # (commit 41c4cf12).
+    "k35pre": ("cost16-survival-k35-preread-20261118.json",
+               "490fa3a00b8e0b19229c94aa6b1aba4a5604ec13"),
     "agg": ("cost16-b-phase-groups-20261118.json", "31bdefdb2e2cc90b706cbb8090e98eb5eece4d87"),
 }
 # k=26 per-record JSONL (published 2026-11-18, commit d974042f): 4,513
@@ -297,6 +352,21 @@ JSONL_K33 = ("cost16-survival-k33-20261118.jsonl", "594ff7882931dc8535b892db4006
 # triple layer 8 records, quad layer 11, never the quint layer;
 # the new pair census is 10 shared / 23 disjoint.
 JSONL_K34 = ("cost16-survival-k34-20261118.jsonl", "8cdb7b20c1bccf932e6acc7b6324c4e81a10b47d")
+# k=35 per-record JSONL (published 2026-11-19, commit b1c73b50):
+# 8,192 records = pair 34 + triple 561 + quad 5,984 + quint 1,595
+# (b_only only; the 44,781 new zero quints are structural, joint
+# 0) + anchors 8 (anchor4 = the two published disjoint quads
+# (4,13,25,33)/(4,16,25,33) of the k=34 record layer x both
+# lineages) + cross 8.  The rank-35 root (18,21) covers row 21
+# for the first time ever (zero prior sharers, so it never doubles
+# in any layer) while row 18 is a 16-sharer hub band row: the new
+# pair census is 16 shared / 18 disjoint, and the 83 new disjoint
+# quads all have unions of exactly 8 rows.
+# The k=35 record JSONL was also independently rerun by the
+# verification lane: same 8,192 record kinds, same joint sums,
+# all values identical (record order differs between the two
+# runs; the joint totals are order-independent).
+JSONL_K35 = ("cost16-survival-k35-20261118.jsonl", "89c15ec4fea859393dd673acde1654435f85bd01")
 # 5-subset counts are machine-derived with math.comb (no hand-written
 # table): C(15..25,5) = 3003..53130, all verified zero-valued; k=26 and
 # k=27 are the first censuses that are not all-zero (C(26,5) = 65,780
@@ -346,7 +416,16 @@ JSONL_K34 = ("cost16-survival-k34-20261118.jsonl", "8cdb7b20c1bccf932e6acc7b6324
 # and quad (11 records) layers and never the quint layer, the
 # new pair census is 10 shared / 23 disjoint, and the sextet
 # census C(34,6) = 1,344,904 stays all zero (the eleventh
-# consecutive rank).
+# consecutive rank).  k=35 (C(35,5) = 324,632: 14,599 b_only /
+# 310,033 zero / 0 disjoint, the rank-35-new layer being 1,595
+# b_only / 44,781 zero, cumulative double rows 15:2421 / 16:469 /
+# 18:8017 / 19:3692) is the hub-band root (18,21): row 21
+# receives its first-ever cover (zero prior sharers, never a
+# double row), row 18 adds 275 / 1,155 / 1,112 new b_only
+# triples / quads / quints, the new pair census is 16 shared /
+# 18 disjoint, there are 83 new disjoint quads (unions all 8,
+# cumulative 1,195), and the sextet census C(35,6) = 1,623,160
+# stays all zero (the twelfth consecutive rank).
 
 
 def git_blob_sha1(data: bytes) -> str:
@@ -432,7 +511,7 @@ def classify2(rows, combo):
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--local", default=None, help="directory with the published JSONs (offline mode; sha1 still checked)")
-    ap.add_argument("--out", default="output/cost16-k34-crosscheck-20261119.json",
+    ap.add_argument("--out", default="output/cost16-k35-crosscheck-20261119.json",
                     help="write deterministic machine-readable check results")
     args = ap.parse_args()
 
@@ -448,7 +527,7 @@ def main() -> int:
     rows = {i: tuple(e["rows_covered"]) for i, e in enumerate(top)}
     mem = [e["membership"] for e in top]
 
-    V = js["k34"]["values"]  # contains the full k=1..34 series
+    V = js["k35"]["values"]  # contains the full k=1..35 series
     kill = {int(k[1:]): int(v) for k, v in V["kill"].items()}
     A = {int(k[1:]): int(v) for k, v in V["A_survive"].items()}
     B = {int(k[1:]): int(v) for k, v in V["B_survive_full_singleton_ban"].items()}
@@ -456,7 +535,7 @@ def main() -> int:
     ksh = {int(k[1:]): v for k, v in V["kill_share_percent"].items()}
     kA = {int(k[1:]): int(v) for k, v in V["kill_A"].items()}
     kB = {int(k[1:]): int(v) for k, v in V["kill_B"].items()}
-    K = 34
+    K = 35
     checks = []
 
     # 1. grand-total identity, constant across all k
@@ -629,7 +708,7 @@ def main() -> int:
     q_new_b_only = {}
     q_full = {}
     q_twos = {}
-    for n in (26, 27, 28, 29, 30, 31, 32, 33, 34):
+    for n in (26, 27, 28, 29, 30, 31, 32, 33, 34, 35):
         qn = {"b_only": 0, "zero": 0, "disjoint": 0}
         qn_twos = {}
         for c in itertools.combinations(range(n), 5):
@@ -654,9 +733,9 @@ def main() -> int:
     # consecutive-era prev-layer identities: full(k) minus the
     # rank-k-new 5-subsets (C(k-1,4) counted as new b_only + new
     # zero) must equal the full census of the previous rank, for
-    # the whole quint era k=27..34.
+    # the whole quint era k=27..35.
     for n, m in ((27, 26), (28, 27), (29, 28), (30, 29), (31, 30), (32, 31), (33, 32),
-                 (34, 33)):
+                 (34, 33), (35, 34)):
         checks.append((f"quint_census_k{n}_prev_layer_equals_published_k{m}_census",
                        q_full[n]["b_only"] - len(q_new_b_only[n]) == q_full[m]["b_only"]
                        and q_full[n]["zero"] - (math.comb(n - 1, 4) - len(q_new_b_only[n])) == q_full[m]["zero"]
@@ -668,7 +747,7 @@ def main() -> int:
     checks.append(("k26_all_census_b_only_contain_rank26",
                    len(q_new_b_only[26]) == q_full[26]["b_only"], len(q_new_b_only[26])))
     # ---- sextet (6-subset) censuses at k=29, k=30, k=31, k=32,
-    # k=33 and k=34:
+    # k=33, k=34 and k=35:
     # machine re-derivation over all C(n,6) 6-subsets with the same
     # independent classifier.  These are the published I-E truncation
     # justifications (the seventh order is never needed), previously
@@ -683,9 +762,12 @@ def main() -> int:
     # with all 1,107,568 sextets still zero, and row 9 doubles for
     # the first time at k=34 (the single-share rank-34 root (9,19),
     # again triple and quad layers only) with all 1,344,904
-    # sextets still zero.
+    # sextets still zero, and row 21 is covered for the first
+    # time at k=35 (the hub-band rank-35 root (18,21): a
+    # first-ever covered row can never double in any layer)
+    # with all 1,623,160 sextets still zero.
     sx_census = {}
-    for n in (29, 30, 31, 32, 33, 34):
+    for n in (29, 30, 31, 32, 33, 34, 35):
         sx = {"b_only": 0, "zero": 0, "disjoint": 0}
         for c in itertools.combinations(range(n), 6):
             sx[classify(rows, c)] += 1
@@ -708,7 +790,7 @@ def main() -> int:
                     xs_bad.append((n, key, kk))
     checks.append((f"kill_series_consistent_across_publications_k13_k{K}", xs_ok, xs_bad[:4]))
 
-    # ---- record layer (k=26 through k=33): each per-record JSONL is fetched
+    # ---- record layer (k=26 through k=35): each per-record JSONL is fetched
     # at its own pinned blob sha1; every joint record is re-classified
     # with the same independent classifier, the new pairs / triples /
     # quads and the recorded new b_only quint set are checked for
@@ -720,12 +802,14 @@ def main() -> int:
     # two combos are the published (25,3,4,16)/(25,3,4,17) disjoint
     # quads of the k=26 record layer, and k=28/k=29/k=30/k=31 likewise
     # anchor on the two published disjoint quads of the previous
-    # rank's record layer (at k=31: (4,13,25,29)/(4,16,25,29); at k=33: (2,4,28,31)/(2,5,28,31), the k=32 record layer disjoint quads; at k=34: (4,13,25,32)/(4,16,25,32), the k=33 record layer disjoint quads).
+    # rank's record layer (at k=31: (4,13,25,29)/(4,16,25,29); at k=33: (2,4,28,31)/(2,5,28,31), the k=32 record layer disjoint quads; at k=34: (4,13,25,32)/(4,16,25,32), the k=33 record layer disjoint
+    # quads; at k=35: (4,13,25,33)/(4,16,25,33), the k=34 record
+    # layer disjoint quads).
     for n, pin, a4c in ((26, JSONL_K26, 1), (27, JSONL_K27, 2),
                          (28, JSONL_K28, 2), (29, JSONL_K29, 2),
                          (30, JSONL_K30, 2), (31, JSONL_K31, 2),
                          (32, JSONL_K32, 2), (33, JSONL_K33, 2),
-                         (34, JSONL_K34, 2)):
+                         (34, JSONL_K34, 2), (35, JSONL_K35, 2)):
         jl = fetch_lines(*pin, args.local)
         new = n - 1
         kinds = {}
@@ -1549,8 +1633,189 @@ def main() -> int:
                    and j34["structure"]["rank34_root"]["root"] == top[33]["root"],
                    (str(em34), str(ea34), str(eb34))))
 
+    # ---- preread layer 8 (k=35): the rank-35 structural preread JSON
+    # (commit 90fc51c9, pure Python with exact integer serialization,
+    # independently verified by a second derivation lineage at commit
+    # 41c4cf12) is re-derived machine-side from the pinned aggregate:
+    # root rows / hex and the row-18 / row-21 prior hit indices (row 18
+    # is now a 16-sharer hub band row; row 21 has zero prior sharers
+    # among the top-34, a first-ever cover at rank-35, so row 21 can
+    # never double in any layer), all four new-layer censuses (pair
+    # shared/disjoint schema 16/18), the three new-layer b_only
+    # double-row histograms, the b_only quint four-subset profiles,
+    # the disjoint-quad fields (83 new disjoint quads, every union
+    # exactly 8 rows; cumulative 1,195 asserted against a fresh full
+    # C(34,4) disjoint count, no hardcoded constants), the full triple
+    # census with its double-row histogram, the full quint census and
+    # the all-zero sextet census (1,623,160), both embedded regression
+    # blocks (rank-33 and rank-34) re-derived with the same combined
+    # logic, and a closed 3-system comparison, same pattern as layers
+    # 6/7: the preread's rank-34 regression block against the
+    # now-published k=34 result JSON structure fields (an independent
+    # third system: the preread's own load-time asserts and the main
+    # lane's preread_match checks are the other two).  The three
+    # large integers must be the exact aggregate values satisfying
+    # A+B==M.
+    pre35 = js["k35pre"]["rank35"]
+    hits18b = sorted(i for i in range(34) if 18 in rows[i])
+    hits21 = sorted(i for i in range(34) if 21 in rows[i])
+    em35 = int(mem[34])
+    ea35 = int(memA[top[34]["root"]])
+    eb35 = int(memB[top[34]["root"]])
+    checks.append(("k35preread_rank35_root_prior_hits_exact_ints",
+                   pre35["root"] == top[34]["root"]
+                   and sorted(pre35["rows"]) == sorted(rows[34])
+                   and pre35["prior_hits"] == {"18": len(hits18b), "21": len(hits21)}
+                   and {k: sorted(v) for k, v in pre35["prior_hit_indices"].items()}
+                   == {"18": hits18b, "21": hits21}
+                   and int(pre35["membership"]) == em35
+                   and int(pre35["a_part"]) == ea35
+                   and int(pre35["b_part"]) == eb35
+                   and ea35 + eb35 == em35,
+                   (len(hits18b), len(hits21), (ea35, eb35, em35))))
+    nc35 = pre35["new_census"]
+    shared35 = sum(1 for i in range(34) if set(rows[i]) & set(rows[34]))
+    m35_tri = {"b_only": 0, "zero": 0, "disjoint": 0}
+    for c in itertools.combinations(range(34), 2):
+        m35_tri[classify(rows, (34,) + c)] += 1
+    m35_quad = {"b_only": 0, "zero": 0, "disjoint": 0}
+    for c in itertools.combinations(range(34), 3):
+        m35_quad[classify(rows, (34,) + c)] += 1
+    nb5_35 = len(q_new_b_only[35])
+    checks.append(("k35preread_new_layer_censuses_machine_rederived",
+                   nc35["pair"] == {"shared": shared35, "disjoint": 34 - shared35,
+                                    "total": 34, "expected_total": 34}
+                   and nc35["triple"]["b_only"] == m35_tri["b_only"]
+                   and nc35["triple"]["zero"] == m35_tri["zero"]
+                   and nc35["triple"]["disjoint"] == m35_tri["disjoint"]
+                   and nc35["triple"]["total"] == nc35["triple"]["expected_total"]
+                   == math.comb(34, 2)
+                   and nc35["quad"]["b_only"] == m35_quad["b_only"]
+                   and nc35["quad"]["zero"] == m35_quad["zero"]
+                   and nc35["quad"]["disjoint"] == m35_quad["disjoint"]
+                   and nc35["quad"]["total"] == nc35["quad"]["expected_total"]
+                   == math.comb(34, 3)
+                   and nc35["quint"]["b_only"] == nb5_35
+                   and nc35["quint"]["zero"] == math.comb(34, 4) - nb5_35
+                   and nc35["quint"]["disjoint"] == 0
+                   and nc35["quint"]["total"] == nc35["quint"]["expected_total"]
+                   == math.comb(34, 4),
+                   (nc35["pair"], m35_tri, m35_quad, nb5_35)))
+    h_tri35 = {}
+    h_quad35 = {}
+    h_qt35 = {}
+    for c in itertools.combinations(range(34), 2):
+        cl, two = classify2(rows, (34,) + c)
+        if cl == "b_only":
+            h_tri35[two] = h_tri35.get(two, 0) + 1
+    for c in itertools.combinations(range(34), 3):
+        cl, two = classify2(rows, (34,) + c)
+        if cl == "b_only":
+            h_quad35[two] = h_quad35.get(two, 0) + 1
+    for c in q_new_b_only[35]:
+        cl, two = classify2(rows, c)
+        h_qt35[two] = h_qt35.get(two, 0) + 1
+    checks.append(("k35preread_new_layer_double_row_histograms_machine_rederived",
+                   h_tri35 == {int(k): v for k, v in pre35["new_triple_double_row_histogram"].items()}
+                   and h_quad35 == {int(k): v for k, v in pre35["new_quad_double_row_histogram"].items()}
+                   and h_qt35 == {int(k): v for k, v in pre35["new_quint_double_row_histogram"].items()},
+                   (h_tri35, h_quad35, h_qt35)))
+    prof35 = {}
+    for c in q_new_b_only[35]:
+        p = {"b_only": 0, "zero": 0, "disjoint": 0}
+        for drop in range(5):
+            p[classify(rows, tuple(x for j, x in enumerate(c) if j != drop))] += 1
+        key = "%d/%d/%d" % (p["b_only"], p["disjoint"], p["zero"])
+        prof35[key] = prof35.get(key, 0) + 1
+    dq35_sizes = {}
+    dq35_cnt = 0
+    for c in itertools.combinations(range(34), 3):
+        if classify(rows, (34,) + c) == "disjoint":
+            dq35_cnt += 1
+            u = set()
+            for i in (34,) + c:
+                u |= set(rows[i])
+            dq35_sizes[len(u)] = dq35_sizes.get(len(u), 0) + 1
+    dj34 = 0
+    for c in itertools.combinations(range(34), 4):
+        if classify(rows, c) == "disjoint":
+            dj34 += 1
+    checks.append(("k35preread_quint_profiles_and_disjoint_quad_fields",
+                   prof35 == {str(k): v for k, v in pre35["b_only_quint_four_subset_profiles"].items()}
+                   and pre35["disjoint_quad_count"] == dq35_cnt
+                   and dq35_cnt == m35_quad["disjoint"]
+                   and {int(k): v for k, v in pre35["disjoint_quad_union_sizes"].items()} == dq35_sizes
+                   and pre35["cumulative_disjoint_quads"] == dj34 + dq35_cnt,
+                   (prof35, dq35_cnt, dq35_sizes, dj34)))
+    ft35 = pre35["full_triples"]
+    ft35m = {"b_only": 0, "zero": 0, "disjoint": 0}
+    ft35_twos = {}
+    for c in itertools.combinations(range(35), 3):
+        cl, two = classify2(rows, c)
+        ft35m[cl] += 1
+        if cl == "b_only":
+            ft35_twos[two] = ft35_twos.get(two, 0) + 1
+    fq35 = pre35["full_quints"]
+    checks.append(("k35preread_full_triples_and_quints_machine_rederived",
+                   ft35["counts"] == ft35m and ft35["total"] == math.comb(35, 3)
+                   and ft35.get("compared") in (None, math.comb(35, 3))
+                   and ft35.get("mismatches", 0) == 0
+                   and {int(k): v for k, v in ft35["double_row_histogram"].items()} == ft35_twos
+                   and fq35["counts"] == q_full[35] and fq35["total"] == math.comb(35, 5)
+                   and fq35.get("compared") in (None, math.comb(35, 5))
+                   and fq35.get("mismatches", 0) == 0
+                   and {int(k): v for k, v in fq35["double_row_histogram"].items()} == q_twos[35],
+                   (ft35m, ft35_twos)))
+    sx35 = pre35["sextet_census"]
+    checks.append(("k35preread_sextet_census_machine_rederived",
+                   sx35["counts"] == sx_census[35] and sx35["total"] == math.comb(35, 6)
+                   and sx35.get("compared") in (None, math.comb(35, 6))
+                   and sx35.get("mismatches", 0) == 0,
+                   sx_census[35]))
+    r33b35_ok, r33b35_bad = regression_block_ok(js["k35pre"]["rank33_regression"], 32)
+    checks.append(("k35preread_rank33_regression_block_machine_rederived",
+                   r33b35_ok, r33b35_bad[:6]))
+    r34b35_ok, r34b35_bad = regression_block_ok(js["k35pre"]["rank34_regression"], 33)
+    checks.append(("k35preread_rank34_regression_block_machine_rederived",
+                   r34b35_ok, r34b35_bad[:6]))
+    # closed 3-system comparison, same pattern as layers 6/7: the
+    # preread's rank-34 regression block against the now-published
+    # k=34 result JSON structure fields.
+    r34reg = js["k35pre"]["rank34_regression"]
+    j34st = js["k34"]["structure"]
+    qreg35 = r34reg["new_census"]["quad"]
+    checks.append(("k35preread_rank34_regression_matches_published_k34_result",
+                   r34reg["root"] == j34st["rank34_root"]["root"]
+                   and sorted(r34reg["rows"]) == sorted(j34st["rank34_root"]["rows"])
+                   and r34reg["full_triples"]["counts"] == j34st["triple_census_k34"]
+                   and int(qreg35["b_only"]) == int(j34st["new_quad_census"]["b_only"])
+                   and int(qreg35["zero"]) == int(j34st["new_quad_census"]["zero"])
+                   and int(qreg35["disjoint"]) == int(j34st["new_quad_census"]["disjoint"])
+                   and {k: int(v) for k, v in r34reg["full_quints"]["counts"].items()}
+                   == {k: int(v) for k, v in j34st["quint_census_k34"].items()}
+                   and {int(k): int(v) for k, v in r34reg["full_quints"]["double_row_histogram"].items()}
+                   == {int(k): int(v) for k, v in j34st["quint_b_only_double_rows"].items()}
+                   and {k: int(v) for k, v in r34reg["sextet_census"]["counts"].items()}
+                   == {k: int(v) for k, v in j34st["sextet_census_k34"].items()}
+                   and int(r34reg["membership"]) == int(j34st["rank34_root"]["membership"]),
+                   None))
+    j35 = js["k35"]
+    pmatch35 = {c["name"]: c["pass"] for c in j35["checks"]}
+    need35 = ("preread_match.triple_census", "preread_match.new_quad_census",
+              "preread_match.quint_census", "preread_match.quint_double_rows",
+              "preread_match.sextet_census")
+    checks.append(("k35json_preread_match_checks_all_present_and_pass",
+                   all(pmatch35.get(nm) is True for nm in need35), need35))
+    checks.append(("k35json_rank35_root_exactly_matches_aggregate",
+                   int(j35["structure"]["rank35_root"]["membership"]) == em35
+                   and int(j35["structure"]["rank35_root"]["a_part"]) == ea35
+                   and int(j35["structure"]["rank35_root"]["b_part"]) == eb35
+                   and j35["structure"]["rank35_root"]["root"] == top[34]["root"],
+                   (str(em35), str(ea35), str(eb35))))
 
-    # Two closure checks added after the 201-check k=34 publication:
+
+    # Two closure checks added after the 201-check k=34 publication
+    # (plus two more closing the k=35 era, appended below):
     # compare the embedded regression blocks directly with their earlier
     # preread publications, and compare the rank-34 preread's full
     # structure fields directly with the published k=34 result JSON.
@@ -1606,6 +1871,32 @@ def main() -> int:
                    and {int(k): v for k, v in s34["quint_b_only_double_rows"].items()} == q_twos[34],
                    None))
 
+    # Two more closure checks close the k=35 era the same way: the
+    # k=35 preread's embedded regression blocks against their earlier
+    # preread publications, and the rank-35 preread's full structural
+    # fields against the published k=35 result JSON (which was
+    # produced by the parallel main lane from the same pinned inputs
+    # and was rerun end-to-end by the verification lane before any of
+    # these artifacts were pinned).
+    checks.append(("k35preread_embedded_rank33_rank34_blocks_match_prior_prereads",
+                   regression_projection(js["k35pre"]["rank33_regression"])
+                   == regression_projection(js["k33pre"]["rank33"])
+                   and regression_projection(js["k35pre"]["rank34_regression"])
+                   == regression_projection(js["k34pre"]["rank34"]),
+                   None))
+    s35 = j35["structure"]
+    checks.append(("k35json_preread_structure_matches_published_result",
+                   s35["new_quad_census"] == {k: nc35["quad"][k] for k in ("b_only", "zero", "disjoint")}
+                   and s35["new_quint_census"] == {k: nc35["quint"][k] for k in ("b_only", "zero", "disjoint")}
+                   and s35["quints_zero_synth_count"] == nc35["quint"]["zero"]
+                   and s35["triple_census_k35"] == ft35["counts"]
+                   and s35["quint_census_k35"] == fq35["counts"]
+                   and s35["sextet_census_k35"] == sx35["counts"]
+                   and published_histogram(s35["new_triple_b_only_double_row_histogram"]) == h_tri35
+                   and published_histogram(s35["new_quad_b_only_double_row_histogram"]) == h_quad35
+                   and {int(k): v for k, v in s35["quint_b_only_double_rows"].items()} == q_twos[35],
+                   None))
+
     n_fail = 0
     for name, ok, extra in checks:
         print(("PASS" if ok else "FAIL"), name, extra if extra is not None else "")
@@ -1614,13 +1905,19 @@ def main() -> int:
     print(f"grand total = {T}")
     print("kill(k)% =", {k: round(kill[k] / T * 100, 4) for k in sorted(kill)})
     report = {
-        "schema": "n11-cost16-k34-crosscheck-20261119-v1",
+        "schema": "n11-cost16-k35-crosscheck-20261119-v1",
         "date": "2026-11-19",
-        "source_main_commit": "d70014678ebcc93441b5b793d9778125c5c67dea",
+        "source_main_commit": "a2814ea0f1f802df1cff0fed86950d5ee0358dba",
+        "source_note": ("k=35 edition: extends the k=34 crosscheck "
+                        "(script published as commit d7001467) with the k=35 "
+                        "record and preread layers, and repairs the "
+                        "transport-truncated tail that commit 2331d99e left "
+                        "on main"),
         "inputs": {
             **{tag: {"file": name, "git_blob_sha1": sha}
                for tag, (name, sha) in PINS.items()},
             "k34_jsonl": {"file": JSONL_K34[0], "git_blob_sha1": JSONL_K34[1]},
+            "k35_jsonl": {"file": JSONL_K35[0], "git_blob_sha1": JSONL_K35[1]},
         },
         "check_count": len(checks),
         "all_pass": n_fail == 0,
@@ -1635,4 +1932,5 @@ def main() -> int:
     return 0 if n_fail == 0 else 1
 
 
-if __name__ == "__main
+if __name__ == "__main__":
+    sys.exit(main())
