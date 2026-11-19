@@ -1,0 +1,58 @@
+{
+  "all_pass": true,
+  "classification": "universal proof by x-induction and complete A/B/C signature bands",
+  "counts": {
+    "A_B_C_signature_coverage_identity_mex_and_Theorem_T": 4552463,
+    "B_C_child_anchor_direct_checks": 26052,
+    "Theorem_T_formula_grid": 4594435,
+    "Theorem_T_parity_bound": 4552463,
+    "fixed_seed_ABC_scatter": 25000,
+    "general_tail": 39992,
+    "height_only_reduction_R_le_15": 15968,
+    "ordered_and_canonical_direct_vs_formula": 13026
+  },
+  "failure_count": 0,
+  "finite_audit_role": "independent ordered/canonical recursion, child anchors, band coverage/signature/mex, low-R reduction, tail, parity, and fixed-seed scatter checks only",
+  "first_failures": [],
+  "repeat_byte_identical": true,
+  "repeat_runs": 2,
+  "scope": {
+    "anchor_R": "0 <= R <= x+41",
+    "anchor_x": [
+      3,
+      80
+    ],
+    "direct_R": "0 <= R <= x+41",
+    "direct_x": [
+      3,
+      80
+    ],
+    "low_R": "0 <= R <= 15",
+    "low_x": [
+      3,
+      1000
+    ],
+    "scatter_points": 25000,
+    "scatter_seed": 20261122,
+    "signature_R": "1 <= R <= x+17",
+    "signature_x": [
+      3,
+      3000
+    ],
+    "tail_R": "x+18 <= R <= x+21",
+    "tail_x": [
+      3,
+      10000
+    ],
+    "target": "H(R;(x,3);14), x>=3, R>=0",
+    "theorem_grid_R": "0 <= R <= x+30",
+    "theorem_grid_x": [
+      3,
+      3000
+    ]
+  },
+  "sha256_without_hash_field": "73e0e9e87070d21d74fc50be3a53a202322b58ba448ff7e5ac7864f934040520",
+  "theorem": "z=14 y=3 two-token residual Grundy slice",
+  "total_checks": 13819399,
+  "verifier_sha256": "8fffea2e60c45c8a5533a90236e2a3ed7489d64b61d5ee20d4dbb38d27600095"
+}
