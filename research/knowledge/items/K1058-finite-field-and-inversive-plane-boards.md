@@ -42,7 +42,7 @@ artifacts:
   note: q>D(n) での禁止集合一致の検証
 - path: research/experiments/finite-field-kyouen-20261120/output/det_threshold.json
   role: data
-  note: n=2..7 の D(n) と極値配置
+  note: n=2..7 の D(n) と極値配置（四点組全列挙）
 - path: research/experiments/finite-field-kyouen-20261120/output/transfer_threshold.json
   role: data
   note: 44通りの閾値一致検査
@@ -58,6 +58,12 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/TORUS.md
   role: source
   note: トーラス盤とAG(2,p)の一致、合成数での乖離
+- path: research/experiments/finite-field-kyouen-20261120/DET_MAX_TRIPLE.md
+  role: source
+  note: 三点分解によるD(n)のn≤12全数確認
+- path: research/experiments/finite-field-kyouen-20261120/scripts/det_max_structure.py
+  role: verifier
+  note: 余因子展開による三点分解D(n)計算
 - path: research/experiments/finite-field-kyouen-20261120/DET_MAX.md
   role: source
   note: D(n)閉形式の証拠と残る証明課題
@@ -67,8 +73,8 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/output/torus_vs_ag.json
   role: data
   note: n=3,4,5,7,11,13 の一致判定
-scope: 標準q=4の禁止条件 det[x,y,x^2+y^2,1]=0 を可換環上で読むことで定義される有限体盤 AG(2,q)（q は奇素数）、位数qの反転平面（3-(q^2+1,q+1,1)設計）、および周期境界を課したトーラス盤 Z_n^2 上の完全指摘・通常プレイゲーム。q=3,5 の完全計算、n≤7 の行列式上界、トーラス盤とAG(2,p)の一致（p≤13）。
-evidence: 有限完全計算（q≤5 の全安全局面 Grundy、q≤7 の最大安全サイズ厳密値、n≤7 の D(n)、p≤13 のトーラス一致）と、3-設計公理の機械検査。D(n)=a^2*floor(a^2/2) は n≤7 の観測であり全称証明ではない。層サイズ公式は k≤5 の範囲で証明、k≥6 は反例あり。トーラス盤とAG(2,p)の一致は Z_p=F_p から従うが全数確認は p≤13。
+scope: 標準q=4の禁止条件 det[x,y,x^2+y^2,1]=0 を可換環上で読むことで定義される有限体盤 AG(2,q)（q は奇素数）、位数qの反転平面（3-(q^2+1,q+1,1)設計）、および周期境界を課したトーラス盤 Z_n^2 上の完全指摘・通常プレイゲーム。q=3,5 の完全計算、n≤12 の行列式上界、トーラス盤とAG(2,p)の一致（p≤13）。
+evidence: 有限完全計算（q≤5 の全安全局面 Grundy、q≤7 の最大安全サイズ厳密値、n≤12 の D(n)、p≤13 のトーラス一致）と、3-設計公理の機械検査。D(n)=a^2*floor(a^2/2) は n≤12 の全数確認済みだが全称証明ではない。層サイズ公式は k≤5 の範囲で証明、k≥6 は反例あり。トーラス盤とAG(2,p)の一致は Z_p=F_p から従うが全数確認は p≤13。
 ---
 
 # 共円ゲームの有限体盤・反転平面盤への移行と転送閾値
