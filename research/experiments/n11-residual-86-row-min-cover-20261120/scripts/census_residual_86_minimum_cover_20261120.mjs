@@ -239,6 +239,11 @@ for (const [child, target] of Object.entries(data.scan.targets)) {
 }
 need(scanWinTransfers.size === 0, "unexpected K0863 WIN7-D10 transfers");
 need(data.scan.engine_map.source_conflicts.length === 0, "K0863 source conflict");
+need(data.scan.engine_map.determined_bits === 8964 &&
+     data.scan.engine_map["REFUTED-D10"] === 8305 &&
+     data.scan.engine_map["WIN7-D10"] === 659 &&
+     data.scan.engine_map["UNKNOWN-CAPPED"] === 0,
+     "K0863 engine verdict totals mismatch");
 
 const joined = {
   refuted: knownRefuted.size,
@@ -284,6 +289,10 @@ for (const [root, item] of candidates) {
   else if (knownRefuted.has(root)) candidateStatus.refuted_d10++;
   else candidateStatus.not_in_pinned_join++;
 }
+need(perRow.reduce((s, x) => s + x.legal_extensions, 0) === 6341 &&
+     Math.min(...perRow.map(x => x.legal_extensions)) === 64 &&
+     Math.max(...perRow.map(x => x.legal_extensions)) === 85,
+     "residual legal-extension totals mismatch");
 need(candidates.size === 5247 && coverage.one_row === 4153 && coverage.two_rows === 1094,
      "candidate census mismatch");
 need(candidateStatus.refuted_d10 === 110 && candidateStatus.win7_d10 === 0 && candidateStatus.not_in_pinned_join === 5137,
@@ -393,6 +402,11 @@ for (const root of selectedRoots) {
 }
 need(coveredBy.size === 86, "selected 43 roots do not cover all 86 rows");
 const selectedMobility = selected.map(x => x.legal_next_moves).sort((a, b) => a - b);
+need(selectedMobility[0] === 47 &&
+     selectedMobility[Math.floor(selectedMobility.length / 2)] === 62 &&
+     selectedMobility[selectedMobility.length - 1] === 79 &&
+     selectedMobility.reduce((a, b) => a + b, 0) === 2672,
+     "selected root mobility totals mismatch");
 const selectedScanHits = selected.filter(x => x.scan_parent_hits.length > 0);
 need(selectedScanHits.length === 1, "selected root cache-parent hit count");
 need(selectedScanHits[0].root === SOLE_SCAN_ROOT &&
