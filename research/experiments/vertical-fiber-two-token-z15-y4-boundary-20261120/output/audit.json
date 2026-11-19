@@ -15,13 +15,22 @@
   "repeat_byte_identical": true,
   "repeat_runs": 2,
   "scope": {
-    "direct_child_x": [3, 30],
-    "direct_root_x": [4, 40],
+    "direct_child_x": [
+      3,
+      30
+    ],
+    "direct_root_x": [
+      4,
+      40
+    ],
     "height_only": "x=4..2000, R=0..16",
     "scatter_points": 10000,
     "scatter_seed": 20261120,
     "signature_R": "1 <= R <= x+19",
-    "signature_x": [4, 2000],
+    "signature_x": [
+      4,
+      2000
+    ],
     "tail": "x=4..10000, R=x+20..x+23"
   },
   "sha256_without_hash_field": "dee577c184f58f8c7380710d579ba8617312455a2b7c87d6d55be28c9c410c75",
