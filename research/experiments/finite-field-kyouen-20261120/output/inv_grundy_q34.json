@@ -1,0 +1,58 @@
+[
+  {
+    "q": 3,
+    "points": 10,
+    "circles": 30,
+    "circle_size": 4,
+    "safe_sets": 428,
+    "layer_sizes": {
+      "0": 1,
+      "1": 10,
+      "2": 45,
+      "3": 120,
+      "4": 180,
+      "5": 72
+    },
+    "max_safe_size": 5,
+    "min_maximal_size": 5,
+    "empty_grundy": 1,
+    "empty_outcome": "N(first-player-win)",
+    "grundy_distribution": {
+      "0": 202,
+      "1": 226
+    },
+    "max_grundy": 1,
+    "first_move_grundy": {
+      "0": 10
+    },
+    "winning_first_moves": 10
+  },
+  {
+    "q": 4,
+    "points": 17,
+    "circles": 68,
+    "circle_size": 5,
+    "safe_sets": 4914,
+    "layer_sizes": {
+      "0": 1,
+      "1": 17,
+      "2": 136,
+      "3": 680,
+      "4": 2040,
+      "5": 2040
+    },
+    "max_safe_size": 5,
+    "min_maximal_size": 5,
+    "empty_grundy": 1,
+    "empty_outcome": "N(first-player-win)",
+    "grundy_distribution": {
+      "0": 2737,
+      "1": 2177
+    },
+    "max_grundy": 1,
+    "first_move_grundy": {
+      "0": 17
+    },
+    "winning_first_moves": 17
+  }
+]
