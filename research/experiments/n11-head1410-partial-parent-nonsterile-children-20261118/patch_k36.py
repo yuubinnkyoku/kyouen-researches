@@ -873,4 +873,3 @@ if stale:
 
 open(DST, "w", encoding="utf-8").write(text)
 print("OK: wrote %s (%d bytes)" % (DST, len(text)))
-
