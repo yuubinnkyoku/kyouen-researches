@@ -1,0 +1,14 @@
+== deep-y skeleton (raw recursion, per-row fresh cache) ==
+y=13 lattice d=9 x=22: point@39=2 gapclean=True
+y=13 pin d=17 x=30: tok=True extras=[] ok=True
+y=13 sweep d=18 x=31 S=44: bandok=True band=(43,61) want=(43,60)
+y=13 steady d=19 x=32 S=45: mismatch=False tailv=1 want=1
+y=20 lattice d=9 x=29: point@53=2 gapclean=True
+y=20 pin d=17 x=37: tok=True extras=[] ok=True
+y=20 sweep d=18 x=38 S=58: bandok=True band=(57,75) want=(57,74)
+y=20 steady d=19 x=39 S=59: mismatch=False tailv=1 want=1
+y=40 lattice d=9 x=49: point@93=2 gapclean=True
+y=40 pin d=17 x=57: tok=True extras=[] ok=True
+y=40 sweep d=18 x=58 S=98: bandok=True band=(97,103) want=(97,114)
+y=40 steady d=19 x=59 S=99: mismatch=False tailv=1 want=1
+cache: CacheInfo(hits=3971839, misses=2113486, maxsize=None, currsize=2113486)

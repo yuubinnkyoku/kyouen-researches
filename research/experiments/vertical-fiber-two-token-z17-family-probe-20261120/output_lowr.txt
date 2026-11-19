@@ -1,0 +1,11 @@
+== low-R reduction: two tokens (x,y) vs single token (S,) ==
+y=6: min-break=24 at x=12; low breaks(<40): n=21 first3=[(11, 6, 25), (12, 6, 24), (13, 6, 25)]
+y=7: min-break=25 at x=10; low breaks(<40): n=23 first3=[(10, 7, 25), (11, 7, 26), (12, 7, 25)]
+y=8: min-break=26 at x=10; low breaks(<40): n=25 first3=[(9, 8, 27), (10, 8, 26), (11, 8, 27)]
+y=9: min-break=27 at x=10; low breaks(<40): n=26 first3=[(9, 9, 28), (10, 9, 27), (11, 9, 28)]
+y=10: min-break=29 at x=11; low breaks(<40): n=26 first3=[(10, 10, 30), (11, 10, 29), (12, 10, 30)]
+y=11: min-break=31 at x=12; low breaks(<40): n=25 first3=[(11, 11, 32), (12, 11, 31), (13, 11, 32)]
+== flat uniform scan: does R<=23 hold everywhere? ==
+rows breaking R<=23: 1
+  x=12 y=6 first R=24
+cache: CacheInfo(hits=397789, misses=220056, maxsize=None, currsize=220056)
