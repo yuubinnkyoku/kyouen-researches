@@ -508,6 +508,12 @@ jobs:
           git diff --exit-code -- research/experiments/vertical-fiber-two-token-z16-y4-boundary-20261120/output/audit.json
           uv run --locked python research/experiments/vertical-fiber-two-token-z16-y4-boundary-20261120/census_z16_y4.py
           git diff --exit-code -- research/experiments/vertical-fiber-two-token-z16-y4-boundary-20261120/output/census.txt
+      - name: Audit K1067 two-token z=17 y=3 boundary slice
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-z17-y3-boundary-20261120/verify_z17_y3.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z17-y3-boundary-20261120/output/audit.json
+          uv run --locked python research/experiments/vertical-fiber-two-token-z17-y3-boundary-20261120/census_z17_y3.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-z17-y3-boundary-20261120/output/census.txt
       - name: Audit K1065 two-token z=15 y>=6 uniform full-Grundy theorem
         run: |
           uv run --locked python research/experiments/vertical-fiber-two-token-z15-y-ge6-proof-20261120/verify_z15_y_ge6.py
