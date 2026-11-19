@@ -1,0 +1,27 @@
+{
+  "all_pass": true,
+  "classification": "universal theorem: y-strong induction, x-outer induction, and a complete A/B/C signature-band partition",
+  "counts": {
+    "K1043_base_anchor": 1540,
+    "K1055_C_anchor": 4095,
+    "band_mex_vs_value12": 925352,
+    "band_vs_closed_form_children": 925352,
+    "canonical_vs_formula": 3388,
+    "fixed_seed_scatter": 400,
+    "general_tail_formula": 31680,
+    "general_tail_vs_engine": 275,
+    "height_only_R_le_13": 67830,
+    "ordered_vs_canonical": 3388,
+    "ordered_vs_formula": 3388,
+    "theorem_T_parity_bound": 925352
+  },
+  "failure_count": 0,
+  "failures": [],
+  "finite_audit_role": "finite transcription and implementation audit only; universality rests on the two-level induction and the complete symbolic signature-band table in report.md",
+  "seeds": {
+    "scatter": 20261120
+  },
+  "slice": "two-token residual game z=12, all x>=y>=6, all R>=0",
+  "total_checks": 2892040,
+  "verifier_sha256": "804dcb4a7dc5452f74dbad6a17b8aef4a9a3edbb8e23a74e42b1fd69502c7f43"
+}
