@@ -28,3 +28,20 @@ rank-35 root（top50 index 34）の機械確定とk35 preread出版（k34 prerea
 ## 11×11 状態（interpretation guard）
 
 標準11×11空盤は **UNKNOWN**。二石root {49,60}/{59,60}、S2 {59,60}、class 1/2/4 もすべて **UNKNOWN**。本crosscheckの全checkはcover-plan組合せ数とその構造の検証であり、verdictを一切生成しない。REFUTED-D10・STERILE は LOSS 証明ではない。B_surviveの過去最低（2.4075%）も勝敗とは無関係である。
+
+
+## 追補（2026-11-19：201 checksから203 checksへ）
+
+後続の監査で、rank-34 prereadの回帰欄と出版結果をさらに直接つなぐ2検査を追加した。**203 checks / 0 failures**。元の201検査は維持している。
+
+- `k34preread_embedded_rank32_rank33_blocks_match_prior_prereads`: k34 prereadに埋め込まれたrank-32/rank-33回帰欄を、先行出版済みk32/k33 prereadと照合。pair欄の `shared` と `b_only` の表現差、`compared` / `mismatches` など任意メタデータを正規化し、root・行・membership/A/B・新層census・二重行histogram・full triple/quint/sextetを比較した。
+- `k34json_preread_structure_matches_published_result`: rank-34 prereadの新quad/quint census、zero合成数、全triple/quint/sextet census、新triple/quad二重行histogram、全quint二重行histogramを、k34本計算の出版JSONと直接照合した。
+
+試作時には表現差・付加メタデータをそのまま比較して2件が不一致になったが、これは数値の不一致ではなく比較形式の違いだった。比較対象を意味のある構造項へ正規化して再実行し、両検査ともPASSとなった。
+
+- 拡張script: 91,614 bytes、Git blob `49606fc61005f9c8652fbda4985e542f5e7ffe95`、SHA-256 `4610d76c4dd56a2a5bd56973c941138384cbd6ccba2cbdaf5ebf3431637b80b7`。
+- 機械可読結果: [cost16-k34-crosscheck-20261119.json](../experiments/n11-head1410-partial-parent-nonsterile-children-20261118/output/cost16-k34-crosscheck-20261119.json)、45,185 bytes、Git blob `2eb1fa8b8b46c34112589543509079fd429e070f`、SHA-256 `9dde9f8a8d4a0c4f8b5906b4b9b6befec1a1f44acf646fac4d6332bfb2e1fcea`。
+- `py_compile` PASS。network mode 2回の結果JSONはbyte-identical。
+- 実行資源は1 vCPU・4 GiB RAMのrunner、単一プロセス。長時間DFPNや並列探索は起動していない。
+
+本追補もcost-16の代替最小被覆計画数の算術・構造検証であり、ゲームの勝敗verdictは生成しない。
