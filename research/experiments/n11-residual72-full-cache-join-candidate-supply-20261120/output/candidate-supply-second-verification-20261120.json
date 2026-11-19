@@ -1,0 +1,387 @@
+{
+  "date": "2026-11-20",
+  "gates": [
+    {
+      "detail": {
+        "actual": "49b6f85f6b51cfdd8a59c7797223da3d8797885d3c992ce67dc9dae629a883fa",
+        "expected": "49b6f85f6b51cfdd8a59c7797223da3d8797885d3c992ce67dc9dae629a883fa"
+      },
+      "name": "pin-candidate_supply",
+      "pass": true
+    },
+    {
+      "detail": {
+        "actual": "207f4094a906817ebb4bbc5ad9b90c203c6a334ee6c8d9a501661257a0e1ce3f",
+        "expected": "207f4094a906817ebb4bbc5ad9b90c203c6a334ee6c8d9a501661257a0e1ce3f"
+      },
+      "name": "pin-resolve7",
+      "pass": true
+    },
+    {
+      "detail": {
+        "actual": "24db2352ad0d94ee4a76ec3de294f02cbdac7899f0b6ef64ea695d261017cdc2",
+        "expected": "24db2352ad0d94ee4a76ec3de294f02cbdac7899f0b6ef64ea695d261017cdc2"
+      },
+      "name": "pin-fold9",
+      "pass": true
+    },
+    {
+      "detail": {
+        "actual": "bed7d33193299a0aa06ea4e076562dfa46251d20d5c3c4ca7fd231ffe854908a",
+        "expected": "bed7d33193299a0aa06ea4e076562dfa46251d20d5c3c4ca7fd231ffe854908a"
+      },
+      "name": "pin-fold10",
+      "pass": true
+    },
+    {
+      "detail": {
+        "actual": "c1073bae1d056db7f56d04a77fd9889d1e297a82a07537ddcd02c00d329dbabc",
+        "expected": "c1073bae1d056db7f56d04a77fd9889d1e297a82a07537ddcd02c00d329dbabc"
+      },
+      "name": "pin-seventeenth_verify",
+      "pass": true
+    },
+    {
+      "detail": {
+        "actual": "22953ae16a6002d87638531f2ca9fd286f6736b834fa296e5648505ada9074dc",
+        "expected": "22953ae16a6002d87638531f2ca9fd286f6736b834fa296e5648505ada9074dc"
+      },
+      "name": "pin-live_sweep",
+      "pass": true
+    },
+    {
+      "detail": {
+        "candidate_rows": 72,
+        "resolve7_rows": 72
+      },
+      "name": "residual72-equals-resolve7",
+      "pass": true
+    },
+    {
+      "detail": {
+        "candidate_rows": 72,
+        "fold10_rows": 72
+      },
+      "name": "residual72-equals-fold10-after",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "fold9-residual74",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "fold9-closed-four",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "fold10-closed-three",
+      "pass": true
+    },
+    {
+      "detail": {
+        "extra": 1,
+        "target": 2
+      },
+      "name": "fold10-target-two-extra-one",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "fold-chain-disjoint-closures",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "fold-chain-residual-subtraction",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "rows-are-six-stone-d4-canonical",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "sv17-root-matches-retired-root",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "sv17-coverage-matches-fold10-target",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "sv17-38-gates",
+      "pass": true
+    },
+    {
+      "detail": {
+        "avg_nodes_per_probe": 2174557,
+        "capped": 0,
+        "max_probe": {
+          "andclose": false,
+          "bit": 7,
+          "capped": false,
+          "loss": false,
+          "ms": 167793,
+          "nodes": 14249420,
+          "root": "00000000010000809002000040000080",
+          "terminalStoneRange": [
+            13,
+            17
+          ]
+        },
+        "order_conflicts": 0,
+        "probes": 78,
+        "refuted": 38,
+        "roots": 39,
+        "total_nodes": 169615508,
+        "win": 1
+      },
+      "name": "live-sweep-39x2-summary",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "resolve7-cross-check-flags",
+      "pass": true
+    },
+    {
+      "detail": {
+        "published": 7448,
+        "rebuilt": 7448
+      },
+      "name": "universe72-independent-rebuild",
+      "pass": true
+    },
+    {
+      "detail": {
+        "safe": 4577,
+        "unsafe": 2871
+      },
+      "name": "independent-safe-universe-count",
+      "pass": true
+    },
+    {
+      "detail": {
+        "fresh_safe": 4109,
+        "fresh_unsafe": 2871,
+        "judged_refuted": 468,
+        "judged_win": 0,
+        "safe_total": 4577,
+        "unsafe_total": 2871
+      },
+      "name": "safe-fresh-judged-partition-arithmetic",
+      "pass": true
+    },
+    {
+      "detail": {
+        "coverage_size_histogram": {
+          "1": 6616,
+          "2": 832
+        }
+      },
+      "name": "all-safe-universe-has-no-multicover",
+      "pass": true
+    },
+    {
+      "detail": {
+        "covered_rows": 72,
+        "residual_rows": 72
+      },
+      "name": "safe-universe-covers-residual",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "witness36-count-and-unique-roots",
+      "pass": true
+    },
+    {
+      "detail": {
+        "bad_count": 0,
+        "bad_roots": []
+      },
+      "name": "witness36-root-shape-and-safety",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "witness36-coverage-rederived",
+      "pass": true
+    },
+    {
+      "detail": {
+        "coverage_sizes": [
+          2
+        ]
+      },
+      "name": "witness36-is-36-pairs",
+      "pass": true
+    },
+    {
+      "detail": {
+        "overlap_memberships": 0,
+        "union_rows": 72
+      },
+      "name": "witness36-exact-one-cover",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "witness36-disjoint-from-retired38",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "matching36-optimality",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "retired38-count-and-root-identity",
+      "pass": true
+    },
+    {
+      "detail": {
+        "bad": [],
+        "bad_count": 0
+      },
+      "name": "retired38-root-shape-safety-and-coverage",
+      "pass": true
+    },
+    {
+      "detail": {
+        "size_histogram": {
+          "1": 4,
+          "2": 34
+        }
+      },
+      "name": "retired38-34-pair-4-singleton",
+      "pass": true
+    },
+    {
+      "detail": {
+        "overlap_memberships": 0,
+        "union_rows": 72
+      },
+      "name": "retired38-one-cover-72-rows",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "row-demand-exact-72-keys",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "row-demand-all-positive",
+      "pass": true
+    },
+    {
+      "detail": {
+        "fresh_safe_incidence": 4678,
+        "fresh_safe_max": 76,
+        "fresh_safe_min": 52,
+        "refuted_incidence": 638,
+        "win_incidence": 0
+      },
+      "name": "row-demand-range-and-arithmetic",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "candidate-summary-values",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "no-windfall-or-free-fold-supply",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "published-25-gates-all-pass",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "stage1-resolve6-exact-reproduction-claimed",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "phase2-join-conflict-free",
+      "pass": true
+    }
+  ],
+  "gates_failed": 0,
+  "gates_passed": 44,
+  "gates_total": 44,
+  "limitations": [
+    "The K0863 1,279-file corpus and phase-2 verdict join were not rebuilt; their published hash-pinned aggregate is treated as input.",
+    "The 536 distinct fresh-safe pair-edge count is checked against K1075's published field and its witness consequences, not independently enumerated from the full fresh verdict-root set.",
+    "This is a coverage-plan verification, not a WIN/LOSS proof or a depth-10 sweep.",
+    "REFUTED-D10 is not a LOSS proof; standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+  ],
+  "method": "published-record-only; independent D4 coordinate actions; 4x4 exact-integer Bareiss determinant; independent add-one-stone universe and deletion-coverage reconstruction",
+  "metrics": {
+    "fresh_safe_pool_published": 4109,
+    "fresh_safe_row_demand_min_max": [
+      52,
+      76
+    ],
+    "fresh_safe_row_incidence_sum": 4678,
+    "matching_upper_bound": 36,
+    "pair_edges_published": 536,
+    "residual_rows": 72,
+    "retired_assignment_overlap_memberships": 0,
+    "retired_assignment_pair_roots": 34,
+    "retired_assignment_rows_covered": 72,
+    "retired_assignment_singleton_roots": 4,
+    "retired_roots_rechecked": 38,
+    "safe_universe_roots_bareiss": 4577,
+    "universe72_roots_rebuilt": 7448,
+    "universe_coverage_size_histogram": {
+      "1": 6616,
+      "2": 832
+    },
+    "unsafe_universe_roots_bareiss": 2871,
+    "witness_overlap_memberships": 0,
+    "witness_roots_rechecked": 36,
+    "witness_rows_covered": 72
+  },
+  "pins": {
+    "candidate_supply": {
+      "expected": "49b6f85f6b51cfdd8a59c7797223da3d8797885d3c992ce67dc9dae629a883fa",
+      "sha256": "49b6f85f6b51cfdd8a59c7797223da3d8797885d3c992ce67dc9dae629a883fa"
+    },
+    "fold10": {
+      "expected": "bed7d33193299a0aa06ea4e076562dfa46251d20d5c3c4ca7fd231ffe854908a",
+      "sha256": "bed7d33193299a0aa06ea4e076562dfa46251d20d5c3c4ca7fd231ffe854908a"
+    },
+    "fold9": {
+      "expected": "24db2352ad0d94ee4a76ec3de294f02cbdac7899f0b6ef64ea695d261017cdc2",
+      "sha256": "24db2352ad0d94ee4a76ec3de294f02cbdac7899f0b6ef64ea695d261017cdc2"
+    },
+    "live_sweep": {
+      "expected": "22953ae16a6002d87638531f2ca9fd286f6736b834fa296e5648505ada9074dc",
+      "sha256": "22953ae16a6002d87638531f2ca9fd286f6736b834fa296e5648505ada9074dc"
+    },
+    "resolve7": {
+      "expected": "207f4094a906817ebb4bbc5ad9b90c203c6a334ee6c8d9a501661257a0e1ce3f",
+      "sha256": "207f4094a906817ebb4bbc5ad9b90c203c6a334ee6c8d9a501661257a0e1ce3f"
+    },
+    "seventeenth_verify": {
+      "expected": "c1073bae1d056db7f56d04a77fd9889d1e297a82a07537ddcd02c00d329dbabc",
+      "sha256": "c1073bae1d056db7f56d04a77fd9889d1e297a82a07537ddcd02c00d329dbabc"
+    }
+  },
+  "schema": "n11-residual72-candidate-supply-independent-second-verification-20261120-v1",
+  "scope": "K1075 candidate geometry, residual-row provenance, 36-root fresh witness cover, resolve7 38-root retired assignment, and published count consistency; no corpus verdict join rebuild and no new game-tree search",
+  "status": "verified"
+}
