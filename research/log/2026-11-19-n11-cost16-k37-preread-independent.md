@@ -33,4 +33,4 @@ rank-37 preread出版（`900f68c3`/`98321003`/`510f0827`/`ad120f9f`・preread JS
 ## レジューム引継ぎ（本レーン追加分）
 
 - k37 preread独立検証は本出版で完了。次回は最新mainで k=37 本計算・crosscheck k37拡張の出版状況を確認のうえ、未出版なら着手（並走レーンが担当している可能性が高いので、まず出版有無の確認を必ず行う）。
-- rank-38 rootの事前導出（pinned aggregate top50 index 37へのk37_facts flow適用）はまだ。着手時は本レーンのbit-maskエンジン流用でrank-38層のpreread定数を事前計算できる。	
+- rank-38 rootの事前導出（pinned aggregate top50 index 37へのk37_facts flow適用）はまだ。着手時は本レーンのbit-maskエンジン流用でrank-38層のpreread定数を事前計算できる。
