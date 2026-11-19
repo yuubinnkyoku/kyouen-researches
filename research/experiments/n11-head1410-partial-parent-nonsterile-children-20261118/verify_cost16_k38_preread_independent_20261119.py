@@ -292,8 +292,11 @@ def compare_layer(label, derived, published, checks):
         "quint": derived["new_quint_hist"],
         "profiles": derived["quint_profiles"]})
 
+    published_new_disjoint = int(
+        published.get("disjoint_quad_count",
+                      published["new_census"]["quad"]["disjoint"]))
     ck("disjoint_quad_union_and_cumulative_recount",
-       int(published["disjoint_quad_count"]) == derived["disjoint_quad_count"]
+       published_new_disjoint == derived["disjoint_quad_count"]
        and normalize_hist(published["disjoint_quad_union_sizes"])
            == derived["disjoint_quad_union_sizes"]
        and int(published["cumulative_disjoint_quads"])
