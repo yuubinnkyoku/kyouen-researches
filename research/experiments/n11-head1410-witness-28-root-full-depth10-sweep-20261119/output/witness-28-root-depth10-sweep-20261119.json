@@ -1,0 +1,1030 @@
+{
+  "schema": "n11-witness-28-root-depth10-sweep-20261119-v1",
+  "date": "2026-11-19",
+  "status": "sweep-complete",
+  "source_main_head": "b111557129d6aa6d3603fb339358e48aa50c4f49",
+  "input_pins": {
+    "coverResolve": {
+      "path": "research/experiments/n11-head1410-residual-48-root-sweep-two-win-receipts-20261119/output/five-parent-refuted-excluded-cover-resolve-20261119.json",
+      "git_blob_sha1": "600b23d39888ea0e693742da4b2ae937a9faf0"
+    },
+    "sweep48": {
+      "path": "research/experiments/n11-head1410-residual-48-root-sweep-two-win-receipts-20261119/output/residual-48-root-depth10-sweep-20261119.json",
+      "git_blob_sha1": "37aba599d0b69275225bf231d56cb18feed14090"
+    },
+    "k1035_probes": {
+      "path": "research/experiments/n11-head1410-residual-28-root-witness-win7-20261119/output/witness-root-probes-and-certificate-20261119.json",
+      "git_blob_sha1": "9cfb5c9c5d8d857b46bd147a68f9795d0a3c59b1"
+    }
+  },
+  "engine": {
+    "file": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/class4_child1_runner_v17.ts",
+    "git_blob_sha1": "c132cc6425eee3feaeef1d697dd74f968cfedb59",
+    "depth": 10,
+    "cap": 30000000,
+    "andclose_orderings": [
+      1,
+      0
+    ],
+    "note": "fresh engine per probe; pilot_d6 control (3402 nodes, loss=false) before every probe"
+  },
+  "probe_records": {
+    "path": "research/experiments/n11-head1410-witness-28-root-full-depth10-sweep-20261119/output/witness-28-root-depth10-probe-records-20261119.jsonl",
+    "records": 56,
+    "pilot_controls_passed": 56
+  },
+  "classification_rule": "WIN7-D10 = uncapped loss=true in both orderings (constructive); REFUTED-D10 = uncapped loss=false in both orderings (complete no-win-within-depth-10 proof at this 7-stone root); CAPPED = cap hit (no verdict). Node counts are exact; ms fields are observational only.",
+  "classification": {
+    "counted_roots": 28,
+    "win7_d10": {
+      "count": 3,
+      "roots": [
+        "00000000000000801202060001000000",
+        "00000000000000805202080001000000",
+        "00000000040000801202000080100000"
+      ]
+    },
+    "refuted_d10": {
+      "count": 25,
+      "roots": [
+        "00000000000000003800000008001021",
+        "0000000000000000380000000b080000",
+        "00000000000000003800280009000000",
+        "00000000000000083800000048100000",
+        "00000000000000801202000000840200",
+        "00000000000000801202000000880400",
+        "00000000000000801202000001040100",
+        "00000000000000801202000011000400",
+        "00000000000000801202000020101000",
+        "00000000000000801202010001080000",
+        "00000000000000801202040000900000",
+        "00000000000000801202050000001000",
+        "000000000000008012020a0000001000",
+        "00000000000000801212000001001000",
+        "00000000000000801222000000801000",
+        "00000000000000909002000080100000",
+        "00000000000020a09002000080000000",
+        "00000000000040889002000000100000",
+        "00000000010000809003000080000000",
+        "00000000010004003800000008002000",
+        "00000000020000801222000000100000",
+        "00000000040000801202000120000000",
+        "0000000a000000003800000008100000",
+        "00000010000000801202000000000404",
+        "00000010000000801202000100000100"
+      ]
+    },
+    "capped": {
+      "count": 0,
+      "roots": []
+    },
+    "previously_known": {
+      "win_before_this_sweep": [
+        "00000000000000801202060001000000"
+      ],
+      "refuted_before_this_sweep": [
+        "00000000000000003800000008001021",
+        "00000000020000801222000000100000"
+      ]
+    },
+    "newly_determined_by_this_sweep": {
+      "win": 2,
+      "refuted": 23
+    }
+  },
+  "rows": [
+    {
+      "root": "00000000000000003800000008001021",
+      "declared_covered_rows": [
+        "00000000000000003800000008001001",
+        "00000000000000003800000008001020"
+      ],
+      "probes": [
+        {
+          "ordering": "andclose1",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 926192,
+          "capped": false,
+          "terminal_range": [
+            15,
+            17
+          ]
+        },
+        {
+          "ordering": "andclose0",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 1544910,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "0000000000000000380000000b080000",
+      "declared_covered_rows": [
+        "0000000000000000380000000a080000",
+        "0000000000000000380000000b000000"
+      ],
+      "probes": [
+        {
+          "ordering": "andclose1",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 5427018,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        },
+        {
+          "ordering": "andclose0",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 8858211,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000000003800280009000000",
+      "declared_covered_rows": [
+        "00000000000000003800000248000000",
+        "00000000000000003800200009000000"
+      ],
+      "probes": [
+        {
+          "ordering": "andclose1",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 11875215,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        },
+        {
+          "ordering": "andclose0",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 27594510,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000000083800000048100000",
+      "declared_covered_rows": [
+        "00000000000000083800000008100000",
+        "00000000000000083800000048000000"
+      ],
+      "probes": [
+        {
+          "ordering": "andclose1",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 2246023,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        },
+        {
+          "ordering": "andclose0",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 1816191,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000000801202000000840200",
+      "declared_covered_rows": [
+        "00000000000000801202000000800200",
+        "00000000000000801202000000840000"
+      ],
+      "probes": [
+        {
+          "ordering": "andclose1",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 900673,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        },
+        {
+          "ordering": "andclose0",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 1953747,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000000801202000000880400",
+      "declared_covered_rows": [
+        "00000000000000801202000000800400",
+        "00000000000000801202000000880000"
+      ],
+      "probes": [
+        {
+          "ordering": "andclose1",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 2582916,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        },
+        {
+          "ordering": "andclose0",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 527837,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000000801202000001040100",
+      "declared_covered_rows": [
+        "00000000000000801202000001000100",
+        "00000000000000801202000001040000"
+      ],
+      "probes": [
+        {
+          "ordering": "andclose1",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 2536182,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        },
+        {
+          "ordering": "andclose0",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 953401,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000000801202000011000400",
+      "declared_covered_rows": [
+        "00000000000000103800000009000000",
+        "00000000000000801202000001000400"
+      ],
+      "probes": [
+        {
+          "ordering": "andclose1",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 199867,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        },
+        {
+          "ordering": "andclose0",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 320576,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000000801202000020101000",
+      "declared_covered_rows": [
+        "00000000000000801202000000101000",
+        "00000000000000801202000020001000"
+      ],
+      "probes": [
+        {
+          "ordering": "andclose1",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 383014,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        },
+        {
+          "ordering": "andclose0",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 1159405,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000000801202010001080000",
+      "declared_covered_rows": [
+        "00000000000000801202000001080000",
+        "00000000000000801202010001000000"
+      ],
+      "probes": [
+        {
+          "ordering": "andclose1",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 270131,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        },
+        {
+          "ordering": "andclose0",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 750733,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000000801202040000900000",
+      "declared_covered_rows": [
+        "00000000000000801202000000900000",
+        "00000000000000801202040000800000"
+      ],
+      "probes": [
+        {
+          "ordering": "andclose1",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 2676976,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        },
+        {
+          "ordering": "andclose0",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 6347402,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000000801202050000001000",
+      "declared_covered_rows": [
+        "00000000000000801202010000001000",
+        "00000000000000801202040000001000"
+      ],
+      "probes": [
+        {
+          "ordering": "andclose1",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 744638,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        },
+        {
+          "ordering": "andclose0",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 693144,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000000801202060001000000",
+      "declared_covered_rows": [
+        "00000000000000801202020001000000",
+        "00000000000000801202040001000000"
+      ],
+      "probes": [
+        {
+          "ordering": "andclose1",
+          "cap": 30000000,
+          "loss": true,
+          "nodes": 3294339,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        },
+        {
+          "ordering": "andclose0",
+          "cap": 30000000,
+          "loss": true,
+          "nodes": 3953563,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        }
+      ],
+      "classification": "WIN7-D10"
+    },
+    {
+      "root": "000000000000008012020a0000001000",
+      "declared_covered_rows": [
+        "00000000000000801202020000001000",
+        "00000000000000801202080000001000"
+      ],
+      "probes": [
+        {
+          "ordering": "andclose1",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 3485745,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        },
+        {
+          "ordering": "andclose0",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 962990,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000000801212000001001000",
+      "declared_covered_rows": [
+        "00000000000000801212000000001000",
+        "00000000000000801212000001000000"
+      ],
+      "probes": [
+        {
+          "ordering": "andclose1",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 879988,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        },
+        {
+          "ordering": "andclose0",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 2334278,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000000801222000000801000",
+      "declared_covered_rows": [
+        "00000000000000801222000000001000",
+        "00000000000000801222000000800000"
+      ],
+      "probes": [
+        {
+          "ordering": "andclose1",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 234087,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        },
+        {
+          "ordering": "andclose0",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 714280,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000000805202080001000000",
+      "declared_covered_rows": [
+        "00000000000000805202000001000000"
+      ],
+      "probes": [
+        {
+          "ordering": "andclose1",
+          "cap": 30000000,
+          "loss": true,
+          "nodes": 2368036,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        },
+        {
+          "ordering": "andclose0",
+          "cap": 30000000,
+          "loss": true,
+          "nodes": 3486894,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        }
+      ],
+      "classification": "WIN7-D10"
+    },
+    {
+      "root": "00000000000000909002000080100000",
+      "declared_covered_rows": [
+        "00000000000000909002000000100000",
+        "00000000000000909002000080000000"
+      ],
+      "probes": [
+        {
+          "ordering": "andclose1",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 520684,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        },
+        {
+          "ordering": "andclose0",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 2393950,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000020a09002000080000000",
+      "declared_covered_rows": [
+        "00000000000000a09002000080000000",
+        "00000000000020809002000080000000"
+      ],
+      "probes": [
+        {
+          "ordering": "andclose1",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 1044449,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        },
+        {
+          "ordering": "andclose0",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 8881769,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000000040889002000000100000",
+      "declared_covered_rows": [
+        "00000000000000889002000000100000",
+        "00000000000040809002000000100000"
+      ],
+      "probes": [
+        {
+          "ordering": "andclose1",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 138910,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        },
+        {
+          "ordering": "andclose0",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 5765078,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000010000809003000080000000",
+      "declared_covered_rows": [
+        "00000000010000809002000080000000"
+      ],
+      "probes": [
+        {
+          "ordering": "andclose1",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 613900,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        },
+        {
+          "ordering": "andclose0",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 2546709,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000010004003800000008002000",
+      "declared_covered_rows": [
+        "00000000000000103800000008080000",
+        "00000000000000801202000000800100"
+      ],
+      "probes": [
+        {
+          "ordering": "andclose1",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 820352,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        },
+        {
+          "ordering": "andclose0",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 18883642,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000020000801222000000100000",
+      "declared_covered_rows": [
+        "00000000000000889002000080000000",
+        "00000000020000801202000000100000"
+      ],
+      "probes": [
+        {
+          "ordering": "andclose1",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 261501,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        },
+        {
+          "ordering": "andclose0",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 1671348,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000000040000801202000080100000",
+      "declared_covered_rows": [
+        "00000000020000809002000040000000"
+      ],
+      "probes": [
+        {
+          "ordering": "andclose1",
+          "cap": 30000000,
+          "loss": true,
+          "nodes": 557943,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        },
+        {
+          "ordering": "andclose0",
+          "cap": 30000000,
+          "loss": true,
+          "nodes": 676155,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        }
+      ],
+      "classification": "WIN7-D10"
+    },
+    {
+      "root": "00000000040000801202000120000000",
+      "declared_covered_rows": [
+        "00000000000080003800000048000000",
+        "00000000010000809002000040000000"
+      ],
+      "probes": [
+        {
+          "ordering": "andclose1",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 312889,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        },
+        {
+          "ordering": "andclose0",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 10698380,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "0000000a000000003800000008100000",
+      "declared_covered_rows": [
+        "00000000000000801202000000081000",
+        "00000008000000003800000008100000"
+      ],
+      "probes": [
+        {
+          "ordering": "andclose1",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 282729,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        },
+        {
+          "ordering": "andclose0",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 334500,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000010000000801202000000000404",
+      "declared_covered_rows": [
+        "00000000000000003800000008500000",
+        "00000010000000801202000000000400"
+      ],
+      "probes": [
+        {
+          "ordering": "andclose1",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 369559,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        },
+        {
+          "ordering": "andclose0",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 1582339,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        }
+      ],
+      "classification": "REFUTED-D10"
+    },
+    {
+      "root": "00000010000000801202000100000100",
+      "declared_covered_rows": [
+        "00000000010000003800000008100000",
+        "00000000010000809002000000100000"
+      ],
+      "probes": [
+        {
+          "ordering": "andclose1",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 1188224,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        },
+        {
+          "ordering": "andclose0",
+          "cap": 30000000,
+          "loss": false,
+          "nodes": 2818437,
+          "capped": false,
+          "terminal_range": [
+            13,
+            17
+          ]
+        }
+      ],
+      "classification": "REFUTED-D10"
+    }
+  ],
+  "receipt_coverage_consequence": {
+    "witness_union_rows": 53,
+    "win_root_declared_rows_unique": 4,
+    "note": "28-root witnessの53行のうち、証明書つき3 WIN rootが構造的に宣言する行はユニーク4行。25 REFUTED rootがcoverしていた残49行はこのプール内のdepth-10 receiptでは閉じられない。5親target簿記の更新（receipt fold・resolve2）は未実施であり、K1033/K1036の簿記は不変。"
+  },
+  "checks": [
+    {
+      "name": "sweep roots equal the published cover-resolve witness list (28, order preserved)",
+      "pass": true
+    },
+    {
+      "name": "every record carries a passing pilot_d6 control (loss=false, 3402 nodes)",
+      "pass": true
+    },
+    {
+      "name": "every root has both-order 30M runs, none capped",
+      "pass": true
+    },
+    {
+      "name": "no WIN/REFUTED ordering conflict (loss equal in both orderings for all 28)",
+      "pass": true
+    },
+    {
+      "name": "classification totals 28 (3 WIN + 25 REFUTED + 0 CAPPED)",
+      "pass": true
+    },
+    {
+      "name": "determinism anchors match published values: K1035 root C 3294339/3953563 nodes, 00000000000000003800000008001021 andclose1 926192 nodes, 00000000020000801222000000100000 andclose1 261501 nodes",
+      "pass": true
+    },
+    {
+      "name": "all 3 WIN roots have published independently verified WIN7-D10 certificates (K1035 .gz blob a9030a517d92dee293afc38d5ca7b623ce08e930; K1036 .n11 git blobs b072170a0557ee15622c9f8dd94ec0fa81c65e18 / 02ea43b389327ea68c54249017a236d2a93360a0)",
+      "pass": true
+    }
+  ],
+  "interpretation_guard": [
+    "REFUTED-D10は7石root単位の判定（そのrootからdepth-10以内に先手勝ちなし・cap未到達）であり、それ以前の局面のLOSS証明ではない。",
+    "本sweepは証明書の出版済み3 rootを除き、receipt fold・frontier簿記の更新を行わない。K1033/K1036の簿記（5親target累計21/112行）は不変。",
+    "二石root {49,60}/{59,60}・S2 {59,60}・class 1/2/4・標準11×11空盤はいずれもUNKNOWNのまま。"
+  ]
+}
