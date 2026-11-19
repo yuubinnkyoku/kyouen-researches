@@ -33,3 +33,15 @@ K1057 resolve5 の条件付き計画（39 pair witness・残余78行完全被覆
   universe内で struck 済み、4 WIN witnessは閉鎖済み行のみを被覆）。
 - 結果の解釈: WINが出たrootは証明書抽出候補。REFUTED-D10はLOSS証明ではなく、
   78行の閉鎖はWIN証明書のfoldでのみ進む。CAPPED/conflictは記録次第で再試行。
+
+## 結果（2026-11-19 掃引完了・分類正本は output/witness-39-root-depth10-sweep-20261119.json）
+
+- 78 probe 完走（worker0 40・worker1 38）。pilot_d6 は全 probe で合格（3,402 nodes・loss=false）。
+- **WIN 0 / REFUTED 39 / CAPPED 0 / 順序矛盾 0**、総nodes 115,940,695、最大単一probe 9,930,490 nodes。
+- 帰結: 78行は1行も閉じず、frontier 6,213行/492,021・solved S6 1,635・5親target 34/112不変
+  （K1057 fold後のまま）。43-pair掃引のdeflation後に再結合した39 fresh pairの全滅により、
+  残余78行へのadd-one-stone・depth-10レーンのfresh候補供給はこのスコープで枯渇。
+- 分類は assemble39.py（生記録から独立組立・GATE: 両順序・uncapped・pilot・partition一致）。
+- K1059 item / research/log/2026-11-19-n11-residual78-39witness-d10-sweep.md 参照。
+- 次の選択肢: depth>10コスト測定（数rootの深さ別nodes傾向）、add-two-stones拡張census、
+  残余78行の幾何構造解析、並走 n11-residual-86-row-min-cover レーンとの視点統合。
