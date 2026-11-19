@@ -1,0 +1,35 @@
+{
+  "checks": [
+    {
+      "name": "(a) closed forms agree, z=6..80 x<=60 R<x+z+100",
+      "grid": "z=6..80, x=1..60, R=0..x+z+99, K1022 cand == K1023 cand",
+      "points": 780750,
+      "status": "PASS"
+    },
+    {
+      "name": "(b) closed forms agree, far z",
+      "grid": "z in {97,98,997,998,2999,3000}, x<=30, R<x+z+30, both census-derived formulas",
+      "points": 253860,
+      "status": "PASS"
+    },
+    {
+      "name": "(c1) z=1..5 vs raw engines",
+      "grid": "z=1..5, x<=25, R<=x+z+30, K1023 cand == K1022 H_canonical == K1022 H_ordered",
+      "points": 5875,
+      "status": "PASS"
+    },
+    {
+      "name": "(c2) z=0 base vs raw engines",
+      "grid": "z=0, x<=25, R<=2x+30, K1023 cand0 == K1022 H_canonical == K1022 H_ordered",
+      "points": 1425,
+      "status": "PASS"
+    },
+    {
+      "name": "(c3) z=0 wide grid",
+      "grid": "z=0, x=26..40, R<=2x+10, K1023 cand0 == K1022 H_canonical",
+      "points": 1155,
+      "status": "PASS"
+    }
+  ],
+  "overall": "PASS"
+}
