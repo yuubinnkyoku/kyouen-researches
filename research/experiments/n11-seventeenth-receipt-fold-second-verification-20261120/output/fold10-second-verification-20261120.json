@@ -1,0 +1,190 @@
+{
+ "schema": "n11-fold10-second-verification-20261120-v1",
+ "date": "2026-11-20",
+ "status": "second-verified",
+ "subject": "research/experiments/n11-seventeenth-win7-receipt-fold-20261120/fold/output/seventeenth-win7-receipt-fold-20261120.json",
+ "inputs_verified_by_sha256": {
+  "fold10_record": "bed7d33193299a0aa06ea4e076562dfa46251d20d5c3c4ca7fd231ffe854908a",
+  "fold9_record": "24db2352ad0d94ee4a76ec3de294f02cbdac7899f0b6ef64ea695d261017cdc2",
+  "seventeenth_certificate": "21dd2f0e9f0b8ec22e917fce5a732835098baf37570a227bebacacb4c13807c8"
+ },
+ "independent_method": "Direct geometric re-derivation of the covered rows from the receipt root (8 D4 images x one-stone removal -> D4 canonical forms, 56 distinct candidates), cross-checked against the fold9 published residual74 and the fold10 record, plus frontier/arithmetic/parent-delta/integrity gates. No chain-reconstruction inputs (worklist/ledger/tarball/...) are consumed; those stay under the owner machine's own fail-closed gates. REFUTED-D10 is not a LOSS proof; closed rows keep arbitrary game-theoretic value in this bookkeeping.",
+ "key_finding": {
+  "rederivation_distinct_candidates": 7,
+  "rederivation_candidate_hexes": [
+   "00000000000000821082000000000001",
+   "00000000000000821082000000000004",
+   "00000000010000003800000000000420",
+   "00004000000000003800000100000020",
+   "00004000000000021082000000000100",
+   "00004000000000820082000000000100",
+   "00004000000000821080000000000100"
+  ],
+  "candidates_touching_fold9_residual74": [
+   "00000000000000821082000000000001",
+   "00000000000000821082000000000004"
+  ],
+  "claim": "Exactly the two claimed five-parent target rows of the fold10 receipt appear among the 56 geometric one-stone-removal D4-canonical candidates intersected with the fold9 residual74; the third closed row (target-external extra) is also a geometric removal candidate but sits outside the target bookkeeping, so its frontier membership cannot be re-derived from these two records alone.",
+  "residual72 equality": true
+ },
+ "unknown_guard": "The standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN.",
+ "gates_total": 31,
+ "gates_all_pass": true,
+ "gates": [
+  {
+   "gate": "fold10 \u6b63\u672c sha256 == published bed7d331...",
+   "pass": true,
+   "detail": "bed7d33193299a0aa06ea4e076562dfa46251d20d5c3c4ca7fd231ffe854908a"
+  },
+  {
+   "gate": "fold9 local pin == fold10.previous_fold pin",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "gate": "cert sha256 pin matches local byte-exact file",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "gate": "cert bytes pin",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "gate": "root popcount == 7",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "gate": "root is D4-canonical",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "gate": "root safe (no cocircular quadruple)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "gate": "56 removal candidates distinct count >= 3",
+   "pass": true,
+   "detail": "7 distinct canonical 6-stone removals"
+  },
+  {
+   "gate": "covered row 00000000000000821082000000000001 in D4-removal rederivation",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "gate": "covered row 00000000000000821082000000000004 in D4-removal rederivation",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "gate": "covered row 00004000000000003800000100000020 in D4-removal rederivation",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "gate": "fold9 residual74: 74 rows, sorted, unique",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "gate": "target rows == coverage claim rows",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "gate": "target rows in fold9 residual74",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "gate": "extra row not in target residual74",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "gate": "target coverage 2 rows in rederivation",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "gate": "fold10 residual72 == fold9 residual74 minus target rows (exact list)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "gate": "residual72 count",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "gate": "closed target total 40",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "gate": "rederived rows touching residual74 == exactly the 2 claimed target rows",
+   "pass": true,
+   "detail": "['00000000000000821082000000000001', '00000000000000821082000000000004']"
+  },
+  {
+   "gate": "frontier_before == fold9 frontier_after stage",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "gate": "frontier rows -3",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "gate": "closed edge cost == sum of row costs == 225",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "gate": "cost difference matches (491722-225==491497)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "gate": "solved +3 (1639->1642)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "gate": "incidence delta 11818->11810 == parent rows_closed sum 8",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "gate": "affected parents 5, fully closed 0",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "gate": "parent_deltas rows_before/after monotone",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "gate": "witness_plan retired rows == target rows",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "gate": "receipt_count 1, schema",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "gate": "interpretation guard 5 entries incl UNKNOWN clause",
+   "pass": true,
+   "detail": ""
+  }
+ ]
+}
