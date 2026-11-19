@@ -359,13 +359,19 @@ def main() -> int:
 
     ck("meta_k36_preread_pinned_and_all_pass",
        k36pre["schema"] == "n11-cost16-k36-preread-20261119-v1"
-       and k36pre["check_count"] == 33 and k36pre["all_pass"] is True)
+       and k36pre["check_count"] == 33 and k36pre["all_pass"] is True
+       and len(k36pre["checks"]) == 33
+       and all(c.get("pass") is True for c in k36pre["checks"]))
     ck("meta_k37_preread_pinned_and_all_pass",
        k37pre["schema"] == "n11-cost16-k37-preread-20261119-v1"
-       and k37pre["check_count"] == 34 and k37pre["all_pass"] is True)
+       and k37pre["check_count"] == 34 and k37pre["all_pass"] is True
+       and len(k37pre["checks"]) == 34
+       and all(c.get("pass") is True for c in k37pre["checks"]))
     ck("meta_k38_preread_pinned_and_all_pass",
        k38pre["schema"] == "n11-cost16-k38-preread-20261119-v1"
-       and k38pre["check_count"] == 34 and k38pre["all_pass"] is True)
+       and k38pre["check_count"] == 34 and k38pre["all_pass"] is True
+       and len(k38pre["checks"]) == 34
+       and all(c.get("pass") is True for c in k38pre["checks"]))
     declared = {
         k: v["git_blob_sha1"] for k, v in k38pre["inputs"].items()
         if isinstance(v, dict) and "git_blob_sha1" in v
@@ -435,13 +441,16 @@ def main() -> int:
        {"counts": sextets, "total": math.comb(38, 6),
         "implied_rank36_total": math.comb(36, 6),
         "implied_rank37_total": math.comb(37, 6)})
-    for n, pub in (
-        (36, k38pre["rank36_regression"]),
-        (37, k38pre["rank37_regression"]),
-        (38, k38pre["rank38"]),
-    ):
+    sextet_publications = (
+        ("k36_original", 36, k36pre["rank36"]),
+        ("k36_k38_regression", 36, k38pre["rank36_regression"]),
+        ("k37_original", 37, k37pre["rank37"]),
+        ("k37_k38_regression", 37, k38pre["rank37_regression"]),
+        ("k38_original", 38, k38pre["rank38"]),
+    )
+    for label, n, pub in sextet_publications:
         expected_six = {"b_only": 0, "zero": math.comb(n, 6), "disjoint": 0}
-        ck(f"rank{n}_published_sextet_subset_of_rank38_all_zero",
+        ck(f"{label}_sextet_subset_of_rank38_all_zero",
            normalize_counts(pub["sextet_census"]["counts"]) == expected_six
            and int(pub["sextet_census"]["total"]) == math.comb(n, 6),
            {"counts": expected_six, "total": math.comb(n, 6)})
