@@ -49,6 +49,17 @@ artifacts:
 - path: research/log/2026-11-19-n11-49-root-two-ply-reproduction-repair.md
   role: log
   note: 二手先frontier再現器の構文・出力先・JSON schema不整合を修正し、固定入力の全数再計算で旧結果を照合
+
+- path: research/experiments/n11-head1410-residual-cover-after-receipt-fold-20261119/scripts/audit_49_root_three_ply_frontier_20261119.mjs
+  role: verifier
+  note: 49候補rootの三手先（10石）frontierをBigInt det4二方式とD4正準化で全数集計する再現器
+- path: research/experiments/n11-head1410-residual-cover-after-receipt-fold-20261119/output/49-root-three-ply-frontier-20261119.json.gz
+  role: data
+  note: 923,696 raw 10石局面、923,586 root別D4類、10,653 root間重複membershipの圧縮結果
+- path: research/log/2026-11-19-n11-49-root-three-ply-frontier.md
+  role: log
+  note: 三手先のD4共有率・root pair重複・探索候補順への含意と検証境界
+
 scope: "2026-11-16に算出した n11 class-lane の post-cost-60c 正準 head 1410 に対する履歴スナップショット（174 open S5 parent、MS5 S6 manifest 7867 行・orbit 重複なし、35 STERILE 行）。cost-65j fold は後続作業として head 1410 から 1419 へ適用済みであり、本 census の基準 head は 1410 のまま。"
 evidence: "orbit-level census: 全 174×7867 ペアで ∃σ∈D4: σ(P) ⊂ R を判定。コントロール: CA manifest 7867 行・cost 総和 615497・orbit 重複なし、CB 174 S5 canon 重複なし、CC cost-60c fold の parent-row 6 ペア全件 orbit-related、CD 62b 行の出版 claim 記載 parent が census の open parents に全件含まれ demand {c1:1,c2:1,c4:0} も完全一致、CE 既知 anchor 3 件（rem 3/209・10/698・18/1460）が出版値と精密一致、CF 違反 0、CG pending-65j 34 orbit が STERILE と非交差、CI cover precheck bits {21,109}・62 合法手 bit 集合・両 cover root hex が出版 claim v2 と一致"
 ---
@@ -104,3 +115,21 @@ K0001/K0868の整数det4規約で49本を二手先まで展開した。BigIntの
 接続Proxmox runner `kyouen-80f-runner`（1 vCPU、4 GiB RAM、Node v22.23.5）で、固定commitからスクリプトと入力6ファイルを取得。6/6のGit blob SHA-1 pin、`node --check`、Node実行2回、15/15 checks、既存JSONとのbyte-identicalを確認した。2回目の実行時間は7.297秒。修正版スクリプトblobは `1ac095ee7e6378d6520cb360a58a1797ea86b90a`、結果JSON blobは `f631574b5701bd8f441d2c552ba001814246ef69`、結果JSON SHA-256は `2e50e310936ba4ac5aa0adc9a11f4fbc579b8ce4828e79ead649348cff7ad646`。詳細は[修復・実行ログ](../../log/2026-11-19-n11-49-root-two-ply-reproduction-repair.md)。
 
 これは49候補rootの二手先構造の再現性検証であり、DFPN探索ではない。303共有類（0.414733%）は9石層だけの重複で、深い探索のcache利得や実測費用を示さない。新しいWIN/LOSS verdict、certificate、receipt、manifest閉鎖は0。49本は候補rootのまま。標準11×11空盤、二石root `{49,60}`/`{59,60}`、S2 `{59,60}`、class 1/2/4は **UNKNOWN**。
+
+
+## 2026-11-19 追記: 49-root三手先frontierとD4共有
+
+49本の候補rootを7石から三手先の10石層まで正確に展開した。各9石局面の合法三手目を全列挙し、追加3点を座標番号の昇順 \`p<q<r\` で一度だけ数える。安全性は部分集合に遺伝するため、各安全10石集合はこの順序で一意に生成できる。各rootの9石局面数は、既存二手先JSONの49件すべてと一致した。
+
+- 49 rootからの9石局面は73,059個。全て合法な三手目を持ち、各局面の合法三手目数は14〜68。
+- 9石局面上の合法三手目は合計2,771,088件。順序を除いたraw 10石集合は923,696個（各10石集合は、その3つの9石部分集合から各1回ずつ数えられるため総数は3倍）。
+- root別にD4正準化すると923,586類で、root内のD4重複が110件（rawの0.011909%）。9石層ではroot内重複0だったので、D4による併合は10石層で初めて現れた。
+- 49 root横断のD4類は912,933。root間重複membershipは10,653（root別D4類membershipの1.153439%）。9石層の303/73,059（0.414733%）に対して2.78116倍。
+- 多重度は1 root共有902,297類、2 root共有10,619類、3 root共有17類。347組のroot pairが重複し、最大は \`00000000000000801202020001001000\` と \`00000000010000809002000040100000\` の851類。9石層での最大47類の18.106倍。
+- 2手先frontier順位と3手先D4類数順位のSpearman相関は0.990816。ただし30/49 rootで順位が変化した。最小候補は引き続き \`00000000000000821082000010800000\`（一手47候補・9石881局面・10石D4類8,420）。
+
+最大共有pairを同じworkerの共有表へまとめる価値は、9石層だけの監査より強くなった。ただし、これは10石層までの幾何学的なD4重複であり、実DFPNの探索費用・深い局面での表参照率・証明可能性を示さない。49本は候補rootのままで、WIN7-D10証明書ではない。
+
+検査は13/13 PASS。BigIntの三項余因子展開と六項Leibniz展開を142,059個の3点組×121点（17,189,139点検査）で照合し、49 rootの1,715四点組も全て非零。最小構成の作業木で \`node --check\` と実行2回を行い、gzip結果はbyte-identical。script Git blob SHA-1 \`9967afadca27a9dc02a8dd07364d466f2c23da86\`、script SHA-256 \`4360a8e41f03a6e10ed82c3f3b188916e8611b9a1633e57c1efad4c112494531\`、圧縮JSON Git blob SHA-1 \`f5854dcc74554829525f2d973dceaecf1882bc27\`、圧縮JSON SHA-256 \`5a91e3b95c1a4bb628c47dbf50be280eed3cbda4465a7a0ad811e7a90629f517\`、展開JSON SHA-256 \`b57da15406f29e4059ed42f08486c9966ebfab02d07df08fdbc8f456cb5d2e8f\`。
+
+実行環境は接続runner \`pve:199\`（Debian 13、Node v22.23.5、1 vCPU・4 GiB）。C++ compilerがないため、この回はDFPNを実行していない。新しいWIN/LOSS verdict、certificate、receipt、manifest閉鎖は0。REFUTED-D10はLOSS証明ではなく、標準11×11空盤・二石root・S2・class 1/2/4は **UNKNOWN** のまま。
