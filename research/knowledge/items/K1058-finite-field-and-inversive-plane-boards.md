@@ -49,6 +49,12 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/output/inversive_plane.json
   role: data
   note: q=3,5 の反転平面ゲーム全値
+- path: research/experiments/finite-field-kyouen-20261120/AG2_PRIME_POWER.md
+  role: source
+  note: AG(2,q)の素数冪拡張と円個数公式の破綻
+- path: research/experiments/finite-field-kyouen-20261120/scripts/ag2_prime_power.py
+  role: solver
+  note: 素数冪AG(2,q)の構成と完全探索
 - path: research/experiments/finite-field-kyouen-20261120/DET_CONTINUOUS.md
   role: source
   note: 連続緩和の正しい値と格子との差1
@@ -249,6 +255,11 @@ AG(2,q) 盤（円と直線の両方がブロック）：
 | q | 盤の点数 | ブロック数 | 厳密 K | 貪欲下界 | 数え上げ上界 |
 |---:|---:|---:|---:|---:|---:|
 | 3 | 9 | 30 | **5** | 5 | 6 |
+| 4 | 16 | 78 | **5** | 5 | 8 |
+
+注意：円の個数が q²(q−1) になるのは **q が奇素数のときのみ**。q=4（標数2）では
+x²+y²=(x+y)² と分解して円が退化し、実測 58 個（理論値 48）になる。
+q≡1 (mod 4) でも退化が起きる（q=5 でサイズ4の円が100個）。
 | 5 | 25 | 155 | **6** | 6 | 10 |
 | 7 | 49 | 350 | **6** | 6 | 13 |
 | 11 | 121 | 1,342 | — | 9 | 21 |
@@ -261,7 +272,7 @@ AG(2,q) 盤（円と直線の両方がブロック）：
 
 q=7 の K=6 は固定サイズ完全探索で決定した（サイズ7が不存在、2,276,002 ノード）。
 
-**AG(2,q) と反転平面の K は q ≤ 7 で完全に一致する**（5, 6, 6）。
+**AG(2,q) と反転平面の K は q ≤ 7 で完全に一致する**（q=3:5, q=4:5, q=5:6, q=7:6）。
 点数はほぼ同じ（q² 対 q²+1）だがブロック構造は大きく異なる（AG は円と直線、
 反転平面は円のみで各円 q+1 点）。この一致が偶然か構造的かは未解明で、
 q=8 では反転平面が K=7 だが AG(2,8) は未計算。
