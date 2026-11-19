@@ -60,6 +60,16 @@ artifacts:
   role: log
   note: 三手先のD4共有率・root pair重複・探索候補順への含意と検証境界
 
+- path: research/experiments/n11-head1410-residual-cover-after-receipt-fold-20261119/output/win7-root-00000000000000821082000010800000-20261119.n11.gz
+  role: certificate
+  note: 7石rootのWIN7-D10証明書（gzip）。展開後966,579 bytes、SHA-256 5a32d95d0e1bddfeed9e810db4d372d5a9440cde594b12b3d94ae2dd06c02ab8
+- path: research/experiments/n11-head1410-residual-cover-after-receipt-fold-20261119/output/first-win7-root-evidence-20261119.tar.gz
+  role: data
+  note: 抽出・二方式検査・receipt foldのdriver、JSONL、結果JSON、再実行手順を含む証拠束
+- path: research/log/2026-11-19-n11-first-residual-root-win7-certificate.md
+  role: log
+  note: WIN7-D10抽出、BigInt/Bareiss独立検査、4 S6行のreceipt化と48-root残余cover
+
 scope: "2026-11-16に算出した n11 class-lane の post-cost-60c 正準 head 1410 に対する履歴スナップショット（174 open S5 parent、MS5 S6 manifest 7867 行・orbit 重複なし、35 STERILE 行）。cost-65j fold は後続作業として head 1410 から 1419 へ適用済みであり、本 census の基準 head は 1410 のまま。"
 evidence: "orbit-level census: 全 174×7867 ペアで ∃σ∈D4: σ(P) ⊂ R を判定。コントロール: CA manifest 7867 行・cost 総和 615497・orbit 重複なし、CB 174 S5 canon 重複なし、CC cost-60c fold の parent-row 6 ペア全件 orbit-related、CD 62b 行の出版 claim 記載 parent が census の open parents に全件含まれ demand {c1:1,c2:1,c4:0} も完全一致、CE 既知 anchor 3 件（rem 3/209・10/698・18/1460）が出版値と精密一致、CF 違反 0、CG pending-65j 34 orbit が STERILE と非交差、CI cover precheck bits {21,109}・62 合法手 bit 集合・両 cover root hex が出版 claim v2 と一致"
 ---
@@ -114,7 +124,7 @@ K0001/K0868の整数det4規約で49本を二手先まで展開した。BigIntの
 
 接続Proxmox runner `kyouen-80f-runner`（1 vCPU、4 GiB RAM、Node v22.23.5）で、固定commitからスクリプトと入力6ファイルを取得。6/6のGit blob SHA-1 pin、`node --check`、Node実行2回、15/15 checks、既存JSONとのbyte-identicalを確認した。2回目の実行時間は7.297秒。修正版スクリプトblobは `1ac095ee7e6378d6520cb360a58a1797ea86b90a`、結果JSON blobは `f631574b5701bd8f441d2c552ba001814246ef69`、結果JSON SHA-256は `2e50e310936ba4ac5aa0adc9a11f4fbc579b8ce4828e79ead649348cff7ad646`。詳細は[修復・実行ログ](../../log/2026-11-19-n11-49-root-two-ply-reproduction-repair.md)。
 
-これは49候補rootの二手先構造の再現性検証であり、DFPN探索ではない。303共有類（0.414733%）は9石層だけの重複で、深い探索のcache利得や実測費用を示さない。新しいWIN/LOSS verdict、certificate、receipt、manifest閉鎖は0。49本は候補rootのまま。標準11×11空盤、二石root `{49,60}`/`{59,60}`、S2 `{59,60}`、class 1/2/4は **UNKNOWN**。
+これは49候補rootの二手先構造の再現性検証であり、DFPN探索ではない。303共有類（0.414733%）は9石層だけの重複で、深い探索のcache利得や実測費用を示さない。この三手先frontier監査単独では新しいWIN/LOSS verdict、certificate、receipt、manifest閉鎖は0。後続の最初のreceipt foldはK1029を参照。49本は候補rootのまま。標準11×11空盤、二石root `{49,60}`/`{59,60}`、S2 `{59,60}`、class 1/2/4は **UNKNOWN**。
 
 
 ## 2026-11-19 追記: 49-root三手先frontierとD4共有
@@ -128,8 +138,56 @@ K0001/K0868の整数det4規約で49本を二手先まで展開した。BigIntの
 - 多重度は1 root共有902,297類、2 root共有10,619類、3 root共有17類。347組のroot pairが重複し、最大は \`00000000000000801202020001001000\` と \`00000000010000809002000040100000\` の851類。9石層での最大47類の18.106倍。
 - 2手先frontier順位と3手先D4類数順位のSpearman相関は0.990816。ただし30/49 rootで順位が変化した。最小候補は引き続き \`00000000000000821082000010800000\`（一手47候補・9石881局面・10石D4類8,420）。
 
-最大共有pairを同じworkerの共有表へまとめる価値は、9石層だけの監査より強くなった。ただし、これは10石層までの幾何学的なD4重複であり、実DFPNの探索費用・深い局面での表参照率・証明可能性を示さない。49本は候補rootのままで、WIN7-D10証明書ではない。
+最大共有pairを同じworkerの共有表へまとめる価値は、9石層だけの監査より強くなった。ただし、これは10石層までの幾何学的なD4重複であり、実DFPNの探索費用・深い局面での表参照率・証明可能性を示さない。この三手先frontier監査の時点では49本は候補rootのままで、WIN7-D10証明書ではなかった（後続の証明書取得はK1029）。
 
 検査は13/13 PASS。BigIntの三項余因子展開と六項Leibniz展開を142,059個の3点組×121点（17,189,139点検査）で照合し、49 rootの1,715四点組も全て非零。最小構成の作業木で \`node --check\` と実行2回を行い、gzip結果はbyte-identical。script Git blob SHA-1 \`9967afadca27a9dc02a8dd07364d466f2c23da86\`、script SHA-256 \`4360a8e41f03a6e10ed82c3f3b188916e8611b9a1633e57c1efad4c112494531\`、圧縮JSON Git blob SHA-1 \`f5854dcc74554829525f2d973dceaecf1882bc27\`、圧縮JSON SHA-256 \`5a91e3b95c1a4bb628c47dbf50be280eed3cbda4465a7a0ad811e7a90629f517\`、展開JSON SHA-256 \`b57da15406f29e4059ed42f08486c9966ebfab02d07df08fdbc8f456cb5d2e8f\`。
 
 実行環境は接続runner \`pve:199\`（Debian 13、Node v22.23.5、1 vCPU・4 GiB）。C++ compilerがないため、この回はDFPNを実行していない。新しいWIN/LOSS verdict、certificate、receipt、manifest閉鎖は0。REFUTED-D10はLOSS証明ではなく、標準11×11空盤・二石root・S2・class 1/2/4は **UNKNOWN** のまま。
+
+## 2026-11-19 追記: 最小分岐rootのWIN7-D10証明書とreceipt fold
+
+49本の残余候補のうち、合法次手数が最小の7石root 00000000000000821082000010800000（47手、D4正準・軌道サイズ8）を探索した。bit 71を除いた6石childは 00000000000000021082000010800000。開始時の公開verdict indexにはこのrootのchild orbitがなく、未判定候補だった。
+
+runner v17・depth 10・cap 950,000 の2方式は、andclose=1 が loss=true / 392,235 nodes / 1,142 ms、andclose=0 が loss=true / 446,745 nodes / 1,337 ms で、どちらも未打切り。pilot_d6 control は両方3,402 nodesで一致した。続くv16 extractorは47応手すべてを処理し、616,064 nodes・26,708 unique strategy rows・fbt_drops=0・終局石数13〜17の証明書を抽出した。
+
+展開後の証明書は966,579 bytes、SHA-256:
+5a32d95d0e1bddfeed9e810db4d372d5a9440cde594b12b3d94ae2dd06c02ab8
+Git管理上はgzip 119,778 bytes（SHA-256 b18b5f607f4c6d215f3fb999f102d30e897f99be2e4416ff88f5dfbb89d8e7bd）で保存した。再現用driver・検査結果・receipt fold JSONはevidence bundle（12,524 bytes、SHA-256 3d4e78e1afeb030a86f0ed8acc7dbba5777b80f5c4ea40e1f238c08582f1c048）に格納した。
+
+BigInt 3×3余因子展開（lifted determinant [x²+y²,x,y,1]、浮動小数なし）でroot安全性、mobility 47、47 subrootsを検査。証明書行26,708、消費行26,708、union missing=0 / extra=0。別実装の4×4 Bareiss行列式検査も47/47 subroots PASS。seen 60,884、terminals 9,942、opponent edges 54,552、consumed records 39,307 / unique 26,708、union差分0。二方式は同じ探索器の再実行ではなく、determinant計算と検査実装を分けている。
+
+receipt foldでは4つのS6行が新たにreceipt化された。edge cost合計262。うち5親target内は次の2行。
+
+- 00000000000000821082000000800000
+- 00000000000000821082000004000000
+
+残り2行は 00000000000000801082000084000000 と 00000000000000103800000000002020。影響を受けたS5 parentは5個で、各parentの行数を2ずつ減らしたが、完全閉鎖されたparentは0。
+
+| frontier項目 | fold前 | fold後 |
+|---|---:|---:|
+| solved S6 in manifest | 1,608 | 1,612 |
+| unique remaining S6 | 6,240 | 6,236 |
+| remaining S5 orbit | 173 | 173 |
+| remaining cost | 493,965 | 493,703 |
+| open-class S6 demand | 4,524 | 4,524 |
+| open-class demand cost | 358,685 | 358,685 |
+
+solved S6はmanifestのreceipt bookkeepingであり、ゲーム状態の勝敗確定数ではない。open-class demandは変わっていない。
+
+5親targetは97行から95行へ減少。候補coverは49 rootから48 root（47 pair + 1 singleton）へ縮小した。95行に対する下界ceil(95/2)=48と、各行を重複なく覆う48-root witnessが一致するため、残余coverは厳密に最小。WIN/LOSS conflictは0。
+
+## 再現と実行環境
+
+接続runner pve:199（Debian 13、Node v22.23.5、1 vCPU、4 GiB RAM）で実行。root filesystemは満杯だったため、抽出・検査の再実行は/dev/shm上で行い、巨大な中間ファイルをroot diskへ書かなかった。3 driverすべてnode --check成功。
+
+- extract driver再実行: certificate / summary byte-identical
+- BigInt verifier: 47/47、union差分0
+- Bareiss verifier: 47/47、union差分0
+- receipt fold driver: current main head f4deを固定し、元fold結果とbase head以外のJSON構造・数値が一致
+- progress JSONLの時間欄は実行ごとに変化するため、決定性比較の対象外
+
+## 結論と境界
+
+49本の残余候補から、最小分岐の7石rootを1本WIN7-D10で閉じ、5親targetの2行をreceipt化した。残余coverは49→48 rootへ厳密に縮小した。
+
+ただし二石rootを閉じたわけではなく、5親の完全閉鎖も0。標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class 1/2/4はUNKNOWNのまま。REFUTED-D10をLOSSと読み替えない。
