@@ -26,7 +26,8 @@
       "certificate_bytes": 2017673,
       "certificate_gz_sha256": "aeafc6a4fd8e6657925241d332d8000b91e7fb29e408d453c0ed45847206ff8d",
       "certificate_gz_bytes": 247265,
-      "file_pattern": "win7-root-00000000000000805202080001000000-20261119.n11[.gz]"
+      "file_pattern": "win7-root-00000000000000805202080001000000-20261119.n11",
+      "certificate_gz_note": "gzip -n -9 deterministic fingerprint. The .gz itself is not published to the repo (binary push corrupts in transit); reproduce from the published .n11 text and compare."
     },
     {
       "name": "sixth",
@@ -46,7 +47,8 @@
       "certificate_bytes": 1117575,
       "certificate_gz_sha256": "592dd6aa966afc19c23a77c9d742a6f01c3c371221ca95ffc0bb9851d158cf1d",
       "certificate_gz_bytes": 139336,
-      "file_pattern": "win7-root-00000000040000801202000080100000-20261119.n11[.gz]"
+      "file_pattern": "win7-root-00000000040000801202000080100000-20261119.n11",
+      "certificate_gz_note": "gzip -n -9 deterministic fingerprint. The .gz itself is not published to the repo (binary push corrupts in transit); reproduce from the published .n11 text and compare."
     }
   ],
   "verification": {
@@ -104,5 +106,6 @@
   },
   "verification_flow": "extract_root_rec_20261119.mjs で抽出後、verify_win_roots_rec_20261119.mjs が BigInt/Bareiss 両検証・状態流量一致・union監査を実行し、全gate PASSで各 per-root json を書く。scripts/ に両driverとlegal生成器を同梱。",
   "receipt_boundary": "本研究では証明書の出版のみを行い、receipt fold（K1033 frontier簿記の更新）は行っていない。K1033の簿記（5親target累計21/112行・残91行）は不変。",
-  "guards": "標準11×11空盤・二石root {49,60}/{59,60}・S2 {59,60}・class 1/2/4はUNKNOWN。REFUTED-D10は LOSS証明ではない。証明書は特定rootの先手WIN7-D10を意味するのみで、クラス全体・上流rootの勝敗を確定しない。"
+  "guards": "標準11×11空盤・二石root {49,60}/{59,60}・S2 {59,60}・class 1/2/4はUNKNOWN。REFUTED-D10は LOSS証明ではない。証明書は特定rootの先手WIN7-D10を意味するのみで、クラス全体・上流rootの勝敗を確定しない。",
+  "gz_publication_note": "証明書は .n11 テキストがrepo上の正本。.gz はbinary pushがtransportで破損するため出版しない（1件は破損状態でpushされたのち即時削除済み）。gzip -n -9 の指紋は roots[].certificate_gz_sha256 に局所指紋として記録。"
 }
