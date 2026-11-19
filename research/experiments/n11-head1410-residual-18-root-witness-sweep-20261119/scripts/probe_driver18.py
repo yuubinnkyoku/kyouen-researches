@@ -26,7 +26,7 @@ MODES = (1, 0)
 PILOT = {"control": "pilot_d6", "loss": False, "nodes": 3402, "capped": False}
 
 def git_blob_sha1(data: bytes) -> str:
-    return hashlib.sha1(b"blob " + str(len(data)).encode() + b"\\0" + data).hexdigest()
+    return hashlib.sha1(b"blob " + str(len(data)).encode() + b"\0" + data).hexdigest()
 
 def det_bareiss(a):
     a = [list(map(int, row)) for row in a]
