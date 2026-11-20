@@ -52,6 +52,9 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/scripts/ag2_fast_target.py
   role: solver
   note: AG(2,q)の対称性利用高速完全探索
+- path: research/experiments/finite-field-kyouen-20261120/BOUND_TEST_Q11.md
+  role: source
+  note: q=11での上界検証とK=9確定
 - path: research/experiments/finite-field-kyouen-20261120/LAMBDA2_BOUND.md
   role: proof
   note: 一般上界K<=lambda_2+2=q+3の証明
@@ -423,6 +426,8 @@ second moment（`λ₂=q+1` は一様）は triple より弱い。直線制約�
 異なる `r` は異なるブロックを与える（同じなら4点を含み安全集合に矛盾）。
 よって `|S| − 2 ≤ λ₂`。AG(2,q) も反転平面も `λ₂ = q+1`（一様、機械確認）なので `K ≤ q+3`。
 これは `q ≡ 3 (mod 4)` で triple 上界 1.82q を大きく改善する（q=19 で 22 対 35）。
+ただし真値との差は q とともに広がる（q=3 で1、q=7 で4、q=11 で5）。
+AG(2,11) ではサイズ10,11,12 がいずれも不存在であることを完全探索で確認し、**K=9 が確定**した。
 
 **q ≡ 3 (mod 4) では十字がない**：ブロックは直線（サイズ q）と真円（サイズ q+1）のみ。
 初等的な上界は triple `C(k,3) ≤ q³+q` から `k ≈ 1.82q` が最良
