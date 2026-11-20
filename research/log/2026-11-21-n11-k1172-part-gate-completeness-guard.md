@@ -32,6 +32,19 @@
 
 判定ロジックを43 gateの合成fixtureで別途実行し、正常分割はPASS、同一gateの両batteryからの削除・余分gate・重複gate・値改変はすべて拒否されることを確認した。重複JSON keyも拒否された。これは合成データでのロジック試験であり、repo同梱のunittestファイル自体や全batteryをこの実行環境で回したという意味ではない。
 
+## 出版記録
+
+- 単一オーナー宣言: `50d80188f3a4b187f20e5b9c99f99f025d3e360e`
+- 補助検証器: `a1bd4414ce609a7ebd49fcacbb5ff6acd47fbb81`
+- 合成回帰試験: `48ff274bd615af2c64d32a60274f99ac61d0fce6`
+- `reproduce.sh` 接続: `b0af5133a90bf5b774596adb831dc355733c50a9`
+- 本log: `afb110a9a4fe6f145b15fbeff08cb4ed89deecc7`
+- K1172更新: `c05e1c2b2cce123b3521ff92583bd08c7bdbb8cb`、artifact注記更新 `a245c3f29a70fc3845d64984c92927033b6ba1e1`
+- 実験README: `80c610768a0322d4723e9a789c78c0e37f79afb5`、同梱物一覧更新 `258929c706d4c93c942c79356a0ad727e687aa99`
+- knowledge README索引: `30179483c5871dbe4bf3ad444e924f0b3b3823c9`
+
+すべてmainへ直接反映し、branch/PRは作成していない。knowledge全体検査・unittest discover・生成処理・GitHub CIの完了は未確認であり、成功とは扱わない。
+
 ## 重要な制約
 
 元の第三検証実行で使った `b1/run/parts` と `b2/run/parts` はGit管理されていない。公開済みなのは各batteryの最終auditである。このため、新しい補助検証器を**歴史的な2 batteryへ遡及適用した**とは主張しない。今後 `reproduce.sh` を実行した際に、実際のpartファイルへ完全性検査を適用するための補強である。
