@@ -52,6 +52,9 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/scripts/ag2_fast_target.py
   role: solver
   note: AG(2,q)の対称性利用高速完全探索
+- path: research/experiments/finite-field-kyouen-20261120/BOUNDS_SUMMARY.md
+  role: source
+  note: 全上界の総括とgapの比較
 - path: research/experiments/finite-field-kyouen-20261120/COVERING_BOUND.md
   role: source
   note: 被覆による上界が弱いことの分析
@@ -460,6 +463,11 @@ AG(2,3) では6点部分集合84個**すべて**がサイズ4の円を完全に�
 ランダムな k-部分集合に含まれるブロックの期待値 `E[f]` が 1 を超えるのは
 q=3 で k≈6、q=5 で k=9、q=7 で k≈25 であり、真値（q=5,7 で K=6）と大きく乖離する。
 被覆が効くのは盤が小さい q=3 のみである。
+
+**上界の総括**：`q ≡ 1 (mod 4)` では十字上界 `q+2` により gap が 1〜2 に収まる
+（q=5:1, q=9:2, q=13:≤2, q=17:≤2）。
+一方 `q ≡ 3 (mod 4)` では λ₂ 上界 `q+3` のみで gap が 4〜9 に広がる（q=7:4, q=11:5, q=19:≤9）。
+**`q ≡ 3 (mod 4)` の上界改善が最大の課題**であり、次数・複数ペンシル・被覆のいずれの手法も失敗している。
 
 AG(2,11) ではサイズ10,11,12 がいずれも不存在であることを完全探索で確認し、**K=9 が確定**した。
 
