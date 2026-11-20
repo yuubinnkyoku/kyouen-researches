@@ -219,5 +219,43 @@ with tempfile.TemporaryDirectory(prefix='n11-s5-merge-test-') as td:
         assert not out.exists()
     print('PASS missing/corrupt registry fails closed')
 
+
+    # 14. Consistent worker-cache union is commutative and node-min is order-independent.
+    # Three workers deliberately overlap on A/B/C/D with only agreeing verdicts.
+    from itertools import permutations
+    worker_x = write(d / 'algebra-x.csv',
+                     line(A, 2, 13) + line(B, 1, 20) + line(C, 2, 30))
+    worker_y = write(d / 'algebra-y.csv',
+                     line(D, 1, 15) + line(A, 2, 7) + line(C, 2, 11))
+    worker_z = write(d / 'algebra-z.csv',
+                     line(B, 1, 9) + line(D, 1, 6))
+    expected = {A: (2, 7), B: (1, 9), C: (2, 11), D: (1, 6)}
+    reference_bytes = None
+    for i, order in enumerate(permutations((worker_x, worker_y, worker_z))):
+        out = d / f'algebra-permutation-{i}.csv'
+        success(run(out, base, *order))
+        assert exact(out) == expected
+        current = out.read_bytes()
+        if reference_bytes is None:
+            reference_bytes = current
+        else:
+            assert current == reference_bytes, 'worker input order changed merged bytes'
+    print('PASS all 6 three-worker permutations are byte-identical')
+
+    # 15. Re-merging a committed union is idempotent; staged union is associative.
+    out = d / 'algebra-idempotent.csv'
+    success(run(out, base, worker_x, worker_y, worker_z))
+    committed = out.read_bytes()
+    success(run(out, base, worker_x, worker_y, worker_z))
+    assert out.read_bytes() == committed
+    staged_xy = d / 'algebra-staged-xy.csv'
+    success(run(staged_xy, base, worker_x, worker_y))
+    staged_xyz = d / 'algebra-staged-xyz.csv'
+    success(run(staged_xyz, staged_xy, worker_z))
+    direct_xyz = d / 'algebra-direct-xyz.csv'
+    success(run(direct_xyz, base, worker_x, worker_y, worker_z))
+    assert staged_xyz.read_bytes() == direct_xyz.read_bytes()
+    print('PASS repeated merge idempotence and staged/direct associativity')
+
 print('MERGE_GUARD_OK')
 PY
