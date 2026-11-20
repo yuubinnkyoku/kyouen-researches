@@ -1,0 +1,106 @@
+[
+  {
+    "check": "crossratio_key",
+    "q": 3,
+    "quads_checked": 210,
+    "mismatches": 0,
+    "key_fact_holds": true
+  },
+  {
+    "check": "crossratio_key",
+    "q": 4,
+    "quads_checked": 2380,
+    "mismatches": 0,
+    "key_fact_holds": true
+  },
+  {
+    "check": "crossratio_key",
+    "q": 5,
+    "quads_checked": 14950,
+    "mismatches": 0,
+    "key_fact_holds": true
+  },
+  {
+    "check": "crossratio_key",
+    "q": 7,
+    "quads_checked": 230300,
+    "mismatches": 0,
+    "key_fact_holds": true
+  },
+  {
+    "check": "graph",
+    "q": 3,
+    "vertices": 6,
+    "edges": 9,
+    "alpha": 2,
+    "K_predicted": 5,
+    "K_observed": 5,
+    "match": true,
+    "witness": [
+      0,
+      3
+    ],
+    "nodes": 7,
+    "seconds": 0.0,
+    "error": null
+  },
+  {
+    "check": "graph",
+    "q": 4,
+    "vertices": 12,
+    "edges": 36,
+    "alpha": 4,
+    "K_predicted": 7,
+    "K_observed": 5,
+    "match": false,
+    "witness": [
+      0,
+      7,
+      9,
+      11
+    ],
+    "nodes": 17,
+    "seconds": 0.02,
+    "error": null
+  },
+  {
+    "check": "graph",
+    "q": 5,
+    "vertices": 20,
+    "edges": 90,
+    "alpha": 4,
+    "K_predicted": 7,
+    "K_observed": 6,
+    "match": false,
+    "witness": [
+      0,
+      4,
+      12,
+      13
+    ],
+    "nodes": 101,
+    "seconds": 0.05,
+    "error": null
+  },
+  {
+    "check": "graph",
+    "q": 7,
+    "vertices": 42,
+    "edges": 315,
+    "alpha": 6,
+    "K_predicted": 9,
+    "K_observed": 6,
+    "match": false,
+    "witness": [
+      0,
+      7,
+      12,
+      14,
+      16,
+      30
+    ],
+    "nodes": 2522,
+    "seconds": 0.26,
+    "error": null
+  }
+]
