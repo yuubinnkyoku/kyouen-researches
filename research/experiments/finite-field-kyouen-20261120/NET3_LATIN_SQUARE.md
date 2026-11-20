@@ -94,6 +94,43 @@ c(a,b) = c'  ⟺  b(a,c) = c'
 
 を満たす。検証済み（q = 3,5,7、全ての横断で成立）。
 
+## 5b. メビウス対合による構造（定理）
+
+`a` を固定すると、`b ↦ c` の対応はメビウス変換
+
+```
+M_a(t) = (d − a·t) / (a − t)
+```
+
+で与えられ、`σ(a) = M_a(c(a))`、`c(a) = M_a(σ(a))`。
+
+**定理**：`M_a` は `P¹(F_q)` の対合で、`M_a(a) = ∞`、`M_a(∞) = a`。
+
+**証明**：`M_a(M_a(t)) = t` を直接確認。`t = a` で分母が消え `∞`、
+`t = ∞` で `M_a(∞) = a`。 □
+
+**定理**：`M_a` の固定点は `(t − a)² = a² − d` の解。
+
+**証明**：`t = (d − a·t)/(a − t)` ⟺ `t(a − t) = d − a·t` ⟺ `at − t² = d − at`
+⟺ `t² − 2at + d = 0` ⟺ `(t − a)² = a² − d`。 □
+
+**系**：`a² − d` が平方となる `a` はちょうど `(q−1)/2` 個あり、
+そのような `a` では `M_a` は2つの固定点を持ち、それ以外では持たない。
+
+**検証**（`net3_proof_complete.py`）：
+
+| q | 固定点2個の `a` の個数 | `(q−1)/2` |
+|---:|---:|---:|
+| 3 | 1 | 1 |
+| 5 | 2 | 2 |
+| 7 | 3 | 3 |
+| 9 | 4 | 4 |
+
+**完全一致。**
+
+したがって横断とは「各 `a` について `M_a` の対（または固定点）を1つ選び、
+`σ` と `c` がともに置換になるようにする」問題である。
+
 ## 6. `τ₃` の決定
 
 **定理（検証済み、一般証明は未完成）**：
@@ -160,6 +197,8 @@ K(inversive q) ≤ 3 + τ₃(q) = q + 2   （q 奇数）
 
 - `τ₃ = q−1`（奇数）の**一般証明は未完成**。q ≤ 9 の全数検証のみ。
 - 和の恒等式は必要条件だが、完全横断の非存在を導くには至っていない。
+- メビウス対合 `M_a` の構造は判明したが、「対の選択が2つの置換を作れない」
+  ことの一般証明は未完成。
 - 特性2（`q` 偶数）では `w² = d` の形の基底が取れず、公式の形が異なる。
   `τ₃ = q` は q = 4, 8 の計算値のみ。
 - 族 C, D の組合せ的記述は依然未取得。
@@ -170,6 +209,7 @@ K(inversive q) ≤ 3 + τ₃(q) = q + 2   （q 奇数）
 cd research/experiments/finite-field-kyouen-20261120/scripts
 python net3_formula2.py --q 3 5 7 9 --out ../output/net3_formula2.json
 python net3_tau_proof3.py --q 3 5 7 --out ../output/net3_tau_proof3.json
+python net3_proof_complete.py --q 3 5 7 9 --out ../output/net3_proof_complete.json
 python net3_tau_theory.py --q 3 4 5 7 8 9 --out ../output/net3_tau_theory.json
 python net3_latin_square.py --q 3 4 5 7 8 9 --out ../output/net3_latin_square.json
 ```
