@@ -8,7 +8,7 @@
 
 ## 結果
 
-<badge>19/19 gates PASS</badge>
+**19/19 gates PASS**
 
 | 指標 | 結果 |
 |---|---:|
