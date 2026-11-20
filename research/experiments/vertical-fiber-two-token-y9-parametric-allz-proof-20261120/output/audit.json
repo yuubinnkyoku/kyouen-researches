@@ -1,0 +1,88 @@
+{
+  "checks": {
+    "C1": {
+      "bad": 0,
+      "desc": "raw both engines vs cand9 z=0..14 x=9..29 R<=x+z+46",
+      "points": 22995
+    },
+    "C11": {
+      "bad": 0,
+      "desc": "raw census anchor z=0..79 x=9..70 R<=x+z+12, both engines",
+      "points": 912640
+    },
+    "C12": {
+      "bad": 0,
+      "desc": "deep closed grid z=0..120 x=9..120 R<=x+z+16",
+      "points": 1904056
+    },
+    "C1b": {
+      "bad": 0,
+      "desc": "single_token/y=8-child/x=9 merger raw anchors",
+      "points": 43692
+    },
+    "C1d": {
+      "anchor_bad": 0,
+      "bad": 0,
+      "desc": "published z=8/9/10/15/16/17 slices (y=9) vs cand9, x=9..159 R<=x+61; + low-R single-token reduction R<=z+6 (z=15..17)",
+      "lowR_bad": 0,
+      "points": 141336
+    },
+    "C2": {
+      "bad": 0,
+      "desc": "closed identity grid z=0..48 x=9..56 R<=x+z+40 (+merge,tail)",
+      "points": 226968
+    },
+    "C2b": {
+      "bad": 0,
+      "desc": "deep tail identity rows z in {60..400}",
+      "points": 9330
+    },
+    "C3": {
+      "bad": 0,
+      "desc": "option decomposition vs raw child enumeration",
+      "points": 1035
+    },
+    "C4": {
+      "bad": 0,
+      "confluence_bad": 0,
+      "desc": "type machine box +/-60, clip 20/sentinel 21, confluence",
+      "identity_bad": 0,
+      "points": 630822,
+      "types": 95844
+    },
+    "C7": {
+      "bad": 0,
+      "desc": "seeded far probes 200k, seed 20261123, z,x<=3000",
+      "points": 200000
+    },
+    "C8": {
+      "bad": 0,
+      "desc": "boundary manifolds z<=3000, dx in [-21,13], tail window",
+      "points": 727077
+    },
+    "C9": {
+      "bad": 0,
+      "desc": "v-space shell sweeps [61,64],[89,92],[117,120]",
+      "points": 922890
+    }
+  },
+  "corollaries": {
+    "merge_below_diagonal": {
+      "bad": 0,
+      "claim": "x<=z-10 => H == single_token(x+9,z,R)",
+      "points": 1526072
+    },
+    "tail": {
+      "bad": 0,
+      "claim": "R>=x+z+10 => H == (x+9)%2",
+      "points": 302657
+    }
+  },
+  "experiment": "vertical-fiber-two-token-y9-parametric-allz-proof-20261120",
+  "family": "H(R;(x,9);z), z>=0, x>=9, R>=0",
+  "overall": "PASS",
+  "total_bad": 0,
+  "total_points": 5742841,
+  "type_count": 96500,
+  "verifier_sha256": "299acb6a70b9625310a3397a10f809879ba4a10a97e965115615d83f46c9171b"
+}
