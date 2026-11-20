@@ -30,7 +30,7 @@ const PINS = {
   },
   plan: {
     path: "research/experiments/n11-win8-four-row-two-ply-response-cover-20261120/output/selected-response-cover-plan.json",
-    sha256: "633c11719d8eef91062b56dc5eab772807b98a8e586905eaeec153a673bee7c0",
+    sha256: "125c9746b93f65f1f48eef18628f440c264c5f7dace4e98ed32e672295a16530",
     blob: "1c8f9cd34a19922ae8abe0f0840c0d60273b390d"
   },
   k1096Certificate: {
