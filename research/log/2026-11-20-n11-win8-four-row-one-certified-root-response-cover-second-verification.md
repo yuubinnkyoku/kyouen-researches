@@ -45,3 +45,14 @@ K1097の独立第二検証（K1102）と、WIN8証明書抽出の他root担当�
 - これは4親行の二手応答方式の幾何最小計画であり、11×11全体の勝敗や別方式の下界を示さない。
 
 **標準11×11空盤・二石root `{49,60}`・`{59,60}`・S2 `{59,60}`・class 1/2/4はUNKNOWNのまま。**
+
+## Knowledge構造の検査
+
+- K1103単体: front matter・kind/status・topics・artifact role・relation target・8 artifact pathを検査し、すべてPASS。
+- `uv sync --locked`: CT204にuvがなく未実行。
+- `tools/knowledge/build.py`: sparse checkoutに既存項目が参照する大量のexperiment/log/artifactを含められず、broken local linkで終了。generated/ とroot READMEは変更されていない。
+- `tools/knowledge/check.py`: sparse checkout由来のartifact missingに加え、既存項目のfront matter不備を多数検出して長時間実行がtimeout。全体成功とは扱わない。
+- `unittest discover -s tools/knowledge/tests`: 31件中30件成功。残る1件はMigrationBoundaryTestsのsetUpClassで既存K項目のaliases欠落によりKeyError。K1103にはaliasesがあり、単体検査はPASS。
+- 最新mainのsparse checkoutでK1103の8 artifactすべてが存在し、K1103自身に対するschema/relation validation errorは0。
+
+このため生成物再構築・repo全体CIの成功は主張しない。生成物を手編集することもしていない。
