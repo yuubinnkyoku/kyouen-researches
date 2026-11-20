@@ -52,6 +52,9 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/scripts/ag2_fast_target.py
   role: solver
   note: AG(2,q)の対称性利用高速完全探索
+- path: research/experiments/finite-field-kyouen-20261120/EXTREMAL_STRUCTURE.md
+  role: source
+  note: 極値配置の全三点ブロック構造
 - path: research/experiments/finite-field-kyouen-20261120/BOUND_Q3MOD4.md
   role: source
   note: q=3 mod 4の上界比較
@@ -407,6 +410,12 @@ second moment（`λ₂=q+1` は一様）は triple より弱い。直線制約�
 **q ≡ 3 (mod 4) では十字がない**：ブロックは直線（サイズ q）と真円（サイズ q+1）のみ。
 初等的な上界は triple `C(k,3) ≤ q³+q` から `k ≈ 1.82q` が最良
 （pair は `q·C(k,2) ≤ 3b` で 2.4q、incidence は `deg·k ≤ 3b` で 2.7q とより緩い）。
+
+**極値配置の構造**：q=7 の K=6 を達成する配置では、**任意の三点が同一円または同一直線上にある**
+（`C(6,3)=20` 個の三点組すべてがブロック上であることを機械確認）。
+さらに各点が同じ数の満杯ブロック（3点を持つブロック）に載る（q=7 で各点10個、q=11 で各点28個）。
+これは「キャップ」（どの三点も共線でない集合）の逆の極端な構造で、上界改善の手がかりになりうる。
+
 上界/真値の比は q≡1 (mod 4) で 1.1〜1.2、q≡3 (mod 4) で 2.2〜2.7 であり、
 **十字ブロックの有無が上界の鋭さを決めている**。
 
