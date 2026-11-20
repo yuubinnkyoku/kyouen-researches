@@ -1,0 +1,227 @@
+{
+ "all_gates_pass": true,
+ "experiment": "n11-residual45-win8-cert-extract-root80880200-20261120",
+ "gate_count": 19,
+ "gates": [
+  {
+   "detail": "808fbda1152cb492bb76641a101660f965f2801c0b74790d20a0d998d5b747fc",
+   "gate": "g01_k1089_master_sha256_pin",
+   "passed": true
+  },
+  {
+   "detail": "c132cc6425eee3feaeef1d697dd74f968cfedb59",
+   "gate": "g02_runner_v17_blob_pin_recorded",
+   "passed": true
+  },
+  {
+   "detail": "c132cc6425eee3feaeef1d697dd74f968cfedb59",
+   "gate": "g03_runner_v17_copy_git_blob",
+   "passed": true
+  },
+  {
+   "detail": {
+    "quadruple_free": true,
+    "stones": 8
+   },
+   "gate": "g04_root_shape_safe",
+   "passed": true
+  },
+  {
+   "detail": 46,
+   "gate": "g05_root_mobility_46",
+   "passed": true
+  },
+  {
+   "detail": {
+    "andclose0": {
+     "capped": false,
+     "loss": true,
+     "nodes": 669067,
+     "terminalStoneRange": [
+      14,
+      18
+     ]
+    },
+    "andclose1": {
+     "capped": false,
+     "loss": true,
+     "nodes": 618359,
+     "terminalStoneRange": [
+      14,
+      18
+     ]
+    }
+   },
+   "gate": "g06_k1089_root_probes_win_uncapped",
+   "passed": true
+  },
+  {
+   "detail": [
+    "0000000000000000380000000a002000",
+    "00000000000000801202000000800200",
+    "00000000000000801202000000880000"
+   ],
+   "gate": "g07_k1089_root_claimed_coverage_3rows",
+   "passed": true
+  },
+  {
+   "detail": {
+    "pilot_d6": 4,
+    "reproduced": {
+     "andclose0": 2,
+     "andclose1": 2
+    }
+   },
+   "gate": "g08_probe_reproduction_matches_k1089",
+   "passed": true
+  },
+  {
+   "detail": {
+    "file": 46,
+    "rederived": 46
+   },
+   "gate": "g09_root_move_list_equals_rederivation",
+   "passed": true
+  },
+  {
+   "detail": {
+    "a1_moves": 46,
+    "a2_moves": 46
+   },
+   "gate": "g10_extraction_runs_a1_a2_clean",
+   "passed": true
+  },
+  {
+   "detail": {
+    "identical_moves": 46
+   },
+   "gate": "g11_a1_a2_per_move_node_exact_repeat",
+   "passed": true
+  },
+  {
+   "detail": {
+    "b_moves": 46
+   },
+   "gate": "g12_extraction_run_b_single_process_clean",
+   "passed": true
+  },
+  {
+   "detail": {
+    "a1_chunk_total_nodes": 1670778,
+    "b_single_process_nodes": 1383269
+   },
+   "gate": "g13_node_accounting_chunk_vs_single",
+   "passed": true
+  },
+  {
+   "detail": {
+    "bytes": 934278,
+    "rows": 25783,
+    "sha256": "eca214f0c53f966c912f3d18b9816dc74baa250a2fe538bfcb2734076512fabf"
+   },
+   "gate": "g14_certificate_format_sorted_unique",
+   "passed": true
+  },
+  {
+   "detail": {
+    "b_nRows": 25783,
+    "cert": 25783
+   },
+   "gate": "g15_run_b_rowcount_matches_certificate",
+   "passed": true
+  },
+  {
+   "detail": {
+    "extra": 0,
+    "failure": null,
+    "loser_reply_edges": 52219,
+    "loser_states": 11311,
+    "missing": 0,
+    "subroot_mobility": 46,
+    "terminal_count": 9204,
+    "terminal_range": [
+     14,
+     18
+    ],
+    "visited_states": 57636,
+    "winner_states": 37121
+   },
+   "gate": "g16_third_method_traversal_pass",
+   "passed": true
+  },
+  {
+   "detail": {
+    "bareiss_subroots": 46,
+    "bigint_terminal_count": 9204,
+    "third_method_terminal_count": 9204
+   },
+   "gate": "g17_three_method_aggregate_agreement",
+   "passed": true
+  },
+  {
+   "detail": "5 guard lines",
+   "gate": "g18_interpretation_guard_present",
+   "passed": true
+  },
+  {
+   "detail": {
+    "claimed": [
+     "0000000000000000380000000a002000",
+     "00000000000000801202000000800200",
+     "00000000000000801202000000880000"
+    ],
+    "k1097_sha256": "2896deb0c5e820904d0e2463e3fd9ebd1613b540a66a97f88d86c75bffa71f40"
+   },
+   "gate": "g19_k1097_refsolve_footprint_match",
+   "passed": true
+  }
+ ],
+ "guard": [
+  "this certificate proves only the game tree of the named 8-stone root",
+  "the 8-stone receipt cover/fold semantics for the S6 parent rows are a separate undertaking",
+  "loss=false (uncapped) is a REFUTED-D10 probe fact and NOT a LOSS proof of any earlier position",
+  "node counts and solved counts are not win/loss readings",
+  "the standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60} and classes 1/2/4 all remain UNKNOWN"
+ ],
+ "pinned_inputs": {
+  "certificate_sha256": "eca214f0c53f966c912f3d18b9816dc74baa250a2fe538bfcb2734076512fabf",
+  "k1089_json_sha256": "808fbda1152cb492bb76641a101660f965f2801c0b74790d20a0d998d5b747fc",
+  "runner_v17_git_blob": "c132cc6425eee3feaeef1d697dd74f968cfedb59"
+ },
+ "recorded": {
+  "certificate": {
+   "bytes": 934278,
+   "rows": 25783,
+   "sha256": "eca214f0c53f966c912f3d18b9816dc74baa250a2fe538bfcb2734076512fabf"
+  },
+  "extraction_nodes": {
+   "run_a1_chunked": 1670778,
+   "run_b_single_process": 1383269
+  },
+  "k1089_claimed_coverage_rows": [
+   "0000000000000000380000000a002000",
+   "00000000000000801202000000800200",
+   "00000000000000801202000000880000"
+  ],
+  "k1097_footprint_rows": [
+   "0000000000000000380000000a002000",
+   "00000000000000801202000000800200",
+   "00000000000000801202000000880000"
+  ],
+  "third_method": {
+   "loser_reply_edges": 52219,
+   "loser_states": 11311,
+   "root_first_moves": 46,
+   "terminal_count": 9204,
+   "terminal_range": [
+    14,
+    18
+   ],
+   "visited_states": 57636,
+   "winner_states": 37121
+  }
+ },
+ "root": "00000000000000801202000800880200",
+ "schema": "win8-cert-extract-verification-v1",
+ "verdict": "WIN8 root certificate triple-verified (extraction self-check + BigInt 3x3 cofactor + Bareiss 4x4 + python third-method); all gates PASS"
+}
