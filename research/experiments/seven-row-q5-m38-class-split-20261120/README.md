@@ -46,3 +46,20 @@
 - `scripts/` — sat.js/sat2.js/sat3.js/verify_witness.py/verify_witness_det.js
   (m30 dir pin と同一 blob)・parse_model.py (m31 dir pin と同一 blob c1cef8f8…)。
 - 結果は本 dir の records.jsonl・output/ と K0827 へ追記して反映する。
+
+
+## 経過 (2026-11-20 — run-1 中断と run-2 relaunch・runner 修正)
+
+1. **起動事故の正直な記録**: 初回起動時に runner 引数ミスで (7,38,5) **class {5}**
+   instance を ~2 分走らせた (m32 dir 版 run_one.sh は第 4 引数を class とみなし
+   q を 6 にハードコードしていた)。即時検出・停止。record なし・無駄計算は軽微。
+   この問題のため **Q 環境変数版 run_one.sh (本 dir に格納・md5 は records 併記) を作成**。
+2. **run-1 (正 class {0}・CNF md5 b050817d…・cap 10800s・19:05Z 開始)**:
+   **実行環境障害により中断** (~19:42-19:46Z)。
+   最終観測進捗 **2,289,281 conflicts @ 1095.0s** (19:42Z 前後の poll による最後の
+   観測値・障害直前の正確な最終 progress line は環境消失により記録できず下界)。
+   判定なし・runner record なし (kissat 終了前中断)。
+3. 環境リセット後、scripts・kissat・CNF を再取得・再生成し md5 はすべて再一致
+   (cross-reset 決定性の追加確認)。
+4. **run-2 を relaunch** (cap 10800s・同条件)。並行して (7,6) m=32 c3_7x32 の
+   run-4 も seven-row-q6-m32-class-split-20261118 で relaunch。
