@@ -25,7 +25,7 @@
 - K1097 refsolve: SHA-256 `2896deb0c5e820904d0e2463e3fd9ebd1613b540a66a97f88d86c75bffa71f40` / blob `4660c012333b04896c36a23a0837fbdbc2572ef9`
 - K1096 certificate: SHA-256 `1393128972a2ee2bd7586239c830caac967ee45166be8ed87107907c42f23e2c` / blob `afc0a1bc005215696e18e02baaaad3c3bf9ba599`
 - K1096 audit: SHA-256 `ad0d9fb3a30edbd76fcb5562ab01f1e7e51781381377a04fa4a195378eb887da` / blob `fa70a6f12927ada9bed3da4c02c7dffef87631ad`
-- Existing response-cover plan: SHA-256 `633c11719d8eef91062b56dc5eab772807b98a8e586905eaeec153a673bee7c0` / blob `1c8f9cd34a19922ae8abe0f0840c0d60273b390d`
+- Existing response-cover plan: SHA-256 `125c9746b93f65f1f48eef18628f440c264c5f7dace4e98ed32e672295a16530` / blob `1c8f9cd34a19922ae8abe0f0840c0d60273b390d`
 - Existing stdlib verifier blob: `e87237026bdf207b8f3052dc6e4fc8e425d40f74`
 
 ## 対象外
