@@ -24,7 +24,7 @@ AGENTS.md の first-published-priority 規則に従い、同一作業の先行�
     `dcdfbf92d62409cc3a92f9f16f319e1328180622660b39791921b5de72800091`（65,777 bytes・再帰rerun gate設計・約186秒/実行）
   - 出版README `3b12d1d421f3d0ab2477af838a910fda8a8ee0c80df2ba0d2421e7f306348de1`（8,865 bytes）
   - fold17 receipt正本 `1175244d1da269b1851d5298a824b12a6ed445edc99307acc9c0fefd803bd674`（22,925 bytes）
-  - fold17 出版機 `e4c32aed731076e2032768b1e8252713bd586dcad08676e0af21668c2a8094c4c`（61,371 bytes）
+  - fold17 出版機 `e4c32aed731076e2032768b1e8252713bd586dcad08676e0af21668c2a8094c4`（61,371 bytes）
   - K1120証明書本体 `d6745edbc77a53bbef66e807fd18e69c039e3007345af906452af11d3206cbe1`
     （484,892 bytes・13,422行）
   - K1120監査正本 `ea6f1945c5a8ff359b93336a0a5d4e29035928447503e2bf2f0d13277174b516`（5,361 bytes・19 gate）
@@ -105,3 +105,5 @@ nodes数・solved数を勝敗として読まない。
 
 失敗・timeout・入力取得失敗・api.github.com rate limitも実験事実として記録し、
 部分的な数値のみで成果としない。重要証拠は再現可能なrepo成果物として出版する。
+
+<!-- content-fix (fold23 839057fb / fold21 d323e780 precedent): corrected a one-character transcription slip in the fold17 machine sha256 (65-hex -> 64-hex, tail ...a8094c4c). Declaration time, acceptance items and jurisdiction are unchanged. Baseline measured bytes are unaffected (fold17 machine 61,371 bytes, sha256 ...(corrected value) as byte-verified during reconstruction). -->
