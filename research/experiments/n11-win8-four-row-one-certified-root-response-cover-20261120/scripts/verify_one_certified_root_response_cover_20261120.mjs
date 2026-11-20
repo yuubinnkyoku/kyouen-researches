@@ -218,7 +218,7 @@ need(plan.source_pins.k1086_sweep_sha256 === k1097.inputs.k1086_sweep_sha256, "K
 const certText = certBytes.toString("utf8");
 const certLines = certText.replace(/\r/g, "").trimEnd().split("\n");
 need(certLines[0] === HEADER, "K1096 certificate header");
-need(certLines.includes(K1096_ROOT), "K1096 certificate root row absent");
+need(certLines[1] === "root " + K1096_ROOT, "K1096 certificate root row absent");
 need(certLines.length === 34531, "K1096 certificate line count");
 need(k1096Audit.all_gates_pass === true && k1096Audit.gate_count === 18, "K1096 audit aggregate");
 need(k1096Audit.gates.length === 18 && k1096Audit.gates.every(g => g.passed === true), "K1096 audit gates");
