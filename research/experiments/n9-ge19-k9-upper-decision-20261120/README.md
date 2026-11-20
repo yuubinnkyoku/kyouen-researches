@@ -128,3 +128,26 @@ notes/strong-encoding-bugfix-tracking-20261120.md  符号化バグの特定→�
 4. ksearch 系: 宣言方法 (a) の min(S) 場合分割チャンク (n8-16 → n9-19) を resume 対応で。
 5. 両系一致でのみ判定出版 (K item + K0029 注記 + README 未尾 bullet、3 段階)。
    予算内 undecided なら本 README と results への INDET 追記のみ。
+
+
+## 進捗追記 (2026-11-20 21:50Z, part2/part3)
+
+- **part2 (commit 906b893f)**: 再開手順 4 の chunk-resume 基盤を実装・検証。
+  ksearch v3d (`scripts/ksearchp.js`, `--prefix` 汎用 chunk 化) と driver/audit
+  (`scripts/chunker.js`)、制御群 V1..V6 全 PASS
+  (`results/chunk-resume-controls-20261120.json`)、n7-15 の完全分割閉鎖
+  (35 chunk 全 UNSAT・audit complete/all_unsat、`results/n7t15-partition-records.jsonl`)。
+- **part3 (本コミット)**: **n8-16 = UNSAT (fresh 完全分割探索) を確定**。280 records・
+  275 葉すべて uncapped UNSAT・SAT レコード 0・capped 5 件 [0]/[1]/[2]/[5]/[5,7] は全て
+  子展開 (cap verdict 不採用)。audit complete=true / all_unsat=true / open_leaves=0 /
+  **nodes_total=604,101,900** (`results/n8t16-partition-records.jsonl`・
+  `results/n8-partition-closure-20261120.json`)。葉 [0,1] と chunk [8] の fresh 再実行が
+  記録と全フィールド一致、レコード打ち切り tamper を audit が fail-closed 捕捉。
+  実行実録・環境リセット 1 回 (capped 3 レコードのみ消失・確定成果の消失なし) は
+  research log part3 (2026-11-20-n9-ge19-part3-n8-16-partition-closure.md) 参照。
+  宣言受入条件 3 のうち **ksearch 系 (探索系) ラダーは n7・n8 ともに完了**
+  (下界 witness は part1・上界は part2/part3 で各々 fresh)。K_8=15 は既知値
+  (K0029 表) の lane 内 fresh 再検証であり、新数学主張ではない。
+- **判定 n9-ge19 は依然 INDET**: fastsat 系の較正ゲート (再開手順 3) は未達のまま。
+  K_9 に関する主張は一切ない。再開手順は変わらず 3 (fastsat) と、n9-19 の chunk
+  landscape 調査 (part3 統計からの規模見積り) が次段。
