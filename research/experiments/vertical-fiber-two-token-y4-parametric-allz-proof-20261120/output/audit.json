@@ -1,0 +1,149 @@
+{
+  "checks": {
+    "c11_deep_raw_census_anchor": {
+      "grid": "z=0..79, x=4..70, R<=x+z+12",
+      "merge_mismatches": 0,
+      "merge_points": 243746,
+      "mismatches": [],
+      "points": 479720,
+      "tail_mismatches": 0,
+      "tail_points": 479720
+    },
+    "c12_deep_grid_sweep": {
+      "grid": "z=0..120, x=4..120, R<=x+z+16",
+      "merge_mismatches": 0,
+      "merge_mismatches_prefix": [],
+      "merge_points": 885920,
+      "mismatches": [],
+      "points": 1953666
+    },
+    "c1_engine_vs_cand4": {
+      "grid": "z=0..14, x=4..26, R<=x+z+45",
+      "mismatches": [],
+      "points": 23460
+    },
+    "c1b_child_anchors": {
+      "single_token_mismatches": 0,
+      "single_token_points": 53010,
+      "x4_coincidence_mismatches": 0,
+      "x4_coincidence_points": 1200,
+      "y3_child_mismatches": 0,
+      "y3_child_points": 53382
+    },
+    "c1d_published_z16_z17_z18_z19": {
+      "z16_k1064": {
+        "mismatches_total_prefix": [],
+        "points": 14391
+      },
+      "z17_k1076": {
+        "mismatches_total_prefix": [],
+        "points": 14391
+      },
+      "z18_k1083": {
+        "mismatches_total_prefix": [],
+        "points": 14391
+      },
+      "z19_k1100": {
+        "mismatches_total_prefix": [],
+        "points": 14391
+      }
+    },
+    "c2_identity_grid": {
+      "grid": "z=0..48, x=4..56, R<=x+z+40",
+      "merge_mismatches": 0,
+      "merge_points": 75440,
+      "mismatches": [],
+      "points": 244118,
+      "tail_mismatches": 0,
+      "tail_points": 244118
+    },
+    "c2b_deep_tail": {
+      "merge_mismatches": 0,
+      "merge_points": 10398,
+      "mismatches": [],
+      "points": 10398,
+      "tail_mismatches": 0,
+      "tail_points": 10398,
+      "z_values": [
+        60,
+        72,
+        84,
+        96,
+        108,
+        120,
+        240,
+        400
+      ]
+    },
+    "c3_option_decomposition_anchor": {
+      "mismatches": [],
+      "points": 1470
+    },
+    "c4_type_machine_box": {
+      "box_bound": 60,
+      "clip": 12,
+      "confluence_mismatches": [],
+      "merge_mismatches": [],
+      "merge_points": 199508,
+      "realized_types": 27722,
+      "sentinel": 13,
+      "type_fields": "x==4, z==0, z%2, x%2, R%2, clipped w0..w5",
+      "valid_points": 652592,
+      "witness_identity_mismatches": []
+    },
+    "c7_seeded_far_probes": {
+      "R_max": 9000,
+      "confluence_mismatches": [],
+      "identity_mismatches": [],
+      "merge_mismatches": 0,
+      "merge_points": 96524,
+      "n": 200000,
+      "new_types": [],
+      "points": 200000,
+      "seed": 20261121,
+      "x_max": 3000,
+      "z_max": 3000
+    },
+    "c8_boundary_manifolds": {
+      "confluence_mismatches": [],
+      "identity_mismatches": [],
+      "merge_mismatches": 0,
+      "merge_points": 164664,
+      "new_types": [],
+      "points": 393713,
+      "tail_value_mismatches": []
+    },
+    "c9_shell_sweep": {
+      "bands": [
+        [
+          61,
+          64
+        ],
+        [
+          89,
+          92
+        ],
+        [
+          117,
+          120
+        ]
+      ],
+      "confluence_mismatches": [],
+      "identity_mismatches": [],
+      "merge_mismatches": 0,
+      "merge_points": 315209,
+      "new_types": [],
+      "points": 934470
+    }
+  },
+  "claim": "for all z>=0, x>=4, R>=0: H(R,(x,4),z) == cand4(z,x,R)",
+  "corollaries": {
+    "merge_below_diagonal_y4": "x<=z-5 (S=x+4<z) implies H(R,(x,4),z) == single_token(x+4,z,R)",
+    "tail": "R>=x+z+5 implies H == (x+4) % 2"
+  },
+  "family": "two-token y=4 residual, parametric in z (all z >= 0)",
+  "overall": "PASS",
+  "total_points": 4241015,
+  "verifier": "verify_y4_universal",
+  "verifier_sha256": "2d5ce3734698ea2a2ac752fb6179a6f6f73c1593b53b5a20858c6d4ae2107d85"
+}
