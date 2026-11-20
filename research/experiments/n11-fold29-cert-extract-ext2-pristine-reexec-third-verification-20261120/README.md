@@ -56,6 +56,27 @@ battery全体を2巡実行した。
   本レーン2巡のharness監査（両者byte一致・出版正本ともbyte一致 `cf6a26ab…`）
 - `published/`: 本検証で取得した出版byte 5点（SHA-256で機械照合に使用）
 
+## 追補: part gate完全性のfail-closed検査（2026-11-21）
+
+元の `assemble_third_record.py` はpartごとのgate辞書が非空で、存在するentryがすべてpassなら合格としていた。finalize後に同じgateが両batteryのpartから欠落しても、最終auditのSHA pinとpart間byte一致だけではpartの完全性を直接確認できない。
+
+補助検証器 `scripts/verify_part_gate_completeness.py` は、pin済みaudit（43 gate・15,549 bytes・SHA-256 `cf6a26ab…`）を各batteryで再確認し、5 partのgateを次の完全分割として検査する。
+
+| part | prefix | 期待数 |
+|---|---|---:|
+| pin.json | `g_pin_` | 1 |
+| k1136.json | `k1136_` | 13 |
+| k1137.json | `k1137_` | 13 |
+| k1139.json | `k1139_` | 13 |
+| tampers.json | `tamper` | 3 |
+| **合計** | | **43** |
+
+結合したgate辞書がauditの `gates` と値まで完全一致すること、part間重複がないこと、JSON objectの重複keyがないこと、2 battery間のpart bytesが一致することをfail-closedで確認する。成功時だけ `output/part-gate-completeness.json` を出力する。
+
+`tests/test_part_gate_completeness.py` に8種類の合成改変試験を追加し、`reproduce.sh` は今後のbattery実行後に試験と補助検証器を呼ぶ。判定ロジックは合成43 gate fixtureで、正常分割PASS・欠落（両battery同時）/余分/重複/値改変の拒否を確認した。
+
+**制約**: 元の2 batteryの `parts/` はGit管理されていないため、この補助検証を歴史的実行へ遡及適用したとは主張しない。元の第三検証record（20 gate・SHA-256 `a6a3e048…`）は不変。新しい検査は今後の再現実行で実partへ適用する。ゲームのverdict・receipt・S6行は変更しない。
+
 ## 限界
 
 本検証は「検証の検証の検証」であり、**行を1行も閉じない**。残余行数・pool
