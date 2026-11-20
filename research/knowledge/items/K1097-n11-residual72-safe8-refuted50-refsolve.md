@@ -1,13 +1,13 @@
 ---
 id: K1097
-title: 残余72行 safe8 第4ラウンド: REFUTED-D10 50根除外後の残余23行をgreedy9根で被覆・下界8・8根被覆ILPは最大550パターン
+title: 残余72行 safe8 第4ラウンド: REFUTED-D10 50根除外後の残余23行をgreedy9根で被覆・下界8から判定で最小被覆9が確定（8根被覆はUNSAT・数え上げ証明書つき）
 kind: computation
 status: computed
 topics: [search-methods, certificates, geometry]
 aliases:
   - round-4 re-solve of the residual 23 rows over pool P-triple-prime (120,424 roots) after excluding the 50 REFUTED-D10 roots (K1086 sixteen + K1089 thirteen + K1091 twelve + K1095 nine)
   - 9 greedy replacement roots cover the residual 23 rows with leftover 0 (gains {3:6,2:2,1:1}, strengthened lower bound 8, bipartite maximum matching 23, stranded 0)
-  - the minimum provider-cover size over P''' is 8 or 9; an 8-root feasibility model needs at most 550 unique pair/triple patterns
+  - the minimum provider-cover size over P''' is exactly 9: the eight-root cover decision is UNSAT (three rows have zero 3-row providers on P'''; counting certificate k_min=2 > k_max=3*8-23=1; exhaustive two-shape search over 100 pair patterns and 351 duplicate-row triple pairs agrees; the greedy 9-root plan is therefore provably minimal in root count on P''')
   - per-root intrinsic coverage of all 16 WIN8-D10 candidates contains their claims (K1086 seven = 23 rows, K1089 three = 9, K1091 three = 10, K1095 three = 7; the K1095 third root has exactly one extra intrinsic row, claimed by the K1096-certificated root 8003180; no residual-23 row inside win-intrinsic; scope1=scope2 identical selection)
 relations:
 - type: depends_on
@@ -56,11 +56,25 @@ artifacts:
 - path: research/log/2026-11-20-n11-residual23-cover-lower-bound-strengthening.md
   role: log
   note: 下界強化の発見順・計算・限界
+- path: research/experiments/n11-residual23-eight-root-cover-decision-20261120/README.md
+  role: document
+  note: 8根被覆判定の実験README（数え上げ証明書・2形完全探索・独立第二実装・決定性・次の一手）
+- path: research/experiments/n11-residual23-eight-root-cover-decision-20261120/scripts/eight_root_cover_decision_20261120.py
+  role: verifier
+  note: 判定機械（K1097/K1102/監査の3正本SHA pin・触れる宇宙137,959根の全数2述語safe8判定・28部分集合内在被覆100%全数・数え上げ証明書ゲート・Shape A/B完全探索・全18 gate fail-closed・stdlibのみ）
+- path: research/experiments/n11-residual23-eight-root-cover-decision-20261120/output/residual23-eight-root-cover-decision-20261120.json
+  role: data
+  note: 判定正本（SHA-256 c5aaf83e…・minimum_cover_size_over_P3 = 9・interval [8,9]→[9,9]・UNSAT（witnessなし）・全18 gate PASS・interpretation_guard 5文言同梱）
+- path: research/log/2026-11-20-n11-residual23-eight-root-cover-decision.md
+  role: log
+  note: 判定の実行記録（宣言ノート参照・発見順・独立第二実装・決定性確認・次回への引継ぎ）
 scope: >-
   REFUTED-D10 50根（K1086の16根+K1089の13根+K1091の12根+K1095の9根）を除外した
   pool P‴（120,424根）上での残余23行 greedy計画再解決と、WIN8-D10候補累計16根の
   内在被覆確認。後続監査でprovider-cover下界を8へ強化し、8根被覆ILPを最大550 patternへ
-  縮約した。新規probe・掃引・証明書抽出・receipt fold・行の閉鎖は含まない。
+  縮約した。判定実験で8根被覆を厳密に判定してUNSATとし、P‴上の最小被覆9を
+  確定した（数え上げ証明書+2形完全探索）。新規probe・掃引・証明書抽出・
+  receipt fold・行の閉鎖は含まない。
 evidence: >-
   （1）プールと需要: safe8 120,474根から50 REFUTED根を除外した pool P‴
   （120,424根）上で残余23行（K1095 REFUTED-9根の主張被覆行・canonical化・
@@ -93,6 +107,26 @@ evidence: >-
   （重複なし）に限られる。2行patternは最大253種、3行providerは297根以下なので、
   被覆pattern変数は最大550。scope2もWIN16の残余23行intrinsic hitが0のため同じ。
   詳細は[下界強化監査](../../experiments/n11-residual23-cover-lower-bound-strengthening-20261120/README.md)・[研究ログ](../../log/2026-11-20-n11-residual23-cover-lower-bound-strengthening.md)を参照する。
+  （7）8根被覆判定: 判定機が入力3正本（K1097=`2896deb0…`、K1102=`d0b5d845…`、
+  監査=`1310ef74…`・pin連鎖検査つき）から23行×C(115,2)=150,765生成事象で触れる
+  宇宙137,959根をD4正準形で再導入し、safe8/unsafe8をK1097交替和形式とK1102アンカー
+  並進3×3形式の2独立述語で全数判定（不一致0）・C(8,6)=28部分集合の内在被覆==
+  生成witnessを100%全数で確認・providers 45,219根・hist・per-row demand・
+  drop 4・greedy9根完全再現・K1102 matching witness 23根を再被覆検証
+  （全18 gate fail-closed PASS）。判定は**UNSAT・最小被覆9**。
+  **数え上げ証明書**: 3行（`00000000000000003800000008002010`・
+  `0000000000000000380000000a080000`・`00000000020000801202000000100000`）は
+  P‴上に3行providerを1本も持たず、これらに触れる根は2行以下しか被覆できない。
+  8根のうちk根がこの3行を被覆するとk≥2が必要な一方、被覆枠の算術は
+  k ≤ 3·8−23 = 1 を要求して矛盾（手計算検証可能）。
+  **2形の完全探索も同一結論**: Shape B（7 triple+1 pair・pair pattern重複除き100種）・
+  Shape A（8 triple・重複1行・全dで351組の対）をメモ化exact coverで完全探索して
+  不成立、独立第二実装（新規幾何・メモなし・分岐順不同）も同一列挙空間でUNSAT。
+  有界8の下界は任意の宇宙で有効なまま、9はP‴に特有の確定である。
+  interval [8,9]は[9,9]へ崩壊し、**greedy 9根代替掃引計画（18 probes）はP‴上で
+  候補根数最小**。3回実行byte-identical（機械SHA-256 da51063c…・正本
+  SHA-256 c5aaf83e…・約41秒/run）。
+  詳細は[判定実験](../../experiments/n11-residual23-eight-root-cover-decision-20261120/README.md)・[判定正本](../../experiments/n11-residual23-eight-root-cover-decision-20261120/output/residual23-eight-root-cover-decision-20261120.json)・[研究ログ](../../log/2026-11-20-n11-residual23-eight-root-cover-decision.md)を参照する。
 
 ---
 
@@ -104,11 +138,15 @@ evidence: >-
 leftover 0完全被覆**（下界6に対し+3）・マッチング23。WIN16のper-root内在被覆は
 主張を包含し、K1095 3根目に初の余剰1行（K1096証明書根の主張行）を記録、
 残余23行へのintrinsic被覆は0行。全体計画は16 WIN+9代替=25根で72行。
-次の一手は代替9根のdepth-10掃引（18 probes）・残るWIN候補の証明書抽出
-（root 8003180はK1096で出版済み・別1根は宣言済み: commit 4496c888）・
+後続監査で下界を8に強化し、さらに判定実験の単一オーナー宣言（commit cb31752551）の下で
+8根被覆を厳密に判定して**UNSAT・最小被覆9を確定**した（3行の3行provider零による
+数え上げ証明書+2形完全探索+独立第二実装の三重確認）。
+次の一手は代替9根のdepth-10掃引（18 probes・P‴上で計画は最小確定済み）・
+残るWIN候補の証明書抽出（root 8003180はK1096で出版済み・別1根は宣言済み: commit 4496c888）・
 K1096証明書のreceipt fold。行は1行も閉じていない。
 詳細は[実験](../../experiments/n11-residual72-safe8-refuted50-refsolve-20261120/README.md)・
 [再解決正本](../../experiments/n11-residual72-safe8-refuted50-refsolve-20261120/output/safe8-refuted50-refsolve-20261120.json)・
+[判定実験](../../experiments/n11-residual23-eight-root-cover-decision-20261120/README.md)・
 [研究ログ](../../log/2026-11-20-n11-residual72-safe8-refuted50-refsolve.md)。
 
 **標準11×11空盤・二石root {49,60}/{59,60}・S2 {59,60}・class 1/2/4はすべてUNKNOWNのまま。**
