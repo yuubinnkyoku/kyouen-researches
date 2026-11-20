@@ -55,6 +55,9 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/ALGEBRAIC_ROUTE.md
   role: source
   note: 放物面上のcap・反転平面3-arcへの再定式化
+- path: research/experiments/finite-field-kyouen-20261120/LITERATURE_AXIOMS.md
+  role: source
+  note: 反転平面の公理I.1-I.3の確認
 - path: research/experiments/finite-field-kyouen-20261120/TWO_ARC_RESOLUTION.md
   role: proof
   note: 2-arcの最大が2であることの証明と不整合の解決
@@ -514,8 +517,10 @@ Sonnino は奇数の q に対して (q+5)-arc を構成しているが、これ�
 したがって Sonnino の arc は別の定義か、Ad(q) が標準的でない反転平面であり、
 我々の K（3-arc の最大）とは直接比較できない。
 
-なお反転平面の公理 (A1)「任意の三点が一意に円を定める」は文献で確認でき、
-我々の恒真性の主張と整合する。
+なお反転平面の公理 (I.1)「任意の三点が一意に円を定める」、(I.2)「二円は一点で接する円が一意」、
+(I.3)「同一円上にない4点が存在する」を文献で確認した。
+我々が使った性質（三点の一意被覆、二円の高々2点交差）はすべて公理から従い、
+恒真性の主張と整合する。
 
 AG(2,11) ではサイズ10,11,12 がいずれも不存在であることを完全探索で確認し、**K=9 が確定**した。
 
