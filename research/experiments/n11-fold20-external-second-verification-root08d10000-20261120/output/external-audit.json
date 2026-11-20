@@ -1,0 +1,3408 @@
+{
+ "all_gates_pass": true,
+ "date": "2026-11-20",
+ "gate_count": 1317,
+ "gates": [
+  {
+   "gate": "published fold20 receipt sha256 pin",
+   "ok": true,
+   "section": "p"
+  },
+  {
+   "gate": "published fold20 machine sha256 pin",
+   "ok": true,
+   "section": "p"
+  },
+  {
+   "gate": "published fold20 builder sha256 pin",
+   "ok": true,
+   "section": "p"
+  },
+  {
+   "gate": "published fold20 README sha256 pin",
+   "ok": true,
+   "section": "p"
+  },
+  {
+   "gate": "machine pin tables 12 blob + 37 sha256",
+   "ok": true,
+   "section": "p"
+  },
+  {
+   "gate": "receipt blob-pin table == machine table",
+   "ok": true,
+   "section": "p"
+  },
+  {
+   "gate": "receipt sha256-pin table == machine table",
+   "ok": true,
+   "section": "p"
+  },
+  {
+   "gate": "receipt schema",
+   "ok": true,
+   "section": "p"
+  },
+  {
+   "gate": "receipt fold-complete",
+   "ok": true,
+   "section": "p"
+  },
+  {
+   "gate": "single receipt",
+   "ok": true,
+   "section": "p"
+  },
+  {
+   "gate": "receipt ordinal",
+   "ok": true,
+   "section": "p"
+  },
+  {
+   "gate": "receipt date",
+   "ok": true,
+   "section": "p"
+  },
+  {
+   "gate": "receipt single-owner note ref",
+   "ok": true,
+   "section": "p"
+  },
+  {
+   "gate": "W blob pin ex48/output/secondThirdFold.json",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "W blob pin fold4rec/fold4.json",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "W blob pin fold56rec/fold56.json",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "W blob pin fold9/output/ninth-twelfth-win7-receipt-fold-20261119.json",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "W blob pin fold_fourth_fifth_sixth.py",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "W blob pin inputs/audit.json",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "W blob pin inputs/census.json",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "W blob pin inputs/firstFoldTarball.tar.gz",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "W blob pin inputs/globalFold.json",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "W blob pin inputs/ledger.json",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "W blob pin inputs/previousCostFold.json",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "W blob pin inputs/worklist.csv",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "W sha256 pin fold10/output/seventeenth-win7-receipt-fold-20261120.json",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "W sha256 pin fold11/output/win8-root8003180-receipt-fold-20261120.json",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "W sha256 pin fold12/output/win8-root8005021-receipt-fold-20261120.json",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "W sha256 pin fold13/output/win8-root9840004-receipt-fold-20261120.json",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "W sha256 pin fold14/output/win8-root9090022-receipt-fold-20261120.json",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "W sha256 pin fold15/output/win8-root120000038-receipt-fold-20261120.json",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "W sha256 pin fold16/output/win8-root8890020-receipt-fold-20261120.json",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "W sha256 pin fold17/output/win8-root22081000-receipt-fold-20261120.json",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "W sha256 pin fold18/output/win8-root00901010-receipt-fold-20261120.json",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "W sha256 pin fold19/output/win8-root1009000-receipt-fold-20261120.json",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "W sha256 pin foldv2/output/eighth-win7-receipt-fold-20261119.json",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "W sha256 pin foldv2/output/seventh-win7-receipt-fold-20261119.json",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "W sha256 pin fs13/output/windfall4-thirteenth-sixteenth-win7-receipt-fold-20261120.json",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "W sha256 pin k1096/certs/win8-root-00000000000000003800000008003180-20261120.n11",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "W sha256 pin k1096/output/win8-cert-extract-verification-20261120.json",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "W sha256 pin k1097/output/safe8-refuted50-refsolve-20261120.json",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "W sha256 pin k1106/certs/win8-root-00000000000000003800000008005021-20261120.n11",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "W sha256 pin k1106/output/win8-cert-extract-verification-20261120.json",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "W sha256 pin k1108/certs/win8-root-00000000000000003800000009840004-20261120.n11",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "W sha256 pin k1108/output/win8-cert-extract-verification-20261120.json",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "W sha256 pin k1109/certs/win8-root-00000000000000909002200080100000-20261120.n11",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "W sha256 pin k1109/output/win8-cert-extract-verification-20261120.json",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "W sha256 pin k1113/certs/win8-root-00000000010000889002000080100000-20261120.n11",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "W sha256 pin k1113/output/win8-cert-extract-verification-20261120.json",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "W sha256 pin k1114/certs/win8-root-00000000012000003800080009000000-20261120.n11",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "W sha256 pin k1114/output/win8-cert-extract-verification-20261120.json",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "W sha256 pin k1117/certs/win8-root-00000000000000801202000022081000-20261120.n11",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "W sha256 pin k1117/output/win8-cert-extract-verification-20261120.json",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "W sha256 pin k1119/certs/win8-root-00000000000000801212000001009000-20261120.n11",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "W sha256 pin k1119/output/win8-cert-extract-verification-20261120.json",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "W sha256 pin k1120/certs/win8-root-00000000000000801202000000901010-20261120.n11",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "W sha256 pin k1120/output/win8-cert-extract-verification-20261120.json",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "W sha256 pin k1121/certs/win8-root-00000000000000003800000008d10000-20261120.n11",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "W sha256 pin k1121/output/win8-cert-extract-verification-20261120.json",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "W sha256 pin resolve6/output/post-saturation-full-cache-join-resolve6-20261120.json",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "W sha256 pin sv17pub/certs/win7-root-00004000000000821082000000000100-20261120.n11",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "W sha256 pin sv17pub/output/seventeenth-cert-triple-verification-20261120.json",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "fold19 machine sha256 pin in W",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "fold19 machine pin tables 12 blob + 34 sha256",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "fold19 blob pins subset of fold20 pins",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "fold19 sha256 pins subset of fold20 pins",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "fold19 sha256 pins agree with fold20 table values",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "fold19 record pin == declared sha",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "K1121 audit pin == declared sha",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "K1121 certificate pin == declared sha",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "fold18 machine sha256 pin in W (pinned in fold19 source)",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "fold18 preverified copy sha256 pin in W (pinned in fold19 source)",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "fold20 machine in W byte-identical to published machine",
+   "ok": true,
+   "section": "i"
+  },
+  {
+   "gate": "worklist row count 6438",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "worklist row hex width 32",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "global-fold base 6259/495507",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "cost78c/79c fold 6240/493965",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "first fold record gate",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "first fold 6236/493703",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "second-third record gate",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "second-third 6229/493184",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold4 record gate",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fourth fold 6226/492970",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold56 record gate",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fifth-sixth fold 6224/492830",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold7 record gate",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "seventh fold 6223/492762",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold8 record gate",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "eighth fold 6222/492688",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold9 record gate",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold9 receipt closes nothing",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold9 receipt closes nothing",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold9 receipt closes nothing",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold9 receipt closes nothing",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 row not walk: 00000000000000801202000001000200",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 row not walk: 00000000000000801202000001040000",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 row not walk: 00000000000000801082080400000000",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 row not walk: 00000000000000821082000200000000",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 row not walk: 00000000000000821082000400000000",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 row not walk: 00000000000000821082200000000000",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 row not walk: 00000000000000821082400000000000",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 row not walk: 00000000000000801202010001000000",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 row not walk: 00000000000020003800000048000000",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "post-fold9 6213/492021",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold9 frontier_after published values solved 1635",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold9 base incidence 11826",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fs13 record gate",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fs13 receipt closes nothing",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fs13 receipt closes nothing",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fs13 receipt closes nothing",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fs13 receipt closes nothing",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fs13 rows unique",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fs13 row not open: 00000000000000801202010000001000",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fs13 row not open: 00000000000000801202080000001000",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fs13 row not open: 00000000000000003800000008001200",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fs13 row not open: 00000000010000003800000008100000",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "post-fs13 6209/491722",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fs13 frontier_after full recompute match",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "residual74 sorted unique",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fs13 closed target 38",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "independent audit json header",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "five-parent target rows 112",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "residual74 subset of target union",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 fold-complete",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 schema",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 single receipt",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 covered rows unique 3",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 covered row was open: 00000000000000821082000000000001",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 covered row in worklist: 00000000000000821082000000000001",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 covered row was open: 00000000000000821082000000000004",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 covered row in worklist: 00000000000000821082000000000004",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 covered row was open: 00004000000000003800000100000020",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 covered row in worklist: 00004000000000003800000100000020",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 recorded cost matches worklist",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 coverage row among covered",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 recorded cost matches worklist",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 coverage row among covered",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 recorded cost matches worklist",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 coverage row among covered",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 coverage rows count",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 closed edge cost recomputed",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 frontier_after full recompute match",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 frontier (6206, 491497)",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 solved increment matches covered rows",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 target rows subset of residual; 2",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 extra rows recorded",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual recompute == residual minus target rows",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual count decrement",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual unique",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 closed target total 40",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold10 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 fold-complete",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 schema",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 single receipt",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 covered rows unique 5",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 covered row was open: 0000000000000000380000000800000c",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 covered row in worklist: 0000000000000000380000000800000c",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 covered row was open: 00000000000000003800000008001080",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 covered row in worklist: 00000000000000003800000008001080",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 covered row was open: 00000000000000003800000008001100",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 covered row in worklist: 00000000000000003800000008001100",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 covered row was open: 00000000000000003800000008002080",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 covered row in worklist: 00000000000000003800000008002080",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 covered row was open: 00000000000000003800000008002100",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 covered row in worklist: 00000000000000003800000008002100",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 recorded cost matches worklist",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 coverage row among covered",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 recorded cost matches worklist",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 coverage row among covered",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 recorded cost matches worklist",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 coverage row among covered",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 recorded cost matches worklist",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 coverage row among covered",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 recorded cost matches worklist",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 coverage row among covered",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 coverage rows count",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 closed edge cost recomputed",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 frontier_after full recompute match",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 frontier (6201, 491110)",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 solved increment matches covered rows",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 target rows subset of residual; 4",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 extra rows recorded",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual recompute == residual minus target rows",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual count decrement",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual unique",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 closed target total 44",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold11 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 fold-complete",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 schema",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 single receipt",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 covered rows unique 8",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 covered row was open: 00000000000000003800000000004021",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 covered row in worklist: 00000000000000003800000000004021",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 covered row was open: 00000000000000003800000000005020",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 covered row in worklist: 00000000000000003800000000005020",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 covered row was open: 00000000000000003800000008000021",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 covered row in worklist: 00000000000000003800000008000021",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 covered row was open: 00000000000000003800000008001001",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 covered row in worklist: 00000000000000003800000008001001",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 covered row was open: 00000000000000003800000008001020",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 covered row in worklist: 00000000000000003800000008001020",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 covered row was open: 00000000000000003800000008004001",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 covered row in worklist: 00000000000000003800000008004001",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 covered row was open: 00000000000000003800000008004020",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 covered row in worklist: 00000000000000003800000008004020",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 covered row was open: 00000000000000003800000008005000",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 covered row in worklist: 00000000000000003800000008005000",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 recorded cost matches worklist",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 coverage row among covered",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 recorded cost matches worklist",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 coverage row among covered",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 recorded cost matches worklist",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 coverage row among covered",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 recorded cost matches worklist",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 coverage row among covered",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 recorded cost matches worklist",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 coverage row among covered",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 recorded cost matches worklist",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 coverage row among covered",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 recorded cost matches worklist",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 coverage row among covered",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 recorded cost matches worklist",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 coverage row among covered",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 coverage rows count",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 closed edge cost recomputed",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 frontier_after full recompute match",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 frontier (6193, 490526)",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 solved increment matches covered rows",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 target rows subset of residual; 3",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 extra rows recorded",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual recompute == residual minus target rows",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual count decrement",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual unique",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 closed target total 47",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold12 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 fold-complete",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 schema",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 single receipt",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 covered rows unique 9",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 covered row was open: 00000000000000003800000000840004",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 covered row in worklist: 00000000000000003800000000840004",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 covered row was open: 00000000000000003800000001800004",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 covered row in worklist: 00000000000000003800000001800004",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 covered row was open: 00000000000000003800000001840000",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 covered row in worklist: 00000000000000003800000001840000",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 covered row was open: 00000000000000003800000008004100",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 covered row in worklist: 00000000000000003800000008004100",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 covered row was open: 00000000000000003800000008800004",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 covered row in worklist: 00000000000000003800000008800004",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 covered row was open: 00000000000000003800000008840000",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 covered row in worklist: 00000000000000003800000008840000",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 covered row was open: 00000000000000003800000009000004",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 covered row in worklist: 00000000000000003800000009000004",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 covered row was open: 00000000000000003800000009040000",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 covered row in worklist: 00000000000000003800000009040000",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 covered row was open: 00000000000000003800000009800000",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 covered row in worklist: 00000000000000003800000009800000",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 recorded cost matches worklist",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 coverage row among covered",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 recorded cost matches worklist",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 coverage row among covered",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 recorded cost matches worklist",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 coverage row among covered",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 recorded cost matches worklist",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 coverage row among covered",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 recorded cost matches worklist",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 coverage row among covered",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 recorded cost matches worklist",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 coverage row among covered",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 recorded cost matches worklist",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 coverage row among covered",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 recorded cost matches worklist",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 coverage row among covered",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 recorded cost matches worklist",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 coverage row among covered",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 coverage rows count",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 closed edge cost recomputed",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 frontier_after full recompute match",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 frontier (6184, 489813)",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 solved increment matches covered rows",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 target rows subset of residual; 3",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 extra rows recorded",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual recompute == residual minus target rows",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual count decrement",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual unique",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 closed target total 50",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold13 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 fold-complete",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 schema",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 single receipt",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 covered rows unique 5",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 covered row was open: 00000000000000801222000000001000",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 covered row in worklist: 00000000000000801222000000001000",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 covered row was open: 00000000000000801222000000800000",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 covered row in worklist: 00000000000000801222000000800000",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 covered row was open: 00000000000000889002400000000000",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 covered row in worklist: 00000000000000889002400000000000",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 covered row was open: 00000000000000909002000000100000",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 covered row in worklist: 00000000000000909002000000100000",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 covered row was open: 00000000000000909002000080000000",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 covered row in worklist: 00000000000000909002000080000000",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 recorded cost matches worklist",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 coverage row among covered",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 recorded cost matches worklist",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 coverage row among covered",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 recorded cost matches worklist",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 coverage row among covered",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 recorded cost matches worklist",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 coverage row among covered",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 recorded cost matches worklist",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 coverage row among covered",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 coverage rows count",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 closed edge cost recomputed",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 frontier_after full recompute match",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 frontier (6179, 489440)",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 solved increment matches covered rows",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 target rows subset of residual; 4",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 extra rows recorded",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual recompute == residual minus target rows",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual count decrement",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual unique",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 closed target total 54",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold14 residual row still open",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold15 fold-complete",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold15 schema",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold15 single receipt",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold15 covered rows unique 6",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold15 covered row was open: 00000000000000003800000248000000",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold15 covered row in worklist: 00000000000000003800000248000000",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold15 covered row was open: 00000000000000801202000001000100",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold15 covered row in worklist: 00000000000000801202000001000100",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold15 covered row was open: 00000000000000801202000020000008",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold15 covered row in worklist: 00000000000000801202000020000008",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold15 covered row was open: 00000000000080003800000048000000",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold15 covered row in worklist: 00000000000080003800000048000000",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold15 covered row was open: 00000000010000003800080008000000",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold15 covered row in worklist: 00000000010000003800080008000000",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold15 covered row was open: 00000000012000003800000008000000",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold15 covered row in worklist: 00000000012000003800000008000000",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold15 recorded cost matches worklist",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold15 coverage row among covered",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold15 recorded cost matches worklist",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold15 coverage row among covered",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold15 recorded cost matches worklist",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold15 coverage row among covered",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold15 recorded cost matches worklist",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold15 coverage row among covered",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold15 recorded cost matches worklist",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold15 coverage row among covered",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold15 recorded cost matches worklist",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold15 coverage row among covered",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold15 coverage rows count",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold15 closed edge cost recomputed",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold15 frontier_after full recompute match",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold15 frontier (6173, 488954)",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold15 solved increment matches covered rows",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold15 target rows subset of residual; 3",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold15 extra rows recorded",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold15 residual recompute == residual minus target rows",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold15 residual count decrement",
+   "ok": true,
+   "section": "c"
+  },
+  {
+   "gate": "fold15 residual unique",
+   "ok": true,
