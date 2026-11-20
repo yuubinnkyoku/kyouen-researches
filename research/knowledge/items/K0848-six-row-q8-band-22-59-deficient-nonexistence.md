@@ -132,3 +132,16 @@ the spirit of K0342. The 11x11 empty board, two-stone root {49,60}, S2
 ## 備考
 
 K番号は作業時点での仮番号（AGENTS.md の再採番規則による）。
+
+
+## 2026-11-20 追記（band-closure再開・m=60..108 完了）
+
+- 単一オーナー宣言（commit `7bc633a6`・先行出版log）の下で IN FLIGHT 実験
+  `six-row-q8-band-closure-22-370-20261114` の後継掃引が本項のフロンティア m=60 を解消した:
+  def-mode で **m=60..108 の49幅すべて UNSAT**（+ m=106 `--lex=H` 交差符号化 UNSAT）。
+- witness-free 幅集合は **{19,...,108}** に拡大され、鋭い形は **M_{6,8} = 19 or M_{6,8} >= 110**。
+  上界 371（K0318/K0806）と `sat2.js` band frontier m=59 の記述は歴史的にそのまま・
+  m >= 60 の掃引実績は K1134 と band3 records に移った。
+- 正本: [K1134](K1134-six-row-q8-band-60-108-deficient-nonexistence.md)・
+  [band3 records](../../experiments/six-row-q8-band-closure-22-370-20261114/output/band3/records.jsonl)・
+  [再開log](../../log/2026-11-20-six-row-q8-band-closure-resume.md)。残帯 m=109..370 は IN FLIGHT。
