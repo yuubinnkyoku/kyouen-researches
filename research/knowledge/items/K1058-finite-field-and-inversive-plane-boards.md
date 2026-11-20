@@ -52,6 +52,9 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/scripts/ag2_fast_target.py
   role: solver
   note: AG(2,q)の対称性利用高速完全探索
+- path: research/experiments/finite-field-kyouen-20261120/FOUR_FAILED_ROUTES.md
+  role: source
+  note: q=3 mod 4の上界改善4手法の失敗記録
 - path: research/experiments/finite-field-kyouen-20261120/BOUNDS_SUMMARY.md
   role: source
   note: 全上界の総括とgapの比較
@@ -467,7 +470,15 @@ q=3 で k≈6、q=5 で k=9、q=7 で k≈25 であり、真値（q=5,7 で K=6�
 **上界の総括**：`q ≡ 1 (mod 4)` では十字上界 `q+2` により gap が 1〜2 に収まる
 （q=5:1, q=9:2, q=13:≤2, q=17:≤2）。
 一方 `q ≡ 3 (mod 4)` では λ₂ 上界 `q+3` のみで gap が 4〜9 に広がる（q=7:4, q=11:5, q=19:≤9）。
-**`q ≡ 3 (mod 4)` の上界改善が最大の課題**であり、次数・複数ペンシル・被覆のいずれの手法も失敗している。
+**`q ≡ 3 (mod 4)` の上界改善が最大の課題**である。試した4手法はいずれも失敗した：
+
+1. 次数 `(k−1)(q+2−k/2) ≤ q²+q` は制約なし
+2. 複数ペンシルは `λ₂+2` のまま
+3. 被覆は q=3 のみ有効
+4. 使用済み円のペア `C(k,2)C(k−2,2) ≤ 2C(C(k,3),2)` は常に成立し制約なし
+
+初等的な数え上げはすべて係数 ≥1 を与え、観測された `K/q ≈ 0.68〜0.86` を下回れない。
+係数1未満には代数幾何・設計論・加法的組合せ論など別の原理が必要と考えられる（未着手）。
 
 AG(2,11) ではサイズ10,11,12 がいずれも不存在であることを完全探索で確認し、**K=9 が確定**した。
 
