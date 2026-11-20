@@ -55,6 +55,12 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/ALGEBRAIC_ROUTE.md
   role: source
   note: 放物面上のcap・反転平面3-arcへの再定式化
+- path: research/experiments/finite-field-kyouen-20261120/WINNER_PREDICTION_FAILED.md
+  role: source
+  note: 非一様盤の勝者予測の失敗
+- path: research/experiments/finite-field-kyouen-20261120/scripts/winner_prediction.py
+  role: verifier
+  note: 予測子の検証
 - path: research/experiments/finite-field-kyouen-20261120/PARITY_APPLICATION.md
   role: source
   note: Kの偶奇による勝者決定の系
