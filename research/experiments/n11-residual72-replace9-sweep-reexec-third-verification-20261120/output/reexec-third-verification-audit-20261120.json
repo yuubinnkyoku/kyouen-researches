@@ -1,0 +1,184 @@
+{
+  "assemble": {
+    "byte_identical_to_published_audit": true,
+    "environment": "this tree, fresh passA + fresh passB (isolated) + pristine volume inputs",
+    "output_sha256": "27fc420c58ac0c979e09c3a35b0b0b886fe1b521efea9de8f9f98e51e6264072",
+    "returncode": 0
+  },
+  "assemble_hashseed_random": {
+    "byte_identical_to_published_audit": true,
+    "environment": "same inputs, PYTHONHASHSEED=random",
+    "output_sha256": "27fc420c58ac0c979e09c3a35b0b0b886fe1b521efea9de8f9f98e51e6264072",
+    "returncode": 0
+  },
+  "declaration_note": "research/log/2026-11-20-n11-residual72-replace9-sweep-reexec-third-verification-single-owner-note.md",
+  "gates": {
+    "assemble_gate": true,
+    "assemble_hashseed_random_gate": true,
+    "pass_A_gate": true,
+    "pass_B_gate": true,
+    "pin_gate": true,
+    "pristine_reassemble_gate": true,
+    "tamper_gate": true
+  },
+  "harness": "verify_k1149_reexec_third_20261120",
+  "interpretation_guard": [
+    "本検証は残余23行のどの行も閉じない",
+    "loss=true（uncapped）はdepth-10内必敗のprobe事実の再現であり証明書抽出の資格を与えない",
+    "loss=false（uncapped）はREFUTED-D10 probe事実の再現でありLOSS証明ではない",
+    "node数・solved数を勝敗として読まない",
+    "標準11×11空盤・二石root {49,60}/{59,60}・S2 {59,60}・class 1/2/4 はすべて UNKNOWN のまま"
+  ],
+  "pass_A": {
+    "environment": "this tree (ambient, PYTHONHASHSEED unset), 4 workers, fresh regeneration",
+    "loss_false_probes": 16,
+    "loss_true_probes": 2,
+    "matches_published": true,
+    "nodes_sum": 3574172,
+    "records": 18,
+    "records_written": true,
+    "returncode": 0
+  },
+  "pass_B": {
+    "environment": "isolated tree/cwd/HOME (PYTHONHASHSEED unset), copied inputs, 4 workers, fresh regeneration",
+    "loss_false_probes": 16,
+    "loss_true_probes": 2,
+    "matches_published": true,
+    "nodes_sum": 3574172,
+    "records": 18,
+    "records_written": true,
+    "returncode": 0
+  },
+  "pin_gates": [
+    {
+      "actual": "77cdd9e3450aed9d2c900475f15d9e09367985b909027c50e485995737252db4",
+      "expected": "77cdd9e3450aed9d2c900475f15d9e09367985b909027c50e485995737252db4",
+      "label": "machine_verify_replace9_reexec_20261120.py",
+      "pass": true,
+      "pin_kind": "sha256"
+    },
+    {
+      "actual": "c132cc6425eee3feaeef1d697dd74f968cfedb59",
+      "expected": "c132cc6425eee3feaeef1d697dd74f968cfedb59",
+      "label": "runner_v17.ts",
+      "pass": true,
+      "pin_kind": "git_blob_sha1"
+    },
+    {
+      "actual": "d163b2a120ac46abee40d0b9a32269bce14a73901a85a80e5925b7d2512bcd41",
+      "expected": "d163b2a120ac46abee40d0b9a32269bce14a73901a85a80e5925b7d2512bcd41",
+      "label": "sweep_machine_replace9_d10_sweep_20261120.py",
+      "pass": true,
+      "pin_kind": "sha256"
+    },
+    {
+      "actual": "c132cc6425eee3feaeef1d697dd74f968cfedb59",
+      "expected": "c132cc6425eee3feaeef1d697dd74f968cfedb59",
+      "label": "sweep_runner_v17.ts",
+      "pass": true,
+      "pin_kind": "git_blob_sha1"
+    },
+    {
+      "actual": "27fc420c58ac0c979e09c3a35b0b0b886fe1b521efea9de8f9f98e51e6264072",
+      "expected": "27fc420c58ac0c979e09c3a35b0b0b886fe1b521efea9de8f9f98e51e6264072",
+      "label": "published_audit_replace9-sweep-reexec-second-verification-20261120.json",
+      "pass": true,
+      "pin_kind": "sha256"
+    },
+    {
+      "actual": "e8f5d6749032c4ad95136d2915c03ce7e997fe494bf3eebf7f912cccc88ded1e",
+      "expected": "e8f5d6749032c4ad95136d2915c03ce7e997fe494bf3eebf7f912cccc88ded1e",
+      "label": "sweep_volume_published",
+      "pass": true,
+      "pin_kind": "sha256"
+    },
+    {
+      "actual": "bdacf0e7056093145bef917ad384220b70c06be68bdd892b56dd23b3a7d4cb06",
+      "expected": "bdacf0e7056093145bef917ad384220b70c06be68bdd892b56dd23b3a7d4cb06",
+      "label": "sweep_records_published",
+      "pass": true,
+      "pin_kind": "sha256"
+    },
+    {
+      "actual": "5fdd342d624abec9b8478b69b13fc63a2dbbec99d227da4740cfe068647e688e",
+      "expected": "5fdd342d624abec9b8478b69b13fc63a2dbbec99d227da4740cfe068647e688e",
+      "label": "input_k1085.json",
+      "pass": true,
+      "pin_kind": "sha256"
+    },
+    {
+      "actual": "3045e15295af9b85b86578b5e8d55a8b325466eac576ee15b8450f6acb9b9ced",
+      "expected": "3045e15295af9b85b86578b5e8d55a8b325466eac576ee15b8450f6acb9b9ced",
+      "label": "input_k1086.json",
+      "pass": true,
+      "pin_kind": "sha256"
+    },
+    {
+      "actual": "808fbda1152cb492bb76641a101660f965f2801c0b74790d20a0d998d5b747fc",
+      "expected": "808fbda1152cb492bb76641a101660f965f2801c0b74790d20a0d998d5b747fc",
+      "label": "input_k1089.json",
+      "pass": true,
+      "pin_kind": "sha256"
+    },
+    {
+      "actual": "edd7ac84f47268adcc8a3364a5ff687499cb2a76ded0c0fa379506af02f40b25",
+      "expected": "edd7ac84f47268adcc8a3364a5ff687499cb2a76ded0c0fa379506af02f40b25",
+      "label": "input_k1091.json",
+      "pass": true,
+      "pin_kind": "sha256"
+    },
+    {
+      "actual": "335eca5ecb7c72e6fb0ee41eb740de736bf4eb78791823ae55f6375a68cb4707",
+      "expected": "335eca5ecb7c72e6fb0ee41eb740de736bf4eb78791823ae55f6375a68cb4707",
+      "label": "input_k1095.json",
+      "pass": true,
+      "pin_kind": "sha256"
+    },
+    {
+      "actual": "2896deb0c5e820904d0e2463e3fd9ebd1613b540a66a97f88d86c75bffa71f40",
+      "expected": "2896deb0c5e820904d0e2463e3fd9ebd1613b540a66a97f88d86c75bffa71f40",
+      "label": "input_k1097.json",
+      "pass": true,
+      "pin_kind": "sha256"
+    }
+  ],
+  "pinned_fetch_commit": "87f569328b4f2cc416c0b9b54f0eed0999c1192a",
+  "pristine_reassemble": {
+    "byte_identical_to_published_volume": true,
+    "environment": "isolated tree, published sweep machine, published probe records",
+    "output_sha256": "e8f5d6749032c4ad95136d2915c03ce7e997fe494bf3eebf7f912cccc88ded1e",
+    "returncode": 0
+  },
+  "publication": {
+    "input_pins": {
+      "k1085": "5fdd342d624abec9b8478b69b13fc63a2dbbec99d227da4740cfe068647e688e",
+      "k1086": "3045e15295af9b85b86578b5e8d55a8b325466eac576ee15b8450f6acb9b9ced",
+      "k1089": "808fbda1152cb492bb76641a101660f965f2801c0b74790d20a0d998d5b747fc",
+      "k1091": "edd7ac84f47268adcc8a3364a5ff687499cb2a76ded0c0fa379506af02f40b25",
+      "k1095": "335eca5ecb7c72e6fb0ee41eb740de736bf4eb78791823ae55f6375a68cb4707",
+      "k1097": "2896deb0c5e820904d0e2463e3fd9ebd1613b540a66a97f88d86c75bffa71f40"
+    },
+    "machine_sha256": "77cdd9e3450aed9d2c900475f15d9e09367985b909027c50e485995737252db4",
+    "published_audit_sha256": "27fc420c58ac0c979e09c3a35b0b0b886fe1b521efea9de8f9f98e51e6264072",
+    "runner_git_blob": "c132cc6425eee3feaeef1d697dd74f968cfedb59",
+    "sweep_machine_sha256": "d163b2a120ac46abee40d0b9a32269bce14a73901a85a80e5925b7d2512bcd41",
+    "sweep_records_sha256": "bdacf0e7056093145bef917ad384220b70c06be68bdd892b56dd23b3a7d4cb06",
+    "sweep_volume_sha256": "e8f5d6749032c4ad95136d2915c03ce7e997fe494bf3eebf7f912cccc88ded1e",
+    "targets": {
+      "nodes_total": 3574172,
+      "probes": 18
+    }
+  },
+  "source_experiment_dir": "research/experiments/n11-residual72-replace9-sweep-reexec-second-verification-20261120",
+  "source_sweep_dir": "research/experiments/n11-residual72-replace9-d10-sweep-20261120",
+  "status": "k1149-reexec-third-verification-passed",
+  "subject": "K1149 replace9 sweep re-execution second verification",
+  "tamper_test": {
+    "failed_closed": true,
+    "mutated_input_sha256": "7cc71c5f80d99fdd01593f66d73630f69ffa91dcc8a12335a472767f81449c71",
+    "mutation": "1 byte flipped at offset 500 (XOR 0x01) of input/k1097.json in a copied tree (run mode)",
+    "no_probe_records_written": true,
+    "pin_caught_mutation": true,
+    "returncode": 1
+  }
+}
