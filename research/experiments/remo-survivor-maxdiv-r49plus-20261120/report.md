@@ -212,7 +212,7 @@ byte-identical `output/audit.json`
 (SHA-256 d916f0a2fd8455d02de86e25b34e51a921a03dacc2db159207c00fc161c1110d,
 51,077 bytes) and byte-identical
 `output/maxdiv_witness_table.txt` (SHA-256
-`cdf890c1d4ad559bae337dd0f029384236494c99f5a5135674e585dde23f1990`,
+cdf890c1d4ad559bae337dd0f029384236494c99f5a5135674e585dde23f1990,
 9,148 bytes; pinned inside the audit); one fresh full run takes
 ~110 s.  `output/published_run.txt` is the stdout record of the
 published fresh run (its elapsed line is not part of the pinned
