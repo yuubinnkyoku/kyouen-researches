@@ -40,6 +40,7 @@
     { "cnf": "n7_ge15_strong", "opts": "--ncells=49 --cellboost=10 --seed=7 --maxseconds=90", "result": "TIMEOUT", "conflicts": 67859 },
     { "cnf": "n7_ge15_strong", "opts": "--ncells=49 --cellboost=10 --base=64 --maxseconds=90", "result": "TIMEOUT", "conflicts": 73540 },
     { "cnf": "n8_ge16_strong", "opts": "--ncells=64 --cellboost=10 --maxseconds=280", "known": "UNSAT", "result": "TIMEOUT", "conflicts": 82904, "props": 377888493 },
+    { "cnf": "n7_ge15_strong", "opts": "--ncells=49 --cellboost=10 --mini --maxseconds=285", "known": "UNSAT", "result": "TIMEOUT", "addendum_post_part1": true, "conflicts": 199243, "decisions": 634916, "props": 465218754, "note": "same-run addendum probe: recursive minimization does not change conflict throughput (~699/s); ladder gate remains closed" },
     { "cnf": "n9_ge19_strong", "result": "NOT_LAUNCHED", "reason": "ladder gate: fastsat must first close a known-UNSAT at n7/n8 in this encoding" }
   ],
   "bugfix_summary": {
