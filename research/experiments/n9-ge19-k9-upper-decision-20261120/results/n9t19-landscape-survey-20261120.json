@@ -1,0 +1,679 @@
+{
+ "experiment": "research/experiments/n9-ge19-k9-upper-decision-20261120",
+ "lane": "n9-ge19 K_9 upper decision (single-owner declaration 21f8610464d2)",
+ "part": "part4 survey — n9-19 (9x9, >=19 stones) partition chunk landscape",
+ "date_utc": "2026-11-20",
+ "status": "SURVEY / bookkeeping. n9_ge19 decision remains INDET. No claim on K_9 is made or implied.",
+ "scripts_pinned_git_blob_sha1": {
+  "ksearchp.js": "66938de2b614c31073eb988c3369751fb8fd68da",
+  "chunker.js": "addab28282fb3c5dd588bc1007591410e91b8bcc",
+  "ksearch.js": "b410b70cc01b065d9dc888bf0f38c938795c1850",
+  "gen_strong_cnf.js": "f62e788eff29481496fcbda05eb3e3c3532e621c"
+ },
+ "environment_reproductions": {
+  "audit_n7t15_published_state": {
+   "complete": true,
+   "all_unsat": true,
+   "settled_leaves": 35,
+   "nodes_total": 11880562,
+   "note": "reproduced fresh this session from published results/n7t15-partition-records.jsonl"
+  },
+  "audit_n8t16_published_state": {
+   "complete": true,
+   "all_unsat": true,
+   "settled_leaves": 275,
+   "nodes_total": 604101900,
+   "note": "reproduced fresh this session from published results/n8t16-partition-records.jsonl"
+  },
+  "gen_strong_cnf_n7_ge15": {
+   "vars": 22117,
+   "clauses": 68510,
+   "fnv1a64": "0f3ee7fe14af06d4",
+   "note": "matches part1 published value"
+  }
+ },
+ "l1_chunks_total": 63,
+ "l1_unsat_done": 42,
+ "l1_unsat_done_nodes": 62010510,
+ "l1_capped_internal": 21,
+ "l1_capped_internal_partial_nodes": 88866816,
+ "l1_cliff": "cost falls off rapidly for c>=26; monotone-ish only in the large (heterogeneous by cell geometry)",
+ "l1_table": [
+  {
+   "c": 0,
+   "status": "capped",
+   "nodes": 5505024,
+   "cap_s": 25,
+   "ms": 25766
+  },
+  {
+   "c": 1,
+   "status": "capped",
+   "nodes": 4980736,
+   "cap_s": 25,
+   "ms": 26097
+  },
+  {
+   "c": 2,
+   "status": "capped",
+   "nodes": 4718592,
+   "cap_s": 25,
+   "ms": 25132
+  },
+  {
+   "c": 3,
+   "status": "capped",
+   "nodes": 4456448,
+   "cap_s": 25,
+   "ms": 25788
+  },
+  {
+   "c": 4,
+   "status": "capped",
+   "nodes": 3670016,
+   "cap_s": 25,
+   "ms": 25028
+  },
+  {
+   "c": 5,
+   "status": "capped",
+   "nodes": 3932160,
+   "cap_s": 25,
+   "ms": 26574
+  },
+  {
+   "c": 6,
+   "status": "capped",
+   "nodes": 4718592,
+   "cap_s": 25,
+   "ms": 25407
+  },
+  {
+   "c": 7,
+   "status": "capped",
+   "nodes": 4194304,
+   "cap_s": 25,
+   "ms": 25010
+  },
+  {
+   "c": 8,
+   "status": "capped",
+   "nodes": 4194304,
+   "cap_s": 25,
+   "ms": 25025
+  },
+  {
+   "c": 9,
+   "status": "capped",
+   "nodes": 4194304,
+   "cap_s": 25,
+   "ms": 26023
+  },
+  {
+   "c": 10,
+   "status": "capped",
+   "nodes": 3932160,
+   "cap_s": 12,
+   "ms": 12543
+  },
+  {
+   "c": 11,
+   "status": "capped",
+   "nodes": 4194304,
+   "cap_s": 12,
+   "ms": 12572
+  },
+  {
+   "c": 12,
+   "status": "capped",
+   "nodes": 3670016,
+   "cap_s": 12,
+   "ms": 12528
+  },
+  {
+   "c": 13,
+   "status": "capped",
+   "nodes": 3407872,
+   "cap_s": 12,
+   "ms": 12098
+  },
+  {
+   "c": 14,
+   "status": "capped",
+   "nodes": 3407872,
+   "cap_s": 12,
+   "ms": 12265
+  },
+  {
+   "c": 15,
+   "status": "capped",
+   "nodes": 3932160,
+   "cap_s": 12,
+   "ms": 12599
+  },
+  {
+   "c": 16,
+   "status": "capped",
+   "nodes": 3932160,
+   "cap_s": 12,
+   "ms": 12283
+  },
+  {
+   "c": 17,
+   "status": "capped",
+   "nodes": 5505024,
+   "cap_s": 12,
+   "ms": 12682
+  },
+  {
+   "c": 18,
+   "status": "capped",
+   "nodes": 4456448,
+   "cap_s": 12,
+   "ms": 12667
+  },
+  {
+   "c": 19,
+   "status": "capped",
+   "nodes": 4194304,
+   "cap_s": 12,
+   "ms": 12508
+  },
+  {
+   "c": 20,
+   "status": "capped",
+   "nodes": 3670016,
+   "cap_s": 12,
+   "ms": 12565
+  },
+  {
+   "c": 21,
+   "status": "unsat-done",
+   "nodes": 7011220,
+   "cap_s": 28,
+   "ms": 22374
+  },
+  {
+   "c": 22,
+   "status": "unsat-done",
+   "nodes": 7395214,
+   "cap_s": 40,
+   "ms": 22807
+  },
+  {
+   "c": 23,
+   "status": "unsat-done",
+   "nodes": 9125736,
+   "cap_s": 40,
+   "ms": 28603
+  },
+  {
+   "c": 24,
+   "status": "unsat-done",
+   "nodes": 9995077,
+   "cap_s": 40,
+   "ms": 30067
+  },
+  {
+   "c": 25,
+   "status": "unsat-done",
+   "nodes": 10334296,
+   "cap_s": 110,
+   "ms": 59183
+  },
+  {
+   "c": 26,
+   "status": "unsat-done",
+   "nodes": 9549402,
+   "cap_s": 40,
+   "ms": 27025
+  },
+  {
+   "c": 27,
+   "status": "unsat-done",
+   "nodes": 2765369,
+   "cap_s": 40,
+   "ms": 8030
+  },
+  {
+   "c": 28,
+   "status": "unsat-done",
+   "nodes": 1197100,
+   "cap_s": 40,
+   "ms": 3619
+  },
+  {
+   "c": 29,
+   "status": "unsat-done",
+   "nodes": 634859,
+   "cap_s": 40,
+   "ms": 2033
+  },
+  {
+   "c": 30,
+   "status": "unsat-done",
+   "nodes": 474317,
+   "cap_s": 28,
+   "ms": 1535
+  },
+  {
+   "c": 31,
+   "status": "unsat-done",
+   "nodes": 476445,
+   "cap_s": 40,
+   "ms": 1632
+  },
+  {
+   "c": 32,
+   "status": "unsat-done",
+   "nodes": 594873,
+   "cap_s": 40,
+   "ms": 1920
+  },
+  {
+   "c": 33,
+   "status": "unsat-done",
+   "nodes": 822156,
+   "cap_s": 40,
+   "ms": 2385
+  },
+  {
+   "c": 34,
+   "status": "unsat-done",
+   "nodes": 707599,
+   "cap_s": 25,
+   "ms": 4234
+  },
+  {
+   "c": 35,
+   "status": "unsat-done",
+   "nodes": 597747,
+   "cap_s": 28,
+   "ms": 1707
+  },
+  {
+   "c": 36,
+   "status": "unsat-done",
+   "nodes": 127616,
+   "cap_s": 25,
+   "ms": 870
+  },
+  {
+   "c": 37,
+   "status": "unsat-done",
+   "nodes": 37614,
+   "cap_s": 25,
+   "ms": 236
+  },
+  {
+   "c": 38,
+   "status": "unsat-done",
+   "nodes": 18927,
+   "cap_s": 25,
+   "ms": 181
+  },
+  {
+   "c": 39,
+   "status": "unsat-done",
+   "nodes": 9199,
+   "cap_s": 25,
+   "ms": 123
+  },
+  {
+   "c": 40,
+   "status": "unsat-done",
+   "nodes": 9041,
+   "cap_s": 28,
+   "ms": 63
+  },
+  {
+   "c": 41,
+   "status": "unsat-done",
+   "nodes": 25327,
+   "cap_s": 25,
+   "ms": 273
+  },
+  {
+   "c": 42,
+   "status": "unsat-done",
+   "nodes": 35206,
+   "cap_s": 25,
+   "ms": 301
+  },
+  {
+   "c": 43,
+   "status": "unsat-done",
+   "nodes": 31662,
+   "cap_s": 25,
+   "ms": 290
+  },
+  {
+   "c": 44,
+   "status": "unsat-done",
+   "nodes": 26793,
+   "cap_s": 25,
+   "ms": 210
+  },
+  {
+   "c": 45,
+   "status": "unsat-done",
+   "nodes": 3382,
+   "cap_s": 28,
+   "ms": 36
+  },
+  {
+   "c": 46,
+   "status": "unsat-done",
+   "nodes": 671,
+   "cap_s": 25,
+   "ms": 20
+  },
+  {
+   "c": 47,
+   "status": "unsat-done",
+   "nodes": 296,
+   "cap_s": 25,
+   "ms": 20
+  },
+  {
+   "c": 48,
+   "status": "unsat-done",
+   "nodes": 176,
+   "cap_s": 25,
+   "ms": 60
+  },
+  {
+   "c": 49,
+   "status": "unsat-done",
+   "nodes": 447,
+   "cap_s": 25,
+   "ms": 21
+  },
+  {
+   "c": 50,
+   "status": "unsat-done",
+   "nodes": 611,
+   "cap_s": 28,
+   "ms": 33
+  },
+  {
+   "c": 51,
+   "status": "unsat-done",
+   "nodes": 957,
+   "cap_s": 25,
+   "ms": 83
+  },
+  {
+   "c": 52,
+   "status": "unsat-done",
+   "nodes": 653,
+   "cap_s": 25,
+   "ms": 33
+  },
+  {
+   "c": 53,
+   "status": "unsat-done",
+   "nodes": 407,
+   "cap_s": 25,
+   "ms": 14
+  },
+  {
+   "c": 54,
+   "status": "unsat-done",
+   "nodes": 31,
+   "cap_s": 25,
+   "ms": 1
+  },
+  {
+   "c": 55,
+   "status": "unsat-done",
+   "nodes": 17,
+   "cap_s": 28,
+   "ms": 1
+  },
+  {
+   "c": 56,
+   "status": "unsat-done",
+   "nodes": 15,
+   "cap_s": 25,
+   "ms": 1
+  },
+  {
+   "c": 57,
+   "status": "unsat-done",
+   "nodes": 13,
+   "cap_s": 25,
+   "ms": 1
+  },
+  {
+   "c": 58,
+   "status": "unsat-done",
+   "nodes": 13,
+   "cap_s": 25,
+   "ms": 1
+  },
+  {
+   "c": 59,
+   "status": "unsat-done",
+   "nodes": 9,
+   "cap_s": 25,
+   "ms": 1
+  },
+  {
+   "c": 60,
+   "status": "unsat-done",
+   "nodes": 9,
+   "cap_s": 28,
+   "ms": 1
+  },
+  {
+   "c": 61,
+   "status": "unsat-done",
+   "nodes": 5,
+   "cap_s": 25,
+   "ms": 0
+  },
+  {
+   "c": 62,
+   "status": "unsat-done",
+   "nodes": 3,
+   "cap_s": 28,
+   "ms": 0
+  }
+ ],
+ "l2_probes": [
+  {
+   "prefix": [
+    0,
+    1
+   ],
+   "status": "capped",
+   "nodes": 5242880,
+   "cap_s": 12,
+   "ms": 12184
+  },
+  {
+   "prefix": [
+    0,
+    2
+   ],
+   "status": "capped",
+   "nodes": 5767168,
+   "cap_s": 12,
+   "ms": 12646
+  },
+  {
+   "prefix": [
+    0,
+    5
+   ],
+   "status": "capped",
+   "nodes": 4718592,
+   "cap_s": 12,
+   "ms": 12646
+  },
+  {
+   "prefix": [
+    0,
+    10
+   ],
+   "status": "capped",
+   "nodes": 4718592,
+   "cap_s": 12,
+   "ms": 12349
+  },
+  {
+   "prefix": [
+    0,
+    20
+   ],
+   "status": "unsat-done",
+   "nodes": 10283525,
+   "cap_s": 110,
+   "ms": 61221
+  },
+  {
+   "prefix": [
+    0,
+    40
+   ],
+   "status": "unsat-done",
+   "nodes": 30486,
+   "cap_s": 12,
+   "ms": 148
+  },
+  {
+   "prefix": [
+    5,
+    6
+   ],
+   "status": "capped",
+   "nodes": 3670016,
+   "cap_s": 12,
+   "ms": 12108
+  },
+  {
+   "prefix": [
+    5,
+    8
+   ],
+   "status": "capped",
+   "nodes": 4456448,
+   "cap_s": 12,
+   "ms": 12813
+  },
+  {
+   "prefix": [
+    5,
+    12
+   ],
+   "status": "capped",
+   "nodes": 3670016,
+   "cap_s": 12,
+   "ms": 12199
+  },
+  {
+   "prefix": [
+    5,
+    20
+   ],
+   "status": "capped",
+   "nodes": 4194304,
+   "cap_s": 12,
+   "ms": 12161
+  },
+  {
+   "prefix": [
+    10,
+    11
+   ],
+   "status": "capped",
+   "nodes": 3932160,
+   "cap_s": 12,
+   "ms": 12437
+  },
+  {
+   "prefix": [
+    10,
+    15
+   ],
+   "status": "capped",
+   "nodes": 3407872,
+   "cap_s": 12,
+   "ms": 12225
+  },
+  {
+   "prefix": [
+    10,
+    20
+   ],
+   "status": "capped",
+   "nodes": 4456448,
+   "cap_s": 12,
+   "ms": 12576
+  },
+  {
+   "prefix": [
+    15,
+    16
+   ],
+   "status": "capped",
+   "nodes": 8912896,
+   "cap_s": 60,
+   "ms": 61185
+  },
+  {
+   "prefix": [
+    15,
+    20
+   ],
+   "status": "capped",
+   "nodes": 4456448,
+   "cap_s": 12,
+   "ms": 12303
+  },
+  {
+   "prefix": [
+    20,
+    21
+   ],
+   "status": "unsat-done",
+   "nodes": 678915,
+   "cap_s": 12,
+   "ms": 2410
+  }
+ ],
+ "audit_snapshot": {
+  "complete": false,
+  "all_unsat": false,
+  "settled_leaves": 45,
+  "capped_internal": 34,
+  "open_leaves": 1783,
+  "sat_records": 0,
+  "bad": [],
+  "nodes_total": 73003436,
+  "note": "nodes_total counts settled-leaf chunks only (capped partial progress excluded), per chunker.js --mode=audit"
+ },
+ "records_file": {
+  "path": "results/n9t19-partition-records.jsonl",
+  "records": 79,
+  "bytes": 15120,
+  "sha256": "221fc6daaa361a066ddbabfcb8d9a9c1b9408271c32dc474cb54df91ebd8c2e0",
+  "dedup": "duplicate capped provisional records for 13 prefixes ([0..9] 12s-cap rewrite under fastsat CPU contention + [25],[0,20],[15,16] re-run to completion) were collapsed last-wins before publication; audit fields identical pre/post"
+ },
+ "observed_node_rates": {
+  "notes": "0.30-0.35M nodes/s uncontended; slower with the concurrent fastsat calibration run; deterministic DFS, so verdicts and settled node counts are content-determined and not affected by contention"
+ },
+ "heuristic_extrapolation": {
+  "warning": "NOT a mathematical claim; from partial (capped) data",
+  "total_nodes_estimate": "4e9..40e9 (order of magnitude)",
+  "cpu_hours_estimate": "4..40 at 0.3e6..0.35e6 nodes/s",
+  "basis": "21 capped L1 chunks ([0]..[20]); [0,20] completed at 10.28M nodes (61s); [15,16] >8.9M unfinished at 60s; heavy L2 children lie at d<=~25 with ~20 per parent; deep tail unknown; n8-16 comparison: 604M total nodes fresh-closed in ~24 CPU-min",
+  "implication": "n9-19 ksearch-side complete closure is a realistic multi-session marathon (driver calls of wall<=280s, published resume state), not a single-session item"
+ },
+ "marathon_protocol": {
+  "state_file": "results/n9t19-partition-records.jsonl",
+  "resume": "download published state file, then chunker.js --mode=run with small-fresh caps (fills open leaves), --mode=audit for completeness; publish updated records file + audit JSON each session",
+  "honesty": "every capped record is unfinished work; verdict only after audit complete=true; sat_records must stay empty for UNSAT; any SAT record stops the marathon and triggers independent witness verification (det4 + eval_strong.census cross) per declaration acceptance condition 1"
+ }
+}
