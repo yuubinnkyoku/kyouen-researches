@@ -55,6 +55,12 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/ALGEBRAIC_ROUTE.md
   role: source
   note: 放物面上のcap・反転平面3-arcへの再定式化
+- path: research/experiments/finite-field-kyouen-20261120/CPP_IMPLEMENTATION.md
+  role: source
+  note: C++実装による高速化
+- path: research/experiments/finite-field-kyouen-20261120/scripts/agq.cpp
+  role: solver
+  note: 任意の素数qに対するAG(2,q)完全探索
 - path: research/experiments/finite-field-kyouen-20261120/BOUND_RESEARCH_SUMMARY.md
   role: source
   note: 上界研究の総括
@@ -641,7 +647,7 @@ q=3 で k≈6、q=5 で k=9、q=7 で k≈25 であり、真値（q=5,7 で K=6�
 - `K ≤ q+3`（無条件、λ₂ 上界）
 - `K ≤ q+2`（`q ≡ 1 (mod 4)`、十字上界）
 
-真値は AG で q ≤ 11、反転平面で q ≤ 13 まで確定。
+真値は AG で q ≤ 11、反転平面で q ≤ 13 まで確定。`n`C++ 実装（`scripts/agq.cpp`）により q=11 のサイズ10不存在を56秒（473万ノード）で確認できる。
 7つの初等的な手法がすべて失敗し、係数1未満の上界には別の原理が必要であることが明確になった。
 
 **代数的再定式化**：各点を持ち上げて `v_p = (x, y, x²+y², 1) ∈ F_q⁴` とすると、
