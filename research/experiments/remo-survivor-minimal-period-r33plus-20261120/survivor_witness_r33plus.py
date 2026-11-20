@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """REMO survivor-column minimal period, r = 33..48 extension of the
-K0925 small-witness sweep (THEOREM S32 -> S48), K1143.
+K0925 small-witness sweep (THEOREM S32 -> S48), K1145.
 
 Declared lane: research/log/2026-11-20-remo-survivor-witness-r33plus-
 single-owner-note.md (single owner, fast lane).
@@ -619,7 +619,7 @@ def assemble_audit(no_cache, deadline=None):
            s4_stop, s4)
 
     audit = {
-        "item": "K1143",
+        "item": "K1145",
         "title": "Survivor-column minimal period exactly Q(r) for "
                  "r = 33..48 by small witnesses (every proper divisor "
                  "rejected), extending K0925 theorem S32 to S48; "

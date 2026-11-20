@@ -1,4 +1,4 @@
-# REMO survivor-column minimal period, r = 33..48 (K0925 S32 -> S48, K1143)
+# REMO survivor-column minimal period, r = 33..48 (K0925 S32 -> S48, K1145)
 
 Declared fast-lane follow-up of [K0925](../../knowledge/items/K0925-remo-survivor-minimal-period-r32.md)
 (single-owner note: `research/log/2026-11-20-remo-survivor-witness-r33plus-single-owner-note.md`).
@@ -70,7 +70,7 @@ C=6: 3,888 (full histogram in the audit).
    does the block-identity follow from the K0926/K0928 reduction
    structure?
 
-## Machine checks (audit.json, 5/5 ok, sha256 0b97f2674bdcb99d5fa067390687522eaaf0f787ae5ab3976ea252b39c9a8c1f)
+## Machine checks (audit.json, 5/5 ok, sha256 0b5ae7eb5f840c038e66d3712f599a21741ccafc1665ba545a38cb7fbebfb0b8)
 
 * S0 divisor enumeration pin (factorization == trial division
   r = 2..20; analytic pattern r = 33..48).

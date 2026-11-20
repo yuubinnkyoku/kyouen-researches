@@ -680,7 +680,7 @@ jobs:
         run: |
           uv run --locked python research/experiments/vertical-fiber-two-token-y10-parametric-allz-proof-20261120/census_rows.py
           git diff --exit-code -- research/experiments/vertical-fiber-two-token-y10-parametric-allz-proof-20261120/output/census.txt
-      - name: Audit K1143 remo survivor minimal period r33to48
+      - name: Audit K1145 remo survivor minimal period r33to48
         run: |
           uv run --locked python research/experiments/remo-survivor-minimal-period-r33plus-20261120/survivor_witness_r33plus.py
           git diff --exit-code -- research/experiments/remo-survivor-minimal-period-r33plus-20261120/output/audit.json

@@ -1,4 +1,4 @@
-# 2026-11-20 生存者列最小周期 r=33..48 掃引（K0925 S32拡張・K1143）
+# 2026-11-20 生存者列最小周期 r=33..48 掃引（K0925 S32拡張・K1145）
 
 単一オーナー宣言（2026-11-20 10:22Z・fast lane）に基づく実行記録。
 
@@ -42,20 +42,27 @@
 6. **検証プロトコル**: assemble 二重実行 byte 一致必須。本金
    cwd（チャンク再開）と隔離 cwd フル再計算（別プロセス・自前
    checkpoint・チャンク再開）の 2 プロセスで監査 byte 同一
-   （SHA-256 0b97f267…・32,790 bytes・5/5 ok）。CI step で
+   （SHA-256 0b5ae7eb…・32,790 bytes・5/5 ok）。CI step で
    新規計算→git diff pin。
 7. **採番**: 出版時点の main 最大番号は K1142（n11 fold25）。
-   K1143 を採番（宣言ノートの条項に従い main 照合の上で決定）。
+   仮採番 K1143 で一括出版したが、15分先行で並走y11 fitting
+   レーンが同名異slugの K1143-two-token-y11-parametric-closed-form-
+   fit（12:15:50Z・27944a94）を出版しており K1144 も使用済み
+   （n11残余72二検証・12:18:26Z）だったため、AGENTS.md再採番規則
+   に従い K1145 へ再採番し、item/log/README bullet/CI step名/監査
+   JSON item欄を同時更新して旧 K1143 item path を削除した
+   （数値内容・検査・正本は再採番不変・監査 SHA-256 0b5ae7eb…）。
 
 ## 出版物
 
 - `research/experiments/remo-survivor-minimal-period-r33plus-20261120/`:
   survivor_witness_r33plus.py・report.md・output/audit.json・
   output/published_run.txt
-- knowledge item: `research/knowledge/items/K1143-remo-survivor-
+- knowledge item: `research/knowledge/items/K1145-remo-survivor-
   minimal-period-r33to48.md`（定理S48・機械確定 status: proved）
-- knowledge README に K1143 bullet、knowledge.yml に CI audit step
-  （監査 JSON の git diff pin）を追加。
+- knowledge README に K1145 bullet、knowledge.yml に CI audit step
+  （監査 JSON の git diff pin）を追加（初回は仮採番K1143で出版し
+  再採番コミットで修正済み）。
 
 ## 信頼境界と残課題
 
