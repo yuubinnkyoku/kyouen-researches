@@ -1,4 +1,4 @@
-successfully downloaded text file (SHA: 9514fa642aac304c266391138b1c68e2228da6e8)`items/Knnnn-content-slug.md` が現在の知識の正本。過去の研究記録は出典として残す。
+`items/Knnnn-content-slug.md` が現在の知識の正本。過去の研究記録は出典として残す。
 命題の証明・再検証が増えたら同じ項目を更新する。反証した命題は残し、異なる修正版は別項目にする。
 有限計算の支持を無界命題の証明に昇格させない。未監査と数学的未解決も区別する。
 
