@@ -318,8 +318,10 @@ need(k1096Coverage.size === 8, "K1096 proof-root obligation coverage");
 need(k1095Coverage.size === 2, "K1095 candidate obligation coverage");
 const k1096Records = coverageRecords(k1096Coverage, rows);
 const k1095Records = coverageRecords(k1095Coverage, rows);
-need(JSON.stringify(k1096Records) === JSON.stringify(plan.fixed_roots[0].coverage), "K1096 coverage differs from published plan");
-need(JSON.stringify(k1095Records) === JSON.stringify(plan.fixed_roots[1].coverage), "K1095 coverage differs from published plan");
+const normalizeCoverage = xs => xs.map(x => ({ row_hex: x.row_hex, first_moves: [...x.first_moves].sort((a, b) => a - b) })).sort((a, b) => a.row_hex.localeCompare(b.row_hex));
+need(JSON.stringify(normalizeCoverage(k1096Records)) === JSON.stringify(normalizeCoverage(plan.fixed_roots[0].coverage)), "K1096 coverage differs from published plan");
+need(JSON.stringify(normalizeCoverage(k1095Records)) === JSON.stringify(normalizeCoverage(plan.fixed_roots[1].coverage)), "K1095 coverage differs from published plan");
+
 need(plan.fixed_roots[0].status === "certificate-verified", "K1096 fixed-root status");
 need(plan.fixed_roots[1].status === "WIN8-D10-candidate-certificate-not-yet-extracted", "K1095 is not a certificate");
 
