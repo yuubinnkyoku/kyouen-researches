@@ -1,0 +1,42 @@
+[
+  {
+    "q": 8,
+    "K": 7,
+    "witness": [
+      "(0, 0, 0, 0, 0, 1)",
+      "(0, 0, 0, 0, 1, 0)",
+      "(0, 1, 0, 0, 1, 0)",
+      "(1, 0, 1, 1, 1, 1)"
+    ],
+    "candidates_at_size": 79251,
+    "phase1_nodes": 88288,
+    "known": 7,
+    "match": true,
+    "seconds": 82.44
+  },
+  {
+    "q": 9,
+    "K": 9,
+    "witness": [
+      "(0, 0, 0, 1)",
+      "(0, 2, 1, 2)",
+      "(1, 2, 1, 1)",
+      "(1, 2, 1, 2)",
+      "(2, 1, 0, 0)",
+      "(2, 1, 1, 2)"
+    ],
+    "candidates_at_size": 340416,
+    "phase1_nodes": 708449,
+    "known": 9,
+    "match": true,
+    "seconds": 148.72
+  },
+  {
+    "q": 11,
+    "error": "node cap exceeded",
+    "tau_lower": 12,
+    "known": 9,
+    "match": null,
+    "seconds": 163.33
+  }
+]
