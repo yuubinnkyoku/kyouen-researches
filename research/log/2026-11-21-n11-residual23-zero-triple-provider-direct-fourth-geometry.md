@@ -44,3 +44,11 @@ K1147の数え上げ証明書が使う3零行の幾何前提を、K1148とは異
 - K1156の検証器は `py_compile` と12 gateを通過し、3実行の監査byte一致・tamper fail-closedを確認済み。
 
 出版直前のmain再確認では `887e594de70e41290d5db27590d4d971d91b4515` が最新で、K1147外部第二検証のpristine再実行第三検証に対する別スコープの単一オーナー宣言だけが追加されていた。K1156項目は未使用であり、本レーンのK1147/K1148幾何再導出とは重ならない。
+
+## 公開・再取得
+
+- 単一オーナー宣言: `b0db8dfec12b163ec51292922fc5fab4fac3ff66`。
+- 実験入力・検証器・監査・README・K1156 item・本ログはmainへ順次直接出版。K1156 item commit: `1d1b185a7de36748d1653a48f1f0ca397a3b75da`、本ログ初版 commit: `ee150508e82fcab767983fa1521d8cfc6948e0b2`。
+- knowledge READMEのK1156項目追記: commit `65980eac02a370db535785af0e5326afdd754d71`。
+- 同commitのraw公開内容から、実験README・検証器・入力3件・監査・K1156 item・knowledge README・本ログ・単一オーナー宣言の計10ファイルを再取得し、ローカル出版正本と全件byte-identicalを確認。knowledge READMEのSHA-256は `749fa9f5e31d41b0454f62e0b5990bf9b1d083e9957a9670dd875a128d06feb7`。
+- K1156を含む最新コミットのcombined statusはstatus/check runが返らず、CI成功とは扱わない。
