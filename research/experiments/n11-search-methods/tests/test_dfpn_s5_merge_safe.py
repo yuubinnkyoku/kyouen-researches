@@ -147,6 +147,36 @@ class MergeTests(unittest.TestCase):
         self.assertIn('unsafe', r.stderr)
         self.assertEqual(self.out.read_text(), 'EXISTING\n')
 
+    def test_noncanonical_quarantine_alias_refuses_without_touching_output(self):
+        points = [i for i in range(121)
+                  if ((GOOD[0] if i < 64 else GOOD[1]) >> (i % 64)) & 1]
+        alias_mask = sum(1 << (11*(p//11) + (10-p%11)) for p in points)
+        alias = (alias_mask & ((1<<64)-1), alias_mask >> 64)
+        self.assertNotEqual(alias, GOOD)
+        self.registry.write_text(json.dumps({
+            'schema': 'n11-s5-evidence-quarantine-v1',
+            'entries': [{'key': list(alias), 'active': True, 'unsupported_verdict': 1}],
+        }))
+        self.base.write_text(row(GOOD, 2))
+        self.out.write_text('EXISTING\\n')
+        result = self.runmerge(self.base)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn('noncanonical or unsafe S5 quarantine key', result.stderr)
+        self.assertEqual(self.out.read_text(), 'EXISTING\\n')
+
+    def test_unsafe_quarantine_key_refuses_without_touching_output(self):
+        # (31, 0) is D4-canonical but its five points are collinear.
+        self.registry.write_text(json.dumps({
+            'schema': 'n11-s5-evidence-quarantine-v1',
+            'entries': [{'key': [31, 0], 'active': True, 'unsupported_verdict': 2}],
+        }))
+        self.base.write_text(row(GOOD, 2))
+        self.out.write_text('EXISTING\\n')
+        result = self.runmerge(self.base)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn('noncanonical or unsafe S5 quarantine key', result.stderr)
+        self.assertEqual(self.out.read_text(), 'EXISTING\\n')
+
     def test_deterministic_merge(self):
         self.base.write_text(row(GOOD, 2))
         self.worker.write_text(row(OTHER, 1) + row(GOOD, 2))

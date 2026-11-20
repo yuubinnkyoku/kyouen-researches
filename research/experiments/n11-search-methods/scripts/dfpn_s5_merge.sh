@@ -22,7 +22,7 @@ inputs = [Path(p) for p in sys.argv[3:]]
 policy_dir = root / 'research/experiments/n11-frontier-selection-20261005/scripts'
 sys.path.insert(0, str(policy_dir))
 try:
-    from s5_evidence_policy import REGISTRY, quarantined_cache_keys
+    from s5_evidence_policy import REGISTRY, quarantined_cache_keys, is_canonical_safe_s5_key
     # The current policy may silently return an empty set when the registry
     # is missing. Require the evidence registry even before that is fixed.
     # Serialize cooperative writers BEFORE reading any evidence. Locking the
@@ -79,40 +79,9 @@ try:
     if not isinstance(quarantine, set):
         raise ValueError('invalid S5 quarantine result')
 
-    # Validate keys independently of the producer: only canonical SAFE
-    # five-stone states are admissible.  Otherwise a D4 alias could bypass
-    # the per-key WIN/LOSS conflict check.
-    def canonical_and_safe(lo, hi):
-        pts = [i for i in range(121)
-               if ((lo if i < 64 else hi) >> (i % 64)) & 1]
-        if len(pts) != 5:
-            return False
-        masks = []
-        for reflection in (False, True):
-            for rotation in range(4):
-                mask = 0
-                for p in pts:
-                    x, y = p % 11, p // 11
-                    if reflection:
-                        x = 10 - x
-                    for _ in range(rotation):
-                        x, y = y, 10 - x
-                    mask |= 1 << (11 * y + x)
-                masks.append((mask & ((1 << 64) - 1), mask >> 64))
-        if (lo, hi) != min(masks, key=lambda k: (k[1], k[0])):
-            return False
-        from itertools import combinations
-        for four in combinations(pts, 4):
-            coords = [(v % 11, v // 11) for v in four]
-            x0, y0 = coords[-1]
-            a, b, c = [((x*x + y*y) - (x0*x0 + y0*y0),
-                         x-x0, y-y0) for x, y in coords[:-1]]
-            det = (a[0]*(b[1]*c[2]-b[2]*c[1])
-                   -a[1]*(b[0]*c[2]-b[2]*c[0])
-                   +a[2]*(b[0]*c[1]-b[1]*c[0]))
-            if det == 0:
-                return False
-        return True
+    # The shared policy validator also checks quarantine registry keys, so the
+    # cache and its exclusion list use exactly the same canonical/safe predicate.
+
 
     # Validate ALL sources and ALL conflicts before opening the output.
     verdicts = {}
@@ -134,7 +103,7 @@ try:
                         or not (0 <= lo < 2**64 and 0 <= hi < 2**57)
                         or lo.bit_count() + hi.bit_count() != 5):
                     raise ValueError(f'invalid S5 evidence: {path}:{lineno}')
-                if not canonical_and_safe(lo, hi):
+                if not is_canonical_safe_s5_key((lo, hi)):
                     raise ValueError(f'noncanonical or unsafe S5 key: {path}:{lineno}')
                 if result == 0:
                     unknown += 1

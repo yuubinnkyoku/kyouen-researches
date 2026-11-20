@@ -217,7 +217,27 @@ with tempfile.TemporaryDirectory(prefix='n11-s5-merge-test-') as td:
         out = d / 'corrupt-registry.csv'
         refused(run(out, base, using=alt_script), 'invalid S5 quarantine registry schema')
         assert not out.exists()
-    print('PASS missing/corrupt registry fails closed')
+
+        # 14. A noncanonical D4 alias in the quarantine registry must fail closed.
+        alias = transform(A)
+        assert alias != A
+        alt_registry.write_text(json.dumps({
+            "schema": "n11-s5-evidence-quarantine-v1",
+            "entries": [{"key": list(alias), "active": True, "unsupported_verdict": 1}],
+        }), encoding='utf-8')
+        out = d / 'noncanonical-registry.csv'
+        refused(run(out, base, using=alt_script), 'noncanonical or unsafe S5 quarantine key')
+        assert not out.exists()
+
+        # 15. A canonical but geometrically unsafe quarantine key must also fail closed.
+        alt_registry.write_text(json.dumps({
+            "schema": "n11-s5-evidence-quarantine-v1",
+            "entries": [{"key": [31, 0], "active": True, "unsupported_verdict": 2}],
+        }), encoding='utf-8')
+        out = d / 'unsafe-registry.csv'
+        refused(run(out, base, using=alt_script), 'noncanonical or unsafe S5 quarantine key')
+        assert not out.exists()
+    print('PASS missing/corrupt/noncanonical/unsafe registry fails closed')
 
 
     # 14. Consistent worker-cache union is commutative and node-min is order-independent.
