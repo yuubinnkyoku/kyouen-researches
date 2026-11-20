@@ -9,18 +9,18 @@ aliases:
   - 4親行の304初手義務をK1096の8被覆と148追加根で完全分割する最小幾何計画
 relations:
   - type: depends_on
-    target: K1085
-    note: 残余72行の正本とadd-two-stones safe8候補宇宙の基礎
-  - type: depends_on
     target: K1096
     note: 唯一の証明書検証済み固定根。既存三重検証の証明自体は本項で再実行せず、証明書と監査正本のhashを固定
-  - type: depends_on
-    target: K1097
-    note: 既知WIN8-D10候補16根・REFUTED-D10 50根の正本
   - type: depends_on
     target: K1102
     note: K1097第4ラウンド再解決の独立第二検証。K1097の候補・REFUTED集合に対する別経路の出典確認
 artifacts:
+  - path: research/experiments/n11-residual72-unsafe-classification-add2stones-20261120/output/residual72-unsafe-classification-add2stones-20261120.json
+    role: data
+    note: 4親行が属する残余72行とadd-two-stones基礎censusの固定入力
+  - path: research/experiments/n11-residual72-safe8-refuted50-refsolve-20261120/output/safe8-refuted50-refsolve-20261120.json
+    role: data
+    note: 既知WIN8候補16根・REFUTED-D10 50根の固定入力
   - path: research/experiments/n11-win8-four-row-one-certified-root-response-cover-20261120/README.md
     role: source
     note: 149根最小応答被覆の対象・入力pin・再現方法・解釈上の制限
