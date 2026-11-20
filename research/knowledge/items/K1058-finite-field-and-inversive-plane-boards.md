@@ -52,6 +52,9 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/scripts/ag2_fast_target.py
   role: solver
   note: AG(2,q)の対称性利用高速完全探索
+- path: research/experiments/finite-field-kyouen-20261120/TRIPLE_COVERAGE.md
+  role: source
+  note: 全三点ブロック性のq<=9での普遍性
 - path: research/experiments/finite-field-kyouen-20261120/EXTREMAL_STRUCTURE.md
   role: source
   note: 極値配置の全三点ブロック構造
@@ -411,10 +414,11 @@ second moment（`λ₂=q+1` は一様）は triple より弱い。直線制約�
 初等的な上界は triple `C(k,3) ≤ q³+q` から `k ≈ 1.82q` が最良
 （pair は `q·C(k,2) ≤ 3b` で 2.4q、incidence は `deg·k ≤ 3b` で 2.7q とより緩い）。
 
-**極値配置の構造**：q=7 の K=6 を達成する配置では、**任意の三点が同一円または同一直線上にある**
-（`C(6,3)=20` 個の三点組すべてがブロック上であることを機械確認）。
+**極値配置の構造**：q=3,5,7,9 の**すべて**で、最大安全集合は
+**任意の三点が同一円または同一直線上にある**（完全探索で確認：10/10, 20/20, 20/20, 84/84）。
 さらに各点が同じ数の満杯ブロック（3点を持つブロック）に載る（q=7 で各点10個、q=11 で各点28個）。
-これは「キャップ」（どの三点も共線でない集合）の逆の極端な構造で、上界改善の手がかりになりうる。
+これは「キャップ」（どの三点も共線でない集合）の逆の極端な構造である。
+ただし `C(k,3) ≤ b` は飽和しない（q=9 で 84 対 819）ので、triple 上界の改善には直結しない。
 
 上界/真値の比は q≡1 (mod 4) で 1.1〜1.2、q≡3 (mod 4) で 2.2〜2.7 であり、
 **十字ブロックの有無が上界の鋭さを決めている**。
