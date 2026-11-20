@@ -55,6 +55,15 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/ALGEBRAIC_ROUTE.md
   role: source
   note: 放物面上のcap・反転平面3-arcへの再定式化
+- path: research/experiments/finite-field-kyouen-20261120/PARITY_LAW.md
+  role: proof
+  note: パリティ法則（定理の真の一般化）
+- path: research/experiments/finite-field-kyouen-20261120/scripts/parity_law.py
+  role: verifier
+  note: パリティ法則の全数検証
+- path: research/experiments/finite-field-kyouen-20261120/COUNTEREXAMPLE_STRUCTURE.md
+  role: source
+  note: 反例の構造分析
 - path: research/experiments/finite-field-kyouen-20261120/CONVERSE_REFUTED.md
   role: source
   note: 逆の反証（41反例）
