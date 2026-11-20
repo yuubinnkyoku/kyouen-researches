@@ -1,0 +1,513 @@
+{
+  "experiment": "n11-fold29-win8-cert-extract-ext-second-verification-20261120",
+  "gate_count": 43,
+  "gates": {
+    "g_pin_published_61_files": {
+      "detail": {
+        "bad": [],
+        "checked": 61,
+        "mismatch_or_missing": 0
+      },
+      "pass": true
+    },
+    "k1136_audit_machine_on_fresh_records": {
+      "detail": {
+        "19_gates_pass": true,
+        "byte_identical": true,
+        "failing_gates": [],
+        "json_parseable": true,
+        "note": "gates evaluated against our freshly regenerated records; pub byte-identity also holds because the audit master embeds no ms-dependent data",
+        "returncode": 0
+      },
+      "pass": true
+    },
+    "k1136_audit_machine_r1": {
+      "detail": {
+        "19_gates_pass": true,
+        "byte_identical": true,
+        "failing_gates": [],
+        "isolated": false,
+        "json_parseable": true,
+        "returncode": 0
+      },
+      "pass": true
+    },
+    "k1136_audit_machine_r2": {
+      "detail": {
+        "19_gates_pass": true,
+        "byte_identical": true,
+        "failing_gates": [],
+        "isolated": false,
+        "json_parseable": true,
+        "returncode": 0
+      },
+      "pass": true
+    },
+    "k1136_audit_machine_r3": {
+      "detail": {
+        "19_gates_pass": true,
+        "byte_identical": true,
+        "failing_gates": [],
+        "isolated": true,
+        "json_parseable": true,
+        "returncode": 0
+      },
+      "pass": true
+    },
+    "k1136_bareiss_rootcheck_byte_identical": {
+      "detail": {
+        "returncode": 0
+      },
+      "pass": true
+    },
+    "k1136_bareiss_subroots_byte_identical": {
+      "detail": {
+        "returncode": 0
+      },
+      "pass": true
+    },
+    "k1136_bigint_reexec_byte_identical": {
+      "detail": {
+        "returncode": 0
+      },
+      "pass": true
+    },
+    "k1136_cert_assembly_byte_identical": {
+      "detail": {
+        "batch_rowset_equal": true,
+        "fresh_sha256": "dbcb0bae71b9e00570f66db601790380362c65aaad2e46911cd2b80119337004",
+        "published_cert_lines": 34845,
+        "published_sha256": "dbcb0bae71b9e00570f66db601790380362c65aaad2e46911cd2b80119337004",
+        "rows_total": 34843
+      },
+      "pass": true
+    },
+    "k1136_ext_a1_equals_a2": {
+      "detail": {
+        "per_move_rows_byte_identical": true,
+        "per_move_values_equal": true
+      },
+      "pass": true
+    },
+    "k1136_ext_a1_match": {
+      "detail": {
+        "fresh_total_sum": 3539166,
+        "label": "a1",
+        "line_order_note": {
+          "fresh": "ascending-numeric",
+          "note": "line order is a publisher transport detail, not a reproduction target; per-move values match exactly",
+          "published_a1_a2": "k1139 lexicographic / k1136,k1137 xargs-numeric"
+        },
+        "moves": 50,
+        "per_move_values_identical": true,
+        "pub_total_sum": 3539166,
+        "records": 50
+      },
+      "pass": true
+    },
+    "k1136_ext_a2_match": {
+      "detail": {
+        "fresh_total_sum": 3539166,
+        "label": "a2",
+        "line_order_note": {
+          "fresh": "ascending-numeric",
+          "note": "line order is a publisher transport detail, not a reproduction target; per-move values match exactly",
+          "published_a1_a2": "k1139 lexicographic / k1136,k1137 xargs-numeric"
+        },
+        "moves": 50,
+        "per_move_values_identical": true,
+        "pub_total_sum": 3539166,
+        "records": 50
+      },
+      "pass": true
+    },
+    "k1136_ext_b_match": {
+      "detail": {
+        "fresh_total_sum": 2564865,
+        "label": "b",
+        "line_order_note": {
+          "fresh": "ascending-numeric",
+          "note": "line order is a publisher transport detail, not a reproduction target; per-move values match exactly",
+          "published_a1_a2": "k1139 lexicographic / k1136,k1137 xargs-numeric"
+        },
+        "moves": 1,
+        "per_move_values_identical": true,
+        "pub_total_sum": 2564865,
+        "records": 1
+      },
+      "pass": true
+    },
+    "k1136_probe_repro": {
+      "detail": {
+        "ac0_nodes": 1054873,
+        "ac1_nodes": 882327,
+        "records": 8
+      },
+      "pass": true
+    },
+    "k1137_audit_machine_on_fresh_records": {
+      "detail": {
+        "19_gates_pass": true,
+        "byte_identical": true,
+        "failing_gates": [],
+        "json_parseable": true,
+        "note": "gates evaluated against our freshly regenerated records; pub byte-identity also holds because the audit master embeds no ms-dependent data",
+        "returncode": 0
+      },
+      "pass": true
+    },
+    "k1137_audit_machine_r1": {
+      "detail": {
+        "19_gates_pass": true,
+        "byte_identical": true,
+        "failing_gates": [],
+        "isolated": false,
+        "json_parseable": true,
+        "returncode": 0
+      },
+      "pass": true
+    },
+    "k1137_audit_machine_r2": {
+      "detail": {
+        "19_gates_pass": true,
+        "byte_identical": true,
+        "failing_gates": [],
+        "isolated": false,
+        "json_parseable": true,
+        "returncode": 0
+      },
+      "pass": true
+    },
+    "k1137_audit_machine_r3": {
+      "detail": {
+        "19_gates_pass": true,
+        "byte_identical": true,
+        "failing_gates": [],
+        "isolated": true,
+        "json_parseable": true,
+        "returncode": 0
+      },
+      "pass": true
+    },
+    "k1137_bareiss_rootcheck_byte_identical": {
+      "detail": {
+        "returncode": 0
+      },
+      "pass": true
+    },
+    "k1137_bareiss_subroots_byte_identical": {
+      "detail": {
+        "returncode": 0
+      },
+      "pass": true
+    },
+    "k1137_bigint_reexec_byte_identical": {
+      "detail": {
+        "returncode": 0
+      },
+      "pass": true
+    },
+    "k1137_cert_assembly_byte_identical": {
+      "detail": {
+        "batch_rowset_equal": true,
+        "fresh_sha256": "7bd64a47bed13c25fe069b0b3563c06081639cd3d2ad09b28a1e6c65a41fa61d",
+        "published_cert_lines": 19527,
+        "published_sha256": "7bd64a47bed13c25fe069b0b3563c06081639cd3d2ad09b28a1e6c65a41fa61d",
+        "rows_total": 19525
+      },
+      "pass": true
+    },
+    "k1137_ext_a1_equals_a2": {
+      "detail": {
+        "per_move_rows_byte_identical": true,
+        "per_move_values_equal": true
+      },
+      "pass": true
+    },
+    "k1137_ext_a1_match": {
+      "detail": {
+        "fresh_total_sum": 1399389,
+        "label": "a1",
+        "line_order_note": {
+          "fresh": "ascending-numeric",
+          "note": "line order is a publisher transport detail, not a reproduction target; per-move values match exactly",
+          "published_a1_a2": "k1139 lexicographic / k1136,k1137 xargs-numeric"
+        },
+        "moves": 42,
+        "per_move_values_identical": true,
+        "pub_total_sum": 1399389,
+        "records": 42
+      },
+      "pass": true
+    },
+    "k1137_ext_a2_match": {
+      "detail": {
+        "fresh_total_sum": 1399389,
+        "label": "a2",
+        "line_order_note": {
+          "fresh": "ascending-numeric",
+          "note": "line order is a publisher transport detail, not a reproduction target; per-move values match exactly",
+          "published_a1_a2": "k1139 lexicographic / k1136,k1137 xargs-numeric"
+        },
+        "moves": 42,
+        "per_move_values_identical": true,
+        "pub_total_sum": 1399389,
+        "records": 42
+      },
+      "pass": true
+    },
+    "k1137_ext_b_match": {
+      "detail": {
+        "fresh_total_sum": 1057553,
+        "label": "b",
+        "line_order_note": {
+          "fresh": "ascending-numeric",
+          "note": "line order is a publisher transport detail, not a reproduction target; per-move values match exactly",
+          "published_a1_a2": "k1139 lexicographic / k1136,k1137 xargs-numeric"
+        },
+        "moves": 1,
+        "per_move_values_identical": true,
+        "pub_total_sum": 1057553,
+        "records": 1
+      },
+      "pass": true
+    },
+    "k1137_probe_repro": {
+      "detail": {
+        "ac0_nodes": 288448,
+        "ac1_nodes": 261294,
+        "records": 8
+      },
+      "pass": true
+    },
+    "k1139_audit_machine_on_fresh_records": {
+      "detail": {
+        "19_gates_pass": true,
+        "byte_identical": true,
+        "failing_gates": [],
+        "json_parseable": true,
+        "note": "gates evaluated against our freshly regenerated records; pub byte-identity also holds because the audit master embeds no ms-dependent data",
+        "returncode": 0
+      },
+      "pass": true
+    },
+    "k1139_audit_machine_r1": {
+      "detail": {
+        "19_gates_pass": true,
+        "byte_identical": true,
+        "failing_gates": [],
+        "isolated": false,
+        "json_parseable": true,
+        "returncode": 0
+      },
+      "pass": true
+    },
+    "k1139_audit_machine_r2": {
+      "detail": {
+        "19_gates_pass": true,
+        "byte_identical": true,
+        "failing_gates": [],
+        "isolated": false,
+        "json_parseable": true,
+        "returncode": 0
+      },
+      "pass": true
+    },
+    "k1139_audit_machine_r3": {
+      "detail": {
+        "19_gates_pass": true,
+        "byte_identical": true,
+        "failing_gates": [],
+        "isolated": true,
+        "json_parseable": true,
+        "returncode": 0
+      },
+      "pass": true
+    },
+    "k1139_bareiss_rootcheck_byte_identical": {
+      "detail": {
+        "returncode": 0
+      },
+      "pass": true
+    },
+    "k1139_bareiss_subroots_byte_identical": {
+      "detail": {
+        "returncode": 0
+      },
+      "pass": true
+    },
+    "k1139_bigint_reexec_byte_identical": {
+      "detail": {
+        "returncode": 0
+      },
+      "pass": true
+    },
+    "k1139_cert_assembly_byte_identical": {
+      "detail": {
+        "batch_rowset_equal": true,
+        "fresh_sha256": "089e175d781dbbc620b3dce7733dc29993d5bd686670e047591a968917e6a6d1",
+        "published_cert_lines": 48020,
+        "published_sha256": "089e175d781dbbc620b3dce7733dc29993d5bd686670e047591a968917e6a6d1",
+        "rows_total": 48018
+      },
+      "pass": true
+    },
+    "k1139_ext_a1_equals_a2": {
+      "detail": {
+        "per_move_rows_byte_identical": true,
+        "per_move_values_equal": true
+      },
+      "pass": true
+    },
+    "k1139_ext_a1_match": {
+      "detail": {
+        "fresh_total_sum": 3515506,
+        "label": "a1",
+        "line_order_note": {
+          "fresh": "ascending-numeric",
+          "note": "line order is a publisher transport detail, not a reproduction target; per-move values match exactly",
+          "published_a1_a2": "k1139 lexicographic / k1136,k1137 xargs-numeric"
+        },
+        "moves": 58,
+        "per_move_values_identical": true,
+        "pub_total_sum": 3515506,
+        "records": 58
+      },
+      "pass": true
+    },
+    "k1139_ext_a2_match": {
+      "detail": {
+        "fresh_total_sum": 3515506,
+        "label": "a2",
+        "line_order_note": {
+          "fresh": "ascending-numeric",
+          "note": "line order is a publisher transport detail, not a reproduction target; per-move values match exactly",
+          "published_a1_a2": "k1139 lexicographic / k1136,k1137 xargs-numeric"
+        },
+        "moves": 58,
+        "per_move_values_identical": true,
+        "pub_total_sum": 3515506,
+        "records": 58
+      },
+      "pass": true
+    },
+    "k1139_ext_b_match": {
+      "detail": {
+        "fresh_total_sum": 2808991,
+        "label": "b",
+        "line_order_note": {
+          "fresh": "ascending-numeric",
+          "note": "line order is a publisher transport detail, not a reproduction target; per-move values match exactly",
+          "published_a1_a2": "k1139 lexicographic / k1136,k1137 xargs-numeric"
+        },
+        "moves": 1,
+        "per_move_values_identical": true,
+        "pub_total_sum": 2808991,
+        "records": 1
+      },
+      "pass": true
+    },
+    "k1139_probe_repro": {
+      "detail": {
+        "ac0_nodes": 1416679,
+        "ac1_nodes": 1226804,
+        "records": 8
+      },
+      "pass": true
+    },
+    "tamper1_cert_body_fail_closed": {
+      "detail": {
+        "audit_returncode": 1,
+        "bareiss_rootcheck_returncode_secondary": 0,
+        "failing_gates": [
+          "g16_third_method_traversal_pass",
+          "g17_three_method_aggregate_agreement"
+        ],
+        "note": "bareiss --root-check only inspects root-line-derived data and returned 0 here; the audit machine's g16 full-tree traversal is what catches the tampered strategy row (defense in depth)",
+        "offset": 300007,
+        "xor": "0x01"
+      },
+      "pass": true
+    },
+    "tamper2_input_pin_fail_closed": {
+      "detail": {
+        "audit_returncode": 1,
+        "failing_gates": [
+          "g01_k1086_master_sha256_pin"
+        ],
+        "file": ".input-k1086.json",
+        "offset": 1111,
+        "xor": "0x01"
+      },
+      "pass": true
+    },
+    "tamper3_summary_node_fail_closed": {
+      "detail": {
+        "audit_returncode": 1,
+        "change": "ext-summary-a1 move-1 nodes 2757->2758",
+        "failing_gates": [
+          "g11_a1_a2_per_move_node_exact_repeat"
+        ]
+      },
+      "pass": true
+    }
+  },
+  "gates_ordered": [
+    "g_pin_published_61_files",
+    "k1136_audit_machine_on_fresh_records",
+    "k1136_audit_machine_r1",
+    "k1136_audit_machine_r2",
+    "k1136_audit_machine_r3",
+    "k1136_bareiss_rootcheck_byte_identical",
+    "k1136_bareiss_subroots_byte_identical",
+    "k1136_bigint_reexec_byte_identical",
+    "k1136_cert_assembly_byte_identical",
+    "k1136_ext_a1_equals_a2",
+    "k1136_ext_a1_match",
+    "k1136_ext_a2_match",
+    "k1136_ext_b_match",
+    "k1136_probe_repro",
+    "k1137_audit_machine_on_fresh_records",
+    "k1137_audit_machine_r1",
+    "k1137_audit_machine_r2",
+    "k1137_audit_machine_r3",
+    "k1137_bareiss_rootcheck_byte_identical",
+    "k1137_bareiss_subroots_byte_identical",
+    "k1137_bigint_reexec_byte_identical",
+    "k1137_cert_assembly_byte_identical",
+    "k1137_ext_a1_equals_a2",
+    "k1137_ext_a1_match",
+    "k1137_ext_a2_match",
+    "k1137_ext_b_match",
+    "k1137_probe_repro",
+    "k1139_audit_machine_on_fresh_records",
+    "k1139_audit_machine_r1",
+    "k1139_audit_machine_r2",
+    "k1139_audit_machine_r3",
+    "k1139_bareiss_rootcheck_byte_identical",
+    "k1139_bareiss_subroots_byte_identical",
+    "k1139_bigint_reexec_byte_identical",
+    "k1139_cert_assembly_byte_identical",
+    "k1139_ext_a1_equals_a2",
+    "k1139_ext_a1_match",
+    "k1139_ext_a2_match",
+    "k1139_ext_b_match",
+    "k1139_probe_repro",
+    "tamper1_cert_body_fail_closed",
+    "tamper2_input_pin_fail_closed",
+    "tamper3_summary_node_fail_closed"
+  ],
+  "interpretation_guard": "rows closed by this harness: 0 (this experiment closes no rows). REFUTED-D10 is not a LOSS proof. nodes/solved counts are never win/loss. The standard 11x11 emptied board, two-stone roots {49,60}/{59,60}, S2 {59,60}, classes 1/2/4 are all UNKNOWN. Residual rows and pool P^parallel 120,416 unchanged.",
+  "missing_parts": [],
+  "parallelism": {
+    "extraction_workers": 2,
+    "reason": "2-core sandbox; modest CPU use per lane policy"
+  },
+  "reproduction_targets": {
+    "byte_targets": "cert 3x (SHA-256), bigint-verification 3x, bareiss-root-check 3x, bareiss-stats 3x, audit master 3x (r1/r2/r3 + fresh-data substitution run)",
+    "excluded": "ms / wall-clock fields (timing-dependent)",
+    "value_targets": "probe deterministic fields, ext-summary a1/a2/b deterministic fields (per-move; ms excluded, publisher line order recorded and excluded)"
+  },
+  "schema": "n11-fold29-win8-cert-extract-ext-second-verification-20261120-v1",
+  "status": "PASS"
+}

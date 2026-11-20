@@ -1,0 +1,164 @@
+{
+  "batteries": {
+    "b1": {
+      "environment": "working cwd HOME, default hash seed",
+      "master_fetch": "fetch_master.py (all_blob_pins_ok true, 61 files)"
+    },
+    "b2": {
+      "environment": "isolated cwd, isolated HOME, PYTHONHASHSEED=random",
+      "master_fetch": "fetch_master.py (all_blob_pins_ok true, 61 files)"
+    }
+  },
+  "experiment": "n11-fold29-cert-extract-ext2-pristine-reexec-third-verification-20261120",
+  "gate_count": 20,
+  "gates": {
+    "g_b1_audit_byte_identical_with_published": {
+      "detail": {
+        "bytes": 15549,
+        "sha256": "cf6a26abf0a459bcfb42bbb2d649ace5d3d1f1a5aee63a01af1de8b79d6a145f"
+      },
+      "pass": true
+    },
+    "g_b1_part_k1136": {
+      "detail": {
+        "gates": 13
+      },
+      "pass": true
+    },
+    "g_b1_part_k1137": {
+      "detail": {
+        "gates": 13
+      },
+      "pass": true
+    },
+    "g_b1_part_k1139": {
+      "detail": {
+        "gates": 13
+      },
+      "pass": true
+    },
+    "g_b1_part_pin": {
+      "detail": {
+        "gates": 1
+      },
+      "pass": true
+    },
+    "g_b1_part_tampers": {
+      "detail": {
+        "gates": 3
+      },
+      "pass": true
+    },
+    "g_b2_audit_byte_identical_with_published": {
+      "detail": {
+        "bytes": 15549,
+        "sha256": "cf6a26abf0a459bcfb42bbb2d649ace5d3d1f1a5aee63a01af1de8b79d6a145f"
+      },
+      "pass": true
+    },
+    "g_b2_part_k1136": {
+      "detail": {
+        "gates": 13
+      },
+      "pass": true
+    },
+    "g_b2_part_k1137": {
+      "detail": {
+        "gates": 13
+      },
+      "pass": true
+    },
+    "g_b2_part_k1139": {
+      "detail": {
+        "gates": 13
+      },
+      "pass": true
+    },
+    "g_b2_part_pin": {
+      "detail": {
+        "gates": 1
+      },
+      "pass": true
+    },
+    "g_b2_part_tampers": {
+      "detail": {
+        "gates": 3
+      },
+      "pass": true
+    },
+    "g_cross_battery_audit_identical": {
+      "detail": {
+        "files": [
+          "harness-audit.json"
+        ]
+      },
+      "pass": true
+    },
+    "g_cross_battery_parts_identical": {
+      "detail": {
+        "k1136.json": true,
+        "k1137.json": true,
+        "k1139.json": true,
+        "pin.json": true,
+        "tampers.json": true
+      },
+      "pass": true
+    },
+    "g_pin_published_audit_size": {
+      "detail": {
+        "bytes": 15549
+      },
+      "pass": true
+    },
+    "g_pin_published_fetch_master": {
+      "detail": {
+        "file": "fetch_master.py",
+        "sha256": "c3c4c9ffef5132e1657470d84b296b499ecd421b0342404ae32b0fd3ee64a114"
+      },
+      "pass": true
+    },
+    "g_pin_published_harness": {
+      "detail": {
+        "file": "verify_cert_extract_ext_second_20261120.py",
+        "sha256": "ca662e57053f504684c8dcc44f66c182d338978a3b9b70369a40754d9c59b276"
+      },
+      "pass": true
+    },
+    "g_pin_published_harness_audit": {
+      "detail": {
+        "file": "harness-audit.json",
+        "sha256": "cf6a26abf0a459bcfb42bbb2d649ace5d3d1f1a5aee63a01af1de8b79d6a145f"
+      },
+      "pass": true
+    },
+    "g_pin_published_pin_manifest": {
+      "detail": {
+        "file": "pin-manifest.json",
+        "sha256": "949868e21fdc124058c608925c101468622acca17702e159f99fb03df09d3ae8"
+      },
+      "pass": true
+    },
+    "g_pin_published_readme": {
+      "detail": {
+        "file": "README.md",
+        "sha256": "6605abff82a8e47556ccf9688bf7b253c34c4d64e9178ae7a1d143adf3f85908"
+      },
+      "pass": true
+    }
+  },
+  "interpretation_guard": [
+    "This third verification closes no rows; residual rows and pool 120,416 are unchanged.",
+    "WIN8-D10 certificates apply only to the game tree of the stated 8-stone root.",
+    "REFUTED-D10 is not a LOSS proof.",
+    "Nodes/solved counts are never read as win/loss.",
+    "The standard 11x11 emptied board, two-stone roots {49,60}/{59,60}, S2 {59,60} and classes 1/2/4 remain UNKNOWN."
+  ],
+  "reproduction_targets": {
+    "harness_audit_oracle_sha256": "cf6a26abf0a459bcfb42bbb2d649ace5d3d1f1a5aee63a01af1de8b79d6a145f",
+    "published_ext2_dir": "research/experiments/n11-fold29-win8-cert-extract-ext-second-verification-20261120",
+    "published_ext2_fetch_commit": "1c42dcf25c78540033c5ec08c00952e4a939a8ee",
+    "publisher_master_pin_commit": "28d223a2dd254b8a85cc342dff3f4bd801d1b31f"
+  },
+  "schema": "k1166-fold29-cert-extract-third-verification-record-v1",
+  "status": "PASS"
+}
