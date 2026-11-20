@@ -55,6 +55,12 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/ALGEBRAIC_ROUTE.md
   role: source
   note: 放物面上のcap・反転平面3-arcへの再定式化
+- path: research/experiments/finite-field-kyouen-20261120/CONVERSE_REFUTED.md
+  role: source
+  note: 逆の反証（41反例）
+- path: research/experiments/finite-field-kyouen-20261120/scripts/exhaustive_converse.py
+  role: verifier
+  note: 全数探索による反例発見
 - path: research/experiments/finite-field-kyouen-20261120/CONVERSE_RESULT.md
   role: source
   note: 定理の逆の検証（300超グラフ）
