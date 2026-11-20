@@ -3,6 +3,7 @@ id: K0934
 kind: proposition
 status: proved
 title: 制限ラダーF(w,h;n)第一stretch-w法則の全称決定（LAD-GEN・open class完全解決）
+aliases: []
 relations:
   - depends_on: [K0928, K0931, K0933]
   - connects: [K0929, K0930, K0932]

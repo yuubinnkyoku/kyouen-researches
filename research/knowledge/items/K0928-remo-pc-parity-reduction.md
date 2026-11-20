@@ -3,6 +3,7 @@ id: K0928
 kind: proposition
 status: proved
 title: 一様盤P(C)のpot定式化と偶奇ストレッチ・パリティ定理・U/V縮約定理（全称）
+aliases: []
 relations:
   - depends_on: [K0859]
   - connects: [K0919, K0922, K0926]

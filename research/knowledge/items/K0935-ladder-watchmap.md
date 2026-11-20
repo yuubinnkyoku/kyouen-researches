@@ -3,6 +3,7 @@ id: K0935
 kind: proposition
 status: proved
 title: 監視位置のラダー境界越え写像（WATCH-MAP）とストレッチ間死亡判定の合成
+aliases: []
 relations:
   - depends_on: [K0934]
   - connects: [K0931, K0933]

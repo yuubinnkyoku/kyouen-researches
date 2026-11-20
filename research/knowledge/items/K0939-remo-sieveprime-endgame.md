@@ -3,6 +3,7 @@ id: K0939
 kind: proposition
 status: proved
 title: END-SIEVE（t=0エンドゲームの約数篩）とSIEVE-PRIME全称証明・双子法則LAW1/LAW2の完全iff全称完結
+aliases: []
 relations:
   - depends_on: [K0928, K0934, K0935, K0937]
   - connects: [K0929, K0931, K0933, K0936, K0922, K0919]

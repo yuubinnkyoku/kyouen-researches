@@ -3,6 +3,7 @@ id: K0941
 kind: proposition
 status: proved
 title: 合成NのV(m)/U(m)完全決定（LADDER-ONLY・死の二分法・E-game閉包・ラベル合成）と全m値の純算術化
+aliases: []
 relations:
   - depends_on: [K0928, K0934, K0935, K0937, K0939]
   - connects: [K0929, K0931, K0933, K0936, K0922, K0919, K0943]

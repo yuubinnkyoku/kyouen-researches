@@ -3,6 +3,7 @@ id: K0943
 kind: proposition
 status: proved
 title: ladder監視状態のO(1)閉形式（STATE-CF）・死亡状態閉形式（DS-CF）・p²崩壊定理（P2）− K0941レジューム(i)完成
+aliases: []
 relations:
   - depends_on: [K0937, K0934, K0941, K0939]
   - connects: [K0929, K0931, K0933, K0942]

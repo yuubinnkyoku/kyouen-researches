@@ -3,6 +3,7 @@ id: K0950
 kind: proposition
 status: proved
 title: σ_Z値1軌跡の素数対への完全還元（HIT-ARITH・Y-FACTOR）と剰余死刑令P-KILL・PAIR-2/PAIR-3・M-SQ（K0946次課題4/5の部分解決）
+aliases: []
 relations:
   - depends_on: [K0946, K0948, K0949]
   - connects: [K0939, K0941, K0945]

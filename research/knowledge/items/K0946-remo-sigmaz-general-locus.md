@@ -3,6 +3,7 @@ id: K0946
 kind: proposition
 status: proved
 title: σ_Z(M,·) 値1軌跡の一般構造（RUN-UNIV・ONE-CHAR-GENERAL・EXCL-1/2・M1-EMPTY・DEG）と素数M法則（PRIME-M・PARITY・EXCL-1はK0948/K0949で全称証明）
+aliases: []
 relations:
   - depends_on: [K0941, K0945]
   - connects: [K0937, K0943, K0948, K0949]

@@ -3,6 +3,7 @@ id: K0926
 kind: proposition
 status: proved
 title: プラトー全称化 E6U、S(C,r) = S(C,C) = P(C)（すべての C >= 1, r >= C）。補題CAS（零石カスケード）と合流カップリングによる全称証明で、K0919 E6 の有限観察（C <= 24 機械）を解決し、P(C) を r 非依存の普遍関数として正当化。系として有界 witness 窓 [1,r-1] の生存者列は P(1..r-1) で、K0925 有界 witness 予想は窓形式「Q(r) の各真約数 d に対し C in [1,r-1] で S(C+d,r) != P(C) が存在」と同値。
+aliases: []
 relations:
   - depends_on: [K0859, K0919, K0925]
   - connects: [K0924]

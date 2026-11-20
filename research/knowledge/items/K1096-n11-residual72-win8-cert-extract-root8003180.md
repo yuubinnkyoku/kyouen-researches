@@ -4,6 +4,7 @@ title: 残余72行 WIN8-D10 root 00000000000000003800000008003180 の完全勝�
 kind: computation
 status: computed
 topics: [search-methods, certificates, geometry]
+aliases: []
 relations:
 - type: depends_on
   target: K1086

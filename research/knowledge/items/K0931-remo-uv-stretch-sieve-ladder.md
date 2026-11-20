@@ -3,6 +3,7 @@ id: K0931
 kind: proposition
 status: mixed
 title: U/V縮約ゲームのstretch-2構造定理・双子法則のmod 6全称決着・統一重量ラダー
+aliases: []
 relations:
   - depends_on: [K0928, K0929]
   - connects: [K0919, K0922, K0923, K0926]

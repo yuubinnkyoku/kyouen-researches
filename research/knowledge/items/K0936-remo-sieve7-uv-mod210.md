@@ -3,6 +3,7 @@ id: K0936
 kind: proposition
 status: proved
 title: SIEVE7-U/V全称証明（stretch-5/6監視追跡の合成）と双子法則のmod 210全解決
+aliases: []
 relations:
   - depends_on: [K0934, K0935]
   - connects: [K0931, K0933]

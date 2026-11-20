@@ -3,6 +3,7 @@ id: K0949
 kind: proposition
 status: proved
 title: E状態リレー還元（RELAY-REDUCE）によるσ_Z値1軌跡の算術還元とPRIME-M・PARITYの全称証明（SIMPLE-CHAR）
+aliases: []
 relations:
   - depends_on: [K0939, K0941, K0946, K0948]
   - connects: [K0943, K0945]

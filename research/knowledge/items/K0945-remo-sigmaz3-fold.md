@@ -3,6 +3,7 @@ id: K0945
 kind: proposition
 status: proved
 title: σ_Z(3,K)のfold分解（RUN-3・FOLD）・値1位置の全称特徴付け（ONE-CHAR）・K≡2 (mod 4) 非存在（A2-NEVER）・run-bump高速算（FAST）
+aliases: []
 relations:
   - depends_on: [K0941, K0937]
   - connects: [K0943, K0928, K0939]

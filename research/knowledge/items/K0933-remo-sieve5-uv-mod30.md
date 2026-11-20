@@ -3,6 +3,7 @@ id: K0933
 kind: proposition
 status: mixed
 title: SIEVE5-U/V全称証明・双子法則のspf∈{3,5}類(mod 30)全解決・ラダーopen class初の証明済みインスタンス
+aliases: []
 relations:
   - depends_on: [K0928, K0929, K0931]
   - connects: [K0919, K0922, K0926]

@@ -3,6 +3,7 @@ id: K0948
 kind: proposition
 status: proved
 title: 一様E状態E(P;n,0)の零点の完全分類（U0-CLASSIFY）と系U0-NEVER・FIRST-NEVER・ZERO-SET（EXCL-1の全称定理化）
+aliases: []
 relations:
   - depends_on: [K0939, K0941, K0946]
   - connects: [K0937, K0945]

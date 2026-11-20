@@ -5,6 +5,7 @@ created: 2026-11-18
 kind: theorem
 status: proved
 tags: [two-token, vertical-fiber, z7, y5, grundy, universal, infinite-family]
+aliases: []
 relations:
   depends_on: [K0832, K0980, K0884]
   supports: [K0976]

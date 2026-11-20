@@ -3,6 +3,7 @@ id: K0951
 kind: proposition
 status: proved
 title: "一般bump-fold閉形式三分法（FOLD-GEN）・rung-2 fold構造とUのmod-5力学的篩（U-RUNG2-FOLD・EXCL-U-MOD5・U-RUNG2-FINAL）・Uセンサス2×10^5拡張"
+aliases: []
 relations:
   - depends_on: [K0941, K0945, K0948]
   - connects: [K0946, K0949, K0950]

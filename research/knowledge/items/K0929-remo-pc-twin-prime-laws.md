@@ -3,6 +3,7 @@ id: K0929
 kind: proposition
 status: proved
 title: 一様盤P(C)の双子素数法則（P(C)=1 は C 素数と同値、P(C)=C-1 は C+1 素数と同値）
+aliases: []
 relations:
   - depends_on: [K0859, K0922]
   - connects: [K0919, K0926, K0928, K0937, K0939]
