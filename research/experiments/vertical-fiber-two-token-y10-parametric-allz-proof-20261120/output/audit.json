@@ -1,0 +1,106 @@
+{
+  "checks": {
+    "C1": {
+      "bad": 0,
+      "desc": "raw both engines vs cand10 z=0..14 x=10..29 R<=x+z+46",
+      "points": 22050
+    },
+    "C11": {
+      "bad": 0,
+      "desc": "raw census anchor z=0..79 x=10..70 R<=x+z+12, both engines",
+      "points": 902800
+    },
+    "C12": {
+      "bad": 0,
+      "desc": "deep closed grid z=0..120 x=10..120 R<=x+z+16",
+      "points": 1893771
+    },
+    "C1b": {
+      "bad": 0,
+      "desc": "single_token/y=9-child/x=10 merger raw anchors",
+      "points": 42473
+    },
+    "C2": {
+      "bad": 0,
+      "desc": "closed identity grid z=0..48 x=10..56 R<=x+z+40 (+merge,tail)",
+      "points": 223391
+    },
+    "C2b": {
+      "bad": 0,
+      "desc": "deep tail identity rows z in {60..400} x=10..60(step5) R<=x+z+30",
+      "points": 18700
+    },
+    "C3": {
+      "bad": 0,
+      "desc": "option decomposition vs raw child enumeration",
+      "points": 1065
+    },
+    "C4": {
+      "bad": 0,
+      "confluence_bad": 0,
+      "desc": "type machine box +/-60, clip 22/sentinel 23, confluence",
+      "identity_bad": 0,
+      "points": 626145,
+      "types": 121461
+    },
+    "C4t": {
+      "desc": "tightness probe clip 21/sentinel 22 (not in bad total)",
+      "first_violation": [
+        60,
+        84,
+        84
+      ],
+      "points": 626145,
+      "violations_at_clip21": 4736
+    },
+    "C7": {
+      "bad": 0,
+      "desc": "seeded far probes 200k, seed 20261130, z,x<=3000",
+      "points": 200000
+    },
+    "C8": {
+      "bad": 0,
+      "desc": "boundary manifolds z<=3000, dx in [-23,14], tail window",
+      "points": 788454
+    },
+    "C9": {
+      "bad": 0,
+      "desc": "v-space shell sweeps [61,64],[89,92],[117,120]",
+      "points": 920502
+    }
+  },
+  "checks_run": [
+    "C1",
+    "C11",
+    "C12",
+    "C1b",
+    "C2",
+    "C2b",
+    "C3",
+    "C4",
+    "C4t",
+    "C7",
+    "C8",
+    "C9"
+  ],
+  "corollaries": {
+    "merge_below_diagonal": {
+      "bad": 0,
+      "claim": "x<=z-11 => H == single_token(x+10,z,R)",
+      "points": 1494591
+    },
+    "tail": {
+      "bad": 0,
+      "claim": "R>=x+z+11 => H == (x+10)%2",
+      "points": 274835
+    }
+  },
+  "experiment": "vertical-fiber-two-token-y10-parametric-allz-proof-20261120",
+  "family": "H(R;(x,10);z), z>=0, x>=10, R>=0",
+  "overall": "PASS",
+  "stage": "part1 (all part-1 checks incl. the C11 raw census anchor PASS; C1d published-slice anchors and the census_rows.py double-recursion census file pending as part2; promotion deferred until the full 12-check machine passes)",
+  "total_bad": 0,
+  "total_points": 6265496,
+  "type_count": 123543,
+  "verifier_sha256": "9fbaa013f8440a294e8bd6e4559ef23970f50b827189300b6af5728bdc2709e2"
+}
