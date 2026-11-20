@@ -892,3 +892,308 @@ need(gate19['detail']['fold18_sha256'] == PIN256['fold18/output/win8-root0090101
 cert_recd = k1123['recorded']['certificate']
 cert_bytes = open(f'{W}/{CERT_RELPATH}', 'rb').read()
 need(hashlib.sha256(cert_bytes).hexdigest() == cert_recd['sha256'] == PIN256[CERT_RELPATH], 'k1123 cert sha256')
+need(cert_recd['bytes'] == len(cert_bytes) == 855258, 'k1123 cert bytes')
+need(cert_recd['rows'] == 23621, 'k1123 cert rows')
+cert_lines = cert_bytes.decode().splitlines()
+need(cert_lines[0] == 'n11-terminal-strategy-v1 original_first_WIN8 second_to_move_LOSS', 'k1123 cert header')
+need(cert_lines[1] == 'root ' + ROOT_HEX, 'k1123 cert root line')
+need(len(cert_lines) - 2 == 23621, 'k1123 cert row count')
+data_rows = cert_lines[2:]
+need(all(len(x.split(' ')) == 2 and len(x.split(' ')[0]) == 32 for x in data_rows), 'k1123 cert row format')
+need(data_rows == sorted(data_rows) and len(set(data_rows)) == len(data_rows), 'k1123 cert rows sorted unique')
+tm = k1123['recorded']['third_method']
+need(tm['root_first_moves'] == 54 and tm['terminal_count'] == 7516 and tm['terminal_range'] == [14, 18]
+     and tm['visited_states'] == 49094 and tm['winner_states'] == 31623 and tm['loser_states'] == 9955
+     and tm['loser_reply_edges'] == 43650, 'k1123 third-method aggregate')
+
+# ---------- k1123 geometry independent rederivation ----------
+mask = int(ROOT_HEX, 16)
+need(popcount(mask) == 8, 'root 8 stones')
+need(unsafe_quadruples(mask) == 0, 'root safe')
+need(canon_int(mask) == mask, 'root D4 canonical')
+lmv = legal_moves_of(mask)
+need(len(lmv) == 54, 'root legal move count rederivation 54')
+print('k1123 certificate record verified: 19/19 gates, sha, header, geometry, mobility 54')
+
+# ---------- K1097 refsolve claim crosscheck ----------
+k1097 = load('k1097/output/safe8-refuted50-refsolve-20261120.json')
+need(k1097['status'] == 'refsolve-computed', 'k1097 status')
+need(len(k1097['gates']) == 27 and all(g['ok'] for g in k1097['gates']), 'k1097 gates all ok')
+foot = k1097['win16_intrinsic_footprints']
+need(ROOT_HEX in foot, 'k1097 footprint has root')
+need(foot[ROOT_HEX]['intrinsic_equals_claimed'] is True, 'root intrinsic == claimed')
+need(sorted(foot[ROOT_HEX]['claimed']) == CLAIM, 'footprint claimed == K1123 claim (K1097 record)')
+need(sorted(foot[ROOT_HEX]['intrinsic']) == CLAIM, 'footprint intrinsic == K1123 claim (K1097 record)')
+need(len(foot) == 16, 'win16 footprint count')
+all_claims = []
+for r in foot:
+    need(len(foot[r]['claimed']) == len(set(foot[r]['claimed'])), 'claimed rows unique per root')
+    all_claims.extend(foot[r]['claimed'])
+need(len(all_claims) == 49 and len(set(all_claims)) == 49, 'win16 claims total 49 distinct')
+claim_count = {h: 0 for h in set(all_claims)}
+for r in foot:
+    for h in foot[r]['claimed']: claim_count[h] += 1
+need(all(v == 1 for v in claim_count.values()), 'win16 claims exactly-once partition')
+need(all(h in residualSet32 for h in CLAIM), 'claim rows inside residual32')
+scope1 = k1097['scope1_refsolve_residual23']
+need(ROOT_HEX not in [s['root'] for s in scope1['greedy_selection']], 'root not in residual23 greedy selection')
+residual23 = k1097['exclusion']['residual23_rows']
+need(sorted(residual23) == residual23 and len(residual23) == 23, 'residual23 sorted')
+need(not (set(residual23) & set(all_claims)), 'residual23 disjoint from win16 claims')
+need(not (set(residual23) & set(CLAIM)), 'residual23 untouched by this receipt')
+print('K1097 refsolve record crosscheck verified: 27 gates, footprint partition, plan untouched')
+
+# ---------- WIN8 receipt geometry: two independent methods ----------
+# Method A: fold-chain convention -- 8 D4 images x C(8,2) two-stone removals.
+rootA = set()
+for t in range(8):
+    image = transform(mask, t)
+    sb = bits_of(image)
+    for b1, b2 in combinations(sb, 2):
+        c = canon_int(image ^ (1 << b1) ^ (1 << b2))
+        rootA.add(format(c, '032x'))
+# Method B: refsolve coverage_of82 convention -- C(8,6)=28 six-stone subsets.
+rootB = set()
+stones = bits_of(mask)
+for six in combinations(stones, 6):
+    smask = 0
+    for b in six: smask |= 1 << b
+    rootB.add(canon_hex(smask))
+need(rootA == rootB, 'methods A and B canonical row sets equal (D4 equivariance)')
+need(len(rootB) <= 28, 'subset count bound')
+opsA = 8 * 28
+print('WIN8 receipt geometry verified: method A (%d ops) == method B (%d subsets), %d canonical rows' % (opsA, 28, len(rootB)))
+
+# classification of every canonical row of the root's 6-stone subgeometry
+closedHistorical = set()
+closedHistorical |= old66 | oldGlobal | prior
+closedHistorical |= firstClosed | set(rows23) | set(rows4) | set(rows56)
+closedHistorical |= set(rows7) | set(rows8) | set(rows9) | set(rows13_16) | set(rows10)
+closedHistorical |= set(rows11) | set(rows12) | set(rows13)
+closedHistorical |= set(rows14)
+closedHistorical |= set(rows15)
+closedHistorical |= set(rows16)
+closedHistorical |= set(rows17)
+closedHistorical |= set(rows18)
+closedHistorical |= set(rows19)
+closedHistorical |= set(rows20)
+closedHistorical |= set(rows21)
+closedHistorical |= set(rows22)
+row_class = {}
+for h in sorted(rootB):
+    if h in open32: row_class[h] = 'open-frontier'
+    elif h in closedHistorical: row_class[h] = 'closed-before-this-receipt'
+    elif h in wl: row_class[h] = 'worklist-but-not-open'   # impossible if chain is exact
+    else: row_class[h] = 'not-in-worklist'
+for h, cls in row_class.items():
+    need(cls != 'worklist-but-not-open', 'chain inconsistency on row ' + h)
+
+rootRows = sorted(h for h in rootA if h in open32)
+need(len(rootRows) >= 1, 'WIN8 receipt closes no open row')
+need(rootRows == sorted(set(rootRows)), 'rederived rows unique')
+targetRows_new = sorted(h for h in rootRows if h in residualSet32)
+need(targetRows_new == CLAIM, 'rederived target rows == published claim')
+extra_rows = [h for h in rootRows if h not in residualSet32]
+closedCost = sum(open32[h][0] for h in rootRows)
+
+# apply the receipt
+deltas = {}
+for h in rootRows:
+    for p in row_parents_hex(h): deltas[p] = deltas.get(p, 0) + 1
+pdeltas = []
+for p in sorted(deltas):
+    before = inc[p]; after = before - deltas[p]
+    pdeltas.append({'parent_hex': p, 'classes': parents[p]['classes'], 'rows_before': before, 'rows_closed': deltas[p], 'rows_after': after})
+for h in rootRows:
+    del open32[h]
+    for p in row_parents_hex(h): inc[p] -= 1
+
+# frontier after
+needed_rows = [h for h in open32 if demand(h)['c1'] == 0]
+frontier_after = {
+  'solved_s6_in_manifest': 1718 + len(rootRows),
+  'remaining_s5_orbits': sum(1 for v in inc.values() if v > 0),
+  'unique_remaining_s6': len(open32),
+  'sum_remaining_cost': sum(v[0] for v in open32.values()),
+  's6_needed_by_open_classes': len(needed_rows),
+  'cost_needed_by_open_classes': sum(open32[h][0] for h in needed_rows),
+  'parent_row_incidence': sum(inc.values()),
+}
+
+# five-parent target accounting
+newTargetAll = set(targetRows_new)
+closedAllNew = 80 + len(newTargetAll)
+residualAfter = sorted(residualSet32 - newTargetAll)
+need(len(residualAfter) == 32 - len(targetRows_new), 'residual accounting')
+
+def coverage_rows(rootRows, wl):
+    rr_out = []
+    for h in sorted(rootRows):
+        rr_out.append({'row_hex': h, 'cost': wl[h][0], 'category': wl[h][1], 'demand': demand(h),
+                       'parents': sorted(row_parents_hex(h)), 'receipt': {'root': ROOT_HEX, 'verdict': 'WIN8-D10'}})
+    return rr_out
+
+result = {
+  'schema': 'n11-five-parent-win8-root208090020004-receipt-fold-20261120-v1',
+  'date': '2026-11-20', 'status': 'fold-complete', 'receipt_ordinal': 'thirtieth (fold23, thirteenth WIN8 receipt fold)',
+  'single_owner_note': 'research/log/2026-11-20-n11-fold23-win8-root208090020004-single-owner-note.md',
+  'previous_fold': {'record': 'research/experiments/n11-residual32-win8-receipt-fold-root840500-20261120/output/win8-root840500-receipt-fold-20261120.json (sha256 f6e011f4a16e6fe257694c3cd3ed90490623f84e1c24113c3f55df68ba3e3488)',
+                    'frontier_after': fa22},
+  'certificate_source': {
+    'record': 'research/experiments/n11-residual48-win8-cert-extract-root208090020004-20261120 (K1123: WIN8 root certificate extract + triple verification, 19 gates; 54-mobility 3-claim WIN8-D10 candidate on the fresh-probe basis, fresh probes 350792/442824 matching the published K1119 total 793616)',
+    'verification_sha256': PIN256['k1123/output/win8-cert-extract-verification-20261120.json'],
+    'certificate_path': 'research/experiments/n11-residual48-win8-cert-extract-root208090020004-20261120/certs/win8-root-00000000000020809002000480100000-20261120.n11',
+    'certificate_sha256': cert_recd['sha256'],
+    'fresh_probe_basis': 'research/experiments/n11-residual48-win8-cert-extract-root208090020004-20261120/output/.input-k1119-log.md (published K1119 fresh-probe log; git blob 51bad3fac..., sha256 4d11ca89...; probe total 793616, pinned by K1123 g01/g02/g06/g08)',
+    'claims_record': 'research/experiments/n11-residual72-safe8-refuted50-refsolve-20261120/output/safe8-refuted50-refsolve-20261120.json (K1097; sha256 ' + PIN256['k1097/output/safe8-refuted50-refsolve-20261120.json'] + '; win16_intrinsic_footprints: intrinsic == claimed == 3 rows)',
+  },
+  'source_blob_pins': dict(PINS),
+  'source_sha256_pins': dict(PIN256),
+  'receipt_count': 1,
+  'receipts': [{
+      'root': ROOT_HEX, 'raw_root_hex': ROOT_HEX, 'receipt': 'thirtieth',
+      'stones': 8, 'verdict': 'WIN8-D10',
+      'legal_next_moves': 54,
+      'covered_s6_rows': rootRows,
+      'covered_five_parent_target_rows': targetRows_new,
+      'extra_s6_rows_not_in_target': extra_rows,
+      'unique_strategy_rows': 23621,
+      'certificate_sha256': cert_recd['sha256'],
+      'certificate_bytes': cert_recd['bytes'],
+      'closed_edge_cost': closedCost,
+      'affected_parents': len(pdeltas),
+      'parent_deltas': pdeltas,
+      'independent_verification': {
+        'extraction_and_triple': {'gates': 19, 'all_pass': True,
+          'methods': ['extraction self-check A1/A2/B byte-identical', 'BigInt 3x3 cofactor', 'Bareiss 4x4', 'python third-method exact traversal'],
+          'third_method_aggregates': tm},
+        'coverage_geometry_two_methods': {'d4_images_two_stone_removals_ops': opsA, 'c86_subsets': 28,
+          'canonical_row_sets_equal': True, 'canonical_rows': sorted(rootB)},
+        'cross_method_union_exact': True,
+        'source_record': 'research/experiments/n11-residual48-win8-cert-extract-root208090020004-20261120',
+      },
+  }],
+  'frontier_before': fa22,
+  'frontier_after': frontier_after,
+  'new_receipt_coverage': {
+    'unique_s6_rows': len(rootRows),
+    'closed_edge_cost': closedCost,
+    'rows': coverage_rows(rootRows, wl),
+  },
+  'six_stone_subgeometry_classification': {h: row_class[h] for h in sorted(rootB)},
+  'parent_closure': {
+    'fully_closed_parent_count': len(set(p['parent_hex'] for p in pdeltas if p['rows_after'] == 0)),
+    'affected_unique_parents': len(set(p['parent_hex'] for p in pdeltas)),
+  },
+  'five_parent_target_after': {
+    'closed_target_rows_total': closedAllNew,
+    'residual_target_rows': len(residualAfter),
+    'residual_row_hex_after': residualAfter,
+  },
+  'win_candidate_plan_impact': {
+    'note': 'Observation only. The K1086 probe classified 7 WIN8-D10 candidates (claims 4+4+4+3+3+3+2 = 23 rows) inside the K1097 plan (16 candidates, 49 rows, exactly-once partition) with 9 alternative roots (residual 23 rows). Fold11 retired root 8003180 (4 claimed rows), fold12 retired root 8005021 (3 claimed rows), fold13 retired root 9840004 (3 claimed rows), fold14 retired root 9090022 (4 claimed rows), fold15 retired root 120000038 (3 claimed rows), fold16 retired root 8890020 (4 claimed rows), fold17 retired root 22081000 (3 claimed rows), fold18 retired root 00901010 (3 claimed rows), fold19 retired root 1009000 (4 claimed rows), fold20 retired root 08d10000 (3 claimed rows), fold21 retired root 80880200 (3 claimed rows) and fold22 retired root 840500 (3 claimed rows); this receipt closes the 3 claimed rows of root 208090020004 (the last published WIN8-D10 candidate inside the same K1097 footprint win16 plan); the remaining 3 WIN8 candidates keep 49-4-3-3-4-3-4-3-3-4-3-3-3-3 = 6 claimed rows, the residual-23 alternative sweep plan is untouched: its rows are disjoint from every WIN16 claim, machine-checked.',
+    'retired_win_candidate_root': ROOT_HEX,
+    'rows_of_retired_root': CLAIM,
+    'retired_root_predecessor': '00000000000000801202000000840500',
+    'win16_candidates_remaining': 3,
+    'win16_claimed_rows_remaining': 6,
+    'residual23_untouched': True,
+  },
+  'verdict_join_summary': {
+    'join_basis': 'published fold22 chain frontier (single fresh rerun gate: the published fold22 machine executed pristine in an isolated W copy, byte-identical to the published fold22 record; the fold21 machine pristine rerun gate and the K1125 gate block re-run transitively inside it; fold10..fold21 upstream verified by SHA-256 pins and the full frontier chain recomputation per the adopted rerun-gate redesign) + K1123 triple-verified WIN8 certificate on the fresh-probe basis (probes match the published K1119 total 793616) + K1097 refsolve coverage footprints',
+    'receipt_root_is': 'certificate-backed WIN8-D10 (K1123: extraction self-check + BigInt 3x3 + Bareiss 4x4 + python third-method; independently re-audited 19-gate fresh-probe record)',
+  },
+  'controls': {
+    'base_frontier_recomputed': True,
+    'chain_frontiers_recomputed_each_step': True,
+    'fold10_record_chained_and_published_values_matched': True,
+    'fold10_frontier_6206_491497_recomputed_from_worklist': True,
+    'post_fold10_incidence_11810_recomputed': True,
+    'fold11_record_chained_and_published_values_matched': True,
+    'fold11_frontier_6201_491110_recomputed_from_worklist': True,
+    'post_fold11_incidence_11803_recomputed': True,
+    'fold12_record_chained_and_published_values_matched': True,
+    'fold12_frontier_6193_490526_recomputed_from_worklist': True,
+    'post_fold12_incidence_11790_recomputed': True,
+    'fold13_record_chained_and_published_values_matched': True,
+    'fold13_frontier_6184_489813_recomputed_from_worklist': True,
+    'post_fold13_incidence_11775_recomputed': True,
+    'fold14_record_chained_and_published_values_matched': True,
+    'fold14_frontier_6179_489440_recomputed_from_worklist': True,
+    'post_fold14_incidence_11765_recomputed': True,
+    'fold15_record_chained_and_published_values_matched': True,
+    'fold15_frontier_6173_488954_recomputed_from_worklist': True,
+    'post_fold15_incidence_11753_recomputed': True,
+    'fold16_record_chained_and_published_values_matched': True,
+    'fold16_frontier_6168_488575_recomputed_from_worklist': True,
+    'post_fold16_incidence_11743_recomputed': True,
+    'fold17_record_chained_and_published_values_matched': True,
+    'fold17_frontier_6161_488094_recomputed_from_worklist': True,
+    'post_fold17_incidence_11729_recomputed': True,
+    'fold18_record_chained_and_published_values_matched': True,
+    'fold18_frontier_6157_487800_recomputed_from_worklist': True,
+    'post_fold18_incidence_11721_recomputed': True,
+    'fold19_record_chained_and_published_values_matched': True,
+    'fold19_frontier_6152_487418_recomputed_from_worklist': True,
+    'post_fold19_incidence_11711_recomputed': True,
+    'fold20_record_chained_and_published_values_matched': True,
+    'fold20_frontier_6144_486819_recomputed_from_worklist': True,
+    'post_fold20_incidence_11701_recomputed': True,
+    'fold21_record_chained_and_published_values_matched': True,
+    'fold21_frontier_6136_486243_recomputed_from_worklist': True,
+    'post_fold21_incidence_11683_recomputed': True,
+    'fold22_record_chained_and_published_values_matched': True,
+    'fold22_frontier_6130_485759_recomputed_from_worklist': True,
+    'post_fold22_incidence_11671_recomputed': True,
+    'fold10_record_sha256_pin_verified': True,
+    'fold11_record_sha256_pin_verified': True,
+    'fold12_record_sha256_pin_verified': True,
+    'fold13_record_sha256_pin_verified': True,
+    'fold14_record_sha256_pin_verified': True,
+    'fold15_record_sha256_pin_verified': True,
+    'fold16_record_sha256_pin_verified': True,
+    'fold17_record_sha256_pin_verified': True,
+    'fold18_record_sha256_pin_verified': True,
+    'fold19_record_sha256_pin_verified': True,
+    'fold20_record_sha256_pin_verified': True,
+    'fold21_record_sha256_pin_verified': True,
+    'fold22_record_sha256_pin_verified': True,
+    'rerun_gate_redesign_adopted_single_predecessor_rerun': True,
+    'fold11_through_fold17_machine_recursive_reruns_replaced_by_sha_pins_and_chain_recomputation': True,
+    'fold20_machine_pristine_rerun_byte_identical': True,
+    'fold21_machine_pristine_rerun_byte_identical': True,
+    'fold22_machine_pristine_rerun_byte_identical': True,
+    'fold19_machine_pristine_rerun_rechecked_transitively_inside_fold20_rerun': True,
+    'fold20_machine_pristine_rerun_rechecked_transitively_inside_fold21_rerun': True,
+    'fold21_machine_pristine_rerun_rechecked_transitively_inside_fold22_rerun': True,
+    'all_chain_input_pins_verified_upfront': True,
+    'k1123_cert_19_gates_rechecked_and_bytes_verified': True,
+    'k1125_cert_gates_rechecked_inside_fold22_pristine_rerun': True,
+    'k1124_cert_gates_rechecked_inside_fold21_pristine_rerun': True,
+    'k1121_cert_gates_rechecked_inside_fold20_pristine_rerun': True,
+    'k1120_cert_gates_rechecked_inside_preverified_fold18_rerun': True,
+    'k1119_cert_gates_rechecked_inside_fold19_pristine_rerun': True,
+    'k1097_refsolve_27_gates_rechecked': True,
+    'coverage_rederived_from_d4_images_and_subsets_two_methods': True,
+    'rederived_target_rows_match_published_claim': True,
+    'all_receipt_rows_were_open_before': True,
+    'coverage_of_historical_closed_set_empty': True,
+    'win16_claim_partition_exactly_once_rechecked': True,
+    'legal_move_count_independently_rederived': True,
+    'certificates_sha256_verified': True,
+  },
+  'interpretation_guard': [
+    'WIN8-D10 proves a first-player win within depth 10 only from the eight-stone root of this receipt.',
+    'The receipt closes its S6 rows in the frontier through the published two-stone-removal cover convention (refsolve coverage_of82 / K1096 cover semantics); it proves nothing about the empty board or any two-stone root.',
+    'The closed rows are a bookkeeping closure of the five-parent depth-10 receipt chain, not a LOSS proof of the rows.',
+    'REFUTED-D10 witnesses are NOT LOSS proofs; node counts and solved counts are not win/loss readings.',
+    'The standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN.',
+  ],
+}
+os.makedirs(f'{W}/fold23/output', exist_ok=True)
+with open(f'{W}/{OUT}', 'w') as f:
+    json.dump(result, f, indent=1); f.write('\n')
+print(json.dumps({'status': result['status'], 'frontier_after': frontier_after,
+                  'closed_target_rows_total': closedAllNew, 'residual_target_rows': len(residualAfter),
+                  'rederived_rows': rootRows, 'target_rows': targetRows_new, 'extra_rows': extra_rows,
+                  'output': OUT, 'sha256': sha256_of(OUT)}, indent=1))
