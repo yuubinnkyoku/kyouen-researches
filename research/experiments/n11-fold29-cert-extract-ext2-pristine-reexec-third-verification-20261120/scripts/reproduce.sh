@@ -63,3 +63,6 @@ cd ..
 # deterministic record
 python3 scripts/assemble_third_record.py b1/run b2/run
 sha256sum output/third-verification.json
+python3 -m unittest discover -s tests -p 'test_part_gate_completeness.py'
+python3 scripts/verify_part_gate_completeness.py b1/run b2/run
+sha256sum output/part-gate-completeness.json
