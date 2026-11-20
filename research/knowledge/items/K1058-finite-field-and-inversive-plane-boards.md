@@ -52,6 +52,9 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/scripts/ag2_fast_target.py
   role: solver
   note: AG(2,q)の対称性利用高速完全探索
+- path: research/experiments/finite-field-kyouen-20261120/COVERING_BOUND.md
+  role: source
+  note: 被覆による上界が弱いことの分析
 - path: research/experiments/finite-field-kyouen-20261120/BOUND_GAP_ANALYSIS.md
   role: source
   note: 上界が達成されない理由の分析
@@ -453,7 +456,10 @@ second moment（`λ₂=q+1` は一様）は triple より弱い。直線制約�
 **上界が達成されない理由**：差は q=3,5,7 で 1,2,4 と広がる。
 AG(2,3) では6点部分集合84個**すべて**がサイズ4の円を完全に含むため、
 サイズ6の安全集合は存在しない（全数検査）。
-円の被覆構造が上界との差を生んでいると考えられるが、定量的な改善には至っていない。
+円の被覆構造が上界との差を生んでいると考えられるが、**被覆による上界は一般には弱い**：
+ランダムな k-部分集合に含まれるブロックの期待値 `E[f]` が 1 を超えるのは
+q=3 で k≈6、q=5 で k=9、q=7 で k≈25 であり、真値（q=5,7 で K=6）と大きく乖離する。
+被覆が効くのは盤が小さい q=3 のみである。
 
 AG(2,11) ではサイズ10,11,12 がいずれも不存在であることを完全探索で確認し、**K=9 が確定**した。
 
