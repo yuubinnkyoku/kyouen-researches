@@ -85,3 +85,26 @@ K 項目へ昇格する。
   (欠損行の正確な石数 0..3 で分割・sweep35 規約) で追分解する。
 - cap 600s 到達の INDET の conflicts は壁時計打ち切り (同一 CNF の
   再実行は同一軌跡を辿るが、打ち切り点は bit-exact ではない)。
+
+## 追記 (2026-11-20 高速レーン: takeover — 掃引再開・較正PASS・batchAB 実行中)
+
+- 前オーナーセッションの最終pushは 2026-11-15 17:55Z（records 5行: 陽性対照 SAT・
+  k3 直接INDET 3幅・c01 UNSAT で停止・以後5日間更新なし）。collision protocol に従い
+  着手前に最新mainを再取得した上で本掃引をtakeoverした（他レーンの同一 (w,m,q)=(4,22,5)
+  着手なしを確認済み）。
+- **較正 (takeover環境)**: 陽性対照 ctrl_4x20_c0k3p1 のCNFが byte-exact 再現
+  （md5 362034b210d89ed3a25d34072995f3a6・vars 9510/clauses 32976）し、
+  kissat 4.0.4（公式静的バイナリ・md5 3a5eba830aa6008a604fcc9bbe99a325）が
+  SAT / **375,415 conflicts bit-exact**（19.4s）。生成器・ソルバの決定性が本環境でも
+  同一軌跡であることを確認。
+- **sat4 k-aware x2上限の検証**: (4,21,5) c0k3p0 --x2=1 のCNFが旧sat4と k-aware版で
+  byte-identical（md5 13749780ebd7467aca0a7b2e3ea7e163・k=3では m-2 上限のまま）。
+  k=2 の --x2=21 (=m-1) は k-aware版でのみ生成可能（旧版はreject）を確認。
+  x2符号器の後方互換性と k=2 完全性修正が実働することを検証。
+- **実行方針 (takeoverセッション)**: 単一オーナー宣言
+  （inflight-claim-20261120-takeover.json）。1インスタンスずつ逐次・CAP=900s（壁時計）。
+  INDET は cap 到達の honest negative・不在主張ではない。既記録の c0k3p0/p1/p2 の
+  600s INDET は直接再試行せず x2 分割へ直行（m21 で同バケットが 2400s でも未決着
+  だった実績を尊重・無駄な cap 焼きを避ける）。batchAB（multi 6 + k2 22 + k1 22 +
+  k0 2・sweep22fast と同じ「安価なクラスを先に」順序）から着手し、決着順にbatch push・
+  records は append-only。
