@@ -52,6 +52,9 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/scripts/ag2_fast_target.py
   role: solver
   note: AG(2,q)の対称性利用高速完全探索
+- path: research/experiments/finite-field-kyouen-20261120/GROWTH_FIT.md
+  role: source
+  note: 成長率フィットの比較と信頼性評価
 - path: research/experiments/finite-field-kyouen-20261120/GROWTH_RATE.md
   role: source
   note: Kの成長率（q^0.33対2n）
@@ -299,6 +302,13 @@ AG(2,q) 側は q=8 で K=8（64点・556ブロック、サイズ9が不存在を
 
 K は 5, 5, 6, 6 とほとんど伸びず、上界との差は 1→3→4→7 と広がる。
 q=8 は K=7 を厳密決定（サイズ8が不存在、1,371,617 ノード）。q=9 はサイズ8の実在のみ確認し 8≤K≤17。
+
+**成長率**：q ≤ 8 の5点（K = 5,5,6,6,7）で log-log フィットすると `K ≈ 3.39·q^0.33` となるが、
+データ点が少なく成長率の主張としては弱い（線形フィットの SSE 0.419 に対しべき乗は 0.013 だが、
+実質的な情報は「K が 5 から 7 へ緩やかに増える」ことだけ）。
+対照的に整数格子は `K_n ≈ 2n`（線形）。密度 K/n は q=8 で反転平面 0.108 対 整数 0.234 と約2倍の差。
+初等的な数え上げ上界（triple, pair）はいずれも `O(q)` を与えるので、
+観測された K の小ささは単純な数え上げでは説明できない。
 
 ### 4. 層サイズの厳密公式（k ≤ 5）
 
