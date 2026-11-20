@@ -1,0 +1,255 @@
+{
+  "fresh_runs": {
+    "runA-same-cwd": {
+      "errors": 0,
+      "mismatches_vs_published": 0,
+      "nodes_total": 37454794,
+      "pilot_d6_controls": 132,
+      "records": 132,
+      "wall_seconds_present": true
+    },
+    "runB-isolated-cwd-home": {
+      "errors": 0,
+      "mismatches_vs_published": 0,
+      "nodes_total": 37454794,
+      "pilot_d6_controls": 132,
+      "records": 132,
+      "wall_seconds_present": true
+    },
+    "runC-same-cwd-hashseed-random": {
+      "errors": 0,
+      "mismatches_vs_published": 0,
+      "nodes_total": 37454794,
+      "pilot_d6_controls": 132,
+      "records": 132,
+      "wall_seconds_present": true
+    },
+    "runD-same-cwd-hashseed-0": {
+      "errors": 0,
+      "mismatches_vs_published": 0,
+      "nodes_total": 37454794,
+      "pilot_d6_controls": 132,
+      "records": 132,
+      "wall_seconds_present": true
+    }
+  },
+  "gates": [
+    {
+      "detail": {
+        "content_sha256_pins": 13,
+        "git_blob_pins": 1,
+        "pins_checked": 14
+      },
+      "name": "input-pin-gate",
+      "pass": true
+    },
+    {
+      "detail": {
+        "nodes_total": 37454794,
+        "probes_per_run": 132,
+        "runs": {
+          "runA-same-cwd": {
+            "errors": 0,
+            "mismatches_vs_published": 0,
+            "nodes_total": 37454794,
+            "pilot_d6_controls": 132,
+            "records": 132,
+            "wall_seconds_present": true
+          },
+          "runB-isolated-cwd-home": {
+            "errors": 0,
+            "mismatches_vs_published": 0,
+            "nodes_total": 37454794,
+            "pilot_d6_controls": 132,
+            "records": 132,
+            "wall_seconds_present": true
+          },
+          "runC-same-cwd-hashseed-random": {
+            "errors": 0,
+            "mismatches_vs_published": 0,
+            "nodes_total": 37454794,
+            "pilot_d6_controls": 132,
+            "records": 132,
+            "wall_seconds_present": true
+          },
+          "runD-same-cwd-hashseed-0": {
+            "errors": 0,
+            "mismatches_vs_published": 0,
+            "nodes_total": 37454794,
+            "pilot_d6_controls": 132,
+            "records": 132,
+            "wall_seconds_present": true
+          }
+        }
+      },
+      "name": "fresh-run-semantic-gate",
+      "pass": true
+    },
+    {
+      "detail": {
+        "canonical_sha256": "6297c646c32a0b1e0643f9f727fe712d1135dad15c0f5b0418ba8b3350596637",
+        "pairs": [
+          {
+            "audit_sha256": "6297c646c32a0b1e0643f9f727fe712d1135dad15c0f5b0418ba8b3350596637",
+            "byte_identical_to_published": true,
+            "pair": [
+              "runA-same-cwd",
+              "runB-isolated-cwd-home"
+            ],
+            "returncode": 0
+          },
+          {
+            "audit_sha256": "6297c646c32a0b1e0643f9f727fe712d1135dad15c0f5b0418ba8b3350596637",
+            "byte_identical_to_published": true,
+            "pair": [
+              "runC-same-cwd-hashseed-random",
+              "runB-isolated-cwd-home"
+            ],
+            "returncode": 0
+          },
+          {
+            "audit_sha256": "6297c646c32a0b1e0643f9f727fe712d1135dad15c0f5b0418ba8b3350596637",
+            "byte_identical_to_published": true,
+            "pair": [
+              "runD-same-cwd-hashseed-0",
+              "runB-isolated-cwd-home"
+            ],
+            "returncode": 0
+          }
+        ]
+      },
+      "name": "assemble-canonical-byte-gate",
+      "pass": true
+    },
+    {
+      "detail": {
+        "count": 2,
+        "variants": [
+          {
+            "fail_closed_message": true,
+            "name": "k1086-record-json-offset500",
+            "offset": 500,
+            "records_written": false,
+            "returncode": 1,
+            "tampered_sha256": "83520f33df362ebf65e4fa69c05252cf733457c835b9a112c4f7257bbf63425a",
+            "xor": "0x01"
+          },
+          {
+            "fail_closed_message": true,
+            "name": "k1095-probe-jsonl-offset300",
+            "offset": 300,
+            "records_written": false,
+            "returncode": 1,
+            "tampered_sha256": "b6cf0f8601c7d635fcc4ec5545743072842598ab335e43268098013834b068d1",
+            "xor": "0x01"
+          }
+        ]
+      },
+      "name": "tamper-fail-closed-gate",
+      "pass": true
+    }
+  ],
+  "interpretation_guard": {
+    "nodes_and_solved_counts_are_not_win_loss": true,
+    "refuted_d10_is_not_a_loss_proof": true,
+    "rows_closed": 0,
+    "standard_11x11_empty_board_unknown": true,
+    "two_stone_roots_unknown": "{49,60}/{59,60} and S2 {59,60} and classes 1/2/4 remain UNKNOWN",
+    "win8_d10_candidates_are_not_certificates": true
+  },
+  "pins": [
+    {
+      "kind": "sha256",
+      "match": true,
+      "name": "second-verification-machine",
+      "sha": "7f0729840a3cd6c8f3010cc16de4c5e9d8f19e8f81fa0b1687e64b9a0e8f0228"
+    },
+    {
+      "kind": "sha256",
+      "match": true,
+      "name": "pinned-runner_v17.ts",
+      "sha": "192903714b1b06a8ea58aa80e22da23fcf9d9ef175830a65a0da5eb0ca64f3d4"
+    },
+    {
+      "kind": "blob",
+      "match": true,
+      "name": "runner-git-blob",
+      "sha": "c132cc6425eee3feaeef1d697dd74f968cfedb59"
+    },
+    {
+      "kind": "sha256",
+      "match": true,
+      "name": "published-passA-jsonl",
+      "sha": "1ade916b06f887c622449613f068f99bd2bf93404527a397ee2438c0f22f6f12"
+    },
+    {
+      "kind": "sha256",
+      "match": true,
+      "name": "published-passB-jsonl",
+      "sha": "e351f6cc64eca23f1b68d1811a65779e20d1ab727f0ac48e9c4a7b3624845897"
+    },
+    {
+      "kind": "sha256",
+      "match": true,
+      "name": "published-assembly-audit",
+      "sha": "6297c646c32a0b1e0643f9f727fe712d1135dad15c0f5b0418ba8b3350596637"
+    },
+    {
+      "kind": "sha256",
+      "match": true,
+      "name": "n11-residual72-addtwo-greedy23-d10-sweep-20261120/record-json",
+      "sha": "3045e15295af9b85b86578b5e8d55a8b325466eac576ee15b8450f6acb9b9ced"
+    },
+    {
+      "kind": "sha256",
+      "match": true,
+      "name": "n11-residual72-addtwo-greedy23-d10-sweep-20261120/probe-jsonl",
+      "sha": "773fef4262a9c69766402d3c0f846f5569ce095107efedaa02a76690ab35b8f3"
+    },
+    {
+      "kind": "sha256",
+      "match": true,
+      "name": "n11-residual72-replace16-d10-sweep-20261120/record-json",
+      "sha": "808fbda1152cb492bb76641a101660f965f2801c0b74790d20a0d998d5b747fc"
+    },
+    {
+      "kind": "sha256",
+      "match": true,
+      "name": "n11-residual72-replace16-d10-sweep-20261120/probe-jsonl",
+      "sha": "75fda6ade767e731ba4e42049230bcea6498eee6e9b2348a9d909a1832f329f6"
+    },
+    {
+      "kind": "sha256",
+      "match": true,
+      "name": "n11-residual72-replace15-d10-sweep-20261120/record-json",
+      "sha": "edd7ac84f47268adcc8a3364a5ff687499cb2a76ded0c0fa379506af02f40b25"
+    },
+    {
+      "kind": "sha256",
+      "match": true,
+      "name": "n11-residual72-replace15-d10-sweep-20261120/probe-jsonl",
+      "sha": "47165331b68f10684db9217a18fd3a2aab6748ecf1191f0216905981737a773a"
+    },
+    {
+      "kind": "sha256",
+      "match": true,
+      "name": "n11-residual72-replace12-d10-sweep-20261120/record-json",
+      "sha": "335eca5ecb7c72e6fb0ee41eb740de736bf4eb78791823ae55f6375a68cb4707"
+    },
+    {
+      "kind": "sha256",
+      "match": true,
+      "name": "n11-residual72-replace12-d10-sweep-20261120/probe-jsonl",
+      "sha": "89e2c30d93fc26b5f760c3f9f00c6190595e6adc2fd6320fd2ac69a2603f9c56"
+    }
+  ],
+  "schema": "n11-residual72-verdict-sweeps-reexec-third-verification-20261120-v1",
+  "status": "k1144-reexec-third-verification-passed",
+  "target": {
+    "item": "K1144",
+    "machine": "7f0729840a3cd6c8f3010cc16de4c5e9d8f19e8f81fa0b1687e64b9a0e8f0228",
+    "published_assembly_audit_sha256": "6297c646c32a0b1e0643f9f727fe712d1135dad15c0f5b0418ba8b3350596637",
+    "runner_blob": "c132cc6425eee3feaeef1d697dd74f968cfedb59",
+    "second_verification_publication": "commit c84e2b0e"
+  }
+}
