@@ -632,6 +632,14 @@ jobs:
         run: |
           uv run --locked python research/experiments/vertical-fiber-two-token-y4-parametric-allz-proof-20261120/census_rows.py
           git diff --exit-code -- research/experiments/vertical-fiber-two-token-y4-parametric-allz-proof-20261120/output/census.txt
+      - name: Audit K1126 two-token y=5 parametric all-z universal proof
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-y5-parametric-allz-proof-20261120/verify_y5_universal.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-y5-parametric-allz-proof-20261120/output/audit.json
+      - name: Audit K1126 two-token y=5 parametric all-z census
+        run: |
+          uv run --locked python research/experiments/vertical-fiber-two-token-y5-parametric-allz-proof-20261120/census_rows.py
+          git diff --exit-code -- research/experiments/vertical-fiber-two-token-y5-parametric-allz-proof-20261120/output/census.txt
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python research/experiments/graph-star-fixed-q-count-complexity-20261102/verify.py
