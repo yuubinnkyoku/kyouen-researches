@@ -56,14 +56,19 @@ T_d = { (X,Y) ∈ F_q² : X² − d·Y² = 1 }  ≅  { z ∈ F_{q²} : z^{q+1} =
 
 の群法則である。`T_d` は位数 `n = q+1` の**巡回群**。
 
-**補題（全単射）**：`A ↦ z_A = (1 + w·A)/(1 − w·A)`（`w² = d`、
-`A = ∞` は `z = −1`）は `P¹(F_q) → T_d` の全単射。
+**補題（全単射）**：`A ↦ z_A = (A + w)/(A − w)`（`w² = d`、`A = ∞` は
+`z = 1`）は `P¹(F_q) → T_d` の全単射。
 
-**証明**：両辺ともサイズ `q+1`。`A ≠ A'` なら `z_A ≠ z_A'`（メビウス変換は
-単射）。`A = ∞` は `z = −1` に対応し、これは `A` 有限の像に含まれない。 □
+**証明**：`A ∈ F_q` なら `z_A` は `T_d` に入る（ノルムを計算すればよい）。
+`A = ∞` は `z = 1`。`A ↦ z_A` はメビウス変換なので単射。
+両辺ともサイズ `q+1`。 □
 
-**検証**（`net3_hall_paige.py`）：q=5,7 で `|P¹(F_q)| = |T_d| = q+1`、
-全単射性を確認。
+**注意**：パラメータ表示は `(A + w)/(A − w)` が正しい。
+`(1 + w·A)/(1 − w·A)` は**誤り**で、加法関係が 2/20 しか成立しない
+（実際に一度この誤りを犯した）。
+
+**検証**（`net3_verify_reduction.py`）：q=5,7 で
+`α` が全単射、かつ全セルで加法関係が成立（20/20, 42/42）。
 
 ### 2.4 指数座標
 
@@ -160,8 +165,13 @@ Hall–Paige により完全写像が**存在する**。よって
 
 ```sh
 cd research/experiments/finite-field-kyouen-20261120/scripts
+python net3_verify_reduction.py --q 5 7 --out ../output/net3_verify_reduction.json
 python net3_hall_paige.py --q 5 7 --out ../output/net3_hall_paige.json
 python net3_torus_native.py --q 5 7 --out ../output/net3_torus_native.json
 python net3_tau_theory.py --q 3 4 5 7 8 9 --out ../output/net3_tau_theory.json
 python verify_qplus2.py
 ```
+
+`net3_verify_reduction.py` が縮約の要：
+`α: P¹(F_q) → Z_{q+1}` の全単射性と、全セルでの加法関係
+`α(1/a) = α(1/b) + α(1/c)` を直接検証する。
