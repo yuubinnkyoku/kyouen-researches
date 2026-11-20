@@ -43,6 +43,28 @@ artifacts:
   - path: research/log/2026-11-20-n11-fold21-external-second-verification.md
     role: log
     note: 宣言から出版までの時系列記録
+  - path: research/experiments/n11-fold21-ext2-pristine-reexec-third-verification-root80880200-20261121/README.md
+    role: verifier
+    note: K1168第三再現の範囲・固定pin・3回の実行結果・再現手順・限界
+  - path: research/experiments/n11-fold21-ext2-pristine-reexec-third-verification-root80880200-20261121/scripts/verify_k1168_third.py
+    role: verifier
+    note: stdlib-only段階実行harness。出版byte pin・W二重再構成・検証器3回再実行・監査byte一致を検査
+  - path: research/experiments/n11-fold21-ext2-pristine-reexec-third-verification-root80880200-20261121/output/publication-pins.json
+    role: data
+    note: K1168実験dir 5ファイルのGit blob SHA-1・SHA-256 pinと固定main ref
+  - path: research/experiments/n11-fold21-ext2-pristine-reexec-third-verification-root80880200-20261121/output/harness-audit.json
+    role: verifier
+    note: 3回の第三再現監査正本。1,394 gate全PASS・出版監査と3出力がbyte-identical
+  - path: research/experiments/n11-fold21-ext2-pristine-reexec-third-verification-root80880200-20261121/output/reproduction.log
+    role: log
+    note: W再構成・検証器3回・tamper再試験・timeout回復の実行記録
+  - path: research/log/2026-11-21-n11-k1168-fold21-ext2-pristine-reexec-third-verification.md
+    role: log
+    note: K1168第三再現の実行記録・結果・制約
+  - path: research/log/2026-11-21-n11-k1168-fold21-ext2-pristine-reexec-third-single-owner-note.md
+    role: log
+    note: main直接反映前の単一オーナー宣言（commit 3e7447021b82347b38c162e90ace39472cdddb24）
+
 ---
 
 # fold21 receipt fold（root 80880200）の外部第二検証
@@ -114,6 +136,16 @@ fold25 ext2 `aad3b71ca`・fold26 `23bffdd4e4`・round-5 refsolve `ace38772d9`・
 fold21時点で1行存在する: `00000000000000801202000800080000`（cost 72・unswept・
 ledger closed_rows_66/globalFold/previousCostFoldのlegacy base段で閉鎖済み）。fold22検証では
 closed-before 0だったのと対照的で、covered行open性判定は検証対象receiptの適用時点依存である。
+
+
+## 第三再現（2026-11-21）
+
+K1168の出版検証器と再構成機を改変せず、固定main ref `429232fd7e8322f5ca11af567c8e9f4ca6d303ad` から入力を再構成して第三の実行環境で3回再実行した。K1168実験dirの5ファイルはGit blob SHA-1・SHA-256 pinに全一致。Wは12 blob + 40 SHA-256 pinの57 files/13,574,816 bytes、出版資料は4 files/137,719 bytesで、独立再構成2回の全ファイルがbyte-identical。fold20機の12 blob + 37 SHA-256 pinの部分集合性も再確認した。
+
+検証器は3回とも1,394/1,394 gates PASS。各監査出力は135,723 bytes・SHA-256 `80f004403e2538914605a22c0df8d9a86bf575d896eadfc70d14531b92767a63`で、K1168の出版監査正本および3出力間でbyte-identical。各実行に含まれるpristine fold21機再実行4回とtamper 2件を再実施し、計12回の機再実行・6回のfail-closed tamper試験を確認した。run3は隔離cwd/HOME・`PYTHONHASHSEED=random`。
+
+これはK1168の第三再現であり、新しい別実装検証器ではない。receiptを追加適用せず、S6行は1行も新たに閉じていない。新しいWIN/LOSS verdictもない。標準11×11空盤・二石root `{49,60}`/`{59,60}`・S2 `{59,60}`・class 1/2/4はUNKNOWNのまま。詳細は第三再現実験READMEと監査正本を参照。
+
 
 ## 限界
 
