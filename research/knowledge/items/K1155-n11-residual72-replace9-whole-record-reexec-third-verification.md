@@ -1,12 +1,12 @@
 ---
 id: K1155
-title: 残余72行 replace9 whole-record第二検証（K1151）のpristine再実行第三検証: 出版pin 2/2+入力10件一致・同一cwd 2回+隔離tree/cwd/HOME+PYTHONHASHSEED=random計4実行byte-identical・1 byte tamperをfail-closed捕捉
+title: "残余72行 replace9 whole-record第二検証（K1151）のpristine再実行第三検証: 出版pin 2/2+入力10件一致・同一cwd 2回+隔離tree/cwd/HOME+PYTHONHASHSEED=random計4実行byte-identical・1 byte tamperをfail-closed捕捉"
 kind: computation
 status: computed
 topics: [search-methods, certificates, verification]
 aliases:
-  - third verification (post-publication independent re-execution) of K1151 replace9 whole-record second verification: published machine e92fb755 and audit 5888afb3 (115,002 bytes) fetched at pinned commit f7aa541f with 10 input snapshots staged from the same pinned tree, machine pristine-re-executed 4 times (2 same-cwd, isolated tree/cwd/HOME, isolated + PYTHONHASHSEED=random), all outputs byte-identical to the published audit 5888afb3 across all 334 gates
-  - tamper test: 1-byte input mutation (.input-replace9.json offset 7701, XOR 0x01, mutated sha 74e25aa4) fails closed with returncode 1 and no output written; the published machine's fail-closed pins catch transport/tampering; third-verification harness audited deterministically (audit byte-identical across 2 same-cwd + 1 isolated-cwd run, sha 6e06f12ad)
+  - "third verification (post-publication independent re-execution) of K1151 replace9 whole-record second verification: published machine e92fb755 and audit 5888afb3 (115,002 bytes) fetched at pinned commit f7aa541f with 10 input snapshots staged from the same pinned tree, machine pristine-re-executed 4 times (2 same-cwd, isolated tree/cwd/HOME, isolated + PYTHONHASHSEED=random), all outputs byte-identical to the published audit 5888afb3 across all 334 gates"
+  - "tamper test: 1-byte input mutation (.input-replace9.json offset 7701, XOR 0x01, mutated sha 74e25aa4) fails closed with returncode 1 and no output written; the published machine's fail-closed pins catch transport/tampering; third-verification harness audited deterministically (audit byte-identical across 2 same-cwd + 1 isolated-cwd run, sha 6e06f12ad)"
   - no new search computation, no residual row closed; every gate parses the published audit bytes rather than re-deriving game-theoretic values; nodes/solved counts are re-read from the pinned record, never interpreted as win/loss
 relations:
   - type: verifies

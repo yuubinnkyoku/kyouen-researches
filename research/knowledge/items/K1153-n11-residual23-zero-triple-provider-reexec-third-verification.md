@@ -1,12 +1,12 @@
 ---
 id: K1153
-title: 残余23行 zero triple provider 第三幾何（K1148）のpristine再実行第三検証: 出版pin 3/3一致・同一cwd 2回+隔離tree/cwd/HOME+PYTHONHASHSEED=random計4実行byte-identical・1 byte tamperをfail-closed捕捉
+title: "残余23行 zero triple provider 第三幾何（K1148）のpristine再実行第三検証: 出版pin 3/3一致・同一cwd 2回+隔離tree/cwd/HOME+PYTHONHASHSEED=random計4実行byte-identical・1 byte tamperをfail-closed捕捉"
 kind: computation
 status: computed
 topics: [search-methods, certificates, verification]
 aliases:
-  - third verification (post-publication independent re-execution) of K1148 residual23 zero-triple-provider third geometry: three published files fetched at pinned commit 6564fded75 and byte-matched against their SHA-256 pins, machine pristine-re-executed 4 times (2 same-cwd, isolated tree/cwd/HOME, isolated + PYTHONHASHSEED=random), all outputs byte-identical to the published audit 526eada2c9
-  - tamper test: 1-byte fixture mutation (offset 1552, XOR 0x01, mutated sha dd3f3c48) fails closed with returncode 1 and no output written; the published machine's fail-closed pin catches transport/tampering; third-verification layer audited deterministically (harness audit byte-identical across 2 same-cwd + 1 isolated-cwd run, sha 312966e89)
+  - "third verification (post-publication independent re-execution) of K1148 residual23 zero-triple-provider third geometry: three published files fetched at pinned commit 6564fded75 and byte-matched against their SHA-256 pins, machine pristine-re-executed 4 times (2 same-cwd, isolated tree/cwd/HOME, isolated + PYTHONHASHSEED=random), all outputs byte-identical to the published audit 526eada2c9"
+  - "tamper test: 1-byte fixture mutation (offset 1552, XOR 0x01, mutated sha dd3f3c48) fails closed with returncode 1 and no output written; the published machine's fail-closed pin catches transport/tampering; third-verification layer audited deterministically (harness audit byte-identical across 2 same-cwd + 1 isolated-cwd run, sha 312966e89)"
   - no new geometric computation, no row closed; K1148's zero rows and safe/unsafe census re-derived nowhere outside the published machine's own pinned-byte re-execution
 relations:
   - type: verifies
