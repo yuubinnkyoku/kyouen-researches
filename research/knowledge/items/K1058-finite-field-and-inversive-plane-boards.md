@@ -475,6 +475,18 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/scripts/verify_qplus2.py
   role: verifier
   note: K<=q+2の修正済み厳密値に対する確認
+- path: research/experiments/finite-field-kyouen-20261120/NET3_NO_TRANSVERSAL.md
+  role: source
+  note: 完全横断の非存在とノルム1トーラスの群法則
+- path: research/experiments/finite-field-kyouen-20261120/scripts/net3_final_step.py
+  role: verifier
+  note: 完全横断が0個であることの全数確認
+- path: research/experiments/finite-field-kyouen-20261120/scripts/net3_group_law.py
+  role: verifier
+  note: 1/a=(1/b)*_d(1/c)の検証
+- path: research/experiments/finite-field-kyouen-20261120/scripts/net3_partial_law.py
+  role: verifier
+  note: 部分演算であることの確認
 scope: 標準q=4の禁止条件 det[x,y,x^2+y^2,1]=0 を可換環上で読むことで定義される有限体盤 AG(2,q)（q は素数冪）、位数qの反転平面（3-(q^2+1,q+1,1)設計）、周期境界を課したトーラス盤 Z_n^2、および一般の Steiner t-(v,s,1) 設計上の完全指摘・通常プレイゲーム。q=3,5 の完全計算、n≤12 の行列式上界、トーラス盤とAG(2,p)の一致（p≤13）、9つのSteiner設計での三分法検証、反転平面の3-ネット翻訳（q≤9）。
 evidence: 有限完全計算（q≤5 の全安全局面 Grundy、q≤8 の反転平面K厳密値、q≤7 のAG K厳密値、n≤12 の D(n)、p≤13 のトーラス一致、9設計のK、q≤9 の3-ネット横断数）と、3-設計公理の機械検査、交差比の鍵事実の全数検証（q≤7、247,840個の4点組、不一致0）。D(n)=a^2*floor(a^2/2) は n≤12 の全数確認済みだが全称証明ではない。層サイズ公式は k≤5 の範囲で証明、k≥6 は反例あり。トーラス盤とAG(2,p)の一致は Z_p=F_p から従うが全数確認は p≤13。三分法・一般上界 K≤lambda_2+2・一般下界 K=Omega((v/s)^(1/3))・派生上界 K≤1+A_2(D_p) は証明済み。K=3+alpha は q≤9 の検証であり一般証明ではない。
 ---
@@ -1117,6 +1129,26 @@ M_a(t) = (d − a·t)/(a − t)
 固定点は `(t−a)² = a² − d` の解なので、`a² − d` が平方となる
 ちょうど `(q−1)/2` 個の `a` で2個、残りでは0個（q=3,5,7,9 で検証）。
 
+**系5（ノルム1トーラスの群法則）**：`a = 1/A`、`b = 1/S`、`c = 1/T` と置くと
+関係式は
+
+```
+A = (S + T) / (1 + d·S·T) =: S *_d T
+```
+
+**これはノルム1トーラス**
+
+```
+T_d = { (X,Y) ∈ F_q² : X² − d·Y² = 1 }  ≅  { z ∈ F_{q²} : z^{q+1} = 1 }
+```
+
+（位数 `q+1` の巡回群）の群法則である。検証：q=5 で 8/8、q=7 で 24/24
+（非零セルのみ）。
+
+ただし `*_d` は `F_q^*` 上で**閉じていない**（`0` や `∞` に落ちる場合がある）。
+よってラテン方陣は**部分 Cayley 表**であり、群表ではない。
+このため Hall–Paige の完全写像定理を直接は適用できない。
+
 ### 10c. `τ₃` の決定と新しい上界
 
 **定理（検証済み、一般証明は未完成）**：
@@ -1126,8 +1158,8 @@ M_a(t) = (d − a·t)/(a − t)
 τ₃(q) = q       （q 偶数）
 ```
 
-上界 `τ₃ ≤ q` は行数から自明。奇数 q では対角線を避ける完全横断が
-存在しないことを全数探索で確認（q = 3,5,7,9）。偶数 q では存在（q = 4,8）。
+上界 `τ₃ ≤ q` は行数から自明。奇数 q では**完全横断が1つも存在しない**
+ことを全数探索で確認（q = 3,5,7）。偶数 q では存在（q = 4,8）。
 
 **系（新しい上界）**：
 
@@ -1142,6 +1174,7 @@ K(inversive q) ≤ q + 2   （q 奇数）
 
 **検証**（`verify_qplus2.py`）：修正済み厳密値
 q=3,5,7,9,11,13,17,19,23,29 のすべてで `K ≤ q+2` が成立（slack 0〜23）。
+slack は q とともに単調に増える（q=29 で 23）。
 
 ### 11. 派生設計による上界
 
