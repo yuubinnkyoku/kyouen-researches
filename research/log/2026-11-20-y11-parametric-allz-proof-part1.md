@@ -1,4 +1,4 @@
-# y=11族パラメトリック全称証明 part1（正本検証器12チェック）（2026-11-20 高速レーン）
+successfully downloaded text file (SHA: ec2b9061bf4d1e99c284fe4cff540d2fe821a97d)# y=11族パラメトリック全称証明 part1（正本検証器12チェック）（2026-11-20 高速レーン）
 
 単一オーナー宣言（[宣言ノート](2026-11-20-y11-two-token-skeleton-single-owner-note.md)・
 2026-11-20T11:58:00Z・commit ed778278）に基づく y=11 族着手の第二段階（正本監査 part1）の記録。
@@ -61,3 +61,18 @@ C1d（出版 z=8/9/10/15/16/17 切片の y=11 特殊化・事前 preflight 必�
 census_rows.py（第三実装・出版 census.txt・cand11 独立照合）を構成して
 全チェック PASS + 3回 byte-identical で昇格判定する。3トークン以上・y>=12 族・
 固定幅・q点版安定化長・標準 11×11 の勝敗は範囲外のまま。
+
+## 追記（push後確認: 採番衝突は解消済み・独立交叉検証の出版）
+
+- part1 push（12:36:22Z・commit d6f00142）直前のREADME再取得の間に衝突は解消されていた:
+  survivor レーン自身が 12:33:58Z（commit d935c567・旧path削除 5e5d55e2）に
+  AGENTS.md 再採番規則で [K1145](../knowledge/items/K1145-remo-survivor-minimal-period-r33to48.md)
+  へ再採番し、README bullet・CI・監査item fieldを更新済み。
+  **K1143 は本レーンの y=11 fit 項目として確定**（上記「次回統合での再採番」課題は消滅）。
+  part1 publish に含めた README 採番注記は解消前の記述であったため、本追記と同時の
+  訂正コミットで修正した。
+- 併せて、別の並走 y11 レーンが出版版 cand11 に対する独立交叉検証
+  （[交叉検証ログ](2026-11-20-y11-fit-independent-cross-verification.md)・probe全点一致＋
+  追加31,488点のbox外spot bad 0・第2実装の意味同一性確認）を出版した。
+  cand11 は2つの独立導出経路で交叉確認済みであり、part2 の逐語転写の
+  実装/転写バグリスクが低減した。
