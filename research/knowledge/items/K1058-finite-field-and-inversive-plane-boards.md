@@ -52,6 +52,12 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/scripts/ag2_fast_target.py
   role: solver
   note: AG(2,q)の対称性利用高速完全探索
+- path: research/experiments/finite-field-kyouen-20261120/ALGEBRAIC_ROUTE.md
+  role: source
+  note: 放物面上のcap・反転平面3-arcへの再定式化
+- path: research/experiments/finite-field-kyouen-20261120/LITERATURE_3ARC.md
+  role: source
+  note: 3-arcの文献調査記録
 - path: research/experiments/finite-field-kyouen-20261120/FOUR_FAILED_ROUTES.md
   role: source
   note: q=3 mod 4の上界改善4手法の失敗記録
@@ -478,7 +484,15 @@ q=3 で k≈6、q=5 で k=9、q=7 で k≈25 であり、真値（q=5,7 で K=6�
 4. 使用済み円のペア `C(k,2)C(k−2,2) ≤ 2C(C(k,3),2)` は常に成立し制約なし
 
 初等的な数え上げはすべて係数 ≥1 を与え、観測された `K/q ≈ 0.68〜0.86` を下回れない。
-係数1未満には代数幾何・設計論・加法的組合せ論など別の原理が必要と考えられる（未着手）。
+係数1未満には代数幾何・設計論・加法的組合せ論など別の原理が必要と考えられる。
+
+**代数的再定式化**：各点を持ち上げて `v_p = (x, y, x²+y², 1) ∈ F_q⁴` とすると、
+四点の共円・共線は `det[v_p1,v_p2,v_p3,v_p4] = 0`、すなわち**4ベクトルの線形従属**と同値。
+よって安全集合は「どの4つも従属でない」集合であり、これは**放物面 `Z=X²+Y²` 上の cap**、
+反転平面の言葉では **3-arc**（どの円とも3点以下で交わる集合）に他ならない。
+符号理論的には「パリティ検査行列の任意3列が独立」に対応するが、Singleton 限界は下界しか与えない。
+文献調査では最大 3-arc サイズの明示的な既知結果を確認できなかった
+（Sonnino の arc 研究は存在するが値は未確認）。
 
 AG(2,11) ではサイズ10,11,12 がいずれも不存在であることを完全探索で確認し、**K=9 が確定**した。
 
