@@ -52,6 +52,9 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/scripts/ag2_fast_target.py
   role: solver
   note: AG(2,q)の対称性利用高速完全探索
+- path: research/experiments/finite-field-kyouen-20261120/DEGENERATION_K.md
+  role: source
+  note: 円の退化がKを大きくする証拠（q=17対19）
 - path: research/experiments/finite-field-kyouen-20261120/SERIES_SUMMARY.md
   role: source
   note: K系列の総括と乖離の分析
@@ -404,6 +407,18 @@ q=13 は `q ≡ 1 (mod 4)` なので円が退化し、サイズ12の退化円 2,
 **AG の円族は反転平面のサイズ14円より緩い**ことが乖離の一因と考えられる。
 
 q=16（標数2）でも AG は K≥12 で、増加傾向が続く。
+
+**円の退化が K を大きくする**（仮説を支持する証拠）：
+
+| q | q mod 4 | 点 | ブロックサイズ | K |
+|---:|---:|---:|---|---:|
+| 17 | 1 | 289 | {16:4624, 17:306, 33:289} | **≥17** |
+| 19 | 3 | 361 | {19:380, 20:6498} | **≥13** |
+
+点数は q=19 の方が多い（361 対 289）のに、K の下界は q=17 の方が大きい（17 対 13）。
+q≡1 (mod 4) では円がサイズ q−1 に退化して制約が弱まるためと考えられる。
+q≡1 (mod 4) の q=5,9,13,17 は K が 6,9,≥13,≥17 と伸び、
+q≡3 (mod 4) の q=7,11,19 は 6,9,≥13 と伸びが遅い。
 
 同じ点数での比較では有限体盤の方がはるかに疎である：
 7×7 整数の K=14 に対し AG(2,7) は 6（半分以下）。
