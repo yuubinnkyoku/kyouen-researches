@@ -55,7 +55,7 @@ frontier照合の対象になるが、fold22 receipt単体の外部第二検証�
    - K1123 root `00000000000020809002000480100000` のC(8,6)=28部分幾何のD4正準行を
      2方法（C(8,2) 2石除去×8 D4像の完全合成と、部分集合のD4正準化の各々）で再導出し、
      cover conventionに基づく閉鎖候補行（主張3行＋余剰1行・閉鎖edge cost 321・
-     29 canonical行分類 open 4/not-in-worklist 22/closed-before 2）の再決定、
+     28 canonical行分類 open 4/not-in-worklist 22/closed-before 2）の再決定、
    - 親行delta（3親・すべてclass 2・9→8・11→9・55→53・計5）・frontier_after
      （6,126/485,438・solved 1,722・incidence 11,666・needed 4,434・cost_needed 351,886）・
      五親target 80→83行・残余32→29行・win16候補 4→3根を含む全統計の再計算、
