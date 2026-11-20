@@ -30,13 +30,13 @@ relations:
 artifacts:
   - path: research/experiments/n11-fold29-cert-extract-ext2-pristine-reexec-third-verification-20261120/README.md
     role: source
-    note: "位置づけ・手順と結果7項・同梱物・限界（SHA-256 77e96ec2…・4,592 bytes）"
+    note: "第三検証の対象・手順・結果・限界と2026-11-21のgate完全性追補"
   - path: research/experiments/n11-fold29-cert-extract-ext2-pristine-reexec-third-verification-20261120/scripts/assemble_third_record.py
     role: verifier
     note: "byte決定的record組立機（stdlibのみ・gate 20・fail-closed・sorted keys・時刻/絶対path排除・SHA-256 2737e802…・7,044 bytes）"
   - path: research/experiments/n11-fold29-cert-extract-ext2-pristine-reexec-third-verification-20261120/scripts/reproduce.sh
     role: verifier
-    note: "byte 5点取得・master再構成・両battery・record生成の再現手順（SHA-256 92d0a2ad…・3,736 bytes）"
+    note: "byte 5点取得・master再構成・両battery・record生成に加え、part gate完全性の回帰試験・補助検証器を呼ぶ再現手順（2026-11-21更新）"
   - path: research/experiments/n11-fold29-cert-extract-ext2-pristine-reexec-third-verification-20261120/output/third-verification.json
     role: audit
     note: "第三検証record正本（4,363 bytes・gate 20・status PASS・SHA-256 a6a3e048…・3実行byte一致）"
