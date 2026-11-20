@@ -7,7 +7,7 @@ topics: [certificates]
 aliases:
   - single-owner fold10 execution (declaration note published first, K1069 separation method)
   - seventeenth WIN7 certificate body published in-repo (commit b7a6db5fb0) filling the gap where the 38-gate record pinned the certificate but the experiment dir lacked the file
-  - independent byte-exact re-extraction of the seventeenth certificate: 4 runs across 2 lanes agree on sha256 21dd2f0e...
+  - "independent byte-exact re-extraction of the seventeenth certificate: 4 runs across 2 lanes agree on sha256 21dd2f0e..."
   - K1068-side fold machine has a 1-char typo in its ledger blob pin (0c03cc vs actual 0d03cc); the canonical K1067-side machine agrees with the repo file
 relations:
 - type: depends_on

@@ -7,7 +7,7 @@ topics: [certificates, verification, search-methods, residual-games]
 aliases:
   - seventeenth WIN7-D10 certificate for the sole WIN root in the residual78 resolve6 39-live-witness sweep
   - root 00004000000000821082000000000100, child 4000000000821082000000000000, added bit 8
-  - blind extraction and triple independent verification: TS Bareiss 4x4, Python exact Bareiss, BigInt 3x3 cofactor
+  - "blind extraction and triple independent verification: TS Bareiss 4x4, Python exact Bareiss, BigInt 3x3 cofactor"
 relations:
 - type: depends_on
   target: K0001

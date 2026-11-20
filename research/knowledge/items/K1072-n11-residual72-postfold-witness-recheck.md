@@ -6,7 +6,7 @@ status: computed
 topics: [residual-coverage]
 aliases:
   - resolve7 (published-records-only recheck; no universe rebuild, no new judging)
-  - post-retire assignment table of the 39-root one-cover plan: 34 roots x 2 rows + 4 roots x 1 row = 72 rows, one-cover preserved
+  - "post-retire assignment table of the 39-root one-cover plan: 34 roots x 2 rows + 4 roots x 1 row = 72 rows, one-cover preserved"
   - all 38 live assigned roots are REFUTED-D10 under the K1069 sweep; zero further depth-10 witness supply from this plan for the residual 72 rows
   - fold9-closed 4 rows' witness owners identified (4 roots degrade to 1-row assignments)
 relations:
