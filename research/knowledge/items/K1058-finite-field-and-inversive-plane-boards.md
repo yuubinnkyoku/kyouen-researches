@@ -55,6 +55,12 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/ALGEBRAIC_ROUTE.md
   role: source
   note: 放物面上のcap・反転平面3-arcへの再定式化
+- path: research/experiments/finite-field-kyouen-20261120/UNIFORMITY_CHECK.md
+  role: source
+  note: 一様性の安価な判定法
+- path: research/experiments/finite-field-kyouen-20261120/scripts/uniformity_check.py
+  role: solver
+  note: 小さい極大集合の探索
 - path: research/experiments/finite-field-kyouen-20261120/WINNER_PREDICTION_FAILED.md
   role: source
   note: 非一様盤の勝者予測の失敗
