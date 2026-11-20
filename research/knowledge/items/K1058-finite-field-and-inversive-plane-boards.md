@@ -55,6 +55,12 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/ALGEBRAIC_ROUTE.md
   role: source
   note: 放物面上のcap・反転平面3-arcへの再定式化
+- path: research/experiments/finite-field-kyouen-20261120/PARITY_STRUCTURE.md
+  role: source
+  note: 一様盤のサイズ偶奇とGrundy値の対応
+- path: research/experiments/finite-field-kyouen-20261120/scripts/nonuniform_structure.py
+  role: verifier
+  note: 非一様構造の分析
 - path: research/experiments/finite-field-kyouen-20261120/TRIVIALITY_THEOREM.md
   role: proof
   note: 極大集合の一様性とGrundy値の定理
