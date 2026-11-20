@@ -1,0 +1,134 @@
+[
+  {
+    "q": 3,
+    "q_mod_4": 3,
+    "points": 9,
+    "blocks": 30,
+    "block_sizes": {
+      "3": 12,
+      "4": 18
+    },
+    "avg_block_size": "18/5",
+    "degree": 12,
+    "degree_uniform": true,
+    "K": 5,
+    "K_exact": true,
+    "K_over_q": 1.6666666666666667
+  },
+  {
+    "q": 5,
+    "q_mod_4": 1,
+    "points": 25,
+    "blocks": 155,
+    "block_sizes": {
+      "4": 100,
+      "5": 30,
+      "9": 25
+    },
+    "avg_block_size": "5",
+    "degree": 31,
+    "degree_uniform": true,
+    "K": 6,
+    "K_exact": true,
+    "K_over_q": 1.2
+  },
+  {
+    "q": 7,
+    "q_mod_4": 3,
+    "points": 49,
+    "blocks": 350,
+    "block_sizes": {
+      "7": 56,
+      "8": 294
+    },
+    "avg_block_size": "196/25",
+    "degree": 56,
+    "degree_uniform": true,
+    "K": 6,
+    "K_exact": true,
+    "K_over_q": 0.8571428571428571
+  },
+  {
+    "q": 9,
+    "q_mod_4": 1,
+    "points": 81,
+    "blocks": 819,
+    "block_sizes": {
+      "8": 648,
+      "9": 90,
+      "17": 81
+    },
+    "avg_block_size": "9",
+    "degree": 91,
+    "degree_uniform": true,
+    "K": 9,
+    "K_exact": true,
+    "K_over_q": 1.0
+  },
+  {
+    "q": 11,
+    "q_mod_4": 3,
+    "points": 121,
+    "blocks": 1342,
+    "block_sizes": {
+      "11": 132,
+      "12": 1210
+    },
+    "avg_block_size": "726/61",
+    "degree": 132,
+    "degree_uniform": true,
+    "K": 9,
+    "K_exact": true,
+    "K_over_q": 0.8181818181818182
+  },
+  {
+    "q": 13,
+    "q_mod_4": 1,
+    "points": 169,
+    "blocks": 2379,
+    "block_sizes": {
+      "12": 2028,
+      "13": 182,
+      "25": 169
+    },
+    "avg_block_size": "13",
+    "degree": 183,
+    "degree_uniform": true,
+    "K": 13,
+    "K_exact": false,
+    "K_over_q": 1.0
+  },
+  {
+    "q": 17,
+    "q_mod_4": 1,
+    "points": 289,
+    "blocks": 5219,
+    "block_sizes": {
+      "16": 4624,
+      "17": 306,
+      "33": 289
+    },
+    "avg_block_size": "17",
+    "degree": 307,
+    "degree_uniform": true,
+    "K": 17,
+    "K_exact": false,
+    "K_over_q": 1.0
+  },
+  {
+    "q": 19,
+    "q_mod_4": 3,
+    "points": 361,
+    "blocks": 6878,
+    "block_sizes": {
+      "19": 380,
+      "20": 6498
+    },
+    "avg_block_size": "3610/181",
+    "degree": 380,
+    "degree_uniform": true,
+    "K": 13,
+    "K_exact": false,
+    "K_over_q": 0.6842105263157895
+  }
+]
