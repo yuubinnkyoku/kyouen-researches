@@ -45,6 +45,9 @@ artifacts:
   - path: research/log/2026-11-20-n11-win8-cert-extract-root00000000000000801202000000840500.md
     role: log
     note: 発見・実行・再現・限界の研究記録
+  - path: research/log/2026-11-20-n11-k1125-cross-runner-reproduction.md
+    role: log
+    note: Python 3.13.5 / Node.js 22.15.0 の別runnerで三検証器を再実行し、監査JSON・数値・証明書行unionを再現
 ---
 
 # WIN8-D10 root 840500 証明書抽出・三重検証
