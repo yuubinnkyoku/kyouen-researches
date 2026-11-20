@@ -1,0 +1,1315 @@
+{
+ "all_ok": true,
+ "checks": [
+  {
+   "data": {
+    "detail": {
+     "r10": {
+      "equal": true,
+      "n": 48
+     },
+     "r11": {
+      "equal": true,
+      "n": 96
+     },
+     "r12": {
+      "equal": true,
+      "n": 96
+     },
+     "r13": {
+      "equal": true,
+      "n": 192
+     },
+     "r14": {
+      "equal": true,
+      "n": 192
+     },
+     "r15": {
+      "equal": true,
+      "n": 192
+     },
+     "r16": {
+      "equal": true,
+      "n": 240
+     },
+     "r17": {
+      "equal": true,
+      "n": 480
+     },
+     "r18": {
+      "equal": true,
+      "n": 480
+     },
+     "r19": {
+      "equal": true,
+      "n": 960
+     },
+     "r2": {
+      "equal": true,
+      "n": 2
+     },
+     "r20": {
+      "equal": true,
+      "n": 960
+     },
+     "r3": {
+      "equal": true,
+      "n": 4
+     },
+     "r33": {
+      "n_primes": 11,
+      "pattern_ok": true,
+      "tau_Q": 18432
+     },
+     "r34": {
+      "n_primes": 11,
+      "pattern_ok": true,
+      "tau_Q": 18432
+     },
+     "r35": {
+      "n_primes": 11,
+      "pattern_ok": true,
+      "tau_Q": 18432
+     },
+     "r36": {
+      "n_primes": 11,
+      "pattern_ok": true,
+      "tau_Q": 18432
+     },
+     "r37": {
+      "n_primes": 12,
+      "pattern_ok": true,
+      "tau_Q": 36864
+     },
+     "r38": {
+      "n_primes": 12,
+      "pattern_ok": true,
+      "tau_Q": 36864
+     },
+     "r39": {
+      "n_primes": 12,
+      "pattern_ok": true,
+      "tau_Q": 36864
+     },
+     "r4": {
+      "equal": true,
+      "n": 6
+     },
+     "r40": {
+      "n_primes": 12,
+      "pattern_ok": true,
+      "tau_Q": 36864
+     },
+     "r41": {
+      "n_primes": 13,
+      "pattern_ok": true,
+      "tau_Q": 73728
+     },
+     "r42": {
+      "n_primes": 13,
+      "pattern_ok": true,
+      "tau_Q": 73728
+     },
+     "r43": {
+      "n_primes": 14,
+      "pattern_ok": true,
+      "tau_Q": 147456
+     },
+     "r44": {
+      "n_primes": 14,
+      "pattern_ok": true,
+      "tau_Q": 147456
+     },
+     "r45": {
+      "n_primes": 14,
+      "pattern_ok": true,
+      "tau_Q": 147456
+     },
+     "r46": {
+      "n_primes": 14,
+      "pattern_ok": true,
+      "tau_Q": 147456
+     },
+     "r47": {
+      "n_primes": 15,
+      "pattern_ok": true,
+      "tau_Q": 294912
+     },
+     "r48": {
+      "n_primes": 15,
+      "pattern_ok": true,
+      "tau_Q": 294912
+     },
+     "r5": {
+      "equal": true,
+      "n": 12
+     },
+     "r6": {
+      "equal": true,
+      "n": 12
+     },
+     "r7": {
+      "equal": true,
+      "n": 24
+     },
+     "r8": {
+      "equal": true,
+      "n": 32
+     },
+     "r9": {
+      "equal": true,
+      "n": 48
+     }
+    },
+    "exp_pattern": true,
+    "small_equal": true
+   },
+   "name": "S0: divisor enumeration from the factorization of Q(r) == trial-division divisors for r = 2..20 (exact multiset and sorted order), analytic exponent pattern e_p = max{a : p^a <= r} holds for r = 33..48",
+   "ok": true
+  },
+  {
+   "data": {
+    "r17": {
+     "pin_match": true,
+     "proper": 479,
+     "r": 17,
+     "stream_sha256": "a6209b6a88badfbd5099b6ba18b573241d1a4700eb6f3055370480d9cd1bbdbb",
+     "sv_C1_same": 227,
+     "unwitnessed": 0,
+     "wit_argmax_over_Q": 17,
+     "wit_max_sv": 12
+    },
+    "r18": {
+     "pin_match": true,
+     "proper": 479,
+     "r": 18,
+     "stream_sha256": "a6209b6a88badfbd5099b6ba18b573241d1a4700eb6f3055370480d9cd1bbdbb",
+     "sv_C1_same": 227,
+     "unwitnessed": 0,
+     "wit_argmax_over_Q": 17,
+     "wit_max_sv": 12
+    },
+    "r19": {
+     "pin_match": true,
+     "proper": 959,
+     "r": 19,
+     "stream_sha256": "d8a559b12aec054eba1d8acb3b9ccbcdafbd26d228d82735a54797637064273a",
+     "sv_C1_same": 438,
+     "unwitnessed": 0,
+     "wit_argmax_over_Q": 209,
+     "wit_max_sv": 9
+    },
+    "r20": {
+     "pin_match": true,
+     "proper": 959,
+     "r": 20,
+     "stream_sha256": "d8a559b12aec054eba1d8acb3b9ccbcdafbd26d228d82735a54797637064273a",
+     "sv_C1_same": 438,
+     "unwitnessed": 0,
+     "wit_argmax_over_Q": 209,
+     "wit_max_sv": 9
+    },
+    "r21": {
+     "pin_match": true,
+     "proper": 959,
+     "r": 21,
+     "stream_sha256": "d8a559b12aec054eba1d8acb3b9ccbcdafbd26d228d82735a54797637064273a",
+     "sv_C1_same": 438,
+     "unwitnessed": 0,
+     "wit_argmax_over_Q": 209,
+     "wit_max_sv": 9
+    },
+    "r22": {
+     "pin_match": true,
+     "proper": 959,
+     "r": 22,
+     "stream_sha256": "d8a559b12aec054eba1d8acb3b9ccbcdafbd26d228d82735a54797637064273a",
+     "sv_C1_same": 438,
+     "unwitnessed": 0,
+     "wit_argmax_over_Q": 209,
+     "wit_max_sv": 9
+    },
+    "r23": {
+     "pin_match": true,
+     "proper": 1919,
+     "r": 23,
+     "stream_sha256": "719b0434405886e650ab60066ce041078b6d5b93a377d76db57177b39ca4991f",
+     "sv_C1_same": 860,
+     "unwitnessed": 0,
+     "wit_argmax_over_Q": 163438,
+     "wit_max_sv": 8
+    },
+    "r24": {
+     "pin_match": true,
+     "proper": 1919,
+     "r": 24,
+     "stream_sha256": "719b0434405886e650ab60066ce041078b6d5b93a377d76db57177b39ca4991f",
+     "sv_C1_same": 860,
+     "unwitnessed": 0,
+     "wit_argmax_over_Q": 163438,
+     "wit_max_sv": 8
+    },
+    "r25": {
+     "pin_match": true,
+     "proper": 2879,
+     "r": 25,
+     "stream_sha256": "0490ff2d694741c3107706ea222463fb5cbdc66ea190b05b4728e75f592154fb",
+     "sv_C1_same": 1348,
+     "unwitnessed": 0,
+     "wit_argmax_over_Q": 5,
+     "wit_max_sv": 20
+    },
+    "r26": {
+     "pin_match": true,
+     "proper": 2879,
+     "r": 26,
+     "stream_sha256": "0490ff2d694741c3107706ea222463fb5cbdc66ea190b05b4728e75f592154fb",
+     "sv_C1_same": 1348,
+     "unwitnessed": 0,
+     "wit_argmax_over_Q": 5,
+     "wit_max_sv": 20
+    },
+    "r27": {
+     "pin_match": true,
+     "proper": 3839,
+     "r": 27,
+     "stream_sha256": "cb6076c6fe2aac24c4f2d1aa906351aa2b5ec82d38a7652db09d1405fb35f1c8",
+     "sv_C1_same": 1888,
+     "unwitnessed": 0,
+     "wit_argmax_over_Q": 15,
+     "wit_max_sv": 18
+    },
+    "r28": {
+     "pin_match": true,
+     "proper": 3839,
+     "r": 28,
+     "stream_sha256": "cb6076c6fe2aac24c4f2d1aa906351aa2b5ec82d38a7652db09d1405fb35f1c8",
+     "sv_C1_same": 1888,
+     "unwitnessed": 0,
+     "wit_argmax_over_Q": 15,
+     "wit_max_sv": 18
+    },
+    "r29": {
+     "pin_match": true,
+     "proper": 7679,
+     "r": 29,
+     "stream_sha256": "0d90ad2bc20de963a1e3f53f3f2bb08af321d9822222458e785efa9967bcf543",
+     "sv_C1_same": 3725,
+     "unwitnessed": 0,
+     "wit_argmax_over_Q": 29,
+     "wit_max_sv": 28
+    },
+    "r30": {
+     "pin_match": true,
+     "proper": 7679,
+     "r": 30,
+     "stream_sha256": "0d90ad2bc20de963a1e3f53f3f2bb08af321d9822222458e785efa9967bcf543",
+     "sv_C1_same": 3725,
+     "unwitnessed": 0,
+     "wit_argmax_over_Q": 29,
+     "wit_max_sv": 28
+    },
+    "r31": {
+     "pin_match": true,
+     "proper": 15359,
+     "r": 31,
+     "stream_sha256": "77106ce240f8b0a464daec47f69a81830d1c068b9ef5998f8985f473749654b2",
+     "sv_C1_same": 7317,
+     "unwitnessed": 0,
+     "wit_argmax_over_Q": 29,
+     "wit_max_sv": 27
+    },
+    "r32": {
+     "pin_match": true,
+     "proper": 18431,
+     "r": 32,
+     "stream_sha256": "42f97831f66daaa2364ffc29429c923c7e7f88b53020624508243052ecc764ce",
+     "sv_C1_same": 9146,
+     "unwitnessed": 0,
+     "wit_argmax_over_Q": 29,
+     "wit_max_sv": 25
+    }
+   },
+   "name": "S1: K0925 REPRODUCTION PINS r = 17..32: recomputed (proper, unwitnessed, wit_max_sv, wit_argmax_over_Q, sv_C1_same) equal the published K0925 audit values verbatim (audit sha256 b3733ed5...); the r = 2..32 sweep semantics are reproduced exactly by this implementation",
+   "ok": true
+  },
+  {
+   "data": {
+    "r33": {
+     "Q": "144403552893600",
+     "chunk_hashes": [
+      "fb0746b5e370c860956053b71a990fba39c0c78479a473a69cfb65e5e378ff41",
+      "7d8423c2a10a2a1d47038d1c66a8cb888004b5eba2020d3eecb5f3474d7931af"
+     ],
+     "fallback_count": 0,
+     "hist": {
+      "1": 9285,
+      "10": 29,
+      "11": 13,
+      "12": 10,
+      "13": 2,
+      "14": 4,
+      "15": 5,
+      "16": 7,
+      "17": 1,
+      "18": 2,
+      "2": 4998,
+      "20": 2,
+      "22": 1,
+      "25": 1,
+      "3": 1894,
+      "4": 1197,
+      "5": 414,
+      "6": 304,
+      "7": 76,
+      "8": 129,
+      "9": 57
+     },
+     "n_sims": 36684,
+     "n_wit_C1": 9285,
+     "proper": 18431,
+     "r": 33,
+     "stream_sha256": "42f97831f66daaa2364ffc29429c923c7e7f88b53020624508243052ecc764ce",
+     "sv_C1_same": 9146,
+     "unwitnessed": 0,
+     "unwitnessed_first": null,
+     "wit_argmax_d": 4979432858400,
+     "wit_argmax_over_Q": 29,
+     "wit_max_sv": 25
+    },
+    "r34": {
+     "Q": "144403552893600",
+     "chunk_hashes": [
+      "fb0746b5e370c860956053b71a990fba39c0c78479a473a69cfb65e5e378ff41",
+      "7d8423c2a10a2a1d47038d1c66a8cb888004b5eba2020d3eecb5f3474d7931af"
+     ],
+     "fallback_count": 0,
+     "hist": {
+      "1": 9285,
+      "10": 29,
+      "11": 13,
+      "12": 10,
+      "13": 2,
+      "14": 4,
+      "15": 5,
+      "16": 7,
+      "17": 1,
+      "18": 2,
+      "2": 4998,
+      "20": 2,
+      "22": 1,
+      "25": 1,
+      "3": 1894,
+      "4": 1197,
+      "5": 414,
+      "6": 304,
+      "7": 76,
+      "8": 129,
+      "9": 57
+     },
+     "n_sims": 36684,
+     "n_wit_C1": 9285,
+     "proper": 18431,
+     "r": 34,
+     "stream_sha256": "42f97831f66daaa2364ffc29429c923c7e7f88b53020624508243052ecc764ce",
+     "sv_C1_same": 9146,
+     "unwitnessed": 0,
+     "unwitnessed_first": null,
+     "wit_argmax_d": 4979432858400,
+     "wit_argmax_over_Q": 29,
+     "wit_max_sv": 25
+    },
+    "r35": {
+     "Q": "144403552893600",
+     "chunk_hashes": [
+      "fb0746b5e370c860956053b71a990fba39c0c78479a473a69cfb65e5e378ff41",
+      "7d8423c2a10a2a1d47038d1c66a8cb888004b5eba2020d3eecb5f3474d7931af"
+     ],
+     "fallback_count": 0,
+     "hist": {
+      "1": 9285,
+      "10": 29,
+      "11": 13,
+      "12": 10,
+      "13": 2,
+      "14": 4,
+      "15": 5,
+      "16": 7,
+      "17": 1,
+      "18": 2,
+      "2": 4998,
+      "20": 2,
+      "22": 1,
+      "25": 1,
+      "3": 1894,
+      "4": 1197,
+      "5": 414,
+      "6": 304,
+      "7": 76,
+      "8": 129,
+      "9": 57
+     },
+     "n_sims": 36684,
+     "n_wit_C1": 9285,
+     "proper": 18431,
+     "r": 35,
+     "stream_sha256": "42f97831f66daaa2364ffc29429c923c7e7f88b53020624508243052ecc764ce",
+     "sv_C1_same": 9146,
+     "unwitnessed": 0,
+     "unwitnessed_first": null,
+     "wit_argmax_d": 4979432858400,
+     "wit_argmax_over_Q": 29,
+     "wit_max_sv": 25
+    },
+    "r36": {
+     "Q": "144403552893600",
+     "chunk_hashes": [
+      "fb0746b5e370c860956053b71a990fba39c0c78479a473a69cfb65e5e378ff41",
+      "7d8423c2a10a2a1d47038d1c66a8cb888004b5eba2020d3eecb5f3474d7931af"
+     ],
+     "fallback_count": 0,
+     "hist": {
+      "1": 9285,
+      "10": 29,
+      "11": 13,
+      "12": 10,
+      "13": 2,
+      "14": 4,
+      "15": 5,
+      "16": 7,
+      "17": 1,
+      "18": 2,
+      "2": 4998,
+      "20": 2,
+      "22": 1,
+      "25": 1,
+      "3": 1894,
+      "4": 1197,
+      "5": 414,
+      "6": 304,
+      "7": 76,
+      "8": 129,
+      "9": 57
+     },
+     "n_sims": 36684,
+     "n_wit_C1": 9285,
+     "proper": 18431,
+     "r": 36,
+     "stream_sha256": "42f97831f66daaa2364ffc29429c923c7e7f88b53020624508243052ecc764ce",
+     "sv_C1_same": 9146,
+     "unwitnessed": 0,
+     "unwitnessed_first": null,
+     "wit_argmax_d": 4979432858400,
+     "wit_argmax_over_Q": 29,
+     "wit_max_sv": 25
+    },
+    "r37": {
+     "Q": "5342931457063200",
+     "chunk_hashes": [
+      "c8d74ec5c69da611f294a713bb56a084dd5b348559ea5c94513810bce9283406",
+      "379d07effdf0c115afea235bc8e33a8ab3b73744490264f591811fbae4535981",
+      "6a2da7df64977a17a0da60db0f2ac5939b961d9be7250b697805ba55e405ab8c"
+     ],
+     "fallback_count": 0,
+     "hist": {
+      "1": 18839,
+      "10": 46,
+      "11": 21,
+      "12": 22,
+      "13": 8,
+      "14": 9,
+      "15": 9,
+      "16": 13,
+      "18": 4,
+      "2": 9956,
+      "20": 1,
+      "22": 1,
+      "25": 1,
+      "26": 1,
+      "3": 3776,
+      "35": 1,
+      "4": 2303,
+      "5": 800,
+      "6": 562,
+      "7": 150,
+      "8": 232,
+      "9": 108
+     },
+     "n_sims": 72269,
+     "n_wit_C1": 18839,
+     "proper": 36863,
+     "r": 37,
+     "stream_sha256": "29184616cdb6075ee8f789724401382a00c71460ccb4a0b43273959c8f738455",
+     "sv_C1_same": 18024,
+     "unwitnessed": 0,
+     "unwitnessed_first": null,
+     "wit_argmax_d": 144403552893600,
+     "wit_argmax_over_Q": 37,
+     "wit_max_sv": 35
+    },
+    "r38": {
+     "Q": "5342931457063200",
+     "chunk_hashes": [
+      "c8d74ec5c69da611f294a713bb56a084dd5b348559ea5c94513810bce9283406",
+      "379d07effdf0c115afea235bc8e33a8ab3b73744490264f591811fbae4535981",
+      "6a2da7df64977a17a0da60db0f2ac5939b961d9be7250b697805ba55e405ab8c"
+     ],
+     "fallback_count": 0,
+     "hist": {
+      "1": 18839,
+      "10": 46,
+      "11": 21,
+      "12": 22,
+      "13": 8,
+      "14": 9,
+      "15": 9,
+      "16": 13,
+      "18": 4,
+      "2": 9956,
+      "20": 1,
+      "22": 1,
+      "25": 1,
+      "26": 1,
+      "3": 3776,
+      "35": 1,
+      "4": 2303,
+      "5": 800,
+      "6": 562,
+      "7": 150,
+      "8": 232,
+      "9": 108
+     },
+     "n_sims": 72269,
+     "n_wit_C1": 18839,
+     "proper": 36863,
+     "r": 38,
+     "stream_sha256": "29184616cdb6075ee8f789724401382a00c71460ccb4a0b43273959c8f738455",
+     "sv_C1_same": 18024,
+     "unwitnessed": 0,
+     "unwitnessed_first": null,
+     "wit_argmax_d": 144403552893600,
+     "wit_argmax_over_Q": 37,
+     "wit_max_sv": 35
+    },
+    "r39": {
+     "Q": "5342931457063200",
+     "chunk_hashes": [
+      "c8d74ec5c69da611f294a713bb56a084dd5b348559ea5c94513810bce9283406",
+      "379d07effdf0c115afea235bc8e33a8ab3b73744490264f591811fbae4535981",
+      "6a2da7df64977a17a0da60db0f2ac5939b961d9be7250b697805ba55e405ab8c"
+     ],
+     "fallback_count": 0,
+     "hist": {
+      "1": 18839,
+      "10": 46,
+      "11": 21,
+      "12": 22,
+      "13": 8,
+      "14": 9,
+      "15": 9,
+      "16": 13,
+      "18": 4,
+      "2": 9956,
+      "20": 1,
+      "22": 1,
+      "25": 1,
+      "26": 1,
+      "3": 3776,
+      "35": 1,
+      "4": 2303,
+      "5": 800,
+      "6": 562,
+      "7": 150,
+      "8": 232,
+      "9": 108
+     },
+     "n_sims": 72269,
+     "n_wit_C1": 18839,
+     "proper": 36863,
+     "r": 39,
+     "stream_sha256": "29184616cdb6075ee8f789724401382a00c71460ccb4a0b43273959c8f738455",
+     "sv_C1_same": 18024,
+     "unwitnessed": 0,
+     "unwitnessed_first": null,
+     "wit_argmax_d": 144403552893600,
+     "wit_argmax_over_Q": 37,
+     "wit_max_sv": 35
+    },
+    "r40": {
+     "Q": "5342931457063200",
+     "chunk_hashes": [
+      "c8d74ec5c69da611f294a713bb56a084dd5b348559ea5c94513810bce9283406",
+      "379d07effdf0c115afea235bc8e33a8ab3b73744490264f591811fbae4535981",
+      "6a2da7df64977a17a0da60db0f2ac5939b961d9be7250b697805ba55e405ab8c"
+     ],
+     "fallback_count": 0,
+     "hist": {
+      "1": 18839,
+      "10": 46,
+      "11": 21,
+      "12": 22,
+      "13": 8,
+      "14": 9,
+      "15": 9,
+      "16": 13,
+      "18": 4,
+      "2": 9956,
+      "20": 1,
+      "22": 1,
+      "25": 1,
+      "26": 1,
+      "3": 3776,
+      "35": 1,
+      "4": 2303,
+      "5": 800,
+      "6": 562,
+      "7": 150,
+      "8": 232,
+      "9": 108
+     },
+     "n_sims": 72269,
+     "n_wit_C1": 18839,
+     "proper": 36863,
+     "r": 40,
+     "stream_sha256": "29184616cdb6075ee8f789724401382a00c71460ccb4a0b43273959c8f738455",
+     "sv_C1_same": 18024,
+     "unwitnessed": 0,
+     "unwitnessed_first": null,
+     "wit_argmax_d": 144403552893600,
+     "wit_argmax_over_Q": 37,
+     "wit_max_sv": 35
+    },
+    "r41": {
+     "Q": "219060189739591200",
+     "chunk_hashes": [
+      "ecbde34ec2ebacd6e4e916ee371ad9f02af3d3ed3c36cc7c9146df63e7722486",
+      "aeb93c6ae9c23571f06ad87ad3aa89a8d84dae9b0d32d210d153705976dbd4cc",
+      "096f4eccd8c09e07d0ab34bef4ff521f3d5fd0ff48b7eb2e90df96fe587ce57a",
+      "454e75df7baea4dc0bec1f585b542b4f4887cc919b8b93bb3b430e4839b1a8bc",
+      "5d3c072fc1b35a52dc46a3385ac955afd4c33510cb5982f3b962ae14c34ec32d"
+     ],
+     "fallback_count": 0,
+     "hist": {
+      "1": 38143,
+      "10": 85,
+      "11": 33,
+      "12": 30,
+      "13": 20,
+      "14": 15,
+      "15": 15,
+      "16": 19,
+      "18": 7,
+      "19": 1,
+      "2": 19883,
+      "22": 1,
+      "25": 1,
+      "26": 2,
+      "29": 1,
+      "3": 7486,
+      "4": 4489,
+      "5": 1532,
+      "6": 1059,
+      "7": 289,
+      "8": 418,
+      "9": 198
+     },
+     "n_sims": 142331,
+     "n_wit_C1": 38143,
+     "proper": 73727,
+     "r": 41,
+     "stream_sha256": "6dd2b2d0863c95ded7f54d7a83b7ef55419296a6897f8cf73102d6ab7b6c07e7",
+     "sv_C1_same": 35584,
+     "unwitnessed": 0,
+     "unwitnessed_first": null,
+     "wit_argmax_d": 5920545668637600,
+     "wit_argmax_over_Q": 37,
+     "wit_max_sv": 29
+    },
+    "r42": {
+     "Q": "219060189739591200",
+     "chunk_hashes": [
+      "ecbde34ec2ebacd6e4e916ee371ad9f02af3d3ed3c36cc7c9146df63e7722486",
+      "aeb93c6ae9c23571f06ad87ad3aa89a8d84dae9b0d32d210d153705976dbd4cc",
+      "096f4eccd8c09e07d0ab34bef4ff521f3d5fd0ff48b7eb2e90df96fe587ce57a",
+      "454e75df7baea4dc0bec1f585b542b4f4887cc919b8b93bb3b430e4839b1a8bc",
+      "5d3c072fc1b35a52dc46a3385ac955afd4c33510cb5982f3b962ae14c34ec32d"
+     ],
+     "fallback_count": 0,
+     "hist": {
+      "1": 38143,
+      "10": 85,
+      "11": 33,
+      "12": 30,
+      "13": 20,
+      "14": 15,
+      "15": 15,
+      "16": 19,
+      "18": 7,
+      "19": 1,
+      "2": 19883,
+      "22": 1,
+      "25": 1,
+      "26": 2,
+      "29": 1,
+      "3": 7486,
+      "4": 4489,
+      "5": 1532,
+      "6": 1059,
+      "7": 289,
+      "8": 418,
+      "9": 198
+     },
+     "n_sims": 142331,
+     "n_wit_C1": 38143,
+     "proper": 73727,
+     "r": 42,
+     "stream_sha256": "6dd2b2d0863c95ded7f54d7a83b7ef55419296a6897f8cf73102d6ab7b6c07e7",
+     "sv_C1_same": 35584,
+     "unwitnessed": 0,
+     "unwitnessed_first": null,
+     "wit_argmax_d": 5920545668637600,
+     "wit_argmax_over_Q": 37,
+     "wit_max_sv": 29
+    },
+    "r43": {
+     "Q": "9419588158802421600",
+     "chunk_hashes": [
+      "0db6b9f8a13e7c09858db94ae9b816ac1457b20fdf70be5f59a3b098be370707",
+      "078945965ad210e6bd1287334ed466bf47eaa7eb9b8d33e4146a7f6312a68dde",
+      "da1b5e23cd96f4e1b13fd98f32da98d0596e05b9e2af8e3289f8a5fc458deb39",
+      "eca3d4b6bea74710b9d1613d934a349c996deea510c82b51c31e41e89103c8fe",
+      "4ea42995799e034b0788354105ce12906a4472cb246cba56914636aa52e57041",
+      "39c5dcad3093e0d9ceecd1db842f6a906f23e1b50a46f3a1fb8ebf77c9743500",
+      "54d881aa66592d0ab280796bfd50ff022287c8a6dcfe2208c9a9e35c3ccdcb9f",
+      "2f14ec5e46c804c2dc79eff09400d75092755d91795ec52b7ea00b3f5d9ceff8",
+      "0dbca620d1be9341090e1f79e6b83a6a7427b5fb032c6f3b3a0243a50e63cf64"
+     ],
+     "fallback_count": 0,
+     "hist": {
+      "1": 77090,
+      "10": 165,
+      "11": 64,
+      "12": 54,
+      "13": 31,
+      "14": 17,
+      "15": 25,
+      "16": 24,
+      "17": 1,
+      "18": 11,
+      "19": 1,
+      "2": 39600,
+      "20": 2,
+      "22": 1,
+      "24": 1,
+      "25": 1,
+      "26": 2,
+      "28": 1,
+      "3": 14886,
+      "30": 1,
+      "4": 8737,
+      "5": 3020,
+      "6": 2015,
+      "7": 574,
+      "8": 791,
+      "9": 340
+     },
+     "n_sims": 281349,
+     "n_wit_C1": 77090,
+     "proper": 147455,
+     "r": 43,
+     "stream_sha256": "f6c5477c290271d0a11a27cba2feb15c596d1efdceefe8fc2f9ef2647f428d31",
+     "sv_C1_same": 70365,
+     "unwitnessed": 0,
+     "unwitnessed_first": null,
+     "wit_argmax_d": 303857682542013600,
+     "wit_argmax_over_Q": 31,
+     "wit_max_sv": 30
+    },
+    "r44": {
+     "Q": "9419588158802421600",
+     "chunk_hashes": [
+      "0db6b9f8a13e7c09858db94ae9b816ac1457b20fdf70be5f59a3b098be370707",
+      "078945965ad210e6bd1287334ed466bf47eaa7eb9b8d33e4146a7f6312a68dde",
+      "da1b5e23cd96f4e1b13fd98f32da98d0596e05b9e2af8e3289f8a5fc458deb39",
+      "eca3d4b6bea74710b9d1613d934a349c996deea510c82b51c31e41e89103c8fe",
+      "4ea42995799e034b0788354105ce12906a4472cb246cba56914636aa52e57041",
+      "39c5dcad3093e0d9ceecd1db842f6a906f23e1b50a46f3a1fb8ebf77c9743500",
+      "54d881aa66592d0ab280796bfd50ff022287c8a6dcfe2208c9a9e35c3ccdcb9f",
+      "2f14ec5e46c804c2dc79eff09400d75092755d91795ec52b7ea00b3f5d9ceff8",
+      "0dbca620d1be9341090e1f79e6b83a6a7427b5fb032c6f3b3a0243a50e63cf64"
+     ],
+     "fallback_count": 0,
+     "hist": {
+      "1": 77090,
+      "10": 165,
+      "11": 64,
+      "12": 54,
+      "13": 31,
+      "14": 17,
+      "15": 25,
+      "16": 24,
+      "17": 1,
+      "18": 11,
+      "19": 1,
+      "2": 39600,
+      "20": 2,
+      "22": 1,
+      "24": 1,
+      "25": 1,
+      "26": 2,
+      "28": 1,
+      "3": 14886,
+      "30": 1,
+      "4": 8737,
+      "5": 3020,
+      "6": 2015,
+      "7": 574,
+      "8": 791,
+      "9": 340
+     },
+     "n_sims": 281349,
+     "n_wit_C1": 77090,
+     "proper": 147455,
+     "r": 44,
+     "stream_sha256": "f6c5477c290271d0a11a27cba2feb15c596d1efdceefe8fc2f9ef2647f428d31",
+     "sv_C1_same": 70365,
+     "unwitnessed": 0,
+     "unwitnessed_first": null,
+     "wit_argmax_d": 303857682542013600,
+     "wit_argmax_over_Q": 31,
+     "wit_max_sv": 30
+    },
+    "r45": {
+     "Q": "9419588158802421600",
+     "chunk_hashes": [
+      "0db6b9f8a13e7c09858db94ae9b816ac1457b20fdf70be5f59a3b098be370707",
+      "078945965ad210e6bd1287334ed466bf47eaa7eb9b8d33e4146a7f6312a68dde",
+      "da1b5e23cd96f4e1b13fd98f32da98d0596e05b9e2af8e3289f8a5fc458deb39",
+      "eca3d4b6bea74710b9d1613d934a349c996deea510c82b51c31e41e89103c8fe",
+      "4ea42995799e034b0788354105ce12906a4472cb246cba56914636aa52e57041",
+      "39c5dcad3093e0d9ceecd1db842f6a906f23e1b50a46f3a1fb8ebf77c9743500",
+      "54d881aa66592d0ab280796bfd50ff022287c8a6dcfe2208c9a9e35c3ccdcb9f",
+      "2f14ec5e46c804c2dc79eff09400d75092755d91795ec52b7ea00b3f5d9ceff8",
+      "0dbca620d1be9341090e1f79e6b83a6a7427b5fb032c6f3b3a0243a50e63cf64"
+     ],
+     "fallback_count": 0,
+     "hist": {
+      "1": 77090,
+      "10": 165,
+      "11": 64,
+      "12": 54,
+      "13": 31,
+      "14": 17,
+      "15": 25,
+      "16": 24,
+      "17": 1,
+      "18": 11,
+      "19": 1,
+      "2": 39600,
+      "20": 2,
+      "22": 1,
+      "24": 1,
+      "25": 1,
+      "26": 2,
+      "28": 1,
+      "3": 14886,
+      "30": 1,
+      "4": 8737,
+      "5": 3020,
+      "6": 2015,
+      "7": 574,
+      "8": 791,
+      "9": 340
+     },
+     "n_sims": 281349,
+     "n_wit_C1": 77090,
+     "proper": 147455,
+     "r": 45,
+     "stream_sha256": "f6c5477c290271d0a11a27cba2feb15c596d1efdceefe8fc2f9ef2647f428d31",
+     "sv_C1_same": 70365,
+     "unwitnessed": 0,
+     "unwitnessed_first": null,
+     "wit_argmax_d": 303857682542013600,
+     "wit_argmax_over_Q": 31,
+     "wit_max_sv": 30
+    },
+    "r46": {
+     "Q": "9419588158802421600",
+     "chunk_hashes": [
+      "0db6b9f8a13e7c09858db94ae9b816ac1457b20fdf70be5f59a3b098be370707",
+      "078945965ad210e6bd1287334ed466bf47eaa7eb9b8d33e4146a7f6312a68dde",
+      "da1b5e23cd96f4e1b13fd98f32da98d0596e05b9e2af8e3289f8a5fc458deb39",
+      "eca3d4b6bea74710b9d1613d934a349c996deea510c82b51c31e41e89103c8fe",
+      "4ea42995799e034b0788354105ce12906a4472cb246cba56914636aa52e57041",
+      "39c5dcad3093e0d9ceecd1db842f6a906f23e1b50a46f3a1fb8ebf77c9743500",
+      "54d881aa66592d0ab280796bfd50ff022287c8a6dcfe2208c9a9e35c3ccdcb9f",
+      "2f14ec5e46c804c2dc79eff09400d75092755d91795ec52b7ea00b3f5d9ceff8",
+      "0dbca620d1be9341090e1f79e6b83a6a7427b5fb032c6f3b3a0243a50e63cf64"
+     ],
+     "fallback_count": 0,
+     "hist": {
+      "1": 77090,
+      "10": 165,
+      "11": 64,
+      "12": 54,
+      "13": 31,
+      "14": 17,
+      "15": 25,
+      "16": 24,
+      "17": 1,
+      "18": 11,
+      "19": 1,
+      "2": 39600,
+      "20": 2,
+      "22": 1,
+      "24": 1,
+      "25": 1,
+      "26": 2,
+      "28": 1,
+      "3": 14886,
+      "30": 1,
+      "4": 8737,
+      "5": 3020,
+      "6": 2015,
+      "7": 574,
+      "8": 791,
+      "9": 340
+     },
+     "n_sims": 281349,
+     "n_wit_C1": 77090,
+     "proper": 147455,
+     "r": 46,
+     "stream_sha256": "f6c5477c290271d0a11a27cba2feb15c596d1efdceefe8fc2f9ef2647f428d31",
+     "sv_C1_same": 70365,
+     "unwitnessed": 0,
+     "unwitnessed_first": null,
+     "wit_argmax_d": 303857682542013600,
+     "wit_argmax_over_Q": 31,
+     "wit_max_sv": 30
+    },
+    "r47": {
+     "Q": "442720643463713815200",
+     "chunk_hashes": [
+      "45198d98637a932850aa52dd4c5632392d68000596e5c6e2667d803968898beb",
+      "b3c1ea43abe516c885566ff8d1ec70caf34b3bb6120dc3f8a20eea2d0080e7af",
+      "db91197e0c47d4135779fedb0c1bb33e69df1ba7a326c091dc67a981644ed9bf",
+      "47da683afc65227661eb5f4c914fc482c397fc92dcc33078e9958e4aaf55a72e",
+      "d4263ab297b9f85e609c9b9183010138e4b6296f7e985a68456cdab949d81b2b",
+      "5c0544132296716fd6c58b52a109dad0ba67f776821626599efb432c769a31cd",
+      "7fd74324c7a72c3fd492ab44901b8bbd11fd804ceb34f34911cff6bec8f775c0",
+      "eddaaa4bff6aaeddc834e21d3109576982286b878730ad373eb5f6b11fb6c7e0",
+      "0efb198d50ee240a1e8d3fa81920c44b4503aa120870c5f8eddb91fbac2f68be",
+      "5c650b28b20f8e50edcc46f76e1c5aeab5f3c52c938f8e047639442c488f8208",
+      "812a84f3414e0c5bbf68d3adf9f9f0aa3bea658fc5b6dcc13bfa06235aeb6e66",
+      "a27b0815fd81ae1436673cacd5b844ef8f25a3e2479ed72d4fe039bef5bb209c",
+      "f97713ed36a3d33581871edbb5715f326d0ab758144e20120edbd3c0828e58f4",
+      "4bdc4db646a23f9a78e64cf8076a3a69c8c1f95bcc2cf4c22e84c72db29a7550",
+      "1807f58a909f5b973b087e5e62e9cc387952305878ea6727cc934198c7a7755b",
+      "6e12398b64a462a9131e049c2ee6201c410e7271c9cd36a3109c7d54fc8ef5de",
+      "7680657d00ffe799cc4b0e69d8400bd10e4f5ffc63771846e80548419ad4d6bc",
+      "7b69c2eae80d2f70659b6d7fa96ec9fd4ae38f3e5378bcc644b388c012c549d9"
+     ],
+     "fallback_count": 0,
+     "hist": {
+      "1": 155722,
+      "10": 288,
+      "11": 108,
+      "12": 98,
+      "13": 56,
+      "14": 43,
+      "15": 46,
+      "16": 62,
+      "17": 2,
+      "18": 17,
+      "19": 1,
+      "2": 78994,
+      "20": 3,
+      "22": 1,
+      "23": 1,
+      "24": 2,
+      "25": 1,
+      "26": 3,
+      "3": 29495,
+      "30": 1,
+      "39": 1,
+      "4": 17029,
+      "5": 5848,
+      "6": 3888,
+      "7": 1091,
+      "8": 1483,
+      "9": 627
+     },
+     "n_sims": 556963,
+     "n_wit_C1": 155722,
+     "proper": 294911,
+     "r": 47,
+     "stream_sha256": "54cabdee0bd39d6b2c91065d8c6b20164555b23f3045f2db0101a4b43ac86df0",
+     "sv_C1_same": 139189,
+     "unwitnessed": 0,
+     "unwitnessed_first": null,
+     "wit_argmax_d": 9419588158802421600,
+     "wit_argmax_over_Q": 47,
+     "wit_max_sv": 39
+    },
+    "r48": {
+     "Q": "442720643463713815200",
+     "chunk_hashes": [
+      "45198d98637a932850aa52dd4c5632392d68000596e5c6e2667d803968898beb",
+      "b3c1ea43abe516c885566ff8d1ec70caf34b3bb6120dc3f8a20eea2d0080e7af",
+      "db91197e0c47d4135779fedb0c1bb33e69df1ba7a326c091dc67a981644ed9bf",
+      "47da683afc65227661eb5f4c914fc482c397fc92dcc33078e9958e4aaf55a72e",
+      "d4263ab297b9f85e609c9b9183010138e4b6296f7e985a68456cdab949d81b2b",
+      "5c0544132296716fd6c58b52a109dad0ba67f776821626599efb432c769a31cd",
+      "7fd74324c7a72c3fd492ab44901b8bbd11fd804ceb34f34911cff6bec8f775c0",
+      "eddaaa4bff6aaeddc834e21d3109576982286b878730ad373eb5f6b11fb6c7e0",
+      "0efb198d50ee240a1e8d3fa81920c44b4503aa120870c5f8eddb91fbac2f68be",
+      "5c650b28b20f8e50edcc46f76e1c5aeab5f3c52c938f8e047639442c488f8208",
+      "812a84f3414e0c5bbf68d3adf9f9f0aa3bea658fc5b6dcc13bfa06235aeb6e66",
+      "a27b0815fd81ae1436673cacd5b844ef8f25a3e2479ed72d4fe039bef5bb209c",
+      "f97713ed36a3d33581871edbb5715f326d0ab758144e20120edbd3c0828e58f4",
+      "4bdc4db646a23f9a78e64cf8076a3a69c8c1f95bcc2cf4c22e84c72db29a7550",
+      "1807f58a909f5b973b087e5e62e9cc387952305878ea6727cc934198c7a7755b",
+      "6e12398b64a462a9131e049c2ee6201c410e7271c9cd36a3109c7d54fc8ef5de",
+      "7680657d00ffe799cc4b0e69d8400bd10e4f5ffc63771846e80548419ad4d6bc",
+      "7b69c2eae80d2f70659b6d7fa96ec9fd4ae38f3e5378bcc644b388c012c549d9"
+     ],
+     "fallback_count": 0,
+     "hist": {
+      "1": 155722,
+      "10": 288,
+      "11": 108,
+      "12": 98,
+      "13": 56,
+      "14": 43,
+      "15": 46,
+      "16": 62,
+      "17": 2,
+      "18": 17,
+      "19": 1,
+      "2": 78994,
+      "20": 3,
+      "22": 1,
+      "23": 1,
+      "24": 2,
+      "25": 1,
+      "26": 3,
+      "3": 29495,
+      "30": 1,
+      "39": 1,
+      "4": 17029,
+      "5": 5848,
+      "6": 3888,
+      "7": 1091,
+      "8": 1483,
+      "9": 627
+     },
+     "n_sims": 556963,
+     "n_wit_C1": 155722,
+     "proper": 294911,
+     "r": 48,
+     "stream_sha256": "54cabdee0bd39d6b2c91065d8c6b20164555b23f3045f2db0101a4b43ac86df0",
+     "sv_C1_same": 139189,
+     "unwitnessed": 0,
+     "unwitnessed_first": null,
+     "wit_argmax_d": 9419588158802421600,
+     "wit_argmax_over_Q": 47,
+     "wit_max_sv": 39
+    }
+   },
+   "name": "S2: SURVIVOR minimality extension (machine, r = 33..48): every proper divisor of Q(r) is rejected as a survivor-column period by a witness C <= 150 (fallback window [151,1500]); with K0922 LEMMA DIV the survivor column's minimal period is exactly Q(r) for r = 33..48; per-divisor witness stream pinned by chained sha256",
+   "ok": true
+  },
+  {
+   "data": {
+    "r33": {
+     "Q": "144403552893600",
+     "anchors": 1504,
+     "per_bad": 0,
+     "r": 33
+    },
+    "r34": {
+     "Q": "144403552893600",
+     "anchors": 1504,
+     "per_bad": 0,
+     "r": 34
+    },
+    "r35": {
+     "Q": "144403552893600",
+     "anchors": 1504,
+     "per_bad": 0,
+     "r": 35
+    },
+    "r36": {
+     "Q": "144403552893600",
+     "anchors": 1504,
+     "per_bad": 0,
+     "r": 36
+    },
+    "r37": {
+     "Q": "5342931457063200",
+     "anchors": 1504,
+     "per_bad": 0,
+     "r": 37
+    },
+    "r38": {
+     "Q": "5342931457063200",
+     "anchors": 1504,
+     "per_bad": 0,
+     "r": 38
+    },
+    "r39": {
+     "Q": "5342931457063200",
+     "anchors": 1504,
+     "per_bad": 0,
+     "r": 39
+    },
+    "r40": {
+     "Q": "5342931457063200",
+     "anchors": 1504,
+     "per_bad": 0,
+     "r": 40
+    },
+    "r41": {
+     "Q": "219060189739591200",
+     "anchors": 1504,
+     "per_bad": 0,
+     "r": 41
+    },
+    "r42": {
+     "Q": "219060189739591200",
+     "anchors": 1504,
+     "per_bad": 0,
+     "r": 42
+    },
+    "r43": {
+     "Q": "9419588158802421600",
+     "anchors": 1504,
+     "per_bad": 0,
+     "r": 43
+    },
+    "r44": {
+     "Q": "9419588158802421600",
+     "anchors": 1504,
+     "per_bad": 0,
+     "r": 44
+    },
+    "r45": {
+     "Q": "9419588158802421600",
+     "anchors": 1504,
+     "per_bad": 0,
+     "r": 45
+    },
+    "r46": {
+     "Q": "9419588158802421600",
+     "anchors": 1504,
+     "per_bad": 0,
+     "r": 46
+    },
+    "r47": {
+     "Q": "442720643463713815200",
+     "anchors": 1504,
+     "per_bad": 0,
+     "r": 47
+    },
+    "r48": {
+     "Q": "442720643463713815200",
+     "anchors": 1504,
+     "per_bad": 0,
+     "r": 48
+    }
+   },
+   "name": "S3: POSITIVE period anchor r = 33..48: S(C+Q(r),r) == S(C,r) for C in [1,1500] plus anchors {Q-1,Q+1,Q+5,2Q-1} (machine anchor; the universal proof is K0925 THEOREM W+)",
+   "ok": true
+  },
+  {
+   "data": {
+    "r33": {
+     "mismatches": 0,
+     "pairs": 150,
+     "r": 33
+    },
+    "r34": {
+     "mismatches": 0,
+     "pairs": 150,
+     "r": 34
+    },
+    "r35": {
+     "mismatches": 0,
+     "pairs": 150,
+     "r": 35
+    },
+    "r36": {
+     "mismatches": 0,
+     "pairs": 150,
+     "r": 36
+    },
+    "r37": {
+     "mismatches": 0,
+     "pairs": 150,
+     "r": 37
+    },
+    "r38": {
+     "mismatches": 0,
+     "pairs": 150,
+     "r": 38
+    },
+    "r39": {
+     "mismatches": 0,
+     "pairs": 150,
+     "r": 39
+    },
+    "r40": {
+     "mismatches": 0,
+     "pairs": 150,
+     "r": 40
+    },
+    "r41": {
+     "mismatches": 0,
+     "pairs": 150,
+     "r": 41
+    },
+    "r42": {
+     "mismatches": 0,
+     "pairs": 150,
+     "r": 42
+    },
+    "r43": {
+     "mismatches": 0,
+     "pairs": 150,
+     "r": 43
+    },
+    "r44": {
+     "mismatches": 0,
+     "pairs": 150,
+     "r": 44
+    },
+    "r45": {
+     "mismatches": 0,
+     "pairs": 150,
+     "r": 45
+    },
+    "r46": {
+     "mismatches": 0,
+     "pairs": 150,
+     "r": 46
+    },
+    "r47": {
+     "mismatches": 0,
+     "pairs": 150,
+     "r": 47
+    },
+    "r48": {
+     "mismatches": 0,
+     "pairs": 150,
+     "r": 48
+    }
+   },
+   "name": "S4: TWIN anchor at the new range: the swept survivor_fast dynamics match the verbatim per-stone K0859 recursion (full (elim, survivor) pair via the closed-form twin theorem_d_fast) for r = 33..48 and C in [1,150]; the K0925 TWIN check already pinned the dynamics for r = 2..24, C = [1,200] plus anchors",
+   "ok": true
+  }
+ ],
+ "date": "2026-11-20",
+ "follows": "K0919 (THEOREM PER), K0922 (LEMMA DIV), K0925 (THEOREM S32, THEOREM W+, published audit pins)",
+ "item": "K1143",
+ "title": "Survivor-column minimal period exactly Q(r) for r = 33..48 by small witnesses (every proper divisor rejected), extending K0925 theorem S32 to S48; r = 2..32 reproduction pinned verbatim"
+}
