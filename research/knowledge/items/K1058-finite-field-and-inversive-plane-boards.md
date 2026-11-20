@@ -496,6 +496,18 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/scripts/net3_torus_native.py
   role: verifier
   note: 指数集合Eの計算
+- path: research/experiments/finite-field-kyouen-20261120/NET3_COMPLETE.md
+  role: source
+  note: 3-ネット理論の総括（交差比からHall-Paigeまで）
+- path: research/experiments/finite-field-kyouen-20261120/scripts/final_consistency.py
+  role: verifier
+  note: 6つの主張を一括検証するハーネス（全チェック通過）
+- path: research/experiments/finite-field-kyouen-20261120/scripts/net3_cyclic_table.py
+  role: verifier
+  note: ラテン方陣がZ_{q+1}の加法表であることの確認
+- path: research/experiments/finite-field-kyouen-20261120/scripts/net3_fast_k.py
+  role: verifier
+  note: 3-ネットフィルタによる高速K計算（q≤11）
 scope: 標準q=4の禁止条件 det[x,y,x^2+y^2,1]=0 を可換環上で読むことで定義される有限体盤 AG(2,q)（q は素数冪）、位数qの反転平面（3-(q^2+1,q+1,1)設計）、周期境界を課したトーラス盤 Z_n^2、および一般の Steiner t-(v,s,1) 設計上の完全指摘・通常プレイゲーム。q=3,5 の完全計算、n≤12 の行列式上界、トーラス盤とAG(2,p)の一致（p≤13）、9つのSteiner設計での三分法検証、反転平面の3-ネット翻訳（q≤9）。
 evidence: 有限完全計算（q≤5 の全安全局面 Grundy、q≤8 の反転平面K厳密値、q≤7 のAG K厳密値、n≤12 の D(n)、p≤13 のトーラス一致、9設計のK、q≤9 の3-ネット横断数）と、3-設計公理の機械検査、交差比の鍵事実の全数検証（q≤7、247,840個の4点組、不一致0）。D(n)=a^2*floor(a^2/2) は n≤12 の全数確認済みだが全称証明ではない。層サイズ公式は k≤5 の範囲で証明、k≥6 は反例あり。トーラス盤とAG(2,p)の一致は Z_p=F_p から従うが全数確認は p≤13。三分法・一般上界 K≤lambda_2+2・一般下界 K=Omega((v/s)^(1/3))・派生上界 K≤1+A_2(D_p) は証明済み。K=3+alpha は q≤9 の検証であり一般証明ではない。
 ---
