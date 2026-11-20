@@ -55,6 +55,12 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/ALGEBRAIC_ROUTE.md
   role: source
   note: 放物面上のcap・反転平面3-arcへの再定式化
+- path: research/experiments/finite-field-kyouen-20261120/PARITY_APPLICATION.md
+  role: source
+  note: Kの偶奇による勝者決定の系
+- path: research/experiments/finite-field-kyouen-20261120/scripts/parity_application.py
+  role: verifier
+  note: 系の検証
 - path: research/experiments/finite-field-kyouen-20261120/PARITY_LAW_COMPLETE.md
   role: proof
   note: パリティ法則の完全な証明（逆も含む）
