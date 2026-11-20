@@ -55,6 +55,12 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/ALGEBRAIC_ROUTE.md
   role: source
   note: 放物面上のcap・反転平面3-arcへの再定式化
+- path: research/experiments/finite-field-kyouen-20261120/TWO_ARC_RESOLUTION.md
+  role: proof
+  note: 2-arcの最大が2であることの証明と不整合の解決
+- path: research/experiments/finite-field-kyouen-20261120/LITERATURE_3ARC_5.md
+  role: source
+  note: arcの定義確定とAd(q)の特定
 - path: research/experiments/finite-field-kyouen-20261120/LITERATURE_3ARC_2.md
   role: source
   note: Sonninoの(q+5)-arcと我々のKの不整合
@@ -501,8 +507,13 @@ q=3 で k≈6、q=5 で k=9、q=7 で k≈25 であり、真値（q=5,7 で K=6�
 反転平面の言葉では **3-arc**（どの円とも3点以下で交わる集合）に他ならない。
 符号理論的には「パリティ検査行列の任意3列が独立」に対応するが、Singleton 限界は下界しか与えない。
 文献調査では最大 3-arc サイズの明示的な既知結果を確認できなかった。
-Sonnino は奇数の q に対して (q+5)-arc を構成しているが、arc の定義を一次資料で確認できておらず、
-我々の K（q+5 より小さい）との不整合は未解決である。
+
+Sonnino は奇数の q に対して (q+5)-arc を構成しているが、これは**別問題**であることが判明した。
+反転平面の「k-arc」は各円と高々2点と定義され、公理 (A1)（任意の三点が一意に円を定める）から
+**2-arc の最大サイズは 2** である（q=3,4,5,7 で計算確認）。
+したがって Sonnino の arc は別の定義か、Ad(q) が標準的でない反転平面であり、
+我々の K（3-arc の最大）とは直接比較できない。
+
 なお反転平面の公理 (A1)「任意の三点が一意に円を定める」は文献で確認でき、
 我々の恒真性の主張と整合する。
 
