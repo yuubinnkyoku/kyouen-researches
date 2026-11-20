@@ -21,3 +21,14 @@ loss=true（uncapped）はdepth-10内必敗のprobe事実の再現であり、�
 - K1147レーンのK1158（8根被覆判定の第三検証・散在5実験dir入力のstage再構成とbasename依存性の発見）との相互整合確認は未実施で候補。
 - 同系譜第三検証で未着手の対象は、K1149以降に新規出版された各検証実験（着地の都度READMEと採番を確認してから）。
 - 器材 `/home/user/work/kv1149/`（harness・staging R/・監査out/）と `/home/user/work/k1159/`（part2原稿）は環境リセットで消失可・全成果はrepo出版済み。
+
+
+## 追加監査・訂正（2026-11-21）
+
+K1159 part1/part2の説明にある「K1149検証機内部pinとの二重照合」という表現は、K1146掃引機本体については正確でなかったため訂正する。K1149第二検証機 `verify_replace9_reexec_20261120.py` の `SWEEP_MACHINE_SHA256` は63文字 `d163b2a120ac46abee40d0b9a32269bce14a73901a85a80e595b7d2512bcd41` で、AST上の読み出しはline 886の監査metadataのみ、`gate(...)` からの参照は0件。公開監査の同項目も同じ63文字である。K1149のpristine gateは再assemble出力とvolumeのSHAを比較するだけで、機械ソース自体はpinしていない。なお `SWEEP_RECORDS_SHA256` は検証機内部で照合されている。
+
+K1159第三検証harnessはK1146公開commit `e9ea153bc469aa551689a5d275773553852f3342` の機械本体を正しい64文字SHA `d163b2a120ac46abee40d0b9a32269bce14a73901a85a80e5925b7d2512bcd41` で独立pinし、pristine再assembleを出版volumeとbyte一致させている。したがって出所確認の不足はK1159側で補われており、18 probe×2パスの再実行結果や24/24監査再現を無効にするものではない。
+
+追加監査器 `audit_k1149_machine_pin_gap_20261121.py` は8/8 gate、監査正本 `k1149-machine-pin-gap-audit-20261121.json`（SHA `b491e45092befcd490633cfa0e822c7063ef04eea14e078307221be84b9c38a6`）は同一tree 2回＋隔離tree 1回でbyte-identical。K1159第三検証harness自体も再取得後3回実行し、監査SHA `7e0824cc11c997882d6b01f528b0ac53205de3ce95891c901bf9da6eb29b7e43` と3回ともbyte一致した。
+
+この訂正は証明書抽出・receipt fold・行閉鎖を追加しない。**標準11×11空盤・二石root {49,60}/{59,60}・S2 {59,60}・class 1/2/4はすべてUNKNOWN。**

@@ -6,7 +6,7 @@ status: computed
 topics: [search-methods, certificates, verification]
 aliases:
   - "third verification (post-publication independent re-execution) of K1149 nine-root replace9 depth-10 sweep re-exec second verification（published machine verify_replace9_reexec_20261120.py 77cdd9e3 and published audit 27fc420c (11,242 bytes) fetched from pinned commit 87f56932 with staged runner git blob c132cc64, published sweep machine d163b2a1, published volume e8f5d674, published probe-records bdacf0e7 and upstream originals k1085 5fdd342d, k1086 3045e152, k1089 808fbda1, k1091 edd7ac84, k1095 335eca5e, k1097 2896deb0）"
-  - "publish-record machine pass structure（pin gate 13 points double-checked against the machine-internal fail-closed pins, pass A fresh re-run of all 18 probes in this tree with 4 workers in 12.8s giving nodes sum 3,574,172 equal to the published value with root 00000000010000809002000040002001 loss=true in both AND orders at 608,293/691,784 nodes and the other 8 roots 16 probes loss=false, pass B fresh re-run in isolated tree/cwd/HOME identical, pristine sweep reassemble byte-identical to the published volume, assemble output byte-identical to the published audit across all 24 gates also under PYTHONHASHSEED=random, tamper at input k1097.json offset 500 caught fail-closed with returncode 1 and no output written, harness audit byte-identical across 2 same-cwd and 1 isolated-cwd/isolated-HOME run）"
+  - "publish-record machine pass structure（third verifier independently pins 13 artifacts; K1149 internal pins cover the six upstream inputs, runner, records and volume, but not the K1146 sweep-machine source hash, pass A fresh re-run of all 18 probes in this tree with 4 workers in 12.8s giving nodes sum 3,574,172 equal to the published value with root 00000000010000809002000040002001 loss=true in both AND orders at 608,293/691,784 nodes and the other 8 roots 16 probes loss=false, pass B fresh re-run in isolated tree/cwd/HOME identical, pristine sweep reassemble byte-identical to the published volume, assemble output byte-identical to the published audit across all 24 gates also under PYTHONHASHSEED=random, tamper at input k1097.json offset 500 caught fail-closed with returncode 1 and no output written, harness audit byte-identical across 2 same-cwd and 1 isolated-cwd/isolated-HOME run）"
   - "no residual row closed; loss=true uncapped probes reproduce depth-10 within-depth forced-loss probe facts and give no certificate-extraction eligibility (extraction is declared by another lane 63877ffd2e), loss=false uncapped probes reproduce REFUTED-D10 facts and are not LOSS proofs"
 relations:
   - type: verifies
@@ -34,6 +34,12 @@ artifacts:
 - path: research/log/2026-11-20-n11-residual72-replace9-sweep-reexec-third-verification-single-owner-note.md
   role: log
   note: 単一オーナー宣言ノート（commit c3c4dd28b48ccf4f5782ddb9f1a81e46d24e4787・2026-11-20T16:01:30Z宣言・先行出版）
+- path: research/experiments/n11-residual72-replace9-sweep-reexec-third-verification-20261120/scripts/audit_k1149_machine_pin_gap_20261121.py
+  role: verifier
+  note: K1149第二検証機の63文字metadata-only source pinとK1159の正しい64文字外部pinをAST・SHAで照合する8 gate監査器
+- path: research/experiments/n11-residual72-replace9-sweep-reexec-third-verification-20261120/output/k1149-machine-pin-gap-audit-20261121.json
+  role: data
+  note: source pin gap監査正本。SHA-256 b491e45092befcd490633cfa0e822c7063ef04eea14e078307221be84b9c38a6・3,524 bytes・8/8 gate・3実行byte-identical
 scope: >-
   K1149（残余72行 代替9根掃引再実行第二検証・出版 commit 7ab77aa1）の出版byte一式の pristine 再実行第三検証。
   出版pin 13点（検証機・runner git blob・掃引機・出版監査・出版volume・出版probe-records・上流6正本）のSHA照合、
@@ -48,7 +54,7 @@ evidence: >-
   runner v17固定コピー（git blob c132cc64…・12,481 bytes）・出版掃引機（d163b2a1…・33,969 bytes）・出版volume
   （e8f5d674…・15,403 bytes）・出版probe-records（bdacf0e7…・10,567 bytes）・上流6正本（39,221/21,835/17,511/
   17,963/16,605/43,540 bytes）・出版監査（27fc420c…・11,242 bytes）をpinned commit 87f56932… のraw CDNから取得し
-  pin 13点全一致（harness側独立pin＋検証機内部fail-closed pinの二重照合）。実験dir自体がstaging rootを兼ね、
+  pin 13点全一致（第三検証harness自身の独立pin 13点。K1149検証機内部pinは上流6正本・runner・records・volumeを検査するが、K1146掃引機本体のsource hashは検査しない）。実験dir自体がstaging rootを兼ね、
   --root . で再現可能。（2）pass Aとpass B: 本treeで18 probes（9根×両AND順序）を4 workersで12.8秒で新規再実行し
   18/18完走・nodes総計 3,574,172 == 出版値・00000000010000809002000040002001 が両AND順序で loss=true
   （608,293/691,784 nodes）・他8根16 probeは loss=false・capped/timeout/error 0。隔離tree/cwd/HOMEのpass Bも
@@ -68,6 +74,7 @@ evidence: >-
   REFUTED-D10はLOSS証明ではなく、nodes数・solved数を勝敗として読まない。
   標準11×11空盤・二石root {49,60}/{59,60}・S2 {59,60}・class 1/2/4はすべてUNKNOWNのまま。残余20行（pool P⁗ 120,416根）
   は全行open。
+  追加監査ではK1149検証機の `SWEEP_MACHINE_SHA256` が63文字で、AST上のload参照はline 886の出力metadataのみ、gate参照は0件と確認した。K1149公開監査にも同じ63文字が記録される。K1149のpristine gateは出力volumeのSHAだけを比較する。K1159第三検証harnessはK1146公開機械の実SHA `d163b2a120ac46abee40d0b9a32269bce14a73901a85a80e5925b7d2512bcd41` を独立pinし、pristine再assembleでvolumeとbyte一致させてこの出所確認の穴を補う。追加監査は8/8 gate、SHA `b491e45092befcd490633cfa0e822c7063ef04eea14e078307221be84b9c38a6`、3実行byte-identical。
 ---
 
 ## 詳細
@@ -96,3 +103,10 @@ WIN8-D10証明書の抽出（root `00000000010000809002000040002001`）は別レ
 [監査正本](../../experiments/n11-residual72-replace9-sweep-reexec-third-verification-20261120/output/reexec-third-verification-audit-20261120.json)・
 [研究ログ](../../log/2026-11-20-n11-residual72-replace9-sweep-reexec-third-verification.md)・
 [単一オーナー宣言](../../log/2026-11-20-n11-residual72-replace9-sweep-reexec-third-verification-single-owner-note.md)。
+
+
+## 追加監査: K1149第二検証機のsource pin欠落
+
+K1149検証機に記録されたK1146掃引機のSHA値は63文字であり、AST解析では出力metadata以外から参照されず、gateにも使われていない。K1149の24/24 gateはこのソースhashを保証しない。一方、K1159はK1146公開commitの機械本体を正しい64文字SHAで独立pinし、pristine再assembleを出版volumeとbyte一致させた。したがって、K1149のprobe再現結果は保たれつつ、機械の出所に関する不足は第三検証層で補完された。
+
+この追加監査もprobe事実の再現性・出所確認に限られ、証明書抽出・receipt fold・行閉鎖を意味しない。**標準11×11空盤・二石root {49,60}/{59,60}・S2 {59,60}・class 1/2/4はUNKNOWNのまま。**
