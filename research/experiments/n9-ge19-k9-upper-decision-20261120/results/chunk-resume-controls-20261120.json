@@ -1,0 +1,273 @@
+{
+ "schema": "n9-ge19-lane-part2-2",
+ "date": "2026-11-20",
+ "purpose": "ksearch v3d generalized-prefix chunking + chunker resume driver: controls and n7-15 partition closure",
+ "V1_prefix_min_identity_n8t16": {
+  "ksearch": {
+   "sat": null,
+   "nodes": 10000001,
+   "capped": true,
+   "boundChecks": 7714799,
+   "boundPrunes": 972034
+  },
+  "ksearchp_nodes": 10000001,
+  "identical_fields": true
+ },
+ "V2_unchunked_reproduction_n7t15": {
+  "nodes": 11880598,
+  "boundChecks": 9096190,
+  "boundPrunes": 1563258,
+  "ms": 18043,
+  "sat": false,
+  "matches_published_v3c_control": true
+ },
+ "V3_sat_chunk_witness": {
+  "chunk_prefix": [
+   0
+  ],
+  "nodes": 345718,
+  "witness": [
+   0,
+   1,
+   5,
+   8,
+   9,
+   19,
+   20,
+   24,
+   26,
+   28,
+   38,
+   39,
+   41,
+   42
+  ],
+  "witness_len": 14,
+  "eval_strong": {
+   "clauses_seen": 68232,
+   "clauses_violated": 0,
+   "independent_safety_check_forbidden_quads": 0,
+   "verdict": "WITNESS-SAT"
+  },
+  "verified": true
+ },
+ "V5_partition_closure_n7t15": {
+  "mode": "audit",
+  "n": 7,
+  "target": 15,
+  "state": "chunks/n7t15.jsonl",
+  "complete": true,
+  "all_unsat": true,
+  "settled_leaves": 35,
+  "capped_internal_nodes": 0,
+  "open_leaves": 0,
+  "open_examples": [],
+  "sat_records": [],
+  "bad": [],
+  "nodes_total": 11880562,
+  "ts": "2026-11-20T21:05:25.170Z"
+ },
+ "V5_audit_determinism_repeat": {
+  "ts_stripped_identical": true,
+  "note": "audit output JSON contains an ISO ts; determinism is over every other field. Two fresh runs in this session: identical after ts removal."
+ },
+ "V6_tamper_controls": {
+  "capped_flip": {
+   "complete": false,
+   "open_leaves": 28,
+   "caught": true
+  },
+  "fake_sat": {
+   "all_unsat": false,
+   "sat_records": [
+    "3"
+   ],
+   "caught": true
+  }
+ },
+ "V5_records_summary": {
+  "n_records": 35,
+  "nodes_total": 11880562,
+  "per_chunk_nodes": [
+   [
+    0,
+    3387225,
+    5075
+   ],
+   [
+    1,
+    1660534,
+    2605
+   ],
+   [
+    2,
+    1124509,
+    1888
+   ],
+   [
+    3,
+    1069917,
+    1739
+   ],
+   [
+    4,
+    1308914,
+    1940
+   ],
+   [
+    5,
+    1117909,
+    1765
+   ],
+   [
+    6,
+    1111892,
+    1641
+   ],
+   [
+    7,
+    368969,
+    644
+   ],
+   [
+    8,
+    145860,
+    302
+   ],
+   [
+    9,
+    94505,
+    209
+   ],
+   [
+    10,
+    90849,
+    193
+   ],
+   [
+    11,
+    112188,
+    229
+   ],
+   [
+    12,
+    109540,
+    234
+   ],
+   [
+    13,
+    112244,
+    208
+   ],
+   [
+    14,
+    26282,
+    69
+   ],
+   [
+    15,
+    7174,
+    25
+   ],
+   [
+    16,
+    2663,
+    18
+   ],
+   [
+    17,
+    3697,
+    20
+   ],
+   [
+    18,
+    5810,
+    22
+   ],
+   [
+    19,
+    9448,
+    27
+   ],
+   [
+    20,
+    7675,
+    24
+   ],
+   [
+    21,
+    1271,
+    15
+   ],
+   [
+    22,
+    195,
+    3
+   ],
+   [
+    23,
+    91,
+    2
+   ],
+   [
+    24,
+    95,
+    3
+   ],
+   [
+    25,
+    427,
+    7
+   ],
+   [
+    26,
+    262,
+    5
+   ],
+   [
+    27,
+    336,
+    5
+   ],
+   [
+    28,
+    23,
+    1
+   ],
+   [
+    29,
+    13,
+    1
+   ],
+   [
+    30,
+    11,
+    0
+   ],
+   [
+    31,
+    9,
+    1
+   ],
+   [
+    32,
+    11,
+    1
+   ],
+   [
+    33,
+    9,
+    1
+   ],
+   [
+    34,
+    5,
+    1
+   ]
+  ],
+  "all_uncapped_unsat": true,
+  "whole_search_nodes_published": 11880598,
+  "partition_nodes": 11880562
+ },
+ "all_controls_pass": true
+}
