@@ -1,0 +1,1301 @@
+{
+ "date": "2026-11-20",
+ "gates": [
+  {
+   "detail": {
+    "gates": 27
+   },
+   "name": "canon-gates-all-pass",
+   "ok": true
+  },
+  {
+   "detail": {
+    "rows": 72
+   },
+   "name": "rows72-canonical-6stones",
+   "ok": true
+  },
+  {
+   "detail": {
+    "predicate": "anchor-translation 3x3 integer determinant of (dx, dy, d(x^2+y^2)); forbidden quadruples absent on all C(6,4)=15 subsets",
+    "rows": 72
+   },
+   "name": "rows72-quad-free-translation-det3",
+   "ok": true
+  },
+  {
+   "detail": {
+    "predicate": "Bareiss 4x4 fraction-free integer determinant; both independent paths agree that all 72 rows are quad-free",
+    "rows": 72
+   },
+   "name": "rows72-quad-free-bareiss-crosscheck",
+   "ok": true
+  },
+  {
+   "detail": {
+    "generation_events": 471960,
+    "safe8": 120474,
+    "universe82": 380098,
+    "unsafe8": 259624
+   },
+   "name": "universe82-rebuild",
+   "ok": true
+  },
+  {
+   "detail": {
+    "note": "re-derivation matches the K1085 census fields as well as the K1097 pins"
+   },
+   "name": "k1085-census-agreement",
+   "ok": true
+  },
+  {
+   "detail": {
+    "intrinsic_coverage_hist": {
+     "1": 82602,
+     "2": 33104,
+     "3": 4718,
+     "4": 50
+    },
+    "mismatches": 0,
+    "note": "every safe8 root's full C(8,6)=28 subset coverage equals its generation-witness coverage; the published machine sampled 39,255 roots, this check covers 100% of the pool",
+    "safe8_roots": 120474
+   },
+   "name": "safe8-fullopulation-intrinsic-equals-generation",
+   "ok": true
+  },
+  {
+   "detail": {
+    "coverage_hist": {
+     "1": 82602,
+     "2": 33104,
+     "3": 4718,
+     "4": 50
+    },
+    "demand_max": 2944,
+    "demand_min": 1714,
+    "demand_sum": 163164
+   },
+   "name": "coverage-hist-and-demand",
+   "ok": true
+  },
+  {
+   "detail": {
+    "note": "K1085 census hist, demand bounds and demand sum agree"
+   },
+   "name": "k1085-census-hist-agreement",
+   "ok": true
+  },
+  {
+   "detail": {
+    "exact_marginal_coverage": true,
+    "exact_sequence": true,
+    "leftover": 0,
+    "reproduced": 23
+   },
+   "name": "greedy23-reproduced",
+   "ok": true
+  },
+  {
+   "detail": {
+    "gains_hist": {
+     "1": 1,
+     "2": 2,
+     "3": 13,
+     "4": 7
+    }
+   },
+   "name": "greedy23-gains-hist",
+   "ok": true
+  },
+  {
+   "detail": {
+    "roots": 23
+   },
+   "name": "greedy23-quad-free-bareiss",
+   "ok": true
+  },
+  {
+   "detail": {
+    "nodes_total_field": 18032471,
+    "nodes_total_recomputed": 18032471,
+    "note": "nodes_total recomputed as the sum of all per-probe node counts (46 probes) independent of the field",
+    "ref": 16,
+    "win": 7
+   },
+   "name": "k1086-join",
+   "ok": true
+  },
+  {
+   "detail": {
+    "note": "raw K1086 covered_rows canonicalize to exactly the K1085 census greedy-plan covered rows",
+    "roots": 23
+   },
+   "name": "k1086-claims-canonicalized-equal-k1085-census",
+   "ok": true
+  },
+  {
+   "detail": {
+    "refuted_claim_rows": 49,
+    "win_rows": 23
+   },
+   "name": "residual49-partition",
+   "ok": true
+  },
+  {
+   "detail": {
+    "nodes_total_field": 6339079,
+    "nodes_total_recomputed": 6339079,
+    "ref": 13,
+    "win": 3
+   },
+   "name": "k1089-join",
+   "ok": true
+  },
+  {
+   "detail": {
+    "claims": 49,
+    "exactly_once": true,
+    "intrinsic_containment": true,
+    "ref13_rows": 40,
+    "win3_rows": 9
+   },
+   "name": "replace16-claims-partition",
+   "ok": true
+  },
+  {
+   "detail": {
+    "nodes_total_field": 7383022,
+    "nodes_total_recomputed": 7383022,
+    "ref": 12,
+    "win": 3
+   },
+   "name": "k1091-join",
+   "ok": true
+  },
+  {
+   "detail": {
+    "claims": 40,
+    "exactly_once": true,
+    "intrinsic_containment": true,
+    "ref12_rows": 30,
+    "win3b_rows": 10
+   },
+   "name": "replace15-claims-partition",
+   "ok": true
+  },
+  {
+   "detail": {
+    "nodes_total_field": 5700222,
+    "nodes_total_recomputed": 5700222,
+    "ref": 9,
+    "win": 3
+   },
+   "name": "k1095-join",
+   "ok": true
+  },
+  {
+   "detail": {
+    "claims": 30,
+    "exactly_once": true,
+    "intrinsic_containment": true,
+    "ref9_rows": 23,
+    "win3c_rows": 7
+   },
+   "name": "replace12-claims-partition",
+   "ok": true
+  },
+  {
+   "detail": {
+    "breakdown": {
+     "K1086": 16,
+     "K1089": 13,
+     "K1091": 12,
+     "K1095": 9
+    },
+    "roots": 50
+   },
+   "name": "ref50-union",
+   "ok": true
+  },
+  {
+   "detail": {
+    "note": "independent re-derivation equals the published list"
+   },
+   "name": "ref50-matches-canon",
+   "ok": true
+  },
+  {
+   "detail": {
+    "P_triple_prime": 120424,
+    "excluded": 50,
+    "safe8": 120474
+   },
+   "name": "pool-P3",
+   "ok": true
+  },
+  {
+   "detail": {},
+   "name": "pool-P3-matches-canon",
+   "ok": true
+  },
+  {
+   "detail": {
+    "rows": 23,
+    "source": "canonicalized claims of the 9 K1095 REFUTED-D10 roots"
+   },
+   "name": "residual23-definition",
+   "ok": true
+  },
+  {
+   "detail": {
+    "max": 2934,
+    "min": 1781,
+    "provider_hist": {
+     "1": 40065,
+     "2": 4857,
+     "3": 297
+    },
+    "providers_touching": 45219,
+    "stranded": 0,
+    "sum": 50670
+   },
+   "name": "residual23-demand",
+   "ok": true
+  },
+  {
+   "detail": {
+    "note": "per-row demand values equal the published table"
+   },
+   "name": "residual23-demand-matches-canon",
+   "ok": true
+  },
+  {
+   "detail": {
+    "gains_hist": {
+     "1": 1,
+     "2": 2,
+     "3": 6
+    },
+    "greedy_size": 9,
+    "leftover": 0,
+    "lower_bound": 6,
+    "selection": [
+     {
+      "covered_rows": [
+       "00000000000000003800000409000000",
+       "00000000000000083800000008100000",
+       "00000000000000083800000048000000"
+      ],
+      "gained_rows": 3,
+      "root": "00000000000000083800040048100000"
+     },
+     {
+      "covered_rows": [
+       "00000000000000003800000209000000",
+       "00000000000000043800000009000000",
+       "00000000000000103800000009000000"
+      ],
+      "gained_rows": 3,
+      "root": "00000000000000143800000209000000"
+     },
+     {
+      "covered_rows": [
+       "00000000000000821082000000000008",
+       "00000000000000821082000000000010",
+       "00000000000000821082000000001000"
+      ],
+      "gained_rows": 3,
+      "root": "00000000000000821082000000001018"
+     },
+     {
+      "covered_rows": [
+       "00000000000000821082000000000800",
+       "00000000000000821082800000000000",
+       "00000000000000821083000000000000"
+      ],
+      "gained_rows": 3,
+      "root": "00000000000000821086800000000800"
+     },
+     {
+      "covered_rows": [
+       "00000000000000003800000008001800",
+       "00000000000000801202020000001000",
+       "00000000000040809002000000100000"
+      ],
+      "gained_rows": 3,
+      "root": "00000000000040809002000800100200"
+     },
+     {
+      "covered_rows": [
+       "00000000000000801202000001000400",
+       "00000000000000801202000001080000",
+       "00000000010000809002000040000000"
+      ],
+      "gained_rows": 3,
+      "root": "00000000010000809002000040002001"
+     },
+     {
+      "covered_rows": [
+       "00000000000000003800000008002010",
+       "00000000000000103800000008080000"
+      ],
+      "gained_rows": 2,
+      "root": "00000000000000103800000008080041"
+     },
+     {
+      "covered_rows": [
+       "0000000000000000380000000a080000",
+       "00000000020000801202000000100000"
+      ],
+      "gained_rows": 2,
+      "root": "00000000020000801202000800100001"
+     },
+     {
+      "covered_rows": [
+       "00000010000000801202000000000400"
+      ],
+      "gained_rows": 1,
+      "root": "00000010000000801202000000000448"
+     }
+    ]
+   },
+   "name": "scope1-greedy",
+   "ok": true
+  },
+  {
+   "detail": {
+    "note": "exact root sequence, per-root gains and covered rows equal the published selection"
+   },
+   "name": "scope1-greedy-matches-canon",
+   "ok": true
+  },
+  {
+   "detail": {
+    "roots": 9
+   },
+   "name": "greedy9-quad-free-bareiss",
+   "ok": true
+  },
+  {
+   "detail": {
+    "rows": 23
+   },
+   "name": "greedy9-exactly-once",
+   "ok": true
+  },
+  {
+   "detail": {
+    "algorithm": "Hopcroft-Karp",
+    "distinct_providers": true,
+    "matching_size": 23,
+    "note": "independent algorithm; each row receives a distinct verified provider covering it",
+    "witness_row_to_root": {
+     "00000000000000003800000008001800": "00000000000000003800000008001814",
+     "00000000000000003800000008002010": "00000000000000003800000008002013",
+     "0000000000000000380000000a080000": "0000000000000000380000000a080003",
+     "00000000000000003800000209000000": "00000000000000003800000209000005",
+     "00000000000000003800000409000000": "00000000000000003800000409000005",
+     "00000000000000043800000009000000": "00000000000000043800000009000003",
+     "00000000000000083800000008100000": "00000000000000083800000008100006",
+     "00000000000000083800000048000000": "00000000000000083800000048000003",
+     "00000000000000103800000008080000": "00000000000000103800000008080003",
+     "00000000000000103800000009000000": "00000000000000103800000009000003",
+     "00000000000000801202000001000400": "00000000000000801202000001000409",
+     "00000000000000801202000001080000": "00000000000000801202000001080005",
+     "00000000000000801202020000001000": "00000000000000801202020000001009",
+     "00000000000000821082000000000008": "00000000000000821082000000000019",
+     "00000000000000821082000000000010": "00000000000000821082000000000015",
+     "00000000000000821082000000000800": "00000000000000821082000000000805",
+     "00000000000000821082000000001000": "00000000000000821082000000001005",
+     "00000000000000821082800000000000": "00000000000000821082800000000006",
+     "00000000000000821083000000000000": "00000000000000821083000000000005",
+     "00000000000040809002000000100000": "00000000000040809002000000100005",
+     "00000000010000809002000040000000": "0000000001000080900200004000000a",
+     "00000000020000801202000000100000": "00000000020000801202000000100005",
+     "00000010000000801202000000000400": "00000010000000801202000000000448"
+    }
+   },
+   "name": "matching-hopcroft-karp",
+   "ok": true
+  },
+  {
+   "detail": {
+    "roots": 16
+   },
+   "name": "win16-list-matches-canon",
+   "ok": true
+  },
+  {
+   "detail": {
+    "extra": {
+     "0000000800000000380000000810000a": [
+      "00000000000000003800000008001080"
+     ]
+    },
+    "note": "full C(8,6) re-derivation; 15/16 candidates have intrinsic == claimed, the K1095 third root carries the single published extra row",
+    "per_root": {
+     "00000000000000003800000008003180": {
+      "claimed": [
+       "00000000000000003800000008001080",
+       "00000000000000003800000008001100",
+       "00000000000000003800000008002080",
+       "00000000000000003800000008002100"
+      ],
+      "intrinsic": [
+       "00000000000000003800000008001080",
+       "00000000000000003800000008001100",
+       "00000000000000003800000008002080",
+       "00000000000000003800000008002100"
+      ],
+      "intrinsic_equals_claimed": true
+     },
+     "00000000000000003800000008005021": {
+      "claimed": [
+       "00000000000000003800000008001001",
+       "00000000000000003800000008001020",
+       "00000000000000003800000008005000"
+      ],
+      "intrinsic": [
+       "00000000000000003800000008001001",
+       "00000000000000003800000008001020",
+       "00000000000000003800000008005000"
+      ],
+      "intrinsic_equals_claimed": true
+     },
+     "00000000000000003800000008d10000": {
+      "claimed": [
+       "00000000000000003800000008011000",
+       "00000000000000003800000008500000",
+       "00000000000000003800000008900000"
+      ],
+      "intrinsic": [
+       "00000000000000003800000008011000",
+       "00000000000000003800000008500000",
+       "00000000000000003800000008900000"
+      ],
+      "intrinsic_equals_claimed": true
+     },
+     "00000000000000003800000009840004": {
+      "claimed": [
+       "00000000000000003800000009000004",
+       "00000000000000003800000009040000",
+       "00000000000000003800000009800000"
+      ],
+      "intrinsic": [
+       "00000000000000003800000009000004",
+       "00000000000000003800000009040000",
+       "00000000000000003800000009800000"
+      ],
+      "intrinsic_equals_claimed": true
+     },
+     "00000000000000043800000008180010": {
+      "claimed": [
+       "00000000000000003800000008002040",
+       "00000000000000043800000008080000",
+       "00000000000000043800000008100000"
+      ],
+      "intrinsic": [
+       "00000000000000003800000008002040",
+       "00000000000000043800000008080000",
+       "00000000000000043800000008100000"
+      ],
+      "intrinsic_equals_claimed": true
+     },
+     "00000000000000801202000000840500": {
+      "claimed": [
+       "00000000000000801202000000800100",
+       "00000000000000801202000000800400",
+       "00000000000000801202000000840000"
+      ],
+      "intrinsic": [
+       "00000000000000801202000000800100",
+       "00000000000000801202000000800400",
+       "00000000000000801202000000840000"
+      ],
+      "intrinsic_equals_claimed": true
+     },
+     "00000000000000801202000000901010": {
+      "claimed": [
+       "00000000000000003800100008002000",
+       "00000000000000801202000000101000",
+       "00000000000000801202000000900000"
+      ],
+      "intrinsic": [
+       "00000000000000003800100008002000",
+       "00000000000000801202000000101000",
+       "00000000000000801202000000900000"
+      ],
+      "intrinsic_equals_claimed": true
+     },
+     "00000000000000801202000022081000": {
+      "claimed": [
+       "00000000000000003800000808001000",
+       "00000000000000801202000000081000",
+       "00000000000000801202000020001000"
+      ],
+      "intrinsic": [
+       "00000000000000003800000808001000",
+       "00000000000000801202000000081000",
+       "00000000000000801202000020001000"
+      ],
+      "intrinsic_equals_claimed": true
+     },
+     "00000000000000801202000800880200": {
+      "claimed": [
+       "0000000000000000380000000a002000",
+       "00000000000000801202000000800200",
+       "00000000000000801202000000880000"
+      ],
+      "intrinsic": [
+       "0000000000000000380000000a002000",
+       "00000000000000801202000000800200",
+       "00000000000000801202000000880000"
+      ],
+      "intrinsic_equals_claimed": true
+     },
+     "00000000000000801212000001009000": {
+      "claimed": [
+       "00000000000000003800200008001000",
+       "00000000000000003800200009000000",
+       "00000000000000801212000000001000",
+       "00000000000000801212000001000000"
+      ],
+      "intrinsic": [
+       "00000000000000003800200008001000",
+       "00000000000000003800200009000000",
+       "00000000000000801212000000001000",
+       "00000000000000801212000001000000"
+      ],
+      "intrinsic_equals_claimed": true
+     },
+     "00000000000000909002200080100000": {
+      "claimed": [
+       "00000000000000801222000000001000",
+       "00000000000000801222000000800000",
+       "00000000000000909002000000100000",
+       "00000000000000909002000080000000"
+      ],
+      "intrinsic": [
+       "00000000000000801222000000001000",
+       "00000000000000801222000000800000",
+       "00000000000000909002000000100000",
+       "00000000000000909002000080000000"
+      ],
+      "intrinsic_equals_claimed": true
+     },
+     "00000000000020809002000480100000": {
+      "claimed": [
+       "00000000000000801202040000001000",
+       "00000000000000801202040000800000",
+       "00000000000020809002000080000000"
+      ],
+      "intrinsic": [
+       "00000000000000801202040000001000",
+       "00000000000000801202040000800000",
+       "00000000000020809002000080000000"
+      ],
+      "intrinsic_equals_claimed": true
+     },
+     "00000000000200003800200008180000": {
+      "claimed": [
+       "00000000000000003800200008100000",
+       "00000000000000a09002000080000000"
+      ],
+      "intrinsic": [
+       "00000000000000003800200008100000",
+       "00000000000000a09002000080000000"
+      ],
+      "intrinsic_equals_claimed": true
+     },
+     "00000000010000889002000080100000": {
+      "claimed": [
+       "00000000000000889002000000100000",
+       "00000000000000889002000080000000",
+       "00000000010000809002000000100000",
+       "00000000010000809002000080000000"
+      ],
+      "intrinsic": [
+       "00000000000000889002000000100000",
+       "00000000000000889002000080000000",
+       "00000000010000809002000000100000",
+       "00000000010000809002000080000000"
+      ],
+      "intrinsic_equals_claimed": true
+     },
+     "00000000012000003800080009000000": {
+      "claimed": [
+       "00000000000000003800000248000000",
+       "00000000000000801202000001000100",
+       "00000000000080003800000048000000"
+      ],
+      "intrinsic": [
+       "00000000000000003800000248000000",
+       "00000000000000801202000001000100",
+       "00000000000080003800000048000000"
+      ],
+      "intrinsic_equals_claimed": true
+     },
+     "0000000800000000380000000810000a": {
+      "claimed": [
+       "00000008000000003800000008100000"
+      ],
+      "intrinsic": [
+       "00000000000000003800000008001080",
+       "00000008000000003800000008100000"
+      ],
+      "intrinsic_equals_claimed": false
+     }
+    }
+   },
+   "name": "win16-footprints",
+   "ok": true
+  },
+  {
+   "detail": {
+    "note": "per-root intrinsic and claimed lists equal the canonical"
+   },
+   "name": "win16-footprints-matches-canon",
+   "ok": true
+  },
+  {
+   "detail": {
+    "note": "no residual-23 row lies inside any WIN intrinsic",
+    "rows_hit": []
+   },
+   "name": "residual23-outside-win-intrinsic",
+   "ok": true
+  },
+  {
+   "detail": {
+    "rows": 23
+   },
+   "name": "scope2-rows",
+   "ok": true
+  },
+  {
+   "detail": {
+    "greedy_size": 9,
+    "matching": 23,
+    "same_selection_as_scope1": true,
+    "selection": [
+     {
+      "covered_rows": [
+       "00000000000000003800000409000000",
+       "00000000000000083800000008100000",
+       "00000000000000083800000048000000"
+      ],
+      "gained_rows": 3,
+      "root": "00000000000000083800040048100000"
+     },
+     {
+      "covered_rows": [
+       "00000000000000003800000209000000",
+       "00000000000000043800000009000000",
+       "00000000000000103800000009000000"
+      ],
+      "gained_rows": 3,
+      "root": "00000000000000143800000209000000"
+     },
+     {
+      "covered_rows": [
+       "00000000000000821082000000000008",
+       "00000000000000821082000000000010",
+       "00000000000000821082000000001000"
+      ],
+      "gained_rows": 3,
+      "root": "00000000000000821082000000001018"
+     },
+     {
+      "covered_rows": [
+       "00000000000000821082000000000800",
+       "00000000000000821082800000000000",
+       "00000000000000821083000000000000"
+      ],
+      "gained_rows": 3,
+      "root": "00000000000000821086800000000800"
+     },
+     {
+      "covered_rows": [
+       "00000000000000003800000008001800",
+       "00000000000000801202020000001000",
+       "00000000000040809002000000100000"
+      ],
+      "gained_rows": 3,
+      "root": "00000000000040809002000800100200"
+     },
+     {
+      "covered_rows": [
+       "00000000000000801202000001000400",
+       "00000000000000801202000001080000",
+       "00000000010000809002000040000000"
+      ],
+      "gained_rows": 3,
+      "root": "00000000010000809002000040002001"
+     },
+     {
+      "covered_rows": [
+       "00000000000000003800000008002010",
+       "00000000000000103800000008080000"
+      ],
+      "gained_rows": 2,
+      "root": "00000000000000103800000008080041"
+     },
+     {
+      "covered_rows": [
+       "0000000000000000380000000a080000",
+       "00000000020000801202000000100000"
+      ],
+      "gained_rows": 2,
+      "root": "00000000020000801202000800100001"
+     },
+     {
+      "covered_rows": [
+       "00000010000000801202000000000400"
+      ],
+      "gained_rows": 1,
+      "root": "00000010000000801202000000000448"
+     }
+    ]
+   },
+   "name": "scope2-greedy",
+   "ok": true
+  },
+  {
+   "detail": {
+    "note": "published scope-2 selection equal"
+   },
+   "name": "scope2-greedy-matches-canon",
+   "ok": true
+  },
+  {
+   "detail": {
+    "note": "demand, drop, stranded flag, win-intrinsic and win3c claim flags all equal the published table",
+    "rows": 23
+   },
+   "name": "per-row-table-matches-canon",
+   "ok": true
+  },
+  {
+   "detail": {
+    "note": "all four verdict joins equal the canonical"
+   },
+   "name": "verdict-summary-matches-canon",
+   "ok": true
+  }
+ ],
+ "greedy_scope1_selection": [
+  {
+   "covered_rows": [
+    "00000000000000003800000409000000",
+    "00000000000000083800000008100000",
+    "00000000000000083800000048000000"
+   ],
+   "gained_rows": 3,
+   "root": "00000000000000083800040048100000"
+  },
+  {
+   "covered_rows": [
+    "00000000000000003800000209000000",
+    "00000000000000043800000009000000",
+    "00000000000000103800000009000000"
+   ],
+   "gained_rows": 3,
+   "root": "00000000000000143800000209000000"
+  },
+  {
+   "covered_rows": [
+    "00000000000000821082000000000008",
+    "00000000000000821082000000000010",
+    "00000000000000821082000000001000"
+   ],
+   "gained_rows": 3,
+   "root": "00000000000000821082000000001018"
+  },
+  {
+   "covered_rows": [
+    "00000000000000821082000000000800",
+    "00000000000000821082800000000000",
+    "00000000000000821083000000000000"
+   ],
+   "gained_rows": 3,
+   "root": "00000000000000821086800000000800"
+  },
+  {
+   "covered_rows": [
+    "00000000000000003800000008001800",
+    "00000000000000801202020000001000",
+    "00000000000040809002000000100000"
+   ],
+   "gained_rows": 3,
+   "root": "00000000000040809002000800100200"
+  },
+  {
+   "covered_rows": [
+    "00000000000000801202000001000400",
+    "00000000000000801202000001080000",
+    "00000000010000809002000040000000"
+   ],
+   "gained_rows": 3,
+   "root": "00000000010000809002000040002001"
+  },
+  {
+   "covered_rows": [
+    "00000000000000003800000008002010",
+    "00000000000000103800000008080000"
+   ],
+   "gained_rows": 2,
+   "root": "00000000000000103800000008080041"
+  },
+  {
+   "covered_rows": [
+    "0000000000000000380000000a080000",
+    "00000000020000801202000000100000"
+   ],
+   "gained_rows": 2,
+   "root": "00000000020000801202000800100001"
+  },
+  {
+   "covered_rows": [
+    "00000010000000801202000000000400"
+   ],
+   "gained_rows": 1,
+   "root": "00000010000000801202000000000448"
+  }
+ ],
+ "inputs": {
+  "k1085_census_sha256": "5fdd342d624abec9b8478b69b13fc63a2dbbec99d227da4740cfe068647e688e",
+  "k1086_sweep_sha256": "3045e15295af9b85b86578b5e8d55a8b325466eac576ee15b8450f6acb9b9ced",
+  "k1089_sweep_sha256": "808fbda1152cb492bb76641a101660f965f2801c0b74790d20a0d998d5b747fc",
+  "k1091_sweep_sha256": "edd7ac84f47268adcc8a3364a5ff687499cb2a76ded0c0fa379506af02f40b25",
+  "k1095_sweep_sha256": "335eca5ecb7c72e6fb0ee41eb740de736bf4eb78791823ae55f6375a68cb4707",
+  "k1097_canonical_git_blob_sha1": "4660c012333b04896c36a23a0837fbdbc2572ef9",
+  "k1097_canonical_sha256": "2896deb0c5e820904d0e2463e3fd9ebd1613b540a66a97f88d86c75bffa71f40",
+  "k1097_machine_rerun_output_sha256": "2896deb0c5e820904d0e2463e3fd9ebd1613b540a66a97f88d86c75bffa71f40",
+  "k1097_machine_sha256": "f01f459f4f9ec2b9d38c0ed61f14132cf36c870f316d1fae840fe534181192c0"
+ },
+ "interpretation_guard": [
+  "Second verification only: no probes run, no row closed; greedy and witness selections are a conditional plan (bookkeeping), not certificates.",
+  "REFUTED-D10 is a probe fact (no forced win within depth 10 at the tested root), not a LOSS proof.",
+  "Node counts and solved counts are not game outcomes.",
+  "The standard 11x11 empty board, the two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 all remain UNKNOWN."
+ ],
+ "methodology_differences": {
+  "coverage_check": "full population: all 120,474 safe8 roots (published machine sampled 39,255)",
+  "matching_algorithm": "Hopcroft-Karp (published: Kuhn augmenting paths)",
+  "nodes_totals": "recomputed as sums of per-probe counts (published: field pins)",
+  "quadruple_predicate": "anchor-translation 3x3 integer determinant of (dx, dy, d(x^2+y^2)) for every 4-subset, with a Bareiss 4x4 fraction-free crosscheck on all 72 rows (published machine: alternating sum of four 3x3 cofactor determinants)"
+ },
+ "per_row_residual23": [
+  {
+   "demand_P_triple_prime": 2210,
+   "demand_drop_from_safe8": 4,
+   "greedy_provider": "00000000000040809002000800100200",
+   "refuted_plan_provider": "00000000000000083800000048300000",
+   "row": "00000000000000003800000008001800",
+   "stranded_under_P_triple_prime": false,
+   "win3c_claimed": false,
+   "win_intrinsic_cover": []
+  },
+  {
+   "demand_P_triple_prime": 1824,
+   "demand_drop_from_safe8": 4,
+   "greedy_provider": "00000000000000103800000008080041",
+   "refuted_plan_provider": "00000000040000801202100100800000",
+   "row": "00000000000000003800000008002010",
+   "stranded_under_P_triple_prime": false,
+   "win3c_claimed": false,
+   "win_intrinsic_cover": []
+  },
+  {
+   "demand_P_triple_prime": 2015,
+   "demand_drop_from_safe8": 4,
+   "greedy_provider": "00000000020000801202000800100001",
+   "refuted_plan_provider": "00000000020000809202000800100000",
+   "row": "0000000000000000380000000a080000",
+   "stranded_under_P_triple_prime": false,
+   "win3c_claimed": false,
+   "win_intrinsic_cover": []
+  },
+  {
+   "demand_P_triple_prime": 2310,
+   "demand_drop_from_safe8": 4,
+   "greedy_provider": "00000000000000143800000209000000",
+   "refuted_plan_provider": "00000000000000103800000209080000",
+   "row": "00000000000000003800000209000000",
+   "stranded_under_P_triple_prime": false,
+   "win3c_claimed": false,
+   "win_intrinsic_cover": []
+  },
+  {
+   "demand_P_triple_prime": 2338,
+   "demand_drop_from_safe8": 4,
+   "greedy_provider": "00000000000000083800040048100000",
+   "refuted_plan_provider": "00000000000000801202000001004440",
+   "row": "00000000000000003800000409000000",
+   "stranded_under_P_triple_prime": false,
+   "win3c_claimed": false,
+   "win_intrinsic_cover": []
+  },
+  {
+   "demand_P_triple_prime": 2784,
+   "demand_drop_from_safe8": 4,
+   "greedy_provider": "00000000000000143800000209000000",
+   "refuted_plan_provider": "00000000000000801202000001004440",
+   "row": "00000000000000043800000009000000",
+   "stranded_under_P_triple_prime": false,
+   "win3c_claimed": false,
+   "win_intrinsic_cover": []
+  },
+  {
+   "demand_P_triple_prime": 2230,
+   "demand_drop_from_safe8": 4,
+   "greedy_provider": "00000000000000083800040048100000",
+   "refuted_plan_provider": "00000000000000083800000048300000",
+   "row": "00000000000000083800000008100000",
+   "stranded_under_P_triple_prime": false,
+   "win3c_claimed": false,
+   "win_intrinsic_cover": []
+  },
+  {
+   "demand_P_triple_prime": 2248,
+   "demand_drop_from_safe8": 4,
+   "greedy_provider": "00000000000000083800040048100000",
+   "refuted_plan_provider": "00000000000000083800000048300000",
+   "row": "00000000000000083800000048000000",
+   "stranded_under_P_triple_prime": false,
+   "win3c_claimed": false,
+   "win_intrinsic_cover": []
+  },
+  {
+   "demand_P_triple_prime": 1993,
+   "demand_drop_from_safe8": 4,
+   "greedy_provider": "00000000000000103800000008080041",
+   "refuted_plan_provider": "00000000000000103800000209080000",
+   "row": "00000000000000103800000008080000",
+   "stranded_under_P_triple_prime": false,
+   "win3c_claimed": false,
+   "win_intrinsic_cover": []
+  },
+  {
+   "demand_P_triple_prime": 2205,
+   "demand_drop_from_safe8": 4,
+   "greedy_provider": "00000000000000143800000209000000",
+   "refuted_plan_provider": "00000000000000103800000209080000",
+   "row": "00000000000000103800000009000000",
+   "stranded_under_P_triple_prime": false,
+   "win3c_claimed": false,
+   "win_intrinsic_cover": []
+  },
+  {
+   "demand_P_triple_prime": 2602,
+   "demand_drop_from_safe8": 4,
+   "greedy_provider": "00000000010000809002000040002001",
+   "refuted_plan_provider": "00000000000000801202000001004440",
+   "row": "00000000000000801202000001000400",
+   "stranded_under_P_triple_prime": false,
+   "win3c_claimed": false,
+   "win_intrinsic_cover": []
+  },
+  {
+   "demand_P_triple_prime": 2428,
+   "demand_drop_from_safe8": 4,
+   "greedy_provider": "00000000010000809002000040002001",
+   "refuted_plan_provider": "00000000000040809002000040102000",
+   "row": "00000000000000801202000001080000",
+   "stranded_under_P_triple_prime": false,
+   "win3c_claimed": false,
+   "win_intrinsic_cover": []
+  },
+  {
+   "demand_P_triple_prime": 1822,
+   "demand_drop_from_safe8": 4,
+   "greedy_provider": "00000000000040809002000800100200",
+   "refuted_plan_provider": "00000000020000809202000800100000",
+   "row": "00000000000000801202020000001000",
+   "stranded_under_P_triple_prime": false,
+   "win3c_claimed": false,
+   "win_intrinsic_cover": []
+  },
+  {
+   "demand_P_triple_prime": 2211,
+   "demand_drop_from_safe8": 4,
+   "greedy_provider": "00000000000000821082000000001018",
+   "refuted_plan_provider": "000000000000008210820000000008c0",
+   "row": "00000000000000821082000000000008",
+   "stranded_under_P_triple_prime": false,
+   "win3c_claimed": false,
+   "win_intrinsic_cover": []
+  },
+  {
+   "demand_P_triple_prime": 2302,
+   "demand_drop_from_safe8": 4,
+   "greedy_provider": "00000000000000821082000000001018",
+   "refuted_plan_provider": "000000000000008210820000000008c0",
+   "row": "00000000000000821082000000000010",
+   "stranded_under_P_triple_prime": false,
+   "win3c_claimed": false,
+   "win_intrinsic_cover": []
+  },
+  {
+   "demand_P_triple_prime": 1881,
+   "demand_drop_from_safe8": 4,
+   "greedy_provider": "00000000000000821086800000000800",
+   "refuted_plan_provider": "000000000000008210820000000008c0",
+   "row": "00000000000000821082000000000800",
+   "stranded_under_P_triple_prime": false,
+   "win3c_claimed": false,
+   "win_intrinsic_cover": []
+  },
+  {
+   "demand_P_triple_prime": 1781,
+   "demand_drop_from_safe8": 4,
+   "greedy_provider": "00000000000000821082000000001018",
+   "refuted_plan_provider": "00000000000000a21083000000100000",
+   "row": "00000000000000821082000000001000",
+   "stranded_under_P_triple_prime": false,
+   "win3c_claimed": false,
+   "win_intrinsic_cover": []
+  },
+  {
+   "demand_P_triple_prime": 1812,
+   "demand_drop_from_safe8": 4,
+   "greedy_provider": "00000000000000821086800000000800",
+   "refuted_plan_provider": "00000000000000a21083000000100000",
+   "row": "00000000000000821082800000000000",
+   "stranded_under_P_triple_prime": false,
+   "win3c_claimed": false,
+   "win_intrinsic_cover": []
+  },
+  {
+   "demand_P_triple_prime": 1942,
+   "demand_drop_from_safe8": 4,
+   "greedy_provider": "00000000000000821086800000000800",
+   "refuted_plan_provider": "00000000000000a21083000000100000",
+   "row": "00000000000000821083000000000000",
+   "stranded_under_P_triple_prime": false,
+   "win3c_claimed": false,
+   "win_intrinsic_cover": []
+  },
+  {
+   "demand_P_triple_prime": 2758,
+   "demand_drop_from_safe8": 4,
+   "greedy_provider": "00000000000040809002000800100200",
+   "refuted_plan_provider": "00000000000040809002000040102000",
+   "row": "00000000000040809002000000100000",
+   "stranded_under_P_triple_prime": false,
+   "win3c_claimed": false,
+   "win_intrinsic_cover": []
+  },
+  {
+   "demand_P_triple_prime": 2934,
+   "demand_drop_from_safe8": 4,
+   "greedy_provider": "00000000010000809002000040002001",
+   "refuted_plan_provider": "00000000040000801202100100800000",
+   "row": "00000000010000809002000040000000",
+   "stranded_under_P_triple_prime": false,
+   "win3c_claimed": false,
+   "win_intrinsic_cover": []
+  },
+  {
+   "demand_P_triple_prime": 1819,
+   "demand_drop_from_safe8": 4,
+   "greedy_provider": "00000000020000801202000800100001",
+   "refuted_plan_provider": "00000000020000809202000800100000",
+   "row": "00000000020000801202000000100000",
+   "stranded_under_P_triple_prime": false,
+   "win3c_claimed": false,
+   "win_intrinsic_cover": []
+  },
+  {
+   "demand_P_triple_prime": 2221,
+   "demand_drop_from_safe8": 4,
+   "greedy_provider": "00000010000000801202000000000448",
+   "refuted_plan_provider": "00000010000000801202000000000444",
+   "row": "00000010000000801202000000000400",
+   "stranded_under_P_triple_prime": false,
+   "win3c_claimed": false,
+   "win_intrinsic_cover": []
+  }
+ ],
+ "schema": "n11-residual72-refuted50-refsolve-second-verification-20261120-v1",
+ "second_verification_results": {
+  "demand_max": 2934,
+  "demand_min": 1781,
+  "demand_sum": 50670,
+  "generation_events": 471960,
+  "greedy_scope1": {
+   "gains_hist": {
+    "1": 1,
+    "2": 2,
+    "3": 6
+   },
+   "leftover": 0,
+   "lower_bound": 6,
+   "size": 9
+  },
+  "greedy_scope2": {
+   "gains_hist": {
+    "1": 1,
+    "2": 2,
+    "3": 6
+   },
+   "leftover": 0,
+   "size": 9
+  },
+  "k1086": {
+   "nodes_total": 18032471,
+   "refuted16": 16,
+   "win8": 7
+  },
+  "k1089": {
+   "nodes_total": 6339079,
+   "refuted13": 13,
+   "win3": 3
+  },
+  "k1091": {
+   "nodes_total": 7383022,
+   "refuted12": 12,
+   "win3": 3
+  },
+  "k1095": {
+   "nodes_total": 5700222,
+   "refuted9": 9,
+   "win3": 3
+  },
+  "matching": {
+   "size": 23,
+   "witness": {
+    "00000000000000003800000008001800": "00000000000000003800000008001814",
+    "00000000000000003800000008002010": "00000000000000003800000008002013",
+    "0000000000000000380000000a080000": "0000000000000000380000000a080003",
+    "00000000000000003800000209000000": "00000000000000003800000209000005",
+    "00000000000000003800000409000000": "00000000000000003800000409000005",
+    "00000000000000043800000009000000": "00000000000000043800000009000003",
+    "00000000000000083800000008100000": "00000000000000083800000008100006",
+    "00000000000000083800000048000000": "00000000000000083800000048000003",
+    "00000000000000103800000008080000": "00000000000000103800000008080003",
+    "00000000000000103800000009000000": "00000000000000103800000009000003",
+    "00000000000000801202000001000400": "00000000000000801202000001000409",
+    "00000000000000801202000001080000": "00000000000000801202000001080005",
+    "00000000000000801202020000001000": "00000000000000801202020000001009",
+    "00000000000000821082000000000008": "00000000000000821082000000000019",
+    "00000000000000821082000000000010": "00000000000000821082000000000015",
+    "00000000000000821082000000000800": "00000000000000821082000000000805",
+    "00000000000000821082000000001000": "00000000000000821082000000001005",
+    "00000000000000821082800000000000": "00000000000000821082800000000006",
+    "00000000000000821083000000000000": "00000000000000821083000000000005",
+    "00000000000040809002000000100000": "00000000000040809002000000100005",
+    "00000000010000809002000040000000": "0000000001000080900200004000000a",
+    "00000000020000801202000000100000": "00000000020000801202000000100005",
+    "00000010000000801202000000000400": "00000010000000801202000000000448"
+   }
+  },
+  "pool_P_triple_prime": 120424,
+  "provider_hist": {
+   "1": 40065,
+   "2": 4857,
+   "3": 297
+  },
+  "providers_touching_23rows": 45219,
+  "refuted_excluded": 50,
+  "residual23": 23,
+  "residual23_win_intrinsic_hits": [],
+  "rows72": 72,
+  "safe8": 120474,
+  "safe8_fullopulation_coverage_mismatches": 0,
+  "universe82": 380098,
+  "unsafe8": 259624,
+  "win16_extra_rows": {
+   "0000000800000000380000000810000a": [
+    "00000000000000003800000008001080"
+   ]
+  },
+  "win16_footprints": {
+   "00000000000000003800000008003180": [
+    "00000000000000003800000008001080",
+    "00000000000000003800000008001100",
+    "00000000000000003800000008002080",
+    "00000000000000003800000008002100"
+   ],
+   "00000000000000003800000008005021": [
+    "00000000000000003800000008001001",
+    "00000000000000003800000008001020",
+    "00000000000000003800000008005000"
+   ],
+   "00000000000000003800000008d10000": [
+    "00000000000000003800000008011000",
+    "00000000000000003800000008500000",
+    "00000000000000003800000008900000"
+   ],
+   "00000000000000003800000009840004": [
+    "00000000000000003800000009000004",
+    "00000000000000003800000009040000",
+    "00000000000000003800000009800000"
+   ],
+   "00000000000000043800000008180010": [
+    "00000000000000003800000008002040",
+    "00000000000000043800000008080000",
+    "00000000000000043800000008100000"
+   ],
+   "00000000000000801202000000840500": [
+    "00000000000000801202000000800100",
+    "00000000000000801202000000800400",
+    "00000000000000801202000000840000"
+   ],
+   "00000000000000801202000000901010": [
+    "00000000000000003800100008002000",
+    "00000000000000801202000000101000",
+    "00000000000000801202000000900000"
+   ],
+   "00000000000000801202000022081000": [
+    "00000000000000003800000808001000",
+    "00000000000000801202000000081000",
+    "00000000000000801202000020001000"
+   ],
+   "00000000000000801202000800880200": [
+    "0000000000000000380000000a002000",
+    "00000000000000801202000000800200",
+    "00000000000000801202000000880000"
+   ],
+   "00000000000000801212000001009000": [
+    "00000000000000003800200008001000",
+    "00000000000000003800200009000000",
+    "00000000000000801212000000001000",
+    "00000000000000801212000001000000"
+   ],
+   "00000000000000909002200080100000": [
+    "00000000000000801222000000001000",
+    "00000000000000801222000000800000",
+    "00000000000000909002000000100000",
+    "00000000000000909002000080000000"
+   ],
+   "00000000000020809002000480100000": [
+    "00000000000000801202040000001000",
+    "00000000000000801202040000800000",
+    "00000000000020809002000080000000"
+   ],
+   "00000000000200003800200008180000": [
+    "00000000000000003800200008100000",
+    "00000000000000a09002000080000000"
+   ],
+   "00000000010000889002000080100000": [
+    "00000000000000889002000000100000",
+    "00000000000000889002000080000000",
+    "00000000010000809002000000100000",
+    "00000000010000809002000080000000"
+   ],
+   "00000000012000003800080009000000": [
+    "00000000000000003800000248000000",
+    "00000000000000801202000001000100",
+    "00000000000080003800000048000000"
+   ],
+   "0000000800000000380000000810000a": [
+    "00000000000000003800000008001080",
+    "00000008000000003800000008100000"
+   ]
+  }
+ },
+ "single_owner_note": "research/log/2026-11-20-n11-residual72-refuted50-refsolve-second-verification-single-owner-note.md (commit de8c44ac96fbde0616a216f184dd54b42b3f2c49)",
+ "status": "second-verification-passed",
+ "trust_boundary": "engine depth-10 verdict soundness + D4 invariance; replacement root sets of rounds 1-3 enter through the same upstream canonicals as the machine under verification; this verification runs no probes and closes no rows"
+}
