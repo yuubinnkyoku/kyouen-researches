@@ -52,6 +52,12 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/scripts/ag2_fast_target.py
   role: solver
   note: AG(2,q)の対称性利用高速完全探索
+- path: research/experiments/finite-field-kyouen-20261120/GROWTH_RATE.md
+  role: source
+  note: Kの成長率（q^0.33対2n）
+- path: research/experiments/finite-field-kyouen-20261120/AG2_Q9_SIZE10.md
+  role: source
+  note: AG(2,9)サイズ10の探索空間分析
 - path: research/experiments/finite-field-kyouen-20261120/AG2_BOUNDS.md
   role: source
   note: 上界の比較（cross/second moment/triple）
