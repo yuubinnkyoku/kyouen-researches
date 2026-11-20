@@ -17,6 +17,12 @@
       "ordered_points": 446040,
       "points": 892080
     },
+    "C11r": {
+      "bad": 0,
+      "desc": "independent raw-double-recursion census ledger (census_rows.py third implementation, census.txt) re-derived from cand12 row by row, R=0..x+z+14, z=0..79, x=12..70 (T/P sets, Thue-Morse index, tail)",
+      "points": 450760,
+      "rows": 4720
+    },
     "C12": {
       "bad": 0,
       "desc": "deep closed grid z=0..120 x=12..120 R<=x+z+16",
@@ -26,6 +32,13 @@
       "bad": 0,
       "desc": "single_token/y=11-child/x=12 merger raw anchors",
       "points": 41666
+    },
+    "C1d": {
+      "anchor_bad": 0,
+      "bad": 0,
+      "desc": "published z=8/9/10/15/16/17 uniform slices (y=12) vs cand12, x=12..159 R<=x+61; + low-R single-token reduction R<=z+6 (z=15..17)",
+      "lowR_bad": 0,
+      "points": 139860
     },
     "C2": {
       "bad": 0,
@@ -79,8 +92,10 @@
   "checks_run": [
     "C1",
     "C11",
+    "C11r",
     "C12",
     "C1b",
+    "C1d",
     "C2",
     "C2b",
     "C3",
@@ -105,9 +120,9 @@
   "experiment": "vertical-fiber-two-token-y12-parametric-allz-proof-20261120",
   "family": "H(R;(x,12);z), z>=0, x>=12, R>=0",
   "overall": "PASS",
-  "stage": "part1 (12-check machine constructed; census parts re-anchored via bounded-memoization twins on a 1 GiB-cgroup host; C1d published-slice anchors at y=12 and the census_rows.py duplication deferred to part 2; K1152 stays observed until the full two-part procedure with 3 byte-identical audit runs)",
+  "stage": "part2 (C1d published-slice anchors at y=12 and the independent census.txt consumer incorporated; census parts re-anchored via bounded-memoization twins on a 1 GiB-cgroup host; on overall PASS with 3 byte-identical audit runs K1152 is promoted observed->proved)",
   "total_bad": 0,
-  "total_points": 6311993,
+  "total_points": 6902613,
   "type_count": 191789,
-  "verifier_sha256": "f73614f7eb4fe8b0afd0c810d4a72450ee4c65a657ec068c51750d5bc0f5938f"
+  "verifier_sha256": "e209297603f68c9a82a50f90cac0bc678211d1517f137b5d490dfca3c492eb04"
 }
