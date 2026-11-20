@@ -55,6 +55,15 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/ALGEBRAIC_ROUTE.md
   role: source
   note: 放物面上のcap・反転平面3-arcへの再定式化
+- path: research/experiments/finite-field-kyouen-20261120/LITERATURE_3ARC_2.md
+  role: source
+  note: Sonninoの(q+5)-arcと我々のKの不整合
+- path: research/experiments/finite-field-kyouen-20261120/LITERATURE_3ARC_3.md
+  role: source
+  note: 射影平面arcの定義確認
+- path: research/experiments/finite-field-kyouen-20261120/LITERATURE_3ARC_4.md
+  role: source
+  note: 反転平面の公理(A1)の確認
 - path: research/experiments/finite-field-kyouen-20261120/LITERATURE_3ARC.md
   role: source
   note: 3-arcの文献調査記録
@@ -491,8 +500,11 @@ q=3 で k≈6、q=5 で k=9、q=7 で k≈25 であり、真値（q=5,7 で K=6�
 よって安全集合は「どの4つも従属でない」集合であり、これは**放物面 `Z=X²+Y²` 上の cap**、
 反転平面の言葉では **3-arc**（どの円とも3点以下で交わる集合）に他ならない。
 符号理論的には「パリティ検査行列の任意3列が独立」に対応するが、Singleton 限界は下界しか与えない。
-文献調査では最大 3-arc サイズの明示的な既知結果を確認できなかった
-（Sonnino の arc 研究は存在するが値は未確認）。
+文献調査では最大 3-arc サイズの明示的な既知結果を確認できなかった。
+Sonnino は奇数の q に対して (q+5)-arc を構成しているが、arc の定義を一次資料で確認できておらず、
+我々の K（q+5 より小さい）との不整合は未解決である。
+なお反転平面の公理 (A1)「任意の三点が一意に円を定める」は文献で確認でき、
+我々の恒真性の主張と整合する。
 
 AG(2,11) ではサイズ10,11,12 がいずれも不存在であることを完全探索で確認し、**K=9 が確定**した。
 
