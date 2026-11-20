@@ -2,7 +2,7 @@
 
 [単一オーナー宣言](2026-11-20-y12-two-token-skeleton-single-owner-note.md)（2026-11-20T14:25:00Z・commit fe93c969・先行出版）に基づく
 y=12 族 fitting（[実験](../experiments/vertical-fiber-two-token-y12-parametric-allz-fit-20261120/report.md)・
-K item [K1150](../knowledge/items/K1150-two-token-y12-parametric-closed-form-fit.md) として出版）の経過・判断の記録。
+K item [K1152](../knowledge/items/K1152-two-token-y12-parametric-closed-form-fit.md) として出版）の経過・判断の記録。
 
 ## 初稿と不一致プロファイル
 
@@ -56,4 +56,12 @@ probe_rows.txt は別 cwd 再生成 byte-identical・audit.json は 3 実行 byt
 - K番号は push 直前に 3 点確認（README 実ファイル grep・item 404・list_commits）で採番した。
   確認時点の README 掲載最大は K1149（ただし K1149 は二重採番・未解消の記載があるため
   後続番号 K1150 を使用）。
+- **採番注記（二重採番・後着再採番で解消済み）**: part2 出版後に、general-multiset merge
+  レーン（commit `af3fb91b30`・先行出版）が異なる slug `K1150-general-multiset-merge-band-reduction.md`
+  で K1150 を取得済みだったことが判明（slug が異なるため push 直前の 404 確認では検出できず）。
+  AGENTS.md 再採番規則（main 上の既存 K 番号は変更しない・衝突した新規項目を再採番する）により、
+  後着である本レーンが K1150 を放棄して K1152 へ再採番した（K1151 は n11 whole-record レーンが
+  取得済み・K1152 の空きは README grep・item 404・list_commits の 3 点で再確認。先着の
+  multiset merge K1150 は不変）。初回出版の K1150 item は削除し、本 log の採番記録以外の
+  参照は K1152 に置換済み。
 - cand12 の正本監査（verify_y12_universal.py・12チェック）は宣言の保持範囲外・次段階。
