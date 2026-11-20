@@ -1,9 +1,9 @@
 ---
 id: K1140
 title: 残余29行のWIN8-D10 receipt fold root 438000000818（fold24）
-kind: experiment
+kind: verification
 status: verified
-topics: [search-methods, certificates, frontier-bookkeeping]
+topics: [search-methods, certificates, verification]
 aliases:
   - fold24 WIN8 receipt fold root 438000000818
   - K1136証明書の五親S6 frontierへのfoldと残余29→26行
@@ -26,7 +26,7 @@ artifacts:
     role: source
     note: 固定Git参照から12 blob・49 SHA-256 pinの入力を再構成
   - path: research/experiments/n11-residual29-win8-receipt-fold-root438000000818-20261120/scripts/build_fold24.py
-    role: generator
+    role: source
     note: fold23出版機からfold24機を生成。置換回数・古い定数・pin件数・構文を検査
   - path: research/experiments/n11-residual29-win8-receipt-fold-root438000000818-20261120/scripts/fold_win8_root438000000818.py
     role: verifier
