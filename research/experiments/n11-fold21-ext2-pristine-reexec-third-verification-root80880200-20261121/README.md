@@ -6,7 +6,7 @@
 
 これは**K1168の第三再現**であり、別実装による新しい第三の証明器を作ったという意味ではない。元の検証器が出版社のfold21機・fold20以下の出版機と実装を共有しない第三実装であることはK1168の範囲を引き継ぐ。
 
-単一オーナー宣言は [宣言ノート](../../../log/2026-11-21-n11-k1168-fold21-ext2-pristine-reexec-third-single-owner-note.md)（commit 3e7447021b82347b38c162e90ace39472cdddb24）。宣言時のmain HEADは 429232fd7e8322f5ca11af567c8e9f4ca6d303ad。入力再構成にはこの不変commitを固定して使った。
+単一オーナー宣言は [宣言ノート](../../log/2026-11-21-n11-k1168-fold21-ext2-pristine-reexec-third-single-owner-note.md)（commit 3e7447021b82347b38c162e90ace39472cdddb24）。宣言時のmain HEADは 429232fd7e8322f5ca11af567c8e9f4ca6d303ad。入力再構成にはこの不変commitを固定して使った。
 
 ## 出版byteの固定
 
