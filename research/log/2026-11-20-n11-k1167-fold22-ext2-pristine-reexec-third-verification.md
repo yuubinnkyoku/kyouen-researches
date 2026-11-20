@@ -75,7 +75,7 @@ stdlibのみ・fail-closed（不一致でstage record未書込・exit 1・失敗
 
 本実験はK1167監査の決定性・入力pin・fail-closed防衛の再検査であり、
 S6行・五親target行を1行も閉じない。fold22 receipt自体の6行閉鎖（残余35→32行）は
-Publisherの成果簿記であり、K1167はその外部第二検証、本実験はその第三検験である。
+Publisherの成果簿記であり、K1167はその外部第二検証、本実験はその第三検証である。
 WIN8-D10証明書は当該8石rootのゲーム木に限られ、REFUTED-D10はLOSS証明ではない。
 nodes数・solved数を勝敗として読まない。
 **標準11×11空盤・二石root `{49,60}`/`{59,60}`・S2 `{59,60}`・class 1/2/4は
