@@ -59,8 +59,8 @@ fail-closedで、出力はソート済みkey・時刻なしの決定論的監査
 3部構成でmainに直接出版した（AGENTS.mdに従いbranch/PRは作らない）:
 
 - part1: 実験dir 4ファイル（README・検証機・監査正本・実行記録）。
-- part2: K1164 item ＋ 本logの前段として単一オーナー宣言ノートと本log。
-- part3: knowledge README末尾へのK1164 bullet追記。
+- part2: K1164 item＋本log（単一オーナー宣言ノートは先行commit `434d53f3e3` で出版済み）。
+- part3: knowledge README末尾へのK1164 bullet追記と、本logの出版節のpart2記述訂正（同一commit）。
 
 K番号はpart2 push直前に3点確認（item 404・README bullet・code search）で空きを確認した。
 
