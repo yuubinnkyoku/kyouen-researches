@@ -109,3 +109,16 @@
   (resume は 11-18 の 2 中断以後まだ行われていない)。
 - 判定 (SAT/UNSAT) または cap 到達 (INDET) 時に本 dir と K0827 へ結果を追記する。
   環境障害で中断した場合は正直に中断 record のみ残す。
+
+## 経過 (2026-11-20 再開 — run-3 中断と run-4 relaunch)
+
+- **run-3 (2026-11-20 19:01Z 開始・cap 14400s・単一): 実行環境障害により中断** (~19:42-19:46Z 障害)。
+  最終観測進捗 **6,783,075 conflicts @ 1398.2s** (19:42Z 前後の poll による最後の観測値・
+  障害直前の正確な最終 progress line は環境消失により記録できず、上記は下界)。
+  C++/Python での検証前・判定なし。runner record なし (kissat 終了前中断)。
+- 環境リセットにより作業 dir・kissat プロセス・中間 log を喪失。再構築後、
+  scripts・kissat (md5 3a5eba83…)・CNF (md5 bc10c516…) を再取得・再生成して
+  **md5 はすべて再一致を確認** (cross-reset 決定性を再度実地確認)。
+- **run-4 を relaunch** (cap 14400s・同条件下)。判定または cap 到達時に結果を追記する。
+  並行して (7,5) 前線 7×38 class {0} class-split も着手
+  (seven-row-q5-m38-class-split-20261120)。
