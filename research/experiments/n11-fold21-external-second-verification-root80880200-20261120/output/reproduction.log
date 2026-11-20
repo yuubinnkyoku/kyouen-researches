@@ -1,0 +1,81 @@
+fold21 (K1130) external second verification: reproduction log
+==============================================================
+
+single process, stdlib only, deterministic audit JSON (no clock fields).
+W rebuilt from pinned Git refs by scripts/reconstruct_inputs.py; verified
+byte-identical at the declaration-time HEAD and at the verification-time main:
+
+  ref A (declaration-time HEAD): 5e1273f57c8c7733f0f2ba14a44000c2f5df0554
+  ref B (verification-time main): d323e780f950d6adea15b8bd7a3309e11d136d55
+
+$ python3 scripts/reconstruct_inputs.py <W_A> <pub_A> [5e1273f57c8c7733f0f2ba14a44000c2f5df0554]
+  publication pins re-fetched: 4/4 byte-identical
+  W blobs: 12 legacy Git-blob pins matched (fail-closed blob-sha1)
+  W sha256 pins: 40/40 matched
+  chain machines placed sha256-checked: fold_win8_root08d10000.py (9e141d4a...),
+    fold_win8_root1009000.py (51442d96...), fold_win8_root00901010.py (dcdfbf92...),
+    fold_win8_root00901010_preverified.py (d342f1f8...), fold_win8_root80880200.py (44399cc5...)
+  subset check (reconstructer): fold20 pins 12 blob + 37 sha256 subset of
+    fold21's 12 + 40 pins, values equal, OK
+$ python3 scripts/reconstruct_inputs.py <W_B> <pub_B> d323e780f950d6adea15b8bd7a3309e11d136d55
+  same output; diff -r <W_A> <W_B> (fold21/ output dir excluded): byte-identical;
+  diff -r <pub_A> <pub_B>: byte-identical
+
+standalone pristine re-executions of the published fold21 machine
+(FOLD_PREVERIFIED_CHAIN unset, env -i with isolated PATH/HOME where noted),
+performed BEFORE the verifier integration run:
+  run 1 (same cwd, W_A):    receipt sha256 9a4da2f61fb5010ebfbddf784cd76f5972b438c244fa29c1f96f2c3cde65cb39
+  run 2 (same cwd, W_A):    receipt byte-identical (9a4da2f6...)
+  run 3 (isolated copytree W/cwd/HOME):    receipt byte-identical (9a4da2f6...), ~6 s wall
+  run 4 (isolated + PYTHONHASHSEED=random): receipt byte-identical (9a4da2f6...), ~7 s wall
+  every run nests the published fold20 machine pristine rerun gate, which
+  transitively re-runs the published fold19 machine pristine (fold18 chain);
+
+$ python3 scripts/verify_fold21_external_20261120.py <W> <pub> <out_json>
+  run 1 (ref-A W, verifier cwd):                ALL 1394 GATES PASS,
+      audit sha256 80f004403e2538914605a22c0df8d9a86bf575d896eadfc70d14531b92767a63
+      (135,723 bytes)
+  run 2 (ref-A W, same cwd, repeat):           ALL 1394 GATES PASS, audit byte-identical
+  run 3 (ref-A W, isolated HOME/cwd, PYTHONHASHSEED=random): ALL 1394 GATES PASS, audit byte-identical
+  run 4 (ref-A W, isolated HOME/cwd):           ALL 1394 GATES PASS, audit byte-identical
+  run 5 (ref-B W, fresh):                       ALL 1394 GATES PASS, audit byte-identical
+
+per-run internals, recorded fail-closed by the verifier's own execution matrix:
+  x1 pristine fold21 machine (same cwd):      receipt sha 9a4da2f61fb5010ebfbddf784cd76f5972b438c244fa29c1f96f2c3cde65cb39
+  x2 pristine (same cwd, repeat):              receipt byte-identical (9a4da2f6...)
+  x3 pristine (isolated tree/cwd/HOME):        receipt byte-identical (9a4da2f6...)
+  x4 pristine (isolated + PYTHONHASHSEED=random): receipt byte-identical (9a4da2f6...)
+  t1 worklist.csv XOR@253 (copytree-isolated W):    rc!=0, 'input blob mismatch', no output write
+  t2 K1124 certificate XOR@17522 (copytree-isolated W): rc!=0, 'input sha256 mismatch', no output write
+  all pristine machine runs with FOLD_PREVERIFIED_CHAIN unset; each nests the fold20 machine
+  pristine rerun gate (which transitively re-runs fold19/fold18 machine checks);
+  a full standalone fold21 machine run measures ~6-7 s
+
+gate sections in the audit: P 13 / I 60 / C 1292 / X 15 / T 14 (total 1394), all PASS.
+verifier runtime: ~27.6 s wall, ~22.8 s user per execution (6 fold21 machine launches incl. tamper).
+
+main rederivation anchors (independent third implementation):
+  base worklist 6,438 rows; post-fold20 open frontier 6,144 rows / 486,819 cost,
+  solved 1,704, incidence 11,701, residual five-parent target rows 38/112 (closed 74);
+  root 00000000000000801202000800880200: 8 stones, quadruple-free, D4-canonical,
+  legal-move rederivation 46 == K1124 g05/g09;
+  C(8,6)=28 canonical rows by two methods (224 ops vs 28 subsets) equal;
+  classification 8 open / 19 not-in-worklist / 1 closed-before (legacy-base row
+  00000000000000801202000800080000, closed in ledger/globalFold/previousCost stage);
+  receipt closes 8 rows = claim 3 + extra 5, closed edge cost 576;
+  parent deltas: 7 parents (classes 4/2/2/4/4/2/6; 80->77, 17->14, 45->43, 81->78,
+  74->72, 59->56, 48->46; 18 row-closings);
+  frontier_after 6,136/486,243, solved 1,712, incidence 11,683, needed 4,444/352,691;
+  five-parent target 74->77, residual 38->35; win16 candidates 6->5 (12 claimed rows
+  remaining = 49 - 37); K1124 19 gates reverified; K1097 footprint 16 roots/49 rows
+  exactly-once rechecked; certificate 934,278 bytes / 25,783 rows sorted-unique.
+
+declaration note published by this lane:
+  research/log/2026-11-20-n11-fold21-external-second-verification-single-owner-note.md
+  first push 98c90cb5108be93a607ba5e35c4cd7255f61ebe5 carried a placeholder body by
+  accident (lane operation error) and was content-fixed 55 s later in
+  d323e780f950d6adea15b8bd7a3309e11d136d55 (fetch-back byte-verified).
+
+11x11 empty board / two-stone roots {49,60}/{59,60} / S2 {59,60} / classes 1/2/4: UNKNOWN
+(no game value is asserted by this verification; rows closed by the receipt are bookkeeping,
+not LOSS verdicts)
