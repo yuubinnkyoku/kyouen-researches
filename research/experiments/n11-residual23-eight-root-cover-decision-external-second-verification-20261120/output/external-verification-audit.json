@@ -1,0 +1,546 @@
+{
+ "checks_all_ok": true,
+ "checks_total": 71,
+ "interpretation_guard": [
+  "No row is closed by this verification or by the cover decision it re-checks.",
+  "The cover numbers are candidate-root plan bookkeeping, not certificates.",
+  "REFUTED-D10 is not a LOSS proof; nodes and solved counts are not game values.",
+  "The audit lower bound 8 remains valid on any universe; 9 is specific to pool P-triple-prime.",
+  "The standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, classes 1/2/4 remain UNKNOWN."
+ ],
+ "published_decision_sha256": "c5aaf83e23b6a716e981aaff745996668c60edba164fb3f5288b60ff9b8ac4d1",
+ "published_machine_sha256": "da51063c6db43cb9d0fe7c69dbbbe17268c250abec3080390384a14316168277",
+ "reexecution": {
+  "byte_identical_to_published": true,
+  "passA1": {
+   "cwd": "same-tree W/A run 1",
+   "sha256": "c5aaf83e23b6a716e981aaff745996668c60edba164fb3f5288b60ff9b8ac4d1"
+  },
+  "passA2": {
+   "cwd": "same-tree W/A run 2",
+   "sha256": "c5aaf83e23b6a716e981aaff745996668c60edba164fb3f5288b60ff9b8ac4d1"
+  },
+  "passB": {
+   "cwd": "isolated tree W/B_TREE, isolated HOME",
+   "sha256": "c5aaf83e23b6a716e981aaff745996668c60edba164fb3f5288b60ff9b8ac4d1"
+  },
+  "passB_hashseed_random": {
+   "cwd": "isolated tree, PYTHONHASHSEED=random",
+   "sha256": "c5aaf83e23b6a716e981aaff745996668c60edba164fb3f5288b60ff9b8ac4d1"
+  }
+ },
+ "results": [
+  {
+   "detail": {
+    "reexec_count": 4
+   },
+   "name": "args-present",
+   "ok": true
+  },
+  {
+   "detail": {
+    "sha256": "da51063c6db43cb9d0fe7c69dbbbe17268c250abec3080390384a14316168277",
+    "want": "da51063c6db43cb9d0fe7c69dbbbe17268c250abec3080390384a14316168277"
+   },
+   "name": "decision-machine-byte-pin",
+   "ok": true
+  },
+  {
+   "detail": {
+    "index": 1
+   },
+   "name": "reexec-1-file-exists",
+   "ok": true
+  },
+  {
+   "detail": {
+    "index": 2
+   },
+   "name": "reexec-2-file-exists",
+   "ok": true
+  },
+  {
+   "detail": {
+    "index": 3
+   },
+   "name": "reexec-3-file-exists",
+   "ok": true
+  },
+  {
+   "detail": {
+    "index": 4
+   },
+   "name": "reexec-4-file-exists",
+   "ok": true
+  },
+  {
+   "detail": {
+    "file": "published-decision.json",
+    "sha256": "c5aaf83e23b6a716e981aaff745996668c60edba164fb3f5288b60ff9b8ac4d1",
+    "want": "c5aaf83e23b6a716e981aaff745996668c60edba164fb3f5288b60ff9b8ac4d1"
+   },
+   "name": "pin-decision",
+   "ok": true
+  },
+  {
+   "detail": {
+    "file": "k1097-refsolve.json",
+    "sha256": "2896deb0c5e820904d0e2463e3fd9ebd1613b540a66a97f88d86c75bffa71f40",
+    "want": "2896deb0c5e820904d0e2463e3fd9ebd1613b540a66a97f88d86c75bffa71f40"
+   },
+   "name": "pin-k1097",
+   "ok": true
+  },
+  {
+   "detail": {
+    "file": "k1102-second-verification.json",
+    "sha256": "d0b5d845c234cf51c55555295f1fe3042f262cccaa0e2923c9c4205d6b6e168b",
+    "want": "d0b5d845c234cf51c55555295f1fe3042f262cccaa0e2923c9c4205d6b6e168b"
+   },
+   "name": "pin-k1102",
+   "ok": true
+  },
+  {
+   "detail": {
+    "file": "lower-bound-audit.json",
+    "sha256": "1310ef74f40a98095d6128f28cba1c5e87e45a45694a3ec6940b541ec0dd3b00",
+    "want": "1310ef74f40a98095d6128f28cba1c5e87e45a45694a3ec6940b541ec0dd3b00"
+   },
+   "name": "pin-audit",
+   "ok": true
+  },
+  {
+   "detail": {
+    "sha256": "c5aaf83e23b6a716e981aaff745996668c60edba164fb3f5288b60ff9b8ac4d1"
+   },
+   "name": "reexec-1-byte-identical-to-master",
+   "ok": true
+  },
+  {
+   "detail": {
+    "sha256": "c5aaf83e23b6a716e981aaff745996668c60edba164fb3f5288b60ff9b8ac4d1"
+   },
+   "name": "reexec-2-byte-identical-to-master",
+   "ok": true
+  },
+  {
+   "detail": {
+    "sha256": "c5aaf83e23b6a716e981aaff745996668c60edba164fb3f5288b60ff9b8ac4d1"
+   },
+   "name": "reexec-3-byte-identical-to-master",
+   "ok": true
+  },
+  {
+   "detail": {
+    "sha256": "c5aaf83e23b6a716e981aaff745996668c60edba164fb3f5288b60ff9b8ac4d1"
+   },
+   "name": "reexec-4-byte-identical-to-master",
+   "ok": true
+  },
+  {
+   "detail": {
+    "sha256s": [
+     "c5aaf83e23b6a716e981aaff745996668c60edba164fb3f5288b60ff9b8ac4d1",
+     "c5aaf83e23b6a716e981aaff745996668c60edba164fb3f5288b60ff9b8ac4d1",
+     "c5aaf83e23b6a716e981aaff745996668c60edba164fb3f5288b60ff9b8ac4d1",
+     "c5aaf83e23b6a716e981aaff745996668c60edba164fb3f5288b60ff9b8ac4d1"
+    ]
+   },
+   "name": "reexec-all-identical",
+   "ok": true
+  },
+  {
+   "detail": {},
+   "name": "decision-machine-pin-recorded",
+   "ok": true
+  },
+  {
+   "detail": {
+    "count": 23
+   },
+   "name": "rows23-k1097-format",
+   "ok": true
+  },
+  {
+   "detail": {
+    "count": 23
+   },
+   "name": "rows23-k1102-format",
+   "ok": true
+  },
+  {
+   "detail": {},
+   "name": "rows23-k1097-unique",
+   "ok": true
+  },
+  {
+   "detail": {
+    "only_k1097": [],
+    "only_k1102": []
+   },
+   "name": "rows23-set-equality-k1097-k1102",
+   "ok": true
+  },
+  {
+   "detail": {
+    "count": 23
+   },
+   "name": "triple-availability-covers-all-23",
+   "ok": true
+  },
+  {
+   "detail": {
+    "max": 140,
+    "min": 0
+   },
+   "name": "triple-availability-values-nonneg",
+   "ok": true
+  },
+  {
+   "detail": {},
+   "name": "demand-equality-k1097-k1102",
+   "ok": true
+  },
+  {
+   "detail": {},
+   "name": "demand-g9-23-rows",
+   "ok": true
+  },
+  {
+   "detail": {},
+   "name": "demand-gaterecord-equals-k1097",
+   "ok": true
+  },
+  {
+   "detail": {
+    "hist": {
+     "1": 40065,
+     "2": 4857,
+     "3": 297
+    },
+    "providers": 45219
+   },
+   "name": "hist-sum-equals-providers",
+   "ok": true
+  },
+  {
+   "detail": {
+    "recorded": 50670,
+    "weighted": 50670
+   },
+   "name": "demand-sum-equals-weighted-hist",
+   "ok": true
+  },
+  {
+   "detail": {
+    "row-sum": 50670
+   },
+   "name": "demand-sum-equals-row-sum",
+   "ok": true
+  },
+  {
+   "detail": {
+    "sum": 891,
+    "want": 891
+   },
+   "name": "triple-availability-sum-equals-3x-triple-providers",
+   "ok": true
+  },
+  {
+   "detail": {},
+   "name": "eligible-pair-plus-triple",
+   "ok": true
+  },
+  {
+   "detail": {
+    "audit": 5154,
+    "sum": 5154
+   },
+   "name": "eligible-equals-audit",
+   "ok": true
+  },
+  {
+   "detail": {},
+   "name": "audit-hist-equal",
+   "ok": true
+  },
+  {
+   "detail": {},
+   "name": "audit-providers-equal",
+   "ok": true
+  },
+  {
+   "detail": {
+    "comb": 6555
+   },
+   "name": "per-row-events-equals-comb1152",
+   "ok": true
+  },
+  {
+   "detail": {
+    "gen": 150765,
+    "want": 150765
+   },
+   "name": "generation-events-equals-23x-events",
+   "ok": true
+  },
+  {
+   "detail": {},
+   "name": "universe-equals-safe-plus-unsafe",
+   "ok": true
+  },
+  {
+   "detail": {
+    "refuted_touching": 44,
+    "safe_touching": 45263
+   },
+   "name": "providers-equals-safe-touching-minus-refuted-touching",
+   "ok": true
+  },
+  {
+   "detail": {
+    "nontouching": 6,
+    "touching": 44
+   },
+   "name": "refuted-touching-plus-nontouching-equals-50",
+   "ok": true
+  },
+  {
+   "detail": {},
+   "name": "greedy-scope-k1097-size-9",
+   "ok": true
+  },
+  {
+   "detail": {},
+   "name": "greedy-k1097-k1102-equal",
+   "ok": true
+  },
+  {
+   "detail": {
+    "1": 1,
+    "2": 2,
+    "3": 6
+   },
+   "name": "greedy-decision-inner-equality-recorded",
+   "ok": true
+  },
+  {
+   "detail": {},
+   "name": "greedy-decision-gains-match-k1097",
+   "ok": true
+  },
+  {
+   "detail": {
+    "covered": 23
+   },
+   "name": "greedy-covered-partition-count",
+   "ok": true
+  },
+  {
+   "detail": {},
+   "name": "greedy-covered-equals-rows23",
+   "ok": true
+  },
+  {
+   "detail": {
+    "seq": [
+     3,
+     3,
+     3,
+     3,
+     3,
+     3,
+     2,
+     2,
+     1
+    ]
+   },
+   "name": "greedy-gains-hist-consistent",
+   "ok": true
+  },
+  {
+   "detail": {},
+   "name": "greedy-gains-sum",
+   "ok": true
+  },
+  {
+   "detail": {},
+   "name": "greedy-roots-format",
+   "ok": true
+  },
+  {
+   "detail": {},
+   "name": "k1097-max-matching-23",
+   "ok": true
+  },
+  {
+   "detail": {},
+   "name": "k1102-hopcroft-witness-verified-in-decision",
+   "ok": true
+  },
+  {
+   "detail": {},
+   "name": "kuhn-matching-23",
+   "ok": true
+  },
+  {
+   "detail": {
+    "no_triple": [
+     "00000000000000003800000008002010",
+     "0000000000000000380000000a080000",
+     "00000000020000801202000000100000"
+    ]
+   },
+   "name": "certificate-rows-match",
+   "ok": true
+  },
+  {
+   "detail": {
+    "k_max": 1,
+    "k_min": 2
+   },
+   "name": "certificate-kmin-kmax-recorded",
+   "ok": true
+  },
+  {
+   "detail": {},
+   "name": "certificate-contradiction",
+   "ok": true
+  },
+  {
+   "detail": {
+    "feasible_k": []
+   },
+   "name": "derivation-slots-inequality-no-solution",
+   "ok": true
+  },
+  {
+   "detail": {
+    "feasible_k": []
+   },
+   "name": "derivation-21minus-k-no-solution",
+   "ok": true
+  },
+  {
+   "detail": {},
+   "name": "three-special-rows-need-two-roots",
+   "ok": true
+  },
+  {
+   "detail": {
+    "interval": [
+     8,
+     9
+    ]
+   },
+   "name": "audit-interval-8-9",
+   "ok": true
+  },
+  {
+   "detail": {},
+   "name": "audit-lower-bound-8-recompute",
+   "ok": true
+  },
+  {
+   "detail": {},
+   "name": "decision-interval-before",
+   "ok": true
+  },
+  {
+   "detail": {},
+   "name": "decision-interval-after",
+   "ok": true
+  },
+  {
+   "detail": {},
+   "name": "decision-minimum-cover-9",
+   "ok": true
+  },
+  {
+   "detail": {},
+   "name": "decision-unsat",
+   "ok": true
+  },
+  {
+   "detail": {},
+   "name": "greedy-upper-bound-9-recorded",
+   "ok": true
+  },
+  {
+   "detail": {},
+   "name": "audit-greedy-9",
+   "ok": true
+  },
+  {
+   "detail": {},
+   "name": "audit-max-cover-3",
+   "ok": true
+  },
+  {
+   "detail": {
+    "count": 18
+   },
+   "name": "gates-count-18",
+   "ok": true
+  },
+  {
+   "detail": {
+    "not_ok": []
+   },
+   "name": "gates-all-ok",
+   "ok": true
+  },
+  {
+   "detail": {},
+   "name": "interpretation-guard-5",
+   "ok": true
+  },
+  {
+   "detail": {},
+   "name": "inputs-pin-chain",
+   "ok": true
+  },
+  {
+   "detail": {},
+   "name": "audit-input-pin-chain",
+   "ok": true
+  },
+  {
+   "detail": {},
+   "name": "k1102-input-pin-chain",
+   "ok": true
+  }
+ ],
+ "schema": "n11-residual23-eight-root-cover-decision-external-second-verification-20261120-v1",
+ "single_owner_note": "research/log/2026-11-20-n11-residual23-eight-root-cover-decision-external-second-verification-single-owner-note.md",
+ "status": "external-verification-passed",
+ "structure_observations": {
+  "availability_max": [
+   "00000000000000821082000000000010",
+   140
+  ],
+  "availability_min": [
+   "00000000000000003800000008002010",
+   0
+  ],
+  "availability_second_lowest": [
+   "00000000000000103800000008080000",
+   2
+  ],
+  "note": "range 0..140, mean 38.74 over 23 rows; sum identity 891 == 3*297 verified above",
+  "rows_with_zero_and_low_lt_5": [
+   "00000000000000003800000008002010",
+   "0000000000000000380000000a080000",
+   "00000000000000103800000008080000",
+   "00000000020000801202000000100000",
+   "00000010000000801202000000000400"
+  ],
+  "top6_rows_share": 0.8653198653198653,
+  "zero_triple_rows": [
+   "00000000000000003800000008002010",
+   "0000000000000000380000000a080000",
+   "00000000020000801202000000100000"
+  ]
+ },
+ "trust_boundary": "record-level cross-document verification and arithmetic recomputation only; the touching universe / safe8 predicates were verified by 4 pristine byte-identical re-executions of the published machine, not re-derived by a third implementation here"
+}
