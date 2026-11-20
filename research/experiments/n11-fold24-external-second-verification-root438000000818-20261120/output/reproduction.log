@@ -1,0 +1,73 @@
+fold24 (K1140) external second verification - verifier execution record (2026-11-20)
+=====================================================================================
+
+Verifier: verify_fold24_external_20261120.py
+  SHA-256  9bc24e3806724cf7dd3db7e23ec26fb4598ea1952bd92c2974c5626a561d8a52
+  size     55,555 bytes
+Inputs:
+  W        reconstructed pristine input tree (61 pinned chain inputs,
+           reproduced with the published reconstruct_inputs.py from its fixed
+           Git reference b91e85a99f0480f084835bdff51533d0cf5feaa8)
+  pub_dir  published fold24 experiment directory bytes (receipt
+           c4ab76d3cb7eba5c1ab8e1830c43d17bf9a771f511b66e7e8573864f3f2402c7,
+           machine f462733dbaa6a958680ce49ff85e056adf8756cc946fa5ac612442f2c47b4fc8,
+           bundled audit 49f330c6e0f73c0a58fdd9b21c215c38fc3a594d35f1d617b1324468c4a3387b,
+           reproduction.log cb01749a9b52e7ed4392dc2d25cf008e805b0ca17b40a25537680e9d1df0e5b2,
+           reconstruct_inputs.py f4e1fa8e69b10c07d9eec7f0b798458b0e73a97308bd418b622d1e9542873591)
+
+Each verifier run re-executes, in a fresh process:
+  - 61 input pin checks (12 git blob + 49 sha256) on W,
+  - the published fold24 machine 4 times (same-env x2, isolated tree/cwd/HOME,
+    isolated + PYTHONHASHSEED=random; each rerun internally re-runs the fold23
+    machine pristine; receipt bytes must match the published receipt every time),
+  - the bundled independent auditor once (46/46 checks),
+  - the full third-implementation rederivation of frontiers, geometry in two
+    methods, claim rows, parent deltas and all frontier_after statistics,
+  - 2 tamper cases (1-byte XOR 0x01 at publishers-untested offsets).
+
+run 1 (default environment, cwd = verifier workdir)
+  $ python3 verify_fold24_external_20261120.py W pub external-audit.json
+  {
+   "status": "PASS",
+   "gate_count": 800,
+   "audit_sha256": "c7e10332df04a4f1e5af7b1cbc5ec487a5c15ca7851edba102b7b3679feb7c24",
+   "machine_runs": 4,
+   "tamper_cases": 2
+  }
+  written: external-audit.json (36,605 bytes)
+
+run 2 (same cwd, fresh verifier process)
+  $ python3 verify_fold24_external_20261120.py W pub external-audit-run2.json
+  stdout: identical to run 1
+  written: external-audit-run2.json (36,605 bytes)
+
+run 3 (isolated cwd/HOME + PYTHONHASHSEED=random)
+  $ env -i PATH=/usr/bin:/bin HOME=<isolated home> PYTHONHASHSEED=random \
+      python3 verify_fold24_external_20261120.py W pub external-audit-run3.json
+  stdout: identical to run 1
+  written: external-audit-run3.json (36,605 bytes)
+
+Byte identity of the audit across runs:
+  c7e10332df04a4f1e5af7b1cbc5ec487a5c15ca7851edba102b7b3679feb7c24  external-audit.json
+  c7e10332df04a4f1e5af7b1cbc5ec487a5c15ca7851edba102b7b3679feb7c24  external-audit-run2.json
+  c7e10332df04a4f1e5af7b1cbc5ec487a5c15ca7851edba102b7b3679feb7c24  external-audit-run3.json
+  c7e10332df04a4f1e5af7b1cbc5ec487a5c15ca7851edba102b7b3679feb7c24  external-audit-confirm.json
+  diff(run 1, run 2) = empty; diff(run 2, run 3) = empty.
+
+run 4 (post-compaction confirmation, default environment, same W and pub bytes)
+  $ time python3 verify_fold24_external_20261120.py W pub external-audit-confirm.json
+  stdout: identical to run 1
+  wall time: real 49.537s, user 39.419s, sys 2.962s
+  written: external-audit-confirm.json (36,605 bytes, same sha as runs 1-3)
+
+Earlier fail-closed interception (recorded as an experimental fact):
+  the first verifier build had a transcription typo in the K1091 sweep pin
+  constant (deda... instead of the correct ded0...); the verifier's own pin
+  gate failed the run before any machine execution. The fixed verifier above
+  is the published byte.
+
+Interpretation guard: this record closes no S6 row and no five-parent target
+row. WIN8-D10 certifies only the game tree of the eight-stone root;
+REFUTED-D10 is not a LOSS proof; node and solved counts are not win/loss
+readings. The standard 11x11 empty board, two-stone roots {49,60}/{59,60},
+S2 {59,60}, and classes 1/2/4 remain UNKNOWN.
