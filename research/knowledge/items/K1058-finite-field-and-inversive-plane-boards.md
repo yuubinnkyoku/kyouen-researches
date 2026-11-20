@@ -55,6 +55,9 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/ALGEBRAIC_ROUTE.md
   role: source
   note: 放物面上のcap・反転平面3-arcへの再定式化
+- path: research/experiments/finite-field-kyouen-20261120/SIZE_WEIGHTED_FAILED.md
+  role: source
+  note: サイズを使った上界の失敗記録
 - path: research/experiments/finite-field-kyouen-20261120/SINGLE_FAMILY.md
   role: source
   note: 単一族でのKとブロックサイズの関係
@@ -621,6 +624,11 @@ q=3 で k≈6、q=5 で k=9、q=7 で k≈25 であり、真値（q=5,7 で K=6�
 3. 被覆は q=3 のみ有効
 4. 使用済み円のペア `C(k,2)C(k−2,2) ≤ 2C(C(k,3),2)` は常に成立し制約なし
 5. 円のプロファイル（3点円 = `C(k,3)`、2点円 = `C(k,2)(q−k+3)`）は `λ₂+2` を再現するのみで改善しない
+6. サイズ重み付きペア `μ₂·C(k,2) ≤ 3Σ|B|` は q=5,7 で 12,16 と弱い
+7. ペンシルのサイズ和 `k−2 ≤ Σ(|B|−2)` は 25,49 と非常に弱い
+
+サイズ効果は実験的に明確（単一族で K がサイズに単調減少）だが、**上界の証明には翻訳できない**。
+`λ₂` 上界の証明はブロックのサイズを一切使わず「本数」だけを使うため鋭い。
 
 初等的な数え上げはすべて係数 ≥1 を与え、観測された `K/q ≈ 0.68〜0.86` を下回れない。
 係数1未満には代数幾何・設計論・加法的組合せ論など別の原理が必要と考えられる。
