@@ -68,7 +68,7 @@ evidence: >-
   min 1,781 / max 2,934 / sum 50,670・23行に触れるprovider 45,219根・
   provider被覆hist {1:40,065, 2:4,857, 3:297}で**stranded行0**。
   （2）計画: **greedy 9根が残余23行をleftover 0で完全被覆**
-  （gains {3:6, 2:2, 1:1}・情報論的下界ceil(23/4)=6に対し+3）。
+  （gains {3:6, 2:2, 1:1}・当時の粗い下界ceil(23/4)=6に対し+3。後続監査でP'''の最大被覆3行から下界8へ強化）。
   **二部最大マッチング23**（全23行に互いに異なる被覆根・每行1根のwitness）。
   代替9根は未掃引で、depth-10掃引には両AND順序18 probesを要する。
   （3）内在被覆: 累計16 WIN8-D10候補根のC(8,6)=28部分集合のcanonical再導入は
@@ -92,7 +92,7 @@ evidence: >-
   使えず、2行providerは高々1根。候補は8 triple（重複1行）または7 triple+1 pair
   （重複なし）に限られる。2行patternは最大253種、3行providerは297根以下なので、
   被覆pattern変数は最大550。scope2もWIN16の残余23行intrinsic hitが0のため同じ。
-  詳細は下界強化監査の成果物を参照する。
+  詳細は[下界強化監査](../../experiments/n11-residual23-cover-lower-bound-strengthening-20261120/README.md)・[研究ログ](../../log/2026-11-20-n11-residual23-cover-lower-bound-strengthening.md)を参照する。
 
 ---
 
