@@ -55,6 +55,9 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/ALGEBRAIC_ROUTE.md
   role: source
   note: 放物面上のcap・反転平面3-arcへの再定式化
+- path: research/experiments/finite-field-kyouen-20261120/BOUND_RESEARCH_SUMMARY.md
+  role: source
+  note: 上界研究の総括
 - path: research/experiments/finite-field-kyouen-20261120/SIZE_WEIGHTED_FAILED.md
   role: source
   note: サイズを使った上界の失敗記録
@@ -630,8 +633,16 @@ q=3 で k≈6、q=5 で k=9、q=7 で k≈25 であり、真値（q=5,7 で K=6�
 サイズ効果は実験的に明確（単一族で K がサイズに単調減少）だが、**上界の証明には翻訳できない**。
 `λ₂` 上界の証明はブロックのサイズを一切使わず「本数」だけを使うため鋭い。
 
-初等的な数え上げはすべて係数 ≥1 を与え、観測された `K/q ≈ 0.68〜0.86` を下回れない。
+初等的な数え上げはすべて係数 ≥1 を与え、観測された `K/q ≈ 0.68〜1.00` を下回れない。
 係数1未満には代数幾何・設計論・加法的組合せ論など別の原理が必要と考えられる。
+
+**上界研究の到達点**：証明済みの上界は2つ。
+
+- `K ≤ q+3`（無条件、λ₂ 上界）
+- `K ≤ q+2`（`q ≡ 1 (mod 4)`、十字上界）
+
+真値は AG で q ≤ 11、反転平面で q ≤ 13 まで確定。
+7つの初等的な手法がすべて失敗し、係数1未満の上界には別の原理が必要であることが明確になった。
 
 **代数的再定式化**：各点を持ち上げて `v_p = (x, y, x²+y², 1) ∈ F_q⁴` とすると、
 四点の共円・共線は `det[v_p1,v_p2,v_p3,v_p4] = 0`、すなわち**4ベクトルの線形従属**と同値。
