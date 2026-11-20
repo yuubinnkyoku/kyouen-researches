@@ -27,7 +27,7 @@ artifacts:
   note: 定理PNEと強形の全称証明（補題INS/MIS・閉形式D_h=T/k_{h-1}・X_h=T/k_{h-1}）・監査数値（h*表・真約数掃引23,249）・生存者側との厳密な分離・限界記述
 - path: research/experiments/remo-uniform-period-characterization-20261120/verify_period_necessity.py
   role: verifier
-  note: V0-V6の7機械検査: 補題Qアンカー・verbatim==閉形式双子・十分性アンカー・最大真約数棄却r ≤ 48・全真約数掃引r ≤ 28・フェーズ級強形1,450トレース違反0・等Qブロック対比。自己完結・stdlibのみ・決定的・入力ファイルなし・監査を2回in-process生成してbyte一致・所要約3.3秒
+  note: V0〜V6の7機械検査（補題Qアンカー・verbatim==閉形式双子・十分性アンカー・最大真約数棄却r ≤ 48・全真約数掃引r ≤ 28・フェーズ級強形1,450トレース違反0・等Qブロック対比）・自己完結・stdlibのみ・決定的・入力ファイルなし・監査を2回in-process生成してbyte一致・所要約3.3秒
 - path: research/experiments/remo-uniform-period-characterization-20261120/output/audit.json
   role: data
   note: 監査JSON（14,284 bytes・SHA-256 77d9df88…・7/7 ok・最大真約数ごとのh*表とrごとの真約数掃引内訳を出版）
