@@ -49,6 +49,16 @@ artifacts:
   - path: research/experiments/n11-fold29-cert-extract-ext2-pristine-reexec-third-verification-20261120/output/battery2/harness-audit.json
     role: audit
     note: "battery 2巡目（隔離cwd/HOME・PYTHONHASHSEED=random）のharness監査（battery 1とbyte一致・出版正本ともbyte一致）"
+  - path: research/experiments/n11-fold29-cert-extract-ext2-pristine-reexec-third-verification-20261120/scripts/verify_part_gate_completeness.py
+    role: verifier
+    note: "5 partの43 gateがpin済みauditを完全再構成するかをfail-closed検査"
+  - path: research/experiments/n11-fold29-cert-extract-ext2-pristine-reexec-third-verification-20261120/tests/test_part_gate_completeness.py
+    role: verifier
+    note: "8種類の合成改変試験。欠落・余分・重複・値改変・battery差・JSON重複keyを拒否"
+  - path: research/log/2026-11-21-n11-k1172-part-gate-completeness-guard.md
+    role: log
+    note: "第三検証record組立器のpart gate完全性の不足と補助検証器による補強"
+
 ---
 
 # K1166（fold29証明書抽出外部第二検証）のpristine再実行第三検証
@@ -112,6 +122,12 @@ K1170（fold22/K1167第三検証）と同一手続き系列の、証明書抽出
   fetch-back 12/12 byte一致（README `77e96ec2…`・record `a6a3e048…`・log `7f70b6b6…`・
   battery監査2点 `cf6a26ab…`・published byte 5点は出版社SHA-256と同一）。
 - part2（本item＋研究log）・part3（knowledge README末尾bullet）は別commit。
+
+## 後続のpart gate完全性ガード（2026-11-21）
+
+既存の `assemble_third_record.py` は各partについて「空でない・存在するentryがすべてpass」を検査していたが、欠落・余分・重複をpin済みauditとの完全一致で検査していなかった。これを補う `verify_part_gate_completeness.py` を追加し、5 partのgate数（1/13/13/13/3）・prefix・重複なし・結合辞書とaudit `gates` の値単位一致・JSON重複key拒否・battery間byte一致をfail-closedで確認するようにした。8種類の合成回帰試験を追加し、`reproduce.sh` は今後のbattery再実行時に試験と補助検証器を呼び出す。
+
+**歴史的な第三検証record（20 gate・SHA-256 `a6a3e048…`）は変更していない。** 元のbattery part filesはGit管理されていないため、この補助検証を過去の2 batteryへ遡及適用したとは主張しない。合成43 gate fixtureで、正常分割PASS・欠落/余分/重複/値改変の拒否を確認したが、repoのunittest全件・実battery・全体CIはこの追補では未実行。詳細は [追補ログ](../log/2026-11-21-n11-k1172-part-gate-completeness-guard.md)。
 
 ## 解釈規約
 
