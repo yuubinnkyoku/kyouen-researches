@@ -588,6 +588,10 @@ jobs:
         run: |
           uv run --locked python research/experiments/vertical-fiber-two-token-z18-y5-boundary-20261120/verify_z18_y5.py
           git diff --exit-code -- research/experiments/vertical-fiber-two-token-z18-y5-boundary-20261120/output/audit.json
+      - name: Audit K1093 N11 residual72 replace16 independent second verification
+        run: |
+          uv run --locked python research/experiments/n11-residual72-replace16-independent-second-verification-20261120/verify_replace16_second_20261120.py
+          git diff --exit-code -- research/experiments/n11-residual72-replace16-independent-second-verification-20261120/output/audit.json
       - name: Audit K1087 two-token z=17 y>=6 uniform full-Grundy theorem
         run: |
           uv run --locked python research/experiments/vertical-fiber-two-token-z17-y-ge6-proof-20261120/verify_z17_y_ge6.py
