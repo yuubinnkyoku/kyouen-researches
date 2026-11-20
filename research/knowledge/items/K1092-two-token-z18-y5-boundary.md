@@ -1,10 +1,12 @@
 ---
-id: K1089
+id: K1092
 title: 2トークン残余ゲーム z=18・y=5境界切片の全Grundy分類
 kind: proposition
 status: proved
 topics: [grundy, residual-games]
-aliases: [two-token z18 y5 boundary slice full Grundy classification]
+aliases:
+  - two-token z18 y5 boundary slice full Grundy classification
+  - originally assigned K1089 before concurrent main integration renumbering
 relations:
 - type: depends_on
   target: K0832
@@ -71,3 +73,8 @@ x=5..12は全Rで一致し、x=13..24の最大初期区間は報告に示した�
 全称性はx外帰納と、1<=R<=x+23を覆う記号的A/B/C署名帯表による。
 有限監査946,283件は証明そのものではなく、再帰実装・子アンカー・帯表転写・mexの独立照合である。
 本項はz=18,y=5の切片に限り、z=18,y>=6一様族、全z一般化、標準二次元盤の固定幅・q点版安定化長には主張を拡張しない。
+
+
+## 採番の履歴
+
+本項は並走中に一度K1089として作成されたが、N11レーンのK1089が先にmainへ反映され、その後K1090も別のN11項目に使われたため、重複IDを避けて現行IDをK1092とした。証明report・検証器・監査JSONは元のbytesを保持し、検証器のSHA-256 pinも変更していない。
