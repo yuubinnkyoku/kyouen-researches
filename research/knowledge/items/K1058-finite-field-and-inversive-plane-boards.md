@@ -52,6 +52,15 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/scripts/ag2_fast_target.py
   role: solver
   note: AG(2,q)の対称性利用高速完全探索
+- path: research/experiments/finite-field-kyouen-20261120/Q11_EXACT.md
+  role: source
+  note: q=11のK=9（両盤）
+- path: research/experiments/finite-field-kyouen-20261120/Q13_RESULTS.md
+  role: source
+  note: q=13の反転平面K=10・AG K>=13
+- path: research/experiments/finite-field-kyouen-20261120/scripts/sym_exact.py
+  role: solver
+  note: 対称性破壊による一般完全探索
 - path: research/experiments/finite-field-kyouen-20261120/AG2_Q9_EXACT.md
   role: source
   note: K(AG(2,9))=9の厳密決定
@@ -365,6 +374,20 @@ q=7 の K=6 は固定サイズ完全探索で決定した（サイズ7が不存�
 q=9 では**両者とも K=9 で厳密に一致**する。AG(2,9) は AGL の2-推移性、
 反転平面は PGL(2,81) の3-推移性を使って対称性破壊し、サイズ10が不存在であることを
 完全探索で確認した（それぞれ 261,023 ノード・21,212 ノード）。
+
+q=11 でも**両者とも K=9 で一致**（AG は 5,524,351 ノード、反転平面は 226,681 ノードでサイズ10の不存在を確認）。
+**q=9 から q=11 へ増えても K は 9 のまま**で、成長が止まる。
+
+q=13 で**大きな乖離が現れる**：反転平面は K=10（厳密、サイズ11が不存在を217万ノードで確認）、
+AG(2,13) は K≥13（サイズ13まで実在、14以上は未判定）。
+
+| q | 3 | 4 | 5 | 7 | 8 | 9 | 11 | 13 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| AG(2,q) | 5 | 5 | 6 | 6 | **8** | 9 | 9 | **≥13** |
+| 反転平面 | 5 | 5 | 6 | 6 | **7** | 9 | 9 | **10** |
+
+AG の K は q=11→13 で 9→13以上へ跳ね上がるが、反転平面は 9→10 と緩やか。
+AG のブロック構造（円 q+1 点＋直線 q 点）が反転平面（円 q+1 点のみ）より緩いためと考えられる。
 
 同じ点数での比較では有限体盤の方がはるかに疎である：
 7×7 整数の K=14 に対し AG(2,7) は 6（半分以下）。
