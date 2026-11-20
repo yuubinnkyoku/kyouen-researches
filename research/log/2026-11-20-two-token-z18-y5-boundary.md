@@ -28,8 +28,8 @@ R<=28=z+2y => H(R;(x,5);18)=H(R;(x+5);18)
 
 verify_z18_y5.py は標準ライブラリのみ。順序保持・降順正準化の二直接再帰、K1083/K1080子アンカー、署名帯の被覆・子署名・mex、帰納閉包、集合版/述語版転写、低R縮約、鋭さwitness、tail、深域アフィン標本を実施。946,283検査・不一致0。二回の同一場所実行と別cwd別プロセス実行でaudit.jsonがbyte-identical。
 
-- verifier SHA-256: e5da5597e46c683295aafe0b12a8535ca9159fbe5f85cdb2e1d49912a69eda19
-- audit SHA-256: 66c0408895e7fbbd74f1c0645d0cd5acac4dc67295fc8cad3890909e5bdde440
+- verifier SHA-256: 2adda5706885290183f99db26d2fb5cc9114d8d30ec86ac403daac53c0f41143
+- audit SHA-256: 94a0c65b0d8f3c8c5f6c9e8aa68080b91258359a71bbaf2ab28315f07f382c4e
 
 有限監査は全称性の根拠ではない。全称性はx外帰納と記号的署名帯表による。
 
