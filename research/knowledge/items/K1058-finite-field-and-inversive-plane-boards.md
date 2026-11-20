@@ -52,6 +52,12 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/scripts/ag2_fast_target.py
   role: solver
   note: AG(2,q)の対称性利用高速完全探索
+- path: research/experiments/finite-field-kyouen-20261120/LAMBDA2_BOUND.md
+  role: proof
+  note: 一般上界K<=lambda_2+2=q+3の証明
+- path: research/experiments/finite-field-kyouen-20261120/scripts/lambda2_bound.py
+  role: verifier
+  note: lambda_2の一様性検証
 - path: research/experiments/finite-field-kyouen-20261120/TRIPLE_COVERAGE.md
   role: source
   note: 全三点ブロック性のq<=9での普遍性
@@ -409,6 +415,14 @@ q=5,9,13,17 で十字の個数が `q²` に一致し、2つの十字の交わり
 **上界の比較**：単純な組合せ上界はいずれも緩い。q=7 で triple 上界13・second moment 16・直線のみ21・4点部分集合47 に対し真値は6。
 second moment（`λ₂=q+1` は一様）は triple より弱い。直線制約だけでは q=5 で k=6 のキャップが存在するため何も排除できない。
 十字上界が最強（q≡1 mod 4）で、改良版 `q+2` は `K/q ≈ 1` という観測と整合する。
+
+**全 q で有効な一般上界（全三点ブロック性から）**：`K ≤ λ₂ + 2 = q + 3`。
+
+証明：`p,q ∈ S` を固定すると、`S\{p,q}` の各点 `r` について三点 `{p,q,r}` はブロック上にあり、
+そのブロックは `p,q` を通るので `λ₂` 個のペンシルのいずれかである。
+異なる `r` は異なるブロックを与える（同じなら4点を含み安全集合に矛盾）。
+よって `|S| − 2 ≤ λ₂`。AG(2,q) も反転平面も `λ₂ = q+1`（一様、機械確認）なので `K ≤ q+3`。
+これは `q ≡ 3 (mod 4)` で triple 上界 1.82q を大きく改善する（q=19 で 22 対 35）。
 
 **q ≡ 3 (mod 4) では十字がない**：ブロックは直線（サイズ q）と真円（サイズ q+1）のみ。
 初等的な上界は triple `C(k,3) ≤ q³+q` から `k ≈ 1.82q` が最良
