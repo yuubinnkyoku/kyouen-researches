@@ -55,6 +55,9 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/ALGEBRAIC_ROUTE.md
   role: source
   note: 放物面上のcap・反転平面3-arcへの再定式化
+- path: research/experiments/finite-field-kyouen-20261120/AG2_Q13_INDEPENDENT.md
+  role: verification
+  note: K(AG(2,13))=13の2実装による独立確認
 - path: research/experiments/finite-field-kyouen-20261120/AG2_Q16_SEARCH.md
   role: source
   note: AG(2,16)でK>=16
@@ -664,7 +667,7 @@ q=3 で k≈6、q=5 で k=9、q=7 で k≈25 であり、真値（q=5,7 で K=6�
 
 真値は AG で q ≤ 13、反転平面で q ≤ 13 まで確定。
 
-AG(2,13) は **K=13**（サイズ14が不存在を1,674万ノード・125秒で確認）。十字上界15との差は2。
+AG(2,13) は **K=13**。サイズ14の不存在を**2つの独立実装**で確認した`n`（基本枝刈り：5,908万ノード・1,563秒、強化枝刈り：1,674万ノード・125秒。結論一致）。十字上界15との差は2。
 C++ 実装（`scripts/agq2.cpp`）の枝刈り強化（候補可用性＋ペンシル実用可能性）により、
 q=11 のサイズ10不存在が19秒（284万ノード）で確認できる。
 
