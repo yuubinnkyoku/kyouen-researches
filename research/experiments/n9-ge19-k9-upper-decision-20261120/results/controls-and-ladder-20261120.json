@@ -1,0 +1,65 @@
+{
+  "schema": "n9-ge19-ka-part1-1",
+  "date": "2026-11-20",
+  "environment": "sandbox 1.0 CPU / ~1GiB RAM / Node 20; bash cap 300s per command (internal --maxseconds caps used)",
+  "declaration": "research/log/2026-11-20-n9-ge19-k9-upper-decision-single-owner-note.md (21f8610464d2711f768b5764d23b21a40295dee5)",
+  "verdict_status": "INDET - no claim on ge19 this run",
+  "strong_cnf_emissions": [
+    { "file": "n5_ge9_strong.cnf", "vars": 3391, "clauses": 10496, "fnv1a64": "c3285b8f0fd92df8" },
+    { "file": "n5_ge10_strong.cnf", "vars": 3423, "clauses": 10622, "fnv1a64": "38c7b8812150babc" },
+    { "file": "n7_ge14_strong.cnf", "vars": 22047, "clauses": 68232, "fnv1a64": "bd74017aef24e6a5" },
+    { "file": "n7_ge15_strong.cnf", "vars": 22117, "clauses": 68510, "fnv1a64": "0f3ee7fe14af06d4" },
+    { "file": "n8_ge15_strong.cnf", "vars": 47014, "clauses": 145328, "fnv1a64": "3b2f3650de9d0fd1" },
+    { "file": "n8_ge16_strong.cnf", "vars": 47112, "clauses": 145718, "fnv1a64": "f674302dae5c3fb7" },
+    { "file": "n9_ge18_strong.cnf", "vars": 89607, "clauses": 278036, "fnv1a64": "d7ffb2bca4a7664f" },
+    { "file": "n9_ge19_strong.cnf", "vars": 89733, "clauses": 278538, "fnv1a64": "83f9407a12eff3ea" }
+  ],
+  "common_meta": { "n9": { "F": 29152, "quads_emitted": 29152, "lines": 92, "circles": 6722, "quad_duplication": 0, "note": "distinct curves share <=3 points, so Sigma C(t,4) = F exactly" } },
+  "census_controls": {
+    "naive_quad_enumeration": { "F5": 826, "F7": 6364, "F8": 14564, "matches_published": true },
+    "generator_curve_catalog_n9": { "F": 29152, "lines": 92, "circles": 6722, "matches_published_catalog": true }
+  },
+  "eval_strong_controls": [
+    { "label": "W5-vs-ge9S", "witness": "naive-fresh [0,1,2,9,11,13,15,22,24]", "cnf": "n5_ge9_strong", "clauses_seen": 10496, "map_clauses": 10496, "violated": 0, "forbidden_quads_det4": 0, "verdict": "WITNESS-SAT" },
+    { "label": "W5-vs-ge10S", "cnf": "n5_ge10_strong", "clauses_seen": 10622, "map_clauses": 10622, "violated": 2, "violated_are_at_least_units_only": true, "unit_vars": [230, 3423], "forbidden_quads_det4": 0, "verdict": "VIOLATION" },
+    { "label": "W7-vs-ge14S", "witness": "naive-fresh [0,1,5,8,9,19,20,24,26,28,38,39,41,42]", "cnf": "n7_ge14_strong", "clauses_seen": 68232, "map_clauses": 68232, "violated": 0, "forbidden_quads_det4": 0, "verdict": "WITNESS-SAT" },
+    { "label": "W7-vs-ge15S", "cnf": "n7_ge15_strong", "clauses_seen": 68510, "map_clauses": 68510, "violated": 2, "violated_are_at_least_units_only": true, "unit_vars": [679, 22117], "verdict": "VIOLATION" },
+    { "label": "W8-vs-ge15S", "witness": "naive-fresh [0,1,2,9,15,19,23,29,32,42,44,53,56,60,61]", "cnf": "n8_ge15_strong", "clauses_seen": 145328, "map_clauses": 145328, "violated": 0, "forbidden_quads_det4": 0, "verdict": "WITNESS-SAT" },
+    { "label": "W9-vs-ge18S", "witness": "published [5,6,8,9,11,18,24,31,44,47,50,52,54,55,70,73,75,79]", "cnf": "n9_ge18_strong", "clauses_seen": 278036, "map_clauses": 278036, "violated": 0, "forbidden_quads_det4": 0, "verdict": "WITNESS-SAT" },
+    { "label": "W9-vs-ge19S", "cnf": "n9_ge19_strong", "clauses_seen": 278538, "map_clauses": 278538, "violated": 2, "violated_are_at_least_units_only": true, "unit_vars": [1449, 89733], "forbidden_quads_det4": 0, "verdict": "VIOLATION" },
+    { "label": "fastsat-model-n5ge9", "witness": "fastsat-fresh [2,4,5,7,11,12,21,23,24]", "cnf": "n5_ge9_strong", "clauses_seen": 10496, "violated": 0, "forbidden_quads_det4": 0, "verdict": "WITNESS-SAT", "note": "distinct from naive W5; decodes the SAT-model pipeline" }
+  ],
+  "ksearch_calibration": [
+    { "cmd": "ksearch --n=7 --target=15 --maxsec=240", "known": "UNSAT (K_7=14)", "result": "UNSAT", "nodes": 11880598, "ms": 17379, "boundChecks": 9096190, "boundPrunes": 1563258, "capped": false }
+  ],
+  "fastsat_calibration": [
+    { "cnf": "n5_ge10_strong", "opts": "--ncells=25 --cellboost=10 --maxseconds=60", "known": "UNSAT", "result": "UNSAT", "conflicts": 12583, "decisions": 22855, "props": 7954391, "sec": 2.6, "cross_system_agreement_n5": true },
+    { "cnf": "n5_ge9_strong", "opts": "--ncells=25 --cellboost=10 --maxseconds=120 --model", "known": "SAT", "result": "SAT", "conflicts": 178, "sec": 0.1, "model_verified": "eval_strong + det4 (9 stones)" },
+    { "cnf": "n7_ge15_strong", "opts": "--ncells=49 --cellboost=10 --maxseconds=280", "known": "UNSAT", "result": "TIMEOUT", "conflicts": 197359, "props": 461480596, "conflicts_per_sec": 705 },
+    { "cnf": "n7_ge15_strong", "opts": "--ncells=49 --cellphase=0 --maxseconds=90", "result": "TIMEOUT", "conflicts": 65003 },
+    { "cnf": "n7_ge15_strong", "opts": "--ncells=49 --cellboost=10 --seed=7 --maxseconds=90", "result": "TIMEOUT", "conflicts": 67859 },
+    { "cnf": "n7_ge15_strong", "opts": "--ncells=49 --cellboost=10 --base=64 --maxseconds=90", "result": "TIMEOUT", "conflicts": 73540 },
+    { "cnf": "n8_ge16_strong", "opts": "--ncells=64 --cellboost=10 --maxseconds=280", "known": "UNSAT", "result": "TIMEOUT", "conflicts": 82904, "props": 377888493 },
+    { "cnf": "n9_ge19_strong", "result": "NOT_LAUNCHED", "reason": "ladder gate: fastsat must first close a known-UNSAT at n7/n8 in this encoding" }
+  ],
+  "bugfix_summary": {
+    "bug1_zero_literal_in_mirror_clauses": {
+      "symptom": "13662 lines like '-84 82 0 0' (invalid DIMACS, would be misread by solvers as empty clauses -> fake UNSAT)",
+      "root_cause": "mirror clause s(i,j)->s(i-1,j) OR s(i-1,j-1) emitted literal 0 when the predecessor var is the constant FALSE (j==i)",
+      "caught_by": "structural DIMACS validation + eval_strong clause-count mismatch, before the first solver launch",
+      "fix": "emit clause(-gi, gim1) when gim==0"
+    },
+    "bug2_missing_diagonal_boundary_upper_mirrors": {
+      "symptom": "fastsat returned SAT with 0 conflicts on known-UNSAT n5_ge10 with only 8 cells set true; all clauses satisfied",
+      "root_cause": "upper mirrors s(i,1)->x_1 (i==1 boundary) and s(i,i)->x_i (diagonal) never emitted, so the at-least-K unit was satisfiable with all cells FALSE",
+      "caught_by": "known-UNSAT negative control (fastsat fake-SAT)",
+      "fix": "emit clause(-gi, xi) whenever gim==0 (fwd, rev with reverse cell var, S1 curve counters alike)",
+      "post_fix": "n5_ge10 UNSAT in 2.6s; all positive/negative semantic controls re-PASS"
+    },
+    "published_lane_audit": {
+      "target": "research/experiments/n9-k9-upper-sat-20261115/scripts/gen_n9_cnf.mjs",
+      "finding": "SOUND - its genCNF substitutes TRUE/FALSE constants correctly (c1 always includes x_i), incl. the boundary/diagonal upper mirrors whose absence caused bug2 here",
+      "action": "reference-only observation; no changes to that lane's files"
+    }
+  }
+}
