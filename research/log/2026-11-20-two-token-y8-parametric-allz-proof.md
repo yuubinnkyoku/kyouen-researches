@@ -1,4 +1,4 @@
-# 2026-11-20 2トークン残余ゲーム y=8族パラメトリック全称証明（K1133）
+# 2026-11-20 2トークン残余ゲーム y=8族パラメトリック全称証明（K1135・旧仮番号K1133から再採番）
 
 ## 経緯と選定
 
@@ -13,7 +13,9 @@
 - 並走レーン（n11 fold22/23・K1058 AG(2,16)・fold23 機械生成・K0863 系
   修正コミット）と y=8 族の経路不競合を list_commits と README・items で
   確認した（着手時点で README 最大は K1132・y=8 all-z 出版なし・宣言ノート
-  のみ・search_code の K1133 表記 0 件）。
+  のみ・search_code の K1133 表記 0 件だったが、これは検索インデックスの
+  stale で、実際には並走 n11 レーンが fold23 に K1133 を使用済みだった
+  〔push 後に判明・下記「K番号の再採番」参照〕）。
 - y=8 固定 z 切片は z=6,8,9,10 の境界切片（K0888・K0996・K0998・K1010 の
   y=8 行）と z=15,16,17 の y>=6 一様族（K1065/K1077/K1087）が出版済み。
   この主張はそれらをすべて含意し、z=18,y=8（未着手）を含む z>=18 の
@@ -84,11 +86,29 @@
   output/census.txt）。ローカル正本の SHA-256（verify = bcad4148...・
   census_rows = 2213070b...・audit.json = 06694603...・
   census.txt = a91cd438...）を出版後に GitHub 取り直し分と照合する。
-- item: research/knowledge/items/K1133-two-token-y8-parametric-allz-universal-proof.md
+- item: research/knowledge/items/K1135-two-token-y8-parametric-allz-universal-proof.md
   （kind: proposition, status: proved。relations: depends_on K0832/K1131、
   generalizes K0888/K0996/K0998/K1010/K1065/K1077/K1087（いずれも y=8 行の
-  特殊例化）。K番号は push 直前に再取得で確認（README 最大 K1132・
-  search_code K1133=0件・items 最大 K1132））。
+  特殊例化）。K番号は push 直前に再取得で確認したが search_code のインデックス
+  遅延で fold23 の K1133 を見逃した。push 後に ID 重複を検出し、AGENTS.md の
+  再採番規約（main の既存 K1133 〔fold23〕・K1134 〔6×m q=8 band〕は変更せず、
+  後発の本項を再採番）により K1133 から K1135 に再採番した）。
+
+## K番号の再採番（統合時対応）
+
+- コミット1（実験dir・item・log・audit、29fbe13e）の push 時点では、
+  並走 n11 レーンの fold23 item（research/knowledge/items/
+  K1133-n11-residual29-win8-receipt-fold-root208090020004.md・26168d3d で
+  先行出版済み）が main に存在していたが、push 直前確認に使った
+  search_code（K1133 query）が 0 件を返した（インデックス stale）。
+  コミット2（census.txt、5b7c0b48）後に README を再取得して重複
+  （K1133 が2 item・K1134 も n6q8 band が使用済み）を検出した。
+- 対応: AGENTS.md「統合時に main 上の番号と衝突する新規項目を再採番し、
+  その項目を参照する新規 relation や Markdown 参照も更新する。main に
+  既に存在する K番号は変更しない」に従い、本項を K1135 に再採番
+  （item id・log・README bullet・CI step 名を更新。report.md・
+  verify_y8_universal.py・census_rows.py・audit.json・census.txt は
+  そもそも K1133 表記を含まないため byte 不変）。
 - index: research/knowledge/README.md に bullet 追加、
   .github/workflows/knowledge.yml に CI audit step 2 件
   （verify_y8_universal.py・census_rows.py・git diff --exit-code）を
