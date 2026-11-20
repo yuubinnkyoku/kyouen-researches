@@ -1,0 +1,86 @@
+{
+  "checks": {
+    "C1": {
+      "bad": 0,
+      "desc": "raw both engines vs cand6 z=0..14 x=6..26 R<=x+z+46",
+      "points": 22050
+    },
+    "C11": {
+      "bad": 0,
+      "desc": "raw census anchor z=0..79 x=6..70 R<=x+z+12, both engines",
+      "points": 941200
+    },
+    "C12": {
+      "bad": 0,
+      "desc": "deep closed grid z=0..120 x=6..120 R<=x+z+16",
+      "points": 1934185
+    },
+    "C1b": {
+      "bad": 0,
+      "desc": "single_token/y=5-child/x=6 merger raw anchors",
+      "points": 47261
+    },
+    "C1d": {
+      "bad": 0,
+      "desc": "published z=15/16/17 y>=6 slices (y=6) vs cand6, x=6..159 R<=x+61",
+      "points": 66297
+    },
+    "C2": {
+      "bad": 0,
+      "desc": "closed identity grid z=0..48 x=6..56 R<=x+z+40 (+merge,tail)",
+      "points": 237405
+    },
+    "C2b": {
+      "bad": 0,
+      "desc": "deep tail identity rows z in {60..400}",
+      "points": 9194
+    },
+    "C3": {
+      "bad": 0,
+      "desc": "option decomposition vs raw child enumeration",
+      "points": 1365
+    },
+    "C4": {
+      "bad": 0,
+      "confluence_bad": 0,
+      "desc": "type machine box +/-60, clip 14/sentinel 15, confluence",
+      "identity_bad": 0,
+      "points": 644215,
+      "types": 39383
+    },
+    "C7": {
+      "bad": 0,
+      "desc": "seeded far probes 200k, seed 20261122, z,x<=3000",
+      "points": 200000
+    },
+    "C8": {
+      "bad": 0,
+      "desc": "boundary manifolds z<=3000, dx in [-15,8], tail window",
+      "points": 498387
+    },
+    "C9": {
+      "bad": 0,
+      "desc": "v-space shell sweeps [61,64],[89,92],[117,120]",
+      "points": 929910
+    }
+  },
+  "corollaries": {
+    "merge_below_diagonal": {
+      "bad": 0,
+      "claim": "x<=z-7 => H == single_token(x+6,z,R)",
+      "points": 1621917
+    },
+    "tail": {
+      "bad": 0,
+      "claim": "R>=x+z+7 => H == (x+6)%2",
+      "points": 360923
+    }
+  },
+  "experiment": "vertical-fiber-two-token-y6-parametric-allz-proof-20261120",
+  "family": "H(R;(x,6);z), z>=0, x>=6, R>=0",
+  "overall": "PASS",
+  "total_bad": 0,
+  "total_points": 5531469,
+  "type_count": 39383,
+  "verifier_sha256": "2d75a817b7c9ff09c87ffec397676c56a8ae59d423c4711aec4f04d37833e41a"
+}
