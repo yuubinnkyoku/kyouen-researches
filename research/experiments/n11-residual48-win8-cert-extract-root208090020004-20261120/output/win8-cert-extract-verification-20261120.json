@@ -1,0 +1,233 @@
+{
+ "all_gates_pass": true,
+ "experiment": "n11-residual48-win8-cert-extract-root208090020004-20261120",
+ "gate_count": 19,
+ "gates": [
+  {
+   "detail": {
+    "git_blob": "51bad3fac4c36fcd1cbf6aeec01b7e153d9adb89",
+    "sha256": "4d11ca896815b73e4e0616a07c81f7abc582d4f5401174462d63e3abd27a4472"
+   },
+   "gate": "g01_k1119_log_sha256_pin",
+   "passed": true
+  },
+  {
+   "detail": {
+    "published_total": 793616,
+    "root_hex_in_log": true,
+    "uncapped_loss_true_statement_in_log": true
+   },
+   "gate": "g02_k1119_log_root_probe_total_published",
+   "passed": true
+  },
+  {
+   "detail": "c132cc6425eee3feaeef1d697dd74f968cfedb59",
+   "gate": "g03_runner_v17_copy_git_blob",
+   "passed": true
+  },
+  {
+   "detail": {
+    "quadruple_free": true,
+    "stones": 8
+   },
+   "gate": "g04_root_shape_safe",
+   "passed": true
+  },
+  {
+   "detail": 54,
+   "gate": "g05_root_mobility_54",
+   "passed": true
+  },
+  {
+   "detail": {
+    "andclose0": 442824,
+    "andclose1": 350792,
+    "sum": 793616
+   },
+   "gate": "g06_fresh_probe_constants_match_k1119_total",
+   "passed": true
+  },
+  {
+   "detail": [
+    "00000000000000801202040000001000",
+    "00000000000000801202040000800000",
+    "00000000000020809002000080000000"
+   ],
+   "gate": "g07_k1097_root_claimed_coverage_3rows",
+   "passed": true
+  },
+  {
+   "detail": {
+    "pilot_d6": 4,
+    "reproduced": {
+     "andclose0": 2,
+     "andclose1": 2
+    }
+   },
+   "gate": "g08_probe_reproduction_matches_k1119_total",
+   "passed": true
+  },
+  {
+   "detail": {
+    "file": 54,
+    "rederived": 54
+   },
+   "gate": "g09_root_move_list_equals_rederivation",
+   "passed": true
+  },
+  {
+   "detail": {
+    "a1_moves": 54,
+    "a2_moves": 54
+   },
+   "gate": "g10_extraction_runs_a1_a2_clean",
+   "passed": true
+  },
+  {
+   "detail": {
+    "identical_moves": 54
+   },
+   "gate": "g11_a1_a2_per_move_node_exact_repeat",
+   "passed": true
+  },
+  {
+   "detail": {
+    "b_moves": 54
+   },
+   "gate": "g12_extraction_run_b_single_process_clean",
+   "passed": true
+  },
+  {
+   "detail": {
+    "a1_chunk_total_nodes": 3009765,
+    "b_single_process_nodes": 3009765
+   },
+   "gate": "g13_node_accounting_chunk_vs_single",
+   "passed": true
+  },
+  {
+   "detail": {
+    "bytes": 855258,
+    "rows": 23621,
+    "sha256": "b8145352cc1d8e21247595bdaedcb123c8e34cf0fb476502a561b46a106f701e"
+   },
+   "gate": "g14_certificate_format_sorted_unique",
+   "passed": true
+  },
+  {
+   "detail": {
+    "b_nRows": 23621,
+    "cert": 23621
+   },
+   "gate": "g15_run_b_rowcount_matches_certificate",
+   "passed": true
+  },
+  {
+   "detail": {
+    "extra": 0,
+    "failure": null,
+    "loser_reply_edges": 43650,
+    "loser_states": 9955,
+    "missing": 0,
+    "subroot_mobility": 54,
+    "terminal_count": 7516,
+    "terminal_range": [
+     14,
+     18
+    ],
+    "visited_states": 49094,
+    "winner_states": 31623
+   },
+   "gate": "g16_third_method_traversal_pass",
+   "passed": true
+  },
+  {
+   "detail": {
+    "bareiss_subroots": 54,
+    "bigint_terminal_count": 7516,
+    "third_method_terminal_count": 7516
+   },
+   "gate": "g17_three_method_aggregate_agreement",
+   "passed": true
+  },
+  {
+   "detail": "5 guard lines",
+   "gate": "g18_interpretation_guard_present",
+   "passed": true
+  },
+  {
+   "detail": {
+    "claimed": [
+     "00000000000000801202040000001000",
+     "00000000000000801202040000800000",
+     "00000000000020809002000080000000"
+    ],
+    "claimed_rows_open_in_residual": 3,
+    "fold18_sha256": "18b543c45c98c22297fd31b8060971aa90e92826f494acb27ad94ce869250026",
+    "k1097_sha256": "2896deb0c5e820904d0e2463e3fd9ebd1613b540a66a97f88d86c75bffa71f40",
+    "residual_rows": 45
+   },
+   "gate": "g19_k1097_footprint_and_fold18_residual_open",
+   "passed": true
+  }
+ ],
+ "guard": [
+  "this certificate proves only the game tree of the named 8-stone root",
+  "the 8-stone receipt cover/fold semantics for the S6 parent rows are a separate undertaking",
+  "loss=false (uncapped) is a REFUTED-D10 probe fact and NOT a LOSS proof of any earlier position",
+  "node counts and solved counts are not win/loss readings",
+  "the standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60} and classes 1/2/4 all remain UNKNOWN"
+ ],
+ "pinned_inputs": {
+  "certificate_sha256": "b8145352cc1d8e21247595bdaedcb123c8e34cf0fb476502a561b46a106f701e",
+  "fold18_json_sha256": "18b543c45c98c22297fd31b8060971aa90e92826f494acb27ad94ce869250026",
+  "k1097_json_sha256": "2896deb0c5e820904d0e2463e3fd9ebd1613b540a66a97f88d86c75bffa71f40",
+  "k1119_log_git_blob": "51bad3fac4c36fcd1cbf6aeec01b7e153d9adb89",
+  "k1119_log_sha256": "4d11ca896815b73e4e0616a07c81f7abc582d4f5401174462d63e3abd27a4472",
+  "runner_v17_git_blob": "c132cc6425eee3feaeef1d697dd74f968cfedb59"
+ },
+ "recorded": {
+  "certificate": {
+   "bytes": 855258,
+   "rows": 23621,
+   "sha256": "b8145352cc1d8e21247595bdaedcb123c8e34cf0fb476502a561b46a106f701e"
+  },
+  "extraction_nodes": {
+   "run_a1_chunked": 3009765,
+   "run_b_single_process": 3009765
+  },
+  "fold18_residual_open_check": {
+   "claimed_rows_present": [
+    true,
+    true,
+    true
+   ],
+   "residual_row_count": 45
+  },
+  "k1097_claimed_coverage_rows": [
+   "00000000000000801202040000001000",
+   "00000000000000801202040000800000",
+   "00000000000020809002000080000000"
+  ],
+  "k1097_footprint_rows": [
+   "00000000000000801202040000001000",
+   "00000000000000801202040000800000",
+   "00000000000020809002000080000000"
+  ],
+  "third_method": {
+   "loser_reply_edges": 43650,
+   "loser_states": 9955,
+   "root_first_moves": 54,
+   "terminal_count": 7516,
+   "terminal_range": [
+    14,
+    18
+   ],
+   "visited_states": 49094,
+   "winner_states": 31623
+  }
+ },
+ "root": "00000000000020809002000480100000",
+ "schema": "win8-cert-extract-verification-v1",
+ "verdict": "WIN8 root certificate triple-verified (extraction self-check + BigInt 3x3 cofactor + Bareiss 4x4 + python third-method); all gates PASS"
+}
