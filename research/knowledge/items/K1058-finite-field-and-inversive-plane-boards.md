@@ -55,6 +55,12 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/ALGEBRAIC_ROUTE.md
   role: source
   note: 放物面上のcap・反転平面3-arcへの再定式化
+- path: research/experiments/finite-field-kyouen-20261120/ARC_STRUCTURE.md
+  role: source
+  note: 最大3-arcの円プロファイル
+- path: research/experiments/finite-field-kyouen-20261120/PROFILE_NO_IMPROVEMENT.md
+  role: source
+  note: プロファイルが上界を改善しないことの証明
 - path: research/experiments/finite-field-kyouen-20261120/LITERATURE_AXIOMS.md
   role: source
   note: 反転平面の公理I.1-I.3の確認
@@ -500,6 +506,7 @@ q=3 で k≈6、q=5 で k=9、q=7 で k≈25 であり、真値（q=5,7 で K=6�
 2. 複数ペンシルは `λ₂+2` のまま
 3. 被覆は q=3 のみ有効
 4. 使用済み円のペア `C(k,2)C(k−2,2) ≤ 2C(C(k,3),2)` は常に成立し制約なし
+5. 円のプロファイル（3点円 = `C(k,3)`、2点円 = `C(k,2)(q−k+3)`）は `λ₂+2` を再現するのみで改善しない
 
 初等的な数え上げはすべて係数 ≥1 を与え、観測された `K/q ≈ 0.68〜0.86` を下回れない。
 係数1未満には代数幾何・設計論・加法的組合せ論など別の原理が必要と考えられる。
