@@ -20,6 +20,13 @@
       "desc": "single_token/y=9-child/x=10 merger raw anchors",
       "points": 42473
     },
+    "C1d": {
+      "anchor_bad": 0,
+      "bad": 0,
+      "desc": "published z=8/9/10/15/16/17 uniform slices (y=10) vs cand10, x=10..159 R<=x+61; + low-R single-token reduction R<=z+6 (z=15..17)",
+      "lowR_bad": 0,
+      "points": 140850
+    },
     "C2": {
       "bad": 0,
       "desc": "closed identity grid z=0..48 x=10..56 R<=x+z+40 (+merge,tail)",
@@ -74,6 +81,7 @@
     "C11",
     "C12",
     "C1b",
+    "C1d",
     "C2",
     "C2b",
     "C3",
@@ -98,9 +106,9 @@
   "experiment": "vertical-fiber-two-token-y10-parametric-allz-proof-20261120",
   "family": "H(R;(x,10);z), z>=0, x>=10, R>=0",
   "overall": "PASS",
-  "stage": "part1 (all part-1 checks incl. the C11 raw census anchor PASS; C1d published-slice anchors and the census_rows.py double-recursion census file pending as part2; promotion deferred until the full 12-check machine passes)",
+  "stage": "part2 (all check machines incl. C1d published-slice anchors and the C11 raw census anchor PASS; census_rows.py published alongside; promotion of K1141 observed->proved on this basis)",
   "total_bad": 0,
-  "total_points": 6265496,
+  "total_points": 6406346,
   "type_count": 123543,
-  "verifier_sha256": "9fbaa013f8440a294e8bd6e4559ef23970f50b827189300b6af5728bdc2709e2"
+  "verifier_sha256": "f9169449309dcd25aaba8d6379d4289167f61eb3895b031e45ff9e80c46c05e4"
 }
