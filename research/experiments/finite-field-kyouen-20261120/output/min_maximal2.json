@@ -1,0 +1,64 @@
+[
+  {
+    "q": 3,
+    "n": 10,
+    "s": 5,
+    "K": 5,
+    "fixed_length": true,
+    "histogram": {
+      "5": 72
+    },
+    "known_K": 5,
+    "K_matches": true,
+    "nodes": 428,
+    "capped": false,
+    "seconds": 0.0
+  },
+  {
+    "q": 4,
+    "n": 17,
+    "s": 5,
+    "K": 5,
+    "fixed_length": true,
+    "histogram": {
+      "5": 2040
+    },
+    "known_K": 5,
+    "K_matches": true,
+    "nodes": 4914,
+    "capped": false,
+    "seconds": 0.03
+  },
+  {
+    "q": 5,
+    "n": 26,
+    "s": 5,
+    "K": 6,
+    "fixed_length": false,
+    "histogram": {
+      "5": 10400,
+      "6": 5200
+    },
+    "known_K": 6,
+    "K_matches": true,
+    "nodes": 47152,
+    "capped": false,
+    "seconds": 0.38
+  },
+  {
+    "q": 7,
+    "n": 50,
+    "s": 5,
+    "K": 6,
+    "fixed_length": false,
+    "histogram": {
+      "5": 11760,
+      "6": 1254400
+    },
+    "known_K": 6,
+    "K_matches": true,
+    "nodes": 2551236,
+    "capped": false,
+    "seconds": 48.46
+  }
+]
