@@ -55,6 +55,12 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/ALGEBRAIC_ROUTE.md
   role: source
   note: 放物面上のcap・反転平面3-arcへの再定式化
+- path: research/experiments/finite-field-kyouen-20261120/TRIVIALITY_THEOREM.md
+  role: proof
+  note: 極大集合の一様性とGrundy値の定理
+- path: research/experiments/finite-field-kyouen-20261120/scripts/triviality.py
+  role: verifier
+  note: 定理の全数検証
 - path: research/experiments/finite-field-kyouen-20261120/CROSS_PRUNE_ORDER.md
   role: source
   note: 十字枝刈りが探索順序を変えることの分析
@@ -798,7 +804,38 @@ q≡3 (mod 4) の q=7,11,19 は 6,9,≥13 と伸びが遅い。
 同じ点数での比較では有限体盤の方がはるかに疎である：
 7×7 整数の K=14 に対し AG(2,7) は 6（半分以下）。
 
-### 6. 初手値の分布（3型）
+### 6. 定理：極大集合が一様なら Grundy 値は (T−|S|) mod 2
+
+**定理（証明済み）**：盤のすべての極大安全集合が同じサイズ `T` を持つとき、
+任意の安全局面 `S` について
+
+```
+g(S) = (T − |S|) mod 2
+```
+
+**証明**：`S` からの任意の完全プレイはサイズ `T` の極大集合に到達するので、
+プレイ長は常に `T−|S|`。ゲーム木は一様深さの木であり、深さ `d` について帰納すると
+mex が `d mod 2` になる。□
+
+**系**：一様な盤ではすべての Grundy 値が 0 か 1。非一様な盤では非自明な値が現れうる。
+
+**全数検証**：
+
+| 盤 | 極大集合のサイズ | 一様 | 最大 Grundy |
+|---|---|---|---|
+| 反転平面 q=3 | {5} | ✓ | **1** |
+| 反転平面 q=4 | {5} | ✓ | **1** |
+| AG(2,3) | {5} | ✓ | **1** |
+| 3×3 整数 | {5} | ✓ | **1** |
+| 反転平面 q=5 | {5,6} | ✗ | 2 |
+| AG(2,5) | {3,5,6} | ✗ | 2 |
+| 4×4 整数 | {5,6,7} | ✗ | 5 |
+| 5×5 整数 | {5..9} | ✗ | 6 |
+
+一様な4盤すべてで定理が成立（全局面照合、不一致0）。
+**非自明な Grundy 値（2以上）の出現は極大集合の非一様性を必要とする。**
+
+### 7. 初手値の分布（3型）
 
 完全計算できた盤では、初手の値の分布は3型に限られた。
 
