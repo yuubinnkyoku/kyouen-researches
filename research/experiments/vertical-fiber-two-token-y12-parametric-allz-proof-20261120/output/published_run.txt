@@ -1,0 +1,107 @@
+published_run.txt — vertical-fiber-two-token-y12-parametric-allz-proof-20261120
+実行記録（2026-11-20・長期レーン・単一オーナー宣言 d345c645 に基づく part1）
+環境: Python 3.12.14 (stdlib only) / cgroup memory.max 1,090,519,040 bytes / 2 cores / x86_64
+
+================================================================
+機械構成（assemble・転写照合）
+================================================================
+sources:
+  verify_y11_universal.py  SHA-256 c57baf5c5270c47ef9f29cc390a2d2eb6b18de438f576aa8f5e94264e3fd8c6b
+  cand12.py                SHA-256 79e588b3d44bada83355676d9da1db559c57167574ed58ce118ef3c897149131
+transcription verification (line-level):
+  engines+single_token+mex                    : 77 lines verbatim ... OK
+  cand11 block (Y -> Y11 rename only)         : 102 lines ... OK (renamed-only diffs = 0)
+  cand12 block (fit driver+docstring removed): 92 lines verbatim ... OK
+  block-local q_odd/single_token_val/_bk duplicates colocated per block (y10/y11 convention)
+verify_y12_universal.py: 36,170 bytes, 931 lines
+  SHA-256 f73614f7eb4fe8b0afd0c810d4a72450ee4c65a657ec068c51750d5bc0f5938f
+  ast.parse OK
+
+================================================================
+run 1 — 12 checks minus C11 (default mode)
+================================================================
+$ python3 verify_y12_universal.py
+  C1: pts=21660 bad=0      C1b: pts=41666 bad=0    C2: pts=224273 bad=0
+  C2b: pts=18964 bad=0     C3: pts=1125 bad=0      C4: pts=616484 bad=0
+  C4t: pts=616484 (violations_at_clip25=3540, first (60,88,88); not in bad total)
+  C7: pts=200000 bad=0     C8: pts=890765 bad=0    C9: pts=915654 bad=0
+  C12: pts=1872838 bad=0
+  overall: PASS total_points: 5419913 types: 191789
+  merge: points=1094223 bad=0    tail: points=223070 bad=0
+wall ~33.2s
+
+================================================================
+census parts (bounded-memoization twins, LRU cap 1,600,000 per engine)
+================================================================
+前身試行との対比（設計根拠・実験事実として記録）:
+  - unbounded verbatim engine, single process, z-band 20: OOM kill exit 137, maxrss 996,376KB
+  - per-row cache-clear variant: exceeded the 300s single-command wall-time budget of this host
+bounded twin (published code object rebound into a shallow copy of module globals with the
+recursive name resolving to the LRU-capped wrapper; deterministic under fixed visit order):
+
+$ python3 verify_y12_universal.py C11ordered
+census[ordered]: points=446040 bad=0 merge={'points': 161700, 'bad': 0} tail={'points': 4720, 'bad': 0}
+  wall 14.1s (rerun 13.3s), maxrss 562,908-563,044KB
+$ python3 verify_y12_universal.py C11canonical
+census[canonical]: points=446040 bad=0 merge={'points': 161700, 'bad': 0} tail={'points': 4720, 'bad': 0}
+  wall 15.2s, maxrss 563,148KB
+
+expected counts recomputed from census geometry (z=0..79, x=12..70, R=0..x+z+13):
+  points 446,040 / merge 161,700 / tail 4,720 per engine — match the runner outputs exactly.
+
+================================================================
+full audit — all 12 checks incl. C11 merge
+================================================================
+$ python3 verify_y12_universal.py C1 C1b C2 C2b C3 C4 C4t C7 C8 C9 C12 C11
+  C1 21660/0  C1b 41666/0  C2 224273/0  C2b 18964/0  C3 1125/0
+  C4 616484/0 (types at check time 181374)  C4t clip25 violations 3540 (excluded from bad)
+  C7 200000/0  C8 890765/0  C9 915654/0  C11 892080/0  C12 1872838/0
+  overall: PASS total_points: 6311993 types: 191789 total_bad: 0
+  merge corollary: points=1417623 bad=0 / tail corollary: points=232510 bad=0
+wall ~31.9s
+output/audit.json 3,141 bytes  SHA-256 7dcc4505b270596b7cef7e395761b1741f54edb74b4732efb1d64b1ac78249db
+  (audit 'verifier_sha256' field == f73614f7...5938f == actual file SHA-256, machine-checked)
+
+================================================================
+determinism — 3 runs byte-identical
+================================================================
+run1: same cwd (commands above)
+run2: same cwd, full re-execution of C11ordered + C11canonical + 12-check merge
+run3: isolated tree copy + isolated cwd + isolated HOME + PYTHONHASHSEED=random
+  $ python3 verify_y12_universal.py C11ordered      -> census-ordered.json
+  $ python3 verify_y12_universal.py C11canonical    -> census-canonical.json
+  $ python3 verify_y12_universal.py C1 C1b C2 C2b C3 C4 C4t C7 C8 C9 C12 C11
+results:
+  audit.json           run2 == run1, run3 == run1   (byte-identical, cmp)
+  census-ordered.json  run2 == run1, run3 == run1   (byte-identical, cmp)
+  census-canonical.json run2 == run1, run3 == run1  (byte-identical, cmp)
+  SHA-256: audit 7dcc4505...449db / census-ordered 195670f0...73008
+           census-canonical af4111f8...af4e4
+
+================================================================
+fail-closed tests on the census merge path (pre-publication)
+================================================================
+tamper 1: census-ordered.json 'points' 446040 -> 446039
+  $ python3 verify_y12_universal.py C11
+  FAIL-CLOSED: census points 446039 != 446040     (exit nonzero, no PASS output)
+tamper 2: corollaries.merge.points -> 1
+  FAIL-CLOSED: census merge corollary mismatch     (exit nonzero, no PASS output)
+tamper 3: census-canonical.json temporarily removed
+  FAIL-CLOSED: census part file for engine 'canonical' is missing (census-canonical.json); run mode C11canonical first
+restore: original part files restored; C11-mode rerun PASS; full 12-check merge rerun
+  regenerated audit.json byte-identical to run1 (cmp).
+
+================================================================
+notes
+================================================================
+- run modes: default (all except C11) / C11ordered / C11canonical / C11 (merge from
+  both part files, validating engine name, box, cache cap, expected counts, bad==0)
+  / explicit check list.
+- no clock, no randomness except the fixed seed 20261132 in C7, sorted audit keys,
+  so audit bytes are reproducible; census runner output is deterministic under the
+  fixed visit order and the LRU cap.
+- K1152 status: observed (unchanged). Promotion to proved is deferred to part2
+  (C1d published-slice anchors specialized at y=12 + census_rows.py third implementation),
+  mirroring the y=11 procedure (K1143).
+- interpretation: standard 11x11 empty board, two-stone roots {49,60}/{59,60},
+  S2 {59,60}, classes 1/2/4 all remain UNKNOWN. This machine makes no claim about them.
