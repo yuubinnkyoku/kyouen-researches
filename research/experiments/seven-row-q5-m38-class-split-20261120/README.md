@@ -63,3 +63,13 @@
    (cross-reset 決定性の追加確認)。
 4. **run-2 を relaunch** (cap 10800s・同条件)。並行して (7,6) m=32 c3_7x32 の
    run-4 も seven-row-q6-m32-class-split-20261118 で relaunch。
+
+## 経過 (run-2 中断 — 実行環境障害・セッション打ち切り)
+
+- run-2 (19:47:30Z relaunch・cap 10800s): **3,233,867 conflicts @ 1681.9s (20:44Z poll)**
+  まで観測 — run-1 の最終観測 2,289,281 を超えて**新規 depth に到達**した後に
+  **~20:47Z の実行環境障害で中断** (判定なし・record なし)。
+- 本 instance (7,38,5) class {0} の既知深度は **≥3,233,867 conflicts に更新**
+  (INDET・cap 内未決・下界のみ・不在主張ではない)。
+- 障害後に実行環境が持続的に利用不可となり本セッションは打ち切り。
+  resume は Q=5 KEY=c0_7x38 CAP=10800 で本 dir の Q 対応 run_one.sh から。
