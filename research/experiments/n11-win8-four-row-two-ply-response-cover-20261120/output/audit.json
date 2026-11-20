@@ -1,0 +1,76 @@
+{
+  "all_gates_pass": true,
+  "candidate_universe": {
+    "available_safe8_d4_root_orbits": 9489,
+    "coverage_obligations_histogram": {"2": 9237, "4": 251, "8": 1},
+    "cross_row_membership_excess": 254,
+    "known_refuted_orbits_excluded": 1,
+    "nonfixed_positive_obligation_degree_histogram": {"1": 136, "2": 9351},
+    "row_memberships": 9743,
+    "safe8_d4_root_orbits_before_known_refuted_exclusion": 9490
+  },
+  "date": "2026-11-20",
+  "fixed_roots": [
+    {"coverage": [{"first_moves": [8,13], "row_hex": "00000000000000003800000008001080"}, {"first_moves": [7,13], "row_hex": "00000000000000003800000008001100"}, {"first_moves": [8,12], "row_hex": "00000000000000003800000008002080"}, {"first_moves": [7,12], "row_hex": "00000000000000003800000008002100"}], "obligations": 8, "root_hex": "00000000000000003800000008003180"},
+    {"coverage": [{"first_moves": [9,109], "row_hex": "00000000000000003800000008001080"}], "obligations": 2, "root_hex": "0000000800000000380000000810000a"}
+  ],
+  "gates": [
+    {"gate": "fixed_roots_are_safe_8_stone_with_8_d4_images", "passed": true},
+    {"gate": "four_parent_rows_are_safe_6_stone", "passed": true},
+    {"gate": "independent_exact_legal_move_methods_agree", "passed": true},
+    {"gate": "known_win8_candidate_intersection_is_exactly_two", "passed": true},
+    {"gate": "known_refuted_intersection_rebuilt_exactly", "passed": true},
+    {"gate": "available_safe8_candidate_universe_has_9489_orbits", "passed": true},
+    {"gate": "candidate_coverage_histogram_matches_9237_251_1", "passed": true},
+    {"gate": "all_nonfixed_candidates_cover_at_most_two_positive_obligations", "passed": true},
+    {"gate": "fixed_roots_cover_ten_distinct_obligations", "passed": true},
+    {"gate": "selected_147_roots_form_perfect_matching", "passed": true},
+    {"gate": "dual_lower_bound_equals_matching_size", "passed": true},
+    {"gate": "no_s6_row_closed_or_game_value_claimed", "passed": true}
+  ],
+  "interpretation_guard": [
+    "The K1096 root is a triple-verified certificate; the K1095 root is only a WIN8-D10 candidate and still needs extraction plus independent verification.",
+    "The 147 additional roots are safe 8-stone candidates, not WIN8 verdicts or certificates.",
+    "The 149-root total is an optimal geometric response-cover plan for these four S6 rows, conditional on proving all selected roots P for the player to move.",
+    "No S6 row is closed by this audit. Receipt folding is not performed.",
+    "This result does not determine the standard 11x11 empty board, the two-stone roots, S2, or classes 1/2/4."
+  ],
+  "known_refuted_root_orbits_intersecting_four_row_universe": ["00000008000000003800000008100006"],
+  "known_refuted_roots_total_from_k1097": 50,
+  "known_win8_candidates_in_four_row_universe": 2,
+  "known_win8_candidates_total_from_k1097": 16,
+  "obligations": {
+    "covered_by_known_win8_roots": 10,
+    "positive_obligations_covered_exactly_once": 294,
+    "remaining_positive_obligations": 294,
+    "selected_additional_root_row_incidence": {"0": 78, "1": 80, "2": 70, "3": 72},
+    "selected_additional_roots": 147,
+    "total_known_plus_selected_roots": 149,
+    "total_legal_first_moves": 304
+  },
+  "optimality_certificate": {
+    "dual_objective": 147.0,
+    "dual_weights": "1/2 on each of the 294 positive obligations; 0 on the 10 obligations covered by the two known WIN8 roots",
+    "lower_bound_additional_roots": 147,
+    "matching_upper_bound_additional_roots": 147,
+    "maximum_positive_obligations_covered_by_any_other_candidate": 2,
+    "optimality_proved": true
+  },
+  "per_row": [
+    {"available_safe8_candidate_orbits": 2616, "fixed_root_coverage": [8,9,13,109], "legal_moves": 79, "positive_obligation_degree_max": 77, "positive_obligation_degree_min": 52, "row_hex": "00000000000000003800000008001080"},
+    {"available_safe8_candidate_orbits": 2789, "fixed_root_coverage": [7,13], "legal_moves": 82, "positive_obligation_degree_max": 80, "positive_obligation_degree_min": 49, "row_hex": "00000000000000003800000008001100"},
+    {"available_safe8_candidate_orbits": 2008, "fixed_root_coverage": [8,12], "legal_moves": 69, "positive_obligation_degree_max": 66, "positive_obligation_degree_min": 45, "row_hex": "00000000000000003800000008002080"},
+    {"available_safe8_candidate_orbits": 2330, "fixed_root_coverage": [7,12], "legal_moves": 74, "positive_obligation_degree_max": 71, "positive_obligation_degree_min": 49, "row_hex": "00000000000000003800000008002100"}
+  ],
+  "plan_sha256": "633c11719d8eef91062b56dc5eab772807b98a8e586905eaeec153a673bee7c0",
+  "schema": "n11-win8-four-row-two-ply-response-cover-audit-20261120-v2",
+  "source_pins": {
+    "k1086_sweep_sha256": "3045e15295af9b85b86578b5e8d55a8b325466eac576ee15b8450f6acb9b9ced",
+    "k1095_sweep_sha256": "335eca5ecb7c72e6fb0ee41eb740de736bf4eb78791823ae55f6375a68cb4707",
+    "k1096_audit_sha256": "ad0d9fb3a30edbd76fcb5562ab01f1e7e51781381377a04fa4a195378eb887da",
+    "k1096_certificate_git_blob_sha1": "afc0a1bc005215696e18e02baaaad3c3bf9ba599",
+    "k1096_certificate_sha256": "1393128972a2ee2bd7586239c830caac967ee45166be8ed87107907c42f23e2c",
+    "k1097_refsolve_git_blob_sha1": "4660c012333b04896c36a23a0837fbdbc2572ef9"
+  },
+  "status": "geometric-plan-verified-no-row-closure"
+}
