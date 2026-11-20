@@ -151,3 +151,20 @@ notes/strong-encoding-bugfix-tracking-20261120.md  符号化バグの特定→�
 - **判定 n9-ge19 は依然 INDET**: fastsat 系の較正ゲート (再開手順 3) は未達のまま。
   K_9 に関する主張は一切ない。再開手順は変わらず 3 (fastsat) と、n9-19 の chunk
   landscape 調査 (part3 統計からの規模見積り) が次段。
+- **part4 (本コミット)**: n9-19 chunk **landscape survey** (L1 全 63 chunk 完走 + L2 probe
+  16 本 + 追加完走 3 本)。42 chunk が uncapped UNSAT で完了 (計 62,010,510 nodes・重い側の
+  代表 [24] 10.0M・[25] 10.33M (59.2s)・[26] 9.55M・[21] 7.0M)、21 chunk ([0]..[20]) が
+  12s cap で capped (内部 partial 計 88,866,816 nodes)。L2 は [0,20] 10.28M 完了・
+  [20,21] 0.68M 完了・[0,40] 0.03M 完了・[15,16] は 60s cap でも 8.9M 到達で未完 (重い例)。
+  audit snapshot: settled_leaves=45 / capped_internal=34 / open_leaves=1783 /
+  sat_records=0 / bad=[] / nodes_total=73,003,436 (**complete=false — open leaves が残る
+  限りいかなる判定でもない**)。state 正本を `results/n9t19-partition-records.jsonl`
+  (79 records・15120 B・SHA-256 `221fc6da…`) として出版し、再開規約 (marathon resume
+  protocol: published state を取得 → `chunker.js --mode=run` で続きから走査 → capped
+  verdict は採用しない → audit complete=true まで INDET) を research log part4
+  (`2026-11-20-n9-ge19-part4-n19-chunk-landscape-survey.md`) に確定。規模の工学的外挿
+  (数学的主張ではない・capped 部分データ由来): 総 nodes オーダー 4e9..40e9 → 純 CPU
+  4..40 時間、複数セッション marathon として現実的な範囲。既出版 state (n7t15・n8t16)
+  への audit 再実行・n7_ge15_strong CNF の FNV 再生成による正本性 fresh 再現つき。
+  **判定 n9-ge19 は INDET のまま (K_9 への主張は一切なし)。fastsat 系較正ゲートは
+  n7_ge15_strong の長時間実行を試行中 (バックグラウンド・結果は採否確認後に次回以降)。**
