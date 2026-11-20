@@ -14,7 +14,7 @@ relations:
     note: 残余72行 代替9根掃引再実行第二検証（出版 commit 7ab77aa1・検証機 77cdd9e3・監査正本 27fc420c）の出版byte一式の、出版後の別実行者によるpristine再実行第三検証。同系譜第三検証（K1153・K1155・K1157）が出版記録機の再実行だったのに対し、本検証は出版されたDFPN probe事実そのもの（9根×両AND順序×2パス=36 probe実行）を最初から再計算した
 artifacts:
 - path: research/experiments/n11-residual72-replace9-sweep-reexec-third-verification-20261120/README.md
-  role: document
+  role: source
   note: 実験README（pin表13点・harness仕様・pass A/pass B・pristine再assemble・assemble・tamper・再現コマンド・解釈規約・実験dir自体がstaging root）
 - path: research/experiments/n11-residual72-replace9-sweep-reexec-third-verification-20261120/scripts/verify_k1149_reexec_third_20261120.py
   role: verifier
