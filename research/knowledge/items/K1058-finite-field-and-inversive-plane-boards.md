@@ -52,6 +52,9 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/scripts/ag2_fast_target.py
   role: solver
   note: AG(2,q)の対称性利用高速完全探索
+- path: research/experiments/finite-field-kyouen-20261120/DEGENERATION_QUANT.md
+  role: source
+  note: 退化とKの定量的関係（K/q≈1）
 - path: research/experiments/finite-field-kyouen-20261120/DEGENERATION_K.md
   role: source
   note: 円の退化がKを大きくする証拠（q=17対19）
@@ -417,6 +420,12 @@ q=16（標数2）でも AG は K≥12 で、増加傾向が続く。
 
 点数は q=19 の方が多い（361 対 289）のに、K の下界は q=17 の方が大きい（17 対 13）。
 q≡1 (mod 4) では円がサイズ q−1 に退化して制約が弱まるためと考えられる。
+
+**定量的なパターン**：`q ≡ 1 (mod 4)` では `K/q ≈ 1.00` で一定（q=9,13,17 で 1.00、q=5 で 1.20）。
+これは平均ブロックサイズがちょうど `q` になることと対応する（退化円 `q−1` と十字 `2q−1` が釣り合う）。
+一方 `q ≡ 3 (mod 4)` では平均サイズが `q` より大きく（真円 `q+1` が支配的）、
+`K/q` は 1.67→0.86→0.82→0.68 と減少する。
+
 q≡1 (mod 4) の q=5,9,13,17 は K が 6,9,≥13,≥17 と伸び、
 q≡3 (mod 4) の q=7,11,19 は 6,9,≥13 と伸びが遅い。
 
