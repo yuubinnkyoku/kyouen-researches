@@ -56,7 +56,7 @@ artifacts:
   role: source
   note: 放物面上のcap・反転平面3-arcへの再定式化
 - path: research/experiments/finite-field-kyouen-20261120/AG2_Q13_INDEPENDENT.md
-  role: verification
+  role: source
   note: K(AG(2,13))=13の2実装による独立確認
 - path: research/experiments/finite-field-kyouen-20261120/AG2_Q16_SEARCH.md
   role: source
