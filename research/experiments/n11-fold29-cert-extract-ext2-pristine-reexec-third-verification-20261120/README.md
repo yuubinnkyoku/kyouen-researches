@@ -49,6 +49,8 @@ battery全体を2巡実行した。
 ## 同梱物
 
 - `scripts/assemble_third_record.py`: byte決定的record組立機（gate 20・fail-closed）
+- `scripts/verify_part_gate_completeness.py`: 5 partの43 gateがpin済みauditを完全再構成するかを検査する補助器
+- `tests/test_part_gate_completeness.py`: 8種類の合成改変試験（欠落・余分・重複・値改変・battery差・JSON重複key・audit順序）
 - `scripts/reproduce.sh`: 詳細な再現手順（byte 5点取得・master再構成・両battery・record）
 - `output/third-verification.json`: 第三検証record正本（`a6a3e048…`・gate 20・PASS）
 - `output/reproduction.log`: 両batteryの実行記録・受入条件対照・負の制御
