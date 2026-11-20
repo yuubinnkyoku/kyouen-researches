@@ -85,3 +85,18 @@ WIN8-D10証明書抽出の外部再実行第二検証を第三環境で再現す
 WIN8-D10証明書は当該8石rootのゲーム木に限られ、REFUTED-D10はLOSS証明ではない。
 nodes数・solved数を勝敗として読まない。
 **標準11×11空盤・二石root {49,60}/{59,60}・S2 {59,60}・class 1/2/4はすべてUNKNOWNのまま。**
+
+## 出版後記録（part3訂正・fetch-back実測）
+
+part3（2026-11-20T23:2xZ）でREADME末尾bullet追記push（commit `6b9f59fe`）の際、
+README本文取得に使ったget_file_contents返却配列の先頭要素（ファイルdownloadの
+tool status text「successfully downloaded text file (SHA: …)」・81 bytes）が
+resource.textとともに結合され、**README先頭に81 bytesのstatus文字列が混入した**。
+fetch-back byte検証（pinned SHAのraw URLでcmp）が即捕捉し、
+訂正commit `cde12fbe`（README == `2afc55dd` base + K1172 bullet のbyte-exact再構成・
+chunk連結はseparatorなし・全10 chunkでchars 379,972を突合）で復旧、
+fetch-back再検証でbyte一致を確定した。混入はpublish機器の表示用status由来で
+README本文には無関係であり、bullet本文・他ファイルへの影響なし
+（影響期間中のcommitは`6b9f59fe`のみ・part1/part2 byte・実験成果には不変）。
+
+**教訓（運用知見）**: get_file_contentsの返却は `[{'type':'text','text':'successfully downloaded text file (SHA: …)'}, {'type':'resource','resource':{'text':…}}]` の複数要素配列で、結合時には各要素の `resource?.text` **のみ**を拾い、`p.text ?? p.resource?.text` のような幅広フォールバックを書いてはならない（status要素が先頭に混入する）。K1166第二検証レーンの「push_filesのcontentはfile readから直接」知見はそのままで、取得側の要素選別が本事故の要因。
