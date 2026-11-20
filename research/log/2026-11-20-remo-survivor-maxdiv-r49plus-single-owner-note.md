@@ -29,3 +29,10 @@ fail-closed）を実行する実験 research/experiments/remo-survivor-maxdiv-r4
 
 （訂正履歴: 初版 97b741b8 に誤植2件（b項の乱れ・「rem o」）あり、
 本コミットで訂正。宣言時刻・対象は初版と同一。）
+（採番繰下げ 2026-11-20T17:50Z訂正: 宣言ノートで想定していた
+K1162 は、宣言後の 17:31Z に並走 y12 universal レーンが出版した
+ため（commits 60622f35/258cd7b0/1093e075）、AGENTS.md の再採番
+規則（main 既存の番号は変更しない・重複新規項目を再採番し参照を
+更新）に従い、本実験は K1163 として出版した（item・README bullet・
+研究log・検証器のitem埋め込み欄・監査とも K1163 で確定済み・
+commit e78cbd8d）。宣言の対象・スコープ・宣言時刻は不変。）
