@@ -55,6 +55,12 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/ALGEBRAIC_ROUTE.md
   role: source
   note: 放物面上のcap・反転平面3-arcへの再定式化
+- path: research/experiments/finite-field-kyouen-20261120/COLLINEAR_TRIPLES.md
+  role: source
+  note: 真円も退化円も共線三点を含まないことの確認
+- path: research/experiments/finite-field-kyouen-20261120/BLOCK_STRUCTURE.md
+  role: source
+  note: サイズq-1ブロックの構造観察
 - path: research/experiments/finite-field-kyouen-20261120/GENUINE_CIRCLE_PATTERN.md
   role: source
   note: 真円の有無がK/qを決めることの検証
@@ -570,6 +576,13 @@ K/q が高い q では大きなブロックが存在するが、それは**交�
 真円が存在するのは `q ≡ 3 (mod 4)` のとき（`x²+y²` が非等方）のみ。
 したがって **`q ≡ 3 (mod 4)` かつ `q ≥ 7` なら K/q < 1、それ以外なら K/q ≥ 1**。
 q=3 は盤が小さい（9点）ため例外（K/q=1.67）。
+
+**真円が強い理由**：真円（サイズ q+1）と退化円（サイズ q−1）は
+**どちらも共線三点を含まない**（機械確認：q=7 の真円 0/56、q=5 の退化円 0/4）。
+したがって違いは共線三点の有無ではなく**ブロックサイズ**である。
+真円は q+1 点と大きいので、「1ブロックあたり3点まで」の制約をより多くの点の組に課し、
+K を強く抑える。
+アブレーション結果（q=7 で真円を除くと +9以上、q=5 で退化円を除いても +1）と整合する。
 
 q=5 ではサイズ7,8 が、q=7 ではサイズ8,9,10 が、q=9 ではサイズ10,11,12 がいずれも不存在であることを
 完全探索で確認した（ノード数は q=5:881、q=7:22,341、q=9:378,101 と急増するが完全探索可能）。
