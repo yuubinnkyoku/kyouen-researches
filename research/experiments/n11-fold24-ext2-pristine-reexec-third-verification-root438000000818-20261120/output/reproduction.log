@@ -1,0 +1,98 @@
+fold24 external second verification (K1164) pristine re-exec third verification - record (2026-11-20)
+=====================================================================================
+
+Scope: single-owner declaration
+  research/log/2026-11-20-n11-k1164-fold24-ext2-pristine-reexec-third-single-owner-note.md
+  (commit 3c88de5ce4101af09a861835b92f7f34d5e40637, declared 2026-11-20T19:15:00Z)
+  K-number for this experiment is taken at part2 push time with the 3-point check.
+
+Machine: n11 long-term lane, third-party execution environment (Python 3.12.14, stdlib only).
+
+Stage 0 - published byte retrieval (bash curl, pinned commits)
+  K1164 part1  12b49de902b0c3e52af577da8ab74e03eadc0275
+    staged/k1164/README.md                          6,232 B   ff42947934d7d9df70f549e9547b42bd56f6b566749770c20b697c9850cc6994
+    staged/k1164/verify_fold24_external_20261120.py   55,555 B   9bc24e3806724cf7dd3db7e23ec26fb4598ea1952bd92c2974c5626a561d8a52
+    staged/k1164/external-audit.json               36,605 B   c7e10332df04a4f1e5af7b1cbc5ec487a5c15ca7851edba102b7b3679feb7c24
+    staged/k1164/reproduction.log                    3,970 B   16b7678e062d65e29e459846feff879a77293e53cefad9357c7375cbfe9950e2
+  K1140 publication  fc4c18fdddb4072667ad019d3218a066e313ff4e (single-commit publication of the fold24 experiment)
+    staged/k1140/win8-root438000000818-receipt-fold-20261120.json  25,666 B  c4ab76d3cb7eba5c1ab8e1830c43d17bf9a771f511b66e7e8573864f3f2402c7
+    staged/k1140/fold_win8_root438000000818.py                       87,662 B  f462733dbaa6a958680ce49ff85e056adf8756cc946fa5ac612442f2c47b4fc8
+    staged/k1140/independent-audit.json                               4,241 B  49f330c6e0f73c0a58fdd9b21c215c38fc3a594d35f1d617b1324468c4a3387b
+    staged/k1140/reproduction.log                                     2,455 B  cb01749a9b52e7ed4392dc2d25cf008e805b0ca17b40a25537680e9d1df0e5b2
+    staged/k1140/reconstruct_inputs.py                               7,561 B  f4e1fa8e69b10c07d9eec7f0b798458b0e73a97308bd418b622d1e9542873591
+    staged/k1140/verify_fold24_independent.py                        11,248 B  e0dbebe463a5f0f4e652779905658301d3b9e4b1506e80b581bce673d1f102aa
+    staged/k1140/build_fold24.py                                    31,289 B  3c1e07fb785cf3bb8b3a65fbdba558bb18c57a8fb885634482957a5e6a2a6ecc
+    staged/k1140/README.md                                           4,601 B  77c4ee401cfe79b5a15cd723902398058225239e622e8687133792cf3451fe15
+  All 12 staged bytes match the SHA-256 pins written in the K1164 experiment README,
+  the K1164 item and, for the five fold24 publication bytes, the P-gate constants of
+  the published verifier itself.
+
+Stage 1 - W reconstruction (twice, network step outside the harness)
+  python3 staged/k1140/reconstruct_inputs.py <W_A>   (fixed ref b91e85a99f0480f084835bdff51533d0cf5feaa8)
+  python3 staged/k1140/reconstruct_inputs.py <W_B>
+  Each run re-verified all 61 chain pins fail-closed (12 git blob + 49 SHA-256)
+  and took ~19 s wall. diff -r W_A W_B = no differences; 70 files per tree;
+  harness-canonical manifest digest (sorted "relpath sha256" lines, no path prefix):
+  1426b6761c1704889ba68c2a94cecc3147068e10678d680635516144fb820773.
+
+Stage 2 - smoke run (published verifier, this environment, before the harness battery)
+  $ python3 staged/k1164/verify_fold24_external_20261120.py W-master pubflat smoke-audit.json
+  {"status": "PASS", "gate_count": 800,
+   "audit_sha256": "c7e10332df04a4f1e5af7b1cbc5ec487a5c15ca7851edba102b7b3679feb7c24",
+   "machine_runs": 4, "tamper_cases": 2}
+  wall time: real 49.8s (publisher's own environment measured 49.5s).
+  Produces a byte-identical copy of the published audit from retrieved bytes alone.
+
+Stage 3 - harness battery run 1 (r1, default environment)
+  $ python3 scripts/verify_k1164_pristine_third_20261120.py staged W_A W_B work-r1 output/harness-audit-r1.json
+  harness audit: {"audit_sha256": "efffaab8ad5693afe432fe6f66abea30ffd1eb2b7a3e524af65718057bda327e",
+                  "gate_count": 66, "status": "PASS", "tamper_cases": 3, "verifier_runs": 4}
+  wall time: real 3m17.3s.
+
+Stage 4 - harness battery run 2 (r2, same cwd, fresh process)
+  same command with work-r2 / harness-audit-r2.json
+  wall time: real 3m18.9s; audit byte-identical to r1.
+
+Stage 5 - harness battery run 3 (r3, isolated HOME/cwd for the harness process,
+         PYTHONHASHSEED=random inherited by the harness)
+  $ env PYTHONHASHSEED=random HOME=<iso-home> python3 <iso-cwd>/harness.py staged W_A W_B work-r3 harness-audit-r3.json
+  wall time: real 3m18.5s; audit byte-identical to r1.
+
+  cmp(harness-audit-r1, harness-audit-r2) = equal
+  cmp(harness-audit-r1, harness-audit-r3) = equal
+  canonical harness audit sha256 (all three runs, 3,184 bytes):
+  efffaab8ad5693afe432fe6f66abea30ffd1eb2b7a3e524af65718057bda327e
+
+What each harness battery executes (inside one battery, all fresh processes):
+  - 12 staged published-byte pin gates + double-reconstruction W equality gates,
+  - 4 fresh re-executions of the published K1164 verifier
+    (same-env x2, isolated cwd/HOME, isolated + PYTHONHASHSEED=random);
+    each verifier invocation re-runs the published fold24 machine 4 times
+    (including fold23 isolated rerun chains), the bundled independent auditor
+    once, and the verifier's own 2 tamper cases; every invocation's audit JSON
+    must equal the published audit byte-for-byte (c7e10332...),
+  - stdout of all 4 verifier invocations byte-identical,
+  - 3 harness-level tamper cases at publisher-untested offsets/surfaces:
+      TA  W inputs/worklist.csv offset 404        XORED 0x01  -> rc 1, no audit, GATE FAILED
+      TB  W fold23/output/win8-root208090020004-receipt-fold-20261120.json offset 3456 -> rc 1, no audit, GATE FAILED
+      TC  pub receipt byte offset 2024 (verifier P-gate surface)                 -> rc 1, no audit, GATE FAILED
+  Total fresh computation across the whole session: 13 verifier invocations
+  (1 smoke + 3 batteries x 4) = 52 fresh fold24 machine executions with fold23
+  chain reruns and 13 bundled-independent-auditor re-executions.
+
+Earlier fail-closed interceptions (experimental facts, same defensive pattern as
+K1158/K1160/K1164's pin-typo captures, all caught before any battery ran):
+  (a) the first harness build carried a W manifest digest constant computed with
+      a different path scheme (leading "./" from a shell-side manifest); the
+      harness's own W-tree-digest pin gate failed the run before any verifier
+      execution; the constant was re-derived from the harness-canonical scheme.
+  (b) the second build's staging feed loop attempted to pin bytes that are not
+      fed to the verifier (experiment README/build_fold24.py): FileNotFoundError,
+      fixed to gate exactly the six fed files. The published harness is the fixed
+      one; both failures are recorded here, not hidden.
+
+Interpretation guard: this record closes no S6 row and no five-parent target row.
+WIN8-D10 certificates cover only the game tree of each eight-stone root;
+REFUTED-D10 is not a LOSS proof; node and solved counts are not win/loss readings.
+The standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60},
+and classes 1/2/4 remain UNKNOWN.

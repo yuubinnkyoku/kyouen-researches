@@ -1,0 +1,113 @@
+{
+  "K1136_audit_sha256": "d065383428621e03cfda87c9b20834f3e425c8c0e58f30823ee36d20828aa90c",
+  "certificate_sha256": "dbcb0bae71b9e00570f66db601790380362c65aaad2e46911cd2b80119337004",
+  "check_count": 46,
+  "checks": [
+    "fold23 record SHA-256",
+    "K1136 audit SHA-256",
+    "K1136 certificate SHA-256",
+    "K1091 sweep SHA-256",
+    "runner v17 Git blob SHA-1",
+    "K1136 19/19 audit gates",
+    "K1091 pin embedded in K1136 g01",
+    "runner v17 pin embedded in K1136 g02/g03",
+    "K1136 g19 fold23 pin",
+    "K1136 g19 residual29 open claim",
+    "12 blob pins + 49 SHA-256 pins",
+    "fold24 schema and status",
+    "fold24 receipt ordinal",
+    "receipt root identity and scope",
+    "fold24 frontier_before equals fold23 frontier_after",
+    "certificate byte and strategy-row counts",
+    "certificate header and root",
+    "certificate rows sorted and unique",
+    "K1136 audit certificate identity",
+    "K1097 intrinsic footprint equals three receipt claims",
+    "K1097 27 gates",
+    "root is eight-stone and quadruple-free",
+    "root is D4-canonical",
+    "two independent D4-removal constructions agree on 28 rows",
+    "independent integer determinant mobility 50",
+    "three claimed rows belong to the 28-row root footprint",
+    "claimed row present in worklist 00000000000000003800000008002040",
+    "claimed row present in worklist 00000000000000043800000008080000",
+    "claimed row present in worklist 00000000000000043800000008100000",
+    "parent delta map independently rederived from 3 rows and census",
+    "three rows touch six parent incidences across four parents",
+    "all four affected parents are class 2",
+    "per-parent before/after arithmetic",
+    "closed edge cost independently sums to 225",
+    "four affected parent rows",
+    "S6 frontier 6126 -> 6123",
+    "remaining cost 485438 -> 485213",
+    "manifest bookkeeping 1722 -> 1725",
+    "parent incidence 11666 -> 11660, decrement 6",
+    "needed S6 4434 -> 4431",
+    "needed cost 351886 -> 351661",
+    "remaining S5 orbits unchanged",
+    "all and only three claimed target rows closed",
+    "target ledger 86 closed / 26 residual",
+    "K1097 plan leaves two candidates / three claimed rows",
+    "all 86 fold controls true"
+  ],
+  "claimed_rows": [
+    "00000000000000003800000008002040",
+    "00000000000000043800000008080000",
+    "00000000000000043800000008100000"
+  ],
+  "closed_edge_cost": 225,
+  "frontier_after": {
+    "cost_needed_by_open_classes": 351661,
+    "parent_row_incidence": 11660,
+    "remaining_s5_orbits": 173,
+    "s6_needed_by_open_classes": 4431,
+    "solved_s6_in_manifest": 1725,
+    "sum_remaining_cost": 485213,
+    "unique_remaining_s6": 6123
+  },
+  "frontier_before": {
+    "cost_needed_by_open_classes": 351886,
+    "parent_row_incidence": 11666,
+    "remaining_s5_orbits": 173,
+    "s6_needed_by_open_classes": 4434,
+    "solved_s6_in_manifest": 1722,
+    "sum_remaining_cost": 485438,
+    "unique_remaining_s6": 6126
+  },
+  "geometry": {
+    "canonical_rows_method_A": 28,
+    "canonical_rows_method_B": 28,
+    "legal_moves": 50,
+    "methods_equal": true,
+    "stones": 8,
+    "unsafe_quads": 0
+  },
+  "parent_counts": {
+    "00000000000000003800000008000010": 1,
+    "00000000000000003800000008001000": 1,
+    "00000000000000003800000008002000": 2,
+    "00000000000000043800000008000000": 2
+  },
+  "parent_incidence_after": 11660,
+  "parent_incidence_before": 11666,
+  "parent_incidence_decrement": 6,
+  "receipt_sha256": "c4ab76d3cb7eba5c1ab8e1830c43d17bf9a771f511b66e7e8573864f3f2402c7",
+  "root": "00000000000000043800000008180010",
+  "row_parent_sets": {
+    "00000000000000003800000008002040": [
+      "00000000000000003800000008000010",
+      "00000000000000003800000008002000"
+    ],
+    "00000000000000043800000008080000": [
+      "00000000000000003800000008002000",
+      "00000000000000043800000008000000"
+    ],
+    "00000000000000043800000008100000": [
+      "00000000000000003800000008001000",
+      "00000000000000043800000008000000"
+    ]
+  },
+  "schema": "n11-fold24-independent-audit-v1",
+  "scope_guard": "This audit verifies a certificate-backed WIN8-D10 root and receipt bookkeeping only; it does not solve the empty 11x11 board or any two-stone root.",
+  "status": "PASS"
+}

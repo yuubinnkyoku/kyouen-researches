@@ -1,0 +1,91 @@
+{
+ "acceptance_criteria": {
+  "c1_staged_pins": "PASS",
+  "c2_w_reconstructed_twice_byte_identical": "PASS",
+  "c3_verifier_reexec_4_runs_byte_identical": "PASS",
+  "c4_tamper_fail_closed_publisher_untested_offsets": "PASS",
+  "c5_harness_deterministic_audit": "see reproduction log (3-run byte identity)",
+  "c6_interpretation_guard_embedded": "PASS"
+ },
+ "experiment": "n11-fold24-ext2-pristine-reexec-third-verification-20261120",
+ "interpretation_guard": [
+  "This third verification re-executes the published K1164 external second verification. It closes no S6 row and no five-parent target row.",
+  "WIN8-D10 certificates cover only the game tree of each eight-stone root; REFUTED-D10 is not a LOSS proof; node counts and solved counts are not win/loss readings.",
+  "The standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+ ],
+ "pinned_inputs": {
+  "staged_pins_all_match": true,
+  "staged_published_bytes": 12
+ },
+ "status": "PASS",
+ "tamper_fail_closed": [
+  {
+   "case": "TA-worklist-offset-404",
+   "fail_closed": true,
+   "offset": 404,
+   "path": "inputs/worklist.csv",
+   "surface": "W",
+   "tampered_byte_xor": "0x01",
+   "verifier_rc": 1
+  },
+  {
+   "case": "TB-fold23-record-offset-3456",
+   "fail_closed": true,
+   "offset": 3456,
+   "path": "fold23/output/win8-root208090020004-receipt-fold-20261120.json",
+   "surface": "W",
+   "tampered_byte_xor": "0x01",
+   "verifier_rc": 1
+  },
+  {
+   "case": "TC-pub-receipt-offset-2024",
+   "fail_closed": true,
+   "offset": 2024,
+   "path": "win8-root438000000818-receipt-fold-20261120.json",
+   "surface": "pub",
+   "tampered_byte_xor": "0x01",
+   "verifier_rc": 1
+  }
+ ],
+ "target_publication": {
+  "k1140_publication_commit": "fc4c18fdddb4072667ad019d3218a066e313ff4e",
+  "k1164_part1_commit": "12b49de902b0c3e52af577da8ab74e03eadc0275",
+  "k1164_part2_commit": "309d140861aae1d94bdbc08b13e0a05716ef1bf3",
+  "k1164_part3_commit": "afd50466633b6c15f7a7bc0a2f5d1cc1bd58fda6",
+  "single_owner_declaration_commit": "3c88de5ce4101af09a861835b92f7f34d5e40637",
+  "w_reconstruct_fixed_ref": "b91e85a99f0480f084835bdff51533d0cf5feaa8"
+ },
+ "verifier_reexec_runs": [
+  {
+   "audit_sha256": "c7e10332df04a4f1e5af7b1cbc5ec487a5c15ca7851edba102b7b3679feb7c24",
+   "byte_identical_to_published": true,
+   "rc": 0,
+   "tag": "same-env-1"
+  },
+  {
+   "audit_sha256": "c7e10332df04a4f1e5af7b1cbc5ec487a5c15ca7851edba102b7b3679feb7c24",
+   "byte_identical_to_published": true,
+   "rc": 0,
+   "tag": "same-env-2"
+  },
+  {
+   "audit_sha256": "c7e10332df04a4f1e5af7b1cbc5ec487a5c15ca7851edba102b7b3679feb7c24",
+   "byte_identical_to_published": true,
+   "rc": 0,
+   "tag": "isolated-cwd-home"
+  },
+  {
+   "audit_sha256": "c7e10332df04a4f1e5af7b1cbc5ec487a5c15ca7851edba102b7b3679feb7c24",
+   "byte_identical_to_published": true,
+   "rc": 0,
+   "tag": "isolated-hashseed-random"
+  }
+ ],
+ "verifier_stdout_byte_identical_across_runs": true,
+ "w_tree": {
+  "file_count": 70,
+  "manifest_sha256": "1426b6761c1704889ba68c2a94cecc3147068e10678d680635516144fb820773",
+  "source": "published reconstruct_inputs.py f4e1fa8e... from fixed ref",
+  "two_reconstructions_byte_identical": true
+ }
+}
