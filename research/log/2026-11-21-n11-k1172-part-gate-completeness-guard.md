@@ -30,7 +30,7 @@
 
 `tests/test_part_gate_completeness.py` に合成fixtureの8試験（正常分割、両battery同時欠落、余分、part間重複、値改変、battery間不一致、JSON重複key、audit順序改変）を追加した。`reproduce.sh` は元のbatteryと20 gate recordの後にこの試験と補助検証器を実行するよう更新した。
 
-判定ロジックを43 gateの合成fixtureで別途実行し、正常分割はPASS、同一gateの両batteryからの削除・余分gate・重複gate・値改変はすべて拒否されることを確認した。重複JSON keyも拒否された。これは合成データでのロジック試験であり、repo同梱のunittestファイル自体や全batteryをこの実行環境で回したという意味ではない。
+判定ロジックを43 gateの合成fixtureで8ケース実行し、正常分割PASS、両battery同時のgate欠落・余分gate・part間重複・値改変・battery間byte不一致・JSON重複key・audit順序改変をすべて拒否した（8/8）。これは合成データでのロジック試験であり、repo同梱のunittestファイル自体や全batteryをこの実行環境で回したという意味ではない。
 
 ## 出版記録
 
