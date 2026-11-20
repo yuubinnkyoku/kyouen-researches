@@ -1,6 +1,6 @@
 # 単一オーナー宣言ノート: 残余29行 fold24 WIN8-D10 receipt fold root 81800010
 
-本ノードは、検証可能な小証明を積み上げる11x11長期レーンの衝突防止のため、下記作業の単一オーナーを宣言する先行出版物である（AGENTS.md の first-published-priority 規則に従う）。
+本ノートは、検証可能な小証明を積み上げる11x11長期レーンの衝突防止のため、下記作業の単一オーナーを宣言する先行出版物である（AGENTS.md の first-published-priority 規則に従う）。
 
 - 宣言日時 (UTC): 2026-11-20T08:50:24.827Z
 - 宣言時点の main HEAD: b3aa1d3ba558be36956bfee7899b6269576f9e4a
