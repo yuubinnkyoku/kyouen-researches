@@ -1,0 +1,59 @@
+{
+  "checks": [
+    "K1097 exact filtered-pool provider histogram matches the pinned expected histogram",
+    "K1102 independent full-pool verification reports the same filtered-pool histogram",
+    "provider histogram totals 45,219 roots and has maximum coverage 3",
+    "any 8-cover excludes singletons and at least two pairs; only 8 triples or 7 triples plus 1 pair remain",
+    "coverage-pattern compression gives at most 253 pair patterns + 297 triple patterns = 550 variables",
+    "both scopes have 23 rows, 9-root greedy cover, and identical gains histogram",
+    "WIN16 intrinsic coverage of residual23 is empty in both records",
+    "Kuhn/Hopcroft-Karp matching size is 23 in both records",
+    "legacy ceil(23/4)=6 is retained as a valid but weaker bound; ceil(23/3)=8 is stronger"
+  ],
+  "eight_cover_ilp": "At most 550 binary coverage-pattern variables and 23 row constraints; the 40,065 singleton providers cannot occur in an 8-cover.",
+  "eight_cover_pattern_variables_upper_bound": 550,
+  "eight_root_cover_shapes": [
+    "8 triples with exactly one duplicated row",
+    "7 triples plus 1 pair with no overlap"
+  ],
+  "eligible_provider_roots_for_8cover": 5154,
+  "greedy_cover_size": 9,
+  "independent_source_agreement": true,
+  "inputs": {
+    "k1097": {
+      "path": "research/experiments/n11-residual72-safe8-refuted50-refsolve-20261120/output/safe8-refuted50-refsolve-20261120.json",
+      "sha256": "2896deb0c5e820904d0e2463e3fd9ebd1613b540a66a97f88d86c75bffa71f40"
+    },
+    "k1102": {
+      "path": "research/experiments/n11-residual72-refuted50-refsolve-second-verification-20261120/output/refuted50-refsolve-second-verification-20261120.json",
+      "sha256": "d0b5d845c234cf51c55555295f1fe3042f262cccaa0e2923c9c4205d6b6e168b"
+    }
+  },
+  "interpretation_guard": [
+    "This is a geometric candidate-cover bound, not a game-theoretic verdict.",
+    "The audit reads two pinned published summaries; it does not regenerate the 120,424-root pool or rerun any depth-10 probe.",
+    "No certificate is extracted and no S6 row is closed.",
+    "The 9-root greedy cover is a plan, not a proof that 8 roots are impossible."
+  ],
+  "max_rows_covered_by_one_provider": 3,
+  "minimum_cover_size_interval": [
+    8,
+    9
+  ],
+  "pair_patterns_upper_bound": 253,
+  "pattern_compression_factor_at_least": 82,
+  "pool_P_triple_prime": 120424,
+  "previous_recorded_lower_bound": 6,
+  "provider_coverage_histogram": {
+    "1": 40065,
+    "2": 4857,
+    "3": 297
+  },
+  "providers_touching_residual23": 45219,
+  "residual_rows": 23,
+  "schema": "n11-residual23-cover-lower-bound-strengthening-20261120-v1",
+  "scope2_same_bound_reason": "All 16 WIN8 intrinsic footprints have zero intersection with the residual-23 rows; removing those roots does not change the provider histogram.",
+  "source_commit": "259e4019db88395a1b8ca48fda9d0b842665653a",
+  "strengthened_lower_bound": 8,
+  "triple_patterns_upper_bound": 297
+}
