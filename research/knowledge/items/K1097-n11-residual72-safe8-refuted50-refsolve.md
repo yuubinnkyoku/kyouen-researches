@@ -1,12 +1,13 @@
 ---
 id: K1097
-title: 残余72行 safe8 pool 第4ラウンド再解決: REFUTED-D10 50根除外後の残余23行をgreedy 9根がleftover 0完全被覆・stranded 0・マッチング23・WIN8累計16根の内在被覆は主張を包含（K1095 3根目は主張+1行の初の余剰）
+title: 残余72行 safe8 第4ラウンド: REFUTED-D10 50根除外後の残余23行をgreedy9根で被覆・下界8・8根被覆ILPは最大550パターン
 kind: computation
 status: computed
 topics: [search-methods, certificates, geometry]
 aliases:
   - round-4 re-solve of the residual 23 rows over pool P-triple-prime (120,424 roots) after excluding the 50 REFUTED-D10 roots (K1086 sixteen + K1089 thirteen + K1091 twelve + K1095 nine)
-  - 9 greedy replacement roots cover the residual 23 rows with leftover 0 (gains {3:6,2:2,1:1}, lower bound 6, bipartite maximum matching 23, stranded 0)
+  - 9 greedy replacement roots cover the residual 23 rows with leftover 0 (gains {3:6,2:2,1:1}, strengthened lower bound 8, bipartite maximum matching 23, stranded 0)
+  - the minimum provider-cover size over P''' is 8 or 9; an 8-root feasibility model needs at most 550 unique pair/triple patterns
   - per-root intrinsic coverage of all 16 WIN8-D10 candidates contains their claims (K1086 seven = 23 rows, K1089 three = 9, K1091 three = 10, K1095 three = 7; the K1095 third root has exactly one extra intrinsic row, claimed by the K1096-certificated root 8003180; no residual-23 row inside win-intrinsic; scope1=scope2 identical selection)
 relations:
 - type: depends_on
@@ -43,10 +44,23 @@ artifacts:
 - path: research/log/2026-11-20-n11-residual72-safe8-refuted50-refsolve.md
   role: log
   note: 実行記録（宣言ノート参照・全数値・決定性確認・次の一手）
+- path: research/experiments/n11-residual23-cover-lower-bound-strengthening-20261120/README.md
+  role: source
+  note: P'''上の最大被覆3行から残余23行の必要根数下界を8へ強化し、8根被覆の形とILP縮約を導出
+- path: research/experiments/n11-residual23-cover-lower-bound-strengthening-20261120/scripts/audit_lower_bound.py
+  role: verifier
+  note: K1097/K1102のSHA-256 pin・provider histogram一致・ceil(23/3)・最大550 pattern変数をfail-closed検査
+- path: research/experiments/n11-residual23-cover-lower-bound-strengthening-20261120/output/residual23-cover-lower-bound-strengthening-20261120.json
+  role: data
+  note: 下界8・greedy9・8根被覆の必要形・最大550 pattern変数を記録（SHA-256 1310ef74…）
+- path: research/log/2026-11-20-n11-residual23-cover-lower-bound-strengthening.md
+  role: log
+  note: 下界強化の発見順・計算・限界
 scope: >-
   REFUTED-D10 50根（K1086の16根+K1089の13根+K1091の12根+K1095の9根）を除外した
   pool P‴（120,424根）上での残余23行 greedy計画再解決と、WIN8-D10候補累計16根の
-  内在被覆確認。新規probe・掃引・証明書抽出・receipt fold・行の閉鎖は含まない。
+  内在被覆確認。後続監査でprovider-cover下界を8へ強化し、8根被覆ILPを最大550 patternへ
+  縮約した。新規probe・掃引・証明書抽出・receipt fold・行の閉鎖は含まない。
 evidence: >-
   （1）プールと需要: safe8 120,474根から50 REFUTED根を除外した pool P‴
   （120,424根）上で残余23行（K1095 REFUTED-9根の主張被覆行・canonical化・
@@ -72,6 +86,14 @@ evidence: >-
   本計算は行を1つも閉じない。REFUTED-D10はLOSS証明ではなく、nodes数・solved数を
   勝敗として読まない。標準11×11空盤・二石root {49,60}/{59,60}・S2 {59,60}・
   class 1/2/4 はすべて UNKNOWN のまま。
+  （6）下界強化: K1097とK1102の独立正本はP'''上のprovider histogram
+  {1:40,065, 2:4,857, 3:297}で一致し、最大被覆は3行。よって必要根数は
+  ceil(23/3)=8。greedy9根と合わせて最小値は8または9。8根被覆では1行providerを
+  使えず、2行providerは高々1根。候補は8 triple（重複1行）または7 triple+1 pair
+  （重複なし）に限られる。2行patternは最大253種、3行providerは297根以下なので、
+  被覆pattern変数は最大550。scope2もWIN16の残余23行intrinsic hitが0のため同じ。
+  詳細は下界強化監査の成果物を参照する。
+
 ---
 
 ## 詳細
