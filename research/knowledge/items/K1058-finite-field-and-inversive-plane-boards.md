@@ -52,6 +52,18 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/scripts/ag2_fast_target.py
   role: solver
   note: AG(2,q)の対称性利用高速完全探索
+- path: research/experiments/finite-field-kyouen-20261120/AG2_Q9_EXACT.md
+  role: source
+  note: K(AG(2,9))=9の厳密決定
+- path: research/experiments/finite-field-kyouen-20261120/INVERSIVE_Q9_EXACT.md
+  role: source
+  note: K(反転平面q=9)=9の厳密決定
+- path: research/experiments/finite-field-kyouen-20261120/scripts/ag9_sym_dfs.py
+  role: solver
+  note: 2-推移性による対称性破壊探索
+- path: research/experiments/finite-field-kyouen-20261120/scripts/inv9_sym_dfs.py
+  role: solver
+  note: 3-推移性による対称性破壊探索
 - path: research/experiments/finite-field-kyouen-20261120/GROWTH_FIT.md
   role: source
   note: 成長率フィットの比較と信頼性評価
@@ -348,8 +360,11 @@ q=7 の K=6 は固定サイズ完全探索で決定した（サイズ7が不存�
 
 **AG(2,q) と反転平面の K は q ≤ 7 で一致するが、q=8 で乖離する**（AG=8、反転平面=7）。
 点数はほぼ同じ（q² 対 q²+1）だがブロック構造は大きく異なる（AG は円と直線、
-反転平面は円のみで各円 q+1 点）。この一致が偶然か構造的かは未解明で、
-q=8 で AG(2,8)=8、反転平面=7 となり**初めて乖離する**。AG の方が大きい。`n`q=9 では両者とも K≥9（AG はサイズ9が実在、反転平面もサイズ9が実在）。どちらが大きいかは未判定。
+反転平面は円のみで各円 q+1 点）。q=8 で AG(2,8)=8、反転平面=7 となり**初めて乖離する**（AG が大きい）。
+
+q=9 では**両者とも K=9 で厳密に一致**する。AG(2,9) は AGL の2-推移性、
+反転平面は PGL(2,81) の3-推移性を使って対称性破壊し、サイズ10が不存在であることを
+完全探索で確認した（それぞれ 261,023 ノード・21,212 ノード）。
 
 同じ点数での比較では有限体盤の方がはるかに疎である：
 7×7 整数の K=14 に対し AG(2,7) は 6（半分以下）。
