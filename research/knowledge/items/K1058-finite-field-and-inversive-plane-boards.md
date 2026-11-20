@@ -52,6 +52,9 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/scripts/ag2_fast_target.py
   role: solver
   note: AG(2,q)の対称性利用高速完全探索
+- path: research/experiments/finite-field-kyouen-20261120/BOUND_Q3MOD4.md
+  role: source
+  note: q=3 mod 4の上界比較
 - path: research/experiments/finite-field-kyouen-20261120/CROSS_SHARP.md
   role: proof
   note: 十字上界の改良K<=q+2の証明
@@ -400,6 +403,12 @@ q=5,9,13,17 で十字の個数が `q²` に一致し、2つの十字の交わり
 **上界の比較**：単純な組合せ上界はいずれも緩い。q=7 で triple 上界13・second moment 16・直線のみ21・4点部分集合47 に対し真値は6。
 second moment（`λ₂=q+1` は一様）は triple より弱い。直線制約だけでは q=5 で k=6 のキャップが存在するため何も排除できない。
 十字上界が最強（q≡1 mod 4）で、改良版 `q+2` は `K/q ≈ 1` という観測と整合する。
+
+**q ≡ 3 (mod 4) では十字がない**：ブロックは直線（サイズ q）と真円（サイズ q+1）のみ。
+初等的な上界は triple `C(k,3) ≤ q³+q` から `k ≈ 1.82q` が最良
+（pair は `q·C(k,2) ≤ 3b` で 2.4q、incidence は `deg·k ≤ 3b` で 2.7q とより緩い）。
+上界/真値の比は q≡1 (mod 4) で 1.1〜1.2、q≡3 (mod 4) で 2.2〜2.7 であり、
+**十字ブロックの有無が上界の鋭さを決めている**。
 
 上界は `C(k,3) ≤ q²(q−1)+q(q+1) = q³+q`（安全集合の各三点が一意に円または直線を定め、
 そのブロックは高々3点しか持てない）。整数格子の `K_n ≈ 2n` と対照的に、有限体盤は相対的に疎である。
