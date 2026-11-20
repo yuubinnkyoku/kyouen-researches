@@ -15,9 +15,6 @@ relations:
   - type: depends_on
     target: K1133
     note: fold23正本（残余29行baseline・SHA-256 04f334ff…）と出版機（SHA-256 c908f6c0…）をpristine隔離再実行してから接続した。
-  - type: depends_on
-    target: K1097
-    note: WIN16 intrinsic footprintの主張3行とreceipt対象の一致、およびfold後に残る候補数・主張行数の照合。
 artifacts:
   - path: research/experiments/n11-residual29-win8-receipt-fold-root438000000818-20261120/README.md
     role: source
@@ -43,6 +40,12 @@ artifacts:
   - path: research/experiments/n11-residual29-win8-receipt-fold-root438000000818-20261120/output/reproduction.log
     role: data
     note: 追加再実行の全pin・frontier chain・証明書・receipt geometry検査ログ
+  - path: research/experiments/n11-residual72-safe8-refuted50-refsolve-20261120/README.md
+    role: source
+    note: WIN16 intrinsic footprintと残余候補計画の前提
+  - path: research/experiments/n11-residual72-safe8-refuted50-refsolve-20261120/output/safe8-refuted50-refsolve-20261120.json
+    role: data
+    note: fold24が照合するWIN16 intrinsic footprint・候補計画の正本
   - path: research/log/2026-11-20-n11-fold24-win8-root438000000818-receipt-fold.md
     role: log
     note: 生成・再実行・独立監査・結果・初回環境障害の記録
