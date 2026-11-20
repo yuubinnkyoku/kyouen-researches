@@ -1,11 +1,11 @@
 ---
 id: K1151
-title: 残余23行 代替9根d10掃引（K1146）whole-record独立第二検証: 334 gate全PASS・残余72→20行連鎖の独立再導入・5掃引横断census（75根・WIN17/REFUTED58衝突0・pool P⁗ 120,416）・win16 intrinsic footprint再現・新WIN8-D10候補のintrinsic footprint初計測
+title: "残余23行 代替9根d10掃引（K1146）whole-record独立第二検証: 334 gate全PASS・残余72→20行連鎖の独立再導入・5掃引横断census（75根・WIN17/REFUTED58衝突0・pool P⁗ 120,416）・win16 intrinsic footprint再現・新WIN8-D10候補のintrinsic footprint初計測"
 kind: computation
 status: computed
 topics: [search-methods, certificates, verification]
 aliases:
-  - whole-record independent second verification of the replace9 depth-10 sweep (K1146): published masters and 18 probe records SHA-pinned and cross-checked by a separate implementation; residual universe chain 72-49-40-30-23-20 independently re-derived; 75-root cross-sweep census WIN17 vs REFUTED58 canonical conflicts 0; pool arithmetic safe8 120,474 - 50 - 8 = 120,416 reproduced; win16 intrinsic footprints reproduced; new WIN8-D10 candidate intrinsic footprint first measured (== claimed 3 rows, surplus 0)
+  - "whole-record independent second verification of the replace9 depth-10 sweep (K1146): published masters and 18 probe records SHA-pinned and cross-checked by a separate implementation; residual universe chain 72-49-40-30-23-20 independently re-derived; 75-root cross-sweep census WIN17 vs REFUTED58 canonical conflicts 0; pool arithmetic safe8 120,474 - 50 - 8 = 120,416 reproduced; win16 intrinsic footprints reproduced; new WIN8-D10 candidate intrinsic footprint first measured (== claimed 3 rows, surplus 0)"
 relations:
   - type: verifies
     target: K1146
