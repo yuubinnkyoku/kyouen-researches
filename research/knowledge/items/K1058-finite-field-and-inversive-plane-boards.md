@@ -52,6 +52,12 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/scripts/ag2_fast_target.py
   role: solver
   note: AG(2,q)の対称性利用高速完全探索
+- path: research/experiments/finite-field-kyouen-20261120/SERIES_SUMMARY.md
+  role: source
+  note: K系列の総括と乖離の分析
+- path: research/experiments/finite-field-kyouen-20261120/AG13_FAMILIES.md
+  role: source
+  note: AG(2,13)のブロック族別分析
 - path: research/experiments/finite-field-kyouen-20261120/AG2_Q13_Q16.md
   role: source
   note: q=13,16のAG K下界
@@ -390,7 +396,13 @@ AG(2,13) は K≥13（サイズ13まで実在、14以上は未判定）。
 | 反転平面 | 5 | 5 | 6 | 6 | **7** | 9 | 9 | **10** | — |
 
 AG の K は q=11→13 で 9→13以上へ跳ね上がるが、反転平面は 9→10 と緩やか。
-AG のブロック構造（円 q+1 点＋直線 q 点）が反転平面（円 q+1 点のみ）より緩いためと考えられる。
+AG のブロック構造が反転平面より緩いためと考えられる。
+
+q=13 は `q ≡ 1 (mod 4)` なので円が退化し、サイズ12の退化円 2,028 個と
+サイズ25の十字 169 個に分かれる（サイズ14の真円は存在しない）。
+族別に測ると円のみで ≥14、直線のみで ≥23、全体で ≥13 であり、
+**AG の円族は反転平面のサイズ14円より緩い**ことが乖離の一因と考えられる。
+
 q=16（標数2）でも AG は K≥12 で、増加傾向が続く。
 
 同じ点数での比較では有限体盤の方がはるかに疎である：
