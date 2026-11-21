@@ -8,6 +8,16 @@ import json
 from pathlib import Path
 
 
+def reject_duplicate_json_keys(pairs):
+    """Reject ambiguous JSON objects instead of accepting the last duplicate value."""
+    obj = {}
+    for key, value in pairs:
+        if key in obj:
+            raise ValueError(f'duplicate JSON key: {key}')
+        obj[key] = value
+    return obj
+
+
 def is_canonical_safe_s5_key(pair):
     """Return whether a five-stone key is D4-canonical and quadruple-free."""
     if not isinstance(pair, (tuple, list)) or len(pair) != 2:
@@ -58,7 +68,7 @@ REGISTRY = ROOT / 'results/n11-s5-evidence-quarantine.json'
 
 def quarantined_cache_keys():
     try:
-        doc = json.loads(REGISTRY.read_text(encoding='utf-8'))
+        doc = json.loads(REGISTRY.read_text(encoding='utf-8'),\n                       object_pairs_hook=reject_duplicate_json_keys)
     except FileNotFoundError as exc:
         raise FileNotFoundError(f'required S5 evidence quarantine registry missing: {REGISTRY}') from exc
     if doc.get('schema') != 'n11-s5-evidence-quarantine-v1':
