@@ -22,3 +22,4 @@ chronologicalな発見・判断は[log](../../log/README.md)、旧統合・計�
 ## Exploratory worker-allocation study
 
 - [36-root worker partition candidate](../n11-residual72-worker-partition-candidate-20261121/README.md): pairwise three-ply D4 overlap allocation heuristic; no active sweep changes.
+- [36-root exact class-membership regeneration](../n11-residual72-36root-exact-class-membership-20261121/README.md): exact 10/9/8-stone class-to-root memberships verified against the published census; pairwise proxy superseded by exact class-level copy counts; no active sweep changes.
