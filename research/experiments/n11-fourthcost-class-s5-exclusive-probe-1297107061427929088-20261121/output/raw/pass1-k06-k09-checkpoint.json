@@ -1,0 +1,79 @@
+{
+ "checkpoint": "pass1 keys k06-k09 (band-1 complete: k01-k09 = 8 LOSS / 1 UNKNOWN@15M parked k02; 15M twice-run determinism identical nodes on every decided key)",
+ "head_before_push": "93ceaab9c3aa9f1bbc9bb130ef64e3fdb3cb7fd4",
+ "rows": [
+  {
+   "key": "1297107061444706304:0",
+   "budget": 2000000,
+   "result": 0,
+   "nodes": 2000000
+  },
+  {
+   "key": "1297107061444706304:0",
+   "budget": 15000000,
+   "result": 2,
+   "nodes": 2066625
+  },
+  {
+   "key": "1297107061444706304:0",
+   "budget": 15000000,
+   "result": 2,
+   "nodes": 2066625
+  },
+  {
+   "key": "1297107062501670912:0",
+   "budget": 2000000,
+   "result": 0,
+   "nodes": 2000000
+  },
+  {
+   "key": "1297107062501670912:0",
+   "budget": 15000000,
+   "result": 2,
+   "nodes": 2229083
+  },
+  {
+   "key": "1297107062501670912:0",
+   "budget": 15000000,
+   "result": 2,
+   "nodes": 2229083
+  },
+  {
+   "key": "1297247798916284416:0",
+   "budget": 2000000,
+   "result": 0,
+   "nodes": 2000000
+  },
+  {
+   "key": "1297247798916284416:0",
+   "budget": 15000000,
+   "result": 2,
+   "nodes": 9756391
+  },
+  {
+   "key": "1297247798916284416:0",
+   "budget": 15000000,
+   "result": 2,
+   "nodes": 9756391
+  },
+  {
+   "key": "10416825938107961344:0",
+   "budget": 2000000,
+   "result": 0,
+   "nodes": 2000000
+  },
+  {
+   "key": "10416825938107961344:0",
+   "budget": 15000000,
+   "result": 2,
+   "nodes": 2702511
+  },
+  {
+   "key": "10416825938107961344:0",
+   "budget": 15000000,
+   "result": 2,
+   "nodes": 2702511
+  }
+ ],
+ "status_guard": "per-key S5 verdicts only; 11x11 empty board remains UNKNOWN"
+}
