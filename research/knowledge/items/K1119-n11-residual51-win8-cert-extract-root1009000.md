@@ -13,7 +13,7 @@ relations:
     note: fold15後残余確定用の代替根 depth-10掃引の出版値（andclose1 192,365・andclose0 229,502・どちらもuncapped loss=true・[14,18]）と主張被覆4行をg01/g06/g07/g08でpin・照合
   - type: depends_on
     target: K1097
-    note: win16 footprint（root 1009000: claimed == intrinsic == 4行）をg19で照合
+    note: "win16 footprint（root 1009000: claimed == intrinsic == 4行）をg19で照合"
   - type: depends_on
     target: K1117
     note: 機材系譜の直接の親（抽出器・BigInt検証器・Bareiss検証器・監査機械が同一bytes・root定数のみ差し替え）

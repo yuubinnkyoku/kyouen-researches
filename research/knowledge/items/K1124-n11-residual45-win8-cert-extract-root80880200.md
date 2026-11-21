@@ -13,7 +13,7 @@ relations:
     note: 残余72行 replace16 depth-10掃引正本（SHA-256 808fbda1…）の出版値（andclose1 618,359・andclose0 669,067・どちらもuncapped loss=true・[14,18]）と主張被覆3行をg01/g06/g07/g08でpin・照合。K1121「80880200は出版probe記録なし」という記載の訂正源
   - type: depends_on
     target: K1097
-    note: win16 footprint（root 80880200: claimed == intrinsic == 3行）をg19で照合
+    note: "win16 footprint（root 80880200: claimed == intrinsic == 3行）をg19で照合"
   - type: depends_on
     target: K1121
     note: 機材系譜の直接の親（抽出器・BigInt検証器・Bareiss検証器・監査機械が同一bytes・root定数のみ差し替え）

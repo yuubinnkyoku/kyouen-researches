@@ -13,7 +13,7 @@ relations:
     note: 代替12根 depth-10掃引の出版値（andclose1 198,622・andclose0 240,848・どちらもuncapped loss=true・[14,18]）と主張被覆3行をg01/g06/g07/g08でpin・照合
   - type: depends_on
     target: K1097
-    note: win16 footprint（root 00901010: claimed == intrinsic == 3行）をg19で照合
+    note: "win16 footprint（root 00901010: claimed == intrinsic == 3行）をg19で照合"
   - type: depends_on
     target: K1117
     note: 機材系譜の直接の親（抽出器・BigInt検証器・Bareiss検証器・監査機械が同一bytes・root定数のみ差し替え）

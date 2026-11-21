@@ -1,13 +1,13 @@
 ---
 id: K1147
-title: 残余23行 8根被覆判定（K1097最小被覆9・interval [9,9]）の外部第二検証: 出版機4実行byte-identical・記録交差71チェック全PASS・数え上げ証明書の外部再計算・triple availability総和恒等式891==3×297
+title: "残余23行 8根被覆判定（K1097最小被覆9・interval [9,9]）の外部第二検証: 出版機4実行byte-identical・記録交差71チェック全PASS・数え上げ証明書の外部再計算・triple availability総和恒等式891==3×297"
 kind: computation
 status: computed
 topics: [search-methods, certificates, verification]
 aliases:
-  - external second verification of the eight-root cover decision over pool P-triple-prime (published UNSAT, minimum cover 9, K1097 interval [8,9] collapsed to [9,9]): published machine re-executed pristine 4 times (2 same-tree, isolated cwd/HOME, isolated + PYTHONHASHSEED=random), all byte-identical to the published master c5aaf83e
+  - "external second verification of the eight-root cover decision over pool P-triple-prime (published UNSAT, minimum cover 9, K1097 interval [8,9] collapsed to [9,9]): published machine re-executed pristine 4 times (2 same-tree, isolated cwd/HOME, isolated + PYTHONHASHSEED=random), all byte-identical to the published master c5aaf83e"
   - 71 record-level cross-document checks pass (rows/demand/hist/greedy/matching/gates/pin-chain across K1097, K1102, lower-bound audit, decision master); counting certificate recomputed externally (k_min=2 > k_max=3*8-23=1, both published derivations have no k in 0..8)
-  - new cross-identity: per-row triple availability table sums to 891 == 3 * 297 (each triple provider covers 3 rows); availability range 0..140, mean 38.74, top-6 rows (all `...82108...` family) share 86.5%, 3 zero rows plus 2 rows below 5
+  - "new cross-identity: per-row triple availability table sums to 891 == 3 * 297 (each triple provider covers 3 rows); availability range 0..140, mean 38.74, top-6 rows (all `...82108...` family) share 86.5%, 3 zero rows plus 2 rows below 5"
 relations:
   - type: verifies
     target: K1097

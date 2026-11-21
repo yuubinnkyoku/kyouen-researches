@@ -13,7 +13,7 @@ relations:
     note: 残余72行 replace16 depth-10掃引正本（SHA-256 808fbda1…）の出版値（andclose1 736,409・andclose0 878,391・どちらもuncapped loss=true・[14,18]）と主張被覆3行をg01/g06/g07/g08でpin・照合
   - type: depends_on
     target: K1097
-    note: win16 footprint（root 840500: claimed == intrinsic == 3行）をg19で照合
+    note: "win16 footprint（root 840500: claimed == intrinsic == 3行）をg19で照合"
   - type: depends_on
     target: K1124
     note: 機材系譜の直接の親（抽出器・BigInt検証器・Bareiss検証器・監査機械が同一bytes・root定数のみ差し替え）。K1124でのK1089 replace16正本per_root probe pin再発見の訂正を継承

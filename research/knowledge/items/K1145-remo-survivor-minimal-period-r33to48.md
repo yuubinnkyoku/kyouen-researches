@@ -34,7 +34,7 @@ artifacts:
     note: 監査JSON（32,790 bytes・SHA-256 0b5ae7eb…・5/5 ok・別cwd隔離再計算と本体でbyte同一）
   - path: research/experiments/remo-survivor-minimal-period-r33plus-20261120/output/published_run.txt
     role: data
-    note: 隔離cwdの完走invocation標準出力（5チェックOK・STATUS: COMPLETE checks:5 all_ok:True）
+    note: "隔離cwdの完走invocation標準出力（5チェックOK・STATUS: COMPLETE checks:5 all_ok:True）"
   - path: research/log/2026-11-20-remo-survivor-minimal-period-r33plus.md
     role: source
     note: 高速レーン研究ログ（単一オーナー宣言の確認・掃引・観察・2プロセス検証・出版）

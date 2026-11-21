@@ -13,7 +13,7 @@ relations:
     note: replacement16掃引で本rootがWIN8-D10候補として確定（K1091/K1095掃引正本per_rootに記録なし）
   - type: depends_on
     target: K1097
-    note: win16 footprint（root 208090020004: claimed == intrinsic == 3行）をg07/g19で照合
+    note: "win16 footprint（root 208090020004: claimed == intrinsic == 3行）をg07/g19で照合"
   - type: depends_on
     target: K1119
     note: 機材系譜とprobe pinの両親（fresh-probe総nodes 793,616の出版記録・研究log git blob 51bad3fa…をg01/g02でpin・抽出器はroot引数のみ差し替え）

@@ -1,6 +1,6 @@
 ---
 id: K1146
-title: 残余23行の代替9根depth-10掃引: WIN8-D10 candidate 1根・REFUTED-D10 fact 8根（累計WIN候補17根・第5ラウンドpool P⁗ 120,416根・行閉鎖0）
+title: "残余23行の代替9根depth-10掃引: WIN8-D10 candidate 1根・REFUTED-D10 fact 8根（累計WIN候補17根・第5ラウンドpool P⁗ 120,416根・行閉鎖0）"
 kind: computation
 status: computed
 topics: [search-methods, certificates, geometry]
