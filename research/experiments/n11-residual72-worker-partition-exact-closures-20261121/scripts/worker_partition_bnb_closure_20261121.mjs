@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Exact worker-partition closure suite (2026-11-21, rebuilt after workspace reset; run with pinned inputs in cwd).
-// Modes: x9 | w2class|w2pair | w3class|w3pair | w4class|w4pair | w6class|w6pair
+// Modes: x9 | x9w{N} | w2class|w2pair | w3class|w3pair | w4class|w4pair | w6class|w6pair
 //   x9      : 9-stone layer, minimize weighted cut of multi-root 9-stone classes (all 2-root), 4 workers x 9 roots.
 //   w*class : 10-stone layer, class objective = sum over multi-root 10-stone D4 classes of (span-1), W workers x 36/W roots.
 //   w*pair  : 10-stone layer, pair objective = sum over root pairs in different groups weighted by #shared multi-root classes.
@@ -45,6 +45,7 @@ const BUDGET_MS = Number(process.argv[3] || 120) * 1000;
 const RESTARTS = Number(process.argv[4] || 0);   // 0 = per-mode default
 let W, LAYER, OBJ;
 if (mode === "x9") { W = 4; LAYER = "9stone"; OBJ = "cross9"; }
+else if (/^x9w(\d+)$/.test(mode)) { W = Number(mode.slice(3)); LAYER = "9stone"; OBJ = "cross9"; }
 else if (/^w(\d+)(class|pair)$/.test(mode)) { W = Number(mode.slice(1).match(/^(\d+)/)[1]); LAYER = "10stone"; OBJ = mode.endsWith("class") ? "class" : "pair"; }
 else { console.error("unknown mode " + mode); process.exit(1); }
 const K = N / W;
@@ -243,8 +244,8 @@ function dfs(depth, cross, maxUsed) {
 }
 
 // ---------- run ----------
-const SEED = mode === "x9" ? 305093817 : ((OBJ === "class" ? 3735928559 : 781605401) + W);
-const RESTARTS_DEFAULT = mode === "x9" ? 200 : W === 4 ? 60 : 80;
+const SEED = mode === "x9" ? 305093817 : (mode.startsWith("x9w") ? 305093817 + W : ((OBJ === "class" ? 3735928559 : 781605401) + W));
+const RESTARTS_DEFAULT = mode.startsWith("x9") ? 200 : W === 4 ? 60 : 80;
 const restarts = RESTARTS || RESTARTS_DEFAULT;
 const tAnn0 = Date.now();
 const annUB = anneal(SEED, 60000, restarts);

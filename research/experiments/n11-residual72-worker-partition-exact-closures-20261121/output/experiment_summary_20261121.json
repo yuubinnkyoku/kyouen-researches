@@ -1,7 +1,7 @@
 {
  "schema": "n11-residual72-worker-partition-exact-closures-20261121-summary-v1",
  "date": "2026-11-21",
- "status": "worker-partition-geometry-exact-closures-and-ub-witnesses",
+ "status": "worker-partition-geometry-exact-closures-and-ub-witnesses-v2-addendum",
  "inputs": {
   "census.json": "94fdb0c6e3503f1e9d19aaaf345f4478157c5a44374f10642c52325f346c2023",
   "partcand.json": "09b394b88cfb0246c278b335b82cfc5f8763f551c0f42c89403977b5e273918b",
@@ -25,6 +25,14 @@
   "w3_pair10": {
    "value": 913,
    "bnb_nodes": 308146
+  },
+  "x9_w2_cross9": {
+   "value": 17,
+   "bnb_nodes": 1198
+  },
+  "x9_w3_cross9": {
+   "value": 22,
+   "bnb_nodes": 157346
   }
  },
  "ub_witnesses_not_closed": {
@@ -299,10 +307,42 @@
    "best_neighbor_score": 2000,
    "best_swap": null,
    "base_score": 2000
+  },
+  "x9w2": {
+   "objective": "cross9",
+   "workers": 2,
+   "roots_per_worker": 18,
+   "anneal_ub": 17,
+   "restarts": 200,
+   "bnb_nodes": 1198,
+   "bnb_ms": 3,
+   "budget_s": 100,
+   "closed": true,
+   "status": "exact-optimum-closed-ub-is-global",
+   "exact_optimum_if_closed": 17,
+   "witness": {
+    "cross9": 17
+   }
+  },
+  "x9w3": {
+   "objective": "cross9",
+   "workers": 3,
+   "roots_per_worker": 12,
+   "anneal_ub": 22,
+   "restarts": 200,
+   "bnb_nodes": 157346,
+   "bnb_ms": 55,
+   "budget_s": 100,
+   "closed": true,
+   "status": "exact-optimum-closed-ub-is-global",
+   "exact_optimum_if_closed": 22,
+   "witness": {
+    "cross9": 22
+   }
   }
  },
  "independent_verification": {
-  "gates_total": 142,
+  "gates_total": 162,
   "all_pass": true
  },
  "interpretation_guard": [
@@ -310,5 +350,16 @@
   "w4/w6/x9 UBs are NOT proven optima; class10 1937 / pair10 1939 / cross9 47 are upper bounds attained by witnesses.",
   "Nodes, iters, and solved counts must not be read as win/loss evidence; REFUTED-D10 is not a LOSS proof.",
   "The standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and class 1/2/4 verdicts all remain UNKNOWN."
- ]
+ ],
+ "structural_findings_addendum": {
+  "x9w2_witness_is_w2class_w2pair_witness": true,
+  "w2_partition_simultaneous_optima": {
+   "class10": 732,
+   "pair10": 737,
+   "cross9": 17
+  },
+  "w3class_witness_also_attains_cross9_optimum_22": true,
+  "x9w3_witness_distinct_from_w3class_witness": true,
+  "note": "for W=2 a single balanced partition attains all three layer optima; at W=3 the 9-stone-layer optimum 22 is non-unique (10-stone-optimal witness and a distinct partition both attain it)"
+ }
 }

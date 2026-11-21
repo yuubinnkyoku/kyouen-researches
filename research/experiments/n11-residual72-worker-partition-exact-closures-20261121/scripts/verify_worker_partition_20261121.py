@@ -286,6 +286,8 @@ for fn, W_, claims in (
     ("w6class_result.json", 6, {"class10": 2558, "pair10": 2562, "cross9": 62}),
     ("w6pair_result.json", 6, {"class10": 2558, "pair10": 2562, "cross9": 62}),
     ("x9_result.json", 4, {"cross9": 47}),
+    ("x9w2_result.json", 2, {"class10": 732, "pair10": 737, "cross9": 17}),
+    ("x9w3_result.json", 3, {"cross9": 22}),
 ):
     if not os.path.exists(os.path.join(OUT, fn)):
         gate("file_" + fn, False, "missing"); sys.exit(1)
@@ -331,6 +333,19 @@ for fn in ("t1class_result.json", "t1pair_result.json"):
         gate(fn + "_same_super_partition", canon(load(fn)["witness"]["assignment_groups"]) == canon(load("w4class_result.json")["witness"]["groups"]))
 # x9 witness: distinct partition also attaining cross9 47
 gate("x9_witness_distinct_from_w4", not same("x9_result.json", "w4class_result.json"))
+
+# addendum (2026-11-21, same day): x9w{N} 9-stone-layer closures for W=2,3
+gate("x9w2_same_partition_as_w2class", same("x9w2_result.json", "w2class_result.json"))
+gate("x9w3_distinct_from_w3class", not same("x9w3_result.json", "w3class_result.json"))
+gate("x9w2_closed_opt_17", load("x9w2_result.json")["result"]["exact_optimum_if_closed"] == 17
+     and load("x9w2_result.json")["result"]["status"] == "exact-optimum-closed-ub-is-global")
+gate("x9w3_closed_opt_22", load("x9w3_result.json")["result"]["exact_optimum_if_closed"] == 22
+     and load("x9w3_result.json")["result"]["status"] == "exact-optimum-closed-ub-is-global")
+# co-attainment: the 10-stone-layer optimal witnesses also attain the closed 9-stone optima
+a2 = groups_to_a(load("w2class_result.json")["witness"]["groups"], 2, 18)
+gate("w2class_witness_cross9_is_optimum_17", cross9(a2) == 17 == load("x9w2_result.json")["result"]["exact_optimum_if_closed"])
+a3 = groups_to_a(load("w3class_result.json")["witness"]["groups"], 3, 12)
+gate("w3class_witness_cross9_is_optimum_22", cross9(a3) == 22 == load("x9w3_result.json")["result"]["exact_optimum_if_closed"])
 
 summary = {
     "schema": "n11-residual72-worker-partition-exact-closures-verify-20261121-v1",

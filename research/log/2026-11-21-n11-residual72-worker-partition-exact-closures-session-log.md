@@ -85,3 +85,25 @@ cross9 = 9石層の同class型目的（全多重所属9石クラスが2-root）�
   （pairwise proxy・クラス計数・実測hit）が高価値。
 - **REFUTED-D10はLOSS証明ではない。標準11×11空盤・二石root {49,60}/{59,60}・S2 {59,60}・
   class 1/2/4 verdictsはすべてUNKNOWNのまま。**
+
+
+## 事後追加（addendum・2026-11-21T14:1xZ出版）
+
+part3出版後、実行時間が残っていたため9石層のclosure samplerを拡張した。
+
+- `worker_partition_bnb_closure_20261121.mjs` に `x9w{N}` モードを追加（mode名からWを一般化・
+  seedは305093817+W・x9のW=4固定と排他的な新モードで既存結果に非干渉）。
+- **W=2の9石層cut大域最適 17**（1,198 nodes・100s・閉包）・**W=3の大域最適 22**
+  （157,346 nodes・閉包）を確定。両モード2回再実行で時間欄以外byte-identical。
+- **構造的発見**: x9w2 witnessはw2class/w2pairのclosure witnessと完全同一の分割。
+  つまりW=2では**1つのbalanced分割がclass10最適732・pair10最適737・cross9最適17の
+  3層大域最適を同時に達成**する。W=3では10石層のclosure witness自身もcross9 22
+  （=大域最適）を達成しており、さらに別分割（x9w3 witness）も22に到達することから
+  9石層22の最適分割は非一意（x9の47と同様の非一意性だが、こちらは値が大域最適確定済み）。
+- 検証器に20 gate追加（x9w2/x9w3のwitness再計算・閉包表記・same-partition性
+  （w2classと同一）・w3class witnessとの非同一・10石層witnessの9石層最適値の同時達成）。
+  **ALL 162 GATES PASS**。`experiment_summary_20261121.json` をv2へ更新
+  （proven_global_optimaにx9_w2_cross9=17・x9_w3_cross9=22、gates_total 162、
+  structural_findings_addendum節を追加）。
+- 依然として**W=4/6・x9(W=4)・T1・T2の大域最適性はすべてUNKNOWN**。
+  標準11×11空盤・二石root・S2・class 1/2/4 verdictsはすべてUNKNOWNのまま。

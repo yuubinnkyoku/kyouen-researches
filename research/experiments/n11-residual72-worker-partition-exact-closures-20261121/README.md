@@ -63,17 +63,19 @@ Structural findings:
 - Large-budget anneal: T1 modes (1,500 restarts each) never beat 1937/1939; T2 modes (2,500 restarts × 60,000 iterations each) never beat 1998/2000. **T2 global optimality remains UNKNOWN** (no closure run).
 - Heavy-first ordering helped w2/w3 but did not close w4/w6/x9; index and dynamic orderings also failed to close x9 within budget.
 
+- **Addendum (9-stone-layer closures, same day)**: the branch-and-bound also closed the 9-stone-layer cut for `W = 2` and `W = 3`: exact global optima **cross9 = 17** (1,198 nodes) and **cross9 = 22** (157,346 nodes). The x9w2 witness is the **same partition** as the w2class/w2pair witness: for `W = 2` one single balanced partition simultaneously attains class10 732, pair10 737, and cross9 17 — all three optima co-attained. At `W = 3` the 10-stone-optimal witness also attains cross9 22; a distinct x9w3 partition attains 22 as well, so the 9-stone optimum 22 is non-unique.
+
 ## Output and verification
 
-`output/` contains 19 JSON results: 9 closure-suite runs, 4 one-swap exhaustive checks, 4 anneal searches, the consolidated `experiment_summary_20261121.json`, and the verifier result.
+`output/` contains 21 JSON results: 11 closure-suite runs (9 plus addendum x9w2/x9w3), 4 one-swap exhaustive checks, 4 anneal searches, the consolidated `experiment_summary_20261121.json`, and the verifier result.
 
-`scripts/verify_worker_partition_20261121.py` is a fail-closed independent verifier (pure Python, no code shared with the JS search/solver): it re-pins all five inputs, rebuilds all objectives from the raw class lists, reproduces the published candidate-lane statistics (including its one-swap check), reproduces the exact-class-membership experiment's published `partition_stats`, recomputes every witness, and checks closure wording, same-partition findings, the super-witness, and T2 infeasibility. **ALL 142 GATES PASS**. Re-run from the repository root, it reproduces the checked-in verifier result byte-identically.
+`scripts/verify_worker_partition_20261121.py` is a fail-closed independent verifier (pure Python, no code shared with the JS search/solver): it re-pins all five inputs, rebuilds all objectives from the raw class lists, reproduces the published candidate-lane statistics (including its one-swap check), reproduces the exact-class-membership experiment's published `partition_stats`, recomputes every witness, and checks closure wording, same-partition findings, the super-witness, and T2 infeasibility. **ALL 162 GATES PASS** (142 in the first publication plus 20 addendum gates: x9w2/x9w3 witness recomputation, closure wording, same-partition check against w2class, distinctness from w3class, and 9-stone co-attainment of the 10-stone witnesses). Re-run from the repository root, it reproduces the checked-in verifier result byte-identically.
 
 Reproduction (from the repository root; run scripts print JSON to stdout):
 
 ```sh
 node research/experiments/n11-residual72-worker-partition-exact-closures-20261121/scripts/worker_partition_bnb_closure_20261121.mjs w3class 100 > w3class_result.json
-#   args: <mode> [budget_seconds] [anneal_restarts]; modes: w2class|w2pair|w3class|w3pair|w4class|w4pair|w6class|w6pair|x9
+#   args: <mode> [budget_seconds] [anneal_restarts]; modes: w2class|w2pair|w3class|w3pair|w4class|w4pair|w6class|w6pair|x9|x9w{N}
 node research/experiments/n11-residual72-worker-partition-exact-closures-20261121/scripts/worker_partition_witness_search_20261121.mjs t2class 2500 > t2class_result.json
 #   modes: t1class|t1pair|t2class|t2pair|oneswapT1class|oneswapT1pair|oneswapT2class|oneswapT2pair
 python3 research/experiments/n11-residual72-worker-partition-exact-closures-20261121/scripts/verify_worker_partition_20261121.py
