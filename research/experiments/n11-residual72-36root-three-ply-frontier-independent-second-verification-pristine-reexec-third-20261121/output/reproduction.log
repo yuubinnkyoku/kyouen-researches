@@ -1,0 +1,35 @@
+== t36 frontier third-verification battery reproduction (batt dir, 2026-11-21T07:xxZ) ==
+== B1: fresh base b1, all stages (pin fetch x6 + recon 2-ref fetch x4 + machine placement + rerun 4x ~16s each + tampers 2x on audit-free fresh trees) ==
+third harness gates 56 all_pass True
+
+real	1m4.855s
+user	1m2.503s
+sys	0m0.389s
+B1 captured rc=0
+== B2: same base b1, all stages re-run (incl. pin re-fetch and recon re-fetch) ==
+third harness gates 56 all_pass True
+
+real	1m2.729s
+user	1m1.746s
+sys	0m0.339s
+B2 captured rc=0
+== B1f: fresh base b1f, all stages (independent fresh-base capture after B2 overwrote the shared audit path) ==
+third harness gates 56 all_pass True
+
+real	1m2.883s
+user	1m1.885s
+sys	0m0.350s
+B1f captured rc=0
+== B3: isolated fresh base b3 + env -i isolated HOME/TMPDIR + PYTHONHASHSEED=random + different cwd ==
+third harness gates 56 all_pass True
+
+real	1m3.332s
+user	1m2.301s
+sys	0m0.376s
+B3 captured rc=0
+== cmp four captures (B1f fresh-base / B2 same-base content / B3 isolated) ==
+B1f==B2 byte-identical
+B1f==B3 byte-identical
+407d649dde8e791447d160dab39ebc71f50ea2aed704e7b145153b494c7b6156  batt_t36/capture_b1f.json
+407d649dde8e791447d160dab39ebc71f50ea2aed704e7b145153b494c7b6156  batt_t36/capture_b1.json
+407d649dde8e791447d160dab39ebc71f50ea2aed704e7b145153b494c7b6156  batt_t36/capture_b3.json
