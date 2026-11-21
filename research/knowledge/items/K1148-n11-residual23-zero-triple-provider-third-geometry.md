@@ -46,3 +46,4 @@ evidence: >-
   和集合は8根で、5根は共円四点を含み、3根は安全だが除外50根に含まれる。別cwd・HOME・
   PYTHONHASHSEEDの3実行で監査JSONがbyte-identical。入力fixtureは固定転記であり、検証器は
   元正本を実行時取得しない。
+---

@@ -1,3 +1,4 @@
+---
 id: K1192
 title: "36root-three-ply frontier（K1084）独立第二検証のpristine再実行第三検証"
 kind: verification

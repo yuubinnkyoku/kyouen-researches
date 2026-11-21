@@ -11,7 +11,7 @@ relations:
   note: M_{4,7}=13の第二certificate（K0318非依存の閉包）。K1182のstatus proved・Mの値13は一切変更しない
 - type: depends_on
   target: K1177
-  note: 系のcertificate併合で使用する既刊正本: q=7 def 全幅掃引 13..85（sat2.js CNF・pinned kissat 4.0.4・rc=20・INDET 0）・m=12 不足極大 witness（下界）・m=13/16 capacity witness・records.jsonl 112レコード
+  note: "系のcertificate併合で使用する既刊正本: q=7 def 全幅掃引 13..85（sat2.js CNF・pinned kissat 4.0.4・rc=20・INDET 0）・m=12 不足極大 witness（下界）・m=13/16 capacity witness・records.jsonl 112レコード"
 - type: uses
   target: K1182
   note: m=86 genfast3 掃引 UNSAT（conflicts 5930・2回bit-exact）と m=87,88 UNSAT（5191/6072）の支持証拠。定理自体（m≤86）は掃引にもK0318にも依存しない

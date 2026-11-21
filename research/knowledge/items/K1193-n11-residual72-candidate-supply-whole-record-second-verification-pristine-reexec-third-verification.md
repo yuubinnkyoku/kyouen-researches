@@ -1,3 +1,4 @@
+---
 id: K1193
 title: "candidate-supply whole-record（K1075正本側）独立第二検証のpristine再実行第三検証"
 kind: verification

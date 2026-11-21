@@ -2,12 +2,12 @@
 id: K1149
 kind: computation
 status: computed
-title: K1146代替9根depth-10掃引の全probe再実行による独立第二検証: 24/24 gate PASS・passA/passB双方18/18 probe完全一致・pristine再assemble byte-identical・knowledge READMEのSHA-256転写ミス1件をfail-closed pinが捕捉（行閉鎖0）
+title: "K1146代替9根depth-10掃引の全probe再実行による独立第二検証: 24/24 gate PASS・passA/passB双方18/18 probe完全一致・pristine再assemble byte-identical・knowledge READMEのSHA-256転写ミス1件をfail-closed pinが捕捉（行閉鎖0）"
 topics: [search-methods, certificates, verification]
 aliases:
-  - full re-execution second verification of the K1146 replace-9 depth-10 sweep (the K1144 protocol applied to the replace-9 lane): all 18 published probes (9 roots x both AND orderings) re-run with the repo-pinned runner v17 (git blob c132cc64…) in two passes — pass A in this tree, pass B in an isolated cwd/HOME/input-copy tree
+  - "full re-execution second verification of the K1146 replace-9 depth-10 sweep (the K1144 protocol applied to the replace-9 lane): all 18 published probes (9 roots x both AND orderings) re-run with the repo-pinned runner v17 (git blob c132cc64…) in two passes — pass A in this tree, pass B in an isolated cwd/HOME/input-copy tree"
   - both passes match the published records 18/18 on nodes/loss/capped/terminalStoneRange (nodes totals 3,574,172 == published in each pass); fresh classification reproduces WIN8-D10 candidate 00000000010000809002000040002001 plus REFUTED-D10 8 roots with zero inter-ordering conflicts; pilot_d6 control passes 36/36 probes
-  - pristine re-assembly: the published K1146 sweep machine re-executed in an isolated tree on the published probe records reproduces the published volume JSON byte-identically (SHA-256 e8f5d674…bf3eebf…, 20/20 gates); the audit master itself is byte-identical across 3 assembly runs in 2 environments
+  - "pristine re-assembly: the published K1146 sweep machine re-executed in an isolated tree on the published probe records reproduces the published volume JSON byte-identically (SHA-256 e8f5d674…bf3eebf…, 20/20 gates); the audit master itself is byte-identical across 3 assembly runs in 2 environments"
 relations:
   - type: verifies
     target: K1146

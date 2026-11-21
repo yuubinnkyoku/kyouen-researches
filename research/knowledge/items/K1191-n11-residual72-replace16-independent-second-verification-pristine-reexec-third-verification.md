@@ -1,3 +1,4 @@
+---
 id: K1191
 title: "replace16（K1089）独立第二検証のpristine再実行第三検証"
 kind: verification

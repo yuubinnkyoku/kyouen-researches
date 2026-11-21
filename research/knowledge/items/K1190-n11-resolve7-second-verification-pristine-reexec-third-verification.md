@@ -1,3 +1,4 @@
+---
 id: K1190
 title: "resolve7（K1072）第二検証のpristine再実行第三検証"
 kind: verification
