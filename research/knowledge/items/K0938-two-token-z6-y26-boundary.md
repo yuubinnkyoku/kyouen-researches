@@ -13,7 +13,7 @@ relations:
   target: K0873
   note: C子の評価にz=5の全Grundy公式を使用する
 - type: depends_on
-  target: K0936
+  target: K1198
   note: B子とx=26境界のA子をz=6,y=25全Grundy公式で評価する
 artifacts:
 - path: research/experiments/vertical-fiber-two-token-z6-y26-boundary-20261118/report.md

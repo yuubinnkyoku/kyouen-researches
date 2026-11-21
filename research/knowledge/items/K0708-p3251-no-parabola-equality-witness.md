@@ -22,7 +22,7 @@ relations:
   target: K0707
   note: 旧d別監査では削除時代入失効の修正版を使用。別経路の単一CNFはRUP限定検査と空節処理修正版LRATで再検査
 - type: depends_on
-  target: K0975
+  target: K1200
   note: 全1,625 d のDRAT監査（drat-trim + 修正版増分チェッカー）
 artifacts:
 - path: research/experiments/parabola-single-cnf-audits-20261110/check_case.py

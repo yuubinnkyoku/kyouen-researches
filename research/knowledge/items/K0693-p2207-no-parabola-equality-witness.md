@@ -16,7 +16,7 @@ relations:
   target: K0101
   note: p=2207の単一CNF独立監査による等号不達成が、全奇素数での等号への反例を与える
 - type: depends_on
-  target: K0974
+  target: K1199
   note: 全1,103 d のDRAT監査（drat-trim）
 artifacts:
 - path: research/experiments/parabola-p2207-single-cnf-audit-20261110/schema.py
