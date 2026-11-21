@@ -1,0 +1,11 @@
+{"session":"2026-11-21T20:2xZ (this lane, second environment instance after the natural pause at ~20:09Z; the same check was also run and passed in the first instance before compaction)",
+ "claim":"The published fixed-width q4/q6 upper-bound reproducer q48_nearby_q6_bounds.py re-run in this environment (python3, no edits) produces an output byte-identical to the published research/experiments/fixed-width/output/q48_nearby_q6_bounds.json",
+ "result":"BYTE-IDENTICAL (7959 bytes, md5 e33a78b6f8c71657cdcee1f7c9a1188c, cmp exit 0)",
+ "inputs_pinned_byte_identical_to_main":{
+   "research/experiments/fixed-width/scripts/q48_nearby_q6_bounds.py":{"md5":"81fead2df3833fc3e6173456a0c5eb26","sha256":"c2255ca08d654f425029a8ab6a5c3df23c19ee8eac6d033c86719781ae298ad4"},
+   "research/experiments/fixed-width/scripts/q48_exact_threshold.py":{"md5":"56876f6a2ea3e3a26c044f8a2abbfb0c"},
+   "research/experiments/fixed-width/scripts/curve_packing_fixed_width.py":{"md5":"a9575c0ab2d6cb7023d68657633cae98"},
+   "research/experiments/fixed-width/output/q48_nearby_q6_bounds.json":{"md5":"e33a78b6f8c71657cdcee1f7c9a1188c","bytes":7959}},
+ "reproduced_output":"output/repro/q48_nearby_q6_bounds_repro.json",
+ "covers":"q48-nearby-q6-bounds.md sections 1-5 as enumerated by the script: packing upper bound U=103, the four-row chord classification (1,3,3,1)/(35,51,63,73)/(73,63,51,35), the gap graph, the blocker budget 67, and the 4x15 witness (19 stones)",
+ "runtime_sec":0.914}
