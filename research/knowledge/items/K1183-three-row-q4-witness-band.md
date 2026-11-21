@@ -1,6 +1,6 @@
 ---
 id: K1183
-title: "3×m・q=4: witness band m=4..23・m=24..27 は witness-free（P(24..27)） — M_{3,4} ∈ [24, 69]（m≥28 未掃引）"
+title: "3×m・q=4: witness band m=4..23・m=24..31 は witness-free（P(24..31)） — M_{3,4} ∈ [24, 69]（m≥32 未掃引）"
 kind: proposition
 status: computed
 topics: [rectangles, maximal-safe, variants]
@@ -67,14 +67,29 @@ artifacts:
 - path: research/experiments/three-row-q4-enumeration-20261121/output/closure_check_13_27.jsonl
   role: data
   note: "crossing-supply 補題による lemma 41プロファイル算術キル台帳（D(m)=Σ(m−rᵢ) > 2·nDef·C(k,3)・m≥22 で41/41・m=4..12 で全数列挙と矛盾 0 を validate）"
+- path: research/experiments/three-row-q4-enumeration-20261121/output/ext28plus/family_sweep_28_31.jsonl
+  role: data
+  note: "ext28plus 拡張: m=28..31 family (m,Y) 集計12行（chunk ia 区間リスト・configs/safe/deep 和・a0/a1/a2 全0）"
+- path: research/experiments/three-row-q4-enumeration-20261121/output/ext28plus/dx_sweep_28_31.jsonl
+  role: data
+  note: "ext28plus 拡張: fast 13プロファイル × m=28..31 全 count 0（52行）"
+- path: research/experiments/three-row-q4-enumeration-20261121/output/ext28plus/crossval_summary_ext28_31.json
+  role: data
+  note: "ext28plus 検証総括: 分割完全性（ia 区間 exactly-once・configs 和 C(m,3)²）・family/fast 全0・閉包 41/41・m=23 陽性対照一致の全検査 PASS（同一 dir の agg_chunks.py が生成）"
+- path: research/log/2026-11-21-three-row-q4-enumeration-m28-single-owner-note.md
+  role: log
+  note: "m≥28 拡張の単一オーナー宣言（2026-11-21T08:38Z・宣言時 HEAD f57060f8・出版 commit e9c3cd86・受入条件5項目）"
+- path: research/log/2026-11-21-three-row-q4-m28ext-session-log.md
+  role: log
+  note: "ext28plus セッション log（掃引実行記録・chunk 集計・運用教訓・次課題 m≥32 治具拡張）"
 - path: research/experiments/three-row-q4-enumeration-20261121/scripts/wsearch34.js
   role: verifier
   note: "family (3,3,a) 円表構造完全探索器（md5 526cf1c3・最終正本 commit 01ac240c）"
 - path: research/experiments/three-row-q4-enumeration-20261121/scripts/dx34.js
   role: verifier
   note: "def-mode 列挙器 direct/fast（md5 b02235a9・fast は family・(3,a,b)・(2,2,2) を circle-class 表で厳密処理・selftest m=4..12 で direct == fast）"
-scope: "'有限機械検証: (SAT 側・kissat 4.0.4 linux-amd64 md5 3a5eba830aa6008a604fcc9bbe99a325) 3×m q=4 幅 4..23 の def-mode SAT 判定と witness、幅 4..8 の全数分類、9幅の census 2実装一致、m=24 の行和63分割全滅による witness-free 判定（較正1件含む35分割ピースは第二環境 bit-exact 再検証）。(列挙閉包側・SAT 非依存) 63プロファイル完全分割（family 9: wsearch34.js 構造完全探索 / fast 13: dx34.js circle-class 列挙 / lemma 41: crossing-supply 算術キル）で m=24..27 を掃引し全て witness-free: P(25), P(26), P(27) はこちらの方法のみで確定・P(24) は両方法で一致。m≥28 は未掃引であり一切主張しない。上界 69 は K0024 引用。標準 11×11 空盤等には無関係。'"
-evidence: "'SAT 側: 各幅の判定は決定論的 kissat run・witness は 2系統独立検証 (sat.js verifyConfig + verify34.py・21/21 PASS〔中央行系20+外側行系1・witness 794円の独立交差検査は parity_lemmas.py で機械確認〕)・m=4..8 では独立全数列挙 (brute34.py) が欠損極大の存在件数まで一致。m=23 は中央行系 row-split と外側行系行和分割の両面で判定。census は JS/Python 2実装で 9幅 byte-identical。UNSAT 側: m=24 の行和63分割 ({0..3}^3 ∖ (3,3,3)) は row-k piece (sat3) 4件 + row-sum piece (sat4) 12件の計16件で exactly-once 被覆 (partition_closure.py 機械検査・pending/uncovered 0) し全 UNSAT・決定打は (2,3,3) rs=2,671,271 conflicts。全35分割ピース+較正1件は第二環境で CNF 再生成・kissat 再実行され conflicts が出版台帳と bit-exact 一致・交差符号化 (m=24 lexH-only 再判定 x2 UNSAT・m=23 V鏡像 rspec (3,3,2) 交差で同一 witness 型再現) で verdict 一致。S/X/Y パリティ補題は有限剰余列挙で機械完証明・被覆円家族 identity は exact-rational 2,124 checks 0 mismatch。列挙閉包側: m=24..27 で fast 52/52 count 0・family 12掃引 0 witness・lemma 41/41 算術キル(m≥22)。検証チェーン (crossval_summary.json overall PASS): dx34 direct ≡ brute34.py m=4..8 全プロファイル一致（def totals 182/674/1724/4607/11542）・fast ≡ direct m=4..12（selftest・mismatch 0）・wsearch34 ≡ brute family 15実行一致・m=23 陽性対照 witness は sat.js verifyConfig + witness_check.py (整数行列式) の2系統 PASS かつ先行出版 wit_3x23_outer_4 と石集合 byte-exact 再発見・補題キル台帳は m=4..12 全数列挙と矛盾 0。'"
+scope: "'有限機械検証: (SAT 側・kissat 4.0.4 linux-amd64 md5 3a5eba830aa6008a604fcc9bbe99a325) 3×m q=4 幅 4..23 の def-mode SAT 判定と witness、幅 4..8 の全数分類、9幅の census 2実装一致、m=24 の行和63分割全滅による witness-free 判定（較正1件含む35分割ピースは第二環境 bit-exact 再検証）。(列挙閉包側・SAT 非依存) 63プロファイル完全分割（family 9: wsearch34.js 構造完全探索 / fast 13: dx34.js circle-class 列挙 / lemma 41: crossing-supply 算術キル）で m=24..27 を掃引し全て witness-free: P(25), P(26), P(27) はこちらの方法のみで確定・P(24) は両方法で一致。ext28plus 拡張（同一 pin scripts・m=30/31 は A-side chunk 分割・集計器 agg_chunks.py が区間の exactly-once 分割〔configs 和 = C(m,3)²〕を機械検査）で m=28..31 も掃引し全て witness-free: P(28), P(29), P(30), P(31) は列挙閉包のみで確定。m≥32 は未掃引であり一切主張しない。上界 69 は K0024 引用。標準 11×11 空盤等には無関係。'"
+evidence: "'SAT 側: 各幅の判定は決定論的 kissat run・witness は 2系統独立検証 (sat.js verifyConfig + verify34.py・21/21 PASS〔中央行系20+外側行系1・witness 794円の独立交差検査は parity_lemmas.py で機械確認〕)・m=4..8 では独立全数列挙 (brute34.py) が欠損極大の存在件数まで一致。m=23 は中央行系 row-split と外側行系行和分割の両面で判定。census は JS/Python 2実装で 9幅 byte-identical。UNSAT 側: m=24 の行和63分割 ({0..3}^3 ∖ (3,3,3)) は row-k piece (sat3) 4件 + row-sum piece (sat4) 12件の計16件で exactly-once 被覆 (partition_closure.py 機械検査・pending/uncovered 0) し全 UNSAT・決定打は (2,3,3) rs=2,671,271 conflicts。全35分割ピース+較正1件は第二環境で CNF 再生成・kissat 再実行され conflicts が出版台帳と bit-exact 一致・交差符号化 (m=24 lexH-only 再判定 x2 UNSAT・m=23 V鏡像 rspec (3,3,2) 交差で同一 witness 型再現) で verdict 一致。S/X/Y パリティ補題は有限剰余列挙で機械完証明・被覆円家族 identity は exact-rational 2,124 checks 0 mismatch。列挙閉包側: m=24..27 で fast 52/52 count 0・family 12掃引 0 witness・lemma 41/41 算術キル(m≥22)。検証チェーン (crossval_summary.json overall PASS): dx34 direct ≡ brute34.py m=4..8 全プロファイル一致（def totals 182/674/1724/4607/11542）・fast ≡ direct m=4..12（selftest・mismatch 0）・wsearch34 ≡ brute family 15実行一致・m=23 陽性対照 witness は sat.js verifyConfig + witness_check.py (整数行列式) の2系統 PASS かつ先行出版 wit_3x23_outer_4 と石集合 byte-exact 再発見・補題キル台帳は m=4..12 全数列挙と矛盾 0。ext28plus: family 12掃引（m=28/29 は全域1実行・m=30 は2chunk・m=31 は3chunk・a 計数 0・分割完全性は crossval_summary_ext28_31.json が全検査 PASS）・fast 52/52 count 0・閉包台帳 m=28..31 は41/41 closed・m=23 陽性対照は拡張環境でも同一 witness 2件（configs 3136441）を再発見して較正。'"
 ---
 
 # 3×m・q=4 行欠損極大 witness band — M_{3,4} ∈ [24, 69]
@@ -95,7 +110,7 @@ P(m) ⟺「3×m の全極大安全配置がちょうど (q−1)·3 = 9 石」（
    m=23 の外側行系（行0欠損・(2,3,3)型 8石 rows [2,3,3]・wit_3x23_outer_4）も
    行和分割 sat4 (2,3,3) piece SAT（1,004,683 conflicts）で判定し、witness は
    両系統検証 PASS。**両行系とも m=23 まで witness が存在する。**
-2. **m=24..27 は witness-free（P(24), P(25), P(26), P(27)）**: m=24 は行和分割（3行の石数 (a,b,c) ∈ {0..3}^3 ∖
+2. **m=24..31 は witness-free（P(24), …, P(31)）**: m=24 は行和分割（3行の石数 (a,b,c) ∈ {0..3}^3 ∖
    (3,3,3) の 63 triple を exactly-once に被覆）で掃引した。row-k piece（sat3・
    不足行の石数 k ∈ {0,1} を共有する 4 グループ ×(H,V鏡像)=4件〔rowY=1系2件+隣接
    行约束なしの対角鏡像2件〕…実際の構成は「いずれかの行が石数 ≤ 1」を殺す 4 piece
@@ -113,10 +128,15 @@ P(m) ⟺「3×m の全極大安全配置がちょうど (q−1)·3 = 9 石」（
    （family: 12掃引全 0 witness・fast: 52/52 count 0）。よって
    **witness band（欠損極大の存在幅）はちょうど {4,...,23} で終端**し、
    P(24) は SAT 分割と列挙閉包の 2 方法で一致、P(25), P(26), P(27) は
-   列挙閉包単独で確定（新規）。
-   ただし P は単調でない（m=27 witness-free でも m≥28 での witness 復活は否定
-   されない）。**M_{3,4} ∈ [24, 69]（不変）**: M=24 ⟺ P(m) が m ≥ 28 でもすべて
-   成立、残る不確定幅は 28..68 の 41 幅の掃引である。
+   列挙閉包単独で確定（新規）。ext28plus 拡張（宣言 e9c3cd86・同一 pin
+   scripts・m=30/31 は A-side chunk 分割・同梱集計器 agg_chunks.py が
+   exactly-once 分割〔configs 和 = C(m,3)²: m=30 16,483,600・m=31 20,205,025〕を
+   機械検査）が m=28..31 を同様に掃引し P(28), P(29), P(30), P(31) を
+   列挙閉包単独で確定した（family 12掃引・fast 52行全0・閉包 41/41）。
+   ただし P は単調でない（m=31 witness-free でも m≥32 での witness 復活は否定
+   されない）。**M_{3,4} ∈ [24, 69]（不変）**: M=24 ⟺ P(m) が m ≥ 32 でもすべて
+   成立、残る不確定幅は 32..68 の 37 幅の掃引（m≥32 は pinned wsearch34.js の
+   m≤31 上限超過のため治具拡張〔BigInt 化等〕が必要）である。
 3. **上界 69 は K0024 の引用値のまま**: K0318 の三つ組・点対充填は q=4 では改善を
    与えない（r = 3 で d1 = C(2,3) = 0・cross_cost = C(2,2) − 1 = 0）。K0318 正本の
    curve_packing_fixed_width.py を実行して U_{3,4} = 69 = min(A,B) を確認
@@ -136,7 +156,8 @@ P(m) ⟺「3×m の全極大安全配置がちょうど (q−1)·3 = 9 石」（
   ことが機械証明された。決定打が (2,3,3)（外側行欠損型）であることから、
   バンド終端は中央行系より外側行系で先に来る: 中央行欠損系の m=24 掃引は
   rowY=1+lexH piece（1.16M conflicts cap下）が未決で、外側行系が先に尽きた形。
-  幅 25..27 は列挙閉包で witness-free・28 以降での witness 復活の有無は open。
+  幅 25..31 は列挙閉包で witness-free・32 以降での witness 復活の有無は open
+  （pinned wsearch34.js が m≤31 上限のため m≥32 は治具拡張が必要）。
 - 証明候補は K0077 型の「円の局所形分類 + 一般計数」（3行板上の 4 点以上円は
   3行への切り方で有限分類可能）あるいは K1177 観察と同型のブロッキング計数。
   q=4 は r=3 の境界形状で K0318 型の被覆計数の項が全て退化するため、
@@ -147,10 +168,13 @@ P(m) ⟺「3×m の全極大安全配置がちょうど (q−1)·3 = 9 石」（
 - 各幅の SAT は実在 witness（2系統検証済み）による存在証明。m=24 の witness-free
   （P(24)）は 63 分割 piece の全 UNSAT + exactly-once 被覆台帳による有限機械証明
   （witness が無いので witness 検証方式ではなく台帳検査方式）。m=25..27 の
-  witness-free（P(25), P(26), P(27)）は SAT 非依存の列挙閉包（63プロファイル完了分割・
-  同じく witness が無いので検証は検証チェーン一致・陽性対照・全数列挙交差による）。
-  m ≥ 28 にはいかなる存在/非存在主張もしない（未掃引）。M_{3,4} ∈ [24,69] は
-  K0024 上界の引用と witness band + P(24..27) による区間であって、M の確定値の
+  witness-free（P(25), P(26), P(27)）と ext28plus 拡張の m=28..31 の
+  witness-free（P(28), P(29), P(30), P(31)）は SAT 非依存の列挙閉包
+  （63プロファイル完了分割・同じく witness が無いので検証は検証チェーン一致・
+  陽性対照・全数列挙交差・m=30/31 では chunk 分割完全性の機械検査による）。
+  m ≥ 32 にはいかなる存在/非存在主張もしない（未掃引・pinned wsearch34.js が
+  m≤31 上限のため治具拡張〔BigInt 化等〕が別途必要）。M_{3,4} ∈ [24,69] は
+  K0024 上界の引用と witness band + P(24..31) による区間であって、M の確定値の
   主張ではない。
 - 決定インスタンスの conflicts は pinned kissat の決定論的再現対象。
   INDET の cap 下 conflicts は環境依存の参考値。
