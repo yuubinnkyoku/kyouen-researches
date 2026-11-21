@@ -38,8 +38,13 @@ doubles, lower-bound-only value update, csv untouched. All conditions met.
    calibration gates: w45-05 id0 -> R=46, w45-00 id0 -> R=45) reaches **R=46 in
    16 placements** from 4 species families (w45-05, w45-11 directly; w45-13 and
    w45-16 via mirrored placements), with **no R=47 placement in the scan**
-   (bounded-family negative only). All 16 R=46 placements re-verified as 5x46
-   witnesses by engine verifymany and node (16/16 each; criterion
+   (bounded-family negative only). Addendum: scan-96 and scan-128 censuses
+   (4240 / 6416 placements, byte-identical doubles, gates re-asserted) show
+   **translation saturation** — max R stays 46, and both the 16 R=46 and 64
+   R=45 key sets are identical to the scan-60 sets; no R>=47 placement exists
+   in any D4/translation window up to shift 128
+   (`output/census-45w-saturation.json`). All 16 R=46 placements re-verified as
+   5x46 witnesses by engine verifymany and node (16/16 each; criterion
    witness_widths agree). Every width m in {45, 46} is therefore witnessed:
    **M_{5,4} in [47, 567]** (lower bound 45 -> 47; upper bound T_5 = 567
    unchanged, K1207). `mwq_stabilization.csv` unchanged (K1201/K1209/K1212
@@ -70,8 +75,9 @@ doubles, lower-bound-only value update, csv untouched. All conditions met.
   (README with method + claims + honesty record; the new surgery45.py plus the 4
   published scripts byte-identical; configs incl. the census config with calib
   anchors; outputs: control 16/16, m45 hunt jsonl, witness bank, criterion record,
-  census extract (full census byte-pinned and regenerable), verification
-  batteries for m=45 and all 16 R=46 placements, tamper checks, m=47 budget-2/3
+  census extract and translation-saturation record
+  (full censuses byte-pinned and regenerable), verification batteries for
+  m=45 and all 16 R=46 placements, tamper checks, m=47 budget-2/3
   negatives, staircase re-run; sha256 digests for outputs/scripts/published
   inputs, fetch-back byte-verified).
 - Session log: `research/log/2026-11-21-five-row-q4-band-45-46-surgery-session.md`.

@@ -28,6 +28,8 @@ This session diagnosed and closed an **incompleteness in the published engine** 
 
 `output/census-45w.json` R histogram (top): R=45: 64 placements, **R=46: 16 placements** (4 each from the w45-05, w45-11, w45-13, w45-16 families), **no R=47 within scan 60**. This is what fixes the m=46 witnesses and seeds the m=47 negative searches. The full census output (1,010,451 bytes) is byte-pinned in `digests.txt` and deterministically regenerable from the published engine + config; the repo carries `output/census-45w-extract.json` (calibration, full histogram, all 16 R=46 placements with stones).
 
+**Translation saturation** (addendum): scan-96 and scan-128 censuses over the same 17 species (4240 / 6416 placements, each byte-identical across 2 runs, calib gates re-asserted) keep max R = 46 — **no R≥47 placement appears in any D4/translation window up to shift 128**, and both the 16 R=46 and the 64 R=45 key sets are bit-for-bit identical to the scan-60 sets (`output/census-45w-saturation.json`; full outputs byte-pinned there, regenerable in ~4 s). Bounded-family negative only.
+
 ## The 17 witness species (`output/bank-45plus.json`, criteria in `output/criterion-45.txt`)
 
 | tag | maxx | witness_widths | R | note |

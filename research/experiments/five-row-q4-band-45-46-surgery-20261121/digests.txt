@@ -43,3 +43,10 @@ fe4edef046b751a7e4ce6d2f241be58e4f1aed8bd8eb3b35ff0bbf884644251f  configs/s5x39q
 # byte-identical to the published five-row-q4-band-41plus-20261121 outputs (commit 59b1251aa);
 # the copies stay in the local kit and are not duplicated in this repo dir.
 # The full census-45w.json (1,010,451 bytes) is regenerable; census-45w-extract.json is published.
+
+=== addendum: translation saturation scans (2026-11-21, same session) ===
+d67e9e319894917e49b9e68f2c9efdd09d8d140d8b4b0a900560af5c043cadfa  output/census-45w-s96.json (kit only; regenerable ~4s)
+df5481daf7f094f28b6e1820dba53e45a3dec5b29e63eb2c1e246179dc23e8d6  output/census-45w-s128.json (kit only; regenerable ~4s)
+bf4aeccc40897b6288ee3a9f912a17fd556797b296fef5da640a69db1fc978cc  configs/cfg-census-45w-s96.json
+0a81fbe401f2f218e51b65e26eec647e307508937946bcd4b9c8b8077f62ea31  configs/cfg-census-45w-s128.json
+5db60ef1c170d129abc4ca7cd256f986f6367fbfe36ef7b7cfe42425f5fd67cc  output/census-45w-saturation.json (published compact record)

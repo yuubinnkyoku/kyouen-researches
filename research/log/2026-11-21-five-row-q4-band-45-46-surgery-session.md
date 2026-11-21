@@ -44,6 +44,12 @@
    per width in a dedicated re-run (`output/staircase-45.txt`).
 8. **Band update**: M_{5,4} ∈ [47, 567] (lower bound 45 → 47, upper bound T_5=567
    unchanged, csv untouched). m=45 and m=46 both witnessed; m=47 UNDETERMINED.
+9. **Translation saturation (addendum, post-publication of part1/2)**: scan-96
+   and scan-128 censuses over the 17 species (4240/6416 placements, ~4 s each,
+   byte-identical doubles, calib gates re-asserted) keep max R=46; the 16 R=46
+   and 64 R=45 key sets are identical to scan-60's. No R≥47 placement in any
+   window up to shift 128 (`output/census-45w-saturation.json`, published in
+   part3; K1214 updated accordingly).
 
 ## Session-specific records
 
