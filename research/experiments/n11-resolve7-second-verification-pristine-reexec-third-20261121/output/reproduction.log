@@ -1,0 +1,29 @@
+== resolve7v third-verification battery reproduction (batt dir, 2026-11-21T06:11:24Z) ==
+== B1: fresh base, all stages (pin fetch + recon 2-ref fetch + rerun 4x + tampers 2x) ==
+third harness gates 90 all_pass True
+
+real	0m1.117s
+user	0m0.190s
+sys	0m0.158s
+B1 captured rc=0
+== B2: same base b1, all stages re-run (incl. pin refactor and recon re-fetch) ==
+third harness gates 90 all_pass True
+
+real	0m1.103s
+user	0m0.228s
+sys	0m0.127s
+B2 captured rc=0
+== B3: isolated fresh base b3 + env -i isolated HOME/TMPDIR + PYTHONHASHSEED=random ==
+third harness gates 90 all_pass True
+
+real	0m1.106s
+user	0m0.248s
+sys	0m0.112s
+B3 captured rc=0
+== cmp three captures ==
+B1==B2 byte-identical
+B1==B3 byte-identical
+0797c44e1df1ce7bbc16873da335e888110b3db2a0822d152a5f28074fecfdee  capture_b1.json
+0797c44e1df1ce7bbc16873da335e888110b3db2a0822d152a5f28074fecfdee  capture_b2.json
+0797c44e1df1ce7bbc16873da335e888110b3db2a0822d152a5f28074fecfdee  capture_b3.json
+11948 capture_b1.json
