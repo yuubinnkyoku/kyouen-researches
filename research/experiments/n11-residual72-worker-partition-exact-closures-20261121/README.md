@@ -65,11 +65,13 @@ Structural findings:
 
 - **Addendum (9-stone-layer closures, same day)**: the branch-and-bound also closed the 9-stone-layer cut for `W = 2` and `W = 3`: exact global optima **cross9 = 17** (1,198 nodes) and **cross9 = 22** (157,346 nodes). The x9w2 witness is the **same partition** as the w2class/w2pair witness: for `W = 2` one single balanced partition simultaneously attains class10 732, pair10 737, and cross9 17 — all three optima co-attained. At `W = 3` the 10-stone-optimal witness also attains cross9 22; a distinct x9w3 partition attains 22 as well, so the 9-stone optimum 22 is non-unique.
 
+- **Addendum 2 (witness neighborhood certificates, same day)**: exhaustive 486-swap neighborhoods around the UB witnesses: the W=4 super-witness is a **strict 1-swap local optimum in all three objectives simultaneously** (best neighbors class10 1962, pair10 1966, cross9 48 — every balanced swap strictly worsens), and the distinct 9-stone x9 witness is a (non-strict) cross9 1-swap local optimum (best neighbor 47). This is local-optimality evidence only, not a global-optimality proof.
+
 ## Output and verification
 
-`output/` contains 21 JSON results: 11 closure-suite runs (9 plus addendum x9w2/x9w3), 4 one-swap exhaustive checks, 4 anneal searches, the consolidated `experiment_summary_20261121.json`, and the verifier result.
+`output/` contains 22 JSON results: 11 closure-suite runs (9 plus addendum x9w2/x9w3), plus the addendum-2 witness-neighborhood certificate, 4 one-swap exhaustive checks, 4 anneal searches, the consolidated `experiment_summary_20261121.json`, and the verifier result.
 
-`scripts/verify_worker_partition_20261121.py` is a fail-closed independent verifier (pure Python, no code shared with the JS search/solver): it re-pins all five inputs, rebuilds all objectives from the raw class lists, reproduces the published candidate-lane statistics (including its one-swap check), reproduces the exact-class-membership experiment's published `partition_stats`, recomputes every witness, and checks closure wording, same-partition findings, the super-witness, and T2 infeasibility. **ALL 162 GATES PASS** (142 in the first publication plus 20 addendum gates: x9w2/x9w3 witness recomputation, closure wording, same-partition check against w2class, distinctness from w3class, and 9-stone co-attainment of the 10-stone witnesses). Re-run from the repository root, it reproduces the checked-in verifier result byte-identically.
+`scripts/verify_worker_partition_20261121.py` is a fail-closed independent verifier (pure Python, no code shared with the JS search/solver): it re-pins all five inputs, rebuilds all objectives from the raw class lists, reproduces the published candidate-lane statistics (including its one-swap check), reproduces the exact-class-membership experiment's published `partition_stats`, recomputes every witness, and checks closure wording, same-partition findings, the super-witness, and T2 infeasibility. **ALL 167 GATES PASS** (142 in the first publication, plus 20 addendum gates (x9w2/x9w3) and 5 addendum-2 witness-neighborhood gates: x9w2/x9w3 witness recomputation, closure wording, same-partition check against w2class, distinctness from w3class, and 9-stone co-attainment of the 10-stone witnesses). Re-run from the repository root, it reproduces the checked-in verifier result byte-identically.
 
 Reproduction (from the repository root; run scripts print JSON to stdout):
 
@@ -79,7 +81,10 @@ node research/experiments/n11-residual72-worker-partition-exact-closures-2026112
 node research/experiments/n11-residual72-worker-partition-exact-closures-20261121/scripts/worker_partition_witness_search_20261121.mjs t2class 2500 > t2class_result.json
 #   modes: t1class|t1pair|t2class|t2pair|oneswapT1class|oneswapT1pair|oneswapT2class|oneswapT2pair
 python3 research/experiments/n11-residual72-worker-partition-exact-closures-20261121/scripts/verify_worker_partition_20261121.py
-#   all 19 result JSONs must be present in output/; writes output/verify_worker_partition_20261121_result.json
+#   all 22 result JSONs must be present in output/; writes output/verify_worker_partition_20261121_result.json
+python3 research/experiments/n11-residual72-worker-partition-exact-closures-20261121/scripts/oneswap_witness_neighborhood_20261121.py
+#   addendum 2: witness-neighborhood certificates; writes output/oneswap_witness_neighborhood_20261121.json
+#   (requires w4class_result.json and x9_result.json in output/)
 ```
 
 Node counts for the closed modes are deterministic; wall-clock-bound modes will differ. w4/w6/x9 closure needs a stronger lower bound or a different method; those runs are recorded as honest not-closed results, not as optima.

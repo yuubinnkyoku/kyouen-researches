@@ -107,3 +107,17 @@ part3出版後、実行時間が残っていたため9石層のclosure sampler�
   structural_findings_addendum節を追加）。
 - 依然として**W=4/6・x9(W=4)・T1・T2の大域最適性はすべてUNKNOWN**。
   標準11×11空盤・二石root・S2・class 1/2/4 verdictsはすべてUNKNOWNのまま。
+
+
+## 事後追加2（addendum 2・2026-11-21T14:4xZ出版）
+
+- 出版済みUB witnessの1-swap全近傍（各486 swap）を独立測定。
+  **super-witness（1937/1939/47）はclass10・pair10・cross9の3目的すべてでstrict 1-swap局所最適**
+  （最良隣接1962/1966/48・すべてのbalanced swapが厳密に悪化）。9石層x9 witness（別分割・47）も
+  cross9について非厳密な1-swap局所最適（最良隣接47・改善0）。
+- `scripts/oneswap_witness_neighborhood_20261121.py`（独立測定機・入力3点pin・
+  witness読込cross-check・`/tmp/det`隔離環境でbyte-identical再現）を追加し、
+  検証器に5 gate（3目的の厳密局所最適・x9 witnessの改善0・成果物JSON整合）を追加。
+  **ALL 167 GATES PASS**。summary v3化。
+- この測定は局所最適性の証明のみで、**W=4/6・x9(W=4)・T1/T2の大域最適性はすべてUNKNOWNのまま**。
+  標準11×11空盤・二石root・S2・class 1/2/4 verdictsはすべてUNKNOWNのまま。

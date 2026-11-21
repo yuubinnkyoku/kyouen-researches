@@ -1,7 +1,7 @@
 {
  "schema": "n11-residual72-worker-partition-exact-closures-20261121-summary-v1",
  "date": "2026-11-21",
- "status": "worker-partition-geometry-exact-closures-and-ub-witnesses-v2-addendum",
+ "status": "worker-partition-geometry-exact-closures-and-ub-witnesses-v3-addendum",
  "inputs": {
   "census.json": "94fdb0c6e3503f1e9d19aaaf345f4478157c5a44374f10642c52325f346c2023",
   "partcand.json": "09b394b88cfb0246c278b335b82cfc5f8763f551c0f42c89403977b5e273918b",
@@ -342,7 +342,7 @@
   }
  },
  "independent_verification": {
-  "gates_total": 162,
+  "gates_total": 167,
   "all_pass": true
  },
  "interpretation_guard": [
@@ -360,6 +360,36 @@
   },
   "w3class_witness_also_attains_cross9_optimum_22": true,
   "x9w3_witness_distinct_from_w3class_witness": true,
-  "note": "for W=2 a single balanced partition attains all three layer optima; at W=3 the 9-stone-layer optimum 22 is non-unique (10-stone-optimal witness and a distinct partition both attain it)"
+  "note": "for W=2 a single balanced partition attains all three layer optima; at W=3 the 9-stone-layer optimum 22 is non-unique (10-stone-optimal witness and a distinct partition both attain it)",
+  "witness_oneswap_neighborhoods": {
+   "super_witness": {
+    "class10": {
+     "improving": 0,
+     "best_neighbor": 1962,
+     "strict_local_opt": true
+    },
+    "pair10": {
+     "improving": 0,
+     "best_neighbor": 1966,
+     "strict_local_opt": true
+    },
+    "cross9": {
+     "improving": 0,
+     "best_neighbor": 48,
+     "strict_local_opt": true
+    },
+    "feasible_swaps": 486
+   },
+   "x9_witness": {
+    "cross9": {
+     "improving": 0,
+     "best_neighbor": 47,
+     "strict_local_opt": false,
+     "nonstrict_local_opt": true
+    },
+    "feasible_swaps": 486
+   },
+   "note": "strict 1-swap local optimality of the super-witness in all three objectives and of the distinct x9 witness in cross9; local optimality only, global optima of W=4/W=6/x9/T1/T2 remain UNKNOWN"
+  }
  }
 }

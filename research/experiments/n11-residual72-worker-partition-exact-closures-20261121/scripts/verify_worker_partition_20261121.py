@@ -347,6 +347,34 @@ gate("w2class_witness_cross9_is_optimum_17", cross9(a2) == 17 == load("x9w2_resu
 a3 = groups_to_a(load("w3class_result.json")["witness"]["groups"], 3, 12)
 gate("w3class_witness_cross9_is_optimum_22", cross9(a3) == 22 == load("x9w3_result.json")["result"]["exact_optimum_if_closed"])
 
+# addendum 2 (same day): one-swap neighborhood certificates around the UB witnesses
+def nbhd(a, f):
+    base = f(a); feas = imp = 0; best = None
+    for i in range(N):
+        for j in range(i + 1, N):
+            if a[i] == a[j]:
+                continue
+            b = a[:]; b[i], b[j] = b[j], b[i]
+            feas += 1
+            zv = f(b)
+            if zv < base:
+                imp += 1
+            if best is None or zv < best:
+                best = zv
+    return feas, imp, best
+swp = groups_to_a(load("w4class_result.json")["witness"]["groups"], 4, 9)
+for objname, f, base in (("class10", class10, 1937), ("pair10", pair10, 1939), ("cross9", cross9, 47)):
+    feas, imp, best = nbhd(swp, f)
+    gate("superwitness_oneswap_" + objname, feas == 486 and imp == 0 and best > base, f"{feas}/{imp}/{best}")
+x9p = groups_to_a(load("x9_result.json")["witness"]["groups"], 4, 9)
+feas, imp, best = nbhd(x9p, cross9)
+gate("x9witness_oneswap_cross9", feas == 486 and imp == 0 and best == 47, f"{feas}/{imp}/{best}")
+nb = load("oneswap_witness_neighborhood_20261121.json")
+gate("oneswap_nbhd_json_consistent",
+     nb["super_witness"]["class10"]["improving"] == 0 and nb["super_witness"]["class10"]["strict_local_opt"] is True
+     and nb["super_witness"]["pair10"]["strict_local_opt"] is True and nb["super_witness"]["cross9"]["strict_local_opt"] is True
+     and nb["x9_witness"]["cross9"]["improving"] == 0 and nb["x9_witness"]["cross9"]["best_neighbor"] == 47)
+
 summary = {
     "schema": "n11-residual72-worker-partition-exact-closures-verify-20261121-v1",
     "gates_total": len(GATES),

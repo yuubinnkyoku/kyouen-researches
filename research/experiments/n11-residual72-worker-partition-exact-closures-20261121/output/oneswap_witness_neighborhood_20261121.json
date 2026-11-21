@@ -1,0 +1,40 @@
+{
+ "schema": "n11-residual72-worker-partition-oneswap-witness-neighborhood-20261121-v1",
+ "super_witness": {
+  "class10": {
+   "feasible": 486,
+   "improving": 0,
+   "best_neighbor": 1962,
+   "base": 1937,
+   "strict_local_opt": true,
+   "nonstrict_local_opt": true
+  },
+  "pair10": {
+   "feasible": 486,
+   "improving": 0,
+   "best_neighbor": 1966,
+   "base": 1939,
+   "strict_local_opt": true,
+   "nonstrict_local_opt": true
+  },
+  "cross9": {
+   "feasible": 486,
+   "improving": 0,
+   "best_neighbor": 48,
+   "base": 47,
+   "strict_local_opt": true,
+   "nonstrict_local_opt": true
+  }
+ },
+ "x9_witness": {
+  "cross9": {
+   "feasible": 486,
+   "improving": 0,
+   "best_neighbor": 47,
+   "base": 47,
+   "strict_local_opt": false,
+   "nonstrict_local_opt": true
+  }
+ },
+ "interpretation": "strict 1-swap local optimality only; NOT a global-optimality proof; T1/T2/W=4/W=6/x9 global optima remain UNKNOWN"
+}
