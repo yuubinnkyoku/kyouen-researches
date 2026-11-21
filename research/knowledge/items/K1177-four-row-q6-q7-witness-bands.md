@@ -125,4 +125,13 @@ P(m) ⟺「4×m の全極大安全配置がちょうど (q−1)·4 石」とす�
 
 ## 事後閉包（K1182・2026-11-21）
 
-M_{4,7} = 13 が K1182 で閉じた（本項出版後の closure レーンによる）。根拠の分担は: 本項の q=7 有限掃引 13..85（主張 2・監査済み records）が帯 [13,85] の有限排除を担い、K0318 の証明済み一般上界 U_{4,7}=81 が [81,∞) を担い、本項の m=12 witness（主張 2）が下界を担う。さらに closure レーンは m=86..88 の直接掃引（genfast3 移植・全幅 UNSAT・(4,86,7) 的 `--lex=H` 交差符号化も UNSAT）を支持証拠として出版し、実験 dir `four-row-q7-stabilization-closure-20261121/` に records 108→112 の追記（本項の records.jsonl に反映済み・再監査 problems 0）とともに収めた。q=6 の部分（M_{4,6} = 16 or >= 30）は本項のままで未閉鎖（U_{4,6}=103 と組み合わせれば M_{4,6} = 16 or ∈ [30,103]）。本項の主張本文・scope に変更はない。
+M_{4,7} = 13 が K1182 で閉じた（本項出版後の closure レーンによる）。根拠の分担は: 本項の q=7 有限掃引 13..85（主張 2・監査済み records）が帯 [13,85] の有限排除を担い、K0318 の証明済み一般上界 U_{4,7}=81 が [81,∞) を担い、本項の m=12 witness（主張 2）が下界を担う。さらに closure レーンは m=86..88 の直接掃引（genfast3 移植・全幅 UNSAT・(4,86,7) 的 `--lex=H` 交差符号化も UNSAT）を支持証拠として出版し、実験 dir `four-row-q7-stabilization-closure-20261121/` に records 108→112 の追記（本項の records.jsonl に反映済み・再監査 problems 0）とともに収めた。q=6 の部分は本項のままで未閉鎖（下記「第2次帯延伸」により M_{4,6} = 16 or ∈ [32,103]）。本項の主張本文・scope に変更はない（第2次帯延伸も追記として区別）。
+
+## 第2次帯延伸（q=6・m=30,31・2026-11-21）
+
+本項の q=6 witness-free band を 2 幅延伸した。正本データは frontier 実験 dir の records.jsonl 112→114（tag s4x30q6_def・s4x31q6_def）・output/q6ext/（solve log・gen meta・較正 meta）・scripts/append_records_q6.js。
+
+1. **(4,30,6)・(4,31,6) def-mode UNSAT**（kissat 4.0.4 pinned〔3a5eba83…〕・rc=20・conflicts 3,091,289 / 3,492,659・process-time 202.54 / 237.06 s・INDET 0）。生成は genfast3.js 弦対抽象円 census（md5 12c2bd9c…・q=6=w+2 への適用は q ≥ w+2 の完全性論・closure 実験dir で確立済み）。較正: 対照 (4,29,6) の CNF が本項の sat2.js 出版 CNF と byte 一致（md5 95816b6c…・curves 748・vars 16688・clauses 58033 同一）。同一 conflicts は先行実行（非出版・環境喪失前の記録値）とも bit-exact に一致した。
+2. 以上より q=6 witness band は m=6..15 のまま、witness-free band は **m=16..31** に伸びる。K0821/K1134 規約の鋭い形は **M_{4,6} = 16 or M_{4,6} >= 32**、代入上界 U_{4,6}=103（K0318）と組み合わせて **M_{4,6} = 16 or ∈ [32,103]**（残る未掃引幅 32..102 の 71 幅）。
+3. m=32 は未掃引。参考記録（非権威・先行セッションの記録値）: plain-def 280s cap で INDET（打切り時 4,060,733 conflicts）・def+lex=H 200s cap でも INDET（2,921,868）— lex=H は決定的加速ではない。
+4. 本節は主張 1・2・4 の q=6 側の数値を本節のとおり読み替えるものとする（確定幅 16..29 → 16..31・M 候補帯 [30,103] → [32,103]）。それ以外の本文・scope に変更はなく、q=7 側と m=6..15 witness・capacity・lex 項目は不変。
