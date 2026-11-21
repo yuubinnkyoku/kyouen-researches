@@ -27,9 +27,10 @@ for a w-general q=4 class-counting theorem:
 (a) **w-general (q=4) blocking-counting class tables (w=3..7).** The K1202
     demand/supply inequality is re-derived for w >= 4 rows, where non-horizontal
     lines CAN block (<= w slab points): the per-deficient-row coverage of any
-    blocker is still <= max(0, 2 - u_i) (lines hit a row <= once and a line
-    blocker of a deficient row carries u_i = 0 on that row; circles meet a row
-    in <= 2 points), so the supply formula sum over stone triples T of
+    blocker is still <= max(0, 2 - u_i) (a circle meets a row in <= 2 points,
+    u_i of them triple stones, so <= 2 - u_i free cells of the row can lie on
+    it; a non-horizontal line meets a row <= once, u_i <= 1 per row and
+    <= 1 - u_i free cells), so the supply formula sum over stone triples T of
     sum_{i def} max(0, 2 - u_i(T)) remains a valid upper bound; 3-on-one-row
     triples (horizontal lines of full rows) are excluded exactly as in K1202.
     Deliverables: the complete class-bound table for every multiset class of
