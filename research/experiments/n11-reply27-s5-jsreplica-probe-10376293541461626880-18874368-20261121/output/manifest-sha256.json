@@ -1,0 +1,28 @@
+{
+ "schema": "n11-experiment-manifest-sha256-v1",
+ "experiment": "n11-reply27-s5-jsreplica-probe-10376293541461626880-18874368-20261121",
+ "note": "sha256 over the exact bytes of every file of this increment (the manifest itself is pinned by git history, not by this dict); base cache is NOT duplicated here (byte-pinned reference: research/experiments/n11-reply27-s5-jsreplica-probe-10376293541461626880-16785408-20261121/output/merged-exact-s5-after-js-probe-9.cache = 716436fc8bfff94b0501e3e5b9431fabb53872215e02cb711f8019aa1e607587)",
+ "files": {
+  "README.md": "e4f087313dbd0648cc69a9e825d7b13b82042f8647ba5860303e019e01dfba73",
+  "input/at15m-s5-10376293541461626880-18874368.input.csv": "2ff35c7e87970a56af18f17a448f600597b20027efb931818ea55ae842c3261c",
+  "input/at2m-s5-10376293541461626880-18874368.input.csv": "2ff35c7e87970a56af18f17a448f600597b20027efb931818ea55ae842c3261c",
+  "input/val/at2m-s5-1152921504606851072-536870946.input.csv": "ecc0299b8142abde201fcc40ea9666dac7368d0888d0600abc717af66ddfe348",
+  "input/val/at2m-s5-1188950301626860544-536870912.input.csv": "56aacb71769b231c9728dcc841d39f0d5cb579517d34769f0e7382516d4c3a62",
+  "input/val/first-15m-s5-1152921504606851072-536870946.input.csv": "ecc0299b8142abde201fcc40ea9666dac7368d0888d0600abc717af66ddfe348",
+  "input/val/second-15m-s5-1188950301626860544-536870912.input.csv": "56aacb71769b231c9728dcc841d39f0d5cb579517d34769f0e7382516d4c3a62",
+  "output/merged-exact-s5-after-js-probe-10.cache": "405d86cb63727d6cee9ea46c325dc8eebda75332a848b8791857b2adbfa6ed9c",
+  "output/post-probe/candidate-classes.csv": "611f965082c3ccd0fe95691f232db7934058b9af096f50f2fe14dadb5e2c345d",
+  "output/post-probe/shared-s5-tasks.csv": "516de83f967a3ae8eb35399eaebca5139a1c9b374a05db56d6a34d3df9929273",
+  "output/post-probe/strategy-analysis.json": "60a5180c9eb00fef1fa95de6c0bb8f9486947a0af5c25a86d6a55f0102a63102",
+  "output/probe-audit.json": "f32f06b023fee7bab8a5b223fb56ca8626d48a4892a7ec2e3f43175d0354be7a",
+  "output/raw/at15m-run2-s5-10376293541461626880-18874368.out.csv": "f60ee14dc044c9090a4b738de8e85792ee1ad3b6e4559fa4f57c1d0b9cd29b50",
+  "output/raw/at15m-s5-10376293541461626880-18874368.out.csv": "ffabb21d803834d3c79e541eb18f7a1e69c761402eba41b2af0ce6cc982d3d1c",
+  "output/raw/at2m-s5-10376293541461626880-18874368.out.csv": "9011ba72386b2e2606e7a2702540d73a581e753261659bf2f8e942fd99a98a25",
+  "output/raw/val-at2m-first.out.csv": "d766154adda47bd2af09905fa8d3e709abc7192596b928d5ff1251f1e1c911e7",
+  "output/raw/val-at2m-second.out.csv": "0af850c443c5574f5a806c760bc236f7937c109003e7bf6ca7e3b5b023646481",
+  "output/raw/val-first-15m.out.csv": "410cc98e3b34a51e9781d14a026ceb730005ec90561c2a9b86acee2be7c86419",
+  "output/raw/val-second-15m.out.csv": "170e942801b6d78571dca235000ccaa7eed0eb4495f45267b3d0110773cc5644",
+  "scripts/audit_probe.py": "20d66a556fde365fbab51defa370408cfc533fb79f2f9ef4e86b9f4e126e3487",
+  "scripts/jsreplay.js": "845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df"
+ }
+}
