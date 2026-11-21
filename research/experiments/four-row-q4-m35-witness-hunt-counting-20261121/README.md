@@ -24,12 +24,13 @@ configuration on the w x m slab (K1202's theory, w-general form):
   d*m - sum_{i def} r_i  <=  CAPS(r),   d = #{i : r_i <= 2},
 
 hence  m <= B(r) := (CAPS(r) + sum_def r_i) / d  (floored; B=0 iff the class
-is impossible at every m for which the demand applies). For w>=4,
-non-horizontal lines can also block (a line carries one point per row), but
-the per-row coverage bound max(0, 2-u_i) is unchanged: a line meets a row
-at most once and carries u_i = 0 on a deficient row's cells, a circle meets a
-row in at most 2 points; 3-on-one-row triples (a full row's own horizontal
-line) never cover deficient-row cells and are excluded. The complete tables
+is impossible at every m for which the demand applies). For w>=4 the per-row
+coverage bound max(0, 2-u_i) is unchanged: a blocker curve meets a deficient
+row i in at most 2 points if it is a circle (u_i of them are triple stones,
+so at most 2-u_i free cells of that row can lie on it) and at most 1 point if
+it is a non-horizontal line (at most 1-u_i <= 2-u_i); 3-on-one-row triples
+are exactly the horizontal lines of saturated rows (r_j = 3), which cover no
+deficient-row free cells and are excluded. The complete tables
 are published here: 34 classes (w=4), 55 (w=5), 83 (w=6), 119 (w=7); see
 `output/captable_q4.json` (computed by `scripts/captable_q4.py`, two
 implementations, assert-equal) and `input/expected_tables_w3_w7.json`
