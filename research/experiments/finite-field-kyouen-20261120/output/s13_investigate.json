@@ -1,0 +1,132 @@
+[
+  {
+    "check": "defect",
+    "q": 3,
+    "k_star": 5,
+    "capacity": 10,
+    "needed": 5,
+    "delta": 5
+  },
+  {
+    "check": "defect",
+    "q": 4,
+    "k_star": 5,
+    "capacity": 20,
+    "needed": 12,
+    "delta": 8
+  },
+  {
+    "check": "defect",
+    "q": 5,
+    "k_star": 5,
+    "capacity": 30,
+    "needed": 21,
+    "delta": 9
+  },
+  {
+    "check": "defect",
+    "q": 7,
+    "k_star": 5,
+    "capacity": 50,
+    "needed": 45,
+    "delta": 5
+  },
+  {
+    "check": "defect",
+    "q": 8,
+    "k_star": 5,
+    "capacity": 60,
+    "needed": 60,
+    "delta": 0
+  },
+  {
+    "check": "defect",
+    "q": 9,
+    "k_star": 6,
+    "capacity": 140,
+    "needed": 76,
+    "delta": 64
+  },
+  {
+    "check": "defect",
+    "q": 11,
+    "k_star": 6,
+    "capacity": 180,
+    "needed": 116,
+    "delta": 64
+  },
+  {
+    "check": "defect",
+    "q": 13,
+    "k_star": 6,
+    "capacity": 220,
+    "needed": 164,
+    "delta": 56
+  },
+  {
+    "check": "defect",
+    "q": 16,
+    "k_star": 6,
+    "capacity": 280,
+    "needed": 251,
+    "delta": 29
+  },
+  {
+    "check": "defect",
+    "q": 17,
+    "k_star": 6,
+    "capacity": 300,
+    "needed": 284,
+    "delta": 16
+  },
+  {
+    "check": "defect",
+    "q": 19,
+    "k_star": 7,
+    "capacity": 595,
+    "needed": 355,
+    "delta": 240
+  },
+  {
+    "check": "defect",
+    "q": 23,
+    "k_star": 7,
+    "capacity": 735,
+    "needed": 523,
+    "delta": 212
+  },
+  {
+    "check": "defect",
+    "q": 29,
+    "k_star": 7,
+    "capacity": 945,
+    "needed": 835,
+    "delta": 110
+  },
+  {
+    "check": "q13",
+    "target": 6,
+    "found": false,
+    "witness": null,
+    "best_unblocked": 12,
+    "trials": 30000,
+    "seconds": 7.36
+  },
+  {
+    "check": "q13",
+    "target": 7,
+    "found": true,
+    "witness": [
+      17,
+      70,
+      94,
+      115,
+      91,
+      38,
+      161
+    ],
+    "best_unblocked": 0,
+    "trials": 32,
+    "seconds": 0.01
+  }
+]
