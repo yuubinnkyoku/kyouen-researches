@@ -33,6 +33,11 @@ raising the lower bound of M_{7,4}.
   verifier of `seven-row-q4-width59-two-swap-20261115`. Verifies: 20 distinct
   stones, row counts [3,3,3,3,3,3,2], no line/circle through 4 stones, and
   every empty deficient-row cell blocked by a 3-stone line/circle.
+- `scripts/verify_third.py`: third independent system, pure brute force with
+  direct 4x4 determinants |x y x^2+y^2 1| over all quadruples / all
+  triple-cell combinations (record: `output/third_verify.json`).
+  The 13 anchor + representative witnesses (A57, B59, 4x width 60,
+  7x widths 61..67) pass all systems.
 
 ## Outputs
 
@@ -53,6 +58,8 @@ raising the lower bound of M_{7,4}.
   this greedy policy (no absence claim at width 68 overall).
 - `output/chain/verification_chain.json`: system #2 verification of one
   representative witness per chain width (61..67).
+- `output/third_verify.json`: system #3 verification record of the same
+  witness set (all pass).
 
 ## Honest limits
 
