@@ -613,3 +613,80 @@ kissat 4.0.4・cap 600s・resumable）:
    probe_free_column.py（第三 Fraction 実装: 7×31 unblocked 0）。**負対照 PASS**:
    (29,4) 除去の摂動配置を py・det 両系統が検出。
 5. **solver-free 構成**: SAT を使わず SAT 前線の先の witness を構成した 2 例目
+   （(6,4) m=46 空列追加に次ぐ）。class {3} (7,31,6) SAT は並走実行中で、結果の如何に
+   よらず surgery 構成の正当性は独立。witness の空列延伸は 7×32 で (31,3) 未遮断
+   （one-stone-short）。**witness 帯 m=6..31・M_{7,6} ∈ [32, 862]・前線 7×32**。
+6. script 開発中の 2 bug（両方修正・README 備考に記録）: (1) 除去石セルの再遮断と移動
+   re-add の扱いが非統一 → 曲線を「盤上全セル」表現で |C∩S'| = |st_on−R| + |A∩full| に統一。
+   (2) 直線キーの gcd 正規化漏れで同一幾何直線が重複（census 表示のみ影響・候補数
+   2,140,633 は修正前後で同一・列挙の完全性に無影響）。
+
+
+## 追記 (2026-11-15 (7,6) 7×32 two-edit surgery 完全負記録)
+
+seven-row-q6-m32-surgery-negative-20261115: m=31 witness を種に 7×32 の唯一の
+未遮断セル T=(31,3) を狙う ≤2 編集 surgery を完全列挙
+（**2,224,675 一意候補・safe かつ maximal 0 件**）。T センサスは c4=1
+（直線 y=3 のみ・m=31 を遮断した c4 円 {(22,2),(23,3),(25,4),(28,4)} は
+(31,3) を通らない）・c3=10。同一コードの m=30 seed/7×31/T=(30,3) レプリカが
+m=31 記録を完全再現（2,140,633 候補・unique witness・end-to-end 陽性対照）。
+m=31 witness の ≤2 編集近傍には 7×32 witness なし — m=29→30（0/1,781,021）と
+同様の疎分布。局所負記録・7×32 全体の不在主張ではない。
+**M_{7,6} ∈ [32, 862] 不変・前線 7×32**。次候補: class {3} (7,32,6) SAT・
+3 編集 surgery・別 seed。
+
+
+## 追記 (2026-11-16/18 実験の反映 — 幅60 1石移動近傍完全負・m=32 class-split 較正PASS/未決)
+
+1. **(7,4) 幅60 の 1 石移動近傍完全列挙負** (seven-row-q4-width60-one-swap-20261116):
+   基礎配置 base53（幅53 極大 20 石）と foundB_7x59（7×59 witness）の 2 seed から、
+   20 石のうち 1 石を除き 7×60 の全空セルに 1 点を加える全 1-for-1 候補を完全列挙
+   （各 seed 1,142 候補・安全 276 / 313 件・**安全かつ極大 0 件**）。
+   C++（外積共線・整数 4×4 行列式共円）と Python（正規化整数直線・円方程式）の
+   2 方式が候補数・安全数・極大数で完全一致（浮動小数点不使用）。
+   既存 2-for-2 完全列挙 (seven-row-q4-width59-two-swap-20261115) と合わせ、
+   2 seed からの **0/1/2 石等数交換近傍**に 7×60 の 20 石・単一欠損行型の
+   安全かつ極大配置は存在しない。局所負記録（3-for-3 以上・別 seed・別行占有型・
+   20 石以外は除外）。**M_{7,4} ∈ [60, 1929] 不変**。
+2. **(7,6) m=32 class {3} class-split** (seven-row-q6-m32-class-split-20261118):
+   対照 (7,30,6) class {3} を end-to-end で bit-exact 再現
+   （CNF md5 09e969b9… 一致・SAT 2,670,296 conflicts 一致・witness は出版 m=30
+   配置と同一・2 系統検証 PASS）— **本 toolchain は較正済み**。
+   本命 c3_7x32（CNF md5 bc10c516… byte-exact 再現）は **2 回とも実行環境障害により
+   未決**（10,985,236 @2890.0s・12,414,117 @2772.3s・同一決定経路通過確認・
+   honest record）。**判定は SAT/UNSAT いずれでも未確定 (IN FLIGHT)**。
+   **M_{7,6} ∈ [32, 862] 不変・前線 7×32**。
+3. **(2026-11-20 追記)**: 高速レーンが c3_7x32 の resume を単一オーナーとして着手
+   （cap 14400s・宣言 commit e30cec0a）。判定または cap 到達時に
+   experiment dir の records.jsonl と本項目へ結果を反映する。
+
+## 追記 (2026-11-21 2-for-2近傍とチェーンで7×60..7×67 witness — M_{7,4} ≥ 68)
+
+宣言: `research/log/2026-11-21-seven-row-q4-band-m60-single-owner.md`（宣言時 HEAD `e0d072fb`）。
+成果物: `research/experiments/seven-row-q4-witness-band-60plus-20261121/`。
+
+1. **幅60 witness**: 2026-11-15 の base53/foundB 2-for-2 完全負と 2026-11-16 の
+   1石移動近傍完全負が調べた seed とは別に、**A57（base53 の 2-for-2 で
+   2026-11-15 に発見済みの 7×57 witness、同レーン output に witness 付き）の
+   7×60 における 2-for-2 fresh 近傍は未調査のまま残っていた**。これを完全列挙した
+   （row_capacity_candidates=1,599,648・safe=95,722・**maxima=4件**、w60_a..d）。
+   他の pooled seed（base53/B59/sa42..53、fresh モード）は 0 件（honest negative、
+   `output/w60/other_bases.jsonl`）。
+2. **チェーン延伸**: w60_a..d を種に 2-for-2 fresh 近傍列挙を幅ごとに反復
+   （frontier cap 10・最大石x降順の貪欲選択）すると **幅61..67 の全幅で witness 存在**
+   （新規 61:49 / 62:29 / 63:72 / 64:18 / 65:41 / 66:38 / 67:2 件）。
+   幅68 は最終 frontier 2件の 2-for-2 近傍で 0件で停止
+   （貪欲 frontier 内の局所負。幅68 全体の不在主張はしない）。
+3. **較正と検証（3系統、浮動小数点不使用）**:
+   列挙器 `enum_two.js` は pinned `audit_two_swap.cpp`（fresh-cell モード）と
+   出版計数で完全一致（base53@57 1,436,643/60,921/2・witness 2件の石配置も一致、
+   base53@60 1,599,648/83,225/0、foundB@60 1,599,648/110,748/0）。
+   witness 検証は (b) 正規化整数直線・円方程式 Python 検証器 `verify_witnesses.py`
+   （pinned 方式の一般化）と (c) 第三系 `verify_third.py`（全 C(20,4) 四組の安全 +
+   全欠損行空セル×全 C(20,3) 三組の極大を素朴 4×4 行列式 |x y x²+y² 1| で総当たり）
+   の2つの独立系統でもう検証。アンカー A57/B59 + 幅60 の4件 + 幅61..67 の代表
+   計13件が全系統 PASS。
+4. **主張**: **M_{7,4} ∈ [68, 1929]**（7×67 witness による構成的下界、上界 1929 は
+   K0068 から不変）。0件・停止結果はすべて範囲明記の局所負記録。
+   次の実行可能課題: 幅68 witness 探索（3-for-3 近傍・seeded SA・frontier の
+   breadth 拡大・holes モード併用）。
