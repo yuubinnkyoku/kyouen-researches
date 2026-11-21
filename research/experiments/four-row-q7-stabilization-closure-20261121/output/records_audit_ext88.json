@@ -1,0 +1,349 @@
+{
+  "schema": 1,
+  "total_records": 112,
+  "unique_tags": 112,
+  "q7_witness_band": [
+    {
+      "m": 7,
+      "stones": 19,
+      "rows": [
+        6,
+        1,
+        6,
+        6
+      ],
+      "conflicts": 0,
+      "cnf_md5": "6339e386f987a2db6c190053fd50f279"
+    },
+    {
+      "m": 8,
+      "stones": 20,
+      "rows": [
+        6,
+        2,
+        6,
+        6
+      ],
+      "conflicts": 0,
+      "cnf_md5": "4388a3f6b21e1dfe0bc163c78d91008b"
+    },
+    {
+      "m": 9,
+      "stones": 23,
+      "rows": [
+        6,
+        6,
+        6,
+        5
+      ],
+      "conflicts": 0,
+      "cnf_md5": "c0bce13dde04b8e51cfa55c4c3b6b307"
+    },
+    {
+      "m": 10,
+      "stones": 23,
+      "rows": [
+        6,
+        6,
+        6,
+        5
+      ],
+      "conflicts": 0,
+      "cnf_md5": "b94adb0633f3bf1004338e12391f4846"
+    },
+    {
+      "m": 11,
+      "stones": 23,
+      "rows": [
+        6,
+        6,
+        5,
+        6
+      ],
+      "conflicts": 0,
+      "cnf_md5": "5b84ca4a5398c229794a1c8af0c5cd03"
+    },
+    {
+      "m": 12,
+      "stones": 23,
+      "rows": [
+        6,
+        6,
+        5,
+        6
+      ],
+      "conflicts": 387,
+      "cnf_md5": "0bca4e4549d64299e854399c1fc78d1c"
+    }
+  ],
+  "q7_witness_free": {
+    "count": 76,
+    "span": [
+      13,
+      88
+    ],
+    "missing": [],
+    "conflicts_min": 960,
+    "conflicts_max": 6286,
+    "max_solve_sec": 0.21
+  },
+  "q6_witness_band": [
+    {
+      "m": 6,
+      "stones": 14,
+      "rows": [
+        1,
+        3,
+        5,
+        5
+      ],
+      "cnf_md5": "e7820b99b1525a34b387040e896e0e9d"
+    },
+    {
+      "m": 7,
+      "stones": 15,
+      "rows": [
+        1,
+        4,
+        5,
+        5
+      ],
+      "cnf_md5": "37eea936e461a556da240b79d6c02004"
+    },
+    {
+      "m": 8,
+      "stones": 18,
+      "rows": [
+        5,
+        5,
+        5,
+        3
+      ],
+      "cnf_md5": "685b26d613122c193c35336163fbbf3f"
+    },
+    {
+      "m": 9,
+      "stones": 19,
+      "rows": [
+        5,
+        5,
+        5,
+        4
+      ],
+      "cnf_md5": "88054608120efcfc5cc1ffe2a5f7bde2"
+    },
+    {
+      "m": 10,
+      "stones": 19,
+      "rows": [
+        5,
+        5,
+        5,
+        4
+      ],
+      "cnf_md5": "26af1c9c67426728d9ec86a64150b1a9"
+    },
+    {
+      "m": 11,
+      "stones": 19,
+      "rows": [
+        4,
+        5,
+        5,
+        5
+      ],
+      "cnf_md5": "66cb2992af07cb048091002a594acc71"
+    },
+    {
+      "m": 12,
+      "stones": 19,
+      "rows": [
+        4,
+        5,
+        5,
+        5
+      ],
+      "cnf_md5": "6f81c6e700312fc7abae9f14b3efe9b3"
+    },
+    {
+      "m": 13,
+      "stones": 19,
+      "rows": [
+        4,
+        5,
+        5,
+        5
+      ],
+      "cnf_md5": "b5b59397148a9a0c63dcdba604f91310"
+    },
+    {
+      "m": 14,
+      "stones": 19,
+      "rows": [
+        5,
+        5,
+        5,
+        4
+      ],
+      "cnf_md5": "38686f74ee3f3361effa8be39cbd1e43"
+    },
+    {
+      "m": 15,
+      "stones": 19,
+      "rows": [
+        5,
+        5,
+        5,
+        4
+      ],
+      "cnf_md5": "77d290027ccc75480afac65eb0234368"
+    }
+  ],
+  "q6_witness_free": {
+    "count": 14,
+    "span": [
+      16,
+      29
+    ],
+    "missing": [],
+    "conflicts_min": 1421067,
+    "conflicts_max": 3695972
+  },
+  "capacity_witnesses": [
+    {
+      "tag": "s4x16q6_capacity",
+      "m": 16,
+      "q": 6,
+      "stones": 20,
+      "rows": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "verify_flags": {
+        "js": true,
+        "py": true,
+        "three": true
+      }
+    },
+    {
+      "tag": "s4x13q7_capacity",
+      "m": 13,
+      "q": 7,
+      "stones": 24,
+      "rows": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "verify_flags": {
+        "js": true,
+        "py": true,
+        "three": true
+      }
+    },
+    {
+      "tag": "s4x16q7_capacity",
+      "m": 16,
+      "q": 7,
+      "stones": 24,
+      "rows": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "verify_flags": {
+        "js": true,
+        "py": true,
+        "three": true
+      }
+    }
+  ],
+  "extras_inventory": [
+    {
+      "tag": "s4x16q6_capacity",
+      "mode": "capacity",
+      "result": "SATISFIABLE",
+      "conflicts": 0,
+      "extra": "",
+      "witness": {
+        "stones": 20,
+        "rows": [
+          5,
+          5,
+          5,
+          5
+        ],
+        "three_ok": true,
+        "py_ok": true,
+        "js_ok": true
+      }
+    },
+    {
+      "tag": "s4x13q7_capacity",
+      "mode": "capacity",
+      "result": "SATISFIABLE",
+      "conflicts": 0,
+      "extra": "",
+      "witness": {
+        "stones": 24,
+        "rows": [
+          6,
+          6,
+          6,
+          6
+        ],
+        "three_ok": true,
+        "py_ok": true,
+        "js_ok": true
+      }
+    },
+    {
+      "tag": "s4x16q7_capacity",
+      "mode": "capacity",
+      "result": "SATISFIABLE",
+      "conflicts": 0,
+      "extra": "",
+      "witness": {
+        "stones": 24,
+        "rows": [
+          6,
+          6,
+          6,
+          6
+        ],
+        "three_ok": true,
+        "py_ok": true,
+        "js_ok": true
+      }
+    },
+    {
+      "tag": "s4x16q6_def_lexH",
+      "mode": "deficient",
+      "result": "UNSATISFIABLE",
+      "conflicts": 1351887,
+      "extra": "--lex=H",
+      "witness": null
+    },
+    {
+      "tag": "s4x13q7_def_lexH",
+      "mode": "deficient",
+      "result": "UNSATISFIABLE",
+      "conflicts": 4599,
+      "extra": "--lex=H",
+      "witness": null
+    },
+    {
+      "tag": "s4x86q7_def_lexH",
+      "mode": "deficient",
+      "result": "UNSATISFIABLE",
+      "conflicts": 3677,
+      "extra": "--lex=H",
+      "witness": null
+    }
+  ],
+  "problems": []
+}
