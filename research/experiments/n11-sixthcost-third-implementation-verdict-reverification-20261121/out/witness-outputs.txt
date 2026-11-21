@@ -1,0 +1,55 @@
+# witness outputs (one file per line block, separators '# ==== <file>')
+
+# ==== out-k02-a.txt
+third,k02,5,-1,87,1,9106337,4991527,27.12,1297036692683751424,68157440,clean,quads=95670,ttOverwrites=4912053,memoPower=22
+
+# ==== out-k02-b.txt
+third,k02b,5,-1,87,1,9106337,4991527,27.16,1297036692683751424,68157440,clean,quads=95670,ttOverwrites=4912053,memoPower=22
+
+# ==== out-k02-g.txt
+third,k02g,5,87,87,1,9106337,4991527,27.12,1297036692683751424,68157440,clean,quads=95670,ttOverwrites=4912053,memoPower=22
+
+# ==== out-k02-v.txt
+third,k02v,5,-1,87,1,9106337,4991527,46.62,1297036692683751424,68157440,clean,quads=95670,ttOverwrites=4912053,memoPower=22
+
+# ==== out-l1-a.txt
+third,l1,5,116,116,2,7660602,3951175,22.69,13019119616,16448,clean,quads=95670,ttOverwrites=3466722,memoPower=22
+
+# ==== out-l1-b.txt
+third,l1b,5,116,116,2,7660602,3951175,23.11,13019119616,16448,clean,quads=95670,ttOverwrites=3466722,memoPower=22
+
+# ==== out-ng1.txt
+third,ng1,5,88,,GATE_FAIL,"legal count mismatch: derived=87 declared=88"
+
+# ==== out-ng2.txt
+third,ng2,6,87,,GATE_FAIL,"stone count mismatch: bits=5 declared=6"
+
+# ==== out-parkL-a.txt
+third,parkL,5,-1,91,2,26488700,14202222,78.59,1297036830122704896,67108864,clean,quads=95670,ttOverwrites=22294396,memoPower=22
+
+# ==== out-parkL-b.txt
+third,parkLb,5,-1,91,2,26488700,14202222,78.66,1297036830122704896,67108864,clean,quads=95670,ttOverwrites=22294396,memoPower=22
+
+# ==== out-parkW-a.txt
+third,parkW,5,94,94,1,37613359,19631906,112.05,10376294091217440768,33554432,clean,quads=95670,ttOverwrites=33419055,memoPower=22
+
+# ==== out-parkW-b.txt
+third,parkWb,5,94,94,1,37613359,19631906,111.02,10376294091217440768,33554432,clean,quads=95670,ttOverwrites=33419055,memoPower=22
+
+# ==== out-w1-a.txt
+third,w1a,5,87,87,1,11663909,6284843,34.24,10376293541461626880,67109120,clean,quads=95670,ttOverwrites=7469605,memoPower=22
+
+# ==== out-w1-b.txt
+third,w1b,5,87,87,1,11663909,6284843,34.43,10376293541461626880,67109120,clean,quads=95670,ttOverwrites=7469605,memoPower=22
+
+# ==== out-w2-b.txt
+third,w2b,5,80,80,1,7583990,4157314,22.25,10376293541461626880,131328,clean,quads=95670,ttOverwrites=3390391,memoPower=22
+
+# ==== out-w2.txt
+third,w2,5,80,80,1,7583990,4157314,21.97,10376293541461626880,131328,clean,quads=95670,ttOverwrites=3390391,memoPower=22
+
+# ==== out-w3-b.txt
+third,w3b,5,89,89,1,10898228,5964726,31.69,10376293541461622792,65600,clean,quads=95670,ttOverwrites=6703924,memoPower=22
+
+# ==== out-w3.txt
+third,w3,5,89,89,1,10898228,5964726,31.06,10376293541461622792,65600,clean,quads=95670,ttOverwrites=6703924,memoPower=22
