@@ -1,4 +1,4 @@
-# n11-sixthcost-class-s5-exclusive-probe-10376293541461626880-20261121 (checkpoint state: probes in progress)
+# n11-sixthcost-class-s5-exclusive-probe-10376293541461626880-20261121 (checkpoint state: batch halted on a fresh WIN at k02)
 
 Exclusive single-live-parent S5 probe batch for the sixth-cost candidate class
 `10376293541461626880:65536` (coverage {80, 84, 100, 108}),
@@ -42,6 +42,45 @@ Status at this checkpoint commit:
   within the ladder (identical (result, nodes) on the determinism pair), or parked
   UNKNOWN at 15M (both runs recorded, no cache row). Any WIN stops further claimed-key
   starts this session and triggers witness publication instead.
+
+## Checkpoint at k02: batch halted on a fresh WIN (verdict NOT consumed)
+
+At this checkpoint the ladder ran k01 and k02 only, then halted on the
+pre-registered WIN stopping rule:
+
+- k01 `1297036692683751424:1114112`: 2M UNKNOWN (2,000,000 nodes), then LOSS(2) at
+  15M with nodes 10,369,650 on both independent cold runs (`at15m-run1-k01`,
+  `at15m-run2-k01`), determinism pair identical.
+- k02 `1297036692683751424:68157440`: 2M UNKNOWN (2,000,000 nodes), then **WIN(1)** at
+  15M with **nodes 7,717,432 on both independent cold runs**, PLUS a voluntary third
+  cold verification run with identical (result, nodes)
+  (`at15m-run3-verify-k02.out.csv`; beyond the declared pair, honestly labeled).
+- Per the declaration's pre-registered rule (1), the batch stops starting further
+  claimed keys this session; k03..k43 were not started. Verdicts are NOT consumed:
+  no cache increment, no class-status change, no coverage claim.
+- `output/win-finding-ifadopted.json` (script `scripts/analyze_win_finding.py`, 69
+  fail-closed gates, deterministic byte-identical output) computes the IF-ADOPTED
+  scenario against the pinned chain base `bb4495e0...` (5,793 rows): the fresh WIN
+  verdict would mark exactly two classes UNKNOWN->WIN, the sixth-cost class
+  `10376293541461626880:65536` (coverage {80, 84, 100, 108}, a live candidate class)
+  and the NON-candidate class `1297037792211107840:0` (coverage {24, 30, 80, 84});
+  live candidate classes 62 -> 61; secured third-move coverage is UNCHANGED at
+  117/119 (remaining {100, 108}); no class becomes LOSS; the k01 LOSS row only
+  decrements the sixth class's unknown-child count (101 -> 99). This is NOT a
+  coverage event and NOT a route to the root certificate; it removes the sixth-cost
+  class as a LOSS-completion route for moves {100, 108}.
+- Adoption requirement (per the exclusive-probe program's WIN-row precedent, as with
+  the third-cost parked-pair L50M WIN): a second-implementation verification of the
+  published replica raw with the pinned C++ solver
+  (`cpp/solvers/kyouen_dfpn_root.cpp`, sha256 `9193f5b6...`): targets
+  `target,0,5,1297036692683751424,68157440,87,0,0,0,0,0` at budget 15,000,000
+  (expected result 1, nodes 7,717,432) and the k01 row
+  `target,0,5,1297036692683751424,1114112,87,0,0,0,0,0` (expected result 2,
+  nodes 10,369,650). No C++ toolchain is available in this sandbox (verified), so this
+  verification is delegated and recorded; any later C++ disagreement fails closed in
+  favor of discarding the row. The class's published bin prior
+  (`bin_prior_all_loss_index` 0.34616 from the class-closure-priority measurement) is
+  mixed, not LOSS-only; the raw rows and this honest framing are the evidence.
 
 Inputs and consumed pins (sha-verified, not duplicated here):
 
