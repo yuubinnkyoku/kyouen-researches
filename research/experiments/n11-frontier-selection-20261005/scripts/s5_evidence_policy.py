@@ -68,7 +68,10 @@ REGISTRY = ROOT / 'results/n11-s5-evidence-quarantine.json'
 
 def quarantined_cache_keys():
     try:
-        doc = json.loads(REGISTRY.read_text(encoding='utf-8'),\n                       object_pairs_hook=reject_duplicate_json_keys)
+        doc = json.loads(
+        REGISTRY.read_text(encoding='utf-8'),
+        object_pairs_hook=reject_duplicate_json_keys,
+    )
     except FileNotFoundError as exc:
         raise FileNotFoundError(f'required S5 evidence quarantine registry missing: {REGISTRY}') from exc
     if doc.get('schema') != 'n11-s5-evidence-quarantine-v1':
