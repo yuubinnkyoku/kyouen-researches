@@ -1,0 +1,41 @@
+fold15 external second verification reproduction log (2026-11-21)
+=================================================================
+
+environment: sandbox, /usr/local/bin/python3 3.12.14, stdlib only
+
+[1] reconstruction from published bytes (panic-recovery after sandbox reset)
+  $ python3 scripts/reconstruct_fold15_inputs.py W15 pub15f
+  - W15: 12 Git blob SHA-1 pins + 22 SHA-256 pins, all fetched from
+    raw.githubusercontent.com at pinned commit 0a1a52d4 and matched (8.6 s)
+  - pub15f: receipt bae2b3c182da6b0b06be530604f43d1bfa3bf008190860dad6d27f2b9c285aef,
+    machine 03000c14f443bc4cf694e233d189fef159ef2b7a20420fa94c30879986ef771e,
+    README c1cd67687e14f8a7e047bc6819ce9121b8eb3ee9a8adc1ded3b22f954027ed1f
+  - machine-confirmed pin chain:
+    fold11 pins (12 blob + 10 sha) subset fold12 (12+13) subset
+    fold13 (12+16) subset fold14 (12+19) subset fold15 (12+22)
+  - fold15 machine pristine run: rc=0, 23.1 s,
+    receipt byte-identical to published bae2b3c1...
+
+[2] third-implementation verifier
+  verifier: verify_fold15_external_20261121.py
+  sha256 ade19de29fa34bb8f0f7913ece230daa428797792c9db59279e8489d872eac99
+  62,390 bytes, built surgically from the published fold14 verifier
+  (d966dad55d54b6c1608f5f046469b2fd9a95b3b38c4f12a69f516e83fb708b0c at
+  commit 23de00dc) by build_verify15.py (exact-match paste/rep with
+  occurrence-count asserts; the builder itself is not part of the published
+  artifact set)
+
+[3] battery
+  run1 (cwd = workdir, default env):
+    ALL 981 GATES PASS (P 12 / I 64 / C 863 / X 26 / T 16), 105.6 s
+    audit sha256 6800759ea5e899b84866079ac36fae2316d78a85620e1b32187abc26a0fed717
+  run2 (same cwd, repeat):
+    ALL 981 GATES PASS, 105.1 s, audit sha identical
+  run3 (isolated cwd=/tmp, HOME override, PYTHONHASHSEED=random):
+    ALL 981 GATES PASS, audit sha identical
+
+[4] interpretation
+  verification of bookkeeping, determinism, input pins and fail-closed
+  behaviour only; no row is closed by this verification; no game value is
+  claimed. Standard 11x11 empty board, two-stone roots {49,60}/{59,60},
+  S2 {59,60}, classes 1/2/4 remain UNKNOWN.
