@@ -151,3 +151,83 @@ python3 scripts/crossval_summary.py   # crossval_summary.json（overall PASS）
   主張であり、m=23 の def-mode プロファイル全域の分類ではない。
 - INDET プローブ・cap 下 conflicts 等の SAT 側参考値は本レーンに無関係。
 - 標準 11×11 空盤等には無関係・UNKNOWN のまま。
+
+## m≥28 掃引 ext28plus（2026-11-21 08:38Z 追設・witness-free 幅 {24..31}）
+
+拡張の単一オーナー宣言: `research/log/2026-11-21-three-row-q4-enumeration-m28-single-owner-note.md`
+（2026-11-21T08:38Z・宣言時 HEAD `f57060f8`・出版 commit `e9c3cd86`）。
+part1-10 の同一 pin scripts 7 点（md5 変更なし・`output/md5s.txt` 参照）で
+m=28..31 を掃引した。既存出版 output は 1 byte も変更しておらず、本拡張の
+成果物は `output/ext28plus/` 配下の新規ファイルのみ。
+
+### 掃引結果（全機械・raw は chunk 出力のまま出版）
+
+- **family（wsearch34.js・(3,3,a) 9プロファイル相当の (m,Y) 全掃引）**:
+  m=28（ia [0,3276) 全域・139-148s/Y）・m=29（[0,3654) 全域・191-202s/Y）は
+  Y∈{0,1,2} 各1実行、m=30 は Y∈{0,1,2} × 2 chunk（[0,2030)/[2030,4060)）、
+  m=31 は Y∈{0,1,2} × 3 chunk（[0,1499)/[1499,2998)/[2998,4495)）。
+  集計 `family_sweep_28_31.jsonl`（(m,Y) 行: configs/safe/deep/a0/a1/a2 和・
+  ia 区間リスト）で **全 (m,Y) で a0=a1=a2=0**。
+- **fast（dx34.js・13プロファイル）**: m=28..31 × 13 = 52行全 **count 0**
+  （`dx_sweep_28_31.jsonl`）。
+- **lemma（crossing-supply 補題）**: m=28..31 で **41/41 算術キル**
+  （`closure_check_28_31.jsonl`・`closure_check.py check`・補題は m≥22 単調）。
+- **陽性対照（環境較正）**: 掃引開始前に pinned wsearch34.js で m=23 Y=0 を
+  再実行し、出版済み witness 2件（a=2）・configs 3136441・safe 2352504 を
+  byte 単位の同一出力で再発見（`control_m23_Y0.txt`・part4a 出版値と一致）。
+
+### 集計器と検証（output/ext28plus/agg_chunks.py・stdlib のみ）
+
+`agg_chunks.py` が次を全検査し `crossval_summary_ext28_31.json` を出力:
+
+1. **分割完全性**: 各 (m,Y) の chunk ia 区間が [0, C(m,3)) を重複なく
+   exactly-once に分割し、configs の和が C(m,3)² に一致
+   （m=29: 13,351,716・m=30: 16,483,600・m=31: 20,205,025）。
+2. family 12掃引の a 計数がすべて 0。
+3. fast 52行すべて count 0。
+4. 閉包台帳 m=28..31 の verdict が closed（41/41）。
+5. m=23 対照が出版行と完全一致。
+
+### 結論と範囲
+
+- **P(28), P(29), P(30), P(31) を確定し witness-free 幅は {24,...,31}。**
+  m=25..27 に続くこの 4 幅も SAT 非依存の列挙閉包単独の確定。
+- **m ≥ 32 は未掃引であり一切主張しない。** pinned wsearch34.js の冒頭
+  `require(4 <= m <= 31)` は 31-bit bitmask（`1 << x` が符号付き 32bit を
+  想定）由来の上限で、m≥32 は治具拡張（BigInt / 2-word mask 化・交差検証は
+  m=4..8 brute と m=23..31 出版掃引の再現で行う設計）が別途必要。
+- **M_{3,4} ∈ [24,69] は不変**（下界 24 は witness band 23 終端由来・上界 69 は
+  K0024 引用・P の幅単調性は未証明）。残る不確定幅は 32..68 の 37 幅。
+- fast 13 プロファイルは m=13..31 の全幅で 0（掃引累計 247/247）。
+  したがって観測上 m≥13 の def-mode witness は (3,3,a) family 型のみ
+  （m≥22 では補題がこれを機械保証付きで正当化）。
+
+### 再現（scripts は既存 pin のまま）
+
+```sh
+cd research/experiments/three-row-q4-enumeration-20261121
+# family（1実行/Y は m=28,29・chunk は m=30,31）
+for Y in 0 1 2; do node scripts/wsearch34.js 28 $Y --quiet; done
+for Y in 0 1 2; do node scripts/wsearch34.js 29 $Y --quiet; done
+for Y in 0 1 2; do node scripts/wsearch34.js 30 $Y --ia=0 --ib=2030; node scripts/wsearch34.js 30 $Y --ia=2030 --ib=4060; done
+for Y in 0 1 2; do node scripts/wsearch34.js 31 $Y --ia=0 --ib=1499; node scripts/wsearch34.js 31 $Y --ia=1499 --ib=2998; node scripts/wsearch34.js 31 $Y --ia=2998 --ib=4495; done
+# fast
+for m in 28 29 30 31; do for p in 3,2,2 2,3,2 2,2,3 3,2,1 3,1,2 2,3,1 1,3,2 2,1,3 1,2,3 3,1,1 1,3,1 1,1,3 2,2,2; do node scripts/dx34.js fast $m $p; done; done
+# 閉包台帳 + 集計検証
+python3 scripts/closure_check.py check 28 29 30 31
+python3 output/ext28plus/agg_chunks.py
+```
+
+run 名と wall time（`--ia` は wsearch34.js の A 側分割オプション）:
+m=28 約139-148s/Y・m=29 約191-202s/Y・m=30 chunk 合計 約254-372s/Y・
+m=31 chunk 合計 約333-439s/Y（2核環境・単一 foreground run で計測）。
+
+### 運用教訓（本拡張セッション）
+
+- heavy run（100s 超）は 1 bash call に 1 foreground process が安定。
+  本環境（2 core）で同 call 内の背景並走は出力を残さず消える
+  （1度喪失し、同一 chunk を foreground でやり直して補填）。
+  call をまたいだ背景 node プロセスは次の call 開始時に殺される。
+- `--ia/--ib` chunk 分割は A 側の冪等な空間分割であり、和による合成は
+  集計器が区間検査込みで機械保証する（目視合成・手書き再構成は不使用）。
+
