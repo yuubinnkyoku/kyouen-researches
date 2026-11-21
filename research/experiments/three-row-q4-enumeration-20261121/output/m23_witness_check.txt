@@ -1,0 +1,9 @@
+m=23 Y=0 family a=2 witnesses (fresh enumeration run)
+each verified: sat.js verifyConfig ok + witness_check.py (exact-integer determinant) ok
+
+{"a":2,"stones":[[7,1],[10,1],[13,1],[9,2],[10,2],[12,2],[1,0],[17,0]]}
+{"a":2,"stones":[[9,1],[12,1],[15,1],[10,2],[12,2],[13,2],[5,0],[21,0]]}
+
+different witness (same (2,3,3) family profile)
+EXACT MATCH with published wit_3x23_outer_4
+published outer witness stone set: ["10:2", "12:1", "12:2", "13:2", "15:1", "21:0", "5:0", "9:1"]
