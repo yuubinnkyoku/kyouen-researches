@@ -15,6 +15,9 @@ relations:
 - type: depends_on
   target: K1177
   note: 有限掃引。q=7 witness band {7..12} SAT・witness-free band {13..85} 全幅 UNSAT（INDET 0・records機械監査）と m=12 不足極大 witness（下界）
+- type: related
+  target: K1196
+  note: K0318に依存しない自己完結ブロッキング計数証明（行欠損極大安全配置はm≤86）の出版により、M_{4,7}=13の第二certificateが成立。本項のstatus proved・Mの値13は一切変更なし
 artifacts:
 - path: research/experiments/four-row-q7-stabilization-closure-20261121/README.md
   role: proof
