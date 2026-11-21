@@ -1,0 +1,174 @@
+[
+  {
+    "q": 3,
+    "n": 10,
+    "K": 5,
+    "known_K": 5,
+    "histogram": {
+      "0": 1,
+      "1": 10,
+      "2": 45,
+      "3": 120,
+      "4": 180,
+      "5": 72
+    },
+    "closed_form_checks": [
+      {
+        "k": 0,
+        "exhaustive": 1,
+        "closed": 1,
+        "ok": true
+      },
+      {
+        "k": 1,
+        "exhaustive": 10,
+        "closed": 10,
+        "ok": true
+      },
+      {
+        "k": 2,
+        "exhaustive": 45,
+        "closed": 45,
+        "ok": true
+      },
+      {
+        "k": 3,
+        "exhaustive": 120,
+        "closed": 120,
+        "ok": true
+      },
+      {
+        "k": 4,
+        "exhaustive": 180,
+        "closed": 180,
+        "ok": true
+      },
+      {
+        "k": 5,
+        "exhaustive": 72,
+        "closed": 72,
+        "ok": true
+      }
+    ],
+    "nodes": 428,
+    "capped": false,
+    "seconds": 0.0
+  },
+  {
+    "q": 4,
+    "n": 17,
+    "K": 5,
+    "known_K": 5,
+    "histogram": {
+      "0": 1,
+      "1": 17,
+      "2": 136,
+      "3": 680,
+      "4": 2040,
+      "5": 2040
+    },
+    "closed_form_checks": [
+      {
+        "k": 0,
+        "exhaustive": 1,
+        "closed": 1,
+        "ok": true
+      },
+      {
+        "k": 1,
+        "exhaustive": 17,
+        "closed": 17,
+        "ok": true
+      },
+      {
+        "k": 2,
+        "exhaustive": 136,
+        "closed": 136,
+        "ok": true
+      },
+      {
+        "k": 3,
+        "exhaustive": 680,
+        "closed": 680,
+        "ok": true
+      },
+      {
+        "k": 4,
+        "exhaustive": 2040,
+        "closed": 2040,
+        "ok": true
+      },
+      {
+        "k": 5,
+        "exhaustive": 2040,
+        "closed": 2040,
+        "ok": true
+      }
+    ],
+    "nodes": 4914,
+    "capped": false,
+    "seconds": 0.04
+  },
+  {
+    "q": 5,
+    "n": 26,
+    "K": 6,
+    "known_K": 6,
+    "histogram": {
+      "0": 1,
+      "1": 26,
+      "2": 325,
+      "3": 2600,
+      "4": 13000,
+      "5": 26000,
+      "6": 5200
+    },
+    "closed_form_checks": [
+      {
+        "k": 0,
+        "exhaustive": 1,
+        "closed": 1,
+        "ok": true
+      },
+      {
+        "k": 1,
+        "exhaustive": 26,
+        "closed": 26,
+        "ok": true
+      },
+      {
+        "k": 2,
+        "exhaustive": 325,
+        "closed": 325,
+        "ok": true
+      },
+      {
+        "k": 3,
+        "exhaustive": 2600,
+        "closed": 2600,
+        "ok": true
+      },
+      {
+        "k": 4,
+        "exhaustive": 13000,
+        "closed": 13000,
+        "ok": true
+      },
+      {
+        "k": 5,
+        "exhaustive": 26000,
+        "closed": 26000,
+        "ok": true
+      },
+      {
+        "k": 6,
+        "exhaustive": 5200,
+        "closed": 5200.0,
+        "ok": true
+      }
+    ],
+    "nodes": 47152,
+    "capped": false,
+    "seconds": 0.34
+  }
+]
