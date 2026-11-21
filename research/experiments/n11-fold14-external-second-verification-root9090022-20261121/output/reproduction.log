@@ -1,0 +1,51 @@
+fold14 external second verification — reproduction record (2026-11-21)
+=====================================================================
+
+declaration: research/log/2026-11-21-n11-fold14-external-second-verification-single-owner-note.md
+pinned commit: 2a6f14de95 (declaration note publication HEAD)
+
+[1] W14 reconstruction (reconstruct_fold14_inputs.py)
+    31 pins verified: 12 Git blob SHA-1 + 19 SHA-256
+    fold11 machine 9b3e06c8..., fold12 machine 706bfa7a..., fold13 machine 5c27f1ae... placed in W
+    pin-table subset chain machine-confirmed: F11(12+10) <= F12(12+13) <= F13(12+16) <= fold14(12+19)
+    W14 = /home/user/work/f13ext/W14, pub14f = /home/user/work/f13ext/pub14f
+    manifest: reconstruct14-manifest.json
+
+[2] fold14 machine timing (pristine run, W14 in place)
+    $ time (FOLD14_W=/home/user/work/f13ext/W14 python3 fold_win8_root9090022.py)
+    real 0m11.354s  (rc=0, 31 pins verified, fold11/fold12/fold13 rerun gates pass,
+    K1109 19 gates pass, K1097 27 gates pass, WIN8 coverage geometry two methods agree)
+    receipt sha256 ed3159fdb8cf2dd8884beb845cd4ef776cbc8b4b7b442d568d895cd930a13f71 == published record
+
+[3] verification battery (verify_fold14_external_20261121.py, third implementation)
+    run1 (same cwd, default env):
+      ALL 880 GATES PASS  (P 12 / I 54 / C 772 / X 26 / T 16)
+      real 0m53.290s; audit written to audit14/audit-run1.json
+    run2 (same cwd, default env):
+      ALL 880 GATES PASS; real 0m52.6s; audit14/audit-run2.json
+    run3 (fresh isolated cwd + HOME, env -i, PYTHONHASHSEED=random):
+      ALL 880 GATES PASS; audit14/audit-run3.json
+    sha256 audit-run1.json == audit-run2.json == audit-run3.json:
+      fe6370f7e9cd30eaca7cc0ce3a61d39e9a6dd1eb47c8ba4f300e680f5d55b102  (91,543 bytes)
+
+[4] X matrix outcomes (inside runs 1-3, cumulative)
+    x1 / x2 (W14 in place): fold14 receipt byte-identical to ed3159fd...;
+      in-machine fold11 rerun receipt byte-identical to d7bf2cd5...
+    x3 (fresh copytree W, isolated cwd/HOME): byte-identical
+    x4 (isolated + PYTHONHASHSEED=random): byte-identical
+    vr13 (independent fold13 machine re-execution, fresh copytree W):
+      fold13 receipt byte-identical to published c2bf8051...;
+      in-machine fold11 rerun receipt byte-identical to d7bf2cd5...
+
+[5] tamper fail-closed probes (offsets never used by any published verification lane)
+    t1 worklist.csv XOR@200222  -> rc != 0, message 'input blob mismatch', no output written
+    t2 K1109 certificate XOR@888222 (file 1,082,873 bytes) ->
+       rc != 0, message 'input sha256 mismatch', no output written
+    both: fold14 and fold11 rerun outputs absent; pinned fold13 record untouched in WT
+
+[6] interpretation
+    No game value is claimed. WIN8-D10 holds only from the eight-stone root
+    00000000000000909002200080100000 within depth 10. Rows closed are a frontier
+    bookkeeping closure, not LOSS verdicts. Node/solved/coverage counts are not
+    win/loss readings. The standard 11x11 empty board, two-stone roots
+    {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN.
