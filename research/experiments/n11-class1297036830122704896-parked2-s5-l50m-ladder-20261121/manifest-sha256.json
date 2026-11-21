@@ -1,0 +1,30 @@
+{
+ "schema": "n11-parked2-l50m-manifest-sha256-v1",
+ "experiment": "research/experiments/n11-class1297036830122704896-parked2-s5-l50m-ladder-20261121",
+ "files": {
+  "README.md": "48010ab2e02b7a947843a5839615d15d0024ffbe7011267f5647948abb14f039",
+  "scripts/audit_parked2_l50m.py": "edfb2238b73542e6c35dcfd2ee85633c8fc8dfee74e1e89b0bae82f84632e519",
+  "scripts/pub_paths.py": "183c53fb919f8bfcdb77350dbb0d8bd75c6c8c9b1a40af82a910ea375be4ec49",
+  "input/batch-s5-10376294091217440768-33554432.input.csv": "d22df157dbb9ccde348e280b26fabb5aa68deeea0ceaa7ae845758cde4b7c63b",
+  "input/batch-s5-1297036830122704896-67108864.input.csv": "8e530240731fea53d3655ca218ed3aa055d02928273035b56a825e1fb3161ca1",
+  "input/val-at2m-first.input.csv": "ecc0299b8142abde201fcc40ea9666dac7368d0888d0600abc717af66ddfe348",
+  "input/val-at2m-second.input.csv": "56aacb71769b231c9728dcc841d39f0d5cb579517d34769f0e7382516d4c3a62",
+  "input/val-first-15m.input.csv": "ecc0299b8142abde201fcc40ea9666dac7368d0888d0600abc717af66ddfe348",
+  "input/val-second-15m.input.csv": "56aacb71769b231c9728dcc841d39f0d5cb579517d34769f0e7382516d4c3a62",
+  "output/raw/base15m-10376294091217440768-33554432.out.csv": "faaf958f969846b3f683e7ffe1508df27e6cce2160d8fddf404c6e7f0e26f2d8",
+  "output/raw/base15m-1297036830122704896-67108864.out.csv": "fb5493c57d66efcc57f02e0b9db28105bd74c3813c00c7685385d9f951608def",
+  "output/raw/l50m-margin-10376294091217440768-33554432.out.csv": "01769a3b90185eca1f49400cbde3805858bc6bc42761497bd0b3d89b95ab5f1f",
+  "output/raw/l50m-margin-1297036830122704896-67108864.out.csv": "994e8daccfa5fabad353ebcbccd18728d48707d3f11fa9d42ef884bb8b19cdff",
+  "output/raw/l50m-run1-10376294091217440768-33554432.out.csv": "62068541ac1d1455b36b0540eacc89d94f2e449c6e71336ad0c05f74a0f2c48a",
+  "output/raw/l50m-run1-1297036830122704896-67108864.out.csv": "cfae67add0f55f409a24778b74b5a723f31ecdbd1983349756cdd349c1b3b8ff",
+  "output/raw/l50m-run2-10376294091217440768-33554432.out.csv": "50b01a354111b29390da6313ac3eed54aca1bc2da52bd629ee8b1bc163d518e1",
+  "output/raw/l50m-run2-1297036830122704896-67108864.out.csv": "0522485696b19e5be1af4b93796ee3ecac759411437db99c1b7c97847e136c91",
+  "output/raw/val-at2m-first.out.csv": "d766154adda47bd2af09905fa8d3e709abc7192596b928d5ff1251f1e1c911e7",
+  "output/raw/val-at2m-second.out.csv": "0af850c443c5574f5a806c760bc236f7937c109003e7bf6ca7e3b5b023646481",
+  "output/raw/val-first-15m.out.csv": "e5d33b954b81b6d766d870eff54a5425e6a0faf09cde049ce463920f8d4f9a25",
+  "output/raw/val-second-15m.out.csv": "5957bce29e5fa27fa3b67f0be6552ecac39e294c14cc3452cbc7711228cedc02",
+  "output/halt-audit.json": "f254f071e2910f19abaf297d644e0994906823c7ebf90c5a35e50e39bdce636b"
+ },
+ "file_count": 22,
+ "status_guard": "halted-on-win evidence record; no verdict consumed; 11x11 empty board remains UNKNOWN"
+}
