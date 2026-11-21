@@ -1,0 +1,375 @@
+{
+ "schema": "n11-fold10-17threceipt-ext2-pristine-reexec-third-harness-20261121-v1",
+ "date": "2026-11-21",
+ "status": "all-gates-pass",
+ "subject": {
+  "ext2_experiment_dir": "research/experiments/n11-seventeenth-receipt-fold-second-verification-20261120",
+  "ext2_publish_commit": "452af0c5cc91a195dd24f4e4086af9bba11e807f",
+  "target_receipt": "fold10 = seventeenth WIN7-D10 receipt fold (root 00004000000000821082000000000100)",
+  "published_files": {
+   "README.md": {
+    "bytes": 3982,
+    "sha256": "240c8e588d07d72212bc5419d6606812d87f9181affe2ab0785ec336a14e3197"
+   },
+   "scripts/verify_fold10_second.py": {
+    "bytes": 11145,
+    "sha256": "7178fbe5fc31045ca36880863b72c6014c2997aa7e4731ac6dc20a88f85ac84f"
+   },
+   "output/fold10-second-verification-20261120.json": {
+    "bytes": 5410,
+    "sha256": "a62d6d50ffe3196ad2de1ff7b1df67ff8208b2a13510cce3f13aee0e9a085054"
+   }
+  }
+ },
+ "refs": {
+  "ref_a_declaration_time_head": "dcc5b96238c0232f0ff8eb07bd50be4243262938",
+  "ref_b_declaration_commit": "4987c2b7dffd98d590ba65499bfb1caed3e1e939",
+  "t1_correction_addendum_commit": "274e3e28c43dc24e0c638f498051d75a75627bad"
+ },
+ "w_inputs": {
+  "fold10": {
+   "bytes": 12918,
+   "sha256": "bed7d33193299a0aa06ea4e076562dfa46251d20d5c3c4ca7fd231ffe854908a",
+   "repo_path": "research/experiments/n11-seventeenth-win7-receipt-fold-20261120/fold/output/seventeenth-win7-receipt-fold-20261120.json"
+  },
+  "fold9": {
+   "bytes": 24399,
+   "sha256": "24db2352ad0d94ee4a76ec3de294f02cbdac7899f0b6ef64ea695d261017cdc2",
+   "repo_path": "research/experiments/n11-residual78-windfall4-receipt-fold-20261120/output/windfall4-thirteenth-sixteenth-win7-receipt-fold-20261120.json"
+  },
+  "cert": {
+   "bytes": 1791541,
+   "sha256": "21dd2f0e9f0b8ec22e917fce5a732835098baf37570a227bebacacb4c13807c8",
+   "repo_path": "research/experiments/n11-residual78-seventeenth-win7-cert-extract-20261120/certs/win7-root-00004000000000821082000000000100-20261120.n11"
+  }
+ },
+ "battery_runs": [
+  "r1",
+  "r2",
+  "r3",
+  "r4"
+ ],
+ "rerun_modes": {
+  "r1": "shared cwd, inherited env",
+  "r2": "shared cwd, inherited env",
+  "r3": "isolated copytree cwd, env -i isolated HOME/TMPDIR",
+  "r4": "isolated as r3 + PYTHONHASHSEED=random"
+ },
+ "tamper_probes": {
+  "t1": "fold10 W @offset 12345 1 byte XOR 0x01 (rc!=0, audit gate-failed, exactly the fold10 sha pin gate fails; corrected per addendum 274e3e28)",
+  "t2": "cert W @offset 1234567 1 byte XOR 0x01 (rc!=0, audit gate-failed, cert sha pin gate fails)"
+ },
+ "stages": {
+  "pin": {
+   "gates": [
+    {
+     "gate": "pin/readme byte count == 3982",
+     "pass": true,
+     "detail": "3982"
+    },
+    {
+     "gate": "pin/readme sha256 == published 240c8e58…",
+     "pass": true,
+     "detail": "240c8e588d07d72212bc5419d6606812d87f9181affe2ab0785ec336a14e3197"
+    },
+    {
+     "gate": "pin/verifier byte count == 11145",
+     "pass": true,
+     "detail": "11145"
+    },
+    {
+     "gate": "pin/verifier sha256 == published 7178fbe5…",
+     "pass": true,
+     "detail": "7178fbe5fc31045ca36880863b72c6014c2997aa7e4731ac6dc20a88f85ac84f"
+    },
+    {
+     "gate": "pin/ext2audit byte count == 5410",
+     "pass": true,
+     "detail": "5410"
+    },
+    {
+     "gate": "pin/ext2audit sha256 == published a62d6d50…",
+     "pass": true,
+     "detail": "a62d6d50ffe3196ad2de1ff7b1df67ff8208b2a13510cce3f13aee0e9a085054"
+    }
+   ],
+   "gates_all_pass": true
+  },
+  "recon": {
+   "gates": [
+    {
+     "gate": "recon/fold10 ref_a sha256 == verifier pin bed7d331…",
+     "pass": true,
+     "detail": "bed7d33193299a0aa06ea4e076562dfa46251d20d5c3c4ca7fd231ffe854908a"
+    },
+    {
+     "gate": "recon/fold10 ref_b sha256 == verifier pin bed7d331…",
+     "pass": true,
+     "detail": "bed7d33193299a0aa06ea4e076562dfa46251d20d5c3c4ca7fd231ffe854908a"
+    },
+    {
+     "gate": "recon/fold10 W_A == W_B bytes",
+     "pass": true,
+     "detail": "12918 vs 12918"
+    },
+    {
+     "gate": "recon/fold10 byte count == 12918",
+     "pass": true,
+     "detail": "12918"
+    },
+    {
+     "gate": "recon/fold9 ref_a sha256 == verifier pin 24db2352…",
+     "pass": true,
+     "detail": "24db2352ad0d94ee4a76ec3de294f02cbdac7899f0b6ef64ea695d261017cdc2"
+    },
+    {
+     "gate": "recon/fold9 ref_b sha256 == verifier pin 24db2352…",
+     "pass": true,
+     "detail": "24db2352ad0d94ee4a76ec3de294f02cbdac7899f0b6ef64ea695d261017cdc2"
+    },
+    {
+     "gate": "recon/fold9 W_A == W_B bytes",
+     "pass": true,
+     "detail": "24399 vs 24399"
+    },
+    {
+     "gate": "recon/fold9 byte count == 24399",
+     "pass": true,
+     "detail": "24399"
+    },
+    {
+     "gate": "recon/cert ref_a sha256 == verifier pin 21dd2f0e…",
+     "pass": true,
+     "detail": "21dd2f0e9f0b8ec22e917fce5a732835098baf37570a227bebacacb4c13807c8"
+    },
+    {
+     "gate": "recon/cert ref_b sha256 == verifier pin 21dd2f0e…",
+     "pass": true,
+     "detail": "21dd2f0e9f0b8ec22e917fce5a732835098baf37570a227bebacacb4c13807c8"
+    },
+    {
+     "gate": "recon/cert W_A == W_B bytes",
+     "pass": true,
+     "detail": "1791541 vs 1791541"
+    },
+    {
+     "gate": "recon/cert byte count == 1791541",
+     "pass": true,
+     "detail": "1791541"
+    },
+    {
+     "gate": "recon/fold10 installed W sha256 == pin",
+     "pass": true,
+     "detail": "bed7d33193299a0aa06ea4e076562dfa46251d20d5c3c4ca7fd231ffe854908a"
+    },
+    {
+     "gate": "recon/fold9 installed W sha256 == pin",
+     "pass": true,
+     "detail": "24db2352ad0d94ee4a76ec3de294f02cbdac7899f0b6ef64ea695d261017cdc2"
+    },
+    {
+     "gate": "recon/cert installed W sha256 == pin",
+     "pass": true,
+     "detail": "21dd2f0e9f0b8ec22e917fce5a732835098baf37570a227bebacacb4c13807c8"
+    }
+   ],
+   "gates_all_pass": true
+  },
+  "rerun": {
+   "gates": [
+    {
+     "gate": "rerun/r1 script copy byte == published pin",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "gate": "rerun/r1 rc == 0",
+     "pass": true,
+     "detail": "rc=0 stderr_tail="
+    },
+    {
+     "gate": "rerun/r1 output byte == published ext2 audit",
+     "pass": true,
+     "detail": "5410B a62d6d50…"
+    },
+    {
+     "gate": "rerun/r1 stdout status/gates_total/all_pass/sha256",
+     "pass": true,
+     "detail": "second-verified/31/True"
+    },
+    {
+     "gate": "rerun/r1 audit JSON 31 gates all pass + schema",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "gate": "rerun/r1 audit inputs_verified_by_sha256 == W pins",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "gate": "rerun/r2 script copy byte == published pin",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "gate": "rerun/r2 rc == 0",
+     "pass": true,
+     "detail": "rc=0 stderr_tail="
+    },
+    {
+     "gate": "rerun/r2 output byte == published ext2 audit",
+     "pass": true,
+     "detail": "5410B a62d6d50…"
+    },
+    {
+     "gate": "rerun/r2 stdout status/gates_total/all_pass/sha256",
+     "pass": true,
+     "detail": "second-verified/31/True"
+    },
+    {
+     "gate": "rerun/r2 audit JSON 31 gates all pass + schema",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "gate": "rerun/r2 audit inputs_verified_by_sha256 == W pins",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "gate": "rerun/r3 script copy byte == published pin",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "gate": "rerun/r3 rc == 0",
+     "pass": true,
+     "detail": "rc=0 stderr_tail="
+    },
+    {
+     "gate": "rerun/r3 output byte == published ext2 audit",
+     "pass": true,
+     "detail": "5410B a62d6d50…"
+    },
+    {
+     "gate": "rerun/r3 stdout status/gates_total/all_pass/sha256",
+     "pass": true,
+     "detail": "second-verified/31/True"
+    },
+    {
+     "gate": "rerun/r3 audit JSON 31 gates all pass + schema",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "gate": "rerun/r3 audit inputs_verified_by_sha256 == W pins",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "gate": "rerun/r4 script copy byte == published pin",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "gate": "rerun/r4 rc == 0",
+     "pass": true,
+     "detail": "rc=0 stderr_tail="
+    },
+    {
+     "gate": "rerun/r4 output byte == published ext2 audit",
+     "pass": true,
+     "detail": "5410B a62d6d50…"
+    },
+    {
+     "gate": "rerun/r4 stdout status/gates_total/all_pass/sha256",
+     "pass": true,
+     "detail": "second-verified/31/True"
+    },
+    {
+     "gate": "rerun/r4 audit JSON 31 gates all pass + schema",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "gate": "rerun/r4 audit inputs_verified_by_sha256 == W pins",
+     "pass": true,
+     "detail": ""
+    }
+   ],
+   "gates_all_pass": true
+  },
+  "tampers": {
+   "gates": [
+    {
+     "gate": "tampers/t1 pre-tamper fold10 W sha256 == pin",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "gate": "tampers/t1 rc != 0 (fail-closed)",
+     "pass": true,
+     "detail": "rc=1"
+    },
+    {
+     "gate": "tampers/t1 audit written gate-failed, exactly the fold10 sha pin gate fails, all other 30 gates (incl cert sha pin) still pass",
+     "pass": true,
+     "detail": "failed=['fold10 正本 sha256 == published bed7d331...']"
+    },
+    {
+     "gate": "tampers/t1 restored fold10 W sha256 == pin",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "gate": "tampers/t2 pre-tamper cert W sha256 == pin",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "gate": "tampers/t2 rc != 0 (fail-closed)",
+     "pass": true,
+     "detail": "rc=1"
+    },
+    {
+     "gate": "tampers/t2 audit written with status gate-failed, exactly the cert sha pin gate failed, fold10 pin gate still pass",
+     "pass": true,
+     "detail": "failed=['cert sha256 pin matches local byte-exact file']"
+    },
+    {
+     "gate": "tampers/t2 restored cert W sha256 == pin",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "gate": "tampers/post fold10 W sha256 == pin (unmodified)",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "gate": "tampers/post fold9 W sha256 == pin (unmodified)",
+     "pass": true,
+     "detail": ""
+    },
+    {
+     "gate": "tampers/post cert W sha256 == pin (unmodified)",
+     "pass": true,
+     "detail": ""
+    }
+   ],
+   "gates_all_pass": true
+  }
+ },
+ "gates_total": 56,
+ "gates_passed": 56,
+ "gates_all_pass": true,
+ "interpretation_guard": [
+  "本検証はfold10外部第二検証の再現性・入力pin・fail-closed防衛・監査byteの第三検査であり、receiptの再発行・行の追加閉鎖・WIN/LOSS verdictの追加は行わない。",
+  "行は1行も閉じない。fold10時点の残余簿記は当該receiptの既出版値のまま。",
+  "WIN7-D10証明書は当該7石rootのゲーム木に限られ、REFUTED-D10はLOSS証明ではない。",
+  "nodes数・solved数・coverage数を勝敗として読まない。",
+  "標準11×11空盤・二石root {49,60}/{59,60}・S2 {59,60}・class 1/2/4はすべてUNKNOWNのまま。"
+ ],
+ "unknown_guard": "The standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+}

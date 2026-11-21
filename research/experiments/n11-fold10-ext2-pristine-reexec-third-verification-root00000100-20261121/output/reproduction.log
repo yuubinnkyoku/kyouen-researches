@@ -1,0 +1,39 @@
+# reproduction.log — fold10 (17th WIN7 receipt) ext2 pristine-reexec third verification
+# Executed 2026-11-21 in the third execution environment (sandbox), python3 stdlib only.
+# Raw pinned fetches only (raw.githubusercontent.com fixed-commit URLs); api.github.com not used.
+
+BATTERY 1 (fresh base base1/, all stages pin/recon/rerun/tampers/finalize, wall ~0.9s)
+  $ python3 verify_fold10ext2_third_20261121.py all base1
+  stage pin:     3 published ext2 files fetched from pin commit 452af0c5cc91a195dd24f4e4086af9bba11e807f
+                 README.md 3,982 B / verify_fold10_second.py 11,145 B / ext2 audit 5,410 B — all SHA-256 == published (6 gates PASS)
+  stage recon:   3 W inputs fetched from raw refs ref_a=dcc5b96238c0232f0ff8eb07bd50be4243262938 and
+                 ref_b=4987c2b7dffd98d590ba65499bfb1caed3e1e939, both refs byte-identical and equal to the
+                 verifier-internal pins bed7d331…(12,918B) / 24db2352…(24,399B) / 21dd2f0e…(1,791,541B);
+                 W installed at the verifier's fixed absolute paths and re-hashed (15 gates PASS)
+  stage rerun:   published verifier re-executed pristine 4x on a byte-exact script copy
+                 r1: rc=0, output byte-identical to published ext2 audit a62d6d50… (5,410 B), 31/31 gates pass
+                 r2: same cwd run dir as r1, rc=0, byte-identical (4 runs cross-identical)
+                 r3: isolated copytree cwd + env -i isolated HOME/TMPDIR, rc=0, byte-identical
+                 r4: r3 + PYTHONHASHSEED=random, rc=0, byte-identical  (24 gates PASS)
+  stage tampers: t1 fold10 record @12345 1-byte XOR 0x01 — in-place, isolated rerun — rc!=0, audit written
+                     'gate-failed', exactly 1 failed gate 'fold10 正本 sha256 == published bed7d331…',
+                     other 30 gates (incl. cert sha pin) still pass; W restored, re-hash == pin
+                 t2 seventeenth cert @1234567 1-byte XOR 0x01 — rc!=0, audit written 'gate-failed',
+                     exactly 1 failed gate 'cert sha256 pin matches local byte-exact file',
+                     fold10 sha pin gate still pass; W restored, re-hash == pin
+                 post: all 3 W files re-hashed == pins (unmodified)  (11 gates PASS)
+  stage finalize: harness audit JSON written (56 gates, all pass)
+
+BATTERY 2 (same base1/, all stages re-run incl. refetch, wall ~0.9s)
+  audit SHA-256 2a97d052bd1f0de95331f6d2b62322b61b38af326743a3dc244e4064a9abd7aa — identical to battery 1
+
+BATTERY 3 (fresh isolated base base2/, whole battery under env -i + isolated HOME/TMPDIR + PYTHONHASHSEED=random, wall ~0.9s)
+  $ env -i HOME=… TMPDIR=… PATH=/usr/bin:/bin PYTHONHASHSEED=random python3 …/verify_fold10ext2_third_20261121.py all …/base2
+  audit SHA-256 2a97d052bd1f0de95331f6d2b62322b61b38af326743a3dc244e4064a9abd7aa — identical to batteries 1 and 2
+
+RESULT: 3/3 batteries byte-identical (cmp). Harness audit: gates_total 56 (pin 6 / recon 15 / rerun 24 / tampers 11), all_gates_pass true, audit 10,980 bytes, SHA-256 2a97d052bd1f0de95331f6d2b62322b61b38af326743a3dc244e4064a9abd7aa.
+
+Interpretation guard: this third verification checks reproducibility, input pins, fail-closed defenses and
+audit byte-determinism of the published fold10 external second verification. No receipt is reissued, no row is
+closed, no WIN/LOSS verdict is added. REFUTED-D10 is not a LOSS proof. The standard 11x11 empty board,
+two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN.
