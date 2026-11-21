@@ -81,6 +81,11 @@ pre-registered WIN stopping rule:
   favor of discarding the row. The class's published bin prior
   (`bin_prior_all_loss_index` 0.34616 from the class-closure-priority measurement) is
   mixed, not LOSS-only; the raw rows and this honest framing are the evidence.
+- Post-push reexecution check (Part 2 commit `e0a30fab`): `analyze_win_finding.py`
+  was re-run twice on the pushed checkpoint state; all 69 fail-closed gates PASS both
+  times and the output is byte-identical to the published
+  `output/win-finding-ifadopted.json` (sha256 `39ae0e8d...`) on both runs. The
+  fetch-back byte audit of the Part 2 commit passed by git blob SHA-1 (12/12 files).
 
 Inputs and consumed pins (sha-verified, not duplicated here):
 

@@ -70,6 +70,19 @@ Companion to the single-owner declaration
 - No k03+ start without a fresh declaration-check pass (hourly parallel executions
   of this lane may already be in flight elsewhere).
 
+## Re-execution and fetch-back verification (post-push)
+
+- Part 2 commit: `e0a30fab` (12 files). Push pre-conditions: all 12 local files
+  SHA-256 gated before upload; the interposed concurrent commit `4f60cbecfc`
+  (K1058 knowledge item only) touches none of this lane's paths or any S5
+  cache/verdict file.
+- Fetch-back byte audit at the fixed commit `e0a30fab`: all 12 files match by git
+  blob SHA-1 (remote-reported vs locally recomputed), 12/12.
+- Re-execution verification on the pushed checkpoint state: `python3
+  scripts/analyze_win_finding.py` run twice -> all 69 fail-closed gates PASS both
+  times, output byte-identical to the published `output/win-finding-ifadopted.json`
+  (sha256 `39ae0e8d...`) on both runs.
+
 ## Status guard
 
 The standard 11x11 empty board, the two-stone root {60,27}, and its remaining third
