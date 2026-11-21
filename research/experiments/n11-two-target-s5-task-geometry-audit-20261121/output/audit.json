@@ -1,0 +1,338 @@
+{
+  "all_gates_pass": true,
+  "cache": {
+    "base_entries": 5741,
+    "base_verdicts": {
+      "LOSS": 5583,
+      "WIN": 158
+    },
+    "initial_task_cache_overlap_base": 0,
+    "initial_task_cache_overlap_merged": 2,
+    "merged_entries": 5743,
+    "merged_verdicts": {
+      "LOSS": 5585,
+      "WIN": 158
+    },
+    "new_entries": {
+      "1152921504606851072:536870946": 2,
+      "1188950301626860544:536870912": 2
+    },
+    "post_task_cache_overlap_merged": 0
+  },
+  "cache_quarantine_overlap": 0,
+  "initial_class_stats": {
+    "active_unknown_s5_incidence_sum": 6466,
+    "all_class_unknown_s5_sum": 10836,
+    "classes": 115,
+    "loss_s5_sum": 1403,
+    "status_counts": {
+      "UNKNOWN": 62,
+      "WIN": 53
+    },
+    "win_s5_sum": 129
+  },
+  "initial_geometry_audit": {
+    "count": 4577,
+    "errors": [],
+    "gate_counts": {
+      "cache_absent": 4577,
+      "canonical": 4577,
+      "legal_count_match": 4577,
+      "parent_coverage_match": 4577,
+      "quarantine_absent": 4577,
+      "safe": 4577,
+      "stone_count": 4577
+    },
+    "historical_observation_distribution": {
+      "0": 4556,
+      "1": 21
+    },
+    "history_budget_distribution": {
+      "0": 4556,
+      "15000000": 21
+    },
+    "legal_distribution": {
+      "100": 264,
+      "101": 266,
+      "102": 302,
+      "103": 330,
+      "104": 308,
+      "105": 283,
+      "106": 292,
+      "107": 269,
+      "108": 207,
+      "109": 152,
+      "110": 85,
+      "111": 91,
+      "112": 40,
+      "113": 3,
+      "80": 1,
+      "81": 1,
+      "82": 5,
+      "83": 5,
+      "84": 7,
+      "85": 18,
+      "86": 18,
+      "87": 29,
+      "88": 40,
+      "89": 44,
+      "90": 50,
+      "91": 81,
+      "92": 92,
+      "93": 124,
+      "94": 136,
+      "95": 171,
+      "96": 198,
+      "97": 238,
+      "98": 204,
+      "99": 223
+    },
+    "live_parent_distribution": {
+      "1": 2688,
+      "2": 1889
+    },
+    "total_gate_passes": 32039,
+    "unique_keys": 4577
+  },
+  "input_git_blob_sha1": {
+    "base_cache": "bcdba2d0ae3309e6e80702068ee5a64266f622ff",
+    "initial_classes": "7e87281fb254d8e8ca85894f16ac29e3137e5b3d",
+    "initial_tasks": "366ff5cd673c09694c8b047e76291174e6c91cf4",
+    "merged_cache": "5f20fea7993e1faef15b4bfc4219538858a3223a",
+    "post_classes": "fc1e3bcf85857ec2248ea7311d5be0f556f19291",
+    "post_tasks": "fa4ba4ab8b0f165c90945f7505de29aebb53d3ac",
+    "quarantine": "6a320237545874ddd841c90be095cccccc46249d"
+  },
+  "input_sha256": {
+    "base_cache": "f890dbc12e3731596afea3cd120f3aafa6103ecd2cd6872c05a0d1c99cc819ca",
+    "initial_classes": "9622f90938819dc0c09ec63db0c6776df9da2f0398e2b2c7804d693a95f9e139",
+    "initial_tasks": "3f0d1e67c31e28c30c7fc9e2bf4307c53aefe467d44fbfcaf7173c6afd89f883",
+    "merged_cache": "24e97b746667bd1c5468d5203e8444a0d379023f6c67facaf9bbd4787c3759e6",
+    "post_classes": "7034a8623e596b89e1f03339a5a4b1ffb9f36e4ee70d8e89df55ffee46add459",
+    "post_tasks": "1e0e97af57f029fd86654f41ae147a3f0ec28dc8b2a758102cc83e1f05962b78",
+    "quarantine": "81d231604d3a095c115135e05ca393d6be83e1aadde4f614d3b5a9cc67d17fe9"
+  },
+  "interpretation_guard": [
+    "Exact geometry and candidate-ledger consistency only; no new S5 verdict is generated.",
+    "Historical legal-band counts and truncated node proxy are not key-specific cost estimates or probabilities.",
+    "REFUTED-D10 is not a LOSS proof; standard 11x11 empty board remains UNKNOWN."
+  ],
+  "post_class_stats": {
+    "active_unknown_s5_incidence_sum": 6462,
+    "all_class_unknown_s5_sum": 10832,
+    "classes": 115,
+    "loss_s5_sum": 1407,
+    "status_counts": {
+      "UNKNOWN": 62,
+      "WIN": 53
+    },
+    "win_s5_sum": 129
+  },
+  "post_geometry_audit": {
+    "count": 4575,
+    "errors": [],
+    "gate_counts": {
+      "cache_absent": 4575,
+      "canonical": 4575,
+      "legal_count_match": 4575,
+      "parent_coverage_match": 4575,
+      "quarantine_absent": 4575,
+      "safe": 4575,
+      "stone_count": 4575
+    },
+    "historical_observation_distribution": {
+      "0": 4554,
+      "1": 21
+    },
+    "history_budget_distribution": {
+      "0": 4554,
+      "15000000": 21
+    },
+    "legal_distribution": {
+      "100": 264,
+      "101": 266,
+      "102": 302,
+      "103": 330,
+      "104": 308,
+      "105": 283,
+      "106": 292,
+      "107": 269,
+      "108": 207,
+      "109": 152,
+      "110": 85,
+      "111": 91,
+      "112": 40,
+      "113": 3,
+      "80": 1,
+      "81": 1,
+      "82": 5,
+      "83": 5,
+      "84": 7,
+      "85": 18,
+      "86": 18,
+      "87": 29,
+      "88": 40,
+      "89": 44,
+      "90": 50,
+      "91": 81,
+      "92": 92,
+      "93": 124,
+      "94": 136,
+      "95": 171,
+      "96": 198,
+      "97": 238,
+      "98": 203,
+      "99": 222
+    },
+    "live_parent_distribution": {
+      "1": 2688,
+      "2": 1887
+    },
+    "total_gate_passes": 32025,
+    "unique_keys": 4575
+  },
+  "quarantine_active_count": 2,
+  "quarantine_task_overlap": 0,
+  "schema": "n11-s5-candidate-supply-geometry-audit-v1",
+  "source_commit": "d173632fc19a3d9f9abf8e66d0595f4629748bf0",
+  "task_delta": {
+    "initial": 4577,
+    "parent_updates": {
+      "1188950301626859520:536870912": 2,
+      "1297036692683752448:0": 1,
+      "1297036830122704896:0": 1
+    },
+    "post": 4575,
+    "removed": [
+      "1152921504606851072:536870946",
+      "1188950301626860544:536870912"
+    ],
+    "removed_verdicts": {
+      "1152921504606851072:536870946": "LOSS",
+      "1188950301626860544:536870912": "LOSS"
+    }
+  },
+  "top_postprobe_candidate": {
+    "bin_loss_count": 682,
+    "bin_sample_size": 765,
+    "bin_unknown_count": 28,
+    "bin_win_count": 55,
+    "historical_observations": 0,
+    "history_max_unknown_budget": 0,
+    "key": "1306114260682670080:0",
+    "legal": 88,
+    "live_parent_count": 2,
+    "live_parent_keys": [
+      "1297107061427929088:0",
+      "1306043891938492416:0"
+    ],
+    "lowest_proxy_two_parent_no_history_top10": [
+      {
+        "key": "1306114260682670080:0",
+        "legal": 88,
+        "loss": 682,
+        "proxy": 5041585,
+        "samples": 765,
+        "unknown": 28,
+        "win": 55
+      },
+      {
+        "key": "10376293541461622788:68727865344",
+        "legal": 110,
+        "loss": 8,
+        "proxy": 5069670,
+        "samples": 8,
+        "unknown": 0,
+        "win": 0
+      },
+      {
+        "key": "10376293541461622788:77309411328",
+        "legal": 112,
+        "loss": 8,
+        "proxy": 5069670,
+        "samples": 8,
+        "unknown": 0,
+        "win": 0
+      },
+      {
+        "key": "10376293541461626880:12288",
+        "legal": 110,
+        "loss": 8,
+        "proxy": 5069670,
+        "samples": 8,
+        "unknown": 0,
+        "win": 0
+      },
+      {
+        "key": "10376293541461626880:134217744",
+        "legal": 111,
+        "loss": 8,
+        "proxy": 5069670,
+        "samples": 8,
+        "unknown": 0,
+        "win": 0
+      },
+      {
+        "key": "10376293541461626880:134225920",
+        "legal": 112,
+        "loss": 8,
+        "proxy": 5069670,
+        "samples": 8,
+        "unknown": 0,
+        "win": 0
+      },
+      {
+        "key": "10376293541461626880:150994944",
+        "legal": 111,
+        "loss": 8,
+        "proxy": 5069670,
+        "samples": 8,
+        "unknown": 0,
+        "win": 0
+      },
+      {
+        "key": "10376293541461626880:16777232",
+        "legal": 110,
+        "loss": 8,
+        "proxy": 5069670,
+        "samples": 8,
+        "unknown": 0,
+        "win": 0
+      },
+      {
+        "key": "10376293541461626880:16785408",
+        "legal": 111,
+        "loss": 8,
+        "proxy": 5069670,
+        "samples": 8,
+        "unknown": 0,
+        "win": 0
+      },
+      {
+        "key": "10376293541461626880:18874368",
+        "legal": 110,
+        "loss": 8,
+        "proxy": 5069670,
+        "samples": 8,
+        "unknown": 0,
+        "win": 0
+      }
+    ],
+    "parent_detail": [
+      {
+        "key": "1297107061427929088:0",
+        "loss": 7,
+        "unknown": 101,
+        "win": 0
+      },
+      {
+        "key": "1306043891938492416:0",
+        "loss": 6,
+        "unknown": 102,
+        "win": 0
+      }
+    ],
+    "truncated_cost_proxy_nodes": 5041585,
+    "two_parent_no_key_history_count": 1887
+  }
+}
