@@ -1,0 +1,24 @@
+# validation controls 2026-11-21 exp3 (sd43/34 sweep, declaration 0b2a6466)
+# [seed health]
+q6 seed native (5,22,6): sat_verify=PASS safety_only=SAFE
+
+q5 seed native (5,26,5): sat_verify=PASS safety_only=SAFE
+
+q6 python: PASS
+
+q5 python: PASS
+
+# [tamper controls]
+tamper q6 6-circle: safety_only=UNSAFE circle 1,-10,-10,25 count=6
+
+ tamper q6 python: FAIL circle
+
+tamper q5 5-circle: safety_only=UNSAFE circle 1,-10,-10,25 count=5
+
+ tamper q5 python: FAIL circle
+
+# [not-maximal controls on target boards]
+q6 seed @ (5,23,6): FAIL {"ok":false,"why":"not-maximal","cell":"22,0"}
+
+q5 seed @ (5,27,5): FAIL {"ok":false,"why":"not-maximal","cell":"26,0"}
+
