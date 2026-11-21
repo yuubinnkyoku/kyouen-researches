@@ -12,9 +12,9 @@ raising the lower bound of M_{7,4}.
   maxima (verified), and the holes-complete 2-for-2 neighborhood contains more.
   Since the pinned 2026-11-15 audit tested only base53 and foundB at width 60,
   this closes the gap the previous lane left open.
-- Chained 2-for-2 extension then reaches widths 61..66 (see `output/chain/`),
-  so **M_{7,4} >= 67**, improving the previous band M_{7,4} ∈ [60, 1929] to
-  **M_{7,4} ∈ [67, 1929]**. The upper bound is unchanged.
+- Chained 2-for-2 extension then reaches widths 61..67 (see `output/chain/`),
+  so **M_{7,4} >= 68**, improving the previous band M_{7,4} ∈ [60, 1929] to
+  **M_{7,4} ∈ [68, 1929]**. The upper bound is unchanged.
 
 ## Method
 
@@ -44,11 +44,15 @@ raising the lower bound of M_{7,4}.
   0 safe row-deficient maxima (honest negative within those neighborhoods).
 - `output/verification_m60.json`: system #2 verification of the pinned
   anchors A57, B59 and the four width-60 witnesses.
-- `output/chain/`: chained 2-for-2 witnesses per width 61..66 plus chain
-  statistics. Each chain step uses only witnesses of width W-1 as bases for
-  width W, fresh-cell mode.
-- `output/verification_chain.json`: system #2 verification of one
-  representative witness per chain width (61..66).
+- `output/chain/`: chained 2-for-2 witnesses per width 61..67 plus chain
+  statistics (`frontier_W.json`, `stats_W.json`, `witness_W.json`). Each
+  chain step uses only kept witnesses of width W-1 as bases for width W,
+  fresh-cell mode, greedy frontier cap 10 sorted by max stone x. At width 68
+  the final 2 frontier witnesses of width 67 yield 0 witnesses
+  (`frontier_68.json`, `stats_68.json`): the chain stops there within
+  this greedy policy (no absence claim at width 68 overall).
+- `output/chain/verification_chain.json`: system #2 verification of one
+  representative witness per chain width (61..67).
 
 ## Honest limits
 
