@@ -1,0 +1,57 @@
+WIN8 receipt source_record census — reproduction record (2026-11-21)
+====================================================================
+
+declaration: research/log/2026-11-21-n11-win8-receipt-source-record-census-single-owner-note.md
+pinned commit: 32cb492c5b13bdab00f5bdad11de06391fcb1274 (declaration note publication HEAD)
+
+machine: win8_receipt_source_record_census.py
+  sha256 e7cffd18f218445a40ae4cea220b998b9b85dc1af80ef456b67bc1bb1c6ab975
+
+[1] inputs (static raw URLs at pinned commit, 45 fetches, fail-closed)
+    15 receipt-fold JSONs  (folds 11-25, ordinals eighteenth..thirty-second)
+    15 certificates .n11   (certificate_source.certificate_path of each receipt)
+    15 verification JSONs  (own certificate-extract dir /output/win8-cert-extract-verification-20261120.json)
+
+[2] census battery (final machine)
+    run1 (same cwd, default env):
+      ALL 180 GATES PASS; stale folds ['fold12', 'fold15', 'fold18']
+      output/census.json written
+    run2 (same cwd, default env):
+      ALL 180 GATES PASS; cmp run1: byte-identical
+    run3 (fresh isolated cwd + HOME, env -i, PYTHONHASHSEED=random):
+      ALL 180 GATES PASS; cmp run1: byte-identical
+    run4/run5/run6 (same cwd, default env, timed):
+      ALL 180 GATES PASS; ~1.4 s per run; cmp run1: byte-identical
+    sha256 output/census.json (all runs):
+      c801564d907efb7697717034360e09bae77f1634903adbad38db71c7e93bcca8  (34,758 bytes)
+
+[3] summary values (from census.json, machine-derived)
+    receipts_total 15 / iv_own 12 / iv_stale 3 (fold12, fold15, fold18)
+    stale_all_equal_previous_fold_iv true
+    stale_all_dir_equals_previous_fold_own_dir true
+    iv_dirs_all_in_universe true
+    own_dir_certificate_sha256_match_count 15
+    own_dir_verification_sha256_match_count 15
+    certificate_source_blocks_correct_count 15
+    own_dir_certificate_bytes_match_certificate_bytes_receipt_count 15
+    structural_gates_passed 180
+
+[4] findings discipline
+    fold12/fold15 stale = mechanical reconfirmation of already-published
+      errata (K1175 / K1179).
+    fold18 stale = new finding of this census (IV.source_record points to
+      fold17's certificate-extract experiment n11-residual55-...-root22081000
+      instead of its own n11-residual48-...-root00901010). Read-only report;
+      the record owner retains erratum authority. folds 17/18/19/23/25
+      single-unit ext2 are declared by other lanes.
+    No row closed, no game-tree computation, no certificate verification,
+    no record modification. Standard 11x11 empty board, two-stone roots
+    {49,60}/{59,60}, S2 {59,60}, classes 1/2/4: all UNKNOWN.
+
+[5] pre-publication machine iteration (experimental fact)
+    draft machine (root-hint int comparison) battery was discarded before
+      publication: draft sha256 fec82a988c053c5f318e4f5938652b47b308b073cbfa4a60dc829b63e1220464
+      then e822f45c452006952ab2bb48739a90a7cb9a8dcfd1d3f64ab3b38bf0514f1010 (never published)
+    fix: root-hint comparison changed to receipt-root suffix match (name-level
+      hint fields only, no gate depends on them); battery fully re-run on the
+      final machine (record above).
