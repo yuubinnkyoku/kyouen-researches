@@ -1,0 +1,83 @@
+fold13 external second verification - reproduction log
+=====================================================
+
+Single-owner declaration
+  research/log/2026-11-21-n11-fold13-external-second-verification-single-owner-note.md
+  pushed 2026-11-21T00:59-01:00Z (commit 5a9e8142942786ffe1b2afa2be228caea3d3d18f)
+  no prior fold13-specific external-verification declaration in the last 30 commits.
+  Declaration-time HEAD assumption: 928ae7834e (own K1175 part3).
+
+Published bytes pinned and re-fetched at the declaration commit
+  fold13 receipt   output/win8-root9840004-receipt-fold-20261120.json
+                   20,416 bytes  sha256 c2bf80511e816306bbb8dcf4efb450214234f020c513386c3b3a82045f71e9ae
+  fold13 machine   scripts/fold_win8_root9840004.py
+                   42,315 bytes  sha256 5c27f1ae1362c6f436e126786891bd4617ec92e403d22eff0b3b7537e51b0020
+  fold13 README    7,169  bytes  sha256 ca7ead2b6691d56bf5868d3e06f7488ee2b06c103aee7abd6c2d181293660f39
+  K1108 audit      k1108/output/win8-cert-extract-verification-20261120.json
+                   5,376  bytes  sha256 2e453a76fc3168b8eb2e5c224d4a271eea0839eb5256d51fd9c02eb54bb1f648
+  K1108 cert       k1108/certs/win8-root-00000000000000003800000009840004-20261120.n11
+                   1,640,220 bytes  sha256 5b114b9e739b7a0a300434afb7ec5326564fc54b0d234df5e3d61abc44541143
+
+Stage A. W13 reconstruction (static raw URLs only, no api.github.com)
+  python3 reconstruct_fold13_inputs.py <W13> <pub13f> 5a9e8142942786ffe1b2afa2be228caea3d3d18f
+  - published fold13 dir 3 files re-fetched and sha-verified (c2bf8051/5c27f1ae/ca7ead2b)
+  - machine pin tables machine-read from receipt: 12 Git blob SHA-1 + 16 SHA-256 = 28 pins
+  - 12 legacy blob pins resolved over the static path map (identical SHAs to fold12 lane)
+  - 16 SHA-256 pins resolved via folder aliases incl. fold12/ and k1108/
+  - fold11 machine fetched (9b3e06c8..., 32,204 B), fold12 machine fetched (706bfa7a..., 37,868 B)
+  - subset checks: fold11 pins (12+10) subset of fold12 pins (12+13) subset of fold13 pins (12+16)
+  - manifest: reconstruct13-manifest.json
+  rc=0, all 28 pin digests + 3 machine digests matched.
+
+Stage B. fold13 machine pristine re-executions (receipt byte-exact)
+  run 1 (same cwd, declared W13):
+    FOLD13_W=W13 python3 pub13f/scripts/fold_win8_root9840004.py
+    rc=0, stdout "all 28 input pins verified", chain verified through fold12,
+    fold11 machine rerun verified, fold12 machine rerun verified (isolated W copy),
+    K1108 19/19 gates verified, K1097 crosscheck verified, WIN8 geometry two-method verified
+    receipt sha256 = c2bf80511e816306bbb8dcf4efb450214234f020c513386c3b3a82045f71e9ae (== published)
+  run 2 (same cwd, repeat): rc=0, receipt sha256 c2bf8051... identical
+  run 3 (isolated copytree W/cwd /tmp/r13dir/env -i with fresh HOME):
+    rc=0, receipt sha256 c2bf8051... identical (first attempt under PATH=/usr/bin:/bin
+    returned 127: python3 lives at /usr/local/bin/python3; record as an environment fact)
+  run 4 (isolated copytree + PYTHONHASHSEED=random): rc=0, receipt sha256 c2bf8051... identical
+  external upstream reruns (outside the fold13 machine):
+    fold11+fold12 machines on a fresh isolated W copy (FOLD11_W=FOLD12_W=copy):
+    rc=0, fold/output receipt = d7bf2cd5... and fold12/output receipt = 0f73795c...,
+    both byte-identical to the pinned records.
+
+Stage C. third-implementation verifier
+  python3 verify_fold13_external_20261121.py <W13> <pub13f> <out>
+  verifier built by surgical derivation from the published K1175 fold12 verifier
+  (builder: build_verify13.py, every replacement asserted unique), compiles clean,
+  stdlib only, no clock/randomness in the audit JSON.
+  run v1 (declared cwd): rc=0, "ALL 774 GATES PASS" (P 12 / I 44 / C 673 / X 29 / T 16)
+    wall ~29s; X section: fold13 machine x1/x2 (W in place), x3 (isolated tree/cwd/HOME),
+    x4 (isolated + PYTHONHASHSEED=random) all receipt-byte-identical, fold11 rerun receipts
+    byte-identical; V section: independent fold11 (vr11) and fold12 (vr12) machine
+    re-executions byte-identical (d7bf2cd5... / 0f73795c...); T section: tamper
+    worklist@117777 (blob mismatch) and K1108 cert@777777 (sha256 mismatch)
+    fail-closed with no fold13/fold11 output write and WT pinned fold12 record untouched.
+  run v2 (same cwd): rc=0, audit sha256 identical
+  run v3 (isolated cwd/HOME, env -i, PYTHONHASHSEED=random, copytree W): rc=0,
+    audit sha256 identical
+  audit original: external-audit.json 81,632 bytes
+                   sha256 4fe40fa254b4d2658bb0fadbc47dadb43c3d85214be8a9517b525693b416be81
+  (3-run byte-identical; v1/v2/v3 outputs compared with cmp: identical)
+
+Stage D. findings
+  - every fold13 receipt claim rederived independently by the third implementation:
+    closed rows 9 (claimed 3 + extra 6), closed edge cost 713, 5 affected parents
+    (c4x3: 87->84/90->87/75->72, c2x2: 61->58/16->13, no fully-closed parent,
+    15 row-closings), frontier_after 6,184/489,813 solved 1,664 incidence 11,775
+    needed 4,492/356,261, five-parent target 47->50, residual 65->62,
+    win16 candidates 14->13 (claimed rows 42->39), legal moves 57,
+    K1108 19-gate values, K1097 27-gate footprint partition, residual23 disjoint.
+  - the fold13 receipt's independent_verification.source_record names the correct
+    K1108 experiment (unlike the fold12 receipt's stale fold11 reference recorded
+    as an erratum in the K1175 audit); recorded as an observation in the audit JSON.
+  - no row is closed by this verification; no game value is claimed anywhere.
+
+Interpretation guard (from the audit JSON):
+  the standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60},
+  and classes 1/2/4 remain UNKNOWN.
