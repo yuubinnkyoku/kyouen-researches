@@ -64,3 +64,23 @@ part1出版（commit `d9d1bfa8`）までの時系列記録。
   36-witness sweep・WIN8証明書D4正準行共有監査は引き続き他レーン宣言済み
   （着手禁止）。本censusのfold18 staleはfold18単体ext2レーンの資料としてのみ
   使用可。
+
+## 追記: part3 push時のREADME truncate事故と修復（実験事実・2026-11-21）
+
+- **事故**: 本レーン（K1181）のpart3 工程（commit `759ca9a6`）でknowledge READMEをpushした際、
+  読み取り側の64KB/60行cap（tools.file_system.read_fileの1呼び出し上限）を考慮せず
+  blob全体を1回のreadで渡した結果、**正しい658,163 bytesのうち先頭63,699 bytes
+  （prefix）だけがmainに書き込まれた**（READMEの約90%欠損。ただしwrite内容は
+  08e13676版の正しいprefixそのものだったため、pin時点のraw byte（08e13676）から
+  完全修復が可能だった）。
+- **修復**（commit `09a1315d`）: 対象byte（08e13676版655,275 bytes ＋
+  K1181 bullet 2,888 bytes）をbash側で行単位・44,951 bytes以下の16 chunkに
+  分割し、各chunkのreadをfile_size_bytes/returned_bytes/was_truncatedで
+  個別検証してから連結push。fetch-backで658,163 bytes byte一致・
+  08e13676版prefix全byte保持・K1177/K1178/K1179/K1180既存bullet温存・
+  K1181 bullet末尾確認済み。
+- **再発防止（本レーン手順に固定）**: 100KB超のファイルをrepoへ反映する
+  場合、read_fileはchunk化して個別検証し、push後はfetch-back byte比較を
+  必須とする。今回も事故はpush後1コミット以内にfetch-back比較で捕捉され、
+  同一実行内に完全修復・検証した（1行も閉じない・census結果・receipt byte
+  いずれにも影響なし）。
