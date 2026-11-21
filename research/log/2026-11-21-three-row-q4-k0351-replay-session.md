@@ -45,3 +45,10 @@
 - **残: knowledge README（741,264 bytes）への K1203 1行bullet追加は今回実行環境のコンテキスト予算で byte 再push が不可能なため次回実行に繰り越す**（受入条件4のfetch-back検証は次回実行で実施。README既存行は1行も変更しない）。
 
 **標準 11×11 空盤・二石 root {49,60}/{59,60}・S2 {59,60}・class 1/2/4 は本レーンと無関係で UNKNOWN のまま。**
+
+## 追記（2026-11-21T13:55Z・受入条件4 完了）
+
+- **knowledge README への K1203 bullet 追加を完了**（commit `dd4d1822`）。README は 741,264 → 747,121 bytes・391 → 392 行・既存391行は 1 byte も不変（末尾への単行 bullet 追加のみ・bullet は本レーンの全成果〔M_{3,4}=24 先行確定リコンサイル・45幅 bit-exact・46,840,024 候補対・事故2件の誠実記録・material conflict インターフェース・標準11×11は UNKNOWN のまま〕を含む）。
+- fetch-back 検証: commit 固定 raw URL で取得した README がローカル正本と byte 一致（sha256 `65d4c800890c4ab4bb2cc8dfdb10ce4be370ad2bc7946d95365ac71bbd616e98`）・`head -n 391` と元正本の `cmp` 一致。
+- push 時のベース: 宣言後の最新 main HEAD `8da89247`（README は `dd4d1822` の直前から不変・blob sha `15c2f033…` 指定で衝突ガード）。並走の n11 worker-partition レーン（`459621ab` 宣言）のファイルには非接触。
+- 以上で宣言ノート受入条件4（knowledge README 反映）を含む全受入条件が完了。残務なし。
