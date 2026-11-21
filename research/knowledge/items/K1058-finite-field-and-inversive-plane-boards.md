@@ -559,6 +559,18 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/scripts/s_q_1617.py
   role: verifier
   note: s(16)=9, s(17)=8の測定
+- path: research/experiments/finite-field-kyouen-20261120/ARC_ON_QUADRIC.md
+  role: source
+  note: 共円ゲームの楕円二次曲面上のアーク問題への帰着
+- path: research/experiments/finite-field-kyouen-20261120/scripts/arc_on_quadric.py
+  role: verifier
+  note: 共円⟺同一平面の全数検証（q≤7）
+- path: research/experiments/finite-field-kyouen-20261120/LITERATURE_ARC_Q8.md
+  role: source
+  note: q=8のアーク数1,048,320が文献値と一致
+- path: research/experiments/finite-field-kyouen-20261120/scripts/k_large.py
+  role: verifier
+  note: ovoid模型での厳密K探索
 scope: 標準q=4の禁止条件 det[x,y,x^2+y^2,1]=0 を可換環上で読むことで定義される有限体盤 AG(2,q)（q は素数冪）、位数qの反転平面（3-(q^2+1,q+1,1)設計）、周期境界を課したトーラス盤 Z_n^2、および一般の Steiner t-(v,s,1) 設計上の完全指摘・通常プレイゲーム。q=3,5 の完全計算、n≤12 の行列式上界、トーラス盤とAG(2,p)の一致（p≤13）、9つのSteiner設計での三分法検証、反転平面の3-ネット翻訳（q≤9）。
 evidence: 有限完全計算（q≤5 の全安全局面 Grundy、q≤8 の反転平面K厳密値、q≤7 のAG K厳密値、n≤12 の D(n)、p≤13 のトーラス一致、9設計のK、q≤9 の3-ネット横断数）と、3-設計公理の機械検査、交差比の鍵事実の全数検証（q≤7、247,840個の4点組、不一致0）。D(n)=a^2*floor(a^2/2) は n≤12 の全数確認済みだが全称証明ではない。層サイズ公式は k≤5 の範囲で証明、k≥6 は反例あり。トーラス盤とAG(2,p)の一致は Z_p=F_p から従うが全数確認は p≤13。三分法・一般上界 K≤lambda_2+2・一般下界 K=Omega((v/s)^(1/3))・派生上界 K≤1+A_2(D_p) は証明済み。K=3+alpha は q≤9 の検証であり一般証明ではない。
 ---
@@ -1460,6 +1472,60 @@ size 8: best unblocked=3    size 9: FOUND  (731 trials)
 | `K(q)` | 5 | 5 | 6 | 6 | 7 | 9 | 9 | **8** |
 
 **q=13 では差がわずか 1。** ゲームの手数は 7 か 8 のどちらかしかない。
+
+### 10k. 幾何学的再定式化：楕円二次曲面上のアーク問題
+
+ovoid 模型により、共円ゲームは**古典的な有限幾何の問題**になる。
+
+**q 奇数**：`Q = x₀² + x₁² + x₂² + d·x₃²`（`d` 非平方）
+**q 偶数**：`Q = x₀x₁ + x₂² + x₂x₃ + a·x₃²`（`Tr_{F_q/F₂}(a) = 1`）
+
+`Q = 0` の零点集合が `PG(3,q)` の ovoid（`q²+1` 点）。
+
+**定理**：`Q` の4点が共円 ⟺ 同一平面上にある。
+
+**証明**：4点が同一平面上ならその平面は `Q` と4点以上で交わり、
+平面切断のサイズは `0,1,2,q+1` のいずれかしかないので `q+1`（円）。
+逆に円は平面切断。 □
+
+**検証**（`arc_on_quadric.py`、全数）：q=3,4,5,7 で
+210 / 2,380 / 14,950 / 230,300 組、**不一致 0**。
+
+**系**：
+
+```
+K(inversive q) = 楕円二次曲面上の最大アークサイズ
+```
+
+**注意（特性2の落とし穴）**：`x₀²+x₀x₁+a·x₁²+x₂²+x₂x₃+b·x₃²`（両方既約）は
+**双曲的**で `q²+2q+1` 点を持つ。q=4 で 25 点（正しくは 17 点）になった。
+正しい形は `x₀x₁+x₂²+x₂x₃+a·x₃²`（`Tr(a)=1`）。
+**点数の検証がなければ気づかなかった**（3-設計公理は誤った曲面でも成立する）。
+
+**計算速度**：q=8 の構成が 453 秒 → **0.6 秒**（750倍）。
+
+### 10l. 文献との一致（q=8）
+
+Sitjar, *There Is No Anti-Cocircular Pair of Ovoids in PG(3, 8)*
+（2026年11月、[alphaXiv](https://www.alphaxiv.org/abs/2611.anti-cocircular-ovoids-pg3-8)）
+は `PG(3,8)` の楕円二次曲面上のアークを全数数え上げている。
+
+**独立計算による照合**（`arc_on_quadric.py` の ovoid 模型）：
+
+```
+q=8: n=65, circles=520
+arc counts: {0:1, 1:65, 2:2080, 3:43680, 4:611520,
+             5:4525248, 6:9434880, 7:1048320}
+```
+
+**サイズ7のアーク数 = 1,048,320。論文の値と完全一致。**
+サイズ8以上は 0。
+
+**系**：`K(inversive 8) = 7` に独立な裏づけが得られた
+（本研究の厳密探索 15,320,036 ノード + 文献のアーク数え上げ）。
+
+**用語対応**：本研究の「安全集合」= 文献の「アーク」、
+「4点共円」=「4点同一平面」、「`K`」=「最大アークサイズ」。
 
 ### 11. 派生設計による上界
 
