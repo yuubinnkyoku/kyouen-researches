@@ -140,3 +140,47 @@ K 項目へ昇格する。
 - **残り**: k3 直接 c1k3p1..10・c0k3p3..10 の 18 枚 (runner 実行中) と
   INDET 3 バケットの x2 分割 (sat4ka.js・各 ≤300s 予測)。
   全 UNSAT なら witness-free 幅集合 {21,22} = **M_{4,5} = 21 or ≥24**。
+
+## 追記 (2026-11-21 高速レーン: batchD/batchE 完結・4×22 witness-free・M_{4,5} = 21 or ≥ 24)
+
+- **再開経緯**: 2026-11-20 13:05Z の実行環境利用不能後の handoff
+  （RESETUP-20261120.md・「次回実行の最初の作業」）を受けて、単一オーナー宣言
+  [f0b1fbad](../../../log/2026-11-21-four-row-q5-m22-batchDE-resumption.md)
+  （07:10Z）の下で batchD/batchE を継続。着手前に main を再取得し
+  他レーンの同一 (4,22,5) 着手がないことを確認。
+- **較正（本環境）**: 陽性対照 ctrl_4x20_c0k3p1 の CNF が byte-exact 再生
+  （md5 362034b2…）・kissat SAT 375,415 conflicts bit-exact。既出版
+  c1k3p3 CNF 再生 md5 25bccf63… byte-exact。c1k3p10 再実行 UNSAT
+  1,146,769 conflicts bit-exact。(4,21,5) c0k3p0 x2=1 で新旧 sat4 CNF
+  byte-identical（13749780…）。kissat 4.0.4 は md5 3a5eba83… 出版pin 一致。
+- **environment-reset 事故 (07:53Z)**: batchE 実行中に実行環境がハードリセットされ
+  work area 全消滅（本レーン4回目）。repo 正本は 76 行（497f4e17）で無事。
+  未push の x2 決着 30 枚を喪失したが、決定的生成・決定的ソルバにより再構築環境で
+  再実行し、喪失前観測済みの 15 枚（c0k3p0 b1/b4..b8/b18..b20・c0k3p1 b2/b8..b11）
+  の conflicts はすべて bit-exact 再現（環境またぎ決定性の較正を兼ねる）。
+  最終 57 枚の x2 レコードはすべて再構築後環境の実行である。
+- **batchD 完了**: c0k3p3..p10 直接 8 枚 全 UNSAT（最難 c0k3p3
+  5,162,737 conflicts / 415s・cap 900s・m21 比約 2x と整合する難化）。
+- **batchE 完了**: c0k3p0/p1/p2 の x2 第2石分割 57 枚 全 UNSAT・INDET 0
+  （p0 b1..20: 14,914,910・p1 b2..20: 11,831,256・p2 b3..20: 9,750,138・
+  計 36,496,304 conflicts・最難 c0k3p0x2b1 2,196,989 / 115s・cap 900s に対し
+  十分余裕）。m21 の x2 最難 1,969,663 conflicts 比 1.1x で ring-fit。
+  2026-11-15 記録の直接 600s INDET 3 幅は完全分割で決着（INDET 行は誠実な
+  負記録として残存）。
+- **被覆の結論**: 9 正準クラスの被覆が完結（multi 7 直接 + k0/k1/k2 46 直接 +
+  k3 c1 側 11 直接 + c0k3p3..10 8 直接 + c0k3p0/p1/p2 x2 完全分割）。
+  計 129 UNSAT + 陽性対照 SAT 1 + INDET 3（決着済み・残存）= records 133 行。
+  **4×22 に行欠損極大安全配置は存在しない**（全極大安全配置は 16 石・行占有率
+  (4,4,4,4)）。
+- **主張**: K0857（4×21 witness-free）・K0833（witness 帯 m=5..20・全 SAT 二重検証）・
+  K0318（上界 U_{4,5}=140）と組み合わせて、(4,5) の witness-free 幅集合は
+  **{21,22}**、したがって K0821 監査規約により **M_{4,5} = 21 または ≥ 24**
+  （M=22/23 は不可能）。次の前線は 4×23（SAT なら M ≥ 24 が確定・
+  UNSAT なら witness-free 幅集合 {21,22,23} で M = 21 or ≥ 25）。
+- **第二検証**: [output/x2-split-verification-20261121.json]
+  （57/57 UNSAT 台帳・p0/p1/p2 桁別合計・CNF 再生 md5 4 件一致・サンプル
+  再実行 3 件 bit-exact（c0k3p0x2b1/c0k3p1x2b2/c0k3p2x2b3）・環境またぎ
+  再現 15/15・records 増分 4 commit の内訳）。
+- **出版**: records 133 行（増分push 4 回: 497f4e17〔76〕・433215df〔88〕・
+  dddf26bd〔112〕・02517132〔133〕・append-only 維持）。K item [K1197]。
+- 標準 11×11 空盤・二石 root は本結果と無関係・UNKNOWN のまま。
