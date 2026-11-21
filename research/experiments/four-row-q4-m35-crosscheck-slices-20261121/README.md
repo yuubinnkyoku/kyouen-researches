@@ -47,6 +47,8 @@ slices re-run with E-pub below extend the record beyond E-kit's coverage.
 | 4x35, base m=32 | 56 | negative, finer grid (E-kit covered 16) | **0 witnesses**; U0-grid identical on the 16 shared placements; lone cells `(34,2),(0,2),(1,2)` on the id image reproduce E-kit's record |
 | 4x35, base m=34 | 56 | negative, finer grid (new) | **0 witnesses** |
 | 4x36, base m=32 | 60 | negative, finer grid (E-kit covered 20) | **0 witnesses**; U0 = 1 at 8 placements, lone cells again inside the deficient row |
+| 4x35, base m=28 | 52 | negative, new family slice | **0 witnesses**; U0 inside the deficient row at all 52 placements (min U0 = 5) |
+| 4x35, base m=30 | 60 | negative, new family slice | **0 witnesses**; U0 inside the deficient row at all 60 placements (min U0 = 2, split pairs straddling both board edges) |
 
 Also re-verified this session: `buildCensus(4,35,4)` from E-pub gives
 `413 lines + 41,194 circles = 41,607`, matching the pin and the independent
@@ -57,8 +59,11 @@ the m=32 base, for every one of the 56 placements, the uncovered set U0 of
 the R = empty configuration lies entirely inside the deficient row (row 2
 for the id/fx images, row 1 for the y-flipped images), with min U0 = 1
 attained at four consecutive bounding-box translations. The same holds for
-base m=34 on 4x35 (56 placements) and for the m=32 base on 4x36 (60
-placements, U0 = 1 at 8 placements). Adding a lone cell
+base m=34 on 4x35 (56 placements), for the m=32 base on 4x36 (60
+placements, U0 = 1 at 8 placements), and — addendum runs, same session —
+for the independent family members base m=28 (52 placements, min U0 = 5)
+and base m=30 (60 placements, min U0 = 2) on 4x35, with the deficient row
+tracked through each image's y-flip. Adding a lone cell
 is safe (it sits on no 3-curve) but saturates the deficient row to
 [3,3,3,3], a non-deficient maximal configuration. No universal claim is
 made; see the session log.
@@ -77,6 +82,8 @@ node probe/probe_base.js --board 34 --base 32 --budget 240 --ledger output/probe
 node probe/probe_base.js --board 35 --base 32 --budget 240 --ledger output/probe_b35_base32.jsonl
 node probe/probe_base.js --board 35 --base 34 --budget 240 --ledger output/probe_b35_base34.jsonl
 node probe/probe_base.js --board 36 --base 32 --budget 240 --ledger output/probe_b36_base32.jsonl
+node probe/probe_base.js --board 35 --base 28 --budget 240 --ledger output/probe_b35_base28.jsonl
+node probe/probe_base.js --board 35 --base 30 --budget 240 --ledger output/probe_b35_base30.jsonl
 ```
 
 Without `--engine-root`, the probe resolves the engine directory as its
@@ -117,6 +124,8 @@ output/probe_b34_base32.jsonl positive control ledger (52 lines)
 output/probe_b35_base32.jsonl negative ledger (56 lines)
 output/probe_b35_base34.jsonl negative ledger (56 lines)
 output/probe_b36_base32.jsonl negative ledger (60 lines)
+output/probe_b35_base28.jsonl negative ledger, addendum family slice (52 lines)
+output/probe_b35_base30.jsonl negative ledger, addendum family slice (60 lines)
 output/probe_runs.log         consolidated run log (all placements, U0 cells, timings)
 sha256s.txt                   pins of all files above
 ```

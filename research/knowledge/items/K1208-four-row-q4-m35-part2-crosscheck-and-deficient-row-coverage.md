@@ -56,6 +56,17 @@ census anchors + published-witness reverification + brute-force EQUIV
 battery) therefore agree exactly on the shared slices, on the positive
 control, and on census(4,35,4) = 413 lines + 41,194 circles = 41,607.
 
+**Addendum (same session, addendum commit)**: two further family slices with
+the published engine extend the record: 4x35 base 28 (52 placements, **0
+witnesses**, min U0 = 5) and 4x35 base 30 (60 placements, **0 witnesses**,
+min U0 = 2, the U0 = 2 pairs straddling the left and right board edges). In
+both, every placement's R=empty uncovered set again lies entirely inside
+the (image-y-flipped) deficient row. The deficient-row coverage observation
+of the next section therefore spans **284 placements across five family
+representatives** (m=28, 30, 32, 34 at 4x35; m=32 at 4x36) on the published
+fine grid, while the distance-1 boundary (U0 = 1) remains specific to the
+m=32-family placements so far.
+
 Placement-grid note for verification use: E-pub translates each reflected
 pattern's bounding box (the m=32 family box has width 21, so 56 placements
 on 4x35); E-kit translates the full m_base-wide window of the canonical
