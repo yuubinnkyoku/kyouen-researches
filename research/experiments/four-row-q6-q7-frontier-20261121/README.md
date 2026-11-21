@@ -6,9 +6,10 @@ w=4 の q=6・q=7 は repo 内で未着手だった（q=4,5 は four-six-row ban
 
 安定化長 M_{4,q} := least m0 such that P(m) ∀ m ≥ m0、ただし P(m) ⟺ def-mode UNSAT（行欠損極大安全配置の非存在）∧ capacity 配置の存在。
 
-- **(4,m,7)**: witness band m=7..12（各行 ≤6・最小行 5・3系統検証 PASS）、witness-free band **m=13..72**（全幅完全 UNSAT）。capacity 配置 m=13 と m=16 で SAT（24石、全行 6、3系統 capacity 検証 PASS）。capacity の m 単調性（同じ石集合はより広い盤でも安全・極大）と合わせ、**M_{4,7} = 13 または M_{4,7} ≥ 73**。
-- **(4,m,6)**: witness band m=6..15（最小行 4）、witness-free band **m=16..27**（全幅完全 UNSAT、conflicts 1.4M〜3.7M）。capacity 配置 m=16 SAT（20石、全行 5、3系統 capacity 検証 PASS）。よって **M_{4,6} = 16 または M_{4,6} ≥ 28**。上界の引用値: U_{4,6} = 103（K0318 thresholds JSON・packing_U）。
+- **(4,m,7)**: witness band m=7..12（各行 ≤6・最小行 5・3系統検証 PASS）、witness-free band **m=13..85**（全幅完全 UNSAT）。capacity 配置 m=13 と m=16 で SAT（24石、全行 6、3系統 capacity 検証 PASS）。capacity の m 単調性（同じ石集合はより広い盤でも安全・極大）と合わせ、**M_{4,7} = 13 または M_{4,7} ≥ 86**。
+- **(4,m,6)**: witness band m=6..15（最小行 4）、witness-free band **m=16..29**（全幅完全 UNSAT、conflicts 1.4M〜3.7M）。capacity 配置 m=16 SAT（20石、全行 5、3系統 capacity 検証 PASS）。よって **M_{4,6} = 16 または M_{4,6} ≥ 30**。上界の引用値: U_{4,6} = 103（K0318 thresholds JSON・packing_U）。
 - 境界幅の交差エンコーディング確認: (4,16,6) と (4,13,7) の def-mode + `--lex=H`（シンボリック LE を lexLeader 制約付きで再符号化）が双方 UNSAT。符号化独立性の信頼性追加。
+- **band extension（同日追い込み、commit参照）**: q=7 を m=73..85（13幅・すべて UNSAT・conflicts 2.8k..5.6k・0.13..0.21s）、q=6 を m=28..29（2幅・ともに UNSAT・2.46M/2.45M conflicts・140s/幅）へ延伸。q=7 の m=86 は sat2.js census 符号化のメモリ壁（生成段階 OOM・INDET ではなく符号化資源上限。kissat 判定は得られていない）。q=6 m=30 以降は未掃引。
 
 ## 観察（予想として記録・未証明）
 
@@ -35,15 +36,15 @@ KISSAT_BIN=... node runner.js cap <q> <m> <capSec>
 - `scripts/verify3.py` — 第 3 検証器（census 非依存・全候補列挙）
 - `scripts/verify_witness.py` — 第 2 検証器（`--capacity` モード付き）
 - `scripts/runner.js` — sweep/lexdef/rowfixed/cap オーケストレータ
-- `output/records.jsonl` — 93 インスタンス記録
+- `output/records.jsonl` — 108 インスタンス記録（初期掃引 93 + band extension 15）
 - `output/witnesses/*.json` — witness（q=6 10個、q=7 6個）と capacity 配置（4個）
 
-## 次の作業（レジューム情報）
+## 次の作業（レジューム情報・band extension 後）
 
-- q=6: m=28 以降の掃引（280s+ 要・INDET の可能性）、rowY 分割での高速化。witness-free band がさらに伸びれば主張の m ≥ 28 部分を改善。
-- q=7: 予想 M_{4,7}=13 の全称証明 試み（ブロッキング計数の定式化）、または m=73.. からの追加掃引で band 延伸。
-- 五行 q7 レーン（five-row-q7）との整合確認は既に本レーン着手時に実施済み（無関係）。
+- q=6: m=30 以降の掃引（外挿 ~140-200s/幅・`NODE_OPTIONS=--max-old-space-size=2048` 必須化の見込み）。witness-free band がさらに伸びれば主張の m ≥ 30 部分を改善。
+- q=7: m=86 は sat2.js の全三つ組 census が生成段階でメモリ上限に到達（kissat 判定なし・INDET ではない）。 Six-row lane の genfast3.js 型の弦対抽象円 census（q ≥ w+2 で完全性論つき・K1134 レーンで確立済み）を w=4 q=7 に移植すれば突破可能。
+- 予想 M_{4,7}=13 の全称証明（ブロッキング計数の定式化）は継続課題。当面は延伸掃引で支持を積む。
 
 $$
-M_{4,6} = 16 \text{ or } \ge 28 \qquad M_{4,7} = 13 \text{ or } \ge 73
+M_{4,6} = 16 \text{ or } \ge 30 \qquad M_{4,7} = 13 \text{ or } \ge 86
 $$
