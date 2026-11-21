@@ -120,14 +120,14 @@ function fastFull(m, prof, examples, astart, acount) {
     for (let bi = 0; bi < nB; bi++) { const b1 = pairsB[bi][0], b2 = pairsB[bi][1];
       for (let ci = 0; ci < nC; ci++) { const Cs = setsC[ci];
         for (const c of Cs) { const cir = circle3(b1, yB, b2, yB, c, yC); if (!cir) continue;
-          const n = rowRoots(cir, yC); for (let t = 0; t < n; t++) { const x = ROOTS[t]; if (x >= 0 && x < m) gC2[bi * nC + ci] |= (1 << x); } } }
+          const n = rowRoots(cir, yC); for (let t = 0; t < n; t++) { const x = ROOTS[t]; if (x >= 0 && x < m) gC2[bi * nC + ci] |= (1 << x); } }
       } }
   }
   if (cIsPair) {
     for (let bi = 0; bi < nB; bi++) {
       for (let ci = 0; ci < nC; ci++) { const c1 = setsC[ci][0], c2 = setsC[ci][1];
         for (const b of pairsB[bi]) { const cir = circle3(c1, yC, c2, yC, b, yB); if (!cir) continue;
-          const n = rowRoots(cir, yB); for (let t = 0; t < n; t++) { const x = ROOTS[t]; if (x >= 0 && x < m) gB2[bi * nC + ci] |= (1 << x); } } }
+          const n = rowRoots(cir, yB); for (let t = 0; t < n; t++) { const x = ROOTS[t]; if (x >= 0 && x < m) gB2[bi * nC + ci] |= (1 << x); } }
       } }
   }
   if (bIsPair && cIsPair) {
