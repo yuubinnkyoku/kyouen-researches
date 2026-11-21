@@ -8,6 +8,7 @@
   - part3 `ce026735`: 第三系 verify_third.py + third_verify.json + README 追記 + K0827 反映 + knowledge README 反映 + 本ログ。
   - repair `8afa77d5`: part3 の切り詰めを正本へ復元。
   - part4 `a2acdd6a`: 幅68 witness（下界69）。
+  - part5 scripts `e91f6f74`: 幅69掃引scripts fresh+holes（データは環境復旧後に）。
 
 ## 結果（下界更新）
 
@@ -36,6 +37,8 @@
 - チェーンの endpoint（幅68）は frontier cap 10 の貪欲に依存。cap・選別基準を
   変えれば 68+ 到達の可能性が残る（幅68 witness 探索が次の実行可能課題）。
 - 実行時間の目安: 1近傍列挙につき 2〜4 秒（幅60前後）、1幅あたり cap 10 で 10〜36 秒。
+- 2026-11-21 第二バッチの後半で bash・file_system の実行環境が一時ダウンした
+  （GitHub コネクタは稼働）。大ファイルのローカル成果は次回実行時に再取得・再構成が必要。
 
 ## 事故と修復（part3 publish の切り詰め）
 
@@ -62,7 +65,7 @@
 - **M_{7,4} ∈ [69, 1929]・witness帯 m=4..68・前線 7×69**。幅69は幅68 witness の
   fresh 近傍で0件（局所負記録のみ）。
 
-## part5（幅69 fresh+holes 全200基底掃引 — 完全局所負記録・publishは環境復旧後）
+## part5（幅69 fresh+holes 全200基底掃引 — 完全局所負記録・データpublishは環境復旧後）
 
 - 幅69をpart4と同一の全基底掃引で評価: 基底は199基底+幅68 witness の200基底。
   fresh 2-for-2 全掃引: 428,241,000候補・43,208,643 safe・**行欠損極大 0件**。
@@ -70,10 +73,9 @@
   いずれも既知基底の（≤2除去,≤2追加）近傍に限る完全列挙による局所負記録であり、
   幅69全体の不在主張ではない（3編集surgery・他の移動型・未発見配置は残る）。
 - **M_{7,4} ∈ [69, 1929] 不変・前線 7×69**。
-- この時点で実行環境（bash・file_system）が一時ダウン。part5の生データ
-  （output/w69/results.jsonl・results_holes.jsonl・sweep69.js・sweep69h.js・実験README追記・
-  K0827追記）は未 publish。sweep69.js は scripts/sweep68.js（part4でpublish済み）の
-  決定的 sed 置換（w68→w69・Board(68)→Board(69)）で再構成可能で、列挙は決定的なので
-  再実行で byte 同一の results.jsonl が再現する。次回実行時の宿題: (1) 環境復旧後に
-  上記データを push して実験 README・K0827 に w69 両モード負記録を反映、
-  (2) sweep69h.js（holes版・結果ファイルのみの差分）も同様に再構成して publish。
+- 環境ダウン時の扱い: sweep69.js・sweep69h.js は正確に再構成して publish 済み（`e91f6f74`）。
+  未 publish: output/w69/results.jsonl・results_holes.jsonl・output/w69/bases.json
+  （= output/w68/bases.json（part4でpublish済み）+ 幅68 witness）・実験README追記・K0827追記。
+  列挙は決定的なので再実行で計数・候補数は完全に再現する（results.jsonl の ms
+  フィールドのみ wall-clock 依存で変わる）。次回実行時の宿題: 環境復旧後に上記データを
+  再生成・push して実験 README・K0827 に w69 両モード負記録を反映する。
