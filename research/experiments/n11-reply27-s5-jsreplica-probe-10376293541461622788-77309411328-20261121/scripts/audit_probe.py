@@ -180,7 +180,7 @@ gate('remaining_third_moves_unchanged', third - secured_b == {100, 108})
 audit = {
     'schema': 'n11-s5-js-replica-probe-audit-v1',
     'all_gates_pass': True,
-    'title': 'reply27 two-target S5 probe #2 (JS replica of pinned exact-replay path): 10376293541461622788:77309411328 = LOSS',
+    'title': 'reply27 two-target S5 probe #3 (JS replica of pinned exact-replay path): 10376293541461622788:77309411328 = LOSS',
     'gates_passed': gates,
     'pins': {
         'pinned_cpp_kyouen_dfpn_root_sha256': '9193f5b6065e0fbcad2ef7c65f386187701cafa1f5b718cc35a5cbb0d138f92e',
