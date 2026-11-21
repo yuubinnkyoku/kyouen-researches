@@ -43,6 +43,12 @@ artifacts:
 - path: research/log/2026-11-21-n11-s5-recovery-input-validation-and-quarantine-guard.md
   role: log
   note: 非正準ログkeyをworker cacheへ書けた欠陥の再現と修正・検査結果
+- path: research/experiments/n11-search-methods/tests/test_s5_quarantine_duplicate_json_keys.py
+  role: verifier
+  note: proof-critical quarantine registryのJSON重複object keyを拒否する回帰（root schema・nested active）
+- path: research/log/2026-11-21-n11-s5-quarantine-duplicate-json-keys-guard.md
+  role: log
+  note: duplicate active fieldによる撤回verdict除外のfail-openを再現・修正し2回帰PASS
 ---
 
 # 11×11のs5 verdict cacheから失われた158証明を回収しLOSS class 2個・secured 10/119を独立検証で確定した
