@@ -1,0 +1,58 @@
+{
+  "engine": {
+    "base53_w57": {
+      "recomputed": {
+        "rcc": 1436643,
+        "safe": 60921,
+        "max": 2
+      },
+      "expected": {
+        "rcc": 1436643,
+        "safe": 60921,
+        "max": 2
+      },
+      "pass": true
+    },
+    "w68witness_w69_fresh": {
+      "recomputed": {
+        "rcc": 2141205,
+        "safe": 199290,
+        "max": 0
+      },
+      "expected": {
+        "rcc": 2141205,
+        "safe": 199290,
+        "max": 0
+      },
+      "pass": true
+    }
+  },
+  "driver_w68": {
+    "compared": 11,
+    "mismatches": [],
+    "positives_rediscovering_published_witness": 3,
+    "pass": true
+  },
+  "holes_semantics_w60": {
+    "fresh_rcc": 1599648,
+    "fresh_safe": 95722,
+    "fresh_max": 4,
+    "holes_rcc": 1641372,
+    "holes_safe": 103379,
+    "holes_max": 23,
+    "fresh_subset_of_holes": true,
+    "published_fresh_counts_match": true,
+    "published_witnesses_reproduced": true,
+    "pass": true
+  },
+  "selftest_1f0": {
+    "positive_control_maximal": true,
+    "negative_control_maximal": false,
+    "negative_control_first_unblocked": [
+      1,
+      5
+    ],
+    "pass": true
+  },
+  "overall_pass": true
+}
