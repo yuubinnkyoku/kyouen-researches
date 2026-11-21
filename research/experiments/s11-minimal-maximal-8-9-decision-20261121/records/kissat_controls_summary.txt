@@ -1,0 +1,17 @@
+== kissat control runs summary (verdicts + key statistics) ==
+binary: kissat 4.0.4 linux-amd64, md5 3a5eba830aa6008a604fcc9bbe99a325 (pinned)
+-- n5 k=4 (UNSAT expected; published s_5=5): --
+s UNSATISFIABLE
+4.0.4
+comment-lines: 96
+c conflicts:                             2458            319
+-- n5 k=5 (SAT expected; witness decodes to a 5-stone maximal safe set, cnf_check PASS separately): --
+s SATISFIABLE
+-- n7 k=6 (UNSAT; published s_7=7): --
+s UNSATISFIABLE
+c conflicts:                           798605            11240.20 per second
+c process-time:                         1m 11s              71.05 seconds
+-- n7 k=7 (SAT; model decodes to stones 8,11,16,18,21,28,46 = published K0031 witness): --
+s SATISFIABLE
+c conflicts:                           176724            12602.28 per second
+c process-time:                            14s              14.02 seconds
