@@ -2,12 +2,12 @@
 """w-general (q=4) blocking-counting class table: for w in {3..7}.
 
 Extends the K1202 w=3 captable mechanism to w rows. For w>=4, non-horizontal
-lines CAN block (<= w slab points); both circle and line blocker coverage on a
-deficient row i is bounded by max(0, 2-u_i) (lines hit a row <= once and a line
-blocker of row i carries u_i=0 on it; circles meet a row <= 2 points), so the
-CAPS supply formula sum_triples sum_def max(0,2-u_i) is a valid upper bound for
-all w. Triples with 3 stones on one row (horizontal lines of full rows) never
-cover deficient-row cells (deficient rows have <=2 stones) and are excluded.
+lines CAN block (<= w slab points), but the per-deficient-row coverage bound
+max(0, 2-u_i) is unchanged: a circle meets a row <= 2 points (u_i of them
+triple stones, <= 2-u_i free cells of the row), a non-horizontal line meets
+a row <= once (u_i <= 1 per row, <= 1-u_i <= 2-u_i free cells). Triples with
+3 stones on one row are exactly the horizontal lines of saturated rows and
+never cover deficient-row cells, so they are excluded (weight 0).
 """
 import itertools, math, json
 
