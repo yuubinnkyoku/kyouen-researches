@@ -144,3 +144,12 @@ M_{4,7} = 13 が K1182 で閉じた（本項出版後の closure レーンによ
 2. 以上より q=6 witness band は m=6..15 のまま、witness-free band は **m=16..33** に伸びる。K0821/K1134 規約の鋭い形は **M_{4,6} = 16 or M_{4,6} >= 34**、代入上界 U_{4,6}=103（K0318）と組み合わせて **M_{4,6} = 16 or ∈ [34,103]**（残る未掃引幅 34..102 の 69 幅）。
 3. m=34 以降は未掃引。先行セッションの参考記録（非権威）: m=32 の plain-def 280s cap 探索は打切り時 4,060,733 conflicts・lex=H 200s cap 探索は 2,921,868 conflicts でいずれも cap 下 INDET であり lex=H は決定的加速ではない。m=32 は先行セッションでも 2 回の cap なし実行で UNSAT・conflicts bit-exact（294.05s/320.15s）だったが出版前に環境喪失した。今回の出版がこの 2 幅の正本。
 4. 本節は主張 1・2・4 の q=6 側の数値を本節のとおり読み替えるものとする（確定幅 16..31 → 16..33・候補帯 [32,103] → [34,103]）。それ以外の本文・scope に変更はなく、q=7 側と m=6..15 witness・capacity・lex 項目は不変。第2次帯延伸節は第2次時点の記録としてそのまま残す。
+
+## 第4次帯延伸（q=6・m=34・2026-11-21）
+
+本項の q=6 witness-free band をもう 1 幅延伸した。正本データは frontier 実験 dir の records.jsonl 116→117（tag s4x34q6_def）・output/q6ext4/（solve log 双実行 2 本・gen meta 1 本・較正 meta 1 点）・scripts/append_records_q6c.js。
+
+1. **(4,34,6) def-mode UNSAT**（kissat 4.0.4 pinned〔3a5eba83…〕・rc=20・conflicts 4,480,309・2 回の独立実行で conflicts bit-exact〔process-time 311.94 / 312.58 s〕・sec_cap null=上限なし実行〔nohup 単独 detached〕・INDET 0）。生成は genfast3.js 弦対抽象円 census（md5 12c2bd9c…・q=6=w+2 への適用の完全性論は第2次帯延伸と同一・生成値 vars 23419/clauses 81446/curves 1059・CNF md5 1f58cdfc…）。較正: 対照 (4,33,6) の CNF が第3次帯延伸の出版 CNF と byte 一致（md5 bf058f40…・curves 992/vars 21972/clauses 76413 同一）。conflicts は同一環境の先行実行（生ログ喪失・非出版・353.53 s）の記録値とも bit-exact。
+2. 以上より q=6 witness band は m=6..15 のまま、witness-free band は **m=16..34** に伸びる。K0821/K1134 規約の鋭い形は **M_{4,6} = 16 or M_{4,6} >= 35**、代入上界 U_{4,6}=103（K0318）と組み合わせて **M_{4,6} = 16 or ∈ [35,103]**（残る未掃引幅 35..102 の 68 幅）。
+3. m=35 以降は未掃引。前セッション同様の実行環境の detached 実行の不安定さにより第2実行の確定まで 2 度のインフラ打切り（いずれも判定には非寄与）を要した。外挿では 1 幅あたり ~330-430 s で単調な conflicts 増加が継続しており、残り 68 幅の閉包は生成壁なし・計算資源の逐次投入で可能。
+4. 本節は主張 1・2・4 の q=6 側の数値を本節のとおり読み替えるものとする（確定幅 16..33 → 16..34・候補帯 [34,103] → [35,103]）。それ以外の本文・scope に変更はなく、q=7 側と m=6..15 witness・capacity・lex 項目は不変。第2次・第3次帯延伸節は当時時点の記録としてそのまま残す。
