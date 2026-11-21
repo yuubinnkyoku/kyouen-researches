@@ -37,6 +37,12 @@ artifacts:
 - path: cpp/solvers/kyouen_dfpn_root.cpp
   role: solver
   note: coordinatorのs5永続化とs4 certificate manifest出力
+- path: research/experiments/n11-search-methods/tests/test_dfpn_s5_recover.py
+  role: verifier
+  note: 回収入口の正準性・撤回除外・cache形式fail-closed回帰
+- path: research/log/2026-11-21-n11-s5-recovery-input-validation-and-quarantine-guard.md
+  role: log
+  note: 非正準ログkeyをworker cacheへ書けた欠陥の再現と修正・検査結果
 ---
 
 # 11×11のs5 verdict cacheから失われた158証明を回収しLOSS class 2個・secured 10/119を独立検証で確定した
@@ -134,3 +140,7 @@ cache hit 87% を達成した。
 - 1 classの新規証明は約40分。
 
 **11×11の空盤勝敗はUNKNOWNのまま。**
+
+## 後続修正: 回収入口の正準性・撤回cache・不正行をfail-closed化（2026-11-21）
+
+`dfpn_s5_recover.py` は以前、ログ由来キーのD4正準・共円禁止条件を検査せず、既存cacheの不正行を読み飛ばしていた。既知の安全キーの垂直反射aliasを合成probeすると、修正前は終了コード0で非正準キーをworker cacheへ書いた（直接再現）。後続修正では共有 `s5_evidence_policy.is_canonical_safe_s5_key` を全ログverdict・既存cache行に適用し、cache行を6字段厳密CSV・S5・WIN/LOSSのみ・nodes非負・bit範囲/5石数・D4正準/共円禁止に限定。不正行は黙って捨てず拒否する。必須quarantine registryも読み、撤回キーを recovered/existing の双方から除外してconflict判定前に再導入を防ぐ。回帰7件を追加しCIのS5 guardへ接続。検証はCT204のtmpfsにmain pinから必要ファイルを隔離再構成して実施し、汚れたcheckoutは変更しない。新しい勝敗証拠ではない。詳細: [2026-11-21 S5 recovery guard log](../../log/2026-11-21-n11-s5-recovery-input-validation-and-quarantine-guard.md)。

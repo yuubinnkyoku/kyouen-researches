@@ -32,6 +32,12 @@ import io
 from contextlib import closing
 import re
 import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[4]
+POLICY_DIR = ROOT / 'research/experiments/n11-frontier-selection-20261005/scripts'
+sys.path.insert(0, str(POLICY_DIR))
+import s5_evidence_policy as evidence_policy
 
 HEADER = ('# s5 verdict cache: n=11 schema=1 '
           '(canonical key -> WIN/LOSS, UNKNOWN never stored)\n')
@@ -43,6 +49,8 @@ Q_DONE = re.compile(r'\[q-done\].*?key=(\d+),(\d+)\s+result=(\d+)\s+nodes=(\d+)'
 
 def record(verdicts, key, result, nodes):
     """Merge observations without promoting UNKNOWN or hiding a conflict."""
+    if not evidence_policy.is_canonical_safe_s5_key(key):
+        raise ValueError(f'noncanonical or unsafe S5 key: {key}')
     if result not in (0, 1, 2) or nodes < 0:
         raise ValueError(f'invalid replay result/nodes for {key}: {result}/{nodes}')
     old = verdicts.get(key)
@@ -91,26 +99,27 @@ def load_cache(path):
     cache = {}
     if not path:
         return cache
-    with closing(io.open(path, encoding='utf-8', errors='replace')) as lines:
-        for line in lines:
-            line = line.strip()
-            if not line or line.startswith('#'):
+    with closing(io.open(path, encoding='utf-8', errors='replace', newline='')) as lines:
+        for lineno, row in enumerate(csv.reader(lines), 1):
+            if not row or row[0].strip().startswith('#'):
                 continue
-            f = line.split(',')
-            if len(f) < 6 or f[0] != 's5verdict':
-                continue
-            if int(f[3]) != 5:
-                continue
-            r = int(f[4])
-            if r not in (1, 2):
-                continue
-            key = (int(f[1]), int(f[2]))
-            if key in cache and cache[key] != r:
-                raise ValueError(f'CONFLICT inside existing cache: {key}: {cache[key]} vs {r}')
-            cache[key] = r
+            if len(row) != 6 or row[0] != 's5verdict':
+                raise ValueError(f'invalid S5 cache row: {path}:{lineno}')
+            try:
+                lo, hi, stones, result, nodes = map(int, row[1:])
+            except ValueError as exc:
+                raise ValueError(f'noninteger S5 cache row: {path}:{lineno}') from exc
+            if (stones != 5 or result not in (1, 2) or nodes < 0
+                    or not (0 <= lo < 2**64 and 0 <= hi < 2**57)
+                    or lo.bit_count() + hi.bit_count() != 5):
+                raise ValueError(f'invalid S5 evidence: {path}:{lineno}')
+            key = (lo, hi)
+            if not evidence_policy.is_canonical_safe_s5_key(key):
+                raise ValueError(f'noncanonical or unsafe S5 key: {path}:{lineno}')
+            if key in cache and cache[key] != result:
+                raise ValueError(f'CONFLICT inside existing cache: {key}: {cache[key]} vs {result}')
+            cache[key] = result
     return cache
-
-
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('logs', nargs='+')
@@ -128,7 +137,8 @@ def main():
                 record(recovered, k, result, nodes)
             started |= started_in_log
         existing = load_cache(args.cache)
-    except (ValueError, IndexError) as exc:
+        quarantine = evidence_policy.quarantined_cache_keys()
+    except (ValueError, IndexError, OSError) as exc:
         print(f'REFUSED: invalid or conflicting evidence: {exc}')
         return 1
     interrupted = started - set(recovered)
@@ -142,10 +152,15 @@ def main():
           % len(interrupted))
 
     # UNKNOWN is an unfinished search, never an exact cache verdict.
-    decided = {k: v for k, v in recovered.items() if v[0] in (1, 2)}
+    quarantined_decided = sum(
+        1 for k, v in recovered.items() if v[0] in (1, 2) and k in quarantine)
+    decided = {k: v for k, v in recovered.items()
+               if v[0] in (1, 2) and k not in quarantine}
+    existing = {k: v for k, v in existing.items() if k not in quarantine}
     fresh = [k for k in decided if k not in existing]
     overlap = [k for k in decided if k in existing]
     conflicts = [k for k in overlap if existing[k] != decided[k][0]]
+    print('quarantined verdicts : %d' % quarantined_decided)
     print('already in cache    : %d' % len(overlap))
     print('new to the cache    : %d' % len(fresh))
     if conflicts:

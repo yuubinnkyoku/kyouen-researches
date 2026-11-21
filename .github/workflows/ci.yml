@@ -146,6 +146,7 @@ jobs:
         run: |
           python -m unittest discover -s research/experiments/n11-search-methods/scripts -p 'test_dfpn_s4_manifest_verify_cache.py'
           bash research/experiments/n11-search-methods/scripts/dfpn_s5_merge_test.sh
+          python -m unittest discover -s research/experiments/n11-search-methods/tests -p 'test_dfpn_s5_recover.py'
       - name: Verify n11 S9 terminal neighbor certificate with independent geometry
         run: bash research/experiments/n11-s9-terminal-neighbor-20261025/reproduce.sh
       - name: Verify n11 second S9 terminal neighbor with independent geometry
