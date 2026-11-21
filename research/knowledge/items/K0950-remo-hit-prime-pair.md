@@ -1,33 +1,84 @@
 ---
 id: K0950
+title: σ_Z値1軌跡の素数対への完全還元（HIT-ARITH・Y-FACTOR）と剰余死刑令P-KILL・PAIR-2/PAIR-3・M-SQ（K0946次課題4/5の部分解決）
 kind: proposition
 status: proved
-title: σ_Z値1軌跡の素数対への完全還元（HIT-ARITH・Y-FACTOR）と剰余死刑令P-KILL・PAIR-2/PAIR-3・M-SQ（K0946次課題4/5の部分解決）
+topics: [variants, multiplayer, strategy-length]
 aliases: []
 relations:
-  - depends_on: [K0946, K0948, K0949]
-  - connects: [K0939, K0941, K0945]
+- type: depends_on
+  target: K0946
+- type: depends_on
+  target: K0948
+- type: depends_on
+  target: K0949
+- type: related
+  target: K0939
+- type: related
+  target: K0941
+- type: related
+  target: K0945
 artifacts:
-  - research/experiments/remo-hit-prime-pair-20261118/report.md
-  - research/experiments/remo-hit-prime-pair-20261118/hitpair_core.py
-  - research/experiments/remo-hit-prime-pair-20261118/audit_build.py
-  - research/experiments/remo-hit-prime-pair-20261118/composite_core.py
-  - research/experiments/remo-hit-prime-pair-20261118/sievegen_core.py
-  - research/experiments/remo-hit-prime-pair-20261118/output/hitpair_audit.json
-  - research/experiments/remo-hit-prime-pair-20261118/pkill_tight_sweep.py
-  - research/experiments/remo-hit-prime-pair-20261118/pkill_tight_deep.py
-  - research/experiments/remo-hit-prime-pair-20261118/kappa_density.py
-  - research/experiments/remo-hit-prime-pair-20261118/pkill_class_probe.py
-  - research/experiments/remo-hit-prime-pair-20261118/output/pkill_tight_tier1_slim.json
-  - research/experiments/remo-hit-prime-pair-20261118/output/pkill_tight_tier2.json
-  - research/experiments/remo-hit-prime-pair-20261118/output/pkill_tight_tier3.json
-  - research/experiments/remo-hit-prime-pair-20261118/output/pkill_tight_tier4_slim.json
-  - research/experiments/remo-hit-prime-pair-20261118/output/pkill_tight_tier5_slim.json
-  - research/experiments/remo-hit-prime-pair-20261118/output/kappa_density_slim.json
-  - research/experiments/remo-hit-prime-pair-20261118/output/sparse_classes_le2.json
-  - research/experiments/remo-hit-prime-pair-20261118/output/pkill_probe_deep.json
-  - research/experiments/remo-hit-prime-pair-20261118/firsthit_growth.py
-  - research/experiments/remo-hit-prime-pair-20261118/output/firsthit_growth.json
+- path: research/experiments/remo-hit-prime-pair-20261118/report.md
+  role: proof
+  note: "HIT-ARITH/PAIR-2/PAIR-3（σ_Z値1軌跡の素数対への完全還元）とP-KILL剰余法則の全称証明レポート"
+- path: research/experiments/remo-hit-prime-pair-20261118/hitpair_core.py
+  role: solver
+  note: "HIT-ARITH直接実装コア（素数対軌跡の評価）"
+- path: research/experiments/remo-hit-prime-pair-20261118/audit_build.py
+  role: verifier
+  note: "監査アセンブラ（pinned coresの入力ピン照合を含む・all_ok true）"
+- path: research/experiments/remo-hit-prime-pair-20261118/composite_core.py
+  role: solver
+  note: "pinned byte同一コピー（sha256 3990d67f…・入力ピン: K0949 relay_audit / K0945 deep_census）"
+- path: research/experiments/remo-hit-prime-pair-20261118/sievegen_core.py
+  role: solver
+  note: "pinned byte同一コピー（sha256 a69f916c…）"
+- path: research/experiments/remo-hit-prime-pair-20261118/output/hitpair_audit.json
+  role: data
+  note: "監査正本（all_ok true）"
+- path: research/experiments/remo-hit-prime-pair-20261118/pkill_tight_sweep.py
+  role: solver
+  note: "κクラスtight掃引スイープ（tier1..5の掃引台帳生成器）"
+- path: research/experiments/remo-hit-prime-pair-20261118/pkill_tight_deep.py
+  role: solver
+  note: "深域tight掃引機（打ち切り2クラスdeep probe）"
+- path: research/experiments/remo-hit-prime-pair-20261118/kappa_density.py
+  role: solver
+  note: "κ密度スイープの生成器"
+- path: research/experiments/remo-hit-prime-pair-20261118/pkill_class_probe.py
+  role: solver
+  note: "単一クラス深部プローブ（HIT-ARITH直接実装・(1367,682)/(1741,648)の初回ヒット特定）"
+- path: research/experiments/remo-hit-prime-pair-20261118/output/pkill_tight_tier1_slim.json
+  role: data
+  note: "tight掃引tier1台帳（F(M)確定に使用・決定的再生成可能）"
+- path: research/experiments/remo-hit-prime-pair-20261118/output/pkill_tight_tier2.json
+  role: data
+  note: "tight掃引tier2台帳"
+- path: research/experiments/remo-hit-prime-pair-20261118/output/pkill_tight_tier3.json
+  role: data
+  note: "tight掃引tier3台帳"
+- path: research/experiments/remo-hit-prime-pair-20261118/output/pkill_tight_tier4_slim.json
+  role: data
+  note: "tight掃引tier4台帳（slim）"
+- path: research/experiments/remo-hit-prime-pair-20261118/output/pkill_tight_tier5_slim.json
+  role: data
+  note: "tight掃引tier5台帳（slim）"
+- path: research/experiments/remo-hit-prime-pair-20261118/output/kappa_density_slim.json
+  role: data
+  note: "κ密度スイープ台帳（slim）"
+- path: research/experiments/remo-hit-prime-pair-20261118/output/sparse_classes_le2.json
+  role: data
+  note: "初回ヒット<=2×10^5のsparse κクラス台帳"
+- path: research/experiments/remo-hit-prime-pair-20261118/output/pkill_probe_deep.json
+  role: data
+  note: "打ち切り2クラスの深部プローブ台帳（初回ヒットK=215,458/220,140）"
+- path: research/experiments/remo-hit-prime-pair-20261118/firsthit_growth.py
+  role: solver
+  note: "FIRSTHIT-GROWTH（初回ヒット増大則）定量評価スイープの生成器"
+- path: research/experiments/remo-hit-prime-pair-20261118/output/firsthit_growth.json
+  role: data
+  note: "初回ヒット増大則の定量評価台帳"
 date: 2026-11-18
 tags: [remo, uniform-board, josephus, closed-form, prime, twin-prime, hardy-littlewood, machine-evidence]
 ---

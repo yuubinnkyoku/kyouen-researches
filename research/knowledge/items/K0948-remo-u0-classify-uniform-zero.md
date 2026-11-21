@@ -1,18 +1,37 @@
 ---
 id: K0948
+title: 一様E状態E(P;n,0)の零点の完全分類（U0-CLASSIFY）と系U0-NEVER・FIRST-NEVER・ZERO-SET（EXCL-1の全称定理化）
 kind: proposition
 status: proved
-title: 一様E状態E(P;n,0)の零点の完全分類（U0-CLASSIFY）と系U0-NEVER・FIRST-NEVER・ZERO-SET（EXCL-1の全称定理化）
+topics: [variants, multiplayer, strategy-length]
 aliases: []
 relations:
-  - depends_on: [K0939, K0941, K0946]
-  - connects: [K0937, K0945]
+- type: depends_on
+  target: K0939
+- type: depends_on
+  target: K0941
+- type: depends_on
+  target: K0946
+- type: related
+  target: K0937
+- type: related
+  target: K0945
 artifacts:
-  - research/experiments/remo-u0-classify-20261118/report.md
-  - research/experiments/remo-u0-classify-20261118/audit_build.py
-  - research/experiments/remo-u0-classify-20261118/composite_core.py
-  - research/experiments/remo-u0-classify-20261118/sievegen_core.py
-  - research/experiments/remo-u0-classify-20261118/output/u0_audit.json
+- path: research/experiments/remo-u0-classify-20261118/report.md
+  role: proof
+  note: "E(P;n,0)零点の完全分類U0-CLASSIFYとU0-NEVER解決・系群の全称証明レポート"
+- path: research/experiments/remo-u0-classify-20261118/audit_build.py
+  role: verifier
+  note: "監査アセンブラ（all_ok true・cold 2回実行byte同一）"
+- path: research/experiments/remo-u0-classify-20261118/composite_core.py
+  role: solver
+  note: "pinned byte同一コピー（sha256 3990d67f…）"
+- path: research/experiments/remo-u0-classify-20261118/sievegen_core.py
+  role: solver
+  note: "pinned byte同一コピー（sha256 a69f916c…）"
+- path: research/experiments/remo-u0-classify-20261118/output/u0_audit.json
+  role: data
+  note: "監査正本（監査sha256 d1a83169…）"
 date: 2026-11-18
 tags: [remo, uniform-board, josephus, divisor-sieve, closed-form, prime, machine-evidence]
 ---

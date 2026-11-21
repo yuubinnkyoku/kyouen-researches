@@ -1,21 +1,48 @@
 ---
 id: K0951
+title: "一般bump-fold閉形式三分法（FOLD-GEN）・rung-2 fold構造とUのmod-5力学的篩（U-RUNG2-FOLD・EXCL-U-MOD5・U-RUNG2-FINAL）・Uセンサス2×10^5拡張"
 kind: proposition
 status: proved
-title: "一般bump-fold閉形式三分法（FOLD-GEN）・rung-2 fold構造とUのmod-5力学的篩（U-RUNG2-FOLD・EXCL-U-MOD5・U-RUNG2-FINAL）・Uセンサス2×10^5拡張"
+topics: [variants, multiplayer, strategy-length]
 aliases: []
 relations:
-  - depends_on: [K0941, K0945, K0948]
-  - connects: [K0946, K0949, K0950]
+- type: depends_on
+  target: K0941
+- type: depends_on
+  target: K0945
+- type: depends_on
+  target: K0948
+- type: related
+  target: K0946
+- type: related
+  target: K0949
+- type: related
+  target: K0950
 artifacts:
-  - research/experiments/remo-foldgen-20261118/report.md
-  - research/experiments/remo-foldgen-20261118/foldgen_core.js
-  - research/experiments/remo-foldgen-20261118/foldgen_verify.js
-  - research/experiments/remo-foldgen-20261118/census_extend.js
-  - research/experiments/remo-foldgen-20261118/composite_core.py
-  - research/experiments/remo-foldgen-20261118/sievegen_core.py
-  - research/experiments/remo-foldgen-20261118/output/fast_census.json
-  - research/experiments/remo-foldgen-20261118/output/foldgen_audit.json
+- path: research/experiments/remo-foldgen-20261118/report.md
+  role: proof
+  note: "FOLD-GEN（一般bump-foldフレーム(1,c,k,kTop)のO(1)三分法）・RUNG-1/2・EXCL-U-MOD5・Uのmod-5 fold力学的篩の全称証明レポート"
+- path: research/experiments/remo-foldgen-20261118/foldgen_core.js
+  role: solver
+  note: "CommonJS foldエンジン（純JSサンドボックス転写実行・出版pin検証済みsha256Hex）"
+- path: research/experiments/remo-foldgen-20261118/foldgen_verify.js
+  role: verifier
+  note: "純JS検証器（クロスラン再現性はチャンクリストsha ピンE/F/G/H 4本が保証）"
+- path: research/experiments/remo-foldgen-20261118/census_extend.js
+  role: solver
+  note: "Uセンサスの2×10^5拡張掃引機"
+- path: research/experiments/remo-foldgen-20261118/composite_core.py
+  role: solver
+  note: "K0941定理C/D σ再帰のpinned byte同一コピー"
+- path: research/experiments/remo-foldgen-20261118/sievegen_core.py
+  role: solver
+  note: "K0937 committed版byte同一コピー"
+- path: research/experiments/remo-foldgen-20261118/output/fast_census.json
+  role: data
+  note: "U(1..200000)=6,531件のセンサス正本（出版3,658+新規2,873・mod5全体ヒストグラム[2143,1,2216,2171,0]）"
+- path: research/experiments/remo-foldgen-20261118/output/foldgen_audit.json
+  role: data
+  note: "機械的証拠監査バッテリー表（foldgen_grid 428,220事象等）"
 date: 2026-11-18
 tags: [remo, uniform-board, josephus, fold, closed-form, machine-evidence]
 ---

@@ -1,15 +1,32 @@
 ---
 id: K0980
 title: "2トークン残余ゲーム z=7, y=4 境界切片の全Grundy分類"
-created: 2026-11-18
-kind: theorem
+kind: proposition
 status: proved
-tags: [two-token, vertical-fiber, z7, y4, grundy, universal, infinite-family]
+topics: [grundy, residual-games]
 aliases: []
 relations:
-  depends_on: [K0832, K0979, K0880]
-  supports: [K0976]
-  next: [K0984, K0936]
+- type: depends_on
+  target: K0832
+  note: "残余ゲームHの定義・A/B/C再帰・Theorem T・単一トークン閉形式・高さだけの縮約・高R tail定理（R>=x+12）を使用する"
+- type: depends_on
+  target: K0979
+  note: "B子の評価にz=7,y=3境界切片の全Grundy公式を使用する"
+- type: depends_on
+  target: K0880
+  note: "C子の評価にz=6,y=4境界切片の全Grundy公式を使用する"
+- type: supports
+  target: K0976
+  note: "z=7のy>=4候補式の全称証明（S=x+y強帰納）に必要な境界切片のうちy=4を供給する"
+artifacts:
+- path: research/experiments/vertical-fiber-two-token-z7-y4-boundary-20261118/report.md
+  role: proof
+  note: "固定z=7,y=4・全x>=4,R>=0のGrundy値0/1/2をA/B/C選択肢署名表とR強帰納で分類する全称証明"
+- path: research/experiments/vertical-fiber-two-token-z7-y4-boundary-20261118/verify_z7_y4.py
+  role: verifier
+  note: "直接多重集合再帰とA/B/C再構成（B=K0979・C=K0880アンカー）の照合・署名帯表・K0832 tail定理照合・Theorem T偶奇検査を行う独立有限監査器（2回実行byte-identical必須）"
+created: 2026-11-18
+tags: [two-token, vertical-fiber, z7, y4, grundy, universal, infinite-family]
 ---
 
 # K0980: 2トークン残余ゲーム z=7, y=4 境界切片の全Grundy分類

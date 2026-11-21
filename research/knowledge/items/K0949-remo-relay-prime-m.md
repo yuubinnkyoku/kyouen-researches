@@ -1,18 +1,39 @@
 ---
 id: K0949
+title: E状態リレー還元（RELAY-REDUCE）によるσ_Z値1軌跡の算術還元とPRIME-M・PARITYの全称証明（SIMPLE-CHAR）
 kind: proposition
 status: proved
-title: E状態リレー還元（RELAY-REDUCE）によるσ_Z値1軌跡の算術還元とPRIME-M・PARITYの全称証明（SIMPLE-CHAR）
+topics: [variants, multiplayer, strategy-length]
 aliases: []
 relations:
-  - depends_on: [K0939, K0941, K0946, K0948]
-  - connects: [K0943, K0945]
+- type: depends_on
+  target: K0939
+- type: depends_on
+  target: K0941
+- type: depends_on
+  target: K0946
+- type: depends_on
+  target: K0948
+- type: related
+  target: K0943
+- type: related
+  target: K0945
 artifacts:
-  - research/experiments/remo-relay-prime-m-20261118/report.md
-  - research/experiments/remo-relay-prime-m-20261118/audit_build.py
-  - research/experiments/remo-relay-prime-m-20261118/composite_core.py
-  - research/experiments/remo-relay-prime-m-20261118/sievegen_core.py
-  - research/experiments/remo-relay-prime-m-20261118/output/relay_audit.json
+- path: research/experiments/remo-relay-prime-m-20261118/report.md
+  role: proof
+  note: "RELAY-REDUCE（E状態リレー還元）・σ_Z値1軌跡の純算術還元（約数・spf）・PRIME-M/PARITYの全称証明レポート"
+- path: research/experiments/remo-relay-prime-m-20261118/audit_build.py
+  role: verifier
+  note: "監査アセンブラ（all_ok true・cold 2回実行byte同一）"
+- path: research/experiments/remo-relay-prime-m-20261118/composite_core.py
+  role: solver
+  note: "pinned byte同一コピー（sha256 3990d67f…）"
+- path: research/experiments/remo-relay-prime-m-20261118/sievegen_core.py
+  role: solver
+  note: "pinned byte同一コピー（sha256 a69f916c…）"
+- path: research/experiments/remo-relay-prime-m-20261118/output/relay_audit.json
+  role: data
+  note: "監査正本（監査sha256 c92cb52f…）"
 date: 2026-11-18
 tags: [remo, uniform-board, josephus, closed-form, prime, parity, machine-evidence]
 ---

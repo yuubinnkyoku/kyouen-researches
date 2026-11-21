@@ -1,19 +1,42 @@
 ---
 id: K0946
+title: σ_Z(M,·) 値1軌跡の一般構造（RUN-UNIV・ONE-CHAR-GENERAL・EXCL-1/2・M1-EMPTY・DEG）と素数M法則（PRIME-M・PARITY・EXCL-1はK0948/K0949で全称証明）
 kind: proposition
 status: proved
-title: σ_Z(M,·) 値1軌跡の一般構造（RUN-UNIV・ONE-CHAR-GENERAL・EXCL-1/2・M1-EMPTY・DEG）と素数M法則（PRIME-M・PARITY・EXCL-1はK0948/K0949で全称証明）
+topics: [variants, multiplayer, strategy-length]
 aliases: []
 relations:
-  - depends_on: [K0941, K0945]
-  - connects: [K0937, K0943, K0948, K0949]
+- type: depends_on
+  target: K0941
+- type: depends_on
+  target: K0945
+- type: related
+  target: K0937
+- type: related
+  target: K0943
+- type: related
+  target: K0948
+- type: related
+  target: K0949
 artifacts:
-  - research/experiments/remo-sigmaz-general-locus-20261118/report.md
-  - research/experiments/remo-sigmaz-general-locus-20261118/sigma_locus_core.js
-  - research/experiments/remo-sigmaz-general-locus-20261118/audit_build.py
-  - research/experiments/remo-sigmaz-general-locus-20261118/sievegen_core.py
-  - research/experiments/remo-sigmaz-general-locus-20261118/composite_core.py
-  - research/experiments/remo-sigmaz-general-locus-20261118/output/sigma_locus_audit.json
+- path: research/experiments/remo-sigmaz-general-locus-20261118/report.md
+  role: proof
+  note: "σ_Z(M,·)値1軌跡の一般構造（ONE-CHAR全M一般化・除外定理・素数M法則）の全称証明レポート"
+- path: research/experiments/remo-sigmaz-general-locus-20261118/sigma_locus_core.js
+  role: solver
+  note: "σ_Z(M,K)分割掃引エンジン（M=1..40,K<=10^5・M∈{2,3,5,7},K<=10^6等のスペクトラム表生成）"
+- path: research/experiments/remo-sigmaz-general-locus-20261118/audit_build.py
+  role: verifier
+  note: "監査アセンブラ（COREPIN等の監査群）"
+- path: research/experiments/remo-sigmaz-general-locus-20261118/sievegen_core.py
+  role: solver
+  note: "pinned byte同一コピー（sha256 a69f916c…）"
+- path: research/experiments/remo-sigmaz-general-locus-20261118/composite_core.py
+  role: solver
+  note: "K0941 pinned coreのbyte同一コピー（sha256 3990d67f…）"
+- path: research/experiments/remo-sigmaz-general-locus-20261118/output/sigma_locus_audit.json
+  role: data
+  note: "監査正本（COREPIN等・all_ok true）"
 date: 2026-11-18
 tags: [remo, uniform-board, josephus, closed-form, prime, machine-evidence]
 ---

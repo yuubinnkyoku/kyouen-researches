@@ -1,17 +1,36 @@
 ---
 id: K0934
+title: 制限ラダーF(w,h;n)第一stretch-w法則の全称決定（LAD-GEN・open class完全解決）
 kind: proposition
 status: proved
-title: 制限ラダーF(w,h;n)第一stretch-w法則の全称決定（LAD-GEN・open class完全解決）
+topics: [variants, multiplayer, strategy-length]
 aliases: []
 relations:
-  - depends_on: [K0928, K0931, K0933]
-  - connects: [K0929, K0930, K0932]
+- type: depends_on
+  target: K0928
+- type: depends_on
+  target: K0931
+- type: depends_on
+  target: K0933
+- type: related
+  target: K0929
+- type: related
+  target: K0930
+- type: related
+  target: K0932
 artifacts:
-  - research/experiments/ladder-gen-20261118/report.md
-  - research/experiments/ladder-gen-20261118/ladder_gen_verify.py
-  - research/experiments/ladder-gen-20261118/audit_build.py
-  - research/experiments/ladder-gen-20261118/output/ladder_gen_audit.json
+- path: research/experiments/ladder-gen-20261118/report.md
+  role: proof
+  note: "LAD-GEN（制限ラダーF(w,h;n)の第一stretch-w完全法則）の全称証明レポート（K0931のopen class h>=2・1<=r<hを含む全クラス）"
+- path: research/experiments/ladder-gen-20261118/ladder_gen_verify.py
+  role: verifier
+  note: "K0928フェーズ規則シミュレータ上のLAD-GEN機械検証器"
+- path: research/experiments/ladder-gen-20261118/audit_build.py
+  role: verifier
+  note: "監査アセンブラ（2実行一致で監査正本を生成）"
+- path: research/experiments/ladder-gen-20261118/output/ladder_gen_audit.json
+  role: data
+  note: "決定性監査正本（all_ok true・タイムスタンプなし・ソート済みキー）"
 date: 2026-11-18
 tags: [remo, uniform-board, counting-recursion, ladder, stretch, open-class, machine-evidence]
 ---

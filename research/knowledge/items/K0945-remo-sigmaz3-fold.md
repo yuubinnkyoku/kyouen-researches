@@ -1,22 +1,49 @@
 ---
 id: K0945
+title: σ_Z(3,K)のfold分解（RUN-3・FOLD）・値1位置の全称特徴付け（ONE-CHAR）・K≡2 (mod 4) 非存在（A2-NEVER）・run-bump高速算（FAST）
 kind: proposition
 status: proved
-title: σ_Z(3,K)のfold分解（RUN-3・FOLD）・値1位置の全称特徴付け（ONE-CHAR）・K≡2 (mod 4) 非存在（A2-NEVER）・run-bump高速算（FAST）
+topics: [variants, multiplayer, strategy-length]
 aliases: []
 relations:
-  - depends_on: [K0941, K0937]
-  - connects: [K0943, K0928, K0939]
+- type: depends_on
+  target: K0941
+- type: depends_on
+  target: K0937
+- type: related
+  target: K0943
+- type: related
+  target: K0928
+- type: related
+  target: K0939
 artifacts:
-  - research/experiments/remo-sigmaz3-fold-20261118/report.md
-  - research/experiments/remo-sigmaz3-fold-20261118/sievegen_core.py
-  - research/experiments/remo-sigmaz3-fold-20261118/composite_core.py
-  - research/experiments/remo-sigmaz3-fold-20261118/sigmaz3_core.py
-  - research/experiments/remo-sigmaz3-fold-20261118/sigmaz3_verify.py
-  - research/experiments/remo-sigmaz3-fold-20261118/deep_census.py
-  - research/experiments/remo-sigmaz3-fold-20261118/audit_build.py
-  - research/experiments/remo-sigmaz3-fold-20261118/output/sigmaz3_audit.json
-  - research/experiments/remo-sigmaz3-fold-20261118/output/deep_census.json
+- path: research/experiments/remo-sigmaz3-fold-20261118/report.md
+  role: proof
+  note: "σ_Z(3,K)のfold分解（RUN-3/FOLD三分法Φ_K）・ONE-CHAR（値1位置特徴付け）・A2-NEVER（K≡2 mod 4 の全称的不存在）の全称証明レポート"
+- path: research/experiments/remo-sigmaz3-fold-20261118/sievegen_core.py
+  role: solver
+  note: "K0937 committed版byte同一コピー（監査PIN照合用）"
+- path: research/experiments/remo-sigmaz3-fold-20261118/composite_core.py
+  role: solver
+  note: "K0941定理C/D σ再帰のpinned byte同一コピー（sha256 3990d67f…）"
+- path: research/experiments/remo-sigmaz3-fold-20261118/sigmaz3_core.py
+  role: solver
+  note: "fold4実装としてのσ_Z(3,K)高速評価コア（K<=4,000でpinned σ_Zと0不一致・予備的にK<=20,000でも0不一致）"
+- path: research/experiments/remo-sigmaz3-fold-20261118/sigmaz3_verify.py
+  role: verifier
+  note: "RUN-3/FOLD/ONE-CHAR/A2-NEVERの機械検証器"
+- path: research/experiments/remo-sigmaz3-fold-20261118/deep_census.py
+  role: solver
+  note: "深いセンサス掃引機（2回実行byte-identical・値1位置台帳の決定的再生成）"
+- path: research/experiments/remo-sigmaz3-fold-20261118/audit_build.py
+  role: verifier
+  note: "監査アセンブラ（PIN/FASTEQ等の監査を出力）"
+- path: research/experiments/remo-sigmaz3-fold-20261118/output/sigmaz3_audit.json
+  role: data
+  note: "監査正本（2回コールド実行でbyte同一）"
+- path: research/experiments/remo-sigmaz3-fold-20261118/output/deep_census.json
+  role: data
+  note: "深いセンサスの値1位置台帳（K<=10^5で1,146個すべてK≡0 mod 4・ONE-CHARと91<->91双方向一致）"
 date: 2026-11-18
 tags: [remo, uniform-board, counting-recursion, josephus, fold, closed-form, machine-evidence]
 ---
