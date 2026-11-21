@@ -16,7 +16,7 @@
 - nested entryの重複 `active` key（true→false）：拒否。
 - 同じ修正を組み込んだ隔離環境のunittest：2/2 PASS。
 - 修正前の標準JSON解析で重複 `active` の後値falseが採用されることを確認し、回避可能だった撤回状態を再現。
-- mainへ直接commit。CI run 44874127773 は現時点でqueued。
+- mainへ直接commit。初回CI run 44874127773は追加testファイルを対象にしていなかったため、CI設定へ専用unittest discoveryコマンドを追加。今回のmain commitから2件の重複キー回帰を実行する。
 
 これはcache統合の勝敗データを変更しない。撤回台帳の読取を厳格化する修正であり、新しいWIN/LOSS verdictや証明書は生まれていない。
 
