@@ -1,0 +1,89 @@
+# circ_catalog_hl_9_16.txt — 半格子中心円カタログ (n=9..16) と n=17..20 の大円級走査 (2026-11-21)
+# Curated synthesis record for the s11-minimal-maximal-8-9-decision experiment, part1c.
+# Producers: circ_catalog_scan.py (in-range catalogs), circ_range_check.py (wide-range checks),
+#            circ_nine_eleven_dump.py (family dumps n=11..16), circ_big_scan.py (big classes n=17..20),
+#            census_a.py (full-rational-center census, n=5..12).
+# Calibration: all census anchors reproduced (F_5..F_12, lines=92@n=9, 12-pt circles 1/4/9/21/42@n=8..12,
+# K0062's r^2=25/2 family 16 @ n=11 etc). n=13,14 in-range catalogs: two independent runs, identical.
+
+## 1. In-range half-lattice catalogs (centers (i/2,j/2), i,j in [0,2n); scan-script output)
+n=9  total=2138   hist={4:1556, 5:116, 6:304, 7:4, 8:146, 10:8, 12:4}          >=12pt: 4
+n=10 total=3310   hist={4:2352, 5:128, 6:528, 7:16, 8:261, 10:16, 12:9}        >=12pt: 9
+n=11 total=4995   hist={4:3521, 5:176, 6:768, 7:60, 8:413, 9:4, 10:28, 11:4, 12:21}  >=12pt: 21
+n=12 total=7183   hist={4:4953, 5:296, 6:1116, 7:96, 8:624, 9:8, 10:40, 11:8, 12:37, 14:4, 16:1}  >=12pt: 42
+n=13 total=10102  hist={4:6831, 5:424, 6:1628, 7:148, 8:906, 9:12, 10:68, 11:12, 12:61, 14:8, 16:4}  >=12pt: 73
+n=14 total=13781  hist={4:9074, 5:680, 6:2296, 7:200, 8:1288, 9:16, 10:92, 11:16, 12:93, 14:16, 16:10}  >=12pt: 119
+n=15 total=18285  hist={4:11796, 5:928, 6:3096, 7:316, 8:1791, 9:20, 10:140, 11:20, 12:134, 14:24, 16:20}  >=12pt: 178
+n=16 total=23988  hist={4:15367, 5:1144, 6:4068, 7:456, 8:2425, 9:24, 10:216, 11:24, 12:193, 14:36, 16:35}  >=12pt: 264
+
+## 2. Wide-range validation (centers [ -2n, 4n )^2; file circ_range_check_*; spot-check [ -4n, 8n ) at n=10)
+- For n=13..16 the wide scan finds NO additional circles in classes >= 9 (identical hist for 9,10,11,12,14,16).
+  So the in-range catalogs above are complete for classes >= 9 at n=13..16 (within tested center range).
+- Census (all rational centers, census_a.py) vs wide half-lattice scan, class-by-class at n=5..12
+  (census raw outputs: census_n05_09.txt, census_catalog_n10_12.txt):
+    every class >= 7 agrees exactly at n=9..12; every class >= 5 agrees exactly at n=5..8.
+  Hence (finite exhaustive verification): at n=5..8 every circle with >=5 lattice points has a
+  half-lattice center; at n=9..12 every circle with >=7 points does. Non-half-lattice circles
+  (guaranteed, = census minus wide-hl, attributed exactly because wide=census for classes>=5 and
+  the counts are range-stable per the n=10 spot check):
+    n=9:  5-pt 32,  6-pt 4          n=10: 5-pt 96,  6-pt 28
+    n=11: 5-pt 152, 6-pt 88         n=12: 5-pt 236, 6-pt 180
+  Class 4 is not attributed (hl count keeps growing with scan range, e.g. n=10: 4085 -> 4152 from
+  [ -2n,4n ) to [ -4n,8n ); census n=10 4-class = 10868).
+- Parity/evenness remark (standard two-squares theory, no novelty claimed): points on a circle with
+  center in (1/2)Z^2 pair up under (x,y) -> (i-x, j-y) with no fixed point, so the FULL-plane count is
+  always even; odd grid classes (9, 11) are window truncations. Full-plane count equals r2(d2) for
+  d2 = 2 mod 4, r2(d2/4) for d2 = 0 mod 4, r2(d2)/2 for odd d2 (mixed-parity centers).
+
+## 3. Family decomposition of big classes (d2 = (2x-i)^2+(2y-j)^2; files circ_big_dump_*, circ_big_scan_*)
+12-point class, by radius family (r^2 = d2/4):
+  n=11: d2=50:16, 130:4, 100:1                        -> total 21
+  n=12: d2=50:25, 130:8, 100:4                        -> total 37
+  n=13: d2=50:36, 130:12, 100:9, 170:4                -> total 61
+  n=14: d2=50:49, 130:16, 100:16, 170:12              -> total 93
+  n=15: d2=50:64, 130:20, 100:25, 170:20, 250:4, 200:1 -> total 134
+  n=16: d2=50:81, 130:24, 100:36, 170:28, 250:12, 200:4, 260:4, 290:4 -> total 193
+  n=17: d2=50:100, 100:49, 130:28, 170:36, 200:9, 250:20, 260:16, 290:16, 340:4 -> total 278
+  n=18: d2=50:121, 100:64, 130:32, 170:44, 200:16, 250:28, 260:28, 290:20, 338:1, 340:16 -> total 370
+  n=19: d2=50:144, 100:81, 130:36, 170:52, 200:25, 250:36, 260:40, 290:24, 325:4, 338:4, 340:20, 370:4, 410:4 -> total 474
+  n=20: d2=50:169, 100:100, 130:40, 170:60, 200:36, 250:44, 260:52, 290:28, 325:12, 338:9, 340:24, 370:20, 410:16 -> total 610
+Family laws verified to their finite ranges (this experiment):
+  d2=50   (r^2=25/2):  (n-7)^2    holds n=10..20 (9,16,25,36,49,64,81,100,121,144,169)
+  d2=100  (r^2=25 integer): (n-10)^2  holds n=11..20
+  d2=130  (r^2=65/2): 4(n-10)    holds n=11..20
+  d2=170  (r^2=85/2): 12 at n=14 then +8 per n (8n-100) holds n=14..20 (12,20,28,36,44,52,60); n=13 is an edge start (4)
+  d2=200  (r^2=50 integer): (n-14)^2  holds n=15..20
+  d2=338  (r^2=169/2): (n-17)^2  holds n=18..20
+  other families (d2=250, 260, 290, 325, 340, 370, 410): observed sequences recorded above; window-slack
+  counting explains them in principle (full-plane counts 12 or 16 per r2(d2)), exact per-family forms not derived here.
+16-point class (full-plane-16 families, every entry a complete rep set of its d2; count per family = (n-q)^2
+  with q the max grid-coordinate offset in original units, e.g. q=11 for d2=130, q=13 for 170, q=15 for 250,
+  q=16 for the integer-center family 260 (offset (8,1) in x: (16,2)/2), q=17 for 290 and 338, q=18 for 340,
+  q=19 for 370 and 410):
+  n=12: 1   = 1^2 (130)
+  n=13: 4   = 2^2                                      (130:4)
+  n=14: 10  = 3^2 + 1^2                                (130:9, 170:1)
+  n=15: 20  = 4^2 + 2^2                                (130:16, 170:4)
+  n=16: 35  = 5^2 + 3^2 + 1^2                          (130:25, 170:9, 250:1)
+  n=17: 57  = 6^2 + 4^2 + 2^2 + 1^2                    (130:36, 170:16, 250:4, 260:1)
+  n=18: 88  = 7^2 + 5^2 + 3^2 + 2^2 + 1^2              (130:49, 170:25, 250:9, 260:4, 290:1)
+  n=19: 130 = 8^2+6^2+4^2+3^2+2^2+1^2                 (130:64,170:36,250:16,260:9,290:4,340:1)
+  n=20: 186 = 9^2+7^2+5^2+4^2+3^2+2^2+1^2+1^2         (130:81,170:49,250:25,260:16,290:9,340:4,370:1,410:1)
+  The naive fit C(n-9,3) = 1,4,10,20,35 held only n=12..16 (odd-squares-sum identity) and BREAKS at n=17
+  (57 vs C(8,3)=56) because integer-center families (d2=260, offset-half of 16) join with even q=16.
+14-point class: n=12:4, 13:8, 14:16, 15:24, 16:36, 17:52, 18:76, 19:108, 20:148 (all entries are window
+  truncations of full-plane-16 families losing exactly one paired orbit; family breakdowns in raw files).
+9/11-point classes (window truncations of the integer r^2=25 family for n<=18; slack window [5, n-6] x 4
+  orientations per loss type):
+  11-pt class = 4(n-10) holds n=11..20 (4,8,12,16,20,24,28,32,36,40)
+  9-pt class  = 4(n-10) holds n=11..18 only; BREAKS at n=19 (observed 64 vs 36) and n=20 (88 vs 40):
+    further families (12-point circles of d2=200/250-type truncated by a 3-point cap) join.
+  At n=11..20 observed 9-pt: 4,8,12,16,20,24,28,32,64,88; 11-pt: 4,8,12,16,20,24,28,32,36,40.
+
+## 4. Scope and caveats
+- All catalogs are half-lattice-center catalogs. Full-rational-center census exists only for n<=12,
+  where classes >=7 are entirely half-lattice; the n=13..20 counts could in principle miss non-half-lattice
+  circles (none exist with >=7 points for n<=12; no claim for n>=13).
+- In-range completeness for classes >=9 verified by wide scan at n=13..16 (n=17..20 not wide-checked).
+- Family "laws" above are finite observations over their stated ranges; window-slack derivations exist
+  in principle (finite translation windows of full-plane rep sets) but are not claimed as theorems here.
