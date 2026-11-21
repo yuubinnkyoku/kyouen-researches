@@ -1,6 +1,6 @@
 ---
 id: K1088
-title: 残余72行 safe8 pool の REFUTED-D10 16根除外後再解決: 残余49行は16代替根で leftover 0 完全被覆（stranded 0・最大マッチング49・WIN8内在被覆は主張と一致）
+title: "残余72行 safe8 pool の REFUTED-D10 16根除外後再解決: 残余49行は16代替根で leftover 0 完全被覆（stranded 0・最大マッチング49・WIN8内在被覆は主張と一致）"
 kind: computation
 status: computed
 topics: [search-methods, certificates, geometry, planning]
@@ -23,7 +23,7 @@ artifacts:
 - path: research/experiments/n11-residual72-safe8-refuted16-refsolve-20261120/scripts/safe8_refuted16_refsolve_20261120.py
 - path: research/experiments/n11-residual72-safe8-refuted16-refsolve-20261120/output/safe8-refuted16-refsolve-20261120.json
 - path: research/log/2026-11-20-n11-residual72-safe8-refuted16-refsolve.md
-summary: |
+evidence: |
   K1086「次の一手」第2項。K1086掃引でREFUTED-D10と確定した16根をsafe8 pool
   （120,474根）から除外し、greedy計画上この16根が主張被覆していた残余49行の
   代替被覆を再解決した。入力はK1085 census正本（SHA-256 5fdd342d…）と
@@ -51,3 +51,4 @@ summary: |
   receipt foldの設計は本項目の対象外。REFUTED-D10はLOSS証明ではない。
   nodes数・solved数を勝敗として読まない。標準11×11空盤・二石root
   {49,60}/{59,60}・S2 {59,60}・class 1/2/4はすべてUNKNOWNのまま。
+---

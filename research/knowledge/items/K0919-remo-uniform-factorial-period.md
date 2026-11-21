@@ -14,7 +14,7 @@ relations:
   note: 定理E′（軌道簡約・全称）によりキーのverdictは実現盤面すべてに転写
 - type: depends_on
   target: K0906
-  note: 定理J（全称・r方向の安定化）との対比: 本定理はC方向の周期性。E6プラトーは定理J帰結の有限アンカー
+  note: "定理J（全称・r方向の安定化）との対比: 本定理はC方向の周期性。E6プラトーは定理J帰結の有限アンカー"
 - type: depends_on
   target: K0881
   note: cap≤12 r=2,7,8 committed列（E5アンカー・ピン照合）

@@ -20,7 +20,7 @@ relations:
   note: exotic11 (1,1,11)|0の低r一様決定観察とr=M反転を(1,1,p)|0全般のspf法則（p ≤ 100機械+全称帰着）へ統合
 - type: supports
   target: K0921
-  note: EXO（exotic11反鏡像: det ⟺ r < M）はspf(p)=p=Mの場合として本項の法則で説明される
+  note: "EXO（exotic11反鏡像: det ⟺ r < M）はspf(p)=p=Mの場合として本項の法則で説明される"
 artifacts:
 - path: research/experiments/remo-k-branch-deceptive-pile-mechanism-20261117/report.md
   role: proof

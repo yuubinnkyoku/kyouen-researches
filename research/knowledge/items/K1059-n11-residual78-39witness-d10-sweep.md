@@ -35,17 +35,15 @@ artifacts:
 - path: research/experiments/n11-residual78-39witness-depth10-sweep-20261119/output/probe-records-w1.jsonl
   role: data
   note: 生probe記録 worker1（38 record）
-- path: resear
-ch/experiments/n11-residual78-witness39-candidate-supply-scope-audit-20261120/audit_candidate_supply_scope_20261120.mjs
+- path: research/experiments/n11-residual78-witness39-candidate-supply-scope-audit-20261120/audit_candidate_supply_scope_20261120.mjs
   role: verifier
   note: resolve5の4,728 fresh-safe候補と39-root sweepの範囲を独立監査。4入力blob pin、D4・整数determinant安全性・削除被覆・78行pair matchingを検査
-- path: research/
-experiments/n11-residual78-witness39-candidate-supply-scope-audit-20261120/output/candidate-supply-scope-audit-20261120.json
+- path: research/experiments/n11-residual78-witness39-candidate-supply-scope-audit-20261120/output/candidate-supply-scope-audit-20261120.json
   role: data
   note: 9 gate全合格。fresh-safe 4,728本のうちsweep39本の外に4,689本、706 pair辺のうち未選択667、78 singleton行は今回未使用。full 8,964 cache joinとpost-sweep matchingは未実施
 - path: research/experiments/n11-residual78-39witness-depth10-sweep-20261119/depth-saturation/depth-saturation-audit-20261119.json
   role: data
-  note: 深さ飽和audit正本（SHA-256 46afc523186cbd68225b70fcecc152951ebb8efde36bd1fc7d47f7f961ab24d5）。78分岐のd10/d12/d14（6残余分岐はd16）node対比・pilot gate・飽和分類（72: d12==d14、6: d14==d16）・d12総nodes 134,902,159（d10比+16.4%）
+  note: "深さ飽和audit正本（SHA-256 46afc523186cbd68225b70fcecc152951ebb8efde36bd1fc7d47f7f961ab24d5）。78分岐のd10/d12/d14（6残余分岐はd16）node対比・pilot gate・飽和分類（72: d12==d14、6: d14==d16）・d12総nodes 134,902,159（d10比+16.4%）"
 - path: research/experiments/n11-residual78-39witness-depth10-sweep-20261119/depth-saturation/records-d12-w0.jsonl
   role: data
   note: depth 12生probe記録 worker0（40 record・pilot_d6 3,402 nodes全件合格）。records-d12/d14-w0/w1.jsonl・worker log・depth16残余分岐・driver-d12/d14.py・build scriptは同dirに同時出版
@@ -64,8 +62,7 @@ evidence: >-
   であることを実験確認: sweep43 root 00000000000000003800000008001081を出版時分解(bit 61)
   と代替分解(bit 0)の両方で両順序probeしnodes 3,164,139/loss=false/capped=falseが完全一致。
   （3）実行: 39 root×2順序=78 probe（worker0 40・worker1 38）。pilot_d6（3,402 nodes・
-  loss=
-false）は全78 probeで合格。分類GATE（両順序完走・uncapped・partition一致）通過。
+  loss=false）は全78 probeで合格。分類GATE（両順序完走・uncapped・partition一致）通過。
   結果: **WIN 0 / REFUTED 39 / CAPPED 0 / 順序矛盾0**、総nodes 115,940,695（最大単一probe
   9,930,490 nodes）。
   （4）帰結: REFUTED-D10はLOSS証明でないため78行は1行も閉じない。frontier・5親targetは
@@ -88,6 +85,7 @@ false）は全78 probeで合格。分類GATE（両順序完走・uncapped・part
   各rootからの先手勝ち不存在のみを意味する。行のゲーム理論的値には一切言及せず、
   runner移動モデル外の着手・2石追加・他の閉鎖機構の可能性は否定しない。
   **標準11×11空盤・二石root {49,60}/{59,60}・S2 {59,60}・class 1/2/4はすべてUNKNOWNのまま。**
+---
 
 
 ## 追記: 39-root sweep後の候補供給範囲監査（2026-11-20）

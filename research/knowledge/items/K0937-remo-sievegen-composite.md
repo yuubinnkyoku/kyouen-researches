@@ -2,7 +2,7 @@
 id: K0937
 kind: proposition
 status: proved
-title: SIEVE構造の全称完結: 不変量INV-TRACK・合成数側死亡定理SIEVE-COMPOSITE-GEN（全spf）・双子法則の全称化
+title: "SIEVE構造の全称完結: 不変量INV-TRACK・合成数側死亡定理SIEVE-COMPOSITE-GEN（全spf）・双子法則の全称化"
 relations:
   - depends_on: [K0928, K0931, K0933, K0934, K0935, K0936]
   - connects: [K0919, K0929]

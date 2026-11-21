@@ -1,6 +1,6 @@
 ---
 id: K0959
-title: 初回ヒットの極値構造: F恒等式・指数平坦化のフィッティング産物化・BH極値モデル・EV増幅（F-IDENTITY・FLAT-ARTIFACT・BH-EXTREME・EV-AMP・ENGINE-F）
+title: "初回ヒットの極値構造: F恒等式・指数平坦化のフィッティング産物化・BH極値モデル・EV増幅（F-IDENTITY・FLAT-ARTIFACT・BH-EXTREME・EV-AMP・ENGINE-F）"
 kind: proposition
 status: observed
 topics: [residual-games, statistics, verification]

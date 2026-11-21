@@ -30,7 +30,7 @@ artifacts:
   note: 実験README（方式・結果表・解釈規約・次の一手）
 - path: research/experiments/n11-windfall4-receipt-fold-thirteenth-sixteenth-20261120/fold/fold_thirteenth_sixteenth.py
   role: verifier
-  note: fold機械（全入力pin検証: git blob sha1 12件・sha256 4件・証明書4枚byte照合、chain全ステップfrontier再計算、K1066の50 gate再検、covered行三方一致、fail-closed）
+  note: "fold機械（全入力pin検証: git blob sha1 12件・sha256 4件・証明書4枚byte照合、chain全ステップfrontier再計算、K1066の50 gate再検、covered行三方一致、fail-closed）"
 - path: research/experiments/n11-windfall4-receipt-fold-thirteenth-sixteenth-20261120/fold/output/thirteenth-sixteenth-win7-receipt-fold-20261120.json
   role: data
   note: fold正本（schema n11-windfall4-thirteenth-sixteenth-win7-receipt-fold-20261120-v1・status fold-complete・21,269 bytes・SHA-256 594137b1bd4298b97a560def4920399ac49d7c4bd3e5fbcb54d3e8aa42919873・4回実行byte-identical）

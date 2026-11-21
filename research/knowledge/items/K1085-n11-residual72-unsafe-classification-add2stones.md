@@ -1,6 +1,6 @@
 ---
 id: K1085
-title: 残余72行 fresh-unsafe 2,871本の構造分類と add-two-stones 拡張census: corpus era drift下のpool identity gate・8石候補宇宙380,098根・greedy 23根完全被覆とplan arithmetic
+title: "残余72行 fresh-unsafe 2,871本の構造分類と add-two-stones 拡張census: corpus era drift下のpool identity gate・8石候補宇宙380,098根・greedy 23根完全被覆とplan arithmetic"
 kind: computation
 status: computed
 topics: [search-methods, geometry, certificates]

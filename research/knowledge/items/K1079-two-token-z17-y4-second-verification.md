@@ -1,6 +1,6 @@
 ---
 id: K1079
-title: 出版済みK1076 z=17・y=4境界切片の独立第二検証: 二つの独立導出の全行一致・第三実装census一致・K1076パッケージのbyte-pin不整合の検出報告
+title: "出版済みK1076 z=17・y=4境界切片の独立第二検証: 二つの独立導出の全行一致・第三実装census一致・K1076パッケージのbyte-pin不整合の検出報告"
 kind: computation
 status: computed
 topics: [grundy, residual-games]

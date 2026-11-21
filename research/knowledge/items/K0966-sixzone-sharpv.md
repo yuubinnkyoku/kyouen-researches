@@ -8,13 +8,13 @@ aliases: [SIX-ZONE, P2-LOWER, SHARP-V, SIX-ZONE-BAND, INT-TIGHTEN]
 relations:
   - type: depends_on
     target: K0961
-    note: TWO-ZONE（t≥2）とK4-CAP 3分岐（α/β/γ）・γ sharp（κ≥1: t·2^{2a}p₁²≤M−2・κ=0: t·2^{2a}p₁≤M−2）を前提に使用
+    note: "TWO-ZONE（t≥2）とK4-CAP 3分岐（α/β/γ）・γ sharp（κ≥1: t·2^{2a}p₁²≤M−2・κ=0: t·2^{2a}p₁≤M−2）を前提に使用"
   - type: depends_on
     target: K0965
     note: 出版行modeb_rows_k4_deep/kap0（ユニーク1,741行・γ 1,735 = 違反932行を含む）を行入力に使用・違反行の構造解析（全行a=1・p₁=3・γ枝）が発見の起点
   - type: generalizes
     target: K0961
-    note: γ sharp（κ≥1: t·2^{2a}p₁²≤M−2・κ=0: t·2^{2a}p₁≤M−2）をSHARP-V（t·c²M(M+1)<(M−1)³+c²・c=2^a p₁）へ拡張・厳密改良（両方とも成り立つ域では新<旧⟺c²<2M²−5M+1・c=6では全M≥6・改良量≈1/18）し κパリティ前提を除去（κ=0のγ行にも無条件・旧κ=0 capを3倍厳密化）
+    note: "γ sharp（κ≥1: t·2^{2a}p₁²≤M−2・κ=0: t·2^{2a}p₁≤M−2）をSHARP-V（t·c²M(M+1)<(M−1)³+c²・c=2^a p₁）へ拡張・厳密改良（両方とも成り立つ域では新<旧⟺c²<2M²−5M+1・c=6では全M≥6・改良量≈1/18）し κパリティ前提を除去（κ=0のγ行にも無条件・旧κ=0 capを3倍厳密化）"
   - type: supports
     target: K0965
     note: 予想(i)反証932行の「six zone」構造（6t<p₂≤p₃≤p₄≤(M−1)/6・p₂p₃>k₀・p₂>6t）の全称定理化・M≡2,3 (mod 36)でγκ≥1整数cap−1・κ=0掃引帯上端を3倍縮小（将来掃引用）

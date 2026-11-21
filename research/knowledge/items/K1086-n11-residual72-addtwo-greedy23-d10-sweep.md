@@ -1,6 +1,6 @@
 ---
 id: K1086
-title: 残余72行 add-two greedy 23根の depth-10 掃引: WIN8-D10 candidate 7根（被覆23行）と REFUTED-D10 fact 16根・46 probes完全完走（capped 0・順序整合）と greedy計画幾何の独立再導入
+title: "残余72行 add-two greedy 23根の depth-10 掃引: WIN8-D10 candidate 7根（被覆23行）と REFUTED-D10 fact 16根・46 probes完全完走（capped 0・順序整合）と greedy計画幾何の独立再導入"
 kind: computation
 status: computed
 topics: [search-methods, certificates, geometry]
