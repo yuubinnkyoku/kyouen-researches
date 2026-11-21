@@ -35,16 +35,13 @@
   変えれば 68+ 到達の可能性が残る（幅68 witness 探索が次の実行可能課題）。
 - 実行時間の目安: 1近傍列挙につき 2〜4 秒（幅60前後）、1幅あたり cap 10 で 10〜36 秒。
 
-## 事故と修復（part3 publish の切り詰め）
+## part4（幅68 witness — 第二バッチ・下界69）
 
-- part3 commit `ce026735` で K0827 と knowledge README が約64KBで切り詰められた状態で
-  push されていた（K0827 63,951B・本来 70,010B。README 63,749B・本来 741,264B。
-  ともに正本のバイトプレフィックスであることを SHA 指定 raw fetch と md5 で確認）。
-  原因は publish 前のファイル読み込みが単発 read（~64KB cap）で was_truncated を
-  確認していなかったこと。push 直後の raw main 指定 fetch は CDN キャッシュの
-  旧 blob を返しており、断面が検査で見えなかった。
-- 修復: 分割読み込み（returned_bytes 合計と file_size_bytes の照合で 70,010B・741,264B
-  を完全復元）で再構成した正本を push し、commit SHA 指定 raw fetch の md5 が
-  local と一致することで完了を確認。
-- 教訓: 大ファイルの publish は分割読み込み + byte 数照合が必須。push 後の検査は
-  main 指定 raw でなく commit SHA 指定 raw で行う（CDN 遅延を回避）。
+- 幅68 witness 探索: 既知全199基底（anchor群+幅61..67全チェーンwitness・重複除去）の
+  幅68 fresh 2-for-2 掃引で、3つの幅65基底近傍から同一の一意な幅68 safe row-deficient
+  maximum（20石 rows [3,3,3,3,3,3,2]・maxX=57）を発見。2系統検証 PASS
+  （正規化整数直線・円 + 素朴4×4行列式）。被覆は幅68でちょうど尽きる（(68,6)未遮断）。
+- **M_{7,4} ∈ [69, 1929]・witness帯 m=4..68・前線 7×69**。幅69は幅68 witness の
+  fresh 近傍で0件（局所負記録のみ）。
+- 修復記録: repair commit 8afa77d5 — part3（ce026735）の K0827/knowledge README
+  切り詰め（約64KB prefix）を正本へ復元し、SHA指定raw md5照合で完了確認済み。

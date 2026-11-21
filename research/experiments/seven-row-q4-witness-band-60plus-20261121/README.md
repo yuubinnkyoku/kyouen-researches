@@ -69,3 +69,26 @@ raising the lower bound of M_{7,4}.
   explored greedy frontier).
 - Upper bound 1929 unchanged; witness type is the def-mode 20-stone
   unsafe-maximal configuration as in K0827.
+
+## Width-68 exhaustive sweep (2026-11-21, second batch of the same lane)
+
+- `scripts/sweep68.js`, `output/w68/bases.json`: fresh 2-for-2 enumeration at
+  width 68 over ALL published bases, deduplicated: pool anchors (base53, B59,
+  w57_0, w57_1, sa42..sa53, w60_a..d) and every chain witness of widths
+  61..67 (199 distinct stone configurations total; `output/w68/results.jsonl`
+  holds all per-base records: rcc 2,077,140 each, safe 166,686..208,232,
+  totals 413,350,860 candidates / 39,476,408 safe).
+- 3 neighborhoods (bases tagged w65, i.e. width-65 chain witnesses) each
+  contain exactly one safe row-deficient maximum, and all three are the SAME
+  unique width-68 witness: 20 stones, rows [3,3,3,3,3,3,2], deficient row 6,
+  maxX=57 (`output/w68/witnesses_68.json`).
+- Verification: `output/w68/verification_68.json` (system #2, normalized
+  integer line/circle equations) and system #3 (`scripts/verify_third.py` over
+  `output/w68/third_cases.json`, brute-force 4x4 determinants) both PASS on
+  all 3 records. Coverage probe (exact integer determinants): the same 20
+  stones are blocked exactly through width 68; the first unblocked
+  deficient-row cell is (68,6), so no free-column extension beyond 68.
+- Chain continuation: the fresh 2-for-2 neighborhood of this witness at
+  width 69 gives 0 (`output/chain/stats_69.json`; honest local negative only,
+  frontier 7x69).
+- **M_{7,4} >= 69** (M in [69,1929]); witness band m=4..68.

@@ -1,0 +1,113 @@
+{
+ "scope": "exact finite witness verification of listed stones; no absence claims",
+ "verified_witnesses": [
+  {
+   "width": 68,
+   "stones": [
+    [
+     5,
+     5
+    ],
+    [
+     13,
+     5
+    ],
+    [
+     14,
+     2
+    ],
+    [
+     14,
+     6
+    ],
+    [
+     18,
+     4
+    ],
+    [
+     23,
+     0
+    ],
+    [
+     24,
+     0
+    ],
+    [
+     25,
+     3
+    ],
+    [
+     28,
+     2
+    ],
+    [
+     30,
+     3
+    ],
+    [
+     36,
+     4
+    ],
+    [
+     39,
+     3
+    ],
+    [
+     42,
+     6
+    ],
+    [
+     43,
+     4
+    ],
+    [
+     44,
+     0
+    ],
+    [
+     46,
+     2
+    ],
+    [
+     51,
+     1
+    ],
+    [
+     52,
+     1
+    ],
+    [
+     57,
+     1
+    ],
+    [
+     57,
+     5
+    ]
+   ],
+   "row_counts": [
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    2
+   ],
+   "deficient_row": 6,
+   "safety": {
+    "method": "normalized integer line/circle equations",
+    "distinct_lines": 164,
+    "distinct_circles": 1127,
+    "max_line_points": 3,
+    "max_circle_points": 3,
+    "safe": true
+   },
+   "maximality": {
+    "deficient_row_empty_cells_all_blocked": true,
+    "uncovered_cells": []
+   },
+   "tag": "w68"
+  }
+ ]
+}
