@@ -1,0 +1,313 @@
+{
+  "schema": "n11-residual72-36root-exact-class-membership-20261121-v1",
+  "date": "2026-11-21",
+  "status": "exact-class-membership-regeneration-cross-checked",
+  "source": {
+    "k1075_sha256": "49b6f85f6b51cfdd8a59c7797223da3d8797885d3c992ce67dc9dae629a883fa",
+    "k1075_git_blob_sha1": "45744d8255f454eae3e0d59b0e2246df80e98667",
+    "census_sha256": "94fdb0c6e3503f1e9d19aaaf345f4478157c5a44374f10642c52325f346c2023",
+    "method_pin": "audit_36_root_three_ply_frontier_20261120.mjs 7177a25a799510d0fa65424fddaaeeefa9148fb0c389ffdcb2384676fdd5d57a",
+    "candidate_sha256": "09b394b88cfb0246c278b335b82cfc5f8763f551c0f42c89403977b5e273918b"
+  },
+  "regen": {
+    "point_checks": 16007211,
+    "unique_triples": 132291,
+    "root_quads": 1260
+  },
+  "stone10": {
+    "unique_d4_classes": 728370,
+    "per_root_d4_memberships": 733800,
+    "duplicate_memberships": 5430,
+    "multiplicity_histogram": {
+      "1": 722945,
+      "2": 5420,
+      "3": 5
+    },
+    "multi_root_classes_ref": "output/multi-root-classes-10stone-20261121.json",
+    "triple_root_classes": [
+      {
+        "c": "00000000010008801202000000801401",
+        "roots": [
+          1,
+          19,
+          20
+        ]
+      },
+      {
+        "c": "00000000010004801302000000901000",
+        "roots": [
+          1,
+          21,
+          22
+        ]
+      },
+      {
+        "c": "00000010400000003820000008003100",
+        "roots": [
+          1,
+          21,
+          33
+        ]
+      },
+      {
+        "c": "00000000010002801202040020801000",
+        "roots": [
+          1,
+          13,
+          23
+        ]
+      },
+      {
+        "c": "00000010400000003820000008013000",
+        "roots": [
+          21,
+          22,
+          33
+        ]
+      }
+    ]
+  },
+  "stone09": {
+    "unique_d4_classes": 56464,
+    "duplicate_memberships": 133,
+    "max_multiplicity": 2,
+    "multiplicity_histogram": {
+      "1": 56331,
+      "2": 133
+    }
+  },
+  "stone08": {
+    "unique_d4_classes": 2251,
+    "duplicate_memberships": 0,
+    "max_multiplicity": 0,
+    "multiplicity_histogram": {
+      "1": 2251
+    }
+  },
+  "partition_stats": {
+    "baseline": {
+      "assignment": "roots[W::4]",
+      "stone10": {
+        "per_worker_visits": [
+          181882,
+          190739,
+          178529,
+          182650
+        ],
+        "per_worker_unique_classes": [
+          181574,
+          190265,
+          178309,
+          182411
+        ],
+        "within_worker_redundant_copies": 1241,
+        "classes_spanning_multiple_workers": 4188,
+        "cross_worker_redundant_copies": 4189,
+        "worker_span_histogram": {
+          "1": 724182,
+          "2": 4187,
+          "3": 1
+        }
+      },
+      "stone09": {
+        "per_worker_visits": [
+          14194,
+          14575,
+          13820,
+          14008
+        ],
+        "per_worker_unique_classes": [
+          14187,
+          14564,
+          13815,
+          14002
+        ],
+        "within_worker_redundant_copies": 29,
+        "classes_spanning_multiple_workers": 104,
+        "cross_worker_redundant_copies": 104,
+        "worker_span_histogram": {
+          "1": 56360,
+          "2": 104
+        }
+      },
+      "stone08": {
+        "per_worker_visits": [
+          566,
+          572,
+          555,
+          558
+        ],
+        "per_worker_unique_classes": [
+          566,
+          572,
+          555,
+          558
+        ],
+        "within_worker_redundant_copies": 0,
+        "classes_spanning_multiple_workers": 0,
+        "cross_worker_redundant_copies": 0,
+        "worker_span_histogram": {
+          "1": 2251
+        }
+      }
+    },
+    "candidate": {
+      "assignment": "worker-partition-candidate-20261121 root_groups",
+      "stone10": {
+        "per_worker_visits": [
+          178867,
+          188746,
+          189979,
+          176208
+        ],
+        "per_worker_unique_classes": [
+          178128,
+          187677,
+          189423,
+          175140
+        ],
+        "within_worker_redundant_copies": 3432,
+        "classes_spanning_multiple_workers": 1997,
+        "cross_worker_redundant_copies": 1998,
+        "worker_span_histogram": {
+          "1": 726373,
+          "2": 1996,
+          "3": 1
+        }
+      },
+      "stone09": {
+        "per_worker_visits": [
+          13918,
+          14245,
+          14760,
+          13674
+        ],
+        "per_worker_unique_classes": [
+          13899,
+          14219,
+          14747,
+          13648
+        ],
+        "within_worker_redundant_copies": 84,
+        "classes_spanning_multiple_workers": 49,
+        "cross_worker_redundant_copies": 49,
+        "worker_span_histogram": {
+          "1": 56415,
+          "2": 49
+        }
+      },
+      "stone08": {
+        "per_worker_visits": [
+          558,
+          561,
+          581,
+          551
+        ],
+        "per_worker_unique_classes": [
+          558,
+          561,
+          581,
+          551
+        ],
+        "within_worker_redundant_copies": 0,
+        "classes_spanning_multiple_workers": 0,
+        "cross_worker_redundant_copies": 0,
+        "worker_span_histogram": {
+          "1": 2251
+        }
+      }
+    }
+  },
+  "pairwise_regeneration_exact_match": true,
+  "checks": [
+    {
+      "name": "36 roots",
+      "pass": true
+    },
+    {
+      "name": "determinant expansions",
+      "pass": true
+    },
+    {
+      "name": "9-stone total",
+      "pass": true
+    },
+    {
+      "name": "raw 10-stone total",
+      "pass": true
+    },
+    {
+      "name": "D4 membership total",
+      "pass": true
+    },
+    {
+      "name": "within-root merges",
+      "pass": true
+    },
+    {
+      "name": "terminal count",
+      "pass": true
+    },
+    {
+      "name": "third move identity",
+      "pass": true
+    },
+    {
+      "name": "global D4 classes",
+      "pass": true
+    },
+    {
+      "name": "cross-root duplicates",
+      "pass": true
+    },
+    {
+      "name": "multiplicity",
+      "pass": true
+    },
+    {
+      "name": "pairwise overlap count",
+      "pass": true
+    },
+    {
+      "name": "pairwise overlap exact match",
+      "pass": true
+    },
+    {
+      "name": "worker split overlap",
+      "pass": true
+    },
+    {
+      "name": "published summary match",
+      "pass": true
+    },
+    {
+      "name": "worker stats match census",
+      "pass": true
+    },
+    {
+      "name": "candidate assignment exactly-once",
+      "pass": true
+    },
+    {
+      "name": "baseline cross/within matches candidate JSON",
+      "pass": true
+    },
+    {
+      "name": "candidate cross/within matches candidate JSON",
+      "pass": true
+    },
+    {
+      "name": "d4 per-worker loads match candidate JSON",
+      "pass": true
+    }
+  ],
+  "check_count": 20,
+  "all_pass": true,
+  "interpretation_guard": [
+    "Geometric class bookkeeping only; not DFPN cost, TT hit rate, or proof reuse.",
+    "A shared D4 class does not imply identical search depth, proof boundary, or an actual TT hit.",
+    "No change to the active 36-root depth-10 sweep or its assignment is made or proposed.",
+    "REFUTED-D10 is not a LOSS proof. The 36 roots are candidates, not WIN certificates.",
+    "Standard 11x11 empty board, two-stone roots, S2, class 1/2/4 verdicts remain UNKNOWN."
+  ]
+}
