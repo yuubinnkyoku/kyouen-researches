@@ -80,6 +80,7 @@ published probe raw（13 probe各2M/15M + two-target design 2M/15M×2鍵、計42
 python3 scripts/census_closure.py
 python3 scripts/audit_global_union.py
 python3 scripts/reconciliation_findings.py
+node scripts/union_audit_node_crosscheck.mjs   # 追記: 独立実装による交叉検証（rc=0=全項目一致）
 ```
 
 依存はPython標準ライブラリのみ。全入力はrepo内publishedファイルのSHA-256 pin（不一致は rc!=0 で fail-closed）。実行順序は census → audit → reconciliation（最後のスクリプトは前2出力のshaをpinする）。
@@ -89,3 +90,13 @@ python3 scripts/reconciliation_findings.py
 - nodes数・proxy・closure距離・unknown数は **scheduling測定であり、いかなる局面の勝敗でもない**。
 - 本実験はいかなるS5/S4/rootの判定も主張しない。cacheへの書込・merge・quarantine rehabは行わない。
 - **標準11×11空盤・二石root {60,27}・第三手100/108は本実験の後も UNKNOWN。**
+
+## 追加検証: 第二実装によるunion監査交叉検証（2026-11-21追記）
+
+`scripts/union_audit_node_crosscheck.mjs`（13,143 bytes・sha256 `d036bed9…`）は、published監査（`audit_global_union.py`）のヘッドライン主張を**独立実装で交叉検証する**Node.jsスクリプトである。Pythonの`csv`モジュールに対して、行分割・フィールド検証・集計すべてを独立に再実装した。入力は同じpublished corpus（chain cache・quarantine registry・published audit出力、すべてsha pin・不一致はrc!=0でfail-closed）。
+
+結果（`output/union-audit-node-crosscheck.json`、sha256 `7dc0be25…`）: published監査との直接比較で**全13項目一致**（files 326・rows 760,504・unique keys 5,866・内部矛盾 0・グローバルWIN/LOSS衝突 0・has_WIN 161・LOSS-only 5,705・chain 5,756=WIN158+LOSS5,598・backward-only行108の鍵・verdict・出所ファイル完全一致・quarantine 2鍵の所在記録完全一致）。壊形式行（suspect rows）も0。
+
+検証: fresh 2回実行で output byte 一致（決定性）。**負対照**: 走査tree内に疑似conflict cache（既存WIN鍵のverdictをLOSSに偽装）を注入すると files 327・衝突検出を経てrc=1でfail-closed、除去後rc=0でbyte一致に復元。
+
+**誠実記録（実装中に発見したJS落とし穴）**: 当初の実装は鍵を`Number`に正規化しており、64ビット鍵（例 `10448351135499552768`）が浮動小数で丸められ、quarantine除外が2鍵分機能せずbackward-onlyが110行と誤計上された。最終版は鍵をCSV生テキスト文字列のまま保持し（`JSON.parse`にも16桁以上の整数リテラルを事前にquoteする前処理を適用）、BigIntで比較・sortする。この修正後に全項目一致した。JSへの64bit整数系移植では「`Number`/`JSON.parse`の2^53超え丸め」が構造的な落とし穴であることを今後の移植律として記録する。

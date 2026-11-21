@@ -30,3 +30,10 @@
 - 課題の所有権: backward-only 108行（K0414系譜のOct 12完了corpus 99行を含む）の採否はreply27レーン・focusレーン・K0414/K0416系譜オーナーへ付託済み。本レーンに残務なし。
 
 **標準11×11空盤・二石root {60,27}・第三手100/108は本レーンの後も UNKNOWN のまま。node数・proxy・closure距離はscheduling測定であり判定ではない。**
+
+## 追記2（2026-11-21T14:48Z・第二実装による交叉検証）
+
+- union監査のヘッドライン主張（矛盾ゼロ・backward-only 108行）の**独立検証**として、Node.js v22.20.0による第二実装 `union_audit_node_crosscheck.mjs`（sha256 `d036bed9…`）を作成・実行した。Python実装（`csv`モジュール）に対し、行分割・`JSON`の安全性（duplicate-key拒否・2^53超え整数の精度保護）・集計をすべて独立に再実装。published監査出力をsha pinして直接比較するゲート付き。
+- 結果: **全13項目一致・rc=0**（326 files / 760,504 rows / 5,866 unique / 内部矛盾0 / global衝突0 / has_WIN 161 / LOSS-only 5,705 / chain 5,756=158+5,598 / backward-only 108行の鍵・verdict・出所完全一致 / quarantine所在完全一致 / suspect rows 0）。決定性2回byte一致。負対照（疑似conflict cache注入）rc=1 fail-closed・除去でbyte一致復元。
+- **実装事故の誠実記録**: 初版は鍵をJS `Number`へ正規化し、64ビット鍵の丸め（`10448351135499552768`→`…553000`）でquarantine除外が2鍵分落ち、backward-onlyが110行と誤計上していた。生テキスト鍵+BigInt比較に修正し全一致。出版版のみが正本。JS移植の「2^53超え`Number`/`JSON.parse`丸め」は今後の移植律としてREADMEに記録した。
+- 出版: 実験dir 3ファイル追加（mjs・output json・README追記）+ 本log追記を1コミットでpush。fetch-back byte検証後にsha追記。
