@@ -10,11 +10,11 @@ Gate criteria per width m:
 
 Usage: python3 verify_port_vs_published.py SWEEP.jsonl [SWEEP2.jsonl ...] > out.json
 """
-
 import json
 import sys
 
 PUBLISHED = "q34_exact_threshold.json"
+
 
 def main():
     pub = json.load(open(PUBLISHED, encoding="utf-8"))
