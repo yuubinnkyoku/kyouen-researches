@@ -10,6 +10,7 @@ Gate criteria per width m:
 
 Usage: python3 verify_port_vs_published.py SWEEP.jsonl [SWEEP2.jsonl ...] > out.json
 """
+
 import json
 import sys
 
@@ -65,6 +66,7 @@ def main():
     }
     print(json.dumps(out, indent=2))
     raise SystemExit(0 if all_ok else 1)
+
 
 if __name__ == "__main__":
     main()
