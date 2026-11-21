@@ -15,7 +15,7 @@ import json
 import sys
 from pathlib import Path
 
-EXP = Path(__file__).resolve().parent.parent          # .../n11-reply27-s5-jsreplica-probe-10376293541461622788-77309411328-20261121
+EXP = Path(__file__).resolve().parent.parent          # .../n11-reply27-s5-jsreplica-probe-10376293541461626880-12288-20261121
 ROOT = EXP.parents[2]                                # repository root
 sys.path.insert(0, str(ROOT / 'research/experiments/n11-independent-exact-audit-20261010/scripts'))
 from independent import Board, mask_from_key  # noqa: E402
