@@ -5,7 +5,9 @@
 - publish:
   - part1 `5d22f006`: scripts（enum_two.js・verify_witnesses.py）+ 較正 + 幅60 witness 4件 + 2系統検証（fetch-back md5 照合 MATCH）。
   - part2 `b0a663a6`: 幅61..67 チェーン成果（frontier/stats/witness 各幅）+ チェーン代表検証 7件（fetch-back 抽査 MATCH）。
-  - part3（本 commit）: 第三系 verify_third.py + third_verify.json + README 追記 + K0827 反映 + knowledge README 反映 + 本ログ。
+  - part3 `ce026735`: 第三系 verify_third.py + third_verify.json + README 追記 + K0827 反映 + knowledge README 反映 + 本ログ。
+  - repair `8afa77d5`: part3 の切り詰めを正本へ復元。
+  - part4 `a2acdd6a`: 幅68 witness（下界69）。
 
 ## 結果（下界更新）
 
@@ -35,6 +37,22 @@
   変えれば 68+ 到達の可能性が残る（幅68 witness 探索が次の実行可能課題）。
 - 実行時間の目安: 1近傍列挙につき 2〜4 秒（幅60前後）、1幅あたり cap 10 で 10〜36 秒。
 
+## 事故と修復（part3 publish の切り詰め）
+
+- part3 commit `ce026735` で K0827 と knowledge README が約64KBで切り詰められた状態で
+  push されていた（K0827 63,951B・本来 70,010B。README 63,749B・本来 741,264B。
+  ともに正本のバイトプレフィックスであることを SHA 指定 raw fetch と md5 で確認）。
+  原因は publish 前のファイル読み込みが単発 read（~64KB cap）で was_truncated を
+  確認していなかったこと。push 直後の raw main 指定 fetch は CDN キャッシュの
+  旧 blob を返しており、断面が検査で見えなかった。
+- 修復（commit `8afa77d5`）: 分割読み込み（returned_bytes 合計と file_size_bytes の照合で
+  70,010B・741,264B を完全復元）で再構成した正本を push し、commit SHA 指定 raw fetch の md5 が
+  local と一致することで完了を確認。
+- 教訓: 大ファイルの publish は分割読み込み + byte 数照合が必須。push 後の検査は
+  `main` 指定 raw でなく commit SHA 指定 raw で行う（CDN 遅延を回避）。
+- part4 push の際、作業側で手違いにより本事故セクションが一度欠落した（part4節の
+  修復記録行のみが残っていた）。本 commit で復元した。
+
 ## part4（幅68 witness — 第二バッチ・下界69）
 
 - 幅68 witness 探索: 既知全199基底（anchor群+幅61..67全チェーンwitness・重複除去）の
@@ -43,5 +61,19 @@
   （正規化整数直線・円 + 素朴4×4行列式）。被覆は幅68でちょうど尽きる（(68,6)未遮断）。
 - **M_{7,4} ∈ [69, 1929]・witness帯 m=4..68・前線 7×69**。幅69は幅68 witness の
   fresh 近傍で0件（局所負記録のみ）。
-- 修復記録: repair commit 8afa77d5 — part3（ce026735）の K0827/knowledge README
-  切り詰め（約64KB prefix）を正本へ復元し、SHA指定raw md5照合で完了確認済み。
+
+## part5（幅69 fresh+holes 全200基底掃引 — 完全局所負記録・publishは環境復旧後）
+
+- 幅69をpart4と同一の全基底掃引で評価: 基底は199基底+幅68 witness の200基底。
+  fresh 2-for-2 全掃引: 428,241,000候補・43,208,643 safe・**行欠損極大 0件**。
+  holes 2-for-2 全掃引: 437,885,400候補・45,578,855 safe・**0件**。
+  いずれも既知基底の（≤2除去,≤2追加）近傍に限る完全列挙による局所負記録であり、
+  幅69全体の不在主張ではない（3編集surgery・他の移動型・未発見配置は残る）。
+- **M_{7,4} ∈ [69, 1929] 不変・前線 7×69**。
+- この時点で実行環境（bash・file_system）が一時ダウン。part5の生データ
+  （output/w69/results.jsonl・results_holes.jsonl・sweep69.js・sweep69h.js・実験README追記・
+  K0827追記）は未 publish。sweep69.js は scripts/sweep68.js（part4でpublish済み）の
+  決定的 sed 置換（w68→w69・Board(68)→Board(69)）で再構成可能で、列挙は決定的なので
+  再実行で byte 同一の results.jsonl が再現する。次回実行時の宿題: (1) 環境復旧後に
+  上記データを push して実験 README・K0827 に w69 両モード負記録を反映、
+  (2) sweep69h.js（holes版・結果ファイルのみの差分）も同様に再構成して publish。
