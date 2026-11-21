@@ -24,7 +24,7 @@ artifacts:
   note: "主張・band 表・row-split 部分問題の健全性・検証プロトコル・レジューム（単一オーナー宣言 72fdd106 レーン・2026-11-21）"
 - path: research/experiments/three-row-q4-frontier-20261121/output/records.jsonl
   role: data
-  note: "26レコード: 20 SAT (m=4..23・witness 2系統検証 PASS・m=23 は rowY=1+lexH 部分問題で判定) + 6 INDET プローブ (m=23 plain/lexH/row0-lexH, m=24 plain/row1-lexH, m=25 plain・cap下 conflicts 参考値)"
+  note: "29レコード: 21 SAT (m=4..23・witness 2系統検証 PASS・m=23 は rowY=1+lexH で判定し lexHV 陽性対照で同一 witness 再生・m=4..22 は plain) + 8 INDET プローブ (m=23 plain/lexH/row0-lexH, m=24 plain/row1-lexH/row1-lexHV/row0-lexH, m=25 plain・cap下 conflicts 参考値)"
 - path: research/experiments/three-row-q4-frontier-20261121/output/brute_3x4_4.json
   role: data
   note: "m=4..8 完全分類（brute_3x{4..8}_4.json・安全集合全列挙に基づく極大・欠損台帳・第三独立系）"
@@ -56,8 +56,9 @@ P(m) ⟺「3×m の全極大安全配置がちょうど (q−1)·3 = 9 石」（
    SAT 471,357 conflicts@106.83s）で判定。抽出 witness（8石・rows [3,2,3]）は
    plain board 上で sat.js verifyConfig (ok) + verify34.py (pass) を直接通るため、
    band 主張は witness 自身に立脚し部分問題の意味論には依存しない。
-2. **m=24, 25 は未決**: m=24 は plain（100s cap・481k conflicts）と rowY=1+lexH
-   （285s cap・1.16M conflicts）とも判定に至らず、m=25 plain は 115s cap
+2. **m=24, 25 は未決**: m=24 は plain（100s cap・481k conflicts）に加え全
+   row-split 分割（rowY=1+lexH 285s・1.16M／rowY=1+lexH,V 285s・1.23M／
+   rowY=0+lexH 285s・1.60M）が判定に至らず、m=25 plain は 115s cap
    （507k conflicts）未決。(3,23,4) rowY=0+lexH（外側行欠損の代表・行2は行0と
    V 同型）も 140s cap（1.00M conflicts）未決で、**m ≥ 23 での外側行欠損 witness
    の存在は open**。witness-free 幅は未確定。**M_{3,4} ∈ [24, 69]**

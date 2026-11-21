@@ -118,3 +118,20 @@ records.jsonl 26レコード化（+4: m23 row0 INDET・m23 row1 SAT・m24 row1 I
 m25 INDET）・wit_3x23_4.witness.json 追加・実験 README と K1183 item の
 claims 更新（band 4..23・M ∈ [24,69]）・knowledge README の K1183 bullet 更新
 （本ログも同 commit）。
+
+## 続報2（HV 符号化較正と m=24 全分割掃引・02:50-03:05Z）
+
+1. **HV 符号化の陽性対照**: V 鏡映（y→2−y）は中央行 y=1 を固定するため
+   --rowY=1 との併用が健全。(3,23,4) --rowY=1 --lex=H,V が **SAT 173,883
+   conflicts@40.21s**（lexH 単独 471,357@106.83s の 2.7 倍速）で
+   **lexH 単独と同一 witness**（`9:0,12:0,18:0,18:1,19:1,4:2,15:2,18:2`）を再生
+   → HV 符号化の健全性・有効性を較正。
+2. **(3,24,4) --rowY=1 --lex=H,V は 285s cap で INDET**（1,230,473 conflicts・
+   判定なし・V 対称でも決着せず）。
+3. **(3,24,4) --rowY=0 --lex=H は 285s cap で INDET**（1,602,798 conflicts・判定なし）。
+   **m=24 は plain + 全 row-split 分割（3種）が 285s cap で未決**。m=24 の決着には
+   285s 超の cap、--cap=K（石数上限）併用、不足行石数 0/1/2 の2段階分割、
+   あるいは並列分散が必要。M_{3,4} ∈ [24,69] は不変・m=25 も plain 115s cap 未決。
+4. records.jsonl 29レコード化（+3: m23 row1-lexHV SAT 対照・m24 row1-lexHV INDET・
+   m24 row0-lexH INDET）。claims は不変（[24,69]）。実験 README/K1183 item の
+   m=24 探索記録と records 計数のみ更新（本コミット）。

@@ -23,11 +23,12 @@ P(m) ⟺「3×m の全極大安全配置がちょうど (q−1)·3 = 9 石」（
    witness は plain board 上で sat.js verifyConfig (ok) + verify34.py (pass) の
    2系統検証を直接通るため、band 主張は witness 自身に立脚する（部分問題の意味論には
    依存しない）。
-3. **m=24, 25 は未決（INDET）**: (3,24,4) plain は 100s cap 481,364 conflicts、
-   (3,24,4) --rowY=1 --lex=H は 285s cap 1,159,627 conflicts でともに判定なし。
-   (3,25,4) plain は 115s cap 507,461 conflicts で判定なし。
-   (3,23,4) --rowY=0 --lex=H（外側行欠損の代表）も 140s cap 1,001,203 conflicts で
-   未決であり、**m ≥ 23 での外側行欠損 witness の存在は open**。
+3. **m=24, 25 は未決（INDET）**: m=24 は plain（100s cap 481,364 conflicts）に加え
+   全 row-split 分割が cap 下未決: --rowY=1 --lex=H 285s 1,159,627・
+   --rowY=1 --lex=H,V 285s 1,230,473・--rowY=0 --lex=H（外側行代表）285s 1,602,798
+   conflicts のすべてで判定なし。(3,25,4) plain は 115s cap 507,461 conflicts で
+   判定なし。(3,23,4) --rowY=0 --lex=H も 140s cap 1,001,203 conflicts で未決であり、
+   **m ≥ 23 での外側行欠損 witness の存在は open**。
    cap 下の conflicts は環境依存の参考値。witness-free 幅はまだ1幅も確定していない。
 4. **上界は K0024 のまま 69**: K0024 十分長さ T_{3,4} = min(A,B) = 69。
    K0318 packing 境界を独立再計算（`curve_packing_fixed_width.py`・commit 49891aaf の
@@ -56,6 +57,9 @@ P(m) ⟺「3×m の全極大安全配置がちょうど (q−1)·3 = 9 石」（
 7. **境界幅の交差符号化陽性対照**: (3,12,4) と (3,22,4) の def-mode + --lex=H
    （列鏡映 lex-leader 節・別符号化）が双方 SAT（76 conflicts・178,116 conflicts@30s）。
    SAT 側の符号化独立性確認。UNSAT 側はまだ存在しないため UNSAT 交差は未実施。
+   さらに (3,23,4) --rowY=1 --lex=H,V の陽性対照が 173,883 conflicts で lexH 単独
+   （471,357）と同一 witness を再生し、V 鏡映（中央行を固定）を行列併用した
+   HV 符号化の健全性・有効性を較正した。UNSAT 側はまだ存在しないため UNSAT 交差は未実施（この文は m=24 掃引後も真のまま）。
 
 ## 観察（予想として記録・未証明）
 
@@ -91,7 +95,7 @@ P(m) ⟺「3×m の全極大安全配置がちょうど (q−1)·3 = 9 石」（
   正しい意味論は「曲線上の石数 ≥ q−1」で両系統ともこれに統一した。すなわち交差検証が
   本来は第三系統由来のバグを検出した事例。C の過剰要求は witness を誤って棄却する
   方向にのみ作用し、採用した witness 群への影響はない。
-- **records**: 26レコード（20 SAT + 6 INDETプローブ）。決定インスタンスの conflicts は
+- **records**: 29レコード（21 SAT + 8 INDETプローブ）。決定インスタンスの conflicts は
   pinned kissat での決定論的再現対象、INDET の cap 下 conflicts は参考値。
 
 ## 出力
@@ -117,9 +121,9 @@ P(m) ⟺「3×m の全極大安全配置がちょうど (q−1)·3 = 9 石」（
 
 ## レジューム（次回・着手前に必ず最新main再取得・宣言ノートの有効性を再確認）
 
-1. m=24, 25 の判定: 不足行分割（--rowY=0/1・V 同型で行0が行2を 代表）＋ --lex=H で
-   cap を段階的に引き上げ（1幅/呼び出し・bash 外装 cap 240-285s 内・kissat は再開不可
-   なので都度最初から）。外側行 (rowY=0) の m=23 も未決。
+1. m=24, 25 の判定: m=24 は全 row-split 分割が 285s cap 未決（row1 lexH/lexHV・
+   row0 lexH）。次は cap を 285s 超に引き上げるか、不足行側の --cap=K（石数上限）
+   併用・2段階分割（不足行の石数 0/1/2 別）を検討。外側行 (rowY=0) の m=23 も未決。
 2. witness-free 帯の先上げ: UNSAT が取れた幅から増分出版（records 追記・1コミット/
    幅以上の粒度）。
 3. 閉包: witness-free 帯が m=69（=T_{3,4}）に達すれば M_{3,4} = onset として
