@@ -22,7 +22,7 @@ These are **scheduling measurements**, not verdicts: node counts and proxies of 
 
 ## Inputs (all fail-closed sha-pinned at main `a423c2f0`)
 
-- geometry `n11-boundary-recovery-20261006/output/geometry.json.gz` - sha256 `146be80b...100b54`
+- geometry `n11-strategy-redesign-20261010/output/geometry.json.gz` - sha256 `146be80b...100b54`
 - merged exact S5 cache after reply27 JS probe-13 - `research/experiments/n11-reply27-s5-jsreplica-probe-10376293541461626880-40960-20261121/output/merged-exact-s5-after-js-probe-13.cache` - sha256 `60e0dc34...bc28c6`
 - probe-13 post-probe supply table (shared-s5-tasks.csv) - sha256 `31f0d29b...ea954`
 - candidate ledger - sha256 `2a4c2382...da80`
