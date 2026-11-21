@@ -1,21 +1,48 @@
 ---
 id: K0931
-kind: proposition
-status: mixed
 title: U/V縮約ゲームのstretch-2構造定理・双子法則のmod 6全称決着・統一重量ラダー
+kind: proposition
+status: proved
+topics: [variants, multiplayer, strategy-length]
 aliases: []
 relations:
-  - depends_on: [K0928, K0929]
-  - connects: [K0919, K0922, K0923, K0926]
+- type: depends_on
+  target: K0928
+- type: depends_on
+  target: K0929
+- type: related
+  target: K0919
+- type: related
+  target: K0922
+- type: related
+  target: K0923
+- type: related
+  target: K0926
 artifacts:
-  - research/experiments/remo-uv-stretch-ladder-20261117/report.md
-  - research/experiments/remo-uv-stretch-ladder-20261117/sieve_test.py
-  - research/experiments/remo-uv-stretch-ladder-20261117/theorem_verify.py
-  - research/experiments/remo-uv-stretch-ladder-20261117/ladder_verify.py
-  - research/experiments/remo-uv-stretch-ladder-20261117/w3_explore.py
-  - research/experiments/remo-uv-stretch-ladder-20261117/audit_build.py
-  - research/experiments/remo-uv-stretch-ladder-20261117/output/uv_stretch_ladder_audit.json
-  - research/experiments/remo-uv-stretch-ladder-20261117/data/w3_explore.json
+- path: research/experiments/remo-uv-stretch-ladder-20261117/report.md
+  role: proof
+  note: "STR2-V/U（U/Vのstretch-2構造定理）・SIEVE3-V/U・LAW1/2のmod-6解決・LAD-h0（h=0ラダー）の全称証明レポート"
+- path: research/experiments/remo-uv-stretch-ladder-20261117/sieve_test.py
+  role: verifier
+  note: "SIEVE構造の有限機械テスト（m<=8000・監視ラベルの死亡時点が理論と一致することのpins mode照合）"
+- path: research/experiments/remo-uv-stretch-ladder-20261117/theorem_verify.py
+  role: verifier
+  note: "STR2定理の機械アンカー（m=4..1000・敗者系列・保持石数の完全一致照合）"
+- path: research/experiments/remo-uv-stretch-ladder-20261117/ladder_verify.py
+  role: verifier
+  note: "LAD-h0ラダーの機械アンカー（w=2,h=0,n<=1000 と w=3,4,5列・終circle・pot・生存者整合の厳密照合）"
+- path: research/experiments/remo-uv-stretch-ladder-20261117/w3_explore.py
+  role: verifier
+  note: "W3/H3/G3 stretch-3終状態形状の決定的探索器"
+- path: research/experiments/remo-uv-stretch-ladder-20261117/audit_build.py
+  role: verifier
+  note: "3検証器を再実行して監査を組み立てるアセンブラ（SIEVE/STR2/LADDER/W3EXPLOREの4チェック）"
+- path: research/experiments/remo-uv-stretch-ladder-20261117/output/uv_stretch_ladder_audit.json
+  role: data
+  note: "監査正本（4チェック all_ok true・2回コールド実行でbyte同一）"
+- path: research/experiments/remo-uv-stretch-ladder-20261117/data/w3_explore.json
+  role: data
+  note: "stretch-3終状態形状の決定的探索データ（n mod 4分類）"
 date: 2026-11-17
 tags: [remo, uniform-board, counting-recursion, survivor, stretch, ladder, primes, machine-evidence]
 ---

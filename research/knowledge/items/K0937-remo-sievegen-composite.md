@@ -1,17 +1,43 @@
 ---
 id: K0937
+title: "SIEVE構造の全称完結: 不変量INV-TRACK・合成数側死亡定理SIEVE-COMPOSITE-GEN（全spf）・双子法則の全称化"
 kind: proposition
 status: proved
-title: "SIEVE構造の全称完結: 不変量INV-TRACK・合成数側死亡定理SIEVE-COMPOSITE-GEN（全spf）・双子法則の全称化"
+topics: [variants, multiplayer, strategy-length]
+aliases: []
 relations:
-  - depends_on: [K0928, K0931, K0933, K0934, K0935, K0936]
-  - connects: [K0919, K0929]
+- type: depends_on
+  target: K0928
+- type: depends_on
+  target: K0931
+- type: depends_on
+  target: K0933
+- type: depends_on
+  target: K0934
+- type: depends_on
+  target: K0935
+- type: depends_on
+  target: K0936
+- type: related
+  target: K0919
+- type: related
+  target: K0929
 artifacts:
-  - research/experiments/remo-sievegen-composite-20261118/report.md
-  - research/experiments/remo-sievegen-composite-20261118/sievegen_core.py
-  - research/experiments/remo-sievegen-composite-20261118/sievegen_verify.py
-  - research/experiments/remo-sievegen-composite-20261118/audit_build.py
-  - research/experiments/remo-sievegen-composite-20261118/output/sievegen_audit.json
+- path: research/experiments/remo-sievegen-composite-20261118/report.md
+  role: proof
+  note: "INV-TRACK（監視距離不変量）・死亡合同式・t=1へのWATCH-MAP拡張と限界特定・SIEVE-COMPOSITE-GEN・双子法則のmod 210制限除去の全称証明レポート"
+- path: research/experiments/remo-sievegen-composite-20261118/sievegen_core.py
+  role: solver
+  note: "track_gen/play_full等の共有コア（K0934-K0936検証器からverbatim・以降の実験群でpinned byte同一コピーとして参照される）"
+- path: research/experiments/remo-sievegen-composite-20261118/sievegen_verify.py
+  role: verifier
+  note: "12チェックの機械アンカー（全前提を検証）"
+- path: research/experiments/remo-sievegen-composite-20261118/audit_build.py
+  role: verifier
+  note: "監査アセンブラ（2回in-process実行一致・2回コールド実行でbyte同一）"
+- path: research/experiments/remo-sievegen-composite-20261118/output/sievegen_audit.json
+  role: data
+  note: "監査正本（file sha256 5281e92e…・12チェック表）"
 date: 2026-11-18
 tags: [remo, uniform-board, counting-recursion, ladder, stretch, watched-tracking, sieve, invariant, twin-laws, machine-evidence]
 ---

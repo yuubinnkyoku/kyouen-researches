@@ -1,16 +1,29 @@
 ---
 id: K0926
+title: プラトー全称化 E6U、S(C,r) = S(C,C) = P(C)（すべての C >= 1, r >= C）。補題CAS（零石カスケード）と合流カップリングによる全称証明で、K0919 E6 の有限観察（C <= 24 機械）を解決し、P(C) を r 非依存の普遍関数として正当化。系として有界 witness 窓 [1,r-1] の生存者列は P(1..r-1) で、K0925 有界 witness 予想は窓形式「Q(r) の各真約数 d に対し C in [1,r-1] で S(C+d,r) != P(C) が存在」と同値。
 kind: proposition
 status: proved
-title: プラトー全称化 E6U、S(C,r) = S(C,C) = P(C)（すべての C >= 1, r >= C）。補題CAS（零石カスケード）と合流カップリングによる全称証明で、K0919 E6 の有限観察（C <= 24 機械）を解決し、P(C) を r 非依存の普遍関数として正当化。系として有界 witness 窓 [1,r-1] の生存者列は P(1..r-1) で、K0925 有界 witness 予想は窓形式「Q(r) の各真約数 d に対し C in [1,r-1] で S(C+d,r) != P(C) が存在」と同値。
+topics: [variants, multiplayer, strategy-length]
 aliases: []
 relations:
-  - depends_on: [K0859, K0919, K0925]
-  - connects: [K0924]
+- type: depends_on
+  target: K0859
+- type: depends_on
+  target: K0919
+- type: depends_on
+  target: K0925
+- type: related
+  target: K0924
 artifacts:
-  - research/experiments/remo-plateau-universality-20261117/report.md
-  - research/experiments/remo-plateau-universality-20261117/verify_plateau_universality.py
-  - research/experiments/remo-plateau-universality-20261117/output/plateau_universality_audit.json
+- path: research/experiments/remo-plateau-universality-20261117/report.md
+  role: proof
+  note: "K0919実験E6の有限観察「プラトー S(C,r) は r>=C で一定」を補題CAS（零石カスケード）と正準状態K_C合流により全称証明する実験レポート（定理E6U）"
+- path: research/experiments/remo-plateau-universality-20261117/verify_plateau_universality.py
+  role: verifier
+  note: "補題CASと定理E6Uの機械検証器（stdlibのみ・決定的・--no-cacheで全再計算・r=2..40×C=1..r-1全数で違反0）"
+- path: research/experiments/remo-plateau-universality-20261117/output/plateau_universality_audit.json
+  role: data
+  note: "監査正本（sha256 ef83446f…・4,748 bytes・pure ASCII・二重実行でbyte同一）"
 date: 2026-11-17
 tags: [remo, uniform-board, counting-recursion, survivor, plateau, universal-proof]
 ---

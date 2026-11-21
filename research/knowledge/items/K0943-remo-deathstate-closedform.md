@@ -1,18 +1,43 @@
 ---
 id: K0943
+title: ladder監視状態のO(1)閉形式（STATE-CF）・死亡状態閉形式（DS-CF）・p²崩壊定理（P2）− K0941レジューム(i)完成
 kind: proposition
 status: proved
-title: ladder監視状態のO(1)閉形式（STATE-CF）・死亡状態閉形式（DS-CF）・p²崩壊定理（P2）− K0941レジューム(i)完成
+topics: [variants, multiplayer, strategy-length]
 aliases: []
 relations:
-  - depends_on: [K0937, K0934, K0941, K0939]
-  - connects: [K0929, K0931, K0933, K0942]
+- type: depends_on
+  target: K0937
+- type: depends_on
+  target: K0934
+- type: depends_on
+  target: K0941
+- type: depends_on
+  target: K0939
+- type: related
+  target: K0929
+- type: related
+  target: K0931
+- type: related
+  target: K0933
+- type: related
+  target: K0942
 artifacts:
-  - research/experiments/remo-deathstate-closedform-20261118/report.md
-  - research/experiments/remo-deathstate-closedform-20261118/sievegen_core.py
-  - research/experiments/remo-deathstate-closedform-20261118/deathstate_verify.py
-  - research/experiments/remo-deathstate-closedform-20261118/audit_build.py
-  - research/experiments/remo-deathstate-closedform-20261118/output/deathstate_audit.json
+- path: research/experiments/remo-deathstate-closedform-20261118/report.md
+  role: proof
+  note: "STATE-CF/DS-CF（ladder監視状態と死亡状態のO(1)閉形式）・p^2崩壊定理P2の全称証明レポート（K0941レジューム(i)の完成）"
+- path: research/experiments/remo-deathstate-closedform-20261118/sievegen_core.py
+  role: solver
+  note: "K0937 committed版のbyte同一コピー（sha256 a69f916c…）"
+- path: research/experiments/remo-deathstate-closedform-20261118/deathstate_verify.py
+  role: verifier
+  note: "閉形式定理の機械検証器"
+- path: research/experiments/remo-deathstate-closedform-20261118/audit_build.py
+  role: verifier
+  note: "監査アセンブラ"
+- path: research/experiments/remo-deathstate-closedform-20261118/output/deathstate_audit.json
+  role: data
+  note: "監査正本（sha256 9bc8c2f4…・7,514 bytes）"
 date: 2026-11-18
 tags: [remo, uniform-board, counting-recursion, closed-form, composite, prime, ladder, machine-evidence]
 ---

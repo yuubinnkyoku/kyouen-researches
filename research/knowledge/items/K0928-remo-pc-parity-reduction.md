@@ -1,20 +1,41 @@
 ---
 id: K0928
+title: 一様盤P(C)のpot定式化と偶奇ストレッチ・パリティ定理・U/V縮約定理（全称）
 kind: proposition
 status: proved
-title: 一様盤P(C)のpot定式化と偶奇ストレッチ・パリティ定理・U/V縮約定理（全称）
+topics: [variants, multiplayer, strategy-length]
 aliases: []
 relations:
-  - depends_on: [K0859]
-  - connects: [K0919, K0922, K0926]
+- type: depends_on
+  target: K0859
+- type: related
+  target: K0919
+- type: related
+  target: K0922
+- type: related
+  target: K0926
 artifacts:
-  - research/experiments/remo-pc-twin-laws-20261117/report.md
-  - research/experiments/remo-pc-twin-laws-20261117/verify_pc_twin_laws.py
-  - research/experiments/remo-pc-twin-laws-20261117/output/pc_twin_laws_audit.json
-  - research/experiments/remo-pc-twin-laws-20261117/data/pc_p8000.json
-  - research/experiments/remo-pc-twin-laws-20261117/data/pc_uv8000.json
-  - research/experiments/remo-pc-twin-laws-20261117/pc_fast.js
-  - research/experiments/remo-pc-twin-laws-20261117/pc_reduced.js
+- path: research/experiments/remo-pc-twin-laws-20261117/report.md
+  role: proof
+  note: "補題P（pot定式化）・s+pot=C不変量・補題E/O・定理PAR（パリティ）・定理RED（U/V縮約）の全称証明レポート（K0859計数再帰・一様盤・零リセット）"
+- path: research/experiments/remo-pc-twin-laws-20261117/verify_pc_twin_laws.py
+  role: verifier
+  note: "10チェック（PIN/REF/TWIN/STRE/STRO/RED/RECON/LAW等）の機械照合器（stdlibのみ・決定的）"
+- path: research/experiments/remo-pc-twin-laws-20261117/output/pc_twin_laws_audit.json
+  role: data
+  note: "監査正本（全チェックOK・コールド実行間でbyte同一・sha256 6bc2ee08…）"
+- path: research/experiments/remo-pc-twin-laws-20261117/data/pc_p8000.json
+  role: data
+  note: "P(C) C=1..8000 の完全センサス（sha256 58a414bc…）"
+- path: research/experiments/remo-pc-twin-laws-20261117/data/pc_uv8000.json
+  role: data
+  note: "U(m)/V(m) m=1..8000 の完全センサス（sha256 8a3b318b…）"
+- path: research/experiments/remo-pc-twin-laws-20261117/pc_fast.js
+  role: solver
+  note: "閉形式フェーズによる直接評価エンジン（2実装交差の一方）"
+- path: research/experiments/remo-pc-twin-laws-20261117/pc_reduced.js
+  role: solver
+  note: "縮約ゲーム上の独立実装エンジン（別データ構造による交差の他方）"
 date: 2026-11-17
 tags: [remo, uniform-board, counting-recursion, survivor, parity, reduction, universal-proof]
 ---

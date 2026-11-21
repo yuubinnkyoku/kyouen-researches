@@ -1,18 +1,47 @@
 ---
 id: K0939
+title: END-SIEVE（t=0エンドゲームの約数篩）とSIEVE-PRIME全称証明・双子法則LAW1/LAW2の完全iff全称完結
 kind: proposition
 status: proved
-title: END-SIEVE（t=0エンドゲームの約数篩）とSIEVE-PRIME全称証明・双子法則LAW1/LAW2の完全iff全称完結
+topics: [variants, multiplayer, strategy-length]
 aliases: []
 relations:
-  - depends_on: [K0928, K0934, K0935, K0937]
-  - connects: [K0929, K0931, K0933, K0936, K0922, K0919]
+- type: depends_on
+  target: K0928
+- type: depends_on
+  target: K0934
+- type: depends_on
+  target: K0935
+- type: depends_on
+  target: K0937
+- type: related
+  target: K0929
+- type: related
+  target: K0931
+- type: related
+  target: K0933
+- type: related
+  target: K0936
+- type: related
+  target: K0922
+- type: related
+  target: K0919
 artifacts:
-  - research/experiments/remo-sieveprime-endgame-20261118/report.md
-  - research/experiments/remo-sieveprime-endgame-20261118/sievegen_core.py
-  - research/experiments/remo-sieveprime-endgame-20261118/sieveprime_verify.py
-  - research/experiments/remo-sieveprime-endgame-20261118/audit_build.py
-  - research/experiments/remo-sieveprime-endgame-20261118/output/sieveprime_audit.json
+- path: research/experiments/remo-sieveprime-endgame-20261118/report.md
+  role: proof
+  note: "END-SIEVE（t=0エンドゲームの約数篩）とSIEVE-PRIME全称証明・双子法則の全称完結レポート"
+- path: research/experiments/remo-sieveprime-endgame-20261118/sievegen_core.py
+  role: solver
+  note: "K0937実験ディレクトリ committed版のbyte同一コピー（track_gen・play_full・ピン読み込みをそのまま使用）"
+- path: research/experiments/remo-sieveprime-endgame-20261118/sieveprime_verify.py
+  role: verifier
+  note: "7チェックの機械検証器（すべてstdlib・決定的・PIN検査を含む）"
+- path: research/experiments/remo-sieveprime-endgame-20261118/audit_build.py
+  role: verifier
+  note: "監査アセンブラ（2回コールド実行でbyte同一）"
+- path: research/experiments/remo-sieveprime-endgame-20261118/output/sieveprime_audit.json
+  role: data
+  note: "監査正本（監査sha256 07d844c6…）"
 date: 2026-11-18
 tags: [remo, uniform-board, counting-recursion, endgame, sieve, primes, twin-laws, invariant, machine-evidence]
 ---

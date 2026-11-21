@@ -1,17 +1,36 @@
 ---
 id: K0933
-kind: proposition
-status: mixed
 title: SIEVE5-U/V全称証明・双子法則のspf∈{3,5}類(mod 30)全解決・ラダーopen class初の証明済みインスタンス
+kind: proposition
+status: proved
+topics: [variants, multiplayer, strategy-length]
 aliases: []
 relations:
-  - depends_on: [K0928, K0929, K0931]
-  - connects: [K0919, K0922, K0926]
+- type: depends_on
+  target: K0928
+- type: depends_on
+  target: K0929
+- type: depends_on
+  target: K0931
+- type: related
+  target: K0919
+- type: related
+  target: K0922
+- type: related
+  target: K0926
 artifacts:
-  - research/experiments/remo-sieve5-uv-20261118/report.md
-  - research/experiments/remo-sieve5-uv-20261118/sieve5_verify.py
-  - research/experiments/remo-sieve5-uv-20261118/audit_build.py
-  - research/experiments/remo-sieve5-uv-20261118/output/sieve5_uv_audit.json
+- path: research/experiments/remo-sieve5-uv-20261118/report.md
+  role: proof
+  note: "U/V縮約ゲームのstretch-3構造・重量4ファミリーのstretch-4構造・SIEVE5-U/V・spf∈{3,5}类のmod-30双子法則解決の全称証明レポート"
+- path: research/experiments/remo-sieve5-uv-20261118/sieve5_verify.py
+  role: verifier
+  note: "SIEVE5・stretch構造定理の機械検証器（stdlib Python・決定的・タイムスタンプなし）"
+- path: research/experiments/remo-sieve5-uv-20261118/audit_build.py
+  role: verifier
+  note: "検証器再実行と監査アセンブラ（2回コールド実行でbyte同一）"
+- path: research/experiments/remo-sieve5-uv-20261118/output/sieve5_uv_audit.json
+  role: data
+  note: "監査正本（sha256 2c1917e0…・2回コールド実行byte同一）"
 date: 2026-11-18
 tags: [remo, uniform-board, counting-recursion, survivor, stretch, sieve, primes, twin-laws, ladder, machine-evidence]
 ---

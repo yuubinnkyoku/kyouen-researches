@@ -1,17 +1,30 @@
 ---
 id: K0935
+title: 監視位置のラダー境界越え写像（WATCH-MAP）とストレッチ間死亡判定の合成
 kind: proposition
 status: proved
-title: 監視位置のラダー境界越え写像（WATCH-MAP）とストレッチ間死亡判定の合成
+topics: [variants, multiplayer, strategy-length]
 aliases: []
 relations:
-  - depends_on: [K0934]
-  - connects: [K0931, K0933]
+- type: depends_on
+  target: K0934
+- type: related
+  target: K0931
+- type: related
+  target: K0933
 artifacts:
-  - research/experiments/watchmap-20261118/report.md
-  - research/experiments/watchmap-20261118/watchmap_verify.py
-  - research/experiments/watchmap-20261118/audit_build.py
-  - research/experiments/watchmap-20261118/output/watchmap_audit.json
+- path: research/experiments/watchmap-20261118/report.md
+  role: proof
+  note: "WATCH-MAP（生存監視位置の次ラダー状態への写像の事例分類 (a)-(e)）の全称証明レポート"
+- path: research/experiments/watchmap-20261118/watchmap_verify.py
+  role: verifier
+  note: "LAD-GEN core（シミュレータ+閉形式）をverbatimコピーしたWATCH-MAP機械検証器"
+- path: research/experiments/watchmap-20261118/audit_build.py
+  role: verifier
+  note: "監査アセンブラ"
+- path: research/experiments/watchmap-20261118/output/watchmap_audit.json
+  role: data
+  note: "決定性監査正本（all_ok true・fail_count 0・実行同一）"
 date: 2026-11-18
 tags: [remo, uniform-board, counting-recursion, ladder, stretch, watched-tracking, machine-evidence]
 ---

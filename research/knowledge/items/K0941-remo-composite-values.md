@@ -1,19 +1,54 @@
 ---
 id: K0941
+title: 合成NのV(m)/U(m)完全決定（LADDER-ONLY・死の二分法・E-game閉包・ラベル合成）と全m値の純算術化
 kind: proposition
 status: proved
-title: 合成NのV(m)/U(m)完全決定（LADDER-ONLY・死の二分法・E-game閉包・ラベル合成）と全m値の純算術化
+topics: [variants, multiplayer, strategy-length]
 aliases: []
 relations:
-  - depends_on: [K0928, K0934, K0935, K0937, K0939]
-  - connects: [K0929, K0931, K0933, K0936, K0922, K0919, K0943]
+- type: depends_on
+  target: K0928
+- type: depends_on
+  target: K0934
+- type: depends_on
+  target: K0935
+- type: depends_on
+  target: K0937
+- type: depends_on
+  target: K0939
+- type: related
+  target: K0929
+- type: related
+  target: K0931
+- type: related
+  target: K0933
+- type: related
+  target: K0936
+- type: related
+  target: K0922
+- type: related
+  target: K0919
+- type: related
+  target: K0943
 artifacts:
-  - research/experiments/remo-composite-values-20261118/report.md
-  - research/experiments/remo-composite-values-20261118/sievegen_core.py
-  - research/experiments/remo-composite-values-20261118/composite_core.py
-  - research/experiments/remo-composite-values-20261118/composite_verify.py
-  - research/experiments/remo-composite-values-20261118/audit_build.py
-  - research/experiments/remo-composite-values-20261118/output/composite_values_audit.json
+- path: research/experiments/remo-composite-values-20261118/report.md
+  role: proof
+  note: "合成NのV(m)/U(m)完全決定（LADDER-ONLY・死の二分法・E-game閉包・ラベル合成）の全称証明レポート"
+- path: research/experiments/remo-composite-values-20261118/sievegen_core.py
+  role: solver
+  note: "K0937のbyte同一コピー（sha256 a69f916c…）"
+- path: research/experiments/remo-composite-values-20261118/composite_core.py
+  role: solver
+  note: "定理C/Dのσ再帰コア実装（以降のK0943-K0951実験群でpinned byte同一コピーとして使用される）"
+- path: research/experiments/remo-composite-values-20261118/composite_verify.py
+  role: verifier
+  note: "本文全定理の機械的証拠の検証器"
+- path: research/experiments/remo-composite-values-20261118/audit_build.py
+  role: verifier
+  note: "監査アセンブラ"
+- path: research/experiments/remo-composite-values-20261118/output/composite_values_audit.json
+  role: data
+  note: "監査正本（sha256 97e854f7…）"
 date: 2026-11-18
 tags: [remo, uniform-board, counting-recursion, composite, ladder, endgame, josephus, machine-evidence]
 ---

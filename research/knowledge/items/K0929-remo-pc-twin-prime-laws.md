@@ -1,20 +1,47 @@
 ---
 id: K0929
+title: 一様盤P(C)の双子素数法則（P(C)=1 は C 素数と同値、P(C)=C-1 は C+1 素数と同値）
 kind: proposition
 status: proved
-title: 一様盤P(C)の双子素数法則（P(C)=1 は C 素数と同値、P(C)=C-1 は C+1 素数と同値）
+topics: [variants, multiplayer, strategy-length]
 aliases: []
 relations:
-  - depends_on: [K0859, K0922]
-  - connects: [K0919, K0926, K0928, K0937, K0939]
+- type: depends_on
+  target: K0859
+- type: depends_on
+  target: K0922
+- type: related
+  target: K0919
+- type: related
+  target: K0926
+- type: related
+  target: K0928
+- type: related
+  target: K0937
+- type: related
+  target: K0939
 artifacts:
-  - research/experiments/remo-pc-twin-laws-20261117/report.md
-  - research/experiments/remo-pc-twin-laws-20261117/verify_pc_twin_laws.py
-  - research/experiments/remo-pc-twin-laws-20261117/output/pc_twin_laws_audit.json
-  - research/experiments/remo-pc-twin-laws-20261117/data/pc_p8000.json
-  - research/experiments/remo-pc-twin-laws-20261117/data/pc_uv8000.json
-  - research/experiments/remo-pc-twin-laws-20261117/pc_fast.js
-  - research/experiments/remo-pc-twin-laws-20261117/pc_reduced.js
+- path: research/experiments/remo-pc-twin-laws-20261117/report.md
+  role: proof
+  note: "LAW1/LAW2・V予想/U予想の特徴付けレポート（実験時点は予想として記述・K0939により全称定理化、本文冒頭に昇格記録あり）"
+- path: research/experiments/remo-pc-twin-laws-20261117/verify_pc_twin_laws.py
+  role: verifier
+  note: "twin lawsの有限機械照合器（PIN/REF/TWIN/STRE/STRO/RED/RECON/LAW等10チェック・stdlibのみ・決定的）"
+- path: research/experiments/remo-pc-twin-laws-20261117/output/pc_twin_laws_audit.json
+  role: data
+  note: "監査正本（全チェックOK・コールド実行間でbyte同一・sha256 6bc2ee08…）"
+- path: research/experiments/remo-pc-twin-laws-20261117/data/pc_p8000.json
+  role: data
+  note: "LAW1照合用の P(C) C=1..8000 完全センサス（sha256 58a414bc…）"
+- path: research/experiments/remo-pc-twin-laws-20261117/data/pc_uv8000.json
+  role: data
+  note: "V予想/U予想照合用の U(m)/V(m) m=1..8000 完全センサス（sha256 8a3b318b…）"
+- path: research/experiments/remo-pc-twin-laws-20261117/pc_fast.js
+  role: solver
+  note: "閉形式フェーズによる直接評価エンジン（LAW1/LAW2掃引に使用）"
+- path: research/experiments/remo-pc-twin-laws-20261117/pc_reduced.js
+  role: solver
+  note: "縮約ゲーム上の独立実装エンジン（twin law評価の交差对照）"
 date: 2026-11-17
 tags: [remo, uniform-board, counting-recursion, survivor, primes, conjecture, machine-evidence]
 ---

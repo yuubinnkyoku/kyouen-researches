@@ -1,17 +1,32 @@
 ---
 id: K0936
+title: SIEVE7-U/V全称証明（stretch-5/6監視追跡の合成）と双子法則のmod 210全解決
 kind: proposition
 status: proved
-title: SIEVE7-U/V全称証明（stretch-5/6監視追跡の合成）と双子法則のmod 210全解決
+topics: [variants, multiplayer, strategy-length]
 aliases: []
 relations:
-  - depends_on: [K0934, K0935]
-  - connects: [K0931, K0933]
+- type: depends_on
+  target: K0934
+- type: depends_on
+  target: K0935
+- type: related
+  target: K0931
+- type: related
+  target: K0933
 artifacts:
-  - research/experiments/remo-sieve7-uv-20261118/report.md
-  - research/experiments/remo-sieve7-uv-20261118/sieve7_verify.py
-  - research/experiments/remo-sieve7-uv-20261118/audit_build.py
-  - research/experiments/remo-sieve7-uv-20261118/output/sieve7_uv_audit.json
+- path: research/experiments/remo-sieve7-uv-20261118/report.md
+  role: proof
+  note: "SIEVE7-U/V（stretch-5/6監視追跡の組成・spf=7）の全称証明レポート（32行クラステーブル・双子法則のmod 210全解決）"
+- path: research/experiments/remo-sieve7-uv-20261118/sieve7_verify.py
+  role: verifier
+  note: "LAD-GEN core verbatimコピー上のSIEVE7機械検証器（32行クラステーブル全照合）"
+- path: research/experiments/remo-sieve7-uv-20261118/audit_build.py
+  role: verifier
+  note: "監査アセンブラ"
+- path: research/experiments/remo-sieve7-uv-20261118/output/sieve7_uv_audit.json
+  role: data
+  note: "決定性監査正本（32行テーブル全文同梱・sha256つき）"
 date: 2026-11-18
 tags: [remo, uniform-board, counting-recursion, ladder, stretch, watched-tracking, sieve, twin-laws, machine-evidence]
 ---
