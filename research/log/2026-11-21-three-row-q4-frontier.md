@@ -67,3 +67,54 @@ conflicts が bit-exact に再現（0×8・308@12）することで pin 復元�
 - **M_{3,4} ∈ [23, 69]**（Γ 内 open・69 は K0024 引用値で q=4 では K0318 改善なし）。
 - 小盤 m ≤ 8 の完全分類は本レーンが初出（満容量極大の初出が m=7 であることも新事実）。
 - 標準 11×11 には無関係。node 数・solved 数を勝敗として読まない。
+
+## 続報（第2パート・02:35-02:48Z）: m=23 判定 — witness band 4..23 に拡大
+
+part3（knowledge README bullet）は 02:34 commit `5938f1b` で完了（fetch-back
+byte-identical・658,163→659,492→661,848 bytes・既存 bullet 全保存）。
+以降の追跡:
+
+1. **m=25,26 の CNF 生成**: sat2.js（md5 282ae832・pin 器材）で plain def CNF を
+   生成。m=25: 禁止曲線 7,258・vars 74,163・clauses 245,245。m=26: 曲線 8,182・
+   vars 83,522・clauses 276,175（未実行）。
+2. **m=25 plain は 115s cap で INDET**（507,461 conflicts・判定なし）。
+   幅とともに難度が上がることを確認。
+3. **row-split 部分問題の設計**: def-mode（不足行の存在）は「不足行 = 行0/行1/行2」
+   の 高さ 3 の OR なので、--rowY=Y（行 Y 欠損を固定）で完全な case-split になる。
+   行0 と行2 のインスタンスは V 鏡映（y→2−y）で同型なので行0 側のみで代表できる。
+   --lex=H（列鏡映 lex-leader）は行配置を保存するため行固定との併用が健全
+   （H は行ごとの石数を変えない）。plain 250s cap 1.35M conflicts 未決だった
+   (3,23,4) をこの2分割に賭けた。
+   生成: (3,23,4) row0+lexH（vars 57,742・clauses 191,141・曲線 5,633）・
+   (3,23,4) row1+lexH（同サイズ）・(3,24,4) row0/row1+lexH（vars 65,667・
+   clauses 217,355・曲線 6,413）。
+4. **(3,23,4) row0+lexH は 140s cap で INDET**（1,001,203 conflicts・判定なし）。
+5. **(3,23,4) row1+lexH が SAT**（**471,357 conflicts・106.83s**・rc=10・cap 285s
+   に到達前に決着）。witness 抽出: 8石・rows [3,2,3]（中央行欠損; row1={18,19}）・
+   coord `9:0,12:0,18:0,18:1,19:1,4:2,15:2,18:2`。
+   - sat.js verifyConfig: ok（size 8）
+   - verify34.py: safe=1・maximal=1・deficient=1 → **2系統検証 PASS**
+   witness は plain board 上で直接検証されるため、**M_{3,4} ≥ 24 は witness 自身が
+   証明**（部分問題の意味論への依存なし）。
+6. **(3,24,4) row1+lexH は 285s cap で INDET**（1,159,627 conflicts・判定なし）。
+   m=24 はなお未決。外側行欠損（row0）側の m=23 も未決で、m≥23 の外側行欠損
+   witness の存在は open。
+7. **予想の反証を記録**: 初版 item は「m=23 は不足行 21 空点の被覆破綻の候補幅」
+   と予想として書いていたが、m=23 witness により反証。8石 (3,3,2) 被覆パターンは
+   幅 23 でも成立する。band 終端は [24,69] 内・外側/中央行系で非対称の可能性。
+
+### 更新後の standing claims
+
+- **witness band m=4..23**（20幅全 SAT・INDET 0・全 witness 2系統検証 PASS）。
+- **M_{3,4} ∈ [24, 69]**（上界は K0024 引用値・K0318 は q=4 で改善なし）。
+- m=24, 25 は INDET（m24: plain 100s/481k・row1+lexH 285s/1.16M・m25: plain
+  115s/507k・m23 row0+lexH 140s/1.00M・いずれも cap 下参考値）。witness-free 幅は
+  0 幅のまま。
+- 標準 11×11 は無関係・UNKNOWN のまま。REFUTED-D10 は LOSS 証明ではない。
+
+### 増分出版（本 commit）
+
+records.jsonl 26レコード化（+4: m23 row0 INDET・m23 row1 SAT・m24 row1 INDET・
+m25 INDET）・wit_3x23_4.witness.json 追加・実験 README と K1183 item の
+claims 更新（band 4..23・M ∈ [24,69]）・knowledge README の K1183 bullet 更新
+（本ログも同 commit）。
