@@ -1,1 +1,47 @@
-PLACEHOLDER
+# 2026-11-21 n11 S5 class-closure priority measurement + certificate-class exclusive probe (JS replica): single-owner declaration
+
+- Declaration time: 2026-11-21T14:52Z. HEAD at declaration: `1045fb39abd4aebf89d410205839615020840a38`.
+- Publication incident (recorded transparently): the first push of this file accidentally contained a single-word placeholder (commit before the fix); it was replaced by this real content immediately; no other file was affected and no probe was started before this fix.
+- Not a continuation of any claimed lane. Respected concurrent lanes (their scoped keys, caches, raws, manifest and analysis outputs are not modified by this lane):
+  1. reply27 two-target S5 candidate probe lane (`research/log/2026-11-21-n11-reply27-s5-probe-js-replica-single-owner.md`, commit `4e944105`, HEAD-at-declaration `00868775`): claims the supply's ranked candidates with `live_parents >= 2` in ascending proxy order. **This lane never starts a key with two or more live candidate parents.**
+  2. focus-class exclusive single-live-parent S5 probe lane (`research/log/2026-11-21-n11-focusclass-s5-exclusive1parent-js-replica-single-owner.md`, commit `aa33434c`): claims the 35 exclusive keys of the focus class `1188950301626859520:536870912`. **This lane never starts any of those 35 keys.**
+  3. n11 S5 frontier census / global s5verdict union audit / backlog reconciliation measurement lane (commits `e4aae3b4`, `6f858074`, `c20511db`, `47a23c25`): read-only, already closed; its measurement outputs are cited and reused as published pins, not modified.
+
+## Claimed scope
+
+**Part A (measurement only).** Publication of a class-closure priority analysis: per live candidate class (62 UNKNOWN under the probe-13 cache), the closure distance split into exclusive (single live parent class) and shared unknown children, the frozen-profile truncated proxy sums of those children, a bin-implied remaining-WIN index (biased evidence, explicitly NOT a probability), and a static all-LOSS-scenario comparison of the global cheapest-first supply order versus class-targeted completion (probe counts and cumulative truncated proxy). Inputs are pinned published files at main `a423c2f0`: geometry `146be80b...100b54`, merged exact S5 cache `merged-exact-s5-after-js-probe-13.cache` (`60e0dc34...`), probe-13 post-probe supply table (`31f0d29b...`), candidate ledger (`2a4c2382...`), frozen profile (`6b2971e5...`). Output goes to a new experiment dir `research/experiments/n11-s5-class-closure-priority-20261121/` (new files only). This part makes no verdict claim of any kind.
+
+**Part B (probe).** The 38 five-stone keys that, under the frozen 3,384-class geometry and the probe-13 merged exact S5 cache, are exactly the unknown children of the certificate class `1297036692683752448:0` (coverage {100,108,110,120}; current 7 LOSS / 99 UNKNOWN of 106 children) whose live candidate parent set is exactly `{1297036692683752448:0}` (exclusive single-live-parent keys). All 38 are absent from the merged cache and the active quarantine registry (`results/n11-s5-evidence-quarantine.json` sha `81d23160...`), have no frozen-history observation, are not in the reply27 lane's >=2-live-parent band, and are not in the focus lane's 35-key claim (machine-checked disjoint). The census/reconciliation lane measured that 99 backward-only published rows exactly cover this class's unknowns (7+99=106); adoption of those rows is NOT done here and its judgment stays with the evidence owners - this lane instead produces fresh replica rows for the 38 unclaimed exclusive keys as a certificate-focused alternative.
+
+Enumerated keys (ascending bin proxy, then key):
+
+proxy 5,041,585 (band 80, 3 keys): `3602879701897446400:0`, `5908722711111140352:0`, `10412322338480590849:0`;
+proxy 5,234,938 (band 90, 26 keys): `1297036692683752448:128`, `1297036692683752449:0`, `1297036692683752452:0`, `1297036692683752480:0`, `1297036692683752576:0`, `1297036692683752704:0`, `1297036692683756544:0`, `1297036692683760640:0`, `1297036692683785216:0`, `1297036692683817984:0`, `1297036692683883520:0`, `1297036692700529664:0`, `1297036692817970176:0`, `1297036761403229184:0`, `1297036967561659392:0`, `1297177430172107776:0`, `1297318167660463104:0`, `1297599642637173760:0`, `1369094286721680384:0`, `1585267068835464192:0`, `1873497444987175936:0`, `10376293541461626881:8`, `10376293541461626881:131072`, `10376293541461626881:33554432`, `10376293541461626881:67108864`, `10376293541461626881:268435456`;
+proxy 5,932,112 (band 100, 9 keys): `1152921504607896576:553648128`, `1152921513197831168:536870912`, `1152956688979985408:536870912`, `1224979098645824512:536870912`, `1297036692683752448:8`, `1297036692683752448:16`, `1297036692683752448:32`, `1297036692683752448:16777216`, `1297036692683752448:536870912`.
+
+Fail-closed clause: the authoritative key set is the machine-regenerated 38-key list computed from the pinned inputs and published in `research/experiments/n11-s5-class-closure-priority-20261121/output/class-closure-priority.json` (`certificate_class_exclusive_probe_order`); any discrepancy between this prose enumeration and that machine list aborts the probe part. Execution order within the list is ascending proxy, then key. A key concurrently published by another developer before its run starts is skipped and reused from main instead.
+
+## Pre-registered stopping rules (fail-closed)
+
+1. Any child verdict WIN(1): the certificate class would be WIN-eliminated; this lane stops that key's further chain immediately, records the raw evidence, and stops starting further claimed keys this session. Because the census lane's reconciliation measured historical rows for this class as all-LOSS, a fresh WIN is a material cross-system conflict: no cache increment containing that row is published without an explicit reconciliation record; the conflict itself is published as a finding.
+2. Any child UNKNOWN at the 15,000,000 budget: the key is parked (raw rows recorded), no cache row is emitted for it, no S6/S7 work is started this session, and the lane continues with the next key.
+3. Node-exact validation gate failure, determinism (twice-run) mismatch on any 15M stage, or an independent-geometry gate failure: the lane stops and reports; no verdict is used or published.
+4. Publication-time conflict (WIN/LOSS) between this lane's increments and the then-latest main merged cache: fail closed, no increment is published; the conflict is reported.
+
+## Execution medium and acceptance conditions
+
+Same evidence class as the reply27 and focus-class lanes (replica solver-trusted exact with node-exact published-raw validation and independent integer geometry; NOT terminal-only minimax):
+
+1. Node.js replica `jsreplay.js` (sha256 `845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df`, byte-identical to the reply27 probe publications, replica of `cpp/solvers/kyouen_dfpn_root.cpp` at `154f3b7a67`, source sha `9193f5b6...`). In-session validation gate re-run PASSED before this declaration: all four published two-target raw rows reproduce with identical stones/legal/is_or/budget/result/nodes, only wall_s differs (2M x2 UNKNOWN 2,000,000; 15M rows LOSS 3,651,923 and 5,040,200).
+2. Probes run cold: fresh 2^22 PnTT per row, one worker, deadline 0, publish=ALL, exact order=count; budget ladder 2,000,000 first, then 15,000,000 only on UNKNOWN. The 15M resolution run is executed twice (independent fresh solvers); identical (result, nodes) required.
+3. Every new verdict is independently geometry-verified before publication with `n11-independent-exact-audit-20261010/scripts/independent.py` (sha `954d3a10...`): 5 stones, D4-canonical, safe, legal count match, frozen-3,384-class parent membership; absence from the base merged cache and the quarantine registry; the canonical-safe policy (`n11-frontier-selection-20261005/scripts/s5_evidence_policy.py`, sha `78655e94...`) must accept the key.
+4. Published increment (one publication expected for the batch): per-key raw in/out rows for both stages of both runs, batch input CSVs, verification audit JSON (fail-closed gates), SHA-256 manifest, one merged cache file = then-latest main merged exact S5 chain cache + this lane's new sorted rows (base byte-preserved as a file; byte comparison plus fail-closed WIN/LOSS conflict check on the union), regenerated post-probe analysis for the certificate class and candidates via the pinned `analyze.py`. Fetch-back byte verification after push.
+5. No S4 class status change beyond machine-checked recomputation; no third-move coverage claim beyond a machine-checked class closure; no `{60,27}`, multi-root, or empty-board claim.
+
+## Non-goals
+
+No two-live-parent keys (reply27's band), no focus-class keys, no S6/S7 enumeration, no df-pn lane work, no restart of the 36-root depth-10 sweep, no adoption or rejection of the backward-only rows (evidence owners keep that decision), no modification of any other lane's files or caches, no branch/PR.
+
+## Status guard
+
+The standard 11x11 empty board, the two-stone root {60,27}, and its remaining third moves 100/108 remain UNKNOWN throughout. Nodes, solver counts, and proxy values are never read as verdicts. A batch of LOSS decrements does not close the certificate class (it reaches 45/106 with all 38 LOSS; 61 shared children remain) unless the class-wide all-children-LOSS condition is machine-checked against the full 106-child set.
