@@ -16,11 +16,17 @@
    - proxy較正: published raw 42行中15M決着27行（全LOSS）の nodes/proxy 比 min 0.698 / mean 1.347 / max 2.490。2M段階15行は全てUNKNOWN。
 6. **境界遵守**: いかなるs5verdict cache・knowledge item・他レーン実験dirにも書き込んでいない。K itemは作成していない（worker-partition測定レーンの先例に従い、判定主張を含まない測定は実験dir + logで出版）。
 
-## push 記録（2026-11-21T14:55Z）
+## push 記録（2026-11-21T14:45Z）
 
 - 事前の最新main再取得: 宣言時 `a423c2f0` → push直前も `a423c2f0`（1コミットも動かず・競合なし）。
 - commit `e4aae3b4`: 実験dir 7ファイル（README・scripts 3・outputs 3）。push後、commit固定raw URLでfetch-backし**全7ファイル sha256 byte一致を確認**。
 - 順序の特記（誠実記録）: 先例では宣言ノートが先に出版されるが、本レーンは実験dirが先（`e4aae3b4`）となった。宣言の実体（レーン選定・受入条件・非接触境界の確定）は14:42Zより前の本セッション内で完了しており、宣言ノート出版は追いかけとなる。並走レーンとのファイル衝突は全経路新規パスのため生じない（`n11-search-methods/README.md` の1行追加を除き既存ファイル非変更）。
 - 後続: 宣言ノート + 本session log を1コミットで、続けて `research/experiments/n11-search-methods/README.md` への参照行（節見出し+1行）を1コミットで main に直接push（branch/PRなし・新規パスのため競合不可能）。`n11-search-methods/README.md` は既存行を1行も変更しない。上記各commitのfetch-back byte検証実施後にshaを追記する。
+
+## 追記（2026-11-21T14:45Z・fetch-back検証完了）
+
+- コミット列: 実験dir `e4aae3b4` → 宣言ノート+本log `6f858074` → `n11-search-methods/README.md` 参照行 `47a23c25`。branch/PRなし・main直接。
+- fetch-back検証: 各commit固定raw URLで取得しsha256照合。実験dir 7ファイル・宣言ノート・本log 全byte一致。`n11-search-methods/README.md` は追加後 sha256 `c0fc94c8…`、先頭2,453 bytes（既存全文）は追加前の `c02180fc…` と不変を確認。
+- 課題の所有権: backward-only 108行（K0414系譜のOct 12完了corpus 99行を含む）の採否はreply27レーン・focusレーン・K0414/K0416系譜オーナーへ付託済み。本レーンに残務なし。
 
 **標準11×11空盤・二石root {60,27}・第三手100/108は本レーンの後も UNKNOWN のまま。node数・proxy・closure距離はscheduling測定であり判定ではない。**
