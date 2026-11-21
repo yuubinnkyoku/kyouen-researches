@@ -95,28 +95,39 @@ def build_ovoid(q: int):
             return s
         params = {"d": repr(d)}
     else:
-        # characteristic 2: Q = x0^2 + x0*x1 + a*x1^2 + x2^2 + x2*x3 + b*x3^2
-        irr = []
+        # characteristic 2: the ELLIPTIC quadric is
+        #
+        #     Q = x0*x1 + x2^2 + x2*x3 + a*x3^2,     Tr_{F_q/F_2}(a) = 1
+        #
+        # (The form x0^2 + x0*x1 + a*x1^2 + x2^2 + x2*x3 + b*x3^2 with both
+        #  quadratics irreducible is HYPERBOLIC: it has q^2 + 2q + 1 points,
+        #  not q^2 + 1.  That mistake was caught by the point count.)
+        def trace(c):
+            # absolute trace F_q -> F_2:  c + c^2 + c^4 + ... + c^(q/2)
+            s = F.zero
+            x = c
+            k = 1
+            while k < q:
+                s = F.add(s, x)
+                x = F.mul(x, x)
+                k *= 2
+            return s
+
+        a = None
         for cand in F.elements():
-            has_root = False
-            for x in F.elements():
-                if F.is_zero(F.add(F.add(F.mul(x, x), x), cand)):
-                    has_root = True
-                    break
-            if not has_root:
-                irr.append(cand)
-        if len(irr) < 2:
-            raise ValueError("need two irreducible x^2+x+c")
-        a, b = irr[0], irr[1]
+            if not F.is_zero(trace(cand)):
+                a = cand
+                break
+        if a is None:
+            raise ValueError("no element of absolute trace 1")
 
         def Q(v):
             x0, x1, x2, x3 = v
-            t1 = F.add(F.mul(x0, x0), F.mul(x0, x1))
-            t1 = F.add(t1, F.mul(a, F.mul(x1, x1)))
-            t2 = F.add(F.mul(x2, x2), F.mul(x2, x3))
-            t2 = F.add(t2, F.mul(b, F.mul(x3, x3)))
-            return F.add(t1, t2)
-        params = {"a": repr(a), "b": repr(b)}
+            t = F.add(F.mul(x0, x1), F.mul(x2, x2))
+            t = F.add(t, F.mul(x2, x3))
+            t = F.add(t, F.mul(a, F.mul(x3, x3)))
+            return t
+        params = {"a": repr(a)}
 
     # enumerate projective points of PG(3,q) and keep those on Q = 0
     pts = set()
