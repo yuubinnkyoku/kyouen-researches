@@ -1,0 +1,57 @@
+{
+ "schema": "n11-residual72-worker-partition-exact-closures-verify-20261121-v1",
+ "gates_total": 142,
+ "all_pass": true,
+ "results": {
+  "w2": {
+   "class10": 732,
+   "pair10": 737,
+   "cross9": 17,
+   "closed": true,
+   "class_pair_same_partition": true
+  },
+  "w3": {
+   "class10": 908,
+   "pair10": 913,
+   "cross9": 22,
+   "closed": true,
+   "class_pair_same_partition": true
+  },
+  "w4": {
+   "class10_ub": 1937,
+   "pair10_ub": 1939,
+   "cross9_ub": 47,
+   "closed": false,
+   "class_pair_same_partition": true,
+   "super_witness": true,
+   "t2_feasible": false
+  },
+  "w6": {
+   "class10_ub": 2558,
+   "pair10_ub": 2562,
+   "cross9_ub": 62,
+   "closed": false,
+   "class_pair_same_partition": true
+  },
+  "x9": {
+   "cross9_ub": 47,
+   "closed": false
+  },
+  "candidate": {
+   "class10": 1998,
+   "pair10": 2000,
+   "cross9": 49,
+   "d4_spread_pct": 7.506677568819842
+  },
+  "baseline": {
+   "class10": 4189,
+   "pair10": 4193,
+   "cross9": 104
+  },
+  "gaps": {
+   "class10": 61,
+   "pair10": 61,
+   "cross9": 2
+  }
+ }
+}

@@ -1,0 +1,314 @@
+{
+ "schema": "n11-residual72-worker-partition-exact-closures-20261121-summary-v1",
+ "date": "2026-11-21",
+ "status": "worker-partition-geometry-exact-closures-and-ub-witnesses",
+ "inputs": {
+  "census.json": "94fdb0c6e3503f1e9d19aaaf345f4478157c5a44374f10642c52325f346c2023",
+  "partcand.json": "09b394b88cfb0246c278b335b82cfc5f8763f551c0f42c89403977b5e273918b",
+  "mr10.json": "5fec87afda5011243403d5efc71209cb9cd602eb3bb02bd833bd9341cb218b08",
+  "mr09.json": "68aa7df1e7b42c3661f404a6949439c31a3619140ae1ddf361001b375c0b6f9f",
+  "exactclass.json": "37ea472ed5dfadbc6edbad0b55116ddba41300b834ff8fef0cda5a31ba33ee64"
+ },
+ "proven_global_optima": {
+  "w2_class10": {
+   "value": 732,
+   "bnb_nodes": 1931
+  },
+  "w2_pair10": {
+   "value": 737,
+   "bnb_nodes": 1955
+  },
+  "w3_class10": {
+   "value": 908,
+   "bnb_nodes": 301671
+  },
+  "w3_pair10": {
+   "value": 913,
+   "bnb_nodes": 308146
+  }
+ },
+ "ub_witnesses_not_closed": {
+  "w4_class10_ub": 1937,
+  "w4_pair10_ub": 1939,
+  "w4_super_witness_cross9": 47,
+  "w6_class10_ub": 2558,
+  "w6_pair10_ub": 2562,
+  "x9_cross9_ub": 47,
+  "witness_class_pair_same_partition": {
+   "w2": true,
+   "w3": true,
+   "w4": true,
+   "w6": true
+  }
+ },
+ "candidate_reference": {
+  "class10": 1998,
+  "pair10": 2000,
+  "cross9": 49,
+  "d4_spread_pct": 7.506677568819842
+ },
+ "baseline_reference": {
+  "class10": 4189,
+  "pair10": 4193,
+  "cross9": 104
+ },
+ "gaps_super_witness_vs_candidate": {
+  "class10": 61,
+  "pair10": 61,
+  "cross9": 2
+ },
+ "one_swap_certificates": {
+  "T1": {
+   "feasible": 486,
+   "improving": 3,
+   "best": "1937[class] / 1939[pair]",
+   "swap": [
+    13,
+    19
+   ]
+  },
+  "T2": {
+   "feasible": 222,
+   "improving": 0,
+   "best": "1998[class] / 2000[pair] (published one_swap_check reproduced)"
+  }
+ },
+ "runs": {
+  "w2class": {
+   "objective": "class",
+   "workers": 2,
+   "roots_per_worker": 18,
+   "anneal_ub": 732,
+   "restarts": 80,
+   "bnb_nodes": 1931,
+   "bnb_ms": 9,
+   "budget_s": 100,
+   "closed": true,
+   "status": "exact-optimum-closed-ub-is-global",
+   "exact_optimum_if_closed": 732,
+   "witness": {
+    "class_cross": 732,
+    "pair_cross": 737,
+    "cross9": 17
+   }
+  },
+  "w2pair": {
+   "objective": "pair",
+   "workers": 2,
+   "roots_per_worker": 18,
+   "anneal_ub": 737,
+   "restarts": 80,
+   "bnb_nodes": 1955,
+   "bnb_ms": 5,
+   "budget_s": 100,
+   "closed": true,
+   "status": "exact-optimum-closed-ub-is-global",
+   "exact_optimum_if_closed": 737,
+   "witness": {
+    "class_cross": 732,
+    "pair_cross": 737,
+    "cross9": 17
+   }
+  },
+  "w3class": {
+   "objective": "class",
+   "workers": 3,
+   "roots_per_worker": 12,
+   "anneal_ub": 908,
+   "restarts": 80,
+   "bnb_nodes": 301671,
+   "bnb_ms": 129,
+   "budget_s": 100,
+   "closed": true,
+   "status": "exact-optimum-closed-ub-is-global",
+   "exact_optimum_if_closed": 908,
+   "witness": {
+    "class_cross": 908,
+    "pair_cross": 913,
+    "cross9": 22
+   }
+  },
+  "w3pair": {
+   "objective": "pair",
+   "workers": 3,
+   "roots_per_worker": 12,
+   "anneal_ub": 913,
+   "restarts": 80,
+   "bnb_nodes": 308146,
+   "bnb_ms": 109,
+   "budget_s": 100,
+   "closed": true,
+   "status": "exact-optimum-closed-ub-is-global",
+   "exact_optimum_if_closed": 913,
+   "witness": {
+    "class_cross": 908,
+    "pair_cross": 913,
+    "cross9": 22
+   }
+  },
+  "w4class": {
+   "objective": "class",
+   "workers": 4,
+   "roots_per_worker": 9,
+   "anneal_ub": 1937,
+   "restarts": 60,
+   "bnb_nodes": 501219328,
+   "bnb_ms": 170289,
+   "budget_s": 170,
+   "closed": false,
+   "status": "budget-exhausted-not-closed",
+   "exact_optimum_if_closed": null,
+   "witness": {
+    "class_cross": 1937,
+    "pair_cross": 1939,
+    "cross9": 47
+   }
+  },
+  "w4pair": {
+   "objective": "pair",
+   "workers": 4,
+   "roots_per_worker": 9,
+   "anneal_ub": 1939,
+   "restarts": 60,
+   "bnb_nodes": 686817280,
+   "bnb_ms": 170171,
+   "budget_s": 170,
+   "closed": false,
+   "status": "budget-exhausted-not-closed",
+   "exact_optimum_if_closed": null,
+   "witness": {
+    "class_cross": 1937,
+    "pair_cross": 1939,
+    "cross9": 47
+   }
+  },
+  "w6class": {
+   "objective": "class",
+   "workers": 6,
+   "roots_per_worker": 6,
+   "anneal_ub": 2558,
+   "restarts": 80,
+   "bnb_nodes": 249561088,
+   "bnb_ms": 90330,
+   "budget_s": 90,
+   "closed": false,
+   "status": "budget-exhausted-not-closed",
+   "exact_optimum_if_closed": null,
+   "witness": {
+    "class_cross": 2558,
+    "pair_cross": 2562,
+    "cross9": 62
+   }
+  },
+  "w6pair": {
+   "objective": "pair",
+   "workers": 6,
+   "roots_per_worker": 6,
+   "anneal_ub": 2562,
+   "restarts": 80,
+   "bnb_nodes": 351272960,
+   "bnb_ms": 90012,
+   "budget_s": 90,
+   "closed": false,
+   "status": "budget-exhausted-not-closed",
+   "exact_optimum_if_closed": null,
+   "witness": {
+    "class_cross": 2558,
+    "pair_cross": 2562,
+    "cross9": 62
+   }
+  },
+  "x9": {
+   "objective": "cross9",
+   "workers": 4,
+   "roots_per_worker": 9,
+   "anneal_ub": 47,
+   "restarts": 200,
+   "bnb_nodes": 316669952,
+   "bnb_ms": 150315,
+   "budget_s": 150,
+   "closed": false,
+   "status": "budget-exhausted-not-closed",
+   "exact_optimum_if_closed": null,
+   "witness": {
+    "cross9": 47
+   }
+  },
+  "t1class": {
+   "anneal_search": true,
+   "restarts": 1500,
+   "iters_per_restart": 60000,
+   "best_cost": 1937,
+   "wall_ms": 45302,
+   "t2_feasible": false
+  },
+  "t1pair": {
+   "anneal_search": true,
+   "restarts": 1500,
+   "iters_per_restart": 60000,
+   "best_cost": 1939,
+   "wall_ms": 30498,
+   "t2_feasible": false
+  },
+  "t2class": {
+   "anneal_search": true,
+   "restarts": 2500,
+   "iters_per_restart": 60000,
+   "best_cost": 1998,
+   "wall_ms": 84663,
+   "t2_feasible": true
+  },
+  "t2pair": {
+   "anneal_search": true,
+   "restarts": 2500,
+   "iters_per_restart": 60000,
+   "best_cost": 2000,
+   "wall_ms": 68621,
+   "t2_feasible": true
+  },
+  "oneswapT1class": {
+   "feasible_swaps": 486,
+   "improving_swaps": 3,
+   "best_neighbor_score": 1937,
+   "best_swap": [
+    13,
+    19
+   ],
+   "base_score": 1998
+  },
+  "oneswapT1pair": {
+   "feasible_swaps": 486,
+   "improving_swaps": 3,
+   "best_neighbor_score": 1939,
+   "best_swap": [
+    13,
+    19
+   ],
+   "base_score": 2000
+  },
+  "oneswapT2class": {
+   "feasible_swaps": 222,
+   "improving_swaps": 0,
+   "best_neighbor_score": 1998,
+   "best_swap": null,
+   "base_score": 1998
+  },
+  "oneswapT2pair": {
+   "feasible_swaps": 222,
+   "improving_swaps": 0,
+   "best_neighbor_score": 2000,
+   "best_swap": null,
+   "base_score": 2000
+  }
+ },
+ "independent_verification": {
+  "gates_total": 142,
+  "all_pass": true
+ },
+ "interpretation_guard": [
+  "This is a geometric worker-allocation study of the published 36-root D4 class tables; it is not a search over game positions and proves nothing about game outcomes.",
+  "w4/w6/x9 UBs are NOT proven optima; class10 1937 / pair10 1939 / cross9 47 are upper bounds attained by witnesses.",
+  "Nodes, iters, and solved counts must not be read as win/loss evidence; REFUTED-D10 is not a LOSS proof.",
+  "The standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and class 1/2/4 verdicts all remain UNKNOWN."
+ ]
+}
