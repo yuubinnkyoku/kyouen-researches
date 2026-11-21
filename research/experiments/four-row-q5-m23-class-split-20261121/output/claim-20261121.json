@@ -1,0 +1,26 @@
+{
+  "claim": "four-row q5 m=23 deficient-maximal safe configuration determination",
+  "lane": "fast-lane single-owner",
+  "declared": "2026-11-21T19:25Z",
+  "head_before_push": "5a9cf30492de286e9a80a196ce13606eab3ecf6f",
+  "decl_note": "research/log/2026-11-21-four-row-q5-m23-frontier-single-owner-note.md",
+  "experiment_dir": "research/experiments/four-row-q5-m23-class-split-20261121",
+  "verdict_scope": {
+    "all_unsat": "witness-free widths {21,22,23} => M_{4,5} = 21 or >= 25 (K0821 audit convention)",
+    "sat": "M_{4,5} in [24,140], witness decoded and dual-verified",
+    "indeterminate_piece": "honest negative, not absence; decomposed by krow pin or x2 split"
+  },
+  "calibration": {
+    "ctrl_4x20_c0k3p1_cnf_md5": "362034b210d89ed3a25d34072995f3a6",
+    "ctrl_kissat": "SAT 375415 conflicts bit-exact (3-lane cross calibration value)",
+    "m22_c0k3p0_cnf_md5": "bf26eee9a23a216870cb1a969d06e888",
+    "m22_c0k3p0x2b1_cnf_md5": "7db59b4be45c7beeb99b61352239d29c",
+    "kissat_md5": "3a5eba830aa6008a604fcc9bbe99a325"
+  },
+  "non_goals": [
+    "no claim about m>=24 existence or absence",
+    "mwq_stabilization.csv not updated (K1201 precedent)",
+    "standard 11x11 boards untouched, remain UNKNOWN"
+  ],
+  "status": "IN FLIGHT"
+}
