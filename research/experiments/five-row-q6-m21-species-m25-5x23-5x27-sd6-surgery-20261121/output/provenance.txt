@@ -1,0 +1,12 @@
+== seed provenance + construction checks 2026-11-21
+-- byte-identical with published sources (raw.githubusercontent.com main):
+   seeds/seed_w56_21.json            == research/experiments/five-row-q6-m22-surgery-20261115/seeds/seed_w56_21.json
+   seeds/verify_variants_5x21.json   == research/experiments/five-row-q6-m22-surgery-20261115/output/verify_variants_5x21.json
+   seeds/w25.json                    == research/experiments/five-row-q5-m26-extend-20261115/output/w25.json
+-- species construction (machine-checked true):
+   seed_m21_m21 = bbox-normalized seed_w56_21 stones
+   seed_m21_varA = seed_w56_21 with (10,2)->(11,2)  [published variant A]
+   seed_m21_varB = seed_w56_21 with (10,2)->(12,2)  [published variant B]
+   seed_m25_q5 = bbox-normalized w25 stones
+-- all 16 img_seed_*.json == recomputed bbox-normalized id/H/V/HV images (machine-checked true)
+   q6 species bbox x=[0,17] span 18 -> offX 0..5; q5 species bbox x=[0,19] span 20 -> offX 0..7
