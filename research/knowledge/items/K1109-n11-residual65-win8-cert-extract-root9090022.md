@@ -19,7 +19,7 @@ relations:
     note: 抽出器・BigInt検証器・Bareiss検証器・監査機械の機材はK1096実験と同一bytes（root定数のみ差し替え）
   - type: depends_on
     target: K1097
-    note: win16 footprint（root 9090022: claimed == intrinsic == 4行）をg19で照合。
+    note: "win16 footprint（root 9090022: claimed == intrinsic == 4行）をg19で照合。"
   - type: depends_on
     target: K1108
     note: 同一実行内の前段抽出root 9840004（fold13候補）とは別root・独立プロセス

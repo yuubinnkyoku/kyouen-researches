@@ -1,6 +1,6 @@
 ---
 id: K1090
-title: 残余72行 safe8 pool 第2ラウンド再解決: REFUTED-D10 29根除外後の残余40行をgreedy 15根がleftover 0完全被覆・stranded 0・マッチング40・WIN8累計10根の内在被覆は主張と一致
+title: "残余72行 safe8 pool 第2ラウンド再解決: REFUTED-D10 29根除外後の残余40行をgreedy 15根がleftover 0完全被覆・stranded 0・マッチング40・WIN8累計10根の内在被覆は主張と一致"
 kind: computation
 status: computed
 topics: [search-methods, certificates, geometry]

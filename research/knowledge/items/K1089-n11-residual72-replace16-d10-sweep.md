@@ -1,6 +1,6 @@
 ---
 id: K1089
-title: 残余72行 代替16根の depth-10 掃引: WIN8-D10 candidate 3根（被覆9行）と REFUTED-D10 fact 13根・32 probes完全完走（capped 0・順序整合）と残余49行宇宙・被覆幾何の独立再導入
+title: "残余72行 代替16根の depth-10 掃引: WIN8-D10 candidate 3根（被覆9行）と REFUTED-D10 fact 13根・32 probes完全完走（capped 0・順序整合）と残余49行宇宙・被覆幾何の独立再導入"
 kind: computation
 status: computed
 topics: [search-methods, certificates, geometry]

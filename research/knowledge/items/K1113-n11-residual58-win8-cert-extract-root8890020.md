@@ -19,7 +19,7 @@ relations:
     note: 抽出器・BigInt検証器・Bareiss検証器・監査機械の機材系譜（K1096→K1108→K1109→本項まで機材同一bytes・root定数のみ差し替え）
   - type: depends_on
     target: K1097
-    note: win16 footprint（root 8890020: claimed == intrinsic == 4行）をg19で照合。
+    note: "win16 footprint（root 8890020: claimed == intrinsic == 4行）をg19で照合。"
   - type: depends_on
     target: K1109
     note: 抽出器・監査機械の直接の親機材（本項はK1109実験dirのroot差し替え版）。主張4行構成も同一（g07/g19の`== 4`定数が不変）

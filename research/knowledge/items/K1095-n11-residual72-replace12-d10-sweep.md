@@ -1,6 +1,6 @@
 ---
 id: K1095
-title: 残余72行 代替12根 depth-10掃引: WIN8-D10 candidate 3根（主張7行）+ REFUTED-D10 fact 9根（主張23行）・24 probes完走・残余30行宇宙をK1085+K1086+K1089+K1091から独立再導入
+title: "残余72行 代替12根 depth-10掃引: WIN8-D10 candidate 3根（主張7行）+ REFUTED-D10 fact 9根（主張23行）・24 probes完走・残余30行宇宙をK1085+K1086+K1089+K1091から独立再導入"
 kind: computation
 status: computed
 topics: [search-methods, certificates, geometry]

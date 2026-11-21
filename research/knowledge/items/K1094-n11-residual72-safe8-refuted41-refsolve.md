@@ -1,6 +1,6 @@
 ---
 id: K1094
-title: 残余72行 safe8 pool 第3ラウンド再解決: REFUTED-D10 41根除外後の残余30行をgreedy 12根がleftover 0完全被覆・stranded 0・マッチング30・WIN8累計13根の内在被覆は主張と一致
+title: "残余72行 safe8 pool 第3ラウンド再解決: REFUTED-D10 41根除外後の残余30行をgreedy 12根がleftover 0完全被覆・stranded 0・マッチング30・WIN8累計13根の内在被覆は主張と一致"
 kind: computation
 status: computed
 topics: [search-methods, certificates, geometry]

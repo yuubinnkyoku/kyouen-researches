@@ -1,13 +1,13 @@
 ---
 id: K1097
-title: 残余72行 safe8 第4ラウンド: REFUTED-D10 50根除外後の残余23行をgreedy9根で被覆・下界8から判定で最小被覆9が確定（8根被覆はUNSAT・数え上げ証明書つき）
+title: "残余72行 safe8 第4ラウンド: REFUTED-D10 50根除外後の残余23行をgreedy9根で被覆・下界8から判定で最小被覆9が確定（8根被覆はUNSAT・数え上げ証明書つき）"
 kind: computation
 status: computed
 topics: [search-methods, certificates, geometry]
 aliases:
   - round-4 re-solve of the residual 23 rows over pool P-triple-prime (120,424 roots) after excluding the 50 REFUTED-D10 roots (K1086 sixteen + K1089 thirteen + K1091 twelve + K1095 nine)
   - 9 greedy replacement roots cover the residual 23 rows with leftover 0 (gains {3:6,2:2,1:1}, strengthened lower bound 8, bipartite maximum matching 23, stranded 0)
-  - the minimum provider-cover size over P''' is exactly 9: the eight-root cover decision is UNSAT (three rows have zero 3-row providers on P'''; counting certificate k_min=2 > k_max=3*8-23=1; exhaustive two-shape search over 100 pair patterns and 351 duplicate-row triple pairs agrees; the greedy 9-root plan is therefore provably minimal in root count on P''')
+  - "the minimum provider-cover size over P''' is exactly 9: the eight-root cover decision is UNSAT (three rows have zero 3-row providers on P'''; counting certificate k_min=2 > k_max=3*8-23=1; exhaustive two-shape search over 100 pair patterns and 351 duplicate-row triple pairs agrees; the greedy 9-root plan is therefore provably minimal in root count on P''')"
   - per-root intrinsic coverage of all 16 WIN8-D10 candidates contains their claims (K1086 seven = 23 rows, K1089 three = 9, K1091 three = 10, K1095 three = 7; the K1095 third root has exactly one extra intrinsic row, claimed by the K1096-certificated root 8003180; no residual-23 row inside win-intrinsic; scope1=scope2 identical selection)
 relations:
 - type: depends_on
