@@ -1,0 +1,72 @@
+fold16 external second verification reproduction log (2026-11-21)
+=================================================================
+
+environment: sandbox, /usr/local/bin/python3 3.12, stdlib only
+
+[1] reconstruction from published bytes
+  $ python3 reconstruct_fold16_inputs.py W16 pub16f c6a55000
+  - W16: 12 Git blob SHA-1 pins + 25 SHA-256 pins, all fetched from
+    raw.githubusercontent.com at pinned commit c6a55000 and matched
+    (K1113 cert 775,317 bytes 105e1e2a..., fold15 record bae2b3c1...,
+    fold14 record ed3159fd..., fold13 record c2bf8051..., fold12 record
+    0f73795c..., fold11 record d7bf2cd5... among them)
+  - pub16f: receipt edd552588e265ada1cf015b4359584288cca3f18686c0fc8ca1536b6458b969b,
+    machine ecaef742bbb98874ce09f9af96666541cc0acb43706396f54f442c9e29b40200,
+    README 7b68d5d5ac3bfc77e6d5470ebe9a8c2f92f4323576f6364938c3cf5818215416
+  - machine-confirmed pin chain:
+    fold11 pins (12 blob + 10 sha) subset fold12 (12+13) subset
+    fold13 (12+16) subset fold14 (12+19) subset fold15 (12+22) subset
+    fold16 (12 blob + 25 sha)
+  - intermediate sandbox incident (recovered, no repo effect): an
+    over-broad local cleanup glob removed the W16 pinned record/cert
+    files; W16 was rebuilt byte-exactly by re-running the static-URL
+    reconstruction machine (fail-closed refetch of all 43 files / 37 pins,
+    post-rebuild pin tables re-verified: 12 blob + 25 sha256, subset chain
+    re-confirmed)
+  - fold16 machine pristine run: rc=0, 46 s, receipt output byte-identical
+    to published edd55258...
+
+[2] third-implementation verifier
+  verifier: verify_fold16_external_20261121.py
+  sha256 3291794504d98f2c7d7204f623325c92d2d898ea6e246ede476e6e736ac51627
+  61,627 bytes, built surgically from the published fold14 verifier
+  (d966dad55d54b6c1608f5f046469b2fd9a95b3b38c4f12a69f516e83fb708b0c at
+  commit 23de00dc) by build_verify16.py: 33 exact-match replacements with
+  occurrence-count asserts (fail-closed on any count mismatch); the
+  builder itself is not part of the published artifact set.
+  Independent-region inheritance from SRC (fold14 verifier, unchanged):
+  D4 canonicity tables, det4 Bareiss-style 4x4 determinant, survival-rule
+  legal-move rederivation, base chain fold4/before (C1), chain_step
+  framework, K1097 refsolve crosscheck framework; rewritten as fold16:
+  docstring/constants (W16 12+25 pins, K1113 shas), I section (5-machine
+  pin-chain gates), post-chain fold15 join block, C2 (K1113 19 gates),
+  C4 values (5 rows / cost 379 / 6168-488575 frontier_after tensor /
+  61-51 target), C5 (6 retired roots, 10 roots 28 rows remaining),
+  narrative byte pins (controls 41, twenty-third), X battery
+  (fold16 machine x1-x4 + vr15 fold15 machine), T tampers
+  (offsets 300,111 / 740,321), E audit (schema
+  n11-fold16-external-second-verification-audit-20261121-v1)
+
+[3] battery (each run = full verifier: P/I/C rederivation, X battery with
+  4 pristine fold16 machine executions + 1 independent fold15 machine
+  execution, T tamper pair)
+  run1 (cwd = workdir, default env):
+    ALL 1061 GATES PASS (P 12 / I 75 / C 932 / X 26 / T 16), 210 s
+    audit sha256 09f80902d8c2159b26db971504a582d43acb77879021e684c56bbbdcbe7cf19d
+  run2 (same cwd, repeat; a prior attempt of this run was cut short by a
+    sandbox infrastructure error before any output was written; scratch
+    trees were removed and the battery re-run from clean state):
+    ALL 1061 GATES PASS, audit sha identical
+  run3 (isolated cwd=/tmp, HOME override, env -i, PYTHONHASHSEED=random):
+    ALL 1061 GATES PASS, audit sha identical
+  (env -i note: PATH must include /usr/local/bin; the environment's
+  python3 lives at /usr/local/bin/python3, not /usr/bin/python3)
+
+[4] interpretation
+  verification of bookkeeping, determinism, input pins and fail-closed
+  behaviour only; no row is closed by this verification; no game value is
+  claimed. WIN8-D10 proves a first-player win within depth 10 only from
+  the eight-stone root; REFUTED-D10 is not a LOSS proof. Standard 11x11
+  empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, classes
+  1/2/4 remain UNKNOWN.
+
