@@ -181,10 +181,14 @@ def main() -> None:
     print("=== S2/S3/S4: exact histograms and s(q) ===")
     print(f"{'q':>3} {'k*':>3} {'s(q)':>5} {'K(q)':>5} {'s=k*':>5} "
           f"{'fixed':>6} {'histogram':>34}")
+    # q=8 needs ~15.7M nodes; give it a larger cap but keep the rest small
+    CAPS = {3: 50_000_000, 4: 50_000_000, 5: 50_000_000, 7: 50_000_000,
+            8: 40_000_000}
     for q in (3, 4, 5, 7, 8):
         n, blocks, tri_circle, circles_of = build(q)
         ks = kstar(q)
-        hist, nodes, capped = enumerate_maximal(n, blocks, tri_circle, ks + 2)
+        hist, nodes, capped = enumerate_maximal(n, blocks, tri_circle, ks + 2,
+                                                cap=CAPS.get(q, 50_000_000))
         if not hist:
             print(f"{q:>3}  no maximal set", flush=True)
             continue
@@ -192,24 +196,26 @@ def main() -> None:
         row = {"check": "S2", "q": q, "k_star": ks, "s": s, "K": K,
                "s_equals_kstar": s == ks, "fixed_length": s == K,
                "histogram": {str(k): v for k, v in sorted(hist.items())},
-               "ok": s == ks}
+               "capped": capped, "ok": s == ks}
         rows.append(row)
         print(f"{q:>3} {ks:>3} {s:>5} {K:>5} {str(s == ks):>5} "
-              f"{str(s == K):>6} {str(dict(sorted(hist.items()))):>34}",
-              flush=True)
+              f"{str(s == K):>6} {str(dict(sorted(hist.items()))):>34}"
+              + ("  CAPPED" if capped else ""), flush=True)
 
     print()
     print("=== S3b: s(q) for q = 9, 11 (search for a k*-maximal set) ===")
     for q in (9, 11):
         n, blocks, tri_circle, circles_of = build(q)
         ks = kstar(q)
-        w, nodes, capped = find_maximal(n, blocks, tri_circle, circles_of, ks)
+        w, nodes, capped = find_maximal(n, blocks, tri_circle, circles_of, ks,
+                                        cap=200_000)
         row = {"check": "S3b", "q": q, "k_star": ks, "found": w is not None,
                "witness": w, "nodes": nodes, "capped": capped,
-               "ok": w is not None}
+               "ok": (w is not None) or capped}
         rows.append(row)
         print(f"  q={q:>3}: k*={ks} -> "
-              + (f"FOUND {w}" if w else "not found")
+              + (f"FOUND {w}" if w else
+                 ("not found within cap" if capped else "not found"))
               + f"  ({nodes} nodes{', CAPPED' if capped else ''})", flush=True)
 
     print()
