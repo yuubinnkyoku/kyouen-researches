@@ -1,7 +1,7 @@
 {
   "schema": "n11-experiment-manifest-sha256-v1",
   "experiment": "n11-reply27-s5-jsreplica-probe-10376293541461622788-77309411328-20261121",
-  "note": "sha256 over the exact bytes of every file of this increment; base cache is NOT duplicated here (byte-pinned reference: research/experiments/n11-reply27-s5-jsreplica-probe-10376293541461622788-20261121/output/merged-exact-s5-after-js-probe-2.cache = b92a8eb06b38852c360fb173085be63705b582c3e72ccce49183a86d0da6d8cd)",
+  "note": "sha256 over the exact bytes of every file of this increment (the manifest itself is pinned by git history, not by this dict); base cache is NOT duplicated here (byte-pinned reference: research/experiments/n11-reply27-s5-jsreplica-probe-10376293541461622788-20261121/output/merged-exact-s5-after-js-probe-2.cache = b92a8eb06b38852c360fb173085be63705b582c3e72ccce49183a86d0da6d8cd)",
   "files": {
     "README.md": "63c5421be8bef8694b35b6faf32f0366ee6097d8d4ba7e752f41e29a059f0db6",
     "input/at15m-s5-10376293541461622788-77309411328.input.csv": "a4bf044ef679bf5de3552b3994a3a6958405cdc1e97c0560f692cb4c5dc22916",
@@ -10,7 +10,6 @@
     "input/val/at2m-s5-1188950301626860544-536870912.input.csv": "56aacb71769b231c9728dcc841d39f0d5cb579517d34769f0e7382516d4c3a62",
     "input/val/first-15m-s5-1152921504606851072-536870946.input.csv": "ecc0299b8142abde201fcc40ea9666dac7368d0888d0600abc717af66ddfe348",
     "input/val/second-15m-s5-1188950301626860544-536870912.input.csv": "56aacb71769b231c9728dcc841d39f0d5cb579517d34769f0e7382516d4c3a62",
-    "output/manifest-sha256.json": "8d203268047a6467bb9ddb0b07bff71551206a2cba8ecd7495d1dd31552f376d",
     "output/merged-exact-s5-after-js-probe-3.cache": "3faf31cc878cad27ccaa09bce6c8098e70c17c2bdabde352e5b69a42cd08cc4b",
     "output/post-probe/candidate-classes.csv": "d0c436379e1674cefdfa65450afa1c27742e07eaa8a4758e36989e4b041aac8a",
     "output/post-probe/shared-s5-tasks.csv": "2045e15b3070b9ae28eb6ad050c6bd66fcd07f9175c188b9bdd00ee52c2dc266",
