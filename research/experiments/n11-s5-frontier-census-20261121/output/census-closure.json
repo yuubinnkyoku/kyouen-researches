@@ -1,0 +1,1760 @@
+{
+ "active_classes": 62,
+ "active_unknown_s5_degree_distribution": {
+  "1": 2688,
+  "2": 1874
+ },
+ "active_unknown_s5_unique": 4562,
+ "candidate_counts": {
+  "UNKNOWN": 62,
+  "WIN": 53
+ },
+ "chain_verify": [
+  {
+   "inserted_keys": null,
+   "loss": 5586,
+   "path": "research/experiments/n11-reply27-s5-jsreplica-probe-1306114260682670080-20261121/output/merged-exact-s5-after-js-probe-1.cache",
+   "rows": 5744,
+   "rows_inserted_vs_prev": null,
+   "sha256": "6ab46ac6c11ada0c2f45fceeda8304852052e09c27db4ed1989c4041d74afcd2",
+   "stage": "probe-1",
+   "strictly_sorted": true,
+   "win": 158
+  },
+  {
+   "inserted_keys": [
+    [
+     10376293541461622788,
+     68727865344
+    ]
+   ],
+   "loss": 5587,
+   "path": "research/experiments/n11-reply27-s5-jsreplica-probe-10376293541461622788-20261121/output/merged-exact-s5-after-js-probe-2.cache",
+   "rows": 5745,
+   "rows_inserted_vs_prev": 1,
+   "sha256": "b92a8eb06b38852c360fb173085be63705b582c3e72ccce49183a86d0da6d8cd",
+   "stage": "probe-2",
+   "strictly_sorted": true,
+   "win": 158
+  },
+  {
+   "inserted_keys": [
+    [
+     10376293541461622788,
+     77309411328
+    ]
+   ],
+   "loss": 5588,
+   "path": "research/experiments/n11-reply27-s5-jsreplica-probe-10376293541461622788-77309411328-20261121/output/merged-exact-s5-after-js-probe-3.cache",
+   "rows": 5746,
+   "rows_inserted_vs_prev": 1,
+   "sha256": "3faf31cc878cad27ccaa09bce6c8098e70c17c2bdabde352e5b69a42cd08cc4b",
+   "stage": "probe-3",
+   "strictly_sorted": true,
+   "win": 158
+  },
+  {
+   "inserted_keys": [
+    [
+     10376293541461626880,
+     12288
+    ]
+   ],
+   "loss": 5589,
+   "path": "research/experiments/n11-reply27-s5-jsreplica-probe-10376293541461626880-12288-20261121/output/merged-exact-s5-after-js-probe-4.cache",
+   "rows": 5747,
+   "rows_inserted_vs_prev": 1,
+   "sha256": "3ba93da97e302c7c80d4f3a9b0c4cfbc136be79e0a3b39ef5ab9ae8dc7c32d2a",
+   "stage": "probe-4",
+   "strictly_sorted": true,
+   "win": 158
+  },
+  {
+   "inserted_keys": [
+    [
+     10376293541461626880,
+     134217744
+    ]
+   ],
+   "loss": 5590,
+   "path": "research/experiments/n11-reply27-s5-jsreplica-probe-10376293541461626880-134217744-20261121/output/merged-exact-s5-after-js-probe-5.cache",
+   "rows": 5748,
+   "rows_inserted_vs_prev": 1,
+   "sha256": "6d0131f90d65045055279556f7d2f90eac70500ff16665c88364d24ae976ff89",
+   "stage": "probe-5",
+   "strictly_sorted": true,
+   "win": 158
+  },
+  {
+   "inserted_keys": [
+    [
+     10376293541461626880,
+     134225920
+    ]
+   ],
+   "loss": 5591,
+   "path": "research/experiments/n11-reply27-s5-jsreplica-probe-10376293541461626880-134225920-20261121/output/merged-exact-s5-after-js-probe-6.cache",
+   "rows": 5749,
+   "rows_inserted_vs_prev": 1,
+   "sha256": "6aded81e7c9747e42d40da8c139420da78b615d3a586964f2dbe093483fc7fad",
+   "stage": "probe-6",
+   "strictly_sorted": true,
+   "win": 158
+  },
+  {
+   "inserted_keys": [
+    [
+     10376293541461626880,
+     150994944
+    ]
+   ],
+   "loss": 5592,
+   "path": "research/experiments/n11-reply27-s5-jsreplica-probe-10376293541461626880-150994944-20261121/output/merged-exact-s5-after-js-probe-7.cache",
+   "rows": 5750,
+   "rows_inserted_vs_prev": 1,
+   "sha256": "a74ecf39b87cd101ba6fdf3747e8e0ebad93443b5e8ba82d351fafb784e9fb08",
+   "stage": "probe-7",
+   "strictly_sorted": true,
+   "win": 158
+  },
+  {
+   "inserted_keys": [
+    [
+     10376293541461626880,
+     16777232
+    ]
+   ],
+   "loss": 5593,
+   "path": "research/experiments/n11-reply27-s5-jsreplica-probe-10376293541461626880-16777232-20261121/output/merged-exact-s5-after-js-probe-8.cache",
+   "rows": 5751,
+   "rows_inserted_vs_prev": 1,
+   "sha256": "708eb4953ce3ce789a988fa6257adac7518ae5c2ca4320fc7f3d4a19dbc46429",
+   "stage": "probe-8",
+   "strictly_sorted": true,
+   "win": 158
+  },
+  {
+   "inserted_keys": [
+    [
+     10376293541461626880,
+     16785408
+    ]
+   ],
+   "loss": 5594,
+   "path": "research/experiments/n11-reply27-s5-jsreplica-probe-10376293541461626880-16785408-20261121/output/merged-exact-s5-after-js-probe-9.cache",
+   "rows": 5752,
+   "rows_inserted_vs_prev": 1,
+   "sha256": "716436fc8bfff94b0501e3e5b9431fabb53872215e02cb711f8019aa1e607587",
+   "stage": "probe-9",
+   "strictly_sorted": true,
+   "win": 158
+  },
+  {
+   "inserted_keys": [
+    [
+     10376293541461626880,
+     18874368
+    ]
+   ],
+   "loss": 5595,
+   "path": "research/experiments/n11-reply27-s5-jsreplica-probe-10376293541461626880-18874368-20261121/output/merged-exact-s5-after-js-probe-10.cache",
+   "rows": 5753,
+   "rows_inserted_vs_prev": 1,
+   "sha256": "405d86cb63727d6cee9ea46c325dc8eebda75332a848b8791857b2adbfa6ed9c",
+   "stage": "probe-10",
+   "strictly_sorted": true,
+   "win": 158
+  },
+  {
+   "inserted_keys": [
+    [
+     10376293541461626880,
+     25165824
+    ]
+   ],
+   "loss": 5596,
+   "path": "research/experiments/n11-reply27-s5-jsreplica-probe-10376293541461626880-25165824-20261121/output/merged-exact-s5-after-js-probe-11.cache",
+   "rows": 5754,
+   "rows_inserted_vs_prev": 1,
+   "sha256": "e5c8bf80888c77e44f29d00dd1a2334e3cf9ec9940605ca855d17d8bba1dd991",
+   "stage": "probe-11",
+   "strictly_sorted": true,
+   "win": 158
+  },
+  {
+   "inserted_keys": [
+    [
+     10376293541461626880,
+     34359742464
+    ]
+   ],
+   "loss": 5597,
+   "path": "research/experiments/n11-reply27-s5-jsreplica-probe-10376293541461626880-34359742464-20261121/output/merged-exact-s5-after-js-probe-12.cache",
+   "rows": 5755,
+   "rows_inserted_vs_prev": 1,
+   "sha256": "0e4016aea0feea2c1eaa6dbc8ba56af1e54c1d02d8cba5338ecd8ddd0804f3a8",
+   "stage": "probe-12",
+   "strictly_sorted": true,
+   "win": 158
+  },
+  {
+   "inserted_keys": [
+    [
+     10376293541461626880,
+     40960
+    ]
+   ],
+   "loss": 5598,
+   "path": "research/experiments/n11-reply27-s5-jsreplica-probe-10376293541461626880-40960-20261121/output/merged-exact-s5-after-js-probe-13.cache",
+   "rows": 5756,
+   "rows_inserted_vs_prev": 1,
+   "sha256": "60e0dc3476920d4e99043dd4f132398ea72e4dfdcd9f3dbb8fc686ba65bc28c6",
+   "stage": "probe-13",
+   "strictly_sorted": true,
+   "win": 158
+  }
+ ],
+ "class_closure_table": [
+  {
+   "children_total": 109,
+   "class": "1188950301626859520:536870912",
+   "completion_15m_truncated_nodes_proxy": 530074017,
+   "coverage": [
+    55,
+    65,
+    100,
+    108
+   ],
+   "loss_children": 16,
+   "min_child_proxy": 5234938.343271555,
+   "quarantine_blocked_keys": [],
+   "unknown": 93,
+   "unknown_exclusive": 35,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 58,
+   "win_children": 0
+  },
+  {
+   "children_total": 114,
+   "class": "1152921504612089856:536870912",
+   "completion_15m_truncated_nodes_proxy": 559112925,
+   "coverage": [
+    88,
+    98,
+    100,
+    108
+   ],
+   "loss_children": 15,
+   "min_child_proxy": 5069670.125,
+   "quarantine_blocked_keys": [],
+   "unknown": 99,
+   "unknown_exclusive": 44,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 55,
+   "win_children": 0
+  },
+  {
+   "children_total": 106,
+   "class": "1297036692683752448:0",
+   "completion_15m_truncated_nodes_proxy": 546960118,
+   "coverage": [
+    100,
+    108,
+    110,
+    120
+   ],
+   "loss_children": 7,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 99,
+   "unknown_exclusive": 38,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 61,
+   "win_children": 0
+  },
+  {
+   "children_total": 112,
+   "class": "1297036692683751424:134217728",
+   "completion_15m_truncated_nodes_proxy": 565678820,
+   "coverage": [
+    35,
+    41,
+    100,
+    108
+   ],
+   "loss_children": 12,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 100,
+   "unknown_exclusive": 42,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 58,
+   "win_children": 0
+  },
+  {
+   "children_total": 107,
+   "class": "1297036830122704896:0",
+   "completion_15m_truncated_nodes_proxy": 549330121,
+   "coverage": [
+    47,
+    51,
+    100,
+    108
+   ],
+   "loss_children": 7,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 100,
+   "unknown_exclusive": 39,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 61,
+   "win_children": 0
+  },
+  {
+   "children_total": 108,
+   "class": "1297107061427929088:0",
+   "completion_15m_truncated_nodes_proxy": 552429280,
+   "coverage": [
+    26,
+    28,
+    100,
+    108
+   ],
+   "loss_children": 8,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 100,
+   "unknown_exclusive": 41,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 59,
+   "win_children": 0
+  },
+  {
+   "children_total": 114,
+   "class": "10376293541461626880:16777216",
+   "completion_15m_truncated_nodes_proxy": 571078231,
+   "coverage": [
+    100,
+    108,
+    112,
+    118
+   ],
+   "loss_children": 13,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 101,
+   "unknown_exclusive": 44,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 57,
+   "win_children": 0
+  },
+  {
+   "children_total": 108,
+   "class": "10376293541461626880:65536",
+   "completion_15m_truncated_nodes_proxy": 559872851,
+   "coverage": [
+    80,
+    84,
+    100,
+    108
+   ],
+   "loss_children": 7,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 101,
+   "unknown_exclusive": 43,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 58,
+   "win_children": 0
+  },
+  {
+   "children_total": 109,
+   "class": "1152921504607895552:536879104",
+   "completion_15m_truncated_nodes_proxy": 577144204,
+   "coverage": [
+    33,
+    43,
+    100,
+    108
+   ],
+   "loss_children": 8,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 101,
+   "unknown_exclusive": 40,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 61,
+   "win_children": 0
+  },
+  {
+   "children_total": 108,
+   "class": "1297036692750860288:0",
+   "completion_15m_truncated_nodes_proxy": 565409368,
+   "coverage": [
+    46,
+    52,
+    100,
+    108
+   ],
+   "loss_children": 7,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 101,
+   "unknown_exclusive": 41,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 60,
+   "win_children": 0
+  },
+  {
+   "children_total": 109,
+   "class": "1301540292311121920:0",
+   "completion_15m_truncated_nodes_proxy": 572961163,
+   "coverage": [
+    92,
+    94,
+    100,
+    108
+   ],
+   "loss_children": 8,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 101,
+   "unknown_exclusive": 41,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 60,
+   "win_children": 0
+  },
+  {
+   "children_total": 108,
+   "class": "1306043891938492416:0",
+   "completion_15m_truncated_nodes_proxy": 563511201,
+   "coverage": [
+    100,
+    103,
+    105,
+    108
+   ],
+   "loss_children": 7,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 101,
+   "unknown_exclusive": 41,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 60,
+   "win_children": 0
+  },
+  {
+   "children_total": 108,
+   "class": "1297036692683751424:131072",
+   "completion_15m_truncated_nodes_proxy": 568359432,
+   "coverage": [
+    47,
+    51,
+    100,
+    108
+   ],
+   "loss_children": 6,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 102,
+   "unknown_exclusive": 40,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 62,
+   "win_children": 0
+  },
+  {
+   "children_total": 111,
+   "class": "1297036692683751424:4",
+   "completion_15m_truncated_nodes_proxy": 586928819,
+   "coverage": [
+    4,
+    6,
+    100,
+    108
+   ],
+   "loss_children": 9,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 102,
+   "unknown_exclusive": 44,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 58,
+   "win_children": 0
+  },
+  {
+   "children_total": 110,
+   "class": "1297036692684013568:0",
+   "completion_15m_truncated_nodes_proxy": 583076315,
+   "coverage": [
+    78,
+    86,
+    100,
+    108
+   ],
+   "loss_children": 8,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 102,
+   "unknown_exclusive": 43,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 59,
+   "win_children": 0
+  },
+  {
+   "children_total": 113,
+   "class": "10376293541461626880:16",
+   "completion_15m_truncated_nodes_proxy": 578191408,
+   "coverage": [
+    92,
+    94,
+    100,
+    108
+   ],
+   "loss_children": 10,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 103,
+   "unknown_exclusive": 44,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 59,
+   "win_children": 0
+  },
+  {
+   "children_total": 111,
+   "class": "10376293541461626880:4",
+   "completion_15m_truncated_nodes_proxy": 586558285,
+   "coverage": [
+    100,
+    108,
+    114,
+    116
+   ],
+   "loss_children": 8,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 103,
+   "unknown_exclusive": 42,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 61,
+   "win_children": 0
+  },
+  {
+   "children_total": 111,
+   "class": "1152921504606852096:536870912",
+   "completion_15m_truncated_nodes_proxy": 592183828,
+   "coverage": [
+    100,
+    108,
+    110,
+    120
+   ],
+   "loss_children": 8,
+   "min_child_proxy": 5234938.343271555,
+   "quarantine_blocked_keys": [],
+   "unknown": 103,
+   "unknown_exclusive": 43,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 60,
+   "win_children": 0
+  },
+  {
+   "children_total": 110,
+   "class": "1297036692683751424:262144",
+   "completion_15m_truncated_nodes_proxy": 586026380,
+   "coverage": [
+    58,
+    62,
+    100,
+    108
+   ],
+   "loss_children": 7,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 103,
+   "unknown_exclusive": 43,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 60,
+   "win_children": 0
+  },
+  {
+   "children_total": 111,
+   "class": "1297036692683751424:8192",
+   "completion_15m_truncated_nodes_proxy": 593026199,
+   "coverage": [
+    3,
+    7,
+    100,
+    108
+   ],
+   "loss_children": 8,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 103,
+   "unknown_exclusive": 42,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 61,
+   "win_children": 0
+  },
+  {
+   "children_total": 109,
+   "class": "1297036692683753472:0",
+   "completion_15m_truncated_nodes_proxy": 580952812,
+   "coverage": [
+    1,
+    9,
+    100,
+    108
+   ],
+   "loss_children": 6,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 103,
+   "unknown_exclusive": 42,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 61,
+   "win_children": 0
+  },
+  {
+   "children_total": 109,
+   "class": "1297036692683767808:0",
+   "completion_15m_truncated_nodes_proxy": 577273591,
+   "coverage": [
+    34,
+    42,
+    100,
+    108
+   ],
+   "loss_children": 6,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 103,
+   "unknown_exclusive": 41,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 62,
+   "win_children": 0
+  },
+  {
+   "children_total": 109,
+   "class": "1297036692684275712:0",
+   "completion_15m_truncated_nodes_proxy": 582347159,
+   "coverage": [
+    89,
+    97,
+    100,
+    108
+   ],
+   "loss_children": 6,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 103,
+   "unknown_exclusive": 40,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 63,
+   "win_children": 0
+  },
+  {
+   "children_total": 110,
+   "class": "1297036692685848576:0",
+   "completion_15m_truncated_nodes_proxy": 585135853,
+   "coverage": [
+    100,
+    108,
+    111,
+    119
+   ],
+   "loss_children": 7,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 103,
+   "unknown_exclusive": 42,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 61,
+   "win_children": 0
+  },
+  {
+   "children_total": 110,
+   "class": "1297036693220622336:0",
+   "completion_15m_truncated_nodes_proxy": 586723553,
+   "coverage": [
+    79,
+    85,
+    100,
+    108
+   ],
+   "loss_children": 7,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 103,
+   "unknown_exclusive": 45,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 58,
+   "win_children": 0
+  },
+  {
+   "children_total": 108,
+   "class": "1297036696978718720:0",
+   "completion_15m_truncated_nodes_proxy": 569915150,
+   "coverage": [
+    100,
+    108,
+    112,
+    118
+   ],
+   "loss_children": 5,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 103,
+   "unknown_exclusive": 41,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 62,
+   "win_children": 0
+  },
+  {
+   "children_total": 111,
+   "class": "1297036701273686016:0",
+   "completion_15m_truncated_nodes_proxy": 589596503,
+   "coverage": [
+    3,
+    7,
+    100,
+    108
+   ],
+   "loss_children": 8,
+   "min_child_proxy": 5069670.125,
+   "quarantine_blocked_keys": [],
+   "unknown": 103,
+   "unknown_exclusive": 42,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 61,
+   "win_children": 0
+  },
+  {
+   "children_total": 108,
+   "class": "1297037242439565312:0",
+   "completion_15m_truncated_nodes_proxy": 572434248,
+   "coverage": [
+    69,
+    73,
+    100,
+    108
+   ],
+   "loss_children": 5,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 103,
+   "unknown_exclusive": 45,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 58,
+   "win_children": 0
+  },
+  {
+   "children_total": 109,
+   "class": "1297071877055840256:0",
+   "completion_15m_truncated_nodes_proxy": 585522560,
+   "coverage": [
+    15,
+    17,
+    100,
+    108
+   ],
+   "loss_children": 6,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 103,
+   "unknown_exclusive": 43,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 60,
+   "win_children": 0
+  },
+  {
+   "children_total": 113,
+   "class": "10376293541461626880:134217728",
+   "completion_15m_truncated_nodes_proxy": 595242194,
+   "coverage": [
+    79,
+    85,
+    100,
+    108
+   ],
+   "loss_children": 9,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 104,
+   "unknown_exclusive": 44,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 60,
+   "win_children": 0
+  },
+  {
+   "children_total": 111,
+   "class": "10376293541461626880:32768",
+   "completion_15m_truncated_nodes_proxy": 590572160,
+   "coverage": [
+    91,
+    95,
+    100,
+    108
+   ],
+   "loss_children": 7,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 104,
+   "unknown_exclusive": 45,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 59,
+   "win_children": 0
+  },
+  {
+   "children_total": 114,
+   "class": "10376293541461626880:8192",
+   "completion_15m_truncated_nodes_proxy": 589075935,
+   "coverage": [
+    100,
+    108,
+    113,
+    117
+   ],
+   "loss_children": 10,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 104,
+   "unknown_exclusive": 45,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 59,
+   "win_children": 0
+  },
+  {
+   "children_total": 110,
+   "class": "1152921504607897600:536870912",
+   "completion_15m_truncated_nodes_proxy": 592849019,
+   "coverage": [
+    99,
+    100,
+    108,
+    109
+   ],
+   "loss_children": 6,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 104,
+   "unknown_exclusive": 45,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 59,
+   "win_children": 0
+  },
+  {
+   "children_total": 112,
+   "class": "1152921504616284160:536870912",
+   "completion_15m_truncated_nodes_proxy": 591188321,
+   "coverage": [
+    89,
+    97,
+    100,
+    108
+   ],
+   "loss_children": 8,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 104,
+   "unknown_exclusive": 42,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 62,
+   "win_children": 0
+  },
+  {
+   "children_total": 113,
+   "class": "1297036692683751424:33554432",
+   "completion_15m_truncated_nodes_proxy": 593178760,
+   "coverage": [
+    13,
+    19,
+    100,
+    108
+   ],
+   "loss_children": 9,
+   "min_child_proxy": 5069670.125,
+   "quarantine_blocked_keys": [],
+   "unknown": 104,
+   "unknown_exclusive": 42,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 62,
+   "win_children": 0
+  },
+  {
+   "children_total": 109,
+   "class": "1297036694831235072:0",
+   "completion_15m_truncated_nodes_proxy": 589556505,
+   "coverage": [
+    100,
+    101,
+    107,
+    108
+   ],
+   "loss_children": 5,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 104,
+   "unknown_exclusive": 43,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 61,
+   "win_children": 0
+  },
+  {
+   "children_total": 111,
+   "class": "1297041090730262528:0",
+   "completion_15m_truncated_nodes_proxy": 590483133,
+   "coverage": [
+    100,
+    102,
+    106,
+    108
+   ],
+   "loss_children": 7,
+   "min_child_proxy": 5069670.125,
+   "quarantine_blocked_keys": [],
+   "unknown": 104,
+   "unknown_exclusive": 42,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 62,
+   "win_children": 0
+  },
+  {
+   "children_total": 110,
+   "class": "10376293541461626880:16384",
+   "completion_15m_truncated_nodes_proxy": 590532162,
+   "coverage": [
+    100,
+    102,
+    106,
+    108
+   ],
+   "loss_children": 5,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 105,
+   "unknown_exclusive": 45,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 60,
+   "win_children": 0
+  },
+  {
+   "children_total": 110,
+   "class": "10376293541461626880:32",
+   "completion_15m_truncated_nodes_proxy": 596806722,
+   "coverage": [
+    81,
+    83,
+    100,
+    108
+   ],
+   "loss_children": 5,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 105,
+   "unknown_exclusive": 46,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 59,
+   "win_children": 0
+  },
+  {
+   "children_total": 114,
+   "class": "1152921504606851584:536870912",
+   "completion_15m_truncated_nodes_proxy": 597559271,
+   "coverage": [
+    100,
+    108,
+    111,
+    119
+   ],
+   "loss_children": 9,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 105,
+   "unknown_exclusive": 43,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 62,
+   "win_children": 0
+  },
+  {
+   "children_total": 113,
+   "class": "1152921521787764736:536870912",
+   "completion_15m_truncated_nodes_proxy": 598083161,
+   "coverage": [
+    78,
+    86,
+    100,
+    108
+   ],
+   "loss_children": 8,
+   "min_child_proxy": 5069670.125,
+   "quarantine_blocked_keys": [],
+   "unknown": 105,
+   "unknown_exclusive": 45,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 60,
+   "win_children": 0
+  },
+  {
+   "children_total": 112,
+   "class": "1297036692683751424:32768",
+   "completion_15m_truncated_nodes_proxy": 600522044,
+   "coverage": [
+    25,
+    29,
+    100,
+    108
+   ],
+   "loss_children": 7,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 105,
+   "unknown_exclusive": 44,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 61,
+   "win_children": 0
+  },
+  {
+   "children_total": 113,
+   "class": "1297036692687945728:0",
+   "completion_15m_truncated_nodes_proxy": 596531561,
+   "coverage": [
+    2,
+    8,
+    100,
+    108
+   ],
+   "loss_children": 8,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 105,
+   "unknown_exclusive": 44,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 61,
+   "win_children": 0
+  },
+  {
+   "children_total": 113,
+   "class": "1297036692692140032:0",
+   "completion_15m_truncated_nodes_proxy": 595568833,
+   "coverage": [
+    13,
+    19,
+    100,
+    108
+   ],
+   "loss_children": 8,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 105,
+   "unknown_exclusive": 43,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 62,
+   "win_children": 0
+  },
+  {
+   "children_total": 113,
+   "class": "1297036692717305856:0",
+   "completion_15m_truncated_nodes_proxy": 591643333,
+   "coverage": [
+    35,
+    41,
+    100,
+    108
+   ],
+   "loss_children": 8,
+   "min_child_proxy": 5069670.125,
+   "quarantine_blocked_keys": [],
+   "unknown": 105,
+   "unknown_exclusive": 43,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 62,
+   "win_children": 0
+  },
+  {
+   "children_total": 111,
+   "class": "1297036709863620608:0",
+   "completion_15m_truncated_nodes_proxy": 598643948,
+   "coverage": [
+    14,
+    18,
+    100,
+    108
+   ],
+   "loss_children": 6,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 105,
+   "unknown_exclusive": 44,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 61,
+   "win_children": 0
+  },
+  {
+   "children_total": 112,
+   "class": "1297036727043489792:0",
+   "completion_15m_truncated_nodes_proxy": 596257992,
+   "coverage": [
+    25,
+    29,
+    100,
+    108
+   ],
+   "loss_children": 7,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 105,
+   "unknown_exclusive": 43,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 62,
+   "win_children": 0
+  },
+  {
+   "children_total": 113,
+   "class": "1152921504607895552:536870920",
+   "completion_15m_truncated_nodes_proxy": 603648636,
+   "coverage": [
+    45,
+    53,
+    100,
+    108
+   ],
+   "loss_children": 7,
+   "min_child_proxy": 5069670.125,
+   "quarantine_blocked_keys": [],
+   "unknown": 106,
+   "unknown_exclusive": 46,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 60,
+   "win_children": 0
+  },
+  {
+   "children_total": 111,
+   "class": "1152921504607895552:570425344",
+   "completion_15m_truncated_nodes_proxy": 608227195,
+   "coverage": [
+    23,
+    31,
+    100,
+    108
+   ],
+   "loss_children": 5,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 106,
+   "unknown_exclusive": 44,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 62,
+   "win_children": 0
+  },
+  {
+   "children_total": 110,
+   "class": "1152939096793939968:536870912",
+   "completion_15m_truncated_nodes_proxy": 599059613,
+   "coverage": [
+    66,
+    76,
+    100,
+    108
+   ],
+   "loss_children": 4,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 106,
+   "unknown_exclusive": 47,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 59,
+   "win_children": 0
+  },
+  {
+   "children_total": 113,
+   "class": "1297036692683751424:268435456",
+   "completion_15m_truncated_nodes_proxy": 602867206,
+   "coverage": [
+    46,
+    52,
+    100,
+    108
+   ],
+   "loss_children": 7,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 106,
+   "unknown_exclusive": 45,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 61,
+   "win_children": 0
+  },
+  {
+   "children_total": 113,
+   "class": "1297036692683751432:0",
+   "completion_15m_truncated_nodes_proxy": 604188556,
+   "coverage": [
+    33,
+    43,
+    100,
+    108
+   ],
+   "loss_children": 7,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 106,
+   "unknown_exclusive": 44,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 62,
+   "win_children": 0
+  },
+  {
+   "children_total": 111,
+   "class": "1297036692683751936:0",
+   "completion_15m_truncated_nodes_proxy": 606695665,
+   "coverage": [
+    99,
+    100,
+    108,
+    109
+   ],
+   "loss_children": 5,
+   "min_child_proxy": 5069670.125,
+   "quarantine_blocked_keys": [],
+   "unknown": 106,
+   "unknown_exclusive": 44,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 62,
+   "win_children": 0
+  },
+  {
+   "children_total": 112,
+   "class": "1297036692683751426:0",
+   "completion_15m_truncated_nodes_proxy": 604873817,
+   "coverage": [
+    11,
+    21,
+    100,
+    108
+   ],
+   "loss_children": 5,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 107,
+   "unknown_exclusive": 45,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 62,
+   "win_children": 0
+  },
+  {
+   "children_total": 112,
+   "class": "1297036692683751488:0",
+   "completion_15m_truncated_nodes_proxy": 603221931,
+   "coverage": [
+    66,
+    76,
+    100,
+    108
+   ],
+   "loss_children": 5,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 107,
+   "unknown_exclusive": 46,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 61,
+   "win_children": 0
+  },
+  {
+   "children_total": 113,
+   "class": "1152921504607895552:536870916",
+   "completion_15m_truncated_nodes_proxy": 613795991,
+   "coverage": [
+    44,
+    54,
+    100,
+    108
+   ],
+   "loss_children": 5,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 108,
+   "unknown_exclusive": 46,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 62,
+   "win_children": 0
+  },
+  {
+   "children_total": 113,
+   "class": "1297036692683751424:34359738368",
+   "completion_15m_truncated_nodes_proxy": 617805749,
+   "coverage": [
+    1,
+    9,
+    100,
+    108
+   ],
+   "loss_children": 5,
+   "min_child_proxy": 5069670.125,
+   "quarantine_blocked_keys": [],
+   "unknown": 108,
+   "unknown_exclusive": 46,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 62,
+   "win_children": 0
+  },
+  {
+   "children_total": 113,
+   "class": "1297045488776773632:0",
+   "completion_15m_truncated_nodes_proxy": 608327701,
+   "coverage": [
+    100,
+    108,
+    113,
+    117
+   ],
+   "loss_children": 5,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 108,
+   "unknown_exclusive": 47,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 61,
+   "win_children": 0
+  },
+  {
+   "children_total": 113,
+   "class": "1315051091193233408:0",
+   "completion_15m_truncated_nodes_proxy": 609105886,
+   "coverage": [
+    100,
+    108,
+    114,
+    116
+   ],
+   "loss_children": 5,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 108,
+   "unknown_exclusive": 47,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 61,
+   "win_children": 0
+  },
+  {
+   "children_total": 113,
+   "class": "1152921504607895552:34896609280",
+   "completion_15m_truncated_nodes_proxy": 625297475,
+   "coverage": [
+    11,
+    21,
+    100,
+    108
+   ],
+   "loss_children": 4,
+   "min_child_proxy": 5069670.125,
+   "quarantine_blocked_keys": [],
+   "unknown": 109,
+   "unknown_exclusive": 47,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 62,
+   "win_children": 0
+  },
+  {
+   "children_total": 113,
+   "class": "1152921504607895552:536887296",
+   "completion_15m_truncated_nodes_proxy": 622114059,
+   "coverage": [
+    34,
+    42,
+    100,
+    108
+   ],
+   "loss_children": 4,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 109,
+   "unknown_exclusive": 48,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 61,
+   "win_children": 0
+  },
+  {
+   "children_total": 113,
+   "class": "1297036692683751440:0",
+   "completion_15m_truncated_nodes_proxy": 617048507,
+   "coverage": [
+    44,
+    54,
+    100,
+    108
+   ],
+   "loss_children": 4,
+   "min_child_proxy": 5041584.580392157,
+   "quarantine_blocked_keys": [],
+   "unknown": 109,
+   "unknown_exclusive": 47,
+   "unknown_quarantine_blocked": 0,
+   "unknown_shared": 62,
+   "win_children": 0
+  }
+ ],
+ "focus_lane_xcheck": {
+  "declared_35_found": 35,
+  "declared_35_missing": [],
+  "extra_focus_band_keys": [],
+  "focus_band_proxy_multiset": [
+   5234938.343271555,
+   5234938.343271555,
+   5234938.343271555,
+   5234938.343271555,
+   5234938.343271555,
+   5234938.343271555,
+   5234938.343271555,
+   5234938.343271555,
+   5234938.343271555,
+   5234938.343271555,
+   5234938.343271555,
+   5234938.343271555,
+   5234938.343271555,
+   5234938.343271555,
+   5234938.343271555,
+   5234938.343271555,
+   5234938.343271555,
+   5234938.343271555,
+   5234938.343271555,
+   5234938.343271555,
+   5234938.343271555,
+   5234938.343271555,
+   5932111.74953271,
+   5932111.74953271,
+   5932111.74953271,
+   5932111.74953271,
+   5932111.74953271,
+   5932111.74953271,
+   5932111.74953271,
+   5932111.74953271,
+   5932111.74953271,
+   5932111.74953271,
+   5932111.74953271,
+   5932111.74953271,
+   5932111.74953271
+  ],
+  "focus_band_unknown_children_of_focus_class": 93
+ },
+ "interpretation_guard": "Closure distance, proxies and node counts are scheduling measurements, never verdicts. Standard 11x11 empty board and the two-stone root {60,27} remain UNKNOWN.",
+ "pins": {
+  "cache": "research/experiments/n11-reply27-s5-jsreplica-probe-10376293541461626880-40960-20261121/output/merged-exact-s5-after-js-probe-13.cache",
+  "cache_rows": 5756,
+  "cache_sha256": "60e0dc3476920d4e99043dd4f132398ea72e4dfdcd9f3dbb8fc686ba65bc28c6",
+  "geometry_sha256": "146be80b5794462c2444e983fc4c4a6e76d3b464bfd5e86fac14509024100b54",
+  "quarantine_sha256": "81d231604d3a095c115135e05ca393d6be83e1aadde4f614d3b5a9cc67d17fe9"
+ },
+ "schema": "n11-s5-frontier-census-20261121-v1",
+ "supply": {
+  "one_live_parent_focus_exclusive": 35,
+  "one_live_parent_other_classes_claimable_pool": 2653,
+  "quarantine_blocked_supply": [],
+  "quarantine_blocked_supply_keys": 0,
+  "two_plus_band_cheapest_20": [
+   {
+    "key": "10376293541461626880:42949672960",
+    "legal": 112,
+    "parents": [
+     "1152921504606851584:536870912",
+     "1297036692683751424:33554432"
+    ],
+    "proxy": 5069670.125
+   },
+   {
+    "key": "10376293541461626880:8208",
+    "legal": 112,
+    "parents": [
+     "10376293541461626880:16",
+     "10376293541461626880:8192"
+    ],
+    "proxy": 5069670.125
+   },
+   {
+    "key": "10376293541461626882:16777216",
+    "legal": 110,
+    "parents": [
+     "10376293541461626880:16777216",
+     "1297036692683751936:0"
+    ],
+    "proxy": 5069670.125
+   },
+   {
+    "key": "10376293541461626882:8192",
+    "legal": 110,
+    "parents": [
+     "10376293541461626880:8192",
+     "1297036692683751936:0"
+    ],
+    "proxy": 5069670.125
+   },
+   {
+    "key": "10376293541461626896:16",
+    "legal": 110,
+    "parents": [
+     "10376293541461626880:16",
+     "1297036692683751488:0"
+    ],
+    "proxy": 5069670.125
+   },
+   {
+    "key": "10376293541461626896:8192",
+    "legal": 111,
+    "parents": [
+     "10376293541461626880:8192",
+     "1297036692683751488:0"
+    ],
+    "proxy": 5069670.125
+   },
+   {
+    "key": "10376293541461626944:134217728",
+    "legal": 111,
+    "parents": [
+     "10376293541461626880:134217728",
+     "1297036692683751440:0"
+    ],
+    "proxy": 5069670.125
+   },
+   {
+    "key": "10376293541461626944:16777216",
+    "legal": 112,
+    "parents": [
+     "10376293541461626880:16777216",
+     "1297036692683751440:0"
+    ],
+    "proxy": 5069670.125
+   },
+   {
+    "key": "10376293541461626944:8192",
+    "legal": 112,
+    "parents": [
+     "10376293541461626880:8192",
+     "1297036692683751440:0"
+    ],
+    "proxy": 5069670.125
+   },
+   {
+    "key": "10376293541461627008:134217728",
+    "legal": 111,
+    "parents": [
+     "10376293541461626880:134217728",
+     "1297036692683751432:0"
+    ],
+    "proxy": 5069670.125
+   },
+   {
+    "key": "10376293541461627008:16",
+    "legal": 111,
+    "parents": [
+     "10376293541461626880:16",
+     "1297036692683751432:0"
+    ],
+    "proxy": 5069670.125
+   },
+   {
+    "key": "10376293541461627008:16777216",
+    "legal": 112,
+    "parents": [
+     "10376293541461626880:16777216",
+     "1297036692683751432:0"
+    ],
+    "proxy": 5069670.125
+   },
+   {
+    "key": "10376293541461627008:8192",
+    "legal": 111,
+    "parents": [
+     "10376293541461626880:8192",
+     "1297036692683751432:0"
+    ],
+    "proxy": 5069670.125
+   },
+   {
+    "key": "10376293541461627392:134217728",
+    "legal": 110,
+    "parents": [
+     "10376293541461626880:134217728",
+     "1297036692683751426:0"
+    ],
+    "proxy": 5069670.125
+   },
+   {
+    "key": "10376293541461627392:16",
+    "legal": 110,
+    "parents": [
+     "10376293541461626880:16",
+     "1297036692683751426:0"
+    ],
+    "proxy": 5069670.125
+   },
+   {
+    "key": "10376293541461627392:16777216",
+    "legal": 111,
+    "parents": [
+     "10376293541461626880:16777216",
+     "1297036692683751426:0"
+    ],
+    "proxy": 5069670.125
+   },
+   {
+    "key": "10376293541461627392:8192",
+    "legal": 111,
+    "parents": [
+     "10376293541461626880:8192",
+     "1297036692683751426:0"
+    ],
+    "proxy": 5069670.125
+   },
+   {
+    "key": "10376293541463719940:68719476736",
+    "legal": 112,
+    "parents": [
+     "1152921504612089856:536870912",
+     "1297036692683751424:34359738368"
+    ],
+    "proxy": 5069670.125
+   },
+   {
+    "key": "10376293541998497792:134217728",
+    "legal": 111,
+    "parents": [
+     "10376293541461626880:134217728",
+     "1297036692717305856:0"
+    ],
+    "proxy": 5069670.125
+   },
+   {
+    "key": "10376293541998497792:16",
+    "legal": 111,
+    "parents": [
+     "10376293541461626880:16",
+     "1297036692717305856:0"
+    ],
+    "proxy": 5069670.125
+   }
+  ],
+  "two_plus_live_parents_reply27_band": 1874,
+  "unclaimed_band_cheapest_20": [
+   {
+    "key": "10376293541461622800:68719476737",
+    "legal": 89,
+    "parent": "1152939096793939968:536870912",
+    "proxy": 5041584.580392157
+   },
+   {
+    "key": "10376293541461626880:1056768",
+    "legal": 86,
+    "parent": "10376293541461626880:8192",
+    "proxy": 5041584.580392157
+   },
+   {
+    "key": "10376293541461626880:1064960",
+    "legal": 88,
+    "parent": "10376293541461626880:16384",
+    "proxy": 5041584.580392157
+   },
+   {
+    "key": "10376293541461626880:16640",
+    "legal": 89,
+    "parent": "10376293541461626880:16384",
+    "proxy": 5041584.580392157
+   },
+   {
+    "key": "10376293541461626880:260",
+    "legal": 89,
+    "parent": "10376293541461626880:4",
+    "proxy": 5041584.580392157
+   },
+   {
+    "key": "10376293541461626880:272",
+    "legal": 87,
+    "parent": "10376293541461626880:16",
+    "proxy": 5041584.580392157
+   },
+   {
+    "key": "10376293541461626880:288",
+    "legal": 84,
+    "parent": "10376293541461626880:32",
+    "proxy": 5041584.580392157
+   },
+   {
+    "key": "10376293541461626880:65792",
+    "legal": 81,
+    "parent": "10376293541461626880:65536",
+    "proxy": 5041584.580392157
+   },
+   {
+    "key": "10376293541461626880:67125248",
+    "legal": 88,
+    "parent": "10376293541461626880:16384",
+    "proxy": 5041584.580392157
+   },
+   {
+    "key": "10376293541461626888:65536",
+    "legal": 83,
+    "parent": "10376293541461626880:65536",
+    "proxy": 5041584.580392157
+   },
+   {
+    "key": "10376293541461626896:131072",
+    "legal": 87,
+    "parent": "1297036692683751488:0",
+    "proxy": 5041584.580392157
+   },
+   {
+    "key": "10376293541461659648:32768",
+    "legal": 86,
+    "parent": "10376293541461626880:32768",
+    "proxy": 5041584.580392157
+   },
+   {
+    "key": "10376293541461757952:65536",
+    "legal": 88,
+    "parent": "10376293541461626880:65536",
+    "proxy": 5041584.580392157
+   },
+   {
+    "key": "10376293541462151168:32",
+    "legal": 89,
+    "parent": "10376293541461626880:32",
+    "proxy": 5041584.580392157
+   },
+   {
+    "key": "10376293541462671362:68719476736",
+    "legal": 88,
+    "parent": "1152921504607897600:536870912",
+    "proxy": 5041584.580392157
+   },
+   {
+    "key": "10376293541462671376:68719476736",
+    "legal": 86,
+    "parent": "1152939096793939968:536870912",
+    "proxy": 5041584.580392157
+   },
+   {
+    "key": "10376293541462673408:68719476736",
+    "legal": 86,
+    "parent": "1152921504606851584:536870912",
+    "proxy": 5041584.580392157
+   },
+   {
+    "key": "10376293541462675456:65536",
+    "legal": 89,
+    "parent": "10376293541461626880:65536",
+    "proxy": 5041584.580392157
+   },
+   {
+    "key": "10376293541462679552:68719476736",
+    "legal": 82,
+    "parent": "1152921504616284160:536870912",
+    "proxy": 5041584.580392157
+   },
+   {
+    "key": "10376293541478404096:32768",
+    "legal": 88,
+    "parent": "10376293541461626880:32768",
+    "proxy": 5041584.580392157
+   }
+  ]
+ }
+}
