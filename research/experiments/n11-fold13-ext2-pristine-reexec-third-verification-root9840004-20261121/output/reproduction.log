@@ -1,0 +1,105 @@
+n11-fold13-ext2-pristine-reexec-third-verification-root9840004-20261121 - reproduction.log
+(all times UTC 2026-11-21; third-verification harness battery record)
+
+03:00        Environment: fresh third-lane sandbox (python3 on remote exec
+             env).  Latest main re-fetched before any action; declaration-
+             time HEAD 0af2ac836a9442e76d1d27cc100ec6243440063c confirmed
+             (K1184 part 3/3).  Log listing (2026-11-21), experiment-dir
+             listing and recent commit listing showed no prior third-
+             verification of K1176; the newest main content was the K1184
+             fold12 third-verification publication and a 3-row q4 m=23
+             SAT subproblem commit.  Single-owner declaration note
+             published as commit 48c6c2c366c4023279272ced0bf5675726ea5e3d
+             (03:00:12Z); fetch-back byte-OK (6,340 bytes; cmp clean vs
+             local draft).
+03:02        Manual pin trial: 5 published files fetched from pinned commit
+             51d86169c1af5e7a880261e76c6f43ea7652d4d4 (part1 final, all
+             5 subject files present); all five SHA-256 == published values
+             (README 28e40ce3..., recon 1b54624f..., verifier aeda41e1...,
+             audit 4fe40fa2..., reproduction 224272ee...).
+03:03        Recon trial at ref_b 48c6c2c3: rc=0, W tree 31 files
+             (12 Git blob pins + 16 SHA-256 pins + fold11/fold12/fold13
+             chain machines), subset-check line
+             "subset-check fold11 pins 12 pin256 10 fold12 pins 12 pin256 13
+             subset of fold13 12+16 OK" verified, final line
+             "RECONSTRUCTED W at ... PINS 12 PIN256 16".
+03:04        Verifier trial: rc=0, 28.8 s wall, first line
+             "ALL 774 GATES PASS"; output audit sha256 4fe40fa254b4... and
+             byte-identical to published external-audit.json (81,632 bytes);
+             gate count 774, all_gates_pass true.  Verifier scratch is the
+             absolute pinned path /home/user/work/f13ext/runs (sequential
+             use only).
+03:05        Manual tamper probes on isolated copytree copies (1-byte
+             XOR 0x20 at the third-lane-chosen offsets):
+             worklist inputs/worklist.csv @222999 -> rc=1,
+             "GATE FAILED [i]: W blob pin inputs/worklist.csv", no audit
+             write (I-section legacy blob pin gate); K1108 certificate
+             k1108/certs/win8-root-00000000000000003800000009840004-
+             20261120.n11 @1111444 -> rc=1, "GATE FAILED [i]: W sha256 pin
+             k1108/certs/...", no audit write (I-section sha256 pin gate).
+             Aftermath recheck on the pristine production W: ALL 774
+             GATES PASS, audit byte-identical (worklist 360,834 bytes,
+             6d8a449e...; K1108 certificate 1,640,220 bytes, 5b114b9e...).
+             Tamper offsets are distinct from the publisher-tested
+             @117777/@777777 and from every other third/second lane's
+             offset groups @{7777,500000}/{253,17522}/{1234,17522,4096}/
+             {150000,654321} (fold12 third)/{200222,888222}/{208888,919191}/
+             {300111,740321}.
+03:07        Third-verification harness written
+             (verify_k1176_fold13ext2_third_20261121.py, 18,746 bytes,
+             stages pin/recon/rerun/tampers/finalize, stdlib only,
+             fail-closed).  Battery 1 (fresh base) full pipeline: pin 10
+             gates, recon 16 gates (two refs, 31 files each, diff -r clean),
+             rerun 19 gates (4 pristine verifier runs ALL 774 GATES PASS,
+             audit byte-identical to published and to run1), tampers 8
+             gates (XOR 0x01 @222999/@1111444 on isolated copies, fail-
+             closed, production W re-checked unchanged).  Finalize audit:
+             53 gates, 6,668 bytes, sha256
+             701bdfebab8b728d2b7f705e0837f5b625ae5e35bfff57a3990e4b4cee8342d6.
+             Battery 2 (same base, every stage re-run incl. republication
+             fetch) and battery 3 (isolated base + isolated cwd/HOME/TMPDIR
+             + PYTHONHASHSEED=random): both finalize audits byte-identical
+             to battery 1 (same sha256, cmp clean).
+03:1x        EXECUTION-ENVIRONMENT RESET INCIDENT: the remote execution
+             environment was reset mid-session and every local work
+             artifact (pubfetch, W trees, batteries, harness file) was
+             lost.  api.github.com core quota was already exhausted (403)
+             at that point; raw pinned-commit URLs were unaffected.
+03:2x        Full regeneration from the session record alone: harness
+             source re-typed from the recorded text and byte-count
+             cross-checked against the pre-reset file (18,746 == 18,746;
+             a stray 24-byte typo line inserted during re-typing was caught
+             by the byte-count cross-check and removed before any stage
+             run), then the complete battery was re-run from scratch in
+             fresh bases: battery 1' (fresh base, full pipeline incl. a
+             fresh republication fetch), battery 2' (same base re-run),
+             battery 3' (isolated base + PYTHONHASHSEED=random).  All
+             three regenerated finalize audits have sha256 701bdfeb...,
+             equal to the pre-reset recorded digest: six finalize audits
+             in total (3 pre-reset + 3 post-reset) are byte-identical.
+             The regenerated harness produced verifier timings 28.5-29.1 s
+             per pristine run (recon 1-6 s per ref).  This reset incident
+             therefore doubles as an unplanned cross-environment byte-
+             determinism check of the harness audit (fresh base, fresh
+             fetch, fresh scratch dir, same audit bytes).
+03:3x        Acceptance对照 (declaration note, 5 items):
+             (1) 5-file pin 10/10 gates PASS; (2) recon two refs both
+             rc=0, subset chain fold11(12+10) subset fold12(12+13) subset
+             fold13(12+16) machine-checked, W trees 31 files, diff -r
+             byte-identical, in every battery; (3) 4 pristine verifier
+             reruns per battery x 3 regenerated batteries (+1 pre-reset
+             battery = 16 total pristine runs incl. the two manual trials)
+             all rc=0, ALL 774 GATES PASS, audit byte-identical to the
+             published external-audit.json; (4) 2 fail-closed tampers at
+             third-lane offsets per battery (6 total; plus 2 manual XOR-0x20
+             probes) all rc!=0 with the correct GATE FAILED [i] message and
+             no audit write, production W unchanged after; (5) harness
+             audit byte-deterministic across 6 finalize executions in two
+             environment incarnations.  All five acceptance items PASS.
+             Rows closed: none.  11x11 empty board / two-stone roots /
+             S2 / class 1-2-4 verdicts: UNKNOWN, unchanged.
+03:3x        Publication part 1/3 (this commit): experiment dir 4 files
+             (README.md, scripts/verify_k1176_fold13ext2_third_20261121.py,
+             output/harness-audit.json, output/reproduction.log) pushed to
+             main as a single push_files commit; fetch-back byte
+             verification at the pinned commit follows in part 2 prep.
