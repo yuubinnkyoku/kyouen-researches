@@ -41,7 +41,7 @@
 ## 追記3（2026-11-21T14:50Z・第2波出版のsha確定）
 
 - コミット列追記: 実験dir+本log追記2を `06cb0caf` でpush、fetch-back byte検証 4/4 OK（mjs `d036bed9…`・output `7dc0be25…`・実験README・本log）。
-- push直前の境界観測（誠実記録）: `c20511db` と本pushの間に並走lane（s12/s13 session 1・knowledge README bullets K1204-K1206）のコミット `1045fb39` が介入していたが、対象は `research/knowledge/README.md` のみで本レーンの全経路と無衝突。本レーンの出版するや否や競合は発生せず、介入コミットは改変されていない。
+- push直前の境界観測（誠実記録）: `c20511db` と第2波pushの間に並走lane（s12/s13 session 1・knowledge README bullets K1204-K1206）のコミット `1045fb39` が介入していたが、対象は `research/knowledge/README.md` のみで本レーンの全経路と無衝突。pushは競合なく成功し、介入コミット側のファイルは改変されていない。
 - 以上で本レーンの全出版が完了。残務なし。108行backward-only の採否は引き続き証拠オーナー（reply27/focus/K0414系譜）に付託。
 
 **標準11×11空盤・二石root {60,27}・第三手100/108は本レーンの後も UNKNOWN のまま。**
