@@ -90,3 +90,53 @@ equalities re-verify against the published files noted above (fetch them from
 - All geometry is exact integer arithmetic; no floating point, no randomness.
 - K0827 is not updated by this batch (no witnesses found); this experiment and
   the session log are the record of the honest negative.
+
+## Batch 2 - restricted fresh 3-for-3 (in progress, checkpoint publication)
+
+Declared in `research/log/2026-11-21-seven-row-q4-band-m69-batch2-restricted-3edit-single-owner-note.md`
+(declaration HEAD `b1f82cc3`). Checkpoint of the same single-owner lane; the swept
+fraction is stated below and NO completed-neighborhood negative claim is made yet.
+
+- Search space: complete fresh 3-for-3 replacement neighborhoods (remove exactly 3
+  stones, add exactly 3 cells NOT in the base, within window columns x >= 52 at width
+  69; final shape exactly [3,3,3,3,3,3,2]) of all 199 published bases plus the
+  width-68 witness as seed, priority w65 -> w66 -> pool anchors -> w61..w64 -> w68witness.
+  A verified width-69 witness would move K0827 and the README headline to
+  M_{7,4} in [70, 1929].
+- Engine `scripts/enum_three.js`: exact integer geometry, reuses the pinned
+  `enum_two.js` Board unchanged. Safety case split complete ({1 add + 3 kept}
+  skip-masked badT, {2 add + 2 kept} badP, {3 add + 1 kept} direct 4x4 determinant
+  without growing the shared curve cache, base-safety precondition). Maximality case
+  split complete over EVERY deficient-row empty cell including removed base cells:
+  {3 kept} remBlocked, {1 add + 2 kept} coverBy recorded for all targets (a deliberate
+  difference to pinned fresh-mode enum_two, whose occupied-target skip was immaterial
+  for batch 1 because the holes superset run also returned 0), {2 add + 1 kept} key3
+  curve marks, {3 add} determinant.
+- Calibration (11 controls, all PASS, `output/w69/three/calibration.json`, runner
+  `scripts/three_control.js`):
+  A positive known-answer: the published width-68 witness is re-found via the
+  holes-refill control mode at window x >= 52 (24,657 / 13,954 / 7 maximal,
+  including the published witness itself);
+  B window negative x >= 56 (0 re-found; 770 / 256 / 1);
+  C unsafe-base guard throws; D determinism (counters + witnesses byte-equal across
+  reruns); E fresh-mode join run (20,128 / 11,737 / 0);
+  F all emitted witnesses pass the independent brute 4x4-determinant + triple-curve
+  maximality re-judge (7/7);
+  G window monotonicity (all B counters <= corresponding A counters);
+  H naive independent exhaustion cross-check at window x >= 56: 31,932 holes combos
+  and 27,072 fresh combos fully re-judged by the brute third-system verifier, maximal
+  sets exactly equal to the engine's in both modes;
+  I fresh structural invariant |final & base| = 17 (in fresh mode a 3-edit candidate
+  cannot degenerate to 2-for-2; also asserted at production save time).
+- Driver `scripts/sweep_three.js`: budget-chunked with per-base append to
+  `output/w69/three/results.jsonl` and resumable `output/w69/three/state.json`;
+  budget-exceeding bases are deferred to escalated retries. Checkpoint totals at push
+  time: 19/200 bases completed (w65 family first), 56,663,096 triples examined /
+  43,160,550 safe / 0 safe maximal row-deficient candidates; 0 brute-verification
+  failures.
+- Honest scope: fresh 3-for-3 within window x >= 52 only; the sweep is NOT complete at
+  this checkpoint and no absence claim is made; declared tier x >= 48 and the batch-1
+  independent-verification gates for any found witness remain open.
+- Reproduction: `node scripts/three_control.js`, then
+  `node scripts/sweep_three.js --budget-ms 160000 --max-bases 4` repeated until
+  `state.json: complete = true`.

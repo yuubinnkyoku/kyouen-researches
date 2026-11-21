@@ -1,0 +1,184 @@
+{
+ "controls": {
+  "A_positive_refind_x52": {
+   "pass": true,
+   "detail": {
+    "counters": {
+     "triples": 24657,
+     "safe": 13954,
+     "shape": 0,
+     "maximal": 7,
+     "ms": 1130
+    },
+    "refound": true
+   }
+  },
+  "B_window_negative_x56": {
+   "pass": true,
+   "detail": {
+    "counters": {
+     "triples": 770,
+     "safe": 256,
+     "maximal": 1,
+     "ms": 560
+    }
+   }
+  },
+  "C_unsafe_base_guard": {
+   "pass": true,
+   "detail": {
+    "threw": true,
+    "threwMsg": "unsafe base"
+   }
+  },
+  "D_determinism": {
+   "pass": true,
+   "detail": {
+    "ms_first": 1130,
+    "ms_second": 733
+   }
+  },
+  "E_fresh_info_x52": {
+   "pass": true,
+   "detail": {
+    "counters": {
+     "triples": 20128,
+     "safe": 11737,
+     "shape": 0,
+     "maximal": 0,
+     "ms": 884
+    }
+   }
+  },
+  "F_bruteforce_all_witnesses": {
+   "pass": true,
+   "detail": {
+    "verified": 7,
+    "bad": []
+   }
+  },
+  "G_window_monotonicity": {
+   "pass": true,
+   "detail": {
+    "A": {
+     "triples": 24657,
+     "safe": 13954,
+     "maximal": 7
+    },
+    "B": {
+     "triples": 770,
+     "safe": 256,
+     "maximal": 1
+    }
+   }
+  },
+  "H_naive_exhaustion_holes_x56": {
+   "pass": true,
+   "detail": {
+    "naive_combos": 31932,
+    "naive_maximals": 1,
+    "engine_maximals": 1,
+    "ms": 1275
+   }
+  },
+  "H_naive_exhaustion_fresh_x56": {
+   "pass": true,
+   "detail": {
+    "naive_combos": 27072,
+    "naive_maximals": 0,
+    "engine_maximals": 0,
+    "ms": 962
+   }
+  },
+  "I_fresh_diff3_invariant": {
+   "pass": true,
+   "detail": {
+    "checked": 0,
+    "note": "structural: fresh additions exclude all base cells, so |final ∩ base| = 17 by construction; asserted on save in production"
+   }
+  }
+ },
+ "pass": true,
+ "w68_published_sorted": [
+  [
+   5,
+   5
+  ],
+  [
+   13,
+   5
+  ],
+  [
+   14,
+   2
+  ],
+  [
+   14,
+   6
+  ],
+  [
+   18,
+   4
+  ],
+  [
+   23,
+   0
+  ],
+  [
+   24,
+   0
+  ],
+  [
+   25,
+   3
+  ],
+  [
+   28,
+   2
+  ],
+  [
+   30,
+   3
+  ],
+  [
+   36,
+   4
+  ],
+  [
+   39,
+   3
+  ],
+  [
+   42,
+   6
+  ],
+  [
+   43,
+   4
+  ],
+  [
+   44,
+   0
+  ],
+  [
+   46,
+   2
+  ],
+  [
+   51,
+   1
+  ],
+  [
+   52,
+   1
+  ],
+  [
+   57,
+   1
+  ],
+  [
+   57,
+   5
+  ]
+ ]
+}
