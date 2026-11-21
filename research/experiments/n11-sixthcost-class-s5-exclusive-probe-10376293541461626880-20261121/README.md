@@ -1,4 +1,4 @@
-# n11-sixthcost-class-s5-exclusive-probe-10376293541461626880-20261121 (checkpoint state: batch halted on a fresh WIN at k02)
+# n11-sixthcost-class-s5-exclusive-probe-10376293541461626880-20261121 (checkpoint state: resumption batch halted on a second fresh WIN at k03; all batch verdicts unconsumed)
 
 Exclusive single-live-parent S5 probe batch for the sixth-cost candidate class
 `10376293541461626880:65536` (coverage {80, 84, 100, 108}),
@@ -86,6 +86,55 @@ pre-registered WIN stopping rule:
   times and the output is byte-identical to the published
   `output/win-finding-ifadopted.json` (sha256 `39ae0e8d...`) on both runs. The
   fetch-back byte audit of the Part 2 commit passed by git blob SHA-1 (12/12 files).
+
+## Checkpoint at k03 (resumption batch): halted on a SECOND fresh WIN (verdicts NOT consumed)
+
+The resumption session re-declared first
+(`research/log/2026-11-21-n11-sixthcost-class10376293541461626880-exclusive-s5-probe-resume-k03-k43-single-owner-note.md`):
+selector re-execution on the resumption host, ALL 229 fail-closed gates PASS under the
+sha-pinned inputs, regenerated selection JSON byte-identical to the published one
+(sha256 `d5e9b059...`), regenerated k03..k43 batch inputs byte-identical, and the
+validation gate 4/4 node-exact ON the resumption host
+(`input/val-gate/`; `replay,0,5,98,0,2000000,0,2000000` x2, `replay,0,5,98,0,15000000,2,3651923`,
+`replay,0,5,99,0,15000000,2,5040200`). At composition time the chain tip was still
+`bb4495e0...` (5,793 rows; the fourth-cost pass-1 has published raws only).
+
+The ladder then ran k03 only and the pre-registered WIN stopping rule fired again:
+
+- k03 `10376293541461626880:65792` (machine order position 3; band 5,041,585 proxy;
+  legal 81): 2M UNKNOWN (result 0, nodes 2,000,000), then **WIN(1)** at 15M with
+  **nodes 9,255,414 on both independent cold runs** (`at15m-run1-k03.out.csv`,
+  `at15m-run2-k03.out.csv`), PLUS a voluntary third cold verification run with identical
+  (result, nodes) (`at15m-run3-verify-k03.out.csv`, honestly labeled beyond the declared
+  pair). Batch halted per pre-registered rule (1): k04..k43 NOT started this session.
+- Verdicts are NOT consumed: no cache increment, no class-status change, no coverage
+  claim. This adds a THIRD unconsumed batch row (k01 LOSS, k02 WIN, k03 WIN); the
+  sixth-cost class now has TWO unconsumed fresh WIN children.
+- `output/win-finding-ifadopted-k03.json` (script `scripts/analyze_win_finding_k03.py`,
+  117 fail-closed gates, deterministic byte-identical output, negative control fails
+  closed) computes TWO IF-ADOPTED scenarios against the pinned chain base `bb4495e0...`:
+  (A) k03-only: exactly two classes UNKNOWN->WIN, the sixth-cost class and the
+  NON-candidate class `1297319267171041280:0` (coverage {48, 50, 80, 84}; the k03
+  membership class `1297036692683751424:64` is already base-stage WIN, no flip);
+  (B) all three unconsumed rows: three classes flip (adding
+  `1297037792211107840:0`, the k02 non-candidate flip). In BOTH scenarios:
+  live candidate classes 62 -> 61, secured third-move coverage UNCHANGED at 117/119
+  (remaining {100, 108}), no class becomes LOSS. NOT a coverage event and NOT a route
+  to the root certificate; the sixth-cost class is WIN-eliminated as a LOSS-completion
+  route for moves {100, 108}.
+- Adoption requirement for k03, same WIN-row precedent: pinned C++
+  second-implementation verification, target
+  `target,0,5,10376293541461626880,65792,81,0,0,0,0,0` @15,000,000 (expected result 1,
+  nodes 9,255,414). No C++ toolchain in this sandbox
+  (re-verified this session), so this verification is delegated and recorded; any later
+  C++ disagreement fails closed in favor of discarding the row. The concurrent
+  third-implementation verdict re-verification (declared 20:45Z, `ceb4eed71`; targets
+  published rows of this lane's claimed keys) did not include k03 at its declaration
+  time and its program extends only with a fresh declaration.
+- k01 remains the only solved-LOSS row of this batch; published bin prior
+  (`bin_prior_all_loss_index` 0.34616 from the class-closure-priority measurement) is
+  mixed, not LOSS-only, consistent with WIN rows appearing in the low-proxy band
+  (k02, k03 both within the 5,041,585 band).
 
 Inputs and consumed pins (sha-verified, not duplicated here):
 

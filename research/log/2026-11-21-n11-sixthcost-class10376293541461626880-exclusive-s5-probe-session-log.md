@@ -98,3 +98,62 @@ second-implementation verification, not a consumed class verdict.
    resume the ladder (k03..k43) with a fresh declaration-check pass.
 3. On full-batch completion: `output/probe-audit.json`, merged cache increment,
    SHA-256 manifest per the declaration's publication plan.
+
+## Session 3 (resumption batch k03..k43, 2026-11-21 ~21:37Z): WIN at k03 after one key, batch halted again
+
+Environment: fresh execution host this session (2 cores, Node v22.20.0, Python 3.12.14);
+no C++ toolchain (re-verified); package installation forbidden; unauthenticated
+raw.githubusercontent.com answered throughout this session.
+
+1. Re-fetch of latest main before any work: HEAD `ac118f45f2` (then re-checked twice:
+   `73cb82bd6`, and at declaration push the parent had moved again; the parallel
+   third-implementation re-verification note `ceb4eed71` (20:45Z) and the fourth-cost
+   pass-1 raws (`b1a3dfbd3`) are disjoint from the k03..k43 resumption and no newer S5
+   chain increment exists: chain tip still `bb4495e0...` 5,793 rows).
+2. Declaration-check pass before the ladder (as required for resumption):
+   `scripts/select_sixth_exclusive.py` re-run unmodified: ALL 229 gates PASS;
+   regenerated selection JSON byte-identical to the published one (sha256 `d5e9b059...`);
+   regenerated k03..k43 input CSVs byte-identical to the published batch inputs;
+   validation gate re-run on THIS host: 4/4 node-exact (only wall_s differs).
+3. Resumption single-owner declaration published
+   (`research/log/2026-11-21-n11-sixthcost-class10376293541461626880-exclusive-s5-probe-resume-k03-k43-single-owner-note.md`).
+4. Ladder start at k03 `10376293541461626880:65792` (machine position 3, legal 81):
+   2M UNKNOWN (result 0, nodes 2,000,000, 9s); 15M run1 **WIN(1) nodes 9,255,414**
+   (49s); pre-registered WIN stopping rule fired immediately; determinism pair closed
+   with run2 15M **WIN(1) nodes 9,255,414** (48s) identical; voluntary third cold
+   verification run 15M **WIN(1) nodes 9,255,414** (48s) identical, honestly labeled
+   beyond the declared pair. k04..k43 NOT started this session.
+5. If-adopted analysis `scripts/analyze_win_finding_k03.py` (117 fail-closed gates,
+   cp of the published k02 analyzer extended with two scenarios): two runs
+   byte-identical (sha256 `b0d2498b...` for `output/win-finding-ifadopted-k03.json`);
+   negative control (one raw node count tampered by -1) fails closed at gate
+   `k03_15m_pair`; restored raw re-verified byte-identical and the analysis re-PASSes.
+   Scenario A (k03 only): 2 classes flip UNKNOWN->WIN (sixth-cost class 10376293541461626880:65536
+   and NON-candidate 1297319267171041280:0 {48,50,80,84}); the k03 membership class
+   1297036692683751424:64 is already base-stage WIN (no flip). Scenario B (k01+k02+k03):
+   3 classes flip (adding 1297037792211107840:0 {24,30,80,84}, the k02 flip). Both:
+   live 62->61, secured third-move coverage unchanged 117/119, remaining {100,108}
+   unchanged, no class to LOSS, no coverage event, no root route. The sixth-cost class
+   would hold TWO fresh WIN children (k02, k03).
+6. Publication: raws + status.log + analyzer + analysis JSON + README checkpoint
+   section + this log appendix in one commit; pre-push SHA-256 gate on all files;
+   fetch-back byte audit by git blob SHA-1 at the pushed commit.
+
+verdict consumption state (unchanged in kind): k01 LOSS / k02 WIN / k03 WIN are ALL
+still unconsumed replica raw rows; adoption of any of them stays gated on the delegated
+pinned C++ second-implementation verification, and the concurrent third-implementation
+re-verification is additional evidence only; judgment stays with the scrutiny owner.
+
+## Next steps (for a later session of this lane)
+
+1. C++ second-implementation verification of the three raw rows (delegated; targets
+   listed in the README k03 checkpoint section; any disagreement fails closed).
+2. The third-implementation re-verification lane (in flight since 20:45Z) may fold the
+   k01/k02/k03 rows into its program only with a fresh declaration covering them.
+3. Resumption of k04..k43 requires a fresh declaration-check pass (selector re-run
+   against the then-latest chain caches and claim sets); note that TWO WIN rows now
+   sit unconsumed in this class's exclusive children, so the batch outcome evidence
+   should be weighed by the scrutiny owner first.
+4. On eventual full-batch completion: `output/probe-audit.json`, merged cache
+   increment, SHA-256 manifest per the parent declaration's publication plan
+   (WIN rows only with their C++ gate passed).
