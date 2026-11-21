@@ -1,0 +1,188 @@
+{
+  "schema": "n11-residual72-worker-partition-candidate-20261121-v1",
+  "date": "2026-11-21",
+  "status": "exploratory-geometric-partition-candidate",
+  "source": {
+    "main_commit": "c74dfd0c0b2c8795236e3064153531f5c7452d01",
+    "path": "research/experiments/n11-residual72-36root-three-ply-frontier-20261120/output/36-root-three-ply-frontier-20261120.json",
+    "sha256": "94fdb0c6e3503f1e9d19aaaf345f4478157c5a44374f10642c52325f346c2023",
+    "git_blob_sha1": "730bc378f93c0de8a2ac1bf7941941e4d5a24798",
+    "bytes": 53914
+  },
+  "algorithm": {
+    "name": "deterministic simulated annealing",
+    "seed": "0xD41F11",
+    "restarts": 10,
+    "swaps_per_restart": 120000,
+    "randomization_swaps_after_first_start": 500,
+    "balance_constraint": "D4-membership load spread <= 8%",
+    "objective": "minimize pairwise 10-stone D4 overlap across workers",
+    "temperature": "45 * 0.01^(iteration / 120000) + 0.05",
+    "global_optimum": false,
+    "search_reproduction_in_script": false
+  },
+  "baseline": {
+    "worker_roots": "roots[W::4]",
+    "root_counts": [
+      9,
+      9,
+      9,
+      9
+    ],
+    "cross_worker_pairwise_overlap": 4193,
+    "within_worker_pairwise_overlap": 1242,
+    "cross_worker_pair_count": 175,
+    "loads": {
+      "d4": [
+        181882,
+        190739,
+        178529,
+        182650
+      ],
+      "raw10": [
+        181902,
+        190756,
+        178547,
+        182650
+      ]
+    },
+    "load_spread_percent": {
+      "d4": 6.655764513491415,
+      "raw10": 6.65472061919589
+    }
+  },
+  "candidate": {
+    "root_groups": [
+      [
+        "00000000000000003800000008003100",
+        "00000000000000801202040020001000",
+        "00000000000000821082000000001010",
+        "00000000000000821082800000000008",
+        "00000000000000821083000000000800",
+        "00000000000000909002000080001000",
+        "00000000000000919002000000100000",
+        "00000010000000003820000008001000",
+        "00000010000008801202000000000200"
+      ],
+      [
+        "00000000000000003800000008001820",
+        "00000000000000003800000008540000",
+        "00000000000000043800000008900000",
+        "00000000000000083800020008100000",
+        "00000000000000801202000000089000",
+        "00000000000000889002000000100400",
+        "00000000000040809002400000100000",
+        "00000000010000809002000800100000",
+        "00000010000000801202000200000400"
+      ],
+      [
+        "00000000000000003800000209000004",
+        "000000000000000038000002c8000000",
+        "00000000000000003800000409040000",
+        "00000000000000043800200009000000",
+        "00000000000000801212000001000100",
+        "00000000000084003800000048000000",
+        "00000000010000809002000040000001",
+        "00000000020000801202000200100000",
+        "00000000020008003800000009000000"
+      ],
+      [
+        "00000000000000043800000008080010",
+        "00000000000000103800000028080000",
+        "000000000000008012020000008c0000",
+        "00000000000000801222000000800200",
+        "00000000000000889002000080000001",
+        "00000000000000a09002000480000000",
+        "00000000000020809042000080000000",
+        "00000000000080801202000000800100",
+        "00000000010000809002000080000040"
+      ]
+    ],
+    "root_counts": [
+      9,
+      9,
+      9,
+      9
+    ],
+    "cross_worker_pairwise_overlap": 2000,
+    "within_worker_pairwise_overlap": 3435,
+    "cross_worker_pair_count": 140,
+    "loads": {
+      "d4": [
+        178867,
+        188746,
+        189979,
+        176208
+      ],
+      "raw10": [
+        178922,
+        188746,
+        189979,
+        176208
+      ]
+    },
+    "load_spread_percent": {
+      "d4": 7.506677568819842,
+      "raw10": 7.506114968215792
+    },
+    "crossworker_share_of_pairwise_overlap_percent": 36.79852805887764
+  },
+  "comparison": {
+    "total_pairwise_overlap": 5435,
+    "cross_worker_overlap_reduction_percent": 52.30145480562843,
+    "baseline_crossworker_share_percent": 77.14811407543698,
+    "one_swap_check": {
+      "feasible_swaps": 222,
+      "improving_swaps": 0,
+      "best_neighbor_score": 2000,
+      "local_optimum_under_constraint": true
+    }
+  },
+  "checks": [
+    {
+      "name": "source blob and SHA pin",
+      "pass": true
+    },
+    {
+      "name": "36 roots assigned exactly once",
+      "pass": true
+    },
+    {
+      "name": "9 roots per worker",
+      "pass": true
+    },
+    {
+      "name": "baseline matches published summary",
+      "pass": true
+    },
+    {
+      "name": "candidate overlap audited",
+      "pass": true
+    },
+    {
+      "name": "pairwise overlap conservation",
+      "pass": true
+    },
+    {
+      "name": "candidate D4 load spread <=8%",
+      "pass": true
+    },
+    {
+      "name": "candidate raw10 load spread <=8%",
+      "pass": true
+    },
+    {
+      "name": "no feasible one-swap improvement",
+      "pass": true
+    }
+  ],
+  "check_count": 9,
+  "all_pass": true,
+  "interpretation_guard": [
+    "Geometric overlap only; not actual DFPN transposition-table hits.",
+    "A shared D4 class does not imply equal search depth or reusable proof boundary.",
+    "This is a heuristic partition candidate, not a globally optimal assignment.",
+    "Do not change the active 36-root depth-10 sweep assignment before actual TT-hit measurements.",
+    "The full 10-stone class-membership regeneration attempt timed out; no exact per-worker class-copy count is claimed."
+  ]
+}

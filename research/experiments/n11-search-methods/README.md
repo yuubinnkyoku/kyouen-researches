@@ -18,3 +18,7 @@ chronologicalな発見・判断は[log](../../log/README.md)、旧統合・計�
 
 未知11盤のprobe・sweep workflowはworkflow_dispatchからの明示的な起動に限定します。構造整理のpushでは開始しません。
 通常pushに残すhybrid-regressionは既知の小盤を検査します。
+
+## Exploratory worker-allocation study
+
+- [36-root worker partition candidate](../n11-residual72-worker-partition-candidate-20261121/README.md): pairwise three-ply D4 overlap allocation heuristic; no active sweep changes.
