@@ -135,3 +135,74 @@ claims 更新（band 4..23・M ∈ [24,69]）・knowledge README の K1183 bulle
 4. records.jsonl 29レコード化（+3: m23 row1-lexHV SAT 対照・m24 row1-lexHV INDET・
    m24 row0-lexH INDET）。claims は不変（[24,69]）。実験 README/K1183 item の
    m=24 探索記録と records 計数のみ更新（本コミット）。
+
+## 続報3（行和63分割: m=23 外側行 witness と m=24 P(24)・05:20-06:55Z）: witness band 4..23 の終端確定
+
+1. **行和分割の設計（session2 part1-4 出版済み・ここまでの経緯をまとめる）**:
+   安全配置では水平線が禁止曲線（q=4 では同行4点で成立）のため各前行の石数は
+   q−1 = 3 以下。よって行欠損極大 witness の行和3つ組 (r0,r1,r2) は
+   {0..3}^3 ∖ {(3,3,3)} の63通り。**row-k piece**（sat3.js rowfixed-kex:
+   --rowY=Y --kex=K で行 Y の石数を厳密に固定。行0・行1 × K∈{0,1} の4件で
+   石数 {0,1} を含む48通りを殺す）と **row-sum piece**（sat4.js rspec:
+   3行の石数を完全指定。残り15通りを12件で殺す〔lexH piece は V 鏡像 triple を
+   同時に反証・V 不変性の機械検査つき〕）で63通りを exactly-once 被覆
+   （partition_closure.py の機械検査・台帳 partition_closure.json・pending 0・
+   uncovered 0）。sat3/sat4 は four-row lane 正本 sat2.js（md5 282ae832）の
+   w=3 代入に piece 条件を加えた派生で、CNF 生成は決定論的。
+2. **m=23 外側行欠損 witness（part1 で出版）**: 同型の48分割（row-k 2件 +
+   row-sum 16件）で (2,3,3) piece が SAT。8石 witness・rows [2,3,3]・
+   coord `5:0,21:0,9:1,12:1,15:1,10:2,12:2,13:2`（wit_3x23_outer_4.witness.json・
+   sat.js verifyConfig + verify34.py 2系統検証 PASS）。**m=23 では中央行系・
+   外側行系の両方で witness が存在する。**
+3. **m=24 は witness-free（P(24)）**: 63分割16 piece が全 UNSAT
+   〔決定打 (2,3,3) 2,671,271 conflicts@476.10s〕→ **witness band は 23 で
+   終端・witness-free 幅は {24}**。P の単調性はないため m≥25 での witness 復活は
+   否定されず、M_{3,4} ∈ [24,69] 不変（残る不確定幅は 25..68の44幅）。
+4. **witness-free 判定の解釈規約**: m=24 は witness 検証方式ではなく
+   台帳検査方式（63 triple の piece 被覆・verdict 機械検査）。SAT 側と違い
+   witness を検証器に通す経路がないため、被覆の完全性（exactly-once・pending 0）
+   が正しさの条件。
+5. **cover 構造分析（part2-4で出版済み）**: witness の被覆円の家族分類
+   （families.json・A/B/C/D identity checks・analyze_cover.py/verify_families.py）・
+   master 判別式の exact-rational 恒等検証（master_cover_identity.py・2,124 checks
+   0 mismatch）・S/X/Y 剰余パリティ補題の機械完証明（parity_lemmas.py・
+   witness 794円スキャン 0違反）。m=24 で被覆破綻が確定した今、これらを一般計数に
+   繋ぐのが最有望の解析方向。
+6. **第二環境での独立 bit-exact 再検証（part5/5 引継ぎ・本セッション）**:
+   session2 が part4/5 (f)（06:03-06:04）で沈黙したため part5/5 を引継ぎ、
+   m24 16 piece + m23 外側 18 piece + 較正 sat3 cal23 rowY=1 kex=2 piece
+   （SAT 319,199 conflicts で wit_3x23 型 witness 再生・verify34 PASS）の計35 run を
+   第二環境で同一 pin 器材から CNF 再生成（md5 台帳は records.jsonl 参照）・
+   pinned kissat 4.0.4 で再実行した。**全ピースの verdict と conflicts が出版台帳
+   （partition_closure.json・README/K1183 記載値）と bit-exact 一致**
+   〔決定打 (2,3,3) m24 = 2,671,271@445.76s〔第一環境 476.10s〕・
+   (3,2,3) = 1,117,137・(3,2,2) = 153,096・(2,3,2) = 121,085・
+   m23 (2,3,2) = 94,415・m23 (2,2,3) = 133,939・
+   m23 (2,3,3) SAT = 1,004,683@138.34s 等・35件全て〕。SAT piece は witness が同一再生
+   （m23 (2,3,3) の再 run は published wit_3x23_outer_4 と同一 witness を
+   bit-exact conflicts で再生）。決定論的 solver の全ピース conflicts の完全再現は
+   CNF 再生成の byte 同一性の強い経験的証拠（数学的証明ではなく報告レベル）。
+7. **交差符号化対照3件**: (2,2,2)（16,004 conflicts@9.41s）と (3,2,3)
+   （1,724,972 conflicts@420.33s）を --lex=H 単独の別 CNF で再判定して同一 UNSAT
+   〔primary は lexHV〕、m23 (2,3,3) の V鏡像 rspec (3,3,2) を別 CNF で再判定して
+   SAT（487,095 conflicts@88.95s・witness `10:0,12:0,13:0,9:1,12:1,15:1,5:2,21:2`
+   = published witness の V鏡像・rows [3,3,2]・sat.js verifyConfig + verify34.py 2系統 PASS）。**UNSAT 分割の符号化独立性の初の実証**（HV→H の対照）と
+   **SAT piece の V鏡像転送の健全性の陽性対照**（台帳の V鏡像転送被覆の意味論が
+   正しく SAT↔SAT で対応することの確認。UNSAT 側の V転送〔m24 (3,3,2) を
+   (2,3,3) piece から殺す部分〕は直接の対照実験を欠くまま台帳の意味論に依存する）
+   を成立させた。
+8. **make_records.py の erratum・拡張**: part4/5 (f) で出版した旧版は
+   V鏡像注記のフォーマットバグ（'(%d,2,%d)' に引数2つ→TypeError）で lexH piece
+   を含む実行が落ちる状態だった。修正して ((%d,%d,%d), (c,b,a)) に直し、決定打
+   (2,3,3) entry と交差対照3件を追加、さらに SAT verdict piece に witness 抽出
+   （extract_witness.js）と2系統検証（verify34.py）を自動実行してレコードに
+   witness_stones/witness_coord/verify_js/verify_py を含めるように拡張
+   （SAT レコードが自己完結する。全 piece 2系統検証 PASS を確認してから
+   records.jsonl を組立）。
+9. **records 増分**: records.jsonl 29→67〔24 SAT + 35 UNSAT + 8 INDET〕。
+   README.md・K1183 item・knowledge README の K1183 bullet（K1177 precedent の
+   更新注記形式に準拠）を witness-free 幅 {24}・P(24) に更新（本コミット）。
+10. **次課題**: (a) m=25 の同一16-piece 分割掃引〔決定打型 (2,3,3) piece は
+    m=24 で 476s・m=25 では数倍が見込まれるため単独バックグラウンドで増分出版〕、
+    (b) S/X/Y パリティ補題と家族分類の一般計数への昇格（m=24 破綻の証明的理解）、
+    (c) 行→幅単調性（m=24 の反証が m≥25 に継承される条件・e.g. 列surgery）。

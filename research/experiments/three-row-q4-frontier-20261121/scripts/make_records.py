@@ -3,7 +3,7 @@
 m=24/m=23 piece runs from kissat run logs (deterministic; md5s from generated CNFs).
 Output: records_append.jsonl on stdout.
 """
-import json, hashlib, re, sys, os
+import json, hashlib, re, sys, os, subprocess
 
 BASE = sys.argv[1] if len(sys.argv) > 1 else '/home/user/work/fastlane/q34'
 SOLVER = 'kissat-4.0.4-linux-amd64 md5 3a5eba830aa6008a604fcc9bbe99a325'
@@ -41,6 +41,26 @@ def parse_run(out_path, cap_sec):
         pt = float(mo.group(1))
     return v, rc, conf, pt
 
+def sat_witness(out_rel, m):
+    """For SAT runs: extract the model from the kissat v-lines, verify with
+    both systems (sat.js verifyConfig via extract_witness.js, and verify34.py
+    independent geometry), and return the witness record fields."""
+    out_abs = os.path.join(BASE, out_rel)
+    scripts_dir = os.path.join(BASE, 'scripts')
+    r1 = subprocess.run(['node', os.path.join(scripts_dir, 'extract_witness.js'), out_abs, '3', str(m), '4'],
+                        capture_output=True, text=True, check=True)
+    d1 = json.loads(r1.stdout.strip().splitlines()[-1])
+    coord = d1['coord']
+    r2 = subprocess.run([sys.executable, os.path.join(scripts_dir, 'verify34.py'), '3', str(m), '4', coord],
+                         capture_output=True, text=True, check=True)
+    d2 = json.loads(r2.stdout.strip().splitlines()[-1])
+    if not d1['verify'].get('ok'):
+        raise SystemExit('verify_js failed for %s' % out_rel)
+    if d2.get('pass') != 1:
+        raise SystemExit('verify_py failed for %s' % out_rel)
+    return {'witness_stones': d1['stones'], 'witness_coord': coord,
+            'verify_js': 'ok', 'verify_py': 'pass'}
+
 MODELEX = {'HV': 'lexHV', 'H': 'lexH', None: 'plain'}
 
 def rec(m, mode, enc, cnf, out, cap, extra):
@@ -60,6 +80,8 @@ def rec(m, mode, enc, cnf, out, cap, extra):
     else:
         r['conflicts'] = conf
     r.update(extra)
+    if r['verdict'] == 'SAT':
+        r.update(sat_witness(out, m))
     return r
 
 def main():
@@ -80,7 +102,7 @@ def main():
     # m=24 calibration sat3 (m=23 row1 kex2 lexH SAT)
     R.append(rec(23, 'rowfixed-kex', 'lexH', 'cnf3/cal23_row1_k2_lexH.cnf', 'runs/cal23_k2.out', None,
                  {'rowY': 1, 'kex': 2, 'lex': ['H'],
-                  'note': 'sat3 calibration: witness band width m=23 exactly-2 piece is SAT (H-reflection of published wit_3x23). verify34 PASS.',
+                  'note': 'sat3 calibration: witness band width m=23 exactly-2 middle-row piece is SAT (same rowY=1/kex=2 subproblem kind that decided the band; fresh witness with the same rows [3,2,3] profile). verify34 PASS.',
                   'verdict': 'SAT', 'rc': 10}))
     # m=24 sum pieces (sat4 rspec)
     for (a, b, c, lexmode, cnf, out, wall, note) in [
@@ -95,11 +117,12 @@ def main():
         (3, 2, 2, 'lexH', 'cnf4/r24_r1k2_s32.cnf', 'runs/r24_r1k2_s32.out', 200, 'second cap after 45s INDET (68077)'),
         (3, 2, 3, 'lexHV', 'cnf4/r24_r1k2_s33.cnf', 'runs/r24_r1k2_s33.out', 6000, None),
         (2, 3, 2, 'lexHV', 'cnf4/r24_s232.cnf', 'runs/r24_s232.out', 260, None),
+        (2, 3, 3, 'lexH', 'cnf4/r24_s233.cnf', 'runs/r24_s233.out', None, 'decisive m=24 outer-plane piece (deciding run 476.10s)'),
     ]:
-        vx = 'V-mirror simultaneously refutes (%d,2,%d)' % (c, a) if lexmode == 'lexH' and a != b else None
+        vx = 'V-mirror simultaneously refutes (%d,%d,%d)' % (c, b, a) if lexmode == 'lexH' and a != b else None
         n = note or ('m=24 row-sum partition piece (r0,r1,r2)=(%d,%d,%d)' % (a, b, c))
         if vx:
-            n += '; also refutes ' + vx
+            n += '; ' + vx
         R.append(rec(24, 'rowsum-partition', MODELEX[{'lexHV': 'HV', 'lexH': 'H'}[lexmode]], cnf, out, wall,
                      {'rspec': {'0': a, '1': b, '2': c}, 'lex': ['H', 'V'] if lexmode == 'lexHV' else ['H'],
                       'note': n}))
@@ -122,6 +145,16 @@ def main():
         R.append(rec(23, 'rowsum-partition', 'lexHV' if b == 2 else 'lexH', cnf, out, cap,
                      {'rspec': {'0': 2, '1': a, '2': b}, 'lex': ['H', 'V'] if b == 2 else ['H'],
                       'note': n}))
+    # --- cross-encoding controls (added 2026-11-21 session: UNSAT/SAT交叉符号化対照) ---
+    R.append(rec(24, 'rowsum-partition', 'lexH', 'cnf4/x_r24_s222_lexH.cnf', 'runs/x_r24_s222_lexH.out', None,
+                 {'rspec': {'0': 2, '1': 2, '2': 2}, 'lex': ['H'],
+                  'note': 'cross-encoding UNSAT control: (2,2,2) re-decided with lex=H only (primary run used lex=H,V); verdict agrees (UNSAT)'}))
+    R.append(rec(24, 'rowsum-partition', 'lexH', 'cnf4/x_r24_s323_lexH.cnf', 'runs/x_r24_s323_lexH.out', None,
+                 {'rspec': {'0': 3, '1': 2, '2': 3}, 'lex': ['H'],
+                  'note': 'cross-encoding UNSAT control: (3,2,3) re-decided with lex=H only (primary run used lex=H,V); verdict agrees (UNSAT)'}))
+    R.append(rec(23, 'rowsum-partition', 'lexH', 'cnf4/x_r23_s332_lexH.cnf', 'runs/x_r23_s332_lexH.out', None,
+                 {'rspec': {'0': 3, '1': 3, '2': 2}, 'lex': ['H'],
+                  'note': 'V-image SAT control of the m=23 outer piece (2,3,3): rspec (3,3,2) is its vertical mirror; SAT with the V-mirrored witness'}))
     for r in R:
         print(json.dumps(r, sort_keys=False))
 
