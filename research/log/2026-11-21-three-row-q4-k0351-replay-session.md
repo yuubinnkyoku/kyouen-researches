@@ -37,4 +37,11 @@
 2. K1183 の m≥32 治具レーンとの接続通知: 彼らの完了時に K1183 の title 更新と併せて K1203 リコンサイルを反映するのは m28 レーン所有者。
 3. 高速レーンの別価値課題に着手可（4×m q=8・3×m q=5/q=4 など）。本レーンは M_{3,4} を確定した値として扱う（以後の3行 q=4 作業は M=24 を前提としてよい）。
 
+## push 記録（2026-11-21T13:40Z）
+
+- 実験dir 16ファイル・宣言ノート・K1203 item・本log を main に直接 push（branch/PR なし・新規パスのため競合不可能）。
+- コミット列: `afed8373`（宣言ノート）→ `9e344988`（docs+scripts）→ `722ef427`（sweeps+audits）→ `ab62edf9`（verify gates+manifest）→ `43b6ed03`（K1203 item+session log）。全18ファイル raw fetch-back sha256 照合で byte 一致を確認。
+- 転写事故（push段階・誠実記録）: `verify_port_vs_published.py` の空行2箇所（`"""` 直後は元ファイルに空行なし・`PUBLISHED` 行の後に空行2つ）が初回コミットで崩れ、中間修正コミット `b87e30f5` でも1空行の位置が誤り、最終的に `22b77de5` で pinned sha256 `3942c93131971450ff20b0fddc3666c8dea921911c7af3503caf5b013cc31f2b` と byte 一致を確認。最終状態のみが正本。
+- **残: knowledge README（741,264 bytes）への K1203 1行bullet追加は今回実行環境のコンテキスト予算で byte 再push が不可能なため次回実行に繰り越す**（受入条件4のfetch-back検証は次回実行で実施。README既存行は1行も変更しない）。
+
 **標準 11×11 空盤・二石 root {49,60}/{59,60}・S2 {59,60}・class 1/2/4 は本レーンと無関係で UNKNOWN のまま。**
