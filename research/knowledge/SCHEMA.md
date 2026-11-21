@@ -7,7 +7,7 @@ slugは内容を表す英小文字・数字をハイフンで区切る。IDはfr
 slugを変更してもK番号・alias・relationのtargetは変えない。生成リンクは実ファイルパスから作る。
 
 必須: `id`, `title`, `kind`, `status`, `topics`, `aliases`, `relations`, `artifacts`。
-本文には命題・対象範囲・現在の根拠・限界を記す。`scope` と `evidence` は任意の文字列。
+本文には命題・対象範囲・現在の根拠・限界を記す。`scope` と `evidence` は任意の文字列。作成日の `date`/`created` と自由形式ラベルの `tags` も任意のメタ資料として許容する（検査は通すが生成表には使わない）。
 
 - `kind` は定義/命題/有限計算/方式/検証/問い。`status: proved` は本文の量化全体への証明。
 - `computed` は明示された有限範囲の完了計算、`observed` は標本・近似・測定。
@@ -42,6 +42,8 @@ kind別の許容statusは `VOCABULARY.yaml` の `status_by_kind` を正本とし
 | verifies | 独立検査・形式検証 → 検査する知識 |
 | generalizes | より一般的な命題 → 特殊な命題 |
 | supersedes | 置き換える知識 → 置き換えられる異なる旧知識 |
+| extends | 拡張する知識 → 拡張される先行知識 |
+| related | 非依存的な関連・対照（依存・支持・検証を意味せず、noteで関係内容を説明する） |
 
 同じ命題の状態更新には `supersedes` や新番号を使わない。`depends_on`/`supersedes` は自己辺・循環禁止。
 

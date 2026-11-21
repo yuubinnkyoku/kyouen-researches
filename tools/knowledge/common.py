@@ -88,7 +88,7 @@ def validate(items, root=ROOT):
         status_by_kind = {}
     ids, aliases, incoming = set(), {}, Counter()
     allowed = {"id", "title", "kind", "status", "topics", "aliases", "relations", "artifacts",
-               "scope", "evidence", "solution", "_path", "_body"}
+               "scope", "evidence", "solution", "date", "created", "tags", "_path", "_body"}
     required = {"id", "title", "kind", "status", "topics", "aliases", "relations", "artifacts"}
 
     def error(ident, message):
