@@ -1,0 +1,88 @@
+external second verification of fold12 (nineteenth receipt), WIN8-D10 root 8005021
+ verifier: verify_fold12_external_20261121.py (independent third implementation;
+          shares no code with the fold12/fold_win8_root8005021.py or fold11
+          machines; stdlib only, deterministic audit JSON, no clock fields)
+ subject input trees: W12 and pub12 reconstructed from published repo bytes only
+          (static raw.githubusercontent.com URLs at pinned commit
+          de32ca573ba1799855 98579ae9608c3851810c078c8 truncated here:
+          de32ca573ba179985579ae9608c3851810c078c8) by
+          reconstruct_fold12_inputs.py; all 25 input pins (12 Git blob SHA-1 +
+          13 SHA-256) fail-closed byte-verified; fold11 machine placed at W
+          (sha256 9b3e06c8fcf5f37949a611dba57ce6546a7ced69a7e97b7588c66c588c55a5e1)
+          and its input-pin table machine-confirmed a subset of fold12's 25 pins
+          (12 blob + 10 sha256 of fold11 agree with the fold12 tables).
+
+ audit execution matrix (audit JSON sha256
+          c309d69337461518390b7a5cb466e49da6c5c98b7fbcd0a4fd187bf03b52eb07,
+          70,149 bytes, 655 gates):
+  run 1 (same cwd, default env):                        ALL 655 GATES PASS, ~14.4 s
+  run 2 (same cwd, repeat):                             ALL 655 GATES PASS, audit byte-identical
+  run 3 (isolated cwd/HOME, PYTHONHASHSEED=random):     ALL 655 GATES PASS, audit byte-identical
+
+ gate sections in the audit: P 12 / I 34 / C 571 / X 24 / T 14 (total 655), all PASS.
+
+ X pristine re-executions of the published fold12 machine (receipt output
+ byte-identical to the published record sha256
+ 0f73795ce71aec83ba4a9f1b97a530891f3e6d1c807bfa47c9fbb88a1b33f5bd in every run,
+ and the in-machine fold11 rerun receipt byte-identical to d7bf2cd53d99d8364
+ 187abd172f4d5890d70bf8a90633b1e434b784bf7e50e in every run):
+  x1 (W12 in place, default env)
+  x2 (W12 in place, repeat)
+  x3 (fresh copytree W, fresh isolated cwd, isolated HOME)
+  x4 (fresh copytree W, fresh isolated cwd, PYTHONHASHSEED=random, isolated HOME)
+  vr (published fold11 machine re-executed independently on a fresh copytree W;
+      fold11 receipt byte-identical to the published d7bf2cd5... record)
+  execution note: all runs pass FOLD12_W explicitly (pointing at the
+  byte-pinned W12 tree or its fresh full copytree), matching the fold20
+  external-second-verification execution matrix precedent (K1173); the
+  reconstructed W is the verifier equivalent of the publisher local W root.
+
+ T tamper fail-closed probes (1-byte XOR at this lane's own,
+  publisher-untested offsets; isolated copytree W each):
+  t1 inputs/worklist.csv XOR@96300:   rc!=0, 'input blob mismatch',
+      no fold12 output write, no fold11 rerun output write
+  t2 k1106/certs/win8-root-00000000000000003800000008005021-20261120.n11
+      XOR@456789:                      rc!=0, 'input sha256 mismatch',
+      no fold12 output write, no fold11 rerun output write
+
+ C independent rederivation (third implementation) of the fold-chain
+  bookkeeping and of every fold12 receipt claim:
+  base worklist 6,438 rows (sum cost 509,109); chained published records
+  fold4, fold56, fold7, fold8, fold9(9th-12th), fs13(13th-16th), fold10(17th),
+  fold11(18th) recomputed step by step: post-fold11 open frontier 6,201 rows /
+  491,110 cost, solved S6 1,642->1,647, parent incidence 11,810->11,803,
+  residual five-parent target 68 rows, closed target 44/112;
+  K1106 19-gate record reverified in value (g01 3045e152..., g02/g03 runner
+  c132cc64..., g05 mobility 41, g06 uncapped probes andclose1 619,138 /
+  andclose0 751,581 terminalRange [14,18], g09-g12 41 moves, g13
+  3,272,039/2,876,091 nodes, g14 cert 945,298 bytes / 26,083 rows, g16-g17
+  third method 10,191 terminals/59,594 visited/38,442 winner/10,961 loser/
+  53,352 reply edges/range [14,18]); certificate bytes sorted-unique verified
+  against the sha triple pin;
+  root 00000000000000003800000008005021: 8 stones, quadruple-free, D4-canonical,
+  survival legal moves rederived 41; C(8,6)=28 canonical rows rederived by two
+  methods (224 D4-image two-stone removals vs 28 six-stone subsets, sets equal);
+  classification 8 open-frontier / 20 not-in-worklist / 0 closed-before;
+  fold12 delta rederived: covered 8 rows == claimed 3 target + 5 extra,
+  closed edge cost 584, affected parents 5 (class-1: 58->56, 65->63, 75->72;
+  class-2: 44->41, 25->22; fully closed 0), frontier_after 6,193/490,526,
+  solved 1,655, incidence 11,790, needed 4,501/356,974, five-parent target
+  44->47, residual 68->65 (65-row hex enumeration matched), win16 candidates
+  15->14 roots with 42 remaining claimed rows, residual-23 disjoint;
+  K1097 refsolve 27 gates rechecked, win16 footprint 49 rows exactly-once,
+  root 8005021 intrinsic == claimed == 3 rows.
+
+ Observations recorded in the audit JSON (erratum, documentation field only):
+  the published receipt's independent_verification.source_record names the
+  fold11 certificate-extract experiment (root 8003180) instead of K1106
+  (root 8005021); the string is hardcoded in the fold12 machine source. The
+  certificate_source block and all sha pins are correct. No byte-pinned
+  quantity is affected.
+
+ Interpretation: this record verifies bookkeeping and byte reproducibility of
+ the published fold12 receipt only. The 8 closed S6 rows are a frontier
+ bookkeeping closure, not LOSS verdicts. WIN8-D10 is a first-player win
+ certificate from the eight-stone root within depth 10; REFUTED-D10 is not a
+ LOSS proof. Node counts, solved counts and coverage counts are not win/loss
+ readings. The standard 11x11 empty board, two-stone roots {49,60}/{59,60},
+ S2 {59,60}, and classes 1/2/4 remain UNKNOWN.
