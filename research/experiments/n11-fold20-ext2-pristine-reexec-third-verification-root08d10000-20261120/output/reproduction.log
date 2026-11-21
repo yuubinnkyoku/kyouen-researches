@@ -1,0 +1,79 @@
+fold20 (K1129) ext second verification: pristine re-execution third verification
+(K1173) reproduction log
+==============================================================
+
+single process, stdlib only, byte-deterministic harness audit (no clock,
+no absolute paths, no timings inside the audit JSON). The harness fetches
+every subject byte itself from the pinned commit cf45360245f66489c8364ac16df7eda0fc01e22e.
+
+timeline (UTC):
+  2026-11-20T23:44Z  latest main checked (992851e2); no prior third-verification
+                     declaration for K1173 found; AGENTS.md and knowledge README
+                     (last bullet K1173) reviewed
+  2026-11-20T23:45:26Z  single-owner declaration published (commit 1d68addb,
+                     fetch-back byte-identical, SHA-256 b2e6f065...)
+  2026-11-20T23:46-23:50Z  subject bytes fetched from pinned commits and
+                     hash-checked; reconstructor executed unmodified at two
+                     pinned refs; published verifier pristine reruns (same
+                     cwd x2, isolated copytree, isolated + PYTHONHASHSEED=random)
+                     all printed ALL 1317 GATES PASS with audit byte-identical
+                     to the published 5a9bb98f...; two spot tampers
+                     (worklist@7777, K1121 cert@500000) failed closed
+  2026-11-20T23:56-00:01Z  harness drafted; two development defects caught
+                     pre-publication: (1) transcription typo in the pre-keyed
+                     audit SHA-256 (extra '7') caught by the harness pin stage
+                     on first execution; (2) volatile wall_ms fields leaked into
+                     the audit via wholesale part copy, breaking byte
+                     determinism across executions - fixed by recursive
+                     *_not_in_audit key stripping; batteries restarted from
+                     scratch after each fix
+  2026-11-20T23:57-00:04Z  battery 2 recon ref_b interrupted by shared-IP
+                     api.github.com quota exhaustion (HTTP 403, core
+                     remaining 0); idempotent fixed-ref retry after quota
+                     recovery (00:04Z, remaining 60)
+  2026-11-21T00:02Z  an execution-environment reset during quota polling
+                     discarded the pre-battery work dir; all batteries were
+                     re-executed from scratch after recovery from the pinned
+                     refs (the declaration was already published, the repo is
+                     the canonical copy; published evidence = the final
+                     batteries only)
+  2026-11-21T00:04:03-00:09:16Z  final-battery sequence below (post-reset,
+                     final harness bytes 17,424, harness SHA-256 9cf2e6f96605208b7941042b893225961b8f15b7ac5c464bc322a5ecaadf5953)
+
+$ python3 verify_k1173_fold20ext2_third_20261120.py pin b1
+  pin OK: 5 files, 10 gates    (00:04:03Z)
+$ python3 verify_k1173_fold20ext2_third_20261120.py recon b1
+  recon OK: both refs, 53 files each, diff clean    (00:04:37Z)
+$ python3 verify_k1173_fold20ext2_third_20261120.py rerun b1
+  rerun OK: 4 pristine verifier reruns, all byte-identical to the published
+  audit (each ~20-21 s, ALL 1317 GATES PASS, gate count 1317, audit SHA-256
+  5a9bb98feb907ebefe5eeddf1c15acd241eae7911ae0cc258ff27f4dc3e3e5ad)
+$ python3 verify_k1173_fold20ext2_third_20261120.py tampers b1
+  tampers OK: 2 fail-closed, production W unchanged
+$ python3 verify_k1173_fold20ext2_third_20261120.py finalize b1
+  finalize OK: harness-audit.json written, 49 gates
+  battery 1 audit SHA-256 24fac0b91c6e0e15a12a9f9a36b4b9f684dac7d25503801ceef3f45e0296834c
+  (00:06:03Z)
+
+battery 2 (same base b1, all stages re-executed, same environment):
+  pin OK: 5 files, 10 gates
+  recon OK: both refs, 53 files each, diff clean
+  rerun OK: 4 pristine verifier reruns, all byte-identical
+  tampers OK: 2 fail-closed
+  finalize OK: harness-audit.json written, 49 gates
+  battery 2 audit byte-identical to battery 1 (cmp, 00:07:42Z)
+
+battery 3 (fresh isolated base, isolated cwd/HOME/TMPDIR via env -i,
+PYTHONHASHSEED=random for all stages, full battery ~91 s wall):
+  pin OK / recon OK / rerun OK / tampers OK / finalize OK (49 gates)
+  battery 3 audit byte-identical to battery 1 (cmp, 00:09:16Z)
+
+harness-audit.json (6,213 bytes, gates_seen 49, all_gates_pass true,
+no clock/absolute-path/volatile fields) is byte-identical across the three
+batteries; per-stage part files are not byte-reproducible (they keep the
+wall_ms_not_in_audit fields by design; only the final audit strips them).
+
+interpretation guards: no rows closed; WIN8-D10 certificates apply only to
+their own 8-stone root game tree; REFUTED-D10 is not a LOSS proof; node and
+solved counts are not verdicts; standard 11x11 empty board / two-stone roots
+{49,60}/{59,60} / S2 {59,60} / class 1/2/4 all remain UNKNOWN.
