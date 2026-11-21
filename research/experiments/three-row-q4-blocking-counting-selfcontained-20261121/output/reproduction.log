@@ -1,0 +1,61 @@
+# reproduction log — three-row-q4-blocking-counting-selfcontained-20261121
+
+検証器: `verify_blocking_counting_3x4_20261121.py`
+sha256 = `e0ac09b56f9f3decdb1002b19756d28b9f46c9343ea530d056fd370d30fc4ae9`
+実行日: 2026-11-21 (UTC)。Python 3.12, stdlibのみ。バッテリは下記 5 実行 + 負の制御 1 実行。
+
+## 正バッテリ（監査 sha 照合）
+
+| run | 実行環境 | rc | gates | audit sha256 |
+|---|---|---:|---|---|
+| A | 同一 cwd（復元直後の clean tree） | 0 | ALL 6 GATES PASS | `d56c192bf73f4c2fe9bdcfb5ed34fa7993190e8aa785626bd23d1536644de80b` |
+| B | 同一 cwd | 0 | ALL 6 GATES PASS | 同上 |
+| C | 同一 cwd | 0 | ALL 6 GATES PASS | 同上 |
+| D | 隔離 copytree（`__pycache__` 削除）・`env -i`・`PATH=/usr/local/bin:/usr/bin:/bin`・`PYTHONHASHSEED=random`・`HOME=/tmp` | 0 | ALL 6 GATES PASS | 同上 |
+| E | 同一 cwd（`time` 計測） | 0 | ALL 6 GATES PASS | 同上（real 5.4s / user 5.4s） |
+
+4 実環境（A−D）すべて `output/audit.json` 3,928 bytes・byte-identical。
+監査書込みは fail-closed（どの gate も失敗すれば書かない）。
+
+## gate 内容（run A の出力）
+
+```
+  g_pin PASS  (7 pinned records sha-verified)
+  g_table PASS  (19 classes; CAPS x-checked closed-form/literal; max bound 68; impossible: [[0, 0, 0], [0, 0, 1], [0, 0, 2], [0, 0, 3], [0, 1, 1]])
+  g_curves PASS  (m=4..8 curve counts 29/50/86/141/221 match published)
+  g_enum PASS  (m=4..8: deficient totals 182/674/1724/4607/11542 = 18729 match published; profiles and P(m) match)
+  g_account PASS  (18729 def witnesses (m=4..8) pass exact cap accounting; 9 classes exercised)
+  g_witness23 PASS  (5 published m=23 witnesses: safety, plain-board maximality, coverage, 21 <= relevant <= 66, m=23 <= 68)
+ALL 6 GATES PASS
+```
+
+負の制御を含む失敗時の動作も確認済み（下記）。run E で監査を消去してから再生成しても
+同一 sha。
+“byte-identical” は検証器自身の監査出力に対する主張であり、Python の dict 順序は
+ハッシュ化前に再帰的に sort 済み。
+AES・浮動小数点・乱数・時刻は不使用。全演算は int・Fraction・std arithmetic。
+
+## 負の制御（tamper）
+
+```
+$ python3 verify_blocking_counting_3x4_20261121.py --tamper
+TAMPER MODE: negative control (expected table falsified)
+  g_pin PASS  (7 pinned records sha-verified)
+GATE FAILED g_table: class table mismatch: {(2, 3, 3): (68, 67)}
+STOPPED after 2 gate(s); 1 passed before failure. No audit written.
+rc=1
+```
+
+`--tamper` は期待クラス表の {2,3,3} を 67 に改竄する（初版に実際にあった誤りの再現）。
+既存の `output/audit.json` は変更されないこと（実行前後で sha 一致）も確認。
+所要 0.07s（g_table で即 stop）。
+
+## 追試時の注意
+
+- `__pycache__` が残っていても gate 結果・監査に影響しない（run D は削除して検証したが、
+  run A は残存状態で同一結果）。
+- 入力 7 件（`brute_3x{4..8}_4.json` 5件・`frontier_records_m23_copy.jsonl`・
+  `m23_Y0_witnesses_copy.jsonl`）は変更すると g_pin が失敗する。正本の sha は検証器内
+  `PIN_ME` に埋め込み済み。
+- 出力 `output/comptable.md` は `captable.py` から別途生成（検証バッテリと同じ閉形式コード）。
+  生成物と検証器埋め込み期待表の一致は g_table が保証する。
