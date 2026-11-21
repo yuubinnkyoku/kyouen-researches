@@ -1,0 +1,28 @@
+# K1079第二検証（vertical-fiber two-token z=17 y=4）のpristine再実行第三検証 — 再現ログ
+
+- 対象: `research/experiments/vertical-fiber-two-token-z17-y4-second-verification-20261120/`（pin commit `2339957f76a548e75b23e9b73b3d5b4b172084f6`・2026-11-19T22:24:18Z単一コミット出版）
+- 単一オーナー宣言: `research/log/2026-11-21-vertical-fiber-z17-y4-second-verification-pristine-reexec-third-single-owner-note.md`（commit `d6858a93679f5ce914f123505702dd4dde760731`・2026-11-21T07:02Z・宣言時HEAD `c1a2a333ea8a18263195ec79e111681643f9d7c4`）
+- K1076検証器固定ref: `412d75b93d14752f528c4fa4c6b5d472a4ca5ac8`
+- 実行環境: python 3.12.14（Linux x86_64）・第三実装・第三実行環境。api.github.com不使用（pinned fetchはすべてcommit固定raw.githubusercontent.com URL）。待機pollingなし。
+
+## 宣言前の予備実測（2026-11-21 07:00Z頃）
+
+- pristine verify実行 1回: rc=0・31.7秒・`output/audit.json` SHA-256 `bfc2fb34…` が出版正本とbyte一致。
+- pristine census実行 1回: rc=0・0.37秒・`output/census.txt` SHA-256 `48bde24a…` が出版正本とbyte一致。
+- tamper t1 verify@2,257 XOR 0x01: rc=1・1.2秒・stderr末行 `AssertionError: (14, 19, 0)`・output dir 不在。
+- tamper t2 verify@11,908 XOR 0x01: rc=1・3.1秒・stderr末行 `AssertionError: (5, 10)`・output dir 不在。
+- tamper t3 census@3,918 XOR 0x01: rc=0・0.4秒・`output/census.txt` に `status=FAIL`・`mismatch_vs_published=5` を記録。
+
+## battery（宣言ノート出版後・各battery = pin/recon/rerun/tampers/finalize全stage・pinned fetchやり直し）
+
+| battery | 構成 | rc | 所要 | 監査正本照合 |
+|---|---|---|---|---|
+| B1 | fresh base・全stage | 0 | （個別計時は記録せず・監査はB2/B3/B1fとbyte同一） | 87 gate全PASS・`a9d310d7…` |
+| B2 | 同一base・全stage再実行（pin/recon再取得込み） | 0 | 140秒 | B1と`cmp` byte一致 |
+| B3 | 隔離fresh base + `env -i` + 隔離HOME/TMPDIR + `PYTHONHASHSEED=random` + 別cwd | 0 | 139秒 | B1と`cmp` byte一致 |
+| B1f | fresh base・独立capture | 0 | 137秒 | B1と`cmp` byte一致 |
+
+- 4 capture完全一致: 監査正本 SHA-256 `a9d310d7df5ea6cf259ca2319f6323d88941ebf7eb570b928f35b60c232ba3c5`（5,444 bytes）。
+- harness SHA-256 `bfe265b48ff34c94ad565e4672eeea41b9d0b21a8b0783109253db50561c7333`（19,086 bytes・stdlibのみ・fail-closed〔監査は全gate通過時のみ書込〕・時刻/絶対path/volatile排除）。
+- rerun stage構成: verify 4回/battery（同一cwd r1/r2 + 隔離copytree r3 + 隔離+`PYTHONHASHSEED=random` r4）×4 battery = 16回（宣言前予備1回を含め計17回）すべて rc=0 かつ `output/audit.json` が出版正本 `bfc2fb34…` とbyte-identical。censusも同構成16回+予備1回=17回すべて `output/census.txt` が出版正本 `48bde24a…` とbyte-identical。
+- tampers stage: t1/t2はrc≠0・stderr末行文言一致（path非含有で環境非依存）・output dir事前事後とも不在（監査不書込型fail-closedを捕捉）。t3はrc=0で`output/census.txt`に`status=FAIL`・`mismatch=5`を書き込む検出記録型を採る（失敗設計5種目）。3探針のoffset @{2,257/11,908/3,918} は既知探針位置universeのいずれとも別位置。事後に検体W無改変再照合。
