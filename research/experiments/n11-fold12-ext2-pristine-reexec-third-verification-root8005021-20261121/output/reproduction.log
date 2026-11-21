@@ -1,0 +1,81 @@
+n11-fold12-ext2-pristine-reexec-third-verification-root8005021-20261121 - reproduction.log
+(all times UTC 2026-11-21; third-verification harness battery record)
+
+02:44-02:49  Environment: fresh third-lane sandbox (python3 on remote exec env).
+             Latest main re-fetched before any action; declaration-time HEAD
+             91f2f0f13164bfe3bd4734f907d5ea3fd27e1c7c confirmed.  Log listing
+             (2026-11-19 onward), experiment-dir listing and recent commit
+             listing showed no prior third-verification of K1175.
+             K1183 (3-row q4) and a 3-row q4 m=23 SAT subproblem commit were
+             the newest main content; fold13-16 ext2 pieces (K1176/K1178/
+             K1179/K1180) published; no fold12-third claim anywhere.
+02:50        Single-owner declaration note published as commit
+             4c7a12f1aed44205f20824be024a382d161a7a4c; fetch-back byte-OK
+             (6,446 bytes; cmp clean vs local draft).
+02:51        Manual pin trial: 5 published files fetched from pinned commit
+             adb1e8f605b6903f6a671d9447c001b79f401398; all five SHA-256 ==
+             published values (README d1eae779..., recon caa30f34...,
+             verifier 43afc1cd..., audit c309d693..., reproduction d85d8c3d...).
+02:52        Recon trial at ref_a 91f2f0f1...: rc=0, 6.8 s wall, 27 files in W
+             (12 blob + 13 sha256 pins + fold11 machine 9b3e06c8... + fold12
+             machine 706bfa7a...), subset-check line intact,
+             final line "RECONSTRUCTED W at ... PINS 12 PIN256 13".
+02:52        Verifier trial: rc=0, 14.3 s, first line
+             "ALL 655 GATES PASS"; output audit sha256 c309d693... and byte-
+             identical to published external-audit.json (70,149 bytes);
+             gates ok:true count == 655, all_gates_pass true.
+02:52        Tamper trials (isolated copytree W):
+             worklist.csv @150000 XOR 1 byte -> rc=1,
+             "GATE FAILED [i]: W blob pin inputs/worklist.csv", no audit write.
+             K1106 certificate @654321 XOR 1 byte -> rc=1,
+             "GATE FAILED [i]: W sha256 pin k1106/certs/...", no audit write.
+02:53        Harness (verify_k1175_fold12ext2_third_20261121.py) written.
+             FIRST pin stage run FAILED [pin] on the verifier file: the
+             harness FILES constant had a transcription typo
+             (43afc1cd31d5f7318... instead of ...31d5d7318...).  The
+             fail-closed pin gate caught it before any part file was
+             written.  Constant fixed (1 char); publication bytes untouched.
+02:53:18-02:54:28   BATTERY 1 (fresh base):
+             pin OK (5 files, 10 gates);
+             recon OK (both refs, 27 files each, diff -r clean);
+             rerun OK (4 pristine verifier runs 02:53:28-02:54:26, all
+               rc=0, ALL 655 GATES PASS, audit sha c309d693..., gate count
+               655, byte-identical to published audit and to run1);
+             tampers OK (2 fail-closed, production W re-checked unchanged:
+               worklist 6d8a449e..., cert 69f32661...);
+             finalize OK (harness-audit.json 6,587 bytes,
+               sha256 06750caa90188ec3c7203d2b2b80eb0bfb61f818f29727a5d13
+               ee5f3cb2137f2, gates_seen 53 = pin 10 + recon 16 + rerun 19
+               + tampers 8, all_gates_pass true).
+02:54:31-02:55:31   BATTERY 2 (same base, full stage re-run incl. republic fetch):
+             all stages OK with identical outputs; harness-audit.json
+             sha256 == battery 1 (06750caa...).
+02:55:34-02:56:35   BATTERY 3 (fresh isolated base, isolated cwd/HOME/TMPDIR,
+             PYTHONHASHSEED=random exported for harness and all children):
+             all stages OK; harness-audit.json sha256 == battery 1;
+             cmp battery1 vs battery3 harness-audit.json: byte-identical.
+
+Acceptance-condition ledger (declaration 4c7a12f1):
+ 1. pin: 5/5 published files re-fetched from adb1e8f605, SHA-256+size equal
+    published values, 2 gates per file, in all 3 batteries.  PASS.
+ 2. recon: reconstruct_fold12_inputs.py unmodified, run at ref_a 91f2f0f1
+    (declaration-time HEAD) and ref_b 4c7a12f1 (verification-time main),
+    25-pin fail-closed re-verification + fold11 12+10 subset machine-check,
+    both refs, diff -r byte-identical, 27 == 27 files.  PASS.
+ 3. rerun: verify_fold12_external_20261121.py unmodified, 4 pristine runs
+    per battery (12 total), each rc=0, ALL 655 GATES PASS line, gate count
+    655 + all_gates_pass true, audit byte-identical to published
+    c309d693... and across runs.  PASS.
+ 4. tampers: this lane's offsets @150000/@654321 (publisher @96300/@456789;
+    disjoint from all other lanes' offsets) both fail-closed
+    (rc!=0, GATE FAILED [i], no audit write); production W re-checked
+    unchanged after both.  PASS.
+ 5. harness audit: byte-deterministic JSON, no clock/abs-path/volatile
+    fields, 3 executions (2 same-base + 1 isolated+PYTHONHASHSEED=random)
+    byte-identical; experiment dir self-contained (README, harness, audit,
+    this log).  PASS.
+
+No api.github.com call was made by any battery stage (raw pinned URLs only).
+No rows were closed by this verification; no verdicts were asserted.
+Standard 11x11 empty board / two-stone roots {49,60}/{59,60} / S2 {59,60} /
+class 1/2/4 remain UNKNOWN.
