@@ -136,6 +136,14 @@ The ladder then ran k03 only and the pre-registered WIN stopping rule fired agai
   mixed, not LOSS-only, consistent with WIN rows appearing in the low-proxy band
   (k02, k03 both within the 5,041,585 band).
 
+- Post-push reexecution check (resumption checkpoint commit `28a038a57`): the four
+  k03 raw rows re-downloaded at the fixed commit are byte-identical to the local
+  originals; `analyze_win_finding_k03.py` re-run twice on the pushed state: all 117
+  fail-closed gates PASS both times and the output is byte-identical to the published
+  `output/win-finding-ifadopted-k03.json` (sha256 `b0d2498b...`) on both runs. The
+  fetch-back byte audit of the resumption checkpoint commit passed by git blob SHA-1
+  (9/9 files).
+
 Inputs and consumed pins (sha-verified, not duplicated here):
 
 - base cache `merged-exact-s5-after-js-probe-13.cache` (sha256 `60e0dc34...`) and the

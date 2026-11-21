@@ -157,3 +157,21 @@ re-verification is additional evidence only; judgment stays with the scrutiny ow
 4. On eventual full-batch completion: `output/probe-audit.json`, merged cache
    increment, SHA-256 manifest per the parent declaration's publication plan
    (WIN rows only with their C++ gate passed).
+
+## Re-execution and fetch-back verification (post-push, resumption session)
+
+- Checkpoint commit: `28a038a57b47ddf192731d5fdb044bef1018edf4` (9 files). Push parent
+  `f092653cf` (K1212 five-row knowledge bullet) touches none of this lane's paths or
+  any S5 cache/verdict file.
+- Fetch-back byte audit at the fixed commit `28a038a57`: all 9 files match by git
+  blob SHA-1 (remote-reported vs locally recomputed), 9/9 (raw listing, scripts
+  listing, output listing, README, session log stub).
+- Post-push re-execution on the pushed checkpoint state: the four k03 raw rows were
+  re-downloaded at the fixed commit and byte-compare clean against the local
+  originals; `python3 scripts/analyze_win_finding_k03.py` run twice -> all 117
+  fail-closed gates PASS both times, and the output is byte-identical (remote cmp
+  clean) to the published `output/win-finding-ifadopted-k03.json` (sha256
+  `b0d2498b...`) on both runs.
+- At the moment of this addendum, main HEAD is still `28a038a57` (no further
+  commits); the concurrent third-implementation re-verification lane (declared
+  20:45Z, `ceb4eed71`) has published no results yet. No k04+ key was started.
