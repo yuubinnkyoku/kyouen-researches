@@ -1,4 +1,4 @@
-# s_12 / s_13 constructive upper bounds, session 1: census reproduction, transplant diagnostics, complete local nets, 2-swap optimality walls, and SLS witness hunts (no improvement found; second/third explicit witnesses for s_12 <= 11 obtained)
+# s_12 / s_13 constructive upper bounds, session 1: census reproduction, transplant diagnostics, complete local nets, 2-swap optimality walls, SLS witness hunts, and lattice-isometry classification (no improvement found; one new 12x12 witness configuration for s_12 <= 11; one SLS find is a rediscovery of the K0320 witness)
 
 Lane: standard-board minimal-maximal size s_n, constructive upper-bound side for n = 12, 13
 (K0026 / K0320 / K0312 / K0147 / K0148 / K0149 family).
@@ -59,8 +59,9 @@ Claimed (all finite-machine, all explicit):
      (records/probe2_wall_n12.json; restricted first-order probe: probe_wall_n12.json.)
    - 13 x 13, S = the SLS plateau config (score 6): 55 pairs, 8,781 + 699,600 checks
      (35.4 s): same strictness at score 6 (records/probe2_pl_n13.json).
-6. **Two new explicit 11-stone maximal safe witnesses on 12 x 12** (SLS positive
-   controls; the harness must be able to find known-feasible sizes):
+6. **SLS positive controls on 12 x 12 at the feasible size k = 11: one genuinely new
+   witness configuration, one rediscovery of the published witness**
+   (the harness must be able to find known-feasible sizes):
    - W_b = [[6,0],[5,1],[6,2],[2,6],[7,6],[10,6],[2,7],[4,7],[9,7],[2,11],[5,11]]
      (found at ~45 s by the seeded run, seed 2024; the pre-reset record file was
      lost to an environment reset, config recovered from the session record and
@@ -72,11 +73,17 @@ Claimed (all finite-machine, all explicit):
    coefficients; Node BigInt Bareiss with a different column order; the quartet
    catalogue State): all report SAFE+MAXIMAL, 133/133 empty points blocked
    (records/verify_{py,mjs,state}_s12_11{b,c}.json + witness_s12_11{b,c}.json).
-   These give independently-verified second/third explicit witnesses for the
-   published bound s_12 <= 11 (K0320's construction remains the first);
-   they are NOT claimed to be distinct up to D4+translation from K0320's witness
-   (they visibly are different configurations, but no canonical-form classification
-   is claimed here).
+   **Lattice-isometry classification (records/classify_s12_11stone.json,
+   scripts/classify.mjs + the independent anchor-enumeration check
+   scripts/check_congruent.mjs): W_b IS the published K0320 n=12 witness
+   (same board, 180-degree rotation (x,y) -> (11-x, 11-y), zero translation);
+   W_c is NOT congruent to it (canonical-form keys differ, embedding search
+   finds no map).** Therefore the session's net new configuration is W_c: the
+   second known witness for s_12 <= 11 up to plane-D4 plus translation. W_b
+   stands as an unseeded-scratch-independent SLS rediscovery of the known
+   optimum, not as a new witness. The earlier in-session wording of this README
+   and of K1206 ("second/third explicit witnesses") counted W_b as new and is
+   corrected here and in the K1206/K1206-bullet revision of this session.
    Negative controls: removing one stone from W_b makes both verifiers reject
    (rc=1, 10 uncovered) in the predicted pattern (records/verify_{py,mjs}_negctrl.json).
 7. **SLS bounded-negative records for the k = target hunt (witness finding only)**:
@@ -131,7 +138,12 @@ any reading of moves/evaluations/restarts as verdicts.
 - scripts/verify_witness.mjs — BigInt Bareiss second verifier (different column
   order, different expansion)
 - scripts/witness_reproduce.mjs — loads all 7 published witnesses (sanity gate)
-- witness_s12_11b.json / witness_s12_11c.json — the two new 11-stone witnesses
+- scripts/classify.mjs — lattice-isometry canonical form (plane D4 + translation) of a
+  stone configuration; CLI prints canonical keys for K0320 n=11..15, W_b, W_c
+- scripts/check_congruent.mjs — independent congruence check by explicit
+  8-transform x anchor-translation embedding search
+- witness_s12_11b.json / witness_s12_11c.json — the two 11-stone SLS finds
+  (W_b: rediscovery of the K0320 witness; W_c: new configuration)
 - records/ — all machine-readable outputs listed above
 
 ## Reproduction
@@ -143,6 +155,8 @@ node scripts/hunt.mjs probe2 '{"n":12,"cells":[[6,0],[9,0],[2,4],[7,4],[9,4],[1,
 node scripts/hunt.mjs sls '{"n":12,"targetK":11,"budgetMs":75000,"runs":1,"seedMaxN":11,"seed":5150}'
 python3 scripts/verify_witness.py witness_s12_11b.json
 node scripts/verify_witness.mjs witness_s12_11c.json
+node scripts/classify.mjs
+node scripts/check_congruent.mjs
 node scripts/census.mjs 5 6 7 8 9 10 11 12 13
 
 Interpretation guards: moves/evals/restarts are not verdicts; every negative scan

@@ -44,11 +44,15 @@ clarification (0a76535f). None touch the s_12/s_13 upper-witness lane; no confli
 5. Complete 2-out/2-in scans of the two plateau states: the 12x12 score-4 wall
    (413,100 pair checks) and the 13x13 score-6 plateau (699,600) are strict local
    optima of their exhausted nets; no witness, no k-2-stone maximal subset.
-6. Two NEW verified 11-stone maximal safe witnesses on 12x12 (W_b, W_c), found by the
+6. Two NEW verified 11-stone maximal safe witnesses on 12x12 (W_b, W_c) — **this count
+   was corrected by the addendum below: W_b is a lattice-isometric rediscovery of the
+   published K0320 witness (same board, 180-degree rotation); W_c is the single net
+   new configuration**, found by the
    SLS harness as positive controls for the feasible k, verified by 3 independent
    systems with full per-empty-point certificates (133/133 blocked), negative controls
-   reject correctly. Second and third explicit witnesses for s_12 <= 11 (K0320's
-   construction remains first and is not improved). -> K1206 (supports K0320).
+   reject correctly. W_c is the second explicit witness configuration for s_12 <= 11
+   (K0320's construction remains first and is not improved; W_b coincides with it).
+   -> K1206 (supports K0320).
 7. SLS bounded negatives: 12x12 k=10 seeded runs all plateau at score 4 in the same
    D4/translation basin; scratch at score 8; 13x13 k=11 at score 6. NO nonexistence
    claim. Honest weakness records: scratch runs cannot even re-find feasible k=11
@@ -93,3 +97,37 @@ clarification (0a76535f). None touch the s_12/s_13 upper-witness lane; no confli
   not scanned (n >= 14 claims are outside this lane's declaration).
 - All scripts runnable standalone: node scripts/hunt.mjs '{mode}' '{json}' from the
   experiment dir; census CLI takes an n list.
+
+## Addendum (same session, ~30 min later): lattice-isometry classification + correction
+
+The recommended-next task (witness equivalence classification) was executed in this
+same session. Result, by two independent methods (canonical lex-min key over the 8
+plane-D4 images with min-corner normalization, scripts/classify.mjs; and an explicit
+8-transform x anchor-translation embedding search, scripts/check_congruent.mjs):
+
+- **W_b IS the published K0320 n=12 witness**: the embedding is the same-board
+  180-degree rotation (x,y) -> (11-x, 11-y), zero translation. Canonical keys equal.
+- **W_c is NOT congruent to K0320's witness (nor to W_b)**: canonical keys differ,
+  no embedding exists.
+
+Therefore the earlier wording of this log's summary (item 6: "two NEW verified 11-stone
+maximal safe witnesses ... second and third explicit witnesses") is CORRECTED: W_b is
+an SLS rediscovery of the known witness (kept as a positive-control strength datum),
+and the session's net new configuration is W_c, the second known witness for s_12 <= 11
+up to lattice isometry. Corrections applied in the same session to: the experiment dir
+README (item 6 retitled/rewritten), K1206 (retitled/rewritten, correction documented in
+its body), and the knowledge README K1206 bullet (rewritten line). Machine-readable
+classification record: records/classify_s12_11stone.json (canonical keys of K0320
+n=11..15, W_b, W_c, pairwise tests, the found embedding, the corrected claim).
+
+Additional commits (this session, correction):
+- experiment dir README revision (item 6/Files/Reproduction retargeted) +
+  scripts/classify.mjs + scripts/check_congruent.mjs +
+  records/classify_s12_11stone.json + K1206 rewrite (title/body/relations corrected,
+  correction documented in-body) + session-log addendum (this section; pushed
+  together with the correction commit) + knowledge README K1206 bullet rewrite
+  (line-1 rewrite of the bullet, byte-verified).
+
+No other result of the session is affected: the census anchors, transplant scans,
+nets, probe2 strictness, SLS negatives, negative controls, and W_c's 3-system
+verification all stand unchanged.

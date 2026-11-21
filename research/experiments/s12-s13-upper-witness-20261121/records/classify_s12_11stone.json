@@ -1,0 +1,53 @@
+{
+ "what": "classification of the known 11-stone 12x12 maximal-safe witnesses up to lattice isometry (plane D4 x integer translation)",
+ "canonicalizer": "scripts/classify.mjs: 8 plane-D4 images, each translated to min-corner (0,0), cells sorted, lexicographic minimum key; independent check scripts/check_congruent.mjs (explicit anchor-enumeration embedding search)",
+ "sets": {
+  "K0320-n11": {
+   "canonical": "[[0,0],[3,0],[0,4],[2,4],[7,4],[0,5],[5,5],[8,5],[4,9],[3,10]]",
+   "span": "9x11"
+  },
+  "K0320-n12": {
+   "canonical": "[[0,0],[3,0],[0,4],[2,4],[7,4],[0,5],[5,5],[8,5],[4,9],[3,10],[4,11]]",
+   "span": "9x12"
+  },
+  "K0320-n13": {
+   "canonical": "[[10,0],[3,1],[4,1],[10,1],[2,2],[4,5],[6,5],[0,6],[12,6],[3,8],[3,9],[4,10]]",
+   "span": "13x11"
+  },
+  "K0320-n14": {
+   "canonical": "[[0,0],[2,2],[4,2],[1,3],[12,3],[10,4],[4,7],[5,7],[12,7],[4,9],[11,9],[12,10],[9,11]]",
+   "span": "13x12"
+  },
+  "K0320-n15": {
+   "canonical": "[[0,0],[1,0],[3,2],[1,3],[5,4],[1,7],[12,7],[0,8],[4,8],[11,8],[5,9],[5,11],[9,13],[8,14]]",
+   "span": "13x15"
+  },
+  "W_b": {
+   "canonical": "[[0,0],[3,0],[0,4],[2,4],[7,4],[0,5],[5,5],[8,5],[4,9],[3,10],[4,11]]",
+   "span": "9x12"
+  },
+  "W_c": {
+   "canonical": "[[0,0],[5,1],[6,2],[2,6],[7,6],[10,6],[2,7],[4,7],[9,7],[2,11],[5,11]]",
+   "span": "11x12"
+  }
+ },
+ "pairwise11stone": {
+  "K0320-n12~W_b": true,
+  "K0320-n12~W_c": false,
+  "W_b~W_c": false
+ },
+ "independent_embedding_check": {
+  "W_b~K0320-n12": {
+   "congruent": true,
+   "witness_transform": "(x,y)->(11-x,11-y) i.e. same-board 180-degree rotation, no translation"
+  },
+  "W_c~K0320-n12": {
+   "congruent": false
+  },
+  "W_c~W_b": {
+   "congruent": false
+  }
+ },
+ "corrected_claim": "W_b is an SLS rediscovery of the published K0320 n=12 witness (an isometric copy), NOT a new witness configuration. W_c is the only new configuration: the second known witness for s_12 <= 11 up to lattice isometry",
+ "earlier_wording_corrected": "the session-1 README/K1206 first-publication wording counted W_b as a second additional witness; this record supersedes it"
+}
