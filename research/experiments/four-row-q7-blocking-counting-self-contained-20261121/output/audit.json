@@ -1,0 +1,319 @@
+{
+ "all_gates_pass": true,
+ "certificate": "M_{4,7} = 13 = min m0 with P(m) for all m>=m0 via sweep[13,86] + counting[87,inf) + m=12 witness; K0318-independent",
+ "experiment": "four-row-q7-blocking-counting-self-contained-20261121",
+ "gates": [
+  {
+   "detail": "worst_per_row=2",
+   "id": "g01_A1_m6",
+   "name": "circle-row gridpoints <= 2 on 4x6",
+   "pass": true
+  },
+  {
+   "detail": "worst_per_row=2",
+   "id": "g01_A1_m12",
+   "name": "circle-row gridpoints <= 2 on 4x12",
+   "pass": true
+  },
+  {
+   "detail": "worst_per_row=2",
+   "id": "g01_A1_m13",
+   "name": "circle-row gridpoints <= 2 on 4x13",
+   "pass": true
+  },
+  {
+   "detail": "collisions=0 registered_triples=1884",
+   "id": "g02_A2_triple_unique_circle",
+   "name": "no grid triple on two distinct circles",
+   "pass": true
+  },
+  {
+   "detail": "collinear_triples_on_circle=0 distinct_circles=961",
+   "id": "g03_A3_no_collinear_triple_on_circle",
+   "name": "no 3 collinear gridpoints on one circle",
+   "pass": true
+  },
+  {
+   "detail": "worst_nonhorizontal=4 horizontal_row_size_ok=True",
+   "id": "g04_A4_lines_m6",
+   "name": "non-horizontal lines <= 4 gridpoints on 4x6",
+   "pass": true
+  },
+  {
+   "detail": "worst_nonhorizontal=4 horizontal_row_size_ok=True",
+   "id": "g04_A4_lines_m12",
+   "name": "non-horizontal lines <= 4 gridpoints on 4x12",
+   "pass": true
+  },
+  {
+   "detail": "worst_nonhorizontal=4 horizontal_row_size_ok=True",
+   "id": "g04_A4_lines_m13",
+   "name": "non-horizontal lines <= 4 gridpoints on 4x13",
+   "pass": true
+  },
+  {
+   "detail": "max=81 arg=(1, 40) feasible_pairs=1722",
+   "id": "g05_B1_max_e",
+   "name": "max a+2b with 10a+20b<=816 is 81",
+   "pass": true
+  },
+  {
+   "detail": "{\"C(18,3)\": true, \"C(4+1,3)>=10*1\": true, \"C(4+2,3)>=10*2\": true, \"C(5,3)\": true, \"C(6,3)\": true, \"budget=3*(q-1) stones\": true, \"deficient_r<=q-2=5\": true, \"rowcap=q-1=6\": true}",
+   "id": "g06_B2_constants",
+   "name": "combinatorial constants",
+   "pass": true
+  },
+  {
+   "detail": "threshold=87 mbound=86",
+   "id": "g07_B3_threshold",
+   "name": "counting kills deficient placements iff m >= 87",
+   "pass": true
+  },
+  {
+   "detail": "sha=6a54fb4f84a4de3504c1969f1222b24cf2ba747bc3523586c6e70ca277f2ab6f records=86",
+   "id": "g08_C1_projection_pin",
+   "name": "q7 record projection sha256 pin (append-invariant)",
+   "pass": true
+  },
+  {
+   "detail": "missing=[] count=82",
+   "id": "g09_C2_plain_set",
+   "name": "plain def records m=7..88 present exactly",
+   "pass": true
+  },
+  {
+   "detail": "bad=[] indet=[]",
+   "id": "g10_C3_sweep_verdicts",
+   "name": "witness band 7..12 SAT / band 13..88 all UNSAT, rc 10/20",
+   "pass": true
+  },
+  {
+   "detail": "bad=[]",
+   "id": "g11_C4_conflict_pins",
+   "name": "pinned conflicts 13/20/85/86/87/88 lexH=3677 etc.",
+   "pass": true
+  },
+  {
+   "detail": "lexh=[(13, 4599), (86, 3677)]",
+   "id": "g12_C5_lexH_records",
+   "name": "cross-encoding lexH records for m=13 and m=86 UNSAT",
+   "pass": true
+  },
+  {
+   "detail": "caps=[13, 16]",
+   "id": "g13_C6_capacity_records",
+   "name": "capacity SAT records present m=13,16",
+   "pass": true
+  },
+  {
+   "detail": "sweep_band=[13,86] counting_band=[87,inf)",
+   "id": "g14_C7_certificate_coverage",
+   "name": "machine sweep covers [13,86] exactly (UNSAT all)",
+   "pass": true
+  },
+  {
+   "detail": "sha=c64a6e46b906f065658ede2ebd8c873a893f03b71de414e4ff8858a206aaabf5",
+   "id": "g15_pin",
+   "name": "witness sha256 pin (s4x12q7_def.witness.json)",
+   "pass": true
+  },
+  {
+   "detail": "m=12 mode=deficient rows=[6, 6, 5, 6] n=23",
+   "id": "g15_meta",
+   "name": "witness meta m/rows/size",
+   "pass": true
+  },
+  {
+   "detail": "n=23",
+   "id": "g15_bounds",
+   "name": "stones distinct and in bounds",
+   "pass": true
+  },
+  {
+   "detail": "rows=[6, 6, 5, 6]",
+   "id": "g15_rowcap",
+   "name": "row caps <= q-1=6 (safety of lines)",
+   "pass": true
+  },
+  {
+   "detail": "max_circle_stones=6 circles_tested=1232",
+   "id": "g15_circle_safety",
+   "name": "no circle carries >= 7 stones (cocircular safety)",
+   "pass": true
+  },
+  {
+   "detail": "unblocked=[]",
+   "id": "g15_maximality",
+   "name": "all empty cells blocked (row or circle with >= 6 stones)",
+   "pass": true
+  },
+  {
+   "detail": "row=2 r=5",
+   "id": "g16_D1_deficient_row",
+   "name": "deficient row identified r <= q-2",
+   "pass": true
+  },
+  {
+   "detail": "count=7 m-r=7",
+   "id": "g17_D2_empty_in_R",
+   "name": "empty cells of deficient row count m-r",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "id": "g18_D3_blocked_4_2",
+   "name": "cell blocked",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "id": "g18_D3_blocked_5_2",
+   "name": "cell blocked",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "id": "g18_D3_blocked_6_2",
+   "name": "cell blocked",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "id": "g18_D3_blocked_8_2",
+   "name": "cell blocked",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "id": "g18_D3_blocked_9_2",
+   "name": "cell blocked",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "id": "g18_D3_blocked_10_2",
+   "name": "cell blocked",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "id": "g18_D3_blocked_11_2",
+   "name": "cell blocked",
+   "pass": true
+  },
+  {
+   "detail": "bad=[]",
+   "id": "g19_D4_circle_classification",
+   "name": "assigned circles: e in {1,2}, e+u<=2, >=6 stones, t>=4+e",
+   "pass": true
+  },
+  {
+   "detail": "registry=80 sum=80",
+   "id": "g20_D5_triple_disjoint",
+   "name": "counted outside triples pairwise disjoint",
+   "pass": true
+  },
+  {
+   "detail": "sum=80 budget=816",
+   "id": "g21_D6_triple_budget",
+   "name": "sum C(t,3) <= C(18,3)=816",
+   "pass": true
+  },
+  {
+   "detail": "10(m-r)=70 sum_C=80",
+   "id": "g22_D7_ten_e",
+   "name": "10*(m-r) <= sum C(t,3)",
+   "pass": true
+  },
+  {
+   "detail": "m=12 r+81=86",
+   "id": "g23_D8_m_consistency",
+   "name": "theorem bound not violated at m=12",
+   "pass": true
+  },
+  {
+   "detail": "sha=1da6a4b50e6b8b9e111adf4f0129339ad4c1d570a47a5971cad537d8550c545c",
+   "id": "g24_pin",
+   "name": "witness sha256 pin (s4x13q7_capacity.witness.json)",
+   "pass": true
+  },
+  {
+   "detail": "m=13 mode=capacity rows=[6, 6, 6, 6] n=24",
+   "id": "g24_meta",
+   "name": "witness meta m/rows/size",
+   "pass": true
+  },
+  {
+   "detail": "n=24",
+   "id": "g24_bounds",
+   "name": "stones distinct and in bounds",
+   "pass": true
+  },
+  {
+   "detail": "rows=[6, 6, 6, 6]",
+   "id": "g24_rowcap",
+   "name": "row caps <= q-1=6 (safety of lines)",
+   "pass": true
+  },
+  {
+   "detail": "max_circle_stones=6 circles_tested=1278",
+   "id": "g24_circle_safety",
+   "name": "no circle carries >= 7 stones (cocircular safety)",
+   "pass": true
+  },
+  {
+   "detail": "unblocked=[]",
+   "id": "g24_maximality",
+   "name": "all empty cells blocked (row or circle with >= 6 stones)",
+   "pass": true
+  },
+  {
+   "detail": "rows=[6, 6, 6, 6] n=24",
+   "id": "g25_E1_capacity",
+   "name": "capacity: all rows exactly q-1=6, 24 stones",
+   "pass": true
+  },
+  {
+   "detail": "gates=45",
+   "id": "g26_F1_stages_complete",
+   "name": "all stages present and passed (fail-closed)",
+   "pass": true
+  },
+  {
+   "detail": "mbound=86 threshold=87",
+   "id": "g27_F2_derivation",
+   "name": "816//10=81, r_max+81=86, threshold=87",
+   "pass": true
+  },
+  {
+   "detail": "m=12 r=5 empty=7",
+   "id": "g28_F3_lower_bound",
+   "name": "m=12 deficient maximal witness validated => M > 12",
+   "pass": true
+  },
+  {
+   "detail": "K0318 not used; machine sweep band [13,86] counting band [87,inf)",
+   "id": "g29_F4_conclusion",
+   "name": "M_{4,7}=13 holds via sweep[13,86]+counting[87,inf)+witness(12)+capacity(13)",
+   "pass": true
+  }
+ ],
+ "guards": [
+  "\u3053\u306e\u6a5f\u68b0\u306f\u8a3c\u660e\u672c\u6587\uff08README\u30fbK\u9805\u76ee\uff09\u306e\u524d\u63d0\u306e\u691c\u67fb\u3068\u3001\u6383\u5f15 certificate \u306e",
+  "pin \u7167\u5408\u30fbwitness \u524d\u63d0\u306e\u5b9f\u30c7\u30fc\u30bf\u76e3\u67fb\u3092\u884c\u3046\u3002\u8a08\u6570\u4e0a\u754c\u306e\u95be\u5024 87 \u306f",
+  "K0318 \u306e\u89e3\u6790\u4e0a\u754c 81 \u3088\u308a 6 \u5e45\u5f31\u3044\uff08\u8aa0\u5b9f\u306a\u76f8\u5bfe\u4f4d\u7f6e\u306e\u8a18\u8f09\uff09\u3002",
+  "fold \u306e\u88ab\u8986\u7c3f\u8a18\u3068\u306f\u7121\u95a2\u4fc2\u3002\u884c\u306f 1 \u884c\u3082\u9589\u3058\u306a\u3044\u3002",
+  "nodes \u6570\u30fbconflicts \u6570\u30fbsolved \u6570\u3092\u52dd\u6557\u3068\u3057\u3066\u8aad\u307e\u306a\u3044\u3002",
+  "REFUTED-D10 \u306f LOSS \u8a3c\u660e\u3067\u306f\u306a\u3044\u3002\u672c\u8ab2\u984c\u306f\u56fa\u5b9a\u5e45\u30ec\u30fc\u30f3\u3067\u3042\u308b\u3002",
+  "\u6a19\u6e96 11\u00d711 \u7a7a\u76e4\u30fb\u4e8c\u77f3 root {49,60}/{59,60}\u30fbS2 {59,60}\u30fb",
+  "class 1/2/4 \u306f\u3059\u3079\u3066 UNKNOWN \u306e\u307e\u307e\u3002"
+ ],
+ "inputs": {
+  "frontier_projection_records": 86,
+  "frontier_projection_sha256": "6a54fb4f84a4de3504c1969f1222b24cf2ba747bc3523586c6e70ca277f2ab6f",
+  "input_s4x12q7_def.witness.json_sha256": "c64a6e46b906f065658ede2ebd8c873a893f03b71de414e4ff8858a206aaabf5",
+  "input_s4x13q7_capacity.witness.json_sha256": "1da6a4b50e6b8b9e111adf4f0129339ad4c1d570a47a5971cad537d8550c545c"
+ },
+ "n_gates": 49,
+ "theorem": "w=4 q=7: deficient maximal safe placements require m <= 86; m >= 87 all maximal safe placements are capacity (24 stones)"
+}
