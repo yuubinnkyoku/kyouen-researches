@@ -1,0 +1,207 @@
+{
+ "all_gates_pass": true,
+ "declaration_commit": "04b4ed9d7f279b299d71eb2749728aa741116fe5",
+ "declaration_note": "research/log/2026-11-21-n11-k1179-fold15-ext2-pristine-reexec-third-single-owner-note.md",
+ "gates_seen": 53,
+ "interpretation_guards": {
+  "nodes_solved": "not verdicts",
+  "refuted_d10": "not a LOSS proof",
+  "rows_closed": "none",
+  "unknown": "standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, class 1/2/4: all UNKNOWN",
+  "win8_d10_scope": "per-root game tree only"
+ },
+ "pin": {
+  "fetched": [
+   {
+    "path": "README.md",
+    "sha256": "20a2d1042412fd2620ed6fc40be383e656064ade8b201dc13a5e7e43892d0bfa",
+    "size": 6683
+   },
+   {
+    "path": "scripts/reconstruct_fold15_inputs.py",
+    "sha256": "7757cb5130942e8891697fcf0903f37d9c8d27f3ed6a8ca1b85a5fc07fd582be",
+    "size": 10644
+   },
+   {
+    "path": "scripts/verify_fold15_external_20261121.py",
+    "sha256": "ade19de29fa34bb8f0f7913ece230daa428797792c9db59279e8489d872eac99",
+    "size": 62390
+   },
+   {
+    "path": "output/external-audit.json",
+    "sha256": "6800759ea5e899b84866079ac36fae2316d78a85620e1b32187abc26a0fed717",
+    "size": 101443
+   },
+   {
+    "path": "output/reproduction.log",
+    "sha256": "579f178a44f5a7ee75ff84c6ee771894f95e9cfaf93df4624135e7ddcc3c9ecc",
+    "size": 2106
+   }
+  ],
+  "gates": 10
+ },
+ "published_by_pin_commit": "2e1bc1eab0fa7f66810d839ca91dd2fae3a50962",
+ "recon": {
+  "diff_wa_wb": "byte-identical",
+  "gates": [
+   "recon_a rc0",
+   "recon_a last line PINS 12 PIN256 19",
+   "recon_a subset chain fold11 12+10<fold12 12+13<fold13 12+16<fold14 12+19<fold15 12+22",
+   "recon_a 12 blob lines",
+   "recon_a 27 sha256 lines (22 pins + 5 machines)",
+   "recon_a 3 published-file lines",
+   "recon_a w file count 39",
+   "recon_b rc0",
+   "recon_b last line PINS 12 PIN256 19",
+   "recon_b subset chain fold11 12+10<fold12 12+13<fold13 12+16<fold14 12+19<fold15 12+22",
+   "recon_b 12 blob lines",
+   "recon_b 27 sha256 lines (22 pins + 5 machines)",
+   "recon_b 3 published-file lines",
+   "recon_b w file count 39",
+   "diff -r wa_a wa_b clean",
+   "w file count 39 == 39"
+  ],
+  "recon_a": {
+   "chain_subset_check": "fold11 pins 12+10 subset of fold12 12+13 subset of fold13 12+16 subset of fold14 12+19 subset of fold15 12+22",
+   "manifest_pins": "12 blob + 22 sha256 (+fold11/fold12/fold13/fold14/fold15 machines)",
+   "rc": 0,
+   "w_files": 39
+  },
+  "recon_b": {
+   "chain_subset_check": "fold11 pins 12+10 subset of fold12 12+13 subset of fold13 12+16 subset of fold14 12+19 subset of fold15 12+22",
+   "manifest_pins": "12 blob + 22 sha256 (+fold11/fold12/fold13/fold14/fold15 machines)",
+   "rc": 0,
+   "w_files": 39
+  },
+  "refs": {
+   "ref_a": "b619261ae0243573031c4314582d580c51b7712f",
+   "ref_b": "04b4ed9d7f279b299d71eb2749728aa741116fe5"
+  }
+ },
+ "rerun": {
+  "all_runs_byte_identical": true,
+  "gates": [
+   "run1 rc0",
+   "run1 ALL 981 GATES PASS line",
+   "run1 audit sha == 6800759e...",
+   "run1 gate count 981 + all_gates_pass",
+   "run2 rc0",
+   "run2 ALL 981 GATES PASS line",
+   "run2 audit sha == 6800759e...",
+   "run2 gate count 981 + all_gates_pass",
+   "run2 audit byte-identical to run1",
+   "run3 rc0",
+   "run3 ALL 981 GATES PASS line",
+   "run3 audit sha == 6800759e...",
+   "run3 gate count 981 + all_gates_pass",
+   "run3 audit byte-identical to run1",
+   "run4 rc0",
+   "run4 ALL 981 GATES PASS line",
+   "run4 audit sha == 6800759e...",
+   "run4 gate count 981 + all_gates_pass",
+   "run4 audit byte-identical to run1"
+  ],
+  "published_audit_sha256": "6800759ea5e899b84866079ac36fae2316d78a85620e1b32187abc26a0fed717",
+  "runs": [
+   {
+    "audit_sha256": "6800759ea5e899b84866079ac36fae2316d78a85620e1b32187abc26a0fed717",
+    "byte_identical_to_published_audit": true,
+    "byte_identical_to_run1": true,
+    "first_line": "ALL 981 GATES PASS",
+    "gate_count": 981,
+    "mode": "same cwd",
+    "rc": 0,
+    "run": 1
+   },
+   {
+    "audit_sha256": "6800759ea5e899b84866079ac36fae2316d78a85620e1b32187abc26a0fed717",
+    "byte_identical_to_published_audit": true,
+    "byte_identical_to_run1": true,
+    "first_line": "ALL 981 GATES PASS",
+    "gate_count": 981,
+    "mode": "same cwd",
+    "rc": 0,
+    "run": 2
+   },
+   {
+    "audit_sha256": "6800759ea5e899b84866079ac36fae2316d78a85620e1b32187abc26a0fed717",
+    "byte_identical_to_published_audit": true,
+    "byte_identical_to_run1": true,
+    "first_line": "ALL 981 GATES PASS",
+    "gate_count": 981,
+    "mode": "isolated tree/cwd/HOME",
+    "rc": 0,
+    "run": 3
+   },
+   {
+    "audit_sha256": "6800759ea5e899b84866079ac36fae2316d78a85620e1b32187abc26a0fed717",
+    "byte_identical_to_published_audit": true,
+    "byte_identical_to_run1": true,
+    "first_line": "ALL 981 GATES PASS",
+    "gate_count": 981,
+    "mode": "isolated + PYTHONHASHSEED=random",
+    "rc": 0,
+    "run": 4
+   }
+  ]
+ },
+ "root_hex": "00000000012000003800080009000000",
+ "section_gate_counts": {
+  "pin": 10,
+  "recon": 16,
+  "rerun": 19,
+  "tampers": 8
+ },
+ "subject": "K1179 fold15 external second verification pristine re-execution third verification",
+ "subject_audit_sha256": "6800759ea5e899b84866079ac36fae2316d78a85620e1b32187abc26a0fed717",
+ "subject_experiment_dir": "research/experiments/n11-fold15-external-second-verification-root120000038-20261121",
+ "tampers": {
+  "gates": [
+   "t1_worklist_blob_pin_xor_277555 rc!=0",
+   "t1_worklist_blob_pin_xor_277555 fail message",
+   "t1_worklist_blob_pin_xor_277555 no audit write",
+   "t2_k1114_cert_sha256pin_xor_877666 rc!=0",
+   "t2_k1114_cert_sha256pin_xor_877666 fail message",
+   "t2_k1114_cert_sha256pin_xor_877666 no audit write",
+   "production W worklist sha unchanged",
+   "production W k1114 cert sha unchanged"
+  ],
+  "production_w_recheck": {
+   "k1114_cert_sha256": "5a1359033325e918cf5d9cd2d60ff63fc2fd45e30b926e79330560a7a3a23c4c",
+   "unchanged": true,
+   "worklist_sha256": "6d8a449e8a3e8ca19f47fe7a42b30f16021797b47509fe592561f60e16e7cef0"
+  },
+  "tampers": [
+   {
+    "audit_written": false,
+    "edits": [
+     {
+      "offset": 277555,
+      "op": "1-byte XOR 0x01",
+      "path": "inputs/worklist.csv"
+     }
+    ],
+    "fail_message": "GATE FAILED [i]: W blob pin inputs/worklist.csv",
+    "isolation": "fresh copytree, production W untouched",
+    "name": "t1_worklist_blob_pin_xor_277555",
+    "publisher_offset": "worklist@208888",
+    "rc": 1
+   },
+   {
+    "audit_written": false,
+    "edits": [
+     {
+      "offset": 877666,
+      "op": "1-byte XOR 0x01",
+      "path": "k1114/certs/win8-root-00000000012000003800080009000000-20261120.n11"
+     }
+    ],
+    "fail_message": "GATE FAILED [i]: W sha256 pin k1114/certs/win8-root-00000000012000003800080009000000-20261120.n11",
+    "isolation": "fresh copytree, production W untouched",
+    "name": "t2_k1114_cert_sha256pin_xor_877666",
+    "publisher_offset": "cert@919191",
+    "rc": 1
+   }
+  ]
+ }
+}
