@@ -1,0 +1,418 @@
+{
+  "schema": "n11-s5-js-replica-probe-audit-v1",
+  "all_gates_pass": true,
+  "title": "reply27 two-target S5 probe #4 (JS replica of pinned exact-replay path): 10376293541461626880:12288 = LOSS",
+  "gates_passed": [
+    "validation_at2m-first",
+    "validation_at2m-second",
+    "validation_first-15m",
+    "validation_second-15m",
+    "at2m_row",
+    "at2m_unknown",
+    "at15m_row",
+    "at15m_loss_within_budget",
+    "at15m_run2_row",
+    "at15m_run2_identical",
+    "legal_consistent",
+    "input_target",
+    "input_target",
+    "stone_count",
+    "d4_canonical",
+    "safe_no_forbidden_quadruple",
+    "legal_count",
+    "policy_canonical_safe",
+    "frozen_geometry_size",
+    "parent_coverage",
+    "quarantine_registry_absent",
+    "quarantine_absent",
+    "base_absent",
+    "new_present_loss",
+    "increment_exactly_one_row",
+    "no_duplicate_keys",
+    "changed_parents_only",
+    "no_class_status_change",
+    "live_parents_expected",
+    "candidates_stable",
+    "secured_unchanged",
+    "remaining_third_moves_unchanged"
+  ],
+  "pins": {
+    "pinned_cpp_kyouen_dfpn_root_sha256": "9193f5b6065e0fbcad2ef7c65f386187701cafa1f5b718cc35a5cbb0d138f92e",
+    "replica_jsreplay_sha256": "845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df",
+    "independent_geometry_python_sha256": "954d3a104c1723ebb15b8c9bae63a4494f07f9eb73446a6d067c4fd6a4ba189f",
+    "geometry_sha256": "146be80b5794462c2444e983fc4c4a6e76d3b464bfd5e86fac14509024100b54",
+    "base_merged_cache_sha256": "3faf31cc878cad27ccaa09bce6c8098e70c17c2bdabde352e5b69a42cd08cc4b",
+    "new_merged_cache_sha256": "3ba93da97e302c7c80d4f3a9b0c4cfbc136be79e0a3b39ef5ab9ae8dc7c32d2a",
+    "quarantine_sha256": "81d231604d3a095c115135e05ca393d6be83e1aadde4f614d3b5a9cc67d17fe9"
+  },
+  "validation": {
+    "published_raw_rows_reproduced": [
+      {
+        "tag": "at2m-first",
+        "row": {
+          "stones": 5,
+          "legal": 98,
+          "is_or": 0,
+          "budget": 2000000,
+          "result": 0,
+          "nodes": 2000000,
+          "key_lo": 1152921504606851072,
+          "key_hi": 536870946
+        }
+      },
+      {
+        "tag": "at2m-second",
+        "row": {
+          "stones": 5,
+          "legal": 99,
+          "is_or": 0,
+          "budget": 2000000,
+          "result": 0,
+          "nodes": 2000000,
+          "key_lo": 1188950301626860544,
+          "key_hi": 536870912
+        }
+      },
+      {
+        "tag": "first-15m",
+        "row": {
+          "stones": 5,
+          "legal": 98,
+          "is_or": 0,
+          "budget": 15000000,
+          "result": 2,
+          "nodes": 3651923,
+          "key_lo": 1152921504606851072,
+          "key_hi": 536870946
+        }
+      },
+      {
+        "tag": "second-15m",
+        "row": {
+          "stones": 5,
+          "legal": 99,
+          "is_or": 0,
+          "budget": 15000000,
+          "result": 2,
+          "nodes": 5040200,
+          "key_lo": 1188950301626860544,
+          "key_hi": 536870912
+        }
+      }
+    ],
+    "rule": "stones/legal/is_or/budget/result/nodes must match the published C++ raw rows; wall_s may differ"
+  },
+  "probe": {
+    "key": [
+      10376293541461626880,
+      12288
+    ],
+    "legal": 110,
+    "stages": {
+      "at2m": {
+        "budget": 2000000,
+        "result": 0,
+        "nodes": 2000000,
+        "verdict": "UNKNOWN"
+      },
+      "at15m": {
+        "budget": 15000000,
+        "result": 2,
+        "nodes": 9145034,
+        "verdict": "LOSS"
+      },
+      "at15m_run2": {
+        "budget": 15000000,
+        "result": 2,
+        "nodes": 9145034,
+        "verdict": "LOSS"
+      }
+    },
+    "raw_verdict": "LOSS",
+    "pinned_semantics": "exact_replay: 0 UNKNOWN (budget exhausted), 1 WIN, 2 LOSS (fixed first player)",
+    "independent_geometry": "safe canonical 5-stone child; derived legal 110 matches input; frozen 3,384-class parents",
+    "independent_terminal_minimax": "not established (evidence is replica solver-trusted exact, node-exact against all four published C++ raw rows)",
+    "determinism": "15M stage executed twice on this host with identical result/nodes (9145034)"
+  },
+  "parents": {
+    "all_geometry_parents": [
+      [
+        1297036692683751424,
+        4
+      ],
+      [
+        1297063080961769472,
+        0
+      ],
+      [
+        10376293541461626880,
+        8192
+      ]
+    ],
+    "live_unknown_parents_before": [
+      [
+        1297036692683751424,
+        4
+      ],
+      [
+        1297063080961769472,
+        0
+      ],
+      [
+        10376293541461626880,
+        8192
+      ]
+    ],
+    "per_class": {
+      "1297036692683751424:4": {
+        "before": {
+          "status": "UNKNOWN",
+          "win": 0,
+          "loss": 7,
+          "unknown": 104,
+          "coverage": [
+            4,
+            6,
+            100,
+            108
+          ],
+          "total": 111
+        },
+        "after": {
+          "status": "UNKNOWN",
+          "win": 0,
+          "loss": 8,
+          "unknown": 103,
+          "coverage": [
+            4,
+            6,
+            100,
+            108
+          ],
+          "total": 111
+        }
+      },
+      "1297063080961769472:0": {
+        "before": {
+          "status": "UNKNOWN",
+          "win": 0,
+          "loss": 1,
+          "unknown": 113,
+          "coverage": [
+            4,
+            6,
+            113,
+            117
+          ],
+          "total": 114
+        },
+        "after": {
+          "status": "UNKNOWN",
+          "win": 0,
+          "loss": 2,
+          "unknown": 112,
+          "coverage": [
+            4,
+            6,
+            113,
+            117
+          ],
+          "total": 114
+        }
+      },
+      "10376293541461626880:8192": {
+        "before": {
+          "status": "UNKNOWN",
+          "win": 0,
+          "loss": 6,
+          "unknown": 108,
+          "coverage": [
+            100,
+            108,
+            113,
+            117
+          ],
+          "total": 114
+        },
+        "after": {
+          "status": "UNKNOWN",
+          "win": 0,
+          "loss": 7,
+          "unknown": 107,
+          "coverage": [
+            100,
+            108,
+            113,
+            117
+          ],
+          "total": 114
+        }
+      }
+    }
+  },
+  "cache": {
+    "base_entries": 5746,
+    "base_verdicts": {
+      "WIN": 158,
+      "LOSS": 5588
+    },
+    "new_entries": [
+      "10376293541461626880:12288 -> LOSS (nodes 9145034)"
+    ],
+    "merged_entries": 5747,
+    "merged_verdicts": {
+      "WIN": 158,
+      "LOSS": 5589
+    },
+    "conflicts": 0,
+    "quarantine_overlap": 0,
+    "base_byte_preserved_roundtrip": true
+  },
+  "classes": {
+    "candidate_classes": 115,
+    "candidate_status_before": {
+      "UNKNOWN": 62,
+      "WIN": 53
+    },
+    "candidate_status_after": {
+      "UNKNOWN": 62,
+      "WIN": 53
+    },
+    "all_status_before": {
+      "UNKNOWN": 3081,
+      "WIN": 272,
+      "LOSS": 31
+    },
+    "all_status_after": {
+      "UNKNOWN": 3081,
+      "WIN": 272,
+      "LOSS": 31
+    },
+    "changed": [
+      {
+        "key": [
+          1297036692683751424,
+          4
+        ],
+        "coverage": [
+          4,
+          6,
+          100,
+          108
+        ],
+        "before": {
+          "status": "UNKNOWN",
+          "win": 0,
+          "loss": 7,
+          "unknown": 104,
+          "coverage": [
+            4,
+            6,
+            100,
+            108
+          ],
+          "total": 111
+        },
+        "after": {
+          "status": "UNKNOWN",
+          "win": 0,
+          "loss": 8,
+          "unknown": 103,
+          "coverage": [
+            4,
+            6,
+            100,
+            108
+          ],
+          "total": 111
+        }
+      },
+      {
+        "key": [
+          1297063080961769472,
+          0
+        ],
+        "coverage": [
+          4,
+          6,
+          113,
+          117
+        ],
+        "before": {
+          "status": "UNKNOWN",
+          "win": 0,
+          "loss": 1,
+          "unknown": 113,
+          "coverage": [
+            4,
+            6,
+            113,
+            117
+          ],
+          "total": 114
+        },
+        "after": {
+          "status": "UNKNOWN",
+          "win": 0,
+          "loss": 2,
+          "unknown": 112,
+          "coverage": [
+            4,
+            6,
+            113,
+            117
+          ],
+          "total": 114
+        }
+      },
+      {
+        "key": [
+          10376293541461626880,
+          8192
+        ],
+        "coverage": [
+          100,
+          108,
+          113,
+          117
+        ],
+        "before": {
+          "status": "UNKNOWN",
+          "win": 0,
+          "loss": 6,
+          "unknown": 108,
+          "coverage": [
+            100,
+            108,
+            113,
+            117
+          ],
+          "total": 114
+        },
+        "after": {
+          "status": "UNKNOWN",
+          "win": 0,
+          "loss": 7,
+          "unknown": 107,
+          "coverage": [
+            100,
+            108,
+            113,
+            117
+          ],
+          "total": 114
+        }
+      }
+    ],
+    "secured_coverage_count": 117,
+    "remaining_third_moves": [
+      100,
+      108
+    ]
+  },
+  "interpretation_guard": [
+    "One S5 solver-trusted LOSS (replica of the pinned C++ exact-replay path, node-exact against all four published C++ raw rows).",
+    "LOSS decrements three live parent classes (candidate parents 104->103 and 108->107; non-candidate bookkeeping parent 113->112); no class closes; no third-move coverage is claimed.",
+    "Nodes, solved counts, and proxy values are never verdicts; the standard 11x11 empty board, the two-stone root {60,27}, and its remaining third moves 100/108 remain UNKNOWN."
+  ]
+}
