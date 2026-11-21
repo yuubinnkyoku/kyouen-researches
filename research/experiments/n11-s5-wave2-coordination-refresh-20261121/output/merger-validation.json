@@ -1,0 +1,34 @@
+{
+ "tool": "s5_union_merge.py validation battery (Part B)",
+ "selftest": "PASS (5/5: positive dedupe/sort over a shuffled pseudo-corpus; cross-file conflict reject: no output; within-file conflict reject; malformed-verdict reject: no output; double-run determinism of both the output bytes and the audit JSON)",
+ "single_input_idempotency": {
+  "input": "research/experiments/n11-reply27-s5-jsreplica-probe-10376293541461626880-40960-20261121/output/merged-exact-s5-after-js-probe-13.cache",
+  "input_sha256": "60e0dc3476920d4e99043dd4f132398ea72e4dfdcd9f3dbb8fc686ba65bc28c6",
+  "result": "re-rendered byte-identically (cmp PASS)",
+  "audit": "idem-probe13.audit.json"
+ },
+ "chain_positive_control": {
+  "inputs": "14 published chain caches: n11-two-target-design-20261010 base merged-exact-s5.cache + reply27 jsreplica merged caches probes 1..13",
+  "result": "union reproduces merged-exact-s5-after-js-probe-13.cache byte-identically (cmp PASS)",
+  "unique_rows": 5756,
+  "duplicate_rows_elided": 74737,
+  "verdict_counts": {
+   "WIN(1)": 158,
+   "LOSS(2)": 5598
+  },
+  "win_loss_conflicts": 0,
+  "nodes_field_mismatches": 0,
+  "audit": "chain-union.audit.json"
+ },
+ "status_guard": "the merger creates no verdict and interprets none; nodes are bookkeeping; 11x11 root questions remain UNKNOWN",
+ "cross_lane_validation": {
+  "finding": "union of the pinned probe-13 base cache and the 37 new LOSS rows extracted from the third-cost lane's published merged increment reproduces that increment byte-identically (cmp PASS)",
+  "published_increment": "research/experiments/n11-class1297036830122704896-exclusive-s5-jsreplica-probe-20261121/output/merged-exact-s5-after-class-excl-1.cache",
+  "published_increment_sha256": "bb4495e0586404876db05856c5b8573c62361dadd826b6f68f6f8cae611190b0",
+  "unique_rows": 5793,
+  "duplicate_rows_elided": 0,
+  "win_loss_conflicts": 0,
+  "nodes_field_mismatches": 0,
+  "audit": "xval-thirdcost.audit.json"
+ }
+}

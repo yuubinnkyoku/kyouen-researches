@@ -1,0 +1,480 @@
+{
+ "mode": "precheck",
+ "class": "1297107061427929088:0",
+ "keys": 41,
+ "gates": [
+  "5 stones",
+  "D4-canonical-safe (policy)",
+  "quadruple-free (policy)",
+  "independent integer Board.legal count == ledger legal",
+  "child of the fourth-cost class in the frozen 3384-class geometry",
+  "exclusive live parent == the fourth-cost class",
+  "absent from probe-13 merged cache",
+  "absent from the latest third-cost merged cache (sha bb4495e0...)",
+  "absent from quarantine registry",
+  "disjoint from focus35/cert38/third39/sbd101 fixed claims",
+  "ascending (proxy, key) probe order"
+ ],
+ "quarantine_registry_sha256": "81d231604d3a095c115135e05ca393d6be83e1aadde4f614d3b5a9cc67d17fe9",
+ "canonical_safe_policy": "pinned published copy (sha256 78655e94...)",
+ "independent_py": "pinned published copy (sha256 954d3a10...)",
+ "band_histogram": {
+  "5041585": 9,
+  "5234938": 27,
+  "5932112": 5
+ },
+ "per_key": [
+  {
+   "order": 1,
+   "key": "1297107061427929088:65536",
+   "legal_independent": 83,
+   "legal_ledger": 83,
+   "truncated_cost_proxy_nodes": 5041585,
+   "live_parents": [
+    "1297107061427929088:0"
+   ],
+   "gates": "PASS"
+  },
+  {
+   "order": 2,
+   "key": "1297107061427929088:67108864",
+   "legal_independent": 82,
+   "legal_ledger": 82,
+   "truncated_cost_proxy_nodes": 5041585,
+   "live_parents": [
+    "1297107061427929088:0"
+   ],
+   "gates": "PASS"
+  },
+  {
+   "order": 3,
+   "key": "1297107061427937280:0",
+   "legal_independent": 86,
+   "legal_ledger": 86,
+   "truncated_cost_proxy_nodes": 5041585,
+   "live_parents": [
+    "1297107061427929088:0"
+   ],
+   "gates": "PASS"
+  },
+  {
+   "order": 4,
+   "key": "1297107061427994624:0",
+   "legal_independent": 89,
+   "legal_ledger": 89,
+   "truncated_cost_proxy_nodes": 5041585,
+   "live_parents": [
+    "1297107061427929088:0"
+   ],
+   "gates": "PASS"
+  },
+  {
+   "order": 5,
+   "key": "1297107061428060160:0",
+   "legal_independent": 85,
+   "legal_ledger": 85,
+   "truncated_cost_proxy_nodes": 5041585,
+   "live_parents": [
+    "1297107061427929088:0"
+   ],
+   "gates": "PASS"
+  },
+  {
+   "order": 6,
+   "key": "1297107061444706304:0",
+   "legal_independent": 87,
+   "legal_ledger": 87,
+   "truncated_cost_proxy_nodes": 5041585,
+   "live_parents": [
+    "1297107061427929088:0"
+   ],
+   "gates": "PASS"
+  },
+  {
+   "order": 7,
+   "key": "1297107062501670912:0",
+   "legal_independent": 87,
+   "legal_ledger": 87,
+   "truncated_cost_proxy_nodes": 5041585,
+   "live_parents": [
+    "1297107061427929088:0"
+   ],
+   "gates": "PASS"
+  },
+  {
+   "order": 8,
+   "key": "1297247798916284416:0",
+   "legal_independent": 88,
+   "legal_ledger": 88,
+   "truncated_cost_proxy_nodes": 5041585,
+   "live_parents": [
+    "1297107061427929088:0"
+   ],
+   "gates": "PASS"
+  },
+  {
+   "order": 9,
+   "key": "10416825938107961344:0",
+   "legal_independent": 88,
+   "legal_ledger": 88,
+   "truncated_cost_proxy_nodes": 5041585,
+   "live_parents": [
+    "1297107061427929088:0"
+   ],
+   "gates": "PASS"
+  },
+  {
+   "order": 10,
+   "key": "1152921504607895552:1627389952",
+   "legal_independent": 92,
+   "legal_ledger": 92,
+   "truncated_cost_proxy_nodes": 5234938,
+   "live_parents": [
+    "1297107061427929088:0"
+   ],
+   "gates": "PASS"
+  },
+  {
+   "order": 11,
+   "key": "1152921504809222144:68719476736",
+   "legal_independent": 91,
+   "legal_ledger": 91,
+   "truncated_cost_proxy_nodes": 5234938,
+   "live_parents": [
+    "1297107061427929088:0"
+   ],
+   "gates": "PASS"
+  },
+  {
+   "order": 12,
+   "key": "1161928703861592064:805306368",
+   "legal_independent": 98,
+   "legal_ledger": 98,
+   "truncated_cost_proxy_nodes": 5234938,
+   "live_parents": [
+    "1297107061427929088:0"
+   ],
+   "gates": "PASS"
+  },
+  {
+   "order": 13,
+   "key": "1297107061427929088:8",
+   "legal_independent": 99,
+   "legal_ledger": 99,
+   "truncated_cost_proxy_nodes": 5234938,
+   "live_parents": [
+    "1297107061427929088:0"
+   ],
+   "gates": "PASS"
+  },
+  {
+   "order": 14,
+   "key": "1297107061427929088:16",
+   "legal_independent": 92,
+   "legal_ledger": 92,
+   "truncated_cost_proxy_nodes": 5234938,
+   "live_parents": [
+    "1297107061427929088:0"
+   ],
+   "gates": "PASS"
+  },
+  {
+   "order": 15,
+   "key": "1297107061427929088:128",
+   "legal_independent": 97,
+   "legal_ledger": 97,
+   "truncated_cost_proxy_nodes": 5234938,
+   "live_parents": [
+    "1297107061427929088:0"
+   ],
+   "gates": "PASS"
+  },
+  {
+   "order": 16,
+   "key": "1297107061427929088:16384",
+   "legal_independent": 97,
+   "legal_ledger": 97,
+   "truncated_cost_proxy_nodes": 5234938,
+   "live_parents": [
+    "1297107061427929088:0"
+   ],
+   "gates": "PASS"
+  },
+  {
+   "order": 17,
+   "key": "1297107061427929088:536870912",
+   "legal_independent": 93,
+   "legal_ledger": 93,
+   "truncated_cost_proxy_nodes": 5234938,
+   "live_parents": [
+    "1297107061427929088:0"
+   ],
+   "gates": "PASS"
+  },
+  {
+   "order": 18,
+   "key": "1297107061427929089:0",
+   "legal_independent": 96,
+   "legal_ledger": 96,
+   "truncated_cost_proxy_nodes": 5234938,
+   "live_parents": [
+    "1297107061427929088:0"
+   ],
+   "gates": "PASS"
+  },
+  {
+   "order": 19,
+   "key": "1297107061427929092:0",
+   "legal_independent": 92,
+   "legal_ledger": 92,
+   "truncated_cost_proxy_nodes": 5234938,
+   "live_parents": [
+    "1297107061427929088:0"
+   ],
+   "gates": "PASS"
+  },
+  {
+   "order": 20,
+   "key": "1297107061427929120:0",
+   "legal_independent": 95,
+   "legal_ledger": 95,
+   "truncated_cost_proxy_nodes": 5234938,
+   "live_parents": [
+    "1297107061427929088:0"
+   ],
+   "gates": "PASS"
+  },
+  {
+   "order": 21,
+   "key": "1297107061427929216:0",
+   "legal_independent": 98,
+   "legal_ledger": 98,
+   "truncated_cost_proxy_nodes": 5234938,
+   "live_parents": [
+    "1297107061427929088:0"
+   ],
+   "gates": "PASS"
+  },
+  {
+   "order": 22,
+   "key": "1297107061427929344:0",
+   "legal_independent": 99,
+   "legal_ledger": 99,
+   "truncated_cost_proxy_nodes": 5234938,
+   "live_parents": [
+    "1297107061427929088:0"
+   ],
+   "gates": "PASS"
+  },
+  {
+   "order": 23,
+   "key": "1297107061427933184:0",
+   "legal_independent": 95,
+   "legal_ledger": 95,
+   "truncated_cost_proxy_nodes": 5234938,
+   "live_parents": [
+    "1297107061427929088:0"
+   ],
+   "gates": "PASS"
+  },
+  {
+   "order": 24,
+   "key": "1297107061427961856:0",
+   "legal_independent": 94,
+   "legal_ledger": 94,
+   "truncated_cost_proxy_nodes": 5234938,
+   "live_parents": [
+    "1297107061427929088:0"
+   ],
+   "gates": "PASS"
+  },
+  {
+   "order": 25,
+   "key": "1297107061562146816:0",
+   "legal_independent": 95,
+   "legal_ledger": 95,
+   "truncated_cost_proxy_nodes": 5234938,
+   "live_parents": [
+    "1297107061427929088:0"
+   ],
+   "gates": "PASS"
+  },
+  {
+   "order": 26,
+   "key": "1297107061696364544:0",
+   "legal_independent": 96,
+   "legal_ledger": 96,
+   "truncated_cost_proxy_nodes": 5234938,
+   "live_parents": [
+    "1297107061427929088:0"
+   ],
+   "gates": "PASS"
+  },
+  {
+   "order": 27,
+   "key": "1297108160939556864:0",
+   "legal_independent": 95,
+   "legal_ledger": 95,
+   "truncated_cost_proxy_nodes": 5234938,
+   "live_parents": [
+    "1297107061427929088:0"
+   ],
+   "gates": "PASS"
+  },
+  {
+   "order": 28,
+   "key": "1297388536404639744:0",
+   "legal_independent": 91,
+   "legal_ledger": 91,
+   "truncated_cost_proxy_nodes": 5234938,
+   "live_parents": [
+    "1297107061427929088:0"
+   ],
+   "gates": "PASS"
+  },
+  {
+   "order": 29,
+   "key": "1369164655465857024:0",
+   "legal_independent": 93,
+   "legal_ledger": 93,
+   "truncated_cost_proxy_nodes": 5234938,
+   "live_parents": [
+    "1297107061427929088:0"
+   ],
+   "gates": "PASS"
+  },
+  {
+   "order": 30,
+   "key": "1585337437579640832:0",
+   "legal_independent": 93,
+   "legal_ledger": 93,
+   "truncated_cost_proxy_nodes": 5234938,
+   "live_parents": [
+    "1297107061427929088:0"
+   ],
+   "gates": "PASS"
+  },
+  {
+   "order": 31,
+   "key": "1873567813731352576:0",
+   "legal_independent": 91,
+   "legal_ledger": 91,
+   "truncated_cost_proxy_nodes": 5234938,
+   "live_parents": [
+    "1297107061427929088:0"
+   ],
+   "gates": "PASS"
+  },
+  {
+   "order": 32,
+   "key": "3602950070641623040:0",
+   "legal_independent": 91,
+   "legal_ledger": 91,
+   "truncated_cost_proxy_nodes": 5234938,
+   "live_parents": [
+    "1297107061427929088:0"
+   ],
+   "gates": "PASS"
+  },
+  {
+   "order": 33,
+   "key": "5908793079855316992:0",
+   "legal_independent": 91,
+   "legal_ledger": 91,
+   "truncated_cost_proxy_nodes": 5234938,
+   "live_parents": [
+    "1297107061427929088:0"
+   ],
+   "gates": "PASS"
+  },
+  {
+   "order": 34,
+   "key": "10380797141088997376:8",
+   "legal_independent": 99,
+   "legal_ledger": 99,
+   "truncated_cost_proxy_nodes": 5234938,
+   "live_parents": [
+    "1297107061427929088:0"
+   ],
+   "gates": "PASS"
+  },
+  {
+   "order": 35,
+   "key": "10380797141088997376:131072",
+   "legal_independent": 93,
+   "legal_ledger": 93,
+   "truncated_cost_proxy_nodes": 5234938,
+   "live_parents": [
+    "1297107061427929088:0"
+   ],
+   "gates": "PASS"
+  },
+  {
+   "order": 36,
+   "key": "10380797141088997376:67108864",
+   "legal_independent": 97,
+   "legal_ledger": 97,
+   "truncated_cost_proxy_nodes": 5234938,
+   "live_parents": [
+    "1297107061427929088:0"
+   ],
+   "gates": "PASS"
+  },
+  {
+   "order": 37,
+   "key": "1152921504606851072:805306369",
+   "legal_independent": 100,
+   "legal_ledger": 100,
+   "truncated_cost_proxy_nodes": 5932112,
+   "live_parents": [
+    "1297107061427929088:0"
+   ],
+   "gates": "PASS"
+  },
+  {
+   "order": 38,
+   "key": "1152921504607899648:805306368",
+   "legal_independent": 102,
+   "legal_ledger": 102,
+   "truncated_cost_proxy_nodes": 5932112,
+   "live_parents": [
+    "1297107061427929088:0"
+   ],
+   "gates": "PASS"
+  },
+  {
+   "order": 39,
+   "key": "1152930300699873280:805306368",
+   "legal_independent": 103,
+   "legal_ledger": 103,
+   "truncated_cost_proxy_nodes": 5932112,
+   "live_parents": [
+    "1297107061427929088:0"
+   ],
+   "gates": "PASS"
+  },
+  {
+   "order": 40,
+   "key": "1297107061427929088:16777216",
+   "legal_independent": 102,
+   "legal_ledger": 102,
+   "truncated_cost_proxy_nodes": 5932112,
+   "live_parents": [
+    "1297107061427929088:0"
+   ],
+   "gates": "PASS"
+  },
+  {
+   "order": 41,
+   "key": "1297107336305836032:0",
+   "legal_independent": 102,
+   "legal_ledger": 102,
+   "truncated_cost_proxy_nodes": 5932112,
+   "live_parents": [
+    "1297107061427929088:0"
+   ],
+   "gates": "PASS"
+  }
+ ],
+ "status_guard": "no search performed yet; targets only; 11x11 UNKNOWN"
+}

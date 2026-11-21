@@ -1,0 +1,104 @@
+{
+ "tool": "s5_union_merge.py",
+ "fail_closed_gates": "strict 6-field row schema, depth==5, verdict in {1,2}, WIN/LOSS conflict abort (no output), first-occurrence nodes",
+ "inputs": [
+  {
+   "file": "chain/base-merged-exact-s5.cache",
+   "sha256": "24e97b746667bd1c5468d5203e8444a0d379023f6c67facaf9bbd4787c3759e6",
+   "rows": 5743,
+   "unique_new": 5743
+  },
+  {
+   "file": "chain/chain-p01.cache",
+   "sha256": "6ab46ac6c11ada0c2f45fceeda8304852052e09c27db4ed1989c4041d74afcd2",
+   "rows": 5744,
+   "unique_new": 5744
+  },
+  {
+   "file": "chain/chain-p02.cache",
+   "sha256": "b92a8eb06b38852c360fb173085be63705b582c3e72ccce49183a86d0da6d8cd",
+   "rows": 5745,
+   "unique_new": 5745
+  },
+  {
+   "file": "chain/chain-p03.cache",
+   "sha256": "3faf31cc878cad27ccaa09bce6c8098e70c17c2bdabde352e5b69a42cd08cc4b",
+   "rows": 5746,
+   "unique_new": 5746
+  },
+  {
+   "file": "chain/chain-p04.cache",
+   "sha256": "3ba93da97e302c7c80d4f3a9b0c4cfbc136be79e0a3b39ef5ab9ae8dc7c32d2a",
+   "rows": 5747,
+   "unique_new": 5747
+  },
+  {
+   "file": "chain/chain-p05.cache",
+   "sha256": "6d0131f90d65045055279556f7d2f90eac70500ff16665c88364d24ae976ff89",
+   "rows": 5748,
+   "unique_new": 5748
+  },
+  {
+   "file": "chain/chain-p06.cache",
+   "sha256": "6aded81e7c9747e42d40da8c139420da78b615d3a586964f2dbe093483fc7fad",
+   "rows": 5749,
+   "unique_new": 5749
+  },
+  {
+   "file": "chain/chain-p07.cache",
+   "sha256": "a74ecf39b87cd101ba6fdf3747e8e0ebad93443b5e8ba82d351fafb784e9fb08",
+   "rows": 5750,
+   "unique_new": 5750
+  },
+  {
+   "file": "chain/chain-p08.cache",
+   "sha256": "708eb4953ce3ce789a988fa6257adac7518ae5c2ca4320fc7f3d4a19dbc46429",
+   "rows": 5751,
+   "unique_new": 5751
+  },
+  {
+   "file": "chain/chain-p09.cache",
+   "sha256": "716436fc8bfff94b0501e3e5b9431fabb53872215e02cb711f8019aa1e607587",
+   "rows": 5752,
+   "unique_new": 5752
+  },
+  {
+   "file": "chain/chain-p10.cache",
+   "sha256": "405d86cb63727d6cee9ea46c325dc8eebda75332a848b8791857b2adbfa6ed9c",
+   "rows": 5753,
+   "unique_new": 5753
+  },
+  {
+   "file": "chain/chain-p11.cache",
+   "sha256": "e5c8bf80888c77e44f29d00dd1a2334e3cf9ec9940605ca855d17d8bba1dd991",
+   "rows": 5754,
+   "unique_new": 5754
+  },
+  {
+   "file": "chain/chain-p12.cache",
+   "sha256": "0e4016aea0feea2c1eaa6dbc8ba56af1e54c1d02d8cba5338ecd8ddd0804f3a8",
+   "rows": 5755,
+   "unique_new": 5755
+  },
+  {
+   "file": "chain/chain-p13.cache",
+   "sha256": "60e0dc3476920d4e99043dd4f132398ea72e4dfdcd9f3dbb8fc686ba65bc28c6",
+   "rows": 5756,
+   "unique_new": 5756
+  }
+ ],
+ "unique_rows": 5756,
+ "duplicate_rows_elided": 74737,
+ "verdict_counts": {
+  "WIN(1)": 158,
+  "LOSS(2)": 5598
+ },
+ "nodes_field_mismatches_recorded": [],
+ "comments_kept_from_first_input": [
+  "# S5 solver-trusted exact; source manifest in probe-audit.json"
+ ],
+ "output_sha256": "60e0dc3476920d4e99043dd4f132398ea72e4dfdcd9f3dbb8fc686ba65bc28c6",
+ "output_bytes": 234172,
+ "row_format": "s5verdict,<lo>,<hi>,5,<verdict>,<nodes>",
+ "interpretation_guard": "nodes are bookkeeping, never verdicts; merge of solver-trusted cache rows; no new verdict is created; 11x11 root questions remain UNKNOWN"
+}
