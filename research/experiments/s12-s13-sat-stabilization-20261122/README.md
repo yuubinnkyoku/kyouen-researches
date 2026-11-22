@@ -111,8 +111,8 @@ model から取出した witness は修瑕の影響を受けない（独立検�
 | (9,8) | v2-draft | default | UNKNOWN | 639,594 | 134.77 | v2n9k8.log |
 | (9,9) | v2-draft | unsat | SAT | 163,958 | 48.60 | v2n9k9_unsat.log |
 | (10,9) | v2-draft | — | **無効: SIGTERM による破損セッション（統計として不使用）** | — | — | v2n10k9.log |
-| (10,10) | v2-draft | unsat | SAT | 152,960 | 81.11 | v2n10k10_unsat.log |
-| (10,10) | v2-draft | shuffle=7, unsat | SAT | 179,356 | 90.87 | v2n10k10sh7_unsat.log |
+| (10,10) | v2-draft | unsat | SAT | 152,960 | 81.11 | v2n10k10_unsat.log.gz.b64 |
+| (10,10) | v2-draft | shuffle=7, unsat | SAT | 179,356 | 90.87 | v2n10k10sh7_unsat.log.gz.b64 |
 | (12,10) | v2-draft | default | UNKNOWN | 336,195 | 269.65 | v2n12k10.log |
 | (12,10) | v2-draft | sat | UNKNOWN | 308,470 | 279.60 | v2n12k10_sat.log |
 | (12,11) | v2-draft | default | UNKNOWN | 356,116 | 269.61 | v2n12k11.log |
@@ -125,11 +125,12 @@ model から取出した witness は修瑕の影響を受けない（独立検�
 | (7,7) | **v2.1** | default | SAT | 284,653 | 24.09 | v3n7k7.log |
 | (8,8) | **v2.1** | default | SAT | 192,114 | 27.27 | v3n8k8.log |
 | (9,9) | **v2.1** | default | SAT | 151,738 | 33.87 | v3n9k9.log |
-| (10,10) | **v2.1** | default | SAT | 2,143 | 4.37 | v3n10k10.log |
+| (10,10) | **v2.1** | default | SAT | 2,143 | 4.37 | v3n10k10.log.gz.b64 |
 | (10,10) | **v2.1** | shuffle=7 | UNKNOWN | 752,186 | 261.68 | v3n10k10sh7.log |
 | (12,10) | **v2.1** | default | UNKNOWN | 351,702 | 265.39 | v3n12k10.log |
 
-備考: 「--unsat」「--sat」は kissat プリセット。sh はエンコーダ --shuffle。v1/v2-draft/v2.1 は符号化版数。
+備考: 「--unsat」「--sat」は kissat プリセット。sh はエンコーダ --shuffle。v1/v2-draft/v2.1 は符号化版数。UNKNOWN=honest bounded negative（cap 到達）、不在・非存在は一切主張しない。
+`.gz.b64` は base64(gzip(生ログ))（kissat model の v 行を含む、最も大きい3本のみ。~1.7MB→b64 ~690KB）。復元手順と生ログの sha256 は logs/NOTE-gz-b64.md とファイル先頭行参照。
 UNKNOWN=honest bounded negative（cap 到達）、不在・非存在は一切主張しない。
 
 ## 5. 結果A: 較正ラダー（v2.1）
