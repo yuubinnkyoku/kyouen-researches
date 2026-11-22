@@ -2183,3 +2183,63 @@ refutation evidence.
   not verdicts. Open items (re-read latest main first): (a) execute
   batch-17 under the declared protocol, (b) the scrutiny owner's q042
   adoption decision, (c) class 23101's remaining 10 unprobed keys.
+
+## Continuation 35 (2026-11-22, this host): Part AU batch-17 (class 10661) executed and published under takeover - 52/52 all LOSS, the fifth clean all-LOSS batch, 17th completed batch; verdicts NOT consumed
+
+- Re-read latest main first: the competing lane (y14) had advanced past
+  `24e418a9` (observed HEAD for commit A: `c15d4813`), the batch-17
+  experiment `output/` did not exist on main yet, no counter-declaration
+  for the batch-17 execution scope existed (the Part AU declaration
+  `adc4358a` and scaffold `62b60a07` from the parallel session were the
+  only 10661 items), so this host executed under the declared protocol.
+- Execution: pinned replica `jsreplay.js` (`84585617...` byte-copy)
+  2-pass fresh-cold node-exact, budget 15M, max 2 workers (2-key wave).
+  **52/52 keys LOSS (result 2)**, WIN 0, budget exhaustion 0, mismatch 0.
+  Total nodes 196,536,452 per pass (range 1,651,860 .. 14,967,263; u031
+  settled LOSS at 14,967,263 nodes, just under budget). Fifth clean
+  all-LOSS batch (after 23963/10324/8784/10687); 17th completed batch.
+- Pre-execution val-gate on this host: 4/4 node-exact (at2m 0/2,000,000
+  twice; 15m `(2, 3651923)` / `(2, 5040200)`; forbidden-four check
+  95,670).
+- Host event (honesty record): 4 sandbox environment resets occurred
+  mid-write; 5 pass files (u017.p2, u018.p2, u027.p2, u031.p2, u033.p2)
+  were left truncated. The completeness guard detected the missing
+  `# replay_done`, quarantined the fragments under
+  `output/raw-truncated-hostevent/`, and re-ran exactly those passes
+  fresh-cold. No fragment ever contained a verdict line; no completed row
+  was ever re-searched (same failure mode as batch-16).
+- row-audit.json (schema
+  `n11-centralreply-closure-class10661-batch17-rowaudit-v1`, sha256
+  `c19e768f...`): all 52 rows machine-re-verified from the raws
+  (p1==p2 node-exact, within budget, result 2, input row match,
+  status.log match). PASS.
+- Runner delta disclosed: `scripts/runbatch.sh` (`f591f8c2...`) is a
+  byte-copy of the published batch-16 runner plus one honest-exhaustion
+  label (jsreplay exits 0 on exhaustion; the 15M exhaustion row must not
+  be recorded as PASS; never fired in this batch since exhaustion was 0).
+  `scripts/runwave.sh` (`8efd78c2...`) is the 2-key wave. Both pinned in
+  the MANIFEST.
+- Publication (4 commits, each message records observed HEAD-before-push):
+  A `2e035ed7` (runner scripts + this-host val-gate outputs + merged
+  execution status.log), B `2266f8c7` (raw u001..u052, 104 files),
+  C `54d2b0ee` (5 host-event fragments), D `ffc09de1` (row-audit.json +
+  README execution-result section + MANIFEST-sha256, 177 entries) =
+  publication complete. **Fetch-back 177/177 byte-identical** against the
+  publication-commit-pinned raw URLs.
+- Note amendment published: Part AU status update appended to the
+  single-owner note (blob sha1 lock `14794159...` -> server blob
+  `e0a4f154...`, server size 249,483 bytes exactly matching the local
+  composition; paged 5-read full-content transfer verified by server-side
+  blob identity).
+- Verdict guards (unchanged): zero verdicts consumed by this Part; the
+  52 LOSS rows may only later enter an increment via the sha-pinned
+  fail-closed merger (`90711961...`) in a separately declared adoption
+  Part; the canonical cache stays 6,120 rows `be9cb24e...`; the 15
+  unconsumed closure WIN rows stay scrutiny-owner-blocked. The standard
+  11x11 empty board, the 19 central-reply roots, class 10661 and all 52
+  keys remain UNKNOWN throughout; nodes, legal counts and probe orders
+  are bookkeeping, never verdicts. Open items (re-read latest main first):
+  (a) the batch-17 52-LOSS canonical adoption Part (if-adopted
+  decomposition optional), (b) the scrutiny owner's q042 adoption
+  decision, (c) class 23101's remaining 10 unprobed keys, (d) next
+  batch-18 candidate selection from the latest closure-classes rank.
