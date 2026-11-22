@@ -76,3 +76,42 @@ be amended with the result section in a later commit; per-row honest records
 land in `output/status.log` and `output/raw/`). The standard 11x11 empty
 board, the 19 central-reply roots and class 8784 remain UNKNOWN throughout.
 Nodes are not verdicts.
+
+## Result (execution finished 2026-11-22T10:06:29Z)
+
+- 52/52 keys PASS: every key two fresh cold passes at budget 15,000,000 with
+  node-exact (budget,result,nodes) equality across the two passes; all 52
+  rows result 2 (LOSS).
+- No WIN-HALT (rc=45), no mismatch (rc=42), no budget exhaustion (result 0):
+  batch 10 is the third clean all-LOSS batch of the grind (with batches 2/7).
+- Replica df-pn nodes (p1 reference): min 1,552,890 (m019, s5 263430, legal
+  88, probe_order 401), median 3,174,872, max 8,133,535 (m010, s5 243538,
+  legal 93, probe_order 392); total 177,295,361 nodes across the 52 keys.
+  Observation (honest, no interpretation): three probe_order-adjacent pairs
+  of distinct keys produced identical node counts (m014/m015 3,801,379;
+  m027/m028 3,162,294; m030/m031 2,277,181); keys are distinct in
+  (s5,lo,hi,legal) and each pair passed its own 2-pass node-exact gate.
+- Execution: 2-core host, up to 4 workers as declared, probe_order 4-key
+  waves via `scripts/runner-all.sh` (resume-safe wave runner; stops launching
+  new waves after any rc>=42; in-flight wave members always complete).
+  Foreground waves covered m001-m012; the detached runner covered m013-m052
+  (wall 09:33:01Z - 10:06:29Z including the restart below).
+- Environment incident (honest record): a 240s bash timeout during an early
+  foreground two-wave attempt abandoned the execution environment and
+  discarded the then-current local outputs (at most 12 partially completed
+  keys, none published). The batch was restarted from scratch after
+  re-downloading this scaffold byte-exact from the published declaration
+  commit `ab8641f...`. m001 was re-run fresh cold and reproduced 4,038,249
+  nodes (result 2) identical to the pre-restart value: a cross-restart
+  node-exact reproduction. All published raws come from post-restart runs.
+- Publication: raws m001-m052 p1/p2 in 3 chunk commits (`7b8790ab` 36
+  files m001-m018, `736a4f11` 36 files m019-m036, `354524de` 32 files
+  m037-m052), fetch-back verified 104/104 byte-exact via commit-pinned raw
+  URLs; `output/status.log` (65 lines: 52 PASS rows plus runner
+  bookkeeping) and `scripts/runner-all.sh` are published in this result
+  commit.
+- Consumption: none. No coverage, closure or root claim. Class 8784, the
+  19 central-reply roots and the standard 11x11 empty board remain UNKNOWN.
+  The 52 LOSS rows are a fail-closed increment candidate only; the merge +
+  refresh re-audit runs only under the separate Part Y declaration. Nodes
+  are not verdicts.

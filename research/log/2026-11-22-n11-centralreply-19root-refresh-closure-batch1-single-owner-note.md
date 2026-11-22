@@ -1016,3 +1016,72 @@ reaudit closure-classes rank 9 のクラス8784に着手する (安価側WIN密�
   scripts/jsreplay.js (pin) + scripts/runbatch.sh (published batch-9と
   byte-identical) + output/val-gate/ (published 4入力 + 本ホスト4出力) +
   README。output/raw/・output/status.logは実行後にchunk出版する。
+
+## Part X 出版status update (2026-11-22, prober): batch 10 完走 - 52/52 全LOSS (3度目のclean batch)
+
+- 実行結果 (machine-verified): m001-m052全52キー、budget 15M・2-pass fresh
+  cold、全キーPASS (budget,result,nodes の2-pass完全一致)、**全52行
+  result 2 (LOSS)**。WIN-HALT (rc=45) なし・mismatch (rc=42) なし・
+  枯渇 (result 0) なし。nodes幅 1,552,890 (m019, s5 263430) -
+  8,133,535 (m010, s5 243538)、52キー合計 177,295,361 (p1参照)。
+  batch実績は10バッチ中7 WIN-HALT + 3 clean (23963/10324/8784) となった。
+- 観測 (誠実記録・解釈なし): m014/m015 (3,801,379)・m027/m028 (3,162,294)・
+  m030/m031 (2,277,181) の3組がprobe_order隣接の**別キー**で同一ノード数。
+  いずれも (s5,lo,hi,legal) は別キーで、各ペアとも2-pass node-exact gateを
+  個別に通過している。
+- 実行形態: 2-coreホスト、宣言通り最大4 worker、probe_order順4キーwave
+  (`scripts/runner-all.sh`、resume-safe・rc>=42で新規wave着手禁止・
+  in-flight完了は誠実開示)。m001-m012はforeground wave、m013-m052は
+  detached runner (wall 09:33:01Z-10:06:29Z、中断含む)。
+- 環境事故の誠実開示: 早期のforeground 2-wave試行中に240s bash timeoutで
+  実行環境が破棄され、当時のローカル出力 (最大12キー分、未出版) が消失。
+  published宣言commit `ab8641f...` からscaffoldをbyte-exact再取得して
+  全キー最初からやり直した。**m001はリセット前に一度完了していた
+  4,038,249 nodes (result 2) を、リセット後のfresh cold再実行で
+  node-exact同一値として再現** (cross-restart node-exact reproduction)。
+  出版されたrawsはすべてリセット後の実行分。
+- 出版: raws 104ファイルを3 chunk commitsに分割出版 (m001-m018=36・
+  m019-m036=36・m037-m052=32、fetch-back 104/104 byte-exact in
+  commit-pinned raw URL検証)。status.log (65行)・runner-all.sh・
+  README Result節を本status commitで出版。**class 8784・19 roots・
+  標準11×11空盤はいかなる時点でもUNKNOWNのまま。nodes数を勝敗として読まない。**
+- 消費は未実行 (予登録通り)。52 LOSS行はfail-closed increment候補として
+  Part Y宣言の下でのみ消費される。
+
+## Part Y (verifier, declaration 2026-11-22): batch 10 (class 8784) increment merge + refresh再監査 - Part C/Mと同一の閉鎖機構
+
+batch 10 (Part X) は52/52全LOSSで完走した。Part C (23963→33番目free)・
+Part M (10324→34番目free) と同一の閉鎖機構で消費・再監査を宣言する。
+
+- 対象: `research/experiments/n11-central-reply-8784-closure-reaudit-20261122/`。
+- 対象: increment 52行はpublished batch-10 rawからfail-closed生成
+  (2-pass (result,nodes,legal) 一致・key (lo:hi) とs5/legalの
+  batch-keys.json照合assert込み、published rawの再取得とsha照合の上)。
+  mergeはpublished `s5_union_merge.py` (selftest PASS) で正本5,975行
+  (`a998f4c0...`) + 52行 → 出力はpublish時にsha記載、衝突0・重複0が
+  fail-closed gate。
+- refreshはpublished script `refresh_19root_frontier.py` (sha256
+  `0bc10a05...`) のbyte-copy (cache pin行のみ変更・diff検証)、他の
+  pinned inputs 5種 (dependency-graph `54f9c364...`・update8 plan
+  `b658290a...`・board `954d3a10...`・policy `78655e94...`・quarantine
+  `81d23160...`) はpublished正本sha一致、**2-run全出力byte-identical**
+  gate。baseとしてPart M published 3成果物 (closure-classes.csv・
+  refresh-summary.json・per-root-coverage.csv) との追加差分比較を行う。
+- 事前登録の判定規則: refresh再実行でclass 8784がunknown 52→0かつ
+  excluded流入なし (WIN 0行消費のため) の場合、Board検証
+  free候補として扱う。free_now 34→35は board_verification 35/35・
+  rejected 0 の場合のみ主張する。**WIN行は1行も存在しないため
+  excluded_nowは不変であることが機械的に要求される** (違反=HARD-STOP・
+  即中止・訂正はscrutiny owner判断)。root第三手被覆の増分・update8
+  remaining/resolved・joint greedy・worklist総量はrefresh-summaryから
+  測定として記録する。
+- 主張と消費規則: 消費するのはbatch 10の52 LOSS行のみ。7 WIN
+  (b018/d002/e002/f017/g018/j033/h045) は引き続きscrutiny owner待ちで
+  不消費。class 8784のfree状態 (成立した場合) はmerge cacheからの
+  derived class statusであり、**標準11×11空盤・19 central-reply rootsは
+  引き続きUNKNOWN**。nodesを勝敗として読まない。
+- transport: probe-worklist (~3.7MB) は再出版しない (pinned inputs +
+  scriptからbyte-identical再生成可能、総量はrefresh-summary.jsonに記録)。
+- 並走との不接触: batch-10由来キーのみ。同一スコープの宣言がmainに
+  存在する場合は着手しない。
+- 本宣言のobserved HEAD-before-push: 実行時の最新mainをコミットメッセージに記録。
