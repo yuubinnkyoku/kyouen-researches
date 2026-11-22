@@ -89,3 +89,33 @@ Part AVの出版可否に依存しない: batch-17キーはclass 10661の費用�
 全53キー・他の全classは本scaffoldのどの時点でもUNKNOWNのまま。
 nodes数・legal数・probe countは簿記であって勝敗ではない。閉鎖・被覆・
 secured主張は一切しない (reaudit + 独立監査の仕事)。
+
+## 実行結果 (2026-11-22, WIN-HALTによる停止・verdict不消費)
+
+事前登録のWIN-HALT規則により、batch-18は最初のwaveで停止した。
+
+- **v001: WIN (result 1)**・2-pass fresh cold node-exact (p1=p2=5,656,151
+  nodes・budget 15,000,000内・legal 83・`# replay_done` x2・keys
+  1154610354467115008/64)。誠実WINラベル WIN-HALT・**採用しない**
+  (verdict不消費・scrutiny owner C++ gate `9193f5b6…` 待ち)。
+- **v002: WIN (result 1)**・2-pass node-exact (7,898,204 nodes・legal 84・
+  `# replay_done` x2・keys 3459890413727387648/64)。同WIN-HALT。
+  両キーは対抗するparallel worker (奇数側/偶数側) が独立に最初のキーとして
+  完了したものであり、排他制御上の問題はない (各workerはhost内で独立・
+  rawはworker毎に分離)。
+- **2/53キーprobe済み・51キー未着手 (fresh)**。未着手キーは一度も実行
+  されていないため15M再探索禁止規則には該当しない (将来のPartが
+  同じbatchを継続できる)。
+- val-gate: 実行直前に本hostで4/4 node-exact再現 (at2m 0/2,000,000 x2・
+  15m (2,3,651,923)/(2,5,040,200)・禁止四角95,670)。host interruptionなし
+  (truncated pass 0)。
+- 消費: **ゼロ**。unconsumed closure WIN候補は15+2=**17**
+  (b018/d002/e002/f017/g018/j033/h045/z003/n005/n006/p002/p003/r001/
+  r002/q042/**v001/v002**)、すべてscrutiny owner待ち。
+- route statement (条件付き・verdictではない): class 16131の費用子に
+  WINが1つでも採用されれば、class 16131の全子LOSS閉包ルートは反駁
+  される。**class 16131 (残51子)・標準11×11空盤・19 rootsは本時点で
+  UNKNOWNのまま。**
+- row-audit: batch完走時点 (残51キーの継続Part) に`scripts/row_audit_batch18.py`
+  が全行機械検証する。本出版時点の2 WIN行はgrepベースの機械検証
+  (p1==p2 node-exact・budget内・`# replay_done`・status.log整合) 済み。
