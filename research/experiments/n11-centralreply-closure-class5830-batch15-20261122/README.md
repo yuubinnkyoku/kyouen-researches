@@ -94,3 +94,37 @@ be amended with the result section in a later commit; per-row honest records
 land in `output/status.log` and `output/raw/`). The standard 11x11 empty
 board, the 19 central-reply roots and class 5830 remain UNKNOWN throughout.
 Nodes are not verdicts.
+
+## Result (WIN-HALT x2, published 2026-11-22)
+
+Wave 1 (r001-r004) ran 2026-11-22T14:37:21Z-14:44:35Z on the declaring host.
+The pre-registered WIN-HALT stop rule fired on the first key; the batch
+halted after in-flight wave disclosure:
+
+- **r001 WIN** - key `(4035788216211603456, 0)` (probe_order 590, s5_index
+  103560, legal 82, membership_class_count 1), result 1, nodes **2,521,302**,
+  2-pass fresh cold node-exact (budget 15,000,000). The 13th unconsumed
+  closure WIN.
+- **r002 WIN** - key `(3603442651849818112, 128)` (probe_order 591, s5_index
+  103561, legal 82, membership_class_count 1), result 1, nodes **5,973,924**,
+  2-pass fresh cold node-exact (budget 15,000,000). The 14th unconsumed
+  closure WIN.
+- r003 budget exhaustion - key `(4035788216077385729, 0)` (probe_order 592,
+  legal 97), result 0 at 15,000,000 nodes, 2-pass (recorded as UNKNOWN,
+  honest negative; no 15M same-condition re-search under the stop rule).
+- r004 budget exhaustion - key `(1729945206863692800, 128)` (probe_order
+  593, legal 100), result 0 at 15,000,000 nodes, 2-pass (UNKNOWN, honest
+  negative).
+- Integrity: all 4 keys machine cross-checked against `input/batch-keys.json`
+  and the Part Y worklist rows (legal, lo, hi); (result, nodes, budget)
+  identical between passes 1 and 2 (HARD-STOP rc=42 never triggered); runner
+  RUNNER-STOP on WIN-HALT as pre-registered; r005-r052 (48 keys) not
+  attempted after the halt.
+
+Batch record: 15 batches -> 12 WIN-HALT + 3 clean (23963/10324/8784).
+Both WINs wait for third-implementation verdict-level cross-verification
+(future verifier declaration) and remain unconsumed pending the scrutiny
+owner (C++ second implementation gate pin `9193f5b6...`). Verdicts are not
+consumed: the standard 11x11 empty board, the 19 central-reply roots and
+class 5830 (including its remaining 48 unprobed children r005-r052) remain
+UNKNOWN throughout. Nodes are not verdicts.
