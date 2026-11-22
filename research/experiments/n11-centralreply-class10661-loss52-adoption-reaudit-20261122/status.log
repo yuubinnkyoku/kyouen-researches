@@ -1,0 +1,142 @@
+# Part AV run status (single-owner lane host, takeover, 2026-11-22)
+# Canonical adoption reaudit of the batch-17 (class 10661) 52 LOSS rows.
+# Declaration: note Part AV amendment, commit 340abef3 (original owner;
+# observed HEAD-before-push 4741a92f, note blob sha1 lock e0a4f154...;
+# scope: batch-17 52-LOSS canonical adoption + reaudit under this
+# experiment dir).
+# The original owner had not published this experiment dir by the takeover
+# criterion (~23:00Z, shared with the AY lane; dir not on main, no counter
+# declaration, working-kit pins byte-verified on this host), so this host
+# published the Part AV takeover amendment (note, commit d3ef2dc6, observed
+# HEAD-before-push 432664f7; note blob lock 50226009... at amendment time)
+# and executed the declared scope unchanged as the single owner (ownership
+# transfer only). No solver search was run in this Part; the only verdict
+# consumption is the batch-17 52 LOSS rows themselves, adopted into the
+# canonical cache through the sha-pinned fail-closed union merger. Batch-17
+# contains zero WIN rows and zero exhaustion rows (absence gates); the 17
+# unconsumed closure WINs are untouched; WIN-row adoption remains gated on
+# the scrutiny owner's C++ second implementation (pin 9193f5b6...).
+
+[inputs pinned at batch-17 publication commit ffc09de1 + hygiene 4741a92f]
+batch-17 raws: 177/177 kit-mirror MANIFEST byte-match (u001..u052 p1/p2 raws,
+merged status.log, batch-keys.json sha256 db762175272206aa53622f30addc1267d534e8a3e576f70c6a084f21392645d2,
+row-audit.json sha256 c19e768f1ce4223de6736713a679028990ef5a884c9886affd62c951e307d5f9,
+host-event fragments 5 with no verdict line); input mirror re-verified 0 bad
+after all fail-closed tamper tests (batch-17 177 files, Part AS kit 15 files).
+Part AS BASE canonical cache 6,120 rows sha256
+be9cb24e899fbe93db51e415320c50fa733e378748bb7a41fe13fd7b22f06685 (byte-pinned);
+BASE reaudit 3 files pinned at Part AS publication (summary f2008e70...,
+closure-classes 3ee1dbb6..., per-root-coverage 527c7e9a...).
+
+[maker re-derivation]
+scripts/make_increments_batch17.py (adapt of the published Part AS maker
+b6094f0b...: class 10661, u001..u052 id space, row-audit 52-row agreement
+gate, full==loss manifest bookkeeping) re-executed 3x from the published
+batch-17 raws, byte-identical;
+increment-batch17-loss52-20261122.cache: 52 rows (52 LOSS / 0 WIN / 0
+exhaustion), sha256
+afcdad5b9fa864d076e6998c12dc4ff1fdf69c110a2cf1495af2b3a96c3c4d52
+increments-manifest.json sha256
+e1d430a4e2462602c49e4aa116236da5ac07bc978d79873118e87eaa7bce0369
+(schema batch17-loss52-increments-manifest-v1; row_counts 52/0/52/0 of
+52 resolved 52 probed; unadopted_win_ids [] ; full_packet_eq_loss_only
+true; win_scenario_exists false; base_cache_absent_hits 0; quarantine_hits
+0; row_audit_agreement_rows 52; status_log_stop_record
+'EXECUTION-COMPLETE: 52/52 probed = 52 LOSS'). 3-way (p1/p2/status.log)
+node-exact gates PASS (total 196,536,452 nodes/pass, nodes==pass2_nodes==raw).
+
+[union merge runs 1..3]
+sha-pinned s5_union_merge.py (sha256
+907119610034fb2aebfde012550a4129dfa3b086c6de11194e856747ac74606a,
+byte-copy pin of the published merger, selftest PASS);
+inputs: pre-adoption canonical BASE cache 6,120 rows (sha256 be9cb24e...,
+path research/experiments/n11-centralreply-class23101-loss41-adoption-reaudit-20261122/output/merged-exact-s5-chain-plus-closure-increment-plus-batch10-plus-batch16loss52-plus-batch14loss41-20261122.cache)
++ 52-row increment; WIN/LOSS conflicts 0, duplicates elided 0;
+canonical cache 6,172 rows (WIN 158 / LOSS 6,014), 253,898 bytes, sha256
+a554081156e2c2f940ecf2cc3c7af082dde6b760d6019e0a5113c4ddd5e12a3a,
+published at research/experiments/n11-centralreply-class10661-loss52-adoption-reaudit-20261122/output/merged-exact-s5-chain-plus-closure-increment-plus-batch10-plus-batch16loss52-plus-batch14loss41-plus-batch17loss52-20261122.cache
+(this repo's new canonical exact-S5 verdict cache);
+merge-audit run1/run2/run3 byte-identical, sha256
+faf504ab84300318f45d38087d72eaf0463f3237fcffb43ae8d04701f25e3b0d
+(repo-relative input paths); the adoption adds exactly the 52 LOSS rows to
+the pre-adoption canonical cache (row-count 6,120+52 == 6,172
+machine-checked by the extractor adoption-equality gates); BASE 6,120-row
+cache re-verified byte-unchanged after the merges.
+
+[adoption refresh runs 1..2]
+adapted refresh script reaudit/scripts/refresh_adoption_10661.py (from the
+published Part AS refresh 5992738d...; 3-hunk adapt: docstring framing +
+canonical cache path + cache sha expectation extracted from the cache file
+itself, a5540811... machine-asserted; sha256
+1b49cc079d60be256894c5f95e9f7876c97ae4760b0df41bb3a96fa069d420d7);
+single process, serial (~62-66s/run);
+refresh-summary.json sha256 a0043c76c05ee949a533f31e6f21616d51f67e211c45fec5cc96431fb7d28dc4
+closure-classes.csv sha256 e60c1088f99aac0ae527b78eac9d192d7e1d2aa4f1a125fa52bc75c86ae16710
+per-root-coverage.csv sha256 4c7ec5d78b7a3496c01fc37a229cc85f27708926511476f516f7f6cedd975e35
+probe-worklist.csv sha256 667dc815e8f2ab4e5a5ee61621070713debd39d8c2a12aa0688cac808623b385
+(NOT published, 3.7 MB, Part AH/AO/AP/AS precedent);
+run 2 byte-identical to run 1 on all four outputs (cmp PASS each).
+
+[delta extractor runs 1..3]
+scripts/compare_deltas_batch17_adoption.py (adapt of the published Part AS
+extractor 9e885ae0...: docstring/guard/schema framing, batch-17 batch-keys
+schema (groups_served_first_seen two groups [24,30]/[24,90]), class-10661
+freeing gates (two-directional: newly-free set == {10661} and every BASE
+unknown cost child resolved), scenario cache sha pin, WIN-absence gate,
+full==loss machine statement, 52-key independent 2-pass raw re-verification
+(a second row verification that does not trust the maker), closure-table
+churn recorded as bookkeeping; batch-keys/increment/scenario/manifest sha
+pins) — 3x byte-identical output, sha256
+7d93613b64426d43adac356cc0efee0f6d689c99e1c400d659f7f7804a51f5fa.
+All gates PASS. input mirrors re-verified after the tamper tests: 0 bad.
+
+[fail-closed tamper tests: 8/8 caught, restore byte-identical]
+maker: T1 raw 2-pass node modification, T2 row-audit sha pin, T3 status.log
+PASS-line mismatch; extractor: T5 increment sha pin, T6 manifest row_counts
+gate, T7 scenario cache sha pin, T8 batch-keys sha pin; each detected with
+the intended fail-closed message; inputs restored byte-verified; post-test
+mirror verification 0 bad.
+
+[measured canonical state after adoption (gated by extractor + refresh)]
+class_status_counts: excluded 390 / excluded_now 23 / free_now 36 -> 37 /
+unknown 34,500 -> 34,499; transitions ledger: unknown->free_now 1
+(class 10661 only; two-directional gate), free_now->free_now 36,
+unknown->unknown 34,499, excluded->excluded 390, excluded_now->excluded_now
+23; excluded_now flips [] (gated: a zero-WIN packet cannot flip).
+board_verification free_candidates 36 -> 37, board_verified_free 37,
+rejected {}: class 10661 passes Board fail-closed child verification and
+becomes the 37th Board-verified free class.
+class 10661: 52 BASE-unknown cost children, all 52 resolved by the
+increment (adopted_by_increment 52, machine-asserted equal to the batch key
+set), scenario-unknown children 0; closure-candidate table 809 -> 808 rows
+(left 6: 5844, 7581, 8826, 9039, 10010, 10661; entered 5: 6372, 7577, 9317,
+9330, 10008; best-option bookkeeping churn, no coverage meaning);
+class 10661 leaves the closure-candidate table; class 23101 stays rank 1
+(unknown 11; untouched by this Part).
+holder_classes: 142 member classes total (increment membership union);
+class 10661 holds 52 rows, 141 other classes hold 1 row each and stay
+unknown (their unknown_now drops by 1 each: scheduling bookkeeping only).
+per-root coverage: changed row = root 24 (central) only: free_now 10 -> 12,
+uncovered 109 -> 107 (newly free thirds {24,30} and {24,90}; class 10661
+a root-24 option); individual_greedy_union column (scheduling bookkeeping
+only) also moved for roots 5, 16, 24, 25, 38 (e.g. root 16 3037->2880,
+root 24 2785->2778); free/uncovered columns byte-identical for the other
+18 roots (root 27 baseline 119/119 unchanged).
+update8: resolved 79 -> 80 (newly resolved s5 272756, inside the increment,
+LOSS, gated), remaining 31,780 -> 31,779, groups_free_now 127 unchanged,
+lost resolutions [] (gated).
+scheduling quantities (recorded, not verdicts): joint greedy 36,726 ->
+35,645 (-1,081, re-selection after the 52-group requirement removal),
+probe worklist 64,941 -> 64,888 (-53), group_best_options
+2,125 -> 2,123.
+
+# Interpretation guard: the only canonical claim established here is the
+# classification delta on the canonical cache: class 10661 becomes the 37th
+# Board-verified free class (unknown 34,500 -> 34,499, free_now 36 -> 37)
+# and root 24 (central) gains 2 free thirds (10 -> 12, uncovered 109 -> 107).
+# This is a classification advance, not a closure: no 19-root win/loss
+# claim, no standard 11x11 empty-board claim. The 17 unconsumed closure
+# WIN rows stay gated on the scrutiny owner's C++ second implementation
+# (pin 9193f5b6...). The standard 11x11 empty board, the 19 central-reply
+# roots and every class not established above remain UNKNOWN. Nodes are
+# bookkeeping, never verdicts.
