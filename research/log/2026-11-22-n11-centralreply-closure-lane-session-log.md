@@ -507,3 +507,48 @@ github_app.push_files with commit-pinned raw fetch-back byte verification.
   batch-7 README with an erratum marker; conclusion (0 hits) unaffected.
 - Honesty record: nothing consumed by the declaration; **the standard 11x11
   empty board, the 19 central-reply roots and class 2634 remain UNKNOWN.**
+
+## Session continuation 9 (2026-11-22 ~06:58-07:10Z, same lane; parallel batch-8 instance left untouched, outstanding Part-O third-impl verified and published)
+
+- Context: this session started with the shared lane kit showing an active
+  parallel instance of this hourly lane mid-batch-8 (class 2634, Part N
+  declared at `fdc46d98`, i001-i025 probed by 06:54Z per the kit status
+  mirror, incl. one 15M-budget exhaustion row). Nothing in the batch-8
+  scope was touched - the Part N single-owner declaration covers it.
+- The one remaining unpublished product from the repo-404 outage window was
+  identified and closed: the batch-7 third-implementation
+  cross-verification (outage-session kit lettering "Part M", declared with
+  timestamp 2026-11-22T05:58Z, staged in the lane kit). Repo lettering
+  check: the recovery session had already issued Part M for the class-10324
+  closure merge + re-audit and Part N for batch 8, so the experiment ships
+  as **Part O** with the mapping disclosed in the experiment README and
+  the note amendment.
+- Publishing-session pre-verification (machine checks, all PASS): MANIFEST
+  174/174 OK; pinned script bytes (`third_impl.js` `08ea958f...`,
+  `verify_tbl.js` `c8c52528...`, `jsreplay.js` `84585617...`) match the
+  published experiments; input rows.json replica (result, nodes) match the
+  published batch-7 status.log 51/51, keys (lo:hi) match batch-keys.json
+  51/51; audit-summary all_pass=true (541 gates, 51/51 LOSS verdict
+  agreements vs published replica verdicts, 0 divergences, 0
+  wall-inconclusive), anchors k02/l1 exactly reproduced (9,106,337 /
+  4,991,527 and 7,660,602 / 3,951,175), negative gates GATE_FAIL with the
+  published messages.
+- Publishes: `eb061b60` (scaffold 66 files), `0dfdc4df` (102 target a/b
+  raws), `0fddb890` (anchors + negative + audit-summary),
+  `d548489f` (note Part O amendment). Fetch-back: 175 experiment files +
+  the note compared against commit-pinned raw URLs byte-for-byte
+  (`cmp`), 0 mismatches.
+- Net effect: the published class-10324 (34th Board-verified free class)
+  evidence bundle is now cross-implementation verified end-to-end - 51
+  replica 2-pass LOSS rows + 51 third-implementation verdict agreements,
+  fail-closed audited. Batch-7's sibling batches 2/6 third-impl coverage
+  (23963: Part C-era; batch-6: Part K) is unchanged.
+- Operational notes: the lightweight pre-upgrade sandbox `sha256sum` shim
+  is broken (returns digest errors) - manifest rechecks were redone in the
+  upgraded environment and the earlier "174 OK" provisional result was
+  confirmed. `file_system.read_file` chunked transport caps near 24K
+  chars per call and reports chars, not bytes (use `wc -m` for UTF-8
+  payload size assertion; byte counts only for pure-ASCII payloads).
+- Honesty record: verdicts not consumed anywhere; the standard 11x11 empty
+  board, the 19 central-reply roots, class 2634 and every closure class
+  remain UNKNOWN. Nodes/expansions are never verdicts.
