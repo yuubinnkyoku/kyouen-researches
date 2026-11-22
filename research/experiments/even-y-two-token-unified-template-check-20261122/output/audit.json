@@ -1,0 +1,448 @@
+{
+ "elapsed_s": 0.5,
+ "failures": [],
+ "grids": {
+  "('y10', 'fit')": {
+   "bad": 0,
+   "cfg": {
+    "rpad": 40,
+    "x_from": 10,
+    "xpad": 25,
+    "zmax": 30
+   },
+   "first": null,
+   "points": 80600
+  },
+  "('y10', 'proved')": {
+   "bad": 0,
+   "cfg": {
+    "rpad": 44,
+    "x_from": 10,
+    "xpad": 25,
+    "zmax": 40
+   },
+   "first": null,
+   "points": 143664
+  },
+  "('y12', 'fit')": {
+   "bad": 0,
+   "cfg": {
+    "rpad": 40,
+    "x_from": 12,
+    "xpad": 25,
+    "zmax": 30
+   },
+   "first": null,
+   "points": 76539
+  },
+  "('y12', 'proved')": {
+   "bad": 0,
+   "cfg": {
+    "rpad": 35,
+    "x_from": 12,
+    "xpad": 20,
+    "zmax": 25
+   },
+   "first": null,
+   "points": 41184
+  },
+  "('y14', 'proved')": {
+   "bad": 0,
+   "cfg": {
+    "rpad": 35,
+    "x_from": 14,
+    "xpad": 20,
+    "zmax": 22
+   },
+   "first": null,
+   "points": 29877
+  },
+  "('y16', 'fit')": {
+   "bad": 0,
+   "cfg": {
+    "rpad": 40,
+    "x_from": 16,
+    "xpad": 25,
+    "zmax": 19
+   },
+   "first": null,
+   "points": 30150
+  }
+ },
+ "inputs": {
+  "cand10_fit": {
+   "bytes": 7381,
+   "path": "research/experiments/vertical-fiber-two-token-y10-parametric-allz-fit-20261120/cand10.py",
+   "sha256": "7c08e065d1278e9e90e4f748a2f7a8a6406318618ac06d259659233387427163"
+  },
+  "cand12_fit": {
+   "bytes": 6699,
+   "path": "research/experiments/vertical-fiber-two-token-y12-parametric-allz-fit-20261120/cand12.py",
+   "sha256": "79e588b3d44bada83355676d9da1db559c57167574ed58ce118ef3c897149131"
+  },
+  "cand14_fit": {
+   "bytes": 8610,
+   "path": "research/experiments/vertical-fiber-two-token-y14-parametric-allz-fit-20261122/cand14.py",
+   "sha256": "61782b6e0a6dde7717dff9ac672299c918e6400bf18dad47ea419a9f081b961e"
+  },
+  "cand16_fit": {
+   "bytes": 10251,
+   "path": "research/experiments/vertical-fiber-two-token-y16-parametric-allz-fit-20261122/cand16.py",
+   "sha256": "1fc9d22bf666d8c98747332b0063f06aad4d21d88f1a2b69643a17104d550be8"
+  },
+  "verify_y10": {
+   "bytes": 39876,
+   "path": "research/experiments/vertical-fiber-two-token-y10-parametric-allz-proof-20261120/verify_y10_universal.py",
+   "sha256": "f9169449309dcd25aaba8d6379d4289167f61eb3895b031e45ff9e80c46c05e4"
+  },
+  "verify_y12": {
+   "bytes": 49295,
+   "path": "research/experiments/vertical-fiber-two-token-y12-parametric-allz-proof-20261120/verify_y12_universal.py",
+   "sha256": "e209297603f68c9a82a50f90cac0bc678211d1517f137b5d490dfca3c492eb04"
+  },
+  "verify_y13": {
+   "bytes": 50865,
+   "path": "research/experiments/vertical-fiber-two-token-y13-parametric-allz-proof-20261122/verify_y13_universal.py",
+   "sha256": "079b49ad5d11c22c7c6c5f8d103eff9ee2194c7d587e7f2432172616c03c1114"
+  },
+  "verify_y14": {
+   "bytes": 51537,
+   "path": "research/experiments/vertical-fiber-two-token-y14-parametric-allz-proof-20261122/verify_y14_universal.py",
+   "sha256": "6ac219cfe27e55e3d6057ea9dcf5db76631b8ef1c50ced0edd63f64d590f2205"
+  },
+  "verify_y15": {
+   "bytes": 51491,
+   "path": "research/experiments/vertical-fiber-two-token-y15-parametric-allz-proof-20261122/verify_y15_universal.py",
+   "sha256": "a39e7ab12051ed92d470c4a1909760e0edb8319bf4bb3e24974e70d23f157d0e"
+  }
+ },
+ "merge_identity": {
+  "cand10_fit": true,
+  "cand12_fit": true,
+  "cand14_fit": true,
+  "cand16_fit": true
+ },
+ "odd_control": {
+  "y13": {
+   "P_diff_rows_n": 54,
+   "P_rows": 56,
+   "T_diff_rows": [
+    [
+     0,
+     -13,
+     "ROW_MISMATCH"
+    ],
+    [
+     1,
+     -11,
+     "ROW_MISMATCH"
+    ]
+   ],
+   "T_diff_rows_n": 2,
+   "T_rows": 56,
+   "box_mismatch": 2649,
+   "box_pts": 4345,
+   "first": [
+    2,
+    13,
+    28,
+    0,
+    1
+   ]
+  },
+  "y15": {
+   "P_diff_rows_n": 62,
+   "P_rows": 64,
+   "T_diff_rows": [
+    [
+     0,
+     -15,
+     "ROW_MISMATCH"
+    ],
+    [
+     1,
+     -13,
+     "ROW_MISMATCH"
+    ]
+   ],
+   "T_diff_rows_n": 2,
+   "T_rows": 64,
+   "box_mismatch": 1660,
+   "box_pts": 2916,
+   "first": [
+    4,
+    15,
+    32,
+    0,
+    1
+   ]
+  }
+ },
+ "row_census": {
+  "y10/fit/P": {
+   "diff_rows": [],
+   "n_diff": 0,
+   "rows": 44
+  },
+  "y10/fit/T": {
+   "diff_rows": [],
+   "n_diff": 0,
+   "rows": 44
+  },
+  "y10/proved/P": {
+   "diff_rows": [],
+   "n_diff": 0,
+   "rows": 44
+  },
+  "y10/proved/T": {
+   "diff_rows": [],
+   "n_diff": 0,
+   "rows": 44
+  },
+  "y12/fit/P": {
+   "diff_rows": [],
+   "n_diff": 0,
+   "rows": 52
+  },
+  "y12/fit/T": {
+   "diff_rows": [],
+   "n_diff": 0,
+   "rows": 52
+  },
+  "y12/proved/P": {
+   "diff_rows": [],
+   "n_diff": 0,
+   "rows": 52
+  },
+  "y12/proved/T": {
+   "diff_rows": [],
+   "n_diff": 0,
+   "rows": 52
+  },
+  "y14/proved/P": {
+   "diff_rows": [],
+   "n_diff": 0,
+   "rows": 60
+  },
+  "y14/proved/T": {
+   "diff_rows": [],
+   "n_diff": 0,
+   "rows": 60
+  },
+  "y16/fit/P": {
+   "diff_rows": [],
+   "n_diff": 0,
+   "rows": 68
+  },
+  "y16/fit/T": {
+   "diff_rows": [],
+   "n_diff": 0,
+   "rows": 68
+  }
+ },
+ "run": "check_even_y_unified",
+ "verdict": "PASS",
+ "when_utc": "2026-11-22T21:40:11Z",
+ "y10_representation": {
+  "alias_rows": [
+   {
+    "d": -9,
+    "pub": [
+     6,
+     12
+    ],
+    "sec": "even",
+    "tmpl": [
+     5,
+     11
+    ]
+   },
+   {
+    "d": -7,
+    "pub": [
+     6,
+     12
+    ],
+    "sec": "even",
+    "tmpl": [
+     5,
+     11
+    ]
+   },
+   {
+    "d": -5,
+    "pub": [
+     7,
+     14
+    ],
+    "sec": "even",
+    "tmpl": [
+     6,
+     13
+    ]
+   },
+   {
+    "d": -3,
+    "pub": [
+     7,
+     14
+    ],
+    "sec": "even",
+    "tmpl": [
+     6,
+     13
+    ]
+   },
+   {
+    "d": -1,
+    "pub": [
+     8,
+     16
+    ],
+    "sec": "even",
+    "tmpl": [
+     7,
+     15
+    ]
+   },
+   {
+    "d": 1,
+    "pub": [
+     8,
+     16
+    ],
+    "sec": "even",
+    "tmpl": [
+     7,
+     15
+    ]
+   },
+   {
+    "d": 3,
+    "pub": [
+     9,
+     18
+    ],
+    "sec": "even",
+    "tmpl": [
+     8,
+     17
+    ]
+   },
+   {
+    "d": 5,
+    "pub": [
+     9,
+     18
+    ],
+    "sec": "even",
+    "tmpl": [
+     8,
+     17
+    ]
+   },
+   {
+    "d": 7,
+    "pub": [
+     10,
+     20
+    ],
+    "sec": "even",
+    "tmpl": [
+     9,
+     19
+    ]
+   },
+   {
+    "d": 9,
+    "pub": [
+     10,
+     20
+    ],
+    "sec": "even",
+    "tmpl": [
+     9,
+     19
+    ]
+   },
+   {
+    "d": -10,
+    "pub": [
+     6,
+     12
+    ],
+    "sec": "odd",
+    "tmpl": [
+     5,
+     11
+    ]
+   },
+   {
+    "d": -6,
+    "pub": [
+     7,
+     14
+    ],
+    "sec": "odd",
+    "tmpl": [
+     6,
+     13
+    ]
+   },
+   {
+    "d": -2,
+    "pub": [
+     8,
+     16
+    ],
+    "sec": "odd",
+    "tmpl": [
+     7,
+     15
+    ]
+   },
+   {
+    "d": 2,
+    "pub": [
+     9,
+     18
+    ],
+    "sec": "odd",
+    "tmpl": [
+     8,
+     17
+    ]
+   },
+   {
+    "d": 6,
+    "pub": [
+     10,
+     20
+    ],
+    "sec": "odd",
+    "tmpl": [
+     9,
+     19
+    ]
+   }
+  ],
+  "n_alias": 15,
+  "n_rep_identical": 26,
+  "other": [
+   {
+    "class": "fallback",
+    "d": -10,
+    "expr": "False  # even-z diagonal: no value-1 at all",
+    "sec": "even",
+    "tmpl": null
+   },
+   {
+    "class": "sweep_row_base_only_matches_bY",
+    "d": 11,
+    "expr": "base10  # sweep row: no value-1 beyond base",
+    "sec": "odd"
+   }
+  ]
+ },
+ "y12_formula_identity": true
+}
