@@ -1,0 +1,54 @@
+{
+ "schema": "batch15-ifadopted-increments-manifest-v1",
+ "batch": 15,
+ "class_index": 5830,
+ "win_ids": [
+  "r001",
+  "r002"
+ ],
+ "resolved_ids": [
+  "r001",
+  "r002"
+ ],
+ "exhausted_excluded_ids": [
+  "r003",
+  "r004"
+ ],
+ "exhausted_rows": [
+  {
+   "key_id": "r003",
+   "s5_index": 120355,
+   "lo": 4035788216077385729,
+   "hi": 0,
+   "nodes": 15000000,
+   "budget": 15000000,
+   "verdict": null,
+   "treatment": "excluded: result 0 budget exhaustion = honest UNKNOWN, not a verdict"
+  },
+  {
+   "key_id": "r004",
+   "s5_index": 120370,
+   "lo": 1729945206863692800,
+   "hi": 128,
+   "nodes": 15000000,
+   "budget": 15000000,
+   "verdict": null,
+   "treatment": "excluded: result 0 budget exhaustion = honest UNKNOWN, not a verdict"
+  }
+ ],
+ "row_counts": {
+  "resolved_rows": 2,
+  "wins": 2,
+  "losses": 0,
+  "exhausted_excluded": 2
+ },
+ "sha256": {
+  "win": "05c10e1ff17c2601b1fb4a0782af2543d302187ce6344df97d3c763947262b7d"
+ },
+ "full_packet_eq_win_only": true,
+ "full_packet_eq_win_only_rationale": "batch-15 has zero resolved LOSS rows; the exhaustion rows r003/r004 (result 0, nodes==budget) are not verdicts and are excluded by the type gate, so adopting every resolved row equals adopting {r001, r002}",
+ "loss_scenario_exists": false,
+ "base_cache_absent_hits": 0,
+ "quarantine_hits": 0,
+ "interpretation_guard": "read-only what-if IF-ADOPTED analysis inputs; verdicts NOT consumed; 11x11 stays UNKNOWN; nodes are bookkeeping, never verdicts"
+}
