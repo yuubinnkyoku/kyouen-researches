@@ -346,3 +346,35 @@ LOSS-only / full の機械分解・加法性を測定で確認）をbatch 6とjo
 - 採用規則は不変: WIN行の採用判断はscrutiny owner (C++第二実装 pin
   `9193f5b6...` 前例)。本レーンはいかなるverdictも消費しない。
   標準11×11空盤・19 root・全クラスは引き続きUNKNOWN。
+
+
+## Part K (verifier, amendment 2026-11-22): batch 6 g018 third-implementation cross-verification
+
+batch 6 (Part I) は事前登録のWIN-HALT規則により g018 (2-pass node-exact
+result 1, 5,936,863 nodes, s5_index 184684, key `[1734519175235239936, 0]`)
+で停止した。Part Gの前例に従い、batch 6のwin行 g018 と層化LOSS spot 3行
+(g001/g011/g016) を第三実装 (`third_impl.js` pin `08ea958f...`) で
+verdict-level交叉検証する。**verdict不消費・採用判断は引き続きscrutiny owner
+(C++第二実装 gate pin `9193f5b6...` 前例・不変)。**
+
+- 対象: `research/experiments/n11-centralreply-closure-batch6-g018-thirdimpl-20261122/`。
+  target 4行 (g018 WIN + g001/g011/g016 LOSS)・anchor 2行 (k02a/l1a,
+  Part Gと同一のpublished第三実装値 9,106,337/4,991,527 と
+  7,660,602/3,951,175)・negative 2行 (ng1/ng2)。入力はpublished batch6 raw
+  由来のrows.json + input CSVで機械固定 (fail-closed・keyの手転写なし)。
+- 手法: Part Gと完全同一 (script pin 3種同一、1行1プロセス、cap 300M、
+  wallcap 240s、a/b 2回determinism、rules-gate quads 95,670/triples
+  195,044 mismatch 0、audit.py fail-closed 2回byte一致)。
+- 結果 (machine-verified): **audit 71/71 gates PASS (2回byte一致)**。
+  anchor両行はpublished値と完全一致。target 4行は全行clean・a/b同一・
+  verdict一致 (g018 WIN 6,776,591 expansions / g001 LOSS 4,143,095 /
+  g011 LOSS 9,926,469 / g016 LOSS 1,690,556)。negative 2行は文言一致の
+  GATE_FAIL。wall-inconclusive 0行。
+- 運用上の開示: 本cross-verificationはPart G宣言時には未存在のbatch 6を
+  対象とするため、Part G宣言の目的外である。実行は同一レーンでverdict
+  不消費のverifier作業として完了した後、本amendment (Part K) を出版時に
+  追記して記録範囲を確定した。11x11空盤・19 central-reply roots・全クラスは
+  本検証のどの時点でもUNKNOWNのまま。nodes/expansionsを勝敗として読まない。
+- transport: 対象はpublished batch6 raw由来のみで、他レーンのclaim集合と
+  無関係。同一スコープの宣言がmainに存在する場合は着手しない。
+- 本amendment observed HEAD-before-push: 実行時の最新mainをコミットメッセージに記録。

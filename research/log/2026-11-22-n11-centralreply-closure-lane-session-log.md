@@ -337,3 +337,108 @@ github_app.push_files with commit-pinned raw fetch-back byte verification.
   experiment README now carries an ERRATUM section; two new experiments are
   published (packet-minus-f017 P24; WIN-vs-LOSS decomposition P4/P17/P21)
   alongside their 4 analysis-only merged caches (own commits).
+
+## Session continuation 5 (2026-11-22 ~04:29-05:10Z, same lane; batch 6 class 5473 + joint 5-WIN if-adopted + REPO OUTAGE)
+
+- **Batch 6 (class 5473, re-audit rank 6**, first clean candidate per Part
+  H-bis): scaffold + Part I amendment pushed as `09f24c62` (64 files). A
+  g001-g010 raw + status commit was created (`729be22c`, 04:45:56Z), but -
+  discovered after the outage ended - **it never reached main** (dangling
+  commit; the mid-outage ref update failed silently). All 18 rows were
+  re-published post-recovery in a single commit (see continuation 6). Fail-safe before declaring: re-audit
+  probe-worklist regenerated on this host from pinned inputs
+  (byte-identical incl. closure-classes/per-root-coverage/refresh-summary),
+  51/51 keys absent from canonical cache (5,924 rows, sha `8a721a18...`),
+  quarantine pair check 0, val-gate 4/4 node-exact (this host 17s/26s at the
+  two 15M rows).
+- **g001-g018: 17 LOSS then g018 (s5_index 184684, key
+  `[1734519175235239936, 0]`, legal 78) result 1 WIN, 5,936,863 nodes,
+  2-pass node-exact -> pre-registered WIN-HALT at 18/51 (rc=45). Verdict
+  NOT consumed (scrutiny owner pending, as b018/d002/e002/f017). Class
+  5473's all-children-LOSS closure route is refuted; the cheap-end
+  WIN-density observation now extends to rank 6 (5 of 6 batches halted).**
+- **IF-ADOPTED decomposition (Part H-bis methodology applied to batch 6)**:
+  `n11-central-reply-class5473-win-g018-ifadopted-20261122/` - increments
+  fail-closed from raws (18 rows/1 WIN/17 LOSS), merges conflict-free
+  (5,925 `3e77daae...` / 5,941 `d97a307e...` / 5,942 `b839abfc...`),
+  per-scenario refresh 2/2 byte-identical, compare script + delta JSON.
+  Measured: WIN-only adoption gives excluded 23->27 (classes 4889/4892/5473/
+  5501 via s5 184684), update8 remaining 31,838->31,787 (root 26 -102,
+  root 49 -102), win-hit 4 groups via class 5473, and **joint greedy
+  UNCHANGED at 35,617 in every batch-6 scenario (WIN-only, LOSS-only,
+  full)** - unlike the f-batch, batch 6 is planning-cost neutral. LOSS rows
+  only add resolved (+17, additive with WIN-side +1 to +18) and worklist
+  (-20 additive).
+- **Joint 5-WIN IF-ADOPTED**: `n11-central-reply-joint-5win-adoption-ifadopted-20261122/`
+  (PJ5WIN = canonical + 4-WIN increment + g018 WIN-only; PJ5FULL = P25
+  packet cache + batch-6 18 rows). Merges conflict-free (5,929 `653dfb07...`
+  / 5,967 `a31e093b...`), refresh 2/2 byte-identical each. Measured:
+  5 WINs alone: excluded 23->41 (+18 = +14 +4 additive), remaining
+  31,838->31,658 (-180 = -129 -51 additive), win-hit 19 groups
+  (16757:5, 20421:4, 12264:6, 5473:4), greedy 35,616 (-1, neutral).
+  43-row full adoption: greedy exactly the Part-H packet value 36,984
+  (+1,367) with **zero additional increase from batch-6 rows** - Part H-bis
+  attribution (f-batch LOSS completeness drives the increase) holds in the
+  joint setting. worklist 65,163 (-50 additive).
+- **REPO OUTAGE (publish-pending)**: at ~04:52Z, mid WIN-HALT publish,
+  `api.github.com/repos/yuubnnkyoku/kyouen-researches` started returning
+  404 for BOTH unauth API and the github_app connector; raw CDN had served
+  cached content until ~04:53Z and then 404ed for new fetches too. The
+  WIN-HALT commit payload (all 36 raws g001-g018 + status.log + README with
+  WIN-HALT section) and both if-adopted experiments (READMEs, scripts,
+  increments, audit JSONs, scenario caches, delta JSONs, session log) are
+  staged byte-exact in the lane kit (`batch5473/`, `batch5473-ifadopted/`,
+  `batch5473-ifadopted-joint5/`, `doc/`) for publish-when-reachable. A
+  parallel SAT-stabilization lane's commits (K1220/K1221 errata, last known
+  HEAD `d73bb0b8` 04:51:31Z) were the last observed main movements; no path
+  conflicts with this lane's pending payloads.
+- Honesty record: budget exhaustion never occurred; no verdict consumed; the
+  standard 11x11 empty board, all 19 central-reply roots, and every S4
+  class remain UNKNOWN. Nodes/budgets/gates are never verdicts.
+
+## Session continuation 6 (2026-11-22 ~05:10-05:5xZ, same lane; repo recovery, full pending-publish clearance, batch-6 third-impl completed)
+
+- **Repo recovery + lost-commit discovery**: the repo became reachable again
+  via the github_app connector (unauth API rate-limited 403; connector fine).
+  Current main had moved to `c37c8527` (two other-lane commits during/after
+  the outage: `4fcee8eb` sweep-resume declaration, `c37c8527` six-row lane
+  note; no path conflicts). Path-filtered history for the batch-6 experiment
+  dir showed ONLY `09f24c62`: the believed-pushed `729be22c` (raws g001-g010
+  + status, created 04:45:56Z) **never reached main** - a dangling commit
+  object. Corrected session-log narrative in continuation 5 before
+  publishing it (continuation 5 had never been published, so this is not a
+  history rewrite).
+- **WIN-HALT publication (retry, complete)**: one commit `9fe53799` with all
+  38 files (36 raws g001-g018 + status.log + README WIN-HALT section),
+  message records observed HEAD-before-push `c37c8527` and supersedes the
+  dangling `729be22c`. Fetch-back: 38/38 byte-identical (raw URLs, fresh
+  paths; status.log + README verified separately due to subshell accounting).
+- **If-adopted decomposition published** `2785f837` (32 files, three
+  worklists excluded per policy) + **transport-truncation incident and fix**:
+  the file-read transport silently caps at ~64KB, so the first push carried
+  truncated (63,961-63,964B) copies of the three ~243KB merged scenario
+  caches. Detected by fetch-back diff (same failure mode as the SAT lane's
+  b64 errata earlier). Fix commit `e940c118`: chunked reads, full 3 caches
+  restored (pwing018 5,925 rows `3e77daae...`, pgloss17 5,941 `d97a307e...`,
+  pfull18 5,942 `b839abfc...`); verified byte-identical via the
+  commit-pinned API resource (raw CDN still served the stale blob at
+  check time - raw caching must be accounted for when verifying modified
+  files).
+- **Joint 5-WIN if-adopted published** `ffca24d5` (23 files + single-owner
+  note Part J amendment). Part J covers both if-adopted scopes (batch-6
+  decomposition + joint 5-WIN). Fetch-back: 23/23 + note byte-identical.
+- **Batch-6 third-impl cross-verification COMPLETED** (Part G re-application,
+  recorded as note amendment **Part K**): targets g018/g001/g011/g016
+  a/b pairs all clean (g018 WIN 6,776,591 expansions - verdict agrees with
+  the replica WIN 5,936,863 nodes; g001/g011/g016 LOSS
+  4,143,095/9,926,469/1,690,556 agree), anchors k02a (WIN 9,106,337/4,991,527,
+  27s) and l1a (LOSS 7,660,602/3,951,175, 23s) node-exact vs published
+  third-impl values a/b, negatives ng1/ng2 GATE_FAIL with published messages,
+  rules-gate quads 95,670 / triples 195,044 mismatch 0 carried. Audit:
+  **71/71 gates PASS, run twice byte-identical**, 0 wall-inconclusive.
+  Verdict-level corroboration only - NOT adoption; scrutiny owner and the
+  C++ gate (`9193f5b6...`) unchanged; verdicts remain unconsumed.
+- Honesty record: no verdict consumed anywhere; the standard 11x11 empty
+  board, all 19 central-reply roots, and every S4 class remain UNKNOWN.
+  Nodes/expansions/budgets/gates are never verdicts. Part K is appended
+  post-completion for scope recording (disclosed in the amendment itself).
