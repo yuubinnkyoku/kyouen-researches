@@ -1123,3 +1123,68 @@ repo diverged:
   rows). Kit mirror refreshed under `batch8106-n-thirdimpl/` (46-entry
   manifest, byte-identical to the published files). Observed
   HEAD-before-push for this update is recorded in the commit message.
+
+## Continuation 19 (2026-11-22): batch 13 (class 16930, Part AE) declared, run, and published - WIN-HALT x2 (p002/p003), verdicts not consumed; same-scope Part AD duplicate stood down, full cross-host audit-summary agreement verified
+
+- Session opened after a context compaction. Latest main re-fetch found the
+  Part AD declaration (`33657c94`, batch12-wins third-impl, another owner,
+  "declared before execution") already on the note, while the local
+  workspace had meanwhile executed the SAME scope (batch-12 n005/n006
+  third-impl battery over the 8 probed rows, 111/111 gates PASS,
+  byte-identical audit twice). Per the pre-registered rule (do not proceed
+  when a same-scope declaration exists on main), the duplicate execution
+  was NOT published and stood down. The Part AD owner has since executed
+  and published the full battery (`4e9c525f` scaffold / `d44fcfb4`
+  targets / `d25a0db9` tail, 46 files, 111/111 gates PASS). Machine
+  cross-check after that publication: the stood-down duplicate's
+  audit-summary agrees with the published Part AD audit-summary on ALL
+  8 target rows (replica_result, third_result, third_expansion,
+  third_ttHits) - full cross-host agreement - recorded as an extra
+  reproducibility corroboration of the third implementation only; it
+  changes no verdict and nothing is consumed. Kit mirror
+  `batch8106-n-thirdimpl` preserves the duplicate's bytes; the
+  published Part AD audit-summary correctly renamed the schema
+  (`batch12-wins-thirdimpl-audit-v1`), while the local copy of the
+  template had kept the batch11-z003 EXP/schema strings (caught and
+  fixed before anything was published here).
+- Technical warning recorded for the Part AD owner (and any future
+  third-impl session): `audit.py` cloned from the Part AA template keeps
+  the batch11-z003 EXP/schema strings and the generated
+  `audit-summary.json` mislabels the experiment. Caught and fixed locally
+  before any publication (re-run 111/111 PASS, twice byte-identical).
+- Batch 13 declared as Part AE (`72608b64`, observed HEAD `7eb9ab70`):
+  first clean candidate under the pre-registered rule = renewed rank 11
+  class 16930 (mask `[1152921504875282432, 272]`, unknown 52; ranks 1-9
+  carry refutation evidence, rank 10 (8106) WIN-HALTed in Part AC).
+  Fail-safes machine-run and PASS before declaring: 52 keys
+  (probe_order 486-537) extracted from the regenerated Part Y worklist
+  (run1 == run2, sha `1807e4d2...`; closure-classes.csv /
+  per-root-coverage.csv / refresh-summary.json byte-equal to the published
+  canonical copies at `7eb9ab70`); 52/52 absent from the canonical merged
+  cache (6,027 rows, sha `95e868d6...`); quarantine 0 hits both
+  directions; duplicate free; rank-row byte check; 10-WIN-key cross-check
+  0 hits (now including n005/n006).
+- Scaffold published `90ee1c87` (65 files, 65/65 fetch-back byte-exact;
+  batch-keys.json sha `c6c56a1a...`; pinned replica jsreplay.js
+  `84585617...`; val-gate 4/4 node-exact on this host: at2m 0/2,000,000
+  twice, 15m 2/3,651,923 and 2/5,040,200). Kit mirror saved under
+  `batch16930/`.
+- Runner (2 cores, up to 4 workers, one 4-key wave, resume-safe) started
+  2026-11-22T12:16:52Z, stopped 12:21:20Z under the pre-registered
+  WIN-HALT rule at 4/52 probed: **p003 WIN 1 / 7,489,274 nodes** (key
+  `[3458764514088976384, 272]`, legal 81, s5 203419) and **p002 WIN 1 /
+  10,770,254 nodes** (key `[1153484454828703744, 272]`, legal 85, s5
+  185003), both 2-pass fresh cold node-exact; in-flight wave members
+  disclosed honestly (p001 LOSS 4,631,275, p004 LOSS 2,291,059); no
+  determinism mismatch, no budget exhaustion. p005-p052 (48 keys) unprobed.
+- p002 and p003 are the 11th and 12th unconsumed closure WINs; nothing
+  consumed anywhere; the standard 11x11 empty board, the 19 central-reply
+  roots and class 16930 remain UNKNOWN; node counts are not verdicts.
+  Publications: raw chunk + status `b4b55ec8` (9/9 fetch-back
+  byte-exact), README Result `f5df3cbf` (byte-exact).
+- Open items for future declarations: third-implementation
+  cross-verification of the two WIN rows (plus the 2 LOSS rows), if-adopted
+  decomposition of the 4 probed rows, batch 14 = rank 12 class 23101
+  (`[1152921504892059648, 16]`, unknown 52) as the next first-clean
+  candidate (fail-safes re-run at declaration time). Observed
+  HEAD-before-push for this update is recorded in the commit message.

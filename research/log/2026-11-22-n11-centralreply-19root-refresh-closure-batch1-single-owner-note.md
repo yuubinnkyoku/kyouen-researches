@@ -1743,3 +1743,47 @@ scrutiny owner、C++第二実装 gate pin `9193f5b6...` 前例・不変)。
   class 16930 `[1152921504875282432, 272]` (unknown 52)。
 - 本status update observed HEAD-before-push: 実行時の最新mainを
   コミットメッセージに記録。
+
+## Part AE (probe-batch owner, status update 2026-11-22): batch 13 (class 16930) WIN-HALT x2 公表 (verdict不消費)
+
+batch 13 (class 16930, renewed rank 11) は宣言 (`72608b64`, fetch-back byte一致, note全体sha
+`42e8770a...`)・scaffold (`90ee1c87`, 65/65 fetch-back byte一致, batch-keys.json sha
+`c6c56a1a...`)・val-gate (本ホストfresh再現4/4 node-exact: at2m result 0/2,000,000 ×2, 15m
+result 2/3,651,923 / result 2/5,040,200) の後、runner 2026-11-22T12:16:52Z開始。
+**4/52 probedで事前登録WIN-HALT規則 (rc=45) が発火**し 12:21:20Z停止 (2-coreホスト, 最大4 worker):
+
+- **p003 WIN: result 1, 2-pass fresh cold node-exact, 7,489,274 nodes, key
+  `[3458764514088976384, 272]`, legal 81, s5_index 203419, probe_order 488**
+- **p002 WIN: result 1, 2-pass fresh cold node-exact, 10,770,254 nodes, key
+  `[1153484454828703744, 272]`, legal 85, s5_index 185003, probe_order 487**
+- 同wave内 in-flight完了 (誠実開示, batch-5 f018先例): p001 LOSS 4,631,275 nodes / p004 LOSS
+  2,291,059 nodes。determinism mismatch (rc=42) なし・budget枯渇 (result 0) なし。
+  p005-p052 (48キー) は未着手のまま。
+
+p002/p003は**11番目・12番目のunconsumed closure WIN**
+(b018/d002/e002/f017/g018/j033/h045/z003/n005/n006/p002/p003)。verdictは不消費・採用判断は
+scrutiny owner (C++第二実装 gate pin `9193f5b6...` 前例) 待ち。2 WINはclass 16930の
+all-LOSS closure routeへの反証証拠としてのみ記録し、class status自体はUNKNOWN・refresh機構
+由来のまま。batch実績: 13バッチ 11 WIN-HALT + 3 clean (23963/10324/8784 = 33/34/35番目Board検証free)。
+
+出版: 宣言 `72608b64` → scaffold `90ee1c87` → raws chunk `b4b55ec8` (9/9 fetch-back byte一致) →
+README Result `f5df3cbf` (fetch-back byte一致)。次のfirst-clean候補: renewed rank 12 class
+23101 (`[1152921504892059648, 16]`, unknown 52, 宣言時fail-safe再実行前提)。第三実装交叉検証
+(p002/p003 + LOSS 2行) と if-adopted decomposition は将来宣言待ち。
+
+運用上の開示 (並走衝突の記録と機械照合): 本実行は compaction 前に batch-12 n005/n006
+第三実装交叉検証 (Part ADと同scope) を実行済みだったが、最新main再取得で**別所有者のPart AD
+宣言 (`33657c94`, 対象 `batch12-wins-thirdimpl-20261122`) を検出**し、規則「同一スコープの
+宣言がmainに存在する場合は着手しない」に従い**本インスタンスの重複実行結果は出版せず撤退**
+した (kit mirror `batch8106-n-thirdimpl` に保全)。撤退後に機械照合した結果、Part ADは
+`4e9c525f`/`d44fcfb4`/`d25a0db9` で完走・出版済み (46 files fetch-back byte一致・111/111
+gates PASS) であり、本インスタンスのaudit-summaryがPart AD出版のaudit-summary
+(`d25a0db9`) と**全8 target行 (replica_result, third_result, third_expansion,
+third_ttHits) で完全一致**した (第三実装のcross-host reproducibility の追加corroboration
+として記録。verdict処理には無関係・不変にUNKNOWN)。テンプレート警告 (将来のverified文献作成時
+向け): Part AA雛形からaudit.pyを複製した場合、`EXP`/schema文字列が `batch11-z003` のまま
+残りaudit-summary.jsonが実験を誤標識することがある (本実行のローカルコピーで実際に検出・
+修正済み。Part AD出版版は `batch12-wins-thirdimpl-audit-v1` に正しく書き換えられている)。
+
+標準11x11空盤・19 central-reply roots・class 16930は本batchのどの時点でもUNKNOWNのまま。
+nodesを勝敗として読まない。本status update observed HEAD-before-push: コミットメッセージに記録。
