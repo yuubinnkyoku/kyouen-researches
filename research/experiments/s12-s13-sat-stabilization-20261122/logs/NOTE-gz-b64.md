@@ -2,7 +2,7 @@
 
 SAT model の v 行を含む3本の生ログ（v3n10k10・v2n10k10_unsat・v2n10k10sh7_unsat・各~1.7MB）は、
 刊行経路のペイロード制約のため base64(gzip(生ログ)) のテキストファイル `.log.gz.b64` として格納する。
-ファイル先頭4行に生ログ・gzip の sha256 と復元コマンドを記してある:
+ファイル先頭4行に生ログ・gzip の sha256 と復元コマンドを記してある。base64部はfold -w 120で折り返してある（base64 -d は改行を無視するため復元に影響しない）。
 
 ```
 grep -v '^#' <name>.log.gz.b64 | base64 -d | gunzip > <name>.log   # byte 完全復元
