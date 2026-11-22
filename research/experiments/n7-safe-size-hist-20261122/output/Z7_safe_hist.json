@@ -1,0 +1,43 @@
+{
+ "n": 7,
+ "N": 49,
+ "board": "standard kyouen 7x7 (q=4)",
+ "definition": "Z_7(lambda) = number of safe cell subsets S (no forbidden quartet Q with Q subseteq S) with |S| = lambda; includes the empty set at lambda=0; non-maximal sets included",
+ "quartets_source": {
+  "file": "output/quartets_n7.txt",
+  "sha256": "7bf555486e1fa08bd43e7c0a6b66d3d2a22956dd0ec448e1feea3b8cdf1a4bfb",
+  "F": 6364, "collinear": 660, "circular": 5704,
+  "generator": "forbidgen.py (exact integer 4x4 determinant / brute force; published sha 61a9d22d…)",
+  "crosscheck": "byte-identical to pinned census.mjs machinery output, n=3..7 all (crosscheck_catalog_n7.mjs)"
+ },
+ "histogram": {
+  "0": 1, "1": 49, "2": 1176, "3": 18424, "4": 205512, "5": 1633048,
+  "6": 8796600, "7": 29688640, "8": 56927728, "9": 55173324, "10": 23478868,
+  "11": 3707028, "12": 177760, "13": 2176, "14": 16
+ },
+ "total_safe_subsets": 179810350,
+ "max_safe_size": 14,
+ "anchors": {
+  "total_k0005_round28_cpp_dp": 179810350,
+  "total_match": true,
+  "z4_identity": "Z_7(4) = C(49,4) - F_7 = 211876 - 6364 = 205512",
+  "low_size_binomial": "Z_7(1)=C(49,1), Z_7(2)=C(49,2), Z_7(3)=C(49,3) (no quartet has fewer than 4 cells)",
+  "lambda_ge_15_zero": "consistent with K1229 n7 at-least-15 UNSAT x2",
+  "n3_to_n6_calibration": "all 33 coefficients of Z_3..Z_6 equal the published K1228 spectrum values (three implementations here)"
+ },
+ "verification": {
+  "impl1_cov_incremental": "safehist_n7.mjs, two byte-identical full runs (sha 1688c1e2…) + 7-way first-stone shard union identical (unite_check_n7.json)",
+  "impl2_python": "dfs_py.py --safehist, n=3..6 calibration identical; n=7 full run not executed in this environment (CPython runtime ~1h), not claimed",
+  "impl3_mask": "safehist_mask.mjs, independent reachability test (triple-mask containment, no cov/stInF), n=3..7 identical to impl1",
+  "determinism": "outputs contain no RNG/timing; reruns byte-identical (cmp)"
+ },
+ "lambda14_orbits": {
+  "total": 16,
+  "orbits": 2,
+  "both_orbit_size_8_stabilizer_trivial": true,
+  "representatives": [
+   [0,1,5,8,9,19,20,24,26,28,38,39,41,42],
+   [0,1,6,11,12,15,17,21,23,34,37,38,44,48]
+  ]
+ }
+}
