@@ -2316,3 +2316,63 @@ refutation evidence.
   batch-14 residual 10-LOSS adoption Part after Part AV lands (BASE =
   canonical 6,172), (d) next batch-18 candidate selection from the
   post-adoption closure-classes rank.
+
+## Continuation 37 (2026-11-22, this host): Part AY batch-18 (class 16131) declared, scaffold published, executed to WIN-HALT at the first wave (v001+v002 both WIN), published; verdicts NOT consumed
+
+- Re-read latest main first: the competing lane had published Part AX
+  (third-implementation cross-verification of batch-14 residual + batch-17
+  edge rows, commits `dbab0b9b`..`115c7ad3`) and declared it before this
+  lane's batch-18; no counter-declaration for the batch-18/class-16131
+  scope existed, so this lane renamed its batch-18 to **Part AY**
+  (previous kit name Part AX) and declared BEFORE execution: note amendment
+  commit `6cde1b0b` (observed HEAD `0c9707ad`, note blob sha1 lock
+  `2c53c205...`), base-independence pinned to the published canonical
+  6,120-row cache `be9cb24e...` (Part AV output neither read nor needed:
+  batch-17 keys are class-10661 cost children, disjoint from class 16131).
+- Key derivation (published, no worklist transcription): make_batch18_keys
+  v2 (published-base edition) derives the 53 class-16131 unknown graph-cost
+  children directly from the pinned graph + canonical base, s5_index
+  ascending key ids v001..v053, 3 runs byte-identical, all gates PASS
+  (canonical 0/53 hits, quarantine 0/53, 15 unconsumed closure WIN children
+  absent, duplicates 0 vs all 18 published packets / 875 rows, Board(11)
+  legal 74..97 re-derived 53/53, rank table: ranks 1-13 win-refuted, rank
+  14 class 10661 fully probed by batch-17, rank 15 = 16131 first clean).
+  batch-keys.json sha256 `1bb3ed41...`. Scaffold publication: 70 files,
+  commit `c36825c7`.
+- Execution (after declaring, verifying no counter-declaration, val-gate
+  first): val-gate 4/4 node-exact on this host (at2m 0/2,000,000 x2, 15m
+  `(2,3651923)`/`(2,5040200)`, forbidden quads 95,670). Pinned replica
+  `jsreplay.js` (`84585617...`) 2-pass fresh cold, budget 15M, max 2
+  workers (two parallel published `runbatch.sh` (`f591f8c2...`)
+  instances, odd/even split; disclosed in status.log RUNNER-NOTE and
+  README). **First wave: both workers' first keys are WIN (result 1)**:
+  **v001 WIN 5,656,151 nodes** (legal 83, key [1154610354467115008, 64])
+  and **v002 WIN 7,898,204 nodes** (legal 84, key
+  [3459890413727387648, 64]), both 2-pass node-exact, both within budget.
+  Pre-registered WIN-HALT fired on both workers (rc=45); batch stopped.
+  2/53 keys probed, 51 keys never run (fresh, re-probe rule not
+  triggered).
+- Publication: B `3c07f51a` (raws v001/v002 p1/p2 + status.log) + C
+  `938e34f2` (README results section + MANIFEST-sha256 73 entries) =
+  publication complete. **Fetch-back 9/9 byte-identical** (local kit vs
+  commit-pinned repo read: 4 raws + status.log + README + MANIFEST +
+  batch-keys + jsreplay + one CSV-equivalents set).
+- Note amendment published: Part AY status update appended (blob lock
+  `68a2e075...` -> commit `30d04759`, server blob `29c7b878...`).
+- Consequences (route statements only, NOT verdicts): unconsumed closure WIN
+  candidates now **17** (15 prior + v001 + v002), all scrutiny-owner
+  blocked (C++ second-implementation gate pin `9193f5b6...`); if either
+  v001/v002 WIN is adopted, the class 16131 all-LOSS closure route is
+  refuted and the next clean candidate is rank 16 class 16513. Zero
+  verdicts consumed; canonical cache stays 6,120 rows `be9cb24e...`.
+- Honesty record: the standard 11x11 empty board, the 19 central-reply
+  roots, class 16131 (51 children unprobed) and all 53 keys remain UNKNOWN
+  throughout; node counts are bookkeeping, never verdicts. Part AV
+  (batch-17 class 10661 adoption + reaudit, declaration `340abef3`
+  19:20:42Z) remains unpublished on main at this session's end; takeover
+  criteria unchanged (~23:00Z). Open items (re-read latest main first):
+  (a) Part AV publication / takeover decision, (b) the scrutiny owner's
+  WIN adoption decisions (now 17 candidates), (c) batch-18 continuation
+  (51 fresh keys v003..v053) or pivot to batch-19 class 16513 (rank 16)
+  under a new declaration, (d) the batch-17 52-LOSS adoption Part whose
+  BASE follows Part AV.
