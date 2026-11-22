@@ -1,0 +1,29 @@
+# n11 central-reply closure batch-14 residual (class 23101) 10-LOSS canonical-adoption increment (Part BC prep, 2026-11-22)
+# residual packet published by Part AW (dataset n11-centralreply-
+#   closure-class23101-batch14-residual-20261122, publication commit cb94f808):
+#   q043..q052, all 10 rows 2-pass fresh-cold node-exact result 2 at budget
+#   15M, WIN 0, exhaustion 0, mismatch 0 (row-audit 6b40b131, 23,252,550
+#   nodes/pass). Batch-14 residual class 23101 continuation of batch-14
+#   (Part AQ/AS) probed set {q001..q042}.
+# BASE = the post-AV canonical exact-S5 verdict cache 6,172 rows
+#   (sha256 a5540811...): Part AS 6,120 + batch-17 52-LOSS (Part AV).
+# gates: 3-way (p1/p2/status) node-exact, row-audit.json 10-row
+#   cross-verification, batch-keys (sha256 d4fada68) legal/(lo,hi)
+#   agreement, resolved keys distinct, s5 set disjoint from the batch-17
+#   adopted pack AND from the unconsumed q042 WIN (s5 745184), ZERO
+#   BASE-cache overlap (any overlap ABORTs), quarantine 0,
+#   WIN-CONTINUE/exhaustion absence gates.
+# ADOPTED set = exactly the 10 LOSS rows {q043..q052} = the full residual
+#   packet (clean all-LOSS residual, so full == loss here).
+# 11x11 stays UNKNOWN; nodes are bookkeeping, never verdicts.
+# 10 rows: the adopted LOSS verdicts of class 23101's residual unknown S5 children.
+s5verdict,1152921504892059648,1040,5,2,557594
+s5verdict,1152921505747697664,9216,5,2,1292547
+s5verdict,1152921505747697664,17408,5,2,1028674
+s5verdict,1152921505747697664,33792,5,2,1855550
+s5verdict,1152921505747697664,66560,5,2,2573254
+s5verdict,1152921505747697664,16778240,5,2,1451266
+s5verdict,1152921505747697664,33555456,5,2,2178945
+s5verdict,1152991873351025152,1140850688,5,2,1101099
+s5verdict,1152991873351025664,1140850688,5,2,2860377
+s5verdict,1152991873352073216,1140850688,5,2,8353244
