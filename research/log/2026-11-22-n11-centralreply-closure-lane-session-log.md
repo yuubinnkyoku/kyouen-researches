@@ -567,3 +567,38 @@ github_app.push_files with commit-pinned raw fetch-back byte verification.
   Read-only audit, no new claim, no verdict consumed; the standard 11x11
   empty board, the 19 central-reply roots and all closure classes remain
   UNKNOWN.
+
+## Session continuation 9 addendum (2026-11-22 ~07:10-07:3xZ, same lane; Part P executed and published, class-23963 consumed evidence bundle cross-verified by the third implementation)
+
+Part P, pre-registered at `03c8e0fa`: third-implementation reverify of the 48
+consumed rows (c001-c048, all LOSS, 2-pass node-exact) of batch 2 /
+class 23963, the first free class closed by Board verification. Same protocol
+and gates as Parts G/K/O; verdict not consumed; post-hoc corroboration
+literature only.
+
+- Execution (paired a/b runs, one row per process, cap 300M expansions,
+  wallcap 240s): all 48 rows byte-identical across the two runs; third-impl
+  expansions 636,315-4,341,425 (replica df-pn nodes 579,880-3,815,424);
+  anchors k02a (WIN 9,106,337 / 4,991,527 ttHits) and l1a (LOSS 7,660,602 /
+  3,951,175 ttHits) node-exact vs the published third-impl values; negative
+  gates ng1/ng2 GATE_FAIL with matching wording; `audit.py` (fail-closed, run
+  twice byte-identical): **511/511 gates PASS, 48/48 LOSS verdict agreement,
+  0 divergence, 0 wall-inconclusive**.
+- Publication commits: `a84f8254` (scaffold 63 files) -> `cb739fcd` (targets
+  96 files) -> `dbd7c5c2` (anchors 4 + negative 2 + audit-summary.json) ->
+  note publication amendment `c89bce19`. Fetch-back: all 166 experiment files
+  byte-identical against their pinned commits (raw URL + cmp), note amendment
+  byte-identical as well.
+- Sources: the 96 published batch-2 raws were re-fetched from main and
+  machine-verified byte-identical (96/96) before use; batch-keys.json
+  (sha256 `3b37c923...`) deliberately not re-published, documented in the
+  experiment README.
+- Parallel lanes: the finite-field cleanup lane landed
+  e86a4373/f996c16b/2aeb33d0 during execution. Post-hoc recheck confirms all
+  Part O experiment files (README, audit-summary, rows.json) remain
+  byte-identical on main against the kit mirror; no path collision with this
+  lane. The parallel batch-8 instance (class 2634, Part N scope) was not
+  touched; its i002 15M-budget depletion row belongs to that lane's scope.
+- No verdict consumed, no claim changes: the standard 11x11 empty board, the
+  19 central-reply roots and all closure classes remain UNKNOWN;
+  nodes/expansions are not read as outcomes.
