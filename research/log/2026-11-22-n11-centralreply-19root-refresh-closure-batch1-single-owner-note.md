@@ -2924,3 +2924,41 @@ unknown 52, groups 3, first 24 / third 28) の52キーをPart AF事前登録プ�
   canonicalが更新されているため増分は新6,079行cacheに対して構築)。
 - 本status updateのobserved HEAD-before-push: `7b211d38…` (note blob sha1ロック
   `7bb7a66d…` で更新、fetch-backで追記確認)。
+
+
+## Part AR (verifier, declaration 2026-11-22): batch-14 q042 WIN + in-wave LOSS 3行の第三実装交叉検証 (verdict不消費・実行前に宣言)
+
+Part AQ (batch-14 takeover) は42キー目で事前登録WIN-HALT規則を発火させた
+(q042: 2-pass fresh cold node-exact result 1, 9,149,084 nodes)。Part G/K/O/P/T/W/AA/AD/AG/AL
+と同一規約で、q042 WIN行と同一wave内in-flight開示済みのLOSS 3行
+(q039/q040/q041) の第三実装verdict-level交叉検証を単一オーナーとして実行する。
+**verdict不消費・検証はverdict-level文献作成のみ・採用判断はscrutiny owner。**
+
+- 対象: `research/experiments/n11-centralreply-closure-batch14-q042-thirdimpl-20261122/`。
+  targets = batch-14のprobed行から4行: WIN 1行 (q042) + LOSS spot 3行 (q039/q040/q041、
+  同wave in-flight開示行。batch-9 Part T (j033 + 3 LOSS spots) と同型の選択)。
+  残り38 LOSS行は本実験の対象外 (全行検証が必要な場合は将来の別宣言)。q043-q052 (10キー)
+  は未着手のまま着手しない。
+- 入力: published正本のみ (batch-14 published raws (takeover由来・publication commit
+  `7b211d38`): q039-q042のp1/p2 8ファイル、status.log、batch-keys.json sha256
+  `dfde0e90…`、input CSV)。`make_inputs_batch14.py` (batch-15版をadapt・schema文字列は
+  `batch14-q042-thirdimpl`) がfail-closed導出: 2-pass一致assert・status.log PASS行・
+  `q042 WIN-HALT` 停止行・WAVE-END stop=1行の存在assert・derived CSVがpublished
+  input CSVとbyte一致するassert・class_index 23101 assert・手転写ゼロ。
+- 手法: pinned `third_impl.js` (sha256 `08ea958f…`)・`verify_tbl.js` (`c8c52528…`)・
+  1行1プロセス・`--cap=300000000 --wallcap=240 --memo-power=22`・1行2回 (a/b)
+  determinism gate (result/expansion/ttHits/reason 同一必須)・rule-engine gate
+  (quads 95,670 == replica / TBL==wob mismatches 0、target走行前に実施)。
+  anchors k02a (WIN, legal 87, 期待 9,106,337 expansions / 4,991,527 ttHits) と
+  l1a (LOSS, legal 116, 期待 7,660,602 / 3,951,175) は本ホスト再現がpublished値と
+  node-exact必須、negatives ng1 (legal+1) / ng2 (stones+1) は文言一致GATE_FAIL必須。
+  2-coreホストで最大2並列。wall超過 (runlimit) はhonest wall-inconclusiveとして
+  記録し検証主張としない。cleanな不一致はdivergence evidenceとして記録するが
+  本レーンはverdictを書き換えない。
+- 主張と消費規則: verdict不消費 (採用は引き続きscrutiny owner・C++第二実装 gate pin
+  `9193f5b6…` 待ち・不変)。標準11x11空盤・19 central-reply roots・class 23101は
+  本検証のどの時点でもUNKNOWNのまま。nodes/expansionsを勝敗として読まない。
+- 並走との不接触: Part AO/AP/published成果には一切書込みしない。同一スコープの
+  対抗宣言がmainに存在する場合は本宣言を破棄して着手しない。
+- 本amendment observed HEAD-before-push: `a54a9402…` (push直前にnote blob sha1
+  ロック `a4cd1465…` を再照合、競合時は再fetchして追記し直す)。
