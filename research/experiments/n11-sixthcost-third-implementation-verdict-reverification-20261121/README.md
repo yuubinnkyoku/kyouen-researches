@@ -90,3 +90,57 @@ python3 run_bank.py <probe-13 cache> out/bank 240 --wins all --loss-sample 40 --
 Requires Node.js; the pinned replica (`jsreplay.js`, sha256
 `845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df`) is referenced
 from the lane kit, not modified.
+
+## Bank full-band recalibration (2026-11-21 follow-up, same lane)
+
+Declared in `research/log/2026-11-21-n11-thirdimpl-bank-full-recalibration-single-owner-note.md`
+(commit `451e0fe8`). This closes the deferred first follow-up item of this lane:
+the full-band calibration of the fixed third implementation against the published
+probe-13 chain cache (`merged-exact-s5-after-js-probe-13.cache`, sha256
+`60e0dc34...`, 5,756 s5verdict rows, stones 5).
+
+- Bank set: all 158 WIN rows + a 40-row LOSS sample (`run_bank.py --wins all
+  --loss-sample 40 --wallcap 90`). The 14 clean-agreed rows of `out/bank-fixed-A`
+  were seed-copied (same fixed implementation; not re-proven); both sample
+  wall-inconclusive rows resolved clean WIN here (58.99s / 54.71s); one row
+  (`10448351135499550786_0`) needed an escalated 240s cap (94.11s clean WIN; its
+  aborted 90s batch attempt is preserved as a comment inside its file).
+- **Result: 198/198 rows agree verdict-level with the cache rows (158 WIN + 40
+  LOSS sample). 0 disagreements, 0 gate fails, 0 unresolved rows.**
+- Calibration before the batch (C1): `verify_tbl.js` 95,670 == replica 95,670
+  quads and 195,044 triples with 0 mismatches; anchor w1
+  `10376293541461626880:67109120` reproduced WIN(1) with expansions 11,663,909 /
+  ttHits 6,284,843 / ttOverwrites 7,469,605, identical to the published
+  fixed-implementation values on this host (33.80s wall).
+- Determinism spot checks (fresh reruns): `10376293541461622792:65600` (WIN,
+  10,898,228 / 5,964,726 / 6,703,924) and `13019119616:16448` (LOSS, 7,660,602 /
+  3,951,175 / 3,466,722), byte-identical to the batch fields and to the published
+  legacy witness values.
+- Verdicts unconsumed, no cache increment, no class/coverage statement; the
+  delegated C++ second-implementation gate is unchanged. Node/expansion counts are
+  never read as verdicts. **The standard 11x11 empty board, the two-stone root
+  {60,27}, and third moves {100,108} remain UNKNOWN.**
+
+### Publication byte-fidelity audit and repair (same follow-up)
+
+Unauthenticated raw fetches had been unavailable to the `ea73c3e3` session, whose
+log left its MANIFEST pins "pending a later byte-exact fetch-back". Fetches work
+again, so this session ran that deferred audit and found, honestly recorded:
+
+1. Every text file pushed by that session lost exactly ONE trailing newline at
+   publication (repo bytes end without the final `\n`; the MANIFEST pins and the
+   canonical lane-kit copies end with it; the content is otherwise identical and
+   the stripped byte is semantically inert for every format involved).
+2. The per-file raw outputs were never pushed: `out/witness/*.txt` (18 files) and
+   `out/bank-fixed-A/*.txt` (16 files) were claimed in the Artifacts section, but
+   only the two concatenated summaries exist in the repo.
+
+Repairs applied in this follow-up (all with byte-exact fetch-back): the five
+non-README stripped files were re-published with the canonical kit bytes (restoring
+the final newline so repo bytes equal the pre-existing MANIFEST pins); the 34
+missing witness/bank-fixed-A raw files were published from the lane-kit canonical
+copies after machine-verification against the pinned summary blocks line-for-line
+(34/34 found verbatim in the pinned summaries); this README appendix was appended
+(the README.md MANIFEST line is updated accordingly); and MANIFEST.sha256 was
+regenerated to enumerate every published artifact of this experiment dir including
+all raw rows.
