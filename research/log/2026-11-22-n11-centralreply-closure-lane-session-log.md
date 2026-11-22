@@ -1583,3 +1583,61 @@ and no takeover was needed (declaring host = this session).
   verdicts; r005-r052 (48 keys) unprobed. The standard 11x11 empty
   board, the 19 central-reply roots, class 5830 and every other class
   remain UNKNOWN. Nodes are not verdicts.
+
+
+## Continuation 27 (2026-11-22, this host): batch 16 (class 10687, Part AM) declared, executed, and published - 52/52 all LOSS, the fourth clean all-LOSS batch
+
+Executed the Part AM declaration (commit `4386ace3`, observed
+HEAD-before-push `1976f566`) on this host. Renewed closure ranks 1-13 were
+all evidence-carrying, WIN-halted or in flight (5830 = batch-15 r001/r002,
+23101 = batch-14 in flight by the Part AF owner), so the first clean
+candidate was renewed rank 14, class 10687 (mask `[1224979098661617664, 0]`,
+unknown 52, groups (16,56)+(16,64)), 52 keys, probe_order 642-693.
+
+- Pre-declaration failsafes 6/6 PASS: 0 hits in the 6,027-row canonical
+  merged cache (`95e868d6...`), 0 quarantine hits (`81d23160...`), no
+  in-batch duplicates, closure-classes rank-14 row byte-checked (`61943b85...`),
+  zero overlap with the 608 published batch 1-15 keys, contiguous
+  probe_order. The Part Y refresh was re-executed on this host from the
+  pinned 6 inputs before extraction and reproduced the published canonical
+  outputs byte-identically (4th recorded reproduction); val-gate fresh
+  4/4 node-exact immediately before the run.
+- Result: **52/52 keys all LOSS (result 2)**, 2-pass fresh-cold node-exact
+  on every key, WIN 0, exhaustion 0, determinism mismatch 0; total
+  168,262,885 nodes per pass; per-row machine cross-check vs batch-keys in
+  row-audit.json (schema `n11-centralreply-closure-class10687-batch16-rowaudit-v1`,
+  `589c1141...`), batch-keys sha256 `465cf44721a661ce94babeb12...` (full value
+  in the experiment README and MANIFEST).
+- Host events, honestly recorded: repeated environment resets killed the
+  background runner mid-batch (15:15Z truncated t002.p2/t003.p2; 15:27Z
+  truncated t020.p2/t022.p1; 15:32Z truncated t020.p2/t022.p1/t023.p1/t024.p1;
+  plus the ~15:31Z `/home/user/work` wipe - the knowledge kit checkpoint held
+  the authoritative state). A `# replay_done` completeness guard was
+  installed in `runbatch.sh` BEFORE any re-run, and the final 7 waves were
+  executed as foreground single-wave invocations (`scripts/runwave.sh`).
+  No stop rule ever fired; all 8 truncated fragments (no verdict lines) are
+  published under `output/raw-truncated-hostevent/` for transparency. The
+  batch has zero exhaustion rows and no complete row was ever re-run, so
+  the truncated passes' fresh-cold re-runs are not same-condition
+  re-searches of any resolved row (stated in the README).
+- Publications: experiment dir
+  `n11-centralreply-closure-class10687-batch16-20261122/` - 180 files in
+  3 commits (scaffold `14092b5e`, results `0aac7e0c`,
+  README+row-audit+MANIFEST `d349e8f8`), fetch-back 180/180 byte-identical
+  against MANIFEST-sha256.txt at the publication commit. runner.log kept
+  internal (kit-mirrored). Note Part AM status update appended as commit
+  `7711aab9` (blob sha1 lock `f36db386...` -> `fefd11c8...`, byte-count
+  gate 142,517 chars passed before push).
+- Closure candidate, verdicts NOT consumed: the fourth clean all-LOSS
+  batch overall (after 23963, 8784, 10324). The 52 LOSS rows only become
+  consumable through the sha-pinned fail-closed union merger (`90711961...`)
+  as a published increment plus an independent refresh re-audit - a
+  separate declaration (Part AP-equivalent) that must first re-check
+  ranks 1-13 (batch-15 if-adopted is now published as Part AN `c37b2790`;
+  batch-14 23101 still in flight). No root coverage, no class closure, no
+  third-move secured is claimed by this batch. The 14 unconsumed closure
+  WINs (b018/d002/e002/f017/g018/j033/h045/z003/n005/n006/p002/p003/
+  r001/r002) remain third-implementation cross-verified and await the
+  scrutiny owner (C++ second-implementation gate pin `9193f5b6...`). The
+  standard 11x11 empty board, the 19 central-reply roots, class 10687 and
+  every other class remain UNKNOWN. Nodes are not verdicts.
