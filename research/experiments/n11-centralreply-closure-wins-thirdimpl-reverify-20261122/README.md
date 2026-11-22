@@ -80,3 +80,50 @@ see `output/status.log` and `output/audit-summary.json`.
 
 The standard 11x11 empty board, the 19 central-reply roots and all classes
 remain UNKNOWN throughout. Expansions and node counts are not verdicts.
+
+## Operator erratum (honest disclosure): first runner version mangled 121-bit keys
+
+The first version of `run_thirdimpl.sh` looked up `--lo`/`--hi` from
+`input/rows.json` inside a Node helper. `JSON.parse` -> JS Number ->
+String concatenation silently rounds mantissa-precision integers
+(observed: k02 `1297036692683751424` was passed as `...1400`, flipping the
+stone popcount 5 -> 20). The damage was caught immediately by the pinned
+driver's own fail-closed gates (`stone count mismatch: bits=20 declared=5`
+on the k02 anchor before any search ran) - no solver search ever ran on a
+mangled key, and no verdict, anchor or target row was produced by the buggy
+runner. The runner was fixed to read lo/hi/legal/stones from the
+machine-derived input CSV strings (exact integer tokens, no JS Number
+round-trip), and `scripts/audit.py` gained gate G0 asserting that every
+published `input/*.input.csv` equals its `rows.json` row in exact Python
+integers. All anchor/negative/target runs published from
+`output/anchors|negative|targets/` were produced by the fixed runner.
+
+## Status: COMPLETED - all gates PASS (2026-11-22)
+
+`scripts/audit.py` (fail-closed, run twice byte-identical): **171/171 gates PASS**.
+Verdict agreements (third implementation vs published pinned-replica verdicts):
+
+| row | replica verdict (15M df-pn nodes) | third_impl verdict (expansions) | runs |
+|---|---|---|---|
+| b018 `[1153204079095189504, 65536]` | WIN 1 (3,549,602) | **WIN 1** (3,972,982) | a/b identical |
+| d002 `[3461016313634230272, 131072]` | WIN 1 (5,359,994) | **WIN 1** (6,144,044) | a/b identical |
+| e002 `[1153765929805414400, 16]` | WIN 1 (14,112,632) | **WIN 1** (16,384,711) | a/b identical |
+| f017 `[1188950301625810945, 70368744177666]` | WIN 1 (3,522,635) | **WIN 1** (4,038,798) | a/b identical |
+| d001 / d003 / d004 / e001 / f001 / f005 / f009 / f013 / f016 / f018 | LOSS 2 (all 2-pass node-exact) | **LOSS 2** all ten (977,037 / 2,402,323 / 14,008,003 / 988,682 / 3,186,168 / 3,209,420 / 2,530,636 / 5,473,893 / 4,681,879 / 4,146,243) | a/b identical |
+
+- Anchors on this host: k02 WIN 9,106,337 expansions / 4,991,527 ttHits and l1
+  LOSS 7,660,602 expansions / 3,951,175 ttHits - **exactly** the published
+  third-implementation values (host-independent determinism confirmed).
+- Rules gate: quads 95,670 == replica; 195,044 triples, TBL==wob, 0 mismatches.
+- Negative gates: ng1 / ng2 GATE_FAIL with the published messages.
+- All runs `clean`, all 2-run pairs identical on (result, expansion, ttHits,
+  overwrites), quads=95,670 in every output line, 0 wall-inconclusive rows.
+
+**Interpretation (verdict-level corroboration only, NOT adoption):** the four
+unconsumed closure WINs (b018/d002/e002/f017) now have a second, independent
+(non-df-pn) re-derivation agreeing verdict-level, and 10 of the 21 unconsumed
+LOSS rows agree spot-wise. This is strengthening evidence for the scrutiny
+owner's adoption decision; the pre-registered C++ second-implementation gate
+(pin `9193f5b6...`) remains the adoption gate. No verdict was consumed, no
+class closure / coverage / root claim is made, and the standard 11x11 empty
+board, the 19 central-reply roots and all classes remain UNKNOWN.

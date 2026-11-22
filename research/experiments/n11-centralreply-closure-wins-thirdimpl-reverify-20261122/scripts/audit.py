@@ -58,7 +58,21 @@ def read_run(kind, key, tag):
 
 def main():
     rows = json.load(open(os.path.join(ROOT, "input", "rows.json")))
-    js = json.load(open(os.path.join(ROOT, "input", "rows.json")))
+
+    # -- G0: input CSVs carry exactly the rows.json keys (exact Python ints;
+    #        guards against any transport rounding of 121-bit keys)
+    for grp in ("targets", "anchors", "negatives"):
+        for r in rows.get(grp, []):
+            p = os.path.join(ROOT, "input", f"{r['key_id']}.input.csv")
+            if not os.path.isfile(p):
+                gate(f"input-{r['key_id']}-present", False, p)
+                continue
+            f = open(p).read().strip().split(",")
+            ok = (f[0] == "target" and int(f[2]) == r["stones"] and int(f[3]) == r["lo"]
+                  and int(f[4]) == r["hi"] and int(f[5]) == r["legal"])
+            gate(f"input-{r['key_id']}-matches-rows", ok,
+                 f"{f[2]},{f[3]},{f[4]},{f[5]} vs {r['stones']},{r['lo']},{r['hi']},{r['legal']}")
+
 
     # -- G1: pinned script bytes
     gate("pin-third_impl.js",

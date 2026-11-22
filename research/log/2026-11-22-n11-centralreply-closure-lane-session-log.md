@@ -238,3 +238,45 @@ github_app.push_files with commit-pinned raw fetch-back byte verification.
   IF-ADOPTED packets are complete for all four), THEN re-run the refresh
   re-audit for a new canonical ranking; further probe batches on blind
   ranking are empirically likely to WIN-HALT early.
+
+## Session continuation 4 (2026-11-22, same lane)
+
+### Part G: third-implementation cross-verification of the closure WINs - ALL AGREE
+
+- Declared as Part G of the single-owner note; experiment
+  `research/experiments/n11-centralreply-closure-wins-thirdimpl-reverify-20261122/`
+  (scaffold `480238ae`, 27 files; the C++ gate remains impossible in this
+  environment - still no compiler, package installation still forbidden).
+- The third implementation (pinned `third_impl.js` sha256 `08ea958f...`,
+  non-df-pn AND/OR minimax) independently re-derived, verdict-level:
+  - **all 4 unconsumed closure WINs agree**: b018 WIN (3,972,982 expansions),
+    d002 WIN (6,144,044), e002 WIN (16,384,711), f017 WIN (4,038,798); each
+    2-run a/b identical (result, expansion, ttHits), all `clean`.
+  - **10/10 stratified LOSS spot rows agree** (d001/d003/d004/e001/f001/
+    f005/f009/f013/f016/f018): all result 2, a/b identical.
+- This-host anchor reproduction: k02 WIN 9,106,337 expansions / 4,991,527
+  ttHits; l1 LOSS 7,660,602 / 3,951,175 - exactly the published third-impl
+  values. Rules gate: quads 95,670 == replica, 195,044 triples TBL==wob
+  0 mismatches. Negative gates ng1/ng2 GATE_FAIL with published messages.
+- `scripts/audit.py` fail-closed: **171/171 gates PASS**, run twice
+  byte-identical; MANIFEST.sha256 over 63 published files.
+- Operator erratum (disclosed in the experiment README): the first runner
+  version looked `--lo/--hi` up from `rows.json` inside Node, and
+  JSON.parse -> Number -> String silently rounded k02's 121-bit key
+  (`...1424` passed as `...1400`, popcount 5 -> 20). The pinned driver's
+  fail-closed stone-count gate caught it before any search ran; no target
+  or anchor row was ever produced by the buggy runner. Fixed by passing
+  lo/hi/legal/stones from the machine-derived input CSV strings (exact
+  integer tokens), and audit gate G0 now asserts every input CSV equals
+  its rows.json row in exact Python integers.
+- Status: verdicts NOT consumed (adoption stays with the scrutiny owner;
+  the C++ second-implementation gate precedent is unchanged and this
+  third-impl agreement is additional strengthening evidence only). The
+  canonical merged cache is unchanged at 5,924 rows; free_now 33 unchanged;
+  11x11 empty board, the 19 central-reply roots and all classes remain
+  UNKNOWN; expansions/nodes are not verdicts.
+- Recommended next: scrutiny-owner consumption decision for the 4 pending
+  WINs (now corroborated by two independent implementations), then the
+  refresh re-audit for a new canonical ranking; remaining unprobed keys
+  of refuted classes (b021-b048, d005-d049, e003-e050, f019-f051) are
+  cache-completion only, never closure evidence.
