@@ -1,0 +1,54 @@
+{
+ "N": 36,
+ "all_have_three_collinear": false,
+ "checks": {
+  "C1_unique_sorted": true,
+  "C2_d4_closure": true,
+  "C3_orbit_sum": 199184
+ },
+ "dirs_histogram_all_sets": {
+  "0": 3568,
+  "1": 30048,
+  "2": 75872,
+  "3": 68000,
+  "4": 20008,
+  "5": 1600,
+  "6": 88
+ },
+ "ecc_histogram_all_sets": {
+  "0": 3152,
+  "1": 13928,
+  "10": 904,
+  "11": 312,
+  "12": 96,
+  "13": 32,
+  "2": 28904,
+  "3": 40632,
+  "4": 40720,
+  "5": 31536,
+  "6": 20448,
+  "7": 10992,
+  "8": 5144,
+  "9": 2384
+ },
+ "k": 9,
+ "n": 6,
+ "orbit_rep_lists_omitted": "size policy: orbit_details_compact omitted for rows with >20000 orbits; regenerate deterministically (classify.mjs run + json extraction)",
+ "orbits": 24898,
+ "source_full_classify_local_only": "members/configs arrays dropped for publication; regenerate by rerunning classify.mjs",
+ "source_full_classify_sha256_local": "00cce94bee7f76efaa202e243610228f52c1b64c45c74e6c16f9fea68ae50cf5",
+ "stabilizer_histogram": {
+  "1": 24898
+ },
+ "total": 199184,
+ "trips3_histogram_all_sets": {
+  "0": 3568,
+  "1": 26376,
+  "2": 67048,
+  "3": 68608,
+  "4": 28168,
+  "5": 5008,
+  "6": 368,
+  "7": 40
+ }
+}

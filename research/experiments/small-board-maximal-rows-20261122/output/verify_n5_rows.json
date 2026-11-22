@@ -1,0 +1,220 @@
+{
+ "N": 25,
+ "n": 5,
+ "problems": [],
+ "quartet_file_sha256": "22d086ba612336ca3c82a874b14871154c8298c6ab24241927e625bff28faedf",
+ "quartets": 826,
+ "rows": [
+  {
+   "all_have_three_collinear": true,
+   "configs_containing_prev_row_member": null,
+   "control_nonmax_tamper": {
+    "applicable": false
+   },
+   "control_unsafe_tamper": {
+    "added": 0,
+    "rejected": true
+   },
+   "dirs_histogram": {
+    "2": 4
+   },
+   "edges_to_prev_row": null,
+   "found": 4,
+   "k": 5,
+   "k3_prefixes": 10,
+   "maximal_all": true,
+   "nodes": 49199,
+   "orbit_sum": 4,
+   "orbits_python": 1,
+   "parents_covered": 0,
+   "parents_total": 4,
+   "remov_histogram": null,
+   "safe_all": true,
+   "stabilizer_histogram": {
+    "2": 1
+   },
+   "supersets_in_next_row_histogram": {},
+   "trips3_histogram": {
+    "2": 4
+   }
+  },
+  {
+   "all_have_three_collinear": false,
+   "configs_containing_prev_row_member": 0,
+   "control_nonmax_tamper": {
+    "rejected": true,
+    "removed": 0
+   },
+   "control_unsafe_tamper": {
+    "added": 3,
+    "rejected": true
+   },
+   "dirs_histogram": {
+    "0": 116,
+    "1": 524,
+    "2": 392,
+    "3": 104
+   },
+   "edges_to_prev_row": 0,
+   "found": 1136,
+   "k": 6,
+   "k3_prefixes": 20,
+   "maximal_all": true,
+   "nodes": 98581,
+   "orbit_sum": 1136,
+   "orbits_python": 143,
+   "parents_covered": 0,
+   "parents_total": 1136,
+   "remov_histogram": {
+    "0": 1136
+   },
+   "safe_all": true,
+   "stabilizer_histogram": {
+    "1": 141,
+    "2": 2
+   },
+   "supersets_in_next_row_histogram": {},
+   "trips3_histogram": {
+    "0": 116,
+    "1": 520,
+    "2": 396,
+    "3": 104
+   }
+  },
+  {
+   "all_have_three_collinear": false,
+   "configs_containing_prev_row_member": 0,
+   "control_nonmax_tamper": {
+    "rejected": true,
+    "removed": 0
+   },
+   "control_unsafe_tamper": {
+    "added": 3,
+    "rejected": true
+   },
+   "dirs_histogram": {
+    "0": 472,
+    "1": 2816,
+    "2": 4936,
+    "3": 2692,
+    "4": 356,
+    "5": 8
+   },
+   "edges_to_prev_row": 0,
+   "found": 11280,
+   "k": 7,
+   "k3_prefixes": 35,
+   "maximal_all": true,
+   "nodes": 109940,
+   "orbit_sum": 11280,
+   "orbits_python": 1413,
+   "parents_covered": 0,
+   "parents_total": 11280,
+   "remov_histogram": {
+    "0": 11280
+   },
+   "safe_all": true,
+   "stabilizer_histogram": {
+    "1": 1407,
+    "2": 6
+   },
+   "supersets_in_next_row_histogram": {},
+   "trips3_histogram": {
+    "0": 472,
+    "1": 2720,
+    "2": 4960,
+    "3": 2740,
+    "4": 376,
+    "5": 12
+   }
+  },
+  {
+   "all_have_three_collinear": false,
+   "configs_containing_prev_row_member": 0,
+   "control_nonmax_tamper": {
+    "rejected": true,
+    "removed": 0
+   },
+   "control_unsafe_tamper": {
+    "added": 3,
+    "rejected": true
+   },
+   "dirs_histogram": {
+    "0": 112,
+    "1": 652,
+    "2": 1760,
+    "3": 1368,
+    "4": 440,
+    "5": 8
+   },
+   "edges_to_prev_row": 0,
+   "found": 4340,
+   "k": 8,
+   "k3_prefixes": 56,
+   "maximal_all": true,
+   "nodes": 85746,
+   "orbit_sum": 4340,
+   "orbits_python": 543,
+   "parents_covered": 0,
+   "parents_total": 4340,
+   "remov_histogram": {
+    "0": 4340
+   },
+   "safe_all": true,
+   "stabilizer_histogram": {
+    "1": 542,
+    "2": 1
+   },
+   "supersets_in_next_row_histogram": {},
+   "trips3_histogram": {
+    "0": 112,
+    "1": 624,
+    "2": 1684,
+    "3": 1400,
+    "4": 488,
+    "5": 24,
+    "6": 8
+   }
+  },
+  {
+   "all_have_three_collinear": true,
+   "configs_containing_prev_row_member": 0,
+   "control_nonmax_tamper": {
+    "rejected": true,
+    "removed": 0
+   },
+   "control_unsafe_tamper": {
+    "added": 3,
+    "rejected": true
+   },
+   "dirs_histogram": {
+    "2": 32,
+    "3": 24,
+    "4": 40,
+    "5": 4
+   },
+   "edges_to_prev_row": 0,
+   "found": 100,
+   "k": 9,
+   "k3_prefixes": 84,
+   "maximal_all": true,
+   "nodes": 62072,
+   "orbit_sum": 100,
+   "orbits_python": 13,
+   "remov_histogram": {
+    "0": 100
+   },
+   "safe_all": true,
+   "stabilizer_histogram": {
+    "1": 12,
+    "2": 1
+   },
+   "trips3_histogram": {
+    "2": 16,
+    "3": 32,
+    "4": 48,
+    "6": 4
+   }
+  }
+ ]
+}
