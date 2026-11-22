@@ -2050,3 +2050,58 @@ by Part AH); batch 14 (Part AF) continues under its own owner. Kit mirror
 saved under `batch8106-n005n006-ifadopted/` (plus base-control mirror).
 Observed HEAD-before-push for this update is recorded in the commit
 message.
+
+## Part AI (read-only analysis, declaration 2026-11-22): batch 13 (class 16930) p002/p003 if-adopted 分解 (verdict不消費・実行前に宣言)
+
+Part ADがopen itemとして掲げ、Part AH status updateで残唯一とした
+「batch-13 4 probed行のif-adopted分解」を単一オーナーとして宣言する
+（Part V/R/AB/AH流・solver探索なし・verdict不消費・新規主張ゼロの
+what-if計画・監査計算）。
+
+- 対象:
+  (a) **BASEの再利用（再出版なし）**: 直前に出版した
+      `research/experiments/n11-class8106-n005n006-base-control-20261122/`
+      の3出力をBASEとして使う。それらはpublished Part Y canonical
+      (`61943b85...`/`33f01a0c...`/`25987add...`) とbyte一致が機械検証済み
+      であり、batch-13 deltaの基準として同一の正本である。同一bytesの
+      3つ目の複製dirは情報を追加しないため出版しない（Part AB/AHの
+      base control dirとpure bytes同一・宣言内で機械照合する）。
+  (b) 新規実験dir
+      `research/experiments/n11-centralreply-class16930-win-p002p003-ifadopted-20261122/`
+      - increments: batch-13 published raws 8件 (p001-p004 x p1/p2)・
+        status.log（4 PASS行・WIN-HALT x2 p002/p003）・batch-keys
+        (sha `c6c56a1a...`, 52キー) からfail-closed生成。**3-way
+        (p1/p2/status) 検証**（batch-13は宣言hostのみ実行でtakeover
+        passが存在しない、Part AE正本）。3種: full 4行
+        (p001/p004 LOSS + p002/p003 WIN)・win-only 2行 (p002/p003)・
+        loss-only 2行 (p001/p004)。**2番目の複数WIN increment**。
+      - scenario caches: canonical 6,027行 + increment をpublished union
+        merger (fail-closed・WIN/LOSS衝突0・重複0・selftest) でmergeした
+        分析用cache 3種 (pwin2/ploss2/pfull4、正本ではない)。
+      - scenario refresh: scenario cache向けadapt script
+        (docstring・ROOT行・CACHE行・sha pin行のみ変更・diff検証) を
+        各2回実行しrun間byte一致。per-root free coverage (free_now/
+        uncovered) が全rootでBASEと同一であること、root first=27が
+        119/119 free thirdsであることをmachine gateで確認。
+      - delta抽出: `compare_deltas_batch13.py` (Part AB/AH版をadapt) が
+        excluded_now flip集合（frozen graphのp002/p003 cost-child holder
+        のunion・membership_class_count 2/4との一致）・update8
+        newly-resolved indices（increment行にgate）・加法性指標・
+        per-root greedy表・win-hit groups群を機械算出し、全
+        class_status_countをBASE+3シナリオで再実行しpublished summaryと
+        一致をassertしてからdelta報告（Board fail-closed free検証込み）。
+      - 前提知識（宣言時点のfrozen graph由来・計算で再検証する）:
+        p002 holder {4903, 16930} (mclass 2)・p003 holder
+        {5471, 5513, 5626, 16930} (mclass 4)・overlap = class 16930のみ・
+        union 5クラス全status baseline UNKNOWN。
+- 主張と消費規則: 本分解はread-only what-if解析・verdict不消費。p002/p003
+  のWINは引き続きscrutiny owner (C++第二実装 gate pin `9193f5b6...` 前例)
+  待ち（第三実装verdict-level検証はPart AG済み）。標準11x11空盤・19
+  central-reply roots・class 16930 (p005-p052未着手) は本解析のどの時点でも
+  UNKNOWNのまま。nodes数を勝敗として読まない。
+- 並走との不接触: batch 14 (Part AF, class 23101) のprobe中ファイル・
+  publishedファイルには一切接触しない (読み取りのみ)。宣言直前に最新mainを
+  再取得し、同scope対抗宣言なし・`p002p003-ifadopted` dir不在・Part AI採番
+  未使用を確認済み。同一スコープの宣言がmainに存在する場合は本宣言を破棄
+  して着手しない。
+- 本amendment observed HEAD-before-push: 実行時の最新mainをコミットメッセージに記録。
