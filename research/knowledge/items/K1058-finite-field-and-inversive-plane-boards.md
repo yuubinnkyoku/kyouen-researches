@@ -849,7 +849,7 @@ artifacts:
   note: 連続比の計算
 - path: research/experiments/finite-field-kyouen-20261120/ARC_POLYNOMIALS.md
   role: source
-  note: #4-arcsと#5-arcsの多項式展開
+  note: 4-arcsと5-arcsの多項式展開
 - path: research/experiments/finite-field-kyouen-20261120/scripts/k_leading_symbolic.py
   role: verifier
   note: 閉形式の多項式展開と主項の計算
