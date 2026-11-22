@@ -69,6 +69,20 @@ so the key selection is canonical; only the mask metadata line is affected.
 Batch 8 is in flight by a parallel instance; this batch does not modify batch-8
 files and records the observation here only.
 
+## Result
+
+Pre-registered WIN-HALT (rc=45) fired at **j033** (33/51 probed: 32 LOSS rows
+j001-j032 + 1 WIN row j033; j034-j051 untouched). j033 = s5_index 69347, key
+`1153484455030030336:0`, legal 80, membership_class_count 2 in the regenerated
+worklist (probe_order 364): result 1 (WIN), nodes 4,718,280, 2-pass fresh cold
+node-exact on (result, nodes, legal), wall 23s/24s. Like the five earlier
+closure WINs (b018/d002/e002/f017/g018), this WIN is **unconsumed** and the
+adoption decision stays with the scrutiny owner (C++ second-implementation
+gate precedent pin `9193f5b6...`); the batch makes no claim beyond the honest
+row records. The all-children-LOSS closure route for class 1518 is refuted if
+the WIN is adopted; no refutation, coverage, closure or root claim is made
+while it stays unconsumed.
+
 ## Status
 
 see `output/status.log`. The standard 11x11 empty board, the 19 central-reply
