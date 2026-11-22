@@ -1,0 +1,69 @@
+
+## Part AW (solver, amendment 2026-11-22): closure class 23101 batch-14 residual 10 keys q043..q052 exact-S5 probe (実行前に宣言・本セッションが実行host・verdict不消費)
+
+batch 14 (Part AQ takeover) は事前登録のWIN-HALT規則により q042 (2-pass
+node-exact result 1, 9,149,084 nodes) で停止し、残10キー q043..q052 は
+未着手のまま残った (Part AT/AS/AU resumeのopen item)。Part AS計上後の
+class 23101はcanonical上unknown 11子 = 未採用q042 WIN + 未着手10キー
+(s5_index 745455..745465のうち10個・published batch-14 batch-keys.jsonの
+probe_order 580..589)。本Partはこの残10キーの列挙probeを実行前に単一
+オーナーとして宣言する。
+
+- 対象: `research/experiments/n11-centralreply-closure-class23101-batch14-residual-20261122/`。
+- キー: published batch-14 batch-keys.json (sha256 `dfde0e90…`) の
+  q043..q052。input CSVはpublished正本のbyte-copy (batch-14 publication
+  commit `7b211d38`のMANIFEST sha固定・10/10のsha256一致をmakerが検証)。
+- machine gates (maker fail-closed): 現行canonical 6,120行 (sha256
+  `be9cb24e…`) に10キー不在 (0/10 hits)・quarantine registry (sha256
+  `81d23160…`) 0/10・batch-17 batch-keys (sha256 `db762175…`) との
+  s5_index交積0・published batch-14 status.log/row-auditのprobed set ==
+  {q001..q042} で残キー集合がpublished key集合のちょうど補集合
+  {q043..q052}。
+- 手法: pinned replica `jsreplay.js` (sha256 `84585617…` byte-copy) による
+  2-pass fresh cold replay・budget 15,000,000・1 solver / 1 row / 1
+  process・publish=ALL・worker最大2 (2-key wave)。実行前にpublished
+  two-target-design 4行のval-gateを本hostで再現 (node数一致が必須)。
+- 停止規則 (事前登録。batch-14/16/17からの差分はWIN行の扱いのみ):
+  1. determinism mismatch → 即時HARD-STOP (rc=42)、以後のキー着手不可。
+  2. budget枯損 (result 0) → honest UNKNOWN。15M同条件の再探索は禁止。
+     次ラダー (budget昇格) は将来の新規宣言が必要。
+  3. WIN (result 1) → **HALTせず続行する** (publish=ALL・誠実WINラベル
+     WIN-CONTINUE・verdict不消費)。理由: class 23101の全子LOSS閉包
+     ルートはq042 WINで既に反駁済み (route statement) なのでWIN-HALTは
+     新しいルート情報を買わず、残キー集合の全列挙がWIN/LOSSいずれの
+     分岐でもclass 23101のunknown子数を最小化するから。2-pass
+     node-exactのWIN行は16番目以降のunconsumed closure WIN候補として
+     誠実記録され、採用判断は引き続きscrutiny owner (C++第二実装 gate
+     pin `9193f5b6…`) 待ち。
+- 消費規則: 本Partのverdict消費はゼロ。LOSS行のcanonical計上は別宣言の
+  adoption Part (Part AS/AV流・sha-pinned fail-closed merger `90711961…`
+  経由) が行う。そのadoption PartのBASEはPart AVが計上するcanonical
+  6,172行 (batch-17計上後) を用いる (本PartはPart AVの成果物には一切
+  触れない・非接触)。
+- 本Part単体ではroot被覆・クラス閉鎖・第三手securedの主張をしない
+  (閉鎖判定・被覆監査は後続のrefresh再実行+独立監査の仕事)。
+- verdict不消費 (WIN側不変): 本Part実行開始時点の15 unconsumed closure
+  WIN (b018/d002/e002/f017/g018/j033/h045/z003/n005/n006/p002/p003/
+  r001/r002/q042) はscrutiny owner待ち・本Partでは採用も却下もしない。
+- 標準11×11空盤・19 central-reply roots・class 23101 (unknown 11子)・
+  10キーは本Partのどの時点でもUNKNOWNのまま。nodes数を勝敗として読まない。
+- 並走との不接触: Part AV (batch-17 class 10661 adoption+reaudit、宣言
+  commit `340abef3`) とは非接触 (本Partはbatch-14由来キーのみを対象とし、
+  batch-17成果物・canonical cache・refresh出力に一切書込まない)。
+  同一スコープの対抗宣言がmainに存在する場合は本宣言を破棄して着手しない。
+- 本amendment observed HEAD-before-push: `3542315d` (push直前にnoteの
+  blob sha1ロックを再照合し、競合時は再fetchして本節を追記し直す)。
+2026-11-22T20:25:03Z PART-AW SCAFFOLD maker gates PASS (10/10, canonical 0/10, quarantine 0/10, batch17-s5-disjoint, row-audit unprobed_keys == residual)
+2026-11-22T20:26:53Z q043 PASS 15000000,2,2573254
+2026-11-22T20:27:35Z q045 PASS 15000000,2,1028674
+2026-11-22T20:27:43Z q044 PASS 15000000,2,1855550
+2026-11-22T20:27:59Z q047 PASS 15000000,2,557594
+2026-11-22T20:28:04Z q046 PASS 15000000,2,1101099
+2026-11-22T20:29:02Z q048 PASS 15000000,2,2860377
+2026-11-22T20:30:03Z q049 PASS 15000000,2,8353244
+2026-11-22T20:30:43Z q051 PASS 15000000,2,1451266
+2026-11-22T20:30:49Z q050 PASS 15000000,2,2178945
+2026-11-22T20:31:05Z q052 PASS 15000000,2,1292547
+2026-11-22T20:26:09Z VAL-GATE 4/4 node-exact this-host (at2m 0/2000000 x2, 15m (2,3651923)/(2,5040200), quads 95670; recorded from file mtime, run before first probe 2026-11-22T20:26:53Z)
+2026-11-22T20:31:21Z RUNNER-NOTE execution used runbatch.sh in 2-key parallel foreground pairs (worker 2, no wave wrapper); published runwave.sh is the same protocol driver
+2026-11-22T20:31:21Z WAVE-END q052 stop=0 all-10-done

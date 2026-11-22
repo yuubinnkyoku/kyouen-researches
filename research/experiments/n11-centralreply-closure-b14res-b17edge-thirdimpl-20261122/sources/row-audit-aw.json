@@ -1,0 +1,135 @@
+{
+ "schema": "n11-centralreply-closure-class23101-batch14residual-rowaudit-v1",
+ "part": "Part AW (solver, batch-14 residual q043..q052)",
+ "class_index": 23101,
+ "budget": 15000000,
+ "probed_rows": 10,
+ "probed_ids": [
+  "q043",
+  "q044",
+  "q045",
+  "q046",
+  "q047",
+  "q048",
+  "q049",
+  "q050",
+  "q051",
+  "q052"
+ ],
+ "wins": [],
+ "win_continues": [],
+ "exhausted_result0": [],
+ "mismatch": 0,
+ "replay_done_complete_all_passes": true,
+ "all_result2_2pass_node_exact": true,
+ "status_pass_rows_cross_checked": true,
+ "total_nodes_per_pass": 23252550,
+ "nodes_range": [
+  557594,
+  8353244
+ ],
+ "verdict_consumption": 0,
+ "interpretation_guard": "row audit only: the 10 LOSS rows are NOT consumed here; canonical adoption is a separately declared Part on the post-AV 6,172-row base; class 23101 still holds the unconsumed q042 WIN (scrutiny owner gate 9193f5b6...); standard 11x11 empty board / 19 central-reply roots / class 23101 and all 10 keys remain UNKNOWN; nodes are bookkeeping, never verdicts",
+ "rows": [
+  {
+   "key_id": "q043",
+   "s5_index": 745455,
+   "lo": 1152921505747697664,
+   "hi": 66560,
+   "legal": 84,
+   "result": 2,
+   "nodes": 2573254,
+   "budget": 15000000
+  },
+  {
+   "key_id": "q044",
+   "s5_index": 745456,
+   "lo": 1152921505747697664,
+   "hi": 33792,
+   "legal": 97,
+   "result": 2,
+   "nodes": 1855550,
+   "budget": 15000000
+  },
+  {
+   "key_id": "q045",
+   "s5_index": 745457,
+   "lo": 1152921505747697664,
+   "hi": 17408,
+   "legal": 94,
+   "result": 2,
+   "nodes": 1028674,
+   "budget": 15000000
+  },
+  {
+   "key_id": "q046",
+   "s5_index": 745459,
+   "lo": 1152991873351025152,
+   "hi": 1140850688,
+   "legal": 99,
+   "result": 2,
+   "nodes": 1101099,
+   "budget": 15000000
+  },
+  {
+   "key_id": "q047",
+   "s5_index": 745460,
+   "lo": 1152921504892059648,
+   "hi": 1040,
+   "legal": 82,
+   "result": 2,
+   "nodes": 557594,
+   "budget": 15000000
+  },
+  {
+   "key_id": "q048",
+   "s5_index": 745461,
+   "lo": 1152991873351025664,
+   "hi": 1140850688,
+   "legal": 84,
+   "result": 2,
+   "nodes": 2860377,
+   "budget": 15000000
+  },
+  {
+   "key_id": "q049",
+   "s5_index": 745462,
+   "lo": 1152991873352073216,
+   "hi": 1140850688,
+   "legal": 92,
+   "result": 2,
+   "nodes": 8353244,
+   "budget": 15000000
+  },
+  {
+   "key_id": "q050",
+   "s5_index": 745463,
+   "lo": 1152921505747697664,
+   "hi": 33555456,
+   "legal": 91,
+   "result": 2,
+   "nodes": 2178945,
+   "budget": 15000000
+  },
+  {
+   "key_id": "q051",
+   "s5_index": 745464,
+   "lo": 1152921505747697664,
+   "hi": 16778240,
+   "legal": 97,
+   "result": 2,
+   "nodes": 1451266,
+   "budget": 15000000
+  },
+  {
+   "key_id": "q052",
+   "s5_index": 745465,
+   "lo": 1152921505747697664,
+   "hi": 9216,
+   "legal": 98,
+   "result": 2,
+   "nodes": 1292547,
+   "budget": 15000000
+  }
+ ]
+}
