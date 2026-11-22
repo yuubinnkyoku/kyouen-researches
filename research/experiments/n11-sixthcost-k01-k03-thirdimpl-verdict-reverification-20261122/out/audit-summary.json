@@ -1,0 +1,182 @@
+{
+ "all_pass": true,
+ "claim": "verdict-level agreement only; no verdict consumed; 11x11 empty board / two-stone root {60,27} / third moves {100,108} remain UNKNOWN",
+ "consumed": false,
+ "gates": {
+  "C1a_quads_95670_eq": {
+   "detail": "replica=95670 mine=95670",
+   "pass": true
+  },
+  "C1a_triples_195044_0": {
+   "detail": "checked=195044 mismatches=0",
+   "pass": true
+  },
+  "C1b_anchor_w2_clean_rc0": {
+   "detail": "",
+   "pass": true
+  },
+  "C1b_anchor_w2_expansions_eq_7583990": {
+   "detail": "expansions=7583990",
+   "pass": true
+  },
+  "C1b_anchor_w2_win": {
+   "detail": "result=1",
+   "pass": true
+  },
+  "C2_k03_determinism_3runs_identical": {
+   "detail": "[('1', '10896601', '5996958'), ('1', '10896601', '5996958'), ('1', '10896601', '5996958')]",
+   "pass": true
+  },
+  "C2_k03_win_verdict_level_vs_replica": {
+   "detail": "third={'1'} replica={'1'}",
+   "pass": true
+  },
+  "C3_k01_determinism_2runs_identical": {
+   "detail": "[('2', '12033330', '6620470'), ('2', '12033330', '6620470')]",
+   "pass": true
+  },
+  "C3_k01_loss_verdict_level_vs_replica": {
+   "detail": "third={'2'} replica={'2'}",
+   "pass": true
+  },
+  "C4_ng1_gate_fail": {
+   "detail": "third,ng1,5,82,,GATE_FAIL,\"legal count mismatch: derived=81 declared=82\"\nrc=1",
+   "pass": true
+  },
+  "C4_ng2_gate_fail": {
+   "detail": "third,ng2,6,81,,GATE_FAIL,\"stone count mismatch: bits=5 declared=6\"\nrc=1",
+   "pass": true
+  },
+  "pin_jsreplay_sha256": {
+   "detail": "",
+   "pass": true
+  },
+  "pin_third_impl_sha256": {
+   "detail": "",
+   "pass": true
+  },
+  "pin_verify_tbl_sha256": {
+   "detail": "",
+   "pass": true
+  },
+  "repl_k01_loss_2runs_unanimous": {
+   "detail": "[('2', '10369650'), ('2', '10369650')]",
+   "pass": true
+  },
+  "repl_k03_2m_unknown_row": {
+   "detail": "0,2000000",
+   "pass": true
+  },
+  "repl_k03_win_3runs_unanimous": {
+   "detail": "[('1', '9255414'), ('1', '9255414'), ('1', '9255414')]",
+   "pass": true
+  },
+  "repl_row_at15m-run1-k01.out.csv": {
+   "detail": "replay,0,5,87,0,15000000,2,10369650,54,1297036692683751424,1114112",
+   "pass": true
+  },
+  "repl_row_at15m-run1-k03.out.csv": {
+   "detail": "replay,0,5,81,0,15000000,1,9255414,49,10376293541461626880,65792",
+   "pass": true
+  },
+  "repl_row_at15m-run2-k01.out.csv": {
+   "detail": "replay,0,5,87,0,15000000,2,10369650,55,1297036692683751424,1114112",
+   "pass": true
+  },
+  "repl_row_at15m-run2-k03.out.csv": {
+   "detail": "replay,0,5,81,0,15000000,1,9255414,48,10376293541461626880,65792",
+   "pass": true
+  },
+  "repl_row_at15m-run3-verify-k03.out.csv": {
+   "detail": "replay,0,5,81,0,15000000,1,9255414,48,10376293541461626880,65792",
+   "pass": true
+  },
+  "repl_row_at2m-k03.out.csv": {
+   "detail": "replay,0,5,81,0,2000000,0,2000000,9,10376293541461626880,65792",
+   "pass": true
+  },
+  "repl_sha_at15m-run1-k01.out.csv": {
+   "detail": "8b923fffe30723a0ba5600ebbd3eb03bd5d30c2320d499746d1e0ef4d300447a",
+   "pass": true
+  },
+  "repl_sha_at15m-run1-k03.out.csv": {
+   "detail": "a1c51cdf3b4a7601b5afabf3c558127f3b762f1f3c87785c695a7ffe5d6b7151",
+   "pass": true
+  },
+  "repl_sha_at15m-run2-k01.out.csv": {
+   "detail": "9a51121df4a1e11264e74a0d403486f479842f2528a0fc9a28052822a76d485d",
+   "pass": true
+  },
+  "repl_sha_at15m-run2-k03.out.csv": {
+   "detail": "b17652530797f7ecca37668ae22145ae538afc498c5795a58846c87902c5cd32",
+   "pass": true
+  },
+  "repl_sha_at15m-run3-verify-k03.out.csv": {
+   "detail": "27169f87a60b7600967e413433dc6fee12ca555b7a20f098ba61f09523e3b924",
+   "pass": true
+  },
+  "repl_sha_at2m-k03.out.csv": {
+   "detail": "ecd00db9ce475fda0adb57374c9c90624634387dd59eb51ccdca6b07713c3216",
+   "pass": true
+  },
+  "third_clean_k01-cold-a.txt": {
+   "detail": "reason=clean",
+   "pass": true
+  },
+  "third_clean_k01-cold-b.txt": {
+   "detail": "reason=clean",
+   "pass": true
+  },
+  "third_clean_k03-cold-a.txt": {
+   "detail": "reason=clean",
+   "pass": true
+  },
+  "third_clean_k03-cold-b.txt": {
+   "detail": "reason=clean",
+   "pass": true
+  },
+  "third_clean_k03-cold-v-legal.txt": {
+   "detail": "reason=clean",
+   "pass": true
+  },
+  "third_derivedlegal_k01-cold-a.txt": {
+   "detail": "in=87 derived=87",
+   "pass": true
+  },
+  "third_derivedlegal_k01-cold-b.txt": {
+   "detail": "in=87 derived=87",
+   "pass": true
+  },
+  "third_derivedlegal_k03-cold-a.txt": {
+   "detail": "in=81 derived=81",
+   "pass": true
+  },
+  "third_derivedlegal_k03-cold-b.txt": {
+   "detail": "in=81 derived=81",
+   "pass": true
+  },
+  "third_derivedlegal_k03-cold-v-legal.txt": {
+   "detail": "in=81 derived=81",
+   "pass": true
+  }
+ },
+ "row_results": {
+  "k01": {
+   "replica_nodes_15m": 10369650,
+   "replica_verdict": 2,
+   "third_impl_expansions": 12033330,
+   "third_impl_runs": 2,
+   "third_impl_verdict": 2,
+   "verdict_level_agreement": true
+  },
+  "k03": {
+   "replica_nodes_15m": 9255414,
+   "replica_verdict": 1,
+   "third_impl_expansions": 10896601,
+   "third_impl_runs": 3,
+   "third_impl_verdict": 1,
+   "verdict_level_agreement": true
+  }
+ },
+ "schema": "n11-sixthcost-k01k03-thirdimpl-audit-v1"
+}

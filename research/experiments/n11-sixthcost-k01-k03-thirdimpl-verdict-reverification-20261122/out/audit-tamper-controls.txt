@@ -1,0 +1,11 @@
+=== audit negative (tamper) controls: run on full kit copies ===
+--- tamper 1: k03-cold-a verdict flipped 1->2 ---
+{
+ "all_pass": false,
+ "claim": "verdict-level agreement only; no verdict consumed; 11x11 empty board / two-stone root {60,27} / third moves {100,108} remain UNKNOWN",
+rc=1 (fail-closed), detected: C2_k03_determinism_3runs_identical, C2_k03_win_verdict_level_vs_replica
+--- tamper 2: k01-cold-b expansions 12033330->12033331 ---
+{
+ "all_pass": false,
+ "claim": "verdict-level agreement only; no verdict consumed; 11x11 empty board / two-stone root {60,27} / third moves {100,108} remain UNKNOWN",
+rc=1 (fail-closed), detected: C3_k01_determinism_2runs_identical
