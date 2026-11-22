@@ -612,7 +612,7 @@ artifacts:
   note: 列挙なしの純粋なk=6公式の検証（q=5,7,8）
 - path: research/experiments/finite-field-kyouen-20261120/ARC_TABLE.md
   role: source
-  note: k≤6の閉形式の統一検証（33/33）とアーク数全表
+  note: k≤7の閉形式の確定版一覧（奇偶分岐・因子階層・主項パターン・アーク数表）
 - path: research/experiments/finite-field-kyouen-20261120/scripts/arc_table.py
   role: verifier
   note: アーク数の統一ハーネス（全数列挙＋閉形式照合）
