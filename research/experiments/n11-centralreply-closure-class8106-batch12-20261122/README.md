@@ -87,3 +87,46 @@ be amended with the result section in a later commit; per-row honest records
 land in `output/status.log` and `output/raw/`). The standard 11x11 empty
 board, the 19 central-reply roots and class 8106 remain UNKNOWN throughout.
 Nodes are not verdicts.
+
+## Result (2026-11-22, amending this README after batch stop)
+
+Batch halted under the pre-registered WIN-HALT rule at **8/52 probed**
+(n001-n008; two probe_order waves; n009-n052 = 44 keys unprobed). Executed on
+this host (`8c50fb9e...`, 2 cores, up to 4 workers), runner started
+2026-11-22T11:48:32Z, stopped 2026-11-22T11:55:49Z. Every completed key is
+2-pass fresh cold node-exact at budget 15,000,000:
+
+- wave 1 (all LOSS): n001 6,471,615 / n002 3,083,301 / n003 4,560,719 /
+  n004 3,710,926 nodes
+- wave 2 (in-flight completion disclosed honestly, batch-5 f018
+  precedent): n007 LOSS 2,905,330 / n008 LOSS 3,442,689 nodes;
+  **n006 WIN (result 1, 2-pass node-exact, 3,695,373 nodes, key
+  `[1152926194711134208, 128]`, legal 78, s5_index per batch-keys.json)**
+  and **n005 WIN (result 1, 2-pass node-exact, 12,863,268 nodes, key
+  `[1153489144664555520, 0]`, legal 82)**. First closure batch to surface
+  two WIN rows, both in the same wave.
+- no determinism mismatch (rc=42) and no budget exhaustion (result 0)
+  anywhere; the runner stopped launching new waves after the rc=45
+  WIN-HALT (in-flight wave members completed).
+
+n005 and n006 are the **9th and 10th unconsumed closure WINs**
+(b018/d002/e002/f017/g018/j033/h045/z003/n005/n006). Their verdicts are NOT
+consumed on this lane: adoption remains with the scrutiny owner (C++
+second-implementation gate precedent, pinned replica verdicts only
+corroborated here). Batch record: 12 batches, 9 WIN-HALT + 3 clean
+(23963/10324/8784 = 33rd/34th/35th Board-verified free classes).
+
+Consequences recorded without interpretation: the two WINs are refutation
+evidence against the all-LOSS closure route of class 8106 (the class status
+itself remains UNKNOWN and derived only from the refresh machinery);
+third-implementation cross-verification of n005/n006 and the if-adopted
+decomposition (WIN-only / LOSS-only / full over the 8 probed rows) are open
+items for future declarations. Next first-clean candidate in the renewed
+ranking: **rank 11 class 16930** (`[1152921504875282432, 272]`, unknown 52;
+nothing in flight, 10-WIN-key cross-check against its 52 worklist children
+0 hits; final declaration-time fail-safes will be re-run before declaring).
+
+Raws are published in chunk commits (`output/raw/n001..n008.p1/.p2.out`,
+`output/status.log`, 15 lines). The standard 11x11 empty board, the 19
+central-reply roots and class 8106 remain UNKNOWN throughout. Node counts
+are not verdicts.
