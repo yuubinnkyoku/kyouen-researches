@@ -1,0 +1,38 @@
+{
+ "basePath": "output/base_n7k8_sh42.cnf",
+ "baseSha256": "3320fa6d7c89ac26b873dcbdad75769bf6ea2749a0f0ac2c7160f1c342583f75",
+ "outPath": "output/lift_k8_sh42.cnf",
+ "outSha256": "46e86cee52e083e44c291e527ae2a1752875c1f6cef2c800ae5b37af6227c280",
+ "nVars": 26240,
+ "nClausesBase": 111105,
+ "nBlockClauses": 2,
+ "nClausesOut": 111107,
+ "shuffle": {
+  "seed": 42,
+  "nVarsTotal": 26240
+ },
+ "leaders": [
+  [
+   10,
+   13,
+   14,
+   17,
+   19,
+   21,
+   45
+  ],
+  [
+   18,
+   21,
+   22,
+   26,
+   31,
+   32,
+   38
+  ]
+ ],
+ "blockClauses": [
+  "-18836 -8000 -5184 -2909 -7421 -10964 -17292 0",
+  "-23847 -10964 -7591 -2052 -13327 -790 -12118 0"
+ ]
+}
