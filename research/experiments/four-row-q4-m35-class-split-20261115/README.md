@@ -191,8 +191,8 @@ resume 宣言: [2026-11-22-four-row-q4-m35-class-split-resume-single-owner-note]
 
 ### 観察 (有限観察・非決着)
 
-- conflicts rate は 75/s (`c1k2p3`) 〜 4,384/s (`c0123`... 対照 `ctrl` 除き) と
-  強く instance 依存。同一 cap 240s で 18k〜438k conflicts と約 24 倍差。
+- conflicts rate は 77/s (`c1k2p3`) 〜 4,343/s (`c1k0`) と強く instance 依存。
+  同一 cap 240s で 18k〜438k conflicts と約 24 倍差。
   `c1k2p3/p5/p6/p7` は 240s で 18k-19k conflicts 台で停滞。
 - second stone ピン後の x2 サブ (`c1k2p0x21/x22`) でも ~800-900k conflicts/200s
   で未収束。(4,5) m23 レーンの同種 piece は同種の cap で UNSAT 収束させてきた
