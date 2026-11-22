@@ -48,3 +48,11 @@
 - 10×10十石witness類の蓄積は「類構造の法則性」仮説形成（類数の増大傾向・spanの多様性）に使える。
 - UNDONE検討: K0032の全408カタログとのn8 witness照合、K0320 n12/n13 witness周辺の
   SAT探索（K1206のSLS近傍結果とSAT側の接続）。
+
+## 追記（2026-11-22T06:15Z）: UNDONE「K0032の全408カタログとのn8 witness照合」完了
+
+- scripts/n8_catalog_lookup.mjs + output/n8_k0032_lookup.json を追加（README §11 追記・MANIFEST 更新）。
+- カタログを original-claims の刊行テキスト2点（round10_small_saturation.json・round46_n8_to_n9_embeddings_probe.json）から独立復元し完全一致（51代表×D4閉包=408・disjoint・stabilizer 1。round10 は B371.bin sha256 f91c81d4… を明記）。
+- wit_n8k8: mask=2501885820992、カタログ直接要素かつ round10 軌道8の代表そのもの（座標一致・essential_curve_count=19）。
+- v3wit_n8k8: mask=1225049536376906752、カタログ直接要素・軌道46（代表mask=10414608632381576・ecc=16）。軌道8≠46 は両 witness 非合同分類と整合（陽性対照）。
+- 64ビットmaskはテキスト正規表現抽出+BigInt厳密比較（jq/JSON.parse の double は 2^53 超で破壊）。s_8=8 不変、カタログ完全性は K0032 の債務（再証明せず）。

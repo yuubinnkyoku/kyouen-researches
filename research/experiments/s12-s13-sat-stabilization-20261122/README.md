@@ -178,7 +178,7 @@ fail-loud 拒否。census.mjs 起動時アンカー検査（F/D/C/lines/circles 
 三点共線 triple は primary 5・sh7 5 個（証人が共円のみでなく共線でも攻撃している通常の構造）。
 v2.1 ラン自身の witness（すべて decode→3系統検証 rc=0・tamper で py/mjs とも rc=1）:
 n7k7 は K0031 witness と合同（**陽性対照**: 修正符号化が既知の s_7=7 witness を再発見）。
-n8k8・n9k9 は draft 時代の witness と非合同の別配置（n=8 は全408カタログ（K0032）に属するとみられる
+n8k8・n9k9 は draft 時代の witness と非合同の別配置（n=8 は全408カタログ（K0032）に属する（§11 追記で照合・特定済み）
 再発見対象であり、n=9 は s_9=9 の明示 witness として追加の検証済み例。新規性はここでは主張しない）。
 n10k10 は **4.37 秒** で SAT（正しい鎖の伝播効果: draft 81秒→v2.1 4秒）し、上表第5類の witness を与えた。
 n10k10sh7 は 270 秒 cap で UNKNOWN（shuffle 下の難度上昇の記録。draft sh7 witness は引き続き
@@ -224,3 +224,17 @@ node scripts/classify_sat_witnesses.mjs          # 格子同型分類（アン�
 
 CNF 本体は非刊行（計~420MB）。scripts/cnf-sha256.txt に v1/v2-draft/v2.1 全 CNF の sha256 を記録し、
 上記コマンドで byte 再現可能。MANIFEST-sha256.txt に本実験の全刊行ファイルのハッシュを記録する。
+
+## 11. 追記（2026-11-22T06:15Z）: n=8 witness の K0032 全408カタログ照合
+
+セッションログ引き継ぎの UNDONE「K0032の全408カタログとのn8 witness照合」を実行し、§6 の「カタログに属するとみられる」を解消した。
+両 n=8 witness が K0032 カタログ（8×8 全八石極大安全配置 408 個・D4 51 軌道・stabilizer 1）のどの要素・どの軌道かを機械特定した。
+
+- 機材: scripts/n8_catalog_lookup.mjs（Node BigInt・fail-closed）。出力: output/n8_k0032_lookup.json。
+- カタログ復元は binary round4_b371.bin を読まず、刊行済みテキスト2点から独立2系統で行い完全一致を確認:
+  - original-claims/output/round10_small_saturation.json: 51 D4 軌道代表（stones+mask、source_sha256=f91c81d4eab5a0cf09e613fde697e1584eabf146210263f64499150fac03d0e1 を round4_b371.bin として明記）。全代表について stones から再計算した BigInt mask が文中テキスト値と 51/51 完全一致。
+  - original-claims/output/round46_n8_to_n9_embeddings_probe.json: 1632 埋め込み = 408 源 × 4 オフセット [0,0],[0,1],[1,0],[1,1]、distinct source_S_mask = 408。
+  - 構造検証: 51 代表 × 8 board-D4 像 = 408 個・disjoint・両系統の 408 点集合が完全一致（K0032 の 51 軌道・stabilizer 1 と符合）。
+- **特定結果（有限計算・機械検証）**: wit_n8k8（§4 v2n8k8_unsat.log 由来）の mask=2501885820992 はカタログ直接要素であり、round10 軌道 8 の代表そのもの（座標列完全一致、essential_curve_count=19）。v3wit_n8k8（§4 v3n8k8.log 由来）の mask=1225049536376906752 もカタログ直接要素で、round10 軌道 46（代表 mask=10414608632381576、essential_curve_count=16）に属する。軌道 8≠46 は §6 の両 witness 非合同分類と整合する陽性対照。陰性対照（1石 tamper 配置）はカタログ非要素。
+- 精度規約: 64 ビット mask はテキスト正規表現抽出 + BigInt 厳密比較（jq/JSON.parse の double は 2^53 超で壊れるため不使用）。D4 変換は盤面変換（round70_scope_catalogue_check.py perms と同型）で stones に適用後 BigInt 再計算。
+- 位置づけ: カタログの完全性（408 = 全八石極大安全配置）は K0032 の確立済み債務であり、本照合は完全性の再証明ではなく「どの要素か」の特定である。s_8=8 の値は不変。両 witness は既知カタログの再発見であり新規性を主張しない。
