@@ -2105,3 +2105,57 @@ what-if計画・監査計算）。
   未使用を確認済み。同一スコープの宣言がmainに存在する場合は本宣言を破棄
   して着手しない。
 - 本amendment observed HEAD-before-push: 実行時の最新mainをコミットメッセージに記録。
+
+## Part AJ (read-only analysis, declaration 2026-11-22): joint unconsumed-rows if-adopted 分解 (batches 1,3,4,5,6,8,9,11,12; verdict不消費・実行前に宣言)
+
+Part AI (batch-13 単独分解) が進行中の間、そのスコープを侵さない規模の補完として、
+**9つのWIN-HALTバッチの未消費probed行全体** (batch 13/14を除く) を一括する
+joint if-adopted分解を単一オーナーとして宣言する (Part H joint-4WIN / Part J
+joint-5WINの直接継承。それらが被覆できなかったWIN j033/h045/z003/n005/n006 を
+初めてjointに含める)。solver探索なし・verdict不消費・新規主張ゼロの
+what-if計画・監査計算。
+
+- 対象:
+  (a) **BASEの再利用（再出版なし）**: published base control
+      `research/experiments/n11-class8106-n005n006-base-control-20261122/`
+      の3出力 (sha `61943b85...`/`33f01a0c...`/`25987add...` = Part Y canonical)
+      をBASEとして使う。本host取得後にsha機械照合する。
+  (b) 新規実験dir
+      `research/experiments/n11-centralreply-joint-unconsumed-ifadopted-20261122/`
+      - increments: 9バッチのpublished raws・status.log・batch-keys から
+        fail-closed生成 (`make_increments_joint10.py`):
+        **JWIN10** (10 WIN行: b018/d002/e002/f017/g018/j033/h045/z003/n005/n006)・
+        **JLOSS141** (141 LOSS行)・**JALL151** (全151 resolved行)。
+        batch-11 z-keyはtakeover pass込み**4-way**、他バッチは**3-way
+        (p1/p2/status)** node-exact gate。**h002 (batch-8, 15M budget枯損
+        result 0) は全incrementから除外し、枯損形状 (result 0, nodes
+        15,000,000, 2-pass一致) をgate検証**。151キーは互いにdistinct・
+        canonical BASE 6,027行cacheに不在 (0 hits)・quarantine不在・
+        batch-keysのlegal/(lo,hi)一致を機械検証。
+      - scenario caches: canonical 6,027行 + 各increment をpublished union
+        merger (s5_union_merge.py pin `90711961...`・fail-closed・WIN/LOSS
+        衝突0・重複0・selftest) でmergeした分析用cache 3種 (正本ではない)。
+      - scenario refresh: Part Y refresh script (pin `88671526...`) を
+        docstring・ROOT行・CACHE行・sha pin行のみ変更 (4-hunk・diff検証) した
+        scenario scriptを各2回実行しrun間byte一致。per-root free coverage
+        (free_now/uncovered) が全rootでBASEと同一であること・root first=27
+        が119/119 free thirdsであることをmachine gateで確認。
+      - delta抽出: `compare_deltas_joint10.py` (Part AB/AH版をadapt) が
+        excluded_now flip集合 (10 WINのfrozen graph holder union・各
+        batch-keys membership_class_countとの一致の機械特定)・update8
+        newly-resolved indices (increment行にgate・期待10/141/151)・9バッチ
+        classのunknown_now加法性指標・per-root greedy表・win-hit groups群を
+        機械算出し、全class_status_countをBASE+3シナリオで再実行し
+        published summaryと一致をassertしてからdelta報告 (Board
+        fail-closed free検証込み)。
+- 主張と消費規則: 本分解はread-only what-if解析・verdict不消費。10 WINの
+  採用判断は引き続きscrutiny owner (C++第二実装 gate pin `9193f5b6...`) 待ち
+  (第三実装verdict-level検証は全10 WINともPart G/H/K/O/P/T/W/AA/AD/AG済み)。
+  9バッチclassの残りunprobed子 (batch universeからprobed行を除いた集合) は
+  本解析のどの時点でもUNKNOWNのまま。標準11×11空盤・19 central-reply rootsも
+  UNKNOWN不変。nodes数を勝敗として読まない。
+- 並走との不接触: batch-13 (Part AI)・batch-14 (Part AF) のファイルには一切
+  接触しない (読み取りのみ)。宣言直前に最新mainを再取得し、同scope対抗宣言なし・
+  `joint-unconsumed-ifadopted` dir不在・Part AJ採番未使用を確認済み。
+  同一スコープの宣言がmainに存在する場合は本宣言を破棄して着手しない。
+- 本amendment observed HEAD-before-push: push時の最新mainをコミットメッセージに記録。
