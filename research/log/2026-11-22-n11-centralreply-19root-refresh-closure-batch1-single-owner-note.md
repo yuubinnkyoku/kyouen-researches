@@ -192,3 +192,47 @@ Part Gと完全に同一。入力はpublished batch5 rawから機械導出
 (make_inputs.pyのLOSS対象を21行全数に拡張)。
 - 本addendum observed HEAD-before-push: 実行時の最新mainを
   コミットメッセージに記録。
+
+
+## Part H (verifier, amendment 2026-11-22): joint 4-WIN adoption IF-ADOPTED analysis - read-only planning cost, verdicts not consumed
+
+- 対象: `research/experiments/n11-central-reply-joint-4win-adoption-ifadopted-20261122/`。
+  closure batch 1/3/4/5の未消費パケット25行 (4 WIN: b018/d002/e002/f017 +
+  21 LOSS) を**まとめて採用した場合**のwhat-if分析。4つの単独IF-ADOPTED
+  解析 (既出版) と同型のrefresh pipelineだが、merge対象を正本5,924行cache
+  (sha256 `8a721a18...`) + 25行一括incrementとする。
+- 手法: incrementはpublished batch rawから `scripts/make_joint_increment.py`
+  が機械導出 (2-pass node-exact pinned-replicaチェック込み)。mergeは
+  published `s5_union_merge.py` (selftest PASS含む) で5,949行・WIN162/
+  LOSS5,787・衝突0・sha256 `88ef4388d727bf1b1da8a9a1be350479ab481870ff2dae2d34f6f70c6d892a9a`。
+  refreshはpublished scriptのbyte-copy、cache pinのみ変更 (diff検証済)、
+  2-run byte一致、root {60,27} baseline 119/119 free thirds fail-closed。
+  delta抽出は `compare_joint_deltas.py` が機械ゲート: **加法性**
+  (joint delta == 4単独deltaの和、11指標・0失敗)、win-hit class集合
+  一致 (joint == union: 16757/20421/12264、e002はempty)、per-root free
+  coverage不変、を検証。
+- 結果 (machine-verified): excluded_now 23→**37** (非重複和+14)、
+  free_now 33 不変、unknown 34,503→34,489、update8 remaining 31,838→
+  **31,709** (加法的: -29-49+0-51)、win-hit 15 groups (16757:5 roots
+  36/48, 20421:4 roots 12/37, 12264:6 roots 0/5)、joint greedy 35,617→
+  **36,984** (**+1,367**; f017単独 +1,372より5安い=一括が単独採用より
+  5だけ計画コストが安い)、probe worklist総量 65,213→65,183。
+  合同採用はf017のroot 0/5 flipが支配的で**frozen 19root計画をscheduling
+  levelで難しくする**という決定に資する測定値である。
+- 重要な制約: `closure-classes.csv` はscheduling量でありclass statusを
+  運ばない。合同採用下のranking上位は反駁クラスが占める (rank1-5 =
+  16757/12264/20421/16371/30345)ので、**最初のclean候補はrank6 class
+  5473** (`1158058422931816448:0`, unknown 51, first=26/third=59,
+  4 groups)。廉価側は反駁quartetで食い尽くされており、blind batchは
+  51-unknown scaleでWIN-denseが続くことを想定すべき測定値が出た。
+- 主張と消費規則: 本分析もverdict不消費・閉鎖・被覆・root主張なし
+  (単独解析4種と同一)。5,949行cacheはanalysis-only成果物でcanonical
+ ではない。11x11空盤・19 central-reply roots・全クラスはUNKNOWNのまま。
+  nodes/expansionsを勝敗として読まない。
+- transport: `probe-worklist.csv` (~3.7MB) は運送上再出版しない
+  (pinned入力からdeterministicに再生成可能、総量はrefresh-summary.json
+  に記録、READMEに開示済み)。
+- 並走との不接触: 既存4単独解析の拡張で、他レーンのclaim集合と無関係。
+  同一スコープの宣言がmainに存在する場合は着手しない。
+- 本amendment observed HEAD-before-push: 実行時の最新mainを
+  コミットメッセージに記録。

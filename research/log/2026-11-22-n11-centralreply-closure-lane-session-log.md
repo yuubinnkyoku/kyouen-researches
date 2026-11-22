@@ -294,3 +294,29 @@ github_app.push_files with commit-pinned raw fetch-back byte verification.
   corroborated verdict-level by the second (non-df-pn) implementation.
 - Verdicts still NOT consumed; scrutiny owner / C++ gate unchanged;
   11x11 empty board, 19 central-reply roots, all classes remain UNKNOWN.
+
+### Continuation 5 (2026-11-22): Part H - joint 4-WIN if-adopted analysis published; additivity machine-gated
+
+- Built and published the joint scenario for the unconsumed 25-row packet
+  (4 WIN + 21 LOSS) on top of the canonical 5,924-row cache: 5,949 rows,
+  WIN 162 / LOSS 5,787, 0 conflicts, merged sha256 `88ef4388...`
+  (pushed as its own single-file commit; analysis-only, NOT canonical).
+- Dynamism gates all green: merge selftest PASS, refresh 2-run
+  byte-identical, root {60,27} baseline 119/119 free thirds, pinned
+  inputs unchanged (Board `954d3a10...`, policy `78655e94...`,
+  quarantine `81d23160...`).
+- `compare_joint_deltas.py` gates: joint delta == sum of the four single
+  deltas on all 11 metrics (0 failures); win-hit class set joint == union
+  ({12264, 16757, 20421}); per-root free coverage identical to baseline.
+- Joint-scenario numbers (if adopted): excluded_now 23->37, update8
+  remaining 31,838->31,709 (additive -29-49-51+0), win-hit 15 groups,
+  joint greedy 35,617->36,984 (+1,367; five cheaper than f017-alone
+  +1,372), free_now 33 unchanged, probe worklist 65,213->65,183.
+- Decision-relevant planning fact: the joint adoption makes the frozen
+  19root plan HARDER at the scheduling level (f017's flip of roots 0/5
+  dominates); and under joint adoption the closure ranking's cheap end is
+  exhausted by the refuted quartet - the first clean candidate is rank 6
+  class 5473 (`1158058422931816448:0`, unknown 51).
+- Verdicts NOT consumed; canonical cache unchanged at 5,924 rows;
+  free_now 33 unchanged; 11x11 empty board, the 19 central-reply roots and
+  all classes remain UNKNOWN; expansions/nodes are not verdicts.
