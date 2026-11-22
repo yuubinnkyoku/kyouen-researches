@@ -42,7 +42,8 @@ closure候補表を現行chain cache相手に再計算する。未知S5はすべ
   WIN/LOSS conflict gate必須)。本batch単体ではroot被覆・クラス閉鎖・
   第三手securedの主張をしない (クラス閉鎖の判定・被覆監査は後続の
   refresh再実行+独立監査が行う)。
-- 並走との不接触: 本batchキーは19-root計画universe由来であり、
+- 並走との不接触: 本b
+atchキーは19-root計画universe由来であり、
   {60,27}系レーン (sixth-cost, s4bd, thirdimpl bank, win7/win8 chains) の
   claim集合と機械的にdisjoint (merged cache不在確認済み)。同一スコープの
   宣言が既にmainにある場合は本宣言を破棄して着手しない。
@@ -87,7 +88,8 @@ reaudit closure-classes.csv rank 2 のクラス20421に着手する。
 - 対象: `research/experiments/n11-centralreply-closure-class20421-batch-20261122/`。
   graph class index 20421, mask `[1155173304420536320, 131072]` の未確定canonical
   S5子49件（d001-d049、reaudit probe-worklistのprobe_order順・Board再計算合法手数固定）。
-  全キーは正本merged cache（5,924行・sha256 `8a721a18...`）に存在しないことを
+  全キー
+は正本merged cache（5,924行・sha256 `8a721a18...`）に存在しないことを
   機械確認済み (0 hits)。quarantine登録はrefreshの同policy処理済み。
 - 手法・停止規則・消費規則: Part B/Cと同一 (pinned replica `jsreplay.js`
   sha256 `84585617...`, 2-pass fresh cold, budget 15M, mismatch→HARD-STOP rc=42,
@@ -127,7 +129,8 @@ closure候補表 rank 1-4 はいずれも反駁証拠保持 (16757: b018, 20421:
 16371: e002, 30345: b018のs5 528497) のため、反駁証拠のない次候補として
 reaudit closure-classes rank 5 のクラス12264に着手する。
 
-- 対象: `research/experiments/n11-centralreply-closure-class12264-batch5-20261122/`。
+- 対象: `resea
+rch/experiments/n11-centralreply-closure-class12264-batch5-20261122/`。
   graph class index 12264, mask `[1152921504606848033, 0]` の未確定canonical
   S5子51件（f001-f051、reaudit正本probe-worklistのprobe_order順・Board再計算
   合法手数固定、root first=0/third=5を含むグループ群担当・graph cost size 52中
@@ -162,7 +165,8 @@ pin sha256 `08ea958f...`) によるverdict-level交叉検証を、採用判断�
   `08ea958f...` / verify_tbl `c8c52528...` / jsreplay replica `84585617...`)、
   rule-engine gate (verify_tbl.js: quad 95,670 == replica / TBL==wob
   mismatches 0)、anchor行 (k02 WIN 9,106,337 expansions / l1 LOSS
-  7,660,602 expansions) の本ホスト再現がpublished値と完全一致、negative
+  7,660,602 expansions) の本ホスト再現がpub
+lished値と完全一致、negative
   gate 2種 (legal+1, stones+1 → GATE_FAIL)。
 - 手法: 1行1プロセス、cap 300M expansions、wallcap 240s、1行2回 (a/b)
   のdeterminism gate (result/expansion/ttHits/reason 同一必須)。
@@ -204,7 +208,8 @@ Part Gと完全に同一。入力はpublished batch5 rawから機械導出
 - 手法: incrementはpublished batch rawから `scripts/make_joint_increment.py`
   が機械導出 (2-pass node-exact pinned-replicaチェック込み)。mergeは
   published `s5_union_merge.py` (selftest PASS含む) で5,949行・WIN162/
-  LOSS5,787・衝突0・sha256 `88ef4388d727bf1b1da8a9a1be350479ab481870ff2dae2d34f6f70c6d892a9a`。
+  LOSS5,787・衝突0・sha256 `88ef4388d727bf1b1da8a9a1be350479ab481870ff2da
+e2d34f6f70c6d892a9a`。
   refreshはpublished scriptのbyte-copy、cache pinのみ変更 (diff検証済)、
   2-run byte一致、root {60,27} baseline 119/119 free thirds fail-closed。
   delta抽出は `compare_joint_deltas.py` が機械ゲート: **加法性**
@@ -244,7 +249,8 @@ Part Gと完全に同一。入力はpublished batch5 rawから機械導出
   `research/experiments/n11-central-reply-packet-minus-f017-ifadopted-20261122/`
   (P24: 25行パケットからf017 WIN行のみを除いた24行シナリオ) および
   `research/experiments/n11-central-reply-packet-win-vs-loss-decomposition-ifadopted-20261122/`
-  (P4 = 4 WIN行のみ / P17 = batch12264のf-LOSS 17行のみ / P21 = 21 LOSS行のみ)。
+  (P4 = 4 WIN行のみ / P17 = batch12264のf-LOSS 17
+行のみ / P21 = 21 LOSS行のみ)。
   いずれも正本5,924行cache (sha256 `8a721a18...`) へのmerge + published
   refresh pipeline (selftest PASS・2-run byte一致・root {60,27} 119維持)。
   増分はpublished 25行packet increment (sha256 `d49e2824...`) からの機械
@@ -281,6 +287,7 @@ Part Gと完全に同一。入力はpublished batch5 rawから機械導出
   analysis-only成果物でcanonicalではない。11x11空盤・19 roots・全クラス
   はUNKNOWNのまま。nodes/expansionsを勝敗として読まない。
 - transport: 各シナリオのprobe-worklist (~3.7MB) は再出版しない
+
   (pinned入力から再生成可能、総量は各refresh-summary.jsonに記録)。
 - 並走との不接触: 既存Part Hのシナリオ拡張のみで、他レーンのclaim集合と
   無関係。同一スコープの宣言がmainに存在する場合は着手しない。
@@ -322,7 +329,8 @@ quantityとして反駁証拠のない次候補クラス5473に着手する。
 
 batch6 (Part I) はWIN-HALT (g018) で停止した。5つの未消費closure WIN
 (b018/d002/e002/f017/g018) がある状態で、Part H-bisの手法（WIN-only /
-LOSS-only / full の機械分解・加法性を測定で確認）をbatch 6とjoint設定
+LOSS-only / full の機械分解・加法性を測定で
+確認）をbatch 6とjoint設定
 の双方に適用し、scrutiny owner向けの採用帰結を出版する。verdictは一切
 消費しない。
 
@@ -362,6 +370,7 @@ verdict-level交叉検証する。**verdict不消費・採用判断は引き続�
   Part Gと同一のpublished第三実装値 9,106,337/4,991,527 と
   7,660,602/3,951,175)・negative 2行 (ng1/ng2)。入力はpublished batch6 raw
   由来のrows.json + input CSVで機械固定 (fail-closed・keyの手転写なし)。
+
 - 手法: Part Gと完全同一 (script pin 3種同一、1行1プロセス、cap 300M、
   wallcap 240s、a/b 2回determinism、rules-gate quads 95,670/triples
   195,044 mismatch 0、audit.py fail-closed 2回byte一致)。
@@ -400,7 +409,8 @@ rank 7 のクラス10324に着手する。5バッチ中5 WIN-HALTの実測傾向
   sha256 `8a721a18...`）に存在しない (0 hits)、(3) quarantine registry
   (sha256 `81d23160...`・active 4件) とのkey対照 0 hits。
 - 手法・停止規則・消費規則: Part B-Iと同一 (pinned replica `jsreplay.js`
-  sha256 `84585617...`, 2-pass fresh cold, budget 15M, mismatch→HARD-STOP
+  sha256 `84585617...`, 2-pass fresh
+ cold, budget 15M, mismatch→HARD-STOP
   rc=42, WIN→HALT rc=45, 枯渇=UNKNOWN, 消費はfail-closed merger経由のみ、
   本batch単体では閉鎖・被覆・secured主張なし)。val-gate 4/4 node-exactは
   本ホストで本session中に再現済み (batch6 val-gateと同一4入力行: at2m×2
@@ -436,7 +446,8 @@ batch 7 (Part L) は51/51全LOSS (2-pass node-exact, WIN-HALTなし・枯渇な�
   unknown 51)。
 - 消費と主張の範囲: 消費したのはbatch 7の51 LOSS行のみ。b018/d002/e002/
   f017/g018の5 WINは引き続きscrutiny owner待ちで不消費。Class 10324のfree
-  状態はmerge cacheからのderived class statusであり、**標準11×11空盤・19
+  状態はmerge cacheからのderive
+d class statusであり、**標準11×11空盤・19
   central-reply rootsは引き続きUNKNOWN**。nodesを勝敗として読まない。
 - transport: probe-worklist (~3.7MB) は再出版しない (pinned inputs + script
   からbyte-identicalに再生成可能、総量はrefresh-summary.jsonに記録)。
@@ -473,7 +484,8 @@ batch 7 (Part L) と同一の予登録protocolで着手する。
   stop rule)。全51本LOSSでも消費はfail-closed increment merge + refresh
   再監査まで行わない。**class 2634・19 roots・標準11×11空盤はUNKNOWN**。
 - 並走との不接触: 同一スコープ宣言がmainに存在する場合は着手しない
-  (宣言前にlatest mainを再取得しclass2634実験目录の不在を確認済み)。
+  (宣言前にlatest mainを再取得しcl
+ass2634実験目录の不在を確認済み)。
 - 本amendment observed HEAD-before-push: 実行時の最新mainをコミットメッセージに記録。
 
 ## Part O (verifier, amendment 2026-11-22): batch 7 (class 10324) 第三実装交叉検証の出版 - 閉鎖済みevidence bundleへのpost-hoc補強 (verdict不消費)
@@ -510,7 +522,8 @@ Part N がbatch 8 (class 2634) に使用済みのため、本amendmentをPart O�
 - 並走との不接触: batch-7由来キーのみを対象とし、進行中のbatch 8 (Part N,
   class 2634) のscopeと無関係。同一スコープの宣言がmainに
   存在する場合は着手しない。
-- 本amendment observed HEAD-before-push: `0fddb890` (Part O実験3コミット
+- 本amendment observed H
+EAD-before-push: `0fddb890` (Part O実験3コミット
   `eb061b60`/`0dfdc4df`/`0fddb890` 直後のmain)。
 
 ## Part P (verifier, amendment 2026-11-22): batch 2 (class 23963, 最初のfree class) 消費済み48行の第三実装交叉検証 (verdict不消費・事後補強)
@@ -550,7 +563,8 @@ cross-implementation補強**として、batch 2の48行 (c001-c048) を第三実
 - 並走との不接触: batch-2由来のpublishedキーのみを扱い、進行中のbatch 8
   (Part N, class 2634) と無関係。同一スコープの宣言がmainに存在する場合は
   着手しない。
-- 本amendment observed HEAD-before-push: 実行時の最新mainをコミットメッセージに記録。
+- 本a
+mendment observed HEAD-before-push: 実行時の最新mainをコミットメッセージに記録。
 
 ## Part P 出版status update (2026-11-22, verifier)
 
@@ -590,6 +604,7 @@ unknown 51、1 group first=26/third=28)をbatch 7 (Part L) と同一の予登録
   独立照合可能)。宣言前に本ホストでPart M refresh機材を再実行し、
   closure-classes.csv・refresh-summary.json・per-root-coverage.csvの3成果物が
   published Part M bytesとbyte一致 (fail-closed)・worklist shaがPart N記載値と
+
   一致することを確認済み。
 - fail-safe (宣言前に機械照会済み): (1) canonical merged cache 5,975行
   (`a998f4c0...`) に51/51 keys不在 (0 hits); (2) quarantine registry
@@ -608,4 +623,57 @@ unknown 51、1 group first=26/third=28)をbatch 7 (Part L) と同一の予登録
   worklist行と51/51で一致しており、本batchはこれをbatch-9 READMEの
   non-interference noteに記録するのみでbatch-8ファイルを修正しない。
   同一スコープの宣言がmainに存在する場合は着手しない。
+- 本amendment observed HEAD-before-push: 実行時の最新mainをコミットメッセージに記録。
+
+
+## Part R (verifier, amendment 2026-11-22): batch 9 (class 1518) j033 if-adopted decomposition - read-only planning, verdicts not consumed
+
+batch 9 (Part Q) は事前登録のWIN-HALT規則により j033 (2-pass node-exact
+result 1, 4,718,280 nodes, s5_index 69347, key `[1153484455030030336, 0]`,
+legal 80, probe_order 364) で停止した。Part H-bis / Part J と同一の手法
+(WIN-only / LOSS-only / full の機械分解・加法性測定) をbatch-9の33行
+(32 LOSS + 1 WIN) に適用し、scrutiny owner向けの採用帰結を出版する。
+verdictは一切消費しない。
+
+- 対象: `research/experiments/n11-central-reply-class1518-win-j033-ifadopted-20261122/`。
+  3シナリオ (PWINJ033 = j033 WIN行のみ / PLOSS32 = 32 LOSS行のみ /
+  PFULL33 = 検査済み全33行)、増分はpublished batch-9 rawからfail-closed生成
+  (2-pass node-exact・legal/key照合込み、sha256は実験README記載)。mergeは
+  published mergerで正本5,975行 (`a998f4c0...`) + 増分・衝突0・重複0
+  (5,976 / 6,007 / 6,008行)。refreshはpublished scriptのbyte-copy
+  (差分3行: depth行・cache path行・sha pin行、diff検証済み) を各シナリオ
+  2回実行し全4出力がbyte-identical (6/6 runs)。root {X,60,27} baseline
+  119/119 free thirds不変。
+- delta抽出は `compare_batch9_deltas.py` が機械ゲート: 依存graphから機械
+  特定した s5 69347 cost-child保持クラス {1518, 4843} (両者base-unknown) が
+  PWINのclosure-classes unknown変化行集合と完全一致、PFULLとPLOSSの
+  per-class unknown差分行 (−1) も同一集合、excluded_now +2、per-root free
+  coverageは全シナリオでbaselineと完全一致、を検証して失敗なし。
+- 測定 (baseline対比, machine-verified): PWINJ033 = excluded 23→25 (+2,
+  classes 1518自己 + 4843) / unknown 34,502→34,500 / update8 remaining
+  31,836不変・win-hit 0 (j033はupdate8 win-hit群を持たない、g018の
+  4群と対照的) / joint greedy 35,857→35,856 (−1) / worklist 65,155→
+  65,153 (−2)。PLOSS32 = excluded不変 / resolved 23→24 (j016 → s5 69330) /
+  remaining −1 / joint greedy → 35,235 (**−622, closure grindでは初の
+  greedy削減**・batch-5 f-packetの+1,372やbatch-6の中立と対照的; 主因は
+  root 15 −75とroot 26 −72) / worklist −44。PFULL33 = excluded +2 /
+  resolved +1 / remaining −1 / greedy −622 / worklist −46 (**加法的: −2−44
+  = −46**; greedyはWIN側−1がLOSS側集合に包含されsub-additive by 1)。
+- class-1518 scheduling: PLOSS32でclass 1518のunknownは51→19・closure
+  rank 1 (次キーj033)、PFULL33ではunknown 18・rank 1 (次キーj034, s5 69348)。
+  いずれの採用シナリオでも、未着手のbatch-9残り (j034-j051の18キー) を含む
+  class 1518完走がranking上最安の次手になる。class 4843はPWIN下でunknown
+  58→57・rank 123→97。
+- 主張と消費規則: verdict不消費・閉鎖・被覆・root主張なし (Part Jの単独
+  if-adopted解析と同一規約)。3つのscenario cacheはanalysis-only成果物で
+  canonicalではない。j033のWINは引き続きscrutiny owner待ち (採用ゲートは
+  C++第二実装 pin `9193f5b6...` 前例・本環境では実行不能のまま)。
+  third-impl (Part K/O/P方式) によるj033の交叉検証は本セッションでは
+  未実施。標準11×11空盤・19 central-reply roots・class 1518/2634は
+  UNKNOWNのまま。nodesを勝敗として読まない。
+- transport: 各シナリオのprobe-worklist (~3.7MB, regenerable) は再出版
+  しない (総量は各refresh-summary.jsonに記録)。
+- 並走との不接触: 進行中のbatch 8 (Part N, class 2634) のファイルには
+  一切接触しない。batch-9実験 (Part Q, commit `a321bfb2`まで) のpublished
+  ファイルは修正しない。同一スコープの宣言がmainに存在する場合は着手しない。
 - 本amendment observed HEAD-before-push: 実行時の最新mainをコミットメッセージに記録。
