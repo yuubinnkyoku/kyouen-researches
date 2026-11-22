@@ -1,0 +1,129 @@
+# Part AS run status (single-owner lane host, 2026-11-22)
+# Canonical adoption reaudit of the batch-14 (class 23101) 41 LOSS rows.
+# Declaration: note Part AS amendment, commit 5b6af2ed (observed
+# HEAD-before-push b394c3ca, note blob sha1 7a534356... at declaration time;
+# re-verified at push time). No solver search was run; the only verdict
+# consumption is the batch-14 41 LOSS rows themselves, adopted into the
+# canonical cache through the sha-pinned fail-closed union merger. The single
+# WIN row q042 (s5_index 745184, result 1, 9,149,084 nodes) is NOT adopted and
+# its verdict is NOT consumed (machine-excluded; remains the 15th unconsumed
+# closure WIN). WIN-row adoption remains gated on the scrutiny owner's C++
+# second implementation (pin 9193f5b6...).
+
+[inputs pinned at batch-14 publication commit 7b211d38]
+batch-14 raws: 144/144 MANIFEST byte-match (156 files fetched, val-gate 12
+not needed for the adoption); batch-keys sha256 dfde0e90... ; graph 54f9c364,
+patch/update8 b658290a, Board 954d3a10, policy 78655e94, quarantine 81d23160;
+Part AP BASE canonical cache 342e8683... (6,079 rows);
+BASE reaudit正本 3 files fetched at publication commit 20deb45d, sha256
+verified: refresh-summary b278f822..., closure-classes 7405699e...,
+per-root-coverage ec52a56d...
+
+[maker re-derivation]
+scripts/make_increments_batch14.py (adapt of the published Part AP maker
+e35b545de23c0feffe04eb712cbb03612373b6cf2f00925ad15c3fab8c5d3774:
+class 23101, q001..q052 id space, 2-pass WIN-HALT raw accounting,
+full!=loss manifest bookkeeping) re-executed once from the published
+batch-14 raws;
+increment-batch14-loss41-20261122.cache: 41 rows, sha256
+5194af934a5373823a819ec53178dd008d1c6d5b17488101aa742ca1230d0831
+increments-manifest.json sha256
+8b5540f9aa1f9bdd40ef73b0353577da3d90c36ea3e43a8586f886e6390fe502
+(schema batch14-loss41-increments-manifest-v1; row_counts 41/0/41/0 of
+42 resolved 52 probed; unadopted_win_ids == ["q042"], unadopted_win_s5_index
+745184; full_packet_eq_loss_only false; win_scenario_exists true;
+base_cache_absent_hits 0; quarantine_hits 0)
+
+[union merge run 1]
+sha-pinned s5_union_merge.py (sha256 907119610034fb2aebfde012550a4129dfa3b086c6de11194e856747ac74606a,
+byte-copy pin of the published merger, selftest PASS);
+inputs: pre-adoption canonical BASE cache 6,079 rows (sha256
+342e86838e0c2bef915798059cb397f7c91e59c65426bf74db19530ecdd7979e, path
+research/experiments/n11-centralreply-class10687-loss52-adoption-reaudit-20261122/output/merged-exact-s5-chain-plus-closure-increment-plus-batch10-plus-batch16loss52-20261122.cache)
++ 41-row increment; WIN/LOSS conflicts 0, duplicates elided 0;
+canonical cache 6,120 rows (WIN 158 / LOSS 5,962), 251,466 bytes,
+sha256 be9cb24e899fbe93db51e415320c50fa733e378748bb7a41fe13fd7b22f06685;
+merge-audit run1 sha256 54c581ee86843e4a663640003db89917f58828ca6ababfb4ac64b513b4535024
+
+[union merge run 2]
+same arguments, byte-identical output and audit (canonical cache cmp PASS,
+merge-audit-run1.json == merge-audit-run2.json byte-compare PASS);
+the adoption adds exactly the 41 LOSS rows to the pre-adoption canonical
+cache and nothing else (row-count 6,079+41 == 6,120 machine-checked by the
+extractor adoption-equality gates).
+
+[adoption refresh run 1]
+adapted refresh script reaudit/scripts/refresh_adoption_23101.py (from the
+published Part AP refresh ad3dc0e66e1831aa545e4ac8e54cd264ef80e4c7cd44b33195d225c5a28ac6f6;
+3-hunk adapt: docstring framing + canonical cache path + cache sha expectation
+extracted from the cache file itself, be9cb24e... machine-asserted);
+single process, serial;
+refresh-summary.json sha256 f2008e70b31f23724d9bd8d605f7ab6f1de20f1802e65bd5b955420a2f50a744
+closure-classes.csv sha256 3ee1dbb6db7a5fc8858f5bbdd5cae7ca754589f376ebb99727535806f917bc9e
+per-root-coverage.csv sha256 527c7e9a3f6350f638b5e2e2a70c3115e50533eeca651e38e32329a04ab225d4
+probe-worklist.csv sha256 1c96df0533d69a57ec16943670e307480aba3511774460e8329f1a7198618c5a
+(NOT published, 3.7 MB, Part AH/AO/AP precedent)
+
+[adoption refresh run 2]
+same script, single process, serial; all four outputs byte-identical to
+run 1 (cmp PASS each).
+
+[delta extractor runs 1..3]
+scripts/compare_deltas_batch14_adoption.py (adapt of the published Part AP
+extractor f78f7e60a97432b7be9615a05f2c4153201e85500a87aa71c8147c01c1a89ae6:
+docstring/guard/schema framing, batch-14 batch-keys schema
+(groups_served_first_seen single group), q042 non-consumption gate set
+(6 faces: increment, BASE cache, scenario cache, quarantine registry,
+BASE/scenario index_verdict, class 23101 scenario-unknown child set),
+new-free emptiness gate for a zero-WIN partial packet, closure-table churn
+observation, raw 2-pass WIN re-verification of q042, BASE reaudit outputs
+pinned and fetched at commit 20deb45d; every recompute gate kept and the
+class-23101-specific gates added) re-executes the published refresh class
+pass from graph + update8 + canonical cache (including Board fail-closed
+child verification of every free candidate) and asserts class_status_counts,
+known-universe counts and per-root coverage equality with the published
+BASE (25987add-era reaudit state b278f822... / 7405699e... / ec52a56d...)
+and the Part AS reaudit outputs before any delta is emitted.
+run 1: OK flips=[] new_free=[] free_now 36->36 class23101_unknown 52->11
+update8_resolved +3 joint_greedy 38522->36726 worklist 65097->64941
+changed_rows=[]
+run 2: byte-identical output (sha256 7155fdaa84b59c59b63fbe5bacd2ca342b553013a78debcfb35af174a71b3ea5)
+run 3: byte-identical output (same sha256)
+
+[measured canonical state after adoption (gated by extractor + refresh)]
+class_status_counts unchanged: excluded 390 / excluded_now 23 / free_now 36
+/ unknown 34,500; transitions ledger all-identity (unknown->unknown 34,500,
+excluded->excluded 390, excluded_now->excluded_now 23, free_now->free_now
+36); excluded_now flips [] and newly free classes [] (gated: a zero-WIN
+partial packet can neither flip nor free). board_verification free_candidates
+36, board_verified_free 36, rejected {}: unchanged from BASE.
+class 23101: 52 BASE-unknown cost children, 41 resolved by the increment,
+scenario-unknown children exactly 11 = {745184 (q042, unconsumed WIN) +
+745455,745456,745457,745459,745460,745461,745462,745463,745464,745465
+(10 unprobed)}; closure-candidate rank 12 -> 1 (unknown_now 11); the batch
+key set was machine-asserted equal to the 52 BASE-unknown children.
+closure candidate table 810 -> 809 rows (left 7: 1250, 2233, 4912, 15394,
+22002, 22119, 22859; entered 6: 21387, 21934, 22925, 23075, 23102, 23283;
+table churn, no coverage meaning). class 10661 stays rank 14 (unknown 52):
+machine-identified batch-17 candidate, unchanged.
+per-root coverage: changed rows [] (free/uncovered columns byte-identical
+to BASE for all 19 roots; root 27 baseline 119/119 unchanged);
+individual_greedy_union column (scheduling bookkeeping only) moved for 8
+roots (e.g. root 2 6145->5918, root 13 6144->6176, root 12 3031->3030).
+update8: resolved 76 -> 79 (newly resolved s5 707915, 713201, 740437, all
+inside the increment and LOSS, gated), remaining 31,783 -> 31,780,
+groups_free_now 127 unchanged, lost resolutions [] (gated).
+scheduling quantities (recorded, not verdicts): joint greedy 38,522 ->
+36,726 (-1,796, re-selection after 41-group requirement removal),
+probe worklist 65,097 -> 64,941 (-156).
+
+# Interpretation guard: the only canonical claim established here is the
+# classification delta on the canonical cache: class 23101's unknown cost
+# boundary drops 52 -> 11 and it advances to rank 1 of the closure-candidate
+# table WITHOUT closing (neither free nor excluded: its WIN child q042 stays
+# unconsumed and 10 keys remain unprobed). No 19-root win/loss claim, no
+# standard 11x11 empty-board claim. 15 unconsumed closure WIN rows remain
+# gated on the scrutiny owner's C++ second implementation (pin 9193f5b6...).
+# The standard 11x11 empty board, the 19 central-reply roots and every
+# class not established above remain UNKNOWN. Nodes are bookkeeping, never
+# verdicts.
