@@ -1641,3 +1641,16 @@ unknown 52, groups (16,56)+(16,64)), 52 keys, probe_order 642-693.
   scrutiny owner (C++ second-implementation gate pin `9193f5b6...`). The
   standard 11x11 empty board, the 19 central-reply roots, class 10687 and
   every other class remain UNKNOWN. Nodes are not verdicts.
+
+
+Addendum to Continuation 27: publication erratum. The experiment README's
+precedent tally sentence originally read "(the 16th batch overall: 13
+WIN-HALT + 3 clean all-LOSS precede it)"; machine re-check of the published
+batch records showed batch-14 (class 23101) is declared but
+result-unpublished (its output/ directory carries no results), so the
+completed precedent record is 11 WIN-HALT + 3 clean in 14 batches. Corrected
+in place by erratum commit `572dcbc3` (README + updated MANIFEST-sha256.txt,
+fetch-back 180/180 byte-identical at that commit). Batch-16 remains the
+fourth clean all-LOSS batch; no verdict, count or claim of the batch itself
+is affected. The note Part AM status update carries no tally sentence and
+needed no correction.
