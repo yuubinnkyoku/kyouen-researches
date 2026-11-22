@@ -843,3 +843,58 @@ repo diverged:
   the scrutiny owner. The standard 11x11 empty board, the 19
   central-reply roots and class 8784 all remain UNKNOWN. Observed
   HEAD-before-push for this log update is recorded in the commit message.
+
+## Session continuation 14 (2026-11-22, prober): batch 11 (class 8785) Part Z - observing the WIN-HALT, declaring-session-loss judgement, takeover with full cross-host reproduction, publication
+
+- Observed on latest main: the Part Z batch-11 (class 8785, renewed rank 8)
+  declaration scaffold commit `3cc96099` (2026-11-22T10:28:54Z, 30 files:
+  README + batch-keys.json + z001-z028 inputs + val-gate inputs) by a
+  parallel instance, then silence after ~10:36Z. The declaring host's kit
+  checkpoint mirror (`batch8785-z/`) contained the complete first wave
+  evidence: 8 raws (z001-z004 p1/p2, all 2-pass node-exact), its status.log
+  (WAVE-START z001-z004 at 10:32:09Z; z002 10:33:54Z, z001 10:34:22Z, z004
+  10:35:35Z, z003 PASS 15000000,1,11601265 + WIN-HALT + RUNNER-STOP rc>=42 at
+  10:36:40Z) and its four val-gate outputs. **Pre-registered WIN-HALT (rc=45)
+  fired at z003** (s5_index 198530, key `[1225542323476103168, 1]`, legal 82,
+  probe_order 334: **result 1 WIN, 11,601,265 nodes**, 2-pass node-exact).
+  No row was ever published by the declaring session (inconsistent with the
+  batch 1-7 push-while-running practice; Part U precedent), so after 20+
+  minutes of silence this session judged a declaring-host loss, completed
+  the scaffold and published everything under takeover.
+- Pre-publication machine audit (fail-closed, all on this host): (1) the 8
+  rescued raws carry the quads gate line and 2-pass (budget,result,nodes)
+  agreement, consistent with the rescued status.log PASS rows; (2) published
+  batch-keys.json (blob `a5d3193a02dd...`, 51 keys) == declaring kit copy
+  bytes; the 51 keys == Part Y re-audit worklist rows serving_class=8785
+  (probe_order 332-382 of `1807e4d2...`, 51/51, no duplicates, input CSVs
+  51/51); (3) 51 keys absent from the canonical merged cache (6,027 rows
+  `95e868d6...`) and the quarantine registry (2 active entries), 0 hits; (4)
+  no unconsumed WIN key among class 8785's 51 children or class 8106's 52
+  (0 hits; b018 re-derived independently); (5) the Part Y rank erratum
+  verified against the published renewed closure-classes `61943b85...`
+  (rank 8 = 8785, rank 9 = 1518, rank 10 = 8106), matching the Part Z
+  declaration's erratum; (6) jsreplay.js == pin `84585617...`.
+- Takeover cross-host reproduction (this host `d3578b9e...`, pinned replica,
+  fresh cold, all node-exact vs the declaring host): val-gate 4/4
+  (15m 2/3,651,923 and 2/5,040,200; at2m 0/2,000,000 x2); **z003 WIN
+  1/11,601,265 both passes**; z001 LOSS 3,146,511 both; z002 LOSS 2,256,914
+  both; z004 LOSS 2/6,424,054 both (runner wall 10:55:50-11:01:28Z).
+  Published as output/raw/z00X.pN.takeover.out + output/val-gate/
+  *.takeover.out + output/status.takeover.log alongside the declaring
+  host's rescued rows (batch-8 `.takeover.out` naming convention).
+- Publication: scaffold completion (43 files: z029-z051 inputs, rescued
+  raws + status.log, declaring-host val-gate outputs, val-gate input CSVs,
+  scripts) then takeover outputs + README amendment (takeover provenance +
+  cross-host reproduction + Result) + single-owner note Part Z status
+  update + this log continuation.
+- Honesty record: 4/51 probed, z005-z051 untouched (WIN-HALT respected; no
+  new keys started). z003 is the 8th unconsumed closure WIN
+  (b018/d002/e002/f017/g018/j033/h045/z003), verdict NOT consumed,
+  scrutiny owner (C++ second-implementation gate pin `9193f5b6...`)
+  unchanged. Third-implementation spot verification of z003 (Part
+  K/O/P/T/W lineage) NOT done. If-adopted decomposition (Part V/R lineage)
+  NOT done. Next clean candidate: renewed rank 10 class 8106 (1518 carries
+  j033, 8785 carries z003). The standard 11x11 empty board, the 19
+  central-reply roots and class 8785 all remain UNKNOWN throughout;
+  nodes/passes are not verdicts. Observed HEAD-before-push for this log
+  update is recorded in the commit message.
