@@ -551,3 +551,26 @@ cross-implementation補強**として、batch 2の48行 (c001-c048) を第三実
   (Part N, class 2634) と無関係。同一スコープの宣言がmainに存在する場合は
   着手しない。
 - 本amendment observed HEAD-before-push: 実行時の最新mainをコミットメッセージに記録。
+
+## Part P 出版status update (2026-11-22, verifier)
+
+Part P (batch 2 / class 23963 消費済み48行の第三実装交叉検証) は実行・出版
+済み。本amendmentの宣言通りverdict不消費・事後補強文献のみ。
+
+- 実行結果: 48行すべてa/b 2回実行byte一致。third-impl expansions
+  636,315〜4,341,425 (replica df-pn nodes 579,880〜3,815,424)。anchors
+  k02a (WIN 9,106,337/4,991,527) と l1a (LOSS 7,660,602/3,951,175) は本
+  ホスト再現値がpublished第三実装値と完全一致 (node-exact)。negative
+  ng1/ng2 は文言一致GATE_FAIL。audit.py (fail-closed, 2回実行byte一致)
+  は **511/511 gates PASS、48/48 LOSS verdict一致、divergence 0、
+  wall-inconclusive 0**。
+- 出版: `n11-centralreply-closure-class23963-batch2-thirdimpl-reverify-20261122`
+  commits a84f8254 (scaffold 63 files) → cb739fcd (targets 96 files) →
+  dbd7c5c2 (anchors 4 + negative 2 + audit-summary.json)。fetch-back:
+  commit-pinned raw URL + cmp で 166/166 files のbyte一致を確認済み。
+- sources/: published batch-2 raws 96をrepo正本から再取得し96/96でbyte
+  一致を機器確認の上使用。batch-keys.json (sha256 `3b37c923...`) は非再
+  出版・READMEにsha記載。
+- verdict・正本cacheへの影響なし。標準11×11空盤・19 central-reply
+  roots・全closure classはUNKNOWNのまま。nodes/expansionsを勝敗として
+  読まない。
