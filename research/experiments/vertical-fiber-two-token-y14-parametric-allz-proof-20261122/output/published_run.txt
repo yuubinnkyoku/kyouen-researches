@@ -111,3 +111,95 @@ sha256 4ecdec11bb4b5d2c7047114228c8482eff2b09db1eb7251c37c5787dda91c34e
   (census parts, merge/tail corollaries, C4t probe, final sha256sum); each
   run's full stdout matched run 1's check-by-check line sequence and
   "overall: PASS total_points: 6377860 types: 281912"
+
+=== y14 universal part2 published run (preflight + census_rows + full 14 checks) ===
+host: Linux x86_64, python Python 3.12.14, same cgroup as part1
+cwd: /home/user/work/y14sv/univ (part1 verifier byte 4ecdec11... still in place
+at preflight time; the part2 extension was installed only after preflight PASS)
+
+$ python3 scripts/preflight_c1d_y14.py
+{"anchor_bad": 0, "anchor_first_bad": null, "anchor_points": 13824,
+ "box": "z0 in {8,9,10,15,16,17}; x=14..45; R=1..x+z0+30",
+ "check": "preflight c1d y=14 rows: published z=8/9/10/15/16/17 uniform slice
+ anchors vs raw engines vs cand14",
+ "lowR_bad": 0, "anchor points + 9,636 low-R points ... overall PASS,
+ per_z 2160/2192/2224/2384/2416/2448"}
+real 0m2.397s, rc=0; output/preflight-c1d-y14.json
+(4-way anchor x H_ordered x H_canonical x cand14, all clean; low-R single-token
+ reduction R<=z+6 on the y=14 rows all clean)
+
+$ python3 census_rows.py
+rows=4560 points=449160 zero_points=224566
+states(misses): 7146027 currsize: 1600000 maxsize: 1600000 hits: 14001709
+real 0m14.238s, rc=0
+(to isolate memory on the 1 GiB cgroup host the LRU is explicitly capped at
+ 1,600,000 as in the y12/y13 versions; a separate rerun under wait4 measured
+ maxrss 639,424 KB)
+
+$ python3 verify_y14_universal.py C1 C1b C1d C2 C2b C3 C4 C4t C7 C8 C9 C11 C11r C12
+  C1: pts=22230 bad=0
+  C1b: pts=42447 bad=0
+  C1d: pts=138846 bad=0
+  C2: pts=222705 bad=0
+  C2b: pts=19140 bad=0
+  C3: pts=1185 bad=0
+  C4: pts=606427 bad=0
+  C4t: pts=606427 bad=0
+  C7: pts=200000 bad=0
+  C8: pts=993021 bad=0
+  C9: pts=910710 bad=0
+  C11: pts=889200 bad=0
+  C11r: pts=449160 bad=0
+  C12: pts=1864368 bad=0
+overall: PASS total_points: 6965866 types: 281912
+  merge: {'points': 1370848, 'bad': 0}
+  tail: {'points': 212713, 'bad': 0}
+  C4t: 2480 violations at clip 29, first: (60, 92, 92)
+real 0m35.008s, rc=0 (part2 extension installed as verify_y14_universal.py,
+ SHA-256 6ac219cfe27e55e3d6057ea9dcf5db76631b8ef1c50ced0edd63f64d590f2205)
+
+=== run2/run3 (part2) ===
+run2: same-cwd rerun (0m34.260s) -> byte-identical audit.json
+run3: isolated tree/cwd/HOME + PYTHONHASHSEED=random; census_rows.py and
+ scripts/preflight_c1d_y14.py regenerated on the isolated side; full 14-check
+ command (0m34.307s) -> audit.json / census.txt / preflight-c1d-y14.json all
+ byte-identical; the isolated-side census parts reproduce the part1 published
+ bytes (census-ordered 6bb64b3c... / census-canonical f31a990e...)
+census_rows.py: run1 canonical + isolated-side regen + maxrss-measurement rerun
+ = census.txt byte-identical across 4 runs
+C11ordered/C11canonical rerun in the part2 session (0m14.502s / 0m16.791s):
+ census parts byte-identical to the part1 published bytes
+
+=== part2 fail-closed probes (pre-publication, all caught) ===
+4. census.txt P-set 1-digit tamper (row z=0 x=14, P={135,...} -> P={335,...}):
+   C11r: pts=449160 bad=1 / overall: FAIL / rc=1 (no PASS output)
+5. census.txt temporarily removed:
+   FAIL-CLOSED: census.txt is missing; run census_rows.py first (rc=1)
+part1 probes 1-3 (census part points tamper / merge corollary tamper / ordered
+ part missing) were re-run in the part2 session's scratch tree and caught with
+ the same FAIL-CLOSED messages (rc=1, audit not produced).
+After restoring the canonical census bytes, the full 14-check command
+ reproduced the published byte-identical audit.
+
+sha256 of the part2 published files:
+6ac219cfe27e55e3d6057ea9dcf5db76631b8ef1c50ced0edd63f64d590f2205  verify_y14_universal.py
+aa3fe56e23d5ec4b64e625a44fb3fbd8206adf426dbae37fea01b1679a461c96  census_rows.py
+fd449b7820998e8420e07da64f4f0a50942cfd9061865d1162ee114a2e63f609  scripts/preflight_c1d_y14.py
+b91e88a0a6dc4797220fb9dc246433907faecda654e41586cd4b0a2eb0ab3c5c  output/audit.json
+baad513c3453f478a79df85724fc3290317b3d31ae0d107ae2f3afe656f36324  output/census.txt
+c7369b4cb5e82855f7238a60de7d641e0bdf013d44f99a7872663a508c5efa79  output/preflight-c1d-y14.json
+6bb64b3c96dec85059005b19a84546cae54f0896a318f84824e6152a47f6e431  output/census-ordered.json (unchanged from part1)
+f31a990ee1b3da2a8adcaf49768345198f6e046226e7cfa0240cf2a03946259c  output/census-canonical.json (unchanged from part1)
+
+=== notes (part2) ===
+- part2 extension is an in-place extension of the part1 publication byte
+ (the y13 part2 procedure; no separate assembly script is published). The
+ C1d anchor block is the published y13 part2 verifier's anchor block
+ verbatim (functions A8u..A17u byte-verbatim), with the provenance header
+ rewritten for the y=14 rows using the actual pre-flight counts read back
+ from output/preflight-c1d-y14.json (count-asserted substitutions only).
+- audit.json is written by whichever mode runs last; the canonical published
+  audit is the full 14-check command:
+  python3 verify_y14_universal.py C1 C1b C1d C2 C2b C3 C4 C4t C7 C8 C9 C11 C11r C12
+- K1233 is promoted observed -> proved under this publication (same item id,
+  no new K number), mirroring K1152/y=12 and K1231/y=13.
