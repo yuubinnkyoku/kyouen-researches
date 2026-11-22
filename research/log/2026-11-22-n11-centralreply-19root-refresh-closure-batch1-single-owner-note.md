@@ -3790,3 +3790,54 @@ verdict不消費・採用判断は引き続きscrutiny owner (C++第二実装 ga
 - 本amendment observed HEAD-before-push: 実行時の最新mainを
   コミットメッセージに記録する。push直前にnote blob sha1ロックを再照合し、
   競合時は再fetchして本節を追記し直す。
+
+### Part AZ status update (2026-11-22, execution host = 本レーン continuing session)
+
+宣言 (note amendment commit `a5ea2aa0`) どおり、宣言後に本hostが
+published batch-18 WIN行 v001/v002をpinned第三実装で解き、出版まで完了した
+(verdict不消費)。
+
+- 実行: pinned `third_impl.js` (`08ea958f…`)・1行=1 solver=1 process・
+  cap 300,000,000・wallcap 240s・`--memo-power=22`・全target/anchor
+  a/b 2回。**targets 2/2 clean WIN (result 1)・replica verdict一致2/2**:
+  **v001 WIN 6,558,484 expansions / 3,610,051 ttHits** (replica 5,656,151
+  nodes・ratio 1.16)・**v002 WIN 9,204,329 / 5,027,672** (replica 7,898,204・
+  ratio 1.17)。a/b pair全員result/expansion/ttHits/reason同一
+  (determinism gate PASS)。総expansions 15,762,813/pass。
+  LOSS 0・WALL-INCONCLUSIVE 0・DIVERGENCE 0。
+- battery順序 (RUNNER-NOTE開示どおり): negatives ng1/ng2が設計どおり
+  fail-closed文言 (GATE_FAIL) → anchors k02a WIN 9,106,337/4,991,527・
+  l1a LOSS 7,660,602/3,951,175 がpublished第三実装値にnode-exact再現
+  (a/b同一) → targets逐次実行 (Part AXのCPU quota半減観測を継承し
+  全行程逐次)。
+- rules gate: verify_tbl replica quads 95,670 == third-impl quads 95,670・
+  195,044 triples mismatch 0 (`output/rules-gate.txt`)。
+- maker `make_inputs_az.py`: 全gate PASS・3回実行byte一致 (source pins:
+  batch-18 batch-keys `1bb3ed41…` (53キー・class 16131・v001 s5 153671/
+  v002 s5 207534/membership 2/3)・raw 4ファイル (published MANIFEST pins
+  `24b45c8a`/`1fc367bd`/`41c10ec2`/`e9f578fc`)の2-pass node-exact + `# replay_done` + result 1 in-budget・status-b18.log `4b785add`の
+  PASS行・WIN-HALT行・WIN-ROW-DETAIL行・VAL-GATE 4/4行・EXECUTION-HALTED行・
+  51-unprobed行・17候補行の3-way一致・README `8b6a85b3`結果節照合・
+  derived-vs-published input CSV byte-equality 2 target (`edee9be8`/
+  `e8bbbaed`) + 4 anchor/negative (published Part AR CSVとbyte一致))。
+- audit `audit.py`: **53/53 gates PASS**・2回実行byte一致 (schema
+  `n11-centralreply-closure-b18win-thirdimpl-audit-v1`)。verdict
+  agreements 2/2 (WIN=2)・inconclusive 0。
+- 出版: 実験dir
+  `research/experiments/n11-centralreply-closure-b18win-thirdimpl-20261122/`
+  43ファイル+MANIFESTを3コミットでmainに反映: A `2e6d14ee` (scaffold:
+  scripts 6 + inputs 7 + sources 14) / B `9a997c21` (solver outputs 15:
+  targets a/b 4・anchors 4・negative 2・rules-gate・status.log・
+  audit-summary・audit-run1/2) / C `2f944d5d` (README + MANIFEST-sha256
+  43行) = publication complete。**fetch-back 43/43 sha一致**
+  (publication commit `2f944d5d` 固定rawでMANIFEST全行sha256照合)。
+- 意味 (route statement・閉鎖主張なし): batch-18最初のwaveの2 WIN
+  (v001/v002) が独立実装でもclean WINで再現された。verdict-level補強
+  文献であり、**verdict消費ゼロ**・17 unconsumed closure WIN候補の採用
+  判断は一切代行しない (scrutiny owner C++第二実装 gate pin `9193f5b6…`
+  のまま)。canonical cache (6,120行 `be9cb24e…`) 不変・書込むいかなる
+  cacheにも書込んでいない。AY宣言の残51キー (v003..v053・fresh) と
+  Part AV (batch-17 adoption・in flight) には一切触れていない。
+- 標準11×11空盤・19 central-reply roots・class 16131 (残51子)・全53キーは
+  本Partのどの時点でもUNKNOWNのまま。nodes数・expansions数を勝敗として
+  読まない。
