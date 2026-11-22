@@ -1484,3 +1484,50 @@ solver processes).
   and package installation is forbidden). The standard 11x11 empty
   board, the 19 central-reply roots, class 5830 (48 unprobed children)
   and every other class remain UNKNOWN. Nodes are not verdicts.
+
+
+## Continuation 25 (2026-11-22, this host): Part AI batch-13 (class 16930) if-adopted decomposition PUBLISHED under takeover - 28/28 fetch-back byte-identical, verdicts NOT consumed
+
+The batch-13 declaring host (Part AI, note amendment `a0cdb0da` at
+2026-11-22T13:08Z) stayed silent for 2h+ with no status update, no
+experiment directory and no kit evidence on main (absent at observed HEADs
+`858a4158` 15:18Z and `ada9bc95` 15:25Z), so this session executed the
+published declaration under the same Part U / Part Z takeover convention.
+No conflicting declaration existed; nothing in the declaration was changed.
+
+- All computation gates PASS on this host: published batch-13 sources
+  re-verified 10/10 byte-identical (8 raws + status.log + batch-keys
+  `c6c56a1a...` at `858a4158`); BASE control refresh re-executed twice,
+  byte-identical to the published Part Y canonical on all four outputs
+  (fifth independent cross-host reproduction); increments maker twice
+  byte-identical (`bb238f67...` / `50c09a06...` / `3a8bcb11...`;
+  3-way p1/p2/status node-exact, BASE overlap 0, quarantine 0, WIN set
+  exactly {p002,p003}); sha-pinned union merges 6,029/6,029/6,031 rows,
+  conflicts 0 (`c180e6d6...` / `ac7b6cdd...` / `faacb374...`);
+  three scenario refreshes twice each, 6/6 byte-identical (honest note: the
+  first concurrent launch was OOM-killed, all final runs serial); delta
+  extractor twice byte-identical (`c62cabb4...`) with fail-closed
+  recompute gates against BASE and all published scenario summaries.
+- Machine-measured decomposition: PWIN2 excluded_now 23->28, flips
+  {4903, 5471, 5513, 5626, 16930} (= the frozen-graph eligible holder
+  union of the two WIN S5 children; only multi-WIN holder = 16930),
+  unknown 34,501->34,496, class 16930 closure rank 11->5 (unknown 52->50);
+  PLOSS2 zero flips, probe worklist 65,154->65,152; PFULL4 worklist
+  65,150 (additive) and update8 unchanged in every scenario (resolved 75,
+  remaining 31,784, win_hit_groups 0 - batch-13 is update8-neutral);
+  free_now 35 and per-root free coverage unchanged everywhere, root 27
+  stays 119/119; joint greedy 35,242 unchanged, per-root greedy roots
+  26/48 move -2/-2/-4 additively.
+- Publications: experiment dir
+  `n11-centralreply-class16930-win-p002p003-ifadopted-20261122/` 28 files
+  (with MANIFEST-sha256.txt) pushed as commit `79a7f72d` (15:34:45Z),
+  fetch-back 28/28 byte-identical including the three ~247KB scenario
+  caches; scenario probe-worklists not published per Part AH precedent
+  (sha256s recorded in the experiment README); note Part AI status update
+  appended to the single-owner note in the same session.
+- Verdicts NOT consumed: p002/p003 remain hypothetical adoptions pending
+  the scrutiny owner (C++ second-implementation gate pin
+  `9193f5b6...`), p001/p004 LOSS rows remain unconsumed published
+  evidence outside the canonical cache. p005-p052 (48 keys) unprobed.
+  The standard 11x11 empty board, the 19 central-reply roots, class
+  16930 and every other class remain UNKNOWN. Nodes are not verdicts.
