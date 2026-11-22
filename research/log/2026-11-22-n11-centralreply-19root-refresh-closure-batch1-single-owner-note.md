@@ -3184,3 +3184,77 @@ gate pin `9193f5b6…`) のためのif-adopted分解を、Part V/R/AB/AH/AI/AN/A
 - 本amendment observed HEAD-before-push: 実行時の最新mainをコミットメッセージ
   に記録 (push直前にnote blob sha1ロック `3c9f42f4…` を再照合し、競合時は
   再fetchして本節を追記し直す)。
+
+### Part AT status update (2026-11-22, verifier host = 本レーンセッション)
+
+宣言 (commit `58938933`, observed HEAD-before-push `2f88a495`, note blob
+sha1ロック `9a5dfdb7…`) どおり完了。q042 (s5_index 745184, result 1,
+9,149,084 nodes) 単WIN行採用時のif-adopted投影分解を単一オーナーとして
+実行し、出版まで完了した (verdict不消費・canonical不変・推奨/却下
+いずれでもない)。
+
+- maker: `scripts/make_increment_q042_win.py` (Part AS/Part AP maker系の
+  単WIN adapt・WAVE-END正規表現の複数キー並び非対応bugを修正) が
+  published batch-14 raws (publication commit `7b211d38`) から2-pass
+  node-exact WINを機械検証し、BASE不在 (6,120行)・quarantine不在をgate
+  して1行 increment (sha256
+  `b4958328270f11b24d3a638e1099a0c6047dbebb242e3116217b0473ef63f9b6`)
+  とmanifest (`894e9420…`,
+  schema `batch14-q042-win-ifadopted-increment-manifest-v1`,
+  ifadopted_only, canonical untouched pin) を導出。
+- merge: sha-pinned fail-closed union merger (`90711961…`, byte-copy
+  pin, selftest PASS) でcanonical 6,120行 (`be9cb24e…`) + 1 WIN行を
+  3回実行・byte一致、**if-adopted cache 6,121行** (WIN 159 / LOSS
+  5,962, conflict 0, 251,513 bytes, sha256
+  `1434c68bc572a9817eca9c9a4ab442005762339cf539f22cb3acb0b24bc5ffe0a`)
+  を生成。merge-audit 3回byte一致 (`e1d11a66…`)。BASE canonicalは
+  merge後に再検証してbyte不変 (verdict不消費・repo canonical chain外の
+  non-canonical投影)。
+- refresh: adapt版 `reaudit/scripts/refresh_q042_ifadopted.py` (Part
+  AS版 `5992738d…` から3ハンク) を2回直列実行 (~61s/回)、4出力とも
+  run間byte一致: refresh-summary `029cc3b6…` / closure-classes
+  `987c4ecb…` / per-root-coverage `ec71c81b…` / probe-worklist
+  `af0c28c5…` (不出版・sha記録のみ)。
+- delta extractor: `scripts/compare_deltas_q042_ifadopted.py` (Part AS版
+  `9e885ae0…` をWIN if-adoptedにadapt。新規: flips == s5 745184の
+  BASE-unknownグラフ保持クラスの機械計算集合 (ハードコードなし)、純WIN
+  採用の新規freeクラス空集合gate・per-root free/uncovered不変gate・
+  新規free第三手空集合gate、23101 flip含有 + scenario-unknown==10
+  gate、canonical BASE sha pin、BASE index_verdict不在gate、raw
+  2-pass再検証; 再計算gate群は全て不変) を3回実行・出力byte同一
+  (`8e6ce1c6…`)・全gate PASS。
+- 結果 (投影上の分類台帳deltaのみ): **flips = 4クラス
+  [23092, 23101, 23115, 23938]**、すべてs5 745184を費用子に持つ
+  BASE-unknown保持クラスでunknown→excluded_now遷移。**この4クラスの
+  全LOSS閉包ルートはWIN子で永久反駁** (route statement)。excluded_now
+  23→27 / unknown 34,500→34,496 / free_now 36不変・遷移台帳は上記4+
+  同一遺移のみ (gate済み)。class 23101のscenario-unknown子は**10個**
+  (未着手q043-q052側10キー 745455..745465、WIN子はunknown境界から
+  消失)。closure候補表809行不変・churnなし (退出0/新規0)・23101は
+  rank 1のまま (表はprobing-worklist viewであり、flipは
+  class_status_countsと遷移台帳で記録)。per-root free/uncoveredは
+  全19 root不変 (root27 baseline 119/119、変更行0・新規free第三手0、
+  いずれもgate)。per-root greedyはroot 24のみ-1 (2,785→2,784、簿記)。
+  update8 resolved 79不変・remaining 31,780不変・groups_free 127不変・
+  win_hit_groups []不変 (**s5 745184はupdate8 baseline requirement外
+  と機械判明**)・lost [] (gate)。joint greedy 36,726→36,725・probe
+  worklist 64,941→64,940 (いずれも-1・簿記)。
+- 出版: 実験dir
+  `research/experiments/n11-centralreply-class23101-q042-ifadopted-20261122/`
+  16ファイルを3コミットでmainに反映 (if-adopted cache単独 `59fe5654`
+  (observed HEAD `58938933`、paged-readで251,513 bytes完全連結・長さ/
+  eol/末尾検証)、scripts+increment+manifest `f0a45654` (observed HEAD
+  `59fe5654`)、outputs+README+status.log+MANIFEST `175864a5` (observed
+  HEAD `f0a45654`) = publication complete)。**fetch-back 15/15 byte一致**
+  (publication commit固定rawのMANIFEST全行sha256照合)。kit mirror
+  `_19root-refresh-kit/batch23101-q042-ifadopted/` (16ファイル・sha全
+  一致・worklist 3.6MBは不採録)。
+- verdict消費: **ゼロ**。q042はcanonical上も未来の採用判断上も**15番目
+  のunconsumed closure WINのまま** (b018/d002/e002/f017/g018/j033/
+  h045/z003/n005/n006/p002/p003/r001/r002/q042)。canonical cacheは
+  6,120行 `be9cb24e…` 不変。標準11×11空盤・19 central-reply roots・
+  class 23101・未着手q043-q052他全classはどの時点でもUNKNOWNのまま。
+  nodes数を勝敗として読まない。WIN行採用は引き続きscrutiny ownerの
+  C++第二実装ゲート (`9193f5b6…`) 待ち。
+- 本status updateのobserved HEAD-before-push: `ee3b6f7325d6d4ae697f93d1f4c520dfd06f59f3` (note blob sha1
+  ロック `9a5dfdb7…` で更新、fetch-backで追記確認)。
