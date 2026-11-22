@@ -49,9 +49,6 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/output/inversive_plane.json
   role: data
   note: q=3,5 の反転平面ゲーム全値
-- path: research/experiments/finite-field-kyouen-20261120/scripts/ag2_fast_target.py
-  role: solver
-  note: AG(2,q)の対称性利用高速完全探索
 - path: research/experiments/finite-field-kyouen-20261120/ALGEBRAIC_ROUTE.md
   role: source
   note: 放物面上のcap・反転平面3-arcへの再定式化
@@ -433,9 +430,6 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/scripts/torus_board.py
   role: verifier
   note: トーラス盤と平面盤の禁止集合比較・ゲーム値
-- path: research/experiments/finite-field-kyouen-20261120/output/torus_vs_ag.json
-  role: data
-  note: n=3,4,5,7,11,13 の一致判定
 - path: research/experiments/finite-field-kyouen-20261120/DESIGN_TRICHOTOMY.md
   role: source
   note: Steiner設計上の三分法と一般上下界
@@ -469,9 +463,6 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/scripts/net3_proof_complete.py
   role: verifier
   note: メビウス対合M_aの構造と固定点数の確認
-- path: research/experiments/finite-field-kyouen-20261120/scripts/net3_two_phase.py
-  role: verifier
-  note: 3-ネットをフィルタに使う二段階探索
 - path: research/experiments/finite-field-kyouen-20261120/scripts/verify_qplus2.py
   role: verifier
   note: K<=q+2の修正済み厳密値に対する確認
@@ -499,9 +490,6 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/NET3_COMPLETE.md
   role: source
   note: 3-ネット理論の総括（交差比からHall-Paigeまで）
-- path: research/experiments/finite-field-kyouen-20261120/scripts/final_consistency.py
-  role: verifier
-  note: 6つの主張を一括検証するハーネス（全チェック通過）
 - path: research/experiments/finite-field-kyouen-20261120/scripts/net3_cyclic_table.py
   role: verifier
   note: ラテン方陣がZ_{q+1}の加法表であることの確認
@@ -568,9 +556,6 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/LITERATURE_ARC_Q8.md
   role: source
   note: q=8のアーク数1,048,320が文献値と一致
-- path: research/experiments/finite-field-kyouen-20261120/scripts/k_large.py
-  role: verifier
-  note: ovoid模型での厳密K探索
 - path: research/experiments/finite-field-kyouen-20261120/ARC_COUNT_FORMULAS.md
   role: source
   note: アーク数の閉形式（k≤4）とK=最大非零サイズ
@@ -601,9 +586,6 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/scripts/arc_k6_orbits.py
   role: verifier
   note: PGL(2,q)軌道の総当たり計算と分布グループの一致確認
-- path: research/experiments/finite-field-kyouen-20261120/scripts/arc_k6_verify.py
-  role: verifier
-  note: k=6公式の端から端までの検証（q=5,7）
 - path: research/experiments/finite-field-kyouen-20261120/ARC_K6_JOINT_COMPLETE.md
   role: source
   note: k=6交点表の完全な閉形式と接する円の補題
@@ -676,9 +658,6 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/scripts/arc_k7_caseB.py
   role: verifier
   note: 場合Bとwの関係の検証
-- path: research/experiments/finite-field-kyouen-20261120/scripts/arc_k7_endtoend.py
-  role: verifier
-  note: k=7プロファイル公式の端から端までの検証（7/7一致）
 - path: research/experiments/finite-field-kyouen-20261120/ARC_K7_CASE_DECOMP.md
   role: source
   note: k=7の(w,u)分布の対合による分解と再構成
