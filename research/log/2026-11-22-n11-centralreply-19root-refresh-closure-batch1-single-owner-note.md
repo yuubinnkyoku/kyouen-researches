@@ -2962,3 +2962,68 @@ Part AQ (batch-14 takeover) は42キー目で事前登録WIN-HALT規則を発火
   対抗宣言がmainに存在する場合は本宣言を破棄して着手しない。
 - 本amendment observed HEAD-before-push: `a54a9402…` (push直前にnote blob sha1
   ロック `a4cd1465…` を再照合、競合時は再fetchして追記し直す)。
+
+
+### Part AR status update (2026-11-22, verifier host = 本レーンセッション)
+
+宣言 (commit `e640f5b6`, observed HEAD-before-push `a54a9402`, note blob sha1
+ロック `a4cd1465…`) どおり完了。batch-14 q042 WIN行と同一wave開示LOSS 3行
+(q039/q040/q041) の第三実実装交叉検証を単一オーナーとして実行し、**4/4
+verdict一致** (WIN=1, LOSS=3)・wall-inconclusive 0・divergence 0で完走した。
+
+- 入力導出: `scripts/make_inputs_batch14.py` (batch-15 Part AL版をadapt、sha256
+  `19c442d18e0a9300cf21424c12ce62cafb61c1b899fed3c111be402a2ae759bb`) が
+  published正本 (takeover raws 8 (q039-q042のp1/p2)・status.log・batch-keys.json
+  sha256 `dfde0e90…`・published input CSV) からfail-closed導出した (2-pass一致
+  assert、status.log PASS行・`q042 WIN-HALT` 停止行・WAVE-END stop=1行の存在
+  assert、derived CSV vs published CSV byte一致assert、class_index 23101 assert、
+  手転写ゼロ)。初回ABORTはq042 PASS行パースの`toks[3]`インデックスbugで、
+  修正後に4 targets + 2 anchors + 2 negativesを生成した。
+- 前提ゲート全PASS: rules gate (replica quads 95,670 == third-impl quads
+  95,670、triples checked 195,044 / TBL mismatches 0)、script pins 3種
+  (third_impl `08ea958f…` / verify_tbl `c8c52528…` / jsreplay `84585617…`)。
+  anchors node-exact: k02a WIN 9,106,337 expansions / 4,991,527 ttHits、l1a LOSS
+  7,660,602 / 3,951,175 (published値と完全一致)。
+- negatives: ng1 (k02のlegal+1, 88 vs derived 87) / ng2 (stones 6 vs 5) ともに
+  文言一致でGATE_FAIL、rc=1 (fail-closed設計どおり)。
+- 結果 (1行1プロセス・a/b 2回・全行deterministic clean): q042 = 第三実装 **WIN**
+  10,728,035 expansions / 5,758,042 ttHits (a 65.14s / b 64.78s)、q039 / q040 /
+  q041 = **LOSS** 2,828,518 / 2,425,671 / 2,843,397 expansions (ttHits
+  1,663,204 / 1,519,018 / 1,693,916)。4行すべてtakeover replica (jsreplay系)
+  verdictとverdict-level一致。nodes/expansionsの差は実装差でありverdictでは
+  ない。takeover hostと別のsandboxでの実行によるcross-host cross-implementation
+  corroboration。
+- verdict-level主張: class 23101の「全52子LOSS」閉包ルートは2実装合意WIN子
+  (q042) で反駁 (route statementのみ、採用はscrutiny owner待ち)。
+- 監査バッテリ: `scripts/audit.py` (schema
+  `n11-centralreply-closure-batch14-q042-thirdimpl-audit-v1`, sha256
+  `4bb6266becd294b2e3a01820da2416162e6276c5ff7cb08eee60266036524b95`) が
+  **71/71 gates PASS**、2回実行で出力byte同一 (output/audit-summary.json
+  sha256 `18125d63a0b6ae0ad22ec58b10c947c945b775d625b8c6889d1c07b0c06a292b`)。
+- 出版: 実験dir
+  `research/experiments/n11-centralreply-closure-batch14-q042-thirdimpl-20261122/`
+  49ファイルを5コミットでmainに反映 (sources+input `5ad33735` 23ファイル、
+  fetch-back転写ミス2件 (status.logのq025行timestamp誤字・ng2 stones) 修正
+  `335fc0a1`、scripts `703840f9` 6ファイル (published bytesとsha検証一致の
+  複製+audit.pyのbatch-14 schema差替)、outputs `af79f4a1` 18ファイル、README +
+  audit-summary.json + MANIFEST-sha256.txt `0f69d03` = publication complete)。
+  **fetch-back 49/49 byte一致** (publication commit `0f69d03` で
+  MANIFEST-sha256.txt全行sha256照合)。
+- 誠実記録 (runner): 最初のnegatives呼び出しはshell cwd grouping bugでng2の
+  プロセスが未起動 (`No such file or directory`) だった。絶対pathで再実行し、
+  ng1はbyte同一のGATE_FAIL行を再生成したため、status.logにng1重複RUN行が
+  残存した。実行と出版に他の逸脱なし。
+- verdict不消費・状態: q042は**15番目のunconsumed closure WIN**のまま (b018/
+  d002/e002/f017/g018/j033/h045/z003/n005/n006/p002/p003/r001/r002/q042)。
+  batch-14の全probed行 (41 LOSS + q042 WIN) はcanonical 6,079行cache
+  (`342e8683…`) に不在 (Part AQ status updateで機械照合済み)。採用判断は
+  scrutiny owner (C++第二実装 gate pin `9193f5b6…`) 待ち・不変。
+- 標準11×11空盤・19 central-reply roots・class 23101・その全S5子 (未着手
+  q043-q052含む) はどの時点でも**UNKNOWNのまま**。nodes/expansionsを勝敗として
+  読まない。
+- open (着手前に必ず最新mainで対抗宣言確認要): (a) q042単WINのif-adopted分解
+  (Part V/R/AB/AH/AI/AN流)、(b) 41 LOSS行のcanonical計上 + reaudit (Part AP流。
+  増分は現行canonical 6,079行 `342e8683…` に対して構築)、(c) batch-17
+  (class 10661, Part AP再監査rank 14) 宣言。
+- 本status updateのobserved HEAD-before-push: `0f69d03…` (note blob sha1
+  ロック `8edd32f7…` で更新、fetch-backで追記確認)。
