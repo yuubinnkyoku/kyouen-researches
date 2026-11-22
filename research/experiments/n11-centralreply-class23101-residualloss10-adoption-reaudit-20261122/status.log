@@ -1,0 +1,43 @@
+# Part BC (batch-14 residual class 23101 10-LOSS canonical adoption) execution status log
+# host: this lane (n11 central-reply closure long-term lane, Continuation 43)
+# all times UTC 2026-11-22; observed HEADs recorded at each push
+
+2026-11-22T23:20:35Z KIT-MIRROR prep complete (bc-residual10-adoption-prep,
+  15 files; maker x3 byte-identical, merger x3 byte-identical + audits x3,
+  refresh x3 byte-identical (4 outputs), extractor x3 byte-identical;
+  all gates PASS; declaration pending Part AV publication)
+2026-11-22T23:2xZ PREPARATION-CONTEXT (all on host mirrors, repo reads only):
+  - BASE = published Part AV canonical 6,172 rows a5540811... verified
+    byte-identical against publication commit 23bda9ba raw fetch
+    (reaudit outputs a0043c76.../e60c1088.../4c7ec5d7... all byte-identical)
+  - inputs: residual batch dir n11-centralreply-closure-class23101-batch14-residual-20261122
+    (batch-keys d4fada68.../row-audit 6b40b131.../raws 20) = published Part AW
+    dataset, byte-verified against kit mirror MANIFEST
+  - merger selftest PASS (positive dedupe+sort, cross/within-file conflict
+    reject, malformed reject, double-run determinism)
+  - extractor x3: flips=[] new_free=[] free_now 37->37 class23101_unknown
+    11->1 (leftover [745184]) update8_resolved +0 joint_greedy 35645->38978
+    worklist 64888->64872 closure_churn left=[22149] entered=[23965]
+    changed_rows=[]
+  - joint greedy non-monotonicity diagnosed: improve-pass-free greedy
+    decreased 49361->49351 as expected; the 38,978 figure is the 6-pass
+    local-search convergence point, recorded as plan estimate only
+PUBLICATION sequence (single-owner Part BC, declaration pushed first):
+  - note Part BC declaration amendment (observed HEAD-before-push recorded
+    in the note section itself)
+  - commit A: output/ increment + manifest + merged canonical cache
+    6,182 rows (WIN 158 / LOSS 6,024) + merge-audit run1/2/3
+  - commit B: scripts (maker 6c57f2d0... / merger 90711961... /
+    extractor 48e88838... ) + reaudit refresh adapt d6bb2374...
+  - commit C: README + status.log + MANIFEST-sha256 + reaudit 3 outputs
+    (refresh-summary 5f3a09c6... / closure-classes 52ec3d4b... /
+    per-root-coverage 1f54065a...) + delta json 62de8c16...
+    (probe-worklist fe71be60... 3.75MB stays unpublished, sha recorded)
+  - every publication commit fetch-back byte-verified via commit-pinned raw
+guards (unchanged at every point of this Part):
+  - standard 11x11 empty board UNKNOWN; all 19 central-reply roots UNKNOWN;
+    class 23101 UNKNOWN (unconsumed q042 WIN child 745184 remains its only
+    scenario-unknown cost child); no class closure or root coverage claimed
+  - verdicts consumed: the 10 residual LOSS rows only; 17 unconsumed
+    closure WINs untouched (scrutiny owner C++ second implementation gate
+    pin 9193f5b6...)
