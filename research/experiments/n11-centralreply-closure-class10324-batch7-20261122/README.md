@@ -27,7 +27,7 @@ this batch**: closure needs the independent merge + refresh re-audit.
   closure-classes files verified against the published re-audit bytes
   (sha256 match on both copies used); (2) all 51 keys absent from the
   canonical merged cache (5,924 rows, sha256 `8a721a18...`, 0 hits);
-  (3) quarantine registry (sha256 `81d23160...`, 4 active entries)
+  (3) quarantine registry (sha256 `81d23160...`, 2 active entries) (erratum 2026-11-22 batch-8 declaration: the original text said "4 active entries", a miscount; the pinned registry sha256 `81d23160...` contains exactly 2 entries, both active; the 0-hit cross-check result is unaffected)
   key-pair check 0 hits
 - solver: pinned replica `scripts/jsreplay.js` (sha256
   `845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df`),

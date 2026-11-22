@@ -443,3 +443,35 @@ batch 7 (Part L) は51/51全LOSS (2-pass node-exact, WIN-HALTなし・枯渇な�
 - 並走との不接触: batch7由来キーのみ。同一スコープの宣言がmainに存在する
   場合は着手しない。
 - 本amendment observed HEAD-before-push: 実行時の最新mainをコミットメッセージに記録。
+
+
+## Part N (prober, amendment 2026-11-22): batch 8 (class 2634, rank 7) declared - next clean candidate opened under the batch-7 protocol
+
+Part Mのclosure rankingで反駁証拠のない首位候補となったrank 7 class 2634
+(mask `[4035225266258182144, 0]`、unknown 51、1 group first=49/third=71) を
+batch 7 (Part L) と同一の予登録protocolで着手する。
+
+- 対象: `research/experiments/n11-centralreply-closure-class2634-batch8-20261122/`。
+  keys 51本 (h001-h051) はPart M refresh再生成worklist (65,155行、sha256
+  `ca3ee3bc...`、worklist自体はregenerableのため未再出版) の
+  `serving_class=2634` 行 (probe_order 281-331) で、batch-keys.jsonに全行
+  published (正本cache・update8機構に対して独立照合可能)。
+- fail-safe (宣言前に機械照会済み): (1) canonical merged cache 5,975行
+  (`a998f4c0...`) に51/51 keys不在 (0 hits); (2) quarantine registry
+  (`81d23160...`) のactive 2件とのkey対照0 hits (hi=128の
+  10448914085452972032:128はquarantineの10448351135499552768:128とは別key);
+  (3) solverはpinned replica `jsreplay.js` (`845856173d...`、batches 1-7と
+  byte-identical)、budget 15M・2-pass fresh cold・node-exact gate。
+- val-gate: published two-target-design 4行を本ホストで再現、4/4 node-exact
+  (at2m result 0/2,000,000 ×2、15m result 2/3,651,923 と result 2/5,040,200)。
+- **erratum (batch-7 README)**: 宣言時のfail-safe記載「quarantine 4 active
+  entries」は、pinned registry (`81d23160...`、published bytes確認済み) の
+  実際の内容である**2 active entries**への誤記。key対照0 hitsの結論に影響
+  なし。batch-7 READMEの当該行をerratum明記付きで訂正し、本Part Nにも記録する。
+- 主張の範囲: 本batchはcoverage・closure・rootを一切主張しない。WIN-HALT
+  (rc=45) が発火した場合はそのkeyで停止しif-adopted解析に回す (予登録
+  stop rule)。全51本LOSSでも消費はfail-closed increment merge + refresh
+  再監査まで行わない。**class 2634・19 roots・標準11×11空盤はUNKNOWN**。
+- 並走との不接触: 同一スコープ宣言がmainに存在する場合は着手しない
+  (宣言前にlatest mainを再取得しclass2634実験目录の不在を確認済み)。
+- 本amendment observed HEAD-before-push: 実行時の最新mainをコミットメッセージに記録。

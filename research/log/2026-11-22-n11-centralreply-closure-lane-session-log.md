@@ -478,3 +478,32 @@ github_app.push_files with commit-pinned raw fetch-back byte verification.
   no verdict was created or asserted; **the standard 11x11 empty board and
   the 19 central-reply roots remain UNKNOWN.** Nodes/expansions are never
   verdicts.
+
+## Session continuation 8 (2026-11-22 ~06:1xZ onward, same lane; d315e38c fetch-back verified, batch 8 declared for class 2634)
+
+- First action of this continuation was the unfinished verification from the
+  previous run: fetch-back of commit `d315e38c` (9 experiment files + note +
+  session log, plus the canonical merged cache) — **11/11 byte-identical**
+  (canonical cache 5,975 rows / 244,860 bytes / sha256 `a998f4c0...`
+  confirmed on the remote). The Part M re-audit kit stash `reaudit10324/` was
+  added to the lane kit. Main HEAD at start: `d315e38c` (no new lane-external
+  commits; an m35 SAT-lane instance had committed `db663914`/`85386533`/
+  `986ab607` before `6577a3f3`, all observed and non-colliding).
+- **Batch 8 declared for class 2634** (Part N amendment of the single-owner
+  note; experiment `n11-centralreply-closure-class2634-batch8-20261122/`):
+  the Part M rank-7 next clean candidate, 51 keys h001-h051 (probe_order
+  281-331 of the 65,155-row regenerated worklist, sha256 `ca3ee3bc...`;
+  all 51 rows published via batch-keys.json). Fail-safes before declaring:
+  51/51 keys absent from the canonical 5,975-row cache (`a998f4c0...`);
+  quarantine (`81d23160...`) key cross-check 0 hits both directions
+  (including distinct hi=128 member 10448914085452972032:128 vs quarantined
+  10448351135499552764:128); no same-scope declaration on main (checked
+  content listing + HEAD). Pinned solver `jsreplay.js` `845856173d...`
+  byte-identical to batches 1-7; val-gate 4/4 node-exact on this host before
+  the first row (at2m 0/2,000,000 twice; 15m 2/3,651,923 and 2/5,040,200).
+- **Erratum published**: the batch-7 README fail-safe line claimed the
+  quarantine registry had "4 active entries"; the pinned registry
+  (`81d23160...`) contains exactly 2 active entries. Corrected in-repo in the
+  batch-7 README with an erratum marker; conclusion (0 hits) unaffected.
+- Honesty record: nothing consumed by the declaration; **the standard 11x11
+  empty board, the 19 central-reply roots and class 2634 remain UNKNOWN.**
