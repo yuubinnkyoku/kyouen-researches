@@ -30,6 +30,7 @@ import itertools
 import json
 import sys
 from math import comb
+from fractions import Fraction
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -73,11 +74,11 @@ def arcs6(q):
     s = q + 1
     term6 = b * comb(s, 6)
     term5 = b * comb(s, 5) * (n - s)
-    contrib = 0
+    contrib = Fraction(0)
     for n2, cnt in N_xy(q).items():
         n1 = s - 2 * n2
         h0, h1, h2 = H(n2, n1, 0), H(n2, n1, 1), H(n2, n1, 2)
-        contrib += b * cnt * (h0 + h1 / 2 + h2 / 3)
+        contrib += b * cnt * (h0 + Fraction(h1, 2) + Fraction(h2, 3))
     bad = term6 + term5 + contrib
     return comb(n, 6) - bad, {"term6": term6, "term5": term5,
                               "contrib": contrib, "N_xy": N_xy(q)}
