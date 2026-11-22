@@ -54,3 +54,24 @@ CPU並列は最大2 worker。中間成果は各chunk後にknowledge kitミラー
 repoへのcheckpoint pushは小分けに行う (大ファイルは1コミット1ファイル)。
   標準11×11空盤・19root ({X,60} 各root)・当該S4 classの閉鎖は本宣言の
 どの時点でもUNKNOWNのまま。nodes数・pass数を勝敗として読まない。
+
+
+## Part C (solver, amendment 2026-11-22): closure class 23963 exact-S5 probe batch 2
+
+batch 1 (Part B) は事前登録のWIN-HALT規則により b018 (2-pass node-exact result 1,
+3,549,602 nodes) で停止した。これによりクラス16757の全子LOSS閉包ルートは反駁され、
+closure候補表の次位クラスにピボットする。
+
+- 対象: `research/experiments/n11-centralreply-closure-class23963-batch-20261122/`。
+  closure候補表class_rank 2 (graph class index 23963, mask
+  `[1152921504673955840, 67109888]`) の未確定canonical S5子48件。
+  キー一覧は `input/batch-keys.json` (48キー、worklist `probe-worklist.csv` の
+  probe_order順、Board再計算の合法手数固定)。全キーは現行merged cache
+  (`4fee9d5e...`, 5,857行) に存在しないことを機械確認済み (0 hits)。
+  quarantine登録はrefreshの同policy処理済み。
+- 手法・停止規則・消費規則: Part Bと同一 (pinned replica `jsreplay.js`
+  sha256 `84585617...`, 2-pass fresh cold, budget 15M, mismatch→HARD-STOP rc=42,
+  WIN→HALT rc=45, 枯渇=UNKNOWN, 消費はfail-closed merger経由のみ、
+  本batch単体では閉鎖・被覆・secured主張なし)。
+- 本amendment observed HEAD: `33a4d70365883e5d0293ecee400b8d09735301db`
+  (batch 1 WIN-HALT出版後のmain)。
