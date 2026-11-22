@@ -1,0 +1,79 @@
+{
+ "schema": "joint10-unconsumed-increments-manifest-v1",
+ "win_ids": {
+  "b1": [
+   "b018"
+  ],
+  "b3": [
+   "d002"
+  ],
+  "b4": [
+   "e002"
+  ],
+  "b5": [
+   "f017"
+  ],
+  "b6": [
+   "g018"
+  ],
+  "b8": [
+   "h045"
+  ],
+  "b9": [
+   "j033"
+  ],
+  "b11": [
+   "z003"
+  ],
+  "b12": [
+   "n005",
+   "n006"
+  ]
+ },
+ "row_counts": {
+  "rows": 132,
+  "wins": 10,
+  "losses": 122
+ },
+ "sha256": {
+  "win": "fe2c6f68f49195b44e21c8d43998fccd965c868e08e49d8a1b3233f5daa4c15e",
+  "loss": "e5fe80af7321a9ea10715c419c2611e469c2470da7ebe26f7d5ee8f14681e8c8",
+  "all": "cc841d6e8af62558e2bd59600f6ffa55ed1c781996f085ead7c699237f4b1a1f"
+ },
+ "excluded_exhaustion": {
+  "batch": 8,
+  "kid": "h002",
+  "result": 0,
+  "budget": 15000000,
+  "nodes": 15000000
+ },
+ "pre_consumed_base_duplicates": {
+  "count": 19,
+  "ids": [
+   "b1:b001",
+   "b1:b002",
+   "b1:b003",
+   "b1:b004",
+   "b1:b005",
+   "b1:b006",
+   "b1:b007",
+   "b1:b008",
+   "b1:b009",
+   "b1:b010",
+   "b1:b011",
+   "b1:b012",
+   "b1:b013",
+   "b1:b014",
+   "b1:b015",
+   "b1:b016",
+   "b1:b017",
+   "b1:b019",
+   "b1:b020"
+  ],
+  "note": "19 batch-1 LOSS rows already inside canonical BASE with identical verdicts AND nodes (verdict+node-identity gate); excluded from every increment; the first maker run ABORTed fail-closed on this and the packet was corrected 151 -> 132 "
+ },
+ "probed_total": 151,
+ "base_cache_absent_hits": 0,
+ "quarantine_hits": 0,
+ "interpretation_guard": "read-only what-if IF-ADOPTED analysis inputs; verdicts NOT consumed; 11x11 stays UNKNOWN; nodes are bookkeeping, never verdicts"
+}

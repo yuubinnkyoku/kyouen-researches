@@ -14,8 +14,20 @@ of this packet.
 Emits three what-if increment caches over the published raw replay rows:
   * JWIN10     - the 10 unconsumed closure WIN rows only
                  (b018/d002/e002/f017/g018/j033/h045/z003/n005/n006)
-  * JLOSS141   - the 141 probed exact-LOSS rows only
-  * JALL151    - all 151 resolved probed rows (WIN+LOSS)
+  * JLOSS122   - the 122 probed exact-LOSS rows NOT already in BASE
+  * JALL132    - all 132 resolved probed rows unique-new here (10 WIN + 122 LOSS)
+
+HONEST CORRECTION published by Part AJ itself: the first run of this script
+ABORTed fail-closed at "b001: key already in canonical BASE cache".  Precise
+re-measurement of the batch keys against BASE found that exactly 19 batch-1
+LOSS rows (b001..b017, b019, b020) are ALREADY inside the canonical BASE
+cache with identical verdicts AND identical node counts (batches 2/7/10 of
+the canonical chain reached their membership classes); batch-1's WIN b018
+is NOT in BASE; batches 3,4,5,6,8,9,11,12 have ZERO BASE overlap; and NO
+verdict conflicts exist anywhere.  Those 19 rows are therefore excluded
+from every increment as pre-consumed duplicates, under a stricter gate
+(verdict AND node count must match BASE exactly, else ABORT), bringing the
+packet from 151 probed rows to 132 unique-new (10 WIN + 122 LOSS).
 h002 (batch 8) exhausted its 15M budget with result 0 (honest UNKNOWN) and is
 EXCLUDED from every increment by gate (its 15M re-search stays forbidden).
 
@@ -26,8 +38,10 @@ additionally match their published takeover-host passes (4-way); legal and
 declaring-host status.log PASS row must agree with the raws on
 (budget, result, nodes); the WIN set must be exactly the 10 unconsumed
 closure WINs; all (lo,hi) must be distinct across the packet, absent from the
-canonical BASE cache (6,027 rows, sha256 95e868d6...) and absent from the
-quarantine registry.  Verdicts are byte-taken from the raws.
+canonical BASE cache (6,027 rows, sha256 95e868d6...) EXCEPT the exactly-19
+pre-consumed batch-1 LOSS rows which must match BASE on verdict AND nodes
+(the only permitted BASE overlap; any other overlap still ABORTs), and absent
+from the quarantine registry.  Verdicts are byte-taken from the raws.
 Read-only what-if analysis inputs; verdicts are NOT consumed. 11x11 stays
 UNKNOWN; nodes are bookkeeping, never verdicts.
 """
@@ -60,6 +74,10 @@ WIN_IDS = {
     8: ["h045"], 9: ["j033"], 11: ["z003"], 12: ["n005", "n006"],
 }
 EXHAUSTION = {(8, "h002")}
+# the 19 batch-1 LOSS rows already consumed into canonical BASE (measured,
+# verdict- and node-identical; found by this script's own first-run gate)
+EXPECTED_CONSUMED = {(1, f"b{n:03d}") for n in
+                     (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 19, 20)}
 # resolved probed sets (from the published declaring-host status.log PASS rows)
 RESOLVED = {
     1: [f"b{n:03d}" for n in (1, 2, 4, 3, 7, 5, 6, 8, 9, 11, 10, 12, 15, 13, 14, 16, 17, 19, 20, 18)],
@@ -117,16 +135,18 @@ def quorum(batch: int):
 def main() -> None:
     if sha(BASE_CACHE) != "95e868d6762925b9a27ad963a825a9ad4fd5131a864eb82fac0db77d7acdb326":
         sys.exit("ABORT base cache sha drift")
+    OUT.mkdir(parents=True, exist_ok=True)
     base_keys = {}
     with BASE_CACHE.open(encoding="utf-8-sig", newline="") as stream:
         for row in csv.reader(stream):
             if not row or row[0].lstrip().startswith("#"):
                 continue
-            base_keys[(int(row[1]), int(row[2]))] = row[4]
+            base_keys[(int(row[1]), int(row[2]))] = (int(row[4]), int(row[5]))
     q = json.loads(json.dumps(json.loads(QUARANTINE.read_text())))
     quarantined = {tuple(e["key"]) for e in q["entries"] if e.get("active")}
 
     rows = []  # (batch, class, kid, s5_index, lo, hi, result, nodes)
+    consumed = []  # pre-consumed BASE duplicates (excluded from increments)
     all_lohi = {}
     for batch, (dirname, klass, _) in BATCHES.items():
         bdir = ROOT / "research/experiments" / dirname
@@ -176,7 +196,13 @@ def main() -> None:
                 sys.exit(f"ABORT duplicate key across packet {key}: {all_lohi[key]} and {kid}")
             all_lohi[key] = f"b{batch}:{kid}"
             if key in base_keys:
-                sys.exit(f"ABORT {kid}: key already in canonical BASE cache (would not be unique_new)")
+                bv, bn = base_keys[key]
+                if ref["result"] != bv:
+                    sys.exit(f"ABORT {kid}: BASE verdict conflict raw={ref['result']} base={bv} {key}")
+                if ref["nodes"] != bn:
+                    sys.exit(f"ABORT {kid}: BASE nodes mismatch raw={ref['nodes']} base={bn} {key}")
+                consumed.append((batch, kid, key))
+                continue  # pre-consumed duplicate: excluded from increments
             if key in quarantined:
                 sys.exit(f"ABORT {kid}: quarantined key {key}")
             rows.append((batch, klass, kid, int(bk["s5_index"]), ref["lo"], ref["hi"], ref["result"], ref["nodes"]))
@@ -201,8 +227,13 @@ def main() -> None:
     got_wins = sorted(f"b{r[0]}:{r[2]}" for r in wins)
     if got_wins != expected_wins:
         sys.exit(f"ABORT WIN set mismatch: {got_wins}")
-    if len(rows) != 151 or len(wins) != 10 or len(losses) != 141:
-        sys.exit(f"ABORT row counts {len(rows)}/{len(wins)}/{len(losses)} != 151/10/141")
+    if len(rows) != 132 or len(wins) != 10 or len(losses) != 122:
+        sys.exit(f"ABORT row counts {len(rows)}/{len(wins)}/{len(losses)} != 132/10/122")
+    got_consumed = sorted(f"b{b}:{k}" for b, k, _ in consumed)
+    if got_consumed != sorted(f"b{b}:{k}" for b, k in EXPECTED_CONSUMED):
+        sys.exit(f"ABORT consumed set mismatch: {got_consumed}")
+    if len(consumed) != 19:
+        sys.exit(f"ABORT consumed count {len(consumed)} != 19")
 
     hdr = [
         "# n11 central-reply closure JOINT unconsumed-rows IF-ADOPTED increment (Part AJ, 2026-11-22)",
@@ -215,17 +246,21 @@ def main() -> None:
         "#   (Part AI / Part AF own them). Read-only what-if analysis only; verdicts are NOT consumed.",
         "# Methodology per Part H / H-bis / J / R / V / AB / AH: WIN-only vs LOSS-only vs full packet.",
         f"# gates: {quorum(11)}-way (batch-11) / 3-way (others) node-exact, status.log agreement,",
-        "#   batch-keys legal/(lo,hi) agreement, 151 distinct keys, 0 BASE-cache hits, quarantine 0.",
+        "# HONEST CORRECTION (Part AJ): first run ABORTed at b001 already-in-BASE; re-measurement",
+        "#   showed 19 batch-1 LOSS rows (b001..b017,b019,b020) pre-consumed into canonical BASE",
+        "#   with identical verdicts AND nodes; they are excluded here (151 probed -> 132 unique-new).",
+        "#   batch-keys legal/(lo,hi) agreement, 132 distinct keys, 19 pre-consumed BASE duplicates",
+        "#   (verdict+node identical, the ONLY permitted overlap) excluded, quarantine 0.",
     ]
     tags = {
         "win": "# 10 rows: the unconsumed closure WINs b018/d002/e002/f017/g018/j033/h045/z003/n005/n006.",
-        "loss": "# 141 rows: the probed exact-LOSS rows only (no WIN rows).",
-        "all": "# 151 rows: all resolved probed rows (10 WIN + 141 LOSS), h002 excluded.",
+        "loss": "# 122 rows: the probed exact-LOSS rows NOT already in BASE (19 pre-consumed excluded).",
+        "all": "# 132 rows: all unique-new resolved probed rows (10 WIN + 122 LOSS), h002 excluded.",
     }
     names = {
         "win": "increment-joint-wins10-IFADOPTED-20261122.cache",
-        "loss": "increment-joint-loss141-IFADOPTED-20261122.cache",
-        "all": "increment-joint-all151-IFADOPTED-20261122.cache",
+        "loss": "increment-joint-loss122-IFADOPTED-20261122.cache",
+        "all": "increment-joint-all132-IFADOPTED-20261122.cache",
     }
 
     def write(tag, sel):
@@ -245,12 +280,22 @@ def main() -> None:
         "row_counts": {"rows": len(rows), "wins": len(wins), "losses": len(losses)},
         "sha256": {tag: sha(OUT / names[tag]) for tag in names},
         "excluded_exhaustion": {"batch": 8, "kid": "h002", "result": 0, "budget": 15000000, "nodes": 15000000},
+        "pre_consumed_base_duplicates": {
+            "count": len(consumed),
+            "ids": sorted(f"b{b}:{kid}" for b, kid, _k in consumed),
+            "note": ("19 batch-1 LOSS rows already inside canonical BASE with "
+                     "identical verdicts AND nodes (verdict+node-identity gate); "
+                     "excluded from every increment; the first maker run ABORTed "
+                     "fail-closed on this and the packet was corrected 151 -> 132 "),
+        },
+        "probed_total": 151,
         "base_cache_absent_hits": 0,
         "quarantine_hits": 0,
         "interpretation_guard": "read-only what-if IF-ADOPTED analysis inputs; verdicts NOT consumed; 11x11 stays UNKNOWN; nodes are bookkeeping, never verdicts",
     }
     (OUT / "increments-manifest.json").write_text(json.dumps(manifest, indent=1) + "\n", encoding="utf-8")
-    print("OK 151 resolved rows (141 LOSS + 10 WIN), h002 exhaustion excluded, all gates PASS")
+    print("OK 151 probed rows -> 132 unique-new (122 LOSS + 10 WIN), 19 pre-consumed BASE duplicates excluded, "
+          "h002 exhaustion excluded, all gates PASS")
 
 
 if __name__ == "__main__":
