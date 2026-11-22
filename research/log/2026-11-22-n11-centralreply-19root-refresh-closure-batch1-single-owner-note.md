@@ -952,3 +952,67 @@ published commit `1f127fb8` からcommit-pinned raw CDNで取得
   勝敗として読まない。
 - 本Part Wのobserved HEAD (出版3 commits直後): `a1ba4ccff58c6e00640cbecaef4da0e5d956f327`。
   note本体push直前にmainの最新を再取得して確認する。
+
+## Part X (prober, amendment 2026-11-22): batch 10 (class 8784, rank 9) 宣言 - 反駁証拠のない次位clean候補をbatch-7 protocolで開始
+
+batch 8 (Part N/U, class 2634) はWIN-HALT (h045; if-adoptedはPart V・第三実装
+spot検証はPart W)、batch 9 (Part Q, class 1518) はWIN-HALT (j033; if-adoptedは
+Part R・第三実装はPart T)。batch実績は9バッチ中7 WIN-HALT + 2 clean
+(23963/10324)。Part M closure rankingでrank 1-8はすべて反駁証拠保持
+(16757: b018, 20421: d002, 30345: b018のs5 528497, 16371: e002, 12264: f017,
+5473: g018, 2634: h045, 1518: j033) のため、反駁証拠のない次候補として
+reaudit closure-classes rank 9 のクラス8784に着手する (安価側WIN密集の
+実測傾向はPart Vまでで11ショット Warning なし・scheduling quantityとして
+選定は不変)。
+
+- 対象: `research/experiments/n11-centralreply-closure-class8784-batch10-20261122/`。
+  graph class index 8784, mask `[6052837899186012160, 0]` の未確定canonical
+  S5子52件 (m001-m052。'i'はbatch-8宣告ホスト由来命名として使用回避、
+  'k'/'l'はsixth-cost k行・第三実装anchor k02a/l1aとの読み衝突回避のため
+  skip)。reaudit正本probe-worklistのprobe_order 383-434 (serving_class=8784・
+  Board再計算合法手数固定・first=16/third=58を含む5グループ担当)。
+- 宣言前fail-safe機械確認 (本ホスト・fail-closed): (1) Part M refresh機材
+  (published script sha256 `0bc10a05...`) をpublished pinned inputs
+  (dependency-graph `54f9c364...`・merged cache `a998f4c0...`・update8 plan
+  `b658290a...`・board `954d3a10...`・policy `78655e94...`・quarantine
+  `81d23160...`) から再実行し、closure-classes.csv・refresh-summary.json・
+  per-root-coverage.csvの3成果物がpublished Part M bytesとbyte一致、
+  probe-worklist.csv (65,155行) はsha256
+  `ca3ee3bc7772ff38462cb60fc41ab4570cb236a880213322de230410fa550e80` で
+  Part N/Q記載値と一致 (cross-host byte-exact再現)。(2) 全52キーは正本
+  merged cache (5,975行・sha256 `a998f4c0...`) に不在 (0 hits)。(3)
+  quarantine registry (sha256 `81d23160...`・active 2件) とのkey対照
+  0 hits (両方向)。
+- val-gate: published two-target-design 4行を本ホストで再現、4/4 node-exact
+  (at2m result 0/2,000,000 ×2、15m result 2/3,651,923 と result 2/5,040,200)。
+- 手法・停止規則・消費規則: Part B-Qと全部同一 (pinned replica
+  `jsreplay.js` sha256 `845856175d...`・batches 1-9とbyte-identical、
+  2-pass fresh cold、budget 15M、mismatch→HARD-STOP rc=42、WIN→HALT rc=45、
+  枯渇=UNKNOWN、消費はfail-closed merger経由のみ、本batch単体では閉鎖・
+  被覆・secured主張なし)。実行並列は本ホスト最大4 worker (probe_order順の
+  4キーwave実行・WIN報告wave完了後は新規キー着手なし・同一wave内の
+  in-flight完了行は誠実開示、batch-5 f018先例)。
+- 主張の範囲: 本batchはcoverage・closure・rootを一切主張しない。WIN-HALT
+  (rc=45) が発火した場合はそのkeyで停止しif-adopted解析に回す (予登録
+  stop rule)。全52本LOSSでも消費はfail-closed increment merge + refresh
+  再監査まで行わない。**class 8784・19 central-reply roots・標準11×11空盤は
+  UNKNOWNのまま。nodes数・pass数を勝敗として読まない。**
+- 並走との不接触: batch-8 (Part N/U/V/W)・batch-9 (Part Q/R/T) のpublished
+  ファイルには一切接触しない。同一スコープの宣言がmainに存在する場合は
+  着手しない (宣言直前に最新mainを再取得・class8784実験dirの不在・Part X
+  採番の未使用を確認済み)。
+- 本amendment observed HEAD-before-push: `b7b798b96c224eacd03b587eaf9356409ec86b5c`
+  (Part W出版後・n7 K1058レーンの修正コミット直後のmain。commit messageにも記録)。
+- 追加fail-safe (出版直前): class 8784のmaskはPart M refresh再生成の
+  closure-classes.csv rank 9行 (class_lo 6052837899186012160 / hi 0 /
+  unknown_now 52 / first 16 / third 58 / groups 5) と正本一致を確認。
+  batch-keys.jsonの52キー (s5_index/lo/hi/legal/membership_class_count/
+  probe_order 383-434) はworklist正本行と52/52完全一致。keys.jsonの
+  class_mask表示 `...2000` はECMAScript float64パースの表示丸めであり、
+  生テキストは正本値 `...2160` (改修不要)。scaffold構成: input/
+  batch-keys.json (sha256
+  `a1401ee2769f3943f993527dd4934ce82e99c6d55ee27a13cf74b1b417148ebf`)
+  + m001-m052.input.csv 52本 (target行: id,stones,lo,hi,legal固定形式) +
+  scripts/jsreplay.js (pin) + scripts/runbatch.sh (published batch-9と
+  byte-identical) + output/val-gate/ (published 4入力 + 本ホスト4出力) +
+  README。output/raw/・output/status.logは実行後にchunk出版する。
