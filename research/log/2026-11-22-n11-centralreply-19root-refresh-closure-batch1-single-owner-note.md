@@ -94,3 +94,25 @@ reaudit closure-classes.csv rank 2 のクラス20421に着手する。
   WIN→HALT rc=45, 枯渇=UNKNOWN, 消費はfail-closed merger経由のみ、
   本batch単体では閉鎖・被覆・secured主張なし)。
 - 本amendment observed HEAD-before-push: 実行時の最新mainをコミットメッセージに記録。
+
+
+## Part E (solver, amendment 2026-11-22): closure class 16371 exact-S5 probe batch 4
+
+batch 3 (Part D) は事前登録のWIN-HALT規則により d002 (2-pass node-exact
+result 1, 5,359,994 nodes) で停止し、if-adopted解析
+(`research/experiments/n11-central-reply-20421-win-d002-ifadopted-20261122/`)
+を公開した。closure候補表上位はWIN子保持で反駁済み (16757: b018, 20421: d002,
+30345: b018のs5 528497をcost childとして保持) のため、反駁証拠のない
+最初の正規候補として re-audit closure-classes rank 4 のクラス16371に着手する。
+
+- 対象: `research/experiments/n11-centralreply-closure-class16371-batch4-20261122/`。
+  graph class index 16371, mask `[1153202979851993088, 16]` の未確定canonical
+  S5子50件（e001-e050、reaudit正本probe-worklistのprobe_order順・Board再計算
+  合法手数固定、root first=26/third=50グループ担当）。全キーは正本merged cache
+  （5,924行・sha256 `8a721a18...`）に存在しないことを機械確認済み (0 hits)。
+- 手法・停止規則・消費規則: Part B/C/Dと同一 (pinned replica `jsreplay.js`
+  sha256 `84585617...`, 2-pass fresh cold, budget 15M, mismatch→HARD-STOP rc=42,
+  WIN→HALT rc=45, 枯渇=UNKNOWN, 消費はfail-closed merger経由のみ、
+  本batch単体では閉鎖・被覆・secured主張なし)。val-gate 4/4 node-exactは
+  本ホストで本session中に再現済み (batch4 val-gateに同outputを固定)。
+- 本amendment observed HEAD-before-push: 実行時の最新mainをコミットメッセージに記録。
