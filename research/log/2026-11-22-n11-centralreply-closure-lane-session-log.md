@@ -1069,3 +1069,57 @@ repo diverged:
   UNKNOWN; node counts are not verdicts. Kit mirror saved under
   `batch8106-n/` (82 files + manifest). Observed HEAD-before-push
   for this update is recorded in the commit message.
+
+## Continuation 18 (2026-11-22): Part AD batch-12 third-implementation cross-verification completed and published - all 10 unconsumed closure WINs now third-impl corroborated (verdicts not consumed)
+
+- Part AD (single-owner note amendment, declared before execution, note
+  commit `33657c94`, observed HEAD-before-push `9759774b`) executed and
+  published the third-implementation verdict-level cross-verification of
+  the complete batch-12 probed set: 2 WIN rows (n005/n006) + 6 LOSS rows
+  (n001-n004/n007/n008), Part G/K/O/P/T/W/AA protocol unchanged.
+- Inputs machine-derived by `make_inputs_batch12.py` fail-closed from the
+  published batch-12 sources (raws chunk commits `eca35f3c`/`ace92d84`,
+  commit-pinned raw CDN): 2-pass (budget,result,nodes) equality asserts,
+  status.log PASS rows + `n005 WIN-HALT`/`n006 WIN-HALT` +
+  RUNNER-STOP/RUNNER-EXIT presence asserts, batch-keys.json (sha256
+  `de55df83...`, scaffold `d333bb2c`) key/legal cross-checks in exact
+  Python ints, derived CSVs byte-equal to the published batch-12 input
+  CSVs (8/8). Sources not republished.
+- 22 solver rows on this 2-core host (pairs, at-most-4 convention), all
+  clean, every a/b pair identical on (result, expansion, ttHits, reason):
+  - **n005 WIN agree** (third-impl 15,280,890 expansions / 8,220,782
+    ttHits vs replica WIN 12,863,268 nodes); **n006 WIN agree**
+    (4,233,764 / 2,394,370 vs 3,695,373);
+  - 6/6 LOSS agree (n001 7,693,366 / n002 3,554,378 / n003 5,243,307 /
+    n004 4,271,858 / n007 3,359,814 / n008 3,976,246 expansions);
+  - anchors k02a WIN 9,106,337/4,991,527 and l1a LOSS 7,660,602/3,951,175
+    node-exact the published third-impl values; ng1/ng2 GATE_FAIL with the
+    published messages; rules gate quads 95,670 == replica, 195,044
+    triples, 0 mismatches;
+  - audit.py (schema `batch12-wins-thirdimpl-audit-v1`, run twice
+    byte-identical): **111/111 gates PASS, 0 divergences, 0
+    wall-inconclusive**.
+- Publication: `research/experiments/n11-centralreply-closure-batch12-wins-thirdimpl-20261122/`
+  commits `4e9c525f` (scaffold 20) → `d44fcfb4` (targets 16) → `d25a0db9`
+  (anchors 4 + negative 2 + rules-gate + status.log + audit-summary +
+  MANIFEST, 10). Fetch-back commit-pinned raw + cmp: **46/46 byte-exact,
+  MANIFEST 45/45 sha256 exact**; the 4 pinned scripts byte-identical to
+  the published Part AA copies (blob-sha match).
+- Note Part AD publication status update pushed as `6d14c38b`: the
+  parallel Part AE (batch 13, class 16930) declaration had landed on the
+  note in between; the create_or_update sha gate caught the stale note
+  copy, the note was re-fetched and the appendix re-appended on top of the
+  latest bytes (declared interleave recorded, no clobbering).
+- Milestone: **all ten unconsumed closure WINs**
+  (b018/d002/e002/f017/g018/j033/h045/z003/n005/n006) are now
+  third-implementation corroborated at the verdict level (Part G/P/T/W/
+  AA/AD). Verdicts still not consumed; adoption remains with the scrutiny
+  owner (C++ second-implementation gate precedent, pin `9193f5b6...`).
+- Honesty record: nothing consumed anywhere; n009-n052 (44 batch-12 keys)
+  untouched; the standard 11x11 empty board, the 19 central-reply roots,
+  class 8106 and every other class remain UNKNOWN throughout;
+  nodes/expansions are not verdicts. Open items for future declarations:
+  n005/n006 if-adopted decomposition (Part V/R/AB style over the 8 probed
+  rows). Kit mirror refreshed under `batch8106-n-thirdimpl/` (46-entry
+  manifest, byte-identical to the published files). Observed
+  HEAD-before-push for this update is recorded in the commit message.
