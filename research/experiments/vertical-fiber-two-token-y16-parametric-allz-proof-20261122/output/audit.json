@@ -17,6 +17,12 @@
       "ordered_points": 442200,
       "points": 884400
     },
+    "C11r": {
+      "bad": 0,
+      "desc": "independent raw-double-recursion census ledger (census_rows.py third implementation, census.txt) re-derived from cand16 row by row, R=0..x+z+18, z=0..79, x=16..70 (T/P sets, Thue-Morse index, tail)",
+      "points": 446600,
+      "rows": 4400
+    },
     "C12": {
       "bad": 0,
       "desc": "deep closed grid z=0..120 x=16..120 R<=x+z+18",
@@ -26,6 +32,13 @@
       "bad": 0,
       "desc": "single_token/y=15-child/x=16 merger raw anchors",
       "points": 41834
+    },
+    "C1d": {
+      "anchor_bad": 0,
+      "bad": 0,
+      "desc": "published z=8/9/10/15/16/17 uniform slices (y=16) vs cand16, x=16..159 R<=x+61; + low-R single-token reduction R<=z+6 (z=15..17)",
+      "lowR_bad": 0,
+      "points": 137808
     },
     "C2": {
       "bad": 0,
@@ -79,8 +92,10 @@
   "checks_run": [
     "C1",
     "C11",
+    "C11r",
     "C12",
     "C1b",
+    "C1d",
     "C2",
     "C2b",
     "C3",
@@ -105,9 +120,9 @@
   "experiment": "vertical-fiber-two-token-y16-parametric-allz-proof-20261122",
   "family": "H(R;(x,16);z), z>=0, x>=16, R>=0",
   "overall": "PASS",
-  "stage": "part1 (12-check machine; the promotion stage part2 adds the published fixed-z slice anchors C1d and the independent census.txt consumer C11r; census parts re-anchored via bounded-memoization twins on a memory-capped host)",
+  "stage": "part2 (C1d published-slice anchors at y=16 and the independent census.txt consumer C11r added to the part1 12-check machine; census parts re-anchored via bounded-memoization twins on a memory-capped host)",
   "total_bad": 0,
-  "total_points": 6331848,
+  "total_points": 6916256,
   "type_count": 394686,
-  "verifier_sha256": "79e21b2d59e02cc060c7f55065a9bc68e961ba173cfa5b0f9248b6719d85f4f7"
+  "verifier_sha256": "bdf4fe04253313ab43b3eeff2cce6ebcea701248710015d3bdb4d47fee4eb6a4"
 }
