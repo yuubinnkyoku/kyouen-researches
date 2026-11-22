@@ -764,3 +764,41 @@ repo diverged:
   11x11 empty board, the 19 central-reply roots and classes
   1518/2634 all remain UNKNOWN. Observed HEAD-before-push for this log
   update is recorded in the commit message.
+
+## Session continuation 12 (2026-11-22, verifier): Part W batch-8 h045 third-implementation spot verification - the Part V open declaration fulfilled
+
+- Immediately after the Part V publication (continuation 11), the same
+  session executed the third-implementation spot verification of the
+  batch-8 rows that Part V had declared open, without a separate prior
+  declaration (the open declaration was already on record in
+  continuation 11; list_commits confirmed no competing claim on main
+  before the push).
+- Experiment `research/experiments/n11-centralreply-closure-batch8-h045-thirdimpl-20261122/`,
+  published in 3 commits: scaffold `b31abeeb` (README + scripts 6 +
+  inputs 9), targets `c5ebc2fc` (8 files), verification tail `a1ba4ccf`
+  (anchors 4 + negatives 2 + rules-gate + status.log + audit-summary +
+  MANIFEST 33 entries). Fetch-back 34/34 byte-identical
+  (commit-pinned raw URLs, curl + cmp).
+- Sources pinned to the published batch-8 raws (commit `1f127fb8`,
+  batch-keys sha `5c42a950...`); scripts byte-identical to the batch-9
+  Part T kit pins except the batch-8-adapted input maker and the audit
+  schema name.
+- 14 solver runs at max 4 parallel, a/b 2-pass each: h045 WIN 1 at
+  7,348,868 expansions / 4,145,900 ttHits (a/b identical, agreeing with
+  the replica df-pn WIN 6,366,900 nodes); h018 LOSS 2 (1,756,741 /
+  1,066,681); h025 LOSS 2 (13,169,795 / 7,161,043); h026 LOSS 2
+  (4,938,236 / 2,884,833); anchors k02a WIN 9,106,337 / 4,991,527 and
+  l1a LOSS 7,660,602 / 3,951,175 identical to the published Part T
+  measured values; negatives ng1/ng2 GATE_FAIL wording match;
+  runlimit/wall-inconclusive 0. Rules gate: quads 95,670 == replicas,
+  triples 195,044, mismatches 0. Audit 71/71 gates PASS, two runs
+  byte-identical.
+- With Part W, all 7 unconsumed closure WINs (b018, d002, e002, f017,
+  g018, j033, h045) have third-implementation spot verification on
+  record. Verdict consumption remains unchanged: none consumed, the
+  scrutiny owner (C++ second-implementation gate pin `9193f5b6...`)
+  is still pending. The standard 11x11 empty board, the 19
+  central-reply roots and classes 1518/2634 all remain UNKNOWN.
+- Note Part W amendment published at note commit `db9805bb`
+  (fetch-back byte-identical). Observed HEAD-before-push for this log
+  update is recorded in the commit message.
