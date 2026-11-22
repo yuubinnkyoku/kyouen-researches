@@ -512,3 +512,42 @@ Part N がbatch 8 (class 2634) に使用済みのため、本amendmentをPart O�
   存在する場合は着手しない。
 - 本amendment observed HEAD-before-push: `0fddb890` (Part O実験3コミット
   `eb061b60`/`0dfdc4df`/`0fddb890` 直後のmain)。
+
+## Part P (verifier, amendment 2026-11-22): batch 2 (class 23963, 最初のfree class) 消費済み48行の第三実装交叉検証 (verdict不消費・事後補強)
+
+class 23963 (batch 2, Part C) は48/48全LOSS (2-pass node-exact, budget 15M) で
+完走し、fail-closed merge + refresh再監査により最初のBoard検証free class
+(33番目) として閉鎖・消費済み。Part G (batches 1/3/4/5)・Part K (batch 6)・
+Part O (batch 7全51行) に続き、**消費済みevidence bundleに対する事後の
+cross-implementation補強**として、batch 2の48行 (c001-c048) を第三実装
+(`third_impl.js` pin `08ea958f...`) でverdict-level交叉検証する。Part Oと
+完全同一の規約・前提ゲート・停止規則を用いる。
+
+- 対象: `research/experiments/n11-centralreply-closure-class23963-batch2-thirdimpl-reverify-20261122/`。
+  target 48行 (c001-c048, published正本rawでは全行result 2 LOSS・2-pass
+  node-exact)・anchor 2行 (k02a/l1a, Part G/K/Oと同一のpublished第三実装値
+  9,106,337/4,991,527 と 7,660,602/3,951,175)・negative 2行 (ng1/ng2)。
+  入力はpublished batch-2 raw (kit鏡像はrepo正本とbyte一致を機械確認の上
+  使用) から `make_inputs_batch2.py` がfail-closed導出 (手転写ゼロ・
+  raw 2-pass一致assert・key/legalをpublished batch-keys.jsonと機械照合・
+  replica verdictは全行LOSS 2を要求)。
+- 前提ゲート (いずれも必須・fail-closed): script pin 3種 (`08ea958f...` /
+  `c8c52528...` / `84585617...`)、rule-engine gate (verify_tbl.js: quads
+  95,670・triples 195,044 mismatches 0)、anchor 2行の本ホスト再現が
+  published値と完全一致、negative 2種の文言一致GATE_FAIL。
+- 手法: 1行1プロセス、cap 300M expansions、wallcap 240s、1行2回 (a/b)
+  のdeterminism gate (result/expansion/ttHits/reason同一必須)。
+  wall超過 (runlimit) はhonest wall-inconclusiveとして記録し検証主張と
+  しない。
+- **消費済み注意**: 23963の48行は既に正本cacheへ消費済み。本検証のcleanな
+  verdict一致はevidence bundleの事後補強文献のみを作成する。cleanな
+  不一致 (divergence) が発生した場合はdivergence evidenceとして記録する
+  が、verdict・正本cacheを本検証で書き換えない (訂正は別個のfail-closed
+  手続き + scrutiny owner判断を要する)。
+- 主張の範囲: verdict不消費・閉鎖・被覆・rootの新主張なし。標準11×11
+  空盤・19 central-reply roots・全closure classはUNKNOWNのまま。
+  nodes/expansionsを勝敗として読まない。
+- 並走との不接触: batch-2由来のpublishedキーのみを扱い、進行中のbatch 8
+  (Part N, class 2634) と無関係。同一スコープの宣言がmainに存在する場合は
+  着手しない。
+- 本amendment observed HEAD-before-push: 実行時の最新mainをコミットメッセージに記録。
