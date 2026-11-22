@@ -63,3 +63,47 @@ record here rather than by rewriting history.
 
 see `output/status.log`. The standard 11x11 empty board, the 19 central-reply
 roots and class 2634 remain UNKNOWN throughout. Nodes are not verdicts.
+
+## Takeover (note Part U) provenance note
+
+The Part N declaring session stalled mid-run: its last kit-mirror write is
+06:54:32Z (status rows i001-i025, i026.p1 complete, i026.p2 truncated at the
+crash), and no batch-8 rows were published to main after the declaration
+commit `fdc46d98c1` (2026-11-22T06:10:23Z). The note Part U takeover session
+resumed the batch under the identical protocol after machine-verifying the
+mirror evidence (jsreplay pin, 51/51 input byte-identity, 25 mirrored rows
+2-pass node-exact, canonical-cache 0 hits re-check, val-gate 4/4 node-exact on
+the takeover host, and an h001 cross-host spot check). Row provenance:
+
+- h001-h025: declaring-host runs, published here byte-untouched from the kit
+  mirror (renamed i->h only). All 2-pass node-exact. h002 is an
+  honest budget exhaustion (result 0, UNKNOWN). h001 cross-host spot check:
+  fresh 2-pass on the takeover host = LOSS 2 / 4,231,707 nodes, node-exact
+  vs the declaring host.
+- h026: fresh cold 2-pass on the takeover host, LOSS 2 / 4,284,312 nodes,
+  node-exact identical to the declaring host's rescued complete p1 (both
+  preserved under `output/rescue-declaring-host/`).
+- h027 onward: fresh cold 2-pass on the takeover host under the pinned
+  protocol (budget 15M, order=count, HARD-STOP rc=42, WIN-HALT rc=45).
+
+## Result
+
+Pre-registered WIN-HALT (rc=45) fired at **h045** (45/51 probed: 43 LOSS rows
++ h002 honest exhaustion UNKNOWN + 1 WIN row h045; h046-h051 untouched).
+h045 = s5_index 103558, key `[4035225266258182144, 64]`, legal 85,
+probe_order 325: result 1 (WIN), nodes 6,366,900, 2-pass fresh cold
+node-exact on (result, nodes, legal), wall 32s/31s. Like the six earlier
+closure WINs (b018/d002/e002/f017/g018/j033), this WIN is **unconsumed** and
+the adoption decision stays with the scrutiny owner (C++ second-implementation
+gate precedent pin `9193f5b6...`); the batch makes no claim beyond the honest
+row records. The all-children-LOSS closure route for class 2634 is refuted if
+the WIN is adopted; no refutation, coverage, closure or root claim is made
+while it stays unconsumed (and h002 UNKNOWN independently blocks any
+all-children-resolved closure claim at the 15M budget). Batch tally after
+batch 8: 9 batches -> 7 WIN-HALTs, 2 clean (23963: 48/48, 10324: 51/51) -
+a scheduling observation only, never a verdict.
+
+## Status
+
+see `output/status.log`. The standard 11x11 empty board, the 19 central-reply
+roots and class 2634 remain UNKNOWN throughout. Nodes are not verdicts.
