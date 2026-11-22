@@ -4358,3 +4358,51 @@ publication計17ファイルがcommit固定rawでsha256/cmp全件一致)。
 - 本status update observed HEAD-before-push: `1afbc6a7` (push直前に
   note blob sha1 (`004d69a762e2ccdb028a726837dfcef9bb2170c1`) を再照合し、
   競合時は再fetchして本節を追記し直す)。
+
+## Part BD (verifier, declaration 2026-11-22): Part BC (batch-14residual 10-LOSS採用) 全pipelineの独立host再実行検証 (実行前に宣言・verdict不消費)
+
+Part BC (note宣言amendment commit `9165ae39`・publication commits `168a44ae`/`f2405c0e`/`1afbc6a7`・status update直前のnote blob lock `004d69a7…`) が出版した
+batch-14residual (class 23101) 残余10-LOSS canonical採用+reauditの全pipelineを、
+published正本bytesのみから独立host (本host) で再実行・機械検証する verifier Part
+を宣言する。同一スコープの対抗宣言/amendmentが本amendmentより先にmainに存在
+する場合は本宣言を破棄して着手しない。
+
+- 対象: `research/experiments/n11-centralreply-class23101-residualloss10-adoption-second-verification-20261122/`。
+- 再実行 (全入力はpublished byte・commit固定rawでfetch-back sha検証済みの読み取り
+  のみ): maker `make_increments_residual10.py` (published `6c57f2d0…`) x3 →
+  increment/manifestがpublished byte (`c3f201a6…`/`f7287b7b…`) と一致すること。
+  byte-pin merger `90711961…` (AV/BC両出版でbyte同一確認済み) x3 + selftest →
+  canonical 6,182行 (published `0b594f7e…`) byte一致・merge-audits 3回byte一致。
+  `refresh_adoption_23101resid.py` (`d6bb2374…`) x3 → reaudit 3出力
+  (`5f3a09c6…`/`52ec3d4b…`/`1f54065a…`) + worklist (`fe71be60…`) byte一致。
+  `compare_deltas_batch14residual_adoption.py` (`48e88838…`) x3 → delta json
+  (`62de8c16…`) byte一致・全gate PASS。本hostのpreflightとしてpublished Part AV
+  refresh (`1b49cc07…`) を先行再実行しBASE 4出力 (`a0043c76…`/`e60c1088…`/
+  `4c7ec5d7…`/`667dc815…`) がbyte再現したことを確認済み (環境一致・verdict不消費)。
+- 独立解析 (published BC機材に依存しない自前minimal checker・BC出力の値は使わない):
+  increment 10行のraw p1/p2 + status.log PASS行 + row-audit + batch-keys + input CSV
+  の3-way再導出・merged cache == published BASE 6,172 (`a5540811…`) ∪ increment 10
+  の集合演算検証 (WIN 158 / LOSS 6,024・conflict 0・重複0)・graph s4_cost + cache +
+  update8 receiptからclass 23101のscenario-unknownがちょうど{s5 745184}
+  (=未採用q042 WIN行・key `1152921505747697664:1032`) であること・holder classの
+  減算 (23101: 11→1・他メンバークラス各−1)・update8 resolved 80不変の独立再計算・
+  closure候補表churn (退出 `22149`/新規 `23965`) とper-root被覆全行不変
+  (root 27 119/119) のBC/BASE published CSV間の独立照合・worklist総数
+  `64,888→64,872` の再計算・joint greedy非単調性 (`35,645→38,978`) を1-pass値と
+  improve-pass逐次軌道 (BASE/BC両world) で計測する計装コピーにより分解し、
+  決定論性と局所探索収束点由来であることを機械記録する (plan estimate・勝敗ではない)。
+- fail-closed改ざんbattery (5種: maker raw node改ざん捕捉・merger WIN/LOSS conflict
+  捕捉・increment verdict反転merger捕捉・extractor manifest row_counts改ざん捕捉・
+  refresh cache sha改ざん捕捉・復元byte一致の確認込み)。
+- verdict不消費: 本Partは読み取りと再実行のみで canonical cache・refresh出力への
+  書込みなし (本Partの出力は新規dir配下のみ)。17 unconsumed closure WIN
+  (b018/d002/e002/f017/g018/j033/h045/z003/n005/n006/p002/p002/p003の15 + q042 +
+  AY v001/v002) は読み書きとも不接触・採用判断 scrutiny owner (C++第二実装 gate
+  pin `9193f5b6…`) 不変。q042 WIN行は採用・却下ともにならない。
+- 標準11×11空盤・19 central-reply roots・class 23101 (未採用q042 WIN 1子)・全キー
+  は本Partのどの時点でもUNKNOWNのまま。nodes数・worklist数・greedy数を勝敗として
+  読まない。
+- 並走との不接触: AY batch-18 (残51キー)・batch-19選定・y16 fastレーン・K1058レー
+  ン・Part BB/BC成果物 (読み取りのみ) に書込みなし。
+- 本amendment observed HEAD-before-push: `b706b21448041c8d6788fd9803059ae675051595` (push直前にnote blob sha1
+  (`a564e191ef9eb5b369dee4b1d1a7c25e9a47f73a`) を再照合し、競合時は再fetchして本節を追記し直す)。
