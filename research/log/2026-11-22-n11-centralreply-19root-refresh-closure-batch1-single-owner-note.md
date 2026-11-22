@@ -1864,3 +1864,51 @@ Part G/K/O/P/T/W/AA/AD と同一規約で単一オーナーとして宣言する
   未使用を確認済み。同一スコープの宣言がmainに存在する場合は本宣言を破棄
   して着手しない。
 - 本amendment observed HEAD-before-push: 実行時の最新mainをコミットメッセージに記録。
+
+## Part AG 出版status update (2026-11-22, verifier): batch 13 p002/p003 第三実装交叉検証 実行・出版済み - 12のunconsumed WIN全て第三実装検証済みに (verdict不消費)
+
+Part AG宣言 (本note Part AG節・commit `e84242c8`・fetch-back byte一致) に基づき実行・
+出版した。宣言通りverdict不消費・verdict-level文献作成のみ (採用判断は引き続き
+scrutiny owner、C++第二実装 gate pin `9193f5b6...` 前例・不変)。
+
+- 実行結果 (machine-verified): target 4行すべてclean・a/b 2回実行で同一
+  (result/expansion/ttHits/reason)。**p002/p003 WIN一致** (p002: 第三実装
+  12,593,747 expansions / 7,021,485 ttHits vs replica df-pn WIN 10,770,254
+  nodes; p003: 8,626,319 / 4,959,871 vs 7,489,273 nodes)、p001/p004 LOSS一致
+  2/2 (5,334,954 / 3,020,029と2,593,393 / 1,571,815 vs replica 4,631,275 /
+  2,291,059 nodes)。anchors k02a (WIN 9,106,337 expansions / 4,991,527 ttHits)
+  と l1a (LOSS 7,660,602 / 3,951,175) は本ホスト再現値がpublished第三実装値
+  (Part G/K/O/P/T/W/AA/AD) と完全一致。negative ng1/ng2は文言一致GATE_FAIL。
+  rules gate (quads 95,670 == replica / triples 195,044・mismatch 0) PASS。
+  audit.py (fail-closed, schema `batch13-wins-thirdimpl-audit-v1`, 2回実行
+  byte一致) は **71/71 gates PASS・divergence 0・wall-inconclusive 0**。
+- 入力はpublished batch-13正本 (raw 4キー×p1/p2 8件・status.log、chunk commit
+  `b4b55ec8`からcommit-pinned raw CDN取得) から `make_inputs_batch13.py`
+  (Part AD版をadapt・schema/EXP文字列はbatch13に書き換え・Part AEテンプレート
+  警告対応) がfail-closed導出 (2-pass一致assert・status.log PASS 4行照合・
+  `p003 WIN-HALT`/`p002 WIN-HALT`停止行とRUNNER-STOP/RUNNER-EXIT行の存在assert・
+  batch-keys.json (sha256 `c6c56a1a...`, scaffold `90ee1c87`正本) との
+  key/legal機械照合・class_index 16930 assert・導出input CSVがpublished
+  batch-13 input CSV 4本とbyte一致するassert・手転写ゼロ・全ゲート通過)。
+- 実行開示 (honesty): runner (`runner-all-thirdimpl.sh`) のnegative 2連結が
+  `&&`のため、ng1 (GATE_FAILでrc=1は設計どおり) の時点でng2がrunner内では
+  実行されず、runner exit直後に本ホストで単独実行してからauditした (README
+  Honesty recordに記載・audit gateは両negativesに文言で照合)。
+- 出版: `research/experiments/n11-centralreply-closure-batch13-wins-thirdimpl-20261122/`
+  3コミット合计35 files (scaffold: README + pinned scripts 7 + machine-derived
+  inputs 9 → targets a/b 8 → anchors 4 + negative 2 + rules-gate + status.log +
+  audit-summary.json + MANIFEST 10)。fetch-back: commit固定raw URL + cmpで
+  **全35 files byte一致**・MANIFEST-sha256.txt記載34エントリが34/34 sha256一致
+  を確認済み。sourcesは再出版なし (published raws由来・READMEにsha記載)。
+- 意味: 12つのunconsumed closure WIN
+  (b018/d002/e002/f017/g018/j033/h045/z003/n005/n006/p002/p003) の**全てが
+  第三実装によるverdict-level交叉検証済み**になった。ただし**verdict不消費は
+  不変**。p002/p003のWINは引き続きscrutiny owner待ち。p005-p052 (48キー) は
+  未着手のまま。**標準11x11空盤・19 central-reply roots・class 16930は本検証の
+  どの時点でもUNKNOWNのまま。nodes/expansions数を勝敗として読まない。**
+- open items (将来の別宣言で実施): batch-13 4 probed行のif-adopted分解
+  (Part V/R/AB流・WIN-only p002/p003 / LOSS-only p001/p004 / full 4行)・
+  batch-12 8 probed行のif-adopted分解 (n005/n006・Part AD open item)。
+  batch 14 (class 23101, Part AF) は並走がprobe継続中で本レーン非接触。
+- 本status update observed HEAD-before-push: 実行時の最新mainを
+  コミットメッセージに記録。
