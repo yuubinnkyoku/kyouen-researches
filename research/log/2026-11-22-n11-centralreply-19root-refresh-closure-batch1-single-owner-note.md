@@ -2604,3 +2604,34 @@ unknown 52, groups (16,56)+(16,64)) の52キーを2-pass fresh cold replay
   **UNKNOWNのまま**。nodes数を勝敗として読まない。
 - 本status updateのobserved HEAD-before-push: `c2178ac1` (note blob sha1
   ロック `f36db386...` で更新、fetch-backで追記確認)。
+
+
+## Part AO (read-only what-if analysis, declaration 2026-11-22): batch-16 (class 10687) 52 LOSS行 IF-ADOPTED increment + scenario refresh分解 (verdict不消費)
+
+batch 16 (Part AM) は52/52全LOSS (2-pass node-exact, 枯損0, WIN 0) で完走・
+出版済み (3コミット `14092b5e`/`0aac7e0c`/`d349e8f8` + erratum `572dcbc3`、
+fetch-back 180/180 byte一致、Part AM status update `7711aab9`)。
+Part AH/AI/AN と同一の機材とfail-closed規約で、batch-16の52 LOSS行すべてを
+what-if incrementとして採用する単一シナリオを計算する。
+
+- 対象: `research/experiments/n11-centralreply-class10687-loss52-ifadopted-20261122/`。
+- 対象シナリオ: **PLOSS52** = BASE (canonical 6,027行 `95e868d6…`) + batch-16
+  52 LOSS行。WIN行ゼロ・枯損行ゼロのため「全probed行採用 == 52 LOSS行」を
+  increments manifestで機械表明する (batch-15 Part ANと対称の単一シナリオ構造)。
+- 入力: published正本のみ (batch-16 raws 104 = 完全p1/p2ペア + declaring-host
+  status.log + batch-keys 52キー sha256 `465cf447…`、各ファイルfetch-back
+  byte検証済み)。increments makerは2回実行しbyte一致必須。mergeはsha-pinned
+  s5_union_merge (`90711961…`, selftest PASS) を2回実行しbyte一致必須、
+  WIN/LOSS conflict 0 gate。scenario refresh はpinned Part Y refresh script
+  (`88671526…`) の最小adapt (docstring / scenario cache path / cache sha
+  expectationのみ) を2回**直列**実行し (batch-13並列OOM再発防止) 3出力とも
+  run間byte一致必須。delta extractorはclass_status_countsをgraph + update8 +
+  cacheから再計算し、BASE (published summary `25987add…`) とPLOSS52両方の
+  summaryと一致するまでfail-closed。
+- verdict不消費・solver探索なし・canonical cache不変更。本分解はwhat-if計画
+  数量のみを生む。クラス閉鎖の判定・root被覆監査・第三手securedの主張は行わない
+  (それらはPLOSS52計上後のrefresh再実行・独立監査が別途担う)。
+- 標準11×11空盤・19 central-reply roots・class 10687他全classはどの時点でも
+  **UNKNOWNのまま**。nodes数を勝敗として読まない。
+- 本宣言 observed HEAD-before-push: `6af95d9c` (push直前にnote blob sha再照合、
+  競合時は破棄し着手しない)。
