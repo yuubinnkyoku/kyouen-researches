@@ -103,3 +103,13 @@ budget, cold runs only.
   with the two-pass evidence now fully in hand. The standard 11x11 empty
   board, the two-stone root {60,27}, and the third moves {100,108} remain
   UNKNOWN throughout. Nodes and pass counts are never verdicts.
+
+### Resume checkpoint addendum: merge-layout byte-copies (s6w.p1/s6w.p2)
+
+- `output/raw/s6w.p1.out` and `output/raw/s6w.p2.out` are byte-copies of
+  `output/raw/s6w.run1.p1.out` and `output/raw/s6w.run2.p1.out`
+  respectively (the two cold determinism runs of this session, sha-identical
+  to their source files), published only so that
+  `scripts/build_merged_cache.py` can find the S6-witness pair under its
+  expected pass1/pass2 filenames. Content and provenance remain the run1 /
+  run2 files; the copies carry no new computation.

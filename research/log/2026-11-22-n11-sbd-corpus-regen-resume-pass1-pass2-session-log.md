@@ -108,3 +108,53 @@ budget 15,000,000)
   `32d436ae9` (s6w pair), `d8575d50a8`, `67ae97a243`, `51d4fa7155`,
   `378a98f592` (pass2 checkpoints), plus this session's final commit
   (README + consistency table + this log).
+
+## Addendum (post-log pre-verification of the merge pipeline; nothing published from it)
+
+- Motivation: de-risk the next run's merge stage. Nothing below consumed or
+  published any verdict.
+- The unpublished `scripts/build_merged_cache.py` was executed on a local
+  scratch tree (repo-path-pinned; base cache, geometry.json.gz,
+  s5_evidence_policy.py, quarantine registry all sha-verified against the
+  published pins) with exactly two deviations, both documented here and NOT
+  published: (1) `RAWS2` repointed from `output/raw-pass2/` to `output/raw/`
+  (the actual pass-2 checkpoint location; one-line path diff, logic
+  identical); (2) a scratch-only placeholder for `k012`'s pass-2 raw
+  (declared out of this session's scope), which lets the loop run but means
+  the k012 determinism pair was NOT actually exercised. The scratch pass
+  also used byte-copies `s6w.p1.out`/`s6w.p2.out` of the run1/run2 raws to
+  satisfy the script's expected filenames.
+- Result: every fail-closed gate that does not depend on k012's pass-2 raw
+  PASSED (canonical/safe/quarantine-free 101-key geometry checks with
+  Board-derived legal counts; input/raw structural checks; 100-row
+  determinism; s6w pair; fresh/history agreement; base cache integrity;
+  derived k012 row shape; merged-cache construction: 5,756 + 101 = 5,857
+  rows, strictly sorted, no duplicates, no quarantined keys, no base
+  conflict).
+- Scratch merged-cache sha256 was `4fee9d5e...` and the scratch manifest
+  records 100 direct-settled rows + the 1 derived TARGET_S5 row
+  (verdict 2, nodes 0). The scratch outputs and scratch manifest were
+  deleted (they contain the k012 placeholder), so this sha is only an
+  expected-byte-target candidate for the merge run: the canonical merged
+  cache is expected to be byte-identical IF the merge run re-executes the
+  unpatched script with a true `k012.p2.out` whose row is the same honest
+  result 0 / nodes 15,000,000 exhaustion (the k012 cache row is derived and
+  does not depend on its pass-2 raw, but the determinism gate must truly
+  run).
+- Merge-run checklist (next session, with its own declaration):
+  1. Run `k012` pass-2 fresh cold (budget 15M; expected result 0,
+     nodes 15,000,000; ~2-3 min), publish `output/raw/k012.p2.out`.
+  2. Repoint `RAWS2` in `scripts/build_merged_cache.py` to `output/raw/`
+     (one-line path diff, logic identical, record both shas), or mirror
+     the raws into `output/raw-pass2/`.
+  3. Execute `gen_s6_witness_audit.py` (witness membership / odd-stone
+     AND polarity machine check for the derived row).
+  4. Execute the unpatched merge; publish merged cache + merge-manifest;
+     compare the merged-cache sha256 against the scratch pre-verification
+     candidate above (identical bytes expected; any divergence is a
+     publication blocker to investigate first).
+  5. Only then the Oct 12 audit pipeline (audit_frontier, audit_root_loss,
+     reclassify, cardinality, analyze) and the class-closure /
+     119/119-coverage / root-{60,27} statements under their own gates.
+- No verdict was consumed by this addendum. The standard 11x11 empty board,
+  the two-stone root {60,27}, and the third moves {100,108} remain UNKNOWN.
