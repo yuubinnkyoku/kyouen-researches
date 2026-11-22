@@ -1,0 +1,19 @@
+# Part AZ third-impl execution status (batch-18 WIN rows v001/v002)
+# decl: note amendment commit a5ea2aa0c82eea5803fb9dd7ce78f5181047f611 (Part AZ, declared before execution; observed HEAD-before-decl-push e23ad91a0cc676cfa37b411ce7a1da9963c3eddc)
+RUN key=ng1 tag=a kind=negative rc=1 out=output/negative/ng1.a.out third,ng1a,5,88,,GATE_FAIL,"legal count mismatch: derived=87 declared=88"
+RUN key=ng2 tag=a kind=negative rc=1 out=output/negative/ng2.a.out third,ng2a,6,87,,GATE_FAIL,"stone count mismatch: bits=5 declared=6"
+RUN key=k02a tag=a kind=anchor rc=0 out=output/anchors/k02a.a.out third,k02aa,5,87,87,1,9106337,4991527,26.57,1297036692683751424,68157440,clean,quads=95670,ttOverwrites=4912053,memoPower=22
+RUN key=k02a tag=b kind=anchor rc=0 out=output/anchors/k02a.b.out third,k02ab,5,87,87,1,9106337,4991527,26.66,1297036692683751424,68157440,clean,quads=95670,ttOverwrites=4912053,memoPower=22
+RUN key=l1a tag=a kind=anchor rc=0 out=output/anchors/l1a.a.out third,l1aa,5,116,116,2,7660602,3951175,22.56,13019119616,16448,clean,quads=95670,ttOverwrites=3466722,memoPower=22
+RUN key=l1a tag=b kind=anchor rc=0 out=output/anchors/l1a.b.out third,l1ab,5,116,116,2,7660602,3951175,22.48,13019119616,16448,clean,quads=95670,ttOverwrites=3466722,memoPower=22
+RUN key=v001 tag=a kind=target rc=0 out=output/targets/v001.a.out third,v001a,5,83,83,1,6558484,3610051,18.70,1154610354467115008,64,clean,quads=95670,ttOverwrites=2371301,memoPower=22
+RUN key=v001 tag=b kind=target rc=0 out=output/targets/v001.b.out third,v001b,5,83,83,1,6558484,3610051,18.77,1154610354467115008,64,clean,quads=95670,ttOverwrites=2371301,memoPower=22
+RUN key=v002 tag=a kind=target rc=0 out=output/targets/v002.a.out third,v002a,5,84,84,1,9204329,5027672,26.67,3459890413727387648,64,clean,quads=95670,ttOverwrites=5010038,memoPower=22
+RUN key=v002 tag=b kind=target rc=0 out=output/targets/v002.b.out third,v002b,5,84,84,1,9204329,5027672,26.12,3459890413727387648,64,clean,quads=95670,ttOverwrites=5010038,memoPower=22
+AZ-SCAFFOLD maker gates PASS
+targets 2 anchors 2 negatives 2
+  v001 [1154610354467115008, 64] legal 83 s5 153671 membership 2 replica_result 1 replica_nodes 5656151 expect_third 1
+  v002 [3459890413727387648, 64] legal 84 s5 207534 membership 3 replica_result 1 replica_nodes 7898204 expect_third 1
+RUNNER-NOTE: every solver process on this host ran sequentially (one at a time); the Part AX observation stands (concurrent solvers halve the per-solver CPU quota on this host). Battery order: negatives (fail-closed design check) -> anchors (published third-impl val battery) -> targets.
+RUNNER-NOTE: negatives ng1/ng2 both fail-closed with the designed wording before any target ran; anchors k02a (WIN 9106337/4991527) and l1a (LOSS 7660602/3951175) reproduced the published third-impl values node-exact (a/b pairs identical) before any target ran.
+AZ-AUDIT audit.py 53/53 gates PASS, run twice byte-identical, verdict agreements 2/2 (WIN=2, replica=third for v001/v002), inconclusive 0, total third-impl expansions pass-one 15762813.
