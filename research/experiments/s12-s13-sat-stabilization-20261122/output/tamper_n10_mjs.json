@@ -1,0 +1,44 @@
+{
+ "n": 10,
+ "k": 9,
+ "engine": "bareiss BigInt, column order [x,y,x^2+y^2,1]",
+ "checked_safe_quadruples": 126,
+ "violating_quadruples": 0,
+ "blocked_empty_points": 83,
+ "uncovered_points": [
+  [
+   6,
+   6
+  ],
+  [
+   0,
+   7
+  ],
+  [
+   0,
+   8
+  ],
+  [
+   4,
+   8
+  ],
+  [
+   1,
+   9
+  ],
+  [
+   2,
+   9
+  ],
+  [
+   3,
+   9
+  ],
+  [
+   5,
+   9
+  ]
+ ],
+ "min_abs_nonzero_determinant": "8",
+ "verdict": "NOT-MAXIMAL-SAFE"
+}
