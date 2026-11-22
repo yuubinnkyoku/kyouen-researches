@@ -1654,3 +1654,82 @@ fetch-back 180/180 byte-identical at that commit). Batch-16 remains the
 fourth clean all-LOSS batch; no verdict, count or claim of the batch itself
 is affected. The note Part AM status update carries no tally sentence and
 needed no correction.
+
+
+## Continuation 28 (2026-11-22, this host): Part AO batch-16 (class 10687) 52-row all-LOSS if-adopted decomposition published - PLOSS52 single scenario, fetch-back 16/16, verdicts NOT consumed
+
+Part AO (declared as note amendment `ede3eb42`, observed HEAD-before-push
+`6af95d9c`, no counter-declaration) is complete. The single scenario
+PLOSS52 = BASE (canonical 6,027-row cache `95e868d6...`) + all 52 LOSS
+rows of batch-16 was computed with the doubled-run discipline: increments
+maker twice byte-identical (52 rows, `95345a5b...`), sha-pinned union
+merger (`90711961...`, selftest PASS) twice byte-identical (6,079 rows,
+WIN 158 / LOSS 5,921, conflicts 0, `342e8683...`), scenario refresh twice
+serial (~60 s each; all 4 outputs byte-identical:
+`7fd15927...` / `7405699e...` / `ec52a56d...` / worklist `3b28ba59...`,
+the worklist itself unpublished per Part AH precedent), delta extractor
+three times byte-identical (`dd6a01ef...`). The extractor re-executes the
+published refresh class pass (including Board fail-closed child
+verification of every free candidate) and asserts class_status_counts,
+known-universe and per-root free-coverage equality against the published
+BASE and PLOSS52 summaries before emitting any delta.
+
+Published as one commit `5a5e56d8`: 16 files under
+`research/experiments/n11-centralreply-class10687-loss52-ifadopted-20261122/`
+(scripts 4, output 6 incl. the scenario cache and delta JSON, loss52
+refresh outputs 3, README, status.log, MANIFEST-sha256.txt), fetch-back
+16/16 byte-identical. Note Part AO status update appended as `e762457e`
+(blob sha1 lock `059ba5aa...` -> `7b14c2ac...`, fetch-back
+byte-identical, Part AQ declaration section untouched).
+
+Machine-measured deltas (scheduling only, no verdict consumed):
+- Zero flips: a zero-WIN increment can only free. Transition ledger:
+  excluded 390 / excluded_now 23 / free_now 35 all unchanged,
+  unknown->free_now exactly 1 (class 10687), unknown->unknown 34,500.
+- Class 10687 becomes a Board-verified what-if free candidate
+  (free_now 35->36 projection; NOT a closure claim). Its 52 BASE-unknown
+  cost children are machine-checked to be exactly the 52 increment keys;
+  every one of the 143 graph holder classes satisfies
+  scenario_unknown_now == BASE unknown_now - own increment membership
+  (class 10661 53->52, class 10695 own 2).
+- Newly free thirds {(root 16, third 56), (root 16, third 64)} are
+  machine-identical to the batch's groups_served_full; the (central,16)
+  row is the only changed per-root coverage row (free 14->16, uncovered
+  105->103, free+uncovered==119 held); root 27 baseline stays 119/119.
+- update8 advances by exactly one requirement (s5 376421): resolved
+  75->76, remaining 31,784->31,783, win_hit_groups 0 unchanged.
+- Scheduling quantities: joint greedy 35,242->38,522 (heuristic
+  re-selection after two groups left the non-free set; NOT a coverage
+  regression), probe worklist 65,154->65,097 (-57), closure candidate
+  table 811->810 rows (class 10687 machine-checked absent); the rank-14
+  row passes to class 10661 (mask `[1152921505697431552, 0]`, unknown
+  52, (24,30)-range groups) - the machine-identified next all-LOSS
+  batch candidate.
+
+Erratum recorded: Continuation 27's batch-keys sha abbreviation
+`465cf44721a661ce94babeb12...` is a transcription slip; the correct full
+value is
+`465cf44721a661ce94babe12212c26c697ebb346392548fcdafaa9d3e8c3dd4e`.
+The full value was already correctly published in the batch-16
+README/MANIFEST and the Part AM note status; no claim or cross-check was
+affected. (Found by machine grep while preparing this continuation; the
+Part AO note status update carries the same record.)
+
+Operational standard confirmed this round: publication fetch-back over
+the public repo is fastest and most reliable via bash curl to
+commit-pinned raw.githubusercontent.com URLs (<commit-sha>/<path>) with
+sha256sum comparison against the pushed MANIFEST/local files; the
+sandbox connector path still rate-limits under parallel loads, and
+main-ref raw URLs can serve CDN-stale bytes - always pin the publication
+commit sha.
+
+Not touched: batch-14 (Part AQ takeover session, in flight), batch-15
+(Part AN), all published raws. The 14 unconsumed closure WINs still
+await the scrutiny owner (C++ gate pin `9193f5b6...`). Class 10687 is
+NOT closed: consumption of the 52 LOSS rows still requires a fresh
+declaration (Part AP-equivalent: canonical increment + refresh re-run +
+independent audit), and the closure candidate table must be re-read
+from the latest main before selecting any next batch (batch-14 and
+batch-17 candidates compete). The standard 11x11 empty board, the 19
+central-reply roots, class 10687 and every other class remain UNKNOWN;
+nodes are bookkeeping, never verdicts.
