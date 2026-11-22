@@ -1,0 +1,148 @@
+{
+ "closed_form_candidate": "cand16 (in_T16 value-2 table / in_P16 value-1 table)",
+ "date": "2026-11-22",
+ "declaration": "single-owner note research/log/2026-11-22-y16-two-token-skeleton-single-owner-note.md (commit e0fbd99d, declared BEFORE the probe run; all pre-registered predictions confirmed at fit level)",
+ "determinism": {
+  "probe_rows_sha256": "5af7582de42a605b6425d72a979b947a3a9741945cc4d6a620945fde2e049473",
+  "regenerations": "3 byte-identical regenerations (same cwd twice + isolated tree/cwd/HOME with PYTHONHASHSEED=random), sha256 5af7582d..."
+ },
+ "engine": "raw order-preserving double recursion with canonical descending-multiset memoization (mirrors published y=10..y=15 probe engines); the spot audit caps the LRU at 1,500,000 entries on this host (deterministic eviction, recomputed values -> identical outputs)",
+ "experiment": "vertical-fiber-two-token-y16-parametric-allz-fit-20261122",
+ "fail_closed_tamper_tests": {
+  "description": "7 effective tamper variants all detected by the selfcheck: probe value flip (1 mismatch), probe row omission (point-count drop 74741->74670 + inherited flip mismatch), Y=17 (2338 mismatches, 64 overlaps), z-odd pin mod-4 class swap (120), band lower end 2Y+2->2Y+3 (387), band upper end x+16->x+15 (186), tail start x+z+Y+1->x+z+Y (186). Note: the first attempted band-lower-end tamper 2Y+2->2Y+1 was found to be BOX-EQUIVALENT on even offsets (no detection possible, recorded honestly) and was replaced by the effective 2Y+3 variant",
+  "detected": 7
+ },
+ "family": "two-token residual game H(R;(x,16);z), Y=16",
+ "first_draft_fit": {
+  "corrections": 0,
+  "description": "the first-draft extrapolation from the published y=14 FINAL structure (cand14 -> cand16, Y=14->16 mechanical translation with the pre-registered even-y family formulas; the code body is the Y-parametric cand14 code with only the Y constant, the 14->16 name renames and recomputed y-specific comments changed) matched all 74,741 probe points with ZERO corrections; every pre-registered prediction in the declaration note was confirmed at fit level, including the exact pre-declared point count 74,741 (rows 899)",
+  "mismatch": 0,
+  "t_p_overlap": 0
+ },
+ "merge_regression_vs_K0832": {
+  "comparisons": 14910,
+  "description": "cand16(z,x,R) == single_token_val(x+16, R) on merge region x<=z-17, z in {33,40,47,54,64,77}, x=16..z-17, R<=x+z+33; engine-vs-cand16 agreement on out-of-box merge rows is additionally covered inside the spot blocks (deep rows (33,16),(34,17))",
+  "mismatches": 0
+ },
+ "pin_census": {
+  "note": "y/2 = 8 pin rows on BOTH parities for the first time (y=10:5/6... y=14:7/7 -> y=16:8/8; even-y count law 4th point); pin mod-4 class rotates with y: y=16 z-odd d==0 mod 4 / z-even d==2 mod 4 (y=12: 0/2 swapped-parity orientation, y=14: 2/0), exactly as pre-registered",
+  "z_even": {
+   "counts": {
+    "-10": 3,
+    "-14": 1,
+    "-2": 7,
+    "-6": 5,
+    "10": 13,
+    "14": 15,
+    "2": 9,
+    "6": 11
+   },
+   "pin_R": "z+(d+48)/2",
+   "rows_d": [
+    -14,
+    -10,
+    -6,
+    -2,
+    2,
+    6,
+    10,
+    14
+   ],
+   "values": "all 2, each observed >= 1 in-box observation"
+  },
+  "z_odd": {
+   "counts": {
+    "-12": 1,
+    "-4": 5,
+    "-8": 3,
+    "0": 7,
+    "12": 13,
+    "16": 15,
+    "4": 9,
+    "8": 11
+   },
+   "pin_R": "z+(d+48)/2",
+   "rows_d": [
+    -12,
+    -8,
+    -4,
+    0,
+    4,
+    8,
+    12,
+    16
+   ],
+   "values": "all 2, each observed >= 1 in-box observation"
+  }
+ },
+ "probe": {
+  "box": "z=0..30, x=16..z+29, R<=x+z+34",
+  "box_cap_note": "R<=x+z+34 = 2y+2 (declared convention carried from the y=14/y=15 fits: exposes z-odd I-band th sweep to 33, steady pins z+32/z+33, band lower end 34 in-box)",
+  "cand16_mismatch": 0,
+  "merge_rows_in_box": 0,
+  "merge_rows_note": "pre-declared: x<=z-17 needs z>=33, so the probe box contains ZERO merge rows for y=16; merge is verified entirely out-of-box (spot deep rows (33,16)/(34,17) + merge regression vs K0832)",
+  "points": 74741,
+  "regenerate": "python3 probe_y16.py  # writes probe_rows.txt deterministically",
+  "rows": 899,
+  "seconds": 7.0,
+  "t_p_overlap": 0,
+  "tail_points_R_ge_x_z_p_17": 16182,
+  "value_histogram": {
+   "0": 36738,
+   "1": 29032,
+   "2": 8971
+  }
+ },
+ "selfcheck_expected_output": "probe points: 74741 mismatch: 0 overlap: 0",
+ "sha256": {
+  "cand16.py": "1fc9d22bf666d8c98747332b0063f06aad4d21d88f1a2b69643a17104d550be8",
+  "probe_rows.txt_local": "5af7582de42a605b6425d72a979b947a3a9741945cc4d6a620945fde2e049473",
+  "probe_y16.py": "bd01a48dc2463c9385613448f7df9b8df213144d59d97ab77b4dc7ed2a7579f6",
+  "spot_y16.py": "b692df1a6560a1297c80e8821126e0d98c5132cd7cd5a4dcb08c05a0115d294b"
+ },
+ "spot": {
+  "bad": 0,
+  "honesty_record": "no below-domain row occurred: the y=14 (19,13) lesson is enforced by a machine assert x>=16 on every selected row (structural fix first applied here)",
+  "points": 35825,
+  "regenerate": "python3 spot_y16.py",
+  "scope": [
+   "deep rows R<=130 for (z,x) in {(33,17),(34,18),(27,17),(23,21),(23,16),(25,31),(17,19),(23,17),(29,17),(13,21),(15,31),(18,16),(30,16),(12,18),(16,30),(32,17),(14,29),(14,30),(15,32),(16,33),(5,23),(28,48),(33,16),(34,17)} (24 rows, all x>=16 machine-asserted: diagonals d=-16, z-odd skew I rows d in {-10,-2,6}, z-odd base d=-7, z-odd pin rows d in {2,-6,-12,8,16}, z-even pin rows d in {-2,-14,6,14}, z-even I rows d in {-15,15}, z-even base saturation row d=16, sweep rows d=17 both parities, steady rows d in {18,20}, merge boundary rows x=z-17 both parities)",
+   "bigz z=33..42 x d in {-16,-15,-14,-13,-12,-11,-9,-7,-6,-5,-3,-2,-1,0,2,4,6,8,10,14,16,17,22,36}, R<=x+z+34",
+   "x=y=16 edge z=16..41, R<=z+130",
+   "far d in {33,44,55} for z in {5,12,19,26,33,40}, R<=x+z+34"
+  ],
+  "seconds": 148.0
+ },
+ "status": "finite fit + out-of-box spot verification; NOT a universal claim",
+ "tail_raw_check": {
+  "description": "raw H(R;(x,16);z) == (x+16) mod 2 for R in [x+z+17, x+z+30] on d>=16 rows (x odd -> 1, x even -> 0)",
+  "mismatches": 0,
+  "points": 84,
+  "rows_zx": [
+   [
+    15,
+    32
+   ],
+   [
+    20,
+    37
+   ],
+   [
+    31,
+    48
+   ],
+   [
+    26,
+    43
+   ],
+   [
+    33,
+    50
+   ],
+   [
+    40,
+    56
+   ]
+  ]
+ }
+}
