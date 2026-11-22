@@ -38,7 +38,9 @@
   "low_size_binomial": "Z_7(1)=C(49,1), Z_7(2)=C(49,2), Z_7(3)=C(49,3) (no quartet has fewer than 4 cells)",
   "lambda_ge_15_zero": "consistent with K1229 n7 at-least-15 UNSAT x2",
   "n3_to_n6_calibration": "all 33 coefficients of Z_3..Z_6 equal the published K1228 spectrum values (three implementations here)",
-  "z5_identity": "Z_7(5) = C(49,5) - covered5 = 1906884 - 273836 = 1633048 (independent direct coverage count, z4z5_identity.mjs; n=3..6 also all match: 56/2360/37272/301952)"
+  "z5_identity": "Z_7(5) = C(49,5) - covered5 = 1906884 - 273836 = 1633048 (independent direct coverage count, z4z5_identity.mjs; n=3..6 also all match: 56/2360/37272/301952)",
+  "z678_identity": "Z_7(6..8) = C(49,l)-covered_l: 8,796,600 / 29,688,640 / 56,927,728, all equal to the published histogram (z678_identity.mjs, colex-rank bitset direct coverage count, DFS-free; covered6/7/8_n7 = 5,187,216 / 56,211,944 / 394,050,338; n=3..6 also all match, 15/15 gate points)",
+  "z9_identity": "Z_7(9) = C(49,9) - covered9 = 2,054,455,634 - 1,999,282,310 = 55,173,324, equal to the published histogram (z9_identity.mjs, 4 quartet-range shards with persisted bitset; n=3..6 also all match: 0/0/100/438,952)"
  },
  "verification": {
   "impl1_cov_incremental": "safehist_n7.mjs, two byte-identical full runs (sha 1688c1e2…) + 7-way first-stone shard union identical (unite_check_n7.json)",

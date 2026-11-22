@@ -2,7 +2,7 @@
 # 生成: 2026-11-22 高速レーン（単一オーナー宣言 research/log/2026-11-22-n7-safe-size-histogram-single-owner-note.md の追記参照）
 
 ## A. 刊行ファイル（刊行時点のsha256）
-07b814728cc8c3fcac39ab033d9df050b2e94cbef8b4829b5770f669f60bd1cb  README.md
+99cf3a64bb4fd90be9f28391a1c8795736a39a66091ba1e302b5fc74063abffd  README.md
 a91a7878a0f6e711aaeca05766cffe79e61acfb0973f6bb1136be366beeb8a54  scripts/safehist_n7.mjs
 91c02aaf8ab649355fef168c8c556bed8db65b77fd2aba6378fad5f8b3a7535c  scripts/safehist_mask.mjs
 422b454446cbadec1648c1190149f441e16360320afce69f5cf3fc2dfb3564d9  scripts/dfs_py.py
@@ -10,7 +10,7 @@ a91a7878a0f6e711aaeca05766cffe79e61acfb0973f6bb1136be366beeb8a54  scripts/safehi
 bae708cfd7d27530b8a295cc6f1d950c9b5b9cb8e37a481ae4413573b9c6ba33  scripts/forbidgen_dump.py
 7a609274fb50bb70f15e91e027905c8dd102a24efca458b25ee6cdf13ddbcd21  scripts/unite_shards.mjs
 4d6c552e1debf0f2457a9e3b1b75d72e594d136db5705c6f1e7690726ba1b805  scripts/enum_max14.mjs
-4626c18bd19c019b2b2bd5c6841e309b505b28e5712910659f2c769d2f35b364  output/Z7_safe_hist.json
+26cd665b382ea2ec0fa8b876429483c5e5846778110bb4e2536c352eeb5d9510  output/Z7_safe_hist.json
 aa1cb42f442496758c5ddbf7c631c0cd21086e19a5992137b75d294a67772932  output/forbidgen_meta_n7.json
 05f030cb688377b2610795246526a361d211dfc5ad52e017f4c292ac37564933  output/hist_n3.jsonl
 13dbdbd42fd35134e348a544d4fe94bf0f6ab06b8a3ddca60d249e92d86322c7  output/hist_n4.jsonl
@@ -25,7 +25,7 @@ cc02c21e919483fb3c6c0ca7f05aa66bd86f3891e3c0a64b0a91efa329eeaf22  output/mask_hi
 8d19ffb0cf690e9ee874703245420d22fa02f9e680e113c70892e48ff6080b3a  output/mask_hist_n7.jsonl
 d72931a0b3bd159c5fb6751cf26554dafd65e5cee27b3a9810ddc0726fabf6c4  output/max14_orbits.json
 08188de4c99cba817c2420fb38838c16aa778ca6084b8368df1e06a1dc8bc03a  output/py_safehist_n3.json
-a120578066c7c0e2ddf627dff26d610f4e0a8a733354d0f795f734334a6a7043  output/py_safehist_n4.json
+a120578066c7c0e2adf627dff26d610f4e0a8a733354d0f795f734334a6a7043  output/py_safehist_n4.json
 069da6101be2f991e118be297d11dd6042d1f17c43fccae9a074910744026768  output/py_safehist_n5.json
 9de66ae82ed134d631a56214cb5bd2a1e7c2c9c6b3a8a721a300d599969825b8  output/py_safehist_n6.json
 335549bd49ba33830cbe14b81dba467fc7b866ee765dec1069c9c3e82a0583ea  output/quartets_n3.txt
@@ -49,9 +49,20 @@ e3977a0411a32bbc3edf9534ba3b059dd2ee9775c59c10cfeac9a17adcbc3a42  output/shards/
 1ec8f00ebb18f91491a662864e777af84507926794e38455f7d23d4a83964876  output/shards/s7.log
 797b8b2528add98457a2ffa27b4eb80f3abe620ea2c183ab92cd00272b29ec10  output/unite_check_n7.json
 e837503b77f6098a20436da12a4da7b74fbdf9062cdba6e204b3459c28d2e249  scripts/z4z5_identity.mjs
+3465fcd4f2a573a887c4c809c86ce4328632daff15cf62f1141b79c974e7f396  scripts/z678_identity.mjs
+4545b32428245e82297484c96c9e35052d09bac31b611e242375c87ddbc02e87  scripts/z9_identity.mjs
+031d540ed623db73cd3b1be54062abcfbd888674b24acf3edf2dd56340895216  output/z678_identity.jsonl
+d7cb1645a9a030a1ee40e419cc46cce2a23b3ade8c69b34ec56e9bccb28d6033  output/z9_identity.jsonl
+76549dc7573075ec3722de08cdb3a28634e8714ea58a82016e497beace0f1b39  output/z9_n7_shard_log.jsonl
 dbe058959919d3a22bab4df66c812f89769c14e570dabed4f70b747ce0e617ac  output/z4z5_identity.jsonl
 
 ## B. 参照のみ（repo内再出版なし・外部/K1224既刊機材の指紋）
 # pinned census.mjs sha256 f52283b2b3a0ca7c2679413a6e5defa688f1643ff74301b9601c0d84d745cbbe (K1224既刊・byte同一をcrosscheck_catalog_n7.mjsでn=3..7照合)
 # forbidgen.py sha256 61a9d22d97a07f7664bfdc88a975af53773394db6c9af68436c68bbdfe2fccbf (K1224既刊・forbidgen_dump.pyは改変なし再利用)
 # F_7=6364 (collinear 660 + circle 5704) はK0057出版値と一致・n3..n6カタログshaはK1228出版quartets_n*.txtと同一
+# z9 bitset files (regenerable via z9_identity.mjs, not published: n7 is 256,806,955 bytes)
+# bits_n3.bin 4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a (1 byte)
+# bits_n4.bin aeb6adf616afdb016ed5713daca8ad6c7674ca6a927502d859fb953df3927139 (1,431 bytes)
+# bits_n5.bin ee29170d4aa6ab641e63f424dc5d74f6a6adf7e3d833d16eb56ef74089534955 (255,378 bytes)
+# bits_n6.bin a5dad949e69f0c9e55f7c9de01a47afaeba1405f370b281e218bad10ceef009f (11,767,911 bytes)
+# bits_n7.bin febbea808f4c4b621826273b8f942863149feb1b91308af463c7411ab4ab5551 (256,806,955 bytes, 4-shard run audit trail in output/z9_n7_shard_log.jsonl)
