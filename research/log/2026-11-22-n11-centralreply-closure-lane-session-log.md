@@ -2475,3 +2475,59 @@ refutation evidence.
   canonical 6,172), (d) the scrutiny owner's 15-WIN/q042 adoption gate,
   (e) optional extension of third-impl spot coverage to further batch
   rows under a new declaration.
+
+## Continuation 39 (2026-11-22, this host): Part AZ batch-18 WIN-row third-implementation cross-verification executed and published - 2/2 targets clean WIN with 2/2 replica verdict agreement, anchors node-exact, negatives fail-closed, 53/53 audit gates; verdicts NOT consumed
+
+- Scope and declaration: Part AZ cross-verified the two WIN rows
+  v001/v002 published in batch-18 (Part AY, class 16131) under the third
+  implementation (verdict-free corroboration, Part G / AR / AX line).
+  Declared by single-owner-note amendment at commit `a5ea2aa08...`
+  (note lock blob `1c4917ac`, 281,536 bytes); batch-18 sources were not
+  touched, the 51 unconsumed batch-18 keys and Part AV remained
+  uncontacted by this Part.
+- Experiment published at
+  `research/experiments/n11-centralreply-closure-b18win-thirdimpl-20261122/`
+  (43 files + MANIFEST, 43 manifest rows) in 3 commits: A `2e6d14ee`
+  (scaffold: pinned third-impl harness, maker, audit inputs, 27 files),
+  B `9a997c21` (solver outputs: target a/b pairs, anchors, negatives,
+  rules-gate, status.log - 15 files), C `2f944d5d` (README + MANIFEST) =
+  publication complete. **Fetch-back 43/43** manifest sha256 match at
+  the publication commit.
+- Determinism and gates: maker `make_inputs_az.py` run 3x byte-identical,
+  all gates PASS. Source pins: batch-18 batch-keys `1bb3ed41` (53 keys,
+  class 16131; v001 s5 `153671` / membership 2; v002 s5 `207534` /
+  membership 3), 4 published raws (`24b45c8a`, `1fc367bd`, `41c10ec2`,
+  `e9f578fc`), status-b18 `4b785add`, README `8b6a85b3`, published input
+  CSVs `edee9be8` / `e8bbbaed`.
+- Execution (sequential battery order negatives -> anchors -> targets):
+  v001 third-impl WIN 6,558,484 expansions / 3,610,051 ttHits (replica
+  5,656,151 nodes, ratio 1.16); v002 WIN 9,204,329 / 5,027,672 (replica
+  7,898,204, ratio 1.17); a/b all identical; 15,762,813 expansions per
+  full pass. Anchors k02a WIN 9,106,337 / 4,991,527 and l1a LOSS
+  7,660,602 / 3,951,175 reproduce the published anchor values
+  node-exact. ng1/ng2 fail-closed lines exact. Rules gate: quads
+  95,670 == 95,670, triples 195,044 with mismatch 0.
+- Audit: `audit.py` schema
+  `n11-centralreply-closure-b18win-thirdimpl-audit-v1`, 53/53 gates
+  PASS, run 2x byte-identical.
+- Note status update appended: commit `792ee250` (blob `02080cd1`,
+  285,045 bytes; note lock `1c4917ac` guard, observed HEAD `2f944d5d`),
+  fetch-back byte-identical against the commit-pinned raw URL.
+- Verdict guards (unchanged): zero verdicts consumed; this is
+  verdict-level corroboration literature only. The 17 unconsumed closure
+  WIN candidates (15 prior + batch-18 v001 + v002), the Part AV batch-17
+  52-LOSS adoption, the future class 23101 residual 10-LOSS adoption
+  Part (BASE = post-AV canonical 6,172) and the scrutiny owner's
+  adoption gates are untouched and unabridged; no canonical cache write
+  happened anywhere in this Part. The standard 11x11 empty board, the 19
+  central-reply roots, class 23101, class 10661, class 16131 and all 53
+  batch-18 keys remain UNKNOWN throughout; expansions, nodes and ttHits
+  are bookkeeping, never verdicts.
+- Open items (re-read latest main first): (a) the Part AV batch-17
+  52-LOSS adoption publication (in flight), (b) batch-18 Part AY
+  continuation / batch-19 (class 16513) selection by a later session
+  (declared `6cde1b0`, scaffold `c36825c7`; this lane did not contact
+  them), (c) the class 23101 residual 10-LOSS adoption Part after Part
+  AV lands (BASE = canonical 6,172), (d) the scrutiny owner's 17-WIN
+  adoption gate, (e) optional extension of third-impl spot coverage to
+  further batch rows under a new declaration.
