@@ -1,0 +1,133 @@
+{
+ "w": 6,
+ "m": 30,
+ "q": 5,
+ "encArgs": "--deficient (single-clause, no lex)",
+ "result": "SAT",
+ "conflicts": 4001401,
+ "decisions": 38950217,
+ "seconds": 1800,
+ "date": "2026-11-14T11:15:45.293Z",
+ "stones": [
+  [
+   11,
+   0
+  ],
+  [
+   12,
+   0
+  ],
+  [
+   14,
+   0
+  ],
+  [
+   19,
+   0
+  ],
+  [
+   8,
+   1
+  ],
+  [
+   10,
+   1
+  ],
+  [
+   16,
+   1
+  ],
+  [
+   22,
+   1
+  ],
+  [
+   7,
+   2
+  ],
+  [
+   8,
+   2
+  ],
+  [
+   15,
+   2
+  ],
+  [
+   19,
+   2
+  ],
+  [
+   5,
+   3
+  ],
+  [
+   6,
+   3
+  ],
+  [
+   7,
+   3
+  ],
+  [
+   9,
+   3
+  ],
+  [
+   2,
+   4
+  ],
+  [
+   11,
+   4
+  ],
+  [
+   13,
+   4
+  ],
+  [
+   24,
+   4
+  ],
+  [
+   4,
+   5
+  ],
+  [
+   12,
+   5
+  ],
+  [
+   13,
+   5
+  ]
+ ],
+ "size": 23,
+ "rows": {
+  "0": 4,
+  "1": 4,
+  "2": 4,
+  "3": 4,
+  "4": 4,
+  "5": 3
+ },
+ "verify_js": {
+  "ok": true,
+  "size": 23,
+  "rows": [
+   4,
+   4,
+   4,
+   4,
+   4,
+   3
+  ],
+  "minRow": 3
+ },
+ "verify_py": {
+  "ok": true,
+  "reason": "ok",
+  "info": "23"
+ },
+ "note": "found by kissat 4.0.4 --time=1800 on the deficient single-clause encoding (102,400 vars / 357,033 clauses); SAT verdict printed at the time budget after 'shutting down' - witness verified by both systems. Third isometry class at 6x30 q=5: non-isomorphic under H/V/HV to the two extend6 dai-5 witnesses (rows 4,4,4,4,3,4). Independent direct-SAT confirmation of M_{6,5} >= 31 (bounds already 31..658 from extend6 lane)."
+}
