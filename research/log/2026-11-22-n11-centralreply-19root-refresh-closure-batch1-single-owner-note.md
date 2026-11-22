@@ -1652,3 +1652,45 @@ Part K/O/P/T/W/AAの前例に従い、batch-12の両WIN行 n005/n006 と、probe
   (宣言直前に最新mainを再取得・同scope対抗宣言なし・Part AD採番未使用を確認済み)。
 - 本amendment observed HEAD-before-push: 9759774ba3765531329f71a5b09a2180e8283a0e
   (commit messageにも記録)。
+
+## Part AE (probe-batch owner, amendment 2026-11-22): batch 13 (class 16930, renewed rank 11) 宣言 (verdict不消費・実行前に宣言)
+
+batch 12 (Part AC, class 8106) は事前登録のWIN-HALT規則により n006/n005 の2 WINで停止し
+(rank 10に反証証拠が付いた。batch-12の8 probed行の第三実装交叉検証は別所有者のPart AD
+宣言 (`33657c94`, 対象 `batch12-wins-thirdimpl-20261122`) のスコープであり本宣言は接触しない)。
+事前登録の選択規則 (反証証拠なし・in flightなし・WIN-HALTなしの最初のclean候補) で、renewed
+rank 1-9は全て反証証拠持ち (16757: b018, 20421: d002, 30345: b018 cost child s5 528497,
+16371: e002, 12264: f017, 5473: g018, 2634: h045, 8785: z003, 1518: j033)、rank 10 (8106) は
+Part ACでWIN-HALT済み。よって**renewed rank 11 class 16930** (mask
+`[1152921504875282432, 272]`, unknown 52, first 26 / third 70, groups 3) をbatch 13として宣言する。
+
+- 対象: `research/experiments/n11-centralreply-closure-class16930-batch13-20261122/`。
+  keys 52件 p001-p052 (probe_order 486-537), Part Y worklist (65,154行, sha `1807e4d2...`)
+  の `serving_class=16930` 行から機械抽出。batch-keys.json sha256
+  `c6c56a1a0552b8a87d1e1f5f9e0d6c3955cf1f58a85ef6726317d17846a0a2c7`。
+- 宣言前fail-safe (全て本実行内に機械実施・全PASS): (1) canonical merged cache 6,027行
+  (sha `95e868d6...`) に52/52不在・0 hits、(2) quarantine registry (sha `81d23160...`,
+  active 2) 両方向0 hits、(3) 52キー重複なし、(4) closure-classes.csv rank 11行 = class
+  16930 (`[1152921504875282432, 272]`, unknown 52, first 26 / third 70, groups 3) published
+  Part Y正本とbyte一致 (closure-classes / per-root-coverage / refresh-summary 3点とも
+  commit `7eb9ab70` 時点のmain正本とbyte一致を再確認)、(5) 10 WINキー
+  (b018/d002/e002/f017/g018/j033/h045/z003/n005/n006) 交叉0 hits、(6) probe_order連続
+  486-537・全行 class_unknown_now=52。
+- worklist再生成: 本workspace系譜のPart Y再生成 (run1/run2 byte一致, sha `1807e4d2...`,
+  published正本とcross-host byte一致, batch-12 Part AC scaffold READMEに記録済み) を再検証
+  の上再利用 (再実行 不要・再出版しない)。
+- protocol (事前登録・batch 12と同一): pinned replica `jsreplay.js` (sha `84585617...`),
+  1キー2 fresh cold pass, budget 15,000,000, determinism mismatchでHARD-STOP (rc=42),
+  WIN検出でWIN-HALT (rc=45, 同wave内in-flightは完了まで開示), 最大4 worker (2-core host,
+  実行並列はdeterminismに影響しない: 全passがshare_tt=0 fresh cold process),
+  resume-safe runner, honest negative (result 0 = UNKNOWN)。
+- validation gate (実行前に本ホストでfresh再現・4/4 node-exact): at2m result 0/2,000,000
+  ×2, 15m result 2/3,651,923 / result 2/5,040,200。
+- 主張と消費規則: 本batchはverdict不消費。WIN行はunconsumed closure WIN (今後の採用判断は
+  scrutiny owner, C++第二実装 gate 前例・不変)。標準11x11空盤・19 central-reply roots・
+  class 16930は本batchのどの時点でもUNKNOWNのまま。nodesを勝敗として読まない。
+  batch選択はscheduling quantityでありverdictではない。
+- 並走との不接触: Part AD (別所有者) を始め他レーンのpublishedファイルには一切接触しない。
+  宣言直前に最新mainを再取得し、同scope対抗宣言なし・`batch13` dir不在・Part AE採番未使用
+  を確認済み。
+- 本amendment observed HEAD-before-push: 実行時の最新mainをコミットメッセージに記録。
