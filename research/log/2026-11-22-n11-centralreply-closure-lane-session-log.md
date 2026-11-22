@@ -320,3 +320,20 @@ github_app.push_files with commit-pinned raw fetch-back byte verification.
 - Verdicts NOT consumed; canonical cache unchanged at 5,924 rows;
   free_now 33 unchanged; 11x11 empty board, the 19 central-reply roots and
   all classes remain UNKNOWN; expansions/nodes are not verdicts.
+
+- Addendum to Continuation 5 (same session, before any further lane work):
+  the P24/decomposition runs RETRACT the mechanism attribution in the
+  Part H headline above. Measured decomposition (all read-only, verdicts
+  NOT consumed, all runs 2-run byte-identical, root {60,27} 119/119):
+  adopting the 4 WINs alone is plan-cost NEUTRAL (greedy -1) and delivers
+  the full WIN-side effects (excluded 37, unknown 34,489, update8 remaining
+  31,709 = -129, win-hit 15 groups); the 17 batch12264 f-LOSS rows alone
+  drive greedy +1,372; the packet-minus-f017 scenario (P24) has the SAME
+  greedy 36,984 as the full packet; per-root free coverage never changed
+  in any scenario. Additivity P4+P21==P25 holds on 8 of 9 metrics (the
+  exception, update8 remaining, has a machine-verified subsumption overlap
+  of exactly 20). Consequence: the WIN-adoption decision is separable from
+  the +1,367 plan cost, which attaches to the f-LOSS completions. The joint
+  experiment README now carries an ERRATUM section; two new experiments are
+  published (packet-minus-f017 P24; WIN-vs-LOSS decomposition P4/P17/P21)
+  alongside their 4 analysis-only merged caches (own commits).

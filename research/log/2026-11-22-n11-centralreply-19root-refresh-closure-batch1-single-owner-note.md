@@ -236,3 +236,53 @@ Part Gと完全に同一。入力はpublished batch5 rawから機械導出
   同一スコープの宣言がmainに存在する場合は着手しない。
 - 本amendment observed HEAD-before-push: 実行時の最新mainを
   コミットメッセージに記録。
+
+
+## Part H-bis (verifier, amendment 2026-11-22): packet WIN-vs-LOSS decomposition - RETRACTS Part H's mechanism attribution, verdicts not consumed
+
+- 対象: 2実験。
+  `research/experiments/n11-central-reply-packet-minus-f017-ifadopted-20261122/`
+  (P24: 25行パケットからf017 WIN行のみを除いた24行シナリオ) および
+  `research/experiments/n11-central-reply-packet-win-vs-loss-decomposition-ifadopted-20261122/`
+  (P4 = 4 WIN行のみ / P17 = batch12264のf-LOSS 17行のみ / P21 = 21 LOSS行のみ)。
+  いずれも正本5,924行cache (sha256 `8a721a18...`) へのmerge + published
+  refresh pipeline (selftest PASS・2-run byte一致・root {60,27} 119維持)。
+  増分はpublished 25行packet increment (sha256 `d49e2824...`) からの機械
+  分解/機械除隊 (f017およびf-rowのkeyはkit rawからfail-closed再導出)。
+- **正誤 (RETraction)**: Part Hが記載した「joint greedy +1,367の原因は
+  f017採用 (root 0/5 flip) が支配的」という機構帰属は本分解で機械反駁
+  され、撤回する。訂正版: 4 WIN**のみ**採用ではgreedyは**−1** (plan-cost
+  中立)、f-batchの17 LOSS行**のみ**で**+1,372**、f017 WINを除いたpacket
+  (P24) でもfull packet (P25) と同一の**36,984**。per-root free coverageは
+  全シナリオでbaselineと同一 (flipは一度も起きていない。「root 0/5 flip」
+  はupdate8 win-hit groupのindex誤読)。f017単独シナリオの+1,372もその
+  incrementに含まれる17 f-LOSS行の効果であり、WINの効果ではない。
+- 機械検証済みの分解表 (baseline対比): P4 = excluded 37 (+14) /
+  unknown 34,489 (−14) / update8 remaining 31,709 (−129) / win-hit 15
+  groups (16757:5, 20421:4, 12264:6) / greedy 35,616 (−1) / worklist
+  65,208 (−5)。P17 = excluded 23 (不変) / remaining −17 / resolved +17 /
+  greedy 36,989 (+1,372)。P21 = greedy 36,985 (+1,368) / remaining −20 /
+  resolved +20。P24 = excluded 34 (+11) / remaining −95 / win-hit 9 /
+  greedy 36,984。加法性: 9指標中8つで delta(P25) == delta(P4)+delta(P21)
+  (機械ゲート)。唯一の例外はupdate8 remaining (−129−20=−149≠−129、
+  WIN側解決がLOSS側を_Exactly 20_だけ包含、機械検証)。
+- 決定に資する要約: (1) 4 WINの採用可否は**計画コストと分離して**判断
+  できる。WINのみ採用はWIN側便益のすべて (excluded +14, unknown −14,
+  remaining −129, win-hit 15) を計画コストほぼゼロ (−1) でもたらす。
+  (2) +1,367はbatch12264のf-LOSS完備の性質であり、どのWINの消費決定にも
+  依存しない。(3) class status (excluded/free/unknown) は**WINのみ**
+  駆動であり、LOSS行はscheduling option pool (resolved/worklist/greedy)
+  のみを動かす。
+- closure ranking: 全packetシナリオで先頭5位は反駁quartet+30345、
+  first clean candidateはrank6 class 5473 (`1158058422931816448:0`,
+  unknown 51) で不変。
+- 主張と消費規則: verdict不消費・閉鎖・被覆・root主張なし。4つの
+  scenario cache (P4 5,928行/P17 5,941行/P21 5,945行/P24 5,948行) は
+  analysis-only成果物でcanonicalではない。11x11空盤・19 roots・全クラス
+  はUNKNOWNのまま。nodes/expansionsを勝敗として読まない。
+- transport: 各シナリオのprobe-worklist (~3.7MB) は再出版しない
+  (pinned入力から再生成可能、総量は各refresh-summary.jsonに記録)。
+- 並走との不接触: 既存Part Hのシナリオ拡張のみで、他レーンのclaim集合と
+  無関係。同一スコープの宣言がmainに存在する場合は着手しない。
+- 本amendment observed HEAD-before-push: 実行時の最新mainを
+  コミットメッセージに記録。

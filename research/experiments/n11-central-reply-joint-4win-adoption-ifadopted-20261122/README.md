@@ -102,3 +102,33 @@ Verdicts NOT consumed; scrutiny owner / C++ second-implementation gate
 precedent unchanged; free_now 33 unchanged; no closure, coverage or root
 claim is made. Standard 11x11 empty board, the 19 central-reply roots and
 all classes remain UNKNOWN.
+
+## ERRATUM (2026-11-22, same session): mechanism attribution of the +1,367 plan-cost increase RETRACTED
+
+The published paragraph above attributes the joint greedy increase
+(+1,367) to f017 ("f017's expensive flip of roots 0/5 dominates; b018/
+d002/e002 adoptions claw back 5 net"). A same-session decomposition
+(`research/experiments/n11-central-reply-packet-win-vs-loss-decomposition-ifadopted-20261122/`
+and `research/experiments/n11-central-reply-packet-minus-f017-ifadopted-20261122/`)
+machine-refutes that attribution:
+
+- adopting all four WINs and NO loss rows moves the greedy size by **−1**
+  (not +1,372);
+- the 17 batch12264 f-LOSS rows alone (f001-f016, f018) drive **+1,372**;
+- adopting the packet without the f017 WIN yields the **identical**
+  greedy 36,984 as the full packet;
+- per-root free coverage is identical to baseline in every scenario (the
+  "flip of roots 0/5" phrasing conflated update8 win-hit group indices with
+  per-root free coverage; coverage never changed).
+
+Corrected statement: the +1,367 joint plan-cost increase is entirely driven
+by the packet's LOSS-side rows (chiefly the batch12264 f-rows), not by any
+WIN adoption, and it is incurred whether or not f017 (or any WIN) is
+adopted. Consequently "the joint packet is 5 cheaper than adopting f017
+alone" remains arithmetically true (36,984 vs 36,989) but both values are
+the same f-LOSS effect plus different offsets; it is not evidence about the
+WINs. The decision-relevant summary is: adopting the four WINs alone gives
+the full WIN-side benefit (excluded +14, unknown −14, update8 remaining
+−129, win-hit 15 groups) at zero plan-cost increase; see the decomposition
+experiment for the machine gates. All quantitative tables above are
+unchanged and remain correct; only this mechanism attribution is retracted.
