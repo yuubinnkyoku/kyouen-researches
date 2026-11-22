@@ -1018,3 +1018,54 @@ repo diverged:
   `batch8785-z-ifadopted/` (33-entry manifest) and
   `reaudit8785-z-base-control/` (8-entry manifest). Observed
   HEAD-before-push for this update is recorded in the commit message.
+
+## Continuation 17 (2026-11-22): batch 12 (class 8106, Part AC) declared, run, and published - WIN-HALT x2 (n005/n006), two WIN rows in one wave, verdicts not consumed
+
+- Session opened after an execution-environment reset had wiped the local
+  workspace mid-preparation (recorded honestly below). Latest main was
+  re-fetched first; HEAD was `a134d8fd` (eight-row lane), the closure-lane
+  note and session log untouched by parallel lanes.
+- Fail-safe block re-done from scratch after the reset: the six Part Y
+  pinned inputs were re-fetched from the repo canonical copies
+  (commit `0a369d6c` pinned raw) with all sha256 matching
+  (dependency-graph `54f9c364...`, merged cache 6,027 rows `95e868d6...`,
+  update8 `b658290a...`, board `954d3a10...`, policy `78655e94...`,
+  quarantine `81d23160...`), and the published Part Y scenario script
+  (`88671526...`) was re-run twice on this host: all four outputs
+  byte-identical between the runs; closure-classes /
+  per-root-coverage / refresh-summary byte-equal to the published Part Y
+  canonical outputs; probe-worklist 65,154 rows sha `1807e4d2...` matching
+  the published record (cross-host byte-exact reproduction).
+- Batch-12 (class 8106, renewed rank 10) keys machine-extracted from the
+  regenerated worklist: 52 rows, probe_order 434-485, all absent from the
+  canonical cache (52/52 misses), quarantine cross-check 0 hits,
+  duplicate free, closure-classes rank-10 row byte-verified, 8-WIN-key
+  cross-check 0 hits. Part AC declaration pushed as note amendment
+  (commit `609e9137`, fetch-back byte-exact), then the scaffold
+  (README + batch-keys.json 52 keys + 52 input CSVs + pinned jsreplay.js +
+  runbatch.sh + runner-all.sh + val-gate 4 inputs and 4 this-host outputs,
+  65 files) published as commit `d333bb2c` with 65/65 fetch-back
+  byte-exact. Val-gate 4/4 node-exact on this host (at2m result
+  0/2,000,000 twice; 15m result 2/3,651,923 and result 2/5,040,200).
+- Runner (2 cores, up to 4 workers, probe-order waves, resume-safe):
+  wave 1 n001-n004 all LOSS; wave 2 surfaced **two** 2-pass node-exact
+  WIN rows - n006 (s5 219608, `[1152926194711134208, 128]`, legal 78,
+  3,695,373 nodes) and n005 (s5 188395, `[1153489144664555520, 0]`,
+  legal 82, 12,863,268 nodes) - with in-flight n007/n008 completing LOSS
+  (2,905,330 / 3,442,689). Batch stopped at 8/52 probed under the
+  pre-registered WIN-HALT rule. First closure batch with two WINs, and
+  the first WIN (n006) is a canonical child sharing the class mask lo.
+- Raw chunks published: `eca35f3c` (n001-n004, 8/8 fetch-back) and
+  `ace92d84` (n005-n008 + status.log, 9/9 fetch-back); README Result
+  section published as `68f2c699` (fetch-back byte-exact).
+- n005/n006 are the 9th and 10th unconsumed closure WINs
+  (b018/d002/e002/f017/g018/j033/h045/z003/n005/n006), all pending the
+  scrutiny owner. Third-implementation cross-verification and the
+  8-row if-adopted decomposition remain open (future declarations).
+  Next first-clean candidate: renewed rank 11 class 16930
+  (`[1152921504875282432, 272]`, unknown 52; 10-WIN cross-check 0 hits).
+- Nothing consumed anywhere. The standard 11x11 empty board, the 19
+  central-reply roots, class 8785/8106 and every other class remain
+  UNKNOWN; node counts are not verdicts. Kit mirror saved under
+  `batch8106-n/` (82 files + manifest). Observed HEAD-before-push
+  for this update is recorded in the commit message.

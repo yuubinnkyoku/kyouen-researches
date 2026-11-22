@@ -1547,3 +1547,65 @@ unknown 52, first=14/third=58, 4 groups) に着手する。
   再取得・class8106実験dirの不在・Part AC採番の未使用を確認済み)。
 - 本amendment observed HEAD-before-push: 実行時の最新mainをコミット
   メッセージに記録。
+
+## Part AC 出版status update (2026-11-22, prober): batch 12 (class 8106) WIN-HALT x2 at n005/n006 - 同一wave内で2つのWINを検出 (8/52 probed・verdict不消費)
+
+Part AC宣言 (本note Part AC節・commit `609e9137`) に基づき、宣言・scaffold出版
+(d333bb2c, 65 files, fetch-back 65/65 byte一致)・実行・出版までを同一セッションで
+完走した。**verdict不消費は不変。**
+
+- 実行結果 (machine-verified): 52キー中 **8キー (n001-n008)** をprobe
+  (probe_order順4キーwave, 本ホスト `8c50fb9e...` 2 core・最大4 worker・
+  budget 15M・2-pass fresh cold)。全完了キー2-pass node-exact、
+  determinism mismatch (rc=42) 0・budget枯渇 (result 0) 0。
+  **wave 2で事前登録WIN-HALT規則 (rc=45) が2キーで発火**: 
+  **n006 (s5_index 219608, key `[1152926194711134208, 128]`, legal 78,
+  probe_order 439): result 1 (WIN), 3,695,373 nodes** および
+  **n005 (s5_index 188395, key `[1153489144664555520, 0]`, legal 82,
+  probe_order 438): result 1 (WIN), 12,863,268 nodes**。両キーとも
+  2-pass node-exact。同一wave内のin-flight残キーは完了・誠実開示
+  (n007 LOSS 2,905,330 / n008 LOSS 3,442,689)。wave 1の4キーは全てLOSS
+  (n001 6,471,615 / n002 3,083,301 / n003 4,560,719 / n004 3,710,926)。
+  n009-n052 (44キー) は未着手のまま。**同一バッチ内で2つのWINが検出された
+  のはclosure grind初。**
+- n006のkeyはclass 8106のmask `[1152926194711134208, 0]` と同じloを持ち、
+  hiのみ128が立つ正規子である (n007 `[...4210, 0]`・n008 `[...4212, 0]` と
+  probe_orderで隣接する系統。観測の記録であり解釈を含まない)。
+- n005/n006は**9番目と10番目のunconsumed closure WIN**
+  (b018/d002/e002/f017/g018/j033/h045/z003/n005/n006) として
+  scrutiny owner (C++第二実装 gate pin `9193f5b6...` 前例) 待ち。
+  第三実装交叉検証 (Part G/K/O/P/T/W/AA流) は未実施・将来のverifier宣言。
+  if-adopted分解 (Part V/R/AB流, WIN-only / LOSS-only / full の8行分解)
+  も未実施・別宣言。**class 8106 (2 WIN子を含むが採用は未決)・19
+  central-reply roots・標準11×11空盤はいかなる時点でもUNKNOWNのまま。
+  nodes数を勝敗として読まない。**
+- 8106の52子に9-10 WIN移行前の8 WINキーが不在 (0 hits) であることは宣言時
+  fail-safe (5) で機械確認済み。batch実績は **12バッチ中9 WIN-HALT +
+  3 clean** (23963/10324/8784 = 33・34・35番目free)。安価側WIN密集の実測
+  傾向 (12ショットで2 WIN/1バッチ) はPart H-bis以来のscheduling測定値と
+  して累積され、クラスstatusには影響しない。
+- 次候補: 8106がn005/n006の反駁証拠を保持するため、renewed rankingの
+  次のfirst clean candidateは **rank 11 class 16930**
+  (`[1152921504875282432, 272]`, unknown 52, first=26/third=70, 3 groups,
+  worklist 52行 = probe_order 486-537)。10-WINキーと16930の52 worklist子の
+  対照は0 hits (本statusの機械確認)。宣言時には他のfail-safeとともに
+  再確認する。
+- 出版: 実験 `n11-centralreply-closure-class8106-batch12-20261122/
+  commits `609e9137` (note Part AC宣言) → `d333bb2c` (scaffold 65 files,
+  fetch-back 65/65 byte一致) → `eca35f3c` (chunk 1/2: n001-n004 raws 8件,
+  fetch-back 8/8) → `ace92d84` (chunk 2/2: n005-n008 raws 8件 + status.log,
+  fetch-back 9/9) → `68f2c699` (README Result節)。宣言・scaffold出版前に
+  実行環境リセットでワークスペースを喪失したため、Part Y pinned inputs
+  6種をrepo正本 (commit `0a369d69` 固定raw) から再取得し (sha256全件一致)、
+  published Part Y scenario script (`88671526...`) を2回再実行、全4出力が
+  run間byte-identical・3成果物がpublished Part Y正本とbyte一致・worklist
+  (65,154行) がsha256 `1807e4d2...` で正本記載値と一致することを
+  cross-hostで再確認した上で52キーを抽出した (Part AB base controlと
+  同一の再現手順)。kit mirror `_19root-refresh-kit/batch8106-n/` は
+  input/scripts/val-gate/raws/status/READMEを保持。
+- transport: probe-worklist (~3.8MB, regenerable) は再出版しない
+  (shaは実験README・base controlの記載通り)。
+- 並走との不接触: batch-11 (Part Z/AA/AB) 以前の全publishedファイルには
+  一切接触していない (宣言直前の最新main再取得で確認)。
+- 本status update observed HEAD-before-push: 実行時の最新mainを
+  コミットメッセージに記録。
