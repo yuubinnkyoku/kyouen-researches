@@ -1,0 +1,1993 @@
+{
+ "class_16131": {
+  "base_status": "unknown",
+  "base_unknown_children": 53,
+  "base_unknown_equals_batch_keys": true,
+  "scenario_status": "excluded_now",
+  "scenario_unknown_children": 51,
+  "scenario_unknown_indices": [
+   259131,
+   309691,
+   356499,
+   401999,
+   482963,
+   497687,
+   497757,
+   500954,
+   501999,
+   505002,
+   506464,
+   508811,
+   510565,
+   512474,
+   514362,
+   515931,
+   518307,
+   521369,
+   522241,
+   524564,
+   525298,
+   527455,
+   528708,
+   529234,
+   529721,
+   531915,
+   532784,
+   535548,
+   538077,
+   538916,
+   540644,
+   540864,
+   542705,
+   542998,
+   543058,
+   543113,
+   543166,
+   543219,
+   543382,
+   543480,
+   543528,
+   543572,
+   543762,
+   543796,
+   544054,
+   544130,
+   544554,
+   544555,
+   544556,
+   544557,
+   544558
+  ]
+ },
+ "closure_candidate_rows": {
+  "base_class_16131_rank": 15,
+  "base_class_16131_unknown_now": 53,
+  "entered_table_classes": [
+   5748
+  ],
+  "flipped_classes_in_table": [
+   1518,
+   2634,
+   4843,
+   5011,
+   5473,
+   5748,
+   6166,
+   8106,
+   8785,
+   12264,
+   16131,
+   16371,
+   16757,
+   16930,
+   20421,
+   23101,
+   30345
+  ],
+  "left_table_classes": [
+   5746
+  ],
+  "note": "the closure-candidate table is a probing-worklist view keyed to unknown cost children; the win-flips are recorded by class_status_counts and the transitions ledger, not by this table",
+  "scenario_class_16131_rank": 14,
+  "scenario_class_16131_unknown_now": 51,
+  "source_class_rows": {
+   "12264": {
+    "base_in_table": true,
+    "base_rank": 6,
+    "base_unknown_now": 51,
+    "scenario_in_table": true,
+    "scenario_rank": 7,
+    "scenario_unknown_now": 50,
+    "unknown_now_delta": -1
+   },
+   "1518": {
+    "base_in_table": true,
+    "base_rank": 10,
+    "base_unknown_now": 51,
+    "scenario_in_table": true,
+    "scenario_rank": 13,
+    "scenario_unknown_now": 50,
+    "unknown_now_delta": -1
+   },
+   "16131": {
+    "base_in_table": true,
+    "base_rank": 15,
+    "base_unknown_now": 53,
+    "scenario_in_table": true,
+    "scenario_rank": 14,
+    "scenario_unknown_now": 51,
+    "unknown_now_delta": -2
+   },
+   "16371": {
+    "base_in_table": true,
+    "base_rank": 4,
+    "base_unknown_now": 49,
+    "scenario_in_table": true,
+    "scenario_rank": 4,
+    "scenario_unknown_now": 48,
+    "unknown_now_delta": -1
+   },
+   "16757": {
+    "base_in_table": true,
+    "base_rank": 2,
+    "base_unknown_now": 29,
+    "scenario_in_table": true,
+    "scenario_rank": 2,
+    "scenario_unknown_now": 28,
+    "unknown_now_delta": -1
+   },
+   "16930": {
+    "base_in_table": true,
+    "base_rank": 12,
+    "base_unknown_now": 52,
+    "scenario_in_table": true,
+    "scenario_rank": 10,
+    "scenario_unknown_now": 50,
+    "unknown_now_delta": -2
+   },
+   "20421": {
+    "base_in_table": true,
+    "base_rank": 3,
+    "base_unknown_now": 49,
+    "scenario_in_table": true,
+    "scenario_rank": 3,
+    "scenario_unknown_now": 48,
+    "unknown_now_delta": -1
+   },
+   "23101": {
+    "base_in_table": true,
+    "base_rank": 1,
+    "base_unknown_now": 11,
+    "scenario_in_table": true,
+    "scenario_rank": 1,
+    "scenario_unknown_now": 10,
+    "unknown_now_delta": -1
+   },
+   "2634": {
+    "base_in_table": true,
+    "base_rank": 8,
+    "base_unknown_now": 51,
+    "scenario_in_table": true,
+    "scenario_rank": 5,
+    "scenario_unknown_now": 48,
+    "unknown_now_delta": -3
+   },
+   "5473": {
+    "base_in_table": true,
+    "base_rank": 7,
+    "base_unknown_now": 51,
+    "scenario_in_table": true,
+    "scenario_rank": 8,
+    "scenario_unknown_now": 50,
+    "unknown_now_delta": -1
+   },
+   "5830": {
+    "base_in_table": true,
+    "base_rank": 13,
+    "base_unknown_now": 52,
+    "scenario_in_table": true,
+    "scenario_rank": 11,
+    "scenario_unknown_now": 50,
+    "unknown_now_delta": -2
+   },
+   "8106": {
+    "base_in_table": true,
+    "base_rank": 11,
+    "base_unknown_now": 52,
+    "scenario_in_table": true,
+    "scenario_rank": 9,
+    "scenario_unknown_now": 50,
+    "unknown_now_delta": -2
+   },
+   "8785": {
+    "base_in_table": true,
+    "base_rank": 9,
+    "base_unknown_now": 51,
+    "scenario_in_table": true,
+    "scenario_rank": 12,
+    "scenario_unknown_now": 50,
+    "unknown_now_delta": -1
+   }
+  }
+ },
+ "flips_excluded_now": [
+  1518,
+  2634,
+  4139,
+  4843,
+  4864,
+  4889,
+  4892,
+  4903,
+  5007,
+  5011,
+  5255,
+  5282,
+  5307,
+  5471,
+  5473,
+  5501,
+  5513,
+  5611,
+  5613,
+  5626,
+  5632,
+  5748,
+  6030,
+  6073,
+  6147,
+  6166,
+  8106,
+  8785,
+  12264,
+  12327,
+  14776,
+  15640,
+  16131,
+  16371,
+  16757,
+  16930,
+  20421,
+  23092,
+  23101,
+  23115,
+  23938,
+  30345
+ ],
+ "flips_gate": "flips == the machine-computed BASE-unknown graph holder classes of any of the 17 WIN s5 indices (per-WIN holder ledger + union computed from the pinned graph cost sets, not hardcoded); each transitions unknown -> excluded_now; no regression; a WIN adoption can never free a class or move per-root coverage (all gated)",
+ "interpretation_guard": "if-adopted projection deltas only: NO WIN verdict is consumed, the canonical cache is byte-pinned untouched, the BASE-unknown holder classes of the 17 WIN children flip to excluded_now (one-way: their all-LOSS closure routes are permanently refuted by the verified WIN children); no coverage change; this Part neither recommends nor rejects adoption; the 11x11 empty board and all 19 central-reply roots stay UNKNOWN; nodes are bookkeeping",
+ "metrics": {
+  "closure_classes_count": {
+   "base": 809,
+   "delta": 0,
+   "scenario": 809
+  },
+  "excluded_now_classes": {
+   "base": 23,
+   "delta": 42,
+   "scenario": 65
+  },
+  "free_now_classes": {
+   "base": 36,
+   "delta": 0,
+   "scenario": 36
+  },
+  "group_best_options_nonfree": {
+   "base": 2125,
+   "delta": 0,
+   "scenario": 2125
+  },
+  "joint_greedy_union_size": {
+   "base": 36726,
+   "delta": 1,
+   "scenario": 36727
+  },
+  "joint_greedy_unique_groups": {
+   "base": 2125,
+   "delta": 0,
+   "scenario": 2125
+  },
+  "probe_worklist_total": {
+   "base": 64941,
+   "delta": -24,
+   "scenario": 64917
+  },
+  "unknown_classes": {
+   "base": 34500,
+   "delta": -42,
+   "scenario": 34458
+  },
+  "update8_groups_free_now": {
+   "base": 127,
+   "delta": 0,
+   "scenario": 127
+  },
+  "update8_remaining_now": {
+   "base": 31780,
+   "delta": -391,
+   "scenario": 31389
+  },
+  "update8_resolved_count": {
+   "base": 79,
+   "delta": 12,
+   "scenario": 91
+  },
+  "update8_win_hit_groups": {
+   "base": 0,
+   "delta": 34,
+   "scenario": 34
+  }
+ },
+ "newly_free_now_classes": [],
+ "newly_free_thirds": [],
+ "per_root_greedy": {
+  "0": {
+   "base_greedy_union_size": 2785,
+   "delta": -56,
+   "free_thirds": [
+    7,
+    7
+   ],
+   "scenario_greedy_union_size": 2729,
+   "uncovered_thirds": [
+    112,
+    112
+   ]
+  },
+  "1": {
+   "base_greedy_union_size": 6355,
+   "delta": 0,
+   "free_thirds": [
+    4,
+    4
+   ],
+   "scenario_greedy_union_size": 6355,
+   "uncovered_thirds": [
+    115,
+    115
+   ]
+  },
+  "12": {
+   "base_greedy_union_size": 3030,
+   "delta": -3,
+   "free_thirds": [
+    6,
+    6
+   ],
+   "scenario_greedy_union_size": 3027,
+   "uncovered_thirds": [
+    113,
+    113
+   ]
+  },
+  "13": {
+   "base_greedy_union_size": 6176,
+   "delta": 0,
+   "free_thirds": [
+    6,
+    6
+   ],
+   "scenario_greedy_union_size": 6176,
+   "uncovered_thirds": [
+    113,
+    113
+   ]
+  },
+  "14": {
+   "base_greedy_union_size": 4440,
+   "delta": 1,
+   "free_thirds": [
+    8,
+    8
+   ],
+   "scenario_greedy_union_size": 4441,
+   "uncovered_thirds": [
+    111,
+    111
+   ]
+  },
+  "15": {
+   "base_greedy_union_size": 5991,
+   "delta": 0,
+   "free_thirds": [
+    5,
+    5
+   ],
+   "scenario_greedy_union_size": 5991,
+   "uncovered_thirds": [
+    114,
+    114
+   ]
+  },
+  "16": {
+   "base_greedy_union_size": 3037,
+   "delta": 0,
+   "free_thirds": [
+    16,
+    16
+   ],
+   "scenario_greedy_union_size": 3037,
+   "uncovered_thirds": [
+    103,
+    103
+   ]
+  },
+  "2": {
+   "base_greedy_union_size": 5918,
+   "delta": 0,
+   "free_thirds": [
+    6,
+    6
+   ],
+   "scenario_greedy_union_size": 5918,
+   "uncovered_thirds": [
+    113,
+    113
+   ]
+  },
+  "24": {
+   "base_greedy_union_size": 2785,
+   "delta": -1,
+   "free_thirds": [
+    10,
+    10
+   ],
+   "scenario_greedy_union_size": 2784,
+   "uncovered_thirds": [
+    109,
+    109
+   ]
+  },
+  "25": {
+   "base_greedy_union_size": 5921,
+   "delta": 0,
+   "free_thirds": [
+    6,
+    6
+   ],
+   "scenario_greedy_union_size": 5921,
+   "uncovered_thirds": [
+    113,
+    113
+   ]
+  },
+  "26": {
+   "base_greedy_union_size": 5128,
+   "delta": -2,
+   "free_thirds": [
+    8,
+    8
+   ],
+   "scenario_greedy_union_size": 5126,
+   "uncovered_thirds": [
+    111,
+    111
+   ]
+  },
+  "3": {
+   "base_greedy_union_size": 5432,
+   "delta": 0,
+   "free_thirds": [
+    6,
+    6
+   ],
+   "scenario_greedy_union_size": 5432,
+   "uncovered_thirds": [
+    113,
+    113
+   ]
+  },
+  "36": {
+   "base_greedy_union_size": 2702,
+   "delta": -1,
+   "free_thirds": [
+    4,
+    4
+   ],
+   "scenario_greedy_union_size": 2701,
+   "uncovered_thirds": [
+    115,
+    115
+   ]
+  },
+  "37": {
+   "base_greedy_union_size": 4001,
+   "delta": -1,
+   "free_thirds": [
+    4,
+    4
+   ],
+   "scenario_greedy_union_size": 4000,
+   "uncovered_thirds": [
+    115,
+    115
+   ]
+  },
+  "38": {
+   "base_greedy_union_size": 3123,
+   "delta": -2,
+   "free_thirds": [
+    13,
+    13
+   ],
+   "scenario_greedy_union_size": 3121,
+   "uncovered_thirds": [
+    106,
+    106
+   ]
+  },
+  "4": {
+   "base_greedy_union_size": 5978,
+   "delta": 0,
+   "free_thirds": [
+    4,
+    4
+   ],
+   "scenario_greedy_union_size": 5978,
+   "uncovered_thirds": [
+    115,
+    115
+   ]
+  },
+  "48": {
+   "base_greedy_union_size": 2879,
+   "delta": -6,
+   "free_thirds": [
+    7,
+    7
+   ],
+   "scenario_greedy_union_size": 2873,
+   "uncovered_thirds": [
+    112,
+    112
+   ]
+  },
+  "49": {
+   "base_greedy_union_size": 2890,
+   "delta": 5,
+   "free_thirds": [
+    10,
+    10
+   ],
+   "scenario_greedy_union_size": 2895,
+   "uncovered_thirds": [
+    109,
+    109
+   ]
+  },
+  "5": {
+   "base_greedy_union_size": 3029,
+   "delta": -1,
+   "free_thirds": [
+    6,
+    6
+   ],
+   "scenario_greedy_union_size": 3028,
+   "uncovered_thirds": [
+    113,
+    113
+   ]
+  }
+ },
+ "pins": {
+  "base_closure_classes_sha256": "3ee1dbb6db7a5fc8858f5bbdd5cae7ca754589f376ebb99727535806f917bc9e",
+  "base_per_root_coverage_sha256": "527c7e9a3f6350f638b5e2e2a70c3115e50533eeca651e38e32329a04ab225d4",
+  "base_summary_sha256": "f2008e70b31f23724d9bd8d605f7ab6f1de20f1802e65bd5b955420a2f50a744",
+  "batch_keys_sha256": "1bb3ed41b26af92491ed579a7c05471f271ed1394d8b5f817b5110794d926667",
+  "canonical_base_cache_sha256": "be9cb24e899fbe93db51e415320c50fa733e378748bb7a41fe13fd7b22f06685",
+  "ifadopted_cache_sha256": "f8c2fd970e836eaf17f955b139b18e2e81c0e899c4652edfb0bc05d0790bf7e9",
+  "ifadopted_closure_classes_sha256": "0c3c31f37b5e159cb4da63f9af41623c5bebc7c16ed4969c37447670033a99dd",
+  "ifadopted_per_root_coverage_sha256": "5ead108d55e8736af308ec5c702f14d7e7a62d3138fecaa94306c85c7dff5747",
+  "ifadopted_summary_sha256": "5cee40860f5350ed758f8f4b266b9334aedfff7e9f36a76c22b2b18cae31795b",
+  "increment_sha256": "04003820756b72bc3b35ac67746d9f6dd3dffd7315dbd2f36d50d497485cbe87",
+  "manifest_sha256": "509cc941fb77b6efccde23b64b7cc38c48814153d457c27a7b3576c47be9866d",
+  "merge_audit_sha256": "ae19b239cb4db449c3a5cd571e6f6447f2eddb9962d6c2d8b7d1cac701bac435",
+  "source_increments": {
+   "batch13-wins2": {
+    "increment_path": "research/experiments/n11-centralreply-class16930-win-p002p003-ifadopted-20261122/output/increment-batch13-wins2-IFADOPTED-20261122.cache",
+    "increment_sha256": "bb238f67dbfcc3b9a05ac5542f783107366777f17149f7a5a5af64d4864b0f7c",
+    "manifest_sha256": "43143fd51bb02ddf65d912018f063e631a70517d607c2a73a626b76bd8e5957c"
+   },
+   "batch14-q042": {
+    "increment_path": "research/experiments/n11-centralreply-class23101-q042-ifadopted-20261122/output/increment-q042-win-ifadopted-20261122.cache",
+    "increment_sha256": "b4958328270f11b24d3a638e1099a0c6047dbebb242e3116217b0473ef63f9b6",
+    "manifest_sha256": "894e9420b043e12543920bb63c49f00530e45ad5b29c95c65e3dadf3047fc02e"
+   },
+   "batch15-wins2": {
+    "increment_path": "research/experiments/n11-centralreply-class5830-win-r001r002-ifadopted-20261122/output/increment-batch15-wins2-IFADOPTED-20261122.cache",
+    "increment_sha256": "05c10e1ff17c2601b1fb4a0782af2543d302187ce6344df97d3c763947262b7d",
+    "manifest_sha256": "d6ed7b931fb3418ceb8879073b2668b184e3dfcc7a2d24230267fdb7da67777e"
+   },
+   "batch18-v001v002": {
+    "increment_path": "research/experiments/n11-centralreply-class16131-win-v001v002-ifadopted-20261122/output/increment-b18win-v001v002-ifadopted-20261122.cache",
+    "increment_sha256": "4f8fc29bfd00492aa9a983f20a121737d395b8f80d53e2b04c271fec068bc1ee",
+    "manifest_sha256": "13736030ea484a0496da7f929b9c6892a2e9ebf6522f96d1c87d2c21000945f1"
+   },
+   "part-aj-wins10": {
+    "increment_path": "research/experiments/n11-centralreply-joint-unconsumed-ifadopted-20261122/output/increment-joint-wins10-IFADOPTED-20261122.cache",
+    "increment_sha256": "fe2c6f68f49195b44e21c8d43998fccd965c868e08e49d8a1b3233f5daa4c15e",
+    "manifest_sha256": "74fb877dba862bb8d8ecaa28d4741fbc97f533087e1779fe49a3062af2600b88"
+   }
+  }
+ },
+ "recompute_gates": "class statuses with Board free-candidate child verification, known-universe counts and per-root free coverage were recomputed from graph + update8 + caches and asserted equal to the published BASE (Part AS reaudit) and if-adopted outputs before any delta was emitted; the joint increment was byte-rebuilt from the five sha-pinned upstream source increments; the class-16131 BASE-unknown boundary was asserted equal to the 53 batch-18 key s5 indices; none of the 17 WIN s5 indices is resolved in the BASE known universe (17/17 verdict non-consumption gate)",
+ "scenario": "IF-ADOPTED = canonical 6,120 rows (be9cb24e..., Part AS) + theseventeen  unconsumed closure WIN rows (b018 d002 e002 f017 g018 h045 j033 z003 n005 n006 p002 p003 r001 r002 q042 v001 v002) adopted TOGETHER as a what-if; the joint increment is byte-rebuilt from the five sha-pinned published source increments; a scrutiny-owner precomputation projection, NOT the canonical chain",
+ "schema": "n11-joint17win-ifadopted-decomp-deltas-v1",
+ "source_class_ledger": {
+  "12264": {
+   "adopted_win_children_held": [
+    415095
+   ],
+   "base_status": "unknown",
+   "base_unknown_children": 51,
+   "in_flips": true,
+   "preexisting_base_win_children": [],
+   "provenance": "AJ b5 / f017",
+   "scenario_status": "excluded_now",
+   "scenario_unknown_children": 50
+  },
+  "1518": {
+   "adopted_win_children_held": [
+    69347
+   ],
+   "base_status": "unknown",
+   "base_unknown_children": 51,
+   "in_flips": true,
+   "preexisting_base_win_children": [],
+   "provenance": "AJ b9 / j033",
+   "scenario_status": "excluded_now",
+   "scenario_unknown_children": 50
+  },
+  "16131": {
+   "adopted_win_children_held": [
+    153671,
+    207534
+   ],
+   "base_status": "unknown",
+   "base_unknown_children": 53,
+   "in_flips": true,
+   "preexisting_base_win_children": [],
+   "provenance": "batch18 / v001+v002",
+   "scenario_status": "excluded_now",
+   "scenario_unknown_children": 51
+  },
+  "16371": {
+   "adopted_win_children_held": [
+    183566
+   ],
+   "base_status": "unknown",
+   "base_unknown_children": 49,
+   "in_flips": true,
+   "preexisting_base_win_children": [],
+   "provenance": "AJ b4 / e002",
+   "scenario_status": "excluded_now",
+   "scenario_unknown_children": 48
+  },
+  "16757": {
+   "adopted_win_children_held": [
+    528497
+   ],
+   "base_status": "unknown",
+   "base_unknown_children": 29,
+   "in_flips": true,
+   "preexisting_base_win_children": [],
+   "provenance": "AJ b1 / b018",
+   "scenario_status": "excluded_now",
+   "scenario_unknown_children": 28
+  },
+  "16930": {
+   "adopted_win_children_held": [
+    185003,
+    203419
+   ],
+   "base_status": "unknown",
+   "base_unknown_children": 52,
+   "in_flips": true,
+   "preexisting_base_win_children": [],
+   "provenance": "batch13 / p002+p003",
+   "scenario_status": "excluded_now",
+   "scenario_unknown_children": 50
+  },
+  "20421": {
+   "adopted_win_children_held": [
+    197253
+   ],
+   "base_status": "unknown",
+   "base_unknown_children": 49,
+   "in_flips": true,
+   "preexisting_base_win_children": [],
+   "provenance": "AJ b3 / d002",
+   "scenario_status": "excluded_now",
+   "scenario_unknown_children": 48
+  },
+  "23101": {
+   "adopted_win_children_held": [
+    745184
+   ],
+   "base_status": "unknown",
+   "base_unknown_children": 11,
+   "in_flips": true,
+   "preexisting_base_win_children": [],
+   "provenance": "batch14 / q042",
+   "scenario_status": "excluded_now",
+   "scenario_unknown_children": 10
+  },
+  "2634": {
+   "adopted_win_children_held": [
+    103558,
+    103560,
+    103561
+   ],
+   "base_status": "unknown",
+   "base_unknown_children": 51,
+   "in_flips": true,
+   "preexisting_base_win_children": [],
+   "provenance": "AJ b8 / h045",
+   "scenario_status": "excluded_now",
+   "scenario_unknown_children": 48
+  },
+  "5473": {
+   "adopted_win_children_held": [
+    184684
+   ],
+   "base_status": "unknown",
+   "base_unknown_children": 51,
+   "in_flips": true,
+   "preexisting_base_win_children": [],
+   "provenance": "AJ b6 / g018",
+   "scenario_status": "excluded_now",
+   "scenario_unknown_children": 50
+  },
+  "5830": {
+   "adopted_win_children_held": [
+    103560,
+    103561
+   ],
+   "base_status": "excluded_now",
+   "base_unknown_children": 52,
+   "in_flips": false,
+   "preexisting_base_win_children": [
+    126017,
+    131631,
+    162106,
+    197665,
+    206386
+   ],
+   "provenance": "batch15 / r001+r002",
+   "scenario_status": "excluded_now",
+   "scenario_unknown_children": 50
+  },
+  "8106": {
+   "adopted_win_children_held": [
+    188395,
+    219608
+   ],
+   "base_status": "unknown",
+   "base_unknown_children": 52,
+   "in_flips": true,
+   "preexisting_base_win_children": [],
+   "provenance": "AJ b12 / n005+n006",
+   "scenario_status": "excluded_now",
+   "scenario_unknown_children": 50
+  },
+  "8785": {
+   "adopted_win_children_held": [
+    198530
+   ],
+   "base_status": "unknown",
+   "base_unknown_children": 51,
+   "in_flips": true,
+   "preexisting_base_win_children": [],
+   "provenance": "AJ b11 / z003",
+   "scenario_status": "excluded_now",
+   "scenario_unknown_children": 50
+  }
+ },
+ "source_class_ledger_gate": "the 13 pinned batch classes collectively cover all 17 adopted WIN children in their BASE-unknown boundaries; 12 of 13 are in flips; class 5830 (batch-15) is the machine-verified BASE exception: already excluded_now via a pre-existing WIN child, so adopting r001/r002 flips no new class there (its shared-cost effect lands on class 2634, which holds 103558/103560/103561)",
+ "status_transitions": {
+  "excluded->excluded": 390,
+  "excluded_now->excluded_now": 23,
+  "free_now->free_now": 36,
+  "unknown->excluded_now": 42,
+  "unknown->unknown": 34458
+ },
+ "update8": {
+  "groups_free_now": [
+   127,
+   127
+  ],
+  "in_baseline_requirement_count": 12,
+  "lost_resolved": [],
+  "newly_resolved_s5": [
+   103558,
+   103560,
+   103561,
+   153671,
+   184684,
+   188395,
+   197253,
+   198530,
+   207534,
+   219608,
+   415095,
+   528497
+  ],
+  "win_hit_groups_base": [],
+  "win_hit_groups_scenario": [
+   {
+    "first": 0,
+    "fourth": 10,
+    "reply": 60,
+    "s4_class_index": 12264,
+    "s4_mask": [
+     1152921504606848033,
+     0
+    ],
+    "third": 5,
+    "unknown_s5_children": 51
+   },
+   {
+    "first": 0,
+    "fourth": 5,
+    "reply": 60,
+    "s4_class_index": 12264,
+    "s4_mask": [
+     1152921504606848033,
+     0
+    ],
+    "third": 10,
+    "unknown_s5_children": 51
+   },
+   {
+    "first": 0,
+    "fourth": 110,
+    "reply": 60,
+    "s4_class_index": 12264,
+    "s4_mask": [
+     1152921504606848033,
+     0
+    ],
+    "third": 55,
+    "unknown_s5_children": 51
+   },
+   {
+    "first": 0,
+    "fourth": 55,
+    "reply": 60,
+    "s4_class_index": 12264,
+    "s4_mask": [
+     1152921504606848033,
+     0
+    ],
+    "third": 110,
+    "unknown_s5_children": 51
+   },
+   {
+    "first": 5,
+    "fourth": 10,
+    "reply": 60,
+    "s4_class_index": 12264,
+    "s4_mask": [
+     1152921504606848033,
+     0
+    ],
+    "third": 0,
+    "unknown_s5_children": 51
+   },
+   {
+    "first": 5,
+    "fourth": 0,
+    "reply": 60,
+    "s4_class_index": 12264,
+    "s4_mask": [
+     1152921504606848033,
+     0
+    ],
+    "third": 10,
+    "unknown_s5_children": 51
+   },
+   {
+    "first": 12,
+    "fourth": 70,
+    "reply": 60,
+    "s4_class_index": 16131,
+    "s4_mask": [
+     1154047404513693696,
+     64
+    ],
+    "third": 50,
+    "unknown_s5_children": 53
+   },
+   {
+    "first": 12,
+    "fourth": 81,
+    "reply": 60,
+    "s4_class_index": 20421,
+    "s4_mask": [
+     1155173304420536320,
+     131072
+    ],
+    "third": 51,
+    "unknown_s5_children": 49
+   },
+   {
+    "first": 12,
+    "fourth": 50,
+    "reply": 60,
+    "s4_class_index": 16131,
+    "s4_mask": [
+     1154047404513693696,
+     64
+    ],
+    "third": 70,
+    "unknown_s5_children": 53
+   },
+   {
+    "first": 12,
+    "fourth": 51,
+    "reply": 60,
+    "s4_class_index": 20421,
+    "s4_mask": [
+     1155173304420536320,
+     131072
+    ],
+    "third": 81,
+    "unknown_s5_children": 49
+   },
+   {
+    "first": 14,
+    "fourth": 102,
+    "reply": 60,
+    "s4_class_index": 8106,
+    "s4_mask": [
+     1152926194711134208,
+     0
+    ],
+    "third": 58,
+    "unknown_s5_children": 52
+   },
+   {
+    "first": 14,
+    "fourth": 58,
+    "reply": 60,
+    "s4_class_index": 8106,
+    "s4_mask": [
+     1152926194711134208,
+     0
+    ],
+    "third": 102,
+    "unknown_s5_children": 52
+   },
+   {
+    "first": 16,
+    "fourth": 104,
+    "reply": 60,
+    "s4_class_index": 5748,
+    "s4_mask": [
+     1225542048598196224,
+     1
+    ],
+    "third": 59,
+    "unknown_s5_children": 58
+   },
+   {
+    "first": 16,
+    "fourth": 104,
+    "reply": 60,
+    "s4_class_index": 5748,
+    "s4_mask": [
+     1225542048598196224,
+     1
+    ],
+    "third": 61,
+    "unknown_s5_children": 58
+   },
+   {
+    "first": 16,
+    "fourth": 59,
+    "reply": 60,
+    "s4_class_index": 5748,
+    "s4_mask": [
+     1225542048598196224,
+     1
+    ],
+    "third": 104,
+    "unknown_s5_children": 58
+   },
+   {
+    "first": 26,
+    "fourth": 92,
+    "reply": 60,
+    "s4_class_index": 5473,
+    "s4_mask": [
+     1158058422931816448,
+     0
+    ],
+    "third": 59,
+    "unknown_s5_children": 51
+   },
+   {
+    "first": 26,
+    "fourth": 59,
+    "reply": 60,
+    "s4_class_index": 5473,
+    "s4_mask": [
+     1158058422931816448,
+     0
+    ],
+    "third": 92,
+    "unknown_s5_children": 51
+   },
+   {
+    "first": 36,
+    "fourth": 84,
+    "reply": 60,
+    "s4_class_index": 16757,
+    "s4_mask": [
+     1153204079095185408,
+     65536
+    ],
+    "third": 50,
+    "unknown_s5_children": 48
+   },
+   {
+    "first": 36,
+    "fourth": 84,
+    "reply": 60,
+    "s4_class_index": 16757,
+    "s4_mask": [
+     1153204079095185408,
+     65536
+    ],
+    "third": 70,
+    "unknown_s5_children": 48
+   },
+   {
+    "first": 36,
+    "fourth": 50,
+    "reply": 60,
+    "s4_class_index": 16757,
+    "s4_mask": [
+     1153204079095185408,
+     65536
+    ],
+    "third": 84,
+    "unknown_s5_children": 48
+   },
+   {
+    "first": 37,
+    "fourth": 100,
+    "reply": 60,
+    "s4_class_index": 20421,
+    "s4_mask": [
+     1155173304420536320,
+     131072
+    ],
+    "third": 73,
+    "unknown_s5_children": 49
+   },
+   {
+    "first": 37,
+    "fourth": 73,
+    "reply": 60,
+    "s4_class_index": 20421,
+    "s4_mask": [
+     1155173304420536320,
+     131072
+    ],
+    "third": 100,
+    "unknown_s5_children": 49
+   },
+   {
+    "first": 38,
+    "fourth": 42,
+    "reply": 60,
+    "s4_class_index": 8106,
+    "s4_mask": [
+     1152926194711134208,
+     0
+    ],
+    "third": 34,
+    "unknown_s5_children": 52
+   },
+   {
+    "first": 38,
+    "fourth": 34,
+    "reply": 60,
+    "s4_class_index": 8106,
+    "s4_mask": [
+     1152926194711134208,
+     0
+    ],
+    "third": 42,
+    "unknown_s5_children": 52
+   },
+   {
+    "first": 48,
+    "fourth": 72,
+    "reply": 60,
+    "s4_class_index": 16131,
+    "s4_mask": [
+     1154047404513693696,
+     64
+    ],
+    "third": 20,
+    "unknown_s5_children": 53
+   },
+   {
+    "first": 48,
+    "fourth": 80,
+    "reply": 60,
+    "s4_class_index": 16757,
+    "s4_mask": [
+     1153204079095185408,
+     65536
+    ],
+    "third": 40,
+    "unknown_s5_children": 48
+   },
+   {
+    "first": 48,
+    "fourth": 20,
+    "reply": 60,
+    "s4_class_index": 16131,
+    "s4_mask": [
+     1154047404513693696,
+     64
+    ],
+    "third": 72,
+    "unknown_s5_children": 53
+   },
+   {
+    "first": 48,
+    "fourth": 40,
+    "reply": 60,
+    "s4_class_index": 16757,
+    "s4_mask": [
+     1153204079095185408,
+     65536
+    ],
+    "third": 80,
+    "unknown_s5_children": 48
+   },
+   {
+    "first": 48,
+    "fourth": 72,
+    "reply": 60,
+    "s4_class_index": 16131,
+    "s4_mask": [
+     1154047404513693696,
+     64
+    ],
+    "third": 100,
+    "unknown_s5_children": 53
+   },
+   {
+    "first": 49,
+    "fourth": 52,
+    "reply": 60,
+    "s4_class_index": 5473,
+    "s4_mask": [
+     1158058422931816448,
+     0
+    ],
+    "third": 46,
+    "unknown_s5_children": 51
+   },
+   {
+    "first": 49,
+    "fourth": 46,
+    "reply": 60,
+    "s4_class_index": 5473,
+    "s4_mask": [
+     1158058422931816448,
+     0
+    ],
+    "third": 52,
+    "unknown_s5_children": 51
+   },
+   {
+    "first": 49,
+    "fourth": 64,
+    "reply": 60,
+    "s4_class_index": 5748,
+    "s4_mask": [
+     1225542048598196224,
+     1
+    ],
+    "third": 56,
+    "unknown_s5_children": 58
+   },
+   {
+    "first": 49,
+    "fourth": 56,
+    "reply": 60,
+    "s4_class_index": 5748,
+    "s4_mask": [
+     1225542048598196224,
+     1
+    ],
+    "third": 64,
+    "unknown_s5_children": 58
+   },
+   {
+    "first": 49,
+    "fourth": 57,
+    "reply": 60,
+    "s4_class_index": 2634,
+    "s4_mask": [
+     4035225266258182144,
+     0
+    ],
+    "third": 71,
+    "unknown_s5_children": 51
+   }
+  ]
+ },
+ "win_holders": {
+  "holder_union": [
+   1518,
+   2634,
+   4139,
+   4843,
+   4864,
+   4889,
+   4892,
+   4903,
+   5007,
+   5011,
+   5255,
+   5282,
+   5307,
+   5471,
+   5473,
+   5501,
+   5513,
+   5611,
+   5613,
+   5626,
+   5632,
+   5748,
+   5830,
+   6030,
+   6073,
+   6147,
+   6166,
+   8106,
+   8785,
+   12264,
+   12327,
+   14776,
+   15640,
+   16131,
+   16371,
+   16757,
+   16930,
+   20421,
+   23092,
+   23101,
+   23115,
+   23938,
+   30345
+  ],
+  "per_s5": {
+   "103558": [
+    2634,
+    5632
+   ],
+   "103560": [
+    2634,
+    5830
+   ],
+   "103561": [
+    2634,
+    5830
+   ],
+   "153671": [
+    4139,
+    16131
+   ],
+   "183566": [
+    4864,
+    4903,
+    5613,
+    16371
+   ],
+   "184684": [
+    4889,
+    4892,
+    5473,
+    5501
+   ],
+   "185003": [
+    4903,
+    16930
+   ],
+   "188395": [
+    5007,
+    5011,
+    8106
+   ],
+   "197253": [
+    5255,
+    5282,
+    6030,
+    20421
+   ],
+   "198530": [
+    5307,
+    5748,
+    8785
+   ],
+   "203419": [
+    5471,
+    5513,
+    5626,
+    16930
+   ],
+   "207534": [
+    5611,
+    6073,
+    16131
+   ],
+   "219608": [
+    6147,
+    6166,
+    8106
+   ],
+   "415095": [
+    12264,
+    12327,
+    14776
+   ],
+   "528497": [
+    15640,
+    16757,
+    30345
+   ],
+   "69347": [
+    1518,
+    4843
+   ],
+   "745184": [
+    23092,
+    23101,
+    23115,
+    23938
+   ]
+  },
+  "rows": {
+   "12264": {
+    "adopted_wins_held": [
+     415095
+    ],
+    "base_status": "unknown",
+    "base_unknown_now": 51,
+    "in_flips": true,
+    "scenario_status": "excluded_now",
+    "scenario_unknown_now": 50
+   },
+   "12327": {
+    "adopted_wins_held": [
+     415095
+    ],
+    "base_status": "unknown",
+    "base_unknown_now": 99,
+    "in_flips": true,
+    "scenario_status": "excluded_now",
+    "scenario_unknown_now": 98
+   },
+   "14776": {
+    "adopted_wins_held": [
+     415095
+    ],
+    "base_status": "unknown",
+    "base_unknown_now": 59,
+    "in_flips": true,
+    "scenario_status": "excluded_now",
+    "scenario_unknown_now": 58
+   },
+   "1518": {
+    "adopted_wins_held": [
+     69347
+    ],
+    "base_status": "unknown",
+    "base_unknown_now": 51,
+    "in_flips": true,
+    "scenario_status": "excluded_now",
+    "scenario_unknown_now": 50
+   },
+   "15640": {
+    "adopted_wins_held": [
+     528497
+    ],
+    "base_status": "unknown",
+    "base_unknown_now": 93,
+    "in_flips": true,
+    "scenario_status": "excluded_now",
+    "scenario_unknown_now": 92
+   },
+   "16131": {
+    "adopted_wins_held": [
+     153671,
+     207534
+    ],
+    "base_status": "unknown",
+    "base_unknown_now": 53,
+    "in_flips": true,
+    "scenario_status": "excluded_now",
+    "scenario_unknown_now": 51
+   },
+   "16371": {
+    "adopted_wins_held": [
+     183566
+    ],
+    "base_status": "unknown",
+    "base_unknown_now": 49,
+    "in_flips": true,
+    "scenario_status": "excluded_now",
+    "scenario_unknown_now": 48
+   },
+   "16757": {
+    "adopted_wins_held": [
+     528497
+    ],
+    "base_status": "unknown",
+    "base_unknown_now": 29,
+    "in_flips": true,
+    "scenario_status": "excluded_now",
+    "scenario_unknown_now": 28
+   },
+   "16930": {
+    "adopted_wins_held": [
+     185003,
+     203419
+    ],
+    "base_status": "unknown",
+    "base_unknown_now": 52,
+    "in_flips": true,
+    "scenario_status": "excluded_now",
+    "scenario_unknown_now": 50
+   },
+   "20421": {
+    "adopted_wins_held": [
+     197253
+    ],
+    "base_status": "unknown",
+    "base_unknown_now": 49,
+    "in_flips": true,
+    "scenario_status": "excluded_now",
+    "scenario_unknown_now": 48
+   },
+   "23092": {
+    "adopted_wins_held": [
+     745184
+    ],
+    "base_status": "unknown",
+    "base_unknown_now": 112,
+    "in_flips": true,
+    "scenario_status": "excluded_now",
+    "scenario_unknown_now": 111
+   },
+   "23101": {
+    "adopted_wins_held": [
+     745184
+    ],
+    "base_status": "unknown",
+    "base_unknown_now": 11,
+    "in_flips": true,
+    "scenario_status": "excluded_now",
+    "scenario_unknown_now": 10
+   },
+   "23115": {
+    "adopted_wins_held": [
+     745184
+    ],
+    "base_status": "unknown",
+    "base_unknown_now": 105,
+    "in_flips": true,
+    "scenario_status": "excluded_now",
+    "scenario_unknown_now": 104
+   },
+   "23938": {
+    "adopted_wins_held": [
+     745184
+    ],
+    "base_status": "unknown",
+    "base_unknown_now": 101,
+    "in_flips": true,
+    "scenario_status": "excluded_now",
+    "scenario_unknown_now": 100
+   },
+   "2634": {
+    "adopted_wins_held": [
+     103558,
+     103560,
+     103561
+    ],
+    "base_status": "unknown",
+    "base_unknown_now": 51,
+    "in_flips": true,
+    "scenario_status": "excluded_now",
+    "scenario_unknown_now": 48
+   },
+   "30345": {
+    "adopted_wins_held": [
+     528497
+    ],
+    "base_status": "unknown",
+    "base_unknown_now": 50,
+    "in_flips": true,
+    "scenario_status": "excluded_now",
+    "scenario_unknown_now": 49
+   },
+   "4139": {
+    "adopted_wins_held": [
+     153671
+    ],
+    "base_status": "unknown",
+    "base_unknown_now": 100,
+    "in_flips": true,
+    "scenario_status": "excluded_now",
+    "scenario_unknown_now": 99
+   },
+   "4843": {
+    "adopted_wins_held": [
+     69347
+    ],
+    "base_status": "unknown",
+    "base_unknown_now": 58,
+    "in_flips": true,
+    "scenario_status": "excluded_now",
+    "scenario_unknown_now": 57
+   },
+   "4864": {
+    "adopted_wins_held": [
+     183566
+    ],
+    "base_status": "unknown",
+    "base_unknown_now": 101,
+    "in_flips": true,
+    "scenario_status": "excluded_now",
+    "scenario_unknown_now": 100
+   },
+   "4889": {
+    "adopted_wins_held": [
+     184684
+    ],
+    "base_status": "unknown",
+    "base_unknown_now": 101,
+    "in_flips": true,
+    "scenario_status": "excluded_now",
+    "scenario_unknown_now": 100
+   },
+   "4892": {
+    "adopted_wins_held": [
+     184684
+    ],
+    "base_status": "unknown",
+    "base_unknown_now": 105,
+    "in_flips": true,
+    "scenario_status": "excluded_now",
+    "scenario_unknown_now": 104
+   },
+   "4903": {
+    "adopted_wins_held": [
+     183566,
+     185003
+    ],
+    "base_status": "unknown",
+    "base_unknown_now": 102,
+    "in_flips": true,
+    "scenario_status": "excluded_now",
+    "scenario_unknown_now": 100
+   },
+   "5007": {
+    "adopted_wins_held": [
+     188395
+    ],
+    "base_status": "unknown",
+    "base_unknown_now": 102,
+    "in_flips": true,
+    "scenario_status": "excluded_now",
+    "scenario_unknown_now": 101
+   },
+   "5011": {
+    "adopted_wins_held": [
+     188395
+    ],
+    "base_status": "unknown",
+    "base_unknown_now": 60,
+    "in_flips": true,
+    "scenario_status": "excluded_now",
+    "scenario_unknown_now": 59
+   },
+   "5255": {
+    "adopted_wins_held": [
+     197253
+    ],
+    "base_status": "unknown",
+    "base_unknown_now": 104,
+    "in_flips": true,
+    "scenario_status": "excluded_now",
+    "scenario_unknown_now": 103
+   },
+   "5282": {
+    "adopted_wins_held": [
+     197253
+    ],
+    "base_status": "unknown",
+    "base_unknown_now": 95,
+    "in_flips": true,
+    "scenario_status": "excluded_now",
+    "scenario_unknown_now": 94
+   },
+   "5307": {
+    "adopted_wins_held": [
+     198530
+    ],
+    "base_status": "unknown",
+    "base_unknown_now": 102,
+    "in_flips": true,
+    "scenario_status": "excluded_now",
+    "scenario_unknown_now": 101
+   },
+   "5471": {
+    "adopted_wins_held": [
+     203419
+    ],
+    "base_status": "unknown",
+    "base_unknown_now": 98,
+    "in_flips": true,
+    "scenario_status": "excluded_now",
+    "scenario_unknown_now": 97
+   },
+   "5473": {
+    "adopted_wins_held": [
+     184684
+    ],
+    "base_status": "unknown",
+    "base_unknown_now": 51,
+    "in_flips": true,
+    "scenario_status": "excluded_now",
+    "scenario_unknown_now": 50
+   },
+   "5501": {
+    "adopted_wins_held": [
+     184684
+    ],
+    "base_status": "unknown",
+    "base_unknown_now": 104,
+    "in_flips": true,
+    "scenario_status": "excluded_now",
+    "scenario_unknown_now": 103
+   },
+   "5513": {
+    "adopted_wins_held": [
+     203419
+    ],
+    "base_status": "unknown",
+    "base_unknown_now": 97,
+    "in_flips": true,
+    "scenario_status": "excluded_now",
+    "scenario_unknown_now": 96
+   },
+   "5611": {
+    "adopted_wins_held": [
+     207534
+    ],
+    "base_status": "unknown",
+    "base_unknown_now": 107,
+    "in_flips": true,
+    "scenario_status": "excluded_now",
+    "scenario_unknown_now": 106
+   },
+   "5613": {
+    "adopted_wins_held": [
+     183566
+    ],
+    "base_status": "unknown",
+    "base_unknown_now": 105,
+    "in_flips": true,
+    "scenario_status": "excluded_now",
+    "scenario_unknown_now": 104
+   },
+   "5626": {
+    "adopted_wins_held": [
+     203419
+    ],
+    "base_status": "unknown",
+    "base_unknown_now": 108,
+    "in_flips": true,
+    "scenario_status": "excluded_now",
+    "scenario_unknown_now": 107
+   },
+   "5632": {
+    "adopted_wins_held": [
+     103558
+    ],
+    "base_status": "unknown",
+    "base_unknown_now": 102,
+    "in_flips": true,
+    "scenario_status": "excluded_now",
+    "scenario_unknown_now": 101
+   },
+   "5748": {
+    "adopted_wins_held": [
+     198530
+    ],
+    "base_status": "unknown",
+    "base_unknown_now": 58,
+    "in_flips": true,
+    "scenario_status": "excluded_now",
+    "scenario_unknown_now": 57
+   },
+   "5830": {
+    "adopted_wins_held": [
+     103560,
+     103561
+    ],
+    "base_status": "excluded_now",
+    "base_unknown_now": 52,
+    "in_flips": false,
+    "scenario_status": "excluded_now",
+    "scenario_unknown_now": 50
+   },
+   "6030": {
+    "adopted_wins_held": [
+     197253
+    ],
+    "base_status": "unknown",
+    "base_unknown_now": 102,
+    "in_flips": true,
+    "scenario_status": "excluded_now",
+    "scenario_unknown_now": 101
+   },
+   "6073": {
+    "adopted_wins_held": [
+     207534
+    ],
+    "base_status": "unknown",
+    "base_unknown_now": 104,
+    "in_flips": true,
+    "scenario_status": "excluded_now",
+    "scenario_unknown_now": 103
+   },
+   "6147": {
+    "adopted_wins_held": [
+     219608
+    ],
+    "base_status": "unknown",
+    "base_unknown_now": 100,
+    "in_flips": true,
+    "scenario_status": "excluded_now",
+    "scenario_unknown_now": 99
+   },
+   "6166": {
+    "adopted_wins_held": [
+     219608
+    ],
+    "base_status": "unknown",
+    "base_unknown_now": 60,
+    "in_flips": true,
+    "scenario_status": "excluded_now",
+    "scenario_unknown_now": 59
+   },
+   "8106": {
+    "adopted_wins_held": [
+     188395,
+     219608
+    ],
+    "base_status": "unknown",
+    "base_unknown_now": 52,
+    "in_flips": true,
+    "scenario_status": "excluded_now",
+    "scenario_unknown_now": 50
+   },
+   "8785": {
+    "adopted_wins_held": [
+     198530
+    ],
+    "base_status": "unknown",
+    "base_unknown_now": 51,
+    "in_flips": true,
+    "scenario_status": "excluded_now",
+    "scenario_unknown_now": 50
+   }
+  }
+ },
+ "win_id_bookkeeping": {
+  "note": "per-id key correspondence is cosmetic inside a batch for this joint Part except where machine-pinned (q042, v001, v002); the joint manifest stores keys sorted by (lo,hi) independent of the id order",
+  "win_ids": [
+   "b018",
+   "d002",
+   "e002",
+   "f017",
+   "g018",
+   "h045",
+   "j033",
+   "z003",
+   "n005",
+   "n006",
+   "p002",
+   "p003",
+   "r001",
+   "r002",
+   "q042",
+   "v001",
+   "v002"
+  ]
+ },
+ "win_rows": [
+  {
+   "key": [
+    1152921505747697664,
+    1032
+   ],
+   "nodes": 9149084,
+   "result": 1,
+   "s5_index": 745184,
+   "source": "batch14-q042"
+  },
+  {
+   "key": [
+    1152926194711134208,
+    128
+   ],
+   "nodes": 3695373,
+   "result": 1,
+   "s5_index": 219608,
+   "source": "part-aj-wins10"
+  },
+  {
+   "key": [
+    1153204079095189504,
+    65536
+   ],
+   "nodes": 3549602,
+   "result": 1,
+   "s5_index": 528497,
+   "source": "part-aj-wins10"
+  },
+  {
+   "key": [
+    1153484454828703744,
+    272
+   ],
+   "nodes": 10770254,
+   "result": 1,
+   "s5_index": 185003,
+   "source": "batch13-wins2"
+  },
+  {
+   "key": [
+    1153484455030030336,
+    0
+   ],
+   "nodes": 4718280,
+   "result": 1,
+   "s5_index": 69347,
+   "source": "part-aj-wins10"
+  },
+  {
+   "key": [
+    1153489144664555520,
+    0
+   ],
+   "nodes": 12863268,
+   "result": 1,
+   "s5_index": 188395,
+   "source": "part-aj-wins10"
+  },
+  {
+   "key": [
+    1153765929805414400,
+    16
+   ],
+   "nodes": 14112632,
+   "result": 1,
+   "s5_index": 183566,
+   "source": "part-aj-wins10"
+  },
+  {
+   "key": [
+    1154610354467115008,
+    64
+   ],
+   "nodes": 5656151,
+   "result": 1,
+   "s5_index": 153671,
+   "source": "batch18-v001v002"
+  },
+  {
+   "key": [
+    1188950301625810945,
+    70368744177666
+   ],
+   "nodes": 3522635,
+   "result": 1,
+   "s5_index": 415095,
+   "source": "part-aj-wins10"
+  },
+  {
+   "key": [
+    1225542323476103168,
+    1
+   ],
+   "nodes": 11601265,
+   "result": 1,
+   "s5_index": 198530,
+   "source": "part-aj-wins10"
+  },
+  {
+   "key": [
+    1734519175235239936,
+    0
+   ],
+   "nodes": 5936863,
+   "result": 1,
+   "s5_index": 184684,
+   "source": "part-aj-wins10"
+  },
+  {
+   "key": [
+    3458764514088976384,
+    272
+   ],
+   "nodes": 7489274,
+   "result": 1,
+   "s5_index": 203419,
+   "source": "batch13-wins2"
+  },
+  {
+   "key": [
+    3459890413727387648,
+    64
+   ],
+   "nodes": 7898204,
+   "result": 1,
+   "s5_index": 207534,
+   "source": "batch18-v001v002"
+  },
+  {
+   "key": [
+    3461016313634230272,
+    131072
+   ],
+   "nodes": 5359994,
+   "result": 1,
+   "s5_index": 197253,
+   "source": "part-aj-wins10"
+  },
+  {
+   "key": [
+    3603442651849818112,
+    128
+   ],
+   "nodes": 5973924,
+   "result": 1,
+   "s5_index": 103561,
+   "source": "batch15-wins2"
+  },
+  {
+   "key": [
+    4035225266258182144,
+    64
+   ],
+   "nodes": 6366900,
+   "result": 1,
+   "s5_index": 103558,
+   "source": "part-aj-wins10"
+  },
+  {
+   "key": [
+    4035788216211603456,
+    0
+   ],
+   "nodes": 2521302,
+   "result": 1,
+   "s5_index": 103560,
+   "source": "batch15-wins2"
+  }
+ ]
+}

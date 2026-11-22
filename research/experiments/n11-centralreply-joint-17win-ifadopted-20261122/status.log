@@ -1,0 +1,188 @@
+# Part BB run status (single-owner lane host, 2026-11-22)
+# JOINT IF-ADOPTED projection of ALL seventeen unconsumed closure WIN
+# rows of the repo history (b018 d002 e002 f017 g018 h045 j033 z003
+# n005 n006 / p002 p003 / r001 r002 / q042 / v001 v002), adopted
+# TOGETHER in one projection. Declaration: note Part BB amendment,
+# commit dafe9651 (observed HEAD-before-push 53e7fae9, note blob sha1
+# 762fc545... at declaration time). No solver search was run.
+# NO verdict is consumed by this Part: the canonical cache stays
+# byte-identical (be9cb24e..., 6,120 rows, machine-reverified before and
+# after the merge), and the 6,137-row if-adopted cache is a non-canonical
+# projection for the scrutiny owner's adoption precomputation. This Part
+# neither recommends nor rejects adoption. The standard 11x11 empty
+# board, the 19 central-reply roots and every class stay UNKNOWN; nodes
+# are bookkeeping, never verdicts.
+
+[inputs pinned at their own publications; byte chains re-verified here]
+five published source increments (upper-stream canonical repo paths,
+sha256-verified here against the published MANIFESTs and re-fetched
+commit-pinned raw for byte equality):
+  part-aj-wins10  increment fe2c6f68f49195b44e21c8d43998fccd965c868e08e49d8a1b3233f5daa4c15e  manifest 74fb877dba862bb8d8ecaa28d4741fbc97f533087e1779fe49a3062af2600b88
+  batch13-wins2   increment bb238f67dbfcc3b9a05ac5542f783107366777f17149f7a5a5af64d4864b0f7c  manifest 43143fd51bb02ddf65d912018f063e631a70517d607c2a73a626b76bd8e5957c
+  batch15-wins2   increment 05c10e1ff17c2601b1fb4a0782af2543d302187ce6344df97d3c763947262b7d  manifest d6ed7b931fb3418ceb8879073b2668b184e3dfcc7a2d24230267fdb7da67777e
+  batch14-q042    increment b4958328270f11b24d3a638e1099a0c6047dbebb242e3116217b0473ef63f9b6  manifest 894e9420b043e12543920bb63c49f00530e45ad5b29c95c65e3dadf3047fc02e
+  batch18-v001v002 increment 4f8fc29bfd00492aa9a983f20a121737d395b8f80d53e2b04c271fec068bc1ee  manifest 13736030ea484a0496da7f929b9c6892a2e9ebf6522f96d1c87d2c21000945f1
+(each WIN row was machine-verified against its own 2-pass raw passes,
+status logs and quarantine registry at its own publication - Part
+AJ/AI/AN/AT/BA; this Part re-verifies the publication bytes and does
+NOT re-derive verdicts; no raw search was run here);
+batch-18 batch-keys sha256 1bb3ed41b26af92491ed579a7c05471f271ed1394d8b5f817b5110794d926667
+(53 keys, class 16131); graph 54f9c364, update8 b658290a,
+Board 954d3a10, policy 78655e94, quarantine 81d23160;
+canonical BASE cache be9cb24e... (6,120 rows, Part AS publication,
+byte-verified before and after the merge);
+BASE reaudit正本 3 files (Part AS, this repo): refresh-summary f2008e70...,
+closure-classes 3ee1dbb6..., per-root-coverage 527c7e9a...
+
+[joint increment maker]
+scripts/make_increment_17win_joint.py (3 runs byte-identical);
+output/increment-17win-joint-IFADOPTED-20261122.cache: 17 rows (all WIN),
+sha256 04003820756b72bc3b35ac67746d9f6dd3dffd7315dbd2f36d50d497485cbe87
+output/increment-manifest.json sha256
+509cc941fb77b6efccde23b64b7cc38c48814153d457c27a7b3576c47be9866d
+(schema joint17win-ifadopted-increment-manifest-v1; row_counts 17/17/0;
+17 unique WIN keys sorted (lo,hi); win_s5_index machine-mapped;
+win_s5_in_update8_baseline_requirement 12; ifadopted_only true;
+canonical_cache_untouched be9cb24e...; base_cache_absent_hits 0;
+quarantine_hits 0; sources = the five pinned increments with their
+manifest shas embedded)
+
+[union merge runs 1..2]
+sha-pinned s5_union_merge.py (sha256
+907119610034fb2aebfde012550a4129dfa3b086c6de11194e856747ac74606a,
+byte-copy pin of the published merger, selftest PASS);
+inputs: canonical BASE cache 6,120 rows (be9cb24e..., byte-verified)
++ 17-row joint WIN increment; WIN/LOSS conflicts 0, duplicates elided 0;
+joint if-adopted cache 6,137 rows (WIN 175 / LOSS 5,962),
+sha256 f8c2fd970e836eaf17f955b139b18e2e81c0e899c4652edfb0bc05d0790bf7e9;
+merge-audit run1 sha256
+ae19b239cb4db449c3a5cd571e6f6447f2eddb9962d6c2d8b7d1cac701bac435;
+run 2 byte-identical (cache cmp PASS, audit byte-compare PASS);
+BASE canonical cache re-verified byte-identical after all merges
+(be9cb24e... unchanged; verdict NOT consumed on main).
+
+[joint if-adopted refresh runs 1..3]
+adapted refresh script reaudit/scripts/refresh_17win_ifadopted.py
+(sha256 0365bf265a69439c28d1137f48c3f6b616ecb05f6d313446f3690211d4ec5183;
+from the published Part BA refresh d3fd8498...; 3-hunk adapt:
+docstring framing + projection cache path, with the cache sha
+expectation extracted from the cache file itself, f8c2fd97...
+machine-asserted inside the script exactly once);
+single process, serial, ~60s each;
+refresh-summary.json sha256 5cee40860f5350ed758f8f4b266b9334aedfff7e9f36a76c22b2b18cae31795b
+closure-classes.csv sha256 0c3c31f37b5e159cb4da63f9af41623c5bebc7c16ed4969c37447670033a99dd
+per-root-coverage.csv sha256 5ead108d55e8736af308ec5c702f14d7e7a62d3138fecaa94306c85c7dff5747
+probe-worklist.csv sha256 4ca9e21b8a9aaf10ae5df8e6d9b521c62d476e5663e79a21b7528f70bb9cd8a1
+(3.7 MB, NOT published, Part AH/AO/AP/AS/AT/BA precedent)
+runs 2 and 3 byte-identical on all four outputs (cmp PASS each).
+
+[delta extractor runs 1..3]
+scripts/compare_deltas_17win_ifadopted.py (sha256
+1163b7c3ae1f59e5ef8d49a7e6ccfa52aa0a692e007b333db57808e2ae74b2e8,
+extension of the published Part BA extractor c1c39b50...):
+joint increment BYTE-REBUILT from the five sha-pinned upstream source
+increments (row-level byte identity vs the published joint increment),
+per-s5 holder sets + holder union machine-computed from the pinned
+graph cost sets (not hardcoded), flips == the BASE-unknown members of
+the holder union (42 classes), 13-class source ledger structurally
+verified (collectively covers all 17 adopted WIN children; 12 of 13
+in flips; class 5830 machine-asserted BASE-excluded_now via
+pre-existing WIN children [126017, 131631, 162106, 197665, 206386]),
+class 16131 BASE-unknown children == the 53 batch-18 key s5 indices
+(agreement gate), scenario class-16131 unknowns == 51 == BASE-unknown
+minus {153671, 207534}, 17/17 verdict non-consumption gate (BASE cache
+absence + BASE index_verdict absence incl. receipts),
+newly-free-CLASSES emptiness gate, per-root free/uncovered immobility
+gate 0 changed rows, newly-free-third emptiness gate, update8 newly
+resolved == baseline requirement 31,859 INTERSECT the 17 WIN s5
+indices (12, machine-recomputed) with resolved-count arithmetic
+consistency, win-hit group serving classes inside the flip set
+(gated), canonical BASE sha pin, scenario closure/prc sha pins,
+merge-audit sha pins; the extractor re-executes the published refresh
+class pass from graph + update8 + caches (including Board fail-closed
+child verification of every free candidate) and asserts
+class_status_counts, known-universe counts and per-root coverage
+equality with the published BASE (Part AS reaudit f2008e70... /
+3ee1dbb6... / 527c7e9a...) and the if-adopted outputs before any
+delta is emitted.
+run 1: OK flips=42 new_free=[] excluded_now 23->65
+class16131_unknown 53->51 free_now 36->36 update8_resolved +12
+win_hit_groups 0->34 joint_greedy 36726->36727 worklist 64941->64917
+runs 2 and 3: byte-identical output (sha256
+115677e6f4502967cf5ee5d787fb36f6f19006e9f35416ee970334ab4498e1c9,
+39,648 bytes, schema n11-joint17win-ifadopted-decomp-deltas-v1)
+[fail-closed tamper tests 7 kinds, tamper -> catch -> immediate restore]
+joint increment nodes tamper -> INCR_SHA pin caught; if-adopted cache
+nodes tamper -> SCEN_CACHE_SHA pin caught; scenario summary count
+tamper -> SCEN_SUMMARY_SHA pin caught; extractor baseline-constant
+tamper (34500 -> 34499) -> recomputed BASE unknown gate caught;
+extractor source-class pin tamper (16930 -> 16931) -> source-class
+ledger machine gate caught; upstream batch-13 increment tamper ->
+source increment sha pin caught; scenario closure CSV tamper ->
+SCEN_CLOSURE_SHA pin caught; after each restore the pinned file shas
+were re-verified byte-identical and the extractor re-run PASS
+(final clean run delta sha == 115677e6...).
+
+[measured joint if-adopted projection state (gated by extractor + refresh)]
+transitions ledger: unknown->excluded_now 42, unknown->unknown 34,458,
+excluded->excluded 390, excluded_now->excluded_now 23,
+free_now->free_now 36; no other transition (gated);
+statuses (projection): excluded 390 / excluded_now 65 / free_now 36 /
+unknown 34,458.
+flips (42) == the machine-computed BASE-unknown members of the graph
+holder union of the 17 WIN s5 indices; per-s5 holder ledgers recorded
+in the delta json (e.g. s5 153671 -> [4139, 16131], s5 207534 ->
+[5611, 6073, 16131], s5 103560/103561 -> [2634, 5830], s5 745184 ->
+[23092, 23101, 23115, 23938]); excluded_now regression [] (gated);
+newly free classes [] (gated: a pure WIN adoption can never free a
+class); newly free thirds [] (gated); per-root free/uncovered changed
+rows {} for all 19 roots (gated); root 27 baseline 119/119 unchanged.
+source-class ledger (13 classes, provenance = upstream per-batch
+experiment dirs; 4 machine-pinned by source manifests): 16757 b1/b018,
+20421 b3/d002, 16371 b4/e002, 12264 b5/f017, 5473 b6/g018, 2634
+b8/h045, 1518 b9/j033, 8785 b11/z003, 8106 b12/n005+n006, 16930
+batch13/p002+p003, 5830 batch15/r001+r002, 23101 batch14/q042, 16131
+batch18/v001+v002; coverage gate: their BASE-unknown boundaries
+collectively contain every one of the 17 adopted WIN children;
+12 of 13 are in flips; class 5830 is the machine-verified exception
+(already excluded_now in BASE via pre-existing WIN children [126017,
+131631, 162106, 197665, 206386]; adopting r001/r002 adds no new flip
+there; the shared batch-15 cost effect lands on class 2634, which
+holds 103558/103560/103561 and loses 3 unknown children).
+per-source-class unknown boundary deltas (gated): 1518 51->50,
+2634 51->48, 5473 51->50, 5830 52->50, 8106 52->50, 8785 51->50,
+12264 51->50, 16131 53->51, 16371 49->48, 16757 29->28, 16930 52->50,
+20421 49->48, 23101 11->10; closure-candidate table 809 rows
+unchanged, churn left [5746] / entered [5748] (worklist-view
+bookkeeping); class 16131 row rank 15 -> 14 (unknown_now 51).
+update8: resolved 79 -> 91 (newly the 12 WIN s5 indices inside the
+baseline requirement, machine-established == baseline requirement
+INTERSECT the 17 WIN indices), remaining_now 31,780 -> 31,389 (-391:
+the 34 win-hit groups drop out of the frozen per-group unknown union -
+published refresh machine computation, bookkeeping only),
+groups_free_now 127 unchanged, win_hit_groups [] -> 34 (every
+win-hit group served by a class inside the flip set, gated), lost
+resolutions [] (gated).
+per-root greedy (scheduling bookkeeping only): movers root 0 (-56),
+root 48 (-6), root 49 (+5), root 12 (-3), root 14 (+1), root 38 (-2),
+root 26 (-2), root 24 (-1), root 36 (-1), root 37 (-1), root 5 (-1);
+free thirds / uncovered unchanged on every root (gated).
+scheduling quantities (recorded, not verdicts): joint greedy 36,726 ->
+36,727 (+1: the greedy set-cover re-solves against the projected
+boundary; recorded as bookkeeping), probe worklist 64,941 -> 64,917
+(-24).
+
+# Interpretation guard: the IF-ADOPTED projection shows the scrutiny
+# owner the exact classification-ledger consequence of adopting ALL
+# seventeen unconsumed closure WINs together: the 42 BASE-unknown
+# holder classes of those children flip to excluded_now (a one-way
+# door: their all-LOSS closure routes are permanently refuted by the
+# verified WIN children), coverage is provably unaffected, and update8
+# gains exactly the twelve pinned resolutions. It is NOT a verdict
+# consumption, NOT a closure claim, NOT a 19-root or standard-11x11
+# result, and neither an adoption recommendation nor a rejection. We
+# do not read strategic value (e.g. excluded_now count) out of this
+# projection to accelerate adoption; WIN-row adoption stays gated on
+# the scrutiny owner's C++ second implementation (pin 9193f5b6...).
+# The standard 11x11 empty board, the 19 central-reply roots and every
+# class remain UNKNOWN. Nodes are bookkeeping, never verdicts.
