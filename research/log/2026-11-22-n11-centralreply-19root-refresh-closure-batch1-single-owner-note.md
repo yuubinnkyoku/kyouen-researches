@@ -2236,3 +2236,84 @@ batch 15 (class 5830) は第1wave (probe_order 590-593, r001-r004) で事前登�
   (C++第二実装 gate pin `9193f5b6...`) 待ち・不変。
 - **標準11×11空盤・19 central-reply roots・class 5830 (48キー未着手) 他全classは
   どの時点でもUNKNOWNのまま。nodes数を勝敗として読まない。**
+
+## Part AJ publication status update (2026-11-22)
+
+Part AJ (joint unconsumed-rows if-adopted decomposition of the nine
+WIN-HALT batches 1,3,4,5,6,8,9,11,12) is **completed and published**
+(commit `7704f5c3`, 26 files, fetch-back sha256-verified 26/26
+byte-identical against the publishing host). Verdicts are NOT consumed
+anywhere; the ten WINs (b018/d002/e002/f017/g018/j033/h045/z003/n005/
+n006) remain unconsumed closure WINs pending the scrutiny owner (C++
+second-implementation gate pin `9193f5b6...`; third-implementation
+verdict-level cross-verification had already been recorded for all ten,
+Parts G/H/K/O/P/T/W/AA/AD/AG). Batch-13 (Part AI), batch-14 (Part AF)
+and batch-15 (Part AK) files were never touched (read-only). The
+standard 11x11 empty board, the 19 central-reply roots, the unprobed
+children of the nine batch classes and every other class remain UNKNOWN
+at every point of this decomposition. Nodes are not verdicts.
+
+**Honest correction published by the maker's own fail-closed gate**: the
+first increment run ABORTed (`ABORT b001: key already in canonical BASE
+cache`). Precise re-measurement of every batch key against the 6,027-row
+canonical BASE cache found that exactly **19 batch-1 LOSS rows
+(b001..b017, b019, b020) are already inside canonical BASE with
+identical verdicts AND identical node counts** (the canonical batch-2/7/10
+increments already reached those membership classes); batch-1's WIN b018
+is NOT in BASE; the other eight batches have ZERO BASE overlap; no
+verdict conflicts exist anywhere. Those 19 rows are excluded from every
+increment as pre-consumed duplicates under a stricter gate (verdict AND
+node identity, else ABORT). The packet shrank from the declared 151
+probed rows (JLOSS141/JALL151 planning labels) to **132 unique-new rows
+= 10 WIN + 122 LOSS**; the declaration numbers were planning quantities,
+not outcomes. h002 (batch-8 15M exhaustion, result 0) stays excluded
+from all increments with its exhaustion shape gate-checked (15M nodes,
+2-pass identical); its forbidden re-search is unchanged.
+
+Published contents (`research/experiments/n11-centralreply-joint-unconsumed-ifadopted-20261122/`,
+26 files; the three 3.7MB probe-worklists are regenerable from the
+published scripts and are not republished, Part AH precedent):
+
+* Corrected maker `scripts/make_increments_joint10.py` (all gates PASS)
+  and new `scripts/compare_deltas_joint10.py`; increments
+  `output/increment-joint-wins10-IFADOPTED-20261122.cache` `fe2c6f68...` /
+  loss122 `e5fe80af...` / all132 `cc841d6e...`, with manifest.
+* Scenario caches via the published fail-closed union merger
+  (`s5_union_merge.py` pin `90711961...`, selftest PASS, WIN/LOSS
+  conflicts 0, duplicates 0): JWIN10 6,037 rows `7881724a...`,
+  JLOSS122 6,149 rows `d80ee94b...`, JALL132 6,159 rows `13bfec6e...`,
+  each with a merge audit.
+* Scenario refresh: Part Y script (pin `88671526...`) adapted in exactly
+  4 hunks per scenario (docstring/ROOT/CACHE/sha-pin, diff-verified),
+  executed twice each, 6/6 byte-identical runs; per-root free coverage
+  (free_now/uncovered) identical to BASE on every root; root first=27
+  keeps 119/119 free thirds in every scenario.
+* Deltas `output/decomp-deltas-joint10.json` (`24b5aa11...`; all
+  recomputed class_status_counts asserted equal to the published
+  BASE+scenario summaries before reporting; Board fail-closed free
+  verification re-executed per scenario):
+  - **JWIN10**: excluded_now 23 -> 53 (+30 flips), unknown 34,501 ->
+    34,471. The flip set is machine-measured IDENTICAL to the frozen-graph
+    valid holder union of the ten WIN S5 children (30 classes, all
+    baseline UNKNOWN, none already excluded_now): each WIN flips its own
+    batch class plus its peer cost-child holders; only class 8106 is a
+    multi-WIN holder (n005+n006). update8 win_hit_groups 0 -> 29;
+    free_now stays 35; root27 stays 119/119.
+  - **JLOSS122**: ZERO flips (excluded_now 23, free_now 35, unknown
+    34,501, root27 119/119); update8 resolved 75 -> 163 (+88 of the 122
+    rows are frozen-baseline requirements), remaining 31,784 -> 31,696;
+    joint greedy 35,242 -> 36,201; probe worklist 65,154 -> 65,011.
+  - **JALL132**: excluded_now 53 / unknown 34,471 (identical to JWIN10:
+    the LOSS rows flip nothing); update8 resolved 75 -> 171 (+96),
+    remaining 31,784 -> 31,442; joint greedy 35,242 -> 36,193; worklist
+    65,154 -> 64,996. Per-class unknown_now additivity of all nine batch
+    classes: True; update8 remaining/joint greedy are honestly
+    NONadditive (WIN hits drop whole planned groups while LOSS rows
+    resolve single requirements); greedy nonadditive roots (0, 14, 49)
+    recorded in the delta JSON, not gated away.
+
+Scheduling reading only (not a verdict): adopting the 122 published
+LOSS rows would shrink the frozen update8 requirement by 88 rows and the
+worklist by 143 with zero status flips; the ten WINs are worth 30
+excluded classes but remain hypothetical. The 11x11 empty board remains
+UNKNOWN.
