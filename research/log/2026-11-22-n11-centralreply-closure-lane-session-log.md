@@ -2531,3 +2531,102 @@ refutation evidence.
   AV lands (BASE = canonical 6,172), (d) the scrutiny owner's 17-WIN
   adoption gate, (e) optional extension of third-impl spot coverage to
   further batch rows under a new declaration.
+
+## Continuation 40 (2026-11-22, this host): Part BA batch-18 WIN-row v001+v002 two-WIN if-adopted decomposition executed and published - flips [4139, 5611, 6073, 16131] machine-computed holder union (double holder 16131), class 16131 BASE-unknown == the 53 batch-18 key s5 indices (new strong gate), excluded_now 23->27 projection; verdicts NOT consumed
+
+- Scope and declaration: Part BA projects the classification-ledger
+  consequence of adopting the two batch-18 WIN rows (v001 s5 153671 /
+  v002 s5 207534) TOGETHER, as the scrutiny owner's adoption-decision
+  precomputation (verdict-free, Part V/R/AB/AH/AI/AN/AO/AT precedent).
+  Declared by single-owner-note amendment at commit `607c876af...`
+  (note lock blob `01e980d9`, 290,488 bytes; observed HEAD-before-push
+  `f8cc6c9d`). Same-scope counter-declaration grep over the note and
+  the experiment directory listing: none. This closes the if-adopted
+  gap: all 17 unconsumed closure WINs now have if-adopted
+  decompositions. Batch-18 sources, the 51 unconsumed batch-18 keys
+  and Part AV remained uncontacted.
+- Environment note: one environment reset mid-run; all pinned inputs
+  (graph `54f9c364`, update8 `b658290a`, Board `954d3a10`, policy
+  `78655e94`, quarantine `81d23160`, BASE cache `be9cb24e` + 3 Part AS
+  reaudit outputs, batch-18 batch-keys `1bb3ed41` + raws
+  `24b45c8a`/`1fc367bd`/`41c10ec2`/`e9f578fc` + status-b18
+  `4b785add`) were re-fetched from main and re-verified by sha; every
+  stage was re-run after the rebuild and the primary and rebuilt
+  outputs were byte-identical end to end (an extra determinism check).
+- Execution: maker `make_increment_v001v002_win.py` run 3x
+  byte-identical (increment `4f8fc29b`, 2 rows / 2 WINs; manifest
+  `13736030`, schema `batch18-win-v001v002-ifadopted-increment-manifest-v1`,
+  ifadopted_only, canonical untouched pin, base_cache_absent_hits 0,
+  quarantine_hits 0); sha-pinned merger (byte-copy pin `90711961`,
+  selftest PASS) run 2x byte-identical -> if-adopted cache 6,122 rows
+  (WIN 160 / LOSS 5,962, conflicts 0) `6bfa9faa` (251,556 bytes),
+  merge-audit run1/run2 byte-identical `4cdad34b`; BASE canonical
+  6,120 rows `be9cb24e` byte-verified unchanged after all merges.
+  Refresh adapt (from the published Part AT refresh `5f9810e6`,
+  2-hunk adapt; cache sha expectation extracted from the cache file
+  itself) run 2x serial, all four outputs byte-identical:
+  refresh-summary `af95270b`, closure-classes `e5a91e15`,
+  per-root-coverage `9f59ebf8`, probe-worklist `18429b91` (NOT
+  published, sha recorded). Delta extractor
+  `compare_deltas_v001v002_ifadopted.py` (`c1c39b50`, two-WIN adapt
+  of the published Part AT extractor `207cfbcc`) run 3x
+  byte-identical, all gates PASS (delta json `e3679aae`, schema
+  `n11-b18win-v001v002-ifadopted-decomp-deltas-v1`); five fail-closed
+  tamper tests (increment nodes, scenario summary, batch-keys s5,
+  extractor WIN-constant, extractor BATCH_CLASS constant) were each
+  caught by the intended pin/gate, immediately restored and
+  re-verified byte-identical.
+- Measured projection (bookkeeping, never verdicts): flips
+  [4139, 5611, 6073, 16131] == the machine-computed BASE-unknown
+  members of the graph holder union of s5 153671/207534 (v001 holders
+  [4139, 16131]; v002 holders [5611, 6073,
+  16131]; double holders [16131] only), all four unknown ->
+  excluded_now; transitions ledger unknown->unknown 34,496 /
+  excluded->excluded 390 / excluded_now->excluded_now 23 /
+  free_now->free_now 36, no other transition, no regression;
+  excluded_now 23 -> 27, unknown 34,500 -> 34,496, free_now 36
+  unchanged; newly free classes/thirds empty (gated); per-root
+  free/uncovered changed rows 0 (gated), root 27 baseline 119/119;
+  class 16131 BASE-unknown children == the 53 batch-18 key s5 indices
+  (new strong agreement gate), scenario-unknown 53 -> 51;
+  closure-candidate table 809 rows unchanged with churn none, class
+  16131 rank 15 -> 7 (unknown_now 51, groups_served 5, the table is a
+  probing-worklist view); update8 resolved 79 -> 81 (newly [153671,
+  207534], both inside the baseline requirement), win_hit_groups
+  [] -> 5 (all five are class 16131 closure groups), groups_free_now
+  127 unchanged, remaining_now 31,780 -> 31,729 (-51, the five
+  win-hit groups drop out of the frozen per-group unknown union);
+  joint greedy 36,726 -> 36,724 and probe worklist 64,941 -> 64,939
+  (movers root 12 and root 48, -2 each).
+- Publication: the experiment dir
+  `research/experiments/n11-centralreply-class16131-win-v001v002-ifadopted-20261122/`
+  (15 files + 1 unpublished worklist, 15 manifest rows) in 3 commits:
+  A `603b4f4f` (if-adopted cache 6,122 rows), B (maker `1e7865cb`,
+  merger `00c3cdc6`, extractor `ce134e05`, refresh `94b00500`,
+  increment `8e8c51d5`, manifest `1b8bc3c8`, merge-audits `19366a1e`
+  / `b4e8e534`), C (refresh-summary `2df84b96`, closure-classes
+  `26ef7844`, per-root-coverage `e3abf46c`, delta json `f11677f3`,
+  README `00c735de`, status.log `2cabe757`, MANIFEST-sha256
+  `333ef6d1`) = publication complete. **Fetch-back 15/15** manifest
+  sha256 match at each publication commit.
+- Note status update appended: commit `592516d2` (blob `762fc545`,
+  296,440 bytes; note lock `01e980d9` guard, observed HEAD `333ef6d1`),
+  fetch-back byte-identical against the commit-pinned raw URL.
+- Verdict guards (unchanged): zero verdicts consumed; the if-adopted
+  cache 6,122 rows is a non-canonical projection, not the canonical
+  chain; all 17 unconsumed closure WINs remain unconsumed on the
+  canonical chain; the scrutiny owner's adoption gate (C++ second
+  implementation, pin `9193f5b6`) is untouched and unabridged; this
+  Part neither recommends nor rejects adoption; no canonical cache
+  write happened anywhere. The standard 11x11 empty board, the 19
+  central-reply roots, class 16131 (51 remaining unknown children)
+  and all 53 batch-18 keys remain UNKNOWN throughout; nodes, worklist
+  and greedy sizes are bookkeeping, never verdicts.
+- Open items (re-read latest main first): (a) the Part AV batch-17
+  52-LOSS adoption publication (still in flight at this Continuation),
+  (b) batch-18 Part AY continuation / batch-19 (class 16513)
+  selection by a later session, (c) the class 23101 residual 10-LOSS
+  adoption Part after Part AV lands (BASE = canonical 6,172), (d) the
+  scrutiny owner's 17-WIN adoption gate, (e) optional joint
+  if-adopted extensions (e.g. the 17-WIN joint projection) under a
+  new declaration.
