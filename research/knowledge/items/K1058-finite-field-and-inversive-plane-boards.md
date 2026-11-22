@@ -948,7 +948,7 @@ artifacts:
   note: v4,u4,z4の排反性の検証
 - path: research/experiments/finite-field-kyouen-20261120/ARC_K8_CIRCLE_SPLIT.md
   role: source
-  note: |C' cap T|の完全な分解（6qと4(q-1)+4(s-4)q）
+  note: C'とTの交点数による完全な分解（6qと4(q-1)+4(s-4)q）
 - path: research/experiments/finite-field-kyouen-20261120/scripts/arc_k8_v2v3u3.py
   role: verifier
   note: 円の分類の検証
