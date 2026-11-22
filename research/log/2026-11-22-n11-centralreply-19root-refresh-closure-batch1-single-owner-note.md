@@ -1609,3 +1609,46 @@ Part AC宣言 (本note Part AC節・commit `609e9137`) に基づき、宣言・s
   一切接触していない (宣言直前の最新main再取得で確認)。
 - 本status update observed HEAD-before-push: 実行時の最新mainを
   コミットメッセージに記録。
+
+
+## Part AD (verifier, amendment 2026-11-22): batch 12 (class 8106) n005/n006 第三実装交叉検証 (declared before execution)
+
+batch 12 (Part AC, class 8106, renewed rank 10) は同一wave内の2キーで事前登録のWIN-HALT規則
+(rc=45) が発火して停止した: **n006 (s5_index 219608, key `[1152926194711134208, 128]`, legal 78,
+probe_order 439): result 1 (WIN), 3,695,373 nodes** および **n005 (s5_index 188395, key
+`[1153489144664555520, 0]`, legal 82, probe_order 438): result 1 (WIN), 12,863,268 nodes**
+(いずれも2-pass fresh cold node-exact・published chunk commits `eca35f3c`/`ace92d84`)。
+Part K/O/P/T/W/AAの前例に従い、batch-12の両WIN行 n005/n006 と、probed LOSS全6行
+(n001/n002/n003/n004/n007/n008 — batch-12は8/52 probedのため、Part AAと同一規則で
+検査済み全行が対象) を第三実装 (`third_impl.js`, pin sha256 `08ea958f...`) でverdict-level
+交叉検証する。**verdict不消費・採用判断は引き続きscrutiny owner (C++第二実装 gate pin
+`9193f5b6...` 前例・不変)。**
+
+- 対象: `research/experiments/n11-centralreply-closure-batch12-wins-thirdimpl-20261122/`。
+  target 8行 (n005 WIN + n006 WIN + n001/n002/n003/n004/n007/n008 LOSS)・anchor 2行
+  (k02a/l1a, Part G/K/O/P/T/W/AAと同一のpublished第三実装値 9,106,337 expansions/
+  4,991,527 ttHits と 7,660,602/3,951,175)・negative 2行 (ng1/ng2)。入力はpublished
+  batch-12 raw (8キー×p1/p2の16ファイル、chunk commits `eca35f3c`/`ace92d84`から
+  commit-pinned raw CDN取得) から `make_inputs_batch12.py` がfail-closed導出する
+  (手転写ゼロ・2-pass (budget, result, nodes) 一致assert・status.logのPASS 8行照合・
+  `n005 WIN-HALT`/`n006 WIN-HALT`停止行とRUNNER-STOP/RUNNER-EXIT行の存在assert・
+  key/legalをpublished batch-keys.json (sha256 `de55df83...`, scaffold commit
+  `d333bb2c` 正本) と機械照合・導出input CSVがpublished batch-12 input CSV 8本と
+  byte一致することをassert)。sourcesは再出版しない。
+- 前提ゲート (いずれも必須・fail-closed): script pin 3種 (`08ea958f...` / `c8c52528...` /
+  `84585617...`)、rule-engine gate (verify_tbl.js: quads 95,670 == replica / triples
+  195,044 mismatches 0)、anchor 2行の本ホスト再現がpublished値と完全一致、negative 2種
+  (ng1/ng2) の文言一致GATE_FAIL。手法: 1行1プロセス、cap 300M expansions、wallcap
+  240s、1行2回 (a/b) determinism gate (result/expansion/ttHits/reason同一必須)。
+  wall超過 (runlimit) はhonest wall-inconclusiveとして記録し検証主張としない。
+- 主張と消費規則: 本検証はverdict-level文献作成のみ・verdict不消費。n005/n006のWINは
+  9番目・10番目のunconsumed closure WIN (b018/d002/e002/f017/g018/j033/h045/z003/
+  n005/n006) として引き続きscrutiny owner待ち。標準11x11空盤・19 central-reply roots・
+  class 8106は本検証のどの時点でもUNKNOWNのまま。n009-n052 (44キー) は未着手のまま。
+  nodes/expansionsを勝敗として読まない。
+- 並走との不接触: 対象はpublished batch-12由来キーのみ (chunk commits `eca35f3c`/
+  `ace92d84`・scaffold `d333bb2c`・status.log) で、他レーン (r=9 crosscheck・eight-row等)
+  ・進行中の実験と無関係。同一スコープの宣言がmainに存在する場合は着手しない
+  (宣言直前に最新mainを再取得・同scope対抗宣言なし・Part AD採番未使用を確認済み)。
+- 本amendment observed HEAD-before-push: 9759774ba3765531329f71a5b09a2180e8283a0e
+  (commit messageにも記録)。
