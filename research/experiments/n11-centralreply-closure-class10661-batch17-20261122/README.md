@@ -81,3 +81,38 @@ Batch 17 of the central-reply 19-root closure grind (K0415/K0417 line).
 - `scripts/make_batch17_keys.py` — scaffold maker (全gate内蔵・3回
   byte一致)。
 - `README.md` / `status.log` / `MANIFEST-sha256.txt` — 本宣言正本。
+
+## 実行結果 (Part AU execution session, 2026-11-22)
+
+宣言 (`adc4358a`) + scaffold (`62b60a07`) のとおり、宣言後の別セッション
+(本execution host) が最新mainで対抗宣言を確認のうえ実行した。
+
+- **結果: 52/52キーすべて LOSS (result 2)**。2-pass fresh-cold
+  node-exact・budget 15,000,000・WIN 0・枯損 0・mismatch 0。
+  総ノード数 **196,536,452/pass** (nodes range 1,651,860 .. 14,967,263。
+  u031が14,967,263 nodesで予算直下でLOSS確定)。
+- val-gate: 実行直前に本hostで4/4 node-exact (at2m 0/2,000,000 x2・
+  15m (2,3651923)/(2,5040200)・禁止四角 95,670)。`output/val-gate/`。
+- host event (誠実記録): 実行中にsandbox環境リセットが4回発生し、
+  書きかけのpassファイル5個 (u017.p2, u018.p2, u027.p2, u031.p2, u033.p2)
+  が不完全断片化した。完全性ガードが `# replay_done` 不在を検出して
+  `output/raw-truncated-hostevent/` に退避し、該当passをfresh coldで
+  再実行した。断片はどれもverdict行を持たず、完了済みrowの再探索は
+  一切行っていない (batch-16と同種のhost event)。
+- row-audit.json (schema `n11-centralreply-closure-class10661-batch17-rowaudit-v1`):
+  全52行をrawから機械再検証 (p1==p2 node-exact・budget内・result 2・
+  input行照合・status.log照合)。
+- verdict消費: **ゼロ**。52 LOSS行のcanonical計上は別宣言のadoption Part
+  (fail-closed merger `90711961...` 経由) で行う。canonical cacheは
+  6,120行 `be9cb24e...` 不変。**標準11x11空盤・19 central-reply roots・
+  class 10661・全キーはどの時点でもUNKNOWNのまま。nodes数を勝敗として
+  読まない。**
+- バッチ実績: 完走17バッチ目。clean全LOSSバッチは
+  23963/10324/8784/10687 に次ぐ**5バッチ目** (WIN-HALT 11本 + batch-14
+  もWIN-HALTのため、完走バッチ内訳は11+1 WIN-HALT + 5 clean)。
+- 実行runnerのscaffold差分 (開示): `scripts/runbatch.sh` はpublished
+  batch-16正本のbyte-copyに、15M枯損行 (jsreplayは枯損時もexit 0) を
+  PASSと誤記録しないhonest exhaustionラベルを1箇所加えた
+  (本バッチでは枯損0のため未発火・shaはMANIFEST固定)。
+  `scripts/runwave.sh` は2-key wave (2-core host・宣言済みworker最大2)。
+  `scripts/jsreplay.js` はpin `84585617...` のbyte-copy (MANIFEST固定)。
