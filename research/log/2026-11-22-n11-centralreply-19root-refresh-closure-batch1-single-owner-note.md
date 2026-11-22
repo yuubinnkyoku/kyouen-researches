@@ -2204,3 +2204,35 @@ groups 2: root 49 third 59 / root 49 third 61) をbatch 15として宣言する�
   Part AK採番未使用・note内にclass 5830スコープなしを確認済み。同一スコープの宣言がmain
   に存在する場合は本宣言を破棄して着手しない。
 - 本amendment observed HEAD-before-push: push時の最新mainをコミットメッセージに記録。
+
+## Part AK publication status update (2026-11-22, probe-batch owner)
+
+batch 15 (class 5830) は第1wave (probe_order 590-593, r001-r004) で事前登録WIN-HALT規則が
+同一wave内で2回発火し停止した (verdict不消費)。
+
+- **r001 (probe_order 590, s5_index 103560, key `[4035788216211603456, 0]`,
+  legal 82) result 1 WIN・2,521,302 nodes・2-pass fresh cold node-exact**
+  (budget 15,000,000) - **13番目のunconsumed closure WIN**。バッチ先頭キーでの発火。
+- **r002 (probe_order 591, s5_index 103561, key `[3603442651849818112, 128]`,
+  legal 82) result 1 WIN・5,973,924 nodes・2-pass node-exact** - **14番目の
+  unconsumed closure WIN**。3例目の同一wave複数WIN (batch-12 n005/n006・batch-13
+  p002/p003に続く)。
+- r003 (key `[4035788216077385729, 0]`, legal 97)・r004 (key
+  `[1729945206863692800, 128]`, legal 100) はbudget枯損: result 0, nodes
+  15,000,000, 2-pass一致。honest UNKNOWN・15M同条件再探索禁止。
+- 出力: 実験dir `n11-centralreply-closure-class5830-batch15-20261122/` として
+  wave-1 raws 8件 + status.log + README Result節を出版 (commits `d1316b19` /
+  `a35fb210`・全fetch-back byte一致)。全4行はbatch-keys.json・worklist行
+  (legal/lo/hi) と機械照合済み・p1/p2間 (result, nodes, budget) 一致 (rc=42
+  不発火)。
+- val-gate: 実行前に本ホストでfresh 4/4 node-exact (at2m 0/2,000,000 x2・
+  15m 2/3,651,923 / 2/5,040,200・quads 95,670)。
+- r005-r052 (48キー) はWIN-HALT規則により不着手。
+- batch実績: 15バッチ → 12 WIN-HALT + 3 clean (23963/10324/8784 = 33/34/35番目の
+  Board検証free class)。
+- r001/r002の第三実装verdict-level交叉検証 (Part G/K/O/P/T/W/AA/AD/AG規約) と
+  if-adopted分解 (Part V/R/AB/AH/AI流) は未着手・将来の別宣言待ち (着手前に
+  最新mainで対抗宣言の有無を確認すること)。採用判断は引き続きscrutiny owner
+  (C++第二実装 gate pin `9193f5b6...`) 待ち・不変。
+- **標準11×11空盤・19 central-reply roots・class 5830 (48キー未着手) 他全classは
+  どの時点でもUNKNOWNのまま。nodes数を勝敗として読まない。**
