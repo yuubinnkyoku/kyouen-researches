@@ -1531,3 +1531,55 @@ No conflicting declaration existed; nothing in the declaration was changed.
   evidence outside the canonical cache. p005-p052 (48 keys) unprobed.
   The standard 11x11 empty board, the 19 central-reply roots, class
   16930 and every other class remain UNKNOWN. Nodes are not verdicts.
+
+## Continuation 26: Part AN batch-15 (class 5830) r001/r002 if-adopted decomposition published under its own declaration
+
+Executed the Part AN declaration (commit `d94b4ff0` 15:41:57Z, observed
+HEAD-before-push `953ae601`) on this host; no counter-declaration existed
+and no takeover was needed (declaring host = this session).
+
+- Single-scenario structure: batch-15 has zero resolved LOSS rows
+  (r003/r004 are 15M budget-exhaustion rows, result 0, nodes==budget,
+  honest UNKNOWN, type-gated out of every increment), so PWIN2 is also
+  the full-packet scenario - machine-asserted in the increments manifest
+  (row_counts losses 0, full_packet_eq_win_only true).
+- All gates PASS: increments maker 2x byte-identical (2 WIN rows,
+  `05c10e1f...`); sha-pinned s5_union_merge (`90711961...`, selftest
+  PASS) 2x byte-identical (6,029 rows, WIN160/LOSS5,869,
+  `51693301...`); scenario refresh 2x serial (66s/61s; single-process
+  after the batch-13 concurrent OOM lesson), 3 outputs byte-identical
+  (`496f3761...`/`37223c04...`/`f4256c28...`); delta extractor 3x
+  byte-identical (`e67df758...`) with fail-closed recompute gates
+  (class_status_counts re-executed from graph+update8+cache and asserted
+  equal to the published summaries for BASE and PWIN2).
+- Machine-measured decomposition: the flip is NOT the batch's own class -
+  class 5830 was ALREADY excluded_now at BASE (5 pre-existing WIN cost
+  children among 57); adopting r001/r002 newly excludes exactly side
+  class 2634 ({2634} == eligible holder union). excluded_now 23->24,
+  unknown 34,501->34,500, free_now 35 unchanged; class 5830 unknown_now
+  52->50 and class 2634 51->49 (own membership delta 2 each).
+  batch-keys membership_class_count (1) is closure-scoped vs the
+  frozen-graph holder sets {2634, 5830} which drive the flips - both
+  recorded per key in the delta output (scope distinction first made
+  explicit here; batch-13 holders happened to match membership counts).
+- update8 moves forward (unlike update8-neutral batch-13): r001/r002
+  (s5 103560/103561) are frozen baseline requirements - resolved 75->77,
+  remaining 31,784->31,734, win_hit_groups 0->1 (first win-hit group is
+  s4 class 2634 on the root-first-49/third-71 group).
+- Scheduling: joint greedy 35,242->35,240, probe worklist 65,154->65,150,
+  root 27 stays 119/119, per-root free coverage columns unchanged on
+  every root, the only individual_greedy_union mover is root first 49
+  (2,890->2,888).
+- Publications: experiment dir
+  `n11-centralreply-class5830-win-r001r002-ifadopted-20261122/` 14 files
+  (README + MANIFEST-sha256.txt) pushed as commit `c37b2790`
+  (15:49:30Z), fetch-back 14/14 byte-identical including the ~247KB
+  scenario cache; probe-worklist not published per Part AH precedent
+  (sha256 in the experiment README); note Part AN status update
+  appended as commit `138795ce`.
+- Verdicts NOT consumed: r001/r002 remain hypothetical adoptions pending
+  the scrutiny owner (C++ second-implementation gate pin
+  `9193f5b6...`); r003/r004 are honest UNKNOWN and must not be read as
+  verdicts; r005-r052 (48 keys) unprobed. The standard 11x11 empty
+  board, the 19 central-reply roots, class 5830 and every other class
+  remain UNKNOWN. Nodes are not verdicts.
