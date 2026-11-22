@@ -165,7 +165,7 @@ resume 宣言: [2026-11-22-four-row-q4-m35-class-split-resume-single-owner-note]
   `c0123` (200s, 33,861) — すべて INDET。
 - x2 サブキー 2: `c1k2p0x21` / `c1k2p0x22` (200s, 788,535 / 919,077 conflicts)
   — 下記 `scripts/sat4.js` (second-stone 位置分割) の初適用。
-- **UNSAT 0・SAT 0**。m=35 の不在も存在も一切主張しない (`M_{4,4} \in [35,237]` 不変)。
+- **UNSAT 0・SAT 0**。m=35 の不在も存在も一切主張しない (`M_{4,4} ∈ [35,237]` 不変)。
 
 ### 追加ツール (本コミットで出版)
 
@@ -186,7 +186,7 @@ resume 宣言: [2026-11-22-four-row-q4-m35-class-split-resume-single-owner-note]
 - INDET キーは done_key で skip されるため、再挑戦時は該当 INDET 行を
   records.jsonl から除去してから再実行する (2026-11-15 truncation 除去と同規約)。
 - x2 サブキー空間は親キーを消費しない別空間。`c1k2p0` の x2 分割は
-  B \in {p+1..m-1} = {1..34} の 34 sub-key、記録済みは B=1,2 のみ。
+  B ∈ {p+1..m-1} = {1..34} の 34 sub-key、記録済みは B=1,2 のみ。
 - 親 CNF は決定的 (record 毎に cnf_md5 記載・リセット越し同一確認済み)。
 
 ### 観察 (有限観察・非決着)

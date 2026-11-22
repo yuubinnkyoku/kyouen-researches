@@ -4,7 +4,7 @@
 レーンの 2026-11-22 単一オーナー resume セッションの実行記録。
 宣言: [2026-11-22-four-row-q4-m35-class-split-resume-single-owner-note](2026-11-22-four-row-q4-m35-class-split-resume-single-owner-note.md)
 (宣言時 HEAD `d73bb0b8`・宣言コミット `4fcee8eb`)。
-**判定は不推移 (UNSAT 0・SAT 0)。不在/存在の主張は一切ない** (`M_{4,4} \in [35,237]` 不変)。
+**判定は不推移 (UNSAT 0・SAT 0)。不在/存在の主張は一切ない** (`M_{4,4} ∈ [35,237]` 不変)。
 
 ## まとめ
 
@@ -73,7 +73,7 @@
 
 - INDET 行 15 のうち親 12 キーは done_key で skip される。retry 時は該当行を
   records.jsonl から除去してから (2026-11-15 truncation 除去と同規約)。
-- `c1k2p0` の x2 展開は B \in {1..34} の 34 sub-key のうち B=1,2 のみ記録済み。
+- `c1k2p0` の x2 展開は B ∈ {1..34} の 34 sub-key のうち B=1,2 のみ記録済み。
   B=3..34 (32 sub-key) が次の最短確定経路候補。
 - multi クラス (`c01`, `c0123`) 向け row-split 分割は未実装 (`sat4.js` は
   単一 deficient row・k>=2 のみ)。
