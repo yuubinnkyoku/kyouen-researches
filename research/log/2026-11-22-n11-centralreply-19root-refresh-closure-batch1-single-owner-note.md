@@ -75,3 +75,22 @@ closure候補表の次位クラスにピボットする。
   本batch単体では閉鎖・被覆・secured主張なし)。
 - 本amendment observed HEAD: `33a4d70365883e5d0293ecee400b8d09735301db`
   (batch 1 WIN-HALT出版後のmain)。
+
+
+## Part D (solver, amendment 2026-11-22): closure class 20421 exact-S5 probe batch 3
+
+batch 2 (Part C) は48/48全LOSSで完走し、クラス23963はfail-closed merge + refresh再監査
+(`research/experiments/n11-central-reply-23963-closure-reaudit-20261122/`)
+でBoard検証free（32→33番目）として閉鎖資格確定。次の正規all-LOSS候補として
+reaudit closure-classes.csv rank 2 のクラス20421に着手する。
+
+- 対象: `research/experiments/n11-centralreply-closure-class20421-batch-20261122/`。
+  graph class index 20421, mask `[1155173304420536320, 131072]` の未確定canonical
+  S5子49件（d001-d049、reaudit probe-worklistのprobe_order順・Board再計算合法手数固定）。
+  全キーは正本merged cache（5,924行・sha256 `8a721a18...`）に存在しないことを
+  機械確認済み (0 hits)。quarantine登録はrefreshの同policy処理済み。
+- 手法・停止規則・消費規則: Part B/Cと同一 (pinned replica `jsreplay.js`
+  sha256 `84585617...`, 2-pass fresh cold, budget 15M, mismatch→HARD-STOP rc=42,
+  WIN→HALT rc=45, 枯渇=UNKNOWN, 消費はfail-closed merger経由のみ、
+  本batch単体では閉鎖・被覆・secured主張なし)。
+- 本amendment observed HEAD-before-push: 実行時の最新mainをコミットメッセージに記録。
