@@ -1,0 +1,97 @@
+{
+ "schema": "n11-centralreply-closure-batch13-wins-thirdimpl-input-v1",
+ "sources": {
+  "batch_keys_sha256": "c6c56a1a0552b8a87d1e1f5f9e0d6c3955cf1f58a85ef6726317d17846a0a2c7",
+  "raws": "sources/raw (published batch-13 raws 8 files: declaring-host 4 keys x 2-pass, chunk commit b4b55ec8, fetched from the repo raw CDN, commit-pinned)",
+  "status_log": "sources/status.log (published batch-13 declaring-host runner log, chunk commit b4b55ec8)"
+ },
+ "consumed_into_canonical_cache": false,
+ "targets": [
+  {
+   "key_id": "p002",
+   "stones": 5,
+   "lo": 1153484454828703744,
+   "hi": 272,
+   "legal": 85,
+   "replica_result": 1,
+   "replica_nodes": 10770254,
+   "expect_third": 1
+  },
+  {
+   "key_id": "p003",
+   "stones": 5,
+   "lo": 3458764514088976384,
+   "hi": 272,
+   "legal": 81,
+   "replica_result": 1,
+   "replica_nodes": 7489274,
+   "expect_third": 1
+  },
+  {
+   "key_id": "p001",
+   "stones": 5,
+   "lo": 10376293541730058240,
+   "hi": 272,
+   "legal": 93,
+   "replica_result": 2,
+   "replica_nodes": 4631275,
+   "expect_third": 2
+  },
+  {
+   "key_id": "p004",
+   "stones": 5,
+   "lo": 5764607523302670336,
+   "hi": 272,
+   "legal": 88,
+   "replica_result": 2,
+   "replica_nodes": 2291059,
+   "expect_third": 2
+  }
+ ],
+ "anchors": [
+  {
+   "key_id": "k02a",
+   "stones": 5,
+   "lo": 1297036692683751424,
+   "hi": 68157440,
+   "legal": 87,
+   "expect_third": 1,
+   "anchor_expansions": 9106337,
+   "anchor_ttHits": 4991527,
+   "expect_kind": "win",
+   "replica_result": null,
+   "replica_nodes": null
+  },
+  {
+   "key_id": "l1a",
+   "stones": 5,
+   "lo": 13019119616,
+   "hi": 16448,
+   "legal": 116,
+   "expect_third": 2,
+   "anchor_expansions": 7660602,
+   "anchor_ttHits": 3951175,
+   "expect_kind": "loss",
+   "replica_result": null,
+   "replica_nodes": null
+  }
+ ],
+ "negatives": [
+  {
+   "key_id": "ng1",
+   "lo": 1297036692683751424,
+   "hi": 68157440,
+   "legal": 88,
+   "stones": 5,
+   "why": "legal+1 vs derived 87"
+  },
+  {
+   "key_id": "ng2",
+   "lo": 1297036692683751424,
+   "hi": 68157440,
+   "legal": 87,
+   "stones": 6,
+   "why": "stones 6 vs actual 5"
+  }
+ ]
+}
