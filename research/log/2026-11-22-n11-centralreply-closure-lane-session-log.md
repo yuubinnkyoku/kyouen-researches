@@ -185,3 +185,56 @@ github_app.push_files with commit-pinned raw fetch-back byte verification.
   scrutiny-owner consumption of the 3 pending WINs, which would formally
   exclude 16757/20421 (and 30345/15640/5255/5282/6030/4864/4903/5613/16371)
   and reshape the ranking.
+
+## Session continuation 3 (2026-11-22 ~03:30-03:45Z, same lane)
+
+### Batch 5 (class 12264, Part F) - WIN-HALT at f017
+
+- Closure ranks 1-4 all carried refutation evidence (b018/d002/e002
+  unconsumed WINs; 30345 holds b018's cost child), so batch 5 pivoted to
+  rank 5: class 12264 (mask `[1152921504606848033, 0]`, 51 unknown, groups
+  incl. root 0/third 5). 51 keys f001-f051, all absent from the canonical
+  cache (0 hits).
+- f001-f016 LOSS (chunk-published: `372b1dd6`, `33b6d26d`), then **f017 WIN
+  3,522,635 nodes** (2-pass node-exact, s5 415095, key
+  `[1188950301625810945, 70368744177666]`, legal 82) -> WIN-HALT
+  (`cfe8605d`); f018 LOSS published as in-flight completion. 18/51 probed,
+  f019-f051 unprobed, WIN unconsumed.
+- Empirical: 4 of 5 closure batches WIN-halted (16757/20421/16371/12264);
+  only 23963 closed. Measure: the cheap (low-unknown) end of the closure
+  ranking is WIN-dense; candidate scoring should be revisited (scheduling
+  quantity only, never a verdict).
+
+### f017 IF-ADOPTED analysis (verdict NOT consumed)
+
+- `research/experiments/n11-central-reply-12264-win-f017-ifadopted-20261122/`:
+  canonical 5,924 + 18 batch-5 rows (17 LOSS + f017 WIN) -> 5,942 rows
+  (WIN159/LOSS5783), sha256 `f7c7c960...`; determinism 4/4; baseline
+  control holds.
+- Deltas (machine-verified): exactly 3 classes flip excluded_now (the
+  s5-415095 cost-child holders 12264 / 12327 / 14776); 6 update8 groups
+  flip win-hit via frozen-plan-selected class 12264 (roots 0 and 5, thirds
+  5/10/55/110/0); resolved among baseline requirement 21 -> 39 (all 18
+  batch-5 keys inside the 31,859 baseline requirement - largest single
+  adoption delta so far); remaining 31,838 -> 31,787 (root 0 -204, root 5
+  -102); free_now 33 unchanged, coverage unchanged; **joint greedy RISES
+  35,617 -> 36,989** - first measured adoption that makes the joint plan
+  more expensive (roots 0/5 lose their cheap option).
+- Commits: `bef0aa4a` (multi-file) + `7f11bf7a` (5,942-row if-adopted cache,
+  single file).
+
+### Final state of this session (all three continuations)
+
+- Canonical merged cache UNCHANGED: 5,924 rows (sha `8a721a18...`).
+- Unconsumed verdicts awaiting the scrutiny owner: 4 WINs (b018, d002, e002,
+  f017) + 22 two-pass LOSS rows (batch3: 3, batch4: 1, batch5: 18 minus...
+  precisely: d001/d003/d004, e001, f001-f016+f018 = 21 LOSS rows total).
+  All 2-pass node-exact from the pinned jsreplay replica at 15M.
+- No closure/coverage/root claim made or consumed this session; free_now 33
+  and achieved coverage unchanged; standard 11x11 empty board, the 19
+  central-reply roots and all classes remain UNKNOWN.
+- Kit mirrors added this continuation: batch12264/, f017ifadopted/.
+- Recommended next: scrutiny-owner consumption of the 4 pending WINs (the
+  IF-ADOPTED packets are complete for all four), THEN re-run the refresh
+  re-audit for a new canonical ranking; further probe batches on blind
+  ranking are empirically likely to WIN-HALT early.
