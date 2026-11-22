@@ -3741,3 +3741,52 @@ class 10661の費用子でありclass 16131の費用子と交わらないため�
   (`scripts/row_audit_batch18.py`) に全行機械検証する (現時点の2 WIN行は
   grepベース機械検証済み: p1==p2 node-exact・budget内・`# replay_done`・
   status.log整合)。
+
+
+## Part AZ (verifier, declaration 2026-11-22): batch-18 closure WIN rows v001/v002 third-implementation cross-verification (宣言後に実行・verdict不消費)
+
+batch 18 (Part AY, class 16131) は宣言どおりの実行で最初のwaveが両workerとも
+WIN (result 1) に終わり、事前登録のWIN-HALT規則で停止した (**v001 WIN
+5,656,151 nodes** / **v002 WIN 7,898,204 nodes**、いずれも2-pass fresh-cold
+node-exact・budget 15M内・raws+status.log出版済み・publication commit
+`938e34f2`)。これによりunconsumed closure WIN候補は17になった。前例
+(Part G: closure WINs b018/d002/e002/f017 の第三実装再検証、および
+Part K/O/P/T/W/AA/AD/AG/AL/AR のverifier battery约定) に従い、
+**採用判断待ちのWIN行に第三実装verdict-level交叉検証の文献を追加する**。
+verdict不消費・採用判断は引き続きscrutiny owner (C++第二実装 gate pin
+`9193f5b6…`)。
+
+- 対象: `research/experiments/n11-centralreply-closure-b18win-thirdimpl-20261122/`。
+  published batch-18の2 WIN行 (v001/v002) の全行再検証 + Part G/ARと同一の
+  anchor行 (k02a/l1a)・negative gate 2種 (ng1/ng2)・rules gate (verify_tbl
+  quads 95,670 == third-impl・triples mismatch 0)。
+- 入力: published batch-18 artifacts (publication commit `938e34f2`・
+  MANIFEST 73行) から `scripts/make_inputs_az.py` で機械導出 (fail-closed・
+  手転写ゼロ): batch-keys `1bb3ed41…` pin (53キー・class 16131・
+  v001 s5 153671 / v002 s5 207534)、raw 4ファイルの2-pass node-exact +
+  `# replay_done` + result 1 in-budget、status.logのPASS行・WIN-ROW-DETAIL行・
+  WIN-HALT行との3-way一致、published input CSV (v001/v002) byte-equality、
+  anchor/negative input CSVはpublished Part AR実験dirのCSVとbyte一致。
+- 手法: pinned `third_impl.js` (`08ea958f…`)・1行=1 solver=1 process・
+  cap 300,000,000拡張・wallcap 240s・`--memo-power=22`・全target/anchor
+  a/b 2回のdeterminism gate (result/expansion/ttHits/reason同一必須)。
+  wall到達 (240s) はhonest WALL-INCONCLUSIVE・clean不一致はDIVERGENCE
+  として記録 (verdict書換え・隠蔽なし。anchorsのDOC/decision文言と同式)。
+- 停止・消費規則: 本Partのverdict消費はゼロ。canonical cache (6,120行
+  `be9cb24e…`・Part AV出版後は6,172行) に書込まない。17 unconsumed
+  closure WIN候補 (b018/d002/e002/f017/g018/j033/h045/z003/n005/n006/
+  p002/p003/r001/r002/q042/v001/v002) は採用判断scrutiny owner待ち・不変。
+  本Part単体ではroot被覆・クラス閉鎖・第三手securedの主張をしない。
+- 並走との不接触: 本Partはpublished batch-18 raw (AYの成果物) の読み取り
+  のみで、AY宣言の残51キー (v003..v053) には一切触れない (15M再探索禁止
+  規則にも触れない)。Part AV (batch-17 adoption, 宣言 `340abef3`,
+  in flight) の成果物にも読み書きしない。AYレーンのbatch-18 continuation
+  またはbatch-19 (class 16513) pivotの選択を本Partは妨げない。
+  同一スコープ (batch-18 WIN行の第三実装交叉検証) の対抗宣言がmainに
+  存在する場合は本宣言を破棄して着手しない。
+- 標準11×11空盤・19 central-reply roots・class 16131 (残51子)・全53キーは
+  本Partのどの時点でもUNKNOWNのまま。nodes数・expansions数を勝敗として
+  読まない。
+- 本amendment observed HEAD-before-push: 実行時の最新mainを
+  コミットメッセージに記録する。push直前にnote blob sha1ロックを再照合し、
+  競合時は再fetchして本節を追記し直す。
