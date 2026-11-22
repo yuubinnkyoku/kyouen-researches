@@ -1,0 +1,62 @@
+# n11 central-reply closure batch-14 (class 23101) 41-LOSS canonical-adoption increment (Part AS, 2026-11-22)
+# published Part AS declaration (note amendment 2026-11-22, commit 5b6af2ed;
+#   observed HEAD-before-push b394c3ca recorded in the declaration commit message).
+# 2-pass node-exact exact-S5 verdicts at budget 15M, fresh cold, pinned jsreplay.js
+#   sha256 845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df
+# batch-14 was executed by the Part AQ takeover host (42/52 probed = 41 LOSS +
+#   1 WIN-HALT at q042, exhaustion 0, mismatch 0; row-audit cc22a1c8, status.log
+#   'q042 WIN-HALT' + WAVE-END stop=1 stop rows published).
+# gates: 3-way (p1/p2/status) node-exact, status.log agreement incl. the published
+#   WIN-HALT stop rows, batch-keys (sha256 dfde0e90) legal/(lo,hi) agreement,
+#   resolved keys distinct, ZERO BASE-cache overlap (structural gate: batch-14
+#   post-dates the Part AP merge; any overlap ABORTs), quarantine 0.
+# ADOPTED set = exactly the 41 LOSS rows {q001..q041}. The WIN row q042
+#   (s5_index 745184, result 1, 9,149,084 nodes) is verified 2-pass here and then
+#   MACHINE-EXCLUDED from this increment: its verdict is NOT consumed (the 15th
+#   unconsumed closure WIN; scrutiny owner gate 9193f5b6... unchanged). Adopting
+#   every resolved batch-14 row would include that WIN row, so full != loss here;
+#   this partial-packet adoption consumes the 41 LOSS rows only.
+# The 41 LOSS rows ARE consumed into the canonical cache by the Part AS merger;
+#   11x11 stays UNKNOWN; nodes are bookkeeping, never verdicts.
+# 41 rows: the adopted LOSS verdicts of class 23101's unknown S5 children (14th batch).
+s5verdict,1152921504892059648,17,5,2,1926944
+s5verdict,1152921504892059648,18,5,2,1178820
+s5verdict,1152921504892059648,528,5,2,2864179
+s5verdict,1152921504892059650,16,5,2,1525332
+s5verdict,1152921504892059652,16,5,2,1097204
+s5verdict,1152921504892059656,16,5,2,1375386
+s5verdict,1152921504892059664,16,5,2,1825996
+s5verdict,1152921504892059712,16,5,2,1238263
+s5verdict,1152921504892059776,16,5,2,961787
+s5verdict,1152921504892059904,16,5,2,2115046
+s5verdict,1152921504892060160,16,5,2,1441380
+s5verdict,1152921504892060672,16,5,2,1105892
+s5verdict,1152921504892063744,16,5,2,2015833
+s5verdict,1152921504892067840,16,5,2,739550
+s5verdict,1152921504892092416,16,5,2,903387
+s5verdict,1152921504892190720,16,5,2,1487487
+s5verdict,1152921504892321792,16,5,2,896668
+s5verdict,1152921504892583936,16,5,2,2632334
+s5verdict,1152921504893108224,16,5,2,2420623
+s5verdict,1152921504894156800,16,5,2,1280552
+s5verdict,1152921504925614080,16,5,2,1020107
+s5verdict,1152921505428930560,16,5,2,905163
+s5verdict,1152921505747697664,1028,5,2,2514109
+s5verdict,1152921505965801472,16,5,2,2916160
+s5verdict,1152921507039543296,16,5,2,1916623
+s5verdict,1152921509187026944,16,5,2,5329291
+s5verdict,1152921573611536384,16,5,2,3005192
+s5verdict,1152921642331013120,16,5,2,1424581
+s5verdict,1152922604403687424,16,5,2,4147465
+s5verdict,1152923703915315200,16,5,2,2528685
+s5verdict,1152925902938570752,16,5,2,1316119
+s5verdict,1152930300985081856,16,5,2,1591833
+s5verdict,1153202979868770304,16,5,2,1494975
+s5verdict,1153484454845480960,16,5,2,5120647
+s5verdict,1155173304705744896,16,5,2,1017148
+s5verdict,1157425104519430144,16,5,2,2175857
+s5verdict,1161928704146800640,16,5,2,2502014
+s5verdict,1170935903401541632,16,5,2,1430647
+s5verdict,3458764514105753600,16,5,2,1783127
+s5verdict,5764607523319447552,16,5,2,1112116
+s5verdict,10376293541746835456,16,5,2,2905244
