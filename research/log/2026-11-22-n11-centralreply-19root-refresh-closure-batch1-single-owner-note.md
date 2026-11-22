@@ -316,3 +316,33 @@ quantityとして反駁証拠のない次候補クラス5473に着手する。
   本ホストで本session中に再現済み (batch5 val-gateと同一4入力行: at2m×2
   result 0/2,000,000、15m result 2/3,651,923 と result 2/5,040,200)。
 - 本amendment observed HEAD-before-push: 実行時の最新mainをコミットメッセージに記録。
+
+
+## Part J (verifier, amendment 2026-11-22): batch-6 g018 if-adopted decomposition + joint 5-WIN packet - read-only planning, verdicts not consumed
+
+batch6 (Part I) はWIN-HALT (g018) で停止した。5つの未消費closure WIN
+(b018/d002/e002/f017/g018) がある状態で、Part H-bisの手法（WIN-only /
+LOSS-only / full の機械分解・加法性を測定で確認）をbatch 6とjoint設定
+の双方に適用し、scrutiny owner向けの採用帰結を出版する。verdictは一切
+消費しない。
+
+- 対象1: `research/experiments/n11-central-reply-class5473-win-g018-ifadopted-20261122/`。
+  3シナリオ (PWIN18=g018 WINのみ / PLOSS17=17 LOSSのみ / PFULL18=全18行)、
+  増分はbatch6 rawからfail-closed生成、merge衝突0、各シナリオrefresh
+  2回byte-identical、root {60,27} 119/119不変。測定: WINのみ採用で
+  excluded 23→27 (4クラス 4889/4892/5473/5501, s5 184684保持)・update8
+  remaining 31,838→31,787 (root26 -102 / root49 -102)・win-hit 4群 (全部
+  class 5473経由)・**joint greedy全シナリオで35,617不変** (batch 6は
+  計画コスト中立・f-batchと対照的)。LOSS行はresolved (+17) とworklist
+  (−20) のみ加法的に動かす。remainingのWIN側包含 (−51+−17 = −51) は
+  Part H-bisと同型。
+- 対象2: `research/experiments/n11-central-reply-joint-5win-adoption-ifadopted-20261122/`。
+  PJ5WIN (canonical + 4-WIN増分 + g018 WIN-only, 5,929行) とPJ5FULL
+  (P25 packet cache + batch6 18行, 5,967行)。5 WINのみ: excluded 41
+  (+18加法的)・remaining 31,658 (−180 = −129−51加法的)・win-hit 19群
+  (16757:5/20421:4/12264:6/5473:4加法的)・greedy 35,616 (−1で中立)。
+  43行フル: greedy 36,984 (Part H packetと同値・batch6行は追加増なし、
+  H-bisの帰属をjoint設定で確認)。worklist 65,163 (−50加法的)。
+- 採用規則は不変: WIN行の採用判断はscrutiny owner (C++第二実装 pin
+  `9193f5b6...` 前例)。本レーンはいかなるverdictも消費しない。
+  標準11×11空盤・19 root・全クラスは引き続きUNKNOWN。
