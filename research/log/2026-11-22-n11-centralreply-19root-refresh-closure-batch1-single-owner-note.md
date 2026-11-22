@@ -3258,3 +3258,54 @@ sha1ロック `9a5dfdb7…`) どおり完了。q042 (s5_index 745184, result 1,
   C++第二実装ゲート (`9193f5b6…`) 待ち。
 - 本status updateのobserved HEAD-before-push: `ee3b6f7325d6d4ae697f93d1f4c520dfd06f59f3` (note blob sha1
   ロック `9a5dfdb7…` で更新、fetch-backで追記確認)。
+
+## Part AU (solver-declaration + scaffold, declaration 2026-11-22): closure class 10661 exact-S5 probe batch 17 (実行前に宣言・本Partはscaffold出版まで・verdict不消費)
+
+Part AT (q042 if-adopted投影) 完了時点で、Part AS reaudit closure候補表
+ rank 1 (class 23101) はin-flight (未着手q043-q052の10キー + 未採用
+q042)、rank 2-13 (16757, 20421, 16371, 30345, 12264, 5473, 2634, 8785,
+1518, 8106, 16930, 5830) はいずれもunconsumed closure WIN子を費用子に
+持ち全LOSS閉包ルート反駁済み (route statement)。**反駁証拠のない最初の
+候補 = rank 14 class 10661** (mask `[1152921505697431552, 0]`・unknown
+52子・closure groups (24,30)+(24,90)・機械再計算一致) にbatch 17として
+着手を宣言する。
+
+- 対象: `research/experiments/n11-centralreply-closure-class10661-batch17-20261122/`。
+  **本Partは宣言+scaffold出版まで**。probe実行は本宣言後のセッションが
+  最新mainで対抗宣言を確認のうえ着手する。
+- キー: Part AS reaudit probe-worklist (sha256 `1c96df05…`) の
+  `serving_class == 10661` 行52件 (probe_order 600..651連続・key ids
+  **u001..u052**・batch 1-16のid空間と無衝突)。
+- machine gates (`scripts/make_batch17_keys.py`・3回実行byte一致・
+  batch-keys.json sha256 `db762175…`): canonical BASE `be9cb24e…`
+  (6,120行) に0/52 hits、quarantine 0/52、canonical-safe 52/52、
+  mask_to_index == s5_index 52/52、全s5_indexがclass 10661のgraph cost子
+  (cost 53子中52未確定・graph status unknown(1))、未採用q042 WIN子
+  (s5 745184) はキー不在、**batch 1-16 (b/c/d/e/f/g/h/j/m/z/n/p/q/r/t
+  計813キー・16ファイルsha固定) と重複0**、Board(11) legal再計算が
+  worklist legal 72..97と52/52一致、closure rank 14行とre-derived
+  group-best view (809候補) のrank/groups一致。
+- 実行protocol (事前登録・実行セッション遵守): pinned replica
+  `jsreplay.js` (`84585617…` byte-copy) 2-pass fresh cold・budget
+  15M・1 solver/1 row/1 process・publish=ALL・worker最大2・実行前に
+  val-gate 4行をhost再現。停止規則: mismatch→HARD-STOP rc=42・
+  WIN→HALT rc=45 (WINは誠実ラベルのみ・**本レーンでは採用しない**・
+  verdict不消費・scrutiny owner待ち)・枯損→honest UNKNOWN
+  (15M同条件再探索禁止)。消費規則: 2-pass LOSS行のみ、後続の別宣言
+  adoption Partでsha-pinned fail-closed merger (`90711961…`) 経由で
+  canonical計上可。本batch単体では閉鎖・被覆・secured主張なし
+  (refresh再実行+独立監査の仕事)。
+- verdict不消費: 本Partが消費するverdictはゼロ。canonical cacheは
+  6,120行 `be9cb24e…` 不変。15 unconsumed closure WIN
+  (b018/d002/e002/f017/g018/j033/h045/z003/n005/n006/p002/p003/r001/
+  r002/q042) はscrutiny owner (C++第二実装 gate pin `9193f5b6…`)
+  待ち・不変。
+- 標準11×11空盤・19 central-reply roots・class 10661 (unknown 52子)・
+  全52キーは本Partのどの時点でもUNKNOWNのまま。nodes数・legal数を勝敗
+  として読まない。
+- 並走との不接触: batch-17 scopeの対抗宣言がmainにないことはpush直前に
+  確認済み (note内の10661言及はすべて候補参照のみ)。同一スコープの
+  宣言が既にmainにある場合は本scaffoldを破棄して着手しない。
+- 本amendment observed HEAD-before-push: 実行時の最新mainをコミット
+  メッセージに記録 (push直前にnote blob sha1ロック `f34401cd…` を再
+  照合し、競合時は再fetchして本節を追記し直す)。
