@@ -1265,3 +1265,46 @@ renewed ranking上の次のfirst clean candidateは**rank 10 class 8106**
 
 **class 8785・19 central-reply roots・標準11×11空盤はいかなる時点でも
 UNKNOWNのまま。nodes数・pass数を勝敗として読まない。**
+## Part AA (verifier, amendment 2026-11-22): batch 11 z003 third-implementation cross-verification (declared before execution)
+
+batch 11 (Part Z, class 8785, renewed rank 8) は事前登録のWIN-HALT規則により
+z003 (2-pass node-exact result 1, 11,601,265 nodes, s5_index 198530, key
+`[1225542323476103168, 1]`, legal 82, probe_order 334; 宣告ホスト値はtakeover
+ホストfresh cold 2-passでcross-host node-exact再現済み・published) で停止した。
+Part K/O/P/T/Wの前例に従い、batch-11のWIN行 z003 と、probed LOSS全3行
+(z001/z002/z004 — batch-11は4/51 probed (z005-z051未着手) のため、既存
+バッチの「層化3行サンプル」ではなく第一wave検査済み全行を対象とする) を
+第三実装 (`third_impl.js`, pin sha256 `08ea958f...`) でverdict-level交叉
+検証する。**verdict不消費・採用判断は引き続きscrutiny owner (C++第二実装
+gate pin `9193f5b6...` 前例・不変)。**
+
+- 対象: `research/experiments/n11-centralreply-closure-batch11-z003-thirdimpl-20261122/`。
+  target 4行 (z003 WIN + z001/z002/z004 LOSS)・anchor 2行 (k02a/l1a, Part
+  G/K/O/P/T/Wと同一のpublished第三実装値 9,106,337 expansions/4,991,527
+  ttHits と 7,660,602/3,951,175)・negative 2行 (ng1/ng2)。入力はpublished
+  batch-11 raw (宣告ホスト p1/p2 8件 + takeoverホスト .takeover.out 8件、
+  commit `12be47c7`/`40e02623`からcommit-pinned raw CDN取得) から
+  `make_inputs_batch11.py` がfail-closed導出する (手転写ゼロ・宣告ホスト
+  raw 2-pass一致assert・takeover rawとの2-host一致assert・status.logと
+  status.takeover.logの照合・key/legalをpublished batch-keys.json (sha256
+  `8ef22069...`, commit `3cc96099` 正本) と機械照合)。sourcesは再出版しない。
+- 前提ゲート (いずれも必須・fail-closed): script pin 3種 (`08ea958f...` /
+  `c8c52528...` / `84585617...`)、rule-engine gate (verify_tbl.js: quads
+  95,670 == replica / triples 195,044 mismatches 0)、anchor 2行の本ホスト
+  再現がpublished値と完全一致、negative 2種 (ng1/ng2) の文言一致
+  GATE_FAIL。手法: 1行1プロセス、cap 300M expansions、wallcap 240s、
+  1行2回 (a/b) determinism gate (result/expansion/ttHits/reason同一必須)。
+  wall超過 (runlimit) はhonest wall-inconclusiveとして記録し検証主張と
+  しない。cleanなverdict一致のみ文献として記録する。
+- 主張と消費規則: 本検証はverdict-level文献作成のみ・verdict不消費。
+  z003のWINは8番目のunconsumed closure WIN (b018/d002/e002/f017/g018/
+  j033/h045/z003) として引き続きscrutiny owner待ち。
+  標準11x11空盤・19 central-reply roots・class 8785は本検証のどの時点でも
+  UNKNOWNのまま。z005-z051は未着手のまま。nodes/expansionsを勝敗として
+  読まない。
+- 並走との不接触: batch-11由来のpublishedキーのみを対象とし、他レーン・
+  進行中の実験と無関係。同一スコープの宣言がmainに存在する場合は着手
+  しない (宣言直前に最新mainを再取得・同scope対抗宣言なしを確認済み)。
+- 本amendment observed HEAD-before-push: `2da303db469683819954820bd832c2f51e096510`
+  (batch-11 takeover出版完了 (Part Z status update + session log
+  continuation 14) 直後のmain。commit messageにも記録)。
