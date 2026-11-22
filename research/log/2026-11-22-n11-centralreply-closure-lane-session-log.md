@@ -1241,3 +1241,78 @@ repo diverged:
   the standard 11x11 empty board, the 19 central-reply roots and class
   16930 remain UNKNOWN; nodes/expansions are not verdicts. Observed
   HEAD-before-push for this update is recorded in the commit message.
+
+## Continuation 21 (2026-11-22, this host): Part AH batch-12 if-adopted decomposition completed and published
+
+- Resumed from continuation 20. Part AG closure (batch-13 third-impl)
+  had already been published by this host earlier in the session; the
+  remaining explicit open item from Part AD was the batch-12 (class 8106)
+  n005/n006 if-adopted decomposition, declared as **Part AH** in the
+  single-owner note (commit `41e1ff52`, blob sha1-locked update on top of
+  the Part AG status note `611e7ab2`) BEFORE any execution. Raw-CDN main
+  caching served a stale note copy during the pre-check; detected via the
+  local blob-sha1 recomputation rule (commit-pinned fetch is the fresh-main
+  check, `main` raw URLs are not trustworthy during parallel pushes).
+- Base control
+  `research/experiments/n11-class8106-n005n006-base-control-20261122/`:
+  pinned Part Y refresh script (`88671526...`), pinned inputs
+  machine-sha-verified after commit-pinned fetch (dependency graph
+  `54f9c364...` etc), executed twice: 2/2 byte-identical runs AND the three
+  outputs byte-equal to the published Part Y canonical re-audit
+  (`61943b85...`/`33f01a0c...`/`25987add...`), i.e. the third host
+  environment reproduces Part Y and the batch-11 base control
+  byte-exactly. Publishing + fetch-back: commit `9fd7dee5`.
+- Decomposition
+  `research/experiments/n11-centralreply-class8106-win-n005n006-ifadopted-20261122/`:
+  batch-12 published raws were re-fetched from the published chunks
+  (`eca35f3c` wave-1, `ace92d84` wave-2) and verified 17/17 byte-identical
+  to the kit mirror BEFORE use. Increments built 3-way fail-closed
+  (p1/p2/status; batch-12 has no takeover passes by construction, unlike
+  batch-11's 4-way): full 8 rows `d1954280...`, win-only 2 rows
+  `dd5fc998...` (first multi-WIN increment of the closure grind), loss-only
+  6 rows `d18ddaf8...`. Scenario caches via the published fail-closed union
+  merger (selftest PASS, conflicts 0, dup 0): PWIN2 6,029 rows WIN 160 /
+  LOSS 5,869 `c13f81d7...`; PLOSS6 6,033 `898ca5f4...`; PFULL8 6,035
+  `21bbef33...`. Scenario refresh scripts are diff-verified 4-hunk
+  adaptations of the Part Y script (docstring/ROOT/CACHE/sha-pin only);
+  2 runs per scenario, 6/6 deterministic.
+- Deltas (`compare_deltas_batch12.py` -> `decomp-deltas-batch12.json`
+  `a4152995...`; all recomputed class_status_counts asserted equal to all
+  four published summaries before reporting; Board fail-closed free
+  verification re-executed for every scenario):
+  - excluded_now flips: PWIN2 = PFULL8 = {5007, 5011, 6147, 6166, 8106}
+    (23 -> 28), PLOSS6 empty; the flip set is the UNION of the two WIN
+    holder triples (3+3, overlap = class 8106 itself = union 5),
+    machine-identified three ways (graph cost-child holders,
+    batch-keys membership_class_count, recompute flip sets).
+  - class 8106 unknown 52 -> 50/46/44, additivity gated.
+  - update8: all 8 probed rows are baseline requirements (batch-11
+    contrast: only z003/z004); newly-resolved 2/6/8 exact; remaining
+    sub-additive by exactly 6 (-52/-6/-52) because the class-8106 flip
+    drops its whole 52-member remaining set.
+  - win-hit groups 4 (PWIN2 = PFULL8), all served by class 8106 itself
+    (reply 60; roots first=14 and first=38), doubling as an excluded_now
+    flip (batch-11's z003 pattern hit via peer 5748 which did not
+    self-exclude).
+  - joint greedy +52/0/+52 additive (contrast Part AB +797 cascade);
+    per-root individual_greedy_union NON-additive at root 14
+    (+1/+7/+5); roots 38 and 49 additive; per-root free coverage
+    (free_now/uncovered) identical to base in every scenario; root
+    first=27 119/119 free thirds everywhere.
+  - worklist additive -4/-7/-11; group_best_options_nonfree 2,127 in all
+    four runs.
+- Published commits `9fd7dee5` (scaffold + base control), `7ca0c3af`
+  (increments + merges + scenario scripts), `bc97ef35` (pwin2),
+  `c2fe5514` (ploss6), `3e6c0f89` (pfull8 + deltas); note Part AH status
+  update `b0255e04` (blob `fb5225a4`, byte-exact, sha1-locked). Fetch-back
+  verification: 38/38 published files byte-identical to this host
+  (commit-pinned raw). Kit mirrors saved under
+  `batch8106-n005n006-ifadopted/` and `class8106-n005n006-base-control/`
+  with MANIFEST-sha256.
+- Verdicts NOT consumed: n005/n006 remain unconsumed closure WINs (the
+  batch-12 item of the Part AD open list is CLOSED; the batch-13 4-row
+  decomposition remains open for a future declaration). The standard
+  11x11 empty board, the 19 central-reply roots, class 8106 (canonical
+  universe untouched; 52 -> 44 unknown only under the full what-if) and
+  every other class remain UNKNOWN. Nodes are not verdicts. Observed
+  HEAD-before-push for this update is recorded in the commit message.
