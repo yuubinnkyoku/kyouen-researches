@@ -94,11 +94,131 @@
   "nIter": 331,
   "wallMs_budget_call": 230543,
   "decision": "partial bounded enumeration (>=331 orbits); completeness NOT claimed",
-  "detcheck_prefix20_leaders_equal": true
+  "detcheck_prefix20_leaders_equal": true,
+  "note": "see also verify_census8_partial.json"
  },
  "verification": {
   "witness_pinned_verifier": "SAFE+MAXIMAL rc=0 (70 safe quadruples, 41/41 empty points blocked, explicit per-point certificates)",
   "tamper_8_one_stone_removals": "all SAFE (0 violations) and NOT MAXIMAL (uncovered_cells >= 3 each)",
   "census_leaders_independent_python": "331/331 SAFE+MAXIMAL, 331/331 indicator-lex-min of own orbit, 0 duplicate orbits, antichain-vs-O1/O2 gate: 0 violations"
+ },
+ "stretch_n8_k9_row": {
+  "blocked_leaders": {
+   "n_leaders": 51,
+   "source": "published n8 k=8 catalog round10_small_saturation.json (K0032/B371, 51 D4 orbit reps; D4 closure 408 re-verified locally, all stabilizers trivial)",
+   "computed": "SAT-convention indicator-vector lex-min per orbit (c = x + 8y)",
+   "leaders_file": "output/n8_k8_leaders_sat.json"
+  },
+  "premise": "s_8=8 (no <=7-stone maximal safe on 8x8; K0212/K0032 published), so at-most-9 models with <=8 stones are exactly the 51 leaders",
+  "encoding": {
+   "n": 8,
+   "k": 9,
+   "F": 14564,
+   "nVars": 59344,
+   "nClauses": 251531
+  },
+  "cnf_sha256": {
+   "base_n8k9": "b00fff3e0f0841d2e7a8a862d630aca5cb70f9753e3549ee8a6cd41bcbe57766",
+   "lift_n8k9_block51": "2b492166f8e0fa1ce0fa1814cd0a0a9eb1f839649035c651263ce985b1663f5d",
+   "base_n8k9_sh42": "2135703c71480a37137e02317f0735e4cb881a50a7f5298ef1e362a4274c82f8",
+   "lift_n8k9_sh42": "cd905779d85d599ae71c06ea0141f9f26b396707e2ed3fbc7a9df8a6de4337cb",
+   "publish_policy": "CNF bodies NOT published; deterministic regeneration as in README"
+  },
+  "runs": {
+   "row9_shot1_default": {
+    "result": "SAT",
+    "wall": "1.93s",
+    "witness_xy": [
+     [
+      7,
+      0
+     ],
+     [
+      7,
+      1
+     ],
+     [
+      0,
+      2
+     ],
+     [
+      2,
+      2
+     ],
+     [
+      7,
+      2
+     ],
+     [
+      0,
+      3
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      0,
+      6
+     ],
+     [
+      1,
+      7
+     ]
+    ],
+    "trips": 3,
+    "dirs": 2
+   },
+   "row9_shot2_shuffle42": {
+    "result": "SAT",
+    "wall": "1.68s",
+    "witness_xy": [
+     [
+      6,
+      2
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      6,
+      3
+     ],
+     [
+      7,
+      3
+     ],
+     [
+      2,
+      4
+     ],
+     [
+      3,
+      4
+     ],
+     [
+      4,
+      4
+     ],
+     [
+      1,
+      5
+     ],
+     [
+      2,
+      5
+     ]
+    ],
+    "in_same_d4_orbit_as_shot1": false,
+    "trips": 5,
+    "dirs": 4
+   }
+  },
+  "verification": {
+   "both_witnesses_pinned_verifier": "SAFE+MAXIMAL rc=0 (shot1: 126 safe quadruples, 55/55 empty points blocked; shot2: 0 violations, 0 uncovered)",
+   "tamper_9_one_stone_removals_shot1": "all SAFE (0 violations) and NOT MAXIMAL (uncovered 4..18 each)",
+   "conclusion": "M_8 >= 9 (was M_8 >= s_8 = 8); n8 k=9 row has >= 2 D4 orbits"
+  }
  }
 }

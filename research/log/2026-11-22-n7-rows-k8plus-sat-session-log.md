@@ -60,3 +60,12 @@
 - n=8 の k=9 行（予算内の stretch として残置。51リーダーの導出は
   K0032 出版カタログから計算可能）。
 - CNF 本体は非刊行・sha256 ピン（determinism.json）。
+
+## 追記（stretch）: n=8 の k=9 行（08:27Z 時点までに実施）
+
+- 出版 round10_small_saturation.json（K0032/B371・51代表）の D4 閉包 408 を本環境で
+  再検証し、SAT規約（indicator-vector 辞書式・0<1）の lex-min leader 51件を計算。
+- at-most-9 n8（F_8=14,564・59,344変数）+ 51ブロック → 両ショット SAT
+  （1.93s / 1.68s）。**8×8 k=9 行は非空・M_8 ≥ 9**・2 witness は異なる軌道。
+- 両 witness SAFE+MAXIMAL・witness1 の tamper 9/9 SAFE not-MAXIMAL。
+- n8 k=9 census は未実施（k=9行の leader 全列挙は別セッション課題）。
