@@ -2,7 +2,7 @@
 
 ## 背景
 
-- 起点の観測: HEAD `8c9d943a` (14:07Z) → 最新 `17e3619f` (14:46Z) を確認。並走 n9rows レーン (Commit 46efd957) は極大行スペクトル・SAT閉包を所有、K1228 レジューム明記の「n7のsafe行サイズ別分布」は未着手であることを実验Dir全列挙で確認。
+- 起点の観測: HEAD `8c9d943a` (14:07Z) → 最新 `17e3619f` (14:46Z) を確認。並走 n9rows レーン (Commit 46efd957) は極大行スペクトル・SAT閉包を所有、K1228 レジューム明記の「n7のsafe行サイズ別分布」は未着手であることを実験Dir全列挙で確認。
 - 単一オーナー宣言 (HEAD 17e3619f観測・宣言 commit cf485460) を先行push後に計算物資を刊行した。
 
 ## 発見・実行の記録
@@ -10,7 +10,7 @@
 1. 幾何二系統照合: forbidgen.py (整数Leibniz 4×4行列式全列挙, F_7=6364=collinear 660+circle 5704) と pinned census.mjs (K1224正本) がカタログテキストとして n=3..7 全て byte 同一。n3..n6 の sha は K1228 出版 quartets と同一。quartets_n7.txt (sha 7bf55548…) を新規に正本化。
 2. 系統1 (cov増分法): n3..n6 は出版33係数と完全一致で較正。n7 全走行 291-295s (Node 22, 2コア)。**run1/run2 byte同一 (sha 1688c1e2…)**。初手セル7分割シャード (0:7 … 42:49) を並走し union が全15係数で全走行と一致 (unite_check_n7.json)。シャード s0 (初手0..6) が総ノードの約84%。
 3. 系統3 (マスク法): 独立到達判定 (cov/stInF無し・トリプルマスク包含)。n3..n6較正一致、n7完全走行 150s で系統1と全係数一致。
-4. 系統2 (Python): dfs_py.py --safehist を複製実装し n3..n6 の33係数一致。n7 の CPython 完全走行は推定~1時間で本環境 (bash 300s上限) の外のため実施せず、その斈を受入条件に明記した (過大主張の排除)。
+4. 系統2 (Python): dfs_py.py --safehist を複製実装し n3..n6 の33係数一致。n7 の CPython 完全走行は推定~1時間で本環境 (bash 300s上限) の外のため実施せず、その旨を受入条件に明記した (過大主張の排除)。
 5. **総数アンカー厳密一致**: ΣZ_7 = 179,810,350 == K0005 (Round28 C++層別DP + 独立逆順再帰監査)。最強の独立ゲート。
 6. 数学的恒等式ゲート: Z_7(1..3)=C(49,·), **Z_7(4)=C(49,4)−F_7=205,512**。n3..n6のZ(4)でも成立を確認 (112=126−14, 1626=1820−194, 11824=12650−826, 56414=58905−2491)。
 7. λ=14 全16個を列挙し D4 軌道センサス: **2自由軌道 (サイズ8, 8・安定群自明)**。代表 [0,1,5,8,9,19,20,24,26,28,38,39,41,42], [0,1,6,11,12,15,17,21,23,34,37,38,44,48]。
@@ -18,7 +18,7 @@
 
 ## 刊行
 
-- 実验: research/experiments/n7-safe-size-hist-20261122/ (47ファイル, commit 148057b7)
+- 実験: research/experiments/n7-safe-size-hist-20261122/ (47ファイル, commit 148057b7)
 - K項目: research/knowledge/items/K1230-n7-safe-size-histogram.md (commit 70d15df5)
 - 単一オーナー宣言: research/log/2026-11-22-n7-safe-size-histogram-single-owner-note.md (commit cf485460)
 
@@ -33,4 +33,4 @@
 
 ## 追記 (2026-11-22 第2実行, commit 858a4158)
 
-- 恒等式ゲートを Z_n(5) へ拡張: **Z_n(5) = C(N,5) − covered5** (禁止quartet + 余剰1セルの直接集合構成・DFS機構不使用)。n=3..7 全点で出版 Z_n(5) と一致 (n7: 1,906,884 − 273,836 = 1,633,048; covered5_n7=273,836 は独立直接計数)。scripts/z4z5_identity.mjs (argv式・published値照合内蔵タbelf-checking), output/z4z5_identity.jsonl, MANIFEST更新, Z7_safe_hist.json anchors に z5_identity を追記し実验Dirへ反映 (fetch-back byte一致確認済み)。
+- 恒等式ゲートを Z_n(5) へ拡張: **Z_n(5) = C(N,5) − covered5** (禁止quartet + 余剰1セルの直接集合構成・DFS機構不使用)。n=3..7 全点で出版 Z_n(5) と一致 (n7: 1,906,884 − 273,836 = 1,633,048; covered5_n7=273,836 は独立直接計数)。scripts/z4z5_identity.mjs (argv式・published値照合内蔵・self-checking), output/z4z5_identity.jsonl, MANIFEST更新, Z7_safe_hist.json anchors に z5_identity を追記し実験Dirへ反映 (fetch-back byte一致確認済み)。
