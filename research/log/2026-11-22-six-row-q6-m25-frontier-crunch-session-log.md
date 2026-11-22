@@ -47,8 +47,8 @@ kit `_q66-m25-crunch-kit`〔records.jsonl 7行・enc metas・out ログ・staged
 
 - **6×25 witness（29石・class{2}・行構成 [5,5,4,5,5,5]）の存在** → **M_{6,6} ∈ [26, 495]**
  （下界 25→26・上界 U=495 不変）・6×26 が新 frontier。
-- INDET 7行（class{1} krow=1:0・{0}/{3}/{4}/{5}/{0..5} plain・前レーンの class{1}/{2} plain+krow固定）
-  は cap 到達 honest negatives で不在を意味しない。
+- INDET honest negatives（本crunch 6行: class{1} krow=1:0・{0}/{3}/{4}/{5}/{0..5} plain、
+  前レーン K1215 の4行: class{1}/{2} plain+krow固定）は cap 到達記録であって不在を意味しない。
 - 6×24 t=1 embedding が6×24 class{2} と非合同な第3の石集合として同時に 6×24 witness 側にも
   新規観測を与えるが、6×24 の下界はすでに K1215 で決着済みのため書類上の影響なし。
 
