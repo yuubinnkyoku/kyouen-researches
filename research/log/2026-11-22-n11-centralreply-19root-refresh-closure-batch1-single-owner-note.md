@@ -286,3 +286,33 @@ Part Gと完全に同一。入力はpublished batch5 rawから機械導出
   無関係。同一スコープの宣言がmainに存在する場合は着手しない。
 - 本amendment observed HEAD-before-push: 実行時の最新mainを
   コミットメッセージに記録。
+
+
+## Part I (solver, amendment 2026-11-22): closure class 5473 exact-S5 probe batch 6
+
+batch5 (Part F) もWIN-HALT (f017) で停止した。Part H-bisの合同分解解析に
+より、closure候補表 rank 1-5 はどの採用シナリオでも反駁証拠保持
+(16757: b018, 20421: d002, 30345: b018のs5 528497, 16371: e002,
+12264: f017) であり、first clean candidate は reaudit closure-classes
+rank 6 のクラス5473であることが確定している。安価側WIN密集
+(5バッチ中4 WIN-HALT) の実測傾向とスコアリング再考推奨はPart H-bisで
+記録済みだが、rank 1-5が反駁証拠保持である以上、バッチ選択はscheduling
+quantityとして反駁証拠のない次候補クラス5473に着手する。
+
+- 対象: `research/experiments/n11-centralreply-closure-class5473-batch6-20261122/`。
+  graph class index 5473, mask `[1158058422931816448, 0]` の未確定canonical
+  S5子51件（g001-g051、reaudit正本probe-worklistのprobe_order 230-280順・
+  Board再計算合法手数固定、root first=26/third=59を含む4グループ担当・
+  unknown_now 51）。fail-safe機械確認: (1) reaudit worklist再生 — pinned
+  inputs + `refresh_19root_frontier.py` により `probe-worklist.csv`
+  (65,213行) はpublished reaudit出力とbyte-identicalに再現、
+  (2) 全51キーは正本merged cache（5,924行・sha256 `8a721a18...`）に
+  存在しない (0 hits)、(3) quarantine registry (sha256 `81d23160...`)
+  とのkey対照 0 hits。
+- 手法・停止規則・消費規則: Part B-Fと同一 (pinned replica `jsreplay.js`
+  sha256 `84585617...`, 2-pass fresh cold, budget 15M, mismatch→HARD-STOP
+  rc=42, WIN→HALT rc=45, 枯渇=UNKNOWN, 消費はfail-closed merger経由のみ、
+  本batch単体では閉鎖・被覆・secured主張なし)。val-gate 4/4 node-exactは
+  本ホストで本session中に再現済み (batch5 val-gateと同一4入力行: at2m×2
+  result 0/2,000,000、15m result 2/3,651,923 と result 2/5,040,200)。
+- 本amendment observed HEAD-before-push: 実行時の最新mainをコミットメッセージに記録。
