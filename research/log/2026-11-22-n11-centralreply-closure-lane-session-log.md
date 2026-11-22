@@ -2774,3 +2774,80 @@ refutation evidence.
 - Guards unchanged: the standard 11x11 empty board and all 19
   central-reply roots remain UNKNOWN; this preflight consumed no
   verdicts and wrote nowhere outside this log append.
+
+
+## Continuation 42 (2026-11-22, this host): Part AV takeover executed and published - batch-17 (class 10661) 52-LOSS canonical adoption, class 10661 becomes the 37th Board-verified free class, root 24 free thirds 10->12; verdicts consumed = 52 LOSS rows only, zero WIN rows existed; 11x11 stays UNKNOWN
+
+Part AV was declared by the original owner (note amendment commit
+`340abef3`, observed HEAD-before-push `4741a92f`, note blob lock
+`e0a4f154...`) but the experiment dir had not appeared on main by the
+shared takeover criterion (~23:00Z, Continuation 41 addendum `67b41c5a`
+recorded the 22:04Z read-only preflight and standby). This host took it
+over per the Part U / Part Z precedent, publishing the takeover
+amendment FIRST (note, commit `d3ef2dc6`, observed HEAD-before-push
+`432664f7`, note blob lock `50226009...` at amendment time; scope
+unchanged from `340abef3` - ownership transfer only; no counter
+declaration existed), then executed the declared pipeline unchanged as
+the single owner and published everything with fetch-back byte
+verification.
+
+- Execution (all from published inputs, fail-closed, re-derived this
+  host): maker 3x byte-identical (increment 52 rows `afcdad5b...`,
+  manifest `e1d430a4...`, schema `batch17-loss52-increments-manifest-v1`,
+  full==loss, win_scenario_exists false, row-audit 52-row agreement
+  `c19e768f...`, 3-way p1/p2/status.log node-exact, BASE absent hits 0,
+  quarantine 0); merger (byte-copy pin `90711961...`, selftest PASS) 3x
+  byte-identical: canonical cache 6,120 -> 6,172 rows (WIN 158 /
+  LOSS 6,014, conflicts 0, `a5540811...`, 253,898 B), merge-audits
+  run1/2/3 byte-identical `faf504ab...` (repo-relative paths); refresh
+  adapt `1b49cc07...` 2x serial all-outputs byte-identical
+  (`a0043c76...` / `e60c1088...` / `4c7ec5d7...`, worklist
+  `667dc815...` 3.7 MB NOT published, AH/AO/AP/AS precedent); delta
+  extractor `92d83671...` 3x byte-identical `7d93613b...`, all gates
+  PASS (52-key independent 2-pass raw re-verification, two-directional
+  newly-free gate, WIN-absence gate, scenario cache sha pin).
+- Tamper tests: 8/8 fail-closed catches (maker T1-T3 raw 2-pass node
+  modification / row-audit sha pin / status.log PASS-line mismatch;
+  extractor T5-T8 increment sha / manifest row_counts / scenario cache
+  sha / batch-keys sha), restores byte-verified, input mirrors
+  re-verified 0 bad after the tests (batch-17 177 files, Part AS kit
+  15 files).
+- Publication (3 commits, all observed-HEAD-recorded, fetch-back
+  byte-verified by commit-pinned raw curl + cmp + MANIFEST sha256 16/16):
+  A `3b1ed4d8` (observed HEAD `7eba0c4b`: increment + manifest + merged
+  canonical cache + merge-audits run1/2/3) / B `96ee328a` (scripts:
+  maker `04bde073`, merger `90711961`, extractor `92d83671`, refresh
+  `1b49cc07`) / C `23bda9ba` (reaudit 3 outputs + delta + README +
+  status.log + MANIFEST-sha256) at
+  research/experiments/n11-centralreply-class10661-loss52-adoption-reaudit-20261122/.
+  Note Part AV status update published at commit `9a32984b` (blob lock
+  `20bf1ecc...` -> server `b6a5f231...`, 315,629 B, fetch-back
+  byte-identical, prefix byte-unchanged).
+- Canonical classification deltas (machine-gated via extractor +
+  refresh; classification advances, NOT closures): class 10661 becomes
+  the 37th Board-verified free class (all 52 BASE-unknown cost children
+  resolved by the adopted packet, scenario-unknown 0, independent
+  integer-geometry regeneration of every child boundary, all exact
+  LOSS); free_now 36 -> 37, unknown 34,500 -> 34,499 (transitions
+  ledger: unknown->free_now 1 only); root 24 (central) free thirds
+  10 -> 12 / uncovered 109 -> 107 (newly free thirds 30 and 90);
+  update8 resolved 79 -> 80 (new s5 272756, in-increment LOSS, gated),
+  remaining 31,780 -> 31,779, groups_free_now 127 unchanged; scheduling
+  bookkeeping (NOT verdicts): joint greedy 36,726 -> 35,645,
+  probe worklist 64,941 -> 64,888, closure-candidate table 809 -> 808
+  (class 10661 leaves; churn is best-option bookkeeping). Class 23101
+  stays rank 1 unknown 11 (untouched).
+- Verdicts NOT consumed elsewhere: the adoption consumed only the 52
+  batch-17 LOSS rows through the fail-closed merger; batch-17 has zero
+  WIN rows and zero exhaustion rows (absence gates, manifest
+  win_scenario_exists false). The 17 unconsumed closure WINs
+  (b018/d002/e002/f017/g018/j033/h045/z003/n005/n006/p002/p003/r001/
+  r002/q042 + AY v001/v002) are untouched and remain gated on the
+  scrutiny owner's C++ second implementation (pin `9193f5b6...`).
+  Non-contact kept with batch-18 (AY remaining 51 keys), batch-19
+  selection, the y=16 fast lane, the K1058 lane and Part BB outputs.
+- Guards unchanged: the standard 11x11 empty board and all 19
+  central-reply roots remain UNKNOWN at every point of this Part;
+  nodes/worklist/greedy numbers are never verdicts. This Continuation
+  appended and consumed nothing beyond the 52 LOSS adoption above;
+  log blob lock `4c1fea95...` verified immediately before this push.
