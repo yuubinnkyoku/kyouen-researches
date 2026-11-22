@@ -912,3 +912,43 @@ base = Part M canonical re-audit (merged cache 5,975行 `a998f4c0...`)。
   verificationは本amendmentでは実行しておらずopen。
 - 本amendment observed HEAD (実験出版commit): `edd5882267c02768fcab3e1c50ca690bfb81af2c`。
   note本体push直前にmainの最新を再取得して確認する。
+
+## Part W (verifier, amendment 2026-11-22): batch-8 h045 第三実装 spot verification - Part V の open 宣言の履行 (verdict不消費)
+
+Part V が出版時にopen宣言した「batch-8行 (h045 WIN + 層化LOSS rows)
+の第三実装 (Part K/O/P/T流) spot verification」を、Part V出版の直後に
+同一セッションで実行・出版した (個別の事前宣言なし。Part Vのsession
+logにopen宣言が記録済みであり、出版時点でmain上に同scopeの対抗宣言が
+存在しないことをlist_commits で確認した上で着手)。実験
+`research/experiments/n11-centralreply-closure-batch8-h045-thirdimpl-20261122/`
+(3 commits: scaffold `b31abeeb` + targets `c5ebc2fc` + verification
+tail `a1ba4ccf`, 34 files, fetch-back 34/34 byte一致)。scripts 6
+(third_impl.js pin `08ea958f...` / verify_tbl.js `c8c52528...` /
+jsreplay.js `84585617...` / run_thirdimpl.sh `a0b77d83...` /
+make_inputs_batch8.py / audit.py, schema `batch8-h045-thirdimpl-audit-v1`)。
+inputs 9: targets 4 (h045 WIN行 + h018/h025/h026層化LOSS行) +
+anchors 2 (k02a/l1a, published Part T実測値とのcross-run) +
+negatives 2 (ng1/ng2, GATE_FAIL文言照合用) + rows.json。sourcesは
+published commit `1f127fb8` からcommit-pinned raw CDNで取得
+(batch-keys sha `5c42a950...`)。
+
+- 機械結果 (14 solver runs, 最大4並列, a/b 2-pass): **h045 WIN 1 =
+  7,348,868 expansions / 4,145,900 ttHits** (a/b同一; replica df-pn
+  WIN 6,366,900 nodes とverdict一致)。h018 LOSS 2 (1,756,741 /
+  1,066,681)・h025 LOSS 2 (13,169,795 / 7,161,043)・h026 LOSS 2
+  (4,938,236 / 2,884,833)。anchors k02a WIN 9,106,337 / 4,991,527・
+  l1a LOSS 7,660,602 / 3,951,175 はpublished Part T実測値と完全一致。
+  negatives ng1/ng2はGATE_FAIL文言一致。runlimit/wall-inconclusive 0。
+- rules gate: quads 95,670 == replica・triples 195,044・mismatch 0。
+- audit: **71/71 gates PASS**、2回実行でbyte一致
+  (audit-summary.json sha `3accd540...`)。MANIFEST 33 entries
+  (sha `f32ef88c...`)。
+- 意味: 7つのunconsumed closure WIN (b018 / d002 / e002 / f017 /
+  g018 / j033 / h045) の**全てが第三実装によるspot検証済み**になった
+  (前6個はwin-thirdimpl-reverify + j033 Part T、h045が本Part W)。
+  ただし**verdict不消費は不変**。scrutiny owner (C++第二実装 gate
+  pin `9193f5b6...`) 待ち。**標準11x11空盤・19 central-reply roots・
+  class 2634/1518はすべてUNKNOWNのまま。** nodes/expansions数を
+  勝敗として読まない。
+- 本Part Wのobserved HEAD (出版3 commits直後): `a1ba4ccff58c6e00640cbecaef4da0e5d956f327`。
+  note本体push直前にmainの最新を再取得して確認する。
