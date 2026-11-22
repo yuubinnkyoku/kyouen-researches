@@ -1210,3 +1210,58 @@ rank 8は1518から8785に変化している。8106の「rank 9」はこのslide
   mainに存在する場合は着手しない (宣言直前に最新mainを再取得・class8785
   実験dirの不在・Part Z採番の未使用を確認済み)。
 - 本amendment observed HEAD-before-push: 実行時の最新mainをコミットメッセージに記録。
+
+## Part Z publication status update (2026-11-22, prober): batch 11 (class 8785) WIN-HALT at z003 - 宣告セッション消失後のtakeover出版 (verdict不消費)
+
+batch 11 (Part Z, class 8785, renewed rank 8) は宣告セッション (RUNNER-START
+2026-11-22T10:32:08Z, host `f80d796a...`, 2 cores) で実行され、第一wave
+(z001-z004) 中に**事前登録のWIN-HALT規則 (rc=45) が z003 (s5_index 198530,
+key `[1225542323476103168, 1]`, legal 82, probe_order 334): result 1 (WIN),
+11,601,265 nodes, 2-pass fresh cold node-exact** で発火した (2026-11-22T
+10:36:40Z)。同一waveのin-flightキー3本は完了・誠実開示 (z001 LOSS
+3,146,511 / z002 LOSS 2,256,914 / z004 LOSS 6,424,054、いずれも2-pass
+node-exact)。4/51 probed、z005-z051は未着手。宣告セッションはWIN-HALT後、
+rows・status・result欄を一切出版しないまま消失した (scaffoldは宣言commit
+`3cc96099`の30ファイル止まり: README + batch-keys.json + z001-z028 inputs +
+val-gate inputs。batch 1-7が走行中もchunk pushを続けた運用と不整合) ので、
+batch 8 (Part U) と同一基準で宣告ホスト消失と判定し、本takeoverセッションが
+証拠をrescue・検証・出版した。
+
+takeoverホスト (本セッション, host `d3578b9e...`) での出版前機械検証
+(fail-closed, すべて機械実行):
+1. kit mirrorからrescued 8 raws (z001-z004 p1/p2): quads gate行 (95,670)
+   存在・2-pass (budget, result, nodes) 一致・rescued status.logのPASS行
+   との一致、すべて確認。
+2. 出版済みbatch-keys.json (blob `a5d3193a02dd...`, 51キー) は宣告セッション
+   kit copyとbyte一致。51キーはPart Y re-audit正本worklist (65,154行,
+   sha256 `1807e4d2...`) のserving_class=8785行 (probe_order 332-382) と
+   51/51完全一致・input CSV一致51/51・重複なし。
+3. 51キーは正本merged cache (6,027行, sha256 `95e868d6...`) に不在 (0 hits)。
+   quarantine registry (2 active entries) とのkey対照0 hits (両方向)。
+4. 7つのunconsumed WINキー (b018/d002/e002/f017/g018/j033/h045) はclass
+   8785の51子にもclass 8106の52子にも不在 (cost child対照 0 hits。b018の
+   キーは16757∩30345 worklist行共通部分として独立再導出一致)。
+5. Part Y status updateのrank誤記 (「rank 9 = 8106」) はPart Z宣言の
+   erratum通り: published renewed closure-classes (sha256 `61943b85...`) は
+   rank 8 = 8785 (unknown 51)・rank 9 = 1518 (j033)・rank 10 = 8106。
+6. val-gate 4/4 を本ホストで再現 (at2m result 0/2,000,000 x2、15m result
+   2/3,651,923 と result 2/5,040,200)。宣告ホストrescued出力4件とも一致。
+7. **交差host再現 (pinned replica `jsreplay.js` `84585617...`, fresh cold)**:
+   rescued全4キーを本ホストで2-pass再実行し、すべて宣告ホスト生値と
+   node-exact一致: z003 WIN 1 / 11,601,265 (両pass)、z001 LOSS 3,146,511
+   (両pass)、z002 LOSS 2,256,914 (両pass)、z004 LOSS 2 / 6,424,054
+   (両pass)。再現生値は `output/raw/z00X.pN.takeover.out`・
+   `output/val-gate/*.takeover.out` として宣告ホスト分とともに出版、
+   `output/status.takeover.log` に本ホストのscheduleを記録。
+
+batch実績は11バッチ中8 WIN-HALT + 3 clean (23963/10324/8784 = 33・34・35番目
+free)。z003は**8番目のunconsumed closure WIN** (b018/d002/e002/f017/g018/
+j033/h045/z003)。verdict不消費・scrutiny owner (C++第二実装 gate pin
+`9193f5b6...`) 待ち。z003の第三実装spot検証 (Part K/O/P/T/W流) は未実施・
+将来のverifier宣言。if-adopted分解 (Part V/R流) も未実施・別宣言。
+次候補: 8785はrefutation evidence保持 (z003)、1518も保持 (j033) なので、
+renewed ranking上の次のfirst clean candidateは**rank 10 class 8106**
+(mask `[1152926194711134208, 0]`, unknown 52, 4 groups)。
+
+**class 8785・19 central-reply roots・標準11×11空盤はいかなる時点でも
+UNKNOWNのまま。nodes数・pass数を勝敗として読まない。**
