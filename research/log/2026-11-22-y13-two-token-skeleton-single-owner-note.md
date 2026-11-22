@@ -56,3 +56,16 @@
 y=12 正本監査は対象外（y=13 全称証明段階も本宣言の範囲外）。
 既に別オーナー宣言が main に存在する経路には着手しない。
 本宣言と競合する y=13 族宣言が main に存在する場合は本宣言を撤回して譲る。
+
+## 宣言の更新: 全称証明段階の着手（fit段階は Published definitive）
+
+- 2026-11-22T17:59:40Z 時点で、本noteの保持対象であった fit 段階（K1231・出版 commit
+  74c859a6→76a4f28→52becaeb 復元→README bullet dcbe6fc3）は Published definitive である。
+  本文で「本宣言の保持範囲外とし着手しない」と明示していた全称証明段階
+  （正本検証器 verify_y13_universal.py・12機械チェック監査・昇格判定は part2）を、
+  同一高速レーンの後続実行が着手した:
+  [2026-11-22-y13-universal-verifier-single-owner-note.md](2026-11-22-y13-universal-verifier-single-owner-note.md)
+  （宣言 2026-11-22T17:59:40Z・part1/part2 を保持）。
+- 着手直前に最新 main を再取得し（HEAD 5b6af2ed・17:55:39Z・y=13 全称段階の対抗宣言・
+  着手記録は不存在を確認）、本 lane の別実行との競合がないことを確認した。
+  fit 段階の成果と本noteの既往文言は以後も不変（時系列一次資料）。
