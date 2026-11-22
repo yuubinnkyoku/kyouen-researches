@@ -1,0 +1,83 @@
+{
+ "schema": "n11-centralreply-closure-b18win-thirdimpl-input-v1",
+ "sources": {
+  "b18": "sources/raw v001/v002 4 files + sources/status-b18.log + batch-keys-b18.json + published batch-18 (Part AY) outputs, publication commit 938e34f2, commit-pinned raw fetch; batch-18 batch-keys sha256 1bb3ed41..",
+  "b18_batch_keys_sha256": "1bb3ed41b26af92491ed579a7c05471f271ed1394d8b5f817b5110794d926667",
+  "anchors": "published Part G/K/O/P/T/W/AA/AD/AG/AL/AR/AX anchor/negative values, input CSVs byte-equality-checked against the published Part AR experiment"
+ },
+ "consumed_into_canonical_cache": false,
+ "targets": [
+  {
+   "key_id": "v001",
+   "stones": 5,
+   "lo": 1154610354467115008,
+   "hi": 64,
+   "legal": 83,
+   "replica_result": 1,
+   "replica_nodes": 5656151,
+   "source": "part-ay-batch18-win",
+   "s5_index": 153671,
+   "membership_class_count": 2,
+   "expect_third": 1
+  },
+  {
+   "key_id": "v002",
+   "stones": 5,
+   "lo": 3459890413727387648,
+   "hi": 64,
+   "legal": 84,
+   "replica_result": 1,
+   "replica_nodes": 7898204,
+   "source": "part-ay-batch18-win",
+   "s5_index": 207534,
+   "membership_class_count": 3,
+   "expect_third": 1
+  }
+ ],
+ "anchors": [
+  {
+   "key_id": "k02a",
+   "stones": 5,
+   "lo": 1297036692683751424,
+   "hi": 68157440,
+   "legal": 87,
+   "expect_third": 1,
+   "anchor_expansions": 9106337,
+   "anchor_ttHits": 4991527,
+   "expect_kind": "win",
+   "replica_result": null,
+   "replica_nodes": null
+  },
+  {
+   "key_id": "l1a",
+   "stones": 5,
+   "lo": 13019119616,
+   "hi": 16448,
+   "legal": 116,
+   "expect_third": 2,
+   "anchor_expansions": 7660602,
+   "anchor_ttHits": 3951175,
+   "expect_kind": "loss",
+   "replica_result": null,
+   "replica_nodes": null
+  }
+ ],
+ "negatives": [
+  {
+   "key_id": "ng1",
+   "lo": 1297036692683751424,
+   "hi": 68157440,
+   "legal": 88,
+   "stones": 5,
+   "why": "legal+1 vs derived 87"
+  },
+  {
+   "key_id": "ng2",
+   "lo": 1297036692683751424,
+   "hi": 68157440,
+   "legal": 87,
+   "stones": 6,
+   "why": "stones 6 vs actual 5"
+  }
+ ]
+}
