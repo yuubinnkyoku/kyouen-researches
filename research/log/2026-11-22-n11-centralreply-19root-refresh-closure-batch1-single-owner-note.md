@@ -3642,3 +3642,62 @@ class 10661の費用子でありclass 16131の費用子と交わらないため�
   存在する場合は本宣言を破棄して着手しない。
 - 本amendment observed HEAD-before-push: `0c9707ad3525674070d3ea7f287f2fd5f91fc826` (push直前にnote blob
   sha1ロックを再照合し、競合時は再fetchして本節を追記し直す)。
+
+### Part AX status update (2026-11-22, execution host = 本レーン continuing session)
+
+宣言 (commit `9771aa5b`) どおり、宣言後に本hostが対象13行をpinned第三実装で解き、
+出版まで完了した (verdict不消費)。Part AY (batch-18 class 16131、宣言 `6cde1b0`)
+は本Partの後 declaration されたが、両宣言どおりスコープ非接触を確認済み
+(対象行集合が異なる・本Partはbatch-17/batch-14 published rowにのみ依存)。
+
+- 実行: pinned `third_impl.js` (`08ea958f…`)・1 row = 1 solver = 1 process・
+  cap 300,000,000拡張・wallcap 240s・`--memo-power=22`・全target/anchor 2回 (a/b)。
+  **13/13 target すべて clean LOSS (result 2)** で、published replica verdict
+  と13/13一致 (Part AW q043..q052 10行 + batch-17 budget-edge u031/u033/u038 3行・
+  u031はbudget直下14,967,263 nodes行の第三実装再現)。a/b pair全員
+  result/expansion/ttHits/reason同一 (determinism gate PASS)。総expansions
+  60,628,197/pass (range 611,783 q047 .. 17,661,456 u031)。WIN 0・
+  WALL-INCONCLUSIVE 0・DIVERGENCE 0。
+- anchors: k02a WIN (9,106,337 expansions / 4,991,527 ttHits)・l1a LOSS
+  (7,660,602 / 3,951,175) ともpublished第三実装値に本hostで完全一致
+  (a/b含む全起動で決定性フィールド同一)。negatives ng1/ng2は設計どおり
+  fail-closed文言でGATE_FAIL。
+- rules gate: verify_tbl replica quads 95,670 == third-impl quads 95,670・
+  195,044 triples mismatch 0。
+- maker: `make_inputs_ax.py` 全gate PASS・3回実行byte一致 (source pins:
+  batch-keys `dfde0e90`/`db762175`・row-audit `6b40b131`/`c19e768f`・
+  raw 26ファイルの2-pass node-exact + `# replay_done` + budget内 result 2・
+  status.log PASS 3-way (AW: 10 PASS全result 2 + VAL-GATE 4/4 + WAVE-END
+  stop=0。b17: EXECUTION-COMPLETE 52/52 LOSS + P2-TRUNCATED-RETRY 5件中
+  u031/u033を含む・fired HARD-STOP 0)・probe_order 580..589 / 630/632/637・
+  derived-vs-published input CSV byte-equality 10+3 target + 4 anchor/negative
+  (anchor/negativeはpublished Part AR実験dirのCSVとbyte一致))。
+- audit: `audit.py` **163/163 gates PASS**・2回実行byte一致 (schema
+  `n11-centralreply-closure-b14res-b17edge-thirdimpl-audit-v1`, sha256
+  `d1fc8999…`。G0 input CSV vs rows.json 17・script pins・rules gate・
+  anchors a/b node-exact・negatives fail-closed・targets 13行 a/b determinism
+  + verdict agreement)。
+- 誠実記録 (status.log RUNNER-NOTE + READMEに開示): (1) anchors初回起動時の
+  shell cwd groupingバグで k02a tag=a のみ単独起動した (RUN行重複・
+  決定性フィールドは同一・k02a.bは未起動・絶対パスで即時再実行して現行a/bで
+  上書き・Part ARのng1前例と同種)。(2) 2 solver並列時にhost CPU quotaで
+  per-solver速度が半減する観測 (k02a solo wall 25.63s vs pair 53.03s) を受けて
+  targetsは逐次実行 (1 solver逐次・宣言cap「最大2」以内・決定性フィールドは
+  wall非依存)。
+- 出版: 実験dir
+  `research/experiments/n11-centralreply-closure-b14res-b17edge-thirdimpl-20261122/`
+  113ファイル+MANIFESTを5コミットでmainに反映: commit A `dbab0b9b`
+  (scaffold: scripts pins + maker + audit.py + inputs 24ファイル) /
+  A2 `b2867591` (source raws 26ファイル) / A3 `b826eebc` (sources rest 25
+  ファイル) / B `db036985` (solver outputs 34ファイル: targets a/b 26・
+  anchors 4・negative 2・rules-gate・status.log) / C `115c7ad3`
+  (audit-summary + audit-run1/2 + README + MANIFEST 113行) = publication
+  complete。**fetch-back全sha一致** (publication commit `115c7ad3` 固定rawで
+  MANIFEST全行sha256照合113/113)。
+- 意味 (route statement・閉鎖主張なし): batch-14 residual 10行 (Part AW) と
+  batch-17 budget-edge 3行 (Part AU) が独立実装でも13/13 LOSSで再現された。
+  これらはverdict-level補強文献であり、**verdict消費ゼロ**・Part AV
+  (batch-17 adoption) と将来のclass 23101 residual LOSS adoption Partの採用判断
+  は一切代行しない (scrutiny owner C++第二実装 gate pin `9193f5b6…`のまま)。
+- 標準11×11空盤・19 central-reply roots・class 23101・class 10661・全13キーは
+  本Partのどの時点でもUNKNOWNのまま。nodes数・expansions数を勝敗として読まない。
