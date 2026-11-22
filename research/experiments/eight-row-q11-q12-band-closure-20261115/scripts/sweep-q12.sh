@@ -5,11 +5,11 @@
 # - decided widths (UNSAT/SAT) are skipped without regenerating their CNF (this script wrote them)
 # - INDET (timeout) widths are retried with doubled cap on later invocations
 # - SAT (rc=10) halts everything immediately with exit code 42
-# records schema matches sweep-q11.jsonl: "{""q","m","status","conflicts","proc_s","cap","rc","cnf_md5","vars","clauses","tag","solver""}"
+# records schema matches sweep-q11.jsonl: {"q","m","status","conflicts","proc_s","cap","rc","cnf_md5","vars","clauses","tag","solver"}
 set -u
 BASE="$(cd "$(dirname "$0")" && pwd)"
 cd "$BASE"
-START=${1:?start m}; END=${2:?end m}; BUDGET=${3:?wall budget s}; BASECAP=${4:-60}
+START=\\${1:?start m}; END=\\${2:?end m}; BUDGET=\\${3:?wall budget s}; BASECAP=\\${4:-60}
 KISSAT="$BASE/bin/kissat"
 # knowledge mounts may be noexec: fall back to an executable copy outside the mount
 if ! "$KISSAT" --version >/dev/null 2>&1; then cp "$BASE/bin/kissat" /tmp/kissat-tko && chmod +x /tmp/kissat-tko && KISSAT=/tmp/kissat-tko; fi
@@ -51,7 +51,7 @@ for ((m=START; m<=END; m++)); do
   CONFLICTS=$(grep -m1 '^c conflicts:' "satlogs/q12_$m.log" | awk '{print $3}')
   [ -z "$CONFLICTS" ] && CONFLICTS=0
   PROC_RAW=$(grep -m1 '^c process-time:' "satlogs/q12_$m.log" | sed -n 's/.* \([0-9]*\.[0-9]*\) seconds.*/\1/p')
-  PROC_S=${PROC_RAW%.*}
+  PROC_S=\${PROC_RAW%.*}
   case $RC in
     20) ST=UNSAT ;;
     10) ST=SAT ;;
@@ -65,7 +65,7 @@ for ((m=START; m<=END; m++)); do
     echo "SAT_FOUND m=$m log=satlogs/q12_$m.log"
     exit 42
   fi
-  if [ "${ST#UNKNOWN}" != "$ST" ]; then echo "ABNORMAL m=$m rc=$RC"; exit 4; fi
+  if [ "\${ST#UNKNOWN}" != "$ST" ]; then echo "ABNORMAL m=$m rc=$RC"; exit 4; fi
 done
 echo "RANGE_DONE $START..$END maxpeak=$MAXPEAK"
 exit 0

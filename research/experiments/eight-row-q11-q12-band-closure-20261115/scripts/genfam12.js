@@ -7,7 +7,7 @@
 // no encoding drift. Curve insertion order strictly matches buildCensus full enumeration:
 // lines first (minimal 2-point occurrence order), then circles (minimal 3-point triple order).
 // Original generator was lost before upload; rebuilt 2026-11-22 from the published README spec
-// and calibrated 29/29 CNF byte-identity (see records/calibration-takeover-20261122.jsonl).
+// and calibrated 29/29 CNF byte-identity (see records/calibration-*.jsonl and the log).
 // Usage: node genfam12.js 8 <m> <q> [--deficient|--cap=K] [--lex=...] out.cnf
 'use strict';
 const S = require('./sat.js');
@@ -43,7 +43,7 @@ S.buildCensus = function familyCensus(w, m, q) {
       idx((u2 - 7) / 2, 4), idx((u2 + 7) / 2, 4),
       idx((u2 - 5) / 2, 6), idx((u2 + 5) / 2, 6),
       idx((u2 - 1) / 2, 7), idx((u2 + 1) / 2, 7),
-    ].sort((a, c) => a - c);
+    ].sort((a, b) => a - b);
     if (pts.length !== 12) throw new Error('F1 circle point count != 12');
     // verify all 12 points are on the canonical circle (defensive)
     for (const p of pts) {
@@ -52,9 +52,9 @@ S.buildCensus = function familyCensus(w, m, q) {
     circles.push({ tripleKey: pts.slice(0, 3), cu: { type: 'circle', co, pts } });
   }
   // circles in minimal-3-point-triple order (== full buildCensus circMap insertion order)
-  circles.sort((a, c) => {
+  circles.sort((a, b) => {
     for (let i = 0; i < 3; i++) {
-      if (a.tripleKey[i] !== c.tripleKey[i]) return a.tripleKey[i] - c.tripleKey[i];
+      if (a.tripleKey[i] !== b.tripleKey[i]) return a.tripleKey[i] - b.tripleKey[i];
     }
     return 0;
   });
