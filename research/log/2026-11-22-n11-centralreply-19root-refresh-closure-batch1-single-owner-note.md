@@ -378,3 +378,34 @@ verdict-level交叉検証する。**verdict不消費・採用判断は引き続�
 - transport: 対象はpublished batch6 raw由来のみで、他レーンのclaim集合と
   無関係。同一スコープの宣言がmainに存在する場合は着手しない。
 - 本amendment observed HEAD-before-push: 実行時の最新mainをコミットメッセージに記録。
+
+
+## Part L (solver, amendment 2026-11-22): closure class 10324 exact-S5 probe batch 7
+
+batch 6 (Part I) も事前登録のWIN-HALT規則により g018 (2-pass node-exact
+result 1, 5,936,863 nodes) で停止し、closure候補表 rank 1-6 はすべて反駁証拠保持
+(16757: b018, 20421: d002, 30345: b018のs5 528497, 16371: e002, 12264: f017,
+5473: g018) となった。反駁証拠のない次候補として reaudit closure-classes
+rank 7 のクラス10324に着手する。5バッチ中5 WIN-HALTの実測傾向とスコアリング
+再考推奨はPart H-bisで記録済みだが、rank 1-6が反駁証拠保持である以上、
+バッチ選択はscheduling quantityとして反駁証拠のない次候補に着手する。
+
+- 対象: `research/experiments/n11-centralreply-closure-class10324-batch7-20261122/`。
+  graph class index 10324, mask `[1152921504607191040, 0]` の未確定canonical
+  S5子51件（h001-h051、reaudit正本probe-worklistのprobe_order 281-331順・
+  Board再計算合法手数固定、root first=14/third=16を含む4グループ担当・
+  unknown_now 51）。fail-safe機械確認: (1) 使用するprobe-worklist・
+  closure-classes はpublished reaudit出力とbyte-identical (sha256
+  `cbea9e79...`・両コピー一致)、(2) 全51キーは正本merged cache（5,924行・
+  sha256 `8a721a18...`）に存在しない (0 hits)、(3) quarantine registry
+  (sha256 `81d23160...`・active 4件) とのkey対照 0 hits。
+- 手法・停止規則・消費規則: Part B-Iと同一 (pinned replica `jsreplay.js`
+  sha256 `84585617...`, 2-pass fresh cold, budget 15M, mismatch→HARD-STOP
+  rc=42, WIN→HALT rc=45, 枯渇=UNKNOWN, 消費はfail-closed merger経由のみ、
+  本batch単体では閉鎖・被覆・secured主張なし)。val-gate 4/4 node-exactは
+  本ホストで本session中に再現済み (batch6 val-gateと同一4入力行: at2m×2
+  result 0/2,000,000、15m result 2/3,651,923 と result 2/5,040,200)。
+- 並走との不接触: 本batchキーは19-root計画universe由来であり、他レーンの
+  claim集合と機械的にdisjoint (merged cache不在確認済み)。同一スコープの
+  宣言が既にmainにある場合は本宣言を破棄して着手しない。
+- 本amendment observed HEAD-before-push: 実行時の最新mainをコミットメッセージに記録。
