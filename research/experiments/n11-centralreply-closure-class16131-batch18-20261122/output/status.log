@@ -7,3 +7,12 @@
 # stop rules (pre-registered): mismatch -> HARD-STOP rc=42; WIN -> HALT rc=45 (honest WIN label only, NOT adopted, verdict not consumed); budget exhaustion -> honest UNKNOWN
 # scope: research/experiments/n11-centralreply-closure-class16131-batch18-20261122/
 # NOTE: verdicts NOT consumed; 15 unconsumed closure WINs unchanged (scrutiny owner C++ gate 9193f5b6 pending); 11x11 empty board and class 16131 remain UNKNOWN
+2026-11-22T20:52:33Z VAL-GATE 4/4 node-exact this-host re-verified (at2m-1/at2m-2 result 0 nodes 2000000/2000000, first-15m (2,3651923), second-15m (2,5040200), forbidden quadruples 95670 x4, all # replay_done, no truncation)
+2026-11-22T20:52:33Z RUNNER-NOTE execution per Part AY protocol: published runbatch.sh (f591f8c2) run as two parallel instances (odd/even key split, 2 workers max), foreground waves resumed on timeout; raw outputs under output/raw/
+2026-11-22T20:54:35Z v001 PASS 15000000,1,5656151
+2026-11-22T20:54:35Z v001 WIN-HALT
+2026-11-22T20:55:00Z v002 PASS 15000000,1,7898204
+2026-11-22T20:55:00Z v002 WIN-HALT
+2026-11-22T20:55:17Z WIN-ROW-DETAIL v001 p1 nodes 5656151 == p2 nodes 5656151 (2-pass node-exact, compared fields identical, wall_s differs only), legal 83, budget 15000000, result 1, keys 1154610354467115008/64, # replay_done x2
+2026-11-22T20:55:17Z WIN-ROW-DETAIL v002 p1 nodes 7898204 == p2 nodes 7898204 (2-pass node-exact, compared fields identical, wall_s differs only), legal 84, budget 15000000, result 1, keys 3459890413727387648/64, # replay_done x2
+2026-11-22T20:55:17Z EXECUTION-HALTED batch-18 stopped at first wave per pre-registered WIN-HALT rule (rc=45 both workers): v001 WIN and v002 WIN. Honest WIN labels recorded, NOT adopted, verdict consumption ZERO. 2/53 keys probed, 51 keys UNPROBED and remain fresh (no re-probe prohibition triggered - they were never run). Unconsumed closure WIN candidates now 17 (15 prior b018/d002/e002/f017/g018/j033/h045/z003/n005/n006/p002/p003/r001/r002/q042 + v001 + v002), all scrutiny-owner pending (C++ gate 9193f5b6). Route statement (conditional, NOT a verdict): if a WIN on a class-16131 cost child is adopted, the all-LOSS closure route of class 16131 is refuted; class 16131 and the remaining 51 children remain UNKNOWN at this point in time.
