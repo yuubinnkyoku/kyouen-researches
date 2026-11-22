@@ -1,0 +1,77 @@
+{
+ "schema": "n11-centralreply-closure-batch15-wins-thirdimpl-input-v1",
+ "sources": {
+  "batch_keys_sha256": "af3e4c46af0d84bcb248c350283b07e26b901f6e0d196038e24bd1292b133727",
+  "raws": "sources/raw (published batch-15 raws 8 files: declaring-host 4 keys x 2-pass, raws commit d1316b19, fetched from the repo raw CDN, commit-pinned)",
+  "status_log": "sources/status.log (published batch-15 declaring-host runner log, raws commit d1316b19)"
+ },
+ "consumed_into_canonical_cache": false,
+ "targets": [
+  {
+   "key_id": "r001",
+   "stones": 5,
+   "lo": 4035788216211603456,
+   "hi": 0,
+   "legal": 82,
+   "replica_result": 1,
+   "replica_nodes": 2521302,
+   "expect_third": 1
+  },
+  {
+   "key_id": "r002",
+   "stones": 5,
+   "lo": 3603442651849818112,
+   "hi": 128,
+   "legal": 82,
+   "replica_result": 1,
+   "replica_nodes": 5973924,
+   "expect_third": 1
+  }
+ ],
+ "anchors": [
+  {
+   "key_id": "k02a",
+   "stones": 5,
+   "lo": 1297036692683751424,
+   "hi": 68157440,
+   "legal": 87,
+   "expect_third": 1,
+   "anchor_expansions": 9106337,
+   "anchor_ttHits": 4991527,
+   "expect_kind": "win",
+   "replica_result": null,
+   "replica_nodes": null
+  },
+  {
+   "key_id": "l1a",
+   "stones": 5,
+   "lo": 13019119616,
+   "hi": 16448,
+   "legal": 116,
+   "expect_third": 2,
+   "anchor_expansions": 7660602,
+   "anchor_ttHits": 3951175,
+   "expect_kind": "loss",
+   "replica_result": null,
+   "replica_nodes": null
+  }
+ ],
+ "negatives": [
+  {
+   "key_id": "ng1",
+   "lo": 1297036692683751424,
+   "hi": 68157440,
+   "legal": 88,
+   "stones": 5,
+   "why": "legal+1 vs derived 87"
+  },
+  {
+   "key_id": "ng2",
+   "lo": 1297036692683751424,
+   "hi": 68157440,
+   "legal": 87,
+   "stones": 6,
+   "why": "stones 6 vs actual 5"
+  }
+ ]
+}
