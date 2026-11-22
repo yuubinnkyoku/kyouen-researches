@@ -2399,3 +2399,53 @@ commit `ca7ad4fc`、fetch-back 29/29 byte一致・MANIFEST-sha256.txt同梱)。
   PARTAL-RUNNER-EXIT後に行が存在・READMEに明記)。
 - 標準11×11空盤・19 central-reply roots・class 5830他全classはどの時点でも
   **UNKNOWNのまま**。nodes/expansionsを勝敗として読まない。
+
+
+## Part AM (solver, declaration 2026-11-22): closure class 10687 exact-S5 probe batch 16 (verdict不消費・実行前に宣言)
+
+batch 15 (Part AK, class 5830) がwave-1でWIN-HALT ×2 (r001/r002) で停止し、r001/r002の
+第三実装交叉検証 (Part AL) も51/51 gatesで完了した。Part AF (batch 14, class 23101)
+は依然in flight (scaffold + val-gateのみ出版・rawsなし)。renewed closure ranks
+1-13はすべて反駁証拠保持・WIN-HALT済み・またはin flight (16757: b018, 20421: d002,
+30345: cost child, 16371: e002, 12264: f017, 5473: g018, 2634: h045, 8785: z003,
+1518: j033, 8106: n005/n006, 16930: p002/p003, 23101: batch-14 in flight, 5830:
+r001/r002) のため、事前登録選択規則 (反駁証拠なし・不在・未着手の最初のclean候補)
+により**renewed rank 14 class 10687** (mask `[1224979098661617664, 0]`,
+unknown 52, groups served 2 = (root first=16, third=56)と(first=16, third=64)、
+still-unknown 52子はすべて(16,56)由来) に着手する。
+
+- 対象: `research/experiments/n11-centralreply-closure-class10687-batch16-20261122/`。
+  未確定canonical S5子52件 (t001-t052、renewed re-audit正本probe-worklistの
+  probe_order 642-693連続・Board再計算の合法手数固定 76-95)。
+  batch-keys.json (schema `n11-centralreply-closure-class10687-batch-input-v1`,
+  sha256 `465cf44721a661ce94babe12212c26c697ebb346392548fcdafaa9d3e8c3dd4e`)は
+  pinned正本probe-worklist (sha256 `1807e4d2...`)から機械抽出。Part Y抽出
+  (refresh_19root_frontier_extract.py・6 pinned入力sha検証) を本ホストで再実行し
+  closure-classes `61943b85...`・per-root-coverage `33f01a0c...`・
+  probe-worklist `1807e4d2...`・refresh-summary `25987add...` がpublished
+  canonical 4ファイルとcmp byte一致することを確認済み (published再現は3度目
+  に続き4度目・全てbyte一致)。served-groups-10687.json (groups (16,56)+(16,64))
+  を実験dirに同梱する。
+- 前提fail-safe (全て機械確認済み・fail-closed): (1) 全52キーは正本merged cache
+  (6,027行・sha256 `95e868d6...`) に(lo,hi)対で0 hit・(2) quarantine registry
+  (sha256 `81d23160...`) に0 hit・(3) バッチ内重複なし (52 key_id・52 (lo,hi)対)・
+  (4) closure-classes.csv rank-14行 `14,10687,1224979098661617664,0,52,16,56,2`
+  byte一致・(5) 過去バッチ鍵集合 (batch 1-15既出版608キー) と(lo,hi)対overlap 0・
+  (6) probe_order 642-693連続。
+- 方法・停止規則・消費規則: Part B/C/D/E/Fと同一 (pinned replica `jsreplay.js`
+  sha256 `84585617...`, 2-pass fresh cold, budget 15M, mismatch→HARD-STOP rc=42,
+  WIN→HALT rc=45, 枯損=result 0 honest UNKNOWN・15M同条件再探索禁止, worker最大2,
+  4キーwave・resume-safe)。実行前に本ホストでfresh val-gate 4/4 node-exact
+  (at2m 0/2,000,000 ×2・15m 2/3,651,923と2/5,040,200・quads 95,670) を
+  再現済み (本セッション内 2026-11-22T15:07Z前に実施)。消費はfail-closed merger経由
+  のみ・本batch単体ではroot被覆・クラス閉鎖・第三手securedの主張をしない
+  (閉鎖判定・被覆監査は後続のrefresh再実行+独立監査が行う)。
+- 並走との不接触: 本バッチはclass 10687固有の52キーで、他レーン・他バッチ
+  (Part AF/AI/AJ/AK/ALファイル) には読み取り以外接触しない。宣言直前に最新main
+  を再取得し (observed HEAD `1976f566`・note末尾はPart AL status update)、
+  「Part AM」「batch 16」「class 10687」対抗宣言なし・`class10687-batch16` dir不在
+  を確認済み。同一スコープの宣言がmainに存在する場合は本宣言を破棄して着手しない。
+- 本宣言 observed HEAD-before-push: push時の最新main HEADをコミットメッセージに
+  記録し、push直前にnote blob sha再照合 (現状 `b86f2373...`)。競合時は破棄。
+  標準11×11空盤・19 central-reply roots・class 10687はどの時点でもUNKNOWNのまま。
+  nodes数を勝敗として読まない。
