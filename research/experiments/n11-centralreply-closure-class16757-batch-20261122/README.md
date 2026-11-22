@@ -32,8 +32,20 @@ batch**: the class closes only after an independent re-verification audit
   cache candidate (published separately with a WIN/LOSS conflict gate); this
   batch alone consumes nothing
 
-## Status
+## Status (batch halted 2026-11-22T02:39:43Z, pre-registered WIN-HALT)
 
-section updated as the batch progresses; see `output/status.log` and the final
-README section. The standard 11x11 empty board, the 19 central-reply roots and
-class 16757 remain UNKNOWN throughout.
+- b001-b017, b019, b020: 2-pass node-exact, result 2 (LOSS), 15M budget, raw in
+  `output/raw/` (published, raw URLs byte-verified against the pinned commit)
+- **b018: 2-pass node-exact result 1 (WIN), 3,549,602 nodes both passes** ->
+  pre-registered WIN-HALT fired (status.log). Consequence: the all-48-LOSS
+  closure route for S4 class 16757 is refuted by a verified WIN child; the class
+  drops out of the all-LOSS certificate candidate ranking from the 2026-11-22
+  frontier refresh. No class-resolved claim of any kind is made from a WIN
+  child on its own.
+- b021-b048: not probed in this batch (halt honored), UNKNOWN. A future batch
+  may resume them for cache completeness; they no longer serve certificate
+  closure.
+- All verdict rows are available as increment-cache candidates only through the
+  separate fail-closed merge gate (not performed here).
+- The standard 11x11 empty board, the 19 central-reply roots and class 16757
+  remain UNKNOWN throughout.
