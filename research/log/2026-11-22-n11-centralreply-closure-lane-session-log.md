@@ -1432,3 +1432,55 @@ class remain UNKNOWN. Nodes are not verdicts.
   HEAD-before-push for the experiment push: `5d745781`; note Part AJ
   publication status update pushed as `17e3619f` (blob sha1-locked
   `65e74c00`, fetch-back byte-identical).
+
+## Continuation 24 (2026-11-22, this host): Part AL batch-15 r001/r002 third-implementation cross-verification completed and published - verdict-level agreement on both WINs, 51/51 gates, verdicts NOT consumed
+
+Following the Part G/K/O/P/T/W/AA/AD/AG convention, the 13th/14th unconsumed
+closure WINs from batch 15 (class 5830, r001 `[4035788216211603456, 0]` /
+r002 `[3603442651849818112, 128]`, both legal 82, published raws `d1316b19`)
+were re-solved with the pinned third implementation (non-df-pn AND/OR
+minimax `third_impl.js` `08ea958f...`). Declaration pushed first (Part AL,
+note commit `ef863117`, observed HEAD-before-push `cf485460`, conflicting
+declaration check clean), then executed on this host
+(`135c7b39-6dfa-4499-9038-092e9efeed37`, 2 cores, at most 2 concurrent
+solver processes).
+
+- Machine-derived inputs only: `make_inputs_batch15.py` (adapted from the
+  published Part AG batch-13 script) re-derives every input from the
+  published batch-15 raws (per-row 2-pass node-exact asserted), the
+  published `batch-keys.json` (sha256 `af3e4c46...`, class 5830, 52 keys),
+  the published declaring-host status.log (PASS lines asserted,
+  r003/r004 exhaustion rows asserted result 0, WIN-HALT stop lines
+  asserted) and the published per-key input CSVs (scaffold `b04969bc`,
+  derived-vs-published byte-identical). Zero hand transcription.
+- Gates: verify_tbl quads 95,670 == replica, 195,044 randomized triples
+  mismatches 0; anchors k02a (WIN, legal 87, 9,106,337/4,991,527) and l1a
+  (LOSS, legal 116, 7,660,602/3,951,175) reproduced the published
+  third-impl values exactly, a/b deterministic; negatives ng1 (legal+1)
+  and ng2 (stones 6) both GATE_FAIL as designed; honest runner note: the
+  serial `&&` negative pair short-circuits after ng1's intentional rc=1,
+  so ng2 was launched immediately after the runner with the identical
+  pinned script and its row recorded in status.log (README documents it).
+- **Results (cap 300M, wallcap 240s, memo-power 22, 1 row x 2 runs):**
+  r001 third-impl result 1 WIN, 2,856,756 expansions / 1,684,754 ttHits,
+  clean, a/b identical (walls 17.34/17.47s); r002 result 1 WIN,
+  6,817,094 / 4,153,893, clean, a/b identical (walls 42.37/42.85s). Both
+  agree with the published replica verdicts (WIN at 15M). Wall-inconclusive
+  0, divergence 0. Audit battery 51/51 gates PASS, run twice with
+  byte-identical output (audit-summary.json sha256 `c008d74b...`,
+  schema `batch15-wins-thirdimpl-audit-v1`).
+- r003/r004 (15M exhaustion, honest UNKNOWN) were NOT re-searched (a
+  third-impl re-search would be a budget escalation requiring a new
+  declaration); r005-r052 (48 keys) remain untouched. Batch-13 (Part AI),
+  batch-14 (Part AF) and Part AJ files stayed read-only throughout. No
+  canonical cache was modified.
+- Publications: experiment dir
+  `n11-centralreply-closure-batch15-wins-thirdimpl-20261122/` 29 files
+  (with MANIFEST-sha256.txt) commit `ca7ad4fc`, fetch-back 29/29
+  byte-identical; note Part AL status update commit `dbd57fb2` (blob
+  sha1 `b86f2373`, fetch-back byte-identical).
+- Adoption of both WINs remains with the scrutiny owner (C++ second
+  implementation gate pin `9193f5b6...`; this host still has no compiler
+  and package installation is forbidden). The standard 11x11 empty
+  board, the 19 central-reply roots, class 5830 (48 unprobed children)
+  and every other class remain UNKNOWN. Nodes are not verdicts.
