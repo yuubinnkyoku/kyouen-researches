@@ -2518,3 +2518,42 @@ r001/r002の2 WIN行に読み取り専用で適用する。
   nodes数を勝敗として読まない。
 - 本宣言 observed HEAD-before-push: push時の最新main HEADをコミットメッセージに記録し、
   push直前にnote blob sha再照合する。競合時は破棄。
+
+### Part AN status update (2026-11-22, declaring host = 本レーンセッション)
+
+宣言どおり完了。実験は単一シナリオ (PWIN2のみ; r003/r004枯損行は型ゲート除外、
+「全resolved行採用 == WIN 2行」をmanifestで機械表明) として実行した。
+
+- 出版: 実験dir `research/experiments/n11-centralreply-class5830-win-r001r002-ifadopted-20261122/`
+  14ファイル (README + MANIFEST-sha256.txt含む) を1コミット `c37b2790`
+  (2026-11-22T15:49:30Z) でmainに反映、fetch-back 14/14 byte一致 (~247KBの
+  scenario cache含む)。probe-worklist (3.7MB) はPart AH/AJ先例どおり不出版
+  (sha256 `951b8897...` はREADMEに記録)。
+- 全ゲートPASS: increments maker 2回byte一致 (2行WIN増分 sha256 `05c10e1f...`);
+  sha-pinned s5_union_merge (`90711961...`, selftest PASS) 2回byte一致
+  (6,029行・WIN160/LOSS5,869, sha256 `51693301...`); scenario refresh 2回
+  直列実行 (66s/61s, batch-13の並列OOM再発防止)・3出力ともbyte一致
+  (`496f3761...`/`37223c04...`/`f4256c28...`); delta extractor 3回byte一致
+  (`e67df758...`)・BASE/PWIN2両方のclass_status_countsをgraph+update8+cache
+  から再計算しpublished summaryと一致させた (fail-closed)。
+- 機械測定された分解結果: excluded_nowの翻りは**side class 2634のみ**
+  (class 5830はBASEで既にexcluded_now, 57子中5 WIN既存)。flips={2634}は
+  eligible holder unionと機械同一。excluded_now 23→24, unknown 34,501→34,500,
+  free_now 35不変。class 5830 unknown_now 52→50, class 2634は51→49 (両クラスの
+  own membership deltaとも2)。batch-keysのmembership_class_count=1はclosure-scoped
+  計数であり、graph s4_cost holders {2634,5830}とはスコープが異なる (両方を
+  delta出力に記録、flipはgraph側が支配)。
+- update8は正方向に動く (batch-13がupdate8-neutralだったのと対照的): r001/r002
+  (s5 103560/103561) はfrozen update8 baseline要件であり、resolved 75→77,
+  remaining 31,784→31,734, win_hit_groups 0→1 (最初のwin-hit groupはs4 class 2634,
+  root first 49/third 71のgroup)。
+- スケジューリング: joint greedy 35,242→35,240, probe worklist 65,154→65,150,
+  root 27 (known-loss baseline) は119/119, per-root free coverage列は全root不変,
+  individual_greedy_unionの移動はroot (first 49) のみ 2,890→2,888。
+- verdict不消費・解釈ガード不変: r001/r002の採用判断はscrutiny ownerのC++第二実装
+  ゲート pin `9193f5b6...` 待ちのまま。r005-r052 (48キー) は不着手。r003/r004は
+  honest UNKNOWN (result 0, nodes==budget) でありverdictとして読まない。標準11×11
+  空盤・19 central-reply roots・class 5830他全classはどの時点でも**UNKNOWNのまま**。
+  nodes数を勝敗として読まない。
+- 本status updateのobserved HEAD-before-push: `b661405a` (note blob sha1ロック
+  `088116b3...` で更新、fetch-backで追記確認)。
