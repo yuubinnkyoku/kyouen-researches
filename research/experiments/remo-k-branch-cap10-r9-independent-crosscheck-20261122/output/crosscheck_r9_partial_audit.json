@@ -1,0 +1,99 @@
+{
+ "machine_checks": [
+  {
+   "data": {
+    "len_A": 15863,
+    "len_B": 15863,
+    "orbits": 15863,
+    "sets_equal": true
+   },
+   "name": "C1 Burnside(10) (fix 84494/3478/125 -> 15863 orbits) == enumeration A (K0869-lineage, pruned verbatim-equivalent traversal, 15863) == enumeration B (K0862-lineage direct_constrained, 15863) with identical profile SETS",
+   "ok": true
+  },
+  {
+   "data": {
+    "agree_prefix": 125,
+    "offset_change_points": 1098
+   },
+   "name": "C2 enumeration-order divergence (DATA): the two published canonical enumerations agree on indices 0..124 and diverge from index 125 onward (1098 offset-change points); phi is a bijection [their_i -> my_i] over all 15863 profiles",
+   "ok": true
+  },
+  {
+   "data": {
+    "records": 6457,
+    "sha256": "f8fffc4602e3efa62ccf7d726c53a87f6f6bc7614dc90a610db8da9f65640e06"
+   },
+   "name": "C3 snapshot integrity: 6457 unique K0869-lineage-indexed records, well-formed verdict fields, sha256 f8fffc4602e3efa6",
+   "ok": true
+  },
+  {
+   "data": {
+    "records": 15863,
+    "sha256": "a2bb16bc8d03f341704d902f0a50ce4352b14ad08043cbced54b8e8f83b9973b"
+   },
+   "name": "C4 K0893 packed integrity: 15863 records, index-complete, masks/states well-formed, sha256 a2bb16bc8d03f341 (byte-verified against the committed K0893 publication)",
+   "ok": true
+  },
+  {
+   "data": {
+    "compared": 6457,
+    "det_mismatch": 0,
+    "fl_mismatch": 0,
+    "sv_mismatch": 0
+   },
+   "name": "C5 CROSS-CHECK: all 6457 snapshot records (fresh K0864 verbatim Python engine, independent process) agree with the phi-mapped K0893 packed records on survivors / first losers / determined (mismatches 0/0/0)",
+   "ok": true
+  },
+  {
+   "data": {
+    "failures": 0,
+    "witnesses": 13
+   },
+   "name": "C6 pinned state-count witnesses: 13 snapshot profiles re-run live with the verbatim engine; (survivors, first_losers, states) equal the pinned constants AND the phi-mapped packed records including the reachable-state count (0 failures)",
+   "ok": true
+  },
+  {
+   "data": {
+    "failures": 0,
+    "sample": 12
+   },
+   "name": "C7 live engine binding: first 12 snapshot records re-run with the verbatim engine match all committed fields incl. order fields (0 failures)",
+   "ok": true
+  },
+  {
+   "data": {
+    "delta0_mismatches": 0,
+    "delta0_profiles": 267,
+    "fl_violations": 0
+   },
+   "name": "C8 snapshot anchors: Lemma FL residues hold on all 6457 snapshot records (0 violations; K0864 proved FL universally - redundant anchor); the 267 Delta=0 profiles in the snapshot all have determined survivor == Theorem D recursion at r=9 (0 mismatches)",
+   "ok": true
+  },
+  {
+   "data": {
+    "failing": 34,
+    "max_states": 363630,
+    "residue_census": {
+     "1": 57,
+     "2": 336,
+     "3": 322
+    },
+    "uniformly_determined": 98,
+    "uniformly_ndet": 583
+   },
+   "name": "C9 K0893 pinned census re-derived from the committed packed bytes under the K0862-lineage enumeration: failing keys exactly the published 34-key set; all 34 partition rows match; census 57/336/322; uniformly determined 98 / non-determined 583 / mixed 34; max_states 363630",
+   "ok": true
+  }
+ ],
+ "meta": {
+  "date": "2026-11-22",
+  "domain": "cap<=10 3-branch REMO r=9, 15863 canonical profiles (partial snapshot 6457 / 15863)",
+  "item": "K1227-provisional",
+  "snapshot_records": 6457,
+  "title": "Independent partial cross-verification of the K0893 r=9 packed records with the K0864 verbatim engine + K0869/K0862 enumeration-order divergence record"
+ },
+ "summary": {
+  "all_ok": true,
+  "checks_total": 9
+ }
+}
