@@ -30,3 +30,12 @@
 - 有限盤のみ・実装/符号化/kissat trust込み・形式証明ではない。
 - K_9の上界・K_9=18確定への主張なし (ge19レーン所有)。fresh探索で18石witnessに240sで到達できないという負の知見のみ記録。
 - 標準11×11空盤・二石root・S2・closure classは非接触 (UNKNOWNのまま)。
+
+## 出版記録 (2026-11-22追記)
+
+- `da55127b`: 実験README (research/experiments/n7n8n9-sat-alone-kn-closures-20261122/README.md) のみで構成したREADME文書単体を出版。
+- `f7209a3f`: 本session log + K項目 [K1229](../knowledge/items/K1229-n7-n8-sat-alone-k-closures-and-rows-extension.md) (直前のmain追いかけ確認後に非競合で到達)。
+- `3e284f85`: K0029 (n1-n9最大安全サイズ既知値) への節追記「2026-11-22 SAT単独再確定 (値は不変)」。
+- `51c10da7`: research/knowledge/README.md 末尾へK1229要約bulletをappend-onlyで追記 (取得正本497,056 bytes + 追記1,648 bytes = 498,704 bytes。fetch→追記→pushを同一実行内で完結)。
+- 上記4コミット間に並走レーンの割込みなし (list_commitsでHEAD列を確認)。
+- **続刊 (bash実行環境復旧後)**: scripts/8点・pinned文書4点・output/ (witnesses・verify・tamper・run_records・meta_records・brute_truth・brute_n4・w9_d4_cells・sa/) ・MANIFEST-sha256.txt を実験dirへ分割push。完了次第本節へ追記する。
