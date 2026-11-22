@@ -2123,3 +2123,63 @@ rejection, consuming zero verdicts.
   (b) closing class 23101 via its remaining 10 unprobed keys + the
   q042 adoption decision (scrutiny owner), (c) any new unconsumed
   closure WIN lanes' if-adopted precomputations as they appear.
+
+## Continuation 34 (2026-11-22, this host): Part AU batch-17 (class 10661) declared and scaffold published - the first candidate without refutation evidence, machine-verified 52-key packet u001..u052; no probe run, verdicts NOT consumed
+
+Declared in the note as Part AU (note blob `f34401cd...` -> `14794159...`,
+sha-locked create_or_update_file, observed HEAD-before-push recorded in the
+commit message). Selection rationale (machine-gated): Part AS reaudit
+closure-candidate rank 1 (class 23101) is in-flight (10 unprobed keys +
+unconsumed q042); ranks 2-13 (16757, 20421, 16371, 30345, 12264, 5473,
+2634, 8785, 1518, 8106, 16930, 5830) all hold unconsumed closure WIN cost
+children (routes permanently refuted); rank 14 class 10661 (mask
+`[1152921505697431552, 0]`, unknown 52 of 53 cost children, closure groups
+(24,30)+(24,90), first-seen (24,30)) is the first candidate without
+refutation evidence.
+
+- Maker: `scripts/make_batch17_keys.py` (fail-closed scaffold maker, all
+  gates inlined) run 3x byte-identical. Keys from the published Part AS
+  reaudit probe-worklist (sha-pinned `1c96df05...`), serving_class ==
+  10661, exactly 52 rows, probe_order 600..651 contiguous; key ids
+  u001..u052 (batch 1-16 letters b/c/d/e/f/g/h/j/m/z/n/p/q/r/t all
+  distinct); batch-keys.json sha256 `db762175...` (schema
+  n11-centralreply-closure-class10661-batch17-input-v1); 52 one-line
+  input CSVs byte-identical across runs.
+- Gates: canonical BASE `be9cb24e...` (6,120 rows) 0/52 hits; quarantine
+  0/52; canonical-safe 52/52; mask_to_index == s5_index 52/52; every
+  s5_index a graph cost child of 10661; the unconsumed WIN child s5
+  745184 NOT a key; overlap with batch 1..16 (813 keys, 16 sha-pinned
+  batch-keys files fetched from repo raw) == 0; Board(11) legal recount
+  == worklist legal 52/52 (range 72..97); published closure rank-14 row
+  content match + re-derived group-best view (809 candidate rows) with
+  class 10661 at rank 14 and groups {(24,30),(24,90)}.
+- Honesty note: one sha transcription slip in the first maker draft
+  (worklist pin 0a8329 vs 0e8329) was caught immediately by the
+  fail-closed pin gate and fixed; the published Part AS status.log
+  was verified to carry the correct full sha (460e8329). No other
+  incidents.
+- Publication: note Part AU declaration first (blob `14794159...`),
+  then the scaffold as a single commit `62b60a07` (observed HEAD
+  `adc4358a`; 57 files: README + status.log + MANIFEST + maker +
+  batch-keys + 52 input CSVs). **Fetch-back 56/56 byte-identical at
+  `62b60a07`** (commit-pinned raw curl + sha256 against every MANIFEST
+  line); the note fetch-back is byte-identical too. Kit mirror
+  `_19root-refresh-kit/batch10661/` (57 files, sha-verified).
+- Execution protocol (pre-registered, for a later session): pinned
+  replica jsreplay.js `84585617...` byte-copy, 2-pass fresh cold,
+  budget 15M, 1 solver/1 row/1 process, publish=ALL, workers max 2,
+  val-gate 4 anchors reproduced first; stop rules mismatch ->
+  HARD-STOP rc=42, WIN -> HALT rc=45 (honest label, NOT adopted,
+  verdict NOT consumed), exhaustion -> honest UNKNOWN; consumption only
+  of 2-pass LOSS rows via the fail-closed merger in a separately
+  declared adoption Part.
+- Verdict guards (unchanged): zero verdicts consumed by this Part; the
+  canonical cache stays 6,120 rows `be9cb24e...`; the 15 unconsumed
+  closure WIN rows stay scrutiny-owner-blocked (C++ second-implementation
+  gate pin `9193f5b6...`).
+- Honesty record: the standard 11x11 empty board, the 19 central-reply
+  roots, class 10661 (unknown 52 cost children) and all 52 keys remain
+  UNKNOWN throughout; probe orders, legal counts and node numbers are
+  not verdicts. Open items (re-read latest main first): (a) execute
+  batch-17 under the declared protocol, (b) the scrutiny owner's q042
+  adoption decision, (c) class 23101's remaining 10 unprobed keys.
