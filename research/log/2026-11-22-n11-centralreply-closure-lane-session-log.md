@@ -1733,3 +1733,67 @@ from the latest main before selecting any next batch (batch-14 and
 batch-17 candidates compete). The standard 11x11 empty board, the 19
 central-reply roots, class 10687 and every other class remain UNKNOWN;
 nodes are bookkeeping, never verdicts.
+
+## Continuation 29 (2026-11-22, this host): Part AP concluded and recorded - batch-16 52 LOSS rows canonically adopted, reaudit published, class 10687 closure-qualified under the canonical classification; verdicts unchanged
+
+This continuation closed the record-keeping remainder of Part AP (declared
+`815391db`, observed HEAD-before-push `a71bef64`). The canonical adoption
+and reaudit products themselves were published in the previous leg
+(commit `cd00857d` single-file canonical reaudit cache + commit
+`20deb45d` reaudit experiment 13 files, both fetch-back
+byte-identical at that commit); no computation was re-run here.
+
+- Note Part AP status update published: note blob sha1 `34d4c759...` ->
+  `7bb7a66d8f6d2a7bc9a1a88f6c57e845f7fe66a0`, insert-only (inserted
+  between the Part AP declaration section end and the Part AQ section
+  start, needle count machine-verified == 1), note 153,203 -> 157,722
+  chars, fetch-back byte-identical against the pushed content
+  (commit `be6f50df`). Observed HEAD-before-push `9e4ffca9`: main had
+  moved past `20deb45d` via other-lane commits during the record-keeping
+  gap, but the note itself was untouched; the note blob sha1 lock
+  reconfirmed `34d4c759...` and the insertion applied cleanly under the
+  create_or_update sha guard. Execution-environment instability
+  (temporary unavailability of the local bash/file tools) forced the
+  whole fetch -> needle-check -> push -> fetch-back chain to run in the
+  connector sandbox instead of the local workspace; verification used
+  in-memory string equality against the freshly fetched resource text
+  (byte-equivalent for this ASCII+JA payload, length 157,722 == pushed
+  length).
+- Recorded Part AP machine results (from the execution leg, all
+  fetch-back byte-verified there): canonical reaudit cache 6,079 rows
+  (WIN 158 / LOSS 5,921, 249,622 bytes), sha256
+  `342e86838e0c2bef915798059cb397f7c91e59c65426bf74db19530ecdd7979e`,
+  byte-identical to the Part AO scenario cache (cmp); increments maker
+  re-derivation byte-equal to the published increment `95345a5b...` /
+  manifest `28c90ba7...`; merger 2x byte-identical, conflicts 0,
+  duplicates 0, merge-audit run1 == run2; adoption refresh 2x serial
+  byte-identical with the 3 CSV outputs byte-equal to the Part AO
+  outputs and refresh-summary `b278f822...` differing from the Part AO
+  summary `7fd15927...` ONLY in `pins.merged_cache.path`; adoption delta
+  extractor 3x byte-identical, all gates PASS, output `70c1b31e...`
+  differing from the Part AO delta JSON `dd6a01ef...` only in the three
+  caption columns + pins.scenario_summary_sha256 (delta values
+  byte-identical).
+- Canonical consequences recorded: **class 10687 closure-qualified under
+  the canonical classification** (Board fail-closed free verification
+  free_candidates 36 / board_verified_free 36 / rejected {}; free_now
+  35 -> 36; unknown 34,500; closure-classes table 811 -> 810 rows with
+  class 10687 absent; per-root change only (central, first=16): free
+  14 -> 16, uncovered 105 -> 103, free+uncovered==119 held; root 16
+  secures the 2 groups {(16,56),(16,64)}; root 27 baseline 119/119;
+  update8 resolved 75 -> 76 (s5 376421), remaining 31,783, win-hit
+  groups 0; joint greedy re-selection 38,522, scheduling only). Rank 14
+  passes to class 10661 (`[1152921505697431552, 0]`, unknown 52) = the
+  machine-identified batch-17 candidate.
+- Consumed: exactly the 52 batch-16 LOSS rows (canonical classification).
+  No WIN row was adopted: the 14 unconsumed closure WINs
+  (b018/d002/e002/f017/g018/j033/h045/z003/n005/n006/p002/p003/r001/r002)
+  remain scrutiny-owner-blocked (C++ second-implementation gate pin
+  `9193f5b6...`).
+- Honesty record: the standard 11x11 empty board, the 19 central-reply
+  roots and every class verdict remain UNKNOWN throughout; free_now /
+  closure qualification is canonical classification status, never a
+  win/loss claim; nodes/budgets/gates are never verdicts. Open items:
+  batch-17 declaration (class 10661) after a fresh main re-read,
+  Part AQ (batch-14 takeover, in flight by its owner) untouched,
+  knowledge-base entry update for Part AP completion (local).
