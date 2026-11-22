@@ -104,3 +104,19 @@ by this batch (58 shared children remain outside this lane's claim); any
 class-level statement will only be made machine-checked against the full
 108-child set. Nodes, budgets, expansions, proxy values and solved counts are
 never verdicts.
+
+
+## Post-push reexecution check (commit `1ccbe303`)
+
+- All five files published by the witness commit `1ccbe303` re-downloaded at the
+  fixed commit and byte-identical (sha256) to the local staged originals:
+  scripts/analyze_win_finding_k04.py `fa7943a8...`,
+  output/win-finding-ifadopted-k04.json `06041fcd...`,
+  output/val-gate-summary-resume2-20261122.json `ebc40f53...`, the probe README
+  (diff vs the pre-push base = title update + k04 checkpoint section insertion
+  only), and this session log `167e5f6e...`.
+- Re-execution on the pushed state: the published script, the published selector
+  (re-downloaded, byte-identical, sha256 `d5e9b059...`), and all 15 published
+  batch raw rows re-downloaded at `1ccbe303`; `analyze_win_finding_k04.py` run
+  twice: 150/150 fail-closed gates PASS both times, output byte-identical to the
+  published JSON on both runs (`06041fcd...`).

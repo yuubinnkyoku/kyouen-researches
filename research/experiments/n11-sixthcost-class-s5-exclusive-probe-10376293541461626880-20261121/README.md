@@ -201,6 +201,14 @@ time (session-scoped):
   is mixed, not LOSS-only, consistent with WIN rows appearing in the low-proxy band
   (k02, k03, k04 all within the 5,041,585 band).
 
+- Post-push reexecution check (k04 witness commit `1ccbe303`): all five published
+  files re-downloaded at the fixed commit are byte-identical to the local staged
+  originals (sha256-verified); `analyze_win_finding_k04.py` re-run TWICE on the
+  pushed state (the script, the re-downloaded published selector `d5e9b059...`, and
+  all 15 published batch raw rows): all 150 fail-closed gates PASS both times and
+  the output is byte-identical to the published `output/win-finding-ifadopted-k04.json`
+  (sha256 `06041fcd...`) on both runs.
+
 Inputs and consumed pins (sha-verified, not duplicated here):
 
 - base cache `merged-exact-s5-after-js-probe-13.cache` (sha256 `60e0dc34...`) and the
