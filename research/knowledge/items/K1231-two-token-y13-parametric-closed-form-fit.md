@@ -1,6 +1,6 @@
 ---
 id: K1231
-title: 2トークン残余ゲーム y=13族のパラメトリック閉形式候補 cand13 の fitting と box 外 spot 検証（全z>=0・全x>=13・全R>=0 は未証明
+title: 2トークン残余ゲーム y=13族のパラメトリック閉形式候補 cand13 の fitting と box 外 spot 検証（全z>=0・全x>=13・全R>=0 は未証明）
 kind: proposition
 status: observed
 topics: [grundy, residual-games]
@@ -24,16 +24,16 @@ artifacts:
   note: 閉形式の正本cand13（in_T13値2表・in_P13値1表・Y=13）とprobe全点照合（72,664点・mismatch 0・overlap 0・SHA-256 cb903c56...）。正本検証器は本ファイルを逐語転写する
 - path: research/experiments/vertical-fiber-two-token-y13-parametric-allz-fit-20261122/probe_y13.py
   role: verifier
-  note: 生二重再帰probe（z=0..30・x=13..z+29・R<=x+z+26・992行・72,664点・紘5.1秒・probe_rows.txtは未出版で決定論的再生・SHA-256 c98f0032...）
+  note: 生二重再帰probe（z=0..30・x=13..z+29・R<=x+z+26・992行・72,664点・約5.1秒・probe_rows.txtは未出版で決定論的再生・SHA-256 c98f0032...）
 - path: research/experiments/vertical-fiber-two-token-y13-parametric-allz-fit-20261122/spot_y13.py
   role: verifier
-  note: box外spot 31,750点bad 0＋merge回帰17,277比較不一致0＋tail raw回帰84点0（終22.4秒・SHA-256 3846f746...）
+  note: box外spot 31,750点bad 0＋merge回帰17,277比較不一致0＋tail raw回帰84点0（約22.4秒・SHA-256 3846f746...）
 - path: research/experiments/vertical-fiber-two-token-y13-parametric-allz-fit-20261122/output/audit.json
   role: data
   note: probe・spot・merge・tailの監査数値とSHA-256・再生コマンド
 - path: research/log/2026-11-22-two-token-y13-parametric-fit.md
   role: log
-  note: fit段階の宣言確認・y=11族表からの外挿初稿一発一致の経繵・出版記録（初出版後にcommit-pinned fetch-backで検出した転写スリップ5箇所の修正コミット76a4f28を含む）
+  note: fit段階の宣言確認・y=11族表からの外挿初稿一発一致の経緯・出版記録（初出版後にcommit-pinned fetch-backで検出した転写スリップ5箇所の修正コミット76a4f28を含む）
 - path: research/log/2026-11-22-y13-two-token-skeleton-single-owner-note.md
   role: log
   note: 単一オーナー宣言ノート（宣言2026-11-22T17:01:05Z・commit d3404db8・fitから全称証明段階まで保持）
