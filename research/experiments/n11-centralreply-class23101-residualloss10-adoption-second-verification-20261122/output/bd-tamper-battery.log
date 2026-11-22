@@ -1,0 +1,45 @@
+ABORT q043: pass mismatch p2 {'stones': 5, 'legal': 84, 'is_or': 0, 'budget': 15000000, 'result': 2, 'nodes': 2573254, 'wall_s': 12, 'lo': 1152921505747697664, 'hi': 66560} vs p1 {'stones': 5, 'legal': 84, 'is_or': 0, 'budget': 15000000, 'result': 2, 'nodes': 2573255, 'wall_s': 12, 'lo': 1152921505747697664, 'hi': 66560}
+T1_exit=1
+GATE FAILED: WIN/LOSS conflict at 1152921505747697664:66560: verdict 2 (input #2 line 24) vs verdict 1 (input #2 line 30)
+T2_exit=1 out_exists=no
+MERGED unique=6182 dup_elided=0 WIN=159 LOSS=6023 -> /home/user/work/kr2/vt-run/t3-out.cache
+T3a_exit=0 out_exists=yes
+855c8aa604d05a8dc66df28bb3928aca99ebbce7cc5c5c8a2cd41fa1c5a61121  vt-run/t3-out.cache
+T3a merged verdict_counts: {'WIN(1)': 159, 'LOSS(2)': 6023}
+Traceback (most recent call last):
+  File "/home/user/work/kr2/vt-tamper/t3b/research/experiments/n11-centralreply-class23101-residualloss10-adoption-reaudit-20261122/reaudit/scripts/refresh_adoption_23101resid.py", line 543, in <module>
+    main()
+  File "/home/user/work/kr2/vt-tamper/t3b/research/experiments/n11-centralreply-class23101-residualloss10-adoption-reaudit-20261122/reaudit/scripts/refresh_adoption_23101resid.py", line 75, in main
+    raise ValueError("merged cache sha256 drift")
+ValueError: merged cache sha256 drift
+T3b_exit=1
+Traceback (most recent call last):
+  File "/home/user/work/kr2/vt-tamper/t5/research/experiments/n11-centralreply-class23101-residualloss10-adoption-reaudit-20261122/reaudit/scripts/refresh_adoption_23101resid.py", line 543, in <module>
+    main()
+  File "/home/user/work/kr2/vt-tamper/t5/research/experiments/n11-centralreply-class23101-residualloss10-adoption-reaudit-20261122/reaudit/scripts/refresh_adoption_23101resid.py", line 75, in main
+    raise ValueError("merged cache sha256 drift")
+ValueError: merged cache sha256 drift
+T5_exit=1
+Traceback (most recent call last):
+  File "/home/user/work/kr2/vt-tamper/t6/research/experiments/n11-centralreply-class23101-residualloss10-adoption-reaudit-20261122/reaudit/scripts/refresh_adoption_23101resid.py", line 543, in <module>
+    main()
+  File "/home/user/work/kr2/vt-tamper/t6/research/experiments/n11-centralreply-class23101-residualloss10-adoption-reaudit-20261122/reaudit/scripts/refresh_adoption_23101resid.py", line 79, in main
+    raise ValueError("evidence policy sha256 drift")
+ValueError: evidence policy sha256 drift
+T6_exit=1
+Traceback (most recent call last):
+  File "/home/user/work/kr2/vt-tamper/t4/research/experiments/n11-centralreply-class23101-residualloss10-adoption-reaudit-20261122/scripts/compare_deltas_batch14residual_adoption.py", line 990, in <module>
+    main()
+  File "/home/user/work/kr2/vt-tamper/t4/research/experiments/n11-centralreply-class23101-residualloss10-adoption-reaudit-20261122/scripts/compare_deltas_batch14residual_adoption.py", line 212, in main
+    got = sha(p)
+          ^^^^^^
+  File "/home/user/work/kr2/vt-tamper/t4/research/experiments/n11-centralreply-class23101-residualloss10-adoption-reaudit-20261122/scripts/compare_deltas_batch14residual_adoption.py", line 175, in sha
+    with Path(path).open("rb") as stream:
+         ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/user/work/kr2/vt-tamper/t4/research/experiments/n11-centralreply-closure-class23101-batch14-residual-20261122/input/batch-keys.json'
+T4_exit=1
+GATE FAILED: manifest row_counts not 10 LOSS / 0 adopted WIN / 0 exhausted of 10 resolved: {'resolved_rows': 10, 'wins': 0, 'losses': 9, 'exhausted_excluded': 0, 'probed_total': 10, 'probed_resolved': 10}
+T4_exit=1
