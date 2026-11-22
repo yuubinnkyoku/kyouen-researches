@@ -52,3 +52,29 @@ independent merge + refresh re-audit.
 
 see `output/status.log`. The standard 11x11 empty board, the 19 central-reply
 roots and class 5473 remain UNKNOWN throughout. Nodes are not verdicts.
+
+## Status: WIN-HALT at g018 (2026-11-22T04:51:17Z)
+
+Pre-registered WIN-HALT fired on key g018 (s5_index 184684, key
+`[1734519175235239936, 0]`, legal 78): 2-pass node-exact
+**result 1 (WIN), 5,936,863 nodes** at budget 15,000,000. Probed total:
+18/51 (all 2-pass node-exact; 17 LOSS + g018 WIN), cumulative
+68,086,683 nodes across the 18 first-pass rows:
+
+- g001-g017 LOSS (nodes in status.log and the published raws)
+- g018 **WIN 5,936,863 nodes (HALT)**
+
+Consequences (honest): with g018 a WIN child, the all-children-LOSS closure
+route for class 5473 is refuted. g019-g051 remain unprobed (33 keys, no 15M
+same-condition re-search consumed). g018's WIN is NOT adopted (verdict
+unconsumed, scrutiny owner pending), exactly as b018, d002, e002, f017.
+
+Empirical update: 5 of 6 closure batches have now WIN-halted (16757: b018,
+20421: d002, 16371: e002, 12264: f017, 5473: g018); only 23963 closed 48/48
+LOSS. Class 5473 was the first probe candidate beyond the WIN-dense
+rank 1-5 quartet and it also halted at a cheap key (18th in probe order);
+the batch-selection observation extends to rank 6 unchanged. The ranking
+stays a scheduling quantity, never a verdict.
+
+The standard 11x11 empty board, the 19 central-reply roots, class 5473 and
+all remaining S5 keys remain UNKNOWN. Nodes are not verdicts.
