@@ -16,7 +16,7 @@
   "cand13.py in this directory is the authoritative closed-form table; the next-stage universal verifier must transcribe it verbatim",
   "y=13 is an odd-y family (same type as y=9/y=11): the value-1 infinite band and tail live on x even rows",
   "the first-draft extrapolation from the published y=11 family laws (cand11, Y=11->13 translation) matched all 72,664 probe points with ZERO corrections (y=12 needed a 240-point correction, y=11 a one-shot match like y=13)",
-  "unified pin lattice law: pin offset o_pin=(d+3y)/2 lies in [y+1,2y]=[14,26] with o_pin == (z+1) mod 2; it reproduces the published y=10/y=11/y/12 pin row sets verbatim and gives y=13 z-odd 7 rows d={-11,-7,-3,1,5,9,13} (first 7-row z-odd lattice in an odd-y family) / z-even 6 rows d={-9,-5,-1,3,7,11}",
+  "unified pin lattice law: pin offset o_pin=(d+3y)/2 lies in [y+1,2y]=[14,26] with o_pin == (z+1) mod 2; it reproduces the published y=10/y=11/y=12 pin row sets verbatim and gives y=13 z-odd 7 rows d={-11,-7,-3,1,5,9,13} (first 7-row z-odd lattice in an odd-y family) / z-even 6 rows d={-9,-5,-1,3,7,11}",
   "pin slot = th-1 holds on all 7 z-odd pin rows (3rd consecutive family y=11/12/13; this answers the cross-family question named in K1152); z-even pins sit at 2k+1 with k the base-row rank floor((d+3y+1)/4) (same as y=11/y=12 z-even pins)",
   "z-odd rows use a single base-rank law k(d)=floor((d+40)/4)=floor((d+3y+1)/4) for both base and I rows (y=11 pattern); z-even I rows keep k(d)=floor((d+38)/4)=floor((d+3y-1)/4); no saturation cap is needed (k reaches at most Y=13 exactly at z-odd d=12 / z-even d=13)",
   "even-z diagonal d=-13 stays value-1-empty beyond the odd-offset value-2 band [1,13] (6th consecutive family y=8..13, fit level)",
@@ -65,12 +65,30 @@
   "mismatches": 0,
   "points": 84,
   "rows_zx": [
-   [15, 29],
-   [20, 35],
-   [31, 46],
-   [26, 41],
-   [33, 48],
-   [40, 54]
+   [
+    15,
+    29
+   ],
+   [
+    20,
+    35
+   ],
+   [
+    31,
+    46
+   ],
+   [
+    26,
+    41
+   ],
+   [
+    33,
+    48
+   ],
+   [
+    40,
+    54
+   ]
   ]
  }
 }
