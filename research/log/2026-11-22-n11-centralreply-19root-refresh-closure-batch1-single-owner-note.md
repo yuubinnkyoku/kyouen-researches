@@ -4050,3 +4050,104 @@ BASE 6,120ではなく**Part Y時代の6,027行**を用いた10 WIN版で、し�
 - 本amendment observed HEAD-before-push: 実行時の最新mainをコミット
   メッセージに記録する。push直前にnote blob sha1ロックを再照合し、
   競合時は再fetchして本節を追記し直す。
+
+### Part BB status update (2026-11-22, execution host = 本レーン continuing session)
+
+宣言 (note amendment commit `dafe9651`, observed HEAD-before-push
+`53e7fae9`) どおり、宣言後に本hostが17行全同時採用のjoint if-adopted
+投影を計算・出版まで完了した (verdict不消費)。入力は5つのpublished source
+increment (AJ wins10 `fe2c6f68` / batch13 `bb238f67` / batch15 `05c10e1f`
+/ Part AT q042 `b4958328` / Part BA v001+v002 `4f8fc29b`、各manifestも
+pin `74fb877d`/`43143fd5`/`d6ed7b93`/`894e9420`/`13736030`) を
+upstream正道からsha検証し、commit `0664482f` pinned rawで計8ファイルの
+byte再検証も行った (誤配信なし)。full shaは実験dirの
+MANIFEST-sha256.txt (16行・`8c361955…`) がpinする。
+
+- maker `make_increment_17win_joint.py` sha256 `4585c416…` (3回実行
+  byte一致): 17行joint increment sha256 `04003820…` + joint manifest
+  `509cc941…` (schema `joint17win-ifadopted-increment-manifest-v1`,
+  rows 17/17 WIN/0 LOSS、17キー一意・BASE不在 hits 0 (6,120行)・
+  quarantine不在・canonical-safe・source manifestとのkey/s5/nodes機械
+  交差・`win_s5_in_update8_baseline_requirement = 12`のupdate8 baseline
+  31,859との機械交差) を導出。
+- merger (byte-copy pin `90711961…`, selftest PASS) 2回実行byte一致:
+  **joint if-adopted cache 6,137行** (WIN 175 / LOSS 5,962, conflict 0)
+  sha256 `f8c2fd97…` (252,255 bytes・non-canonical投影)。merge-audit
+  run1/run2 byte一致 sha256 `ae19b239…`。merge後にBASE canonical
+  6,120行 `be9cb24e…` byte不変を再検証。
+- refresh adapt版 `refresh_17win_ifadopted.py` (BA版 `d3fd8498…`から
+  docstring文言 + projection cache path + cache sha期待値cache自体から
+  の機械抽出の3-hunk adapt) sha256 `0365bf26…` 3回直列実行・4出力とも
+  run間byte一致: summary `5cee4086…` / closure-classes `0c3c31f3…` /
+  per-root-coverage `5ead108d…` / probe-worklist `4ca9e21b…`
+  (3.7MB・不出版・sha記録のみ)。
+- extractor `compare_deltas_17win_ifadopted.py` (BA版 `c1c39b50…`の
+  17-WIN拡張・本レーン執筆) sha256 `1163b7c3…`: joint incrementを
+  5 source incrementからbyte再構築してpublished行とbyte一致を保証、
+  delta json (sha256 `115677e6…`, 39,648 bytes, schema
+  `n11-joint17win-ifadopted-decomp-deltas-v1`) を3回実行byte一致・
+  全gate PASS。INCR_SHA末尾pinの当初誤記 (`…d495485`) は作成中に
+  fail-closed gateが捕捉し`…d497485cbe87`に修正した (検証済み3回は
+  修正後)。fail-closed改ざんテスト7種 (joint increment nodes /
+  if-adopted cache nodes / scenario summary / extractor baseline定数
+  34500→34499 / extractor source-class pin 16930→16931 / upstream
+  batch-13 increment / scenario closure CSV) すべて該当gateが捕捉・
+  即復元・復元byte一致。
+- 実測 (投影・schedule quantities): **flips = 42クラス**
+  `[1518, 2634, 4139, 4843, 4864, 4889, 4892, 4903, 5007, 5011, 5255,
+  5282, 5307, 5471, 5473, 5501, 5513, 5611, 5613, 5626, 5632, 5748,
+  6030, 6073, 6147, 6166, 8106, 8785, 12264, 12327, 14776, 15640,
+  16131, 16371, 16757, 16930, 20421, 23092, 23101, 23115, 23938,
+  30345]` (17 WIN s5のgraph保持クラス**和集合**のうちBASE-unknownの
+  もの・per-s5 holder台帳+joint union機械計算・hardcodeなし)。遷移
+  台帳: unknown→excluded_now 42 / unknown→unknown 34,458 /
+  excluded→excluded 390 / excluded_now→excluded_now 23 /
+  free_now→free_now 36・回帰0 (gate)。excluded_now 23→**65**・unknown
+  34,500→**34,458**・free_now **36不変**・excluded 390不変。
+  **class 5830 (batch-15) は機械検証済みの例外**: BASEで既に別WIN子
+  `[126017, 131631, 162106, 197665, 206386]` によりexcluded_now済み
+  のためr001/r002採用はここに新規flipを作らない (13 source-class
+  ledgerのうち唯一の非flip)。共有費用効果はclass 2634側 (r001/r002と
+  の共有費用子 103558/103560/103561込みで51→48)。13 source classの
+  BASE-unknown境界の和は17 WIN子**全て**を被覆 (gate)・13中12が
+  flips内。class 16131 53→51 (BASE-unknown==batch-18 53キーの強い一致
+  gate維持)。update8: resolved 79→**91** (newly 12 index
+  `[103558, 103560, 103561, 153671, 184684, 188395, 197253, 198530,
+  207534, 219608, 415095, 528497]` == baseline requirement ∩ 17 WIN
+  s5 == manifest `in_baseline_req` 12・算術一致)・win_hit_groups
+  []→**34** (34 groupすべてflip集合内のclassがserve・gate)・
+  groups_free_now 127不変・remaining_now 31,780→**31,389** (−391:
+  34 win-hit groupがfrozen per-group unknown和集合から除外)・lost
+  resolutions [] (gate)。joint greedy 36,726→**36,727** (+1)・probe
+  worklist 64,941→**64,917** (−24)。per-root free/uncovered変更行0
+  (root 27 baseline 119/119不変)・新規free class/third空 (gate)。
+  closure候補表churn: 退出 `[5746]`・新規 `[5748]`・class 16131 rank
+  15→**14** (unknown_now 51)。
+- 出版: 実験dir
+  `research/experiments/n11-centralreply-joint-17win-ifadopted-20261122/`
+  を3コミットでmainに反映: A `28acbbe9` (if-adopted cache 6,137行・
+  252,255 bytes) / B `d86e33da` (maker `4585c416` + merger `90711961` +
+  extractor `1163b7c3` + refresh `0365bf26` + increment `04003820` +
+  manifest `509cc941` + merge-audits run1/run2 `ae19b239`) / C
+  `78b4b8a1` (README `aed9994c` + status.log `871b3869` + reaudit
+  summary `5cee4086` / closure-classes `0c3c31f3` / per-root-coverage
+  `5ead108d` 3出力 + delta json `115677e6` + MANIFEST-sha256 `8c361955`)
+  = publication complete。**fetch-back 16/16 sha一致** (各publication
+  commit固定rawでsha256照合)。
+- 意味 (route statement・閉鎖主張なし): joint if-adopted投影は、
+  scrutiny ownerが17個のunconsumed closure WINを**全て同時に**採用した
+  場合の分類台帳の変化を機械証明したもの。42クラスの全LOSS閉包ルートは
+  検証済みWIN子によって永久に反駁され、被覆は不変、update8は12個の
+  pinned解決を得る。これで17個すべてのunconsumed closure WINが単独・
+  2行・10行・17行両極のif-adopted分解を持った (機械可測のギャップは
+  消滅)。本Partは採用を推奨も却下もしない・判断は一切代行しない
+  (scrutiny owner C++第二実装 gate pin `9193f5b6…`のまま)。
+- verdict不消費: canonical cache 6,120行 `be9cb24e…` はbyte不変
+  (merge後再検証)。if-adopted cache 6,137行はrepoのcanonical chain
+  ではない。17 WIN行は全てcanonical上も未来の採用判断上もunconsumed
+  のまま。AY宣言の残51キー (v003..v053・fresh)・Part AV (batch-17
+  adoption・in flight)・batch-19 (class 16513) の成果物には読み書き
+  とも触れていない。
+- 標準11×11空盤・19 central-reply roots・17 WINの全保有クラス (残る
+  unknown子すべて)・全classは本Partのどの時点でもUNKNOWNのまま。
+  nodes数・worklist数・greedy数を勝敗として読まない。
