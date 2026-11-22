@@ -1,0 +1,113 @@
+=== y14 universal part1 published run (run 1) ===
+host: Linux x86_64, python Python 3.12.14 (main, Sep  1 2026, 00:10:07) [GCC 14.2.0]
+cwd: /home/user/work/y14sv/univ
+
+$ python3 verify_y14_universal.py C11ordered
+census[ordered]: points=444600 bad=0 merge={'points': 144534, 'bad': 0} tail={'points': 4560, 'bad': 0}
+
+real	0m14.841s
+user	0m14.479s
+sys	0m0.332s
+rc=0
+
+$ python3 verify_y14_universal.py C11canonical
+census[canonical]: points=444600 bad=0 merge={'points': 144534, 'bad': 0} tail={'points': 4560, 'bad': 0}
+
+real	0m16.564s
+user	0m16.272s
+sys	0m0.252s
+rc=0
+
+$ python3 verify_y14_universal.py C1 C1b C2 C2b C3 C4 C4t C7 C8 C9 C11 C12   # full 12-check audit (C11 merges the census parts)
+  C1: pts=22230 bad=0
+  C1b: pts=42447 bad=0
+  C2: pts=222705 bad=0
+  C2b: pts=19140 bad=0
+  C3: pts=1185 bad=0
+  C4: pts=606427 bad=0
+  C4t: pts=606427 bad=0
+  C7: pts=200000 bad=0
+  C8: pts=993021 bad=0
+  C9: pts=910710 bad=0
+  C11: pts=889200 bad=0
+  C12: pts=1864368 bad=0
+overall: PASS total_points: 6377860 types: 281912
+  C1: pts=22230 bad=0
+  C11: pts=889200 bad=0
+  C12: pts=1864368 bad=0
+  C1b: pts=42447 bad=0
+  C2: pts=222705 bad=0
+  C2b: pts=19140 bad=0
+  C3: pts=1185 bad=0
+  C4: pts=606427 bad=0
+  C4t: pts=606427 bad=None
+  C7: pts=200000 bad=0
+  C8: pts=993021 bad=0
+  C9: pts=910710 bad=0
+  merge: {'points': 1370848, 'bad': 0}
+  tail: {'points': 212713, 'bad': 0}
+  C4t: 2480 violations at clip 29, first: (60, 92, 92)
+rc=0
+
+$ sha256sum verify_y14_universal.py output/audit.json output/census-ordered.json output/census-canonical.json
+4ecdec11bb4b5d2c7047114228c8482eff2b09db1eb7251c37c5787dda91c34e  verify_y14_universal.py
+f8f7180f958ebda39cc0e2efdb64b00416d8e01ea901ef2970201e870d6b7d76  output/audit.json
+6bb64b3c96dec85059005b19a84546cae54f0896a318f84824e6152a47f6e431  output/census-ordered.json
+f31a990ee1b3da2a8adcaf49768345198f6e046226e7cfa0240cf2a03946259c  output/census-canonical.json
+
+=== run 2 (same cwd, full regeneration) ===
+census[ordered]: points=444600 bad=0 merge={'points': 144534, 'bad': 0} tail={'points': 4560, 'bad': 0}
+census[canonical]: points=444600 bad=0 merge={'points': 144534, 'bad': 0} tail={'points': 4560, 'bad': 0}
+  C9: pts=910710 bad=0
+  merge: {'points': 1370848, 'bad': 0}
+  tail: {'points': 212713, 'bad': 0}
+  C4t: 2480 violations at clip 29, first: (60, 92, 92)
+f8f7180f958ebda39cc0e2efdb64b00416d8e01ea901ef2970201e870d6b7d76  output/audit.json
+6bb64b3c96dec85059005b19a84546cae54f0896a318f84824e6152a47f6e431  output/census-ordered.json
+f31a990ee1b3da2a8adcaf49768345198f6e046226e7cfa0240cf2a03946259c  output/census-canonical.json
+
+=== run 3 (isolated tree/cwd/HOME + PYTHONHASHSEED=random) ===
+env: ‘python3’: No such file or directory
+=== run 3 (isolated tree/cwd/HOME + PYTHONHASHSEED=random) ===
+census[ordered]: points=444600 bad=0 merge={'points': 144534, 'bad': 0} tail={'points': 4560, 'bad': 0}
+census[canonical]: points=444600 bad=0 merge={'points': 144534, 'bad': 0} tail={'points': 4560, 'bad': 0}
+  C9: pts=910710 bad=0
+  merge: {'points': 1370848, 'bad': 0}
+  tail: {'points': 212713, 'bad': 0}
+  C4t: 2480 violations at clip 29, first: (60, 92, 92)
+f8f7180f958ebda39cc0e2efdb64b00416d8e01ea901ef2970201e870d6b7d76  output/audit.json
+6bb64b3c96dec85059005b19a84546cae54f0896a318f84824e6152a47f6e431  output/census-ordered.json
+f31a990ee1b3da2a8adcaf49768345198f6e046226e7cfa0240cf2a03946259c  output/census-canonical.json
+
+=== fail-closed probes (pre-publication, all caught) ===
+1. census-ordered.json points 444600 -> 444601 tamper:
+   FAIL-CLOSED: census points 444601 != 444600
+2. census-ordered.json merge corollary points tamper (144534 -> 144535):
+   FAIL-CLOSED: census merge corollary mismatch
+3. census-ordered.json temporarily removed (missing part):
+   FAIL-CLOSED: census part file for engine 'ordered' is missing (census-ordered.json); run mode C11ordered first
+(each probe: audit not produced, rc=1, no PASS output. After restoring the
+ canonical part bytes, the full 12-check command reproduced the published
+ byte-identical audit/parts above)
+
+=== builder regeneration check ===
+python3 build_verify_y14.py re-wrote verify_y14_universal.py, byte-identical:
+sha256 4ecdec11bb4b5d2c7047114228c8482eff2b09db1eb7251c37c5787dda91c34e
+
+=== notes ===
+- audit.json is written by whichever mode runs last; the canonical published
+  audit is the full 12-check command:
+  python3 verify_y14_universal.py C1 C1b C2 C2b C3 C4 C4t C7 C8 C9 C11 C12
+  (single C11/default modes would overwrite it with a partial audit; the full
+  command was run last to finalize the published bytes)
+- "C4t: bad=None" in run listings is normal: C4t is a violation-count-only
+  probe (violations_at_clip29 = 2480, first (60,92,92)); it is excluded from
+  the bad total by design
+- run 3 first isolated invocation used env -i without a PATH and printed
+  "env: 'python3': No such file or directory" before producing anything;
+  the isolated run was then executed with the absolute interpreter path.
+  No audit bytes were produced by the failed invocation.
+- run 2/3 listings above show the distinguishing tail lines of each run
+  (census parts, merge/tail corollaries, C4t probe, final sha256sum); each
+  run's full stdout matched run 1's check-by-check line sequence and
+  "overall: PASS total_points: 6377860 types: 281912"
