@@ -1354,3 +1354,64 @@ scrutiny owner、C++第二実装 gate pin `9193f5b6...` 前例・不変)。
   `[1152926194711134208, 0]` (unknown 52)。
 - 本status update observed HEAD-before-push: 実行時の最新mainを
   コミットメッセージに記録。
+
+## Part AB (verifier, amendment 2026-11-22): batch 11 (class 8785) z003 if-adopted 分解 - WIN-only / LOSS-only / full の3シナリオ (verdict不消費・別宣言の履行)
+
+Part Z status update が open item として挙げた「z003 if-adopted分解 (Part V/R流)」の
+実行宣言である (Part AAの第三実装交叉検証は published済みのため、z003の
+verdict-level補強は全て揃った状態で本分解に着手する)。手法・規約は
+Part H-bis / Part J / Part R / Part V と完全同一 (machine-separated
+WIN-only vs LOSS-only vs full what-if)。**verdictは一切消費しない。**
+
+- 対象: `research/experiments/n11-centralreply-class8785-win-z003-ifadopted-20261122/`。
+  3シナリオ: PWINZ003 = z003 WIN行のみ (s5 198530, key
+  `[1225542323476103168, 1]`, result 1, 11,601,265 nodes) / PLOSS3 =
+  z001/z002/z004の3 LOSS行のみ / PFULL4 = probed全4行。batch 11は
+  4/51 probed (z005-z051未着手) のため、probed全行 = 第一wave 4行が
+  分解対象の全行である。
+- 前提確認 (宣言前に本ホストで機械実施・fail-closed): (1) Part Y pinned
+  inputs 6種をrepo正本 (commit `0a369d6c`固定raw) から取得しsha256全件一致
+  (dependency-graph `54f9c364...`・正本merged cache 6,027行 `95e868d6...`・
+  update8 plan `b658290a...`・board `954d3a10...`・policy `78655e94...`・
+  quarantine `81d23160...`)。(2) Part Y scenario script (sha256
+  `88671526...`) をbase controlとして本ホストで2回再実行、全4出力が
+  run間でbyte-identical、かつclosure-classes.csv・per-root-coverage.csv・
+  refresh-summary.jsonの3成果物がpublished Part Y正本とbyte一致、
+  probe-worklist.csvはsha256 `1807e4d2...` (65,154行、Part Y/Z記載値)
+  と一致 (cross-host byte-exact再現)。
+- 増分 (fail-closed, `make_increments_batch11.py`): published batch-11 raw
+  (宣告ホスト p1/p2 8件・takeoverホスト `.takeover.out` 8件、chunk commits
+  `12be47c7`/`40e02623`からcommit-pinned raw CDN取得・sha全件照合の上) から
+  機械生成。両host分の2-pass (budget,result,nodes) 一致assert・published
+  batch-keys.json (sha256 `8ef22069...`) とのkey/legal照合・z003は result 1・
+  他3行は result 2 を要求 (手転写ゼロ)。増分は
+  PFULL4 (4行) / PWINZ003 (1行) / PLOSS3 (3行) の3本。
+- merge: published `s5_union_merge.py` (selftest PASS) で正本6,027行
+  (`95e868d6...`) + 増分。衝突0・重複0・nodes不一致0をfail-closed gateとする。
+  シナリオcache 3本 (6,028/6,030/6,031行) は**analysis-only成果物で
+  canonicalではない**。
+- refresh: Part Y scenario script (`88671526...`) のbyte-copy
+  (差分3行: docstringのcache系列記述行・CACHE path行・CACHE sha pin行、
+  diff検証で検証)、各シナリオ2回実行、全4出力がbyte-identicalであること、
+  root {X,60,27} baseline 119/119 free thirdsが不変であることをgateとする。
+- delta: `compare_deltas_batch11.py` (published batch-8版 compare scriptの
+  batch-11適用版) がgraph + update8 receipt + scenario cacheからrefreshの
+  class-status意味論 (free候補へのBoard fail-closed検証込み) を忠実に再実行し、
+  BASE + 3シナリオの全class_status_countがpublished summaryと一致することを
+  delta報告の前にfail-closedで門を開ける。cost-child保持クラス集合の
+  graph走査による独立再導出・WIN-only flip集合の対照・加法性測定を含む。
+- 主張と消費規則: verdict不消費 (z003を含む8つのunconsumed closure WIN
+  (b018/d002/e002/f017/g018/j033/h045/z003) は引き続きscrutiny owner
+  (C++第二実装 gate pin `9193f5b6...` 前例) 待ち)・閉鎖・被覆・root主張なし。
+  **標準11x11空盤・19 central-reply roots・class 8785 (z003未採用ゆえ
+  unknown 51維持)・class 8106は本分解のどの時点でもUNKNOWNのまま。
+  nodes数を勝敗として読まない。** scenario cacheの採用・廃棄はscrutiny
+  owner の判断であり、本レーンはcanonical cacheを書き換えない。
+- transport: 各シナリオのprobe-worklist (~3.8MB, regenerable) は再出版しない
+  (sha256はREADMEに記載)。
+- 並走との不接触: batch-11由来のpublishedキーのみを扱う。進行中の他レーン
+  (eight-row (8,12)など) のファイルには一切接触しない。同一スコープの宣言が
+  mainに存在する場合は着手しない (宣言直前に最新mainを再取得・同scope対抗
+  宣言なしを確認済み)。
+- 本amendment observed HEAD-before-push: `3de9544503f672489149b577a6c6acb0404aff02`
+  (eight-row (8,12) takeover 4コミット目 (sweep shard 1/3) 直後のmain。commit messageにも記録)。
