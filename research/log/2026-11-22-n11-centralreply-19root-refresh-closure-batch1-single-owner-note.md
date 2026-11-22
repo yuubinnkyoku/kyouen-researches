@@ -4203,3 +4203,58 @@ takeoverし、declaration `340abef3` の範囲を**変更なく**そのまま実
 - 本amendment observed HEAD-before-push: `432664f7` (push直前にnote
   blob sha1 (`5022600953d25a02b4ae77da531f513c9ad4dea7`) を再照合し、
   競合時は再fetchして本節を追記し直す)。
+
+### Part AV status update (2026-11-22, takeover実行host): execution complete, published, fetch-back verified
+
+takeover amendment (上記・commit `d3ef2dc6`) どおり、本hostが単一
+オーナーとしてbatch-17 (class 10661) 52-LOSS canonical採用+reauditを
+宣言スコープ変更なく実行完了し、対象dir
+`research/experiments/n11-centralreply-class10661-loss52-adoption-reaudit-20261122/`
+をmainに3コミットで出版・fetch-back byte検証した (全16ファイル
+MANIFEST-sha256照合一致・publication commit固定rawでcmp byte一致)。
+
+- 出版コミット: A `3b1ed4d8` (observed HEAD-before-push `7eba0c4b`:
+  increment 52行 `afcdad5b…` + manifest `e1d430a4…`
+  (schema batch17-loss52-increments-manifest-v1, full==loss,
+  win_scenario_exists false, row_counts 52/0/52/0) + merged canonical
+  cache **6,172行** (WIN 158 / LOSS 6,014, conflict 0, `a5540811…`,
+  253,898 bytes, 6,120+52 machine-checked) + merge-audit run1/2/3
+  byte一致 `faf504ab…`) / B `96ee328a` (maker `04bde073…` +
+  byte-pin merger `90711961…` + extractor `92d83671…` + refresh adapt
+  `1b49cc07…`) / C `23bda9ba` (reaudit 3出力 `a0043c76…` /
+  `e60c1088…` / `4c7ec5d7…` (2回実行byte一致) + delta
+  `7d93613b…` (3回実行byte一致・全gate PASS) + README + status.log +
+  MANIFEST-sha256)。probe-worklist `667dc815…` (3.7MB) は
+  AH/AO/AP/AS先例どおり不出版・sha記録のみ。
+- 実行機証: maker 3回・merger 3回・refresh 2回・extractor 3回とも
+  byte一致。fail-closed改ざんテスト8種 (maker T1-T3: raw 2-pass
+  ノード改ざん・row-audit sha pin・status.log PASS行不整合 /
+  extractor T5-T8: increment sha・manifest row_counts・scenario
+  cache sha・batch-keys sha) 全捕捉・復元byte一致・テスト後入力
+  ミラー再検証 0 bad (batch-17 177ファイル・Part AS kit 15ファイル)。
+- canonical上の機械確定 (分類の前進・reauditの機械gate・閉鎖主張なし):
+  **class 10661が37番目のBoard検証free class** (BASE-unknown費用子
+  52個全てが採用52行で解決・scenario-unknown 0・子境界の独立整数幾何
+  再生成で全子exact LOSS)。free_now 36→**37**・unknown 34,500→
+  **34,499** (unknown→free_now 1のみ・二方向gate)。**root 24 (central)
+  free thirds 10→12 / uncovered 109→107** (新規free third 30・90)。
+  update8 resolved 79→**80** (新規 s5 272756・LOSS・gate)・
+  remaining 31,780→31,779・groups_free_now 127不変。簿記量 (勝敗ではない):
+  joint greedy 36,726→35,645 (−1,081)・probe worklist 64,941→64,888
+  (−53)・closure候補表 809→808 (class 10661退出・churnはbest-option
+  簿記)。class 23101はrank 1 unknown 11のまま (非接触・不変)。
+- verdict不消費 (WIN側不変): 消費はbatch-17 52 LOSS行のみ (fail-closed
+  merger経由)。batch-17にWIN行・枯損行は存在しない (不在gate・manifest
+  win_scenario_exists false)。**17 unconsumed closure WIN
+  (b018/d002/e002/f017/g018/j033/h045/z003/n005/n006/p002/p003/r001/
+  r002/q042 + AY v001/v002) は読み書きとも不接触・不変**。採用判断は
+  scrutiny owner C++第二実装 gate pin `9193f5b6…` のまま。
+- 並走との不接触: batch-18 (AY残51キー)・batch-19選定・y=16 fastレーン・
+  K1058レーン・Part BB 17-WIN joint if-adopted成果物には読み書きとも
+  触れていない (本3コミットは新規dir配下のみ)。
+- 標準11×11空盤・19 central-reply roots・class 10661以外の全class・
+  未知の全S5子は本Partのどの時点でもUNKNOWNのまま。nodes数・worklist数・
+  greedy数を勝敗として読まない。
+- 本status update observed HEAD-before-push: `23bda9ba` (push直前に
+  note blob sha1 (`20bf1ecce776b4a4a7deac601613b8ede22c819e`) を再照合し、
+  競合時は再fetchして本節を追記し直す)。
