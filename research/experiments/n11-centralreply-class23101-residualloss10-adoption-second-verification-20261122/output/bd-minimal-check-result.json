@@ -1,0 +1,177 @@
+{
+ "fin": [],
+ "results": {
+  "A.b17_s5_disjoint": {
+   "detail": "",
+   "ok": true
+  },
+  "A.increment_rerender": {
+   "detail": "mine=['s5verdict,1152921504892059648,1040,5,2,557594', 's5verdict,1152921505747697664,9216,5,2,1292547'] pub=['s5verdict,1152921504892059648,1040,5,2,557594', 's5verdict,1152921505747697664,9216,5,2,1292547']",
+   "ok": true
+  },
+  "A.manifest_fields": {
+   "detail": "",
+   "ok": true
+  },
+  "A.nodes_total_per_pass": {
+   "detail": "23252550",
+   "ok": true
+  },
+  "A.nowin_noexhaust": {
+   "detail": "",
+   "ok": true
+  },
+  "A.q042_excluded": {
+   "detail": "",
+   "ok": true
+  },
+  "A.quarantine_disjoint": {
+   "detail": "2 quarantined keys",
+   "ok": true
+  },
+  "A.raw_3way_all10": {
+   "detail": "10 keys",
+   "ok": true
+  },
+  "B.base_rows": {
+   "detail": "",
+   "ok": true
+  },
+  "B.base_subset": {
+   "detail": "",
+   "ok": true
+  },
+  "B.comments_carried": {
+   "detail": "1 comment lines",
+   "ok": true
+  },
+  "B.new_keys_eq_incr": {
+   "detail": "new=10",
+   "ok": true
+  },
+  "B.scen_nodes_follow_base_or_incr": {
+   "detail": "",
+   "ok": true
+  },
+  "B.scen_rows": {
+   "detail": "",
+   "ok": true
+  },
+  "B.scen_sorted_unique": {
+   "detail": "",
+   "ok": true
+  },
+  "B.verdict_counts": {
+   "detail": "W158 L6024 bW158 bL6014",
+   "ok": true
+  },
+  "C.class23101_base_unknown": {
+   "detail": "[745184, 745455, 745456, 745457, 745459, 745460, 745461, 745462, 745463, 745464, 745465]",
+   "ok": true
+  },
+  "C.class23101_base_unknown11": {
+   "detail": "[745184, 745455, 745456, 745457, 745459, 745460, 745461, 745462, 745463, 745464, 745465]",
+   "ok": true
+  },
+  "C.class23101_mask": {
+   "detail": "",
+   "ok": true
+  },
+  "C.class23101_scen_unknown_eq_leftover": {
+   "detail": "[745184]",
+   "ok": true
+  },
+  "C.closure_churn": {
+   "detail": "left={'22149'} entered={'23965'}",
+   "ok": true
+  },
+  "C.closure_rank1_is23101": {
+   "detail": "",
+   "ok": true
+  },
+  "C.closure_sets_808": {
+   "detail": "",
+   "ok": true
+  },
+  "C.closure_unknown_now_col_matches_mine": {
+   "detail": "[] (0)",
+   "ok": true
+  },
+  "C.holder_values_match": {
+   "detail": "",
+   "ok": true
+  },
+  "C.holders_match": {
+   "detail": "mine=[23101, 23104, 23116, 23117, 23118, 23119, 23120, 23121, 23122, 23123, 23124, 23125, 23126, 23127, 23129, 23130, 23131, 23132, 23777, 23957, 23958, 23959, 23960, 23961, 23962, 23964, 23965, 23966] pub=[23101, 23104, 23116, 23117, 23118, 23119, 23120, 23121, 23122, 23123, 23124, 23125, 23126, 23127, 23129, 23130, 23131, 23132, 23777, 23957, 23958, 23959, 23960, 23961, 23962, 23964, 23965, 2396",
+   "ok": true
+  },
+  "C.q042_index_nonconsumed": {
+   "detail": "",
+   "ok": true
+  },
+  "C.update8_resolved80_inv": {
+   "detail": "scen_known=80 base_known=80",
+   "ok": true
+  },
+  "C.world_counts_vs_published": {
+   "detail": "mine={'excluded': 390, 'excluded_now': 23, 'free_now': 37, 'unknown': 34499} pub={'excluded': 390, 'excluded_now': 23, 'free_now': 37, 'unknown': 34499}",
+   "ok": true
+  },
+  "E.adopted_keys_gone_from_scen_worklist": {
+   "detail": "base copies=15 scen copies=0",
+   "ok": true
+  },
+  "E.odd_removed_pairs_all_holder_served": {
+   "detail": "[('745461', '23964'), ('745455', '23960'), ('745462', '23966'), ('745460', '23777'), ('745463', '23962')]",
+   "ok": true
+  },
+  "E.worklist_churn_matches_closure_churn": {
+   "detail": "rem=[('22149', 108), ('23101', 10), ('23964', 1), ('23960', 1), ('23966', 1), ('23777', 1), ('23962', 1)] add=[('23965', 107)]",
+   "ok": true
+  },
+  "E.worklist_counts": {
+   "detail": "64888 -> 64872",
+   "ok": true
+  },
+  "E.worklist_removed_added_copies": {
+   "detail": "removed=123 added=107",
+   "ok": true
+  },
+  "F.prc_changes_only_greedy_col": {
+   "detail": "diffcols={'individual_greedy_union': 4}",
+   "ok": true
+  },
+  "F.prc_same_rowcount": {
+   "detail": "21 21",
+   "ok": true
+  },
+  "PUBSHA.closure": {
+   "detail": "",
+   "ok": true
+  },
+  "PUBSHA.delta": {
+   "detail": "",
+   "ok": true
+  },
+  "PUBSHA.increment": {
+   "detail": "",
+   "ok": true
+  },
+  "PUBSHA.manifest": {
+   "detail": "",
+   "ok": true
+  },
+  "PUBSHA.prc": {
+   "detail": "",
+   "ok": true
+  },
+  "PUBSHA.scen_cache": {
+   "detail": "",
+   "ok": true
+  },
+  "PUBSHA.summary": {
+   "detail": "",
+   "ok": true
+  }
+ }
+}
