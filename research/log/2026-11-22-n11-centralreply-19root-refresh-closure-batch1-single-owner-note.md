@@ -2751,6 +2751,78 @@ batch-14 (Part AQ, in flight) とはキー・ファイルが非交差である�
   出版はcanonical cache単独コミット→reaudit実験dirコミットの順で行う。
 
 
+### Part AP status update (2026-11-22, declaring host = this lane session)
+
+Executed and published exactly as declared (declaration commit `815391db`,
+observed HEAD-before-push `a71bef64`, note blob sha1 `34d4c759...` at the
+declaration). The canonical adoption consumed exactly the 52 batch-16 LOSS
+rows; no WIN row was adopted and no verdict was created. The standard 11x11
+empty board, the 19 central-reply roots and every class verdict remain
+UNKNOWN throughout; free_now / closure qualification is canonical
+classification status, never a win/loss claim.
+
+- Reaudit staging (published for reproducibility): the increments maker is
+  the byte-copy re-derivation of the Part AO script and reproduced the
+  published increment bytes exactly (increment sha256 `95345a5b...`,
+  manifest `28c90ba7...`); the sha-pinned fail-closed union merger
+  (`90711961...`, selftest PASS) ran twice byte-identical -> **canonical
+  reaudit cache: 6,079 rows (WIN 158 / LOSS 5,921, 249,622 bytes), sha256
+  `342e86838e0c2bef915798059cb397f7c91e59c65426bf74db19530ecdd7979e`**,
+  byte-identical (cmp) to the Part AO scenario cache; WIN/LOSS conflicts 0,
+  duplicates 0; merge-audit run1 == run2 (`b69ea953...`).
+- Publication commit `cd00857d`: the single-file canonical reaudit cache
+  under `research/experiments/n11-centralreply-class10687-loss52-adoption-reaudit-20261122/output/`
+  (fetch-back byte-identical).
+- Adoption refresh: `reaudit/scripts/refresh_adoption_10687.py` (docstring +
+  cache-path 2-hunk adaptation of the Part AO script, `fb846776...` ->
+  `ad3dc0e6...`) run twice serial (~60 s each), 4 outputs byte-identical
+  across runs; the three CSV outputs are byte-identical to the Part AO
+  outputs (`7405699e...`, `ec52a56d...`, worklist `3b28ba59...`).
+  Refresh-summary sha256
+  `b278f822627560d7c3945ee0c0aded7de415b6141a69f0f8722e670432fc48da`,
+  differing from the Part AO loss52 summary (`7fd15927...`) ONLY in
+  `pins.merged_cache.path` (single line, machine-diff-verified).
+- Adoption delta extraction: `scripts/compare_deltas_batch16_adoption.py`
+  (11-hunk adaptation of the Part AO extractor `ca2a14f7...` ->
+  `f78f7e60...`) run three times byte-identical, all gates PASS; output
+  sha256
+  `70c1b31e783b43e69397a692aea807a460c89f4827b33664a95eeceb31dc6acb`;
+  vs the Part AO delta JSON (`dd6a01ef...`) the only differences are the
+  three caption columns (schema / scenario / interpretation_guard) and
+  pins.scenario_summary_sha256 - every delta value byte-identical.
+- Publication commit `20deb45d`: the reaudit experiment directory (13
+  files: README, status.log, MANIFEST-sha256.txt, scripts 3 = maker /
+  merger / adapted extractor, reaudit/scripts/refresh_adoption_10687.py,
+  output merge-audit run1/run2 + decomp-deltas-batch16-adoption.json,
+  reaudit/output refresh-summary / closure-classes / per-root-coverage).
+  Fetch-back 13/13 byte-identical (MANIFEST cross-checked; the MANIFEST
+  itself byte-identical). probe-worklist (3.7 MB) not published (Part AH /
+  AO precedent). Latest main at publication time was `20deb45d` itself;
+  no parallel push observed.
+- Machine-measured canonical consequences (all recomputed from the
+  published pinned inputs; Board fail-closed child verification
+  re-executed): Board verification free_candidates 36 /
+  board_verified_free 36 / rejected {}; **free_now 35 -> 36, unknown
+  34,500**; the closure-classes table drops from 811 to 810 rows with class
+  10687 absent - **class 10687 is closure-qualified under the canonical
+  classification**; its 52 canonical-unknown cost children are exactly the
+  52 adopted keys. The only changed per-root coverage row is (central,
+  first=16): free 14 -> 16, uncovered 105 -> 103 (free+uncovered==119
+  held); root 16 secures the 2 groups {(16,56),(16,64)}; the root 27
+  baseline stays 119/119 free thirds. update8 resolved 75 -> 76 (s5
+  376421), remaining 31,784 -> 31,783, win_hit_groups 0 unchanged. Joint
+  greedy re-selection to 38,522 (scheduling quantity only, not a coverage
+  regression). The rank-14 row passes to **class 10661**
+  (`[1152921505697431552, 0]`, unknown 52) - the machine-identified
+  batch-17 candidate.
+- Honesty record: consumed = exactly the 52 batch-16 LOSS rows (canonical
+  classification). The 14 unconsumed closure WINs
+  (b018/d002/e002/f017/g018/j033/h045/z003/n005/n006/p002/p003/r001/r002)
+  remain scrutiny-owner-blocked (C++ second-implementation gate pin
+  `9193f5b6...`) and NO WIN row was adopted; win-hit groups stay 0.
+  Nodes/budgets/gates are never verdicts.
+
+
 ## Part AQ (takeover owner, declaration 2026-11-22): batch 14 (class 23101) completion under takeover after declaring-host silence (verdict不消費・実行前に宣言)
 
 Part AF (batch 14, class 23101, renewed rank 12) は2026-11-22T12:26:47Zにscaffold
