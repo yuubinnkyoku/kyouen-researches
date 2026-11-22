@@ -574,3 +574,38 @@ Part P (batch 2 / class 23963 消費済み48行の第三実装交叉検証) は�
 - verdict・正本cacheへの影響なし。標準11×11空盤・19 central-reply
   roots・全closure classはUNKNOWNのまま。nodes/expansionsを勝敗として
   読まない。
+
+## Part Q (prober, amendment 2026-11-22): batch 9 (class 1518, rank 8) declared - 進行中でない次位のclean candidateをbatch-7 protocolで開始
+
+Part Mのclosure rankingで、進行中のbatch 8 (Part N, class 2634, rank 7)を除く
+反駁証拠のない首位候補であるrank 8 class 1518 (mask `[1152921505076609024, 0]`、
+unknown 51、1 group first=26/third=28)をbatch 7 (Part L) と同一の予登録protocol
+で着手する。
+
+- 対象: `research/experiments/n11-centralreply-closure-class1518-batch9-20261122/`。
+  keys 51本 (j001-j051) はPart M refresh再生成worklist (65,155行、sha256
+  `ca3ee3bc7772ff38462cb60fc41ab4570cb236a880213322de230410fa550e80`、worklist
+  自体はregenerableのため未再出版) の `serving_class=1518` 行 (probe_order
+  332-382) で、batch-keys.jsonに全行published (正本cache・update8機構に対して
+  独立照合可能)。宣言前に本ホストでPart M refresh機材を再実行し、
+  closure-classes.csv・refresh-summary.json・per-root-coverage.csvの3成果物が
+  published Part M bytesとbyte一致 (fail-closed)・worklist shaがPart N記載値と
+  一致することを確認済み。
+- fail-safe (宣言前に機械照会済み): (1) canonical merged cache 5,975行
+  (`a998f4c0...`) に51/51 keys不在 (0 hits); (2) quarantine registry
+  (`81d23160...`) のactive 2件とのkey対照0 hits (両方向); (3) solverはpinned
+  replica `jsreplay.js` (`845856173d...`、batches 1-8とbyte-identical)、
+  budget 15M・2-pass fresh cold・node-exact gate。
+- val-gate: published two-target-design 4行を本ホストで再現、4/4 node-exact
+  (at2m result 0/2,000,000 ×2、15m result 2/3,651,923 と result 2/5,040,200)。
+- 主張の範囲: 本batchはcoverage・closure・rootを一切主張しない。WIN-HALT
+  (rc=45) が発火した場合はそのkeyで停止しif-adopted解析に回す (予登録
+  stop rule)。全51本LOSSでも消費はfail-closed increment merge + refresh
+  再監査まで行わない。**class 1518・19 roots・標準11×11空盤はUNKNOWN**。
+- 並走との不接触: 進行中のbatch 8 (Part N, class 2634) には一切手を触れない。
+  観測として、published batch-8 batch-keys.jsonのclass_mask下位bitに十進転記
+  drift (...182000 vs canonical ...182144) を検出したが、51 keys自体はcanonical
+  worklist行と51/51で一致しており、本batchはこれをbatch-9 READMEの
+  non-interference noteに記録するのみでbatch-8ファイルを修正しない。
+  同一スコープの宣言がmainに存在する場合は着手しない。
+- 本amendment observed HEAD-before-push: 実行時の最新mainをコミットメッセージに記録。
