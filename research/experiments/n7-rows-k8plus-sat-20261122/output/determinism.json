@@ -1,0 +1,104 @@
+{
+ "experiment": "n7-rows-k8plus-sat-20261122",
+ "machine": "Vibe sandbox upgraded env, node v22.20.0, python3 (fractions), kissat 4.0.4 official linux-amd64 (md5 3a5eba830aa6008a604fcc9bbe99a325, sha256 21da5d984e38b74f620f14c62442f834f27b9158decdb722540d97f98aac93a1)",
+ "leaders_blocked": {
+  "O1": [
+   10,
+   13,
+   14,
+   17,
+   19,
+   21,
+   45
+  ],
+  "O2": [
+   18,
+   21,
+   22,
+   26,
+   31,
+   32,
+   38
+  ],
+  "source": "K1224 published n7 k=7 catalog (16 configs, 2 D4 orbits), SAT-convention indicator-lex leaders"
+ },
+ "cnf_sha256": {
+  "base_n7k7": "1f2dbefe993553036ad1e71a65973b01b1c291b75544e0ede094aef29dc4588c",
+  "lift_k7_blockO1O2": "c98f5ded1f118c95eaa0d864c54c242ca47a6ef80e7c99f9d87cb30455677f8e",
+  "base_n7k8": "fdf365fe0e6c52364334b3d07dce9b8829f72108c1672fa09765ef89825cf70e",
+  "lift_k8_blockO1O2": "c94883312851b4feaa31d58427150bcaab53ac89f061fa0e0f1fd188bd219615",
+  "base_n7k8_sh42": "3320fa6d7c89ac26b873dcbdad75769bf6ea2749a0f0ac2c7160f1c342583f75",
+  "lift_k8_sh42": "46e86cee52e083e44c291e527ae2a1752875c1f6cef2c800ae5b37af6227c280",
+  "publish_policy": "CNF bodies NOT published (size); deterministic regeneration: node pinned/enc_sat2.mjs 7 K --out=... [--shuffle=42] then scripts/block_lift.mjs ... (meta files carry the same sha256)"
+ },
+ "runs": {
+  "calibration1_atmost7_no_blocks": {
+   "result": "SAT",
+   "model": "[10,13,14,17,19,21,45]",
+   "matches": "K1224 O1 leader",
+   "wall": "24.8s"
+  },
+  "calibration2_atmost7_block_both": {
+   "result": "UNSAT",
+   "wall": "51.8s",
+   "implies": "the only <=7-stone models of the encoding are O1 and O2 (re-derivation of the published 2-orbit census at model level)"
+  },
+  "row8_shot1_default": {
+   "result": "SAT",
+   "wall": "0.37s",
+   "witness_xy": [
+    [
+     3,
+     2
+    ],
+    [
+     5,
+     2
+    ],
+    [
+     1,
+     3
+    ],
+    [
+     5,
+     3
+    ],
+    [
+     6,
+     3
+    ],
+    [
+     0,
+     4
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     3,
+     4
+    ]
+   ]
+  },
+  "row8_shot2_shuffle42": {
+   "result": "SAT",
+   "wall": "0.39s",
+   "witness_xy_same": true
+  }
+ },
+ "census_k8": {
+  "complete": false,
+  "n_leaders": 331,
+  "budget_seconds": 230,
+  "nIter": 331,
+  "wallMs_budget_call": 230543,
+  "decision": "partial bounded enumeration (>=331 orbits); completeness NOT claimed",
+  "detcheck_prefix20_leaders_equal": true
+ },
+ "verification": {
+  "witness_pinned_verifier": "SAFE+MAXIMAL rc=0 (70 safe quadruples, 41/41 empty points blocked, explicit per-point certificates)",
+  "tamper_8_one_stone_removals": "all SAFE (0 violations) and NOT MAXIMAL (uncovered_cells >= 3 each)",
+  "census_leaders_independent_python": "331/331 SAFE+MAXIMAL, 331/331 indicator-lex-min of own orbit, 0 duplicate orbits, antichain-vs-O1/O2 gate: 0 violations"
+ }
+}
