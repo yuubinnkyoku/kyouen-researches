@@ -56,4 +56,4 @@
 - 残件 (bash 復旧後): (1) K1230 へ カタログ完全分割・7点円非存在 (n=7 有限確定値)・軌道分離不変量・8点円39個 の evidence 追記 (tools/knowledge の check/build を実行できる環境で行う)、(2) kit (_n7-hist-kit) の structure と MANIFEST を repo 正本から再生成・整合、(3) sha256sum による MANIFEST 全行再照合。いずれも本実行では bash 不全のため未実施。
 - 次回レジューム候補 (更新): λ=10 直接被覆ゲート (covered10 刻印サイクル約51.9G・シャード化)、λ=14 の16配置の補集合構造分析、Grundy値別分解の正本化、上記残件3点。
 
-本追記自体の push commit は続行コミットで記録する。
+本追記自体の push commit: `1464f97612ba924dd0c124251b885905a36abf26` (MANIFEST 第3実行5指紋追加 + README行更新 + session log 追記を同一コミットに含む)。
