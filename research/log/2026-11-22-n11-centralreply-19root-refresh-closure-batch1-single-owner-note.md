@@ -3581,3 +3581,64 @@ verdict-level再検証し、literature側の追加独立証拠とする。**verd
   (batch-14 residual / batch-17 edge rowsの第三実装交叉検証) の対抗宣言は
   mainに存在しない (直近commit列挙と本noteのgrepで確認)。push直前にnote
   blob sha1ロックを再照合し、競合時は再fetchして本節を追記し直す。
+
+## Part AY (solver-declaration + scaffold, declaration 2026-11-22): closure class 16131 exact-S5 probe batch 18 (実行前に宣言・本Partはscaffold出版まで・verdict不消費)
+
+**base独立性**を明記した上でbatch 18を宣言する。本宣言の正本baseは
+**published** canonical exact-S5 verdict cache (6,120行, sha256 `be9cb24e…`,
+Part AS adoption出力・main上の正本)。Part AV (batch-17 class 10661
+52-LOSS adoption + reaudit, 宣言 `340abef3` 19:20:42Z, 本宣言時点でmain未出版)
+の成果物には一切依存しない・読まない・書かない。機械事実: batch-17キーは
+class 10661の費用子でありclass 16131の費用子と交わらないため、
+**class 16131のunknown費用子53件はpublished base (6,120行) とPost-AV base
+(6,172行) のどちらでも同一集合として定まる** (本レーンの機械導出で両方向を照合)。
+
+- 選定: published base再導出closure候補表 (809候補) のrank 1-13 (23101,
+  16757, 20421, 16371, 30345, 12264, 5473, 2634, 8785, 1518, 8106, 16930,
+  5830) はいずれも再導出unknown費用子と15 unconsumed closure WIN子の交差が
+  非空で全LOSS閉包ルート反駁済み (route statement。class 23101の残10キー
+  q043-q052はPart AW (batch-14 residual) で列挙probe済み・adoption待ち)。
+  rank 14 (class 10661) はWIN交差をもたないが52 unknown子すべてがpublished
+  batch-17 packetでprobe済み (52/52 two-pass LOSS・adoptionは別宣言Part AV
+  が保留中・同budgetの再probeは規則上禁止・着手対象として空)。
+  **rank 15 class 16131 (mask `[1154047404513693696, 64]`・unknown_now 53子・
+  graph cost 53子すべて未確定・closure groups (12,50)+(12,70)+(48,20)+
+  (48,72)+(48,100)・機械再計算一致) が反駁証拠がなく・既probe子を持たない
+  最初の候補**。次点はrank 16 class 16513 (unknown 53)。
+- 対象: `research/experiments/n11-centralreply-closure-class16131-batch18-20261122/`。
+  **本Partは宣言+scaffold出版まで**。probe実行は本宣言後のセッション (本セッションを
+  含む) が最新mainで対抗宣言を確認のうえ着手する。
+- キー: published canonical base (6,120行・sha `be9cb24e…` 固定) + pinned graph
+  + update8 receipts による機械再導出 (graph cost子 ∩ canonical不在の53件、
+  s5_index升順にkey ids **v001..v053**、batch 1-18のid空間と無衝突、worklist転写ゼロ)。
+  本レーンはAV reaudit worklist由来キー (probe_order 600..652) との機械照合も
+  済み (key_id→(lo,hi,s5,legal,membership) 53/53同一)。
+- machine gates (`scripts/make_batch18_keys.py`・3回実行byte一致・全出力re-read
+  durability gate込み): canonical BASEに0/53 hits、quarantine 0/53、
+  canonical-safe 53/53、mask_to_index == 導出s5_index 53/53、全s5_indexが
+  class 16131のgraph cost子、**15 unconsumed closure WIN子はキー不在 (全15子を
+  published batch packetから再導出・graph mask_to_indexで照合・canonical不在も
+  gate)**、**batch 1-17 + batch-14 residual (18 packet・計875行・sha固定) と重複0**
+  (cross-packet共有位置簿認)、Board(11) legal再導出53/53 (legal 74..97・値は
+  Board再導出であってworklist転写ではない)、membership_class_countもgraph cost
+  関係から再導出53/53、再導出closure表 (809候補) のrank 1..16表・rank14完全probe
+  gate・rank 15 = 16131のrank/groups一致。
+- 実行protocol (事前登録・実行セッション遵守): pinned replica `jsreplay.js`
+  (`84585617…` byte-copy) 2-pass fresh cold・budget 15M・1 solver/1 row/1 process・
+  publish=ALL・worker最大2・実行前にval-gate 4行をhost再現。停止規則:
+  mismatch→HARD-STOP rc=42・WIN→HALT rc=45 (WINは誠実ラベルのみ・**本レーンでは
+  採用しない**・verdict不消費・scrutiny owner待ち)・枯損→honest UNKNOWN
+  (15M同条件再探索禁止)。消費規則: 2-pass LOSS行のみ、後続の別宣言adoption Partで
+  sha-pinned fail-closed merger (`90711961…`) 経由でのみ行う (canonical cacheは
+  本batch単体では不変・閉鎖・被覆・secured主張なし)。15 unconsumed closure WIN
+  (b018/d002/e002/f017/g018/j033/h045/z003/n005/n006/p002/p003/r001/r002/q042) は
+  scrutiny owner (C++第二実装 gate pin `9193f5b6…`) 待ち・不変。
+- 標準11×11空盤・19 central-reply roots・class 16131 (unknown 53子)・全53キーは
+  本Partのどの時点でもUNKNOWNのまま。nodes数・legal数を勝敗として読まない。
+- 併走との不接触: Part AV (batch-17 adoption) が出版/接管いずれになった場合も
+  本Partのキー集合・gateは不変 (base独立性)。Part AX (batch-14 residual +
+  batch-17 edge行の第三実装交差検証) ともスコープ非接触 (対象行集合が異なる)。
+  他レーン (y13/y14 two-token・K1058系) とは無接触。同一スコープの対抗宣言がmainに
+  存在する場合は本宣言を破棄して着手しない。
+- 本amendment observed HEAD-before-push: `0c9707ad3525674070d3ea7f287f2fd5f91fc826` (push直前にnote blob
+  sha1ロックを再照合し、競合時は再fetchして本節を追記し直す)。
