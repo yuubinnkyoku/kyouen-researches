@@ -602,3 +602,37 @@ literature only.
 - No verdict consumed, no claim changes: the standard 11x11 empty board, the
   19 central-reply roots and all closure classes remain UNKNOWN;
   nodes/expansions are not read as outcomes.
+
+## Session continuation 9 addendum 2 (2026-11-22 ~07:4xZ, same lane; read-only post-publication independent chain audit of the class-23963 consumption evidence)
+
+Independently audited the full published evidence chain for class 23963
+(batch 2, the first free class closed by Board verification), from freshly
+fetched published bytes only (no lane-staged file trusted):
+
+- Method: `chain_audit_23963.py` (sha256 `fef60288...`, fail-closed, stdlib
+  only; run twice, byte-identical output) over: the published batch-2 raws
+  (96 files re-fetched from main), the published batch-2 status.log (48
+  rows), the kit batch-keys.json (sha256 `3b37c923...` re-checked), the
+  published Part P `input/rows.json` and `output/audit-summary.json`, and the
+  published canonical merged cache (5,975 rows, sha256
+  `a998f4c0b13383cb50bbbdb60761182722ba45280fd585739ad5d08bc182ed1b` -
+  the full pin from the note Part M record).
+- Result: **ALL PASS - 13,521 independent machine gates.** Specifically:
+  (1) raws: 48/48 keys 2-pass node-exact LOSS at the 15M budget
+  (replica df-pn nodes 579,880-3,815,424), keys unique; (2) published
+  status.log: 48/48 (result, nodes) identical to the raws; (3) batch-keys
+  identity: 48/48 key (lo, hi) and legal match the raws; (4) Part P input
+  rows.json: 48/48 replica (result, nodes) equal the published batch-2
+  values, all expect_third LOSS; anchors k02a/l1a and negatives ng1/ng2 rows
+  present with the pinned geometry; (5) Part P audit-summary (published): 511
+  published gates all PASS on refetch, verdict agreements 48/48
+  third-impl LOSS == replica LOSS, anchor node-exact details 9,106,337/4,991,527
+  and 7,660,602/3,951,175, negatives GATE_FAIL, 0 wall-inconclusive; (6)
+  canonical cache consumption intact: all 48 batch-2 keys present **exactly
+  once**, each verdict LOSS with nodes byte-consistent with the raws, cache
+  totals WIN 158 / LOSS 5,817.
+- Read-only audit; no verdict consumed, no claim change; the script and both
+  run logs are staged in the lane kit (`batch23963-thirdimpl-reverify/chainaudit/`)
+  for reproducibility. The standard 11x11 empty board, the 19 central-reply
+  roots and all closure classes remain UNKNOWN; nodes/expansions are not read
+  as outcomes.
