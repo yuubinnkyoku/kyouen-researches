@@ -4301,3 +4301,60 @@ precedentどおりfail-closed pipelineで実行・出版する単一オーナー
 - 本amendment observed HEAD-before-push: `1867f01f` (push直前にnote blob sha1
   (`b6a5f231914ae0da8789542b5aa1ec4f01fc1adc`) を再照合し、競合時は再fetchして
   本節を追記し直す)。
+
+
+### Part BC status update (2026-11-22, 単一オーナー実行host): execution complete, published, fetch-back verified
+
+宣言amendment (上記・commit `9165ae39`) どおり、本hostが単一オーナーとして
+batch-14residual (class 23101) 残余10-LOSS canonical採用+reauditを宣言スコープ
+変更なく実行完了し、対象dir
+`research/experiments/n11-centralreply-class23101-residualloss10-adoption-reaudit-20261122/`
+をmainに3コミットで出版・fetch-back byte検証した (note宣言amendment・
+publication計17ファイルがcommit固定rawでsha256/cmp全件一致)。
+
+- 出版コミット: amendment `9165ae39` (observed HEAD-before-push `1867f01f`:
+  push直前にnote blob sha1 `b6a5f231…`を再照合) / A `168a44ae`
+  (observed HEAD `9165ae39`: increment 10行 `c3f201a6…` + manifest
+  `f7287b7b…` + merged canonical cache **6,182行** (WIN 158 / LOSS 6,024,
+  conflict 0, `0b594f7e…`, 254,396 bytes, 6,172+10 machine-checked) +
+  merge-audit run1/2/3 byte一致 `6a9a53a3…`) / B `f2405c0e` (maker
+  `6c57f2d0…` + byte-pin merger `90711961…` + extractor `48e88838…` +
+  refresh adapt `d6bb2374…`) / C `1afbc6a7` (reaudit 3出力 `5f3a09c6…` /
+  `52ec3d4b…` / `1f54065a…` + delta `62de8c16…` + README `53347371…` +
+  status.log `df9ccfab…` + MANIFEST-sha256 `2c805371…`)。probe-worklist
+  `fe71be60…` (3.75MB) はAH/AO/AP/AS/AV先例どおり不出版・sha記録のみ。
+- 実行機証 (実行回数はstatus.log `df9ccfab…`が正): maker 3回・merger 3回
+  (audits 3回込)・refresh **3回** (4出力それぞれbyte一致)・extractor 3回
+  ともbyte一致。extractorはclosure候補表を両worldでrow-exact再構築する
+  churn gate + 全class減算gate付き (AV版 `92d83671…`からのadapt)。
+  commit B/Cメッセージ中のrefresh "x2" は本節記載時の誤記 (実行3回・
+  byte一致はstatus.log・kit mirrorが正)。
+- canonical上の機械確定 (分類の前進・閉鎖主張なし・delta `62de8c16…`全gate):
+  採用はbatch-14residual 10 LOSS行 (q043..q052・full==loss: WIN不在gate・
+  枯損行不在)。**class 23101は閉鎖しない**: unconsumed q042 WIN子
+  s5 745184 (key `1152921505747697664:1032`) が唯一のscenario-unknown
+  cost子として残り、同クラスのunknown cost子は11→**1** (leftover
+  `[745184]`・gate)。free_now 37→**37不変** (unknown 34,499不変・
+  unknown→unknown 34,499・excluded_now 23不変・free_now→free_now 37の
+  二方向gate)。update8: resolved 80不変 (newly 0)・win_hit_groups 0不変。
+  27の他holder class (23104..23966・各1 LOSS子) はunknownのまま (各クラス
+  scenario-unknown −1の簿記のみ)。**probe worklist 64,888→64,872 (−16)**。
+  closure候補表808不変・churn: 退出 `[22149]`・新規 `[23965]` (best-option
+  簿記)。joint greedy 35,645→38,978 (+3,333): 6 improveパス局所探索の
+  収束先差による**非単調性**で退行ではない (improveパス無し構成では
+  49,361→49,351と正しく減少・delta json `joint_greedy_nonmonotonicity`
+  に記録済み・plan estimateのみで被覆主張ではない)。
+- verdict不消費 (WIN側不変): 消費はbatch-14residual 10 LOSS行のみ
+  (fail-closed merger経由)。**17 unconsumed closure WIN
+  (b018/d002/e002/f017/g018/j033/h045/z003/n005/n006/p002/p003/r001/r002/q042 +
+  AY v001/v002) は読み書きとも不接触・不変**。採用判断はscrutiny owner
+  C++第二実装 gate pin `9193f5b6…`のまま。
+- 並走との不接触: batch-18 (AY残51キー)・batch-19選定・y=16 fastレーン・
+  K1058レーン・Part BB 17-WIN joint if-adopted成果物には読み書きとも
+  触れていない (本出版コミットは新規dir配下のみ)。
+- 標準11×11空盤・19 central-reply roots・class 23101・全class・未知の全S5子
+  は本Partのどの時点でもUNKNOWNのまま。nodes数・worklist数・greedy数を
+  勝敗として読まない。
+- 本status update observed HEAD-before-push: `1afbc6a7` (push直前に
+  note blob sha1 (`004d69a762e2ccdb028a726837dfcef9bb2170c1`) を再照合し、
+  競合時は再fetchして本節を追記し直す)。
