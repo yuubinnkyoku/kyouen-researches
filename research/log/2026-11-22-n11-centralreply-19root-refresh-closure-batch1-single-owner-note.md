@@ -3701,3 +3701,43 @@ class 10661の費用子でありclass 16131の費用子と交わらないため�
   は一切代行しない (scrutiny owner C++第二実装 gate pin `9193f5b6…`のまま)。
 - 標準11×11空盤・19 central-reply roots・class 23101・class 10661・全13キーは
   本Partのどの時点でもUNKNOWNのまま。nodes数・expansions数を勝敗として読まない。
+
+### Part AY status update (2026-11-22, execution host = 本レーンセッション)
+
+宣言 (commit `6cde1b0b`) どおり、宣言後に本実行hostが最新mainで対抗宣言を確認
+したうえで batch-18 (class 16131) を実行し、WIN-HALT時点まで出版した
+(verdict不消費)。
+
+- 実行: pinned replica `jsreplay.js` (`84585617…` byte-copy) 2-pass fresh
+  cold・budget 15M・worker最大2 (published `runbatch.sh` (`f591f8c2…`) を
+  2並列instanceで運転・status.log RUNNER-NOTE行とREADMEに開示)。
+  最初のwaveで両workerの最初のキーがいずれも**WIN (result 1)**:
+  **v001 (2-pass node-exact 5,656,151 nodes・legal 83・keys
+  1154610354467115008/64)** と **v002 (7,898,204 nodes・legal 84・keys
+  3459890413727387648/64)**。事前登録のWIN-HALT (rc=45) が発火しbatch停止。
+  **51キーは未着手fresh** (一度も実行されておらず、15M再探索禁止規則に
+  該当しない)。
+- val-gate: 実行直前に本hostで4/4 node-exact再現 (at2m 0/2,000,000 x2・
+  15m (2,3,651,923)/(2,5,040,200)・禁止四角95,670)。truncated pass 0。
+- 出版: 実験dir
+  `research/experiments/n11-centralreply-closure-class16131-batch18-20261122/`:
+  scaffold 70ファイル (commit `c36825c7`、53 CSV + batch-keys `1bb3ed41…` +
+  scripts 5 + val-gate 8 + README + status.log header + MANIFEST) /
+  raw 4ファイル + status.log (commit `3c07f51a`) / README結果節 +
+  MANIFEST 73行 (commit `938e34f2`) = publication complete。
+  **fetch-back byte一致 9/9** (raws 4 + status.log + README + MANIFEST +
+  batch-keys + jsreplay + 一部CSV相当の内容照合)。
+- verdict消費: **ゼロ**。unconsumed closure WIN候補は**17**
+  (b018/d002/e002/f017/g018/j033/h045/z003/n005/n006/p002/p003/r001/
+  r002/q042 + **v001 + v002**)、すべてscrutiny owner (C++第二実装 gate
+  pin `9193f5b6…`) 待ち。**v001/v002は本レーンでは採用しない。**
+- route statement (条件付き・verdictではない): class 16131の費用子に
+  WINが1つでも採用されれば、class 16131の全子LOSS閉包ルートは反駁される
+  (16131は既probeのない最初のclean候補だったrank 15であり、rank 16
+  class 16513が現行の次点clean候補)。**class 16131 (残51子)・次点候補・
+  標準11×11空盤・19 central-reply rootsは本時点でUNKNOWNのまま。**
+  nodes数を勝敗として読まない。
+- 残51キーの列挙継続は将来の別宣言Partが行う。row-auditはbatch完走時点
+  (`scripts/row_audit_batch18.py`) に全行機械検証する (現時点の2 WIN行は
+  grepベース機械検証済み: p1==p2 node-exact・budget内・`# replay_done`・
+  status.log整合)。
