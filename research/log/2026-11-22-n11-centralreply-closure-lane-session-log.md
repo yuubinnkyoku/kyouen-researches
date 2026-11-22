@@ -2922,3 +2922,95 @@ sha-verified).
   nodes/worklist/greedy numbers are never verdicts. This Continuation
   appended and consumed nothing beyond the 10-LOSS adoption above;
   log blob lock `7cc2221e...` verified immediately before this push.
+
+
+## Continuation 44 (2026-11-22, this host): Part BD executed and published - independent-host second verification of the Part BC batch-14residual 10-LOSS adoption (all-stage reruns byte-identical, self-written minimal checker 43/43 PASS with NO Part BC machinery, joint greedy non-monotonicity deterministically decomposed to a pass-limit local-search artifact, fail-closed tamper battery 6/6 with the T3a merger gate-gap honestly documented); zero verdict consumption; 11x11 stays UNKNOWN
+
+This host executed the Part BD single-owner verifier declaration (note
+commit `269e78657eea3628af5d19fe8ab5dee7119b3df0`, observed
+HEAD-before-push `b706b214...`, pre-push note blob lock `a564e191...`;
+no counter declaration on main) end to end: the published Part BC
+adoption pipeline was re-run from published bytes only on this
+independent host and cross-checked without reusing any Part BC script
+value.
+
+- Pipeline rerun (x-run byte-identical, published bytes as the only
+  input, Part AV preflight reproduced BASE world first):
+  maker `6c57f2d0...` 3x (increment `c3f201a6...`, manifest
+  `f7287b7b...`) -> merger (pin `90711961...`, selftest 5-case PASS)
+  3x (canonical 6,182 rows `0b594f7e...`, merge-audits `6a9a53a3...`)
+  -> refresh `d6bb2374...` 3x (`5f3a09c6...` / `52ec3d4b...` /
+  `1f54065a...` + worklist `fe71be60...` unpublished, ~58 s/run) ->
+  extractor `48e88838...` 3x (delta `62de8c16...`, all gates PASS).
+  All identical to the Part BC publication bytes.
+- Self-written minimal checker (`check_bd_minimal.py`, uses no Part BC
+  machinery, never reads BC output values as inputs): **43 checks / 0
+  failures / rc=0**. Re-derived independently: the 10-key raw 3-way
+  agreement (p1/p2/status.log/row-audit/batch-keys/input CSV,
+  23,252,550 nodes/pass), q042-absence + batch-17 s5-disjoint +
+  quarantine-disjoint gates, cache set-arithmetic (BASE 6,172
+  union increment 10 = 6,182; WIN 158 / LOSS 6,024; conflict 0;
+  duplicate 0), class 23101 scenario-unknown == [745184] (q042 key
+  `1152921505747697664:1032`) recomputed from graph s4_cost + cache +
+  update8 receipts, the 28 holder classes with value agreement, the
+  full-world classification (excluded 390 / excluded_now 23 / free_now
+  37 / unknown 34,499, board-verified 37/37), update8 resolved 80
+  invariant (both worlds), the closure table (808 rows, churn
+  22149-out / 23965-in, rank 1 = 23101 with unknown_now 1, every
+  unknown_now column value matched), the worklist (64,888 -> 64,872 as
+  a (key,serving_class) row-multiset diff: 123 removed copies
+  {22149:108, 23101:10, holder singles 5} vs 107 added copies
+  {23965 dominant}; adopted keys fully gone from the scenario
+  worklist; -16 is best-option bookkeeping, NOT a coverage change),
+  and per-root coverage (only the individual_greedy_union column
+  moves, 23 rows).
+- Joint greedy non-monotonicity decomposition (instrumented refresh
+  copies, 7-line diff, both worlds re-produced all published output
+  bytes): the 1-pass union moves 49,361 -> 49,351 (-10 = exactly the 10
+  adopted keys; matches the Part BC host record), while the 6-pass
+  truncated snapshot moves 35,645 -> 38,978 (+3,333). In BOTH worlds
+  the JOINT call exits at improve-pass 6 with improved=True, i.e. the
+  published figure is a deterministic pass-limit snapshot of a
+  non-converging local search, not a monotone plan quantity.
+  Trajectories published as two trace JSONs (BASE [49361, 35697,
+  40555, 36770, 35167, 36270, 35645]; SCEN [49351, 35694, 40555,
+  36767, 35158, 36127, 38978]).
+- Fail-closed tamper battery (6 kinds; all tampering confined to
+  scratch trees, pristine bytes re-verified after, Part BC MANIFEST
+  16/16 OK): T1 maker raw node +1 -> 3-way gate ABORT; T2 inserted
+  11th WIN row -> merger GATE FAILED no-output; T3a flipped q043
+  verdict alone -> merger SUCCEEDS (WIN 159, tamper output `855c8aa6`)
+  = an honestly documented merger gate-gap for a BASE-absent key,
+  captured downstream by T3b (refresh cache-sha pin, rc=1); T4
+  manifest losses 10->9 -> extractor GATE FAILED; T5 one cache nodes
+  digit -> refresh cache sha drift; T6 one appended policy comment
+  byte -> evidence policy sha drift. All rc=1, no false accept.
+- Publication (12 files, declared before execution, fetch-back
+  byte-verified): scripts x3 `34356786` (`46a6cc51...`) /
+  `331b26b0` (`d922e6a6...`) / `05cf0106` (`1fe2e67b...`); outputs
+  x6 `a2cca96d` (summary `55e61eb5...`) / `9c0bee45` (rerun shas
+  `a4db0efc...`) / `fb341fde` (43-check result `68871285...`) /
+  `4e6723a4` (trace `3560aa0b...`) / `4005defd` (trace `339a8238...`)
+  / `e9ac7e0d` (battery log `a57329b2...`); docs x3 `76288203`
+  (README `1ddffed0...`) / `abbfa7cf` (status.log `38cc26d6...`) /
+  `2a8060b8` (MANIFEST `3581d469...`). Final-HEAD-pinned raw fetch
+  back: cmp 12/12 byte-identical, MANIFEST sha256 all-match. Note
+  Part BD status update published at `176137a2` (note blob lock
+  `739e7fe2...` verified immediately before that push).
+- Verdicts NOT consumed: this Part only read published bytes and
+  re-ran published scripts; nothing was adopted or written into any
+  canonical cache or refresh output (new-dir outputs only). The 17
+  unconsumed closure WINs (b018/d002/e002/f017/g018/j033/h045/z003/
+  n005/n006/p002/p003/r001/r002/q042 + AY v001/v002) are untouched and
+  remain gated on the scrutiny owner's C++ second implementation
+  (pin `9193f5b6...`). Non-contact kept with batch-18 (AY remaining 51
+  keys), batch-19 selection, the y=16 fast lane, the K1058 lane and
+  the Part BB/BC outputs. Class 23101 is NOT free (the q042 WIN child
+  s5 745184 is still its only scenario-unknown cost child).
+- Guards unchanged: the standard 11x11 empty board and all 19
+  central-reply roots remain UNKNOWN at every point of this Part;
+  nodes/worklist/greedy numbers are never verdicts. Resume pointers:
+  batch-19 selection, batch-18 (AY remaining 51 keys), the 17-WIN
+  scrutiny-owner adoption decision, and joint greedy pass-limit
+  improvement candidates (e.g. run-to-convergence with a saved-best
+  snapshot instead of the 6-pass truncated snapshot).
