@@ -475,3 +475,40 @@ batch 7 (Part L) と同一の予登録protocolで着手する。
 - 並走との不接触: 同一スコープ宣言がmainに存在する場合は着手しない
   (宣言前にlatest mainを再取得しclass2634実験目录の不在を確認済み)。
 - 本amendment observed HEAD-before-push: 実行時の最新mainをコミットメッセージに記録。
+
+## Part O (verifier, amendment 2026-11-22): batch 7 (class 10324) 第三実装交叉検証の出版 - 閉鎖済みevidence bundleへのpost-hoc補強 (verdict不消費)
+
+repo 404障害 (2026-11-22 ~04:52Z) 中にkit lettering "Part M"・タイムスタンプ
+2026-11-22T05:58Z で事前登録されたbatch-7全51行の第三実装交叉検証を
+`research/experiments/n11-centralreply-closure-class10324-batch7-thirdimpl-reverify-20261122/`
+として出版する。repo letteringでは Part M がbatch-7 closure merge + re-auditに、
+Part N がbatch 8 (class 2634) に使用済みのため、本amendmentをPart Oとして
+採番した (kit lettering "Part M" → repo Part O の写像は実験READMEにも開示)。
+
+- 成果 (machine-verified・verdict不消費): 第三実装 (`third_impl.js` pin
+  `08ea958f...`) によるbatch-7全51行のverdict-level交叉検証。51/51行で
+  published pinned-replica verdict (result 2 LOSS) と第三実装verdictが一致
+  (third実装expansions 2,436,068-8,744,134、a/b 2-run determinism identical)。
+  出版セッションによる出版前機械再照合: input rows.jsonのreplica (result,nodes)
+  はpublished batch-7 status.logと51/51行完全一致・key (lo:hi) はbatch-keys.json
+  と51/51一致・script pin 3種 (`08ea958f...`/`c8c52528...`/`84585617...`) は
+  published実験群とbyte一致・MANIFEST 174/174 OK。
+  anchor 2行 (k02 WIN 9,106,337 expansions/4,991,527 ttHits・l1 LOSS
+  7,660,602/3,951,175) はpublished第三実装値と完全一致、negative gate 2種
+  (ng1/ng2) は文言一致のGATE_FAIL、rules gate (quads 95,670・triples 195,044
+  mismatch 0) PASS、audit.py 541/541 gates PASS (2回実行byte一致)、
+  wall-inconclusive 0行。
+- 出版時の位置づけ: staging時点ではbatch-7のmerge + re-auditは未出版だったが、
+  出版時点でnote Part Mとしてmainに存在する (class 10324 = Board検証34番目
+  free class・正本cache 5,975行 `a998f4c0...`)。よって本amendmentは閉鎖済み
+  class 10324のevidence bundleに対するpost-hocなcross-implementation
+  corroborationであり、採用規則・証明責任に変更を与えない。
+- 主張の範囲: verdict不消費・閉鎖・被覆・root主張なし。5つの未消費WIN
+  (b018/d002/e002/f017/g018) はscrutiny owner待ちのまま。標準11×11空盤・
+  19 central-reply roots・全closure classはUNKNOWNのまま。nodes/expansionsを
+  勝敗として読まない。
+- 並走との不接触: batch-7由来キーのみを対象とし、進行中のbatch 8 (Part N,
+  class 2634) のscopeと無関係。同一スコープの宣言がmainに
+  存在する場合は着手しない。
+- 本amendment observed HEAD-before-push: `0fddb890` (Part O実験3コミット
+  `eb061b60`/`0dfdc4df`/`0fddb890` 直後のmain)。
