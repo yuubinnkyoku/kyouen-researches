@@ -2030,3 +2030,96 @@ Execution (all gates fail-closed, all PASS):
   6,120-row canonical `be9cb24e...`), (b) batch-17 declaration
   (class 10661, rank 14), (c) closing class 23101 via its remaining
   10 unprobed keys + the q042 adoption decision (scrutiny owner).
+
+## Continuation 33 (2026-11-22, this host): Part AT q042 single-WIN if-adopted decomposition completed and published - flips 4 classes [23092, 23101, 23115, 23938] unknown->excluded_now on the projection, coverage provably unchanged, update8 provably unchanged; verdict NOT consumed
+
+Declared in the note as Part AT (commit `58938933`, observed
+HEAD-before-push `2f88a495`, note blob lock `9a5dfdb7...`). Part AS's
+unconsumed 15th closure WIN (q042, s5_index 745184, key
+`[1152921505747697664, 1032]`, 2-pass node-exact result 1, 9,149,084
+nodes) decomposed as a single-row IF-ADOPTED projection against the
+published canonical 6,120 rows (`be9cb24e...`): a scrutiny-owner
+adoption precomputation only, adopting neither recommendation nor
+rejection, consuming zero verdicts.
+
+- Maker: `scripts/make_increment_q042_win.py` (Part AS/AP maker line
+  single-WIN adapt; fixed the WAVE-END regex that could not match
+  multi-key publish lines) machine-reverified the 2-pass WIN from the
+  published batch-14 raws (publication commit `7b211d38`), gated
+  BASE-absence (6,120 rows) and quarantine-absence, and emitted the
+  single-row increment sha256 `b4958328...` + manifest sha256
+  `894e9420...` (schema `batch14-q042-win-ifadopted-increment-manifest-v1`,
+  ifadopted_only, canonical_cache_untouched pin `be9cb24e...`).
+- Merge: sha-pinned byte-copy merger `90711961...` (selftest PASS) run
+  3x byte-identical; if-adopted cache 6,121 rows (WIN 159 / LOSS 5,962),
+  251,513 bytes, sha256 `1434c68b...`; merge-audit 3x byte-identical
+  (`e1d11a66...`); BASE canonical reverified byte-identical after every
+  merge (the projection is not the repo canonical chain).
+- Refresh: adapted `reaudit/scripts/refresh_q042_ifadopted.py` (3-hunk
+  adapt of the Part AS refresh `5992738d...`; sha expectation extracted
+  from the cache file itself) run 2x serial, all four outputs
+  byte-identical: refresh-summary `029cc3b6...`, closure-classes
+  `987c4ecb...`, per-root-coverage `ec71c81b...`, probe-worklist
+  `af0c28c5...` (not published, sha recorded only).
+- Extractor: `scripts/compare_deltas_q042_ifadopted.py` (WIN if-adopted
+  adapt of the Part AS extractor `9e885ae0...`; new gates: flips must
+  equal the machine-computed BASE-unknown graph holder set of s5 745184
+  (computed from the pinned graph, not hardcoded), a pure WIN adoption
+  can free no class (newly-free-classes empty), can move no per-root
+  free/uncovered count (0 changed rows) and create no newly free third,
+  class 23101 must be among the flips with scenario-unknown exactly 10,
+  canonical BASE sha pin, BASE index_verdict absence (verdict not
+  consumed on main), raw 2-pass re-verification; all Part AS recompute
+  gates kept) run 3x byte-identical (sha256 `8e6ce1c6...`), all gates
+  PASS.
+- Result (projection classification-ledger delta only): flips =
+  [23092, 23101, 23115, 23938], all four unknown -> excluded_now
+  (one-way: their all-LOSS closure routes are permanently refuted by the
+  verified WIN child; route statement, not a closure claim);
+  excluded_now 23 -> 27, unknown 34,500 -> 34,496, free_now 36
+  unchanged; transitions ledger exactly those 4 + identities. Class
+  23101: scenario-unknown children exactly the 10 unprobed keys
+  (745455..745465); closure-candidate table 809 rows unchanged, zero
+  churn, stays rank 1 unknown_now 10 (the table is a probing-worklist
+  view; the flip lives in class_status_counts + the ledger).
+  Coverage: per-root free/uncovered unchanged for all 19 roots (root
+  27 baseline 119/119), newly free thirds [] (all gated); sole
+  per-root-greedy mover root 24 (2,785 -> 2,784, bookkeeping). update8:
+  resolved 79 unchanged, remaining 31,780 unchanged, groups_free 127,
+  win_hit_groups [] -> []; machine-established that s5 745184 sits
+  OUTSIDE the update8 baseline requirement. joint greedy 36,726 ->
+  36,725, probe worklist 64,941 -> 64,940 (both bookkeeping).
+- Publication (16 files, 3 commits, no branch/PR): if-adopted cache
+  alone `59fe5654` (observed HEAD `58938933`; 251,513-byte payload
+  fully re-assembled via line-chunked reads with exact length/eol/tail
+  checks) -> scripts + increment + manifest `f0a45654` (observed HEAD
+  `59fe5654`) -> outputs + README + status.log + MANIFEST `175864a5`
+  (publication complete; observed HEAD `f0a45654`). **Fetch-back 15/15
+  byte-identical at `175864a5`** (commit-pinned raw curl + sha256
+  against every MANIFEST line). Kit mirror
+  `_19root-refresh-kit/batch23101-q042-ifadopted/` (16 files, all sha
+  verified, 3.6MB probe-worklist not mirrored per precedent). Note Part
+  AT status update `ee3b6f73`-observed (note blob `9a5dfdb7...` ->
+  `f34401cd...`, sha-locked create_or_update_file, GitHub-reported blob
+  sha equals the locally computed one; fetch-back byte-identical,
+  `ee3b6f73` was another lane's y13 commit recorded as the observed
+  HEAD-before-push of the note update).
+- Runner honesty note: one false "blob moved" gate abort (the blob-sha
+  field was read from the wrong response slot; the GitHub API contents
+  call confirmed the lock blob `9a5dfdb7...` was still current and the
+  note untouched, after which the push proceeded with the recorded
+  observed HEAD). No other incidents in this continuation.
+- Verdict guards (unchanged): q042 stays the 15th unconsumed closure
+  WIN (b018/d002/e002/f017/g018/j033/h045/z003/n005/n006/p002/p003/
+  r001/r002/q042), scrutiny-owner-blocked (C++ second-implementation
+  gate pin `9193f5b6...`). Zero verdicts consumed by this Part; the
+  canonical cache stays 6,120 rows `be9cb24e...`.
+- Honesty record: the standard 11x11 empty board, the 19 central-reply
+  roots, class 23101 (projection excluded_now, on the canonical chain
+  an 11-unknown-child unknown class), the 10 unprobed keys q043-q052
+  and every other class remain UNKNOWN throughout; nodes/worklist/
+  greedy numbers are not verdicts. Open items (re-read latest main
+  first): (a) batch-17 declaration (class 10661, rank 14, unknown 52),
+  (b) closing class 23101 via its remaining 10 unprobed keys + the
+  q042 adoption decision (scrutiny owner), (c) any new unconsumed
+  closure WIN lanes' if-adopted precomputations as they appear.
