@@ -3364,3 +3364,50 @@ q042)、rank 2-13 (16757, 20421, 16371, 30345, 12264, 5473, 2634, 8785,
 - 本status updateのobserved HEAD-before-push:
   `ffc09de14d353bb985bdce8d3cad629d5ffc9714` (note blob sha1ロック
   `14794159…` で更新、fetch-backで追記確認)。
+
+## Part AV (adoption, declaration 2026-11-22): batch-17 (class 10661) 52 LOSS行のcanonical計上 + reaudit (実行前に宣言)
+
+Part AU (batch-17 execution, publication complete at `ffc09de1`・root status.log
+hygiene除去 `4741a92f`) が出版したprobed 52行のうち、**52 LOSS行 (u001..u052、
+WIN-HALT 0・枯損 0・clean全LOSSバッチ)**を、Part AP/AS (batch-16/14
+52/41 LOSS行) と同一形式で canonical exact-S5 verdict cache へ計上する。
+batch-17にはWIN行もexhaustion行も存在しないため、WIN除外機構と枯損取り扱いは
+「不在のgate」として機械検証する (採用増分にWIN行・exhaustion行は1行も含めない)。
+
+- 対象: `research/experiments/n11-centralreply-class10661-loss52-adoption-reaudit-20261122/`。
+- 入力はpublished正本のみ: batch-17実験dir (publication commit `ffc09de1`)
+  の raws 104 (u001-u052のp1/p2、全行 `# replay_done` 完了)・merged
+  `output/status.log` (宣言文+実行記録・sha256 pub MANIFEST固定)・
+  batch-keys.json (sha256 `db762175…`)・row-audit.json (`c19e768f…`)・
+  hostevent隔離断片5 (verdict行なし)・現行canonical 6,120行cache
+  (sha256 `be9cb24e…`)・Part AS reaudit 4出力 (refresh-summary `f2008e70…`・
+  closure-classes `3ee1dbb6…`・per-root-coverage `527c7e9a…`・
+  probe-worklist `1c96df05…`)。
+- maker (Part AS版 `make_increments_batch14.py` をbatch-17にadapt) が
+  fail-closed導出: 52 LOSS行の3-way (p1/p2/status.log PASS行) node-exact
+  gate・batch-keys legal/(lo,hi) 照合・WIN/exhaustion不在gate・52キーの
+  BASE cache不在 (0 hits)・quarantine 0・batch-17全体像 (probed set
+  =={u001..u052}、WAVE-END rows、row-audit 52行一致) の機械検証。
+- 手法: sha-pinned fail-closed union merger (`90711961…`) でcanonical 6,120行に
+  52行をmerge (3回実行・byte一致・WIN/LOSS conflict 0 gate) →
+  **canonical 6,172行**を新pathに出版。Part AS refresh script adapt版
+  (cache path/sha・文言のみ変更) を2回直列実行・run間byte一致。
+  delta extractor (Part AS版 `compare_deltas_batch14_adoption.py` を
+  batch-17にadapt: BASE=Part AS reaudit出力、scenario=本reaudit出力) を3回
+  実行・byte一致・全gate PASS。
+- 主張範囲: canonical cache上の分類のみ。**class 10661 (52子) が採用後に
+  free_now (Board検証free class) になるかどうかはreauditの機械計算に委ね、
+  宣言時点では断定しない** (52/52の全子LOSS計上後のclass_status遷移は
+  refreshが決定する)。本Part単体ではroot被覆・第三手secured・クラス閉鎖の
+  主張をしない。
+- verdict不消費 (WIN側不変): batch-17にWIN行は存在しない。15 unconsumed
+  closure WIN (b018/d002/e002/f017/g018/j033/h045/z003/n005/n006/p002/p003/
+  r001/r002/q042) は採用判断 scrutiny owner (C++第二実装 gate pin
+  `9193f5b6…`) 待ち・不変。
+- 標準11×11空盤・19 central-reply roots・class 10661以外の全class・未知の
+  全S5子は本Partのどの時点でもUNKNOWNのまま。nodes数を勝敗として読まない。
+- 並走との不接触: batch-18の選定・他バッチの宣言・実行は本Partでは行わない。
+  published成果への書込みは本Partの新規実験dirのみ。同一スコープの対抗宣言が
+  mainに存在する場合は本宣言を破棄して着手しない。
+- 本amendment observed HEAD-before-push: `4741a92f` (push直前にnote blob
+  sha1 (`e0a4f154…`) を再照合し、競合時は再fetchして本節を追記し直す)。
