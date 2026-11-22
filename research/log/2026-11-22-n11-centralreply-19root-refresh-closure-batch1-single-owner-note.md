@@ -2871,3 +2871,56 @@ Part AF実行由来のrawは存在せず、rescue対象行はない。以上よ�
 - 本amendment observed HEAD-before-push: `ede3eb42…` (push直前にnote blob
   sha1を再照合し、競合時は再fetchして本節を追記し直す。同スコープ対抗宣言が
   存在する場合は本takeover宣言を破棄して着手しない)。
+
+
+### Part AQ status update (2026-11-22, takeover host = 本レーンセッション)
+
+宣言 (commit `398a96ae`, observed HEAD-before-push `ede3eb42`) どおり完了。
+batch 14 (class 23101, renewed closure rank 12, mask `[1152921504892059648, 16]`,
+unknown 52, groups 3, first 24 / third 28) の52キーをPart AF事前登録プロトコル
+のまま本takeoverセッションが実行し、42キー目で事前登録WIN-HALT規則が発火した。
+
+- 結果: **WIN-HALT at q042 (result 1 WIN, 9,149,084 nodes, 2-pass fresh cold
+  node-exact)** (s5_index 745184, key `[1152921505747697664, 1032]`, legal 85,
+  probe_order 579)。同一wave内in-flightのq039/q040/q041は完了まで開示
+  (いずれもLOSS 2-pass node-exact: 2,502,014 / 2,175,857 / 2,514,109 nodes)。
+  q043-q052 (10キー) は着手せず (halt規約)。42 probed = 41 LOSS + 1 WIN・
+  budget枯損 (result 0) 0・determinism mismatch 0・総ノード数/pass 88,338,850。
+- row-audit.json (schema `n11-centralreply-closure-class23101-batch14-rowaudit-takeover-v1`,
+  sha256 `cc22a1c8057d06b829060d321edd6e26e016ff7d92bce9c7c66eb4cca5ca24c7`):
+  全42行でp1/p2 (budget,result,nodes) 一致、legal/lo/hi/probe_order が
+  batch-keys (sha256 `dfde0e90…`) と一致、forbidden quadruples 95,670両pass、
+  `# replay_done` 完全性、status.log相互照合、problems空。
+- 出版: 実験dir
+  `research/experiments/n11-centralreply-closure-class23101-batch14-20261122/`
+  156ファイル (published scaffold 65 + takeover raws 84 (q001-q042のp1/p2) +
+  status.log + row-audit.json + val-gate takeover 4 + scripts/runwave-aq.sh +
+  README Takeover/Result + MANIFEST-sha256.txt) を4コミットでmainに反映
+  (raws chunk1 `21affe23`、raws chunk2 `d064e3aa`、status+audit+val-gate+
+  runner `4cf1d248`、README+MANIFEST `7b211d38`)。fetch-back 156/156 byte一致
+  (MANIFEST-sha256全照合・publication commit `7b211d38`で全ファイル取得)、
+  kit鏡像byte一致。
+- 誠実記録 (並走・canonical): 本takeover実行中に並走がPart AO
+  (batch-16 if-adopted分解 `5a5e56d8`) とPart AP (batch-16 52 LOSS行のcanonical
+  計上 + reaudit。canonical exact-S5 cache 6,027→6,079行 sha256 `342e8683…`、
+  class 10687閉鎖資格確定) を完走出版した。Part AO/APスコープへの本側書込みは
+  ゼロ。takeover実行後、batch-14の52キー全部 (probed 42・WIN q042含む) が
+  新canonical 6,079行cacheに不在 (0 hits) であることを機械再照合済み。
+  なお宣言時 (16:11Z) のfail-safe照合は当時正本の6,027行 `95e868d6…` に対して
+  実施済みであり、両方のcacheに対して52キー不在は成立している。
+- verdict不消費・状態: **q042は15番目のunconsumed closure WIN**
+  (b018/d002/e002/f017/g018/j033/h045/z003/n005/n006/p002/p003/r001/r002/q042)。
+  class 23101の「全52子LOSS」閉包ルートは検証済みWIN子で反駁 (このルートに
+  関するverdict-level記述のみ。行のゲーム理論的値は判定しない)。採用判断は
+  scrutiny owner (C++第二実装 gate pin `9193f5b6…`) 待ち・不変。
+  batch実績: 15バッチ → **12 WIN-HALT + 3 clean** (23963/10324/8784 = 33/34/35番目
+  free。class 10687は本takeover中に並走Part APで閉鎖資格確定)。
+- 標準11×11空盤・19 central-reply roots・class 23101・その全S5子 (未着手
+  q043-q052含む) はどの時点でも**UNKNOWNのまま**。nodes数を勝敗として読まない。
+- open (着手前に必ず最新mainで対抗宣言確認要): (a) q042の第三実装交叉検証
+  (Part G/K/O/P/T/W/AA/AD規約・anchor 2 + negative 2・rules gate)、
+  (b) q042単WINのif-adopted分解 (Part V/R/AB/AH/AI/AN流・対抗宣言 grep必須)、
+  (c) 41 LOSS行のcanonical計上 + reaudit (Part AP流・別宣言・Part AP採用で
+  canonicalが更新されているため増分は新6,079行cacheに対して構築)。
+- 本status updateのobserved HEAD-before-push: `7b211d38…` (note blob sha1ロック
+  `7bb7a66d…` で更新、fetch-backで追記確認)。
