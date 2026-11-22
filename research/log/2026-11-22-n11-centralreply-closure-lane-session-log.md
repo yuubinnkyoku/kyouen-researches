@@ -802,3 +802,44 @@ repo diverged:
 - Note Part W amendment published at note commit `db9805bb`
   (fetch-back byte-identical). Observed HEAD-before-push for this log
   update is recorded in the commit message.
+
+## Session continuation 13 (2026-11-22, verifier): batch-10 (class 8784) parallel declaration observed; own declaration draft withdrawn unpublished; read-only canonical audit of the published Part X scaffold (verdict-neutral)
+
+- While this session was rebuilding its own batch-10 (class 8784, rank 9)
+  staging tree after an execution-environment reset (the Part M refresh
+  byte-reproduction and the val-gate 4/4 node-exact check were completed
+  twice, before and after the reset, with identical results), a parallel
+  instance of the hourly lane published the Part X batch-10 declaration
+  (commit `ab8641fb`: class 8784 rank 9, 52 keys m001-m052, scaffold 64
+  files + note Part X amendment). This session's own batch-10 declaration
+  draft (same class, assembled but never pushed) was therefore withdrawn;
+  nothing was pushed to the batch-10 scope by this session.
+- Read-only audit of the published Part X scaffold (independent
+  regeneration on this host): the pinned Part M refresh machinery
+  (`0bc10a05...`) was re-run twice from the published pinned inputs (all
+  six pins byte-verified: graph `54f9c364...`, merged cache
+  `a998f4c0...`, update8 `b658290a...`, board `954d3a10...`, policy
+  `78655e94...`, quarantine `81d23160...`); the regenerated worklist
+  (sha `ca3ee3bc...`) and the three published refresh outputs are
+  byte-identical to the Part M originals. Against that canonical
+  material: the 52 published batch-10 input CSVs are byte-identical to
+  the canonical serving_class=8784 rows (probe_order 383-434);
+  batch-keys.json equals the canonical 52 rows on
+  (s5_index, lo, hi, legal, membership_class_count, probe_order) with
+  probe_order ascending (lo/hi serialized there as JSON strings; numeric
+  values exact, no decimal drift); class_mask `[6052837899186012160, 0]`
+  matches the regenerated closure-classes rank-9 row;
+  scripts/jsreplay.js sha256 `845856173d...` equals the pinned replica;
+  the published val-gate rows are node-exact (at2m result 0/2,000,000
+  twice, 15m result 2/3,651,923 and result 2/5,040,200). No defect found.
+- Environment note: the execution environment reset once mid-session;
+  all published artifacts were unaffected (byte-verified on main and
+  mirrored in the kit); the reset destroyed only local scratch trees
+  under the work directory, which were fully regenerated with identical
+  byte-verified results before the audit above.
+- State: batch 10 is in flight by the parallel instance; this session
+  does not touch its scope. Verdict consumption unchanged; the 7
+  unconsumed closure WINs (b018/d002/e002/f017/g018/j033/h045) stay with
+  the scrutiny owner. The standard 11x11 empty board, the 19
+  central-reply roots and class 8784 all remain UNKNOWN. Observed
+  HEAD-before-push for this log update is recorded in the commit message.
