@@ -1694,3 +1694,52 @@ Part ACでWIN-HALT済み。よって**renewed rank 11 class 16930** (mask
   宣言直前に最新mainを再取得し、同scope対抗宣言なし・`batch13` dir不在・Part AE採番未使用
   を確認済み。
 - 本amendment observed HEAD-before-push: 実行時の最新mainをコミットメッセージに記録。
+
+## Part AD 出版status update (2026-11-22, verifier): batch 12 n005/n006 第三実装交叉検証 実行・出版済み - 10のunconsumed WIN全て第三実装検証済みに (verdict不消費)
+
+Part AD宣言 (本note Part AD節・commit `33657c94`) に基づき実行・出版した。
+宣言通りverdict不消費・verdict-level文献作成のみ (採用判断は引き続き
+scrutiny owner、C++第二実装 gate pin `9193f5b6...` 前例・不変)。
+
+- 実行結果 (machine-verified): target 8行すべてclean・a/b 2回実行で同一
+  (result/expansion/ttHits/reason)。**n005/n006 WIN一致** (n005: 第三実装
+  15,280,890 expansions / 8,220,782 ttHits vs replica df-pn WIN 12,863,268
+  nodes; n006: 4,233,764 / 2,394,370 vs 3,695,373 nodes)、
+  n001-n004/n007/n008 LOSS一致 6/6 (第三実装 7,693,366 / 3,554,378 /
+  5,243,307 / 4,271,858 / 3,359,814 / 3,976,246 expansions vs replica
+  6,471,615 / 3,083,301 / 4,560,719 / 3,710,926 / 2,905,330 / 3,442,689
+  nodes)。anchors k02a (WIN 9,106,337 expansions / 4,991,527 ttHits) と
+  l1a (LOSS 7,660,602 / 3,951,175) は本ホスト再現値がpublished第三実装値
+  (Part G/K/O/P/T/W/AA) と完全一致。negative ng1/ng2は文言一致GATE_FAIL。
+  rules gate (quads 95,670 == replica / triples 195,044・mismatch 0) PASS。
+  audit.py (fail-closed, schema `batch12-wins-thirdimpl-audit-v1`, 2回実行
+  byte一致) は **111/111 gates PASS・divergence 0・wall-inconclusive 0**。
+- 入力はpublished batch-12正本 (raw 8キー×p1/p2 16件・status.log、chunk
+  commits `eca35f3c`/`ace92d84`からcommit-pinned raw CDN取得) から
+  `make_inputs_batch12.py` がfail-closed導出 (2-pass (budget,result,nodes)
+  一致assert・status.logのPASS 8行照合・`n005 WIN-HALT`/`n006 WIN-HALT`
+  停止行とRUNNER-STOP/RUNNER-EXIT行の存在assert・published batch-keys.json
+  (sha256 `de55df83...`, scaffold commit `d333bb2c`正本) とのkey/legal機械
+  照合・導出input CSVがpublished batch-12 input CSV 8本とbyte一致する
+  ことのassert・手転写ゼロ・全ゲート通過)。
+- 出版: `research/experiments/n11-centralreply-closure-batch12-wins-thirdimpl-20261122/`
+  commits `4e9c525f` (scaffold 20 files: README + pinned scripts 6 +
+  machine-derived inputs 13、pinned scripts 4種はpublished Part AA bytesと
+  blob同一性確認) → `d44fcfb4` (targets a/b 16) → `d25a0db9` (anchors 4 +
+  negative 2 + rules-gate + status.log + audit-summary.json + MANIFEST,
+  10 files)。fetch-back: commit固定raw URL + cmpで**全46 files byte一致**・
+  MANIFEST-sha256.txt記載45エントリが45/45 sha256一致を確認済み。
+  sourcesは再出版なし (published raws由来・READMEにsha記載)。
+- 意味: 10つのunconsumed closure WIN
+  (b018/d002/e002/f017/g018/j033/h045/z003/n005/n006) の**全てが第三実装に
+  よるverdict-level交叉検証済み**になった (前6個はwin-thirdimpl-reverify
+  (Part G) + Part P + Part T (j033) + Part W (h045)、z003がPart AA、
+  n005/n006が本Part AD)。ただし**verdict不消費は不変**。n005/n006のWINは
+  引き続きscrutiny owner待ち。n009-n052 (44キー) は未着手のまま。
+  **標準11x11空盤・19 central-reply roots・class 8106は本検証のどの時点でも
+  UNKNOWNのまま。nodes/expansions数を勝敗として読まない。**
+- open items (将来の別宣言で実施): n005/n006 if-adopted分解 (Part V/R/AB流・
+  8 probed行のWIN-only / LOSS-only / full)・次batch候補 = renewed rank 11
+  class 16930 `[1152921504875282432, 272]` (unknown 52)。
+- 本status update observed HEAD-before-push: 実行時の最新mainを
+  コミットメッセージに記録。
