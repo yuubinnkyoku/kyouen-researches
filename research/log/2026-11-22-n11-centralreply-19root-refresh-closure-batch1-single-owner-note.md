@@ -139,3 +139,43 @@ reaudit closure-classes rank 5 のクラス12264に着手する。
   本batch単体では閉鎖・被覆・secured主張なし)。val-gate 4/4 node-exactは
   本ホストで本session中に再現済み (batch5 val-gateに同outputを固定)。
 - 本amendment observed HEAD-before-push: 実行時の最新mainをコミットメッセージに記録。
+
+
+## Part G (verifier, amendment 2026-11-22): closure WINs third-implementation cross-verification
+
+batch5 (Part F) はWIN-HALT (f017) で停止した。現時点で4つのWIN
+(b018/d002/e002/f017, いずれも2-pass node-exact・pinned jsreplay replica @15M)
+がscrutiny ownerの採用判断待ちで未消費。事前登録の採用ゲートはC++第二実装
+(`cpp/solvers/kyouen_dfpn_root.cpp` pin `9193f5b6...`) だが本レーン環境は
+コンパイラなし・パッケージ導入禁止のため実行不能のまま。前例
+(`research/experiments/n11-sixthcost-third-implementation-verdict-reverification-20261121/`)
+に従い、第三実装 (third implementation) (非df-pn AND/ORミニマックス `third_impl.js`,
+pin sha256 `08ea958f...`) によるverdict-level交叉検証を、採用判断の追加
+補強材料として実行する。**verdict不消費・採用判断は引き続きscrutiny owner。**
+
+- 対象: `research/experiments/n11-centralreply-closure-wins-thirdimpl-reverify-20261122/`。
+  4 WIN行 (b018/d002/e002/f017) の全行再検証 + 未消費LOSS行の層化サンプル
+  spot検証10行 (d001/d003/d004/e001/f001/f005/f009/f013/f016/f018)。
+  入力はpublished batch rawから `scripts/make_inputs.py` で機械導出
+  (fail-closed・手転写ゼロ・source raw自体の2-pass node-exactチェック込み)。
+- 前提ゲート (いずれも必須・fail-closed): script pin 3種 (third_impl
+  `08ea958f...` / verify_tbl `c8c52528...` / jsreplay replica `84585617...`)、
+  rule-engine gate (verify_tbl.js: quad 95,670 == replica / TBL==wob
+  mismatches 0)、anchor行 (k02 WIN 9,106,337 expansions / l1 LOSS
+  7,660,602 expansions) の本ホスト再現がpublished値と完全一致、negative
+  gate 2種 (legal+1, stones+1 → GATE_FAIL)。
+- 手法: 1行1プロセス、cap 300M expansions、wallcap 240s、1行2回 (a/b)
+  のdeterminism gate (result/expansion/ttHits/reason 同一必須)。
+  wall超過 (runlimit) はhonest wall-inconclusive として記録し検証主張と
+  しない。cleanなverdict一致のみ「第三実装verdictがpublished replica
+  verdictと一致した」という文献として記録する。cleanな不一致はdivergence
+  evidenceとして記録するが、本レーンではverdictを書き換えない。
+- 主張と消費規則: 本検証はverdict-level文献作成のみ・verdict不消費
+  (採用は引き続きscrutiny owner・C++ゲート先行・不変)。11x11空盤・19
+  central-reply roots・クラス閉鎖・第三手被覆は本検証のどの時点でも
+  UNKNOWN/不変。nodes/expansionsを勝敗として読まない。
+- 並走との不接触: 対象キーはclosure grindバッチ1-5のpublished raw由来で、
+  他レーン (six-row/seven-row/five-row/SAT系) のclaim集合と無関係。
+  同一スコープの宣言がmainに存在する場合は着手しない。
+- 本amendment observed HEAD-before-push: 実行時の最新mainを
+  コミットメッセージに記録。
