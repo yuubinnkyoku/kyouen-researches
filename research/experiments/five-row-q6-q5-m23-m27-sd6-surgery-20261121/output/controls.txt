@@ -1,0 +1,30 @@
+# validation controls 2026-11-21 (rebuild after env reset)
+# [census gates] sat vs buildCensus4 (see census4_gates.txt)
+# [seed health]
+q6 seed native (5,22,6): sat_verify=PASS safety_only=SAFE python=PASS
+q5 seed native (5,26,5): sat_verify=PASS safety_only=SAFE python=PASS
+# [not-maximal controls on target boards]
+q6 seed @ (5,23,6): FAIL {"ok":false,"why":"not-maximal","cell":"22,0"}
+q5 seed @ (5,27,5): FAIL {"ok":false,"why":"not-maximal","cell":"26,0"}
+# [tamper controls: synthetic cocircular sets, must be unsafe]
+tamper q6 6-circle: safety_only=UNSAFE circle 1,-10,-10,25 count=6 python=FAIL circle sat_verify=FAIL {"ok":false,"why":"unsafe-circle","co":"1,-10,-10,25"}
+tamper q5 5-circle: safety_only=UNSAFE circle 1,-10,-10,25 count=5 python=FAIL circle sat_verify=FAIL {"ok":false,"why":"unsafe-circle","co":"1,-10,-10,25"}
+
+# [self-completion positive controls] (recovers published witnesses from minus2 seeds)
+q6 (5,22,6) budget(2,2) target 24 on minus2: nWitness=4, one EXACT published witness + 3 neighbors (sym-diff 2/2/4); elapsedMs=177
+q5 (5,26,5) budget(2,2) target 19 on minus2: nWitness=1, EXACT published witness; elapsedMs=264
+
+# [campaign q6: 5x23 q=6, budget(3,3), targetMax=24] all classes 0 witness
+output/campaign_q6/H_off0_crosscheck.jsonl: offX=0 leaves=5162142 maximal=0 witnesses=0 ms=35133
+output/campaign_q6/id_off0.jsonl: offX=0 leaves=5162142 maximal=0 witnesses=0 ms=36291
+output/campaign_q6/id_off1.jsonl: offX=1 leaves=5130368 maximal=0 witnesses=0 ms=34954
+output/campaign_q6/id_off2.jsonl: offX=2 leaves=5175265 maximal=0 witnesses=0 ms=37809
+output/campaign_q5/H_off0_crosscheck.jsonl: offX=0 leaves=3522581 maximal=0 witnesses=0 ms=35366
+output/campaign_q5/id_off0.jsonl: offX=0 leaves=3522581 maximal=0 witnesses=0 ms=36329
+output/campaign_q5/id_off1.jsonl: offX=1 leaves=3479683 maximal=0 witnesses=0 ms=35872
+output/campaign_q5/id_off2.jsonl: offX=2 leaves=3432887 maximal=0 witnesses=0 ms=34566
+output/campaign_q5/id_off3.jsonl: offX=3 leaves=3348135 maximal=0 witnesses=0 ms=32371
+output/campaign_q5/id_off4.jsonl: offX=4 leaves=3517536 maximal=0 witnesses=0 ms=34733
+output/campaign_q5/id_off5.jsonl: offX=5 leaves=3491656 maximal=0 witnesses=0 ms=34983
+output/campaign_q5/id_off6.jsonl: offX=6 leaves=3691525 maximal=0 witnesses=0 ms=36245
+output/campaign_q5/id_off7.jsonl: offX=7 leaves=3592789 maximal=0 witnesses=0 ms=35535

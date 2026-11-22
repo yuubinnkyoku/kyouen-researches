@@ -140,3 +140,76 @@ key 値の直後に comma が必ず続くため既存 record と完全互換
 (判定結果は不変)。姉妹掃引 four-row-q5-m21-class-split-20261115 の
 sweepp0x2.sh (`b1` vs `b10..b19`)・sweepp0gpin.sh (`g1` vs `g10..`)
 にも同種の衝突があり、同日修正済み。
+## 追記 (2026-11-22 resume — 単一オーナー宣言下の再開: 較正と honest negative)
+
+resume 宣言: [2026-11-22-four-row-q4-m35-class-split-resume-single-owner-note](../../../log/2026-11-22-four-row-q4-m35-class-split-resume-single-owner-note.md)
+(宣言時 HEAD `d73bb0b8`・宣言コミット `4fcee8eb`。2026-11-15 hardening 以来の再開)。
+
+### 実行環境・較正
+
+- 実行環境: 2 コア・RAM ~2GB・bash 1 呼び出し上限 300s。このため piece cap は
+  200-240s に制限され、想定 cap 700s の `sweep35.sh` はそのままでは運用できない。
+- 対照 (4,34,4) class{1} `--krow=1:2 --minpos=7` の CNF を再生成し
+  **vars=392,614 / clauses=1,300,317, cnf_md5 `c26434a356033a5a7dd4884da4c92208`**
+  — 出版対照ログ `output/r_ctrl_4x34_c1k2p7.txt` の DIMACS header "p cnf 392614 1300317"
+  と完全一致。kissat 4.0.4 static md5 `3a5eba830aa6008a604fcc9bbe99a325` (README pin 一致)。
+  親キー CNF の md5 は環境リセット越しに 3 回同一 (決定性確認済み)。
+- 対照を cap 220s で再実行: INDET (rc=124, 872,303 conflicts)。2026-11-15 の
+  240s probe (1,052,475 conflicts) と整合。pipeline 較正は本環境でも成立。
+
+### 本日の records (15 行・全行 honest negative・判定不推移)
+
+- 対照 1 (`ctrl_4x34_c1k2p7`, cap 220): INDET。
+- 親キー 12/82: `c1k2p0..p7` (cap 240, conflicts 18,272-438,368)、
+  `c1k1p0` (200s, 843,903)、`c1k0` (200s, 868,532)、`c01` (200s, 82,234)、
+  `c0123` (200s, 33,861) — すべて INDET。
+- x2 サブキー 2: `c1k2p0x21` / `c1k2p0x22` (200s, 788,535 / 919,077 conflicts)
+  — 下記 `scripts/sat4.js` (second-stone 位置分割) の初適用。
+- **UNSAT 0・SAT 0**。m=35 の不在も存在も一切主張しない (`M_{4,4} ∈ [35,237]` 不変)。
+
+### 追加ツール (本コミットで出版)
+
+- `scripts/sat4.js` — 単一 deficient row・k>=2 インスタンスの 2 番目石の位置分割
+  (`--x2=B`)。B の全ケース分割は exhaustive & disjoint (平場合解析・対称性仮定なし)
+  のため all-UNSAT なら bucket を UNSAT 確定できる。minpos との併用可、--lex との
+  併用は不可。[four-row-q5-m23-class-split-20261121](../four-row-q5-m23-class-split-20261121/)
+  の sat4.js と同一内容 (repo 側 fetch で文字列一致を確認)。
+- `sweep35x2.sh` — 2 コア用並列 2 wrapper (同一 keys・同一 CNF md5・同一 record 形式・
+  優先順不变。CNF 生成は逐次: 2 並列 gen は RAM ~2GB で OOM。`X2=1` で k=2 親キーを
+  x2 サブキー空間 `${y}k2p${p}x2${B}` に展開)。
+- `sample35.sh` — category hardness 較正用 1 wave (<=2 piece) サンプラ。
+
+### coverage 会計 (次の resume 向け)
+
+- 親 82 キー中 INDET 記録済み 12 (`c1k2p0..p7`, `c1k1p0`, `c1k0`, `c01`, `c0123`)。
+  残り 70 未走査。対照 1 行は掃引カバー外の pipeline 較正用。
+- INDET キーは done_key で skip されるため、再挑戦時は該当 INDET 行を
+  records.jsonl から除去してから再実行する (2026-11-15 truncation 除去と同規約)。
+- x2 サブキー空間は親キーを消費しない別空間。`c1k2p0` の x2 分割は
+  B ∈ {p+1..m-1} = {1..34} の 34 sub-key、記録済みは B=1,2 のみ。
+- 親 CNF は決定的 (record 毎に cnf_md5 記載・リセット越し同一確認済み)。
+
+### 観察 (有限観察・非決着)
+
+- conflicts rate は 77/s (`c1k2p3`) 〜 4,343/s (`c1k0`) と強く instance 依存。
+  同一 cap 240s で 18k〜438k conflicts と約 24 倍差。
+  `c1k2p3/p5/p6/p7` は 240s で 18k-19k conflicts 台で停滞。
+- second stone ピン後の x2 サブ (`c1k2p0x21/x22`) でも ~800-900k conflicts/200s
+  で未収束。(4,5) m23 レーンの同種 piece は同種の cap で UNSAT 収束させてきた
+  実績との対比で、(4,4) m=35 の piece は 1-2 桁難しい。
+- 運用判断 (ヒューリスティック): 300s 呼び出し上限の本環境では親 piece の
+  決着は期待できない。決着には、より長い cap (呼び出し 800s+) を取れる環境か、
+  さらなる分解 (x3、multi クラス向け row-split) が必要。本日は較正データとして
+  13+2 piece の honest negative とツール群を出版する。
+
+### 事故 (すべて出版前に処理済み・開示)
+
+1. knowledge マウント (noexec) での実行試行が rc=126 を返し、24 行の擬似 INDET
+   (kissat 未起動) を records に混入 → 出版前に全行除去。生成済み CNF の md5
+   記録だけは決定性確認に流用した。以後 work は exec 可な /home/user/work 配下で実行し、
+   knowledge マウントは退避専用。
+2. 2 並列 CNF 生成で OOM (RAM ~2GB)。`c1k2p1` の genfail 1 行を除去・再実行済み。
+   以後 CNF gen は逐次 (`sweep35x2.sh` 設計に反映)。
+3. 環境リセット 2 回 (bash 300s 上限超過)。kit ミラー (knowledge 側退避) から
+   scripts・records を復元し md5 全一致で resume を確認。運用規約として
+   bash 1 呼び出しの合計ソルブ時間は 270s 未満に抑えること (200s cap × 2 wave は不可)。

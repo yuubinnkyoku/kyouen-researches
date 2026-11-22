@@ -55,8 +55,23 @@ artifacts:
 - path: research/experiments/n11-s4-boundary-direct-20261012/input/saved-s6-raw-relocations.json
   role: manifest
   note: 保存S6 raw 2件の履歴由来、移動先、SHA-256を固定
+- path: research/experiments/n11-s4bd-fresh-corpus-regen-20261121/README.md
+  role: source
+  note: 2026-11-22 merge run。決着済みclass corpusのchain-native再生成と最終パイプラインの全結果・受入ゲート・再現手順
+- path: research/experiments/n11-s4bd-fresh-corpus-regen-20261121/output/merge-manifest.json
+  role: manifest
+  note: 基底probe-13 cache byte-preserve + fresh 101行increment(100 direct two-pass LOSS + S6 witness由来TARGET_S5行)のfail-closed merge manifest。merged cache sha256 4fee9d5e...
+- path: research/experiments/n11-s4bd-fresh-corpus-regen-20261121/output/s6-witness-fresh-audit.json
+  role: verifier
+  note: S6 LOSS witnessのfresh 2パス決定性(5,859,060 nodes)、TARGET_S5子境界所属と奇数石AND伝播の独立Board機械監査
+- path: research/experiments/n11-s4bd-fresh-corpus-regen-20261121/output/frontier-after-fresh-regen.json
+  role: certificate
+  note: chain-native cacheによる全3,384 S4子境界独立再監査。第三手被覆119/119・残余[]、対象S4 106/106子LOSS
+- path: research/experiments/n11-s4bd-fresh-corpus-regen-20261121/output/root-60-27-loss-proof-freshregen.json
+  role: certificate
+  note: 119合法root手それぞれへS4 LOSS応手を機械割当した移動毎証明のchain-native再生成。root_outcome LOSS、100/108は対象S4経由
 scope: 11×11標準通常版の二石root {60,27} 一局面。固定元先手視点で119合法手を全て分類する。11×11空盤面の勝敗は含まない。
-evidence: solver-trusted exact S5 evidenceを持つcacheから独立Boardが全3,384 S4 child境界を再生成した。対象S4 `(1297036692683752448,0)` はcanonical S5子106件すべてLOSS。最後のS5 `(1152921504607899649,536870912)` は、15M direct S5 UNKNOWN後、98 S6子のうち保存済み2 WINを再利用し、1Mで96子（77 WIN / 19 UNKNOWN）、そのUNKNOWNのうち15Mで12子（11 WIN / 1 LOSS）を解いた。S6 LOSS witness `(1152921504675009536,536870912)` は5,859,060 nodes。S5 odd ANDはこの一つの子によりLOSS、対象S4 even ORは全106 S5 LOSSによりLOSS。これにより全119 root moveにS4 LOSS応手を確認し、{60,27} even OR rootをLOSSとした。監査receipt23件が参照する202 raw記録を再読し、176 unique rawのSHA-256とreplay fieldsを照合、未追跡local raw参照は0件。unknownのまま残ったS6はroot verdictに不要。solver葉・保存cacheへの信頼は残り、terminal-only独立minimax DAGではない。
+evidence: solver-trusted exact S5 evidenceを持つcacheから独立Boardが全3,384 S4 child境界を再生成した。対象S4 `(1297036692683752448,0)` はcanonical S5子106件すべてLOSS。最後のS5 `(1152921504607899649,536870912)` は、15M direct S5 UNKNOWN後、98 S6子のうち保存済み2 WINを再利用し、1Mで96子（77 WIN / 19 UNKNOWN）、そのUNKNOWNのうち15Mで12子（11 WIN / 1 LOSS）を解いた。S6 LOSS witness `(1152921504675009536,536870912)` は5,859,060 nodes。S5 odd ANDはこの一つの子によりLOSS、対象S4 even ORは全106 S5 LOSSによりLOSS。これにより全119 root moveにS4 LOSS応手を確認し、{60,27} even OR rootをLOSSとした。監査receipt23件が参照する202 raw記録を再読し、176 unique rawのSHA-256とreplay fieldsを照合、未追跡local raw参照は0件。unknownのまま残ったS6はroot verdictに不要。solver葉・保存cacheへの信頼は残り、terminal-only独立minimax DAGではない。 2026-11-22のmerge run（n11-s4bd-fresh-corpus-regen-20261121）が同じ結論をchain-nativeな新鮮計算で再現した。101鍵は15M two-pass fresh再実行で全て歴史監査verdictと一致し、最後のS5はfresh S6 witness再実行(5,859,060 nodes×2)から奇数ANDで導出、全3,384 S4境界・119 root手の逐次証明が再生成され被覆119/119・残余は[]。
 solution:
   board: "11×11"
   level: weak
@@ -77,3 +92,5 @@ solution:
 このS4の完全canonical S5境界106件はすべてexact LOSS。最後の一件は直接S5探索では15M UNKNOWNだったが、保存済みS6 WINを再利用した後、層別探索でS6 LOSS witnessを得た。親S5のAND伝播とS4境界の全子LOSSを独立監査した。
 
 勝敗葉はsolver-trusted exactであり、保存cacheに由来する従来の信頼依存も残る。root coverageと合法境界は独立再生成したが、全ゲーム木を終局まで展開したterminal-only独立minimax証明とは区別する。この結果は `{60,27}` のみで、11×11空盤面の勝敗は決めない。
+
+2026-11-22の最終コミット（merge run）で、この証明は計算全体を新鮮にやり直すchain-native経路で再確立された。101鍵のtwo-pass fresh完全リプレイ（決定性101/101・fresh/history一致・fresh WINゼロ）、S6 witnessの再実行とAND導出、全3,384 S4子境界の独立整数幾何による再監査、そして119 root手すべてへのS4 LOSS応手割当の再生成が全媒体監査として公開されている（`n11-s4bd-fresh-corpus-regen-20261121`）。項目のstatusとscopeは変わらない。

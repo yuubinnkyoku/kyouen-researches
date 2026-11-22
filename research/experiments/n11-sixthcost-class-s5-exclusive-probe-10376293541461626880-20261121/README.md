@@ -1,4 +1,4 @@
-# n11-sixthcost-class-s5-exclusive-probe-10376293541461626880-20261121 (checkpoint state: batch halted on a fresh WIN at k02)
+# n11-sixthcost-class-s5-exclusive-probe-10376293541461626880-20261121 (checkpoint state: second resumption halted on a THIRD fresh WIN at k04; all batch verdicts unconsumed)
 
 Exclusive single-live-parent S5 probe batch for the sixth-cost candidate class
 `10376293541461626880:65536` (coverage {80, 84, 100, 108}),
@@ -86,6 +86,128 @@ pre-registered WIN stopping rule:
   times and the output is byte-identical to the published
   `output/win-finding-ifadopted.json` (sha256 `39ae0e8d...`) on both runs. The
   fetch-back byte audit of the Part 2 commit passed by git blob SHA-1 (12/12 files).
+
+## Checkpoint at k03 (resumption batch): halted on a SECOND fresh WIN (verdicts NOT consumed)
+
+The resumption session re-declared first
+(`research/log/2026-11-21-n11-sixthcost-class10376293541461626880-exclusive-s5-probe-resume-k03-k43-single-owner-note.md`):
+selector re-execution on the resumption host, ALL 229 fail-closed gates PASS under the
+sha-pinned inputs, regenerated selection JSON byte-identical to the published one
+(sha256 `d5e9b059...`), regenerated k03..k43 batch inputs byte-identical, and the
+validation gate 4/4 node-exact ON the resumption host
+(`input/val-gate/`; `replay,0,5,98,0,2000000,0,2000000` x2, `replay,0,5,98,0,15000000,2,3651923`,
+`replay,0,5,99,0,15000000,2,5040200`). At composition time the chain tip was still
+`bb4495e0...` (5,793 rows; the fourth-cost pass-1 has published raws only).
+
+The ladder then ran k03 only and the pre-registered WIN stopping rule fired again:
+
+- k03 `10376293541461626880:65792` (machine order position 3; band 5,041,585 proxy;
+  legal 81): 2M UNKNOWN (result 0, nodes 2,000,000), then **WIN(1)** at 15M with
+  **nodes 9,255,414 on both independent cold runs** (`at15m-run1-k03.out.csv`,
+  `at15m-run2-k03.out.csv`), PLUS a voluntary third cold verification run with identical
+  (result, nodes) (`at15m-run3-verify-k03.out.csv`, honestly labeled beyond the declared
+  pair). Batch halted per pre-registered rule (1): k04..k43 NOT started this session.
+- Verdicts are NOT consumed: no cache increment, no class-status change, no coverage
+  claim. This adds a THIRD unconsumed batch row (k01 LOSS, k02 WIN, k03 WIN); the
+  sixth-cost class now has TWO unconsumed fresh WIN children.
+- `output/win-finding-ifadopted-k03.json` (script `scripts/analyze_win_finding_k03.py`,
+  117 fail-closed gates, deterministic byte-identical output, negative control fails
+  closed) computes TWO IF-ADOPTED scenarios against the pinned chain base `bb4495e0...`:
+  (A) k03-only: exactly two classes UNKNOWN->WIN, the sixth-cost class and the
+  NON-candidate class `1297319267171041280:0` (coverage {48, 50, 80, 84}; the k03
+  membership class `1297036692683751424:64` is already base-stage WIN, no flip);
+  (B) all three unconsumed rows: three classes flip (adding
+  `1297037792211107840:0`, the k02 non-candidate flip). In BOTH scenarios:
+  live candidate classes 62 -> 61, secured third-move coverage UNCHANGED at 117/119
+  (remaining {100, 108}), no class becomes LOSS. NOT a coverage event and NOT a route
+  to the root certificate; the sixth-cost class is WIN-eliminated as a LOSS-completion
+  route for moves {100, 108}.
+- Adoption requirement for k03, same WIN-row precedent: pinned C++
+  second-implementation verification, target
+  `target,0,5,10376293541461626880,65792,81,0,0,0,0,0` @15,000,000 (expected result 1,
+  nodes 9,255,414). No C++ toolchain in this sandbox
+  (re-verified this session), so this verification is delegated and recorded; any later
+  C++ disagreement fails closed in favor of discarding the row. The concurrent
+  third-implementation verdict re-verification (declared 20:45Z, `ceb4eed71`; targets
+  published rows of this lane's claimed keys) did not include k03 at its declaration
+  time and its program extends only with a fresh declaration.
+- k01 remains the only solved-LOSS row of this batch; published bin prior
+  (`bin_prior_all_loss_index` 0.34616 from the class-closure-priority measurement) is
+  mixed, not LOSS-only, consistent with WIN rows appearing in the low-proxy band
+  (k02, k03 both within the 5,041,585 band).
+
+- Post-push reexecution check (resumption checkpoint commit `28a038a57`): the four
+  k03 raw rows re-downloaded at the fixed commit are byte-identical to the local
+  originals; `analyze_win_finding_k03.py` re-run twice on the pushed state: all 117
+  fail-closed gates PASS both times and the output is byte-identical to the published
+  `output/win-finding-ifadopted-k03.json` (sha256 `b0d2498b...`) on both runs. The
+  fetch-back byte audit of the resumption checkpoint commit passed by git blob SHA-1
+  (9/9 files).
+
+## Checkpoint at k04 (second resumption): halted on a THIRD fresh WIN (verdicts NOT consumed)
+
+The second resumption session re-declared first
+(`research/log/2026-11-22-n11-sixthcost-class10376293541461626880-exclusive-s5-probe-resume-k04-k43-single-owner-note.md`,
+commit `65f7a3f8`): D1 selector re-execution on the resumption host, ALL 229
+fail-closed gates PASS under the sha-pinned inputs, regenerated selection JSON
+byte-identical to the published one (sha256 `d5e9b059...`), all 43 regenerated
+k01..k43 batch input CSVs byte-identical; D2 validation gate 4/4 node-exact ON the
+resumption host (`output/val-gate-summary-resume2-20261122.json`, a new file per the
+declaration: this host's wall_s 9/9/17/24 s vs the published first-host 9/9/18/25,
+result/nodes/legal exact on all four rows: at2m x2 result 0 / nodes 2,000,000 /
+legal 98, 99; 15M rows result 2 / nodes 3,651,923 and 5,040,200 / legal 98, 99).
+
+The ladder then ran k04 only and the pre-registered WIN stopping rule fired a THIRD
+time (session-scoped):
+
+- k04 `10376293541461626888:65536` (machine order position 4; band 5,041,585 proxy;
+  legal 83): 2M UNKNOWN (result 0, nodes 2,000,000), then **WIN(1)** at 15M with
+  **nodes 9,433,024 on both independent cold runs** (`at15m-run1-k04.out.csv`,
+  `at15m-run2-k04.out.csv`), PLUS a voluntary third cold verification run with
+  identical (result, nodes) (`at15m-run3-verify-k04.out.csv`, honestly labeled
+  beyond the declared pair). Batch halted per pre-registered rule (1):
+  k05..k43 NOT started this session. Checkpoint raws published at `cb7ffe05`.
+- Cross-implementation support (evidence only, published at `bcc39add` in the
+  k01-k03 third-implementation dir as its k04 addendum, auditor `audit_k04.py`
+  31/31 fail-closed gates): the pinned third implementation reproduces WIN(1)
+  with identical result / expansions 11,020,407 / ttHits 6,092,599 on two full
+  cold runs plus one verify-legal run. Additional evidence only; not adoption.
+- Verdicts are NOT consumed: no cache increment, no class-status change, no
+  coverage claim. This adds a FOURTH unconsumed batch row (k01 LOSS; k02, k03,
+  k04 WIN); the sixth-cost class now has THREE unconsumed fresh WIN children.
+- `output/win-finding-ifadopted-k04.json` (script `scripts/analyze_win_finding_k04.py`,
+  150 fail-closed gates, deterministic byte-identical output, fail-closed tamper
+  controls) computes TWO IF-ADOPTED scenarios against the pinned chain base
+  `bb4495e0...` (5,793 rows): (A) k04-only: exactly ONE class flips UNKNOWN->WIN,
+  the sixth-cost class `10376293541461626880:65536` itself (coverage {80, 84, 100,
+  108}); k04's two other membership classes `1297036692683751552:0` (coverage
+  {77, 87, 100, 108}) and `10376293541461622792:65536` (coverage {77, 80, 84, 87})
+  are already base-stage WIN, no flip. (B) all four unconsumed rows: three classes
+  flip (adding `1297319267171041280:0` coverage {48, 50, 80, 84} via k03 and
+  `1297037792211107840:0` coverage {24, 30, 80, 84} via k02). In BOTH scenarios:
+  live candidate classes 62 -> 61, secured third-move coverage UNCHANGED at
+  117/119 (remaining {100, 108}), no class becomes LOSS. NOT a coverage event and
+  NOT a route to the root certificate; the sixth-cost class is WIN-eliminated as a
+  LOSS-completion route for moves {100, 108}.
+- Adoption requirement for k04, same WIN-row precedent: pinned C++
+  second-implementation verification, target
+  `target,0,5,10376293541461626888,65536,83,0,0,0,0,0` @15,000,000 (expected result 1,
+  nodes 9,433,024). No C++ toolchain in this sandbox (re-verified this session),
+  so this verification is delegated and recorded; any later C++ disagreement fails
+  closed in favor of discarding the row. The third-implementation reproduction
+  (k04 addendum at `bcc39add`) is additional evidence only.
+- k01 remains the only solved-LOSS row of this batch; published bin prior
+  (`bin_prior_all_loss_index` 0.34616 from the class-closure-priority measurement)
+  is mixed, not LOSS-only, consistent with WIN rows appearing in the low-proxy band
+  (k02, k03, k04 all within the 5,041,585 band).
+
+- Post-push reexecution check (k04 witness commit `1ccbe303`): all five published
+  files re-downloaded at the fixed commit are byte-identical to the local staged
+  originals (sha256-verified); `analyze_win_finding_k04.py` re-run TWICE on the
+  pushed state (the script, the re-downloaded published selector `d5e9b059...`, and
+  all 15 published batch raw rows): all 150 fail-closed gates PASS both times and
+  the output is byte-identical to the published `output/win-finding-ifadopted-k04.json`
+  (sha256 `06041fcd...`) on both runs.
 
 Inputs and consumed pins (sha-verified, not duplicated here):
 

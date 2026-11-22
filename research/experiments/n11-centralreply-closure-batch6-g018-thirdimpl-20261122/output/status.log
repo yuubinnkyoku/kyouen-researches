@@ -1,0 +1,14 @@
+RUN key=ng1 tag=a kind=negative rc=1 out=output/negative/ng1.a.out third,ng1a,5,88,,GATE_FAIL,"legal count mismatch: derived=87 declared=88"
+RUN key=ng2 tag=a kind=negative rc=1 out=output/negative/ng2.a.out third,ng2a,6,87,,GATE_FAIL,"stone count mismatch: bits=5 declared=6"
+RUN key=k02a tag=a kind=anchor rc=0 out=output/anchors/k02a.a.out third,k02aa,5,87,87,1,9106337,4991527,27.06,1297036692683751424,68157440,clean,quads=95670,ttOverwrites=4912053,memoPower=22
+RUN key=k02a tag=b kind=anchor rc=0 out=output/anchors/k02a.b.out third,k02ab,5,87,87,1,9106337,4991527,26.78,1297036692683751424,68157440,clean,quads=95670,ttOverwrites=4912053,memoPower=22
+RUN key=l1a tag=a kind=anchor rc=0 out=output/anchors/l1a.a.out third,l1aa,5,116,116,2,7660602,3951175,23.24,13019119616,16448,clean,quads=95670,ttOverwrites=3466722,memoPower=22
+RUN key=l1a tag=b kind=anchor rc=0 out=output/anchors/l1a.b.out third,l1ab,5,116,116,2,7660602,3951175,23.14,13019119616,16448,clean,quads=95670,ttOverwrites=3466722,memoPower=22
+RUN key=g018 tag=a kind=target rc=0 out=output/targets/g018.a.out third,g018a,5,78,78,1,6776591,3973507,20.35,1734519175235239936,0,clean,quads=95670,ttOverwrites=2586078,memoPower=22
+RUN key=g001 tag=a kind=target rc=0 out=output/targets/g001.a.out third,g001a,5,82,82,2,4143095,2368875,12.77,1158058423066034176,0,clean,quads=95670,ttOverwrites=356331,memoPower=22
+RUN key=g011 tag=a kind=target rc=0 out=output/targets/g011.a.out third,g011a,5,89,89,2,9926469,5440253,29.47,1158058422931849216,0,clean,quads=95670,ttOverwrites=5732166,memoPower=22
+RUN key=g016 tag=a kind=target rc=0 out=output/targets/g016.a.out third,g016a,5,83,83,2,1690556,1075604,5.59,1158058422965370880,0,clean,quads=95670,ttOverwrites=192,memoPower=22
+RUN key=g018 tag=b kind=target rc=0 out=output/targets/g018.b.out third,g018b,5,78,78,1,6776591,3973507,20.30,1734519175235239936,0,clean,quads=95670,ttOverwrites=2586078,memoPower=22
+RUN key=g001 tag=b kind=target rc=0 out=output/targets/g001.b.out third,g001b,5,82,82,2,4143095,2368875,12.74,1158058423066034176,0,clean,quads=95670,ttOverwrites=356331,memoPower=22
+RUN key=g011 tag=b kind=target rc=0 out=output/targets/g011.b.out third,g011b,5,89,89,2,9926469,5440253,28.86,1158058422931849216,0,clean,quads=95670,ttOverwrites=5732166,memoPower=22
+RUN key=g016 tag=b kind=target rc=0 out=output/targets/g016.b.out third,g016b,5,83,83,2,1690556,1075604,5.53,1158058422965370880,0,clean,quads=95670,ttOverwrites=192,memoPower=22

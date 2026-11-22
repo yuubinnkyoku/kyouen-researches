@@ -1,0 +1,240 @@
+{
+  "generated": "2026-11-22T06:11:34.486Z",
+  "lane": "s12-s13-sat-stabilization-20261122 addendum: n=8 witness K0032 catalogue lookup",
+  "convention": {
+    "board": "8x8",
+    "cell": "[x,y]",
+    "bit": "p = x + 8*y, mask bit p",
+    "masks_stored_as": "decimal strings (values exceed 2^53; JSON double would corrupt them)"
+  },
+  "catalog_recovery": {
+    "from": "published text artifacts only (binary round4_b371.bin not read)",
+    "round46_probe": {
+      "embeddings": 1632,
+      "distinct_source_masks": 408,
+      "per_mask_offsets": [
+        "[0,0]",
+        "[0,1]",
+        "[1,0]",
+        "[1,1]"
+      ]
+    },
+    "round10_orbits": {
+      "representatives": 51,
+      "rep_mask_rederivation_from_stones": "ALL 51 EXACT MATCH (BigInt vs text)",
+      "source_sha256_of_b371_bin_claim": "f91c81d4eab5a0cf09e613fde697e1584eabf146210263f64499150fac03d0e1"
+    },
+    "cross_check": "51 reps x 8 board-D4 images = 408 distinct, disjoint, set-equal to round46 distinct source masks"
+  },
+  "input_sha256": {
+    "round10_small_saturation_json": "c5c4e510ca4894c132a2ac2e0c6037083f8bde889babbc862a168dcf0e11b2c1",
+    "round46_n8_to_n9_embeddings_probe_json": "584f4c9b62bc31272628c31aec41dc81d38a607e6e3eb6908599f919b838b6d1"
+  },
+  "witnesses": [
+    {
+      "file": "output/wit_n8k8.json",
+      "derived_from": {
+        "model": "logs/v2n8k8_unsat.log",
+        "k": 8,
+        "shuffle": null,
+        "nLits": 59280
+      },
+      "stones": [
+        [
+          6,
+          0
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          1,
+          5
+        ]
+      ],
+      "mask": "2501885820992",
+      "direct_member_of_catalog": true,
+      "d4_image_masks_in_catalog": 8,
+      "d4_image_masks": [
+        "2501885820992",
+        "581245826909351936",
+        "70790206717954",
+        "4611690984584118272",
+        "3439272371718160",
+        "13541585207693576",
+        "144150515830226944",
+        "1191202101443169280"
+      ],
+      "round10_orbit_index": 8,
+      "round10_orbit_rep_mask": "2501885820992",
+      "round10_orbit_rep_stones": [
+        [
+          6,
+          0
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          1,
+          5
+        ]
+      ],
+      "witness_equals_orbit_rep_stones": true,
+      "essential_curve_count": 19
+    },
+    {
+      "file": "output/v3wit_n8k8.json",
+      "derived_from": {
+        "model": "logs/v3n8k8.log",
+        "k": 8,
+        "shuffle": null,
+        "nLits": 59280
+      },
+      "stones": [
+        [
+          2,
+          1
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "mask": "1225049536376906752",
+      "direct_member_of_catalog": true,
+      "d4_image_masks_in_catalog": 8,
+      "d4_image_masks": [
+        "1225049536376906752",
+        "153125239189012608",
+        "9799835022675420416",
+        "46161965172654097",
+        "72127963205731392",
+        "9223374238428307458",
+        "10414608632381576",
+        "4612882394456784897"
+      ],
+      "round10_orbit_index": 46,
+      "round10_orbit_rep_mask": "10414608632381576",
+      "round10_orbit_rep_stones": [
+        [
+          3,
+          0
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "witness_equals_orbit_rep_stones": false,
+      "essential_curve_count": 16
+    }
+  ],
+  "negative_controls": [
+    {
+      "witness": "output/wit_n8k8.json",
+      "tampered_mask": "2501885820929",
+      "in_catalog": false
+    },
+    {
+      "witness": "output/v3wit_n8k8.json",
+      "tampered_mask": "1225049536376905730",
+      "in_catalog": false
+    }
+  ],
+  "notes": [
+    "Catalog completeness (408 = all maximal safe 8-stone sets on 8x8) is K0032 established debt; this lookup identifies WHICH member each witness is, and does not re-prove completeness.",
+    "Both witnesses are 3-way verified maximal-safe per the s12-s13 README; membership is logically implied once the K0032 enumeration is trusted.",
+    "s_8 = 8 unaffected. essential_curve_count values are per-set features from round10 (histogram over 408 sets: 13:8,14:8,15:48,16:32,17:32,18:96,19:40,20:56,21:24,22:24,23:24,24:8,27:8)."
+  ]
+}

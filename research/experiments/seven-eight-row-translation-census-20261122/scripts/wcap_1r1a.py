@@ -1,0 +1,158 @@
+#!/usr/bin/env python3
+"""Cap-witness 1R1A sweep for widths 66..80 ((7,4) lane).
+
+Cap witness = w65-01 id@+11 base + cap stone (0,6) on 7x66, rows all exactly
+q-1=3 (all-cap structure). It is safe+maximal at EVERY width >= 65 (safe is
+board-independent, and every row line carries exactly q-1 stones, so every
+empty cell is blocked by its row line; established separately).
+
+This sweep asks the M-question: does a DEFICIENT (some row < q-1) maximal safe
+configuration exist at width w in 66..80 via a single relocate edit
+(remove one cap-witness stone, add one elsewhere, add-row != removed-row so the
+removed row stays deficient)? Screen = fastv (dual-checked against
+verify_int.verify on the first 500 states of each width and every 250th
+state overall); every screen hit is re-verified by verify_int.verify (integer
+determinant) and verifyB (bisector + Fraction, method-disjoint) plus tamper
+checks (drop each stone -> maximal must break).
+"""
+import json, os, sys, time
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from verify_int import verify
+from fastv import Screen
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+OUT = os.path.join(HERE, "output66b")
+os.makedirs(OUT, exist_ok=True)
+BUDGET = float(sys.argv[1]) if len(sys.argv) > 1 else 240.0
+
+def verifyB(stones, M, H, Q):
+    import itertools
+    from fractions import Fraction
+
+    def circB(p1, p2, p3):
+        (x1, y1), (x2, y2), (x3, y3) = p1, p2, p3
+        ux, uy = x2-x1, y2-y1; vx, vy = x3-x1, y3-y1
+        rhsu = Fraction((x2*x2+y2*y2) - (x1*x1+y1*y1), 2)
+        rhsv = Fraction((x3*x3+y3*y3) - (x1*x1+y1*y1), 2)
+        det = ux*vy - uy*vx
+        if det == 0:
+            return None
+        cx = (rhsu*vy - rhsv*uy) / det
+        cy = (ux*rhsv - vx*rhsu) / det
+        r2 = (cx - x1)**2 + (cy - y1)**2
+        return (cx, cy, r2)
+
+    S = list(stones); Sset = set(S)
+    circles = {}
+    lines = {}
+    for t in itertools.combinations(S, 3):
+        c = circB(*t)
+        if c:
+            circles[c] = None
+    for pair in itertools.combinations(S, 2):
+        (x1, y1), (x2, y2) = pair
+        if x1 == x2: lines.setdefault(('v', x1), None)
+        elif y1 == y2: lines.setdefault(('h', y1), None)
+        else: lines.setdefault(('d', Fraction(y2-y1, x2-x1), Fraction(y1*(x2-x1) - (y2-y1)*x1, x2-x1)), None)
+    unsafe = 0; cntmap = {}
+    for c in circles:
+        cnt = sum(1 for p in S if (c[0]-p[0])**2 + (c[1]-p[1])**2 == c[2])
+        cntmap[('c', c)] = cnt
+        if cnt >= Q: unsafe += 1
+    for ln in lines:
+        if ln[0] == 'v': cnt = sum(1 for p in S if p[0] == ln[1])
+        elif ln[0] == 'h': cnt = sum(1 for p in S if p[1] == ln[1])
+        else: cnt = sum(1 for p in S if ln[1]*p[0] + ln[2] == p[1])
+        cntmap[('l', ln)] = cnt
+        if cnt >= Q: unsafe += 1
+    blocked = set()
+    for key, cnt in cntmap.items():
+        if cnt != Q-1: continue
+        if key[0] == 'c':
+            cx, cy, r2 = key[1]
+            for x in range(M):
+                for y in range(H):
+                    if (cx-x)**2 + (cy-y)**2 == r2: blocked.add((x, y))
+        else:
+            ln = key[1]
+            if ln[0] == 'v':
+                for y in range(H): blocked.add((ln[1], y))
+            elif ln[0] == 'h':
+                for x in range(M): blocked.add((x, ln[1]))
+            else:
+                a, b = ln[1], ln[2]
+                for x in range(M):
+                    if (a*x + b).denominator == 1 and 0 <= a*x + b < H: blocked.add((x, int(a*x+b)))
+    empty = [(x, y) for x in range(M) for y in range(H) if (x, y) not in Sset]
+    un = [c for c in empty if c not in blocked]
+    return unsafe == 0, not un, len(un)
+
+def main():
+    t0 = time.time()
+    W = json.load(open(os.path.join(HERE, "w66-cap-witness.json")))
+    st = [tuple(s) for s in W["stones"]]
+    H, Q = 7, 4
+    progPath = os.path.join(OUT, "wcap1r1a_progress.json")
+    hitsPath = os.path.join(OUT, "wcap1r1a_hits.jsonl")
+    logPath = os.path.join(OUT, "wcap1r1a_log.jsonl")
+    prog = {"w": 66, "idx": 0, "screens": 0, "dual": 0, "mismatch": 0, "hits": 0}
+    if os.path.exists(progPath):
+        prog.update(json.load(open(progPath)))
+    flog = open(logPath, "a")
+    fhits = open(hitsPath, "a")
+    screenCache = {}
+
+    for M in range(prog["w"], 81):
+        if time.time() - t0 > BUDGET:
+            break
+        scr = Screen(st, M, H, Q)
+        empty = [(x, y) for x in range(M) for y in range(H) if (x, y) not in set(st)]
+        cand = [(r, a) for r in st for a in empty if a[1] != r[1]]
+        for idx in range(prog["idx"], len(cand)):
+            if time.time() - t0 > BUDGET:
+                break
+            r, a = cand[idx]
+            sc = scr.screen((r,), a, None)
+            prog["screens"] += 1
+            if prog["dual"] < 500 or prog["screens"] % 250 == 0:
+                vv = verify(sorted([s for s in st if s != r] + [a]), M, H, Q)
+                prog["dual"] += 1
+                if (vv["safe"] and vv["maximal"]) != (sc[0] and sc[1]):
+                    prog["mismatch"] += 1
+                    flog.write(json.dumps({"event": "MISMATCH", "w": M, "r": r, "a": a,
+                                           "screen": [sc[0], sc[1]], "verify": [vv["safe"], vv["maximal"]]}) + "\n")
+                    flog.flush()
+                    raise SystemExit("SCREEN MISMATCH")
+            if sc[0] and sc[1]:
+                state = sorted([s for s in st if s != r] + [a])
+                res = verify(state, M, H, Q)  # authoritative
+                bsafe, bmax, bun = verifyB(state, M, H, Q)
+                tamper = []
+                for s2 in state:
+                    t2 = verify([p for p in state if p != s2], M, H, Q)
+                    tamper.append([list(s2), bool(t2["maximal"])])
+                rows = [0]*H
+                for (x, y) in state: rows[y] += 1
+                fhits.write(json.dumps({
+                    "w": M, "removed": list(r), "added": list(a), "stones": state,
+                    "rows": rows, "deficientRows": rows.count(0) or (Q-1) - min(rows),
+                    "sysA": {"safe": res["safe"], "maximal": res["maximal"], "unblockedCount": res["unblockedCount"]},
+                    "sysB": {"safe": bsafe, "maximal": bmax, "unblockedCount": bun},
+                    "tamperAllMustBeFalse": tamper,
+                }) + "\n")
+                fhits.flush()
+                prog["hits"] += 1
+                flog.write(json.dumps({"event": "HIT", "w": M, "r": r, "a": a}) + "\n")
+                flog.flush()
+            prog["idx"] = idx + 1
+        if prog["idx"] >= len(cand):
+            flog.write(json.dumps({"event": "widthDone", "w": M, "cands": len(cand),
+                                   "screens": prog["screens"], "hits": prog["hits"]}) + "\n")
+            flog.flush()
+            prog["w"] = M + 1
+            prog["idx"] = 0
+    json.dump(prog, open(progPath, "w"))
+    flog.write(json.dumps({**prog, "wall": round(time.time()-t0, 1)}) + "\n")
+    print(json.dumps(prog))
+
+main()

@@ -1,0 +1,72 @@
+---
+id: K1219
+title: (7,4) w66-cap: 21石 all-cap witness ファミリー (幅65以上全幅safe+maximal) と幅66 seed周辺 ±2編集欠損手術の完備陰性
+kind: proposition
+status: proved
+topics: [rectangles, maximal-safe, fixed-width, stable-class]
+aliases: []
+relations:
+- type: extends
+  target: K1218
+  note: K1218 残課題の幅66クラス(ii) 2R2A を完走 (分岐B・C 含む全2R2A)、かつ T占有 (0R1A) クラスを追加して seed 周辺手術プログラムを完結
+- type: related
+  target: K0069
+  note: (2,4) の「m>=9 全 maximal 6石 (all-cap 安定クラス)」の (7,4) 対応物: all-cap 21石安定クラスが幅65以上全幅で存在
+- type: related
+  target: K1211
+  note: 単一石集合の多幅 witness 記録 (幅54..65の12連続) のさらに上を行く「全幅」ファミリー
+- type: depends_on
+  target: K0318
+  note: 上界 U=1929 は「欠損 witness」の不在を主張し all-cap とは両立 (本項は all-cap の存在を示す)
+artifacts:
+- path: research/experiments/seven-eight-row-translation-census-20261122/witness/w66-cap-witness.json
+  role: source
+  note: 7x66 21石 rows [3,3,3,3,3,3,3] (w65-01 id@shift11 base + cap (0,6))
+- path: research/experiments/seven-eight-row-translation-census-20261122/scripts/fastv.py
+  role: source
+  note: 正確高速screen (残存石カウント方式、verify_intとの直接照合機構込み)
+- path: research/experiments/seven-eight-row-translation-census-20261122/scripts/surgery66_2r2a.py
+  role: source
+  note: 幅66 2R2A完全走査 (分岐A/B/C、行ゲート+hotcellゲート、resumable)
+- path: research/experiments/seven-eight-row-translation-census-20261122/scripts/wcap_1r1a.py
+  role: source
+  note: cap witness 周辺 1R1A 欠損置換掃討 (幅66..80)
+---
+
+## 命題
+
+**(1) w66-cap-01**: 7×66 盤に 21石 row-full-cap safe+maximal 配置が存在する:
+stones = w65-01 id像@shift11 base 20石 + cap 石 (0,6), rows [3,3,3,3,3,3,3], unblocked 0。
+2系統検証 (整数行列式 verify_int / 垂直二等分線+Fraction 独立実装)、tamper 21/21 (1石除去→全て非maximal)。
+
+**(2) 全幅ファミリー定理**: 同一石集合は**任意の幅 m ≥ 65 の 7×m 盤で safe+maximal**。
+証明: safe は「石集合の曲線上の石数」のみで定義され盤幅に依存しない (census は 3つ組経由で完結)。
+maximal: 各行 y の水平直線はちょうど 3 (= q−1) 石を運ぶため、任意の盤幅で全空セル (x,y) が行 y の直線で
+block される。配置は同一石集合の任意並進・鏡像で成立 (span 65 ≤ m)。
+機械検証: 幅65..80 の全 4(m−64) 配置が全て witness (mnemonic: 幅66で8/8, 80で64/64)、
+追加で幅 1500・1929 でも safe+maximal。よって (7,4) の all-cap 安定クラスは幅65以上**全幅**で存在する
+(K0069 の 6石安定クラスの対応物; M 計算には寄与しない: all-cap は行欠損を含まない)。
+
+**(3) 行和パリティ補題**: (7,4) def-mode 配置で |S| = 21 なら全行3石 (all-cap)、|S| ≥ 22 は不可。
+ゆえに 21石になる編集クラス (0R1A・1R2A) は「欠損 witness」を構成できず (0R2A = 22石は def-mode 外)、
+幅66 seed 手術の欠損観点の完結に必要なのは 1R1A・2R1A・2R2A のみ (全て完走済み)。
+
+**(4) 幅66 seed周辺の完備陰性** (scoped local negative、不決着):
+- w65-01 id@shift11 base (T=(0,6) 唯一 uncovered) 周辺: 1R1A 1,860 / 2R1A 17,670 / 2R2A 全分岐
+  A(c0=1 両add) 9,657ペア + B(c0=2 + free add) 125,510ペア + C(T占有) 441ペア = 135,608ペア、
+  gate通過 1,615,395、固有状態 102,385 を screen (fastv; 1,877状態を verify_int と照合、0不一致)、
+  **0 hits**。0R1A row6 全64セル中 T のみが (1) の all-cap witness を与え、他63セルは陰性
+  (all-cap であり全て欠損 witness ではない)。
+- cap witness (21石) 周辺: 1R1A 欠損置換 (add行 ≠ remove行) を幅66..80 で全列挙
+  (132,300 screens、1,027状態二重照合 0不一致)、**0 hits**。1R0A は tamper が直接示す通り
+  21通り全て非maximal、減少側編集は non-maximality の単調性で従う。
+- よって **7×66 の欠損 witness はこの seed 両家族の ±2 編集近傍に存在しない**
+  (seed 近傍 scoped; 全空間不在は主張しない)。M_{7,4} ≥ 66 不変、7×66 は UNDETERMINED。
+
+## 限界とスコープ
+
+- 下界・存在主張のみ。7×66 の全体的不在は不主張 (UNDETERMINED)。
+- 候補数・screens数は勝敗ではなく、標準 11×11 空盤・二石 root・class 1/2/4 は本レーン非接触で UNKNOWN。
+- 検証器 verify_int の3×3行列式円と fastv の残存石カウント screen は列挙論が同一で実装系が異なる
+  (1,877 状態の直接照合で 0 不一致)。cap witness 自身は verify_int と 2系統目 (bisector/Fraction)
+  で検証し、発見経路の screen は再判定に使っていない。

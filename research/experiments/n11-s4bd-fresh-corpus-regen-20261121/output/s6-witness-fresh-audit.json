@@ -1,0 +1,83 @@
+{
+ "schema": "n11-s4bd-freshregen-s6-witness-audit-v1",
+ "s6_key": [
+  1152921504675009536,
+  536870912
+ ],
+ "s6_stones": 6,
+ "s6_legal": 87,
+ "s6_budget": 15000000,
+ "s6_is_or": 1,
+ "parent_s5": [
+  1152921504607899649,
+  536870912
+ ],
+ "parent_relation_independently_verified": true,
+ "and_polarity_derivation": "the 5-stone parent is an AND node (second player to move): one exact LOSS child proves the parent LOSS for the original first player",
+ "derived_parent_s5_outcome": "LOSS",
+ "loss_witnesses": [
+  [
+   1152921504675009536,
+   536870912
+  ]
+ ],
+ "pass_results": [
+  {
+   "raw_path": "research/experiments/n11-s4bd-fresh-corpus-regen-20261121/output/raw/s6w.p1.out",
+   "row_sequence": 0,
+   "stones": 6,
+   "legal": 87,
+   "is_or": 1,
+   "budget": 15000000,
+   "verdict_code": 2,
+   "nodes": 5859060,
+   "key": [
+    1152921504675009536,
+    536870912
+   ]
+  },
+  {
+   "raw_path": "research/experiments/n11-s4bd-fresh-corpus-regen-20261121/output/raw/s6w.p2.out",
+   "row_sequence": 0,
+   "stones": 6,
+   "legal": 87,
+   "is_or": 1,
+   "budget": 15000000,
+   "verdict_code": 2,
+   "nodes": 5859060,
+   "key": [
+    1152921504675009536,
+    536870912
+   ]
+  }
+ ],
+ "pass_determinism": true,
+ "published_oct12_row": {
+  "raw_path": "research/experiments/n11-s4-boundary-direct-20261012/output/raw/s6-211.csv",
+  "stones": 6,
+  "legal": 87,
+  "is_or": 1,
+  "budget": 15000000,
+  "verdict_code": 2,
+  "nodes": 5859060,
+  "key": [
+   1152921504675009536,
+   536870912
+  ]
+ },
+ "new_s6_results": [
+  {
+   "key": [
+    1152921504675009536,
+    536870912
+   ],
+   "verdict": "LOSS",
+   "nodes": 5859060,
+   "raw_path": "research/experiments/n11-s4bd-fresh-corpus-regen-20261121/output/raw/s6w.p1.out",
+   "raw_sha256": "b317b0b90f0c7d4d2a19eb43a3327a2d9aeff9d40cfe49ccf89f7f8813231e3b",
+   "raw_pass2_path": "research/experiments/n11-s4bd-fresh-corpus-regen-20261121/output/raw/s6w.p2.out",
+   "raw_pass2_sha256": "8bfe50ee9de83fc7d26346dba70075f85ddcf885f2be25ef21e83e01ad05b451"
+  }
+ ],
+ "trust": "fresh execution by the pinned Node.js replica jsreplay.js (sha256 845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df), two independent passes, independent Board geometry checks, historical cross-check against the published Oct 12 raw"
+}

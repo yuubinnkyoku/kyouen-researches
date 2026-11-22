@@ -1,0 +1,363 @@
+{
+ "description": "Pure-translation free-append census of all published (6,5) m<=30 witness placements (15 unique iso-classes incl. D4 images), scan maxw=50. Reach = free_append_reach (width beyond which extension stops). Band top 31 is achieved only by c009 (L2) at offset+1 (the published witness).",
+ "system": "append_criterion.py (Fraction) driven by census_shift.py; cross-checked with surgery_gen.js and det_q_verify.py",
+ "config_rows": [
+  {
+   "cfg_id": "c000",
+   "provenance": [
+    "q56_s6x19q5_def_6x19:id"
+   ],
+   "span": 19,
+   "band_top": 19,
+   "covered_ranges": [
+    [
+     19,
+     19,
+     0
+    ]
+   ],
+   "maxw": 50
+  },
+  {
+   "cfg_id": "c001",
+   "provenance": [
+    "q56_s6x22q5_def_6x22:id"
+   ],
+   "span": 22,
+   "band_top": 22,
+   "covered_ranges": [
+    [
+     22,
+     22,
+     0
+    ]
+   ],
+   "maxw": 50
+  },
+  {
+   "cfg_id": "c002",
+   "provenance": [
+    "q56_s6x23q5_def_6x23:id"
+   ],
+   "span": 19,
+   "band_top": 23,
+   "covered_ranges": [
+    [
+     19,
+     19,
+     0
+    ],
+    [
+     20,
+     20,
+     1
+    ],
+    [
+     21,
+     21,
+     2
+    ],
+    [
+     22,
+     22,
+     3
+    ],
+    [
+     23,
+     23,
+     4
+    ]
+   ],
+   "maxw": 50
+  },
+  {
+   "cfg_id": "c003",
+   "provenance": [
+    "q56_s6x25q5_def_6x25:id"
+   ],
+   "span": 23,
+   "band_top": 25,
+   "covered_ranges": [
+    [
+     23,
+     24,
+     0
+    ],
+    [
+     24,
+     25,
+     1
+    ]
+   ],
+   "maxw": 50
+  },
+  {
+   "cfg_id": "c004",
+   "provenance": [
+    "q56_s6x26q5_def_6x26:id"
+   ],
+   "span": 20,
+   "band_top": 26,
+   "covered_ranges": [
+    [
+     20,
+     24,
+     0
+    ],
+    [
+     21,
+     25,
+     1
+    ],
+    [
+     22,
+     26,
+     2
+    ]
+   ],
+   "maxw": 50
+  },
+  {
+   "cfg_id": "c005",
+   "provenance": [
+    "q56_s6x20q5_def_6x20:id"
+   ],
+   "span": 20,
+   "band_top": 21,
+   "covered_ranges": [
+    [
+     20,
+     21,
+     0
+    ]
+   ],
+   "maxw": 50
+  },
+  {
+   "cfg_id": "c006",
+   "provenance": [
+    "ext_28to29_6x29:id"
+   ],
+   "span": 25,
+   "band_top": 29,
+   "covered_ranges": [
+    [
+     25,
+     25,
+     0
+    ],
+    [
+     26,
+     26,
+     1
+    ],
+    [
+     27,
+     27,
+     2
+    ],
+    [
+     28,
+     28,
+     3
+    ],
+    [
+     29,
+     29,
+     4
+    ]
+   ],
+   "maxw": 50
+  },
+  {
+   "cfg_id": "c007",
+   "provenance": [
+    "k0808_6x19:id"
+   ],
+   "span": 19,
+   "band_top": 19,
+   "covered_ranges": [
+    [
+     19,
+     19,
+     0
+    ]
+   ],
+   "maxw": 50
+  },
+  {
+   "cfg_id": "c008",
+   "provenance": [
+    "ext6_a0_6x30:id"
+   ],
+   "span": 26,
+   "band_top": 30,
+   "covered_ranges": [
+    [
+     26,
+     30,
+     0
+    ]
+   ],
+   "maxw": 50
+  },
+  {
+   "cfg_id": "c009",
+   "provenance": [
+    "L2_6x30:id"
+   ],
+   "span": 23,
+   "band_top": 31,
+   "covered_ranges": [
+    [
+     23,
+     28,
+     0
+    ],
+    [
+     24,
+     29,
+     1
+    ],
+    [
+     25,
+     30,
+     2
+    ],
+    [
+     26,
+     31,
+     3
+    ]
+   ],
+   "maxw": 50
+  },
+  {
+   "cfg_id": "c010",
+   "provenance": [
+    "q56_s6x28q5_rowY0_6x28:id"
+   ],
+   "span": 22,
+   "band_top": 29,
+   "covered_ranges": [
+    [
+     22,
+     26,
+     0
+    ],
+    [
+     23,
+     27,
+     1
+    ],
+    [
+     24,
+     28,
+     2
+    ],
+    [
+     25,
+     29,
+     3
+    ]
+   ],
+   "maxw": 50
+  },
+  {
+   "cfg_id": "c011",
+   "provenance": [
+    "ext6_a1_6x30:id"
+   ],
+   "span": 26,
+   "band_top": 30,
+   "covered_ranges": [
+    [
+     26,
+     26,
+     0
+    ],
+    [
+     27,
+     27,
+     1
+    ],
+    [
+     28,
+     28,
+     2
+    ],
+    [
+     29,
+     29,
+     3
+    ],
+    [
+     30,
+     30,
+     4
+    ]
+   ],
+   "maxw": 50
+  },
+  {
+   "cfg_id": "c012",
+   "provenance": [
+    "q56_s6x27q5_def_6x27:id"
+   ],
+   "span": 24,
+   "band_top": 27,
+   "covered_ranges": [
+    [
+     24,
+     27,
+     0
+    ]
+   ],
+   "maxw": 50
+  },
+  {
+   "cfg_id": "c013",
+   "provenance": [
+    "q56_s6x21q5_def_6x21:id"
+   ],
+   "span": 20,
+   "band_top": 21,
+   "covered_ranges": [
+    [
+     20,
+     20,
+     0
+    ],
+    [
+     21,
+     21,
+     1
+    ]
+   ],
+   "maxw": 50
+  },
+  {
+   "cfg_id": "c014",
+   "provenance": [
+    "q56_s6x24q5_def_6x24:id"
+   ],
+   "span": 22,
+   "band_top": 24,
+   "covered_ranges": [
+    [
+     22,
+     23,
+     0
+    ],
+    [
+     23,
+     24,
+     1
+    ]
+   ],
+   "maxw": 50
+  }
+ ],
+ "result": "max free_append_reach over all placements = 31 (c009 offset+1). No placement reaches 32 within maxw 50.",
+ "claim_scope": "bounded-family observation on the published pool; not a population census of all 23-stone placements; absence at 6x32 not claimed"
+}

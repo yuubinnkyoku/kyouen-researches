@@ -1,0 +1,26 @@
+{
+  "width": 69,
+  "bases": 199,
+  "fresh": {
+    "mode": "fresh",
+    "records": 199,
+    "bases": 199,
+    "total_row_capacity_candidates": 426099795,
+    "total_safe": 43009353,
+    "total_safe_maximal": 0,
+    "bases_with_one_for_zero_hits": 0,
+    "wall_ms_deltas_sum_informal": 18618606
+  },
+  "holes": {
+    "mode": "holes",
+    "records": 199,
+    "bases": 199,
+    "total_row_capacity_candidates": 435695973,
+    "total_safe": 45368697,
+    "total_safe_maximal": 0,
+    "bases_with_one_for_zero_hits": 0,
+    "wall_ms_deltas_sum_informal": 18141821
+  },
+  "result": "no witnesses in the complete fresh+holes 2-for-2 neighborhoods of all 199 published bases; 1-for-0 (19-stone) also 0 hits everywhere",
+  "bound_unchanged": "M_{7,4} in [69,1929]"
+}

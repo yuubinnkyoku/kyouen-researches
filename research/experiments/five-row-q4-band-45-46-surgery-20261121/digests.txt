@@ -1,0 +1,52 @@
+=== output digests (sha256, sorted by name) ===
+d16eaa76809095a9ca054bf96a613d2718bd07ddcedeae0b0bcdf38f55167dc5  output/bank-45plus.json
+45432e45c87822a4c6ce09b459c62efb2ac9b2acb1c3722b717ea71b526a9e36  output/bank-46.json
+8e606b52c172e02fdea940d25a0e50a24c71e2fdd618d2c4eb8fafd41b23fb7a  output/bank-tamper.json
+aa8435bc1970282876b2e64abb09079688616a48e81c334a7ca5c2896a9e6a40  output/census-45w-extract.json
+64f3a5732e77fd766735a53116979b813d5c3cdf0846d652b27e659096fc5fe7  output/census-45w.json
+789c09a21ce367ea1877e6c436d89fa2ed38fe8b0b4ba8b98b071b76290b3328  output/census-5row-m40seeds.json
+d5d23fb2e4974d114892f1ca11d627307d68f2f6fac6145647b7023648777e25  output/census-R44seeds.json
+dce4b65d48cb461d855f8da74344bcb3d3d304854df6753cdf04c30b508d7b6a  output/control45-m39-m40-joint.json
+06dee2f2c75133b6def7f18f1facb06e192944cfce835fbda59c378b12c36447  output/criterion-45.txt
+ff573d1632836935e227d067d41e21428be1d37f796a35df24de11d609f4b358  output/main45-budget2.jsonl
+eb85862a741c26e227611a562dbebf0a8c75675882de66e6ec9331e32b9fdd64  output/main47-from46-budget2.jsonl
+92a41f0cbfc7ea7b2d196be63a4621ae2d724f151d27e63d7f86b97cd4bdb64b  output/main47-from46-budget3.jsonl
+3bf20258b2230e1c5f78b8c0f090c173bb9c8b7a21c26c69cf469e5992dd092a  output/staircase-45.txt
+cbb881cda0f2e870fc63334e39047599e4deeb32b9b74e07f865c8b49e4301d8  output/verify-engine-45.json
+d92c66e2c53304608d18edf425d97b626f462b0c45756d90e77fae931693e89e  output/verify-engine-46-R46census.json
+d83a01b3d3e12588c8d170648cad763b4a468f5106e049788c7acc78c941c3de  output/verify-engine-46.json
+2659b316aba6b8966e91de642124f94b2742e2fa22f0f3caf67824b88fdd836a  output/verify-node-45.json
+b6face0b641f88062d9847b11a2423759fb617059b4372c93acb3db9ac606251  output/verify-node-46-R46census.json
+458904b943430518cbf5f87acc0dd429b39a874f26fff9a1dc4309732a528480  output/verify-node-46.json
+3fb1d80f7d4b6b6137e7f76ba9979ae3fd958f79d86a78a7dc6dc33afcf9c2bc  output/verify-tamper-node.json
+3ee19b7f8c5592a6cae47cf390678bbce2aceddc1f0d33fa48a2f2cbb8827b6e  output/verify-tamper.txt
+
+=== script pins (this experiment) ===
+113e7818f539b96992cd6b50aa3a07c1e376938199c61ebc975bd1d7dde1a7bf  scripts/surgery45.py
+99bd45aea4f75e1a5a3cfb14beb39e163eb5d6ad9596b710a20e789df5b65cda  scripts/engine_v2.py
+d08d8fb16a5ed9cae11ba781ff5606c7f07da77c7e6bc934b88b1b3fc59a51d0  scripts/append_criterion.py
+f629b16e1482de0e3788746438162c842ed0aa2962b6fa76fd6062766274efb5  scripts/verify_frac.py
+fb2c8c9ec49412efbd791027badf27871b72b8f8a74e7861b1533e3c924ad130  scripts/verify_node.mjs
+
+=== published input pins (commit 59b1251aa7360d48ed0a553212fda9ddd38da9b6) ===
+engine_v2.py 99bd45aea4f75e1a5a3cfb14beb39e163eb5d6ad9596b710a20e789df5b65cda (identical to five-row-q4-band-41plus scripts at pin 59b1251aa736)
+789c09a21ce367ea1877e6c436d89fa2ed38fe8b0b4ba8b98b071b76290b3328  configs/census-5row-m40seeds.json
+1bfe2b8e74d247d9ef866f702832d451e6eec82aea2af2d559c9171f9cc0999c  configs/cfg-census-m40seeds.json
+fe4edef046b751a7e4ce6d2f241be58e4f1aed8bd8eb3b35ff0bbf884644251f  configs/s5x39q4.json
+73058a4bd143f4c25dc082a8c9ff879c692c066c89a40fb4a4838f880afd5195  configs/surgery-control-m39.json
+60634043e73a6796ffb296e8f44eda943e10771a8ff0230b6ef075fa3b825681  configs/surgery-main-m40.json (K1209 published output/surgery-main-m40.json; reference-only input, not republished here)
+#
+# note: output/archive-main47-* (the first 12-placement m=47 runs, superseded by the
+# 16-placement main47-from46-budget{2,3}.jsonl before any push) and the byte-copy
+# reproductions output/census-5row-m40seeds.json / output/census-R44seeds.json and
+# configs/census-5row-m40seeds.json / configs/census-R44seeds.json are pinned above and
+# byte-identical to the published five-row-q4-band-41plus-20261121 outputs (commit 59b1251aa);
+# the copies stay in the local kit and are not duplicated in this repo dir.
+# The full census-45w.json (1,010,451 bytes) is regenerable; census-45w-extract.json is published.
+
+=== addendum: translation saturation scans (2026-11-21, same session) ===
+d67e9e319894917e49b9e68f2c9efdd09d8d140d8b4b0a900560af5c043cadfa  output/census-45w-s96.json (kit only; regenerable ~4s)
+df5481daf7f094f28b6e1820dba53e45a3dec5b29e63eb2c1e246179dc23e8d6  output/census-45w-s128.json (kit only; regenerable ~4s)
+bf4aeccc40897b6288ee3a9f912a17fd556797b296fef5da640a69db1fc978cc  configs/cfg-census-45w-s96.json
+0a81fbe401f2f218e51b65e26eec647e307508937946bcd4b9c8b8077f62ea31  configs/cfg-census-45w-s128.json
+5db60ef1c170d129abc4ca7cd256f986f6367fbfe36ef7b7cfe42425f5fd67cc  output/census-45w-saturation.json (published compact record)

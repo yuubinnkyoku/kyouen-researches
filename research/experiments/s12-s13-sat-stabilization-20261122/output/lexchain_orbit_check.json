@@ -1,0 +1,123 @@
+{
+ "p1_decider_vs_d_enumeration": {
+  "checked_pairs": 6300,
+  "draft_decider_mismatches": 0,
+  "fixed_decider_mismatches": 0
+ },
+ "p2_draft_rejects_lexle": {
+  "n3": {
+   "vectors_with_A_lexle_gA_rejected_by_draft": 274
+  },
+  "n4": {
+   "vectors_with_A_lexle_gA_rejected_by_draft": 36808
+  }
+ },
+ "p3_draft_fully_blocked_orbits": {
+  "n3": {
+   "orbits": 102,
+   "fully_blocked_by_draft": 30,
+   "lexmin_members_blocked_by_draft": 30
+  },
+  "n4": {
+   "orbits": 8548,
+   "fully_blocked_by_draft": 3195,
+   "lexmin_members_blocked_by_draft": 3783
+  }
+ },
+ "p4_fixed_is_exact_lexle": {
+  "n3": {
+   "rejected_despite_lexle": 0,
+   "accepted_despite_not_lexle": 0,
+   "verdict": "FIXED == exact A<=lex g(A)"
+  },
+  "n4": {
+   "rejected_despite_lexle": 0,
+   "accepted_despite_not_lexle": 0,
+   "verdict": "FIXED == exact A<=lex g(A)"
+  },
+  "n5_sampled": {
+   "samples": 150,
+   "mismatches": 0
+  },
+  "n6_sampled": {
+   "samples": 150,
+   "mismatches": 0
+  },
+  "n7_sampled": {
+   "samples": 150,
+   "mismatches": 0
+  },
+  "n8_sampled": {
+   "samples": 150,
+   "mismatches": 0
+  },
+  "n9_sampled": {
+   "samples": 150,
+   "mismatches": 0
+  },
+  "n10_sampled": {
+   "samples": 150,
+   "mismatches": 0
+  },
+  "n11_sampled": {
+   "samples": 150,
+   "mismatches": 0
+  },
+  "n12_sampled": {
+   "samples": 150,
+   "mismatches": 0
+  },
+  "n13_sampled": {
+   "samples": 150,
+   "mismatches": 0
+  }
+ },
+ "p5_fixed_orbit_coverage": {
+  "n3": {
+   "orbits": 102,
+   "fully_blocked_by_fixed": 0,
+   "verdict": "all orbits reachable"
+  },
+  "n4": {
+   "orbits": 8548,
+   "fully_blocked_by_fixed": 0,
+   "verdict": "all orbits reachable"
+  },
+  "n5_sampled": {
+   "samples": 150,
+   "lexmin_members_rejected_by_all_gates": 0
+  },
+  "n6_sampled": {
+   "samples": 150,
+   "lexmin_members_rejected_by_all_gates": 0
+  },
+  "n7_sampled": {
+   "samples": 150,
+   "lexmin_members_rejected_by_all_gates": 0
+  },
+  "n8_sampled": {
+   "samples": 150,
+   "lexmin_members_rejected_by_all_gates": 0
+  },
+  "n9_sampled": {
+   "samples": 150,
+   "lexmin_members_rejected_by_all_gates": 0
+  },
+  "n10_sampled": {
+   "samples": 150,
+   "lexmin_members_rejected_by_all_gates": 0
+  },
+  "n11_sampled": {
+   "samples": 150,
+   "lexmin_members_rejected_by_all_gates": 0
+  },
+  "n12_sampled": {
+   "samples": 150,
+   "lexmin_members_rejected_by_all_gates": 0
+  },
+  "n13_sampled": {
+   "samples": 150,
+   "lexmin_members_rejected_by_all_gates": 0
+  }
+ }
+}
