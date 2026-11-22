@@ -721,3 +721,46 @@ repo diverged:
   (47 files incl. repo-unpublished audit-run1/2.txt and sources/;
   MANIFEST 33/33 OK). Observed HEAD-before-push for this log update is
   recorded in the commit message.
+
+## Session continuation 11 (2026-11-22, verifier): batch-8 takeover completion (Part U) + Part V h045 if-adopted decomposition
+
+- Batch-8 takeover (declared note Part U, `37757217`) completed and
+  published by the takeover host: chunk 1 `a6fd2c48` (declaring-host rows
+  h001-h025 renamed i->h from the kit mirror, rescue-declaring-host/,
+  takeover val-gate + cross-check + status.log, 59/59), chunk 2
+  `27d3b46f` (h026-h039 fresh cold 2-pass all node-exact LOSS at 15M,
+  29/29), WIN-HALT chunk `1f127fb8` (h040-h045 raws: 43 LOSS + h002
+  exhaustion UNKNOWN + h045 WIN at s5 103558, `[4035225266258182144,64]`,
+  nodes 6,366,900, 2-pass node-exact; total batches: 9 -> 7 WIN-HALT + 2
+  clean). h045 is the 7th unconsumed closure WIN; h046-h051 (6 keys)
+  untouched; verdicts not consumed anywhere.
+- Part V (verifier amendment, note commit `267ead27`): batch-8 h045
+  IF-ADOPTED decomposition per Part H-bis/J/R methodology, using a
+  published base-control experiment `n11-class2634-base-control-20261122`
+  (`242c1de7`: pinned Part M script re-run twice on the takeover host,
+  run-to-run byte-identical and byte-equal to the published Part M
+  outputs) and `n11-central-reply-class2634-win-h045-ifadopted-20261122`
+  (`edd58822`, 32 files): fail-closed increments (44 rows / WIN-only /
+  43-LOSS-only, h002 excluded from every increment), conflict-0 merges,
+  3-line-diff refresh runs 6/6 byte-identical, and a compare script that
+  faithfully re-executes the refresh class-status semantics (with the
+  Board fail-closed free verification) and asserts every recomputed
+  class_status_count against the published summaries before reporting
+  deltas. Fetch-back 39/39 byte-identical (commit-pinned raw URLs).
+- Measured deltas vs base: WIN-only excluded_now flips are exactly
+  {2634, 5632} (membership 2, 3-route machine cross-check; self-exclusion
+  of 2634 as under g018/j033). Unlike j033, the h045 WIN hits the frozen
+  update8 plan in exactly 1 group (root 49; remaining 31,836 -> 31,786,
+  resolved 23 -> 24). The 43 LOSS rows resolve 43 baseline requirements
+  and cut the joint greedy union 35,857 -> 34,906 (-951, largest measured;
+  biggest per-root mover root 49, -88) with WIN-only greedy -1 subsumed.
+  Worklist deltas exactly additive (-1/-45/-46). free_now 34 and all
+  per-root coverage unchanged (machine gate).
+- State: no verdict consumed anywhere. The 7 unconsumed WINs remain
+  with the scrutiny owner (C++ second-implementation gate pin
+  `9193f5b6...`). A Part K/O/P/T-style third-implementation spot
+  verification of the batch-8 rows (h045 WIN + stratified LOSS anchors)
+  was declared open by Part V and remains unclaimed. The standard
+  11x11 empty board, the 19 central-reply roots and classes
+  1518/2634 all remain UNKNOWN. Observed HEAD-before-push for this log
+  update is recorded in the commit message.
