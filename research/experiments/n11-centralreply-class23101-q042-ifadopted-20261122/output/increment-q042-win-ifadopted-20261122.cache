@@ -1,0 +1,10 @@
+# n11 central-reply batch-14 q042 single-WIN if-adopted increment (Part AT, 2026-11-22)
+# published Part AT declaration (note amendment 2026-11-22, commit 58938933;
+#   observed HEAD-before-push 2f88a495 recorded in the declaration commit message).
+# IF-ADOPTED PROJECTION ONLY - the WIN row is NOT consumed by this Part; the
+#   canonical cache (be9cb24e..., 6,120 rows) is untouched; adoption of q042
+#   stays the scrutiny owner's call (C++ second-implementation gate 9193f5b6...).
+# gates: 2-pass (p1/p2) node-exact, status.log WIN-HALT stop-row agreement,
+#   batch-keys (sha256 dfde0e90) legal/(lo,hi)/s5_index agreement,
+#   ZERO BASE-cache overlap, quarantine 0, canonical-safe key.
+s5verdict,1152921505747697664,1032,5,1,9149084
