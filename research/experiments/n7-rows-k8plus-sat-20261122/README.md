@@ -1,4 +1,4 @@
-# 7×7 極大安全配置 k=8 行の非空虚判定と bounded census（2026-11-22）
+# 7×7 極大安全配置 k=8 行の非空虚判定と bounded census、8×8 k=9 行の非空虚（2026-11-22）
 
 単一オーナー宣言: [2026-11-22-n7-rows-k8plus-sat-single-owner-note](../../log/2026-11-22-n7-rows-k8plus-sat-single-owner-note.md)。
 セッションログ: [2026-11-22-n7-rows-k8plus-sat-session-log](../../log/2026-11-22-n7-rows-k8plus-sat-session-log.md)。
@@ -75,6 +75,24 @@
 - 行の非空虚・witness・各leaderの配置検証は有限計算であり形式証明ではない
   （実装・kissat・符号化の trust 込み・K1224 と同水準）。
 - 標準 11×11 空盤・二石 root・S2・closure class は本レーン非接触で UNKNOWN のまま。
+
+## 追加結果（stretch）: 8×8 の k=9 行も非空虚
+
+同じ leader-blocking 方式を n=8 に適用（前提: s_8=8 は既刊・K0212/K0032）。
+at-most-9（F_8=14,564・59,344変数・251,531節）から K0032/B371 出版51軌道代表の
+indicator-lex-min leader 51件（D4閉包408を本環境で再検証）をブロックした CNF は:
+
+- **両ショットとも SAT（default 1.93s・shuffle=42 1.68s）→ 8×8 の k=9 行は非空**。
+  witness1 `[[7,0],[7,1],[0,2],[2,2],[7,2],[0,3],[1,3],[0,6],[1,7]]`
+  （三点共線トリプル3・方向2）、witness2
+  `[[6,2],[2,3],[6,3],[7,3],[2,4],[3,4],[4,4],[1,5],[2,5]]`
+  （三点共線トリプル5・方向4）— **互いに異なる D4 軌道**（k=9行は ≥2軌道）。
+- 両 witness とも出版正本 verify_witness.py で SAFE+MAXIMAL（witness1:
+  126四点組安全・55/55空点blocked・witness2: 違反0・未カバー0）。
+  witness1 の1石除去9通りはすべて SAFE かつ NOT-MAXIMAL（未カバー4〜18）。
+- **M_8 ≥ 9**（これまで M_8 ≥ s_8 = 8 しか知られていなかった）。
+- 非主張: k=9 行の census は未実施（軌道数 ≥2 のみ）。M_8 の上界は扱わない。
+  CNF 本体は非刊行・sha256 は determinism.json にピン。
 
 ## ファイル
 
