@@ -3309,3 +3309,58 @@ q042)、rank 2-13 (16757, 20421, 16371, 30345, 12264, 5473, 2634, 8785,
 - 本amendment observed HEAD-before-push: 実行時の最新mainをコミット
   メッセージに記録 (push直前にnote blob sha1ロック `f34401cd…` を再
   照合し、競合時は再fetchして本節を追記し直す)。
+
+### Part AU status update (2026-11-22, execution host = 本レーンセッション)
+
+宣言 (commit `adc4358a`, scaffold `62b60a07`, note blob sha1ロック
+`f34401cd…`) どおり、宣言後の別セッション (本execution host) が最新mainで
+対向宣言を確認したうえで batch-17 を実行し、出版まで完了した
+(verdict不消費)。
+
+- 実行: pinned replica `jsreplay.js` (`84585617…` byte-copy) 2-pass fresh
+  cold・budget 15M・worker最大2 (2-key wave)。**52/52キーすべて LOSS
+  (result 2)**・WIN 0・枯損 0・mismatch 0。総ノード数
+  **196,536,452/pass** (nodes range 1,651,860 .. 14,967,263。u031は
+  14,967,263 nodes で予算直下のLOSS確定)。
+- これは完走17バッチ目・clean全LOSSバッチとしては
+  23963/10324/8784/10687 に次ぐ**5バッチ目** (クラス10661)。
+- val-gate: 実行直前に本hostで4/4 node-exact (at2m 0/2,000,000 ×2・
+  15m `(2, 3651923)`/`(2, 5040200)`・禁止四角 95,670)。
+- host event (誠実記録): 実行中にsandbox環境リセットが4回発生し、
+  書きかけpass 5個 (u017.p2, u018.p2, u027.p2, u031.p2, u033.p2) が
+  不完全断片化。完全性ガードが `# replay_done` 不在を検出して
+  `output/raw-truncated-hostevent/` に隔離し、該当passをfresh coldで
+  再実行。断片はどれもverdict行を持たず、完了済みrowの再探索は一切
+  行っていない (batch-16と同種のhost event)。
+- row-audit.json (schema
+  `n11-centralreply-closure-class10661-batch17-rowaudit-v1`, sha256
+  `c19e768f…`): 全52行をrawから機械再検証 (p1==p2 node-exact・budget内・
+  result 2・input行照合・status.log照合)。PASS。
+- runner差分の開示: `scripts/runbatch.sh` (sha256 `f591f8c2…`) はpublished
+  batch-16正本のbyte-copyに、15M枯損行 (jsreplayは枯損時もexit 0) をPASS
+  と誤記録しないhonest exhaustionラベル1箇所を加えた (本バッチでは
+  枯損0のため未発火)。`scripts/runwave.sh` (`8efd78c2…`) は2-key wave。
+  いずれもMANIFEST sha固定。
+- 出版: 実験dir
+  `research/experiments/n11-centralreply-closure-class10661-batch17-20261122/`
+  を4コミットでmainに反映: commit A `2e035ed7` (observed HEAD
+  `c15d4813`、runner scripts + this-host val-gate 8ファイル + 統合status.log)
+  / commit B `2266f8c7` (observed HEAD `2e035ed7`、raw u001..u052
+  104ファイル) / commit C `54d2b0ee` (observed HEAD `2266f8c7`、
+  hostevent断片5ファイル) / commit D `ffc09de1` (observed HEAD
+  `54d2b0ee`、row-audit.json + README実行結果節 + MANIFEST-sha256
+  177行) = publication complete。**fetch-back 177/177 byte一致**
+  (publication commit `ffc09de1` 固定raw URLでMANIFEST全行sha256照合)。
+- verdict消費: **ゼロ**。52 LOSS行のcanonical計上は、別宣言のadoption
+  Partでsha-pinned fail-closed union merger (`90711961…`) 経由でのみ
+  行う (canonical 6,120行 `be9cb24e…` 不変・本batch単体では閉鎖・
+  被覆・secured主張なし)。15 unconsumed closure WIN
+  (b018/d002/e002/f017/g018/j033/h045/z003/n005/n006/p002/p003/r001/
+  r002/q042) はscrutiny owner (C++第二実装 gate pin `9193f5b6…`) 待ち・
+  不変。
+- 標準11×11空盤・19 central-reply roots・class 10661 (unknown 52子)・
+  全52キーは本Partのどの時点でもUNKNOWNのまま。nodes数・legal数を勝敗
+  として読まない。
+- 本status updateのobserved HEAD-before-push:
+  `ffc09de14d353bb985bdce8d3cad629d5ffc9714` (note blob sha1ロック
+  `14794159…` で更新、fetch-backで追記確認)。
