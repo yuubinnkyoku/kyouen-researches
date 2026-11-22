@@ -2376,3 +2376,102 @@ refutation evidence.
   (51 fresh keys v003..v053) or pivot to batch-19 class 16513 (rank 16)
   under a new declaration, (d) the batch-17 52-LOSS adoption Part whose
   BASE follows Part AV.
+
+## Continuation 38 (2026-11-22, this host): Part AX third-implementation cross-verification executed and published - 13/13 targets clean LOSS (Part AW q043..q052 + batch-17 budget-edge u031/u033/u038), 13/13 replica verdict agreements, 163/163 audit gates; verdicts NOT consumed
+
+- Resumed from continuation 36 (Part AW publication complete at `cb94f808`).
+  Part AV (batch-17 class 10661 adoption, declared `340abef3`) was still
+  unpublished at resume. This continuation carved out Part AX, a
+  non-intersecting verifier scope in the Part AR third-impl convention,
+  declared BEFORE execution (note amendment commit `9771aa5b`, observed
+  HEAD-before-push `29897108`, no counter-declaration; Part AY batch-18
+  class 16131 was declared later at `6cde1b0` with declared non-contact -
+  target row sets are disjoint; the Part AY declaration explicitly cites
+  Part AX as non-contacting).
+- Rebase note: while this Part AX record was being composed and
+  pushed, the parallel AY lane published its own Continuation 37
+  (batch-18 Part AY) to this session log; this Part AX record was
+  renumbered 37 -> 38 and rebased onto the new head (session-log blob
+  sha1 `84e6d514` -> `576d5616`, 154,249 bytes, verified byte-identical
+  before push). The two continuations are disjoint Parts with no
+  content conflict; the push was re-attempted with the new blob lock and
+  records the observed HEAD-before-push in its commit message.
+- Scope: 13 published 2-pass fresh-cold node-exact replica LOSS rows:
+  the Part AW batch-14 residual q043..q052 (publication `cb94f808`) plus
+  the batch-17 (class 10661, publication `ffc09de1`) budget-edge trio
+  u031 (14,967,263 nodes - the whole-batch max-nodes row directly under
+  the 15M budget; its published p2 is a fresh-cold retry after a host
+  reset) / u033 (7,806,486, p2 retry) / u038 (6,589,964). The experiment
+  is verdict-level corroboration literature for the Part AV
+  adoption-declaration edge rows and the future class 23101 residual
+  LOSS adoption Part; the other 39 batch-17 rows and the remaining Part
+  AQ batch-14 rows (38; q042/q039-q041 were Part AR's) were not
+  re-searched here.
+- Execution: pinned third implementation `third_impl.js` (sha256
+  `08ea958f...`, non-df-pn AND/OR minimax), 1 row = 1 solver = 1
+  process, cap 300,000,000 expansions, wallcap 240s, `--memo-power=22`,
+  every target/anchor run twice (a/b). **13/13 targets clean LOSS
+  (result 2), 13/13 verdict agreements with the published replica
+  rows**; every a/b pair identical in result/expansion/ttHits/reason
+  (determinism PASS); total third-impl expansions 60,628,197/pass
+  (range 611,783 q047 .. 17,661,456 u031 = 1.18x the budget-edge
+  replica nodes; whole-table third/replica node ratios 1.11-1.18, the
+  same band as Part AR). WIN 0, WALL-INCONCLUSIVE 0, DIVERGENCE 0.
+- Gates: rules engine replica quads 95,670 == third-impl quads 95,670,
+  195,044 randomized triples 0 mismatch; anchors k02a WIN (legal 87)
+  9,106,337 expansions / 4,991,527 ttHits and l1a LOSS (legal 116)
+  7,660,602 / 3,951,175 reproduced node-exact vs the published
+  third-impl values on this host (a/b pairs); negatives ng1 (legal+1)
+  and ng2 (stones 6) fail-closed with the exact designed wording; maker
+  `make_inputs_ax.py` fail-closed on all sources (26 raw files 2-pass
+  node-exact + `# replay_done` + in-budget result-2; published
+  row-audits `6b40b131`/`c19e768f` cross-checks; runner status PASS
+  3-way incl. the AW VAL-GATE 4/4 + WAVE-END stop=0 lines and the b17
+  EXECUTION-COMPLETE 52/52 LOSS + P2-TRUNCATED-RETRY honesty lines, no
+  fired HARD-STOP; batch-keys `dfde0e90`/`db762175` probe_order
+  580..589 / 630/632/637; derived-vs-published input CSV byte-equality
+  10+3 targets + 4 anchor/negatives against the published Part AR
+  inputs), 3 runs byte-identical; audit battery `audit.py` **163/163
+  gates PASS**, run twice byte-identical with published console
+  captures (schema `n11-centralreply-closure-b14res-b17edge-thirdimpl-audit-v1`,
+  sha256 `d1fc8999...`).
+- Honesty records (full text in the experiment status.log and README):
+  (1) a shell cwd grouping bug at the first anchor invocation started
+  k02a tag=a once ahead of the intended clean pair (duplicated identical
+  RUN line, deterministic fields unchanged, k02a.b never started in that
+  shell; the absolute-path re-run overwrote the output - Part AR's ng1
+  precedent). (2) The host CPU quota halves per-solver throughput when 2
+  solvers run concurrently (k02a solo wall 25.63s vs 53.03s in the
+  pair), so the 13 targets were executed sequentially, within the
+  declared cap of max 2; deterministic fields are wall-independent.
+- Publication: experiment dir
+  `research/experiments/n11-centralreply-closure-b14res-b17edge-thirdimpl-20261122/`
+  (113 files + MANIFEST) in 5 commits: A `dbab0b9b` (scaffold:
+  pinned scripts + maker + audit.py + inputs, 24 files), A2 `b2867591`
+  (published source raws archive, 26 files), A3 `b826eebc` (sources
+  rest: batch-keys, row-audits, runner logs, published input CSVs,
+  source MANIFESTs - 25 files), B `db036985` (solver outputs: targets
+  a/b 26, anchors 4, negatives 2, rules-gate, status.log - 34 files),
+  C `115c7ad3` (audit-summary + audit-run captures + README +
+  MANIFEST-sha256 113 entries) = publication complete. **Fetch-back
+  113/113** MANIFEST sha256 match at the publication commit. The note
+  status update was appended and fetched back byte-identical (blob sha1
+  lock `fc0910a5...` -> push `a0bd6061`, 275,176 bytes).
+- Verdict guards (unchanged): zero verdicts consumed; this is
+  verdict-level corroboration literature only. The Part AV batch-17
+  52-LOSS adoption, the future class 23101 residual 10-LOSS adoption
+  Part (BASE = post-AV canonical 6,172), and the scrutiny owner's 15
+  unconsumed closure WIN / q042 adoption decisions (C++ second
+  implementation gate pin `9193f5b6...`) are untouched and unabridged;
+  no canonical cache write happened anywhere in this Part. The standard
+  11x11 empty board, the 19 central-reply roots, class 23101, class
+  10661 and all 13 keys remain UNKNOWN throughout; nodes and expansions
+  are bookkeeping, never verdicts.
+- Open items (re-read latest main first): (a) the Part AV batch-17
+  52-LOSS canonical adoption publication (in flight), (b) the batch-18
+  Part AY probes by a later session (v001..v053; declared `6cde1b0`,
+  scaffold `c36825c7`; this lane did not contact them), (c) the class
+  23101 residual 10-LOSS adoption Part after Part AV lands (BASE =
+  canonical 6,172), (d) the scrutiny owner's 15-WIN/q042 adoption gate,
+  (e) optional extension of third-impl spot coverage to further batch
+  rows under a new declaration.
