@@ -89,3 +89,78 @@ be amended with the result section in a later commit; per-row honest records
 land in `output/status.log` and `output/raw/`). The standard 11x11 empty
 board, the 19 central-reply roots and class 8785 remain UNKNOWN throughout.
 Nodes are not verdicts.
+
+## Takeover provenance note (note Part Z status update)
+
+The batch-11 declaring session (RUNNER-START 2026-11-22T10:32:08Z, host
+`f80d796a-fabb-4821-bd72-7c34211e1da0`, 2 cores) ran the first probe_order wave
+(z001-z004) and the pre-registered WIN-HALT rule fired, but the session then
+went silent without publishing a single row: the declaration scaffold commit
+`3cc960991f` (2026-11-22T10:28:54Z) carries only 30 files (README +
+batch-keys.json + z001-z028 inputs + val-gate inputs) and no batch-11 row,
+status or result section ever reached main, which is inconsistent with the
+batch 1-7 practice of pushing chunk commits while running. Judged a
+declaring-host loss under the Part U precedent; this takeover session
+completed the scaffold, rescued the declaring host's evidence and published
+everything. Row provenance:
+
+- z001-z004 (all wave-1 keys): declaring-host runs rescued from the
+  declaring session's kit-mirror checkpoint, published byte-untouched as
+  `output/raw/z00X.pN.out`; all 2-pass node-exact (budget 15M). The rescued
+  `output/status.log` is the declaring host's own (wave start 10:32:09Z,
+  z002 10:33:54Z, z001 10:34:22Z, z004 10:35:35Z, z003 WIN-HALT 10:36:40Z).
+- val-gate: the declaring host's four outputs are in
+  `output/val-gate/*.this-host.out` (rescued, 4/4 node-exact vs the published
+  val-gate design values).
+- z005-z051: untouched (batch halted at the WIN; no further keys started).
+
+## Takeover-host cross-host reproduction (pinned replica, fresh cold)
+
+Takeover host `d3578b9e-f126-42b6-873a-5dc0efe4b189` re-verified the evidence
+before publication (fail-closed, all machine checks): (1) the rescued 8 raws
+carry the quads gate line (95,670) and 2-pass (budget, result, nodes)
+agreement; (2) the published batch-keys.json (blob `a5d3193a02dd...`, 51 keys)
+byte-matches the declaring session's kit copy, matches the Part Y re-audit
+worklist rows `serving_class=8785` (probe_order 332-382) 51/51, matches all 51
+input CSVs and has no duplicates; (3) all 51 keys are absent from the canonical
+merged cache (6,027 rows, sha256 `95e868d6...`, 0 hits) and from the quarantine
+registry (2 active entries, 0 hits both directions); (4) no unconsumed WIN key
+(b018/d002/e002/f017/g018/j033/h045) is among the 51 children of class 8785 or
+the 52 of class 8106 (cost-child cross-check, 0 hits; b018's key independently
+re-derived as the 16757-intersect-30345 worklist intersection); (5) val-gate
+4/4 node-exact reproduced on this host; (6) **every rescued row was re-run
+fresh-cold 2-pass on this host**: val-gate at2m result 0/2,000,000 x2,
+15m result 2/3,651,923 and result 2/5,040,200; z001 LOSS 2 / 3,146,511 both
+passes; z002 LOSS 2 / 2,256,914 both passes; z003 **WIN 1 / 11,601,265 both
+passes**; z004 LOSS 2 / 6,424,054 both passes - all node-exact against the
+declaring host on (budget, result, nodes). Reproduction raws are published
+alongside as `output/raw/z00X.pN.takeover.out` and
+`output/val-gate/15m-1|15m-2|at2m-1|at2m-2.takeover.out`;
+`output/status.takeover.log` records this host's schedule.
+
+## Result
+
+Pre-registered WIN-HALT (rc=45) fired at **z003** (4/51 probed, wave 1: the
+other three keys completed in flight and are disclosed honestly). z003 =
+s5_index 198530, key `[1225542323476103168, 1]`, legal 82, probe_order 334:
+result 1 (WIN), 11,601,265 nodes, declaring-host 2-pass fresh cold node-exact,
+AND takeover-host 2-pass reproduction node-exact on both passes. The in-flight completions are
+honest LOSS rows: z001 3,146,511 / z002 2,256,914 / z004 6,424,054 nodes
+(each 2-pass node-exact on the declaring host, reproduced 2-pass node-exact
+on the takeover host). z005-z051 (47 keys) untouched. Like the seven earlier
+closure WINs (b018/d002/e002/f017/g018/j033/h045), this WIN is **unconsumed**
+and the adoption decision stays with the scrutiny owner (C++
+second-implementation gate precedent pin `9193f5b6...`). Third-implementation
+spot verification of z003 (Part K/O/P/T/W lineage) is NOT yet done; the
+if-adopted decomposition (Part V/R lineage) is NOT yet done; both remain
+open. No refutation, coverage, closure or root claim is made while the WIN
+stays unconsumed. Batch tally after batch 11: 11 batches -> 8 WIN-HALTs
+(16757 b018 / 20421 d002 / 16371 e002 / 12264 f017 / 5473 g018 / 1518 j033 /
+2634 h045 / 8785 z003) + 3 clean (23963 / 10324 / 8784, the 33rd/34th/35th
+Board-verified free classes) - a scheduling observation only, never a verdict.
+
+## Status
+
+see `output/status.log` (declaring host) and `output/status.takeover.log`
+(takeover host). The standard 11x11 empty board, the 19 central-reply roots
+and class 8785 remain UNKNOWN throughout. Nodes are not verdicts.
