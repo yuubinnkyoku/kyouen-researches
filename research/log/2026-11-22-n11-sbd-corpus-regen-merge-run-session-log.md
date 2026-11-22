@@ -144,3 +144,30 @@ blob sha1 recomputation); 0 mismatches.
   before (this lane's fresh corpus produced only exact LOSS and one honest
   exhaustion; the k02-era WIN rows belong to the disjoint sixth-cost lane and
   are untouched here).
+
+## Addendum (post-push verification: live-pin check and pipeline re-execution)
+
+- Live-pin check: at main `7b449545e4` all 13 final-commit machine files
+  were re-fetched and their sha256 compared against the pins of
+  `output/manifest-sha256.json`: 13/13 PIN-OK, 0 mismatches (the two honest
+  negative logs included, so the pushed state and the manifest agree
+  everywhere).
+- Pipeline re-execution on the byte-verified mirror (every experiment
+  input/raw/script byte proven identical to main at the documented commits
+  by blob-sha1/sha256 fetch-back; consumed pins sha-verified): the five
+  machine stages `gen_s6_witness_audit.py` -> `build_merged_cache.py` ->
+  `audit_frontier.py` -> `audit_root_loss.py` -> `reclassify_115_candidates.py`
+  were re-executed fresh; all seven machine outputs (merged cache,
+  merge-manifest, s6-witness audit, frontier audit, root proof, candidate
+  CSV, candidate ranking) are byte-identical to the published bytes:
+  7/7 REPRODUCED, 0 diffs. The published pipeline is deterministic and the
+  published artifacts are independently reproducible from the published
+  inputs alone.
+- Resume note (next run, own declaration required): a third-implementation
+  (non-df-pn) spot-verification of a sample of the 101 fresh increment rows
+  is the natural next cross-implementation evidence item (the sixth-cost
+  lane's `third_impl.js` program; none of it is claimed by this session's
+  declaration). The C++ reference-implementation gate for the replica rows
+  stays with the scrutiny owner.
+- No verdict changed by this addendum. The standard 11x11 EMPTY BOARD
+  remains UNKNOWN. Nodes and reproduction counts are never verdicts.
