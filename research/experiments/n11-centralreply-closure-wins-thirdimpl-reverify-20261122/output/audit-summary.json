@@ -2,7 +2,7 @@
  "schema": "n11-centralreply-closure-wins-thirdimpl-audit-v1",
  "experiment": "n11-centralreply-closure-wins-thirdimpl-reverify-20261122",
  "all_pass": true,
- "gate_count": 171,
+ "gate_count": 281,
  "verdict_agreements": [
   {
    "key_id": "b018",
@@ -86,12 +86,66 @@
    "agree": true
   },
   {
+   "key_id": "f002",
+   "replica_result": 2,
+   "replica_nodes": 4054799,
+   "third_result": 2,
+   "third_expansion": 4701658,
+   "third_ttHits": 2603258,
+   "agree": true
+  },
+  {
+   "key_id": "f003",
+   "replica_result": 2,
+   "replica_nodes": 2247077,
+   "third_result": 2,
+   "third_expansion": 2567013,
+   "third_ttHits": 1495002,
+   "agree": true
+  },
+  {
+   "key_id": "f004",
+   "replica_result": 2,
+   "replica_nodes": 4461753,
+   "third_result": 2,
+   "third_expansion": 5183262,
+   "third_ttHits": 2924979,
+   "agree": true
+  },
+  {
    "key_id": "f005",
    "replica_result": 2,
    "replica_nodes": 2815240,
    "third_result": 2,
    "third_expansion": 3209420,
    "third_ttHits": 1898185,
+   "agree": true
+  },
+  {
+   "key_id": "f006",
+   "replica_result": 2,
+   "replica_nodes": 2042919,
+   "third_result": 2,
+   "third_expansion": 2308800,
+   "third_ttHits": 1417116,
+   "agree": true
+  },
+  {
+   "key_id": "f007",
+   "replica_result": 2,
+   "replica_nodes": 3503294,
+   "third_result": 2,
+   "third_expansion": 4036239,
+   "third_ttHits": 2272829,
+   "agree": true
+  },
+  {
+   "key_id": "f008",
+   "replica_result": 2,
+   "replica_nodes": 1775516,
+   "third_result": 2,
+   "third_expansion": 2031528,
+   "third_ttHits": 1178184,
    "agree": true
   },
   {
@@ -104,12 +158,57 @@
    "agree": true
   },
   {
+   "key_id": "f010",
+   "replica_result": 2,
+   "replica_nodes": 3586193,
+   "third_result": 2,
+   "third_expansion": 4131539,
+   "third_ttHits": 2336504,
+   "agree": true
+  },
+  {
+   "key_id": "f011",
+   "replica_result": 2,
+   "replica_nodes": 2685012,
+   "third_result": 2,
+   "third_expansion": 3068600,
+   "third_ttHits": 1758542,
+   "agree": true
+  },
+  {
+   "key_id": "f012",
+   "replica_result": 2,
+   "replica_nodes": 4680543,
+   "third_result": 2,
+   "third_expansion": 5475727,
+   "third_ttHits": 2990500,
+   "agree": true
+  },
+  {
    "key_id": "f013",
    "replica_result": 2,
    "replica_nodes": 4667365,
    "third_result": 2,
    "third_expansion": 5473893,
    "third_ttHits": 3025496,
+   "agree": true
+  },
+  {
+   "key_id": "f014",
+   "replica_result": 2,
+   "replica_nodes": 2543113,
+   "third_result": 2,
+   "third_expansion": 2904018,
+   "third_ttHits": 1698786,
+   "agree": true
+  },
+  {
+   "key_id": "f015",
+   "replica_result": 2,
+   "replica_nodes": 6555693,
+   "third_result": 2,
+   "third_expansion": 7653660,
+   "third_ttHits": 4053951,
    "agree": true
   },
   {
@@ -179,9 +278,39 @@
    "detail": "5,1152921504741065761,0,80 vs 5,1152921504741065761,0,80"
   },
   {
+   "gate": "input-f002-matches-rows",
+   "pass": true,
+   "detail": "5,1297036692682703905,0,86 vs 5,1297036692682703905,0,86"
+  },
+  {
+   "gate": "input-f003-matches-rows",
+   "pass": true,
+   "detail": "5,1152921504606848033,536870912,84 vs 5,1152921504606848033,536870912,84"
+  },
+  {
+   "gate": "input-f004-matches-rows",
+   "pass": true,
+   "detail": "5,1729382256910271521,0,86 vs 5,1729382256910271521,0,86"
+  },
+  {
    "gate": "input-f005-matches-rows",
    "pass": true,
    "detail": "5,1152921504606848033,128,84 vs 5,1152921504606848033,128,84"
+  },
+  {
+   "gate": "input-f006-matches-rows",
+   "pass": true,
+   "detail": "5,1152921779484754977,0,76 vs 5,1152921779484754977,0,76"
+  },
+  {
+   "gate": "input-f007-matches-rows",
+   "pass": true,
+   "detail": "5,1441151880758559777,0,90 vs 5,1441151880758559777,0,90"
+  },
+  {
+   "gate": "input-f008-matches-rows",
+   "pass": true,
+   "detail": "5,1152921504606848033,262144,80 vs 5,1152921504606848033,262144,80"
   },
   {
    "gate": "input-f009-matches-rows",
@@ -189,9 +318,34 @@
    "detail": "5,1152921504606913569,0,76 vs 5,1152921504606913569,0,76"
   },
   {
+   "gate": "input-f010-matches-rows",
+   "pass": true,
+   "detail": "5,1224979098644775969,0,90 vs 5,1224979098644775969,0,90"
+  },
+  {
+   "gate": "input-f011-matches-rows",
+   "pass": true,
+   "detail": "5,1152921504606848033,1099511627776,80 vs 5,1152921504606848033,1099511627776,80"
+  },
+  {
+   "gate": "input-f012-matches-rows",
+   "pass": true,
+   "detail": "5,1188950301627908097,70368744177664,92 vs 5,1188950301627908097,70368744177664,92"
+  },
+  {
    "gate": "input-f013-matches-rows",
    "pass": true,
    "detail": "5,1188950305920778241,70368744177664,92 vs 5,1188950305920778241,70368744177664,92"
+  },
+  {
+   "gate": "input-f014-matches-rows",
+   "pass": true,
+   "detail": "5,1188959097718833153,70368744177664,92 vs 5,1188959097718833153,70368744177664,92"
+  },
+  {
+   "gate": "input-f015-matches-rows",
+   "pass": true,
+   "detail": "5,1206964700135292929,70368744177664,91 vs 5,1206964700135292929,70368744177664,91"
   },
   {
    "gate": "input-f016-matches-rows",
@@ -764,6 +918,141 @@
    "detail": "third=2 replica=2"
   },
   {
+   "gate": "target-f002-present",
+   "pass": true,
+   "detail": "a/b"
+  },
+  {
+   "gate": "target-f002-a-key",
+   "pass": true,
+   "detail": "1297036692682703905:0"
+  },
+  {
+   "gate": "target-f002-a-legal",
+   "pass": true,
+   "detail": "86 vs 86"
+  },
+  {
+   "gate": "target-f002-a-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-f002-b-key",
+   "pass": true,
+   "detail": "1297036692682703905:0"
+  },
+  {
+   "gate": "target-f002-b-legal",
+   "pass": true,
+   "detail": "86 vs 86"
+  },
+  {
+   "gate": "target-f002-b-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-f002-det-pair",
+   "pass": true,
+   "detail": "a=(2,4701658,clean) b=(2,4701658,clean)"
+  },
+  {
+   "gate": "target-f002-verdict-agree",
+   "pass": true,
+   "detail": "third=2 replica=2"
+  },
+  {
+   "gate": "target-f003-present",
+   "pass": true,
+   "detail": "a/b"
+  },
+  {
+   "gate": "target-f003-a-key",
+   "pass": true,
+   "detail": "1152921504606848033:536870912"
+  },
+  {
+   "gate": "target-f003-a-legal",
+   "pass": true,
+   "detail": "84 vs 84"
+  },
+  {
+   "gate": "target-f003-a-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-f003-b-key",
+   "pass": true,
+   "detail": "1152921504606848033:536870912"
+  },
+  {
+   "gate": "target-f003-b-legal",
+   "pass": true,
+   "detail": "84 vs 84"
+  },
+  {
+   "gate": "target-f003-b-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-f003-det-pair",
+   "pass": true,
+   "detail": "a=(2,2567013,clean) b=(2,2567013,clean)"
+  },
+  {
+   "gate": "target-f003-verdict-agree",
+   "pass": true,
+   "detail": "third=2 replica=2"
+  },
+  {
+   "gate": "target-f004-present",
+   "pass": true,
+   "detail": "a/b"
+  },
+  {
+   "gate": "target-f004-a-key",
+   "pass": true,
+   "detail": "1729382256910271521:0"
+  },
+  {
+   "gate": "target-f004-a-legal",
+   "pass": true,
+   "detail": "86 vs 86"
+  },
+  {
+   "gate": "target-f004-a-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-f004-b-key",
+   "pass": true,
+   "detail": "1729382256910271521:0"
+  },
+  {
+   "gate": "target-f004-b-legal",
+   "pass": true,
+   "detail": "86 vs 86"
+  },
+  {
+   "gate": "target-f004-b-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-f004-det-pair",
+   "pass": true,
+   "detail": "a=(2,5183262,clean) b=(2,5183262,clean)"
+  },
+  {
+   "gate": "target-f004-verdict-agree",
+   "pass": true,
+   "detail": "third=2 replica=2"
+  },
+  {
    "gate": "target-f005-present",
    "pass": true,
    "detail": "a/b"
@@ -805,6 +1094,141 @@
   },
   {
    "gate": "target-f005-verdict-agree",
+   "pass": true,
+   "detail": "third=2 replica=2"
+  },
+  {
+   "gate": "target-f006-present",
+   "pass": true,
+   "detail": "a/b"
+  },
+  {
+   "gate": "target-f006-a-key",
+   "pass": true,
+   "detail": "1152921779484754977:0"
+  },
+  {
+   "gate": "target-f006-a-legal",
+   "pass": true,
+   "detail": "76 vs 76"
+  },
+  {
+   "gate": "target-f006-a-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-f006-b-key",
+   "pass": true,
+   "detail": "1152921779484754977:0"
+  },
+  {
+   "gate": "target-f006-b-legal",
+   "pass": true,
+   "detail": "76 vs 76"
+  },
+  {
+   "gate": "target-f006-b-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-f006-det-pair",
+   "pass": true,
+   "detail": "a=(2,2308800,clean) b=(2,2308800,clean)"
+  },
+  {
+   "gate": "target-f006-verdict-agree",
+   "pass": true,
+   "detail": "third=2 replica=2"
+  },
+  {
+   "gate": "target-f007-present",
+   "pass": true,
+   "detail": "a/b"
+  },
+  {
+   "gate": "target-f007-a-key",
+   "pass": true,
+   "detail": "1441151880758559777:0"
+  },
+  {
+   "gate": "target-f007-a-legal",
+   "pass": true,
+   "detail": "90 vs 90"
+  },
+  {
+   "gate": "target-f007-a-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-f007-b-key",
+   "pass": true,
+   "detail": "1441151880758559777:0"
+  },
+  {
+   "gate": "target-f007-b-legal",
+   "pass": true,
+   "detail": "90 vs 90"
+  },
+  {
+   "gate": "target-f007-b-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-f007-det-pair",
+   "pass": true,
+   "detail": "a=(2,4036239,clean) b=(2,4036239,clean)"
+  },
+  {
+   "gate": "target-f007-verdict-agree",
+   "pass": true,
+   "detail": "third=2 replica=2"
+  },
+  {
+   "gate": "target-f008-present",
+   "pass": true,
+   "detail": "a/b"
+  },
+  {
+   "gate": "target-f008-a-key",
+   "pass": true,
+   "detail": "1152921504606848033:262144"
+  },
+  {
+   "gate": "target-f008-a-legal",
+   "pass": true,
+   "detail": "80 vs 80"
+  },
+  {
+   "gate": "target-f008-a-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-f008-b-key",
+   "pass": true,
+   "detail": "1152921504606848033:262144"
+  },
+  {
+   "gate": "target-f008-b-legal",
+   "pass": true,
+   "detail": "80 vs 80"
+  },
+  {
+   "gate": "target-f008-b-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-f008-det-pair",
+   "pass": true,
+   "detail": "a=(2,2031528,clean) b=(2,2031528,clean)"
+  },
+  {
+   "gate": "target-f008-verdict-agree",
    "pass": true,
    "detail": "third=2 replica=2"
   },
@@ -854,6 +1278,141 @@
    "detail": "third=2 replica=2"
   },
   {
+   "gate": "target-f010-present",
+   "pass": true,
+   "detail": "a/b"
+  },
+  {
+   "gate": "target-f010-a-key",
+   "pass": true,
+   "detail": "1224979098644775969:0"
+  },
+  {
+   "gate": "target-f010-a-legal",
+   "pass": true,
+   "detail": "90 vs 90"
+  },
+  {
+   "gate": "target-f010-a-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-f010-b-key",
+   "pass": true,
+   "detail": "1224979098644775969:0"
+  },
+  {
+   "gate": "target-f010-b-legal",
+   "pass": true,
+   "detail": "90 vs 90"
+  },
+  {
+   "gate": "target-f010-b-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-f010-det-pair",
+   "pass": true,
+   "detail": "a=(2,4131539,clean) b=(2,4131539,clean)"
+  },
+  {
+   "gate": "target-f010-verdict-agree",
+   "pass": true,
+   "detail": "third=2 replica=2"
+  },
+  {
+   "gate": "target-f011-present",
+   "pass": true,
+   "detail": "a/b"
+  },
+  {
+   "gate": "target-f011-a-key",
+   "pass": true,
+   "detail": "1152921504606848033:1099511627776"
+  },
+  {
+   "gate": "target-f011-a-legal",
+   "pass": true,
+   "detail": "80 vs 80"
+  },
+  {
+   "gate": "target-f011-a-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-f011-b-key",
+   "pass": true,
+   "detail": "1152921504606848033:1099511627776"
+  },
+  {
+   "gate": "target-f011-b-legal",
+   "pass": true,
+   "detail": "80 vs 80"
+  },
+  {
+   "gate": "target-f011-b-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-f011-det-pair",
+   "pass": true,
+   "detail": "a=(2,3068600,clean) b=(2,3068600,clean)"
+  },
+  {
+   "gate": "target-f011-verdict-agree",
+   "pass": true,
+   "detail": "third=2 replica=2"
+  },
+  {
+   "gate": "target-f012-present",
+   "pass": true,
+   "detail": "a/b"
+  },
+  {
+   "gate": "target-f012-a-key",
+   "pass": true,
+   "detail": "1188950301627908097:70368744177664"
+  },
+  {
+   "gate": "target-f012-a-legal",
+   "pass": true,
+   "detail": "92 vs 92"
+  },
+  {
+   "gate": "target-f012-a-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-f012-b-key",
+   "pass": true,
+   "detail": "1188950301627908097:70368744177664"
+  },
+  {
+   "gate": "target-f012-b-legal",
+   "pass": true,
+   "detail": "92 vs 92"
+  },
+  {
+   "gate": "target-f012-b-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-f012-det-pair",
+   "pass": true,
+   "detail": "a=(2,5475727,clean) b=(2,5475727,clean)"
+  },
+  {
+   "gate": "target-f012-verdict-agree",
+   "pass": true,
+   "detail": "third=2 replica=2"
+  },
+  {
    "gate": "target-f013-present",
    "pass": true,
    "detail": "a/b"
@@ -895,6 +1454,96 @@
   },
   {
    "gate": "target-f013-verdict-agree",
+   "pass": true,
+   "detail": "third=2 replica=2"
+  },
+  {
+   "gate": "target-f014-present",
+   "pass": true,
+   "detail": "a/b"
+  },
+  {
+   "gate": "target-f014-a-key",
+   "pass": true,
+   "detail": "1188959097718833153:70368744177664"
+  },
+  {
+   "gate": "target-f014-a-legal",
+   "pass": true,
+   "detail": "92 vs 92"
+  },
+  {
+   "gate": "target-f014-a-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-f014-b-key",
+   "pass": true,
+   "detail": "1188959097718833153:70368744177664"
+  },
+  {
+   "gate": "target-f014-b-legal",
+   "pass": true,
+   "detail": "92 vs 92"
+  },
+  {
+   "gate": "target-f014-b-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-f014-det-pair",
+   "pass": true,
+   "detail": "a=(2,2904018,clean) b=(2,2904018,clean)"
+  },
+  {
+   "gate": "target-f014-verdict-agree",
+   "pass": true,
+   "detail": "third=2 replica=2"
+  },
+  {
+   "gate": "target-f015-present",
+   "pass": true,
+   "detail": "a/b"
+  },
+  {
+   "gate": "target-f015-a-key",
+   "pass": true,
+   "detail": "1206964700135292929:70368744177664"
+  },
+  {
+   "gate": "target-f015-a-legal",
+   "pass": true,
+   "detail": "91 vs 91"
+  },
+  {
+   "gate": "target-f015-a-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-f015-b-key",
+   "pass": true,
+   "detail": "1206964700135292929:70368744177664"
+  },
+  {
+   "gate": "target-f015-b-legal",
+   "pass": true,
+   "detail": "91 vs 91"
+  },
+  {
+   "gate": "target-f015-b-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-f015-det-pair",
+   "pass": true,
+   "detail": "a=(2,7653660,clean) b=(2,7653660,clean)"
+  },
+  {
+   "gate": "target-f015-verdict-agree",
    "pass": true,
    "detail": "third=2 replica=2"
   },

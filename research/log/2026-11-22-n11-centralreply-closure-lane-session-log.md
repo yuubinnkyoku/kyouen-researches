@@ -280,3 +280,17 @@ github_app.push_files with commit-pinned raw fetch-back byte verification.
   refresh re-audit for a new canonical ranking; remaining unprobed keys
   of refuted classes (b021-b048, d005-d049, e003-e050, f019-f051) are
   cache-completion only, never closure evidence.
+
+### Part G addendum: full unconsumed-packet coverage - 25/25 rows agree
+
+- The LOSS spot sample was extended (pre-registered addendum) from 10
+  stratified rows to all 21 unconsumed LOSS rows; the remaining 11
+  (f002/f003/f004/f006/f007/f008/f010/f011/f012/f014/f015) all agree
+  verdict-level (result 2, clean, 2-run deterministic pairs;
+  expansions 2,031,528..7,653,660).
+- `scripts/audit.py` now **281/281 gates PASS** (run twice byte-identical);
+  verdict agreements **4/4 WIN + 21/21 LOSS, 0 divergences,
+  0 wall-inconclusive**. The entire unconsumed closure-lane packet is
+  corroborated verdict-level by the second (non-df-pn) implementation.
+- Verdicts still NOT consumed; scrutiny owner / C++ gate unchanged;
+  11x11 empty board, 19 central-reply roots, all classes remain UNKNOWN.

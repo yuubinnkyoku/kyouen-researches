@@ -179,3 +179,16 @@ pin sha256 `08ea958f...`) によるverdict-level交叉検証を、採用判断�
   同一スコープの宣言がmainに存在する場合は着手しない。
 - 本amendment observed HEAD-before-push: 実行時の最新mainを
   コミットメッセージに記録。
+
+
+## Part G addendum (verifier, amendment 2026-11-22): extend the LOSS spot sample to all unconsumed rows
+
+Part G の10行層化サンプルは全行verdict一致で完了した (audit 171/171 gates)。
+未消費パケット (4 WIN + 21 LOSS) の第三実装被覆を完全にするため、
+残る11行 (f002/f003/f004/f006/f007/f008/f010/f011/f012/f014/f015) も
+同一手法 (pinned third_impl.js・1行1プロセス・2-run determinism・
+同一audit gate群) で検証する。verdict不消費・閉鎖・被覆・root主張なしは
+Part Gと完全に同一。入力はpublished batch5 rawから機械導出
+(make_inputs.pyのLOSS対象を21行全数に拡張)。
+- 本addendum observed HEAD-before-push: 実行時の最新mainを
+  コミットメッセージに記録。

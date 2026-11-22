@@ -127,3 +127,29 @@ owner's adoption decision; the pre-registered C++ second-implementation gate
 (pin `9193f5b6...`) remains the adoption gate. No verdict was consumed, no
 class closure / coverage / root claim is made, and the standard 11x11 empty
 board, the 19 central-reply roots and all classes remain UNKNOWN.
+
+## Status addendum: full unconsumed-packet coverage (Part G addendum)
+
+Declared as the Part G addendum of the single-owner note: the LOSS spot
+sample was extended from 10 stratified rows to **all 21 unconsumed LOSS
+rows** (inputs regenerated machine-derived from the published batch raws by
+`scripts/make_inputs.py`; the original 14 rows' input files are
+byte-identical to the first publication). Every row: 2 runs (a/b),
+deterministic pairs, `clean`, quads=95,670.
+
+`scripts/audit.py` (fail-closed, run twice byte-identical):
+**281/281 gates PASS. Verdict agreements: 4/4 WIN + 21/21 LOSS, 0
+divergences, 0 wall-inconclusive.**
+
+| extended rows (all LOSS 2, expansions) | | | | |
+|---|---|---|---|---|
+| f002 (4,701,658) | f003 (2,567,013) | f004 (5,183,262) | f006 (2,308,800) | f007 (4,036,239) |
+| f008 (2,031,528) | f010 (4,131,539) | f011 (3,068,600) | f012 (5,475,727) | f014 (2,904,018) |
+
+(the eleventh, f015 = 7,653,660 expansions). With the first 10 (see above),
+**the entire unconsumed closure-lane packet - 4 WINs and 21 LOSS rows - is
+now corroborated verdict-level by a second, independent implementation.**
+The interpretation rule is unchanged: verdict-level corroboration only,
+NOT adoption; the scrutiny owner and the C++ second-implementation gate
+precedent are unchanged; 11x11 empty board, the 19 central-reply roots and
+all classes remain UNKNOWN.

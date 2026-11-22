@@ -20,14 +20,28 @@ WIN_TARGETS = [
     ("f017", "batch12264", "win"),
 ]
 LOSS_SAMPLE = [
+    # batch 3
     ("d001", "batch20421", "loss"),
     ("d003", "batch20421", "loss"),
     ("d004", "batch20421", "loss"),
+    # batch 4
     ("e001", "batch16371", "loss"),
+    # batch 5: all 17 unconsumed LOSS rows (Part G addendum: full coverage)
     ("f001", "batch12264", "loss"),
+    ("f002", "batch12264", "loss"),
+    ("f003", "batch12264", "loss"),
+    ("f004", "batch12264", "loss"),
     ("f005", "batch12264", "loss"),
+    ("f006", "batch12264", "loss"),
+    ("f007", "batch12264", "loss"),
+    ("f008", "batch12264", "loss"),
     ("f009", "batch12264", "loss"),
+    ("f010", "batch12264", "loss"),
+    ("f011", "batch12264", "loss"),
+    ("f012", "batch12264", "loss"),
     ("f013", "batch12264", "loss"),
+    ("f014", "batch12264", "loss"),
+    ("f015", "batch12264", "loss"),
     ("f016", "batch12264", "loss"),
     ("f018", "batch12264", "loss"),
 ]
