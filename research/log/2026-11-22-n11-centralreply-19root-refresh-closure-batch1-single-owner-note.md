@@ -3065,3 +3065,82 @@ canonical exact-S5 verdict cacheへ計上する。**q042 WIN行は採用しな�
   のみ。同一スコープの対抗宣言がmainに存在する場合は本宣言を破棄して着手しない。
 - 本amendment observed HEAD-before-push: `b394c3ca` (push直前にnote blob sha1
   を再照合し、競合時は再fetchして本節を追記し直す)。
+### Part AS status update (2026-11-22, adoption host = 本レーンセッション)
+
+宣言 (commit `5b6af2ed`, observed HEAD-before-push `b394c3ca`, note blob sha1
+ロック `7a534356…`) どおり完了。batch-14 (class 23101) の41 LOSS行
+(q001..q041) をcanonical exact-S5 verdict cacheへ計上する採用・再監査を
+単一オーナーとして実行し、出版まで完了した (full != loss: q042 WIN行は
+採用しない・verdict不消費)。
+
+- maker: `scripts/make_increments_batch14.py` (published Part AP版
+  `e35b545d…` をbatch-14にadapt) がpublished raws (publication commit
+  `7b211d38`) からfail-closed導出。41 LOSS行 increment 3,498 bytes
+  sha256 `5194af934a5373823a819ec53178dd008d1c6d5b17488101aa742ca1230d0831`、
+  manifest sha256
+  `8b5540f9aa1f9bdd40ef73b0353577da3d90c36ea3e43a8586f886e6390fe502`
+  (schema `batch14-loss41-increments-manifest-v1`、row_counts 41/0/41/0
+  (42 resolved / 52 probed)、unadopted_win_ids == ["q042"]、
+  full_packet_eq_loss_only false、win_scenario_exists true)。
+  q042の2-pass WIN結果 (result 1, 9,149,084 nodes) はrawから機械再検証のうえ
+  incrementから除外。
+- merge: sha-pinned fail-closed union merger (`90711961…`, byte-copy pin、
+  selftest PASS) でPart AP正本canonical 6,079行 (`342e8683…`) に41行をmerge、
+  **canonical 6,120行** (WIN 158 / LOSS 5,962, WIN/LOSS conflict 0,
+  duplicates 0, 251,466 bytes, sha256
+  `be9cb24e899fbe93db51e415320c50fa733e378748bb7a41fe13fd7b22f06685`) を
+  新pathに出版。2回実行・byte一致・merge-audit 2回byte一致
+  (`54c581ee…`)。
+- refresh: adapt版 `reaudit/scripts/refresh_adoption_23101.py` (Part AP版
+  `ad3dc0e6…` から3ハンク: docstring文言・canonical cache path・cache sha
+  期待値はcacheファイル自体から機械抽出) を2回直列実行、4出力ともrun間
+  byte一致: refresh-summary `f2008e70…` / closure-classes `3ee1dbb6…` /
+  per-root-coverage `527c7e9a…` / probe-worklist `1c96df05…` (3.7MB、
+  Part AH/AO/AP先例どおり不出版・sha記録のみ)。
+- delta extractor: `scripts/compare_deltas_batch14_adoption.py` (Part AP版
+  `f78f7e60…` をbatch-14にadapt。新規: q042不消費ゲート6面 (increment・
+  BASE cache・scenario cache・quarantine・BASE/scenario index_verdict・
+  class 23101のscenario-unknown子集合)、zero-WIN partial packetの
+  new-free空集合gate、closure表churn観測、q042 rawの2-pass再検証; 再計算
+  gate群は全て不変) を3回実行・出力byte同一 (`7155fdaa…`)・全gate PASS。
+  BASE (Part AP reaudit正本、publication commit `20deb45d` で取得し
+  `b278f822…` / `7405699e…` / `ec52a56d…` とsha検証済み) とscenario両方に
+  対してclass_status_counts・既知universe数・per-root被覆の再計算一致を
+  fail-closedで保証。
+- 結果 (canonical cache上の分類のみ): class 23101のunknown費用子は
+  **52 → 11** (残11 = 未採用q042のs5 745184 + 未着手q043-q052の10キー、
+  機械一致)。closure候補表 **rank 12 → rank 1** (unknown_now 11)。
+  class 23101はfree_now/excluded_nowのいずれにもならない。free_now 36・
+  excluded_now 23・unknown 34,500は全域不変・遷移ledger全同一・
+  excluded_now flip 0・新規free 0 (いずれもgate済み)。per-root free被覆は
+  全19 root不変 (root27 baseline 119/119)。update8 resolved 76 → 79
+  (s5 707915/713201/740437、すべてincrement内LOSSとgated)、remaining
+  31,783 → 31,780、groups_free 127不変。closure候補表 810 → 809行 (退出7:
+  1250/2233/4912/15394/22002/22119/22859、新規6: 21387/21934/22925/23075/
+  23102/23283 = 台帳churn)。class 10661はrank 14不変 (batch-17候補)。
+  joint greedy 38,522 → 36,726 (-1,796)、probe worklist 65,097 → 64,941
+  (-156) (いずれも簿記・被覆変更0)。
+- 出版: 実験dir `research/experiments/n11-centralreply-class23101-loss41-adoption-reaudit-20261122/`
+  16ファイルを3コミットでmainに反映 (canonical cache単独 `f03809fa`
+  (observed HEAD `7196cbd5`、paged-readで251,466 bytes完全連結・長さ検証)、
+  scripts+increment+manifest `5e579b03`、outputs+README+status.log+MANIFEST
+  `8c42e44c` = publication complete)。**fetch-back 15/15 byte一致**
+  (publication commit `8c42e44c` 固定raw URLでMANIFEST-sha256.txt全行を
+  sha256照合)。
+- 誠実記録 (runner): extractor初回書き損じ2件 (batch-keysの
+  groups_served_full→groups_served_first_seen schema差、replay行の列
+  offset誤り) はfail-closed gateが即時捕捉し、修正後3回byte同一で可決。
+  sequence中のsha手転写事故なし。
+- verdict不消費・状態: q042は**15番目のunconsumed closure WIN**のまま
+  (b018/d002/e002/f017/g018/j033/h045/z003/n005/n006/p002/p003/r001/r002/q042)。
+  採用判断はscrutiny owner (C++第二実装 gate pin `9193f5b6…`) 待ち・不変。
+  canonical cache上の41 LOSS行の採用は本Partが消費した唯一のverdict。
+- 標準11×11空盤・19 central-reply roots・class 23101 (unknown 11子) の
+  全S5子はどの時点でも**UNKNOWNのまま**。nodes数・worklist数・greedy数を
+  勝敗として読まない。
+- open (着手前に必ず最新mainで対抗宣言確認要): (a) q042単WINのif-adopted
+  分解 (Part V/R/AB/AH/AI/AN流・新canonical 6,120行 `be9cb24e…` をBASEに
+  構築)、(b) batch-17 (class 10661, rank 14, `1152921505697431552,0`,
+  unknown 52) 宣言、(c) batch-15等の残るunconsumed WIN群の同形式reaudit。
+- 本status updateのobserved HEAD-before-push: `8c42e44c…` (note blob sha1
+  ロック `7a534356…` で更新、fetch-backで追記確認)。
