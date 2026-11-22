@@ -1,0 +1,76 @@
+# n11 central-reply closure batch-17 (class 10661) 52-LOSS canonical-adoption increment (Part AV, 2026-11-22)
+# published Part AV declaration (note amendment 2026-11-22, commit 340abef3) + Part AV
+#   takeover amendment (note, commit d3ef2dc6, observed HEAD-before-push 432664f7;
+#   scope unchanged - ownership transfer only).
+# 2-pass node-exact exact-S5 verdicts at budget 15M, fresh cold, pinned jsreplay.js
+#   sha256 845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df
+# batch-17 was executed by the Part AU host (52/52 probed = 52 LOSS, 0 WIN, 0
+#   exhaustion, 0 mismatch; five host-event truncated fragments never produced a
+#   verdict line and were re-run fresh cold; row-audit c19e768f, status.log
+#   'EXECUTION-COMPLETE: 52/52 probed = 52 LOSS' record published).
+# gates: 3-way (p1/p2/status) node-exact + '# replay_done' completeness, status.log
+#   agreement incl. the published EXECUTION-COMPLETE record, row-audit.json 52-row
+#   agreement (result/verdict/nodes/legal/(lo,hi)/s5_index/probe_order/whole picture),
+#   batch-keys (sha256 db762175) legal/(lo,hi) agreement, resolved keys distinct,
+#   ZERO WIN rows (absence gate), ZERO exhaustion rows (absence gate), ZERO
+#   BASE-cache overlap (structural gate: batch-17 post-dates the Part AS merge;
+#   any overlap ABORTs), quarantine 0.
+# ADOPTED set = the full resolved packet {u001..u052} = exactly all 52 LOSS rows.
+#   No WIN row exists in batch-17, so full == loss here (machine-stated); no WIN
+#   verdict is consumed anywhere by this Part; the 17 unconsumed closure WINs are
+#   untouched (scrutiny owner gate 9193f5b6... unchanged).
+# The 52 LOSS rows ARE consumed into the canonical cache by the Part AV merger;
+#   11x11 stays UNKNOWN; nodes are bookkeeping, never verdicts.
+# 52 rows: the adopted LOSS verdicts of class 10661's unknown S5 children (17th batch).
+s5verdict,1152921505697431552,8,5,2,1673242
+s5verdict,1152921505697431552,16,5,2,5160719
+s5verdict,1152921505697431552,32,5,2,2204673
+s5verdict,1152921505697431552,64,5,2,4897960
+s5verdict,1152921505697431552,128,5,2,2135947
+s5verdict,1152921505697431552,8192,5,2,4736680
+s5verdict,1152921505697431552,16384,5,2,4128023
+s5verdict,1152921505697431552,32768,5,2,2779870
+s5verdict,1152921505697431552,65536,5,2,2472941
+s5verdict,1152921505697431552,131072,5,2,4246954
+s5verdict,1152921505697431552,262144,5,2,2550176
+s5verdict,1152921505697431552,16777216,5,2,4211028
+s5verdict,1152921505697431552,33554432,5,2,4809998
+s5verdict,1152921505697431552,67108864,5,2,3027580
+s5verdict,1152921505697431553,0,5,2,2467460
+s5verdict,1152921505697431554,0,5,2,5123893
+s5verdict,1152921505697431556,0,5,2,3370343
+s5verdict,1152921505697431560,0,5,2,4732751
+s5verdict,1152921505697431568,0,5,2,2000183
+s5verdict,1152921505697431584,0,5,2,2122547
+s5verdict,1152921505697433600,0,5,2,2918993
+s5verdict,1152921505697435648,0,5,2,4665558
+s5verdict,1152921505697439744,0,5,2,2393498
+s5verdict,1152921505697464320,0,5,2,3340659
+s5verdict,1152921505701625856,0,5,2,2902039
+s5verdict,1152921505705820160,0,5,2,6009881
+s5verdict,1152921505730985984,0,5,2,5154154
+s5verdict,1152921505831649280,0,5,2,2340296
+s5verdict,1152921514287366144,0,5,2,6589964
+s5verdict,1152921540057169920,0,5,2,1780787
+s5verdict,1152921574416908288,0,5,2,2824739
+s5verdict,1152921643136385024,0,5,2,2679969
+s5verdict,1152921780575338496,0,5,2,1816952
+s5verdict,1152939097883475968,0,5,2,2033033
+s5verdict,1152956690069520384,0,5,2,3565076
+s5verdict,1153062243185786880,0,5,2,2429281
+s5verdict,1153484455650852864,0,5,2,1807922
+s5verdict,1188950302716395520,0,5,2,5930201
+s5verdict,1224979098661552128,67108865,5,2,1904250
+s5verdict,1224979098661552128,67108866,5,2,4081732
+s5verdict,1224979098661552640,67108864,5,2,4223548
+s5verdict,1224979098661553152,67108864,5,2,2276223
+s5verdict,1224979098663649280,67108864,5,2,5116404
+s5verdict,1224979100809035776,67108864,5,2,3670208
+s5verdict,1224981297684807680,67108864,5,2,3486492
+s5verdict,1224983496708063232,67108864,5,2,3544067
+s5verdict,1224987894754574336,67108864,5,2,7806486
+s5verdict,1229482698288922624,67108864,5,2,2149761
+s5verdict,1233986297916293120,67108864,5,2,14967263
+s5verdict,1242993497171034112,67108864,5,2,1651860
+s5verdict,1729382258000855040,0,5,2,5217624
+s5verdict,10448351135516327936,67108864,5,2,6404564
