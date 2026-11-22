@@ -2693,6 +2693,64 @@ what-if incrementとして採用する単一シナリオを計算する。
   追記し直す)。
 
 
+## Part AP (canonical adoption + reaudit, declaration 2026-11-22): batch-16 (class 10687) 52 LOSS行のcanonical計上 + refresh再実行・独立監査によるclass 10687閉鎖資格確定
+
+batch 16 (Part AM) は52/52全LOSS・枯損0で完走しており、52 LOSS行の消費は
+fail-closed union merger経由で合法 (batch-2 23963, batch-10 8784, 10324の
+先例どおり、C++第二実装ゲート pin `9193f5b6...` はWIN行採用のみに適用)。
+Part AN (batch-15 if-adopted) は出版済みだが本Partでは計上しない。
+batch-14 (Part AQ, in flight) とはキー・ファイルが非交差であることを
+着手前に再確認する。52 LOSS行すべてを本Partで計上する (WIN行ゼロ・
+枯損ゼロはpublished manifestで機械表明済み)。
+
+- 対象: `research/experiments/n11-centralreply-class10687-loss52-adoption-reaudit-20261122/`。
+- canonical cache出版 (単一ファイルコミット): published increment
+  `95345a5b...` (Part AO `5a5e56d8`) を、BASE canonical 6,027行
+  `95e868d6...` (8784-reaudit正本path) にsha-pinned union merger
+  (`90711961...`, selftest PASS) でfail-closed mergeした6,079行cache
+  (sha256 `342e8683...`・Part AO scenario cacheとbyte同一・merge 2回
+  byte一致はPart AOで機械検証済み) を、新path
+  `output/merged-exact-s5-chain-plus-closure-increment-plus-batch10-plus-batch16loss52-20261122.cache`
+  として出版する。本reaudit内でincrements maker (`e35b545d...`) と
+  mergerを再実行し、published bytes (increment `95345a5b...`, merge結果
+  `342e8683...`) とのbyte一致とWIN/LOSS conflict 0を再び機械検証する
+  (再導出分はstatus.logに記録、increment/auditの再出版は行わない)。
+- refresh再実行 (reaudit本体): pinned Part Y refresh script (`88671526...`)
+  のadapt (Part AO adapt `fb846776...` からcache pathとdocstringのみ
+  変更、cache sha期待値 `342e8683...` は不変) を2回**直列**実行し、
+  4出力ともrun間byte一致必須。closure-classes.csv・per-root-coverage.csv・
+  probe-worklist.csvの3出力はPart AOのPLOSS52出力
+  (`7405699e...` / `ec52a56d...` / `3b28ba59...`) とbyte一致必須
+  (cache bytesが同一のため決定論的。差異があればfail-closed着手停止)。
+  refresh-summary.jsonは`pins.merged_cache.path`が新canonical pathに
+  変わる1フィールドのみの差分であることを機械diff検証する (他は全行
+  byte一致必須)。
+- 独立監査 (delta extractor): Part AO extractor
+  (`compare_deltas_batch16.py`, `ca2a14f7...`) のadapt (SCEN cache
+  path・SCEN summary path/sha・docstring文言・interpretation guardのみ
+  変更、再計算gate群は全て不変) を3回実行しbyte一致必須・全gate PASS
+  を必須とする: BASE summary (published `25987add...`) 対照、
+  graph + update8 + canonical cacheからのclass_status_counts・既知
+  universe数・per-root被覆の全再計算一致、class 10687がBoard検証free
+  (36番目・free_now 35→36)、closure candidate表からclass 10687消滅
+  (811→810行)、per-root変更行は (central,16) のみ (free 14→16, uncovered
+  105→103, free+uncovered==119不変)、root 27 baseline 119/119、update8
+  +1要件 (s5 376421: resolved 75→76, remaining 31,784→31,783,
+  win_hit_groups 0不変)、143 holder classのown-membership算術gate、
+  excluded_now flip 0、newly free third手 {(16,56),(16,64)} の
+  groups_served_full機械一致。
+- 主張 (本Partで確定するもの): **class 10687の閉鎖資格確定**
+  (Board検証free・36番目・root 16の2 group secured。23963/8784/10324
+  先例と同一の判定形式)。これはcanonical cache上の分類確定のみであり、
+  19 rootの勝敗・標準11×11空盤には一切言及しない。
+- 標準11×11空盤・19 central-reply roots・class 10687他全classはどの
+  時点でも**UNKNOWNのまま**。nodes数・worklist数・greedy数を勝敗として
+  読まない。
+- 本宣言 observed HEAD-before-push: `a71bef64` (push直前にnote blob
+  sha1 `7b14c2ac...` を再照合、競合時は破棄し着手しない)。本Partの
+  出版はcanonical cache単独コミット→reaudit実験dirコミットの順で行う。
+
+
 ## Part AQ (takeover owner, declaration 2026-11-22): batch 14 (class 23101) completion under takeover after declaring-host silence (verdict不消費・実行前に宣言)
 
 Part AF (batch 14, class 23101, renewed rank 12) は2026-11-22T12:26:47Zにscaffold
