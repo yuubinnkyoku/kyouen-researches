@@ -2364,3 +2364,38 @@ legal 82, result 1 WIN, 2,521,302 nodes / r002: s5_index 103561, key
   `batch15-wins-thirdimpl` dir不在・Part AL採番未使用を確認済み。同一スコープの
   宣言がmainに存在する場合は本宣言を破棄して着手しない。
 - 本宣言 observed HEAD-before-push: `cf485460` (2026-11-22T14:47:40Z)。push直前にnote blob再照合し競合時は破棄。
+
+
+## Part AL publication status update (2026-11-22, verifier owner)
+
+Part AL (batch-15 class 5830 r001/r002 第三実装交叉検証) は**完走・出版済み**
+(実験dir `n11-centralreply-closure-batch15-wins-thirdimpl-20261122/` 29ファイル、
+commit `ca7ad4fc`、fetch-back 29/29 byte一致・MANIFEST-sha256.txt同梱)。
+**verdict不消費**のまま。R003/R004の15M枯損行は再探索しておらず (honest UNKNOWN
+のまま・禁止は不変)、r005-r052 (48キー) は未着手のまま。
+
+- 前提ゲート: verify_tbl.js quads 95,670 == replica・ランダム195,044トリプル
+  0 mismatch・script 3pin一致 (third_impl `08ea958f...` / verify_tbl
+  `c8c52528...` / jsreplay `84585617...`)。
+- negatives: ng1 (legal 88 vs derived 87)・ng2 (stones 6 vs bits 5) とも文言
+  一致のGATE_FAIL (fail-closed動作)。
+- anchors: k02a a/b = WIN, 9,106,337 expansions / 4,991,527 ttHits, clean・
+  l1a a/b = LOSS, 7,660,602 / 3,951,175, clean - **いずれもpublished第三実装
+  値と完全一致、a/b決定性一致**。
+- targets (1行2回 a/b determinism・cap 300M・wallcap 240s・memo-power 22):
+  - **r001 `[4035788216211603456, 0]` (legal 82): 第三実装 result 1 WIN・
+    2,856,756 expansions・1,684,754 ttHits・clean・a/b同一 (wall 17.34/17.47s)
+    → replica verdict (WIN, 2,521,302 nodes @15M) とverdict一致**
+  - **r002 `[3603442651849818112, 128]` (legal 82): 第三実装 result 1 WIN・
+    6,817,094 expansions・4,153,893 ttHits・clean・a/b同一 (wall 42.37/42.85s)
+    → replica verdict (WIN, 5,973,924 nodes @15M) とverdict一致**
+  - wall-inconclusive 0件・divergence 0件。13番目・14番目のunconsumed
+    closure WINは第三実装verdict-level補強を得た (採用判断は引き続き
+    scrutiny ownerのC++第二実装ゲート `9193f5b6...` 待ち・不変)。
+- audit: schema `batch15-wins-thirdimpl-audit-v1`、**51/51 gates PASS**・
+  2回実行でbyte一致 (audit-summary.json sha256 `c008d74b...`)。
+- 誠実記録: runnerの直列`&&`ペアがng1の意図的rc=1で短絡したため、ng2は
+  runner直後に同一pinned `run_thirdimpl.sh` 起動で実行した (status.logの
+  PARTAL-RUNNER-EXIT後に行が存在・READMEに明記)。
+- 標準11×11空盤・19 central-reply roots・class 5830他全classはどの時点でも
+  **UNKNOWNのまま**。nodes/expansionsを勝敗として読まない。
