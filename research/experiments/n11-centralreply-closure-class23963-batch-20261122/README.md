@@ -39,8 +39,22 @@ this batch**: the class closes only after an independent re-verification audit
   cache candidate (published separately with a WIN/LOSS conflict gate); this
   batch alone consumes nothing
 
-## Status
+## Status (batch complete 2026-11-22T02:56:54Z)
 
-section updated as the batch progresses; see `output/status.log` and the final
-README section. The standard 11x11 empty board, the 19 central-reply roots and
-class 23963 remain UNKNOWN throughout.
+- **all 48 keys (c001-c048): 2-pass node-exact, result 2 (LOSS), budget 15M**
+  (no WIN, no budget exhaustion, no mismatch; status.log 48 PASS rows, rc=0)
+- independent row audit `output/batch-audit.json`: 48/48 keys 2-pass agree,
+  key/lo/hi and legal counts machine-verified against `input/batch-keys.json`,
+  all input csv rows regenerate byte-exact; total nodes 76,504,609 per pass,
+  153,009,218 for both passes
+- consequence: the all-48-LOSS closure route for S4 class 23963 SURVIVES this
+  batch. The class becomes closable only after the independent re-verification
+  audit (rerun of the frontier refresh with a fail-closed merged cache that
+  includes these 48 rows, with the Board fail-safe boundary regeneration);
+  that audit is a separate publication. **No closure or coverage claim is made
+  by this batch alone.**
+- consumption: the 48 LOSS rows are increment-cache candidates via the
+  fail-closed union merger with a WIN/LOSS conflict gate (separate publication);
+  this batch consumes nothing
+- the standard 11x11 empty board, the 19 central-reply roots and class 23963
+  remain UNKNOWN throughout
