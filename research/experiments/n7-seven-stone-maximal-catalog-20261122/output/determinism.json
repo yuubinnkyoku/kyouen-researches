@@ -1,0 +1,61 @@
+{
+ "purpose": "determinism re-run of the three n=7 k=7 enumeration shards (same command lines)",
+ "runs": [
+  {
+   "shard": "y0",
+   "range": "0:7",
+   "run1": {
+    "found": 8,
+    "nodes": 27916188,
+    "elapsedMs": 45119
+   },
+   "run2": {
+    "found": 8,
+    "nodes": 27916188,
+    "elapsedMs": 44853
+   },
+   "cfg_lines_byte_identical": true,
+   "differing_fields": [
+    "elapsedMs in summary record only"
+   ]
+  },
+  {
+   "shard": "mid",
+   "range": "7:42",
+   "run1": {
+    "found": 8,
+    "nodes": 10882338,
+    "elapsedMs": 17921
+   },
+   "run2": {
+    "found": 8,
+    "nodes": 10882338,
+    "elapsedMs": 17927
+   },
+   "cfg_lines_byte_identical": true,
+   "differing_fields": [
+    "elapsedMs in summary record only"
+   ]
+  },
+  {
+   "shard": "y6",
+   "range": "42:49",
+   "run1": {
+    "found": 0,
+    "nodes": 9,
+    "elapsedMs": 2
+   },
+   "run2": {
+    "found": 0,
+    "nodes": 9,
+    "elapsedMs": 1
+   },
+   "cfg_lines_byte_identical": true,
+   "differing_fields": [
+    "elapsedMs in summary record only"
+   ]
+  }
+ ],
+ "shard_partition": "first-stone cell c=x+7y in [lo,hi): 0:7 + 7:42 + 42:49 = 0:49 covers every configuration exactly once (unique minimum-index stone)",
+ "n6_k6_shard_union_check": "full-range run and 0:18+18:36 sharded run of n=6 k=6 produce byte-identical cfg line sequences (8 configs)"
+}
