@@ -96,6 +96,8 @@ m=21（conflicts 1,379,955）と m=26（162,762）は、実行環境の完全リ
   q12 掃引記録 m=17..882 全866幅 UNSAT（正本 records/sweep-q12.jsonl 866行を3分割・
   連結で正本と byte-exact・シャード md5 は records/sweep-q12.checksums）
 - records/calibration-takeover-20261122.jsonl — 接管較正 29/29
+- records/rerun-sample-20261122.jsonl — 公開スクリプト+公式 kissat 再ダウンロードによる
+  8幅サンプル再実行（CNF md5・vars・clauses・conflicts 全て公開記録と bit-exact 一致）
 
 ## 環境障害の記録
 

@@ -48,9 +48,26 @@ checksums・較正記録・scripts・src oracles・kissat）で成果物一式�
 - results/fixed-width/mwq_stabilization.csv 行31: (8,12) を
   exact-threshold,8,12,12,17,proved に置換（CSV 内 w=8 では (8,11) に続き2行目）。
 
+## 成果5：公開成果物からのサンプル再実行 — 8/8 bit-exact
+
+main に公開済みの scripts/genfam12.js と sat2.js/sat.js
+（seven-row-inband-families-20261114; md5 はキットと同一）だけを用いて CNF を再生成し、
+公式 release から新規ダウンロードした kissat 4.0.4（binary md5 3a5eba830aa6008a604fcc9bbe99a325・
+掃引時の binary と bit-exact 同一）で再解決した:
+
+- 対象8幅: m=17（conflicts max）・51（min）・231（接管掃引の起点）・316/317・616/617
+  （シャード境界）・882（最終幅）
+- **8/8 すべて CNF md5・vars・clauses が公開記録と bit-exact 一致し、kissat 再実行も
+  UNSAT・conflicts が公開記録と bit-exact 一致**（6,653 / 679 / 2,097 / 1,835 / 1,668 /
+  1,869 / 1,731 / 1,996）
+- 記録: records/rerun-sample-20261122.jsonl（tag rerun-1）
+- 位置づけ: 同一実行環境という限界はあるが、CNF 生成から解決まで公開成果物のみで
+  再構成される点で掃引実行とは独立の確認経路。別環境での全幅独立再実行は今後の課題。
+
 ## 残務（後続レーン）
 
 - decode_model.js・verify_all.js・SAT フロンティア生ログ・UNSAT 生ログ batch tar は未格納
   （binary は push 経路なし・records の conflicts/CNF md5 が当面の整合担保）。
-- (8,12) の独立第二検証（別実装・別環境での掃引再実行）は今後の候補。
+- (8,12) の完全な独立第二検証（別実装・別環境での掃引全幅再実行）は今後の候補
+  （第1段階のサンプル再実行 8/8 bit-exact は成果5で完了）。
 - 11×11 等の長期レーンは本レーンの管轄外。

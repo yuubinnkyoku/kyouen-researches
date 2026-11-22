@@ -40,6 +40,9 @@ artifacts:
 - path: research/experiments/eight-row-q11-q12-band-closure-20261115/records/calibration-takeover-20261122.jsonl
   role: verifier
   note: "29/29 takeover calibration PASS: (A) 11/11 CNF byte-identity vs sat2.js all-triples census at 8x11..16 q11/q12, (B) 10/10 vs genfast.js chord-pair census at 8x17/20/26/40/60 q11/q12, (C) 8/8 CNF md5/vars/clauses match vs published records/sweep-q11.jsonl at m=21,26,40,100,300,500,700,907"
+- path: research/experiments/eight-row-q11-q12-band-closure-20261115/records/rerun-sample-20261122.jsonl
+  role: verifier
+  note: "8-width sampled rerun rebuilt only from published artifacts (scripts/genfam12.js + sat2.js from seven-row-inband-families-20261114) and a fresh official kissat 4.0.4 download (binary md5 3a5eba830aa6008a604fcc9bbe99a325, bit-identical to the sweep binary): m=17,51,231,316,317,616,617,882 all regenerate the published CNF md5/vars/clauses byte-exactly and re-solve UNSAT with bit-exact conflicts (6653, 679, 2097, 1835, 1668, 1869, 1731, 1996); same execution environment, so an independent-environment full re-run remains future work"
 - path: research/experiments/eight-row-q11-q12-band-closure-20261115/scripts/genfam12.js
   role: solver
   note: "family-census CNF generator (8 rows + m-7 twelve-point F1 circles); published and byte-verified against the kit copy"
