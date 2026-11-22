@@ -2637,6 +2637,62 @@ what-if incrementとして採用する単一シナリオを計算する。
   競合時は破棄し着手しない)。
 
 
+### Part AO status update (2026-11-22, declaring host = 本レーンセッション)
+
+宣言 (commit `ede3eb42`, observed HEAD-before-push `6af95d9c`) どおり完了。
+単一シナリオ **PLOSS52** = BASE (canonical 6,027行 `95e868d6…`) + batch-16
+52 LOSS行を計算した (WIN行ゼロ・枯損行ゼロのため「全resolved行採用 == 52 LOSS行」
+はmanifestで機械表明済み)。
+
+- 出版: 実験dir `research/experiments/n11-centralreply-class10687-loss52-ifadopted-20261122/`
+  16ファイル (scripts 4 = increments maker / sha-pinned union merger `90711961…` /
+  delta extractor / adapted scenario refresh (loss52/scripts側), output 6 = 52行増分
+  `95345a5b…` + manifest + merge-audit run1/run2 + scenario cache 6,079行
+  `342e8683…` + delta JSON `dd6a01ef…`, loss52/output 3 = refresh 3出力,
+  README.md, status.log, MANIFEST-sha256.txt) を1コミット `5a5e56d8`
+  (2026-11-22) でmainに反映、fetch-back 16/16 byte一致 (commit-pinned raw URL
+  →sha256sum照合)。probe-worklist (3.7MB, sha256 `3b28ba59…`) はPart AH/AJ
+  先例どおり不出版 (READMEにsha記録)。
+- 全二重実行byte一致 (status.logに正本記録): increments maker 2回 (`95345a5b…`)、
+  union merge 2回 (selftest PASS・WIN/LOSS conflict 0、`342e8683…`)、
+  scenario refresh 2回直列実行 (~60s、4出力ともrun間byte一致:
+  `7fd15927…`/`7405699e…`/`ec52a56d…`/worklist `3b28ba59…`)、delta extractor 3回
+  (`dd6a01ef…`・全ゲートPASS)。extractorはgraph + update8 + cacheから
+  class_status_counts・known-universe数・per-root free被覆を再計算し、BASE
+  (published `25987add…`) とPLOSS52両summaryと一致するまでfail-closed。
+- 機械測定された分解結果: **flipなし** (zero-WIN増分はflip不可能、
+  excluded_now 23不変・flip集合は空と機械検証)。状態遷移台帳: excluded 390・
+  excluded_now 23・free_now 35は全行不変、unknown→free_now 1、unknown→unknown
+  34,500。**class 10687がwhat-if上でBoard検証free候補化** (free_now 35→36: what-if
+  投影であり閉鎖主張ではない)、unknown 34,501→34,500。新規free第三手 {(16,56),(16,64)}
+  はbatchのgroups_served_fullと機械一致、per-root被覆の変更行は (central,16) のみ
+  (free_now 14→16・uncovered 105→103・不変式free+uncovered==119保持)、root 27
+  baselineは119/119不変。increment子を持つ143個のgraph holder classすべてで
+  scenario unknown_now == BASE unknown_now - own membership を機械検証
+  (class 10661 53→52 own 1、class 10695 own 2でunknown維持)。
+  update8は+1要件 (s5 376421: resolved 75→76, remaining 31,784→31,783,
+  win_hit_groups 0不変)。スケジューリング数量 (heuristic測定・被覆とは別): joint
+  greedy 35,242→38,522 (free化groupの除外による再選択であって被覆後退ではない)、
+  worklist 65,154→65,097 (-57)、closure candidate表からclass 10687消滅
+  (811→810行)、rank 14行は**class 10661** (mask `[1152921505697431552, 0]`,
+  unknown 52, groups (24,30)系) に異動 = 機械特定された次のall-LOSS候補。
+- **verdict不消費・閉鎖主張なし**: 52 LOSS行はPart AM証拠のままcanonical cache外。
+  class 10687の閉鎖資格確定には、本what-ifとは別にPLOSS52計上後のcanonical
+  increment化 + refresh再実行 + 独立監査 (別宣言・Part AP相当) が必要。
+  14 unconsumed closure WINの採用判断はscrutiny ownerのC++第二実装ゲート pin
+  `9193f5b6…` 待ちのまま。標準11×11空盤・19 central-reply roots・class 10687他
+  全classはどの時点でも**UNKNOWNのまま**。nodes数を勝敗として読まない。
+- 誤記録の訂正: session log continuation 27 内のbatch-keys sha略記
+  `465cf44721a661ce94babeb12...` は写し損じ (正全文は
+  `465cf44721a661ce94babe12212c26c697ebb346392548fcdafaa9d3e8c3dd4e`)。
+  同continuationは全文をexperiment README/MANIFESTに正しく指しており、
+  主張・照合への影響なし。正本 (batch-16 input/batch-keys.json出版bytes) は
+  誤りを含まない。
+- 本status updateのobserved HEAD-before-push: `5a5e56d8` (push直前にnote blob
+  sha1 `059ba5aa…` を再照合、fetch-backで追記確認。競合時は再fetchして本節を
+  追記し直す)。
+
+
 ## Part AQ (takeover owner, declaration 2026-11-22): batch 14 (class 23101) completion under takeover after declaring-host silence (verdict不消費・実行前に宣言)
 
 Part AF (batch 14, class 23101, renewed rank 12) は2026-11-22T12:26:47Zにscaffold
