@@ -3144,3 +3144,43 @@ canonical exact-S5 verdict cacheへ計上する。**q042 WIN行は採用しな�
   unknown 52) 宣言、(c) batch-15等の残るunconsumed WIN群の同形式reaudit。
 - 本status updateのobserved HEAD-before-push: `8c42e44c…` (note blob sha1
   ロック `7a534356…` で更新、fetch-backで追記確認)。
+## Part AT (verifier, declaration 2026-11-22): q042単WIN行のif-adopted分解 (scrutiny owner向け事前計算・verdict不消費・実行前に宣言)
+
+Part AS (41 LOSS行canonical計上) 完了時点で、batch-14のq042 WIN行
+(s5_index 745184, key `[1152921505747697664, 1032]`, result 1,
+9,149,084 nodes, 2-pass node-exact, 第三実装一致済み (Part AR)) は
+15番目のunconsumed closure WINのまま。採用判断 scrutiny owner (C++第二実装
+gate pin `9193f5b6…`) のためのif-adopted分解を、Part V/R/AB/AH/AI/AN/AO流
+(b018/d002/e002/r001/r002等のk04 precedent) と同一形式で実行する。
+**verdict不消費・本Partは採用を推奨も却下もしない・if-adopted投影を勝敗や
+閉鎖主張として読まない。**
+
+- 対象: `research/experiments/n11-centralreply-class23101-q042-ifadopted-20261122/`。
+- BASE = 現行canonical 6,120行 (sha256 `be9cb24e…`, publication commit
+  `8c42e44c` の `n11-centralreply-class23101-loss41-adoption-reaudit-20261122/output/`)。
+  q042のkeyはBASEに不在 (Part AS extractorの6面gate済み)。
+- 増分 = 単一WIN行 (published batch-14 raws q042.p1/q042.p2, publication
+  commit `7b211d38`; makerが2-pass node-exact (result 1, 9,149,084 nodes
+  両pass一致) をrawから機械検証し、BASE不在・quarantine不在・canonical key
+  形式をgateしてから1行incrementを導出)。
+- 手法: sha-pinned fail-closed union merger (`90711961…`, byte-copy pin)
+  2回実行・byte一致 → **if-adopted cache 6,121行** (WIN 159 / LOSS 5,962,
+  canonicalではなく投影)。refresh script adapt版 (Part AS版 `5992738d…` から
+  cache path/sha・文言のみの変更・sha期待値はcache自体から機械抽出) を2回
+  直列実行・run間byte一致。delta extractor (Part AS版 `9e885ae0…` をWIN単行
+  if-adopted用にadapt: flips == s5 745184をcost childとして持つunknown保持
+  クラスの機械計算集合、WIN採用によるfree化は起きえない gate、update8
+  win_hit_groups変化の機械抽出・resolved基線不変) を3回実行・byte一致・全gate
+  PASS。
+- 主張範囲: if-adopted投影上の分類delta (flip集合・win_hit_groups・被覆・
+  worklist等の数表) のみ。canonical cacheは本Partで一切変更しない。
+- verdict不消費: 本Partが消費するverdictはゼロ (if-adopted cacheはrepoの
+  canonical chainではない)。q042はcanonical上も未来の採用判断上もunconsumed。
+- 標準11×11空盤・19 central-reply roots・class 23101・全classは本Partの
+  どの時点でもUNKNOWNのまま。nodes数を勝敗として読まない。
+- 並走との不接触: batch-17 (class 10661) は本Partでは宣言・scaffold・実行ともに
+  行わない。Part AS/published成果への書込みは読み取りのみ。同一スコープの
+  対抗宣言がmainに存在する場合は本宣言を破棄して着手しない。
+- 本amendment observed HEAD-before-push: 実行時の最新mainをコミットメッセージ
+  に記録 (push直前にnote blob sha1ロック `3c9f42f4…` を再照合し、競合時は
+  再fetchして本節を追記し直す)。
