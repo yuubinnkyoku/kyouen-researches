@@ -1797,3 +1797,68 @@ byte-identical at that commit); no computation was re-run here.
   batch-17 declaration (class 10661) after a fresh main re-read,
   Part AQ (batch-14 takeover, in flight by its owner) untouched,
   knowledge-base entry update for Part AP completion (local).
+
+
+## Continuation 30 (2026-11-22, this host): Part AQ batch-14 (class 23101) completed under takeover - WIN-HALT at q042, the 15th unconsumed closure WIN, verdicts NOT consumed
+
+Takeover provenance and publication (all byte-verified):
+
+- takeover basis: Part AF declared 2026-11-22T12:26:47Z (scaffold `54b7453d`)
+  and never published a row or status line; 3h40m silence far exceeds the
+  20-minute batch 8/11 criterion; no declaring-host rows existed in any
+  mirror (nothing to rescue). Declared in the note as Part AQ (commit
+  `398a96ae`, observed HEAD-before-push `ede3eb42`), with the Part AF
+  pre-registered protocol taken over unchanged (2-pass fresh cold, budget
+  15M, mismatch HARD-STOP rc=42, WIN-HALT rc=45, in-flight wave members
+  disclosed complete, 4-key waves).
+- pre-execution verification on this host (all PASS): published scaffold
+  65/65 byte-identical to the kit mirror; jsreplay pin
+  `845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df`;
+  fail-safes (1)-(6): 52/52 keys absent from the then-canonical 6,027-row
+  cache `95e868d6...`, quarantine (active 2) 0 hits both directions,
+  duplicate-free, closure-classes rank-12 row byte-agreement, 12
+  unconsumed WIN keys 0 hits (lo/hi re-extracted from published batch
+  raws), probe_order 538-589 == worklist 65,154 rows `1807e4d2...` with
+  lo/hi/legal/s5_index agreement vs batch-keys `dfde0e90...`; val-gate
+  4/4 node-exact fresh (at2m 0/2,000,000 twice; 15m 2/3,651,923 and
+  2/5,040,200), takeover outputs saved as `*.takeover-aq.out`.
+- execution result: **WIN-HALT at q042 (probe_order 579, s5_index 745184,
+  key `[1152921505747697664, 1032]`, legal 85): result 1 WIN, 9,149,084
+  nodes, 2-pass fresh-cold node-exact.** Same-wave q039/q040/q041 disclosed
+  complete LOSS (2,502,014 / 2,175,857 / 2,514,109 nodes). 42 probed =
+  41 LOSS + 1 WIN, exhaustion 0, mismatch 0, 88,338,850 nodes/pass.
+  q043-q052 (10 keys) not started per the halt rule. No truncation on this
+  host (all 84 raws carry the `# replay_done` trailer; the takeover wave
+  wrapper `scripts/runwave-aq.sh` was introduced with that completeness
+  guard and WAVE-START/WAVE-END logging).
+- machine row audit `output/row-audit.json` (schema
+  `n11-centralreply-closure-class23101-batch14-rowaudit-takeover-v1`,
+  sha256 `cc22a1c8...`): all 42 rows two-pass node-exact, key/legal/
+  probe_order agreement, 95,670 quadruple gate both passes, status.log
+  cross-check, problems empty.
+- publication: 156 files in 4 commits (raws q001-q021 `21affe23`, raws
+  q022-q042 `d064e3aa`, status+audit+val-gate+runner `4cf1d248`, README
+  Takeover/Result + MANIFEST `7b211d38`), fetch-back 156/156 byte-exact
+  against the MANIFEST at the publication commit; kit mirror byte-equal.
+  Note Part AQ status update `eaccb0b4` (note blob
+  `a4cd1465...`, fetch-back byte-identical).
+- honesty record: the parallel lane completed Part AO (`5a5e56d8`) and
+  Part AP (canonical 6,027 -> 6,079 rows `342e8683...`, class 10687
+  closure-qualified) during this takeover; zero writes to their scope.
+  All 52 batch-14 keys re-checked absent from the new 6,079-row canonical
+  cache (0 hits, including q042).
+- verdict guards (unchanged): q042 is the 15th unconsumed closure WIN
+  (b018/d002/e002/f017/g018/j033/h045/z003/n005/n006/p002/p003/r001/r002
+  /q042), scrutiny-owner-blocked (C++ second-implementation gate pin
+  `9193f5b6...`). The all-52-children-LOSS closure route for class 23101
+  is refuted by a verified WIN child (verdict-level route statement
+  only). Batch tally: 15 batches -> 12 WIN-HALT + 3 clean. The standard
+  11x11 empty board, the 19 central-reply roots, class 23101 and its S5
+  children remain UNKNOWN throughout; nodes are not verdicts.
+- open items (re-read latest main before starting): (a) q042
+  third-implementation cross-verification (Part G/K/O/P/T/W/AA/AD
+  protocol, anchors 2 + negatives 2, rules gate), (b) q042 single-WIN
+  if-adopted decomposition (Part V/R/AB/AH/AI/AN flow), (c) 41 LOSS rows
+  canonical adoption + reaudit (Part AP flow, increments built against
+  the new 6,079-row canonical), (d) batch-17 declaration (class 10661
+  per the Part AP reaudit, machine-identified next clean candidate).
