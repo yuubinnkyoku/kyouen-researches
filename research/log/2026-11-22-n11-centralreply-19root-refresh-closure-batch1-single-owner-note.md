@@ -1139,3 +1139,74 @@ Part Y宣言 (本note Part Y節) に基づき消費・再監査を実行・出�
   勝敗主張ではない。nodesを勝敗として読まない。
 - 本status update observed HEAD-before-push: 実行時の最新mainを
   コミットメッセージに記録 (Part Y実験出版 `5a6e0528` 直後のmain)。
+
+## Part Z (prober, amendment 2026-11-22): batch 11 (class 8785, renewed rank 8) 宣言 - Part Y statusのrank記載修正とともに、反駁証拠のない次位clean候補をbatch-7 protocolで開始
+
+batch実績は10バッチ中7 WIN-HALT + 3 clean (23963/10324/8784 = 33・34・35番目free)。
+Part Yにより新正本merged cache 6,027行 (sha256 `95e868d6...`) が確定した。
+次候補の選定に先立ち、**Part Y status updateのrank記載に対するerratumを本宣言に
+記録する**: 同statusの「次のfirst clean candidate: renewed closure rankingで
+rank 1-8は不変 (全て反駁証拠保持: 16757: b018, 20421: d002, 30345: s5 528497,
+16371: e002, 12264: f017, 5473: g018, 2634: h045, 1518: j033)、rank 9 class 8106」
+というrank読みは、published Part Y closure-classes.csv (sha256 `61943b85...`) の
+renewed rankingと一致しない。実際のrenewed rankingは rank 1-7が反駁証拠保持
+(16757: b018, 20421: d002, 30345: b018 cost child保持, 16371: e002,
+12264: f017, 5473: g018, 2634: h045)、**rank 8 = class 8785** (unknown 51。
+Part M baseではrank 15 / unknown 52だったが、batch-10の52-LOSS増分の消費で
+unknown子が1つ解決され上位に移動したもの)、rank 9 = 1518 (j033)、
+rank 10 = 8106 である。「rank 1-8不変」はrank 1-7についてのみ成立し、
+rank 8は1518から8785に変化している。8106の「rank 9」はこのslide誤読由来である。
+
+- 本ホストでの機械検証 (宣言前・fail-closed): (a) published renewed
+  closure-classes.csv rank 8行 = class 8785 `[1224979373522681856, 1]`・
+  unknown 51・first=16/third=104・groups 1 (Part Y正本出力とbyte一致)。
+  (b) 7つのunconsumed WINキー (b018 `[1153204079095189504, 65536]` /
+  d002 `[3461016313634230272, 131072]` / e002 `[1153765929805414400, 16]` /
+  f017 `[1188950301625810945, 70368744177666]` / g018 `[1734519175235239936, 0]` /
+  j033 `[1153484455030030336, 0]` / h045 `[4035225266258182144, 64]`) の
+  いずれもclass 8785の51未確定子に不在 (cost child / refuted-quarter対照
+  0 hits。b018のキーは16757∩30345 worklist行共通部分として独立再導出し
+  確認)。class 8106の52子にも0 hits (referenced: 8785完了後の次候補は
+  renewed rank 10 class 8106)。participatingするのはcost child関係のみで、
+  クラス選定はscheduling quantityである。
+- 予登録選定規則 (「in flightでもWIN-HALTでもなく反駁証拠 (refuted-quarter)
+  を持たない最初のclean candidate」) に従い、renewed rankingのfirst clean
+  candidateは **rank 8 class 8785** (unknown 51) であり、batch 11はこれに
+  着手する。Part Yのprose誤記はクラスstatus・verdict・被覆主張には一切
+  影響しない (クラスstatusはrefresh機構からのderiveであり、機構・出力は
+  publishedのまま正しい。誤っていたのは手書き要約のrank読みのみ)。
+- 対象: `research/experiments/n11-centralreply-closure-class8785-batch11-20261122/`。
+  graph class index 8785, mask `[1224979373522681856, 1]` の未確定canonical
+  S5子51件 (z001-z051。接頭辞zはbatch 1-10の命名系列衝突回避、bookkeeping
+  のみ)。Part Y re-audit正本probe-worklist (65,154行、sha256
+  `1807e4d21f6fb757ea21850c6bda4d822cb76ac59abfa9bcd1cc7b53bd7055ef`、
+  Part Y status記載値と一致) の `serving_class=8785` 行 (probe_order
+  332-382・Board再計算合法手数固定・first=16/third=104の1グループ担当)。
+  本宣言セッションはPart Y refresh機材のfull再実行は行っていない
+  (Part Y出版時に2-run byte-identical検証済み)。51行はbatch-keys.jsonに
+  全行publishedしており、正本cache・update8機構に対して独立照合可能。
+- 宣言前fail-safe機械確認 (本ホスト・fail-closed): (1) 正本merged cache
+  (6,027行・sha256 `95e868d6...`) に51/51 keys不在 (0 hits)。(2) quarantine
+  registry (sha256 `81d23160...`・active 2件) とのkey対照 0 hits (両方向)。
+  (3) 51キー重複なし。(4) renewed closure-classes rank 8行との正本一致。
+  (5) 7 WINキーのcost-child対照 0 hits (上述)。
+- val-gate: published two-target-design 4行を本ホストで再現、4/4 node-exact
+  (at2m result 0/2,000,000 ×2、15m result 2/3,651,923 と result 2/5,040,200。
+  本ホストのfresh出力4件はscaffoldのoutput/val-gate/に固定)。
+- 手法・停止規則・消費規則: Part B-Xと全部同一 (pinned replica
+  `jsreplay.js` sha256 `845856175d...`・batches 1-10とbyte-identical、
+  2-pass fresh cold、budget 15M、mismatch→HARD-STOP rc=42、WIN→HALT rc=45、
+  枯渇=UNKNOWN、消費はfail-closed merger経由のみ、本batch単体では閉鎖・
+  被覆・secured主張なし)。実行並列は本ホスト最大4 worker (probe_order順の
+  4キーwave実行・WIN報告wave完了後は新規キー着手なし・同一wave内の
+  in-flight完了行は誠実開示、batch-5 f018先例)。
+- 主張の範囲: 本batchはcoverage・closure・rootを一切主張しない。WIN-HALT
+  (rc=45) が発火した場合はそのkeyで停止しif-adopted解析に回す (予登録
+  stop rule)。全51本LOSSでも消費はfail-closed increment merge + refresh
+  再監査まで行わない (将来のverifier宣言)。**class 8785・19 central-reply
+  roots・標準11×11空盤はUNKNOWNのまま。nodes数・pass数を勝敗として読まない。**
+- 並走との不接触: batch-8 (Part N/U/V/W)・batch-9 (Part Q/R/T)・batch-10
+  (Part X/Y) のpublishedファイルには一切接触しない。同一スコープの宣言が
+  mainに存在する場合は着手しない (宣言直前に最新mainを再取得・class8785
+  実験dirの不在・Part Z採番の未使用を確認済み)。
+- 本amendment observed HEAD-before-push: 実行時の最新mainをコミットメッセージに記録。
