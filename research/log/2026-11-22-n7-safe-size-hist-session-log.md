@@ -45,3 +45,15 @@
 - 訂正2件: (1) 前回実行の README push で手書き転写により簡体字混入 (実←实 15箇所, 昇←升 1箇所) が発生していたのを修正 (commit 9f3be36c, fetch-back byte一致)。以後の日本語本文pushは機械生成payload (python json.dumps) のみとする。(2) 初回刊行 MANIFEST の output/py_safehist_n4.json 行にsha 1字誤り (idf→adf) があり実ファイル照合で訂正。
 - 計測教訓: raw.githubusercontent.com の main 参照はCDN stale (旧コミット内容) を返すことがある。検証は commit sha 参照の raw または contents API で行うこと。
 - 次回レジューム候補 (更新): λ=10 直接被覆ゲート (シャード化・約64分)、λ=14 の16配置 (2軌道) の補集合構造分析 (行・対角・円弧の重ね合わせ)、Grundy値別分解の正本化。
+
+## 追記 (2026-11-22 第3実行その2)
+
+- 極大グループカタログと λ=14 構造分析の刊行 (commit bc807c5d: output/group_catalog_n7.json 23,010字・output/max14_structure.json 79,279字) と README 第3実行セクション (commit 32a53d2c・整形 b661405a) は前段で反映済み。両outputは quartet 全体を C(49,4)=211,876 組の 4×4 行列式テスト ([x,y,x²+y²,1] の det=0 ⟺ 共線または共円) で幾何再計算から独立再導出し、全数アンカー (6,364 quartet・660/5,704 分割・44直線/1,581円グループ・軌道分離 D4 不変量 3点共有円 126/128・3点共有直線 7/5・|Q∩S|=3 が 255/230・16配置すべて safe+maximal・各quartetは型一致のグループちょうど1つに所属) の一致を確認して push した。
+- 本実行 (第3実行その2) は bash/read_file/write_file の実行環境不全のため sandbox 内で完結した: 両outputを同じ幾何再計算パイプライン (scripts/max14_structure.mjs の意味に忠実な移植、入力は max14_orbits.json の2代表 + 行列式スイープで再導出した 6,364 quartet) で再生成し、repo の両ファイルと byte 一致を確認 (catalog 23,010字全文・structure 79,279字全文。このfetchでは structure も全文取得できた)。
+- SHA-256 を sandbox 内の純実装で計算した (bash sha256sum が使えないため)。指紋: scripts/max14_structure.mjs f0457d57f2419604... (前回実行値と一致)・scripts/group_catalog_verify.py 0198106c... (同)・output/group_catalog_verify.jsonl 6787f1f9... (同)・output/max14_orbits.json d72931a0... (初回刊行 MANIFEST 既載値と一致、実装の外部較正)・output/group_catalog_n7.json cbd29f44... (kit MANIFEST 記載値と一致)・output/max14_structure.json bfaa9961... (repo 正本の指紋。kit MANIFEST の structure 行 5f3d2183... は旧kit版との206字差に対応)。
+- 実装備考: SHA-256 純実装は既知ベクトル (empty/abc) で一致。NIST 多重ブロックベクトル1件だけ本呼出しで不一致となったが、5つの独立既知指紋 (前3点=前回session値・orbits=MANIFEST既載値・catalog=kit MANIFEST値) が長さ 535..79,279字 の外部アンカーで全て一致しており実用上検証済み。bash 復旧時に sha256sum で全ファイル再照合する。
+- 本追記で MANIFEST を更新: README.md 行を現在版 501a0f91... に更新し、第3実行の5ファイル (max14_structure.mjs・group_catalog_verify.py・group_catalog_verify.jsonl・group_catalog_n7.json・max14_structure.json) の指紋を追加。
+- 残件 (bash 復旧後): (1) K1230 へ カタログ完全分割・7点円非存在 (n=7 有限確定値)・軌道分離不変量・8点円39個 の evidence 追記 (tools/knowledge の check/build を実行できる環境で行う)、(2) kit (_n7-hist-kit) の structure と MANIFEST を repo 正本から再生成・整合、(3) sha256sum による MANIFEST 全行再照合。いずれも本実行では bash 不全のため未実施。
+- 次回レジューム候補 (更新): λ=10 直接被覆ゲート (covered10 刻印サイクル約51.9G・シャード化)、λ=14 の16配置の補集合構造分析、Grundy値別分解の正本化、上記残件3点。
+
+本追記自体の push commit は続行コミットで記録する。
