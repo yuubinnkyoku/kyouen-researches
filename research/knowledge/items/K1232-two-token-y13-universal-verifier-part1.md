@@ -1,6 +1,6 @@
 ---
 id: K1232
-title: "2トークン残余ゲーム y=13族の全称証明 part1: 正本検証器 verify_y13_universal.py 12機械チェック全 PASS（正本監査2段階のpart1・昇格判定はpart2）"
+title: "2トークン残余ゲーム y=13族の全称証明 part1: 正本検証器 verify_y13_universal.py 12機械チェック全 PASS（正本監査2段階のpart1・昇格判定はpart2。part2は2026-11-22に実行されK1231のobserved→proved昇格が完了）"
 kind: computation
 status: computed
 topics: [grundy, residual-games]
@@ -10,10 +10,11 @@ aliases:
   - "census anchor z=0..79, x=13..70, R<=x+z+14 over both raw engines via bounded-memoization twins (published code object rebound to an LRU-capped recursive cache, cap 1,600,000) run as separate commands C11ordered/C11canonical (445,440 points each, 13-16s, ~549-562MB) and fail-closed merged in the C11 mode with recomputed expected counts (points 445,440 / merge 153,117 / tail 4,640 per engine)"
   - "merge corollary x<=z-14 implies single_token(x+13,z,R) verified at 1,391,747 points and tail corollary R>=x+z+14 implies (x+13) mod 2 verified at 217,342 points, both with 0 mismatches"
   - "3 byte-identical runs total: audit.json plus both census part files identical across same-cwd reruns and an isolated tree/cwd/HOME run with PYTHONHASHSEED=random; K1231 status remains observed until part2 (C1d published-slice anchors at y=13 plus census_rows.py third implementation)"
+  - "part2 executed 2026-11-22 under the same single-owner note: C1d 139,356 pts vs published z=8/9/10/15/16/17 anchors specialised at y=13 (pre-flighted fail-closed, 4-way anchor verification 14,157 pts + low-R reduction 9,702 pts) and C11r 450,080 pts row-by-row re-derivation of the third-implementation census.txt (4,640 rows, z=0..79, x=13..70, R=0..x+z+15); full 14-check audit PASS 6,942,579 pts bad 0, 3 byte-identical runs (census and preflight regenerated on the isolated side), K1231 promoted observed to proved"
 relations:
   - type: extends
     target: "K1231"
-    note: "K1231（y=13族 fit・cand13・出版時 observed）の正本監査段階 part1。A子=cand13(z,x-1,R-1)（x=13は合流子(12,13)≡(13,12)でcand12(z,13,R-1)）・B子=出版cand12（K1152全称）・C子=1 xor cand13(z-1,x,R-1)の12チェック。observed→provedの昇格判定はpart2（C1d・census_rows.py第三実装）で行う"
+    note: "K1231（y=13族 fit・cand13・出版時 observed）の正本監査段階 part1。A子=cand13(z,x-1,R-1)（x=13は合流子(12,13)≡(13,12)でcand12(z,13,R-1)）・B子=出版cand12（K1152全称）・C子=1 xor cand13(z-1,x,R-1)の12チェック。observed→provedの昇格判定はpart2（C1d・census_rows.py第三実装）で行い、part2は同一単一オーナー宣言の下で2026-11-22に実行・出版済み（K1231はprovedに昇格・フル14チェック監査6,942,579点・全bad 0）"
   - type: depends_on
     target: "K1152"
     note: "B子の逐語転写元（y=12族全称・出版 verify_y12_universal.py の cand12 ブロックをブロック内 Y→Y12 改名のみで転写）と機械的母体（y=12 part2 正本機械・SHA-256 e2092976...）"
@@ -26,10 +27,10 @@ artifacts:
   note: "実験README（機械構成・転写照合・12チェック結果表・bounded-memoization twin設計〔y12 part1と同一設計〕・3回決定性・fail-closed 3件・再現コマンド・解釈規約）"
 - path: research/experiments/vertical-fiber-two-token-y13-parametric-allz-proof-20261122/verify_y13_universal.py
   role: verifier
-  note: "正本検証器（12チェック版・36,457 bytes・937行・SHA-256 b73d9aaa94f04f1f4922d84808ac7afe6f5bfb55631b4c990cae29734279141f・C11ordered/C11canonical/C11モード・機械組み立てscriptの再生成物とbyte一致）"
+  note: "正本検証器。part1出版byte（12チェック版・commit ee3b6f73・36,457 bytes・SHA-256 b73d9aaa94f04f1f4922d84808ac7afe6f5bfb55631b4c990cae29734279141f・937行・C11ordered/C11canonical/C11モード・機械組み立てscriptの再生成物とbyte一致）とpart2拡張正本（14チェック版・SHA-256 079b49ad5d11c22c7c6c5f8d103eff9ee2194c7d587e7f2432172616c03c1114・50,865 bytes・1,314行・C1d/C11r追加・anchor blockはy=12 part2正本検証器 e2092976… からverbatim抽出）の2段階。part1の12チェックは挙動不変"
 - path: research/experiments/vertical-fiber-two-token-y13-parametric-allz-proof-20261122/output/audit.json
   role: data
-  note: "12チェック入り監査正本（3,103 bytes・SHA-256 db7c5fa56f407f09ed6604d7677aaab681d78649dc85379d977c5bd58c8e42de・3実行byte-identical）"
+  note: "part2フル14チェック入り監査正本（3,673 bytes・SHA-256 2f5f56c0da4578252db8bf12d536764562ded134e5bad45ca832c58b17424bb1d・total_points 6,942,579・total_bad 0・3実行byte-identical。part1出版時は12チェック版 db7c5fa5… 3,103 bytes）"
 - path: research/experiments/vertical-fiber-two-token-y13-parametric-allz-proof-20261122/output/census-ordered.json
   role: data
   note: "C11ordered part正本（486 bytes・445,440点・bad 0・merge 153,117/tail 4,640付帯）"
@@ -42,6 +43,21 @@ artifacts:
 - path: research/log/2026-11-22-y13-parametric-allz-proof-part1.md
   role: log
   note: "part1研究log（着手・宣言・機械構成・実行・出版系列・採番3点確認）"
+- path: research/experiments/vertical-fiber-two-token-y13-parametric-allz-proof-20261122/scripts/preflight_c1d_y13.py
+  role: verifier
+  note: "part2: C1dアンカー組み込み前fail-closed事前検証（4方照合14,157点+低R縮約9,702点・不一致0・2回byte-identical）"
+- path: research/experiments/vertical-fiber-two-token-y13-parametric-allz-proof-20261122/census_rows.py
+  role: verifier
+  note: "census第三実装（z=0..79・x=13..70・R=0..x+z+15・4,640行450,080点・値0点224,203・misses 6,630,827・LRU上限1.6M明示キャップ・SHA-256 85bafd2e…）"
+- path: research/experiments/vertical-fiber-two-token-y13-parametric-allz-proof-20261122/output/census.txt
+  role: data
+  note: "census行表正本（829,622 bytes・SHA-256 505f05bf…・C11rで全行cand13再導出照合・不一致0）"
+- path: research/experiments/vertical-fiber-two-token-y13-parametric-allz-proof-20261122/output/preflight-c1d-y13.json
+  role: data
+  note: "事前検証結果正本（SHA-256 a9307d33…）"
+- path: research/log/2026-11-22-y13-parametric-allz-proof-part2.md
+  role: log
+  note: "part2研究log（C1d・census・14チェック監査・K1231 observed→proved昇格・出版記録・CI step不登録の理由）"
 ---
 
 # 2トークン残余ゲーム y=13族 全称証明 part1（正本検証器12チェック）
@@ -100,9 +116,12 @@ part1 push 直前に最新 main で 3 点確認（knowledge README grep `K1232` 
 
 ## 解釈規約
 
-- K1231 の status は本 part1 出版後も **observed** のまま。昇格判定（observed→proved）は part2
-  （C1d 出版固定z切片アンカーの y=13 特殊化 + census_rows.py 第三実装 + 3回 byte-identical）で行う
-  （K1141/K1143/K1152/K1162 の前例と同一手続き・同一K項目・新規採番なし）。
+- K1231 の status は本 part1 出版の時点では **observed** のままだった。昇格判定は part2（C1d 出版固定z切片アンカーの
+  y=13 特殊化 + census_rows.py 第三実装 + 3回 byte-identical）で行い、part2（2026-11-22・同一単一オーナー宣言）
+  の出版で **observed→proved に昇格した**（K1152/y=12 と同一手続き・同一K項目・新規採番なし・フル14チェック監査
+  6,942,579 点・全 bad 0・[part2 log](../../log/2026-11-22-y13-parametric-allz-proof-part2.md)）。
+  なお現行 main の knowledge.yml に y=11（K1143）・y=12（K1152）実験機の CI step が存在しないため
+  （CI 登録は y=10/K1141 まで）、本実験も CI step を登録せず出版 byte を監査正本とする（直近 2 族と同一の扱い）。
 - 標準 11×11 の空盤勝敗・二石root {49,60}/{59,60}・S2 {59,60}・class 1/2/4 はすべて **UNKNOWN** のまま。
   本項は残余ゲーム族 H(R;(x,13);z) の数学的構造の証明であり、標準盤の勝敗には一切言及しない。
 - 3トークン以上・y>=14 族・固定幅・q点版安定化長は範囲外。
