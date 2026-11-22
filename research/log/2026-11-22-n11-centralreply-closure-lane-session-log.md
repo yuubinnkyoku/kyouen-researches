@@ -2243,3 +2243,76 @@ refutation evidence.
   decomposition optional), (b) the scrutiny owner's q042 adoption
   decision, (c) class 23101's remaining 10 unprobed keys, (d) next
   batch-18 candidate selection from the latest closure-classes rank.
+
+## Continuation 36 (2026-11-22, this host): Part AW batch-14 residual (class 23101) q043..q052 executed and published - 10/10 all LOSS, batch-14 key set fully enumerated on this lane (42 rows Part AQ + 10 rows here); verdicts NOT consumed
+
+- Selection and declaration: latest main re-fetched first; Part AV
+  (batch-17 class 10661 adoption + reaudit, declaration `340abef3`) was
+  declared-before-execution and still in flight, so the non-contact open
+  item (c) from Continuation 35 was taken: the 10 unprobed residual keys
+  q043..q052 of batch-14 (class 23101). Part AW declared BEFORE execution
+  (note amendment `da131f10`, observed HEAD `3542315d`, note blob lock
+  `141a8647...`), with a pre-registered deviation from the batch-14/16/17
+  protocol: WIN rows get an honest WIN-CONTINUE label and the batch
+  CONTINUES (rationale declared: the class 23101 all-LOSS closure route is
+  already refuted by the published q042 WIN, so halting buys no route
+  information; full enumeration minimizes the class unknown count on every
+  branch).
+- Scaffold maker `make_residual_keys.py` (published in commit A, 3 runs
+  byte-identical): fail-closed gates G1-G7 all PASS - published batch-14
+  batch-keys sha `dfde0e90...` (52 keys of class 23101), residual
+  {q043..q052} with probe_order 580..589 and s5_index
+  {745455..745457, 745459..745465}, the unadopted q042 WIN s5 745184
+  verified absent, input CSVs byte-equal to the published batch-14 files
+  (per-file MANIFEST sha pins), canonical 6,120 rows `be9cb24e...` 0/10
+  hits, quarantine `81d23160...` 0/10, batch-17 batch-keys `db762175...`
+  s5-disjoint, published batch-14 row-audit `cc22a1c8...` probed set
+  {q001..q042} + its machine-recorded unprobed_keys == the residual set.
+- Execution: pinned replica `jsreplay.js` (`84585617...` byte-copy)
+  2-pass fresh cold, budget 15M, worker max 2 (runbatch.sh operated in
+  2-key parallel foreground pairs; disclosed in status.log and README).
+  val-gate 4/4 node-exact on this host BEFORE the first probe (at2m
+  0/2,000,000 x2, 15m `(2, 3651923)`/`(2, 5040200)`, forbidden quads
+  95,670). **10/10 keys LOSS (result 2)**, WIN 0 (the WIN-CONTINUE rule
+  never fired), exhaustion 0, mismatch 0, total nodes 23,252,550/pass
+  (range 557,594..8,353,244, largest q049). No host interruption, zero
+  truncated passes.
+- Runner deltas disclosed: `runbatch.sh` (`989e359c...`) = published
+  batch-17 `f591f8c2...` with the WIN block replaced by the declared
+  honest WIN-CONTINUE label (continue, verdict NOT consumed);
+  `runwave.sh` (`885830d0...`) = done-set adds WIN-CONTINUE. Both pinned
+  in the MANIFEST.
+- row-audit.json (schema
+  `n11-centralreply-closure-class23101-batch14residual-rowaudit-v1`,
+  sha256 `6b40b131...`): all 10 rows machine-re-verified from raws (both
+  passes carry `# replay_done`, p1==p2 node-exact on all fields, within
+  budget, result 2, input/batch-keys/status agreement); 3 runs
+  byte-identical.
+- Publication (3 commits, each message records observed HEAD-before-push):
+  A `a5b514d7` (scaffold: runner scripts + maker + inputs + this-host
+  val-gate + merged status.log, 26 files), B `ecfe258d` (raw q043..q052,
+  20 files), C `cb94f808` (row-audit.json + README + MANIFEST-sha256,
+  48 entries) = publication complete. **Fetch-back 48/48 byte-identical**
+  (publication-commit-pinned raw URLs, MANIFEST per-file sha256 all rows).
+- Note amendment published: Part AW status update appended to the
+  single-owner note (blob sha1 lock `a60f8a95...` -> server blob
+  `ba30165e...`, server size 260,851 bytes exactly matching the local
+  composition; chunk-assembled full-content transfer verified by
+  server-side blob identity).
+- Verdict guards (unchanged): zero verdicts consumed by this Part; the 10
+  LOSS rows may only later enter an increment via the sha-pinned
+  fail-closed merger (`90711961...`) in a separately declared adoption
+  Part whose BASE is the post-AV canonical 6,172-row cache (this Part
+  touched no batch-17 artifact and no canonical cache); after that
+  adoption, class 23101's canonical unknown cost-children shrink to the
+  single unconsumed q042 WIN (route statement, no closure claim). The
+  q042 adoption decision stays with the scrutiny owner (C++ second
+  implementation gate pin `9193f5b6...`). The standard 11x11 empty board,
+  the 19 central-reply roots, class 23101 (unknown 11 children on the
+  current 6,120 canonical) and all 10 keys remain UNKNOWN throughout;
+  nodes are bookkeeping, never verdicts. Open items (re-read latest main
+  first): (a) the batch-17 52-LOSS canonical adoption Part (Part AV, in
+  flight), (b) the scrutiny owner's q042 adoption decision, (c) the
+  batch-14 residual 10-LOSS adoption Part after Part AV lands (BASE =
+  canonical 6,172), (d) next batch-18 candidate selection from the
+  post-adoption closure-classes rank.
