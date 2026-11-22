@@ -60,3 +60,46 @@ Inputs and recipes:
 Execution constraints honored: at most 2 workers (2-core host), fresh 2^22 PnTT
 per row, one solver per row, publish=ALL, exact-order=count, <= 15,000,000 node
 budget, cold runs only.
+
+## Resume checkpoint (2026-11-22, pass 1 + pass 2 complete for the whole corpus)
+
+- Resumed by the session declared in
+  `research/log/2026-11-21-n11-sbd-corpus-regen-resume-pass1-single-owner-note.md`
+  (no new keys claimed; every acceptance condition of the 15:39Z declaration
+  unchanged). The parent session had stalled after the k061-k084 checkpoint
+  (`93ceaab9c3`, 17:22Z).
+- Validation gate re-reproduced on the resume host (4/4 node-exact before any
+  row start: at2m x2 result 0 / 2,000,000 / legal 98,99; 15M rows result 2 /
+  3,651,923 and 5,040,200).
+- Pass 1 completed: k085-k101 executed fresh cold this session (17 rows,
+  78,590,859 nodes, all result 2 exact LOSS within budget, 0 WIN, 0 unexpected
+  exhaustion, every row agreeing with the audited historical verdict), pushed
+  at `99becad0f9` (fetch-back 17/17 byte-identical). Pass 1 is now complete
+  for the whole declared corpus k001-k101.
+- S6 witness: cold determinism pair executed (`s6w.run1/run2.p1.out`, both
+  result 2, nodes 5,859,060, identical to the published historical witness
+  row), pushed at `32d436ae9`.
+- Pass 2 completed: all 100 settled rows re-run fresh cold this session,
+  (result, nodes) identical to pass 1 row-for-row (546,428,673 nodes each
+  pass, 0 determinism mismatches; k012 TARGET_S5 stays honest result 0 at
+  15M). Pushed at `d8575d50a8` / `67ae97a243` / `51d4fa7155` /
+  `378a98f592`; cumulative fetch-back all byte-identical.
+- Read-only consistency table published: `output/pass-consistency-table.json`
+  (fail-closed: determinism 100/100, 0 fresh WIN, 0 fresh/history
+  disagreement, k012 the only result-0 row, s6w pair identical; includes
+  provenance per row and the standard UNKNOWN guard).
+- Layout note for the merge run: pass-2 raws are published as
+  `output/raw/kNNN.p2.out` (execution-time checkpoint layout, this lane's
+  naming), while `scripts/build_merged_cache.py` (never executed yet) points
+  its `RAWS2` at `output/raw-pass2/`. The merge run must repoint that one
+  path constant or mirror the raws, and must record the one-line diff in its
+  session log and manifest (logic must stay identical to the published Oct 12
+  norms).
+- Verdicts remain unconsumed: no cache increment, no merge, no class-status
+  change, no coverage or third-move statement this session. The remaining
+  final-commit pipeline (build_merged_cache.py + gen_s6_witness_audit.py +
+  audit_frontier.py + audit_root_loss.py + reclassify/cardinality/analyze,
+  merge manifest and SHA-256 manifest) is left to the next run(s) of this lane
+  with the two-pass evidence now fully in hand. The standard 11x11 empty
+  board, the two-stone root {60,27}, and the third moves {100,108} remain
+  UNKNOWN throughout. Nodes and pass counts are never verdicts.
