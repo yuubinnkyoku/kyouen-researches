@@ -2557,3 +2557,50 @@ r001/r002の2 WIN行に読み取り専用で適用する。
   nodes数を勝敗として読まない。
 - 本status updateのobserved HEAD-before-push: `b661405a` (note blob sha1ロック
   `088116b3...` で更新、fetch-backで追記確認)。
+
+
+### Part AM status update (2026-11-22, declaring host = 本レーンセッション)
+
+宣言 (commit `4386ace3`, observed HEAD-before-push `1976f566`) どおり完了。
+batch 16 (class 10687, renewed closure rank 14, mask `[1224979098661617664, 0]`,
+unknown 52, groups (16,56)+(16,64)) の52キーを2-pass fresh cold replay
+(pinned `jsreplay.js` sha256 `84585617...`, budget 15M, probe_order 642-693)
+で全件探索した。
+
+- 結果: **52/52全LOSS (result 2)**。2-pass node-exact (全キーでp1/p2 nodes
+  一致)・WIN 0・budget枯損 0・determinism mismatch 0。総ノード数/pass
+  168,262,885。行単位機械照合 `output/row-audit.json` (schema
+  `n11-centralreply-closure-class10687-batch16-rowaudit-v1`, 52行,
+  all_loss_2pass_node_exact=true, sha256 `589c1141...`) でbatch-keys
+  (key_id/lo/hi/legal/probe_order) と突合済み。`input/batch-keys.json`
+  sha256 `465cf44721a661ce94babe12212c26c697ebb346392548fcdafaa9d3e8c3dd4e`。
+- 出版: 実験dir
+  `research/experiments/n11-centralreply-closure-class10687-batch16-20261122/`
+  180ファイル (input 53 = batch-keys + t001-t052 CSV、scripts 4、val-gate 8、
+  raw 104 = 完全p1/p2ペア、raw-truncated-hostevent 8、status.log、
+  row-audit.json、README.md、MANIFEST-sha256.txt) を3コミットでmainに反映
+  (scaffold `14092b5e`、results `0aac7e0c`、README+audit+MANIFEST `d349e8f8`)。
+  fetch-back 180/180 byte一致 (publication commit `d349e8f8` 全ファイル
+  MANIFEST sha照合)。
+- 誠実なhost event記録: 宣言後の実行中にhost環境のリセットが繰り返し背景
+  runnerをkillした (truncated断片のタイムスタンプから15:15Z・15:27Z・15:32Zの
+  3系統、加えて~15:31Zに`/home/user/work`一掃。status.logのHOST-EVENT行2行と
+  WAVE-START/TRUNCATED-RETRY行で記録)。権威状態はknowledge kit checkpointが
+  保持した。`runbatch.sh`に`# replay_done`完全性ガードを再実行前に導入し、
+  最終7 waveは前景1-wave実行 (`scripts/runwave.sh`) で完走。truncated断片8件
+  (いずれもverdict行なし) は`output/raw-truncated-hostevent/`にそのまま公開。
+  本batchは枯損行0・resolved完了行の再探索ゼロであるため、truncated passの
+  fresh-cold再実行は「同条件15M再探索禁止」の対象外であることをREADMEに明記。
+- closure candidate (verdict不消費): 本batch単体ではroot被覆・クラス閉鎖・
+  第三手securedを主張しない。52 LOSS行の消費はfail-closed union merger
+  (pin `90711961...`) によるpublished increment + refresh再実行・独立監査に
+  よってのみ成立し (batch 10/8784, 8784-reaudit先例) 、class 10687の閉鎖資格
+  確定はその後。このincrement+reauditは別宣言 (Part AP相当) が必要で、着手前に
+  ranks 1-13の最新状況 (batch-15 if-adoptedはPart AN `c37b2790` 出版済み・
+  23101 batch-14 in flight) を再確認する。
+- verdict不消費・解釈ガード不変: unconsumed closure WIN 14個の採用判断は
+  scrutiny ownerのC++第二実装ゲート pin `9193f5b6...` 待ちのまま。標準
+  11×11空盤・19 central-reply roots・class 10687他全classはどの時点でも
+  **UNKNOWNのまま**。nodes数を勝敗として読まない。
+- 本status updateのobserved HEAD-before-push: `c2178ac1` (note blob sha1
+  ロック `f36db386...` で更新、fetch-backで追記確認)。
