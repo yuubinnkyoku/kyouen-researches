@@ -2851,3 +2851,74 @@ verification.
   nodes/worklist/greedy numbers are never verdicts. This Continuation
   appended and consumed nothing beyond the 52 LOSS adoption above;
   log blob lock `4c1fea95...` verified immediately before this push.
+
+
+## Continuation 43 (2026-11-22, this host): Part BC executed and published - batch-14residual (class 23101) residual 10-LOSS canonical adoption, class 23101 NOT closed (unconsumed q042 WIN child s5 745184 stays its only scenario-unknown cost child, unknown 11->1), free_now 37 unchanged, probe worklist 64,888->64,872; verdicts consumed = the 10 residual LOSS rows only; 11x11 stays UNKNOWN
+
+This host executed the Part BC single-owner declaration (note amendment
+commit `9165ae39`, observed HEAD-before-push `1867f01f`, note blob lock
+`b6a5f231...` re-verified immediately before the declaration push; no
+counter declaration existed and the "Part BC" characters were unused on
+main before the amendment) end to end as the sole owner, and published
+the experiment dir with fetch-back byte verification. The prep was done
+in this same session (Continuation 43) from published inputs only
+(BASE = published Part AV canonical 6,172 rows `a5540811...`, re-verified
+byte-identical against the publication commit `23bda9ba` raw fetch;
+batch-14residual dataset = Part AW `cb94f808` lineage: batch-keys
+`d4fada68...`, row-audit `6b40b131...`, raws 20, kit-mirror MANIFEST
+sha-verified).
+
+- Execution (fail-closed, x-run byte-identical, from published
+  originals only): maker 3x (increment 10 rows `c3f201a6...`, manifest
+  `f7287b7b...`, row-audit 10-row agreement, WIN/exhaustion absence
+  gates, BASE-absent 0 hits); merger (byte-copy pin `90711961...`,
+  selftest PASS) 3x: canonical 6,172 -> 6,182 rows (WIN 158 / LOSS
+  6,024, conflict 0, `0b594f7e...`); refresh adapt `d6bb2374...` 3x
+  (4 outputs byte-identical); extractor `48e88838...` (AV `92d83671`
+  adapt + churn hardening: closure-candidate table row-exact rebuild in
+  BOTH worlds + total-class subtraction gates) 3x, all gates PASS.
+- Publication (declaration pushed first, per protocol): amendment
+  `9165ae39` / commit A `168a44ae` (outputs: increment + manifest +
+  merged canonical cache 254,396 bytes + merge-audit run1/2/3
+  `6a9a53a3...`) / commit B `f2405c0e` (maker `6c57f2d0...` + merger
+  `90711961...` + extractor `48e88838...` + refresh adapt
+  `d6bb2374...`) / commit C `1afbc6a7` (README `53347371...` +
+  status.log `df9ccfab...` + MANIFEST-sha256 `2c805371...` + reaudit
+  3 outputs `5f3a09c6...` / `52ec3d4b...` / `1f54065a...` + delta
+  json `62de8c16...`). probe-worklist `fe71be60...` (3.75MB) stays
+  unpublished per the AH/AO/AP/AS/AV precedent (sha recorded). Note
+  Part BC status update published at `06dc9cc7`. fetch-back: both note
+  pushes cmp byte-identical against precomputed expected blobs
+  (`004d69a7...` / `a564e191...`), all 17 publication files sha256
+  verified via commit-pinned raw. Correction recorded in the note: the
+  "x2" for the refresh runs in the commit B/C messages is a typo;
+  status.log (3 runs, byte-identical) is authoritative.
+- Machine-established on the adopted canonical (delta `62de8c16...`,
+  all gates; no closure claims): class 23101 is NOT closed - the
+  unconsumed q042 WIN child s5 745184 (key `1152921505747697664:1032`)
+  remains its only scenario-unknown cost child (unknown 11 -> 1,
+  leftover `[745184]`). free_now 37 -> 37 unchanged (unknown 34,499
+  unchanged, excluded_now 23 unchanged, two-direction gates). update8
+  resolved 80 unchanged (newly 0). 27 other holder classes
+  (23104..23966, one LOSS child each) stay unknown (bookkeeping only).
+  probe worklist 64,888 -> 64,872 (-16). closure-candidate table 808
+  unchanged; churn left `[22149]`, entered `[23965]` (best-option
+  bookkeeping). joint greedy 35,645 -> 38,978: NON-monotone under
+  adoption due to the 6-local-search improve-pass convergence-point
+  difference, NOT a regression (improve-pass-free config decreases
+  49,361 -> 49,351 as expected); recorded in the delta json
+  (`joint_greedy_nonmonotonicity`), plan estimate only, never a
+  coverage claim.
+- Verdicts NOT consumed elsewhere: the adoption consumed only the 10
+  batch-14residual LOSS rows (q043..q052) through the fail-closed
+  merger. The 17 unconsumed closure WINs (b018/d002/e002/f017/g018/
+  j033/h045/z003/n005/n006/p002/p003/r001/r002/q042 + AY v001/v002)
+  are untouched and remain gated on the scrutiny owner's C++ second
+  implementation (pin `9193f5b6...`). Non-contact kept with batch-18
+  (AY remaining 51 keys), batch-19 selection, the y=16 fast lane, the
+  K1058 lane and Part BB outputs.
+- Guards unchanged: the standard 11x11 empty board and all 19
+  central-reply roots remain UNKNOWN at every point of this Part;
+  nodes/worklist/greedy numbers are never verdicts. This Continuation
+  appended and consumed nothing beyond the 10-LOSS adoption above;
+  log blob lock `7cc2221e...` verified immediately before this push.
