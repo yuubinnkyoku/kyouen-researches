@@ -1316,3 +1316,49 @@ repo diverged:
   universe untouched; 52 -> 44 unknown only under the full what-if) and
   every other class remain UNKNOWN. Nodes are not verdicts. Observed
   HEAD-before-push for this update is recorded in the commit message.
+
+## Continuation 22 (2026-11-22, this host): batch 15 (class 5830, Part AK) declared, run, and published - WIN-HALT x2 (r001/r002), verdicts not consumed
+
+Batch 15 target = renewed rank 13 class 5830 (mask `[4035788216077385728, 0]`,
+unknown 52, groups root-49/third-59 + root-49/third-61; batch 14 = class 23101
+in flight by another operator, ranks 1-12 evidence-carrying/WIN-halted/in
+flight). Full protocol as AF/AC/AE: Part Y workspace regenerated from the six
+pinned inputs on this host (3 runs byte-identical; closure-classes
+`61943b85...` / per-root-coverage `33f01a0c...` / refresh-summary
+`25987add...` / probe-worklist `1807e4d2...` all equal the published
+canonical bytes, published closure-classes.csv cmp-verified), 52 keys
+machine-extracted (probe_order 590-641, batch-keys.json sha256
+`af3e4c46af0d84bcb248c350283b07e26b901f6e0d196038e24bd1292b133727`),
+fail-safe 6/6 PASS (canonical cache 6,027 rows 0 hits, quarantine 0 both
+directions, duplicate-free, rank-13 row byte-check, 12-WIN-key cross-check
+0 hits from the ten published batch-keys.json files, contiguity +
+class_unknown_now=52 every row), val-gate fresh 4/4 node-exact (at2m
+0/2,000,000 x2; 15m 2/3,651,923 and 2/5,040,200; quads 95,670). Declaration
+`0f57eef7` (note Part AK, note blob `deea536f...` after push) then scaffold
+`b04969bc` (66 files fetch-back byte-identical).
+
+Wave 1 (4 workers, 2-core host): **r001 WIN** (probe_order 590, s5_index
+103560, key `[4035788216211603456, 0]`, legal 82, result 1, **2,521,302
+nodes**, 2-pass fresh cold node-exact) - first key of the batch, the **13th
+unconsumed closure WIN**; **r002 WIN** (probe_order 591, s5_index 103561,
+key `[3603442651849818112, 128]`, legal 82, result 1, **5,973,924 nodes**,
+2-pass) - the **14th unconsumed closure WIN** (third multi-WIN wave after
+batch-12 n005/n006 and batch-13 p002/p003); r003 (key
+`[4035788216077385729, 0]`, legal 97) and r004 (key
+`[1729945206863692800, 128]`, legal 100) budget exhaustion at 15,000,000
+nodes, result 0, 2-pass, honest UNKNOWN (no 15M same-condition re-search
+under the stop rule). All 4 rows machine cross-checked against batch-keys
+and worklist (legal, lo, hi); p1/p2 (result, nodes, budget) identical,
+rc=42 never fired; RUNNER-STOP rc>=42 protocol followed; r005-r052 (48
+keys) not attempted. Publications: raws+status `d1316b19`, README Result
+`a35fb210`, note Part AK status update `24d4bd08`, all fetch-back
+byte-identical. Batch record: 15 batches -> 12 WIN-HALT + 3 clean.
+
+Third-implementation cross-verification of r001/r002 and the class-5830
+if-adopted decomposition have NOT been declared at publication time -
+check latest main for competing declarations before starting either.
+Adoption of both WINs remains with the scrutiny owner (C++ second
+implementation gate pin `9193f5b6...`; this host still has no compiler and
+package installation is forbidden). The standard 11x11 empty board, the 19
+central-reply roots, class 5830 (48 unprobed children) and every other
+class remain UNKNOWN. Nodes are not verdicts.
