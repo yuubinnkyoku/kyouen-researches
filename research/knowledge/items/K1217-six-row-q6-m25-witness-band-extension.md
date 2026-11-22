@@ -16,7 +16,7 @@ relations:
 artifacts:
   - {path: research/experiments/six-row-q6-m25-frontier-crunch-20261122/README.md, role: log, note: "実験README（主張・経緯・ゲート・再現手順）"}
   - {path: research/experiments/six-row-q6-m25-frontier-crunch-20261122/MANIFEST.sha256, role: manifest, note: "全ファイルのsha256"}
-  - {path: research/experiments/six-row-q6-m25-frontier-crunch-20261122/output/records.jsonl, role: data, note: "8走査行（SAT×3ラン・INDET honest negatives 7行・provenance付）"}
+  - {path: research/experiments/six-row-q6-m25-frontier-crunch-20261122/output/records.jsonl, role: data, note: "8走査行 = 中断レーン verbatim 7行（INDET 6行+SAT run1）+ 採用 run3 SAT行（provenance付）"}
   - {path: research/experiments/six-row-q6-m25-frontier-crunch-20261122/witness/w6x25_class2.json, role: certificate, note: "class{2} witness 29石 rows [5,5,4,5,5,5] decode+verify"}
   - {path: research/experiments/six-row-q6-m25-frontier-crunch-20261122/witness/census_class2.json, role: data, note: "純並進census R(S)=25（widths 23..25被覆）"}
   - {path: research/experiments/six-row-q6-m25-frontier-crunch-20261122/output/controls/census_gates.json, role: data, note: "census アンカー 4/4 MATCH・6x25=2,302 新アンカー"}
@@ -48,7 +48,7 @@ K1215 の 6×24 class{1}/class{2} witness とも非合同（新規の格子同�
 - K0821-audit 規約でいう「M 候補集合から 25 が消えて 26..495 が残る」更新であり、
   witness-free 幅は 1 も新たに確定していない（不在主張は本項に含まれない）。
 - 6×26 が新 frontier。6×25 の未走査クラス（class{1} の krow=1:1..1:3 分解・残り正準クラスの
-  cap 内掃引 INDET 7行を除く未実行分）は不在不主張のまま。
+  cap 内掃引 INDET 10行（本crunch 6行+K1215-era 4行）を除く未実行分）は不在不主張のまま。
 - 追加観測（witness 側の構造）: bbox 幅は 23 で、正規化純並進配置は 6×23/6×24/6×25 の3幅すべて
   極大安全（純並進 R(S)=25 で停止）。高速並進 census と Fraction 検証器の交差検査 4点で一致
  （6×24 は t=1 で被覆・t=0 は not maximal (23,2)）。
