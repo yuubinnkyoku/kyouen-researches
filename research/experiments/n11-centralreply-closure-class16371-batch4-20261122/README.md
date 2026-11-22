@@ -47,3 +47,31 @@ the independent merge + refresh re-audit.
 
 see `output/status.log`. The standard 11x11 empty board, the 19 central-reply
 roots and class 16371 remain UNKNOWN throughout. Nodes are not verdicts.
+
+## Status: WIN-HALT at e002 (2026-11-22T03:26:03Z)
+
+Pre-registered WIN-HALT fired on key e002 (s5_index 183566, key
+`[1153765929805414400, 16]`, legal 79): 2-pass node-exact
+**result 1 (WIN), 14,112,632 nodes** at budget 15,000,000.
+Probed before the halt (both 2-pass node-exact):
+
+- e001 LOSS 882,800 nodes
+- e002 **WIN** 14,112,632 nodes (HALT)
+
+Consequences (honest, no speculation): with e002 a WIN child, the
+all-children-LOSS closure route for class 16371 is refuted. e003-e050
+remain unprobed (48 keys, no 15M same-condition re-search consumed).
+e002's WIN is NOT adopted by this lane (verdict unconsumed, scrutiny owner
+pending), exactly as b018 (batch 1) and d002 (batch 3). The batch is stopped
+per the pre-registered rule.
+
+Empirical note (scheduling-relevant, not a claim): of the four closure
+batches so far, three halted on a pre-registered WIN (16757: b018; 20421:
+d002; 16371: e002) and only 23963 closed 48/48 LOSS. The cheap end of the
+closure-classes ranking appears WIN-dense; candidate selection may benefit
+from more scrutiny-owner verdict consumption before further full batches.
+No WIN row is consumed here and no inference is drawn beyond the refuted
+closure routes.
+
+The standard 11x11 empty board, the 19 central-reply roots, class 16371
+and all remaining S5 keys remain UNKNOWN. Nodes are not verdicts.
