@@ -1787,3 +1787,39 @@ third_ttHits) で完全一致**した (第三実装のcross-host reproducibility
 
 標準11x11空盤・19 central-reply roots・class 16930は本batchのどの時点でもUNKNOWNのまま。
 nodesを勝敗として読まない。本status update observed HEAD-before-push: コミットメッセージに記録。
+
+## Part AF (probe-batch owner, amendment 2026-11-22): batch 14 (class 23101, renewed rank 12) 宣言 (verdict不消費・実行前に宣言)
+
+batch 13 (Part AE, class 16930) はWIN-HALT x2 (p003/p002) で停止し、rank 10・11に反証証拠が
+付いた (batch-12のPart AD第三実装・batch-13の2 WINの交叉検証は将来宣言待ち)。事前登録の
+選択規則で、renewed rank 1-9は全て反証証拠持ち (16757: b018, 20421: d002, 30345: b018
+cost child s5 528497, 16371: e002, 12264: f017, 5473: g018, 2634: h045, 8785: z003,
+1518: j033)、rank 10 (8106) はPart AC、rank 11 (16930) はPart AEでWIN-HALT済み。よって
+**renewed rank 12 class 23101** (mask `[1152921504892059648, 16]`, unknown 52, first 24 /
+third 28, groups 3) をbatch 14として宣言する。
+
+- 対象: `research/experiments/n11-centralreply-closure-class23101-batch14-20261122/`。
+  keys 52件 q001-q052 (probe_order 538-589), Part Y worklist (65,154行, sha `1807e4d2...`)
+  の `serving_class=23101` 行から機械抽出。batch-keys.json sha256
+  `dfde0e90b75fd261b51ef746fe69a16eb182a99f5d2f8e1ff8bfa6efe936d71f`。
+- 宣言前fail-safe (全て本実行内に機械実施・全PASS): (1) canonical merged cache 6,027行
+  (sha `95e868d6...`) に52/52不在・0 hits、(2) quarantine registry (sha `81d23160...`,
+  active 2) 両方向0 hits、(3) 52キー重複なし、(4) closure-classes.csv rank 12行 = class
+  23101 (`[1152921504892059648, 16]`, unknown 52, first 24 / third 28, groups 3) published
+  Part Y正本とbyte一致、(5) 12 WINキー
+  (b018/d002/e002/f017/g018/j033/h045/z003/n005/n006/p002/p003) 交叉0 hits、
+  (6) probe_order連続538-589・全行 class_unknown_now=52。
+- protocol (事前登録・batch 12/13と同一): pinned replica `jsreplay.js` (sha
+  `84585617...`), 1キー2 fresh cold pass, budget 15,000,000, determinism mismatchで
+  HARD-STOP (rc=42), WIN検出でWIN-HALT (rc=45, 同wave内in-flightは完了まで開示),
+  最大4 worker (2-core host), resume-safe runner, honest negative (result 0 = UNKNOWN)。
+- validation gate (実行前に本ホストでfresh再現・4/4 node-exact): at2m result 0/2,000,000
+  ×2, 15m result 2/3,651,923 / result 2/5,040,200。
+- 主張と消費規則: 本batchはverdict不消費。WIN行はunconsumed closure WIN (採用判断は
+  scrutiny owner, C++第二実装 gate pin `9193f5b6...` 前例・不変)。標準11x11空盤・19
+  central-reply roots・class 23101は本batchのどの時点でもUNKNOWNのまま。nodesを勝敗と
+  して読まない。batch選択はscheduling quantityでありverdictではない。
+- 並走との不接触: Part AD (別所有者) を始め他レーンのpublishedファイルには一切接触しない。
+  宣言直前に最新mainを再取得し、同scope対抗宣言なし・`batch14` dir不在・Part AF採番未使用
+  を確認済み。
+- 本amendment observed HEAD-before-push: 実行時の最新mainをコミットメッセージに記録。
