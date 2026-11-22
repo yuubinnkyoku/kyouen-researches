@@ -2471,8 +2471,7 @@ published宣言を変更なしで実行した。対抗宣言・競合なし。ve
   再計算しBASE・全シナリオのpublished summaryと一致)。
 - 機械測定された分解結果 (decomp-deltas-batch13.json) : **PWIN2** のexcluded_nowは
   23→28、flip集合 == frozen-graph eligible holder union **{4903, 5471, 5513, 5626, 16930}**
-  (p002 s5 185003 holders {4903,16930}・p003 s5 203419 holders {4471→5471,5513,5626,16930}...
-  詳細は実験README; multi-WIN holderは16930のみ)。unknown 34,501→34,496。
+  (p002 s5 185003 holders {4903,16930}・p003 s5 203419 holders {5471,5513,5626,16930} (membership 4)・overlapは16930のみ。multi-WIN holderは16930のみ)。unknown 34,501→34,496。
   class 16930のclosure-classes rankは11→5 (unknown 52→50)。**PLOSS2** はflip 0
   (excluded_now 23・free_now 35・unknown 34,501不変)、probe worklist 65,154→65,152。
   **PFULL4** はworklist 65,150 (−4, 加法的)・class 16930 unknown 48。**update8は全シナリオ
