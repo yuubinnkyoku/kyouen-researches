@@ -158,3 +158,39 @@ budget 15,000,000)
      119/119-coverage / root-{60,27} statements under their own gates.
 - No verdict was consumed by this addendum. The standard 11x11 empty board,
   the two-stone root {60,27}, and the third moves {100,108} remain UNKNOWN.
+
+## Addendum 2 (further scratch pre-verification of the audit pipeline; still nothing published)
+
+- The two audit stages were also exercised on the same local scratch tree
+  (same two path repoints and the k012 pass-2 placeholder caveats as
+  addendum 1; scratch outputs deleted after the checks, values recorded here
+  as expected-value anchors for the merge run only):
+  - `scripts/gen_s6_witness_audit.py` PASS: single LOSS witness
+    `(1152921504675009536,536870912)`, pass determinism true, derived
+    parent S5 outcome LOSS; the Oct 12 published raw `s6-211.csv` (fetched,
+    unchanged) carries the identical replay row result 2 / nodes 5,859,060.
+  - `scripts/audit_frontier.py` (whose internal gates machine-regenerate
+    every one of the 3,384 frozen S4 child boundaries against the
+    independent Board and hard-require the residual set to be {100,108} or
+    empty) ran clean on the scratch merged cache in ~4s. Expected values if
+    the canonical merge is published (NOT asserted by this session):
+    cache rows 5,857 (LOSS 5,699 / WIN 158), all-S4 class counts
+    {LOSS 32, WIN 272, UNKNOWN 3080}, third-move coverage 119/119 secured,
+    remaining third moves [], target S4 `(1297036692683752448,0)` all-106
+    children LOSS, status LOSS.
+  - `scripts/audit_root_loss.py` ran clean in ~4s on the scratch cache and
+    produced the move-by-move root `{60,27}` certificate structure with
+    `root_outcome: LOSS` (solver-trusted AND/OR propagation over
+    independently regenerated root moves x S4 responses x S5 children; not
+    a terminal-only proof). Also NOT asserted by this session: it must be
+    re-executed by the merge run on the published canonical cache.
+- Combined with addendum 1, the entire remaining pipeline of the parent
+  declaration is now exercised end-to-end in scratch with every
+  non-k012-pass-2 gate passing and expected values recorded (kit:
+  `preverification-expected-values.json` in the lane kit mirror). The merge
+  run's checklist is unchanged: k012 pass-2 fresh cold; the RAWS2/WITNESS2
+  path repoints (or raw mirroring); then the unpatched pipeline.
+- Again: no verdict consumed, no class-status or coverage claim published.
+  The standard 11x11 empty board remains UNKNOWN; the two-stone root {60,27}
+  keeps its guarded treatment until the canonical publication passes all
+  gates; nodes and pass counts are never verdicts.
