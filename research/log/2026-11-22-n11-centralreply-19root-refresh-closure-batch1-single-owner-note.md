@@ -3909,3 +3909,86 @@ scrutiny owner (C++第二実装 gate pin `9193f5b6…`) のためのif-adopted�
 - 本amendment observed HEAD-before-push: 実行時の最新mainをコミットメッセージ
   に記録する。push直前にnote blob sha1ロックを再照合し、競合時は再fetchして
   本節を追記し直す。
+
+### Part BA status update (2026-11-22, execution host = 本レーン continuing session)
+
+宣言 (note amendment commit `607c876a`, observed HEAD-before-push
+`f8cc6c9d`) どおり、宣言後に本hostがv001+v002同時採用のif-adopted
+投影を計算・出版まで完了した (verdict不消費)。実行中に環境リセットが
+1回発生したため、全pinned入力をmainから再取得・sha照合のうえ全工程を
+再実行し、一次実行と再構築実行の出力が全てbyte一致した
+(決定論的再現の追加検証になった)。
+
+- maker `make_increment_v001v002_win.py` (3回実行byte一致): 2行
+  increment sha256 `4f8fc29b…`・manifest sha256 `13736030…` (schema
+  `batch18-win-v001v002-ifadopted-increment-manifest-v1`, rows 2/2/0,
+  win_ids [v001, v002], win_s5_index [153671, 207534], win_nodes
+  [5656151, 7898204], ifadopted_only, canonical untouched pin,
+  base_cache_absent_hits 0, quarantine_hits 0)。raw 4ファイル
+  (published pins `24b45c8a`/`1fc367bd`/`41c10ec2`/`e9f578fc`) の
+  2-pass node-exact再検証・status-b18.log (`4b785add…`) との3-way
+  一致・batch-keys legal一致はAT版と同一gate。
+- merger (byte-copy pin `90711961…`, selftest PASS) 2回実行byte一致:
+  **if-adopted cache 6,122行** (WIN 160 / LOSS 5,962, conflict 0,
+  duplicates 0) sha256 `6bfa9faa…` (251,556 bytes)。merge-audit
+  run1/run2 byte一致 sha256 `4cdad34b…`。merge後にBASE canonical
+  6,120行 `be9cb24e…` byte不変を再検証 (verdict不消費の機械表明)。
+- refresh adapt版 `refresh_v001v002_ifadopted.py` (AT版 `5f9810e6…`から
+  2-hunk adapt) 2回直列実行 (~60s/回)・4出力ともbyte一致:
+  summary `af95270b…` / closure-classes `e5a91e15…` / per-root-coverage
+  `9f59ebf8…` / probe-worklist `18429b91…` (3.7MB・不出版・sha記録のみ)。
+- extractor `compare_deltas_v001v002_ifadopted.py` (AT版 `207cfbcc…`の
+  双WIN adapt・本レーン執筆) 3回実行byte一致 (delta json sha256
+  `e3679aae…`)・全gate PASS。flips == s5 153671/207534のgraph保持
+  クラス和集合のうちBASE-unknownのもの (v001 holders [4139, 16131] /
+  v002 holders [5611, 6073, 16131] / double holders [16131] を機械
+  計算・hardcodeなし)、**class 16131のBASE-unknown子53個 == batch-18
+  53キーのs5 index集合** (新規の強い一致gate)、純WIN採用のnewly-free
+  空集合・per-root被覆変更行0・新規free第三手空集合、verdict不消費
+  (両s5のBASE index_verdict不在)、raw 2-pass・legal再検証。fail-closed
+  改ざんテスト5種 (increment改ざん→INCR_SHA pin・summary改ざん→
+  SCEN_SUMMARY_SHA pin・batch-keys改ざん→BATCH_KEYS_SHA pin・extractor
+  定数v002 s5改ざん→manifest win gate・BATCH_CLASS改ざん→manifest
+  class gate)、すべて即復元・復元byte一致を確認。
+- 実測 (投影・schedule quantities): **flips = [4139, 5611, 6073, 16131]**
+  すべてunknown→excluded_now 4 / unknown→unknown 34,496 /
+  excluded→excluded 390 / excluded_now→excluded_now 23 /
+  free_now→free_now 36、回帰0)。excluded_now 23→**27**・unknown
+  34,500→**34,496**・free_now **36不変**。class 16131 (唯一のdouble
+  holder) はBASE-unknown 53→**51**・closure候補表rank 15→**7**
+  (unknown_now 51・groups_served 5、表はprobing-worklist view)。
+  per-root free/uncovered変更行0 (root 27 baseline 119/119不変)。
+  update8: resolved 79→**81** (新規 [153671, 207534]・両WINとも
+  baseline requirement内)・win_hit_groups []→**5** (全てclass 16131の
+  5 closure groups (12,50)/(12,70)/(48,20)/(48,72)/(48,100))・
+  groups_free_now 127不変・remaining_now 31,780→31,729 (−51: 5つの
+  win-hit groupがfrozen per-group unknown和集合から除外される.published
+  refreshの機械計算・簿記)。joint greedy 36,726→**36,724**・probe
+  worklist 64,941→**64,939** (movers: root 12 −2・root 48 −2)。
+- 出版: 実験dir
+  `research/experiments/n11-centralreply-class16131-win-v001v002-ifadopted-20261122/`
+  15ファイル+不出版1 (worklist) を3コミットでmainに反映: A `603b4f4f`
+  (if-adopted cache 6,122行・251,556 bytes) / B (maker `1e7865cb` +
+  merger `00c3cdc6` + extractor `ce134e05` + refresh `94b00500` +
+  increment `8e8c51d5` + manifest `1b8bc3c8` + merge-audits
+  `19366a1e`/`b4e8e534`) / C (summary `2df84b96` + closure `26ef7844` +
+  prc `e3abf46c` + delta json `f11677f3` + README `00c735de` +
+  status.log `2cabe757` + MANIFEST-sha256 (15行) `333ef6d1`) =
+  publication complete。**fetch-back 15/15 sha一致** (各publication
+  commit固定rawでsha256照合)。
+- 意味 (route statement・閉鎖主張なし): if-adopted投影は、scrutiny
+  ownerがv001+v002を**同時に**採用した場合の分類台帳の変化を機械
+  証明したもの。4クラス (4139 v001のみ / 5611・6073 v002のみ / 16131
+  両WIN保有) の全LOSS閉包ルートは検証済みWIN子によって永久に反駁され、
+  被覆は不変、update8は2つのpinned解決を得る。17個のunconsumed
+  closure WIN全てのif-adopted分解が揃った (v001/v002が最後のギャップ
+  だった)。本Partは採用を推奨も却下もしない・判断は一切代行しない
+  (scrutiny owner C++第二実装 gate pin `9193f5b6…`のまま)。
+- verdict不消費: canonical cache 6,120行 `be9cb24e…` はbyte不変
+  (merge後再検証)。if-adopted cache 6,122行はrepoのcanonical chain
+  ではない。v001/v002 (と他15候補) はcanonical上も未来の採用判断上も
+  unconsumedのまま。AY宣言の残51キー (v003..v053・fresh) と Part AV
+  (batch-17 adoption・in flight) の成果物には読み書きとも触れていない。
+- 標準11×11空盤・19 central-reply roots・class 16131 (残51子)・全classは
+  本Partのどの時点でもUNKNOWNのまま。nodes数・worklist数・greedy数を
+  勝敗として読まない。
