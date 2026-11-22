@@ -3466,3 +3466,52 @@ probe_order 580..589)。本Partはこの残10キーの列挙probeを実行前に
   同一スコープの対抗宣言がmainに存在する場合は本宣言を破棄して着手しない。
 - 本amendment observed HEAD-before-push: `3542315d` (push直前にnoteの
   blob sha1ロックを再照合し、競合時は再fetchして本節を追記し直す)。
+
+### Part AW status update (2026-11-22, execution host = 本レーンセッション)
+
+宣言 (commit `da131f10`) どおり、宣言後に本実行hostが最新mainで対抗宣言を確認
+したうえで batch-14 residual 10キーを実行し、出版まで完了した (verdict不消費)。
+
+- 実行: pinned replica `jsreplay.js` (`84585617…` byte-copy) 2-pass fresh
+  cold・budget 15M・worker最大2。**10/10キーすべて LOSS (result 2)**・WIN 0・
+  枯損 0・mismatch 0。総ノード数 **23,252,550/pass** (range 557,594 .. 8,353,244・
+  最大はq049 8,353,244)。事前登録どおりWIN行はWIN-CONTINUE誠実ラベルで
+  継続のはずだったが、WINは一堂に出現せず (WIN 0)。
+- 誠実記録: 実行は`runbatch.sh`を2-key並列foregroundで運転した (`runwave.sh`
+  wrapperは同protocolのまま本バッチサイズでは不要・status.log RUNNER-NOTE行と
+  READMEに開示)。
+- val-gate: 実行直前に本hostで4/4 node-exact (at2m 0/2,000,000 ×2・15m
+  `(2, 3651923)`/`(2, 5040200)`・禁止四角 95,670)。host interruptionなし
+  (truncated pass 0)。
+- maker gates: `make_residual_keys.py` G1-G7全PASS・3回実行byte一致
+  (canonical 6,120行 `be9cb24e…` 0/10 hits・quarantine `81d23160…` 0/10・
+  batch-17 batch-keys `db762175…` とのs5_index交積0・published batch-14
+  row-audit `cc22a1c8…` の unprobed_keys == {q043..q052} 機械一致)。
+- runner差分の開示: `runbatch.sh` (sha256 `989e359c…`) はpublished batch-17
+  正本 (`f591f8c2…`) からWIN時のHALT exit 45を誠実WIN-CONTINUEラベル+
+  継続に置き換えたPart AW宣言済み差分のみ・`runwave.sh` (`885830d0…`) は
+  done-setにWIN-CONTINUEを追加した同差分のみ。`jsreplay.js`はbyte同一
+  (`84585617…`)。いずれもMANIFEST sha固定。
+- row-audit.json (schema `n11-centralreply-closure-class23101-batch14residual-
+  rowaudit-v1`, sha256 `6b40b131…`): 全10行をrawから機械再検証 (p1==p2
+  node-exact・budget内・result 2・input/batch-keys/status.log照合・全pass
+  `# replay_done` 完了) PASS・3回実行byte一致。
+- 出版: 実験dir
+  `research/experiments/n11-centralreply-closure-class23101-batch14-residual-20261122/`
+  48ファイルを3コミットでmainに反映: commit A `a5b514d7` (scaffold:
+  runner scripts + maker + inputs + 本host val-gate + 統合status.log) /
+  commit B `ecfe258d` (raw q043..q052 20ファイル) / commit C `cb94f808`
+  (row-audit.json + README + MANIFEST-sha256 48行) = publication complete。
+  **fetch-back全byte一致** (publication commit `cb94f808` 固定rawでMANIFEST
+  全行sha256照合48/48)。
+- verdict消費: **ゼロ**。batch-14キー集合 (class 23101費用子52中、未着手
+  だった残10キー) の列挙は本laneの証拠上これで完結 (Part AQ 42行 + 本Part
+  10行)。10 LOSS行のcanonical計上は別宣言のadoption Partが行う (**BASEは
+  Part AV計上後のcanonical 6,172行**・sha-pinned fail-closed merger
+  `90711961…` 経由・Part AV出版後に着手可能)。そのadoption Part完了後、
+  class 23101のcanonical上unknown費用子は未採用q042 WIN 1子のみになる
+  見込み (route statement・閉鎖・被覆主張ではない)。q042採用判断は引き続き
+  scrutiny owner (C++第二実装 gate pin `9193f5b6…`) 待ち。
+- 標準11×11空盤・19 central-reply roots・class 23101 (現行canonical
+  6,120行上unknown 11子)・10キーは本Partのどの時点でもUNKNOWNのまま。
+  nodes数を勝敗として読まない。
