@@ -1,0 +1,228 @@
+{
+ "schema": "n11-centralreply-closure-b14res-b17edge-thirdimpl-input-v1",
+ "sources": {
+  "aw": "sources/raw q043..q052 20 files + status-aw.log + row-audit-aw.json (published Part AW batch-14-residual outputs, publication commit cb94f808, fetched from the repo raw CDN, commit-pinned; row-audit sha256 6b40b131..)",
+  "aw_batch_keys_sha256": "dfde0e90b75fd261b51ef746fe69a16eb182a99f5d2f8e1ff8bfa6efe936d71f",
+  "b17": "sources/raw u031/u033/u038 6 files + status-b17.log + row-audit-b17.json (published batch-17 Part AU outputs, publication commit ffc09de1, commit-pinned; row-audit sha256 c19e768f..)",
+  "b17_batch_keys_sha256": "db762175272206aa53622f30addc1267d534e8a3e576f70c6a084f21392645d2",
+  "anchors": "published Part G/K/O/P/T/W/AA/AD/AG/AL/AR anchor/negative values, input CSVs byte-equality-checked against the published Part AR experiment"
+ },
+ "consumed_into_canonical_cache": false,
+ "targets": [
+  {
+   "key_id": "q043",
+   "stones": 5,
+   "lo": 1152921505747697664,
+   "hi": 66560,
+   "legal": 84,
+   "replica_result": 2,
+   "replica_nodes": 2573254,
+   "source": "part-aw-b14residual",
+   "probe_order": 580,
+   "s5_index": 745455,
+   "expect_third": 2
+  },
+  {
+   "key_id": "q044",
+   "stones": 5,
+   "lo": 1152921505747697664,
+   "hi": 33792,
+   "legal": 97,
+   "replica_result": 2,
+   "replica_nodes": 1855550,
+   "source": "part-aw-b14residual",
+   "probe_order": 581,
+   "s5_index": 745456,
+   "expect_third": 2
+  },
+  {
+   "key_id": "q045",
+   "stones": 5,
+   "lo": 1152921505747697664,
+   "hi": 17408,
+   "legal": 94,
+   "replica_result": 2,
+   "replica_nodes": 1028674,
+   "source": "part-aw-b14residual",
+   "probe_order": 582,
+   "s5_index": 745457,
+   "expect_third": 2
+  },
+  {
+   "key_id": "q046",
+   "stones": 5,
+   "lo": 1152991873351025152,
+   "hi": 1140850688,
+   "legal": 99,
+   "replica_result": 2,
+   "replica_nodes": 1101099,
+   "source": "part-aw-b14residual",
+   "probe_order": 583,
+   "s5_index": 745459,
+   "expect_third": 2
+  },
+  {
+   "key_id": "q047",
+   "stones": 5,
+   "lo": 1152921504892059648,
+   "hi": 1040,
+   "legal": 82,
+   "replica_result": 2,
+   "replica_nodes": 557594,
+   "source": "part-aw-b14residual",
+   "probe_order": 584,
+   "s5_index": 745460,
+   "expect_third": 2
+  },
+  {
+   "key_id": "q048",
+   "stones": 5,
+   "lo": 1152991873351025664,
+   "hi": 1140850688,
+   "legal": 84,
+   "replica_result": 2,
+   "replica_nodes": 2860377,
+   "source": "part-aw-b14residual",
+   "probe_order": 585,
+   "s5_index": 745461,
+   "expect_third": 2
+  },
+  {
+   "key_id": "q049",
+   "stones": 5,
+   "lo": 1152991873352073216,
+   "hi": 1140850688,
+   "legal": 92,
+   "replica_result": 2,
+   "replica_nodes": 8353244,
+   "source": "part-aw-b14residual",
+   "probe_order": 586,
+   "s5_index": 745462,
+   "expect_third": 2
+  },
+  {
+   "key_id": "q050",
+   "stones": 5,
+   "lo": 1152921505747697664,
+   "hi": 33555456,
+   "legal": 91,
+   "replica_result": 2,
+   "replica_nodes": 2178945,
+   "source": "part-aw-b14residual",
+   "probe_order": 587,
+   "s5_index": 745463,
+   "expect_third": 2
+  },
+  {
+   "key_id": "q051",
+   "stones": 5,
+   "lo": 1152921505747697664,
+   "hi": 16778240,
+   "legal": 97,
+   "replica_result": 2,
+   "replica_nodes": 1451266,
+   "source": "part-aw-b14residual",
+   "probe_order": 588,
+   "s5_index": 745464,
+   "expect_third": 2
+  },
+  {
+   "key_id": "q052",
+   "stones": 5,
+   "lo": 1152921505747697664,
+   "hi": 9216,
+   "legal": 98,
+   "replica_result": 2,
+   "replica_nodes": 1292547,
+   "source": "part-aw-b14residual",
+   "probe_order": 589,
+   "s5_index": 745465,
+   "expect_third": 2
+  },
+  {
+   "key_id": "u031",
+   "stones": 5,
+   "lo": 1233986297916293120,
+   "hi": 67108864,
+   "legal": 97,
+   "replica_result": 2,
+   "replica_nodes": 14967263,
+   "source": "part-au-b17-edge",
+   "probe_order": 630,
+   "s5_index": 375355,
+   "expect_third": 2
+  },
+  {
+   "key_id": "u033",
+   "stones": 5,
+   "lo": 1224987894754574336,
+   "hi": 67108864,
+   "legal": 96,
+   "replica_result": 2,
+   "replica_nodes": 7806486,
+   "source": "part-au-b17-edge",
+   "probe_order": 632,
+   "s5_index": 375357,
+   "expect_third": 2
+  },
+  {
+   "key_id": "u038",
+   "stones": 5,
+   "lo": 1152921514287366144,
+   "hi": 0,
+   "legal": 96,
+   "replica_result": 2,
+   "replica_nodes": 6589964,
+   "source": "part-au-b17-edge",
+   "probe_order": 637,
+   "s5_index": 375362,
+   "expect_third": 2
+  }
+ ],
+ "anchors": [
+  {
+   "key_id": "k02a",
+   "stones": 5,
+   "lo": 1297036692683751424,
+   "hi": 68157440,
+   "legal": 87,
+   "expect_third": 1,
+   "anchor_expansions": 9106337,
+   "anchor_ttHits": 4991527,
+   "expect_kind": "win",
+   "replica_result": null,
+   "replica_nodes": null
+  },
+  {
+   "key_id": "l1a",
+   "stones": 5,
+   "lo": 13019119616,
+   "hi": 16448,
+   "legal": 116,
+   "expect_third": 2,
+   "anchor_expansions": 7660602,
+   "anchor_ttHits": 3951175,
+   "expect_kind": "loss",
+   "replica_result": null,
+   "replica_nodes": null
+  }
+ ],
+ "negatives": [
+  {
+   "key_id": "ng1",
+   "lo": 1297036692683751424,
+   "hi": 68157440,
+   "legal": 88,
+   "stones": 5,
+   "why": "legal+1 vs derived 87"
+  },
+  {
+   "key_id": "ng2",
+   "lo": 1297036692683751424,
+   "hi": 68157440,
+   "legal": 87,
+   "stones": 6,
+   "why": "stones 6 vs actual 5"
+  }
+ ]
+}
