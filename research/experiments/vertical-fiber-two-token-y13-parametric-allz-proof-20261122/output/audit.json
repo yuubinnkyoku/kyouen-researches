@@ -1,0 +1,113 @@
+{
+  "checks": {
+    "C1": {
+      "bad": 0,
+      "desc": "raw both engines vs cand13 z=0..14 x=13..31 R<=x+z+47",
+      "points": 21945
+    },
+    "C11": {
+      "bad": 0,
+      "canonical_points": 445440,
+      "census_cache_maxsize": 1600000,
+      "census_part_files": [
+        "census-ordered.json",
+        "census-canonical.json"
+      ],
+      "desc": "raw census anchor z=0..79 x=13..70 R<=x+z+14, both engines (bounded-memoization twins, LRU cap 1600000, separate commands C11ordered/C11canonical on this 1 GiB-cgroup host), parts validated and merged here with recomputed expected counts",
+      "ordered_points": 445440,
+      "points": 890880
+    },
+    "C12": {
+      "bad": 0,
+      "desc": "deep closed grid z=0..120 x=13..120 R<=x+z+16",
+      "points": 1862190
+    },
+    "C1b": {
+      "bad": 0,
+      "desc": "single_token/y=12-child/x=13 merger raw anchors",
+      "points": 42041
+    },
+    "C2": {
+      "bad": 0,
+      "desc": "closed identity grid z=0..48 x=13..58 R<=x+z+41 (+merge,tail)",
+      "points": 226527
+    },
+    "C2b": {
+      "bad": 0,
+      "desc": "deep tail identity rows z in {60..400} x=13..63(step5) R<=x+z+31",
+      "points": 19052
+    },
+    "C3": {
+      "bad": 0,
+      "desc": "option decomposition vs raw child enumeration",
+      "points": 1155
+    },
+    "C4": {
+      "bad": 0,
+      "confluence_bad": 0,
+      "desc": "type machine box +/-60, clip 28/sentinel 29, confluence",
+      "identity_bad": 0,
+      "points": 611504,
+      "types": 214984
+    },
+    "C4t": {
+      "desc": "tightness probe clip 27/sentinel 28 (not in bad total)",
+      "first_violation": [
+        60,
+        90,
+        90
+      ],
+      "points": 611504,
+      "violations_at_clip27": 2987
+    },
+    "C7": {
+      "bad": 0,
+      "desc": "seeded far probes 200k, seed 20261132, z,x<=3000",
+      "points": 200000
+    },
+    "C8": {
+      "bad": 0,
+      "desc": "boundary manifolds z<=3000, dx in [-28,17], tail window",
+      "points": 953151
+    },
+    "C9": {
+      "bad": 0,
+      "desc": "v-space shell sweeps [61,64],[89,92],[117,120]",
+      "points": 913194
+    }
+  },
+  "checks_run": [
+    "C1",
+    "C11",
+    "C12",
+    "C1b",
+    "C2",
+    "C2b",
+    "C3",
+    "C4",
+    "C4t",
+    "C7",
+    "C8",
+    "C9"
+  ],
+  "corollaries": {
+    "merge_below_diagonal": {
+      "bad": 0,
+      "claim": "x<=z-14 => H == single_token(x+13,z,R)",
+      "points": 1391747
+    },
+    "tail": {
+      "bad": 0,
+      "claim": "R>=x+z+14 => H == (x+13)%2",
+      "points": 217342
+    }
+  },
+  "experiment": "vertical-fiber-two-token-y13-parametric-allz-proof-20261122",
+  "family": "H(R;(x,13);z), z>=0, x>=13, R>=0",
+  "overall": "PASS",
+  "stage": "part1 (12-check promotion machine; the promotion decision K1231 observed->proved is reserved for part2: C1d published-slice anchors at y=13 + census_rows.py third implementation; census parts re-anchored via bounded-memoization twins on a 1 GiB-cgroup host)",
+  "total_bad": 0,
+  "total_points": 6353143,
+  "type_count": 234180,
+  "verifier_sha256": "b73d9aaa94f04f1f4922d84808ac7afe6f5bfb55631b4c990cae29734279141f"
+}

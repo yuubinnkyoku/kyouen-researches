@@ -1,0 +1,123 @@
+published_run.txt — vertical-fiber-two-token-y13-parametric-allz-proof-20261122
+実行記録（2026-11-22・高速レーン・単一オーナー宣言 7196cbd570c638ffbdcf8edfb17ccd8b6df8ead3〔2026-11-22T17:59:40Z・part1+part2保持〕に基づく part1）
+環境: Python 3.12.14 (stdlib only) / cgroup memory.max 1,090,519,040 bytes (約1.0 GiB) / 2 cores / x86_64
+
+================================================================
+機械構成（assemble・転写照合）
+================================================================
+sources:
+  verify_y12_universal.py  SHA-256 e209297603f68c9a82a50f90cac0bc678211d1517f137b5d490dfca3c492eb04（出版 y=12 part2 正本機械・y=13 part1 の直接の母体。part1 では C1d/C11r 系は不使用）
+  cand13.py                SHA-256 cb903c56b589310907d44f21674ef61a21a4baf7cec8b2e314d5720ff68e2e09（出版 K1231 fit cand13・実 byte 再計算一致）
+assembly (mechanical, replacement pairs each asserted by count):
+  imports + mex + 生2エンジン（H_ordered/H_canonical）+ K0832 単一トークン表 single_token
+    : y12 正本機械から verbatim（y12 の同領域が y11 正本の 77 行 verbatim であることは y12 part1 出版時に確定済み）
+  cand12 ブロック（B子・y=12 出版族の逐語ブロック）
+    : y12 正本機械の cand12 セクションをブロック内 Y→Y12 改名のみで転写
+      （改名行数 == word-boundary Y を含む行数の count-assert・改名以外の差 0 行）
+  cand13 ブロック: 出版 cand13.py から docstring と fit driver（main）を除き verbatim（Y = 13・差 0 行）。
+    ブロック内 q_odd/single_token_val/_bk の重複定義は y10-y12 慣行通りブロック毎に併置（最終定義が有効）。
+  y=13 機械本体（docstring/opts13/型機械/12チェック/census runner/main）
+    : opts13 の合流子 x==13 → A=cand12(z,13,R-1)〔(12,13)≡(13,12)〕・x>=14 → cand13(z,x-1,R-1)、
+      B子 = cand12(z,x,R-1)、C子 = 1 xor cand13(z-1,x,R-1)。CLIP,SENT = 28,29（2y+2=28・番兵 2y+3=29）。
+      census box 'z=0..79, x=13..70, R=0..x+z+14'・merge x<=z-14・tail (x+13)%2・
+      y12 part2 版から C1d/C11r 系除去（part1 は 12チェック構成）。
+      キー名 fixes: y12 由来の violations_at_clip25 → violations_at_clip27（print 文言含む）。
+verify_y13_universal.py: 36,457 bytes, 937 lines
+  SHA-256 b73d9aaa94f04f1f4922d84808ac7afe6f5bfb55631b4c990cae29734279141f
+  ast.parse OK
+  再生成: 機械組み立てスクリプトによる再生成物が実行物と byte-identical（sha 一致で確認）
+  監査 'verifier_sha256' フィールド == b73d9aaa... == 実ファイル SHA-256（機械照合）
+
+================================================================
+run 1 — 12 checks minus C11 (default mode)
+================================================================
+$ python3 verify_y13_universal.py
+  C1: pts=21945 bad=0     C1b: pts=42041 bad=0    C2: pts=226527 bad=0
+  C2b: pts=19052 bad=0    C3: pts=1155 bad=0      C4: pts=611504 bad=0
+  C4t: pts=611504 (violations_at_clip27=2987, first (60,90,90); not in bad total)
+  C7: pts=200000 bad=0    C8: pts=953151 bad=0    C9: pts=913194 bad=0
+  C12: pts=1862190 bad=0
+  overall: PASS total_points: 5462263 types: 234180
+  merge: points=1085513 bad=0    tail: points=208062 bad=0
+
+================================================================
+census parts (bounded-memoization twins, LRU cap 1,600,000 per engine)
+================================================================
+設計は y12 part1 と同一（同ホスト 1 GiB cgroup で無制限 memo 生エンジンの 1 プロセス census が
+OOM kill〔exit 137・maxrss 996,376KB〕・行ごと cache-clear 版が 300 秒コマンド上限超過、は y12 で実測記録済み）。
+bounded twin: 出版 code object を module globals 浅複写に再束縛（types.FunctionType）し、
+再帰参照を LRU 上限 1,600,000 キャップ付きキャッシュへ差し替え。再帰定義の byte は正本と同一・
+決定的純関数の memo 化は透過・LRU 追い出しは固定訪問順の下で決定的。
+
+$ python3 verify_y13_universal.py C11ordered
+census[ordered]: points=445440 bad=0 merge={'points': 153117, 'bad': 0} tail={'points': 4640, 'bad': 0}
+  wall 13.3s, maxrss 約549-562MB
+$ python3 verify_y13_universal.py C11canonical
+census[canonical]: points=445440 bad=0 merge={'points': 153117, 'bad': 0} tail={'points': 4640, 'bad': 0}
+  wall 16.4s, maxrss 同程度
+
+expected counts recomputed from census geometry (z=0..79, x=13..70, R=0..x+z+14):
+  points 445,440 / merge 153,117 / tail 4,640 per engine — match the runner outputs exactly.
+
+================================================================
+full audit — all 12 checks incl. C11 merge
+================================================================
+$ python3 verify_y13_universal.py C1 C1b C2 C2b C3 C4 C4t C7 C8 C9 C11 C12
+  C1 21945/0  C1b 42041/0  C2 226527/0  C2b 19052/0  C3 1155/0
+  C4 611504/0 (types at check time 214984)  C4t clip27 violations 2987 (excluded from bad)
+  C7 200000/0  C8 953151/0  C9 913194/0  C11 890880/0  C12 1862190/0
+  overall: PASS total_points: 6353143 types: 234180 total_bad: 0
+  merge corollary: points=1391747 bad=0 / tail corollary: points=217342 bad=0
+wall 32.8s（直近の再計測）
+output/audit.json 3,103 bytes  SHA-256 db7c5fa56f407f09ed6604d7677aaab681d78649dc85379d977c5bd58c8e42de
+  (audit 'verifier_sha256' field == b73d9aaa... == actual file SHA-256, machine-checked)
+
+================================================================
+determinism — 3 runs byte-identical
+================================================================
+run1: same cwd (commands above)
+run2: same cwd, full re-execution of C11ordered + C11canonical + 12-check merge
+run3: isolated tree copy + isolated cwd + isolated HOME + PYTHONHASHSEED=random
+  $ python3 verify_y13_universal.py C11ordered      -> census-ordered.json
+  $ python3 verify_y13_universal.py C11canonical    -> census-canonical.json
+  $ python3 verify_y13_universal.py C1 C1b C2 C2b C3 C4 C4t C7 C8 C9 C11 C12
+results:
+  audit.json            run2 == run1, run3 == run1   (byte-identical, sha256sum)
+  census-ordered.json   run2 == run1, run3 == run1   (byte-identical, sha256sum)
+  census-canonical.json run2 == run1, run3 == run1   (byte-identical, sha256sum)
+  SHA-256: audit db7c5fa5...b681d78649dc85379d977c5bd58c8e42de / census-ordered
+           264d7cd817583e2a88f617296e2cf03703fd24153b62743a000ec3440c275b22
+           census-canonical 82fb880381358917c47d3f8ab6c4deffabc617d5e45876d46652852f1e306b38
+
+================================================================
+fail-closed tests on the census merge path (pre-publication)
+================================================================
+tamper 1: census-ordered.json 'points' 445440 -> 445439
+  $ python3 verify_y13_universal.py C11
+  FAIL-CLOSED: census points 445439 != 445440     (exit via SystemExit, no PASS output)
+tamper 2: corollaries.merge.points -> +1（153117 -> 153118）
+  FAIL-CLOSED: census merge corollary mismatch     (no PASS output)
+tamper 3: census-canonical.json temporarily removed
+  FAIL-CLOSED: census part file for engine 'canonical' is missing (census-canonical.json); run mode C11canonical first
+restore: original part files restored (sha256 re-checked); C11-mode rerun PASS; full 12-check
+  rerun regenerated audit.json byte-identical to the run1 baseline (db7c5fa5..., cmp).
+  なお検証器の audit.json は最後に実行したモードの監査を同じパスに書くため、単体 C11 モードや
+  default モード（C11 抜き）は部分監査で正本 audit.json を上書きする。本記録の tamper 検査と
+  default-mode 実行の後にフル 12 チェックを再実行して正本監査を再確定し byte-identical を確認した。
+
+================================================================
+notes
+================================================================
+- run modes: default (all except C11) / C11ordered / C11canonical / C11 (merge from
+  both part files, validating engine name, box, cache cap, expected counts, bad==0)
+  / explicit check list.
+- no clock, no randomness except the fixed seed 20261132 in C7, sorted audit keys,
+  so audit bytes are reproducible; census runner output is deterministic under the
+  fixed visit order and the LRU cap.
+- C4t: clip 27 (2y+1) で 2,987 点の型収束違反（最初 (60,90,90)）→ clip 2y+2=28 が tight。
+  2y+2 clip tight は 9 族連続候補（y=5..13: 12/14/16/18/20/22/24/26/28）。
+- K1231 status: observed (unchanged). Promotion to proved is deferred to part2
+  (C1d published-slice anchors specialized at y=13 + census_rows.py third implementation),
+  mirroring the y=12 procedure (K1152/K1162).
+- interpretation: standard 11x11 empty board, two-stone roots {49,60}/{59,60},
+  S2 {59,60}, classes 1/2/4 all remain UNKNOWN. This machine makes no claim about them.
