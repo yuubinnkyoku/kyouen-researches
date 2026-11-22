@@ -1,0 +1,1897 @@
+{
+ "board_verification": {
+  "board_verified_free": 35,
+  "free_candidates": 35,
+  "rejected": {}
+ },
+ "class_status_counts": {
+  "excluded": 390,
+  "excluded_now": 26,
+  "free_now": 35,
+  "unknown": 34498
+ },
+ "closure_classes_count": 811,
+ "closure_classes_first": [],
+ "frozen_update8_refresh": {
+  "groups_free_now": 127,
+  "per_root_remaining": {
+   "0": 11726,
+   "1": 12463,
+   "12": 10957,
+   "13": 12010,
+   "14": 11996,
+   "15": 12226,
+   "16": 10968,
+   "2": 12112,
+   "24": 11197,
+   "25": 11927,
+   "26": 11689,
+   "3": 12179,
+   "36": 11256,
+   "37": 11964,
+   "38": 10620,
+   "4": 12164,
+   "48": 10963,
+   "49": 10802,
+   "5": 10699
+  },
+  "remaining_now": 31726,
+  "resolved_among_baseline_requirement": [
+   54757,
+   82690,
+   102312,
+   167863,
+   194261,
+   198530,
+   227912,
+   227968,
+   233318,
+   233406,
+   238496,
+   238564,
+   243538,
+   243573,
+   248368,
+   248433,
+   255119,
+   255208,
+   259293,
+   260346,
+   263359,
+   263430,
+   267294,
+   267344,
+   271060,
+   271136,
+   273659,
+   276389,
+   276454,
+   279742,
+   279777,
+   282692,
+   285588,
+   285640,
+   288392,
+   290844,
+   290923,
+   293494,
+   295845,
+   297931,
+   298084,
+   298130,
+   299014,
+   300239,
+   300312,
+   302286,
+   302358,
+   304227,
+   304303,
+   306086,
+   307679,
+   307727,
+   309241,
+   310606,
+   311726,
+   312958,
+   312959,
+   362082,
+   362090,
+   391206,
+   392179,
+   473572,
+   474401,
+   495020,
+   498907,
+   503090,
+   507102,
+   509890,
+   513542,
+   516932,
+   520108,
+   523270,
+   530835,
+   533411,
+   709166,
+   714379
+  ],
+  "resolved_count": 76,
+  "total_groups": 2261,
+  "union_size_baseline": 31859,
+  "win_hit_groups": [
+   {
+    "first": 16,
+    "fourth": 104,
+    "reply": 60,
+    "s4_class_index": 5748,
+    "s4_mask": [
+     1225542048598196224,
+     1
+    ],
+    "third": 59,
+    "unknown_s5_children": 58
+   },
+   {
+    "first": 16,
+    "fourth": 104,
+    "reply": 60,
+    "s4_class_index": 5748,
+    "s4_mask": [
+     1225542048598196224,
+     1
+    ],
+    "third": 61,
+    "unknown_s5_children": 58
+   },
+   {
+    "first": 16,
+    "fourth": 59,
+    "reply": 60,
+    "s4_class_index": 5748,
+    "s4_mask": [
+     1225542048598196224,
+     1
+    ],
+    "third": 104,
+    "unknown_s5_children": 58
+   },
+   {
+    "first": 49,
+    "fourth": 64,
+    "reply": 60,
+    "s4_class_index": 5748,
+    "s4_mask": [
+     1225542048598196224,
+     1
+    ],
+    "third": 56,
+    "unknown_s5_children": 58
+   },
+   {
+    "first": 49,
+    "fourth": 56,
+    "reply": 60,
+    "s4_class_index": 5748,
+    "s4_mask": [
+     1225542048598196224,
+     1
+    ],
+    "third": 64,
+    "unknown_s5_children": 58
+   }
+  ]
+ },
+ "group_best_options_nonfree": 2127,
+ "inputs": {
+  "cache_rows": 6028,
+  "cache_rows_in_universe": 184,
+  "cache_verdicts": {
+   "1": 159,
+   "2": 5869
+  },
+  "cost_universe_masks": 962525,
+  "graph_counts": {
+   "exact_s5_cache_rows": 5851,
+   "roots": 20,
+   "s4_classes_loss": 32,
+   "s4_classes_total": 34949,
+   "s4_classes_unknown": 34527,
+   "s4_classes_win_excluded": 390,
+   "s5_cost_universe": 962525
+  },
+  "known_universe_indices": 207,
+  "update8_resolved_verdicts": {
+   "115540": 2,
+   "121263": 2,
+   "126017": 1,
+   "126899": 2,
+   "131631": 1,
+   "137694": 2,
+   "143240": 2,
+   "144095": 1,
+   "144193": 2,
+   "144311": 1,
+   "145001": 2,
+   "150871": 2,
+   "162106": 1,
+   "197665": 1,
+   "206386": 1,
+   "209644": 1,
+   "220231": 2,
+   "381840": 2,
+   "381858": 2,
+   "382619": 2,
+   "402066": 2,
+   "550881": 2,
+   "558600": 2
+  }
+ },
+ "joint_greedy": {
+  "greedy_union_size": 35241,
+  "unique_groups": 2127
+ },
+ "per_root_greedy": {
+  "0": {
+   "free_thirds": 7,
+   "greedy_union_size": 2785,
+   "uncovered_thirds": 112
+  },
+  "1": {
+   "free_thirds": 4,
+   "greedy_union_size": 6355,
+   "uncovered_thirds": 115
+  },
+  "12": {
+   "free_thirds": 6,
+   "greedy_union_size": 3031,
+   "uncovered_thirds": 113
+  },
+  "13": {
+   "free_thirds": 6,
+   "greedy_union_size": 6144,
+   "uncovered_thirds": 113
+  },
+  "14": {
+   "free_thirds": 8,
+   "greedy_union_size": 4440,
+   "uncovered_thirds": 111
+  },
+  "15": {
+   "free_thirds": 5,
+   "greedy_union_size": 5991,
+   "uncovered_thirds": 114
+  },
+  "16": {
+   "free_thirds": 14,
+   "greedy_union_size": 2539,
+   "uncovered_thirds": 105
+  },
+  "2": {
+   "free_thirds": 6,
+   "greedy_union_size": 6145,
+   "uncovered_thirds": 113
+  },
+  "24": {
+   "free_thirds": 10,
+   "greedy_union_size": 2826,
+   "uncovered_thirds": 109
+  },
+  "25": {
+   "free_thirds": 6,
+   "greedy_union_size": 6215,
+   "uncovered_thirds": 113
+  },
+  "26": {
+   "free_thirds": 8,
+   "greedy_union_size": 5203,
+   "uncovered_thirds": 111
+  },
+  "3": {
+   "free_thirds": 6,
+   "greedy_union_size": 5432,
+   "uncovered_thirds": 113
+  },
+  "36": {
+   "free_thirds": 4,
+   "greedy_union_size": 2704,
+   "uncovered_thirds": 115
+  },
+  "37": {
+   "free_thirds": 4,
+   "greedy_union_size": 4001,
+   "uncovered_thirds": 115
+  },
+  "38": {
+   "free_thirds": 13,
+   "greedy_union_size": 3123,
+   "uncovered_thirds": 106
+  },
+  "4": {
+   "free_thirds": 4,
+   "greedy_union_size": 5978,
+   "uncovered_thirds": 115
+  },
+  "48": {
+   "free_thirds": 7,
+   "greedy_union_size": 2822,
+   "uncovered_thirds": 112
+  },
+  "49": {
+   "free_thirds": 10,
+   "greedy_union_size": 2899,
+   "uncovered_thirds": 109
+  },
+  "5": {
+   "free_thirds": 6,
+   "greedy_union_size": 3029,
+   "uncovered_thirds": 113
+  }
+ },
+ "pins": {
+  "board_source": {
+   "path": "research/experiments/n11-independent-exact-audit-20261010/scripts/independent.py",
+   "sha256": "954d3a104c1723ebb15b8c9bae63a4494f07f9eb73446a6d067c4fd6a4ba189f"
+  },
+  "dependency_graph": {
+   "path": "research/experiments/n11-joint-s5-proof-planning-20261012/output/dependency-graph.json.gz",
+   "sha256": "54f9c3643eeba139ea5e8d3babb1db9744d19f00f3cf024bbf192ec0d408c00b"
+  },
+  "evidence_policy": {
+   "path": "research/experiments/n11-frontier-selection-20261005/scripts/s5_evidence_policy.py",
+   "sha256": "78655e94480920de48a6fe8792e02e611513ddee7f685b422bbb2b08af5c95e2"
+  },
+  "merged_cache": {
+   "path": "research/experiments/n11-centralreply-class8785-win-z003-ifadopted-20261122/pwinz003/output/cache-pwinz003-IFADOPTED.cache",
+   "sha256": "3fcdbfd090e64144f458d3eb5f28086e6026e000c5f24aecca4a34f38173a882"
+  },
+  "quarantine": {
+   "path": "results/n11-s5-evidence-quarantine.json",
+   "sha256": "81d231604d3a095c115135e05ca393d6be83e1aadde4f614d3b5a9cc67d17fe9"
+  },
+  "update8_plan": {
+   "path": "research/experiments/n11-night-plan-update8-20261016/output/repaired-joint-plan-update8.json",
+   "sha256": "b658290aa941c105035aa3b9b13741cd95b5032b9b7fb7d61b2aed0d0cea6719"
+  }
+ },
+ "roots": [
+  {
+   "free_thirds_now": 119,
+   "origin_first": 27,
+   "role": "known-loss-baseline",
+   "thirds": 119,
+   "uncovered": 0
+  },
+  {
+   "free_thirds_now": 10,
+   "origin_first": 49,
+   "role": "central",
+   "thirds": 119,
+   "uncovered": 109
+  },
+  {
+   "free_thirds_now": 13,
+   "origin_first": 38,
+   "role": "central",
+   "thirds": 119,
+   "uncovered": 106
+  },
+  {
+   "free_thirds_now": 14,
+   "origin_first": 16,
+   "role": "central",
+   "thirds": 119,
+   "uncovered": 105
+  },
+  {
+   "free_thirds_now": 6,
+   "origin_first": 5,
+   "role": "central",
+   "thirds": 119,
+   "uncovered": 113
+  },
+  {
+   "free_thirds_now": 7,
+   "origin_first": 48,
+   "role": "central",
+   "thirds": 119,
+   "uncovered": 112
+  },
+  {
+   "free_thirds_now": 4,
+   "origin_first": 37,
+   "role": "central",
+   "thirds": 119,
+   "uncovered": 115
+  },
+  {
+   "free_thirds_now": 8,
+   "origin_first": 26,
+   "role": "central",
+   "thirds": 119,
+   "uncovered": 111
+  },
+  {
+   "free_thirds_now": 5,
+   "origin_first": 15,
+   "role": "central",
+   "thirds": 119,
+   "uncovered": 114
+  },
+  {
+   "free_thirds_now": 4,
+   "origin_first": 4,
+   "role": "central",
+   "thirds": 119,
+   "uncovered": 115
+  },
+  {
+   "free_thirds_now": 4,
+   "origin_first": 36,
+   "role": "central",
+   "thirds": 119,
+   "uncovered": 115
+  },
+  {
+   "free_thirds_now": 6,
+   "origin_first": 25,
+   "role": "central",
+   "thirds": 119,
+   "uncovered": 113
+  },
+  {
+   "free_thirds_now": 8,
+   "origin_first": 14,
+   "role": "central",
+   "thirds": 119,
+   "uncovered": 111
+  },
+  {
+   "free_thirds_now": 6,
+   "origin_first": 3,
+   "role": "central",
+   "thirds": 119,
+   "uncovered": 113
+  },
+  {
+   "free_thirds_now": 10,
+   "origin_first": 24,
+   "role": "central",
+   "thirds": 119,
+   "uncovered": 109
+  },
+  {
+   "free_thirds_now": 6,
+   "origin_first": 13,
+   "role": "central",
+   "thirds": 119,
+   "uncovered": 113
+  },
+  {
+   "free_thirds_now": 6,
+   "origin_first": 2,
+   "role": "central",
+   "thirds": 119,
+   "uncovered": 113
+  },
+  {
+   "free_thirds_now": 6,
+   "origin_first": 12,
+   "role": "central",
+   "thirds": 119,
+   "uncovered": 113
+  },
+  {
+   "free_thirds_now": 4,
+   "origin_first": 1,
+   "role": "central",
+   "thirds": 119,
+   "uncovered": 115
+  },
+  {
+   "free_thirds_now": 7,
+   "origin_first": 0,
+   "role": "central",
+   "thirds": 119,
+   "uncovered": 112
+  }
+ ],
+ "schema": "n11-centralreply-19root-frontier-refresh-20261122-v1",
+ "worklist_first": [
+  {
+   "class_mask": [
+    1153204079095185408,
+    65536
+   ],
+   "class_unknown_now": 29,
+   "closure_candidates_served": [
+    {
+     "first": 36,
+     "third": 50
+    },
+    {
+     "first": 36,
+     "third": 70
+    },
+    {
+     "first": 36,
+     "third": 84
+    },
+    {
+     "first": 48,
+     "third": 40
+    },
+    {
+     "first": 48,
+     "third": 80
+    }
+   ],
+   "hi": 65536,
+   "legal": 60,
+   "lo": 1153204079095189504,
+   "membership_class_count": 3,
+   "probe_order": 1,
+   "s5_index": 528497,
+   "serving_class": 16757
+  },
+  {
+   "class_mask": [
+    1153204079095185408,
+    65536
+   ],
+   "class_unknown_now": 29,
+   "closure_candidates_served": [
+    {
+     "first": 36,
+     "third": 50
+    },
+    {
+     "first": 36,
+     "third": 70
+    },
+    {
+     "first": 36,
+     "third": 84
+    },
+    {
+     "first": 48,
+     "third": 40
+    },
+    {
+     "first": 48,
+     "third": 80
+    }
+   ],
+   "hi": 65536,
+   "legal": 83,
+   "lo": 1153204079095218176,
+   "membership_class_count": 4,
+   "probe_order": 2,
+   "s5_index": 535179,
+   "serving_class": 16757
+  },
+  {
+   "class_mask": [
+    1153204079095185408,
+    65536
+   ],
+   "class_unknown_now": 29,
+   "closure_candidates_served": [
+    {
+     "first": 36,
+     "third": 50
+    },
+    {
+     "first": 36,
+     "third": 70
+    },
+    {
+     "first": 36,
+     "third": 84
+    },
+    {
+     "first": 48,
+     "third": 40
+    },
+    {
+     "first": 48,
+     "third": 80
+    }
+   ],
+   "hi": 65536,
+   "legal": 79,
+   "lo": 1153204079095316480,
+   "membership_class_count": 4,
+   "probe_order": 3,
+   "s5_index": 537545,
+   "serving_class": 16757
+  },
+  {
+   "class_mask": [
+    1153204079095185408,
+    65536
+   ],
+   "class_unknown_now": 29,
+   "closure_candidates_served": [
+    {
+     "first": 36,
+     "third": 50
+    },
+    {
+     "first": 36,
+     "third": 70
+    },
+    {
+     "first": 36,
+     "third": 84
+    },
+    {
+     "first": 48,
+     "third": 40
+    },
+    {
+     "first": 48,
+     "third": 80
+    }
+   ],
+   "hi": 65536,
+   "legal": 76,
+   "lo": 1153204079095447552,
+   "membership_class_count": 4,
+   "probe_order": 4,
+   "s5_index": 539592,
+   "serving_class": 16757
+  },
+  {
+   "class_mask": [
+    1153204079095185408,
+    65536
+   ],
+   "class_unknown_now": 29,
+   "closure_candidates_served": [
+    {
+     "first": 36,
+     "third": 50
+    },
+    {
+     "first": 36,
+     "third": 70
+    },
+    {
+     "first": 36,
+     "third": 84
+    },
+    {
+     "first": 48,
+     "third": 40
+    },
+    {
+     "first": 48,
+     "third": 80
+    }
+   ],
+   "hi": 65536,
+   "legal": 83,
+   "lo": 1153204079095709696,
+   "membership_class_count": 4,
+   "probe_order": 5,
+   "s5_index": 541610,
+   "serving_class": 16757
+  },
+  {
+   "class_mask": [
+    1153204079095185408,
+    65536
+   ],
+   "class_unknown_now": 29,
+   "closure_candidates_served": [
+    {
+     "first": 36,
+     "third": 50
+    },
+    {
+     "first": 36,
+     "third": 70
+    },
+    {
+     "first": 36,
+     "third": 84
+    },
+    {
+     "first": 48,
+     "third": 40
+    },
+    {
+     "first": 48,
+     "third": 80
+    }
+   ],
+   "hi": 65536,
+   "legal": 87,
+   "lo": 1153204079097282560,
+   "membership_class_count": 4,
+   "probe_order": 6,
+   "s5_index": 545364,
+   "serving_class": 16757
+  },
+  {
+   "class_mask": [
+    1153204079095185408,
+    65536
+   ],
+   "class_unknown_now": 29,
+   "closure_candidates_served": [
+    {
+     "first": 36,
+     "third": 50
+    },
+    {
+     "first": 36,
+     "third": 70
+    },
+    {
+     "first": 36,
+     "third": 84
+    },
+    {
+     "first": 48,
+     "third": 40
+    },
+    {
+     "first": 48,
+     "third": 80
+    }
+   ],
+   "hi": 65536,
+   "legal": 72,
+   "lo": 1153204079111962624,
+   "membership_class_count": 3,
+   "probe_order": 7,
+   "s5_index": 546902,
+   "serving_class": 16757
+  },
+  {
+   "class_mask": [
+    1153204079095185408,
+    65536
+   ],
+   "class_unknown_now": 29,
+   "closure_candidates_served": [
+    {
+     "first": 36,
+     "third": 50
+    },
+    {
+     "first": 36,
+     "third": 70
+    },
+    {
+     "first": 36,
+     "third": 84
+    },
+    {
+     "first": 48,
+     "third": 40
+    },
+    {
+     "first": 48,
+     "third": 80
+    }
+   ],
+   "hi": 65536,
+   "legal": 75,
+   "lo": 1153204079128739840,
+   "membership_class_count": 4,
+   "probe_order": 8,
+   "s5_index": 548070,
+   "serving_class": 16757
+  },
+  {
+   "class_mask": [
+    1153204079095185408,
+    65536
+   ],
+   "class_unknown_now": 29,
+   "closure_candidates_served": [
+    {
+     "first": 36,
+     "third": 50
+    },
+    {
+     "first": 36,
+     "third": 70
+    },
+    {
+     "first": 36,
+     "third": 84
+    },
+    {
+     "first": 48,
+     "third": 40
+    },
+    {
+     "first": 48,
+     "third": 80
+    }
+   ],
+   "hi": 65536,
+   "legal": 83,
+   "lo": 1153204079162294272,
+   "membership_class_count": 4,
+   "probe_order": 9,
+   "s5_index": 549153,
+   "serving_class": 16757
+  },
+  {
+   "class_mask": [
+    1153204079095185408,
+    65536
+   ],
+   "class_unknown_now": 29,
+   "closure_candidates_served": [
+    {
+     "first": 36,
+     "third": 50
+    },
+    {
+     "first": 36,
+     "third": 70
+    },
+    {
+     "first": 36,
+     "third": 84
+    },
+    {
+     "first": 48,
+     "third": 40
+    },
+    {
+     "first": 48,
+     "third": 80
+    }
+   ],
+   "hi": 65536,
+   "legal": 81,
+   "lo": 1153204079632056320,
+   "membership_class_count": 4,
+   "probe_order": 10,
+   "s5_index": 551777,
+   "serving_class": 16757
+  },
+  {
+   "class_mask": [
+    1153204079095185408,
+    65536
+   ],
+   "class_unknown_now": 29,
+   "closure_candidates_served": [
+    {
+     "first": 36,
+     "third": 50
+    },
+    {
+     "first": 36,
+     "third": 70
+    },
+    {
+     "first": 36,
+     "third": 84
+    },
+    {
+     "first": 48,
+     "third": 40
+    },
+    {
+     "first": 48,
+     "third": 80
+    }
+   ],
+   "hi": 65536,
+   "legal": 87,
+   "lo": 1153204081242669056,
+   "membership_class_count": 4,
+   "probe_order": 11,
+   "s5_index": 554104,
+   "serving_class": 16757
+  },
+  {
+   "class_mask": [
+    1153204079095185408,
+    65536
+   ],
+   "class_unknown_now": 29,
+   "closure_candidates_served": [
+    {
+     "first": 36,
+     "third": 50
+    },
+    {
+     "first": 36,
+     "third": 70
+    },
+    {
+     "first": 36,
+     "third": 84
+    },
+    {
+     "first": 48,
+     "third": 40
+    },
+    {
+     "first": 48,
+     "third": 80
+    }
+   ],
+   "hi": 65536,
+   "legal": 86,
+   "lo": 1153204083390152704,
+   "membership_class_count": 4,
+   "probe_order": 12,
+   "s5_index": 555161,
+   "serving_class": 16757
+  },
+  {
+   "class_mask": [
+    1153204079095185408,
+    65536
+   ],
+   "class_unknown_now": 29,
+   "closure_candidates_served": [
+    {
+     "first": 36,
+     "third": 50
+    },
+    {
+     "first": 36,
+     "third": 70
+    },
+    {
+     "first": 36,
+     "third": 84
+    },
+    {
+     "first": 48,
+     "third": 40
+    },
+    {
+     "first": 48,
+     "third": 80
+    }
+   ],
+   "hi": 65536,
+   "legal": 72,
+   "lo": 1153204147814662144,
+   "membership_class_count": 3,
+   "probe_order": 13,
+   "s5_index": 556117,
+   "serving_class": 16757
+  },
+  {
+   "class_mask": [
+    1153204079095185408,
+    65536
+   ],
+   "class_unknown_now": 29,
+   "closure_candidates_served": [
+    {
+     "first": 36,
+     "third": 50
+    },
+    {
+     "first": 36,
+     "third": 70
+    },
+    {
+     "first": 36,
+     "third": 84
+    },
+    {
+     "first": 48,
+     "third": 40
+    },
+    {
+     "first": 48,
+     "third": 80
+    }
+   ],
+   "hi": 65536,
+   "legal": 83,
+   "lo": 1153206278118440960,
+   "membership_class_count": 4,
+   "probe_order": 14,
+   "s5_index": 558018,
+   "serving_class": 16757
+  },
+  {
+   "class_mask": [
+    1153204079095185408,
+    65536
+   ],
+   "class_unknown_now": 29,
+   "closure_candidates_served": [
+    {
+     "first": 36,
+     "third": 50
+    },
+    {
+     "first": 36,
+     "third": 70
+    },
+    {
+     "first": 36,
+     "third": 84
+    },
+    {
+     "first": 48,
+     "third": 40
+    },
+    {
+     "first": 48,
+     "third": 80
+    }
+   ],
+   "hi": 65536,
+   "legal": 84,
+   "lo": 1153208477141696512,
+   "membership_class_count": 4,
+   "probe_order": 15,
+   "s5_index": 558054,
+   "serving_class": 16757
+  },
+  {
+   "class_mask": [
+    1153204079095185408,
+    65536
+   ],
+   "class_unknown_now": 29,
+   "closure_candidates_served": [
+    {
+     "first": 36,
+     "third": 50
+    },
+    {
+     "first": 36,
+     "third": 70
+    },
+    {
+     "first": 36,
+     "third": 84
+    },
+    {
+     "first": 48,
+     "third": 40
+    },
+    {
+     "first": 48,
+     "third": 80
+    }
+   ],
+   "hi": 65536,
+   "legal": 83,
+   "lo": 1153212875188207616,
+   "membership_class_count": 4,
+   "probe_order": 16,
+   "s5_index": 558079,
+   "serving_class": 16757
+  },
+  {
+   "class_mask": [
+    1153204079095185408,
+    65536
+   ],
+   "class_unknown_now": 29,
+   "closure_candidates_served": [
+    {
+     "first": 36,
+     "third": 50
+    },
+    {
+     "first": 36,
+     "third": 70
+    },
+    {
+     "first": 36,
+     "third": 84
+    },
+    {
+     "first": 48,
+     "third": 40
+    },
+    {
+     "first": 48,
+     "third": 80
+    }
+   ],
+   "hi": 65536,
+   "legal": 84,
+   "lo": 1171218477604667392,
+   "membership_class_count": 4,
+   "probe_order": 17,
+   "s5_index": 558120,
+   "serving_class": 16757
+  },
+  {
+   "class_mask": [
+    1153204079095185408,
+    65536
+   ],
+   "class_unknown_now": 29,
+   "closure_candidates_served": [
+    {
+     "first": 36,
+     "third": 50
+    },
+    {
+     "first": 36,
+     "third": 70
+    },
+    {
+     "first": 36,
+     "third": 84
+    },
+    {
+     "first": 48,
+     "third": 40
+    },
+    {
+     "first": 48,
+     "third": 80
+    }
+   ],
+   "hi": 65536,
+   "legal": 72,
+   "lo": 1157707678722555904,
+   "membership_class_count": 4,
+   "probe_order": 18,
+   "s5_index": 558183,
+   "serving_class": 16757
+  },
+  {
+   "class_mask": [
+    1153204079095185408,
+    65536
+   ],
+   "class_unknown_now": 29,
+   "closure_candidates_served": [
+    {
+     "first": 36,
+     "third": 50
+    },
+    {
+     "first": 36,
+     "third": 70
+    },
+    {
+     "first": 36,
+     "third": 84
+    },
+    {
+     "first": 48,
+     "third": 40
+    },
+    {
+     "first": 48,
+     "third": 80
+    }
+   ],
+   "hi": 65792,
+   "legal": 86,
+   "lo": 1152922604118507520,
+   "membership_class_count": 4,
+   "probe_order": 19,
+   "s5_index": 558228,
+   "serving_class": 16757
+  },
+  {
+   "class_mask": [
+    1153204079095185408,
+    65536
+   ],
+   "class_unknown_now": 29,
+   "closure_candidates_served": [
+    {
+     "first": 36,
+     "third": 50
+    },
+    {
+     "first": 36,
+     "third": 70
+    },
+    {
+     "first": 36,
+     "third": 84
+    },
+    {
+     "first": 48,
+     "third": 40
+    },
+    {
+     "first": 48,
+     "third": 80
+    }
+   ],
+   "hi": 65792,
+   "legal": 82,
+   "lo": 1152922604185583616,
+   "membership_class_count": 4,
+   "probe_order": 20,
+   "s5_index": 558261,
+   "serving_class": 16757
+  },
+  {
+   "class_mask": [
+    1153204079095185408,
+    65536
+   ],
+   "class_unknown_now": 29,
+   "closure_candidates_served": [
+    {
+     "first": 36,
+     "third": 50
+    },
+    {
+     "first": 36,
+     "third": 70
+    },
+    {
+     "first": 36,
+     "third": 84
+    },
+    {
+     "first": 48,
+     "third": 40
+    },
+    {
+     "first": 48,
+     "third": 80
+    }
+   ],
+   "hi": 65792,
+   "legal": 81,
+   "lo": 1152922741557428224,
+   "membership_class_count": 4,
+   "probe_order": 21,
+   "s5_index": 558283,
+   "serving_class": 16757
+  },
+  {
+   "class_mask": [
+    1153204079095185408,
+    65536
+   ],
+   "class_unknown_now": 29,
+   "closure_candidates_served": [
+    {
+     "first": 36,
+     "third": 50
+    },
+    {
+     "first": 36,
+     "third": 70
+    },
+    {
+     "first": 36,
+     "third": 84
+    },
+    {
+     "first": 48,
+     "third": 40
+    },
+    {
+     "first": 48,
+     "third": 80
+    }
+   ],
+   "hi": 65792,
+   "legal": 88,
+   "lo": 1152922604118474756,
+   "membership_class_count": 4,
+   "probe_order": 22,
+   "s5_index": 558334,
+   "serving_class": 16757
+  },
+  {
+   "class_mask": [
+    1153204079095185408,
+    65536
+   ],
+   "class_unknown_now": 29,
+   "closure_candidates_served": [
+    {
+     "first": 36,
+     "third": 50
+    },
+    {
+     "first": 36,
+     "third": 70
+    },
+    {
+     "first": 36,
+     "third": 84
+    },
+    {
+     "first": 48,
+     "third": 40
+    },
+    {
+     "first": 48,
+     "third": 80
+    }
+   ],
+   "hi": 65792,
+   "legal": 88,
+   "lo": 1152922604118474754,
+   "membership_class_count": 4,
+   "probe_order": 23,
+   "s5_index": 558367,
+   "serving_class": 16757
+  },
+  {
+   "class_mask": [
+    1153204079095185408,
+    65536
+   ],
+   "class_unknown_now": 29,
+   "closure_candidates_served": [
+    {
+     "first": 36,
+     "third": 50
+    },
+    {
+     "first": 36,
+     "third": 70
+    },
+    {
+     "first": 36,
+     "third": 84
+    },
+    {
+     "first": 48,
+     "third": 40
+    },
+    {
+     "first": 48,
+     "third": 80
+    }
+   ],
+   "hi": 65792,
+   "legal": 78,
+   "lo": 1152922604118474753,
+   "membership_class_count": 3,
+   "probe_order": 24,
+   "s5_index": 558393,
+   "serving_class": 16757
+  },
+  {
+   "class_mask": [
+    1153204079095185408,
+    65536
+   ],
+   "class_unknown_now": 29,
+   "closure_candidates_served": [
+    {
+     "first": 36,
+     "third": 50
+    },
+    {
+     "first": 36,
+     "third": 70
+    },
+    {
+     "first": 36,
+     "third": 84
+    },
+    {
+     "first": 48,
+     "third": 40
+    },
+    {
+     "first": 48,
+     "third": 80
+    }
+   ],
+   "hi": 65792,
+   "legal": 80,
+   "lo": 1152922604118491136,
+   "membership_class_count": 4,
+   "probe_order": 25,
+   "s5_index": 558410,
+   "serving_class": 16757
+  },
+  {
+   "class_mask": [
+    1153204079095185408,
+    65536
+   ],
+   "class_unknown_now": 29,
+   "closure_candidates_served": [
+    {
+     "first": 36,
+     "third": 50
+    },
+    {
+     "first": 36,
+     "third": 70
+    },
+    {
+     "first": 36,
+     "third": 84
+    },
+    {
+     "first": 48,
+     "third": 40
+    },
+    {
+     "first": 48,
+     "third": 80
+    }
+   ],
+   "hi": 65792,
+   "legal": 87,
+   "lo": 1152922604118482944,
+   "membership_class_count": 4,
+   "probe_order": 26,
+   "s5_index": 558443,
+   "serving_class": 16757
+  },
+  {
+   "class_mask": [
+    1153204079095185408,
+    65536
+   ],
+   "class_unknown_now": 29,
+   "closure_candidates_served": [
+    {
+     "first": 36,
+     "third": 50
+    },
+    {
+     "first": 36,
+     "third": 70
+    },
+    {
+     "first": 36,
+     "third": 84
+    },
+    {
+     "first": 48,
+     "third": 40
+    },
+    {
+     "first": 48,
+     "third": 80
+    }
+   ],
+   "hi": 65792,
+   "legal": 81,
+   "lo": 1152922604152029184,
+   "membership_class_count": 4,
+   "probe_order": 27,
+   "s5_index": 558486,
+   "serving_class": 16757
+  },
+  {
+   "class_mask": [
+    1153204079095185408,
+    65536
+   ],
+   "class_unknown_now": 29,
+   "closure_candidates_served": [
+    {
+     "first": 36,
+     "third": 50
+    },
+    {
+     "first": 36,
+     "third": 70
+    },
+    {
+     "first": 36,
+     "third": 84
+    },
+    {
+     "first": 48,
+     "third": 40
+    },
+    {
+     "first": 48,
+     "third": 80
+    }
+   ],
+   "hi": 65792,
+   "legal": 74,
+   "lo": 1152922604135251968,
+   "membership_class_count": 3,
+   "probe_order": 28,
+   "s5_index": 558506,
+   "serving_class": 16757
+  },
+  {
+   "class_mask": [
+    1153204079095185408,
+    65536
+   ],
+   "class_unknown_now": 29,
+   "closure_candidates_served": [
+    {
+     "first": 36,
+     "third": 50
+    },
+    {
+     "first": 36,
+     "third": 70
+    },
+    {
+     "first": 36,
+     "third": 84
+    },
+    {
+     "first": 48,
+     "third": 40
+    },
+    {
+     "first": 48,
+     "third": 80
+    }
+   ],
+   "hi": 65792,
+   "legal": 72,
+   "lo": 1152922672837951488,
+   "membership_class_count": 3,
+   "probe_order": 29,
+   "s5_index": 558553,
+   "serving_class": 16757
+  },
+  {
+   "class_mask": [
+    1155173304420536320,
+    131072
+   ],
+   "class_unknown_now": 49,
+   "closure_candidates_served": [
+    {
+     "first": 12,
+     "third": 51
+    },
+    {
+     "first": 12,
+     "third": 81
+    },
+    {
+     "first": 37,
+     "third": 73
+    },
+    {
+     "first": 37,
+     "third": 100
+    }
+   ],
+   "hi": 131072,
+   "legal": 77,
+   "lo": 1155173304554754048,
+   "membership_class_count": 4,
+   "probe_order": 30,
+   "s5_index": 38215,
+   "serving_class": 20421
+  },
+  {
+   "class_mask": [
+    1155173304420536320,
+    131072
+   ],
+   "class_unknown_now": 49,
+   "closure_candidates_served": [
+    {
+     "first": 12,
+     "third": 51
+    },
+    {
+     "first": 12,
+     "third": 81
+    },
+    {
+     "first": 37,
+     "third": 73
+    },
+    {
+     "first": 37,
+     "third": 100
+    }
+   ],
+   "hi": 131072,
+   "legal": 73,
+   "lo": 3461016313634230272,
+   "membership_class_count": 4,
+   "probe_order": 31,
+   "s5_index": 197253,
+   "serving_class": 20421
+  },
+  {
+   "class_mask": [
+    1155173304420536320,
+    131072
+   ],
+   "class_unknown_now": 49,
+   "closure_candidates_served": [
+    {
+     "first": 12,
+     "third": 51
+    },
+    {
+     "first": 12,
+     "third": 81
+    },
+    {
+     "first": 37,
+     "third": 73
+    },
+    {
+     "first": 37,
+     "third": 100
+    }
+   ],
+   "hi": 131072,
+   "legal": 86,
+   "lo": 1155173579298443264,
+   "membership_class_count": 4,
+   "probe_order": 32,
+   "s5_index": 259023,
+   "serving_class": 20421
+  },
+  {
+   "class_mask": [
+    1155173304420536320,
+    131072
+   ],
+   "class_unknown_now": 49,
+   "closure_candidates_served": [
+    {
+     "first": 12,
+     "third": 51
+    },
+    {
+     "first": 12,
+     "third": 81
+    },
+    {
+     "first": 37,
+     "third": 73
+    },
+    {
+     "first": 37,
+     "third": 100
+    }
+   ],
+   "hi": 131072,
+   "legal": 86,
+   "lo": 5766859322847924224,
+   "membership_class_count": 4,
+   "probe_order": 33,
+   "s5_index": 300778,
+   "serving_class": 20421
+  },
+  {
+   "class_mask": [
+    1155173304420536320,
+    131072
+   ],
+   "class_unknown_now": 49,
+   "closure_candidates_served": [
+    {
+     "first": 12,
+     "third": 51
+    },
+    {
+     "first": 12,
+     "third": 81
+    },
+    {
+     "first": 37,
+     "third": 73
+    },
+    {
+     "first": 37,
+     "third": 100
+    }
+   ],
+   "hi": 131072,
+   "legal": 87,
+   "lo": 1155173304420601856,
+   "membership_class_count": 4,
+   "probe_order": 34,
+   "s5_index": 356378,
+   "serving_class": 20421
+  },
+  {
+   "class_mask": [
+    1155173304420536320,
+    131072
+   ],
+   "class_unknown_now": 49,
+   "closure_candidates_served": [
+    {
+     "first": 12,
+     "third": 51
+    },
+    {
+     "first": 12,
+     "third": 81
+    },
+    {
+     "first": 37,
+     "third": 73
+    },
+    {
+     "first": 37,
+     "third": 100
+    }
+   ],
+   "hi": 131073,
+   "legal": 85,
+   "lo": 1155173304420536320,
+   "membership_class_count": 4,
+   "probe_order": 35,
+   "s5_index": 393798,
+   "serving_class": 20421
+  },
+  {
+   "class_mask": [
+    1155173304420536320,
+    131072
+   ],
+   "class_unknown_now": 49,
+   "closure_candidates_served": [
+    {
+     "first": 12,
+     "third": 51
+    },
+    {
+     "first": 12,
+     "third": 81
+    },
+    {
+     "first": 37,
+     "third": 73
+    },
+    {
+     "first": 37,
+     "third": 100
+    }
+   ],
+   "hi": 131072,
+   "legal": 82,
+   "lo": 1155173304420536352,
+   "membership_class_count": 4,
+   "probe_order": 36,
+   "s5_index": 441775,
+   "serving_class": 20421
+  },
+  {
+   "class_mask": [
+    1155173304420536320,
+    131072
+   ],
+   "class_unknown_now": 49,
+   "closure_candidates_served": [
+    {
+     "first": 12,
+     "third": 51
+    },
+    {
+     "first": 12,
+     "third": 81
+    },
+    {
+     "first": 37,
+     "third": 73
+    },
+    {
+     "first": 37,
+     "third": 100
+    }
+   ],
+   "hi": 131072,
+   "legal": 76,
+   "lo": 1155454779397246976,
+   "membership_class_count": 3,
+   "probe_order": 37,
+   "s5_index": 528689,
+   "serving_class": 20421
+  },
+  {
+   "class_mask": [
+    1155173304420536320,
+    131072
+   ],
+   "class_unknown_now": 49,
+   "closure_candidates_served": [
+    {
+     "first": 12,
+     "third": 51
+    },
+    {
+     "first": 12,
+     "third": 81
+    },
+    {
+     "first": 37,
+     "third": 73
+    },
+    {
+     "first": 37,
+     "third": 100
+    }
+   ],
+   "hi": 131072,
+   "legal": 73,
+   "lo": 1156299204327378944,
+   "membership_class_count": 4,
+   "probe_order": 38,
+   "s5_index": 543795,
+   "serving_class": 20421
+  },
+  {
+   "class_mask": [
+    1155173304420536320,
+    131072
+   ],
+   "class_unknown_now": 49,
+   "closure_candidates_served": [
+    {
+     "first": 12,
+     "third": 51
+    },
+    {
+     "first": 12,
+     "third": 81
+    },
+    {
+     "first": 37,
+     "third": 73
+    },
+    {
+     "first": 37,
+     "third": 100
+    }
+   ],
+   "hi": 131072,
+   "legal": 86,
+   "lo": 1155173304420537344,
+   "membership_class_count": 4,
+   "probe_order": 39,
+   "s5_index": 565995,
+   "serving_class": 20421
+  },
+  {
+   "class_mask": [
+    1155173304420536320,
+    131072
+   ],
+   "class_unknown_now": 49,
+   "closure_candidates_served": [
+    {
+     "first": 12,
+     "third": 51
+    },
+    {
+     "first": 12,
+     "third": 81
+    },
+    {
+     "first": 37,
+     "third": 73
+    },
+    {
+     "first": 37,
+     "third": 100
+    }
+   ],
+   "hi": 131072,
+   "legal": 79,
+   "lo": 1155173304422633472,
+   "membership_class_count": 4,
+   "probe_order": 40,
+   "s5_index": 570139,
+   "serving_class": 20421
+  }
+ ],
+ "worklist_total": 65152
+}
