@@ -841,3 +841,74 @@ owner、C++第二実装 gate pin `9193f5b6...` 前例・不変)。
   まま。nodes/expansionsを勝敗として読まない。
 - 本status update observed HEAD-before-push: 実行時の最新mainを
   コミットメッセージに記録。
+
+## Part V (verifier, amendment 2026-11-22): batch-8 (class 2634) h045 if-adopted 分解 - WIN-only / LOSS-43-only / full-44 の3シナリオ (verdict不消費)
+
+Part U が事前登録した「WINを得た場合はそのキーで停止し if-adopted解析に
+回す」の履行、および Part U の「merge + refresh再監査は将来の別宣言」の
+別宣言として、Part H-bis / Part J (batch-6 g018) / Part R (batch-9 j033)
+と同一手法のmachine-separated what-if分解を本セッションで宣言・実行・
+出版した。対象はbatch-8 (class 2634) のWIN-HALT h045
+(s5_index 103558, key `[4035225266258182144, 64]`, legal 85, probe_order
+325, result 1, nodes 6,366,900, 2-pass node-exact; Part U takeover分)。
+base = Part M canonical re-audit (merged cache 5,975行 `a998f4c0...`)。
+
+- base control (cross-host再現): pinned Part M script (sha256
+  `0bc10a05...`) を本takeoverホストで2回再実行し、4出力は両run間で
+  byte一致、さらに3出力 (refresh-summary / closure-classes / per-root-
+  coverage) はpublished Part M正本とbyte一致。probe-worklist (非出版,
+  3.77MB) はsha256 `ca3ee3bc...` を記録。実験
+  `n11-class2634-base-control-20261122` (commit `242c1de7`, 7 files,
+  fetch-back 7/7 byte一致)。
+- increments (fail-closed, `make_increments_batch8.py`): raw 2-pass
+  node-exact全行照合、h002 (15M枯損 UNKNOWN, s5 11390) は全incrementから
+  除外、WIN行はh045のみ。probed-44rows (sha `356b62a7...`) /
+  winh045-only (`7a5e0549...`) / loss43-only (`73f01e74...`)。
+  published mergerで衝突0 merge: 5,976行 WIN159/LOSS5,817
+  (`1b84db11...`) / 6,018行 WIN158/LOSS5,860 (`0020b89d...`) / 6,019行
+  (`9235e547...`)。3行差分refresh scriptをシナリオごとに2回実行し
+  6/6 run byte一致。
+- 実験 `n11-central-reply-class2634-win-h045-ifadopted-20261122`
+  (commit `edd58822`, 32 files, fetch-back 32/32 byte一致;
+  probe-worklist.csv 3本は非出版慣行)。compare script
+  (`compare_deltas_batch8.py`) はgraph + update8 receipt + scenario
+  cacheからrefreshのclass-status意味論 (free候補へのBoard fail-closed
+  検証込み) を忠実に再実行し、BASE + 3シナリオの全class_status_countが
+  published summaryと一致することを、delta報告の前にfail-closedで門が
+  開く形で保証している。
+- 機械検証済みの分解結果 (delta: PW045 / PLOSS43 / PFULL44 vs base):
+  excluded_now 23 -> 25/23/25. **WIN-only flipは exactly 2 class =
+  {2634, 5632}** (graph上s5 103558をcost childに持つ全class、
+  membership_class_count 2 と3経路で一致: 再計算flip集合、PFULL44-
+  PLOSS43差集合、graph走査)。2634自身のself-exclusion (g018の5473・
+  j033の1518と同型)、peer 5632 (base unknown 102 -> このWIN 1つで
+  excluded。未解決子が残っていても、published refresh意味論ではWIN
+  cost childがあればexcluded_now)。
+- update8 (frozen joint plan refresh): batch-9 j033 (win-hit 0) と違い
+  **h045のWINはfrozen planにhitする - exactly 1 group** (root-49 group
+  `{first 49, reply 60, third 71, fourth 57}`, class 2634がserve、
+  unknown_s5_children 51)。remaining 31,836 -> 31,786 (-50; 103558自身の
+  resolution +1 とwin-hit group権利落ちの49の合成)、resolved 23 -> 24。
+  LOSS43は純加算 (+43 resolved / -43 remaining、43指数は全てbaseline
+  requirement内)。FULL44 -51/+44 は単純加算にならない (group-level
+  意味論として期待通り)。
+- joint greedy: **LOSS43で 35,857 -> 34,906 (-951)** - 測定史上最大の
+  greedy削減 (batch-9 loss32の-622、batch-5の+1,372)。最大のper-root
+  moverはroot 49 (2,891 -> 2,803, -88)。WIN-onlyのgreedy効果は-1で
+  FULL44に完全に包含 (greedy sub-additive by 1、Part Rと同型)。
+  worklist deltaは完全加算: -1 (WIN) + -45 (LOSS) = -46 (FULL)。
+- class 2634の残: PLOSS43で unknown 51 -> 8 (rank 7 -> 1)、FULL44で
+  unknown 7 (rank 1)。残キー = h002 (同条件再探索禁止) + h046-h051
+  (s5 103559-103564, 未着手)。PW045のworklistは2634の他50キーを
+  excluded classのまま残す (worklistはexcluded classを刈らない;
+  free coverageになり得ない行のscheduling bookkeepingのみ)。
+  free_now 34 (Board検証34/34) ・全rootのfree coverage・達成済みclosure
+  は全シナリオで不変 (machine gate)。
+- 不変事項: **verdict不消費**。h045のWINは7番目のunconsumed closure WIN
+  (b018/d002/e002/f017/g018/j033/h045) としてscrutiny owner
+  (C++第二実装 gate pin `9193f5b6...`) 待ち。**標準11x11空盤・19
+  central-reply roots・class 2634/1518はすべてUNKNOWNのまま。** nodes数
+  を勝敗として読まない。第三実装 (Part K/O/P/T流) によるh045 spot
+  verificationは本amendmentでは実行しておらずopen。
+- 本amendment observed HEAD (実験出版commit): `edd5882267c02768fcab3e1c50ca690bfb81af2c`。
+  note本体push直前にmainの最新を再取得して確認する。
