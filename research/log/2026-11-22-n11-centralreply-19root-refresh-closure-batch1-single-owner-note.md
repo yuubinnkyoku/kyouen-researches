@@ -1308,3 +1308,49 @@ gate pin `9193f5b6...` 前例・不変)。**
 - 本amendment observed HEAD-before-push: `2da303db469683819954820bd832c2f51e096510`
   (batch-11 takeover出版完了 (Part Z status update + session log
   continuation 14) 直後のmain。commit messageにも記録)。
+
+## Part AA 出版status update (2026-11-22, verifier): batch 11 z003 第三実装交叉検証 実行・出版済み - 8つのunconsumed WIN全て第三実装検証済みに
+
+Part AA宣言 (本note Part AA節・commit `1d750f19`) に基づき実行・出版した。
+宣言通りverdict不消費・verdict-level文献作成のみ (採用判断は引き続き
+scrutiny owner、C++第二実装 gate pin `9193f5b6...` 前例・不変)。
+
+- 実行結果 (machine-verified): target 4行すべてclean・a/b 2回実行で同一
+  (result/expansion/ttHits/reason)。**z003 WIN一致** (第三実装 13,781,596
+  expansions / 7,500,476 ttHits vs replica df-pn WIN 11,601,265 nodes・
+  cross-host node-exact済みの宣告ホスト値とtakeoverホスト値の双方と一致)、
+  z001/z002/z004 LOSS一致 (第三実装 3,594,991 / 2,547,371 / 7,426,794
+  expansions vs replica 3,146,511 / 2,256,914 / 6,424,054 nodes)。
+  anchors k02a (WIN 9,106,337 expansions / 4,991,527 ttHits) と l1a
+  (LOSS 7,660,602 / 3,951,175) は本ホスト再現値がpublished第三実装値
+  (Part G/K/O/P/T/W) と完全一致。negative ng1/ng2は文言一致GATE_FAIL。
+  rules gate (quads 95,670 == replica / triples 195,044・mismatch 0) PASS。
+  audit.py (fail-closed, schema `batch11-z003-thirdimpl-audit-v1`, 2回実行
+  byte一致) は **71/71 gates PASS・divergence 0・wall-inconclusive 0**。
+- 入力はpublished batch-11正本 (宣告ホスト p1/p2 raw 8件 + takeoverホスト
+  `.takeover.out` 8件、chunk commits `12be47c7`/`40e02623`からcommit-pinned
+  raw CDNで取得・sha256全件照合の上) から `make_inputs_batch11.py` が
+  fail-closed導出 (両host分の2-pass (budget,result,nodes) 一致assert・
+  RUNNER-STOP/RUNNER-EXIT由来行の存在assert・status.logと
+  status.takeover.logの照合・published batch-keys.json (sha256
+  `8ef22069...`, commit `3cc96099`正本) とのkey/legal機械照合・手転写ゼロ)。
+- 出版: `research/experiments/n11-centralreply-closure-batch11-z003-thirdimpl-20261122/`
+  commits `1d750f19` (本note Part AA宣言amendment) → `28b23f14`
+  (scaffold 16 files: README + pinned scripts 6 + machine-derived inputs 9) →
+  `fea875eb` (targets a/b 8) → `f2a8fa48` (anchors 4 + negative 2 + rules-gate
+  + status.log + audit-summary.json + MANIFEST, 10 files)。fetch-back: commit固定raw
+  URL + sha256sumで**34/34 files byte一致**を確認済み。sourcesは再出版なし
+  (published raws由来・READMEにsha記載)。
+- 意味: 8つのunconsumed closure WIN (b018/d002/e002/f017/g018/j033/h045/
+  z003) の**全てが第三実装によるverdict-level交叉検証済み**になった
+  (前6個はwin-thirdimpl-reverify (Part G) + Part P + Part T (j033) +
+  Part W (h045)、z003が本Part AA)。ただし**verdict不消費は不変**。
+  z003のWINは引き続きscrutiny owner待ち。z005-z051は未着手のまま。
+  **標準11x11空盤・19 central-reply roots・class 8785は本検証のどの時点でも
+  UNKNOWNのまま。nodes/expansions数を勝敗として読まない。**
+- open items (将来の別宣言で実施): z003 if-adopted分解 (Part V/R流・
+  refresh機材はPart Y pinned scenario script `88671526...` / base cache
+  `95e868d6...` 系列)・次batch候補 = renewed rank 10 class 8106
+  `[1152926194711134208, 0]` (unknown 52)。
+- 本status update observed HEAD-before-push: 実行時の最新mainを
+  コミットメッセージに記録。

@@ -898,3 +898,57 @@ repo diverged:
   central-reply roots and class 8785 all remain UNKNOWN throughout;
   nodes/passes are not verdicts. Observed HEAD-before-push for this log
   update is recorded in the commit message.
+
+
+## Session continuation 15 (2026-11-22, verifier): Part AA batch-11 z003 third-implementation cross-verification executed and published; note status update; all 8 unconsumed WINs now third-implementation verified
+
+- Scope: Part AA, declared in the single-owner note before execution
+  (commit `1d750f19`, observed HEAD `2da303db...`): verdict-level
+  cross-verification of the batch-11 WIN row z003 and the full first-wave
+  probed LOSS rows (z001/z002/z004; batch 11 probed 4/51, z005-z051
+  untouched) with the pinned third implementation (`third_impl.js` pin
+  `08ea958f...`), anchors k02a/l1a and negatives ng1/ng2. Verdict NOT
+  consumed in any way; the adoption decision remains with the scrutiny
+  owner (C++ second-implementation gate pin `9193f5b6...` precedent,
+  unchanged; not executable in this compiler-less lane).
+- Machine results (all gates fail-closed, run on this host, max 4
+  parallel, 1 row = 1 process, cap 300M expansions, wallcap 240s,
+  a/b two-run determinism): z003 third-impl WIN 1 / 13,781,596 expansions /
+  7,500,476 ttHits (a/b identical; agrees with the pinned-replica df-pn
+  WIN 11,601,265 nodes, cross-host node-exact published by the
+  Part Z takeover); z001 LOSS 3,594,991 / z002 LOSS 2,547,371 /
+  z004 LOSS 7,426,794 expansions (all agree with replica verdicts
+  3,146,511 / 2,256,914 / 6,424,054 nodes). Anchors reproduced the
+  published third-implementation values exactly (k02a WIN 9,106,337 /
+  4,991,527; l1a LOSS 7,660,602 / 3,951,175). Negatives ng1/ng2 matched
+  the GATE_FAIL wording. Rules gate: quads 95,670 == replica, triples
+  195,044, mismatches 0. audit.py (schema `batch11-z003-thirdimpl-audit-v1`)
+  71/71 gates PASS, executed twice byte-identical; divergence 0;
+  wall-inconclusive 0.
+- Inputs machine-derived by `make_inputs_batch11.py` (fail-closed,
+  zero hand transcription) from the published batch-11 raws of BOTH hosts
+  (declaring-host p1/p2 8 files + takeover-host `.takeover.out` 8 files,
+  commit-pinned raw CDN from `12be47c7`/`40e02623`, sha256 all verified),
+  cross-checked against status.log, status.takeover.log, and the
+  published batch-keys.json (sha256 `8ef22069...`, commit `3cc96099`).
+- Publication: experiment directory
+  `research/experiments/n11-centralreply-closure-batch11-z003-thirdimpl-20261122/`
+  (34 files) in 3 commits: `28b23f14` (scaffold) -> `fea875eb` (targets)
+  -> `f2a8fa48` (anchors + negatives + rules-gate + status.log +
+  audit-summary.json + MANIFEST), after the declaration commit
+  `1d750f19`. Fetch-back: commit-pinned raw URL + sha256sum, 34/34 files
+  byte-identical.
+- Meaning: all 8 unconsumed closure WINs (b018/d002/e002/f017/g018/
+  j033/h045/z003) are now third-implementation cross-verified
+  (Part G / Part P / Part T (j033) / Part W (h045) / this Part AA
+  (z003)). Verdicts remain unconsumed; scrutiny owner unchanged.
+  Batch record stands at 11 batches: 8 WIN-HALT + 3 clean
+  (23963/10324/8784, the 33rd/34th/35th Board-verified free classes).
+  Open items for future declarations: z003 if-adopted decomposition
+  (Part V/R lineage, refresh kit scenario pin `88671526...`, base
+  cache `95e868d6...` series) and next batch candidate renewed rank 10
+  class 8106 `[1152926194711134208, 0]` (unknown 52).
+- Honesty record: 11x11 empty board, the 19 central-reply roots and
+  class 8785 remain UNKNOWN throughout; nodes/expansions are not
+  verdicts. Observed HEAD-before-push for this update is recorded in
+  the commit message.
