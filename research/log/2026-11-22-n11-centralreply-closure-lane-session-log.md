@@ -1362,3 +1362,73 @@ implementation gate pin `9193f5b6...`; this host still has no compiler and
 package installation is forbidden). The standard 11x11 empty board, the 19
 central-reply roots, class 5830 (48 unprobed children) and every other
 class remain UNKNOWN. Nodes are not verdicts.
+
+## Continuation 23 (2026-11-22, this host): Part AJ joint unconsumed if-adopted decomposition completed and published
+
+- Resumed from continuation 22 (batch 15 Part AK was run and published by
+  the parallel operator; this host stayed read-only on it). The declared
+  and scaffolded Part AJ joint decomposition (note commit `8d5cb672`,
+  scaffold `978634cf`) was executed and published as
+  `research/experiments/n11-centralreply-joint-unconsumed-ifadopted-20261122/`
+  (commit `7704f5c3`, 26 files, fetch-back sha256 26/26 byte-identical;
+  the three 3.7MB scenario probe-worklists are regenerable from the
+  published scripts and were not republished, Part AH precedent).
+- Host environment resets destroyed /home/user/work twice mid-run; the
+  whole working set was rebuilt from commit-pinned fetches under the
+  permanent kit mirror `joint10-unconsumed-ifadopted/` BEFORE publication,
+  with all fail-closed gates re-run PASS and every byte-sha matching the
+  pre-reset run (lesson recorded: work lives under knowledge/, commands
+  stay <= 240s).
+- Honest correction published by the maker's own fail-closed gate: the
+  first increment run ABORTed (b001 already inside the canonical BASE
+  6,027-row cache). Precise re-measurement found exactly 19 batch-1 LOSS
+  rows (b001..b017, b019, b020) already in BASE with identical verdicts
+  AND node counts; batch-1's WIN b018 is NOT in BASE; the other eight
+  batches have zero BASE overlap; no verdict conflicts anywhere. Those
+  19 rows are excluded as pre-consumed duplicates (verdict+node identity
+  gate, stricter than the declared 0-hit expectation; the declaration
+  numbers JLOSS141/JALL151 were planning quantities). Packet: 151 probed
+  rows -> **132 unique-new = 10 WIN + 122 LOSS** (JWIN10 `fe2c6f68...` /
+  JLOSS122 `e5fe80af...` / JALL132 `cc841d6e...`); h002 (batch-8, 15M
+  exhaustion result 0) stays excluded with its exhaustion shape
+  gate-checked and its re-search still forbidden.
+- Scenario caches (published union merger pin `90711961...`, selftest
+  PASS, WIN/LOSS conflicts 0, duplicates 0): JWIN10 6,037 rows
+  `7881724a...`, JLOSS122 6,149 `d80ee94b...`, JALL132 6,159
+  `13bfec6e...`, each with a merge audit. Refresh scripts are
+  diff-verified 4-hunk adaptations of the pinned Part Y script
+  (`88671526...`), 2 runs per scenario, 6/6 byte-identical; per-root
+  free coverage identical to BASE on every root; root first=27 keeps
+  119/119 free thirds in all four runs.
+- Deltas (`compare_deltas_joint10.py` -> `decomp-deltas-joint10.json`
+  `24b5aa11...`; all recomputed class_status_counts asserted equal to the
+  published BASE+scenario summaries before reporting; Board fail-closed
+  free verification re-executed per scenario):
+  - JWIN10: excluded_now 23 -> **53** (+30), unknown 34,501 -> 34,471;
+    the flip set is machine-identical to the frozen-graph valid holder
+    union of the ten WIN S5 children; only class 8106 is a multi-WIN
+    holder (n005+n006); update8 win_hit_groups 0 -> 29; free_now stays
+    35; root27 stays 119/119.
+  - JLOSS122: ZERO flips (excluded_now 23, free_now 35, unknown 34,501);
+    update8 resolved 75 -> 163 (+88 of the 122 rows are frozen-baseline
+    requirements), remaining 31,784 -> 31,696; joint greedy 35,242 ->
+    36,201; probe worklist 65,154 -> 65,011.
+  - JALL132: excluded_now 53 / unknown 34,471 (identical to JWIN10);
+    update8 resolved 75 -> 171 (+96), remaining -> 31,442, joint greedy
+    -> 36,193, worklist -> 64,996; the nine batch-class unknown deltas
+    are additive (full == WIN + LOSS for every class); update8 remaining
+    and joint greedy deltas are honestly NONadditive (WIN hits drop
+    whole planned groups while LOSS rows resolve single requirements);
+    greedy nonadditive roots (0, 14, 49) recorded, not gated away.
+- Verdicts NOT consumed: the ten WINs remain hypothetical adoptions
+  pending the scrutiny owner (C++ second-implementation gate pin
+  `9193f5b6...`; third-implementation verdict-level cross-verification
+  already published for all ten, Parts G/H/K/O/P/T/W/AA/AD/AG). The 122
+  LOSS rows remain unconsumed published evidence outside the canonical
+  cache. Batch-13 (Part AI) and batch-14 (Part AF) scopes untouched
+  (read-only). The standard 11x11 empty board, the 19 central-reply
+  roots, the unprobed children of the nine batch classes and every
+  other class remain UNKNOWN. Nodes are not verdicts. Observed
+  HEAD-before-push for the experiment push: `5d745781`; note Part AJ
+  publication status update pushed as `17e3619f` (blob sha1-locked
+  `65e74c00`, fetch-back byte-identical).
