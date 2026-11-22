@@ -236,4 +236,3 @@ def main():
     print(json.dumps({**prog, **genEvent}))
 
 main()
-  

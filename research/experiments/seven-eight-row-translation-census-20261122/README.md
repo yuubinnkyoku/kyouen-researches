@@ -195,4 +195,3 @@ batch 2: `python3 scripts/surgery66_2r2a.py 240` and
 `python3 scripts/wcap_1r1a.py 240` (resumable; writes `output66b/`
 next to the scripts — published copies live in `output/`; run with
 `witness/w65-01.json` copied next to `scripts/`).
- 
