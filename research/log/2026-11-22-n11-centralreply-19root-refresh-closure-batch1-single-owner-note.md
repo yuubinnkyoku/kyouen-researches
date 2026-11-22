@@ -741,3 +741,68 @@ nodes, s5_index 69347, key `[1153484455030030336, 0]`, legal 80, probe_order 364
 - 並走との不接触: batch-9由来キーのみを対象とし、進行中のbatch 8 (Part N,
   class 2634) のscopeと無関係。同一スコープの宣言がmainに存在する場合は着手しない。
 - 本amendment observed HEAD-before-push: 実行時の最新mainをコミットメッセージに記録。
+
+## Part U (prober, amendment 2026-11-22): batch-8 takeover - 中断した宣告セッションを kit mirror からresume (事前登録・verdict不消費)
+
+batch 8 (Part N, class 2634, rank 7) は2026-11-22T06:10:23Zにscaffold
+(README + scripts 2点 + 51 inputs + batch-keys.json + val-gate 4入力と
+宣告ホスト由来4出力) が出版された後、mainへの新規出版が2時間以上途絶え、
+kit mirror (`_19root-refresh-kit/batch2634/`) も06:54:32Z (status.log 25行
+= i001-i025、i026.p1 は完全・i026.p2 は実行中断由来のheader-only 211B)
+で静止している。batch 1-7が走行中もchunk pushを続けた運用と整合しない
+ため、宣告実行セッションは i026 の第2 pass 直前に消失したと判定し、
+本セッションがbatch 8を引き継ぐ (takeover)。後発2セッション (07:26Z
+verifier / 07:33Z batch-9宣告) はいずれもbatch 8をin-flightとして不接触
+だった。
+
+takeover開始前に機械検証済みの証拠 (本セッション・read-only):
+1. kit `scripts/jsreplay.js` はpin `845856175d...` とbyte一致、published
+   batch-8 `scripts/jsreplay.js` とも0 diff。
+2. kit input `i001..i051.input.csv` をi→hに改名した51本はpublished
+   `input/h001..h051.input.csv` と51/51 byte一致。kit版batch-keys.jsonの
+   keys は (s5_index, lo, hi, legal, membership_class_count) でpublished版と
+   51/51 ordered一致 (key_id命名 i/h・probe_order 332-382 vs 281-331・
+   rank 8 vs 7・mask転記 [...]182144 vs [...]182000 はメタデータ差異。
+   canonical選択メタデータはpublished batch-keys.json (後者) であり、
+   51/51のworklist (sha256 `ca3ee3bc...`) 行一致はbatch-9セッションが
+   機械検証済み)。
+3. kit raws i001-i025: 25/25で2-pass node-exact (budget 15M)・key/legal
+   全行照合 (i002は15M budget枯渇 result 0 = honest UNKNOWN、status.log上
+   PASS = 2-pass node-exact)。
+4. 残り h027-h051 を含む51キーはcanonical merged cache (5,975行
+   `a998f4c0...`) に不在 (0 hits、本セッションで再照合)。
+5. val-gate 4/4 node-exact を本 (takeover) ホストで再現 (at2m result
+   0/2,000,000 ×2、15m result 2/3,651,923 と result 2/5,040,200)。
+6. 交差host確認: h001 (h002は枯渇行なので触れない) を本ホストで2 fresh
+   cold pass再実行 → LOSS 2 / 4,231,707 nodes が両passとも宣告ホスト生値
+   とnode-exact一致。
+7. rescue: 宣告ホストの i026.p1 (完全・LOSS 2 / 4,284,312 nodes) はkitが
+   保持、repo出版時に `output/rescue-declaring-host/` に保存する
+   (i026.p2の枯損分もそのまま保存し、補完はしない)。
+
+本amendment (takeover) の事前登録:
+- h026 は本ホストで2 fresh cold passを最初から実行する (protocolは
+  i026のstatus行が存在しないため、status.log上は本ホスト行のみを記載)。
+  h027-h051 の25キーもPart Nと同一の順序・手順で実行。
+- 手法・停止規則・消費規則はPart B-Nと全部同一 (pinned replica
+  `jsreplay.js` `84585617...`, 2-pass fresh cold, budget 15M,
+  mismatch→HARD-STOP rc=42, result 1→WIN-HALT rc=45, 枯渇=UNKNOWN)。
+  h002のUNKNOWN行は宣告ホスト記録のまま引き継ぎ、15M同条件の再探索は
+  行わない (budget昇格は将来の新規宣言による)。
+- 出版: 宣告ホスト実行分 (h001-h025 = kit i001-i025の改名・内容無改変)
+  と本ホスト実行分 (h026-) をすべて `output/raw/` に出版。
+  output/status.log はkitの25行 (元タイムスタンプ保持) + 本ホスト行の
+  追記とし、実行hostの帰属はREADMEに明記する。
+- 主張の範囲: coverage・closure・rootを一切主張しない。h002がUNKNOWNの
+  ため51キー完了でもbatch 8単体ではclass 2634の閉鎖資格は生じない
+  (h002のbudget昇格は別宣言)。WINを得た場合はそのキーで停止し
+  if-adopted解析に回す。2-pass LOSS行のみをfail-closed increment cache
+  候補として出版してよいが、merge + refresh再監査は本amendmentの
+  scope外である (merge + refresh再監査は将来の別宣言に回す)。
+- 並走との不接触: batch-9 (Part Q/R/T) のファイルには一切触れない。
+  進行中の他レーンとpath衝突しない。実行時にtakeover宣言・batch-8行
+  出版がmainに存在する場合は着手しない。
+- **class 2634・19 central-reply roots・標準11×11空盤はUNKNOWNのまま。
+  nodes数・pass数を勝敗として読まない。**
+- 本amendment observed HEAD-before-push: `9f06b2b2b5a770aab414f6c80eb6fe1201d1c1c6`
+  (commit messageにも記録)。
