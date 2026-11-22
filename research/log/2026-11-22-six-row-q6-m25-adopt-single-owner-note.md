@@ -34,3 +34,10 @@ main への成果出版なく中断した（本セッション開始時点 01:36
 ## 前例
 
 (6,5) 6×31 band extension（`bc11e28b`・2026-11-22T01:02Z）の adopt+republish 手続に準拠。
+
+## Amendment 2（erratum・2026-11-22T01:53:07Z）
+
+- スコープ項5の「honest negatives（INDET 7行）」は「中断レーン records 7行（INDET 6行+SAT
+  run1 の1行）」の誤記だった。実際の verbatim 出版は records.jsonl 8行 = 中断レーン7行
+ （INDET 6行+SAT run1）+採用 run3 行で、INDET ログ6件（`2503be36`）・実験README記載と整合する。
+  honest negative の取扱い（cap 到達記録・不在不主張）は不変。
