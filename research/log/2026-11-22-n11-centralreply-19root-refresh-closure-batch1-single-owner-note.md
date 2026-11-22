@@ -3515,3 +3515,69 @@ probe_order 580..589)。本Partはこの残10キーの列挙probeを実行前に
 - 標準11×11空盤・19 central-reply roots・class 23101 (現行canonical
   6,120行上unknown 11子)・10キーは本Partのどの時点でもUNKNOWNのまま。
   nodes数を勝敗として読まない。
+
+## Part AX (verifier, amendment 2026-11-22): batch-14 residual (class 23101) q043..q052 + batch-17 (class 10661) budget-edge 3行の第三実装交叉検証 (実行前に宣言・verdict不消費)
+
+単一オーナー宣言 (Part G/K/O/P/T/W/AA/AD/AG/AL/AR流 third-implementation
+cross-verification)。Part AW (batch-14 residual 10キー) とbatch-17 (Part AU)
+の計上対象行うち計算量上位のエッジ行を、pinned第三実装
+(non-df-pn AND/OR minimax `third_impl.js`, sha256 `08ea958f…`) で
+verdict-level再検証し、literature側の追加独立証拠とする。**verdict不消費**
+(採用判断はscrutiny owner C++第二実装 gate pin `9193f5b6…`のまま)。
+
+- 対象13行 (すべてpublished 2-pass fresh-cold node-exact・result 2 LOSS・
+  budget 15,000,000内):
+  - Part AW正本 (publication commit `cb94f808`, 実験dir
+    `n11-centralreply-closure-class23101-batch14-residual-20261122/`):
+    q043 (2,573,254) / q044 (1,855,550) / q045 (1,028,674) / q046 (1,101,099) /
+    q047 (557,594) / q048 (2,860,377) / q049 (8,353,244) / q050 (2,178,945) /
+    q051 (1,451,266) / q052 (1,292,547)。
+  - batch-17正本 (publication commit `ffc09de1`, 実験dir
+    `n11-centralreply-closure-class10661-batch17-20261122/`) のエッジ3行:
+    **u031 (14,967,263 nodes・予算直下のmax-nodes行・後述のP2 retryを含む)** /
+    u033 (7,806,486・P2 retry) / u038 (6,589,964)。いずれもPart AV
+    (batch-17 class 10661 52-LOSS adoption+reaudit) の計上対象行集合の要素
+    であり、本PartはPart AVの実行・出版・reaudit成果物には一切触れない
+    (verdict-level literatureのみ・非接触)。
+- 入力は機械導出のみ (`scripts/make_inputs_ax.py`, Part AR makerのadapt):
+  published raws (q 20ファイル + u 6ファイル) の2-pass node-exact /
+  `# replay_done` / budget内 / result 2 / legal・lo・hi照合・published
+  row-audit (`6b40b131…` / `c19e768f…`) の行表との機械一致・published
+  status.logのPASS行照合 (AW: 10 PASS全result 2・VAL-GATE 4/4・
+  WAVE-END stop=0。b17: EXECUTION-COMPLETE 52/52 LOSS・u031/u033
+  P2-TRUNCATED-RETRY誠実行5件のうちu031/u033を含む・fired HARD-STOP 0)・
+  batch-keys (b14 `dfde0e90…` 52キー / b17 `db762175…` 52キー) の
+  probe_order照合 (q043..q052 = 580..589連続・u031/u033/u038 =
+  630/632/637)・derived-vs-published input CSV byte-equality (13 target +
+  2 anchor + 2 negative、anchor/negativeはpublished Part AR実験dirの
+  CSVとbyte一致)。3回実行・byte一致。
+- anchors (published第三実装値を本hostで再現): k02a WIN (legal 87)
+  9,106,337 expansions / 4,991,527 ttHits、l1a LOSS (legal 116)
+  7,660,602 / 3,951,175。negatives (fail-closed必須): ng1 = k02 legal+1、
+  ng2 = k02 stones 6。
+- method: 1 row = 1 solver = 1 process、cap 300,000,000拡張、wallcap 240s、
+  `--memo-power=22`、各target/anchor 2回 (a/b) determinism gate。
+  rules engine gate: `verify_tbl.js` replica quads 95,670 == third-impl
+  quads 95,670・195,044 triples mismatch 0。audit battery `audit.py`
+  (schema `n11-centralreply-closure-b14res-b17edge-thirdimpl-audit-v1`)
+  2回実行byte一致。
+- 事前登録の誠実ラベリング: third-impl verdictがpublished replica
+  (expected 2)と一致せずcleanで終わった場合は**DIVERGENCE**として記録
+  (agree gate FAIL・隠さない)。wall (240s)到達で終了した行は
+  **WALL-INCONCLUSIVE** (verdictではない)。いずれの場合もverdict消費・
+  canonical更新は行わない。
+- host: Part AWと同一sandbox host (2 cores、solver最大2並列)。
+  本Partは単一host内のcross-implementation corroboration (Part ARは
+  cross-host + cross-implementation。どちらもliterature)。
+- 消費規則: 本Partのverdict消費はゼロ。canonical cache (6,120行
+  `be9cb24e…`・Part AV出版後は6,172行) には書込まない。15 unconsumed
+  closure WIN (b018/d002/e002/f017/g018/j033/h045/z003/n005/n006/p002/
+  p003/r001/r002/q042) は採用判断 scrutiny owner 待ち・不変。
+- 本Part単体ではroot被覆・クラス閉鎖・第三手securedの主張をしない。
+- 標準11×11空盤・19 central-reply roots・class 23101・class 10661・
+  全13キーは本Partのどの時点でもUNKNOWNのまま。nodes数・expansions数を
+  勝敗として読まない。
+- 対抗宣言チェック: observed HEAD `29897108` 時点で同一スコープ
+  (batch-14 residual / batch-17 edge rowsの第三実装交叉検証) の対抗宣言は
+  mainに存在しない (直近commit列挙と本noteのgrepで確認)。push直前にnote
+  blob sha1ロックを再照合し、競合時は再fetchして本節を追記し直す。
