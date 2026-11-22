@@ -1,0 +1,1449 @@
+{
+ "boards": {
+  "3": {
+   "rows": [
+    {
+     "k": 1,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 9,
+     "node_nodes_pass2": 9,
+     "py_found": 0,
+     "py_nodes": 9,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 2,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 45,
+     "node_nodes_pass2": 45,
+     "py_found": 0,
+     "py_nodes": 44,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 3,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 121,
+     "node_nodes_pass2": 121,
+     "py_found": 0,
+     "py_nodes": 119,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 4,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 198,
+     "node_nodes_pass2": 198,
+     "py_found": 0,
+     "py_nodes": 195,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 5,
+     "node_found": 56,
+     "node_found_pass2": 56,
+     "node_nodes": 177,
+     "node_nodes_pass2": 177,
+     "py_found": 56,
+     "py_nodes": 173,
+     "determinism_match": true,
+     "k0030_cell": {
+      "expected": 56,
+      "observed": 56,
+      "match": true
+     }
+    },
+    {
+     "k": 6,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 94,
+     "node_nodes_pass2": 94,
+     "py_found": 0,
+     "py_nodes": 89,
+     "determinism_match": true,
+     "k0030_cell": {
+      "expected": 0,
+      "observed": 0,
+      "match": true
+     }
+    },
+    {
+     "k": 7,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 46,
+     "node_nodes_pass2": 46,
+     "py_found": 0,
+     "py_nodes": 40,
+     "determinism_match": true,
+     "k0030_cell": {
+      "expected": 0,
+      "observed": 0,
+      "match": true
+     }
+    },
+    {
+     "k": 8,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 20,
+     "node_nodes_pass2": 20,
+     "py_found": 0,
+     "py_nodes": 13,
+     "determinism_match": true,
+     "k0030_cell": {
+      "expected": 0,
+      "observed": 0,
+      "match": true
+     }
+    },
+    {
+     "k": 9,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 12,
+     "node_nodes_pass2": 12,
+     "py_found": 0,
+     "py_nodes": 4,
+     "determinism_match": true,
+     "k0030_cell": {
+      "expected": 0,
+      "observed": 0,
+      "match": true
+     }
+    }
+   ],
+   "total_maximal": 56
+  },
+  "4": {
+   "rows": [
+    {
+     "k": 1,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 16,
+     "node_nodes_pass2": 16,
+     "py_found": 0,
+     "py_nodes": 16,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 2,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 136,
+     "node_nodes_pass2": 136,
+     "py_found": 0,
+     "py_nodes": 135,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 3,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 681,
+     "node_nodes_pass2": 681,
+     "py_found": 0,
+     "py_nodes": 679,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 4,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 2188,
+     "node_nodes_pass2": 2188,
+     "py_found": 0,
+     "py_nodes": 2185,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 5,
+     "node_found": 176,
+     "node_found_pass2": 176,
+     "node_nodes": 4027,
+     "node_nodes_pass2": 4027,
+     "py_found": 176,
+     "py_nodes": 4023,
+     "determinism_match": true,
+     "k0030_cell": {
+      "expected": 176,
+      "observed": 176,
+      "match": true
+     }
+    },
+    {
+     "k": 6,
+     "node_found": 688,
+     "node_found_pass2": 688,
+     "node_nodes": 3893,
+     "node_nodes_pass2": 3893,
+     "py_found": 688,
+     "py_nodes": 3888,
+     "determinism_match": true,
+     "k0030_cell": {
+      "expected": 688,
+      "observed": 688,
+      "match": true
+     }
+    },
+    {
+     "k": 7,
+     "node_found": 64,
+     "node_found_pass2": 64,
+     "node_nodes": 2691,
+     "node_nodes_pass2": 2691,
+     "py_found": 64,
+     "py_nodes": 2685,
+     "determinism_match": true,
+     "k0030_cell": {
+      "expected": 64,
+      "observed": 64,
+      "match": true
+     }
+    },
+    {
+     "k": 8,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 1786,
+     "node_nodes_pass2": 1786,
+     "py_found": 0,
+     "py_nodes": 1779,
+     "determinism_match": true,
+     "k0030_cell": {
+      "expected": 0,
+      "observed": 0,
+      "match": true
+     }
+    },
+    {
+     "k": 9,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 1086,
+     "node_nodes_pass2": 1086,
+     "py_found": 0,
+     "py_nodes": 1078,
+     "determinism_match": true,
+     "k0030_cell": {
+      "expected": 0,
+      "observed": 0,
+      "match": true
+     }
+    },
+    {
+     "k": 10,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 617,
+     "node_nodes_pass2": 617,
+     "py_found": 0,
+     "py_nodes": 608,
+     "determinism_match": true,
+     "k0030_cell": {
+      "expected": 0,
+      "observed": 0,
+      "match": true
+     }
+    },
+    {
+     "k": 11,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 365,
+     "node_nodes_pass2": 365,
+     "py_found": 0,
+     "py_nodes": 355,
+     "determinism_match": true,
+     "k0030_cell": {
+      "expected": 0,
+      "observed": 0,
+      "match": true
+     }
+    },
+    {
+     "k": 12,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 204,
+     "node_nodes_pass2": 204,
+     "py_found": 0,
+     "py_nodes": 193,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 13,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 100,
+     "node_nodes_pass2": 100,
+     "py_found": 0,
+     "py_nodes": 88,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 14,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 51,
+     "node_nodes_pass2": 51,
+     "py_found": 0,
+     "py_nodes": 38,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 15,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 29,
+     "node_nodes_pass2": 29,
+     "py_found": 0,
+     "py_nodes": 15,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 16,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 18,
+     "node_nodes_pass2": 18,
+     "py_found": 0,
+     "py_nodes": 3,
+     "determinism_match": true,
+     "k0030_cell": null
+    }
+   ],
+   "total_maximal": 928
+  },
+  "5": {
+   "rows": [
+    {
+     "k": 1,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 25,
+     "node_nodes_pass2": 25,
+     "py_found": 0,
+     "py_nodes": 25,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 2,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 325,
+     "node_nodes_pass2": 325,
+     "py_found": 0,
+     "py_nodes": 324,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 3,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 2601,
+     "node_nodes_pass2": 2601,
+     "py_found": 0,
+     "py_nodes": 2599,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 4,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 14126,
+     "node_nodes_pass2": 14126,
+     "py_found": 0,
+     "py_nodes": 14123,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 5,
+     "node_found": 4,
+     "node_found_pass2": 4,
+     "node_nodes": 49199,
+     "node_nodes_pass2": 49199,
+     "py_found": 4,
+     "py_nodes": 49195,
+     "determinism_match": true,
+     "k0030_cell": {
+      "expected": 4,
+      "observed": 4,
+      "match": true
+     }
+    },
+    {
+     "k": 6,
+     "node_found": 1136,
+     "node_found_pass2": 1136,
+     "node_nodes": 98581,
+     "node_nodes_pass2": 98581,
+     "py_found": 1136,
+     "py_nodes": 98576,
+     "determinism_match": true,
+     "k0030_cell": {
+      "expected": 1136,
+      "observed": 1136,
+      "match": true
+     }
+    },
+    {
+     "k": 7,
+     "node_found": 11280,
+     "node_found_pass2": 11280,
+     "node_nodes": 109940,
+     "node_nodes_pass2": 109940,
+     "py_found": 11280,
+     "py_nodes": 109934,
+     "determinism_match": true,
+     "k0030_cell": {
+      "expected": 11280,
+      "observed": 11280,
+      "match": true
+     }
+    },
+    {
+     "k": 8,
+     "node_found": 4340,
+     "node_found_pass2": 4340,
+     "node_nodes": 85746,
+     "node_nodes_pass2": 85746,
+     "py_found": 4340,
+     "py_nodes": 85739,
+     "determinism_match": true,
+     "k0030_cell": {
+      "expected": 4340,
+      "observed": 4340,
+      "match": true
+     }
+    },
+    {
+     "k": 9,
+     "node_found": 100,
+     "node_found_pass2": 100,
+     "node_nodes": 62072,
+     "node_nodes_pass2": 62072,
+     "py_found": 100,
+     "py_nodes": 62064,
+     "determinism_match": true,
+     "k0030_cell": {
+      "expected": 100,
+      "observed": 100,
+      "match": true
+     }
+    },
+    {
+     "k": 10,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 43129,
+     "node_nodes_pass2": 43129,
+     "py_found": 0,
+     "py_nodes": 43120,
+     "determinism_match": true,
+     "k0030_cell": {
+      "expected": 0,
+      "observed": 0,
+      "match": true
+     }
+    },
+    {
+     "k": 11,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 28060,
+     "node_nodes_pass2": 28060,
+     "py_found": 0,
+     "py_nodes": 28050,
+     "determinism_match": true,
+     "k0030_cell": {
+      "expected": 0,
+      "observed": 0,
+      "match": true
+     }
+    },
+    {
+     "k": 12,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 17969,
+     "node_nodes_pass2": 17969,
+     "py_found": 0,
+     "py_nodes": 17958,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 13,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 12489,
+     "node_nodes_pass2": 12489,
+     "py_found": 0,
+     "py_nodes": 12477,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 14,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 8810,
+     "node_nodes_pass2": 8810,
+     "py_found": 0,
+     "py_nodes": 8797,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 15,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 5830,
+     "node_nodes_pass2": 5830,
+     "py_found": 0,
+     "py_nodes": 5816,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 16,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 3488,
+     "node_nodes_pass2": 3488,
+     "py_found": 0,
+     "py_nodes": 3473,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 17,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 2047,
+     "node_nodes_pass2": 2047,
+     "py_found": 0,
+     "py_nodes": 2031,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 18,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 1321,
+     "node_nodes_pass2": 1321,
+     "py_found": 0,
+     "py_nodes": 1304,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 19,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 793,
+     "node_nodes_pass2": 793,
+     "py_found": 0,
+     "py_nodes": 775,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 20,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 407,
+     "node_nodes_pass2": 407,
+     "py_found": 0,
+     "py_nodes": 388,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 21,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 195,
+     "node_nodes_pass2": 195,
+     "py_found": 0,
+     "py_nodes": 175,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 22,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 111,
+     "node_nodes_pass2": 111,
+     "py_found": 0,
+     "py_nodes": 90,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 23,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 60,
+     "node_nodes_pass2": 60,
+     "py_found": 0,
+     "py_nodes": 38,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 24,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 32,
+     "node_nodes_pass2": 32,
+     "py_found": 0,
+     "py_nodes": 9,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 25,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 27,
+     "node_nodes_pass2": 27,
+     "py_found": 0,
+     "py_nodes": 3,
+     "determinism_match": true,
+     "k0030_cell": null
+    }
+   ],
+   "total_maximal": 16860
+  },
+  "6": {
+   "rows": [
+    {
+     "k": 1,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 36,
+     "node_nodes_pass2": 36,
+     "py_found": 0,
+     "py_nodes": 36,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 2,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 666,
+     "node_nodes_pass2": 666,
+     "py_found": 0,
+     "py_nodes": 665,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 3,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 7771,
+     "node_nodes_pass2": 7771,
+     "py_found": 0,
+     "py_nodes": 7769,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 4,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 63556,
+     "node_nodes_pass2": 63556,
+     "py_found": 0,
+     "py_nodes": 63553,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 5,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 358560,
+     "node_nodes_pass2": 358560,
+     "py_found": 0,
+     "py_nodes": 358556,
+     "determinism_match": true,
+     "k0030_cell": {
+      "expected": 0,
+      "observed": 0,
+      "match": true
+     }
+    },
+    {
+     "k": 6,
+     "node_found": 8,
+     "node_found_pass2": 8,
+     "node_nodes": 1305866,
+     "node_nodes_pass2": 1305866,
+     "py_found": 8,
+     "py_nodes": 1305861,
+     "determinism_match": true,
+     "k0030_cell": {
+      "expected": 8,
+      "observed": 8,
+      "match": true
+     }
+    },
+    {
+     "k": 7,
+     "node_found": 3952,
+     "node_found_pass2": 3952,
+     "node_nodes": 2859096,
+     "node_nodes_pass2": 2859096,
+     "py_found": 3952,
+     "py_nodes": 2859090,
+     "determinism_match": true,
+     "k0030_cell": {
+      "expected": 3952,
+      "observed": 3952,
+      "match": true
+     }
+    },
+    {
+     "k": 8,
+     "node_found": 115496,
+     "node_found_pass2": 115496,
+     "node_nodes": 3714301,
+     "node_nodes_pass2": 3714301,
+     "py_found": 115496,
+     "py_nodes": 3714294,
+     "determinism_match": true,
+     "k0030_cell": {
+      "expected": 115496,
+      "observed": 115496,
+      "match": true
+     }
+    },
+    {
+     "k": 9,
+     "node_found": 199184,
+     "node_found_pass2": 199184,
+     "node_nodes": 3281078,
+     "node_nodes_pass2": 3281078,
+     "py_found": 199184,
+     "py_nodes": 3281070,
+     "determinism_match": true,
+     "k0030_cell": {
+      "expected": 199184,
+      "observed": 199184,
+      "match": true
+     }
+    },
+    {
+     "k": 10,
+     "node_found": 30492,
+     "node_found_pass2": 30492,
+     "node_nodes": 2529963,
+     "node_nodes_pass2": 2529963,
+     "py_found": 30492,
+     "py_nodes": 2529954,
+     "determinism_match": true,
+     "k0030_cell": {
+      "expected": 30492,
+      "observed": 30492,
+      "match": true
+     }
+    },
+    {
+     "k": 11,
+     "node_found": 464,
+     "node_found_pass2": 464,
+     "node_nodes": 1904379,
+     "node_nodes_pass2": 1904379,
+     "py_found": 464,
+     "py_nodes": 1904369,
+     "determinism_match": true,
+     "k0030_cell": {
+      "expected": 464,
+      "observed": 464,
+      "match": true
+     }
+    },
+    {
+     "k": 12,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 1373918,
+     "node_nodes_pass2": 1373918,
+     "py_found": 0,
+     "py_nodes": 1373907,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 13,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 934239,
+     "node_nodes_pass2": 934239,
+     "py_found": 0,
+     "py_nodes": 934227,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 14,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 623540,
+     "node_nodes_pass2": 623540,
+     "py_found": 0,
+     "py_nodes": 623527,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 15,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 448304,
+     "node_nodes_pass2": 448304,
+     "py_found": 0,
+     "py_nodes": 448290,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 16,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 340081,
+     "node_nodes_pass2": 340081,
+     "py_found": 0,
+     "py_nodes": 340066,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 17,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 252275,
+     "node_nodes_pass2": 252275,
+     "py_found": 0,
+     "py_nodes": 252259,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 18,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 176275,
+     "node_nodes_pass2": 176275,
+     "py_found": 0,
+     "py_nodes": 176258,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 19,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 115130,
+     "node_nodes_pass2": 115130,
+     "py_found": 0,
+     "py_nodes": 115112,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 20,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 76110,
+     "node_nodes_pass2": 76110,
+     "py_found": 0,
+     "py_nodes": 76091,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 21,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 54946,
+     "node_nodes_pass2": 54946,
+     "py_found": 0,
+     "py_nodes": 54926,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 22,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 40599,
+     "node_nodes_pass2": 40599,
+     "py_found": 0,
+     "py_nodes": 40578,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 23,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 28417,
+     "node_nodes_pass2": 28417,
+     "py_found": 0,
+     "py_nodes": 28395,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 24,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 17944,
+     "node_nodes_pass2": 17944,
+     "py_found": 0,
+     "py_nodes": 17921,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 25,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 10435,
+     "node_nodes_pass2": 10435,
+     "py_found": 0,
+     "py_nodes": 10411,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 26,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 6530,
+     "node_nodes_pass2": 6530,
+     "py_found": 0,
+     "py_nodes": 6505,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 27,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 4376,
+     "node_nodes_pass2": 4376,
+     "py_found": 0,
+     "py_nodes": 4350,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 28,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 2726,
+     "node_nodes_pass2": 2726,
+     "py_found": 0,
+     "py_nodes": 2699,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 29,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 1425,
+     "node_nodes_pass2": 1425,
+     "py_found": 0,
+     "py_nodes": 1397,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 30,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 654,
+     "node_nodes_pass2": 654,
+     "py_found": 0,
+     "py_nodes": 625,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 31,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 365,
+     "node_nodes_pass2": 365,
+     "py_found": 0,
+     "py_nodes": 335,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 32,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 214,
+     "node_nodes_pass2": 214,
+     "py_found": 0,
+     "py_nodes": 183,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 33,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 110,
+     "node_nodes_pass2": 110,
+     "py_found": 0,
+     "py_nodes": 78,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 34,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 52,
+     "node_nodes_pass2": 52,
+     "py_found": 0,
+     "py_nodes": 19,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 35,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 43,
+     "node_nodes_pass2": 43,
+     "py_found": 0,
+     "py_nodes": 9,
+     "determinism_match": true,
+     "k0030_cell": null
+    },
+    {
+     "k": 36,
+     "node_found": 0,
+     "node_found_pass2": 0,
+     "node_nodes": 38,
+     "node_nodes_pass2": 38,
+     "py_found": 0,
+     "py_nodes": 3,
+     "determinism_match": true,
+     "k0030_cell": null
+    }
+   ],
+   "total_maximal": 349596
+  }
+ },
+ "k0030_cell_check": {},
+ "ok": true,
+ "orbit_census": [
+  {
+   "n": 3,
+   "k": 5,
+   "total": 56,
+   "orbits": 8,
+   "stabilizer_histogram": {
+    "1": 6,
+    "2": 2
+   },
+   "orbit_size_histogram": {
+    "4": 2,
+    "8": 6
+   },
+   "checks": {
+    "C1_unique_sorted": true,
+    "C2_d4_closure": true,
+    "C3_orbit_sum": 56,
+    "total_eq_orbit_sum": true
+   }
+  },
+  {
+   "n": 4,
+   "k": 5,
+   "total": 176,
+   "orbits": 22,
+   "stabilizer_histogram": {
+    "1": 22
+   },
+   "orbit_size_histogram": {
+    "8": 22
+   },
+   "checks": {
+    "C1_unique_sorted": true,
+    "C2_d4_closure": true,
+    "C3_orbit_sum": 176,
+    "total_eq_orbit_sum": true
+   }
+  },
+  {
+   "n": 4,
+   "k": 6,
+   "total": 688,
+   "orbits": 87,
+   "stabilizer_histogram": {
+    "1": 85,
+    "2": 2
+   },
+   "orbit_size_histogram": {
+    "4": 2,
+    "8": 85
+   },
+   "checks": {
+    "C1_unique_sorted": true,
+    "C2_d4_closure": true,
+    "C3_orbit_sum": 688,
+    "total_eq_orbit_sum": true
+   }
+  },
+  {
+   "n": 4,
+   "k": 7,
+   "total": 64,
+   "orbits": 8,
+   "stabilizer_histogram": {
+    "1": 8
+   },
+   "orbit_size_histogram": {
+    "8": 8
+   },
+   "checks": {
+    "C1_unique_sorted": true,
+    "C2_d4_closure": true,
+    "C3_orbit_sum": 64,
+    "total_eq_orbit_sum": true
+   }
+  },
+  {
+   "n": 5,
+   "k": 5,
+   "total": 4,
+   "orbits": 1,
+   "stabilizer_histogram": {
+    "2": 1
+   },
+   "orbit_size_histogram": {
+    "4": 1
+   },
+   "checks": {
+    "C1_unique_sorted": true,
+    "C2_d4_closure": true,
+    "C3_orbit_sum": 4,
+    "total_eq_orbit_sum": true
+   }
+  },
+  {
+   "n": 5,
+   "k": 6,
+   "total": 1136,
+   "orbits": 143,
+   "stabilizer_histogram": {
+    "1": 141,
+    "2": 2
+   },
+   "orbit_size_histogram": {
+    "4": 2,
+    "8": 141
+   },
+   "checks": {
+    "C1_unique_sorted": true,
+    "C2_d4_closure": true,
+    "C3_orbit_sum": 1136,
+    "total_eq_orbit_sum": true
+   }
+  },
+  {
+   "n": 5,
+   "k": 7,
+   "total": 11280,
+   "orbits": 1413,
+   "stabilizer_histogram": {
+    "1": 1407,
+    "2": 6
+   },
+   "orbit_size_histogram": {
+    "4": 6,
+    "8": 1407
+   },
+   "checks": {
+    "C1_unique_sorted": true,
+    "C2_d4_closure": true,
+    "C3_orbit_sum": 11280,
+    "total_eq_orbit_sum": true
+   }
+  },
+  {
+   "n": 5,
+   "k": 8,
+   "total": 4340,
+   "orbits": 543,
+   "stabilizer_histogram": {
+    "1": 542,
+    "2": 1
+   },
+   "orbit_size_histogram": {
+    "4": 1,
+    "8": 542
+   },
+   "checks": {
+    "C1_unique_sorted": true,
+    "C2_d4_closure": true,
+    "C3_orbit_sum": 4340,
+    "total_eq_orbit_sum": true
+   }
+  },
+  {
+   "n": 5,
+   "k": 9,
+   "total": 100,
+   "orbits": 13,
+   "stabilizer_histogram": {
+    "1": 12,
+    "2": 1
+   },
+   "orbit_size_histogram": {
+    "4": 1,
+    "8": 12
+   },
+   "checks": {
+    "C1_unique_sorted": true,
+    "C2_d4_closure": true,
+    "C3_orbit_sum": 100,
+    "total_eq_orbit_sum": true
+   }
+  },
+  {
+   "n": 6,
+   "k": 6,
+   "total": 8,
+   "orbits": 1,
+   "stabilizer_histogram": {
+    "1": 1
+   },
+   "orbit_size_histogram": {
+    "8": 1
+   },
+   "checks": {
+    "C1_unique_sorted": true,
+    "C2_d4_closure": true,
+    "C3_orbit_sum": 8,
+    "total_eq_orbit_sum": true
+   }
+  },
+  {
+   "n": 6,
+   "k": 7,
+   "total": 3952,
+   "orbits": 494,
+   "stabilizer_histogram": {
+    "1": 494
+   },
+   "orbit_size_histogram": {
+    "8": 494
+   },
+   "checks": {
+    "C1_unique_sorted": true,
+    "C2_d4_closure": true,
+    "C3_orbit_sum": 3952,
+    "total_eq_orbit_sum": true
+   }
+  },
+  {
+   "n": 6,
+   "k": 8,
+   "total": 115496,
+   "orbits": 14441,
+   "stabilizer_histogram": {
+    "1": 14433,
+    "2": 8
+   },
+   "orbit_size_histogram": {
+    "4": 8,
+    "8": 14433
+   },
+   "checks": {
+    "C1_unique_sorted": true,
+    "C2_d4_closure": true,
+    "C3_orbit_sum": 115496,
+    "total_eq_orbit_sum": true
+   }
+  },
+  {
+   "n": 6,
+   "k": 9,
+   "total": 199184,
+   "orbits": 24898,
+   "stabilizer_histogram": {
+    "1": 24898
+   },
+   "orbit_size_histogram": {
+    "8": 24898
+   },
+   "checks": {
+    "C1_unique_sorted": true,
+    "C2_d4_closure": true,
+    "C3_orbit_sum": 199184,
+    "total_eq_orbit_sum": true
+   }
+  },
+  {
+   "n": 6,
+   "k": 10,
+   "total": 30492,
+   "orbits": 3814,
+   "stabilizer_histogram": {
+    "1": 3809,
+    "2": 5
+   },
+   "orbit_size_histogram": {
+    "4": 5,
+    "8": 3809
+   },
+   "checks": {
+    "C1_unique_sorted": true,
+    "C2_d4_closure": true,
+    "C3_orbit_sum": 30492,
+    "total_eq_orbit_sum": true
+   }
+  },
+  {
+   "n": 6,
+   "k": 11,
+   "total": 464,
+   "orbits": 58,
+   "stabilizer_histogram": {
+    "1": 58
+   },
+   "orbit_size_histogram": {
+    "8": 58
+   },
+   "checks": {
+    "C1_unique_sorted": true,
+    "C2_d4_closure": true,
+    "C3_orbit_sum": 464,
+    "total_eq_orbit_sum": true
+   }
+  }
+ ],
+ "safe_subset": [
+  {
+   "n": 3,
+   "histogram": {
+    "0": 1,
+    "1": 9,
+    "2": 36,
+    "3": 84,
+    "4": 112,
+    "5": 56
+   },
+   "total": 298,
+   "max_safe_size": 5
+  },
+  {
+   "n": 4,
+   "histogram": {
+    "0": 1,
+    "1": 16,
+    "2": 120,
+    "3": 560,
+    "4": 1626,
+    "5": 2360,
+    "6": 1064,
+    "7": 64
+   },
+   "total": 5811,
+   "max_safe_size": 7
+  },
+  {
+   "n": 5,
+   "histogram": {
+    "0": 1,
+    "1": 25,
+    "2": 300,
+    "3": 2300,
+    "4": 11824,
+    "5": 37272,
+    "6": 59192,
+    "7": 35208,
+    "8": 5172,
+    "9": 100
+   },
+   "total": 151394,
+   "max_safe_size": 9
+  },
+  {
+   "n": 6,
+   "histogram": {
+    "0": 1,
+    "1": 36,
+    "2": 630,
+    "3": 7140,
+    "4": 56414,
+    "5": 301952,
+    "6": 997796,
+    "7": 1783296,
+    "8": 1459292,
+    "9": 438952,
+    "10": 35316,
+    "11": 464
+   },
+   "total": 5081289,
+   "max_safe_size": 11
+  }
+ ],
+ "sat": {
+  "atmost4_n5_unsat": true,
+  "atmost5_n6_unsat": true,
+  "sat_enum_n5k5": "1 lex-min model, size 5, in DFS set",
+  "sat_enum_n6k6": "1 lex-min model, size 6, in DFS set",
+  "safe_count_n6_k12": {
+   "models": 0
+  },
+  "safe_count_n5_k10": {
+   "models": 0
+  },
+  "safe_count_n6_k11": {
+   "models": 464
+  },
+  "safe_count_n5_k9": {
+   "models": 100
+  },
+  "safe_count_enc_CALIBRATION": "n=3 k=1..7 and n=4 k=4..8 equal to brute-force histograms"
+ }
+}
