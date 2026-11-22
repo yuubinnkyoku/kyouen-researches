@@ -43,3 +43,31 @@ by this batch**: closure needs the independent merge + refresh re-audit.
 
 see `output/status.log`. The standard 11x11 empty board, the 19 central-reply
 roots and class 12264 remain UNKNOWN throughout. Nodes are not verdicts.
+
+## Status: WIN-HALT at f017 (2026-11-22T03:41:36Z)
+
+Pre-registered WIN-HALT fired on key f017 (s5_index 415095, key
+`[1188950301625810945, 70368744177666]`, legal 82): 2-pass node-exact
+**result 1 (WIN), 3,522,635 nodes** at budget 15,000,000. Probed total:
+18/51 (all 2-pass node-exact; 17 LOSS + f017 WIN):
+
+- f001-f016 LOSS (cumulative nodes in status.log: 23,693,764 + f009-016
+  chunk; see the published raws)
+- f017 **WIN 3,522,635 nodes (HALT)**
+- f018 LOSS 3,598,340 nodes (completed in-flight before the halt observer
+  stopped the batch; published as-is, 2-pass node-exact)
+
+Consequences (honest): with f017 a WIN child, the all-children-LOSS closure
+route for class 12264 is refuted. f019-f051 remain unprobed (33 keys, no 15M
+same-condition re-search consumed). f017's WIN is NOT adopted (verdict
+unconsumed, scrutiny owner pending), exactly as b018, d002, e002.
+
+Empirical update: 4 of 5 closure batches have now WIN-halted (16757: b018,
+20421: d002, 16371: e002, 12264: f017); only 23963 closed 48/48 LOSS. 5 of
+the 5 batches' halt keys or refutations sit at closure rank 1-5, all chosen
+by ascending unknown-count: the cheap end of the ranking is measured to be
+WIN-dense, and candidate scoring for future batches should account for it
+(the ranking itself stays a scheduling quantity, never a verdict).
+
+The standard 11x11 empty board, the 19 central-reply roots, class 12264 and
+all remaining S5 keys remain UNKNOWN. Nodes are not verdicts.
