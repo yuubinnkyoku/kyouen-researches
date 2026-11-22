@@ -3027,3 +3027,41 @@ verdict一致** (WIN=1, LOSS=3)・wall-inconclusive 0・divergence 0で完走し
   (class 10661, Part AP再監査rank 14) 宣言。
 - 本status updateのobserved HEAD-before-push: `0f69d03…` (note blob sha1
   ロック `8edd32f7…` で更新、fetch-backで追記確認)。
+
+
+## Part AS (adoption, declaration 2026-11-22): batch-14 (class 23101) 41 LOSS行のcanonical計上 + reaudit (実行前に宣言)
+
+Part AQ (batch-14 takeover) が出版したprobed 42行 (41 LOSS + q042 WIN) のうち
+**41 LOSS行 (q001..q041) のみ**を、Part AP (batch-16 52 LOSS行) と同一形式で
+canonical exact-S5 verdict cacheへ計上する。**q042 WIN行は採用しない**
+(verdict不消費・15番目のunconsumed closure WINのまま・scrutiny owner待ち)。
+
+- 対象: `research/experiments/n11-centralreply-class23101-loss41-adoption-reaudit-20261122/`。
+- 入力はpublished正本のみ: batch-14実験dir (publication commit `7b211d38`) の
+  raws 84 (q001-q042のp1/p2)・status.log・batch-keys.json (sha256 `dfde0e90…`)・
+  現行canonical 6,079行cache (sha256 `342e8683…`)。maker (Part AP版 `e35b545d…` を
+  batch-14にadapt) がfail-closed導出: 41 LOSS行の3-way (p1/p2/status) node-exact
+  gate、batch-keys legal/(lo,hi) 照合、q042 WIN行の2-pass検出とincrementからの
+  機械除外 (採用増分にWIN行は1行も含めない)、41キーのBASE cache不在 (0 hits)、
+  quarantine 0。
+- 手法: sha-pinned fail-closed union merger (`90711961…`) でcanonical 6,079行に
+  41行をmerge (2回実行・byte一致・WIN/LOSS conflict 0) → **canonical 6,120行**を
+  新pathに出版。Part Y refresh script adapt版 (Part AP版 `ad3dc0e6…` からcache
+  path/shaと文言のみ変更) を2回直列実行・run間byte一致・root27 119/119 gate。
+  delta extractor (Part AP版 `f78f7e60…` をbatch-14にadapt) を3回実行・byte一致・
+  全gate PASS (BASE=Part AP reaudit出力、scenario=本reaudit出力、遷移ledger・
+  holder own-membership算術・update8増分universe一致・per-root被覆再計算)。
+- 主張範囲: canonical cache上の分類のみ。class 23101は採用後もunknown 11子
+  (未着手q043-q052 + 未採用q042) を持ちfree_now/excluded_nowのいずれにもならない
+  (closure候補表内のunknown減少のみ)。本Part単体ではroot被覆・第三手secured・
+  クラス閉鎖の主張をしない。
+- verdict不消費: q042 WIN行を含む15 unconsumed closure WIN
+  (b018/d002/e002/f017/g018/j033/h045/z003/n005/n006/p002/p003/r001/r002/q042)
+  は採用判断 scrutiny owner (C++第二実装 gate pin `9193f5b6…`) 待ち・不変。
+- 標準11×11空盤・19 central-reply roots・class 23101の全S5子 (未着手q043-q052
+  含む) は本Partのどの時点でもUNKNOWNのまま。nodes数を勝敗として読まない。
+- 並走との不接触: batch-17 (class 10661) は本Partでは宣言・scaffold・実行ともに
+  行わない。Part AQ/ARとpublished成果への書込みはextractor/refreshの読み取り
+  のみ。同一スコープの対抗宣言がmainに存在する場合は本宣言を破棄して着手しない。
+- 本amendment observed HEAD-before-push: `b394c3ca` (push直前にnote blob sha1
+  を再照合し、競合時は再fetchして本節を追記し直す)。
