@@ -4258,3 +4258,46 @@ MANIFEST-sha256照合一致・publication commit固定rawでcmp byte一致)。
 - 本status update observed HEAD-before-push: `23bda9ba` (push直前に
   note blob sha1 (`20bf1ecce776b4a4a7deac601613b8ede22c819e`) を再照合し、
   競合時は再fetchして本節を追記し直す)。
+
+
+## Part BC (adoption, amendment 2026-11-22): batch-14residual (class 23101) 残余10-LOSS canonical adoptionの単一オーナー実行宣言
+
+本hostが、batch-14residual (class 23101系譜・Part AW出版commit `cb94f808`由来)
+の残余10 LOSS行 (2-pass node-exact・published raw/row-audit正本のみを入力とする
+fail-closed makerによる机計算済み) のcanonical採用+reauditを、Part AS/AV
+precedentどおりfail-closed pipelineで実行・出版する単一オーナーであることを
+宣言する。**同一スコープの対抗宣言/amendmentが本amendmentより先にmainに存在
+する場合は本宣言を破棄して着手しない。**
+
+- 対象dir:
+  `research/experiments/n11-centralreply-class23101-residualloss10-adoption-reaudit-20261122/`。
+- pipeline (全成果物はpublished正本からsha-pinで導出・実行回数とbyte一致を
+  status.logに記録): maker (increment 10行・3-way p1/p2/status.log node-exact・
+  row-audit 10行一致・WIN不在gate・BASE cache不在gate) x3 → fail-closed union
+  merger (byte-pin `90711961…`・3回実行・byte一致・WIN/LOSS conflict 0) で
+  canonical 6,172行 (a5540811系) → 6,182行 (WIN 158 / LOSS 6,024) を新pathに
+  出版 → refresh adapt版2回直列実行・run間byte一致 → delta extractor adapt版
+  (closure候補表両world row-exact再構築gate・全class減算gate) x3・byte一致・
+  全gate PASS → 3コミット出版 (A: output 6ファイル / B: scripts 3ファイル+
+  reaudit refresh adapt / C: README+status.log+MANIFEST-sha256+reaudit 3出力+
+  delta json。probe-worklist 3.75MBはAH/AO/AP/AS/AV先例どおり不出版・sha記録
+  のみ) → 各publication commit固定rawでfetch-back byte検証。
+- 主張の範囲: **class 23101の閉鎖は主張しない。** q042 WIN子 s5 745184
+  (key `1152921505747697664:1032`) はunconsumedのままで、採用後も同クラスに
+  unknownコスト子1個 (s5 745184) が残る。refresh後のfree_now (37不変想定)・
+  unknown数の変化はreauditの機械計算結果としてのみ記録し、本amendment時点
+  では断定しない。
+- verdict不消費 (WIN側不変): 消費はbatch-14residual 10 LOSS行のみ
+  (fail-closed merger経由)。**17 unconsumed closure WIN
+  (b018/d002/e002/f017/g018/j033/h045/z003/n005/n006/p002/p003/r001/r002/q042 +
+  AY v001/v002) は読み書きとも不接触。** 採用判断はscrutiny owner C++
+  第二実装 gate pin `9193f5b6…`のまま。
+- 並走との不接触: batch-18 (AY残51キー)・batch-19選定・y=16 fastレーン・
+  K1058レーン・Part BB 17-WIN joint if-adopted成果物には読み書きとも
+  触れない (本出版は新規dir配下のみ)。
+- 標準11×11空盤・19 central-reply roots・class 23101・全class・未知の全S5子は
+  本Partのどの時点でもUNKNOWNのまま。nodes数・worklist数・greedy数を勝敗として
+  読まない。
+- 本amendment observed HEAD-before-push: `1867f01f` (push直前にnote blob sha1
+  (`b6a5f231914ae0da8789542b5aa1ec4f01fc1adc`) を再照合し、競合時は再fetchして
+  本節を追記し直す)。
