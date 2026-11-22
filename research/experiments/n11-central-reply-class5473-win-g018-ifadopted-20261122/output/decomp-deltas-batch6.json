@@ -1,0 +1,590 @@
+{
+ "schema": "n11-class5473-batch6-decomp-deltas-v1",
+ "interpretation_guard": "read-only what-if IF-ADOPTED planning deltas; verdicts NOT consumed; scheduling quantities only; 11x11 stays UNKNOWN",
+ "metrics": {
+  "excluded_now": {
+   "base": 23,
+   "PWIN18": 27,
+   "PLOSS17": 23,
+   "PFULL18": 27
+  },
+  "free_now": {
+   "base": 33,
+   "PWIN18": 33,
+   "PLOSS17": 33,
+   "PFULL18": 33
+  },
+  "unknown_classes": {
+   "base": 34503,
+   "PWIN18": 34499,
+   "PLOSS17": 34503,
+   "PFULL18": 34499
+  },
+  "update8_remaining_now": {
+   "base": 31838,
+   "PWIN18": 31787,
+   "PLOSS17": 31821,
+   "PFULL18": 31787
+  },
+  "update8_resolved_count": {
+   "base": 21,
+   "PWIN18": 22,
+   "PLOSS17": 38,
+   "PFULL18": 39
+  },
+  "update8_win_hit_groups": {
+   "base": 0,
+   "PWIN18": 4,
+   "PLOSS17": 0,
+   "PFULL18": 4
+  },
+  "joint_greedy_union_size": {
+   "base": 35617,
+   "PWIN18": 35617,
+   "PLOSS17": 35617,
+   "PFULL18": 35617
+  },
+  "probe_worklist_total": {
+   "base": 65213,
+   "PWIN18": 65212,
+   "PLOSS17": 65194,
+   "PFULL18": 65193
+  },
+  "baseline_root27_free_thirds": {
+   "base": 119,
+   "PWIN18": 119,
+   "PLOSS17": 119,
+   "PFULL18": 119
+  },
+  "win_hit_classes": {
+   "PWIN18": {
+    "5473": 4
+   },
+   "base": {},
+   "PLOSS17": {},
+   "PFULL18": {
+    "5473": 4
+   }
+  }
+ },
+ "additivity_measured": {
+  "excluded_now": {
+   "win_delta": 4,
+   "loss_delta": 0,
+   "full_delta": 4,
+   "full_eq_win_plus_loss": true
+  },
+  "free_now": {
+   "win_delta": 0,
+   "loss_delta": 0,
+   "full_delta": 0,
+   "full_eq_win_plus_loss": true
+  },
+  "unknown_classes": {
+   "win_delta": -4,
+   "loss_delta": 0,
+   "full_delta": -4,
+   "full_eq_win_plus_loss": true
+  },
+  "update8_remaining_now": {
+   "win_delta": -51,
+   "loss_delta": -17,
+   "full_delta": -51,
+   "full_eq_win_plus_loss": false
+  },
+  "update8_resolved_count": {
+   "win_delta": 1,
+   "loss_delta": 17,
+   "full_delta": 18,
+   "full_eq_win_plus_loss": true
+  },
+  "update8_win_hit_groups": {
+   "win_delta": 4,
+   "loss_delta": 0,
+   "full_delta": 4,
+   "full_eq_win_plus_loss": true
+  },
+  "joint_greedy_union_size": {
+   "win_delta": 0,
+   "loss_delta": 0,
+   "full_delta": 0,
+   "full_eq_win_plus_loss": true
+  },
+  "probe_worklist_total": {
+   "win_delta": -1,
+   "loss_delta": -19,
+   "full_delta": -20,
+   "full_eq_win_plus_loss": true
+  },
+  "baseline_root27_free_thirds": {
+   "win_delta": 0,
+   "loss_delta": 0,
+   "full_delta": 0,
+   "full_eq_win_plus_loss": true
+  }
+ },
+ "closure_class_deltas": {
+  "PWIN18": {
+   "rows_with_unknown_changed": [
+    {
+     "class_index": 5473,
+     "base_unknown": 51,
+     "scenario_unknown": 50,
+     "scenario_rank": 3
+    },
+    {
+     "class_index": 12264,
+     "base_unknown": 51,
+     "scenario_unknown": 51,
+     "scenario_rank": 6
+    },
+    {
+     "class_index": 16371,
+     "base_unknown": 50,
+     "scenario_unknown": 50,
+     "scenario_rank": 5
+    },
+    {
+     "class_index": 30345,
+     "base_unknown": 50,
+     "scenario_unknown": 50,
+     "scenario_rank": 4
+    }
+   ],
+   "scenario_status_counts": {
+    "excluded": 390,
+    "excluded_now": 27,
+    "free_now": 33,
+    "unknown": 34499
+   }
+  },
+  "PLOSS17": {
+   "rows_with_unknown_changed": [
+    {
+     "class_index": 962,
+     "base_unknown": 105,
+     "scenario_unknown": 105,
+     "scenario_rank": 712
+    },
+    {
+     "class_index": 992,
+     "base_unknown": 105,
+     "scenario_unknown": 105,
+     "scenario_rank": 713
+    },
+    {
+     "class_index": 1013,
+     "base_unknown": 105,
+     "scenario_unknown": 105,
+     "scenario_rank": 719
+    },
+    {
+     "class_index": 1671,
+     "base_unknown": 105,
+     "scenario_unknown": 105,
+     "scenario_rank": 722
+    },
+    {
+     "class_index": 1824,
+     "base_unknown": 105,
+     "scenario_unknown": 105,
+     "scenario_rank": 714
+    },
+    {
+     "class_index": 3540,
+     "base_unknown": 106,
+     "scenario_unknown": 105,
+     "scenario_rank": 710
+    },
+    {
+     "class_index": 4217,
+     "base_unknown": 105,
+     "scenario_unknown": 105,
+     "scenario_rank": 723
+    },
+    {
+     "class_index": 4912,
+     "base_unknown": 105,
+     "scenario_unknown": 105,
+     "scenario_rank": 709
+    },
+    {
+     "class_index": 5366,
+     "base_unknown": 105,
+     "scenario_unknown": 105,
+     "scenario_rank": 715
+    },
+    {
+     "class_index": 5473,
+     "base_unknown": 51,
+     "scenario_unknown": 34,
+     "scenario_rank": 2
+    },
+    {
+     "class_index": 6197,
+     "base_unknown": 105,
+     "scenario_unknown": 105,
+     "scenario_rank": 720
+    },
+    {
+     "class_index": 6241,
+     "base_unknown": 106,
+     "scenario_unknown": 106,
+     "scenario_rank": 726
+    },
+    {
+     "class_index": 7595,
+     "base_unknown": 106,
+     "scenario_unknown": 106,
+     "scenario_rank": 724
+    },
+    {
+     "class_index": 9746,
+     "base_unknown": 106,
+     "scenario_unknown": 106,
+     "scenario_rank": 735
+    },
+    {
+     "class_index": 12264,
+     "base_unknown": 51,
+     "scenario_unknown": 51,
+     "scenario_rank": 6
+    },
+    {
+     "class_index": 12528,
+     "base_unknown": 106,
+     "scenario_unknown": 106,
+     "scenario_rank": 729
+    },
+    {
+     "class_index": 12697,
+     "base_unknown": 106,
+     "scenario_unknown": 106,
+     "scenario_rank": 727
+    },
+    {
+     "class_index": 13482,
+     "base_unknown": 106,
+     "scenario_unknown": 106,
+     "scenario_rank": 734
+    },
+    {
+     "class_index": 16371,
+     "base_unknown": 50,
+     "scenario_unknown": 50,
+     "scenario_rank": 5
+    },
+    {
+     "class_index": 20421,
+     "base_unknown": 49,
+     "scenario_unknown": 49,
+     "scenario_rank": 3
+    },
+    {
+     "class_index": 20810,
+     "base_unknown": 106,
+     "scenario_unknown": 106,
+     "scenario_rank": 728
+    },
+    {
+     "class_index": 21050,
+     "base_unknown": 106,
+     "scenario_unknown": 106,
+     "scenario_rank": 730
+    },
+    {
+     "class_index": 21069,
+     "base_unknown": 106,
+     "scenario_unknown": 106,
+     "scenario_rank": 732
+    },
+    {
+     "class_index": 21071,
+     "base_unknown": 106,
+     "scenario_unknown": 106,
+     "scenario_rank": 731
+    },
+    {
+     "class_index": 21888,
+     "base_unknown": 106,
+     "scenario_unknown": 106,
+     "scenario_rank": 733
+    },
+    {
+     "class_index": 23436,
+     "base_unknown": 105,
+     "scenario_unknown": 105,
+     "scenario_rank": 711
+    },
+    {
+     "class_index": 24115,
+     "base_unknown": 105,
+     "scenario_unknown": 105,
+     "scenario_rank": 708
+    },
+    {
+     "class_index": 28414,
+     "base_unknown": 105,
+     "scenario_unknown": 105,
+     "scenario_rank": 717
+    },
+    {
+     "class_index": 28617,
+     "base_unknown": 105,
+     "scenario_unknown": 105,
+     "scenario_rank": 716
+    },
+    {
+     "class_index": 30045,
+     "base_unknown": 105,
+     "scenario_unknown": 105,
+     "scenario_rank": 718
+    },
+    {
+     "class_index": 30345,
+     "base_unknown": 50,
+     "scenario_unknown": 50,
+     "scenario_rank": 4
+    },
+    {
+     "class_index": 32173,
+     "base_unknown": 105,
+     "scenario_unknown": 105,
+     "scenario_rank": 721
+    },
+    {
+     "class_index": 34943,
+     "base_unknown": 106,
+     "scenario_unknown": 106,
+     "scenario_rank": 725
+    }
+   ],
+   "scenario_status_counts": {
+    "excluded": 390,
+    "excluded_now": 23,
+    "free_now": 33,
+    "unknown": 34503
+   }
+  },
+  "PFULL18": {
+   "rows_with_unknown_changed": [
+    {
+     "class_index": 962,
+     "base_unknown": 105,
+     "scenario_unknown": 105,
+     "scenario_rank": 712
+    },
+    {
+     "class_index": 992,
+     "base_unknown": 105,
+     "scenario_unknown": 105,
+     "scenario_rank": 713
+    },
+    {
+     "class_index": 1013,
+     "base_unknown": 105,
+     "scenario_unknown": 105,
+     "scenario_rank": 719
+    },
+    {
+     "class_index": 1671,
+     "base_unknown": 105,
+     "scenario_unknown": 105,
+     "scenario_rank": 722
+    },
+    {
+     "class_index": 1824,
+     "base_unknown": 105,
+     "scenario_unknown": 105,
+     "scenario_rank": 714
+    },
+    {
+     "class_index": 3540,
+     "base_unknown": 106,
+     "scenario_unknown": 105,
+     "scenario_rank": 710
+    },
+    {
+     "class_index": 4217,
+     "base_unknown": 105,
+     "scenario_unknown": 105,
+     "scenario_rank": 723
+    },
+    {
+     "class_index": 4912,
+     "base_unknown": 105,
+     "scenario_unknown": 105,
+     "scenario_rank": 709
+    },
+    {
+     "class_index": 5366,
+     "base_unknown": 105,
+     "scenario_unknown": 105,
+     "scenario_rank": 715
+    },
+    {
+     "class_index": 5473,
+     "base_unknown": 51,
+     "scenario_unknown": 33,
+     "scenario_rank": 2
+    },
+    {
+     "class_index": 6197,
+     "base_unknown": 105,
+     "scenario_unknown": 105,
+     "scenario_rank": 720
+    },
+    {
+     "class_index": 6241,
+     "base_unknown": 106,
+     "scenario_unknown": 106,
+     "scenario_rank": 726
+    },
+    {
+     "class_index": 7595,
+     "base_unknown": 106,
+     "scenario_unknown": 106,
+     "scenario_rank": 724
+    },
+    {
+     "class_index": 9746,
+     "base_unknown": 106,
+     "scenario_unknown": 106,
+     "scenario_rank": 735
+    },
+    {
+     "class_index": 12264,
+     "base_unknown": 51,
+     "scenario_unknown": 51,
+     "scenario_rank": 6
+    },
+    {
+     "class_index": 12528,
+     "base_unknown": 106,
+     "scenario_unknown": 106,
+     "scenario_rank": 729
+    },
+    {
+     "class_index": 12697,
+     "base_unknown": 106,
+     "scenario_unknown": 106,
+     "scenario_rank": 727
+    },
+    {
+     "class_index": 13482,
+     "base_unknown": 106,
+     "scenario_unknown": 106,
+     "scenario_rank": 734
+    },
+    {
+     "class_index": 16371,
+     "base_unknown": 50,
+     "scenario_unknown": 50,
+     "scenario_rank": 5
+    },
+    {
+     "class_index": 20421,
+     "base_unknown": 49,
+     "scenario_unknown": 49,
+     "scenario_rank": 3
+    },
+    {
+     "class_index": 20810,
+     "base_unknown": 106,
+     "scenario_unknown": 106,
+     "scenario_rank": 728
+    },
+    {
+     "class_index": 21050,
+     "base_unknown": 106,
+     "scenario_unknown": 106,
+     "scenario_rank": 730
+    },
+    {
+     "class_index": 21069,
+     "base_unknown": 106,
+     "scenario_unknown": 106,
+     "scenario_rank": 732
+    },
+    {
+     "class_index": 21071,
+     "base_unknown": 106,
+     "scenario_unknown": 106,
+     "scenario_rank": 731
+    },
+    {
+     "class_index": 21888,
+     "base_unknown": 106,
+     "scenario_unknown": 106,
+     "scenario_rank": 733
+    },
+    {
+     "class_index": 23436,
+     "base_unknown": 105,
+     "scenario_unknown": 105,
+     "scenario_rank": 711
+    },
+    {
+     "class_index": 24115,
+     "base_unknown": 105,
+     "scenario_unknown": 105,
+     "scenario_rank": 708
+    },
+    {
+     "class_index": 28414,
+     "base_unknown": 105,
+     "scenario_unknown": 105,
+     "scenario_rank": 717
+    },
+    {
+     "class_index": 28617,
+     "base_unknown": 105,
+     "scenario_unknown": 105,
+     "scenario_rank": 716
+    },
+    {
+     "class_index": 30045,
+     "base_unknown": 105,
+     "scenario_unknown": 105,
+     "scenario_rank": 718
+    },
+    {
+     "class_index": 30345,
+     "base_unknown": 50,
+     "scenario_unknown": 50,
+     "scenario_rank": 4
+    },
+    {
+     "class_index": 32173,
+     "base_unknown": 105,
+     "scenario_unknown": 105,
+     "scenario_rank": 721
+    },
+    {
+     "class_index": 34943,
+     "base_unknown": 106,
+     "scenario_unknown": 106,
+     "scenario_rank": 725
+    }
+   ],
+   "scenario_status_counts": {
+    "excluded": 390,
+    "excluded_now": 27,
+    "free_now": 33,
+    "unknown": 34499
+   }
+  },
+  "g018_cost_child_classes": null
+ },
+ "per_root_free_coverage_gate": {
+  "PWIN18": {
+   "identical_to_base": true
+  },
+  "PLOSS17": {
+   "identical_to_base": true
+  },
+  "PFULL18": {
+   "identical_to_base": true
+  }
+ }
+}
