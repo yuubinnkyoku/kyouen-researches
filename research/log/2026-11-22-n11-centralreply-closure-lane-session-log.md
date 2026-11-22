@@ -636,3 +636,35 @@ fetched published bytes only (no lane-staged file trusted):
   for reproducibility. The standard 11x11 empty board, the 19 central-reply
   roots and all closure classes remain UNKNOWN; nodes/expansions are not read
   as outcomes.
+
+## Session continuation 9 addendum 3 (2026-11-22 ~07:4x-08:0xZ, same lane; repo-wide integrity scan of the kit-pinned experiment mirrors after the cleanup lane, plus batch-7 chain recheck)
+
+Read-only integrity scan of all five kit manifests (678 manifest entries)
+against main HEAD, fail-closed (scanner `intscan.py`, kit
+`intscan-20261122/`), followed by repo-internal chain rechecks where kit and
+repo diverged:
+
+- CLEAN: Part G mirror 96/96, Part O mirror 174/174, Part P mirror 165/165
+  manifest entries byte-identical on main. The cleanup lane removed nothing of
+  this lane's published evidence.
+- Two STALE staging mirrors classified (repo authoritative, no damage):
+  `batch5473-thirdimpl-reverify` (outage-era planned 211-gate scope
+  superseded by the published 71-gate
+  `n11-centralreply-closure-batch6-g018-thirdimpl-20261122` - 43 absent files
+  are unpublished planned scope, 17 diffs are wall-time-only with identical
+  expansions/ttHits) and `batch10324` (pre-resume staging; repo final raws
+  differ only in `wall_s` and, on a few keys, which pass is labeled p1 vs p2).
+- Repo-internal chain rechecks (fail-closed, published bytes only):
+  (1) batch-7 51 keys: raws 2-pass node-exact LOSS, (result, nodes) ==
+  status.log == merged canonical cache consumption, 51/51 (`b7_chain_check`,
+  ALL PASS); (2) Part K published audit refetch: 71/71 gates PASS,
+  g001/g011/g016 LOSS + g018 WIN third-impl agreement 4/4, anchors node-exact
+  9,106,337/4,991,527 and 7,660,602/3,951,175, 0 wall-inconclusive.
+- Operating rule recorded in the lane kit: the two stale manifests must not be
+  used as repo pins; `doc/integrity-scan-20261122.md` classifies all five
+  mirrors. Scanner lesson (own bug, caught by the empty-file sha `e3b0c442`
+  appearing as a "mismatch"): parallel file fetches must not share one temp
+  output file; fixed in the scanner before any conclusion was drawn.
+- Read-only audit; no verdict consumed, no claim change; the standard 11x11
+  empty board, the 19 central-reply roots and all closure classes remain
+  UNKNOWN; nodes/expansions are not read as outcomes.
