@@ -2,11 +2,10 @@
 
 w=8 帯の (8,11)・(8,12) の真の満容量安定化長 M を SAT（witness）と UNSAT（witness-free 掃引）の両側から閉じる高速レーン。
 
-## 状態（2026-11-15 時点）
+## 状態（2026-11-22 更新 — 両帯とも COMPLETE）
 
 - **(8,11): COMPLETE — M_{8,11} = 21 EXACT（w=8 で初の完全決着。全体では M_{7,10}=19・M_{7,9}=24 に次ぐ w≥6 で3例目）**
-- (8,12): IN FLIGHT — witness 8×12..8×16・witness-free 17..230 完走。**残り 231..882 を掃引中**
-  （resume-safe・records/sweep-q12.jsonl に追記）。全完了で M_{8,12}=17 exact。
+- **(8,12): COMPLETE（2026-11-22 掃引完了・記録公開）— M_{8,12} = 17 EXACT（w=8 で2例目の完全決着）**
 
 ## 方法と健全性
 
@@ -32,6 +31,18 @@ w=8 帯の (8,11)・(8,12) の真の満容量安定化長 M を SAT（witness）
 - 記録: records/calibration-cnf-byteidentity.jsonl（CNF md5 一致・完全環境リセットを
   またいで2回再現）。
 
+## 接管（2026-11-22）
+
+前回セッションで 3 回の実行環境リセット・VibeFS 障害によりローカル成果物を失ったが、
+knowledge マウント（_q12band-takeover-kit）経由で正本一式（records・scripts・較正記録）を
+復旧し、接管作業として q12 掃引 231..882 を完走・全記録を公開して本 README・claims を
+完了形に更新した。接管時の較正 29/29 PASS（記録: records/calibration-takeover-20261122.jsonl）:
+
+- (A) 11/11 — sat2.js 全三つ組census と 8×11..16 q11/q12 で CNF byte-identity
+- (B) 10/10 — genfast.js 弦対census と 8×17/20/26/40/60 q11/q12 で CNF byte-identity
+- (C) 8/8 — q11 公開記録 records/sweep-q11.jsonl の CNF md5・vars・clauses が
+  m=21,26,40,100,300,500,700,907 で再現
+
 ## 結果
 
 ### (8,11) — M = 21 EXACT
@@ -45,12 +56,17 @@ w=8 帯の (8,11)・(8,12) の真の満容量安定化長 M を SAT（witness）
 - **尾部**: m ≥ 908 は K0318 substitution U_{8,11}=908（proved）で排除。
 - **決着**: M_{8,11} = 21（exact）。knowledge: K0843。CSV の (8,11) 行は exact-threshold proved に更新。
 
-### (8,12) — M ∈ {17} ∪ [231, 883]
+### (8,12) — M = 17 EXACT（2026-11-22 完了）
 
 - 下側: 87石単一欠損 witness を 8×12..8×16（m=12..14 SA・m=15..16 kissat 新規）で確認・2系統検証。
-- 上側: m=17..230 の214幅 UNSAT（INDET 0）。**231..882 掃引継続中**（追記型 resume-safe）。
-  全完了で M_{8,12}=17 exact。
-- 尾部: U_{8,12}=883（curve-packing substitution・w7_upper_bounds.json）。
+- 上側: **m=17..882 の全866幅 UNSAT（INDET 0・SAT 0・欠落 0・連続）**。conflicts は
+  min 679（m=51）・max 6,653（m=17）・median 1,655.5・p90 2,868（nearest-rank）・
+  総計 1,598,748。正本 records/sweep-q12.jsonl（866行・md5 9c628f8e25ca541d82491e322743789a）
+  を3シャード（shard1 m=17..316・shard2 m=317..616・shard3 m=617..882）で公開し、各シャードを
+  records/sweep-q12.checksums の md5 と fetch-back 検証で byte-exact 到達を確認。
+- 尾部: U_{8,12}=883（curve-packing substitution・w7_upper_bounds.json・K0318 proved）で
+  m ≥ 883 を排除。
+- **決着**: M_{8,12} = 17（exact・w=8 で2例目）。CSV の (8,12) 行は exact-threshold proved に更新。
 
 ## 決定性
 
@@ -71,17 +87,22 @@ m=21（conflicts 1,379,955）と m=26（162,762）は、実行環境の完全リ
 - records/calibration-cnf-byteidentity.jsonl — 21/21 較正
 - witnesses/ — 8x17..20q11・8x15..16q12 の6枚（8x15/16q11 の2枚はローカル artifacts
   マウントに保存済み・次回格納）
-- claim-20261115.json — IN FLIGHT 時点の機械可読 claim スナップショット（q12 完了時に更新）
-- scripts/ — genfam12.js・decode_model.js・verify_all.js・sweep.sh は検証済み本文を
-  ローカル artifacts マウントから次回格納（sat.js/sat2.js/genfast.js は
-  seven-row-inband-families-20261114 / seven-row-q9-q10-bands-20261114 から複製して使用）
-- records/sweep-q12.jsonl — q12 掃引記録（17..230 完走分はローカルにあり次回格納・
-  231..882 を追記）
+- claim-20261115.json — COMPLETE 時点の機械可読 claim スナップショット（(8,12) 完了反映済み）
+- scripts/genfam12.js・scripts/sweep-q12.sh — 掃引再実行用の族census 生成器と駆動スクリプト
+  （公開・byte-verified。sat.js/sat2.js/genfast.js は seven-row-inband-families-20261114 /
+  seven-row-q9-q10-bands-20261114 から複製して使用。decode_model.js・verify_all.js・
+  SAT フロンティア生ログは後続格納課題）
+- records/sweep-q12-shard1-m17-316.jsonl・shard2-m317-616.jsonl・shard3-m617-882.jsonl —
+  q12 掃引記録 m=17..882 全866幅 UNSAT（正本 records/sweep-q12.jsonl 866行を3分割・
+  連結で正本と byte-exact・シャード md5 は records/sweep-q12.checksums）
+- records/calibration-takeover-20261122.jsonl — 接管較正 29/29
 
 ## 環境障害の記録
 
 本レーンは1セッション内で3回の実行環境リセットと終盤の VibeFS（bash・file_system）障害に
 遭遇した。q11 の主要記録（witness 6枚・sweep 887行・較正 21対照）は main に到達済み。
-q12 掃引 231..882 とローカル成果物（records/sweep-q12.jsonl・summary-q11.json・witness 2枚・
-SAT フロンティア生ログ 8本・scripts 4本）の格納は次回実行に回す。UNSAT 生ログの
-batch tar は binary のため push 経路がなく、conflicts・CNF md5 を records で担保する。
+q12 掃引 231..882 とローカル成果物の格納は次回実行に回す、と記録していたが、
+**2026-11-22 に knowledge マウント（_q12band-takeover-kit）経由で正本一式が復旧し、
+接管セッションが掃引 231..882 を完走して3シャードとして公開、本 README・claim・K0843・
+CSV を完了形に更新したため本件は解決済み**（詳細は research/log/2026-11-22-eight-row-q12-closure-complete.md）。
+UNSAT 生ログの batch tar は binary のため push 経路がなく、conflicts・CNF md5 を records で担保する。

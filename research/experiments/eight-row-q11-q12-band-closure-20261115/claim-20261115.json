@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "lane": "fixed-width fast lane (8,11)/(8,12) band closure",
-  "status": "IN FLIGHT ((8,11) COMPLETE; (8,12) sweep 231..882 remaining)",
-  "date": "2026-11-15",
+  "status": "COMPLETE ((8,11) M=21 exact; (8,12) M=17 exact)",
+  "date": "2026-11-15 (q12 completion and publication 2026-11-22)",
   "q11_complete": {
     "M_8_11": "21 exact (first complete determination at w=8; third at w>=6 after M_{7,10}=19 and M_{7,9}=24)",
     "witnesses": "row-deficient maximal safe configs at 8x11..8x20 (m=11: 78 stones 2-deficient rows [10,10,10,8,10,10,10,10]; m=12..20: 79 stones single-deficiency, rows 2,5 full, one row at 9; m=12..15 SA lane, m=15..20 kissat 4.0.4 def-mode SAT; all dual-verified sat.js verifyConfig + verify_witness.py exact Fraction)",
@@ -10,11 +10,14 @@
     "tail": "m>=908 excluded by K0318 substitution U_{8,11}=908 (proved)",
     "knowledge": "K0843 (schema-fixed: individual witness-file artifacts)"
   },
-  "q12_in_flight": {
-    "M_8_12_current": "in {17} union [231,883]",
+  "q12_complete": {
+    "M_8_12": "17 exact (second complete determination at w=8)",
     "witnesses": "87-stone single-deficiency witnesses at 8x12..8x16 (m=12..14 SA lane; m=15..16 kissat def-mode SAT; dual-verified)",
-    "witness_free": "m=17..230 all 214 widths UNSAT (INDET 0); records held locally pending upload; remaining sweep 231..882 (resume-safe)",
-    "if_all_unsat": "M_{8,12}=17 exact"
+    "witness_free": "m=17..882 all 866 widths UNSAT over the genfam12 family census (kissat 4.0.4 def-mode; INDET 0, SAT 0, no gaps; conflicts min 679 at m=51, max 6,653 at m=17, median 1,655.5, p90 2,868 nearest-rank, sum 1,598,748; per-width CNF md5/vars/clauses; canonical records/sweep-q12.jsonl 866 lines md5 9c628f8e25ca541d82491e322743789a published as three byte-verified shards sweep-q12-shard1-m17-316.jsonl / shard2-m317-616.jsonl / shard3-m617-882.jsonl with md5s in records/sweep-q12.checksums)",
+    "tail": "m>=883 excluded by K0318 substitution U_{8,12}=883 (proved)",
+    "hence": "M_{8,12}=17 exact",
+    "takeover": "sweep completed by the 2026-11-22 takeover session after 3 environment resets; kit recovered via the knowledge mount; 29/29 takeover calibration PASS ((A) 11/11 CNF byte-identity vs sat2.js all-triples census at 8x11..16 q11/q12, (B) 10/10 vs genfast.js chord-pair census at 8x17/20/26/40/60 q11/q12, (C) 8/8 CNF md5/vars/clauses match vs published records/sweep-q11.jsonl at m=21,26,40,100,300,500,700,907) - records/calibration-takeover-20261122.jsonl",
+    "session_log": "research/log/2026-11-22-eight-row-q12-closure-complete.md"
   },
   "scope": "def-mode SAT sweep with kissat 4.0.4 over the family-census CNF generator genfam12.js (8 rows + m-7 twelve-point F1 circles only; sound band-wide for m<=984 by eight-row-strip-classification-20261115 Theorem A + Corollary 4 since dropping curves only removes constraints); upper bounds U_{8,11}=908 / U_{8,12}=883 by K0318 substitution",
   "calibration_done": [
@@ -22,6 +25,6 @@
     "genfam12 CNF byte-identical to genfast.js chord-pair census CNF at 8x17/20/26/40/60 q11 and q12 (10 widths)",
     "all published SA witnesses (8x11..8x15 q11, 8x12..8x14 q12) independently re-verified PASS by sat.js verifyConfig + verify_witness.py (dual system)"
   ],
-  "environment_note": "local artifacts mount (records/sweep-q12.jsonl 17..230, summary-q11.json, witnesses 8x15/16 q11, SAT frontier raw logs, scripts genfam12.js/decode_model.js/verify_all.js/sweep.sh) awaits VibeFS recovery for upload; UNSAT raw-log batch tars are binary and have no push route - conflicts and CNF md5 in records serve as the integrity bond",
+  "environment_note": "resolved 2026-11-22: records/sweep-q12.jsonl, the genfam12.js / sweep-q12.sh scripts and all q12 sweep records were recovered via the knowledge mount and published (scripts and the 3 shards fetched back and byte-verified against records/sweep-q12.checksums); UNSAT raw-log batch tars remain binary with no push route - conflicts and CNF md5 in records serve as the integrity bond",
   "non_goals": "no 11x11 claims; witness-free width sets and M ranges only as established by verified witnesses and UNSAT instances; (8,9) 8x29 and other claimed frontiers untouched"
 }
