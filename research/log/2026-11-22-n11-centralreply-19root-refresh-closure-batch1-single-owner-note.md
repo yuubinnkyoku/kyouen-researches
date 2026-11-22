@@ -4151,3 +4151,55 @@ MANIFEST-sha256.txt (16行・`8c361955…`) がpinする。
 - 標準11×11空盤・19 central-reply roots・17 WINの全保有クラス (残る
   unknown子すべて)・全classは本Partのどの時点でもUNKNOWNのまま。
   nodes数・worklist数・greedy数を勝敗として読まない。
+
+## Part AV takeover (adoption, amendment 2026-11-22): batch-17 52-LOSS canonical adoptionのtakeover実行宣言（実行前に本amendmentを出版）
+
+Part AV declaration (commit `340abef3`, observed HEAD-before-push `4741a92f`)
+から7時間以上経過し、**~23:00Zのtakeover基準時刻** (AYレーンと共有・
+session log Continuation 41 addendum `67b41c5a` が22:04Zにread-only
+preflight済み・「dirがmainに現れない限りstandby」記録) を過ぎても、
+Part AV対象dir
+`research/experiments/n11-centralreply-class10661-loss52-adoption-reaudit-20261122/`
+はmainに存在せず、AV採用のpublicationコミットも対抗takeover宣言も
+存在しない (observed HEAD `432664f7` 時点でcommit stream・当note両方を
+確認)。よってPart U / Part Z precedent に従い、本hostがPart AVを
+takeoverし、declaration `340abef3` の範囲を**変更なく**そのまま実行する
+単一オーナーとなる (本amendmentはscope変更ではなく所有権の移転のみ)。
+
+- 本hostのtakeover前read-only preflight (本amendmentより前・verdict不消費・
+  db書込ゼロ): (1) batch-17実験dir kit mirror 177ファイルをpublished
+  MANIFEST-sha256 (main byte同一確認済み) に対しsha256全件再検証 0 bad
+  (batch-keys `db762175…`・row-audit `c19e768f…`・raws 104含む)。
+  (2) Part AS機材precedent kit 15ファイルを同様に全件再検証 0 bad
+  (canonical 6,120行 `be9cb24e…`・AS reaudit 3出力 `f2008e70…`/
+  `3ee1dbb6…`/`527c7e9a…`・maker `b6094f0b…`・merger `90711961…`・
+  extractor `9e885ae0…`・refresh `5992738d…`)。
+- 実行するpipeline (declaration `340abef3` の文言どおり・適応先はbatch-17):
+  maker (Part AS `make_increments_batch14.py` のbatch-17 adapt・
+  3-way p1/p2/status.log node-exact・batch-keys legal/(lo,hi)・
+  row-audit 52行一致・WIN/exhaustion「不在」gate・52キーのBASE cache不在
+  (0 hits)・quarantine 0・probed set=={u001..u052}+WAVE-END全体像) →
+  fail-closed union merger (`90711961…` byte-copy・3回実行・byte一致・
+  WIN/LOSS conflict 0) でcanonical 6,120行→**6,172行**を新pathに出版 →
+  refresh adapt版 2回直列実行・run間byte一致 → delta extractor adapt版
+  (BASE=Part AS reaudit 3出力・scenario=本reaudit出力) 3回実行・byte一致・
+  全gate PASS。成果物は全てpublished正本のみからsha-pinで導出し、
+  対象dir `n11-centralreply-class10661-loss52-adoption-reaudit-20261122/`
+  に出版・fetch-back byte検証する。
+- class 10661採用後のclass_status遷移 (free_now 36→37かどうかを含む) は
+  宣言文言どおりreauditの機械計算に委ね、本amendment時点では一切断定しない。
+- verdict不消費 (WIN側不変): batch-17にWIN行は存在しない (不在gate)。
+  採用消費は52 LOSS行のみ。15 unconsumed closure WIN (宣言時点) は
+  その後AY v001/v002を含む**17 unconsumed closure WIN**として増加したが、
+  本Partはその全てに読み書きとも触れない (採用判断はscrutiny owner
+  C++第二実装 gate pin `9193f5b6…` のまま)。
+- 標準11×11空盤・19 central-reply roots・class 10661・全class・未知の全S5子
+  は本Partのどの時点でもUNKNOWNのまま。nodes数を勝敗として読まない。
+- 並走との不接触: batch-18 (AY残51キー)・batch-19選定・y=16 fastレーン・
+  K1058レーンの成果物には読み書きとも触れない。**同一スコープの対抗
+  takeover宣言/amendmentが本amendmentより先にmainに存在する場合
+  (push時のnote blob sha1 lock `…` 衝突で検出) は本takeoverを破棄して
+  着手しない。**
+- 本amendment observed HEAD-before-push: `432664f7` (push直前にnote
+  blob sha1 (`5022600953d25a02b4ae77da531f513c9ad4dea7`) を再照合し、
+  競合時は再fetchして本節を追記し直す)。
