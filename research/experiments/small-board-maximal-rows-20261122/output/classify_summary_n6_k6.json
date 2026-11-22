@@ -1,0 +1,42 @@
+{
+ "N": 36,
+ "all_have_three_collinear": true,
+ "checks": {
+  "C1_unique_sorted": true,
+  "C2_d4_closure": true,
+  "C3_orbit_sum": 8
+ },
+ "dirs_histogram_all_sets": {
+  "2": 8
+ },
+ "ecc_histogram_all_sets": {
+  "11": 8
+ },
+ "k": 6,
+ "n": 6,
+ "orbit_details_compact": [
+  {
+   "ecc": 11,
+   "orbit_size": 8,
+   "rep": [
+    1,
+    2,
+    18,
+    19,
+    23,
+    31
+   ],
+   "stabilizer_order": 1
+  }
+ ],
+ "orbits": 1,
+ "source_full_classify_local_only": "members/configs arrays dropped for publication; regenerate by rerunning classify.mjs",
+ "source_full_classify_sha256_local": "a9722bcc5ae2f4b2ccc9b056db5f5c94b4cff41db70127fdfceeaab95a7845c3",
+ "stabilizer_histogram": {
+  "1": 1
+ },
+ "total": 8,
+ "trips3_histogram_all_sets": {
+  "2": 8
+ }
+}
