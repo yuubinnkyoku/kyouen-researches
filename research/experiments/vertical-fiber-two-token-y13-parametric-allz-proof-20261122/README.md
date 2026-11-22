@@ -1,12 +1,12 @@
-# 2トークン残余ゲーム y=13族 全称証明: 正本検証器12機械チェック part1（K1231 fit の正本監査・昇格判定はpart2）
+# 2トークン残余ゲーム y=13族 全称証明: 正本検証器14機械チェック part1+part2（K1231 fit の正本監査・observed→proved 昇格）
 
 - 実験名: vertical-fiber-two-token-y13-parametric-allz-proof-20261122
 - 対象族: H(R; (x,13); z), z >= 0, x >= 13, R >= 0（標準 11×11 とは無関係の数学的残余ゲーム族）
-- 対象item: [K1231](../../knowledge/items/K1231-two-token-y13-parametric-closed-form-fit.md)（fit・status: observed・その正本監査段階が本実験）
+- 対象item: [K1231](../../knowledge/items/K1231-two-token-y13-parametric-closed-form-fit.md)（fit出版時 observed→part1 出版時点でも observed→part2 出版で **observed→proved に昇格**）
 - 単一オーナー宣言: [2026-11-22-y13-universal-verifier-single-owner-note.md](../../log/2026-11-22-y13-universal-verifier-single-owner-note.md)（commit 7196cbd570c638ffbdcf8edfb17ccd8b6df8ead3・2026-11-22T17:59:40Z・part1+part2保持・K1231 fitレーンの宣言〔d3404db8・17:01:05Z〕はfitから全称証明段階まで保持を明示済みで自宣言が重複保持・互いに矛盾なし）
 - 実行環境: Python 3.12.14 標準ライブラリのみ・cgroup RAM 上限 1,090,519,040 bytes（約1.0 GiB）・2コア・x86_64
 
-## 機械構成（verify_y13_universal.py・SHA-256 b73d9aaa94f04f1f4922d84808ac7afe6f5bfb55631b4c990cae29734279141f・36,457 bytes・937行）
+## 機械構成（verify_y13_universal.py・part1出版時 SHA-256 b73d9aaa94f04f1f4922d84808ac7afe6f5bfb55631b4c990cae29734279141f・36,457 bytes・937行 → part2拡張版 SHA-256 079b49ad5d11c22c7c6c5f8d103eff9ee2194c7d587e7f2432172616c03c1114・50,865 bytes・1,314行）
 
 y=12 正本機械（K1152/K1162 part2・verify_y12_universal.py SHA-256
 e209297603f68c9a82a50f90cac0bc678211d1517f137b5d490dfca3c492eb04）と出版 cand13.py
@@ -91,6 +91,80 @@ cache-clear 版は 300 秒コマンド上限超過を実測記録済み・y=13 �
    （C11 抜き）は部分監査で正本 audit.json を上書きする。本実験では検査・計測後にフル 12 チェックを
    再実行して正本監査を再確定し byte-identical を確認した。）
 
+## part2: C1d 出版切片アンカー + 独立 census 消費者（2026-11-22 追加・observed→proved 昇格段階）
+
+part1 出版（commit ee3b6f73）で残した昇格工程（K1152/y=12・K1141/y=10 と同一手続き）を実行した。
+検証器は part1 正本を in-place に拡張（anchor block は y=12 part2 正本検証器〔SHA-256 e2092976…〕から
+verbatim 抽出・`Y` は関数ローカル変数のみで cand12/cand13 ブロックと干渉しない）。part1 の 12 チェックの
+byte は不変（census part 能力は出版 byte と同一・part2 実行で census-ordered/census-canonical は
+part1 出版 byte〔264d7cd8…/82fb8803…〕のまま再確認）。
+
+### C1d（出版固定 z 切片アンカーの y=13 特殊化・139,356 点・bad 0）
+
+出版 uniform closed form（z=8: K0999/K1000・z=9: K1001・z=10: K1011・z=15/16/17:
+K1065/K1077/K1087）のアンカー関数 A8u..A17u を x=13..159・R=1..x+61 で y=13 行
+（引数 (x,13,r)）と cand13 が一致することを機械照合（内訳: 6 z0 × x=13..159 × R=1..x+61 の
+アンカー掃引 129,654 点 ＋出版低 R 単一トークン縮約 R<=z+6（z0=15,16,17）の y=13 行照合
+〔cand13 vs single_token(x+13,z0,R)〕9,702 点。y=12 part2 の 130,092+9,768=139,860 点構成の鏡像）。
+**組み込み前事前検証（fail-closed）**: 各 z0 について x=13..45・R<=x+z0+30 の 14,157 点を
+出版アンカー×H_ordered×H_canonical×cand13 の 4 方照合で不一致 0
+（z 別 2,211/2,244/2,277/2,442/2,475/2,508）・低 R 縮約 9,702 点も不一致 0・約 2.2 秒
+（`scripts/preflight_c1d_y13.py`・結果 `output/preflight-c1d-y13.json`・SHA-256 a9307d33…・2 回実行
+byte-identical。y=10 でこの段階が K1087 転写初稿の評価順バグ 170 点を捕捉した実績があり、
+本族ではアンカーは y=12 正本からの verbatim 再転写のため 4 方照合で初めから一致）。
+z=15/16/17 の (y,d) 過渡セルと S<17/S==17 分岐は y=13 で到達不能（S=x+13>=26）。
+
+### C11r（独立 census 台帳消費者・450,080 点・bad 0・fail-closed）
+
+census_rows.py（y=13 版・第三実装）が z=0..79・x=13..70・R=0..x+z+15 の 4,640 行
+（450,080 点・値0点 224,203・エンジン状態計算〔LRU misses〕6,630,827・約 15 秒・maxrss 約 557MB）の
+行ごとの Thue-Morse 指数・値2/値1台帳（T/P 集合）・tail を出力した census.txt
+（829,622 bytes・4,640 行＋空行 80・SHA-256 505f05bf04c3819561707f42927da354fdefcdd315b1a3792b0c3e9eb1fe5989。
+tail アサート R>=x+z+14 の (x+13) mod 2 全行成立）。C11r は census.txt の全行を
+cand13 から再導出して T/P 集合・idx・tail を照合する（行重複・欠落・rows != 80*58・
+終端改行なしは FAIL-CLOSED）。census_rows.py の本体は y=5..y=10/y=12 出版版と同一の
+生 tuple 二重再帰で、本実行ホストの 1 GiB cgroup 制約のみ LRU 上限 1,600,000
+（CENSUS_CACHE_MAXSIZE）として明示キャップ（docstring 記載）。決定的純関数の
+memo 化は透過で、LRU 追い出しは固定訪問順の下で決定的。
+
+### part2 フル監査（14 チェック・overall PASS・total_points 6,942,579・total_bad 0）
+
+C1/C1b/C1d/C2/C2b/C3/C4/C4t/C7/C8/C9/C11/C11r/C12 を 1 コマンドで実行:
+C1d 139,356 点・C11r 450,080 点が part1 の 6,353,143 点に加算され
+**total_points 6,942,579・total_bad 0・型総数 234,180**（C4t は情報提示で bad 総計外）。
+merge corollary 1,391,747 点・tail corollary 217,342 点は part1 と不変のまま bad 0。
+audit.json（3,673 bytes・SHA-256 2f5f56c0da4578252db8bf12d536764562ded134e5bad45ca832c58b17424bb1d・
+stage 文言は part2）。
+
+### 決定性（part2・3 実行 byte-identical）
+
+run1（同一cwd）→ run2（同一cwd再実行）→ run3（隔離 tree/cwd/HOME + PYTHONHASHSEED=random・
+census_rows.py・preflight・両 census part も隔離側で再生成）の 3 実行で
+audit.json・census.txt・census-ordered.json・census-canonical.json・preflight-c1d-y13.json
+が全て byte-identical（census_rows.py は記録時にもう 1 回再実行し計 4 回 byte-identical）。
+
+### fail-closed 検査（part2・出版前に実施）
+
+4. census.txt の P 集合 1 桁を改ざん → C11r が行不一致として捕捉・監査 FAIL（rc=1・PASS 出力なし）。
+5. census.txt を一時退避（欠落）→ `FAIL-CLOSED: census.txt is missing; run census_rows.py first`。
+   （復元後のフル 14 チェック再実行で clean PASS・baseline と byte-identical を確認。
+   なお検証器は引数に未知の文字列を渡すと 0 チェック実行として空監査を書く仕様のため、
+   再現コマンドはチェック名を明示して実行すること。）
+
+### 昇格判定
+
+以上（part1 12 チェック全 PASS＋part2 C1d/C11r 追加・フル監査 14 チェック PASS・
+census_rows.py 第三実装・3 回 byte-identical・fail-closed 検査）により、
+**K1231（y=13 族閉形式 cand13）を observed→proved に昇格する**
+（AGENTS.md「同じ命題は同じ K 項目・新規採番なし」・K1152/y=12 の前例と同一手続き）。
+マージ命題の y=13 版（x<=z-14 → single_token(x+13,z,R)）・tail 値 (x+13) mod 2 も
+全称系として確定。B子に先行出版族の閉形式を逐語転写する構成は cand9（y=10 の B 子）・
+cand10（y=11 の B 子・K1141 全称）・cand11（y=12 の B 子・K1143）・cand12（y=13 の B 子・K1152 全称）
+の 4 連。
+なお現行 main の knowledge.yml に y=11（K1143）・y=12（K1152）実験機の CI step が存在しない
+（CI 登録は y=10/K1141 まで）ため、本実験も CI step を登録せず出版 byte を監査正本とする
+（直近 2 族と同一の扱い）。
+
 ## 再現コマンド
 
 ```sh
@@ -98,30 +172,24 @@ python3 verify_y13_universal.py                  # 12チェックのうち C11 �
 python3 verify_y13_universal.py C11ordered       # census part1（約13秒・約550-562MB）
 python3 verify_y13_universal.py C11canonical     # census part2（約16秒）
 python3 verify_y13_universal.py C1 C1b C2 C2b C3 C4 C4t C7 C8 C9 C11 C12  # part1 フル12チェック
-sha256sum verify_y13_universal.py output/audit.json output/census-ordered.json output/census-canonical.json
+python3 census_rows.py                            # census.txt（約15秒・約557MB）
+python3 scripts/preflight_c1d_y13.py              # C1d 事前検証（約2.2秒）
+python3 verify_y13_universal.py C1 C1b C1d C2 C2b C3 C4 C4t C7 C8 C9 C11 C11r C12  # part2 フル14チェック
+sha256sum verify_y13_universal.py census_rows.py scripts/preflight_c1d_y13.py output/audit.json output/census.txt output/census-ordered.json output/census-canonical.json output/preflight-c1d-y13.json
 ```
 
-実行細部は [published_run.txt](output/published_run.txt) 記録の通り。
-
-## part2（未着手・本宣言の継続）
-
-part2 は y=12 の手続き（K1141/K1143/K1152/K1162）と同型で別コミットとして実施する:
-
-1. preflight_c1d_y13.py: 出版固定 z 切片アンカー（z=8/9/10/15/16/17）の 4 方照合 pre-flight
-   （cand13(z0,x,R)==single_token(x+13,z0,R) 低 R 縮約を含む）。
-2. 検証器 in-place 拡張: C1d（アンカー A8u..A17u の y=13 行 x=13..159・R<=x+61）+ C11r（census_rows.py
-   第三実装〔z=0..79・x=13..70・R=0..x+z+14〕の行ごとの cand13 再導出照合・fail-closed）。
-3. フル14チェック 3 回 byte-identical + fail-closed 検査の後、**K1231 を同番号で observed→proved に昇格**
-   （AGENTS.md「同じ命題は同じ K 項目・新規採番なし」）。
+実行細部（part1・part2 両段階）は [published_run.txt](output/published_run.txt) 記録の通り。
 
 ## 解釈規約
 
-- K1231（y=13族閉形式候補 cand13）の status は本 part1 出版後も **observed** のまま。
+- K1231（y=13族閉形式 cand13）の status は本 part2 の出版（14チェック監査 PASS・3回 byte-identical
+  記録・census 第三実装・item 同番号更新）をもって **observed→proved に昇格**した
+  （part1 出版時点では observed のままだった。K1152/y=12 の前例と同一手続き・新規採番なし）。
   有限照合は有限観察の機械的証拠であって、trust 境界（選択肢分解の健全性・mex 恒等式・有限型空間の完全性）は
-  y=1..12 系列と同一の機械分類に依存する。observed→proved の昇格判定は part2（C1d 出版切片アンカーの
-  y=13 特殊化 + census_rows.py 第三実装 + 3 回 byte-identical）で行う。B子に先行出版族の閉形式を逐語
-  転写する構成は cand10（y=11 正本機械の B 子）・cand11（y=12 正本機械の B 子）に続き
-  cand12（y=13 正本機械の B 子・K1152 全称）で 3 連。
+  y=1..13 系列と同一の機械分類に依存する。C1d アンカー切片の正しさは
+  K0999/K1000/K1001/K1011/K1065/K1077/K1087 の主張のy=13行である。
+  B子に先行出版族の閉形式を逐語転写する構成は cand10（y=11 正本機械の B 子）・cand11（y=12 正本機械の
+  B 子）に続き cand12（y=13 正本機械の B 子・K1152 全称）で 3 連。
 - 標準 11×11 の空盤勝敗・二石root {49,60}/{59,60}・S2 {59,60}・class 1/2/4 はすべて **UNKNOWN** のまま。
   本実験は残余ゲーム族 H(R;(x,13);z) の数学的構造の証明であり、標準盤の勝敗には一切言及しない。
 - 3トークン以上・y>=14 族・固定幅・q点版安定化長は範囲外。

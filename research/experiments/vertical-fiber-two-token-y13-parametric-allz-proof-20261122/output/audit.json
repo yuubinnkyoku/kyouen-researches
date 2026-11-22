@@ -17,6 +17,12 @@
       "ordered_points": 445440,
       "points": 890880
     },
+    "C11r": {
+      "bad": 0,
+      "desc": "independent raw-double-recursion census ledger (census_rows.py third implementation, census.txt) re-derived from cand13 row by row, R=0..x+z+15, z=0..79, x=13..70 (T/P sets, Thue-Morse index, tail)",
+      "points": 450080,
+      "rows": 4640
+    },
     "C12": {
       "bad": 0,
       "desc": "deep closed grid z=0..120 x=13..120 R<=x+z+16",
@@ -26,6 +32,13 @@
       "bad": 0,
       "desc": "single_token/y=12-child/x=13 merger raw anchors",
       "points": 42041
+    },
+    "C1d": {
+      "anchor_bad": 0,
+      "bad": 0,
+      "desc": "published z=8/9/10/15/16/17 uniform slices (y=13) vs cand13, x=13..159 R<=x+61; + low-R single-token reduction R<=z+6 (z=15..17)",
+      "lowR_bad": 0,
+      "points": 139356
     },
     "C2": {
       "bad": 0,
@@ -79,8 +92,10 @@
   "checks_run": [
     "C1",
     "C11",
+    "C11r",
     "C12",
     "C1b",
+    "C1d",
     "C2",
     "C2b",
     "C3",
@@ -105,9 +120,9 @@
   "experiment": "vertical-fiber-two-token-y13-parametric-allz-proof-20261122",
   "family": "H(R;(x,13);z), z>=0, x>=13, R>=0",
   "overall": "PASS",
-  "stage": "part1 (12-check promotion machine; the promotion decision K1231 observed->proved is reserved for part2: C1d published-slice anchors at y=13 + census_rows.py third implementation; census parts re-anchored via bounded-memoization twins on a 1 GiB-cgroup host)",
+  "stage": "part2 (C1d published-slice anchors at y=13 and the independent census.txt consumer incorporated; census parts re-anchored via bounded-memoization twins on a 1 GiB-cgroup host; on overall PASS with 3 byte-identical audit runs K1231 is promoted observed->proved)",
   "total_bad": 0,
-  "total_points": 6353143,
+  "total_points": 6942579,
   "type_count": 234180,
-  "verifier_sha256": "b73d9aaa94f04f1f4922d84808ac7afe6f5bfb55631b4c990cae29734279141f"
+  "verifier_sha256": "079b49ad5d11c22c7c6c5f8d103eff9ee2194c7d587e7f2432172616c03c1114"
 }

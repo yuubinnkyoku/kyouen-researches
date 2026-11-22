@@ -121,3 +121,89 @@ notes
   mirroring the y=12 procedure (K1152/K1162).
 - interpretation: standard 11x11 empty board, two-stone roots {49,60}/{59,60},
   S2 {59,60}, classes 1/2/4 all remain UNKNOWN. This machine makes no claim about them.
+
+================================================================
+part2 — C1d pre-flight, census_rows.py, full 14-check audit
+================================================================
+実行記録（2026-11-22・part2・同一単一オーナー宣言 7196cbd570c638ffbdcf8edfb17ccd8b6df8ead3〔17:59:40Z・part1+part2保持〕）
+
+verifier update (in-place, template-regenerated):
+verify_y13_universal.py: 50,865 bytes, 1,314 lines
+  SHA-256 079b49ad5d11c22c7c6c5f8d103eff9ee2194c7d587e7f2432172616c03c1114
+  additions: check_C1d (anchors A8u..A17u verbatim block extracted from the
+  published y=12 part2 verifier e2092976...; Y is function-local so no interference with
+  the cand12/cand13 blocks) + check_C11r (row-by-row census.txt consumer, fail-closed).
+  part1 12-check bytes unchanged in behaviour; census part files re-verified byte-identical
+  to the part1 publication (264d7cd8.../82fb8803...).
+  (part1 verifier byte kept as reference: 36,457 bytes, SHA-256 b73d9aaa...)
+
+census_rows.py (third implementation, y=13):
+  SHA-256 85bafd2e497d4d1322dada256fcf1895e841fe380ae03f68c77b06dca4c598e3 (3,656 bytes)
+  same raw tuple double recursion as the published y=5/y=6/y=7/y=8/y=9/y=10/y=12 versions;
+  only change is the explicit LRU cap CENSUS_CACHE_MAXSIZE=1,600,000 for the ~1.0 GiB
+  cgroup of this host (documented in the docstring). z=0..79, x=13..70, R=0..x+z+15.
+$ python3 census_rows.py
+  rows 4640 + 80 blank lines, points 450080, zero-value 224203
+  misses (distinct-state computations) 6,630,827, currsize 1,600,000 (cap reached, deterministic)
+  wall ~14.9s, maxrss 556,652KB (~557MB)
+  output/census.txt 829,622 bytes, SHA-256 505f05bf04c3819561707f42927da354fdefcdd315b1a3792b0c3e9eb1fe5989
+  census_rows.py rerun byte-identical (4 runs total incl. this record run: same-cwd run1,
+  isolated tree/cwd/HOME run2 with PYTHONHASHSEED=random with census regenerated on the
+  isolated side, same-cwd run3, same-cwd run4)
+
+C1d pre-flight (fail-closed, before anchor incorporation):
+$ python3 scripts/preflight_c1d_y13.py
+  anchor box z0 in {8,9,10,15,16,17}, x=13..45, R=1..x+z0+30, 4-way
+  (anchor vs H_ordered vs H_canonical vs cand13): 14,157 pts bad 0
+  (per z: 2211/2244/2277/2442/2475/2508), wall ~2.2s
+  low-R reduction z0 in {15,16,17}, x=13..159, R=1..z0+6: 9,702 pts bad 0
+  output/preflight-c1d-y13.json SHA-256 a9307d33e81314728ff7a3e3e3634fb5fe6c0f175b00fadc1fc0c90c844145b9
+  rerun byte-identical (2 runs)
+
+full 14-check audit (run 1/3, same cwd):
+$ python3 verify_y13_universal.py C1 C1b C1d C2 C2b C3 C4 C4t C7 C8 C9 C11 C11r C12
+  C1: 21945/0  C1b: 42041/0  C1d: 139356/0 (anchor sweep 129,654 + lowR 9,702)
+  C2: 226527/0  C2b: 19052/0  C3: 1155/0
+  C4: 611504/0 C4t: clip27 violations 2987 first (60,90,90) (informational)
+  C7: 200000/0 C8: 953151/0  C9: 913194/0  C11: 890880/0 (parts byte-identical to
+  part1 publication)  C11r: 450080/0 (rows 4640)  C12: 1862190/0
+  overall PASS total_points 6942579 total_bad 0 types 234180
+  merge corollary 1391747/0, tail corollary 217342/0
+  wall ~33s
+  output/audit.json 3,673 bytes
+  SHA-256 2f5f56c0da4578252db8bf12d536764562ded134e5bad45ca832c58b17424bb1d
+
+determinism (part2, 3 runs):
+  run1 same-cwd / run2 same-cwd / run3 isolated tree+cwd+HOME with PYTHONHASHSEED=random,
+  census.txt, preflight json and both census part files regenerated on the isolated side:
+  audit.json, census.txt, census-ordered.json, census-canonical.json,
+  preflight-c1d-y13.json all byte-identical.
+  SHA-256: audit 2f5f56c0..., census.txt 505f05bf..., census-ordered 264d7cd8...,
+  census-canonical 82fb8803..., preflight a9307d33...
+  (Note: passing an unknown argument list runs zero checks and writes an empty audit;
+  always name the checks explicitly. A full rerun after such an overwrite was re-verified
+  byte-identical to the run1 baseline before publication.)
+
+fail-closed tests (part2, pre-publication):
+tamper 4: one digit of a P set in census.txt
+  -> C11r row mismatch (bad 1), audit FAIL, rc=1, no PASS output
+tamper 5: census.txt temporarily removed
+  -> FAIL-CLOSED: census.txt is missing; run census_rows.py first
+restore: census.txt restored; full 14-check rerun clean PASS, byte-identical
+  to the baseline (audit.json 2f5f56c0..., cmp).
+
+promotion:
+  K1231 observed -> proved with this part2 publication (14-check audit PASS, 3
+  byte-identical runs, third-implementation census, same-K-item update, no renumber),
+  mirroring K1152 (y=12). Merge y=13 version (x<=z-14) and tail value (x+13) mod 2
+  promoted with the claim.
+
+notes (part2):
+- K1231 status: proved (with this publication).
+- knowledge.yml CI steps for the y=13 machine are NOT registered by this lane: current
+  main knowledge.yml contains universal-verifier CI steps only up to y=10 (K1141); the
+  y=11 (K1143) and y=12 (K1152) machines are likewise unregistered there, so the
+  published experiment bytes are the audit of record for y=13 (same treatment as the
+  last two families).
+- interpretation: standard 11x11 empty board, two-stone roots {49,60}/{59,60},
+  S2 {59,60}, classes 1/2/4 all remain UNKNOWN. This machine makes no claim about them.
