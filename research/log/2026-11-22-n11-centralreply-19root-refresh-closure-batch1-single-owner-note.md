@@ -1912,3 +1912,54 @@ scrutiny owner、C++第二実装 gate pin `9193f5b6...` 前例・不変)。
   batch 14 (class 23101, Part AF) は並走がprobe継続中で本レーン非接触。
 - 本status update observed HEAD-before-push: 実行時の最新mainを
   コミットメッセージに記録。
+
+## Part AH (read-only analysis, declaration 2026-11-22): batch 12 (class 8106) n005/n006 if-adopted 分解 (verdict不消費・実行前に宣言)
+
+Part ADがopen itemとして掲げた「n005/n006 if-adopted分解 (Part V/R/AB流・
+8 probed行のWIN-only / LOSS-only / full)」を単一オーナーとして宣言する。
+solver探索なし・verdict不消費・新規主張ゼロのwhat-if計画・監査計算。
+
+- 対象 (2実験dir):
+  (a) `research/experiments/n11-class8106-n005n006-base-control-20261122/`
+      - published Part Y refresh scenario script `refresh_19root_frontier.py`
+        (sha256 `88671526...`) を本ホストで2回実行し、3出力をpublished
+        Part Y正本 (`n11-central-reply-8784-closure-reaudit-20261122`) と
+        byte一致させる (cross-host再現・run間byte一致)。
+      - 入力はpublished正本からcommit-pinnedに取得しsha固定: dependency-graph
+        `54f9c364...`・merged chain cache 6,027行 `95e868d6...`・update8 plan
+        `b658290a...`・Board source `954d3a10...`・evidence policy
+        `78655e94...`・quarantine registry `81d23160...`。
+      - probe-worklist.csv (65,154行, `1807e4d2...`) は再生成可能なため
+        sha記録のみで再出版しない (Part AB流)。
+  (b) `research/experiments/n11-centralreply-class8106-win-n005n006-ifadopted-20261122/`
+      - increments: batch-12 raw 16件 (p1/p2 x 8キー)・status.log・batch-keys
+        (sha `de55df83...`, scaffold `d333bb2c`正本) からfail-closed生成
+        (2-pass一致・status PASS行照合・key/legal機械照合・手転写ゼロ。
+        batch-12は宣言hostが全行実行のため4-way host交差は不要・3-way
+        (p1/p2/status) でfail-closed)。3種: full 8行 (n001-n004/n007/n008
+        LOSS + n005/n006 WIN)・win-only 2行 (n005/n006)・loss-only 6行
+        (n001-n004/n007/n008)。**win-only 2行はclosure grind初の複数WIN
+        increment** (z003の1行を超える)。
+      - scenario caches: canonical 6,027行 + increment をpublished union
+        merger (fail-closed・WIN/LOSS衝突0・重複0・selftest) でmergeした
+        分析用cache 3種 (正本ではない)。
+      - scenario refresh: scenario cache向けにadaptしたscenario script
+        (docstring・ROOT行・CACHE行・sha pin行のみ変更・diff検証) を各2回
+        実行しrun間byte一致を確認。baseline guarantee (root first=27
+        119/119 free thirds・per-root free coverage不変) をmachine gateで確認。
+      - delta抽出: `compare_deltas_batch12.py` (Part AB版をadapt) が
+        excluded_now flip集合 (frozen graphのWIN子保持機械特定)・update8
+        newly-resolved indices (increment行にgate)・加法性指標・per-root
+        greedy表・win-hit groups群を機械算出し、全class_status_countを
+        再実行してpublished summaryと一致をassertしてからdelta報告
+        (Board fail-closed free検証込み)。
+- 主張と消費規則: 本分解はread-only what-if解析・verdict不消費。n005/n006
+  のWINは引き続きscrutiny owner (C++第二実装 gate pin `9193f5b6...` 前例)
+  待ち。標準11x11空盤・19 central-reply roots・class 8106 (n009-n052未着手)
+  は本解析のどの時点でもUNKNOWNのまま。nodes数を勝敗として読まない。
+- 並走との不接触: batch 14 (Part AF, class 23101) のprobe中ファイル・
+  publishedファイルには一切接触しない (読み取りのみ)。宣言直前に最新mainを
+  再取得し、同scope対抗宣言なし・`n005n006-ifadopted` dir不在・Part AH採番
+  未使用を確認済み。同一スコープの宣言がmainに存在する場合は本宣言を破棄
+  して着手しない。
+- 本amendment observed HEAD-before-push: 実行時の最新mainをコミットメッセージに記録。
