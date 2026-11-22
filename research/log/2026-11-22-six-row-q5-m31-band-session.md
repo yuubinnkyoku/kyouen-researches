@@ -57,3 +57,13 @@
 - 並走レーンは n11 s4bd のみアクティブ（01:33Z HEAD `2b7b4db`）。他レーンの占有物
   （(6,6) m=25 crunch・(6,7) 6×22）には非接触を維持。
 - 今回の K 番号: K1216（HEAD `2b7b4db` 時点で未使用を確認済み）。
+
+## post-push live-pin（出版確定・2026-11-22）
+
+- 実験dir 41ファイル: commit `d6e882055c80d52ede92d09beca05511da78b5dd`
+- K1216 + 本ログ初版: commit `880e28866341a5ea8cb9a939882dbefbab9c469d`
+- knowledge README bullet（K1216 を追記・新README blob `e860fbc5`）: commit `1ac648cf328f6a2f6c5405dba29bd492813ac78b`
+- fetch-back検証: 7代表ファイル（witness・manifest・実験README・surgery_deep.js・
+  run_verify_suite.sh・K1216・本ログ）のgit blob SHAが全部一致
+  （witness `6e60d571`・K1216 `055d26fe`ほか・commit `1ac648cf` pin）。
+  出版完了。6×32 t2 resume は次回実行へ。
