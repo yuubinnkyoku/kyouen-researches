@@ -1,0 +1,9 @@
+# Attempted run of the published cache_aware_reply27_cardinality.py over the fresh-regen merged cache
+# host: n11 long-term lane merge run (2026-11-22), Python 3.12.14, stdlib only; package installation is forbidden in this sandbox and numpy/scipy are unavailable; no substitute implementation may be invented
+# command: python3 /home/user/work/repo/research/experiments/n11-frontier-selection-20261005/scripts/cache_aware_reply27_cardinality.py --cache output/merged-exact-s5-after-js-probe-13-plus-freshregen-20261121.cache --out output/cardinality-after-fresh-regen.json
+# outcome: ENV-BLOCKED at import (ModuleNotFoundError: numpy) BEFORE any load or solve; delegated per the merge-run declaration; with the machine-checked 119/119 secured coverage of frontier-after-fresh-regen.json there is no unsecured third-move vertex, so the minimum additional UNKNOWN-class cover is vacuously 0 classes (recorded, not asserted as a run of this script)
+
+Traceback (most recent call last):
+  File "/home/user/work/repo/research/experiments/n11-frontier-selection-20261005/scripts/cache_aware_reply27_cardinality.py", line 23, in <module>
+    import numpy as np
+ModuleNotFoundError: No module named 'numpy'
