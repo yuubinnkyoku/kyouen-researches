@@ -2489,3 +2489,32 @@ published宣言を変更なしで実行した。対抗宣言・競合なし。ve
   class 16930他全classはどの時点でも**UNKNOWNのまま**。nodes数を勝敗として読まない。
 - 本status updateのobserved HEAD-before-push: `e0f26f11` (note blob sha1ロック
   `ac8090f6...` で更新、fetch-backで追記確認)。
+
+
+## Part AN (read-only analysis, declaration 2026-11-22): closure class 5830 batch-15 r001/r002 IF-ADOPTED分解 (verdict不消費)
+
+batch 15 (Part AK, class 5830) はwave-1でWIN-HALT規則が2回発火して停止した
+(r001/r002: 2-pass node-exact result 1, 2,521,302 / 5,973,924 nodes・いずれもlegal 82;
+r003/r004は15M budget枯損 = honest UNKNOWN, result 0, nodes==budget)。第三実装verdict-level
+交叉検証 (Part AL, 51/51 gates) 出版済み。Part V/R/AB/AH/AI と同一のif-adopted分解を
+r001/r002の2 WIN行に読み取り専用で適用する。
+
+- 対象: `research/experiments/n11-centralreply-class5830-win-r001r002-ifadopted-20261122/`。
+- 入力はpublished正本のみ: batch-15正本 (8 raws + status.log + batch-keys 52キー) を
+  本ホストでmain再取得により10/10 byte再検証済み (実験dir一覧に5830系はbatch-15正本のみ、
+  対抗宣言・if-adopted先行dirなしを確認)。BASE = Part AH base control canonical
+  (merged cache 6,027行・sha256 `95e868d6...`)。r003/r004枯損行 (result 0) はverdictでは
+  ないため型ゲートで除外し、増分はWINのみ2行。PLOSS2/PFULL4相当のシナリオは存在しない
+  (解決LOSS行ゼロ; 「全probed行採用」== WIN 2行であることを機械表明する)。
+- 方法: Part AI 機材流用 (increments maker adapter、sha-pinned s5_union_merge
+  `90711961...` (selftest PASS)、pinned Part Y refresh script の4-hunk adapt
+  (docstring/ROOT/CACHE path/CACHE_SHA_EXPECTEDのみ) を2回実行してbyte一致必須、
+  delta extractor はclass_status_counts を graph+update8+cache から再計算し
+  BASEとシナリオのpublished summary と一致するまでfail-closed)。solver探索なし・
+  新規verdictゼロ・canonical cache不変更。
+- verdict不消費: r001/r002の採用判断はscrutiny ownerのC++第二実装ゲート pin
+  `9193f5b6...` 待ちのまま。r005-r052 (48キー) は不着手。標準11×11空盤・
+  19 central-reply roots・class 5830他全classはどの時点でもUNKNOWNのまま。
+  nodes数を勝敗として読まない。
+- 本宣言 observed HEAD-before-push: push時の最新main HEADをコミットメッセージに記録し、
+  push直前にnote blob sha再照合する。競合時は破棄。
