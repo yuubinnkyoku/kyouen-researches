@@ -1,0 +1,2192 @@
+{
+ "schema": "n11-s4bd-freshregen-merge-manifest-v1",
+ "base_cache": {
+  "path": "research/experiments/n11-reply27-s5-jsreplica-probe-10376293541461626880-40960-20261121/output/merged-exact-s5-after-js-probe-13.cache",
+  "sha256": "60e0dc3476920d4e99043dd4f132398ea72e4dfdcd9f3dbb8fc686ba65bc28c6",
+  "rows": 5756
+ },
+ "fresh_increment": {
+  "declared_s5_keys": 101,
+  "s5_rows_added": 101,
+  "direct_settled": 100,
+  "derived_rows": [
+   {
+    "id": "k012",
+    "key": [
+     1152921504607899649,
+     536870912
+    ],
+    "verdict": 2,
+    "nodes": 0,
+    "derived": true
+   }
+  ],
+  "s6_witness": {
+   "key": [
+    1152921504675009536,
+    536870912
+   ],
+   "result": 2,
+   "nodes": 5859060,
+   "pass_determinism": "identical result+nodes in both passes",
+   "published_oct12_nodes": 5859060
+  },
+  "target_s5_fresh_result": 0,
+  "target_s5_row_is_derived": true
+ },
+ "rows": [
+  {
+   "id": "k001",
+   "key": [
+    1152921504606851072,
+    805306370
+   ],
+   "verdict": 2,
+   "nodes": 5925730,
+   "derived": false
+  },
+  {
+   "id": "k002",
+   "key": [
+    1152921504606851585,
+    536870912
+   ],
+   "verdict": 2,
+   "nodes": 4425857,
+   "derived": false
+  },
+  {
+   "id": "k003",
+   "key": [
+    1152921504606852097,
+    536870912
+   ],
+   "verdict": 2,
+   "nodes": 4292117,
+   "derived": false
+  },
+  {
+   "id": "k004",
+   "key": [
+    1152921504607896576,
+    536870916
+   ],
+   "verdict": 2,
+   "nodes": 10011197,
+   "derived": false
+  },
+  {
+   "id": "k005",
+   "key": [
+    1152921504607896576,
+    536870920
+   ],
+   "verdict": 2,
+   "nodes": 4581929,
+   "derived": false
+  },
+  {
+   "id": "k006",
+   "key": [
+    1152921504607896576,
+    536879104
+   ],
+   "verdict": 2,
+   "nodes": 7019730,
+   "derived": false
+  },
+  {
+   "id": "k007",
+   "key": [
+    1152921504607896576,
+    536887296
+   ],
+   "verdict": 2,
+   "nodes": 7564461,
+   "derived": false
+  },
+  {
+   "id": "k008",
+   "key": [
+    1152921504607896576,
+    553648128
+   ],
+   "verdict": 2,
+   "nodes": 11267484,
+   "derived": false
+  },
+  {
+   "id": "k009",
+   "key": [
+    1152921504607896576,
+    570425344
+   ],
+   "verdict": 2,
+   "nodes": 5422811,
+   "derived": false
+  },
+  {
+   "id": "k010",
+   "key": [
+    1152921504607896576,
+    34896609280
+   ],
+   "verdict": 2,
+   "nodes": 6070834,
+   "derived": false
+  },
+  {
+   "id": "k011",
+   "key": [
+    1152921504607898624,
+    536870912
+   ],
+   "verdict": 2,
+   "nodes": 7959630,
+   "derived": false
+  },
+  {
+   "id": "k013",
+   "key": [
+    1152921504612090880,
+    536870912
+   ],
+   "verdict": 2,
+   "nodes": 4801030,
+   "derived": false
+  },
+  {
+   "id": "k014",
+   "key": [
+    1152921504616285184,
+    536870912
+   ],
+   "verdict": 2,
+   "nodes": 4035893,
+   "derived": false
+  },
+  {
+   "id": "k015",
+   "key": [
+    1152921513197831168,
+    536870912
+   ],
+   "verdict": 2,
+   "nodes": 8699028,
+   "derived": false
+  },
+  {
+   "id": "k016",
+   "key": [
+    1152921521787765760,
+    536870912
+   ],
+   "verdict": 2,
+   "nodes": 5222810,
+   "derived": false
+  },
+  {
+   "id": "k017",
+   "key": [
+    1152939096793940992,
+    536870912
+   ],
+   "verdict": 2,
+   "nodes": 5916458,
+   "derived": false
+  },
+  {
+   "id": "k018",
+   "key": [
+    1152956688979985408,
+    536870912
+   ],
+   "verdict": 2,
+   "nodes": 6065498,
+   "derived": false
+  },
+  {
+   "id": "k019",
+   "key": [
+    1188950301626859520,
+    671088640
+   ],
+   "verdict": 2,
+   "nodes": 4399355,
+   "derived": false
+  },
+  {
+   "id": "k020",
+   "key": [
+    1224979098645824512,
+    536870912
+   ],
+   "verdict": 2,
+   "nodes": 3451027,
+   "derived": false
+  },
+  {
+   "id": "k021",
+   "key": [
+    1297036692683752448,
+    4
+   ],
+   "verdict": 2,
+   "nodes": 6235999,
+   "derived": false
+  },
+  {
+   "id": "k022",
+   "key": [
+    1297036692683752448,
+    8
+   ],
+   "verdict": 2,
+   "nodes": 9843332,
+   "derived": false
+  },
+  {
+   "id": "k023",
+   "key": [
+    1297036692683752448,
+    16
+   ],
+   "verdict": 2,
+   "nodes": 3980754,
+   "derived": false
+  },
+  {
+   "id": "k024",
+   "key": [
+    1297036692683752448,
+    32
+   ],
+   "verdict": 2,
+   "nodes": 6441192,
+   "derived": false
+  },
+  {
+   "id": "k025",
+   "key": [
+    1297036692683752448,
+    128
+   ],
+   "verdict": 2,
+   "nodes": 3641949,
+   "derived": false
+  },
+  {
+   "id": "k026",
+   "key": [
+    1297036692683752448,
+    8192
+   ],
+   "verdict": 2,
+   "nodes": 9543836,
+   "derived": false
+  },
+  {
+   "id": "k027",
+   "key": [
+    1297036692683752448,
+    32768
+   ],
+   "verdict": 2,
+   "nodes": 4200271,
+   "derived": false
+  },
+  {
+   "id": "k028",
+   "key": [
+    1297036692683752448,
+    131072
+   ],
+   "verdict": 2,
+   "nodes": 8492184,
+   "derived": false
+  },
+  {
+   "id": "k029",
+   "key": [
+    1297036692683752448,
+    262144
+   ],
+   "verdict": 2,
+   "nodes": 6042214,
+   "derived": false
+  },
+  {
+   "id": "k030",
+   "key": [
+    1297036692683752448,
+    16777216
+   ],
+   "verdict": 2,
+   "nodes": 7806330,
+   "derived": false
+  },
+  {
+   "id": "k031",
+   "key": [
+    1297036692683752448,
+    33554432
+   ],
+   "verdict": 2,
+   "nodes": 3214367,
+   "derived": false
+  },
+  {
+   "id": "k032",
+   "key": [
+    1297036692683752448,
+    134217728
+   ],
+   "verdict": 2,
+   "nodes": 5766864,
+   "derived": false
+  },
+  {
+   "id": "k033",
+   "key": [
+    1297036692683752448,
+    268435456
+   ],
+   "verdict": 2,
+   "nodes": 3589382,
+   "derived": false
+  },
+  {
+   "id": "k034",
+   "key": [
+    1297036692683752448,
+    536870912
+   ],
+   "verdict": 2,
+   "nodes": 7123492,
+   "derived": false
+  },
+  {
+   "id": "k035",
+   "key": [
+    1297036692683752448,
+    34359738368
+   ],
+   "verdict": 2,
+   "nodes": 6369598,
+   "derived": false
+  },
+  {
+   "id": "k036",
+   "key": [
+    1297036692683752449,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 3504651,
+   "derived": false
+  },
+  {
+   "id": "k037",
+   "key": [
+    1297036692683752450,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 4352577,
+   "derived": false
+  },
+  {
+   "id": "k038",
+   "key": [
+    1297036692683752452,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 4597825,
+   "derived": false
+  },
+  {
+   "id": "k039",
+   "key": [
+    1297036692683752456,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 7412429,
+   "derived": false
+  },
+  {
+   "id": "k040",
+   "key": [
+    1297036692683752464,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 3528576,
+   "derived": false
+  },
+  {
+   "id": "k041",
+   "key": [
+    1297036692683752480,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 3983104,
+   "derived": false
+  },
+  {
+   "id": "k042",
+   "key": [
+    1297036692683752512,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 3734569,
+   "derived": false
+  },
+  {
+   "id": "k043",
+   "key": [
+    1297036692683752576,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 2996288,
+   "derived": false
+  },
+  {
+   "id": "k044",
+   "key": [
+    1297036692683752704,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 4352577,
+   "derived": false
+  },
+  {
+   "id": "k045",
+   "key": [
+    1297036692683752960,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 2954632,
+   "derived": false
+  },
+  {
+   "id": "k046",
+   "key": [
+    1297036692683754496,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 7106367,
+   "derived": false
+  },
+  {
+   "id": "k047",
+   "key": [
+    1297036692683756544,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 5221923,
+   "derived": false
+  },
+  {
+   "id": "k048",
+   "key": [
+    1297036692683760640,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 14122712,
+   "derived": false
+  },
+  {
+   "id": "k049",
+   "key": [
+    1297036692683768832,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 3960110,
+   "derived": false
+  },
+  {
+   "id": "k050",
+   "key": [
+    1297036692683785216,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 10298632,
+   "derived": false
+  },
+  {
+   "id": "k051",
+   "key": [
+    1297036692683817984,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 2765972,
+   "derived": false
+  },
+  {
+   "id": "k052",
+   "key": [
+    1297036692683883520,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 4100570,
+   "derived": false
+  },
+  {
+   "id": "k053",
+   "key": [
+    1297036692684014592,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 4133815,
+   "derived": false
+  },
+  {
+   "id": "k054",
+   "key": [
+    1297036692684276736,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 5975893,
+   "derived": false
+  },
+  {
+   "id": "k055",
+   "key": [
+    1297036692685849600,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 2691082,
+   "derived": false
+  },
+  {
+   "id": "k056",
+   "key": [
+    1297036692687946752,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 5645288,
+   "derived": false
+  },
+  {
+   "id": "k057",
+   "key": [
+    1297036692692141056,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 4721061,
+   "derived": false
+  },
+  {
+   "id": "k058",
+   "key": [
+    1297036692700529664,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 3353183,
+   "derived": false
+  },
+  {
+   "id": "k059",
+   "key": [
+    1297036692717306880,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 3972735,
+   "derived": false
+  },
+  {
+   "id": "k060",
+   "key": [
+    1297036692750861312,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 5026776,
+   "derived": false
+  },
+  {
+   "id": "k061",
+   "key": [
+    1297036692817970176,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 2724895,
+   "derived": false
+  },
+  {
+   "id": "k062",
+   "key": [
+    1297036693220623360,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 2225177,
+   "derived": false
+  },
+  {
+   "id": "k063",
+   "key": [
+    1297036694831236096,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 10906288,
+   "derived": false
+  },
+  {
+   "id": "k064",
+   "key": [
+    1297036696978719744,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 6137538,
+   "derived": false
+  },
+  {
+   "id": "k065",
+   "key": [
+    1297036701273687040,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 5011558,
+   "derived": false
+  },
+  {
+   "id": "k066",
+   "key": [
+    1297036709863621632,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 5002748,
+   "derived": false
+  },
+  {
+   "id": "k067",
+   "key": [
+    1297036727043490816,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 8344175,
+   "derived": false
+  },
+  {
+   "id": "k068",
+   "key": [
+    1297036761403229184,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 6522725,
+   "derived": false
+  },
+  {
+   "id": "k069",
+   "key": [
+    1297036830122705920,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 3670909,
+   "derived": false
+  },
+  {
+   "id": "k070",
+   "key": [
+    1297036967561659392,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 5849898,
+   "derived": false
+  },
+  {
+   "id": "k071",
+   "key": [
+    1297037242439566336,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 2745800,
+   "derived": false
+  },
+  {
+   "id": "k072",
+   "key": [
+    1297041090730263552,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 4259034,
+   "derived": false
+  },
+  {
+   "id": "k073",
+   "key": [
+    1297045488776774656,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 7696380,
+   "derived": false
+  },
+  {
+   "id": "k074",
+   "key": [
+    1297071877055841280,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 5626717,
+   "derived": false
+  },
+  {
+   "id": "k075",
+   "key": [
+    1297107061427930112,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 7147572,
+   "derived": false
+  },
+  {
+   "id": "k076",
+   "key": [
+    1297177430172107776,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 5461211,
+   "derived": false
+  },
+  {
+   "id": "k077",
+   "key": [
+    1297318167660463104,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 3182164,
+   "derived": false
+  },
+  {
+   "id": "k078",
+   "key": [
+    1297599642637173760,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 2973580,
+   "derived": false
+  },
+  {
+   "id": "k079",
+   "key": [
+    1301540292311122944,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 3454253,
+   "derived": false
+  },
+  {
+   "id": "k080",
+   "key": [
+    1306043891938493440,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 8170286,
+   "derived": false
+  },
+  {
+   "id": "k081",
+   "key": [
+    1315051091193234432,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 5786536,
+   "derived": false
+  },
+  {
+   "id": "k082",
+   "key": [
+    1369094286721680384,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 11230988,
+   "derived": false
+  },
+  {
+   "id": "k083",
+   "key": [
+    1585267068835464192,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 5048845,
+   "derived": false
+  },
+  {
+   "id": "k084",
+   "key": [
+    1873497444987175936,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 4720547,
+   "derived": false
+  },
+  {
+   "id": "k085",
+   "key": [
+    3602879701897446400,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 2742740,
+   "derived": false
+  },
+  {
+   "id": "k086",
+   "key": [
+    5908722711111140352,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 3182164,
+   "derived": false
+  },
+  {
+   "id": "k087",
+   "key": [
+    10376293541461626881,
+    4
+   ],
+   "verdict": 2,
+   "nodes": 6366754,
+   "derived": false
+  },
+  {
+   "id": "k088",
+   "key": [
+    10376293541461626881,
+    8
+   ],
+   "verdict": 2,
+   "nodes": 3691111,
+   "derived": false
+  },
+  {
+   "id": "k089",
+   "key": [
+    10376293541461626881,
+    16
+   ],
+   "verdict": 2,
+   "nodes": 3638190,
+   "derived": false
+  },
+  {
+   "id": "k090",
+   "key": [
+    10376293541461626881,
+    32
+   ],
+   "verdict": 2,
+   "nodes": 3777766,
+   "derived": false
+  },
+  {
+   "id": "k091",
+   "key": [
+    10376293541461626881,
+    8192
+   ],
+   "verdict": 2,
+   "nodes": 3637884,
+   "derived": false
+  },
+  {
+   "id": "k092",
+   "key": [
+    10376293541461626881,
+    16384
+   ],
+   "verdict": 2,
+   "nodes": 4625967,
+   "derived": false
+  },
+  {
+   "id": "k093",
+   "key": [
+    10376293541461626881,
+    32768
+   ],
+   "verdict": 2,
+   "nodes": 3787800,
+   "derived": false
+  },
+  {
+   "id": "k094",
+   "key": [
+    10376293541461626881,
+    65536
+   ],
+   "verdict": 2,
+   "nodes": 3074874,
+   "derived": false
+  },
+  {
+   "id": "k095",
+   "key": [
+    10376293541461626881,
+    131072
+   ],
+   "verdict": 2,
+   "nodes": 3823653,
+   "derived": false
+  },
+  {
+   "id": "k096",
+   "key": [
+    10376293541461626881,
+    16777216
+   ],
+   "verdict": 2,
+   "nodes": 3008670,
+   "derived": false
+  },
+  {
+   "id": "k097",
+   "key": [
+    10376293541461626881,
+    33554432
+   ],
+   "verdict": 2,
+   "nodes": 9234009,
+   "derived": false
+  },
+  {
+   "id": "k098",
+   "key": [
+    10376293541461626881,
+    67108864
+   ],
+   "verdict": 2,
+   "nodes": 3964389,
+   "derived": false
+  },
+  {
+   "id": "k099",
+   "key": [
+    10376293541461626881,
+    134217728
+   ],
+   "verdict": 2,
+   "nodes": 3972983,
+   "derived": false
+  },
+  {
+   "id": "k100",
+   "key": [
+    10376293541461626881,
+    268435456
+   ],
+   "verdict": 2,
+   "nodes": 10645568,
+   "derived": false
+  },
+  {
+   "id": "k101",
+   "key": [
+    10412322338480590849,
+    0
+   ],
+   "verdict": 2,
+   "nodes": 5416337,
+   "derived": false
+  },
+  {
+   "id": "k012",
+   "key": [
+    1152921504607899649,
+    536870912
+   ],
+   "verdict": 2,
+   "nodes": 0,
+   "derived": true
+  }
+ ],
+ "per_key_rows": [
+  {
+   "id": "k001",
+   "key": [
+    1152921504606851072,
+    805306370
+   ],
+   "stones": 5,
+   "legal": 95,
+   "result": 2,
+   "nodes": 5925730
+  },
+  {
+   "id": "k002",
+   "key": [
+    1152921504606851585,
+    536870912
+   ],
+   "stones": 5,
+   "legal": 99,
+   "result": 2,
+   "nodes": 4425857
+  },
+  {
+   "id": "k003",
+   "key": [
+    1152921504606852097,
+    536870912
+   ],
+   "stones": 5,
+   "legal": 97,
+   "result": 2,
+   "nodes": 4292117
+  },
+  {
+   "id": "k004",
+   "key": [
+    1152921504607896576,
+    536870916
+   ],
+   "stones": 5,
+   "legal": 103,
+   "result": 2,
+   "nodes": 10011197
+  },
+  {
+   "id": "k005",
+   "key": [
+    1152921504607896576,
+    536870920
+   ],
+   "stones": 5,
+   "legal": 103,
+   "result": 2,
+   "nodes": 4581929
+  },
+  {
+   "id": "k006",
+   "key": [
+    1152921504607896576,
+    536879104
+   ],
+   "stones": 5,
+   "legal": 101,
+   "result": 2,
+   "nodes": 7019730
+  },
+  {
+   "id": "k007",
+   "key": [
+    1152921504607896576,
+    536887296
+   ],
+   "stones": 5,
+   "legal": 104,
+   "result": 2,
+   "nodes": 7564461
+  },
+  {
+   "id": "k008",
+   "key": [
+    1152921504607896576,
+    553648128
+   ],
+   "stones": 5,
+   "legal": 100,
+   "result": 2,
+   "nodes": 11267484
+  },
+  {
+   "id": "k009",
+   "key": [
+    1152921504607896576,
+    570425344
+   ],
+   "stones": 5,
+   "legal": 102,
+   "result": 2,
+   "nodes": 5422811
+  },
+  {
+   "id": "k010",
+   "key": [
+    1152921504607896576,
+    34896609280
+   ],
+   "stones": 5,
+   "legal": 104,
+   "result": 2,
+   "nodes": 6070834
+  },
+  {
+   "id": "k011",
+   "key": [
+    1152921504607898624,
+    536870912
+   ],
+   "stones": 5,
+   "legal": 101,
+   "result": 2,
+   "nodes": 7959630
+  },
+  {
+   "id": "k012",
+   "key": [
+    1152921504607899649,
+    536870912
+   ],
+   "stones": 5,
+   "legal": 98,
+   "result": 0,
+   "nodes": 15000000
+  },
+  {
+   "id": "k013",
+   "key": [
+    1152921504612090880,
+    536870912
+   ],
+   "stones": 5,
+   "legal": 105,
+   "result": 2,
+   "nodes": 4801030
+  },
+  {
+   "id": "k014",
+   "key": [
+    1152921504616285184,
+    536870912
+   ],
+   "stones": 5,
+   "legal": 103,
+   "result": 2,
+   "nodes": 4035893
+  },
+  {
+   "id": "k015",
+   "key": [
+    1152921513197831168,
+    536870912
+   ],
+   "stones": 5,
+   "legal": 103,
+   "result": 2,
+   "nodes": 8699028
+  },
+  {
+   "id": "k016",
+   "key": [
+    1152921521787765760,
+    536870912
+   ],
+   "stones": 5,
+   "legal": 99,
+   "result": 2,
+   "nodes": 5222810
+  },
+  {
+   "id": "k017",
+   "key": [
+    1152939096793940992,
+    536870912
+   ],
+   "stones": 5,
+   "legal": 100,
+   "result": 2,
+   "nodes": 5916458
+  },
+  {
+   "id": "k018",
+   "key": [
+    1152956688979985408,
+    536870912
+   ],
+   "stones": 5,
+   "legal": 100,
+   "result": 2,
+   "nodes": 6065498
+  },
+  {
+   "id": "k019",
+   "key": [
+    1188950301626859520,
+    671088640
+   ],
+   "stones": 5,
+   "legal": 96,
+   "result": 2,
+   "nodes": 4399355
+  },
+  {
+   "id": "k020",
+   "key": [
+    1224979098645824512,
+    536870912
+   ],
+   "stones": 5,
+   "legal": 100,
+   "result": 2,
+   "nodes": 3451027
+  },
+  {
+   "id": "k021",
+   "key": [
+    1297036692683752448,
+    4
+   ],
+   "stones": 5,
+   "legal": 101,
+   "result": 2,
+   "nodes": 6235999
+  },
+  {
+   "id": "k022",
+   "key": [
+    1297036692683752448,
+    8
+   ],
+   "stones": 5,
+   "legal": 100,
+   "result": 2,
+   "nodes": 9843332
+  },
+  {
+   "id": "k023",
+   "key": [
+    1297036692683752448,
+    16
+   ],
+   "stones": 5,
+   "legal": 100,
+   "result": 2,
+   "nodes": 3980754
+  },
+  {
+   "id": "k024",
+   "key": [
+    1297036692683752448,
+    32
+   ],
+   "stones": 5,
+   "legal": 101,
+   "result": 2,
+   "nodes": 6441192
+  },
+  {
+   "id": "k025",
+   "key": [
+    1297036692683752448,
+    128
+   ],
+   "stones": 5,
+   "legal": 98,
+   "result": 2,
+   "nodes": 3641949
+  },
+  {
+   "id": "k026",
+   "key": [
+    1297036692683752448,
+    8192
+   ],
+   "stones": 5,
+   "legal": 103,
+   "result": 2,
+   "nodes": 9543836
+  },
+  {
+   "id": "k027",
+   "key": [
+    1297036692683752448,
+    32768
+   ],
+   "stones": 5,
+   "legal": 103,
+   "result": 2,
+   "nodes": 4200271
+  },
+  {
+   "id": "k028",
+   "key": [
+    1297036692683752448,
+    131072
+   ],
+   "stones": 5,
+   "legal": 100,
+   "result": 2,
+   "nodes": 8492184
+  },
+  {
+   "id": "k029",
+   "key": [
+    1297036692683752448,
+    262144
+   ],
+   "stones": 5,
+   "legal": 101,
+   "result": 2,
+   "nodes": 6042214
+  },
+  {
+   "id": "k030",
+   "key": [
+    1297036692683752448,
+    16777216
+   ],
+   "stones": 5,
+   "legal": 101,
+   "result": 2,
+   "nodes": 7806330
+  },
+  {
+   "id": "k031",
+   "key": [
+    1297036692683752448,
+    33554432
+   ],
+   "stones": 5,
+   "legal": 104,
+   "result": 2,
+   "nodes": 3214367
+  },
+  {
+   "id": "k032",
+   "key": [
+    1297036692683752448,
+    134217728
+   ],
+   "stones": 5,
+   "legal": 103,
+   "result": 2,
+   "nodes": 5766864
+  },
+  {
+   "id": "k033",
+   "key": [
+    1297036692683752448,
+    268435456
+   ],
+   "stones": 5,
+   "legal": 104,
+   "result": 2,
+   "nodes": 3589382
+  },
+  {
+   "id": "k034",
+   "key": [
+    1297036692683752448,
+    536870912
+   ],
+   "stones": 5,
+   "legal": 102,
+   "result": 2,
+   "nodes": 7123492
+  },
+  {
+   "id": "k035",
+   "key": [
+    1297036692683752448,
+    34359738368
+   ],
+   "stones": 5,
+   "legal": 104,
+   "result": 2,
+   "nodes": 6369598
+  },
+  {
+   "id": "k036",
+   "key": [
+    1297036692683752449,
+    0
+   ],
+   "stones": 5,
+   "legal": 94,
+   "result": 2,
+   "nodes": 3504651
+  },
+  {
+   "id": "k037",
+   "key": [
+    1297036692683752450,
+    0
+   ],
+   "stones": 5,
+   "legal": 97,
+   "result": 2,
+   "nodes": 4352577
+  },
+  {
+   "id": "k038",
+   "key": [
+    1297036692683752452,
+    0
+   ],
+   "stones": 5,
+   "legal": 94,
+   "result": 2,
+   "nodes": 4597825
+  },
+  {
+   "id": "k039",
+   "key": [
+    1297036692683752456,
+    0
+   ],
+   "stones": 5,
+   "legal": 100,
+   "result": 2,
+   "nodes": 7412429
+  },
+  {
+   "id": "k040",
+   "key": [
+    1297036692683752464,
+    0
+   ],
+   "stones": 5,
+   "legal": 100,
+   "result": 2,
+   "nodes": 3528576
+  },
+  {
+   "id": "k041",
+   "key": [
+    1297036692683752480,
+    0
+   ],
+   "stones": 5,
+   "legal": 91,
+   "result": 2,
+   "nodes": 3983104
+  },
+  {
+   "id": "k042",
+   "key": [
+    1297036692683752512,
+    0
+   ],
+   "stones": 5,
+   "legal": 99,
+   "result": 2,
+   "nodes": 3734569
+  },
+  {
+   "id": "k043",
+   "key": [
+    1297036692683752576,
+    0
+   ],
+   "stones": 5,
+   "legal": 96,
+   "result": 2,
+   "nodes": 2996288
+  },
+  {
+   "id": "k044",
+   "key": [
+    1297036692683752704,
+    0
+   ],
+   "stones": 5,
+   "legal": 96,
+   "result": 2,
+   "nodes": 4352577
+  },
+  {
+   "id": "k045",
+   "key": [
+    1297036692683752960,
+    0
+   ],
+   "stones": 5,
+   "legal": 98,
+   "result": 2,
+   "nodes": 2954632
+  },
+  {
+   "id": "k046",
+   "key": [
+    1297036692683754496,
+    0
+   ],
+   "stones": 5,
+   "legal": 100,
+   "result": 2,
+   "nodes": 7106367
+  },
+  {
+   "id": "k047",
+   "key": [
+    1297036692683756544,
+    0
+   ],
+   "stones": 5,
+   "legal": 96,
+   "result": 2,
+   "nodes": 5221923
+  },
+  {
+   "id": "k048",
+   "key": [
+    1297036692683760640,
+    0
+   ],
+   "stones": 5,
+   "legal": 90,
+   "result": 2,
+   "nodes": 14122712
+  },
+  {
+   "id": "k049",
+   "key": [
+    1297036692683768832,
+    0
+   ],
+   "stones": 5,
+   "legal": 98,
+   "result": 2,
+   "nodes": 3960110
+  },
+  {
+   "id": "k050",
+   "key": [
+    1297036692683785216,
+    0
+   ],
+   "stones": 5,
+   "legal": 96,
+   "result": 2,
+   "nodes": 10298632
+  },
+  {
+   "id": "k051",
+   "key": [
+    1297036692683817984,
+    0
+   ],
+   "stones": 5,
+   "legal": 97,
+   "result": 2,
+   "nodes": 2765972
+  },
+  {
+   "id": "k052",
+   "key": [
+    1297036692683883520,
+    0
+   ],
+   "stones": 5,
+   "legal": 93,
+   "result": 2,
+   "nodes": 4100570
+  },
+  {
+   "id": "k053",
+   "key": [
+    1297036692684014592,
+    0
+   ],
+   "stones": 5,
+   "legal": 96,
+   "result": 2,
+   "nodes": 4133815
+  },
+  {
+   "id": "k054",
+   "key": [
+    1297036692684276736,
+    0
+   ],
+   "stones": 5,
+   "legal": 97,
+   "result": 2,
+   "nodes": 5975893
+  },
+  {
+   "id": "k055",
+   "key": [
+    1297036692685849600,
+    0
+   ],
+   "stones": 5,
+   "legal": 97,
+   "result": 2,
+   "nodes": 2691082
+  },
+  {
+   "id": "k056",
+   "key": [
+    1297036692687946752,
+    0
+   ],
+   "stones": 5,
+   "legal": 104,
+   "result": 2,
+   "nodes": 5645288
+  },
+  {
+   "id": "k057",
+   "key": [
+    1297036692692141056,
+    0
+   ],
+   "stones": 5,
+   "legal": 104,
+   "result": 2,
+   "nodes": 4721061
+  },
+  {
+   "id": "k058",
+   "key": [
+    1297036692700529664,
+    0
+   ],
+   "stones": 5,
+   "legal": 94,
+   "result": 2,
+   "nodes": 3353183
+  },
+  {
+   "id": "k059",
+   "key": [
+    1297036692717306880,
+    0
+   ],
+   "stones": 5,
+   "legal": 104,
+   "result": 2,
+   "nodes": 3972735
+  },
+  {
+   "id": "k060",
+   "key": [
+    1297036692750861312,
+    0
+   ],
+   "stones": 5,
+   "legal": 92,
+   "result": 2,
+   "nodes": 5026776
+  },
+  {
+   "id": "k061",
+   "key": [
+    1297036692817970176,
+    0
+   ],
+   "stones": 5,
+   "legal": 96,
+   "result": 2,
+   "nodes": 2724895
+  },
+  {
+   "id": "k062",
+   "key": [
+    1297036693220623360,
+    0
+   ],
+   "stones": 5,
+   "legal": 98,
+   "result": 2,
+   "nodes": 2225177
+  },
+  {
+   "id": "k063",
+   "key": [
+    1297036694831236096,
+    0
+   ],
+   "stones": 5,
+   "legal": 98,
+   "result": 2,
+   "nodes": 10906288
+  },
+  {
+   "id": "k064",
+   "key": [
+    1297036696978719744,
+    0
+   ],
+   "stones": 5,
+   "legal": 96,
+   "result": 2,
+   "nodes": 6137538
+  },
+  {
+   "id": "k065",
+   "key": [
+    1297036701273687040,
+    0
+   ],
+   "stones": 5,
+   "legal": 103,
+   "result": 2,
+   "nodes": 5011558
+  },
+  {
+   "id": "k066",
+   "key": [
+    1297036709863621632,
+    0
+   ],
+   "stones": 5,
+   "legal": 97,
+   "result": 2,
+   "nodes": 5002748
+  },
+  {
+   "id": "k067",
+   "key": [
+    1297036727043490816,
+    0
+   ],
+   "stones": 5,
+   "legal": 102,
+   "result": 2,
+   "nodes": 8344175
+  },
+  {
+   "id": "k068",
+   "key": [
+    1297036761403229184,
+    0
+   ],
+   "stones": 5,
+   "legal": 92,
+   "result": 2,
+   "nodes": 6522725
+  },
+  {
+   "id": "k069",
+   "key": [
+    1297036830122705920,
+    0
+   ],
+   "stones": 5,
+   "legal": 95,
+   "result": 2,
+   "nodes": 3670909
+  },
+  {
+   "id": "k070",
+   "key": [
+    1297036967561659392,
+    0
+   ],
+   "stones": 5,
+   "legal": 97,
+   "result": 2,
+   "nodes": 5849898
+  },
+  {
+   "id": "k071",
+   "key": [
+    1297037242439566336,
+    0
+   ],
+   "stones": 5,
+   "legal": 96,
+   "result": 2,
+   "nodes": 2745800
+  },
+  {
+   "id": "k072",
+   "key": [
+    1297041090730263552,
+    0
+   ],
+   "stones": 5,
+   "legal": 97,
+   "result": 2,
+   "nodes": 4259034
+  },
+  {
+   "id": "k073",
+   "key": [
+    1297045488776774656,
+    0
+   ],
+   "stones": 5,
+   "legal": 100,
+   "result": 2,
+   "nodes": 7696380
+  },
+  {
+   "id": "k074",
+   "key": [
+    1297071877055841280,
+    0
+   ],
+   "stones": 5,
+   "legal": 101,
+   "result": 2,
+   "nodes": 5626717
+  },
+  {
+   "id": "k075",
+   "key": [
+    1297107061427930112,
+    0
+   ],
+   "stones": 5,
+   "legal": 95,
+   "result": 2,
+   "nodes": 7147572
+  },
+  {
+   "id": "k076",
+   "key": [
+    1297177430172107776,
+    0
+   ],
+   "stones": 5,
+   "legal": 93,
+   "result": 2,
+   "nodes": 5461211
+  },
+  {
+   "id": "k077",
+   "key": [
+    1297318167660463104,
+    0
+   ],
+   "stones": 5,
+   "legal": 93,
+   "result": 2,
+   "nodes": 3182164
+  },
+  {
+   "id": "k078",
+   "key": [
+    1297599642637173760,
+    0
+   ],
+   "stones": 5,
+   "legal": 93,
+   "result": 2,
+   "nodes": 2973580
+  },
+  {
+   "id": "k079",
+   "key": [
+    1301540292311122944,
+    0
+   ],
+   "stones": 5,
+   "legal": 94,
+   "result": 2,
+   "nodes": 3454253
+  },
+  {
+   "id": "k080",
+   "key": [
+    1306043891938493440,
+    0
+   ],
+   "stones": 5,
+   "legal": 98,
+   "result": 2,
+   "nodes": 8170286
+  },
+  {
+   "id": "k081",
+   "key": [
+    1315051091193234432,
+    0
+   ],
+   "stones": 5,
+   "legal": 100,
+   "result": 2,
+   "nodes": 5786536
+  },
+  {
+   "id": "k082",
+   "key": [
+    1369094286721680384,
+    0
+   ],
+   "stones": 5,
+   "legal": 97,
+   "result": 2,
+   "nodes": 11230988
+  },
+  {
+   "id": "k083",
+   "key": [
+    1585267068835464192,
+    0
+   ],
+   "stones": 5,
+   "legal": 97,
+   "result": 2,
+   "nodes": 5048845
+  },
+  {
+   "id": "k084",
+   "key": [
+    1873497444987175936,
+    0
+   ],
+   "stones": 5,
+   "legal": 94,
+   "result": 2,
+   "nodes": 4720547
+  },
+  {
+   "id": "k085",
+   "key": [
+    3602879701897446400,
+    0
+   ],
+   "stones": 5,
+   "legal": 89,
+   "result": 2,
+   "nodes": 2742740
+  },
+  {
+   "id": "k086",
+   "key": [
+    5908722711111140352,
+    0
+   ],
+   "stones": 5,
+   "legal": 89,
+   "result": 2,
+   "nodes": 3182164
+  },
+  {
+   "id": "k087",
+   "key": [
+    10376293541461626881,
+    4
+   ],
+   "stones": 5,
+   "legal": 98,
+   "result": 2,
+   "nodes": 6366754
+  },
+  {
+   "id": "k088",
+   "key": [
+    10376293541461626881,
+    8
+   ],
+   "stones": 5,
+   "legal": 98,
+   "result": 2,
+   "nodes": 3691111
+  },
+  {
+   "id": "k089",
+   "key": [
+    10376293541461626881,
+    16
+   ],
+   "stones": 5,
+   "legal": 97,
+   "result": 2,
+   "nodes": 3638190
+  },
+  {
+   "id": "k090",
+   "key": [
+    10376293541461626881,
+    32
+   ],
+   "stones": 5,
+   "legal": 95,
+   "result": 2,
+   "nodes": 3777766
+  },
+  {
+   "id": "k091",
+   "key": [
+    10376293541461626881,
+    8192
+   ],
+   "stones": 5,
+   "legal": 100,
+   "result": 2,
+   "nodes": 3637884
+  },
+  {
+   "id": "k092",
+   "key": [
+    10376293541461626881,
+    16384
+   ],
+   "stones": 5,
+   "legal": 99,
+   "result": 2,
+   "nodes": 4625967
+  },
+  {
+   "id": "k093",
+   "key": [
+    10376293541461626881,
+    32768
+   ],
+   "stones": 5,
+   "legal": 102,
+   "result": 2,
+   "nodes": 3787800
+  },
+  {
+   "id": "k094",
+   "key": [
+    10376293541461626881,
+    65536
+   ],
+   "stones": 5,
+   "legal": 96,
+   "result": 2,
+   "nodes": 3074874
+  },
+  {
+   "id": "k095",
+   "key": [
+    10376293541461626881,
+    131072
+   ],
+   "stones": 5,
+   "legal": 94,
+   "result": 2,
+   "nodes": 3823653
+  },
+  {
+   "id": "k096",
+   "key": [
+    10376293541461626881,
+    16777216
+   ],
+   "stones": 5,
+   "legal": 99,
+   "result": 2,
+   "nodes": 3008670
+  },
+  {
+   "id": "k097",
+   "key": [
+    10376293541461626881,
+    33554432
+   ],
+   "stones": 5,
+   "legal": 97,
+   "result": 2,
+   "nodes": 9234009
+  },
+  {
+   "id": "k098",
+   "key": [
+    10376293541461626881,
+    67108864
+   ],
+   "stones": 5,
+   "legal": 95,
+   "result": 2,
+   "nodes": 3964389
+  },
+  {
+   "id": "k099",
+   "key": [
+    10376293541461626881,
+    134217728
+   ],
+   "stones": 5,
+   "legal": 104,
+   "result": 2,
+   "nodes": 3972983
+  },
+  {
+   "id": "k100",
+   "key": [
+    10376293541461626881,
+    268435456
+   ],
+   "stones": 5,
+   "legal": 99,
+   "result": 2,
+   "nodes": 10645568
+  },
+  {
+   "id": "k101",
+   "key": [
+    10412322338480590849,
+    0
+   ],
+   "stones": 5,
+   "legal": 84,
+   "result": 2,
+   "nodes": 5416337
+  },
+  {
+   "id": "s6w",
+   "key": [
+    1152921504675009536,
+    536870912
+   ],
+   "stones": 6,
+   "legal": 87,
+   "result": 2,
+   "nodes": 5859060
+  }
+ ],
+ "merged_cache": {
+  "path": "research/experiments/n11-s4bd-fresh-corpus-regen-20261121/output/merged-exact-s5-after-js-probe-13-plus-freshregen-20261121.cache",
+  "sha256": "4fee9d5ec78a825b487cc4706bc303b6828ea3be162268c307acb448f6c91e12",
+  "rows": 5857
+ },
+ "raws": {
+  "pass1_dir": "research/experiments/n11-s4bd-fresh-corpus-regen-20261121/output/raw",
+  "pass2_dir": "research/experiments/n11-s4bd-fresh-corpus-regen-20261121/output/raw"
+ },
+ "fail_closed_gates": [
+  "determinism: identical result+nodes across the two passes (per key)",
+  "history: every settled verdict equals the audited union-backlog historical verdict",
+  "budget exhaustion only allowed for TARGET_S5 (row then S6-witness-derived, nodes 0)",
+  "no fresh WIN rows (would contradict history and block the lane)",
+  "geometry: canonical, safe, quarantined-free, 5-stone, Board-derived legal counts",
+  "boundary: corpus99 = frozen 106-child S4 boundary minus the 7 chain keys",
+  "S6 witness: canonical 6-stone child of TARGET_S5, settled LOSS with published nodes",
+  "cache: strictly sorted, no duplicates, no base conflicts, no quarantined keys"
+ ]
+}
