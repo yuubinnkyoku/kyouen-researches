@@ -1963,3 +1963,90 @@ solver探索なし・verdict不消費・新規主張ゼロのwhat-if計画・監
   未使用を確認済み。同一スコープの宣言がmainに存在する場合は本宣言を破棄
   して着手しない。
 - 本amendment observed HEAD-before-push: 実行時の最新mainをコミットメッセージに記録。
+
+## Part AH publication status update (2026-11-22)
+
+Part AH (batch-12 class 8106 n005/n006 if-adopted decomposition) is
+**completed and published**. Verdicts are NOT consumed anywhere; the
+n005/n006 WINs remain unconsumed closure WINs pending the scrutiny owner
+(scratch third-implementation verdict-level cross-verification had already
+been recorded, Part AD). The standard 11x11 empty board, the 19
+central-reply roots, class 8106 (canonical 52-row universe untouched) and
+every other class remain UNKNOWN. Node counts are not verdicts.
+
+Published (all fetch-back verified byte-identical against this host):
+
+* Base control `research/experiments/n11-class8106-n005n006-base-control-20261122/`
+  (README, pinned script `88671526...`, 3 outputs, run1/run2 logs, commit
+  `9fd7dee5`): Part Y refresh script executed twice on this host, runs
+  byte-identical (2/2, run logs sha `9816dfb7...` both), and
+  closure-classes `61943b85...` / per-root-coverage `33f01a0c...` /
+  refresh-summary `25987add...` are byte-equal to the published Part Y
+  canonical re-audit outputs (cross-host reproduction; also byte-equal to
+  the batch-11 z003 base control outputs). probe-worklist `1807e4d2...`
+  (65,154 rows) recorded, not republished.
+* Decomposition `research/experiments/n11-centralreply-class8106-win-n005n006-ifadopted-20261122/`
+  (commits `9fd7dee5` scaffold+base, `7ca0c3af` increments+merges,
+  `bc97ef35` pwin2, `c2fe5514` ploss6, `3e6c0f89` pfull8+deltas; 38 files
+  fetch-back 38/38 byte-identical):
+  - increments (3-way fail-closed (p1/p2/status) - batch-12 ran entirely
+    on the declaring host, so no 4-way cross-host exists by construction):
+    full 8 rows `d1954280...`, win-only 2 rows (n005/n006)
+    `dd5fc998...`, loss-only 6 rows `d18ddaf8...`; deterministic 2/2;
+    key/legal machine-cross-checked against published batch-keys
+    `de55df83...` (52 keys).
+  - scenario caches (fail-closed published union merger, selftest PASS,
+    WIN/LOSS conflicts 0, duplicates 0): PWIN2 6,029 rows WIN 160 /
+    LOSS 5,869 `c13f81d7...`; PLOSS6 6,033 rows WIN 158 / LOSS 5,875
+    `898ca5f4...`; PFULL8 6,035 rows WIN 160 / LOSS 5,875 `21bbef33...`.
+  - scenario refresh runs: 2 per scenario, all byte-identical (determinism
+    6/6); scenario scripts diff-verified 4-hunk copies of the Part Y script.
+  - deltas gated by `compare_deltas_batch12.py` -> `decomp-deltas-batch12.json`
+    `a4152995...`; the compare script faithfully re-executes the refresh
+    class-status semantics (graph + update8 + scenario cache, Board
+    fail-closed free verification) and asserts all recomputed
+    class_status_counts equal the published summaries for BASE + all 3
+    scenarios before emitting any delta. All gates PASS.
+
+Machine-verified decomposition results (deltas vs the Part Y canonical
+re-audit; full detail in the experiment README and decomp JSON):
+
+* **excluded_now flips: PWIN2 = PFULL8 = exactly {5007, 5011, 6147, 6166,
+  8106}** (23 -> 28), PLOSS6 empty. The 5 flips are the UNION of the two
+  WIN holder triples (n005: {5007, 5011, 8106}, n006: {6147, 6166, 8106};
+  membership_class_count 3 each; overlap = class 8106 itself; union 5,
+  machine-gated three ways: graph holders, membership counts, and the
+  flip sets). This is the closure grind's first multi-WIN increment and
+  the flip set is union-shaped (3+3 with overlap 1), not additive.
+* class 8106 unknown_now: 52 -> 50 (PWIN2) / 46 (PLOSS6) / 44 (PFULL8);
+  additivity machine-gated.
+* update8: **all 8 probed batch-12 rows are update8 baseline requirements**
+  (unlike batch-11 where only z003/z004 were): newly-resolved PWIN2
+  {188395, 219608}, PLOSS6 {48210, 75387, 110810, 161205, 232022, 237227},
+  PFULL8 all 8 resolved counts 2/6/8 exact. Remaining_now delta
+  sub-additive by exactly 6 (-52 / -6 / -52): the class-8106
+  excluded_now flip drops the whole 52-member remaining set, subsuming
+  the 6 LOSS resolutions.
+* win-hit groups: PWIN2 = PFULL8 = 4 groups, all served by class 8106
+  (reply 60): first=14 (seconds 58/102) and first=38 (seconds 34/42),
+  unknown_s5_children 52 each. Contrast batch-11 z003: 5 groups via peer
+  5748 which did NOT self-exclude; here the win-hit holder is the batch
+  class itself and doubles as an excluded_now flip.
+* joint greedy is additive this time (+52 / 0 / +52 - contrast Part AB's
+  +797 cascade), but the per-root individual_greedy_union column is
+  NON-additive at root 14 (central first=14: +1 / +7 / +5,
+  win+loss=8 != 5); roots 38 (-2/-6/-8) and 49 (-2/0/-2) additive.
+  group_best_options_nonfree 2,127 in all four runs. Per-root free
+  coverage (free_now/uncovered) identical to base in every scenario;
+  root first=27 keeps 119/119 free thirds in all scenarios.
+* worklist_total additive: -4 / -7 / -11 (65,154 -> 65,143 under the full
+  what-if). Scenario probe-worklists recorded by sha only (PWIN2
+  `aea35363...`, PLOSS6 `f9687992...`, PFULL8 `fbf65fe3...`), not
+  republished.
+
+Open items for future declarations (unchanged by this update): batch-13
+if-adopted decomposition (4 probed rows; the batch-12 item is now CLOSED
+by Part AH); batch 14 (Part AF) continues under its own owner. Kit mirror
+saved under `batch8106-n005n006-ifadopted/` (plus base-control mirror).
+Observed HEAD-before-push for this update is recorded in the commit
+message.
