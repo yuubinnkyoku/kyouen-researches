@@ -668,3 +668,56 @@ repo diverged:
 - Read-only audit; no verdict consumed, no claim change; the standard 11x11
   empty board, the 19 central-reply roots and all closure classes remain
   UNKNOWN; nodes/expansions are not read as outcomes.
+
+## Session continuation 10 (2026-11-22 ~08:4xZ, same lane; Part S retraction record + Part T batch-9 j033 third-impl cross-verification: run, publication, note status update; concurrent Part U batch-8 takeover observed)
+
+- Part S (start of this run): the transport/blob-corruption concern on the
+  merged cache raised at the end of continuation 9 was RETRACTED after full
+  fetch-back (32/32 manifest entries byte-identical); the damage was a local
+  workspace reset artifact, the repo authoritative copy undamaged; published
+  as note Part S amendment (`3bc1a7bf`). Operating rule: blob-corruption
+  claims stay provisional until kit-mirror and repo copies both disagree.
+- Part T: single-owner declaration `4e725538` (note blob `f0ea354d...`), then
+  the batch-9 (class 1518) j033 third-implementation cross-verification was run
+  and published, exactly as declared (verdict-neutral evidence work):
+  - Runs: 16 processes (targets j033/j001/j016/j027 a/b + anchors k02a/l1a
+    a/b + negatives ng1/ng2), all clean, a/b identical. j033 WIN agreement
+    (third-impl 5,392,392 expansions vs replica df-pn 4,718,280 nodes); LOSS
+    spots j001 9,103,477 / j016 10,556,205 / j027 1,401,488 expansions.
+    Anchors k02a WIN 9,106,337/4,991,527 and l1a LOSS 7,660,602/3,951,175
+    node-exact vs published third-impl values. Rules gate quads 95,670 /
+    triples 195,044, mismatch 0; negatives GATE_FAIL on wording, as required.
+  - Fail-closed inputs derived by `make_inputs_batch9.py` (batch-2 script
+    adapted; batch-9 batch-keys lo/hi are strings, so int-compare was
+    required) from the published batch-9 authoritative commit `a321bfb2`
+    (raws 8, batch-keys.json `8f2035d1...`, status.log PASS rows), repo
+    fetch vs kit mirror 10/10 byte-identical.
+  - `audit.py` (batch-9 adaptation, schema/EXP names only): 71/71 gates
+    PASS, 2 runs byte-identical, divergence 0, wall-inconclusive 0.
+  - Publication: three commits `1ebf75e1` (scaffold 16; pinned scripts 4
+    byte-identical to the published Part P experiment) -> `c98ad197`
+    (targets 8) -> `eae66b36` (anchors 4 + negatives 2 + rules-gate +
+    status.log + audit-summary.json + MANIFEST); experiment dir
+    `n11-centralreply-closure-batch9-j033-thirdimpl-20261122` (34 files);
+    fetch-back 34/34 byte-identical (commit-pinned raw URLs + sha256sum).
+- Note status update `180d85fb` (note blob `4c721238...`, byte-precomputed,
+  42,039 chars): the first push attempt failed its note guard and detected a
+  concurrent Part U (batch-8 takeover declaration, observed HEAD `9f06b2b2`,
+  note blob `a2081397...`); the batch-8 declaring host reportedly vanished
+  just before i026 p2, takeover continues h026-h051. Scope disjoint from Part
+  T (batch-9-derived keys only; zero contact with batch-8 files); recorded
+  in the appendix and re-pushed successfully.
+- State: no verdict consumed anywhere. j033 WIN is the sixth unconsumed
+  closure WIN (b018/d002/e002/f017/g018/j033), all third-impl corroborated,
+  awaiting the scrutiny owner (C++ second-implementation gate pin
+  `9193f5b6...`, unchanged). batch-9 remaining keys j034-j051 (18) not
+  started; check latest main for Part V-type declarations before touching
+  them. 11x11 baseline unchanged (merged cache 5,975 rows `a998f4c0...`,
+  excluded 23 / free 34 / unknown 34,502 / remaining 31,836 / greedy 35,857 /
+  worklist 65,155). The standard 11x11 empty board, the 19 central-reply
+  roots and classes 1518/2634 all remain UNKNOWN; nodes/expansions are not
+  read as outcomes.
+- Analysis-lane kit mirror: `_19root-refresh-kit/batch9j033-thirdimpl/`
+  (47 files incl. repo-unpublished audit-run1/2.txt and sources/;
+  MANIFEST 33/33 OK). Observed HEAD-before-push for this log update is
+  recorded in the commit message.
