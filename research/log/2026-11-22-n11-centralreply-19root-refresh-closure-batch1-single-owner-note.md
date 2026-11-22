@@ -677,3 +677,36 @@ verdictは一切消費しない。
   一切接触しない。batch-9実験 (Part Q, commit `a321bfb2`まで) のpublished
   ファイルは修正しない。同一スコープの宣言がmainに存在する場合は着手しない。
 - 本amendment observed HEAD-before-push: 実行時の最新mainをコミットメッセージに記録。
+
+## Part S: 出版状態検証 — transport破損疑いの撤回 + ワークスペースリセット記録 (2026-11-22)
+
+- 前セッション末尾に、file_system.read_file のコンテンツ返却チャンク
+  (累積約2000文字境界) への改行挿入挙動を観測したことから、
+  「readAllで読んでpushした23ファイルのpublished blobが破損した」との疑いが
+  生じ、修復コミットが計画されていた。本セッションでこれを検証した。
+- 検証方法: push前のローカル正本 (消失前) から計算済みの git blob sha1
+  (sha1("blob <len>\0" + content)) 32値と、GitHub get_file_contents が返す
+  blob SHA を全32ファイルで照合した。結果: **32/32 完全一致。破損は
+  最初から存在せず、疑いを撤回する**。追加で README.md と
+  output/decomp-deltas-batch9.json は本文sha256照合でもbyte完全一致
+  (`ff7b7dd9...` / `48ae2717...`)。コミット統計の行数 (+5977 等) も
+  ローカル正本の wc -l と全件一致していた (行途中への改行挿入があれば
+  増加するはずだった)。
+- 教訓 (read-pathの事実として残す): read_fileのチャンク境界挙動は確認済みの
+  読み取り側の挙動であり、publish-pathではなかった。両者を混同して推測を
+  確定扱いにしたのが誤りだった。出版blobの検証は今後
+  (a) get_file_contents の "SHA: <blob sha1>" 表示とローカル
+  sha1("blob %d\0"+content) の照合、または (b) commit固定raw URL +
+  sha256sum、で行う (両プロトコルは本環境で実証済み)。
+- ワークスペースリセット: 本セッション中に実行環境がリセットされ、
+  /home/user/work 配下のローカル作業ツリー (if-adopted作業一式) が消失した。
+  影響はなし — batch-9正本raws (j001-j033) は kit batch1518/ ミラーが保持、
+  if-adopted成果32ファイルはpublished正本から抽出しsha256全件一致 (32/32) を
+  再確認のうえ kit batch1518-ifadopted/ へミラーした
+  (MANIFEST-sha256.txt 34行付き)。repoが正本であるspecに変化はない。
+- 状況はすべて不変: verdict不消費。j033 WINはscrutiny owner待ち。
+  j034-j051 (18キー) 未着手。標準11x11空盤・19 central-reply roots・
+  class 1518/2634 (batch-8/batch-9) はすべて UNKNOWN のまま。
+  nodesを勝敗として読まない。
+- 本amendment observed HEAD-before-push: `b8374c416ed39815231e29f3afa92ec192834d98`
+  (K1058 small-boardレーン)。コミットメッセージにも同じHEADを記録する。
