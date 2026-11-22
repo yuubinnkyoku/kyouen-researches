@@ -82,8 +82,48 @@ verdict.
 
 ## Status
 
-Declared and scaffold published before the first probe row (this README will
-be amended with the result section in a later commit; per-row honest records
-land in `output/status.log` and `output/raw/`). The standard 11x11 empty
-board, the 19 central-reply roots and class 16930 remain UNKNOWN throughout.
-Nodes are not verdicts.
+Result section below (this README was amended after the batch stop; per-row
+honest records land in `output/status.log` and `output/raw/`). The standard
+11x11 empty board, the 19 central-reply roots and class 16930 remain UNKNOWN
+throughout. Nodes are not verdicts.
+
+## Result (2026-11-22, amending this README after batch stop)
+
+Batch halted under the pre-registered WIN-HALT rule at **4/52 probed**
+(p001-p004; one probe_order wave; p005-p052 = 48 keys unprobed). Executed on
+this host (`8c50fb9e...`, 2 cores, up to 4 workers), runner started
+2026-11-22T12:16:52Z, stopped 2026-11-22T12:21:20Z. Every completed key is
+2-pass fresh cold node-exact at budget 15,000,000:
+
+- wave 1 (in-flight completion disclosed honestly, batch-5 f018 precedent;
+  the WIN-HALT fired on p003 first and p002 completed in flight):
+  **p003 WIN (result 1, 2-pass node-exact, 7,489,274 nodes, key
+  `[3458764514088976384, 272]`, legal 81, s5_index 203419, probe_order 488)**
+  and **p002 WIN (result 1, 2-pass node-exact, 10,770,254 nodes, key
+  `[1153484454828703744, 272]`, legal 85, s5_index 185003, probe_order 487)**;
+  p001 LOSS 4,631,275 nodes / p004 LOSS 2,291,059 nodes. Second closure
+  batch in a row to surface two WIN rows in the same wave.
+- no determinism mismatch (rc=42) and no budget exhaustion (result 0)
+  anywhere; the runner stopped launching new waves after the rc=45
+  WIN-HALT (in-flight wave members completed).
+
+p002 and p003 are the **11th and 12th unconsumed closure WINs**
+(b018/d002/e002/f017/g018/j033/h045/z003/n005/n006/p002/p003). Their
+verdicts are NOT consumed on this lane: adoption remains with the scrutiny
+owner (C++ second-implementation gate precedent, pinned replica verdicts
+only corroborate the batch record). Batch record: 13 batches, 11 WIN-HALT +
+3 clean (23963/10324/8784, the 33rd/34th/35th Board-verified free classes).
+
+Consequences recorded without interpretation: the two WINs are refutation
+evidence against the all-LOSS closure route of class 16930 (the class status
+itself remains UNKNOWN and derived only from the refresh machinery);
+third-implementation cross-verification of p002/p003 (plus the 2 LOSS rows)
+and the if-adopted decomposition are open items for future declarations.
+Next first-clean candidate in the renewed ranking: rank 12 class 23101
+(`[1152921504892059648, 16]`, unknown 52; final declaration-time fail-safes
+will be re-run before declaring).
+
+Raws are published in a chunk commit (`output/raw/p001..p004.p1/.p2.out`,
+`output/status.log`). The standard 11x11 empty board, the 19 central-reply
+roots and class 16930 remain UNKNOWN throughout. Node counts are not
+verdicts.
