@@ -1,0 +1,95 @@
+{
+ "checks": [
+  {
+   "bad": 0,
+   "mismatch": 0,
+   "name": "A_probe_box_fit",
+   "note_overlap": "T/P overlap structurally disjoint; verified 0 during construction selfcheck (cand14.py prints overlap)",
+   "overlap_ov": 0,
+   "points": 90049,
+   "value_histogram": {
+    "0": 44161,
+    "1": 33563,
+    "2": 12325
+   }
+  },
+  {
+   "bad": 0,
+   "name": "B_inbox_tail_assertion",
+   "points": 15946
+  },
+  {
+   "bad": 0,
+   "merge_rows": 15,
+   "name": "C_inbox_merge_assertion",
+   "points": 1125
+  },
+  {
+   "bad": 0,
+   "name": "D_steady_gap_assertion",
+   "points": 1904
+  },
+  {
+   "bad": 0,
+   "name": "E_deep_row_spot_R130",
+   "points": 2080,
+   "xeng": true
+  },
+  {
+   "bad": 0,
+   "name": "F_bigz_spot_z34_43",
+   "points": 12940,
+   "xeng": false
+  },
+  {
+   "bad": 0,
+   "name": "G_xeq_edge_x14",
+   "points": 2794,
+   "xeng": true
+  },
+  {
+   "bad": 0,
+   "name": "H_far_d_spot_d52",
+   "points": 3787,
+   "xeng": true
+  },
+  {
+   "bad": 0,
+   "merge_rows": 122,
+   "name": "I_merge_regression_k0832",
+   "points": 10513,
+   "xeng": false
+  },
+  {
+   "bad": 0,
+   "name": "K_probe_regen_byte_identical",
+   "points": 0,
+   "regen_sha256": "8559dc59e4885414e6122b6cfbd2e15b34fc5fc52bf56fa96952cb8e454a4373"
+  }
+ ],
+ "engine": {
+  "canonical": "probe_y14.py H_canonical, verbatim import",
+  "disagreements": 0,
+  "ordered_idl": "independent no-sort implementation, used on checks marked xeng=true"
+ },
+ "fail_closed": [
+  {
+   "caught": true,
+   "mismatch": 1,
+   "name": "L1_probe_tamper"
+  },
+  {
+   "caught": true,
+   "mismatch": 45,
+   "name": "L2_cand_mergegate_tamper"
+  },
+  {
+   "caught": true,
+   "mismatch": 26,
+   "name": "L3_k0832_tamper"
+  }
+ ],
+ "family": "y14",
+ "overall": "PASS",
+ "probe_sha256": "8559dc59e4885414e6122b6cfbd2e15b34fc5fc52bf56fa96952cb8e454a4373"
+}

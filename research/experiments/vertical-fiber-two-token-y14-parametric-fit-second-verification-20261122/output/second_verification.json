@@ -1,0 +1,28 @@
+{
+ "checks": [
+  {
+   "bad": 0,
+   "name": "V1_our_raw_probe_vs_their_cand",
+   "points": 90049
+  },
+  {
+   "bad": 0,
+   "name": "V2_their_regen_probe_vs_our_cand",
+   "points": 74834,
+   "rows_sha256": "633f17cc097215ff4b83211a6f482de60a90b075be385fc9487697a29ce95428"
+  },
+  {
+   "bad": 0,
+   "name": "V3_verdict_equivalence_grid",
+   "points": 2241162
+  }
+ ],
+ "fail_closed": {
+  "caught": true,
+  "mismatch": 933,
+  "name": "V4_Y_tamper"
+ },
+ "overall": "PASS",
+ "their_cand_file": "cand14.py",
+ "their_dir": "their"
+}
