@@ -806,3 +806,38 @@ takeover開始前に機械検証済みの証拠 (本セッション・read-only)
   nodes数・pass数を勝敗として読まない。**
 - 本amendment observed HEAD-before-push: `9f06b2b2b5a770aab414f6c80eb6fe1201d1c1c6`
   (commit messageにも記録)。
+
+## Part T 出版status update (2026-11-22, verifier)
+
+Part T (batch-9 j033 第三実装交叉検証) は実行・出版済み。宣言通り
+verdict不消費・verdict-level文献作成のみ (採用判断は引き続きscrutiny
+owner、C++第二実装 gate pin `9193f5b6...` 前例・不変)。
+
+- 実行結果: target 4行すべてclean・a/b 2回同一 (result/expansion/ttHits/
+  reason)。**j033 WIN一致** (第三実装 5,392,392 expansions vs replica
+  df-pn 4,718,280 nodes)、j001/j016/j027 LOSS一致 (9,103,477 / 10,556,205 /
+  1,401,488 expansions)。anchors k02a (WIN 9,106,337/4,991,527) と l1a
+  (LOSS 7,660,602/3,951,175) はpublished第三実装値とnode-exact一致。
+  negative ng1/ng2は文言一致GATE_FAIL。rules gate (quads 95,670・triples
+  195,044 mismatches 0) PASS。audit.py (fail-closed, 2回byte一致) は
+  **71/71 gates PASS・divergence 0・wall-inconclusive 0**。
+- 入力はpublished batch-9正本 (commit `a321bfb2` のraws 8件・batch-keys.json
+  `8f2035d1...`・status.log) から `make_inputs_batch9.py` がfail-closed導出
+  (raw 2-pass node-exact assert・batch-keys・status.logのPASS行照合込み、
+  手転写ゼロ)。repo取得物とkit鏡像は10/10 byte一致で確認済み。
+- 出版: `n11-centralreply-closure-batch9-j033-thirdimpl-20261122`
+  commits `1ebf75e1` (scaffold 16: README + pinned scripts 4種はpublished
+  Part P実験とbyte一致 + audit.py/make_inputs_batch9.py batch-9適用版 +
+  machine-derived inputs) → `c98ad197` (targets 8) → `eae66b36` (anchors 4 +
+  negative 2 + rules-gate + status.log + audit-summary.json + MANIFEST)。
+  fetch-back: commit固定raw URL + sha256sumで**34/34 files byte一致**。
+- 観測: 本status pushのretry中に、main上のnoteへ並走セッションによる
+  Part U (batch-8 takeover宣言) の追記を確認した。batch-9由来キーのみを
+  扱う本実験のscopeとは不衝突。batch-8実験 (Part N/U) のファイルには
+  一切接触していない。
+- 状況はすべて不変: verdict不消費。j033のWIN (b018/d002/e002/f017/g018と
+  同様) はscrutiny owner待ち。batch-9残りj034-j051 (18キー) 未着手。
+  標準11x11空盤・19 central-reply roots・class 1518/2634はすべてUNKNOWNの
+  まま。nodes/expansionsを勝敗として読まない。
+- 本status update observed HEAD-before-push: 実行時の最新mainを
+  コミットメッセージに記録。
