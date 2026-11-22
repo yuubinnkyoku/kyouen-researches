@@ -2630,3 +2630,119 @@ refutation evidence.
   scrutiny owner's 17-WIN adoption gate, (e) optional joint
   if-adopted extensions (e.g. the 17-WIN joint projection) under a
   new declaration.
+
+## Continuation 41 (2026-11-22, this host): Part BB joint 17-WIN if-adopted decomposition executed and published - flips 42 classes (machine-computed holder union sum of all 17 WIN s5, no hardcoding), class 5830 the verified exception (already excluded_now via other WIN children), excluded_now 23->65 projection, update8 79->91 (newly 12 == baseline req intersect 17 WINs); verdicts NOT consumed 17/17
+
+- Scope and declaration: Part BB projects the classification-ledger
+  consequence of adopting ALL 17 unconsumed closure WIN rows
+  (b018 d002 e002 f017 g018 h045 j033 z003 n005 n006 / p002 p003 /
+  r001 r002 / q042 / v001 v002) SIMULTANEOUSLY, as the scrutiny
+  owner's adoption-decision precomputation (verdict-free; closes the
+  last machine-measurable gap left by Part AJ joint10, which was
+  computed on the pre-Part-Y 6,027-row BASE and covered only 10
+  WINs). Declared by single-owner-note amendment at commit
+  `dafe9651...` (observed HEAD-before-push `53e7fae9...`; note blob
+  sha1 `042eaf2e`, 300,696 bytes at push time). Same-scope
+  counter-declaration grep: none. Part AV (batch-17 adoption, in
+  flight), the AY remaining 51 keys and batch-19 remained
+  uncontacted; BASE = the current canonical 6,120 rows
+  (`be9cb24e...`, Part AS), byte-invariant and re-verified after
+  every merge.
+- Machinery (published, full shas pinned by the experiment dir
+  MANIFEST-sha256.txt 16 rows `8c361955...`): maker
+  `make_increment_17win_joint.py` `4585c416` derives the 17-WIN joint
+  increment `04003820` + manifest `509cc941` (schema
+  `joint17win-ifadopted-increment-manifest-v1`; rows 17/17 WIN/0
+  LOSS; 17 keys unique; BASE-absent 0/6,120; quarantine-absent;
+  canonical-safe; key/s5/nodes cross-checks vs the 5 sha-pinned
+  source increments and their manifests; win_s5_in_update8_
+  baseline_requirement = 12 machine cross). Merger `90711961`
+  (byte-copy pin) run 2x byte-identical -> joint if-adopted cache
+  6,137 rows (WIN 175 / LOSS 5,962, conflict 0) `f8c2fd97`
+  (252,255 B); merge-audit run1/run2 byte-identical `ae19b239`;
+  BASE `be9cb24e` re-verified byte-invariant after the merges.
+  Refresh adapt `refresh_17win_ifadopted.py` `0365bf26` (3-hunk
+  adapt of the BA refresh, cache-sha expectation extracted from the
+  cache itself) run 3x serial, all four outputs byte-identical
+  across runs (summary `5cee4086`, closure-classes `0c3c31f3`,
+  per-root-coverage `5ead108d`, probe-worklist `4ca9e21b`, 3.7 MB
+  unpublished). Extractor `compare_deltas_17win_ifadopted.py`
+  `1163b7c3` (this lane's 17-WIN extension of the BA extractor
+  `c1c39b50`) run 3x byte-identical, all gates PASS (delta json
+  `115677e6`, 39,648 B, schema `n11-joint17win-ifadopted-decomp-
+  deltas-v1`); it byte-rebuilds the joint increment from the 5
+  source increments. A one-character INCR_SHA pin typo
+  (...d495485) made during bring-up was caught fail-closed by the
+  gate and corrected (...d497485cbe87) before the three verified
+  runs. Seven fail-closed tamper tests (joint increment nodes /
+  if-adopted cache nodes / scenario summary / extractor baseline
+  34500->34499 / source-class pin 16930->16931 / upstream batch-13
+  increment / scenario closure CSV) were each caught by the
+  intended gate and restored byte-identical.
+- Measured projection (bookkeeping, never verdicts): flips = 42
+  classes [1518, 2634, 4139, 4843, 4864, 4889, 4892, 4903, 5007,
+  5011, 5255, 5282, 5307, 5471, 5473, 5501, 5513, 5611, 5613,
+  5626, 5632, 5748, 6030, 6073, 6147, 6166, 8106, 8785, 12264,
+  12327, 14776, 15640, 16131, 16371, 16757, 16930, 20421, 23092,
+  23101, 23115, 23938, 30345] == the BASE-unknown members of the
+  machine-computed graph holder union of the 17 WIN s5 (per-s5
+  holder ledger, no hardcoding). Transition ledger:
+  unknown->excluded_now 42 / unknown->unknown 34,458 /
+  excluded->excluded 390 / excluded_now->excluded_now 23 /
+  free_now->free_now 36, no regression (gated). excluded_now
+  23 -> 65, unknown 34,500 -> 34,458, free_now 36 unchanged,
+  excluded 390 unchanged. Class 5830 (batch-15) is the
+  machine-verified exception: already excluded_now in BASE via its
+  other WIN children [126017, 131631, 162106, 197665, 206386], so
+  r001/r002 adoption creates no new flip there; the shared-cost
+  effect shows on class 2634 instead (51 -> 48 via the shared cost
+  children 103558/103560/103561). The 13 source-class ledger's
+  BASE-unknown boundaries cover all 17 WIN children (gated), 12 of
+  13 land inside flips. Class 16131 53 -> 51 (BASE-unknown == the
+  53 batch-18 key s5 indices, strong agreement gate kept).
+  update8: resolved 79 -> 91 (newly 12 [103558, 103560, 103561,
+  153671, 184684, 188395, 197253, 198530, 207534, 219608, 415095,
+  528497] == baseline requirement intersect the 17 WIN s5 ==
+  manifest in_baseline_req 12, machine re-computed), remaining_now
+  31,780 -> 31,389 (-391, the 34 win-hit groups drop out of the
+  frozen per-group unknown union), win_hit_groups [] -> 34 (every
+  one served by a flip-set class, gated), groups_free_now 127
+  unchanged, lost resolutions []. Joint greedy 36,726 -> 36,727
+  (+1), probe worklist 64,941 -> 64,917 (-24), per-root
+  free/uncovered changed rows 0 (root 27 baseline 119/119),
+  newly-free classes/thirds empty (gated). Closure-table churn:
+  left [5746], entered [5748]; class 16131 rank 15 -> 14
+  (unknown_now 51).
+- Publication: experiment dir
+  `research/experiments/n11-centralreply-joint-17win-ifadopted-20261122/`
+  in 3 commits: A `28acbbe9` (if-adopted cache 6,137 rows,
+  252,255 B) / B `d86e33da` (maker + merger + extractor + refresh +
+  17-row increment + manifest + both merge-audits) / C `78b4b8a1`
+  (README `aed9994c`, status.log `871b3869`, reaudit 3 outputs, the
+  delta json, MANIFEST-sha256). Fetch-back 16/16 sha256 match at
+  each publication commit (commit-pinned raw URLs). The 8 upstream
+  source files were additionally byte-re-verified via the commit
+  `0664482f` pinned raw URLs (mis-delivery check).
+- Route statement (not a closure claim): the joint projection
+  machine-proves what the classification ledger becomes if all 17
+  unconsumed closure WIN rows are adopted together; the 42 flip
+  classes' all-LOSS closure routes are permanently refuted, the
+  root coverage is unchanged, update8 gains the 12 pinned
+  resolutions. With this, every one of the 17 unconsumed closure
+  WINs has single-, pair-, 10- and 17-row if-adopted
+  decompositions. This Part neither recommends nor rejects any
+  adoption; the scrutiny owner's C++ second-implementation gate
+  (pin `9193f5b6...`) remains the sole adoption authority.
+- Status and guards (unchanged): the standard 11x11 empty board
+  and all 19 central-reply roots remain UNKNOWN; no verdict was
+  consumed (0 rows consumed, 17/17 WINs unconsumed, canonical
+  6,120-row cache `be9cb24e` byte-invariant); the 6,137-row
+  if-adopted cache is a non-canonical projection; nodes, worklist
+  and greedy sizes are bookkeeping, never verdicts.
+- Open items (re-read latest main first): (a) Part AV batch-17
+  52-LOSS adoption publication (still in flight, decision shared
+  with the AY lane), (b) batch-18 AY continuation / batch-19
+  (class 16513) selection, (c) the class 23101 residual 10-LOSS
+  adoption after Part AV lands, (d) the scrutiny owner's WIN/LOSS
+  adoption gates, (e) note status append for Part BB + knowledge
+  kit mirror (done in this continuation when present).
