@@ -1823,3 +1823,44 @@ third 28, groups 3) をbatch 14として宣言する。
   宣言直前に最新mainを再取得し、同scope対抗宣言なし・`batch14` dir不在・Part AF採番未使用
   を確認済み。
 - 本amendment observed HEAD-before-push: 実行時の最新mainをコミットメッセージに記録。
+
+## Part AG (verifier, declaration 2026-11-22): batch 13 (class 16930) p002/p003 第三実装交叉検証 (verdict不消費・実行前に宣言)
+
+batch 13 (Part AE, class 16930, renewed rank 11) は4/52 probedで事前登録WIN-HALT規則が
+同一wave内で2回発火し (p003: 2-pass fresh cold node-exact result 1, 7,489,274 nodes /
+p002: result 1, 10,770,254 nodes; 同waveの in-flight p001/p004 は誠実開示済み LOSS)、
+p002/p003 が11番目・12番目のunconsumed closure WINとして残っている (採用判断は
+scrutiny owner, C++第二実装 gate pin `9193f5b6...` 前例・不変)。Part AEのstatus
+updateが「第三実装交叉検証 (p002/p003 + LOSS 2行) は将来宣言待ち」と掲げた本件を、
+Part G/K/O/P/T/W/AA/AD と同一規約で単一オーナーとして宣言する。
+**verdict不消費・検証はverdict-level文献作成のみ。**
+
+- 対象: `research/experiments/n11-centralreply-closure-batch13-wins-thirdimpl-20261122/`。
+  target = batch-13のprobed全行4件: WIN 2行 (p002, p003) + LOSS 2行 (p001, p004)。
+  anchors k02a (WIN, legal 87, 期待 9,106,337 expansions / 4,991,527 ttHits) と
+  l1a (LOSS, legal 116, 期待 7,660,602 / 3,951,175) は本ホスト再現、negatives
+  ng1 (legal+1) / ng2 (stones+1) は文言一致GATE_FAIL必須。
+- sources (再出版せず・commit-pinnedに取得): published batch-13 raws 8件
+  (p001-p004 x p1/p2, chunk commit `b4b55ec8`)・status.log (同chunk)・
+  batch-keys.json (sha256 `c6c56a1a0552b8a87d1e1f5f9e0d6c3955cf1f58a85ef6726317d17846a0a2c7`,
+  scaffold `90ee1c87`)・published input CSV 4件。`make_inputs_batch13.py` (Part AD版を
+  adapt・schema/EXP文字列は `batch13-wins-thirdimpl` に書き換え・Part AE警告対応) が
+  fail-closed導出: 2-pass一致assert・status.log PASS行・`p003 WIN-HALT`/`p002 WIN-HALT`
+  停止行・RUNNER-STOP/RUNNER-EXIT行の存在assert・class_index 16930 assert・
+  導出input CSVがpublished input CSVとbyte一致するassert・手転写ゼロ。
+- 手法: pinned `third_impl.js` (sha256 `08ea958f...`)・1行1プロセス・
+  `--cap=300000000 --wallcap=240 --memo-power=22`・1行2回 (a/b) determinism gate
+  (result/expansion/ttHits/reason 同一必須)・rule-engine gate (`verify_tbl.js`:
+  quads 95,670 == replica / TBL==wob mismatches 0) をtarget走行前に実施。
+  2-coreホストで最大2並列。wall超過 (runlimit) はhonest wall-inconclusive と
+  して記録し検証主張としない。cleanな不一致はdivergence evidence として記録
+  するが本レーンはverdictを書き換えない。
+- 主張と消費規則: verdict不消費 (採用は引き続き scrutiny owner・不変)。
+  標準11x11空盤・19 central-reply roots・class 16930は本検証のどの時点でも
+  UNKNOWNのまま。nodes/expansions数を勝敗として読まない。
+- 並走との不接触: batch 14 (Part AF, class 23101) のprobe中ファイル・他レーンの
+  publishedファイルには一切接触しない。宣言直前に最新mainを再取得し、同scope
+  (batch13第三実装)対抗宣言なし・`batch13-wins-thirdimpl` dir不在・Part AG採番
+  未使用を確認済み。同一スコープの宣言がmainに存在する場合は本宣言を破棄
+  して着手しない。
+- 本amendment observed HEAD-before-push: 実行時の最新mainをコミットメッセージに記録。
