@@ -2317,3 +2317,50 @@ LOSS rows would shrink the frozen update8 requirement by 88 rows and the
 worklist by 143 with zero status flips; the ten WINs are worth 30
 excluded classes but remain hypothetical. The 11x11 empty board remains
 UNKNOWN.
+
+## Part AL (verifier, declaration 2026-11-22): batch 15 (class 5830) r001/r002 第三実装交叉検証 (verdict不消費・実行前に宣言)
+
+batch 15 (Part AK, class 5830, renewed rank 13) は第1wave で事前登録WIN-HALT規則が
+同一wave内で2回発火した (r001: s5_index 103560, key `[4035788216211603456, 0]`,
+legal 82, result 1 WIN, 2,521,302 nodes / r002: s5_index 103561, key
+`[3603442651849818112, 128]`, legal 82, result 1 WIN, 5,973,924 nodes。いずれも
+2-pass fresh cold node-exact)。Part G/K/O/P/T/W/AA/AD/AG規約に従い、13番目・
+14番目のunconsumed closure WIN r001/r002 を**第三実装** (非df-pn AND/ORミニ
+マックス `third_impl.js`, pin sha256 `08ea958f...`) でverdict-level交叉検証する。
+**verdict不消費・採用判断は引き続きscrutiny owner (C++第二実装 gate pin
+`9193f5b6...`)。**
+
+- 対象: `research/experiments/n11-centralreply-closure-batch15-wins-thirdimpl-20261122/`。
+  targets = batch-15のprobed行のうちverdictを有する行 全部 = **r001/r002 の2 WIN行**
+  (期待値はpublished replicaどおり WIN 1)。r003/r004 はbudget枯損 (result 0,
+  15,000,000, 2-pass) でverdictを持たないため交叉検証の対象外 (honest UNKNOWNの
+  まま。第三実装での再探索はbudget昇格に相当し別宣言が必要なため本実験では
+  実行しない)。
+  - anchors (published第三実装値を本ホストで再現): k02a (WIN, legal 87, 9,106,337
+    expansions / 4,991,527 ttHits)・l1a (LOSS, legal 116, 7,660,602 / 3,951,175)。
+  - negatives (GATE_FAIL必須): ng1 (k02 legal+1)・ng2 (k02 stones 6)。
+  - 入力はpublished batch-15 raws (commit `d1316b19`)・batch-keys.json (sha256
+    `af3e4c46...`)・status.log・published input CSV (scaffold `b04969bc`) から
+    `scripts/make_inputs_batch15.py` (Part AG版をadapt) で機械導出
+    (fail-closed・手転写ゼロ・source raw 2-pass node-exact・status PASS行照合・
+    derived-vs-published CSV byte一致)。
+- 前提ゲート (fail-closed): script pin 3種 (third_impl `08ea958f...` / verify_tbl
+  `c8c52528...` / jsreplay `84585617...`)・rule-engine gate (quads 95,670 ==
+  replica・TBL==wob mismatches 0)・anchor本ホスト再現がpublished値と完全一致・
+  negatives文言一致GATE_FAIL。
+- 手法: 1行1プロセス、cap 300M expansions、wallcap 240s、`--memo-power=22`、
+  1行2回 (a/b) determinism gate (result/expansion/ttHits/reason同一必須)。
+  wall超過 (runlimit) はhonest wall-inconclusive・検証主張としない。cleanな
+  verdict一致のみ文献として記録。cleanな不一致はdivergence evidenceとして
+  記録するがverdictは書き換えない。audit.py (schema
+  `batch15-wins-thirdimpl-audit-v1`) を2回実行しbyte一致必須。
+- 主張と消費規則: 本実験はverdict不消費。r001/r002のWINはunconsumed closure WIN
+  のまま (採用判断はscrutinity owner待ち・不変)。標準11x11空盤・19 central-reply
+  roots・class 5830 (48キー未着手) はどの時点でもUNKNOWNのまま。nodes/expansionsを
+  勝敗として読まない。
+- 並走との不接触: batch-13 (Part AI)・batch-14 (Part AF)・Part AJのファイルには
+  一切接触しない (読み取りのみ)。宣言直前に最新mainを再取得し (observed HEAD
+  `cf485460`・note blob `65e74c00...` 171,198 bytes・記録時点でPart AJ status updateが末尾)、同scope対抗宣言なし・
+  `batch15-wins-thirdimpl` dir不在・Part AL採番未使用を確認済み。同一スコープの
+  宣言がmainに存在する場合は本宣言を破棄して着手しない。
+- 本宣言 observed HEAD-before-push: `cf485460` (2026-11-22T14:47:40Z)。push直前にnote blob再照合し競合時は破棄。
