@@ -45,6 +45,15 @@ artifacts:
 - path: research/log/2026-11-22-two-token-y14-parametric-fit.md
   role: log
   note: fit段階の実行記録（選定・経緯・誠実記録・出版記録）
+- path: research/experiments/vertical-fiber-two-token-y14-parametric-fit-second-verification-20261122/README.md
+  role: proof
+  note: 独立第二検証（同一毎時タスクの別実行レーン・fit出版は対抗宣言18:42:55Zに19秒差で譲渡済み・第二レーンの宣言・fit出版はmainになし）。独立導出したcand14の生probe 90,049点（K1233 probe box外の17,137点を含む相補box・z=0..33・x=14..z+30・R<=x+z+28）対K1233出版cand14 mismatch 0・K1233出版probe_y14.py再生成74,834点（行SHA同一633f17cc…）対第二レーンcand14 mismatch 0・両実装の判定等価グリッド2,241,162点 mismatch 0・Y定数改ざんfail-closed捕捉・overall PASS（second_verification.json SHA-256 04b72214…）。y=14生probe行表の初出版も本dir
+- path: research/experiments/vertical-fiber-two-token-y14-parametric-fit-second-verification-20261122/y14_second_verification.py
+  role: verifier
+  note: 第二検証の正本検証器（V1-V4・決定的・純stdlib・K1233出版dir引数取り・fetch-back版で再実行PASS・second_verification.json byte-identical）
+- path: research/log/2026-11-22-y14-fit-second-verification.md
+  role: log
+  note: 第二検証の実行記録（二重並走の解決・譲渡経緯・box相補性・K1171/K1231併存のmaintainer判定事項記録・trust境界）
 scope: >-
   κ=1残余ゲームH(R;X;z)の2トークン族X=(x,14)、有限fit範囲 z=0..30・x=14..z+29・R<=x+z+30
   ＋box外spot・merge/tail回帰の計122,829点比較。cand14(z,x,R)のz偶奇別T/P集合表が
@@ -71,6 +80,14 @@ evidence: >-
   bad 0（深R<=130代表15行・大z=31..40×23d・x=y=14エッジ・大d∈{30,41,52}）・
   merge回帰15,336比較0・tail raw回帰84点0。(4) 決定性: probe_rows.txt別cwd再生成
   byte-identical・audit 2回実行byte-identical・fail-closedモデル。
+  (5) 独立第二検証（別実行レーン・実験dir commit dc0a7cfc・SV log commit 04f1b30e）:
+  K1233と同じ毎時タスクの別実行が宣言18:43:14Z（対抗宣言に19秒遅れ）で独自導出した
+  cand14（K1231横断統一則seed・pin行フリップと混合th則を事前予想し自前probeに一発一致）
+  および相補的な生probe box（z=0..33・90,049点・merge行15行）を用いた双方向生値照合:
+  K1233出版cand14が独立probe 90,049点（box外17,137点含む）にmismatch 0・第二レーン
+  cand14がK1233 probe再生成74,834点（K1233専有の広R帯1,922点含む）にmismatch 0・
+  両実装判定等価2,241,162点mismatch 0・Y定数改ざん捕捉。同一閉形式への独立二導出が
+  fit levelで確定。全称性の主張は不変。
   誠実記録: spot深行の初回選択に定義域x>=14未満の(19,13)（{13,14}はy=13族x=14行で
   生値1が正しい）が混入し該当1点のみbadになったが、出版前に(21,15)へ修正し以後の
   全実行はbad 0。合計122,829点比較・不一致0。全称性は含まない。
