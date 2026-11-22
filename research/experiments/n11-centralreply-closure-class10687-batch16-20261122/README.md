@@ -59,8 +59,11 @@ the 52 keys (row-by-row machine cross-check vs batch-keys:
 `PASS 15000000,2,<nodes>` lines).
 
 Consequence: under the pre-registered batch rule, the all-LOSS closure route
-for S4 class 10687 survives its first full probe (the 16th batch overall:
-13 WIN-HALT + 3 clean all-LOSS precede it). The 52 LOSS rows are NOT consumed
+for S4 class 10687 survives its first full probe - the fourth clean all-LOSS
+batch overall (after 23963, 10324, 8784). Completed batches before this one
+number 14: 11 WIN-HALT (16757/20421/16371/12264/5473/2634/1518/8785/8106/
+16930/5830) + 3 clean; batch-14 (class 23101) is declared but its result
+remains unpublished (in flight by the Part AF owner) and is not counted.
 here: consumption happens only through the fail-closed union merger as a
 published increment plus an independent refresh re-audit; this batch alone
 asserts no root coverage, no class closure, and no third-move secured claim.
@@ -88,3 +91,13 @@ transparency (211 header bytes each, no verdict lines). No stop rule ever
 fired; every published raw is a complete 2-pass node-exact pair.
 
 File inventory and sha256 of every published file: `MANIFEST-sha256.txt`.
+
+## Erratum (publication amendment, 2026-11-22)
+
+The Result section originally read "(the 16th batch overall: 13 WIN-HALT +
+3 clean all-LOSS precede it)". That tally was wrong: batch-14 (class 23101)
+is declared but result-unpublished (its experiment README/output carry no
+results), so the completed precedent record is 11 WIN-HALT + 3 clean in 14
+batches, and this batch is the fourth clean all-LOSS batch. Corrected in
+place by erratum commit; MANIFEST-sha256.txt updated accordingly. No
+verdict, count or claim of this batch itself is affected.
