@@ -1488,3 +1488,62 @@ Part AB宣言 (本note Part AB節・commit `a081823a`) に基づき base control
   `[1152926194711134208, 0]` (unknown 52) の宣言・実行。
 - 本status update observed HEAD-before-push: 実行時の最新mainを
   コミットメッセージに記録。
+
+## Part AC (prober, amendment 2026-11-22): batch 12 (class 8106, renewed rank 10) 宣言 - 反駁証拠のない次位clean候補をbatch-7 protocolで開始
+
+batch実績は11バッチ中8 WIN-HALT + 3 clean (23963/10324/8784 = 33・34・35番目free)。
+Part ABの分解出版後、renewed closure ranking (Part Y正本 closure-classes.csv,
+sha256 `61943b85...`) で rank 1-8はすべて反駁証拠保持 (16757: b018, 20421: d002,
+30345: b018のs5 528497, 16371: e002, 12264: f017, 5473: g018, 2634: h045,
+8785: z003)、rank 9 = 1518 (j033保持) のため、反駁証拠のないfirst clean
+candidateとして **rank 10 class 8106** (mask `[1152926194711134208, 0]`,
+unknown 52, first=14/third=58, 4 groups) に着手する。
+
+- 対象: `research/experiments/n11-centralreply-closure-class8106-batch12-20261122/`。
+  graph class index 8106 の未確定canonical S5子52件 (n001-n052。接頭辞nは
+  batch 1-11およびanchor行 (k02a/l1a) の命名系列との衝突がなく、bookkeeping
+  のみ)。Part Y re-audit正本probe-worklist (65,154行、sha256
+  `1807e4d21f6fb757ea21850c6bda4d822cb76ac59abfa9bcd1cc7b53bd7055ef`) の
+  `serving_class=8106` 行 (probe_order 434-485・Board再計算合法手数固定。52行
+  すべてclosure group first=14/third=58所属・classがserveする4グループの
+  うちこのgroupに残存unknown子が集中)。52行はbatch-keys.jsonに
+  全行published (正本cache・update8機構に対して独立照合可能)。
+- 宣言前fail-safe機械確認 (本ホスト・fail-closed): (1) 実行環境リセットにより
+  ローカル作業ツリーを失ったため、pinned inputs 6種 (dependency-graph
+  `54f9c364...`・正本merged cache 6,027行 `95e868d6...`・update8 plan
+  `b658290a...`・Board `954d3a10...`・policy `78655e94...`・quarantine
+  `81d23160...`) をrepo正本 (commit `0a369d6c` 固定raw) から再取得しsha256
+  全件一致を確認の上、published Part Y scenario script (sha256 `88671526...`)
+  を2回再実行してclosure-classes.csv・per-root-coverage.csv・
+  refresh-summary.jsonの3成果物がpublished Part Y正本とbyte一致、
+  probe-worklist.csv (65,154行) はsha256 `1807e4d2...` でPart Y/Z記載値と
+  一致することをcross-host byte-exactで再確認した (worklistの全52行抽出は
+  この再生成正本から行った)。(2) 52/52キーは正本merged cache (6,027行・
+  sha256 `95e868d6...`) に不在 (0 hits)。(3) quarantine registry
+  (sha256 `81d23160...`・active 2件) とのkey対照 0 hits (両方向)。
+  (4) 52キー重複なし・closure-classes rank 10行 (class 8106・mask
+  `[1152926194711134208, 0]`・unknown 52・first 14/third 58) と正本一致。
+  (5) 8つのunconsumed WINキー (b018/d002/e002/f017/g018/j033/h045/z003) は
+  class 8106の52子に不在 (cost-child対照 0 hits、Part Z記載の機械確認と同一
+  結果)。
+- val-gate: published two-target-design 4行を本ホストで再現、4/4 node-exact
+  (at2m result 0/2,000,000 ×2、15m result 2/3,651,923 と result 2/5,040,200。
+  本ホストのfresh出力4件はscaffoldのoutput/val-gate/に固定)。
+- 手法・停止規則・消費規則: Part B-Zと全部同一 (pinned replica `jsreplay.js`
+  sha256 `845856175d...`・batches 1-11とbyte-identical、2-pass fresh cold、
+  budget 15M、mismatch→HARD-STOP rc=42、WIN→HALT rc=45、枯渇=UNKNOWN、
+  消費はfail-closed merger経由のみ、本batch単体では閉鎖・被覆・secured主張
+  なし)。実行並列は本ホスト最大4 worker (probe_order順4キーwave実行・
+  WIN報告wave完了後は新規キー着手なし・同一wave内のin-flight完了行は誠実開示、
+  batch-5 f018先例)。
+- 主張の範囲: 本batchはcoverage・closure・rootを一切主張しない。WIN-HALT
+  (rc=45) が発火した場合はそのkeyで停止しif-adopted解析に回す (予登録
+  stop rule)。全52本LOSSでも消費はfail-closed increment merge + refresh
+  再監査まで行わない (将来のverifier宣言)。**class 8106・19 central-reply
+  roots・標準11×11空盤はUNKNOWNのまま。nodes数・pass数を勝敗として読まない。**
+- 並走との不接触: batch-8 (Part N/U/V/W)・batch-9 (Part Q/R/T)・batch-10
+  (Part X/Y)・batch-11 (Part Z/AA/AB) のpublishedファイルには一切接触しない。
+  同一スコープの宣言がmainに存在する場合は着手しない (宣言直前に最新mainを
+  再取得・class8106実験dirの不在・Part AC採番の未使用を確認済み)。
+- 本amendment observed HEAD-before-push: 実行時の最新mainをコミット
+  メッセージに記録。
