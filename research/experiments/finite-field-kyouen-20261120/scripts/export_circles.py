@@ -29,12 +29,24 @@ def main() -> None:
     idx = {p: i for i, p in enumerate(points)}
     blocks = [tuple(sorted(idx[p] for p in c)) for c in circles]
 
+    # put the base circle C = P^1(F_q) FIRST so the C programs find it
+    base = set(sub) | {None}
+    ci = None
+    for k, B in enumerate(blocks):
+        if set(points[i] for i in B) == base:
+            ci = k
+            break
+    if ci is None:
+        raise SystemExit("base circle not found")
+    blocks = [blocks[ci]] + [B for k, B in enumerate(blocks) if k != ci]
+
     args.out.parent.mkdir(parents=True, exist_ok=True)
     with args.out.open("w", encoding="utf-8") as fh:
         fh.write(f"{len(points)} {len(blocks)}\n")
         for B in blocks:
             fh.write(f"{len(B)} " + " ".join(str(x) for x in B) + "\n")
-    print(f"q={args.q}: n={len(points)}, b={len(blocks)} -> {args.out}")
+    print(f"q={args.q}: n={len(points)}, b={len(blocks)}, "
+          f"base moved to index 0 -> {args.out}")
 
 
 if __name__ == "__main__":
