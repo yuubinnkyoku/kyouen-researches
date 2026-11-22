@@ -1085,3 +1085,57 @@ Part M (10324→34番目free) と同一の閉鎖機構で消費・再監査を�
 - 並走との不接触: batch-10由来キーのみ。同一スコープの宣言がmainに
   存在する場合は着手しない。
 - 本宣言のobserved HEAD-before-push: 実行時の最新mainをコミットメッセージに記録。
+
+## Part Y 出版status update (2026-11-22, verifier): class 8784 消費完了 - 35番目のBoard検証free class確定
+
+Part Y宣言 (本note Part Y節) に基づき消費・再監査を実行・出版した。
+
+- increment (fail-closed, `make_increment_batch10.py`): published batch-10
+  raws (chunk commits `7b8790ab`/`736a4f11`/`354524de` から再取得・
+  実行ホスト正本と104/104 byte一致を再確認) + published
+  batch-keys.json (`a1401ee2...`) から52行を機械生成。全ゲート通過
+  (ルールゲート行`forbidden quadruples: 95670`両pass存在・stones=5/
+  is_or=0/budget=15M・2-pass (budget,result,nodes) 一致・全行result 2・
+  legal/key照合)。increment sha256 `f500610a55802e7f67eecb06d9d31e3462
+  761cbb61a746bbd46a4e63ad2cc652`。
+- merge (published merger, selftest PASS): 正本5,975行 (`a998f4c0...`) +
+  52行 → **6,027行 (WIN 158 / LOSS 5,869)・衝突0・重複0・nodes不一致0**。
+  新merged cache sha256 `95e868d6762925b9a27ad963a825a9ad4fd5131a864eb82
+  fac0db77d7acdb326` (247,267 bytes)。canonical input pathからのmerge再実行
+  で出力sha同一 (決定性確認)。
+- refresh (published scriptのbyte-copy、差分3行 = docstringのcache系列行・
+  CACHE path行・sha pin行、scenario script sha256 `88671526...`): **2回実行
+  の全4出力がbyte-identical** (closure-classes `61943b85...`・
+  per-root-coverage `33f01a0c...`・refresh-summary `25987add...`・
+  probe-worklist 65,154行 `1807e4d2...`)。
+- 事前登録判定ゲート (すべてPASS・machine-verified):
+  **(1) class 8784 = Board検証済み35番目のfree class** (free_now 34→**35**、
+  board_verification 35/35・rejected 0、8784はunknown閉鎖rankingから消失)。
+  **(2) excluded_now 23不変** (WIN 0行消費の機械的要求)。unknown class総数
+  34,502→34,501 (unknown→freeは8784の1クラスのみ)。**(3) 実被覆増分**:
+  root 38のfree第三手 **10→13 (+3)**・root 16 **12→14 (+2)**
+  (per-root-coverage.csv)。**(4) update8**: remaining_now 31,836→**31,784
+  (−52)** (resolved 23→**75**、52 keys全てbaseline requirement内・
+  groups_free_now 122→**127** (+5)、per-root remaining: root 16 −104・
+  root 38 −156)。**(5) scheduling量**: joint greedy 35,857→**35,242 (−615、
+  測定史上3番目のgreedy削減: h045 LOSS43の−951・j-loss32の−622に次ぐ)**、
+  worklist 65,155→65,154、nonfree best-option groups 2,132→2,127。
+- 次のfirst clean candidate: renewed closure rankingでrank 1-8は不変
+  (全て反駁証拠保持: 16757: b018, 20421: d002, 30345: s5 528497,
+  16371: e002, 12264: f017, 5473: g018, 2634: h045, 1518: j033)、
+  **rank 9 class 8106** `[1152926194711134208, 0]` (unknown 52,
+  first=14/third=58, 4 groups)。
+- 出版: 実験 `n11-central-reply-8784-closure-reaudit-20261122`
+  commit `79cfa66a` (9 files: README + scripts 3 + increment + merge-audit
+  + closure-classes + per-root-coverage + refresh-summary) + commit
+  `5a6e0528` (新merged cache 1 file)。fetch-back: 10/10 byte一致
+  (commit固定raw URL)。probe-worklist (3.77MB, regenerable) は非再出版
+  (shaはREADME記載)。
+- 不変事項: **verdict不消費**。7つのunconsumed closure WIN (b018/d002/
+  e002/f017/g018/j033/h045) はscrutiny owner待ち (C++第二実装 gate pin
+  `9193f5b6...`前例)。消費したのはbatch-10の52 LOSS行のみ。
+  **標準11×11空盤・19 central-reply rootsは引き続きUNKNOWN。**
+  class 8784のfreeはmerged cache由来のderived class statusであり、
+  勝敗主張ではない。nodesを勝敗として読まない。
+- 本status update observed HEAD-before-push: 実行時の最新mainを
+  コミットメッセージに記録 (Part Y実験出版 `5a6e0528` 直後のmain)。
