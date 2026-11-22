@@ -4406,3 +4406,68 @@ published正本bytesのみから独立host (本host) で再実行・機械検証
   ン・Part BB/BC成果物 (読み取りのみ) に書込みなし。
 - 本amendment observed HEAD-before-push: `b706b21448041c8d6788fd9803059ae675051595` (push直前にnote blob sha1
   (`a564e191ef9eb5b369dee4b1d1a7c25e9a47f73a`) を再照合し、競合時は再fetchして本節を追記し直す)。
+
+### Part BD status update (2026-11-22, verifier host B): execution complete, published (12 files), fetch-back verified
+
+宣言 (note amendment commit `269e7865`・observed HEAD-before-push `b706b214`・push直前note
+blob lock `a564e191…`) どおり、 verifier単一オーナーとしてPart BC batch-14residual
+(class 23101) 残余10-LOSS canonical採用の全pipelineを独立host Bで再実行検証し、
+`research/experiments/n11-centralreply-class23101-residualloss10-adoption-second-verification-20261122/`
+に12ファイルを出版・fetch-back byte検証した (最終HEAD `2a8060b8` 固定rawでcmp 12/12一致・
+MANIFEST sha256全件一致)。
+
+- 出版コミット (12ファイル): scripts x3 = `34356786` (check_bd_minimal.py `46a6cc51…`) /
+  `331b26b0` (refresh_adoption_10661_instr.py `d922e6a6…`) / `05cf0106`
+  (refresh_adoption_23101resid_instr.py `1fe2e67b…`) ・ outputs x6 = `a2cca96d`
+  (bd-verification-summary.json `55e61eb5…`) / `9c0bee45` (bd-rerun-shas.txt
+  `a4db0efc…`) / `fb341fde` (bd-minimal-check-result.json `68871285…`) /
+  `4e6723a4` (bd-greedy-trace-base.json `3560aa0b…`) / `4005defd`
+  (bd-greedy-trace-scen.json `339a8238…`) / `e9ac7e0d` (bd-tamper-battery.log
+  `a57329b2…`) ・ docs x3 = `76288203` (README.md `1ddffed0…`) / `abbfa7cf`
+  (status.log `38cc26d6…`) / `2a8060b8` (MANIFEST-sha256.txt `3581d46b…`)。
+- pipeline再実行 (全入力はpublished byte・commit固定raw fetch-back検証済み):
+  maker x3 (increment `c3f201a6` / manifest `f7287b7b`) → merger selftest (5-case
+  PASS) + x3 (canonical 6,182行 `0b594f7e` + merge-audits `6a9a53a3`) →
+  refresh x3 (`5f3a09c6` / `52ec3d4b` / `1f54065a` + worklist `fe71be60`,
+  ~58s/run) → extractor x3 (`62de8c16`・全gate PASS)。3回実行すべてpublished byte一致。
+- 自作minimal checker (Part BC機材非依存・BC出力の値は不使用): **43 checks /
+  0 failures / rc=0**。raw 3-way再導出 (p1/p2/status.log/row-audit/batch-keys/input
+  CSV・23,252,550 nodes/pass) ・ q042不在/batch-17 s5-disjoint/quarantine disjoint・
+  cache集合演算 (BASE 6,172 ∪ increment 10 = 6,182・WIN 158 / LOSS 6,024・conflict 0・
+  重複0) ・ class 23101 scenario-unknown == [745184] (未採用q042 WIN行
+  key `1152921505747697664:1032`) ・ holder 28クラス (23101×10 + 27×1) 値一致・
+  世界分類 excluded 390 / excluded_now 23 / free_now 37 / unknown 34,499・board検証
+  free 37/37・update8 resolved 80不変 (両world)・closure候補表808行churn
+  (退出 `22149` / 新規 `23965`・rank1=23101 with unknown_now 1) と全808行の
+  unknown_now列の自前再計算一致・worklist 64,888→64,872 ((key,serving_class)行
+  multiset差分: 削除123コピー {22149:108, 23101:10, holder singles 5}・追加107コピー
+  {23965支配}・採用10キーはSCEN worklistから完全消滅・−16はbest-option
+  bookkeepingで被覆変化ではない) ・ per-root coverageはindividual_greedy_union
+  カラムのみ変化 (23行・被覆列は不変)。
+- joint greedy非単調性の決定論的分解 (計装refreshコピー・両world全出力byte再現):
+  1-pass値 BASE 49,361 → SCEN 49,351 (−10 = 採用10キー分・BC host記録と一致) ・
+  6-pass打ち切りsnapshot 35,645 → 38,978 (+3,333)。両worldともJOINTはpass 6で
+  improved=Trueのまま制限打ち切り = 収束しない非単調局所探索の決定論的snapshot、
+  plan estimateであり被覆主張ではない。軌道: BASE [49361, 35697, 40555, 36770,
+  35167, 36270, 35645] / SCEN [49351, 35694, 40555, 36767, 35158, 36127, 38978]
+  (trace 2ファイル出版)。
+- fail-closed改ざんbattery: 宣言の5種をT3のmerger単体 (T3a) とrefresh cache-sha pin
+  捕捉 (T3b) に分離し計6種を実行 (全てスクラッチツリーのみ・現物はbattery後に
+  Part BC MANIFEST 16/16で再検証): T1 maker raw nodes改ざん→3-way gate ABORT rc1 /
+  T2 増分11行目WIN追加→merger GATE FAILED・no-output rc1 / T3a q043 verdict単独反転
+  →merger単体は成功 (WIN 159・tamper-merged `855c8aa6`) = mergerだけではBASE不在
+  キーの反転を捕捉できないgate-gap (T3bでrefresh cache-sha pinがrc1捕捉) /
+  T4 manifest row_counts 10→9→extractor GATE FAILED rc1 / T5 scenario cache nodes
+  1桁改ざん→cache sha drift rc1 / T6 policy末尾1行追加→evidence policy sha drift rc1。
+- verdict不消費: 本Partは読み取りと再実行のみでcanonical cache・refresh出力への
+  書込みなし (出力は新規dir配下のみ)。**17 unconsumed closure WIN
+  (b018/d002/e002/f017/g018/j033/h045/z003/n005/n006/p002/p003/r001/r002/q042 +
+  AY v001/v002) は読み書きとも不接触・不変**。採用判断はscrutiny owner C++第二実装
+  gate pin `9193f5b6…`のまま。q042 WIN行は採用・却下ともにならない。
+- 並走との不接触: batch-18 (AY残51キー)・batch-19選定・y=16 fastレーン・K1058レー
+  ン・Part BB/BC成果物 (読み取りのみ) に書込みなし。
+- 標準11×11空盤・19 central-reply roots・class 23101・未知の全S5子は本Partの
+  どの時点でもUNKNOWNのまま。nodes数・worklist数・greedy数を勝敗として読まない。
+- 本status update observed HEAD-before-push: `2a8060b86f506786553344eae61674adc18d3064`
+  (push直前にnote blob sha1 (`739e7fe2c8c3e4dd5f816f69b804e12b80e66fd5`) を再照合し、
+  競合時は再fetchして本節を追記し直す)。
