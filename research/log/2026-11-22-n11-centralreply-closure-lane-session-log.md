@@ -2746,3 +2746,31 @@ refutation evidence.
   adoption after Part AV lands, (d) the scrutiny owner's WIN/LOSS
   adoption gates, (e) note status append for Part BB + knowledge
   kit mirror (done in this continuation when present).
+
+### Continuation 41 addendum (2026-11-22, this host): Part AV takeover preflight (read-only; no verdicts touched, no writes)
+
+- Status check at ~22:05Z (HEAD `8a1f17a4`): the Part AV experiment dir
+  `n11-centralreply-class10661-loss52-adoption-reaudit-20261122/` does
+  not exist on main yet (Part AV declaration commit `340abef3`,
+  observed HEAD-before-push `4741a92f`, batch-17 52-LOSS canonical
+  adoption in flight). No AV adoption publication appears in the
+  commit stream since. The takeover decision time (~23:00Z, shared
+  with the AY lane) is not reached; this lane stands by and does not
+  touch the Part AV scope before the criterion fires.
+- Preflight for the eventual takeover executor (all byte-verified vs
+  commit-pinned raw at HEAD `8a1f17a4`): canonical 6,120-row cache
+  `be9cb24e...` (251,466 B) at the Part AS adoption-reaudit path;
+  Part AS reaudit 3 outputs refresh-summary `f2008e70...` /
+  closure-classes `3ee1dbb6...` / per-root-coverage `527c7e9a...`;
+  batch-17 input batch-keys `db762175...` (9,400 B) and row-audit
+  `c19e768f...` (14,232 B) at the batch-17 publication dir (unchanged
+  since `ffc09de1` + hygiene `4741a92f`). Kit mirrors are in place
+  for the takeover: `_19root-refresh-kit/batch10661/` (178 files
+  incl. the 104 raws u001..u052 p1/p2) and
+  `_19root-refresh-kit/batch23101-loss41-adoption/` (the Part AV
+  machinery precedent: maker `b6094f0b...`, merger byte-copy pin
+  `90711961...`, extractor `9e885ae0...`, refresh adapt base
+  `5992738d...`, plus the AS reaudit outputs).
+- Guards unchanged: the standard 11x11 empty board and all 19
+  central-reply roots remain UNKNOWN; this preflight consumed no
+  verdicts and wrote nowhere outside this log append.
