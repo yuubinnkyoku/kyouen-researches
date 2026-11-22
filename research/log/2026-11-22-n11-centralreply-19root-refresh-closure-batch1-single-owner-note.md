@@ -3992,3 +3992,61 @@ scrutiny owner (C++第二実装 gate pin `9193f5b6…`) のためのif-adopted�
 - 標準11×11空盤・19 central-reply roots・class 16131 (残51子)・全classは
   本Partのどの時点でもUNKNOWNのまま。nodes数・worklist数・greedy数を
   勝敗として読まない。
+
+## Part BB (verifier, declaration 2026-11-22): 全17 unconsumed closure WIN行のjoint if-adopted分解 (scrutiny owner向け事前計算・verdict不消費・実行前に宣言)
+
+Part BAの完了により、17個全部のunconsumed closure WIN (b018/d002/e002/
+f017/g018/j033/h045/z003/n005/n006/p002/p003/r001/r002/q042/v001/v002) が
+単独または小結合のif-adopted分解を持つ状態になった。ただし全17行を
+**同時に**採用した場合のjoint投影は存在しない (Part AJのjoint10は旧
+BASE 6,120ではなく**Part Y時代の6,027行**を用いた10 WIN版で、しかも
+その後7 WIN (p002/p003/r001/r002/q042/v001/v002) が増えた・機械可測の
+ギャップ)。scrutiny owner (C++第二実装 gate pin `9193f5b6…`) のための
+全17行同時採用if-adopted分解を、**現行canonical BASE 6,120行**
+(sha256 `be9cb24e…`, Part AS publication) の上で実行する。
+**verdict不消費・本Partは採用を推奨も却下もしない・if-adopted投影を
+勝敗や閉鎖主張として読まない。**
+
+- 対象: `research/experiments/n11-centralreply-joint-17win-ifadopted-20261122/`。
+- 入力は**全て出版済みのsha-pinned increment cache**のみ (raw再検証は
+  各自の出版時に完了済み・ここではpinで連鎖させる):
+  (1) Part AJ wins10 `fe2c6f68f49195b44e21c8d43998fccd965c868e08e49d8a1b3233f5daa4c15e`
+  (10行: b018/d002/e002/f017/g018/h045/j033/z003/n005/n006)、
+  (2) batch13 wins2 `bb238f67dbfcc3b9a05ac5542f783107366777f17149f7a5a5af64d4864b0f7c`
+  (p002/p003, class 16930)、
+  (3) batch15 wins2 `05c10e1ff17c2601b1fb4a0782af2543d302187ce6344df97d3c763947262b7d`
+  (r001/r002, class 5830)、
+  (4) Part AT q042 `b4958328270f11b24d3a638e1099a0c6047dbebb242e3116217b0473ef63f9b6`
+  (class 23101)、
+  (5) Part BA b18win v001/v002 `4f8fc29bfd00492aa9a983f20a121737d395b8f80d53e2b04c271fec068bc1ee`
+  (class 16131)。resource pins: graph `54f9c364…`・update8 `b658290a…`・
+  Board `954d3a10…`・policy `78655e94…`・quarantine `81d23160…`・
+  BASE reaudit正本 3件 (Part AS: `f2008e70…`/`3ee1dbb6…`/`527c7e9a…`)。
+- maker `make_increment_17win_joint.py`: 5つのpinned incrementから
+  (行形式・WIN=1・nodes正・キー17個一意・BASE不在6,120行・quarantine
+  不在・canonical-safe・各manifestのsha/行数/win構成との交差一致) を
+  gateして17行joint increment + manifest (rows 17/17 WIN/0 LOSS) を導出。
+- merger: byte-copy pin `90711961…` 2回実行・byte一致 → **if-adopted
+  cache 6,137行** (WIN 175 / LOSS 5,962)。merge-audit 2回byte一致。
+  merge後にBASE `be9cb24e…` byte不変再検証。
+- refresh: AT/BA流のadapt (docstring + cache path + cache sha期待値は
+  cache自体から機械抽出) を2回直列実行・4出力byte一致。
+- extractor `compare_deltas_17win_ifadopted.py` (BA版 `c1c39b50…` の
+  17-WIN拡張): flips == 17個のWIN s5 indexの全graph保持クラス和集合の
+  うちBASE-unknownのもの (per-WIN holder台帳 + joint union機械計算・
+  hardcodeなし)・純WIN採用のnewly-free空・per-root被覆変更行0・
+  per-WIN s5のBASE index_verdict不在 (17/17不消費gate)・
+  update8新規解決集合 == baseline requirement ∩ 17 s5 (機械)・
+  excluded_now/unknownの加算整合。実測は台帳に記録するのみで
+  事前予想しない (Part AJとの差分要因: BASE 6,027→6,120変化・
+  10→17行拡大・その後のbatch-14 41 LOSS採用)。
+- 並走との不接触: AY残51キー・Part AV (batch-17 adoption, in flight)・
+  batch-19には一切触れない。同一スコープ (17-WIN joint if-adopted
+  分解) の対抗宣言がmainに存在する場合は本宣言を破棄して着手しない
+  (grep済み: 同名実験dirなし・note内に対抗宣言なし)。
+- 標準11×11空盤・19 central-reply roots・17 WINの保有クラス (残る
+  unknown子すべて)・全classは本Partのどの時点でもUNKNOWNのまま。
+  nodes数を勝敗として読まない。
+- 本amendment observed HEAD-before-push: 実行時の最新mainをコミット
+  メッセージに記録する。push直前にnote blob sha1ロックを再照合し、
+  競合時は再fetchして本節を追記し直す。
