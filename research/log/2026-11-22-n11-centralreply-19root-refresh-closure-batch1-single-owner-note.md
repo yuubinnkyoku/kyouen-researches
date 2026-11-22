@@ -3841,3 +3841,71 @@ published batch-18 WIN行 v001/v002をpinned第三実装で解き、出版まで
 - 標準11×11空盤・19 central-reply roots・class 16131 (残51子)・全53キーは
   本Partのどの時点でもUNKNOWNのまま。nodes数・expansions数を勝敗として
   読まない。
+
+## Part BA (verifier, declaration 2026-11-22): batch-18 closure WIN行 v001/v002 のif-adopted分解 (scrutiny owner向け事前計算・verdict不消費・実行前に宣言)
+
+batch-18 (Part AY, class 16131) の最初のwaveで両worker WIN (v001 5,656,151
+nodes / v002 7,898,204 nodes, 2-pass fresh-cold node-exact, 第三実装一致済み
+(Part AZ, publication commit `2f944d5d`), batch-18 publication commit
+`938e34f2`) により、unconsumed closure WIN候補は17になった。17候補のうち
+15 (b018/d002/e002/f017/g018/j033/h045/z003/n005/n006/p002/p003/r001/
+r002/q042) は既存のif-adopted分解 (Part V/R/AB/AH/AI/AN/AO/AT等) を持つが、
+**v001/v002はいまだif-adopted分解をもたない (機械可測のギャップ)**。採用判断
+scrutiny owner (C++第二実装 gate pin `9193f5b6…`) のためのif-adopted分解を
+双WIN precedent (p002p003/r001r002/n005n006) と同一形式で実行する。
+**verdict不消費・本Partは採用を推奨も却下もしない・if-adopted投影を勝敗や
+閉鎖主張として読まない。**
+
+- 対象: `research/experiments/n11-centralreply-class16131-win-v001v002-ifadopted-20261122/`。
+- BASE = 現行canonical 6,120行 (sha256 `be9cb24e…`, Part AS publication
+  commit `8c42e44c` の `n11-centralreply-class23101-loss41-adoption-reaudit-20261122/output/`)。
+  v001/v002のkeyはBASEに不在 (batch-18 makerのcanonical 0/53 gate済み)。
+  Part AV (batch-17 adoption, 宣言 `340abef3`, in flight) の成果物は読み書き
+  ともしない (Part ATと同様、BASE 6,120を凍結BASEとする非正典projectionで
+  あることを明記)。
+- 増分 = 双WIN行 v001 (s5_index 153671, key `[1154610354467115008, 64]`,
+  legal 83, nodes 5,656,151) + v002 (s5_index 207534, key
+  `[3459890413727387648, 64]`, legal 84, nodes 7,898,204) (published
+  batch-18 raws 4ファイル `24b45c8a`/`1fc367bd`/`41c10ec2`/`e9f578fc`,
+  publication commit `938e34f2`; maker `make_increment_v001v002_win.py`
+  (Part AT版 `622ba795…` のadapt) が2-pass node-exact (result 1, nodes
+  両pass一致) をrawから機械検証し、status.log (`4b785add…`) のPASS行・
+  WIN-HALT行・WIN-ROW-DETAIL行・EXECUTION-HALTED行との3-way一致、
+  batch-keys (`1bb3ed41…`) のlegal/(lo,hi)/s5_index一致、BASE不在 (6,120行)・
+  quarantine不在・canonical-safe形式をgateしてから2行incrementを導出)。
+- 手法: sha-pinned fail-closed union merger (`90711961…`, byte-copy pin)
+  2回実行・byte一致 → **if-adopted cache 6,122行** (WIN 160 / LOSS 5,962・
+  canonicalではなく投影)。merge後にBASE cache `be9cb24e…` byte不変を再検証。
+  refresh script adapt版 `reaudit/scripts/refresh_v001v002_ifadopted.py`
+  (Part AT版 `5f9810e6…` からcache path/sha・文言のみのadapt・sha期待値は
+  cache自体から機械抽出) を2回直列実行・run間byte一致。delta extractor
+  `compare_deltas_v001v002_ifadopted.py` (Part AT版 `207cfbcc…` を双WIN
+  if-adopted用にadapt: flips == s5 153671/207534をcost childとして持つ
+  unknown保持クラスの機械計算集合 (graph由来・hardcodeなし)、pure WIN採用の
+  newly-free-classes空、per-root free/uncovered変更行0、class 16131 flip含有 +
+  scenario-unknown 53→51、double-flipクラス (両WINをcost childにもつ) の
+  台帳記録、update8 win_hit_groups変化の機械抽出、canonical BASE sha pin・
+  BASE index_verdict不在gate、raw 2-pass再検証、manifest gate) を2回実行・
+  byte一致・全gate PASS。
+- 事前予想 (機械検証可能な範囲で事前登録・外れたら実測を優先して原因を記録):
+  BASE (Part AS reaudit正本) のclass_status_counts/free_now/per-root coverage
+  は本Partの再計算と完全一致しなければならない (equality gate)。class 16131は
+  v001/v002の保有クラスとして必ずflipし、scenario-unknownは53→51。flipsの
+  個数・peerクラス構成は台帳記録のみで予想しない (Part AJの30クラスjointと
+  は条件が異なる)。joint greedy/worklistの変化は実測をそのまま記録し、
+  加成性の主張はしない。
+- 主張範囲: if-adopted投影上の分類delta (flip集合・win_hit_groups・被覆・
+  worklist等の数表) のみ。canonical cacheは本Partで一切変更しない。
+- verdict不消費: 本Partが消費するverdictはゼロ (if-adopted cacheはrepoの
+  canonical chainではない)。v001/v002 (と他15候補) はcanonical上も未来の
+  採用判断上もunconsumedのまま。
+- 並走との不接触: AY宣言の残51キー (v003..v053・fresh) には一切触れない
+  (probeも15M再探索もしない)。Part AVの成果物 (cache 6,172行・reaudit出力)
+  には読み書きともに触れない。AYレーンのbatch-18 continuation / batch-19
+  (class 16513) pivotの選択を本Partは妨げない。同一スコープ (batch-18 WIN行の
+  if-adopted分解) の対抗宣言がmainに存在する場合は本宣言を破棄して着手しない。
+- 標準11×11空盤・19 central-reply roots・class 16131 (残51子)・全53キーは
+  本Partのどの時点でもUNKNOWNのまま。nodes数を勝敗として読まない。
+- 本amendment observed HEAD-before-push: 実行時の最新mainをコミットメッセージ
+  に記録する。push直前にnote blob sha1ロックを再照合し、競合時は再fetchして
+  本節を追記し直す。
