@@ -96,3 +96,92 @@ K0415/K0417 line). All pushes byte-verified via commit-pinned raw URLs
    consequences are pre-computed in the if-adopted analysis.
 5. Kit mirrors (reset-proof): `/home/user/knowledge/kyouen-research/_19root-refresh-kit/`
    (batch16757/, batch23963/, batch23963-reaudit/, b018ifadopted/).
+
+## Session continuation 2 (2026-11-22 ~03:13-03:30Z, same lane)
+
+Environment was reset mid-session (work dir lost; kit mirrors survived and
+were used to rebuild; node/curl/python3 present, git absent as before).
+Re-fetched latest main at each step; all pushes went through
+github_app.push_files with commit-pinned raw fetch-back byte verification.
+
+### Batch 3 (class 20421, Part D) - WIN-HALT at d002
+
+- val-gate 4/4 node-exact reproduced on the RESET host (at2m result 0 /
+  2,000,000 x2; 15m result 2 / 3,651,923; result 2 / 5,040,200).
+- d001 LOSS 879,510 nodes; d002 **WIN 5,359,994 nodes** (2-pass node-exact,
+  s5 197253, key `[3461016313634230272, 131072]`, legal 73) -> pre-registered
+  WIN-HALT; d003 LOSS 2,113,678; d004 LOSS 11,969,338. All 2-pass
+  node-exact. Class 20421's all-LOSS closure route refuted; d005-d049
+  unprobed; WIN unconsumed (scrutiny owner pending).
+- Operator note: one stray runner invocation with a `--check` argument
+  (treated as key id, exit 43, no solver run); spurious artifacts removed
+  and disclosed in the batch README before publishing.
+- Commits: `5bafed82` (scaffold + Part D, 62 files) -> `6e2a789f`
+  (WIN-HALT raws d001-d004 + status + README).
+
+### d002 IF-ADOPTED analysis (verdict NOT consumed)
+
+- `research/experiments/n11-central-reply-20421-win-d002-ifadopted-20261122/`:
+  canonical 5,924-row cache + 4-row batch-3 increment (3 LOSS + d002 WIN),
+  published merger selftest PASS, conflicts 0 -> 5,928 rows
+  (WIN159/LOSS5769), sha256 `f0bcbbc8...`; refresh script byte-copy with only
+  the 2 cache pins changed; determinism 4/4; baseline control 119/119 holds.
+- Deltas (machine-verified): exactly 4 classes flip excluded_now
+  (23 -> 27): the s5-197253 cost-child holders 5255 / 5282 / 6030 / 20421;
+  4 update8 groups flip win-hit (roots 12 and 37, all via 20421);
+  remaining 31,838 -> 31,789 (root 12: -98, root 37: -98); resolved among
+  baseline requirement 21 -> 25; groups_free_now 122 unchanged; free_now 33
+  unchanged; per-root free-third coverage unchanged everywhere; worklist
+  65,213 -> 65,209; joint greedy 35,617 -> 35,613.
+- Commits: `596f3ae5` (multi-file) + `0ecdb829` (5,928-row if-adopted cache,
+  single file).
+
+### Batch 4 (class 16371, Part E) - WIN-HALT at e002
+
+- First ranked closure class with no refutation evidence (16757: b018;
+  20421: d002; 30345: holds b018's s5 528497). 50 keys e001-e050
+  (root first=26/third=50 group), all absent from the canonical cache
+  (0 hits), worklist-sourced, Board legal counts fixed 74..94.
+- e001 LOSS 882,800 nodes; e002 **WIN 14,112,632 nodes** (2-pass node-exact,
+  s5 183566, key `[1153765929805414400, 16]`, legal 79) -> WIN-HALT;
+  e003-e050 unprobed; WIN unconsumed.
+- Empirical note: 3 of 4 closure batches have now WIN-halted (16757: b018;
+  20421: d002; 16371: e002); only 23963 closed 48/48 LOSS. The cheap end of
+  the closure-classes ranking appears WIN-dense.
+- Commits: `537e92de` (scaffold + Part E, 64 files) -> `8910e2c3`
+  (WIN-HALT raws e001/e002 + status + README).
+
+### e002 IF-ADOPTED analysis (verdict NOT consumed)
+
+- `research/experiments/n11-central-reply-16371-win-e002-ifadopted-20261122/`:
+  canonical 5,924 + 2-row batch-4 increment (e001 LOSS + e002 WIN) -> 5,926
+  rows (WIN159/LOSS5767), sha256 `cd3ad8d7...`; determinism 4/4; baseline
+  control holds.
+- Deltas (machine-verified): exactly 4 classes flip excluded_now: the
+  s5-183566 cost-child holders 4864 / 4903 / 5613 / 16371; **NO update8
+  consequence** (16371 is not a frozen-plan selected class; neither e001
+  nor e002 is in the 31,859 baseline requirement; remaining stays 31,838);
+  free_now 33 unchanged, coverage unchanged, worklist 65,213 -> 65,211;
+  joint greedy 35,617 -> 35,616; per-root greedy root 26 5,203 -> 5,202,
+  root 48 2,822 -> 2,820.
+- Commits: `ca175508` (multi-file) + `72c2fe96` (5,926-row if-adopted cache,
+  single file).
+
+### State on main after this continuation
+
+- Canonical merged cache is UNCHANGED at 5,924 rows (sha `8a721a18...`);
+  all six batch-3/4 verdicts (4 LOSS + 2 WIN) remain UNCONSUMED pending the
+  scrutiny owner (3 WINs now: b018, d002, e002, all 2-pass node-exact from
+  the pinned replica; C++ second-implementation gate precedent).
+- free_now 33 / achieved coverage unchanged; no closure, coverage or root
+  claim was made or consumed; standard 11x11 empty board, the 19
+  central-reply roots and all classes remain UNKNOWN.
+- Kit mirrors added: batch20421/ (complete incl. raws), d002ifadopted/,
+  batch16371/, e002ifadopted/ (each with increment, merge-audit,
+  refresh-summary, closure-classes, per-root-coverage, probe-worklist,
+  scripts).
+- Next runs: clean closure candidate = class 12264 (rank 5 re-audit
+  closure-classes.csv, 51 unknown) via a new declaration (Part F); or
+  scrutiny-owner consumption of the 3 pending WINs, which would formally
+  exclude 16757/20421 (and 30345/15640/5255/5282/6030/4864/4903/5613/16371)
+  and reshape the ranking.
