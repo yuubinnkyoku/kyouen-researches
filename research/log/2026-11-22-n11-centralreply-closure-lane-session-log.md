@@ -552,3 +552,18 @@ github_app.push_files with commit-pinned raw fetch-back byte verification.
 - Honesty record: verdicts not consumed anywhere; the standard 11x11 empty
   board, the 19 central-reply roots, class 2634 and every closure class
   remain UNKNOWN. Nodes/expansions are never verdicts.
+- Addendum (post-continuation-9 check, same session, ~07:1xZ): an
+  independent post-publication audit of the class-10324 consumption chain
+  was run from the published bytes only: (1) the published merged cache
+  (5,975 rows) refetches with sha256 exactly `a998f4c0...` (the note Part M
+  pin) and is byte-identical to the lane kit mirror; (2) sorted row sets
+  show merged == canonical 5,924 (sha256 `8a721a18...`, refetched from
+  main, pin-verified) UNION batch-7 increment 51, zero duplicate rows,
+  zero key collisions (the WIN/LOSS conflict gate is structurally
+  confirmed: increment and canonical are disjoint); (3) verdict counts
+  WIN 158 / LOSS 5,817, exactly as Part M published; (4) all 51 increment
+  rows match the published batch-7 status.log on (nodes, verdict) through
+  the published batch-keys.json lo:hi mapping, 51/51, 0 mismatches.
+  Read-only audit, no new claim, no verdict consumed; the standard 11x11
+  empty board, the 19 central-reply roots and all closure classes remain
+  UNKNOWN.
