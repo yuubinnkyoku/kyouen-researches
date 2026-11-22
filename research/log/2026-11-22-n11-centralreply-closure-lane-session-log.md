@@ -1862,3 +1862,82 @@ Takeover provenance and publication (all byte-verified):
   canonical adoption + reaudit (Part AP flow, increments built against
   the new 6,079-row canonical), (d) batch-17 declaration (class 10661
   per the Part AP reaudit, machine-identified next clean candidate).
+
+## Continuation 31 (2026-11-22, this host): Part AR batch-14 q042 third-implementation cross-verification completed and published - 4/4 verdict agreement WIN=1 LOSS=3 cross-host; verdicts NOT consumed
+
+Declared in the note as Part AR (commit `e640f5b6`, observed
+HEAD-before-push `a54a9402`, note blob lock `a4cd1465...`; no
+counter-declaration observed). Scope: the batch-14 WIN-HALT row q042 plus
+its same-wave disclosed LOSS rows q039/q040/q041, re-solved with the pinned
+third implementation (non-df-pn AND/OR minimax `third_impl.js`, sha256
+`08ea958f...`, same Part G/K/O/P/T/W/AA/AD/AG/AL protocol).
+
+Execution (all gates fail-closed, all PASS):
+
+- Input derivation: `make_inputs_batch14.py` (adapted from the published
+  batch-15 Part AL script, sha256 `19c442d1...`) re-derives everything
+  from the published batch-14 takeovers (publication commit `7b211d38`:
+  q039-q042 p1/p2 raws 8, status.log, batch-keys `dfde0e90...`, per-key
+  input CSVs), asserting 2-pass node-exactness, the `q042 WIN-HALT` and
+  WAVE-END stop=1 lines, RUNNER-START presence, derived-vs-published CSV
+  byte equality and class_index 23101. First invocation ABORTed on a
+  q042 PASS-row parse bug (`toks[3]` index), fixed and re-run clean.
+- Prerequisite gates: rules gate (replica quads 95,670 == third-impl
+  quads 95,670; 195,044 randomized triples, TBL mismatches 0); script
+  pins 3/3; anchors node-exact on this host (k02a WIN 9,106,337
+  expansions / 4,991,527 ttHits; l1a LOSS 7,660,602 / 3,951,175 - both
+  exactly the published values); negatives ng1 (legal+1: 88 vs derived
+  87) and ng2 (stones 6 vs 5) both GATE_FAIL with the exact expected
+  wording, rc=1.
+- Results (1 row = 1 solver = 1 process, cap 300M, wallcap 240s,
+  --memo-power=22, every row run twice a/b, all a/b deterministic clean):
+  q042 **WIN** 10,728,035 expansions / 5,758,042 ttHits (a 65.14s /
+  b 64.78s); q039 / q040 / q041 **LOSS** 2,828,518 / 2,425,671 /
+  2,843,397 expansions (ttHits 1,663,204 / 1,519,018 / 1,693,916).
+  **4/4 verdict agreement with the takeover replica (jsreplay df-pn
+  family), executed on a different sandbox host: cross-host
+  cross-implementation corroboration. Wall-inconclusive 0, divergence
+  0.** Node counts differ across implementations as expected; only
+  verdicts are cross-checked.
+- Verdict-level route statement: the class 23101 all-52-children-LOSS
+  closure route is refuted by a two-implementation-agreed WIN child
+  (q042). Verdicts NOT consumed: q042 stays the 15th unconsumed closure
+  WIN (b018/d002/e002/f017/g018/j033/h045/z003/n005/n006/p002/p003/
+  r001/r002/q042), scrutiny owner (C++ second-implementation gate pin
+  `9193f5b6...`) unchanged.
+- Audit battery: batch-14-adapted `audit.py` (schema
+  `n11-centralreply-closure-batch14-q042-thirdimpl-audit-v1`, sha256
+  `4bb6266b...`): **71/71 gates PASS, two runs byte-identical**
+  (output/audit-summary.json sha256 `18125d63...`).
+- Publication (49 files, 5 commits, no branch/PR): sources+input
+  `5ad33735` (23) -> transcription-slip fix `335fc0a1` (2 slips caught
+  by commit-pinned fetch-back BEFORE push: status.log q025 timestamp
+  prefix, ng2 stone count) -> scripts `703840f9` (6, sha-verified copies
+  of published bytes + audit.py schema transform) -> outputs
+  `af79f4a1` (18; the audit-run1 trailing-quote slip was caught by the
+  pre-push SHA checklist) -> README + audit-summary.json +
+  MANIFEST-sha256.txt `0f69d03` (publication complete). **Fetch-back
+  49/49 byte-identical at `0f69d03`** (full MANIFEST sha256 sweep via
+  the public-repo commit-pinned raw curl route). Note Part AR status
+  update `5993e38` (note blob `8edd32f7...` -> `1ca1bc2b...`,
+  prefix byte-identical, appendix fetch-back sha256-verified).
+- Runner honesty note: the first negatives invocation hit a shell cwd
+  grouping bug (ng2 solver never started, "No such file or directory");
+  re-invoked with absolute paths, ng1 re-ran producing a byte-identical
+  GATE_FAIL row, so status.log carries a duplicated identical ng1 RUN
+  line. Disclosed in the experiment README; no other deviation.
+- Operational (verification workflow hardened this session):
+  `github_app.get_file_contents` resource text is byte-faithful
+  (verified against git blob sha1 via raw curl); pre-push pure-JS
+  SHA-256 comparison of every pasted payload catches transcription
+  slips before they reach main (2 caught here);
+  `web_search.open_url` is byte-destructive and must never be used for
+  verification; note/sessionlog appends happen in-connector as
+  fetched-text + appendix + create_or_update_file sha lock.
+- Honesty record: the standard 11x11 empty board, the 19 central-reply
+  roots, class 23101 and all 52 batch-14 keys remain UNKNOWN throughout;
+  nodes/expansions are not verdicts. Open items (re-read latest main
+  first): (a) q042 single-WIN if-adopted decomposition (Part
+  V/R/AB/AH/AI/AN flow), (b) 41 LOSS rows canonical adoption + reaudit
+  (Part AP flow, increments against the 6,079-row canonical), (c)
+  batch-17 declaration (class 10661 per the Part AP reaudit).
