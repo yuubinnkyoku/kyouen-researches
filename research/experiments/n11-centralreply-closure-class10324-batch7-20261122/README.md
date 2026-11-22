@@ -48,3 +48,21 @@ this batch**: closure needs the independent merge + refresh re-audit.
 
 see `output/status.log`. The standard 11x11 empty board, the 19 central-reply
 roots and class 10324 remain UNKNOWN throughout. Nodes are not verdicts.
+
+## Status: COMPLETED - 51/51 all-LOSS (2026-11-22T05:59:50Z)
+
+**No WIN-HALT fired.** All 51 keys h001-h051 are 2-pass node-exact
+**LOSS (result 2)** at budget 15M (per-key nodes 2,133,491 - 7,430,631;
+cumulative 203,517,761 nodes). Provenance note: rows h001-h010 and h011-h019
+were run by two concurrent instances of this lane (the same hourly task);
+every duplicated execution produced identical (result, nodes, legal) rows, and
+the published status.log keeps each row once. The parallel-run collision is
+recorded in the session log continuation.
+
+Unlike batches 1/3/4/5/6, the all-children-LOSS closure route for class 10324
+survives this batch. **Consumption is still not done by this batch alone**:
+the class becomes closable only after the fail-closed increment merge into the
+canonical cache plus the refresh re-audit (Board-verified, quarantine-free),
+published as its own experiment. **The standard 11x11 empty board, the 19
+central-reply roots and class 10324 remain UNKNOWN** until that re-audit
+certifies the closure.
