@@ -31,11 +31,16 @@ the merged cache.
    5,924 unique rows, WIN 158 / LOSS 5,766, duplicates elided 0, conflicts 0,
    nodes mismatches 0; full audit `output/merge-audit.json`)
 3. re-audit refresh `scripts/refresh_19root_frontier.py`: byte-copy of the
-   2026-11-22 baseline refresh script with ONLY the cache pin (path + sha256)
-   changed to the merged cache; run twice -> byte-identical outputs
-   (determinism), all other input pins unchanged (graph, update8, independent
-   Board, evidence policy, quarantine registry), baseline control still holds
-   (root first=27 reproduces 119/119 free coverage exactly)
+   2026-11-22 baseline refresh script with exactly two deltas: the cache pin
+   (path + sha256) moved to the merged cache, and `csv.writer` given
+   `lineterminator="\n"` (published CSV canonical = LF; the push_files
+   publication route used this session normalizes CRLF to LF in transport, so
+   CRLF bytes cannot round-trip through it - recorded here for future
+   publishers). Run twice -> byte-identical outputs (determinism), all other
+   input pins unchanged (graph, update8, independent Board, evidence policy,
+   quarantine registry), baseline control still holds (root first=27
+   reproduces 119/119 free coverage exactly); JSON outputs identical to the
+   CRLF-writing variant byte-for-byte
 
 ## Machine-verified result
 

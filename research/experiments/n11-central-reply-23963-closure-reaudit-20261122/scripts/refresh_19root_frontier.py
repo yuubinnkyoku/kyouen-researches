@@ -491,7 +491,7 @@ def main() -> None:
     out.write_text(json.dumps(summary, indent=1, sort_keys=True), encoding="utf-8")
 
     with (EXP / "output/per-root-coverage.csv").open("w", newline="", encoding="utf-8") as fh:
-        w = csv.writer(fh)
+        w = csv.writer(fh, lineterminator="\n")
         w.writerow(["first", "role", "thirds", "free_now", "uncovered", "individual_greedy_union"])
         for r in root_rows:
             plan = per_root_plan.get(r["origin_first"], {})
@@ -499,7 +499,7 @@ def main() -> None:
                         r["uncovered"], plan.get("greedy_union_size", "")])
 
     with (EXP / "output/closure-classes.csv").open("w", newline="", encoding="utf-8") as fh:
-        w = csv.writer(fh)
+        w = csv.writer(fh, lineterminator="\n")
         w.writerow(["class_rank", "class_index", "class_lo", "class_hi",
                     "unknown_now", "first_group_first", "first_group_third", "groups_served_count"])
         for rank, item in enumerate(closure_classes, 1):
@@ -509,7 +509,7 @@ def main() -> None:
                         served[0]["third"] if served else "", len(served)])
 
     with (EXP / "output/probe-worklist.csv").open("w", newline="", encoding="utf-8") as fh:
-        w = csv.writer(fh)
+        w = csv.writer(fh, lineterminator="\n")
         w.writerow(["probe_order", "s5_index", "lo", "hi", "legal", "serving_class",
                     "class_unknown_now", "closure_first", "closure_third", "membership_class_count"])
         for item in worklist:
