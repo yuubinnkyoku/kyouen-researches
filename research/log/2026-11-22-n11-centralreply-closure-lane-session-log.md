@@ -952,3 +952,69 @@ repo diverged:
   class 8785 remain UNKNOWN throughout; nodes/expansions are not
   verdicts. Observed HEAD-before-push for this update is recorded in
   the commit message.
+
+
+## Session continuation 16 (2026-11-22, verifier): Part AB batch-11 z003 if-adopted decomposition executed and published; base control cross-host reproduction; greedy non-additivity measured (verdict unchanged)
+
+- Scope: Part AB, declared in the single-owner note before execution
+  (commit `a081823a`, observed HEAD `3de95445...` after the concurrent
+  eight-row-lane commits were checked for scope non-interference): the
+  Part H-bis / J / R / V lineage what-if decomposition for the batch-11
+  WIN row z003 (s5 198530, WIN 1, 11,601,265 nodes, 4-way cross-host
+  node-exact, third-implementation verified by Part AA). Verdict NOT
+  consumed anywhere; verdicts of all 8 unconsumed closure WINs stay with
+  the scrutiny owner (C++ second-implementation gate pin `9193f5b6...`
+  precedent, unchanged).
+- Base control (published first):
+  `research/experiments/n11-class8785-z003-base-control-20261122/`
+  (commit `36ac2359`, 7 files, fetch-back 7/7 byte-identical, observed
+  HEAD-before-push `33f4d041...`). Pinned inputs fetched from the repo
+  canonical copies and sha256-verified (dependency-graph `54f9c364...`,
+  merged cache 6,027 rows `95e868d6...`, update8 `b658290a...`, board
+  `954d3a10...`, policy `78655e94...`, quarantine `81d23160...`); the
+  published Part Y scenario script (`88671526...`) ran twice on this host:
+  all four outputs byte-identical between runs, and the three summary
+  outputs byte-equal to the published Part Y re-audit; probe-worklist
+  65,154 rows sha `1807e4d2...` matches the Part Y/Z record.
+- Decomposition experiment (published):
+  `research/experiments/n11-centralreply-class8785-win-z003-ifadopted-20261122/`
+  (commit `7f698e9a`, 32 files, fetch-back 32/32 byte-identical). Three
+  increments machine-derived fail-closed from the published batch-11 raws
+  of both hosts (4-way pass agreement + declaring status.log agreement +
+  batch-keys cross-check; shas `2778d392...` / `32c582c1...` /
+  `939f8deb...`); three scenario merges onto the canonical 6,027-row
+  cache (published merger, selftest PASS, conflicts 0, duplicates 0;
+  6,028/6,030/6,031 rows); per-scenario refresh byte-copies (docstring +
+  ROOT + CACHE + sha-pin lines only) run twice each, 6/6 byte-identical;
+  root {X,60,27} baseline 119/119 everywhere; per-root free coverage
+  identical to base everywhere.
+- Machine-verified results (`compare_deltas_batch11.py`, all gates PASS;
+  class_status_counts recomputed from graph+update8+cache and asserted
+  equal to the published summaries for BASE and all three scenarios before
+  any delta; `output/decomp-deltas-batch11.json` sha `99c744b9...`):
+  excluded_now flips = exactly {5307, 5748, 8785} in PWINZ003 and PFULL4
+  (graph holders of s5 198530, membership_class_count 3; class 8785
+  self-exclusion like 5473/1518/2634), PLOSS3 empty; class 8785 unknown
+  51 -> 50/48/47 (additive); update8 win-hit = exactly 5 groups all
+  served by class 5748; newly resolved baseline requirements
+  {198530} / {211089} / {198530,211089}; remaining delta -58/-1/-58
+  (sub-additive by exactly 1: s5 211089 (z004) is also a cost child of
+  class 5748, machine-verified from the frozen graph, so its separate
+  LOSS resolution is subsumed by the win-hit unknown-set drops);
+  worklist -2/-4/-6 (fully additive); **joint greedy 35,242 -> 35,241 /
+  35,241 / 36,039: WIN-only -1, LOSS-only -1, full +797 - the first
+  measured packet whose full greedy exceeds both single-row scenarios**
+  (per-root greedy_union_size changed only at root 49: 2,890 -> 2,899 /
+  2,899 / 2,946; the union growth beyond that is greedy option
+  re-selection cascades; group_best_options_nonfree 2,127 invariant).
+  All scheduling quantities; no coverage or verdict content.
+- Honesty record: verdicts not consumed; z005-z051 untouched; scenario
+  caches are analysis-only; the standard 11x11 empty board, the 19
+  central-reply roots, class 8785 (canonical cache still has all 51
+  children unknown) and class 8106 remain UNKNOWN throughout;
+  nodes/passes/expansions are not verdicts. Open item for a future
+  declaration: next batch candidate renewed rank 10 class 8106
+  `[1152926194711134208, 0]` (unknown 52). Kit mirrors saved under
+  `batch8785-z-ifadopted/` (33-entry manifest) and
+  `reaudit8785-z-base-control/` (8-entry manifest). Observed
+  HEAD-before-push for this update is recorded in the commit message.

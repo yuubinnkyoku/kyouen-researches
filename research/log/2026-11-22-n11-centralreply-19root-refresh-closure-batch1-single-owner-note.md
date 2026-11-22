@@ -1415,3 +1415,76 @@ WIN-only vs LOSS-only vs full what-if)。**verdictは一切消費しない。**
   宣言なしを確認済み)。
 - 本amendment observed HEAD-before-push: `3de9544503f672489149b577a6c6acb0404aff02`
   (eight-row (8,12) takeover 4コミット目 (sweep shard 1/3) 直後のmain。commit messageにも記録)。
+
+## Part AB 出版status update (2026-11-22, verifier): batch 11 z003 if-adopted 分解 実行・出版済み - 分解8指標は全機械ゲート通過・joint greedyに非加法的 +797 を測定 (verdict不消費)
+
+Part AB宣言 (本note Part AB節・commit `a081823a`) に基づき base control・
+3シナリオ分解・公開・fetch-back検証まで完走した。verdict不消費は不変。
+
+- Base control (cross-host再現): 実験
+  `research/experiments/n11-class8785-z003-base-control-20261122/`
+  (commit `36ac2359`, 7 files, fetch-back 7/7 byte一致)。pinned inputs 6種を
+  repo正本からfetchしsha256全件一致 (graph `54f9c364...`・正本cache 6,027行
+  `95e868d6...`・update8 `b658290a...`・board `954d3a10...`・policy
+  `78655e94...`・quarantine `81d23160...`) の上で、Part Y scenario script
+  (sha256 `88671526...`, published正本とbyte一致) を2回実行し、全4出力が
+  run間byte-identical、closure-classes.csv・per-root-coverage.csv・
+  refresh-summary.jsonの3成果物が**published Part Y正本とbyte一致**、
+  probe-worklist.csv (65,154行) はsha256 `1807e4d2...` でPart Y/Z記載値と
+  一致 (cross-host byte-exact再現)。
+- 実験: `research/experiments/n11-centralreply-class8785-win-z003-ifadopted-20261122/`
+  (commit `7f698e9a`, 32 files, fetch-back 32/32 byte一致)。
+  増分3本 (published batch-11 raw両host分からfail-closed生成。4-way
+  (宣告p1/p2 + takeover p1/p2) 全面一致・status.log PASS行照合・
+  batch-keys照合込み・sha256 full-4 `2778d392...` / win-z003 `32c582c1...` /
+  loss3 `939f8deb...`)。merge 3本 (published merger, selftest PASS,
+  衝突0・重複0): 6,028行 WIN159/LOSS5,869 `3fcdbfd0...`・6,030行 WIN158/
+  LOSS5,872 `ba08f924...`・6,031行 WIN159/LOSS5,872 `c5044be8...`。
+  シナリオrefresh (Part Y scriptのbyte-copy、差分docstring 2行 + ROOT行 +
+  CACHE行 + sha pin行、diff検証) は各2回実行し6/6 run byte-identical、
+  root {X,60,27} baseline 119/119・per-root free coverage全シナリオ同一。
+- 分解結果 (machine-verified, `compare_deltas_batch11.py` 全gate PASS:
+  BASE+3シナリオのclass_status_count再計算がpublished summaryと完全一致、
+  `output/decomp-deltas-batch11.json` sha256 `99c744b9...`):
+  - **excluded_now flips: PWINZ003 = PFULL4 はちょうど3クラス
+    {5307, 5748, 8785}** (graph上s5 198530のcost-child_holder、
+    membership_class_count 3と3経路一致)。8785 self-exclusionは
+    g018/5473・j033/1518・h045/2634と同型。PLOSS3 flips空 (gate)。
+  - class 8785 unknown_now: **51 → 50 / 48 / 47** (WINのみ−1・LOSSのみ−3・
+    full −4、加法性gate)。
+  - **update8: z003のWINはちょうど5 groupにhit (すべてserving class 5748,
+    s4_mask `[1225542048598196224, 1]`、各group unknown_s5_children 58)**。
+    newly resolved baseline requirement: PWINZ003 `{198530}` (z003自身)・
+    PLOSS3 `{211089}` (z004)・PFULL4 `{198530, 211089}`。remainingは
+    −58 / −1 / −58 で**ぴったり1だけsub-additive**: s5 211089 (z004) は
+    class 5748のcost childでもあることをgraph走査で機械確認しており、
+    fullでは同s5の単独解決が win-hit群のunknown-set dropに包含されるため。
+    z001/z002 (s5 86114/100564) はupdate8 baseline requirement外。
+  - **joint greedy: 35,242 → 35,241 / 35,241 / 36,039 (WINのみ−1・
+    LOSSのみ−1・full +797) - 本packetでは非加法**。per-root
+    greedy_union_sizeの変化はroot 49のみ (2,890 → 2,899 / 2,899 / 2,946、
+    +9/+9/+56。他18 rootは全シナリオbyte-同一)。group_best_options_nonfree
+    は2,127で全シナリオ不変。root 49のper-root増分を超えるunion増大は
+    greedy選択列の再選択滝 (option swap) 由来のscheduling量効果であり、
+    被覆でもverdictでもない。Part V (h045: full == loss-only −951)・
+    Part R (j033: greedy sub-additive by 1) と対照的な方向の測定値。
+  - worklist 65,154 → 65,152 / 65,150 / 65,148 (−2−4=−6 完全加法)。
+    free_now 35・excluded_count 390不変・root被覆は全シナリオでbase同一
+    (gate)。
+- scrutiny owner向け測定 (解釈なし): z003 WINのみ採用はexcluded +3・
+  unknown −3・remaining −58・win-hit 5 groupを計画コストほぼ中立 (greedy
+  −1) でもたらす。+797のgreedy増大は**LOSS 3行との合同採用時に限って**
+  発生する (f-batch (Part H-bis +1,372) と同様、LOSS完備の性質)。z003の
+  verdictは引き続き不消費・scrutiny owner (C++第二実装 gate pin
+  `9193f5b6...` 前例) 待ち。
+- 不変事項: z005-z051未着手。**標準11x11空盤・19 central-reply roots・
+  class 8785 (canonical cache上はunknown 51のまま)・class 8106は本分解の
+  どの時点でもUNKNOWNのまま。nodes数を勝敗として読まない。** scenario
+  cache 3本はanalysis-only成果物でcanonicalではない。
+- transport: 各シナリオのprobe-worklist (~3.8MB, regenerable) は再出版
+  なし (sha256は実験README記載: BASE `1807e4d2...`・PWINZ003 `82dbd775...`・
+  PLOSS3 `ec123c74...`・PFULL4 `2ac35775...`)。
+- open items (将来の別宣言): 次batch候補 = renewed rank 10 class 8106
+  `[1152926194711134208, 0]` (unknown 52) の宣言・実行。
+- 本status update observed HEAD-before-push: 実行時の最新mainを
+  コミットメッセージに記録。
