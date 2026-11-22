@@ -2635,3 +2635,53 @@ what-if incrementとして採用する単一シナリオを計算する。
   **UNKNOWNのまま**。nodes数を勝敗として読まない。
 - 本宣言 observed HEAD-before-push: `6af95d9c` (push直前にnote blob sha再照合、
   競合時は破棄し着手しない)。
+
+
+## Part AQ (takeover owner, declaration 2026-11-22): batch 14 (class 23101) completion under takeover after declaring-host silence (verdict不消費・実行前に宣言)
+
+Part AF (batch 14, class 23101, renewed rank 12) は2026-11-22T12:26:47Zにscaffold
+(`54b7453d`, observed HEAD-before-push `9fe1a6c1`) を出版した後、実行結果を
+1行も出版していない。現時点 (16:1xZ) までの沈黙は3時間40分を超え、batch 8/11
+takeoverで用いた「宣告hostがrows・statusを出版しないまま20分以上沈黙」基準を
+大きく超過する。kit鏡像 (batch23101, published scaffoldと65/65 byte一致) にも
+Part AF実行由来のrawは存在せず、rescue対象行はない。以上より、batch-14の残務
+(52キー全部) をPart AFの事前登録プロトコルのまま本takeoverセッションで完走する。
+
+- 対象: `research/experiments/n11-centralreply-closure-class23101-batch14-20261122/`
+  (Part AF宣言のスコープを引き継ぐ。scaffold/input/scripts/val-gateのpublished
+  bytesは一切変更しない。本takeover由来の出力はraws/status.log/README Result)。
+- 本takeover hostで宣言前に機械実施した再検証 (全PASS):
+  (1) published scaffold 65ファイル == kit鏡像 byte一致 (MANIFEST-sha256.txt
+  全行照合)。jsreplay.js sha256 `845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df`
+  (pin一致)。(2) canonical merged cache 6,027行 (sha256 `95e868d6…`) に52/52不在
+  (0 hits)。(3) quarantine registry (sha256 `81d23160…`, active 2件) とのkey対照
+  両方向0 hits。(4) 52キー重複なし。(5) closure-classes.csv (published Part Y正本)
+  rank 12行 = class 23101 (`[1152921504892059648, 16]`, unknown 52, first 24 /
+  third 28, groups 3)。(6) 12 unconsumed WINキー (b018/d002/e002/f017/g018/j033/
+  h045/z003/n005/n006/p002/p003) 交差0 hits (12キーのlo/hi/result=1をpublished
+  batch rawsのreplay行から再抽出して照合)。(7) probe-worklist 65,154行
+  (sha256 `1807e4d2…`) のprobe_order 538-589 = serving_class 23101・
+  class_unknown_now=52全行で、batch-keys 52キーとlo/hi/legal/s5_index完全一致。
+  (8) val-gate fresh 4/4 node-exact (at2m 2件 result 0 / nodes 2,000,000、
+  15m 2件 result 2 / 3,651,923 / 5,040,200。出力はoutput/val-gate/
+  `*.takeover-aq.out` として保存・出版する。forbidden quadruples 95670双方)。
+- protocol (Part AF事前登録のまま、変更なし): 2-pass fresh cold replay、budget
+  15,000,000、1行1プロセス、p1/p2の (budget,result,nodes) 不一致でHARD-STOP
+  (rc=42)、WIN検出でWIN-HALT (rc=45、同一wave内in-flightキーは完了まで開示)、
+  resume-safe runner (4キー/wave)、honest negative (result 0 = UNKNOWN)。
+- 主張と消費規則: verdict不消費。WIN-HALT行はunconsumed closure WINとして
+  15番目以降の候補に加わる (採用判断はscrutiny owner、C++第二実装 gate pin
+  `9193f5b6…` 前例・不変)。全LOSS完走の場合の消費 (increment + refresh再監査)
+  は別宣言が必要。batch選択・nodes数はscheduling/測定数量でありverdictではない。
+  標準11×11空盤・19 central-reply roots・class 23101は本batchのどの時点でも
+  **UNKNOWNのまま**。
+- 並走との不接触: Part AO (batch-16 if-adopted分解、2026-11-22T16:04:18Z宣言・
+  in flight) のスコープ・ファイルには一切接触しない。他レーンのpublished成果
+  にも不接触。実行・出版の各段階で最新mainを取り直す。
+- 誠実記録: Part AF hostの消失は「沈黙超過からの推定」であり、宣告host側が
+  後にrawsを出版してきた場合は本takeover分と著者側で対比検証する (batch 8/11
+  と同じ取り扱い)。重複した再探索が発生した場合、13番目のキー以降は本側で
+  skipし対照に回すことを優先する。
+- 本amendment observed HEAD-before-push: `ede3eb42…` (push直前にnote blob
+  sha1を再照合し、競合時は再fetchして本節を追記し直す。同スコープ対抗宣言が
+  存在する場合は本takeover宣言を破棄して着手しない)。
