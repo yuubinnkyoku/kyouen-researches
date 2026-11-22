@@ -72,3 +72,40 @@
 
 - Knowledge kit: `kyouen-research/_78-row-frontier-kit-20261122/` (リセット耐性镜像,
   repo側が正式)。
+
+## Batch 2 (続行セッション)
+
+幅66 seed 周辺の ±2 編集欠損手術プログラムを完結し、all-cap witness を出版
+(K1219):
+
+1. **クラス(ii) 2R2A 完走**: 分岐 A(c0=1 両add) 9,657 + B(c0=2+free add)
+   125,510 + C(T占有) 441 = 135,608 ペア完全、行ゲート 1,615,395、固有状態
+   102,385 を fastv screen、1,877 状態を verify_int.verify と照合 0 不一致、
+   **0 hit**。fastv は verify_int と同一曲線宇宙・残存石カウント方式
+   (surgery66_2r2a.py / fastv.py / surgery66_2r2a_log.jsonl)。
+2. **w66-cap-01 (all-cap witness)**: 分岐C の T 置き = base 20石 + cap (0,6)
+   の 21石 rows [3,3,3,3,3,3,3] が 7×66 で safe+maximal (verify_int +
+   bisector/Fraction 2系統、tamper 21/21 全非maximal)。
+3. **全幅ファミリー定理**: 同一石集合は任意幅 m≥65 で safe+maximal。safe
+   は石集合のみ依存、各行水平線がちょうど q−1=3 石で全空セルを block。
+   幅65..80 の全配置 (4(w−64)/幅) が全て witness、幅1500・1929も safe+maximal
+   (w66cap_translation_sweep.json / w66cap_wide_check.json)。K0069 all-cap
+   安定クラスの (7,4) 対応物。**M_{7,4}∈[66,1929] 不変** (行欠損なし)。
+4. **行和パリティ補題**: def-mode (7,4) の |S|=21 は全行3石 (all-cap) に限る。
+   0R1A T以外の63 add セルは全て all-cap で非欠損、1R2A/0R2A は構造的に除外。
+5. **cap 周边欠損置換掃討**: 幅66..80 の 1R1A (remove≠add行) 全列挙
+   132,300 screens・1,027 照合 0 不一致・**0 hit** (wcap_1r1a.py)。
+   1R0A 21通り tamper 全非maximal、kR0A (k≥2) は非maximal単調で従う。
+
+→ 幅66 は seed 両家族 ±2 編集の scoped local negative のまま UNDETERMINED、
+不在不主張。CSV (7,4) 行は値更新なしなので不変 (K1201/K1216 前例)。
+
+## 次バッチ (着手前に必ず最新main再取得)
+
+1. 喪失 26 witness (幅60) の再構築: pair0/band53 seeds からの stage 再実行。
+2. 他行数 ((7,5)..(8,10)) 各 frontier への同型手術移植 (cap 構成が
+   単純なので移植コスト低)。
+3. 別 seed (H像/V像・別シフト) での幅66+ 欠損 witness 探索: 全幅 cap
+   ファミリーの存在は cap 以外の構造的候補の稀薄化を示唆するので、
+   search 空間の再優先順位付けから。
+ 
