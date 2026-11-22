@@ -45,3 +45,33 @@ this batch**: closure needs the independent merge + refresh re-audit.
 see `output/status.log` and the final README section. The standard 11x11
 empty board, the 19 central-reply roots and class 20421 remain UNKNOWN
 throughout.
+
+## Status: WIN-HALT at d002 (2026-11-22T03:16:25Z)
+
+Pre-registered WIN-HALT fired on key d002 (s5_index 197253, key
+`[3461016313634230272, 131072]`, legal 73): 2-pass node-exact
+**result 1 (WIN), 5,359,994 nodes** at budget 15,000,000.
+Probed before the halt (all 2-pass node-exact):
+
+- d001 LOSS 879,510 nodes
+- d002 **WIN** 5,359,994 nodes (HALT)
+- d003 LOSS 2,113,678 nodes
+- d004 LOSS 11,969,338 nodes
+
+Consequences (honest, no speculation): with d002 a WIN child, the
+all-children-LOSS closure route for class 20421 is refuted. d005-d049
+remain unprobed (45 keys, no 15M same-condition re-search consumed).
+d002's WIN is NOT adopted by this lane (verdict unconsumed, scrutiny owner
+pending), exactly as b018 in batch 1. The batch is stopped per the
+pre-registered rule.
+
+Operator note (disclosure): during setup the runner was accidentally
+invoked once with a `--check` argument, which the runner treats as a key
+id; it immediately failed (exit 43, no solver run, `input/--check.input.csv`
+does not exist). The spurious `P1-FAIL --check` status line and the empty
+`--check.p1.out` were removed before publishing; no solver result was
+affected. All published raw files are byte-identical to the solver outputs
+of the four genuine keys.
+
+The standard 11x11 empty board, the 19 central-reply roots, class 20421
+and all remaining S5 keys remain UNKNOWN. Nodes are not verdicts.
