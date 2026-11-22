@@ -17,6 +17,12 @@
       "ordered_points": 443520,
       "points": 887040
     },
+    "C11r": {
+      "bad": 0,
+      "desc": "independent raw-double-recursion census ledger (census_rows.py third implementation, census.txt) re-derived from cand15 row by row, R=0..x+z+17, z=0..79, x=15..70 (T/P sets, Thue-Morse index, tail)",
+      "points": 448000,
+      "rows": 4480
+    },
     "C12": {
       "bad": 0,
       "desc": "deep closed grid z=0..120 x=15..120 R<=x+z+17",
@@ -26,6 +32,13 @@
       "bad": 0,
       "desc": "single_token/y=14-child/x=15 merger raw anchors",
       "points": 43228
+    },
+    "C1d": {
+      "anchor_bad": 0,
+      "bad": 0,
+      "desc": "published z=8/9/10/15/16/17 uniform slices (y=15) vs cand15, x=15..159 R<=x+61; + low-R single-token reduction R<=z+6 (z=15..17)",
+      "lowR_bad": 0,
+      "points": 138330
     },
     "C2": {
       "bad": 0,
@@ -79,8 +92,10 @@
   "checks_run": [
     "C1",
     "C11",
+    "C11r",
     "C12",
     "C1b",
+    "C1d",
     "C2",
     "C2b",
     "C3",
@@ -105,9 +120,9 @@
   "experiment": "vertical-fiber-two-token-y15-parametric-allz-proof-20261122",
   "family": "H(R;(x,15);z), z>=0, x>=15, R>=0",
   "overall": "PASS",
-  "stage": "part 1 (12 checks; on overall PASS with 3 byte-identical audit runs the part 2 machine -- published fixed-z slice anchors at the y=15 rows (C1d) and the independent census_rows.py census.txt consumer (C11r) -- promotes K1235 observed->proved), per the procedure that promoted y=5..y=14",
+  "stage": "part2 (C1d published-slice anchors at y=15 and the independent census.txt consumer incorporated; census parts re-anchored via bounded-memoization twins on a memory-capped host; on overall PASS with 3 byte-identical audit runs K1235 is promoted observed->proved)",
   "total_bad": 0,
-  "total_points": 6349309,
+  "total_points": 6935639,
   "type_count": 335658,
-  "verifier_sha256": "583252ccebeaa9842408b5093b985844d733d19d769528189ccf52fb32f0ea76"
+  "verifier_sha256": "a39e7ab12051ed92d470c4a1909760e0edb8319bf4bb3e24974e70d23f157d0e"
 }

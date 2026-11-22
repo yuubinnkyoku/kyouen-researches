@@ -91,3 +91,106 @@ run from this experiment dir unless noted.
   - The full 12-check command was also timed once on this host at
     33 s wall (after the part-1 record was complete; byte-identical audit
     re-confirmed by sha256).
+
+=== y15 universal part2 published run (preflight + census_rows + full 14 checks) ===
+host: Linux x86_64, python Python 3.12.14, same cgroup as part1
+cwd: this experiment dir (the part1 verifier byte 583252cc... was still the
+published byte on main at preflight time; the part2 extension was installed
+in place only after the preflight PASS; no part2 assembly script is
+published - the y13/y14 part2 procedure)
+
+$ python3 scripts/preflight_c1d_y15.py
+{"anchor_bad": 0, "anchor_first_bad": null, "anchor_points": 13485,
+ "box": "z0 in {8,9,10,15,16,17}; x=15..45; R=1..x+z0+30",
+ "check": "preflight c1d y=15 rows: published z=8/9/10/15/16/17 uniform
+ slice anchors vs raw engines vs cand15",
+ "lowR_bad": 0, "lowR_points": 9570,
+ "lowR_box": "z0 in {15,16,17}; x=15..159; R=1..z0+6", "overall": "PASS",
+ "per_z": {"8": 2108, "9": 2139, "10": 2170, "15": 2325, "16": 2356,
+           "17": 2387} (all bad 0)}
+rc=0, wall 3 s; output/preflight-c1d-y15.json
+(4-way anchor x H_ordered x H_canonical x cand15 all clean; low-R
+ single-token reduction R<=z+6 on the y=15 rows all clean 9,570 pts;
+ the file is the pretty-printed canonical byte, stdout is the same JSON
+ compacted; 2 runs byte-identical, one on the isolated side)
+
+$ python3 census_rows.py
+rows=4480 points=448000 zero_points=223127
+states(misses): 7666827 currsize: 1600000 maxsize: 1600000 hits: 15021674
+wall 15.7-16.3 s, rc=0; maxrss 639,524 KB
+(the LRU is explicitly capped at 1,600,000, the y12/y13/y14 host adaptation)
+
+$ python3 verify_y15_universal.py C11ordered / C11canonical (rerun in the
+  part2 session): census parts byte-identical to the part1 published
+  bytes (ordered 50819ab3... / canonical 64b006a3...)
+
+$ python3 verify_y15_universal.py C1 C1b C1d C2 C2b C3 C4 C4t C7 C8 C9 C11 C11r C12
+  C1: pts=22515 bad=0        C1b: pts=43228 bad=0
+  C1d: pts=138330 bad=0      C2: pts=218834 bad=0
+  C2b: pts=19228 bad=0       C3: pts=1215 bad=0
+  C4: pts=601255 bad=0       C4t: pts=601255 (probe; not in bad total)
+  C7: pts=200000 bad=0 (seed 20261152)  C8: pts=993180 bad=0
+  C9: pts=908202 bad=0       C11: pts=887040 bad=0
+  C11r: pts=448000 bad=0     C12: pts=1853357 bad=0
+overall: PASS total_points: 6935639 types: 335658 types total_bad 0
+  merge corollary: 1,304,870 pts, bad 0
+  tail corollary: 195,917 pts, bad 0
+  C4t: 2030 violations at clip 31, first: (60, 94, 94)
+wall 34.8 s (run1; maxrss 473,520 KB) / 34.3 s (run2), rc=0
+(part2 edition installed as verify_y15_universal.py,
+ SHA-256 a39e7ab12051ed92d470c4a1909760e0edb8319bf4bb3e24974e70d23f157d0e)
+
+=== run2/run3 (part2) ===
+run2: same-cwd rerun (34.3 s) -> byte-identical audit.json
+run3: isolated tree/cwd/HOME + env -i (PATH pinned to /usr/local/bin:/usr/bin)
+ + PYTHONHASHSEED=random; scripts/preflight_c1d_y15.py, census_rows.py and
+ BOTH census parts regenerated on the isolated side:
+ preflight-c1d-y15.json / census.txt / census-ordered.json /
+ census-canonical.json all byte-identical; full 14-check command (timed
+ rerun 34 s) -> audit.json byte-identical
+census_rows.py: main-tree runs (2x, incl. the maxrss measurement) +
+ isolated-side regen = census.txt byte-identical across 3 runs
+
+=== part2 fail-closed probes (pre-publication, all caught; scratch tree) ===
+1. census-ordered.json 'points' tamper 443520 -> 443521 (C11 only):
+   "FAIL-CLOSED: census points 443521 != 443520" (rc=1)
+2. census-canonical.json removed (C11 only):
+   "FAIL-CLOSED: census part file for engine 'canonical' is missing
+   (census-canonical.json); run mode C11canonical first" (rc=1)
+3. corollary merge bound tamper x<=z-16 -> x<=z-15 (tampered verifier copy,
+   C2 only): overall FAIL, merge {'points': 19760, 'bad': 223}, rc=1
+4. census.txt P-set 1-digit tamper (row z=0 x=15, P 17 -> 18): C11r:
+   pts=448000 bad=1 / overall: FAIL / rc=1 (no PASS output)
+5. census.txt temporarily removed:
+   "FAIL-CLOSED: census.txt is missing; run census_rows.py first" (rc=1)
+Baseline bytes restored and cmp'd clean after (1)(2)(4)(5); the main-tree
+audit.json was never touched by the probes.
+
+sha256 of the part2 published files:
+a39e7ab12051ed92d470c4a1909760e0edb8319bf4bb3e24974e70d23f157d0e  verify_y15_universal.py
+28e849558444965f7134523de3fad554d8b3bbbc07f4d12ff38bc069a35c86a3  census_rows.py
+fdc4ca86a3fa893459fc9c54606b21430a9b787bbb7dd52df940051d6e5875aa  scripts/preflight_c1d_y15.py
+401be38341edd5e5e402baa115adfec88ca19929b028c7aafd79358b4bc9f0d4  output/audit.json
+1465a0113be36cbfff4aca7d73c81f6a9f3d4304173fd7caa83a7f0f77948156  output/census.txt
+cd67d3fe836bb8a179c153b8a5dd82d425117afff1c0804d3d6de6e0272568aa  output/preflight-c1d-y15.json
+50819ab3b865ad959f84b6532293ca1648885238751f14e16f1d9e8068a52c44  output/census-ordered.json (unchanged from part1)
+64b006a3d10da8732ee6d0c19a0a295dd23fb8686a6c10eac34792e3ffd35263  output/census-canonical.json (unchanged from part1)
+
+=== notes (part2) ===
+- part2 extension is an in-place extension of the part1 publication byte
+ (the y13/y14 part2 procedure; no separate assembly script is published).
+ The C1d anchor block is the published y14 part2 canonical verifier's
+ anchor block verbatim, with the provenance header rewritten for the y=15
+ rows using the actual preflight counts (13,485/9,570, cand15);
+ the 12 part1 check bodies are byte-unchanged. One textual "y=14" outside
+ provenance naming remains deliberately (the comment citing the
+ y=10/y=12/y=13/y=14 part2 C1d precedent).
+- K1235 promotion: with the full 14-check audit PASS (6,935,639 pts, bad 0)
+ and three byte-identical audit runs, K1235 (cand15, the y=15 family
+ closed form) is promoted observed -> proved in the same item, under the
+ scope declared in the single-owner note (commit c34a19ff), same procedure
+ as K1141/K1152/K1231/K1233. The merge proposition's y=15 edition
+ (x<=z-16 => single_token(x+15,z,R)) and the tail value (x+15) mod 2 are
+ fixed as universal claims; the merge proposition is now universal through
+ y=1..15. The B-child verbatim chain extends to cand9..cand14 (six links;
+ proved B-children: cand10/cand12/cand13/cand14, four links).
