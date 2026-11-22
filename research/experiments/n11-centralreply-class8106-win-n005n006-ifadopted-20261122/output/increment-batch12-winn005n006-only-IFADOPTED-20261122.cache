@@ -1,0 +1,14 @@
+# n11 central-reply closure batch 12 (class 8106) IF-ADOPTED increment (2026-11-22)
+# 2-pass node-exact exact-S5 verdicts at budget 15M, fresh cold, pinned jsreplay.js
+#   sha256 845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df
+# BOTH declaring-host passes agree (p1/p2) on every row; declaring-host
+#   status.log PASS rows agree on (budget,result,nodes). Batch-12 was
+#   executed entirely on the declaring host: 3-way fail-closed (p1/p2/status),
+#   no takeover-host passes exist for this batch (unlike batch-11's 4-way).
+# Read-only what-if analysis only; verdicts are NOT consumed.
+#   IF-ADOPTED decomposition per Part H-bis / Part J / Part R / Part V / Part AB methodology:
+#   WIN-only vs LOSS-only vs full packet, machine-separated.
+# batch 12 probed 8/52 (two waves); n009-n052 remain untouched.
+# 2 rows: the batch-12 WIN rows n005/n006 only (s5 188395 and s5 219608) - first multi-WIN increment.
+s5verdict,1152926194711134208,128,5,1,3695373
+s5verdict,1153489144664555520,0,5,1,12863268
