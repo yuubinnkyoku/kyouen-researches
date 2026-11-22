@@ -475,15 +475,16 @@ def main() -> None:
             {k: v for k, v in r.items() if k != "groups"} for r in root_rows
         ],
         "per_root_greedy": {
-            str(first): {k: v for k, v in plan.items() if k != "choice"}
+            str(first): {k: v for k, v in plan.items()
+                         if k not in ("choice", "union_indices")}
             for first, plan in per_root_plan.items()
         },
-        "joint_greedy": joint_summary,
+        "joint_greedy": {k: v for k, v in joint_summary.items() if k != "union_indices"},
         "frozen_update8_refresh": frozen,
         "group_best_options_nonfree": len(group_best),
         "closure_classes_first": [c for c in closure_classes if c["unknown_now"] <= 12],
         "closure_classes_count": len(closure_classes),
-        "worklist_first": worklist[:200],
+        "worklist_first": worklist[:40],
         "worklist_total": len(worklist),
     }
     out = EXP / "output/refresh-summary.json"

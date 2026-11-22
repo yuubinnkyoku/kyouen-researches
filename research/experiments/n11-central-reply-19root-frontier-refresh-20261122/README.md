@@ -87,7 +87,9 @@ run twice byte-identical (output sha256s in `output/refresh-summary.json` pins a
 
 ## Output files
 
-- `output/refresh-summary.json` - full machine summary (1.4MB)
+- `output/refresh-summary.json` - machine summary (compact: per-root coverage,
+  greedy union sizes, frozen-plan refresh, ranked closure preview; full key-slot
+  unions are reproducible with the script)
 - `output/per-root-coverage.csv` - per-root free/uncovered/greedy-union table
 - `output/closure-classes.csv` - 813 ranked closure certificate candidates
 - (regenerated locally, not published:) `output/probe-worklist.csv` - 65,290
