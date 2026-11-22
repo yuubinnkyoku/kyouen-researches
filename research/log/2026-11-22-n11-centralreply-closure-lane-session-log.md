@@ -1188,3 +1188,56 @@ repo diverged:
   (`[1152921504892059648, 16]`, unknown 52) as the next first-clean
   candidate (fail-safes re-run at declaration time). Observed
   HEAD-before-push for this update is recorded in the commit message.
+
+## Continuation 20 (2026-11-22): Part AG batch-13 third-implementation cross-verification completed and published - all 12 unconsumed closure WINs now third-impl corroborated (verdicts not consumed)
+
+- Fresh main pull before any execution: HEAD `54b7453d` (batch-14 Part AF
+  scaffold published; Part AE batch-13 WIN-HALT x2 status published; the
+  open items were the batch-13 third-impl cross-verification and the
+  batch-12/13 if-adopted decompositions). No same-scope declaration for a
+  batch-13 third-impl experiment; Part AG sequence number free; declared
+  Part AG in the single-owner note as commit `e84242c8` (138,848 bytes,
+  fetch-back byte-exact) BEFORE the first solver run, observed
+  HEAD-before-push `54b7453d`.
+- Experiment `research/experiments/n11-centralreply-closure-batch13-wins-thirdimpl-20261122/`:
+  inputs machine-derived from the published batch-13 sources (raws 8 +
+  status.log, chunk commit `b4b55ec8`, commit-pinned raw CDN; batch-keys.json
+  sha `c6c56a1a...` pinned against scaffold `90ee1c87`) by the Part AD
+  script adapted with all EXP/schema strings renamed to
+  `batch13-wins-thirdimpl-*` (the Part AE stale-template warning heeded);
+  every derived target CSV byte-identical to the published batch-13 input
+  CSVs; kit mirror cross-check 10/10 byte-identical before execution.
+- Execution (2-core host): rules gate first (quads 95,670 == replica;
+  195,044 triples, TBL==wob, 0 mismatches), negatives ng1/ng2 both GATE_FAIL
+  with the published messages (ng1 inside the runner, ng2 executed
+  immediately after the runner's exit because the runner chained the two
+  negative gates with `&&` after ng1 which exits rc=1 by design; disclosed
+  in the README honesty record), anchors k02a/l1a reproduced EXACTLY at
+  9,106,337/4,991,527 and 7,660,602/3,951,175 (a/b pairs), then the
+  complete probed row set: **p002 WIN 1 third-impl 12,593,747 expansions /
+  7,021,485 ttHits (replica WIN 10,770,254 nodes) and p003 WIN 1
+  8,626,319/4,959,871 (replica 7,489,274) agree; p001 LOSS 2
+  5,334,954/3,020,029 and p004 LOSS 2 2,593,393/1,571,815 agree (replica
+  4,631,275 / 2,291,059); 0 divergences, 0 wall-inconclusive**, all a/b
+  pairs identical on (result, expansion, ttHits, reason); every wall time
+  far below the 240 s wallcap (max 76.75 s).
+- audit.py (schema `batch13-wins-thirdimpl-audit-v1`, run twice
+  byte-identical): **71/71 gates PASS**. Nothing was consumed into any
+  canonical cache; the p002/p003 WINs (11th/12th unconsumed closure WINs)
+  stay scrutiny-owner-blocked. With this, the twelve unconsumed closure
+  WINs (b018/d002/e002/f017/g018/j033/h045/z003/n005/n006/p002/p003) are
+  all third-implementation corroborated at the verdict level.
+- Publication: scaffold `71f4803d` (17 files: README + pinned scripts 7 +
+  inputs 9; the 4 pinned script bytes blob-identical to the published Part
+  AD / Part AA copies) -> targets `62f29489` (8 rows) -> completion
+  `ba5d0309` (10 files incl. audit-summary.json and MANIFEST). Fetch-back:
+  **35/35 files byte-exact, MANIFEST 34/34 sha256 exact**. Note Part AG
+  publication status update `611e7ab2`. Kit mirror saved under
+  `batch16930-thirdimpl/`.
+- Open items for future declarations: if-adopted decomposition of the
+  batch-13 4 probed rows and of the batch-12 8 probed rows (both the
+  WIN-only / LOSS-only / full splits, Part V/R/AB methodology); batch 14
+  (Part AF) continues under its own owner. Verdicts unchanged everywhere:
+  the standard 11x11 empty board, the 19 central-reply roots and class
+  16930 remain UNKNOWN; nodes/expansions are not verdicts. Observed
+  HEAD-before-push for this update is recorded in the commit message.
