@@ -442,3 +442,39 @@ github_app.push_files with commit-pinned raw fetch-back byte verification.
   board, all 19 central-reply roots, and every S4 class remain UNKNOWN.
   Nodes/expansions/budgets/gates are never verdicts. Part K is appended
   post-completion for scope recording (disclosed in the amendment itself).
+
+## Session continuation 7 (2026-11-22 ~05:35-06:1xZ, same lane; execution-environment reset mid-batch, parallel-run collision handled, batch 7 COMPLETE 51/51 all-LOSS, class 10324 CLOSED free via re-audit)
+
+- **Environment reset mid-batch**: at ~05:35Z the remote execution environment
+  reset (work dir wiped, no solver state lost besides staging), right after a
+  concurrent instance of this same hourly lane had stashed h001-h019 raws to
+  the kit (`batch10324/`) with status rows timestamped 05:23:12-05:35:18Z.
+  Duplicate executions of h001-h010 by both instances produced identical
+  (result, nodes, legal) rows - an unplanned 2-host determinism cross-check.
+- **Batch 7 resumed and COMPLETED**: after rebuilding from the kit stash and
+  re-fetching the pinned inputs (shas verified), h020-h051 ran to completion:
+  **51/51 keys 2-pass node-exact LOSS at 15M, NO WIN-HALT, no mismatch, no
+  exhaustion** - the first batch since batch 2 (class 23963) without a WIN
+  stop. Cumulative 203,517,761 nodes. Checkpoint pushes: h011-h019
+  (`209a0479`, with a batch-keys metadata erratum: per-row
+  membership_class_count from the worklist rows), h020-h030 (`72fe8613`),
+  h031-h042 (`fdff5c4e`), final h043-h051 + README (`ac2ff9ae`).
+- **Class 10324 closure re-audit PASSED**: fail-closed increment (51 rows
+  `39b975e8...`) + published `s5_union_merge.py` (selftest PASS) merge into
+  canonical 5,924 (`8a721a18...`) -> **5,975 rows `a998f4c0...`** (WIN 158 /
+  LOSS 5,817, 0 conflicts) + published `refresh_19root_frontier.py`
+  (byte-copy, only the 2 cache-pin lines changed, all 6 pinned inputs
+  sha-verified, 2-run byte-identical). **Class 10324 is certified as the
+  34th Board-verified free class** (`free_now` 33->34, board verification
+  34/34 with 0 rejected, `unknown` 34,503->34,502). Root third coverage
+  244->248 (root 14: 6->8, root 16: 10->12). update8 `remaining_now`
+  31,838->31,836 with 2 newly-resolved baseline requirements (batch-7 h043
+  s5 362082, h051 s5 362090). Joint greedy 35,617->35,857 (+240, LOSS-side
+  option-pool effect, f-batch direction). Worklist 65,213->65,155. Closure
+  ranking: 10324 gone entirely; next clean candidate rank 7 class 2634
+  (`[4035225266258182144, 0]`, 51 unknown).
+- Honesty record: only the 51 batch-7 LOSS rows were consumed; the six
+  unconsumed WINs (b018/d002/e002/f017/g018) stay scrutiny-owner-pending;
+  no verdict was created or asserted; **the standard 11x11 empty board and
+  the 19 central-reply roots remain UNKNOWN.** Nodes/expansions are never
+  verdicts.

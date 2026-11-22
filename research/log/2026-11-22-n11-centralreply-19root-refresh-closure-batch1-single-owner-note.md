@@ -409,3 +409,37 @@ rank 7 のクラス10324に着手する。5バッチ中5 WIN-HALTの実測傾向
   claim集合と機械的にdisjoint (merged cache不在確認済み)。同一スコープの
   宣言が既にmainにある場合は本宣言を破棄して着手しない。
 - 本amendment observed HEAD-before-push: 実行時の最新mainをコミットメッセージに記録。
+
+
+## Part M (verifier, amendment 2026-11-22): batch 7 (class 10324) increment merge + free re-audit - class 10324 certified as the 34th free class
+
+batch 7 (Part L) は51/51全LOSS (2-pass node-exact, WIN-HALTなし・枯渇なし) で
+完走した。Part C (23963) と同一の閉鎖機構で消費・再監査を行う。
+
+- 対象: `research/experiments/n11-central-reply-10324-closure-reaudit-20261122/`。
+  increment 51行 (sha256 `39b975e8...`) はpublished rawからfail-closed生成
+  (2-pass (result,nodes,legal) 一致・key一致assert込み)。mergeはpublished
+  `s5_union_merge.py` (selftest PASS) で正本5,924行 (`8a721a18...`) + 51行 →
+  **5,975行 (WIN 158 / LOSS 5,817)・衝突0・重複0**、出力sha256
+  `a998f4c0b13383cb50bbbdb60761182722ba45280fd585739ad5d08bc182ed1b`。
+  refreshはpublished scriptのbyte-copy (cache pin 2行のみ変更・diff検証済)、
+  他のpinned inputs 5種は正本sha一致、**2-run全出力byte-identical**。
+- 結果 (machine-verified): **class 10324 = Board検証済み34番目のfree class**
+  (`free_now` 33→34、`board_verification` 34/34・rejected 0、`unknown`
+  34,503→34,502、excluded系は不変=新規WIN流入なし)。root第三手被覆は
+  **244→248** (root 14: 6→8、root 16: 10→12)。update8 `remaining_now`
+  31,838→31,836 (−2、新規resolved 2件 = batch7のh043 (s5 362082) と
+  h051 (s5 362090))、`win_hit_groups` 空のまま。scheduling量: joint greedy
+  35,617→35,857 (+240、LOSS側option-pool効果・Part H-bisのf-batchと同方向)、
+  probe worklist 65,213→65,155 (−58)、closure rankingから10324は全面消失・
+  反駁証拠のない首位候補は**rank 7 class 2634** (`[4035225266258182144, 0]`、
+  unknown 51)。
+- 消費と主張の範囲: 消費したのはbatch 7の51 LOSS行のみ。b018/d002/e002/
+  f017/g018の5 WINは引き続きscrutiny owner待ちで不消費。Class 10324のfree
+  状態はmerge cacheからのderived class statusであり、**標準11×11空盤・19
+  central-reply rootsは引き続きUNKNOWN**。nodesを勝敗として読まない。
+- transport: probe-worklist (~3.7MB) は再出版しない (pinned inputs + script
+  からbyte-identicalに再生成可能、総量はrefresh-summary.jsonに記録)。
+- 並走との不接触: batch7由来キーのみ。同一スコープの宣言がmainに存在する
+  場合は着手しない。
+- 本amendment observed HEAD-before-push: 実行時の最新mainをコミットメッセージに記録。
