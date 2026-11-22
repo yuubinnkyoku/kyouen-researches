@@ -58,7 +58,8 @@ covered_λ := 禁止四点組を少なくとも1つ含むλ点部分集合の個
 - **2自由軌道を分離する D4 不変量**（id代表での値）: 共有点ちょうど3点の円 126 vs 128（うち8点円との3点共有は両軌道とも15個）、3点共有直線 7本 vs 5本、|Q∩S|=3 のquartet数 255 vs 230。quartetヒストグラムは {0: 1448, 1: 2995, 2: 1666, 3: 255} vs {0: 1412, 1: 3089, 2: 1633, 3: 230}。
 - 成果の境界: 本分析は published 代表から得た16配置の直接検証と記述であって、「16個以外に極大配置が存在しない」ことの再証明ではない（それは上記の完全列挙による）。7点円の非存在も同様に n=7 の確定値である。
 - 実装: `scripts/max14_structure.mjs`（quartet列挙→グループ化、正本）と `scripts/group_catalog_verify.py`（全トリプレット掃引・Fraction 厳密算術、quartet非依存）の2実装がカタログ項目単位で一致（`output/group_catalog_verify.jsonl`, all_ok:true）。
-- 刊行時の再生成経路: `output/group_catalog_n7.json`・`output/max14_structure.json` は、quartet全体を 4×4行列式テスト（[x,y,x²+y²,1] 行列式 = 0 ⟺ 共線または共円）で C(49,4)=211,876 組すべてから独立再計算し、全数アンカー（6,364個、660/5704分割、44/1581、軌道不変量 126/128・255/230）一致を確認の上で push、fetch-back で byte一致（catalog全文、structure全長+両端）を検証した。レーン機材の bash 環不全により今回は kit 履歴との sha 突合は未実施
+- 刊行時の再生成経路: `output/group_catalog_n7.json`・`output/max14_structure.json` は、quartet全体を 4×4行列式テスト（[x,y,x²+y²,1] 行列式 = 0 ⟺ 共線または共円）で C(49,4)=211,876 組すべてから独立再計算し、全数アンカー（6,364個、660/5704分割、44/1581、軌道不変量 126/128・255/230）一致を確認の上で push、fetch-back で byte一致（catalog全文、structure全長+両端）を検証した。レーン機材の bash 環不全により今回は kit 履歴との sha 突合は未実施。
+
 ## 方式と独立検証（3実装 × 分散統合 × 総数アンカー）
 
 1. **系統1（cov増分法）**: `scripts/safehist_n7.mjs` — dfs_py.py `--safehist` と同一セマンティクス（安全接頭辞木を昇順セルDFSで全走査し cov/stInF を増分管理）。**n7 全走行2回が byte 同一**（`output/hist_n7_run{1,2}.jsonl`, sha 同一）。さらに **初手セルによる7分割シャードを並走**し union が全走行と係数単位で完全一致（`output/unite_check_n7.json`, `output/shards/`）。シャードは「各安全集合の最小セルが一意」により全体を恰好に分割する。
