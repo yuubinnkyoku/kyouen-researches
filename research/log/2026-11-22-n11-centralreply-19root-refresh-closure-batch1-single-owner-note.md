@@ -2449,3 +2449,44 @@ still-unknown 52子はすべて(16,56)由来) に着手する。
   記録し、push直前にnote blob sha再照合 (現状 `b86f2373...`)。競合時は破棄。
   標準11×11空盤・19 central-reply roots・class 10687はどの時点でもUNKNOWNのまま。
   nodes数を勝敗として読まない。
+
+
+## Part AI status update (amendment 2026-11-22): if-adopted分解をtakeoverで実行・出版した (verdict不消費)
+
+宣言ホスト (Part AI, note修正コミット `a0cdb0da`, 2026-11-22T13:08Z) は宣言後2時間以上
+沈黙した (status updateなし・実験dirなし・kit成果物なし; 柾HEAD `858a4158` 15:18Zと
+`ada9bc95` 15:25Zの両時点で実験dir不在を確認)。Part U (batch-8) / Part Z (batch-11) と
+同一のtakeover基準 (20分超の沈黙かつ成果出版なし) により、本セッションのホストが
+published宣言を変更なしで実行した。対抗宣言・競合なし。verdictは一切不消費。
+
+- 再取得・全ゲートPASS: published batch-13正本10/10 byte一致 (8 raws + status.log +
+  batch-keys `c6c56a1a...`, AT `858a4158`)、BASE control refresh 2回実行でpublished
+  Part Y canonical 4出力とbyte一致 (5度目のcross-host再現)、increments maker 2回実行
+  byte一致 (wins2 `bb238f67...` / loss2 `50c09a06...` / full4 `3a8bcb11...`,
+  ゲート: 3-way p1/p2/status一致・BASE重複0・quarantine 0・WIN集合=={p002,p003})、
+  sha-pinned union mergerで衝突0・重複0 (6,029/6,029/6,031行, `c180e6d6...` /
+  `ac7b6cdd...` / `faacb374...`)、scenario refresh 6/6 byte一致 (直列実行。
+  最初の並列起動はOOM-killされ誠実記録、部分出力の流出なし)、delta extractor 2回実行
+  byte一致 (`c62cabb4...`, 再計算ゲート: class_status_countsをgraph+update8+cacheから
+  再計算しBASE・全シナリオのpublished summaryと一致)。
+- 機械測定された分解結果 (decomp-deltas-batch13.json) : **PWIN2** のexcluded_nowは
+  23→28、flip集合 == frozen-graph eligible holder union **{4903, 5471, 5513, 5626, 16930}**
+  (p002 s5 185003 holders {4903,16930}・p003 s5 203419 holders {4471→5471,5513,5626,16930}...
+  詳細は実験README; multi-WIN holderは16930のみ)。unknown 34,501→34,496。
+  class 16930のclosure-classes rankは11→5 (unknown 52→50)。**PLOSS2** はflip 0
+  (excluded_now 23・free_now 35・unknown 34,501不変)、probe worklist 65,154→65,152。
+  **PFULL4** はworklist 65,150 (−4, 加法的)・class 16930 unknown 48。**update8は全シナリオ
+  不変** (resolved 75, remaining 31,784, win_hit_groups 0; batch-13はupdate8-neutral)。
+  free_now 35とper-root free coverageは全root不変、root 27は119/119。joint greedy
+  35,242不変、per-root greedyはroot 26/48が-2/-2/-4加法的。PWIN2とPLOSS2の
+  closure-classes.csvが同一bytesなのは構造的理由 (両方2子解消でrank/unknown同値)。
+- 出版: 実験dir `research/experiments/n11-centralreply-class16930-win-p002p003-ifadopted-20261122/`
+  28ファイル (27 + MANIFEST-sha256.txt) を1コミット `79a7f72d` (2026-11-22T15:34:45Z) で
+  mainに反映、fetch-back 28/28 byte一致 (247KB cache 3本を含む)。scenario probe-worklist
+  (3.7MB×3) はPart AH/AJ先例どおり不出版 (sha256はREADMEに記録)。
+- verdict不消費・解釈ガート不変: p002/p003の採用判断はscrutiny ownerのC++第二実装
+  ゲート pin `9193f5b6...` 待ちのまま、p001/p004 LOSS行もcanonical cache外のunconsumed
+  evidence。p005-p052 (48キー) は未着手。標準11×11空盤・19 central-reply roots・
+  class 16930他全classはどの時点でも**UNKNOWNのまま**。nodes数を勝敗として読まない。
+- 本status updateのobserved HEAD-before-push: `e0f26f11` (note blob sha1ロック
+  `ac8090f6...` で更新、fetch-backで追記確認)。
