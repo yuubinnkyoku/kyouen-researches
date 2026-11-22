@@ -710,3 +710,34 @@ verdictは一切消費しない。
   nodesを勝敗として読まない。
 - 本amendment observed HEAD-before-push: `b8374c416ed39815231e29f3afa92ec192834d98`
   (K1058 small-boardレーン)。コミットメッセージにも同じHEADを記録する。
+
+
+## Part T (verifier, amendment 2026-11-22): batch 9 j033 third-implementation cross-verification (declared before execution)
+
+batch 9 (Part Q) はWIN-HALT (j033) で停止し、Part Rのif-adopted解析は出版済み。
+Part K/O/Pの前例に従い、batch-9のwin行 j033 (2-pass node-exact result 1, 4,718,280
+nodes, s5_index 69347, key `[1153484455030030336, 0]`, legal 80, probe_order 364) と
+層化LOSS spot 3行 (j001 / j016 / j027 — replica nodes 7,908,824 / 9,112,205 /
+1,255,316 でbatch-9 nodes幅をほぼ全幅) を第三実装 (`third_impl.js` pin
+`08ea958f...`) でverdict-level交叉検証する。**verdict不消費・採用判断は
+引き続きscrutiny owner (C++第二実装 gate pin `9193f5b6...` 前例・不変)。**
+
+- 対象: `research/experiments/n11-centralreply-closure-batch9-j033-thirdimpl-20261122/`。
+  target 4行 (j033 WIN + j001/j016/j027 LOSS)・anchor 2行 (k02a/l1a, Part G/K/O/P
+  と同一のpublished第三実装値 9,106,337/4,991,527 と 7,660,602/3,951,175)・
+  negative 2行 (ng1/ng2)。入力はpublished batch-9 raw (kit鏡像はrepo正本と
+  byte一致を機械確認の上使用) から `make_inputs_batch9.py` がfail-closed導出
+  (手転写ゼロ・raw 2-pass一致assert・key/legalをpublished batch-keys.json
+  およびstatus.logと機械照合)。
+- 前提ゲート (いずれも必須・fail-closed): script pin 3種 (`08ea958f...` /
+  `c8c52528...` / `84585617...`)、rule-engine gate (verify_tbl: quads 95,670 ==
+  replica / triples 195,044 mismatches 0)、anchor 2行の本ホスト再現がpublished
+  値と完全一致、negative 2種の文言一致GATE_FAIL。手法: 1行1プロセス、cap 300M
+  expansions、wallcap 240s、1行2回 (a/b) determinism、audit.py 2回実行byte一致。
+- 主張と消費規則: 本検証はverdict-level文献作成のみ・verdict不消費。j033のWINは
+  引き続きscrutiny owner待ち。標準11x11空盤・19 central-reply roots・class
+  1518/2634は本検証のどの時点でもUNKNOWNのまま。nodes/expansionsを勝敗として
+  読まない。
+- 並走との不接触: batch-9由来キーのみを対象とし、進行中のbatch 8 (Part N,
+  class 2634) のscopeと無関係。同一スコープの宣言がmainに存在する場合は着手しない。
+- 本amendment observed HEAD-before-push: 実行時の最新mainをコミットメッセージに記録。
