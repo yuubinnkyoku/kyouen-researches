@@ -63,6 +63,12 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/scripts/graph_fp_linear.py
   role: verifier
   note: F_p-線型写像の全数検査（q=9で24/81のみアーク）
+- path: research/experiments/finite-field-kyouen-20261120/scripts/fp2_subspace_arcs.py
+  role: solver
+  note: q=p^2 の2次元F_p-部分空間の全数検査（q=9で40個がアーク、q=25で0）
+- path: research/experiments/finite-field-kyouen-20261120/output/fp2_subspace_arcs.json
+  role: data
+  note: q=9,25 の部分空間アーク数
 - path: research/experiments/finite-field-kyouen-20261120/scripts/max_arc_orbit.py
   role: solver
   note: 最大アークのPΓL(2,q^2)軌道分解（q=9で単一軌道）
@@ -243,9 +249,22 @@ e×e の F_p 行列（p^(e²) 個）で尽くされる。これを全数試す�
 |---|---:|---:|---:|---:|
 | F_p-線型グラフがアーク | 0/512 | **24/81** | 0/625 | 0/19683 |
 
-**q=9 だけが当たり**（24個）。q=9 は上界 K ≤ q が tight な唯一の既知の q
-（K(9)=9、K1252/K1253）であり、その極大アークの一部は F_3-線型写像のグラフで実現できる。
-しかし q=25 など他の平方でも 0 なので、一般的な構成にはならない。
+**q=9 だけが当たり**（24個）。q=16（F_2-線型 65,536個）、q=25（F_5-線型 625個）、
+q=27（F_3-線型 19,683個）では **0**。
+q=9 は上界 K ≤ q が tight な唯一の既知の q（K(9)=9、K1252/K1253）であり、
+その極大アークの一部は F_3-線型写像のグラフで実現できる。
+
+**さらに q=p² では「2次元 F_p-部分空間」を全数検査できる**（`F_{q²} = F_{p⁴}` の
+2次元 F_p-部分空間はちょうど `p² = q` 個の元を持ち、反転平面の q 点集合になる。
+個数はガウス二項係数 `[4 choose 2]_p = (p²+1)(p²+p+1)`）：
+
+| q | 2次元 F_p-部分空間の数 | そのうちアーク（サイズ q） |
+|---:|---:|---:|
+| 9 (=3²) | 130 | **40** |
+| 25 (=5²) | 806 | **0** |
+
+q=9 では「F_3-線型グラフ」より広い族（40個）が極大アークを与え、すべて単一軌道の一部である。
+q=25 では 0 なので、**この族も q=9 に固有**である。
 
 **結論**：極大アークは小さい q ではグラフとして実現できるが、
 q ≥ 11 ではグラフ ansatz は一般探索（q=11 で 9）より弱い。
