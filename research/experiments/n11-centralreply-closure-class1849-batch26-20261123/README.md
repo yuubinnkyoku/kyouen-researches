@@ -123,3 +123,48 @@ UNKNOWNのまま。** 被覆・secured・root勝敗の主張はしない。
   本+truncated 10+l035断片1〕・row-audit-winhalt.json)・fetch-back
   75/75一致。
 - C (本commit) README + MANIFEST-sha256.txt 148行。
+
+## batch-26 残留22キー continuation (Part BT, 2026-11-23)
+
+宣言: note amendment `135cc386` (WIN-CONTINUE事前登録・publish-then-execute
+・verdict不消費)。本continuationでclass 1849の列挙が完遂した。
+
+- val-gate (実行前・本host): 4/4 node-exact (at2m 2行 result 0 / nodes
+  2,000,000・15m 2行 result 2 / nodes (2,3,651,923)/(2,5,040,200)・禁止四角
+  95,670 x4・`# replay_done` x4)。本host値は val-gate/*.bt-host.out (published
+  this-host 4ファイルは不変)。
+- drive: 4回の bounded invocation (同一published drive driver・2 worker・
+  260s有界) で残留22キー (fragment l035 + fileless 21キー) を完走。
+  **22行すべてLOSS (採用候補のみ・verdict不消費)**・2-pass node-exact
+  (mismatch 0)・EXHAUSTED 0・WIN 0 (WIN-CONTINUE規則不発動)。残留22キー
+  合計 nodes 88,000,683 (最小 l038 1,577,298・最大 l048 9,304,668)。
+  truncated-retry 7件を誠実記録 (l035 p1 / l036 p2 / l041 p1 / l045 p1 /
+  l046 p2 / l049 p1 / l050 p1・断片は output/raw/*.truncated.*.out として
+  保存・published completeness guard がfresh-cold再実行・完了行の再実行
+  ゼロ・status.logはpublished 42行prefixとbyte一致+追記29行)。
+- full-row row-audit: published pre-registered `row_audit_batch26.py`
+  (sha256 `33ffbce5…`) はWIN行のstatus.log照合でfail-closedした (runbatch
+  `f591f8c2…`がWINキーを「PASS (nodes付き) + WIN-HALT行」の2行で書くの
+  に対し監査側が単行想定・完全完走でWIN行を含む監査は今回が初実行・
+  誠実記録)。最小派生版 `row_audit_batch26_full.py` (sha256 `434025ba…`・
+  pre-registered版との差分はWIN行の2行照合のみ・schema
+  `n11-centralreply-closure-class1849-batch26-rowaudit-full-v2`) を出版し
+  **PASS: 53 rows / LOSS 52 / WIN 1 (l028) / exhausted 0 / mismatches 0**
+  (row-audit.json sha256 `cb4158d9…`・3回実行byte一致)。tamper battery
+  4/4検出 (T1 l044.p1 verdict反転→p1/p2 mismatch・T2 l028 WIN-HALT行
+  除去→2行pair gate・T3 l035.p1 verdict反転→mismatch・T4 l049.p2
+  replay_done行除去→truncated gate。初回T1のsed探針はpattern不一致の
+  no-opで検出に至らず、anchor実効性assert付きで電池を設計し直して再実施
+  ・scratch上で実施し実験filesはbattery前後でbyte同一)。
+- 出版: outputs `a79c2a6f` (58 files・fetch-back 58/58 byte一致) → 本commit
+  (README + MANIFEST-sha256 204行: status.log行のみsha更新・l035.p1.out行は
+  fresh再実行版に更新・その他148行はpublished MANIFESTの行を保持)。
+- 意味 (route statementのみ・閉鎖主張なし): class 1849の53子すべてに
+  honest label (WIN 1 (l028・Part BSで4系統裏付け済) + LOSS 52) が揃った
+  (verdict不消費・採用判断はscrutiny owner C++第二実装 gate
+  `9193f5b6…` 待ち・adoptionは別宣言Part (pinned fail-closed merger
+  `90711961…`) 経由のみ)。nodes数を勝敗として読まない。被覆・secured・
+  root勝敗の主張をしない。
+- 標準11×11空盤・19 central-reply roots・二石root {49,60}/{59,60}・S2
+  {59,60}・class 1/2/4・class 1849 (53キーすべて・l028を含む) は本Partの
+  どの時点でもUNKNOWNのまま。
