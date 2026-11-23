@@ -5058,3 +5058,69 @@ WIN-HALT rc=45が a003 のhonest WIN labelで発火したため、そこで停�
   push直前に最新mainのnote blob sha1
   `83c59d9221e7a624ca81b8f876d903d54419aaa2` (並走amendment `2f6086dd`
   適用後) を再fetch・再照合し、競合時は本節を追記し直す。
+
+## Part BJ addendum (2026-11-23): 第二ホスト同時再現の取り込み (両方向記録・status update並走節の履行)
+
+並走セッション (実行開始amendment `2f6086dd` の出版者側) が本batch-21の
+drive-1を第二ホストで 04:13:00Z..04:17:20Z に実行完了した。
+**正本 (`0022c8c5`) と全10 rawファイルが wall_s フィールド以外で完全一致**
+(a001 LOSS 2,392,778・a002 LOSS 6,755,079・**a003 WIN 5,021,280 →
+同一キーで事前登録WIN-HALT発火**・a004 LOSS 4,151,964・a006 p1単一pass
+簿記 8,008,743 同一・211 bytesのtruncated断片は正本とbyte完全一致)。
+正本 `row_audit_batch21_win_halt.py` も第二ホスト出力に対してPASS・
+`row-audit-winhalt.json` は正本とbyte完全一致 (`5bb403ad…`)。
+詳細は `research/log/2026-11-23-b21-drive1-second-host-replication.md`
+(commit `ad487a2f`)。verdict不消費・canonical 6,235行 (`f6649fe3…`) 不変。
+閉鎖・被覆・secured主張なし。標準11×11空盤・19 central-reply roots・
+二石root {49,60}/{59,60}・S2 {59,60}・class 1/2/4・class 12643
+(53キーすべて) はどの時点でもUNKNOWNのまま。
+
+## Part BK (verifier, amendment 2026-11-23, 実行前に宣言): batch-21 a003 WIN行の第三実装交叉検証 (verdict不消費)
+
+batch-21 (Part BJ) で出版されたWIN行 a003 (canonical `0022c8c5`・
+2-pass fresh-cold node-exact・result 1・nodes 5,021,280) に対し、前例
+(Part G/K/O/P/T/W/AA/AD/AG/AL/AR/AZ/BF) と同じpinned第三実装
+(non-df-pn AND/OR minimax) によるverdict-level交叉検証を、本セッションが
+単一オーナーとして実行する (同一スコープの対抗宣言・amendmentが本
+amendmentより先にmainにある場合は本宣言を破棄して着手しない)。
+
+- 対象: `research/experiments/n11-centralreply-closure-b21win-thirdimpl-20261123/`。
+  target 1行: **a003** (s5 115192・key (10412339930666631168, 4)・legal 82・
+  replica_result 1・replica_nodes 5,021,280・holder class 12643 (unknown)・
+  membership_class_count 3・published batch-21 batch-keys `1f9346a7…`)。
+- 機材 (全てpublished byte・実行時にsha照合): third_impl.js `08ea958f…`・
+  verify_tbl.js `c8c52528…`・jsreplay.js replica `84585617…`・runner
+  `run_thirdimpl.sh` (BF正本byte-copy)・maker (BF `20d52c75…`をbatch-21
+  正本sourcesへadapt)・audit gate battery (BF `fa7dd5e6…`を単一targetへ
+  adapt)。
+- 前提ゲート (fail-closed・全て機械検査): maker 3回実行byte一致・sources
+  sha pin (batch-keys `1f9346a7…`・status-b21.log・README-b21・canonical
+  a003 p1/p2 raw・published input CSV byte-equality (scaffold `85d0c4d7`)・
+  BF published anchor/negative CSV byte-equality (provenance AR→BF→BK))、
+  raw 2-pass node-exact (決定性field比較)・result 1 in-budget、
+  status.log/README 3-way照合 (batch-21形式: a003 PASS行・WIN-HALT行・
+  READMEのa003 WIN文言・nodes 5,021,280)。
+- 実行protocol: anchors k02a (WIN 9,106,337/4,991,527)・l1a (LOSS
+  7,660,602/3,951,175) の本ホストnode-exact再現、negatives ng1/ng2の
+  GATE_FAIL確認、rules gate (replica quads 95,670 == third quads 95,670・
+  triples mismatch 0)、target a003は1行=1solver=1プロセス・cap
+  300,000,000・wallcap 240s・--memo-power=22・a/b 2回のdeterminism gate
+  (result/expansions/ttHits/reason 同一必須)・逐次実行。wall超過は
+  honest wall-inconclusiveとし検証主張としない。
+- 主張と消費規則: 本検証はverdict-level文献作成のみ・**verdict不消費**
+  (a003の採用判断は引き続きscrutiny owner C++第二実装 gate pin
+  `9193f5b6…` のまま)。第三実装verdictがcleanにreplica verdictと一致
+  した場合は「一致した」事実のみ記録し、clean不一致はdivergence
+  evidenceとして記録するが本レーンではverdictを書き換えない。
+  開鎖・被覆・secured・root勝敗の主張をしない。
+- 不接触: canonical cache (6,235行 `f6649fe3…`) への書き込みなし・
+  19+1 unconsumed closure WIN候補 (既存19 + a003) の採用状態不変・
+  Part BH (`de1383a7`)・batch-20採用済みBASE・batch-21 residual 49キー
+  (fresh・未着手) に一切触れない・y18/y19 fast lane・K1058系・
+  inversive-plane/k=8 lane非接触。
+- UNKNOWN担保: 標準11×11空盤・19 central-reply roots・二石root
+  {49,60}/{59,60}・S2 {59,60}・class 1/2/4・class 12643 (53キーすべて)
+  は本Partのどの時点でもUNKNOWNのまま。nodes数・expansions数・ttHits数
+  を勝敗として読まない。
+- 本amendment observed HEAD-before-push: push直前に最新mainを再fetchし
+  note blob lockを再照合する (競合時は本節を追記し直す)。
