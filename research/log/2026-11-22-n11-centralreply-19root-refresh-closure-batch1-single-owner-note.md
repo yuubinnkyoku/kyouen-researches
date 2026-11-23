@@ -6051,3 +6051,5 @@ fetch-back済み出版状況に基づく追記。本節追記前の note blob lo
   nodes数・legal数を勝敗として読まない。WIN/LOSS採用は別宣言の adoption
   Part (pinned fail-closed merger 90711961) 経由のみ・scrutiny owner C++
   第二実装 gate 9193f5b6 待ちは代行しない。
+
+...
