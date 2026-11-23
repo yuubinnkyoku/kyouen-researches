@@ -5429,3 +5429,88 @@ verdict-level交叉検証を、本セッションが単一オーナーとして�
   のまま。nodes数・expansions数・ttHits数を勝敗として読まない。
 - 本status update observed HEAD-before-push: `32cf078` (commit C)。
   push直前に最新mainを再fetchしnote blob lockを再照合する。
+
+
+## Part BN (solver, amendment 2026-11-23, 実行前に宣言): closure class 31600 exact-S5 probe batch 23 (verdict不消費)
+
+batch-23はclosure候補表の**rank 19 class 31600**（mask
+[1152921505160495104, 32768]・groups served (24,29)(24,79)(25,30)(25,85)・
+cost 53子すべてunknown・known children {}・21-unconsumed-WIN交積空・
+known WIN子なし）を最初のroute-alive候補として選定する。実行前に本
+amendmentを出版する (publish-then-execute)。
+
+- 選定根拠 (published baseから再導出・prose不使用): re-ranked closure
+  候補表 = 807 classes (closure表 `d57a7609…` 807行と全行一致
+  cross-check)。ranks 1..16 (23101/16757/20421/16371/30345/12264/5473/
+  2634/8785/1518/8106/16930/5830/16131/16513/5687) は従来どおり反駁済み
+  (19-WIN交積またはknown WIN子: 5830はreceipt WIN 5子
+  {126017,131631,162106,197665,206386}・5687はreceipt WIN子{209644}・
+  rank 1 class 23101のunknown集合は{745184}のみ)。rank 17 class 12643
+  (batch-21対象) はunconsumed-WIN交積 {115192} (Part BJ a003・Part BK
+  第三実装裏付け済み)・**rank 18 class 25835 (batch-22対象) は今回の
+  反駁証拠が確定**: unknown子集合と21-unconsumed-WIN集合の交積は厳密に
+  {150241}、すなわちpublished Part BL honest WIN行 k002 (s5 150241・
+  2ホストpinned-replica + Part BM第三実装で裏付け済み・verdict不消費
+  のまま)。ranks 1..18がすべて反駁済みのため、**rank 19 class 31600が
+  published-table順で最初の全LOSS閉包ルート生存候補**。
+  runner-up rank 20 class 10968 (mask
+  [1152925919833292800, 0]・cost 53子すべてunknown)・backup
+  rank 21 class 16957 はともにroute-alive (maker内で機械検証)。
+- preflight (fail-closed maker `make_batch23_keys.py` sha256
+  `7b2c8e53…`・全gate PASS・**4回実行byte一致**): 53キー s001..s053
+  (s5昇順 62435..924796・legal 78..95・Board再計算53/53・membership
+  分布 {3:8, 4:45})。**canonical cache 6,235行 `f6649fe3…`
+  hits 0/53・quarantine 0/53・prior 23 published packets
+  (batches 1..22・1,140行・1,126一意) overlap 0・key id prefix "s"
+  は23 packetすべてで未使用**。batch-keys.json sha256
+  `2776acaf…`・input CSV 53枚 (s001 = (1152921505294712832, 32768)・
+  legal 78・s053 = (1152921505160495104, 2129920)・legal 90)。
+  **tamper battery 6/6検出** (T1 graph sha pin改ざん→drift ABORT・
+  T2 CLASS_MASK 1bit反転→mask gate FAIL・T3 batch-22 prior packet
+  pin 1bit反転→sha drift ABORT・T4 prior rows pin 1140→1141→gate
+  FAIL・T5 rank-18 evidence pin {150241}→{150242}→21-WIN evidence
+  gate FAIL・T6 graph実ファイル末尾1bit反転→sha drift ABORT・
+  スクラッチcopyで実施)。
+- val-gate (pinned `jsreplay.js` `84585617…`・本host): **4/4
+  node-exact** (at2m 2キー result 0 nodes 2,000,000/2,000,000 budget
+  exhausted・first-15m result 2 nodes 3,651,923・second-15m result 2
+  nodes 5,040,200・禁止四角 95,670・wall_s比較外)。
+- 実行protocol (batch-22流・publish-then-execute): scaffold
+  (scripts 7: maker `7b2c8e53` + drive_batch23.sh `37bb126c` +
+  row_audit_batch23.py `f45b124e` +
+  **row_audit_batch23_win_halt.py `f55ae559` (汎用事前登録版・後述)** +
+  pinned jsreplay `84585617` / runbatch `f591f8c2` / runwave
+  `8efd78c2`) を実験dir
+  `research/experiments/n11-centralreply-closure-class31600-batch23-20261123/`
+  に出版してからdriveする。停止規則・消費規則はPart BLと同一
+  (2-pass fresh cold budget 15M・mismatch→HARD-STOP・WIN→HALT rc=45
+  (honest WIN label・verdict不消費・scrutiny owner待ち)・枯渇=UNKNOWN
+  (15M同条件再探索禁止)・消費は別宣言adoption Part (pinned fail-closed
+  merger `90711961`) 経由のみ・本batch単体では閉鎖・被覆・secured
+  主張なし)。実行は次回以降のランが行う (起動だけは成果としない)。
+- win-halt監査の事前登録 (batch-22からの構造改善): batch-22の
+  win-halt row-auditはhalt後の事後スクリプトであった (k002/k001を
+  固定記述)。batch-23では**汎用版 `row_audit_batch23_win_halt.py`
+  をscaffoldに同梱して事前登録する**: completed/fragment/fileless
+  の分類はすべてrawファイルの `# replay_done` 有無とstatus.logから
+  導出し、haltするキーidは一切固定しない。WIN行が1つもcompleted
+  に存在しない場合はGATE_FAIL (その場合はフル監査
+  `row_audit_batch23.py` を使う)、fragmentキーの完全片側passは
+  bookkeepingのみ (evidence=false・probed=false)、非completedキーへの
+  verdict行は status.log上禁止、を機械検査する。
+- 不接触: canonical cache (6,235行 `f6649fe3…`) read-only・
+  21 unconsumed closure WIN候補 (19旧 + a003 + k002) の採用状態不変・
+  batch-22 residual 52キー (k001 fresh-cold再実行 + k003..k053 fresh)
+  に一切触れない・Part BM b22win-thirdimpl dir (`5e3c180..
+  `32cf078`) 不変・Part BH (`de1383a7`)・batch-19/20/21系・fast lane
+  (y19/y20)・K1058系・K1250-K1253 inversive-plane系・inversive-arc
+  lane非接触。
+- UNKNOWN担保: 標準11×11空盤・19 central-reply roots・二石root
+  {49,60}/{59,60}・S2 {59,60}・class 1/2/4・class 12643・class 25835
+  (53キーすべて)・**class 31600 (53キーすべて)** は本Partのどの時点でも
+  UNKNOWNのまま。nodes数・legal数を勝敗として読まない。WIN/LOSS採用は
+  別宣言のadoption Part (pinned fail-closed merger `90711961`) でのみ。
+- 本amendment observed HEAD-before-push: `03e409d9`
+  (inversive lane K1253後のmain)。push直前に最新mainを再fetchし
+  note blob lock (`7a733e54…`・405,454B) を再照合する (競合時は本節を
+  追記し直す)。
