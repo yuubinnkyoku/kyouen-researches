@@ -3216,3 +3216,83 @@ value.
   `60de44edda099ac624824feb8b222e9b917b865c` (session-log blob lock
   `ad29acc0c5238469f30103faea69c17e74e4eef2` before this Continuation;
   push re-checks the lock and re-appends if a parallel lane moved it).
+
+## Continuation 48 (2026-11-23, this host): Part BI executed and published - batch-20 (class 12457) 53-LOSS canonical adoption complete: canonical cache 6,182 -> 6,235 rows, class 12457 exits the unknown population as the 38th Board-verified free class (machine classification delta only); standard 11x11 stays UNKNOWN
+
+- Lane resume: this session continued after a compaction (Part BI scripts
+  commit `7bdf327a` was already pushed mid-flight). Re-fetched latest main
+  before every write; all fetch-backs were byte-exact.
+- Publish-then-execute honored end-to-end: the four machinery scripts
+  (maker `81a6b7ec`, delta extractor `605e040a`, union merger byte-copy pin
+  `90711961`, refresh `2f77a8bb`) were fetched back from the pinned commit
+  `7bdf327a093670a24d04220c95b8495e452a9896` via commit-pinned raw URLs,
+  sha256-verified 4/4 byte-identical to the local authoring copies, installed
+  over them, and then ALL four stages were re-executed post-publication.
+  Every output was byte-identical to the pre-publication runs: increment
+  `554f7261` (53 rows), manifest `82a5f866`, merged canonical cache
+  `f6649fe3` (6,235 rows), refresh 4 outputs (`d9d18fc2`, `d57a7609`,
+  `bc409e63`, worklist `3152855d`), decomp `31078669`. Maker gates all PASS
+  (kit 191/191, WIN-set and exhaustion-set empty absence gates, BASE overlap
+  0, quarantine 0, row-audit `1dcb7fb8` agreement, 175,842,846 nodes per
+  pass both passes).
+- Canonical merge (fail-closed merger selftest PASS): BASE 6,182 rows
+  `0b594f7e` + 53 = 6,235 rows (WIN 158 / LOSS 6,077, dup 0, conflict 0)
+  published as outputs A commit `04a2335e24fb317e2e2547d72eb379d2da77c99e`
+  (increment + manifest + merged cache + audits run1-3 byte-identical
+  `06151e6d` + postpub audit `d748bbbf` (input-path string only diff) +
+  refresh 3 published outputs + decomp json). BASE re-verified byte-unchanged
+  after merge. The merge/postpub outputs byte-match the pre-publication
+  execution that had already passed the full 10-tamper battery (10/10
+  detected, restore byte-identical).
+- Machine-established classification deltas (refresh re-run + extractor all
+  gates PASS): free_now 37 -> 38 (class 12457: all 54 cost children now LOSS
+  on the canonical cache - known child {126899: LOSS} + the adopted 53 - and
+  the Board fail-closed child-boundary check PASSes; 38th Board-verified
+  free class, exits the unknown population), unknown classes 34,499 ->
+  34,498, closure candidate table 808 -> 807 (rank 17 exit only, closure
+  gate empty-entry check), root 27 baseline 119/119 unchanged, class 23101
+  and 12643 unchanged (12643 promoted rank 18 -> 17, the next route-alive
+  candidate), update8 remaining 31,779 -> 31,726, resolved 80 -> 133, joint
+  greedy 38,978 -> 38,415, inner worklist 64,872 -> 64,808. flips=[], 
+  new_free=[12457] exact-match gate, changed rows central|2 and central|5.
+- Worklist publication decision (honest correction): outputs A's commit
+  message anticipated publishing the 3.75MB probe-worklist in a separate
+  commit; per the standing repo convention (Part AH/AO/AP/AS/AV/BC:
+  unpublished, sha recorded only) it stays unpublished; sha256 `3152855d...`
+  recorded in the experiment README and the note status update instead.
+  Two sandbox attempts to push it hit hard run limits (60s time / 16MiB
+  memory), which motivated re-checking the convention; the convention is
+  the correct resolution, not a workaround.
+- Publication: note Part BI status update + experiment README in commit
+  `68180ea1f92c7c2ddfff07e9e3c68f33d2ba4392` (note blob lock `e398f02b`
+  re-verified byte-identical at HEAD `e7ef8b6d` immediately before the
+  push; predicted new blob `28a9c7b952e25537d77b15136463e06f5f1a75d4`,
+  fetch-back confirmed byte-identical, README blob `025eea49` likewise).
+- Parallel-lane events (non-contact maintained): between our scripts push
+  and this status update, the y19/y18 fast lane landed `22dc3dd2`,
+  `ecc96264` (K1243 README, explicitly marked our scripts commit
+  non-touching), `9f3d5764`, `e7ef8b6d` (K1244 y18 part1). Part BH
+  (batch-19 residual w003..w053, declaration `de1383a7`) still has no
+  adoption/execution commit on main; batch-21 (class 12643) untouched.
+- Verdicts NOT consumed beyond the 53 LOSS rows (the declared Part BI
+  scope): batch-20 has zero WIN rows (absence gate), so no WIN consumption
+  occurred anywhere; the 19 unconsumed closure WIN candidates remain
+  scrutiny-owner pending (C++ second-implementation gate pin `9193f5b6`
+  unchanged); canonical chain had no prior projection and none was created.
+- Guards unchanged: standard 11x11 empty board, all 19 central-reply
+  roots, the two-stone roots {49,60}/{59,60}, S2 {59,60}, classes 1/2/4
+  and 12643 remain UNKNOWN at every point; node/worklist/greedy numbers
+  are bookkeeping, never verdicts; no coverage, secured, or root-outcome
+  claim is made by the free-class exit statement.
+- Tooling lesson for future sessions: `tools.file_system.read_file` chunk
+  payloads cost roughly 0.5-0.6s per call against the 60s run budget, and
+  each recorded chunk result also consumes the 16MiB run memory (UTF-16
+  doubling) - a ~3.7MB CSV cannot be assembled in a single run (budget AND
+  memory both bust at ~59 chunks); split pushes so no single run_typescript
+  block moves more than ~300KB, and prefer the established conventions
+  (unpublishing regenerable giant worklists with recorded shas) over
+  fighting the sandbox limits.
+- Session-log observed HEAD-before-push:
+  `68180ea1f92c7c2ddfff07e9e3c68f33d2ba4392` (session-log blob lock
+  `0d213568986f3305bf7eb97133b3248b165baf0e` before this Continuation;
+  push re-checks the lock and re-appends if a parallel lane moved it).
