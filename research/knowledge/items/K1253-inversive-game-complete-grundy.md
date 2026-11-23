@@ -8,6 +8,9 @@ aliases:
 - inversive kyouen game complete Grundy values q <= 9
 - 反転平面盤の空盤はq=7で後手勝ち
 relations:
+- type: related
+  target: K1254
+  note: 非Miquelian 盤（Suzuki–Tits）では同じ位数でも勝敗が変わる
 - type: depends_on
   target: K1058
   note: 反転平面盤のゲーム定義とq=3,5のGrundy記録（本項の較正に使用）
@@ -261,3 +264,10 @@ g₀ = 0 ⟺ g₁ ≠ 0,    g₁ = 0 ⟺ g₂ ≠ 0,    g₂ = 0 ⟺ g₃ ≠ 0
 - 空盤の勝敗が q=3,5,8（先手）と q=7,9（後手）で分かれる理由は未解明だが、
   3重推移性により**3点局面の Grundy 値に局在**するところまでは特定できた。
   残る問題は「q=7 で3点局面の4点拡大の Grundy 値が {0,2} に分かれる理由」である。
+- **本項は Miquelian 盤専用の結果**。同じ位数8でも非Miquelian 盤（Suzuki–Tits）では
+  極大弧の最大サイズは同じ 7 なのに**空盤は後手勝ち**になる（K1254）。したがって
+  通常・misère の勝敗も、P-局面の層別分布も、**設計パラメータでは決まらない**。
+  K1254 では AG(2,q) 盤と Suzuki–Tits 盤にも同じ還元（`g0 = mex{g1}`, `g1 = mex{g2}`,
+  3点局面の Grundy 値）を適用し、位数8の3盤で P-局面の分布が全く違うことを示した。
+  Miquelian 盤の「3点局面が単一軌道」という性質は鋭い3重推移性の帰結であり、
+  `Sz(q)` は2重推移的でしかないため、非Miquelian 盤では同じ還元が一段弱くなる。
