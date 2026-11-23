@@ -1,13 +1,14 @@
 ---
 id: K1256
-title: "2トークン残余ゲーム y=22族のパラメトリック閉形式 fit（有限probe box＋box外spot・cand22・observed）"
+title: "2トークン残余ゲーム y=22族のパラメトリック閉形式の全称証明（全z>=0・全x>=22・全R>=0）"
 kind: proposition
-status: observed
+status: proved
 topics: [grundy, residual-games]
 aliases:
   - "two-token y=22 parametric closed-form fit, P22-fit"
   - "cand22 fitting and out-of-box spot verification (fitting stage, pre-universal; first-draft ZERO-correction agreement on all 119,567 probe points; even-y mechanical translation from the published FINAL cand20, the universally proved y=20 table (K1246 promoted, K1249 machine), Y=20->22; reverse rename verified byte-identical to the published cand20 code in both directions)"
   - "seed law 10th consecutive one-shot test passed (even-y pair series 12->14->16->18->20->22, 6-for-6; FOURTH consecutive proved-seed extrapolation after cand11->13 via K1143, cand18->20 via K1242, cand19->21 via K1243/K1248, cand20->22 via K1246); FIRST family with 11 pin rows on BOTH parities simultaneously (z-odd d==2 mod 4 {-18..22}, z-even d==0 mod 4 {-20..20}); MOST out-of-box pin rows in the series (3+3 = 6, series-first on EACH parity, raw-verified by spot deep rows (41,23)/(37,23)/(33,23)/(42,22)/(38,22)/(34,22)); FIRST 23-row consecutive-integer th sweep 23..45; 8th consecutive family with zero in-box merge rows (out-of-box merge regression 123 rows / 19,449 comparisons bad 0); K0915 z=6,y=22 PROVED-slice three-way cross-check: raw probe vs proved T_22/P_22 boxes vs cand22 on ALL 2,450 in-box slice points bad 0; total 182,042 comparison points bad 0"
+  - "universal proof completed (2026-11-23, single-edition 14-check machine under single-owner declaration e1e60cd4): observed -> proved via the 14-check canonical audit at 6,956,320 comparison points bad 0, C1d published-slice anchors preflighted 4-way (12,012+9,108 pts), census_rows.py third implementation consumed by C11r (433,160 pts over 3,920 rows); clip window 2y+2=46 tight (18-family streak y=5..22, 10th walking first-violation (60,108,108)); merge proposition now universal through y=1..22; two-token universal complete through y=1..22; first family beyond the previously proved range y=1..21"
 relations:
 - type: depends_on
   target: K0832
@@ -26,7 +27,28 @@ relations:
   note: 「pinスロット=th-1」（奇z I行）と偶z base行2k+1 slot則（y=11..21の11族連続に続き12族目として奇z 11 pin行・偶z 11 pin行すべてで算術的に成立〔2k(d)=o_pin(d)と2k(d)+1=o_pin(d)が全pin行で恒等的に成立〕）
 - type: related
   target: K0915
-  note: z=6,y=22証明済み切片（全称証明）との交差検証。宣言で補助的と事前登録し、実行では出版T_22(x)/P_22(x)表を監査生成器へ転写してprobe box内z=6切片（x=22..49・R<=x+52）全2,450点の三点照合（生probe値vs証明済み分類・cand22 vs証明済み分類）をfail-closed gateで実施しbad 0。ラダー{1,3,5}・pin(22,6)@47〔d=16〕・(26,6)@49〔d=20〕・掃引x=29の{51,53,55,57}・定常R=51〔=z+2y+1〕・tail R>=x+29→(x+22) mod 2が宣言予想・K0915出版表・生値で完全一致。転写トラップ（tail下端O[x+30,∞)を一時x+31と誤転写→境界点11点のみを検出）はfail-closed設計の作動実例として帳簿に記録（独立裏付け・本項はobserved・2レーンの相互補強の記録）
+  note: z=6,y=22証明済み切片（全称証明）との交差検証。宣言で補助的と事前登録し、実行では出版T_22(x)/P_22(x)表を監査生成器へ転写してprobe box内z=6切片（x=22..49・R<=x+52）全2,450点の三点照合（生probe値vs証明済み分類・cand22 vs証明済み分類）をfail-closed gateで実施しbad 0。ラダー{1,3,5}・pin(22,6)@47〔d=16〕・(26,6)@49〔d=20〕・掃引x=29の{51,53,55,57}・定常R=51〔=z+2y+1〕・tail R>=x+29→(x+22) mod 2が宣言予想・K0915出版表・生値で完全一致。転写トラップ（tail下端O[x+30,∞)を一時x+31と誤転写→境界点11点のみを検出）はfail-closed設計の作動実例として帳簿に記録（独立裏付け・fit当時はobserved・2レーンの相互補強の記録）
+- type: depends_on
+  target: K1257
+  note: y=22全称検証機械（K1257・単一機体14チェック・総6,956,320照合点・全bad 0・4実行byte-identical〔3同一cwd+1隔離full-pipeline再生成〕・fail-closed 12種全捕捉・単一ホスト出版）が本項observed→proved昇格の全称証拠の正本
+- type: generalizes
+  target: K0999
+  note: C1dアンカーA8uがz=8の出版一様閉形式（K0999）のy=22行で4方照合（anchor×H_ordered×H_canonical×cand22）bad 0（preflight 1,885点+機内掃引）。y=22全称はz=8則のy>=22行側を含む
+- type: generalizes
+  target: K1001
+  note: C1dアンカーのz=9一様閉形式K1001のy=22行4方照合 bad 0（preflight 1,911点+当該分）
+- type: generalizes
+  target: K1011
+  note: C1dアンカーのz=10一様閉形式K1011のy=22行4方照合 bad 0（preflight 1,937点+当該分）
+- type: generalizes
+  target: K1065
+  note: C1dアンカーのz=15一様閉形式K1065のy=22行4方照合+低R単一トークン縮約 bad 0（preflight 2,067点+低R縮約のうち当該分）
+- type: generalizes
+  target: K1077
+  note: C1dアンカーのz=16一様閉形式K1077のy=22行4方照合+低R縮約 bad 0（preflight 2,093点+当該分）
+- type: generalizes
+  target: K1087
+  note: C1dアンカーのz=17一様閉形式K1087のy=22行4方照合+低R縮約 bad 0（preflight 2,119点+当該分）
 artifacts:
 - path: research/experiments/vertical-fiber-two-token-y22-parametric-fit-20261123/report.md
   role: proof
@@ -61,22 +83,122 @@ artifacts:
 - path: research/log/2026-11-23-two-token-y22-parametric-fit.md
   role: log
   note: fit段階の実行記録（選定・宣言・経緯・系列初一斉達成3件・誠実記録5点・出版記録〔Commit A 3b69574e・fetch-back byte検証〕・次段階〔y=22全称はB子cand21逐語＝系列初の全称確定済みB-child〕）
+- path: research/experiments/vertical-fiber-two-token-y22-universal-proof-20261123/README.md
+  role: proof
+  note: 全称段階の正本README（単一機体14チェック版の機械構成・転写marker検査・段階実行結果表・C4t tight（18族連続・歩み10観測目）・決定性4実行〔3同一cwd+1隔離full-pipeline再生成〕・fail-closed 12種全捕捉・宣言予想と実測の完全一致〔amendment不要〕・再現コマンド・昇格判定・解釈規約・単一ホスト出版の正直記録）
+- path: research/experiments/vertical-fiber-two-token-y22-universal-proof-20261123/verify_y22_universal.py
+  role: verifier
+  note: 正本検証器（単一機体14チェック版・53,422 bytes・SHA-256 96d9787fae441a39c1cf0475e446b9dfef9bcc8297818afc1bd82a9f3c19ec6b・@@TRANSCRIPTION marker 3ブロック〔engine 1,957 bytes・cand21 3,502 bytes二ソース・cand22 3,212 bytes〕・C1dアンカー前のpreflight fail-closedゲート設計）
+- path: research/experiments/vertical-fiber-two-token-y22-universal-proof-20261123/census_rows.py
+  role: verifier
+  note: census第三実装（XMIN=22・XMAX=70・ZHI=80・RBUF=24・LRU cap 1,600,000・433,160点・zero_points 216,626・misses 11,469,227・census.txt〔3,920行+80空行区切り・791,080 bytes・SHA-256 3275cc74…〕を生成。台帳bytesは本editionでは実験dirに同梱せず生成器+SHA pinで再現する体裁〔y=21 editionと同一〕）
+- path: research/experiments/vertical-fiber-two-token-y22-universal-proof-20261123/scripts/check_transcriptions_y22.py
+  role: verifier
+  note: 転写二重正本検証（engine 出版y21機〔blob ca5e8284〕から逐語・cand21 出版cand21.py〔git blob 38613e92〕と出版y21機ブロックの両方とY→Y21改名差分のみで一致・sources_agree・cand22 出版cand22.py〔git blob fd50358e〕逐語・repo rootはAGENTS.md探索）
+- path: research/experiments/vertical-fiber-two-token-y22-universal-proof-20261123/scripts/preflight_c1d_y22.py
+  role: verifier
+  note: C1d事前検証（出版6切片アンカー4方照合 12,012点+低R単一トークン縮約 9,108点・bad 0・anchor blockは出版y21 preflightからbyte-verbatim・JSON SHA-256 a65b967d…）
+- path: research/experiments/vertical-fiber-two-token-y22-universal-proof-20261123/output/audit.json
+  role: data
+  note: フル14チェック監査正本（SHA-256 41813df3…・total_points 6,956,320・total_bad 0・type_count 797,559・corollaries merge 887,200 / tail 191,158 全bad 0・verifier self-hash 96d9787f…）
+- path: research/experiments/vertical-fiber-two-token-y22-universal-proof-20261123/output/audit-part1-12checks.json
+  role: data
+  note: 段階実行12チェック電池の監査退避正本（SHA-256 1d434dbd…・total_points 5,664,680・total_bad 0・宣言の段階実行プロトコルの記録・型797,559）
+- path: research/experiments/vertical-fiber-two-token-y22-universal-proof-20261123/output/census-ordered.json
+  role: data
+  note: census ordered部（SHA-256 246506b2…・429,240点・bad 0・merge 78,750・tail 3,920）
+- path: research/experiments/vertical-fiber-two-token-y22-universal-proof-20261123/output/census-canonical.json
+  role: data
+  note: census canonical部（SHA-256 da0c20fc…・429,240点・bad 0・merge 78,750・tail 3,920）
+- path: research/experiments/vertical-fiber-two-token-y22-universal-proof-20261123/output/preflight-c1d-y22.json
+  role: data
+  note: C1d preflight結果正本（SHA-256 a65b967d…・12,012+9,108点bad 0・per z 1,885/1,911/1,937/2,067/2,093/2,119）
+- path: research/experiments/vertical-fiber-two-token-y22-universal-proof-20261123/output/transcriptions-check-y22.json
+  role: data
+  note: 転写検査結果（engine/cand21二ソース/cand22 全equal・overall PASS・SHA-256 7767d14c…）
+- path: research/experiments/vertical-fiber-two-token-y22-universal-proof-20261123/output/published_run.txt
+  role: log
+  note: 正典run transcript（段階実行の全記録〔転写検査→preflight→census→12チェック→14チェック〕・rc=0・4回決定性〔3同一cwd+1隔離full-pipeline再生成〕・fail-closed 12種〔探針(9)初回no-opの正直記録を含む〕・宣言の事前予想と全照合点数の一致・出版SHA-256 pin一式）
+- path: research/log/2026-11-23-y22-universal-verifier-single-owner-note.md
+  role: log
+  note: 全称段階の単一オーナー宣言ノート（commit e1e60cd4・機体実行前に出版・観測HEAD-before-push db195667・対抗宣言なしの確認記録・単一機体14チェック版の事前登録〔publish-then-execute〕・事前横断予想の機械算出〔出版y19/y20/y21の3audit 14点数ずつでcross-validated〕・K1257仮採番）
+- path: research/log/2026-11-23-two-token-y22-universal-verifier.md
+  role: log
+  note: 全称段階の実行記録（単一実行の出版・宣言予想との完全一致・決定性・fail-closed 12種・K1256昇格判定・出版記録・単一ホスト出版の正直記録・次のレジューム）
+scope: >-
+  κ=1残余ゲームH(R;X;z)の2トークン族X=(x,22)、全z>=0・全x>=22・全R>=0。
+  HのGrundy値0/1/2をz偶奇別のパラメトリックT/P集合表（閉形式cand22）で
+  分類する命題。全称は正本検証器（K1257・単一機体14チェック版・
+  フル14チェック監査・総6,956,320照合点・全bad 0・4実行byte-identical
+  〔3同一cwd+1隔離のfull-pipeline完全再生成〕・fail-closed 12種全捕捉）
+  で検証済み（2026-11-23出版・単一オーナー宣言e1e60cd4配下で
+  observed→proved昇格）。系としてx<=z-23の単一トークン一致マージ命題
+  y=22版とtail R>=x+z+23の(x+22) mod 2を含み、マージ命題はy=1..22で
+  全称確定。2トークン族の全称はy=1..22で完結（y=22は全称確定済み範囲
+  y<=21の外の最初の族）。標準11×11の空盤・二石root・S2 {59,60}・
+  class 1/2/4は範囲外かつUNKNOWNのまま。3トークン以上・y>=23族・
+  固定幅・q点版も範囲外。
+evidence: >-
+  fit段階の証拠（2026-11-23出版・単一オーナー宣言c0baada6配下）:
+  probe box全点一発一致（119,567点・mismatch 0）・box内tail assertion
+  27,528点・box外spot 43,026点・merge回帰123行/19,449比較・tail raw 78点・
+  K0915交差検査2,450点・合計182,042点比較不一致0・seed法則10連続一発一致・
+  probe 6回再生成byte-identical・audit 3回byte-identical・fail-closed電池
+  20変種すべてcaught（本文「検証規模」「主結果」が詳細の正本）。
+  全称段階の証拠（2026-11-23出版・単一オーナー宣言e1e60cd4配下・単一機体
+  14チェック版でobserved→proved昇格）:
+  転写二重正本検査（engine 1,957 bytes出版y21機〔blob ca5e8284〕から逐語・
+  cand21 3,502 bytes 出版cand21.py〔git blob 38613e92〕と出版y21機ブロックの
+  二系統byte一致・Y→Y21改名・両ソースbyte一致・cand22 3,212 bytes 出版
+  cand22.py〔git blob fd50358e〕逐語・overall PASS・隔離側再生成一致）・
+  C1d事前検証（出版6切片アンカー4方照合12,012点+低R縮約9,108点bad 0・
+  anchor blockは出版y21 preflightからbyte-verbatim・組み込み前fail-closed
+  ゲート・機内掃引134,550点〔125,442+9,108〕bad 0）・census第三実装
+  （rows 3,920=80*49・points 433,160・zero_points 216,626・misses
+  11,469,227・hits 22,466,349）をC11r（全行をcand22から再導出・行数斉一性・
+  行重複/欠損FAIL-CLOSED）で消費しフル14チェック監査total 6,956,320点
+  bad 0（型797,559・merge帰結887,200点〔729,700+2×78,750〕・tail帰結
+  191,158点〔183,318+2×3,920〕・3同一cwd+隔離full-pipeline再生成1回で全出力
+  byte-identical・audit.json SHA-256 41813df3…・census.txt 3275cc74…は
+  本editionでは生成器+pinで再現）・段階12チェック電池の監査も別正本
+  （total 5,664,680・bad 0・audit-part1-12checks.json 1d434dbd…）で保存・
+  fail-closed 12種全捕捉（census欠落/行削除3,919!=3,920/重複行(0,22)の
+  FAIL-CLOSED・P-set/T-set改ざん→C11r bad 1・C11r tail反転→bad 3,920〔全行・
+  宣言予想どおりrows数〕・アンカー誤結合→C1d bad 14,869・lowR参照ずれR+1→
+  bad 9,108〔全lowR点が独立に識別〕・merge境界z-23→z-22→merge bad 59〔初回
+  探針はharnessのno-opとして正直記録し有効版で再検出〕・clip窓46,47→44,45→
+  C4 bad 945・in_P22 tail偶奇反転→C1 bad 4,898/C2 bad 24,024・in_P22 band
+  偶奇改ざん→C1 bad 1,763/C2 bad 24,451・12種すべてrc=1・スクラッチtreeで実施
+  ・正典treeは無傷）・C4t clip 45違反280点・最初(60,108,108)で clip 2y+2=46
+  はtight（18族連続y=5..22・最初違反はband下端と歩む系列の10観測目）。
+  宣言の事前機械算出予想（predict_y22_counts.py・出版y19/y20/y21の3audit
+  の14点数ずつを完全一致で再現してcross-validated・数値はstdoutから機械
+  転写）は全項目で実測と完全一致（amendmentなし・散文内転置なし）。
+  誠実記録: 本全称段階は単一ホストでの出版であり（4実行byte-identical・
+  隔離ゼロ再生成込み）、y=21 editionのような兄弟実行による独立ビルド・
+  第二ホスト再現は出版時点でまだ存在しない。独立再現は次回実行の裏付け
+  課題として本itemとrun logに明記する。
 ---
 
-# K1256: 2トークン残余ゲーム y=22族のパラメトリック閉形式 fit（observed）
+# K1256: 2トークン残余ゲーム y=22族のパラメトリック閉形式の全称証明（observed→proved・2026-11-23）
 
-## 命題（fit段階・有限範囲で確定・全称は未証明）
+## 命題・範囲
 
-すべての z>=0・x>=22・R>=0 に対して H(R;(x,22);z) = cand22（`cand22.py` が正本・
-z 偶奇別 T/P 集合表・Y=22・偶数 y 型で値1無限帯・tail は x 奇行・d = x-z・off = R-z）。
-**本項の status は observed**: 検証は有限 probe box（z=0..30・x=22..z+43・R<=x+z+46）
-+ box 外 spot（宣言電池合計 182,042 点比較・bad 0）であり、全称（全 z・全 x・全 R）は
-次段階の別宣言（verify_y22_universal.py・K 番号は追って採番）で挑む。
-コード本体は出版 cand20（K1246 promoted・全称確定）の Y=20→22 機械翻訳で 1 行も変わらず、
-逆 rename が出版 cand20 コード本体と byte 同一になることを両方向で機械検証した
-（translate_y22.py）。
+すべての z>=0・x>=22・R>=0 に対して H(R;(x,22);z) = cand22 が成り立つ
+（**status: proved・2026-11-23 単一機体14チェック全称検証の出版で
+observed→proved 昇格**・全称段階の正本は
+[全称検証実験dir](../../experiments/vertical-fiber-two-token-y22-universal-proof-20261123/README.md)）。
+ここで cand22 は z 偶奇別のパラメトリック T/P 集合表（fit実験dirの
+`cand22.py` が正本・Y=22・偶数 y 型で値1無限帯・tail は x 奇行・
+d = x-z・off = R-z）であり、出版 cand20（K1246 proved）の Y=20→22
+機械翻訳に等しい（コード本体 1 行も変わらず・逆 rename byte 同一を
+両方向で機械検証済み・translate_y22.py）。
 
-## 主結果（宣言 c0baada6 配下・publish-then-execute）
+fit段階の正本は
+[fit実験dir](../../experiments/vertical-fiber-two-token-y22-parametric-fit-20261123/report.md)
+で、fit段階の証拠は下記「検証規模」の合計 182,042 点比較・不一致 0 である。
+
+## fit段階の記録（宣言 c0baada6 配下・publish-then-execute）
 
 - **初稿一発一致**: probe 119,567 点 mismatch 0・T/P overlap 0・値ヒストグラム
   0:58,950/1:49,478/2:11,139 が宣言の事前機械予想と厳密一致・値 3 なし。
@@ -117,4 +239,95 @@ z 偶奇別 T/P 集合表・Y=22・偶数 y 型で値1無限帯・tail は x 奇
 標準 11×11 空盤・二石 root {49,60}/{59,60}・S2 {59,60}・class 1/2/4 は UNKNOWN のまま。
 3 トークン以上・y>=23 族・固定幅・q点版は範囲外。 y=22 の全称（A子/B子cand21逐語
 〔系列初の全称確定済み B-child〕/C子・clip 窓 2y+2=46 tight 判定）は本項の昇格条件であり
-別宣言。y=23 fit の seed は cand21（K1248 proved）。
+別宣言とされた。**2026-11-23、その別宣言（単一オーナー宣言 e1e60cd4）配下で
+単一機体14チェック検証器（K1257）が実行・出版され、全条件を満たして本項は
+observed→proved に昇格した**（詳細は下記「全称段階の記録」）。
+y=23 fit の seed は cand21（K1248 proved）。
+
+## 全称段階の記録（単一機体14チェック版・observed→proved・2026-11-23）
+
+単一オーナー宣言 e1e60cd4（検証器実行前に出版・観測 HEAD-before-push db195667・
+対抗宣言なしを確認）配下で、y=21 出版手続き（K1255・単一機体単一出版）を y=22
+定数に適合した単一機体14チェック版として実施した（宣言で事前登録・段階実行:
+転写検査→preflight→census→12チェック電池→フル14チェック・12チェック電池の
+監査は audit-part1-12checks.json として別正本保存）:
+
+- **機体**: 単一機体14チェック版 verify_y22_universal.py（53,422 bytes・
+  SHA-256 96d9787f…・C1/C1b/C1d/C2/C2b/C3/C4/C4t/C7/C8/C9/C11/C11r/C12）。
+  転写3ブロック（engine 1,957 bytes〔出版y21機 blob ca5e8284 から逐語〕・
+  cand21 3,502 bytes〔出版cand21.py〔git blob 38613e92〕と出版y21機ブロックの
+  二系統 byte-equality・Y→Y21 改名・sources_agree〕・cand22 3,212 bytes〔出版
+  cand22.py〔git blob fd50358e〕から逐語〕）を check_transcriptions_y22.py
+  が検査 PASS（cand21 は二ソース一致・隔離側でも再生成一致）。
+  A子 x==22 行は合流子 {21,22}≡{22,21} で cand21(z,22,R-1)〔y=21族x=22行と
+  同一状態〕・B子 出版 cand21 逐語転写〔x>=22 行は定義域 x>=21 の内側・
+  **系列初の全称確定済み B-child**〕・C子 1 xor cand22(z-1,x,R-1)・
+  型機械 clip 2y+2=46・番兵 47。
+- **C1d 事前検証**: preflight_c1d_y22.py（anchor block は出版 y21 preflight
+  から byte-verbatim）が出版6切片アンカー（K0999/K1001/K1011/K1065/
+  K1077/K1087・z0∈{8,9,10,15,16,17}）を y=22 行で4方照合:
+  **12,012点 bad 0**（per z 1,885/1,911/1,937/2,067/2,093/2,119）+
+  低R単一トークン縮約 R<=z+6: **9,108点 bad 0**・JSON 正本 a65b967d…。
+  機内 C1d 掃引（アンカー掃引 125,442 + lowR 9,108）は **134,550点 bad 0**。
+- **census第三実装**: census_rows.py（XMIN=22・XMAX=70・ZHI=80・RBUF=24・
+  LRU cap 1,600,000・約65秒）が census.txt（791,080 bytes・3,920行+80空行
+  区切り・SHA-256 3275cc74…・台帳は生成器+SHA pinで再現〔実験dirに同梱せず・
+  y21 edition体裁〕）を生成し、C11r（rows==80*49=3,920・全行を cand22 の
+  T/P集合・Thue-Morse index・tail から再導出）が **433,160点 bad 0**
+  （zero_points 216,626・misses 11,469,227・hits 22,466,349）。
+  census部品（C11ordered/C11canonical・bounded-memoization twin・LRU 1.6M）は
+  各engine **429,240点 bad 0**・merge帰結各 78,750・tail各 3,920 bad 0
+  （census幾何では z>=45 で初めて非空）。
+- **段階12チェック電池**（part1相当）: **overall PASS・総5,664,680点・全bad 0・
+  型797,559**（C1 26,220 / C1b 46,220 / C1d 134,550 / C2 242,305 / C2b 19,844 /
+  C3 1,425 / C4 562,559 / C4t 562,559〔probe〕 / C7 200,000 / C8 1,122,279 /
+  C9 889,974 / C12 1,856,745）・audit-part1-12checks.json（SHA-256 1d434dbd…）
+  に退避。
+- **フル14チェック監査**: **overall PASS・総照合点 6,956,320**（12チェック電池
+  5,664,680 + C11 858,480 + C11r 433,160）・**全bad 0・型797,559**（系列:
+  y=17 457,645 → y=18 523,398 → y=19 590,877 → y=20 658,978 → y=21 727,229 →
+  y=22 797,559）・audit.json（SHA-256 41813df3…・verifier self-hash
+  96d9787f…）が正本。merge帰結 **887,200点 bad 0**
+  （x<=z-23 => H == single_token(x+22,z,R)・呼び出し点 729,700 +
+  両census engine 2×78,750）・tail帰結 **191,158点 bad 0**
+  （R>=x+z+23 => (x+22) mod 2）。
+- **C4t**: clip 45（2y+1）違反**280点・最初 (60,108,108)** → clip窓 2y+2=46 は
+  **tight・18族連続確定**（y=5..22: 12/14/…/44/46）・最初違反は band下端
+  R-z=2y+2=46 とともに歩む系列の**10観測目**
+  （(60,90,90)→(60,92,92)→…→(60,106,106)→(60,108,108)・宣言の事前予想
+  〔違反>0・(60,108,108)〕と完全一致）。C4 in-box 登録型数は clip 46/番兵 47
+  で **448,494**（y=21 機の clip 44 で 429,397 を更新）。
+- **決定性・fail-closed**: 4実行 byte-identical（同一cwd 3回 + 隔離
+  tree/cwd/HOME+env -i+PYTHONHASHSEED=random 1回〔隔離側は転写検査・preflight・
+  census_rows・census両部・12チェック・フル14チェックの完全ゼロ再生成・
+  census engine states まで同一: misses 11,469,227 / hits 22,466,349〕）。
+  fail-closed 12種全捕捉（census.txt 欠落/行削除 3,919 != 3,920/重複行 (0,22)
+  のFAIL-CLOSED・P-set/T-set改ざん→C11r bad 1・C11r tail反転 (x+22)→(x+23)→
+  bad 3,920〔全行・宣言の予想どおりrows数〕・アンカー誤結合 (17,A17u)→(17,A10u)
+  →C1d bad 14,869・lowR参照ずれ R+1→bad 9,108〔全lowR点が独立に識別〕・merge
+  境界 z-23→z-22→merge bad 59〔初回の探針はharnessのno-op（編集不発効）として
+  正直記録し有効版で即再検出〕・clip窓 46,47→44,45→C4 bad 945・in_P22 tail
+  偶奇反転（x%2==1→==0）→C1 bad 4,898/C2 bad 24,024・in_P22 band偶奇改ざん
+  （off%2==0→==1）→C1 bad 1,763/C2 bad 24,451。12種すべてrc=1・スクラッチtree
+  で実施・probe後にbaselineをbuild bytesとcmp検証・正典treeは無傷）。
+- **宣言予想との完全一致**: 宣言ノートの事前機械算出（出版y19/y20/y21の3機体
+  auditの14点数ずつを完全一致で再現して cross-validated・数値は
+  predict_y22_counts.py stdoutから機械転写）は、preflight 12,012+9,108・
+  C1d 134,550・census幾何全値（3,920行・429,240/engine・merge 78,750・
+  tail 3,920）・C11r 433,160・12チェック電池 5,664,680・総点 6,956,320・merge帰結 887,200・tail帰結 191,158・C4t
+  （違反>0・最初違反 (60,108,108)）・C11r tail反転 bad 3,920 の**すべてが
+  実測と完全一致**（全段階無修正・amendmentなし・散文内転置なし）。
+- **系の確定**: 2トークン族の全称は **y=1..22 で完結**（y=1..12 は旧来の単族
+  証明・y=13..22 は機械検証の逐語連鎖）。マージ命題
+  x<=z-23 => H == single_token(x+22,z,R) は y=1..22 で全称。tail
+  R>=x+z+23 => (x+22) mod 2。clip窓 2y+2 は y=5..22 の 18 族連続で tight。
+  B子逐語連鎖 cand9..cand21（証明済みB子使用は cand10/cand12..cand21）、
+  機体 item は K1257（proposition は本項）。**y=22 は全称確定済み範囲
+  （y<=21）の外の最初の族**である。
+- **単一ホスト出版の正直記録**: y=21 edition と異なり、出版時点で兄弟実行に
+  よる独立ビルド・第二ホスト再現はまだない。単一ホストでの4実行
+  byte-identical（隔離ゼロ再生成込み）と fail-closed 電池が昇格の根拠であり、
+  独立再現は次回実行の裏付け課題として run log に明記する。
+- **範囲外の維持**: 標準 11×11 の空盤・二石 root {49,60}/{59,60}・S2 {59,60}・
+  class 1/2/4 は UNKNOWN のまま。3トークン以上・y>=23 族・固定幅・q点版は
+  範囲外。
