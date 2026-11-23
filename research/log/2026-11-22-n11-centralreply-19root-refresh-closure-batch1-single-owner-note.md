@@ -7388,3 +7388,118 @@ fetch-back済み出版状況に基づく追記)
   825f98c5` (546,467 bytes = 本Part BY宣言 `7a3a3f27` 版) を再照合する
   (並走追記が挟まった場合は本節を追記し直し、成立しない場合は簡潔に
   記録して次回へ回す)。
+
+
+### Part BZ宣言 (adoption, publish-then-execute, amendment 2026-11-23): batch-24 y002/y004 + batch-27 o001/o003/o005/o007 の6-LOSS canonical adoption
+
+(observed HEAD-before-push: `ecd7387e…`。並走コミットはK1254/ status
+page docs `12f6b2bd`・`009bb1f3` の非接触2件を確認済み。対抗宣言なし・
+本noteに同一スコープのsectionなしをgrep確認済み。push直前にnote blob lock
+`c0dcfe03471875bece2a946dc40fbd0b8e3db783` (551,976 bytes = Part BY status
+update版) を再照合し、並走追記が挟まった場合は本節を追記し直す。)
+
+単一オーナーとして着手する。スコープ: batch-24 (class 16957) のy002/y004と
+batch-27 (class 13342) のo001/o003/o005/o007、計6行の2-pass node-exact
+result 2 (LOSS) を、pinned fail-closed union merger (byte-copy
+`907119610034…`) でPart BU正本cache (6,287行 `e32a2e44…`) に併合する
+adoption Part (BU前例シpreflightとしてBU refresh出力の本host byte再現を
+含む)。**verdict不消費は不変**: 非採用WIN 3行 (y001/y006/o002) はhonest
+labelのままunconsumed (scrutiny owner C++ gate `9193f5b6…` 待ち・本レーン
+は代行しない)。fragment o009とfilelessキー (batch-24 49件・batch-27
+48件・いずれもUNPROBED) は不接触。
+
+実験dir:
+`research/experiments/n11-centralreply-class16957-13342-loss6-adoption-reaudit-20261123/`。
+本節の数値・shaはすべて事前取得の機械算出 (dry-run由来・この場合の「1回の
+実行で」要素もdry-run; 宣言後にprotocol 1)-11)を逐次再実行し、下記shaと
+byte一致しない場合は即時abort・honest記録とする)。
+
+- 入力pins (全sha照合済み): BASE cache `e32a2e44…` (6,287行)・BASE refresh
+  3出力 (Part BU reaudit: refresh-summary
+  `51d6bf0dd6a7d73cc2824a692cf6b086849e5f7945509b9e72c6177ce7599101`・
+  closure-classes `e54a0eb8…`・per-root-coverage `c1cb1bf5…`)・batch-24
+  kit MANIFEST `8a8e30a8…` (83ファイル全sha照合)・batch-27 kit MANIFEST
+  `eb4da2f7…` (92ファイル全sha照合)・merger byte-copy source
+  `907119610034fb2aebfde012550a4129dfa3b086c6de11194e856747ac74606a`・
+  dependency-graph.json.gz `54f9c364…`・repaired-joint-plan-update8.json・
+  independent.py `954d3a10…`・s5_evidence_policy.py `78655e94…`・
+  quarantine `81d23160…`。
+- dry-run成果物 (sha固定済み・事前宣言数値):
+  - maker `make_increments_b24b27.py`
+    `eff939cdf98b928be78adf07b2fc95f7b4e814de6b0aaf95ac7ea132ab64c297c`:
+    x4 byte-stable。increment (6行)
+    `1d8556c128e09fa8d41a22d749af5a28dd4babf30c33d6317cb29af5cdd22074`
+    (batch-24 y002/y004 nodes/pass 850,035・batch-27 o001/o003/o005/o007
+    nodes/pass 13,967,778・計14,817,813/pass)。increments-manifest.json
+    `818fb0c3e5e3bd8459bb4943218ab33c316ad45d8301d53badc235f584dcc00a`
+    (row_counts: probed 9・adopted 6・WIN 3・fragment 1・fileless 97)。
+  - merger `s5_union_merge.py` (byte-copy・selftest PASS・merge x3
+    byte一致): merge-audit (全3run同一bytes)
+    `cef05e36ed4d6c2ee48536744aff7645d48a7f85f4ac50596606c6d3e90e444c1`。
+    scenario cache 6,293行 (WIN 158 / LOSS 6,135・259,527 bytes)
+    `9115be9eca1e60828a90c50041f511b598ef79fc0be76d5e16821816e478e93e`。
+  - refresh `reaudit/scripts/refresh_adoption_b24b27.py`
+    `0677e6eb5321bb61ab5757687f4e192acc12447f4c8b642aa455f985a9ae57c3`:
+    x3 byte一致 + 隔離実行 (env -i・PYTHONHASHSEED=random・cwd=/tmp)
+    byte一致。refresh-summary
+    `fca242cc767f4e30b1d450a3b10cbd524b18b96f28b4cc4ba83c8762f8bb2ff2`・
+    closure-classes
+    `14fc37c3a6f5c6753cac72a094d2c7693defb4a5e483558b3b87a42016b679d9`
+    (class 16957 unknown_now 53→51・rank 22→10, class 13342 54→50・
+    rank 26→6)・per-root-coverage
+    `4218a6b49f8dd4df41f9bb3b746c7f2a32afeb3e22d175243e9319c8f46ca56a`・
+    probe-worklist `7d9020d4…` (非出版・実行ごとに再生成)。
+  - extractor `compare_deltas_b24b27_adoption.py`
+    `a3adc0dafaa9ceafc159f0aa364859f4f80ff998abcc0f5daf5674a429f55a2a`:
+    x4 + 隔離実行byte丁致。decomp-deltas-b24b27-adoption.json (16,398B)
+    `e0005d42a20998ba86d7a9f895e7e93bde01d1b0cf23bb56de0346dd6bd64d8d`:
+    flips=[]・new_free=[]・free_now 38→38・update8 resolved +0 (133不変)・
+    joint greedy 38,301→38,295・probe-worklist 64,754→64,747・closure churn
+    left=[] entered=[]・individual greedy movers 4 roots ({5,16,24,48})・
+    per-root free/uncovered不変。
+- preflight (宣言前実施済み): 本hostでpublished Part BU refresh 3出力
+  (refresh-summary・closure-classes・per-root-coverage・probe-worklist
+  `9ae1ca50` 含む) をbyte再現。
+- 準備段階のtamper battery (scratch tree /tmp/tb/kr = 別絶对pathで実施・
+  **16/16検出 + 全probe復元byte検証**): T1-T5 (batch-24 raw y002.p2
+  nodes 217944→217945・batch-27 status.log o002 WIN flip・batch-24
+  batch-keys class id・batch-27 row-audit o007改変・BASE cache append →
+  いずれも各sha-pin層でABORT)・T6 (maker定数のadopted setにWIN y001追加 →
+  published row-audit loss_rows semantic gateでABORT)・T7 (maker定数の
+  fragmentsからo009除去 → fileless/unprobed bookkeeping gateでABORT)・
+  **T2d (3-level pin bypass: status.log o002 result 2に改変 + kit
+  MANIFEST当該行再構築 + maker pin定数2件更新 → sha-pin層通過後にsemantic
+  「WIN set [] != unadopted ['o002']」でABORT)**・T8 (merger同一キー
+  verdict conflict (y002 2 vs 1) → GATE FAILED・出力未生成)・R1 (scenario
+  cache y002 verdict反転 → refresh merged-cache pinでABORT)・R2
+  (quarantine append → refresh quarantine pinでABORT)・E1/E2 (scenario
+  closure-classes class 16957 unknown_now 51→50 / per-root-coverage
+  baseline改変 → extractor sha-pinでABORT)・E3 (increments-manifest
+  loss_idsからy004除去 → extractor semantic gate「manifest loss_ids !=
+  the 6 adopted ids」でABORT)・CONTROL (scratch tree上でmaker→merger→
+  refresh→extractorのfull chain再実行 → 出版sha全件byte一致)。
+- 実行protocol (宣言時点で固定・逐次実行): 1) 本host preflight再確認 (BU
+  refresh出力byte再現) 2) maker x4 3) merger selftest + merge x3
+  4) refresh x3 + 隔離x1 5) extractor x4 + 隔離x1 (各stepでbyte一致検査) 
+  6) tamper battery再実行 (16 probe・全検出+復元byte検証) 7) 出版A
+  (scripts 4 = `scripts/` 3 + `reaudit/scripts/` 1) 8) 出版B (increment +
+  increments-manifest + merge-audit x3) 9) 出版C (merged scenario cache) 
+  10) 出版D (reaudit 3出力 + decomp-deltas json) 11) 出版E (README +
+  MANIFEST-sha256) + 本noteへstatus update追記。全出版bytesはcommit-pinned
+  raw URL fetch-backでbyte検証する (branch path CDN staleに注意)。
+- 不接触: canonical BASE (Part BU `e32a2e44…`) read-only・非採用WIN
+  y001/y006/o002 unconsumed・fragment o009 (p1完全単一パスはbookkeeping
+  のみ・証拠ではない)・batch-24/27 filelessキー (49+48件ともUNPROBED)・
+  batch-23/24/25/26/27の他scaffold/outputs・batch-28選定・fast lane
+  (y=22/23宣言)・finite-field lane (K1254)・thirdimpl bank・29
+  unconsumed closure WIN候補・inversive-arc lane。
+- 消費規則: 本Partが消費するのは6 LOSS行のみ (merger WIN/LOSS conflict
+  gate経由・BASEとのキー重複ゼロをmaker structural gateで担保済み)。本Part
+  単体ではroot被覆・クラス閉鎖・secured・root勝敗の主張をしない (closure
+  churn left=[]/entered=[] はクラス集合不変の機械記録であり閉鎖主張ではない)。
+- **標準11×11空盤・19 central-reply roots・二石root {49,60}/{59,60}・S2
+  {59,60}・class 1/2/4・class 16957・class 13342 (全キー) は本Partの
+  どの時点でもUNKNOWNのまま。** nodes数を勝敗として読まない。WIN採用は
+  別adoption Part (pinned merger `90711961` 経由) のみで、scrutiny owner
+  C++第二実装 gate `9193f5b6…` 待ちは本レーンは代行しない。joint greedy
+  38,295・worklist 64,747はbookkeepingであり勝敗でも閉鎖でもない。
