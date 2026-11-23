@@ -1,0 +1,367 @@
+{
+ "schema": "n11-centralreply-closure-b25win-thirdimpl-audit-v1",
+ "experiment": "n11-centralreply-closure-b25win-thirdimpl-20261123",
+ "all_pass": true,
+ "gate_count": 67,
+ "targets_pass_one_total_third_expansions": 24015769,
+ "verdict_agreements": [
+  {
+   "key_id": "i001",
+   "source": "part-bp-batch25-win",
+   "replica_result": 1,
+   "replica_nodes": 13251132,
+   "third_result": 1,
+   "third_expansion": 15723649,
+   "third_ttHits": 8504237,
+   "agree": true
+  },
+  {
+   "key_id": "i002",
+   "source": "part-bp-batch25-win",
+   "replica_result": 1,
+   "replica_nodes": 7207180,
+   "third_result": 1,
+   "third_expansion": 8292120,
+   "third_ttHits": 4721313,
+   "agree": true
+  }
+ ],
+ "wall_inconclusive": [],
+ "gates": [
+  {
+   "gate": "input-i001-matches-rows",
+   "pass": true,
+   "detail": "5,1152921505277935616,1081344,88 vs 5,1152921505277935616,1081344,88"
+  },
+  {
+   "gate": "input-i002-matches-rows",
+   "pass": true,
+   "detail": "5,3458764514357411840,1081344,82 vs 5,3458764514357411840,1081344,82"
+  },
+  {
+   "gate": "input-k02a-matches-rows",
+   "pass": true,
+   "detail": "5,1297036692683751424,68157440,87 vs 5,1297036692683751424,68157440,87"
+  },
+  {
+   "gate": "input-l1a-matches-rows",
+   "pass": true,
+   "detail": "5,13019119616,16448,116 vs 5,13019119616,16448,116"
+  },
+  {
+   "gate": "input-ng1-matches-rows",
+   "pass": true,
+   "detail": "5,1297036692683751424,68157440,88 vs 5,1297036692683751424,68157440,88"
+  },
+  {
+   "gate": "input-ng2-matches-rows",
+   "pass": true,
+   "detail": "6,1297036692683751424,68157440,87 vs 6,1297036692683751424,68157440,87"
+  },
+  {
+   "gate": "pin-third_impl.js",
+   "pass": true,
+   "detail": "08ea958ff59c3234ec5ac55c5c40689bd0999a34e101a88ea0546800cc4a1998"
+  },
+  {
+   "gate": "pin-verify_tbl.js",
+   "pass": true,
+   "detail": "c8c52528f70b3a9b438edc3feb4e432fbe705d6be21650383d3955efc6790251"
+  },
+  {
+   "gate": "pin-jsreplay.js",
+   "pass": true,
+   "detail": "845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df"
+  },
+  {
+   "gate": "rows-schema",
+   "pass": true,
+   "detail": "n11-centralreply-closure-b25win-thirdimpl-input-v1"
+  },
+  {
+   "gate": "target-count",
+   "pass": true,
+   "detail": "2 (2 b25 WIN rows)"
+  },
+  {
+   "gate": "rules-gate-quads",
+   "pass": true,
+   "detail": "replica quads 95670 mine quads 95670"
+  },
+  {
+   "gate": "rules-gate-tbl-mismatch0",
+   "pass": true,
+   "detail": "['triples checked 195044 mismatches 0']"
+  },
+  {
+   "gate": "replica-i001-present",
+   "pass": true,
+   "detail": "p1/p2"
+  },
+  {
+   "gate": "replica-i001-done",
+   "pass": true,
+   "detail": "replay_done p1=True p2=True"
+  },
+  {
+   "gate": "replica-i001-quads",
+   "pass": true,
+   "detail": "quads-header p1=True p2=True"
+  },
+  {
+   "gate": "replica-i001-det-pair",
+   "pass": true,
+   "detail": "p1=['88', '0', '15000000', '1', '13251132'] p2=['88', '0', '15000000', '1', '13251132']"
+  },
+  {
+   "gate": "replica-i001-schema",
+   "pass": true,
+   "detail": "schema ['replay', '0', '5', '88', '0', '15000000']"
+  },
+  {
+   "gate": "replica-i001-key",
+   "pass": true,
+   "detail": "1152921505277935616,1081344,88 vs 1152921505277935616,1081344,88"
+  },
+  {
+   "gate": "replica-i001-verdict-vs-published",
+   "pass": true,
+   "detail": "this-host result=1 nodes=13251132 vs published result=1 nodes=13251132"
+  },
+  {
+   "gate": "replica-i002-present",
+   "pass": true,
+   "detail": "p1/p2"
+  },
+  {
+   "gate": "replica-i002-done",
+   "pass": true,
+   "detail": "replay_done p1=True p2=True"
+  },
+  {
+   "gate": "replica-i002-quads",
+   "pass": true,
+   "detail": "quads-header p1=True p2=True"
+  },
+  {
+   "gate": "replica-i002-det-pair",
+   "pass": true,
+   "detail": "p1=['82', '0', '15000000', '1', '7207180'] p2=['82', '0', '15000000', '1', '7207180']"
+  },
+  {
+   "gate": "replica-i002-schema",
+   "pass": true,
+   "detail": "schema ['replay', '0', '5', '82', '0', '15000000']"
+  },
+  {
+   "gate": "replica-i002-key",
+   "pass": true,
+   "detail": "3458764514357411840,1081344,82 vs 3458764514357411840,1081344,82"
+  },
+  {
+   "gate": "replica-i002-verdict-vs-published",
+   "pass": true,
+   "detail": "this-host result=1 nodes=7207180 vs published result=1 nodes=7207180"
+  },
+  {
+   "gate": "anchor-k02a-present",
+   "pass": true,
+   "detail": "a/b"
+  },
+  {
+   "gate": "anchor-k02a-a-clean",
+   "pass": true,
+   "detail": "result=1 reason=clean"
+  },
+  {
+   "gate": "anchor-k02a-a-expansions",
+   "pass": true,
+   "detail": "exp=9106337 vs 9106337, ttH=4991527 vs 4991527"
+  },
+  {
+   "gate": "anchor-k02a-a-legal",
+   "pass": true,
+   "detail": "87 vs 87"
+  },
+  {
+   "gate": "anchor-k02a-a-key",
+   "pass": true,
+   "detail": "1297036692683751424:68157440"
+  },
+  {
+   "gate": "anchor-k02a-b-clean",
+   "pass": true,
+   "detail": "result=1 reason=clean"
+  },
+  {
+   "gate": "anchor-k02a-b-expansions",
+   "pass": true,
+   "detail": "exp=9106337 vs 9106337, ttH=4991527 vs 4991527"
+  },
+  {
+   "gate": "anchor-k02a-b-legal",
+   "pass": true,
+   "detail": "87 vs 87"
+  },
+  {
+   "gate": "anchor-k02a-b-key",
+   "pass": true,
+   "detail": "1297036692683751424:68157440"
+  },
+  {
+   "gate": "anchor-k02a-det-pair",
+   "pass": true,
+   "detail": "9106337 vs 9106337"
+  },
+  {
+   "gate": "anchor-l1a-present",
+   "pass": true,
+   "detail": "a/b"
+  },
+  {
+   "gate": "anchor-l1a-a-clean",
+   "pass": true,
+   "detail": "result=2 reason=clean"
+  },
+  {
+   "gate": "anchor-l1a-a-expansions",
+   "pass": true,
+   "detail": "exp=7660602 vs 7660602, ttH=3951175 vs 3951175"
+  },
+  {
+   "gate": "anchor-l1a-a-legal",
+   "pass": true,
+   "detail": "116 vs 116"
+  },
+  {
+   "gate": "anchor-l1a-a-key",
+   "pass": true,
+   "detail": "13019119616:16448"
+  },
+  {
+   "gate": "anchor-l1a-b-clean",
+   "pass": true,
+   "detail": "result=2 reason=clean"
+  },
+  {
+   "gate": "anchor-l1a-b-expansions",
+   "pass": true,
+   "detail": "exp=7660602 vs 7660602, ttH=3951175 vs 3951175"
+  },
+  {
+   "gate": "anchor-l1a-b-legal",
+   "pass": true,
+   "detail": "116 vs 116"
+  },
+  {
+   "gate": "anchor-l1a-b-key",
+   "pass": true,
+   "detail": "13019119616:16448"
+  },
+  {
+   "gate": "anchor-l1a-det-pair",
+   "pass": true,
+   "detail": "7660602 vs 7660602"
+  },
+  {
+   "gate": "neg-ng1-failclosed",
+   "pass": true,
+   "detail": "{'raw': 'third,ng1a,5,88,,GATE_FAIL,\"legal count mismatch: derived=87 declared=88\"', 'stub': 'third', 'gate_fail': 'GATE_FAIL,\"legal count mismatch: derived=87 declared=88'}"
+  },
+  {
+   "gate": "neg-ng2-failclosed",
+   "pass": true,
+   "detail": "{'raw': 'third,ng2a,6,87,,GATE_FAIL,\"stone count mismatch: bits=5 declared=6\"', 'stub': 'third', 'gate_fail': 'GATE_FAIL,\"stone count mismatch: bits=5 declared=6'}"
+  },
+  {
+   "gate": "target-i001-present",
+   "pass": true,
+   "detail": "a/b"
+  },
+  {
+   "gate": "target-i001-a-key",
+   "pass": true,
+   "detail": "1152921505277935616:1081344"
+  },
+  {
+   "gate": "target-i001-a-legal",
+   "pass": true,
+   "detail": "88 vs 88"
+  },
+  {
+   "gate": "target-i001-a-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-i001-b-key",
+   "pass": true,
+   "detail": "1152921505277935616:1081344"
+  },
+  {
+   "gate": "target-i001-b-legal",
+   "pass": true,
+   "detail": "88 vs 88"
+  },
+  {
+   "gate": "target-i001-b-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-i001-det-pair",
+   "pass": true,
+   "detail": "a=(1,15723649,clean) b=(1,15723649,clean)"
+  },
+  {
+   "gate": "target-i001-verdict-agree",
+   "pass": true,
+   "detail": "third=1 replica=1"
+  },
+  {
+   "gate": "target-i002-present",
+   "pass": true,
+   "detail": "a/b"
+  },
+  {
+   "gate": "target-i002-a-key",
+   "pass": true,
+   "detail": "3458764514357411840:1081344"
+  },
+  {
+   "gate": "target-i002-a-legal",
+   "pass": true,
+   "detail": "82 vs 82"
+  },
+  {
+   "gate": "target-i002-a-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-i002-b-key",
+   "pass": true,
+   "detail": "3458764514357411840:1081344"
+  },
+  {
+   "gate": "target-i002-b-legal",
+   "pass": true,
+   "detail": "82 vs 82"
+  },
+  {
+   "gate": "target-i002-b-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-i002-det-pair",
+   "pass": true,
+   "detail": "a=(1,8292120,clean) b=(1,8292120,clean)"
+  },
+  {
+   "gate": "target-i002-verdict-agree",
+   "pass": true,
+   "detail": "third=1 replica=1"
+  }
+ ]
+}
