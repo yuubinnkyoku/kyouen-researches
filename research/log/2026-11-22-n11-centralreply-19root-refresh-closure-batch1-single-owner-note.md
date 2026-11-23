@@ -7929,3 +7929,62 @@ typo-fix `b37117d9` 版) を再照合する。)
   (2026-11-23)。push直前に最新mainを再fetchしnote blob sha1ロック
   `fad849e99ffa4e460b6ca3605fbc0d885c30c828` (585,934 bytes版) を再照合する
   (競合時は再fetchして本節を追記し直し、成立しなければ簡潔に記録して次回へ回す)。
+
+### Part CC status update (2026-11-23, verifier): batch-28 aa001/aa002 third-impl clean WIN 2/2・本host pinned-replica node-exact 2/2・出版全files fetch-back byte一致・verdict不消費 (UNKNOWN担保不変)
+
+(observed HEAD-before-push: `29060369aa04e1d8f97d211bf455df8a63110d59`。push直前にnote blob sha1ロック
+`9703ae8f742260d8eea2d675c60c216a22ec9b92` (593,538 bytes版・fetch時点) を再照合する。status section本文の数値は実行時点の記録で不変。)
+
+- 宣言 (`0e2114913a593340c39a05a8fc4f4a6bbfe46937`, publish-then-execute) どおり実行
+  (対抗宣言なし・実験dir 404事前確認済み)。
+- 前提ゲート (宣言前): maker `make_inputs_cc.py` (`8255d0ad`) 4回実行全出力
+  byte-identical・rows.json (`b7222edf`) 再生成byte一致・全sourceピン照合
+  (published batch-28 MANIFEST 81行と全行一致)・maker tamper battery 7/7検出
+  (T1..T7・適用実効性assert込み・scratch上・実験sources byte不変)・clean control PASS。
+- 実行 (宣言protocol 1-6・逐次): (1) rules gate PASS (quads 95,670 == 95,670・
+  triples checked 195,044・mismatches 0)。 (2) val-gate this-host 4/4 node-exact
+  (at2m 2行 result 0/nodes 2,000,000 x2・15m 2行 result 2/nodes 3,651,923・
+  5,040,200・`# replay_done` x4・wall_s比較外)。 (3) negatives 2/2 GATE_FAIL
+  設計どおり (ng1 derived=87 declared=88・ng2 bits=5 declared=6)。 (4) anchors
+  2/2 本host node-exact a/b determinism PASS (k02a clean WIN 9,106,337/4,991,527
+  wall 32.90/32.49s・l1a clean LOSS 7,660,602/3,951,175 wall 28.36/28.89s・
+  published第三実装値と同一)。 (5) **本host pinned-replica 2-pass fresh-cold
+  2/2 node-exact**: aa001 result 1 nodes 13,183,855 (wall 84/91s)・aa002 result 1
+  nodes 6,527,041 (wall 42/43s)・両行ともpublished batch-28 raw fieldsと完全一致・
+  EXHAUSTED 0・mismatch 0 (**aa001/aa002に対する最初の独立セッション再現**)。
+  (6) **targets 2/2 clean WIN一致 (verdict agreement 2/2・WALL-INCONCLUSIVE 0・
+  DIVERGENCE 0)**: aa001 result 1 expansions 15,677,345 ttHits 8,277,865 (a/b
+  完全一致・wall 56.97/55.07s)・aa002 result 1 expansions 7,624,309 ttHits
+  4,113,380 (a/b完全一致・wall 27.22/27.08s)・cap 300M・wallcap 240s・
+  memo-power=22・pass-one拡張数合計 23,301,654。
+- 監査 (`audit.py` `b7cfb0ce`・schema
+  `n11-centralreply-closure-b28win-thirdimpl-audit-v1`): **ALL 67 GATES PASS**
+  3回実行byte一致 (audit-run1/2/3 `df402055`・audit-summary 4ファイル `9c22c1e7`)
+  ・verdict_agreements 2/2 (aa001/aa002 third=1 replica=1 agree=true)・
+  wall_inconclusive 0。audit tamper battery **3/3検出** (pin反転→
+  pin-third_impl.js gate fail・aa002.a expansions +1→target-aa002-det-pair gate
+  fail・aa002 CSV legal 86→87→input-aa002-matches-rows gate fail・scratch上で実施し
+  実験files byte不変)・clean control PASS。
+- 出版4コミット (commit-pinned raw URLでfetch-back **64/64 byte一致**): 宣言
+  note amendment `0e211491` (note blob `9703ae8f`・prefix byte一致)・A scaffold
+  `1f38deb8` (35 files = scripts 6 + input 7 + sources 14 + val-gate 8)・B outputs
+  `31ddca98` (27 files = rules-gate + this-host val-gate 4 + replica 4 +
+  negatives 2 + anchors 4 + targets 4 + audit 3回分 7 + status.log)・C README+
+  MANIFEST `29060369` (63行)。実験dir:
+  `research/experiments/n11-centralreply-closure-b28win-thirdimpl-20261123/`。
+- 意味 (route statementのみ・verdict不消費): 第三実装 (非df-pn AND/OR minimax) の
+  clean verdictがpublished replica verdictと2/2で一致した (three-implementation
+  corroboration文献)。aa001 (30番目)・aa002 (31番目) の採用判断はscrutiny owner
+  C++第二実装 gate pin `9193f5b6` のまま・本レーンは代行しない。canonical cache
+  (`9115be9e` 6,293行) read-only不変。閉鎖・被覆・secured・root勝敗の主張はしない。
+- 次回以降の候補: (a) aa001/aa002あるいは将来のLOSS行adoption (別adoption Part・
+  pinned merger `90711961…` 経由のみ)・(b) batch-29選定はreaudit再実行後 (rank 28
+  class 13758 {459528} = batch-27 o031・rank 29 class 14103 {460145} = o037 は
+  batch-27 packet衝突でreaudit待ち・rank 35 class 2251・rank 36 class 34269 が
+  zero-collision clean候補)・(c) batch-28 fileless 52キー (aa003..aa054) の将来
+  probe (別宣言)。
+- **標準11×11空盤・19 central-reply roots・二石root {49,60}/{59,60}・S2
+  {59,60}・class 1/2/4・class 10968・class 23964・class 5343 (54キーすべて・
+  aa001/aa002を含む) は本Partの実行・出版のどの時点でもUNKNOWNのまま。**
+  nodes数・expansions数・ttHits数・wall秒数を勝敗として読まない。WIN/LOSS採用は
+  別adoption Part (pinned merger `90711961…` 経由) のみ。
