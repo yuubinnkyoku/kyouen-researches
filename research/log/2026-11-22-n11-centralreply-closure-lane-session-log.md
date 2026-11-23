@@ -3296,3 +3296,107 @@ value.
   `68180ea1f92c7c2ddfff07e9e3c68f33d2ba4392` (session-log blob lock
   `0d213568986f3305bf7eb97133b3248b165baf0e` before this Continuation;
   push re-checks the lock and re-appends if a parallel lane moved it).
+## Continuation 49 (2026-11-23, this host): Part BJ executed and published - batch-21 (class 12643 rank-17 closure candidate) exact-S5 probe drive-1 stopped by the pre-registered WIN-HALT at a003 (WIN 5,021,280 nodes two-pass node-exact, key (10412339930666631168,4), s5 115192): 3 LOSS rows completed as adoption candidates only (a001/a002/a004), a006 fragment UNPROBED (worker host-timeout kill), 49 keys unprobed fresh; verdict consumption ZERO; class 12643 / all 53 keys / standard 11x11 stay UNKNOWN
+
+- Lane resume: this session continued after a compaction (the Part BJ
+  declaration `2bf5d529` and the scaffold commit `85d0c4d7` were already
+  pushed mid-flight). Latest main was re-fetched before every write; all
+  fetch-backs were byte-exact, including the interrupted commit-C
+  verification that was completed at resume (README `27dd1abf` +
+  MANIFEST `548f25df` at `a38153a8`, both byte-exact via commit-pinned
+  raw).
+- Scaffold publication (commit `85d0c4d7`, 72 files, fetch-back 72/72
+  byte-exact): maker `make_batch21_keys.py` adapted from the published
+  batch-20 maker `1dceb05e` (base = adopted canonical 6,235 rows
+  `f6649fe3`), with a NEW published-table cross-check gate (`d57a7609`,
+  807/807 agree) and a NEW batch-20 x-keys-all-LOSS-in-base gate, the
+  ranks 1..16 refutation-evidence gate (incl. 5830 via 5 receipt WIN
+  children, 5687 via known WIN child 209644), the route-alive target
+  (known child {137694: LOSS} only), runner-up 25835, backup 31600, and
+  the unused-prefix check (prefix "a" unused across 21 prior packets,
+  1,034 rows / 1,020 unique); pinned byte-copies jsreplay `84585617`,
+  runbatch `f591f8c2`, runwave `8efd78c2`; `drive_batch21.sh` and
+  `row_audit_batch21.py`.
+- Input: `batch-keys.json` sha256 `1f9346a7…` (full 64-hex recorded in
+  MANIFEST) + a001..a053 CSVs; maker 3x byte-identical; all gates PASS
+  (53 keys, 0 canonical hits, 0 quarantine, canonical-safe 53/53, prior
+  overlap 0, legal 74..96, groups {(4,5),(4,6),(5,4),(5,6)}, class 12643
+  rank 17 unknown 53).
+- val-gate 4/4 node-exact this host vs the published batch-20 baselines
+  (at2m result 0 / nodes 2,000,000 x2; 15m result 2 with nodes
+  3,651,923 and 5,040,200; forbidden quadruples 95,670 x4;
+  `# replay_done` x4; wall_s excluded).
+- Execution drive-1 (status.log 04:09:23Z..04:11:41Z, worker max 2,
+  260s bounded drive): a001 LOSS 2,392,778; a002 LOSS 6,755,079 (p1==p2
+  byte-identical, wall_s 67/67); a003 WIN (replay result 1) nodes
+  5,021,280 two-pass node-exact (key (10412339930666631168,4), s5
+  115192, wall_s 51/50) -> pre-registered WIN-HALT rc=45 fired under
+  declaration `2bf5d529`; a004 LOSS 4,151,964. mismatch 0, exhaustion 0,
+  verdict consumption ZERO (a003 honest WIN label, scrutiny owner C++
+  gate `9193f5b6` unchanged).
+- a006 UNPROBED: the second worker was killed by the host-timeout at
+  the 260s drive bound, leaving p1 complete single-pass bookkeeping
+  (result 2 / nodes 8,008,743 - explicitly NOT evidence) and a p2
+  truncated headers-only fragment (no `# replay_done`). a006 is never
+  counted as a completed row; fresh-cold re-probe is reserved to a
+  future continuation under a new declaration.
+- 49 keys (a005..a053, including a006) unprobed fresh; batch-21
+  residual probing needs a NEW declaration analogous to Part BH
+  (batch-19 residual), with scaffold reuse + val-gate rerun; this
+  session declares nothing further.
+- Row audit: new winhalt-specific script
+  `scripts/row_audit_batch21_win_halt.py` (sha256 `08fff912…`,
+  published with the outputs) -> `output/row-audit-winhalt.json` sha256
+  `5bb403ad…`, 3x byte-identical, all gates PASS (probed=4, loss_rows
+  [a001,a002,a004], win_rows [a003], mismatches 0, exhausted [],
+  fragment_key semantics: a006 evidence=false probed=false,
+  unprobed_count 49). The scaffold full-row audit remains the designed
+  end-state audit for a completed residual.
+- Publications, all fetch-back byte-verified: outputs B `0022c8c5`
+  (13 files: raw 2-pass x8 + status.log `0c5d691a` + row-audit json +
+  audit script; 13/13), README + MANIFEST-sha256.txt (85 entries) C
+  `a38153a8` (README `27dd1abf`, MANIFEST `548f25df`, both verified
+  byte-exact), experiment dir
+  `research/experiments/n11-centralreply-closure-class12643-batch21-20261123/`.
+- Note status update commit `a98d14c9` (blob lock 83c59d92 ->
+  b07bdb42, predicted locally from published bytes and confirmed on the
+  server; fetch-back byte-exact 379,862 bytes; appends the
+  "Part BJ status update (execution owner)" section with the full
+  honest drive-1 record, race record, and UNKNOWN guards).
+- RACE RECORD (honest, both directions): a parallel session published a
+  "Part BJ execution-start amendment" `2f6086dd` at 04:12:55Z AFTER this
+  execution had already started (status.log first row 04:09:23Z; drive
+  window ended 04:13Z; scaffold `85d0c4d7` was published by this session
+  at 04:08:04Z and that amendment mirrored it in its own preflight).
+  Per the repo first-completer rule (y17 part2 precedent) this
+  session's outputs + README + note publications close the Part BJ
+  execution; the parallel same-kit run, if published, is an
+  independent cross-verification (expected divergence: wall_s only).
+  Their amendment also overwrote the note blob lock (23ea8560 ->
+  83c59d92), which was re-verified immediately before my note push.
+  Both directions are recorded honestly in the note section and in
+  every commit message.
+- Conditional bookkeeping ONLY (never a closure/coverage claim): a003
+  is a cost child of closure-candidate class 12643; if that WIN row is
+  ever adopted, the future closure selection route pointer moves to
+  runner-up rank 18 class 25835 (backup 31600). The class 12643
+  unknown population is unchanged by this session. Adoption of the 3
+  LOSS rows (a001/a002/a004) requires a separate declared adoption Part
+  via the pinned fail-closed union merger (byte-copy pin `90711961`).
+- UNKNOWN disclaimers: standard 11x11, all 19 central-reply roots, the
+  two-stone roots {49,60}/{59,60}, S2 {59,60}, classes 1/2/4 and 12643
+  (all 53 keys) stay UNKNOWN at every point; node counts, worklist
+  sizes and rank positions are never read as outcomes.
+- Tooling lesson: `tools.github_app.get_file_contents` returns
+  [{type:text,...},{type:resource, resource:{text}}] with the
+  server-computed git blob SHA of the fetched file inside the first
+  text element - a usable in-sandbox integrity anchor before
+  push_files; and tail checks via endsWith must include the trailing
+  newline (a first fail-closed abort was a false negative from omitting
+  it, not a content mismatch).
+- Session-log observed HEAD-before-push:
+  `a98d14c94e10796fc0d4dcf09b75e431f26c93c1` (this session's note
+  status update commit; session-log blob lock
+  `088a7b10e765dd63b5fa72c9b62e0c6c4e953d35` re-verified immediately
+  before push; re-append this section if a parallel lane moved the
+  file).
