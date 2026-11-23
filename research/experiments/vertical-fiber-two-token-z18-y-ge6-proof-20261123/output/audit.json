@@ -1,0 +1,30 @@
+{
+  "K1087_C_anchor": 8976,
+  "K1092_B_anchor": 15370,
+  "bad": [],
+  "claim": "H(R;(x,y);18), all x>=y>=6 and R>=0",
+  "closure_sweep": 5451855,
+  "finite_audit_scope": {
+    "K1087_C_anchor": "6<=y<=16, 0<=d<=16, 0<=R<=x+y+17",
+    "K1092_B_anchor": "6<=x<=150, 0<=R<=x+27",
+    "closure_sweep": "6<=y<=150, 0<=d<=150, all 1<=R<=x+y+18 (direct mex of closed-form children)",
+    "deep_scatter": "band identity + mex at y,d<=4000; tail consistency at y,d<=1500",
+    "low_R_collapse": "6<=y<=80, 0<=d<=80, 0<=R<=24 (=z+6); sharpness witness (12,6)@R=25: value18=0 vs single token 2",
+    "parent_direct": "6<=y<=20, 0<=d<=30, 0<=R<=x+y+18",
+    "scatter_raw": "y,d<=25, R<=x+y+18 (dual engines vs closed form)",
+    "scatter_seed": 20261126,
+    "set_vs_predicate": "independent set-based transcription vs predicates, x<=300",
+    "signature_bands": "6<=y<=80, 0<=d<=80, all 1<=R<=x+y+18",
+    "tail_direct": "6<=y<=18, 0<=d<=25, x+y+19<=R<=x+y+23"
+  },
+  "fixed_seed_scatter": 11000,
+  "low_R_single_token_collapse": 151875,
+  "low_R_witness_12_6_R25": 1,
+  "parent_two_recursions": 27900,
+  "proof_status": "proved_by_two_level_induction_and_symbolic_signature_bands",
+  "set_vs_predicate": 132675,
+  "signature_coverage_identity_mex": 874800,
+  "tail_direct": 1690,
+  "total": 6676142,
+  "verifier_sha256": "5c669d7cd2bc3f54637879df2942a14e7017e5e1432d3090118b90c6fce2c049"
+}
