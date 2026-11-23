@@ -7308,3 +7308,83 @@ amendmentが本amendmentより先にmainにある場合は本宣言を破棄し�
   `cb2c80d1aea1250be0cda9b8105f12b682812ec1` (536,124 bytes = Part BX
   status update `91b490c0` 版) を再照合する (並走追記が挟まった場合は
   本節を追記し直し、成立しない場合は簡潔に記録して次回へ回す)。
+
+### Part BY status update (2026-11-23, verifier): batch-27 o002 第三実装交叉検証完了 - 本host pinned-replica初の独立host再現 + clean WIN一致1/1 (UNKNOWN担保不変)
+
+(observed HEAD-before-push: `6bbacd91…` (本Part commit C)・並走非接触
+コミット `df2b1cd6` (K1254・finite-field lane) を確認のうえ線形続行。
+fetch-back済み出版状況に基づく追記)
+
+- 宣言 `7a3a3f27` (publish-then-execute・protocol順どおり) の実行完了。
+  **実行時に競合・対抗宣言は存在しなかった** (note grep clean・
+  b27win dir不存在を宣言時に確認済み)。
+- rules gate PASS: replica quads 95,670 == third-impl quads 95,670・
+  triples checked 195,044・mismatches 0 (禁止四角 95,670)。
+- val-gate this-host 4/4 node-exact (pinned `jsreplay.js`・published
+  baseline (0, 2,000,000)×2・(2, 3,651,923)・(2, 5,040,200)・wall_s
+  比較外・宣言前host健全性取得分の上書き再取得・walls 9/9/17/25s)。
+- **本host pinned-replica再現 2/2 node-exact**: o002 p1/p2 = result
+  1・nodes **4,589,084** (two-pass node-exact・wall 22/22s・published
+  45/47s)。batch-27 (Part BR) はtakeover実行hostの単一host出版だった
+  ため、**o002 にとって最初の独立host再現** (audit G2b機械検査・
+  EXHAUSTED 0・mismatch 0・truncation 0)。
+- negatives 2/2 GATE_FAIL設計どおり (ng1: legal count mismatch
+  derived=87 declared=88・ng2: stone count mismatch bits=5 declared=6)・
+  anchors k02a/l1a本host node-exact (a/b determinism PASS・k02a clean
+  WIN 9,106,337/4,991,527・wall 26.39/26.22s・l1a clean LOSS
+  7,660,602/3,951,175・wall 22.14/21.75s・published第三実装定数と
+  完全一致)。
+- **target 1/1 clean WIN一致 (verdict agreement 1/1・DIVERGENCE 0・
+  WALL-INCONCLUSIVE 0)**: **o002 clean WIN (result 1)** expansions
+  5,303,699・ttHits 2,988,749 (a/b一致・wall 15.13/15.15s)。cap
+  300,000,000・wallcap 240s・memo-power=22。pass-one third-impl
+  拡張数 5,303,699 (replica 4,589,084 との比率 1.156)。
+- 監査 (`audit.py` `7f7fa3d1…`): **ALL 50 GATES PASS**・3回実行byte
+  一致 (audit-summary-run json sha `2d05ccff…`)・audit tamper
+  battery 3/3検出 (AT1 maker pin反転→ABORT rc=1・AT2 o002.b
+  expansions +1→target-o002-det-pair gate fail rc=1・AT3 o002 CSV
+  legal 79→80→input-o002-matches-rows gate fail rc=1・scratch (/tmp)
+  上で実施・実験files無改変byte検証)・clean control PASS。前提側
+  maker tamper battery 7/7検出 (全tamperに適用実効性assert)・4回
+  byte一致も宣言時に記録済み (maker `359abebc…`・rows.json
+  `cfd8bd06…`)。
+- 実行事故のhonest記録: l1a anchor a-pass実行中に実行環境の同期
+  エラーが発生し、空の `l1a.a.out` とstatus.logのRUN行欠落という
+  不整合が生じた。当該部分成果物は破棄し、l1a a/bをクリーンに
+  再実行してstatus.log整合を回復した (published出版bytesはすべて
+  再実行後のもので、上記anchors実測値も再実行後)。
+- 出版4コミット (fetch-back byte照合済み): 宣言 `7a3a3f27` (note
+  blob `106a8abe…` fetch-back一致)・scaffold `5ed729d1` (31/31
+  一致)・outputs `821b8a9e` (23/23一致)・README + MANIFEST-sha256
+  55行 `6bbacd91` (README blob `32695f7a…`・MANIFEST blob
+  `b37b97c7…`・実験dir `n11-centralreply-closure-b27win-thirdimpl-
+  20261123/`・マニフェスト対象55ファイル = scaffold 31 + outputs
+  23 + README)。
+- 意味 (verdict-level文献のみ・verdict不消費): 第三実装 (non-df-pn
+  AND/OR minimax) のclean verdictがpublished replica verdict
+  (result 1 = WIN行) と1/1で一致した事実のみを記録する。o002
+  (29番目の unconsumed closure WIN候補) の採用判断は引き続き
+  scrutiny owner C++第二実装 gate pin `9193f5b6…` 待ち (本レーンは
+  代行しない)・canonical cache (Part BU採用後 6,287行
+  `e32a2e44…`) read-only不変・採用は別宣言のadoption Part
+  (pinned fail-closed merger `90711961` 経由) のみ。閉鎖・被覆・
+  secured・root勝敗の主張はしない。batch-27残留キー (o004/o006/
+  o008/o010..o054 fileless UNPROBED)・fragment o009 (p1完全単一
+  パスはbookkeepingのみで証拠ではない)・同batch4 LOSS行
+  (o001/o003/o005/o007・adoption candidates) には本Partは一切
+  触れていない。
+- 次回以降の候補: batch-28選定 (29-WIN交積・2文字prefix新設計・
+  rank 27 class 5343/13758/14103) が次点。adoption候補6行
+  (batch-24 y002/y004・batch-27 o001/o003/o005/o007 LOSS) は別Part
+  (BU前例・merger `90711961`) として将来回で宣言のみで着手。
+  scrutiny owner C++ gate `9193f5b6…` 待ちは本レーンは代行しない。
+- **標準11×11空盤・19 central-reply roots・二石root {49,60}/{59,60}・
+  S2 {59,60}・class 1/2/4・class 10968・class 23964・class 16957・
+  class 1849・class 30565・class 13342 (54キーすべて・o002を含む) は
+  どの時点でもUNKNOWNのまま。** nodes数・expansions数・ttHits数を
+  勝敗として読まない。
+- 本status update observed HEAD-before-push: `6bbacd91…`。push直前に
+  最新mainを再fetchし note blob lock `106a8abee991f707708716baea702580
+  825f98c5` (546,467 bytes = 本Part BY宣言 `7a3a3f27` 版) を再照合する
+  (並走追記が挟まった場合は本節を追記し直し、成立しない場合は簡潔に
+  記録して次回へ回す)。
