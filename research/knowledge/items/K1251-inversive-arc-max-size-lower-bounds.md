@@ -5,7 +5,7 @@ kind: computation
 status: computed
 topics: [geometry, variants, maximum-safe, search-methods, statistics]
 aliases:
-- inversive plane arcs: improved lower bounds
+- inversive plane arcs, improved lower bounds
 - 反転平面アークの最大サイズの下界改善
 relations:
 - type: depends_on
