@@ -1,37 +1,113 @@
-=== y=17 universal verifier part1 - canonical published run (this host, 2026-11-23T01:13:08Z) ===
+=== y17 universal part2 published run (preflight + census_rows + full 14 checks) ===
+host: Linux x86_64, python Python 3.12, same cgroup class as part1
+cwd: this experiment dir (the part1 verifier byte 2110ecbb... was still the
+published byte on main at preflight time, commit 33e0a062; the part2
+extension was installed in place only after the preflight PASS; no part2
+assembly script is published - the y13/y14/y15/y16 part2 procedure)
+
+$ python3 scripts/preflight_c1d_y17.py
+{"anchor_bad": 0, "anchor_first_bad": null, "anchor_points": 12789,
+ "box": "z0 in {8,9,10,15,16,17}; x=17..45; R=1..x+z0+30",
+ "check": "preflight c1d y=17 rows: published z=8/9/10/15/16/17 uniform
+ slice anchors vs raw engines vs cand17",
+ "lowR_bad": 0, "lowR_points": 9438,
+ "lowR_box": "z0 in {15,16,17}; x=17..159; R=1..z0+6", "overall": "PASS",
+ "per_z": {"8": 2001, "9": 2030, "10": 2059, "15": 2204, "16": 2233,
+           "17": 2262} (all bad 0)}
+rc=0, wall 2.8 s; output/preflight-c1d-y17.json
+(4-way anchor x H_ordered x H_canonical x cand17 all clean; low-R
+ single-token reduction R<=z+6 on the y=17 rows all clean 9,438 pts;
+ the file is the pretty-printed canonical byte; 2 runs byte-identical,
+ one on the isolated side, the isolated run regenerating it from
+ scratch. Preflight SHA-256 fc1d4ec0...)
+
+$ python3 census_rows.py
+rows=4320 points=444960 zero_points=221578
+states(misses): 8725227 currsize: 1600000 maxsize: 1600000 hits: 17094274
+wall 17.6 s, rc=0; census.txt 817,882 bytes (4,320 rows + 80 empty rows)
+(the LRU is explicitly capped at 1,600,000, the memory-capped-host
+ adaptation mirroring the published y=12/y=13/y=14/y=15/y=16 editions;
+ tail assertion R>=x+z+18 => (x+17)%2 held on every row; byte-identical
+ regeneration on the isolated side)
+
+$ python3 verify_y17_universal.py C11ordered / C11canonical (rerun in the
+  part2 session): census parts byte-identical to the part1 published
+  bytes (ordered 12244496... / canonical 1ca205a5...)
+
 $ python3 scripts/check_transcriptions_y17.py
-{"cand16": {"bytes": 3298, "equal_fit_verbatim_renamed": true, "equal_machine_verbatim_renamed": true, "sources_agree": true}, "cand17": {"bytes": 3379, "equal_fit_verbatim": true}, "check": "y17 verifier transcription byte-equality vs published bytes", "engine": {"bytes": 1957, "equal": true}, "overall": "PASS", "verifier": "research/experiments/vertical-fiber-two-token-y17-parametric-allz-proof-20261123/verify_y17_universal.py"}
-$ python3 verify_y17_universal.py C11ordered
-census[ordered]: points=440640 bad=0 merge={'points': 119025, 'bad': 0} tail={'points': 4320, 'bad': 0}
-$ python3 verify_y17_universal.py C11canonical
-census[canonical]: points=440640 bad=0 merge={'points': 119025, 'bad': 0} tail={'points': 4320, 'bad': 0}
-$ python3 verify_y17_universal.py C1 C1b C2 C2b C3 C4 C4t C7 C8 C9 C11 C12
-  C1: pts=23370 bad=0
-  C1b: pts=42565 bad=0
-  C2: pts=221235 bad=0
-  C2b: pts=19404 bad=0
-  C3: pts=1275 bad=0
-  C4: pts=590634 bad=0
-  C4t: pts=590634 bad=0
-  C7: pts=200000 bad=0
-  C8: pts=1014174 bad=0
-  C9: pts=903114 bad=0
-  C11: pts=881280 bad=0
-  C12: pts=1856140 bad=0
-overall: PASS total_points: 6343825 types: 457645
-  C1: pts=23370 bad=0
-  C11: pts=881280 bad=0
-  C12: pts=1856140 bad=0
-  C1b: pts=42565 bad=0
-  C2: pts=221235 bad=0
-  C2b: pts=19404 bad=0
-  C3: pts=1275 bad=0
-  C4: pts=590634 bad=0
-  C4t: pts=590634 bad=None
-  C7: pts=200000 bad=0
-  C8: pts=1014174 bad=0
-  C9: pts=903114 bad=0
-  merge: {'points': 1182632, 'bad': 0}
-  tail: {'points': 193096, 'bad': 0}
-  C4t: 1300 violations at clip 35, first: (60, 98, 98)
-rc=0
+overall PASS on the part2 edition too (engine/cand16/cand17 blocks
+byte-invariant; run on the isolated side as well)
+
+$ python3 verify_y17_universal.py C1 C1b C1d C2 C2b C3 C4 C4t C7 C8 C9 C11 C11r C12
+  C1: pts=23370 bad=0        C1b: pts=42565 bad=0
+  C1d: pts=137280 bad=0      C2: pts=221235 bad=0
+  C2b: pts=19404 bad=0       C3: pts=1275 bad=0
+  C4: pts=590634 bad=0       C4t: pts=590634 (probe; not in bad total)
+  C7: pts=200000 bad=0 (seed 20261172)  C8: pts=1014174 bad=0
+  C9: pts=903114 bad=0       C11: pts=881280 bad=0
+  C11r: pts=444960 bad=0     C12: pts=1856140 bad=0
+overall: PASS total_points: 6926065 types: 457645 total_bad 0
+  merge corollary: 1,182,632 pts, bad 0 (invariant from part1)
+  tail corollary: 193,096 pts, bad 0 (invariant from part1)
+  C4t: 1300 violations at clip 35, first: (60, 98, 98) (invariant)
+wall 35.4 s (run 1) / (run 2 same cwd), rc=0
+(part2 edition installed as verify_y17_universal.py,
+ SHA-256 4253cf29790ff06d17fc3a75315b282ffd67b13789b977764e0b25884a9689a3;
+ part1 12-check bodies byte-invariant by diff against the published
+ part1 byte: only the anchor block, check_C1d/check_C11r, the STAGE
+ docstring and the main() registry/dispatch lines were added/edited)
+
+=== run2/run3 (part2) ===
+run2: same-cwd rerun -> byte-identical audit.json
+run3: isolated tree/cwd/HOME + env -i (PATH pinned to
+ /usr/local/bin:/usr/bin:/bin) + PYTHONHASHSEED=random;
+ check_transcriptions_y17.py, scripts/preflight_c1d_y17.py,
+ census_rows.py and BOTH census parts regenerated on the isolated side:
+ transcriptions-check-y17.json / preflight-c1d-y17.json / census.txt /
+ census-ordered.json / census-canonical.json all byte-identical; full
+ 14-check command on the isolated side -> audit.json byte-identical
+SHA-256 audit.json fd4b7d8cea97dbe094eb3deee3d6d923c4897ed8e1bbd38309a1d212faf3455b
+ (3 runs byte-identical: 2 same-cwd + 1 isolated)
+
+=== part2 fail-closed probes (pre-publication, all caught; scratch tree) ===
+(1) census part points tamper 440,640 -> 440,641 (census-ordered.json):
+    FAIL-CLOSED "census points 440641 != 440640", rc=1
+(2) census-canonical.json missing: FAIL-CLOSED (run mode C11canonical
+    first), rc=1
+(3) merge boundary tamper x<=z-18 -> x<=z-17 (tampered verifier copy,
+    C2 only): overall FAIL, merge {'points': 12960, 'bad': 176}, rc=1
+(4) census.txt P-set one-digit tamper: C11r pts=444960 bad=1,
+    overall FAIL, rc=1
+(5) census.txt missing: FAIL-CLOSED "census.txt is missing; run
+    census_rows.py first", rc=1
+(6) duplicate census row injection: FAIL-CLOSED "duplicate census row
+    (0,17)", rc=1
+baseline restored after each probe; scratch tree only, the canonical
+tree's outputs byte-verified against the isolated regeneration
+afterwards (all six probes were run on copies, no tampered byte was
+published)
+
+=== notes (part2) ===
+- C1d sweep: 6 anchors x x=17..159 R<=x+61 = 127,842 pts + low-R
+  single-token reduction 9,438 pts = 137,280 pts, bad 0. Preflight box
+  (anchor x both raw engines x cand17, x=17..45, R<=x+z0+30) 12,789 pts
+  bad 0 was the fail-closed gate before the anchors entered the machine.
+- C11r: 4,320 rows, 444,960 pts, bad 0; every census.txt row re-derived
+  from cand17 across R=0..x+z+19 (T set, P set, Thue-Morse index, tail);
+  rows==80*54=4,320 asserted FAIL-CLOSED.
+- merge/tail corollaries and the C4t clip-35 probe carried invariant
+  from part1 (published at 33e0a062).
+- The full 14-check total is 6,343,825 (part1) + 137,880 (C1d)
+  + 444,960 (C11r) = 6,926,065 comparison points, all bad 0.
+- On overall PASS with 3 byte-identical audit runs, K1240
+  (H(R;(x,17);z) == cand17, all z>=0, x>=17, R>=0) is promoted
+  observed -> proved (AGENTS.md: same K item, no new number; the
+  K1141/K1152/K1231/K1233/K1235/K1237 procedure).
+- Standard 11x11 empty board / two-stone roots {49,60}/{59,60} /
+  S2 {59,60} / class 1/2/4 stay UNKNOWN. Three-or-more-token rows,
+  y>=18 families, fixed-width and q-point stabilization lengths are out
+  of scope. Trust boundary unchanged: option-decomposition soundness,
+  the mex identity and finite-type conflation are the y=8..y=16 machine
+  class carried in this same file.
+- The part1 published_run.txt transcript is preserved at commit 33e0a062
+  (git history); this file is the part2 canonical transcript.
