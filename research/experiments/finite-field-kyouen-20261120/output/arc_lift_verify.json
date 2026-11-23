@@ -1,16 +1,5 @@
 [
   {
-    "model": {
-      "q": 7,
-      "points": 50,
-      "concyclic_4sets": 24500,
-      "dependent_4sets": 24500,
-      "mismatches": 0,
-      "off_quadric": 0,
-      "ok": true
-    }
-  },
-  {
     "witness": {
       "q": 5,
       "k": 6,
@@ -21,6 +10,15 @@
       "dual": "[6,2,5]",
       "q_plus_1": 6,
       "k_over_q": 1.2
+    }
+  },
+  {
+    "projection": {
+      "q": 5,
+      "k": 6,
+      "projection_arc": true,
+      "bad_projections": 0,
+      "projected_size": 5
     }
   },
   {
@@ -37,6 +35,15 @@
     }
   },
   {
+    "projection": {
+      "q": 7,
+      "k": 6,
+      "projection_arc": true,
+      "bad_projections": 0,
+      "projected_size": 5
+    }
+  },
+  {
     "witness": {
       "q": 8,
       "k": 7,
@@ -47,6 +54,15 @@
       "dual": "[7,3,5]",
       "q_plus_1": 9,
       "k_over_q": 0.875
+    }
+  },
+  {
+    "projection": {
+      "q": 8,
+      "k": 7,
+      "projection_arc": true,
+      "bad_projections": 0,
+      "projected_size": 6
     }
   },
   {
@@ -63,6 +79,15 @@
     }
   },
   {
+    "projection": {
+      "q": 9,
+      "k": 9,
+      "projection_arc": true,
+      "bad_projections": 0,
+      "projected_size": 8
+    }
+  },
+  {
     "witness": {
       "q": 11,
       "k": 9,
@@ -73,6 +98,15 @@
       "dual": "[9,5,5]",
       "q_plus_1": 12,
       "k_over_q": 0.8182
+    }
+  },
+  {
+    "projection": {
+      "q": 11,
+      "k": 9,
+      "projection_arc": true,
+      "bad_projections": 0,
+      "projected_size": 8
     }
   },
   {
@@ -89,6 +123,15 @@
     }
   },
   {
+    "projection": {
+      "q": 13,
+      "k": 10,
+      "projection_arc": true,
+      "bad_projections": 0,
+      "projected_size": 9
+    }
+  },
+  {
     "witness": {
       "q": 16,
       "k": 12,
@@ -99,6 +142,15 @@
       "dual": "[12,8,5]",
       "q_plus_1": 17,
       "k_over_q": 0.75
+    }
+  },
+  {
+    "projection": {
+      "q": 16,
+      "k": 12,
+      "projection_arc": true,
+      "bad_projections": 0,
+      "projected_size": 11
     }
   },
   {
@@ -115,6 +167,15 @@
     }
   },
   {
+    "projection": {
+      "q": 17,
+      "k": 13,
+      "projection_arc": true,
+      "bad_projections": 0,
+      "projected_size": 12
+    }
+  },
+  {
     "witness": {
       "q": 19,
       "k": 14,
@@ -125,6 +186,15 @@
       "dual": "[14,10,5]",
       "q_plus_1": 20,
       "k_over_q": 0.7368
+    }
+  },
+  {
+    "projection": {
+      "q": 19,
+      "k": 14,
+      "projection_arc": true,
+      "bad_projections": 0,
+      "projected_size": 13
     }
   },
   {
@@ -141,6 +211,15 @@
     }
   },
   {
+    "projection": {
+      "q": 23,
+      "k": 16,
+      "projection_arc": true,
+      "bad_projections": 0,
+      "projected_size": 15
+    }
+  },
+  {
     "witness": {
       "q": 25,
       "k": 18,
@@ -151,6 +230,15 @@
       "dual": "[18,14,5]",
       "q_plus_1": 26,
       "k_over_q": 0.72
+    }
+  },
+  {
+    "projection": {
+      "q": 25,
+      "k": 18,
+      "projection_arc": true,
+      "bad_projections": 0,
+      "projected_size": 17
     }
   },
   {
@@ -167,6 +255,15 @@
     }
   },
   {
+    "projection": {
+      "q": 27,
+      "k": 19,
+      "projection_arc": true,
+      "bad_projections": 0,
+      "projected_size": 18
+    }
+  },
+  {
     "witness": {
       "q": 29,
       "k": 20,
@@ -177,6 +274,15 @@
       "dual": "[20,16,5]",
       "q_plus_1": 30,
       "k_over_q": 0.6897
+    }
+  },
+  {
+    "projection": {
+      "q": 29,
+      "k": 20,
+      "projection_arc": true,
+      "bad_projections": 0,
+      "projected_size": 19
     }
   },
   {
@@ -193,6 +299,15 @@
     }
   },
   {
+    "projection": {
+      "q": 31,
+      "k": 21,
+      "projection_arc": true,
+      "bad_projections": 0,
+      "projected_size": 20
+    }
+  },
+  {
     "witness": {
       "q": 32,
       "k": 22,
@@ -203,6 +318,15 @@
       "dual": "[22,18,5]",
       "q_plus_1": 33,
       "k_over_q": 0.6875
+    }
+  },
+  {
+    "projection": {
+      "q": 32,
+      "k": 22,
+      "projection_arc": true,
+      "bad_projections": 0,
+      "projected_size": 21
     }
   },
   {
@@ -219,6 +343,15 @@
     }
   },
   {
+    "projection": {
+      "q": 37,
+      "k": 25,
+      "projection_arc": true,
+      "bad_projections": 0,
+      "projected_size": 24
+    }
+  },
+  {
     "witness": {
       "q": 41,
       "k": 27,
@@ -229,6 +362,15 @@
       "dual": "[27,23,5]",
       "q_plus_1": 42,
       "k_over_q": 0.6585
+    }
+  },
+  {
+    "projection": {
+      "q": 41,
+      "k": 27,
+      "projection_arc": true,
+      "bad_projections": 0,
+      "projected_size": 26
     }
   },
   {
@@ -245,6 +387,15 @@
     }
   },
   {
+    "projection": {
+      "q": 43,
+      "k": 28,
+      "projection_arc": true,
+      "bad_projections": 0,
+      "projected_size": 27
+    }
+  },
+  {
     "witness": {
       "q": 47,
       "k": 30,
@@ -258,6 +409,15 @@
     }
   },
   {
+    "projection": {
+      "q": 47,
+      "k": 30,
+      "projection_arc": true,
+      "bad_projections": 0,
+      "projected_size": 29
+    }
+  },
+  {
     "witness": {
       "q": 49,
       "k": 32,
@@ -268,6 +428,15 @@
       "dual": "[32,28,5]",
       "q_plus_1": 50,
       "k_over_q": 0.6531
+    }
+  },
+  {
+    "projection": {
+      "q": 49,
+      "k": 32,
+      "projection_arc": true,
+      "bad_projections": 0,
+      "projected_size": 31
     }
   }
 ]

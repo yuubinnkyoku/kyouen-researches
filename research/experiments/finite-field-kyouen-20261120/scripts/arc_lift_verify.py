@@ -154,10 +154,67 @@ def verify_witness(q: int, arc: list, lift: Lift) -> dict:
             "q_plus_1": q + 1, "k_over_q": round(k / q, 4)}
 
 
+def rank(F, rows) -> int:
+    m = [list(r) for r in rows]
+    n_col = len(m[0]) if m else 0
+    rk = 0
+    for col in range(n_col):
+        piv = next((r for r in range(rk, len(m)) if not F.is_zero(m[r][col])), None)
+        if piv is None:
+            continue
+        m[rk], m[piv] = m[piv], m[rk]
+        inv = F.div(F.pow(m[rk][col], 0), m[rk][col])
+        m[rk] = [F.mul(inv, x) for x in m[rk]]
+        for r in range(len(m)):
+            if r != rk and not F.is_zero(m[r][col]):
+                f = m[r][col]
+                m[r] = [F.sub(m[r][c], F.mul(f, m[rk][c])) for c in range(n_col)]
+        rk += 1
+    return rk
+
+
+def projection_arc_check(q: int, arc: list, lift: Lift) -> dict:
+    """For each P of the arc, project the others from P onto a plane.
+
+    Claim (K1250, projection corollary): the projections form an arc of PG(2,q),
+    i.e. no three are collinear.  This is what bounds K by (max arc of PG(2,q))+1.
+    """
+    F = lift.F
+    points = point_list(q)
+    vecs = [lift.coords(points[i]) for i in arc]
+    k = len(vecs)
+    worst = k
+    failures = 0
+    for i in range(k):
+        p = vecs[i]
+        # pick a coordinate functional y with y.p != 0, then pi = ker(y)
+        yi = next(c for c in range(4) if not F.is_zero(p[c]))
+        proj = []
+        for j in range(k):
+            if j == i:
+                continue
+            a = vecs[j]
+            s = p[yi]                       # y.p
+            t = a[yi]                       # y.a
+            # (y.p)*a - (y.a)*p  lies in ker(y) and on the span of p, a
+            proj.append(tuple(F.sub(F.mul(s, a[c]), F.mul(t, p[c])) for c in range(4)))
+        bad = 0
+        for tri in itertools.combinations(range(len(proj)), 3):
+            if rank(F, [proj[x] for x in tri]) < 3:
+                bad += 1
+        if bad:
+            failures += 1
+            worst = min(worst, k - 1)
+    return {"q": q, "k": k, "projection_arc": failures == 0,
+            "bad_projections": failures, "projected_size": k - 1}
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--check-model", type=int, nargs="*", default=[])
     ap.add_argument("--check-witnesses", action="store_true")
+    ap.add_argument("--check-projection", action="store_true",
+                    help="verify that projecting from any arc point gives an arc of PG(2,q)")
     ap.add_argument("--files", nargs="*", default=[
         "arc_maxsearch.json", "arc_maxsearch_long.json", "arc_maxsearch_big.json",
         "arc_maxsearch_q49.json", "arc_maxsearch_q49b.json"])
@@ -186,19 +243,25 @@ def main() -> None:
                     continue
                 q = rec["q"]
                 # keep the largest witness per q
-                if q in seen and seen[q]["k"] >= len(rec["arc"]):
+                if q in seen and seen[q][0]["k"] >= len(rec["arc"]):
                     continue
                 lift = Lift(q)
-                r = verify_witness(q, rec["arc"], lift)
-                seen[q] = r
+                seen[q] = (verify_witness(q, rec["arc"], lift), rec["arc"])
         for q in sorted(seen):
-            r = seen[q]
+            r, arc = seen[q]
             rows.append({"witness": r})
             ok_all &= r["mds_ok"]
             print(f"q={r['q']:>2}: k={r['k']:>2} MDS {r['mds_params']:>12} "
                   f"dual {r['dual']:>10} q+1={r['q_plus_1']:>2} k/q={r['k_over_q']:.3f} "
                   f"dep4={r['dependent_4sets']} off={r['off_quadric']} "
                   f"-> {'OK' if r['mds_ok'] else 'FAIL'}", flush=True)
+            if args.check_projection:
+                pj = projection_arc_check(q, arc, Lift(q))
+                rows.append({"projection": pj})
+                ok_all &= pj["projection_arc"]
+                print(f"      projection from each of {pj['k']} points gives "
+                      f"{pj['projected_size']} points with no 3 collinear: "
+                      f"{'OK' if pj['projection_arc'] else 'FAIL'}", flush=True)
 
     if args.out:
         args.out.parent.mkdir(parents=True, exist_ok=True)
