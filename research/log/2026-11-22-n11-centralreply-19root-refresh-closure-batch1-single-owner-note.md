@@ -7402,7 +7402,7 @@ update版) を再照合し、並走追記が挟まった場合は本節を追記
 batch-27 (class 13342) のo001/o003/o005/o007、計6行の2-pass node-exact
 result 2 (LOSS) を、pinned fail-closed union merger (byte-copy
 `907119610034…`) でPart BU正本cache (6,287行 `e32a2e44…`) に併合する
-adoption Part (BU前例シpreflightとしてBU refresh出力の本host byte再現を
+adoption Part (BU前例・preflightとしてBU refresh出力の本host byte再現を
 含む)。**verdict不消費は不変**: 非採用WIN 3行 (y001/y006/o002) はhonest
 labelのままunconsumed (scrutiny owner C++ gate `9193f5b6…` 待ち・本レーン
 は代行しない)。fragment o009とfilelessキー (batch-24 49件・batch-27
@@ -7451,7 +7451,7 @@ byte一致しない場合は即時abort・honest記録とする)。
     probe-worklist `7d9020d4…` (非出版・実行ごとに再生成)。
   - extractor `compare_deltas_b24b27_adoption.py`
     `a3adc0dafaa9ceafc159f0aa364859f4f80ff998abcc0f5daf5674a429f55a2a`:
-    x4 + 隔離実行byte丁致。decomp-deltas-b24b27-adoption.json (16,398B)
+    x4 + 隔離実行byte一致。decomp-deltas-b24b27-adoption.json (16,398B)
     `e0005d42a20998ba86d7a9f895e7e93bde01d1b0cf23bb56de0346dd6bd64d8d`:
     flips=[]・new_free=[]・free_now 38→38・update8 resolved +0 (133不変)・
     joint greedy 38,301→38,295・probe-worklist 64,754→64,747・closure churn
@@ -7460,7 +7460,7 @@ byte一致しない場合は即時abort・honest記録とする)。
 - preflight (宣言前実施済み): 本hostでpublished Part BU refresh 3出力
   (refresh-summary・closure-classes・per-root-coverage・probe-worklist
   `9ae1ca50` 含む) をbyte再現。
-- 準備段階のtamper battery (scratch tree /tmp/tb/kr = 別絶对pathで実施・
+- 準備段階のtamper battery (scratch tree /tmp/tb/kr = 別絶対pathで実施・
   **16/16検出 + 全probe復元byte検証**): T1-T5 (batch-24 raw y002.p2
   nodes 217944→217945・batch-27 status.log o002 WIN flip・batch-24
   batch-keys class id・batch-27 row-audit o007改変・BASE cache append →
