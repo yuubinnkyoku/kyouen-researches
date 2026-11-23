@@ -9,6 +9,7 @@ aliases:
   - "closed-form identity grid, deep-tail rows, option decomposition raw anchor, type machine with clip window 2y+2=38 sentinel 39 and 523,398 types (series: y=14: 281,912 -> y=15: 335,658 -> y=16: 394,686 -> y=17: 457,645 -> y=18: 523,398), tightness probe showing clip 37 has 1,012 confluence violations (first (60,100,100)) so 38 is tight (14-family streak y=5..18: 12/14/16/18/20/22/24/26/28/30/32/34/36/38)"
   - "census anchor z=0..79, x=18..70, R<=x+z+19 over both raw engines via bounded-memoization twins (published code object rebound to an LRU-capped recursive cache, cap 1,600,000) run as separate commands C11ordered/C11canonical (438,840 points each engine, 53 x-rows per z, ~19 s each) and fail-closed merged in the C11 mode with recomputed expected counts (points 438,840 / merge 110,682 / tail 4,240 per engine)"
   - "merge corollary x<=z-19 implies single_token(x+18,z,R) verified at 1,121,822 points (census merge rows first non-empty at z=37, 4th consecutive family whose probe box contained zero merge rows) and tail corollary R>=x+z+19 implies (x+18) mod 2 verified at 192,210 points, both with 0 mismatches"
+  - "part2 executed under the same single-owner declaration 1d46f883 (scope continuation): C1d published-slice anchors preflighted 4-way (12,432+9,372 pts bad 0), census_rows.py third implementation (443,080 pts) consumed by C11r, full 14-check audit at 6,934,616 comparison points bad 0 (part1 6,354,790 + C1d 136,746 + C11r 443,080), 3 byte-identical runs incl. isolated regeneration, fail-closed 8 probes all caught; verifier part2 edition SHA-256 8ddd0c2f... with part-1 12 check bodies byte-invariant; K1242 promoted observed -> proved"
 relations:
   - type: extends
     target: "K1242"
@@ -142,3 +143,40 @@ part2（C1d 出版固定z切片アンカーの y=18 行〔preflight fail-closed�
 の C11r）を同一単一オーナー宣言 1d46f883 配下で実施し、
 フル14チェック監査3回byte-identical + fail-closed電池の上で
 **K1242 を observed→proved に昇格する**（同一K番号・K1240前例）。
+
+## part2実行・昇格判定（2026-11-23・K1242 observed→proved）
+
+part2 を同一単一オーナー宣言 1d46f883 の継続として実行した
+（y=13..y=17 と同一手続き。「part2への引き継ぎ」の計画どおり）:
+
+- C1d事前検証: scripts/preflight_c1d_y18.py（SHA-256 1d21c6ab…・出版6切片
+  アンカー A8u..A17u を y=18 行で4方照合〔anchor×H_ordered×H_canonical×
+  cand18〕・x=18..45・R<=x+z0+30・z0∈{8,9,10,15,16,17} の**12,432点 bad 0**
+  〔per z 1,946/1,974/2,002/2,142/2,170/2,198〕+ 低R単一トークン縮約
+  R<=z+6〔z0∈{15,16,17}・x=18..159〕**9,372点 bad 0**・3実行byte-identical
+  〔同一cwd2回+隔離1回〕・output/preflight-c1d-y18.json SHA-256 89cb9541…）を
+  組み込み前 fail-closed ゲートとして通過後に anchor block を出版y17 part2
+  正本（commit ab23d120・4253cf29…）から逐語採用。機内 C1d掃引
+  （x=18..159・R<=x+61）は**136,746点 bad 0**。
+- census第三実装: census_rows.py（SHA-256 1cd71004…・XMIN=18・XMAX=70・
+  RBUF=20・ZHI=80・LRU cap 1,600,000・約18秒）が census.txt（810,453 bytes・
+  4,240行+空行80・SHA-256 8e239f52…・tail assert R>=x+z+19 全行成立）を生成し、
+  C11r（rows==80*53=4,240・values range(0,x+z+21)・tail (x+18)%2）が全行を
+  cand18 から再導出（T/P集合・Thue-Morse index・tail）して**443,080点 bad 0**。
+- フル14チェック監査: **overall PASS・総照合点 6,934,616**（part1 6,354,790+
+  C1d 136,746+C11r 443,080）・全bad 0・型523,398・C4t clip 37違反1,012
+  (60,100,100)・merge 1,121,822・tail 192,210 は part1から不変。
+  検証器は part2正本（SHA-256 8ddd0c2f…・52,177 bytes）へ in-place 更新で
+  **part1 12チェック本体は byte 不変**・転写検査も part2 bytesでPASS。
+  決定性: audit.json（a636c187…）・census.txt・preflight-c1d-y18.json・
+  census両部（part1出版bytesと再実行で一致）・転写検査JSON の3実行
+  byte-identical（同一cwd2回+隔離tree/cwd/HOME+env -i+PYTHONHASHSEED=random
+  で隔離側は全出力ゼロ再生成）。
+- fail-closed 8種全捕捉: census.txt欠落/行削除/重複行→FAIL-CLOSED・
+  P-set/T-set改ざん→C11r bad 1・C11r tail反転 (x+18)→(x+19)→bad 4,240
+  （全行）・アンカー誤結合 (16,A16u)→(16,A10u)→C1d bad 1,756・lowR参照ずれ
+  R→R+1→bad 9,372（全lowR点が独立に識別する事実の記録）。各probe後に
+  baselineをbuild bytesとcmp検証し復元。
+- **K1242 を observed→proved に昇格**（同一K項目・K1240/K1237前例）。
+  マージ命題は y=1..18 で全称、tail R>=x+z+19 => (x+18) mod 2、
+  clip 2y+2=38 tight は14族連続（y=5..18）。
