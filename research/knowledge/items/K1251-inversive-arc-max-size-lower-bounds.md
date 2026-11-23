@@ -51,6 +51,18 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/output/arc_swap_q13.json
   role: data
   note: 交換探索によるq=13の再現とk=11未発見の記録
+- path: research/experiments/finite-field-kyouen-20261120/scripts/graph_arc_probe.py
+  role: solver
+  note: 関数のグラフ族をアークとしてテストする予備探索
+- path: research/experiments/finite-field-kyouen-20261120/scripts/graph_field_poly_search.py
+  role: verifier
+  note: F_q上の2次以下の多項式グラフがアークでないことの全数検査（q=5..13）
+- path: research/experiments/finite-field-kyouen-20261120/scripts/graph_random_search.py
+  role: solver
+  note: ランダム関数のグラフアーク探索（5,000サンプル）
+- path: research/experiments/finite-field-kyouen-20261120/scripts/graph_hillclimb.py
+  role: solver
+  note: グラフ空間の山登り（罰則最小化）
 - path: research/experiments/finite-field-kyouen-20261120/output/arc_maxsearch_push.json
   role: data
   note: 予算を増やした追試（値が変わらないことの記録）
@@ -169,6 +181,26 @@ Sonnino の構成値 `(q+5)/2` の比較：
 
 （交換探索は `q ≥ 17` では既知値の再発見にも届かず、この戦略は小さい `q` 向きである。
 `--init` で既知の弧から成長を試みても `k = 現最良+1` は見つからなかった。）
+
+## 構造化部分集合のテスト（グラフ ansatz）
+
+探索が `≈0.65q` で頭打ちになるのは「構造を持つ大きなアークを取り逃がしている」からかもしれない。
+そこで最も単純な構造化族、**アフィンモデルでの関数のグラフ**
+`S = {(a, f(a)) : a ∈ F_q}`（q 点）を総当りで調べた。
+
+- **最大アークがグラフで実現できる場合がある**：q=7 ではサイズ 6（`K=6`）、
+  q=9 ではサイズ 9（`K=9`）のグラフがアークになる（ランダム関数/添字多項式の探索で発見）。
+  q=5 ではランダム関数の多くがアーク（サイズ5）。
+- **しかし F_q 上の多項式のグラフはダメ**：2次以下の多項式 `f(a) = c_2a²+c_1a+c_0`
+  の全組合せ（q=5,7,9,11,13）でグラフがアークになるものは **0 個**。
+- **q ≥ 7 ではランダム関数もほぼダメ**：任意関数を 5,000 個サンプルして完全なグラフアークは
+  q=7,9,11,13 で **0 個**（q=5 のみ多数）。
+- q 点のグラフを目的関数（4点以上を含む円の個数）で山登りしても局所解（q=7 で罰則1、
+  q=9 で4、q=11 で11）に留まる。
+
+**結論**：極大アークは小さい q ではグラフとして実現できるが、
+q ≥ 11 ではグラフ ansatz は一般探索（q=11 で 9）より弱い。
+「構造化族で 0.65q を超える」という目論見は、少なくともグラフ ansatz では成功しなかった。
 
 ## 検証
 
