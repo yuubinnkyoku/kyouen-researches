@@ -22,6 +22,9 @@ artifacts:
   role: verifier
   note: 持ち上げ模型と射影補題（q+2の場合に使う「射影が円錐曲線になる」こと）の検証
 - path: research/experiments/finite-field-kyouen-20261120/output/arc_maxsearch_big.json
+- path: research/experiments/finite-field-kyouen-20261120/scripts/projection_no_conic.py
+  role: verifier
+  note: q=9の極大アークの射影が8-アークで円錐曲線に載らないことの確認
   role: data
   note: 上界と矛盾しない検証済み弧（K≤q+1を満たす）
 scope: 位数q（q奇数、q≥7）のMiquelian反転平面M(q)の弧（どの4点も同一円上にない点集合）の最大サイズK(q)。楕円二次曲面Q^-(3,q)上の一般位置集合としての特徴づけ（K1250）と射影上界、Segre の定理、Bezout、および楕円二次曲面がF_q上の奇数次数曲線を持たないことを使う。
@@ -130,7 +133,9 @@ q ≥ 11 では数値が `≈0.65q` なので上界はまだ緩い。
   Frobenius の作用）を引用して使っている。標準的だが本項では独立証明していない。
 - **`K ≤ q−1` へは同じ論法で進めない**：射影が `(q−1)`-アークになり、
   「`(q−1)`-アークは円錐曲線に含まれる」が必要だが、これは一般には偽
-  （`(q+3)/2` 程度の非円錐 complete arc が存在する）。
+  （`(q+3)/2` 程度の非円錐 complete arc が存在する）。**q=9 で具体的に確認**：
+  極大9-アークを1点から射影すると `PG(2,9)` の 8-アークになり（3点共線なし）、
+  5点を通る円錐曲線は一意だが残り3点はその上にない（`scripts/projection_no_conic.py`）。
 - **偶数 `q` には拡張できていない**：Step 1 の上界が `q+3` になり、Step 2 の
   「oval = conic」も偶数では成り立たない（非円錐 oval が存在）。偶数側の最良は
   K1250 の MDS 経由 `K ≤ q+1`（MDS予想下）である。
