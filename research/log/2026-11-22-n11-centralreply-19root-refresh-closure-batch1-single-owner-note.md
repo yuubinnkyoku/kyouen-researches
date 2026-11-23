@@ -6605,3 +6605,75 @@ s001/s002にとって最初の独立host再現である (rc=45 WIN-HALT時点の
   s001/s002を含む) は本Partのどの時点でもUNKNOWNのまま。nodes数・
   expansions数・ttHits数を勝敗として読まない。WIN/LOSS採用は別宣言の
   adoption Part (pinned fail-closed merger `90711961` 経由) のみ。
+
+## Part BV status update (2026-11-23, verifier): batch-23 s001/s002 第三実装交叉検証完了 - 本host pinned-replica初の独立host再現 + clean WIN一致2/2 (UNKNOWN担保不変)
+
+Part BV (宣言 publication commit `d58afadd`・observed HEAD-before-push
+`d2114935`〔並走finite-field lane docs・非接触〕・実行前に出版) どおり、
+batch-23 (class 31600) WIN行 s001/s002 のpinned第三実装交叉検証と本host
+pinned-replica再現を完遂し、全成果をmainに出版した (verdict不消費)。
+
+- publish-then-execute順序の履行: 宣言 `d58afadd` → A `db195667`
+  (scaffold 35ファイル = scripts 6 + input 7 + sources 14 + val-gate
+  input/published-baseline 8・35/35 fetch-back byte一致) → B `8b6a1048`
+  (outputs 24ファイル = output 20 + val-gate this-host 4・24/24一致) →
+  C `6abf8097` (README + MANIFEST-sha256 59行・2/2一致) → 本status
+  update。全出版bytesはcommit-pinned raw fetch-backでbyte検証済み。
+- 実行 (宣言protocol順・逐次): (1) **rules gate PASS** (verify_tbl
+  `c8c52528…`・replica quads 95,670 == third-impl quads 95,670・triples
+  checked 195,044・mismatch 0)。(2) **val-gate this-host 4/4 node-exact**
+  (jsreplay `84585617…`・published baselineと一致 (wall_s除外): at2m
+  2M exhaustion ×2 (result 0, nodes 2,000,000)・15m基準キー budget 15M
+  (2, 3,651,923)/(2, 5,040,200)・禁止四角 95,670)。(3) **本host
+  pinned-replica再現 4/4 完全一致**: s001 p1/p2 = result 1・nodes
+  5,415,927 (two-pass node-exact・wall 26/25s)・s002 p1/p2 = result 1・
+  nodes 9,329,444 (two-pass node-exact・wall 46/48s)・published batch-23
+  raw fieldsとの一致をaudit G2bで機械検査 (EXHAUSTED 0・mismatch 0・
+  truncation 0)・**s001/s002にとって初の独立host再現** (Part BSのl028
+  と違いbatch-23は単一host出版だった)。(4) **negatives 2/2 GATE_FAIL
+  設計どおり** (ng1 legal count mismatch derived=87 declared=88・ng2
+  stone count mismatch bits=5 declared=6)。(5) **anchors 2/2 本host
+  node-exact** (a/b determinism PASS): k02a clean WIN 9,106,337 exp /
+  4,991,527 ttHits・l1a clean LOSS 7,660,602/3,951,175 (published第三実装値
+  と完全一致)。(6) **targets 2/2 clean WIN一致**: s001 clean WIN
+  (result 1) 6,227,131 exp / 3,553,011 ttHits (wall 18.11/18.47s)・s002
+  clean WIN (result 1) 11,072,137 / 6,076,075 (wall 32.06/32.49s)・
+  cap 300,000,000・wallcap 240s・memo-power=22・**WALL-INCONCLUSIVE 0・
+  DIVERGENCE 0** (pass-one合計 17,299,268・replica行との比率 1.150/
+  1.187)。
+- 監査: audit.py (BV版 `08bdebce…`・schema `n11-centralreply-closure-
+  b23win-thirdimpl-audit-v1`) **ALL 67 GATES PASS**・3回実行byte一致
+  (audit-run1=2=3)・audit-summary.jsonは決定的 (タイムスタンプ不読)・
+  target det-pair改ざん/dir内pin反転/G0 input改ざんの**audit tamper
+  battery 3/3検出** (scratch上・実験files無改変byte検証) + clean control
+  PASS。宣言前に行った**maker全gate PASS** (BV-SCAFFOLD) + 4回byte一致 +
+  **maker tamper battery 6/6検出** (raw pin 1bit・row-audit pin 1bit・
+  README pin 1bit・row-audit内容改変・raw内容改変 (nodes 5415927→
+  5415928)・published-input pin 1bit・T4/T5はsha-pin層で検出) +
+  clean control PASS も確認済み。
+- 意味 (route statementのみ・閉鎖/被覆/secured/root勝敗の主張なし):
+  s001/s002 (22番目・23番目の unconsumed closure WIN候補) は (a) Part BN
+  drive-1 published replica (b) 本host pinned-replica 2-pass node-exact
+  (独立host) (c) 独立第三実装 clean WIN一致 の**3系統裏付け**となった
+  (同一クラス内2WINペアの第三実装交叉検証は Part BF (batch-19 w001/w002)
+  以来2例目・pair型ではa003/k002/l028に続く4,5,6番目の候補のクロス検証)
+  。ただし **verdictは一切消費していない**・採用判断は scrutiny owner
+  C++第二実装 gate pin `9193f5b6…` 待ちで本レーンは代行しない・
+  canonical cache (Part BU採用後 6,287行 `e32a2e44…`) read-only不変・
+  28 unconsumed closure WIN候補の採用状態・簿記は一切不変。
+- 不接触: batch-21/22残留キー・batch-23残留51キー (s003..s053 fileless
+  UNPROBEDのまま)・batch-27 (Part BR) の54キー/scaffold/drive/outputs
+  (BRは並走所有・outputsは本status update時点でもmainに存在せず)・
+  batch-24/25 (y001/y006・i001/i002 WIN行は本Part非接触・次のverifier
+  候補)・fast lane (y=22 universal宣言 `e1e60cd4` は並走非接触)・
+  finite-field lane非接触。
+- UNKNOWN担保: 標準11x11空盤・19 central-reply roots・二石root
+  {49,60}/{59,60}・S2 {59,60}・class 1/2/4・class 31600 (53キーすべて・
+  s001/s002を含む) は本status update時点でも**UNKNOWN**のまま。nodes数・
+  expansions数・ttHits数を勝敗・距離として読まない。
+- 本status update observed HEAD-before-push: `6abf8097…` (本Part
+  commit Cそのもの。並走非接触コミットは y=22 universal single-owner宣言
+  `e1e60cd4` のみ)。push直前に最新mainを再fetchし note blob lock
+  `3c31aa353240c37cae7149bbce445b07e55e436f` (489,824 bytes = 宣言
+  `d58afadd` 版) を再照合する (batch-27 status update等の並走追記が挟まった
+  場合は本節を追記し直し、成立しない場合は簡潔に記録して次回へ回す)。
