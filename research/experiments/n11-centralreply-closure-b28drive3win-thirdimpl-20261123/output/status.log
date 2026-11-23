@@ -1,0 +1,19 @@
+RUN key=ng1 tag=a kind=negative rc=1 out=output/negative/ng1.a.out third,ng1a,5,88,,GATE_FAIL,"legal count mismatch: derived=87 declared=88"
+RUN key=ng2 tag=a kind=negative rc=1 out=output/negative/ng2.a.out third,ng2a,6,87,,GATE_FAIL,"stone count mismatch: bits=5 declared=6"
+RUN key=k02a tag=a kind=anchor rc=0 out=output/anchors/k02a.a.out third,k02aa,5,87,87,1,9106337,4991527,25.98,1297036692683751424,68157440,clean,quads=95670,ttOverwrites=4912053,memoPower=22
+RUN key=k02a tag=b kind=anchor rc=0 out=output/anchors/k02a.b.out third,k02ab,5,87,87,1,9106337,4991527,26.03,1297036692683751424,68157440,clean,quads=95670,ttOverwrites=4912053,memoPower=22
+RUN key=l1a tag=a kind=anchor rc=0 out=output/anchors/l1a.a.out third,l1aa,5,116,116,2,7660602,3951175,22.20,13019119616,16448,clean,quads=95670,ttOverwrites=3466722,memoPower=22
+RUN key=l1a tag=b kind=anchor rc=0 out=output/anchors/l1a.b.out third,l1ab,5,116,116,2,7660602,3951175,22.53,13019119616,16448,clean,quads=95670,ttOverwrites=3466722,memoPower=22
+RUN key=aa008 tag=a kind=target rc=0 out=output/targets/aa008.a.out third,aa008a,5,85,85,1,6247727,3349810,16.76,1171516445255794704,0,clean,quads=95670,ttOverwrites=2067756,memoPower=22
+RUN key=aa008 tag=b kind=target rc=0 out=output/targets/aa008.b.out third,aa008b,5,85,85,1,6247727,3349810,16.84,1171516445255794704,0,clean,quads=95670,ttOverwrites=2067756,memoPower=22
+RUN key=aa009 tag=a kind=target rc=0 out=output/targets/aa009.a.out third,aa009a,5,91,91,1,8663677,4539319,23.52,1747977197559218176,0,clean,quads=95670,ttOverwrites=4469413,memoPower=22
+RUN key=aa009 tag=b kind=target rc=0 out=output/targets/aa009.b.out third,aa009b,5,91,91,1,8663677,4539319,23.38,1747977197559218176,0,clean,quads=95670,ttOverwrites=4469413,memoPower=22
+PROTOCOL [1] rules-gate rc=0 replica quads 95670 mine quads 95670 | triples checked 195044 mismatches 0
+PROTOCOL [2] val-gate 4/4 node-exact: at2m result=0 nodes=2000000 match | at2m result=0 nodes=2000000 match | first result=2 nodes=3651923 match | second result=2 nodes=5040200 match
+PROTOCOL [3] negatives ng1/ng2 GATE_FAIL rc=1 x2 (legal count mismatch derived=87 declared=88 / stone count mismatch bits=5 declared=6)
+PROTOCOL [4] anchors 4/4: k02a clean result=1 exp=9106337 ttH=4991527 (a=25.98s b=26.03s det-pair PASS) | l1a clean result=2 exp=7660602 ttH=3951175 (a=22.20s b=22.53s det-pair PASS) | published anchor values reproduced
+PROTOCOL [5] replica aa008 p1 result=1 nodes=5270340 wall=24s | p2 result=1 nodes=5270340 wall=25s node-exact vs published raw result=1 nodes=5270340 | replica aa009 p1 result=1 nodes=7319605 wall=35s | p2 result=1 nodes=7319605 wall=36s node-exact vs published raw result=1 nodes=7319605 | EXHAUSTED 0 mismatch 0 | drive-3 rows' first independent-session reproduction
+PROTOCOL [6] target aa008 third-impl a result=1 exp=6247727 ttH=3349810 wall=16.76s | b result=1 exp=6247727 ttH=3349810 wall=16.84s | verdict-agree third=1 replica=1 | det-pair PASS | target aa009 third-impl a result=1 exp=8663677 ttH=4539319 wall=23.52s | b result=1 exp=8663677 ttH=4539319 wall=23.38s | verdict-agree third=1 replica=1 | det-pair PASS | WALL-INCONCLUSIVE 0 DIVERGENCE 0 | clean WIN agreement 2/2
+PROTOCOL [7] audit x3 byte-identical: ALL 101 GATES PASS; verdict agreements 2/2 (WIN=2 LOSS=0); inconclusive=0; total third-impl expansions pass-one=14911404
+PROTOCOL [8] maker tamper battery 8/8 DETECTED (T1 raw p1 nodes+1 / T2 row-audit probed 9->10 / T3 README wording flip / T4 status PASS verdict flip / T5 published-input legal flip / T6 BF anchor lo+1 / T7 batch-keys s5_index +1 / T8 merged-cache adopted-row nodes+1; all sha/battery fail-closed; efficacy-asserted; scratch /tmp; experiment dir bytes unchanged)
+PROTOCOL [9] audit tamper battery 4/4 DETECTED (T1 pin-third / T2 target-aa008-det-pair / T3 input-aa009-matches-rows / T4 unadopted-pin-merged-cache-aa008) + clean control PASS; experiment dir bytes unchanged
