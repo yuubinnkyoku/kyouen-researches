@@ -545,6 +545,10 @@ def cand_y1_allz(z, x, R):
     return cand_y1(z, x, R)
 
 
+def q(n):
+    return n if n % 2 == 1 else n - 1
+
+
 def U(k, z, R):  # published unified slice closed form (verbatim)
     if z < 1:
         raise ValueError
@@ -1029,7 +1033,7 @@ def run_c9b():
         if not (V2 == set(exc04[0]) and V1F == set(exc04[1]) and t == exc04[2] and tv == exc04[3]):
             bad.append([(0, 4), sorted(V2), sorted(V1F), t, tv])
     for z in range(0, 76):
-        for x in range(1, z + 40):
+        for x in range(1, z + 41):
             n += 1
             d = x - z
             row = _row(z, x)
