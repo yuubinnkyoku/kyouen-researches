@@ -4691,3 +4691,59 @@ published batch-19 WIN行 w001/w002をpinned第三実装で解き、出版まで
   `research/experiments/n11-centralreply-closure-class12457-batch20-20261123/`。
 - 本amendment observed HEAD-before-push: 723eb637c1fcfbec8d04a40fa7f634de65615c79
   (push直前にnote blob sha1を再照合し、競合時は再fetchして本節を追記し直す)。
+
+## Part BH (solver, amendment 2026-11-23): batch-19 residual w003..w053 continuation (class 16513 enumeration - WIN-CONTINUE事前登録)・verdict不消費・実行前に出版
+
+Part BE (batch-19 class 16513) は事前登録のWIN-HALT規則により最初のwaveで停止した。
+published batch-19 READMEの予約文言 (「将来のPartが同じbatchを継続できる」「row-audit
+はbatch完走時点 (残51キーの継続Part) に全行機械検証する」) に従い、残51キー
+w003..w053 (fresh・一度も実行されていない) の単一オーナー実行を宣言する
+(本amendmentより先にmainに存在するbatch-19 residual continuationスコープの対抗宣言・
+amendmentがある場合は本宣言を破棄して着手しない。branch / PRは作らない)。
+
+- WIN-CONTINUE事前登録 (Part AW batch-14 residualの先例と同一の根拠): class 16513の
+  全子LOSS閉包ルートはpublished w001/w002 WIN honest labelにより既に反駁済み。
+  残余キーのprobeはunknown数最小化のための列挙であり、ここでのさらなるWIN-HALTに
+  情報価値はない。よってresidual installmentでは、published runbatch.shのrc=45
+  (WIN) が発火したキーはhonest WIN labelのみで記録し、続けてdrive driverを
+  再起動して51キー完遂まで列挙を続ける。決定論mismatch -> 即HARD-STOP rc=42
+  (以後のdrive起動も行わずbatch全体を停止)。budget枯渇 (result 0) ->
+  honest UNKNOWN labelで次キーへ (同条件再probe禁止)。
+- 新規scaffoldなし。published batch-19 dir
+  `research/experiments/n11-centralreply-closure-class16513-batch19-20261123/`
+  を正本としてそのまま使用する: input/batch-keys.json (sha256 `9609aaf3…`・53キー)・
+  53枚input CSV (各MANIFEST pin)・scripts `jsreplay.js` `84585617…` /
+  `runbatch.sh` `f591f8c2…` / `runwave.sh` `8efd78c2…` / `drive_batch19.sh`
+  `35024890…` / `row_audit_batch19.py` `e6526f75…` / `make_batch19_keys.py`
+  `2b672888…`。published MANIFEST-sha256.txt掲載の74ファイルを本hostで
+  sha256再検証し74/74 byte一致を宣言前に機械確認済み。
+- val-gate (実行前・本host): batch-19/20と同一の4アンカー。at2m 2行 ->
+  result 0 / nodes 2,000,000 node-exact、15m 2行 -> result 2 (2,3,651,923) /
+  (2,5,040,200) node-exact、禁止四角 95,670 x4、`# replay_done` x4
+  (truncationなし)。published val-gate/*.this-host.out基準線とnode数完全一致を
+  実行の前提条件とする。
+- protocol: 2-pass fresh-cold node-exact、budget 15,000,000、
+  1 solver / 1 row / 1プロセス、publish=ALL。実行はpublished drive driver
+  (1回起動あたりtimeout 260秒有界・残キー奇偶分割 worker最大2 = 2-core host・
+  drive自体はbatch意味論を持たない) を渡して反復起動する。完了済み行
+  (w001/w002・published raws) は再実行しない。中断断片はpublished completeness
+  guard (`# replay_done` 検査) がfresh-cold再実行する。
+- row-audit: 列挙完遂後、`row_audit_batch19.py` (published byte) により53キー
+  全行の機械検証を行う。これはBE READMEが予約した「継続Partで全行機械検証する」
+  役割の履行である。
+- verdict不消費: canonical exact-S5 verdict cache (6,182行 `0b594f7e…`) を含め
+  cache書込みは一切しない。LOSS行は採用候補のみ (消費は別宣言adoption Partが
+  pinned fail-closed mergerで実行)。新規WIN行はunconsumed closure WIN候補の
+  追加のみで採用しない (scrutiny owner C++第二実装 gate pin `9193f5b6…`のまま)。
+  19 unconsumed closure WIN行 (w001/w002含む) は読み書きとも非接触。
+- 不接触: 並走中のbatch-20 (Part BG) には一切触れない。batch 1..18 + 各residual
+  packet・{60,27}系レーンは非接触。batch-19スコープ内のw003..w053のみを扱う。
+- UNKNOWN担保: 標準11x11空盤・19 central-reply roots・class 16513 (残51子も含む)・
+  全キーは本Partのどの時点でもUNKNOWNのまま。nodes数・legal数を勝敗として読まない。
+  閉鎖・被覆・secured主張は一切しない。
+- セッション制約: 本Partが1セッションで51キー全てを完了できない可能性がある。
+  その場合は完了行のみを誠実出版 (verdictを出力していないtruncated断片は
+  出版対象から除外し再実行に備える) し、残りはfreshのまま次の継続Partに
+  引き継ぐ。
+- 本amendment observed HEAD-before-push:
+  `358cac13521bd9cd075c7128763147f7b2511447` (batch-20 Part BG scaffold直後のmain・push直前にnote blob sha `becd61ac…`を再照合し、競合時は再fetchして本節を追記し直す)
