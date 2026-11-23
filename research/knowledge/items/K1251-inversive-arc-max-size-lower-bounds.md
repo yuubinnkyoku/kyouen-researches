@@ -128,7 +128,7 @@ ScienceDirect・arXiv・EuDML を検索した限り、反転平面の弧の上�
 （Hirschfeld–Storme, "The packing problem …: update 2001", Table 3.1：`q` 奇数 `> 3` で
 `m(3,q) = q+1` かつ `(q+1)`-アークは normal rational curve（Segre 1955）、`q = 2^h ≥ 8` でも
 `m(3,q) = q+1`）で、これから `K(q) ≤ q+1` が出るのみ。
-⇒ **`K ≤ q`（q 奇数, q≥9、K1252）は文献にない**。
+⇒ **`K ≤ q`（q ≥ 7、K1252）は文献にない**。
 
 **偶数 q**：Sonnino の一連の論文はすべて奇数位数。偶数位数（Miquelian および Suzuki–Tits
 ovoid 由来）については構成も上界も小さい q のデータも見つからない。
