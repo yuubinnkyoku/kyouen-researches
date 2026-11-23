@@ -4931,3 +4931,61 @@ canonical exact-S5 verdict cacheへ採用し、refresh再監査・delta extracto
 - 本status update observed HEAD-before-push: push直前に最新mainを再fetch
   し、note blob lock `e398f02b2c7cabe20768944109e14dfbef432bc8` を再照合
   する (競合時は本節を追記し直す)。
+
+## Part BJ (solver, amendment 2026-11-23): closure class 12643 exact-S5 probe batch 21 (実行前に宣言・verdict不消費)
+
+長期レーン (n11 central-reply closure) の次のsolverバッチとして、batch-21
+(class 12643) を宣言する (batch-21 / class 12643 probeというスコープに対して
+本amendmentより先にmainに存在する対抗宣言・amendmentがある場合は本宣言を
+破棄して着手しない。branch / PRは作らない)。
+
+- 引き継ぎ (機械確定・Part BI status updateの分類delta): class 12457採用
+  (canonical 6,235行 `f6649fe3`・free_now 38) の結果、closure候補表
+  (`d57a7609…`, 807行) でclass 12643 (mask `[1152921504606847088, 0]`) は
+  **rank 17に繰り上げ**られた (unknown 53・groups 4・first group first=4/
+  third=5)。rank 1..16は反駁証拠保持または未着手を含む既知の状態であり、
+  Part BG宣言 `b4c4ac2d` の選定規則 (既知WIN費用子を持つクラスは除外) を
+  引き継ぐ。
+- 対象: `research/experiments/n11-centralreply-closure-class12643-batch21-20261123/`。
+  closure候補表rank 17クラス12643の未確定canonical S5子53キー
+  (Part BI scenario probe-worklist `3152855d` のserving_class=12643行
+  53行・probe_order順・Board再計算の合法手数74..96固定)。
+- 本hostの事前preflight (read-only・宣言に先行して実施した点を誠実記録・
+  2026-11-23実施): (1) 53行53キー一意 (キー重複なし機械確認)。(2) 採用後
+  canonical cache 6,235行 (`f6649fe3`) に53キー **0 hits**。(3) quarantine
+  registry (`81d23160…`) にlo文字列レベルで **0 hits**。(4) route-alive
+  機械証拠: published Part BI closure候補表 (`d57a7609…`) にclass 12643が
+  rank 17で残存していること自体が、refresh規則 (既知WIN費用子を持つクラス
+  は除外される) による「既知WIN子不在」の機械帰結である。
+- 機材 (全てpublished byte・実行時にsha照合): pinned replica `jsreplay.js`
+  sha256 `84585617…` (batch-19/20正本からbyte-copy)・`runbatch.sh` `f591f8c2…`・
+  `runwave.sh` `8efd78c2…`・drive driver (batch-20版 `0b1d6b38…`相当品を
+  batch-21へadapt)・row audit (`3197c4dc…`相当品をbatch-21へadapt)・
+  key maker (batch-20版 `1dceb05e…`相当品をbatch-21へadapt・canonical
+  6,235行0-hit gate・quarantine gate・prior-packets overlap gate・
+  route-alive gate込み)。
+- val-gate (実行前・本host): batch-19/20と同一の4アンカー (at2m 2行 →
+  result 0 / nodes 2,000,000 node-exact・15m 2行 → result 2 /
+  (2,3651,923)/(2,5,040,200) node-exact・禁止四角 95,670 x4・
+  `# replay_done` x4)。published val-gate基準線とnode数完全一致を実行の
+  前提条件とする。
+- protocol: 2-pass fresh-cold node-exact・budget 15,000,000・1 solver / 1 row /
+  1プロセス・publish=ALL・worker最大2 (2-core host)・drive起動は260秒有界。
+- 停止規則 (事前登録): 決定論mismatch → 即時HARD-STOP rc=42 (batch全体停止)。
+  WIN (result 1) → 即時HALT rc=45・honest WIN labelで記録 (verdict不消費・
+  採用はscrutiny owner C++第二実装 gate pin `9193f5b6…`のまま)。
+  budget枯渇 (result 0) → honest UNKNOWN (同条件再probe禁止)。
+- 消費規則: 2-pass一致かつresult 2 (LOSS) のキーのみincrement cache候補。
+  採用は別宣言adoption Partがpinned fail-closed union merger (byte-copy pin
+  `90711961…`) で実行する。本batch単体では閉鎖・被覆・secured・root勝敗の
+  主張を一切しない。
+- 不接触: Part BH (batch-19 residual w003..w053・宣言 `de1383a7`・別オーナー)
+  には一切触れない。batch-20 (採用済み・Part BI完了) への追記もしない。
+  y=18/y=19 fast lane・K1058系・sixth-cost系は非接触。
+- UNKNOWN担保: 標準11×11空盤・19 central-reply roots・二石root {49,60}/{59,60}・
+  S2 {59,60}・class 1/2/4・class 12643 (53キーすべて含む) は本Partのどの時点でも
+  UNKNOWNのまま。nodes数・legal数・worklist数を勝敗として読まない。
+- 本amendment observed HEAD-before-push: `e7c7595425442c3af35ad4dd74445b515dd071a7`
+  (session log Continuation 48直後のmain・push直前にnote blob sha1
+  `28a9c7b952e25537d77b15136463e06f5f1a75d4`を再照合し、競合時は再fetch
+  して本節を追記し直す)。
