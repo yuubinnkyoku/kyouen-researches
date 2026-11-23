@@ -1,0 +1,44 @@
+PASS input-a003-matches-rows 5,10412339930666631168,4,82 vs 5,10412339930666631168,4,82
+PASS input-k02a-matches-rows 5,1297036692683751424,68157440,87 vs 5,1297036692683751424,68157440,87
+PASS input-l1a-matches-rows 5,13019119616,16448,116 vs 5,13019119616,16448,116
+PASS input-ng1-matches-rows 5,1297036692683751424,68157440,88 vs 5,1297036692683751424,68157440,88
+PASS input-ng2-matches-rows 6,1297036692683751424,68157440,87 vs 6,1297036692683751424,68157440,87
+PASS pin-third_impl.js 08ea958ff59c3234ec5ac55c5c40689bd0999a34e101a88ea0546800cc4a1998
+PASS pin-verify_tbl.js c8c52528f70b3a9b438edc3feb4e432fbe705d6be21650383d3955efc6790251
+PASS pin-jsreplay.js 845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df
+PASS rows-schema n11-centralreply-closure-b21win-thirdimpl-input-v1
+PASS target-count 1 (1 b21 WIN row)
+PASS rules-gate-quads replica quads 95670 mine quads 95670
+PASS rules-gate-tbl-mismatch0 ['triples checked 195044 mismatches 0']
+PASS anchor-k02a-present a/b
+PASS anchor-k02a-a-clean result=1 reason=clean
+PASS anchor-k02a-a-expansions exp=9106337 vs 9106337, ttH=4991527 vs 4991527
+PASS anchor-k02a-a-legal 87 vs 87
+PASS anchor-k02a-a-key 1297036692683751424:68157440
+PASS anchor-k02a-b-clean result=1 reason=clean
+PASS anchor-k02a-b-expansions exp=9106337 vs 9106337, ttH=4991527 vs 4991527
+PASS anchor-k02a-b-legal 87 vs 87
+PASS anchor-k02a-b-key 1297036692683751424:68157440
+PASS anchor-k02a-det-pair 9106337 vs 9106337
+PASS anchor-l1a-present a/b
+PASS anchor-l1a-a-clean result=2 reason=clean
+PASS anchor-l1a-a-expansions exp=7660602 vs 7660602, ttH=3951175 vs 3951175
+PASS anchor-l1a-a-legal 116 vs 116
+PASS anchor-l1a-a-key 13019119616:16448
+PASS anchor-l1a-b-clean result=2 reason=clean
+PASS anchor-l1a-b-expansions exp=7660602 vs 7660602, ttH=3951175 vs 3951175
+PASS anchor-l1a-b-legal 116 vs 116
+PASS anchor-l1a-b-key 13019119616:16448
+PASS anchor-l1a-det-pair 7660602 vs 7660602
+PASS neg-ng1-failclosed {'raw': 'third,ng1a,5,88,,GATE_FAIL,"legal count mismatch: derived=87 declared=88"', 'stub': 'third', 'gate_fail': 'GATE_FAIL,"legal count mismatch: derived=87 declared=88'}
+PASS neg-ng2-failclosed {'raw': 'third,ng2a,6,87,,GATE_FAIL,"stone count mismatch: bits=5 declared=6"', 'stub': 'third', 'gate_fail': 'GATE_FAIL,"stone count mismatch: bits=5 declared=6'}
+PASS target-a003-present a/b
+PASS target-a003-a-key 10412339930666631168:4
+PASS target-a003-a-legal 82 vs 82
+PASS target-a003-a-quads 95670
+PASS target-a003-b-key 10412339930666631168:4
+PASS target-a003-b-legal 82 vs 82
+PASS target-a003-b-quads 95670
+PASS target-a003-det-pair a=(1,5806719,clean) b=(1,5806719,clean)
+PASS target-a003-verdict-agree third=1 replica=1
+ALL 43 GATES PASS; verdict agreements 1/1 (WIN=1 LOSS=0); inconclusive=0; total third-impl expansions pass-one=5806719
