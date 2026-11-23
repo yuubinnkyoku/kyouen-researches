@@ -31,6 +31,8 @@ static int *allowed, *pos, nallowed;
 static u128 *bucket[128];
 static long long bcount[128];
 static long long first_g[128];
+static int probe_g[4] = {-1, -1, -1, -1};
+static long long probe_children[128];
 
 static inline int popcount128(u128 x) {
     return __builtin_popcountll((uint64_t)x) + __builtin_popcountll((uint64_t)(x >> 64));
@@ -217,6 +219,7 @@ int main(int argc, char **argv) {
                 if (g < 64) seen_g |= (1ULL << g);
                 nmoves++;
                 if (s == 0) first_g[g]++;
+                if (s == 3 && mask == 7) probe_children[g]++;
                 if (!child_misere) misere_win = 1;
             }
             int g = 0;
@@ -226,6 +229,10 @@ int main(int argc, char **argv) {
             ghist[g]++;
             map_put(&curmap, mask, (uint16_t)(g | (misere_win << 8)));
             if (s == 0) root_val = (uint16_t)(g | (misere_win << 8));
+            if (s >= 1 && s <= 3) {
+                u128 probe = (s == 1) ? 1 : (s == 2) ? 3 : 7;
+                if (mask == probe) probe_g[s] = g;
+            }
         }
         map_free(&nextmap);
         nextmap = curmap;
@@ -240,5 +247,8 @@ int main(int argc, char **argv) {
         if (ghist[g]) printf("GRUNDY %d %lld\n", g, ghist[g]);
     for (int g = 0; g < 128; g++)
         if (first_g[g]) printf("FIRSTMOVE %d %lld\n", g, first_g[g]);
+    printf("PROBE %d %d %d\n", probe_g[1], probe_g[2], probe_g[3]);
+    for (int g = 0; g < 128; g++)
+        if (probe_children[g]) printf("PROBE_CHILDREN %d %lld\n", g, probe_children[g]);
     return 0;
 }

@@ -56,6 +56,8 @@ static int *allowed, *pos, nallowed;
 
 static uint64_t *bucket[64];     // safe-position masks by size
 static long long first_g[64];
+static int probe_g[4] = {-1, -1, -1, -1};
+static long long probe_children[64];
 static long long bcount[64];
 
 /* ----------------------------- phase 1 ----------------------------- */
@@ -240,6 +242,7 @@ int main(int argc, char **argv) {
                 if (g < 64) seen_g |= (1ULL << g);
                 nmoves++;
                 if (s == 0) first_g[g]++;
+                if (s == 3 && mask == 7ULL) probe_children[g]++;
                 if (!child_misere) misere_win = 1;
             }
             int g = 0;
@@ -249,6 +252,10 @@ int main(int argc, char **argv) {
             ghist[g]++;
             map_put(&curmap, mask, (uint16_t)(g | (misere_win << 8)));
             if (s == 0) root_val = (uint16_t)(g | (misere_win << 8));
+            if (s >= 1 && s <= 3) {
+                uint64_t probe = (s == 1) ? 1ULL : (s == 2) ? 3ULL : 7ULL;
+                if (mask == probe) probe_g[s] = g;
+            }
         }
         // swap: current becomes the child map for the next (smaller) size
         map_free(&nextmap);
@@ -264,5 +271,8 @@ int main(int argc, char **argv) {
         if (ghist[g]) printf("GRUNDY %d %lld\n", g, ghist[g]);
     for (int g = 0; g < 64; g++)
         if (first_g[g]) printf("FIRSTMOVE %d %lld\n", g, first_g[g]);
+    printf("PROBE %d %d %d\n", probe_g[1], probe_g[2], probe_g[3]);
+    for (int g = 0; g < 64; g++)
+        if (probe_children[g]) printf("PROBE_CHILDREN %d %lld\n", g, probe_children[g]);
     return 0;
 }
