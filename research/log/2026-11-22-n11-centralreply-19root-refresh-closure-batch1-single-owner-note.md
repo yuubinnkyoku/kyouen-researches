@@ -5798,3 +5798,54 @@ batch-24は、batch-23 status update 2で予定したrunner-up rank 20 class 109
   legal数を勝敗として読まない。WIN/LOSS採用は別宣言の adoption Part
   (pinned fail-closed merger 90711961) 経由のみ・scrutiny owner C++
   第二実装 gate 9193f5b6 待ちは代行しない。
+
+## Part BP status update (batch-25 実行結果、2026-11-23)
+
+(observed HEAD: 3b1a6283・concurrent non-contact commits fd2c12dd
+(K1252) を確認のうえ線形続行。fetch-back済み出版状況に基づく追記)
+
+- drive-1 は宣言commit `b54fbdd6` の事前登録stop ruleどおり
+  **WIN-HALT rc=45 (両worker)** で完了 (2026-11-23T06:58:54Z..07:02:34Z・
+  fragmentゼロ・truncated再実行ゼロ・budget 15M・2-pass fresh cold)。
+- **i001 WIN (honest label)**: key (1152921505277935616, 1081344)・
+  s5 68580・legal 88・membership 4・nodes 13,251,132 (budget 15M内)・
+  two-pass node-exact (wall 150/68s)。**26番目の unconsumed closure
+  WIN 候補**。
+- **i002 WIN (honest label)**: key (3458764514357411840, 1081344)・
+  s5 191299・legal 82・membership 4・nodes 7,207,180 (budget 15M内)・
+  two-pass node-exact (wall 77/75s)。**27番目の unconsumed closure
+  WIN 候補**。
+- 残り51キー (i003..i053) は fileless UNPROBED。
+- row-audit-winhalt PASS (schema
+  n11-centralreply-closure-class30565-batch25-rowaudit-winhalt-v1・
+  json sha256 `cc84d1b3…`): completed 2 (WIN 2・LOSS 0・exhausted 0)・
+  3回実行byte一致・tamper battery 3/3検出 (p1 verdict反転 /
+  未probeキー i010への偽verdict行 / verdict行 i002除去・scratch上で
+  実施し実験filesは無改変)・clean control PASS。
+- 出版3コミット (fetch-back byte照合済み): scaffold 2cc4a69a (73
+  files・73/73 blob一致)・outputs 3b1a6283 (6 files・6/6一致)・
+  README+MANIFEST-sha256.txt 79行 573099b4 (README blob 5c6fe73d…・
+  MANIFEST blob 6b5a933c…・raw sha256 eb649458…)。
+- 意味 (route statementのみ): i001/i002 の2独立WIN子により (採用
+  された場合) **class 30565 の全LOSS閉包ルートは反駁証拠を持つ**
+  (4batch連続の同型反駁パターン)。ただし verdictは一切消費してい
+  ない・採用判断は scrutiny owner C++第二実装 gate pin `9193f5b6…`
+  待ち (本レーンは代行しない)。class 10968・23964 はblocked
+  (packet交差・NOT route-dead)・class 5690 は route-dead
+  (receipt WIN子 209644) のまま。canonical cache 6,235行
+  f6649fe3… は read-only・不変。
+- 次回 (batch-26) の選定は **27-WIN交積** (25 + i001 (s5 68580)・
+  i002 (s5 191299) の unconsumed set) の反駁簿記でmaker内で機械
+  選定する。当面のroute-alive候補は rank 24 class 1849 (runner-up)・
+  rank 26 class 13342 (backup)。rank 25 class 5690 はroute-dead
+  (known WIN子 209644) のため選定対象外。PKT-collision blockedの
+  10968・23964は継続。27-WIN交積の出現で反駁状況が変わるため
+  EXPECTED_RANKS を再拡張して再導出必須。
+- **標準11×11空盤・19 central-reply roots・二石root {49,60}/{59,60}・
+  S2 {59,60}・class 1/2/4・class 10968・class 23964・class 16957・
+  class 30565 (53キーすべて・i001/i002を含む) はどの時点でもUNKNOWN
+  のまま。** nodes数・expansions数を勝敗として読まない。
+- note blob lock chain: `d8cf204b…` (Part BN) → `c108a4df…` (Part BO
+  宣言) → `85fe6d79…` (Part BO status) → `79935c46…` (Part BP宣言)
+  → 本status update追記後のblobはpush時にfetch-backして次回ラン用
+  に記録する。
