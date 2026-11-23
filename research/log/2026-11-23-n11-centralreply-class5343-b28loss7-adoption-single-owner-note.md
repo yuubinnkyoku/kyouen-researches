@@ -1,17 +1,17 @@
 # 単一オーナー宣言: batch-28 (class 5343) 7-LOSS行 adoption — Part CO（仮採番）publish-then-execute
 
-- 2026-11-23T20:2xZ 初回出版。単一オーナー: 本Partのadoption实行体（Vibe長期レーン）。
+- 2026-11-23T20:2xZ 初回出版。単一オーナー: 本Partのadoption実行体（Vibe長期レーン）。
 - observed HEAD-before-push: `891c70e2a4deb1f92f00976289c161a8d73b8ce6`
   （K1272 lane の experiment outputs 出版。非接触。直前 `701064f1` inversive-plane
   handoff note・非接触、`4be51cb6` K1272 宣言・非接触、`952897e5` K1252 scope note・非接触）。
 - 対抗宣言チェック: `research/log` の 2026-11-23 17:30Z 以降のコミット列
   （CJ 42cecf36 / CL 7a184e92 / CM 27217816 / CK ad269701 / CG takeover宣言 d5e9acc2 /
   CM完了 2102800b / CK完了 85d26a2c / CN宣言 11f2b668 / CN完了 13fe1cc6 / K-series各種）を確認。
-  **batch-28 loss-7 adoption の宣言・实行・出版は存在しない。レーンは空いている。**
+  **batch-28 loss-7 adoption の宣言・実行・出版は存在しない。レーンは空いている。**
   Part CG takeover（aa006/aa007 third-impl、18:01Z宣言以降 outputs無く停滞）と batch-29/class 2251
   （Part CI, scaffold c6ae987a, outputs停滞）は本宣言と非接触（本Partは優先度判断により手を触れない）。
 - 共有入力はHEAD `4be51cb6` でcurl fetch-back照合済み（8/8一致。以後の `701064f1`/`891c70e2`
-  はresearch/log・K1272实验dへの追加のみで本Partの入力ファイル非接触）:
+  はresearch/log・K1272実験dirへの追加のみで本Partの入力ファイル非接触）:
   BASE cache 3124461b…（Part CH正準6,294行）・CH reaudit outputs（summary 76cad2a1…/
   closure baa2db13…/per-root-coverage 75e59441…）・drive-4 kit MANIFEST 1e4024f8…（150ファイル）・
   drive-5 kit MANIFEST e2d81055…（200ファイル）・batch-keys af19208f…・drive-5 status.log
@@ -23,7 +23,7 @@
 ＋ batch-28 の7新規LOSS行**（class 5343; aa015/aa017/aa018/aa023/aa024/aa029/aa036;
 s5 164462/170101/173654/193820/196053/199714/199721; nodes合計 38,784,669）を、
 pinned byte-clone fail-closed union merger（`s5_union_merge.py`, sha256 `907119610034fb2aebfde012550a4129dfa3b086c6de11194e856747ac74606a`）
-で採用する。配下はすべて实验ディレクトリ
+で採用する。配下はすべて実験ディレクトリ
 `research/experiments/n11-centralreply-class5343-loss7-adoption-reaudit-20261123/`。
 
 - aa003 は Part CH で採用済み。**再送しない**（incrementは7行のみ。manifestにBASE一貫ゲートを置く）。
@@ -36,7 +36,7 @@ pinned byte-clone fail-closed union merger（`s5_union_merge.py`, sha256 `907119
   機械ゲートで示す）。
 - 統合後cache行数 6,301（WIN 158 / LOSS 6,143）。
 
-## 公式实行プロトコル（宣言後に实行、全ステップこのhostでbyte再現）
+## 公式実行プロトコル（宣言後に実行、全ステップこのhostでbyte再現）
 
 D1. maker（`scripts/make_increments_b28loss7.py`）×4 byte-stable:
     両キット全ファイルsha検証（150+200）、全54キー2-pass node-exact、
@@ -47,8 +47,8 @@ D1. maker（`scripts/make_increments_b28loss7.py`）×4 byte-stable:
 D2. merger selftest + merge ×3 byte-identical（出力tmp命名のため出力名は63B短縮名
     `merged-exact-s5-chain-plus-b28loss1-plus-b28loss7-20261123.cache`）＋ merge-audit 3通。
 D3. refresh（`reaudit/scripts/refresh_adoption_b28loss7.py`）×3 byte-identical
-    ＋隔離实行（`env -i`・別tree・PYTHONHASHSEED=random）。
-D4. extractor（`scripts/compare_deltas_b28loss7_adoption.py`）×4 byte-identical＋隔離实行:
+    ＋隔離実行（`env -i`・別tree・PYTHONHASHSEED=random）。
+D4. extractor（`scripts/compare_deltas_b28loss7_adoption.py`）×4 byte-identical＋隔離実行:
     17 sha pin（両drive kit MANIFEST含む）＋キット全文件再検証、manifest・両row-audit意味ゲート、
     全54キー独立2-pass raw再検証（drive-5）、6キーはdrive-4 cross-drive一致（aa036はdrive-5のみ）、
     aa003 BASE一致 (2, 4070373)≡raw、scen==base+7、verdict count 6294(158/6136)→6301(158/6143)、
@@ -61,17 +61,17 @@ D5. tamper battery（`scratch tree`、Part CHの12種踏襲＋manifestゲート�
 D6. 出版順: A= scripts 4（maker/merger byte-clone/refresh/extractor）→ B= increment+manifest+merge-audit×3
     → C= merged cache → D= reaudit outputs（summary/closure/per-root-coverage; probe-worklistは設計どおり非出版）
     ＋ decomp-deltas json → E= README + MANIFEST-sha256。
-D7. 各push後にfetch-back sha256照合。競合・同時書き込み・取得失敗時は無理せず記録して次回实行に回す。
+D7. 各push後にfetch-back sha256照合。競合・同時書き込み・取得失敗時は無理せず記録して次回実行に回す。
 
 完了時: `research/log/2026-11-23-part-co-b28loss7-adoption.md` 完了log、
 kyouen knowledge `KNOWLEDGE.md` 冒頭エントリ更新。
 
-## 宣言前探査の全開示（規約に従い、宣言前に本hostで实行・観測した数値を全て列挙）
+## 宣言前探査の全開示（規約に従い、宣言前に本hostで実行・観測した数値を全て列挙）
 
-本セッションの採番 Part CO 宣言に先立ち、以下を**宣言前**に实行済み（全て決定論的・再現済み）:
+本セッションの採番 Part CO 宣言に先立ち、以下を**宣言前**に実行済み（全て決定論的・再現済み）:
 
 1. キット取得・検証: drive-4 150ファイル + drive-5 200ファイルの全sha256検証パス（manifestと一致）。
-2. maker自前实装→4回 byte-stable:
+2. maker自前実装→4回 byte-stable:
    increment `increment-b28loss7-20261123.cache` 7行
    sha256 `bd5ef7d7632816006bd5a74349bf703a8dd3251e3a550a33e7ae7a0253abe382`、
    manifest（schema `b28loss7-increments-manifest-v1`）
@@ -86,15 +86,15 @@ kyouen knowledge `KNOWLEDGE.md` 冒頭エントリ更新。
    sha256 `4727fb2b991d78107a67aa3ef2bf533be042907214216f8d363a23f884228179`、
    closure-classes.csv `9d3965d94db9fc8005fda1cd24aadf1b515a799e5558448a391489cd24caa85d`、
    per-root-coverage.csv `8e6fb981ee637d896cbf6d378d0543db06d5552da725cba2fa24130cc6fd4809`。
-5. extractor完成→×3 byte-stable PASS（实行約3秒）: decomp-deltas json
+5. extractor完成→×3 byte-stable PASS（実行約3秒）: decomp-deltas json
    sha256 `39b2802d78c7e2c8b54262bfc994d96ed123dcb02ac400f2abce388a2556c74e`、
    script sha256 `67b2b3c583d569b672a40ef4d8edc0d7d0086b74d8e6eeb3aef2d20406d1fbe2`。
-   初回实行で genuine gate hit: churn 431クラス中3クラス（5596等）は
+   初回実行で genuine gate hit: churn 431クラス中3クラス（5596等）は
    **両側 excluded_now 安定のまま rank移動**する純粋ランキング移動であり、
    「両側unknown」を要求した初版ゲートが過剰だった。ゲートを「再計算状態不変
    （分布 pin {unknown: 428, excluded_now: 3}）」に修正して緑復帰した。
-   宣言前探査で見つかった設計修正として開示し、修正後ゲートを公式实行に使用する。
-6. 事前観測された事後採用数値(**全てextractorのpinとして事前登録し、公式实行で再検証する**):
+   宣言前探査で見つかった設計修正として開示し、修正後ゲートを公式実行に使用する。
+6. 事前観測された事後採用数値(**全てextractorのpinとして事前登録し、公式実行で再検証する**):
    - class 5343: unknown 53→46、closure rank 19→4。class_status_counts 両側完全同値
      （excluded 390 / excluded_now 23 / free_now 38 / unknown 34,498）→ flip 0・新規free 0。
    - holder算術: 7キーの graph holder union 21クラス。5343 own=7、他20クラスは
@@ -118,13 +118,13 @@ kyouen knowledge `KNOWLEDGE.md` 冒頭エントリ更新。
    短縮名 `merged-exact-s5-chain-plus-b28loss1-plus-b28loss7-20261123.cache` を採用
    （extractor pinとmanifestに明記）。
 
-この宣言前探査の数値は「宣言通りに公式实行が同じ値を機械再現すること」の検証対象であり、
-それ自体が结諘ではない。
+この宣言前探査の数値は「宣言通りに公式実行が同じ値を機械再現すること」の検証対象であり、
+それ自体が結論ではない。
 
 ## UNKNOWN guarantee
 
 本Partのどの時点でも、標準11×11空盤・19 central-reply roots・二石roots {49,60}/{59,60}・
 S2 {59,60}・classes 1/2/4/10968/23964/5343（aa001..aa054全キー含む）は **UNKNOWN のまま**。
 nodes数はbookkeepingであり決してverdictではない。本Partはいかなるroot-coverage/
-closure/secured/root-outcome主張も行わない。 WIN 35行の採用判断にに一切触れない
+closure/secured/root-outcome主張も行わない。 WIN 35行の採用判断には一切触れない
 （scrutiny owner pin `9193f5b6…`専権）。verdictは不消費。
