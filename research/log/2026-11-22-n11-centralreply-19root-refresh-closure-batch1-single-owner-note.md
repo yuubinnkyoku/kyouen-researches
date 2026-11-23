@@ -4795,3 +4795,67 @@ batch 20 (Part BG, class 12457) は宣言 (`b4c4ac2d`) どおり完走した。
 - 本status update observed HEAD-before-push: push直前に最新mainを
   再fetchし、note blob lock `0e0ec792ea3ee16ef700292f858e097078e9bcc3`
   を再照合する (競合時は本節を追記し直す)。
+
+## Part BI (solver, amendment 2026-11-23): batch-20 (class 12457) 53-LOSS canonical adoption + reaudit（実行前に出版・verdict採用は53 LOSS行のみ）
+
+長期レーン (n11 central-reply closure) のPart BIとして、published batch-20 (Part BG,
+class 12457) の53 LOSS行をcanonical exact-S5 verdict cacheへ計上する単一オーナー実行を
+宣言する (batch-20 53-LOSS adoptionというスコープに対して本amendmentより先にmainに
+存在する対抗宣言/amendmentがある場合は本宣言を破棄して着手しない。branch / PRは作らない)。
+
+- 引き継ぎ (published byteに基づく): Part BGはclass 12457 (rank 17・route-alive) の
+  53 unknown費用子を2-pass node-exactで完走し、53/53 honest label result=2 (LOSS) を
+  出版した (commit A 358cac13 scaffold 69 / B 564cc66a outputs 122 / C 928546df
+  README ad0c3eec + MANIFEST d0ef293b 191行・row-audit 1dcb7fb8)。同READMEの消費規則は
+  「53 LOSS行の採用は別宣言adoption Partがpinned fail-closed mergerで実行」であり、
+  本Partがその役割を履行する。batch-20にWIN行は1行も存在しない (absence gate) なので、
+  採用パケットは完全解決パケットと一致する (full == loss・機械主張)。
+- 対象: `research/experiments/n11-centralreply-class12457-loss53-adoption-reaudit-20261123/`。
+  BASE canonical exact-S5 verdict cache 6,182行 sha256 `0b594f7e…` (Part BC採用正本)
+  + increment 53行 → 採用後canonical 6,235行 (予想: WIN 158 / LOSS 6,077・conflict 0)。
+- 機材 (全てpublished byte・実行時にsha照合): union merger `s5_union_merge.py`
+  sha256 `90711961…` byte-copy pin (WIN/LOSS conflict検出時の出力拒否gate込み・3回実行
+  byte一致) / maker `make_increments_batch20.py` (Part AV版 04bde073のbatch-20 adapt・
+  本宣言後に出版してから実行) / refresh `refresh_adoption_12457.py` (Part BC版
+  d6bb2374のadapt・cache sha期待値はcache自体から機械抽出・graph 54f9c364 / update8
+  b658290a / Board 954d3a10 / policy 78655e94 / quarantine 81d23160) / delta extractor
+  `compare_deltas_batch20_adoption.py` (Part AV版 92d83671のadapt・本宣言後に出版して
+  から実行) / batch-20 kit 191ファイル (MANIFEST d0ef293b・row-audit 1dcb7fb8・
+  batch-keys efb40b1b) / BASE reaudit 3出力 (refresh-summary 5f3a09c6・closure-classes
+  52ec3d4b 808行・per-root-coverage 1f54065a)。
+- 本hostの事前preflight (read-only・宣言に先行して実施した点を誠実記録): published
+  Part BC BASE refresh (d6bb2374) を本hostで再実行し3出力ともpublished byteとsha一致
+  で再現済み (5f3a09c6 / 52ec3d4b / 1f54065a)。read-only機械検査で batch-20 key集合 ==
+  class 12457のBASE-unknown費用子53個 (既知子は {126899: LOSS} のみ・update8 receipts
+  不在) を確認済み。
+- gate群 (fail-closed・全stage): 53行の2-pass raw独立再検証 (p1==p2 node-exact・
+  `# replay_done`・result 2・budget 15M・stones 5・legal/(lo,hi)照合・WIN行不在
+  absence gate・14 truncated断片はverdict行なし) / BASE不在53/53・quarantine 0 /
+  increments manifest (53 resolved / 53 LOSS / 0 WIN / full==loss /
+  win_scenario_exists false) / merge conflict 0・採用行は追加のみでBASE行はbyte不変 /
+  refresh再実行 (class_status_counts・Board fail-closed子境界検証・root 27は119/119
+  不変gate・per-root coverageはpublished BASEと一致して改善のみ) / delta extractor
+  (status transition ledgerはunknown->{unknown, free_now}のみ・excluded_now flip空・
+  newly free集合==機械計算集合かつ12457を含む・class 12457のBASE-unknown 53子==batch-20
+  key集合で全行解決・holder classのunknown_now減少は自身のmembership分のみ・closure
+  候補表churn: 12457退出) / 各stageのtamper battery (計5種以上・検出後復元byte一致)。
+- route statement (条件付き・採用後のscheduling quantitiesに過ぎない): 53 LOSS行採用に
+  よりclass 12457の費用子54個すべてがcanonical上LOSSとなる (既知子 126899 + 53行)。
+  refresh再実行が54子すべてのBoard fail-closed検証にPASSすればclass 12457はunknown
+  人口から退出しBoard検証free classとなる (37→38番目候補・機械判定待ち)。unknown class
+  数34,499→34,498・closure候補表808→807の見込み・被覆の変化は機械実測で確定する。
+  被覆・secured・root勝敗の主張はrefresh再実行とextractor gateが出す分類deltaのみ。
+- 消費規則: 本Partは53 LOSS行のみをcanonical (6,182→6,235) として採用する。WIN行は
+  batch-20に存在しないので採用場面はない。19 unconsumed closure WIN候補 (b018/d002/
+  e002/f017/g018/j033/h045/z003/n005/n006/p002/p003/r001/r002/q042/v001/v002/w001/w002)
+  は読み書きとも非接触 (scrutiny owner C++第二実装 gate pin 9193f5b6のまま)。
+  canonical chain外の投影は作らない。
+- 不接触: Part BH (batch-19 residual w003..w053・宣言 de1383a7・別実行) には一切触れない。
+  batch-21 (class 12643・将来の別宣言)・y=18/y=19 fast lane・K1058系は非接触。
+- UNKNOWN担保: 標準11x11空盤・19 central-reply roots・二石root {49,60}/{59,60}・
+  S2 {59,60}・class 1/2/4 は本Partのどの時点でもUNKNOWNのまま。nodes数・簿記量を
+  勝敗として読まない。
+- 実験dir: `research/experiments/n11-centralreply-class12457-loss53-adoption-reaudit-20261123/`。
+- 本amendment observed HEAD-before-push: 1d46f883a1fea022128a1bb28d28713b75dcbcf6
+  (push直前にnote blob sha1 4e09fd8374744fa9ce8adfafa4ad92c3ccaa0cfdを再照合し、
+  競合時は再fetchして本節を追記し直す)。
