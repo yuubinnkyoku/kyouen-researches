@@ -1,0 +1,19 @@
+{
+  "cand21": {
+    "bytes": 3502,
+    "equal_fit_verbatim_renamed": true,
+    "equal_machine_verbatim_renamed": true,
+    "sources_agree": true
+  },
+  "cand22": {
+    "bytes": 3212,
+    "equal_fit_verbatim": true
+  },
+  "check": "y22 verifier transcription byte-equality vs published bytes",
+  "engine": {
+    "bytes": 1957,
+    "equal": true
+  },
+  "overall": "PASS",
+  "verifier": "research/experiments/vertical-fiber-two-token-y22-universal-proof-20261123/verify_y22_universal.py"
+}
