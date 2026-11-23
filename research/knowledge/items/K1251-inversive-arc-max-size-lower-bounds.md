@@ -81,6 +81,15 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/output/arc_maxsearch_push.json
   role: data
   note: 予算を増やした追試（値が変わらないことの記録）
+- path: research/experiments/finite-field-kyouen-20261120/scripts/subspace_arcs_sqrtfield.py
+  role: solver
+  note: 平方根体 F_r 上の2次元部分空間の全数検査（q=16/F_4 で0、q=9/F_3 で40）
+- path: research/experiments/finite-field-kyouen-20261120/output/subspace_sqrt_q16.json
+  role: data
+  note: q=16 の2次元F_4-部分空間 357個（アーク 0）
+- path: research/experiments/finite-field-kyouen-20261120/output/subspace_sqrt_q9.json
+  role: data
+  note: q=9 の2次元F_3-部分空間 130個（アーク 40、fp2_suspace_scan と一致）
 scope: 位数qのMiquelian反転平面M(q)（= 楕円二次曲面Q^-(3,q)の円幾何）における弧（どの4点も同一円上にない点集合）の最大サイズK(q)。q=3..11は全数列挙による厳密値、q=13..49は明示的な証人による下界。文献比較はSonnino 1999の(q+5)/2構成との比較に限る。
 evidence: q=3..11のKは全数探索（K1058に記録）。q=13..49の各下界は、円リストとの総当り突き合わせ（arc_search_report.py）と、楕円二次曲面への持ち上げ後の「全4点組のrank=4」検査（arc_lift_verify.py）の二経路で独立に検証済み。射影上界K≤q+2（q奇数）は全証人で「任意の点からの射影がPG(2,q)のアークになる」ことを総当り確認。
 ---
@@ -266,9 +275,12 @@ q=9 は上界 K ≤ q が tight な唯一の既知の q（K(9)=9、K1252/K1253�
 | 9 (=3²) | 130 | **40** |
 | 25 (=5²) | 806 | **0** |
 | 49 (=7²) | 2,850 | **0** |
+| 16 (=4², 係数体 F_4) | 357 | **0** |
 
 q=9 では「F_3-線型グラフ」より広い族（40個）が極大アークを与え、すべて単一軌道の一部である。
 q=25, q=49 では 0 なので、**この族も q=9 に固有**である。
+
+q=p² で p が素数でない最初の例 q=16（=4²）では、スカラー体を **F_4** にして同じ検査を行える（`F_{q²} = F_{4⁴}` は F_4 上の4次元、2次元 F_4-部分空間は 16 = q 個の元を持つ）。結果は 357 個中 **0**。したがって「平方根体上の2次元部分空間」でも q=9 だけが当たりである。
 
 **結論**：極大アークは小さい q ではグラフとして実現できるが、
 q ≥ 11 ではグラフ ansatz は一般探索（q=11 で 9）より弱い。
