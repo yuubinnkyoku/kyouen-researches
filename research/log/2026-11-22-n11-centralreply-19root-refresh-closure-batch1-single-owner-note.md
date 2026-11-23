@@ -5263,3 +5263,45 @@ amendmentを出版する (publish-then-execute)。
 - 本amendment observed HEAD-before-push: `895ad14` (K1250
   inversive-plane item・非接触)。note blob lock `0fa1f479…` を
   push直前に再fetchして照合する (競合時は本節を追記し直す)。
+
+
+## Part BL status update (2026-11-23): batch-22 (class 25835) drive-1 WIN-HALT at k002
+
+- drive-1 (published declaration `8b27515b`の事前登録protocolどおり): 
+  val-gate 4/4 node-exact (pinned jsreplay `84585617…`・本host)の後、
+  k001・k002の順に2-pass fresh-cold・budget 15M・2 worker・drive 260s有界。
+- **k002 WIN (honest label)**: key (1153484454560403456, 8)・s5 index
+  150241・legal 87・membership 4。replay result 1・p1/p2 two-pass
+  node-exact・nodes 10,542,704 (budget 15M内)・wall 113/112s。
+  → 事前登録WIN-HALT rc=45でbatch停止。**verdict不消費** (本レーンは
+  採用しない)。
+- k001 fragment (UNPROBED): key (10376293541461757952, 8)。p1 complete
+  single-pass bookkeeping result 0・nodes 15,000,000 budget exhaustion
+  (honest UNKNOWN bookkeeping・**evidenceではない**)。p2はdrive
+  260s timeoutによるtruncated断片 (`# replay_done`なし)。将来の
+  continuationでfresh-cold再実行する (published completeness guard)。
+  15M同一条件再probe禁止は完走行のみに binding。
+- 残留UNPROBED: 51 freshキー (k003..k053) + k001再実行。
+- 行監査: row-audit-winhalt (script sha256 `31e927e7…`): PASS・3回
+  実行byte一致 (json `c6f7585c…`)・tamper battery 3/3検出 (p2 verdict
+  反転 / status.log key-id改ざん / p1 key改ざん)。
+- 意味 (route bookkeepingのみ): これにより**class 25835 (rank 18) の
+  全LOSS閉包ルートも反駁証拠を持った** (class 12643・rank 17と同型)。
+  k002は**21番目の unconsumed closure WIN 候補** (19旧 + a003 + k002)。
+  採用判断はscrutiny owner C++第二実装 gate `9193f5b6…` 待ちで本レーン
+  は代行しない。次batch選定は20+1-WIN交積の反駁簿記で行い、**rank 19
+  class 31600 (mask [1152921505160495104, 32768]・cost 53子すべて
+  unknown) がpublished-table順で次のroute-alive候補** (runner-up
+  rank 20 class 10968)。被覆の閉鎖判定・secured主張はrefresh再実行+
+  独立監査が行う。
+- 出版: 宣言amendment `8b27515b`・scaffold commit A `106c469`
+  (72ファイル・fetch-back 72/72 byte一致)・outputs commit B
+  `2ed5b90` (7ファイル・fetch-back 7/7 byte一致)・commit C `a83da90`
+  (README + MANIFEST-sha256 79行・fetch-back byte一致)。
+- UNKNOWN担保: 標準11×11空盤・19 central-reply roots・二石root
+  {49,60}/{59,60}・S2 {59,60}・class 1/2/4・class 25835 (53キー
+  すべて・k002を含む)・class 12643は本status update時点でもUNKNOWN
+  のまま。nodes数・expansions数・legal数を勝敗として読まない。
+- 本status update observed HEAD-before-push: `a83da90` (commit C)。
+  note blob lock `eef9de1c…` をre-fetchして照合済み (競合時は本節を
+  追記し直す)。
