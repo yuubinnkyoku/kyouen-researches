@@ -1,6 +1,6 @@
 ---
 id: K1254
-title: 非Miquelian反転平面（Suzuki–Tits 位数8）の弧：最大値は Miquelian と同じ7
+title: 非Miquelian反転平面（Suzuki–Tits）の弧：位数8では同じ7、位数32では Miquelian より小さい
 kind: proposition
 status: proved
 topics: [geometry, variants, maximum-safe]
@@ -33,6 +33,12 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/scripts/tits_ovoid_search.py
   role: solver
   note: Tits ovoid の座標形の候補探索（3次以下。不発の記録）
+- path: research/experiments/finite-field-kyouen-20261120/scripts/tits_build.py
+  role: solver
+  note: 一般の q=2^(2e+1) 用の Tits 反転平面構成（q=8,32 で検証）
+- path: research/experiments/finite-field-kyouen-20261120/output/circles_tits_q32.txt
+  role: data
+  note: Suzuki–Tits 位数32 反転平面の 1,025 点 32,800 円
 scope: 位数8のSuzuki–Tits反転平面（Tits ovoid から作られる非Miquelian反転平面）の弧（どの4点も同一円上にない点集合）の最大サイズ
 evidence: Tits ovoid O = {(1, x^4+xy+y^6, x, y)} ∪ {(0,1,0,0)} を F_8 上で構成し、全直線が2点以下（0本の違反）・平面上の9点切断が520個・全 C(65,3) 三点点が円上にちょうど1回（43,680/43,680）を機械確認。その後アーク・センサスを深さ10まで走らせ、層サイズと K を厳密に決定。
 ---
@@ -90,8 +96,36 @@ k : #k-arcs
   一方「弧＝`PG(3,q)` の n-アーク」という見方は任意の ovoid で成り立つので、
   ambient の `m(3,q) = q+1`（Casse–Glynn）から **`K ≤ q+1`** は無条件に成り立つ。
   位数8では `7 ≤ 9` で、まだ slack がある。
-- 次の問い：Suzuki–Tits 位数32（`q = 2^5`、次に存在する位数）でも `K = 7` に対応する値
-  （＝Miquelian の下界と同程度）になるか。全数列挙は不可（1025 点）なので探索になる。
+- 位数32の結果：`K(Tits) ≈ 14` に対し `K(Miquelian) ≥ 22`（同上の比較表）。
+
+## 位数32（`q = 2^5`）での拡張：非Miquelian 盤はずっと制約が強い
+
+同じ構成（`σ = 2^{e+1} = 8`）を `q = 32` で実行（`scripts/tits_build.py`、一般の `q` 用）：
+
+```
+q=32: Tits ovoid 1,025 点、円 32,800 = q(q²+1) ✓
+      3-設計検証：全 524,800 対がちょうど 33 = (v−2)/(k−2) 個の円に載る ✓
+```
+
+**弧の探索**（同じ探索器・同じ予算で比較）：
+
+| 盤 | 手法 | 結果 |
+|---|---|---|
+| **Suzuki–Tits(32)** | ILS（150試行×3000反復） | 13 |
+| **Suzuki–Tits(32)** | ILS（500試行×4000反復） | **14** |
+| Suzuki–Tits(32) | スワップ探索 k=15, 16, 20, 22 | すべて失敗（罰則 24, 33, 92, 136） |
+| **Miquelian(32)** | ILS（150試行×3000反復） | **22** |
+
+> **非Miquelian 盤ではずっと小さい**：位数32で `K(Tits) ≈ 14` に対し `K(Miquelian) ≥ 22`。
+> 位数8では両者とも 7 で一致していたので、これは位数が上がって初めて現れる差である。
+
+**解釈**：Miquelian 盤の大きな弧は「楕円二次曲面上の一般位置集合」という代数構造に支えられている
+（K1250/K1252）。Tits ovoid は二次曲面ではないのでその構造が使えず、弧が小さくなる。
+両盤は同じ `3-(1025,33,1)` 設計（パラメータ同一）なので、**設計のパラメータだけでは
+弧の大きさは決まらない**ことがはっきりした。
+
+上界は両盤とも ambient の `m(3,q) = q+1 = 33`（K1252）で、Tits 側には 19 の slack がある
+（Miquelian 側は 11）。非Miquelian 盤で `K ≤ q` に相当する上界をどう示すかは未解決。
 
 ## 限界
 
