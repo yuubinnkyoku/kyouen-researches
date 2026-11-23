@@ -36,6 +36,12 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/scripts/arc_lift_verify.py
   role: verifier
   note: 二次曲面への持ち上げとrankによる独立検証
+- path: research/experiments/finite-field-kyouen-20261120/scripts/arc_structure_probe.py
+  role: verifier
+  note: 極大アークが低次曲線・生成元不変・乗法構造を持たないことの検査（負の結果）
+- path: research/experiments/finite-field-kyouen-20261120/output/arc_maxsearch_push.json
+  role: data
+  note: 予算を増やした追試（値が変わらないことの記録）
 scope: 位数qのMiquelian反転平面M(q)（= 楕円二次曲面Q^-(3,q)の円幾何）における弧（どの4点も同一円上にない点集合）の最大サイズK(q)。q=3..11は全数列挙による厳密値、q=13..49は明示的な証人による下界。文献比較はSonnino 1999の(q+5)/2構成との比較に限る。
 evidence: q=3..11のKは全数探索（K1058に記録）。q=13..49の各下界は、円リストとの総当り突き合わせ（arc_search_report.py）と、楕円二次曲面への持ち上げ後の「全4点組のrank=4」検査（arc_lift_verify.py）の二経路で独立に検証済み。射影上界K≤q+2（q奇数）は全証人で「任意の点からの射影がPG(2,q)のアークになる」ことを総当り確認。
 ---
@@ -110,6 +116,21 @@ Sonnino の構成値 `(q+5)/2` の比較：
 以前の「`K ≈ 8.86`（ほぼ定数）」「`K ≈ q^0.31`」という見立ては、文献の `(q+5)/2` 構成とも
 矛盾していた。**`K` は線形に増える。** 残る問題は定数である：
 `liminf K(q)/q` は現在 `0.5`（文献）と `1`（上界）の間で、本項の測定が `0.65` まで押し上げた。
+
+## ロバスト性（値は予算の産物ではない）
+
+`q ≤ 32` の値は、予算（`trials × ils` を10倍以上変える）と貪欲則
+（一様ランダム／「ほぼ満杯のブロックが最少の点を選ぶ」サンプリング法 `--sample`）を
+変えても**変わらない**：
+
+- `q=13`：`trials=40, ils=3000` / `trials=2000, ils=1000`（200万ステップ）/
+  `trials=400, ils=6000` のすべてで 10。
+- `q=17`：`trials=1000, ils=1500` でも 13。
+- `q=23, 29`：`--sample 0` と `--sample 8` の両方で 16, 20。
+
+したがってこれらは予算不足の産物ではなく、真値に近い（`q=13,17` は上限の可能性が高い）。
+一方 `q ≥ 37` は**再起動回数に敏感**で、`q=49` は `trials=40` で 18、`trials=200` で 32 だった。
+**大 `q` では `ils` より `trials` が効く。**
 
 ## 検証
 

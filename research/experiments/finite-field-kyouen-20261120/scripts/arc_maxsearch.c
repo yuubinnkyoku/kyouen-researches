@@ -119,8 +119,34 @@ static void remove_point(int p) {
 }
 
 // add uniformly random playable points until none is playable
+//
+// With --sample S > 0 the next point is the best of S random playable
+// candidates, "best" meaning it completes the fewest almost-full blocks
+// (blocks with cnt == 2 through it), which is the cheapest useful proxy for
+// "how many points does adding it kill".  Costs a factor ~S in time.
+static int sample_size = 0;
+
+static int pressure(int p) {
+    int t = 0;
+    for (int k = adj_off[p]; k < adj_off[p + 1]; k++)
+        if (cnt[adj[k]] == 2) t++;
+    return t;
+}
+
 static void greedy_fill(void) {
-    while (nallowed > 0) add_point(allowed[rnd_int(nallowed)]);
+    while (nallowed > 0) {
+        if (sample_size <= 1) {
+            add_point(allowed[rnd_int(nallowed)]);
+            continue;
+        }
+        int best = -1, best_score = 0;
+        for (int s = 0; s < sample_size; s++) {
+            int cand = allowed[rnd_int(nallowed)];
+            int sc = pressure(cand);
+            if (best < 0 || sc < best_score) { best = cand; best_score = sc; }
+        }
+        add_point(best);
+    }
 }
 
 static void restore(const int *pts, int k) {
@@ -137,6 +163,7 @@ int main(int argc, char **argv) {
         if (!strcmp(argv[i], "--trials")) trials = atol(argv[i + 1]);
         else if (!strcmp(argv[i], "--ils")) ils = atol(argv[i + 1]);
         else if (!strcmp(argv[i], "--seed")) seed = (uint64_t)strtoull(argv[i + 1], NULL, 10);
+        else if (!strcmp(argv[i], "--sample")) sample_size = atoi(argv[i + 1]);
     }
     rng_state = seed ? seed : 1;
 
