@@ -67,11 +67,11 @@ artifacts:
   role: solver
   note: q=p^2 の2次元F_p-部分空間の全数検査（q=9で40個がアーク、q=25で0）
 - path: research/experiments/finite-field-kyouen-20261120/output/fp2_subspace_arcs.json
+  role: data
+  note: q=9,25 の部分空間アーク数
 - path: research/experiments/finite-field-kyouen-20261120/output/fp2_subspace_arcs_q49.json
   role: data
   note: q=49 の2次元F_7-部分空間 2,850 個（アーク 0）
-  role: data
-  note: q=9,25 の部分空間アーク数
 - path: research/experiments/finite-field-kyouen-20261120/scripts/max_arc_orbit.py
   role: solver
   note: 最大アークのPΓL(2,q^2)軌道分解（q=9で単一軌道）
