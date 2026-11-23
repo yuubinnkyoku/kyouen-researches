@@ -5681,3 +5681,57 @@ batch-24は、batch-23 status update 2で予定したrunner-up rank 20 class 109
   fast-lane宣言・新規noteファイルのみで非接触)。push直前に最新mainを
   再fetchしnote blob lock (`d8cf204b…`・416,711B) を再照合する (競合時は
   本節を追記し直す)。
+
+## Part BO status update (batch-24 実行結果、2026-11-23)
+
+(observed HEAD: 3c05b203・non-contact concurrent commits 7b62b8c2 (K1253)
+・3c05b203 (K1251) を確認のうえ線形続行。fetch-back 済み出版状況に基づく追記)
+
+- drive-1 は宣言commit 2c91e033 の事前登録stop ruleどおり **WIN-HALT
+  rc=45 (両worker)** で完了 (2026-11-23T06:50:14Z..06:52:09Z・
+  fragmentゼロ・truncated再実行ゼロ・budget 15M・2-pass fresh cold)。
+- **y001 WIN (honest label)**: key (10376293541461753856, 264)・
+  s5 91296・legal 87・membership 2・nodes 5,291,064 (budget 15M内)・
+  two-pass node-exact (wall 53/53s)。**24番目の unconsumed closure WIN
+  候補**。
+- **y006 WIN (honest label)**: key (1152921504607043584, 264)・
+  s5 368510・legal 84・membership 2・nodes 5,321,639 (budget 15M内)・
+  two-pass node-exact (wall 51/45s)。**25番目の unconsumed closure WIN
+  候補**。
+- y002 LOSS (adoption candidateのみ): (1153484454560399360, 264)・
+  s5 166253・nodes 217,944。y004 LOSS (adoption candidateのみ):
+  (1152921779484884992, 264)・s5 272083・nodes 632,091。いずれも
+  verdict不消費 (別宣言adoption Part・pinned fail-closed merger
+  90711961 経由のみ)。
+- 残り49キー (y003, y005, y007..y053) は fileless UNPROBED。
+- row-audit-winhalt PASS (schema
+  n11-centralreply-closure-class16957-batch24-rowaudit-winhalt-v1・
+  json sha256 `9d073038…`): completed 4 (WIN 2・LOSS 2・exhausted 0)・
+  3回実行byte一致・tamper battery 3/3検出 (p1 verdict反転 /
+  未probeキー y010への偽verdict行 / verdict行 y006除去・scratch上で
+  実施し実験filesは無改変)・clean control PASS。
+- 出版3コミット (fetch-back byte照合済み): scaffold d7ee67c7 (73
+  files・73/73 blob一致)・outputs 18420555 (10 files・10/10一致)・
+  README+MANIFEST-sha256.txt 83行 d4c0074e (README blob 96f7b5d1…・
+  MANIFEST blob 39660079…・raw sha256 8a8e30a8…)。
+- 意味 (route statementのみ): y001/y006 の2独立WIN子により (採用
+  された場合) **class 16957 の全LOSS閉包ルートは反駁証拠を持つ**
+  (batch-21/22/23 と同型の反駁パターン)。ただし verdictは一切消費
+  していない・採用判断は scrutiny owner C++第二実装 gate pin
+  `9193f5b6…` 待ち (本レーンは代行しない)。class 10968・23964 は
+  blocked (packet交差・NOT route-dead) のまま。canonical cache 6,235行
+  f6649fe3… は read-only・不変。
+- 次回 (batch-25) の選定は **25-WIN交積** (23旧 + s001/s002 +
+  y001 (s5 91296)・y006 (s5 368510) の unconsumed set) の反駁簿記で
+  maker内で機械選定する。rank 22 class 23964 は PKT-collision
+  blocked継続・rank 23 class 30565 (runner-up)・rank 24 class 1849
+  (backup) が当面のroute-alive候補だが、25-WIN交積の出現で反駁状況
+  が変わるため EXPECTED_RANKS を拡張して再導出必須。
+- **標準11×11空盤・19 central-reply roots・二石root {49,60}/{59,60}・
+  S2 {59,60}・class 1/2/4・class 10968・class 23964・class 16957
+  (53キーすべて・y001/y006を含む) はどの時点でもUNKNOWNのまま。**
+  nodes数・expansions数を勝敗として読まない。
+- note blob lock chain: `d8cf204b…` (Part BN終了時 416,711B) →
+  `c108a4df…` (Part BO宣言published 422,870B・fetch-back照合済み) →
+  本status update追記後のblobはpush時にfetch-backして次回ラン用に
+  記録する。
