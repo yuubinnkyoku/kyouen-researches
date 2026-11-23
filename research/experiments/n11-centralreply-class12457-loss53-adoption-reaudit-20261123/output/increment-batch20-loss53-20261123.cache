@@ -1,0 +1,78 @@
+# n11 central-reply closure batch-20 (class 12457) 53-LOSS canonical-adoption increment (Part BI, 2026-11-23)
+# published Part BI declaration (note amendment 2026-11-23, commit 879e898c, observed
+#   HEAD-before-push 1d46f883a1fea022128a1bb28d28713b75dcbcf6; note blob lock 4e09fd83).
+# 2-pass node-exact exact-S5 verdicts at budget 15M, fresh cold, pinned jsreplay.js
+#   sha256 845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df
+# batch-20 was executed by the Part BG host (53/53 probed = 53 LOSS, 0 WIN, 0
+#   exhaustion, 0 mismatch; fourteen host-event truncated fragments never produced
+#   a verdict line and were re-run fresh cold; row-audit 1dcb7fb8 summary agrees,
+#   status.log 627d306b: 53 dated each-once PASS rows, final row 'x053 PASS
+#   15000000,2,6402333', NO stop record (batch-20 status.log has none; the
+#   probed-set/each-once/final-row gates replace it - honest record)).
+# gates: kit MANIFEST d0ef293b 191/191 file sha verification, 2-way (p1/p2) node-exact
+#   + '# replay_done' completeness, status.log each-once agreement (b,r,n) per key,
+#   row-audit.json summary agreement (schema/class/batch/probed/pass/win/exhausted/
+#   mismatches/input_sha), batch-keys efb40b1b legal/(lo,hi) agreement, pass node
+#   totals 175,842,846 x2, resolved keys distinct, ZERO WIN rows (absence gate),
+#   ZERO exhaustion rows (absence gate), ZERO BASE-cache overlap (structural gate:
+#   batch-20 post-dates the Part BC merge; any overlap ABORTS), quarantine 0.
+# ADOPTED set = the full resolved packet {x001..x053} = exactly all 53 LOSS rows.
+#   No WIN row exists in batch-20, so full == loss here (machine-stated); no WIN
+#   verdict is consumed anywhere by this Part; the 19 unconsumed closure WINs are
+#   untouched (scrutiny owner gate 9193f5b6... unchanged).
+# The 53 LOSS rows ARE consumed into the canonical cache by the Part BI merger;
+#   11x11 stays UNKNOWN; nodes are bookkeeping, never verdicts.
+# 53 rows: the adopted LOSS verdicts of class 12457's unknown S5 children (20th batch).
+s5verdict,1152921504606847268,4,5,2,2849394
+s5verdict,1152921504606847268,8,5,2,2355902
+s5verdict,1152921504606847268,16,5,2,1728295
+s5verdict,1152921504606847268,32,5,2,3018459
+s5verdict,1152921504606847268,64,5,2,2461958
+s5verdict,1152921504606847268,128,5,2,5517654
+s5verdict,1152921504606847268,8192,5,2,6402333
+s5verdict,1152921504606847268,16384,5,2,2196857
+s5verdict,1152921504606847268,32768,5,2,2955250
+s5verdict,1152921504606847268,65536,5,2,2604286
+s5verdict,1152921504606847268,131072,5,2,7509965
+s5verdict,1152921504606847268,262144,5,2,2339778
+s5verdict,1152921504606847268,16777216,5,2,1785234
+s5verdict,1152921504606849316,0,5,2,3585183
+s5verdict,1152921504606855460,0,5,2,2665865
+s5verdict,1152921504606863652,0,5,2,1607403
+s5verdict,1152921504606912804,0,5,2,3585183
+s5verdict,1152921504611041572,0,5,2,2326563
+s5verdict,1152921504615235876,0,5,2,3557444
+s5verdict,1152921504623624484,0,5,2,1728295
+s5verdict,1152921504640401700,0,5,2,1949717
+s5verdict,1152921504673956132,0,5,2,3066131
+s5verdict,1152921504741064996,0,5,2,4215663
+s5verdict,1152921513196781860,0,5,2,3199532
+s5verdict,1152921521786716452,0,5,2,4341845
+s5verdict,1152921538966585636,0,5,2,2955714
+s5verdict,1152921573326324004,0,5,2,5459790
+s5verdict,1152921642045800740,0,5,2,3289092
+s5verdict,1152921779484754212,0,5,2,3066131
+s5verdict,1152939096792891684,0,5,2,4485561
+s5verdict,1152991873351024932,0,5,2,3009525
+s5verdict,1153062242095202596,0,5,2,5011155
+s5verdict,1188950301625811236,0,5,2,4048666
+s5verdict,1188950301630005248,16777217,5,2,1451336
+s5verdict,1188950301630005248,16777218,5,2,3961224
+s5verdict,1188950301630005760,16777216,5,2,6406021
+s5verdict,1188950301630006272,16777216,5,2,2266730
+s5verdict,1188950301630529536,16777216,5,2,5616395
+s5verdict,1188950301631053824,16777216,5,2,4814486
+s5verdict,1188950301632102400,16777216,5,2,3948806
+s5verdict,1188950302703747072,16777216,5,2,2840520
+s5verdict,1188950303777488896,16777216,5,2,2911056
+s5verdict,1188950305924972544,16777216,5,2,2453860
+s5verdict,1188952500653260800,16777216,5,2,2291622
+s5verdict,1188954699676516352,16777216,5,2,2828322
+s5verdict,1188959097723027456,16777216,5,2,4503715
+s5verdict,1193453901257375744,16777216,5,2,1284227
+s5verdict,1197957500884746240,16777216,5,2,4175721
+s5verdict,1206964700139487232,16777216,5,2,2484836
+s5verdict,1224979098644775204,0,5,2,1721742
+s5verdict,1441151880758559012,0,5,2,3668253
+s5verdict,1729382256910270756,0,5,2,2298079
+s5verdict,10412322338484781056,16777216,5,2,3036072
