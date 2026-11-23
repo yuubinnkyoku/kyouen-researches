@@ -1,0 +1,19 @@
+{
+  "cand20": {
+    "bytes": 3308,
+    "equal_fit_verbatim_renamed": true,
+    "equal_machine_verbatim_renamed": true,
+    "sources_agree": true
+  },
+  "cand21": {
+    "bytes": 3412,
+    "equal_fit_verbatim": true
+  },
+  "check": "y21 verifier transcription byte-equality vs published bytes",
+  "engine": {
+    "bytes": 1957,
+    "equal": true
+  },
+  "overall": "PASS",
+  "verifier": "research/experiments/vertical-fiber-two-token-y21-universal-proof-20261123/verify_y21_universal.py"
+}
