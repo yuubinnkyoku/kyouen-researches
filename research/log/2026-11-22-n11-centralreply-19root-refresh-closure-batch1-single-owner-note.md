@@ -4471,3 +4471,47 @@ MANIFEST sha256全件一致)。
 - 本status update observed HEAD-before-push: `2a8060b86f506786553344eae61674adc18d3064`
   (push直前にnote blob sha1 (`739e7fe2c8c3e4dd5f816f69b804e12b80e66fd5`) を再照合し、
   競合時は再fetchして本節を追記し直す)。
+
+## Part BE (solver, amendment 2026-11-23): closure class 16513 exact-S5 probe batch 19 (宣言後に実行・verdict不消費・実行前に宣言)
+
+長期レーン (n11 central-reply closure) のbatch-19として、graph class index 16513
+(mask [1153202980657299456, 67108864]) の53個のunknown費用子をexact-S5 probeする
+単一オーナー実行を宣言する (batch-19 / closure class 16513 probeというスコープに
+対して本amendmentより先にmainに存在する対抗宣言/amendmentがある場合は本宣言を
+破棄して着手しない)。
+
+- 選定根拠 (全てpublished byteからの再導出・Part BD時点のresume指針「batch-19
+  選定」を本hostが履行): baseはpublished canonical exact-S5 verdict cache
+  6,182行 sha256 `0b594f7e…` (Part BC採用正本)。再ランクclosure候補表808クラスの
+  うち rank 1..14 (23101/16757/20421/16371/30345/12264/5473/2634/8785/1518/8106/
+  16930/5830/16131) は全て17 unconsumed closure WIN子と交差 (win-refuted) し、
+  rank 1 class 23101 のunknown集合は {745184} (未採用q042 WIN行のみ・採用は
+  scrutiny owner待ち)。よってrank 15 class 16513 (unknown 53・groups 5
+  {(24,50),(24,70),(24,96),(48,30),(48,90)}・WIN交差0・prior 19パケット914位置と
+  重複0) が首位のclean候補、runner-upはrank 16 class 5687 (unknown 53・WIN交差0)。
+- 機材 (全てpublished byte): replica `jsreplay.js` sha256 `84585617…` byte-copy・
+  `runbatch.sh` `f591f8c2…`・`runwave.sh` `8efd78c2…` (batch-17正本)・依存graph
+  `54f9c364…`・update8 `b658290a…`・Board `954d3a10…`・policy `78655e94…`・
+  quarantine `81d23160…`。scaffold keys maker `make_batch19_keys.py` (本Part作成・
+  3回実行byte一致・全gate PASS: 53キー0/53 canonical hits・0 quarantine・
+  914位置overlap 0・17-WIN再導出一致・rank 1..16 exact assert)。
+- val-gate (実行前・本host): at2m 2アンカー → result 0 / nodes 2,000,000 x2
+  node-exact・15m 2アンカー → (2, 3651923) / (2, 5040200) node-exact・禁止四角
+  95,670 x4・`# replay_done` x4 (truncationなし) の4/4確認済み。
+- protocol (事前登録): 2-pass fresh-cold node-exact、budget 15,000,000、
+  1 solver / 1 row / 1プロセス、worker最大2 (2-core host)、publish=ALL
+  (raw 2-pass全件出版)。stop rules: 決定論mismatch → HARD-STOP rc=42・
+  WIN → HALT rc=45 (honest WIN labelのみで採用しない・verdict不消費)・
+  budget枯損 → honest UNKNOWN label (同条件での再probe禁止)。
+- verdict不消費: LOSS行は採用候補のみ (消費は別宣言adoption Partがpinned
+  fail-closed mergerで行う)。17 unconsumed closure WIN行
+  (b018/d002/e002/f017/g018/j033/h045/z003/n005/n006/p002/p003/r001/r002/q042 +
+  v001/v002) は読み書きとも非接触・採用判定はscrutiny owner C++第二実装 gate pin
+  `9193f5b6…`のまま。batch-18 (AY残51キー) とは非接触 (class 16513の53子と
+  batch-18パケット53位置は重複0・機械確認済み)。
+- UNKNOWN担保: 標準11x11空盤・19 central-reply roots・class 16513・全キーは
+  本Partのどの時点でもUNKNOWNのまま。nodes/legal/キー数は簿記で勝敗ではない。
+  probe worklist抽出は行わない (キー導出はgraph+published cacheから)。
+- 実験dir: `research/experiments/n11-centralreply-closure-class16513-batch19-20261123/`。
+- 本amendment observed HEAD-before-push: `b546b56d1c4bccb0d2fbf6f150d9190649fc9627`
+  (push直前にnote blob sha1 (`598b5f8494e1f0a0c74f6a1ae073fb6b0cf273f0`) を再照合し、競合時は再fetchして本節を追記し直す)。
