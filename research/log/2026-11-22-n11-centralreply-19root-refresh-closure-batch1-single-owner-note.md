@@ -5186,3 +5186,80 @@ published batch-21 WIN行 a003をpinned第三実装で解き、出版まで完�
   S2 {59,60}・class 1/2/4・class 12643 (53キーすべて・a003を含む)
   は本Partのどの時点でもUNKNOWNのまま。nodes数・expansions数を
   勝敗として読まない。
+
+## Part BL (solver, amendment 2026-11-23, 実行前に宣言): closure class 25835 exact-S5 probe batch 22 (verdict不消費)
+
+batch-22はclosure候補表の**rank 18 class 25835**（mask
+[1152921504606982144, 8]・groups served (12,17)(12,67)(15,20)(15,75)・
+cost 53子すべてunknown・known children {}・20-unconsumed-WIN交積0・
+known WIN子なし）を最初のroute-alive候補として選定する。実行前に本
+amendmentを出版する (publish-then-execute)。
+
+- 選定根拠 (published baseから再導出・prose不使用): re-ranked closure
+  候補表 = 807 classes (class 12457はPart BI採用で退出・closure表
+  `d57a7609…` 807行と全行一致cross-check)。ranks 1..16 (23101/16757/
+  20421/16371/30345/12264/5473/2634/8785/1518/8106/16930/5830/16131/
+  16513/5687) は従来どおり反駁済み (19-WIN交積またはknown WIN子:
+  5830はreceipt WIN 5子 {126017,131631,162106,197665,206386}・5687は
+  receipt WIN子 {209644}・rank 1 class 23101のunknown集合は
+  {745184}のみ)。**rank 17 class 12643 (batch-21対象) は今回の反駁
+  証拠が確定**: unknown子集合と20-unconsumed-WIN集合の交積は厳密に
+  {115192}、すなわちpublished Part BJ honest WIN行 a003 (key
+  (10412339930666631168, 4)・Part BK第三実装で裏付け済み・verdict
+  不消費のまま)。ranks 1..17がすべて反駁済みのため、**rank 18
+  class 25835がpublished-table順で最初の全LOSS閉包ルート生存候補**。
+  runner-up rank 19 class 31600 (mask
+  [1152921505160495104, 32768]・cost 53子すべてunknown)・backup
+  rank 20 class 10968 (mask
+  [1152925919833292800, 0]・groups served 3) はともにroute-alive。
+- preflight (fail-closed maker `make_batch22_keys.py` sha256
+  `945ba254…`・全gate PASS・3回実行byte一致): 53キー k001..k053
+  (s5昇順 91297..810380・legal 77..96・Board再計算53/53・membership
+  分布 {2:1, 3:8, 4:44})。**canonical cache 6,235行 `f6649fe3…`
+  hits 0/53・quarantine 0/53・prior 22 published packets
+  (batches 1..21・1,087行・1,073一意) overlap 0・key id prefix "k"
+  は22 packetすべてで未使用**。batch-keys.json sha256
+  `b5f567bd…`・input CSV 53枚 (k001 = (10376293541461757952, 8)・
+  legal 89・k053 = (1152921504606982144, 2056)・legal 91)。
+  tamper battery 4/4検出 (T1 target rank pin 18->17→published表
+  target行gate FAIL・T2 prior rows pin 1087->1086→gate FAIL・
+  T3 a003 WIN行の除去→"WIN s5 set 19 != 20" gate FAIL・T4 rank-17
+  evidence pin 115192->115193→20-WIN evidence gate FAIL)。
+- val-gate (pinned `jsreplay.js` `84585617…`・本host): **4/4
+  node-exact** (at2m 2キー result 0 nodes 2,000,000/2,000,000 budget
+  exhausted・first-15m result 2 nodes 3,651,923・second-15m result 2
+  nodes 5,040,200・禁止四角 95,670・wall_s比較外)。
+- 実行protocol (batch-20/21流・publish-then-execute): scaffold
+  (scripts 6: maker `945ba254` + drive_batch22.sh `df0ed0cd` +
+  row_audit_batch22.py `c1ce40a6` + pinned jsreplay `84585617` /
+  runbatch `f591f8c2` / runwave `8efd78c2`) を実験dir
+  `n11-centralreply-closure-class25835-batch22-20261123/` に
+  72ファイルでmainへ出版した後に実行する。2-pass fresh-cold replica・
+  budget 15M・2 worker max・drive 260s有界・逐次はworker内のみ。
+  事前登録stop rules: determinism mismatch rc=42 HARD-STOP・
+  **WIN (replay result 1) は即時WIN-HALT rc=45 (honest WIN label・
+  verdict不消費)**・budget exhaustion result 0はhonest UNKNOWN
+  (15M同一条件での再probe禁止)。truncated pass filesは`# replay_done`
+  なしはevidenceとせずfresh-cold再実行 (published completeness
+  guard)。
+- 採用規則: LOSS行のcanonical採用は**別宣言adoption Part**
+  (pinned fail-closed merger `90711961`) でのみ。WIN行は20
+  unconsumed closure WIN候補と同様にscrutiny owner C++第二実装
+  gate `9193f5b6…` 待ちで本レーンは代行しない。
+- 実行ownerの honesty: 本amendment出版後に本レーンがdriveを実行
+  できない場合は、standard single-owner/takeover規則どおり次回以降
+  の実行 (または並走実行のamendment先取) に委ね、重複実行・重複
+  出版はしない。起動だけの成果扱いはしない。
+- 不接触: canonical cache (6,235行 `f6649fe3…`) read-only・19+1
+  unconsumed closure WIN候補 (a003込み) 不変・batch-21 residual
+  49キー (fresh・a005..a053) 非接触・Part BH (batch-19 residual
+  `de1383a7`) 別オーナーのまま・y18/y19 fast lane・K1058系・
+  inversive-plane lane非接触。
+- UNKNOWN担保: 標準11×11空盤・19 central-reply roots・二石root
+  {49,60}/{59,60}・S2 {59,60}・class 1/2/4・class 25835 (53キー
+  すべて)・class 12643は本Partのどの時点でもUNKNOWNのまま。
+  nodes数・expansions数・legal数を勝敗として読まない。閉鎖・被覆・
+  secured・root勝敗の主張はしない。
+- 本amendment observed HEAD-before-push: `895ad14` (K1250
+  inversive-plane item・非接触)。note blob lock `0fa1f479…` を
+  push直前に再fetchして照合する (競合時は本節を追記し直す)。
