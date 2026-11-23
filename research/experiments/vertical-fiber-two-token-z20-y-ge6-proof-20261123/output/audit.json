@@ -1,0 +1,30 @@
+{
+  "K1126_B_anchor_z20_row": 15660,
+  "K1261_C_anchor": 9163,
+  "bad": [],
+  "claim": "H(R;(x,y);20), all x>=y>=6 and R>=0",
+  "closure_sweep": 5495645,
+  "finite_audit_scope": {
+    "K1126_B_anchor": "6<=x<=150, 0<=R<=x+29 (z=20 row of the parametric y=5 family)",
+    "K1261_C_anchor": "6<=y<=16, 0<=d<=16, 0<=R<=x+y+18",
+    "closure_sweep": "6<=y<=150, 0<=d<=150, all 1<=R<=x+y+20 (direct mex of closed-form children)",
+    "deep_scatter": "band identity + mex at y,d<=4000; tail consistency at y,d<=1500",
+    "low_R_collapse": "6<=y<=80, 0<=d<=80, 0<=R<=26 (=z+6); sharpness witness (16,6)@R=27: value20=2 vs single token 1",
+    "parent_direct": "6<=y<=20, 0<=d<=30, 0<=R<=x+y+20",
+    "scatter_raw": "y,d<=25, R<=x+y+20 (dual engines vs closed form)",
+    "scatter_seed": 20261123,
+    "set_vs_predicate": "independent set-based transcription vs predicates, x<=300",
+    "signature_bands": "6<=y<=80, 0<=d<=80, all 1<=R<=x+y+20",
+    "tail_direct": "6<=y<=18, 0<=d<=25, x+y+21<=R<=x+y+25"
+  },
+  "fixed_seed_scatter": 11000,
+  "low_R_single_token_collapse": 164025,
+  "low_R_witness_16_6_R27": 1,
+  "parent_two_recursions": 28830,
+  "proof_status": "proved_by_two_level_induction_and_symbolic_signature_bands",
+  "set_vs_predicate": 135725,
+  "signature_coverage_identity_mex": 886950,
+  "tail_direct": 1690,
+  "total": 6748689,
+  "verifier_sha256": "773189e69d9db37782190f84aa389f32265a48c20829180f97fcfd7e43d25eae"
+}
