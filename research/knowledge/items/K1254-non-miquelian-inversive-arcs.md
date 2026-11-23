@@ -48,6 +48,12 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/output/grundy_ag_q8.txt
   role: data
   note: AG(2,8) 盤の完全 Grundy（ROOT 0 1 = 後手勝ち）
+- path: research/experiments/finite-field-kyouen-20261120/output/grundy_ag_q7.txt
+  role: data
+  note: AG(2,7) 盤の完全 Grundy（ROOT 0 1 = 後手勝ち）
+- path: research/experiments/finite-field-kyouen-20261120/output/grundy_ag_q9.txt
+  role: data
+  note: AG(2,9) 盤の完全 Grundy（ROOT 1 0 = 先手勝ち）
 scope: 位数8のSuzuki–Tits反転平面（Tits ovoid から作られる非Miquelian反転平面）の弧（どの4点も同一円上にない点集合）の最大サイズ
 evidence: Tits ovoid O = {(1, x^4+xy+y^6, x, y)} ∪ {(0,1,0,0)} を F_8 上で構成し、全直線が2点以下（0本の違反）・平面上の9点切断が520個・全 C(65,3) 三点点が円上にちょうど1回（43,680/43,680）を機械確認。その後アーク・センサスを深さ10まで走らせ、層サイズと K を厳密に決定。
 ---
@@ -227,6 +233,24 @@ Suzuki–Tits 盤だけ Grundy 値 3 が現れる（109,200 局面）のも特�
   `σ = 2^{e+1}` の古典形を使えばよいが、本項では `q=8` のみ構成・検証した。
 - 弧の計算は厳密（アーク・センサスが全アークを列挙）。ただし `K` の値はこの盤に固有の
   計算結果であり、一般の非Miquelian 盤への拡張は未検討。
+
+## 位数7・8・9 の盤ごとのゲーム勝敗（5盤の比較）
+
+AG(2,q) 盤でも完全 Grundy 計算を行い（q=7: 2,276,002 局面、q=9: 76,540,114 局面）、
+同じ整理をした。
+
+| 盤 | q=7 | q=8 | q=9 |
+|---|---|---|---|
+| Miquelian 反転平面 | 後手勝ち | **先手勝ち** | 後手勝ち |
+| Suzuki–Tits 反転平面 | （存在せず） | 後手勝ち | （存在せず） |
+| AG(2,q) 盤 | 後手勝ち | 後手勝ち | **先手勝ち** |
+
+- q=7 では Miquelian と AG が一致（ともに対象）。
+- **q=8 と q=9 では Miquelian と AG が逆**。q=8 では Suzuki–Tits も AG 側（後手勝ち）。
+- Miquelian の系列（q=3,5,7,8,9 → 先, 先, 後, 先, 後）に対し、AG 盤は q=8, 9 で
+  ちょうど裏返る。したがって「位数8で先手勝ち」は Miquelian 盤の特異性である。
+
+**データ**：`output/grundy_ag_q7.txt`（ROOT 0 1）、`output/grundy_ag_q9.txt`（ROOT 1 0）。
 
 ## 付記：AG(2,8) 盤の最大弧は 8
 
