@@ -6277,3 +6277,68 @@ amendmentがある場合は本宣言を破棄して着手しない。branch / PR
   noteのblob sha1ロック `7f19145a…` (458,762 bytes) を再照合する
   (競合時は再fetchして本節を追記し直し、成立しない場合は簡潔に記録して
   次回へ回す)。
+
+### Part BT status update (2026-11-23, execution host = 本レーン continuing session)
+
+宣言 (note amendment commit `135cc386`) どおり、push後に最新mainで
+batch-26 residual continuationスコープの対抗宣言・amendmentがないことを
+確認したうえ、宣言protocolを履行し出版まで完了した (verdict不消費)。
+
+- 実行 (宣言protocol順・逐次): val-gate 4/4 node-exact (at2m 2行 result 0
+  / nodes 2,000,000・15m 2行 result 2 / nodes (2,3,651,923)/(2,5,040,200)・
+  禁止四角 95,670 x4・`# replay_done` x4・本host値は val-gate/*.bt-host.out
+  4ファイル) → drive 4回の bounded invocation (同一published drive driver
+  `1037cc5f`・2 worker・260s有界) で残留22キー完走: **22行すべて LOSS
+  (採用候補のみ)** (合計 nodes 88,000,683・最小 l038 1,577,298・最大 l048
+  9,304,668)・2-pass node-exact (mismatch 0)・EXHAUSTED 0・WIN 0
+  (WIN-CONTINUE規則は不発動)。truncated-retry 7件を誠実記録 (l035 p1 /
+  l036 p2 / l041 p1 / l045 p1 / l046 p2 / l049 p1 / l050 p1・断片7ファイル
+  は output/raw/*.truncated.*.out として保存・published completeness
+  guard (`# replay_done` 検査) がfresh-cold再実行・完了行の再実行ゼロ・
+  status.log はpublished 42行 prefixとbyte一致 + 追記29行)。
+- full-row row-audit (batch-26 README予約文言の履行): published
+  pre-registered `row_audit_batch26.py` (sha256 `33ffbce5…`) はWIN行の
+  status.log照合で**fail-closedした** (runbatch `f591f8c2…` がWINキーを
+  「PASS (nodes付き) + WIN-HALT」の2行で書くのに対し監査側が単行
+  (nodes付きWIN-HALT行) を想定・完全完走バッチでWIN行を含む監査の実行は
+  今回が初で、これが潜在gateバグの初発火) → 最小派生版
+  `row_audit_batch26_full.py` (sha256 `434025ba…`・pre-registered版との
+  差分はWIN行の2行pair照合のみ・schema
+  `n11-centralreply-closure-class1849-batch26-rowaudit-full-v2`) を本Partの
+  outputsとして出版し **PASS: 53 rows / LOSS 52 / WIN 1 (l028) / exhausted
+  0 / mismatches 0** (row-audit.json sha256 `cb4158d9…`・3回実行byte
+  一致)・tamper battery 4/4検出 (T1 l044.p1 verdict反転→p1/p2 mismatch・
+  T2 l028 WIN-HALT行除去→2行pair gate・T3 l035.p1 verdict反転→mismatch・
+  T4 l049.p2 replay_done行除去→truncated gate。初回T1探針はsed pattern
+  不一致のno-opで検出に至らず、anchor実効性assert付きで電池を設計し直し
+  再実施・scratch上で実施し実験filesはbattery前後でbyte同一)・clean
+  control PASS。
+- 出版 (全fetch-back byte照合): outputs `a79c2a6f` (58 files: raw 51 =
+  完了44 + 断片7・status.log・row-audit.json・bt-host 4・派生監査script・
+  fetch-back 58/58 byte一致) → `d69c3a38` README + MANIFEST-sha256 204行
+  (fetch-back 2/2・MANIFESTはpublished 148行を保持しstatus.log行のみsha
+  更新・l035.p1.out行はfresh再実行版に更新・新規57行追記)。
+- 意味 (route statementのみ・閉鎖主張なし): **class 1849の53子すべてに
+  honest label (WIN 1 (l028・Part BSで4系統裏付け済み) + LOSS 52) が揃い、
+  列挙ブックとして完結** (ただしverdictは一切不消費・閉包判定・free
+  classificationの更新はadoption Partとrefresh再監査の仕事で本Partは
+  代行しない)。52 LOSS行は採用候補のみ・採用は別宣言adoption Part
+  (pinned fail-closed merger `90711961…`) 経由のみ。l028を含む28
+  unconsumed closure WIN候補はscrutiny owner C++第二実装 gate pin
+  `9193f5b6…` 待ちのまま。canonical cache 6,235行 `f6649fe3…` は
+  read-only不変・batch-26 rowsはいかなるcacheにも未書込。
+- 不接触確認: **batch-27 (Part BR・scaffold 93ef3f89・54キー) には本Partは
+  一切触れていない** (BRは並走所有・本status update push直前の時点で
+  batch-27のdrive outputsはまだmainに無いことを確認)。fast lane (y21宣言
+  `a0519efe`)・finite-field/general-x-merge lane (K1252/K1254) 非接触。
+- UNKNOWN担保: 標準11×11空盤・19 central-reply roots・二石root
+  {49,60}/{59,60}・S2 {59,60}・class 1/2/4・class 1849 (53キーすべて・
+  l028・52 LOSS行を含む)・class 13342 は本status update時点でもUNKNOWN
+  のまま。nodes数・legal数を勝敗として読まない。被覆・secured・root勝敗
+  の主張をしない。WIN/LOSS採用は別宣言のadoption Part (merger
+  `90711961`) 経由のみ。
+- 本status update observed HEAD-before-push: `d69c3a38` (Part BT
+  commit B)。push直前に最新mainを再fetchし note blob lock `7bc5d800…`
+  (464,656 bytes) を再照合する (batch-27 status update等の並走追記が
+  挟まった場合は本節を追記し直し、成立しない場合は簡潔に記録して次回へ
+  回す)。
