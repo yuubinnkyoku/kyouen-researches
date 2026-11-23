@@ -3014,3 +3014,104 @@ value.
   scrutiny-owner adoption decision, and joint greedy pass-limit
   improvement candidates (e.g. run-to-convergence with a saved-best
   snapshot instead of the 6-pass truncated snapshot).
+
+## Continuation 45 (2026-11-23, this host): Part BE executed and published - batch-19 (class 16513 rank-15 closure candidate) exact-S5 probe; first wave w001 WIN 6,639,780 nodes + w002 WIN 7,738,714 nodes (both 2-pass fresh-cold node-exact, in 15M budget), pre-registered WIN-HALT rule stopped the batch at 2/53 probed (51 UNPROBED, fresh); verdict consumption ZERO; unconsumed closure WIN candidates 17->19; class 16513 and all 53 keys stay UNKNOWN; 11x11 stays UNKNOWN
+
+- Entry recorded post-publication by the continuing session of this
+  lane (context compaction fell between the execution and this
+  session-log write-up; every fact below was re-verified against the
+  published bytes on main just now: batch-19 MANIFEST remote ==
+  local byte-identical, raw/status/README gate shas all match).
+- Selection was machine-fixed, not hand-picked: the published
+  closure-candidate table (Part BC reaudit output) ranks 1-14 all
+  17-WIN-refuted; rank 15 class 16513 (mask [1153202980657299456,
+  67108864], unknown 53, groups served (24,50)(24,70)(24,96)(48,30)
+  (48,90)) was the first clean candidate; runner-up rank 16 class
+  5687 left untouched for batch-20.
+- Declaration published before execution: note amendment
+  `2dbb6714` (note blob lock `598b5f84`, observed HEAD-before-push
+  `b546b56d`). Scaffold publication commit A `49c3bea7` (68 files:
+  runner + val-gate 4/4 node-exact this-host re-verified (at2m
+  0/2,000,000 x2, first-15m (2,3651923), second-15m (2,5040200),
+  forbidden quadruples 95,670 x4) + status.log + input packet
+  w001..w053, batch-keys sha256 `9609aaf3...`, maker
+  `make_batch19_keys.py` 3x byte-identical, all gates PASS; a
+  one-char batch-11 packet-pin typo caught by the sha gate during
+  dev was fixed and honestly recorded).
+- Execution commit B `51e73082` (WIN-HALT at first wave, rc=45 both
+  workers): **w001 WIN (result 1) 6,639,780 nodes**, key
+  [1153202980791517184, 67108864], legal 84, s5 index 63802, holder
+  classes 1363/16513; **w002 WIN (result 1) 7,738,714 nodes**, key
+  [10376575017512075264, 67108864], legal 89, s5 index 109169,
+  holder classes 2901/16513. Both rows 2-pass fresh-cold
+  node-exact with `# replay_done` (w001 raw p1/p2 byte-identical,
+  wall_s 67/67; w002 wall_s 81/67). Readme/rules commit C
+  `9719e926` (README + MANIFEST-sha256, 74 enumerated files).
+- Route statement (conditional, NOT a verdict): if a WIN on a
+  class-16513 cost child is adopted, the all-LOSS closure route of
+  class 16513 is refuted. Nothing was adopted: the 19 unconsumed
+  closure WIN candidates (17 prior + w001 + w002) all remain
+  scrutiny-owner pending (C++ second-implementation gate pin
+  `9193f5b6...`). Canonical exact-S5 cache (6,182 rows
+  `0b594f7e...`) untouched; no cache written; verdict consumption
+  ZERO. Probed keys are NOT re-probed (15M re-search prohibition);
+  the remaining 51 keys w003..w053 were never run and stay fresh.
+- Guards unchanged: the standard 11x11 empty board, the 19
+  central-reply roots, class 16513 (remaining 51 children) and all
+  53 batch-19 keys remain UNKNOWN at every point; node counts are
+  bookkeeping, not verdicts.
+
+## Continuation 46 (2026-11-23, this host): Part BF executed and published - third-implementation cross-verification of the two batch-19 WIN rows w001/w002: both reproduce as clean WIN under the pinned independent solver (7,682,625 / 8,988,730 expansions, a/b determinism pairs identical, replica verdict agreement 2/2); verdict consumption ZERO; 19 unconsumed closure WIN candidates remain scrutiny-owner pending; class 16513 and all 53 keys stay UNKNOWN; 11x11 stays UNKNOWN
+
+- Declaration published before execution: note amendment
+  `511ae474` (observed HEAD-before-push `9719e926`, note blob lock
+  `eb6066e6`), fetch-back byte-identical. Battery: Part
+  G/K/O/P/T/W/AA/AD/AG/AL/AR/AZ precedent, sequential per the Part
+  AX CPU-quota observation.
+- Machine-derived inputs (`make_inputs_bf.py`, all gates PASS, 3x
+  byte-identical, zero hand transcription): source pins from the
+  published batch-19 artifacts (batch-keys `9609aaf3...`, raws
+  `8cf13d13` x2 (w001 p1/p2 byte-identical), `1faf8d15`/
+  `feb8475b` (w002), status-b19.log `e3a9e5b4` (three-way battery:
+  PASS rows, WIN-HALT rows, WIN-ROW-DETAIL rows with s5 index and
+  holder classes, VAL-GATE 4/4, EXECUTION-HALTED, 51-unprobed,
+  19-candidates), README-b19 `29c7ea51` results section,
+  published input CSVs `f232a593`/`574a4124` byte-equal, AR
+  anchor/negative CSVs byte-equal) + batch-19 published MANIFEST
+  remote == local byte-identity check.
+- Targets (pinned `third_impl.js` `08ea958f...`, 1 solver / 1 row /
+  1 process, cap 300M, wallcap 240s, `--memo-power=22`):
+  **w001 third-impl WIN (result 1) 7,682,625 expansions /
+  4,336,161 ttHits** (replica 6,639,780 nodes, ratio 1.16) and
+  **w002 third-impl WIN (result 1) 8,988,730 expansions /
+  5,106,247 ttHits** (replica 7,738,714 nodes, ratio 1.16). a/b
+  pairs result/expansion/ttHits/reason identical; pass-one total
+  16,671,355 expansions. LOSS 0, WALL-INCONCLUSIVE 0, DIVERGENCE 0.
+- Anchors: k02a WIN 9,106,337/4,991,527 and l1a LOSS
+  7,660,602/3,951,175 reproduce the published third-impl values
+  node-exact (a/b identical). Negatives ng1/ng2 fail-closed with
+  the designed GATE_FAIL wording. Rules gate: replica quads 95,670
+  == third-impl quads 95,670, triples checked 195,044 mismatches 0.
+  Audit (`audit.py`, schema
+  `n11-centralreply-closure-b19win-thirdimpl-audit-v1`): 53/53
+  gates PASS, two runs byte-identical.
+- Publication (declared before execution, fetch-back byte-verified
+  at the pinned commits, 43/43 files): A `98e5b3b1` (scaffold 26:
+  scripts 6 + inputs 7 + sources 13) / B `6e31eb35` (solver
+  outputs 16) / C `55a75f38` (README + MANIFEST-sha256 43-file
+  enumeration). Experiment dir:
+  `research/experiments/n11-centralreply-closure-b19win-thirdimpl-20261123/`.
+- Verdicts NOT consumed: this Part only read published bytes and
+  produced new-dir outputs; canonical cache (6,182 rows
+  `0b594f7e...`) untouched. The 19 unconsumed closure WIN
+  candidates remain gated on the scrutiny owner's C++ second
+  implementation (pin `9193f5b6...`). Non-contact kept with the
+  batch-19 remaining 51 fresh keys w003..w053 and with the
+  batch-20 pivot (rank-16 class 5687).
+- Guards unchanged: the standard 11x11 empty board, the 19
+  central-reply roots, the two-stone roots {49,60}/{59,60}, S2
+  {59,60}, class 16513 (remaining 51 children) and all 53 keys
+  remain UNKNOWN at every point; nodes/expansions/ttHits are
+  bookkeeping, never verdicts. Resume pointers: batch-20 selection
+  (class 5687 next clean closure candidate), batch-19 remaining 51
+  keys, the 19-WIN scrutiny-owner adoption decision.
