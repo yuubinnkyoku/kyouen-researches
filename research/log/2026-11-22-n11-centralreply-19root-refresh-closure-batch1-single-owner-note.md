@@ -7834,3 +7834,98 @@ typo-fix `b37117d9` 版) を再照合する。)
   本commitで該当2sectionのみ改行へ復元した (junction junk 2 個・section内 144 個)。
   observed HEAD-before-push: `e3c4cbc6b6fb3b2e18b11375e0e0809759872024`、修復時 note blob sha1ロック `b3e92fe8cb25b01bf7e90c7cf5886e16e3ca5542`。
   その他のsection・数値・shaは不変。
+
+## Part CC (verifier, amendment 2026-11-23): batch-28 WIN rows aa001/aa002 third-implementation cross-verification・実行前に出版・verdict不消費
+
+(Part CB (batch-28・class 5343) のWIN-HALT 2行に対するpinned第三実装交叉検証を単一オーナーで着手するamendment。Part BY (batch-27 o002) の手続きのbatch-28再適用。対抗宣言なしをpush直前に機械確認済み (note内に「Part CC」表記ゼロ)。)
+
+- 対象: `research/experiments/n11-centralreply-closure-b28win-thirdimpl-20261123/`。
+  batch-28 (Part CB・宣言 `395219833f80a5d345c0acf999407b31e66832cb`) で出版された
+  WIN行 **aa001** (key (1315631633331650560, 0)・s5 28037・legal 88・membership 4・
+  published replica result 1・nodes 13,183,855・**30番目の unconsumed closure WIN候補**) と
+  **aa002** (key (1171516445390012416, 0)・s5 87306・legal 86・membership 2・
+  published replica result 1・nodes 6,527,041・**31番目**)。いずれもhonest label・
+  2-pass node-exact。残り52キー (aa003..aa054) はfileless UNPROBEDのまま本Partは
+  一切触れない。
+- 誠実な開示: batch-28 drive-1 は Part CB実行hostの単一環境出版物であり、
+  aa001/aa002の第二実行環境同時再現は出版されていなかった。本Partのthis-host
+  pinned-replica (fresh-cold 2-pass) はpublished source bytesのsha検証後に全工程を
+  再実行するもので、node-exact一致が達成された場合はaa001/aa002に対して最初の
+  「独立セッション再現」として記録する (実行hostの物理的相違までは主張しない)。
+- 事前ゲート (宣言前・本host・すべて機械確認済み): maker
+  `scripts/make_inputs_cc.py` (runtime sha256
+  `8255d0adfe82ccc33d49c1339281fb18410748d165fa36e099529233249ab700`・Part BY maker
+  359abebc…のbatch-28派生・2文字prefix aa### gate込み) を4回実行し全出力
+  byte-identical・input/rows.json (sha256
+  `b7222edf773c541fafac165d16355fd1f9469ec31bc233f78a35037fad542d39`・schema
+  `n11-centralreply-closure-b28win-thirdimpl-input-v1`) 再生成byte一致。
+  maker内fail-closed gate: sources 4ピン (batch-keys-b28 `af19208f…` /
+  status-b28.log `e98b5d23…` / README-b28 `1b9f87b1…` /
+  row-audit-winhalt-b28 `3f50b4f6…`) + raw 4ピン (aa001.p1 `b3f396bd…` /
+  aa001.p2 `59a3e8a1…` / aa002.p1 `07d9d643…` / aa002.p2 `7d2d26a8…`) +
+  published input CSV 2ピン (aa001 `8083b62e…` / aa002 `6310e641…`) + Part BF
+  anchor/negative CSV 4ピン (b6174a3f… / e13d2a6c… / 8e64b9ad… / f19cd5a3…・
+  provenance chain AR→BF→BK→BM→BS→BV→BW→BX→BY→CC)。status.log 4行
+  (WIN PASS 2 + WIN-HALT 2・retry/fragment/loss行ゼロ)・row-audit
+  (probed 2・win_rows [aa001, aa002]・loss_rows []・fileless_unprobed 52・
+  fragment_keys {})・README文言 (両WIN honest label・nodes 2件・
+  30番目・31番目候補・fileless UNPROBED・scrutiny owner継続・class 5343/Part CB)
+  の各gate全PASS。tamper battery **7/7検出** (T1 raw aa001.p1 nodes+1 /
+  T2 row-audit probed 2→3 / T3 README aa001 WIN→LOSS / T4 status aa001 verdict
+  反転 1→2 / T5 published-input aa002 legal 86→85 / T6 BF anchor k02a lo+1 /
+  T7 batch-keys s5_index 28037→28038・全tamperに適用実効性確認・scratch (/tmp)
+  上で実施し実験sources無改変byte検証済み)・clean control PASS。
+- 手法 (Part BYと同一のgate論理・1行1プロセス・逐次): (1) rules gate
+  (pinned `verify_tbl.js` `c8c52528…`・replica quads 95,670 == third-impl quads
+  95,670・triples mismatches 0)。(2) val-gate this-host 4行 (pinned
+  `jsreplay.js` `84585617…`・published baseline 4組 (batch-28 kitのbyte-copy)
+  に対するnode-exact一致が前提・wall_s比較外)。(3) negatives 2種
+  (ng1 legal+1 / ng2 stones+1 → GATE_FAIL設計どおり)。(4) anchors 2行
+  (k02a clean WIN expansions 9,106,337 / ttHits 4,991,527・l1a clean LOSS
+  7,660,602 / 3,951,175・a/b determinism)。(5) 本host pinned-replica 2-pass
+  fresh-cold (budget 15,000,000・aa001/aa002各p1/p2・determinism field一致 +
+  published raw fields (result 1・nodes 13,183,855 / 6,527,041) 完全一致)。
+  (6) 第三実装 (非df-pn AND/ORミニマックス `third_impl.js` pin `08ea958f…`)
+  による対象行のverdict-level交叉検証 (driver `run_thirdimpl.sh` byte-copy
+  sha256 `a0b77d8330c696a5a7da2883d49110ae8703dc1673be10d3a9972ea53c885a41`・
+  cap 300,000,000・wallcap 240s・memo-power=22・1行2回 (a/b) determinism gate)。
+  wall超過 (runlimit) はhonest wall-inconclusiveとして記録し検証主張としない。
+  cleanな不一致はdivergence evidenceとして記録するが本レーンではverdictを
+  書き換えない。
+- 監査: `scripts/audit.py` (sha256
+  `b7cfb0ce1fa2457ec7b4bfbb595aabcdd4303859800566104370b82d864d8b96`・Part BY
+  audit 7f7fa3d1…のbatch-28派生・schema
+  `n11-centralreply-closure-b28win-thirdimpl-audit-v1`)。G0 (input/rows整合)・G1
+  (script pin 3種)・G2 (rules gate)・G2b (this-host replica p1/p2 determinism +
+  published fields一致)・G3 (anchors node-exact)・G4 (negatives GATE_FAIL)・
+  G5 (targets a/b determinism + verdict agreement) の全gate MUST PASS・3回実行
+  byte一致 (audit-run1/2/3)・audit tamper battery 3種 (T1 script pin反転
+  (PIN_THIRD末尾1桁反転) → pin gate fail ABORT / T2 targets a.out det-pair
+  改ざん (expansions +1) → target-det-pair gate fail / T3 G0 input改ざん
+  (CSV legal +1) → input-matches-rows gate fail・いずれもscratch copy上で実施し
+  実験files無改変byte検証)。
+- 主張と消費規則: 本検証はverdict-level文献 (three-implementation
+  corroboration) のみ・**verdict不消費** (採用判断はscrutiny owner C++
+  第二実装 gate pin `9193f5b6` 待ち・本レーンは代行しない)。aa001/aa002の
+  採用された場合のroute statement: 単WIN子によりclass 5343の全LOSS閉包ルートは
+  反駁証拠を持つ (Part CB READMEと同一文言)。閉鎖・被覆・secured・root勝敗の
+  主張はしない。canonical cache (`9115be9e…` 6,293行) read-only・不変。
+- 不接触: batch-28 fileless 52キー (aa003..aa054)・Part CA (batch-27 residual)・
+  batch 1..28 published dirs (不変)・fast lane (y=22/23)・finite-field lane
+  (K1254)・inversive/z19 lanes・19root計画。28 unconsumed closure WIN候補の
+  採用状態にも非接触。
+- UNKNOWN担保: 標準11x11空盤・19 central-reply roots・二石root
+  {49,60}/{59,60}・S2 {59,60}・class 1/2/4・class 10968・class 23964・
+  class 5343 (54キーすべて・aa001/aa002を含む) は本Partの実行・出版の
+  どの時点でもUNKNOWNのまま。nodes数・expansions数・ttHits数・wall秒数を
+  勝敗として読まない。
+- 出版計画: A scaffold (scripts 6 + input 7 + sources 14 + val-gate 8 = 35
+  files) → B outputs (rules-gate + this-host val-gate 4 + replica 4 +
+  negatives 2 + anchors 4 + targets 4 + audit 3回分 + status.log) →
+  C README + MANIFEST-sha256 (全published files分)。各コミットはcommit-pinned
+  raw URLでfetch-back byte照合・push直前に必ず最新mainを再fetchして
+  observed HEADを記録する。
+- 本amendment observed HEAD-before-push: `59fababc6a49a077fbe03f3f1e25a359816f338a`
+  (2026-11-23)。push直前に最新mainを再fetchしnote blob sha1ロック
+  `fad849e99ffa4e460b6ca3605fbc0d885c30c828` (585,934 bytes版) を再照合する
+  (競合時は再fetchして本節を追記し直し、成立しなければ簡潔に記録して次回へ回す)。
