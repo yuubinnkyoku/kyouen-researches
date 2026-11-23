@@ -1,0 +1,527 @@
+{
+ "batch_keys": {
+  "adopted_loss": 1,
+  "b28_adopted": 1,
+  "b28_class": 5343,
+  "b28_class_mask": [
+   1171516445255794688,
+   0
+  ],
+  "b28_cost_children_total": 54,
+  "b28_exhausted": 2,
+  "b28_fileless_unprobed": 47,
+  "b28_fragments": 0,
+  "b28_groups_served": [
+   [
+    4,
+    59
+   ],
+   [
+    4,
+    114
+   ],
+   [
+    49,
+    44
+   ],
+   [
+    49,
+    54
+   ]
+  ],
+  "b28_keys": 54,
+  "b28_win": 4,
+  "count": 54,
+  "exhausted_excluded": 2,
+  "unadopted_win": 4
+ },
+ "changed_per_root_coverage_rows": {},
+ "class_rows": {
+  "5343": {
+   "adopted_by_increment": 1,
+   "base_unknown_children": 54,
+   "batch": 28,
+   "class_index": 5343,
+   "exhausted_s5_in_leftover": [
+    118693,
+    124331
+   ],
+   "leftover_unknown_children": 53,
+   "scenario_status": "unknown",
+   "scenario_unknown_children": 53,
+   "unadopted_win_s5_in_leftover": [
+    28037,
+    87306,
+    129823,
+    135236
+   ]
+  }
+ },
+ "closure_candidate_rows": {
+  "anchors": {
+   "12643": {
+    "base_rank": 20,
+    "note": "rank churns per the declared map; unknown_now stays 53",
+    "scenario_rank": 21,
+    "unknown_now": 53
+   },
+   "1849": {
+    "base_rank": 2,
+    "scenario_rank": 2,
+    "unknown_now": 1
+   },
+   "23101": {
+    "base_rank": 1,
+    "scenario_rank": 1,
+    "unknown_now": 1
+   }
+  },
+  "churn": {
+   "10968": {
+    "base_rank": 22,
+    "scenario_rank": 23
+   },
+   "12643": {
+    "base_rank": 20,
+    "scenario_rank": 21
+   },
+   "23964": {
+    "base_rank": 23,
+    "scenario_rank": 24
+   },
+   "25835": {
+    "base_rank": 24,
+    "scenario_rank": 25
+   },
+   "30565": {
+    "base_rank": 25,
+    "scenario_rank": 26
+   },
+   "31600": {
+    "base_rank": 21,
+    "scenario_rank": 22
+   },
+   "5343": {
+    "base_rank": 27,
+    "scenario_rank": 19
+   },
+   "5687": {
+    "base_rank": 19,
+    "scenario_rank": 20
+   },
+   "5690": {
+    "base_rank": 26,
+    "scenario_rank": 27
+   }
+  },
+  "churn_gate": "rank churn only: every churned class keeps recomputed BASE == scenario status unknown, driven by the class-5343 remaining-count change (54->53) moving 5343 ahead in the ranked table; no class freed, none excluded, none entered the unknown population",
+  "classes": {
+   "5343": {
+    "base_rank": 27,
+    "base_unknown_now": 54,
+    "scenario_rank": 19,
+    "scenario_unknown_now": 53
+   }
+  },
+  "entered_table_classes": [],
+  "left_table_classes": [],
+  "scenario_first_row": {
+   "class_hi": "16",
+   "class_index": "23101",
+   "class_lo": "1152921504892059648",
+   "class_rank": "1",
+   "first_group_first": "24",
+   "first_group_third": "28",
+   "groups_served_count": "3",
+   "unknown_now": "1"
+  }
+ },
+ "excluded_now_flips": [],
+ "exhausted_rows": [
+  {
+   "consumed": false,
+   "key": [
+    1171516445255794689,
+    0
+   ],
+   "key_id": "aa004",
+   "nodes": 15000000,
+   "note": "budget exhaustion at 15M on both passes; honest UNKNOWN; same-condition re-probe not performed; adopted nowhere; the completeness guard re-runs any truncated pass fresh-cold",
+   "probed": true,
+   "result": 0,
+   "s5_index": 118693
+  },
+  {
+   "consumed": false,
+   "key": [
+    1171516445255794690,
+    0
+   ],
+   "key_id": "aa005",
+   "nodes": 15000000,
+   "note": "budget exhaustion at 15M on both passes; honest UNKNOWN; same-condition re-probe not performed; adopted nowhere; the completeness guard re-runs any truncated pass fresh-cold",
+   "probed": true,
+   "result": 0,
+   "s5_index": 124331
+  }
+ ],
+ "fragment_rows": [],
+ "holder_classes": {
+  "2688": {
+   "base_status": "unknown",
+   "base_unknown_now": 101,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 100
+  },
+  "2700": {
+   "base_status": "unknown",
+   "base_unknown_now": 61,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 60
+  },
+  "5343": {
+   "base_status": "unknown",
+   "base_unknown_now": 54,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 53
+  }
+ },
+ "holder_union_size": 3,
+ "individual_greedy_union_movers": {
+  "central|4": {
+   "base": 5978,
+   "scenario": 5977
+  },
+  "central|49": {
+   "base": 2811,
+   "scenario": 2810
+  }
+ },
+ "interpretation_guard": "canonical single-row adoption deltas: only the 1 LOSS row aa003 is consumed into the canonical cache via the fail-closed union merger; the aa001/aa002/aa006/aa007 WIN verdicts are NOT consumed (the unconsumed closure WIN candidates stay untouched); the aa004/aa005 EXHAUSTED rows stay honest UNKNOWN; class 5343 does NOT free in this adoption; scheduling quantities are bookkeeping; every claim stays UNKNOWN; 11x11 empty board and all 19 roots stay UNKNOWN; nodes are bookkeeping",
+ "member_loss_counts": {
+  "2688": 1,
+  "2700": 1,
+  "5343": 1
+ },
+ "metrics": {
+  "closure_classes_count": {
+   "base": 807,
+   "delta": 0,
+   "scenario": 807
+  },
+  "excluded_now_classes": {
+   "base": 23,
+   "delta": 0,
+   "scenario": 23
+  },
+  "free_now_classes": {
+   "base": 38,
+   "delta": 0,
+   "scenario": 38
+  },
+  "group_best_options_nonfree": {
+   "base": 2119,
+   "delta": 0,
+   "scenario": 2119
+  },
+  "joint_greedy_union_size": {
+   "base": 38295,
+   "delta": 0,
+   "scenario": 38295
+  },
+  "joint_greedy_unique_groups": {
+   "base": 2119,
+   "delta": 0,
+   "scenario": 2119
+  },
+  "probe_worklist_total": {
+   "base": 64747,
+   "delta": -1,
+   "scenario": 64746
+  },
+  "unknown_classes": {
+   "base": 34498,
+   "delta": 0,
+   "scenario": 34498
+  },
+  "update8_groups_free_now": {
+   "base": 131,
+   "delta": 0,
+   "scenario": 131
+  },
+  "update8_remaining_now": {
+   "base": 31726,
+   "delta": -1,
+   "scenario": 31725
+  },
+  "update8_resolved_count": {
+   "base": 133,
+   "delta": 1,
+   "scenario": 134
+  },
+  "update8_win_hit_groups": {
+   "base": 0,
+   "delta": 0,
+   "scenario": 0
+  }
+ },
+ "newly_free_now_classes": [],
+ "newly_free_now_gate": "the loss-only packet can only free classes whose BASE-unknown children are ALL resolved by the increment; machine-computed list is empty here; class 5343 does NOT free (its 4 WIN children and the 2 EXHAUSTED + 47 fileless keys stay unconsumed/unprobed/unknown)",
+ "newly_free_thirds": [],
+ "per_root_greedy": {
+  "0": {
+   "base_free_thirds": 7,
+   "base_greedy_union_size": 2785,
+   "base_uncovered_thirds": 112,
+   "delta": 0,
+   "scenario_free_thirds": 7,
+   "scenario_greedy_union_size": 2785,
+   "scenario_uncovered_thirds": 112
+  },
+  "1": {
+   "base_free_thirds": 4,
+   "base_greedy_union_size": 6355,
+   "base_uncovered_thirds": 115,
+   "delta": 0,
+   "scenario_free_thirds": 4,
+   "scenario_greedy_union_size": 6355,
+   "scenario_uncovered_thirds": 115
+  },
+  "12": {
+   "base_free_thirds": 6,
+   "base_greedy_union_size": 3029,
+   "base_uncovered_thirds": 113,
+   "delta": 0,
+   "scenario_free_thirds": 6,
+   "scenario_greedy_union_size": 3029,
+   "scenario_uncovered_thirds": 113
+  },
+  "13": {
+   "base_free_thirds": 6,
+   "base_greedy_union_size": 6176,
+   "base_uncovered_thirds": 113,
+   "delta": 0,
+   "scenario_free_thirds": 6,
+   "scenario_greedy_union_size": 6176,
+   "scenario_uncovered_thirds": 113
+  },
+  "14": {
+   "base_free_thirds": 8,
+   "base_greedy_union_size": 4439,
+   "base_uncovered_thirds": 111,
+   "delta": 0,
+   "scenario_free_thirds": 8,
+   "scenario_greedy_union_size": 4439,
+   "scenario_uncovered_thirds": 111
+  },
+  "15": {
+   "base_free_thirds": 5,
+   "base_greedy_union_size": 5991,
+   "base_uncovered_thirds": 114,
+   "delta": 0,
+   "scenario_free_thirds": 5,
+   "scenario_greedy_union_size": 5991,
+   "scenario_uncovered_thirds": 114
+  },
+  "16": {
+   "base_free_thirds": 16,
+   "base_greedy_union_size": 2972,
+   "base_uncovered_thirds": 103,
+   "delta": 0,
+   "scenario_free_thirds": 16,
+   "scenario_greedy_union_size": 2972,
+   "scenario_uncovered_thirds": 103
+  },
+  "2": {
+   "base_free_thirds": 8,
+   "base_greedy_union_size": 6129,
+   "base_uncovered_thirds": 111,
+   "delta": 0,
+   "scenario_free_thirds": 8,
+   "scenario_greedy_union_size": 6129,
+   "scenario_uncovered_thirds": 111
+  },
+  "24": {
+   "base_free_thirds": 12,
+   "base_greedy_union_size": 2764,
+   "base_uncovered_thirds": 107,
+   "delta": 0,
+   "scenario_free_thirds": 12,
+   "scenario_greedy_union_size": 2764,
+   "scenario_uncovered_thirds": 107
+  },
+  "25": {
+   "base_free_thirds": 6,
+   "base_greedy_union_size": 5920,
+   "base_uncovered_thirds": 113,
+   "delta": 0,
+   "scenario_free_thirds": 6,
+   "scenario_greedy_union_size": 5920,
+   "scenario_uncovered_thirds": 113
+  },
+  "26": {
+   "base_free_thirds": 8,
+   "base_greedy_union_size": 5122,
+   "base_uncovered_thirds": 111,
+   "delta": 0,
+   "scenario_free_thirds": 8,
+   "scenario_greedy_union_size": 5122,
+   "scenario_uncovered_thirds": 111
+  },
+  "3": {
+   "base_free_thirds": 6,
+   "base_greedy_union_size": 5432,
+   "base_uncovered_thirds": 113,
+   "delta": 0,
+   "scenario_free_thirds": 6,
+   "scenario_greedy_union_size": 5432,
+   "scenario_uncovered_thirds": 113
+  },
+  "36": {
+   "base_free_thirds": 4,
+   "base_greedy_union_size": 2980,
+   "base_uncovered_thirds": 115,
+   "delta": 0,
+   "scenario_free_thirds": 4,
+   "scenario_greedy_union_size": 2980,
+   "scenario_uncovered_thirds": 115
+  },
+  "37": {
+   "base_free_thirds": 4,
+   "base_greedy_union_size": 4001,
+   "base_uncovered_thirds": 115,
+   "delta": 0,
+   "scenario_free_thirds": 4,
+   "scenario_greedy_union_size": 4001,
+   "scenario_uncovered_thirds": 115
+  },
+  "38": {
+   "base_free_thirds": 13,
+   "base_greedy_union_size": 3120,
+   "base_uncovered_thirds": 106,
+   "delta": 0,
+   "scenario_free_thirds": 13,
+   "scenario_greedy_union_size": 3120,
+   "scenario_uncovered_thirds": 106
+  },
+  "4": {
+   "base_free_thirds": 4,
+   "base_greedy_union_size": 5978,
+   "base_uncovered_thirds": 115,
+   "delta": -1,
+   "scenario_free_thirds": 4,
+   "scenario_greedy_union_size": 5977,
+   "scenario_uncovered_thirds": 115
+  },
+  "48": {
+   "base_free_thirds": 7,
+   "base_greedy_union_size": 2968,
+   "base_uncovered_thirds": 112,
+   "delta": 0,
+   "scenario_free_thirds": 7,
+   "scenario_greedy_union_size": 2968,
+   "scenario_uncovered_thirds": 112
+  },
+  "49": {
+   "base_free_thirds": 10,
+   "base_greedy_union_size": 2811,
+   "base_uncovered_thirds": 109,
+   "delta": -1,
+   "scenario_free_thirds": 10,
+   "scenario_greedy_union_size": 2810,
+   "scenario_uncovered_thirds": 109
+  },
+  "5": {
+   "base_free_thirds": 8,
+   "base_greedy_union_size": 2940,
+   "base_uncovered_thirds": 111,
+   "delta": 0,
+   "scenario_free_thirds": 8,
+   "scenario_greedy_union_size": 2940,
+   "scenario_uncovered_thirds": 111
+  }
+ },
+ "pins": {
+  "base_cache_sha256": "9115be9eca1e60828a90c50041f511b598ef79fc0be76d5e16821816e478e93e",
+  "base_closure_classes_sha256": "14fc37c3a6f5c6753cac72a094d2c7693defb4a5e483558b3b87a42016b679d9",
+  "base_per_root_coverage_sha256": "4218a6b49f8dd4df41f9bb3b746c7f2a32afeb3e22d175243e9319c8f46ca56a",
+  "base_summary_sha256": "fca242cc767f4e30b1d450a3b10cbd524b18b96f28b4cc4ba83c8762f8bb2ff2",
+  "batch28_keys_sha256": "af19208fafb61cc20892fa968bc373fe2c4f79da94744dfeed9d2f40ea8481e5",
+  "batch28_row_audit_sha256": "3e86a32b847b5799594be5fbee6624878deadf02990940b2503f931d7af30e91",
+  "increment_sha256": "dc857bfd2ecd00deaea3dbe214e0eec0e5b9d7704104a8721d046f262f170487",
+  "scenario_cache_sha256": "3124461b14e4f73a7248cbf5b96c7ff59ebfdcc05258adeb9c81791d86cc461e",
+  "scenario_closure_classes_sha256": "baa2db136c18c681633e5bfe3b5a1dec3f084d0c696b4454ae1855ab0773e7fd",
+  "scenario_per_root_coverage_sha256": "75e594419d7822752c9b91b58b8c96ba352296f83707b98786a8bd07afb6c439",
+  "scenario_summary_sha256": "76cad2a14263ee59cd8bc83008c26bd0b656f2c74e2e7a650550306dda40d395"
+ },
+ "recompute_gates": "class statuses with Board free-candidate child verification, known-universe counts and per-root free coverage were recomputed from graph + update8 + cache and asserted equal to the published BASE (Part BZ reaudit) and scenario outputs before any delta was emitted",
+ "roots_summary_moved": {},
+ "scenario": "ADOPTED-CANONICAL = pre-adoption BASE (canonical 6,293 rows, Part BZ reaudit state) + the single LOSS row aa003 of batch-28 (class 5343; s5 104943; nodes 4,070,373); full != loss: the resolved packet additionally holds the 4 WIN rows (aa001/aa002 Part CC cross-verified, aa006/aa007 Part CG lane declared, honest labels), which stay UNCONSUMED (scrutiny owner C++ second-implementation gate pin 9193f5b6...; batch-14residual q042 / batch-26 l028 precedents), the 2 EXHAUSTED rows aa004/aa005 stay honest UNKNOWN, and the batch keeps its 47 fileless UNPROBED keys; class 5343 does not free",
+ "schema": "n11-b28loss1-adoption-decomp-deltas-v1",
+ "status_transitions": {
+  "excluded->excluded": 390,
+  "excluded_now->excluded_now": 23,
+  "free_now->free_now": 38,
+  "unknown->unknown": 34498
+ },
+ "unadopted_win_rows": [
+  {
+   "consumed": false,
+   "key": [
+    1315631633331650560,
+    0
+   ],
+   "key_id": "aa001",
+   "nodes": 13183855,
+   "note": "honest WIN label only; adopted nowhere; stays unconsumed with the unconsumed closure WIN candidates; scrutiny owner C++ second-implementation gate pin 9193f5b6... decides; Part CC third-implementation cross-verified",
+   "result": 1,
+   "s5_index": 28037
+  },
+  {
+   "consumed": false,
+   "key": [
+    1171516445390012416,
+    0
+   ],
+   "key_id": "aa002",
+   "nodes": 6527041,
+   "note": "honest WIN label only; adopted nowhere; stays unconsumed with the unconsumed closure WIN candidates; scrutiny owner C++ second-implementation gate pin 9193f5b6... decides; Part CC third-implementation cross-verified",
+   "result": 1,
+   "s5_index": 87306
+  },
+  {
+   "consumed": false,
+   "key": [
+    1171516445255794692,
+    0
+   ],
+   "key_id": "aa006",
+   "nodes": 14303810,
+   "note": "honest WIN label only; adopted nowhere; stays unconsumed with the unconsumed closure WIN candidates; scrutiny owner C++ second-implementation gate pin 9193f5b6... decides; Part CG cross-verification lane declared (pending output)",
+   "result": 1,
+   "s5_index": 129823
+  },
+  {
+   "consumed": false,
+   "key": [
+    1171516445255794696,
+    0
+   ],
+   "key_id": "aa007",
+   "nodes": 13483540,
+   "note": "honest WIN label only; adopted nowhere; stays unconsumed with the unconsumed closure WIN candidates; scrutiny owner C++ second-implementation gate pin 9193f5b6... decides; Part CG cross-verification lane declared (pending output)",
+   "result": 1,
+   "s5_index": 135236
+  }
+ ],
+ "update8": {
+  "lost_resolved": [],
+  "newly_resolved_count": 1,
+  "newly_resolved_s5": [
+   104943
+  ]
+ }
+}
