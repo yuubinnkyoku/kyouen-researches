@@ -5376,3 +5376,56 @@ verdict-level交叉検証を、本セッションが単一オーナーとして�
 - 本amendment observed HEAD-before-push: push直前に最新mainを再fetchし
   note blob lock (`94117f27…`・396,586B) を再照合する (競合時は本節を
   追記し直す)。
+
+### Part BM status update (2026-11-23, execution host = 本レーン continuing session)
+
+宣言 (note amendment commit `578638b3`・observed HEAD-before-push
+`cc20473c4`) どおり、宣言後に本hostがpublished batch-22 WIN行 k002を
+処理し、出版まで完了した (verdict不消費)。実験dir
+`research/experiments/n11-centralreply-closure-b22win-thirdimpl-20261123/`。
+
+- 実行 (宣言protocol順・逐次): pinned replica `jsreplay.js`
+  (`84585617…`) でk002をfresh-cold budget 15M・逐次2回 → **p1/p2
+  ともに result 1・nodes 10,542,704・two-pass node-exactかつpublished
+  raw fields (result 1 / nodes 10,542,704) と完全一致** (wall 53s/54s・
+  exhaustion/mismatch/truncationゼロ)。これでk002のreplica行はbatch-22
+  実行hostと本hostの2ホストで同値再現。
+- negatives ng1/ng2 GATE_FAIL文言どおり → anchors **k02a WIN
+  9,106,337/4,991,527 (25.29s/25.51s)**・**l1a LOSS 7,660,602/3,951,175
+  (21.68s/21.58s)** がpublished第三実装値にnode-exact再現 (a/b同一) →
+  rules gate quads 95,670==95,670・triples 195,044 mismatch 0 →
+  target **k002 third-impl clean WIN (result 1) 12,457,901 expansions /
+  6,625,269 ttHits** (replica 10,542,704・ratio 1.18・a/b determinism
+  PASS・34.04s/33.95s)・**replica verdict一致 1/1**・
+  WALL-INCONCLUSIVE 0・DIVERGENCE 0。
+- maker `make_inputs_bm.py` (`d560b8cd…`): 全gate PASS・4回実行byte
+  一致・tamper 5/5検出 (T1a status-b22.log nodes改ざん→sha-pin ABORT・
+  T1b README文言改ざん→sha-pin ABORT・T2 target raw verdict反転→audit
+  det-pair DIVERGENCE rc=1・T3 input CSV legal改ざん→audit G0 rc=1・
+  T4 replica両pass verdict反転→audit replica-verdict-vs-published
+  rc=1・スクラッチcopyで実施・実験filesはbyte検証復元)。
+- audit `audit.py` (`79f4b7e5…`): **50/50 gates PASS**・4回実行byte一致
+  (schema `n11-centralreply-closure-b22win-thirdimpl-audit-v1`・
+  gate内訳: input 5 + pins 3 + rows/count 2 + rules 2 +
+  replica-thishost 7 + anchors 18 + negatives 2 + targets 10)。
+- 出版 (全fetch-back byte一致): 実験dir 41ファイルを3コミットでmain
+  に反映: A `5e3c180` scaffold 23ファイル (scripts 6 + inputs 6 +
+  sources 11・fetch-back 23/23) → B `23d18c0` outputs 16ファイル
+  (replica 2・targets 2・anchors 4・negative 2・rules-gate・status.log・
+  audit 4・fetch-back 16/16) → C `32cf078` README + MANIFEST-sha256
+  39行 (2/2)。
+- 意味 (route statement・閉鎖主張なし): batch-22 drive-1のk002 WINが
+  独立実装 (第三実装) でもclean WINで再現され、さらに本host fresh-cold
+  replicaがpublished rawと完全一致した。k002 WIN labelはこれで
+  (a) pinned df-pn replica 2-pass node-exact×2ホスト、(b) 独立第三実装
+  a/b determinism pair の2系統で裏付けられた (**21番目のunconsumed
+  closure WIN候補・verdict不消費**)。採用判断はscrutiny owner C++
+  第二実装 gate pin `9193f5b6…` のまま。canonical cache (6,235行
+  `f6649fe3…`) 不変。batch-22 residual 52キー・batch-23選定
+  (rank 19 class 31600) には本Partでは触れていない。
+- UNKNOWN担保: 標準11×11空盤・19 central-reply roots・二石root
+  {49,60}/{59,60}・S2 {59,60}・class 1/2/4・class 25835 (53キー
+  すべて・k002を含む)・class 12643は本status update時点でもUNKNOWN
+  のまま。nodes数・expansions数・ttHits数を勝敗として読まない。
+- 本status update observed HEAD-before-push: `32cf078` (commit C)。
+  push直前に最新mainを再fetchしnote blob lockを再照合する。
