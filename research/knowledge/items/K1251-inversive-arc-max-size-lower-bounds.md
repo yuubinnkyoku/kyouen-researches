@@ -86,17 +86,45 @@ evidence: q=3..11のKは全数探索（K1058に記録）。q=13..49の各下界�
 **楕円二次曲面 `Q⁻(3,q)` 上の一般位置集合の最大サイズ**、すなわち
 **二次曲面上に列を持つ4次元MDS符号の最大長**に等しい。
 
-## 文献（確認できた範囲）
+## 文献（サブエージェントによる web 調査、2026-11-23）
 
-- **A. Sonnino, "Large k-arcs in inversive planes of odd order", J. Geom. 66 (1999) 187–191**：
-  `q` 奇数の `M(q)` に **`(q+5)/2`-弧の族**を構成する、と要旨に明記されている。
-  同要旨は「任意の `k` と素数 `p` に対し、`h` が `k` に比べて十分大きければ
-  `M(p^h)` に `k`-弧が存在する」（[7] による）とも述べており、
-  **`K(q) = Θ(q)` であること**はこれと我々の上界から従う。
-- "Complete arcs in inversive planes over prime fields" など、弧の完備性を扱う研究もある。
+**用語**：反転平面 `M(q)` の弧（k-arc）＝どの4点も同一円上にない k 点集合。
+Sonnino 1999 の要旨原文："An arc of size k (briefly: a k-arc) in an inversive plane is defined
+as a set consisting of k points no four of which lie on the same circle."
+（zbMATH の一部レビューが "no three" と書いているのは誤り。）
 
-**注意（限界）**：全文は取得できなかった（403/リダイレクト）。したがって以下の比較は
-**確認できた `(q+5)/2` 族との比較に限る**。より強い既知構成が存在する可能性は排除できない。
+**下界（文献の最良）**：**A. Sonnino, "Large k-arcs in inversive planes of odd order",
+J. Geom. 66 (1999) 187–191**（DOI 10.1007/BF01225681）。本文："we shall construct a family of
+½(q+5)-arcs in the inversive plane M(q) with q odd. These arcs turn out to be complete for
+q > 71 or q ∈ {17,23,27,29,41,47,53,59}." 要旨の仮定は `q ≡ 1 (mod 3)` かつ `q ≥ 71` または
+`q ∈ {17,23,27,29,41,47,49,53,59}` で、**全奇数 q かどうかは本文と要旨で食い違う（未確定）**。
+zbMATH レビューの `1/3(q+5)` は誤植（(q+5)/3 は q=17,23,… で整数でない）。
+
+**後年の Hadnagy–Sonnino, Discrete Math. 255 (2002) 181–188** は素数位数で
+**≈(p+17)/4** の complete arc を作るもので、`(q+5)/2` より**小さい**。
+したがって `(q+5)/2` が文献の最良で、本項の検証済み下界（q=13..49 で +1〜+5）は**改善**である。
+
+**上界：文献に存在しない**。zbMATH（レビュー全文）・OpenAlex・Crossref・Springer・
+ScienceDirect・arXiv・EuDML を検索した限り、反転平面の弧の上界（`k ≤ q`, `q+1`, `q+2` など）を
+述べた論文は**奇数・偶数を問わず見つからない**。唯一の材料は ambient な `PG(3,q)` の理論
+（Hirschfeld–Storme, "The packing problem …: update 2001", Table 3.1：`q` 奇数 `> 3` で
+`m(3,q) = q+1` かつ `(q+1)`-アークは normal rational curve（Segre 1955）、`q = 2^h ≥ 8` でも
+`m(3,q) = q+1`）で、これから `K(q) ≤ q+1` が出るのみ。
+⇒ **`K ≤ q`（q 奇数, q≥9、K1252）は文献にない**。
+
+**偶数 q**：Sonnino の一連の論文はすべて奇数位数。偶数位数（Miquelian および Suzuki–Tits
+ovoid 由来）については構成も上界も小さい q のデータも見つからない。
+
+**小さい q の厳密値**：印刷された表は存在しない。文献にあるのは構成からの下界
+（`K(3)≥4, K(5)≥5, K(7)≥6, K(9)≥7`）だけ。⇒ 本項の `K(3..11)` の厳密値は新規。
+
+**MDS 対応**：`PG(3,q)` 側の古典的対応は既知（Storme–Thas, J. Combin. Theory Ser. A 62 (1993)
+139–154："k-arcs in PG(n,q) and linear MDS codes of dimension n+1 and length k over GF(q) are
+equivalent objects"）。**「`Q⁻` 上の弧＝楕円二次曲面上に列を持つ MDS 符号の最大長」という
+制限版の同定（K1250）は文献に見当たらない。**
+
+**注意（限界）**：Sonnino 1999 と Hadnagy–Sonnino 2002 の全文は有料で取得できず、
+要旨・レビュー・索引 PDF の断片による。したがって以下の比較は `(q+5)/2` 族との比較に限る。
 
 ## 結果：検証済み下界は (q+5)/2 を上回る
 
