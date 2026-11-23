@@ -1,0 +1,328 @@
+{
+  "battery": "y=22 own-build second-host fail-closed tamper battery",
+  "probes": {
+    "P01-census-missing": {
+      "tag": "P01-census-missing",
+      "checks": [
+        "C11r"
+      ],
+      "mutated_sha": "removed",
+      "caught": true,
+      "rc": 1,
+      "wall_s": 0.1,
+      "expectation": {
+        "expected_sub": "census.txt is missing",
+        "observed": "FAIL-CLOSED: census.txt is missing; run census_rows.py first"
+      },
+      "expectation_match": true,
+      "baseline_integrity": "OK",
+      "stdout_tail": ""
+    },
+    "P02-census-row-deleted": {
+      "tag": "P02-census-row-deleted",
+      "checks": [
+        "C11r"
+      ],
+      "mutated_sha": "03305365f53904fe824c43b6a2e62cffe70d67c85ce57900bc7cbea80094b330",
+      "caught": true,
+      "rc": 1,
+      "wall_s": 0.3,
+      "expectation": {
+        "expected_sub": "census rows 3919 != 3920",
+        "observed": "FAIL-CLOSED: census rows 3919 != 3920"
+      },
+      "expectation_match": true,
+      "baseline_integrity": "OK",
+      "stdout_tail": ""
+    },
+    "P03-census-duplicate": {
+      "tag": "P03-census-duplicate",
+      "checks": [
+        "C11r"
+      ],
+      "mutated_sha": "aaa94124d3d71b8abb4b9857a860abe0099d6533eae0741ef37dffea3e434848",
+      "caught": true,
+      "rc": 1,
+      "wall_s": 0.1,
+      "expectation": {
+        "expected_sub": "duplicate census row (0,22)",
+        "observed": "FAIL-CLOSED: duplicate census row (0,22)"
+      },
+      "expectation_match": true,
+      "baseline_integrity": "OK",
+      "stdout_tail": ""
+    },
+    "P05-census-T-inject": {
+      "tag": "P05-census-T-inject",
+      "checks": [
+        "C11r"
+      ],
+      "mutated_sha": "00fa1529fcd1cfe2dba803f3d4c06f352c3140ccf9902cedd0144bcd1498e981",
+      "caught": true,
+      "rc": 1,
+      "wall_s": 0.3,
+      "expectation": {
+        "expected_bad": 1,
+        "observed": 1
+      },
+      "expectation_match": true,
+      "baseline_integrity": "OK",
+      "stdout_tail": "  C11r: pts=433160 bad=1\noverall: FAIL total_points: 433160 types: 0\n  C11r: pts=433160 bad=1\n  merge: {'points': 0, 'bad': 0}\n  tail: {'points': 0, 'bad': 0}\n"
+    },
+    "P06-C11r-tail-flip": {
+      "tag": "P06-C11r-tail-flip",
+      "checks": [
+        "C11r"
+      ],
+      "mutated_sha": "38f099cac7aeb5bf6c3415261b5596623814c4c8e78755ab07591187a4e5c771",
+      "caught": true,
+      "rc": 1,
+      "wall_s": 0.3,
+      "expectation": {
+        "expected_bad": 3920,
+        "observed": 3920
+      },
+      "expectation_match": true,
+      "baseline_integrity": "OK",
+      "stdout_tail": "  C11r: pts=433160 bad=3920\noverall: FAIL total_points: 433160 types: 0\n  C11r: pts=433160 bad=3920\n  merge: {'points': 0, 'bad': 0}\n  tail: {'points': 0, 'bad': 0}\n"
+    },
+    "P04-census-P-tamper": {
+      "tag": "P04-census-P-tamper",
+      "checks": [
+        "C11r"
+      ],
+      "mutated_sha": "efdbd4476356ac58216198cc434fd904713610d7e10f4e4479cfedaf01bf08a9",
+      "caught": false,
+      "rc": 1,
+      "wall_s": 0.1,
+      "expectation": {
+        "expected_bad": 1,
+        "observed": null,
+        "note": "invalid mutation; body of run was an unplanned int-parse failure"
+      },
+      "expectation_match": null,
+      "baseline_integrity": "OK",
+      "stdout_tail": "",
+      "harness_note": "first harness mutation invalid (pattern ', 43' absent: census set syntax has no space after commas); the mutation did not drop the element but the machine still failed closed on the malformed row (int ValueError, rc=1); recorded honestly and immediately re-probed with the valid mutation (see P04b)"
+    },
+    "P04b-census-P-tamper-valid-reprobe": {
+      "tag": "P04-census-P-tamper",
+      "checks": [
+        "C11r"
+      ],
+      "mutated_sha": "b3c7ae4c4a032757635db5d0fe699bd58a62df75478897b0df7bf9295d21efbb",
+      "caught": true,
+      "rc": 1,
+      "wall_s": 0.3,
+      "expectation": {
+        "expected_bad": 1,
+        "observed": 1
+      },
+      "expectation_match": true,
+      "baseline_integrity": "OK",
+      "stdout_tail": "  C11r: pts=433160 bad=1\noverall: FAIL total_points: 433160 types: 0\n  C11r: pts=433160 bad=1\n  merge: {'points': 0, 'bad': 0}\n  tail: {'points': 0, 'bad': 0}\n"
+    },
+    "P07-anchor-misbind": {
+      "tag": "P07-anchor-misbind",
+      "checks": [
+        "C1d"
+      ],
+      "mutated_sha": "4b109d4ec7b5234e59565274a73fc9b62bcc5e5653ba4dd04a90084a6bbdfb20",
+      "caught": true,
+      "rc": 1,
+      "wall_s": 0.2,
+      "expectation": {
+        "expected_bad": 14869,
+        "observed": 14869
+      },
+      "expectation_match": true,
+      "baseline_integrity": "OK",
+      "stdout_tail": "  C1d: pts=134550 bad=14869\noverall: FAIL total_points: 134550 types: 0\n  C1d: pts=134550 bad=14869\n  merge: {'points': 0, 'bad': 0}\n  tail: {'points': 0, 'bad': 0}\n"
+    },
+    "P08-lowR-shift": {
+      "tag": "P08-lowR-shift",
+      "checks": [
+        "C1d"
+      ],
+      "mutated_sha": "5eea624cc73e424ea255e3ef95452c5f5169642328a6f7350fe411fef34cbe0b",
+      "caught": true,
+      "rc": 1,
+      "wall_s": 0.2,
+      "expectation": {
+        "expected_bad": 9108,
+        "observed": 9108
+      },
+      "expectation_match": true,
+      "baseline_integrity": "OK",
+      "stdout_tail": "  C1d: pts=134550 bad=9108\noverall: FAIL total_points: 134550 types: 0\n  C1d: pts=134550 bad=9108\n  merge: {'points': 0, 'bad': 0}\n  tail: {'points': 0, 'bad': 0}\n"
+    },
+    "P09-merge-boundary": {
+      "tag": "P09-merge-boundary",
+      "checks": [
+        "C2"
+      ],
+      "mutated_sha": "932167d5222de4838fcade0c4d62216b84a082df1c4ae802df35aa20aaba3e36",
+      "caught": true,
+      "rc": 1,
+      "wall_s": 0.9,
+      "expectation": {
+        "expected_merge_bad": 59,
+        "observed": 59
+      },
+      "expectation_match": true,
+      "baseline_integrity": "OK",
+      "stdout_tail": "  C2: pts=242305 bad=0\noverall: FAIL total_points: 242305 types: 0\n  C2: pts=242305 bad=0\n  merge: {'points': 1770, 'bad': 59}\n  tail: {'points': 54782, 'bad': 0}\n"
+    },
+    "P10-clip-window": {
+      "tag": "P10-clip-window",
+      "checks": [
+        "C4",
+        "C4t"
+      ],
+      "mutated_sha": "65b4de2293998a817824871ac0dae629a8c6f060faad6d6d17420c7de7d39ab7",
+      "caught": true,
+      "rc": 1,
+      "wall_s": 6.2,
+      "expectation": {
+        "expected_bad": 945,
+        "observed": 945
+      },
+      "expectation_match": true,
+      "baseline_integrity": "OK",
+      "stdout_tail": "  C4: pts=562559 bad=945\n  C4t: pts=562559 bad=0\noverall: FAIL total_points: 1125118 types: 424015\n  C4: pts=562559 bad=945\n  C4t: pts=562559 bad=None\n  merge: {'points': 0, 'bad': 0}\n  tail: {'points': 0, 'bad': 0}\n  C4t: 280 violations at clip 45, first: (60, 108, 108)\n"
+    },
+    "P11-tail-parity-flip": {
+      "tag": "P11-tail-parity-flip",
+      "checks": [
+        "C1",
+        "C2"
+      ],
+      "mutated_sha": "617f62db4a40fdb1403862fa083372eb4e7b34e87998aa05d6548143d0f55831",
+      "caught": true,
+      "rc": 1,
+      "wall_s": 4.7,
+      "expectation": {
+        "expected_bads": {
+          "C1": 4898,
+          "C2": 24024
+        },
+        "observed": {
+          "C1": 4898,
+          "C2": 24024
+        }
+      },
+      "expectation_match": true,
+      "baseline_integrity": "OK",
+      "stdout_tail": "  C1: pts=26220 bad=4898\n  C2: pts=242305 bad=24024\noverall: FAIL total_points: 268525 types: 0\n  C1: pts=26220 bad=4898\n  C2: pts=242305 bad=24024\n  merge: {'points': 1180, 'bad': 0}\n  tail: {'points': 54782, 'bad': 22932}\n"
+    },
+    "P12-band-parity-flip": {
+      "tag": "P12-band-parity-flip",
+      "checks": [
+        "C1",
+        "C2"
+      ],
+      "mutated_sha": "f9e3b9f57c816f10f2906f64c9b6f6eaa39f763f41760ed71d672dcce8485058",
+      "caught": true,
+      "rc": 1,
+      "wall_s": 4.9,
+      "expectation": {
+        "expected_bads": {
+          "C1": 1763,
+          "C2": 24451
+        },
+        "observed": {
+          "C1": 1763,
+          "C2": 24451
+        }
+      },
+      "expectation_match": true,
+      "baseline_integrity": "OK",
+      "stdout_tail": "  C1: pts=26220 bad=1763\n  C2: pts=242305 bad=24451\noverall: FAIL total_points: 268525 types: 0\n  C1: pts=26220 bad=1763\n  C2: pts=242305 bad=24451\n  merge: {'points': 1180, 'bad': 0}\n  tail: {'points': 54782, 'bad': 0}\n"
+    }
+  },
+  "valid_probes": 12,
+  "all_caught_rc1": true,
+  "expected_counts_match_published_battery": true,
+  "harness_incidents": 1,
+  "harness_incident_note": "first harness mutation invalid (pattern ', 43' absent: census set syntax has no space after commas); the mutation did not drop the element but the machine still failed closed on the malformed row (int ValueError, rc=1); recorded honestly and immediately re-probed with the valid mutation (see P04b)",
+  "count_table": {
+    "P01-census-missing": {
+      "expected_sub": "census.txt is missing",
+      "observed": "FAIL-CLOSED: census.txt is missing; run census_rows.py first",
+      "caught": true
+    },
+    "P02-census-row-deleted": {
+      "expected_sub": "census rows 3919 != 3920",
+      "observed": "FAIL-CLOSED: census rows 3919 != 3920",
+      "caught": true
+    },
+    "P03-census-duplicate": {
+      "expected_sub": "duplicate census row (0,22)",
+      "observed": "FAIL-CLOSED: duplicate census row (0,22)",
+      "caught": true
+    },
+    "P05-census-T-inject": {
+      "expected_bad": 1,
+      "observed": 1,
+      "caught": true
+    },
+    "P06-C11r-tail-flip": {
+      "expected_bad": 3920,
+      "observed": 3920,
+      "caught": true
+    },
+    "P04-census-P-tamper": {
+      "expected_bad": 1,
+      "observed": null,
+      "note": "invalid mutation; body of run was an unplanned int-parse failure",
+      "caught": false
+    },
+    "P04b-census-P-tamper-valid-reprobe": {
+      "expected_bad": 1,
+      "observed": 1,
+      "caught": true
+    },
+    "P07-anchor-misbind": {
+      "expected_bad": 14869,
+      "observed": 14869,
+      "caught": true
+    },
+    "P08-lowR-shift": {
+      "expected_bad": 9108,
+      "observed": 9108,
+      "caught": true
+    },
+    "P09-merge-boundary": {
+      "expected_merge_bad": 59,
+      "observed": 59,
+      "caught": true
+    },
+    "P10-clip-window": {
+      "expected_bad": 945,
+      "observed": 945,
+      "caught": true
+    },
+    "P11-tail-parity-flip": {
+      "expected_bads": {
+        "C1": 4898,
+        "C2": 24024
+      },
+      "observed": {
+        "C1": 4898,
+        "C2": 24024
+      },
+      "caught": true
+    },
+    "P12-band-parity-flip": {
+      "expected_bads": {
+        "C1": 1763,
+        "C2": 24451
+      },
+      "observed": {
+        "C1": 1763,
+        "C2": 24451
+      },
+      "caught": true
+    }
+  }
+}
