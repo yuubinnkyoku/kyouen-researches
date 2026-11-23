@@ -1,6 +1,6 @@
 ---
 id: K1254
-title: 非Miquelian反転平面（Suzuki–Tits）の弧：位数8では同じ7、位数32では Miquelian より小さい
+title: 非Miquelian反転平面（Suzuki–Tits）：弧は位数8で同じ7・位数32でより小さく、ゲームは勝敗が逆
 kind: proposition
 status: proved
 topics: [geometry, variants, maximum-safe]
@@ -39,6 +39,9 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/output/circles_tits_q32.txt
   role: data
   note: Suzuki–Tits 位数32 反転平面の 1,025 点 32,800 円
+- path: research/experiments/finite-field-kyouen-20261120/output/grundy_tits_q8.txt
+  role: data
+  note: Suzuki–Tits 位数8 の完全 Grundy 計算の生出力（ROOT 0 0 = 後手勝ち）
 scope: 位数8のSuzuki–Tits反転平面（Tits ovoid から作られる非Miquelian反転平面）の弧（どの4点も同一円上にない点集合）の最大サイズ
 evidence: Tits ovoid O = {(1, x^4+xy+y^6, x, y)} ∪ {(0,1,0,0)} を F_8 上で構成し、全直線が2点以下（0本の違反）・平面上の9点切断が520個・全 C(65,3) 三点点が円上にちょうど1回（43,680/43,680）を機械確認。その後アーク・センサスを深さ10まで走らせ、層サイズと K を厳密に決定。
 ---
@@ -126,6 +129,29 @@ q=32: Tits ovoid 1,025 点、円 32,800 = q(q²+1) ✓
 
 上界は両盤とも ambient の `m(3,q) = q+1 = 33`（K1252）で、Tits 側には 19 の slack がある
 （Miquelian 側は 11）。非Miquelian 盤で `K ≤ q` に相当する上界をどう示すかは未解決。
+
+## ゲーム（共円ゲーム）は両盤で勝敗が逆になる
+
+同じ位数8の2つの反転平面で、**共円ゲームの完全な Grundy 計算**（`grundy_full128.c`、
+空盤から到達可能な全安全局面を列挙）を行った。
+
+| 盤 | 安全局面数 | 空盤の Grundy 値 | 勝敗 |
+|---|---:|---:|---|
+| **Miquelian(8)** | 15,665,794 | **1** | **先手勝ち** |
+| **Suzuki–Tits(8)** | 15,694,914 | **0** | **後手勝ち** |
+
+> **最大弧サイズは両盤とも 7 なのに、空盤の勝敗は逆**。
+
+- 安全局面数の差 `15,694,914 − 15,665,794 = 29,120` は、7-アーク数の差
+  （`1,077,440 − 1,048,320 = 29,120`）と完全に一致する ✓（k ≤ 6 の層は両盤で同一）。
+- したがって **ゲームの勝敗は 3-(65,9,1) という設計パラメータでは決まらず**、円の配置
+  （＝ Miquelian か否か）に依存する。Miquelian 盤の「先手勝ち」は K1253 の系列
+  （q=3,5,8 が先手勝ち、q=7,9 が後手勝ち）の一部だが、同じ位数8でも円配置が変わると
+  後手勝ちになる例がここで初めて出た。
+- K1253 の解析（3重推移性による `g0 = mex{g1}` の還元、4点局面の拡大の Grundy 値が鍵）
+  は設計のパラメータだけを使わないので、この違いを原理的に扱える枠組みである。
+
+**データ**：`output/grundy_tits_q8.txt`（`SAFE 15694914`, `ROOT 0 0`, `SIZE` 行）。
 
 ## 限界
 
