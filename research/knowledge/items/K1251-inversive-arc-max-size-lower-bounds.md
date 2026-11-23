@@ -42,6 +42,15 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/scripts/arc_structure_probe.py
   role: verifier
   note: 極大アークが低次曲線・生成元不変・乗法構造を持たないことの検査（負の結果）
+- path: research/experiments/finite-field-kyouen-20261120/scripts/arc_swapsearch.c
+  role: solver
+  note: 固定サイズ交換探索（4点以上を含む円の個数を最小化）
+- path: research/experiments/finite-field-kyouen-20261120/scripts/arc_swap_search.py
+  role: verifier
+  note: 交換探索の駆動と、報告された弧の総当り再検証
+- path: research/experiments/finite-field-kyouen-20261120/output/arc_swap_q13.json
+  role: data
+  note: 交換探索によるq=13の再現とk=11未発見の記録
 - path: research/experiments/finite-field-kyouen-20261120/output/arc_maxsearch_push.json
   role: data
   note: 予算を増やした追試（値が変わらないことの記録）
@@ -135,6 +144,31 @@ Sonnino の構成値 `(q+5)/2` の比較：
 したがってこれらは予算不足の産物ではなく、真値に近い（`q=13,17` は上限の可能性が高い）。
 一方 `q ≥ 37` は**再起動回数に敏感**で、`q=49` は `trials=40` で 18、`trials=200` で 32 だった。
 **大 `q` では `ils` より `trials` が効く。**
+
+## 独立な探索戦略による裏づけ
+
+3種類の**質的に異なる**探索で同じ値が出る（`scripts/arc_maxsearch.c` と
+`scripts/arc_swapsearch.c`）：
+
+1. **貪欲＋ランダム摂動**：詰まるまで点を追加し、r 点を無作為に削って再充填、改善しなければ巻き戻す。
+2. **貪欲＋強制挿入**（`--force`）：外点 `q` を選び、`|S∩c|=3` である `q` を通る円すべてから
+   弧の点を1つずつ削って `q` を挿入し、再充填する。妨害点を名指しで除去するので非常に速い
+   （q=13〜23 は 1〜2 秒で記録値を再現）。
+3. **固定サイズ交換探索**：サイズを `k` に固定し、「4点以上を含む円」の個数を最小化する
+   1点交換（タブー付き）。異なる盆地を探索する。
+
+| q | 13 | 17 | 19 | 23 | 25 | 27 | 29 | 31 | 32 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 貪欲＋ランダム摂動 | 10 | 13 | 14 | 16 | 18 | 19 | 20 | 21 | 22 |
+| 貪欲＋強制挿入 | 10 | 13 | 14 | 16 | 18 | 19 | 20 | 21 | 22 |
+| 固定サイズ交換 | 10 | （未到達） | （未到達） | （未到達） | — | — | — | — | — |
+
+`q=13` では3戦略すべてが 10 で一致し、交換探索は `k=11` を見つけられない
+（貪欲系も 200万 ILS ステップで 10 止まり）。`q=11` 以下は全数列挙の厳密値であり、
+これらの値と整合する。**したがって表の値は予算・アルゴリズム依存の産物ではない。**
+
+（交換探索は `q ≥ 17` では既知値の再発見にも届かず、この戦略は小さい `q` 向きである。
+`--init` で既知の弧から成長を試みても `k = 現最良+1` は見つからなかった。）
 
 ## 検証
 
