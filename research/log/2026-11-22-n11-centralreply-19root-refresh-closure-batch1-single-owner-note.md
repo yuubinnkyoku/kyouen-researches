@@ -8122,3 +8122,68 @@ push前に404を確認する。)
   S2 {59,60}・class 1/2/4・class 31600 (53キーすべて・s001/s002を含む) は実行前後とも
   UNKNOWNのまま。nodes数・wall秒数を勝敗として読まない。WIN/LOSS採用は別adoption Part
   (pinned merger `90711961…` 経由) のみ。
+
+### Part CD status update (2026-11-23): batch-28 drive-2完遂 — aa003 LOSS行・aa004/aa005 EXHAUSTED・aa006/aa007 WIN-HALT行・val-gate 4/4・row-audit(winhalt) PASS・tamper battery 4/4・出版全files fetch-back byte一致・verdict不消費 (UNKNOWN担保不変)
+
+(observed HEAD-before-push: `b3c6daf628f0c1b5059845ebe40ee6d42d6b9f0f` (Part CD C
+commit)。push直前にnote blob sha1ロック
+`9610c469352689c782d02ede25dbb809e6c81f07` (609,498 bytes版・Part CE宣言
+amendmentを含むfetch時点) を再照合・fail-closed shaで更新する。並走のPart CE
+(batch-23・class 31600) 宣言は本Partと非接触であることを確認済み。)
+
+- 宣言 (`0ae99cf0e18b0487f47fbe2ad31dcd14237e58cc`, publish-then-execute) どおり
+  実行 (対抗宣言なし・実験dir 404事前確認済み・kit clone 68 files published pins
+  全件byte照合済み)。
+- val-gate (宣言protocol (1)): 本host fresh 4/4 node-exact (published baselines
+  比較・wall_s比較外・`.cd2-host.out` 4 files出版)。
+- 実行 (宣言protocol (2)-(5)・ただし後述orchestration偏移を正直開示):
+  wave-1 (drive_batch28.sh 1回 260s窓): aa003 **LOSS行 (result 2・nodes
+  4,070,373・two-pass node-exact)**。aa004 p1完走後・aa004 p2・aa005 p1 は260s窓で
+  truncated (TRUNCATED-RETRY行・sidecar 4 filesはevidenceでないbookkeepingとして
+  出版)。
+- **orchestration偏移 (正直開示)**: aa004 (legal 91) はbudget 15,000,000でEXHAUSTED
+  207s/passであり、drive_batch28.shのworker当たりtimeout 260ではp2が永遠に完了
+  しない。よってpinned runner `runbatch.sh` (`f591f8c2…`・変更なし) を「未完キー
+  1個ずつ」`timeout 285`で直接起動するsession-local orchestration
+  (`scripts/drive2_local_step.sh`・solver変更なし・2 solver並列上限・odd/even 2
+  workers相当・runner内部guard・pre-registered stop rule変更なし) に切り替えた。
+  verdict行はすべてrunner自身の記録。
+- wave結果: aa004 **EXHAUSTED** (honest UNKNOWN・同条件再probeなし)・aa005
+  **EXHAUSTED** (同) → **aa006 WIN (result 1・nodes 14,303,810)・aa007 WIN
+  (result 1・nodes 13,483,540)**。両worker rc=45観測で事前登録stop ruleにより
+  wave終了。残り47キー (aa008..aa054) はfileless UNPROBEDのまま。
+- **row-audit(winhalt) PASS (機械導出)**: probed 7 (aa001..aa007) = WIN 4
+  (aa001/aa002/aa006/aa007)・LOSS 1 (aa003)・EXHAUSTED 2 (aa004/aa005)・fragment 0・
+  fileless 47・mismatch 0 (byte-pin `96867282…` をdrive-2 dirにそのまま実行・kit
+  構造同一のため)。
+- tamper battery **4/4検出** (scratch copy上・battery後実験dir全file sha256不変):
+  T1' aa006 p1 result 1→2 → p1/p2 row mismatch gate fail (初回T1はsed置換不発動の
+  無操作だったため実効性assert込みで再実施)・T2 status.log aa006 nodes+1 →
+  WIN-HALT record incomplete fail・T3 seed aa001 status nodes+1 → 同fail・T4 aa003
+  raw legal 86→87 → published packet legal不一致fail。
+- 出版3コミット (commit-pinned raw URL fetch-back **96/96 byte一致 + MANIFEST
+  byte一致**): A scaffold `43a0d55f` (71 files = scripts 8 (7 pinned再利用 +
+  session-local orchestration記録) + input 55 + val-gate inputs/baselines 8)・
+  B outputs `5c9ee6b3` (24 files = cd2-host outs 4・raw outs 14 (seed 4 + 新規10)・
+  truncated sidecars 4・status.log・row-audit json)・C README+MANIFEST `b3c6daf6`。
+  実験dir:
+  `research/experiments/n11-centralreply-closure-class5343-batch28-drive2-20261123/`。
+- 意味 (route statementのみ・verdict不消費): **unconsumed closure WIN候補は33キー**
+  (31 prior + aa006/aa007・aa006は32番目・aa007は33番目候補としてhonest記録)。
+  aa003 LOSS行はadoption候補のみ (消費は別adoption Part・pinned merger
+  `90711961…` 経由のみ)。aa004/aa005 はhonest UNKNOWN (15M同条件再probeなし)。
+  canonical cache (`9115be9e` 6,293行) read-only不変。閉鎖・被覆・secured・root
+  勝敗の主張はしない。
+- 次回以降の候補: (a) batch-28 fileless残り47キー (aa008..aa054) の将来probeは別
+  宣言 (Part CF候補・**WIN-CONTINUE事前登録 (Part BT/CA/CE先例) の検討を推奨**:
+  class 5343の全子LOSS閉包ルートはaa001/aa002 (第三実装交叉検証済み) で反駁済み
+  であり、残余キーの列挙はunknown数最小化目的でWIN-HALT停止の情報価値は小さい)。
+  (b) aa006/aa007の第三実装交叉検証 (verifier Part候補)。(c) aa001..aa007 WIN・
+  LOSS行のadoption (別adoption Part・pinned merger `90711961…` 経由のみ)。
+  (d) batch-29選定はreaudit再実行後 (rank 35 class 2251・rank 36 class 34269が
+  zero-collision clean候補)。
+- **標準11×11空盤・19 central-reply roots・二石root {49,60}/{59,60}・S2 {59,60}・
+  class 1/2/4・class 10968・class 23964・class 5343 (54キーすべて・aa001..aa007を
+  含む) は本Partの実行・出版のどの時点でもUNKNOWNのまま。** nodes数・expansions
+  数・wall秒数を勝敗として読まない。WIN/LOSS採用は別adoption Part (pinned merger
+  `90711961…` 経由) のみ。
