@@ -60,6 +60,9 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/scripts/graph_random_search.py
   role: solver
   note: ランダム関数のグラフアーク探索（5,000サンプル）
+- path: research/experiments/finite-field-kyouen-20261120/scripts/graph_fp_linear.py
+  role: verifier
+  note: F_p-線型写像の全数検査（q=9で24/81のみアーク）
 - path: research/experiments/finite-field-kyouen-20261120/scripts/graph_hillclimb.py
   role: solver
   note: グラフ空間の山登り（罰則最小化）
@@ -198,6 +201,17 @@ Sonnino の構成値 `(q+5)/2` の比較：
   q=7,9,11,13 で **0 個**（q=5 のみ多数）。
 - q 点のグラフを目的関数（4点以上を含む円の個数）で山登りしても局所解（q=7 で罰則1、
   q=9 で4、q=11 で11）に留まる。
+
+**F_p-線型写像の全数検査**：q = p^e のとき F_p-線型写像 : F_q → F_q は
+e×e の F_p 行列（p^(e²) 個）で尽くされる。これを全数試すと
+
+| q | 8 (=2³) | 9 (=3²) | 25 (=5²) | 27 (=3³) |
+|---|---:|---:|---:|---:|
+| F_p-線型グラフがアーク | 0/512 | **24/81** | 0/625 | 0/19683 |
+
+**q=9 だけが当たり**（24個）。q=9 は上界 K ≤ q が tight な唯一の既知の q
+（K(9)=9、K1252/K1253）であり、その極大アークの一部は F_3-線型写像のグラフで実現できる。
+しかし q=25 など他の平方でも 0 なので、一般的な構成にはならない。
 
 **結論**：極大アークは小さい q ではグラフとして実現できるが、
 q ≥ 11 ではグラフ ansatz は一般探索（q=11 で 9）より弱い。
