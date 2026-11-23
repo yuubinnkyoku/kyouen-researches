@@ -5598,3 +5598,86 @@ WIN-HALT規則によりbatchが停止した (verdict不消費)。実験dirの全
 - 本status update observed HEAD-before-push: `4dad105b` (commit C)。
   push直前に最新mainを再fetchしnote blob lock (`900004a0…`・
   413,325B) を再照合する。
+
+
+## Part BO (solver, amendment 2026-11-23, 実行前に宣言): closure class 16957 exact-S5 probe batch 24 (verdict不消費)
+
+batch-24は、batch-23 status update 2で予定したrunner-up rank 20 class 10968
+から選定を開始したが、**fail-closed overlap gateが新事実を捕捉した**
+(publish-then-execute規約どおり、まず本amendmentを出版する)。
+
+- 機械発見 (selection実行中の生の失敗として記録・proze不使用):
+  batch-23 maker `7b2c8e53`のbatch-24機械翻訳初稿 (KEY_PREFIX="y"・prior
+  24 packets)でrank 20 class 10968 (mask
+  [1152925919833292800, 0]・route-alive・cost 53子すべてunknown・known
+  children {})のkey生成を試みたところ、**overlap gateが発火**:
+  `GATE FAILED: key (1152926194711199744,0) already probed by a published
+  packet`。当該位置はs5 index 273033で、published batch-12 packet (class
+  8106)のkey id **n018**が宣言済み (batch-12はn008でWIN-HALT停止しており
+  n018にrawは存在せず fileless UNPROBED、15M probeは一度も走っていない)。
+  すなわち**class 10968はpublished-packet disjointness慣例の下では53キー
+  fresh batch不能 (blocked・NOT route-dead)**: WIN反駁証拠ゼロ・known WIN子
+  なし・unknown 53不変・採用判断・UNKNOWN担保はすべて不変のまま。同じ
+  gateで機械掃引した結果、**rank 22 class 23964も2点交差を持つ**ことを
+  将来の選定用に記録する: s5 495193 = batch-13 key p007 (p003でWIN-HALT・
+  UNPROBED)・s5 550880 = batch-4 key e043 (e002でWIN-HALT・UNPROBED)。
+  この2クラスのコリジョン簿記はbatch-24 makerにPKT_COLLISION gateとして
+  組み込み、ピン改ざんにfail-closedする (T6電池で検出済み)。
+- 選定続行 (すべて機械・published baseから再導出): rank 20 class 10968
+  (blocked)とrank 22 class 23964 (blocked)を飛ばし、**rank 21 class
+  16957** (mask [1152921504606978048, 264]・cost 53子すべてunknown・known
+  children {}・groups served (15,70)(48,53)(48,103)・23-WIN交積空・
+  packet交差ゼロ) がpublished-table順で最初の全key gate通過候補。
+  runner-upは**rank 23 class 30565** (rank 22 23964がblockedのため飛び
+  越し・route-alive・交差ゼロ)・backupは**rank 24 class 1849**
+  (route-alive・交差ゼロ)。rank 19以前の反駁簿記 (ranks 1..18＋rank 19
+  class 31600 via s001+s002 WIN pair) はPart BN宣言から不変で、batch-24
+  makerで再検証済み。
+- preflight (fail-closed maker `make_batch24_keys.py` sha256 `130b76dd…`・
+  全gate PASS・**4回実行byte一致**): 53キー y001..y053 (s5昇順
+  91296..561493・legal 75..95・Board再算出53/53・membership分布
+  {2:3, 3:10, 4:40})。y001 = (10376293541461753856, 264)・legal 87・
+  y053 = (1152921504606879744, 68719478848)・legal 90。canonical cache
+  6,235行 `f6649fe3…` hits 0/53・quarantine 0/53・prior 24 published
+  packets (batches 1..23・1,193行・1,179一意) overlap 0・key id prefix
+  "y"は24 packetすべてで未使用 (使用済みはabcdefghjkmnpqrtuvwxzs・未使用
+  はiloy)。batch-keys.json sha256 `486858d6…`。**tamper battery 7/7検出**
+  (T1 graph sha pin 1bit→drift ABORT・T2 CLASS_MASK 1bit→mask gate
+  FAIL・T3 batch-23 prior packet pin 1bit→sha drift ABORT・T4 prior rows
+  pin 1193→1194→gate FAIL・T5 rank-19 WIN-pair evidence pin 1bit→selection
+  gate FAIL・**T6 PKT-collision skip pin 1bit→新collision gate FAIL**・
+  T7 graph実ファイル末尾1bit→sha drift ABORT・スクラッチcopyで実施)。
+- val-gate (pinned `jsreplay.js` `84585617…`・本host): **4/4 node-exact**
+  (at2m 2キー result 0 nodes 2,000,000/2,000,000 budget exhausted・
+  first-15m result 2 nodes 3,651,923・second-15m result 2 nodes
+  5,040,200・禁止四角 95,670・wall_s比較外)。
+- 実行protocol (batch-22/23流・publish-then-execute): scaffold (scripts 7:
+  maker `130b76dd` + drive_batch24.sh `031b6f38` + full row audit
+  row_audit_batch24.py `722506eb` + **汎用事前登録win-halt監査
+  row_audit_batch24_win_halt.py `fdebf219`** (batch-23の汎用版構造を踏襲・
+  haltキーid固定なし・derived_state) + pinned jsreplay `84585617` /
+  runbatch `f591f8c2` / runwave `8efd78c2`) + input 54 (batch-keys.json
+  `2776acaf`…ではなくbatch-24正本 `486858d6…` + y001..y053 CSV) +
+  val-gate 12 (published-baseline 8 byte-copy + 本host再生成4) を実験dir
+  `research/experiments/n11-centralreply-closure-class16957-batch24-20261123/`
+  に出版してからdriveする。停止規則・消費規則はPart BNと同一 (2-pass
+  fresh cold budget 15M・mismatch→HARD-STOP rc=42・WIN→HALT rc=45 honest
+  label・verdict不消費・枯渇=UNKNOWN・15M同条件再probe禁止は完走行のみ・
+  採用は別宣言adoption Part (pinned fail-closed merger `90711961`) 経由
+  のみ・本batch単体では閉鎖・被覆・secured主張なし)。起動だけは成果と
+  しない。
+- 不接触: canonical cache (6,235行 `f6649fe3…`) read-only・23 unconsumed
+  closure WIN候補 (19旧 + a003 + k002 + s001 + s002) 不変・batch-21/22/23
+  residuals非接触・batch-12/13/4のhalted packets (collision keysの宣言元)
+  不変かつ本batchでは一切probeしない・Part BM/BN dirs不変・Part BH
+  (`de1383a7`) 不変・fast lane・inversive-arc lane非接触。
+- UNKNOWN担保: 標準11×11空盤・19 central-reply roots・二石root
+  {49,60}/{59,60}・S2 {59,60}・class 1/2/4・class 31600・**class 10968
+  (blocked・route-aliveのまま)**・**class 23964 (blocked)**・class 16957
+  (53キーすべて・y001..y053) は本Partのどの時点でもUNKNOWNのまま。
+  nodes数・legal数・membership数を勝敗として読まない。WIN/LOSS採用は
+  別宣言のadoption Part (pinned fail-closed merger `90711961`) でのみ。
+- 本amendment observed HEAD-before-push: `df870814` (three-token
+  fast-lane宣言・新規noteファイルのみで非接触)。push直前に最新mainを
+  再fetchしnote blob lock (`d8cf204b…`・416,711B) を再照合する (競合時は
+  本節を追記し直す)。
