@@ -5514,3 +5514,37 @@ amendmentを出版する (publish-then-execute)。
   (inversive lane K1253後のmain)。push直前に最新mainを再fetchし
   note blob lock (`7a733e54…`・405,454B) を再照合する (競合時は本節を
   追記し直す)。
+
+
+### Part BN status update (2026-11-23, execution host = 本レーン continuing session): scaffold published
+
+宣言 (note amendment commit `bde1c7de`・observed HEAD-before-push
+`03e409d9`・note blob lock `7a733e54…` を再照合のうえpush) に続いて、
+scaffoldをmainに出版しfetch-back検証まで完了した (verdict不消費・
+未実行)。
+
+- scaffold commit A `52ff9a09` (observed HEAD-before-push `bde1c7de`):
+  **73ファイル** = scripts 7 (maker `7b2c8e53` + drive `37bb126c` +
+  row_audit `f45b124e` + **汎用事前登録win-halt監査 `f55ae559`** +
+  pinned jsreplay `84585617` / runbatch `f591f8c2` / runwave
+  `8efd78c2`) + input 54 (batch-keys.json `2776acaf…`・s001..s053 CSV)
+  + val-gate 12 (published-baseline 8・this-host 4)。
+- **fetch-back 73/73 byte一致** (commit `52ff9a09` pinned raw fetch +
+  cmp全件)。
+- 本host val-gate (this-host.out更新済み・出版済み): 4/4 node-exact
+  (at2m 2キー result 0 nodes 2,000,000・first-15m result 2 nodes
+  3,651,923・second-15m result 2 nodes 5,040,200・禁止四角 95,670・
+  wall_s比較外)。
+- maker: 全gate PASS・4回実行byte一致 (batch-keys.json sha256
+  `2776acafbb638cb148661b3988b7eb36bc8519e5b7b75b415b01618bfcb85bf7`・
+  tamper battery 6/6検出・T1-T6詳細は宣言節どおり)。
+- batch-23 drive は未着手 (publish-then-execute・起動だけは成果と
+  しない)。次回のランが宣言protocolどおりdriveする (2-pass fresh
+  cold budget 15M・mismatch→HARD-STOP・WIN→HALT rc=45・枯渇=UNKNOWN)。
+- UNKNOWN担保: 標準11×11空盤・19 central-reply roots・二石root
+  {49,60}/{59,60}・S2 {59,60}・class 1/2/4・class 12643・class 25835
+  (53キーすべて)・class 31600 (53キーすべて・s001..s053のまま) は
+  本status update時点でもUNKNOWNのまま。nodes数・legal数を勝敗として
+  読まない。
+- 本status update observed HEAD-before-push: push直前に最新mainを
+  再fetchしnote blob lock (`1a9b85ea…`・411,288B) を再照合する。
