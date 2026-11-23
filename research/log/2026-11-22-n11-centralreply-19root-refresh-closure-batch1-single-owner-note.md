@@ -8254,3 +8254,103 @@ push直前に404を再確認済み。)
   含む) は本Partの実行・出版のどの時点でもUNKNOWNのまま。** nodes数・expansions
   数・wall秒数を勝敗として読まない。WIN/LOSS採用は別adoption Part (pinned merger
   `90711961…` 経由) のみ。
+
+### Part CH 宣言 (2026-11-23): batch-28 (class 5343) 1-LOSS行 aa003 canonical adoption + re-audit — publish-then-execute
+
+(observed HEAD-before-push: 336481d230aa082078cb2e8cae4318f3aa8edfd3 →
+push直前に最新mainを再取得しコミットメッセージにHEADを記録する。push直前にnote
+blob sha1ロック 7dbd917a6b392e19949f36aa8d2672651dcb4f0a (620,004 bytes版・Part CG
+宣言適用済み) を再照合・fail-closedで更新する。対抗宣言なし (note内 Part CH /
+batch-28 adoption / b28loss1 記述ゼロを機械grepで確認済み)。実験dir
+`research/experiments/n11-centralreply-class5343-loss1-adoption-reaudit-20261123/` は
+push直前に404を再確認済み。)
+
+- **目的**: Part CD (batch-28 drive-2・class 5343) でpublishされた解決済み単一
+  LOSS行 aa003 (key `(1152921504741064704, 4228)`, s5 index 104943, result 2,
+  nodes 4,070,373, 2-pass node-exact @budget 15M) のみを、Part BZ canonical
+  cache (6,293行 `9115be9e…`) に pinned byte-copy fail-closed union merger
+  (`90711961…`) 経由で採用する。採用パケットはloss-only 1行であり
+  **full != loss**: 同batchの WIN 4行 (aa001/aa002 はPart CC第三実装交叉検証済み・
+  aa006/aa007 はPart CG交叉検証レーン宣言済み) はhonest labelのまま不採用
+  (verdict不消費・scrutiny owner C++第二実装 gate pin `9193f5b6…` が唯一のWIN
+  採用ルート・batch-14residual q042 / batch-26 l028 先例)、EXHAUSTED 2行
+  (aa004/aa005・result 0 nodes==budget 15M) はhonest UNKNOWNのまま、fileless
+  47キー (aa008..aa054) はUNPROBEDのまま。閉鎖・被覆・secured・root勝敗の主張を
+  しない。
+- **正直開示 (protocol偏移)**: 本セッションはdry-run準備から開始したため、
+  本amendmentの出版前にadopted packet・gate定数・期待機械簿記の導出を本hostで
+  実施済みである。publish-then-executeの実質 (スコープの事前固定・事後の
+  cherry-pick不可能性) は、本宣言に固定する (a) 実験dir構成、(b) 入力sha pin群、
+  (c) 採用行 (aa003単行) と不採用集合 (WIN 4・EXHAUSTED 2・fileless 47)、
+  (d) 期待機械簿記 (下記) のすべてを事前登録することで担保する。出版される
+  outputsはこれら宣言値とのbyte一致をfetch-back照合で機械検証する。宣言後に
+  実行するのは、(A)-(E)出版とnote status updateである。
+- **入力 (全件byte-pin)**: published batch-28 drive-2 kit 96 files (dir
+  MANIFEST-sha256.txt `2811b577…`), status.log `343097c2…` (17行),
+  row-audit-winhalt.json `3e86a32b…` (probed 7 = WIN 4 + LOSS 1 + EXHAUSTED 2
+  + fileless 47), BASE cache 6,293行 `9115be9e…`, Part BZ reaudit outputs
+  (refresh-summary `fca242cc…`, closure-classes.csv `14fc37c3…`,
+  per-root-coverage.csv `4218a6b4…`), pinned merger `s5_union_merge.py`
+  `90711961…` (Part BZ正本・変更なし), dependency-graph.json.gz `54f9c364…`,
+  repaired-joint-plan-update8.json `b658290a…`, independent.py `954d3a10…`,
+  s5_evidence_policy.py `78655e94…`, quarantine `81d23160…`。
+- **実行protocol (本セッションで機械実施済み・出版は宣言後)**:
+  (1) maker `make_increments_b28loss1.py` (kit 96/96 sha検証・status.log 17行
+  構造gate (WIN-HALT 4ペア+EXHAUSTED 2ペア+TRUNCATED-RETRY 4行 sidecar
+  absence gate)・aa003 2-pass node-exact・WIN 4行/EXHAUSTED 2行の
+  NOT-emitted gate・zero BASE overlap・quarantine 0) → increment 1行
+  `dc857bfd…` + manifest `017c7c30…` (schema `b28loss1-increments-manifest-v1`・
+  `full_packet_eq_loss_only` false)。x4 byte-stable。
+  (2) merger selftest PASS → BASE+increment merge x3 byte一致 (merge-audit
+  run1/2/3同一 `5e8d6909…`) → merged 6,294行 `3124461b…` (WIN 158 /
+  LOSS 6,136)。
+  (3) refresh `refresh_adoption_b28loss1.py` (Part BZ版 `0677e6eb…` からのdeltaは
+  CACHE path・CACHE_SHA_EXPECTED・docstringのみ) x3 + 隔離実行 (env -i・別tree)
+  byte一致 → refresh-summary `76cad2a1…` / closure-classes `baa2db13…` /
+  per-root-coverage `75e59441…` (+ probe-worklistはregenerateするが「worklist
+  not published by design」(BZ先例) により出版しない)。
+  (4) extractor `compare_deltas_b28loss1_adoption.py` (Part BZ版 `a3adc0da…`
+  からのdeltaは1-batch/1-adopted-row/4-WIN/2-EXHAUSTED/0-fragment構造への適応
+  のみ・gate logic設計はBZ先例継承・11 sha pin + manifest semantic gates +
+  probed 7キー独立2-pass再検証 + closure churn rank機械宣言 CHURN_RANK_EXPECT +
+  update8 delta=={104943} gate込み) x4 + 隔離実行 byte一致 →
+  decomp-deltas `975a9cc6…`。
+- **期待機械簿記 (事前登録)**: class 5343 unknown_now 54→53 (rank 27→19・
+  rank 19..26クラス {5687, 12643, 31600, 10968, 23964, 25835, 30565, 5690} の
+  +1シフトは純粋なranking bookkeeping。closure table membershipは不変
+  left=[]/entered=[]・anchor 23101/1849 (unknown_now 1/1) rank不変)・
+  excluded_now flips=[]・newly_free=[] (loss-only 1行はBASE未知コスト子全解決
+  クラスのみfree化しうるが該当なし・**class 5343はWIN 4行不採用+EXHAUSTED 2行
+  +fileless 47キーが残るためfree化しない**)・free_now 38→38・update8 resolved
+  133→134 (新規解決集合=={104943}のみ)・joint greedy 38,295不変・probe worklist
+  64,747→64,746・per-root free/uncovered不変 (root 27 baseline 119/119含む)・
+  individual greedy union movers roots {4, 49} (root 4: 5978→5977, root 49:
+  2811→2810)。
+- **tamper battery (scratch tree上・12/12検出 + restoration green)**: pin層
+  (increment sha / status.log sha (maker) / BASE cache sha / batch-keys sha /
+  raw tamper→maker kit MANIFEST sha gate) と、攻撃者がpin定数を書き換えた場合の
+  semantic層 (verdict反転 2→1→「non-LOSS verdict」gate・BASE append→
+  「scenario cache row count != BASE + 1」gate・batch-keys class_index反転→
+  row-audit picture disagreement gate・manifestはunpinnedのためWIN行nodes+1 /
+  full!=loss反転 / resolved_ids欠落がsemantic gateで直接検出・extractorの独立
+  2-pass raw mismatch表示を含む) の兩層を実効性assert込みで検証。battery後に
+  pristine restoreでmaker/extractorともgreen。
+- **出版 (宣言後・順次)**: A scripts (make_increments_b28loss1.py `1a79f5a6…` +
+  s5_union_merge.py `90711961…` + compare_deltas_b28loss1_adoption.py
+  `86fbc570…` + reaudit/scripts/refresh_adoption_b28loss1.py `729ef020…`) →
+  B outputs (increment `dc857bfd…` + increments-manifest `017c7c30…` +
+  merge-audit-run1/2/3 `5e8d6909…` ×3 + merged cache 6,294行 `3124461b…` +
+  reaudit 3出力 + decomp-deltas `975a9cc6…`) → C README + MANIFEST-sha256 →
+  note status update。全files commit-pinned raw URL fetch-back byte照合・
+  branch path URL (CDN stale) は使わない。
+- **不接触**: Part CG (batch-28 drive2win thirdimpl・並走所有) の実験dir・
+  outputs・進行、batch-28 drive-2 published dir (不変)・batch 1..27各published
+  dir (不変)、fast lane (y=23)・finite-field lane (K1254)・inversive/z19 lanes、
+  19root計画、unconsumed closure WIN候補33キーの採用状態、BASE cache
+  (`9115be9e…`) read-only不変 (merge先は新規別名cacheとしてのみ出版)。
+- **標準11×11空盤・19 central-reply roots・二石root {49,60}/{59,60}・S2 {59,60}・
+  class 1/2/4・class 10968・class 23964・class 5343 (54キーすべて・aa001..aa007を
+  含む) は本Partの実行・出版のどの時点でもUNKNOWNのまま。** nodes数を勝敗として
+  読まない。WIN採用は引き続きscrutiny owner C++第二実装 gate (`9193f5b6…`) のみ
+  (本レーンは代行しない)。本Partはloss-only 1行のcanonical adoptionであり
+  class 5343の閉鎖・root被覆・securedの主張を一切しない。
