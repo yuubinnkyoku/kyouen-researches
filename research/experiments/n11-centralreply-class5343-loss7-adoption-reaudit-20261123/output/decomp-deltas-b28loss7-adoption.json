@@ -1,0 +1,1365 @@
+{
+ "adopted_rows": [
+  {
+   "consumed": true,
+   "key": [
+    1171516445255827456,
+    0
+   ],
+   "key_id": "aa015",
+   "legal": 89,
+   "nodes": 6152494,
+   "note": "two-pass node-exact LOSS row adopted into the canonical chain via the pinned fail-closed merger 90711961003...; drive-4/drive-5 cross-identical raw where probed on both",
+   "s5_index": 164462
+  },
+  {
+   "consumed": true,
+   "key": [
+    1171516445259988992,
+    0
+   ],
+   "key_id": "aa017",
+   "legal": 92,
+   "nodes": 11446358,
+   "note": "two-pass node-exact LOSS row adopted into the canonical chain via the pinned fail-closed merger 90711961003...; drive-4/drive-5 cross-identical raw where probed on both",
+   "s5_index": 170101
+  },
+  {
+   "consumed": true,
+   "key": [
+    1171516445264183296,
+    0
+   ],
+   "key_id": "aa018",
+   "legal": 91,
+   "nodes": 214968,
+   "note": "two-pass node-exact LOSS row adopted into the canonical chain via the pinned fail-closed merger 90711961003...; drive-4/drive-5 cross-identical raw where probed on both",
+   "s5_index": 173654
+  },
+  {
+   "consumed": true,
+   "key": [
+    1171516513975271424,
+    0
+   ],
+   "key_id": "aa023",
+   "legal": 84,
+   "nodes": 5000770,
+   "note": "two-pass node-exact LOSS row adopted into the canonical chain via the pinned fail-closed merger 90711961003...; drive-4/drive-5 cross-identical raw where probed on both",
+   "s5_index": 193820
+  },
+  {
+   "consumed": true,
+   "key": [
+    1171516582694748160,
+    0
+   ],
+   "key_id": "aa024",
+   "legal": 88,
+   "nodes": 5003631,
+   "note": "two-pass node-exact LOSS row adopted into the canonical chain via the pinned fail-closed merger 90711961003...; drive-4/drive-5 cross-identical raw where probed on both",
+   "s5_index": 196053
+  },
+  {
+   "consumed": true,
+   "key": [
+    1171516445255794688,
+    16
+   ],
+   "key_id": "aa029",
+   "legal": 90,
+   "nodes": 10010789,
+   "note": "two-pass node-exact LOSS row adopted into the canonical chain via the pinned fail-closed merger 90711961003...; drive-4/drive-5 cross-identical raw where probed on both",
+   "s5_index": 199714
+  },
+  {
+   "consumed": true,
+   "key": [
+    1152921504606912512,
+    4228
+   ],
+   "key_id": "aa036",
+   "legal": 64,
+   "nodes": 955659,
+   "note": "two-pass node-exact LOSS row adopted into the canonical chain via the pinned fail-closed merger 90711961003...; drive-4/drive-5 cross-identical raw where probed on both",
+   "s5_index": 199721
+  }
+ ],
+ "already_adopted": {
+  "adopted_by": "Part CH (base cache 6,294 rows 3124461b...)",
+  "base_consistency_asserted": true,
+  "key": [
+   1152921504741064704,
+   4228
+  ],
+  "key_id": "aa003",
+  "legal": 86,
+  "nodes": 4070373,
+  "re_emitted": false,
+  "s5_index": 104943
+ },
+ "batch_keys": {
+  "aa036_drive5_only": true,
+  "adopted_loss": 7,
+  "b28_class": 5343,
+  "b28_class_mask": [
+   1171516445255794688,
+   0
+  ],
+  "b28_cost_children_total": 54,
+  "b28_fragments": 0,
+  "b28_groups_served": [
+   [
+    4,
+    59
+   ],
+   [
+    4,
+    114
+   ],
+   [
+    49,
+    44
+   ],
+   [
+    49,
+    54
+   ]
+  ],
+  "b28_keys": 54,
+  "b28_probed": 54,
+  "count": 54,
+  "cross_drive_identical_adopted_raws": [
+   "aa015",
+   "aa017",
+   "aa018",
+   "aa023",
+   "aa024",
+   "aa029"
+  ],
+  "exhausted_excluded": 11,
+  "unadopted_win": 35
+ },
+ "changed_per_root_coverage_rows": {},
+ "class_rows": {
+  "5343": {
+   "adopted_by_increment": 7,
+   "base_unknown_children": 53,
+   "batch": 28,
+   "class_index": 5343,
+   "leftover_is_exactly_win_plus_exhausted": true,
+   "leftover_unknown_children": 46,
+   "scenario_status": "unknown",
+   "scenario_unknown_children": 46
+  }
+ },
+ "closure_candidate_rows": {
+  "anchors": {
+   "12643": {
+    "base_rank": 21,
+    "scenario_rank": 21,
+    "unknown_now": 53
+   },
+   "1849": {
+    "base_rank": 2,
+    "scenario_rank": 2,
+    "unknown_now": 1
+   },
+   "23101": {
+    "base_rank": 1,
+    "scenario_rank": 1,
+    "unknown_now": 1
+   }
+  },
+  "changed_unknown": {
+   "11641": {
+    "base": [
+     69,
+     56
+    ],
+    "own_membership_in_increment": 1,
+    "scenario": [
+     47,
+     55
+    ]
+   },
+   "5232": {
+    "base": [
+     605,
+     102
+    ],
+    "own_membership_in_increment": 1,
+    "scenario": [
+     570,
+     101
+    ]
+   },
+   "5343": {
+    "base": [
+     19,
+     53
+    ],
+    "own_membership_in_increment": 7,
+    "scenario": [
+     4,
+     46
+    ]
+   }
+  },
+  "classes": {
+   "5343": {
+    "base_rank": 19,
+    "base_unknown_now": 53,
+    "scenario_rank": 4,
+    "scenario_unknown_now": 46
+   }
+  },
+  "counts": {
+   "base": 807,
+   "scenario": 808
+  },
+  "entered_table_classes": [
+   {
+    "class_index": 5233,
+    "scenario_row": [
+     722,
+     106
+    ]
+   },
+   {
+    "class_index": 5374,
+    "scenario_row": [
+     412,
+     91
+    ]
+   }
+  ],
+  "left_table_classes": [
+   {
+    "base_row": [
+     721,
+     106
+    ],
+    "class_index": 12697
+   }
+  ],
+  "scenario_first_row": {
+   "class_hi": "16",
+   "class_index": "23101",
+   "class_lo": "1152921504892059648",
+   "class_rank": "1",
+   "first_group_first": "24",
+   "first_group_third": "28",
+   "groups_served_count": "3",
+   "unknown_now": "1"
+  },
+  "stable_unknown_rank_churn": {
+   "count": 431,
+   "gate": "every churned class with stable unknown_now is pure ranking bookkeeping: recomputed status UNCHANGED between BASE and scenario (428 unknown + 3 excluded_now, all pre-existing on both sides), none of them a holder of the adopted keys",
+   "status_distribution": {
+    "excluded_now": 3,
+    "unknown": 428
+   }
+  }
+ },
+ "excluded_now_flips": [],
+ "exhausted_rows": [
+  {
+   "consumed": false,
+   "key": [
+    1171516445255794689,
+    0
+   ],
+   "key_id": "aa004",
+   "legal": 91,
+   "nodes": 15000000,
+   "note": "budget exhaustion at 15M on both passes; honest UNKNOWN; same-condition re-probe not performed; adopted nowhere; the truncated sidecars were re-run fresh-cold by the completeness guard",
+   "probed": true,
+   "result": 0,
+   "s5_index": 118693
+  },
+  {
+   "consumed": false,
+   "key": [
+    1171516445255794690,
+    0
+   ],
+   "key_id": "aa005",
+   "legal": 89,
+   "nodes": 15000000,
+   "note": "budget exhaustion at 15M on both passes; honest UNKNOWN; same-condition re-probe not performed; adopted nowhere; the truncated sidecars were re-run fresh-cold by the completeness guard",
+   "probed": true,
+   "result": 0,
+   "s5_index": 124331
+  },
+  {
+   "consumed": false,
+   "key": [
+    1171516462435663872,
+    0
+   ],
+   "key_id": "aa021",
+   "legal": 90,
+   "nodes": 15000000,
+   "note": "budget exhaustion at 15M on both passes; honest UNKNOWN; same-condition re-probe not performed; adopted nowhere; the truncated sidecars were re-run fresh-cold by the completeness guard",
+   "probed": true,
+   "result": 0,
+   "s5_index": 188751
+  },
+  {
+   "consumed": false,
+   "key": [
+    1152921504606879744,
+    4228
+   ],
+   "key_id": "aa028",
+   "legal": 95,
+   "nodes": 15000000,
+   "note": "budget exhaustion at 15M on both passes; honest UNKNOWN; same-condition re-probe not performed; adopted nowhere; the truncated sidecars were re-run fresh-cold by the completeness guard",
+   "probed": true,
+   "result": 0,
+   "s5_index": 199713
+  },
+  {
+   "consumed": false,
+   "key": [
+    1243574039293722624,
+    0
+   ],
+   "key_id": "aa030",
+   "legal": 90,
+   "nodes": 15000000,
+   "note": "budget exhaustion at 15M on both passes; honest UNKNOWN; same-condition re-probe not performed; adopted nowhere; the truncated sidecars were re-run fresh-cold by the completeness guard",
+   "probed": true,
+   "result": 0,
+   "s5_index": 199715
+  },
+  {
+   "consumed": false,
+   "key": [
+    1459746821407506432,
+    0
+   ],
+   "key_id": "aa031",
+   "legal": 92,
+   "nodes": 15000000,
+   "note": "budget exhaustion at 15M on both passes; honest UNKNOWN; same-condition re-probe not performed; adopted nowhere; the truncated sidecars were re-run fresh-cold by the completeness guard",
+   "probed": true,
+   "result": 0,
+   "s5_index": 199716
+  },
+  {
+   "consumed": false,
+   "key": [
+    1171516445255794688,
+    4
+   ],
+   "key_id": "aa032",
+   "legal": 91,
+   "nodes": 15000000,
+   "note": "budget exhaustion at 15M on both passes; honest UNKNOWN; same-condition re-probe not performed; adopted nowhere; the truncated sidecars were re-run fresh-cold by the completeness guard",
+   "probed": true,
+   "result": 0,
+   "s5_index": 199717
+  },
+  {
+   "consumed": false,
+   "key": [
+    1152921504606846978,
+    4228
+   ],
+   "key_id": "aa035",
+   "legal": 96,
+   "nodes": 15000000,
+   "note": "budget exhaustion at 15M on both passes; honest UNKNOWN; same-condition re-probe not performed; adopted nowhere; the truncated sidecars were re-run fresh-cold by the completeness guard",
+   "probed": true,
+   "result": 0,
+   "s5_index": 199720
+  },
+  {
+   "consumed": false,
+   "key": [
+    1152921504611041280,
+    4228
+   ],
+   "key_id": "aa047",
+   "legal": 92,
+   "nodes": 15000000,
+   "note": "budget exhaustion at 15M on both passes; honest UNKNOWN; same-condition re-probe not performed; adopted nowhere; the truncated sidecars were re-run fresh-cold by the completeness guard",
+   "probed": true,
+   "result": 0,
+   "s5_index": 199732
+  },
+  {
+   "consumed": false,
+   "key": [
+    1152921504640401408,
+    4228
+   ],
+   "key_id": "aa050",
+   "legal": 94,
+   "nodes": 15000000,
+   "note": "budget exhaustion at 15M on both passes; honest UNKNOWN; same-condition re-probe not performed; adopted nowhere; the truncated sidecars were re-run fresh-cold by the completeness guard",
+   "probed": true,
+   "result": 0,
+   "s5_index": 199735
+  },
+  {
+   "consumed": false,
+   "key": [
+    1152921504606855168,
+    4228
+   ],
+   "key_id": "aa053",
+   "legal": 95,
+   "nodes": 15000000,
+   "note": "budget exhaustion at 15M on both passes; honest UNKNOWN; same-condition re-probe not performed; adopted nowhere; the truncated sidecars were re-run fresh-cold by the completeness guard",
+   "probed": true,
+   "result": 0,
+   "s5_index": 199738
+  }
+ ],
+ "fragment_rows": [],
+ "holder_classes": {
+  "11641": {
+   "base_status": "unknown",
+   "base_unknown_now": 56,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 55
+  },
+  "19972": {
+   "base_status": "unknown",
+   "base_unknown_now": 116,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 115
+  },
+  "21730": {
+   "base_status": "unknown",
+   "base_unknown_now": 115,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 114
+  },
+  "26748": {
+   "base_status": "unknown",
+   "base_unknown_now": 114,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 113
+  },
+  "27669": {
+   "base_status": "unknown",
+   "base_unknown_now": 113,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 112
+  },
+  "28198": {
+   "base_status": "unknown",
+   "base_unknown_now": 114,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 113
+  },
+  "29023": {
+   "base_status": "unknown",
+   "base_unknown_now": 115,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 114
+  },
+  "4386": {
+   "base_status": "unknown",
+   "base_unknown_now": 109,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 108
+  },
+  "4387": {
+   "base_status": "unknown",
+   "base_unknown_now": 107,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 106
+  },
+  "4520": {
+   "base_status": "unknown",
+   "base_unknown_now": 109,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 108
+  },
+  "4521": {
+   "base_status": "unknown",
+   "base_unknown_now": 111,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 110
+  },
+  "4608": {
+   "base_status": "unknown",
+   "base_unknown_now": 108,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 107
+  },
+  "4609": {
+   "base_status": "unknown",
+   "base_unknown_now": 111,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 110
+  },
+  "5161": {
+   "base_status": "unknown",
+   "base_unknown_now": 99,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 98
+  },
+  "5162": {
+   "base_status": "unknown",
+   "base_unknown_now": 106,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 105
+  },
+  "5232": {
+   "base_status": "unknown",
+   "base_unknown_now": 102,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 101
+  },
+  "5233": {
+   "base_status": "unknown",
+   "base_unknown_now": 107,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 106
+  },
+  "5343": {
+   "base_status": "unknown",
+   "base_unknown_now": 53,
+   "own_membership_in_increment": 7,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 46
+  },
+  "5359": {
+   "base_status": "unknown",
+   "base_unknown_now": 105,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 104
+  },
+  "5374": {
+   "base_status": "unknown",
+   "base_unknown_now": 92,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 91
+  },
+  "5381": {
+   "base_status": "unknown",
+   "base_unknown_now": 111,
+   "own_membership_in_increment": 1,
+   "scenario_status": "unknown",
+   "scenario_unknown_now": 110
+  }
+ },
+ "holder_union_size": 21,
+ "individual_greedy_union_movers": {
+  "central|16": {
+   "base": 2972,
+   "scenario": 2971
+  },
+  "central|4": {
+   "base": 5977,
+   "scenario": 5949
+  },
+  "central|49": {
+   "base": 2810,
+   "scenario": 2803
+  }
+ },
+ "interpretation_guard": "canonical 7-row adoption deltas: only the 7 fresh LOSS rows are consumed into the canonical cache via the fail-closed union merger; the 35 WIN verdicts are NOT consumed (unconsumed closure WIN candidates stay untouched); the 11 EXHAUSTED rows stay honest UNKNOWN; class 5343 does NOT free in this adoption; scheduling quantities are bookkeeping; every claim stays UNKNOWN; 11x11 empty board and all 19 roots stay UNKNOWN; nodes are bookkeeping",
+ "kit_integrity": {
+  "drive4": {
+   "files_verified": 150,
+   "manifest_sha256": "1e4024f861e0080d63bc606d8d53a02bd909d97708aca0b3933dc3dff1041475"
+  },
+  "drive5": {
+   "files_verified": 200,
+   "manifest_sha256": "e2d81055c19945d4f0a4e29a3c521381c31f540f12537a4daddf5dfb1b597a3c"
+  }
+ },
+ "member_loss_counts": {
+  "11641": 1,
+  "19972": 1,
+  "21730": 1,
+  "26748": 1,
+  "27669": 1,
+  "28198": 1,
+  "29023": 1,
+  "4386": 1,
+  "4387": 1,
+  "4520": 1,
+  "4521": 1,
+  "4608": 1,
+  "4609": 1,
+  "5161": 1,
+  "5162": 1,
+  "5232": 1,
+  "5233": 1,
+  "5343": 7,
+  "5359": 1,
+  "5374": 1,
+  "5381": 1
+ },
+ "metrics": {
+  "closure_classes_count": {
+   "base": 807,
+   "delta": 1,
+   "scenario": 808
+  },
+  "excluded_now_classes": {
+   "base": 23,
+   "delta": 0,
+   "scenario": 23
+  },
+  "free_now_classes": {
+   "base": 38,
+   "delta": 0,
+   "scenario": 38
+  },
+  "group_best_options_nonfree": {
+   "base": 2119,
+   "delta": 0,
+   "scenario": 2119
+  },
+  "joint_greedy_union_size": {
+   "base": 38295,
+   "delta": 15,
+   "scenario": 38310
+  },
+  "joint_greedy_unique_groups": {
+   "base": 2119,
+   "delta": 0,
+   "scenario": 2119
+  },
+  "probe_worklist_total": {
+   "base": 64746,
+   "delta": 82,
+   "scenario": 64828
+  },
+  "unknown_classes": {
+   "base": 34498,
+   "delta": 0,
+   "scenario": 34498
+  },
+  "update8_groups_free_now": {
+   "base": 131,
+   "delta": 0,
+   "scenario": 131
+  },
+  "update8_remaining_now": {
+   "base": 31725,
+   "delta": -7,
+   "scenario": 31718
+  },
+  "update8_resolved_count": {
+   "base": 134,
+   "delta": 7,
+   "scenario": 141
+  },
+  "update8_win_hit_groups": {
+   "base": 0,
+   "delta": 0,
+   "scenario": 0
+  }
+ },
+ "newly_free_now_classes": [],
+ "newly_free_now_gate": "the loss-only packet can only free classes whose BASE-unknown children are ALL resolved by the increment; machine-computed list is empty here; class 5343 does NOT free (its 35 WIN children and the 11 EXHAUSTED keys stay unconsumed/honest-UNKNOWN)",
+ "per_root_greedy": {
+  "0": {
+   "base_free_thirds": 7,
+   "base_greedy_union_size": 2785,
+   "base_uncovered_thirds": 112,
+   "delta": 0,
+   "scenario_free_thirds": 7,
+   "scenario_greedy_union_size": 2785,
+   "scenario_uncovered_thirds": 112
+  },
+  "1": {
+   "base_free_thirds": 4,
+   "base_greedy_union_size": 6355,
+   "base_uncovered_thirds": 115,
+   "delta": 0,
+   "scenario_free_thirds": 4,
+   "scenario_greedy_union_size": 6355,
+   "scenario_uncovered_thirds": 115
+  },
+  "12": {
+   "base_free_thirds": 6,
+   "base_greedy_union_size": 3029,
+   "base_uncovered_thirds": 113,
+   "delta": 0,
+   "scenario_free_thirds": 6,
+   "scenario_greedy_union_size": 3029,
+   "scenario_uncovered_thirds": 113
+  },
+  "13": {
+   "base_free_thirds": 6,
+   "base_greedy_union_size": 6176,
+   "base_uncovered_thirds": 113,
+   "delta": 0,
+   "scenario_free_thirds": 6,
+   "scenario_greedy_union_size": 6176,
+   "scenario_uncovered_thirds": 113
+  },
+  "14": {
+   "base_free_thirds": 8,
+   "base_greedy_union_size": 4439,
+   "base_uncovered_thirds": 111,
+   "delta": 0,
+   "scenario_free_thirds": 8,
+   "scenario_greedy_union_size": 4439,
+   "scenario_uncovered_thirds": 111
+  },
+  "15": {
+   "base_free_thirds": 5,
+   "base_greedy_union_size": 5991,
+   "base_uncovered_thirds": 114,
+   "delta": 0,
+   "scenario_free_thirds": 5,
+   "scenario_greedy_union_size": 5991,
+   "scenario_uncovered_thirds": 114
+  },
+  "16": {
+   "base_free_thirds": 16,
+   "base_greedy_union_size": 2972,
+   "base_uncovered_thirds": 103,
+   "delta": -1,
+   "scenario_free_thirds": 16,
+   "scenario_greedy_union_size": 2971,
+   "scenario_uncovered_thirds": 103
+  },
+  "2": {
+   "base_free_thirds": 8,
+   "base_greedy_union_size": 6129,
+   "base_uncovered_thirds": 111,
+   "delta": 0,
+   "scenario_free_thirds": 8,
+   "scenario_greedy_union_size": 6129,
+   "scenario_uncovered_thirds": 111
+  },
+  "24": {
+   "base_free_thirds": 12,
+   "base_greedy_union_size": 2764,
+   "base_uncovered_thirds": 107,
+   "delta": 0,
+   "scenario_free_thirds": 12,
+   "scenario_greedy_union_size": 2764,
+   "scenario_uncovered_thirds": 107
+  },
+  "25": {
+   "base_free_thirds": 6,
+   "base_greedy_union_size": 5920,
+   "base_uncovered_thirds": 113,
+   "delta": 0,
+   "scenario_free_thirds": 6,
+   "scenario_greedy_union_size": 5920,
+   "scenario_uncovered_thirds": 113
+  },
+  "26": {
+   "base_free_thirds": 8,
+   "base_greedy_union_size": 5122,
+   "base_uncovered_thirds": 111,
+   "delta": 0,
+   "scenario_free_thirds": 8,
+   "scenario_greedy_union_size": 5122,
+   "scenario_uncovered_thirds": 111
+  },
+  "3": {
+   "base_free_thirds": 6,
+   "base_greedy_union_size": 5432,
+   "base_uncovered_thirds": 113,
+   "delta": 0,
+   "scenario_free_thirds": 6,
+   "scenario_greedy_union_size": 5432,
+   "scenario_uncovered_thirds": 113
+  },
+  "36": {
+   "base_free_thirds": 4,
+   "base_greedy_union_size": 2980,
+   "base_uncovered_thirds": 115,
+   "delta": 0,
+   "scenario_free_thirds": 4,
+   "scenario_greedy_union_size": 2980,
+   "scenario_uncovered_thirds": 115
+  },
+  "37": {
+   "base_free_thirds": 4,
+   "base_greedy_union_size": 4001,
+   "base_uncovered_thirds": 115,
+   "delta": 0,
+   "scenario_free_thirds": 4,
+   "scenario_greedy_union_size": 4001,
+   "scenario_uncovered_thirds": 115
+  },
+  "38": {
+   "base_free_thirds": 13,
+   "base_greedy_union_size": 3120,
+   "base_uncovered_thirds": 106,
+   "delta": 0,
+   "scenario_free_thirds": 13,
+   "scenario_greedy_union_size": 3120,
+   "scenario_uncovered_thirds": 106
+  },
+  "4": {
+   "base_free_thirds": 4,
+   "base_greedy_union_size": 5977,
+   "base_uncovered_thirds": 115,
+   "delta": -28,
+   "scenario_free_thirds": 4,
+   "scenario_greedy_union_size": 5949,
+   "scenario_uncovered_thirds": 115
+  },
+  "48": {
+   "base_free_thirds": 7,
+   "base_greedy_union_size": 2968,
+   "base_uncovered_thirds": 112,
+   "delta": 0,
+   "scenario_free_thirds": 7,
+   "scenario_greedy_union_size": 2968,
+   "scenario_uncovered_thirds": 112
+  },
+  "49": {
+   "base_free_thirds": 10,
+   "base_greedy_union_size": 2810,
+   "base_uncovered_thirds": 109,
+   "delta": -7,
+   "scenario_free_thirds": 10,
+   "scenario_greedy_union_size": 2803,
+   "scenario_uncovered_thirds": 109
+  },
+  "5": {
+   "base_free_thirds": 8,
+   "base_greedy_union_size": 2940,
+   "base_uncovered_thirds": 111,
+   "delta": 0,
+   "scenario_free_thirds": 8,
+   "scenario_greedy_union_size": 2940,
+   "scenario_uncovered_thirds": 111
+  }
+ },
+ "pins": {
+  "base_cache_sha256": "3124461b14e4f73a7248cbf5b96c7ff59ebfdcc05258adeb9c81791d86cc461e",
+  "base_closure_classes_sha256": "baa2db136c18c681633e5bfe3b5a1dec3f084d0c696b4454ae1855ab0773e7fd",
+  "base_per_root_coverage_sha256": "75e594419d7822752c9b91b58b8c96ba352296f83707b98786a8bd07afb6c439",
+  "base_summary_sha256": "76cad2a14263ee59cd8bc83008c26bd0b656f2c74e2e7a650550306dda40d395",
+  "batch28_keys_sha256": "af19208fafb61cc20892fa968bc373fe2c4f79da94744dfeed9d2f40ea8481e5",
+  "drive4_kit_manifest_sha256": "1e4024f861e0080d63bc606d8d53a02bd909d97708aca0b3933dc3dff1041475",
+  "drive4_row_audit_sha256": "dcf078aab8f05dea3dde25da517393de9b851cf1042c7a05ff489203ba284358",
+  "drive4_status_log_sha256": "598174447fa878c2e0a6d6db6f892c5c279063174d763746456476e3051633f8",
+  "drive5_kit_manifest_sha256": "e2d81055c19945d4f0a4e29a3c521381c31f540f12537a4daddf5dfb1b597a3c",
+  "drive5_row_audit_sha256": "00c323835f9ebc048b6ffea81a8fd556e3e8146adf1c562c34aa89d9d7bb69c0",
+  "drive5_status_log_sha256": "ca1e98ccd952b29e8295147add50e6b4a3ff3732748bf544b9c3a7018d495df0",
+  "increment_sha256": "bd5ef7d7632816006bd5a74349bf703a8dd3251e3a550a33e7ae7a0253abe382",
+  "scenario_cache_sha256": "854800f38349277924bc77c50d92a6d5252f11bdb2b2cdb54a14ca2b4f6b087d",
+  "scenario_closure_classes_sha256": "9d3965d94db9fc8005fda1cd24aadf1b515a799e5558448a391489cd24caa85d",
+  "scenario_per_root_coverage_sha256": "8e6fb981ee637d896cbf6d378d0543db06d5552da725cba2fa24130cc6fd4809",
+  "scenario_summary_sha256": "4727fb2b991d78107a67aa3ef2bf533be042907214216f8d363a23f884228179"
+ },
+ "recompute_gates": "class statuses with Board free-candidate child verification, known-universe counts and per-root free coverage were recomputed from graph + update8 + cache and asserted equal to the published BASE (Part CH reaudit) and scenario outputs before any delta was emitted",
+ "roots_summary_moved": {},
+ "scenario": "ADOPTED-CANONICAL = pre-adoption BASE (Part CH canonical state, 6,294 rows, 3124461b...) + the 7 fresh LOSS rows of batch-28 (class 5343; aa015/aa017/aa018/aa023/aa024/aa029/aa036; nodes total 38,784,669); full != loss: the fully-probed packet additionally holds 35 WIN rows (aa001/aa002 Part CC cross-verified, aa006/aa007 Part CG lane declared with the d5e9acc2 takeover pending output, aa008/aa009 Part CM cross-verified, 29 further honest labels) which stay UNCONSUMED (scrutiny owner C++ second-implementation gate pin 9193f5b6...; batch-14residual q042 / batch-26 l028 precedents), the 11 EXHAUSTED rows stay honest UNKNOWN, aa003 was already adopted by Part CH and is asserted BASE-consistent; class 5343 does not free (46 leftover = 35 WIN + 11 EXHAUSTED)",
+ "schema": "n11-b28loss7-adoption-decomp-deltas-v1",
+ "status_log": {
+  "drive4_final_row": "2026-11-23T18:18:30Z aa031 EXHAUSTED 15000000,0,15000000",
+  "drive4_is_prefix": true,
+  "drive4_lines": 61,
+  "drive5_final_verdict_row": "2026-11-23T19:24:56Z aa054 WIN-HALT",
+  "drive5_lines": 109,
+  "junk_row": "P1-FAIL ",
+  "junk_row_note": "disclosed empty-key invocation artifact (Part CN completion log); no key id, no verdict record; '.p1.out' node ENOENT"
+ },
+ "status_transitions": {
+  "excluded->excluded": 390,
+  "excluded_now->excluded_now": 23,
+  "free_now->free_now": 38,
+  "unknown->unknown": 34498
+ },
+ "unadopted_win_rows": [
+  {
+   "consumed": false,
+   "key": [
+    1315631633331650560,
+    0
+   ],
+   "key_id": "aa001",
+   "legal": 88,
+   "nodes": 13183855,
+   "note": "honest WIN label only; adopted nowhere; stays unconsumed with the unconsumed closure WIN candidates; scrutiny owner C++ second-implementation gate pin 9193f5b6... decides; Part CC third-implementation cross-verified",
+   "result": 1,
+   "s5_index": 28037
+  },
+  {
+   "consumed": false,
+   "key": [
+    1171516445390012416,
+    0
+   ],
+   "key_id": "aa002",
+   "legal": 86,
+   "nodes": 6527041,
+   "note": "honest WIN label only; adopted nowhere; stays unconsumed with the unconsumed closure WIN candidates; scrutiny owner C++ second-implementation gate pin 9193f5b6... decides; Part CC third-implementation cross-verified",
+   "result": 1,
+   "s5_index": 87306
+  },
+  {
+   "consumed": false,
+   "key": [
+    1171516445255794692,
+    0
+   ],
+   "key_id": "aa006",
+   "legal": 88,
+   "nodes": 14303810,
+   "note": "honest WIN label only; adopted nowhere; stays unconsumed with the unconsumed closure WIN candidates; scrutiny owner C++ second-implementation gate pin 9193f5b6... decides; Part CG cross-verification lane declared (takeover d5e9acc2, pending output)",
+   "result": 1,
+   "s5_index": 129823
+  },
+  {
+   "consumed": false,
+   "key": [
+    1171516445255794696,
+    0
+   ],
+   "key_id": "aa007",
+   "legal": 95,
+   "nodes": 13483540,
+   "note": "honest WIN label only; adopted nowhere; stays unconsumed with the unconsumed closure WIN candidates; scrutiny owner C++ second-implementation gate pin 9193f5b6... decides; Part CG cross-verification lane declared (takeover d5e9acc2, pending output)",
+   "result": 1,
+   "s5_index": 135236
+  },
+  {
+   "consumed": false,
+   "key": [
+    1171516445255794704,
+    0
+   ],
+   "key_id": "aa008",
+   "legal": 85,
+   "nodes": 5270340,
+   "note": "honest WIN label only; adopted nowhere; stays unconsumed with the unconsumed closure WIN candidates; scrutiny owner C++ second-implementation gate pin 9193f5b6... decides; Part CM third-implementation cross-verified",
+   "result": 1,
+   "s5_index": 140489
+  },
+  {
+   "consumed": false,
+   "key": [
+    1747977197559218176,
+    0
+   ],
+   "key_id": "aa009",
+   "legal": 91,
+   "nodes": 7319605,
+   "note": "honest WIN label only; adopted nowhere; stays unconsumed with the unconsumed closure WIN candidates; scrutiny owner C++ second-implementation gate pin 9193f5b6... decides; Part CM third-implementation cross-verified",
+   "result": 1,
+   "s5_index": 142299
+  },
+  {
+   "consumed": false,
+   "key": [
+    1171516445255794720,
+    0
+   ],
+   "key_id": "aa010",
+   "legal": 86,
+   "nodes": 8882182,
+   "note": "honest WIN label only; adopted nowhere; stays unconsumed with the unconsumed closure WIN candidates; scrutiny owner C++ second-implementation gate pin 9193f5b6... decides; cross-verification pending (honest label only)",
+   "result": 1,
+   "s5_index": 144019
+  },
+  {
+   "consumed": false,
+   "key": [
+    1171516445255796736,
+    0
+   ],
+   "key_id": "aa011",
+   "legal": 90,
+   "nodes": 12424953,
+   "note": "honest WIN label only; adopted nowhere; stays unconsumed with the unconsumed closure WIN candidates; scrutiny owner C++ second-implementation gate pin 9193f5b6... decides; cross-verification pending (honest label only)",
+   "result": 1,
+   "s5_index": 147632
+  },
+  {
+   "consumed": false,
+   "key": [
+    1171516445255798784,
+    0
+   ],
+   "key_id": "aa012",
+   "legal": 81,
+   "nodes": 4994213,
+   "note": "honest WIN label only; adopted nowhere; stays unconsumed with the unconsumed closure WIN candidates; scrutiny owner C++ second-implementation gate pin 9193f5b6... decides; cross-verification pending (honest label only)",
+   "result": 1,
+   "s5_index": 151960
+  },
+  {
+   "consumed": false,
+   "key": [
+    1171516445255802880,
+    0
+   ],
+   "key_id": "aa013",
+   "legal": 87,
+   "nodes": 8317071,
+   "note": "honest WIN label only; adopted nowhere; stays unconsumed with the unconsumed closure WIN candidates; scrutiny owner C++ second-implementation gate pin 9193f5b6... decides; cross-verification pending (honest label only)",
+   "result": 1,
+   "s5_index": 156182
+  },
+  {
+   "consumed": false,
+   "key": [
+    1171516445255811072,
+    0
+   ],
+   "key_id": "aa014",
+   "legal": 88,
+   "nodes": 7263370,
+   "note": "honest WIN label only; adopted nowhere; stays unconsumed with the unconsumed closure WIN candidates; scrutiny owner C++ second-implementation gate pin 9193f5b6... decides; cross-verification pending (honest label only)",
+   "result": 1,
+   "s5_index": 160350
+  },
+  {
+   "consumed": false,
+   "key": [
+    1171516445255860224,
+    0
+   ],
+   "key_id": "aa016",
+   "legal": 78,
+   "nodes": 2621847,
+   "note": "honest WIN label only; adopted nowhere; stays unconsumed with the unconsumed closure WIN candidates; scrutiny owner C++ second-implementation gate pin 9193f5b6... decides; cross-verification pending (honest label only)",
+   "result": 1,
+   "s5_index": 167491
+  },
+  {
+   "consumed": false,
+   "key": [
+    1171516445322903552,
+    0
+   ],
+   "key_id": "aa019",
+   "legal": 86,
+   "nodes": 7967030,
+   "note": "honest WIN label only; adopted nowhere; stays unconsumed with the unconsumed closure WIN candidates; scrutiny owner C++ second-implementation gate pin 9193f5b6... decides; cross-verification pending (honest label only)",
+   "result": 1,
+   "s5_index": 183025
+  },
+  {
+   "consumed": false,
+   "key": [
+    1171516453845729280,
+    0
+   ],
+   "key_id": "aa020",
+   "legal": 90,
+   "nodes": 8432253,
+   "note": "honest WIN label only; adopted nowhere; stays unconsumed with the unconsumed closure WIN candidates; scrutiny owner C++ second-implementation gate pin 9193f5b6... decides; cross-verification pending (honest label only)",
+   "result": 1,
+   "s5_index": 185891
+  },
+  {
+   "consumed": false,
+   "key": [
+    1171516479615533056,
+    0
+   ],
+   "key_id": "aa022",
+   "legal": 87,
+   "nodes": 14044375,
+   "note": "honest WIN label only; adopted nowhere; stays unconsumed with the unconsumed closure WIN candidates; scrutiny owner C++ second-implementation gate pin 9193f5b6... decides; cross-verification pending (honest label only)",
+   "result": 1,
+   "s5_index": 191399
+  },
+  {
+   "consumed": false,
+   "key": [
+    1171516720133701632,
+    0
+   ],
+   "key_id": "aa025",
+   "legal": 80,
+   "nodes": 3056950,
+   "note": "honest WIN label only; adopted nowhere; stays unconsumed with the unconsumed closure WIN candidates; scrutiny owner C++ second-implementation gate pin 9193f5b6... decides; cross-verification pending (honest label only)",
+   "result": 1,
+   "s5_index": 198223
+  },
+  {
+   "consumed": false,
+   "key": [
+    1171516445255794688,
+    32
+   ],
+   "key_id": "aa026",
+   "legal": 88,
+   "nodes": 11019409,
+   "note": "honest WIN label only; adopted nowhere; stays unconsumed with the unconsumed closure WIN candidates; scrutiny owner C++ second-implementation gate pin 9193f5b6... decides; cross-verification pending (honest label only)",
+   "result": 1,
+   "s5_index": 199711
+  },
+  {
+   "consumed": false,
+   "key": [
+    1171516445255794688,
+    64
+   ],
+   "key_id": "aa027",
+   "legal": 81,
+   "nodes": 4860191,
+   "note": "honest WIN label only; adopted nowhere; stays unconsumed with the unconsumed closure WIN candidates; scrutiny owner C++ second-implementation gate pin 9193f5b6... decides; cross-verification pending (honest label only)",
+   "result": 1,
+   "s5_index": 199712
+  },
+  {
+   "consumed": false,
+   "key": [
+    1171516445255794688,
+    128
+   ],
+   "key_id": "aa033",
+   "legal": 86,
+   "nodes": 3347117,
+   "note": "honest WIN label only; adopted nowhere; stays unconsumed with the unconsumed closure WIN candidates; scrutiny owner C++ second-implementation gate pin 9193f5b6... decides; cross-verification pending (honest label only)",
+   "result": 1,
+   "s5_index": 199718
+  },
+  {
+   "consumed": false,
+   "key": [
+    1152921504606846977,
+    4228
+   ],
+   "key_id": "aa034",
+   "legal": 94,
+   "nodes": 14097048,
+   "note": "honest WIN label only; adopted nowhere; stays unconsumed with the unconsumed closure WIN candidates; scrutiny owner C++ second-implementation gate pin 9193f5b6... decides; cross-verification pending (honest label only)",
+   "result": 1,
+   "s5_index": 199719
+  },
+  {
+   "consumed": false,
+   "key": [
+    1152921504606846980,
+    4228
+   ],
+   "key_id": "aa037",
+   "legal": 87,
+   "nodes": 14239714,
+   "note": "honest WIN label only; adopted nowhere; stays unconsumed with the unconsumed closure WIN candidates; scrutiny owner C++ second-implementation gate pin 9193f5b6... decides; cross-verification pending (honest label only)",
+   "result": 1,
+   "s5_index": 199722
+  },
+  {
+   "consumed": false,
+   "key": [
+    1152921504606849024,
+    4228
+   ],
+   "key_id": "aa038",
+   "legal": 82,
+   "nodes": 4911996,
+   "note": "honest WIN label only; adopted nowhere; stays unconsumed with the unconsumed closure WIN candidates; scrutiny owner C++ second-implementation gate pin 9193f5b6... decides; cross-verification pending (honest label only)",
+   "result": 1,
+   "s5_index": 199723
+  },
+  {
+   "consumed": false,
+   "key": [
+    1152921504606846984,
+    4228
+   ],
+   "key_id": "aa039",
+   "legal": 88,
+   "nodes": 11349776,
+   "note": "honest WIN label only; adopted nowhere; stays unconsumed with the unconsumed closure WIN candidates; scrutiny owner C++ second-implementation gate pin 9193f5b6... decides; cross-verification pending (honest label only)",
+   "result": 1,
+   "s5_index": 199724
+  },
+  {
+   "consumed": false,
+   "key": [
+    1152921504606846992,
+    4228
+   ],
+   "key_id": "aa040",
+   "legal": 89,
+   "nodes": 8916641,
+   "note": "honest WIN label only; adopted nowhere; stays unconsumed with the unconsumed closure WIN candidates; scrutiny owner C++ second-implementation gate pin 9193f5b6... decides; cross-verification pending (honest label only)",
+   "result": 1,
+   "s5_index": 199725
+  },
+  {
+   "consumed": false,
+   "key": [
+    1171516445255794688,
+    8
+   ],
+   "key_id": "aa041",
+   "legal": 93,
+   "nodes": 10283599,
+   "note": "honest WIN label only; adopted nowhere; stays unconsumed with the unconsumed closure WIN candidates; scrutiny owner C++ second-implementation gate pin 9193f5b6... decides; cross-verification pending (honest label only)",
+   "result": 1,
+   "s5_index": 199726
+  },
+  {
+   "consumed": false,
+   "key": [
+    1152921504606847008,
+    4228
+   ],
+   "key_id": "aa042",
+   "legal": 88,
+   "nodes": 5800791,
+   "note": "honest WIN label only; adopted nowhere; stays unconsumed with the unconsumed closure WIN candidates; scrutiny owner C++ second-implementation gate pin 9193f5b6... decides; cross-verification pending (honest label only)",
+   "result": 1,
+   "s5_index": 199727
+  },
+  {
+   "consumed": false,
+   "key": [
+    1152921513196781568,
+    4228
+   ],
+   "key_id": "aa043",
+   "legal": 90,
+   "nodes": 12069965,
+   "note": "honest WIN label only; adopted nowhere; stays unconsumed with the unconsumed closure WIN candidates; scrutiny owner C++ second-implementation gate pin 9193f5b6... decides; cross-verification pending (honest label only)",
+   "result": 1,
+   "s5_index": 199728
+  },
+  {
+   "consumed": false,
+   "key": [
+    1152921521786716160,
+    4228
+   ],
+   "key_id": "aa044",
+   "legal": 86,
+   "nodes": 9219778,
+   "note": "honest WIN label only; adopted nowhere; stays unconsumed with the unconsumed closure WIN candidates; scrutiny owner C++ second-implementation gate pin 9193f5b6... decides; cross-verification pending (honest label only)",
+   "result": 1,
+   "s5_index": 199729
+  },
+  {
+   "consumed": false,
+   "key": [
+    1152921642045800448,
+    4228
+   ],
+   "key_id": "aa045",
+   "legal": 84,
+   "nodes": 12371943,
+   "note": "honest WIN label only; adopted nowhere; stays unconsumed with the unconsumed closure WIN candidates; scrutiny owner C++ second-implementation gate pin 9193f5b6... decides; cross-verification pending (honest label only)",
+   "result": 1,
+   "s5_index": 199730
+  },
+  {
+   "consumed": false,
+   "key": [
+    1152921779484753920,
+    4228
+   ],
+   "key_id": "aa046",
+   "legal": 78,
+   "nodes": 2185149,
+   "note": "honest WIN label only; adopted nowhere; stays unconsumed with the unconsumed closure WIN candidates; scrutiny owner C++ second-implementation gate pin 9193f5b6... decides; cross-verification pending (honest label only)",
+   "result": 1,
+   "s5_index": 199731
+  },
+  {
+   "consumed": false,
+   "key": [
+    1152921504615235584,
+    4228
+   ],
+   "key_id": "aa048",
+   "legal": 87,
+   "nodes": 10553343,
+   "note": "honest WIN label only; adopted nowhere; stays unconsumed with the unconsumed closure WIN candidates; scrutiny owner C++ second-implementation gate pin 9193f5b6... decides; cross-verification pending (honest label only)",
+   "result": 1,
+   "s5_index": 199733
+  },
+  {
+   "consumed": false,
+   "key": [
+    1152921504623624192,
+    4228
+   ],
+   "key_id": "aa049",
+   "legal": 83,
+   "nodes": 7272703,
+   "note": "honest WIN label only; adopted nowhere; stays unconsumed with the unconsumed closure WIN candidates; scrutiny owner C++ second-implementation gate pin 9193f5b6... decides; cross-verification pending (honest label only)",
+   "result": 1,
+   "s5_index": 199734
+  },
+  {
+   "consumed": false,
+   "key": [
+    1152921504673955840,
+    4228
+   ],
+   "key_id": "aa051",
+   "legal": 87,
+   "nodes": 7662388,
+   "note": "honest WIN label only; adopted nowhere; stays unconsumed with the unconsumed closure WIN candidates; scrutiny owner C++ second-implementation gate pin 9193f5b6... decides; cross-verification pending (honest label only)",
+   "result": 1,
+   "s5_index": 199736
+  },
+  {
+   "consumed": false,
+   "key": [
+    1152921504606851072,
+    4228
+   ],
+   "key_id": "aa052",
+   "legal": 93,
+   "nodes": 8976982,
+   "note": "honest WIN label only; adopted nowhere; stays unconsumed with the unconsumed closure WIN candidates; scrutiny owner C++ second-implementation gate pin 9193f5b6... decides; cross-verification pending (honest label only)",
+   "result": 1,
+   "s5_index": 199737
+  },
+  {
+   "consumed": false,
+   "key": [
+    1152921504606863360,
+    4228
+   ],
+   "key_id": "aa054",
+   "legal": 95,
+   "nodes": 13227570,
+   "note": "honest WIN label only; adopted nowhere; stays unconsumed with the unconsumed closure WIN candidates; scrutiny owner C++ second-implementation gate pin 9193f5b6... decides; cross-verification pending (honest label only)",
+   "result": 1,
+   "s5_index": 199739
+  }
+ ],
+ "update8": {
+  "lost_resolved": [],
+  "newly_resolved_count": 7,
+  "newly_resolved_s5": [
+   164462,
+   170101,
+   173654,
+   193820,
+   196053,
+   199714,
+   199721
+  ]
+ }
+}
