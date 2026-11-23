@@ -4569,3 +4569,59 @@ scrutiny owner (C++第二実装 gate pin `9193f5b6…`)。
 - 本amendment observed HEAD-before-push: `9719e92606a09eaf4ebb283488e66215ac71f295`
   (push直前にnote blob sha1 (`eb6066e68244324136e8f9dfeadb6e543779c7e7`) を再照合し、
   競合時は再fetchして本節を追記し直す)。
+
+### Part BF status update (2026-11-23, execution host = 本レーン continuing session)
+
+宣言 (note amendment commit `511ae474`) どおり、宣言後に本hostが
+published batch-19 WIN行 w001/w002をpinned第三実装で解き、出版まで完了した
+(verdict不消費)。
+
+- 実行: pinned `third_impl.js` (`08ea958f…`)・1行=1 solver=1 process・
+  cap 300,000,000・wallcap 240s・`--memo-power=22`・全target/anchor
+  a/b 2回・逐次実行。**targets 2/2 clean WIN (result 1)・replica verdict
+  一致 2/2**: **w001 third-impl WIN 7,682,625 expansions / 4,336,161
+  ttHits** (replica 6,639,780 nodes・ratio 1.16)・**w002 third-impl WIN
+  8,988,730 expansions / 5,106,247 ttHits** (replica 7,738,714 nodes・
+  ratio 1.16)。a/b pair全員result/expansion/ttHits/reason同一
+  (determinism gate PASS)。pass-one総expansions 16,671,355。
+  LOSS 0・WALL-INCONCLUSIVE 0・DIVERGENCE 0。
+- battery順序: negatives ng1/ng2が設計どおりfail-closed文言 (GATE_FAIL)
+  → anchors k02a WIN 9,106,337/4,991,527・l1a LOSS 7,660,602/3,951,175
+  がpublished第三実装値にnode-exact再現 (a/b同一) → targets逐次実行
+  (Part AXのCPU quota半減観測を継承し全行程逐次) → rules gate → audit x2。
+- rules gate: verify_tbl replica quads 95,670 == third-impl quads 95,670・
+  195,044 triples mismatch 0 (`output/rules-gate.txt`)。
+- maker `make_inputs_bf.py`: 全gate PASS・3回実行byte一致 (source pins:
+  batch-19 batch-keys `9609aaf3…` (53キー・class 16513・w001 s5 63802/w002
+  s5 109169/membership 2)・raw 4ファイル (MANIFEST pins
+  `8cf13d13`×2・`1faf8d15`/`feb8475b`)の2-pass node-exact + `# replay_done`
+  + result 1 in-budget・status-b19.log `e3a9e5b4`のPASS行・WIN-HALT行・
+  WIN-ROW-DETAIL行 (s5 index・holder classes 1363/2901込み)・VAL-GATE 4/4行・
+  EXECUTION-HALTED行・51-unprobed行・19候補行の3-way一致・README `29c7ea51`
+  結果節照合・derived-vs-published input CSV byte-equality 2 target
+  (`f232a593`/`574a4124`) + 4 anchor/negative (published Part AR CSVと
+  byte一致))・batch-19 published MANIFEST remote byte一致確認。
+- audit `audit.py`: **53/53 gates PASS**・2回実行byte一致 (schema
+  `n11-centralreply-closure-b19win-thirdimpl-audit-v1`)。verdict
+  agreements 2/2 (WIN=2)・inconclusive 0。
+- 出版: 実験dir
+  `research/experiments/n11-centralreply-closure-b19win-thirdimpl-20261123/`
+  43ファイル+MANIFESTを3コミットでmainに反映: A `98e5b3b1` (scaffold:
+  scripts 6 + inputs 7 + sources 13) / B `6e31eb35` (solver outputs 16:
+  targets a/b 4・anchors 4・negative 2・rules-gate・status.log・
+  audit-summary・audit-run1/2) / C `55a75f38` (README + MANIFEST-sha256
+  43行) = publication complete。**fetch-back 43/43 sha一致**
+  (publication commit `55a75f38` 固定rawで全ファイルbyte照合)。
+- session log: Continuation 45 (Part BE実行記録・compaction後の書き起こし
+  でpublished bytesに再照合済み) + Continuation 46 (Part BF完了) を
+  commit `578bcb05` で出版・fetch-back byte一致。
+- 意味 (route statement・閉鎖主張なし): batch-19最初のwaveの2 WIN
+  (w001/w002) が独立実装 (第三実装) でもclean WINで再現された
+  (verdict-level補強文献)。**verdict消費ゼロ**・19 unconsumed closure
+  WIN候補の採用判断は一切代行しない (scrutiny owner C++第二実装 gate pin
+  `9193f5b6…` のまま)。canonical cache (6,182行 `0b594f7e…`) 不変・
+  いかなるcacheにも書込んでいない。BE宣言の残51キー (w003..w053・fresh)
+  とbatch-20 pivot (rank 16 class 5687) には一切触れていない。
+- 標準11×11空盤・19 central-reply roots・二石root {49,60}/{59,60}・
+  S2 {59,60}・class 16513 (残51子)・全53キーは本Partのどの時点でも
+  UNKNOWNのまま。nodes数・expansions数を勝敗として読まない。
