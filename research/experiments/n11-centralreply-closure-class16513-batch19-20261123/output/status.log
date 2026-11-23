@@ -1,0 +1,11 @@
+# batch-19 status.log (class 16513 exact-S5 probe, Part BE)
+# declaration: Part BE commit 2dbb67145fe3eb5d2fd694958a3ed1034d0fce76 (note blob eb6066e68244324136e8f9dfeadb6e543779c7e7, observed HEAD-before-push b546b56d1c4bccb0d2fbf6f150d9190649fc9627)
+# base: published canonical exact-S5 verdict cache 6,182 rows sha256 0b594f7e14d7eb67263d38a3daa2816e1fd0b73b23403f9b58ca2917225f877a (Part BC adoption output, main) - probe worklist etc. NOT used/read, keys derived from graph+cache only
+# keys: 53 class-16513 unknown graph-cost children w001..w053, batch-keys.json sha256 9609aaf3116f2ba80c206ae66b09249af1855d509d17be588911e6ab72e53d50 (maker make_batch19_keys.py 3x byte-identical, all gates PASS)
+# pins: jsreplay.js 84585617 (byte-copy replica), runbatch.sh f591f8c2, runwave.sh 8efd78c2 (published batch-17 originals), merger 90711961 (not used this Part), quarantine 81d23160
+# protocol: 2-pass fresh cold, budget 15,000,000, 1 solver/1 row/1 process, publish=ALL, worker max 2
+# stop rules (pre-registered): mismatch -> HARD-STOP rc=42; WIN -> HALT rc=45 (honest WIN label only, NOT adopted, verdict not consumed); budget exhaustion -> honest UNKNOWN
+# scope: research/experiments/n11-centralreply-closure-class16513-batch19-20261123/
+# NOTE: verdicts NOT consumed; 17 unconsumed closure WINs unchanged (scrutiny owner C++ gate 9193f5b6 pending); 11x11 empty board and class 16513 remain UNKNOWN
+2026-11-23T00:28:33Z VAL-GATE 4/4 node-exact this-host re-verified (at2m-1/at2m-2 result 0 nodes 2000000/2000000, first-15m (2,3651923), second-15m (2,5040200), forbidden quadruples 95670 x4, all # replay_done, no truncation)
+2026-11-23T00:28:33Z RUNNER-NOTE execution per Part BE protocol: published runbatch.sh (f591f8c2) invoked in bounded 2-worker foreground waves (this session's tool calls cap ~280s per invocation); truncated fragments re-run fresh-cold by the published completeness guard; raw outputs under output/raw/
