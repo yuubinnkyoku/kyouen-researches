@@ -6814,3 +6814,83 @@ y007..y053) fileless UNPROBEDには一切触れない。同batchのLOSS行 y002/
 - 不接触: Part BW (batch-24 verifier・並走所有) のscaffold/outputs・batch-23/24/25残留キー (s003..s053・y003/y005/y007..y053・i003..i053 fileless UNPROBED)・batch-26残留 (l028含む)・batch-25 i001/i002 WIN行の第三実装交叉検証 (次のverifier候補)・fast lane・finite-field lane・inversive-arc lane非接触。
 - UNKNOWN担保: 標準11×11空盤・19 central-reply roots・二石root {49,60}/{59,60}・S2 {59,60}・class 1/2/4・class 13342 (54キーすべて) は本Partのどの時点でもUNKNOWNのまま。
 - 本amendment observed HEAD-before-push: `855778a2…` (並走verifier lane Part BW commit B outputs・本lane非接触・note.md不変を確認済み)。push直前に最新mainを再fetchし note blob lock `b35ce499f72c39a5dccf4b0103bdd0d325077424` (504,869 bytes = Part BW宣言 `9f5b9b3c` 版) を再照合する (Part BWの更なるoutputsや他セッションのbatch-27実行成果が夾まった場合は本節を追記し直し、成立しない場合は簡潔に記録して次回へ回す)。
+
+## Part BW status update (2026-11-23, verifier): batch-24 y001/y006 第三実装交叉検証完了 - 本host pinned-replica初の独立host再現 + clean WIN一致2/2 (UNKNOWN担保不変)
+
+Part BW (宣言 publication commit `9f5b9b3c`・observed HEAD-before-push
+`cad4f7b4`〔並走非接触〕・実行前に出版) どおり、batch-24 (class 16957)
+WIN行 y001/y006 のpinned第三実装交叉検証と本host pinned-replica再現を完遂
+し、全成果をmainに出版した (verdict不消費)。
+
+- publish-then-execute順序の履行: 宣言 `9f5b9b3c` → A `ed77d6b6`
+  (scaffold 35ファイル = scripts 6 + input 7 + sources 14 + val-gate
+  input/published-baseline 8・35/35 fetch-back byte一致) → B `855778a2`
+  (outputs 24ファイル = output 20 + val-gate this-host 4・24/24一致) →
+  C `bfa533ca` (README + MANIFEST-sha256 59行・2/2一致) → 本status
+  update。全出版bytesはcommit-pinned raw fetch-backでbyte検証済み。
+- 実行 (宣言protocol順・逐次): (1) **rules gate PASS** (verify_tbl
+  `c8c52528…`・replica quads 95,670 == third-impl quads 95,670・triples
+  checked 195,044・mismatch 0)。(2) **val-gate this-host 4/4 node-exact**
+  (jsreplay `84585617…`・published baselineと一致 (wall_s除外): at2m
+  2M exhaustion ×2 (result 0, nodes 2,000,000)・15m基準キー budget 15M
+  (2, 3,651,923)/(2, 5,040,200)・禁止四角 95,670)。(3) **本host
+  pinned-replica再現 4/4 完全一致**: y001 p1/p2 = result 1・nodes
+  5,291,064 (two-pass node-exact・wall 26/26s)・y006 p1/p2 = result 1・
+  nodes 5,321,639 (two-pass node-exact・wall 26/25s)・published batch-24
+  raw fieldsとの一致をaudit G2bで機械検査 (EXHAUSTED 0・mismatch 0・
+  truncation 0)・**y001/y006にとって初の独立host再現** (Part BSのl028
+  と違いbatch-24は単一host出版だった)。(4) **negatives 2/2 GATE_FAIL
+  設計どおり** (ng1 legal count mismatch derived=87 declared=88・ng2
+  stone count mismatch bits=5 declared=6)。(5) **anchors 2/2 本host
+  node-exact** (a/b determinism PASS): k02a clean WIN 9,106,337 exp /
+  4,991,527 ttHits・l1a clean LOSS 7,660,602/3,951,175 (published第三実装値
+  と完全一致)。(6) **targets 2/2 clean WIN一致**: y001 clean WIN
+  (result 1) 6,097,380 exp / 3,451,878 ttHits (wall 17.40/17.46s)・
+  y006 clean WIN (result 1) 6,190,624 / 3,326,421 (wall 16.95/16.95s)・
+  cap 300,000,000・wallcap 240s・memo-power=22・**WALL-INCONCLUSIVE 0・
+  DIVERGENCE 0** (pass-one合計 12,288,004・replica行との比率 1.153/
+  1.163)。
+- 監査: audit.py (BW版 `3a2ce7ef…`・schema `n11-centralreply-closure-
+  b24win-thirdimpl-audit-v1`) **ALL 67 GATES PASS**・3回実行byte一致
+  (audit-run1=2=3)・audit-summary.jsonは決定的 (タイムスタンプ不読)・
+  target det-pair改ざん/dir内pin反転/G0 input改ざんの**audit tamper
+  battery 3/3検出** (scratch上・実験files無改変byte検証) + clean control
+  PASS。宣言前に行った**maker全gate PASS** (BW-SCAFFOLD) + 4回byte一致 +
+  **maker tamper battery 7/7検出** (raw pin 1bit・row-audit pin 1bit・
+  README pin 1bit・row-audit内容改変・raw内容改変 (nodes 5291064→
+  5291065)・published-input pin 1bit・**status.log loss-row verdict反転
+  (y002 PASS result 2→1)**・T4/T5/T7はsha-pin層で検出) + clean control
+  PASS も確認済み。
+- 意味 (route statementのみ・閉鎖/被覆/secured/root勝敗の主張なし):
+  y001/y006 (24番目・25番目の unconsumed closure WIN候補) は (a) Part BO
+  drive-1 published replica (b) 本host pinned-replica 2-pass node-exact
+  (独立host) (c) 独立第三実装 clean WIN一致 の**3系統裏付け**となった
+  (同一クラス内2WINペアの第三実装交叉検証は Part BF (batch-19
+  w001/w002)・Part BV (batch-23 s001/s002) に続く**3例目**)。ただし
+  **verdictは一切消費していない**・採用判断は scrutiny owner C++
+  第二実装 gate pin `9193f5b6…` 待ちで本レーンは代行しない・
+  canonical cache (Part BU採用後 6,287行 `e32a2e44…`) read-only不変・
+  28 unconsumed closure WIN候補の採用状態・簿記は一切不変。
+- 不接触: batch-23/24残留キー (s003..s053 51キー・y003/y005/y007..y053
+  49キー fileless UNPROBEDのまま)・batch-24の y002/y004 LOSS行
+  (adoption candidate・本Partは出版正本の読み取りのみ)・batch-25
+  (i001/i002 WIN行)・batch-27 (Part BR) の54キー/scaffold/drive/outputs
+  (BRは本status update直前の12:31:32Zに並走がtakeover宣言 `d2e345e6`
+  を出版済み・本Part BWとは非接触と同amendmentにも明記・outputsは本
+  status update時点でもmainに存在せず)・
+  fast lane (y=22 universal宣言 `e1e60cd4` は並走非接触)・finite-field
+  lane・inversive-arc lane (K1254 `2489d763`・q=13 arc `cad4f7b4` 等
+  並走非接触commit)非接触。
+- UNKNOWN担保: 標準11x11空盤・19 central-reply roots・二石root
+  {49,60}/{59,60}・S2 {59,60}・class 1/2/4・class 16957 (53キーすべて・
+  y001/y006・y002/y004を含む) は本status update時点でも**UNKNOWN**の
+  まま。nodes数・expansions数・ttHits数を勝敗・距離として読まない。
+- 本status update observed HEAD-before-push: `bfa533ca…` (本Part
+  commit Cそのもの。commit B→Cの間に並走のPart BR takeover amendment
+  `d2e345e6` (12:31:32Z・note追記・本Part BW宣言prefixは無改変を
+  byte検証済み) が挟まった。その他の並走非接触コミットは q=13/有限体/
+  inversive-arc laneの諸commitのみ)。push直前に最新mainを再fetchし
+  note blob lock `f412fcc4f6030867598a66598d36f290c948b342`
+  (508,970 bytes = Part BR takeover amendment `d2e345e6` 版) を再照合
+  する (さらに並走追記が挟まった場合は本節を追記し直し、成立しない
+  場合は簡潔に記録して次回へ回す)。
