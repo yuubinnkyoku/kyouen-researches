@@ -13,7 +13,7 @@ relations:
   note: 弧＝楕円二次曲面上の一般位置集合、射影上界K≤q+2
 - type: extends
   target: K1250
-  note: q+2の場合を排除して無条件にK≤q+1へ改善
+  note: k=q+2 と k=q+1 の場合を排除して無条件にK≤qへ改善
 - type: related
   target: K1251
   note: 下界(q+5)/2（Sonnino）と合わせてK=Θ(q)の定数評価が締まる
@@ -22,12 +22,12 @@ artifacts:
   role: verifier
   note: 持ち上げ模型と射影補題（q+2の場合に使う「射影が円錐曲線になる」こと）の検証
 - path: research/experiments/finite-field-kyouen-20261120/output/arc_maxsearch_big.json
+  role: data
+  note: 上界と矛盾しない検証済み弧（K≤qを満たす）
 - path: research/experiments/finite-field-kyouen-20261120/scripts/projection_no_conic.py
   role: verifier
   note: q=9の極大アークの射影が8-アークで円錐曲線に載らないことの確認
-  role: data
-  note: 上界と矛盾しない検証済み弧（K≤q+1を満たす）
-scope: 位数q（q奇数、q≥7）のMiquelian反転平面M(q)の弧（どの4点も同一円上にない点集合）の最大サイズK(q)。楕円二次曲面Q^-(3,q)上の一般位置集合としての特徴づけ（K1250）と射影上界、Segre の定理、Bezout、および楕円二次曲面がF_q上の奇数次数曲線を持たないことを使う。
+scope: 位数q（q奇数、q≥9）のMiquelian反転平面M(q)の弧（どの4点も同一円上にない点集合）の最大サイズK(q)。楕円二次曲面Q^-(3,q)上の一般位置集合としての特徴づけ（K1250）と射影上界、Segre の定理、Bezout、および楕円二次曲面がF_q上の奇数次数曲線を持たないことを使う。
 evidence: 次の3つの古典的事実に依る：(1) q奇数のPG(2,q)の(q+1)-アークは円錐曲線（Segre）、(2) PG(3,q)の2次曲面の交わりは4次曲線（Bezout）、(3) 楕円二次曲面Q^-(3,q)はF_q上有理な奇数次数曲線を持たない（Picard群Z^2上のFrobeniusが2つの ruling を入れ替えるため、不変類の次数は偶数）。帰結として全検証済み弧（q=5..49）がK≤q+1を満たすことを数値確認。q=3ではK=5=q+2で例外（定理の適用範囲外）。
 ---
 
