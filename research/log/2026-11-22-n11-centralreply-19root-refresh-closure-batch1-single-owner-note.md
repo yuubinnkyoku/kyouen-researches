@@ -7172,3 +7172,139 @@ fetch-back済み出版状況に基づく追記)
   8a59a7fe` (531,427 bytes = 本Part BX宣言 `8b3aa95d` 版) を再照合する
   (並走追記が挟まった場合は本節を追記し直し、成立しない場合は簡潔に
   記録して次回へ回す)。
+
+## Part BY (verifier, amendment 2026-11-23, 実行前に宣言): batch-27 o002 WIN行の第三実装交叉検証 + 本host pinned-replica再現 (verdict不消費)
+
+batch-27 (Part BR・takeover実行) で出版されたWIN行 o002 (canonical宣言
+`14ee1873`・scaffold `93ef3f89`・takeover amendment `d2e345e6`・raws+status+
+row-audit `28cf8c2f`・README+MANIFEST 92行 `a55813ee`・2-pass fresh-cold
+node-exact・replay result 1・nodes 4,589,084・budget 15M内・WIN-HALT rc=45
+(worker2の最初のキー・**29番目の unconsumed closure WIN候補**)) に対し、
+前例 (Part G/K/O/P/T/W/AA/AD/AG/AL/AR/AZ/BF/BK/BM/BS/BV/BW/BX) と同じ
+pinned第三実装 (non-df-pn AND/OR minimax) によるverdict-level交叉検証を、
+本セッションが単一オーナーとして実行する (同一スコープの対抗宣言・
+amendmentが本amendmentより先にmainにある場合は本宣言を破棄して着手し
+ない・本宣言時点でnote grep clean (Part BY文字は未使用)・
+`n11-centralreply-closure-b27win-thirdimpl-20261123` dirの不存在を確認
+済み)。誠実な相違点の開示: batch-27 drive-1はPart BR takeover実行host
+の単一host出版であり第二host同時再現は出版されていない。よって本Part
+の「本host pinned-replica再現」はo002にとって最初の独立host再現で
+ある (残留キー・fragment o009 (UNPROBED・p1完全単一パスはbookkeeping
+のみで証拠ではない) には一切触れない。同batchの o001/o003/o005/o007
+の4 LOSS行はadoption候选のみで・本Partは出版正本の読み取りのみ)。
+
+- 対象: `research/experiments/n11-centralreply-closure-b27win-thirdimpl-20261123/`。
+  target 1行: **o002** (key (3494793310856282144, 0)・s5 209134・legal
+  79・membership 4・replica_result 1・replica_nodes 4,589,084・holder
+  class 13342 (unknown)・batch-keys `67814ed6…`)。
+- 機材 (全てpublished byte・実行時にsha照合): third_impl.js `08ea958f…`・
+  verify_tbl.js `c8c52528…`・jsreplay.js replica `84585617…`・runner
+  `run_thirdimpl.sh` (BF正本byte-copy `a0b77d83…`)・maker
+  `make_inputs_by.py` `359abebc…` (BX maker `e1def905…`のbatch-27正本
+  sourcesへのhonest adapt: 対象1行 o002・b27 pin群 (batch-keys/status/
+  README/row-audit/raw 2/published-input 1)・status.log 6行電池 (PASS 5 =
+  LOSS 4行 (o001/o003/o005/o007・result 2・published nodes) + WIN 1行
+  (o002・result 1・published nodes)・WIN-HALT 1・retry行ゼロ・**loss-row
+  gate復元 (BX版の除去から戻し: 各PASS行はtarget WIN行またはrow-audit
+  loss_rows のいずれかでなければABORT)**・PASS key集合 == row-audit
+  win_rows ∪ loss_rows の機械交叉導出・**fragment gate新設**: fragment
+  o009 はstatus行に一切出現してはならず・row-audit fragment_keys は
+  {o009} (p1完全単一パス true・p2完全単一パス false・evidence false・
+  probed false) 厳密照合)・row-audit電池 (win_rows [o002]・loss_rows
+  4行・pass_rows 4・probed 5・unprobed_count 49・fileless 48・mismatches
+  0・derived_state true・stop_rule文言gate・input_sha256機械照合)・
+  README文言gate (o002 WIN honest label・4,589,084・29番目の
+  unconsumed closure WIN候補・4 LOSS行のnode数文言・fragment o009
+  UNPROBED文言・scrutiny owner文言・class 13342・Part BR識別)・rows.json
+  schema s/b25/b27/)・audit gate battery `audit.py` `7f7fa3d1…` (BX audit
+  `19351ab5…`のb27win版 adapt: EXP/SCHEMA/rows-schema・target-count文言
+  (1 b27 WIN row) のみ変更・gateロジック不変)。
+- 前提ゲート (fail-closed・全て機械検査・宣言時点で実施済み): maker全
+  gate PASS (BY-SCAFFOLD)・4回実行byte一致 (`__pycache__`衛生)・input/
+  o002.input.csv derived-vs-published byte-equality (published pin
+  `d083f5c3…`)・tamper battery **7/7検出** (T1 raw o002.p1 nodes内容
+  改変 4589084→4589085・T2 row-audit内容改変 probed 5→6・T3 README文言
+  改変 o002 WIN→LOSS・T4 status.log o001 LOSS行 verdict反転 2→1・T5
+  published-input o002 legal 79→78・T6 BF anchor CSV k02a lo +1・T7
+  batch-keys s5_index 209134→209135・**全tamperに適用実効性assert**
+  (改変前後sha照合)・scratch (/tmp) 上で実施し実験sources無改変byte
+  検証・T1/T2/T3/T4/T7はsha-pin層・T5/T6はderived-vs-published byte
+  等価層で検出)・clean control PASS。なお本host val-gate 4件 (jsreplay)
+  は宣言前のhost健全性確認として取得済み (published baselineとの
+  node-exact一致 4/4・wall比較外) であり、protocol step 2で改めて取得
+  し直したものを出版する。
+- sources sha pin: batch-keys-b27 `67814ed6…` (54キー・class 13342・
+  schema `n11-centralreply-closure-class13342-batch27-input-v1`・published
+  MANIFEST-sha256 92行 (commit `a55813ee` 時点) と全行一致照合)・
+  status-b27.log `50a4f407…` (6行)・README-b27 `1ee2666e…`・row-audit-
+  winhalt-b27 `530fe947…`・raw o002 p1/p2 `56fdf7a4…`/`cf1ce8ff…`
+  (2-pass node-exact + result 1 in-budget + status/row-audit/README
+  3-way照合)・published input CSV byte-equality `d083f5c3…`・BF
+  anchor/negative CSV byte-equality (provenance chain AR→BF→BK→BM→BS→
+  BV→BW→BX→BY・k02a `b6174a3f…`・l1a `e13d2a6c…`・ng1 `8e64b9ad…`・
+  ng2 `f19cd5a3…`)。
+- val-gate (本host jsreplay健全性): batch-27 scaffold val-gate input 4 +
+  published-baseline 4をbyte-copy (b23/BV系譜のpublished baselineと同一
+  bytes・batch-27 val-gate正本からfetch-back照合済み) し・本host再生成
+  4件 (at2m budget 2M exhaustion ×2・15m基準キー budget 15M・published
+  baseline (2, 3,651,923)/(2, 5,040,200)・禁止四角 95,670) がpublished
+  baselineとnode-exact一致 (wall_s比較外) することを本Part実行の
+  protocol step 2として取得する。本host .out 4件を出版する。
+- 実行protocol (宣言時点で事前登録・順序も含め固定・逐次実行):
+  1. rules gate: pinned `verify_tbl.js`でreplica quads 95,670 ==
+     third-impl quads 95,670・triples checked mismatch 0。
+  2. val-gate this-host 4件 (宣言前取得分の上書き再取得)。
+  3. 本host pinned-replica再現: pinned replica (jsreplay `84585617…`) で
+     o002をbudget 15M・fresh-cold・逐次2回 (p1/p2) 実行し、決定性
+     fields p1==p2・published raw fields (result 1・nodes 4,589,084) との
+     一致をauditで機械検査する。exhaustion/mismatch/truncationはhonest
+     記録のみとし検証主張としない。
+  4. negatives ng1 (legal+1)/ng2 (stones 6) のGATE_FAIL確認 (fail-closed
+     設計どおり) → anchors k02a (WIN 9,106,337 exp / 4,991,527 ttHits)・
+     l1a (LOSS 7,660,602 / 3,951,175)の本host node-exact再現 (a/b 2回)。
+  5. target o002は1行=1solver=1プロセス・cap 300,000,000・wallcap 240s・
+     `--memo-power=22`・a/b 2回のdeterminism gate (result/expansions/
+     ttHits/reason同一必須)・逐次実行。wall超過はhonest
+     wall-inconclusiveとし検証主張としない。事前の機械予想は宣言時に
+     残さない (実測を待つ)。
+  6. 監査: `audit.py` (G0/G1/G2/G2b/G3/G4/G5・BX版と同一gate構成・schema
+     `n11-centralreply-closure-b27win-thirdimpl-audit-v1`) 3回実行byte
+     一致・audit tamper battery 3種 (T1 maker pin反転→ABORT・T2 auditの
+     target det-pair改ざん→DIVERGENCE検出・T3 G0のinput改ざん→gate
+     fail・scratch上で実施・実験files無改変byte検証)・clean control
+     PASS。
+  7. 出版: A scaffold (scripts + input + sources + val-gate) → B outputs
+     (rules-gate・val-gate this-host・replica p1/p2・negative・anchors
+     a/b・target a/b・audit 3回分・audit-summary・status.log) → C README
+     + MANIFEST-sha256 → 本noteへのstatus update。全出版bytesは
+     commit-pinned raw fetch-backでbyte検証する。
+- 主張と消費規則: 本検証はverdict-level文献作成のみ・**verdict不消費**
+  (o002の採用判断は引き続きscrutiny owner C++第二実装 gate pin
+  `9193f5b6…` のまま)。第三実装verdictがcleanにreplica verdictと一致
+  した場合は「一致した」事実のみ記録し、clean不一致はdivergence
+  evidenceとして記録するが本レーンではverdictを書き換えない。閉鎖・
+  被覆・secured・root勝敗の主張をしない。
+- 不接触: canonical cache (Part BU採用後 6,287行 `e32a2e44…`) への書き
+  込みなし・29 unconsumed closure WIN候補の採用状態不変・batch-23/24/25
+  残留キー (s003..s053・y003/y005/y007..y053・i003..i053 fileless
+  UNPROBED)・batch-27残留キー (o004/o006/o008/o010..o054 fileless
+  UNPROBED)・**fragment o009 (p1完全単一パスはbookkeepingのみ・証拠で
+  ない)** に一切触れない・batch-24の y002/y004・batch-27の
+  o001/o003/o005/o007 LOSS 6行 (adoption candidates) には本Partは出版
+  正本の読み取りのみで一切書き込まない・batch-26/27 (Part BQ/BT/BR) の
+  scaffold・drive・outputsには一切書き込まない・fast lane (y=22 universal
+  宣言 `e1e60cd4`・K1256/K1257・y=23宣言 `6f79c81f`)・finite-field lane
+  (K1254)・inversive-arc lane非接触。
+- UNKNOWN担保: 標準11×11空盤・19 central-reply roots・二石root
+  {49,60}/{59,60}・S2 {59,60}・class 1/2/4・class 10968・class 23964・
+  class 16957・class 1849・class 30565・class 13342 (54キーすべて・
+  o002を含む) は本Partのどの時点でもUNKNOWNのまま。nodes数・expansions
+  数・ttHits数を勝敗として読まない。WIN/LOSS採用は別宣言の adoption
+  Part (pinned fail-closed merger `90711961` 経由) のみ。scrutiny owner
+  C++第二実装 gate `9193f5b6…` 待ちは本レーンは代行しない。
+- 本宣言 observed HEAD-before-push: `91b490c0…` (本レーン Part BX
+  status更新・並走非接触コミットなしをlist_commitsで確認済み)。push
+  直前に最新mainを再fetchし note blob lock
+  `cb2c80d1aea1250be0cda9b8105f12b682812ec1` (536,124 bytes = Part BX
+  status update `91b490c0` 版) を再照合する (並走追記が挟まった場合は
+  本節を追記し直し、成立しない場合は簡潔に記録して次回へ回す)。
