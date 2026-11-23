@@ -4991,3 +4991,70 @@ canonical exact-S5 verdict cacheへ採用し、refresh再監査・delta extracto
   して本節を追記し直す)。
 
 - 2026-11-23 04:14Z Part BJ実行開始amendment（solver・execution start）: batch-21（class 12643・53キー）の宣言済みプロトコル `2bf5d529` に基づく2-pass fresh-cold probe実行を、本セッションを実行オーナーとして開始する。preflight（本amendment出版前・read-only・honest record）: published scaffold commit `85d0c4d7`（scripts 6・input 54・val-gate 12の72ファイル）をcommit-pinned rawで鏡像し、git blob sha1 18件照合＋pinned jsreplay SHA-256 `84585617…` 合致を機械確認。val-gate 4-anchorを本ホストで再実行し4/4 node-exact一致（budget/result/nodes比較・forbidden quadruples 95670 x4・wall_s除外: at2m 2本はresult 0/nodes 2000000、15m 2本はresult 2/nodes 3651923・5040200）。以降はpublished drive_batch21.sh（bounded invocation・2 worker max・2 solver process/host以下）を完走または事前登録STOP条件（mismatch rc=42・WIN-HALT rc=45・exhaustion honest UNKNOWN）まで実行し、outputs（status.log・raw 2-pass・row-audit）をpublishする。並走への留意: 本amendmentがmainに観測できる時点で本セッションが実行中である。実行成果の出版が観測されないまま本amendmentから長時間経過した場合（host消失等）は、takeover amendmentを先に出版したセッションが単一実行オーナーを引き継げる。標準11×11空盤・19 central-reply roots・二石root {49,60}/{59,60}・S2 {59,60}・class 1/2/4・class 12643（53キー含む）はどの時点でもUNKNOWNのまま。本amendment observed HEAD-before-push: `6bc4d65865c53afa6d12f29299a7895fab864979`（inversive-plane lane commit・非接触）。push直前にnote blob sha1 `23ea8560bbd191d8c1ba0408a8dc5637d999e17b`を再照合し、競合時は再fetchして本節を追記し直す。
+## Part BJ status update (2026-11-23, execution owner): batch-21 (class 12643) drive-1完了 - 事前登録WIN-HALTがa003で発火 (honest WIN label・verdict不消費)・49キー残留は新宣言待ち
+
+Part BJ (宣言 `2bf5d529`) のプロトコルどおり、batch-21 (class 12643・
+53キー) の2-pass fresh-cold probe drive-1を実行し、事前登録停止規則の
+WIN-HALT rc=45が a003 のhonest WIN labelで発火したため、そこで停止した。
+出版3コミットすべてfetch-back byte検証済み。
+
+- drive-1 (status.log先頭行 2026-11-23T04:09:23Z・最終行 04:11:41Z・
+  worker最大2・2番目workerはhost-timeout killで運用終了): 完走 two-pass
+  node-exact行は4行。a001 LOSS 2,392,778 / a002 LOSS 6,755,079
+  (p1==p2 byte一致・wall_s 67/67) / **a003 WIN (replay result 1) nodes
+  5,021,280 two-pass node-exact** (key (10412339930666631168,4)・s5
+  115192・wall_s 51/50) → 事前登録WIN-HALT rc=45発火・verdict不消費 /
+  a004 LOSS 4,151,964。mismatch 0・exhaustion 0 (budget枯槍なし)。
+- a006 はUNPROBED: 2番目workerが260秒有界driveのhost-timeoutでkillされた
+  (p1: complete single-pass bookkeeping行 result 2 / nodes 8,008,743 は
+  「NOT evidence」の簿記でありverdictではない。p2: truncated
+  headers-only断片で `# replay_done` なし)。将来のcontinuationで
+  fresh-cold再probeを実行するまで a006 は完了行として数えない。
+- 残り49キー (a005..a053) は未着手fresh。batch-21 residualの追加probeには
+  Part BH (batch-19 residual) と同型の新宣言 (preflight・scaffold再利用・
+  val-gate再実行込み) が必要で、本status updateでは追加probeを一切しない。
+- row audit (winhalt専用新script `scripts/row_audit_batch21_win_halt.py`
+  sha256 `08fff912…` 同時出版): `output/row-audit-winhalt.json` sha256
+  `5bb403ad…` 3回byte一致・全gate PASS (probed=4・loss_rows
+  [a001,a002,a004]・win_rows [a003]・mismatches 0・exhausted []・
+  fragment_key semantics: a006 evidence=false probed=false・
+  unprobed_count 49)。scaffold同梱のfull-row auditは完走residual用の
+  end-state auditとしてそのまま残存する。
+- 出版 (全てcommit-pinned raw fetch-back byte一致): scaffold `85d0c4d7`
+  (72ファイル・72/72) → outputs `0022c8c5` (raw 2-pass 8本 + status.log +
+  row-audit json + audit script 併せ13ファイル・13/13) → README +
+  MANIFEST-sha256.txt (85エントリ) `a38153a8` (README `27dd1abf…` /
+  MANIFEST `548f25df…`)。experiments dir:
+  `research/experiments/n11-centralreply-closure-class12643-batch21-20261123/`。
+- verdict不消費ゼロ: a003 のWIN labelはhonest recordのみで採用しない
+  (scrutiny owner C++第二実装 gate pin `9193f5b6…` 不変)。a001/a002/a004
+  の3 LOSS行は採用候補のみで、採用は別宣言adoption Part (pinned
+  fail-closed union merger byte-copy `90711961…`) が行う。canonical 6,235行
+  (batch-20採用済みBASE `f6649fe3…`) はread-only・書き込みなし。19 unconsumed
+  closure WIN候補も非接触。
+- 条件付き書記 (closure・被覆・secured・root勝敗の主張ではない): a003
+  (WIN honest label) はclosure候補class 12643の費用子であるため、このWIN
+  行が将来採用された場合にのみ、closure selection route pointerはrunner-up
+  rank 18 class 25835へ移動する (backup 31600)。class 12643のunknown人口は
+  本時点では一切変化しない。
+- 並走記録 (誠実・両方向): 本実行はstatus.log先頭行 04:09:23Zで開始済み
+  (scaffold `85d0c4d7` の出版 04:08:04Z が先行・並走amendment自身が当
+  scaffoldのcommit-pinned mirrorをpreflightに使用) のところ、並走セッション
+  が 04:12:55Z に「Part BJ実行開始amendment」`2f6086dd` (本ノート直前の
+  節・note blob lock `23ea8560…` を上書き) を出版し、同kitでの
+  mirror/preflight・execution ownerの主張を記録した。同一scaffold・同一
+  val-gate基準線に対する並走実行の成果がpublishされた場合は、独立
+  cross-verification (期待される相違はwall_sのみ) として両方向記録に
+  取り込む。first-completer規則 (y17 part2先例) に従い、本status update
+  とoutputs出版 (`0022c8c5`, `a38153a8`) によりPart BJ executionを
+  完結させる。
+- UNKNOWN担保: 標準11×11空盤・19 central-reply roots・二石root
+  {49,60}/{59,60}・S2 {59,60}・class 1/2/4・**class 12643 (53キーすべて)**
+  はどの時点でもUNKNOWNのまま。nodes数・worklist数・rank順位を勝敗として
+  読まない。
+- 本status update observed HEAD-before-push:
+  `7055cb450fa9b2321f2e33300d2e8cdb3defce6a` (README/MANIFEST出版 `a38153a8`
+  の後に対局外のinversive-plane laneがpushした非接触commit・noteは不変)。
+  push直前に最新mainのnote blob sha1
+  `83c59d9221e7a624ca81b8f876d903d54419aaa2` (並走amendment `2f6086dd`
+  適用後) を再fetch・再照合し、競合時は本節を追記し直す。
