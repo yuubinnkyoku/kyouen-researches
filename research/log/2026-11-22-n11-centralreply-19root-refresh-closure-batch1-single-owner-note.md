@@ -6422,3 +6422,83 @@ exact-S5 verdict cacheへ計上する単一オーナー実行を宣言する (ba
 - 本amendment observed HEAD-before-push: `4ccf1630062944932654001622477ec6bcfebc67`
   (push直前にnote blob sha1 `86ab7300…` (469,554 bytes) を再照合し、競合時は
   再fetchして本節を追記し直し、成立しない場合は簡潔に記録して次回へ回す)。
+
+## Part BU status update (2026-11-23, solver): batch-26 52-LOSS採用完了 - canonical 6,287行・class 1849はl028 (s5 81011) 1子を残しUNKNOWNのまま (UNKNOWN担保不変)
+
+Part BU (宣言 publication commit `b299f42`・observed HEAD `4ccf1630`) どおり、
+batch-26 (class 1849; Part BQ drive-1 l028 WIN-HALT停止 + Part BT residual完走
+で53/53 honest label) の52 LOSS行のみをcanonical exact-S5 verdict cacheへ
+採用し、refresh再監査・delta extractor全gateを完走した。**l028 WIN行は
+不採用** (unadopted_win_ids == ["l028"]・batch-14residual q042先例と同一
+取り扱い) を全stageのgateで機械担保した。
+
+- publish-then-execute順序の履行: 計算機材4 scriptを先にmainへ出版
+  (commit `33f942a`): maker `838a5c84…` / delta extractor `39606c48…` /
+  union merger byte-copy pin `90711961…` / refresh `cf67ace7…`。出版bytesを
+  commit-pinned raw fetchで本hostに取得・sha照合 (4/4 byte一致) の上、
+  **出版bytesから全pipeline (maker → merger → refresh → extractor) を
+  再実行しALL-OK** (maker 4回目 / merger 4回目 (run4 auditはinputのpath
+  表記差のみでcache本体byte不変) / refresh 5回目 / extractor 4回目、
+  いずれも出版前実行と出力byte一致)。
+- tamper battery **14/14 PASS**: maker 5種・refresh 2種・extractor 4種の
+  改竄入力を全検出+復元byte一致+検出後 kit 204/204 再検証、control 3件は
+  正しく非検出・全出力sha再確認。
+- maker全gate PASS: increment 52行 (l001..l027, l029..l053全LOSS) sha256
+  `19f6306e6c15e11e4eb3ead4c7cd1189f24210a927dcf0a153c3fe5c26733217`・
+  manifest `5db2410b…` (unadopted_win_ids==["l028"] gate・
+  full_packet_eq_loss_only false・win_scenario_exists true・52キーのBASE
+  (6,235行 `f6649fe3…`) 不在52/52・quarantine 0・総ノード208,202,177/pass
+  両pass一致・l028 raw再検証でincrementから除外)。
+- merger (selftest PASS): BASE 6,235行 `f6649fe3…` + 52行 =
+  **canonical 6,287行** (WIN 158 / LOSS 6,129・dup 0・conflict 0) sha256
+  `e32a2e442e77799ea36194f675baeb2424f3410a1d3e681b4c4fbb389f66fe93`
+  (259,260 bytes) を
+  `output/merged-exact-s5-chain-plus-closure-increment-plus-batch10-plus-batch16loss52-plus-batch14loss41-plus-batch17loss52-plus-batch14residualloss10-plus-batch20loss53-plus-batch26loss52-20261123.cache`
+  に出版 (commit C `8f3e487`)。merge-audit run1=run2=run3 `faf6439b…`。
+- refresh再実行 (~57s/回) 5回実行・出力byte一致: refresh-summary `51d6bf0d…`
+  (worklist_total 64,754・joint greedy 38,301)・closure-classes `e54a0eb8…`
+  (807行)・per-root-coverage `c1cb1bf5…`・probe-worklist `9ae1ca50…`
+  (**Part AH/AO/AP/AS/AV/BC/BI先例どおり不出版・sha記録のみ**)。
+- delta extractor全gate PASS: decomp `33a540c3…`・flips=[]・new_free=[]
+  厳密一致 (loss-only packetがfree化できるclassの機械計算listは空)・
+  class 1849のBASE-unknown 53子 == batch-26 key集合で52行解決・
+  leftover == [81011] == l028・ranking churn gate: class 1849 rank 24→2
+  (closure候補表のworklist best-option churnのみ: left [5213, 18933] /
+  entered [1349, 1906]、各churned classのstatusは不変)・update8
+  newly_resolved 0。
+- 機械確定 (簿記量・勝敗ではない): **class 1849 unknown_now 53→1**
+  (残るunknownはl028 (s5 81011) のみ・Board fail-closed子境界検証PASSで
+  確認)・**class 1849は本採用では閉じない** (l028は28 unconsumed closure
+  WIN候補 (Part BS第三実装交叉検証込み4系統裏付け) のためloss-only採用では
+  閉鎖資格なし・採用判断はscrutiny owner C++第二実装 gate pin `9193f5b6…`
+  通過後の別法律)・free_now 38不変・unknown 34,498不変・closure候補表807
+  不変 (rank churn 24→2のみ)・root 27 (known-loss-baseline) 119/119不変・
+  class 23101はrank 1 / unknown_now 1のまま・joint greedy 38,415→38,301
+  (delta -114)・probe worklist 64,808→64,754 (delta -54)・update8 resolved
+  133不変。
+- verdict不消費: l028 WIN行 (2-pass node-exact result 1・4,893,014 nodes) は
+  読み書きとも非接触のまま (**28 unconsumed closure WIN候補不变**)。
+- publication series (各commitともfetch-back byte検証済み): `b299f42`
+  (declaration note amendment) → `33f942a` (A: 実験dir scripts 4) →
+  `694c816` (B1: increment + manifest + merge-audit×3) → `8dc3bd64`
+  (B2: decomp-deltas + reaudit 3出力) → `8f3e487` (C: merged canonical
+  cache 259,260 bytes) → `f613ded0` (D: README + MANIFEST-sha256・
+  15ファイル明示列挙) → 本status update commit。実験dir:
+  `research/experiments/n11-centralreply-class1849-loss52-adoption-reaudit-20261123/`。
+- 不接触: batch-27 (Part BR・並走) のdrive outputsは本status update時点で
+  mainに存在せず不接触のまま。並走 K1252 (Pfaffian訂正 `32d1d88…`)・
+  y=22族パラメトリックfit単一オーナー宣言 (`c0baada6`) は別laneで本Partと
+  無関係 (本Partの成果・読み書きに一切依存しない)。
+- UNKNOWN担保: 標準11x11空盤・19 central-reply roots・二石root {49,60}/
+  {59,60}・S2 {59,60}・class 1/2/4・class 1849 (53キーすべて・l028・52 LOSS行
+  を含む) は本status update時点でも**UNKNOWN**のまま。nodes数・worklist数・
+  greedy union size等のscheduling quantities (簿記量) を勝敗・距離として
+  読まない。
+- 本status update observed HEAD-before-push:
+  `292c408be8d1d73ed87d022f87c5bef47bd7c530` (並走finite-field laneの
+  arc-bounds summary・本Partと無関係・note.md不変を確認済みで再取得した
+  最新main HEAD。Part BU series上一番直近の本レーンcommitはcommit D
+  `f613ded0`)。push直前に最新mainを再fetchし note blob lock
+  `91aee50fdad63a7406ae0902ea7563313d514778` (476,026 bytes) を再照合する
+  (batch-27 status update等の並走追記が挟まった場合は本節を追記し直し、
+  成立しない場合は簡潔に記録して次回へ回す)。
