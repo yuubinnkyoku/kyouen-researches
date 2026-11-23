@@ -4859,3 +4859,75 @@ class 12457) の53 LOSS行をcanonical exact-S5 verdict cacheへ計上する単�
 - 本amendment observed HEAD-before-push: 1d46f883a1fea022128a1bb28d28713b75dcbcf6
   (push直前にnote blob sha1 4e09fd8374744fa9ce8adfafa4ad92c3ccaa0cfdを再照合し、
   競合時は再fetchして本節を追記し直す)。
+
+## Part BI status update (2026-11-23, solver): batch-20 53-LOSS採用完了 - canonical 6,235行・class 12457は38番目のBoard検証free class (UNKNOWN担保不変)
+
+Part BI (宣言 `879e898c`) どおり、batch-20 (class 12457) の53 LOSS行を
+canonical exact-S5 verdict cacheへ採用し、refresh再監査・delta extractor全gate
+を完走した。
+
+- publish-then-execute順序の履行: 計算機材4 scriptを先にmainへ出版
+  (commit `7bdf327a093670a24d04220c95b8495e452a9896`): maker `81a6b7ec…` /
+  delta extractor `605e040a…` / union merger byte-copy pin `90711961…` /
+  refresh `2f77a8bb…`。出版bytesをcommit-pinned raw fetchで本hostに取得・
+  sha照合 (4/4 byte一致) の上、4段階すべてを出版後に再実行し、出版前実行
+  (同一host・同一bytes) との出力byte一致を機械確認した。
+- maker全gate PASS: increment 53行 (x001..x053全LOSS) sha256
+  `554f726129cce48b09fcbc5edaf4b40fb6dd4332182e4c62594455c47bc0a163`・
+  manifest `82a5f866…` (full==loss・WIN不在absence gate・枯損行不在
+  absence gate・BASE (6,182行 `0b594f7e…`) 重複0・quarantine 0・kit 191/191・
+  row-audit `1dcb7fb8` 一致・総ノード175,842,846/pass両pass一致)。
+- merger (selftest PASS): BASE 6,182行 `0b594f7e…` + 53行 =
+  **canonical 6,235行** (WIN 158 / LOSS 6,077・dup 0・conflict 0) sha256
+  `f6649fe36425f9a4e959b058392746b73e655cda0fcfa223befafd8905d67d26`
+  (256,885 bytes) を
+  `output/merged-exact-s5-chain-…-plus-batch20loss53-20261123.cache`
+  に出版。merge 3回byte一致 (audit run1=run2=run3 `06151e6d…`)・出版後
+  再実行もbyte一致 (post-audit `d748bbbf…`、記録される入力path文字列
+  以外はrun1と完全一致)。
+- refresh再実行 (~60s) 4出力byte一致: refresh-summary `d9d18fc2…`・
+  closure-classes `d57a7609…` (807行)・per-root-coverage `bc409e63…`・
+  probe-worklist `3152855d…` (3.75MB・**Part AH/AO/AP/AS/AV/BC先例どおり
+  不出版・sha記録のみ**)。
+- delta extractor全gate PASS: decomp `31078669…`・flips=[]・
+  new_free=[12457]厳密一致・class 12457のBASE-unknown 53子==batch-20
+  key集合で全行解決・update8_resolved +53・changed_rows [central|2,
+  central|5]・closure候補表の退出は[12457]のみ (closure gate)。
+- 機械確定 (分類delta・勝敗ではない): **free_now 37→38** (class 12457
+  は費用子54個すべてLOSS (既知子 {126899: LOSS} + 53行) かつBoard
+  fail-closed子境界検証PASSで、38番目のBoard検証free classとしてunknown
+  人口から退出)・**unknown 34,499→34,498**・closure候補表**808→807**・
+  root 27 (known-loss-baseline) は**119/119不変**・class 23101は両表
+  unknown_now 1のまま・class 12643はunknown 53のまま (**rank 18→17に
+  繰り上げ**: 次のroute-alive closure候補・batch-21は別宣言が必要)。
+  update8簿記: remaining 31,779→31,726・resolved 80→133・joint greedy
+  38,978→38,415・worklist 64,872→64,808。nodes数・worklist数・greedy数
+  を勝敗として読まない。被覆・secured・root勝敗の主張はしない。
+- tamper battery 10種すべて出版前に検出 (increment verdict flip / raw行
+  改変 / manifest WIN注入 / refresh-summary差し替え / batch-keys差し替え /
+  scenario cache flip / merger cross-file conflict (出力拒否) / status.log
+  最終行改変 / kit MANIFEST gate / extractor sha pin)・検出後復元byte一致。
+- 誠実な修正記録: outputs commit `04a2335e…`のmessageはprobe-worklistを
+  「直後の別commitで出版」と予告していたが、repo慣例 (3.7MB worklist
+  不出版・sha記録のみ) に従い不出版とした (sha `3152855d…` はREADMEと
+  本noteに記録)。
+- verdict不消費: 採用は53 LOSS行のみ (fail-closed merger経由)。batch-20に
+  WIN行は存在しない (absence gate) のでWIN採用場面はない。19 unconsumed
+  closure WIN候補 (b018/d002/e002/f017/g018/j033/h045/z003/n005/n006/
+  p002/p003/r001/r002/q042/v001/v002/w001 (s5 63802)/w002 (s5 109169)) は
+  読み書きとも非接触 (scrutiny owner C++第二実装 gate pin `9193f5b6…`
+  のまま)。
+- 並走記録 (非接触維持): 本Partのscripts出版後にfast-lane 2コミット
+  (`22dc3dd2`, `ecc96264`) とPart BI outputs A (`04a2335e`) がpushされた
+  (`ecc96264` のmessageが本Part scripts commitを非接触と明記)。Part BH
+  (batch-19 residual w003..w053・宣言 `de1383a7`) の採用コミットはまだ
+  mainに無い。batch-21 (class 12643) は本Partでは着手していない。
+- experiments dir: `research/experiments/n11-centralreply-class12457-loss53-adoption-reaudit-20261123/`
+  (scripts `7bdf327a` / outputs A `04a2335e` / READMEは本status update
+  commitで出版)。
+- UNKNOWN担保: 標準11×11空盤・19 central-reply roots・二石root
+  {49,60}/{59,60}・S2 {59,60}・class 1/2/4・class 12643は本時点で
+  **UNKNOWNのまま**。
+- 本status update observed HEAD-before-push: push直前に最新mainを再fetch
+  し、note blob lock `e398f02b2c7cabe20768944109e14dfbef432bc8` を再照合
+  する (競合時は本節を追記し直す)。
