@@ -52,3 +52,52 @@ gate `9193f5b6…` 待ち)。**published 15M条件の同一条件再probeは行�
 
 (宣言出版後に追記)
 
+### 宣言後実行 (publish-then-execute・protocol遵守)
+
+1. **A scaffold push**: 34 files (scripts 6 / input 15 / sources 4 / val-gate 8 / README) —
+   commit `dd68c4d6` (observed HEAD-before-push `699a13bc` Part CG completion log)。
+   fetch-back 34/34 byte-identical (commit-pinned raw URL・sha256照合)。
+   前回sessionのscaffold pushは16MiB制約で着地していなかったことをlist_commitsで確認済み
+   (HEADがCQ Aを含まず・重複pushなし)。
+2. **val-gate fresh 4** (宣言後に本host再実行): at2m×2 budget 2,000,000 → exhaustion
+   nodes 2,000,000 (`wall_s=9`), 15m×2 budget 15,000,000 → 3,651,923 (`17`) /
+   5,040,200 (`26`)。published baselinesと node-exact (f6 result / f7 nodes 一致・
+   f8 wall_s は比較外・事前宣言どおり)。**4/4 PASS**。
+3. **anchors** (derived runner `runbatch_b28exh20m.sh` 20M): aa036 → PASS `20000000,2,955659`
+   (published とnode-exact)、aa046 → PASS `20000000,1,2185149` + WIN-HALT (rc=45・事前登録
+   どおり)。**2/2 PASS**。
+4. **11 target keys** (`cq_local_step.sh` 1 invocation 1キー・外側295s/inner 260s):
+   全11キー2-pass fresh-cold完了・TRUNCATED-RETRY 0・WINDOW-EXCEEDED 0・determinism
+   mismatch 0。各キー1 invocationでp1/p2双方完走 (実測 2m37s〜3m37s)。
+   - **WIN (7行・全て15M < nodes ≦ 20Mで解決)**: aa004 15,616,012 / aa005 15,957,877 /
+     aa030 16,765,560 / aa031 17,185,014 / aa035 15,424,243 / aa047 16,230,465 /
+     aa053 16,685,872。全て2-pass node-exact + status.log PASS行 + WIN-HALT行。
+   - **EXHAUSTED at 20M (4行・honest UNKNOWN・same-condition再probeなし)**:
+     aa021 / aa028 / aa032 / aa050 (全て nodes=20,000,000 2-pass一致)。
+   - **LOSS 0行・mismatch 0行**。
+5. **audit** (`audit_cq.py`): PASS — probed 11/11, win 7, loss 0, exhausted @20M 4,
+   window-exceeded 0, unprobed 0, anchors 2, val-gate 4。3回実行 stdout + audit.json
+   byte-identical (stdout`13e1f902…` / json `6227eb2c…`)。tamper電池: (a) p2 nodes改変→
+   p1/p2不一致捕捉 (b) WIN→LOSS反転→status.log PASS行照合捕捉 (c) replay_done削除→
+   truncated捕捉 (d) `reprobe_condition.budget` 19999999→registry gate A捕捉、
+   4/4 fail-closed、各probe復元 + cmp byte-identical。
+   誠実記録: 当初の(d)probeはregistryに存在しないtop-level `budget` keyを改変しており
+   ゲート不発火だった (auditor欠陥ではなく電池側のフィールド設定ミス)。正フィールド
+   `reprobe_condition.budget`で再実行し捕捉を確認。また **B commit message中の
+   audit.json hash `a2452e59` は手転写ミス** (正: `6227eb2cfeb14c31799d94f19436
+   c07233d55c8301d8640ee266b8cc3a366692`・commit messageは取り消せないため
+   MANIFEST+本記録で訂正。手転写禁止の教訓を再確認)。
+6. **B outputs push**: 32 files (status.log 25行 + audit.json + raw 26 + val-gate
+   `.cq-host.out` 4) — commit `962348f9` (observed HEAD-before-push `001278ac` Part CR B)。
+   fetch-back 32/32 byte-identical。
+
+### 結果の解釈 (interpretation guard)
+
+- 7 WIN行は **probe-level honest labels のみ**。verdict不消費: canonical adoptionは別
+  宣言のadoption Part (pinned fail-closed merger) 経由のみ、WIN行はさらに scrutiny
+  owner C++第二実装 gate を通るまで採用されない。本Partはいかなる adoption も行わない。
+- batch-28のEXHAUSTED残は 11行 → 4行 (aa021/aa028/aa032/aa050・20M条件でも未解決)。
+  これらは今後の別条件 (higher budget / 構造改善 / cache活用) での再probe候補として
+  openのまま。20M条件のsame-condition再probeは行わない。
+- class 5343 のclosure構成・secured coverage・root勝敗には一切触及しない。
+- **標準11×11空盤・class 5343・全キーはこの時点で UNKNOWN**。
