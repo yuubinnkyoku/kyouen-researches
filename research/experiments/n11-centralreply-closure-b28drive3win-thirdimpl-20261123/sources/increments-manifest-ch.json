@@ -1,0 +1,205 @@
+{
+ "schema": "b28loss1-increments-manifest-v1",
+ "batches": [
+  {
+   "batch": 28,
+   "class_index": 5343,
+   "keys_total": 54,
+   "adopted_loss_ids": [
+    "aa003"
+   ],
+   "unadopted_win_ids": [
+    "aa001",
+    "aa002",
+    "aa006",
+    "aa007"
+   ],
+   "exhausted_excluded_ids": [
+    "aa004",
+    "aa005"
+   ],
+   "probed_ids": [
+    "aa002",
+    "aa001",
+    "aa003",
+    "aa004",
+    "aa005",
+    "aa007",
+    "aa006"
+   ],
+   "fragment_ids": [],
+   "fileless_unprobed_count": 47,
+   "input_sha256": "af19208fafb61cc20892fa968bc373fe2c4f79da94744dfeed9d2f40ea8481e5",
+   "row_audit_sha256": "3e86a32b847b5799594be5fbee6624878deadf02990940b2503f931d7af30e91",
+   "status_log_sha256": "343097c268425cc62263935f1063c26689515bc797c68bbdb82389c713952c98",
+   "status_log_stop_records": [
+    {
+     "pass_row": "2026-11-23T15:22:39Z aa002 PASS 15000000,1,6527041",
+     "halt_row": "2026-11-23T15:22:39Z aa002 WIN-HALT"
+    },
+    {
+     "pass_row": "2026-11-23T15:23:55Z aa001 PASS 15000000,1,13183855",
+     "halt_row": "2026-11-23T15:23:55Z aa001 WIN-HALT"
+    },
+    {
+     "pass_row": "2026-11-23T16:22:56Z aa007 PASS 15000000,1,13483540",
+     "halt_row": "2026-11-23T16:22:56Z aa007 WIN-HALT"
+    },
+    {
+     "pass_row": "2026-11-23T16:23:05Z aa006 PASS 15000000,1,14303810",
+     "halt_row": "2026-11-23T16:23:05Z aa006 WIN-HALT"
+    }
+   ],
+   "status_log_exhausted_records": [
+    {
+     "pass_row": "2026-11-23T16:10:42Z aa004 PASS 15000000,0,15000000",
+     "exhausted_row": "2026-11-23T16:10:42Z aa004 EXHAUSTED 15000000,0,15000000"
+    },
+    {
+     "pass_row": "2026-11-23T16:14:18Z aa005 PASS 15000000,0,15000000",
+     "exhausted_row": "2026-11-23T16:14:18Z aa005 EXHAUSTED 15000000,0,15000000"
+    }
+   ],
+   "status_log_final_row": "2026-11-23T16:23:05Z aa006 WIN-HALT",
+   "stop_rule": "pre-registered WIN-HALT (Part CB drive-1 aa001/aa002 2-line pairs + Part CD drive-2 aa006/aa007 2-line pairs and aa003 LOSS row + aa004/aa005 EXHAUSTED records; verdict not consumed)",
+   "total_nodes_pass_one": 4070373,
+   "total_nodes_pass_two": 4070373,
+   "kit_integrity": {
+    "manifest_sha256": "2811b577f01a29e0bbdafbf3a4d9bb6237851246753d02ad86f025a75d560713",
+    "files_verified": 96
+   },
+   "fragment_state": {}
+  }
+ ],
+ "resolved_ids": [
+  "aa002",
+  "aa001",
+  "aa003",
+  "aa004",
+  "aa005",
+  "aa007",
+  "aa006"
+ ],
+ "loss_ids": [
+  "aa003"
+ ],
+ "win_ids": [
+  "aa001",
+  "aa002",
+  "aa006",
+  "aa007"
+ ],
+ "unadopted_win_ids": [
+  "aa001",
+  "aa002",
+  "aa006",
+  "aa007"
+ ],
+ "exhausted_excluded_ids": [
+  "aa004",
+  "aa005"
+ ],
+ "row_counts": {
+  "probed_rows": 7,
+  "adopted_loss_rows": 1,
+  "wins": 4,
+  "exhausted_excluded": 2,
+  "fragments_unprobed": 0,
+  "fileless_unprobed": 47
+ },
+ "sha256": {
+  "loss": "dc857bfd2ecd00deaea3dbe214e0eec0e5b9d7704104a8721d046f262f170487"
+ },
+ "full_packet_eq_loss_only": false,
+ "full_packet_eq_loss_only_rationale": "batch-28 is a partial batch: the resolved packet holds 4 WIN rows (aa001/aa002/aa006/aa007, honest labels) and 2 EXHAUSTED rows (aa004/aa005, honest UNKNOWN) which are NOT adopted (unconsumed), so the adopted packet (1 LOSS row) != the resolved probed set",
+ "win_scenario_exists": true,
+ "win_scenario_note": "the in-batch WIN rows aa001 (s5 28037) and aa002 (s5 87306) (third-implementation cross-verified in Part CC) and aa006 (s5 129823) and aa007 (s5 135236) (Part CG cross-verification lane declared, pending output) are honest labels only, NOT adopted by this Part; they stay unconsumed (scrutiny owner C++ second-implementation gate pin 9193f5b6...; batch-14residual q042 / batch-26 l028 precedents); loss-only adoption NEVER frees class 5343 while its WIN children stay unconsumed",
+ "unadopted_win_rows": [
+  {
+   "key_id": "aa001",
+   "batch": 28,
+   "class_index": 5343,
+   "s5_index": 28037,
+   "lo": 1315631633331650560,
+   "hi": 0,
+   "legal": 88,
+   "result": 1,
+   "nodes": 13183855,
+   "two_pass_node_exact": true,
+   "note": "honest label only, never adopted in this Part (Part CC third-implementation cross-verified; stays unconsumed)"
+  },
+  {
+   "key_id": "aa002",
+   "batch": 28,
+   "class_index": 5343,
+   "s5_index": 87306,
+   "lo": 1171516445390012416,
+   "hi": 0,
+   "legal": 86,
+   "result": 1,
+   "nodes": 6527041,
+   "two_pass_node_exact": true,
+   "note": "honest label only, never adopted in this Part (Part CC third-implementation cross-verified; stays unconsumed)"
+  },
+  {
+   "key_id": "aa006",
+   "batch": 28,
+   "class_index": 5343,
+   "s5_index": 129823,
+   "lo": 1171516445255794692,
+   "hi": 0,
+   "legal": 88,
+   "result": 1,
+   "nodes": 14303810,
+   "two_pass_node_exact": true,
+   "note": "honest label only, never adopted in this Part (Part CG cross-verification lane declared (pending output); stays unconsumed)"
+  },
+  {
+   "key_id": "aa007",
+   "batch": 28,
+   "class_index": 5343,
+   "s5_index": 135236,
+   "lo": 1171516445255794696,
+   "hi": 0,
+   "legal": 95,
+   "result": 1,
+   "nodes": 13483540,
+   "two_pass_node_exact": true,
+   "note": "honest label only, never adopted in this Part (Part CG cross-verification lane declared (pending output); stays unconsumed)"
+  }
+ ],
+ "exhausted_rows": [
+  {
+   "key_id": "aa004",
+   "batch": 28,
+   "class_index": 5343,
+   "s5_index": 118693,
+   "lo": 1171516445255794689,
+   "hi": 0,
+   "legal": 91,
+   "result": 0,
+   "nodes": 15000000,
+   "two_pass_node_exact": true,
+   "note": "budget exhaustion at 15M (honest UNKNOWN; same-condition re-probe not performed; NOT adopted, NOT emitted; nodes are bookkeeping"
+  },
+  {
+   "key_id": "aa005",
+   "batch": 28,
+   "class_index": 5343,
+   "s5_index": 124331,
+   "lo": 1171516445255794690,
+   "hi": 0,
+   "legal": 89,
+   "result": 0,
+   "nodes": 15000000,
+   "two_pass_node_exact": true,
+   "note": "budget exhaustion at 15M (honest UNKNOWN; same-condition re-probe not performed; NOT adopted, NOT emitted; nodes are bookkeeping"
+  }
+ ],
+ "fragment_rows_note": "batch-28 has NO fragment keys in this drive: the 4 truncated sidecars (aa004.p2 / aa005.p1 / aa006.p2 / aa007.p2 at the wave-1 260s window) are bookkeeping only and were re-run fresh-cold by the published completeness guard; the fileless unprobed keys (aa008..aa054) are untouched by this Part",
+ "merger_sha256": "907119610034fb2aebfde012550a4129dfa3b086c6de11194e856747ac74606a",
+ "base_cache_absent_hits": 0,
+ "base_cache_rows": 6293,
+ "quarantine_hits": 0,
+ "interpretation_guard": "canonical single-row adoption increment: only the 1 LOSS row (aa003) is consumed into the canonical cache via the fail-closed union merger; the aa001/aa002/aa006/aa007 WIN verdicts are NOT consumed (unconsumed closure WIN candidates); 11x11 stays UNKNOWN; nodes are bookkeeping, never verdicts"
+}
