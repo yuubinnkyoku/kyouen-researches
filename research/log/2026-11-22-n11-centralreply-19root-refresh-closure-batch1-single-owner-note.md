@@ -7610,3 +7610,76 @@ branch / PRは作らない)。
   `8dff57dd16d1148784d1fb0143995224a8e1e049` (560,088 bytes = Part BZ
   adoption宣言 typo修正 `b37117d9` 版) を再照合する (競合時は再fetchして
   本節を追記し直し、成立しない場合は簡潔に記録して次回へ回す)。
+
+
+### Part BZ status update (2026-11-23, adoption): batch-24/27 6-LOSS canonical adoption 実行完了 - 全16ファイル出版byte検証済み・canonical cache 6,293行 (UNKNOWN担保不変)
+
+(observed HEAD-before-push: 実行時の最新mainをコミットメッセージに記録。
+実行window中の並走コミットは `f1d9e460` (K1254 order-32 arc gap・finite-field
+lane) の1件のみで非接触を確認済み。push直前にnote blob lock
+`8dff57dd16d1148784d1fb0143995224a8e1e049` (560,088 bytes = Part BZ宣言
+typo-fix `b37117d9` 版) を再照合する。)
+
+- 宣言 (`8b7111be` + typo-fix `b37117d9`, publish-then-execute) のprotocol
+  1)-6) を逐次実行し、**全stepが宣言済みshaとbyte一致**:
+  preflight (published Part BU refresh 3出力 `51d6bf0d`/`e54a0eb8`/`c1cb1bf5`
+  を本hostでbyte再現)・maker x4 (increment `1d8556c1`・manifest `818fb0c3`)・
+  merger selftest PASS + merge x3 (audit `cef05e36` x3同一bytes・scenario
+  cache `9115be9e`)・refresh x3 + 隔離実行 (env -i・PYTHONHASHSEED=random・
+  cwd=/tmp) (`fca242cc`/`14fc37c3`/`4218a6b4`/probe-worklist `7d9020d4`)・
+  extractor x4 + 隔離実行 (decomp `e0005d42`)・tamper battery再実行
+  **16/16検出 + 全probe復元byte検証** (T2d 3-level pin bypass→semantic
+  「WIN set [] != unadopted ['o002']」・T8 merger同一キーverdict conflict
+  →GATE FAILED出力未生成・CONTROL: scratch tree 別絶対pathでfull chain
+  再実行・出版sha全件byte一致)。
+- 出版5コミット ( fetch-back byte照合済み・全16ファイル ): A `92f67db1`
+  (scripts 4: maker `eff939cd`・merger byte-copy `90711961`・extractor
+  `a3adc0da`・refresh `0677e6eb`)・B `212136ef` (increment・
+  increments-manifest・merge-audit x3計5ファイル)・C `d433323b`
+  (merged scenario cache 6,293行・WIN 158 / LOSS 6,135・259,527 bytes
+  `9115be9e`)・D (take 2) `1aba3f1f` (reaudit 3出力 + decomp計4ファイル)・
+  E `a6f132d7` (README + MANIFEST-sha256 14行対象)。実験dir:
+  `research/experiments/n11-centralreply-class16957-13342-loss6-adoption-reaudit-20261123/`。
+- honest事故記録 (3件・いずれも検証層が捕捉): (1) 宣言sectionの
+  unicode escape手打ち誤字3文字 (シ/丁/対) を宣言commit `8b7111be` の
+  fetch-back byte検証が検出 → 修正commit `b37117d9` (数値・shaへの影響
+  なし・fetch-back再検証byte一致)。(2) 出版D commit `aad298aa` が
+  path誤り (dir名から `-reaudit-` 欠落) で4ファイルを誤locationに書込 →
+  fetch-back 404が検出 → 正pathに再出版 `1aba3f1f` + 誤dirの4ファイル
+  を掃除4 commits (`066e379e`/`5bb543da`/`cabe3ce4`/`3a38100`)・main
+  HEADの誤dirは空。(3) protocol step 2のmaker run1が1回だけrc!=0
+  (一過性・再現せず) → 即時再実行で x4 byte一致。
+- 意味 (adopted facts only): canonical cacheはPart BU正本6,287行から
+  6,293行へ (batch-24 y002/y004・batch-27 o001/o003/o005/o007の6-LOSS行
+  をpinned fail-closed merger `90711961` 経由で採用・WIN/LOSS conflict
+  gate・BASE重複ゼロのstructural gate込み)。scenario (adoption後) で
+  class 16957 unknown_now 53→51・class 13342 54→50 (rank 26→6, 22→10)・
+  closure churn left=[] entered=[]・free_now 38不変・update8 resolved
+  +0 (133不変)・joint greedy 38,301→38,295・probe-worklist
+  64,754→64,747・per-root free/uncovered不変 (individual greedy movers
+  4 roots {5,16,24,48})。これらはすべてbookkeepingであり、root被覆・
+  クラス閉鎖・secured・root勝敗の主張はしない。
+- 不接触・未消費 (再確認): 非採用WIN 3行 (y001/y006/o002) はhonest
+  labelのままunconsumed (29 unconsumed closure WIN候補に含まれ採用待ち・
+  scrutiny owner C++第二実装 gate `9193f5b6…` 待ち・本レーンは代行しない)・
+  fragment o009 (p1完全単一パスはbookkeepingのみ)・batch-24/27 fileless
+  キー (49+48件ともUNPROBED)・canonical BASE (BU `e32a2e44…`) read-only
+  (新正本は別filename `9115be9e` として出版・BASE書換なし)・fast lane・
+  finite-field lane・inversive-arc lane非接触。
+- 次回以降の候補: batch-28選定 (29-WIN交積・rank 27 class 5343/13758/
+  14103) が次点。残るadoption候補なし (6行すべて採用完了)。knowledge
+  folderの更新は次回実行時。
+- **標準11×11空盤・19 central-reply roots・二石root {49,60}/{59,60}・S2
+  {59,60}・class 1/2/4・class 16957・class 13342 (全キー) は本Part の
+  実行・出版のどの時点でもUNKNOWNのまま。** nodes数を勝敗として読まない。
+  WIN採用は別adoption Part (pinned merger `90711961` 経由) のみ。
+- 事後注記 (本status updateのpush時・refit): push直前の再fetchで、本noteに並走による
+  Part CA amendment (batch-27 residual continuation宣言・observed HEADはPart BZ typo-fix
+  `b37117d9`) が追記済みであることが判明した。よって、事前登録のnote blob lock
+  `8dff57dd16d1148784d1fb0143995224a8e1e049` (560,088 bytes版) は解消済みとして、
+  本status sectionはPart CA追記後の最新正本 (568,693 bytes・fetch時点) 末尾に
+  追記して出版した (observed HEAD-before-push・出版時に指定したnote blob shaは
+  本commitのmessageに記録。本section本文の数値・sha・事故記録はPart BZ実行時点の
+  記録であり不変・Part CAのoutputs publicationは本status update着地後という
+  事前登録の条件どおり)。
+
