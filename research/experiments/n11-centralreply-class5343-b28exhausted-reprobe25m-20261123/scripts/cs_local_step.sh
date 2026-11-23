@@ -41,7 +41,7 @@ PY
 echo "remaining=${#REM[@]}"
 if [ "${#REM[@]}" -eq 0 ]; then echo ALL-DONE; tail -4 "$K/output/status.log"; exit 0; fi
 cd "$K" || exit 9
-timeout 260 bash scripts/runbatch_b28exh20m.sh "${REM[0]}"
+timeout 260 bash scripts/runbatch_b28exh25m.sh "${REM[0]}"
 rc=$?
 echo "W-A ${REM[0]} rc=$rc"
 tail -4 output/status.log
