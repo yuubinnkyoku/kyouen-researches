@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Universal verifier for the y=18 two-token residual family (PART 1).
+Universal verifier for the y=18 two-token residual family (PART 2).
 
 Family: H(R; (x,18); z), all z >= 0, all x >= 18, all R >= 0.
 Claim under test (K1242, currently status "observed"); the closed form
@@ -9,31 +9,40 @@ cand18 equals H everywhere; with corollaries
        x <= z-19  =>  H == single_token(x+18, z, R)
   tail:                                 R >= x+z+19  =>  H == (x+18) % 2
 
-STAGE: part 1 (the 12-check machine; the part 2 stage adds C1d published
-fixed-z slice anchors at the y=18 rows and the independent census_rows.py
-census.txt consumer C11r and, on overall PASS with 3 byte-identical audit
+STAGE: part 2 (C1d published fixed-z slice anchors at the y=18 rows and
+the independent census_rows.py census.txt consumer C11r are incorporated
+on top of the published part1 12-check machine (commit 9f3d5764, those
+bodies byte-invariant); on overall PASS with 3 byte-identical audit
 runs, promotes K1242 observed -> proved), per the procedure that proved
 y=5..y=17 (K1023/K1099/K1104/K1112/K1126/K1127/K1131/K1135/K1138/K1141/
 K1143/K1152/K1231/K1233/K1235/K1237/K1240).
 
-Checks implemented and run here: C1, C1b, C2, C2b, C3, C4 (clip window
+Checks implemented and run here: C1, C1b, C1d, C2, C2b, C3, C4 (clip window
 2y+2 = 38, sentinel 39), C4t (clip tightness probe 37), C7, C8, C9, C11,
-C12. part2 will add C1d and C11r in place with these bodies byte-invariant.
+C11r, C12. The part1 12 checks keep their published bodies (byte-
+invariant); part2 adds C1d and C11r in place.
 
 Run modes:
-  python3 verify_y18_universal.py                 # all checks except C11
+  python3 verify_y18_universal.py                 # all checks except C11,
+                                                  # C11r
   python3 verify_y18_universal.py C11ordered      # census part 1 (slow)
   python3 verify_y18_universal.py C11canonical    # census part 2 (slow)
   python3 verify_y18_universal.py C11             # merge census parts, then
                                                   # run all checks incl. C11
+                                                  # and C11r
   python3 verify_y18_universal.py C1 C2 ...      # explicit check list
 
   C1   raw order-preserving AND descending-canonical engines vs cand18,
        z=0..14, x=18..36, R=0..x+z+49
   C1b  single-token closed form (K0832) raw anchor; published y=17 closed
        form (K1240 transcription, the B-child of every y=18 point and the
-       x=18 A-child) raw anchor; x=18 multiset merger (17,18)==(18,17)
+       x=18 multiset merger (17,18)==(18,17)
        i.e. A==B child value raw anchor
+  C1d  published fixed-z slice anchors (z=8/9/10/15/16/17, x=18..159,
+       R<=x+61, evaluated at the y=18 row) vs cand18, + the published
+       low-R single-token reduction R<=z+6 (z=15..17); anchors
+       pre-flighted fail-closed against both raw engines and cand18
+       (scripts/preflight_c1d_y18.py) before incorporation
   C2   closed-form identity grid z=0..48, x=18..60, R<=x+z+44 (+merge,tail)
   C2b  deep-tail identity rows z in {60,72,84,96,108,120,240,400},
        x in {18,23,...,68}, R <= x+z+31
@@ -69,6 +78,10 @@ Run modes:
        point counts, corollary counts recomputed from formulas, bad == 0
        fail-closed) and merges them. The unbounded verbatim engines
        still anchor C1, C1b, C3.
+  C11r independent raw-double-recursion census ledger consumer: every
+       row of census.txt (census_rows.py, the third implementation,
+       published in this experiment dir) re-derived from cand18 (T/P
+       sets, Thue-Morse index, tail), z=0..79, x=18..70, R=0..x+z+20
   C12  deep closed grid z=0..120, x=18..120, R<=x+z+20
 
 Trust boundary (same machine class as the y=5..y=17 proof machines):
@@ -464,6 +477,266 @@ def identity_ok18(z, x, R):
     return got == want, got, want
 
 
+# =====================================================================
+# Published fixed-z slice anchors (C1d), verbatim block from the y=17
+# part2 verifier verify_y17_universal.py (published, commit ab23d120,
+# SHA-256 4253cf29...), whose own provenance chain (via the y=16/y=15/
+# y=14/y=12 machines) is the y=10
+# part2 verifier verify_y10_universal.py (published, SHA-256
+# f9169449309dcd25aaba8d6379d4289167f61eb3895b031e45ff9e80c46c05e4) and
+# the published slice verifiers (z=8: K0999/K1000
+# verify_z8_y_ge9_proof.py e88e5ea7...; z=9: K1001 verify_z9_y_ge9_proof.py
+# db1d60c6...; z=10: K1011 scope verify_z10_y_ge9_proof.py 42db00b2...;
+# z=15: K1065 verify_z15_y_ge6.py 131e1c64...; z=16: K1077
+# verify_z16_y_ge6.py d07c3b0e...; z=17: K1087 verify_z17_y_ge6.py
+# e49d24d2...). Kept in their published parametric (x, y, r) form and
+# evaluated at the y=18 row. Pre-flighted fail-closed at the y=18 rows
+# before incorporation (scripts/preflight_c1d_y18.py: 12,432 anchor
+# points + 9,372 low-R reduction points, three-way vs raw engines and
+# cand18, all clean; the y=10 pre-flight of the same transcriptions
+# caught an evaluation-order bug in the K1087 first draft, 170 points).
+# =====================================================================
+
+# ------------------------------------------------------------------
+# Published fixed-z slice anchors specialised at y=10 (C1d).
+# Independent of the cand10 tables above. Uniform closed forms kept in
+# their published parametric (x,y,r) form and evaluated at the y=10 row:
+#   z=8:  K0999/K1000 uniform candidate, scope x>=y>=9
+#         (verify_z8_y_ge9_proof.py, SHA-256 e88e5ea7...)
+#   z=9:  K1001 uniform candidate, scope x>=y>=9
+#         (verify_z9_y_ge9_proof.py, SHA-256 db1d60c6...)
+#   z=10: K1002 uniform candidate restricted to y>=9 = the K1011 proof
+#         scope (verify_z10_y_ge9_proof.py, SHA-256 42db00b2...)
+#   z=15: K1065 uniform y>=6 family (verify_z15_y_ge6.py,
+#         SHA-256 131e1c64...); the small-y transitional cells
+#         (y,d) in {(6,0),(6,1),(6,2),(7,0),(6,3),(7,1)} are unreachable
+#         at y=10, so the published generic rows apply as-is
+#   z=16: K1077 uniform y>=6 family (verify_z16_y_ge6.py,
+#         SHA-256 d07c3b0e...); unreachable transitional (y,d) cells
+#         at y=10 likewise
+#   z=17: K1087 uniform y>=6 family (verify_z17_y_ge6.py,
+#         SHA-256 e49d24d2...); the S<17 / S==17 transitional branches
+#         are unreachable at y=10 (S=x+10>=20)
+# Every anchor was pre-validated against both raw engines at the y=10
+# rows before incorporation (pre-flight box: z fixed, x=10..45,
+# R<=x+z+30: 15,336 points, mismatch 0, both engines).
+# ------------------------------------------------------------------
+
+
+def _od(r, a, b):
+    return r % 2 == 1 and a <= r <= b
+
+
+def _ev(r, a, b):
+    return r % 2 == 0 and a <= r <= b
+
+
+def A8u(x, y, r):
+    """K0999/K1000 published uniform form: H(R;(x,y);8), x>=y>=9."""
+    if r == 0:
+        return 0
+    if r >= x + y + 9:
+        return (x + y) % 2
+    d = x - y
+    t = (r in (1, 3, 5, 7) or
+         (d == 2 and r == 2 * y + 5) or
+         (d == 6 and r == 2 * y + 7) or
+         (d == 9 and _od(r, 2 * y + 9, 2 * y + 17)) or
+         (d >= 10 and r == 2 * y + 9))
+    if t:
+        return 2
+    if d == 0:
+        p = _od(r, 9, 2 * y + 3)
+    elif d == 1:
+        p = _od(r, 9, 2 * y + 9) or _ev(r, 2 * y + 6, 2 * y + 9)
+    elif d == 2:
+        p = _od(r, 9, 2 * y + 3)
+    elif d == 3:
+        p = _od(r, 9, 2 * y + 11) or _ev(r, 2 * y + 6, 2 * y + 11)
+    elif d == 4:
+        p = _od(r, 9, 2 * y + 5)
+    elif d == 5:
+        p = _od(r, 9, 2 * y + 13) or _ev(r, 2 * y + 8, 2 * y + 13)
+    elif d == 6:
+        p = _od(r, 9, 2 * y + 5)
+    elif d == 7:
+        p = _od(r, 9, 2 * y + 15) or _ev(r, 2 * y + 8, 2 * y + 15)
+    elif d == 8:
+        p = _od(r, 9, 2 * y + 7)
+    elif d == 9:
+        p = _od(r, 9, 2 * y + 7) or _ev(r, 2 * y + 10, 2 * y + 16)
+    else:
+        p = _od(r, 9, 2 * y + 7) or _ev(r, 2 * y + 10, x + y + 8)
+    return 1 if p else 0
+
+
+def A9u(x, y, r):
+    """K1001 published uniform form: H(R;(x,y);9), x>=y>=9."""
+    if r == 0:
+        return 0
+    if r >= x + y + 10:
+        return (x + y) % 2
+    d = x - y
+    top = x + y + 9
+    t = (r in (1, 3, 5, 7, 9) or
+         (d == 1 and r == 2 * y + 5) or
+         (d == 5 and r == 2 * y + 7) or
+         (d == 9 and r == 2 * y + 9) or
+         (d == 10 and _od(r, 2 * y + 9, 2 * y + 19)) or
+         (d >= 11 and r == 2 * y + 9))
+    if t:
+        return 2
+    if d == 10:
+        p = _ev(r, 10, 2 * y + 8)
+    elif d % 2 == 1:
+        if d <= 3:
+            p = _ev(r, 10, 2 * y + 6) or r >= 2 * y + 7
+        elif d <= 7:
+            p = _ev(r, 10, 2 * y + 8) or r >= 2 * y + 9
+        elif d == 9:
+            p = _ev(r, 10, 2 * y + 8) or r >= 2 * y + 10
+        else:
+            p = _ev(r, 10, 2 * y + 8) or _od(r, 2 * y + 11, top)
+    else:
+        if d <= 2:
+            ht = 2 * y + 4
+        elif d <= 6:
+            ht = 2 * y + 6
+        else:
+            ht = 2 * y + 8
+        if d >= 12:
+            p = _ev(r, 10, ht) or _od(r, 2 * y + 11, top)
+        else:
+            p = _ev(r, 10, ht)
+    return 1 if p else 0
+
+
+def A10u(x, y, r):
+    """K1002 uniform form restricted to y>=9 (K1011 proof scope):
+    H(R;(x,y);10), x>=y>=9."""
+    if r == 0:
+        return 0
+    S = x + y
+    if r >= S + 11:
+        return S % 2
+    d = x - y
+    t = (r in (1, 3, 5, 7, 9) or
+         (d in (0, 4, 8) and r == 2 * y + 5 + d // 2) or
+         (d == 11 and _od(r, 2 * y + 11, S + 10)) or
+         (d >= 12 and r == 2 * y + 11))
+    if t:
+        return 2
+    if d % 2 == 0 and d <= 10:
+        p = _od(r, 11, 2 * y + 3 + 2 * ((d + 3) // 4))
+    elif d % 2 == 0:
+        p = _od(r, 11, 2 * y + 9) or _ev(r, 2 * y + 12, S + 10)
+    elif d <= 9:
+        p = _od(r, 11, S + 10) or _ev(r, 2 * y + 6 + 2 * ((d + 1) // 4), S + 9)
+    else:
+        p = _od(r, 11, 2 * y + 9) or _ev(r, 2 * y + 12, S + 9)
+    return 1 if p else 0
+
+
+def A15u(x, y, r):
+    """K1065 published uniform form: H(R;(x,y);15), x>=y>=6.
+    The (y,d) transitional cells are unreachable at y=10."""
+    d = x - y
+    Y = 2 * y
+    S = x + y
+    if r == 0:
+        return 0
+    if r >= S + 16:
+        return S % 2
+    t = (_od(r, 1, 15) or
+         (d in (3, 7, 11, 15) and r == Y + (d + 15) // 2) or
+         (d == 16 and _od(r, Y + 15, S + 15)) or
+         (d >= 17 and r == Y + 15))
+    if t:
+        return 2
+    if d % 2 == 0 and d <= 14:
+        p = _ev(r, 16, Y + 6 + 2 * ((d + 3) // 4))
+    elif d % 2 == 1 and d <= 15:
+        p = (_ev(r, 16, S + 15) or _od(r, Y + 7 + 2 * ((d + 5) // 4), S + 14)
+             or r >= S + 16)
+    elif d == 16:
+        p = _ev(r, 16, Y + 14)
+    else:
+        hi = S + (15 if d % 2 == 0 else 14)
+        p = (_ev(r, 16, Y + 14) or _od(r, Y + 17, hi)
+             or (d % 2 == 1 and r >= S + 16))
+    return 1 if p else 0
+
+
+def A16u(x, y, r):
+    """K1077 published uniform form: H(R;(x,y);16), x>=y>=6.
+    The (y,d) transitional cells are unreachable at y=10."""
+    d = x - y
+    Y = 2 * y
+    S = x + y
+    if r == 0:
+        return 0
+    if r >= S + 17:
+        return S % 2
+    t = (_od(r, 1, 15) or
+         (d in (2, 6, 10, 14) and r == Y + (d + 16) // 2) or
+         (d == 17 and _od(r, Y + 17, S + 16)) or
+         (d >= 18 and r == Y + 17))
+    if t:
+        return 2
+    if d % 2 == 0 and d <= 14:
+        p = _od(r, 17, Y + 7 + 2 * (d // 4))
+    elif d % 2 == 1 and d <= 15:
+        p = (_od(r, 17, S + 16) or _ev(r, Y + 10 + 2 * ((d - 1) // 4), S + 15)
+             or r >= S + 17)
+    elif d == 16:
+        p = _od(r, 17, Y + 15)
+    elif d % 2 == 1:
+        p = (_od(r, 17, Y + 15) or _ev(r, Y + 18, S + 15) or r >= S + 17)
+    else:
+        p = _od(r, 17, Y + 15) or _ev(r, Y + 18, S + 16)
+    return 1 if p else 0
+
+
+def A17u(x, y, r):
+    """K1087 published uniform form: H(R;(x,y);17), x>=y>=6.
+    T fully evaluated before P (value17 order); the S<17 and S==17
+    transitional branches are unreachable at y=10 (S=x+10>=20)."""
+    d = x - y
+    Y = 2 * y
+    S = x + y
+    if r == 0:
+        return 0
+    if r >= S + 18:
+        return S % 2
+    if _od(r, 1, 17):
+        return 2
+    if d == 18 and _od(r, Y + 17, S + 17):
+        return 2
+    if d >= 19 and r == Y + 17:
+        return 2
+    if d % 2 == 1 and d % 4 == 1 and d <= 17 and r == Y + (d + 17) // 2:
+        return 2
+    if d >= 19:
+        if _ev(r, 18, Y + 16):
+            return 1
+        if _od(r, Y + 19, S + 17):
+            return 1
+        if S % 2 == 1 and r >= S + 18:
+            return 1
+        return 0
+    if d == 18:
+        return 1 if _ev(r, 18, Y + 16) else 0
+    if d % 2 == 1:
+        rt = Y + (d + 17) // 2
+        if d % 4 == 1:
+            p = _ev(r, 18, rt - 1) or r >= rt + 1
+        else:
+            p = _ev(r, 18, rt - 2) or r >= rt
+        return 1 if p else 0
+    U = Y + 8 + 2 * (d // 4)
+    return 1 if _ev(r, 18, U) else 0
+
+
 # ------------------------------------------------------------------
 # Type machine. y=17's clip window (+/-36 sentinel +/-37) folded the
 # y=17 features; the y=18 features (pins up to z+36 odd-z / z+37 even-z
@@ -727,6 +1000,99 @@ def check_C9(audit, types):
                    'points': n, 'bad': bad}
 
 
+
+
+def check_C1d(audit):
+    """Published fixed-z slice anchors (z=8/9/10/15/16/17) at the y=18 row
+    vs cand18; anchors pre-flighted fail-closed against both raw engines
+    and cand18 (scripts/preflight_c1d_y18.py) before incorporation. Anchor
+    sweeps mirror the published y=10/y=12/y=13/y=14/y=15/y=16/y=17 part2
+    C1d: x=18..159, R<=x+61. Includes the published low-R single-token
+    reduction R<=z+6 (z=15..17).
+    """
+    n = bad = 0
+    anchors = ((8, A8u), (9, A9u), (10, A10u), (15, A15u), (16, A16u), (17, A17u))
+    for z0, fn in anchors:
+        for x in range(18, 160):
+            for r in range(1, x + 62):
+                n += 1
+                if fn(x, 18, r) != cand18(z0, x, r):
+                    bad += 1
+    # published low-R single-token reduction of the fixed-z y>=6 slices
+    # (R<=z+6) checked directly on the y=18 rows
+    n_low = bad_low = 0
+    for z0 in (15, 16, 17):
+        for x in range(18, 160):
+            for R in range(1, z0 + 7):
+                n_low += 1
+                if cand18(z0, x, R) != single_token(x + 18, z0, R):
+                    bad_low += 1
+    audit['C1d'] = {'desc': 'published z=8/9/10/15/16/17 uniform slices (y=18) '
+                            'vs cand18, x=18..159 R<=x+61; + low-R '
+                            'single-token reduction R<=z+6 (z=15..17)',
+                    'points': n + n_low, 'bad': bad + bad_low,
+                    'anchor_bad': bad, 'lowR_bad': bad_low}
+
+
+def check_C11r(audit):
+    """Independent census consumer: output/census.txt (produced by the raw
+    double-recursion census_rows.py third implementation, published in this
+    experiment dir) is validated row by row against cand18 here. Every
+    ledger row must reproduce from cand18: the value-2 support (T set),
+    value-1 support (P set), Thue-Morse index and tail, over R=0..x+z+20.
+    Fail-closed on a missing/partial/unaligned ledger.
+    """
+    out = Path(__file__).with_name("output")
+    p = out / "census.txt"
+    if not p.is_file():
+        raise SystemExit("FAIL-CLOSED: census.txt is missing; run census_rows.py first")
+    text = p.read_text(encoding="utf-8")
+    lines = [ln for ln in text.split("\n")]
+    if not text.endswith("\n"):
+        raise SystemExit("FAIL-CLOSED: census.txt does not end with a newline")
+    n = bad = rows = 0
+    seen = set()
+    for ln in lines:
+        if ln == "":
+            continue
+        parts = dict(tok.split("=", 1) for tok in ln.split(" ") if "=" in tok)
+        z = int(parts["z"]); x = int(parts["x"])
+        if (z, x) in seen:
+            raise SystemExit(f"FAIL-CLOSED: duplicate census row ({z},{x})")
+        seen.add((z, x))
+        rows += 1
+        tset = {int(t) for t in parts["T"][1:-1].split(",") if t != ""}
+        pset = {int(t) for t in parts["P"][1:-1].split(",") if t != ""}
+        values = [cand18(z, x, R) for R in range(0, x + z + 21)]
+        n += len(values)
+        recompute_t = {R for R, g in enumerate(values) if g == 2}
+        recompute_p = {R for R, g in enumerate(values) if g == 1}
+        if recompute_t != tset or recompute_p != pset:
+            bad += 1
+            continue
+        tail = (x + 18) % 2
+        if int(parts["tail"]) != tail:
+            bad += 1
+            continue
+        hi = len(values) - 1
+        idx = None
+        for R0 in range(hi, -1, -1):
+            ok = all(values[R] == (tail if (R - R0) % 2 == 0 else 1 - tail)
+                     for R in range(R0, hi + 1))
+            if ok:
+                idx = R0
+            elif idx is not None:
+                break
+        if int(parts["idx"]) != idx:
+            bad += 1
+    if rows != 80 * 53:
+        raise SystemExit(f"FAIL-CLOSED: census rows {rows} != 4240")
+    audit['C11r'] = {'desc': 'independent raw-double-recursion census ledger '
+                            '(census_rows.py third implementation, census.txt) '
+                            're-derived from cand18 row by row, R=0..x+z+20, '
+                            'z=0..79, x=18..70 (T/P sets, Thue-Morse index, tail)',
+                    'points': n, 'bad': bad, 'rows': rows}
+
 # ------------------------------------------------------------------
 # C11 census: bounded-memoization twins + separate-command parts.
 # ------------------------------------------------------------------
@@ -881,13 +1247,13 @@ def main():
         rc = run_census(args[0][3:].lower())
         return {'overall': 'PASS' if rc == 0 else 'FAIL'}
     requested = set(args)
-    everything = {'C1', 'C1b', 'C2', 'C2b', 'C3', 'C4', 'C4t', 'C7', 'C8', 'C9', 'C11', 'C12'}
-    todo = requested & everything if requested else (everything - {'C11'})
+    everything = {'C1', 'C1b', 'C1d', 'C2', 'C2b', 'C3', 'C4', 'C4t', 'C7', 'C8', 'C9', 'C11', 'C11r', 'C12'}
+    todo = requested & everything if requested else (everything - {'C11', 'C11r'})
     audit = {'experiment': 'vertical-fiber-two-token-y18-parametric-allz-proof-20261123',
              'family': 'H(R;(x,18);z), z>=0, x>=18, R>=0',
-             'stage': 'part1 (the 12-check canonical machine; the part2 stage '
-                      'adds C1d published-slice anchors at the y=18 rows and the '
-                      'independent census.txt consumer C11r; census parts '
+             'stage': 'part2 (C1d published-slice anchors at the y=18 rows and '
+                      'the independent census.txt consumer C11r added to the '
+                      'published part1 12-check machine; census parts '
                       'anchored via bounded-memoization twins on a memory-capped '
                       'host)',
              'checks_run': sorted(todo),
@@ -898,13 +1264,15 @@ def main():
     corr = {'merge': {'points': 0, 'bad': 0}, 'tail': {'points': 0, 'bad': 0}}
     types = {}
 
-    for name in ('C1', 'C1b', 'C2', 'C2b', 'C3', 'C4', 'C4t', 'C7', 'C8', 'C9', 'C11', 'C12'):
+    for name in ('C1', 'C1b', 'C1d', 'C2', 'C2b', 'C3', 'C4', 'C4t', 'C7', 'C8', 'C9', 'C11', 'C11r', 'C12'):
         if name not in todo:
             continue
         if name == 'C1':
             check_C1(audit['checks'])
         elif name == 'C1b':
             check_C1b(audit['checks'])
+        elif name == 'C1d':
+            check_C1d(audit['checks'])
         elif name == 'C2':
             check_C2(audit['checks'], corr)
         elif name == 'C2b':
@@ -923,6 +1291,8 @@ def main():
             check_C9(audit['checks'], types)
         elif name == 'C11':
             check_C11(audit['checks'], corr)
+        elif name == 'C11r':
+            check_C11r(audit['checks'])
         elif name == 'C12':
             check_C12(audit['checks'], types, corr)
         c = audit['checks'].get(name)

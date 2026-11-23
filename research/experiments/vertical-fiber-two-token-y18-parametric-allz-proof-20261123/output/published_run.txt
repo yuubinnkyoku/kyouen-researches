@@ -1,118 +1,122 @@
-=== y18 universal part1 published run (transcription check + census parts + full 12 checks) ===
-host: Linux x86_64, python Python 3.12, ~1.0 GiB cgroup host
-(same class as the y=15/y=16/y=17 census hosts)
-cwd: this experiment dir; single-owner declaration note
-research/log/2026-11-23-y18-universal-verifier-single-owner-note.md
-(commit 1d46f883, observed HEAD c15b1c3f, published before the run)
-machine byte: verify_y18_universal.py 38,212 bytes,
-SHA-256 14373419ed3d7cd5242c4e79b38be1812bc3b4fb80521e5859d102234653c851
+=== y18 universal part2 published run (preflight + census_rows + full 14 checks) ===
+host: Linux x86_64, python Python 3.12, same cgroup class as part1
+cwd: this experiment dir (the part1 verifier byte 14373419... was the
+published byte on main at preflight time, commit 9f3d5764 / HEAD 4bcdafa;
+the part2 extension was installed in place only after the preflight
+PASS; no part2 assembly script is published - the y13/y14/y15/y16/y17
+part2 procedure; single-owner declaration continuation 1d46f883)
+
+$ python3 scripts/preflight_c1d_y18.py
+{"anchor_bad": 0, "anchor_points": 12432,
+ "box": "z0 in {8,9,10,15,16,17}; x=18..45; R=1..x+z0+30",
+ "lowR_bad": 0, "lowR_points": 9372,
+ "lowR_box": "z0 in {15,16,17}; x=18..159; R=1..z0+6", "overall": "PASS",
+ "per_z": {"8": 1946, "9": 1974, "10": 2002, "15": 2142, "16": 2170,
+           "17": 2198} (all bad 0)}
+rc=0, wall 2.9 s; output/preflight-c1d-y18.json
+(4-way anchor x H_ordered x H_canonical x cand18 all clean; low-R
+ single-token reduction R<=z+6 on the y=18 rows all clean 9,372 pts;
+ the file is the pretty-printed canonical byte; 3 runs byte-identical,
+ one of them on the isolated side. Preflight script SHA-256 1d21c6ab...,
+ preflight JSON SHA-256 89cb9541...)
+
+$ python3 census_rows.py
+rows=4240 points=443080 zero_points=221548
+states(misses): 9262827 currsize: 1600000 maxsize: 1600000 hits: 18146909
+wall 18.0 s, rc=0; census.txt 810,453 bytes (4,240 rows + 80 blank
+separators; byte-identical regeneration on the isolated side;
+SHA-256 8e239f52...)
+(the LRU is explicitly capped at 1,600,000, the memory-capped-host
+ adaptation mirroring the published y=12..y=17 editions; tail assertion
+ R>=x+z+19 => (x+18)%2 held on every row)
+
+$ python3 verify_y18_universal.py C11ordered / C11canonical (rerun in the
+  part2 session): census parts byte-identical to the part1 published
+  bytes (ordered af284ab7... / canonical 9c817177...)
 
 $ python3 scripts/check_transcriptions_y18.py
-{"cand17": {"bytes": 3465, "equal_fit_verbatim_renamed": true,
- "equal_machine_verbatim_renamed": true, "sources_agree": true},
- "cand18": {"bytes": 3211, "equal_fit_verbatim": true},
- "engine": {"bytes": 1957, "equal": true}, "overall": "PASS"}
-rc=0 (engine = published y17 part2 machine block, commit ab23d120,
- SHA-256 4253cf29...; cand17 B-child = published y17 machine cand17 block
- AND published cand17.py (commit 6ca80e0e) both modulo Y->Y17, two sources
- byte-agree; cand18 = published cand18.py (commit 9e898f45) verbatim,
- fit driver omitted); output/transcriptions-check-y18.json
- SHA-256 83c60e89...
+overall PASS on the part2 edition too (engine/cand17/cand18 blocks
+byte-invariant; run on the isolated side as well; the JSON byte
+83c60e89... is unchanged from part1)
 
-$ python3 verify_y18_universal.py C11ordered
-census[ordered]: points=438840 bad=0 merge={'points': 110682, 'bad': 0}
-                tail={'points': 4240, 'bad': 0}
-rc=0, wall ~19 s; output/census-ordered.json
-SHA-256 af284ab790bc5743c25e090fd375ac5d5e7dbd3537a64582394897a907ccdf41
-(bounded-memoization twin of the verbatim raw engine, LRU cap 1,600,000,
- deterministic eviction under the fixed census visit order; box
- z=0..79, x=18..70, R=0..x+z+19 = 80*53 = 4,240 rows)
-
-$ python3 verify_y18_universal.py C11canonical
-census[canonical]: points=438840 bad=0 merge={'points': 110682, 'bad': 0}
-                   tail={'points': 4240, 'bad': 0}
-rc=0, wall ~20 s; output/census-canonical.json
-SHA-256 9c817177c062fdf28d9cdc60bf344553e0e0ee1a11c5ab22186e952938b8b10a
-
-$ python3 verify_y18_universal.py C1 C1b C2 C2b C3 C4 C4t C7 C8 C9 C11 C12
+$ python3 verify_y18_universal.py C1 C1b C1d C2 C2b C3 C4 C4t C7 C8 C9 C11 C11r C12
   C1: pts=23940 bad=0        C1b: pts=43296 bad=0
-  C2: pts=225449 bad=0       C2b: pts=19492 bad=0
-  C3: pts=1305 bad=0         C4: pts=585189 bad=0
-  C4t: pts=585189 (probe; not in bad total)
+  C1d: pts=136746 bad=0      C2: pts=225449 bad=0
+  C2b: pts=19492 bad=0       C3: pts=1305 bad=0
+  C4: pts=585189 bad=0       C4t: pts=585189 (probe; not in bad total)
   C7: pts=200000 bad=0 (seed 20261182)  C8: pts=1035729 bad=0
   C9: pts=900534 bad=0       C11: pts=877680 bad=0
-  C12: pts=1856987 bad=0
-overall: PASS total_points: 6354790 types: 523398
-  merge corollary: 1,121,822 pts, bad 0 (census rows first non-empty z=37)
-  tail corollary: 192,210 pts, bad 0
-  C4t: 1012 violations at clip 37, first: (60, 100, 100)
-rc=0, wall ~35 s (run 1); output/audit.json
-SHA-256 c090be81e997a76a48aa23eb133d429156fcee2c1ebff45cbaffd592cbeddb39
-(C11 mode validated both census parts against the independently
- recomputed expected counts 438,840 / 110,682 / 4,240 per engine and
- merged them; every check bad 0; the declared part-1 total 6,354,790
- exactly as predicted in the declaration note)
+  C11r: pts=443080 bad=0     C12: pts=1856987 bad=0
+overall: PASS total_points: 6934616 types: 523398 total_bad 0
+  merge corollary: 1,121,822 pts, bad 0 (invariant from part1)
+  tail corollary: 192,210 pts, bad 0 (invariant from part1)
+  C4t: 1012 violations at clip 37, first: (60, 100, 100) (invariant)
+wall 36.1 s (run 1) / (run 2 same cwd), rc=0
+(part2 edition installed as verify_y18_universal.py,
+ SHA-256 8ddd0c2f24213e658705a403ede55d185aab59e7b7d47bd68679d9b3b0b6072a,
+ 52,177 bytes; part1 12-check bodies byte-invariant by diff against the
+ published part1 byte: only the anchor block, check_C1d/check_C11r, the
+ STAGE docstring, the C1b/C1d/C11r docstring lines and the main()
+ registry/dispatch lines were added/edited)
 
-=== run2/run3 (determinism) ===
-run2: same-cwd rerun (fresh process, both census parts regenerated
- first) -> audit.json / census-ordered.json / census-canonical.json
- byte-identical to run 1
+=== run2/run3 (part2) ===
+run2: same-cwd rerun (fresh process, both census parts and census.txt
+ regenerated first) -> byte-identical audit.json
 run3: isolated tree/cwd/HOME + env -i (PATH pinned to
  /usr/local/bin:/usr/bin:/bin) + PYTHONHASHSEED=random;
- check_transcriptions_y18.py, BOTH census parts and the full 12-check
- command regenerated on the isolated side:
- transcriptions-check-y18.json / census-ordered.json /
- census-canonical.json / audit.json all byte-identical
-3 runs byte-identical (2 same-cwd + 1 isolated regeneration)
+ check_transcriptions_y18.py, scripts/preflight_c1d_y18.py,
+ census_rows.py, BOTH census parts and the full 14-check command
+ regenerated on the isolated side:
+ transcriptions-check-y18.json / preflight-c1d-y18.json / census.txt /
+ census-ordered.json / census-canonical.json / audit.json all
+ byte-identical
+SHA-256 audit.json a636c18784219add600b56a2698de35b3884c6db71dd38e08aaa6fe81c85d16d
+ (3 runs byte-identical: 2 same-cwd + 1 isolated regeneration)
 
-=== part1 fail-closed probes (pre-publication, scratch copies; 9 probes) ===
-T1 census-ordered.json box tamper R<=x+z+19 -> R<=x+z+18:
-   FAIL-CLOSED "census part box mismatch", rc=1 (caught)
-T2 census-canonical.json removed: FAIL-CLOSED missing-part message, rc=1
-   (caught)
-T3 cand18 band bottom 2Y+2 -> 2Y (candidate block): C2 bad > 0,
-   overall FAIL, rc=1 (caught)
-T4 cand18 z-even steady pin z+2Y+1 -> z+2Y-1: C2 bad > 0, rc=1 (caught)
-T5 corollary merge boundary x<=z-19 -> x<=z-18: merge bad > 0, rc=1
-   (caught)
-T6 clip window 38/39 -> 36/37: C4 confluence conf_bad > 0, rc=1 (caught)
-T7 C1b merger multiset (18,17) -> (18,16): C1b bad > 0, rc=1 (caught)
-T8 opts18 merger A-child cand17(z,18,R-1) -> cand18(z,18,R-1):
-   C3/C2 bad > 0, rc=1 (caught)
-T9 deep-tail window (19,20,21) -> (18,20,21): bad 0 - honest
-   extension-consistency observation (R = x+z+18 lies inside the proved
-   cand17 (K1240) tail claim R>=x+z+18 => (x+17)%2, so consistency is
-   exactly what the proved family predicts at that point); the true
-   outside-boundary shift (17,20,21) IS caught: C8 bad 40, rc=1.
-baseline restored after each probe; scratch tree only; the publication
-tree's outputs were byte-verified against the isolated regeneration
-afterwards (no tampered byte was published).
+=== part2 fail-closed probes (pre-publication, all caught; scratch tree) ===
+(1) census.txt missing: FAIL-CLOSED "census.txt is missing; run
+    census_rows.py first", rc=1
+(2) census.txt data-row deleted: FAIL-CLOSED "census rows 4239 != 4240",
+    rc=1
+(3) duplicate census-row injection: FAIL-CLOSED "duplicate census row
+    (0,18)", rc=1
+(4) census.txt P-set one-digit tamper: C11r pts=443080 bad=1, overall
+    FAIL, rc=1
+(5) census.txt T-set tamper (bogus member): C11r pts=443080 bad=1,
+    overall FAIL, rc=1
+(6) C11r tail flip (x+18)->(x+19) on a tampered verifier copy:
+    C11r pts=443080 bad=4240 (every row), overall FAIL, rc=1
+(7) anchor mis-binding (16, A16u) -> (16, A10u) on a tampered verifier
+    copy: C1d pts=136746 bad=1756, overall FAIL, rc=1
+(8) low-R reference shift R -> R+1 on a tampered verifier copy:
+    C1d pts=136746 bad=9372 (every low-R point independently mismatches),
+    overall FAIL, rc=1
+baseline restored after each probe and cmp'd clean against the build
+bytes; scratch tree only, the canonical tree's outputs byte-verified
+against the isolated regeneration afterwards (no tampered byte was
+published)
 
-=== honest records (part1) ===
-- First assembled build had a region-splice off-by-one in the local
-  builder (never published): the old cand17 candidate region was left in
-  place after the new cand18 block, reassigning the global Y to 17, and
-  the machine's own C1 caught it immediately (1,229 of 23,940 mismatched,
-  features shifted by exactly one family). The builder was fixed with
-  marker-uniqueness asserts; all published runs are the fixed build.
-  See the experiment README for the full record.
-- The declaration note's census merge corollary per-engine prediction was
-  105,651 (arithmetic slip in the note's own precomputation); the
-  machine's independently recomputed formula value 110,682 governs and
-  matches both census parts. All other declared predictions (eleven
-  check point counts, total 6,354,790, census 438,840/engine, tail rows
-  4,240/engine) matched exactly.
-- C4t: clip 37 (2y+1) has 1,012 confluence violations, first
-  (60,100,100): the clip window 2y+2 = 38 is tight, the 14th consecutive
-  family (y=5..18: 12/14/16/18/20/22/24/26/28/30/32/34/36/38), and the
-  first-violation-walks-with-band-bottom series reaches its 6th
-  observation (60,90,90)->(60,92,92)->(60,94,94)->(60,96,96)->
-  (60,98,98)->(60,100,100), as pre-registered in the declaration note.
-- K1242 stays observed until part 2 (C1d published-slice anchors +
-  census_rows.py third implementation C11r, same declaration
-  continuation). Standard 11x11 empty board / two-stone roots /
+=== notes (part2) ===
+- C1d sweep: 6 anchors x x=18..159 R<=x+61 = 127,374 pts + low-R
+  single-token reduction 9,372 pts = 136,746 pts, bad 0. Preflight box
+  (anchor x both raw engines x cand18, x=18..45, R<=x+z0+30) 12,432 pts
+  bad 0 was the fail-closed gate before the anchors entered the machine.
+- C11r: 4,240 rows, 443,080 pts, bad 0; every census.txt row re-derived
+  from cand18 across R=0..x+z+20 (T set, P set, Thue-Morse index, tail);
+  rows==80*53=4,240 asserted FAIL-CLOSED.
+- merge/tail corollaries and the C4t clip-37 probe carried invariant
+  from part1 (published at 9f3d5764).
+- The full 14-check total is 6,354,790 (part1) + 136,746 (C1d)
+  + 443,080 (C11r) = 6,934,616 comparison points, all bad 0.
+- On overall PASS with 3 byte-identical audit runs, K1242
+  (H(R;(x,18);z) == cand18, all z>=0, x>=18, R>=0) is promoted
+  observed -> proved (AGENTS.md: same K item, no new number; the
+  K1141/K1152/K1231/K1233/K1235/K1237/K1240 procedure).
+- Standard 11x11 empty board / two-stone roots {49,60}/{59,60} /
   S2 {59,60} / class 1/2/4 stay UNKNOWN. Three-or-more-token rows,
   y>=19 families, fixed-width and q-point stabilization lengths are out
   of scope. Trust boundary unchanged: option-decomposition soundness,
-  the mex identity and finite-type confluence are the y=8..y=17 machine
+  the mex identity and finite-type conflation are the y=8..y=17 machine
   class carried in this same file.
+- The part1 published_run.txt transcript is preserved at commit 9f3d5764
+  (git history); this file is the part2 canonical transcript.

@@ -1,9 +1,9 @@
-# Vertical fiber: two-token y=18 parametric family, all-z universal verifier (part 1)
+# Vertical fiber: two-token y=18 parametric family, all-z universal verifier (part 1 + part 2)
 
 Experiment dir: `vertical-fiber-two-token-y18-parametric-allz-proof-20261123`
 Family: `H(R;(x,18);z)`, all `z >= 0`, all `x >= 18`, all `R >= 0`.
 Claim under audit: K1242 (`cand18`, published fit, status **observed** at
-part-1 publication) equals `H` everywhere, with corollaries
+part-1 publication, **promoted proved by part 2**) equals `H` everywhere, with corollaries
 
 - merge below the diagonal: `x <= z-19  =>  H == single_token(x+18,z,R)` (K0832),
 - tail: `R >= x+z+19  =>  H == (x+18) % 2`.
@@ -181,14 +181,122 @@ byte-verified untouched; 9 probes, all caught or honestly accounted):
   what the proved family predicts; shifting the window to the true
   boundary outside the claim, `(x+z+17, ...)`, IS caught (40 bad, rc=1).
 
+## Part 2: C1d published-slice anchors + census_rows.py consumer (2026-11-23 added; promotes K1242 observed -> proved)
+
+The promotion stage left open by part 1 (pre-declared in the
+single-owner note), executed with the same procedure that promoted the
+y=10/y=12/y=13/y=14/y=15/y=16/y=17 machines
+(K1141/K1152/K1231/K1233/K1235/K1237/K1240). The C1d anchor block (anchor
+functions A8u..A17u) is the published y=17 part-2 canonical verifier's
+anchor block **verbatim** (commit `ab23d120`, SHA-256 `4253cf29...`; its
+universal proof domain covers the y=18 rows reached here; its own chain
+runs back through the y=16/y=15/y=14/y=12 machines to the y=10 part2
+verifier and the published z-slice verifiers), with only the provenance
+header rewritten from the y=18 preflight measurements (12,432/9,372,
+cand18).
+
+### C1d (published fixed-z slice anchors at the y=18 rows: 136,746 points, bad 0)
+
+`scripts/preflight_c1d_y18.py` (SHA-256 `1d21c6ab...`, generated from
+the published y=17 preflight with count-asserted y=18 scan constants)
+fail-closed pre-verification BEFORE the machine body ran: the published
+uniform closed forms (z=8: K0999/K1000, z=9: K1001, z=10: K1011,
+z=15/16/17: K1065/K1077/K1087) 4-way checked
+(anchor x H_ordered x H_canonical x cand18) on z0 in {8,9,10,15,16,17},
+x=18..45, R=1..x+z0+30: **12,432 points bad 0** (per z: 1,946 / 1,974 /
+2,002 / 2,142 / 2,170 / 2,198), plus the published low-R single-token
+reduction R<=z+6 on the z0=15/16/17 y=18 rows
+(cand18 vs single_token(x+18,z0,R)): **9,372 points bad 0**; wall ~3 s;
+3 runs byte-identical (2 same-cwd + 1 isolated regeneration);
+`output/preflight-c1d-y18.json` (SHA-256 `89cb9541...`; the file is the
+pretty-printed canonical byte, stdout is the same JSON compacted). The
+y=10 precedent (this stage caught a 170-point evaluation-order bug in
+the first K1087 transcription) is why this stage exists; here the
+anchors are a verbatim re-transcription, and the 4-way check agreed on
+the first run. Machine C1d then sweeps 6 z0 x x=18..159 x R=1..x+61
+(**127,374 points**) plus the lowR rows (9,372): total **136,746, bad 0**.
+
+### C11r (independent census ledger consumer: 443,080 points, bad 0, fail-closed)
+
+`census_rows.py` (the third implementation; y=18 edition, SHA-256
+`1cd71004...`) writes `output/census.txt` (810,453 bytes, 4,240 rows + 80
+blank separators, SHA-256 `8e239f52...`): z=0..79, x=18..70, per-row
+Thue-Morse index, value-2 support T, value-1 support P (explicit R lists)
+and tail flag: **443,080 points**, zero-value points 221,548, engine states
+(LRU misses) 9,262,827, LRU cap 1,600,000 explicit (the memory-capped-host
+adaptation, mirroring the published y=12..y=17 editions on the same class
+of host); the tail assert `R>=x+z+19 => (x+18)%2` held on every row. Wall
+~18 s. C11r re-derives every row from cand18 and compares idx/T/P/tail
+(duplicate or missing rows, rows != 80*53 = 4,240, missing trailing
+newline are FAIL-CLOSED): 443,080 points **bad 0**, 4,240 rows.
+
+### Part-2 full audit (14 checks, overall PASS, total_points 6,934,616, bad 0)
+
+C1/C1b/C1d/C2/C2b/C3/C4/C4t/C7/C8/C9/C11/C11r/C12 in one command: C1d
+136,746 and C11r 443,080 added to part 1's 6,354,790: total_points
+**6,934,616**, total_bad **0**, types **523,398**. Merge corollary
+1,121,822 and tail 192,210 unchanged, bad 0. C4t consistent with part 1
+(1,012 violations at clip 37, first (60,100,100)). Wall 36.1 s (run 1);
+the C11ordered/C11canonical parts rerun in the part-2 session reproduce
+the part-1 published bytes (`af284ab7...`/`9c817177...`).
+`output/audit.json` (part-2 stage wording, SHA-256 `a636c187...`) is the
+canonical audit of record; `verify_y18_universal.py` is now the part-2
+edition (52,177 bytes, SHA-256 `8ddd0c2f...`), whose part-1 twelve check
+bodies are byte-invariant against the published part-1 byte
+(diff-verified: only the anchor block, check_C1d/check_C11r, the STAGE
+docstring, the C1b/C1d/C11r docstring lines and the main() registry/
+dispatch changed).
+
+### Part-2 determinism (3 runs byte-identical) and fail-closed (8 probes)
+
+run1 (same cwd) -> run2 (same-cwd rerun) -> run3 (isolated tree/cwd/HOME
++ `env -i` with pinned PATH + `PYTHONHASHSEED=random`, transcription
+check, preflight, census_rows.py and BOTH census parts regenerated on
+the isolated side): audit.json, census.txt, census-ordered.json,
+census-canonical.json, preflight-c1d-y18.json,
+transcriptions-check-y18.json all byte-identical.
+
+Fail-closed exercised on a scratch tree, all caught before publication:
+(1) census.txt missing (FAIL-CLOSED "census.txt is missing; run
+census_rows.py first", rc=1), (2) census.txt data-row deleted
+(FAIL-CLOSED "census rows 4239 != 4240", rc=1), (3) duplicate census-row
+injection (FAIL-CLOSED "duplicate census row (0,18)", rc=1), (4)
+census.txt P-set one-digit tamper (C11r bad 1, FAIL, rc=1), (5)
+census.txt T-set tamper (C11r bad 1, FAIL, rc=1), (6) C11r tail flip
+(x+18)->(x+19) on a tampered verifier copy (C11r bad 4,240 = every row,
+FAIL, rc=1), (7) anchor mis-binding (16, A16u) -> (16, A10u) on a
+tampered verifier copy (C1d bad 1,756, FAIL, rc=1), (8) low-R reference
+shift R -> R+1 (C1d bad 9,372 = every low-R point independently
+mismatches, FAIL, rc=1). Baseline bytes restored and cmp'd clean against
+the build bytes after every probe; the canonical-tree outputs were
+byte-verified against the isolated regeneration afterwards and no
+tampered byte was published.
+
+### Promotion decision
+
+With the full 14-check audit PASS, the fail-closed pre-verified C1d
+anchors, the independent third-implementation census (C11r), and three
+byte-identical audit runs (2 same-cwd + 1 isolated regeneration),
+**K1242 is promoted observed -> proved** (same K item, no new numbering,
+the K1141/K1152/K1231/K1233/K1235/K1237/K1240 precedent). The corollaries
+are fixed as universal claims in the same scope: the merge proposition's
+y=18 edition `x<=z-19 => H == single_token(x+18,z,R)` and the tail value
+`R>=x+z+19 => H == (x+18)%2`, so the merge proposition now holds
+universally through y=1..18. The B-child of the y=18 family is the
+verbatim cand17 (K1240, proved), extending the B-child verbatim chain to
+cand9..cand17 and the proved-B-child usage to cand10/cand12..cand17.
+
+
 ## Reproduction
 
 ```sh
 cd research/experiments/vertical-fiber-two-token-y18-parametric-allz-proof-20261123
 python3 scripts/check_transcriptions_y18.py        # transcription byte-equality (repo-root discovery via AGENTS.md)
+python3 scripts/preflight_c1d_y18.py               # C1d preflight gate (part 2, ~3 s)
+python3 census_rows.py                             # regenerate output/census.txt (~18 s)
 python3 verify_y18_universal.py C11ordered         # census part 1 (~19 s)
 python3 verify_y18_universal.py C11canonical       # census part 2 (~19 s)
-python3 verify_y18_universal.py C1 C1b C2 C2b C3 C4 C4t C7 C8 C9 C11 C12   # full part-1 (~35 s)
+python3 verify_y18_universal.py C1 C1b C1d C2 C2b C3 C4 C4t C7 C8 C9 C11 C11r C12   # full part-2 (~36 s)
 ```
 
 ## Interpretation
@@ -200,8 +308,8 @@ B-child), and to the x=18 multiset merger (17,18)==(18,17). Finite
 comparison is finite observation; the machine's PASS is mechanical
 evidence for the universal claim, and the part-2 stage (C1d published
 slice anchors at the y=18 rows + census_rows.py third-implementation
-ledger + C11r, plus three byte-identical audit runs) will be the basis on
-which K1242 is promoted observed -> proved in this dir. The standard
+ledger + C11r, plus three byte-identical audit runs) is the basis on
+which K1242 has been promoted observed -> proved in this dir. The standard
 11x11 empty board, the two-stone roots {49,60}/{59,60}, S2 {59,60} and
 classes 1/2/4 remain UNKNOWN and are unrelated to this family. Three or
 more tokens, y>=19 families, fixed-width and q-point stabilization length
