@@ -7503,3 +7503,110 @@ byte一致しない場合は即時abort・honest記録とする)。
   別adoption Part (pinned merger `90711961` 経由) のみで、scrutiny owner
   C++第二実装 gate `9193f5b6…` 待ちは本レーンは代行しない。joint greedy
   38,295・worklist 64,747はbookkeepingであり勝敗でも閉鎖でもない。
+
+
+## Part CA (solver, amendment 2026-11-23): batch-27 residual o004..o054 continuation (class 13342 enumeration - WIN-CONTINUE事前登録)・verdict不消費・実行前に出版
+
+Part BR (batch-27 class 13342) は事前登録のWIN-HALT規則によりo002で停止し、
+残49キー (fragment o009 truncated p2・NOT evidence + fileless 48キー
+o004/o006/o008/o010..o054・fresh・一度もverdictを出していない) が残った。
+published batch-27 READMEの予約文言 (「published completeness guardが以降の
+continuationでfresh-cold再実行する」) に従い、残49キーの単一オーナー実行を
+宣言する (本amendmentより先にmainに存在するbatch-27 residual continuation
+スコープの対抗宣言・amendmentがある場合は本宣言を破棄して着手しない。
+branch / PRは作らない)。
+
+- WIN-CONTINUE事前登録 (Part AW batch-14 residual / Part BH batch-19 residual /
+  Part BT batch-26 residualの先例と同一の根拠): class 13342の全子LOSS閉包
+  ルートはpublished o002 WIN honest label (Part BR drive-1 + Part BY第三実装
+  交叉検証・独立host pinned-replica再現込み3系統) により既に反駁済み。
+  残余キーのprobeはunknown数最小化のための列挙であり、ここでのさらなる
+  WIN-HALTに情報価値はない。よってresidual installmentでは、published
+  runbatch.shのrc=45 (WIN) が発火したキーはhonest WIN labelのみで記録し、
+  drive driverを再起動して49キー完遂 (または本セッション限界) まで列挙を
+  続ける。決定論mismatch -> 即時HARD-STOP rc=42 (以後のdrive起動も行わず
+  停止)。budget枯損 (result 0) -> honest EXHAUSTED (UNKNOWN・同一条件での
+  再probeなし)。
+- 残留キー集合の機械導出 (prose不使用): published batch-keys.json (sha256
+  `67814ed6287d68d6e97212c931dce2b7ee585219e20b4d43edb621632220a014`・54キー
+  o001..o054・s5_index昇順 98526..460214) とpublished output/status.log
+  (sha256 `50a4f407b369e06f9569238d1b0c35deb02dfad7d839cf57b2fc97a389512ca9`
+  ・6行) から PASS/WIN-HALT/EXHAUSTED 済み5キー {o001, o002, o003, o005,
+  o007} を除いた補集合 == {o004, o006, o008, o009, o010..o054} の49キー
+  (fragment {o009} + fileless 48キー) であることを本hostで機械検証済み
+  (published README記載のunprobed 49キー文言と一致)。**fragment o009**:
+  published o009.p1.out は `# replay_done`付き完全単一パス (bookkeepingのみ・
+  result 2 / nodes 9,082,839・証拠ではない) のためcompleteness guardは
+  これを保持し、p2 truncated断片 (verdict行なし) のみをfresh-cold再実行する
+  (よって将来のPASS行は、fresh p2とpublished p1の2-pass node-exact照として
+  読まれる)。
+- 新規scaffoldなし。published batch-27 dir
+  `research/experiments/n11-centralreply-closure-class13342-batch27-20261123/`
+  を正本としてそのまま使用する。本hostでpublished MANIFEST-sha256.txt掲載
+  92ファイル (input 54+1・output/raw 12・output 2・scripts 8・val-gate 16)
+  をcommit-pinned raw fetch + sha256再検証し **92/92 byte一致** を宣言前に
+  機械確認済み (publish-then-executeの宣言先行preflight・read-only)。
+- **実行場所と公開時序 (並走Part BZ非干渉の事前登録)**: 並走が同時刻に
+  Part BZ (batch-24 y002/y004 + batch-27 o001/o003/o005/o007 6-LOSS
+  canonical adoption・宣言 `8b7111be`・publish-then-execute) を宣言済みで
+  あり、同Partはbatch-27 kit 92ファイルをsha pinで検証する。よって本Partの
+  drive・val-gate・row-auditの実行は**(published dirのbyte-pinを一切更新
+  しない) scratch copy** で行い、成果物 (raw・status.log追記・val-gate
+  ca-host 4・派生監査script・row-audit json・MANIFEST更新) のpublished dir
+  へのpublicationは **Part BZのstatus updateがmainに着地した後** に行う。
+  Part BZが本セッション終了時点でも実行中の場合は成果物をscratchに保持し
+  publicationを次回Runへ誠実繰越 (断片のままの出版は行わない)。どちらの
+  場合も本宣言自体はBZと無関係 (BZの進行を一切待たない・結果に依存しない)。
+- val-gate (実行前・本host): batch-23/24/25/26/27と同一の4アンカー。
+  at2m 2行 -> result 0 / nodes 2,000,000 node-exact、15m 2行 -> result 2 /
+  nodes (2,3,651,923)/(2,5,040,200) node-exact、禁止四角 95,670 x4、
+  `# replay_done` x4 (truncationなし)。published val-gate/*.published-baseline.out
+  基準線に対するnode数完全一致 (wall_s比較外) を実行の前提条件とする。
+  本host再生成値は val-gate/*.ca-host.out としてoutputs出版に含める
+  (published this-host 4・takeover-host 4ファイルは不変・byte-pin維持)。
+- protocol: 2-pass fresh-cold node-exact、budget 15,000,000、
+  1 solver / 1 row / 1プロセス、publish=ALL。実行はpublished drive driver
+  (drive_batch27.sh sha256
+  `9114e21142b1e0230eebc479b793dbdc1f0a2c994a52e7a924c3b2290cfe61bc`・
+  1回起動あたりtimeout 260秒有界・残キー奇偶分割 worker最大2 = 控えめ並列・
+  runbatch sha256
+  `f591f8c2b67326e53873f8ea70f8d04d18423e7c8ef8359838cbafe8264f3b84` byte-pin)
+  をscratch copy上で反復起動する。完了済み5キー (published raws) は再実行
+  しない。中断断片はpublished completeness guard (`# replay_done` 検査) が
+  fresh-cold再実行する。
+- row-audit: 列挙完遂後、published `row_audit_batch27.py` (sha256
+  `ed21debece2939cccac76ebccd1c8450a81e8c7e9cb452da81aebe0b2392c2d6`・
+  full-row監査としてscaffold事前登録済み) により54キー全行の機械検証を
+  行う。**Part BT先例 (row_audit_batch26の潜在gateバグ) を踏まえた事前登録**:
+  runbatchはWINキーを「PASS (nodes付き) + WIN-HALT」の2行構成で書くため、
+  事前登録版がWIN行のstatus.log照合でfail-closedする場合は、差分がWIN行の
+  2行pair照合のみの最小派生版を本Partのoutputsとして出版し全行監査に使用する
+  (事前登録版のfail-closeも誠実記録・schemaはbatch-26 full-v2先例に倣い
+  `n11-centralreply-closure-class13342-batch27-rowaudit-full-v2`)。監査は
+  3回実行byte一致・tamper battery (verdict反転/WIN行pair除去/replay_done
+  除去等・全tamperに適用実効性assert・実験files無改変byte検証) を実施する。
+- verdict不消費: canonical exact-S5 verdict cache (Part BU採用時点 6,287行
+  `e32a2e44…`・並走Part BZ採用後のどの状態にも) 書込みは一切しない。
+  LOSS行は採用候補のみ (消費は別宣言adoption Partがpinned fail-closed
+  merger `90711961…`で実行)。新規WIN行はunconsumed closure WIN候補の追加
+  のみで採用しない (29候補 (o002込み) は読み書きとも非接触・本PartのWIN行が
+  あれば30番目以降の候補として誠実記録)。採用判断はscrutiny owner C++第二実装
+  gate pin `9193f5b6…`のまま (本レーンは代行しない)。
+- 不接触: **Part BZ (6行adoption・並走所有・宣言 `8b7111be`)** の実験dir・
+  outputs・canonical cache成果物には本Partは一切書き込まない (BZは本Partの
+  batch-27 dir publicationを待たずに実行してよい・計算はscratchで独立)。
+  batch 1..25各dir・各residual packet・batch-26残留 (l028含むadoption候補)・
+  fast lane (y=23宣言 `6f79c81f`・K1256/K1257)・finite-field lane (K1254)・
+  inversive-arc lane非接触。scratch以外のmain上の既存filesは無改変 (本Partの
+  outputs publicationは本節の事前登録どおりBZ status update着地後のみ行う)。
+- UNKNOWN担保: 標準11x11空盤・19 central-reply roots・二石root
+  {49,60}/{59,60}・S2 {59,60}・class 1/2/4・class 10968・class 23964・
+  class 13342 (54キーすべて・o002・49残留キーを含む) は本Partのどの時点でも
+  UNKNOWNのまま。nodes数を勝敗として読まない。被覆・secured・root勝敗の
+  主張をしない。
+- 本amendment observed HEAD-before-push: `b37117d97f1f6be91fb735fc36edb1afabd72220`
+  (2026-11-23T13:41:31Z・Part BZ typo修正コミットを検知済み)。
+  push直前に最新mainを再fetchし note blob sha1ロック
+  `8dff57dd16d1148784d1fb0143995224a8e1e049` (560,088 bytes = Part BZ
+  adoption宣言 typo修正 `b37117d9` 版) を再照合する (競合時は再fetchして
+  本節を追記し直し、成立しない場合は簡潔に記録して次回へ回す)。
