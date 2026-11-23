@@ -1,0 +1,38 @@
+{
+  "anchor_bad": 0,
+  "anchor_first_bad": null,
+  "anchor_points": 11700,
+  "box": "z0 in {8,9,10,15,16,17}; x=20..45; R=1..x+z0+30",
+  "check": "preflight c1d y=20 rows: published z=8/9/10/15/16/17 uniform slice anchors vs raw engines vs cand20",
+  "lowR_bad": 0,
+  "lowR_box": "z0 in {15,16,17}; x=20..159; R=1..z0+6",
+  "lowR_first_bad": null,
+  "lowR_points": 9240,
+  "overall": "PASS",
+  "per_z": {
+    "8": {
+      "bad": 0,
+      "points": 1833
+    },
+    "9": {
+      "bad": 0,
+      "points": 1859
+    },
+    "10": {
+      "bad": 0,
+      "points": 1885
+    },
+    "15": {
+      "bad": 0,
+      "points": 2015
+    },
+    "16": {
+      "bad": 0,
+      "points": 2041
+    },
+    "17": {
+      "bad": 0,
+      "points": 2067
+    }
+  }
+}
