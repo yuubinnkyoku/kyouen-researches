@@ -17,6 +17,9 @@ relations:
 - type: extends
   target: K1058
   note: K(q)の新的な特徴づけ（MDS符号の長さ）と上界K≤q+1の導出
+- type: related
+  target: K1251
+  note: 弧の最大サイズの具体的な下界と文献Sonninoの(q+5)/2構成との比較
 artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/scripts/arc_lift_verify.py
   role: verifier
@@ -128,6 +131,11 @@ A', B', C' が共線  ⇔  P, A, B, C が同一平面上（= 共円）
 数値：全アーク証人（q=5..49、20個）について、**どの `P` からの射影も `k−1` 点で
 3点共線なし**であることを総当りで確認（`scripts/arc_lift_verify.py --check-projection`）。
 `q+2` 上界に対して `K ≈ 0.65〜0.77q` なので、まだ定数倍の余地がある。
+
+**文献との関係**：Sonnino (1999) が `q` 奇数の `M(q)` に `(q+5)/2`-弧を構成している。
+射影上界 `q+2` と合わせて **`K(q) = Θ(q)`** が確定する（「ほぼ定数」ではない）。
+具体的な下界の比較と改善は K1251。
+
 
 
 ## 数値（検証済み下界と MDS パラメータ）
