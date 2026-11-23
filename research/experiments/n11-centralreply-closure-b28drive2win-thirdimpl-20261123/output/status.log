@@ -1,0 +1,10 @@
+RUN key=ng1 tag=a kind=negative rc=1 out=output/negative/ng1.a.out third,ng1a,5,88,,GATE_FAIL,"legal count mismatch: derived=87 declared=88"
+RUN key=ng2 tag=a kind=negative rc=1 out=output/negative/ng2.a.out third,ng2a,6,87,,GATE_FAIL,"stone count mismatch: bits=5 declared=6"
+RUN key=k02a tag=a kind=anchor rc=0 out=output/anchors/k02a.a.out third,k02aa,5,87,87,1,9106337,4991527,26.11,1297036692683751424,68157440,clean,quads=95670,ttOverwrites=4912053,memoPower=22
+RUN key=k02a tag=b kind=anchor rc=0 out=output/anchors/k02a.b.out third,k02ab,5,87,87,1,9106337,4991527,26.46,1297036692683751424,68157440,clean,quads=95670,ttOverwrites=4912053,memoPower=22
+RUN key=l1a tag=a kind=anchor rc=0 out=output/anchors/l1a.a.out third,l1aa,5,116,116,2,7660602,3951175,21.90,13019119616,16448,clean,quads=95670,ttOverwrites=3466722,memoPower=22
+RUN key=l1a tag=b kind=anchor rc=0 out=output/anchors/l1a.b.out third,l1ab,5,116,116,2,7660602,3951175,22.59,13019119616,16448,clean,quads=95670,ttOverwrites=3466722,memoPower=22
+RUN key=aa006 tag=a kind=target rc=0 out=output/targets/aa006.a.out third,aa006a,5,88,88,1,16976575,8935079,46.78,1171516445255794692,0,clean,quads=95670,ttOverwrites=12782271,memoPower=22
+RUN key=aa006 tag=b kind=target rc=0 out=output/targets/aa006.b.out third,aa006b,5,88,88,1,16976575,8935079,46.53,1171516445255794692,0,clean,quads=95670,ttOverwrites=12782271,memoPower=22
+RUN key=aa007 tag=a kind=target rc=0 out=output/targets/aa007.a.out third,aa007a,5,95,95,1,16098654,8465953,44.09,1171516445255794696,0,clean,quads=95670,ttOverwrites=11904350,memoPower=22
+RUN key=aa007 tag=b kind=target rc=0 out=output/targets/aa007.b.out third,aa007b,5,95,95,1,16098654,8465953,44.08,1171516445255794696,0,clean,quads=95670,ttOverwrites=11904350,memoPower=22
