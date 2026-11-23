@@ -100,6 +100,14 @@ scope: >-
   課題としてrun logに明記した。標準11×11の空盤・二石root・S2 {59,60}・
   class 1/2/4は範囲外かつUNKNOWNのまま。3トークン以上・y>=23族・固定幅・
   q点版も範囲外。
+  2026-11-23追記（兄弟実行）: 出版後同日、第二ホスト独立再現が完了
+  （AST同一自前ビルド 88ce3ed1…・全7出版出力byte再現〔census SHA pin
+  3275cc74…・engine states miss 11,469,227/hit 22,466,349含む〕・
+  自前ビルド4実行byte-identical・fail-closed電池12種全捕捉でbad数が
+  出版電池と完全一致）し、本itemの証拠基盤は2ホスト化された
+  （実験dir vertical-fiber-two-token-y22-universal-second-host-
+  reproduction-20261123・log 2026-11-23-two-token-y22-second-host-
+  reproduction.md）。出版時点の単一ホスト正直記録は無改稿で保持。
 evidence: >-
   2026-11-23出版・単一オーナー宣言 e1e60cd4 配下:
   (1) 転写の二重正本検証: engine/cand21/cand22 の3ブロックが出版bytesと
@@ -149,6 +157,24 @@ evidence: >-
   y=21 editionが持った兄弟実行による独立ビルド（AST同一）・全数値再現・
   出版bytesの第二ホストbyte再現は出版時点でまだ無く、独立再現は次回実行の
   最優先裏付け課題としてrun log・K1256 item・実験READMEに明記した。
+  (10) 追記（2026-11-23・兄弟実行による第二ホスト独立再現）: ①出版
+  corpus取得+pin検証（機体 96d9787f…・y21機 git blob ca5e8284・cand21
+  blob 38613e92・cand22 blob fd50358e・全一致）。②出版bytesの段階再実行で
+  全7出版出力byte再現（preflight 12,012+9,108点bad 0・census.txt 3275cc74…
+  791,080B・12チェック 5,664,680点・フル14 6,956,320点・型 797,559・merge
+  887,200/tail 191,158・C4t違反280最初(60,108,108)・engine statesも一致）。
+  ③宣言レシピからの自前ビルド（失敗閉鎖型変換表・全置換回数assert・
+  46,170B SHA-256 88ce3ed1…・決定論的2回再構築一致）が出版機体とAST同一
+  （ast_compare rc=0・docstring/comment差のみ）。④自前ビルド全段階再実行:
+  転写/preflight/censusはbyte同一・監査はverifier_sha256フィールドのみ差
+  （flat-key差集合機械検証）・4実行byte-identical（3同一cwd+隔離env -i
+  全pipelineゼロ再生成）。⑤自作fail-closed電池12種すべてrc=1で捕捉・観測
+  bad数が出版電池と完全一致（bad 1/1/3,920・C1d 14,869/9,108・merge 59・
+  C4 945・C1 4,898+C2 24,024・C1 1,763+C2 24,451・FAIL-CLOSED文言3種）。
+  ただしP04初回変異はharness側の無効変異（census集合のカンマ後に空白が
+  無いため `, 43` 探索不; 変異は余計な波括弧付加になったが機体は同样に
+  fail-closed rc=1）であり、(9)同様正直記録の上有効変異で即再probe（bad=1
+  捕捉・正典/出版bytesは全probe後無傷をcmp検証）。
 ---
 
 ## 14チェックの構成と実績値（単一機体版）
@@ -226,3 +252,31 @@ cand9..cand21 に拡大（証明済みB子使用は cand10/cand12..cand21・
 外の最初の族**）。標準11×11空盤・二石root {49,60}/{59,60}・S2 {59,60}・
 class 1/2/4 はすべてUNKNOWNのまま。3トークン以上・y>=23族・固定幅・q点版
 安定化長は範囲外。
+
+## 第二ホスト独立再現の記録（2026-11-23 追記・兄弟実行）
+
+出版時点の「単一ホスト」正直記録（上記）に対し、同日兄弟実行が独立再現を
+完遂した。内容: (1) 出版corpus取得とpin検証（機体 96d9787f…・転写源 y21機
+git blob ca5e8284・cand21 blob 38613e92・cand22 blob fd50358e 全一致）。
+(2) 出版bytesを第二ホストで段階再実行し全7出版出力がbyte再現（censusは
+生成器+SHA pin体裁の 3275cc74…・engine states miss 11,469,227 /
+hit 22,466,349 も一致）。(3) 宣言レシピからの自前ビルド（失敗閉鎖型変換表・
+全置換回数assert・46,170B・SHA-256 88ce3ed1…・決定論的2回再構築一致）が
+出版機体と構文木レベルで同一（ast_compare.py rc=0・docstring/comment差のみ）。
+(4) 自前ビルドの全段階出力は出版出力とbyte同一（監査は機体自己hash
+verifier_sha256 フィールドのみ差・flat-key差集合を機械検証）で4実行
+byte-identical（1回は隔離tree/env -i/PYTHONHASHSEED=randomでの全pipeline
+完全ゼロ再生成）。(5) 自作fail-closed電池12種すべてをrc=1で捕捉し、観測
+bad数は出版電池の値と完全一致（P04初回のharness無効変異1件は(9)と同じ方式
+で正直記録し有効変異で再検出）。
+
+これにより本item（および K1256 昇格）の証拠基盤は「単一ホスト・4実行+
+電池12種」から「2ホスト・出版bytes再実行+AST同一自前ビルド+2組の決定性
+4実行+2組のfail-closed電池（bad数完全一致）」へ拡張された。機体は単一出版
+のまま改造ゼロ。statusの変更・新しい主張は無い（標準11×11空盤・二石root
+{49,60}/{59,60}・S2 {59,60}・class 1/2/4 はすべてUNKNOWNのまま）。
+正本は実験dir
+`research/experiments/vertical-fiber-two-token-y22-universal-second-host-reproduction-20261123/`
+（README・build_y22_own.py・ast_compare.py・battery.py・
+output/battery-results-ALL.json・output/reproduction-record.txt）と
+log `research/log/2026-11-23-two-token-y22-second-host-reproduction.md`。
