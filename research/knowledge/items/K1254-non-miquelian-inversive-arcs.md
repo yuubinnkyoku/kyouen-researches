@@ -42,6 +42,12 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/output/grundy_tits_q8.txt
   role: data
   note: Suzuki–Tits 位数8 の完全 Grundy 計算の生出力（ROOT 0 0 = 後手勝ち）
+- path: research/experiments/finite-field-kyouen-20261120/scripts/ag_board_export.py
+  role: solver
+  note: AG(2,q) 盤をアーク・センサス形式で書き出す
+- path: research/experiments/finite-field-kyouen-20261120/output/grundy_ag_q8.txt
+  role: data
+  note: AG(2,8) 盤の完全 Grundy（ROOT 0 1 = 後手勝ち）
 scope: 位数8のSuzuki–Tits反転平面（Tits ovoid から作られる非Miquelian反転平面）の弧（どの4点も同一円上にない点集合）の最大サイズ
 evidence: Tits ovoid O = {(1, x^4+xy+y^6, x, y)} ∪ {(0,1,0,0)} を F_8 上で構成し、全直線が2点以下（0本の違反）・平面上の9点切断が520個・全 C(65,3) 三点点が円上にちょうど1回（43,680/43,680）を機械確認。その後アーク・センサスを深さ10まで走らせ、層サイズと K を厳密に決定。
 ---
@@ -152,6 +158,22 @@ q=32: Tits ovoid 1,025 点、円 32,800 = q(q²+1) ✓
   は設計のパラメータだけを使わないので、この違いを原理的に扱える枠組みである。
 
 **データ**：`output/grundy_tits_q8.txt`（`SAFE 15694914`, `ROOT 0 0`, `SIZE` 行）。
+
+### 位数8の3つの盤の比較
+
+同じ位数8で、別の構造を持つ盤も計算した（AG(2,q) 盤＝4点共線と4点共円をブロック、
+`scripts/ag_board_export.py` で書き出し）。
+
+| 盤 | 点 | ブロック | 安全局面数 | 空盤の Grundy 値 | 勝敗 |
+|---|---:|---:|---:|---:|---|
+| Miquelian 反転平面 | 65 | 520 | 15,665,794 | **1** | **先手勝ち** |
+| Suzuki–Tits 反転平面 | 65 | 520 | 15,694,914 | **0** | **後手勝ち** |
+| AG(2,8) 盤 | 64 | 548 | 10,892,513 | **0** | **後手勝ち** |
+
+**3つの盤のうち先手勝ちは Miquelian 反転平面だけ**。Miquelian と Suzuki–Tits は
+同じ `3-(65,9,1)` 設計パラメータを持ち、最大弧サイズも同じ 7 なのに勝敗が逆で、
+ゲームの勝敗が**設計のパラメータではなく円の配置で決まる**ことがはっきりした。
+（AG 盤は3-設計ですらない別のハイパーグラフなので、後手勝ちなのは独立な情報。）
 
 ## 限界
 
