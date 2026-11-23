@@ -6894,3 +6894,80 @@ WIN行 y001/y006 のpinned第三実装交叉検証と本host pinned-replica再�
   (508,970 bytes = Part BR takeover amendment `d2e345e6` 版) を再照合
   する (さらに並走追記が挟まった場合は本節を追記し直し、成立しない
   場合は簡潔に記録して次回へ回す)。
+
+## Part BR status update (2026-11-23, solver・takeover実行host): batch-27 (class 13342) drive-1完了 - 事前登録WIN-HALTがo002で発火 (honest WIN label・**29番目の unconsumed closure WIN候補**・verdict不消費)
+
+(takeover amendment 通り・publish-then-execute履行: amendment `d2e345e6` 出版後に
+scaffold pins再照合 → val-gate this-host 4 → drive → audit/tamper → 出版 A
+`28cf8c2f` outputs → C `a55813ee` README+MANIFEST → 本status update。全出版bytesは
+commit-pinned raw fetch-backでbyte検証済み。observed HEAD: a55813ee (本Part
+commit Cそのもの・併走Part BW status update `f687fa73` と fast lane
+`6360bb32` は非接触・note.mdのBW status update以降の本lane追記なしを確認)。
+本節追記前の note blob lock は `f412fcc4` (Part BW status update `f687fa73` 版
+508,970 bytes) であるが、push直前の再fetchで最新mainの現blob
+`4fa0fdffd…` (514,881 bytes) を再照合する。)
+
+- 実行 (宣言 `14ee1873` + takeover amendment `d2e345e6` の事前登録どおり):
+  (1) scaffold pins 8種再照合 byte一致 (drive `9114e211` / jsreplay `84585617`
+  / make_batch27_keys `9ab4523a` / row_audit `ed21debe` / row_audit_win_halt
+  `7d920f2b` / runbatch `f591f8c2` / runwave `8efd78c2` / batch-keys
+  `67814ed6`)・54 input CSVの (id, lo, hi, legal) とbatch-keys全行一致
+  (bad 0)。(2) **val-gate 4/4 node-exact** (takeover host・`*.takeover-host.out`
+  4ファイル: at2m 2M exhaustion ×2 (result 0・nodes 2,000,000)・15m基準キー
+  (2, 3,651,923)/(2, 5,040,200)・禁止四角 95,670・wall_s 19/19/36/44。
+  published this-host 4 (宣言host preflight) は不変のまま別名overlay出版)。
+  (3) drive invocation 1回のみで **worker2 rc=45 事前登録WIN-HALT**。
+- **o002 WIN (honest label)**: key (3494793310856282144, 0)・s5 209134・legal
+  79・membership 4・nodes 4,589,084 (budget 15M内)・two-pass node-exact (wall
+  45/47s) → worker2の最初のキーで発火 (batch-21 a003・batch-22 k002・
+  batch-26 l028 に続く4回目の単独WIN子パターン・**29番目の unconsumed
+  closure WIN候補**)。status.log は PASS (nodes付き) + WIN-HALT の2行
+  (runbatchの定式どおり・事前登録win-halt監査はpair照合を正しく実装済みで
+  Part BTのような派生は不要)。
+- worker1はworker2のWIN-HALT後に自workerの260s有界区間を継続し (driver wait
+  設計・runbatchは他workerの停止を観測しない・batch-26 worker2/l033と同型)、
+  o001/o003/o005/o007 **LOSS (採用候補のみ・verdict不消費)** (nodes
+  2,829,495 / 2,400,082 / 2,093,259 / 6,644,942・2-pass node-exact) 完了後
+  o009実行中に timeout 124 で打ち切り。**fragment o009 (UNPROBED)**:
+  o009.p1.out は `# replay_done` 付き完全単一パス (bookkeepingのみ: result 2・
+  nodes 9,082,839・証拠ではない)・o009.p2.out はtruncated断片 (verdict行なし)。
+  truncated-retry行 0件 (retry再実行は未実施・continuationでfresh-cold再実行)。
+- 残り48キー (o004, o006, o008, o010..o054) は fileless UNPROBED。EXHAUSTED 0・
+  determinism mismatch (rc=42) 不発。
+- **row-audit-winhalt PASS** (schema
+  `n11-centralreply-closure-class13342-batch27-rowaudit-winhalt-v1`・事前登録
+  `7d920f2b`・derived_state): completed 5 (WIN 1・LOSS 4)・fragment 1
+  (o009)・fileless 48・unprobed 49・3回実行byte一致 (json sha256 `530fe947…`・
+  status.log sha256 `50a4f407…`)・**tamper battery 3/3検出** (T1 o001 verdict
+  反転→WIN-HALT pair照合gate / T2 未probeキー o010への偽PASS行→verdict-ish
+  gate / T3 o002 verdict 2行除去→pair照合gate・scratch上で実施し実験filesは
+  battery前後でbyte同一) + clean control PASS。誠実記録: T2の初回実行は
+  scratch再利用ミス (T1汚染残存) でT1のgateメッセージでの検出となったため、
+  クリーンscratchで再実施し正しいgate (verdict-ish lines for non-completed
+  keys ['o010']) での検出を確認した。
+- 出版 (全fetch-back byte照合): outputs `28cf8c2f` (18ファイル: status.log・
+  raw 12・row-audit-winhalt.json・val-gate takeover-host 4) → README +
+  MANIFEST-sha256 92行 `a55813ee` (実験dir `n11-centralreply-closure-class13342-
+  batch27-20261123/`・MANIFESTはmain状態92ファイルのsha256・published
+  this-host 4は宣言host版のまま)。
+- 意味 (route statementのみ・閉鎖/被覆/secured/root勝敗の主張なし): 単独WIN子
+  o002 により (採用された場合) **class 13342 の全LOSS閉包ルートは反駁証拠を
+  持つ**。ただし verdictは一切消費していない・採用判断は scrutiny owner C++
+  第二実装 gate pin `9193f5b6…` 待ち (本レーンは代行しない)・canonical cache
+  (Part BU採用後 6,287行 `e32a2e44…`) read-only不変・class 10968/23964 は
+  PKT-collision blocked・class 5690 は route-dead のまま。
+- 次回 (batch-28) の選定は **29-WIN交積** (28 + o002 (s5 209134)) の反駁簿記で
+  maker内で機械選定する。当面のroute-alive候補: rank 27 class 5343
+  (runner-up)・rank 28 class 13758 (backup)・rank 29 class 14103 (rank 30..
+  30484以降は要packet交差確認)。**prefix未使用単文字ゼロ** ({i, l, o} を
+  batch-25/26/27で使用済み) なので次回選定時は2文字prefix等の新設計を要する。
+- **標準11×11空盤・19 central-reply roots・二石root {49,60}/{59,60}・S2
+  {59,60}・class 1/2/4・class 10968・class 23964・class 13342 (54キーすべて・
+  o002を含む) はどの時点でもUNKNOWNのまま。** nodes数・expansions数を勝敗・
+  距離として読まない。WIN/LOSS採用は別宣言のadoption Part (pinned fail-closed
+  merger `90711961` 経由) のみ。
+- 本status update observed HEAD-before-push: `a55813ee…` (本Part commit C)。
+  push直前に最新mainを再fetchし note blob lock `4fa0fdffd…` (514,881 bytes =
+  Part BW status update `f687fa73` 版) を再照合する (y=22 universal実行等の
+  並走追記が挟まった場合は本節を追記し直し、成立しない場合は簡潔に記録して
+  次回へ回す)。
