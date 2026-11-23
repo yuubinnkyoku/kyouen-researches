@@ -1,0 +1,108 @@
+{
+  "checks": {
+    "C1": {
+      "bad": 0,
+      "desc": "raw both engines vs cand19 z=0..14 x=19..37 R<=x+z+50",
+      "points": 24510
+    },
+    "C12": {
+      "bad": 0,
+      "desc": "deep closed grid z=0..120 x=19..120 R<=x+z+21",
+      "points": 1857471
+    },
+    "C1b": {
+      "bad": 0,
+      "desc": "single_token/y=18-child/x=19 merger raw anchors",
+      "points": 44027
+    },
+    "C1d": {
+      "anchor_bad": 0,
+      "bad": 0,
+      "desc": "published z=8/9/10/15/16/17 uniform slices (y=19) vs cand19, x=19..159 R<=x+61; + low-R single-token reduction R<=z+6 (z=15..17)",
+      "lowR_bad": 0,
+      "points": 136206
+    },
+    "C2": {
+      "bad": 0,
+      "desc": "closed identity grid z=0..48 x=19..61 R<=x+z+45 (+merge,tail)",
+      "points": 229663
+    },
+    "C2b": {
+      "bad": 0,
+      "desc": "deep tail identity rows z in {60..400} x=19..69(step5) R<=x+z+31",
+      "points": 19580
+    },
+    "C3": {
+      "bad": 0,
+      "desc": "option decomposition vs raw child enumeration",
+      "points": 1335
+    },
+    "C4": {
+      "bad": 0,
+      "confluence_bad": 0,
+      "desc": "type machine box +/-60, clip 40/sentinel 41, confluence",
+      "identity_bad": 0,
+      "points": 579657,
+      "types": 386487
+    },
+    "C4t": {
+      "desc": "tightness probe clip 39/sentinel 40 (not in bad total)",
+      "first_violation": [
+        60,
+        102,
+        102
+      ],
+      "points": 579657,
+      "violations_at_clip39": 770
+    },
+    "C7": {
+      "bad": 0,
+      "desc": "seeded far probes 200k, seed 20261192, z,x<=3000",
+      "points": 200000
+    },
+    "C8": {
+      "bad": 0,
+      "desc": "boundary manifolds z<=3000, dx in [-30,20], tail window",
+      "points": 1057317
+    },
+    "C9": {
+      "bad": 0,
+      "desc": "v-space shell sweeps [61,64],[89,92],[117,120]",
+      "points": 897930
+    }
+  },
+  "checks_run": [
+    "C1",
+    "C12",
+    "C1b",
+    "C1d",
+    "C2",
+    "C2b",
+    "C3",
+    "C4",
+    "C4t",
+    "C7",
+    "C8",
+    "C9"
+  ],
+  "corollaries": {
+    "merge_below_diagonal": {
+      "bad": 0,
+      "claim": "x<=z-20 => H == single_token(x+19,z,R)",
+      "points": 857191
+    },
+    "tail": {
+      "bad": 0,
+      "claim": "R>=x+z+20 => H == (x+19)%2",
+      "points": 184200
+    }
+  },
+  "experiment": "vertical-fiber-two-token-y19-parametric-allz-proof-20261123",
+  "family": "H(R;(x,19);z), z>=0, x>=19, R>=0",
+  "overall": "PASS",
+  "stage": "single-edition 14-check machine (C1d published-slice anchors at the y=19 rows, pre-flighted fail-closed before any run, and the independent census.txt consumer C11r; staged runs: transcription check -> preflight -> census -> 12-check battery -> full 14-check battery, per the y19 single-owner declaration; census parts anchored via bounded-memoization twins on a memory-capped host)",
+  "total_bad": 0,
+  "total_points": 5627353,
+  "type_count": 590877,
+  "verifier_sha256": "76525717875ceb6d7bc1f4e628cc95066a3591a134120ee4d1bf3743babd7294"
+}
