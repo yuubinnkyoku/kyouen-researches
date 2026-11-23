@@ -3115,3 +3115,104 @@ value.
   bookkeeping, never verdicts. Resume pointers: batch-20 selection
   (class 5687 next clean closure candidate), batch-19 remaining 51
   keys, the 19-WIN scrutiny-owner adoption decision.
+
+## Continuation 47 (2026-11-23, this host): Part BG executed and published - batch-20 closure class 12457 exact-S5 probe complete: 53/53 keys two-pass node-exact PASS, all 53 honest labels result=2 per pinned contract (adoption candidates only), verdict consumption ZERO; class 12457 / all keys / standard 11x11 / 19 roots stay UNKNOWN
+
+- Lane resume: this session continued after a compaction. Re-fetched latest
+  main before any write. Selection correction (machine-verified against
+  published bytes, recorded in the Part BG declaration commit `b4c4ac2d`,
+  note blob `becd61ac`): the batch-19 README pointer (rank 16 class 5687)
+  is route-dead via known-WIN cost child s5 209644 (update8 receipt
+  `209644: 1`; published Part BC refresh rule `d6bb2374` marks such classes
+  excluded), so batch-20 targeted rank 17 class 12457
+  (mask [1152921504606847268, 0], cost 54, known child {126899: LOSS} only,
+  53 unknown keys, 19-WIN intersection 0). Runner-up class 12643 (rank 18)
+  and backups 25835/31600 verified route-alive for future batches.
+- Scaffold (commit A `358cac13521bd9cd075c7128763147f7b2511447`, 69
+  files): keys x001..x053 by `make_batch20_keys.py` `1dceb05e` (3 runs
+  byte-identical, all gates PASS: canonical 0/53 hits, quarantine 0,
+  prior 20 packets 981 rows / 967 unique overlap 0, 14 shared-prior
+  positions across 2 packets each, ranks 1..16 refutation evidence,
+  route-alive gate); batch-keys.json `efb40b1b`; pinned scripts
+  byte-copied from published batch-19 (jsreplay `84585617`, runbatch
+  `f591f8c2`, runwave `8efd78c2`); drive `0b1d6b38`, row_audit
+  `3197c4dc`; val-gate executed pre-run 4/4 node-exact this host
+  (at2m result 0 nodes 2,000,000 x2; 15m (2, 3651,923)/(2, 5,040,200);
+  forbidden quads 95,670 x4). Honest incident record: a PRIOR_BATCHES
+  pin drop-char typo in the first maker draft was caught by its own sha
+  gate and repaired by byte-copy from the published batch-19 maker
+  `mk19.py` (gate worked as designed).
+- Execution (this host, 7 bounded drive invocations, 2 workers max,
+  260s per invocation, budget 15M per pass, 2-pass fresh-cold):
+  53/53 keys PASS (p1==p2 identity on budget/result/nodes). All 53
+  labels result=2 (pinned contract: LOSS for the probed side; honest
+  labels only, adoption candidates, NOT consumed). WIN 0 (WIN-HALT rule
+  never fired), exhausted 0 (no re-probe rule triggered), mismatch 0.
+  14 truncated-retry guard events from host timeout kills
+  (partials preserved as `*.truncated.*.out`, re-run fresh-cold by the
+  published completeness guard; zero completed-row re-runs). Drive
+  PROGRESS printing "54/53" at the end is a known cosmetic artifact
+  (the counter set also captures one documentation header line
+  containing the word PASS); the 53 real x-key PASS lines are each
+  unique (machine-verified). Row audit PASS
+  (`output/row-audit.json` `1dcb7fb8`: 53 pass rows, LOSS 53, WIN 0,
+  exhausted 0, mismatches 0).
+- Publication: commit A (scaffold 69 files), commit B
+  `564cc66a4a5b0a48cc4bb7c4010d802f13014e83` (run outputs 122 files:
+  status.log + row-audit + 120 raw), commit C
+  `928546dfea4b40a3873ddc559fa6082a25445847` (README `ad0c3eec` +
+  MANIFEST-sha256 `d0ef293b`, 191 entries), note Part BG status update
+  `60de44ed` (note blob lock `0e0ec792` before, new blob `4e09fd83`).
+  All fetch-back byte-verified via a new independent route: git trees
+  API (one recursive call) + local git blob SHA-1 recomputation
+  (69/69, 122/122, 2/2 match; note verified by 12-page incremental
+  sha256 equal to the pinned local file).
+- Tooling lessons recorded for future sessions of this lane:
+  (1) pin lists must be machine-transferred into the push sandbox
+  (generate `pins.txt` by sha256sum in bash, read it via the
+  file_system connector) - manual transcription of 69 x 64-hex pins
+  produced exactly 3 typos, all caught by the fail-closed sha gate
+  (push refused until fixed, zero corrupted publications);
+  (2) the push sandbox has a 16 MiB run memory limit - hash large
+  files with an incremental (page-fed) sha256, never a one-shot
+  byte-array copy (two MemoryLimitError failures before the
+  incremental form); a one-shot/incremental cross-check on a
+  100,010-byte multi-block UTF-8 test string caught a 1-extra-length-
+  byte padding bug before any real push;
+  (3) UTF-8 content requires byte-aware hashing (char & 0xff silently
+  corrupts Japanese text hashes; encode code points to UTF-8 bytes);
+  (4) per-file fetch-back via get_file_contents hits upstream rate
+  limits (502) after ~16 calls, and open_url/raw fetches mangle
+  trailing whitespace (misleading hash mismatches) - the trees+blob
+  SHA-1 route is exact, fast, and cheap; (5) push_files resolves the
+  branch head at call time, so the HEAD check must run immediately
+  before the push call in the same run.
+- Parallel-lane events during this Part (non-contact maintained):
+  K1058 knowledge-item commit `74fa9731` and the Part BH declaration
+  (note commit `de1383a7`: batch-19 residual w003..w053 continuation by
+  another session, WIN-CONTINUE pre-registered) landed while our drive
+  was running. Our commit B rode on top of them with zero path
+  overlap (HEAD re-checked per the standing rule before each push;
+  the observed-HEAD abort at 74fa9731 was resolved by inspection,
+  no force-through).
+- Verdicts NOT consumed: canonical cache (6,182 rows `0b594f7e`)
+  untouched; LOSS rows of this batch are adoption candidates only
+  (a future declared adoption Part with the pinned fail-closed
+  merger owns consumption); 19 unconsumed closure WIN candidates
+  remain scrutiny-owner pending (C++ second-implementation gate pin
+  `9193f5b6` unchanged); batch-19 residual w003..w053 left to Part BH.
+- Route statement (conditional, NOT a verdict): class 12457 now has
+  all 54 cost children labeled at row level (known {126899: LOSS} +
+  this batch's 53), so IF a future adoption Part consumes the 53 LOSS
+  rows, the all-children-LOSS closure route for class 12457 is
+  established. This Part makes no closure, coverage, or secured
+  claim. Next route-alive closure candidate: class 12643 (rank 18),
+  backups 25835/31600.
+- Guards unchanged: the standard 11x11 empty board, the 19
+  central-reply roots, the two-stone roots {49,60}/{59,60}, S2
+  {59,60}, class 12457, and all 53 keys remain UNKNOWN at every
+  point; node counts are bookkeeping, not verdicts.
+- Session-log observed HEAD-before-push:
+  `60de44edda099ac624824feb8b222e9b917b865c` (session-log blob lock
+  `ad29acc0c5238469f30103faea69c17e74e4eef2` before this Continuation;
+  push re-checks the lock and re-appends if a parallel lane moved it).
