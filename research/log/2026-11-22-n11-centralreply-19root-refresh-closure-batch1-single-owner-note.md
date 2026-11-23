@@ -4515,3 +4515,57 @@ MANIFEST sha256全件一致)。
 - 実験dir: `research/experiments/n11-centralreply-closure-class16513-batch19-20261123/`。
 - 本amendment observed HEAD-before-push: `b546b56d1c4bccb0d2fbf6f150d9190649fc9627`
   (push直前にnote blob sha1 (`598b5f8494e1f0a0c74f6a1ae073fb6b0cf273f0`) を再照合し、競合時は再fetchして本節を追記し直す)。
+
+## Part BF (verifier, declaration 2026-11-23): batch-19 closure WIN行 w001/w002 の第三実装交叉検証 (宣言後に実行・verdict不消費)
+
+batch 19 (Part BE, class 16513) は宣言どおりの実行で最初のwaveで
+**w001 WIN 6,639,780 nodes** (legal 84・s5 63802・2-pass fresh-cold
+node-exact・budget 15M内)・**w002 WIN 7,738,714 nodes** (legal 89・
+s5 109169・2-pass node-exact) に終わり、事前登録WIN-HALT規則で停止した
+(publication commits A `49c3bea7` / B `51e73082` / C `9719e926`、
+2/53 probed・51 UNPROBED・verdict消費ゼロ)。これによりunconsumed closure
+WIN候補は19になった。前例 (Part G/K/O/P/T/W/AA/AD/AG/AL/AR/AZ の
+verifier battery 约定) に従い、**採用判断待ちのWIN行に第三実装
+verdict-level交叉検証の文献を追加する**。verdict不消費・採用判断は
+scrutiny owner (C++第二実装 gate pin `9193f5b6…`)。
+
+- 対象: `research/experiments/n11-centralreply-closure-b19win-thirdimpl-20261123/`。
+  published batch-19の2 WIN行 (w001/w002) の全行再検証 + Part G/AR/AZと同一の
+  anchor行 (k02a/l1a)・negative gate 2種 (ng1/ng2)・rules gate (verify_tbl
+  quads 95,670 == third-impl・triples mismatch 0)。
+- 入力: published batch-19 artifacts (publication commits `49c3bea7`/
+  `51e73082`/`9719e926`・MANIFEST-sha256 74行・remote byte一致確認済み)
+  から `scripts/make_inputs_bf.py` で機械導出 (fail-closed・手転写ゼロ):
+  batch-keys `9609aaf3…` pin (53キー・class 16513・w001 s5 63802/w002
+  s5 109169・membership 2)、raw 4ファイル (w001 p1/p2 `8cf13d13` byte同一
+  (wall_s 67/67)・w002 p1 `1faf8d15`/p2 `feb8475b` (wall_s 81/67のみ相違))
+  の2-pass node-exact (比較はnodes/legal/result/keys等の決定性field) +
+  `# replay_done` + result 1 in-budget、status-b19.log `e3a9e5b4` の
+  PASS行・WIN-HALT行・WIN-ROW-DETAIL行 (s5 index・holder classes 1363/2901
+  込み)・VAL-GATE 4/4行・EXECUTION-HALTED行・51-unprobed行・19候補行の
+  3-way一致、README-b19 `29c7ea51` 結果節照合・derived-vs-published
+  input CSV byte-equality (w001 `f232a593`/w002 `574a4124`) +
+  anchor/negative 4件はpublished Part AR実験dir CSVとbyte一致。
+- 手法: pinned `third_impl.js` (`08ea958f…`)・1行=1 solver=1 process・
+  cap 300,000,000拡張・wallcap 240s・`--memo-power=22`・全target/anchor
+  a/b 2回のdeterminism gate (result/expansion/ttHits/reason同一必須)。
+  wall到達 (240s) はhonest WALL-INCONCLUSIVE・clean不一致はDIVERGENCE
+  として記録 (verdict書換え・隠蔽なし)。
+- 停止・消費規則: 本Partのverdict消費はゼロ。canonical cache (6,182行
+  `0b594f7e…`) に書込まない。19 unconsumed closure WIN候補 (b018/d002/
+  e002/f017/g018/j033/h045/z003/n005/n006/p002/p003/r001/r002/q042/v001/
+  v002/w001/w002) は採用判断scrutiny owner待ち・不変。本Part単体では
+  root被覆・クラス閉鎖・第三手securedの主張をしない。
+- 並走との不接触: 本Partはpublished batch-19 raw (BEの成果物) の読み取り
+  のみで、BE宣言の残51キー (w003..w053) には一切触れない (15M再探索禁止
+  規則にも触れない)。batch-20 (rank 16 class 5687) pivot・batch-19残キー
+  継続のいずれの選択も本Partは妨げない。同一スコープ (batch-19 WIN行の
+  第三実装交叉検証) の対抗宣言がmainに存在する場合は本宣言を破棄して
+  着手しない。
+- 標準11×11空盤・19 central-reply roots・class 16513 (残51子)・全53キーは
+  本Partのどの時点でもUNKNOWNのまま。nodes数・expansions数を勝敗として
+  読まない。
+- 実験dir: `research/experiments/n11-centralreply-closure-b19win-thirdimpl-20261123/`。
+- 本amendment observed HEAD-before-push: `9719e92606a09eaf4ebb283488e66215ac71f295`
+  (push直前にnote blob sha1 (`eb6066e68244324136e8f9dfeadb6e543779c7e7`) を再照合し、
+  競合時は再fetchして本節を追記し直す)。
