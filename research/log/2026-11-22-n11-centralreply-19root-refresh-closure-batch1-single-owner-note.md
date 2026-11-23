@@ -8038,3 +8038,87 @@ push直前にnote blob sha1ロック `a2a159255055549d5b97e388a9f566061aaea1d9`
   class 1/2/4・class 10968・class 23964・class 5343 (54キーすべて・aa001/aa002
   含む) は実行前後ともUNKNOWNのまま。** nodes数を勝敗として読まない。
   WIN/LOSS採用は別adoption Part (pinned merger `90711961…` 経由) のみ。
+
+### Part CE 宣言 (2026-11-23): batch-23 fileless 51キー (s003..s053) drive-2 continuation — publish-then-execute
+
+(observed HEAD-before-push: 最新mainをpush直前に再取得しコミットメッセージに記録する。
+push直前にnote blob sha1ロックを再照合し、fail-closed shaで更新する。対抗宣言なし
+(note内 Part CE / batch-23 drive-2 記述ゼロを機械確認済み)。実験dir
+`research/experiments/n11-centralreply-closure-class31600-batch23-drive2-20261123/` は
+push前に404を確認する。)
+
+- **目的**: batch-23 (Part BN・class 31600 rank 19・54キーではなく53キー) の published kitを
+  byte-clone継続し、UNPROBED fileless 51キー s003..s053 を pinned replica
+  (jsreplay.js sha256 `845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df`)
+  で2-pass fresh-cold probeする drive-2 wave。**verdict不消費**。閉鎖・被覆・
+  secured・root勝敗の主張をしない。
+- **WIN-CONTINUE事前登録 (Part BT batch-26 residual / Part CA batch-27 residual の
+  先例と同一の根拠)**: class 31600の全子LOSS閉包ルートはpublished s001/s002 WIN
+  honest label (Part BN drive-1 + Part BV第三実装交叉検証3系統・同一クラス内2WINは
+  12643/25835と同型) により既に反駁済み。残余キーのprobeはunknown数最小化のための
+  列挙であり、ここでのさらなるWIN-HALTに情報価値はない。よってresidual installmentでは、
+  published runnerのrc=45 (WIN) が発火したキーはhonest WIN labelのみで記録し、
+  drive driverを再起動して51キー完遂 (または本セッション限界) まで列挙を続ける
+  (部分完了もhonestに出版・残りはfileless UNPROBEDのまま)。決定論mismatch →
+  即時HARD-STOP rc=42 (以後のdrive起動も行わず停止)。budget枯渇 (result 0) →
+  honest EXHAUSTED bookkeeping (UNKNOWN・15M同条件の再probeなし)。truncated pass
+  (`# replay_done`なし) はevidenceでなく、published completeness guardが次の
+  invocationでfresh-cold再実行する。
+- **残留キー集合の機械導出 (prose不使用)**: published batch-keys.json (sha256
+  `2776acafbb638cb148661b3988b7eb36bc8519e5b7b75b415b01618bfcb85bf7`・53キー) から
+  published output/status.log (sha256 `1e4ccea9025cb11f38a05c7403a85a7d838398040506201738516bf46fa97e60`・
+  4行: s001/s002 の PASS + WIN-HALT 2行ペア) のcompleted集合 {s001, s002} を除いた
+  補集合 == {s003..s053} 51キー (fileless・fragmentゼロ) であることを本hostで機械検証済み
+  (published README記載のunprobed 51キー文言と一致)。**drive-1のcompleted行
+  (s001/s002) は再probeしない**。
+- **kit** (drive-2 dir = published batch-23 dirのbyte-clone): published MANIFEST-sha256
+  79行のうち本dirがcloneする75ファイル (scripts 8 + input 54 + output/status.log +
+  output/raw 4 + output/row-audit-winhalt.json + val-gate input 4 + published-baseline 4)
+  をcommit-pinned raw fetch + sha256再検証し **75/75 byte一致** を宣言前に機械確認済み
+  (publish-then-executeの宣言先行preflight・read-only)。残る .this-host.out 4ファイルは
+  published dir専用としてclone対象外 (drive-2では本host fresh `.ce-host.out` に置き換え)。
+  scripts byte-pin再利用 (drive `37bb126c…`・runbatch `f591f8c2…`・runwave
+  `8efd78c2…`・jsreplay `84585617…`・row_audit full `f45b125e…`・row_audit win-halt
+  `f55ae559…`・make_batch23_keys `7b2c8e53…`・一切変更なし)。
+- **val-gate (実行前・本host)**: batch-23..28と同一の4アンカー。at2m 2行 →
+  result 0 / nodes 2,000,000 node-exact、15m 2行 → result 2 / nodes
+  (2, 3,651,923)/(2, 5,040,200) node-exact、禁止四角 95,670 x4、`# replay_done` x4。
+  published val-gate/*.published-baseline.out 基準線に対するnode数完全一致
+  (wall_s比較外) をwave実行の前提条件とする。本host再生成値は val-gate/*.ce-host.out
+  としてoutputs出版に含める。
+- **実行protocol (宣言後・逐次)**: (1) val-gate 4/4 本host node-exactを確認。
+  (2) waves: `bash scripts/drive_batch23.sh` 反復 (残りキーはpublished status.logから
+  機械導出・odd/even 2 workers・各worker `timeout 260`・同時solver 2プロセス上限)。
+  (3) rc=45観測でそのwave終了後にdriverを再起動する (WIN-CONTINUE)。(4) rc=42は
+  hard-stop・即時honest記録。(5) 51キー完了またはセッション限界で停止。
+- **row-audit**: 51キー完遂後、published `row_audit_batch23.py` (`f45b125e…`・full-row
+  監査) をdrive-2 dirに対しそのまま実行 (kit構造同一のためbyte-pin再利用)。
+  **Part BT先例 (row_audit潜在gateバグ) を踏まえた事前登録**: runbatchはWINキーを
+  「PASS (nodes付き) + WIN-HALT」の2行構成で書くため、事前登録版がWIN行
+  (s001/s002含む) のstatus.log照合でfail-closedする場合は、差分がWIN行の2行pair
+  照合のみの最小派生版 `row_audit_batch23_full.py` (schema
+  `n11-centralreply-closure-class31600-batch23-rowaudit-full-v2`) を本Partのoutputsとして
+  出版し全行監査に使用する (事前登録版のfail-closeも誠実記録)。監査は3回実行byte一致・
+  tamper battery (verdict反転 / status.log nodes改竄 / seed raw nodes+1 / replay_done除去
+  等の該当gate fail検出・全tamperに適用実効性assert・scratch上・実験files無改変byte検証)
+  を実施する。
+- **verdict不消費**: canonical exact-S5 verdict cache (6,293行 `9115be9e…`) への書込みは
+  一切しない。LOSS行は採用候補のみ (消費は別adoption Partがpinned fail-closed merger
+  `90711961…`で実行)。新規WIN行はunconsumed closure WIN候補の追加のみ
+  (aa001/aa002までの31候補に続き32番目以降として誠実記録・採用判断はscrutiny owner
+  C++第二実装 gate pin `9193f5b6` のまま・本レーンは代行しない)。
+- **不接触**: Part CD (batch-28 drive-2・並走所有) の実験dir・outputs、Part CA
+  (batch-27 residual・並走所有) のprogress・outputs, batch 1..22各published dir,
+  batch-24/25/26/27/28各published dir (不変)、batch-24 fileless 49キー・batch-25
+  fileless 51キー (将来の別宣言対象)、fast lane (y=23)・finite-field lane (K1254)・
+  inversive/z19 lanes、19root計画、28+3 unconsumed closure WIN候補の採用状態、
+  canonical cache read-only不変。
+- **出版**: A scaffold (scripts 8 + input 54 + output seeds 5 + val-gate 8 + README) →
+  B outputs (fresh val-gate ce-host outs 4・新probe raw outs・統合status.log・
+  再生成row-audit json 3回分) → C MANIFEST-sha256 → note status update。
+  全files commit-pinned raw URL fetch-back byte照合・push直前に必ず最新mainを再fetchして
+  observed HEADを記録する。
+- **UNKNOWN担保**: 標準11×11空盤・19 central-reply roots・二石root {49,60}/{59,60}・
+  S2 {59,60}・class 1/2/4・class 31600 (53キーすべて・s001/s002を含む) は実行前後とも
+  UNKNOWNのまま。nodes数・wall秒数を勝敗として読まない。WIN/LOSS採用は別adoption Part
+  (pinned merger `90711961…` 経由) のみ。
