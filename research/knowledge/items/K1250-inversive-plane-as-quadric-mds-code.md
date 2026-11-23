@@ -20,6 +20,9 @@ relations:
 - type: related
   target: K1251
   note: 弧の最大サイズの具体的な下界と文献Sonninoの(q+5)/2構成との比較
+- type: related
+  target: K1252
+  note: 射影上界をq奇数(q≥7)でq+1まで下げた無条件上界
 artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/scripts/arc_lift_verify.py
   role: verifier
@@ -127,6 +130,10 @@ A', B', C' が共線  ⇔  P, A, B, C が同一平面上（= 共円）
 - **`q` 奇数：`K ≤ q+2`（無条件）** — K1058 の無条件上界 `q+3` を全奇数 q に改善する
   （`q ≡ 1 (mod 4)` の `q+2` は十字上界として既知）。
 - `q` 偶数：`K ≤ q+3`（既存の無条件上界と同じ）。
+
+**さらに `q ≥ 7` の奇数では `K ≤ q+1` まで落ちる（K1252、無条件）**：
+`k = q+2` とすると射影が conic になり、2つの錐の交わりの残り3次曲線が
+`Q⁻` 上のねじれ三次曲線になるが、`Q⁻` は `F_q` 有理な奇数次数曲線を持たない。□
 
 数値：全アーク証人（q=5..49、20個）について、**どの `P` からの射影も `k−1` 点で
 3点共線なし**であることを総当りで確認（`scripts/arc_lift_verify.py --check-projection`）。
