@@ -6203,3 +6203,77 @@ drive-1を第二ホストとして同時実行しており、両ホストのl028
   push直前に最新mainを再fetchしnote blob lockを再照合する (batch-27
   status update等の並走追記が挟まった場合は本節を追記し直し、成立し
   ない場合は簡潔に記録して次回へ回す)。
+## Part BT (solver, amendment 2026-11-23): batch-26 residual l030..l053 continuation (class 1849 enumeration - WIN-CONTINUE事前登録)・verdict不消費・実行前に出版
+
+Part BQ (batch-26 class 1849) は事前登録のWIN-HALT規則によりl028で停止し、
+残22キー (fragment l035 truncated p1・NOT evidence + fileless 21キー
+l030/l032/l034/l036..l053・fresh・一度もverdictを出していない) が残った。
+published batch-26 READMEの予約文言 (「将来の continuation で fresh-cold
+再実行」「row-auditはbatch完走時点 (残22キーの継続Part) に全行機械検証
+する」) に従い、残22キーの単一オーナー実行を宣言する (本amendmentより
+先にmainに存在するbatch-26 residual continuationスコープの対抗宣言・
+amendmentがある場合は本宣言を破棄して着手しない。branch / PRは作らない)。
+
+- WIN-CONTINUE事前登録 (Part AW batch-14 residual / Part BH batch-19
+  residualの先例と同一の根拠): class 1849の全子LOSS閉包ルートはpublished
+  l028 WIN honest label (Part BQ drive-1・Part BS第三実装交叉検証込み
+  計4系統) により既に反駁済み。残余キーのprobeはunknown数最小化のための
+  列挙であり、ここでのさらなるWIN-HALTに情報価値はない。よってresidual
+  installmentでは、published runbatch.shのrc=45 (WIN) が発火したキーは
+  honest WIN labelのみで記録し、drive driverを再起動して22キー完遂
+  (または本セッション限界) まで列挙を続ける。決定論mismatch -> 即時
+  HARD-STOP rc=42 (以後のdrive起動も行わず停止)。budget枯損 (result 0)
+  -> honest EXHAUSTED (UNKNOWN・同一条件での再probeなし)。
+- 残留キー集合の機械導出 (prose不使用): published batch-keys.json
+  (sha256 `f1ea43ae…`・53キー l001..l053) とpublished output/status.log
+  から PASS/WIN-HALT/EXHAUSTED 済み31キー {l001..l029, l031, l033} を
+  除いた補集合 == {l030, l032, l034, l035, l036..l053} の22キー
+  (fragment {l035} + fileless 21キー) であることを本hostで機械検証済み
+  (published README記載のUNPROBED 22キー文言と一致)。published l035断片
+  (output/raw/l035.p1.out・211 bytes・`# replay_done`なし) はrunbatchの
+  completeness guardがfresh-cold再実行する。
+- 新規scaffoldなし。published batch-26 dir
+  `research/experiments/n11-centralreply-closure-class1849-batch26-20261123/`
+  を正本としてそのまま使用する。本hostでpublished MANIFEST-sha256.txt
+  掲載148ファイルのうち144ファイル (val-gate this-host 4ファイルを除く:
+  scripts 7・input 54・val-gate 8・output/status.log・row-audit-winhalt
+  .json・raw 73) をsha256再検証し**144/144 byte一致**を宣言前に機械確認
+  済み。published README (sha256 `602fb209…`) もbyte一致再検証済み。
+- val-gate (実行前・本host): batch-23/24/25/26と同一の4アンカー。
+  at2m 2行 -> result 0 / nodes 2,000,000 node-exact、15m 2行 -> result 2 /
+  nodes (2,3,651,923)/(2,5,040,200) node-exact、禁止四角 95,670 x4、
+  `# replay_done` x4 (truncationなし)。published val-gate/*.this-host.out
+  基準線とpublished-baseline 4組に対するnode数完全一致を実行の前提条件
+  とする。本host再生成値は val-gate/*.bt-host.out としてoutputs出版に
+  含める (published this-host 4ファイルは不変・byte-pin維持)。
+- protocol: 2-pass fresh-cold node-exact、budget 15,000,000、
+  1 solver / 1 row / 1プロセス、publish=ALL。実行はpublished drive driver
+  (1回起動あたりtimeout 260秒有界・残キー奇偶分割 worker最大2 = 控えめ
+  並列) を反復起動する。完了済み31キー (published raws) は再実行しない。
+  中断断片はpublished completeness guard (`# replay_done` 検査) が
+  fresh-cold再実行する。
+- row-audit: 列挙完遂後、published `row_audit_batch26.py`
+  (sha256 `33ffbce5…`・full-row監査としてscaffold事前登録済み) により
+  53キー全行の機械検証を行う (batch-26 README予約文言の履行)。
+  途中でセッションが終了する場合は完了行のみを誠実出版 (verdictを出力していない
+  truncated断片は出版対象から除外し再実行に備え、残りはfreshのまま
+  次の継続Partに引き継ぐ)。
+- verdict不消費: canonical exact-S5 verdict cache (6,235行 `f6649fe3…`)
+  への書込みは一切しない。LOSS行は採用候補のみ (消費は別宣言adoption
+  Partがpinned fail-closed merger `90711961…`で実行)。新規WIN行は
+  unconsumed closure WIN候補の追加のみで採用しない (28候補 (l028込み)
+  は読み書きとも非接触・本PartのWIN行があれば29番目以降の候補として
+  誠実記録)。採用判断はscrutiny owner C++第二実装 gate pin
+  `9193f5b6…`のまま (本レーンは代行しない)。
+- 不接触: **batch-27 (Part BR) の54キー・scaffold・drive・outputsには
+  一切触れない (BRは並走所有)**。batch 1..25・各residual packet・
+  fast lane (y18..y21)・inversive-arc lane・finite-field lane非接触。
+  canonical cache read-only・scratch以外の既存filesは無改変。
+- UNKNOWN担保: 標準11×11空盤・19 central-reply roots・二石root
+  {49,60}/{59,60}・S2 {59,60}・class 1/2/4・class 1849 (53キーすべて・
+  l028・30 LOSS行を含む) は本Partのどの時点でもUNKNOWNのまま。nodes数を
+  勝敗として読まない。被覆・secured・root勝敗の主張をしない。
+- 本amendment observed HEAD-before-push: push直前に最新mainを再取得し
+  noteのblob sha1ロック `7f19145a…` (458,762 bytes) を再照合する
+  (競合時は再fetchして本節を追記し直し、成立しない場合は簡潔に記録して
+  次回へ回す)。
