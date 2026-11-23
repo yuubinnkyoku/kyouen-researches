@@ -5979,3 +5979,75 @@ fetch-back済み出版状況に基づく追記。本節追記前の note blob lo
   別宣言の adoption Part (pinned fail-closed merger 90711961)
   経由のみ・scrutiny owner C++ 第二実装 gate 9193f5b6 待ちは
   代行しない。
+
+### Part BR宣言 (batch-27, class 13342 rank 26, 2026-11-23、実行前に出版)
+
+本文は publish-then-execute 宣言。以下の選定・パケットはすべて機械再導出
+(prose不使用) であり、実行はこの宣言の後に限る。
+
+- **28-WIN集合確定**: 先の Part BQ 結果 (l028 s5 81011) を加えた
+  unconsumed closure WIN 候補は28個。l028 は published batch-26 packet
+  (sha256 f1ea43ae…) から再導出・canonical cache 6,235行 (f6649fe3…)
+  未消費を機械確認。
+- **rank 24 class 1849 は反駁に転落** (verdict不消費):
+  unknown_now[1849] ∩ 28-WIN = {81011} (published Part BQ honest WIN行
+  l028 単独による反駁・batch-21 a003・batch-22 k002 に続く3回目の
+  単独WIN子パターン)。
+- rank 17 class 12643 ({115192})・rank 18 class 25835 ({150241})・
+  rank 19 class 31600 ({62435, 192809})・rank 21 class 16957
+  ({91296, 368510})・rank 23 class 30565 ({68580, 191299}) の反駁は
+  28-WIN簿記で不変。
+- **rank 20 class 10968 と rank 22 class 23964 は blocked 継続**
+  (NOT route-dead・WIN反駁証拠ゼロ): batch-26 packet を prior に加えても
+  衝突ピンは不変 (10968 = {273033} = batch-12 n018 単独、23964 =
+  {495193, 550880} = batch-13 p007 + batch-4 e043)。
+- **rank 25 class 5690 は route-dead 継続**: update8 receipt WIN子
+  {209644}。batch-27 候補から除外 (maker内で機械pin)。
+- **対象選定: rank 26 class 13342** (mask [1188950301642588192, 0]・
+  groups served (5,24)(5,30)(5,55)(5,65)(24,5)(24,55)・cost 54子すべて
+  unknown・known children {}・28-WIN交積空・known WIN子ゼロ・packet交差
+  ゼロ・canonical hits 0/54・quarantine 0/54・54キーすべて canonical-safe)。
+  published候補表 (d57a7609… 807行) との (rank→class) 全行一致を機械再確認
+  (rank 30まで: (30, 30484, 54) を拡張pin)。runner-up: rank 27 class 5343
+  (unknown 54・route-alive・交差ゼロ)。backup: rank 28 class 13758
+  (unknown 54・route-alive・交差ゼロ)。
+- 54キー **o001..o054** (prefix "o" は27 published packets ですべて未使用。
+  未使用文字は {o} のみで今回は "o" を使用)。s5昇順 98526..460214・legal
+  74..100・Board再計算 54/54・membership {4:45, 3:8, 2:1}。prior 27
+  packets (1,352行・1,338一意・cross-packet重複14はmembership由来)
+  overlap ゼロ。batch-keys.json sha256
+  `67814ed6287d68d6e97212c931dce2b7ee585219e20b4d43edb621632220a014`
+  (schema `n11-centralreply-closure-class13342-batch27-input-v1`)。
+- preflight maker `make_batch27_keys.py` `9ab4523a…`: 全gate PASS・
+  4回実行byte一致・tamper battery 8/8検出 (T1 graph sha pin 1bit /
+  T2 CLASS_MASK 1bit / T3 batch-26 packet sha pin 1bit / T4
+  EXPECTED_PRIOR_ROWS 1352→1353 / T5 rank-24 evidence pin
+  81011→81012 / T6 PKT-collision pin 273033→273034 / T7 rank-25
+  route-dead known-win pin 209644→209645 / T8 EXPECTED_RANKS rank-30
+  pin 30484→30485)・clean control PASS。新規gate: 28-WIN集合・rank-24
+  反駁tie (== {81011})・prior 27 packets 拡張・EXPECTED_RANKS rank-30
+  拡張 (30484)。batch-20 x-key pin をこのbatchのUNPROBED (54) から独立
+  した固定53に分離 (batch-26 makerで暗黙に一致していた箇所の明示化)。
+- val-gate 12ファイル: published-baseline 4組は batch-23/24/25 と同一の
+  byte-copy、this-host 4つは本ホスト再生成 (node-exact一致: at2m 2M
+  exhaustion ×2・15m基準キー (2, 3,651,923)/(2, 5,040,200)・禁止四角
+  95,670)。solver `jsreplay.js` `84585617…`・runner `runbatch.sh`
+  `f591f8c2…`・`runwave.sh` `8efd78c2…` はいずれも byte-copy pin。
+- 事前登録stop rules (batch-23/24/25/26 と同一): 2 worker・260s有界・
+  2-pass fresh cold・budget 15M・WINは rc=45 で WIN-HALT (verdict不消費)・
+  determinism mismatch は rc=42 HARD-STOP・budget不足は honest
+  EXHAUSTED (UNKNOWN・同一条件での再probeなし)。監査script
+  `row_audit_batch27_win_halt.py` `7d920f2b…` (halt キーid固定なし)・
+  `row_audit_batch27.py` `ed21debe…` は scaffold に事前登録済み。
+  driver `drive_batch27.sh` `9114e211…`。
+- 不接触確認: 本宣言の執筆時点で n11 centralreply closure laneへの
+  他セッションコミットは確認していない (observed HEAD: Part BQ status
+  update a2e1d76b 時点のものが本lane最後)。observed HEAD は push 時に
+  status update 側に記録する (競合時は本節を追記し直し、成立しない
+  場合は簡潔に記録して次回へ回す)。
+- **標準11×11空盤・19 central-reply roots・二石root {49,60}/{59,60}・
+  S2 {59,60}・class 1/2/4・class 10968・class 23964・class 30565・
+  class 1849・class 13342 (54キーすべて) はどの時点でもUNKNOWNのまま。**
+  nodes数・legal数を勝敗として読まない。WIN/LOSS採用は別宣言の adoption
+  Part (pinned fail-closed merger 90711961) 経由のみ・scrutiny owner C++
+  第二実装 gate 9193f5b6 待ちは代行しない。
