@@ -6342,3 +6342,83 @@ batch-26 residual continuationスコープの対抗宣言・amendmentがない�
   (464,656 bytes) を再照合する (batch-27 status update等の並走追記が
   挟まった場合は本節を追記し直し、成立しない場合は簡潔に記録して次回へ
   回す)。
+
+## Part BU (solver, amendment 2026-11-23): batch-26 (class 1849) 52-LOSS canonical adoption + reaudit（実行前に出版・verdict採用は52 LOSS行のみ・l028 WINは不採用）
+
+長期レーン (n11 central-reply closure) のPart BUとして、published batch-26
+(Part BQ drive-1 + Part BT residual, class 1849) の52 LOSS行をcanonical
+exact-S5 verdict cacheへ計上する単一オーナー実行を宣言する (batch-26
+52-LOSS adoptionというスコープに対して本amendmentより先にmainに存在する対抗
+宣言/amendmentがある場合は本宣言を破棄して着手しない。branch / PRは作らない)。
+
+- 引き継ぎ (published byteに基づく): Part BQ (宣言 8e64ba1) はclass 1849
+  (rank 24) の53 unknown費用子を2-pass fresh-cold node-exactで33キーまで
+  探索し l028 WIN-HALT (rc=45・事前登録) で停止した (l028: 2-pass
+  node-exact result 1, 4,893,014 nodes・Part BS第三実装交叉検証込み
+  計4系統裏付け)。Part BT (宣言 135cc38・WIN-CONTINUE事前登録) が残り22
+  キーを完走し (22行すべてLOSS・nodes計88,000,683)、**53/53 honest label
+  (WIN 1 (l028) + LOSS 52)** が揃った (row-audit full-v2 `cb4158d9…`:
+  53 rows / LOSS 52 / WIN 1 / mismatches 0・status.log `afc92e03…` 71行
+  最終行 l053 PASS)。同READMEの消費規則は「52 LOSS行の採用は別宣言adoption
+  Partがpinned fail-closed mergerで実行」であり、本Partがその役割を履行する。
+- 対象: `research/experiments/n11-centralreply-class1849-loss52-adoption-reaudit-20261123/`。
+  BASE canonical exact-S5 verdict cache 6,235行 sha256 `f6649fe3…` (Part BI
+  採用正本) + increment 52行 → 採用後canonical 6,287行 (予想: WIN 158 /
+  LOSS 6,129・conflict 0)。
+- 機材 (全てpublished byte・実行時にsha照合): union merger `s5_union_merge.py`
+  sha256 `90711961…` byte-copy pin (WIN/LOSS conflict検出時の出力拒否gate込み) /
+  maker `make_increments_batch26.py` (Part BI版 04bde073のbatch-26 adapt・
+  本宣言後に出版してから実行) / refresh `refresh_adoption_1849.py` (published
+  Part BC版 `2f77a8bb…` byte-copyのbatch-26 adapt・cache sha期待値はcache
+  自体から機械抽出・Board 954d3a10 / policy 78655e94 / quarantine 81d23160) /
+  delta extractor `compare_deltas_batch26_adoption.py` (Part BI版 92d83671の
+  adapt・本宣言後に出版してから実行) / batch-26 kit 204ファイル
+  (MANIFEST af6da4ce・row-audit cb4158d9・batch-keys f1ea43ae) / BASE reaudit
+  3出力 (refresh-summary d9d18fc2・closure-classes d57a7609 808行・
+  per-root-coverage bc409e63)。
+- 本hostの事前preflight (read-only・宣言に先行して実施した点を誠実記録):
+  published Part BI BASE refresh (2f77a8bb) を本hostで再実行し3出力とも
+  published byteとsha一致で再現済み (d9d18fc2 / d57a7609 / bc409e63・
+  probe-worklist `3152855d…` 含む)。read-only機械検査で batch-26 key集合 ==
+  class 1849のBASE-unknown費用子53個を確認済み (l028含む・quarantine 0・
+  BASE不在53/53)。
+- gate群 (fail-closed・全stage): 52 LOSS行の2-pass raw独立再検証 (p1==p2
+  node-exact・`# replay_done`・result 2・budget 15M・stones 5・legal/(lo,hi)
+  照合・pass-1/pass-2 総nodes 208,202,177/208,202,177)・l028 WIN行のraw再検証
+  でincrement不採用 (unadopted_win_ids == [l028] gate) / increments manifest
+  (53 resolved / 52 LOSS / 1 WIN unconsumed / exhausted 0 /
+  full_packet_eq_loss_only false・win_scenario_exists true・batch-14residual
+  q042先例と同一取り扱い) / merge conflict 0・採用行は追加のみでBASE行は
+  byte不変 (merge-audit 3回byte一致) / refresh再実行 (class_status_counts
+  はBASEと同一・class 1849 unknown_now 53→1・Board fail-closed子境界検証で
+  残るunknownはl028 (s5 81011) のみ・per-root coverageはBASEと一致して改善
+  のみ) / delta extractor (verdict flips空・new_free空・class 1849の
+  BASE-unknown 53子==batch-26 key集合で52行解決・leftover==[81011]==l028・
+  holder classのunknown_now減少は自身のmembership分のみ・closure候補表
+  ranking churn: 1849 rank 24→2) / 各stageのtamper battery (maker 5種・
+  refresh 2種・extractor 4種・計11 probe全検出+復元byte一致・検出後kit 204/204
+  再検証)。
+- route statement (条件付き・採用後のscheduling quantitiesに過ぎない): 52
+  LOSS行採用によりclass 1849の費用子53個のうち52個がcanonical上LOSSとなり、
+  l028 (s5 81011) のみunknownとして残る。**l028は28番目のunconsumed closure
+  WIN候補 (4系統裏付け) のため、loss-only採用ではclass 1849は決して閉鎖
+  しない** (閉鎖資格はl028の採用判断がscrutiny owner C++第二実装 gate を
+  通過した後の別法律に依る)。closure候補表上のclass 1849 rankingは24→2
+  (unknown_now 1)・joint greedy 38,415→38,301・probe worklist
+  64,808→64,754 (いずれも簿記量・勝敗ではない)。被覆・secured・root勝敗の
+  主張はrefresh再実行とextractor gateが出す分類deltaのみ。
+- 消費規則: 本Partは52 LOSS行のみをcanonical (6,235→6,287) として採用する。
+  l028 WIN行はhonest labelのみで読み書きとも非接触・不採用 (28 unconsumed
+  closure WIN候補のまま・scrutiny owner C++第二実装 gate pin 9193f5b6のまま
+  ・batch-14residual q042先例: Part AS manifest unadopted_win_ids==[q042] と
+  同一取り扱い)。canonical chain外の投影は作らない。
+- 不接触: batch-27 (Part BR・class 13342・54キー・drive outputsは未出版) に
+  は一切触れない (BRは並走所有)。batch 1..25各dir・各residual packet・
+  fast lane (y18..y21)・inversive-arc lane・finite-field lane・既存reaudit
+  dirs不変。BASE canonical cache f6649fe3はread-only不変。
+- UNKNOWN担保: 標準11x11空盤・19 central-reply roots・二石root {49,60}/{59,60}・
+  S2 {59,60}・class 1/2/4・class 1849 (53キーすべて・l028・52 LOSS行を含む)
+  は本Partのどの時点でもUNKNOWNのまま。nodes数・簿記量を勝敗として読まない。
+- 本amendment observed HEAD-before-push: `4ccf1630062944932654001622477ec6bcfebc67`
+  (push直前にnote blob sha1 `86ab7300…` (469,554 bytes) を再照合し、競合時は
+  再fetchして本節を追記し直し、成立しない場合は簡潔に記録して次回へ回す)。
