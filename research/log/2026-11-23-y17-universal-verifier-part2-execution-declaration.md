@@ -39,7 +39,7 @@ part1 を重複出版せず、下記の独立複製による交叉検証の結�
   アンカー関数ブロックは y=10 part2 検証器の transcribed block から
   verbatim（y=13/y14/y15/y16 part2 と同一の出版ブロック）。
 - C1d: 上記アンカーの y=17 行評価 x=17..159・R<=x+61 の cand17 照合 +
-  低 R 単一トークン還元 R<=z+6（z=15..17）。y=7..y=16 part2 と同一掃引定数。
+  低 R 単一トークン還元 R<=z+6（z=15..17）。y=7..y16 part2 と同一掃引定数。
 - C11r: `census_rows.py` 第三実装（独立生二重回帰・ZHI=80・XMIN=17・
   XMAX=70・RBUF=19・LRU cap 1,600,000・tail 主張 R>=x+z+18 ⇒ (x+17)%2 の
   行内 assert）が書く `output/census.txt`（80*54=4,320 行）を cand17 から
@@ -60,8 +60,8 @@ part1 を重複出版せず、下記の独立複製による交叉検証の結�
 ## 対抗確認（宣言前の最新 main で実施）
 
 - 観測 HEAD `83234a16`: part2 の宣言・実験要素・K1242 以降の y=17 part2 系
-  item は存在しない。search_code \"y17-universal-part2\" / \"y=17 universal
-  part 2\" total_count 0。research/log の y17 系 notes は既知の 5 本
+  item は存在しない。search_code 'y17-universal-part2' / 'y=17 universal
+  part 2' total_count 0。research/log の y17 系 notes は既知の 5 本
   （fit・part1・proof single-owner・verifier single-owner・two-token skeleton）
   のみで part2 着手宣言はなし。実験dirに census_rows.py / preflight は未存在。
 - 実験dir `vertical-fiber-two-token-y17-parametric-allz-proof-20261123` は
