@@ -5305,3 +5305,74 @@ amendmentを出版する (publish-then-execute)。
 - 本status update observed HEAD-before-push: `a83da90` (commit C)。
   note blob lock `eef9de1c…` をre-fetchして照合済み (競合時は本節を
   追記し直す)。
+
+## Part BM (verifier, amendment 2026-11-23, 実行前に宣言): batch-22 k002 WIN行の第三実装交叉検証 + 本host pinned-replica再現 (verdict不消費)
+
+batch-22 (Part BL) で出版されたWIN行 k002 (canonical outputs commit
+`2ed5b90`・2-pass fresh-cold node-exact・replay result 1・nodes
+10,542,704・budget 15M内) に対し、前例 (Part G/K/O/P/T/W/AA/AD/AG/AL/
+AR/AZ/BF/BK) と同じpinned第三実装 (non-df-pn AND/OR minimax) による
+verdict-level交叉検証を、本セッションが単一オーナーとして実行する
+(同一スコープの対抗宣言・amendmentが本amendmentより先にmainにある
+場合は本宣言を破棄して着手しない・本宣言時点でgrep cleanを確認)。
+
+- 対象: `research/experiments/n11-centralreply-closure-b22win-thirdimpl-20261123/`。
+  target 1行: **k002** (s5 150241・key (1153484454560403456, 8)・legal 87・
+  replica_result 1・replica_nodes 10,542,704・holder class 25835 (unknown)・
+  membership_class_count 4・published batch-22 batch-keys `b5f567bd…`)。
+- 機材 (全てpublished byte・実行時にsha照合): third_impl.js `08ea958f…`・
+  verify_tbl.js `c8c52528…`・jsreplay.js replica `84585617…`
+  (batch-22正本byte-copy)・runner `run_thirdimpl.sh` (BF正本byte-copy
+  `a0b77d83…`)・maker (Part BK `e664c4e6…`をbatch-22正本sourcesへ
+  adapt)・audit gate battery (Part BK `f20d83b9…`をbatch-22向けadapt)。
+- 前提ゲート (fail-closed・全て機械検査): maker 3回実行byte一致・sources
+  sha pin (batch-keys-b22 `b5f567bd…`・status-b22.log `27dc7e7c…`・
+  README-b22 `eab65d4f…`・row-audit-winhalt `c6f7585c…`・canonical
+  k002 raw `baf468a3…`/`0ef25c4a…`・published input CSV byte-equality
+  `2736d30a…` (scaffold `106c469`・MANIFEST `a83da90`行と一致)・BF
+  published anchor/negative CSV byte-equality (provenance chain
+  AR→BF→BK→BM))・raw 2-pass node-exact (決定性field比較)・result 1
+  in-budget・status/row-audit/README 3-way照合 (batch-22形式: k002 PASS行
+  `15000000,1,10542704`・k002 WIN-HALT行・row-audit win_rows [k002]・
+  fragment k001 evidence=false・unprobed_count 52・READMEのk002 WIN文言・
+  nodes 10,542,704)。
+- 実行protocol (宣言時点で事前登録・順序も含め固定):
+  1. **本host pinned-replica再現** (Part BJ第二ホスト再現 `ad487a2f`と
+     同型の追加強化・Part BKにはなかった工程): pinned replica
+     (jsreplay `84585617…`) でk002をbudget 15M・fresh-cold・逐次2回
+     実行し、決定性fields (budget/result/nodes) のp1==p2・およびpublished
+     raw fields (result 1・nodes 10,542,704) との一致をauditで機械検査
+     する。exhaustion/mismatch/truncationはhonest記録のみとし検証主張
+     としない (fail-closeした場合は実験を閉じdivergence evidenceとして
+     記録する)。
+  2. negatives ng1/ng2のGATE_FAIL確認 (fall-closed設計どおり) → anchors
+     k02a (WIN 9,106,337 exp / 4,991,527 ttHits)・l1a (LOSS 7,660,602 /
+     3,951,175) の本host node-exact再現 (a/b 2回)。
+  3. rules gate: pinned `verify_tbl.js`でreplica quads 95,670 ==
+     third-impl quads 95,670・triples checked mismatch 0。
+  4. target k002は1行=1solver=1プロセス・cap 300,000,000・wallcap
+     240s・`--memo-power=22`・a/b 2回のdeterminism gate
+     (result/expansions/ttHits/reason同一必須)・逐次実行。wall超過は
+     honest wall-inconclusiveとし検証主張としない。事前の機械予想は
+     ない (expansions scaleについてはreplica nodes比から概算のみを
+     宣言時に残さない・実測を待つ)。
+- 主張と消費規則: 本検証はverdict-level文献作成のみ・**verdict不消費**
+  (k002の採用判断は引き続きscrutiny owner C++第二実装 gate pin
+  `9193f5b6…` のまま)。第三実装verdictがcleanにreplica verdictと一致
+  した場合は「一致した」事実のみ記録し、clean不一致はdivergence
+  evidenceとして記録するが本レーンではverdictを書き換えない。閉鎖・
+  被覆・secured・root勝敗の主張をしない。
+- 不接触: canonical cache (6,235行 `f6649fe3…`) への書き込みなし・
+  21 unconsumed closure WIN候補 (19旧 + a003 + k002) の採用状態不変・
+  batch-22 residual 52キー (k001 fresh-cold再実行 + k003..k053 fresh) に
+  一切触れない・batch-23選定 (rank 19 class 31600) は本Partの別工程
+  ・Part BH (`de1383a7`)・batch-19/20/21系・fast lane (y18/y19)・
+  K1058系・K1250-K1252 inversive-plane系・inversive-arc lane非接触。
+- UNKNOWN担保: 標準11×11空盤・19 central-reply roots・二石root
+  {49,60}/{59,60}・S2 {59,60}・class 1/2/4・class 12643・class 25835
+  (53キーすべて・k002を含む) は本Partのどの時点でもUNKNOWNのまま。
+  nodes数・expansions数・ttHits数を勝敗として読まない。WIN/LOSS採用は
+  別宣言のadoption Part (pinned fail-closed merger `90711961`) でのみ。
+- 本amendment observed HEAD-before-push: push直前に最新mainを再fetchし
+  note blob lock (`94117f27…`・396,586B) を再照合する (競合時は本節を
+  追記し直す)。
