@@ -8187,3 +8187,70 @@ amendmentを含むfetch時点) を再照合・fail-closed shaで更新する。�
   含む) は本Partの実行・出版のどの時点でもUNKNOWNのまま。** nodes数・expansions
   数・wall秒数を勝敗として読まない。WIN/LOSS採用は別adoption Part (pinned merger
   `90711961…` 経由) のみ。
+### Part CG 宣言 (2026-11-23): batch-28 drive-2 WIN行 aa006/aa007 第三実装交叉検証 — publish-then-execute
+
+(observed HEAD-before-push: `a8772a049bd3…` (16:26:27Z・K1251 laneの検索実験commit・
+noteには不触)。push直前にnote blob sha1ロック `5da4cecddac9bf8e5d6bd11f49e72d96c9825f11`
+(614,692 bytes版・Part CD status update適用済み) を再照合し、fail-closed shaで更新する。
+対抗宣言なし (note内 Part CG/thirdimpl-drive2win 記述ゼロを機械確認済み)。実験dir
+`research/experiments/n11-centralreply-closure-b28drive2win-thirdimpl-20261123/` は
+push直前に404を再確認済み。)
+
+- **目的**: Part CD (batch-28 drive-2・class 5343) でpublishされた WIN行2件
+  (aa006: replay result 1 nodes 14,303,810 / aa007: replay result 1 nodes
+  13,483,540) を第三実装 (third_impl.js `08ea958ff59c3234ec5ac55c5c40689bd0999a34e101a88ea0546800cc4a1998`)
+  で交叉検証し、本host pinned-replica 2-pass fresh-cold 再現と合わせて
+  独立検証可能にする。**verdict不消費**。閉鎖・被覆・secured・root勝敗の主張をしない。
+- **事前登録stop rules**: replica MISMATCH (published raw fieldsとのresult/nodes
+  不一致) はhard-stop・即時honest記録。third_impl DIVERGENCE (2-run非決定性) や
+  WALL-INCONCLUSIVE (cap 300M/expansions wallcap 240 到達) もevidenceとして
+  記録するがverdictには変換しない。EXHAUSTEDなし・全target行はfresh-cold 1回ずつ。
+- **kit (scripts 6・全件byte-pin)**: third_impl.js `08ea958f…` (published Part CC
+  からのpin再利用・一切変更なし)・verify_tbl.js `c8c52528…`・jsreplay.js
+  `84585617…` (pinned replica)・run_thirdimpl.sh `a0b77d83…`・make_inputs_cg.py
+  `d7155bd9…` (published sources byte-pin再利用・OUTPUT gate済み)・audit_cg.py
+  `b326a292…` (published Part CC audit.py `b7cfb0ce…` からのdeltaは
+  EXP/SCHEMA/rows-schema文字列とtarget-count gate明細のみ・gate logic不変・
+  宣言内で開示)。audit_cg.pyのrules-gate依存はpinned jsreplay (inv path) 経由。
+- **input (7 files)**: rows.json `3ef56043…` (schema
+  `n11-centralreply-closure-b28drive2win-thirdimpl-input-v1`・targets aa006/aa007
+  (lo/hi/legal/s5_index/replica_result 1/replica_nodes)・anchors k02a (expect win
+  expansions 9,106,337 ttHits 4,991,527) l1a (expect loss expansions 7,660,602
+  ttHits 3,951,175)・negatives ng1 (legal+1改竄) ng2 (stones改竄)) + input CSV 6件
+  (make_inputs_cg.pyによるmachine-derived・published Part CD/BF sources byte-pin:
+  aa006 `cdd84899…` aa007 `493e0a58…` k02a `b6174a3f…` l1a `e13d2a6c…` ng1
+  `8e64b9ad…` ng2 `f19cd5a3…`)。
+- **sources (13 files)**: published Part CD canonical outputs (status-cd.log
+  `343097c2…`・row-audit-cd.json `3e86a32b…`・batch-keys-cd.json `af19208f…`・
+  README-cd.md `338fc136…`・raw aa006.p1 `c9455882…` .p2 `e157a451…` aa007.p1
+  `ad2870ea…` .p2 `bbacf3e3…`・published-input aa006 `cdd84899…` aa007
+  `493e0a58…`) + published Part BF anchor/negative基底CSV 4件 (byte-pin) +
+  published-rows-cc.json `b7222edf…`。
+- **val-gate (8 files)**: sanctioned 4キー (at2m×2 budget 2M・15m×2 budget 15M)
+  input CSV + published baselines (published pins)。本host fresh 4/4 node-exact
+  を実行後確認。
+- **実行protocol (宣言後・逐次・1 solver/1 row/1 process)**: (1) rules gate:
+  `node scripts/verify_tbl.js` 期待「replica quads 95670 mine quads 95670 / triples
+  checked 195044 mismatches 0」。失敗ならhard-stop。(2) val-gate fresh 4本
+  (jsreplay --exact-replay・budget 2M/15M) → published baseline node-exact比較。
+  (3) negatives: run_thirdimpl.sh ng1/ng2 → 期待GATE_FAIL (rc=1)。(4) anchors:
+  k02a/l1a × (a,b) 計4 run → published expansions/ttHits一致。(5) targets
+  pinned-replica 2-pass fresh-cold (aa006/aa007 × p1/p2・budget 15M・各~200s) →
+  published raw fieldsとnode-exact。(6) targets third_impl 2-run pair
+  (aa006/aa007 × (a,b)・cap 300M wallcap 240) → determinism (a==b) と
+  published replica_result 1との verdict agreement。
+- **監査**: `python3 scripts/audit_cg.py` 3回実行byte一致
+  (audit-run1/2/3.txt + audit-summary-run1/2/3.json) と audit-summary.json。
+  期待全gate PASS・verdict_agreements 2/2。tamper battery (scratch copy上:
+  replica result反転 / raw nodes+1 / input CSV legal改竄 / third_impl pin反転)
+  の各fail検出と実験dir byte不変を検証。
+- **出版**: A scaffold (scripts 6 + input 7 + sources 13 + val-gate inputs/
+  baselines 8) → B outputs (rules-gate.txt + val-gate this-host outs 4 + replica
+  4 + negatives 2 + anchors 4 + targets 4 + audit 7 + status.log) → C README +
+  MANIFEST-sha256 → note status update。全files commit-pinned raw URL fetch-back
+  byte照合・branch path URL (CDN stale) は使わない。
+- **標準11×11空盤・19 central-reply roots・二石root {49,60}/{59,60}・S2 {59,60}・
+  class 1/2/4・class 10968・class 23964・class 5343 (54キーすべて・aa006/aa007を
+  含む) は本Partの実行・出版のどの時点でもUNKNOWNのまま。** nodes数・expansions
+  数・wall秒数を勝敗として読まない。WIN/LOSS採用は別adoption Part (pinned merger
+  `90711961…` 経由) のみ。
