@@ -36,6 +36,18 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/output/grundy_q8.txt
   role: data
   note: q=8の完全Grundy出力（新規）
+- path: research/experiments/finite-field-kyouen-20261120/scripts/extension_orbits.py
+  role: solver
+  note: 3点集合のStabilizerによる4点拡大の軌道分解と交差比クラスの計算
+- path: research/experiments/finite-field-kyouen-20261120/scripts/three_cycle_character.py
+  role: verifier
+  note: 3-サイクル固定点の所在（判別式の平方性）の判定
+- path: research/experiments/finite-field-kyouen-20261120/output/ext_orbits_q5.json
+  role: data
+  note: q=5の拡大軌道（2+6+6+6）と値
+- path: research/experiments/finite-field-kyouen-20261120/output/ext_orbits_q7.json
+  role: data
+  note: q=7の拡大軌道（6x7）と値
 - path: research/experiments/finite-field-kyouen-20261120/scripts/pairing_candidates.py
   role: solver
   note: 固定点なし対合（z -> c/z）の生成
@@ -170,6 +182,37 @@ g₀ = 0 ⟺ g₁ ≠ 0,    g₁ = 0 ⟺ g₂ ≠ 0,    g₂ = 0 ⟺ g₃ ≠ 0
   **「なぜ q=7 だけで3点局面の4点拡大のGrundy値が {0,2} に分かれるか」**に還元された。
 - 前節の対合戦略の失敗と合わせると、**q=7 の異常は「浅い対称性」では説明できない**
   ことが確定した。
+
+## 4点拡大の軌道分解：例外値を持つ軌道はどれか
+
+3点集合 `{0,1,2}` は `F_q` 有理（`0,1,2 ∈ F_q ⊂ F_{q²}`）なので、その Stabilizer は
+S₃ ちょうど（`PGL(2,q²)` の3点集合 Stabilizer の位数は 6）。拡大 `q²−q` 個はこの S₃ で
+軌道に分かれ、**Grundy 値は軌道上で一定**（自己同型不変）である。
+
+| q | 拡大数 | 軌道サイズ | 軌道ごとの Grundy 値 |
+|---:|---:|---|---|
+| 5 | 20 | 2 + 6 + 6 + 6 | **1** ／ 2 ／ 2 ／ 2 |
+| 7 | 42 | 6 × 7 | 0 × 6 ／ **2 × 1** |
+
+- **q=5 のサイズ2軌道**は3-サイクルの固定点（「調和点」）で、**そこだけ値が 1**。
+- **q=7 ではその軌道が存在しない**：3-サイクルの固定点が2つとも基礎円 `P¹(F_q)` 上にあり、
+  拡大ではない。
+- 代わりに q=7 では**一般軌道（サイズ6）が1つだけ値 2** を持ち、残り6つが 0。
+
+したがって `g₃ = mex{軌道の値}` は q=5 で `mex{1,2}=0`、q=7 で `mex{0,2}=1` となる。
+**反転は「(i) 調和軌道が消えること」と「(ii) 一般軌道の値配置が変わること」の合成**である。
+
+**調和軌道の存在条件**：3-サイクル `0→1→2→0` は `F_q` 係数の Möbius 変換なので、
+その固定点は `F_q` 上の2次方程式の根。固定点が基礎円上か拡大かは**判別式の平方性**で決まる
+（`scripts/three_cycle_character.py`）：
+
+| q | 3 | 4 | 5 | 7 | 8 | 9 | 11 | 13 | 16 | 17 | 19 | 23 | 25 | 27 | 29 | 31 | 32 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 基礎円上（調和軌道なし） | ✓ | – | – | ✓ | – | – | – | ✓ | – | – | ✓ | – | – | – | – | ✓ | – |
+
+✓ は `q ∈ {3,7,13,19,31,…}`。ただし **q=3 も ✓ だが反転しない**ので、
+この判別式だけでは反転は説明できない。値そのもの（なぜ一般軌道が 2 を取るのか）は
+さらに深い再帰に依存し、未解明である。
 
 ## 限界
 

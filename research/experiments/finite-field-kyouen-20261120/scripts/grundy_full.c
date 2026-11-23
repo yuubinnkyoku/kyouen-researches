@@ -57,6 +57,9 @@ static int *allowed, *pos, nallowed;
 static uint64_t *bucket[64];     // safe-position masks by size
 static long long first_g[64];
 static int probe_g[4] = {-1, -1, -1, -1};
+static uint64_t *p4_masks = NULL;
+static int p4_count = 0;
+static int *p4_values = NULL;
 static long long probe_children[64];
 static long long bcount[64];
 
@@ -204,6 +207,19 @@ int main(int argc, char **argv) {
     nallowed = n;
     for (int i = 0; i < n; i++) { allowed[i] = i; pos[i] = i; }
 
+    if (argc > 2) {
+        FILE *pf = fopen(argv[2], "r");
+        if (!pf) { perror("probe file"); return 1; }
+        if (fscanf(pf, "%d", &p4_count) != 1) { fprintf(stderr, "bad probe file\n"); return 1; }
+        p4_masks = (uint64_t *)malloc((size_t)p4_count * sizeof(uint64_t));
+        p4_values = (int *)malloc((size_t)p4_count * sizeof(int));
+        for (int z = 0; z < p4_count; z++) {
+            if (fscanf(pf, "%llu", (unsigned long long *)&p4_masks[z]) != 1) { fprintf(stderr, "probe truncated\n"); return 1; }
+            p4_values[z] = -1;
+        }
+        fclose(pf);
+    }
+
     enumerate(0, 0ULL, -1);
     long long total = 0;
     int maxk = 0;
@@ -256,6 +272,10 @@ int main(int argc, char **argv) {
                 uint64_t probe = (s == 1) ? 1ULL : (s == 2) ? 3ULL : 7ULL;
                 if (mask == probe) probe_g[s] = g;
             }
+            if (s == 4 && p4_masks) {
+                for (int z = 0; z < p4_count; z++)
+                    if (p4_masks[z] == mask) p4_values[z] = g;
+            }
         }
         // swap: current becomes the child map for the next (smaller) size
         map_free(&nextmap);
@@ -274,5 +294,7 @@ int main(int argc, char **argv) {
     printf("PROBE %d %d %d\n", probe_g[1], probe_g[2], probe_g[3]);
     for (int g = 0; g < 64; g++)
         if (probe_children[g]) printf("PROBE_CHILDREN %d %lld\n", g, probe_children[g]);
+    for (int z = 0; z < p4_count; z++)
+        printf("PROBE4 %llu %d\n", (unsigned long long)p4_masks[z], p4_values[z]);
     return 0;
 }
