@@ -5548,3 +5548,53 @@ scaffoldをmainに出版しfetch-back検証まで完了した (verdict不消費�
   読まない。
 - 本status update observed HEAD-before-push: push直前に最新mainを
   再fetchしnote blob lock (`1a9b85ea…`・411,288B) を再照合する。
+
+
+### Part BN status update 2 (2026-11-23, execution host = 本レーン continuing session): batch-23 drive-1 WIN-HALT at s001・s002、出版完了
+
+宣言 (`bde1c7de`)・scaffold (`52ff9a09`・status update `d95ca723`) の
+後、宣言protocolどおりbatch-23のdrive-1を本hostで実行し、事前登録
+WIN-HALT規則によりbatchが停止した (verdict不消費)。実験dirの全成果
+をmainに出版しfetch-back検証まで完了した。
+
+- drive-1 (2 worker・260s有界・2-pass fresh cold budget 15M・pinned
+  replica `jsreplay.js` `84585617…`): **s001 WIN (honest label)**
+  (key (1152921505294712832, 32768)・s5 index 62435・legal 78・
+  membership 4・replay result 1・nodes 5,415,927・two-pass node-exact・
+  wall 51/56s) → worker1 rc=45事前登録WIN-HALT。**s002 WIN (honest
+  label)** (key (3458764514374189056, 32768)・legal 88・replay result
+  1・nodes 9,329,444・two-pass node-exact・wall 94/52s) → worker2
+  rc=45。両workerの最初のキーがともにWINであったため **fragment
+  ゼロ** (batch-22のk001のようなmid-flight断片なし)。残り51キー
+  (s003..s053) はfileless UNPROBED、15M同条件の再probe禁止は完走行
+  のみにbinding。
+- 行監査 (汎用事前登録版 `row_audit_batch23_win_halt.py`
+  `f55ae559…`・schema `...batch23-rowaudit-winhalt-v1`): PASS・3回実行
+  byte一致 (json `14aa7f63…`・probed 2・win_rows [s001, s002]・
+  derived_state=true)・tamper battery 3/3検出 (s001 p1 verdict反転→
+  p1/p2 mismatch GATE FAIL / 未probe s003への偽PASS行追加→非completed
+  キーへのverdict行 GATE FAIL / s002のverdict行除去→completed欠落
+  GATE FAIL・scratch copyで実施・実験filesはbyte検証復元)。
+- 出版 (全fetch-back byte一致): 実験dir 81ファイルを3コミットでmain
+  に反映: A `52ff9a09` scaffold 73ファイル (scripts 7 + input 54 +
+  val-gate 12・73/73) → B `597d810` outputs 6ファイル (status.log・
+  raw 4 (s001・s002のp1/p2)・row-audit-winhalt.json・6/6) → C
+  `4dad105b` README + MANIFEST-sha256 79行 (2/2)。
+- 意味 (route bookkeepingのみ・閉鎖主張なし): s001とs002は**22番目
+  と23番目の unconsumed closure WIN 候補** (19旧 + a003 + k002 +
+  s001 + s002)。採用された場合、**class 31600 (rank 19) の全LOSS
+  閉包ルートは2つの独立WIN子で反駁証拠を持つ** (12643・25835と
+  同型・同一クラス内2WINは初めてのパターン)。verdictは一切消費して
+  いない: 採用判断はscrutiny owner C++第二実装 gate pin `9193f5b6…`
+  待ちで本レーンは代行しない。canonical cache (6,235行 `f6649fe3…`)
+  read-only・不変。次batch選定は次回のランが21+2-WIN交積の反駁簿記で
+  行う (runner-up rank 20 class 10968・backup rank 21 class 16957は
+  本batchでは触れていない)。
+- UNKNOWN担保: 標準11×11空盤・19 central-reply roots・二石root
+  {49,60}/{59,60}・S2 {59,60}・class 1/2/4・class 12643・class 25835
+  (53キーすべて)・class 31600 (53キーすべて・s001/s002を含む) は本
+  status update時点でもUNKNOWNのまま。nodes数・legal数を勝敗として
+  読まない。
+- 本status update observed HEAD-before-push: `4dad105b` (commit C)。
+  push直前に最新mainを再fetchしnote blob lock (`900004a0…`・
+  413,325B) を再照合する。
