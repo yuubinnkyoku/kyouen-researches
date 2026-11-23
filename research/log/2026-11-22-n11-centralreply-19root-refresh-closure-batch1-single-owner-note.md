@@ -4747,3 +4747,51 @@ amendmentがある場合は本宣言を破棄して着手しない。branch / PR
   引き継ぐ。
 - 本amendment observed HEAD-before-push:
   `358cac13521bd9cd075c7128763147f7b2511447` (batch-20 Part BG scaffold直後のmain・push直前にnote blob sha `becd61ac…`を再照合し、競合時は再fetchして本節を追記し直す)
+
+## Part BG 出版status update (2026-11-23, solver): batch 20 (class 12457) 完走 - 53/53 two-pass node-exact・honest LOSS 53ラベル・verdict不消費
+
+batch 20 (Part BG, class 12457) は宣言 (`b4c4ac2d`) どおり完走した。
+
+- 実行 (本host・drive 7起動・最終起動は両worker rc=0): 53/53キー
+  **PASS (p1==p2 node-exact・budget 15,000,000内・`# replay_done` x106)**。
+  53ラベルすべて**result=2 (LOSS, pinned contract)**。honest labels
+  として記録したのみ (adoption candidates・消費は別宣言adoption Partが
+  pinned fail-closed mergerで実行)。WIN 0・exhausted 0
+  (WIN-HALT規則・exhaustion規則とも不発動)・mismatch 0。
+- 途中中断: host timeoutによるtruncated-retry 14件を誠実記録
+  (`output/raw/*.truncated.*.out` として断片保存 + published
+  completeness guard (`# replay_done` 検査) によるfresh-cold再実行。
+  完了行の再実行はゼロ)。
+- row audit PASS (`row_audit_batch20.py` `3197c4dc…`・
+  `output/row-audit.json` `1dcb7fb8…`: 53 pass rows・LOSS 53・WIN 0・
+  exhausted 0・mismatches 0・input `efb40b1b…`照合済み)。
+- 出版 (宣言と同一scaffold・実行前にpre-publishedだったもの):
+  commit A `358cac13521bd9cd075c7128763147f7b2511447`
+  (scaffold 69 files・val-gate 4/4 node-exact込み)・
+  commit B `564cc66a4a5b0a48cc4bb7c4010d802f13014e83`
+  (実行outputs 122 files: status.log・row-audit・raw 120)・
+  commit C `928546dfea4b40a3873ddc559fa6082a25445847`
+  (README `ad0c3eec…` + MANIFEST-sha256 `d0ef293b…`・191 entries)。
+  全ファイルfetch-back byte-verified (git blob SHA-1: 69/69・122/122・
+  2/2照合; trees API + local blob再計算の独立経路)。
+- 並走記録: 本Partの実行中にmainへ K1058 knowledge commit (`74fa9731`)
+  と**Part BH宣言** (`de1383a7`: batch-19 residual w003..w053継続・
+  WIN-CONTINUE事前登録) がpushされた。本Partはいずれのパスにも
+  触れていない (非接触維持)。
+- verdict消費: **ゼロ**。canonical cache (6,182行 `0b594f7e…`) 書込み
+  ゼロ。19 unconsumed closure WIN候補 (b018/d002/e002/f017/g018/j033/
+  h045/z003/n005/n006/p002/p003/r001/r002/q042/v001/v002/w001 (s5 63802)/
+  w002 (s5 109169)) は読み書きとも非接触 (scrutiny owner C++ gate
+  `9193f5b6…`のまま)。
+- route statement (条件付き・verdictではない): class 12457 (rank 17・
+  route-alive) の費用子54すべてがラベルを持つ (既知子 {126899: LOSS} +
+  probe 53・採用は一切行っていない)。53 LOSS行の採用が成立すれば
+  class 12457の全子LOSS閉包ルートが確定するが、これは別宣言
+  adoption Partの仕事。次のroute-alive closure候補はrank 18 class 12643
+  (runner-up・backups 25835/31600もroute-alive機械検証済み)。
+- UNKNOWN担保: 標準11x11空盤・19 central-reply roots・二石root
+  {49,60}/{59,60}・S2 {59,60}・class 12457・全53キーは本時点で
+  **UNKNOWNのまま** (nodes数は簿記であり勝敗ではない)。
+- 本status update observed HEAD-before-push: push直前に最新mainを
+  再fetchし、note blob lock `0e0ec792ea3ee16ef700292f858e097078e9bcc3`
+  を再照合する (競合時は本節を追記し直す)。
