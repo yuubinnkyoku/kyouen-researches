@@ -1,0 +1,18 @@
+# batch-19 status.log (class 16513 exact-S5 probe, Part BE)
+# declaration: Part BE commit 2dbb67145fe3eb5d2fd694958a3ed1034d0fce76 (note blob eb6066e68244324136e8f9dfeadb6e543779c7e7, observed HEAD-before-push b546b56d1c4bccb0d2fbf6f150d9190649fc9627)
+# base: published canonical exact-S5 verdict cache 6,182 rows sha256 0b594f7e14d7eb67263d38a3daa2816e1fd0b73b23403f9b58ca2917225f877a (Part BC adoption output, main) - probe worklist etc. NOT used/read, keys derived from graph+cache only
+# keys: 53 class-16513 unknown graph-cost children w001..w053, batch-keys.json sha256 9609aaf3116f2ba80c206ae66b09249af1855d509d17be588911e6ab72e53d50 (maker make_batch19_keys.py 3x byte-identical, all gates PASS)
+# pins: jsreplay.js 84585617 (byte-copy replica), runbatch.sh f591f8c2, runwave.sh 8efd78c2 (published batch-17 originals), merger 90711961 (not used this Part), quarantine 81d23160
+# protocol: 2-pass fresh cold, budget 15,000,000, 1 solver/1 row/1 process, publish=ALL, worker max 2
+# stop rules (pre-registered): mismatch -> HARD-STOP rc=42; WIN -> HALT rc=45 (honest WIN label only, NOT adopted, verdict not consumed); budget exhaustion -> honest UNKNOWN
+# scope: research/experiments/n11-centralreply-closure-class16513-batch19-20261123/
+# NOTE: verdicts NOT consumed; 17 unconsumed closure WINs unchanged (scrutiny owner C++ gate 9193f5b6 pending); 11x11 empty board and class 16513 remain UNKNOWN
+2026-11-23T00:28:33Z VAL-GATE 4/4 node-exact this-host re-verified (at2m-1/at2m-2 result 0 nodes 2000000/2000000, first-15m (2,3651923), second-15m (2,5040200), forbidden quadruples 95670 x4, all # replay_done, no truncation)
+2026-11-23T00:28:33Z RUNNER-NOTE execution per Part BE protocol: published runbatch.sh (f591f8c2) invoked in bounded 2-worker foreground waves (this session's tool calls cap ~280s per invocation); truncated fragments re-run fresh-cold by the published completeness guard; raw outputs under output/raw/
+2026-11-23T00:31:41Z w001 PASS 15000000,1,6639780
+2026-11-23T00:31:41Z w001 WIN-HALT
+2026-11-23T00:31:54Z w002 PASS 15000000,1,7738714
+2026-11-23T00:31:54Z w002 WIN-HALT
+2026-11-23T00:32:18Z WIN-ROW-DETAIL w001 p1 nodes 6639780 == p2 nodes 6639780 (2-pass node-exact, compared fields identical, wall_s 67/67), legal 84, budget 15000000, result 1, s5 index 63802, keys 1153202980791517184/67108864, # replay_done x2, holder classes (cost-child graph relation): 1363 (unknown), 16513 (unknown)
+2026-11-23T00:32:18Z WIN-ROW-DETAIL w002 p1 nodes 7738714 == p2 nodes 7738714 (2-pass node-exact, compared fields identical, wall_s 81/67), legal 89, budget 15000000, result 1, s5 index 109169, keys 10376575017512075264/67108864, # replay_done x2, holder classes (cost-child graph relation): 2901 (unknown), 16513 (unknown)
+2026-11-23T00:32:18Z EXECUTION-HALTED batch-19 stopped at first wave per pre-registered WIN-HALT rule (rc=45 both workers): w001 WIN and w002 WIN. Honest WIN labels recorded, NOT adopted, verdict consumption ZERO. 2/53 keys probed, 51 keys UNPROBED and remain fresh (no re-probe prohibition triggered - they were never run). Unconsumed closure WIN candidates now 19 (17 prior b018/d002/e002/f017/g018/j033/h045/z003/n005/n006/p002/p003/r001/r002/q042/v001/v002 + w001 + w002), all scrutiny-owner pending (C++ gate 9193f5b6). Route statement (conditional, NOT a verdict): if a WIN on a class-16513 cost child is adopted, the all-LOSS closure route of class 16513 is refuted; class 16513 and the remaining 51 children remain UNKNOWN at this point. The next clean closure candidate per the published 6,182-row base is rank 16 class 5687 (53 unknown, WIN-intersection 0).
