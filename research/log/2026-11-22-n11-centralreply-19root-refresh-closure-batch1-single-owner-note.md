@@ -7683,4 +7683,154 @@ typo-fix `b37117d9` 版) を再照合する。)
   記録であり不変・Part CAのoutputs publicationは本status update着地後という
   事前登録の条件どおり)。
 
-\n\n## Part CB (solver, amendment 2026-11-23): batch-28 closure class 5343 exact-S5 probe (54キー aa001..aa054)・実行前に出版・verdict不消費\n\n(batch-28選定を単一オーナーで着手するamendment。Part CA (batch-27 residual) の進行・outputsとは非接触・相互に進行を待たない。)\n\n- 選定 (published factsのみから機械再導出): 実験dir\n  `research/experiments/n11-centralreply-closure-class5343-batch28-20261123/`。\n  対象は Part BZ正本 merged scenario cache 6,293行 (sha256\n  `9115be9eca1e60828a90c50041f511b598ef79fc0be76d5e16821816e478e93e`) 上の\n  closure順位 rank 27 class 5343 (mask `[1171516445255794688, 0]`・unknown 54・\n  route-alive・29-WIN交積ゼロ・known WIN cost childゼロ・quarantine 0・\n  54キーすべて canonical-safe)。rank→class対応は published BZ reaudit\n  closure-classes.csv (sha256\n  `14fc37c3a6f5c6753cac72a094d2c7693defb4a5e483558b3b87a42016b679d9`) と\n  ranks 1..30 全行一致をmaker内で機械照合済み。rank 22 class 10968・rank 23\n  class 23964 は PKT-collision blockedのまま。rank 28 class 13758\n  (= unknown {459528} = batch-27 packet key o031)・rank 29 class 14103\n  (= {460145} = o037) は batch-27 published packet (Part BR) と衝突するため\n  本選定では除外 (両クラスはreaudit後の将来回)。runner-up: rank 35 class 2251・\n  backup: rank 36 class 34269 (いずれも route-alive・29-WIN交積ゼロ・packet\n  交差ゼロを zero-collision gateで機械確認済み)。\n- 54キー aa001..aa054 (2文字prefix `aa` は新設計: 26単文字は published\n  packets 1..27で使用済み。makerは prior 28 packets全key idが ^[a-z][0-9]{3}$\n  形式であることをfail-closed gateで固定)。s5昇順 28037..199739・legal 64..96・\n  membership {4:44, 3:9, 2:1}。\n- input正本: `input/batch-keys.json` (sha256\n  `af19208fafb61cc20892fa968bc373fe2c4f79da94744dfeed9d2f40ea8481e5`・54キー)\n  + 54 input CSV。maker `scripts/make_batch28_keys.py` (宣言時runtime sha256\n  `d1ffe72f7a92c190db4982bbb59d10da9d1a967a6425fbc75cf745a255422f16`) を4回\n  実行し全55ファイル byte-identicalを本セッションで機械確認済み。maker内\n  fail-closed gate: prior 28 packets (1,406行・1,392 unique・14 shared\n  positions・各packetのsha256埋込み) との交差ゼロ・quarantine 0・canonical\n  重複ゼロ・29-WIN tie (28 + o002 (s5 209134))・ranks 1..26 (rank 22/23 skip)\n  の反駁evidence (rank 6 class 13342 == {209134}・rank 10 class 16957 ==\n  {91296, 368510}・rank 20 class 12643 == {115192}・rank 21 class 31600 ==\n  {62435, 192809}・rank 24 class 25835 == {150241}・rank 25 class 30565 ==\n  {68580, 191299})・rank 2 class 1849 unknown == {81011}・rank 19 class 5687・\n  rank 26 class 5690 route-dead (known WIN == {209644})・BZ adoption tie\n  (6 LOSS行 y002/y004/o001/o003/o005/o007がbase内LOSS(2)・class 16957 unknown\n  51・class 13342 unknown 50)・published候補表807行一致・5830 receipt wins 5。\n- 手法・停止規則・消費規則: Part B..BRと同一。pinned replica `jsreplay.js`\n  (byte-copy sha256\n  `845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df`)・\n  2-pass fresh cold・budget 15,000,000・1 solver / 1 row / 1プロセス・\n  publish=ALL・exact-order=count・worker最大2。runbatch.sh byte-copy (sha256\n  `f591f8c2b67326e53873f8ea70f8d04d18423e7c8ef8359838cbafe8264f3b84`) ・\n  drive driver `drive_batch28.sh` (sha256\n  `08dc059c55f4337d2c0a58c7e644a529af604a052a9137381345c3af6b6a2a5f`・1回起動\n  あたりtimeout 260秒有界・残キー奇偶分割・worker最大2) を反復起動。\n  determinism mismatch → 即時HARD-STOP (rc=42・以後のdrive起動も停止)。WIN\n  (result 1) → 即時HALT (rc=45)・honest WIN label・verdict不消費 (29\n  unconsumed closure WIN候補と書き込みとも非接触・本batchのWIN行は30番目\n  以降の候補として誠実記録)。budget枯渇 (result 0) → honest EXHAUSTED\n  (UNKNOWN・同一条件での再probe禁止)。\n- val-gate (実行前・本host): batch-23..27と同一4アンカー (at2m 2行 →\n  result 0 / nodes 2,000,000・15m 2行 → result 2 / nodes 3,651,923 /\n  5,040,200・禁止四角 95,670 x4・`# replay_done` x4)。published-baseline 4組\n  (batch-27 published kitのbyte-copy) に対するnode数完全一致が実行の前提\n  条件。本host再生成は val-gate/*.cb-host.out としてoutputs出版に含める。\n- row-audit: 列挙完遂後 `row_audit_batch28.py` (再適用版・sha256\n  `656cac31fd95f7193c3df12efa05512cf2e746063740cfee7e5c574a5be66d56`) で\n  54キー全行監査3回byte一致 + tamper battery (verdict反転・WIN行pair除去・\n  replay_done除去等・全tamper検出assert)。WIN-HALT停止時はWIN行pair照合\n  最小派生版 `row_audit_batch28_win_halt.py` (sha256\n  `730ef5505deb9ea54c8a0c2986f88e9d071a1b76d138f4c26b9859208c637438`) を\n  併用 (Part BT先例の事前登録と同一)。\n- 消費規則: 2-pass一致かつ result 2 (LOSS) のキーのみ increment cache候補と\n  して出版してよい (canonical採用は別adoption Partがpinned fail-closed merger\n  `90711961…` で実施)。本batch単体ではroot被覆・クラス閉鎖・第三手securedの\n  主張をしない (閉鎖判定は後続のreaudit + 独立監査が行う)。\n- 不接触: Part CA (batch-27 residual continuation・並走所有) の実験dir・\n  outputs・batch-27 dir byte-pinには本Partは一切書き込まない (相互に進行を\n  待たない)。本Partの54キーはpublished 28 packetsと交差ゼロ (maker gate)・\n  Part CA残留キー (o004..o054) ともprefix・s5集合でdisjoint。batch 1..27\n  published dirs不変。fast lane (y=22/23宣言)・finite-field lane (K1254)・\n  inversive/z19 lanes非接触。canonical BASE/正本 (`e32a2e44…` / `9115be9e`)\n  read-only (本Partはverdict cacheへ書き込まない)。\n- UNKNOWN担保: 標準11x11空盤・19 central-reply roots・二石root\n  {49,60}/{59,60}・S2 {59,60}・class 1/2/4・class 10968・class 23964・\n  class 5343 (54キーすべて) は本Partの実行・出版のどの時点でもUNKNOWNの\n  まま。nodes数・pass数を勝敗として読まない。\n- 本amendment observed HEAD-before-push: `d6c37739cb478f18832e4d3edec8ffbacaec342b` (2026-11-23)。push直前に\n  最新mainを再fetchしnote blob sha1ロック `94417ca8fd92b3a8975f2c4d3bc74eab456aa793` を再照合する\n  (競合時は再fetchして本節を追記し直し、成立しなければ簡潔に記録して次回へ\n  回す)。\n\n\n\n### Part CB status update (2026-11-23, solver): batch-28 class 5343 WIN-HALT aa001/aa002 - 出版82ファイルfetch-back byte一致・verdict不消費 (UNKNOWN担保不変)\n\n(observed HEAD-before-push: `4f9d2cef7e6b12bf52bf9ffd3bcba8869ffca194`。push直前にnote blob sha1ロック\n`eb7e4454639406f36a8c182611080c5c301dde08` (fetch時点版) を再照合する。)\n\n- 宣言 (`395219833f80a5d345c0acf999407b31e66832cb`, publish-then-execute・宣言host\n  実行) どおり実行。preflight: maker x4 byte-identical (全55ファイル)・\n  全gate PASS・push直前の対抗確認 (対抗batch-28宣言なし・実験dir不在を\n  機械確認済み)。\n- val-gate (本host): cb-host 4/4 node-exact (published-baseline byte-copy基準・\n  禁止四角 95,670 x4・`# replay_done` x4・wall_s比較外)。\n- drive-1: 1 invocation (drive_batch28.sh・2 worker・260s有界) で **両workerとも\n  最初のキーで事前登録 WIN-HALT rc=45**。\n  **aa002 WIN** (honest label・2-pass node-exact・result 1・nodes 6,527,041\n  (budget 15M内)・key (1171516445390012416, 0)・s5 index 87306・legal 86・\n  membership 2・wall 72/73s)・**aa001 WIN** (honest label・2-pass node-exact・\n  result 1・nodes 13,183,855・key (1315631633331650560, 0)・s5 index 28037・\n  legal 88・membership 4・wall 147/75s)。**30番目・31番目の候補**として誠実記録\n  (29 unconsumed closure WIN候補と書き込みとも非接触・採用判断は scrutiny\n  owner C++第二実装 gate pin `9193f5b6…` のまま・本レーンは代行しない)。\n  残り52キー (aa003..aa054) は fileless UNPROBED・EXHAUSTED 0・MISMATCH 0\n  (rc=42不発)・truncated断片 0。\n- row-audit-winhalt (最小派生版 `96867282…`・schema\n  `n11-centralreply-closure-class5343-batch28-rowaudit-winhalt-v1`): PASS 3回\n  byte一致 (json sha256 `3f50b4f6…`)・completed 2 (WIN 2)・fragments []・\n  fileless 52・unprobed 52。tamper battery **7/7検出** (verdict反転 / nodes改竄 /\n  packet legal改竄 (batch-keys.json) / status WIN-pair除去 / replay_done strip /\n  budget改竄 / nondigit nodes)・実験filesはbattery前後でbyte不変。\n- 出版3コミット (commit-pinned raw URLでfetch-back **82/82 byte一致**):\n  scaffold `a3dc8202953423620c94735e6345435734f1f63b` (scripts 7 + input 55 +\n  val-gate 12)・outputs `84d495e8b4b42f57969994b071d6b4e3c28d923c` (raw 4 +\n  status.log + row-audit json)・README+MANIFEST\n  `4f9d2cef7e6b12bf52bf9ffd3bcba8869ffca194` (MANIFEST 81行)。実験dir:\n  `research/experiments/n11-centralreply-closure-class5343-batch28-20261123/`。\n- honest事故記録 (2件・いずれも検証層が捕捉): (1) 事前登録版\n  `scripts/row_audit_batch28_win_halt.py` (宣言pin `730ef550…`) は batch-26版\n  からのsed適用時に単文字前提のkey id gate (len 4・first letter・`o\d{3}`) が\n  残っており、batch-28の2文字prefix `aa###` に対してfail-closeした (監査対象\n  ファイルは無傷)。差分は当該gate 1箇所を `aa[0-9]{3}` 形式に修正するだけの\n  最小派生版を出版し全行監査に使用 (fail-close自体も誠実記録)。(2) tamper\n  battery初回構築の2件 (input CSV直接改竄・sedパターン不一致) はbattery側の\n  構築ミスで監査のgapではない (実験files無改変・正規battery 7/7で裏どり)。\n- 意味 (route statementのみ・verdict不消費): aa001/aa002 のいずれかが採用された\n  場合、**class 5343 の全LOSS閉包ルートは反駁証拠を持つ** (batch-21 a003・\n  batch-22 k002・batch-26 l028・batch-27 o002 に続く)。bookkeepingのみで閉鎖・\n  被覆・secured・root勝敗の主張はしない。\n- 次回以降の候補: (a) batch-28 WIN 2行 (aa001/aa002) の第三実装交叉検証\n  (Part BY先例)・(b) aa001/aa002あるいは将来のLOSS行adoption (別Part・pinned\n  merger `90711961…` 経由のみ)・(c) batch-29選定はreaudit再実行後 (rank 28\n  class 13758 {459528} = batch-27 o031・rank 29 class 14103 {460145} = o037 は\n  batch-27 packet衝突でreaudit待ち・rank 35 class 2251・rank 36 class 34269 が\n  zero-collision clean候補)。Part CA (batch-27 residual) の進行とは非接触。\n- **標準11×11空盤・19 central-reply roots・二石root {49,60}/{59,60}・S2\n  {59,60}・class 1/2/4・class 10968・class 23964・class 5343 (54キーすべて・\n  aa001/aa002を含む) は本Partの実行・出版のどの時点でもUNKNOWNのまま。**\n  nodes数・wall秒数を勝敗として読まない。\n\n
+
+## Part CB (solver, amendment 2026-11-23): batch-28 closure class 5343 exact-S5 probe (54キー aa001..aa054)・実行前に出版・verdict不消費
+
+(batch-28選定を単一オーナーで着手するamendment。Part CA (batch-27 residual) の進行・outputsとは非接触・相互に進行を待たない。)
+
+- 選定 (published factsのみから機械再導出): 実験dir
+  `research/experiments/n11-centralreply-closure-class5343-batch28-20261123/`。
+  対象は Part BZ正本 merged scenario cache 6,293行 (sha256
+  `9115be9eca1e60828a90c50041f511b598ef79fc0be76d5e16821816e478e93e`) 上の
+  closure順位 rank 27 class 5343 (mask `[1171516445255794688, 0]`・unknown 54・
+  route-alive・29-WIN交積ゼロ・known WIN cost childゼロ・quarantine 0・
+  54キーすべて canonical-safe)。rank→class対応は published BZ reaudit
+  closure-classes.csv (sha256
+  `14fc37c3a6f5c6753cac72a094d2c7693defb4a5e483558b3b87a42016b679d9`) と
+  ranks 1..30 全行一致をmaker内で機械照合済み。rank 22 class 10968・rank 23
+  class 23964 は PKT-collision blockedのまま。rank 28 class 13758
+  (= unknown {459528} = batch-27 packet key o031)・rank 29 class 14103
+  (= {460145} = o037) は batch-27 published packet (Part BR) と衝突するため
+  本選定では除外 (両クラスはreaudit後の将来回)。runner-up: rank 35 class 2251・
+  backup: rank 36 class 34269 (いずれも route-alive・29-WIN交積ゼロ・packet
+  交差ゼロを zero-collision gateで機械確認済み)。
+- 54キー aa001..aa054 (2文字prefix `aa` は新設計: 26単文字は published
+  packets 1..27で使用済み。makerは prior 28 packets全key idが ^[a-z][0-9]{3}$
+  形式であることをfail-closed gateで固定)。s5昇順 28037..199739・legal 64..96・
+  membership {4:44, 3:9, 2:1}。
+- input正本: `input/batch-keys.json` (sha256
+  `af19208fafb61cc20892fa968bc373fe2c4f79da94744dfeed9d2f40ea8481e5`・54キー)
+  + 54 input CSV。maker `scripts/make_batch28_keys.py` (宣言時runtime sha256
+  `d1ffe72f7a92c190db4982bbb59d10da9d1a967a6425fbc75cf745a255422f16`) を4回
+  実行し全55ファイル byte-identicalを本セッションで機械確認済み。maker内
+  fail-closed gate: prior 28 packets (1,406行・1,392 unique・14 shared
+  positions・各packetのsha256埋込み) との交差ゼロ・quarantine 0・canonical
+  重複ゼロ・29-WIN tie (28 + o002 (s5 209134))・ranks 1..26 (rank 22/23 skip)
+  の反駁evidence (rank 6 class 13342 == {209134}・rank 10 class 16957 ==
+  {91296, 368510}・rank 20 class 12643 == {115192}・rank 21 class 31600 ==
+  {62435, 192809}・rank 24 class 25835 == {150241}・rank 25 class 30565 ==
+  {68580, 191299})・rank 2 class 1849 unknown == {81011}・rank 19 class 5687・
+  rank 26 class 5690 route-dead (known WIN == {209644})・BZ adoption tie
+  (6 LOSS行 y002/y004/o001/o003/o005/o007がbase内LOSS(2)・class 16957 unknown
+  51・class 13342 unknown 50)・published候補表807行一致・5830 receipt wins 5。
+- 手法・停止規則・消費規則: Part B..BRと同一。pinned replica `jsreplay.js`
+  (byte-copy sha256
+  `845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df`)・
+  2-pass fresh cold・budget 15,000,000・1 solver / 1 row / 1プロセス・
+  publish=ALL・exact-order=count・worker最大2。runbatch.sh byte-copy (sha256
+  `f591f8c2b67326e53873f8ea70f8d04d18423e7c8ef8359838cbafe8264f3b84`) ・
+  drive driver `drive_batch28.sh` (sha256
+  `08dc059c55f4337d2c0a58c7e644a529af604a052a9137381345c3af6b6a2a5f`・1回起動
+  あたりtimeout 260秒有界・残キー奇偶分割・worker最大2) を反復起動。
+  determinism mismatch → 即時HARD-STOP (rc=42・以後のdrive起動も停止)。WIN
+  (result 1) → 即時HALT (rc=45)・honest WIN label・verdict不消費 (29
+  unconsumed closure WIN候補と書き込みとも非接触・本batchのWIN行は30番目
+  以降の候補として誠実記録)。budget枯渇 (result 0) → honest EXHAUSTED
+  (UNKNOWN・同一条件での再probe禁止)。
+- val-gate (実行前・本host): batch-23..27と同一4アンカー (at2m 2行 →
+  result 0 / nodes 2,000,000・15m 2行 → result 2 / nodes 3,651,923 /
+  5,040,200・禁止四角 95,670 x4・`# replay_done` x4)。published-baseline 4組
+  (batch-27 published kitのbyte-copy) に対するnode数完全一致が実行の前提
+  条件。本host再生成は val-gate/*.cb-host.out としてoutputs出版に含める。
+- row-audit: 列挙完遂後 `row_audit_batch28.py` (再適用版・sha256
+  `656cac31fd95f7193c3df12efa05512cf2e746063740cfee7e5c574a5be66d56`) で
+  54キー全行監査3回byte一致 + tamper battery (verdict反転・WIN行pair除去・
+  replay_done除去等・全tamper検出assert)。WIN-HALT停止時はWIN行pair照合
+  最小派生版 `row_audit_batch28_win_halt.py` (sha256
+  `730ef5505deb9ea54c8a0c2986f88e9d071a1b76d138f4c26b9859208c637438`) を
+  併用 (Part BT先例の事前登録と同一)。
+- 消費規則: 2-pass一致かつ result 2 (LOSS) のキーのみ increment cache候補と
+  して出版してよい (canonical採用は別adoption Partがpinned fail-closed merger
+  `90711961…` で実施)。本batch単体ではroot被覆・クラス閉鎖・第三手securedの
+  主張をしない (閉鎖判定は後続のreaudit + 独立監査が行う)。
+- 不接触: Part CA (batch-27 residual continuation・並走所有) の実験dir・
+  outputs・batch-27 dir byte-pinには本Partは一切書き込まない (相互に進行を
+  待たない)。本Partの54キーはpublished 28 packetsと交差ゼロ (maker gate)・
+  Part CA残留キー (o004..o054) ともprefix・s5集合でdisjoint。batch 1..27
+  published dirs不変。fast lane (y=22/23宣言)・finite-field lane (K1254)・
+  inversive/z19 lanes非接触。canonical BASE/正本 (`e32a2e44…` / `9115be9e`)
+  read-only (本Partはverdict cacheへ書き込まない)。
+- UNKNOWN担保: 標準11x11空盤・19 central-reply roots・二石root
+  {49,60}/{59,60}・S2 {59,60}・class 1/2/4・class 10968・class 23964・
+  class 5343 (54キーすべて) は本Partの実行・出版のどの時点でもUNKNOWNの
+  まま。nodes数・pass数を勝敗として読まない。
+- 本amendment observed HEAD-before-push: `d6c37739cb478f18832e4d3edec8ffbacaec342b` (2026-11-23)。push直前に
+  最新mainを再fetchしnote blob sha1ロック `94417ca8fd92b3a8975f2c4d3bc74eab456aa793` を再照合する
+  (競合時は再fetchして本節を追記し直し、成立しなければ簡潔に記録して次回へ
+  回す)。
+
+
+
+### Part CB status update (2026-11-23, solver): batch-28 class 5343 WIN-HALT aa001/aa002 - 出版82ファイルfetch-back byte一致・verdict不消費 (UNKNOWN担保不変)
+
+(observed HEAD-before-push: `4f9d2cef7e6b12bf52bf9ffd3bcba8869ffca194`。push直前にnote blob sha1ロック
+`eb7e4454639406f36a8c182611080c5c301dde08` (fetch時点版) を再照合する。)
+
+- 宣言 (`395219833f80a5d345c0acf999407b31e66832cb`, publish-then-execute・宣言host
+  実行) どおり実行。preflight: maker x4 byte-identical (全55ファイル)・
+  全gate PASS・push直前の対抗確認 (対抗batch-28宣言なし・実験dir不在を
+  機械確認済み)。
+- val-gate (本host): cb-host 4/4 node-exact (published-baseline byte-copy基準・
+  禁止四角 95,670 x4・`# replay_done` x4・wall_s比較外)。
+- drive-1: 1 invocation (drive_batch28.sh・2 worker・260s有界) で **両workerとも
+  最初のキーで事前登録 WIN-HALT rc=45**。
+  **aa002 WIN** (honest label・2-pass node-exact・result 1・nodes 6,527,041
+  (budget 15M内)・key (1171516445390012416, 0)・s5 index 87306・legal 86・
+  membership 2・wall 72/73s)・**aa001 WIN** (honest label・2-pass node-exact・
+  result 1・nodes 13,183,855・key (1315631633331650560, 0)・s5 index 28037・
+  legal 88・membership 4・wall 147/75s)。**30番目・31番目の候補**として誠実記録
+  (29 unconsumed closure WIN候補と書き込みとも非接触・採用判断は scrutiny
+  owner C++第二実装 gate pin `9193f5b6…` のまま・本レーンは代行しない)。
+  残り52キー (aa003..aa054) は fileless UNPROBED・EXHAUSTED 0・MISMATCH 0
+  (rc=42不発)・truncated断片 0。
+- row-audit-winhalt (最小派生版 `96867282…`・schema
+  `n11-centralreply-closure-class5343-batch28-rowaudit-winhalt-v1`): PASS 3回
+  byte一致 (json sha256 `3f50b4f6…`)・completed 2 (WIN 2)・fragments []・
+  fileless 52・unprobed 52。tamper battery **7/7検出** (verdict反転 / nodes改竄 /
+  packet legal改竄 (batch-keys.json) / status WIN-pair除去 / replay_done strip /
+  budget改竄 / nondigit nodes)・実験filesはbattery前後でbyte不変。
+- 出版3コミット (commit-pinned raw URLでfetch-back **82/82 byte一致**):
+  scaffold `a3dc8202953423620c94735e6345435734f1f63b` (scripts 7 + input 55 +
+  val-gate 12)・outputs `84d495e8b4b42f57969994b071d6b4e3c28d923c` (raw 4 +
+  status.log + row-audit json)・README+MANIFEST
+  `4f9d2cef7e6b12bf52bf9ffd3bcba8869ffca194` (MANIFEST 81行)。実験dir:
+  `research/experiments/n11-centralreply-closure-class5343-batch28-20261123/`。
+- honest事故記録 (2件・いずれも検証層が捕捉): (1) 事前登録版
+  `scripts/row_audit_batch28_win_halt.py` (宣言pin `730ef550…`) は batch-26版
+  からのsed適用時に単文字前提のkey id gate (len 4・first letter・`o\d{3}`) が
+  残っており、batch-28の2文字prefix `aa###` に対してfail-closeした (監査対象
+  ファイルは無傷)。差分は当該gate 1箇所を `aa[0-9]{3}` 形式に修正するだけの
+  最小派生版を出版し全行監査に使用 (fail-close自体も誠実記録)。(2) tamper
+  battery初回構築の2件 (input CSV直接改竄・sedパターン不一致) はbattery側の
+  構築ミスで監査のgapではない (実験files無改変・正規battery 7/7で裏どり)。
+- 意味 (route statementのみ・verdict不消費): aa001/aa002 のいずれかが採用された
+  場合、**class 5343 の全LOSS閉包ルートは反駁証拠を持つ** (batch-21 a003・
+  batch-22 k002・batch-26 l028・batch-27 o002 に続く)。bookkeepingのみで閉鎖・
+  被覆・secured・root勝敗の主張はしない。
+- 次回以降の候補: (a) batch-28 WIN 2行 (aa001/aa002) の第三実装交叉検証
+  (Part BY先例)・(b) aa001/aa002あるいは将来のLOSS行adoption (別Part・pinned
+  merger `90711961…` 経由のみ)・(c) batch-29選定はreaudit再実行後 (rank 28
+  class 13758 {459528} = batch-27 o031・rank 29 class 14103 {460145} = o037 は
+  batch-27 packet衝突でreaudit待ち・rank 35 class 2251・rank 36 class 34269 が
+  zero-collision clean候補)。Part CA (batch-27 residual) の進行とは非接触。
+- **標準11×11空盤・19 central-reply roots・二石root {49,60}/{59,60}・S2
+  {59,60}・class 1/2/4・class 10968・class 23964・class 5343 (54キーすべて・
+  aa001/aa002を含む) は本Partの実行・出版のどの時点でもUNKNOWNのまま。**
+  nodes数・wall秒数を勝敗として読まない。
+
+- 事後注記 (typo-fix・本commit): Part CB宣言sectionとPart CB status sectionは
+  初回pushで行区切りが JSON escape起因の literal `\n` 2文字列として書き込まれる
+  事故があった (数値・sha・published filesへの影響なし・fetch-back検証で検出)。
+  本commitで該当2sectionのみ改行へ復元した (junction junk 2 個・section内 144 個)。
+  observed HEAD-before-push: `e3c4cbc6b6fb3b2e18b11375e0e0809759872024`、修復時 note blob sha1ロック `b3e92fe8cb25b01bf7e90c7cf5886e16e3ca5542`。
+  その他のsection・数値・shaは不変。
