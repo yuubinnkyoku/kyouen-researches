@@ -1,0 +1,19 @@
+{
+  "cand17": {
+    "bytes": 3465,
+    "equal_fit_verbatim_renamed": true,
+    "equal_machine_verbatim_renamed": true,
+    "sources_agree": true
+  },
+  "cand18": {
+    "bytes": 3211,
+    "equal_fit_verbatim": true
+  },
+  "check": "y18 verifier transcription byte-equality vs published bytes",
+  "engine": {
+    "bytes": 1957,
+    "equal": true
+  },
+  "overall": "PASS",
+  "verifier": "research/experiments/vertical-fiber-two-token-y18-parametric-allz-proof-20261123/verify_y18_universal.py"
+}
