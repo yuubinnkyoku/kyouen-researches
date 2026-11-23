@@ -6139,3 +6139,67 @@ drive-1を第二ホストとして同時実行しており、両ホストのl028
   最新mainのnote blob lockを再照合する (batch-27 status update等の並走
   追記が挟まった場合は本節を追記し直し、成立しない場合は簡潔に記録して
   次回へ回す)。
+
+### Part BS status update (2026-11-23, execution host = 本レーン continuing session)
+
+宣言 (note amendment commit `c4dd29a6`・observed HEAD-before-push
+`efe21bd35`) どおり、宣言後に本hostがpublished batch-26 WIN行 l028を
+第三実装交叉検証し、出版まで完了した (verdict不消費)。実験dir
+`research/experiments/n11-centralreply-closure-b26win-thirdimpl-20261123/`。
+※運用記録: 宣言push時にプレースホルダ未置換の誤コミット `f4ada6a6`
+("..."3文字追記) が一度成立したが、同一セッション内のfail-closed
+検証で即時に検知し `c4dd29a6` が修正した (baseはblob `01bd66f8` 相当
+329,972 charsと機械検証・誤コミットは履歴に残る・fetch-back blob
+`0910a569` 454,355 bytes)。
+
+- 実行 (宣言protocol順・逐次): rules gate `verify_tbl.js` 95,670==
+  95,670・triples checked 195,044 mismatch 0 → 本host pinned-replica
+  再現: p1/p2ともに **result 1・nodes 4,893,014・two-pass node-exact
+  かつpublished raw fieldsと完全一致** (wall 24s/25s・exhaustion/
+  mismatch/truncationゼロ) → negatives ng1/ng2 GATE_FAIL文言どおり →
+  anchors **k02a WIN 9,106,337/4,991,527 (25.99s/26.15s)**・**l1a
+  LOSS 7,660,602/3,951,175 (22.42s/22.75s)** がpublished第三実装値に
+  node-exact再現 (a/b同一) → target **l028 third-impl clean WIN
+  (result 1) 5,646,148 expansions / 3,187,475 ttHits** (replica
+  4,893,014 nodes・ratio 1.15・a/b determinism PASS・16.65s/16.60s)・
+  **replica verdict一致 1/1**・WALL-INCONCLUSIVE 0・DIVERGENCE 0。
+- maker `make_inputs_bs.py` (`313a8d71…`): 全gate PASS・4回実行byte
+  一致・tamper 5/5検出 (T1 raw pin 1bit・T2 row-audit pin 1bit・
+  T3 README pin 1bit・T4 row-audit内容改変 (pass_rows 30→31)・T5 raw
+  内容改変 (nodes 4893014→4893015)・scratch上・sources無改変)・clean
+  control PASS。
+- audit `audit.py` (`afc4da1d…`): **50/50 gates PASS**・3回実行byte
+  一致 (schema `n11-centralreply-closure-b26win-thirdimpl-audit-v1`・
+  gate内訳: input 5 + pins 3 + rows/count 2 + rules 2 +
+  replica-thishost 7 + anchors 18 + negatives 2 + targets 10)・
+  audit tamper battery 3/3検出 (T1 maker README pin反転→ABORT /
+  T2 target det-pair改ざん (l028.b result 1→2)→`target-l028-det-pair`
+  DIVERGENCE検出 / T3 G0 input改ざん (legal 88→89)→`input-l028-
+  matches-rows` gate fail・scratch上で実施し実験filesはbattery前後
+  byte同一を検証)・clean control PASS。
+- 出版 (fetch-back byte照合済み): 実験dir 41ファイルを宣言込みでmain
+  に反映: 宣言 `c4dd29a6` (note amendment) → A `01851bc9` scaffold
+  23ファイル (fetch-back 23/23) → B `77d3cadf` outputs 16ファイル
+  (fetch-back 16/16) → C `b5008fb7` README (sha256 `6baa01f6…`) +
+  MANIFEST-sha256 39行 (`e1138ae7…`・39ファイルすべてbyte一致・
+  追記後の実験README文言どおり)。
+- 意味 (route statement・閉鎖主張なし): **l028 WIN (honest label)
+  は合計4系統で裏付けられた**: (a) batch-26 drive-1 第一ホストの
+  pinned df-pn replica 2-pass node-exact・(b) drive-1 第二 ホスト再現
+  (本レーン `e38a49f03`・byte同一)・(c) 宣言protocol step 2の本host
+  fresh-cold replica再現・(d) 独立第三実装a/b determinism pair
+  (**28番目のunconsumed closure WIN候補・verdict不消費**)。採用判断は
+  scrutiny owner C++第二実装 gate pin `9193f5b6…` のまま。canonical
+  cache (6,235行 `f6649fe3…`) 不変。batch-26残留 (fragment l035 +
+  fileless 21キー)・batch-27 (Part BR) には本Partでは一切触れて
+  いない (BRは並走所有)。
+- UNKNOWN担保: 標準11×11空盤・19 central-reply roots・二石root
+  {49,60}/{59,60}・S2 {59,60}・class 1/2/4・class 1849 (53キー
+  すべて・l028を含む)・class 13342 は本status update時点でも
+  UNKNOWNのまま。nodes数・expansions数・ttHits数を勝敗として読ま
+  ない。WIN/LOSS採用は別宣言のadoption Part (pinned fail-closed
+  merger `90711961`) 経由のみ。
+- 本status update observed HEAD-before-push: `b5008fb7` (commit C)。
+  push直前に最新mainを再fetchしnote blob lockを再照合する (batch-27
+  status update等の並走追記が挟まった場合は本節を追記し直し、成立し
+  ない場合は簡潔に記録して次回へ回す)。
