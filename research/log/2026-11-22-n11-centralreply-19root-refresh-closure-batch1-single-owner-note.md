@@ -4625,3 +4625,69 @@ published batch-19 WIN行 w001/w002をpinned第三実装で解き、出版まで
 - 標準11×11空盤・19 central-reply roots・二石root {49,60}/{59,60}・
   S2 {59,60}・class 16513 (残51子)・全53キーは本Partのどの時点でも
   UNKNOWNのまま。nodes数・expansions数を勝敗として読まない。
+
+## Part BG (solver, amendment 2026-11-23): closure class 12457 exact-S5 probe batch 20 (実行前に宣言・verdict不消費)
+
+長期レーン (n11 central-reply closure) のbatch-20として、graph class index
+12457 (mask [1152921504606847268, 0]) の53個のunknown費用子をexact-S5 probe
+する単一オーナー実行を宣言する (batch-20 / closure class 12457 probeという
+スコープに対して本amendmentより先にmainに存在する対抗宣言/amendmentが
+ある場合は本宣言を破棄して着手しない)。
+
+- 選定根拠とroute-alive訂正 (全てpublished byteからの再導出・Part BF時点の
+  resume指針「batch-20選定 (rank 16 class 5687)」を履行する機械検査で
+  rank 16指定に訂正が必要と判明した点を誠実記録): baseはpublished
+  canonical exact-S5 verdict cache 6,182行 sha256 `0b594f7e…` (Part BC採用
+  正本) + update8 receipts (`b658290a…`)。再ランクclosure候補表808クラスの
+  うち rank 1..15 (23101/16757/20421/16371/30345/12264/5473/2634/8785/1518/
+  8106/16930/5830/16131/16513) は再導出unknown費用子と**19 unconsumed
+  closure WIN子** (b018/d002/e002/f017/g018/j033/h045/z003/n005/n006/p002/
+  p003/r001/r002/q042/v001/v002/**w001 s5 63802/w002 s5 109169**) の交差が
+  非空 (win-refuted)。rank 16 class 5687 (unknown 53)はWIN候補との交差0
+  だが、**base + update8 receipts上で費用子 s5 209644 が勝ち (verdict 1)
+  で確定済み** (receipt `209644: 1`・update8正本)。published Part BC refresh機
+  (`refresh_adoption_23101resid.py` sha256 `d6bb2374…`) の公開規則
+  「any cost child that is a known WIN now marks the class excluded」により、
+  class 5687は同refreshの **excluded_now 相当** (全子LOSS閉包ルートは
+  反駁済み。仮に残53子すべてをLOSSで解決してもclass 5687はfreeにならない)。
+  batch-19 READMEの「runner-up 5687 also clean」記述はunconsumed-WIN交差のみ
+  の検査であってknown-WIN子検査を含まず、closure候補としての実行価値の点で
+  不完全だった (published byteは不変のまま、本amendmentが訂正記録)。
+  よって**rank 17 class 12457 (mask [1152921504606847268, 0]・cost size 54・
+  unknown 53・known子は s5 126899 (LOSS確定) の1個のみ・WIN候補交差
+  0・known WIN子なし) がpublished表順で最初のroute-alive候補** (現時点で
+  全子LOSS閉包ルートへの反駁証拠が1つもない) として選定する。runner-upは
+  rank 18 class 12643 (unknown 53・WIN交差0・known WIN子なし・route-alive)。
+  rank 19 class 25835 / rank 20 class 31600も同様にroute-alive (backups)。
+- 機材 (全てpublished byte): replica `jsreplay.js` sha256 `84585617…`
+  byte-copy・`runbatch.sh` `f591f8c2…`・`runwave.sh` `8efd78c2…` (batch-17
+  正本pin)・依存graph `54f9c364…`・update8 `b658290a…`・Board `954d3a10…`・
+  policy `78655e94…`・quarantine `81d23160…`。scaffold keys maker
+  `make_batch20_keys.py` (本Part作成・3回実行byte一致・全gate PASS:
+  53キー0/53 canonical hits・0 quarantine・prior 20パケット981行/967位置と
+  重複0・19-WIN再導出一致・rank 1..17 exact assert・rank 1..16 refutation
+  evidence gate (19-WIN交差またはknown-WIN子・5687は s5 209644=1 を再現)・
+  **route-alive gate: class 12457のknown子集合は{126899: LOSS}のみ**・
+  全キーlegal/membership再導出・`x`接頭辞未使用gate)。
+- val-gate (実行前・本host): batch-19と同一4アンカー。at2m 2 → result 0 /
+  nodes 2,000,000 x2 node-exact・15m 2 → (2, 3651,923) / (2, 5,040,200)
+  node-exact・禁止四角 95,670 x4・`# replay_done` x4 (truncationなし)。
+- protocol (事前登録): 2-pass fresh-cold node-exact、budget 15,000,000、
+  1 solver / 1 row / 1プロセス、worker最大2 (2-core host)、publish=ALL
+  (raw 2-pass全件出版)。stop rules: 決定論 mismatch → HARD-STOP rc=42・
+  WIN → HALT rc=45 (honest WIN labelのみで採用しない・verdict不消費)・
+  budget枯損 → honest UNKNOWN label (同条件での再probe禁止)。本hostの実行は
+  published runnerを上限付きforeground起動 (drive driverはbatch意味論を
+  持たない・中断断片はpublished completeness guardがfresh-cold再実行)。
+- verdict不消費: LOSS行は採用候補のみ (消費は別宣言adoption Partがpinned
+  fail-closed mergerで実行)。19 unconsumed closure WIN行は読み書きとも
+  非接触・採用判定はscrutiny owner C++第二実装 gate pin `9193f5b6…`のまま。
+  batch-19残51キー (w003..w053・fresh) とは非接触。
+- UNKNOWN担保: 標準11x11空盤・19 central-reply roots・class 12457・全キーは
+  本Partのどの時点でもUNKNOWNのまま。nodes/legal/キー数は簿記で勝敗ではない。
+  probe worklist抽出は行わない (キー導出はgraph + published cache + receipts
+  から機械再導出のみ)。
+- 実験dir:
+  `research/experiments/n11-centralreply-closure-class12457-batch20-20261123/`。
+- 本amendment observed HEAD-before-push: 723eb637c1fcfbec8d04a40fa7f634de65615c79
+  (push直前にnote blob sha1を再照合し、競合時は再fetchして本節を追記し直す)。
