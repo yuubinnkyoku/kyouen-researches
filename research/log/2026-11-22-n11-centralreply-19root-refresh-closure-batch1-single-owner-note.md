@@ -5735,3 +5735,66 @@ batch-24は、batch-23 status update 2で予定したrunner-up rank 20 class 109
   `c108a4df…` (Part BO宣言published 422,870B・fetch-back照合済み) →
   本status update追記後のblobはpush時にfetch-backして次回ラン用に
   記録する。
+
+### Part BP宣言 (batch-25, class 30565 rank 23, 2026-11-23、実行前に出版)
+
+本文は publish-then-execute 宣言。以下の選定・パケットはすべて機械再導出
+(prose不使用) であり、実行はこの宣言の後に限る。
+
+- **25-WIN集合確定**: 先の Part BO 結果 (y001 s5 91296・y006 s5 368510)
+  を加えた unconsumed closure WIN 候補は25個。y001/y006 は published
+  batch-24 packet (sha256 486858d6…) から再導出・canonical cache
+  6,235行 (f6649fe3…) 未消費を機械確認。
+- **rank 21 class 16957 は反駁に転落** (verdict不消費):
+  unknown_now[16957] ∩ 25-WIN = {91296, 368510} (published Part BO
+  honest WIN行 y001+y006 による2番目のWIN-PAIR反駁)。
+- **rank 20 class 10968 と rank 22 class 23964 は blocked 継続**
+  (NOT route-dead・WIN反駁証拠ゼロ): batch-24 packet を prior に加えても
+  衝突ピンは不変 (10968 = {273033} = batch-12 n018 単独、23964 =
+  {495193, 550880} = batch-13 p007 + batch-4 e043)。
+- **新事実・rank 25 class 5690 は route-dead**: update8 receipt WIN子
+  {209644} を持つ (rank 16 class 5687 と同一の既知WIN子)。known WIN子
+  を持つため backup にはならない。よって batch-25 の backup は **rank 26
+  class 13342** (mask [1188950301642588192, 0]・cost 54・unknown 54・
+  25-WIN交積空・known_win空・packet交差ゼロ)。runner-up は rank 24
+  class 1849 (mask [1152922672972169216, 0]・cost 53 unknown 53・交差ゼロ)。
+- **対象選定: rank 23 class 30565** (mask [1152921505143717888, 1081344]・
+  groups served (25,80)(36,41)(36,91)・cost 53子すべてunknown・known
+  children {}・25-WIN交積空・packet交差ゼロ)。published候補表
+  (d57a7609… 807行) との (rank→class) 全行一致を機械再確認。
+- 53キー **i001..i053** (prefix "i" は25 published packets ですべて未使用。
+  未使用文字は {i, l, o})。s5昇順 68580..903169・legal 76..94・Board再計算
+  53/53・membership {4:45, 3:8}。canonical cache hits 0/53・quarantine
+  0/53。prior 25 packets (1,246行・1,232一意・cross-packet重複14は
+  membership由来) overlap ゼロ。batch-keys.json sha256
+  `272c0c134e3be17838311d0d3f18f09340d09094d35e15197481c999892390a5`
+  (schema `n11-centralreply-closure-class30565-batch25-input-v1`)。
+- preflight maker `make_batch25_keys.py` `6b461049…`: 全gate PASS・
+  4回実行byte一致・tamper battery 7/7検出 (T1 graph sha pin 1bit /
+  T2 CLASS_MASK 1bit / T3 batch-24 packet sha pin 1bit / T4
+  EXPECTED_PRIOR_ROWS 1246→1247 / T5 rank-21 evidence pin
+  368510→368511 / T6 PKT-collision pin 273033→273034 / T7 rank-25
+  route-dead known-win pin 209644→209645)・clean control PASS。
+  新規gate: 25-WIN集合・rank-21反駁tie (== {91296, 368510})・
+  rank-25 route-dead gate (ranked[24] == 5690・known_win == {209644})・
+  EXPECTED_RANKS 25..28 拡張 (5690/13342/5343/13758)。
+- val-gate 12ファイル: published-baseline 4組は batch-23/24 と同一の
+  byte-copy、this-host 4つは本ホスト再生成 (node-exact一致・禁止四角
+  95,670)。solver `jsreplay.js` `84585617…`・runner `runbatch.sh`
+  `f591f8c2…`・`runwave.sh` `8efd78c2…` はいずれも byte-copy pin。
+- 事前登録stop rules (batch-23/24 と同一): 2 worker・260s有界・
+  2-pass fresh cold・budget 15M・WINは rc=45 で WIN-HALT (verdict不消費)・
+  determinism mismatch は rc=42 HARD-STOP・budget不足は honest
+  EXHAUSTED (UNKNOWN・同一条件での再probeなし)。監査script
+  `row_audit_batch25_win_halt.py` `7b61123e…` (halt キーid固定なし)・
+  `row_audit_batch25.py` `a81da5a5…` は scaffold に事前登録済み。
+- 不接触確認: 本宣言時点の並走非接触コミットは finite-field-kyouen
+  (K1251/K1253) のみ。observed HEAD は push 時に本文末尾の status update
+  に記録する (競合時は本節を追記し直し、成立しない場合は簡潔に記録して
+  次回へ回す)。
+- **標準11×11空盤・19 central-reply roots・二石root {49,60}/{59,60}・
+  S2 {59,60}・class 1/2/4・class 10968・class 23964・class 16957・
+  class 30565 (53キーすべて) はどの時点でもUNKNOWNのまま。** nodes数・
+  legal数を勝敗として読まない。WIN/LOSS採用は別宣言の adoption Part
+  (pinned fail-closed merger 90711961) 経由のみ・scrutiny owner C++
+  第二実装 gate 9193f5b6 待ちは代行しない。
