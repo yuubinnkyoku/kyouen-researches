@@ -1,0 +1,193 @@
+{
+ "schema": "b24b27-loss6-increments-manifest-v1",
+ "batches": [
+  {
+   "batch": 24,
+   "class_index": 16957,
+   "keys_total": 53,
+   "adopted_loss_ids": [
+    "y002",
+    "y004"
+   ],
+   "unadopted_win_ids": [
+    "y001",
+    "y006"
+   ],
+   "probed_ids": [
+    "y001",
+    "y002",
+    "y004",
+    "y006"
+   ],
+   "fragment_ids": [],
+   "fileless_unprobed_count": 49,
+   "input_sha256": "486858d6e2de0662ef38a6ff1fd61c1c0dcf6e9b09012c2c32fdd99153d096cc",
+   "row_audit_sha256": "9d073038f99af68f5832e6b49de2f760356dbfddcbd468623b762cce1083c0d5",
+   "status_log_sha256": "dcba6b0e25b9643651eafaac6f4da85624e1335a6936762b10a2a00dcb04d7d5",
+   "status_log_stop_records": [
+    {
+     "pass_row": "2026-11-23T06:52:02Z y001 PASS 15000000,1,5291064",
+     "halt_row": "2026-11-23T06:52:02Z y001 WIN-HALT"
+    },
+    {
+     "pass_row": "2026-11-23T06:52:09Z y006 PASS 15000000,1,5321639",
+     "halt_row": "2026-11-23T06:52:09Z y006 WIN-HALT"
+    }
+   ],
+   "status_log_final_row": "2026-11-23T06:52:09Z y006 WIN-HALT",
+   "stop_rule": "pre-registered WIN-HALT (Part BN drive published stop record: PASS row directly followed by the dated WIN-HALT row for each of y001 and y006; verdict not consumed)",
+   "total_nodes_pass_one": 850035,
+   "total_nodes_pass_two": 850035,
+   "kit_integrity": {
+    "manifest_sha256": "8a8e30a8b8692f1a728410d806e22a9511ef9a3b6da5248f4d7b505ae104d2c2",
+    "files_verified": 83
+   },
+   "fragment_state": {}
+  },
+  {
+   "batch": 27,
+   "class_index": 13342,
+   "keys_total": 54,
+   "adopted_loss_ids": [
+    "o001",
+    "o003",
+    "o005",
+    "o007"
+   ],
+   "unadopted_win_ids": [
+    "o002"
+   ],
+   "probed_ids": [
+    "o001",
+    "o002",
+    "o003",
+    "o005",
+    "o007"
+   ],
+   "fragment_ids": [
+    "o009"
+   ],
+   "fileless_unprobed_count": 48,
+   "input_sha256": "67814ed6287d68d6e97212c931dce2b7ee585219e20b4d43edb621632220a014",
+   "row_audit_sha256": "530fe94712c79bc73f0df4933e2778bc90eb372675fcb7f5d9ca2d4236ac03ed",
+   "status_log_sha256": "50a4f407b369e06f9569238d1b0c35deb02dfad7d839cf57b2fc97a389512ca9",
+   "status_log_stop_records": [
+    {
+     "pass_row": "2026-11-23T12:34:28Z o002 PASS 15000000,1,4589084",
+     "halt_row": "2026-11-23T12:34:28Z o002 WIN-HALT"
+    }
+   ],
+   "status_log_final_row": "2026-11-23T12:36:05Z o007 PASS 15000000,2,6644942",
+   "stop_rule": "pre-registered WIN-HALT (Part BR drive-1 takeover stop record: the o002 2-line pair, worker1 then continued its bounded window to o001/o003/o005/o007; verdict not consumed)",
+   "total_nodes_pass_one": 13967778,
+   "total_nodes_pass_two": 13967778,
+   "kit_integrity": {
+    "manifest_sha256": "eb4da2f7917c0b5b32fc92065ef3928e2a324fdf30726e0c030bc69e002fc1d1",
+    "files_verified": 92
+   },
+   "fragment_state": {
+    "o009": {
+     "p1_complete_single_pass": true,
+     "p1_result_bookkeeping": 2,
+     "p1_nodes_bookkeeping": 9082839,
+     "p2_complete_single_pass": false,
+     "pass_pair_complete": false,
+     "evidence": false,
+     "probed": false
+    }
+   }
+  }
+ ],
+ "resolved_ids": [
+  "y001",
+  "y002",
+  "y004",
+  "y006",
+  "o001",
+  "o002",
+  "o003",
+  "o005",
+  "o007"
+ ],
+ "loss_ids": [
+  "y002",
+  "y004",
+  "o001",
+  "o003",
+  "o005",
+  "o007"
+ ],
+ "win_ids": [
+  "y001",
+  "y006",
+  "o002"
+ ],
+ "unadopted_win_ids": [
+  "y001",
+  "y006",
+  "o002"
+ ],
+ "exhausted_excluded_ids": [],
+ "row_counts": {
+  "probed_rows": 9,
+  "adopted_loss_rows": 6,
+  "wins": 3,
+  "exhausted_excluded": 0,
+  "fragments_unprobed": 1,
+  "fileless_unprobed": 97
+ },
+ "sha256": {
+  "loss": "1d8556c128e09fa8d41a22d749af5a28dd4babf30c33d6317cb29af5cdd22074"
+ },
+ "full_packet_eq_loss_only": false,
+ "full_packet_eq_loss_only_rationale": "batch-24 and batch-27 are partial batches: the resolved packets hold 3 WIN rows (y001/y006/o002, honest labels) which are NOT adopted (unconsumed), so the adopted packet (6 LOSS rows) != the resolved probed set",
+ "win_scenario_exists": true,
+ "win_scenario_note": "the in-batch WIN rows y001 (s5 91296) and y006 (batch-24, third-implementation cross-verified in Part BW) and o002 (s5 209134, batch-27, third-implementation cross-verified in Part BY) are honest labels only, NOT adopted by this Part; they stay unconsumed (scrutiny owner C++ second-implementation gate pin 9193f5b6...; batch-14residual q042 / batch-26 l028 precedents); loss-only adoption NEVER frees class 16957 / class 13342 while their WIN children stay unconsumed",
+ "unadopted_win_rows": [
+  {
+   "key_id": "y001",
+   "batch": 24,
+   "class_index": 16957,
+   "s5_index": 91296,
+   "lo": 10376293541461753856,
+   "hi": 264,
+   "legal": 87,
+   "result": 1,
+   "nodes": 5291064,
+   "two_pass_node_exact": true,
+   "note": "honest label only, never adopted in this Part (Part BW third-implementation cross-verified; stays unconsumed)"
+  },
+  {
+   "key_id": "y006",
+   "batch": 24,
+   "class_index": 16957,
+   "s5_index": 368510,
+   "lo": 1152921504607043584,
+   "hi": 264,
+   "legal": 84,
+   "result": 1,
+   "nodes": 5321639,
+   "two_pass_node_exact": true,
+   "note": "honest label only, never adopted in this Part (Part BW third-implementation cross-verified; stays unconsumed)"
+  },
+  {
+   "key_id": "o002",
+   "batch": 27,
+   "class_index": 13342,
+   "s5_index": 209134,
+   "lo": 3494793310856282144,
+   "hi": 0,
+   "legal": 79,
+   "result": 1,
+   "nodes": 4589084,
+   "two_pass_node_exact": true,
+   "note": "honest label only, never adopted in this Part (Part BY third-implementation cross-verified; stays unconsumed)"
+  }
+ ],
+ "fragment_rows_note": "fragment o009 (batch-27) carries NO evidence: its p1 complete single pass is bookkeeping only, its p2 is truncated; o009 is UNPROBED and NOT emitted; the fileless unprobed keys of both batches are untouched by this Part",
+ "merger_sha256": "907119610034fb2aebfde012550a4129dfa3b086c6de11194e856747ac74606a",
+ "base_cache_absent_hits": 0,
+ "base_cache_rows": 6287,
+ "quarantine_hits": 0,
+ "interpretation_guard": "canonical joint adoption increment: only the 6 LOSS rows are consumed into the canonical cache via the fail-closed union merger; the y001/y006/o002 WIN verdicts are NOT consumed (unconsumed closure WIN candidates); 11x11 stays UNKNOWN; nodes are bookkeeping, never verdicts"
+}

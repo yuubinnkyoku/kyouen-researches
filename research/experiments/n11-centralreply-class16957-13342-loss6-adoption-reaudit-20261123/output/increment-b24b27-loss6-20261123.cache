@@ -1,0 +1,39 @@
+# n11 central-reply closure batch-24 (class 16957) + batch-27 (class 13342) joint
+#   6-LOSS canonical-adoption increment (Part BZ, 2026-11-23)
+# published Part BZ declaration (note amendment 2026-11-23; single-owner: loss-only
+#   joint adoption; the in-batch WIN rows y001/y006 (batch-24, Part BW cross-verified)
+#   and o002 (batch-27, Part BY cross-verified) are honest labels only and are NOT
+#   adopted; fragment o009 is bookkeeping only, UNPROBED).
+# 2-pass node-exact exact-S5 verdicts at budget 15M, fresh cold, pinned jsreplay.js
+#   sha256 845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df
+# batch-24 probed 4/53 keys under the pre-registered WIN-HALT rule (y001, y006 WIN
+#   pairs published; 49 fileless UNPROBED); batch-27 probed 5/54 keys (o002 WIN pair
+#   published; fragment o009 UNPROBED; 48 fileless UNPROBED).  NEITHER batch is a
+#   complete enumeration book: only the resolved LOSS rows below are adopted.
+#   the remaining keys stay UNKNOWN in canonical and untouched by this Part.
+# gates (per batch + joint): kit MANIFEST sha verification (83 + 92 files), 2-way
+#   (p1/p2) node-exact + '# replay_done' completeness, status.log each-once
+#   agreement (b,r,n) per key, WIN sets == unadopted, exhaustion absence gate,
+#   WIN-HALT 2-line pair pins, row-audit-winhalt schema agreement, batch-keys
+#   legal/(lo,hi) agreement, adopted-row pass node sums (batch-24 850,035;
+#   batch-27 13,967,778), adopted keys distinct, ZERO BASE-cache overlap
+#   (structural gate: batch-24/27 rows post-date the Part BU merge; any overlap
+#   ABORTs), quarantine 0, WIN rows two-pass re-verified + presence bookkeeping
+#   (asserted NOT adopted), fragment o009 completeness-guard asymmetry asserted
+#   + NOT emitted + absent from status PASS rows.
+# ADOPTED set = {y002, y004} + {o001, o003, o005, o007}.  full != loss here
+#   (machine-stated): the resolved packets additionally hold the y001/y006/o002
+#   WIN rows, which stay UNCONSUMED (scrutiny owner C++ second-implementation
+#   gate pin 9193f5b6...; batch-14residual q042 / batch-26 l028 precedents); no
+#   WIN verdict is consumed anywhere by this Part; the unconsumed closure WIN
+#   candidates (y001/y006/o002 among them) are untouched.
+# The 6 LOSS rows ARE consumed into the canonical cache by the Part BZ merger;
+#   11x11 stays UNKNOWN; nodes are bookkeeping, never verdicts.
+# 6 rows: the adopted LOSS verdicts of class 16957's and class 13342's
+#   probed unknown S5 children (batches 24 and 27).
+s5verdict,1152921779484884992,264,5,2,632091
+s5verdict,1153484454560399360,264,5,2,217944
+s5verdict,1188950301642589216,0,5,2,6644942
+s5verdict,1188950301642653728,0,5,2,2093259
+s5verdict,1188950576520495136,0,5,2,2400082
+s5verdict,10412322338497364000,0,5,2,2829495

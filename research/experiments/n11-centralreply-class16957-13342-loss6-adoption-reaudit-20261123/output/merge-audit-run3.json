@@ -1,0 +1,32 @@
+{
+ "tool": "s5_union_merge.py",
+ "fail_closed_gates": "strict 6-field row schema, depth==5, verdict in {1,2}, WIN/LOSS conflict abort (no output), first-occurrence nodes",
+ "inputs": [
+  {
+   "file": "research/experiments/n11-centralreply-class1849-loss52-adoption-reaudit-20261123/output/merged-exact-s5-chain-plus-closure-increment-plus-batch10-plus-batch16loss52-plus-batch14loss41-plus-batch17loss52-plus-batch14residualloss10-plus-batch20loss53-plus-batch26loss52-20261123.cache",
+   "sha256": "e32a2e442e77799ea36194f675baeb2424f3410a1d3e681b4c4fbb389f66fe93",
+   "rows": 6287,
+   "unique_new": 6287
+  },
+  {
+   "file": "research/experiments/n11-centralreply-class16957-13342-loss6-adoption-reaudit-20261123/output/increment-b24b27-loss6-20261123.cache",
+   "sha256": "1d8556c128e09fa8d41a22d749af5a28dd4babf30c33d6317cb29af5cdd22074",
+   "rows": 6,
+   "unique_new": 6
+  }
+ ],
+ "unique_rows": 6293,
+ "duplicate_rows_elided": 0,
+ "verdict_counts": {
+  "WIN(1)": 158,
+  "LOSS(2)": 6135
+ },
+ "nodes_field_mismatches_recorded": [],
+ "comments_kept_from_first_input": [
+  "# S5 solver-trusted exact; base=merged-exact-s5-after-js-probe-13.cache (sha256 60e0dc3476920d4e...); increment=101 fresh rows (99 canonical S5 children of S4 1297036692683752448:0 absent from the chain, 2 unclaimed backward-only rows, 1 S6-witness-derived TARGET_S5 row nodes=0); see merge-manifest.json"
+ ],
+ "output_sha256": "9115be9eca1e60828a90c50041f511b598ef79fc0be76d5e16821816e478e93e",
+ "output_bytes": 259527,
+ "row_format": "s5verdict,<lo>,<hi>,5,<verdict>,<nodes>",
+ "interpretation_guard": "nodes are bookkeeping, never verdicts; merge of solver-trusted cache rows; no new verdict is created; 11x11 root questions remain UNKNOWN"
+}
