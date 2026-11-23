@@ -33,6 +33,9 @@ artifacts:
 - path: research/experiments/finite-field-kyouen-20261120/scripts/casse_glynn_quadrics.py
   role: verifier
   note: Casse–Glynn 弧を通る二次曲面の全数分類（q=8,16 で楕円型 0）
+- path: research/experiments/finite-field-kyouen-20261120/scripts/quadric_type_check.py
+  role: verifier
+  note: 「双曲型 ⟺ det M が平方」のランダム標本による二重分類チェック（不一致 0）
 scope: 位数q（q奇数は q≥9、偶数は全 q≥4）のMiquelian反転平面M(q)の弧（どの4点も同一円上にない点集合）の最大サイズK(q)。楕円二次曲面Q^-(3,q)上の一般位置集合としての特徴づけ（K1250）と射影上界、Segre の定理、Bezout、および楕円二次曲面がF_q上の奇数次数曲線を持たないことを使う。
 evidence: 次の3つの古典的事実に依る：(1) q奇数のPG(2,q)の(q+1)-アークは円錐曲線（Segre）、(2) PG(3,q)の2次曲面の交わりは4次曲線（Bezout）、(3) 楕円二次曲面Q^-(3,q)はF_q上有理な奇数次数曲線を持たない（Picard群Z^2上のFrobeniusが2つの ruling を入れ替えるため、不変類の次数は偶数）。帰結として全検証済み弧（q=5..49）がK≤q+1を満たすことを数値確認。q=3ではK=5=q+2で例外（定理の適用範囲外）。
 ---
@@ -138,7 +141,9 @@ det M = h²·(a²c²h² + 2ab²ch² − ab²c + b⁴h²) = ((a·c − b²)/4)² 
 
 すなわち **`det M` は常に平方**（または `ac = b²` で 0）。q 奇数では非退化二次曲面
 `Q` に対し「双曲型 ⟺ `det M` が平方」なので（標準形 `x0x3−x1x2` は `det = 1/16`（平方）、
-楕円型 `x0² − d·x1² + x2x3`（`d` 非平方）は `det = d/4`（非平方）で確認）、
+楕円型 `x0² − d·x1² + x2x3`（`d` 非平方）は `det = d/4`（非平方）。さらに `q = 7, 9, 11` で
+ランダムな非退化二次曲面 218/228/232 個を点の個数と `det` の平方性で二重分類し
+**不一致 0** を確認。`scripts/quadric_type_check.py`）、
 **NRC を通る二次曲面は退化か双曲型のみ**。□
 
 `q = 5` で楕円型が出るのは、次数 ≤ 6 の条件多項式が 5 点では消えきらず、族が3次元に

@@ -42,9 +42,27 @@ def main() -> None:
         mul, add = F.mul, F.add
 
         pairs = [(i, j) for i in range(4) for j in range(i, 4)]
-        pg = [pt for pt in itertools.product(elems, repeat=4)
-              if not all(F.is_zero(x) for x in pt)]
-        n_proj = len(pg) // (q - 1)
+        # projective points of PG(3,q), each stored once, with its monomial
+        # vector precomputed (the field has q = 32 or 16 elements, so this is
+        # cheap and saves a factor q-1 everywhere below)
+        seen_pt = set()
+        pg = []
+        for pt in itertools.product(elems, repeat=4):
+            if all(F.is_zero(x) for x in pt):
+                continue
+            inv = None
+            for x in pt:
+                if not F.is_zero(x):
+                    inv = F.div(one, x)
+                    break
+            norm = tuple(mul(inv, x) for x in pt)
+            if norm in seen_pt:
+                continue
+            seen_pt.add(norm)
+            pg.append(norm)
+        monomials = {}
+        for pt in pg:
+            monomials[pt] = [mul(pt[i], pt[j]) for (i, j) in pairs]
 
         es = [e for e in range(1, m) if __import__("math").gcd(e, m) == 1]
         for e in es:
@@ -101,16 +119,16 @@ def main() -> None:
 
             def val(vec, pt):
                 acc = zero
-                for coef, (i, j) in zip(vec, pairs):
+                mon = monomials[pt]
+                for coef, m in zip(vec, mon):
                     if not F.is_zero(coef):
-                        acc = add(acc, mul(coef, mul(pt[i], pt[j])))
+                        acc = add(acc, mul(coef, m))
                 return acc
 
             hist = {}
             elliptic = 0
             for vec in projectives:
-                raw = sum(1 for pt in pg if F.is_zero(val(vec, pt)))
-                cnt = raw // (q - 1)
+                cnt = sum(1 for pt in pg if F.is_zero(val(vec, pt)))
                 hist[cnt] = hist.get(cnt, 0) + 1
                 if cnt == q * q + 1:
                     elliptic += 1
