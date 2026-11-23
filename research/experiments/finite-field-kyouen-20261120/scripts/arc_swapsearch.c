@@ -118,11 +118,13 @@ int main(int argc, char **argv) {
     long iters = 200000;
     int sample = 24;
     uint64_t seed = 0x9E3779B97F4A7C15ULL;
+    const char *init_arg = NULL;
     for (int i = 2; i + 1 < argc; i += 2) {
         if (!strcmp(argv[i], "--k")) k = atoi(argv[i + 1]);
         else if (!strcmp(argv[i], "--iters")) iters = atol(argv[i + 1]);
         else if (!strcmp(argv[i], "--sample")) sample = atoi(argv[i + 1]);
         else if (!strcmp(argv[i], "--seed")) seed = (uint64_t)strtoull(argv[i + 1], NULL, 10);
+        else if (!strcmp(argv[i], "--init")) init_arg = argv[i + 1];
     }
     rng_state = seed ? seed : 1;
 
@@ -178,6 +180,19 @@ int main(int argc, char **argv) {
         int t = perm[i]; perm[i] = perm[j]; perm[j] = t;
     }
     int sz = 0;
+    if (init_arg) {
+        // start from the points listed in --init (comma separated)
+        const char *s = init_arg;
+        while (*s) {
+            int p = atoi(s);
+            if (p >= 0 && p < n && !inS[p] && sz < k) {
+                inS[p] = 1; posS[p] = sz; S[sz++] = p;
+                for (int t = adj_off[p]; t < adj_off[p + 1]; t++) touch(adj[t], +1);
+            }
+            while (*s && *s != ',') s++;
+            if (*s == ',') s++;
+        }
+    }
     for (int i = 0; i < n && sz < k; i++) {
         int p = perm[i];
         int ok = 1;
@@ -235,9 +250,10 @@ int main(int argc, char **argv) {
         printf("FOUND %d", k);
         for (int i = 0; i < k; i++) printf(" %d", S[i]);
         printf("\n");
-        printf("RESULT %d OK 0\n", k);
+        printf("RESULT %d OK 0 (cur_pen %ld, recomputed %ld)\n", k, cur_pen, penalty());
     } else {
-        printf("RESULT %d FAILED %ld\n", k, best_pen);
+        printf("RESULT %d FAILED %ld (cur_pen %ld, recomputed %ld)\n",
+               k, best_pen, cur_pen, penalty());
     }
     return feasible ? 0 : 3;
 }

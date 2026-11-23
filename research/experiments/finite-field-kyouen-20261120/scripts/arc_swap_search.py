@@ -30,6 +30,24 @@ KNOWN = {5: 6, 7: 6, 8: 7, 9: 9, 11: 9, 13: 10, 16: 12, 17: 13, 19: 14,
          23: 16, 25: 18, 27: 19, 29: 20, 31: 21, 32: 22, 37: 25, 41: 27,
          43: 28, 47: 30, 49: 32}
 
+WITNESS_FILES = ["arc_maxsearch.json", "arc_maxsearch_long.json",
+                 "arc_maxsearch_big.json", "arc_maxsearch_q49.json",
+                 "arc_maxsearch_q49b.json", "arc_maxsearch_push.json"]
+
+
+def load_witness(q: int):
+    """Largest arc recorded for q by the greedy search (K1251's tables)."""
+    best = None
+    for name in WITNESS_FILES:
+        p = OUT / name
+        if not p.exists():
+            continue
+        for rec in json.loads(p.read_text(encoding="utf-8")):
+            if rec.get("q") == q and "arc" in rec and rec.get("verified", True):
+                if best is None or len(rec["arc"]) > len(best):
+                    best = rec["arc"]
+    return best
+
 
 def read_circles(path: Path):
     with path.open("r", encoding="utf-8") as fh:
@@ -71,13 +89,16 @@ def main() -> None:
         base = KNOWN.get(q)
         targets = [base, base + 1] if base else [8, 9, 10]
         rec = {"q": q, "n": n, "results": []}
+        witness = load_witness(q)
         for k in targets:
             if k is None or k > n:
                 continue
-            proc = subprocess.run([str(EXE), str(path), "--k", str(k),
-                                   "--iters", str(args.iters),
-                                   "--sample", str(args.sample)],
-                                  capture_output=True, text=True, timeout=7200)
+            cmd = [str(EXE), str(path), "--k", str(k),
+                   "--iters", str(args.iters), "--sample", str(args.sample)]
+            if witness and k == base + 1 and len(witness) == base:
+                # start the growth attempt from the known best arc
+                cmd += ["--init", ",".join(str(x) for x in witness)]
+            proc = subprocess.run(cmd, capture_output=True, text=True, timeout=7200)
             out = proc.stdout.strip().splitlines()
             last = out[-1] if out else ""
             found = proc.returncode == 0

@@ -125,6 +125,7 @@ static void remove_point(int p) {
 // (blocks with cnt == 2 through it), which is the cheapest useful proxy for
 // "how many points does adding it kill".  Costs a factor ~S in time.
 static int sample_size = 0;
+static int force_mode = 0;
 
 static int pressure(int p) {
     int t = 0;
@@ -154,6 +155,45 @@ static void restore(const int *pts, int k) {
     for (int i = 0; i < k; i++) add_point(pts[i]);
 }
 
+// remove p from the arc while keeping arc[] compact
+static void arc_remove(int p) {
+    int idx = -1;
+    for (int i = 0; i < asz; i++) if (arc[i] == p) { idx = i; break; }
+    remove_point(p);
+    if (idx >= 0 && idx < asz) arc[idx] = arc[asz];
+}
+
+// how many circles through q already carry three arc points
+static int count_blockers(int q) {
+    int t = 0;
+    for (int k = adj_off[q]; k < adj_off[q + 1]; k++)
+        if (cnt[adj[k]] == 3) t++;
+    return t;
+}
+
+// make q playable by deleting one arc point from each blocking circle, then add q.
+// This is the "forced insertion" move: it is far more targeted than deleting
+// random arc points, because it removes exactly the points that obstruct q.
+static int force_insert(int q) {
+    int removed = 0;
+    for (int safety = 0; safety < 256; safety++) {
+        int c = -1;
+        for (int k = adj_off[q]; k < adj_off[q + 1]; k++)
+            if (cnt[adj[k]] == 3) { c = adj[k]; break; }
+        if (c < 0) break;
+        int pick = -1, seen = 0;
+        for (int j = 0; j < clen[c]; j++) {
+            int u = cpts[c][j];
+            if (inarc[u]) { seen++; if (rnd_int(seen) == 0) pick = u; }
+        }
+        if (pick < 0) break;
+        arc_remove(pick);
+        removed++;
+    }
+    if (blk[q] == 0 && !inarc[q]) add_point(q);
+    return removed;
+}
+
 int main(int argc, char **argv) {
     if (argc < 2) { fprintf(stderr, "usage: %s circles.txt [--trials T] [--ils I] [--seed S]\n", argv[0]); return 2; }
     long trials = 200;
@@ -164,6 +204,7 @@ int main(int argc, char **argv) {
         else if (!strcmp(argv[i], "--ils")) ils = atol(argv[i + 1]);
         else if (!strcmp(argv[i], "--seed")) seed = (uint64_t)strtoull(argv[i + 1], NULL, 10);
         else if (!strcmp(argv[i], "--sample")) sample_size = atoi(argv[i + 1]);
+        else if (!strcmp(argv[i], "--force")) force_mode = 1;
     }
     rng_state = seed ? seed : 1;
 
@@ -222,18 +263,25 @@ int main(int argc, char **argv) {
             memcpy(best_arc, arc, (size_t)asz * sizeof(int));
         }
         for (long it = 0; it < ils; it++) {
-            // perturbation: delete r random points
-            int r = 1 + rnd_int(4);
-            if (r > cur_sz) r = cur_sz;
-            int removed[4];
-            for (int k = 0; k < r; k++) {
-                int idx = rnd_int(asz);
-                int p = arc[idx];
-                removed[k] = p;
-                remove_point(p);
-                if (idx < asz) arc[idx] = arc[asz];
+            if (force_mode) {
+                // forced insertion: pick the least obstructed outside point
+                int best_q = -1, best_c = 0;
+                for (int s = 0; s < 8; s++) {
+                    int q = rnd_int(n);
+                    if (inarc[q]) continue;
+                    int cb = count_blockers(q);
+                    if (best_q < 0 || cb < best_c) { best_q = q; best_c = cb; }
+                }
+                if (best_q < 0) continue;
+                force_insert(best_q);
+                greedy_fill();
+            } else {
+                // perturbation: delete r random points
+                int r = 1 + rnd_int(4);
+                if (r > cur_sz) r = cur_sz;
+                for (int k = 0; k < r; k++) arc_remove(arc[rnd_int(asz)]);
+                greedy_fill();
             }
-            greedy_fill();
             if (asz >= cur_sz) {
                 cur_sz = asz;
                 memcpy(cur, arc, (size_t)asz * sizeof(int));
