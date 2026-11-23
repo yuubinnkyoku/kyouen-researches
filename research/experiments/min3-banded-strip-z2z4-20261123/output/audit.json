@@ -1,0 +1,124 @@
+{
+ "D1": {
+  "bad": 0,
+  "comparisons": 1485,
+  "details_mismatch": [],
+  "points": 495
+ },
+ "D2": {
+  "bad": 0,
+  "comparisons": 43884,
+  "details_mismatch": [],
+  "points": 14628
+ },
+ "D3": {
+  "bad": 0,
+  "comparisons": 4951,
+  "details_mismatch": [],
+  "deviants_arithmetic": [
+   [
+    4
+   ]
+  ],
+  "points": 1650
+ },
+ "D4": {
+  "bad": 0,
+  "comparisons": 11988,
+  "details_mismatch": [],
+  "points": 3996
+ },
+ "D5": {
+  "bad": 0,
+  "comparisons": 1080,
+  "details_mismatch": [],
+  "points": 360
+ },
+ "D6a": {
+  "bad": 0,
+  "comparisons": 85,
+  "details_mismatch": [],
+  "points": 17
+ },
+ "D6b": {
+  "bad": 0,
+  "comparisons": 69,
+  "details_mismatch": [],
+  "points": 23
+ },
+ "D6c_census": {
+  "bad": 0,
+  "collapse_counts": {
+   "4": {
+    "collapse": 96,
+    "engine_bad": 0,
+    "total": 96
+   },
+   "5": {
+    "collapse": 96,
+    "engine_bad": 0,
+    "total": 96
+   },
+   "6": {
+    "collapse": 96,
+    "engine_bad": 0,
+    "total": 96
+   },
+   "7": {
+    "collapse": 96,
+    "engine_bad": 0,
+    "total": 96
+   }
+  },
+  "comparisons": 768,
+  "note": "census observation only; z>=5 collapse for m>=4 is NOT claimed (open)",
+  "points": 384
+ },
+ "D7": {
+  "bad": 0,
+  "comparisons": 1188,
+  "details_mismatch": [],
+  "points": 396
+ },
+ "comparisons_totals": {
+  "D1": 1485,
+  "D2": 43884,
+  "D3": 4951,
+  "D4": 11988,
+  "D5": 1080,
+  "D6a": 85,
+  "D6b": 69,
+  "D7": 1188
+ },
+ "points_totals": {
+  "D1": 495,
+  "D2": 14628,
+  "D3": 1650,
+  "D4": 3996,
+  "D5": 360,
+  "D6a": 17,
+  "D6b": 23,
+  "D7": 396
+ },
+ "summary": {
+  "census": {
+   "bad_engine": 0,
+   "comparisons": 768,
+   "points": 384
+  },
+  "declared_totals": {
+   "comparisons": 64730,
+   "points": 21565
+  },
+  "meta": {
+   "verifier_sha256": "009184eff1accbaa82cdea9eea5e81253252e6d3681e893b1fd30506d6acad9c"
+  },
+  "n_bad": 0,
+  "observed_totals": {
+   "comparisons": 64730,
+   "points": 21565
+  },
+  "theorem": "Lemma U/F/R2/D + Theorem T-B: min>=3 banded window extension to z in {2,3,4}; with K1270 (z in {0,1}) this completes the m=3 row of K1268 Conjecture C1 (band z<z*(3)=5). Universal claims proved on paper in the declaration note; this finite audit corroborates.",
+  "unknown_statement": "standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, classes 1/2/4, class 5343: UNKNOWN at all times"
+ }
+}
