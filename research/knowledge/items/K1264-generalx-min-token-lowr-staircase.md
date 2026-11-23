@@ -56,8 +56,8 @@ evidence: >-
   固定seed乱数深部（6,454点・境界470点）、2トークン境界census（5,400点・
   分離370点の記録）、出版z切片witnessアンカー4件＋階段鋭さwitness7件の
   総照合2,468,581点・bad 0。8種fail-closed変異電池すべてrc=1で捕捉、
-  4回実行（同一cwd2＋隔離cwd1＋env -i・PYTHONHASHSEED=random・別HOME1）で
-  audit.json byte-identical。有限監査は証明そのものではない。
+  4回実行（同一cwd2＋隔離cwd1＋env -i・PYTHONHASHSEED=random・別HOME1）
+  でaudit.json byte-identical。有限監査は証明そのものではない。
 ---
 
 ## 命題・範囲

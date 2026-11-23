@@ -67,7 +67,6 @@ A子値に一致）。全称・アリティ自由・閉形式不使用。
 
 標準11×11空盤・二石root {49,60}/{59,60}・S2 {59,60}・class 1/2/4 は
 常にUNKNOWNのまま。
-
 ## 出版時のバイト検証と転写ドリフトの正直記録
 
 - 実験dir出版（commit 5bdfa017）後、raw.githubusercontent の fetch-back を
