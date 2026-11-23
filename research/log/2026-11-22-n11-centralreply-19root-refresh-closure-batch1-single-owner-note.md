@@ -5124,3 +5124,65 @@ amendmentより先にmainにある場合は本宣言を破棄して着手しな�
   を勝敗として読まない。
 - 本amendment observed HEAD-before-push: push直前に最新mainを再fetchし
   note blob lockを再照合する (競合時は本節を追記し直す)。
+
+### Part BK status update (2026-11-23, execution host = 本レーン continuing session)
+
+宣言 (note amendment commit `d93256ae`) どおり、宣言後に本hostが
+published batch-21 WIN行 a003をpinned第三実装で解き、出版まで完了した
+(verdict不消費)。
+
+- 実行: pinned `third_impl.js` (`08ea958f…`)・1行=1 solver=1 process・
+  cap 300,000,000・wallcap 240s・`--memo-power=22`・全target/anchor
+  a/b 2回・逐次実行。**targets 1/1 clean WIN (result 1)・replica verdict
+  一致 1/1**: **a003 third-impl WIN 5,806,719 expansions / 3,248,352
+  ttHits** (replica 5,021,280 nodes・ratio 1.16・key
+  (10412339930666631168, 4)・s5 index 115192・legal 82)。a/b pair
+  result/expansions/ttHits/reason同一 (determinism gate PASS・
+  16.55s/16.57s)。LOSS 0・WALL-INCONCLUSIVE 0・DIVERGENCE 0。
+  pass-one総expansions 5,806,719。
+- battery順序: negatives ng1/ng2が設計どおりfail-closed文言
+  (ng1 GATE_FAIL "legal count mismatch: derived=87 declared=88"・
+  ng2 GATE_FAIL "stone count mismatch: bits=5 declared=6")
+  → anchors k02a WIN 9,106,337/4,991,527・l1a LOSS 7,660,602/3,951,175
+  がpublished第三実装値にnode-exact再現 (a/b同一)
+  → target a003逐次実行 → rules gate → audit。
+- rules gate: verify_tbl replica quads 95,670 == third-impl quads 95,670・
+  195,044 triples mismatch 0 (`output/rules-gate.txt`)。
+- maker `make_inputs_bk.py`: 全gate PASS・tamper battery 3/3検出
+  (T1 maker sha-pin ABORT (status.log tamper)・T2 audit det-pair
+  DIVERGENCE (verdict flip)・T3 audit G0 (input legal tamper)・
+  scratch copyで実施・実験filesはrestore byte-verified)。
+  source pins: batch-21 batch-keys (53キー・class 12643)・owner正本
+  raw 10ファイル (outputs `0022c8c5`) + 本レーン第二ホスト再現raw
+  10ファイル (log `ad487a2f`)・それぞれ2-pass node-exact +
+  `# replay_done` + result 1 in-budget・status/README 3-way照合
+  (batch-21形式: a003 PASS行・WIN-HALT行・nodes 5,021,280・README
+  a003 WIN文言)。
+- audit `audit.py`: **43/43 gates PASS**・3回実行byte一致 (schema
+  `n11-centralreply-closure-b21win-thirdimpl-audit-v1`)。verdict
+  agreement 1/1 (WIN=1)・wall_inconclusive 0
+  (`output/audit-summary.json`)。
+- 出版: 実験dir
+  `research/experiments/n11-centralreply-closure-b21win-thirdimpl-20261123/`
+  を3コミットでmainに反映: A `f15112a6` (scaffold: scripts 6 +
+  inputs 6 + sources 10: README-b21・batch-keys-b21・status-b21・
+  published-input・published-input-bf 4・raw 2) / B `7be47e99`
+  (solver outputs 14: target a/b 2・anchors 4・negative 2・rules-gate・
+  status.log・audit-summary・audit-run1.json/txt/2.txt) /
+  C `4839be4b` (README `9faa30ca` + MANIFEST-sha256 36行 `56d5668b`)
+  = publication complete。**fetch-back 38/38 byte一致**
+  (publication commit `4839be4b` 固定rawで全ファイル照合)。
+- 意味 (route statement・閉鎖主張なし): batch-21 drive-1のa003 WINが
+  独立実装 (第三実装) でもclean WINで再現された (verdict-level補強
+  文献)。a003はこれで (a) 二ホストで確認されたpinned df-pn replica
+  2-pass node-exact rows・(b) 独立第三実装a/b determinism pairの
+  双方で�付けられた**20番目のunconsumed closure WIN候補**となった。
+  **verdict消費ゼロ**・採用判断は一切代行しない (scrutiny owner C++
+  第二実装 gate pin `9193f5b6…` のまま)。canonical cache (6,235行
+  `f6649fe3…`) 不変・いかなるcacheにも書込んでいない。batch-21
+  residual 49キー (fresh・WIN-HALTにより未着手) ・Part BH
+  (`de1383a7`)・batch-22候補 (class 25835) には本Partでは触れていない。
+- 標準11×11空盤・19 central-reply roots・二石root {49,60}/{59,60}・
+  S2 {59,60}・class 1/2/4・class 12643 (53キーすべて・a003を含む)
+  は本Partのどの時点でもUNKNOWNのまま。nodes数・expansions数を
+  勝敗として読まない。
