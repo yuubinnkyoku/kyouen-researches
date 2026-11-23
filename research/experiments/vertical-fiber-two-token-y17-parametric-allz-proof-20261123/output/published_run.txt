@@ -1,0 +1,37 @@
+=== y=17 universal verifier part1 - canonical published run (this host, 2026-11-23T01:13:08Z) ===
+$ python3 scripts/check_transcriptions_y17.py
+{"cand16": {"bytes": 3298, "equal_fit_verbatim_renamed": true, "equal_machine_verbatim_renamed": true, "sources_agree": true}, "cand17": {"bytes": 3379, "equal_fit_verbatim": true}, "check": "y17 verifier transcription byte-equality vs published bytes", "engine": {"bytes": 1957, "equal": true}, "overall": "PASS", "verifier": "research/experiments/vertical-fiber-two-token-y17-parametric-allz-proof-20261123/verify_y17_universal.py"}
+$ python3 verify_y17_universal.py C11ordered
+census[ordered]: points=440640 bad=0 merge={'points': 119025, 'bad': 0} tail={'points': 4320, 'bad': 0}
+$ python3 verify_y17_universal.py C11canonical
+census[canonical]: points=440640 bad=0 merge={'points': 119025, 'bad': 0} tail={'points': 4320, 'bad': 0}
+$ python3 verify_y17_universal.py C1 C1b C2 C2b C3 C4 C4t C7 C8 C9 C11 C12
+  C1: pts=23370 bad=0
+  C1b: pts=42565 bad=0
+  C2: pts=221235 bad=0
+  C2b: pts=19404 bad=0
+  C3: pts=1275 bad=0
+  C4: pts=590634 bad=0
+  C4t: pts=590634 bad=0
+  C7: pts=200000 bad=0
+  C8: pts=1014174 bad=0
+  C9: pts=903114 bad=0
+  C11: pts=881280 bad=0
+  C12: pts=1856140 bad=0
+overall: PASS total_points: 6343825 types: 457645
+  C1: pts=23370 bad=0
+  C11: pts=881280 bad=0
+  C12: pts=1856140 bad=0
+  C1b: pts=42565 bad=0
+  C2: pts=221235 bad=0
+  C2b: pts=19404 bad=0
+  C3: pts=1275 bad=0
+  C4: pts=590634 bad=0
+  C4t: pts=590634 bad=None
+  C7: pts=200000 bad=0
+  C8: pts=1014174 bad=0
+  C9: pts=903114 bad=0
+  merge: {'points': 1182632, 'bad': 0}
+  tail: {'points': 193096, 'bad': 0}
+  C4t: 1300 violations at clip 35, first: (60, 98, 98)
+rc=0
