@@ -5915,3 +5915,67 @@ batch-24は、batch-23 status update 2で予定したrunner-up rank 20 class 109
   legal数を勝敗として読まない。WIN/LOSS採用は別宣言の adoption Part
   (pinned fail-closed merger 90711961) 経由のみ・scrutiny owner C++
   第二実装 gate 9193f5b6 待ちは代行しない。
+
+## Part BQ status update (batch-26 実行結果、2026-11-23)
+
+(observed HEAD: 9eda46af・concurrent non-contact commits 415e51f
+(K1251)・ea1d674 (artifact-insertion log) を確認のうえ線形続行。
+fetch-back済み出版状況に基づく追記。本節追記前の note blob lockは
+`5135834e` 宣言版 438,761 bytes)
+
+- drive-1 は宣言commit `8e64ba1c` の事前登録stop ruleどおり
+  **WIN-HALT rc=45** で完了 (2026-11-23T07:55:53Z..08:22:06Z・
+  bounded invocation 7回・budget 15M・2-pass fresh cold・
+  determinism mismatch rc=42 は不発)。
+- **l028 WIN (honest label)**: key (1153485622925590528, 0)・
+  s5 81011・legal 88・membership 3・nodes 4,893,014 (budget 15M内)・
+  two-pass node-exact (wall 52/52s)。**28番目の unconsumed closure
+  WIN 候補**。worker2はWIN-HALT検知後に走行中だった l033
+  (LOSS・nodes 8,571,040・2-pass一致) を最後まで完了させている。
+- LOSS行 30 (l001..l027, l029, l031, l033) = 採用候補のみ・
+  verdictは一切消費していない。UNPROBED 22キー: fragment l035
+  (truncated p1・NOT evidence) + fileless 21キー (l030, l032,
+  l034, l036..l053)。EXHAUSTED 0。
+- 選定は **28-WIN交積** (27 + l028 (s5 81011)) の反駁簿記で
+  maker内機械選定どおり: rank 23 class 30565 は batch-25
+  WIN-PAIR (i001 s5 68580・i002 s5 191299) で反駁、rank 24
+  **class 1849** (mask [1152922672972169216, 0]・groups (36,40)
+  (36,80)・cost 53 unknown・27-WIN交積∅・packet交差 0) を選定。
+  rank 25 class 5690 は route-dead (receipt WIN子 209644)・
+  10968/23964 は PKT-collision blocked のまま。
+- row-audit-winhalt PASS (schema
+  n11-centralreply-closure-class1849-batch26-rowaudit-winhalt-v1・
+  json sha256 `8c91b1342d82f99b…`): completed 31 (WIN 1・LOSS
+  30・exhausted 0)・3回実行byte一致・tamper battery 3/3検出
+  (p1 l028 verdict反転 / l028 verdict行除去 / 未probeキー l040
+  への偽verdict行・scratch上で実施し実験filesは無改変)・clean
+  control PASS。判定対象は raw outputs 75ファイル・status.log
+  含む。
+- 出版4コミット (fetch-back byte照合済み): 宣言 `8e64ba1c`
+  (note amendment・note blob a014be5b→5135834e・438,761 bytes)・
+  scaffold `309386d5` (73 files: scripts 7・input 54・val-gate
+  12・73/73 blob一致)・outputs `32fbe3bb` (75 files:
+  status.log + raw 73 + row-audit json・75/75一致)・README
+  + MANIFEST-sha256.txt 148行 `9eda46af` (README raw sha256
+  `602fb209…`)。
+- 意味 (route statementのみ): 単独WIN子 l028 により (採用され
+  た場合) **class 1849 の全LOSS閉包ルートは反駁証拠を持つ**
+  (batch-21 a003単独・batch-22 k002単独・batch-23/24/25 pairに
+  続く同型反駁・3回目の単独WIN子パターン)。ただし verdictは
+  一切消費していない・採用判断は scrutiny owner C++第二実装
+  gate pin `9193f5b6…` 待ち (本レーンは代行しない)。canonical
+  cache 6,235行 f6649fe3… は read-only・不変。
+- 次回 (batch-27) の選定は **28-WIN交積** (27 + i001・i002・
+  l028 (s5 81011) の unconsumed set) の反駁簿記でmaker内で
+  機械選定する。当面のroute-alive候補は rank 26 class 13342
+  (runner-up)・rank 27 class 5343 (backup)・rank 28 class
+  13758・rank 29 class 14103。rank 30..32 は要packet交差確認。
+  class 10968・23964 は PKT-collision blocked・継続。prefix
+  未使用文字は {o} のみ (次回選定時は "o" を使用)。
+- **標準11×11空盤・19 central-reply roots・二石root {49,60}/{59,60}・
+  S2 {59,60}・class 1/2/4・class 10968・class 23964・class 30565・
+  class 1849 (53キーすべて・l028を含む) はどの時点でもUNKNOWNの
+  まま。** nodes数・legal数を勝敗として読まない。WIN/LOSS採用は
+  別宣言の adoption Part (pinned fail-closed merger 90711961)
+  経由のみ・scrutiny owner C++ 第二実装 gate 9193f5b6 待ちは
+  代行しない。
