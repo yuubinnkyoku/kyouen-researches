@@ -10,6 +10,9 @@ batch-28 (closure class 5343・54キー aa001..aa054) の第三実装交叉検�
 
 **rev4 (2026-11-24T09:12Z)**: Part DF完了 (takeover宣言 `255d43a4`・amendment `4afac03b`・完了 `622ad460`) を反映。P2パッケージ8行 (aa014/aa049/aa051/aa019/aa013/aa020/aa010/aa040) のthirdimpl state (open→done)・queue_state_counts (done_win 21→29・open_win 25→17・claimed 0不変)・thirdimpl_publications.DF (done)・packages P2 (done) を更新。takeoverは原宣言 `59b6540f` (05:01:52Z) の3.5h停滞後 (amendmentの時刻逸脱honest記録込み: 実行開始は earliest_takeover 08:31:52Z 経過後・対抗出版なし機械確認済み)。open33_by_est_cost snapshotはrev2/rev3同じく更新せず。open17・P3/P4 viewは不変。本revも solver実行・probe・cache書込なしの純bookkeeping。
 
+
+**rev5 (2026-11-24T09:20Z)**: Part DG完了 (宣言 `e05d73fd`・完了 `014a0361`) を反映。P3パッケージ8行 (aa052/aa044/aa041/aa048/aa026/aa039/aa043/aa045) のthirdimpl state (open→done)・queue_state_counts (done_win 29→37・open_win 17→9・claimed 0不変)・thirdimpl_publications.DG (done)・packages P3 (done) を更新。DG宣言D9はDF側P2反映 (rev4) との競合回避のためP3分のregistry反映を「次回合流」と明記保留しており、rev4出版 (`0d90c02a`) 後の本rev5で合流 (DG audit-summary `fd68c562…` を最新mainから再取得機械検証)。open33_by_est_cost snapshotは更新せず。open9 (P4のみ)。本revも solver実行・probe・cache書込なしの純bookkeeping。
+
 ## 何であるか・何でないか
 
 - **本registryの作成にあたり solver は一つも実行していない** (probeなし・cache書込なし・単一オーナーlane宣言なし)。純粋な整理であって、いかなる計算laneの占有でも宣告でもない。
@@ -38,9 +41,9 @@ rc = 0/1/2 (EXHAUSTED/WIN/LOSS・drive README群の定義どおり)。decisive r
 
 ## 第三実装交叉検証の現状
 
-- **done 29 WIN行 (rev4)**: aa014/aa049/aa051/aa019/aa013/aa020/aa010/aa040 (**P2パッケージ8行・Part DF・takeover `255d43a4` 完了 `622ad460`**・three-implementation corroboration 8/8 agree・replica 16/16 node-exact (pinned合計 64,713,638)・audit 323 gates PASS×3 byte-identical・tamper 4/4・verdict不消費)・ aa001/aa002 (Part CC・完了 `9eb30494`)・aa006/aa007 (Part CG・完了 `699a13bc`)・aa008/aa009 (Part CM・完了 `2102800b`)・aa004/aa035 (Part CW・完了 `8f03ed3d`)・aa046/aa016/aa025/aa033/aa027/aa038/aa012/aa042 (P1パッケージ8行・Part DE・完了 `1eead030`・three-implementation corroboration 8/8 agree・replica 16/16 node-exact・audit 323 gates PASS・verdict不消費)・aa005/aa030/aa031/aa047/aa053 (**P5 (claimed-5) 5行・Part CX・takeover `c48aa56b` 完了 `46687096`**・three-implementation corroboration 5/5 agree・replica 10/10 node-exact・audit 178 gates PASS×3 byte-identical・verdict不消費)。加えて LOSS行 aa003 (Part CL・完了 `660fe238`)。
-- **claimed 0行 (rev3より・rev4で不変)**: なし。Part CX (原宣言 `1300c10d`・2026-11-24T00:49:31Z) は3.5h停滞後、takeover規約 (earliest_takeover 2026-11-24T04:19:31Z以降かつ停滞・対抗宣言なし機械確認) に従いtakeover宣言 `c48aa56b` (2026-11-24T04:20:09Z) で解決・完了 `46687096`。claimed5_do_not_retake_until_takeover_ruleはrev3でresolved。
-- **open 17 WIN行 (rev4)**: P1・P2パッケージは交叉検証済み (done)。残りはP3/P4パッケージ17行 (下記queue表・P1〜P4の分割はrev1時点のコスト順viewとして不変)。P3の8行はPart DG完了済み (rev5合流待ち)。
+- **done 37 WIN行 (rev5)**: aa052/aa044/aa041/aa048/aa026/aa039/aa043/aa045 (**P3パッケージ8行・Part DG・完了 `014a0361`**・audit 323 gates PASS・verdict agreements 8/8 (WIN=8)・replica 16/16 node-exact・verdict不消費・DG宣言D9の競合回避のためrev4後に本revで合流)・ aa014/aa049/aa051/aa019/aa013/aa020/aa010/aa040 (**P2パッケージ8行・Part DF・takeover `255d43a4` 完了 `622ad460`**・three-implementation corroboration 8/8 agree・replica 16/16 node-exact (pinned合計 64,713,638)・audit 323 gates PASS×3 byte-identical・tamper 4/4・verdict不消費)・ aa001/aa002 (Part CC・完了 `9eb30494`)・aa006/aa007 (Part CG・完了 `699a13bc`)・aa008/aa009 (Part CM・完了 `2102800b`)・aa004/aa035 (Part CW・完了 `8f03ed3d`)・aa046/aa016/aa025/aa033/aa027/aa038/aa012/aa042 (P1パッケージ8行・Part DE・完了 `1eead030`・three-implementation corroboration 8/8 agree・replica 16/16 node-exact・audit 323 gates PASS・verdict不消費)・aa005/aa030/aa031/aa047/aa053 (**P5 (claimed-5) 5行・Part CX・takeover `c48aa56b` 完了 `46687096`**・three-implementation corroboration 5/5 agree・replica 10/10 node-exact・audit 178 gates PASS×3 byte-identical・verdict不消費)。加えて LOSS行 aa003 (Part CL・完了 `660fe238`)。
+- **claimed 0行 (rev3より・rev4/rev5で不変)**: なし。Part CX (原宣言 `1300c10d`・2026-11-24T00:49:31Z) は3.5h停滞後、takeover規約 (earliest_takeover 2026-11-24T04:19:31Z以降かつ停滞・対抗宣言なし機械確認) に従いtakeover宣言 `c48aa56b` (2026-11-24T04:20:09Z) で解決・完了 `46687096`。claimed5_do_not_retake_until_takeover_ruleはrev3でresolved。
+- **open 9 WIN行 (rev5)**: P1・P2・P3パッケージは交叉検証済み (done)。残りはP4パッケージ9行 (aa011/aa054/aa022/aa034/aa037/aa032/aa028/aa021/aa050・下記queue表・P1〜P4の分割はrev1時点のコスト順viewとして不変・Part DHが宣言済み `f63c1654`)。
 - **L-optional 7 LOSS行**: aa018/aa036/aa023/aa024/aa015/aa029/aa017 (Part CO採用済み・交叉検証は冗長性のみで任意)。
 
 ## 見積りモデル (planning heuristic・計測値ではない)

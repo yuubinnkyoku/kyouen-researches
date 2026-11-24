@@ -161,6 +161,20 @@
    ],
    "completion": "622ad460",
    "kind": "done (P2 package; takeover 255d43a4 of declaration 59b6540f + amendment 4afac03b; audit 323 gates all PASS; verdict agreements 8/8 (WIN=8); replica 16/16 node-exact; verdict unconsumed)"
+  },
+  "DG": {
+   "keys": [
+    "aa052",
+    "aa044",
+    "aa041",
+    "aa048",
+    "aa026",
+    "aa039",
+    "aa043",
+    "aa045"
+   ],
+   "completion": "014a0361",
+   "kind": "done (P3 package; audit 323 gates all PASS; verdict agreements 8/8 (WIN=8); replica 16/16 node-exact; verdict unconsumed; registry merge deferred to post-rev4 wave per DG declaration D9 conflict-avoidance)"
   }
   },
   "loss_adoptions": {
@@ -2897,7 +2911,9 @@
     }
    ],
    "thirdimpl": {
-    "state": "open"
+    "state": "done",
+    "part": "DG",
+    "completion": "014a0361"
    },
    "est_crossimpl_2pass_nodes": 26005805
   },
@@ -3913,7 +3929,9 @@
     }
    ],
    "thirdimpl": {
-    "state": "open"
+    "state": "done",
+    "part": "DG",
+    "completion": "014a0361"
    },
    "est_crossimpl_2pass_nodes": 26785471
   },
@@ -4009,7 +4027,9 @@
     }
    ],
    "thirdimpl": {
-    "state": "open"
+    "state": "done",
+    "part": "DG",
+    "completion": "014a0361"
    },
    "est_crossimpl_2pass_nodes": 24269294
   },
@@ -4105,7 +4125,9 @@
     }
    ],
    "thirdimpl": {
-    "state": "open"
+    "state": "done",
+    "part": "DG",
+    "completion": "014a0361"
    },
    "est_crossimpl_2pass_nodes": 28485117
   },
@@ -4152,7 +4174,9 @@
     }
    ],
    "thirdimpl": {
-    "state": "open"
+    "state": "done",
+    "part": "DG",
+    "completion": "014a0361"
    },
    "est_crossimpl_2pass_nodes": 21758676
   },
@@ -4199,7 +4223,9 @@
     }
    ],
    "thirdimpl": {
-    "state": "open"
+    "state": "done",
+    "part": "DG",
+    "completion": "014a0361"
    },
    "est_crossimpl_2pass_nodes": 29197785
   },
@@ -4394,7 +4420,9 @@
     }
    ],
    "thirdimpl": {
-    "state": "open"
+    "state": "done",
+    "part": "DG",
+    "completion": "014a0361"
    },
    "est_crossimpl_2pass_nodes": 24905889
   },
@@ -4678,7 +4706,9 @@
     }
    ],
    "thirdimpl": {
-    "state": "open"
+    "state": "done",
+    "part": "DG",
+    "completion": "014a0361"
    },
    "est_crossimpl_2pass_nodes": 21185678
   },
@@ -4811,9 +4841,9 @@
  "views": {
   "queue_state_counts": {
    "win_total": 46,
-   "thirdimpl_done_win": 29,
+   "thirdimpl_done_win": 37,
    "thirdimpl_claimed_win": 0,
-   "thirdimpl_open_win": 17,
+   "thirdimpl_open_win": 9,
    "loss_total": 8,
    "loss_thirdimpl_done": 1,
    "loss_adoption_done": 8,
@@ -4905,7 +4935,10 @@
     ],
     "n_keys": 8,
     "pinned_nodes_total": 85844795,
-    "est_crossimpl_2pass_total": 202593715
+    "est_crossimpl_2pass_total": 202593715,
+    "status": "done",
+    "done_part": "DG",
+    "completion": "014a0361"
    },
    "P4": {
     "keys": [
@@ -5015,15 +5048,17 @@
  "how_to_verify": "re-fetch the 7 pinned status.logs + batch-keys, verify sha256, parse (PASS b,rc,nodes / WIN-HALT / EXHAUSTED / *-TRUNCATED-RETRY), decisive = first chronological rc=1 (WIN) else rc=2 (LOSS)"
 ,
  "revision": {
-  "rev": 4,
-  "updated_utc": "2026-11-24T09:12Z",
-  "change": "P2-package 8 rows thirdimpl open->done (Part DF completion 622ad460 after takeover 255d43a4 + amendment 4afac03b of declaration 59b6540f); thirdimpl_done_win 21->29, thirdimpl_open_win 25->17, claimed 0 unchanged; packages.P2 status done; thirdimpl_publications DF appended; open33_by_est_cost snapshot unchanged (rev2/rev3 practice); bookkeeping-only, no solver run, verdict unconsumed",
+  "rev": 5,
+  "updated_utc": "2026-11-24T09:20Z",
+  "change": "P3-package 8 rows thirdimpl open->done (Part DG completion 014a0361; registry merge was explicitly deferred by DG declaration D9 to avoid conflict with the DF-side P2 update, merged here as rev5 after rev4 0d90c02a); thirdimpl_done_win 29->37, thirdimpl_open_win 17->9, claimed 0 unchanged; packages.P3 status done; thirdimpl_publications DG appended; open33_by_est_cost snapshot unchanged; bookkeeping-only, no solver run, verdict unconsumed",
   "rev1_registry_sha256": "8c4216c68366c6a63e426ee36234b68955ef6f3a873429b0baa207f6dfc66592",
   "rev1_published": "69e391a3",
   "rev2_registry_sha256": "e437af3745fa129734cc1edc76808b49b84d23036109bad6ff93c03c29602483",
   "rev2_published": "fc537f3b",
   "rev3_registry_sha256": "334f6209d0628cdf8f5c997e92bc5e5e63ae7f450345dc1a8393488941f1f6e9",
   "rev3_published": "43932d74",
-  "provenance": "Part DF completion 622ad460 (takeover 255d43a4 + amendment 4afac03b of declaration 59b6540f), experiment n11-centralreply-closure-b28p2win8-thirdimpl-20261124, audit 323 gates all PASS (3x byte-identical stdout 96e59f21), replica 16/16 node-exact vs published PIN_RAW_DF, third-impl verdict agreements 8/8 (WIN), tamper battery 4/4 captured + restore green, verdict unconsumed, 11x11 UNKNOWN"
+  "rev4_registry_sha256": "6e995387538422d161f33d45a8f24dd48403ac1c869acd6e88f1ca08bbcbe319",
+  "rev4_published": "0d90c02a",
+  "provenance": "Part DG completion 014a0361, experiment n11-centralreply-closure-b28p3win8-thirdimpl-20261124, audit-summary fd68c562 machine-verified on main (323 gates all PASS, third-impl verdict agreements 8/8 (WIN), replica 16/16 node-exact vs published raw, pass-one total third expansions 101,925,010), verdict unconsumed, 11x11 UNKNOWN"
  }
 }
