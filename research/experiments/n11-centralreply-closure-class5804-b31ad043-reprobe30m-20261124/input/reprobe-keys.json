@@ -1,0 +1,104 @@
+{
+ "schema": "n11-centralreply-c5804-b31ad043-reprobe30m-input-v1",
+ "class_index": 5804,
+ "batch": 31,
+ "source_condition": {
+  "budget": 15000000,
+  "published_batch_packet_sha256": "d058fddc862c5f62b387eea7c7ac5b78f2c5063661371b388e5078772af4ff0e",
+  "published_b31_status": {
+   "sha256": "c69c2fec9d07e50dca6763fdb97acb5a05798b7852a1ab45be8e7a7a7889dd5b",
+   "published_commit": "70d79714",
+   "lines": 59,
+   "target_last_remaining_exhausted": {
+    "id": "ad043",
+    "fields": "15000000,0,15000000"
+   },
+   "target_in_resolved_lines": false,
+   "anchor_facts": {
+    "ad054_pass": "15000000,2,1644957",
+    "ad055_pass": "15000000,1,3364655",
+    "ad055_win_halt": true
+   },
+   "source_experiment_dir": "research/experiments/n11-centralreply-closure-class5804-batch31-20261124/"
+  },
+  "published_aggregate": {
+   "loss": 51,
+   "win": [
+    "ad024",
+    "ad028",
+    "ad055"
+   ],
+   "exhausted": [
+    "ad043"
+   ],
+   "source": "published batch-31 README (Part CY drive-2 takeover C, commit 70d79714)"
+  }
+ },
+ "reprobe_condition": {
+  "budget": 30000000,
+  "derived_runner_sha256": "3b5083b47c043f93bbe01a5f3335baba6be6d1d6929885f4ab5b28b1778cf7b4",
+  "note": "higher-budget NEW-condition reprobe pre-declared by Part DI (Part CT precedent followed byte-for-byte in design); the published 15M condition is not re-run (no-same-condition-re-search rule for COMPLETED exhaustion rows is untouched); result 0 at 30M remains honest UNKNOWN with no same-condition re-probe; published 15M exhaustion pass wall is 108s so a 30M single pass is expected ~216s: a single invocation cannot host p1+p2 inside the 260s inner window, so the published cross-invocation p1/p2 file-existence resume guard is exercised as pre-declared (1-3 invocations per key, WINDOW-EXCEEDED backup rule intact); a still-exhausted target at 30M would need a future Part with a different window/budget design"
+ },
+ "base_cache_absence_check": {
+  "path": "research/experiments/n11-centralreply-closure-b28p4win9-thirdimpl-20261124/sources/canonical-cache-db-merged-b29loss37.cache",
+  "sha256": "04b0a23987a97518e276ea5ff966496facab22f93628cd5fbc682a04c3650556",
+  "verdict_rows": 6354,
+  "target_hits": {
+   "ad043": 0
+  },
+  "note": "Part DB merged canonical 6354-row chain head (published as Part DH A2b source); batch-31 rows incl. the target are pre-adoption there by construction - recorded here as a machine fact"
+ },
+ "keys": [
+  {
+   "key_id": "ad043",
+   "s5_index": 212115,
+   "lo": "6052837899185946628",
+   "hi": "128",
+   "legal": 87,
+   "membership_class_count": 4,
+   "input_csv_sha256": "fda5d01d981b3ae7c1874cb11aae4379d0add8a53f11defb6ded496fd1b2bcd2",
+   "published_15m": {
+    "result": 0,
+    "nodes": 15000000,
+    "raw_p1_sha256": "5f3bf5bc6f6bc636c7aa6d7e72619530ce2a0b918558d635ac7191b27c729d11",
+    "raw_p2_sha256": "1feacf0c91cfaa72e9f3965bc0be83beb6aebbba005a74f0fbbdcfffb4b4db15"
+   }
+  }
+ ],
+ "anchors": [
+  {
+   "key_id": "ad054",
+   "lo": "6052838174063853568",
+   "hi": "128",
+   "legal": 86,
+   "published_15m": {
+    "result": 2,
+    "nodes": 1644957,
+    "raw_p1_sha256": "c2d1500b831836c7791d96d3fab5f344c59bff506d96854c510a2c504e9ae1e0",
+    "raw_p2_sha256": "c2d1500b831836c7791d96d3fab5f344c59bff506d96854c510a2c504e9ae1e0"
+   },
+   "expect_at_30m": {
+    "result": 2,
+    "nodes": 1644957
+   },
+   "note": "resolved rows re-run under the higher budget flag as derived-runner val anchors; the deterministic search must reproduce the published node count exactly (budget only caps, so nodes are unchanged)"
+  },
+  {
+   "key_id": "ad055",
+   "lo": "6053400849139367936",
+   "hi": "128",
+   "legal": 92,
+   "published_15m": {
+    "result": 1,
+    "nodes": 3364655,
+    "raw_p1_sha256": "61704c55151f00db87c59285e40ba01180da5b762c9bb73ecf285fe93b9c34dd",
+    "raw_p2_sha256": "61704c55151f00db87c59285e40ba01180da5b762c9bb73ecf285fe93b9c34dd"
+   },
+   "expect_at_30m": {
+    "result": 1,
+    "nodes": 3364655
+   },
+   "note": "resolved rows re-run under the higher budget flag as derived-runner val anchors; the deterministic search must reproduce the published node count exactly (budget only caps, so nodes are unchanged)"
+  }
+ ]
+}
