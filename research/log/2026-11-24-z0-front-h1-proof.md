@@ -101,3 +101,19 @@ T-Q が拡張）。z0 面は予算全域で確定。
   class 群は **UNKNOWN 維持**（verdict 不消費・検証点数を勝敗と
   して読まない）。
 - z10/z11 ストリップレーン・n11 CQ レーン・11×11 giant は非接触。
+
+## honest 記録（出版側インシデント・一連の commit にも記録済み）
+
+6. **knowledge README truncation 事故と修復**: 出版 (D)（commit 705dcd87）で
+   K item・run log は byte 一致で無傷だったが、knowledge README
+   （1,008,655B = 元 1,003,768B + K1282 bullet 純append）の push が
+   読み取り側のバイト上限（~37.5KB/チャンク）で切れた 63,749B の
+   前置断片で上書きされていた。直後の curl fetch-back（wc -c）で
+   検出し、next_offset チャンク連結（17 chunk・JS 628,446 chars =
+   Python 628,444 codepoints + 𝓜 U+1D4DC 2 個のサロゲートペア差
+   を機械確認）で全量を復元し、修復 commit 1c2103bb として再出版。
+   修復後 fetch-back sha256 5ea4d945… がローカル正本と byte 一致
+   （cmp 全 nbytes PASS）。切れっぱなし期間は 705dcd87〜1c2103bb の
+   約2分。以後の運用メモ: KB 級超ファイルの push は読み取り
+   chunk 連結 + 全文字数照合 + push 後 fetch-back wc/sha の
+   3点検を必須とする。
