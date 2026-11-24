@@ -1,0 +1,1281 @@
+TAMPER-T1 replica ab002.p1 nodes 3662776->3662777
+CASE t1 rc=1 first_gate=replica-ab002-det-pair expected=replica-ab002-det-pair
+    PASS pin-pins-table 59cd84093bac8a0e114913a6dedf38069ba27980a7fc20a59e606b9ddc1fb60f
+    PASS pins-schema n11-centralreply-class2251-b29ckpt1-pins-v1
+    PASS pin-all-73 73 entries
+    PASS rows-schema n11-centralreply-class2251-b29ckpt1-thirdimpl-input-v1
+    PASS rows-target-count 16 (16 published ckpt-1/3 rows, all LOSS honest labels)
+    PASS rows-target-verdict-kind all 16 published rows are LOSS (result=2); 0 WIN / 0 EXHAUSTED
+    PASS rows-anchor-negative-counts 2 anchors / 2 negatives
+    PASS published-ab001-present-done p1=True p2=True done=True
+    PASS published-ab001-det-pair p1=['15000000', '2', '4265342'] p2=['15000000', '2', '4265342']
+    PASS published-ab001-key-scheme 1155314042043105281,0,95 vs 1155314042043105281,0,95
+    PASS published-ab002-present-done p1=True p2=True done=True
+    PASS published-ab002-det-pair p1=['15000000', '2', '3662776'] p2=['15000000', '2', '3662776']
+    PASS published-ab002-key-scheme 1155314042043105282,0,97 vs 1155314042043105282,0,97
+    PASS published-ab003-present-done p1=True p2=True done=True
+    PASS published-ab003-det-pair p1=['15000000', '2', '4447441'] p2=['15000000', '2', '4447441']
+    PASS published-ab003-key-scheme 1155314042043105284,0,98 vs 1155314042043105284,0,98
+    PASS published-ab004-present-done p1=True p2=True done=True
+    PASS published-ab004-det-pair p1=['15000000', '2', '2687012'] p2=['15000000', '2', '2687012']
+    PASS published-ab004-key-scheme 1155314042043105288,0,92 vs 1155314042043105288,0,92
+    PASS published-ab005-present-done p1=True p2=True done=True
+    PASS published-ab005-det-pair p1=['15000000', '2', '3714648'] p2=['15000000', '2', '3714648']
+    PASS published-ab005-key-scheme 1155314042043105296,0,96 vs 1155314042043105296,0,96
+    PASS published-ab006-present-done p1=True p2=True done=True
+    PASS published-ab006-det-pair p1=['15000000', '2', '3855756'] p2=['15000000', '2', '3855756']
+    PASS published-ab006-key-scheme 1155314042043107328,0,96 vs 1155314042043107328,0,96
+    PASS published-ab007-present-done p1=True p2=True done=True
+    PASS published-ab007-det-pair p1=['15000000', '2', '3763776'] p2=['15000000', '2', '3763776']
+    PASS published-ab007-key-scheme 1155314042043109376,0,83 vs 1155314042043109376,0,83
+    PASS published-ab008-present-done p1=True p2=True done=True
+    PASS published-ab008-det-pair p1=['15000000', '2', '2890562'] p2=['15000000', '2', '2890562']
+    PASS published-ab008-key-scheme 1155314042043113472,0,93 vs 1155314042043113472,0,93
+    PASS published-ab009-present-done p1=True p2=True done=True
+    PASS published-ab009-det-pair p1=['15000000', '2', '1786048'] p2=['15000000', '2', '1786048']
+    PASS published-ab009-key-scheme 1155314042043138048,0,87 vs 1155314042043138048,0,87
+    PASS published-ab010-present-done p1=True p2=True done=True
+    PASS published-ab010-det-pair p1=['15000000', '2', '4242063'] p2=['15000000', '2', '4242063']
+    PASS published-ab010-key-scheme 1155314042043170816,0,88 vs 1155314042043170816,0,88
+    PASS published-ab011-present-done p1=True p2=True done=True
+    PASS published-ab011-det-pair p1=['15000000', '2', '4806135'] p2=['15000000', '2', '4806135']
+    PASS published-ab011-key-scheme 1155314042047299584,0,92 vs 1155314042047299584,0,92
+    PASS published-ab012-present-done p1=True p2=True done=True
+    PASS published-ab012-det-pair p1=['15000000', '2', '2606954'] p2=['15000000', '2', '2606954']
+    PASS published-ab012-key-scheme 1155314042051493888,0,89 vs 1155314042051493888,0,89
+    PASS published-ab013-present-done p1=True p2=True done=True
+    PASS published-ab013-det-pair p1=['15000000', '2', '2284195'] p2=['15000000', '2', '2284195']
+    PASS published-ab013-key-scheme 1155314042059882496,0,87 vs 1155314042059882496,0,87
+    PASS published-ab014-present-done p1=True p2=True done=True
+    PASS published-ab014-det-pair p1=['15000000', '2', '4280600'] p2=['15000000', '2', '4280600']
+    PASS published-ab014-key-scheme 1155314042076659712,0,91 vs 1155314042076659712,0,91
+    PASS published-ab015-present-done p1=True p2=True done=True
+    PASS published-ab015-det-pair p1=['15000000', '2', '3912106'] p2=['15000000', '2', '3912106']
+    PASS published-ab015-key-scheme 1155314050633039872,0,98 vs 1155314050633039872,0,98
+    PASS published-ab016-present-done p1=True p2=True done=True
+    PASS published-ab016-det-pair p1=['15000000', '2', '4258557'] p2=['15000000', '2', '4258557']
+    PASS published-ab016-key-scheme 1155314059222974464,0,96 vs 1155314059222974464,0,96
+    PASS published-status-16-pass-lines 16 lines
+    PASS published-status-reconciles-raw 16/16 (budget,result,nodes)
+    PASS published-status-no-halt-or-exhaustion 0 HALT/EXHAUSTED/MISMATCH/TRUNCATED lines
+    PASS published-batch-keys-reconcile 16/16
+    PASS published-claim-16-loss distinct results=['2']
+    PASS rows-regen-agrees-source 16/16 fields+sha re-derived
+    PASS replica-ab001-present p1/p2
+    PASS replica-ab001-done replay_done p1=True p2=True
+    PASS replica-ab001-quads quads-header p1=True p2=True
+    PASS replica-ab001-det-pair p1=['15000000', '2', '4265342'] p2=['15000000', '2', '4265342']
+    PASS replica-ab001-schema schema ['replay', '0', '5', '95', '0', '15000000']
+    PASS replica-ab001-key 1155314042043105281,0,95 vs 1155314042043105281,0,95
+    PASS replica-ab001-node-exact-vs-published this-host result=2 nodes=4265342 vs published result=2 nodes=4265342
+    PASS replica-ab002-present p1/p2
+    PASS replica-ab002-done replay_done p1=True p2=True
+    PASS replica-ab002-quads quads-header p1=True p2=True
+    GATE FAILED: replica-ab002-det-pair p1=['15000000', '2', '3662777'] p2=['15000000', '2', '3662776']
+TAMPER-T2 third ab005.b expansions +1
+CASE t2 rc=1 first_gate=third-target-ab005-det-pair expected=third-target-ab005-det-pair
+    PASS pin-pins-table 59cd84093bac8a0e114913a6dedf38069ba27980a7fc20a59e606b9ddc1fb60f
+    PASS pins-schema n11-centralreply-class2251-b29ckpt1-pins-v1
+    PASS pin-all-73 73 entries
+    PASS rows-schema n11-centralreply-class2251-b29ckpt1-thirdimpl-input-v1
+    PASS rows-target-count 16 (16 published ckpt-1/3 rows, all LOSS honest labels)
+    PASS rows-target-verdict-kind all 16 published rows are LOSS (result=2); 0 WIN / 0 EXHAUSTED
+    PASS rows-anchor-negative-counts 2 anchors / 2 negatives
+    PASS published-ab001-present-done p1=True p2=True done=True
+    PASS published-ab001-det-pair p1=['15000000', '2', '4265342'] p2=['15000000', '2', '4265342']
+    PASS published-ab001-key-scheme 1155314042043105281,0,95 vs 1155314042043105281,0,95
+    PASS published-ab002-present-done p1=True p2=True done=True
+    PASS published-ab002-det-pair p1=['15000000', '2', '3662776'] p2=['15000000', '2', '3662776']
+    PASS published-ab002-key-scheme 1155314042043105282,0,97 vs 1155314042043105282,0,97
+    PASS published-ab003-present-done p1=True p2=True done=True
+    PASS published-ab003-det-pair p1=['15000000', '2', '4447441'] p2=['15000000', '2', '4447441']
+    PASS published-ab003-key-scheme 1155314042043105284,0,98 vs 1155314042043105284,0,98
+    PASS published-ab004-present-done p1=True p2=True done=True
+    PASS published-ab004-det-pair p1=['15000000', '2', '2687012'] p2=['15000000', '2', '2687012']
+    PASS published-ab004-key-scheme 1155314042043105288,0,92 vs 1155314042043105288,0,92
+    PASS published-ab005-present-done p1=True p2=True done=True
+    PASS published-ab005-det-pair p1=['15000000', '2', '3714648'] p2=['15000000', '2', '3714648']
+    PASS published-ab005-key-scheme 1155314042043105296,0,96 vs 1155314042043105296,0,96
+    PASS published-ab006-present-done p1=True p2=True done=True
+    PASS published-ab006-det-pair p1=['15000000', '2', '3855756'] p2=['15000000', '2', '3855756']
+    PASS published-ab006-key-scheme 1155314042043107328,0,96 vs 1155314042043107328,0,96
+    PASS published-ab007-present-done p1=True p2=True done=True
+    PASS published-ab007-det-pair p1=['15000000', '2', '3763776'] p2=['15000000', '2', '3763776']
+    PASS published-ab007-key-scheme 1155314042043109376,0,83 vs 1155314042043109376,0,83
+    PASS published-ab008-present-done p1=True p2=True done=True
+    PASS published-ab008-det-pair p1=['15000000', '2', '2890562'] p2=['15000000', '2', '2890562']
+    PASS published-ab008-key-scheme 1155314042043113472,0,93 vs 1155314042043113472,0,93
+    PASS published-ab009-present-done p1=True p2=True done=True
+    PASS published-ab009-det-pair p1=['15000000', '2', '1786048'] p2=['15000000', '2', '1786048']
+    PASS published-ab009-key-scheme 1155314042043138048,0,87 vs 1155314042043138048,0,87
+    PASS published-ab010-present-done p1=True p2=True done=True
+    PASS published-ab010-det-pair p1=['15000000', '2', '4242063'] p2=['15000000', '2', '4242063']
+    PASS published-ab010-key-scheme 1155314042043170816,0,88 vs 1155314042043170816,0,88
+    PASS published-ab011-present-done p1=True p2=True done=True
+    PASS published-ab011-det-pair p1=['15000000', '2', '4806135'] p2=['15000000', '2', '4806135']
+    PASS published-ab011-key-scheme 1155314042047299584,0,92 vs 1155314042047299584,0,92
+    PASS published-ab012-present-done p1=True p2=True done=True
+    PASS published-ab012-det-pair p1=['15000000', '2', '2606954'] p2=['15000000', '2', '2606954']
+    PASS published-ab012-key-scheme 1155314042051493888,0,89 vs 1155314042051493888,0,89
+    PASS published-ab013-present-done p1=True p2=True done=True
+    PASS published-ab013-det-pair p1=['15000000', '2', '2284195'] p2=['15000000', '2', '2284195']
+    PASS published-ab013-key-scheme 1155314042059882496,0,87 vs 1155314042059882496,0,87
+    PASS published-ab014-present-done p1=True p2=True done=True
+    PASS published-ab014-det-pair p1=['15000000', '2', '4280600'] p2=['15000000', '2', '4280600']
+    PASS published-ab014-key-scheme 1155314042076659712,0,91 vs 1155314042076659712,0,91
+    PASS published-ab015-present-done p1=True p2=True done=True
+    PASS published-ab015-det-pair p1=['15000000', '2', '3912106'] p2=['15000000', '2', '3912106']
+    PASS published-ab015-key-scheme 1155314050633039872,0,98 vs 1155314050633039872,0,98
+    PASS published-ab016-present-done p1=True p2=True done=True
+    PASS published-ab016-det-pair p1=['15000000', '2', '4258557'] p2=['15000000', '2', '4258557']
+    PASS published-ab016-key-scheme 1155314059222974464,0,96 vs 1155314059222974464,0,96
+    PASS published-status-16-pass-lines 16 lines
+    PASS published-status-reconciles-raw 16/16 (budget,result,nodes)
+    PASS published-status-no-halt-or-exhaustion 0 HALT/EXHAUSTED/MISMATCH/TRUNCATED lines
+    PASS published-batch-keys-reconcile 16/16
+    PASS published-claim-16-loss distinct results=['2']
+    PASS rows-regen-agrees-source 16/16 fields+sha re-derived
+    PASS replica-ab001-present p1/p2
+    PASS replica-ab001-done replay_done p1=True p2=True
+    PASS replica-ab001-quads quads-header p1=True p2=True
+    PASS replica-ab001-det-pair p1=['15000000', '2', '4265342'] p2=['15000000', '2', '4265342']
+    PASS replica-ab001-schema schema ['replay', '0', '5', '95', '0', '15000000']
+    PASS replica-ab001-key 1155314042043105281,0,95 vs 1155314042043105281,0,95
+    PASS replica-ab001-node-exact-vs-published this-host result=2 nodes=4265342 vs published result=2 nodes=4265342
+    PASS replica-ab002-present p1/p2
+    PASS replica-ab002-done replay_done p1=True p2=True
+    PASS replica-ab002-quads quads-header p1=True p2=True
+    PASS replica-ab002-det-pair p1=['15000000', '2', '3662776'] p2=['15000000', '2', '3662776']
+    PASS replica-ab002-schema schema ['replay', '0', '5', '97', '0', '15000000']
+    PASS replica-ab002-key 1155314042043105282,0,97 vs 1155314042043105282,0,97
+    PASS replica-ab002-node-exact-vs-published this-host result=2 nodes=3662776 vs published result=2 nodes=3662776
+    PASS replica-ab003-present p1/p2
+    PASS replica-ab003-done replay_done p1=True p2=True
+    PASS replica-ab003-quads quads-header p1=True p2=True
+    PASS replica-ab003-det-pair p1=['15000000', '2', '4447441'] p2=['15000000', '2', '4447441']
+    PASS replica-ab003-schema schema ['replay', '0', '5', '98', '0', '15000000']
+    PASS replica-ab003-key 1155314042043105284,0,98 vs 1155314042043105284,0,98
+    PASS replica-ab003-node-exact-vs-published this-host result=2 nodes=4447441 vs published result=2 nodes=4447441
+    PASS replica-ab004-present p1/p2
+    PASS replica-ab004-done replay_done p1=True p2=True
+    PASS replica-ab004-quads quads-header p1=True p2=True
+    PASS replica-ab004-det-pair p1=['15000000', '2', '2687012'] p2=['15000000', '2', '2687012']
+    PASS replica-ab004-schema schema ['replay', '0', '5', '92', '0', '15000000']
+    PASS replica-ab004-key 1155314042043105288,0,92 vs 1155314042043105288,0,92
+    PASS replica-ab004-node-exact-vs-published this-host result=2 nodes=2687012 vs published result=2 nodes=2687012
+    PASS replica-ab005-present p1/p2
+    PASS replica-ab005-done replay_done p1=True p2=True
+    PASS replica-ab005-quads quads-header p1=True p2=True
+    PASS replica-ab005-det-pair p1=['15000000', '2', '3714648'] p2=['15000000', '2', '3714648']
+    PASS replica-ab005-schema schema ['replay', '0', '5', '96', '0', '15000000']
+    PASS replica-ab005-key 1155314042043105296,0,96 vs 1155314042043105296,0,96
+    PASS replica-ab005-node-exact-vs-published this-host result=2 nodes=3714648 vs published result=2 nodes=3714648
+    PASS replica-ab006-present p1/p2
+    PASS replica-ab006-done replay_done p1=True p2=True
+    PASS replica-ab006-quads quads-header p1=True p2=True
+    PASS replica-ab006-det-pair p1=['15000000', '2', '3855756'] p2=['15000000', '2', '3855756']
+    PASS replica-ab006-schema schema ['replay', '0', '5', '96', '0', '15000000']
+    PASS replica-ab006-key 1155314042043107328,0,96 vs 1155314042043107328,0,96
+    PASS replica-ab006-node-exact-vs-published this-host result=2 nodes=3855756 vs published result=2 nodes=3855756
+    PASS replica-ab007-present p1/p2
+    PASS replica-ab007-done replay_done p1=True p2=True
+    PASS replica-ab007-quads quads-header p1=True p2=True
+    PASS replica-ab007-det-pair p1=['15000000', '2', '3763776'] p2=['15000000', '2', '3763776']
+    PASS replica-ab007-schema schema ['replay', '0', '5', '83', '0', '15000000']
+    PASS replica-ab007-key 1155314042043109376,0,83 vs 1155314042043109376,0,83
+    PASS replica-ab007-node-exact-vs-published this-host result=2 nodes=3763776 vs published result=2 nodes=3763776
+    PASS replica-ab008-present p1/p2
+    PASS replica-ab008-done replay_done p1=True p2=True
+    PASS replica-ab008-quads quads-header p1=True p2=True
+    PASS replica-ab008-det-pair p1=['15000000', '2', '2890562'] p2=['15000000', '2', '2890562']
+    PASS replica-ab008-schema schema ['replay', '0', '5', '93', '0', '15000000']
+    PASS replica-ab008-key 1155314042043113472,0,93 vs 1155314042043113472,0,93
+    PASS replica-ab008-node-exact-vs-published this-host result=2 nodes=2890562 vs published result=2 nodes=2890562
+    PASS replica-ab009-present p1/p2
+    PASS replica-ab009-done replay_done p1=True p2=True
+    PASS replica-ab009-quads quads-header p1=True p2=True
+    PASS replica-ab009-det-pair p1=['15000000', '2', '1786048'] p2=['15000000', '2', '1786048']
+    PASS replica-ab009-schema schema ['replay', '0', '5', '87', '0', '15000000']
+    PASS replica-ab009-key 1155314042043138048,0,87 vs 1155314042043138048,0,87
+    PASS replica-ab009-node-exact-vs-published this-host result=2 nodes=1786048 vs published result=2 nodes=1786048
+    PASS replica-ab010-present p1/p2
+    PASS replica-ab010-done replay_done p1=True p2=True
+    PASS replica-ab010-quads quads-header p1=True p2=True
+    PASS replica-ab010-det-pair p1=['15000000', '2', '4242063'] p2=['15000000', '2', '4242063']
+    PASS replica-ab010-schema schema ['replay', '0', '5', '88', '0', '15000000']
+    PASS replica-ab010-key 1155314042043170816,0,88 vs 1155314042043170816,0,88
+    PASS replica-ab010-node-exact-vs-published this-host result=2 nodes=4242063 vs published result=2 nodes=4242063
+    PASS replica-ab011-present p1/p2
+    PASS replica-ab011-done replay_done p1=True p2=True
+    PASS replica-ab011-quads quads-header p1=True p2=True
+    PASS replica-ab011-det-pair p1=['15000000', '2', '4806135'] p2=['15000000', '2', '4806135']
+    PASS replica-ab011-schema schema ['replay', '0', '5', '92', '0', '15000000']
+    PASS replica-ab011-key 1155314042047299584,0,92 vs 1155314042047299584,0,92
+    PASS replica-ab011-node-exact-vs-published this-host result=2 nodes=4806135 vs published result=2 nodes=4806135
+    PASS replica-ab012-present p1/p2
+    PASS replica-ab012-done replay_done p1=True p2=True
+    PASS replica-ab012-quads quads-header p1=True p2=True
+    PASS replica-ab012-det-pair p1=['15000000', '2', '2606954'] p2=['15000000', '2', '2606954']
+    PASS replica-ab012-schema schema ['replay', '0', '5', '89', '0', '15000000']
+    PASS replica-ab012-key 1155314042051493888,0,89 vs 1155314042051493888,0,89
+    PASS replica-ab012-node-exact-vs-published this-host result=2 nodes=2606954 vs published result=2 nodes=2606954
+    PASS replica-ab013-present p1/p2
+    PASS replica-ab013-done replay_done p1=True p2=True
+    PASS replica-ab013-quads quads-header p1=True p2=True
+    PASS replica-ab013-det-pair p1=['15000000', '2', '2284195'] p2=['15000000', '2', '2284195']
+    PASS replica-ab013-schema schema ['replay', '0', '5', '87', '0', '15000000']
+    PASS replica-ab013-key 1155314042059882496,0,87 vs 1155314042059882496,0,87
+    PASS replica-ab013-node-exact-vs-published this-host result=2 nodes=2284195 vs published result=2 nodes=2284195
+    PASS replica-ab014-present p1/p2
+    PASS replica-ab014-done replay_done p1=True p2=True
+    PASS replica-ab014-quads quads-header p1=True p2=True
+    PASS replica-ab014-det-pair p1=['15000000', '2', '4280600'] p2=['15000000', '2', '4280600']
+    PASS replica-ab014-schema schema ['replay', '0', '5', '91', '0', '15000000']
+    PASS replica-ab014-key 1155314042076659712,0,91 vs 1155314042076659712,0,91
+    PASS replica-ab014-node-exact-vs-published this-host result=2 nodes=4280600 vs published result=2 nodes=4280600
+    PASS replica-ab015-present p1/p2
+    PASS replica-ab015-done replay_done p1=True p2=True
+    PASS replica-ab015-quads quads-header p1=True p2=True
+    PASS replica-ab015-det-pair p1=['15000000', '2', '3912106'] p2=['15000000', '2', '3912106']
+    PASS replica-ab015-schema schema ['replay', '0', '5', '98', '0', '15000000']
+    PASS replica-ab015-key 1155314050633039872,0,98 vs 1155314050633039872,0,98
+    PASS replica-ab015-node-exact-vs-published this-host result=2 nodes=3912106 vs published result=2 nodes=3912106
+    PASS replica-ab016-present p1/p2
+    PASS replica-ab016-done replay_done p1=True p2=True
+    PASS replica-ab016-quads quads-header p1=True p2=True
+    PASS replica-ab016-det-pair p1=['15000000', '2', '4258557'] p2=['15000000', '2', '4258557']
+    PASS replica-ab016-schema schema ['replay', '0', '5', '96', '0', '15000000']
+    PASS replica-ab016-key 1155314059222974464,0,96 vs 1155314059222974464,0,96
+    PASS replica-ab016-node-exact-vs-published this-host result=2 nodes=4258557 vs published result=2 nodes=4258557
+    PASS replica-all-16-node-exact 16/16 (first independent-session reproduction of ckpt-1/3)
+    PASS anchor-k02a-present a/b
+    PASS anchor-k02a-a-clean result=1 reason=clean quads=95670
+    PASS anchor-k02a-a-expansions exp=9106337 vs 9106337, ttH=4991527 vs 4991527
+    PASS anchor-k02a-a-key 1297036692683751424:68157440
+    PASS anchor-k02a-b-clean result=1 reason=clean quads=95670
+    PASS anchor-k02a-b-expansions exp=9106337 vs 9106337, ttH=4991527 vs 4991527
+    PASS anchor-k02a-b-key 1297036692683751424:68157440
+    PASS anchor-k02a-det-pair a=9106337/4991527 b=9106337/4991527
+    PASS anchor-l1a-present a/b
+    PASS anchor-l1a-a-clean result=2 reason=clean quads=95670
+    PASS anchor-l1a-a-expansions exp=7660602 vs 7660602, ttH=3951175 vs 3951175
+    PASS anchor-l1a-a-key 13019119616:16448
+    PASS anchor-l1a-b-clean result=2 reason=clean quads=95670
+    PASS anchor-l1a-b-expansions exp=7660602 vs 7660602, ttH=3951175 vs 3951175
+    PASS anchor-l1a-b-key 13019119616:16448
+    PASS anchor-l1a-det-pair a=7660602/3951175 b=7660602/3951175
+    PASS neg-ng1-failclosed {'raw': 'third,ng1a,5,88,,GATE_FAIL,"legal count mismatch: derived=87 declared=88"', 'gate_fail': 'GATE_FAIL,"legal count mismatch: derived=87 declared=88'}
+    PASS neg-ng2-failclosed {'raw': 'third,ng2a,6,87,,GATE_FAIL,"stone count mismatch: bits=5 declared=6"', 'gate_fail': 'GATE_FAIL,"stone count mismatch: bits=5 declared=6'}
+    PASS third-target-ab001-present a/b
+    PASS third-target-ab001-a-key 1155314042043105281:0
+    PASS third-target-ab001-a-legal-derived 95 vs 95
+    PASS third-target-ab001-a-quads 95670
+    PASS third-target-ab001-b-key 1155314042043105281:0
+    PASS third-target-ab001-b-legal-derived 95 vs 95
+    PASS third-target-ab001-b-quads 95670
+    PASS third-target-ab001-det-pair a=(2,4923828,clean) b=(2,4923828,clean)
+    PASS third-target-ab001-verdict-agree third=2 replica=2
+    PASS third-target-ab002-present a/b
+    PASS third-target-ab002-a-key 1155314042043105282:0
+    PASS third-target-ab002-a-legal-derived 97 vs 97
+    PASS third-target-ab002-a-quads 95670
+    PASS third-target-ab002-b-key 1155314042043105282:0
+    PASS third-target-ab002-b-legal-derived 97 vs 97
+    PASS third-target-ab002-b-quads 95670
+    PASS third-target-ab002-det-pair a=(2,4230137,clean) b=(2,4230137,clean)
+    PASS third-target-ab002-verdict-agree third=2 replica=2
+    PASS third-target-ab003-present a/b
+    PASS third-target-ab003-a-key 1155314042043105284:0
+    PASS third-target-ab003-a-legal-derived 98 vs 98
+    PASS third-target-ab003-a-quads 95670
+    PASS third-target-ab003-b-key 1155314042043105284:0
+    PASS third-target-ab003-b-legal-derived 98 vs 98
+    PASS third-target-ab003-b-quads 95670
+    PASS third-target-ab003-det-pair a=(2,5191413,clean) b=(2,5191413,clean)
+    PASS third-target-ab003-verdict-agree third=2 replica=2
+    PASS third-target-ab004-present a/b
+    PASS third-target-ab004-a-key 1155314042043105288:0
+    PASS third-target-ab004-a-legal-derived 92 vs 92
+    PASS third-target-ab004-a-quads 95670
+    PASS third-target-ab004-b-key 1155314042043105288:0
+    PASS third-target-ab004-b-legal-derived 92 vs 92
+    PASS third-target-ab004-b-quads 95670
+    PASS third-target-ab004-det-pair a=(2,3061759,clean) b=(2,3061759,clean)
+    PASS third-target-ab004-verdict-agree third=2 replica=2
+    PASS third-target-ab005-present a/b
+    PASS third-target-ab005-a-key 1155314042043105296:0
+    PASS third-target-ab005-a-legal-derived 96 vs 96
+    PASS third-target-ab005-a-quads 95670
+    PASS third-target-ab005-b-key 1155314042043105296:0
+    PASS third-target-ab005-b-legal-derived 96 vs 96
+    PASS third-target-ab005-b-quads 95670
+    GATE FAILED: third-target-ab005-det-pair a=(2,4264033,clean) b=(2,4264034,clean)
+TAMPER-T3 third ab009 a+b result 2->1
+CASE t3 rc=1 first_gate=third-target-ab009-verdict-agree expected=third-target-ab009-verdict-agree
+    PASS pin-pins-table 59cd84093bac8a0e114913a6dedf38069ba27980a7fc20a59e606b9ddc1fb60f
+    PASS pins-schema n11-centralreply-class2251-b29ckpt1-pins-v1
+    PASS pin-all-73 73 entries
+    PASS rows-schema n11-centralreply-class2251-b29ckpt1-thirdimpl-input-v1
+    PASS rows-target-count 16 (16 published ckpt-1/3 rows, all LOSS honest labels)
+    PASS rows-target-verdict-kind all 16 published rows are LOSS (result=2); 0 WIN / 0 EXHAUSTED
+    PASS rows-anchor-negative-counts 2 anchors / 2 negatives
+    PASS published-ab001-present-done p1=True p2=True done=True
+    PASS published-ab001-det-pair p1=['15000000', '2', '4265342'] p2=['15000000', '2', '4265342']
+    PASS published-ab001-key-scheme 1155314042043105281,0,95 vs 1155314042043105281,0,95
+    PASS published-ab002-present-done p1=True p2=True done=True
+    PASS published-ab002-det-pair p1=['15000000', '2', '3662776'] p2=['15000000', '2', '3662776']
+    PASS published-ab002-key-scheme 1155314042043105282,0,97 vs 1155314042043105282,0,97
+    PASS published-ab003-present-done p1=True p2=True done=True
+    PASS published-ab003-det-pair p1=['15000000', '2', '4447441'] p2=['15000000', '2', '4447441']
+    PASS published-ab003-key-scheme 1155314042043105284,0,98 vs 1155314042043105284,0,98
+    PASS published-ab004-present-done p1=True p2=True done=True
+    PASS published-ab004-det-pair p1=['15000000', '2', '2687012'] p2=['15000000', '2', '2687012']
+    PASS published-ab004-key-scheme 1155314042043105288,0,92 vs 1155314042043105288,0,92
+    PASS published-ab005-present-done p1=True p2=True done=True
+    PASS published-ab005-det-pair p1=['15000000', '2', '3714648'] p2=['15000000', '2', '3714648']
+    PASS published-ab005-key-scheme 1155314042043105296,0,96 vs 1155314042043105296,0,96
+    PASS published-ab006-present-done p1=True p2=True done=True
+    PASS published-ab006-det-pair p1=['15000000', '2', '3855756'] p2=['15000000', '2', '3855756']
+    PASS published-ab006-key-scheme 1155314042043107328,0,96 vs 1155314042043107328,0,96
+    PASS published-ab007-present-done p1=True p2=True done=True
+    PASS published-ab007-det-pair p1=['15000000', '2', '3763776'] p2=['15000000', '2', '3763776']
+    PASS published-ab007-key-scheme 1155314042043109376,0,83 vs 1155314042043109376,0,83
+    PASS published-ab008-present-done p1=True p2=True done=True
+    PASS published-ab008-det-pair p1=['15000000', '2', '2890562'] p2=['15000000', '2', '2890562']
+    PASS published-ab008-key-scheme 1155314042043113472,0,93 vs 1155314042043113472,0,93
+    PASS published-ab009-present-done p1=True p2=True done=True
+    PASS published-ab009-det-pair p1=['15000000', '2', '1786048'] p2=['15000000', '2', '1786048']
+    PASS published-ab009-key-scheme 1155314042043138048,0,87 vs 1155314042043138048,0,87
+    PASS published-ab010-present-done p1=True p2=True done=True
+    PASS published-ab010-det-pair p1=['15000000', '2', '4242063'] p2=['15000000', '2', '4242063']
+    PASS published-ab010-key-scheme 1155314042043170816,0,88 vs 1155314042043170816,0,88
+    PASS published-ab011-present-done p1=True p2=True done=True
+    PASS published-ab011-det-pair p1=['15000000', '2', '4806135'] p2=['15000000', '2', '4806135']
+    PASS published-ab011-key-scheme 1155314042047299584,0,92 vs 1155314042047299584,0,92
+    PASS published-ab012-present-done p1=True p2=True done=True
+    PASS published-ab012-det-pair p1=['15000000', '2', '2606954'] p2=['15000000', '2', '2606954']
+    PASS published-ab012-key-scheme 1155314042051493888,0,89 vs 1155314042051493888,0,89
+    PASS published-ab013-present-done p1=True p2=True done=True
+    PASS published-ab013-det-pair p1=['15000000', '2', '2284195'] p2=['15000000', '2', '2284195']
+    PASS published-ab013-key-scheme 1155314042059882496,0,87 vs 1155314042059882496,0,87
+    PASS published-ab014-present-done p1=True p2=True done=True
+    PASS published-ab014-det-pair p1=['15000000', '2', '4280600'] p2=['15000000', '2', '4280600']
+    PASS published-ab014-key-scheme 1155314042076659712,0,91 vs 1155314042076659712,0,91
+    PASS published-ab015-present-done p1=True p2=True done=True
+    PASS published-ab015-det-pair p1=['15000000', '2', '3912106'] p2=['15000000', '2', '3912106']
+    PASS published-ab015-key-scheme 1155314050633039872,0,98 vs 1155314050633039872,0,98
+    PASS published-ab016-present-done p1=True p2=True done=True
+    PASS published-ab016-det-pair p1=['15000000', '2', '4258557'] p2=['15000000', '2', '4258557']
+    PASS published-ab016-key-scheme 1155314059222974464,0,96 vs 1155314059222974464,0,96
+    PASS published-status-16-pass-lines 16 lines
+    PASS published-status-reconciles-raw 16/16 (budget,result,nodes)
+    PASS published-status-no-halt-or-exhaustion 0 HALT/EXHAUSTED/MISMATCH/TRUNCATED lines
+    PASS published-batch-keys-reconcile 16/16
+    PASS published-claim-16-loss distinct results=['2']
+    PASS rows-regen-agrees-source 16/16 fields+sha re-derived
+    PASS replica-ab001-present p1/p2
+    PASS replica-ab001-done replay_done p1=True p2=True
+    PASS replica-ab001-quads quads-header p1=True p2=True
+    PASS replica-ab001-det-pair p1=['15000000', '2', '4265342'] p2=['15000000', '2', '4265342']
+    PASS replica-ab001-schema schema ['replay', '0', '5', '95', '0', '15000000']
+    PASS replica-ab001-key 1155314042043105281,0,95 vs 1155314042043105281,0,95
+    PASS replica-ab001-node-exact-vs-published this-host result=2 nodes=4265342 vs published result=2 nodes=4265342
+    PASS replica-ab002-present p1/p2
+    PASS replica-ab002-done replay_done p1=True p2=True
+    PASS replica-ab002-quads quads-header p1=True p2=True
+    PASS replica-ab002-det-pair p1=['15000000', '2', '3662776'] p2=['15000000', '2', '3662776']
+    PASS replica-ab002-schema schema ['replay', '0', '5', '97', '0', '15000000']
+    PASS replica-ab002-key 1155314042043105282,0,97 vs 1155314042043105282,0,97
+    PASS replica-ab002-node-exact-vs-published this-host result=2 nodes=3662776 vs published result=2 nodes=3662776
+    PASS replica-ab003-present p1/p2
+    PASS replica-ab003-done replay_done p1=True p2=True
+    PASS replica-ab003-quads quads-header p1=True p2=True
+    PASS replica-ab003-det-pair p1=['15000000', '2', '4447441'] p2=['15000000', '2', '4447441']
+    PASS replica-ab003-schema schema ['replay', '0', '5', '98', '0', '15000000']
+    PASS replica-ab003-key 1155314042043105284,0,98 vs 1155314042043105284,0,98
+    PASS replica-ab003-node-exact-vs-published this-host result=2 nodes=4447441 vs published result=2 nodes=4447441
+    PASS replica-ab004-present p1/p2
+    PASS replica-ab004-done replay_done p1=True p2=True
+    PASS replica-ab004-quads quads-header p1=True p2=True
+    PASS replica-ab004-det-pair p1=['15000000', '2', '2687012'] p2=['15000000', '2', '2687012']
+    PASS replica-ab004-schema schema ['replay', '0', '5', '92', '0', '15000000']
+    PASS replica-ab004-key 1155314042043105288,0,92 vs 1155314042043105288,0,92
+    PASS replica-ab004-node-exact-vs-published this-host result=2 nodes=2687012 vs published result=2 nodes=2687012
+    PASS replica-ab005-present p1/p2
+    PASS replica-ab005-done replay_done p1=True p2=True
+    PASS replica-ab005-quads quads-header p1=True p2=True
+    PASS replica-ab005-det-pair p1=['15000000', '2', '3714648'] p2=['15000000', '2', '3714648']
+    PASS replica-ab005-schema schema ['replay', '0', '5', '96', '0', '15000000']
+    PASS replica-ab005-key 1155314042043105296,0,96 vs 1155314042043105296,0,96
+    PASS replica-ab005-node-exact-vs-published this-host result=2 nodes=3714648 vs published result=2 nodes=3714648
+    PASS replica-ab006-present p1/p2
+    PASS replica-ab006-done replay_done p1=True p2=True
+    PASS replica-ab006-quads quads-header p1=True p2=True
+    PASS replica-ab006-det-pair p1=['15000000', '2', '3855756'] p2=['15000000', '2', '3855756']
+    PASS replica-ab006-schema schema ['replay', '0', '5', '96', '0', '15000000']
+    PASS replica-ab006-key 1155314042043107328,0,96 vs 1155314042043107328,0,96
+    PASS replica-ab006-node-exact-vs-published this-host result=2 nodes=3855756 vs published result=2 nodes=3855756
+    PASS replica-ab007-present p1/p2
+    PASS replica-ab007-done replay_done p1=True p2=True
+    PASS replica-ab007-quads quads-header p1=True p2=True
+    PASS replica-ab007-det-pair p1=['15000000', '2', '3763776'] p2=['15000000', '2', '3763776']
+    PASS replica-ab007-schema schema ['replay', '0', '5', '83', '0', '15000000']
+    PASS replica-ab007-key 1155314042043109376,0,83 vs 1155314042043109376,0,83
+    PASS replica-ab007-node-exact-vs-published this-host result=2 nodes=3763776 vs published result=2 nodes=3763776
+    PASS replica-ab008-present p1/p2
+    PASS replica-ab008-done replay_done p1=True p2=True
+    PASS replica-ab008-quads quads-header p1=True p2=True
+    PASS replica-ab008-det-pair p1=['15000000', '2', '2890562'] p2=['15000000', '2', '2890562']
+    PASS replica-ab008-schema schema ['replay', '0', '5', '93', '0', '15000000']
+    PASS replica-ab008-key 1155314042043113472,0,93 vs 1155314042043113472,0,93
+    PASS replica-ab008-node-exact-vs-published this-host result=2 nodes=2890562 vs published result=2 nodes=2890562
+    PASS replica-ab009-present p1/p2
+    PASS replica-ab009-done replay_done p1=True p2=True
+    PASS replica-ab009-quads quads-header p1=True p2=True
+    PASS replica-ab009-det-pair p1=['15000000', '2', '1786048'] p2=['15000000', '2', '1786048']
+    PASS replica-ab009-schema schema ['replay', '0', '5', '87', '0', '15000000']
+    PASS replica-ab009-key 1155314042043138048,0,87 vs 1155314042043138048,0,87
+    PASS replica-ab009-node-exact-vs-published this-host result=2 nodes=1786048 vs published result=2 nodes=1786048
+    PASS replica-ab010-present p1/p2
+    PASS replica-ab010-done replay_done p1=True p2=True
+    PASS replica-ab010-quads quads-header p1=True p2=True
+    PASS replica-ab010-det-pair p1=['15000000', '2', '4242063'] p2=['15000000', '2', '4242063']
+    PASS replica-ab010-schema schema ['replay', '0', '5', '88', '0', '15000000']
+    PASS replica-ab010-key 1155314042043170816,0,88 vs 1155314042043170816,0,88
+    PASS replica-ab010-node-exact-vs-published this-host result=2 nodes=4242063 vs published result=2 nodes=4242063
+    PASS replica-ab011-present p1/p2
+    PASS replica-ab011-done replay_done p1=True p2=True
+    PASS replica-ab011-quads quads-header p1=True p2=True
+    PASS replica-ab011-det-pair p1=['15000000', '2', '4806135'] p2=['15000000', '2', '4806135']
+    PASS replica-ab011-schema schema ['replay', '0', '5', '92', '0', '15000000']
+    PASS replica-ab011-key 1155314042047299584,0,92 vs 1155314042047299584,0,92
+    PASS replica-ab011-node-exact-vs-published this-host result=2 nodes=4806135 vs published result=2 nodes=4806135
+    PASS replica-ab012-present p1/p2
+    PASS replica-ab012-done replay_done p1=True p2=True
+    PASS replica-ab012-quads quads-header p1=True p2=True
+    PASS replica-ab012-det-pair p1=['15000000', '2', '2606954'] p2=['15000000', '2', '2606954']
+    PASS replica-ab012-schema schema ['replay', '0', '5', '89', '0', '15000000']
+    PASS replica-ab012-key 1155314042051493888,0,89 vs 1155314042051493888,0,89
+    PASS replica-ab012-node-exact-vs-published this-host result=2 nodes=2606954 vs published result=2 nodes=2606954
+    PASS replica-ab013-present p1/p2
+    PASS replica-ab013-done replay_done p1=True p2=True
+    PASS replica-ab013-quads quads-header p1=True p2=True
+    PASS replica-ab013-det-pair p1=['15000000', '2', '2284195'] p2=['15000000', '2', '2284195']
+    PASS replica-ab013-schema schema ['replay', '0', '5', '87', '0', '15000000']
+    PASS replica-ab013-key 1155314042059882496,0,87 vs 1155314042059882496,0,87
+    PASS replica-ab013-node-exact-vs-published this-host result=2 nodes=2284195 vs published result=2 nodes=2284195
+    PASS replica-ab014-present p1/p2
+    PASS replica-ab014-done replay_done p1=True p2=True
+    PASS replica-ab014-quads quads-header p1=True p2=True
+    PASS replica-ab014-det-pair p1=['15000000', '2', '4280600'] p2=['15000000', '2', '4280600']
+    PASS replica-ab014-schema schema ['replay', '0', '5', '91', '0', '15000000']
+    PASS replica-ab014-key 1155314042076659712,0,91 vs 1155314042076659712,0,91
+    PASS replica-ab014-node-exact-vs-published this-host result=2 nodes=4280600 vs published result=2 nodes=4280600
+    PASS replica-ab015-present p1/p2
+    PASS replica-ab015-done replay_done p1=True p2=True
+    PASS replica-ab015-quads quads-header p1=True p2=True
+    PASS replica-ab015-det-pair p1=['15000000', '2', '3912106'] p2=['15000000', '2', '3912106']
+    PASS replica-ab015-schema schema ['replay', '0', '5', '98', '0', '15000000']
+    PASS replica-ab015-key 1155314050633039872,0,98 vs 1155314050633039872,0,98
+    PASS replica-ab015-node-exact-vs-published this-host result=2 nodes=3912106 vs published result=2 nodes=3912106
+    PASS replica-ab016-present p1/p2
+    PASS replica-ab016-done replay_done p1=True p2=True
+    PASS replica-ab016-quads quads-header p1=True p2=True
+    PASS replica-ab016-det-pair p1=['15000000', '2', '4258557'] p2=['15000000', '2', '4258557']
+    PASS replica-ab016-schema schema ['replay', '0', '5', '96', '0', '15000000']
+    PASS replica-ab016-key 1155314059222974464,0,96 vs 1155314059222974464,0,96
+    PASS replica-ab016-node-exact-vs-published this-host result=2 nodes=4258557 vs published result=2 nodes=4258557
+    PASS replica-all-16-node-exact 16/16 (first independent-session reproduction of ckpt-1/3)
+    PASS anchor-k02a-present a/b
+    PASS anchor-k02a-a-clean result=1 reason=clean quads=95670
+    PASS anchor-k02a-a-expansions exp=9106337 vs 9106337, ttH=4991527 vs 4991527
+    PASS anchor-k02a-a-key 1297036692683751424:68157440
+    PASS anchor-k02a-b-clean result=1 reason=clean quads=95670
+    PASS anchor-k02a-b-expansions exp=9106337 vs 9106337, ttH=4991527 vs 4991527
+    PASS anchor-k02a-b-key 1297036692683751424:68157440
+    PASS anchor-k02a-det-pair a=9106337/4991527 b=9106337/4991527
+    PASS anchor-l1a-present a/b
+    PASS anchor-l1a-a-clean result=2 reason=clean quads=95670
+    PASS anchor-l1a-a-expansions exp=7660602 vs 7660602, ttH=3951175 vs 3951175
+    PASS anchor-l1a-a-key 13019119616:16448
+    PASS anchor-l1a-b-clean result=2 reason=clean quads=95670
+    PASS anchor-l1a-b-expansions exp=7660602 vs 7660602, ttH=3951175 vs 3951175
+    PASS anchor-l1a-b-key 13019119616:16448
+    PASS anchor-l1a-det-pair a=7660602/3951175 b=7660602/3951175
+    PASS neg-ng1-failclosed {'raw': 'third,ng1a,5,88,,GATE_FAIL,"legal count mismatch: derived=87 declared=88"', 'gate_fail': 'GATE_FAIL,"legal count mismatch: derived=87 declared=88'}
+    PASS neg-ng2-failclosed {'raw': 'third,ng2a,6,87,,GATE_FAIL,"stone count mismatch: bits=5 declared=6"', 'gate_fail': 'GATE_FAIL,"stone count mismatch: bits=5 declared=6'}
+    PASS third-target-ab001-present a/b
+    PASS third-target-ab001-a-key 1155314042043105281:0
+    PASS third-target-ab001-a-legal-derived 95 vs 95
+    PASS third-target-ab001-a-quads 95670
+    PASS third-target-ab001-b-key 1155314042043105281:0
+    PASS third-target-ab001-b-legal-derived 95 vs 95
+    PASS third-target-ab001-b-quads 95670
+    PASS third-target-ab001-det-pair a=(2,4923828,clean) b=(2,4923828,clean)
+    PASS third-target-ab001-verdict-agree third=2 replica=2
+    PASS third-target-ab002-present a/b
+    PASS third-target-ab002-a-key 1155314042043105282:0
+    PASS third-target-ab002-a-legal-derived 97 vs 97
+    PASS third-target-ab002-a-quads 95670
+    PASS third-target-ab002-b-key 1155314042043105282:0
+    PASS third-target-ab002-b-legal-derived 97 vs 97
+    PASS third-target-ab002-b-quads 95670
+    PASS third-target-ab002-det-pair a=(2,4230137,clean) b=(2,4230137,clean)
+    PASS third-target-ab002-verdict-agree third=2 replica=2
+    PASS third-target-ab003-present a/b
+    PASS third-target-ab003-a-key 1155314042043105284:0
+    PASS third-target-ab003-a-legal-derived 98 vs 98
+    PASS third-target-ab003-a-quads 95670
+    PASS third-target-ab003-b-key 1155314042043105284:0
+    PASS third-target-ab003-b-legal-derived 98 vs 98
+    PASS third-target-ab003-b-quads 95670
+    PASS third-target-ab003-det-pair a=(2,5191413,clean) b=(2,5191413,clean)
+    PASS third-target-ab003-verdict-agree third=2 replica=2
+    PASS third-target-ab004-present a/b
+    PASS third-target-ab004-a-key 1155314042043105288:0
+    PASS third-target-ab004-a-legal-derived 92 vs 92
+    PASS third-target-ab004-a-quads 95670
+    PASS third-target-ab004-b-key 1155314042043105288:0
+    PASS third-target-ab004-b-legal-derived 92 vs 92
+    PASS third-target-ab004-b-quads 95670
+    PASS third-target-ab004-det-pair a=(2,3061759,clean) b=(2,3061759,clean)
+    PASS third-target-ab004-verdict-agree third=2 replica=2
+    PASS third-target-ab005-present a/b
+    PASS third-target-ab005-a-key 1155314042043105296:0
+    PASS third-target-ab005-a-legal-derived 96 vs 96
+    PASS third-target-ab005-a-quads 95670
+    PASS third-target-ab005-b-key 1155314042043105296:0
+    PASS third-target-ab005-b-legal-derived 96 vs 96
+    PASS third-target-ab005-b-quads 95670
+    PASS third-target-ab005-det-pair a=(2,4264033,clean) b=(2,4264033,clean)
+    PASS third-target-ab005-verdict-agree third=2 replica=2
+    PASS third-target-ab006-present a/b
+    PASS third-target-ab006-a-key 1155314042043107328:0
+    PASS third-target-ab006-a-legal-derived 96 vs 96
+    PASS third-target-ab006-a-quads 95670
+    PASS third-target-ab006-b-key 1155314042043107328:0
+    PASS third-target-ab006-b-legal-derived 96 vs 96
+    PASS third-target-ab006-b-quads 95670
+    PASS third-target-ab006-det-pair a=(2,4449209,clean) b=(2,4449209,clean)
+    PASS third-target-ab006-verdict-agree third=2 replica=2
+    PASS third-target-ab007-present a/b
+    PASS third-target-ab007-a-key 1155314042043109376:0
+    PASS third-target-ab007-a-legal-derived 83 vs 83
+    PASS third-target-ab007-a-quads 95670
+    PASS third-target-ab007-b-key 1155314042043109376:0
+    PASS third-target-ab007-b-legal-derived 83 vs 83
+    PASS third-target-ab007-b-quads 95670
+    PASS third-target-ab007-det-pair a=(2,4309624,clean) b=(2,4309624,clean)
+    PASS third-target-ab007-verdict-agree third=2 replica=2
+    PASS third-target-ab008-present a/b
+    PASS third-target-ab008-a-key 1155314042043113472:0
+    PASS third-target-ab008-a-legal-derived 93 vs 93
+    PASS third-target-ab008-a-quads 95670
+    PASS third-target-ab008-b-key 1155314042043113472:0
+    PASS third-target-ab008-b-legal-derived 93 vs 93
+    PASS third-target-ab008-b-quads 95670
+    PASS third-target-ab008-det-pair a=(2,3278912,clean) b=(2,3278912,clean)
+    PASS third-target-ab008-verdict-agree third=2 replica=2
+    PASS third-target-ab009-present a/b
+    PASS third-target-ab009-a-key 1155314042043138048:0
+    PASS third-target-ab009-a-legal-derived 87 vs 87
+    PASS third-target-ab009-a-quads 95670
+    PASS third-target-ab009-b-key 1155314042043138048:0
+    PASS third-target-ab009-b-legal-derived 87 vs 87
+    PASS third-target-ab009-b-quads 95670
+    PASS third-target-ab009-det-pair a=(1,1996702,clean) b=(1,1996702,clean)
+    GATE FAILED: third-target-ab009-verdict-agree DIVERGENCE third=(1,clean) replica=2
+TAMPER-T4 replica ab012.p2 replay_done removed
+CASE t4 rc=1 first_gate=replica-ab012-done expected=replica-ab012-done
+    PASS pin-pins-table 59cd84093bac8a0e114913a6dedf38069ba27980a7fc20a59e606b9ddc1fb60f
+    PASS pins-schema n11-centralreply-class2251-b29ckpt1-pins-v1
+    PASS pin-all-73 73 entries
+    PASS rows-schema n11-centralreply-class2251-b29ckpt1-thirdimpl-input-v1
+    PASS rows-target-count 16 (16 published ckpt-1/3 rows, all LOSS honest labels)
+    PASS rows-target-verdict-kind all 16 published rows are LOSS (result=2); 0 WIN / 0 EXHAUSTED
+    PASS rows-anchor-negative-counts 2 anchors / 2 negatives
+    PASS published-ab001-present-done p1=True p2=True done=True
+    PASS published-ab001-det-pair p1=['15000000', '2', '4265342'] p2=['15000000', '2', '4265342']
+    PASS published-ab001-key-scheme 1155314042043105281,0,95 vs 1155314042043105281,0,95
+    PASS published-ab002-present-done p1=True p2=True done=True
+    PASS published-ab002-det-pair p1=['15000000', '2', '3662776'] p2=['15000000', '2', '3662776']
+    PASS published-ab002-key-scheme 1155314042043105282,0,97 vs 1155314042043105282,0,97
+    PASS published-ab003-present-done p1=True p2=True done=True
+    PASS published-ab003-det-pair p1=['15000000', '2', '4447441'] p2=['15000000', '2', '4447441']
+    PASS published-ab003-key-scheme 1155314042043105284,0,98 vs 1155314042043105284,0,98
+    PASS published-ab004-present-done p1=True p2=True done=True
+    PASS published-ab004-det-pair p1=['15000000', '2', '2687012'] p2=['15000000', '2', '2687012']
+    PASS published-ab004-key-scheme 1155314042043105288,0,92 vs 1155314042043105288,0,92
+    PASS published-ab005-present-done p1=True p2=True done=True
+    PASS published-ab005-det-pair p1=['15000000', '2', '3714648'] p2=['15000000', '2', '3714648']
+    PASS published-ab005-key-scheme 1155314042043105296,0,96 vs 1155314042043105296,0,96
+    PASS published-ab006-present-done p1=True p2=True done=True
+    PASS published-ab006-det-pair p1=['15000000', '2', '3855756'] p2=['15000000', '2', '3855756']
+    PASS published-ab006-key-scheme 1155314042043107328,0,96 vs 1155314042043107328,0,96
+    PASS published-ab007-present-done p1=True p2=True done=True
+    PASS published-ab007-det-pair p1=['15000000', '2', '3763776'] p2=['15000000', '2', '3763776']
+    PASS published-ab007-key-scheme 1155314042043109376,0,83 vs 1155314042043109376,0,83
+    PASS published-ab008-present-done p1=True p2=True done=True
+    PASS published-ab008-det-pair p1=['15000000', '2', '2890562'] p2=['15000000', '2', '2890562']
+    PASS published-ab008-key-scheme 1155314042043113472,0,93 vs 1155314042043113472,0,93
+    PASS published-ab009-present-done p1=True p2=True done=True
+    PASS published-ab009-det-pair p1=['15000000', '2', '1786048'] p2=['15000000', '2', '1786048']
+    PASS published-ab009-key-scheme 1155314042043138048,0,87 vs 1155314042043138048,0,87
+    PASS published-ab010-present-done p1=True p2=True done=True
+    PASS published-ab010-det-pair p1=['15000000', '2', '4242063'] p2=['15000000', '2', '4242063']
+    PASS published-ab010-key-scheme 1155314042043170816,0,88 vs 1155314042043170816,0,88
+    PASS published-ab011-present-done p1=True p2=True done=True
+    PASS published-ab011-det-pair p1=['15000000', '2', '4806135'] p2=['15000000', '2', '4806135']
+    PASS published-ab011-key-scheme 1155314042047299584,0,92 vs 1155314042047299584,0,92
+    PASS published-ab012-present-done p1=True p2=True done=True
+    PASS published-ab012-det-pair p1=['15000000', '2', '2606954'] p2=['15000000', '2', '2606954']
+    PASS published-ab012-key-scheme 1155314042051493888,0,89 vs 1155314042051493888,0,89
+    PASS published-ab013-present-done p1=True p2=True done=True
+    PASS published-ab013-det-pair p1=['15000000', '2', '2284195'] p2=['15000000', '2', '2284195']
+    PASS published-ab013-key-scheme 1155314042059882496,0,87 vs 1155314042059882496,0,87
+    PASS published-ab014-present-done p1=True p2=True done=True
+    PASS published-ab014-det-pair p1=['15000000', '2', '4280600'] p2=['15000000', '2', '4280600']
+    PASS published-ab014-key-scheme 1155314042076659712,0,91 vs 1155314042076659712,0,91
+    PASS published-ab015-present-done p1=True p2=True done=True
+    PASS published-ab015-det-pair p1=['15000000', '2', '3912106'] p2=['15000000', '2', '3912106']
+    PASS published-ab015-key-scheme 1155314050633039872,0,98 vs 1155314050633039872,0,98
+    PASS published-ab016-present-done p1=True p2=True done=True
+    PASS published-ab016-det-pair p1=['15000000', '2', '4258557'] p2=['15000000', '2', '4258557']
+    PASS published-ab016-key-scheme 1155314059222974464,0,96 vs 1155314059222974464,0,96
+    PASS published-status-16-pass-lines 16 lines
+    PASS published-status-reconciles-raw 16/16 (budget,result,nodes)
+    PASS published-status-no-halt-or-exhaustion 0 HALT/EXHAUSTED/MISMATCH/TRUNCATED lines
+    PASS published-batch-keys-reconcile 16/16
+    PASS published-claim-16-loss distinct results=['2']
+    PASS rows-regen-agrees-source 16/16 fields+sha re-derived
+    PASS replica-ab001-present p1/p2
+    PASS replica-ab001-done replay_done p1=True p2=True
+    PASS replica-ab001-quads quads-header p1=True p2=True
+    PASS replica-ab001-det-pair p1=['15000000', '2', '4265342'] p2=['15000000', '2', '4265342']
+    PASS replica-ab001-schema schema ['replay', '0', '5', '95', '0', '15000000']
+    PASS replica-ab001-key 1155314042043105281,0,95 vs 1155314042043105281,0,95
+    PASS replica-ab001-node-exact-vs-published this-host result=2 nodes=4265342 vs published result=2 nodes=4265342
+    PASS replica-ab002-present p1/p2
+    PASS replica-ab002-done replay_done p1=True p2=True
+    PASS replica-ab002-quads quads-header p1=True p2=True
+    PASS replica-ab002-det-pair p1=['15000000', '2', '3662776'] p2=['15000000', '2', '3662776']
+    PASS replica-ab002-schema schema ['replay', '0', '5', '97', '0', '15000000']
+    PASS replica-ab002-key 1155314042043105282,0,97 vs 1155314042043105282,0,97
+    PASS replica-ab002-node-exact-vs-published this-host result=2 nodes=3662776 vs published result=2 nodes=3662776
+    PASS replica-ab003-present p1/p2
+    PASS replica-ab003-done replay_done p1=True p2=True
+    PASS replica-ab003-quads quads-header p1=True p2=True
+    PASS replica-ab003-det-pair p1=['15000000', '2', '4447441'] p2=['15000000', '2', '4447441']
+    PASS replica-ab003-schema schema ['replay', '0', '5', '98', '0', '15000000']
+    PASS replica-ab003-key 1155314042043105284,0,98 vs 1155314042043105284,0,98
+    PASS replica-ab003-node-exact-vs-published this-host result=2 nodes=4447441 vs published result=2 nodes=4447441
+    PASS replica-ab004-present p1/p2
+    PASS replica-ab004-done replay_done p1=True p2=True
+    PASS replica-ab004-quads quads-header p1=True p2=True
+    PASS replica-ab004-det-pair p1=['15000000', '2', '2687012'] p2=['15000000', '2', '2687012']
+    PASS replica-ab004-schema schema ['replay', '0', '5', '92', '0', '15000000']
+    PASS replica-ab004-key 1155314042043105288,0,92 vs 1155314042043105288,0,92
+    PASS replica-ab004-node-exact-vs-published this-host result=2 nodes=2687012 vs published result=2 nodes=2687012
+    PASS replica-ab005-present p1/p2
+    PASS replica-ab005-done replay_done p1=True p2=True
+    PASS replica-ab005-quads quads-header p1=True p2=True
+    PASS replica-ab005-det-pair p1=['15000000', '2', '3714648'] p2=['15000000', '2', '3714648']
+    PASS replica-ab005-schema schema ['replay', '0', '5', '96', '0', '15000000']
+    PASS replica-ab005-key 1155314042043105296,0,96 vs 1155314042043105296,0,96
+    PASS replica-ab005-node-exact-vs-published this-host result=2 nodes=3714648 vs published result=2 nodes=3714648
+    PASS replica-ab006-present p1/p2
+    PASS replica-ab006-done replay_done p1=True p2=True
+    PASS replica-ab006-quads quads-header p1=True p2=True
+    PASS replica-ab006-det-pair p1=['15000000', '2', '3855756'] p2=['15000000', '2', '3855756']
+    PASS replica-ab006-schema schema ['replay', '0', '5', '96', '0', '15000000']
+    PASS replica-ab006-key 1155314042043107328,0,96 vs 1155314042043107328,0,96
+    PASS replica-ab006-node-exact-vs-published this-host result=2 nodes=3855756 vs published result=2 nodes=3855756
+    PASS replica-ab007-present p1/p2
+    PASS replica-ab007-done replay_done p1=True p2=True
+    PASS replica-ab007-quads quads-header p1=True p2=True
+    PASS replica-ab007-det-pair p1=['15000000', '2', '3763776'] p2=['15000000', '2', '3763776']
+    PASS replica-ab007-schema schema ['replay', '0', '5', '83', '0', '15000000']
+    PASS replica-ab007-key 1155314042043109376,0,83 vs 1155314042043109376,0,83
+    PASS replica-ab007-node-exact-vs-published this-host result=2 nodes=3763776 vs published result=2 nodes=3763776
+    PASS replica-ab008-present p1/p2
+    PASS replica-ab008-done replay_done p1=True p2=True
+    PASS replica-ab008-quads quads-header p1=True p2=True
+    PASS replica-ab008-det-pair p1=['15000000', '2', '2890562'] p2=['15000000', '2', '2890562']
+    PASS replica-ab008-schema schema ['replay', '0', '5', '93', '0', '15000000']
+    PASS replica-ab008-key 1155314042043113472,0,93 vs 1155314042043113472,0,93
+    PASS replica-ab008-node-exact-vs-published this-host result=2 nodes=2890562 vs published result=2 nodes=2890562
+    PASS replica-ab009-present p1/p2
+    PASS replica-ab009-done replay_done p1=True p2=True
+    PASS replica-ab009-quads quads-header p1=True p2=True
+    PASS replica-ab009-det-pair p1=['15000000', '2', '1786048'] p2=['15000000', '2', '1786048']
+    PASS replica-ab009-schema schema ['replay', '0', '5', '87', '0', '15000000']
+    PASS replica-ab009-key 1155314042043138048,0,87 vs 1155314042043138048,0,87
+    PASS replica-ab009-node-exact-vs-published this-host result=2 nodes=1786048 vs published result=2 nodes=1786048
+    PASS replica-ab010-present p1/p2
+    PASS replica-ab010-done replay_done p1=True p2=True
+    PASS replica-ab010-quads quads-header p1=True p2=True
+    PASS replica-ab010-det-pair p1=['15000000', '2', '4242063'] p2=['15000000', '2', '4242063']
+    PASS replica-ab010-schema schema ['replay', '0', '5', '88', '0', '15000000']
+    PASS replica-ab010-key 1155314042043170816,0,88 vs 1155314042043170816,0,88
+    PASS replica-ab010-node-exact-vs-published this-host result=2 nodes=4242063 vs published result=2 nodes=4242063
+    PASS replica-ab011-present p1/p2
+    PASS replica-ab011-done replay_done p1=True p2=True
+    PASS replica-ab011-quads quads-header p1=True p2=True
+    PASS replica-ab011-det-pair p1=['15000000', '2', '4806135'] p2=['15000000', '2', '4806135']
+    PASS replica-ab011-schema schema ['replay', '0', '5', '92', '0', '15000000']
+    PASS replica-ab011-key 1155314042047299584,0,92 vs 1155314042047299584,0,92
+    PASS replica-ab011-node-exact-vs-published this-host result=2 nodes=4806135 vs published result=2 nodes=4806135
+    PASS replica-ab012-present p1/p2
+    GATE FAILED: replica-ab012-done replay_done p1=True p2=False
+TAMPER-T5 published source ab013.p2 nodes +1
+CASE t5 rc=1 first_gate=pin-all-73 expected=pin-all-73
+    PASS pin-pins-table 59cd84093bac8a0e114913a6dedf38069ba27980a7fc20a59e606b9ddc1fb60f
+    PASS pins-schema n11-centralreply-class2251-b29ckpt1-pins-v1
+    GATE FAILED: pin-all-73 ['sources/raw/ab013.p2.out']
+TAMPER-T6 canonical cache fake adopted row appended
+CASE t6 rc=1 first_gate=pin-all-73 expected=pin-all-73
+    PASS pin-pins-table 59cd84093bac8a0e114913a6dedf38069ba27980a7fc20a59e606b9ddc1fb60f
+    PASS pins-schema n11-centralreply-class2251-b29ckpt1-pins-v1
+    GATE FAILED: pin-all-73 ['sources/canonical-cache-co-merged-b28loss7.cache']
+TAMPER-T7 anchor l1a.a expansions 7660602->7661602
+CASE t7 rc=1 first_gate=anchor-l1a-a-expansions expected=anchor-l1a-a-expansions
+    PASS pin-pins-table 59cd84093bac8a0e114913a6dedf38069ba27980a7fc20a59e606b9ddc1fb60f
+    PASS pins-schema n11-centralreply-class2251-b29ckpt1-pins-v1
+    PASS pin-all-73 73 entries
+    PASS rows-schema n11-centralreply-class2251-b29ckpt1-thirdimpl-input-v1
+    PASS rows-target-count 16 (16 published ckpt-1/3 rows, all LOSS honest labels)
+    PASS rows-target-verdict-kind all 16 published rows are LOSS (result=2); 0 WIN / 0 EXHAUSTED
+    PASS rows-anchor-negative-counts 2 anchors / 2 negatives
+    PASS published-ab001-present-done p1=True p2=True done=True
+    PASS published-ab001-det-pair p1=['15000000', '2', '4265342'] p2=['15000000', '2', '4265342']
+    PASS published-ab001-key-scheme 1155314042043105281,0,95 vs 1155314042043105281,0,95
+    PASS published-ab002-present-done p1=True p2=True done=True
+    PASS published-ab002-det-pair p1=['15000000', '2', '3662776'] p2=['15000000', '2', '3662776']
+    PASS published-ab002-key-scheme 1155314042043105282,0,97 vs 1155314042043105282,0,97
+    PASS published-ab003-present-done p1=True p2=True done=True
+    PASS published-ab003-det-pair p1=['15000000', '2', '4447441'] p2=['15000000', '2', '4447441']
+    PASS published-ab003-key-scheme 1155314042043105284,0,98 vs 1155314042043105284,0,98
+    PASS published-ab004-present-done p1=True p2=True done=True
+    PASS published-ab004-det-pair p1=['15000000', '2', '2687012'] p2=['15000000', '2', '2687012']
+    PASS published-ab004-key-scheme 1155314042043105288,0,92 vs 1155314042043105288,0,92
+    PASS published-ab005-present-done p1=True p2=True done=True
+    PASS published-ab005-det-pair p1=['15000000', '2', '3714648'] p2=['15000000', '2', '3714648']
+    PASS published-ab005-key-scheme 1155314042043105296,0,96 vs 1155314042043105296,0,96
+    PASS published-ab006-present-done p1=True p2=True done=True
+    PASS published-ab006-det-pair p1=['15000000', '2', '3855756'] p2=['15000000', '2', '3855756']
+    PASS published-ab006-key-scheme 1155314042043107328,0,96 vs 1155314042043107328,0,96
+    PASS published-ab007-present-done p1=True p2=True done=True
+    PASS published-ab007-det-pair p1=['15000000', '2', '3763776'] p2=['15000000', '2', '3763776']
+    PASS published-ab007-key-scheme 1155314042043109376,0,83 vs 1155314042043109376,0,83
+    PASS published-ab008-present-done p1=True p2=True done=True
+    PASS published-ab008-det-pair p1=['15000000', '2', '2890562'] p2=['15000000', '2', '2890562']
+    PASS published-ab008-key-scheme 1155314042043113472,0,93 vs 1155314042043113472,0,93
+    PASS published-ab009-present-done p1=True p2=True done=True
+    PASS published-ab009-det-pair p1=['15000000', '2', '1786048'] p2=['15000000', '2', '1786048']
+    PASS published-ab009-key-scheme 1155314042043138048,0,87 vs 1155314042043138048,0,87
+    PASS published-ab010-present-done p1=True p2=True done=True
+    PASS published-ab010-det-pair p1=['15000000', '2', '4242063'] p2=['15000000', '2', '4242063']
+    PASS published-ab010-key-scheme 1155314042043170816,0,88 vs 1155314042043170816,0,88
+    PASS published-ab011-present-done p1=True p2=True done=True
+    PASS published-ab011-det-pair p1=['15000000', '2', '4806135'] p2=['15000000', '2', '4806135']
+    PASS published-ab011-key-scheme 1155314042047299584,0,92 vs 1155314042047299584,0,92
+    PASS published-ab012-present-done p1=True p2=True done=True
+    PASS published-ab012-det-pair p1=['15000000', '2', '2606954'] p2=['15000000', '2', '2606954']
+    PASS published-ab012-key-scheme 1155314042051493888,0,89 vs 1155314042051493888,0,89
+    PASS published-ab013-present-done p1=True p2=True done=True
+    PASS published-ab013-det-pair p1=['15000000', '2', '2284195'] p2=['15000000', '2', '2284195']
+    PASS published-ab013-key-scheme 1155314042059882496,0,87 vs 1155314042059882496,0,87
+    PASS published-ab014-present-done p1=True p2=True done=True
+    PASS published-ab014-det-pair p1=['15000000', '2', '4280600'] p2=['15000000', '2', '4280600']
+    PASS published-ab014-key-scheme 1155314042076659712,0,91 vs 1155314042076659712,0,91
+    PASS published-ab015-present-done p1=True p2=True done=True
+    PASS published-ab015-det-pair p1=['15000000', '2', '3912106'] p2=['15000000', '2', '3912106']
+    PASS published-ab015-key-scheme 1155314050633039872,0,98 vs 1155314050633039872,0,98
+    PASS published-ab016-present-done p1=True p2=True done=True
+    PASS published-ab016-det-pair p1=['15000000', '2', '4258557'] p2=['15000000', '2', '4258557']
+    PASS published-ab016-key-scheme 1155314059222974464,0,96 vs 1155314059222974464,0,96
+    PASS published-status-16-pass-lines 16 lines
+    PASS published-status-reconciles-raw 16/16 (budget,result,nodes)
+    PASS published-status-no-halt-or-exhaustion 0 HALT/EXHAUSTED/MISMATCH/TRUNCATED lines
+    PASS published-batch-keys-reconcile 16/16
+    PASS published-claim-16-loss distinct results=['2']
+    PASS rows-regen-agrees-source 16/16 fields+sha re-derived
+    PASS replica-ab001-present p1/p2
+    PASS replica-ab001-done replay_done p1=True p2=True
+    PASS replica-ab001-quads quads-header p1=True p2=True
+    PASS replica-ab001-det-pair p1=['15000000', '2', '4265342'] p2=['15000000', '2', '4265342']
+    PASS replica-ab001-schema schema ['replay', '0', '5', '95', '0', '15000000']
+    PASS replica-ab001-key 1155314042043105281,0,95 vs 1155314042043105281,0,95
+    PASS replica-ab001-node-exact-vs-published this-host result=2 nodes=4265342 vs published result=2 nodes=4265342
+    PASS replica-ab002-present p1/p2
+    PASS replica-ab002-done replay_done p1=True p2=True
+    PASS replica-ab002-quads quads-header p1=True p2=True
+    PASS replica-ab002-det-pair p1=['15000000', '2', '3662776'] p2=['15000000', '2', '3662776']
+    PASS replica-ab002-schema schema ['replay', '0', '5', '97', '0', '15000000']
+    PASS replica-ab002-key 1155314042043105282,0,97 vs 1155314042043105282,0,97
+    PASS replica-ab002-node-exact-vs-published this-host result=2 nodes=3662776 vs published result=2 nodes=3662776
+    PASS replica-ab003-present p1/p2
+    PASS replica-ab003-done replay_done p1=True p2=True
+    PASS replica-ab003-quads quads-header p1=True p2=True
+    PASS replica-ab003-det-pair p1=['15000000', '2', '4447441'] p2=['15000000', '2', '4447441']
+    PASS replica-ab003-schema schema ['replay', '0', '5', '98', '0', '15000000']
+    PASS replica-ab003-key 1155314042043105284,0,98 vs 1155314042043105284,0,98
+    PASS replica-ab003-node-exact-vs-published this-host result=2 nodes=4447441 vs published result=2 nodes=4447441
+    PASS replica-ab004-present p1/p2
+    PASS replica-ab004-done replay_done p1=True p2=True
+    PASS replica-ab004-quads quads-header p1=True p2=True
+    PASS replica-ab004-det-pair p1=['15000000', '2', '2687012'] p2=['15000000', '2', '2687012']
+    PASS replica-ab004-schema schema ['replay', '0', '5', '92', '0', '15000000']
+    PASS replica-ab004-key 1155314042043105288,0,92 vs 1155314042043105288,0,92
+    PASS replica-ab004-node-exact-vs-published this-host result=2 nodes=2687012 vs published result=2 nodes=2687012
+    PASS replica-ab005-present p1/p2
+    PASS replica-ab005-done replay_done p1=True p2=True
+    PASS replica-ab005-quads quads-header p1=True p2=True
+    PASS replica-ab005-det-pair p1=['15000000', '2', '3714648'] p2=['15000000', '2', '3714648']
+    PASS replica-ab005-schema schema ['replay', '0', '5', '96', '0', '15000000']
+    PASS replica-ab005-key 1155314042043105296,0,96 vs 1155314042043105296,0,96
+    PASS replica-ab005-node-exact-vs-published this-host result=2 nodes=3714648 vs published result=2 nodes=3714648
+    PASS replica-ab006-present p1/p2
+    PASS replica-ab006-done replay_done p1=True p2=True
+    PASS replica-ab006-quads quads-header p1=True p2=True
+    PASS replica-ab006-det-pair p1=['15000000', '2', '3855756'] p2=['15000000', '2', '3855756']
+    PASS replica-ab006-schema schema ['replay', '0', '5', '96', '0', '15000000']
+    PASS replica-ab006-key 1155314042043107328,0,96 vs 1155314042043107328,0,96
+    PASS replica-ab006-node-exact-vs-published this-host result=2 nodes=3855756 vs published result=2 nodes=3855756
+    PASS replica-ab007-present p1/p2
+    PASS replica-ab007-done replay_done p1=True p2=True
+    PASS replica-ab007-quads quads-header p1=True p2=True
+    PASS replica-ab007-det-pair p1=['15000000', '2', '3763776'] p2=['15000000', '2', '3763776']
+    PASS replica-ab007-schema schema ['replay', '0', '5', '83', '0', '15000000']
+    PASS replica-ab007-key 1155314042043109376,0,83 vs 1155314042043109376,0,83
+    PASS replica-ab007-node-exact-vs-published this-host result=2 nodes=3763776 vs published result=2 nodes=3763776
+    PASS replica-ab008-present p1/p2
+    PASS replica-ab008-done replay_done p1=True p2=True
+    PASS replica-ab008-quads quads-header p1=True p2=True
+    PASS replica-ab008-det-pair p1=['15000000', '2', '2890562'] p2=['15000000', '2', '2890562']
+    PASS replica-ab008-schema schema ['replay', '0', '5', '93', '0', '15000000']
+    PASS replica-ab008-key 1155314042043113472,0,93 vs 1155314042043113472,0,93
+    PASS replica-ab008-node-exact-vs-published this-host result=2 nodes=2890562 vs published result=2 nodes=2890562
+    PASS replica-ab009-present p1/p2
+    PASS replica-ab009-done replay_done p1=True p2=True
+    PASS replica-ab009-quads quads-header p1=True p2=True
+    PASS replica-ab009-det-pair p1=['15000000', '2', '1786048'] p2=['15000000', '2', '1786048']
+    PASS replica-ab009-schema schema ['replay', '0', '5', '87', '0', '15000000']
+    PASS replica-ab009-key 1155314042043138048,0,87 vs 1155314042043138048,0,87
+    PASS replica-ab009-node-exact-vs-published this-host result=2 nodes=1786048 vs published result=2 nodes=1786048
+    PASS replica-ab010-present p1/p2
+    PASS replica-ab010-done replay_done p1=True p2=True
+    PASS replica-ab010-quads quads-header p1=True p2=True
+    PASS replica-ab010-det-pair p1=['15000000', '2', '4242063'] p2=['15000000', '2', '4242063']
+    PASS replica-ab010-schema schema ['replay', '0', '5', '88', '0', '15000000']
+    PASS replica-ab010-key 1155314042043170816,0,88 vs 1155314042043170816,0,88
+    PASS replica-ab010-node-exact-vs-published this-host result=2 nodes=4242063 vs published result=2 nodes=4242063
+    PASS replica-ab011-present p1/p2
+    PASS replica-ab011-done replay_done p1=True p2=True
+    PASS replica-ab011-quads quads-header p1=True p2=True
+    PASS replica-ab011-det-pair p1=['15000000', '2', '4806135'] p2=['15000000', '2', '4806135']
+    PASS replica-ab011-schema schema ['replay', '0', '5', '92', '0', '15000000']
+    PASS replica-ab011-key 1155314042047299584,0,92 vs 1155314042047299584,0,92
+    PASS replica-ab011-node-exact-vs-published this-host result=2 nodes=4806135 vs published result=2 nodes=4806135
+    PASS replica-ab012-present p1/p2
+    PASS replica-ab012-done replay_done p1=True p2=True
+    PASS replica-ab012-quads quads-header p1=True p2=True
+    PASS replica-ab012-det-pair p1=['15000000', '2', '2606954'] p2=['15000000', '2', '2606954']
+    PASS replica-ab012-schema schema ['replay', '0', '5', '89', '0', '15000000']
+    PASS replica-ab012-key 1155314042051493888,0,89 vs 1155314042051493888,0,89
+    PASS replica-ab012-node-exact-vs-published this-host result=2 nodes=2606954 vs published result=2 nodes=2606954
+    PASS replica-ab013-present p1/p2
+    PASS replica-ab013-done replay_done p1=True p2=True
+    PASS replica-ab013-quads quads-header p1=True p2=True
+    PASS replica-ab013-det-pair p1=['15000000', '2', '2284195'] p2=['15000000', '2', '2284195']
+    PASS replica-ab013-schema schema ['replay', '0', '5', '87', '0', '15000000']
+    PASS replica-ab013-key 1155314042059882496,0,87 vs 1155314042059882496,0,87
+    PASS replica-ab013-node-exact-vs-published this-host result=2 nodes=2284195 vs published result=2 nodes=2284195
+    PASS replica-ab014-present p1/p2
+    PASS replica-ab014-done replay_done p1=True p2=True
+    PASS replica-ab014-quads quads-header p1=True p2=True
+    PASS replica-ab014-det-pair p1=['15000000', '2', '4280600'] p2=['15000000', '2', '4280600']
+    PASS replica-ab014-schema schema ['replay', '0', '5', '91', '0', '15000000']
+    PASS replica-ab014-key 1155314042076659712,0,91 vs 1155314042076659712,0,91
+    PASS replica-ab014-node-exact-vs-published this-host result=2 nodes=4280600 vs published result=2 nodes=4280600
+    PASS replica-ab015-present p1/p2
+    PASS replica-ab015-done replay_done p1=True p2=True
+    PASS replica-ab015-quads quads-header p1=True p2=True
+    PASS replica-ab015-det-pair p1=['15000000', '2', '3912106'] p2=['15000000', '2', '3912106']
+    PASS replica-ab015-schema schema ['replay', '0', '5', '98', '0', '15000000']
+    PASS replica-ab015-key 1155314050633039872,0,98 vs 1155314050633039872,0,98
+    PASS replica-ab015-node-exact-vs-published this-host result=2 nodes=3912106 vs published result=2 nodes=3912106
+    PASS replica-ab016-present p1/p2
+    PASS replica-ab016-done replay_done p1=True p2=True
+    PASS replica-ab016-quads quads-header p1=True p2=True
+    PASS replica-ab016-det-pair p1=['15000000', '2', '4258557'] p2=['15000000', '2', '4258557']
+    PASS replica-ab016-schema schema ['replay', '0', '5', '96', '0', '15000000']
+    PASS replica-ab016-key 1155314059222974464,0,96 vs 1155314059222974464,0,96
+    PASS replica-ab016-node-exact-vs-published this-host result=2 nodes=4258557 vs published result=2 nodes=4258557
+    PASS replica-all-16-node-exact 16/16 (first independent-session reproduction of ckpt-1/3)
+    PASS anchor-k02a-present a/b
+    PASS anchor-k02a-a-clean result=1 reason=clean quads=95670
+    PASS anchor-k02a-a-expansions exp=9106337 vs 9106337, ttH=4991527 vs 4991527
+    PASS anchor-k02a-a-key 1297036692683751424:68157440
+    PASS anchor-k02a-b-clean result=1 reason=clean quads=95670
+    PASS anchor-k02a-b-expansions exp=9106337 vs 9106337, ttH=4991527 vs 4991527
+    PASS anchor-k02a-b-key 1297036692683751424:68157440
+    PASS anchor-k02a-det-pair a=9106337/4991527 b=9106337/4991527
+    PASS anchor-l1a-present a/b
+    PASS anchor-l1a-a-clean result=2 reason=clean quads=95670
+    GATE FAILED: anchor-l1a-a-expansions exp=7661602 vs 7660602, ttH=3951175 vs 3951175
+CASE control rc=0 expected rc=0
+    PASS pin-pins-table 59cd84093bac8a0e114913a6dedf38069ba27980a7fc20a59e606b9ddc1fb60f
+    PASS pins-schema n11-centralreply-class2251-b29ckpt1-pins-v1
+    PASS pin-all-73 73 entries
+    PASS rows-schema n11-centralreply-class2251-b29ckpt1-thirdimpl-input-v1
+    PASS rows-target-count 16 (16 published ckpt-1/3 rows, all LOSS honest labels)
+    PASS rows-target-verdict-kind all 16 published rows are LOSS (result=2); 0 WIN / 0 EXHAUSTED
+    PASS rows-anchor-negative-counts 2 anchors / 2 negatives
+    PASS published-ab001-present-done p1=True p2=True done=True
+    PASS published-ab001-det-pair p1=['15000000', '2', '4265342'] p2=['15000000', '2', '4265342']
+    PASS published-ab001-key-scheme 1155314042043105281,0,95 vs 1155314042043105281,0,95
+    PASS published-ab002-present-done p1=True p2=True done=True
+    PASS published-ab002-det-pair p1=['15000000', '2', '3662776'] p2=['15000000', '2', '3662776']
+    PASS published-ab002-key-scheme 1155314042043105282,0,97 vs 1155314042043105282,0,97
+    PASS published-ab003-present-done p1=True p2=True done=True
+    PASS published-ab003-det-pair p1=['15000000', '2', '4447441'] p2=['15000000', '2', '4447441']
+    PASS published-ab003-key-scheme 1155314042043105284,0,98 vs 1155314042043105284,0,98
+    PASS published-ab004-present-done p1=True p2=True done=True
+    PASS published-ab004-det-pair p1=['15000000', '2', '2687012'] p2=['15000000', '2', '2687012']
+    PASS published-ab004-key-scheme 1155314042043105288,0,92 vs 1155314042043105288,0,92
+    PASS published-ab005-present-done p1=True p2=True done=True
+    PASS published-ab005-det-pair p1=['15000000', '2', '3714648'] p2=['15000000', '2', '3714648']
+    PASS published-ab005-key-scheme 1155314042043105296,0,96 vs 1155314042043105296,0,96
+    PASS published-ab006-present-done p1=True p2=True done=True
+    PASS published-ab006-det-pair p1=['15000000', '2', '3855756'] p2=['15000000', '2', '3855756']
+    PASS published-ab006-key-scheme 1155314042043107328,0,96 vs 1155314042043107328,0,96
+    PASS published-ab007-present-done p1=True p2=True done=True
+    PASS published-ab007-det-pair p1=['15000000', '2', '3763776'] p2=['15000000', '2', '3763776']
+    PASS published-ab007-key-scheme 1155314042043109376,0,83 vs 1155314042043109376,0,83
+    PASS published-ab008-present-done p1=True p2=True done=True
+    PASS published-ab008-det-pair p1=['15000000', '2', '2890562'] p2=['15000000', '2', '2890562']
+    PASS published-ab008-key-scheme 1155314042043113472,0,93 vs 1155314042043113472,0,93
+    PASS published-ab009-present-done p1=True p2=True done=True
+    PASS published-ab009-det-pair p1=['15000000', '2', '1786048'] p2=['15000000', '2', '1786048']
+    PASS published-ab009-key-scheme 1155314042043138048,0,87 vs 1155314042043138048,0,87
+    PASS published-ab010-present-done p1=True p2=True done=True
+    PASS published-ab010-det-pair p1=['15000000', '2', '4242063'] p2=['15000000', '2', '4242063']
+    PASS published-ab010-key-scheme 1155314042043170816,0,88 vs 1155314042043170816,0,88
+    PASS published-ab011-present-done p1=True p2=True done=True
+    PASS published-ab011-det-pair p1=['15000000', '2', '4806135'] p2=['15000000', '2', '4806135']
+    PASS published-ab011-key-scheme 1155314042047299584,0,92 vs 1155314042047299584,0,92
+    PASS published-ab012-present-done p1=True p2=True done=True
+    PASS published-ab012-det-pair p1=['15000000', '2', '2606954'] p2=['15000000', '2', '2606954']
+    PASS published-ab012-key-scheme 1155314042051493888,0,89 vs 1155314042051493888,0,89
+    PASS published-ab013-present-done p1=True p2=True done=True
+    PASS published-ab013-det-pair p1=['15000000', '2', '2284195'] p2=['15000000', '2', '2284195']
+    PASS published-ab013-key-scheme 1155314042059882496,0,87 vs 1155314042059882496,0,87
+    PASS published-ab014-present-done p1=True p2=True done=True
+    PASS published-ab014-det-pair p1=['15000000', '2', '4280600'] p2=['15000000', '2', '4280600']
+    PASS published-ab014-key-scheme 1155314042076659712,0,91 vs 1155314042076659712,0,91
+    PASS published-ab015-present-done p1=True p2=True done=True
+    PASS published-ab015-det-pair p1=['15000000', '2', '3912106'] p2=['15000000', '2', '3912106']
+    PASS published-ab015-key-scheme 1155314050633039872,0,98 vs 1155314050633039872,0,98
+    PASS published-ab016-present-done p1=True p2=True done=True
+    PASS published-ab016-det-pair p1=['15000000', '2', '4258557'] p2=['15000000', '2', '4258557']
+    PASS published-ab016-key-scheme 1155314059222974464,0,96 vs 1155314059222974464,0,96
+    PASS published-status-16-pass-lines 16 lines
+    PASS published-status-reconciles-raw 16/16 (budget,result,nodes)
+    PASS published-status-no-halt-or-exhaustion 0 HALT/EXHAUSTED/MISMATCH/TRUNCATED lines
+    PASS published-batch-keys-reconcile 16/16
+    PASS published-claim-16-loss distinct results=['2']
+    PASS rows-regen-agrees-source 16/16 fields+sha re-derived
+    PASS replica-ab001-present p1/p2
+    PASS replica-ab001-done replay_done p1=True p2=True
+    PASS replica-ab001-quads quads-header p1=True p2=True
+    PASS replica-ab001-det-pair p1=['15000000', '2', '4265342'] p2=['15000000', '2', '4265342']
+    PASS replica-ab001-schema schema ['replay', '0', '5', '95', '0', '15000000']
+    PASS replica-ab001-key 1155314042043105281,0,95 vs 1155314042043105281,0,95
+    PASS replica-ab001-node-exact-vs-published this-host result=2 nodes=4265342 vs published result=2 nodes=4265342
+    PASS replica-ab002-present p1/p2
+    PASS replica-ab002-done replay_done p1=True p2=True
+    PASS replica-ab002-quads quads-header p1=True p2=True
+    PASS replica-ab002-det-pair p1=['15000000', '2', '3662776'] p2=['15000000', '2', '3662776']
+    PASS replica-ab002-schema schema ['replay', '0', '5', '97', '0', '15000000']
+    PASS replica-ab002-key 1155314042043105282,0,97 vs 1155314042043105282,0,97
+    PASS replica-ab002-node-exact-vs-published this-host result=2 nodes=3662776 vs published result=2 nodes=3662776
+    PASS replica-ab003-present p1/p2
+    PASS replica-ab003-done replay_done p1=True p2=True
+    PASS replica-ab003-quads quads-header p1=True p2=True
+    PASS replica-ab003-det-pair p1=['15000000', '2', '4447441'] p2=['15000000', '2', '4447441']
+    PASS replica-ab003-schema schema ['replay', '0', '5', '98', '0', '15000000']
+    PASS replica-ab003-key 1155314042043105284,0,98 vs 1155314042043105284,0,98
+    PASS replica-ab003-node-exact-vs-published this-host result=2 nodes=4447441 vs published result=2 nodes=4447441
+    PASS replica-ab004-present p1/p2
+    PASS replica-ab004-done replay_done p1=True p2=True
+    PASS replica-ab004-quads quads-header p1=True p2=True
+    PASS replica-ab004-det-pair p1=['15000000', '2', '2687012'] p2=['15000000', '2', '2687012']
+    PASS replica-ab004-schema schema ['replay', '0', '5', '92', '0', '15000000']
+    PASS replica-ab004-key 1155314042043105288,0,92 vs 1155314042043105288,0,92
+    PASS replica-ab004-node-exact-vs-published this-host result=2 nodes=2687012 vs published result=2 nodes=2687012
+    PASS replica-ab005-present p1/p2
+    PASS replica-ab005-done replay_done p1=True p2=True
+    PASS replica-ab005-quads quads-header p1=True p2=True
+    PASS replica-ab005-det-pair p1=['15000000', '2', '3714648'] p2=['15000000', '2', '3714648']
+    PASS replica-ab005-schema schema ['replay', '0', '5', '96', '0', '15000000']
+    PASS replica-ab005-key 1155314042043105296,0,96 vs 1155314042043105296,0,96
+    PASS replica-ab005-node-exact-vs-published this-host result=2 nodes=3714648 vs published result=2 nodes=3714648
+    PASS replica-ab006-present p1/p2
+    PASS replica-ab006-done replay_done p1=True p2=True
+    PASS replica-ab006-quads quads-header p1=True p2=True
+    PASS replica-ab006-det-pair p1=['15000000', '2', '3855756'] p2=['15000000', '2', '3855756']
+    PASS replica-ab006-schema schema ['replay', '0', '5', '96', '0', '15000000']
+    PASS replica-ab006-key 1155314042043107328,0,96 vs 1155314042043107328,0,96
+    PASS replica-ab006-node-exact-vs-published this-host result=2 nodes=3855756 vs published result=2 nodes=3855756
+    PASS replica-ab007-present p1/p2
+    PASS replica-ab007-done replay_done p1=True p2=True
+    PASS replica-ab007-quads quads-header p1=True p2=True
+    PASS replica-ab007-det-pair p1=['15000000', '2', '3763776'] p2=['15000000', '2', '3763776']
+    PASS replica-ab007-schema schema ['replay', '0', '5', '83', '0', '15000000']
+    PASS replica-ab007-key 1155314042043109376,0,83 vs 1155314042043109376,0,83
+    PASS replica-ab007-node-exact-vs-published this-host result=2 nodes=3763776 vs published result=2 nodes=3763776
+    PASS replica-ab008-present p1/p2
+    PASS replica-ab008-done replay_done p1=True p2=True
+    PASS replica-ab008-quads quads-header p1=True p2=True
+    PASS replica-ab008-det-pair p1=['15000000', '2', '2890562'] p2=['15000000', '2', '2890562']
+    PASS replica-ab008-schema schema ['replay', '0', '5', '93', '0', '15000000']
+    PASS replica-ab008-key 1155314042043113472,0,93 vs 1155314042043113472,0,93
+    PASS replica-ab008-node-exact-vs-published this-host result=2 nodes=2890562 vs published result=2 nodes=2890562
+    PASS replica-ab009-present p1/p2
+    PASS replica-ab009-done replay_done p1=True p2=True
+    PASS replica-ab009-quads quads-header p1=True p2=True
+    PASS replica-ab009-det-pair p1=['15000000', '2', '1786048'] p2=['15000000', '2', '1786048']
+    PASS replica-ab009-schema schema ['replay', '0', '5', '87', '0', '15000000']
+    PASS replica-ab009-key 1155314042043138048,0,87 vs 1155314042043138048,0,87
+    PASS replica-ab009-node-exact-vs-published this-host result=2 nodes=1786048 vs published result=2 nodes=1786048
+    PASS replica-ab010-present p1/p2
+    PASS replica-ab010-done replay_done p1=True p2=True
+    PASS replica-ab010-quads quads-header p1=True p2=True
+    PASS replica-ab010-det-pair p1=['15000000', '2', '4242063'] p2=['15000000', '2', '4242063']
+    PASS replica-ab010-schema schema ['replay', '0', '5', '88', '0', '15000000']
+    PASS replica-ab010-key 1155314042043170816,0,88 vs 1155314042043170816,0,88
+    PASS replica-ab010-node-exact-vs-published this-host result=2 nodes=4242063 vs published result=2 nodes=4242063
+    PASS replica-ab011-present p1/p2
+    PASS replica-ab011-done replay_done p1=True p2=True
+    PASS replica-ab011-quads quads-header p1=True p2=True
+    PASS replica-ab011-det-pair p1=['15000000', '2', '4806135'] p2=['15000000', '2', '4806135']
+    PASS replica-ab011-schema schema ['replay', '0', '5', '92', '0', '15000000']
+    PASS replica-ab011-key 1155314042047299584,0,92 vs 1155314042047299584,0,92
+    PASS replica-ab011-node-exact-vs-published this-host result=2 nodes=4806135 vs published result=2 nodes=4806135
+    PASS replica-ab012-present p1/p2
+    PASS replica-ab012-done replay_done p1=True p2=True
+    PASS replica-ab012-quads quads-header p1=True p2=True
+    PASS replica-ab012-det-pair p1=['15000000', '2', '2606954'] p2=['15000000', '2', '2606954']
+    PASS replica-ab012-schema schema ['replay', '0', '5', '89', '0', '15000000']
+    PASS replica-ab012-key 1155314042051493888,0,89 vs 1155314042051493888,0,89
+    PASS replica-ab012-node-exact-vs-published this-host result=2 nodes=2606954 vs published result=2 nodes=2606954
+    PASS replica-ab013-present p1/p2
+    PASS replica-ab013-done replay_done p1=True p2=True
+    PASS replica-ab013-quads quads-header p1=True p2=True
+    PASS replica-ab013-det-pair p1=['15000000', '2', '2284195'] p2=['15000000', '2', '2284195']
+    PASS replica-ab013-schema schema ['replay', '0', '5', '87', '0', '15000000']
+    PASS replica-ab013-key 1155314042059882496,0,87 vs 1155314042059882496,0,87
+    PASS replica-ab013-node-exact-vs-published this-host result=2 nodes=2284195 vs published result=2 nodes=2284195
+    PASS replica-ab014-present p1/p2
+    PASS replica-ab014-done replay_done p1=True p2=True
+    PASS replica-ab014-quads quads-header p1=True p2=True
+    PASS replica-ab014-det-pair p1=['15000000', '2', '4280600'] p2=['15000000', '2', '4280600']
+    PASS replica-ab014-schema schema ['replay', '0', '5', '91', '0', '15000000']
+    PASS replica-ab014-key 1155314042076659712,0,91 vs 1155314042076659712,0,91
+    PASS replica-ab014-node-exact-vs-published this-host result=2 nodes=4280600 vs published result=2 nodes=4280600
+    PASS replica-ab015-present p1/p2
+    PASS replica-ab015-done replay_done p1=True p2=True
+    PASS replica-ab015-quads quads-header p1=True p2=True
+    PASS replica-ab015-det-pair p1=['15000000', '2', '3912106'] p2=['15000000', '2', '3912106']
+    PASS replica-ab015-schema schema ['replay', '0', '5', '98', '0', '15000000']
+    PASS replica-ab015-key 1155314050633039872,0,98 vs 1155314050633039872,0,98
+    PASS replica-ab015-node-exact-vs-published this-host result=2 nodes=3912106 vs published result=2 nodes=3912106
+    PASS replica-ab016-present p1/p2
+    PASS replica-ab016-done replay_done p1=True p2=True
+    PASS replica-ab016-quads quads-header p1=True p2=True
+    PASS replica-ab016-det-pair p1=['15000000', '2', '4258557'] p2=['15000000', '2', '4258557']
+    PASS replica-ab016-schema schema ['replay', '0', '5', '96', '0', '15000000']
+    PASS replica-ab016-key 1155314059222974464,0,96 vs 1155314059222974464,0,96
+    PASS replica-ab016-node-exact-vs-published this-host result=2 nodes=4258557 vs published result=2 nodes=4258557
+    PASS replica-all-16-node-exact 16/16 (first independent-session reproduction of ckpt-1/3)
+    PASS anchor-k02a-present a/b
+    PASS anchor-k02a-a-clean result=1 reason=clean quads=95670
+    PASS anchor-k02a-a-expansions exp=9106337 vs 9106337, ttH=4991527 vs 4991527
+    PASS anchor-k02a-a-key 1297036692683751424:68157440
+    PASS anchor-k02a-b-clean result=1 reason=clean quads=95670
+    PASS anchor-k02a-b-expansions exp=9106337 vs 9106337, ttH=4991527 vs 4991527
+    PASS anchor-k02a-b-key 1297036692683751424:68157440
+    PASS anchor-k02a-det-pair a=9106337/4991527 b=9106337/4991527
+    PASS anchor-l1a-present a/b
+    PASS anchor-l1a-a-clean result=2 reason=clean quads=95670
+    PASS anchor-l1a-a-expansions exp=7660602 vs 7660602, ttH=3951175 vs 3951175
+    PASS anchor-l1a-a-key 13019119616:16448
+    PASS anchor-l1a-b-clean result=2 reason=clean quads=95670
+    PASS anchor-l1a-b-expansions exp=7660602 vs 7660602, ttH=3951175 vs 3951175
+    PASS anchor-l1a-b-key 13019119616:16448
+    PASS anchor-l1a-det-pair a=7660602/3951175 b=7660602/3951175
+    PASS neg-ng1-failclosed {'raw': 'third,ng1a,5,88,,GATE_FAIL,"legal count mismatch: derived=87 declared=88"', 'gate_fail': 'GATE_FAIL,"legal count mismatch: derived=87 declared=88'}
+    PASS neg-ng2-failclosed {'raw': 'third,ng2a,6,87,,GATE_FAIL,"stone count mismatch: bits=5 declared=6"', 'gate_fail': 'GATE_FAIL,"stone count mismatch: bits=5 declared=6'}
+    PASS third-target-ab001-present a/b
+    PASS third-target-ab001-a-key 1155314042043105281:0
+    PASS third-target-ab001-a-legal-derived 95 vs 95
+    PASS third-target-ab001-a-quads 95670
+    PASS third-target-ab001-b-key 1155314042043105281:0
+    PASS third-target-ab001-b-legal-derived 95 vs 95
+    PASS third-target-ab001-b-quads 95670
+    PASS third-target-ab001-det-pair a=(2,4923828,clean) b=(2,4923828,clean)
+    PASS third-target-ab001-verdict-agree third=2 replica=2
+    PASS third-target-ab002-present a/b
+    PASS third-target-ab002-a-key 1155314042043105282:0
+    PASS third-target-ab002-a-legal-derived 97 vs 97
+    PASS third-target-ab002-a-quads 95670
+    PASS third-target-ab002-b-key 1155314042043105282:0
+    PASS third-target-ab002-b-legal-derived 97 vs 97
+    PASS third-target-ab002-b-quads 95670
+    PASS third-target-ab002-det-pair a=(2,4230137,clean) b=(2,4230137,clean)
+    PASS third-target-ab002-verdict-agree third=2 replica=2
+    PASS third-target-ab003-present a/b
+    PASS third-target-ab003-a-key 1155314042043105284:0
+    PASS third-target-ab003-a-legal-derived 98 vs 98
+    PASS third-target-ab003-a-quads 95670
+    PASS third-target-ab003-b-key 1155314042043105284:0
+    PASS third-target-ab003-b-legal-derived 98 vs 98
+    PASS third-target-ab003-b-quads 95670
+    PASS third-target-ab003-det-pair a=(2,5191413,clean) b=(2,5191413,clean)
+    PASS third-target-ab003-verdict-agree third=2 replica=2
+    PASS third-target-ab004-present a/b
+    PASS third-target-ab004-a-key 1155314042043105288:0
+    PASS third-target-ab004-a-legal-derived 92 vs 92
+    PASS third-target-ab004-a-quads 95670
+    PASS third-target-ab004-b-key 1155314042043105288:0
+    PASS third-target-ab004-b-legal-derived 92 vs 92
+    PASS third-target-ab004-b-quads 95670
+    PASS third-target-ab004-det-pair a=(2,3061759,clean) b=(2,3061759,clean)
+    PASS third-target-ab004-verdict-agree third=2 replica=2
+    PASS third-target-ab005-present a/b
+    PASS third-target-ab005-a-key 1155314042043105296:0
+    PASS third-target-ab005-a-legal-derived 96 vs 96
+    PASS third-target-ab005-a-quads 95670
+    PASS third-target-ab005-b-key 1155314042043105296:0
+    PASS third-target-ab005-b-legal-derived 96 vs 96
+    PASS third-target-ab005-b-quads 95670
+    PASS third-target-ab005-det-pair a=(2,4264033,clean) b=(2,4264033,clean)
+    PASS third-target-ab005-verdict-agree third=2 replica=2
+    PASS third-target-ab006-present a/b
+    PASS third-target-ab006-a-key 1155314042043107328:0
+    PASS third-target-ab006-a-legal-derived 96 vs 96
+    PASS third-target-ab006-a-quads 95670
+    PASS third-target-ab006-b-key 1155314042043107328:0
+    PASS third-target-ab006-b-legal-derived 96 vs 96
+    PASS third-target-ab006-b-quads 95670
+    PASS third-target-ab006-det-pair a=(2,4449209,clean) b=(2,4449209,clean)
+    PASS third-target-ab006-verdict-agree third=2 replica=2
+    PASS third-target-ab007-present a/b
+    PASS third-target-ab007-a-key 1155314042043109376:0
+    PASS third-target-ab007-a-legal-derived 83 vs 83
+    PASS third-target-ab007-a-quads 95670
+    PASS third-target-ab007-b-key 1155314042043109376:0
+    PASS third-target-ab007-b-legal-derived 83 vs 83
+    PASS third-target-ab007-b-quads 95670
+    PASS third-target-ab007-det-pair a=(2,4309624,clean) b=(2,4309624,clean)
+    PASS third-target-ab007-verdict-agree third=2 replica=2
+    PASS third-target-ab008-present a/b
+    PASS third-target-ab008-a-key 1155314042043113472:0
+    PASS third-target-ab008-a-legal-derived 93 vs 93
+    PASS third-target-ab008-a-quads 95670
+    PASS third-target-ab008-b-key 1155314042043113472:0
+    PASS third-target-ab008-b-legal-derived 93 vs 93
+    PASS third-target-ab008-b-quads 95670
+    PASS third-target-ab008-det-pair a=(2,3278912,clean) b=(2,3278912,clean)
+    PASS third-target-ab008-verdict-agree third=2 replica=2
+    PASS third-target-ab009-present a/b
+    PASS third-target-ab009-a-key 1155314042043138048:0
+    PASS third-target-ab009-a-legal-derived 87 vs 87
+    PASS third-target-ab009-a-quads 95670
+    PASS third-target-ab009-b-key 1155314042043138048:0
+    PASS third-target-ab009-b-legal-derived 87 vs 87
+    PASS third-target-ab009-b-quads 95670
+    PASS third-target-ab009-det-pair a=(2,1996702,clean) b=(2,1996702,clean)
+    PASS third-target-ab009-verdict-agree third=2 replica=2
+    PASS third-target-ab010-present a/b
+    PASS third-target-ab010-a-key 1155314042043170816:0
+    PASS third-target-ab010-a-legal-derived 88 vs 88
+    PASS third-target-ab010-a-quads 95670
+    PASS third-target-ab010-b-key 1155314042043170816:0
+    PASS third-target-ab010-b-legal-derived 88 vs 88
+    PASS third-target-ab010-b-quads 95670
+    PASS third-target-ab010-det-pair a=(2,4882786,clean) b=(2,4882786,clean)
+    PASS third-target-ab010-verdict-agree third=2 replica=2
+    PASS third-target-ab011-present a/b
+    PASS third-target-ab011-a-key 1155314042047299584:0
+    PASS third-target-ab011-a-legal-derived 92 vs 92
+    PASS third-target-ab011-a-quads 95670
+    PASS third-target-ab011-b-key 1155314042047299584:0
+    PASS third-target-ab011-b-legal-derived 92 vs 92
+    PASS third-target-ab011-b-quads 95670
+    PASS third-target-ab011-det-pair a=(2,5557843,clean) b=(2,5557843,clean)
+    PASS third-target-ab011-verdict-agree third=2 replica=2
+    PASS third-target-ab012-present a/b
+    PASS third-target-ab012-a-key 1155314042051493888:0
+    PASS third-target-ab012-a-legal-derived 89 vs 89
+    PASS third-target-ab012-a-quads 95670
+    PASS third-target-ab012-b-key 1155314042051493888:0
+    PASS third-target-ab012-b-legal-derived 89 vs 89
+    PASS third-target-ab012-b-quads 95670
+    PASS third-target-ab012-det-pair a=(2,2988752,clean) b=(2,2988752,clean)
+    PASS third-target-ab012-verdict-agree third=2 replica=2
+    PASS third-target-ab013-present a/b
+    PASS third-target-ab013-a-key 1155314042059882496:0
+    PASS third-target-ab013-a-legal-derived 87 vs 87
+    PASS third-target-ab013-a-quads 95670
+    PASS third-target-ab013-b-key 1155314042059882496:0
+    PASS third-target-ab013-b-legal-derived 87 vs 87
+    PASS third-target-ab013-b-quads 95670
+    PASS third-target-ab013-det-pair a=(2,2607492,clean) b=(2,2607492,clean)
+    PASS third-target-ab013-verdict-agree third=2 replica=2
+    PASS third-target-ab014-present a/b
+    PASS third-target-ab014-a-key 1155314042076659712:0
+    PASS third-target-ab014-a-legal-derived 91 vs 91
+    PASS third-target-ab014-a-quads 95670
+    PASS third-target-ab014-b-key 1155314042076659712:0
+    PASS third-target-ab014-b-legal-derived 91 vs 91
+    PASS third-target-ab014-b-quads 95670
+    PASS third-target-ab014-det-pair a=(2,4913790,clean) b=(2,4913790,clean)
+    PASS third-target-ab014-verdict-agree third=2 replica=2
+    PASS third-target-ab015-present a/b
+    PASS third-target-ab015-a-key 1155314050633039872:0
+    PASS third-target-ab015-a-legal-derived 98 vs 98
+    PASS third-target-ab015-a-quads 95670
+    PASS third-target-ab015-b-key 1155314050633039872:0
+    PASS third-target-ab015-b-legal-derived 98 vs 98
+    PASS third-target-ab015-b-quads 95670
+    PASS third-target-ab015-det-pair a=(2,4498722,clean) b=(2,4498722,clean)
+    PASS third-target-ab015-verdict-agree third=2 replica=2
+    PASS third-target-ab016-present a/b
+    PASS third-target-ab016-a-key 1155314059222974464:0
+    PASS third-target-ab016-a-legal-derived 96 vs 96
+    PASS third-target-ab016-a-quads 95670
+    PASS third-target-ab016-b-key 1155314059222974464:0
+    PASS third-target-ab016-b-legal-derived 96 vs 96
+    PASS third-target-ab016-b-quads 95670
+    PASS third-target-ab016-det-pair a=(2,4902587,clean) b=(2,4902587,clean)
+    PASS third-target-ab016-verdict-agree third=2 replica=2
+    PASS third-target-all-16-agree 16/16 three-implementation LOSS agreements (published df-pn + this-host replica + third impl)
+    PASS unadopted-pin-merged-cache 854800f38349277924bc77c50d92a6d5252f11bdb2b2cdb54a14ca2b4f6b087d
+    PASS unadopted-merged-cache-rowcount 6301 s5verdict rows
+    PASS unadopted-merged-cache-all-16-absent 0 key-collision rows (expect 0: ckpt-1/3 rows never adopted)
+    PASS valgate-at2m-s5-1152921504606851072-536870946-present baseline=True host=True
+    PASS valgate-at2m-s5-1152921504606851072-536870946-budget budget=2000000 vs 2000000
+    PASS valgate-at2m-s5-1152921504606851072-536870946-node-exact host=['2000000', '0', '2000000'] baseline=['2000000', '0', '2000000']
+    PASS valgate-at2m-s5-1188950301626860544-536870912-present baseline=True host=True
+    PASS valgate-at2m-s5-1188950301626860544-536870912-budget budget=2000000 vs 2000000
+    PASS valgate-at2m-s5-1188950301626860544-536870912-node-exact host=['2000000', '0', '2000000'] baseline=['2000000', '0', '2000000']
+    PASS valgate-first-15m-s5-1152921504606851072-536870946-present baseline=True host=True
+    PASS valgate-first-15m-s5-1152921504606851072-536870946-budget budget=15000000 vs 15000000
+    PASS valgate-first-15m-s5-1152921504606851072-536870946-node-exact host=['15000000', '2', '3651923'] baseline=['15000000', '2', '3651923']
+    PASS valgate-second-15m-s5-1188950301626860544-536870912-present baseline=True host=True
+    PASS valgate-second-15m-s5-1188950301626860544-536870912-budget budget=15000000 vs 15000000
+    PASS valgate-second-15m-s5-1188950301626860544-536870912-node-exact host=['15000000', '2', '5040200'] baseline=['15000000', '2', '5040200']
+    ALL 352 GATES PASS; verdict agreements 16/16 (LOSS=16); inconclusive=0; total third-impl expansions pass-one=66057589
+BATTERY COMPLETE: 7/7 tamper cases captured at pre-registered gates + control PASS

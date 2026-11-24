@@ -33,7 +33,7 @@ run_case() {  # run_case <case-name> <expected-first-gate>
   local name="$1" expect="$2"
   local out rc first
   out="$(cd "$ROOT/../tamper-$name" && python3 scripts/audit_cu.py 2>&1)"; rc=$?
-  first="$(echo "$out" | grep -o 'GATE FAILED: [^ ]+' | head -1 | cut -d' ' -f3-)"
+  first="$(echo "$out" | grep -oE 'GATE FAILED: [^ ]+' | head -1 | cut -d' ' -f3-)"
   echo "CASE $name rc=$rc first_gate=${first:-<none>} expected=$expect" >> "$BATT"
   echo "$out" | sed 's/^/    /' >> "$BATT"
   [ "$rc" -eq 1 ] || fail "$name expected rc=1 got rc=$rc"
