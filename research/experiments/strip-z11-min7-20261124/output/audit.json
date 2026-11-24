@@ -1,0 +1,921 @@
+{
+ "D1": {
+  "bad": 0,
+  "comparisons": 10971,
+  "details_mismatch": [],
+  "points": 3657
+ },
+ "D2": {
+  "bad": 0,
+  "comparisons": 991,
+  "details_mismatch": [],
+  "deviants_arithmetic": [
+   [
+    3,
+    3,
+    4
+   ],
+   [
+    3,
+    7
+   ],
+   [
+    4,
+    6
+   ],
+   [
+    5,
+    5
+   ]
+  ],
+  "points": 330
+ },
+ "D3": {
+  "bad": 0,
+  "comparisons": 992,
+  "details_mismatch": [],
+  "deviants_arithmetic": [
+   [
+    3,
+    3,
+    4
+   ],
+   [
+    3,
+    5
+   ],
+   [
+    3,
+    7
+   ],
+   [
+    4,
+    4
+   ],
+   [
+    4,
+    6
+   ],
+   [
+    5,
+    5
+   ],
+   [
+    8
+   ]
+  ],
+  "points": 330,
+  "uncond_ghost_mismatch_330": 0
+ },
+ "D4": {
+  "bad": 0,
+  "comparisons": 4950,
+  "details_mismatch": [],
+  "points": 1650
+ },
+ "D4b": {
+  "bad": 0,
+  "comparisons": 3234,
+  "details_mismatch": [],
+  "points": 1078
+ },
+ "D4c": {
+  "bad": 0,
+  "comparisons": 2100,
+  "details_mismatch": [],
+  "points": 700
+ },
+ "D4d": {
+  "bad": 0,
+  "comparisons": 1380,
+  "details_mismatch": [],
+  "points": 460
+ },
+ "D5": {
+  "bad": 0,
+  "comparisons": 3996,
+  "details_mismatch": [],
+  "points": 1332
+ },
+ "D6": {
+  "bad": 0,
+  "comparisons": 270,
+  "details_mismatch": [],
+  "points": 90
+ },
+ "D6c_census": {
+  "bad": 0,
+  "census": {
+   "E11_uncond_ghost_mismatch": 0,
+   "m5_z11_out_of_band": {
+    "separations": [
+     [
+      [
+       5,
+       6
+      ],
+      1,
+      2
+     ],
+     [
+      [
+       5,
+       8
+      ],
+      2,
+      0
+     ]
+    ],
+    "total": 222
+   },
+   "m6_z11_out_of_band": {
+    "separations": [
+     [
+      [
+       6,
+       6
+      ],
+      0,
+      1
+     ]
+    ],
+    "total": 222
+   },
+   "z12_cells": {
+    "A12": {
+     "R": 20,
+     "decomp_dependent_s": [],
+     "deviant_count": 0,
+     "deviants_vs_collapse": [],
+     "family": 15,
+     "floor": 8,
+     "table_s20": {
+      "0": [
+       1
+      ],
+      "16": [
+       0
+      ],
+      "17": [
+       0
+      ],
+      "18": [
+       0
+      ],
+      "8": [
+       0
+      ],
+      "9": [
+       0
+      ]
+     }
+    },
+    "B12": {
+     "R": 19,
+     "decomp_dependent_s": [],
+     "deviant_count": 1,
+     "deviants_vs_collapse": [
+      [
+       8
+      ]
+     ],
+     "family": 35,
+     "floor": 7,
+     "table_s20": {
+      "0": [
+       0
+      ],
+      "14": [
+       1
+      ],
+      "15": [
+       1
+      ],
+      "16": [
+       1
+      ],
+      "17": [
+       1
+      ],
+      "18": [
+       1
+      ],
+      "7": [
+       1
+      ],
+      "8": [
+       2
+      ],
+      "9": [
+       1
+      ]
+     }
+    },
+    "C12": {
+     "R": 18,
+     "decomp_dependent_s": [],
+     "deviant_count": 1,
+     "deviants_vs_collapse": [
+      [
+       8
+      ]
+     ],
+     "family": 70,
+     "floor": 6,
+     "table_s20": {
+      "0": [
+       1
+      ],
+      "12": [
+       0
+      ],
+      "13": [
+       0
+      ],
+      "14": [
+       0
+      ],
+      "15": [
+       0
+      ],
+      "16": [
+       0
+      ],
+      "17": [
+       0
+      ],
+      "18": [
+       0
+      ],
+      "19": [
+       0
+      ],
+      "20": [
+       0
+      ],
+      "6": [
+       1
+      ],
+      "7": [
+       0
+      ],
+      "8": [
+       1
+      ],
+      "9": [
+       0
+      ]
+     }
+    },
+    "D12": {
+     "R": 17,
+     "decomp_dependent_s": [],
+     "deviant_count": 2,
+     "deviants_vs_collapse": [
+      [
+       8
+      ],
+      [
+       5,
+       5
+      ]
+     ],
+     "family": 126,
+     "floor": 5,
+     "table_s20": {
+      "0": [
+       0
+      ],
+      "10": [
+       2
+      ],
+      "11": [
+       1
+      ],
+      "12": [
+       1
+      ],
+      "13": [
+       1
+      ],
+      "14": [
+       1
+      ],
+      "15": [
+       1
+      ],
+      "16": [
+       1
+      ],
+      "17": [
+       1
+      ],
+      "18": [
+       1
+      ],
+      "19": [
+       1
+      ],
+      "20": [
+       1
+      ],
+      "5": [
+       1
+      ],
+      "6": [
+       0
+      ],
+      "7": [
+       1
+      ],
+      "8": [
+       0
+      ],
+      "9": [
+       1
+      ]
+     }
+    },
+    "D12_loose": {
+     "R": 17,
+     "decomp_dependent_s": [
+      10,
+      12
+     ],
+     "deviant_count": 11,
+     "deviants_vs_collapse": [
+      [
+       8
+      ],
+      [
+       3,
+       5
+      ],
+      [
+       3,
+       7
+      ],
+      [
+       3,
+       9
+      ],
+      [
+       4,
+       4
+      ],
+      [
+       4,
+       6
+      ],
+      [
+       5,
+       5
+      ],
+      [
+       3,
+       3,
+       4
+      ],
+      [
+       3,
+       3,
+       6
+      ],
+      [
+       3,
+       4,
+       5
+      ],
+      [
+       3,
+       3,
+       3,
+       3
+      ]
+     ],
+     "family": 330,
+     "floor": 3,
+     "table_s20": {
+      "0": [
+       0
+      ],
+      "10": [
+       0,
+       2
+      ],
+      "11": [
+       1
+      ],
+      "12": [
+       1,
+       2
+      ],
+      "13": [
+       1
+      ],
+      "14": [
+       1
+      ],
+      "15": [
+       1
+      ],
+      "16": [
+       1
+      ],
+      "17": [
+       1
+      ],
+      "18": [
+       1
+      ],
+      "19": [
+       1
+      ],
+      "20": [
+       1
+      ],
+      "3": [
+       1
+      ],
+      "4": [
+       0
+      ],
+      "5": [
+       1
+      ],
+      "6": [
+       0
+      ],
+      "7": [
+       1
+      ],
+      "8": [
+       0
+      ],
+      "9": [
+       1
+      ]
+     }
+    },
+    "E12": {
+     "R": 16,
+     "decomp_dependent_s": [],
+     "deviant_count": 4,
+     "deviants_vs_collapse": [
+      [
+       3,
+       7
+      ],
+      [
+       4,
+       6
+      ],
+      [
+       5,
+       5
+      ],
+      [
+       3,
+       3,
+       4
+      ]
+     ],
+     "family": 330,
+     "floor": 3,
+     "table_s20": {
+      "0": [
+       1
+      ],
+      "10": [
+       1
+      ],
+      "11": [
+       0
+      ],
+      "12": [
+       0
+      ],
+      "13": [
+       0
+      ],
+      "14": [
+       0
+      ],
+      "15": [
+       0
+      ],
+      "16": [
+       0
+      ],
+      "17": [
+       0
+      ],
+      "18": [
+       0
+      ],
+      "19": [
+       0
+      ],
+      "20": [
+       0
+      ],
+      "3": [
+       0
+      ],
+      "4": [
+       1
+      ],
+      "5": [
+       0
+      ],
+      "6": [
+       1
+      ],
+      "7": [
+       0
+      ],
+      "8": [
+       1
+      ],
+      "9": [
+       0
+      ]
+     }
+    },
+    "F12": {
+     "R": 14,
+     "decomp_dependent_s": [],
+     "deviant_count": 8,
+     "deviants_vs_collapse": [
+      [
+       3,
+       9
+      ],
+      [
+       4,
+       8
+      ],
+      [
+       5,
+       7
+      ],
+      [
+       6,
+       6
+      ],
+      [
+       3,
+       3,
+       6
+      ],
+      [
+       3,
+       4,
+       5
+      ],
+      [
+       4,
+       4,
+       4
+      ],
+      [
+       3,
+       3,
+       3,
+       3
+      ]
+     ],
+     "family": 330,
+     "floor": 3,
+     "table_s20": {
+      "0": [
+       1
+      ],
+      "10": [
+       1
+      ],
+      "11": [
+       0
+      ],
+      "12": [
+       1
+      ],
+      "13": [
+       0
+      ],
+      "14": [
+       0
+      ],
+      "15": [
+       0
+      ],
+      "16": [
+       0
+      ],
+      "17": [
+       0
+      ],
+      "18": [
+       0
+      ],
+      "19": [
+       0
+      ],
+      "20": [
+       0
+      ],
+      "3": [
+       0
+      ],
+      "4": [
+       1
+      ],
+      "5": [
+       0
+      ],
+      "6": [
+       1
+      ],
+      "7": [
+       0
+      ],
+      "8": [
+       1
+      ],
+      "9": [
+       0
+      ]
+     }
+    },
+    "G12": {
+     "R": 15,
+     "decomp_dependent_s": [],
+     "deviant_count": 12,
+     "deviants_vs_collapse": [
+      [
+       3,
+       7
+      ],
+      [
+       3,
+       9
+      ],
+      [
+       4,
+       6
+      ],
+      [
+       4,
+       8
+      ],
+      [
+       5,
+       5
+      ],
+      [
+       5,
+       7
+      ],
+      [
+       6,
+       6
+      ],
+      [
+       3,
+       3,
+       4
+      ],
+      [
+       3,
+       3,
+       6
+      ],
+      [
+       3,
+       4,
+       5
+      ],
+      [
+       4,
+       4,
+       4
+      ],
+      [
+       3,
+       3,
+       3,
+       3
+      ]
+     ],
+     "family": 330,
+     "floor": 3,
+     "table_s20": {
+      "0": [
+       0
+      ],
+      "10": [
+       0
+      ],
+      "11": [
+       1
+      ],
+      "12": [
+       2
+      ],
+      "13": [
+       1
+      ],
+      "14": [
+       1
+      ],
+      "15": [
+       1
+      ],
+      "16": [
+       1
+      ],
+      "17": [
+       1
+      ],
+      "18": [
+       1
+      ],
+      "19": [
+       1
+      ],
+      "20": [
+       1
+      ],
+      "3": [
+       1
+      ],
+      "4": [
+       0
+      ],
+      "5": [
+       1
+      ],
+      "6": [
+       0
+      ],
+      "7": [
+       1
+      ],
+      "8": [
+       0
+      ],
+      "9": [
+       1
+      ]
+     }
+    }
+   },
+   "z12_strip": {
+    "5": {
+     "collapse": 221,
+     "separations": [
+      [
+       [
+        5,
+        8
+       ],
+       1,
+       0
+      ]
+     ],
+     "total": 222
+    },
+    "6": {
+     "collapse": 220,
+     "separations": [
+      [
+       [
+        6,
+        6
+       ],
+       0,
+       2
+      ],
+      [
+       [
+        6,
+        8
+       ],
+       2,
+       1
+      ]
+     ],
+     "total": 222
+    },
+    "7": {
+     "collapse": 222,
+     "separations": [],
+     "total": 222
+    },
+    "8": {
+     "collapse": 96,
+     "separations": [],
+     "total": 96
+    },
+    "9": {
+     "collapse": 96,
+     "separations": [],
+     "total": 96
+    },
+    "10": {
+     "collapse": 96,
+     "separations": [],
+     "total": 96
+    },
+    "11": {
+     "collapse": 96,
+     "separations": [],
+     "total": 96
+    },
+    "12": {
+     "collapse": 96,
+     "separations": [],
+     "total": 96
+    }
+   }
+  },
+  "comparisons": 9969,
+  "note": "census observation only; z=12 strip closed forms are NOT claimed (registered open); m=6 z=12 and m=5 z=12 are out of band; the m=6/m=5 z=11 out-of-band separations are claimed sharpness re-records (min>=7 necessary: the (6,6) sign-flip witness and the m=5 double witness)",
+  "points": 6813
+ },
+ "D7a": {
+  "bad": 0,
+  "comparisons": 85,
+  "details_mismatch": [],
+  "points": 17
+ },
+ "D7b": {
+  "bad": 0,
+  "comparisons": 234,
+  "details_mismatch": [],
+  "points": 78
+ },
+ "D8": {
+  "bad": 0,
+  "comparisons": 14859,
+  "details_mismatch": [],
+  "points": 14859
+ },
+ "D9": {
+  "bad": 0,
+  "comparisons": 495,
+  "details_mismatch": [],
+  "points": 165
+ },
+ "comparisons_totals": {
+  "D1": 10971,
+  "D2": 991,
+  "D3": 992,
+  "D4": 4950,
+  "D4b": 3234,
+  "D4c": 2100,
+  "D4d": 1380,
+  "D5": 3996,
+  "D6": 270,
+  "D7a": 85,
+  "D7b": 234,
+  "D8": 14859,
+  "D9": 495
+ },
+ "points_totals": {
+  "D1": 3657,
+  "D2": 330,
+  "D3": 330,
+  "D4": 1650,
+  "D4b": 1078,
+  "D4c": 700,
+  "D4d": 460,
+  "D5": 1332,
+  "D6": 90,
+  "D7a": 17,
+  "D7b": 78,
+  "D8": 14859,
+  "D9": 165
+ },
+ "summary": {
+  "census": {
+   "bad_engine": 0,
+   "comparisons": 9969,
+   "points": 6813
+  },
+  "declared_totals": {
+   "comparisons": 44557,
+   "points": 24746
+  },
+  "meta": {
+   "verifier_sha256": "c02eb116d3387e0ba3de7dede34330f624393018033618f7ebe61f1fd2226aa0"
+  },
+  "n_bad": 0,
+  "observed_totals": {
+   "comparisons": 44557,
+   "points": 24746
+  },
+  "theorem": "Lemma F11 (persistent-2 REBIRTH: single s=10 DOWNWARD deviant 1<2 over the 5 shapes, s=11 agreement, then the permanent s>=12 UP tail 2>0 -- persistent-2 dead at z=10 is alive again at z=11)/G11 (single s=10 DOWNWARD 0<1; the z=10 two-sided pair shrinks to one side)/E11 (FIRST two-sided E deviant pair: s=8 DOWN 1<2 and s=10 UP 2>0; conditional recursion, unconditional ghost agrees 3rd consecutive slice)/D11 (floored single s=8 DOWNWARD 0<1; loose floor breaks at s=10)/C11 (FIRST two-sided C deviant pair: s=6 DOWN 1<2 and s=8 UP 2>0, the s=6 cell co-residing with the m=5 z=11 out-of-band witness and the s=8 cell with the SECOND witness -- the first double-witness m=5 slice)/B11 (full collapse 3rd consecutive slice)/A11 (full collapse 2nd consecutive slice; C-hand child = published T-Z10) + Theorem T-Z11: min>=7 critical-strip z=11 slice with the SECOND TRIVIAL-ABSORPTION base m=7 (a=7 child == stair option exactly, no deviant child) + option-set identity induction. z*(7)=13 so m=7 IS in band: the m=7 row of K1268 Conjecture C1 is determined for z in {0..11} leaving exactly {12} open. Universal claims proved on paper in the declaration note; this finite audit corroborates.",
+  "unknown_statement": "standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, classes 1/2/4, classes 10968/23964/2251/5343: UNKNOWN at all times"
+ }
+}
