@@ -1,0 +1,256 @@
+{
+  "tool": "independent verifier for K1298 (task 2)",
+  "python": "3.12.13 (main, Mar 24 2026, 14:54:28) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "seed": 20261125,
+  "model": "positions = safe sets; moves add one point; normal/misere as documented",
+  "families": [
+    {
+      "name": "exhaustive_n4",
+      "n": 4,
+      "s_values": [
+        2,
+        3
+      ],
+      "num_boards": 1024,
+      "cases": 2048,
+      "counts": {
+        "uniform": 1408,
+        "mixed": 640,
+        "only01": 1408,
+        "not_only01": 640,
+        "c_ok": 1408,
+        "c_fail": 640,
+        "local_ok": 2048,
+        "local_fail": 0,
+        "uniform_nonconstant": 0,
+        "formula_viol": 0,
+        "misere_viol": 0,
+        "ab_viol": 0,
+        "ac_viol": 0,
+        "with_active_block": 960
+      },
+      "per_s": {
+        "2": {
+          "cases": 1024,
+          "uniform": 384,
+          "mixed": 640,
+          "only01": 384,
+          "violations": 0
+        },
+        "3": {
+          "cases": 1024,
+          "uniform": 1024,
+          "mixed": 0,
+          "only01": 1024,
+          "violations": 0
+        }
+      },
+      "nonconstant_examples": [],
+      "violations": []
+    },
+    {
+      "name": "exhaustive_n5",
+      "n": 5,
+      "s_values": [
+        2,
+        3
+      ],
+      "num_boards": 1024,
+      "cases": 2048,
+      "counts": {
+        "uniform": 1288,
+        "mixed": 760,
+        "only01": 1288,
+        "not_only01": 760,
+        "c_ok": 1288,
+        "c_fail": 760,
+        "local_ok": 2048,
+        "local_fail": 0,
+        "uniform_nonconstant": 15,
+        "formula_viol": 0,
+        "misere_viol": 0,
+        "ab_viol": 0,
+        "ac_viol": 0,
+        "with_active_block": 1023
+      },
+      "per_s": {
+        "2": {
+          "cases": 1024,
+          "uniform": 264,
+          "mixed": 760,
+          "only01": 264,
+          "violations": 0
+        },
+        "3": {
+          "cases": 1024,
+          "uniform": 1024,
+          "mixed": 0,
+          "only01": 1024,
+          "violations": 0
+        }
+      },
+      "nonconstant_examples": [
+        {
+          "case": "exhaustive_n5:sel=0007(0000000111):s=2",
+          "maximal_sizes": [
+            2,
+            4
+          ]
+        },
+        {
+          "case": "exhaustive_n5:sel=0025(0000011001):s=2",
+          "maximal_sizes": [
+            2,
+            4
+          ]
+        },
+        {
+          "case": "exhaustive_n5:sel=0042(0000101010):s=2",
+          "maximal_sizes": [
+            2,
+            4
+          ]
+        },
+        {
+          "case": "exhaustive_n5:sel=0052(0000110100):s=2",
+          "maximal_sizes": [
+            2,
+            4
+          ]
+        },
+        {
+          "case": "exhaustive_n5:sel=0063(0000111111):s=2",
+          "maximal_sizes": [
+            2,
+            4
+          ]
+        },
+        {
+          "case": "exhaustive_n5:sel=0193(0011000001):s=2",
+          "maximal_sizes": [
+            2,
+            4
+          ]
+        },
+        {
+          "case": "exhaustive_n5:sel=0322(0101000010):s=2",
+          "maximal_sizes": [
+            2,
+            4
+          ]
+        },
+        {
+          "case": "exhaustive_n5:sel=0388(0110000100):s=2",
+          "maximal_sizes": [
+            2,
+            4
+          ]
+        },
+        {
+          "case": "exhaustive_n5:sel=0455(0111000111):s=2",
+          "maximal_sizes": [
+            2,
+            4
+          ]
+        },
+        {
+          "case": "exhaustive_n5:sel=0584(1001001000):s=2",
+          "maximal_sizes": [
+            2,
+            4
+          ]
+        }
+      ],
+      "violations": []
+    },
+    {
+      "name": "random_n6n7",
+      "n": [
+        6,
+        7
+      ],
+      "s_values": [
+        2,
+        3,
+        4
+      ],
+      "num_boards": 3000,
+      "cases": 9000,
+      "counts": {
+        "uniform": 4422,
+        "mixed": 4578,
+        "only01": 4422,
+        "not_only01": 4578,
+        "c_ok": 4422,
+        "c_fail": 4578,
+        "local_ok": 9000,
+        "local_fail": 0,
+        "uniform_nonconstant": 1,
+        "formula_viol": 0,
+        "misere_viol": 0,
+        "ab_viol": 0,
+        "ac_viol": 0,
+        "with_active_block": 6000
+      },
+      "per_s": {
+        "2": {
+          "cases": 3000,
+          "uniform": 1115,
+          "mixed": 1885,
+          "only01": 1115,
+          "violations": 0
+        },
+        "3": {
+          "cases": 3000,
+          "uniform": 307,
+          "mixed": 2693,
+          "only01": 307,
+          "violations": 0
+        },
+        "4": {
+          "cases": 3000,
+          "uniform": 3000,
+          "mixed": 0,
+          "only01": 3000,
+          "violations": 0
+        }
+      },
+      "nonconstant_examples": [
+        {
+          "case": "random_n6n7:n=6:board=0381:s=3",
+          "maximal_sizes": [
+            3,
+            5
+          ]
+        }
+      ],
+      "violations": []
+    }
+  ],
+  "totals": {
+    "cases": 13096,
+    "uniform": 7118,
+    "mixed": 5978,
+    "only01": 7118,
+    "not_only01": 5978,
+    "c_ok": 7118,
+    "c_fail": 5978,
+    "local_ok": 13096,
+    "local_fail": 0,
+    "uniform_nonconstant": 16,
+    "formula_viol": 0,
+    "misere_viol": 0,
+    "ab_viol": 0,
+    "ac_viol": 0,
+    "with_active_block": 7983,
+    "violating_cases": 0
+  },
+  "verdict": {
+    "a_iff_b": true,
+    "a_iff_c": true,
+    "grundy_formula_when_uniform": true,
+    "misere_formula_when_uniform": true,
+    "localized_corollary": true
+  }
+}

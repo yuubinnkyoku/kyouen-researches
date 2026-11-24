@@ -37,8 +37,20 @@ artifacts:
 - path: research/experiments/projective-blocking-kyouen-20261125/report.md
   role: proof
   note: 元の十分条件（パリティ一様 ⇒ {0,1}）の帰納証明と PG 盤での適用
+- path: research/experiments/parity-characterization-20261125/independent/REPORT.md
+  role: log
+  note: 独立検証の総括（定理監査 PASS、小盤 13,096 インスタンス違反 0、PG(2,5) 3 手法一致）
+- path: research/experiments/parity-characterization-20261125/independent/verify_boards.py
+  role: verifier
+  note: 独自実装による小盤の (a)⇔(b)⇔(c)・公式・局所形の検査
+- path: research/experiments/parity-characterization-20261125/independent/out/verification_boards.json
+  role: certificate
+  note: 5,048 盤 / 13,096 インスタンスの検査結果（違反 0）
+- path: research/experiments/parity-characterization-20261125/independent/out/pg2q5_verification.json
+  role: certificate
+  note: PG(2,5) キャップ・ゲームの独立再計算（3 手法一致）
 scope: 有限ハイパーグラフ盤（点集合 + ブロック族）上の共演ゲーム。局面は各ブロックと高々 s 点で交わる点集合、手は 1 点追加、通常プレイ（打てない方が負け）。s は固定（s=2,3,4 など）。
-evidence: "定理: 次の 3 条件は同値。(a) すべての局面の Grundy 値が 0 か 1。(b) すべての極大安全集合のサイズのパリティが一様。(c) 任意の局面 S について、S の極大拡大のサイズのパリティがすべて一様。さらに (b) が成り立つとき共通パリティ p で Grundy(S)=(p−|S|) mod 2、misère は (p−|S|) が偶数なら勝ち。**証明**: (b)⇒(a) は極大集合がすべてサイズ ≡p なので任意の完全プレイの長さが p−|S| に固定され、K1058 §6 と同じ帰納で mex が (p−|S|) mod 2 になる。(a)⇒(c): 全 Grundy が {0,1} なら、Grundy 0 の局面の子はすべて 1、Grundy 1 の局面の子はすべて 0（mex の定義）。極大局面は Grundy 0 なので、任意の極大プレイに沿って値は 0,1,0,1,… と交互に並び、終点 0 までの距離のパリティは Grundy(S) で決まる。よって (c)。(c)⇒(b) は空盤で自明。**検証**: 8,360 個の小盤（n=4,5 の全 2/3/4-一様族、n=6,7,8 のランダム族、s=2,3,4）で (a)⇔(b)・局所形・公式を検査し、uniform 5,263 盤・mixed 3,097 盤・violations 0。実データでも AG(2,4) s=2（極大 4,6 の偶数一様）は Grundy {0,1}、AG(2,5) s=2（5,6 混在）・AG(2,4) s=3（8,9）・AG(2,5) s=3（9,10,11）・PG(2,4) s=4（12,13,14,16）・M(q)（q≥5）は Grundy ≥2 をもつ。"
+evidence: "定理: 次の 3 条件は同値。(a) すべての局面の Grundy 値が 0 か 1。(b) すべての極大安全集合のサイズのパリティが一様。(c) 任意の局面 S について、S の極大拡大のサイズのパリティがすべて一様。さらに (b) が成り立つとき共通パリティ p で Grundy(S)=(p−|S|) mod 2、misère は (p−|S|) が偶数なら勝ち。**証明**: (b)⇒(a) は極大集合がすべてサイズ ≡p なので任意の完全プレイの長さが p−|S| と同パリティになり、K1058 §6 と同じ帰納で mex が (p−|S|) mod 2 になる（サイズ自体は一様でなくてよい）。(a)⇒(c): 全 Grundy が {0,1} なら、Grundy 0 の局面の子はすべて 1、Grundy 1 の局面の子はすべて 0（mex の定義）。極大局面は Grundy 0 なので、任意の極大プレイに沿って値は 0,1,0,1,… と交互に並び、終点 0 までの距離のパリティは Grundy(S) で決まる。よって (c)。(c)⇒(b) は空盤で自明。**検証**: 8,360 個の小盤（n=4,5 の全 2/3/4-一様族、n=6,7,8 のランダム族、s=2,3,4）で (a)⇔(b)・局所形・公式を検査し、uniform 5,263 盤・mixed 3,097 盤・violations 0。実データでも AG(2,4) s=2（極大 4,6 の偶数一様）は Grundy {0,1}、AG(2,5) s=2（5,6 混在）・AG(2,4) s=3（8,9）・AG(2,5) s=3（9,10,11）・PG(2,4) s=4（12,13,14,16）・M(q)（q≥5）は Grundy ≥2 をもつ。独立検証（別実装）は 5,048 盤 / 13,096 インスタンス（n=4,5 網羅＋n=6,7 ランダム、s=2,3,4）で (a)⇔(b)⇔(c)・Grundy/misère 公式・局所形の違反 0、PG(2,5) は 3 手法でキャップ 41,572・極大 3,100（すべて 6）・Grundy {0:19066,1:22506}・G(∅)=0・misère=1 を確認。"
 ---
 
 # parity-graded 共演ゲーム
@@ -77,7 +89,7 @@ Grundy(S) = (p − |S|) mod 2,      misère 勝利 ⟺ (p − |S|) が偶数.
 **(c) ⇒ (b)**: 空盤に (c) を適用すればよい。□
 
 **系（局所形）**: 局面 `S` 以下の部分ゲームの Grundy 値がすべて `{0,1}` に限ることは、
-`S` の極大拡大のパリティが一様であることと同値（部分ゲームに定理を適用）。
+`S` の極大拡大のパリティが一様であることと同値（S を固定した残余ゲームに同じ帰納を適用する。残余容量 s−|S∩B| は一様でないが、定理の証明は容量の一様性を使わない）。
 
 ## 意味
 
