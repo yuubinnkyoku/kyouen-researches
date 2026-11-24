@@ -1,0 +1,210 @@
+{
+ "experiment": "inversive-spectrum-20261124",
+ "definition": "K_s(q) = max |S| with |S \u2229 C| <= s for every circle C",
+ "theorem": "K_s(q) <= (s-2)(q+1)+2 for 2 <= s <= q+1",
+ "results": [
+  {
+   "q": 3,
+   "s": 3,
+   "v": 10,
+   "b": 30,
+   "bound_theorem": 6,
+   "solver": "cadical195",
+   "second_solver": "glucose3",
+   "encoding": "seq",
+   "symmetry_breaking": true,
+   "greedy_lower": 5,
+   "calls": [
+    {
+     "n": 6,
+     "sat": false,
+     "seconds": 0.003
+    }
+   ],
+   "exact": 5,
+   "elapsed": 0.02,
+   "witness": "research\\experiments\\inversive-spectrum-20261124\\output\\witness_q3_s3_n5.json",
+   "witness_source": "greedy",
+   "second_engine_unsat_confirm": true,
+   "second_engine_seconds": 0.0,
+   "witness_verified": true,
+   "dual_d": 1,
+   "tau_d": 5,
+   "tau_linear_bound": 4
+  },
+  {
+   "q": 4,
+   "s": 3,
+   "v": 17,
+   "b": 68,
+   "bound_theorem": 7,
+   "solver": "cadical195",
+   "second_solver": "glucose3",
+   "encoding": "seq",
+   "symmetry_breaking": true,
+   "greedy_lower": 5,
+   "calls": [
+    {
+     "n": 6,
+     "sat": false,
+     "seconds": 0.002
+    }
+   ],
+   "exact": 5,
+   "elapsed": 0.04,
+   "witness": "research\\experiments\\inversive-spectrum-20261124\\output\\witness_q4_s3_n5.json",
+   "witness_source": "greedy",
+   "second_engine_unsat_confirm": true,
+   "second_engine_seconds": 0.001,
+   "witness_verified": true,
+   "dual_d": 2,
+   "tau_d": 12,
+   "tau_linear_bound": 10
+  },
+  {
+   "q": 4,
+   "s": 4,
+   "v": 17,
+   "b": 68,
+   "bound_theorem": 12,
+   "solver": "cadical195",
+   "second_solver": "glucose3",
+   "encoding": "seq",
+   "symmetry_breaking": true,
+   "greedy_lower": 9,
+   "calls": [
+    {
+     "n": 10,
+     "sat": false,
+     "seconds": 0.004
+    }
+   ],
+   "exact": 9,
+   "elapsed": 0.05,
+   "witness": "research\\experiments\\inversive-spectrum-20261124\\output\\witness_q4_s4_n9.json",
+   "witness_source": "greedy",
+   "second_engine_unsat_confirm": true,
+   "second_engine_seconds": 0.001,
+   "witness_verified": true,
+   "dual_d": 1,
+   "tau_d": 8,
+   "tau_linear_bound": 5
+  },
+  {
+   "q": 5,
+   "s": 4,
+   "v": 26,
+   "b": 130,
+   "bound_theorem": 14,
+   "solver": "cadical195",
+   "second_solver": "glucose3",
+   "encoding": "seq",
+   "symmetry_breaking": true,
+   "greedy_lower": 10,
+   "calls": [
+    {
+     "n": 11,
+     "sat": false,
+     "seconds": 0.04
+    }
+   ],
+   "exact": 10,
+   "elapsed": 0.12,
+   "witness": "research\\experiments\\inversive-spectrum-20261124\\output\\witness_q5_s4_n10.json",
+   "witness_source": "greedy",
+   "second_engine_unsat_confirm": true,
+   "second_engine_seconds": 0.023,
+   "witness_verified": true,
+   "dual_d": 2,
+   "tau_d": 16,
+   "tau_linear_bound": 12
+  },
+  {
+   "q": 5,
+   "s": 5,
+   "v": 26,
+   "b": 130,
+   "bound_theorem": 20,
+   "solver": "cadical195",
+   "second_solver": "glucose3",
+   "encoding": "seq",
+   "symmetry_breaking": true,
+   "greedy_lower": 16,
+   "calls": [
+    {
+     "n": 17,
+     "sat": false,
+     "seconds": 0.042
+    }
+   ],
+   "exact": 16,
+   "elapsed": 0.14,
+   "witness": "research\\experiments\\inversive-spectrum-20261124\\output\\witness_q5_s5_n16.json",
+   "witness_source": "greedy",
+   "second_engine_unsat_confirm": true,
+   "second_engine_seconds": 0.026,
+   "witness_verified": true,
+   "dual_d": 1,
+   "tau_d": 10,
+   "tau_linear_bound": 6
+  },
+  {
+   "q": 7,
+   "s": 4,
+   "v": 50,
+   "b": 350,
+   "bound_theorem": 18,
+   "solver": "cadical195",
+   "second_solver": "glucose3",
+   "encoding": "seq",
+   "symmetry_breaking": true,
+   "greedy_lower": 13,
+   "calls": [
+    {
+     "n": 14,
+     "sat": false,
+     "seconds": 17.013
+    }
+   ],
+   "exact": 13,
+   "elapsed": 17.23,
+   "witness": "research\\experiments\\inversive-spectrum-20261124\\output\\witness_q7_s4_n13.json",
+   "witness_source": "greedy",
+   "second_engine_unsat_confirm": true,
+   "second_engine_seconds": 10.248,
+   "witness_verified": true,
+   "dual_d": 4,
+   "tau_d": 37,
+   "tau_linear_bound": 32
+  },
+  {
+   "q": 9,
+   "s": 3,
+   "v": 82,
+   "b": 738,
+   "bound_theorem": 12,
+   "solver": "cadical195",
+   "second_solver": "glucose3",
+   "encoding": "seq",
+   "symmetry_breaking": true,
+   "greedy_lower": 9,
+   "calls": [
+    {
+     "n": 10,
+     "sat": false,
+     "seconds": 0.515
+    }
+   ],
+   "exact": 9,
+   "elapsed": 1.01,
+   "witness": "research\\experiments\\inversive-spectrum-20261124\\output\\witness_q9_s3_n9.json",
+   "witness_source": "greedy",
+   "second_engine_unsat_confirm": true,
+   "second_engine_seconds": 0.258,
+   "witness_verified": true,
+   "dual_d": 7,
+   "tau_d": 73,
+   "tau_linear_bound": 70
+  }
+ ]
+}

@@ -1,0 +1,47 @@
+{
+ "experiment": "inversive-spectrum-20261124",
+ "note": "Exact values live in spectrum_results.json. This file records (a) partial exact bounds for (q,s)=(8,4),(9,4) and (b) verified lower bounds for the s=q line. All witnesses were checked by scripts/verify_witness.py against the committed board JSON.",
+ "partial_bounds": [
+  {
+   "q": 8,
+   "s": 4,
+   "v": 65,
+   "lower": 14,
+   "lower_witness": "research/experiments/inversive-spectrum-20261124/output/witness_q8_s4_n14.json",
+   "lower_method": "randomised greedy, 20000 restarts, seed 20261124",
+   "upper": 17,
+   "upper_proof": {
+    "n_refuted": 18,
+    "encoding": "seq/subsets (one clause per (s+1)-subset of a circle) + cardinality >= n + 3-point symmetry breaking",
+    "engines": [
+     {"name": "cadical195", "seconds": 128.59, "artifact": "probe stdout in session log (no file)"},
+     {"name": "glucose3", "seconds": 69.85, "artifact": "output/q8s4_second_engine.log"}
+    ]
+   },
+   "bound_theorem": 20
+  },
+  {
+   "q": 9,
+   "s": 4,
+   "v": 82,
+   "lower": 16,
+   "lower_witness": "research/experiments/inversive-spectrum-20261124/output/witness_q9_s4_n16.json",
+   "lower_method": "randomised greedy, 20000 restarts, seed 20261124",
+   "upper": 22,
+   "upper_proof": {
+    "n_refuted": null,
+    "reason": "theorem bound (s-2)(q+1)+2 = 22; no SAT refutation attempted beyond n=17 (timeouts)"
+   },
+   "bound_theorem": 22
+  }
+ ],
+ "s_equals_q_lower_bounds": [
+  {"q": 7, "K_q_lower": 33, "witness": "research/experiments/inversive-spectrum-20261124/output/witness_q7_s7_n33.json", "tau_1_upper": 17},
+  {"q": 8, "K_q_lower": 45, "witness": "research/experiments/inversive-spectrum-20261124/output/witness_q8_s8_n45.json", "tau_1_upper": 20},
+  {"q": 9, "K_q_lower": 57, "witness": "research/experiments/inversive-spectrum-20261124/output/witness_q9_s9_n57.json", "tau_1_upper": 25}
+ ],
+ "blocking_upper": {
+  "note": "tau_1 upper bounds from the same greedy sets (complement of a valid q-arc is a blocking set); q=3,4,5 values are exact because K_q is exact there.",
+  "q3": 5, "q4": 8, "q5": 10, "q7": 17, "q8": 20, "q9": 25
+ }
+}
