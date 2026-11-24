@@ -237,8 +237,17 @@ def design_check(points: int, blocks: list[frozenset[int]], t: int, lam: int) ->
             for T in combinations(sorted(B), 3):
                 c3[T] += 1
         lam3 = sorted(set(c3.values()))
+    lam_by_t = {}
+    for tt in range(2, min(5, len(blocks[0])) + 1):
+        c = Counter()
+        for B in blocks:
+            for T in combinations(sorted(B), tt):
+                c[T] += 1
+        all_tt = list(combinations(range(points), tt))
+        lam_by_t[tt] = sorted({c.get(T, 0) for T in all_tt})
     return {"v": points, "b": len(blocks), "k": len(blocks[0]),
             "t": t, "lambda_t": sorted(vals), "lambda_2": lam2, "lambda_3": lam3,
+            "lambda_by_t": {str(k): v for k, v in lam_by_t.items()},
             "ok": vals == {lam}}
 
 
@@ -295,7 +304,7 @@ def main() -> None:
     words23 = cyclic_words(g2, 23, 12, 2, F2)
     supports7 = weight_supports(words23, 7)
     assert len(supports7) == 253, len(supports7)
-    chk23 = design_check(23, supports7, 3, 5)
+    chk23 = design_check(23, supports7, 4, 1)
     assert chk23["ok"] and chk23["lambda_3"] == [5], chk23
     write_circle_file(args.out / "board_w23.txt", supports7, 23)
     meta["designs"].append({"name": "W_23", **chk23, "board": "output/board_w23.txt"})

@@ -40,8 +40,17 @@ artifacts:
 - path: research/experiments/design-kyouen-witt-20261125/output/ks_ilp.json
   role: data
   note: K_3, K_4, K_5 の ILP 厳密値
+- path: research/experiments/design-kyouen-witt-20261125/independent/REPORT.md
+  role: log
+  note: 独立実装（Grundy エンジン・ILP 不使用）による全タスク PASS の検証報告
+- path: research/experiments/design-kyouen-witt-20261125/independent/run_all.py
+  role: verifier
+  note: 設計パラメータ・K_3/K_4・graded 性・Grundy/misère の独立再計算ドライバ
+- path: research/experiments/design-kyouen-witt-20261125/independent/out/task2_3_k3_graded.json
+  role: certificate
+  note: K_3 全列挙と graded 性の結果（W_22 の 8-集合なし証明を含む）
 scope: 7 つの Steiner 3-設計（AG(3,2), AG(4,2), W_11, W_12, W_22, W_23, W_24）上の「各ブロックに高々3点」共演ゲームの完全 Grundy（通常・misère）、および各ブロックに高々 s 点の K_s（s=3,4,5）。
-evidence: 設計は符号理論からゼロ構成し、すべての t-部分集合についてブロック数が一様（λ_t）であることを全数検査。Grundy は出版済み grundy_full.exe（64bit マスク）で全安全局面を列挙。K_s は別経路の ILP で計算し、K_3 は Grundy の最大サイズと 7 ボードすべてで一致。観察は (i) 7 ボードすべてで極大安全集合のサイズは K に一様（graded）で、Grundy(S)=(K−|S|) mod 2、Grundy 値は {0,1}、空盤は K mod 2。(ii) 任意の4点がブロックに載る4-設計（W_11,W_12,W_23,W_24）では K_3=3 で安全局面は ≤3 点の全部分集合（safe 数 = Σ_{j≤3}C(v,j)）。(iii) W_22 で K_3=7 が一般上界 (v−2)/(k−2)+2=7 を達成（非自明な tight 例）。(iv) 反転平面盤では短い極大集合が存在し Grundy ≥2 が現れるが、これらの設計では現れない。
+evidence: 設計は符号理論からゼロ構成し、すべての t-部分集合についてブロック数が一様（λ_t）であることを全数検査。Grundy は出版済み grundy_full.exe（64bit マスク）で全安全局面を列挙。K_s は別経路の ILP で計算し、K_3 は Grundy の最大サイズと 7 ボードすべてで一致。観察は (i) 7 ボードすべてで極大安全集合のサイズは K に一様（graded）で、Grundy(S)=(K−|S|) mod 2、Grundy 値は {0,1}、空盤は K mod 2。(ii) 任意の4点がブロックに載る4-設計（W_11,W_12,W_23,W_24）では K_3=3 で安全局面は ≤3 点の全部分集合（safe 数 = Σ_{j≤3}C(v,j)）。(iii) W_22 で K_3=7 が一般上界 (v−2)/(k−2)+2=7 を達成（非自明な tight 例）。(iv) 反転平面盤では短い極大集合が存在し Grundy ≥2 が現れるが、これらの設計では現れない。独立実装（標準ライブラリのみ、Grundy エンジン・ILP 不使用）が設計パラメータ・K_3・K_4・graded 性・完全 Grundy/misère を全 7 ボードで再検査し PASS（discrepancy 0、independent/REPORT.md）。
 ---
 
 # Steiner 3-設計上の共演ゲーム — Witt/アフィン幾何 7 ボード
