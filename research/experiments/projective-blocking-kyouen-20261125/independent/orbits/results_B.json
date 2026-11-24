@@ -1,0 +1,229 @@
+{
+  "claim": "B",
+  "verdict": "PASS",
+  "checks": {
+    "board_satisfies_PG_2_4_axioms": {
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    "board_isomorphic_to_F4_cubed_construction": {
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    "PGL_3_4_order_computed": {
+      "actual": 60480,
+      "expected": 60480,
+      "pass": true
+    },
+    "maximal_safe_9_set_count": {
+      "actual": 11480,
+      "expected": 11480,
+      "pass": true
+    },
+    "complement_twelve_sets_distinct": {
+      "actual": 11480,
+      "expected": 11480,
+      "pass": true
+    },
+    "complement_profile_multiplicities": {
+      "actual": {
+        "2:10,3:6,4:3,5:2": 10080,
+        "2:12,4:9": 280,
+        "2:9,3:9,5:3": 1120
+      },
+      "expected": {
+        "2:10,3:6,4:3,5:2": 10080,
+        "2:9,3:9,5:3": 1120,
+        "2:12,4:9": 280
+      },
+      "pass": true
+    },
+    "orbit_count_under_PGL_3_4": {
+      "actual": 3,
+      "expected": 3,
+      "pass": true
+    },
+    "orbit_sizes": {
+      "actual": [
+        280,
+        1120,
+        10080
+      ],
+      "expected": [
+        280,
+        1120,
+        10080
+      ],
+      "pass": true
+    },
+    "orbit_size_profile_multiset": {
+      "actual": [
+        [
+          280,
+          "2:12,4:9"
+        ],
+        [
+          1120,
+          "2:9,3:9,5:3"
+        ],
+        [
+          10080,
+          "2:10,3:6,4:3,5:2"
+        ]
+      ],
+      "expected": [
+        [
+          280,
+          "2:12,4:9"
+        ],
+        [
+          1120,
+          "2:9,3:9,5:3"
+        ],
+        [
+          10080,
+          "2:10,3:6,4:3,5:2"
+        ]
+      ],
+      "pass": true
+    },
+    "profile_uniform_within_each_orbit": {
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    "minimum_line_intersection_of_complements": {
+      "actual": 2,
+      "expected": 2,
+      "pass": true
+    },
+    "triangle_orbit_exists": {
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    "direct_minimal_2fold_blocking_12_set_count": {
+      "actual": 11480,
+      "expected": 11480,
+      "pass": true
+    },
+    "direct_minimal_2fold_blocking_sets_equal_complements": {
+      "actual": true,
+      "expected": true,
+      "pass": true
+    }
+  },
+  "data": {
+    "board": "PG(2,4)",
+    "n_points": 21,
+    "n_lines": 21,
+    "pgl_order_computed": 60480,
+    "pgl_order_expected": 60480,
+    "generator_count": 13,
+    "generator_descriptions": [
+      "x0_new = x0 + 1*x1",
+      "x0_new = x0 + 2*x1",
+      "x0_new = x0 + 1*x2",
+      "x0_new = x0 + 2*x2",
+      "x1_new = x1 + 1*x0",
+      "x1_new = x1 + 2*x0",
+      "x1_new = x1 + 1*x2",
+      "x1_new = x1 + 2*x2",
+      "x2_new = x2 + 1*x0",
+      "x2_new = x2 + 2*x0",
+      "x2_new = x2 + 1*x1",
+      "x2_new = x2 + 2*x1",
+      "diag(g,1,1), g a generator of F_q^*"
+    ],
+    "safe_9_sets": 11480,
+    "maximal_safe_9_sets": 11480,
+    "complement_twelve_sets": 11480,
+    "complement_profile_histogram": {
+      "2:10,3:6,4:3,5:2": 10080,
+      "2:12,4:9": 280,
+      "2:9,3:9,5:3": 1120
+    },
+    "direct_minimal_2fold_blocking_12_sets": 11480,
+    "direct_minimal_2fold_blocking_equals_complements": true,
+    "orbit_count": 3,
+    "orbits": [
+      {
+        "size": 10080,
+        "profile": {
+          "2": 10,
+          "3": 6,
+          "4": 3,
+          "5": 2
+        },
+        "profile_string": "2:10,3:6,4:3,5:2",
+        "profile_uniform_in_orbit": true,
+        "representative_mask": 140799,
+        "representative_points": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          10,
+          13,
+          17
+        ]
+      },
+      {
+        "size": 1120,
+        "profile": {
+          "2": 9,
+          "3": 9,
+          "5": 3
+        },
+        "profile_string": "2:9,3:9,5:3",
+        "profile_uniform_in_orbit": true,
+        "representative_mask": 140287,
+        "representative_points": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          13,
+          17
+        ]
+      },
+      {
+        "size": 280,
+        "profile": {
+          "2": 12,
+          "4": 9
+        },
+        "profile_string": "2:12,4:9",
+        "profile_uniform_in_orbit": true,
+        "representative_mask": 146909,
+        "representative_points": [
+          0,
+          2,
+          3,
+          4,
+          6,
+          7,
+          8,
+          10,
+          11,
+          12,
+          13,
+          17
+        ]
+      }
+    ]
+  }
+}

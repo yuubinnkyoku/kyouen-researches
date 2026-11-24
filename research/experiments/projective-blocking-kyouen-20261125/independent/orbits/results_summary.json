@@ -1,0 +1,454 @@
+{
+  "meta": {
+    "title": "Independent verification of PGL orbits for minimal blocking sets in PG(2,3), PG(2,4)",
+    "generated_utc": "2026-11-24T16:26:16+00:00",
+    "runtime_seconds": 7.93,
+    "python_version": "3.12.13",
+    "script": "C:\\Users\\yuubi\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\projective-blocking-kyouen-20261125\\independent\\orbits\\verify_orbits.py",
+    "standard_library_only": true,
+    "reads_experiment_scripts": false,
+    "reads_output_orbits_json": false
+  },
+  "group_orders": {
+    "PGL(3,3)": {
+      "computed": 5616,
+      "expected": 5616,
+      "generator_count": 13,
+      "pass": true
+    },
+    "PGL(3,4)": {
+      "computed": 60480,
+      "expected": 60480,
+      "generator_count": 13,
+      "pass": true
+    }
+  },
+  "boards": {
+    "q3": {
+      "file": "C:\\Users\\yuubi\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\projective-blocking-kyouen-20261125\\output\\board_pg2q3.txt",
+      "axioms": {
+        "n": 13,
+        "b": 13,
+        "expected_n": 13,
+        "expected_b": 13,
+        "line_lengths": [
+          4
+        ],
+        "expected_line_length": 4,
+        "distinct_lines": 13,
+        "all_points_covered": true,
+        "point_pair_total": 78,
+        "expected_point_pair_total": 78,
+        "every_point_pair_on_exactly_one_line": true,
+        "point_degree_values": [
+          4
+        ],
+        "every_point_on_q_plus_1_lines": true,
+        "every_line_pair_meets_in_exactly_one_point": true,
+        "line_pair_intersection_size_histogram": {
+          "1": 78
+        },
+        "ok": true
+      },
+      "isomorphic_to_F3_cubed_construction": true,
+      "frame_board_points": [
+        0,
+        1,
+        4,
+        8
+      ],
+      "frame_canonical_vectors": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    "q4": {
+      "file": "C:\\Users\\yuubi\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\projective-blocking-kyouen-20261125\\output\\board_pg2q4.txt",
+      "axioms": {
+        "n": 21,
+        "b": 21,
+        "expected_n": 21,
+        "expected_b": 21,
+        "line_lengths": [
+          5
+        ],
+        "expected_line_length": 5,
+        "distinct_lines": 21,
+        "all_points_covered": true,
+        "point_pair_total": 210,
+        "expected_point_pair_total": 210,
+        "every_point_pair_on_exactly_one_line": true,
+        "point_degree_values": [
+          5
+        ],
+        "every_point_on_q_plus_1_lines": true,
+        "every_line_pair_meets_in_exactly_one_point": true,
+        "line_pair_intersection_size_histogram": {
+          "1": 210
+        },
+        "ok": true
+      },
+      "isomorphic_to_F4_cubed_construction": true,
+      "frame_board_points": [
+        0,
+        1,
+        5,
+        10
+      ],
+      "frame_canonical_vectors": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    }
+  },
+  "claims": {
+    "A": {
+      "verdict": "PASS",
+      "checks": {
+        "board_satisfies_PG_2_3_axioms": {
+          "actual": true,
+          "expected": true,
+          "pass": true
+        },
+        "board_isomorphic_to_F3_cubed_construction": {
+          "actual": true,
+          "expected": true,
+          "pass": true
+        },
+        "PGL_3_3_order_computed": {
+          "actual": 5616,
+          "expected": 5616,
+          "pass": true
+        },
+        "maximal_safe_7_set_count": {
+          "actual": 234,
+          "expected": 234,
+          "pass": true
+        },
+        "complement_six_sets_distinct": {
+          "actual": 234,
+          "expected": 234,
+          "pass": true
+        },
+        "three_point_line_count_histogram": {
+          "actual": {
+            "4": 234
+          },
+          "expected": {
+            "4": 234
+          },
+          "pass": true
+        },
+        "every_six_set_has_exactly_four_three_point_lines": {
+          "actual": true,
+          "expected": true,
+          "pass": true
+        },
+        "those_four_lines_are_in_general_position": {
+          "actual": true,
+          "expected": true,
+          "pass": true
+        },
+        "six_set_equals_the_six_pairwise_intersections": {
+          "actual": true,
+          "expected": true,
+          "pass": true
+        },
+        "general_position_line_quadruple_count": {
+          "actual": 234,
+          "expected": 234,
+          "pass": true
+        },
+        "distinct_quadrilateral_vertex_sets": {
+          "actual": 234,
+          "expected": 234,
+          "pass": true
+        },
+        "complements_equal_quadrilateral_vertex_sets": {
+          "actual": true,
+          "expected": true,
+          "pass": true
+        },
+        "formula_C13_4_minus_13C43_9_minus_13": {
+          "actual": 234,
+          "expected": 234,
+          "pass": true
+        },
+        "all_complements_are_blocking": {
+          "actual": 234,
+          "expected": 234,
+          "pass": true
+        },
+        "all_complements_are_minimal_blocking": {
+          "actual": 234,
+          "expected": 234,
+          "pass": true
+        },
+        "direct_minimal_blocking_six_set_count": {
+          "actual": 234,
+          "expected": 234,
+          "pass": true
+        },
+        "direct_minimal_blocking_sets_equal_complements": {
+          "actual": true,
+          "expected": true,
+          "pass": true
+        },
+        "orbit_count_under_PGL_3_3": {
+          "actual": 1,
+          "expected": 1,
+          "pass": true
+        },
+        "single_orbit_size": {
+          "actual": 234,
+          "expected": 234,
+          "pass": true
+        }
+      }
+    },
+    "B": {
+      "verdict": "PASS",
+      "checks": {
+        "board_satisfies_PG_2_4_axioms": {
+          "actual": true,
+          "expected": true,
+          "pass": true
+        },
+        "board_isomorphic_to_F4_cubed_construction": {
+          "actual": true,
+          "expected": true,
+          "pass": true
+        },
+        "PGL_3_4_order_computed": {
+          "actual": 60480,
+          "expected": 60480,
+          "pass": true
+        },
+        "maximal_safe_9_set_count": {
+          "actual": 11480,
+          "expected": 11480,
+          "pass": true
+        },
+        "complement_twelve_sets_distinct": {
+          "actual": 11480,
+          "expected": 11480,
+          "pass": true
+        },
+        "complement_profile_multiplicities": {
+          "actual": {
+            "2:10,3:6,4:3,5:2": 10080,
+            "2:12,4:9": 280,
+            "2:9,3:9,5:3": 1120
+          },
+          "expected": {
+            "2:10,3:6,4:3,5:2": 10080,
+            "2:9,3:9,5:3": 1120,
+            "2:12,4:9": 280
+          },
+          "pass": true
+        },
+        "orbit_count_under_PGL_3_4": {
+          "actual": 3,
+          "expected": 3,
+          "pass": true
+        },
+        "orbit_sizes": {
+          "actual": [
+            280,
+            1120,
+            10080
+          ],
+          "expected": [
+            280,
+            1120,
+            10080
+          ],
+          "pass": true
+        },
+        "orbit_size_profile_multiset": {
+          "actual": [
+            [
+              280,
+              "2:12,4:9"
+            ],
+            [
+              1120,
+              "2:9,3:9,5:3"
+            ],
+            [
+              10080,
+              "2:10,3:6,4:3,5:2"
+            ]
+          ],
+          "expected": [
+            [
+              280,
+              "2:12,4:9"
+            ],
+            [
+              1120,
+              "2:9,3:9,5:3"
+            ],
+            [
+              10080,
+              "2:10,3:6,4:3,5:2"
+            ]
+          ],
+          "pass": true
+        },
+        "profile_uniform_within_each_orbit": {
+          "actual": true,
+          "expected": true,
+          "pass": true
+        },
+        "minimum_line_intersection_of_complements": {
+          "actual": 2,
+          "expected": 2,
+          "pass": true
+        },
+        "triangle_orbit_exists": {
+          "actual": true,
+          "expected": true,
+          "pass": true
+        },
+        "direct_minimal_2fold_blocking_12_set_count": {
+          "actual": 11480,
+          "expected": 11480,
+          "pass": true
+        },
+        "direct_minimal_2fold_blocking_sets_equal_complements": {
+          "actual": true,
+          "expected": true,
+          "pass": true
+        }
+      }
+    },
+    "C": {
+      "verdict": "PASS",
+      "checks": {
+        "board_satisfies_PG_2_4_axioms": {
+          "actual": true,
+          "expected": true,
+          "pass": true
+        },
+        "board_isomorphic_to_F4_cubed_construction": {
+          "actual": true,
+          "expected": true,
+          "pass": true
+        },
+        "PGL_3_4_order_computed": {
+          "actual": 60480,
+          "expected": 60480,
+          "pass": true
+        },
+        "triangle_count": {
+          "actual": 1120,
+          "expected": 1120,
+          "pass": true
+        },
+        "concurrent_line_triple_count": {
+          "actual": 210,
+          "expected": 210,
+          "pass": true
+        },
+        "formula_C21_3_minus_21C53": {
+          "actual": 1120,
+          "expected": 1120,
+          "pass": true
+        },
+        "all_unions_are_twelve_points": {
+          "actual": true,
+          "expected": true,
+          "pass": true
+        },
+        "distinct_triangle_unions": {
+          "actual": 1120,
+          "expected": 1120,
+          "pass": true
+        },
+        "triangle_unions_subset_of_maximal_complements": {
+          "actual": true,
+          "expected": true,
+          "pass": true
+        },
+        "triangle_complements_are_maximal_safe": {
+          "actual": true,
+          "expected": true,
+          "pass": true
+        },
+        "triangle_union_profile": {
+          "actual": {
+            "2": 9,
+            "3": 9,
+            "5": 3
+          },
+          "expected": {
+            "2": 9,
+            "3": 9,
+            "5": 3
+          },
+          "pass": true
+        },
+        "all_triangle_unions_have_same_profile": {
+          "actual": true,
+          "expected": true,
+          "pass": true
+        },
+        "triangles_equal_1120_orbit": {
+          "actual": true,
+          "expected": true,
+          "pass": true
+        },
+        "triangles_form_single_PGL_orbit": {
+          "actual": true,
+          "expected": true,
+          "pass": true
+        }
+      }
+    }
+  },
+  "discrepancies": [],
+  "overall_verdict": "PASS",
+  "files": [
+    "results_A.json",
+    "results_B.json",
+    "results_C.json",
+    "results_summary.json"
+  ]
+}

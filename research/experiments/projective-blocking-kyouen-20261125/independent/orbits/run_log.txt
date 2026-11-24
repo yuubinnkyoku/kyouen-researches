@@ -1,0 +1,38 @@
+==========================================================================
+Independent verification: PGL orbits and structures in PG(2,3), PG(2,4)
+==========================================================================
+[1/7] F_3 / GF(4) arithmetic self-tests: ok
+[2/7] canonical construction: PG(2,3) 13 points / 13 lines; PG(2,4) 21 points / 21 lines
+[3/7] board files satisfy the projective-plane axioms: ok
+[4/7] explicit isomorphisms to F_q^3 construction found and verified: ok
+      generated projective matrix group for q=3: order 5616
+      generated projective matrix group for q=4: order 60480
+      generator matrices induce point permutations: ok
+--------------------------------------------------------------------------
+[5/7] claim A: PG(2,3), maximal safe 7-sets and complete quadrilaterals
+      safe 7-sets: 702; maximal safe 7-sets: 234; complement six-sets: 234
+      direct enumeration of 6-point minimal blocking sets: 234
+      claim A: PASS
+--------------------------------------------------------------------------
+[6/7] claim B: PG(2,4), maximal safe 9-sets and their three PGL orbits
+      safe 9-sets: 11480
+      maximal safe 9-sets: 11480; complement twelve-sets: 11480
+      complement profiles: {'2:10,3:6,4:3,5:2': 10080, '2:12,4:9': 280, '2:9,3:9,5:3': 1120}
+      PGL(3,4) orbits: 10080 (2:10,3:6,4:3,5:2), 1120 (2:9,3:9,5:3), 280 (2:12,4:9)
+      direct enumeration of 12-point minimal 2-fold blocking sets: 11480
+      claim B: PASS
+--------------------------------------------------------------------------
+[7/7] claim C: PG(2,4), unions of three lines in general position
+      concurrent line triples: 210; general-position line triples: 1120
+      claim C: PASS
+==========================================================================
+group order PGL(3,3): 5616 (expected 5616)
+group order PGL(3,4): 60480 (expected 60480)
+claim A: PASS
+claim B: PASS
+claim C: PASS
+overall: PASS
+No discrepancies.
+runtime: 7.93 s
+outputs written to: C:\Users\yuubi\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\projective-blocking-kyouen-20261125\independent\orbits
+==========================================================================
