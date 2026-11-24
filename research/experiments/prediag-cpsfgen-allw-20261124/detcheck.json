@@ -1,0 +1,99 @@
+{
+ "byte_identical_official_stdout": true,
+ "claim_note": "GENERAL-w universal theorems (T-GEPSF/T-GEBED/L-BU-GEN, all w>=0) with hand proofs in the single-owner declaration note; finite censuses and typed-mex machine checks are consistency checks only and do not replace the proofs; subsumes K1286..K1302 per-plane theorems as w-instances",
+ "counts": [
+  137700,
+  3808,
+  34901,
+  41124,
+  19499,
+  1440,
+  35175,
+  17952,
+  521,
+  3954,
+  36372
+ ],
+ "declared_stdout_sha256": "af25dfac45327bea7769bffb03197b26f7e67799919e5d68f07b0d79109f2566",
+ "engine_pin": "bd5f22e415a78368c9b798296bc84948d5637decbf3c21a92404d45fb12e3a92",
+ "kit": "verify_k1303",
+ "official_runs": [
+  {
+   "cwd": "fb_k1303 (fetch-back bytes)",
+   "elapsed_s": 68.1,
+   "env": "inherited+PYTHONHASHSEED=random(未設定)",
+   "hashseed": "random",
+   "rc": 0,
+   "run": 1,
+   "stdout_sha256": "af25dfac45327bea7769bffb03197b26f7e67799919e5d68f07b0d79109f2566"
+  },
+  {
+   "cwd": "fb_k1303 (fetch-back bytes)",
+   "elapsed_s": 67.8,
+   "env": "inherited+PYTHONHASHSEED=1",
+   "hashseed": "1",
+   "rc": 0,
+   "run": 2,
+   "stdout_sha256": "af25dfac45327bea7769bffb03197b26f7e67799919e5d68f07b0d79109f2566"
+  },
+  {
+   "cwd": "isoC (fetch-back bytes, env -i)",
+   "elapsed_s": 67.0,
+   "env": "env -i PYTHONHASHSEED=99",
+   "hashseed": "99",
+   "rc": 0,
+   "run": 3,
+   "stdout_sha256": "af25dfac45327bea7769bffb03197b26f7e67799919e5d68f07b0d79109f2566"
+  },
+  {
+   "cwd": "isoD (fetch-back bytes, env -i)",
+   "elapsed_s": 67.3,
+   "env": "env -i PYTHONHASHSEED=7",
+   "hashseed": "7",
+   "rc": 0,
+   "run": 4,
+   "stdout_sha256": "af25dfac45327bea7769bffb03197b26f7e67799919e5d68f07b0d79109f2566"
+  }
+ ],
+ "overall_bad": 0,
+ "predry_stdout_sha256": "af25dfac45327bea7769bffb03197b26f7e67799919e5d68f07b0d79109f2566",
+ "status": "OFFICIAL-PASS",
+ "tamper": [
+  {
+   "mode": "engine",
+   "mutated_sha": "0ea47a80761d2b20bf414cd52b1535fba56829c3a4c232d1b2f5da3f81441882",
+   "note": "engine sha256 startup gate fail-closed (identical mutation to K1282..K1302)",
+   "rc": 2
+  },
+  {
+   "mode": "hl",
+   "D1_bad": 137700,
+   "rc": 1
+  },
+  {
+   "mode": "hbd",
+   "D2_bad": 3808,
+   "rc": 1
+  },
+  {
+   "mode": "ws",
+   "rc": 1,
+   "total_bad": 212232,
+   "bad_per_battery": [91832, 2072, 23274, 29788, 7145, 0, 26447, 4242, 0, 0, 27432]
+  },
+  {
+   "mode": "Ls",
+   "rc": 1,
+   "total_bad": 21102,
+   "bad_per_battery": [6880, 250, 2144, 8631, 270, 0, 1765, 705, 0, 0, 457]
+  }
+ ],
+ "total_comparisons": 332446,
+ "unknowns_untouched": [
+  "11x11 empty board",
+  "roots {49,60}/{59,60}",
+  "S2 {59,60}",
+  "class 1/2/4"
+ ],
+ "verify_k1303_sha256": "1efdcf9e2776e4e57ee452f3d1fee823d1fa2d7eaa87e7ff853ba9a4edf2af0c"
+}
