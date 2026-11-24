@@ -1,0 +1,46 @@
+{
+ "q": 4,
+ "n": 21,
+ "safe_by_size": {
+  "0": 1,
+  "1": 21,
+  "2": 210,
+  "3": 1330,
+  "4": 5880,
+  "5": 18648,
+  "6": 41328,
+  "7": 58320,
+  "8": 42840,
+  "9": 11480
+ },
+ "safe_total": 180058,
+ "grundy_distribution": {
+  "0": 89799,
+  "1": 90259
+ },
+ "root_grundy": 1,
+ "root_misere": 0,
+ "maximal_by_size": {
+  "7": 360,
+  "9": 11480
+ },
+ "max_grundy": 1,
+ "parity_formula": "grundy(S) == (9 - |S|) mod 2 for all safe S",
+ "parity_formula_ok": true,
+ "scan_seconds": 2.8,
+ "dp_seconds": 3.7,
+ "checks": {
+  "safe_total": true,
+  "dfs_matches_literal_scan": true,
+  "grundy_distribution": true,
+  "root": true,
+  "maximal_by_size": true,
+  "grundy_in_0_1": true,
+  "parity_formula_for_all_safe_sets": true,
+  "engine_size_lines": true,
+  "engine_grundy_lines": true,
+  "engine_root": true,
+  "engine_safe": true
+ },
+ "ok": true
+}

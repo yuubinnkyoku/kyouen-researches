@@ -1,0 +1,115 @@
+{
+ "tasks": [
+  {
+   "q": 2,
+   "n": 7,
+   "K3": 7,
+   "claimed": 7,
+   "witness": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "safe_10_subsets": 0,
+   "safe_11plus_subsets": {},
+   "branch_and_bound_max": 7,
+   "maximal_max": 7,
+   "brute_force_seconds": 0.0,
+   "higher_enumeration_seconds": 0.0,
+   "branch_and_bound_seconds": 0.0,
+   "checks": {
+    "brute_force_max_equals_claim": true,
+    "branch_and_bound_equals_brute_force": true,
+    "no_safe_10_subsets": true,
+    "no_safe_subsets_above_10": true,
+    "maximal_max_equals_brute_force": true
+   },
+   "ok": true
+  },
+  {
+   "q": 3,
+   "n": 13,
+   "K3": 9,
+   "claimed": 9,
+   "witness": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "safe_10_subsets": 0,
+   "safe_11plus_subsets": {
+    "11": 0,
+    "12": 0,
+    "13": 0
+   },
+   "branch_and_bound_max": 9,
+   "maximal_max": 9,
+   "brute_force_seconds": 0.01,
+   "higher_enumeration_seconds": 0.0,
+   "branch_and_bound_seconds": 0.0,
+   "checks": {
+    "brute_force_max_equals_claim": true,
+    "branch_and_bound_equals_brute_force": true,
+    "no_safe_10_subsets": true,
+    "no_safe_subsets_above_10": true,
+    "maximal_max_equals_brute_force": true
+   },
+   "ok": true
+  },
+  {
+   "q": 4,
+   "n": 21,
+   "K3": 9,
+   "claimed": 9,
+   "witness": [
+    1,
+    2,
+    3,
+    5,
+    6,
+    7,
+    9,
+    10,
+    11
+   ],
+   "safe_10_subsets": 0,
+   "safe_11plus_subsets": {
+    "11": 0,
+    "12": 0,
+    "13": 0,
+    "14": 0,
+    "15": 0,
+    "16": 0,
+    "17": 0,
+    "18": 0,
+    "19": 0,
+    "20": 0,
+    "21": 0
+   },
+   "branch_and_bound_max": 9,
+   "maximal_max": 9,
+   "brute_force_seconds": 2.56,
+   "higher_enumeration_seconds": 4.23,
+   "branch_and_bound_seconds": 0.22,
+   "checks": {
+    "brute_force_max_equals_claim": true,
+    "branch_and_bound_equals_brute_force": true,
+    "no_safe_10_subsets": true,
+    "no_safe_subsets_above_10": true,
+    "maximal_max_equals_brute_force": true
+   },
+   "ok": true
+  }
+ ],
+ "all_ok": true
+}

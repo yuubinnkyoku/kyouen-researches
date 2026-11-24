@@ -1,0 +1,472 @@
+{
+ "part_a": {
+  "rows": [
+   {
+    "name": "PG(2,2)",
+    "n": 7,
+    "blocks": 7,
+    "safe": 128,
+    "safe_by_size": {
+     "0": 1,
+     "1": 7,
+     "2": 21,
+     "3": 35,
+     "4": 35,
+     "5": 21,
+     "6": 7,
+     "7": 1
+    },
+    "maximal_by_size": {
+     "7": 1
+    },
+    "uniform_maximal_parity": true,
+    "p": 1,
+    "grundy_distribution": {
+     "0": 64,
+     "1": 64
+    },
+    "max_grundy": 1,
+    "root_grundy": 1,
+    "root_misere_first_player_wins": 0,
+    "formula_mismatches": 0,
+    "formula_holds": true,
+    "grundy_in_0_1": true,
+    "category": "PG",
+    "engine_checks": {
+     "safe": true,
+     "root": true,
+     "grundy_distribution": true
+    },
+    "engine_ok": true
+   },
+   {
+    "name": "PG(2,3)",
+    "n": 13,
+    "blocks": 13,
+    "safe": 4330,
+    "safe_by_size": {
+     "0": 1,
+     "1": 13,
+     "2": 78,
+     "3": 286,
+     "4": 702,
+     "5": 1170,
+     "6": 1248,
+     "7": 702,
+     "8": 117,
+     "9": 13
+    },
+    "maximal_by_size": {
+     "7": 234,
+     "9": 13
+    },
+    "uniform_maximal_parity": true,
+    "p": 1,
+    "grundy_distribution": {
+     "0": 2184,
+     "1": 2146
+    },
+    "max_grundy": 1,
+    "root_grundy": 1,
+    "root_misere_first_player_wins": 0,
+    "formula_mismatches": 0,
+    "formula_holds": true,
+    "grundy_in_0_1": true,
+    "category": "PG",
+    "engine_checks": {
+     "safe": true,
+     "root": true,
+     "grundy_distribution": true
+    },
+    "engine_ok": true
+   },
+   {
+    "name": "PG(2,4)",
+    "n": 21,
+    "blocks": 21,
+    "safe": 180058,
+    "safe_by_size": {
+     "0": 1,
+     "1": 21,
+     "2": 210,
+     "3": 1330,
+     "4": 5880,
+     "5": 18648,
+     "6": 41328,
+     "7": 58320,
+     "8": 42840,
+     "9": 11480
+    },
+    "maximal_by_size": {
+     "7": 360,
+     "9": 11480
+    },
+    "uniform_maximal_parity": true,
+    "p": 1,
+    "grundy_distribution": {
+     "0": 89799,
+     "1": 90259
+    },
+    "max_grundy": 1,
+    "root_grundy": 1,
+    "root_misere_first_player_wins": 0,
+    "formula_mismatches": 0,
+    "formula_holds": true,
+    "grundy_in_0_1": true,
+    "category": "PG",
+    "engine_checks": {
+     "safe": true,
+     "root": true,
+     "grundy_distribution": true
+    },
+    "engine_ok": true
+   },
+   {
+    "name": "AG(3,2)",
+    "n": 8,
+    "blocks": 14,
+    "safe": 149,
+    "safe_by_size": {
+     "0": 1,
+     "1": 8,
+     "2": 28,
+     "3": 56,
+     "4": 56
+    },
+    "maximal_by_size": {
+     "4": 56
+    },
+    "uniform_maximal_parity": true,
+    "p": 0,
+    "grundy_distribution": {
+     "0": 85,
+     "1": 64
+    },
+    "max_grundy": 1,
+    "root_grundy": 0,
+    "root_misere_first_player_wins": 1,
+    "formula_mismatches": 0,
+    "formula_holds": true,
+    "grundy_in_0_1": true,
+    "category": "design",
+    "engine_checks": {
+     "safe": true,
+     "root": true,
+     "grundy_distribution": true,
+     "summary_safe": true,
+     "summary_root_grundy": true,
+     "summary_root_misere": true,
+     "summary_grundy_distribution": true,
+     "summary_maximal_counts": true
+    },
+    "engine_ok": true
+   },
+   {
+    "name": "AG(4,2)",
+    "n": 16,
+    "blocks": 140,
+    "safe": 5513,
+    "safe_by_size": {
+     "0": 1,
+     "1": 16,
+     "2": 120,
+     "3": 560,
+     "4": 1680,
+     "5": 2688,
+     "6": 448
+    },
+    "maximal_by_size": {
+     "6": 448
+    },
+    "uniform_maximal_parity": true,
+    "p": 0,
+    "grundy_distribution": {
+     "0": 2249,
+     "1": 3264
+    },
+    "max_grundy": 1,
+    "root_grundy": 0,
+    "root_misere_first_player_wins": 1,
+    "formula_mismatches": 0,
+    "formula_holds": true,
+    "grundy_in_0_1": true,
+    "category": "design",
+    "engine_checks": {
+     "safe": true,
+     "root": true,
+     "grundy_distribution": true,
+     "summary_safe": true,
+     "summary_root_grundy": true,
+     "summary_root_misere": true,
+     "summary_grundy_distribution": true,
+     "summary_maximal_counts": true
+    },
+    "engine_ok": true
+   },
+   {
+    "name": "W_11",
+    "n": 11,
+    "blocks": 66,
+    "safe": 232,
+    "safe_by_size": {
+     "0": 1,
+     "1": 11,
+     "2": 55,
+     "3": 165
+    },
+    "maximal_by_size": {
+     "3": 165
+    },
+    "uniform_maximal_parity": true,
+    "p": 1,
+    "grundy_distribution": {
+     "0": 176,
+     "1": 56
+    },
+    "max_grundy": 1,
+    "root_grundy": 1,
+    "root_misere_first_player_wins": 0,
+    "formula_mismatches": 0,
+    "formula_holds": true,
+    "grundy_in_0_1": true,
+    "category": "design",
+    "engine_checks": {
+     "safe": true,
+     "root": true,
+     "grundy_distribution": true,
+     "summary_safe": true,
+     "summary_root_grundy": true,
+     "summary_root_misere": true,
+     "summary_grundy_distribution": true,
+     "summary_maximal_counts": true
+    },
+    "engine_ok": true
+   },
+   {
+    "name": "W_12",
+    "n": 12,
+    "blocks": 132,
+    "safe": 299,
+    "safe_by_size": {
+     "0": 1,
+     "1": 12,
+     "2": 66,
+     "3": 220
+    },
+    "maximal_by_size": {
+     "3": 220
+    },
+    "uniform_maximal_parity": true,
+    "p": 1,
+    "grundy_distribution": {
+     "0": 232,
+     "1": 67
+    },
+    "max_grundy": 1,
+    "root_grundy": 1,
+    "root_misere_first_player_wins": 0,
+    "formula_mismatches": 0,
+    "formula_holds": true,
+    "grundy_in_0_1": true,
+    "category": "design",
+    "engine_checks": {
+     "safe": true,
+     "root": true,
+     "grundy_distribution": true,
+     "summary_safe": true,
+     "summary_root_grundy": true,
+     "summary_root_misere": true,
+     "summary_grundy_distribution": true,
+     "summary_maximal_counts": true
+    },
+    "engine_ok": true
+   },
+   {
+    "name": "W_22",
+    "n": 22,
+    "blocks": 77,
+    "safe": 18162,
+    "safe_by_size": {
+     "0": 1,
+     "1": 22,
+     "2": 231,
+     "3": 1540,
+     "4": 6160,
+     "5": 7392,
+     "6": 2464,
+     "7": 352
+    },
+    "maximal_by_size": {
+     "7": 352
+    },
+    "uniform_maximal_parity": true,
+    "p": 1,
+    "grundy_distribution": {
+     "0": 9306,
+     "1": 8856
+    },
+    "max_grundy": 1,
+    "root_grundy": 1,
+    "root_misere_first_player_wins": 0,
+    "formula_mismatches": 0,
+    "formula_holds": true,
+    "grundy_in_0_1": true,
+    "category": "design",
+    "engine_checks": {
+     "safe": true,
+     "root": true,
+     "grundy_distribution": true,
+     "summary_safe": true,
+     "summary_root_grundy": true,
+     "summary_root_misere": true,
+     "summary_grundy_distribution": true,
+     "summary_maximal_counts": true
+    },
+    "engine_ok": true
+   },
+   {
+    "name": "W_23",
+    "n": 23,
+    "blocks": 253,
+    "safe": 2048,
+    "safe_by_size": {
+     "0": 1,
+     "1": 23,
+     "2": 253,
+     "3": 1771
+    },
+    "maximal_by_size": {
+     "3": 1771
+    },
+    "uniform_maximal_parity": true,
+    "p": 1,
+    "grundy_distribution": {
+     "0": 1794,
+     "1": 254
+    },
+    "max_grundy": 1,
+    "root_grundy": 1,
+    "root_misere_first_player_wins": 0,
+    "formula_mismatches": 0,
+    "formula_holds": true,
+    "grundy_in_0_1": true,
+    "category": "design",
+    "engine_checks": {
+     "safe": true,
+     "root": true,
+     "grundy_distribution": true,
+     "summary_safe": true,
+     "summary_root_grundy": true,
+     "summary_root_misere": true,
+     "summary_grundy_distribution": true,
+     "summary_maximal_counts": true
+    },
+    "engine_ok": true
+   },
+   {
+    "name": "W_24",
+    "n": 24,
+    "blocks": 759,
+    "safe": 2325,
+    "safe_by_size": {
+     "0": 1,
+     "1": 24,
+     "2": 276,
+     "3": 2024
+    },
+    "maximal_by_size": {
+     "3": 2024
+    },
+    "uniform_maximal_parity": true,
+    "p": 1,
+    "grundy_distribution": {
+     "0": 2048,
+     "1": 277
+    },
+    "max_grundy": 1,
+    "root_grundy": 1,
+    "root_misere_first_player_wins": 0,
+    "formula_mismatches": 0,
+    "formula_holds": true,
+    "grundy_in_0_1": true,
+    "category": "design",
+    "engine_checks": {
+     "safe": true,
+     "root": true,
+     "grundy_distribution": true,
+     "summary_safe": true,
+     "summary_root_grundy": true,
+     "summary_root_misere": true,
+     "summary_grundy_distribution": true,
+     "summary_maximal_counts": true
+    },
+    "engine_ok": true
+   }
+  ],
+  "ok": true
+ },
+ "part_b": {
+  "stats": {
+   "exhaustive n=4, blocks of size 3-4": {
+    "boards": 32,
+    "uniform": 32,
+    "uniform_ge2": 0,
+    "formula_mismatches": 0,
+    "mixed_ge2": 0,
+    "examples": [],
+    "seconds": 0.001508474349975586
+   },
+   "exhaustive n=5, blocks of size 3-4": {
+    "boards": 32768,
+    "uniform": 7168,
+    "uniform_ge2": 0,
+    "formula_mismatches": 0,
+    "mixed_ge2": 25600,
+    "examples": [],
+    "seconds": 2.584685802459717
+   },
+   "exhaustive n=6, all 4-uniform block sets": {
+    "boards": 32768,
+    "uniform": 4019,
+    "uniform_ge2": 0,
+    "formula_mismatches": 0,
+    "mixed_ge2": 28749,
+    "examples": [],
+    "seconds": 5.209014654159546
+   },
+   "random n=6, 400 boards, blocks of size 3-5": {
+    "boards": 400,
+    "uniform": 123,
+    "uniform_ge2": 0,
+    "formula_mismatches": 0,
+    "mixed_ge2": 277,
+    "examples": [],
+    "seconds": 0.06279134750366211
+   },
+   "random n=7, 400 boards, blocks of size 3-5": {
+    "boards": 400,
+    "uniform": 108,
+    "uniform_ge2": 0,
+    "formula_mismatches": 0,
+    "mixed_ge2": 292,
+    "examples": [],
+    "seconds": 0.13416361808776855
+   },
+   "random n=8, 400 boards, blocks of size 3-5": {
+    "boards": 400,
+    "uniform": 111,
+    "uniform_ge2": 0,
+    "formula_mismatches": 0,
+    "mixed_ge2": 289,
+    "examples": [],
+    "seconds": 0.26679420471191406
+   }
+  },
+  "total_boards": 66768,
+  "total_uniform": 11561,
+  "counterexamples": 0,
+  "formula_mismatches": 0,
+  "ok": true
+ },
+ "ok": true
+}

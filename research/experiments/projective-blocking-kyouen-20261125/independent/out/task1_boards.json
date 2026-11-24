@@ -1,0 +1,161 @@
+{
+ "boards": [
+  {
+   "path": "output/board_pg2q2.txt",
+   "q": 2,
+   "n": 7,
+   "b": 7,
+   "n_expected": 7,
+   "checks": {
+    "n_equals_q2_plus_q_plus_1": {
+     "ok": true,
+     "detail": "n=7, expected 7"
+    },
+    "b_equals_n": {
+     "ok": true,
+     "detail": "b=7, n=7"
+    },
+    "every_block_size_q_plus_1": {
+     "ok": true,
+     "detail": "block sizes seen: [3]"
+    },
+    "every_block_has_distinct_points": {
+     "ok": true
+    },
+    "all_points_in_range": {
+     "ok": true
+    },
+    "all_blocks_distinct": {
+     "ok": true
+    },
+    "every_point_on_q_plus_1_blocks": {
+     "ok": true,
+     "detail": "degrees seen: [3]"
+    },
+    "every_pair_on_exactly_one_block": {
+     "ok": true,
+     "detail": "pairs seen 21/21; pairs with count != 1: 0"
+    },
+    "every_pair_of_blocks_meets_in_one_point": {
+     "ok": true,
+     "detail": "intersection sizes seen: [1]"
+    },
+    "pair_count_identity": {
+     "ok": true,
+     "detail": "7*C(3,2) = 21, C(7,2) = 21"
+    }
+   },
+   "ok": true,
+   "incidences": 21,
+   "incidences_expected": 21,
+   "pair_multiplicities": [
+    1
+   ]
+  },
+  {
+   "path": "output/board_pg2q3.txt",
+   "q": 3,
+   "n": 13,
+   "b": 13,
+   "n_expected": 13,
+   "checks": {
+    "n_equals_q2_plus_q_plus_1": {
+     "ok": true,
+     "detail": "n=13, expected 13"
+    },
+    "b_equals_n": {
+     "ok": true,
+     "detail": "b=13, n=13"
+    },
+    "every_block_size_q_plus_1": {
+     "ok": true,
+     "detail": "block sizes seen: [4]"
+    },
+    "every_block_has_distinct_points": {
+     "ok": true
+    },
+    "all_points_in_range": {
+     "ok": true
+    },
+    "all_blocks_distinct": {
+     "ok": true
+    },
+    "every_point_on_q_plus_1_blocks": {
+     "ok": true,
+     "detail": "degrees seen: [4]"
+    },
+    "every_pair_on_exactly_one_block": {
+     "ok": true,
+     "detail": "pairs seen 78/78; pairs with count != 1: 0"
+    },
+    "every_pair_of_blocks_meets_in_one_point": {
+     "ok": true,
+     "detail": "intersection sizes seen: [1]"
+    },
+    "pair_count_identity": {
+     "ok": true,
+     "detail": "13*C(4,2) = 78, C(13,2) = 78"
+    }
+   },
+   "ok": true,
+   "incidences": 52,
+   "incidences_expected": 52,
+   "pair_multiplicities": [
+    1
+   ]
+  },
+  {
+   "path": "output/board_pg2q4.txt",
+   "q": 4,
+   "n": 21,
+   "b": 21,
+   "n_expected": 21,
+   "checks": {
+    "n_equals_q2_plus_q_plus_1": {
+     "ok": true,
+     "detail": "n=21, expected 21"
+    },
+    "b_equals_n": {
+     "ok": true,
+     "detail": "b=21, n=21"
+    },
+    "every_block_size_q_plus_1": {
+     "ok": true,
+     "detail": "block sizes seen: [5]"
+    },
+    "every_block_has_distinct_points": {
+     "ok": true
+    },
+    "all_points_in_range": {
+     "ok": true
+    },
+    "all_blocks_distinct": {
+     "ok": true
+    },
+    "every_point_on_q_plus_1_blocks": {
+     "ok": true,
+     "detail": "degrees seen: [5]"
+    },
+    "every_pair_on_exactly_one_block": {
+     "ok": true,
+     "detail": "pairs seen 210/210; pairs with count != 1: 0"
+    },
+    "every_pair_of_blocks_meets_in_one_point": {
+     "ok": true,
+     "detail": "intersection sizes seen: [1]"
+    },
+    "pair_count_identity": {
+     "ok": true,
+     "detail": "21*C(5,2) = 210, C(21,2) = 210"
+    }
+   },
+   "ok": true,
+   "incidences": 105,
+   "incidences_expected": 105,
+   "pair_multiplicities": [
+    1
+   ]
+  }
+ ],
+ "all_ok": true
+}
