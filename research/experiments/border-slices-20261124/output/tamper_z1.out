@@ -1,0 +1,170 @@
+{
+ "bad": [
+  0,
+  0,
+  882,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0
+ ],
+ "counts": [
+  6719,
+  3470,
+  882,
+  42,
+  882,
+  42,
+  152,
+  2910,
+  2353,
+  666
+ ],
+ "engine_gate": "PASS",
+ "engine_sha": "bd5f22e415a78368c9b798296bc84948d5637decbf3c21a92404d45fb12e3a92",
+ "examples": [
+  [],
+  [],
+  [
+   [
+    3,
+    1,
+    1,
+    -1,
+    1,
+    0,
+    1
+   ],
+   [
+    3,
+    1,
+    1,
+    0,
+    2,
+    1,
+    2
+   ],
+   [
+    3,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1
+   ],
+   [
+    3,
+    1,
+    2,
+    -1,
+    2,
+    1,
+    2
+   ],
+   [
+    3,
+    1,
+    2,
+    0,
+    0,
+    1,
+    0
+   ],
+   [
+    3,
+    1,
+    2,
+    1,
+    2,
+    1,
+    2
+   ]
+  ],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  []
+ ],
+ "hists": {
+  "D1_f0_class": {
+   "0": 3251,
+   "1": 3174,
+   "2": 294
+  }
+ },
+ "kit": "verify_k1286",
+ "obs": {
+  "F2web_F": {
+   "c": "1..6",
+   "claim": "finite observation only (c>=2 columns new; c=1 columns are published slice instances)",
+   "d": "1..3",
+   "m": "1..8",
+   "matches": 144,
+   "mismatches": 0
+  },
+  "F2web_G": {
+   "c": "1..6",
+   "claim": "finite observation only (G_1 c>=3 -> 2)",
+   "d": "1..3",
+   "m": "1..8",
+   "matches": 144,
+   "mismatches": 0
+  },
+  "recheck_z0k0": {
+   "claim": "K1285 OBS promotion: engine rows agree with the now-proven tables",
+   "g": "1..14",
+   "m": "1..8",
+   "matches": 112,
+   "mismatches": 0
+  },
+  "recheck_z1k1": {
+   "claim": "K1285 OBS promotion: engine rows agree with the now-proven tables",
+   "g": "1..14",
+   "m": "1..8",
+   "matches": 112,
+   "mismatches": 0
+  },
+  "recheck_z2k1": {
+   "claim": "K1285 OBS promotion: engine rows agree with the now-proven tables",
+   "g": "1..14",
+   "m": "1..8",
+   "matches": 112,
+   "mismatches": 0
+  },
+  "recheck_z2k2": {
+   "claim": "K1285 OBS promotion: engine rows agree with the now-proven tables",
+   "g": "1..14",
+   "m": "1..8",
+   "matches": 112,
+   "mismatches": 0
+  },
+  "z1km2": {
+   "claim": "finite observation only (m=1,g=1 nucleation; z1 pre-diag is NOT delta-1D)",
+   "g": "1..14",
+   "m": "1..9",
+   "points": 126
+  },
+  "z2km1": {
+   "claim": "finite observation only (rows appear m-uniform for all tested m; candidate next typed target)",
+   "g": "1..14",
+   "m": "1..9",
+   "points": 126
+  },
+  "z2km2": {
+   "claim": "finite observation only (g=5 value-2 spike; m=1,g=1 split)",
+   "g": "1..14",
+   "m": "1..9",
+   "points": 126
+  }
+ },
+ "overall_bad": 882,
+ "tamper": "z1",
+ "total_comparisons": 18118
+}

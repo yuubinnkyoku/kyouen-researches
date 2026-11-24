@@ -1,0 +1,234 @@
+{
+ "counts_expected": [
+  6719,
+  3470,
+  882,
+  42,
+  882,
+  42,
+  152,
+  2910,
+  2353,
+  666
+ ],
+ "expected_stdout_sha256": "ac7d104d8a70b69c37ae354d98048fcc07c69ca836cb482166c22ba1864967e9",
+ "kit": "verify_k1286",
+ "official_runs": [
+  {
+   "counts_match": true,
+   "engine_gate": "PASS",
+   "mode": "same-cwd PYTHONHASHSEED=random",
+   "overall_bad": 0,
+   "rc": 0,
+   "run": 1,
+   "stderr_info": {
+    "elapsed_s": 0.8,
+    "finished": "2026-11-24T09:17:27Z",
+    "started": "2026-11-24T09:17:27Z"
+   },
+   "stdout_sha256": "ac7d104d8a70b69c37ae354d98048fcc07c69ca836cb482166c22ba1864967e9",
+   "total": 18118
+  },
+  {
+   "counts_match": true,
+   "engine_gate": "PASS",
+   "mode": "same-cwd PYTHONHASHSEED=1",
+   "overall_bad": 0,
+   "rc": 0,
+   "run": 2,
+   "stderr_info": {
+    "elapsed_s": 0.8,
+    "finished": "2026-11-24T09:17:28Z",
+    "started": "2026-11-24T09:17:28Z"
+   },
+   "stdout_sha256": "ac7d104d8a70b69c37ae354d98048fcc07c69ca836cb482166c22ba1864967e9",
+   "total": 18118
+  },
+  {
+   "counts_match": true,
+   "engine_gate": "PASS",
+   "mode": "isolated-tree env -i PYTHONHASHSEED=99",
+   "overall_bad": 0,
+   "rc": 0,
+   "run": 3,
+   "stderr_info": {
+    "elapsed_s": 0.7,
+    "finished": "2026-11-24T09:17:29Z",
+    "started": "2026-11-24T09:17:29Z"
+   },
+   "stdout_sha256": "ac7d104d8a70b69c37ae354d98048fcc07c69ca836cb482166c22ba1864967e9",
+   "total": 18118
+  },
+  {
+   "counts_match": true,
+   "engine_gate": "PASS",
+   "mode": "isolated-tree env -i PYTHONHASHSEED=7",
+   "overall_bad": 0,
+   "rc": 0,
+   "run": 4,
+   "stderr_info": {
+    "elapsed_s": 0.7,
+    "finished": "2026-11-24T09:17:29Z",
+    "started": "2026-11-24T09:17:29Z"
+   },
+   "stdout_sha256": "ac7d104d8a70b69c37ae354d98048fcc07c69ca836cb482166c22ba1864967e9",
+   "total": 18118
+  }
+ ],
+ "tamper_runs_rc_recorded_live": [
+  {
+   "expected_rc": 2,
+   "mode": "engine",
+   "ok": true,
+   "rc": 2,
+   "stdout_head": "TAMPER-ENGINE: sha mismatch: 0ea47a80761d2b20bf414cd52b1535fba56829c3a4c232d1b2f5da3f81441882 != bd5f22e415a78368c9b798296bc84948d5637decbf3c21a92404d45fb12e3a92"
+  },
+  {
+   "bad": [
+    6719,
+    0,
+    0,
+    0,
+    0,
+    0,
+    152,
+    0,
+    0,
+    0
+   ],
+   "expected_bad": [
+    6719,
+    0,
+    0,
+    0,
+    0,
+    0,
+    152,
+    0,
+    0,
+    0
+   ],
+   "mode": "f0",
+   "ok": true,
+   "rc": 1
+  },
+  {
+   "bad": [
+    0,
+    0,
+    882,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "expected_bad": [
+    0,
+    0,
+    882,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "mode": "z1",
+   "ok": true,
+   "rc": 1
+  },
+  {
+   "bad": [
+    0,
+    0,
+    0,
+    0,
+    882,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "expected_bad": [
+    0,
+    0,
+    0,
+    0,
+    882,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "mode": "z2",
+   "ok": true,
+   "rc": 1
+  },
+  {
+   "bad": [
+    0,
+    0,
+    0,
+    42,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "expected_bad": [
+    0,
+    0,
+    0,
+    42,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "mode": "bed1",
+   "ok": true,
+   "rc": 1
+  },
+  {
+   "bad": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    42,
+    0,
+    0,
+    0,
+    0
+   ],
+   "expected_bad": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    42,
+    0,
+    0,
+    0,
+    0
+   ],
+   "mode": "bed2",
+   "ok": true,
+   "rc": 1
+  }
+ ],
+ "total_expected": 18118,
+ "verdict": "OFFICIAL-PASS"
+}
