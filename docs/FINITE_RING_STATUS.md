@@ -184,6 +184,8 @@ K(13)≥10（K1058 訂正）、s(13)=7 はランダム測定値。
   `PG(2,9)` は 128,917,712 キャップで極大 6/7/8/10、**初めてパリティ混在**
   （完全 7-アーク 2,021,760 個）→ 定理より Grundy ≥2 が存在（完全分布は未計算）。
   完全 6/7/8/10-アークはそれぞれ **PGL(3,9) の単一軌道**（固定群 60/21/8/720、K1303）。
+  3-キャップ（110,565）・4-キャップ（1,769,040）も単一軌道で、
+  **全 3-キャップが Grundy 1、全 4-キャップが Grundy 0**（K1304）。
 - 実験: [s-parameter-kyouen-20261125](../research/experiments/s-parameter-kyouen-20261125/report.md)・[parity-characterization-20261125](../research/experiments/parity-characterization-20261125/report.md)
 
 ## 0c. 高速な反転平面構成（新）
