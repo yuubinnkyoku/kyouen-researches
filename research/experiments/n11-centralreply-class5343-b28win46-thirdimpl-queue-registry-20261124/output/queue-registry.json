@@ -129,9 +129,12 @@
     "declaration": "1300c10d",
     "declared_utc": "2026-11-24T00:49:31Z",
     "scaffold_a": "3185a672",
-    "kind": "claimed (outputs unpublished at observed HEAD d2d60645d26b2eae88ffc87fdd5e6160cfcae8e1)"
+    "takeover": "c48aa56b",
+    "takeover_declared_utc": "2026-11-24T04:20:09Z",
+    "completion": "46687096",
+    "kind": "done (takeover; audit 178 gates all PASS; verdict agreements 5/5 (WIN=5); replica 10/10 node-exact; verdict unconsumed)"
    },
-   "DE": {
+"DE": {
     "keys": [
      "aa046",
      "aa016",
@@ -1052,11 +1055,14 @@
     }
    ],
    "thirdimpl": {
-    "state": "claimed",
+    "state": "done",
     "part": "CX",
     "declaration": "1300c10d",
     "declared_utc": "2026-11-24T00:49:31Z",
-    "scaffold_a": "3185a672"
+    "scaffold_a": "3185a672",
+    "takeover": "c48aa56b",
+    "takeover_declared_utc": "2026-11-24T04:20:09Z",
+    "completion": "46687096"
    },
    "est_crossimpl_2pass_nodes": 37660590
   },
@@ -3243,11 +3249,14 @@
     }
    ],
    "thirdimpl": {
-    "state": "claimed",
+    "state": "done",
     "part": "CX",
     "declaration": "1300c10d",
     "declared_utc": "2026-11-24T00:49:31Z",
-    "scaffold_a": "3185a672"
+    "scaffold_a": "3185a672",
+    "takeover": "c48aa56b",
+    "takeover_declared_utc": "2026-11-24T04:20:09Z",
+    "completion": "46687096"
    },
    "est_crossimpl_2pass_nodes": 39566722
   },
@@ -3368,11 +3377,14 @@
     }
    ],
    "thirdimpl": {
-    "state": "claimed",
+    "state": "done",
     "part": "CX",
     "declaration": "1300c10d",
     "declared_utc": "2026-11-24T00:49:31Z",
-    "scaffold_a": "3185a672"
+    "scaffold_a": "3185a672",
+    "takeover": "c48aa56b",
+    "takeover_declared_utc": "2026-11-24T04:20:09Z",
+    "completion": "46687096"
    },
    "est_crossimpl_2pass_nodes": 40556633
   },
@@ -4302,11 +4314,14 @@
     }
    ],
    "thirdimpl": {
-    "state": "claimed",
+    "state": "done",
     "part": "CX",
     "declaration": "1300c10d",
     "declared_utc": "2026-11-24T00:49:31Z",
-    "scaffold_a": "3185a672"
+    "scaffold_a": "3185a672",
+    "takeover": "c48aa56b",
+    "takeover_declared_utc": "2026-11-24T04:20:09Z",
+    "completion": "46687096"
    },
    "est_crossimpl_2pass_nodes": 38303897
   },
@@ -4704,11 +4719,14 @@
     }
    ],
    "thirdimpl": {
-    "state": "claimed",
+    "state": "done",
     "part": "CX",
     "declaration": "1300c10d",
     "declared_utc": "2026-11-24T00:49:31Z",
-    "scaffold_a": "3185a672"
+    "scaffold_a": "3185a672",
+    "takeover": "c48aa56b",
+    "takeover_declared_utc": "2026-11-24T04:20:09Z",
+    "completion": "46687096"
    },
    "est_crossimpl_2pass_nodes": 39378658
   },
@@ -4763,8 +4781,8 @@
  "views": {
   "queue_state_counts": {
    "win_total": 46,
-   "thirdimpl_done_win": 16,
-   "thirdimpl_claimed_win": 5,
+   "thirdimpl_done_win": 21,
+   "thirdimpl_claimed_win": 0,
    "thirdimpl_open_win": 25,
    "loss_total": 8,
    "loss_thirdimpl_done": 1,
@@ -4900,7 +4918,8 @@
    "declared_utc": "2026-11-24T00:49:31Z",
    "rule_hours": 3.5,
    "earliest_takeover_utc": "2026-11-24T04:19:31Z",
-   "note": "as observed at HEAD d2d60645d26b2eae88ffc87fdd5e6160cfcae8e1"
+   "note": "as observed at HEAD d2d60645d26b2eae88ffc87fdd5e6160cfcae8e1",
+   "outcome": "resolved: takeover c48aa56b declared 2026-11-24T04:20:09Z (after earliest_takeover_utc 04:19:31Z; cx-dir stall machine-verified; no counter-declaration); Part CX completed 46687096 (audit 178 gates all PASS; verdict agreements 5/5 WIN; replica 10/10 node-exact; verdict unconsumed); rows moved claimed->done in rev3"
   }
  },
  "accounting": {
@@ -4963,11 +4982,13 @@
  "how_to_verify": "re-fetch the 7 pinned status.logs + batch-keys, verify sha256, parse (PASS b,rc,nodes / WIN-HALT / EXHAUSTED / *-TRUNCATED-RETRY), decisive = first chronological rc=1 (WIN) else rc=2 (LOSS)"
 ,
  "revision": {
-  "rev": 2,
-  "updated_utc": "2026-11-24T03:57Z",
-  "change": "P1 package 8 rows thirdimpl open->done (Part DE completion); thirdimpl_done_win 8->16, thirdimpl_open_win 33->25; P1 package marked done; open33_by_est_cost and P2-P4 views unchanged from rev1",
+  "rev": 3,
+  "updated_utc": "2026-11-24T05:15Z",
+  "change": "P5 (claimed-5) rows thirdimpl claimed->done (Part CX completion after takeover c48aa56b); thirdimpl_done_win 16->21, thirdimpl_claimed_win 5->0; claimed5 rule marked resolved; thirdimpl_publications CX updated to done; open25 / P2-P4 package views unchanged",
   "rev1_registry_sha256": "8c4216c68366c6a63e426ee36234b68955ef6f3a873429b0baa207f6dfc66592",
   "rev1_published": "69e391a3",
-  "provenance": "Part DE completion 1eead030, experiment n11-centralreply-closure-b28p1win8-thirdimpl-20261124, audit 323 gates all PASS, verdict agreements 8/8 (WIN=8), verdict unconsumed, 11x11 UNKNOWN"
+  "rev2_registry_sha256": "e437af3745fa129734cc1edc76808b49b84d23036109bad6ff93c03c29602483",
+  "rev2_published": "fc537f3b",
+  "provenance": "Part CX completion 46687096 (takeover c48aa56b of declaration 1300c10d), experiment n11-centralreply-closure-b28cqwin5-thirdimpl-20261124, audit 178 gates all PASS, verdict agreements 5/5 (WIN=5), replica 10/10 node-exact, verdict unconsumed, 11x11 UNKNOWN"
  }
 }

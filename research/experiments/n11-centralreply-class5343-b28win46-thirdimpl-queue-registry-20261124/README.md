@@ -5,6 +5,8 @@ batch-28 (closure class 5343・54キー aa001..aa054) の第三実装交叉検�
 
 **rev2 (2026-11-24T03:57Z)**: P1パッケージ8行の第三実装交叉検証完了 (Part DE・完了 `1eead030`) を反映。queue-registry.json該当8行のthirdimpl state (open→done)・queue_state_counts (done 8→16・open 33→25)・thirdimpl_publications (DE追記)・packages P1 (done) を更新。それ以外のview (open33_by_est_cost・P2〜P4) はrev1時点のまま。本revも solver実行・probe・cache書込なしの純bookkeeping。
 
+**rev3 (2026-11-24T05:15Z)**: Part CX完了 (takeover宣言 `c48aa56b`・完了 `46687096`) を反映。claimed-5行 (aa005/aa030/aa031/aa047/aa053) のthirdimpl state (claimed→done)・queue_state_counts (done 16→21・claimed 5→0)・claimed5 takeover規約 (resolved)・thirdimpl_publications CX (done) を更新。原宣言 `1300c10d` は3.5h停滞後にtakeover規約どおり単一オーナーtakeoverで解決 (対抗宣言なし機械確認)。open25・P2〜P4 viewは不変。本revも solver実行・probe・cache書込なしの純bookkeeping。
+
 ## 何であるか・何でないか
 
 - **本registryの作成にあたり solver は一つも実行していない** (probeなし・cache書込なし・単一オーナーlane宣言なし)。純粋な整理であって、いかなる計算laneの占有でも宣告でもない。
@@ -33,8 +35,8 @@ rc = 0/1/2 (EXHAUSTED/WIN/LOSS・drive README群の定義どおり)。decisive r
 
 ## 第三実装交叉検証の現状
 
-- **done 16 WIN行 (rev2)**: aa001/aa002 (Part CC・完了 `9eb30494`)・aa006/aa007 (Part CG・完了 `699a13bc`)・aa008/aa009 (Part CM・完了 `2102800b`)・aa004/aa035 (Part CW・完了 `8f03ed3d`)・aa046/aa016/aa025/aa033/aa027/aa038/aa012/aa042 (**P1パッケージ8行・Part DE・完了 `1eead030`**・three-implementation corroboration 8/8 agree・replica 16/16 node-exact・audit 323 gates PASS・verdict不消費)。加えて LOSS行 aa003 (Part CL・完了 `660fe238`)。
-- **claimed 5行 (Part CX 宣言済み)**: aa005/aa030/aa031/aa047/aa053・宣言 `1300c10d` (2026-11-24T00:49:31Z)・scaffold A `3185a672`。観測HEAD時点でoutputs未出版。**takeover規約 (宣言から3.5h ⇒ 2026-11-24T04:19:31Z以降かつ停滞時) が許すまで再取得禁止。**
+- **done 21 WIN行 (rev3)**: aa001/aa002 (Part CC・完了 `9eb30494`)・aa006/aa007 (Part CG・完了 `699a13bc`)・aa008/aa009 (Part CM・完了 `2102800b`)・aa004/aa035 (Part CW・完了 `8f03ed3d`)・aa046/aa016/aa025/aa033/aa027/aa038/aa012/aa042 (P1パッケージ8行・Part DE・完了 `1eead030`・three-implementation corroboration 8/8 agree・replica 16/16 node-exact・audit 323 gates PASS・verdict不消費)・aa005/aa030/aa031/aa047/aa053 (**P5 (claimed-5) 5行・Part CX・takeover `c48aa56b` 完了 `46687096`**・three-implementation corroboration 5/5 agree・replica 10/10 node-exact・audit 178 gates PASS×3 byte-identical・verdict不消費)。加えて LOSS行 aa003 (Part CL・完了 `660fe238`)。
+- **claimed 0行 (rev3)**: なし。Part CX (原宣言 `1300c10d`・2026-11-24T00:49:31Z) は3.5h停滞後、takeover規約 (earliest_takeover 2026-11-24T04:19:31Z以降かつ停滞・対抗宣言なし機械確認) に従いtakeover宣言 `c48aa56b` (2026-11-24T04:20:09Z) で解決・完了 `46687096`。claimed5_do_not_retake_until_takeover_ruleはrev3でresolved。
 - **open 25 WIN行 (rev2時点)**: P1パッケージはPart DEで交叉検証済み (done)。残りはP2/P3/P4パッケージ25行 (下記queue表・P1〜P4の分割はrev1時点のコスト順viewとして不変)。
 - **L-optional 7 LOSS行**: aa018/aa036/aa023/aa024/aa015/aa029/aa017 (Part CO採用済み・交叉検証は冗長性のみで任意)。
 
