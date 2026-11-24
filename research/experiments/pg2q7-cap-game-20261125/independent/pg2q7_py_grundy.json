@@ -1,0 +1,100 @@
+{
+  "tag": "pg2q7",
+  "n": 57,
+  "b": 57,
+  "safe": 2446460,
+  "max_size": 8,
+  "per_size": [
+    {
+      "size": 0,
+      "count": 1,
+      "grundy": {
+        "0": 1
+      },
+      "win": 1,
+      "loss": 0
+    },
+    {
+      "size": 1,
+      "count": 57,
+      "grundy": {
+        "1": 57
+      },
+      "win": 0,
+      "loss": 57
+    },
+    {
+      "size": 2,
+      "count": 1596,
+      "grundy": {
+        "0": 1596
+      },
+      "win": 1596,
+      "loss": 0
+    },
+    {
+      "size": 3,
+      "count": 26068,
+      "grundy": {
+        "1": 26068
+      },
+      "win": 0,
+      "loss": 26068
+    },
+    {
+      "size": 4,
+      "count": 234612,
+      "grundy": {
+        "0": 234612
+      },
+      "win": 234612,
+      "loss": 0
+    },
+    {
+      "size": 5,
+      "count": 938448,
+      "grundy": {
+        "1": 938448
+      },
+      "win": 0,
+      "loss": 938448
+    },
+    {
+      "size": 6,
+      "count": 1094856,
+      "grundy": {
+        "0": 1094856
+      },
+      "win": 1094856,
+      "loss": 0
+    },
+    {
+      "size": 7,
+      "count": 134064,
+      "grundy": {
+        "1": 134064
+      },
+      "win": 0,
+      "loss": 134064
+    },
+    {
+      "size": 8,
+      "count": 16758,
+      "grundy": {
+        "0": 16758
+      },
+      "win": 16758,
+      "loss": 0
+    }
+  ],
+  "grundy": {
+    "0": 1347823,
+    "1": 1098637
+  },
+  "root_g": 0,
+  "root_win": 1,
+  "win_total": 1347823,
+  "loss_total": 1098637,
+  "parity_mismatch": 0,
+  "seconds": 36.339
+}

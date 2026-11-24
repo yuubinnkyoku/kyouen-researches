@@ -1,0 +1,1042 @@
+{
+  "summary": {
+    "task1": "PASS",
+    "task2": "PASS",
+    "task3": "PASS",
+    "task4": "PASS",
+    "task5": "PASS"
+  },
+  "failed": [],
+  "checks": [
+    {
+      "task": 2,
+      "name": "pg2q7 SAFE total",
+      "expected": 2446460,
+      "c_engine": 2446460,
+      "python": 2446460,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 2,
+      "name": "pg2q7 count(size=0)",
+      "expected": 1,
+      "c_engine": 1,
+      "python": 1,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 2,
+      "name": "pg2q7 count(size=1)",
+      "expected": 57,
+      "c_engine": 57,
+      "python": 57,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 2,
+      "name": "pg2q7 count(size=2)",
+      "expected": 1596,
+      "c_engine": 1596,
+      "python": 1596,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 2,
+      "name": "pg2q7 count(size=3)",
+      "expected": 26068,
+      "c_engine": 26068,
+      "python": 26068,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 2,
+      "name": "pg2q7 count(size=4)",
+      "expected": 234612,
+      "c_engine": 234612,
+      "python": 234612,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 2,
+      "name": "pg2q7 count(size=5)",
+      "expected": 938448,
+      "c_engine": 938448,
+      "python": 938448,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 2,
+      "name": "pg2q7 count(size=6)",
+      "expected": 1094856,
+      "c_engine": 1094856,
+      "python": 1094856,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 2,
+      "name": "pg2q7 count(size=7)",
+      "expected": 134064,
+      "c_engine": 134064,
+      "python": 134064,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 2,
+      "name": "pg2q7 count(size=8)",
+      "expected": 16758,
+      "c_engine": 16758,
+      "python": 16758,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 2,
+      "name": "pg2q7 analytic count(size=2)",
+      "expected": 1596,
+      "c_engine": 1596,
+      "python": 1596,
+      "pass": true,
+      "note": "closed-form count, no enumeration used"
+    },
+    {
+      "task": 2,
+      "name": "pg2q7 analytic count(size=3)",
+      "expected": 26068,
+      "c_engine": 26068,
+      "python": 26068,
+      "pass": true,
+      "note": "closed-form count, no enumeration used"
+    },
+    {
+      "task": 2,
+      "name": "pg2q7 analytic count(size=4)",
+      "expected": 234612,
+      "c_engine": 234612,
+      "python": 234612,
+      "pass": true,
+      "note": "closed-form count, no enumeration used"
+    },
+    {
+      "task": 2,
+      "name": "pg2q7 analytic count(size=5)",
+      "expected": 938448,
+      "c_engine": 938448,
+      "python": 938448,
+      "pass": true,
+      "note": "closed-form count, no enumeration used"
+    },
+    {
+      "task": 3,
+      "name": "pg2q7 maximal(size=0)",
+      "expected": 0,
+      "c_engine": 0,
+      "python": 0,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 3,
+      "name": "pg2q7 maximal(size=1)",
+      "expected": 0,
+      "c_engine": 0,
+      "python": 0,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 3,
+      "name": "pg2q7 maximal(size=2)",
+      "expected": 0,
+      "c_engine": 0,
+      "python": 0,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 3,
+      "name": "pg2q7 maximal(size=3)",
+      "expected": 0,
+      "c_engine": 0,
+      "python": 0,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 3,
+      "name": "pg2q7 maximal(size=4)",
+      "expected": 0,
+      "c_engine": 0,
+      "python": 0,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 3,
+      "name": "pg2q7 maximal(size=5)",
+      "expected": 0,
+      "c_engine": 0,
+      "python": 0,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 3,
+      "name": "pg2q7 maximal(size=6)",
+      "expected": 625632,
+      "c_engine": 625632,
+      "python": 625632,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 3,
+      "name": "pg2q7 maximal(size=7)",
+      "expected": 0,
+      "c_engine": 0,
+      "python": 0,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 3,
+      "name": "pg2q7 maximal(size=8)",
+      "expected": 16758,
+      "c_engine": 16758,
+      "python": 16758,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 3,
+      "name": "pg2q7 testA vs testB counts",
+      "expected": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 625632,
+        "7": 0,
+        "8": 16758
+      },
+      "c_engine": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 625632,
+        "7": 0,
+        "8": 16758
+      },
+      "python": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 625632,
+        "7": 0,
+        "8": 16758
+      },
+      "pass": true,
+      "note": "C test A and test B must agree"
+    },
+    {
+      "task": 3,
+      "name": "pg2q7 maximal checksum A==B",
+      "expected": true,
+      "c_engine": true,
+      "python": true,
+      "pass": true,
+      "note": "identical maximal set under both C tests"
+    },
+    {
+      "task": 3,
+      "name": "pg2q7 maximal checksum C==Python",
+      "expected": true,
+      "c_engine": true,
+      "python": true,
+      "pass": true,
+      "note": "C test A vs Python maximal sets"
+    },
+    {
+      "task": 4,
+      "name": "pg2q7 grundy(0)",
+      "expected": 1347823,
+      "c_engine": 1347823,
+      "python": 1347823,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 4,
+      "name": "pg2q7 grundy(1)",
+      "expected": 1098637,
+      "c_engine": 1098637,
+      "python": 1098637,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 4,
+      "name": "pg2q7 root Grundy",
+      "expected": 0,
+      "c_engine": 0,
+      "python": 0,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 4,
+      "name": "pg2q7 root misere win",
+      "expected": 1,
+      "c_engine": 1,
+      "python": 1,
+      "pass": true,
+      "note": "1 = player to move wins under misere"
+    },
+    {
+      "task": 4,
+      "name": "pg2q7 per-size Grundy C==Python",
+      "expected": "C == Python",
+      "c_engine": {
+        "0": {
+          "0": 1
+        },
+        "1": {
+          "1": 57
+        },
+        "2": {
+          "0": 1596
+        },
+        "3": {
+          "1": 26068
+        },
+        "4": {
+          "0": 234612
+        },
+        "5": {
+          "1": 938448
+        },
+        "6": {
+          "0": 1094856
+        },
+        "7": {
+          "1": 134064
+        },
+        "8": {
+          "0": 16758
+        }
+      },
+      "python": {
+        "0": {
+          "0": 1
+        },
+        "1": {
+          "1": 57
+        },
+        "2": {
+          "0": 1596
+        },
+        "3": {
+          "1": 26068
+        },
+        "4": {
+          "0": 234612
+        },
+        "5": {
+          "1": 938448
+        },
+        "6": {
+          "0": 1094856
+        },
+        "7": {
+          "1": 134064
+        },
+        "8": {
+          "0": 16758
+        }
+      },
+      "pass": true,
+      "note": "full per-size distribution"
+    },
+    {
+      "task": 4,
+      "name": "pg2q7 per-size misere C==Python",
+      "expected": "C == Python",
+      "c_engine": {
+        "0": [
+          1,
+          0
+        ],
+        "1": [
+          0,
+          57
+        ],
+        "2": [
+          1596,
+          0
+        ],
+        "3": [
+          0,
+          26068
+        ],
+        "4": [
+          234612,
+          0
+        ],
+        "5": [
+          0,
+          938448
+        ],
+        "6": [
+          1094856,
+          0
+        ],
+        "7": [
+          0,
+          134064
+        ],
+        "8": [
+          16758,
+          0
+        ]
+      },
+      "python": {
+        "0": [
+          1,
+          0
+        ],
+        "1": [
+          0,
+          57
+        ],
+        "2": [
+          1596,
+          0
+        ],
+        "3": [
+          0,
+          26068
+        ],
+        "4": [
+          234612,
+          0
+        ],
+        "5": [
+          0,
+          938448
+        ],
+        "6": [
+          1094856,
+          0
+        ],
+        "7": [
+          0,
+          134064
+        ],
+        "8": [
+          16758,
+          0
+        ]
+      },
+      "pass": true,
+      "note": "misere win/loss counts by size"
+    },
+    {
+      "task": 2,
+      "name": "pg2q7 mask checksums C==Python",
+      "expected": true,
+      "c_engine": true,
+      "python": true,
+      "pass": true,
+      "note": "sum splitmix64(mask) per size; equality => identical enumerated sets"
+    },
+    {
+      "task": 5,
+      "name": "pg2q7 all maximal sizes even",
+      "expected": true,
+      "c_engine": true,
+      "python": true,
+      "pass": true,
+      "note": "maximal sizes present: 6,8"
+    },
+    {
+      "task": 5,
+      "name": "pg2q7 Grundy subset of {0,1}",
+      "expected": true,
+      "c_engine": true,
+      "python": true,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 5,
+      "name": "pg2q7 Grundy = |S| mod 2 on all safe sets",
+      "expected": 0,
+      "c_engine": 0,
+      "python": 0,
+      "pass": true,
+      "note": "mismatch count, so 0 = formula holds everywhere"
+    },
+    {
+      "task": 5,
+      "name": "pg2q7 size-8 count = q^5-q^2 (conics)",
+      "expected": 16758,
+      "c_engine": 16758,
+      "python": 16758,
+      "pass": true,
+      "note": "independent combinatorial count of conics in PG(2,7)"
+    },
+    {
+      "task": 1,
+      "name": "pg2q7 board axioms",
+      "expected": true,
+      "c_engine": null,
+      "python": true,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 2,
+      "name": "ag2q7 SAFE total",
+      "expected": 1108724,
+      "c_engine": 1108724,
+      "python": 1108724,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 2,
+      "name": "ag2q7 count(size=0)",
+      "expected": 1,
+      "c_engine": 1,
+      "python": 1,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 2,
+      "name": "ag2q7 count(size=1)",
+      "expected": 49,
+      "c_engine": 49,
+      "python": 49,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 2,
+      "name": "ag2q7 count(size=2)",
+      "expected": 1176,
+      "c_engine": 1176,
+      "python": 1176,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 2,
+      "name": "ag2q7 count(size=3)",
+      "expected": 16464,
+      "c_engine": 16464,
+      "python": 16464,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 2,
+      "name": "ag2q7 count(size=4)",
+      "expected": 127596,
+      "c_engine": 127596,
+      "python": 127596,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 2,
+      "name": "ag2q7 count(size=5)",
+      "expected": 444528,
+      "c_engine": 444528,
+      "python": 444528,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 2,
+      "name": "ag2q7 count(size=6)",
+      "expected": 460992,
+      "c_engine": 460992,
+      "python": 460992,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 2,
+      "name": "ag2q7 count(size=7)",
+      "expected": 51744,
+      "c_engine": 51744,
+      "python": 51744,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 2,
+      "name": "ag2q7 count(size=8)",
+      "expected": 6174,
+      "c_engine": 6174,
+      "python": 6174,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 2,
+      "name": "ag2q7 analytic count(size=2)",
+      "expected": 1176,
+      "c_engine": 1176,
+      "python": 1176,
+      "pass": true,
+      "note": "closed-form count, no enumeration used"
+    },
+    {
+      "task": 2,
+      "name": "ag2q7 analytic count(size=3)",
+      "expected": 16464,
+      "c_engine": 16464,
+      "python": 16464,
+      "pass": true,
+      "note": "closed-form count, no enumeration used"
+    },
+    {
+      "task": 2,
+      "name": "ag2q7 analytic count(size=4)",
+      "expected": 127596,
+      "c_engine": 127596,
+      "python": 127596,
+      "pass": true,
+      "note": "closed-form count, no enumeration used"
+    },
+    {
+      "task": 3,
+      "name": "ag2q7 maximal(size=0)",
+      "expected": 0,
+      "c_engine": 0,
+      "python": 0,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 3,
+      "name": "ag2q7 maximal(size=1)",
+      "expected": 0,
+      "c_engine": 0,
+      "python": 0,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 3,
+      "name": "ag2q7 maximal(size=2)",
+      "expected": 0,
+      "c_engine": 0,
+      "python": 0,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 3,
+      "name": "ag2q7 maximal(size=3)",
+      "expected": 0,
+      "c_engine": 0,
+      "python": 0,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 3,
+      "name": "ag2q7 maximal(size=4)",
+      "expected": 0,
+      "c_engine": 0,
+      "python": 0,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 3,
+      "name": "ag2q7 maximal(size=5)",
+      "expected": 0,
+      "c_engine": 0,
+      "python": 0,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 3,
+      "name": "ag2q7 maximal(size=6)",
+      "expected": 271656,
+      "c_engine": 271656,
+      "python": 271656,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 3,
+      "name": "ag2q7 maximal(size=7)",
+      "expected": 2352,
+      "c_engine": 2352,
+      "python": 2352,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 3,
+      "name": "ag2q7 maximal(size=8)",
+      "expected": 6174,
+      "c_engine": 6174,
+      "python": 6174,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 3,
+      "name": "ag2q7 testA vs testB counts",
+      "expected": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 271656,
+        "7": 2352,
+        "8": 6174
+      },
+      "c_engine": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 271656,
+        "7": 2352,
+        "8": 6174
+      },
+      "python": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 271656,
+        "7": 2352,
+        "8": 6174
+      },
+      "pass": true,
+      "note": "C test A and test B must agree"
+    },
+    {
+      "task": 3,
+      "name": "ag2q7 maximal checksum A==B",
+      "expected": true,
+      "c_engine": true,
+      "python": true,
+      "pass": true,
+      "note": "identical maximal set under both C tests"
+    },
+    {
+      "task": 3,
+      "name": "ag2q7 maximal checksum C==Python",
+      "expected": true,
+      "c_engine": true,
+      "python": true,
+      "pass": true,
+      "note": "C test A vs Python maximal sets"
+    },
+    {
+      "task": 4,
+      "name": "ag2q7 grundy(0)",
+      "expected": 581827,
+      "c_engine": 581827,
+      "python": 581827,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 4,
+      "name": "ag2q7 grundy(1)",
+      "expected": 477505,
+      "c_engine": 477505,
+      "python": 477505,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 4,
+      "name": "ag2q7 grundy(2)",
+      "expected": 49392,
+      "c_engine": 49392,
+      "python": 49392,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 4,
+      "name": "ag2q7 root Grundy",
+      "expected": 0,
+      "c_engine": 0,
+      "python": 0,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 4,
+      "name": "ag2q7 root misere win",
+      "expected": 1,
+      "c_engine": 1,
+      "python": 1,
+      "pass": true,
+      "note": "1 = player to move wins under misere"
+    },
+    {
+      "task": 4,
+      "name": "ag2q7 per-size Grundy C==Python",
+      "expected": "C == Python",
+      "c_engine": {
+        "0": {
+          "0": 1
+        },
+        "1": {
+          "1": 49
+        },
+        "2": {
+          "0": 1176
+        },
+        "3": {
+          "1": 16464
+        },
+        "4": {
+          "0": 127596
+        },
+        "5": {
+          "1": 395136,
+          "2": 49392
+        },
+        "6": {
+          "0": 444528,
+          "1": 16464
+        },
+        "7": {
+          "0": 2352,
+          "1": 49392
+        },
+        "8": {
+          "0": 6174
+        }
+      },
+      "python": {
+        "0": {
+          "0": 1
+        },
+        "1": {
+          "1": 49
+        },
+        "2": {
+          "0": 1176
+        },
+        "3": {
+          "1": 16464
+        },
+        "4": {
+          "0": 127596
+        },
+        "5": {
+          "1": 395136,
+          "2": 49392
+        },
+        "6": {
+          "0": 444528,
+          "1": 16464
+        },
+        "7": {
+          "0": 2352,
+          "1": 49392
+        },
+        "8": {
+          "0": 6174
+        }
+      },
+      "pass": true,
+      "note": "full per-size distribution"
+    },
+    {
+      "task": 4,
+      "name": "ag2q7 per-size misere C==Python",
+      "expected": "C == Python",
+      "c_engine": {
+        "0": [
+          1,
+          0
+        ],
+        "1": [
+          0,
+          49
+        ],
+        "2": [
+          1176,
+          0
+        ],
+        "3": [
+          0,
+          16464
+        ],
+        "4": [
+          127596,
+          0
+        ],
+        "5": [
+          49392,
+          395136
+        ],
+        "6": [
+          444528,
+          16464
+        ],
+        "7": [
+          2352,
+          49392
+        ],
+        "8": [
+          6174,
+          0
+        ]
+      },
+      "python": {
+        "0": [
+          1,
+          0
+        ],
+        "1": [
+          0,
+          49
+        ],
+        "2": [
+          1176,
+          0
+        ],
+        "3": [
+          0,
+          16464
+        ],
+        "4": [
+          127596,
+          0
+        ],
+        "5": [
+          49392,
+          395136
+        ],
+        "6": [
+          444528,
+          16464
+        ],
+        "7": [
+          2352,
+          49392
+        ],
+        "8": [
+          6174,
+          0
+        ]
+      },
+      "pass": true,
+      "note": "misere win/loss counts by size"
+    },
+    {
+      "task": 2,
+      "name": "ag2q7 mask checksums C==Python",
+      "expected": true,
+      "c_engine": true,
+      "python": true,
+      "pass": true,
+      "note": "sum splitmix64(mask) per size; equality => identical enumerated sets"
+    },
+    {
+      "task": 5,
+      "name": "ag2q7 has maximal size 7 (odd)",
+      "expected": true,
+      "c_engine": true,
+      "python": true,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 5,
+      "name": "ag2q7 has maximal size 6 and 8 (even)",
+      "expected": true,
+      "c_engine": true,
+      "python": true,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 5,
+      "name": "ag2q7 Grundy 2 exists",
+      "expected": true,
+      "c_engine": true,
+      "python": true,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "task": 5,
+      "name": "ag2q7 parity formula fails somewhere",
+      "expected": true,
+      "c_engine": true,
+      "python": true,
+      "pass": true,
+      "note": "mixed maximal parity => no graded formula"
+    },
+    {
+      "task": 1,
+      "name": "ag2q7 board axioms",
+      "expected": true,
+      "c_engine": null,
+      "python": true,
+      "pass": true,
+      "note": ""
+    }
+  ],
+  "c_timings": {
+    "pg2q7": {
+      "enum_seconds": 3.34,
+      "dp_seconds": 2.854
+    },
+    "ag2q7": {
+      "enum_seconds": 1.447,
+      "dp_seconds": 1.172
+    }
+  },
+  "python_timings": {
+    "pg2q7": {
+      "enum_seconds": 13.076,
+      "dp_seconds": 36.339
+    },
+    "ag2q7": {
+      "enum_seconds": 5.866,
+      "dp_seconds": 14.918
+    }
+  }
+}
