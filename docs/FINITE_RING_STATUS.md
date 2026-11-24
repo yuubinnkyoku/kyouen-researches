@@ -161,7 +161,11 @@ K(13)≥10（K1058 訂正）、s(13)=7 はランダム測定値。
   偶数一様で Grundy `{0,1}`、`AG(2,5) s=2` はパリティ混在で 2 が出現。
   仮定は「サイズ一様」ではなく「パリティ一様」。
 - `AG(2,5) s=3` で **Grundy 4** が初出現（従来最大 3）。
-- 実験: [s-parameter-kyouen-20261125](../research/experiments/s-parameter-kyouen-20261125/report.md)
+- **parity 特性定理（K1298 の必要十分化）**: Grundy 値が `{0,1}` に限ることは、
+  極大安全集合のサイズのパリティが一様であることと**同値**。Grundy 2 以上の出現は
+  パリティ混在と同値。小盤 8,360 個で violations 0。`PG(2,5)` s=2 も graded
+  （全 41,572 キャップ、極大 6 が 3,100）。
+- 実験: [s-parameter-kyouen-20261125](../research/experiments/s-parameter-kyouen-20261125/report.md)・[parity-characterization-20261125](../research/experiments/parity-characterization-20261125/report.md)
 
 ## 0c. 高速な反転平面構成（新）
 

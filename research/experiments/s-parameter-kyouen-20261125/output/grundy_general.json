@@ -314,6 +314,35 @@
    "total_seconds": 12.74,
    "name": "PG2(4)_s4",
    "board": "research/experiments/projective-blocking-kyouen-20261125/output/board_pg2q4.txt"
+  },
+  {
+   "n": 31,
+   "blocks": 31,
+   "s": 2,
+   "safe": 41572,
+   "size_counts": {
+    "0": 1,
+    "1": 31,
+    "2": 465,
+    "3": 3875,
+    "4": 15500,
+    "5": 18600,
+    "6": 3100
+   },
+   "max_size": 6,
+   "maximal_by_size": {
+    "6": 3100
+   },
+   "root_grundy": 0,
+   "root_misere_win": 1,
+   "grundy_dist": {
+    "0": 19066,
+    "1": 22506
+   },
+   "enum_seconds": 0.371,
+   "total_seconds": 0.716,
+   "name": "PG2(5)_s2",
+   "board": "research/experiments/projective-blocking-kyouen-20261125/output/board_pg2q5.txt"
   }
  ]
 }

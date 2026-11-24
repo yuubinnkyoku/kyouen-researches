@@ -67,8 +67,13 @@ def solve(n: int, blocks, s: int):
     safe_total = sum(len(v) for v in by_size.values())
     t_enum = time.time() - t0
     line_masks = [sum(1 << p for p in B) for B in blocks]
-    g = bytearray([255]) * (1 << n)
-    mis = bytearray(1 << n)  # 0 = losing for player to move, 1 = winning
+    use_array = n <= 24
+    if use_array:
+        g = bytearray([255]) * (1 << n)
+        mis = bytearray(1 << n)  # 0 = losing for player to move, 1 = winning
+    else:
+        g = {}
+        mis = {}
     maximal: dict[int, int] = {}
     max_size = max(by_size)
     full = (1 << n) - 1
@@ -100,8 +105,12 @@ def solve(n: int, blocks, s: int):
     elapsed = time.time() - t0
     sizes = {k: len(v) for k, v in sorted(by_size.items())}
     grundy_dist: Counter = Counter()
-    for v in g:
-        if v != 255:
+    if use_array:
+        for v in g:
+            if v != 255:
+                grundy_dist[v] += 1
+    else:
+        for v in g.values():
             grundy_dist[v] += 1
 
     return {
