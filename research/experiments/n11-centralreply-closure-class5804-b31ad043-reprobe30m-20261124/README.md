@@ -67,9 +67,58 @@ unresolvedとして監査に記録 (silent dropなし)。
   (`ad043.p{1,2}.out`・truncated sidecar `.truncated.HHMMSS.out`はpublished
   runner guardがrename) + audit.json (audit_di.py生成)。
 
-## 実行記録 (宣言protocol・逐次)
+## 実行記録 (2026-11-24 UTC・protocol順)
 
-(執行後に追記する)
+- 宣言: commit `b3f068ab` (observed HEAD `7abca71f`・対抗宣言なし直近100コミット
+  機械走査)・fetch-back byte-identical検証済み。
+- A scaffold: commit `a5e32648` (observed HEAD `c9e534f4`) — kit 28 files・
+  fetch-back 28/28 blob sha一致 (cache 262,326Bはpush前chunked-read再構成の
+  byte-identical検証後、remote blob sha一致)。
+- val-gate fresh 4 (07:10-07:12Z): **4/4 NODE-EXACT vs published baselines**
+  (budget/result/nodes/legal/lo/hi全一致・wall_sは許容差分) — at2m×2
+  (result 0・nodes 2,000,000)・first-15m (result 2・nodes 3,651,923)・
+  second-15m (result 2・nodes 5,040,200)。quads header (95670) と
+  `# replay_done` は4文件すべてに存在。
+- anchors (derived 30M runner `runbatch_b31ad043-30m.sh`): ad054 PASS
+  result 2 (LOSS)・nodes **1,644,957** (published 15M値とnodes完全一致・p1==p2)・
+  ad055 PASS result 1 (WIN)・nodes **3,364,655** (同・p1==p2・WIN-HALT rc=45は
+  事前登録どおり runnerの正常終了)。30M派生runnerのend-to-end妥当性gate PASS。
+- target ad043 (`di_local_step.sh` invocation 1・07:14-07:16Z): 2-pass fresh-cold
+  budget 30,000,000 完走 — **PASS result 1 (WIN)・nodes 18,247,029**・
+  wall ~102s/pass (p1==p2 node-exact・本hostではp1+p2が単一invocationの260s
+  inner windowに収まった・truncated sidecarなし・cross-invocation resume設計は
+  不用起動に終わった)。invocation 2: remaining=0 ALL-DONE。
+- audit ×3 byte-identical (audit.json sha `8415f48a…`) PASS: probed 1/1・win 1・
+  loss 0・exhausted @30M 0・window-exceeded 0・unprobed 0・anchors 2・val-gate 4。
+- tamper電池 4/4 fail-closed (kit全体のscratch copy上で実行・本番output非破壊):
+  T1 p2 nodes +1 → p1/p2 row mismatch捕捉・T2 p1 WIN→LOSS反転 → 同捕捉・
+  T3 replay_done削除 → truncated fragment捕捉・T4 registry budget 29999999 →
+  A registry gate捕捉。clean control rc=0 (audit.json sha同一)・restore後再確認も同一。
+- B outputs: commit `487eacd3` (observed HEAD `a5e32648`) — files **12**
+  (status.log 1 + raw 6 + audit.json 1 + val-gate `.di-host.out` 4)。
+  **コミットメッセージの「11 files」は誤記 (実際は12 files)** — fetch-back
+  12/12 blob sha一致で件数・内容とも検証済み (Part CY B3計数誤記と同種の
+  誠実訂正記録)。
+- C: 本README実行記録追記 + MANIFEST-sha256 (40 entries・path-sorted)。
+  fetch-back検証は完了logに記載。
+
+## 結果 (honest label・verdict不消費)
+
+- **ad043: budget 30,000,000で result 1 (WIN) が2-pass fresh-cold一致**
+  (nodes 18,247,029 < 30,000,000・p1==p2 node-exact・fresh-cold・決定的探索)。
+  published 15M条件 (nodes 15,000,000 exhaustion) に対する**新条件30Mでの
+  解決**であり、同一条件再probeは一度も行っていない。
+- これによりbatch-31 (closure class 5804) 55キーのprobe-level honest label
+  集計は **LOSS 51・WIN 4 (ad024/ad028/ad043/ad055)・EXHAUSTED 0** となった
+  (55/55キーがhonest labelを持つ状態に初到達)。
+- **verdict不消費**: 本PartのWIN/LOSSはprobe-level honest labelのみ。canonical
+  adoption は pinned fail-closed merger `90711961…` 経由の別adoption Part専権
+  (ad043の30M行もbatch-31 55行と同様にadoption候補としてmergerに渡るのみ)。
+  WIN行はscrutiny owner C++第二実装 gate `9193f5b6…` 待ち。
+- nodes数 (18,247,029) は探索打刻であり距離でも証明サイズでもない。
+- **標準11×11空盤・19 central-reply roots・二石root {49,60}/{59,60}・
+  S2 {59,60}・class 1/2/4・class 5804 (55キーすべて・ad043の30M WIN labelを
+  含む) はこの時点で UNKNOWN のまま。**
 
 ## 結果の解釈 (interpretation guard)
 
