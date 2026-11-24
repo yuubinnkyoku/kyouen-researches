@@ -28,6 +28,15 @@ artifacts:
 - path: research/experiments/design-kyouen-witt-20261125/scripts/ks_ilp.py
   role: solver
   note: scipy HiGHS のバイナリ ILP で K_3, K_4, K_5 を独立に厳密計算
+- path: research/experiments/witt-s-spectrum-20261125/report.md
+  role: log
+  note: W_24 の s=1..7 完全 Grundy と dodecad 同定
+- path: research/experiments/witt-s-spectrum-20261125/output/spectrum.json
+  role: data
+  note: s 別の安全局面・極大サイズ・Grundy 分布・構造的事実
+- path: research/experiments/design-kyouen-witt-20261125/output/grundy_w24_s6.txt
+  role: data
+  note: s=6 の完全 Grundy（1,937,867 局面、極大 12 が 2,576）
 - path: research/experiments/design-kyouen-witt-20261125/scripts/summarize.py
   role: verifier
   note: Grundy 出力の解析、λ4 の再計算、上界との比較表の生成
@@ -92,6 +101,29 @@ evidence: 設計は符号理論からゼロ構成し、すべての t-部分集�
 - 全パラメータを全数検査（λ2, λ3, λ4, λ5）。
 - Grundy は出版済み `grundy_full.exe`（n≤64）で完全計算。
 - K_s は scipy HiGHS のバイナリ ILP（各ブロック ≤s 制約）で独立計算。
+
+## s-スペクトル（W_24、追記 2026-11-25）
+
+W_24 で s=1..7 の完全 Grundy を計算（s 可変エンジン、`witt-s-spectrum-20261125`）。
+
+| s | 安全局面 | 極大サイズ（個数） | パリティ | G(∅) | misère | Grundy 最大 |
+|---:|---:|---|---:|---:|---:|---:|
+| 1 | 25 | 1 (24) | 奇数 | 1 | 0 | 1 |
+| 2 | 301 | 2 (276) | 偶数 | 0 | 1 | 1 |
+| 3 | 2,325 | 3 (2,024) | 奇数 | 1 | 0 | 1 |
+| 4 | 12,951 | 4 (10,626) | 偶数 | 0 | 1 | 1 |
+| 5 | 168,799 | 6 (113,344) | 偶数 | 0 | 1 | 1 |
+| 6 | 1,937,867 | 12 (2,576) | 偶数 | 0 | 1 | 1 |
+| 7 | 7,932,035 | 12 (1,020,096), 13 (30,912) | 混在 | 0 | 0 | 2 |
+| 8 | 16,777,216 | 24 (1) | 偶数 | 0 | 1 | 1 |
+
+- s=2..6 は graded（極大サイズ一様）で Grundy `{0,1}`、s=7 のみパリティ混在で
+  Grundy 2 が 2,606,912 局面に出現（K1298 の予測どおり）。
+- s=2,3,4 の極大集合はすべての s-点集合（W_24 が 5-設計で任意の (s+1)-点集合が
+  octad に含まれるため）。
+- s=5 の極大集合はどの octad にも含まれない 6-点集合（113,344）。
+- **s=6 の極大集合は 2,576 個の dodecad**（Golay 符号の重み 12 語）と同定。
+- 実験: [witt-s-spectrum-20261125](../../experiments/witt-s-spectrum-20261125/report.md)。
 
 ## 限界
 

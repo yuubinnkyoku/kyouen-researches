@@ -124,6 +124,10 @@ K(13)≥10（K1058 訂正）、s(13)=7 はランダム測定値。
 - 任意の 4 点がブロックに載る 4-設計は `K_3 = 3`。
 - `W_22` は一般上界 `(v−2)/(k−2)+2` を非自明に達成。
 - 実験: [design-kyouen-witt-20261125](../research/experiments/design-kyouen-witt-20261125/report.md)
+- **W_24 の s-スペクトル（K1293 追記、2026-11-25）**: s=1..7 の完全 Grundy。
+  s=2..6 は graded で `{0,1}`、s=7 のみパリティ混在（12 と 13）で Grundy 2 が
+  2,606,912 局面。**s=6 の極大安全集合は 2,576 個の dodecad**（Golay 符号の重み 12 語）。
+  実験: [witt-s-spectrum-20261125](../research/experiments/witt-s-spectrum-20261125/report.md)
 
 ### 0b-3. 射影平面のブロッキング集合ゲームと parity-graded 補題（新、2026-11-25）
 
