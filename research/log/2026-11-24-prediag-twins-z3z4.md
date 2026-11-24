@@ -118,3 +118,27 @@ push 都度 fetch-back で byte 照合した。
   のみ・z4 証明では z3 層 2·[R odd] の R<4 部分を暗黙に利用）。
 - K1287 O1 残部（SLB2/SLB3 単一層族・L/Am frontier）は本項では
   非着手。K1290+ の候補として残置。
+
+## 追記: README bullet push の実記録（Commit B）
+
+- Commit A（K item + 本 log・`518c4366`）の push 前後で、Part DN adoption
+  レーンの 2 コミット（`a2acac2e` 12:27:45 kit3-fail-closed maker・
+  `32cd214d` 12:28:34 canonical merged cache head）が挟まった
+  （非接触: いずれも K1289 領域・knowledge README に触れず）。
+- README bullet push は publish 前チェックで HEAD が `32cd214d` に動いた
+  ことを検出して 1 回 ABORT（宣言時の 402d481f → 本段階は 32cd214d）。
+  Part DN 増分コミットの変更ファイル一覧で knowledge README 非接触を
+  確認の上、再実行して成功。競合時は無理せず止める規約どおりの挙動。
+- 成果: commit `25261e34`・変更は `research/knowledge/README.md` の
+  +1 行（1,038,693 bytes + 6,005 bytes = 1,044,698 bytes 純 append・
+  17 chunk next_offset ループで全読みし UTF-8 byte 長・先頭・末尾・
+  bullet 位置を機械検証してから push）。
+- fetch-back: 遠隔 `research/knowledge` 一覧の README.md blob sha
+  `73afbea6c34264de1a227877baa60c9364392297`・size 1,044,698 が
+  ローカル構成 bytes から計算した git blob sha・byte 長と完全一致
+  （blob sha は内容物 address のため byte 照合と同等）。
+- honest 記録: 誤 ABORT 1 回は head 検証の文字数設定ミス（30 文字 slice
+  に 36 文字の期待値を比較）で、push 前の機械検証が止めたもので内容への
+  影響なし。push_files の結果記録時に sandbox メモリ上限（16 MiB・19
+  操作）を超えたが、push 自体は完了しており、HEAD `25261e34`・
+  parents・ファイル統計・blob sha で反映を検証済み。
