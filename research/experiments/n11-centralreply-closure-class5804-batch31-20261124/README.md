@@ -78,3 +78,44 @@ root勝敗の主張はしない。batch-30宣言後最初の新規closure class 
 まま。** nodes数・wall秒数を勝敗として読まない。
 WIN採用は scrutiny owner C++第二実装 gate (`9193f5b6…`) 通過後の別adoption Part
 (pinned fail-closed merger `90711961…` 経由) のみ (本レーンは代行しない)。
+
+## drive-2 (Part CY drive-2 takeover, 2026-11-24): 残27キー ad029..ad055 WIN-CONTINUE probe — 55キー全てprobe-level label確定
+
+出典: drive-2宣言 (Part CY) `21fef631` (02:10:13Z) → incident amendment
+`7ff09bb8` (02:20:27Z・ad033/ad034 artifact-MISMATCH診断・drive2b事前登録) →
+原session停滞4h超 → **takeover宣言** (`research/log/2026-11-24-part-cy-drive2-takeover-batch31-class5804.md`・`5855e3f8`・
+publish-then-execute・規約時刻 05:40:13Z通過・対抗宣言なし機械確認)。
+
+- val-gate: published `.d2-host.out` (原session分 4/4 node-exact) に加え
+  takeover host fresh `.tk-host.out` 4/4 node-exact (2M×2 result 0 / 15M×2
+  result 2 nodes 3,651,923・5,040,200・baselinesと wall_s 以外全field一致)。
+- **実行 (drive2b_local_step.sh `4fcb5775…` 反復・1 invocation 2キー×2 worker・
+  budget 15M 2-pass fresh-cold・全27キー ad029..ad055)**:
+  - **PASS 26行 (うち LOSS 25行・WIN 1行)**: nodes 1,644,957 (ad054) 〜
+    11,268,913 (ad032)。全行 p1==p2 (determinism・genuine MISMATCH 0・
+    artifact MISMATCH 0・TRUNCATED-RETRY 0)。
+  - **WIN 1行 ad055 (result 1 nodes 3,364,655)**: runnerは正規の WIN-HALT
+    行をappendし、WIN-CONTINUE設計 (宣言事前登録) どおりwaveを継続して
+    batch完走 (status.log最終行 ALL-DONE確認)。
+  - **EXHAUSTED 1行 ad043 (budget 15M×2完走後消費・nodes 15,000,000)**:
+    honest UNKNOWN・同一条件での再probeはしない (高budget再probeは別
+    Partの対象)。PASS行とEXHAUSTED行の二重記録はrunnerの事前登録設計。
+  - ad033/ad034: fresh再probeで amendment診断値 (LOSS・nodes 5,883,887 /
+    4,885,748) と node-exact 一致 (独立追試成立)。
+- **batch-31 (class 5804) 集計 (55キー全てprobe-level label確定)**:
+  LOSS 51・WIN 3 (ad024 4,360,661 / ad028 12,803,283 / **ad055 3,364,655**)
+  ・EXHAUSTED 1 (ad043) = 計55。ただし **verdict不消費** (honest label)。
+  canonical adoption は全55キー確定後の reaudit を経て pinned
+  fail-closed merger `90711961…` での別adoption Part 専権。WIN行3行の採用は
+  scrutiny owner C++第二実装 gate `9193f5b6…` 通過後のみ。
+- 誠実記録: takeover実行中に1度の実行環境リセットが発生 (第1回目の
+  val-gate/初-wave分は 1 bash実行に2 stepを連結した設計違反 (CP事故の再発)
+  が原因でローカル喪失・**未出版につきevidenceとせず** kit再復元 (sha pin
+  再照合) からやり直し。出版されたのは再実行分のみ (中間 checkpoint 出版
+  A `9f021706` / B1 `49e6fa3f` / B2 `9ede0202` / B3 `a9dba61e`・全 fetch-back
+  sha256 一致検証済み)。
+
+**標準11×11空盤・19 central-reply roots・二石root・S2・class 5804 (55キー
+すべて・WIN/LOSS/EXHAUSTED行を含む) は本drive-2の実行・出版のどの時点でも
+UNKNOWNのまま。** nodes数・wall秒数を勝敗や距離として読まない。被覆・
+secured・root勝敗の主張をしない。
