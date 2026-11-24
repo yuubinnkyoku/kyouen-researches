@@ -1,0 +1,235 @@
+{
+ "batch": {
+  "adopted_loss_ids": [
+   "ae001",
+   "ae002",
+   "ae003",
+   "ae004",
+   "ae005",
+   "ae006",
+   "ae007",
+   "ae008",
+   "ae009",
+   "ae010",
+   "ae011",
+   "ae012",
+   "ae013",
+   "ae014",
+   "ae015",
+   "ae016",
+   "ae017",
+   "ae018",
+   "ae019",
+   "ae020",
+   "ae021",
+   "ae022",
+   "ae023",
+   "ae024",
+   "ae025",
+   "ae026",
+   "ae027",
+   "ae028",
+   "ae029",
+   "ae030",
+   "ae031",
+   "ae032",
+   "ae033",
+   "ae034",
+   "ae035",
+   "ae036",
+   "ae037",
+   "ae038",
+   "ae039",
+   "ae040",
+   "ae041",
+   "ae042",
+   "ae043",
+   "ae044",
+   "ae045",
+   "ae046",
+   "ae047",
+   "ae048",
+   "ae049",
+   "ae050",
+   "ae051",
+   "ae052",
+   "ae053",
+   "ae054"
+  ],
+  "adopted_loss_rows": 54,
+  "adopted_total_nodes_per_pass": 223769637,
+  "batch": 32,
+  "class_index": 8730,
+  "decisive_labels": "54 LOSS @15M (Part DM drive-1 kit raws, 2-pass fresh-cold; WIN 0 / EXHAUSTED 0 / MISMATCH 0 / TRUNCATED 0)",
+  "probed_rows": 54,
+  "unadopted_win_ids": [],
+  "unadopted_win_rows": 0
+ },
+ "cache": {
+  "base_rows": 6448,
+  "base_sha256": "7bdfa2366ef9c24b48a610d078104227555dd52ec18a566082cef2f906aab0f7",
+  "increment_rows": 54,
+  "merge_audit_runs": 3,
+  "merge_audit_sha256_each": "5ebfdbfb4aefefb2cd1d6c020f1bbe946f60c1196ee2bd2b63a998fe0305ae52",
+  "relation": "scenario == base rows + the 54 increment rows verbatim (no other row changed)",
+  "scenario_rows": 6502,
+  "scenario_sha256": "1ded9a083feabc095dd998c92002b47efc05b8666adf030501bcffc2873a9dd6",
+  "verdict_counts": {
+   "LOSS": 6344,
+   "WIN": 158
+  }
+ },
+ "class_8730": {
+  "adopted_own": 54,
+  "base_known_loss_s5": [
+   144458,
+   212464,
+   310606,
+   311726
+  ],
+  "children_total": 58,
+  "groups_served": [
+   [
+    5,
+    58
+   ],
+   [
+    5,
+    62
+   ],
+   [
+    38,
+    55
+   ],
+   [
+    38,
+    65
+   ]
+  ],
+  "not_a_root_verdict": "free_now is Board-derived scheduling bookkeeping over exact LOSS verdicts; no root verdict and no coverage claim is made",
+  "per_root_coverage_effect": {
+   "first 38": "free 13 -> 15, uncovered 106 -> 104",
+   "first 5": "free 8 -> 10, uncovered 111 -> 109"
+  },
+  "status_after": "free_now (Board-verified by the reaudit refresh: free_now 38 -> 39, board_verified 39/39, rejected 0)",
+  "status_before": "unknown",
+  "unknown_after": 0,
+  "unknown_before": 54
+ },
+ "class_status_counts_after": {
+  "excluded": 390,
+  "excluded_now": 23,
+  "free_now": 39,
+  "unknown": 34497
+ },
+ "class_status_counts_before": {
+  "excluded": 390,
+  "excluded_now": 23,
+  "free_now": 38,
+  "unknown": 34498
+ },
+ "closure_table": {
+  "entered": [],
+  "fully_stable_rows": 27,
+  "groups_served_decrease_churn": [],
+  "left": [
+   8730
+  ],
+  "left_reason": "class 8730 turned free_now (all 58 children exact LOSS in the scenario cache) and leaves the nonfree closure ranking",
+  "rank_churn_only_rows": 779,
+  "rows_after": 807,
+  "rows_before": 808,
+  "unknown_changed_classes": [
+   {
+    "class_index": 8811,
+    "own_adopted": 2,
+    "unknown_after": 52,
+    "unknown_before": 54
+   }
+  ]
+ },
+ "interpretation_guard": "only the 54 fresh LOSS rows are consumed into the canonical cache by this Part; batch-32 has no WIN row, so no verdict stays unconsumed and no scrutiny gate is in scope; class 8730 turns free_now ONLY as Board-derived scheduling bookkeeping over exact LOSS verdicts (no root verdict, no coverage claim); the 508 rows and coverage quantities quoted here are bookkeeping, never verdicts; no update8 resolution was lost; per-root coverage improved exactly at the four class-8730 groups and regressed nowhere (root 27 stays 119/119); 11x11 stays UNKNOWN",
+ "metrics": {
+  "cache_rows_in_universe": [
+   604,
+   658
+  ],
+  "joint_greedy_union_size": [
+   36902,
+   36968
+  ],
+  "known_universe_indices": [
+   627,
+   681
+  ],
+  "note": "greedy/worklist deltas are frozen-scheduler bookkeeping after the 54 frontier slots resolve; the joint greedy union INCREASES (36,902 -> 36,968) because class-8730's members leave the nonfree best-option set and re-selection churns the greedy choice; per-root free/uncovered thirds improve exactly at the four class-8730 groups; root 27 stays 119/119",
+  "per_root_coverage_delta": {
+   "38": {
+    "free": [
+     13,
+     15
+    ],
+    "greedy": [
+     3068,
+     3014
+    ],
+    "uncovered": [
+     106,
+     104
+    ]
+   },
+   "5": {
+    "free": [
+     8,
+     10
+    ],
+    "greedy": [
+     2938,
+     2884
+    ],
+    "uncovered": [
+     111,
+     109
+    ]
+   }
+  },
+  "per_root_remaining_delta": {
+   "25": -2,
+   "38": -4,
+   "5": -5
+  },
+  "unique_groups": [
+   2119,
+   2115
+  ],
+  "worklist_total": [
+   64665,
+   64609
+  ]
+ },
+ "scenario": "ADOPTED-CANONICAL",
+ "schema": "b32loss54-adoption-decomp-deltas-v1",
+ "update8": {
+  "groups_free_now_static": 131,
+  "newly_resolved_s5": [
+   285539,
+   311727
+  ],
+  "newly_resolved_within_adopted": true,
+  "remaining_after": 31672,
+  "remaining_before": 31674,
+  "resolved_after": 187,
+  "resolved_before": 185
+ },
+ "verification": {
+  "board_child_regeneration": "class-8730 canonical 58-child 5-stone boundary regenerated via Board(11).children",
+  "kit_files_verified": {
+   "kit1": 193
+  },
+  "refresh_outputs_byte_identical": true,
+  "refresh_scripts_reexecuted": [
+   "d45832a6569267d7a8187cb9935acab177d73395af4485bf496ba2661ec29c5b",
+   "41bf706fd0e2d0eb831ecfdf35eb52bf448dece8107b792856fb2d65fe93a366"
+  ]
+ }
+}
