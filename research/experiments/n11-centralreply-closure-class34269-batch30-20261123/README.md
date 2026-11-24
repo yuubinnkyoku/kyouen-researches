@@ -176,3 +176,53 @@ S2 {59,60}・class 1/2/4・class 10968・class 23964・class 5343・class 2251�
 class 34948 は本driveの実行・出版のどの時点でもUNKNOWNのまま。nodes数・wall秒数を
 勝敗として読まない。WIN採用は scrutiny owner C++第二実装 gate `9193f5b6…` 通過後の
 別adoption Part (pinned merger `90711961…` 経由) のみ。row-auditは別セッション。
+
+## drive-3 (takeover実行・2026-11-24) — 残25キー ac030..ac054 完走
+
+原宣言 `6edbcf58` (2026-11-24T02:27:43Z・Part CP drive-3・publish-then-execute) に
+対し、原オーナーが scaffold A′ `cca29581` (02:29:06Z・session script v3
+`41c5719c…` 出版 + `.d3t-host.out` 4) 以降 4時間18分 停滞 (実験dirへのcommit
+ゼロ・status.log 44行のまま・ac030..ac054 fileless UNPROBED・対抗takeover宣言なし
+を機械確認・earliest_takeover 05:57:43Z 経過) したため、takeover宣言
+`3f0aeb55` (observed HEAD `4948f19a`) で継承した。kit pin は全てfetch-back
+sha256照合済み (runbatch `f591f8c2…`・jsreplay `84585617…`・drive3_local_step
+`41c5719c…`・batch-keys `79fbd166…`・input 25 CSV全件 vs MANIFEST `2b36d896…`)。
+
+- **takeover host val-gate** (A `ce5cf7c9`): `.d3u-host.out` 4本 fresh 実行 —
+  published baselines と node-exact 4/4 (2M result=0 n=2,000,000 ×2・15M result=2
+  n=3,651,923 / 5,040,200・wall_sは比較対象外)。
+- **実行**: v3 session scriptそのまま (flock・orphan-liveness・incident-aware
+  MISMATCH pre-check 3点deltaは宣言済み)。「1 bash invocation = 1 wave」厳守・
+  2キー x 2 worker・timeout 260 内側wrap・13 waves + 空キーガード ALL-DONE 確認。
+  ac034のみ初回 260s truncated (rc=124・retryable设计) → 次waveで fresh-cold
+  再実行 (TRUNCATED-RETRY 1行・truncated file 1件は証拠として保存)。
+- **結果 (25/25キー PASS・全行 p1==p2 node-exact・real_mismatch=0)**:
+  - WIN 5行 (WIN-CONTINUE設計・verdict不消費): ac034 14,853,857 / ac041
+    10,959,413 / ac045 2,530,544 / ac048 4,701,704 / ac054 2,236,690 nodes。
+  - LOSS 16行: ac030 7,072,780・ac031 10,125,646・ac033 5,912,106・ac035
+    8,904,715・ac037 3,818,788・ac038 5,018,863・ac039 11,367,923・ac040
+    3,119,506・ac042 3,007,885・ac043 6,210,354・ac046 5,216,563・ac049
+    3,095,290・ac050 8,586,185・ac051 9,625,374・ac052 5,349,962・ac053
+    4,251,146 nodes。
+  - EXHAUSTED 4行 (honest UNKNOWN・同条件再probeなし): ac032 / ac036 /
+    ac044 / ac047 (いずれも budget 15M・nodes 15,000,000)。
+  - ac028/ac029 は原宣言の決定どおり出版済み incident-area pair をそのまま
+    採用 (再probeなし・incident 2行はindex済みで HARD-STOP不発火)。
+- **batch-30全体**: 54キーすべて probe-level label 確定 —
+  **WIN 10 / LOSS 38 / EXHAUSTED 6** (drive-1: WIN 2 / LOSS 2 — drive-2
+  (takeover): WIN 3 / LOSS 20 / EXH 2 — drive-3 (takeover): WIN 5 / LOSS 16 /
+  EXH 4)。いずれも verdictは不消費。EXHAUSTED 6行は15M budgetでは未決着の
+  honest UNKNOWNのまま。
+- **出版 (fetch-back byte一致)**: B checkpoint1 `c9e534f4` (ac030..ac040 raw 23 +
+  status.log 59行) → B checkpoint2 `092a655d` (ac041..ac054 raw 28 +
+  status.log 79行 append-only) → C (本commit): README追記 + MANIFEST-sha256
+  拡張 (139→199行・README行・status.log行はdrive-3反映後shaに更新)。
+  完了log: research/log/2026-11-24-part-cp-batch30-drive3.md。
+
+**UNKNOWN担保**: 標準11×11空盤・19 central-reply roots・二石root {49,60}/{59,60}・
+S2 {59,60}・class 1/2/4・class 10968・class 23964・class 5343・class 2251・
+**class 34269 (本batch-30の54キーすべて・EXHAUSTED行・incident対象キー
+ac028/ac029・drive-3のac030..ac054を含む)**・class 5804・class 34948 は本drive
+の実行・出版のどの時点でもUNKNOWNのまま。nodes数・wall秒数を勝敗として読まない。
+被覆・secured・root勝敗の主張をしない。WIN/LOSS採用はscrutiny owner C++第二実装
+gate `9193f5b6…` 通過後の別adoption Part (pinned merger `90711961…` 経由) のみ。
