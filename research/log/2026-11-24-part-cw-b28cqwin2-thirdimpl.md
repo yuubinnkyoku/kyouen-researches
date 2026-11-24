@@ -78,8 +78,12 @@ A-fix (`d56968e`) で行offset paginationにより全文再取得・上書きし
 **標準11×11空盤・19 central-reply roots・closure class 5343・全キー
 (batch-28 54キーを含む) はこの時点で UNKNOWN**。nodes数・expansions数・
 ttHits数を勝敗として読まない。閉鎖・被覆・secured・root勝敗の主張はしない。
-batch-28のEXHAUSTED残3行 (aa021/aa028/aa032・20Mでも未解決) は別条件候補
-としてopenのまま。
+batch-28のEXHAUSTED残は現時点で**0行**: aa021/aa028/aa032はPart CS 25M再probe
+(WIN 22,942,323 / 21,563,925 / 20,312,294)・aa050はPart CT 30M再probe (WIN
+25,541,199) で解決済み。CS/CT解決分4行は第三実装未交叉検証であり、次回の
+交叉検証候補。〔本行は訂正版: 初出版版の「EXHAUSTED残3行 (aa021/aa028/aa032・
+20Mでも未解決) open」は事実誤記 (aa021/aa028/aa032はPart CS 25Mで・aa050は
+Part CT 30MでWIN解決済み)〕
 
 ## commits
 
