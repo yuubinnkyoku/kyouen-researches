@@ -1,0 +1,70 @@
+{
+ "byte_identical": true,
+ "counts": [
+  8928,
+  360,
+  8928,
+  360,
+  1939,
+  114,
+  1939,
+  114,
+  39671,
+  1516,
+  16190
+ ],
+ "declared_stdout_sha256": "c424a680cb2b9711893edac4029c61faca253afe103d0e0d978554d572e8af50",
+ "engine_pin": "bd5f22e415a78368c9b798296bc84948d5637decbf3c21a92404d45fb12e3a92",
+ "kit": "verify_k1294",
+ "official_runs": [
+  {
+   "rc": 0,
+   "run": 1,
+   "stdout_sha256": "c424a680cb2b9711893edac4029c61faca253afe103d0e0d978554d572e8af50"
+  },
+  {
+   "rc": 0,
+   "run": 2,
+   "stdout_sha256": "c424a680cb2b9711893edac4029c61faca253afe103d0e0d978554d572e8af50"
+  },
+  {
+   "rc": 0,
+   "run": 3,
+   "stdout_sha256": "c424a680cb2b9711893edac4029c61faca253afe103d0e0d978554d572e8af50"
+  },
+  {
+   "rc": 0,
+   "run": 4,
+   "stdout_sha256": "c424a680cb2b9711893edac4029c61faca253afe103d0e0d978554d572e8af50"
+  }
+ ],
+ "overall_bad": 0,
+ "predry_stdout_sha256": "c424a680cb2b9711893edac4029c61faca253afe103d0e0d978554d572e8af50",
+ "status": "OFFICIAL-PASS",
+ "tamper_battery": {
+  "engine": {
+   "info_bytes": 0,
+   "mutated_sha": "0ea47a80761d2b20bf414cd52b1535fba56829c3a4c232d1b2f5da3f81441882",
+   "rc": 2,
+   "stdout_sha256": "94f0b052aff35862be9f57a8543e337506b322fb23199c5a8e9659a4fab388e9"
+  },
+  "z7b": {
+   "bad": 360,
+   "rc": 1
+  },
+  "z7s": {
+   "bad": 8928,
+   "rc": 1
+  },
+  "z8b": {
+   "bad": 360,
+   "rc": 1
+  },
+  "z8s": {
+   "bad": 8928,
+   "rc": 1
+  }
+ },
+ "tamper_battery_result": "5/5 fail-closed exactly as declared",
+ "total_comparisons": 80059
+}
