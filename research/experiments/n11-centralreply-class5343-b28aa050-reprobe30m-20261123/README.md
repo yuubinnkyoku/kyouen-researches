@@ -67,4 +67,57 @@ TRUNCATED-RETRY 2回でskipしhonest unresolvedとして監査に記録 (silent 
 
 ## 実行記録 (宣言protocol・逐次)
 
-(宣言出版後に追記)
+### 宣言後実行 (publish-then-execute・protocol遵守)
+
+1. **宣言 push**: `research/log/2026-11-23-part-ct-b28aa050-reprobe30m-declaration.md`
+   (observed HEAD-before-push `41e3c3d6` 対抗宣言なし機械確認)。**誠実記録**: 初回宣言pushで
+   実行側の本文抽出ミスにより 15B の `[object Object]` が混入 (commit `d14ce692`) → 直後に
+   正本 6,201B (sha256 `9bb9e7f4…`) に上書き修正 (commit `353fdfb0`・commit-pinned fetch-back
+   byte一致で確定)。混入・修正とも出版透明的に記録。Declaration/README草案段階では機械sha
+   検証が手転写pin 2件の転置ミス (ct_local_step.sh pin) を出版前に捕捉・機械注入に差替済み。
+2. **A scaffold push**: 30 files (scripts 6 / input 5 / sources 10 / val-gate 8 / README)
+   — commit `d06c4d92` (observed HEAD-before-push `353fdfb0` 本宣言)。fetch-back 30/30
+   byte-identical。
+3. **val-gate fresh 4** (宣言後): at2m×2 exhaustion nodes 2,000,000 (wall 9/9s)・
+   15m×2 3,651,923 (17s) / 5,040,200 (25s)。published baselinesとnode-exact
+   (4/4 PASS・f9 wall_s比較外: at2m-1のみ wall 9 vs published 8)。
+4. **anchors** (derived runner `runbatch_b28aa050-30m.sh` 30M): aa036 → PASS
+   `30000000,2,955659`・aa004 → PASS `30000000,1,15616012` + WIN-HALT (rc=45)。
+   published CQ rawとnode-exact。**2/2 PASS**。
+5. **target aa050** (`ct_local_step.sh` 外側290s/inner 260s・cross-invocation resume設計):
+   - **invocation 1**: p1 完走 (nodes 25,541,199・result 1・wall 137s・replay_done) →
+     p2 起動後にinner 260s timeoutで切断 (rc=124・truncated sidecar候補)。
+   - **invocation 2**: published guardがtruncated p2をsidecar `aa050.p2.truncated.001234.out`
+     に退避・status.log P2-TRUNCATED-RETRY 1行 (1回 <2でWINDOW-EXCEEDED不発火) →
+     p2 fresh-cold再実行で完走 (nodes 25,541,199・result 1・wall 137s) → PASS +
+     WIN-HALT。**aa050は WIN (result 1・nodes 25,541,199・25M < nodes ≦ 30M・2-pass
+     node-exact・p1/p2はwall込みbyte-identical (両pass同137s))**。
+   - **batch-28 (class 5343) のEXHAUSTED残は 1行 → 0行**。54キーすべてにprobe-level
+     honest labelが揃った (46 WIN unconsumed / 8 LOSS (全行Part CH/CO で canonical
+     adoption済み) / EXHAUSTED 0 / window-exceeded 0・mismatch 0)。
+     これはbookkeeping観察でありclosure主張ではない (下記interpretation guard)。
+6. **audit** (`audit_ct.py`): PASS — probed 1/1, win 1, loss 0, exhausted @30M 0,
+   window-exceeded 0, unprobed 0, anchors 2, val-gate 4。3回実行 stdout +
+   audit.json byte-identical (stdout`b7f8badc…` / json `9bf586b1…`)。tamper電池:
+   (a) p2 nodes +1→p1/p2不一致捕捉 (b) WIN→LOSS反転→status.log PASS行照合捕捉
+   (c) replay_done削除→truncated捕捉 (d) registry `reprobe_condition.budget`
+   29999999→gate A捕捉 (CQ/CS教訓どおりregistry schema機械確認の上でフィールド指定・
+   4/4 fail-closed)、各probe復元cmp・clean control byte一致。
+7. **B outputs push**: 13 files (status.log 6行 + audit.json + raw 7 (truncated
+   sidecar 1込み) + val-gate `.ct-host.out` 4) — commit `bf49af4f` (observed
+   HEAD-before-push `d06c4d92`)。fetch-back 13/13 byte-identical。
+
+### 結果の解釈 (interpretation guard)
+
+- **aa050 WIN は probe-level honest label のみ**。verdict不消費: canonical adoptionは別
+  宣言のadoption Part (pinned fail-closed merger `90711961…`) 経由のみ・WIN行はscrutiny
+  owner C++第二実装 gate 通過まで採用されない。本Partはいかなるadoptionも行わない。
+- **batch-28全54キーprobe完了はbookkeeping観察**: WIN 46行はすべてverdict不消費
+  (そのうち aa006/aa007/aa008/aa009/aa001/aa002 は第三実装交叉検証corroboration済み・
+  batch-30 drive-1は別batch)。closure class 5343の解放はWIN行adoption (scrutiny owner
+  待ち) の後に始まる。閉鎖・被覆・secured・root勝敗には一切触及しない。
+- **batch-28のEXHAUSTED残は消滅** (aa050が30Mで解決)。15M/20M/25M/30Mの全条件で
+  exhaustion行は消えた。no-same-condition-re-search規約は無傷のまま。
+- **標準11×11空盤・class 5343・全キーはこの時点で UNKNOWN**。
+- (実行 timestamps は 2026-11-24T00:05-00:15Z・dir/宣言の2026-11-23ラベルは本レーン
+  セッション開始日。時刻はすべてUTC。)
