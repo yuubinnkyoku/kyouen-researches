@@ -1,0 +1,118 @@
+PASS rows-json-pin e1aa1ecbe5045e8fd5d59cfb9ce1a81c1797fba0458e3549a2e3c84164919aa0
+PASS input-ag001-matches-rows 5,1152921505747697664,1032,85 vs 5,1152921505747697664,1032,85
+PASS input-ag002-matches-rows 5,1153485622925590528,0,88 vs 5,1153485622925590528,0,88
+PASS input-k02a-matches-rows 5,1297036692683751424,68157440,87 vs 5,1297036692683751424,68157440,87
+PASS input-l1a-matches-rows 5,13019119616,16448,116 vs 5,13019119616,16448,116
+PASS input-ng1-matches-rows 5,1297036692683751424,68157440,88 vs 5,1297036692683751424,68157440,88
+PASS input-ng2-matches-rows 6,1297036692683751424,68157440,87 vs 6,1297036692683751424,68157440,87
+PASS pin-third_impl.js 08ea958ff59c3234ec5ac55c5c40689bd0999a34e101a88ea0546800cc4a1998
+PASS pin-run_thirdimpl.sh a0b77d8330c696a5a7da2883d49110ae8703dc1673be10d3a9972ea53c885a41
+PASS pin-jsreplay.js 845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df
+PASS pin-runbatch.sh f591f8c2b67326e53873f8ea70f8d04d18423e7c8ef8359838cbafe8264f3b84
+PASS pin-verify_tbl_b34.js 4ae13bff104190a4f767436970c2dd7e9bd9a6c5515229740605af29d34ca9aa
+PASS verify_tbl_b34-diff-declared require path switched to the kit byte-clone (declared diff; CZ pin c8c52528)
+PASS rows-schema n11-centralreply-closure-b34win-thirdimpl-input-v1
+PASS target-count 2 (2 b34 small-pocket WIN rows)
+PASS target-verdict-kinds expect_third=[1, 1] replica_result=[1, 1]
+PASS published-ag001-present-done p1=True p2=True done=True
+PASS published-ag001-det-pair p1=['15000000', '1', '9149084'] p2=['15000000', '1', '9149084']
+PASS published-ag001-key-scheme 1152921505747697664,1032,85 vs 1152921505747697664,1032,85
+PASS published-ag001-claim-win published result=1 nodes=9149084 rows.json=1,9149084
+PASS published-ag002-present-done p1=True p2=True done=True
+PASS published-ag002-det-pair p1=['15000000', '1', '4893014'] p2=['15000000', '1', '4893014']
+PASS published-ag002-key-scheme 1153485622925590528,0,88 vs 1153485622925590528,0,88
+PASS published-ag002-claim-win published result=1 nodes=4893014 rows.json=1,4893014
+PASS published-status-pin 2b5c0aa57406c17539abe8d471379605f8cb2819874e6414517c6fdb1b10c2b5
+PASS published-status-4-lines 4 lines
+PASS published-status-reconciles-raw 2/2 PASS lines match pinned raws
+PASS published-status-no-exhaustion-or-mismatch 0 EXHAUSTED/MISMATCH/TRUNCATED lines
+PASS published-batch-keys-pin 47754a70c793a850dc4d7e13590fe5d134f0b850280a984aeddd4debcf4925ac
+PASS published-batch-keys-reconcile 2/2
+PASS rules-gate-quads replica quads 95670 mine quads 95670
+PASS rules-gate-tbl-mismatch0 ['triples checked 195044 mismatches 0']
+PASS replica-ag001-present p1/p2
+PASS replica-ag001-done replay_done p1=True p2=True
+PASS replica-ag001-quads quads-header p1=True p2=True
+PASS replica-ag001-det-pair p1=['85', '0', '15000000', '1', '9149084'] p2=['85', '0', '15000000', '1', '9149084']
+PASS replica-ag001-schema schema ['replay', '0', '5', '85', '0', '15000000']
+PASS replica-ag001-key 1152921505747697664,1032,85 vs 1152921505747697664,1032,85
+PASS replica-ag001-verdict-vs-published this-host result=1 nodes=9149084 vs published result=1 nodes=9149084
+PASS replica-ag002-present p1/p2
+PASS replica-ag002-done replay_done p1=True p2=True
+PASS replica-ag002-quads quads-header p1=True p2=True
+PASS replica-ag002-det-pair p1=['88', '0', '15000000', '1', '4893014'] p2=['88', '0', '15000000', '1', '4893014']
+PASS replica-ag002-schema schema ['replay', '0', '5', '88', '0', '15000000']
+PASS replica-ag002-key 1153485622925590528,0,88 vs 1153485622925590528,0,88
+PASS replica-ag002-verdict-vs-published this-host result=1 nodes=4893014 vs published result=1 nodes=4893014
+PASS anchor-k02a-present a/b
+PASS anchor-k02a-a-clean result=1 reason=clean
+PASS anchor-k02a-a-expansions exp=9106337 vs 9106337, ttH=4991527 vs 4991527
+PASS anchor-k02a-a-legal 87 vs 87
+PASS anchor-k02a-a-key 1297036692683751424:68157440
+PASS anchor-k02a-b-clean result=1 reason=clean
+PASS anchor-k02a-b-expansions exp=9106337 vs 9106337, ttH=4991527 vs 4991527
+PASS anchor-k02a-b-legal 87 vs 87
+PASS anchor-k02a-b-key 1297036692683751424:68157440
+PASS anchor-k02a-det-pair a=9106337/4991527 b=9106337/4991527
+PASS anchor-l1a-present a/b
+PASS anchor-l1a-a-clean result=2 reason=clean
+PASS anchor-l1a-a-expansions exp=7660602 vs 7660602, ttH=3951175 vs 3951175
+PASS anchor-l1a-a-legal 116 vs 116
+PASS anchor-l1a-a-key 13019119616:16448
+PASS anchor-l1a-b-clean result=2 reason=clean
+PASS anchor-l1a-b-expansions exp=7660602 vs 7660602, ttH=3951175 vs 3951175
+PASS anchor-l1a-b-legal 116 vs 116
+PASS anchor-l1a-b-key 13019119616:16448
+PASS anchor-l1a-det-pair a=7660602/3951175 b=7660602/3951175
+PASS neg-ng1-failclosed third,ng1a,5,88,,GATE_FAIL,"legal count mismatch: derived=87 declared=88"
+PASS neg-ng2-failclosed third,ng2a,6,87,,GATE_FAIL,"stone count mismatch: bits=5 declared=6"
+PASS target-ag001-present a/b
+PASS target-ag001-a-key 1152921505747697664:1032
+PASS target-ag001-a-legal 85 vs 85
+PASS target-ag001-a-quads 95670
+PASS target-ag001-b-key 1152921505747697664:1032
+PASS target-ag001-b-legal 85 vs 85
+PASS target-ag001-b-quads 95670
+PASS target-ag001-det-pair a=(1,10728035,clean) b=(1,10728035,clean)
+PASS target-ag001-verdict-agree third=1 replica=1
+PASS target-ag002-present a/b
+PASS target-ag002-a-key 1153485622925590528:0
+PASS target-ag002-a-legal 88 vs 88
+PASS target-ag002-a-quads 95670
+PASS target-ag002-b-key 1153485622925590528:0
+PASS target-ag002-b-legal 88 vs 88
+PASS target-ag002-b-quads 95670
+PASS target-ag002-det-pair a=(1,5646148,clean) b=(1,5646148,clean)
+PASS target-ag002-verdict-agree third=1 replica=1
+PASS target-all-2-agree 2/2 third-impl WIN agreements (published df-pn replica + this-host replica + third impl); inconclusive=0
+PASS unadopted-pin-raw-ag001-p1 3ac9ab81a66804efbfa766cd227f4d8abd9cca2f193ee7dec8979b8e90b5550c
+PASS unadopted-pin-raw-ag001-p2 829b960aeee3addc30c1299c1344ce7fbfacba24f28fbdd9d4764e9825d7fa87
+PASS unadopted-pin-target-csv-ag001 e09332d76bd506e7a6613e29411fbd06b55135389c02260727336375c3fb6479
+PASS unadopted-pin-raw-ag002-p1 f99796ae9f800de993332c84fcf88900411a508526f58e033da67a1cb4665bee
+PASS unadopted-pin-raw-ag002-p2 7ab4cbb46ef5c7e12379ba296353835204ab4aee68107d342d1c6f2a401d0718
+PASS unadopted-pin-target-csv-ag002 52d79efc91f4b12935e9fcf6529e3b53a896d30060e8ef5af5503fc7e6fca21e
+PASS unadopted-pin-canonical-cache 973bcd19309eae1d73b26c40c3d6839a2f35baa74658e0794f19da6f9412ca5b
+PASS unadopted-canonical-cache-rowcount 6547 s5verdict rows
+PASS unadopted-ag001-same-lo-context 8 same-lo rows vs batch-keys context 8
+PASS unadopted-canonical-cache-row-absent-ag001 s5verdict,1152921505747697664,1032,5,1,9149084 occurs 0 times (expect 0: the WIN row was never adopted)
+PASS unadopted-canonical-cache-no-key-row-ag001 []
+PASS unadopted-ag002-same-lo-context 0 same-lo rows vs batch-keys context 0
+PASS unadopted-canonical-cache-row-absent-ag002 s5verdict,1153485622925590528,0,5,1,4893014 occurs 0 times (expect 0: the WIN row was never adopted)
+PASS unadopted-canonical-cache-no-key-row-ag002 []
+PASS unadopted-pin-anchor-neg-input-k02a b6174a3fa73687af2820fd3eee16d750ca0d43ac7c2a1ea063a392710ce73887
+PASS unadopted-pin-anchor-neg-input-l1a e13d2a6c5bbaa34833dcaf8bfaaa91f99393942281f001552cb8af49cca8c98a
+PASS unadopted-pin-anchor-neg-input-ng1 8e64b9ade1c04122ac4bdc5fa5129b5fca6cfac742ed92cb149f9ffb80ad0b09
+PASS unadopted-pin-anchor-neg-input-ng2 f19cd5a30b0b868f0a0c7f12a6c47376c8ceb6e862f5c769fb14bdf74e8997dc
+PASS valgate-at2m-s5-1152921504606851072-536870946-present baseline=True host=True
+PASS valgate-at2m-s5-1152921504606851072-536870946-budget budget=2000000 vs 2000000
+PASS valgate-at2m-s5-1152921504606851072-536870946-node-exact host=['2000000', '0', '2000000'] baseline=['2000000', '0', '2000000']
+PASS valgate-at2m-s5-1188950301626860544-536870912-present baseline=True host=True
+PASS valgate-at2m-s5-1188950301626860544-536870912-budget budget=2000000 vs 2000000
+PASS valgate-at2m-s5-1188950301626860544-536870912-node-exact host=['2000000', '0', '2000000'] baseline=['2000000', '0', '2000000']
+PASS valgate-first-15m-s5-1152921504606851072-536870946-present baseline=True host=True
+PASS valgate-first-15m-s5-1152921504606851072-536870946-budget budget=15000000 vs 15000000
+PASS valgate-first-15m-s5-1152921504606851072-536870946-node-exact host=['15000000', '2', '3651923'] baseline=['15000000', '2', '3651923']
+PASS valgate-second-15m-s5-1188950301626860544-536870912-present baseline=True host=True
+PASS valgate-second-15m-s5-1188950301626860544-536870912-budget budget=15000000 vs 15000000
+PASS valgate-second-15m-s5-1188950301626860544-536870912-node-exact host=['15000000', '2', '5040200'] baseline=['15000000', '2', '5040200']
+ALL 117 GATES PASS; verdict agreements 2/2 (WIN=2); inconclusive=0; total third-impl expansions pass-one=16374183
