@@ -1,0 +1,14 @@
+=== pg23: n=13, lines=13, line sizes=[4] ===
+  brute force total = 560
+  brute force sizes = [1, 13, 78, 234, 234]
+  brute force max   = [(4, 234)]
+  PASS  ./cap_census.exe  (log testdata\pg23.txt.cap_census.exe.out)
+  PASS  ./cap_census_alt.exe  (log testdata\pg23.txt.cap_census_alt.exe.out)
+=== ag23: n=9, lines=12, line sizes=[3] ===
+  brute force total = 172
+  brute force sizes = [1, 9, 36, 72, 54]
+  brute force max   = [(4, 54)]
+  PASS  ./cap_census.exe  (log testdata\ag23.txt.cap_census.exe.out)
+  PASS  ./cap_census_alt.exe  (log testdata\ag23.txt.cap_census_alt.exe.out)
+
+RESULT: PASS (0 failures)

@@ -1,0 +1,49 @@
+==============================================================================
+PG: census cross-checks and extension identities
+==============================================================================
+  PASS  alt census agrees with main census   (total=19550350)
+  PASS  py census agrees with main census   (total=19550350)
+  size  0: caps=        1  addhist-sum=        1 ok  sum(addable)=         73 vs (k+1)*caps[k+1]=         73 ok
+  size  1: caps=       73  addhist-sum=       73 ok  sum(addable)=       5256 vs (k+1)*caps[k+1]=       5256 ok
+  size  2: caps=     2628  addhist-sum=     2628 ok  sum(addable)=     168192 vs (k+1)*caps[k+1]=     168192 ok
+  size  3: caps=    56064  addhist-sum=    56064 ok  sum(addable)=    2747136 vs (k+1)*caps[k+1]=    2747136 ok
+  size  4: caps=   686784  addhist-sum=   686784 ok  sum(addable)=   20603520 vs (k+1)*caps[k+1]=   20603520 ok
+  size  5: caps=  4120704  addhist-sum=  4120704 ok  sum(addable)=   53569152 vs (k+1)*caps[k+1]=   53569152 ok
+  size  6: caps=  8928192  addhist-sum=  8928192 ok  sum(addable)=   27471360 vs (k+1)*caps[k+1]=   27471360 ok
+  size  7: caps=  3924480  addhist-sum=  3924480 ok  sum(addable)=   11773440 vs (k+1)*caps[k+1]=   11773440 ok
+  size  8: caps=  1471680  addhist-sum=  1471680 ok  sum(addable)=    2943360 vs (k+1)*caps[k+1]=    2943360 ok
+  size  9: caps=   327040  addhist-sum=   327040 ok  sum(addable)=     327040 vs (k+1)*caps[k+1]=     327040 ok
+  size 10: caps=    32704  addhist-sum=    32704 ok  sum(addable)=          0 vs (k+1)*caps[k+1]=          0 ok
+  maximal caps: max6=2060352, max10=32704
+  containment identity for size 6: caps=8928192 vs subsets-of-maximal-caps=8928192  ok
+  containment identity for size 7: caps=3924480 vs subsets-of-maximal-caps=3924480  ok
+  containment identity for size 8: caps=1471680 vs subsets-of-maximal-caps=1471680  ok
+  containment identity for size 9: caps=327040 vs subsets-of-maximal-caps=327040  ok
+  containment identity for size 10: caps=32704 vs subsets-of-maximal-caps=32704  ok
+
+==============================================================================
+AG: census cross-checks and extension identities
+==============================================================================
+  PASS  alt census agrees with main census   (total=9136801)
+  PASS  py census agrees with main census   (total=9136801)
+  size  0: caps=        1  addhist-sum=        1 ok  sum(addable)=         64 vs (k+1)*caps[k+1]=         64 ok
+  size  1: caps=       64  addhist-sum=       64 ok  sum(addable)=       4032 vs (k+1)*caps[k+1]=       4032 ok
+  size  2: caps=     2016  addhist-sum=     2016 ok  sum(addable)=     112896 vs (k+1)*caps[k+1]=     112896 ok
+  size  3: caps=    37632  addhist-sum=    37632 ok  sum(addable)=    1618176 vs (k+1)*caps[k+1]=    1618176 ok
+  size  4: caps=   404544  addhist-sum=   404544 ok  sum(addable)=   10725120 vs (k+1)*caps[k+1]=   10725120 ok
+  size  5: caps=  2145024  addhist-sum=  2145024 ok  sum(addable)=   24950016 vs (k+1)*caps[k+1]=   24950016 ok
+  size  6: caps=  4158336  addhist-sum=  4158336 ok  sum(addable)=   11665920 vs (k+1)*caps[k+1]=   11665920 ok
+  size  7: caps=  1666560  addhist-sum=  1666560 ok  sum(addable)=    4677120 vs (k+1)*caps[k+1]=    4677120 ok
+  size  8: caps=   584640  addhist-sum=   584640 ok  sum(addable)=    1128960 vs (k+1)*caps[k+1]=    1128960 ok
+  size  9: caps=   125440  addhist-sum=   125440 ok  sum(addable)=     125440 vs (k+1)*caps[k+1]=     125440 ok
+  size 10: caps=    12544  addhist-sum=    12544 ok  sum(addable)=          0 vs (k+1)*caps[k+1]=          0 ok
+  maximal caps: max6=959616, max8=20160, max10=12544
+  containment identity for size 6: caps=4158336 vs subsets-of-maximal-caps=4158336  ok
+  containment identity for size 7: caps=1666560 vs subsets-of-maximal-caps=1666560  ok
+  containment identity for size 8: caps=584640 vs subsets-of-maximal-caps=584640  ok
+  containment identity for size 9: caps=125440 vs subsets-of-maximal-caps=125440  ok
+  containment identity for size 10: caps=12544 vs subsets-of-maximal-caps=12544  ok
+
+==============================================================================
+RESULT: PASS
+==============================================================================

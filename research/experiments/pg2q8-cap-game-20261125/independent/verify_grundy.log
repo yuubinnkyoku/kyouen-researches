@@ -1,0 +1,49 @@
+==============================================================================
+TASK 4: parity theorem, Grundy distribution, misere value
+==============================================================================
+
+--- PG(2,8) ---
+  independent census total      : 19550350
+  claimed total                 : 19550350   MATCH
+  size distribution vs claim    : MATCH
+  maximal sizes (nonzero counts): [6, 10]
+  maximal counts vs claim       : MATCH
+  every maximal size even (p=0) : PASS   (p = 0)
+  even-size caps (Grundy 0)     : 11121989
+  odd-size caps  (Grundy 1)     : 8428361
+  even+odd = 19550350 = total  PASS
+  Grundy distribution vs claim  : MATCH   claimed {0: 11121989, 1: 8428361}
+  Grundy(empty) = |empty| mod 2 = 0 : PASS
+
+--- AG(2,8) ---
+  independent census total      : 9136801
+  claimed total                 : 9136801   MATCH
+  size distribution vs claim    : MATCH
+  maximal sizes (nonzero counts): [6, 8, 10]
+  maximal counts vs claim       : MATCH
+  every maximal size even (p=0) : PASS   (p = 0)
+  even-size caps (Grundy 0)     : 5162081
+  odd-size caps  (Grundy 1)     : 3974720
+  even+odd = 9136801 = total  PASS
+  Grundy distribution vs claim  : MATCH   claimed {0: 5162081, 1: 3974720}
+  Grundy(empty) = |empty| mod 2 = 0 : PASS
+
+==============================================================================
+Direct normal-play Grundy / misere recursion on sampled caps
+==============================================================================
+
+--- PG(2,8) ---
+  sampled caps checked: 300 (sizes [6, 7, 8, 9, 10])
+  normal-play Grundy(S) = |S| mod 2 : PASS
+  misere win iff |S| even (S non-empty positions sampled) : PASS
+  misere(empty) = WIN for player to move: follows because every maximal size is even, so every complete play from empty has even length (the second player makes the last move and loses).
+
+--- AG(2,8) ---
+  sampled caps checked: 300 (sizes [6, 7, 8, 9])
+  normal-play Grundy(S) = |S| mod 2 : PASS
+  misere win iff |S| even (S non-empty positions sampled) : PASS
+  misere(empty) = WIN for player to move: follows because every maximal size is even, so every complete play from empty has even length (the second player makes the last move and loses).
+
+==============================================================================
+RESULT: PASS
+==============================================================================
