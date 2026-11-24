@@ -18,6 +18,9 @@ relations:
 - type: related
   target: K1251
   note: K_3（弧）の厳密値・下界データの s 方向への拡張
+- type: related
+  target: K1291
+  note: モーメント多項式法が K_4(9) の上界を 22 から 19 に改善（下界 16 は本項）
 artifacts:
 - path: research/experiments/inversive-spectrum-20261124/scripts/build_board.py
   role: source
@@ -50,7 +53,7 @@ artifacts:
   role: verifier
   note: 独立検証のドライバ（既存 SAT/全探索コードを import しない）
 scope: Miquelian 反転平面 M(q)（q 素数冪、q<=9）。s-弧＝各円と高々 s 点で交わる点集合、K_s はその最大サイズ。厳密値は q<=7 と (q,s)=(9,3)、部分境界は (8,4),(9,4)、s=q 行の下界は q=7,8,9。
-evidence: q=3,4,5,9 の K_3 は既知値（5,5,6,9）と一致しパイプラインを較正。新規厳密値 K_4(4)=9, K_4(5)=10, K_4(7)=13, K_5(5)=16 は (i) 貪欲証人または SAT モデルの独立証人検査、(ii) 最終 UNSAT の cadical195/glucose3 二重確認、(iii) q<=5 の独立全探索一致、で確定。さらに SAT 非依存の独立実装（独自の体模型で 350/350 円を再構成、C 全探索と分枝限定、q=7 は 3-推移性で固定 3 点）が 3 値を再確認し discrepancies 0（independent/results.json）。q=8,s=4 は K=14（n=15,16,17,18 の UNSAT を cadical195、n=15 と n=18 を glucose3 でも確認）、q=9,s=4 は 16<=K<=22。s=q 行は k=33,45,57 の明示的 q-弧（各円と q 点以下）で下界。双対 tau_d=q^2+1-K_s は定理 K1274 の d(q+1) 下界と整合（全行で >=）。残余の証人検証は scripts/verify_witness.py による。
+evidence: q=3,4,5,9 の K_3 は既知値（5,5,6,9）と一致しパイプラインを較正。新規厳密値 K_4(4)=9, K_4(5)=10, K_4(7)=13, K_5(5)=16 は (i) 貪欲証人または SAT モデルの独立証人検査、(ii) 最終 UNSAT の cadical195/glucose3 二重確認、(iii) q<=5 の独立全探索一致、で確定。さらに SAT 非依存の独立実装（独自の体模型で 350/350 円を再構成、C 全探索と分枝限定、q=7 は 3-推移性で固定 3 点）が 3 値を再確認し discrepancies 0（independent/results.json）。q=8,s=4 は K=14（n=15,16,17,18 の UNSAT を cadical195、n=15 と n=18 を glucose3 でも確認）、q=9,s=4 は 16<=K<=19（上界は K1291）。s=q 行は k=33,45,57 の明示的 q-弧（各円と q 点以下）で下界。双対 tau_d=q^2+1-K_s は定理 K1274 の d(q+1) 下界と整合（全行で >=）。残余の証人検証は scripts/verify_witness.py による。
 ---
 
 # 反転平面の K_4・K_5 厳密値と s=q 行の下界（SAT 二重実装、q<=9）
@@ -90,7 +93,7 @@ q=4,5 では `τ_1 = 2q`（Bruen–Rothschild 下界が tight）で `K_q = (q-1)
 
 | q | s | 下界（証人） | 上界（証明） |
 |---:|---:|---:|---|
-| 9 | 4 | 16 | 22（定理上界。SAT は n=17 で 90 秒タイムアウト） |
+| 9 | 4 | 16 | 19（K1291 の `K_4 ≤ 2q+1`。SAT は n=17 で 90 秒タイムアウト） |
 
 ## 方法
 
