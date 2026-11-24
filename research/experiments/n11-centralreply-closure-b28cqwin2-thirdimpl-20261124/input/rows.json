@@ -1,0 +1,89 @@
+{
+ "schema": "n11-centralreply-closure-b28cqwin2-thirdimpl-input-v1",
+ "sources": {
+  "b28cqwin": "sources/raw aa004/aa035 p1+p2 + sources/status-cq.log + sources/log-cq-reprobe.md + batch-keys-b28.json + published Part CQ batch-28 EXHAUSTED 11-row 20M-reprobe canonical outputs (experiment n11-centralreply-class5343-b28exhausted-reprobe-20261123, completion log research/log/2026-11-23-part-cq-b28exhausted-reprobe.md), commit-pinned raw fetch; batch-keys sha256 af19208f..; the two targets are the CQ 20M newly-solved WIN rows (budget 20000000)",
+  "b28_batch_keys_sha256": "af19208fafb61cc20892fa968bc373fe2c4f79da94744dfeed9d2f40ea8481e5",
+  "b28cq_status_sha256": "afc4873482219ec605f62da9a2b543ca8a10f5a2a08d3b3a5ac6de36475704af",
+  "b28cq_completion_log_sha256": "be208f9caaff4bae8232e2293417d6859e583c472bdef4f955c6917bab221d64",
+  "unadopted": "published Part CO 7-LOSS adoption re-audit (experiment n11-centralreply-class5343-loss7-adoption-reaudit-20261123): merged canonical cache sha256 854800f3.. (6,301 rows = Part CH 6,294 + 7 batch-28 LOSS rows) is UNCHANGED and carries NO row for aa004/aa035 (machine-gated both by this maker and by audit_cw.py G6); increment bd5ef7d7.., increments-manifest b47e07ca.., pinned fail-closed merger 90711961..; DECLARED batch-28 adaptation: the two cross-verified CQ-WIN rows appear ONLY in the manifest's exhausted_excluded_ids (CO-time 15M EXHAUSTED roster) and member bookkeeping (probed_ids/resolved_ids), NOT in any adopted/win id list; they are UNADOPTED honest labels pending the scrutiny owner C++ second-implementation gate 9193f5b6 unchanged",
+  "anchors": "published Part G/K/O/P/T/W/AA/AD/AG/AL/AR/AX/AZ/BF/BK/BM/BS/BV/BW/BX/BY/CC/CL/CM/CR anchor/negative values, input CSVs byte-equality-checked against the published Part BF experiment (provenance chain AR -> BF -> BK -> BM -> BS -> BV -> BW -> BX -> BY -> CC -> CL -> CM -> CR -> CW)"
+ },
+ "consumed_into_canonical_cache": false,
+ "unadopted_win_rows": true,
+ "unadopted_loss_rows": false,
+ "canonical_cache_sha256_unchanged": "854800f38349277924bc77c50d92a6d5252f11bdb2b2cdb54a14ca2b4f6b087d",
+ "targets": [
+  {
+   "key_id": "aa004",
+   "stones": 5,
+   "lo": 1171516445255794689,
+   "hi": 0,
+   "legal": 91,
+   "replica_result": 1,
+   "replica_nodes": 15616012,
+   "source": "part-cq-b28exhausted-reprobe20m",
+   "s5_index": 118693,
+   "membership_class_count": 4,
+   "expect_third": 1
+  },
+  {
+   "key_id": "aa035",
+   "stones": 5,
+   "lo": 1152921504606846978,
+   "hi": 4228,
+   "legal": 96,
+   "replica_result": 1,
+   "replica_nodes": 15424243,
+   "source": "part-cq-b28exhausted-reprobe20m",
+   "s5_index": 199720,
+   "membership_class_count": 4,
+   "expect_third": 1
+  }
+ ],
+ "anchors": [
+  {
+   "key_id": "k02a",
+   "stones": 5,
+   "lo": 1297036692683751424,
+   "hi": 68157440,
+   "legal": 87,
+   "expect_third": 1,
+   "anchor_expansions": 9106337,
+   "anchor_ttHits": 4991527,
+   "expect_kind": "win",
+   "replica_result": null,
+   "replica_nodes": null
+  },
+  {
+   "key_id": "l1a",
+   "stones": 5,
+   "lo": 13019119616,
+   "hi": 16448,
+   "legal": 116,
+   "expect_third": 2,
+   "anchor_expansions": 7660602,
+   "anchor_ttHits": 3951175,
+   "expect_kind": "loss",
+   "replica_result": null,
+   "replica_nodes": null
+  }
+ ],
+ "negatives": [
+  {
+   "key_id": "ng1",
+   "lo": 1297036692683751424,
+   "hi": 68157440,
+   "legal": 88,
+   "stones": 5,
+   "why": "legal+1 vs derived 87"
+  },
+  {
+   "key_id": "ng2",
+   "lo": 1297036692683751424,
+   "hi": 68157440,
+   "legal": 87,
+   "stones": 6,
+   "why": "stones 6 vs actual 5"
+  }
+ ]
+}
