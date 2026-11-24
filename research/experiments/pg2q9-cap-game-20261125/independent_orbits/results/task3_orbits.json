@@ -1,0 +1,215 @@
+{
+ "model_ok": true,
+ "n_generators": 14,
+ "generator_labels": [
+  "E_01(1)",
+  "E_01(3)",
+  "E_02(1)",
+  "E_02(3)",
+  "E_10(1)",
+  "E_10(3)",
+  "E_12(1)",
+  "E_12(3)",
+  "E_20(1)",
+  "E_20(3)",
+  "E_21(1)",
+  "E_21(3)",
+  "diag(i,1,1)",
+  "cycle(012)"
+ ],
+ "orbits": {
+  "6": {
+   "start_cap_board": [
+    4,
+    9,
+    20,
+    32,
+    69,
+    84
+   ],
+   "start_cap_model": [
+    2,
+    9,
+    20,
+    35,
+    45,
+    57
+   ],
+   "orbit_size": 707616,
+   "claim": 707616,
+   "matches_claim": true,
+   "seconds": 23.6,
+   "sampled_members": 100,
+   "sampled_bad": 0
+  },
+  "7": {
+   "start_cap_board": [
+    16,
+    47,
+    51,
+    56,
+    60,
+    80,
+    82
+   ],
+   "start_cap_model": [
+    13,
+    50,
+    55,
+    74,
+    81,
+    83,
+    90
+   ],
+   "orbit_size": 2021760,
+   "claim": 2021760,
+   "matches_claim": true,
+   "seconds": 74.6,
+   "sampled_members": 100,
+   "sampled_bad": 0
+  },
+  "8": {
+   "start_cap_board": [
+    32,
+    39,
+    42,
+    47,
+    56,
+    59,
+    84,
+    87
+   ],
+   "start_cap_model": [
+    35,
+    57,
+    63,
+    66,
+    72,
+    74,
+    83,
+    89
+   ],
+   "orbit_size": 5307120,
+   "claim": 5307120,
+   "matches_claim": true,
+   "seconds": 199.6,
+   "sampled_members": 100,
+   "sampled_bad": 0
+  },
+  "10": {
+   "start_cap_board": [
+    6,
+    9,
+    27,
+    32,
+    34,
+    37,
+    45,
+    75,
+    77,
+    82
+   ],
+   "start_cap_model": [
+    8,
+    9,
+    24,
+    31,
+    35,
+    48,
+    53,
+    55,
+    64,
+    69
+   ],
+   "orbit_size": 58968,
+   "claim": 58968,
+   "matches_claim": true,
+   "seconds": 1.9,
+   "sampled_members": 100,
+   "sampled_bad": 0
+  }
+ },
+ "frame_census_seconds": 0.01,
+ "n_frames": 1769040,
+ "caps_through_frame": {
+  "4": 1,
+  "5": 42,
+  "6": 441,
+  "7": 1020,
+  "8": 315,
+  "9": 42,
+  "10": 7
+ },
+ "maximal_through_frame": {
+  "4": 0,
+  "5": 0,
+  "6": 6,
+  "7": 40,
+  "8": 210,
+  "9": 0,
+  "10": 7
+ },
+ "total_caps_by_size": {
+  "0": 1,
+  "1": 91,
+  "2": 4095,
+  "3": 110565,
+  "4": 1769040,
+  "5": 14859936,
+  "6": 52009776,
+  "7": 51554880,
+  "8": 7960680,
+  "9": 589680,
+  "10": 58968
+ },
+ "maximal_caps_by_size": {
+  "4": 0,
+  "5": 0,
+  "6": 707616,
+  "7": 2021760,
+  "8": 5307120,
+  "9": 0,
+  "10": 58968
+ },
+ "census_matches_parent": true,
+ "no_maximal_9_caps": true,
+ "maximal_5_caps": 0,
+ "nonzero_symmetric_matrices": 531440,
+ "nondegenerate_symmetric_matrices": 471744,
+ "conics_mod_scalars": 58968,
+ "conics_formula_q5_minus_q2": 58968,
+ "quadratic_form_space_dim_through_cap": 1,
+ "conic_form_matrix": [
+  [
+   5,
+   6,
+   5
+  ],
+  [
+   6,
+   3,
+   2
+  ],
+  [
+   5,
+   2,
+   3
+  ]
+ ],
+ "conic_form_nonsingular": true,
+ "conic_point_set": [
+  8,
+  9,
+  24,
+  31,
+  35,
+  48,
+  53,
+  55,
+  64,
+  69
+ ],
+ "cap_is_conic_point_set": true,
+ "all_orbits_match_claim": true,
+ "elapsed_s": 302.8
+}

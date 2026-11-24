@@ -1,0 +1,131 @@
+{
+ "board": {
+  "name": "board_pg2q9.txt",
+  "n": 91,
+  "nlines": 91,
+  "all_lines_size_10": true,
+  "line_sizes": [
+   10
+  ],
+  "point_degree_all_10": true,
+  "n_pairs": 4095,
+  "pair_lambda_1": true,
+  "any_two_lines_meet_once": true,
+  "distinct_lines": true,
+  "all_ok": true
+ },
+ "caps": {
+  "6": {
+   "cap": [
+    4,
+    9,
+    20,
+    32,
+    69,
+    84
+   ],
+   "size": 6,
+   "distinct": true,
+   "in_range": true,
+   "max_points_on_a_line": 2,
+   "is_cap": true,
+   "lines_with_3plus": [],
+   "n_secants": 15,
+   "n_tangents": 30,
+   "n_external": 46,
+   "secant_count_expected": 15,
+   "secant_count_ok": true,
+   "addable_points": [],
+   "is_maximal": true,
+   "addable_points_recheck": [],
+   "maximal_recheck_agrees": true,
+   "PASS": true
+  },
+  "7": {
+   "cap": [
+    16,
+    47,
+    51,
+    56,
+    60,
+    80,
+    82
+   ],
+   "size": 7,
+   "distinct": true,
+   "in_range": true,
+   "max_points_on_a_line": 2,
+   "is_cap": true,
+   "lines_with_3plus": [],
+   "n_secants": 21,
+   "n_tangents": 28,
+   "n_external": 42,
+   "secant_count_expected": 21,
+   "secant_count_ok": true,
+   "addable_points": [],
+   "is_maximal": true,
+   "addable_points_recheck": [],
+   "maximal_recheck_agrees": true,
+   "PASS": true
+  },
+  "8": {
+   "cap": [
+    32,
+    39,
+    42,
+    47,
+    56,
+    59,
+    84,
+    87
+   ],
+   "size": 8,
+   "distinct": true,
+   "in_range": true,
+   "max_points_on_a_line": 2,
+   "is_cap": true,
+   "lines_with_3plus": [],
+   "n_secants": 28,
+   "n_tangents": 24,
+   "n_external": 39,
+   "secant_count_expected": 28,
+   "secant_count_ok": true,
+   "addable_points": [],
+   "is_maximal": true,
+   "addable_points_recheck": [],
+   "maximal_recheck_agrees": true,
+   "PASS": true
+  },
+  "10": {
+   "cap": [
+    6,
+    9,
+    27,
+    32,
+    34,
+    37,
+    45,
+    75,
+    77,
+    82
+   ],
+   "size": 10,
+   "distinct": true,
+   "in_range": true,
+   "max_points_on_a_line": 2,
+   "is_cap": true,
+   "lines_with_3plus": [],
+   "n_secants": 45,
+   "n_tangents": 10,
+   "n_external": 36,
+   "secant_count_expected": 45,
+   "secant_count_ok": true,
+   "addable_points": [],
+   "is_maximal": true,
+   "addable_points_recheck": [],
+   "maximal_recheck_agrees": true,
+   "PASS": true
+  }
+ },
+ "all_PASS": true
+}

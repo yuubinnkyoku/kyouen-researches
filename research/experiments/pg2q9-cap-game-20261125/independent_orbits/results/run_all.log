@@ -1,0 +1,179 @@
+==============================================================================
+RUN: python task1_caps.py
+==============================================================================
+board: 91 points, 91 lines; axioms ok = True
+
+size 6: cap=[4, 9, 20, 32, 69, 84]
+  is_cap=True (max points on a line = 2), secants=15 (expect 15), tangents=30, external=46
+  is_maximal=True (addable points = [])
+  PASS=True
+
+size 7: cap=[16, 47, 51, 56, 60, 80, 82]
+  is_cap=True (max points on a line = 2), secants=21 (expect 21), tangents=28, external=42
+  is_maximal=True (addable points = [])
+  PASS=True
+
+size 8: cap=[32, 39, 42, 47, 56, 59, 84, 87]
+  is_cap=True (max points on a line = 2), secants=28 (expect 28), tangents=24, external=39
+  is_maximal=True (addable points = [])
+  PASS=True
+
+size 10: cap=[6, 9, 27, 32, 34, 37, 45, 75, 77, 82]
+  is_cap=True (max points on a line = 2), secants=45 (expect 45), tangents=10, external=36
+  is_maximal=True (addable points = [])
+  PASS=True
+
+TASK 1: PASS
+==============================================================================
+RUN: python task2_model_iso.py
+==============================================================================
+== 1. GF(9) ==
+{"add_associative": true, "add_commutative": true, "additive_group_is_C3xC3": true, "all_nonzero_invertible": true, "char_3": true, "distributive": true, "i_squared_is_minus_1": true, "mul_associative": true, "mul_commutative": true, "multiplicative_group_cyclic_C8": true, "multiplicative_orders": {"1": 1, "2": 1, "4": 2, "8": 4}, "no_zero_divisors": true, "x2_plus_1_irreducible": true, "zero_one": true}
+
+== 2. own model of PG(2,9) ==
+91 canonical vectors, 91 lines of 10; axioms ok = True (pairs=4095)
+
+== 3. board file ==
+board axioms ok = True
+
+== 4. explicit bijection board -> model ==
+  isomorphism search nodes: 2
+verified on all 91 lines: True
+phi(board 0..9) = [0, 1, 4, 7, 2, 5, 8, 3, 6, 9]
+  line  0 -> [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  line  1 -> [0, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+  line 45 -> [2, 15, 22, 32, 45, 52, 62, 66, 73, 83]
+  line 90 -> [9, 15, 20, 34, 37, 54, 59, 71, 76, 84]
+
+== 5. |PGL(3,9)| ==
+|GL(3,9)| = 728*720*648 = 339655680; |PGL| = |GL|/8 = 42456960
+4-subsets: 2672670 = 1769040 frames + 903630 with a collinear triple
+ordered frames = 24 * 1769040 = 42456960
+91*90*81*64 = 42456960 (p1 != p0, p2 off a line, p3 off 3 sides)
+all three counts agree: True
+random frame pairs: 60/60 unique invertible projectivities (sharp transitivity)
+non-frame 4-tuples: 0/72 admit an invertible map (must be 0)
+
+== 6. own generators (permutations of the 91 points) ==
+  E_01(1)      det=1 order=3
+  E_01(3)      det=1 order=3
+  E_02(1)      det=1 order=3
+  E_02(3)      det=1 order=3
+  E_10(1)      det=1 order=3
+  E_10(3)      det=1 order=3
+  E_12(1)      det=1 order=3
+  E_12(3)      det=1 order=3
+  E_20(1)      det=1 order=3
+  E_20(3)      det=1 order=3
+  E_21(1)      det=1 order=3
+  E_21(3)      det=1 order=3
+  diag(i,1,1)  det=3 order=4
+  cycle(012)   det=1 order=3
+scalar multiple gives the same point permutation: True
+
+TASK 2: PASS   (3.78 s)
+==============================================================================
+RUN: python task3_orbits.py 6 7 8 10
+==============================================================================
+== generators ==
+14 generators: ['E_01(1)', 'E_01(3)', 'E_02(1)', 'E_02(3)', 'E_10(1)', 'E_10(3)', 'E_12(1)', 'E_12(3)', 'E_20(1)', 'E_20(3)', 'E_21(1)', 'E_21(3)', 'diag(i,1,1)', 'cycle(012)']
+chunk tables built in 0.17s
+
+== (a) BFS orbits of the start caps ==
+    ... 697,640 masks (12.2s)
+  k= 6: orbit size =    707,616   claim =    707,616   match = True   (23.6s; 100 sampled members all maximal 6-caps: True)
+    ... 560,133 masks (3.2s)
+    ... 1,754,163 masks (20.2s)
+  k= 7: orbit size =  2,021,760   claim =  2,021,760   match = True   (74.6s; 100 sampled members all maximal 7-caps: True)
+    ... 611,145 masks (3.3s)
+    ... 2,816,709 masks (22.1s)
+    ... 5,229,840 masks (105.1s)
+  k= 8: orbit size =  5,307,120   claim =  5,307,120   match = True   (199.6s; 100 sampled members all maximal 8-caps: True)
+  k=10: orbit size =     58,968   claim =     58,968   match = True   (1.9s; 100 sampled members all maximal 10-caps: True)
+
+== (b) independent census via one projective frame ==
+frame = (0, 1, 10, 20) (no three collinear)
+    k    T_k    all k-caps        parent   m_k  maximal k-caps     parent
+    4      1     1,769,040     1,769,040     0               0          0   ok
+    5     42    14,859,936    14,859,936     0               0          0   ok
+    6    441    52,009,776    52,009,776     6         707,616    707,616   ok
+    7   1020    51,554,880    51,554,880    40       2,021,760  2,021,760   ok
+    8    315     7,960,680     7,960,680   210       5,307,120  5,307,120   ok
+    9     42       589,680       589,680     0               0          0   ok
+   10      7        58,968        58,968     7          58,968     58,968   ok
+  census matches the claimed counts: True
+  maximal 9-caps: 0   maximal 5-caps: 0
+
+== (c) 10-caps = conics ==
+  symmetric 3x3 forms over GF(9): 531440 nonzero, 471744 nondegenerate -> 58968 conics mod scalars  (q^5-q^2 = 58968)   [2.2s]
+  forms through the start 10-cap: 1-dimensional; nonsingular = True; zero set equals the cap = True
+
+TASK 3: PASS   (302.8 s)
+==============================================================================
+RUN: python task4_second_caps.py
+==============================================================================
+setup ok; fixed projective frame = (0, 1, 10, 20) (model labels)
+maximal caps through the frame, by size: k=5:0, k=6:6, k=7:40, k=8:210, k=9:0, k=10:7
+400 random greedy maximal caps on the board plane in 0.2s; sizes: 6:6, 7:18, 8:330, 10:46
+conic x^2+y^2+z^2: size=10 cap=True maximal=True nonsingular=True
+  k= 6: second cap [0, 1, 10, 20, 72, 89] (by incidence DFS through a fixed frame); cap=True maximal=True; 60 explicit group elements map start -> second (claimed |Stab| = 60); board-line-preserving = True [0.2s]
+  k= 7: second cap [0, 1, 10, 20, 34, 49, 75] (by incidence DFS through a fixed frame); cap=True maximal=True; 21 explicit group elements map start -> second (claimed |Stab| = 21); board-line-preserving = True [0.4s]
+  k= 8: second cap [0, 1, 10, 20, 34, 45, 66, 78] (by incidence DFS through a fixed frame); cap=True maximal=True; 8 explicit group elements map start -> second (claimed |Stab| = 8); board-line-preserving = True [0.8s]
+  extra check: conic x^2+y^2+z^2 lies in the start orbit (720 explicit elements found): True
+  k=10: second cap [0, 1, 10, 20, 34, 48, 58, 69, 81, 86] (by incidence DFS through a fixed frame); cap=True maximal=True; 720 explicit group elements map start -> second (claimed |Stab| = 720); board-line-preserving = True [2.4s]
+
+TASK 4: PASS   (6.4 s)
+==============================================================================
+RUN: python task5_stabilizers.py
+==============================================================================
+orbit sizes from: own BFS (results/task3_orbits.json) -> {6: 707616, 7: 2021760, 8: 5307120, 10: 58968}
+|PGL(3,9)| = 42,456,960
+  k= 6: |Stab| =   60 (claim   60, match=True); |Stab|*orbit = 42,456,960 = |PGL|: True; element orders {1: 1, 2: 15, 3: 20, 5: 24}; abelian=False cyclic=False derived=60 (0.2s)
+  k= 7: |Stab| =   21 (claim   21, match=True); |Stab|*orbit = 42,456,960 = |PGL|: True; element orders {1: 1, 3: 14, 7: 6}; abelian=False cyclic=False derived=7 (0.4s)
+  k= 8: |Stab| =    8 (claim    8, match=True); |Stab|*orbit = 42,456,960 = |PGL|: True; element orders {1: 1, 2: 5, 4: 2}; abelian=False cyclic=False derived=2 (0.8s)
+  k=10: |Stab| =  720 (claim  720, match=True); |Stab|*orbit = 42,456,960 = |PGL|: True; element orders {1: 1, 2: 81, 3: 80, 4: 90, 5: 144, 8: 180, 10: 144}; abelian=False cyclic=False derived=360 (2.5s)
+  identification k= 6: A5 = PSL(2,5) (the simple group of order 60). Element orders {1: 1, 2: 15, 3: 20, 5: 24} = 1,15,20,24; perfect = True; action on the 6 cap points transitive = True, 2-transitive = True (so the 6 points are P^1(5) with A5 acting as PSL(2,5)).
+  identification k= 7: Non-abelian group of order 21 = Frobenius group C7 : C3. Element orders {1: 1, 3: 14, 7: 6}: 6 elements of order 7 (a normal Sylow 7-subgroup) and 14 elements of order 3; abelian = False, cyclic = False, derived subgroup order 7.
+  identification k= 8: order 8, element orders {1: 1, 2: 5, 4: 2}, abelian = False, cyclic = False -> D4 (dihedral of order 8)
+  identification k=10: PGL(2,9), order 720, acting on the 10 points of the conic sharply 3-transitively (True). Element orders {1: 1, 2: 81, 3: 80, 4: 90, 5: 144, 8: 180, 10: 144}; derived subgroup order 360 (an index-2 subgroup, so not perfect).  NB: this group is NOT S6 even though |S6| = 720: S6 has no elements of order 8 or 10, while this group has 180 of order 8 and 144 of order 10.  The distribution coincides with a direct computation from 2x2 matrices over GF(9) (extra_checks.py) and with the classical PGL(2,9) = M10.
+
+TASK 5: PASS   (3.9 s)
+==============================================================================
+RUN: python extra_checks.py
+==============================================================================
+== 1. census for a second frame ==
+  frame1 = (0, 1, 10, 20): caps/frame [1, 42, 441, 1020, 315, 42, 7]
+  frame2 = (0, 1, 10, 21): caps/frame [1, 42, 441, 1020, 315, 42, 7]
+  identical per-frame counts: True
+
+== 2. every maximal k-cap through the frame is in the start orbit ==
+  k= 6: 6/6 other maximal 6-caps through the frame are projectively equivalent to the start cap [0.0s]
+  k= 7: 40/40 other maximal 7-caps through the frame are projectively equivalent to the start cap [0.4s]
+  k= 8: 5/5 other maximal 8-caps through the frame are projectively equivalent to the start cap [0.5s]
+  k=10: 7/7 other maximal 10-caps through the frame are projectively equivalent to the start cap [0.0s]
+
+== 3. structural identities ==
+  caps10_eq_conics: True
+  caps9_eq_10x_conics: True
+  nonmax8_eq_45x_conics: True
+  total8_eq_max8_plus_45conics: True
+  maximal caps total = 8,095,464 (parent analysis.json: 8,095,464)
+  all caps total = 128,917,712 (parent analysis.json: 128,917,712)
+
+== 4. 9-caps and non-maximal 8-caps live in conics ==
+  42 9-caps through the frame, all inside one of the 7 conics through the frame: True
+  105 non-maximal 8-caps through the frame, all inside such a conic: True
+
+== 5. group-order arguments ==
+  |GL(3,9)| = 339,655,680; |SL(3,9)| = 42,456,960; |PGL| = 24*#frames = 42,456,960
+  cubing on GF(9)^* is a bijection: True ([1, 2, 3, 4, 5, 6, 7, 8])
+  gcd(60,21,8,720) = 1
+
+== 6. the 720-element stabilizer is PGL(2,9), not S6 ==
+  |PGL(2,9)| = 720 from 5760 2x2 matrices; element orders {1: 1, 2: 81, 3: 80, 4: 90, 5: 144, 8: 180, 10: 144}
+  720-element cap stabilizer element orders: {1: 1, 2: 81, 3: 80, 4: 90, 5: 144, 8: 180, 10: 144}; agree = True
+  S6 would have orders {1: 1, 2: 75, 3: 80, 4: 180, 5: 144, 6: 240}; the stabilizer is NOT S6: True
+
+EXTRA CHECKS: PASS   (1.1 s)
+
+All steps completed.

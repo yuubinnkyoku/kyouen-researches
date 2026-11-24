@@ -1,0 +1,152 @@
+{
+ "framecounts": {
+  "frame1": {
+   "4": 1,
+   "5": 42,
+   "6": 441,
+   "7": 1020,
+   "8": 315,
+   "9": 42,
+   "10": 7
+  },
+  "frame2": {
+   "4": 1,
+   "5": 42,
+   "6": 441,
+   "7": 1020,
+   "8": 315,
+   "9": 42,
+   "10": 7
+  },
+  "maximal_frame1": {
+   "4": 0,
+   "5": 0,
+   "6": 6,
+   "7": 40,
+   "8": 210,
+   "9": 0,
+   "10": 7
+  },
+  "maximal_frame2": {
+   "4": 0,
+   "5": 0,
+   "6": 6,
+   "7": 40,
+   "8": 210,
+   "9": 0,
+   "10": 7
+  },
+  "identical": true
+ },
+ "other_caps_in_orbit": {
+  "6": {
+   "checked": 6,
+   "in_orbit": 6,
+   "seconds": 0.0
+  },
+  "7": {
+   "checked": 40,
+   "in_orbit": 40,
+   "seconds": 0.4
+  },
+  "8": {
+   "checked": 5,
+   "in_orbit": 5,
+   "seconds": 0.5
+  },
+  "10": {
+   "checked": 7,
+   "in_orbit": 7,
+   "seconds": 0.0
+  }
+ },
+ "identities": {
+  "total_caps": {
+   "4": 1769040,
+   "5": 14859936,
+   "6": 52009776,
+   "7": 51554880,
+   "8": 7960680,
+   "9": 589680,
+   "10": 58968
+  },
+  "maximal_caps": {
+   "4": 0,
+   "5": 0,
+   "6": 707616,
+   "7": 2021760,
+   "8": 5307120,
+   "9": 0,
+   "10": 58968
+  },
+  "conics": 58968,
+  "caps10_eq_conics": true,
+  "caps9_eq_10x_conics": true,
+  "nonmax8_eq_45x_conics": true,
+  "total8_eq_max8_plus_45conics": true,
+  "maximal_total": 8095464,
+  "parent_maximal_total": 8095464,
+  "all_caps_total": 128917712,
+  "parent_all_caps_total": 128917712
+ },
+ "nine_in_conic": {
+  "n": 42,
+  "all_in_conic": true
+ },
+ "nonmax8_in_conic": {
+  "n": 105,
+  "all_in_conic": true
+ },
+ "group_order_argument": {
+  "gl": 339655680,
+  "sl": 42456960,
+  "pgl_frame_count": 42456960,
+  "sl_equals_pgl": true,
+  "cubes_of_GF9star": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8
+  ],
+  "cubing_is_bijection": true,
+  "gcd_60_21_8_720": 1,
+  "conclusion": "|SL(3,9)| = |GL|/8 = |PGL(3,9)|; cubing is a bijection of GF(9)^*, so GL = SL.Z and PGL = PSL = SL.  Hence the 12 elementary transvections generate all of PGL(3,9); and because gcd(60,21,8,720) = 1, any subgroup whose orbits on the four families have the full sizes must equal PGL(3,9)."
+ },
+ "pgl29": {
+  "order": 720,
+  "element_order_histogram": {
+   "1": 1,
+   "2": 81,
+   "3": 80,
+   "4": 90,
+   "5": 144,
+   "8": 180,
+   "10": 144
+  },
+  "stabilizer20_order_histogram": {
+   "1": 1,
+   "2": 81,
+   "3": 80,
+   "4": 90,
+   "5": 144,
+   "8": 180,
+   "10": 144
+  },
+  "histograms_agree": true,
+  "s6_element_order_histogram": {
+   "1": 1,
+   "2": 75,
+   "3": 80,
+   "4": 180,
+   "5": 144,
+   "6": 240
+  },
+  "stabilizer_is_not_S6": true
+ },
+ "PASS": true,
+ "elapsed_s": 1.1
+}

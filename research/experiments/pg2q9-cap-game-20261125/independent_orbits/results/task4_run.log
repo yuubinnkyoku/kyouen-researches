@@ -1,0 +1,11 @@
+setup ok; fixed projective frame = (0, 1, 10, 20) (model labels)
+maximal caps through the frame, by size: k=5:0, k=6:6, k=7:40, k=8:210, k=9:0, k=10:7
+400 random greedy maximal caps on the board plane in 0.2s; sizes: 6:6, 7:18, 8:330, 10:46
+conic x^2+y^2+z^2: size=10 cap=True maximal=True nonsingular=True
+  k= 6: second cap [0, 1, 10, 20, 72, 89] (by incidence DFS through a fixed frame); cap=True maximal=True; 60 explicit group elements map start -> second (claimed |Stab| = 60); board-line-preserving = True [0.2s]
+  k= 7: second cap [0, 1, 10, 20, 34, 49, 75] (by incidence DFS through a fixed frame); cap=True maximal=True; 21 explicit group elements map start -> second (claimed |Stab| = 21); board-line-preserving = True [0.4s]
+  k= 8: second cap [0, 1, 10, 20, 34, 45, 66, 78] (by incidence DFS through a fixed frame); cap=True maximal=True; 8 explicit group elements map start -> second (claimed |Stab| = 8); board-line-preserving = True [0.8s]
+  extra check: conic x^2+y^2+z^2 lies in the start orbit (720 explicit elements found): True
+  k=10: second cap [0, 1, 10, 20, 34, 48, 58, 69, 81, 86] (by incidence DFS through a fixed frame); cap=True maximal=True; 720 explicit group elements map start -> second (claimed |Stab| = 720); board-line-preserving = True [3.3s]
+
+TASK 4: PASS   (7.8 s)
