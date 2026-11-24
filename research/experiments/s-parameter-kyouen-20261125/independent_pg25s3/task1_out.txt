@@ -1,0 +1,18 @@
+{
+  "n": 31,
+  "b": 31,
+  "ok": true,
+  "failed_checks": []
+}
+PASS n_is_31 - n=31
+PASS b_is_31 - b=31
+PASS all_line_sizes_6 - size histogram={6: 31}
+PASS all_points_in_range - 
+PASS no_duplicate_lines - distinct=31/31
+PASS no_repeated_point_in_line - bad lines=[]
+PASS all_points_used - min incidence=6
+PASS every_point_on_6_lines - incidence histogram={6: 31}
+PASS all_pairs_covered - covered pairs=465/465
+PASS every_pair_on_exactly_one_line - pair-multiplicity histogram={1: 465}
+PASS every_line_pair_meets_in_one_point - intersection-size histogram={1: 465}
+PASS design_parameters_2_31_6_1 - 

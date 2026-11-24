@@ -34,6 +34,15 @@ artifacts:
 - path: research/experiments/s-parameter-kyouen-20261125/output/grundy_pg2q5_s3.txt
   role: data
   note: PG(2,5) s=3 の完全 Grundy（safe 7,906,892、極大 9/10/11、Grundy 0..4）
+- path: research/experiments/s-parameter-kyouen-20261125/independent_pg25s3/REPORT.md
+  role: log
+  note: PG(2,5) s=3 の独立検証（2 つの全数 DP・全部分集合列挙・81 フィールド照合すべて PASS）
+- path: research/experiments/s-parameter-kyouen-20261125/independent_pg25s3/grundy_level.c
+  role: solver
+  note: 独自 C による 7.9M 状態の level-by-level Grundy DP
+- path: research/experiments/s-parameter-kyouen-20261125/independent_pg25s3/out_claims_comparison.json
+  role: certificate
+  note: エンジン出力 81 フィールドの照合結果（不一致 0）
 - path: research/experiments/s-parameter-kyouen-20261125/independent/claims_check.json
   role: certificate
   note: 独立実装による 3 ゲームの全項目一致（all_pass=true）
@@ -53,7 +62,7 @@ artifacts:
   role: data
   note: AG(2,4) の 16 点・20 直線の盤（点対一意性検査済み）
 scope: PG(2,q)（q=2,3,4）と AG(2,q)（q=2,3,4,5）上の「各直線と高々 s 点」共演ゲーム。s=2（キャップ・ゲーム）と s=3（AG ではブロッキング・ゲーム）の完全 Grundy（通常・misère、全安全局面）。
-evidence: 盤は出版済み PG ボードから導出し点対の一意性を全数検査。安全集合を DFS で全列挙しサイズ降順 DP で Grundy（bytearray(2^n)、n≤25）と misère（打てない方が勝ち）を計算。主結果は (i) PG(2,q) s=2 は全極大が最大サイズ（q=2,3,4,5 で 4/4/6/6）で Grundy {0,1}、極大アーク数 7/234/168/3,100（q=5 は全 41,572 キャップ、6-キャップ 3,100＝円錐曲線）。(ii) AG(2,4) s=2 は極大サイズ 4 と 6 の混在だが全て偶数で、Grundy は {0,1} のみ（parity-graded 補題の仮定がサイズ一様でなくパリティ一様であることを示す決定的例）。(iii) AG(2,5) s=2 は極大サイズ 5 と 6 でパリティ混在、Grundy 2 が 3,000 局面に出現。(iv) AG(2,4) s=3 は極大 8/9 混在で Grundy 2 が 960 局面。(v) AG(2,5) s=3 は 1,365,826 局面で Grundy 0..4（4 が 54,000 局面。これらの幾何盤（PG/AG/設計）の共演ゲームでは最大値。n×n 盤族には Grundy 11 の例があり、リポジトリ全体の最大ではない）。(vi) PG(2,4) s=4 は 1,234,016 局面、極大サイズ 12/13/14/16、Grundy 2,3 が出現。misère の基底は「打てない方が勝ち」。PG(2,5) s=2 は dict ベース DP で計算（41,572 局面、全極大 6）。(vii) PG(2,5) s=3 は 7,906,892 局面（完全 Grundy、極大 9/10/11、Grundy 0..4、K=11）。独立検証（別実装）が AG(2,4) s=2・AG(2,5) s=2・AG(2,4) s=3 の safe 数・サイズ別個数・極大サイズ・Grundy 分布・G(∅)・misère をすべて一致確認（claims_check.json の all_pass=true）。AG(2,4) s=2 の全 1,793 安全局面で parity-graded 補題が成立（violations 0）。クロスチェックとして n=16 は全 2^16 部分集合の完全 DP、AG(2,5) はサイズ別列挙で level 7 が空（列挙の完全性）、増加/減少 DFS の一致、2 実装の Grundy/misère 表の SHA-256 一致を確認（crosscheck.json）。
+evidence: 盤は出版済み PG ボードから導出し点対の一意性を全数検査。安全集合を DFS で全列挙しサイズ降順 DP で Grundy（bytearray(2^n)、n≤25）と misère（打てない方が勝ち）を計算。主結果は (i) PG(2,q) s=2 は全極大が最大サイズ（q=2,3,4,5 で 4/4/6/6）で Grundy {0,1}、極大アーク数 7/234/168/3,100（q=5 は全 41,572 キャップ、6-キャップ 3,100＝円錐曲線）。(ii) AG(2,4) s=2 は極大サイズ 4 と 6 の混在だが全て偶数で、Grundy は {0,1} のみ（parity-graded 補題の仮定がサイズ一様でなくパリティ一様であることを示す決定的例）。(iii) AG(2,5) s=2 は極大サイズ 5 と 6 でパリティ混在、Grundy 2 が 3,000 局面に出現。(iv) AG(2,4) s=3 は極大 8/9 混在で Grundy 2 が 960 局面。(v) AG(2,5) s=3 は 1,365,826 局面で Grundy 0..4（4 が 54,000 局面。これらの幾何盤（PG/AG/設計）の共演ゲームでは最大値。n×n 盤族には Grundy 11 の例があり、リポジトリ全体の最大ではない）。(vi) PG(2,4) s=4 は 1,234,016 局面、極大サイズ 12/13/14/16、Grundy 2,3 が出現。misère の基底は「打てない方が勝ち」。PG(2,5) s=2 は dict ベース DP で計算（41,572 局面、全極大 6）。(vii) PG(2,5) s=3 は 7,906,892 局面（完全 Grundy、極大 9/10/11、Grundy 0..4、K=11）。独立検証は 2 つの全数 DP（level-by-level ハッシュ・再帰メモ化）と全部分集合列挙（Gosper、k≤12 で 301,766,029 個）で SAFE 数・サイズ分布・極大カウント・Grundy 分布・G(∅)=1・misère=1 を一致確認し、エンジン出力の 81 フィールドすべてを照合（不一致 0。K1298 の引用値 Grundy(∅)=0 は misère 値との混同で、1 に訂正）。独立検証（別実装）が AG(2,4) s=2・AG(2,5) s=2・AG(2,4) s=3 の safe 数・サイズ別個数・極大サイズ・Grundy 分布・G(∅)・misère をすべて一致確認（claims_check.json の all_pass=true）。AG(2,4) s=2 の全 1,793 安全局面で parity-graded 補題が成立（violations 0）。クロスチェックとして n=16 は全 2^16 部分集合の完全 DP、AG(2,5) はサイズ別列挙で level 7 が空（列挙の完全性）、増加/減少 DFS の一致、2 実装の Grundy/misère 表の SHA-256 一致を確認（crosscheck.json）。
 ---
 
 # s-パラメータ共演ゲーム

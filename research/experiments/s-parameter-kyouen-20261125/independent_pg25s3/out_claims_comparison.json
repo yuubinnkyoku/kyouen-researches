@@ -1,0 +1,595 @@
+{
+  "claim_file": "C:\\Users\\yuubi\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\s-parameter-kyouen-20261125\\output\\grundy_pg2q5_s3.txt",
+  "n_checks": 81,
+  "failed": 0,
+  "ok": true,
+  "unknown_claim_lines": [],
+  "checks": [
+    {
+      "check": "POINTS",
+      "claim": 31,
+      "computed": 31,
+      "pass": true,
+      "note": "board file header"
+    },
+    {
+      "check": "CIRCLES",
+      "claim": 31,
+      "computed": 31,
+      "pass": true,
+      "note": "board file header"
+    },
+    {
+      "check": "SAFE",
+      "claim": 7906892,
+      "computed": 7906892,
+      "pass": true,
+      "note": "DFS enumeration"
+    },
+    {
+      "check": "SAFE_brute",
+      "claim": 7906892,
+      "computed": 7906892,
+      "pass": true,
+      "note": "exhaustive subsets up to size 12"
+    },
+    {
+      "check": "SAFE_level",
+      "claim": 7906892,
+      "computed": 7906892,
+      "pass": true,
+      "note": "level DP"
+    },
+    {
+      "check": "maximal_sizes",
+      "claim": [
+        9,
+        10,
+        11
+      ],
+      "computed": [
+        9,
+        10,
+        11
+      ],
+      "pass": true,
+      "note": "sizes with any maximal set"
+    },
+    {
+      "check": "SIZE_0_count",
+      "claim": 1,
+      "computed": 1,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_0_maximal",
+      "claim": 0,
+      "computed": 0,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_0_grundy0",
+      "claim": 0,
+      "computed": 0,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_0_count_brute",
+      "claim": 1,
+      "computed": 1,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_0_maximal_brute",
+      "claim": 0,
+      "computed": 0,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_1_count",
+      "claim": 31,
+      "computed": 31,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_1_maximal",
+      "claim": 0,
+      "computed": 0,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_1_grundy0",
+      "claim": 31,
+      "computed": 31,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_1_count_brute",
+      "claim": 31,
+      "computed": 31,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_1_maximal_brute",
+      "claim": 0,
+      "computed": 0,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_2_count",
+      "claim": 465,
+      "computed": 465,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_2_maximal",
+      "claim": 0,
+      "computed": 0,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_2_grundy0",
+      "claim": 0,
+      "computed": 0,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_2_count_brute",
+      "claim": 465,
+      "computed": 465,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_2_maximal_brute",
+      "claim": 0,
+      "computed": 0,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_3_count",
+      "claim": 4495,
+      "computed": 4495,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_3_maximal",
+      "claim": 0,
+      "computed": 0,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_3_grundy0",
+      "claim": 4495,
+      "computed": 4495,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_3_count_brute",
+      "claim": 4495,
+      "computed": 4495,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_3_maximal_brute",
+      "claim": 0,
+      "computed": 0,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_4_count",
+      "claim": 31000,
+      "computed": 31000,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_4_maximal",
+      "claim": 0,
+      "computed": 0,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_4_grundy0",
+      "claim": 0,
+      "computed": 0,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_4_count_brute",
+      "claim": 31000,
+      "computed": 31000,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_4_maximal_brute",
+      "claim": 0,
+      "computed": 0,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_5_count",
+      "claim": 158100,
+      "computed": 158100,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_5_maximal",
+      "claim": 0,
+      "computed": 0,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_5_grundy0",
+      "claim": 111600,
+      "computed": 111600,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_5_count_brute",
+      "claim": 158100,
+      "computed": 158100,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_5_maximal_brute",
+      "claim": 0,
+      "computed": 0,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_6_count",
+      "claim": 592100,
+      "computed": 592100,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_6_maximal",
+      "claim": 0,
+      "computed": 0,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_6_grundy0",
+      "claim": 15500,
+      "computed": 15500,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_6_count_brute",
+      "claim": 592100,
+      "computed": 592100,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_6_maximal_brute",
+      "claim": 0,
+      "computed": 0,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_7_count",
+      "claim": 1550000,
+      "computed": 1550000,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_7_maximal",
+      "claim": 0,
+      "computed": 0,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_7_grundy0",
+      "claim": 480500,
+      "computed": 480500,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_7_count_brute",
+      "claim": 1550000,
+      "computed": 1550000,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_7_maximal_brute",
+      "claim": 0,
+      "computed": 0,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_8_count",
+      "claim": 2557500,
+      "computed": 2557500,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_8_maximal",
+      "claim": 0,
+      "computed": 0,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_8_grundy0",
+      "claim": 465000,
+      "computed": 465000,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_8_count_brute",
+      "claim": 2557500,
+      "computed": 2557500,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_8_maximal_brute",
+      "claim": 0,
+      "computed": 0,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_9_count",
+      "claim": 2216500,
+      "computed": 2216500,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_9_maximal",
+      "claim": 93000,
+      "computed": 93000,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_9_grundy0",
+      "claim": 666500,
+      "computed": 666500,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_9_count_brute",
+      "claim": 2216500,
+      "computed": 2216500,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_9_maximal_brute",
+      "claim": 93000,
+      "computed": 93000,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_10_count",
+      "claim": 731600,
+      "computed": 731600,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_10_maximal",
+      "claim": 248000,
+      "computed": 248000,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_10_grundy0",
+      "claim": 248000,
+      "computed": 248000,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_10_count_brute",
+      "claim": 731600,
+      "computed": 731600,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_10_maximal_brute",
+      "claim": 248000,
+      "computed": 248000,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_11_count",
+      "claim": 65100,
+      "computed": 65100,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_11_maximal",
+      "claim": 65100,
+      "computed": 65100,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_11_grundy0",
+      "claim": 65100,
+      "computed": 65100,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_11_count_brute",
+      "claim": 65100,
+      "computed": 65100,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "SIZE_11_maximal_brute",
+      "claim": 65100,
+      "computed": 65100,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "GRUNDY_0",
+      "claim": 2056726,
+      "computed": 2056726,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "GRUNDY_1",
+      "claim": 2083666,
+      "computed": 2083666,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "GRUNDY_2",
+      "claim": 1519000,
+      "computed": 1519000,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "GRUNDY_3",
+      "claim": 2061500,
+      "computed": 2061500,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "GRUNDY_4",
+      "claim": 186000,
+      "computed": 186000,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "check": "ROOT_grundy",
+      "claim": 1,
+      "computed": 1,
+      "pass": true,
+      "note": "G(empty)"
+    },
+    {
+      "check": "ROOT_misere",
+      "claim": 1,
+      "computed": 1,
+      "pass": true,
+      "note": "misere(empty)"
+    },
+    {
+      "check": "FIRSTMOVE",
+      "claim": {
+        "0": 31
+      },
+      "computed": {
+        "0": 31
+      },
+      "pass": true,
+      "note": "histogram of child Grundy over the 31 first moves"
+    },
+    {
+      "check": "PROBE",
+      "claim": [
+        0,
+        1,
+        0
+      ],
+      "computed": [
+        0,
+        1,
+        0
+      ],
+      "pass": true,
+      "note": "G({0}), G({0,1}), G({0,1,2})"
+    },
+    {
+      "check": "PROBE_CHILDREN",
+      "claim": {
+        "2": 25
+      },
+      "computed": {
+        "2": 25
+      },
+      "pass": true,
+      "note": "children of {0,1,2} grouped by Grundy"
+    },
+    {
+      "check": "K1298_formula_violations",
+      "claim": 0,
+      "computed": 0,
+      "pass": true
+    },
+    {
+      "check": "K1298_desc2_equiv_violations",
+      "claim": 0,
+      "computed": 0,
+      "pass": true
+    },
+    {
+      "check": "K1298_misere_formula_violations",
+      "claim": 0,
+      "computed": 0,
+      "pass": true
+    },
+    {
+      "check": "size_distribution_sums_to_SAFE",
+      "claim": 7906892,
+      "computed": 7906892,
+      "pass": true
+    },
+    {
+      "check": "grundy_distribution_sums_to_SAFE",
+      "claim": 7906892,
+      "computed": 7906892,
+      "pass": true
+    }
+  ]
+}

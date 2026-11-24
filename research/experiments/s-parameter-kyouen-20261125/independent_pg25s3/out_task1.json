@@ -1,0 +1,58 @@
+{
+  "board_file": "C:\\Users\\yuubi\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\projective-blocking-kyouen-20261125\\output\\board_pg2q5.txt",
+  "n": 31,
+  "b": 31,
+  "checks": {
+    "n_is_31": {
+      "pass": true,
+      "detail": "n=31"
+    },
+    "b_is_31": {
+      "pass": true,
+      "detail": "b=31"
+    },
+    "all_line_sizes_6": {
+      "pass": true,
+      "detail": "size histogram={6: 31}"
+    },
+    "all_points_in_range": {
+      "pass": true,
+      "detail": ""
+    },
+    "no_duplicate_lines": {
+      "pass": true,
+      "detail": "distinct=31/31"
+    },
+    "no_repeated_point_in_line": {
+      "pass": true,
+      "detail": "bad lines=[]"
+    },
+    "all_points_used": {
+      "pass": true,
+      "detail": "min incidence=6"
+    },
+    "every_point_on_6_lines": {
+      "pass": true,
+      "detail": "incidence histogram={6: 31}"
+    },
+    "all_pairs_covered": {
+      "pass": true,
+      "detail": "covered pairs=465/465"
+    },
+    "every_pair_on_exactly_one_line": {
+      "pass": true,
+      "detail": "pair-multiplicity histogram={1: 465}"
+    },
+    "every_line_pair_meets_in_one_point": {
+      "pass": true,
+      "detail": "intersection-size histogram={1: 465}"
+    },
+    "design_parameters_2_31_6_1": {
+      "pass": true,
+      "detail": ""
+    }
+  },
+  "ok": true,
+  "bad_pairs_sample": [],
+  "failed_checks": []
+}
