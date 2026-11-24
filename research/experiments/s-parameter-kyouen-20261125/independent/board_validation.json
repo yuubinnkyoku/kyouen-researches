@@ -1,0 +1,393 @@
+{
+  "all_passed": true,
+  "boards": {
+    "AG(2,2)": {
+      "b": 6,
+      "checks": {
+        "additional_affine_parallel_axiom": {
+          "detail": {
+            "rule": "for p not in L: exactly one line through p disjoint from L",
+            "witness": null
+          },
+          "pass": true
+        },
+        "additional_parallel_classes_partition": {
+          "detail": {
+            "class_sizes": [
+              2,
+              2,
+              2
+            ],
+            "expected_class_size": 2,
+            "expected_classes": 3,
+            "num_classes": 3
+          },
+          "pass": true
+        },
+        "b_equals_q_times_q_plus_1": {
+          "detail": {
+            "actual": 6,
+            "expected": 6
+          },
+          "pass": true
+        },
+        "every_line_has_q_distinct_points": {
+          "detail": {
+            "all_distinct": true,
+            "line_sizes": [
+              2
+            ]
+          },
+          "pass": true
+        },
+        "every_pair_of_points_on_exactly_one_line": {
+          "detail": {
+            "max_pair_multiplicity": 1,
+            "missing_pairs": 0,
+            "num_pairs_expected": 6,
+            "num_pairs_seen": 6
+          },
+          "pass": true
+        },
+        "every_point_on_q_plus_1_lines": {
+          "detail": {
+            "expected": 3,
+            "histogram": {
+              "3": 4
+            },
+            "max": 3,
+            "min": 3
+          },
+          "pass": true
+        },
+        "n_equals_q_squared": {
+          "detail": {
+            "actual": 4,
+            "expected": 4
+          },
+          "pass": true
+        },
+        "no_duplicate_lines": {
+          "detail": {
+            "duplicate_line_count": 0
+          },
+          "pass": true
+        },
+        "points_in_range": {
+          "detail": {
+            "n": 4
+          },
+          "pass": true
+        }
+      },
+      "file": "research\\experiments\\s-parameter-kyouen-20261125\\output\\board_ag2q2.txt",
+      "n": 4,
+      "passed": true,
+      "problems": [],
+      "q": 2,
+      "required_checks": [
+        "n_equals_q_squared",
+        "b_equals_q_times_q_plus_1",
+        "every_line_has_q_distinct_points",
+        "points_in_range",
+        "every_pair_of_points_on_exactly_one_line",
+        "every_point_on_q_plus_1_lines"
+      ],
+      "sha256": "7ebb46f716c7166a742d25a6bf8ab3810a46423d04ec6901109629efc95f7704",
+      "validation_seconds": 0.001249
+    },
+    "AG(2,3)": {
+      "b": 12,
+      "checks": {
+        "additional_affine_parallel_axiom": {
+          "detail": {
+            "rule": "for p not in L: exactly one line through p disjoint from L",
+            "witness": null
+          },
+          "pass": true
+        },
+        "additional_parallel_classes_partition": {
+          "detail": {
+            "class_sizes": [
+              3,
+              3,
+              3,
+              3
+            ],
+            "expected_class_size": 3,
+            "expected_classes": 4,
+            "num_classes": 4
+          },
+          "pass": true
+        },
+        "b_equals_q_times_q_plus_1": {
+          "detail": {
+            "actual": 12,
+            "expected": 12
+          },
+          "pass": true
+        },
+        "every_line_has_q_distinct_points": {
+          "detail": {
+            "all_distinct": true,
+            "line_sizes": [
+              3
+            ]
+          },
+          "pass": true
+        },
+        "every_pair_of_points_on_exactly_one_line": {
+          "detail": {
+            "max_pair_multiplicity": 1,
+            "missing_pairs": 0,
+            "num_pairs_expected": 36,
+            "num_pairs_seen": 36
+          },
+          "pass": true
+        },
+        "every_point_on_q_plus_1_lines": {
+          "detail": {
+            "expected": 4,
+            "histogram": {
+              "4": 9
+            },
+            "max": 4,
+            "min": 4
+          },
+          "pass": true
+        },
+        "n_equals_q_squared": {
+          "detail": {
+            "actual": 9,
+            "expected": 9
+          },
+          "pass": true
+        },
+        "no_duplicate_lines": {
+          "detail": {
+            "duplicate_line_count": 0
+          },
+          "pass": true
+        },
+        "points_in_range": {
+          "detail": {
+            "n": 9
+          },
+          "pass": true
+        }
+      },
+      "file": "research\\experiments\\s-parameter-kyouen-20261125\\output\\board_ag2q3.txt",
+      "n": 9,
+      "passed": true,
+      "problems": [],
+      "q": 3,
+      "required_checks": [
+        "n_equals_q_squared",
+        "b_equals_q_times_q_plus_1",
+        "every_line_has_q_distinct_points",
+        "points_in_range",
+        "every_pair_of_points_on_exactly_one_line",
+        "every_point_on_q_plus_1_lines"
+      ],
+      "sha256": "db1fbdbc1996e767103ec406623e71efe1587b2fcd25ecbdeec8e7b5f6a4bb91",
+      "validation_seconds": 0.001279
+    },
+    "AG(2,4)": {
+      "b": 20,
+      "checks": {
+        "additional_affine_parallel_axiom": {
+          "detail": {
+            "rule": "for p not in L: exactly one line through p disjoint from L",
+            "witness": null
+          },
+          "pass": true
+        },
+        "additional_parallel_classes_partition": {
+          "detail": {
+            "class_sizes": [
+              4,
+              4,
+              4,
+              4,
+              4
+            ],
+            "expected_class_size": 4,
+            "expected_classes": 5,
+            "num_classes": 5
+          },
+          "pass": true
+        },
+        "b_equals_q_times_q_plus_1": {
+          "detail": {
+            "actual": 20,
+            "expected": 20
+          },
+          "pass": true
+        },
+        "every_line_has_q_distinct_points": {
+          "detail": {
+            "all_distinct": true,
+            "line_sizes": [
+              4
+            ]
+          },
+          "pass": true
+        },
+        "every_pair_of_points_on_exactly_one_line": {
+          "detail": {
+            "max_pair_multiplicity": 1,
+            "missing_pairs": 0,
+            "num_pairs_expected": 120,
+            "num_pairs_seen": 120
+          },
+          "pass": true
+        },
+        "every_point_on_q_plus_1_lines": {
+          "detail": {
+            "expected": 5,
+            "histogram": {
+              "5": 16
+            },
+            "max": 5,
+            "min": 5
+          },
+          "pass": true
+        },
+        "n_equals_q_squared": {
+          "detail": {
+            "actual": 16,
+            "expected": 16
+          },
+          "pass": true
+        },
+        "no_duplicate_lines": {
+          "detail": {
+            "duplicate_line_count": 0
+          },
+          "pass": true
+        },
+        "points_in_range": {
+          "detail": {
+            "n": 16
+          },
+          "pass": true
+        }
+      },
+      "file": "research\\experiments\\s-parameter-kyouen-20261125\\output\\board_ag2q4.txt",
+      "n": 16,
+      "passed": true,
+      "problems": [],
+      "q": 4,
+      "required_checks": [
+        "n_equals_q_squared",
+        "b_equals_q_times_q_plus_1",
+        "every_line_has_q_distinct_points",
+        "points_in_range",
+        "every_pair_of_points_on_exactly_one_line",
+        "every_point_on_q_plus_1_lines"
+      ],
+      "sha256": "9bf6a10cc2d4199ee5e28c602f13a0e99a6cca6f9bd63d095c8d240f8aa2790f",
+      "validation_seconds": 0.001794
+    },
+    "AG(2,5)": {
+      "b": 30,
+      "checks": {
+        "additional_affine_parallel_axiom": {
+          "detail": {
+            "rule": "for p not in L: exactly one line through p disjoint from L",
+            "witness": null
+          },
+          "pass": true
+        },
+        "additional_parallel_classes_partition": {
+          "detail": {
+            "class_sizes": [
+              5,
+              5,
+              5,
+              5,
+              5,
+              5
+            ],
+            "expected_class_size": 5,
+            "expected_classes": 6,
+            "num_classes": 6
+          },
+          "pass": true
+        },
+        "b_equals_q_times_q_plus_1": {
+          "detail": {
+            "actual": 30,
+            "expected": 30
+          },
+          "pass": true
+        },
+        "every_line_has_q_distinct_points": {
+          "detail": {
+            "all_distinct": true,
+            "line_sizes": [
+              5
+            ]
+          },
+          "pass": true
+        },
+        "every_pair_of_points_on_exactly_one_line": {
+          "detail": {
+            "max_pair_multiplicity": 1,
+            "missing_pairs": 0,
+            "num_pairs_expected": 300,
+            "num_pairs_seen": 300
+          },
+          "pass": true
+        },
+        "every_point_on_q_plus_1_lines": {
+          "detail": {
+            "expected": 6,
+            "histogram": {
+              "6": 25
+            },
+            "max": 6,
+            "min": 6
+          },
+          "pass": true
+        },
+        "n_equals_q_squared": {
+          "detail": {
+            "actual": 25,
+            "expected": 25
+          },
+          "pass": true
+        },
+        "no_duplicate_lines": {
+          "detail": {
+            "duplicate_line_count": 0
+          },
+          "pass": true
+        },
+        "points_in_range": {
+          "detail": {
+            "n": 25
+          },
+          "pass": true
+        }
+      },
+      "file": "research\\experiments\\s-parameter-kyouen-20261125\\output\\board_ag2q5.txt",
+      "n": 25,
+      "passed": true,
+      "problems": [],
+      "q": 5,
+      "required_checks": [
+        "n_equals_q_squared",
+        "b_equals_q_times_q_plus_1",
+        "every_line_has_q_distinct_points",
+        "points_in_range",
+        "every_pair_of_points_on_exactly_one_line",
+        "every_point_on_q_plus_1_lines"
+      ],
+      "sha256": "b6fe706177f8d9d19753d770772fb3e7c40f9161bc941aec4bca8f4cd1039b1c",
+      "validation_seconds": 0.003507
+    }
+  },
+  "description": "Validation of output/board_ag2q{2,3,4,5}.txt as AG(2,q) boards.",
+  "generated_by": "independent/verify.py"
+}

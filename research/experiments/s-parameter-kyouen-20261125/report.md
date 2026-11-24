@@ -71,7 +71,13 @@
 - Grundy: 全安全局面の DFS 列挙とサイズ降順 DP。小盤（PG(2,2), s=3 等）は
   既知値と一致（例: PG(2,2) s=3 は K=7・全 128 局面、K1058 と整合）。
 - misère の基底（打てない方が勝ち）を明示的に実装。
-- サブエージェント独立検証（結果は追記）。
+- 独立検証サブエージェント（標準ライブラリのみ、独自実装）: AG(2,4) s=2、AG(2,5) s=2、
+  AG(2,4) s=3 の safe 数・サイズ別個数・極大サイズ・Grundy 分布・G(∅)・misère が
+  すべて一致（`independent/claims_check.json`、all_pass=true）。
+  parity-graded 補題は AG(2,4) s=2 の全 1,793 局面で成立（violations 0）。
+  クロスチェック: n=16 は全 2^16 部分集合の完全 DP、AG(2,5) は level 7 が空で
+  列挙の完全性を証明、増加/減少 DFS の一致、2 実装の Grundy/misère 表の
+  SHA-256 一致（`independent/crosscheck.json`）。
 
 ## 5. 限界・未解決
 

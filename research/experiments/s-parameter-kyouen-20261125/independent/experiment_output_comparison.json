@@ -1,0 +1,50 @@
+{
+  "all_match": true,
+  "cases": {
+    "AG(2,4)-s2": {
+      "diffs": {},
+      "fields_compared": [
+        "safe_count",
+        "safe_by_size",
+        "maximal_by_size",
+        "grundy_empty",
+        "misere_empty",
+        "grundy_distribution"
+      ],
+      "independent_case": "AG(2,4)-s2",
+      "matches": true,
+      "stored_name": "AG2(4)_s2"
+    },
+    "AG(2,4)-s3": {
+      "diffs": {},
+      "fields_compared": [
+        "safe_count",
+        "safe_by_size",
+        "maximal_by_size",
+        "grundy_empty",
+        "misere_empty",
+        "grundy_distribution"
+      ],
+      "independent_case": "AG(2,4)-s3",
+      "matches": true,
+      "stored_name": "AG2(4)_s3"
+    },
+    "AG(2,5)-s2": {
+      "diffs": {},
+      "fields_compared": [
+        "safe_count",
+        "safe_by_size",
+        "maximal_by_size",
+        "grundy_empty",
+        "misere_empty",
+        "grundy_distribution"
+      ],
+      "independent_case": "AG(2,5)-s2",
+      "matches": true,
+      "stored_name": "AG2(5)_s2"
+    }
+  },
+  "generated_by": "independent/compare_experiment_output.py",
+  "note": "read output/grundy_general.json only after the independent recomputation completed",
+  "stored_file": "research\\experiments\\s-parameter-kyouen-20261125\\output\\grundy_general.json"
+}
