@@ -1,0 +1,430 @@
+independent_small / run_all.py  (python 3.12.13)
+run started 2026-11-25T06:05:13
+board: ../output/board_pg2q9.txt
+
+==============================================================================
+TASK 1  board is PG(2,9)
+==============================================================================
+{
+ "n_points_declared": 91,
+ "n_lines_declared": 91,
+ "trailing_content": "",
+ "n_lines": 91,
+ "all_lines_len10": true,
+ "lines_distinct": true,
+ "matches_my_construction": true,
+ "matches_my_construction_in_file_order": true,
+ "point_degree_set": [
+  10
+ ],
+ "pair_count": 4095,
+ "pair_count_expected": 4095,
+ "pair_lambda_set": [
+  1
+ ],
+ "collinear_triples": 10920,
+ "collinear_triples_expected": 10920,
+ "line_intersection_sizes": [
+  1
+ ],
+ "line0_is_a_line_by_construction": true
+}
+
+==============================================================================
+TASK 2  3-caps and 4-caps (independent enumeration)
+==============================================================================
+{
+ "n_caps3": 110565,
+ "n_caps4": 1769040,
+ "expected_caps3_from_counting": 110565,
+ "caps3_matches_identity": true,
+ "n_3subsets": 121485,
+ "n_collinear_triples": 10920,
+ "all_caps3_are_caps": true,
+ "all_caps4_are_caps": true,
+ "distinct_caps3": true,
+ "distinct_caps4": true,
+ "covers_all_3subsets": true,
+ "claim_caps3_110565": true,
+ "claim_caps4_1769040": true,
+ "seconds_enum_caps3": 0.0,
+ "seconds_enum_caps4": 0.8
+}
+3-caps = 110565  4-caps = 1769040
+[section time 12.0s]
+
+==============================================================================
+TASK 3  PGL(3,9), |G|, orbits, stabilizers
+==============================================================================
+|GL(3,9)| = 339655680  |PGL(3,9)| = 42456960
+generators: 14 all collineations: True
+Schreier chain: [{'base': 0, 'orbit': 91, 'n_stab_gens': 620}, {'base': 1, 'orbit': 90, 'n_stab_gens': 5182}, {'base': 2, 'orbit': 8, 'n_stab_gens': 647}, {'base': 10, 'orbit': 81, 'n_stab_gens': 7}, {'base': 11, 'orbit': 8, 'n_stab_gens': 0}] product = 42456960
+orbit of (0, 1, 10) = 110565  (all 3-caps: 110565)
+orbit of (0, 1, 10, 20) = 1769040  (all 4-caps: 1769040)
+orbit3 == all enumerated 3-caps: True
+orbit4 == all enumerated 4-caps: True
+|Stab({0,1,10})| = 384
+|Stab({0,1,10,20})| = 24
+{
+ "n_ordered_bases_GL39": 339655680,
+ "pgl_order_formula": 42456960,
+ "pgl_order_expected": 42456960,
+ "pgl_order_ok": true,
+ "generators": [
+  "I+1*e12",
+  "I+i*e12",
+  "I+1*e13",
+  "I+i*e13",
+  "I+1*e21",
+  "I+i*e21",
+  "I+1*e23",
+  "I+i*e23",
+  "I+1*e31",
+  "I+i*e31",
+  "I+1*e32",
+  "I+i*e32",
+  "diag(1+i,1,1)",
+  "3-cycle(1 2 3)"
+ ],
+ "all_generators_are_collineations": true,
+ "schreier_chain": [
+  {
+   "base": 0,
+   "orbit": 91,
+   "n_stab_gens": 620
+  },
+  {
+   "base": 1,
+   "orbit": 90,
+   "n_stab_gens": 5182
+  },
+  {
+   "base": 2,
+   "orbit": 8,
+   "n_stab_gens": 647
+  },
+  {
+   "base": 10,
+   "orbit": 81,
+   "n_stab_gens": 7
+  },
+  {
+   "base": 11,
+   "orbit": 8,
+   "n_stab_gens": 0
+  }
+ ],
+ "schreier_chain_product": 42456960,
+ "schreier_chain_reaches_pgl_order": true,
+ "seconds_chain": 2.8,
+ "cap3": {
+  "cap": [
+   0,
+   1,
+   10
+  ],
+  "orbit_size": 110565,
+  "orbit_is_all_3caps": true,
+  "seconds": 2.7
+ },
+ "cap4": {
+  "cap": [
+   0,
+   1,
+   10,
+   20
+  ],
+  "orbit_size": 1769040,
+  "orbit_is_all_4caps": true,
+  "seconds": 62.1
+ },
+ "orbit3_sizes_ok": true,
+ "orbit4_sizes_ok": true,
+ "orbit3_all_caps": true,
+ "orbit4_all_caps": true,
+ "orbit3_equals_enumerated_3caps": true,
+ "orbit4_equals_enumerated_4caps": true,
+ "orbit3_symmetric_difference": 0,
+ "orbit4_symmetric_difference": 0,
+ "stab_order_cap3": 384,
+ "stab3_expected_384": true,
+ "stab_order_cap4": 24,
+ "stab4_expected_24": true,
+ "orbit_x_stab_cap3": 42456960,
+ "orbit_x_stab_cap4": 42456960,
+ "orbit_stab_identity_3": true,
+ "orbit_stab_identity_4": true,
+ "seconds_stab": 0.2
+}
+[section time 76.6s]
+
+==============================================================================
+TASK 4  Grundy values and upsets
+==============================================================================
+{
+ "label": "3cap",
+ "cap": [
+  0,
+  1,
+  10
+ ],
+ "is_cap": true,
+ "grundy": 1,
+ "upset_sizes": {
+  "3": 1,
+  "4": 64,
+  "5": 1344,
+  "6": 9408,
+  "7": 16320,
+  "8": 4032,
+  "9": 448,
+  "10": 64
+ },
+ "upset_total": 31681,
+ "upset_total_minus_self": 31680,
+ "n_terminal_positions": 3520,
+ "terminal_all_maximal": true,
+ "grundy_distribution_by_size": {
+  "3": {
+   "1": 1
+  },
+  "4": {
+   "0": 64
+  },
+  "5": {
+   "1": 1344
+  },
+  "6": {
+   "0": 6848,
+   "2": 2560
+  },
+  "7": {
+   "0": 640,
+   "1": 15680
+  },
+  "8": {
+   "0": 4032
+  },
+  "9": {
+   "1": 448
+  },
+  "10": {
+   "0": 64
+  }
+ },
+ "max_size": 10,
+ "seconds": 0.8,
+ "upset_sizes_level_enum": {
+  "3": 1,
+  "4": 64,
+  "5": 1344,
+  "6": 9408,
+  "7": 16320,
+  "8": 4032,
+  "9": 448,
+  "10": 64
+ },
+ "upset_matches_level_enum": true
+}
+{
+ "label": "4cap",
+ "cap": [
+  0,
+  1,
+  10,
+  20
+ ],
+ "is_cap": true,
+ "grundy": 0,
+ "upset_sizes": {
+  "4": 1,
+  "5": 42,
+  "6": 441,
+  "7": 1020,
+  "8": 315,
+  "9": 42,
+  "10": 7
+ },
+ "upset_total": 1868,
+ "upset_total_minus_self": 1867,
+ "n_terminal_positions": 263,
+ "terminal_all_maximal": true,
+ "grundy_distribution_by_size": {
+  "4": {
+   "0": 1
+  },
+  "5": {
+   "1": 42
+  },
+  "6": {
+   "0": 321,
+   "2": 120
+  },
+  "7": {
+   "0": 40,
+   "1": 980
+  },
+  "8": {
+   "0": 315
+  },
+  "9": {
+   "1": 42
+  },
+  "10": {
+   "0": 7
+  }
+ },
+ "max_size": 10,
+ "seconds": 0.0,
+ "upset_sizes_level_enum": {
+  "4": 1,
+  "5": 42,
+  "6": 441,
+  "7": 1020,
+  "8": 315,
+  "9": 42,
+  "10": 7
+ },
+ "upset_matches_level_enum": true
+}
+3cap upset sizes match claim: True {'3': 1, '4': 64, '5': 1344, '6': 9408, '7': 16320, '8': 4032, '9': 448, '10': 64}
+3cap total match: True 31681 31681
+4cap upset sizes match claim: True {'4': 1, '5': 42, '6': 441, '7': 1020, '8': 315, '9': 42, '10': 7}
+4cap total match: True 1868 1868
+grundy 3cap = 1 (claim 1)
+grundy 4cap = 0 (claim 0)
+[section time 1.2s]
+
+==============================================================================
+TASK 5  observations
+==============================================================================
+6-cap A (0, 1, 10, 20, 32, 39) -> cap: True grundy: 2 extensions: 7 upset: {6: 1, 7: 7, 8: 3}
+6-cap B (4, 9, 20, 32, 69, 84) -> cap: True maximal: True grundy: 0
+5-caps containing {0,1,10,20}: 42 grundy distribution: {1: 42}
+  random sample of 5: [((0, 1, 10, 20, 31), 1), ((0, 1, 10, 20, 59), 1), ((0, 1, 10, 20, 71), 1), ((0, 1, 10, 20, 81), 1), ((0, 1, 10, 20, 52), 1)]
+random 3-caps: {(19, 41, 50): 1, (6, 9, 83): 1, (12, 46, 68): 1}
+random 4-caps: {(4, 11, 53, 55): 0, (8, 11, 30, 70): 0, (7, 28, 74, 80): 0}
+[section time 1.3s]
+
+==============================================================================
+BONUS  census layer / reference consistency
+==============================================================================
+{
+ "sum_ext_over_3caps": 7076160,
+ "sum_ext_over_3caps_div4": 1769040,
+ "equals_n_caps4": true,
+ "n_caps4": 1769040,
+ "sum_ext_over_4caps": 74299680,
+ "n_caps5_derived": 14859936,
+ "equals_n_caps5_exact_div": true,
+ "claim_n_caps5_14859936": true,
+ "census_sum": 128917712,
+ "census_sum_ok": true,
+ "census_k3_matches_mine": true,
+ "census_k4_matches_mine": true,
+ "census_k5_matches_mine": true,
+ "conics_formula_q5_minus_q2": 58968,
+ "conics_eq_census_k10": true,
+ "caps9_eq_10_times_conics": true,
+ "orbit_x_stab": {
+  "3": 42456960,
+  "4": 42456960,
+  "6": 42456960,
+  "7": 42456960,
+  "8": 42456960,
+  "10": 42456960
+ },
+ "orbit_x_stab_all_pgl": true
+}
+[section time 5.1s]
+
+==============================================================================
+BONUS  which generator sets generate PGL(3,9)
+==============================================================================
+{
+ "task_suggested_set": {
+  "n_generators": 14,
+  "order": 42456960,
+  "chain_orbits": [
+   [
+    0,
+    91
+   ],
+   [
+    1,
+    90
+   ],
+   [
+    2,
+    8
+   ],
+   [
+    10,
+    81
+   ],
+   [
+    11,
+    8
+   ]
+  ],
+  "generates_full_pgl": true,
+  "index": 1
+ },
+ "my_set": {
+  "n_generators": 14,
+  "order": 42456960,
+  "chain_orbits": [
+   [
+    0,
+    91
+   ],
+   [
+    1,
+    90
+   ],
+   [
+    2,
+    8
+   ],
+   [
+    10,
+    81
+   ],
+   [
+    11,
+    8
+   ]
+  ],
+  "generates_full_pgl": true
+ },
+ "small_5_set": {
+  "n_generators": 5,
+  "order": 42456960,
+  "chain_orbits": [
+   [
+    0,
+    91
+   ],
+   [
+    1,
+    90
+   ],
+   [
+    2,
+    8
+   ],
+   [
+    10,
+    81
+   ],
+   [
+    11,
+    8
+   ]
+  ],
+  "generates_full_pgl": true
+ }
+}
+[section time 7.5s]
+
+total time 103.8s

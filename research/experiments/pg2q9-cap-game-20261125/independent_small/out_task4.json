@@ -1,0 +1,128 @@
+{
+ "3cap": {
+  "label": "3cap",
+  "cap": [
+   0,
+   1,
+   10
+  ],
+  "is_cap": true,
+  "grundy": 1,
+  "upset_sizes": {
+   "3": 1,
+   "4": 64,
+   "5": 1344,
+   "6": 9408,
+   "7": 16320,
+   "8": 4032,
+   "9": 448,
+   "10": 64
+  },
+  "upset_total": 31681,
+  "upset_total_minus_self": 31680,
+  "n_terminal_positions": 3520,
+  "terminal_all_maximal": true,
+  "grundy_distribution_by_size": {
+   "3": {
+    "1": 1
+   },
+   "4": {
+    "0": 64
+   },
+   "5": {
+    "1": 1344
+   },
+   "6": {
+    "0": 6848,
+    "2": 2560
+   },
+   "7": {
+    "0": 640,
+    "1": 15680
+   },
+   "8": {
+    "0": 4032
+   },
+   "9": {
+    "1": 448
+   },
+   "10": {
+    "0": 64
+   }
+  },
+  "max_size": 10,
+  "seconds": 0.8,
+  "upset_sizes_level_enum": {
+   "3": 1,
+   "4": 64,
+   "5": 1344,
+   "6": 9408,
+   "7": 16320,
+   "8": 4032,
+   "9": 448,
+   "10": 64
+  },
+  "upset_matches_level_enum": true
+ },
+ "4cap": {
+  "label": "4cap",
+  "cap": [
+   0,
+   1,
+   10,
+   20
+  ],
+  "is_cap": true,
+  "grundy": 0,
+  "upset_sizes": {
+   "4": 1,
+   "5": 42,
+   "6": 441,
+   "7": 1020,
+   "8": 315,
+   "9": 42,
+   "10": 7
+  },
+  "upset_total": 1868,
+  "upset_total_minus_self": 1867,
+  "n_terminal_positions": 263,
+  "terminal_all_maximal": true,
+  "grundy_distribution_by_size": {
+   "4": {
+    "0": 1
+   },
+   "5": {
+    "1": 42
+   },
+   "6": {
+    "0": 321,
+    "2": 120
+   },
+   "7": {
+    "0": 40,
+    "1": 980
+   },
+   "8": {
+    "0": 315
+   },
+   "9": {
+    "1": 42
+   },
+   "10": {
+    "0": 7
+   }
+  },
+  "max_size": 10,
+  "seconds": 0.0,
+  "upset_sizes_level_enum": {
+   "4": 1,
+   "5": 42,
+   "6": 441,
+   "7": 1020,
+   "8": 315,
+   "9": 42,
+   "10": 7
+  },
+  "upset_matches_level_enum": true
+ }
+}
