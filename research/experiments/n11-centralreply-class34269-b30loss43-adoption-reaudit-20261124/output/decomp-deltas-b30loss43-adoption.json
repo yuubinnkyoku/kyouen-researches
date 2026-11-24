@@ -1,0 +1,244 @@
+{
+ "batch": {
+  "adopted_loss_ids": [
+   "ac001",
+   "ac004",
+   "ac005",
+   "ac007",
+   "ac008",
+   "ac009",
+   "ac010",
+   "ac011",
+   "ac012",
+   "ac013",
+   "ac014",
+   "ac015",
+   "ac016",
+   "ac017",
+   "ac018",
+   "ac019",
+   "ac021",
+   "ac022",
+   "ac023",
+   "ac024",
+   "ac025",
+   "ac028",
+   "ac029",
+   "ac030",
+   "ac031",
+   "ac032",
+   "ac033",
+   "ac035",
+   "ac036",
+   "ac037",
+   "ac038",
+   "ac039",
+   "ac040",
+   "ac042",
+   "ac043",
+   "ac044",
+   "ac046",
+   "ac047",
+   "ac049",
+   "ac050",
+   "ac051",
+   "ac052",
+   "ac053"
+  ],
+  "adopted_loss_rows": 43,
+  "adopted_total_nodes_per_pass": 346729500,
+  "batch": 30,
+  "class_index": 34269,
+  "decisive_labels": "38 LOSS @15M (kit) + 4 LOSS @20M (DJ reprobe: ac032/ac036/ac044/ac047) + 1 LOSS @25M (DK reprobe: ac013, superseding its 15M/20M exhaustions) + 11 probe-level WINs (10 @15M, ac006 @20M DJ) left UNCONSUMED",
+  "probed_rows": 54,
+  "unadopted_win_ids": [
+   "ac002",
+   "ac003",
+   "ac006",
+   "ac020",
+   "ac026",
+   "ac027",
+   "ac034",
+   "ac041",
+   "ac045",
+   "ac048",
+   "ac054"
+  ],
+  "unadopted_win_rows": 11
+ },
+ "cache": {
+  "base_rows": 6405,
+  "base_sha256": "60222707dd13902103fc8f7ef11c8487ec1be531ad0711e23e50c32154e30b84",
+  "increment_rows": 43,
+  "merge_audit_runs": 3,
+  "merge_audit_sha256_each": "6c35b897262cc80b1374a7cf1e8fc0eb1ae7edfef1e1b2b92c48d9c613619041",
+  "relation": "scenario == base rows + the 43 increment rows verbatim (no other row changed)",
+  "scenario_rows": 6448,
+  "scenario_sha256": "7bdfa2366ef9c24b48a610d078104227555dd52ec18a566082cef2f906aab0f7",
+  "verdict_counts": {
+   "LOSS": 6290,
+   "WIN": 158
+  }
+ },
+ "class_34269": {
+  "adopted_own": 43,
+  "children_total": 54,
+  "groups_served": [
+   [
+    12,
+    30
+   ]
+  ],
+  "not_freed_because": "eleven probe-level WIN children remain verdict-unconsumed (scrutiny owner C++ second-implementation gate pin 9193f5b6...)",
+  "status_after": "unknown",
+  "unknown_after": 11,
+  "unknown_after_s5": [
+   38891,
+   178184,
+   355050,
+   809575,
+   900276,
+   900687,
+   941211,
+   956329,
+   957713,
+   958080,
+   958143
+  ],
+  "unknown_before": 54
+ },
+ "class_status_counts": {
+  "excluded": 390,
+  "excluded_now": 23,
+  "free_now": 38,
+  "unknown": 34498
+ },
+ "closure_table": {
+  "entered": [],
+  "fully_stable_rows": 746,
+  "groups_served_decrease_churn": [
+   {
+    "class_index": 16513,
+    "groups_served_count": [
+     5,
+     4
+    ]
+   }
+  ],
+  "left": [],
+  "rank_churn_only_rows": 58,
+  "rows": 808,
+  "unknown_changed_classes": [
+   {
+    "class_index": 34263,
+    "own_adopted": 1,
+    "unknown_after": 53,
+    "unknown_before": 54
+   },
+   {
+    "class_index": 34269,
+    "own_adopted": 43,
+    "unknown_after": 11,
+    "unknown_before": 54
+   },
+   {
+    "class_index": 34908,
+    "own_adopted": 2,
+    "unknown_after": 54,
+    "unknown_before": 56
+   }
+  ]
+ },
+ "interpretation_guard": "only the 43 fresh LOSS rows are consumed into the canonical cache by this Part; the eleven probe-level WINs are consumed NOWHERE (no verdict claim, no exclusion claim); all 54 batch-30 keys stay UNKNOWN as verdicts; class 34269 is NOT freed (11 unconsumed WIN children remain); no update8 resolution was lost; no per-root coverage regressed (all free/uncovered thirds identical); 11x11 stays UNKNOWN; nodes are bookkeeping, never verdicts",
+ "metrics": {
+  "cache_rows_in_universe": [
+   561,
+   604
+  ],
+  "joint_greedy_union_size": [
+   36854,
+   36902
+  ],
+  "known_universe_indices": [
+   584,
+   627
+  ],
+  "note": "greedy/worklist deltas are frozen-scheduler bookkeeping after the 43 frontier slots resolve (class 34269's members leave the nonfree best-option set); per-root free/uncovered thirds are byte-identical everywhere; root 27 stays 119/119",
+  "per_root_remaining_delta": {
+   "12": -129,
+   "24": -86
+  },
+  "worklist_total": [
+   64711,
+   64665
+  ]
+ },
+ "scenario": "ADOPTED-CANONICAL",
+ "schema": "b30loss43-adoption-decomp-deltas-v1",
+ "update8": {
+  "groups_free_now_static": 131,
+  "newly_resolved_equals_adopted": true,
+  "newly_resolved_s5": [
+   36668,
+   257581,
+   259840,
+   357255,
+   440522,
+   442454,
+   542960,
+   544425,
+   604378,
+   605817,
+   625811,
+   715677,
+   731067,
+   732474,
+   799572,
+   800491,
+   810549,
+   858406,
+   859149,
+   865769,
+   866494,
+   916195,
+   916640,
+   920775,
+   921287,
+   939058,
+   939315,
+   941466,
+   951686,
+   951830,
+   952950,
+   953103,
+   955954,
+   956625,
+   956972,
+   957287,
+   957935,
+   958064,
+   958082,
+   958097,
+   958105,
+   958114,
+   958125
+  ],
+  "remaining_after": 31674,
+  "remaining_before": 31717,
+  "resolved_after": 185,
+  "resolved_before": 142
+ },
+ "verification": {
+  "board_child_regeneration": "class-34269 canonical 5-stone child boundary regenerated via Board(11).children",
+  "kit_files_verified": {
+   "kit1": 199,
+   "kit2": 34,
+   "kit3": 15
+  },
+  "refresh_outputs_byte_identical": true,
+  "refresh_scripts_reexecuted": [
+   "e92fa80e7d8d9ac46f9dd66b90fab6cebab349948fdb14a916f180c2611b81e4",
+   "d45832a6569267d7a8187cb9935acab177d73395af4485bf496ba2661ec29c5b"
+  ]
+ }
+}
