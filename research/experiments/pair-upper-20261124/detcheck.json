@@ -1,0 +1,145 @@
+{
+ "battery_names": [
+  "D1_tuh_census",
+  "D2_tdu_census",
+  "D3_zdiag_census",
+  "D4_typed_selfcheck",
+  "D5_lsb_both_engines",
+  "D6_published_anchors",
+  "D7_plane_closure",
+  "D8_csum_census",
+  "D9_refuted_recheck",
+  "D10_cross_engine",
+  "D11_stress"
+ ],
+ "claims_status": {
+  "conjecture_census_only": [
+   "C-SUM"
+  ],
+  "non_claims": "11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, classes 1/2/4 remain UNKNOWN; no verdict consumed; census is not a substitute for proof",
+  "observation_only": [
+   "OBS-WC window congruent rows follow Z-DIAG",
+   "OBS-BW bed window row k=z-1 zero for z>=3",
+   "E6b mixed-triple early stabilization"
+  ],
+  "proved_universal": [
+   "T-UH",
+   "T-DU'",
+   "Z-DIAG",
+   "L-SB"
+  ],
+  "refuted": [
+   "transition-window parity alternation (k not congruent z)"
+  ]
+ },
+ "counts": [
+  5760,
+  972,
+  1260,
+  1512,
+  2623,
+  1941,
+  1440,
+  2364,
+  6,
+  1116,
+  1594
+ ],
+ "declared_predry_stdout_sha256": "d3e244f42f290db0cb0a28d15cd9dec482386e808fcc673db6e4995e16c88d25",
+ "engine_block_standalone_sha256": "582c93c17bcd4fa618bfb74c733c3d679e197e8749ec4bbcc8821d3a6610d5c0",
+ "engine_pin_embedded": "bd5f22e415a78368c9b798296bc84948d5637decbf3c21a92404d45fb12e3a92",
+ "fetch_back": {
+  "byte_sha256_match": 13,
+  "files_checked": 13,
+  "mismatches": 0,
+  "note_full_text_match": true
+ },
+ "kit": "pair-upper-20261124",
+ "mutation_battery": {
+  "cs": {
+   "as_declared": true,
+   "bad": 2364,
+   "rc": 1
+  },
+  "du": {
+   "as_declared": true,
+   "bad": 972,
+   "rc": 1
+  },
+  "engine": {
+   "as_declared": true,
+   "mutated_sha256": "0ea47a80761d2b20bf414cd52b1535fba56829c3a4c232d1b2f5da3f81441882",
+   "rc": 2
+  },
+  "ps": {
+   "as_declared": true,
+   "bad": 1941,
+   "rc": 1
+  },
+  "rw": {
+   "as_declared": true,
+   "bad": 6,
+   "rc": 1
+  },
+  "sb": {
+   "as_declared": true,
+   "bad": 2623,
+   "rc": 1
+  },
+  "ty": {
+   "as_declared": true,
+   "bad": 1502,
+   "rc": 1
+  },
+  "uh": {
+   "as_declared": true,
+   "bad": 5760,
+   "rc": 1
+  },
+  "zd": {
+   "as_declared": true,
+   "bad": 1260,
+   "rc": 1
+  }
+ },
+ "official_runs": {
+  "byte_identical_stdout": true,
+  "matches_declared_predry_sha": true,
+  "run1": {
+   "PYTHONHASHSEED": "random",
+   "cwd": "fetchback",
+   "rc": 0,
+   "stdout_sha256": "d3e244f42f290db0cb0a28d15cd9dec482386e808fcc673db6e4995e16c88d25"
+  },
+  "run2": {
+   "PYTHONHASHSEED": "1",
+   "cwd": "fetchback",
+   "rc": 0,
+   "stdout_sha256": "d3e244f42f290db0cb0a28d15cd9dec482386e808fcc673db6e4995e16c88d25"
+  },
+  "run3": {
+   "PYTHONHASHSEED": "99",
+   "cwd": "isolated-tree-a",
+   "env": "env -i",
+   "rc": 0,
+   "stdout_sha256": "d3e244f42f290db0cb0a28d15cd9dec482386e808fcc673db6e4995e16c88d25"
+  },
+  "run4": {
+   "PYTHONHASHSEED": "7",
+   "cwd": "isolated-tree-b",
+   "env": "env -i",
+   "rc": 0,
+   "stdout_sha256": "d3e244f42f290db0cb0a28d15cd9dec482386e808fcc673db6e4995e16c88d25"
+  }
+ },
+ "overall_bad": 0,
+ "publish_then_execute": {
+  "K1308_vacancy_recheck": "latest published K item chain at declaration = K1305 (792a7d43); K1306 (SLB) / K1307-provisional (REMO) lanes orthogonal, non-contact",
+  "declaration_note_commit": "eabcb7423ca70d74ba1ab56cc12f929d64c5044c",
+  "kit_commit": "28959626463d375306556d352a9d5a68d6d3ef4b",
+  "observed_head_at_declaration": "295b9505c6d5e379618a2ab60c1b358a73cffdc0"
+ },
+ "total_comparisons": 20588,
+ "verdict": "OFFICIAL-PASS",
+ "verify_sha256": "973c97a52a03137fbb7be4af6965593f2bb1c6c384d75ce18f3d34f3fde5c3ac"
+}
