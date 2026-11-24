@@ -1,51 +1,7 @@
 {
  "experiment": "inversive-spectrum-20261124",
- "note": "Exact values live in spectrum_results.json. This file records (a) partial exact bounds for (q,s)=(8,4),(9,4) and (b) verified lower bounds for the s=q line. All witnesses were checked by scripts/verify_witness.py against the committed board JSON.",
+ "note": "Exact values live in spectrum_results.json; (8,4) moved there (exact K=14). This file records the remaining partial bound (9,4) and verified lower bounds for the s=q line.",
  "partial_bounds": [
-  {
-   "q": 8,
-   "s": 4,
-   "v": 65,
-   "lower": 14,
-   "lower_witness": "research/experiments/inversive-spectrum-20261124/output/witness_q8_s4_n14.json",
-   "lower_method": "randomised greedy, 20000 restarts, seed 20261124",
-   "upper": 15,
-   "upper_proof": {
-    "n_refuted": [
-     16,
-     17,
-     18
-    ],
-    "encoding": "seq/subsets (one clause per (s+1)-subset of a circle) + cardinality >= n + 3-point symmetry breaking",
-    "engines": [
-     {
-      "name": "cadical195",
-      "n": 16,
-      "seconds": 481.36,
-      "artifact": "background job output (session transcript)"
-     },
-     {
-      "name": "cadical195",
-      "n": 17,
-      "seconds": 244.45,
-      "artifact": "background job output (session transcript)"
-     },
-     {
-      "name": "cadical195",
-      "n": 18,
-      "seconds": 128.59,
-      "artifact": "probe stdout (session transcript)"
-     },
-     {
-      "name": "glucose3",
-      "n": 18,
-      "seconds": 69.85,
-      "artifact": "output/q8s4_second_engine.log"
-     }
-    ]
-   },
-   "bound_theorem": 20
-  },
   {
    "q": 9,
    "s": 4,

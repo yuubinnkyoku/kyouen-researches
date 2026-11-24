@@ -178,6 +178,35 @@
    "tau_linear_bound": 32
   },
   {
+   "q": 8,
+   "s": 4,
+   "v": 65,
+   "b": 520,
+   "bound_theorem": 20,
+   "solver": "cadical195",
+   "second_solver": "glucose3",
+   "encoding": "seq",
+   "symmetry_breaking": true,
+   "greedy_lower": 14,
+   "calls": [
+    {
+     "n": 15,
+     "sat": false,
+     "seconds": 658.79
+    }
+   ],
+   "exact": 14,
+   "elapsed": 659.0,
+   "witness": "research/experiments/inversive-spectrum-20261124/output/witness_q8_s4_n14.json",
+   "witness_source": "greedy",
+   "second_engine_unsat_confirm": true,
+   "second_engine_seconds": 410.68,
+   "witness_verified": true,
+   "dual_d": 5,
+   "tau_d": 51,
+   "tau_linear_bound": 45
+  },
+  {
    "q": 9,
    "s": 3,
    "v": 82,
