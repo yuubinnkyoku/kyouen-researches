@@ -1,0 +1,87 @@
+{
+ "board_path": "C:\\Users\\yuubi\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\design-kyouen-witt-20261125\\output\\board_w24.txt",
+ "header": [
+  24,
+  759
+ ],
+ "octads": 759,
+ "distinct_octads": 759,
+ "lambda": {
+  "0": {
+   "distinct_subsets_covered": 1,
+   "expected_distinct": 1,
+   "multiplicity_values": [
+    759
+   ],
+   "expected_multiplicity": 759,
+   "total_incidences": 759,
+   "expected_total": 759
+  },
+  "1": {
+   "distinct_subsets_covered": 24,
+   "expected_distinct": 24,
+   "multiplicity_values": [
+    253
+   ],
+   "expected_multiplicity": 253,
+   "total_incidences": 6072,
+   "expected_total": 6072
+  },
+  "2": {
+   "distinct_subsets_covered": 276,
+   "expected_distinct": 276,
+   "multiplicity_values": [
+    77
+   ],
+   "expected_multiplicity": 77,
+   "total_incidences": 21252,
+   "expected_total": 21252
+  },
+  "3": {
+   "distinct_subsets_covered": 2024,
+   "expected_distinct": 2024,
+   "multiplicity_values": [
+    21
+   ],
+   "expected_multiplicity": 21,
+   "total_incidences": 42504,
+   "expected_total": 42504
+  },
+  "4": {
+   "distinct_subsets_covered": 10626,
+   "expected_distinct": 10626,
+   "multiplicity_values": [
+    5
+   ],
+   "expected_multiplicity": 5,
+   "total_incidences": 53130,
+   "expected_total": 53130
+  },
+  "5": {
+   "distinct_subsets_covered": 42504,
+   "expected_distinct": 42504,
+   "multiplicity_values": [
+    1
+   ],
+   "expected_multiplicity": 1,
+   "total_incidences": 42504,
+   "expected_total": 42504
+  }
+ },
+ "pair_intersection_distribution": {
+  "0": 11385,
+  "2": 170016,
+  "4": 106260
+ },
+ "pair_intersection_expected": {
+  "0": 11385,
+  "2": 170016,
+  "4": 106260
+ },
+ "six_subsets_in_octad": 21252,
+ "six_subsets_in_octad_expected": 21252,
+ "seven_subsets_in_octad": 6072,
+ "seven_subsets_in_octad_expected": 6072,
+ "checks_failed": [],
+ "PASS": true
+}

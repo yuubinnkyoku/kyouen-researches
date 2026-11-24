@@ -34,6 +34,12 @@ artifacts:
 - path: research/experiments/witt-s-spectrum-20261125/output/spectrum.json
   role: data
   note: s 別の安全局面・極大サイズ・Grundy 分布・構造的事実
+- path: research/experiments/witt-s-spectrum-20261125/independent/REPORT.md
+  role: log
+  note: 独立検証（2 実装、s=2..7 全数一致、s=6 の全 12-点集合走査を含む）
+- path: research/experiments/witt-s-spectrum-20261125/independent/out/compare_claims.json
+  role: certificate
+  note: 生データと主張の照合（不一致 0）
 - path: research/experiments/design-kyouen-witt-20261125/output/grundy_w24_s6.txt
   role: data
   note: s=6 の完全 Grundy（1,937,867 局面、極大 12 が 2,576）
@@ -128,6 +134,10 @@ W_24 で s=1..7 の完全 Grundy を計算（s 可変エンジン、`witt-s-spec
   W_23 s=5 は極大 9/11（奇数一様）で `{0,1}`、s=6 は 12/16（偶数一様）で `{0,1}`。
   W_22 s=4 は 8/10（偶数一様）で `{0,1}`、s=5 は極大 11/12/15 でパリティ混在、
   **Grundy 3 が 101,640 局面**に出現（設計盤で初の 3）。
+- 独立検証（別実装 2 系統、5/5 PASS）: s=2..7 の全データ一致。とくに s=6 は
+  C(24,12)=2,704,156 個の全 12-点集合を走査して極大＝dodecad 2,576 個を確定、
+  s=7 も 7,932,035 局面を 2 実装で一致確認。dodecad は各 octad と {2,4,6} 個で交わり
+  （プロファイル 2:132, 4:495, 6:132）、各 dodecad は 66 個の octad 対から生じる。
 - 実験: [witt-s-spectrum-20261125](../../experiments/witt-s-spectrum-20261125/report.md)。
 
 ## 限界

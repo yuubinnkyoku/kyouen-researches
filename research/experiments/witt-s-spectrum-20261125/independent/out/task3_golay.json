@@ -1,0 +1,55 @@
+{
+ "rank": 12,
+ "codewords": 4096,
+ "weight_distribution": {
+  "0": 1,
+  "8": 759,
+  "12": 2576,
+  "16": 759,
+  "24": 1
+ },
+ "doubly_even": true,
+ "self_orthogonal": true,
+ "weight8_is_octads": true,
+ "dodecads_from_code": 2576,
+ "dodecads_from_octad_pairs": 2576,
+ "dodecad_families_equal": true,
+ "dodecad_pair_multiplicities": [
+  66
+ ],
+ "dodecad_octad_intersection_profile": {
+  "((2, 132), (4, 495), (6, 132))": 2576
+ },
+ "dodecads_non_safe": 0,
+ "dodecads_not_maximal_s6": 0,
+ "dodecad_complement_failures": 0,
+ "twelve_sets_with_two_octads": 35420,
+ "twelve_sets_octad_count_profile": {
+  "3": 35420
+ },
+ "sum_choose_k_2": 106260,
+ "twelve_sets_containing_an_octad": 1310540,
+ "safe_12_sets_s7": 1393616,
+ "safe_10_sets_s7": 1870176,
+ "safe_11_sets_s7": 2071104,
+ "dodecad_subset_counts": {
+  "9": {
+   "distinct": 566720,
+   "upper_bound": 566720
+  },
+  "10": {
+   "distinct": 170016,
+   "upper_bound": 170016
+  },
+  "11": {
+   "distinct": 30912,
+   "upper_bound": 30912
+  },
+  "12": {
+   "distinct": 2576,
+   "upper_bound": 2576
+  }
+ },
+ "checks_failed": [],
+ "PASS": true
+}
