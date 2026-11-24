@@ -1,0 +1,251 @@
+{
+ "schema": "n11-s5-chain-integrity-tsaudit-v1",
+ "generated": "2026-11-24T02:43:14.570Z",
+ "executor_note": "independent non-owner verification: sandboxed TypeScript re-implementation (sha256/sha1 from scratch, FIPS vectors + published-pin agreement), GitHub text channel only, no Python, no native host, no solver reruns. Read-only audit; no verdict consumed. 11x11 stays UNKNOWN.",
+ "sha_impl_selftest": {
+  "sha256_empty": true,
+  "sha256_abc": true,
+  "sha256_nist2block_prefix120bit": true,
+  "sha1_abc": true,
+  "sha1_empty": true,
+  "decisive": "tool correctness is settled by 256-bit agreement with three independent published pin sources (MANIFEST-sha256 registers, increments-manifest internal fields, published completion-log pins)"
+ },
+ "files": [
+  {
+   "path": "research/experiments/n11-centralreply-class5343-loss1-adoption-reaudit-20261123/output/merged-exact-s5-chain-plus-closure-increment-plus-batch10-plus-batch16loss52-plus-batch14loss41-plus-batch17loss52-plus-batch14residualloss10-plus-batch20loss53-plus-batch26loss52-plus-batch24loss2-plus-batch27loss4-plus-batch28loss1-20261123.cache",
+   "len": 259574,
+   "chars": 259574,
+   "gitBlobReported": "014c0521f91c3c695502d4734ea23dbe3c2b863b",
+   "gitBlobRecomputed": "014c0521f91c3c695502d4734ea23dbe3c2b863b",
+   "blobChannelMatch": true,
+   "asciiOnly": true,
+   "sha256": "3124461b14e4f73a7248cbf5b96c7ff59ebfdcc05258adeb9c81791d86cc461e"
+  },
+  {
+   "path": "research/experiments/n11-centralreply-class5343-loss1-adoption-reaudit-20261123/output/increment-b28loss1-20261123.cache",
+   "len": 2546,
+   "chars": 2546,
+   "gitBlobReported": "ac2c6f8f6550191270f61abca295b813dc2b1840",
+   "gitBlobRecomputed": "ac2c6f8f6550191270f61abca295b813dc2b1840",
+   "blobChannelMatch": true,
+   "asciiOnly": true,
+   "sha256": "dc857bfd2ecd00deaea3dbe214e0eec0e5b9d7704104a8721d046f262f170487"
+  },
+  {
+   "path": "research/experiments/n11-centralreply-class5343-loss1-adoption-reaudit-20261123/output/increments-manifest.json",
+   "len": 6672,
+   "chars": 6672,
+   "gitBlobReported": "f8ffe9c80bec65709940aeb772000da56e6c6350",
+   "gitBlobRecomputed": "f8ffe9c80bec65709940aeb772000da56e6c6350",
+   "blobChannelMatch": true,
+   "asciiOnly": true,
+   "sha256": "017c7c3036927ddc8107258029d6a89318d04d5923103d7b8ae97952225aaa71"
+  },
+  {
+   "path": "research/experiments/n11-centralreply-class5343-loss7-adoption-reaudit-20261123/output/merged-exact-s5-chain-plus-b28loss1-plus-b28loss7-20261123.cache",
+   "len": 259886,
+   "chars": 259886,
+   "gitBlobReported": "e21e9d16ffce087b20e3f0a1adcb4f4b7b527b76",
+   "gitBlobRecomputed": "e21e9d16ffce087b20e3f0a1adcb4f4b7b527b76",
+   "blobChannelMatch": true,
+   "asciiOnly": true,
+   "sha256": "854800f38349277924bc77c50d92a6d5252f11bdb2b2cdb54a14ca2b4f6b087d"
+  },
+  {
+   "path": "research/experiments/n11-centralreply-class5343-loss7-adoption-reaudit-20261123/output/increment-b28loss7-20261123.cache",
+   "len": 2352,
+   "chars": 2352,
+   "gitBlobReported": "de405024a763344cd6d6db810123b5a1ce7ce350",
+   "gitBlobRecomputed": "de405024a763344cd6d6db810123b5a1ce7ce350",
+   "blobChannelMatch": true,
+   "asciiOnly": true,
+   "sha256": "bd5ef7d7632816006bd5a74349bf703a8dd3251e3a550a33e7ae7a0253abe382"
+  },
+  {
+   "path": "research/experiments/n11-centralreply-class5343-loss7-adoption-reaudit-20261123/output/increments-manifest.json",
+   "len": 24300,
+   "chars": 24300,
+   "gitBlobReported": "1ece286f6c4aac13e3144ebaa9ab620a23156fb4",
+   "gitBlobRecomputed": "1ece286f6c4aac13e3144ebaa9ab620a23156fb4",
+   "blobChannelMatch": true,
+   "asciiOnly": true,
+   "sha256": "b47e07ca90b0166d22c681a3136a60500d7a4f8671b1e77b656a1b34c7c02192"
+  },
+  {
+   "path": "research/experiments/n11-centralreply-class2251-loss16-adoption-reaudit-20261123/output/merged-exact-s5-chain-plus-b28loss1-plus-b28loss7-plus-b29loss16-20261123.cache",
+   "len": 260590,
+   "chars": 260590,
+   "gitBlobReported": "836c79fd0616e0012b712e13fc5d099d159f2e88",
+   "gitBlobRecomputed": "836c79fd0616e0012b712e13fc5d099d159f2e88",
+   "blobChannelMatch": true,
+   "asciiOnly": true,
+   "sha256": "30ddad9dc0add7e21698e864b5c202b8e6ebd3e396c4eb6156a85ff2d34005c4"
+  },
+  {
+   "path": "research/experiments/n11-centralreply-class2251-loss16-adoption-reaudit-20261123/output/increment-b29loss16-20261123.cache",
+   "len": 2502,
+   "chars": 2502,
+   "gitBlobReported": "592e9ff7ccf9e17c1da5976eb489a18337be0b1f",
+   "gitBlobRecomputed": "592e9ff7ccf9e17c1da5976eb489a18337be0b1f",
+   "blobChannelMatch": true,
+   "asciiOnly": true,
+   "sha256": "bab011e376090f9f4732d63f0084f326ba72dada5cf699d5aabc7e014c29ae24"
+  },
+  {
+   "path": "research/experiments/n11-centralreply-class2251-loss16-adoption-reaudit-20261123/output/increments-manifest.json",
+   "len": 5104,
+   "chars": 5104,
+   "gitBlobReported": "d3a0c5b113f2431d87a76943e00ad3f86c9e8cc9",
+   "gitBlobRecomputed": "d3a0c5b113f2431d87a76943e00ad3f86c9e8cc9",
+   "blobChannelMatch": true,
+   "asciiOnly": true,
+   "sha256": "f9f58ee101d53f0598ee01c5c54d5b277797a9e882cfb478ab7f7b3010e191e0"
+  },
+  {
+   "path": "results/n11-s5-evidence-quarantine.json",
+   "len": 927,
+   "chars": 927,
+   "gitBlobReported": "6a320237545874ddd841c90be095cccccc46249d",
+   "gitBlobRecomputed": "6a320237545874ddd841c90be095cccccc46249d",
+   "blobChannelMatch": true,
+   "asciiOnly": true,
+   "sha256": "81d231604d3a095c115135e05ca393d6be83e1aadde4f614d3b5a9cc67d17fe9"
+  }
+ ],
+ "pins": {
+  "chCache_vs_chManifest_3124461b": true,
+  "chCache_vs_coManifest_base_cache_sha256": true,
+  "coCache_854800f3": true,
+  "coCache_vs_cuManifest_base_854800f3": true,
+  "cuCache_30ddad9d": true,
+  "cuInc_vs_cuManifest_bab011e3": true,
+  "cuInc_vs_cuManifestJsonLoss": true,
+  "coInc_bd5ef7d7": true,
+  "coInc_vs_coManifestJsonLoss": true,
+  "chInc_dc857bfd": true,
+  "merger_pin_90711961_shared": true
+ },
+ "counts": {
+  "CH": {
+   "rows": 6294,
+   "distinct": 6294,
+   "verdicts": {
+    "1": 158,
+    "2": 6136
+   },
+   "conflicts": 0,
+   "badRows": 0
+  },
+  "CO": {
+   "rows": 6301,
+   "distinct": 6301,
+   "verdicts": {
+    "1": 158,
+    "2": 6143
+   },
+   "conflicts": 0,
+   "badRows": 0
+  },
+  "CU": {
+   "rows": 6317,
+   "distinct": 6317,
+   "verdicts": {
+    "1": 158,
+    "2": 6159
+   },
+   "conflicts": 0,
+   "badRows": 0
+  },
+  "increments": {
+   "l1": 1,
+   "l7": 7,
+   "l16": 16
+  }
+ },
+ "counts_vs_published": {
+  "CO": {
+   "observedWin": 158,
+   "observedLoss": 6143,
+   "expected": {
+    "win": 158,
+    "loss": 6143,
+    "rows": 6301
+   }
+  },
+  "CU": {
+   "observedWin": 158,
+   "observedLoss": 6159,
+   "expected": {
+    "win": 158,
+    "loss": 6159,
+    "rows": 6317
+   }
+  }
+ },
+ "chain": {
+  "chToCo": {
+   "from": "CH_6294",
+   "to": "CO_6301",
+   "fromRows": 6294,
+   "toRows": 6301,
+   "rowDelta": 7,
+   "subsetBad": 0,
+   "keysMissingInTo": 0,
+   "deltaKeyCount": 7,
+   "incrementKeyCount": 7,
+   "deltaEqualsIncrementKeys": true,
+   "incrementKeysAlreadyInBase": 0,
+   "incrementRowMismatchInTo": 0,
+   "incrementNodesSum": "38784669",
+   "sampleDeltaKeys": [
+    "1152921504606912512:4228",
+    "1171516445255794688:16",
+    "1171516445255827456:0"
+   ]
+  },
+  "coToCu": {
+   "from": "CO_6301",
+   "to": "CU_6317",
+   "fromRows": 6301,
+   "toRows": 6317,
+   "rowDelta": 16,
+   "subsetBad": 0,
+   "keysMissingInTo": 0,
+   "deltaKeyCount": 16,
+   "incrementKeyCount": 16,
+   "deltaEqualsIncrementKeys": true,
+   "incrementKeysAlreadyInBase": 0,
+   "incrementRowMismatchInTo": 0,
+   "incrementNodesSum": "57463971",
+   "sampleDeltaKeys": [
+    "1155314042043105281:0",
+    "1155314042043105282:0",
+    "1155314042043105284:0"
+   ]
+  }
+ },
+ "b28loss1_increment_inside_CH": true,
+ "quarantine": {
+  "activeKeys": [
+   "1152925911243358200:536870912",
+   "10448351135499553000:128"
+  ],
+  "hits": {
+   "ch": [],
+   "co": [],
+   "cu": []
+  }
+ },
+ "nodesChecks": {
+  "b28loss7_sum": "38784669",
+  "b28loss7_manifest_total": "38784669",
+  "b29loss16_sum": "57463971",
+  "b29loss16_manifest_total": "57463971"
+ },
+ "blob_channel": {
+  "allMatch": true,
+  "asciiOnlyAll": true
+ },
+ "errors_during_fetch": [],
+ "ALL_GATES": "PASS"
+}
