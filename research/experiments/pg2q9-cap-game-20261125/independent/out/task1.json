@@ -1,0 +1,74 @@
+{
+ "board_file": "C:\\Users\\yuubi\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\pg2q9-cap-game-20261125\\output\\board_pg2q9.txt",
+ "board_axioms": {
+  "n": 91,
+  "nlines": 91,
+  "line_sizes": [
+   10
+  ],
+  "k": 10,
+  "q": 9,
+  "point_degree_set": [
+   10
+  ],
+  "npairs": 4095,
+  "bad_pairs": 0,
+  "bad_line_meets": 0,
+  "pair_lambda": 1
+ },
+ "model": {
+  "q": 9,
+  "points": 91,
+  "lines": 91,
+  "field": "GF(3)[x]/(x^2+1)",
+  "construction": "zero sets of nonzero normals"
+ },
+ "model_axioms": {
+  "n": 91,
+  "nlines": 91,
+  "line_sizes": [
+   10
+  ],
+  "k": 10,
+  "q": 9,
+  "point_degree_set": [
+   10
+  ],
+  "npairs": 4095,
+  "bad_pairs": 0,
+  "bad_line_meets": 0,
+  "pair_lambda": 1
+ },
+ "iso_search_nodes": 2,
+ "iso_found": true,
+ "frame_model": [
+  [
+   0,
+   0,
+   1
+  ],
+  [
+   0,
+   1,
+   0
+  ],
+  [
+   1,
+   0,
+   0
+  ],
+  [
+   1,
+   1,
+   1
+  ]
+ ],
+ "frame_board": [
+  0,
+  1,
+  10,
+  20
+ ],
+ "iso_lines_mapped": 91,
+ "iso_image_set_equals_board": true
+}
