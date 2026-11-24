@@ -1,0 +1,653 @@
+PASS rows-json-pin 64bc4b78711dbe1e3798116a670d669bcdd71865768bf9a0998bd50550dc13b6
+PASS input-ab033-matches-rows 5,1155314042043105280,4,99 vs 5,1155314042043105280,4,99
+PASS input-ab034-matches-rows 5,1155314042043105280,16384,94 vs 5,1155314042043105280,16384,94
+PASS input-ab035-matches-rows 5,1155314042043105280,32768,97 vs 5,1155314042043105280,32768,97
+PASS input-ab036-matches-rows 5,1297036830121656320,131073,84 vs 5,1297036830121656320,131073,84
+PASS input-ab037-matches-rows 5,1297036830121657344,131072,96 vs 5,1297036830121657344,131072,96
+PASS input-ab038-matches-rows 5,1297036830121656576,131072,100 vs 5,1297036830121656576,131072,100
+PASS input-ab039-matches-rows 5,1155314042043105280,65536,87 vs 5,1155314042043105280,65536,87
+PASS input-ab040-matches-rows 5,1297045626214678528,131072,96 vs 5,1297045626214678528,131072,96
+PASS input-ab041-matches-rows 5,1315051228631138304,131072,99 vs 5,1315051228631138304,131072,99
+PASS input-ab042-matches-rows 5,1155314042043105280,131072,84 vs 5,1155314042043105280,131072,84
+PASS input-ab043-matches-rows 5,1155314042043105280,8,84 vs 5,1155314042043105280,8,84
+PASS input-ab044-matches-rows 5,1297036831195398144,131072,95 vs 5,1297036831195398144,131072,95
+PASS input-ab045-matches-rows 5,1297039029144911872,131072,87 vs 5,1297039029144911872,131072,87
+PASS input-ab046-matches-rows 5,1301540429749026816,131072,94 vs 5,1301540429749026816,131072,94
+PASS input-ab047-matches-rows 5,1297036832269139968,131072,90 vs 5,1297036832269139968,131072,90
+PASS input-ab048-matches-rows 5,1297041228168167424,131072,96 vs 5,1297041228168167424,131072,96
+PASS input-ab049-matches-rows 5,1155314042043105280,8192,88 vs 5,1155314042043105280,8192,88
+PASS input-ab050-matches-rows 5,1306044029376397312,131072,98 vs 5,1306044029376397312,131072,98
+PASS input-ab051-matches-rows 5,1297036834416623616,131072,101 vs 5,1297036834416623616,131072,101
+PASS input-ab052-matches-rows 5,1297036830122180608,131072,95 vs 5,1297036830122180608,131072,95
+PASS input-ab053-matches-rows 5,1297036830122704896,131072,95 vs 5,1297036830122704896,131072,95
+PASS input-ab054-matches-rows 5,1297036830123753472,131072,95 vs 5,1297036830123753472,131072,95
+PASS input-k02a-matches-rows 5,1297036692683751424,68157440,87 vs 5,1297036692683751424,68157440,87
+PASS input-l1a-matches-rows 5,13019119616,16448,116 vs 5,13019119616,16448,116
+PASS input-ng1-matches-rows 5,1297036692683751424,68157440,88 vs 5,1297036692683751424,68157440,88
+PASS input-ng2-matches-rows 6,1297036692683751424,68157440,87 vs 6,1297036692683751424,68157440,87
+PASS pin-third_impl.js 08ea958ff59c3234ec5ac55c5c40689bd0999a34e101a88ea0546800cc4a1998
+PASS pin-verify_tbl.js c8c52528f70b3a9b438edc3feb4e432fbe705d6be21650383d3955efc6790251
+PASS pin-jsreplay.js 845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df
+PASS rows-schema n11-centralreply-closure-b29d2loss22-thirdimpl-input-v1
+PASS target-count 22 (22 b29 drive-2 ckpt-3/3 LOSS rows)
+PASS target-verdict-kinds [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+PASS rules-gate-quads replica quads 95670 mine quads 95670
+PASS rules-gate-tbl-mismatch0 ['triples checked 195044 mismatches 0']
+PASS replica-ab033-present p1/p2
+PASS replica-ab033-done replay_done p1=True p2=True
+PASS replica-ab033-quads quads-header p1=True p2=True
+PASS replica-ab033-det-pair p1=['99', '0', '15000000', '2', '5737514'] p2=['99', '0', '15000000', '2', '5737514']
+PASS replica-ab033-schema schema ['replay', '0', '5', '99', '0', '15000000']
+PASS replica-ab033-key 1155314042043105280,4,99 vs 1155314042043105280,4,99
+PASS replica-ab033-verdict-vs-published this-host result=2 nodes=5737514 vs published result=2 nodes=5737514
+PASS replica-ab034-present p1/p2
+PASS replica-ab034-done replay_done p1=True p2=True
+PASS replica-ab034-quads quads-header p1=True p2=True
+PASS replica-ab034-det-pair p1=['94', '0', '15000000', '2', '2421190'] p2=['94', '0', '15000000', '2', '2421190']
+PASS replica-ab034-schema schema ['replay', '0', '5', '94', '0', '15000000']
+PASS replica-ab034-key 1155314042043105280,16384,94 vs 1155314042043105280,16384,94
+PASS replica-ab034-verdict-vs-published this-host result=2 nodes=2421190 vs published result=2 nodes=2421190
+PASS replica-ab035-present p1/p2
+PASS replica-ab035-done replay_done p1=True p2=True
+PASS replica-ab035-quads quads-header p1=True p2=True
+PASS replica-ab035-det-pair p1=['97', '0', '15000000', '2', '3712073'] p2=['97', '0', '15000000', '2', '3712073']
+PASS replica-ab035-schema schema ['replay', '0', '5', '97', '0', '15000000']
+PASS replica-ab035-key 1155314042043105280,32768,97 vs 1155314042043105280,32768,97
+PASS replica-ab035-verdict-vs-published this-host result=2 nodes=3712073 vs published result=2 nodes=3712073
+PASS replica-ab036-present p1/p2
+PASS replica-ab036-done replay_done p1=True p2=True
+PASS replica-ab036-quads quads-header p1=True p2=True
+PASS replica-ab036-det-pair p1=['84', '0', '15000000', '2', '5512708'] p2=['84', '0', '15000000', '2', '5512708']
+PASS replica-ab036-schema schema ['replay', '0', '5', '84', '0', '15000000']
+PASS replica-ab036-key 1297036830121656320,131073,84 vs 1297036830121656320,131073,84
+PASS replica-ab036-verdict-vs-published this-host result=2 nodes=5512708 vs published result=2 nodes=5512708
+PASS replica-ab037-present p1/p2
+PASS replica-ab037-done replay_done p1=True p2=True
+PASS replica-ab037-quads quads-header p1=True p2=True
+PASS replica-ab037-det-pair p1=['96', '0', '15000000', '2', '3582387'] p2=['96', '0', '15000000', '2', '3582387']
+PASS replica-ab037-schema schema ['replay', '0', '5', '96', '0', '15000000']
+PASS replica-ab037-key 1297036830121657344,131072,96 vs 1297036830121657344,131072,96
+PASS replica-ab037-verdict-vs-published this-host result=2 nodes=3582387 vs published result=2 nodes=3582387
+PASS replica-ab038-present p1/p2
+PASS replica-ab038-done replay_done p1=True p2=True
+PASS replica-ab038-quads quads-header p1=True p2=True
+PASS replica-ab038-det-pair p1=['100', '0', '15000000', '2', '7949979'] p2=['100', '0', '15000000', '2', '7949979']
+PASS replica-ab038-schema schema ['replay', '0', '5', '100', '0', '15000000']
+PASS replica-ab038-key 1297036830121656576,131072,100 vs 1297036830121656576,131072,100
+PASS replica-ab038-verdict-vs-published this-host result=2 nodes=7949979 vs published result=2 nodes=7949979
+PASS replica-ab039-present p1/p2
+PASS replica-ab039-done replay_done p1=True p2=True
+PASS replica-ab039-quads quads-header p1=True p2=True
+PASS replica-ab039-det-pair p1=['87', '0', '15000000', '2', '3343978'] p2=['87', '0', '15000000', '2', '3343978']
+PASS replica-ab039-schema schema ['replay', '0', '5', '87', '0', '15000000']
+PASS replica-ab039-key 1155314042043105280,65536,87 vs 1155314042043105280,65536,87
+PASS replica-ab039-verdict-vs-published this-host result=2 nodes=3343978 vs published result=2 nodes=3343978
+PASS replica-ab040-present p1/p2
+PASS replica-ab040-done replay_done p1=True p2=True
+PASS replica-ab040-quads quads-header p1=True p2=True
+PASS replica-ab040-det-pair p1=['96', '0', '15000000', '2', '3796441'] p2=['96', '0', '15000000', '2', '3796441']
+PASS replica-ab040-schema schema ['replay', '0', '5', '96', '0', '15000000']
+PASS replica-ab040-key 1297045626214678528,131072,96 vs 1297045626214678528,131072,96
+PASS replica-ab040-verdict-vs-published this-host result=2 nodes=3796441 vs published result=2 nodes=3796441
+PASS replica-ab041-present p1/p2
+PASS replica-ab041-done replay_done p1=True p2=True
+PASS replica-ab041-quads quads-header p1=True p2=True
+PASS replica-ab041-det-pair p1=['99', '0', '15000000', '2', '4746725'] p2=['99', '0', '15000000', '2', '4746725']
+PASS replica-ab041-schema schema ['replay', '0', '5', '99', '0', '15000000']
+PASS replica-ab041-key 1315051228631138304,131072,99 vs 1315051228631138304,131072,99
+PASS replica-ab041-verdict-vs-published this-host result=2 nodes=4746725 vs published result=2 nodes=4746725
+PASS replica-ab042-present p1/p2
+PASS replica-ab042-done replay_done p1=True p2=True
+PASS replica-ab042-quads quads-header p1=True p2=True
+PASS replica-ab042-det-pair p1=['84', '0', '15000000', '2', '1926643'] p2=['84', '0', '15000000', '2', '1926643']
+PASS replica-ab042-schema schema ['replay', '0', '5', '84', '0', '15000000']
+PASS replica-ab042-key 1155314042043105280,131072,84 vs 1155314042043105280,131072,84
+PASS replica-ab042-verdict-vs-published this-host result=2 nodes=1926643 vs published result=2 nodes=1926643
+PASS replica-ab043-present p1/p2
+PASS replica-ab043-done replay_done p1=True p2=True
+PASS replica-ab043-quads quads-header p1=True p2=True
+PASS replica-ab043-det-pair p1=['84', '0', '15000000', '2', '3003611'] p2=['84', '0', '15000000', '2', '3003611']
+PASS replica-ab043-schema schema ['replay', '0', '5', '84', '0', '15000000']
+PASS replica-ab043-key 1155314042043105280,8,84 vs 1155314042043105280,8,84
+PASS replica-ab043-verdict-vs-published this-host result=2 nodes=3003611 vs published result=2 nodes=3003611
+PASS replica-ab044-present p1/p2
+PASS replica-ab044-done replay_done p1=True p2=True
+PASS replica-ab044-quads quads-header p1=True p2=True
+PASS replica-ab044-det-pair p1=['95', '0', '15000000', '2', '4719146'] p2=['95', '0', '15000000', '2', '4719146']
+PASS replica-ab044-schema schema ['replay', '0', '5', '95', '0', '15000000']
+PASS replica-ab044-key 1297036831195398144,131072,95 vs 1297036831195398144,131072,95
+PASS replica-ab044-verdict-vs-published this-host result=2 nodes=4719146 vs published result=2 nodes=4719146
+PASS replica-ab045-present p1/p2
+PASS replica-ab045-done replay_done p1=True p2=True
+PASS replica-ab045-quads quads-header p1=True p2=True
+PASS replica-ab045-det-pair p1=['87', '0', '15000000', '2', '3978891'] p2=['87', '0', '15000000', '2', '3978891']
+PASS replica-ab045-schema schema ['replay', '0', '5', '87', '0', '15000000']
+PASS replica-ab045-key 1297039029144911872,131072,87 vs 1297039029144911872,131072,87
+PASS replica-ab045-verdict-vs-published this-host result=2 nodes=3978891 vs published result=2 nodes=3978891
+PASS replica-ab046-present p1/p2
+PASS replica-ab046-done replay_done p1=True p2=True
+PASS replica-ab046-quads quads-header p1=True p2=True
+PASS replica-ab046-det-pair p1=['94', '0', '15000000', '2', '4979936'] p2=['94', '0', '15000000', '2', '4979936']
+PASS replica-ab046-schema schema ['replay', '0', '5', '94', '0', '15000000']
+PASS replica-ab046-key 1301540429749026816,131072,94 vs 1301540429749026816,131072,94
+PASS replica-ab046-verdict-vs-published this-host result=2 nodes=4979936 vs published result=2 nodes=4979936
+PASS replica-ab047-present p1/p2
+PASS replica-ab047-done replay_done p1=True p2=True
+PASS replica-ab047-quads quads-header p1=True p2=True
+PASS replica-ab047-det-pair p1=['90', '0', '15000000', '2', '5604561'] p2=['90', '0', '15000000', '2', '5604561']
+PASS replica-ab047-schema schema ['replay', '0', '5', '90', '0', '15000000']
+PASS replica-ab047-key 1297036832269139968,131072,90 vs 1297036832269139968,131072,90
+PASS replica-ab047-verdict-vs-published this-host result=2 nodes=5604561 vs published result=2 nodes=5604561
+PASS replica-ab048-present p1/p2
+PASS replica-ab048-done replay_done p1=True p2=True
+PASS replica-ab048-quads quads-header p1=True p2=True
+PASS replica-ab048-det-pair p1=['96', '0', '15000000', '2', '3457154'] p2=['96', '0', '15000000', '2', '3457154']
+PASS replica-ab048-schema schema ['replay', '0', '5', '96', '0', '15000000']
+PASS replica-ab048-key 1297041228168167424,131072,96 vs 1297041228168167424,131072,96
+PASS replica-ab048-verdict-vs-published this-host result=2 nodes=3457154 vs published result=2 nodes=3457154
+PASS replica-ab049-present p1/p2
+PASS replica-ab049-done replay_done p1=True p2=True
+PASS replica-ab049-quads quads-header p1=True p2=True
+PASS replica-ab049-det-pair p1=['88', '0', '15000000', '2', '4332757'] p2=['88', '0', '15000000', '2', '4332757']
+PASS replica-ab049-schema schema ['replay', '0', '5', '88', '0', '15000000']
+PASS replica-ab049-key 1155314042043105280,8192,88 vs 1155314042043105280,8192,88
+PASS replica-ab049-verdict-vs-published this-host result=2 nodes=4332757 vs published result=2 nodes=4332757
+PASS replica-ab050-present p1/p2
+PASS replica-ab050-done replay_done p1=True p2=True
+PASS replica-ab050-quads quads-header p1=True p2=True
+PASS replica-ab050-det-pair p1=['98', '0', '15000000', '2', '4127068'] p2=['98', '0', '15000000', '2', '4127068']
+PASS replica-ab050-schema schema ['replay', '0', '5', '98', '0', '15000000']
+PASS replica-ab050-key 1306044029376397312,131072,98 vs 1306044029376397312,131072,98
+PASS replica-ab050-verdict-vs-published this-host result=2 nodes=4127068 vs published result=2 nodes=4127068
+PASS replica-ab051-present p1/p2
+PASS replica-ab051-done replay_done p1=True p2=True
+PASS replica-ab051-quads quads-header p1=True p2=True
+PASS replica-ab051-det-pair p1=['101', '0', '15000000', '2', '6906311'] p2=['101', '0', '15000000', '2', '6906311']
+PASS replica-ab051-schema schema ['replay', '0', '5', '101', '0', '15000000']
+PASS replica-ab051-key 1297036834416623616,131072,101 vs 1297036834416623616,131072,101
+PASS replica-ab051-verdict-vs-published this-host result=2 nodes=6906311 vs published result=2 nodes=6906311
+PASS replica-ab052-present p1/p2
+PASS replica-ab052-done replay_done p1=True p2=True
+PASS replica-ab052-quads quads-header p1=True p2=True
+PASS replica-ab052-det-pair p1=['95', '0', '15000000', '2', '5830122'] p2=['95', '0', '15000000', '2', '5830122']
+PASS replica-ab052-schema schema ['replay', '0', '5', '95', '0', '15000000']
+PASS replica-ab052-key 1297036830122180608,131072,95 vs 1297036830122180608,131072,95
+PASS replica-ab052-verdict-vs-published this-host result=2 nodes=5830122 vs published result=2 nodes=5830122
+PASS replica-ab053-present p1/p2
+PASS replica-ab053-done replay_done p1=True p2=True
+PASS replica-ab053-quads quads-header p1=True p2=True
+PASS replica-ab053-det-pair p1=['95', '0', '15000000', '2', '2832769'] p2=['95', '0', '15000000', '2', '2832769']
+PASS replica-ab053-schema schema ['replay', '0', '5', '95', '0', '15000000']
+PASS replica-ab053-key 1297036830122704896,131072,95 vs 1297036830122704896,131072,95
+PASS replica-ab053-verdict-vs-published this-host result=2 nodes=2832769 vs published result=2 nodes=2832769
+PASS replica-ab054-present p1/p2
+PASS replica-ab054-done replay_done p1=True p2=True
+PASS replica-ab054-quads quads-header p1=True p2=True
+PASS replica-ab054-det-pair p1=['95', '0', '15000000', '2', '3014059'] p2=['95', '0', '15000000', '2', '3014059']
+PASS replica-ab054-schema schema ['replay', '0', '5', '95', '0', '15000000']
+PASS replica-ab054-key 1297036830123753472,131072,95 vs 1297036830123753472,131072,95
+PASS replica-ab054-verdict-vs-published this-host result=2 nodes=3014059 vs published result=2 nodes=3014059
+PASS anchor-k02a-present a/b
+PASS anchor-k02a-a-clean result=1 reason=clean
+PASS anchor-k02a-a-expansions exp=9106337 vs 9106337, ttH=4991527 vs 4991527
+PASS anchor-k02a-a-legal 87 vs 87
+PASS anchor-k02a-a-key 1297036692683751424:68157440
+PASS anchor-k02a-b-clean result=1 reason=clean
+PASS anchor-k02a-b-expansions exp=9106337 vs 9106337, ttH=4991527 vs 4991527
+PASS anchor-k02a-b-legal 87 vs 87
+PASS anchor-k02a-b-key 1297036692683751424:68157440
+PASS anchor-k02a-det-pair 9106337 vs 9106337
+PASS anchor-l1a-present a/b
+PASS anchor-l1a-a-clean result=2 reason=clean
+PASS anchor-l1a-a-expansions exp=7660602 vs 7660602, ttH=3951175 vs 3951175
+PASS anchor-l1a-a-legal 116 vs 116
+PASS anchor-l1a-a-key 13019119616:16448
+PASS anchor-l1a-b-clean result=2 reason=clean
+PASS anchor-l1a-b-expansions exp=7660602 vs 7660602, ttH=3951175 vs 3951175
+PASS anchor-l1a-b-legal 116 vs 116
+PASS anchor-l1a-b-key 13019119616:16448
+PASS anchor-l1a-det-pair 7660602 vs 7660602
+PASS neg-ng1-failclosed {'raw': 'third,ng1a,5,88,,GATE_FAIL,"legal count mismatch: derived=87 declared=88"', 'stub': 'third', 'gate_fail': 'GATE_FAIL,"legal count mismatch: derived=87 declared=88'}
+PASS neg-ng2-failclosed {'raw': 'third,ng2a,6,87,,GATE_FAIL,"stone count mismatch: bits=5 declared=6"', 'stub': 'third', 'gate_fail': 'GATE_FAIL,"stone count mismatch: bits=5 declared=6'}
+PASS target-ab033-present a/b
+PASS target-ab033-a-key 1155314042043105280:4
+PASS target-ab033-a-legal 99 vs 99
+PASS target-ab033-a-quads 95670
+PASS target-ab033-b-key 1155314042043105280:4
+PASS target-ab033-b-legal 99 vs 99
+PASS target-ab033-b-quads 95670
+PASS target-ab033-det-pair a=(2,6676063,clean) b=(2,6676063,clean)
+PASS target-ab033-verdict-agree third=2 replica=2
+PASS target-ab034-present a/b
+PASS target-ab034-a-key 1155314042043105280:16384
+PASS target-ab034-a-legal 94 vs 94
+PASS target-ab034-a-quads 95670
+PASS target-ab034-b-key 1155314042043105280:16384
+PASS target-ab034-b-legal 94 vs 94
+PASS target-ab034-b-quads 95670
+PASS target-ab034-det-pair a=(2,2747787,clean) b=(2,2747787,clean)
+PASS target-ab034-verdict-agree third=2 replica=2
+PASS target-ab035-present a/b
+PASS target-ab035-a-key 1155314042043105280:32768
+PASS target-ab035-a-legal 97 vs 97
+PASS target-ab035-a-quads 95670
+PASS target-ab035-b-key 1155314042043105280:32768
+PASS target-ab035-b-legal 97 vs 97
+PASS target-ab035-b-quads 95670
+PASS target-ab035-det-pair a=(2,4230911,clean) b=(2,4230911,clean)
+PASS target-ab035-verdict-agree third=2 replica=2
+PASS target-ab036-present a/b
+PASS target-ab036-a-key 1297036830121656320:131073
+PASS target-ab036-a-legal 84 vs 84
+PASS target-ab036-a-quads 95670
+PASS target-ab036-b-key 1297036830121656320:131073
+PASS target-ab036-b-legal 84 vs 84
+PASS target-ab036-b-quads 95670
+PASS target-ab036-det-pair a=(2,6352203,clean) b=(2,6352203,clean)
+PASS target-ab036-verdict-agree third=2 replica=2
+PASS target-ab037-present a/b
+PASS target-ab037-a-key 1297036830121657344:131072
+PASS target-ab037-a-legal 96 vs 96
+PASS target-ab037-a-quads 95670
+PASS target-ab037-b-key 1297036830121657344:131072
+PASS target-ab037-b-legal 96 vs 96
+PASS target-ab037-b-quads 95670
+PASS target-ab037-det-pair a=(2,4120371,clean) b=(2,4120371,clean)
+PASS target-ab037-verdict-agree third=2 replica=2
+PASS target-ab038-present a/b
+PASS target-ab038-a-key 1297036830121656576:131072
+PASS target-ab038-a-legal 100 vs 100
+PASS target-ab038-a-quads 95670
+PASS target-ab038-b-key 1297036830121656576:131072
+PASS target-ab038-b-legal 100 vs 100
+PASS target-ab038-b-quads 95670
+PASS target-ab038-det-pair a=(2,9247282,clean) b=(2,9247282,clean)
+PASS target-ab038-verdict-agree third=2 replica=2
+PASS target-ab039-present a/b
+PASS target-ab039-a-key 1155314042043105280:65536
+PASS target-ab039-a-legal 87 vs 87
+PASS target-ab039-a-quads 95670
+PASS target-ab039-b-key 1155314042043105280:65536
+PASS target-ab039-b-legal 87 vs 87
+PASS target-ab039-b-quads 95670
+PASS target-ab039-det-pair a=(2,3781163,clean) b=(2,3781163,clean)
+PASS target-ab039-verdict-agree third=2 replica=2
+PASS target-ab040-present a/b
+PASS target-ab040-a-key 1297045626214678528:131072
+PASS target-ab040-a-legal 96 vs 96
+PASS target-ab040-a-quads 95670
+PASS target-ab040-b-key 1297045626214678528:131072
+PASS target-ab040-b-legal 96 vs 96
+PASS target-ab040-b-quads 95670
+PASS target-ab040-det-pair a=(2,4347869,clean) b=(2,4347869,clean)
+PASS target-ab040-verdict-agree third=2 replica=2
+PASS target-ab041-present a/b
+PASS target-ab041-a-key 1315051228631138304:131072
+PASS target-ab041-a-legal 99 vs 99
+PASS target-ab041-a-quads 95670
+PASS target-ab041-b-key 1315051228631138304:131072
+PASS target-ab041-b-legal 99 vs 99
+PASS target-ab041-b-quads 95670
+PASS target-ab041-det-pair a=(2,5474412,clean) b=(2,5474412,clean)
+PASS target-ab041-verdict-agree third=2 replica=2
+PASS target-ab042-present a/b
+PASS target-ab042-a-key 1155314042043105280:131072
+PASS target-ab042-a-legal 84 vs 84
+PASS target-ab042-a-quads 95670
+PASS target-ab042-b-key 1155314042043105280:131072
+PASS target-ab042-b-legal 84 vs 84
+PASS target-ab042-b-quads 95670
+PASS target-ab042-det-pair a=(2,2156667,clean) b=(2,2156667,clean)
+PASS target-ab042-verdict-agree third=2 replica=2
+PASS target-ab043-present a/b
+PASS target-ab043-a-key 1155314042043105280:8
+PASS target-ab043-a-legal 84 vs 84
+PASS target-ab043-a-quads 95670
+PASS target-ab043-b-key 1155314042043105280:8
+PASS target-ab043-b-legal 84 vs 84
+PASS target-ab043-b-quads 95670
+PASS target-ab043-det-pair a=(2,3392084,clean) b=(2,3392084,clean)
+PASS target-ab043-verdict-agree third=2 replica=2
+PASS target-ab044-present a/b
+PASS target-ab044-a-key 1297036831195398144:131072
+PASS target-ab044-a-legal 95 vs 95
+PASS target-ab044-a-quads 95670
+PASS target-ab044-b-key 1297036831195398144:131072
+PASS target-ab044-b-legal 95 vs 95
+PASS target-ab044-b-quads 95670
+PASS target-ab044-det-pair a=(2,5426501,clean) b=(2,5426501,clean)
+PASS target-ab044-verdict-agree third=2 replica=2
+PASS target-ab045-present a/b
+PASS target-ab045-a-key 1297039029144911872:131072
+PASS target-ab045-a-legal 87 vs 87
+PASS target-ab045-a-quads 95670
+PASS target-ab045-b-key 1297039029144911872:131072
+PASS target-ab045-b-legal 87 vs 87
+PASS target-ab045-b-quads 95670
+PASS target-ab045-det-pair a=(2,4523668,clean) b=(2,4523668,clean)
+PASS target-ab045-verdict-agree third=2 replica=2
+PASS target-ab046-present a/b
+PASS target-ab046-a-key 1301540429749026816:131072
+PASS target-ab046-a-legal 94 vs 94
+PASS target-ab046-a-quads 95670
+PASS target-ab046-b-key 1301540429749026816:131072
+PASS target-ab046-b-legal 94 vs 94
+PASS target-ab046-b-quads 95670
+PASS target-ab046-det-pair a=(2,5769335,clean) b=(2,5769335,clean)
+PASS target-ab046-verdict-agree third=2 replica=2
+PASS target-ab047-present a/b
+PASS target-ab047-a-key 1297036832269139968:131072
+PASS target-ab047-a-legal 90 vs 90
+PASS target-ab047-a-quads 95670
+PASS target-ab047-b-key 1297036832269139968:131072
+PASS target-ab047-b-legal 90 vs 90
+PASS target-ab047-b-quads 95670
+PASS target-ab047-det-pair a=(2,6439541,clean) b=(2,6439541,clean)
+PASS target-ab047-verdict-agree third=2 replica=2
+PASS target-ab048-present a/b
+PASS target-ab048-a-key 1297041228168167424:131072
+PASS target-ab048-a-legal 96 vs 96
+PASS target-ab048-a-quads 95670
+PASS target-ab048-b-key 1297041228168167424:131072
+PASS target-ab048-b-legal 96 vs 96
+PASS target-ab048-b-quads 95670
+PASS target-ab048-det-pair a=(2,3938830,clean) b=(2,3938830,clean)
+PASS target-ab048-verdict-agree third=2 replica=2
+PASS target-ab049-present a/b
+PASS target-ab049-a-key 1155314042043105280:8192
+PASS target-ab049-a-legal 88 vs 88
+PASS target-ab049-a-quads 95670
+PASS target-ab049-b-key 1155314042043105280:8192
+PASS target-ab049-b-legal 88 vs 88
+PASS target-ab049-b-quads 95670
+PASS target-ab049-det-pair a=(2,4958228,clean) b=(2,4958228,clean)
+PASS target-ab049-verdict-agree third=2 replica=2
+PASS target-ab050-present a/b
+PASS target-ab050-a-key 1306044029376397312:131072
+PASS target-ab050-a-legal 98 vs 98
+PASS target-ab050-a-quads 95670
+PASS target-ab050-b-key 1306044029376397312:131072
+PASS target-ab050-b-legal 98 vs 98
+PASS target-ab050-b-quads 95670
+PASS target-ab050-det-pair a=(2,4758814,clean) b=(2,4758814,clean)
+PASS target-ab050-verdict-agree third=2 replica=2
+PASS target-ab051-present a/b
+PASS target-ab051-a-key 1297036834416623616:131072
+PASS target-ab051-a-legal 101 vs 101
+PASS target-ab051-a-quads 95670
+PASS target-ab051-b-key 1297036834416623616:131072
+PASS target-ab051-b-legal 101 vs 101
+PASS target-ab051-b-quads 95670
+PASS target-ab051-det-pair a=(2,8083936,clean) b=(2,8083936,clean)
+PASS target-ab051-verdict-agree third=2 replica=2
+PASS target-ab052-present a/b
+PASS target-ab052-a-key 1297036830122180608:131072
+PASS target-ab052-a-legal 95 vs 95
+PASS target-ab052-a-quads 95670
+PASS target-ab052-b-key 1297036830122180608:131072
+PASS target-ab052-b-legal 95 vs 95
+PASS target-ab052-b-quads 95670
+PASS target-ab052-det-pair a=(2,6748723,clean) b=(2,6748723,clean)
+PASS target-ab052-verdict-agree third=2 replica=2
+PASS target-ab053-present a/b
+PASS target-ab053-a-key 1297036830122704896:131072
+PASS target-ab053-a-legal 95 vs 95
+PASS target-ab053-a-quads 95670
+PASS target-ab053-b-key 1297036830122704896:131072
+PASS target-ab053-b-legal 95 vs 95
+PASS target-ab053-b-quads 95670
+PASS target-ab053-det-pair a=(2,3200847,clean) b=(2,3200847,clean)
+PASS target-ab053-verdict-agree third=2 replica=2
+PASS target-ab054-present a/b
+PASS target-ab054-a-key 1297036830123753472:131072
+PASS target-ab054-a-legal 95 vs 95
+PASS target-ab054-a-quads 95670
+PASS target-ab054-b-key 1297036830123753472:131072
+PASS target-ab054-b-legal 95 vs 95
+PASS target-ab054-b-quads 95670
+PASS target-ab054-det-pair a=(2,3463276,clean) b=(2,3463276,clean)
+PASS target-ab054-verdict-agree third=2 replica=2
+PASS unadopted-pin-raw-ab033-p1 1fb2b25017e6d899b105652fd104316628ec66aaa5e35ef91e3ee5876396e260
+PASS unadopted-pin-raw-ab033-p2 b4545d3682aafb11701f344a82e38f4f817b713e6e5a6936e6f89f68faabd39c
+PASS unadopted-pin-merged-cache-ab033 30ddad9dc0add7e21698e864b5c202b8e6ebd3e396c4eb6156a85ff2d34005c4
+PASS unadopted-merged-cache-rowcount-ab033 6317 s5verdict rows
+PASS unadopted-merged-cache-row-absent-ab033 s5verdict,1155314042043105280,4,5,2,5737514 occurs 0 times (expect 0: the drive-2 LOSS row was never adopted)
+PASS unadopted-merged-cache-no-key-row-ab033 []
+PASS unadopted-pin-raw-ab034-p1 02cc6aac705e6ebe788486f8ef5e5aa835d9238d076dadc5706ba14b92118b33
+PASS unadopted-pin-raw-ab034-p2 1276f66702e70de460e612c5b0a26e6f083e3c471080ac10699a32db43f32a4a
+PASS unadopted-pin-merged-cache-ab034 30ddad9dc0add7e21698e864b5c202b8e6ebd3e396c4eb6156a85ff2d34005c4
+PASS unadopted-merged-cache-rowcount-ab034 6317 s5verdict rows
+PASS unadopted-merged-cache-row-absent-ab034 s5verdict,1155314042043105280,16384,5,2,2421190 occurs 0 times (expect 0: the drive-2 LOSS row was never adopted)
+PASS unadopted-merged-cache-no-key-row-ab034 []
+PASS unadopted-pin-raw-ab035-p1 a64a66c342c01a798b707111b6e1959a373d6784c23a231626cbb54bf51e07c1
+PASS unadopted-pin-raw-ab035-p2 cac28df0e7bc55707c762e4db490694f66148d4e2e1ac68725e5497a521d3f04
+PASS unadopted-pin-merged-cache-ab035 30ddad9dc0add7e21698e864b5c202b8e6ebd3e396c4eb6156a85ff2d34005c4
+PASS unadopted-merged-cache-rowcount-ab035 6317 s5verdict rows
+PASS unadopted-merged-cache-row-absent-ab035 s5verdict,1155314042043105280,32768,5,2,3712073 occurs 0 times (expect 0: the drive-2 LOSS row was never adopted)
+PASS unadopted-merged-cache-no-key-row-ab035 []
+PASS unadopted-pin-raw-ab036-p1 fb66e6ba9f93c02cc63821a432e94aa98485adbe501cb7d2969ab913849043ba
+PASS unadopted-pin-raw-ab036-p2 612cf8697ac4f05a351205e665c779a6a9643f1cad4ce7f7f0e19e8806a06c66
+PASS unadopted-pin-merged-cache-ab036 30ddad9dc0add7e21698e864b5c202b8e6ebd3e396c4eb6156a85ff2d34005c4
+PASS unadopted-merged-cache-rowcount-ab036 6317 s5verdict rows
+PASS unadopted-merged-cache-row-absent-ab036 s5verdict,1297036830121656320,131073,5,2,5512708 occurs 0 times (expect 0: the drive-2 LOSS row was never adopted)
+PASS unadopted-merged-cache-no-key-row-ab036 []
+PASS unadopted-pin-raw-ab037-p1 ccf3bdc3912be63d0236cfcf1ef98ed1de5fbbb7a1a7f6fad26068fb9f67cd10
+PASS unadopted-pin-raw-ab037-p2 ec56ba4c8081c1a57170012304a9af6429743d235dc0321c967a4b47e0eba730
+PASS unadopted-pin-merged-cache-ab037 30ddad9dc0add7e21698e864b5c202b8e6ebd3e396c4eb6156a85ff2d34005c4
+PASS unadopted-merged-cache-rowcount-ab037 6317 s5verdict rows
+PASS unadopted-merged-cache-row-absent-ab037 s5verdict,1297036830121657344,131072,5,2,3582387 occurs 0 times (expect 0: the drive-2 LOSS row was never adopted)
+PASS unadopted-merged-cache-no-key-row-ab037 []
+PASS unadopted-pin-raw-ab038-p1 1faabe063bdf0e11895fe569896e780c86e596015110928b77b9c2ace11858c9
+PASS unadopted-pin-raw-ab038-p2 b1c8bbf46d84600126765480133328830e80fab29f2e68f2b813a01ae5a04f2e
+PASS unadopted-pin-merged-cache-ab038 30ddad9dc0add7e21698e864b5c202b8e6ebd3e396c4eb6156a85ff2d34005c4
+PASS unadopted-merged-cache-rowcount-ab038 6317 s5verdict rows
+PASS unadopted-merged-cache-row-absent-ab038 s5verdict,1297036830121656576,131072,5,2,7949979 occurs 0 times (expect 0: the drive-2 LOSS row was never adopted)
+PASS unadopted-merged-cache-no-key-row-ab038 []
+PASS unadopted-pin-raw-ab039-p1 6010281e79aca63c1017b3dae72fe3559482e4d5ffeec0e0fba16e8988830769
+PASS unadopted-pin-raw-ab039-p2 6e66a85edc3b0fcaa9da92fd58630586266527fb299ac329162d081bfb3a8d36
+PASS unadopted-pin-merged-cache-ab039 30ddad9dc0add7e21698e864b5c202b8e6ebd3e396c4eb6156a85ff2d34005c4
+PASS unadopted-merged-cache-rowcount-ab039 6317 s5verdict rows
+PASS unadopted-merged-cache-row-absent-ab039 s5verdict,1155314042043105280,65536,5,2,3343978 occurs 0 times (expect 0: the drive-2 LOSS row was never adopted)
+PASS unadopted-merged-cache-no-key-row-ab039 []
+PASS unadopted-pin-raw-ab040-p1 d5458452c343f7f82e6f278e9760f7675ae6aa8d7ea107344a798cb59d0df335
+PASS unadopted-pin-raw-ab040-p2 5f49c18615e2278cf872ea7afb9a7fa0b0679f04322cfbf9679742a60a9ab99e
+PASS unadopted-pin-merged-cache-ab040 30ddad9dc0add7e21698e864b5c202b8e6ebd3e396c4eb6156a85ff2d34005c4
+PASS unadopted-merged-cache-rowcount-ab040 6317 s5verdict rows
+PASS unadopted-merged-cache-row-absent-ab040 s5verdict,1297045626214678528,131072,5,2,3796441 occurs 0 times (expect 0: the drive-2 LOSS row was never adopted)
+PASS unadopted-merged-cache-no-key-row-ab040 []
+PASS unadopted-pin-raw-ab041-p1 b2aec1abca8019fbc4f7496f5c89dfe0ce4eb0150e3af946f04676501b0c47bb
+PASS unadopted-pin-raw-ab041-p2 0a24ebf4a96207c4c1df0d68a482f0875ca61a97da5d2c8b9f55beab6b9fd666
+PASS unadopted-pin-merged-cache-ab041 30ddad9dc0add7e21698e864b5c202b8e6ebd3e396c4eb6156a85ff2d34005c4
+PASS unadopted-merged-cache-rowcount-ab041 6317 s5verdict rows
+PASS unadopted-merged-cache-row-absent-ab041 s5verdict,1315051228631138304,131072,5,2,4746725 occurs 0 times (expect 0: the drive-2 LOSS row was never adopted)
+PASS unadopted-merged-cache-no-key-row-ab041 []
+PASS unadopted-pin-raw-ab042-p1 714daf54f12b742dc80ba5140c5626d639f9cd9cbce1b15749efcf202725a6e0
+PASS unadopted-pin-raw-ab042-p2 e7042cd71c8407c3f2b48eda39f6a26de3e1303fdc3afd43d21f206cd5093c65
+PASS unadopted-pin-merged-cache-ab042 30ddad9dc0add7e21698e864b5c202b8e6ebd3e396c4eb6156a85ff2d34005c4
+PASS unadopted-merged-cache-rowcount-ab042 6317 s5verdict rows
+PASS unadopted-merged-cache-row-absent-ab042 s5verdict,1155314042043105280,131072,5,2,1926643 occurs 0 times (expect 0: the drive-2 LOSS row was never adopted)
+PASS unadopted-merged-cache-no-key-row-ab042 []
+PASS unadopted-pin-raw-ab043-p1 a0d6c3a07d922ed3abda4f7fecb562ad6747acd9ff93c89b0c9ef57cdaecced5
+PASS unadopted-pin-raw-ab043-p2 430ff6e191f49e71d60d81ff60c7c44fe09638431673d9b1886effed801f9fd9
+PASS unadopted-pin-merged-cache-ab043 30ddad9dc0add7e21698e864b5c202b8e6ebd3e396c4eb6156a85ff2d34005c4
+PASS unadopted-merged-cache-rowcount-ab043 6317 s5verdict rows
+PASS unadopted-merged-cache-row-absent-ab043 s5verdict,1155314042043105280,8,5,2,3003611 occurs 0 times (expect 0: the drive-2 LOSS row was never adopted)
+PASS unadopted-merged-cache-no-key-row-ab043 []
+PASS unadopted-pin-raw-ab044-p1 18128ecb2bf8fc74f0bab09a6b57ceabfdae66a47eefbe8830cfa76d826944b6
+PASS unadopted-pin-raw-ab044-p2 6c391e4d32fdcd85f6744d23fafef6c23e75f46c5937d105a24fa5578258f4bb
+PASS unadopted-pin-merged-cache-ab044 30ddad9dc0add7e21698e864b5c202b8e6ebd3e396c4eb6156a85ff2d34005c4
+PASS unadopted-merged-cache-rowcount-ab044 6317 s5verdict rows
+PASS unadopted-merged-cache-row-absent-ab044 s5verdict,1297036831195398144,131072,5,2,4719146 occurs 0 times (expect 0: the drive-2 LOSS row was never adopted)
+PASS unadopted-merged-cache-no-key-row-ab044 []
+PASS unadopted-pin-raw-ab045-p1 4f4cb428c31e26ca537aa1bbde092a333141d9dd6edb494afadf1fce1bf2e39c
+PASS unadopted-pin-raw-ab045-p2 acb756456316f34959332292dc6f125242c40b973e8ef7d2b2e1ad3b50a5c4f8
+PASS unadopted-pin-merged-cache-ab045 30ddad9dc0add7e21698e864b5c202b8e6ebd3e396c4eb6156a85ff2d34005c4
+PASS unadopted-merged-cache-rowcount-ab045 6317 s5verdict rows
+PASS unadopted-merged-cache-row-absent-ab045 s5verdict,1297039029144911872,131072,5,2,3978891 occurs 0 times (expect 0: the drive-2 LOSS row was never adopted)
+PASS unadopted-merged-cache-no-key-row-ab045 []
+PASS unadopted-pin-raw-ab046-p1 d0aa5b31e90fae9e2eba9f8cff0eff7cc5d41fb28b174fd1f5165bc03169676a
+PASS unadopted-pin-raw-ab046-p2 6b2b38ef1900d6a150a2f0b36d6f5125bea2d408b83eac2e82b48e21d1a6b9ea
+PASS unadopted-pin-merged-cache-ab046 30ddad9dc0add7e21698e864b5c202b8e6ebd3e396c4eb6156a85ff2d34005c4
+PASS unadopted-merged-cache-rowcount-ab046 6317 s5verdict rows
+PASS unadopted-merged-cache-row-absent-ab046 s5verdict,1301540429749026816,131072,5,2,4979936 occurs 0 times (expect 0: the drive-2 LOSS row was never adopted)
+PASS unadopted-merged-cache-no-key-row-ab046 []
+PASS unadopted-pin-raw-ab047-p1 2e9f7cf2b19a1896933e9201a7245b218c89895325aee2c8720448e64af03850
+PASS unadopted-pin-raw-ab047-p2 f53697178e1f6aa8b6561a26c043a00729963c6e15c806599c0c2e912cecdb03
+PASS unadopted-pin-merged-cache-ab047 30ddad9dc0add7e21698e864b5c202b8e6ebd3e396c4eb6156a85ff2d34005c4
+PASS unadopted-merged-cache-rowcount-ab047 6317 s5verdict rows
+PASS unadopted-merged-cache-row-absent-ab047 s5verdict,1297036832269139968,131072,5,2,5604561 occurs 0 times (expect 0: the drive-2 LOSS row was never adopted)
+PASS unadopted-merged-cache-no-key-row-ab047 []
+PASS unadopted-pin-raw-ab048-p1 30b633c167824c84fb32e117c164aacf026aafeaa4f35cfcaa051d3ddaa2c087
+PASS unadopted-pin-raw-ab048-p2 d71f73ccad93b58f6dffe09faf0d3eea8bc97007a794a13814bf5047a51d4fc9
+PASS unadopted-pin-merged-cache-ab048 30ddad9dc0add7e21698e864b5c202b8e6ebd3e396c4eb6156a85ff2d34005c4
+PASS unadopted-merged-cache-rowcount-ab048 6317 s5verdict rows
+PASS unadopted-merged-cache-row-absent-ab048 s5verdict,1297041228168167424,131072,5,2,3457154 occurs 0 times (expect 0: the drive-2 LOSS row was never adopted)
+PASS unadopted-merged-cache-no-key-row-ab048 []
+PASS unadopted-pin-raw-ab049-p1 44b431f5941d5f35138c63eacf1ac6e662431f06c87d06ce39d103bb60065071
+PASS unadopted-pin-raw-ab049-p2 6c3aac130f498985e993bb78cc4c80b364a3e7b15293048ee69f93dd6bd0098e
+PASS unadopted-pin-merged-cache-ab049 30ddad9dc0add7e21698e864b5c202b8e6ebd3e396c4eb6156a85ff2d34005c4
+PASS unadopted-merged-cache-rowcount-ab049 6317 s5verdict rows
+PASS unadopted-merged-cache-row-absent-ab049 s5verdict,1155314042043105280,8192,5,2,4332757 occurs 0 times (expect 0: the drive-2 LOSS row was never adopted)
+PASS unadopted-merged-cache-no-key-row-ab049 []
+PASS unadopted-pin-raw-ab050-p1 b027f4d91a95f954049d1d8313e2b9a7c07f6b719d22a7edcf7829adae371d9e
+PASS unadopted-pin-raw-ab050-p2 b027f4d91a95f954049d1d8313e2b9a7c07f6b719d22a7edcf7829adae371d9e
+PASS unadopted-pin-merged-cache-ab050 30ddad9dc0add7e21698e864b5c202b8e6ebd3e396c4eb6156a85ff2d34005c4
+PASS unadopted-merged-cache-rowcount-ab050 6317 s5verdict rows
+PASS unadopted-merged-cache-row-absent-ab050 s5verdict,1306044029376397312,131072,5,2,4127068 occurs 0 times (expect 0: the drive-2 LOSS row was never adopted)
+PASS unadopted-merged-cache-no-key-row-ab050 []
+PASS unadopted-pin-raw-ab051-p1 198af4f083bf59dd971b6e4dd775a6d7120d1b315dc8d18164e0b18bed65a91c
+PASS unadopted-pin-raw-ab051-p2 3898a79281f3ff8f3e884fa1e1f3dfa4c962b023cece5787c88786b17ea937f1
+PASS unadopted-pin-merged-cache-ab051 30ddad9dc0add7e21698e864b5c202b8e6ebd3e396c4eb6156a85ff2d34005c4
+PASS unadopted-merged-cache-rowcount-ab051 6317 s5verdict rows
+PASS unadopted-merged-cache-row-absent-ab051 s5verdict,1297036834416623616,131072,5,2,6906311 occurs 0 times (expect 0: the drive-2 LOSS row was never adopted)
+PASS unadopted-merged-cache-no-key-row-ab051 []
+PASS unadopted-pin-raw-ab052-p1 28b105794acb36705102755a39d3a64d1a718bc5b900f5d0f758c8ebcd7cd74e
+PASS unadopted-pin-raw-ab052-p2 eae0d933fc275933fdad3d46ff0cf53625f371f48d11d46ca0502688a1c243b7
+PASS unadopted-pin-merged-cache-ab052 30ddad9dc0add7e21698e864b5c202b8e6ebd3e396c4eb6156a85ff2d34005c4
+PASS unadopted-merged-cache-rowcount-ab052 6317 s5verdict rows
+PASS unadopted-merged-cache-row-absent-ab052 s5verdict,1297036830122180608,131072,5,2,5830122 occurs 0 times (expect 0: the drive-2 LOSS row was never adopted)
+PASS unadopted-merged-cache-no-key-row-ab052 []
+PASS unadopted-pin-raw-ab053-p1 a92b7c0a78ea5eb66c0e0ef9b82410507faf1e8047ce417c77598a7a406ef533
+PASS unadopted-pin-raw-ab053-p2 a92b7c0a78ea5eb66c0e0ef9b82410507faf1e8047ce417c77598a7a406ef533
+PASS unadopted-pin-merged-cache-ab053 30ddad9dc0add7e21698e864b5c202b8e6ebd3e396c4eb6156a85ff2d34005c4
+PASS unadopted-merged-cache-rowcount-ab053 6317 s5verdict rows
+PASS unadopted-merged-cache-row-absent-ab053 s5verdict,1297036830122704896,131072,5,2,2832769 occurs 0 times (expect 0: the drive-2 LOSS row was never adopted)
+PASS unadopted-merged-cache-no-key-row-ab053 []
+PASS unadopted-pin-raw-ab054-p1 22a825e42af6ab1cdd7b83390c9831a69a9a1841aee6f979136decdf266bb6a3
+PASS unadopted-pin-raw-ab054-p2 2e4c5e1dbcc379f1f50f64fb83e4aa0a5d73b1fb20a17152353205b835fbbeab
+PASS unadopted-pin-merged-cache-ab054 30ddad9dc0add7e21698e864b5c202b8e6ebd3e396c4eb6156a85ff2d34005c4
+PASS unadopted-merged-cache-rowcount-ab054 6317 s5verdict rows
+PASS unadopted-merged-cache-row-absent-ab054 s5verdict,1297036830123753472,131072,5,2,3014059 occurs 0 times (expect 0: the drive-2 LOSS row was never adopted)
+PASS unadopted-merged-cache-no-key-row-ab054 []
+PASS unadopted-pin-merged-cache-shared 30ddad9dc0add7e21698e864b5c202b8e6ebd3e396c4eb6156a85ff2d34005c4
+PASS unadopted-pin-increment-shared bab011e376090f9f4732d63f0084f326ba72dada5cf699d5aabc7e014c29ae24
+PASS unadopted-increment-exact-16-rows 16 rows
+PASS unadopted-increment-adopted-set-header Part CU increment ADOPTED set statement
+PASS unadopted-pin-increments-manifest-shared f9f58ee101d53f0598ee01c5c54d5b277797a9e882cfb478ab7f7b3010e191e0
+PASS unadopted-manifest-schema b29loss16-increments-manifest-v1
+PASS unadopted-manifest-loss-ids ['ab001', 'ab002', 'ab003', 'ab004', 'ab005', 'ab006', 'ab007', 'ab008', 'ab009'
+PASS unadopted-manifest-flags full_eq_loss=True base=6301 quarantine=0
+PASS unadopted-manifest-row-counts row_counts={'probed_rows': 16, 'adopted_loss_rows': 16, 'wins': 0, 'exhausted_excluded': 0, 'fragments_unprobed': 0, 'fileless_unprobed': 38}
+PASS unadopted-manifest-status-prefix-pin 6b877344b9abea348a9b221f
+PASS unadopted-manifest-fileless-roster fileless roster size 38
+PASS unadopted-manifest-target-not-in-adopted-lists-ab033 ab033 must not appear in any adopted/win/probed id list of the increments-manifest
+PASS unadopted-manifest-target-in-fileless-roster-ab033 ab033 must appear in the CU-time fileless UNPROBED roster (batches[0].fileless_unprobed_ids)
+PASS unadopted-manifest-target-not-in-adopted-lists-ab034 ab034 must not appear in any adopted/win/probed id list of the increments-manifest
+PASS unadopted-manifest-target-in-fileless-roster-ab034 ab034 must appear in the CU-time fileless UNPROBED roster (batches[0].fileless_unprobed_ids)
+PASS unadopted-manifest-target-not-in-adopted-lists-ab035 ab035 must not appear in any adopted/win/probed id list of the increments-manifest
+PASS unadopted-manifest-target-in-fileless-roster-ab035 ab035 must appear in the CU-time fileless UNPROBED roster (batches[0].fileless_unprobed_ids)
+PASS unadopted-manifest-target-not-in-adopted-lists-ab036 ab036 must not appear in any adopted/win/probed id list of the increments-manifest
+PASS unadopted-manifest-target-in-fileless-roster-ab036 ab036 must appear in the CU-time fileless UNPROBED roster (batches[0].fileless_unprobed_ids)
+PASS unadopted-manifest-target-not-in-adopted-lists-ab037 ab037 must not appear in any adopted/win/probed id list of the increments-manifest
+PASS unadopted-manifest-target-in-fileless-roster-ab037 ab037 must appear in the CU-time fileless UNPROBED roster (batches[0].fileless_unprobed_ids)
+PASS unadopted-manifest-target-not-in-adopted-lists-ab038 ab038 must not appear in any adopted/win/probed id list of the increments-manifest
+PASS unadopted-manifest-target-in-fileless-roster-ab038 ab038 must appear in the CU-time fileless UNPROBED roster (batches[0].fileless_unprobed_ids)
+PASS unadopted-manifest-target-not-in-adopted-lists-ab039 ab039 must not appear in any adopted/win/probed id list of the increments-manifest
+PASS unadopted-manifest-target-in-fileless-roster-ab039 ab039 must appear in the CU-time fileless UNPROBED roster (batches[0].fileless_unprobed_ids)
+PASS unadopted-manifest-target-not-in-adopted-lists-ab040 ab040 must not appear in any adopted/win/probed id list of the increments-manifest
+PASS unadopted-manifest-target-in-fileless-roster-ab040 ab040 must appear in the CU-time fileless UNPROBED roster (batches[0].fileless_unprobed_ids)
+PASS unadopted-manifest-target-not-in-adopted-lists-ab041 ab041 must not appear in any adopted/win/probed id list of the increments-manifest
+PASS unadopted-manifest-target-in-fileless-roster-ab041 ab041 must appear in the CU-time fileless UNPROBED roster (batches[0].fileless_unprobed_ids)
+PASS unadopted-manifest-target-not-in-adopted-lists-ab042 ab042 must not appear in any adopted/win/probed id list of the increments-manifest
+PASS unadopted-manifest-target-in-fileless-roster-ab042 ab042 must appear in the CU-time fileless UNPROBED roster (batches[0].fileless_unprobed_ids)
+PASS unadopted-manifest-target-not-in-adopted-lists-ab043 ab043 must not appear in any adopted/win/probed id list of the increments-manifest
+PASS unadopted-manifest-target-in-fileless-roster-ab043 ab043 must appear in the CU-time fileless UNPROBED roster (batches[0].fileless_unprobed_ids)
+PASS unadopted-manifest-target-not-in-adopted-lists-ab044 ab044 must not appear in any adopted/win/probed id list of the increments-manifest
+PASS unadopted-manifest-target-in-fileless-roster-ab044 ab044 must appear in the CU-time fileless UNPROBED roster (batches[0].fileless_unprobed_ids)
+PASS unadopted-manifest-target-not-in-adopted-lists-ab045 ab045 must not appear in any adopted/win/probed id list of the increments-manifest
+PASS unadopted-manifest-target-in-fileless-roster-ab045 ab045 must appear in the CU-time fileless UNPROBED roster (batches[0].fileless_unprobed_ids)
+PASS unadopted-manifest-target-not-in-adopted-lists-ab046 ab046 must not appear in any adopted/win/probed id list of the increments-manifest
+PASS unadopted-manifest-target-in-fileless-roster-ab046 ab046 must appear in the CU-time fileless UNPROBED roster (batches[0].fileless_unprobed_ids)
+PASS unadopted-manifest-target-not-in-adopted-lists-ab047 ab047 must not appear in any adopted/win/probed id list of the increments-manifest
+PASS unadopted-manifest-target-in-fileless-roster-ab047 ab047 must appear in the CU-time fileless UNPROBED roster (batches[0].fileless_unprobed_ids)
+PASS unadopted-manifest-target-not-in-adopted-lists-ab048 ab048 must not appear in any adopted/win/probed id list of the increments-manifest
+PASS unadopted-manifest-target-in-fileless-roster-ab048 ab048 must appear in the CU-time fileless UNPROBED roster (batches[0].fileless_unprobed_ids)
+PASS unadopted-manifest-target-not-in-adopted-lists-ab049 ab049 must not appear in any adopted/win/probed id list of the increments-manifest
+PASS unadopted-manifest-target-in-fileless-roster-ab049 ab049 must appear in the CU-time fileless UNPROBED roster (batches[0].fileless_unprobed_ids)
+PASS unadopted-manifest-target-not-in-adopted-lists-ab050 ab050 must not appear in any adopted/win/probed id list of the increments-manifest
+PASS unadopted-manifest-target-in-fileless-roster-ab050 ab050 must appear in the CU-time fileless UNPROBED roster (batches[0].fileless_unprobed_ids)
+PASS unadopted-manifest-target-not-in-adopted-lists-ab051 ab051 must not appear in any adopted/win/probed id list of the increments-manifest
+PASS unadopted-manifest-target-in-fileless-roster-ab051 ab051 must appear in the CU-time fileless UNPROBED roster (batches[0].fileless_unprobed_ids)
+PASS unadopted-manifest-target-not-in-adopted-lists-ab052 ab052 must not appear in any adopted/win/probed id list of the increments-manifest
+PASS unadopted-manifest-target-in-fileless-roster-ab052 ab052 must appear in the CU-time fileless UNPROBED roster (batches[0].fileless_unprobed_ids)
+PASS unadopted-manifest-target-not-in-adopted-lists-ab053 ab053 must not appear in any adopted/win/probed id list of the increments-manifest
+PASS unadopted-manifest-target-in-fileless-roster-ab053 ab053 must appear in the CU-time fileless UNPROBED roster (batches[0].fileless_unprobed_ids)
+PASS unadopted-manifest-target-not-in-adopted-lists-ab054 ab054 must not appear in any adopted/win/probed id list of the increments-manifest
+PASS unadopted-manifest-target-in-fileless-roster-ab054 ab054 must appear in the CU-time fileless UNPROBED roster (batches[0].fileless_unprobed_ids)
+PASS db-pin-increment-shared 85bd44693edfd862a7cf74fc10414978fcf248dcef684a821b487f9757b443cc
+PASS db-pin-merged-shared 04b0a23987a97518e276ea5ff966496facab22f93628cd5fbc682a04c3650556
+PASS db-increment-37-rows 37 rows
+PASS db-merged-6354-rows 6354 rows
+PASS db-increment-row-ab033 s5verdict,1155314042043105280,4,5,2,5737514
+PASS db-merged-row-ab033 s5verdict,1155314042043105280,4,5,2,5737514
+PASS db-increment-row-ab034 s5verdict,1155314042043105280,16384,5,2,2421190
+PASS db-merged-row-ab034 s5verdict,1155314042043105280,16384,5,2,2421190
+PASS db-increment-row-ab035 s5verdict,1155314042043105280,32768,5,2,3712073
+PASS db-merged-row-ab035 s5verdict,1155314042043105280,32768,5,2,3712073
+PASS db-increment-row-ab036 s5verdict,1297036830121656320,131073,5,2,5512708
+PASS db-merged-row-ab036 s5verdict,1297036830121656320,131073,5,2,5512708
+PASS db-increment-row-ab037 s5verdict,1297036830121657344,131072,5,2,3582387
+PASS db-merged-row-ab037 s5verdict,1297036830121657344,131072,5,2,3582387
+PASS db-increment-row-ab038 s5verdict,1297036830121656576,131072,5,2,7949979
+PASS db-merged-row-ab038 s5verdict,1297036830121656576,131072,5,2,7949979
+PASS db-increment-row-ab039 s5verdict,1155314042043105280,65536,5,2,3343978
+PASS db-merged-row-ab039 s5verdict,1155314042043105280,65536,5,2,3343978
+PASS db-increment-row-ab040 s5verdict,1297045626214678528,131072,5,2,3796441
+PASS db-merged-row-ab040 s5verdict,1297045626214678528,131072,5,2,3796441
+PASS db-increment-row-ab041 s5verdict,1315051228631138304,131072,5,2,4746725
+PASS db-merged-row-ab041 s5verdict,1315051228631138304,131072,5,2,4746725
+PASS db-increment-row-ab042 s5verdict,1155314042043105280,131072,5,2,1926643
+PASS db-merged-row-ab042 s5verdict,1155314042043105280,131072,5,2,1926643
+PASS db-increment-row-ab043 s5verdict,1155314042043105280,8,5,2,3003611
+PASS db-merged-row-ab043 s5verdict,1155314042043105280,8,5,2,3003611
+PASS db-increment-row-ab044 s5verdict,1297036831195398144,131072,5,2,4719146
+PASS db-merged-row-ab044 s5verdict,1297036831195398144,131072,5,2,4719146
+PASS db-increment-row-ab045 s5verdict,1297039029144911872,131072,5,2,3978891
+PASS db-merged-row-ab045 s5verdict,1297039029144911872,131072,5,2,3978891
+PASS db-increment-row-ab046 s5verdict,1301540429749026816,131072,5,2,4979936
+PASS db-merged-row-ab046 s5verdict,1301540429749026816,131072,5,2,4979936
+PASS db-increment-row-ab047 s5verdict,1297036832269139968,131072,5,2,5604561
+PASS db-merged-row-ab047 s5verdict,1297036832269139968,131072,5,2,5604561
+PASS db-increment-row-ab048 s5verdict,1297041228168167424,131072,5,2,3457154
+PASS db-merged-row-ab048 s5verdict,1297041228168167424,131072,5,2,3457154
+PASS db-increment-row-ab049 s5verdict,1155314042043105280,8192,5,2,4332757
+PASS db-merged-row-ab049 s5verdict,1155314042043105280,8192,5,2,4332757
+PASS db-increment-row-ab050 s5verdict,1306044029376397312,131072,5,2,4127068
+PASS db-merged-row-ab050 s5verdict,1306044029376397312,131072,5,2,4127068
+PASS db-increment-row-ab051 s5verdict,1297036834416623616,131072,5,2,6906311
+PASS db-merged-row-ab051 s5verdict,1297036834416623616,131072,5,2,6906311
+PASS db-increment-row-ab052 s5verdict,1297036830122180608,131072,5,2,5830122
+PASS db-merged-row-ab052 s5verdict,1297036830122180608,131072,5,2,5830122
+PASS db-increment-row-ab053 s5verdict,1297036830122704896,131072,5,2,2832769
+PASS db-merged-row-ab053 s5verdict,1297036830122704896,131072,5,2,2832769
+PASS db-increment-row-ab054 s5verdict,1297036830123753472,131072,5,2,3014059
+PASS db-merged-row-ab054 s5verdict,1297036830123753472,131072,5,2,3014059
+PASS valgate-at2m-s5-1152921504606851072-536870946-present baseline=True host=True
+PASS valgate-at2m-s5-1152921504606851072-536870946-node-exact host=['2000000', '0', '2000000'] baseline=['2000000', '0', '2000000']
+PASS valgate-at2m-s5-1188950301626860544-536870912-present baseline=True host=True
+PASS valgate-at2m-s5-1188950301626860544-536870912-node-exact host=['2000000', '0', '2000000'] baseline=['2000000', '0', '2000000']
+PASS valgate-first-15m-s5-1152921504606851072-536870946-present baseline=True host=True
+PASS valgate-first-15m-s5-1152921504606851072-536870946-node-exact host=['15000000', '2', '3651923'] baseline=['15000000', '2', '3651923']
+PASS valgate-second-15m-s5-1188950301626860544-536870912-present baseline=True host=True
+PASS valgate-second-15m-s5-1188950301626860544-536870912-node-exact host=['15000000', '2', '5040200'] baseline=['15000000', '2', '5040200']
+ALL 652 GATES PASS; verdict agreements 22/22 (WIN=0 LOSS=22); inconclusive=0; total third-impl expansions pass-one=109838511
