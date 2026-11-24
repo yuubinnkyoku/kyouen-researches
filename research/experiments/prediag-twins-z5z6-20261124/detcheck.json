@@ -1,0 +1,35 @@
+{
+  "kit": "verify_k1290",
+  "protocol": "publish-then-execute (K1285-K1289 chain)",
+  "declaration_note": "research/log/2026-11-24-prediag-twins-z5z6-single-owner-note.md (commit 88dd53703ba72cb1d8b63bed985e5cb82549cf6d)",
+  "kit_commit": "048ae37c69e1afde31e16dc3b63529ca19ea72a0",
+  "fetch_back": "15/15 files byte-identical (sha256) at kit commit before official runs",
+  "verify_sha256": "b86cdaf943106a78bc7abef5c9085a0a2e3d4c4fde9b60e9a5d02eabf6ced0fd",
+  "engine_block_sha256": "582c93c17bcd4fa618bfb74c733c3d679e197e8749ec4bbcc8821d3a6610d5c0",
+  "engine_pin": "bd5f22e415a78368c9b798296bc84948d5637decbf3c21a92404d45fb12e3a92",
+  "official_runs": [
+    {"run": 1, "mode": "fetchback cwd, PYTHONHASHSEED=random", "rc": 0},
+    {"run": 2, "mode": "fetchback cwd, PYTHONHASHSEED=1", "rc": 0},
+    {"run": 3, "mode": "isolated tree isoA (fetch-back bytes, sha re-verified), env -i, PYTHONHASHSEED=99", "rc": 0},
+    {"run": 4, "mode": "isolated tree isoB (fetch-back bytes, sha re-verified), env -i, PYTHONHASHSEED=7", "rc": 0}
+  ],
+  "stdout_sha256_all_runs_identical": "e5359335de76dee83f38375f42b61ba6d8b0d23ea6875bb8f4da6b95aa3a9621",
+  "stdout_sha256_matches_predry": true,
+  "counts": [8928, 360, 8928, 360, 1939, 114, 1939, 114, 30051, 1516, 15304],
+  "total_comparisons": 69553,
+  "overall_bad": 0,
+  "obs_hists": {
+    "z7_lowR": {"0": 283, "2": 280},
+    "z8_lowR": {"0": 283, "2": 280},
+    "D1_class": {"R0": 206, "R1": 218, "R2": 229, "R3": 240, "R4": 249, "R5": 258, "core": 294, "dl": 4294, "hi": 2940}
+  },
+  "tamper_battery": {
+    "expectation_declared_before_runs": true,
+    "engine": {"rc": 2, "mutated_sha": "0ea47a80761d2b20bf414cd52b1535fba56829c3a4c232d1b2f5da3f81441882"},
+    "z5s": {"rc": 1, "D1_bad": 8928},
+    "z5b": {"rc": 1, "D2_bad": 360},
+    "z6s": {"rc": 1, "D3_bad": 8928},
+    "z6b": {"rc": 1, "D4_bad": 360}
+  },
+  "verdict": "OFFICIAL-PASS"
+}
