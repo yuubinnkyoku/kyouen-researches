@@ -1,0 +1,91 @@
+# n11 central-reply closure batch-31 (class 5804) 51-LOSS
+#   canonical-adoption increment (Part DL, 2026-11-24)
+# published batch-31 kit (Part CY scaffold + takeover drives) +
+#   published Part DI reprobe kit: ALL 55 of 55 keys carry honest
+#   probe labels.  51 keys resolved LOSS at budget 15M and ARE
+#   this increment; their two-pass fresh-cold raws come from the
+#   cumulative batch-31 kit (Part CY drive-1 + drive-2 takeover +
+#   Part DI reprobe).  3 keys (ad024/ad028/ad055) are probe-level
+#   WINs at budget 15M and 1 key (ad043) is a probe-level WIN at
+#   the Part DI 30M budget (its published 15M exhaustion is
+#   superseded); all four stay UNCONSUMED: not adopted, not
+#   emitted, not in any canonical cache (WIN-row scrutiny is the
+#   separate C++ owner lane, pin 9193f5b6...; no completeness
+#   claim is made beyond the labels).
+# 2-pass node-exact exact-S5 verdicts at budget 15M, fresh cold,
+#   pinned jsreplay.js sha256
+#   845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df
+# gates: batch-31 kit MANIFEST sha-verified file-by-file (194 files)
+#   + Part DI kit MANIFEST sha-verified file-by-file (40 files);
+#   20 val-gate host files pinned and node-exact on five hosts
+#   (published-baseline/b31-host/d2-host/tk-host/di-host); all 55
+#   probed keys two-pass node-exact with '# replay_done' on both
+#   passes; status.log (59 lines, sha-pinned, 55 PASS rows + three
+#   pinned WIN-HALT rows + the one pinned superseded 15M ad043
+#   EXHAUSTED row) each-once agreement on (b,r,n); raw inventory
+#   exactly ad001..ad055 x {p1,p2} (110 files; no sidecars);
+#   batch-keys legal/(lo,hi)/s5/membership agreement; adopted-row
+#   per-pass node total 237,596,711; adopted keys distinct and
+#   absent from BASE 04b0a239... (6,354 rows) while all four WIN
+#   keys are also absent (consumed nowhere); DI kit byte-clones
+#   reproduce the batch-31 status.log and the BASE cache; adopted
+#   keys absent from the quarantine registry.
+# ADOPTED set = ad001..ad054 except {ad024, ad028, ad043, ad055}
+#   (51 keys; 51 of them result 2 at budget 15M).  The batch is
+#   probe-complete; full != loss because four WIN rows exist at
+#   probe level and stay unconsumed.
+# The 51 LOSS rows ARE consumed into the canonical cache by the
+#   fail-closed union merger; 11x11 stays UNKNOWN; nodes are
+#   bookkeeping, never verdicts; class 5804 is NOT freed (its
+#   remaining unknown children are the four unconsumed WINs).
+s5verdict,6052837899185946625,128,5,2,5883887
+s5verdict,6052837899185946626,128,5,2,4503724
+s5verdict,6052837899185946632,128,5,2,11064379
+s5verdict,6052837899185946640,128,5,2,5410550
+s5verdict,6052837899185946656,128,5,2,4094246
+s5verdict,6052837899185948672,128,5,2,11268913
+s5verdict,6052837899185950720,128,5,2,5417573
+s5verdict,6052837899185954816,128,5,2,3179879
+s5verdict,6052837899185963008,128,5,2,3560629
+s5verdict,6052837899185979392,128,5,2,3580351
+s5verdict,6052837899190140928,128,5,2,5946707
+s5verdict,6052837899194335232,128,5,2,1675597
+s5verdict,6052837899202723840,128,5,2,2168706
+s5verdict,6052837899253055488,128,5,2,1897590
+s5verdict,6052837899320164352,128,5,2,4555434
+s5verdict,6052837907775881216,128,5,2,3146845
+s5verdict,6052837916365815808,128,5,2,3582819
+s5verdict,6052837933545684992,128,5,2,1723362
+s5verdict,6052837967905423360,128,5,2,7781306
+s5verdict,6052838036624900096,128,5,2,3146801
+s5verdict,6052838174063853568,128,5,2,1644957
+s5verdict,6053400849139367936,4,5,2,2936438
+s5verdict,6053400849139367936,8,5,2,4885748
+s5verdict,6053400849139367936,16,5,2,4962308
+s5verdict,6053400849139367936,32,5,2,2251201
+s5verdict,6053400849139367936,64,5,2,10316369
+s5verdict,6053400849139367937,0,5,2,5940995
+s5verdict,6053400849139367938,0,5,2,3434932
+s5verdict,6053400849139367940,0,5,2,3420177
+s5verdict,6053400849139367944,0,5,2,7296844
+s5verdict,6053400849139367952,0,5,2,7840993
+s5verdict,6053400849139367968,0,5,2,2362665
+s5verdict,6053400849139369984,0,5,2,2479959
+s5verdict,6053400849139372032,0,5,2,12273095
+s5verdict,6053400849139376128,0,5,2,2914995
+s5verdict,6053400849139384320,0,5,2,5968986
+s5verdict,6053400849139400704,0,5,2,5270933
+s5verdict,6053400849143562240,0,5,2,3337929
+s5verdict,6053400849147756544,0,5,2,4271124
+s5verdict,6053400849156145152,0,5,2,3479933
+s5verdict,6053400849172922368,0,5,2,2805657
+s5verdict,6053400849206476800,0,5,2,7948923
+s5verdict,6053400849273585664,0,5,2,5609720
+s5verdict,6053400857729302528,0,5,2,6567285
+s5verdict,6053400866319237120,0,5,2,4663738
+s5verdict,6053400883499106304,0,5,2,4826218
+s5verdict,6053400917858844672,0,5,2,3183609
+s5verdict,6053400986578321408,0,5,2,2795664
+s5verdict,6053418441325412352,0,5,2,2750868
+s5verdict,6053436033511456768,0,5,2,3940244
+s5verdict,6053471217883545600,0,5,2,1624906
