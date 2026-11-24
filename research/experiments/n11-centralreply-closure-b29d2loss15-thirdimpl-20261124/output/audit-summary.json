@@ -1,0 +1,2307 @@
+{
+ "schema": "n11-centralreply-closure-b29d2loss15-thirdimpl-audit-v1",
+ "experiment": "n11-centralreply-closure-b29d2loss15-thirdimpl-20261124",
+ "all_pass": true,
+ "gate_count": 429,
+ "targets_pass_one_total_third_expansions": 73293629,
+ "verdict_agreements": [
+  {
+   "key_id": "ab017",
+   "source": "part-ci-takeover-batch29-drive2",
+   "replica_result": 2,
+   "replica_nodes": 3366331,
+   "third_result": 2,
+   "third_expansion": 3827358,
+   "third_ttHits": 2261164,
+   "agree": true
+  },
+  {
+   "key_id": "ab018",
+   "source": "part-ci-takeover-batch29-drive2",
+   "replica_result": 2,
+   "replica_nodes": 6998686,
+   "third_result": 2,
+   "third_expansion": 8028562,
+   "third_ttHits": 4559684,
+   "agree": true
+  },
+  {
+   "key_id": "ab019",
+   "source": "part-ci-takeover-batch29-drive2",
+   "replica_result": 2,
+   "replica_nodes": 2623573,
+   "third_result": 2,
+   "third_expansion": 2987621,
+   "third_ttHits": 1736118,
+   "agree": true
+  },
+  {
+   "key_id": "ab020",
+   "source": "part-ci-takeover-batch29-drive2",
+   "replica_result": 2,
+   "replica_nodes": 3020397,
+   "third_result": 2,
+   "third_expansion": 3447988,
+   "third_ttHits": 2010279,
+   "agree": true
+  },
+  {
+   "key_id": "ab021",
+   "source": "part-ci-takeover-batch29-drive2",
+   "replica_result": 2,
+   "replica_nodes": 3748592,
+   "third_result": 2,
+   "third_expansion": 4301626,
+   "third_ttHits": 2446496,
+   "agree": true
+  },
+  {
+   "key_id": "ab022",
+   "source": "part-ci-takeover-batch29-drive2",
+   "replica_result": 2,
+   "replica_nodes": 4620753,
+   "third_result": 2,
+   "third_expansion": 5328274,
+   "third_ttHits": 3068083,
+   "agree": true
+  },
+  {
+   "key_id": "ab023",
+   "source": "part-ci-takeover-batch29-drive2",
+   "replica_result": 2,
+   "replica_nodes": 8695465,
+   "third_result": 2,
+   "third_expansion": 10104496,
+   "third_ttHits": 5727811,
+   "agree": true
+  },
+  {
+   "key_id": "ab024",
+   "source": "part-ci-takeover-batch29-drive2",
+   "replica_result": 2,
+   "replica_nodes": 4131850,
+   "third_result": 2,
+   "third_expansion": 4735823,
+   "third_ttHits": 2729224,
+   "agree": true
+  },
+  {
+   "key_id": "ab025",
+   "source": "part-ci-takeover-batch29-drive2",
+   "replica_result": 2,
+   "replica_nodes": 3832650,
+   "third_result": 2,
+   "third_expansion": 4390137,
+   "third_ttHits": 2500202,
+   "agree": true
+  },
+  {
+   "key_id": "ab026",
+   "source": "part-ci-takeover-batch29-drive2",
+   "replica_result": 2,
+   "replica_nodes": 1835150,
+   "third_result": 2,
+   "third_expansion": 2075693,
+   "third_ttHits": 1246077,
+   "agree": true
+  },
+  {
+   "key_id": "ab027",
+   "source": "part-ci-takeover-batch29-drive2",
+   "replica_result": 2,
+   "replica_nodes": 4364868,
+   "third_result": 2,
+   "third_expansion": 5060412,
+   "third_ttHits": 2786658,
+   "agree": true
+  },
+  {
+   "key_id": "ab029",
+   "source": "part-ci-takeover-batch29-drive2",
+   "replica_result": 2,
+   "replica_nodes": 2583183,
+   "third_result": 2,
+   "third_expansion": 2953931,
+   "third_ttHits": 1692157,
+   "agree": true
+  },
+  {
+   "key_id": "ab030",
+   "source": "part-ci-takeover-batch29-drive2",
+   "replica_result": 2,
+   "replica_nodes": 7694235,
+   "third_result": 2,
+   "third_expansion": 8871916,
+   "third_ttHits": 4974372,
+   "agree": true
+  },
+  {
+   "key_id": "ab031",
+   "source": "part-ci-takeover-batch29-drive2",
+   "replica_result": 2,
+   "replica_nodes": 2973520,
+   "third_result": 2,
+   "third_expansion": 3399875,
+   "third_ttHits": 1930464,
+   "agree": true
+  },
+  {
+   "key_id": "ab032",
+   "source": "part-ci-takeover-batch29-drive2",
+   "replica_result": 2,
+   "replica_nodes": 3320290,
+   "third_result": 2,
+   "third_expansion": 3779917,
+   "third_ttHits": 2183182,
+   "agree": true
+  }
+ ],
+ "wall_inconclusive": [],
+ "gates": [
+  {
+   "gate": "rows-json-pin",
+   "pass": true,
+   "detail": "8b212fd4d6193ea806b455a41d967f6270348ed57c3e513554374270ad1a9ffc"
+  },
+  {
+   "gate": "input-ab017-matches-rows",
+   "pass": true,
+   "detail": "5,1155314076402843648,0,93 vs 5,1155314076402843648,0,93"
+  },
+  {
+   "gate": "input-ab018-matches-rows",
+   "pass": true,
+   "detail": "5,1299429230118961152,0,83 vs 5,1299429230118961152,0,83"
+  },
+  {
+   "gate": "input-ab019-matches-rows",
+   "pass": true,
+   "detail": "5,1155314316921012224,0,88 vs 5,1155314316921012224,0,88"
+  },
+  {
+   "gate": "input-ab020-matches-rows",
+   "pass": true,
+   "detail": "5,1155331634229149696,0,85 vs 5,1155331634229149696,0,85"
+  },
+  {
+   "gate": "input-ab021-matches-rows",
+   "pass": true,
+   "detail": "5,1155349226415194112,0,89 vs 5,1155349226415194112,0,89"
+  },
+  {
+   "gate": "input-ab022-matches-rows",
+   "pass": true,
+   "detail": "5,1155384410787282944,0,79 vs 5,1155384410787282944,0,79"
+  },
+  {
+   "gate": "input-ab023-matches-rows",
+   "pass": true,
+   "detail": "5,1155876991996526592,0,86 vs 5,1155876991996526592,0,86"
+  },
+  {
+   "gate": "input-ab024-matches-rows",
+   "pass": true,
+   "detail": "5,1155314042043105280,32,90 vs 5,1155314042043105280,32,90"
+  },
+  {
+   "gate": "input-ab025-matches-rows",
+   "pass": true,
+   "detail": "5,1155314042043105280,64,93 vs 5,1155314042043105280,64,93"
+  },
+  {
+   "gate": "input-ab026-matches-rows",
+   "pass": true,
+   "detail": "5,5908722848549044224,131072,86 vs 5,5908722848549044224,131072,86"
+  },
+  {
+   "gate": "input-ab027-matches-rows",
+   "pass": true,
+   "detail": "5,1297036830121656832,131072,101 vs 5,1297036830121656832,131072,101"
+  },
+  {
+   "gate": "input-ab029-matches-rows",
+   "pass": true,
+   "detail": "5,1155314042043105280,16,97 vs 5,1155314042043105280,16,97"
+  },
+  {
+   "gate": "input-ab030-matches-rows",
+   "pass": true,
+   "detail": "5,1191342839062069248,0,88 vs 5,1191342839062069248,0,88"
+  },
+  {
+   "gate": "input-ab031-matches-rows",
+   "pass": true,
+   "detail": "5,1227371636081033216,0,94 vs 5,1227371636081033216,0,94"
+  },
+  {
+   "gate": "input-ab032-matches-rows",
+   "pass": true,
+   "detail": "5,1443544418194817024,0,93 vs 5,1443544418194817024,0,93"
+  },
+  {
+   "gate": "input-k02a-matches-rows",
+   "pass": true,
+   "detail": "5,1297036692683751424,68157440,87 vs 5,1297036692683751424,68157440,87"
+  },
+  {
+   "gate": "input-l1a-matches-rows",
+   "pass": true,
+   "detail": "5,13019119616,16448,116 vs 5,13019119616,16448,116"
+  },
+  {
+   "gate": "input-ng1-matches-rows",
+   "pass": true,
+   "detail": "5,1297036692683751424,68157440,88 vs 5,1297036692683751424,68157440,88"
+  },
+  {
+   "gate": "input-ng2-matches-rows",
+   "pass": true,
+   "detail": "6,1297036692683751424,68157440,87 vs 6,1297036692683751424,68157440,87"
+  },
+  {
+   "gate": "pin-third_impl.js",
+   "pass": true,
+   "detail": "08ea958ff59c3234ec5ac55c5c40689bd0999a34e101a88ea0546800cc4a1998"
+  },
+  {
+   "gate": "pin-verify_tbl.js",
+   "pass": true,
+   "detail": "c8c52528f70b3a9b438edc3feb4e432fbe705d6be21650383d3955efc6790251"
+  },
+  {
+   "gate": "pin-jsreplay.js",
+   "pass": true,
+   "detail": "845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df"
+  },
+  {
+   "gate": "rows-schema",
+   "pass": true,
+   "detail": "n11-centralreply-closure-b29d2loss15-thirdimpl-input-v1"
+  },
+  {
+   "gate": "target-count",
+   "pass": true,
+   "detail": "15 (15 b29 drive-2 ckpt-2/3 LOSS rows)"
+  },
+  {
+   "gate": "target-verdict-kinds",
+   "pass": true,
+   "detail": "[2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]"
+  },
+  {
+   "gate": "rules-gate-quads",
+   "pass": true,
+   "detail": "replica quads 95670 mine quads 95670"
+  },
+  {
+   "gate": "rules-gate-tbl-mismatch0",
+   "pass": true,
+   "detail": "['triples checked 195044 mismatches 0']"
+  },
+  {
+   "gate": "replica-ab017-present",
+   "pass": true,
+   "detail": "p1/p2"
+  },
+  {
+   "gate": "replica-ab017-done",
+   "pass": true,
+   "detail": "replay_done p1=True p2=True"
+  },
+  {
+   "gate": "replica-ab017-quads",
+   "pass": true,
+   "detail": "quads-header p1=True p2=True"
+  },
+  {
+   "gate": "replica-ab017-det-pair",
+   "pass": true,
+   "detail": "p1=['93', '0', '15000000', '2', '3366331'] p2=['93', '0', '15000000', '2', '3366331']"
+  },
+  {
+   "gate": "replica-ab017-schema",
+   "pass": true,
+   "detail": "schema ['replay', '0', '5', '93', '0', '15000000']"
+  },
+  {
+   "gate": "replica-ab017-key",
+   "pass": true,
+   "detail": "1155314076402843648,0,93 vs 1155314076402843648,0,93"
+  },
+  {
+   "gate": "replica-ab017-verdict-vs-published",
+   "pass": true,
+   "detail": "this-host result=2 nodes=3366331 vs published result=2 nodes=3366331"
+  },
+  {
+   "gate": "replica-ab018-present",
+   "pass": true,
+   "detail": "p1/p2"
+  },
+  {
+   "gate": "replica-ab018-done",
+   "pass": true,
+   "detail": "replay_done p1=True p2=True"
+  },
+  {
+   "gate": "replica-ab018-quads",
+   "pass": true,
+   "detail": "quads-header p1=True p2=True"
+  },
+  {
+   "gate": "replica-ab018-det-pair",
+   "pass": true,
+   "detail": "p1=['83', '0', '15000000', '2', '6998686'] p2=['83', '0', '15000000', '2', '6998686']"
+  },
+  {
+   "gate": "replica-ab018-schema",
+   "pass": true,
+   "detail": "schema ['replay', '0', '5', '83', '0', '15000000']"
+  },
+  {
+   "gate": "replica-ab018-key",
+   "pass": true,
+   "detail": "1299429230118961152,0,83 vs 1299429230118961152,0,83"
+  },
+  {
+   "gate": "replica-ab018-verdict-vs-published",
+   "pass": true,
+   "detail": "this-host result=2 nodes=6998686 vs published result=2 nodes=6998686"
+  },
+  {
+   "gate": "replica-ab019-present",
+   "pass": true,
+   "detail": "p1/p2"
+  },
+  {
+   "gate": "replica-ab019-done",
+   "pass": true,
+   "detail": "replay_done p1=True p2=True"
+  },
+  {
+   "gate": "replica-ab019-quads",
+   "pass": true,
+   "detail": "quads-header p1=True p2=True"
+  },
+  {
+   "gate": "replica-ab019-det-pair",
+   "pass": true,
+   "detail": "p1=['88', '0', '15000000', '2', '2623573'] p2=['88', '0', '15000000', '2', '2623573']"
+  },
+  {
+   "gate": "replica-ab019-schema",
+   "pass": true,
+   "detail": "schema ['replay', '0', '5', '88', '0', '15000000']"
+  },
+  {
+   "gate": "replica-ab019-key",
+   "pass": true,
+   "detail": "1155314316921012224,0,88 vs 1155314316921012224,0,88"
+  },
+  {
+   "gate": "replica-ab019-verdict-vs-published",
+   "pass": true,
+   "detail": "this-host result=2 nodes=2623573 vs published result=2 nodes=2623573"
+  },
+  {
+   "gate": "replica-ab020-present",
+   "pass": true,
+   "detail": "p1/p2"
+  },
+  {
+   "gate": "replica-ab020-done",
+   "pass": true,
+   "detail": "replay_done p1=True p2=True"
+  },
+  {
+   "gate": "replica-ab020-quads",
+   "pass": true,
+   "detail": "quads-header p1=True p2=True"
+  },
+  {
+   "gate": "replica-ab020-det-pair",
+   "pass": true,
+   "detail": "p1=['85', '0', '15000000', '2', '3020397'] p2=['85', '0', '15000000', '2', '3020397']"
+  },
+  {
+   "gate": "replica-ab020-schema",
+   "pass": true,
+   "detail": "schema ['replay', '0', '5', '85', '0', '15000000']"
+  },
+  {
+   "gate": "replica-ab020-key",
+   "pass": true,
+   "detail": "1155331634229149696,0,85 vs 1155331634229149696,0,85"
+  },
+  {
+   "gate": "replica-ab020-verdict-vs-published",
+   "pass": true,
+   "detail": "this-host result=2 nodes=3020397 vs published result=2 nodes=3020397"
+  },
+  {
+   "gate": "replica-ab021-present",
+   "pass": true,
+   "detail": "p1/p2"
+  },
+  {
+   "gate": "replica-ab021-done",
+   "pass": true,
+   "detail": "replay_done p1=True p2=True"
+  },
+  {
+   "gate": "replica-ab021-quads",
+   "pass": true,
+   "detail": "quads-header p1=True p2=True"
+  },
+  {
+   "gate": "replica-ab021-det-pair",
+   "pass": true,
+   "detail": "p1=['89', '0', '15000000', '2', '3748592'] p2=['89', '0', '15000000', '2', '3748592']"
+  },
+  {
+   "gate": "replica-ab021-schema",
+   "pass": true,
+   "detail": "schema ['replay', '0', '5', '89', '0', '15000000']"
+  },
+  {
+   "gate": "replica-ab021-key",
+   "pass": true,
+   "detail": "1155349226415194112,0,89 vs 1155349226415194112,0,89"
+  },
+  {
+   "gate": "replica-ab021-verdict-vs-published",
+   "pass": true,
+   "detail": "this-host result=2 nodes=3748592 vs published result=2 nodes=3748592"
+  },
+  {
+   "gate": "replica-ab022-present",
+   "pass": true,
+   "detail": "p1/p2"
+  },
+  {
+   "gate": "replica-ab022-done",
+   "pass": true,
+   "detail": "replay_done p1=True p2=True"
+  },
+  {
+   "gate": "replica-ab022-quads",
+   "pass": true,
+   "detail": "quads-header p1=True p2=True"
+  },
+  {
+   "gate": "replica-ab022-det-pair",
+   "pass": true,
+   "detail": "p1=['79', '0', '15000000', '2', '4620753'] p2=['79', '0', '15000000', '2', '4620753']"
+  },
+  {
+   "gate": "replica-ab022-schema",
+   "pass": true,
+   "detail": "schema ['replay', '0', '5', '79', '0', '15000000']"
+  },
+  {
+   "gate": "replica-ab022-key",
+   "pass": true,
+   "detail": "1155384410787282944,0,79 vs 1155384410787282944,0,79"
+  },
+  {
+   "gate": "replica-ab022-verdict-vs-published",
+   "pass": true,
+   "detail": "this-host result=2 nodes=4620753 vs published result=2 nodes=4620753"
+  },
+  {
+   "gate": "replica-ab023-present",
+   "pass": true,
+   "detail": "p1/p2"
+  },
+  {
+   "gate": "replica-ab023-done",
+   "pass": true,
+   "detail": "replay_done p1=True p2=True"
+  },
+  {
+   "gate": "replica-ab023-quads",
+   "pass": true,
+   "detail": "quads-header p1=True p2=True"
+  },
+  {
+   "gate": "replica-ab023-det-pair",
+   "pass": true,
+   "detail": "p1=['86', '0', '15000000', '2', '8695465'] p2=['86', '0', '15000000', '2', '8695465']"
+  },
+  {
+   "gate": "replica-ab023-schema",
+   "pass": true,
+   "detail": "schema ['replay', '0', '5', '86', '0', '15000000']"
+  },
+  {
+   "gate": "replica-ab023-key",
+   "pass": true,
+   "detail": "1155876991996526592,0,86 vs 1155876991996526592,0,86"
+  },
+  {
+   "gate": "replica-ab023-verdict-vs-published",
+   "pass": true,
+   "detail": "this-host result=2 nodes=8695465 vs published result=2 nodes=8695465"
+  },
+  {
+   "gate": "replica-ab024-present",
+   "pass": true,
+   "detail": "p1/p2"
+  },
+  {
+   "gate": "replica-ab024-done",
+   "pass": true,
+   "detail": "replay_done p1=True p2=True"
+  },
+  {
+   "gate": "replica-ab024-quads",
+   "pass": true,
+   "detail": "quads-header p1=True p2=True"
+  },
+  {
+   "gate": "replica-ab024-det-pair",
+   "pass": true,
+   "detail": "p1=['90', '0', '15000000', '2', '4131850'] p2=['90', '0', '15000000', '2', '4131850']"
+  },
+  {
+   "gate": "replica-ab024-schema",
+   "pass": true,
+   "detail": "schema ['replay', '0', '5', '90', '0', '15000000']"
+  },
+  {
+   "gate": "replica-ab024-key",
+   "pass": true,
+   "detail": "1155314042043105280,32,90 vs 1155314042043105280,32,90"
+  },
+  {
+   "gate": "replica-ab024-verdict-vs-published",
+   "pass": true,
+   "detail": "this-host result=2 nodes=4131850 vs published result=2 nodes=4131850"
+  },
+  {
+   "gate": "replica-ab025-present",
+   "pass": true,
+   "detail": "p1/p2"
+  },
+  {
+   "gate": "replica-ab025-done",
+   "pass": true,
+   "detail": "replay_done p1=True p2=True"
+  },
+  {
+   "gate": "replica-ab025-quads",
+   "pass": true,
+   "detail": "quads-header p1=True p2=True"
+  },
+  {
+   "gate": "replica-ab025-det-pair",
+   "pass": true,
+   "detail": "p1=['93', '0', '15000000', '2', '3832650'] p2=['93', '0', '15000000', '2', '3832650']"
+  },
+  {
+   "gate": "replica-ab025-schema",
+   "pass": true,
+   "detail": "schema ['replay', '0', '5', '93', '0', '15000000']"
+  },
+  {
+   "gate": "replica-ab025-key",
+   "pass": true,
+   "detail": "1155314042043105280,64,93 vs 1155314042043105280,64,93"
+  },
+  {
+   "gate": "replica-ab025-verdict-vs-published",
+   "pass": true,
+   "detail": "this-host result=2 nodes=3832650 vs published result=2 nodes=3832650"
+  },
+  {
+   "gate": "replica-ab026-present",
+   "pass": true,
+   "detail": "p1/p2"
+  },
+  {
+   "gate": "replica-ab026-done",
+   "pass": true,
+   "detail": "replay_done p1=True p2=True"
+  },
+  {
+   "gate": "replica-ab026-quads",
+   "pass": true,
+   "detail": "quads-header p1=True p2=True"
+  },
+  {
+   "gate": "replica-ab026-det-pair",
+   "pass": true,
+   "detail": "p1=['86', '0', '15000000', '2', '1835150'] p2=['86', '0', '15000000', '2', '1835150']"
+  },
+  {
+   "gate": "replica-ab026-schema",
+   "pass": true,
+   "detail": "schema ['replay', '0', '5', '86', '0', '15000000']"
+  },
+  {
+   "gate": "replica-ab026-key",
+   "pass": true,
+   "detail": "5908722848549044224,131072,86 vs 5908722848549044224,131072,86"
+  },
+  {
+   "gate": "replica-ab026-verdict-vs-published",
+   "pass": true,
+   "detail": "this-host result=2 nodes=1835150 vs published result=2 nodes=1835150"
+  },
+  {
+   "gate": "replica-ab027-present",
+   "pass": true,
+   "detail": "p1/p2"
+  },
+  {
+   "gate": "replica-ab027-done",
+   "pass": true,
+   "detail": "replay_done p1=True p2=True"
+  },
+  {
+   "gate": "replica-ab027-quads",
+   "pass": true,
+   "detail": "quads-header p1=True p2=True"
+  },
+  {
+   "gate": "replica-ab027-det-pair",
+   "pass": true,
+   "detail": "p1=['101', '0', '15000000', '2', '4364868'] p2=['101', '0', '15000000', '2', '4364868']"
+  },
+  {
+   "gate": "replica-ab027-schema",
+   "pass": true,
+   "detail": "schema ['replay', '0', '5', '101', '0', '15000000']"
+  },
+  {
+   "gate": "replica-ab027-key",
+   "pass": true,
+   "detail": "1297036830121656832,131072,101 vs 1297036830121656832,131072,101"
+  },
+  {
+   "gate": "replica-ab027-verdict-vs-published",
+   "pass": true,
+   "detail": "this-host result=2 nodes=4364868 vs published result=2 nodes=4364868"
+  },
+  {
+   "gate": "replica-ab029-present",
+   "pass": true,
+   "detail": "p1/p2"
+  },
+  {
+   "gate": "replica-ab029-done",
+   "pass": true,
+   "detail": "replay_done p1=True p2=True"
+  },
+  {
+   "gate": "replica-ab029-quads",
+   "pass": true,
+   "detail": "quads-header p1=True p2=True"
+  },
+  {
+   "gate": "replica-ab029-det-pair",
+   "pass": true,
+   "detail": "p1=['97', '0', '15000000', '2', '2583183'] p2=['97', '0', '15000000', '2', '2583183']"
+  },
+  {
+   "gate": "replica-ab029-schema",
+   "pass": true,
+   "detail": "schema ['replay', '0', '5', '97', '0', '15000000']"
+  },
+  {
+   "gate": "replica-ab029-key",
+   "pass": true,
+   "detail": "1155314042043105280,16,97 vs 1155314042043105280,16,97"
+  },
+  {
+   "gate": "replica-ab029-verdict-vs-published",
+   "pass": true,
+   "detail": "this-host result=2 nodes=2583183 vs published result=2 nodes=2583183"
+  },
+  {
+   "gate": "replica-ab030-present",
+   "pass": true,
+   "detail": "p1/p2"
+  },
+  {
+   "gate": "replica-ab030-done",
+   "pass": true,
+   "detail": "replay_done p1=True p2=True"
+  },
+  {
+   "gate": "replica-ab030-quads",
+   "pass": true,
+   "detail": "quads-header p1=True p2=True"
+  },
+  {
+   "gate": "replica-ab030-det-pair",
+   "pass": true,
+   "detail": "p1=['88', '0', '15000000', '2', '7694235'] p2=['88', '0', '15000000', '2', '7694235']"
+  },
+  {
+   "gate": "replica-ab030-schema",
+   "pass": true,
+   "detail": "schema ['replay', '0', '5', '88', '0', '15000000']"
+  },
+  {
+   "gate": "replica-ab030-key",
+   "pass": true,
+   "detail": "1191342839062069248,0,88 vs 1191342839062069248,0,88"
+  },
+  {
+   "gate": "replica-ab030-verdict-vs-published",
+   "pass": true,
+   "detail": "this-host result=2 nodes=7694235 vs published result=2 nodes=7694235"
+  },
+  {
+   "gate": "replica-ab031-present",
+   "pass": true,
+   "detail": "p1/p2"
+  },
+  {
+   "gate": "replica-ab031-done",
+   "pass": true,
+   "detail": "replay_done p1=True p2=True"
+  },
+  {
+   "gate": "replica-ab031-quads",
+   "pass": true,
+   "detail": "quads-header p1=True p2=True"
+  },
+  {
+   "gate": "replica-ab031-det-pair",
+   "pass": true,
+   "detail": "p1=['94', '0', '15000000', '2', '2973520'] p2=['94', '0', '15000000', '2', '2973520']"
+  },
+  {
+   "gate": "replica-ab031-schema",
+   "pass": true,
+   "detail": "schema ['replay', '0', '5', '94', '0', '15000000']"
+  },
+  {
+   "gate": "replica-ab031-key",
+   "pass": true,
+   "detail": "1227371636081033216,0,94 vs 1227371636081033216,0,94"
+  },
+  {
+   "gate": "replica-ab031-verdict-vs-published",
+   "pass": true,
+   "detail": "this-host result=2 nodes=2973520 vs published result=2 nodes=2973520"
+  },
+  {
+   "gate": "replica-ab032-present",
+   "pass": true,
+   "detail": "p1/p2"
+  },
+  {
+   "gate": "replica-ab032-done",
+   "pass": true,
+   "detail": "replay_done p1=True p2=True"
+  },
+  {
+   "gate": "replica-ab032-quads",
+   "pass": true,
+   "detail": "quads-header p1=True p2=True"
+  },
+  {
+   "gate": "replica-ab032-det-pair",
+   "pass": true,
+   "detail": "p1=['93', '0', '15000000', '2', '3320290'] p2=['93', '0', '15000000', '2', '3320290']"
+  },
+  {
+   "gate": "replica-ab032-schema",
+   "pass": true,
+   "detail": "schema ['replay', '0', '5', '93', '0', '15000000']"
+  },
+  {
+   "gate": "replica-ab032-key",
+   "pass": true,
+   "detail": "1443544418194817024,0,93 vs 1443544418194817024,0,93"
+  },
+  {
+   "gate": "replica-ab032-verdict-vs-published",
+   "pass": true,
+   "detail": "this-host result=2 nodes=3320290 vs published result=2 nodes=3320290"
+  },
+  {
+   "gate": "anchor-k02a-present",
+   "pass": true,
+   "detail": "a/b"
+  },
+  {
+   "gate": "anchor-k02a-a-clean",
+   "pass": true,
+   "detail": "result=1 reason=clean"
+  },
+  {
+   "gate": "anchor-k02a-a-expansions",
+   "pass": true,
+   "detail": "exp=9106337 vs 9106337, ttH=4991527 vs 4991527"
+  },
+  {
+   "gate": "anchor-k02a-a-legal",
+   "pass": true,
+   "detail": "87 vs 87"
+  },
+  {
+   "gate": "anchor-k02a-a-key",
+   "pass": true,
+   "detail": "1297036692683751424:68157440"
+  },
+  {
+   "gate": "anchor-k02a-b-clean",
+   "pass": true,
+   "detail": "result=1 reason=clean"
+  },
+  {
+   "gate": "anchor-k02a-b-expansions",
+   "pass": true,
+   "detail": "exp=9106337 vs 9106337, ttH=4991527 vs 4991527"
+  },
+  {
+   "gate": "anchor-k02a-b-legal",
+   "pass": true,
+   "detail": "87 vs 87"
+  },
+  {
+   "gate": "anchor-k02a-b-key",
+   "pass": true,
+   "detail": "1297036692683751424:68157440"
+  },
+  {
+   "gate": "anchor-k02a-det-pair",
+   "pass": true,
+   "detail": "9106337 vs 9106337"
+  },
+  {
+   "gate": "anchor-l1a-present",
+   "pass": true,
+   "detail": "a/b"
+  },
+  {
+   "gate": "anchor-l1a-a-clean",
+   "pass": true,
+   "detail": "result=2 reason=clean"
+  },
+  {
+   "gate": "anchor-l1a-a-expansions",
+   "pass": true,
+   "detail": "exp=7660602 vs 7660602, ttH=3951175 vs 3951175"
+  },
+  {
+   "gate": "anchor-l1a-a-legal",
+   "pass": true,
+   "detail": "116 vs 116"
+  },
+  {
+   "gate": "anchor-l1a-a-key",
+   "pass": true,
+   "detail": "13019119616:16448"
+  },
+  {
+   "gate": "anchor-l1a-b-clean",
+   "pass": true,
+   "detail": "result=2 reason=clean"
+  },
+  {
+   "gate": "anchor-l1a-b-expansions",
+   "pass": true,
+   "detail": "exp=7660602 vs 7660602, ttH=3951175 vs 3951175"
+  },
+  {
+   "gate": "anchor-l1a-b-legal",
+   "pass": true,
+   "detail": "116 vs 116"
+  },
+  {
+   "gate": "anchor-l1a-b-key",
+   "pass": true,
+   "detail": "13019119616:16448"
+  },
+  {
+   "gate": "anchor-l1a-det-pair",
+   "pass": true,
+   "detail": "7660602 vs 7660602"
+  },
+  {
+   "gate": "neg-ng1-failclosed",
+   "pass": true,
+   "detail": "{'raw': 'third,ng1a,5,88,,GATE_FAIL,\"legal count mismatch: derived=87 declared=88\"', 'stub': 'third', 'gate_fail': 'GATE_FAIL,\"legal count mismatch: derived=87 declared=88'}"
+  },
+  {
+   "gate": "neg-ng2-failclosed",
+   "pass": true,
+   "detail": "{'raw': 'third,ng2a,6,87,,GATE_FAIL,\"stone count mismatch: bits=5 declared=6\"', 'stub': 'third', 'gate_fail': 'GATE_FAIL,\"stone count mismatch: bits=5 declared=6'}"
+  },
+  {
+   "gate": "target-ab017-present",
+   "pass": true,
+   "detail": "a/b"
+  },
+  {
+   "gate": "target-ab017-a-key",
+   "pass": true,
+   "detail": "1155314076402843648:0"
+  },
+  {
+   "gate": "target-ab017-a-legal",
+   "pass": true,
+   "detail": "93 vs 93"
+  },
+  {
+   "gate": "target-ab017-a-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-ab017-b-key",
+   "pass": true,
+   "detail": "1155314076402843648:0"
+  },
+  {
+   "gate": "target-ab017-b-legal",
+   "pass": true,
+   "detail": "93 vs 93"
+  },
+  {
+   "gate": "target-ab017-b-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-ab017-det-pair",
+   "pass": true,
+   "detail": "a=(2,3827358,clean) b=(2,3827358,clean)"
+  },
+  {
+   "gate": "target-ab017-verdict-agree",
+   "pass": true,
+   "detail": "third=2 replica=2"
+  },
+  {
+   "gate": "target-ab018-present",
+   "pass": true,
+   "detail": "a/b"
+  },
+  {
+   "gate": "target-ab018-a-key",
+   "pass": true,
+   "detail": "1299429230118961152:0"
+  },
+  {
+   "gate": "target-ab018-a-legal",
+   "pass": true,
+   "detail": "83 vs 83"
+  },
+  {
+   "gate": "target-ab018-a-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-ab018-b-key",
+   "pass": true,
+   "detail": "1299429230118961152:0"
+  },
+  {
+   "gate": "target-ab018-b-legal",
+   "pass": true,
+   "detail": "83 vs 83"
+  },
+  {
+   "gate": "target-ab018-b-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-ab018-det-pair",
+   "pass": true,
+   "detail": "a=(2,8028562,clean) b=(2,8028562,clean)"
+  },
+  {
+   "gate": "target-ab018-verdict-agree",
+   "pass": true,
+   "detail": "third=2 replica=2"
+  },
+  {
+   "gate": "target-ab019-present",
+   "pass": true,
+   "detail": "a/b"
+  },
+  {
+   "gate": "target-ab019-a-key",
+   "pass": true,
+   "detail": "1155314316921012224:0"
+  },
+  {
+   "gate": "target-ab019-a-legal",
+   "pass": true,
+   "detail": "88 vs 88"
+  },
+  {
+   "gate": "target-ab019-a-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-ab019-b-key",
+   "pass": true,
+   "detail": "1155314316921012224:0"
+  },
+  {
+   "gate": "target-ab019-b-legal",
+   "pass": true,
+   "detail": "88 vs 88"
+  },
+  {
+   "gate": "target-ab019-b-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-ab019-det-pair",
+   "pass": true,
+   "detail": "a=(2,2987621,clean) b=(2,2987621,clean)"
+  },
+  {
+   "gate": "target-ab019-verdict-agree",
+   "pass": true,
+   "detail": "third=2 replica=2"
+  },
+  {
+   "gate": "target-ab020-present",
+   "pass": true,
+   "detail": "a/b"
+  },
+  {
+   "gate": "target-ab020-a-key",
+   "pass": true,
+   "detail": "1155331634229149696:0"
+  },
+  {
+   "gate": "target-ab020-a-legal",
+   "pass": true,
+   "detail": "85 vs 85"
+  },
+  {
+   "gate": "target-ab020-a-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-ab020-b-key",
+   "pass": true,
+   "detail": "1155331634229149696:0"
+  },
+  {
+   "gate": "target-ab020-b-legal",
+   "pass": true,
+   "detail": "85 vs 85"
+  },
+  {
+   "gate": "target-ab020-b-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-ab020-det-pair",
+   "pass": true,
+   "detail": "a=(2,3447988,clean) b=(2,3447988,clean)"
+  },
+  {
+   "gate": "target-ab020-verdict-agree",
+   "pass": true,
+   "detail": "third=2 replica=2"
+  },
+  {
+   "gate": "target-ab021-present",
+   "pass": true,
+   "detail": "a/b"
+  },
+  {
+   "gate": "target-ab021-a-key",
+   "pass": true,
+   "detail": "1155349226415194112:0"
+  },
+  {
+   "gate": "target-ab021-a-legal",
+   "pass": true,
+   "detail": "89 vs 89"
+  },
+  {
+   "gate": "target-ab021-a-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-ab021-b-key",
+   "pass": true,
+   "detail": "1155349226415194112:0"
+  },
+  {
+   "gate": "target-ab021-b-legal",
+   "pass": true,
+   "detail": "89 vs 89"
+  },
+  {
+   "gate": "target-ab021-b-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-ab021-det-pair",
+   "pass": true,
+   "detail": "a=(2,4301626,clean) b=(2,4301626,clean)"
+  },
+  {
+   "gate": "target-ab021-verdict-agree",
+   "pass": true,
+   "detail": "third=2 replica=2"
+  },
+  {
+   "gate": "target-ab022-present",
+   "pass": true,
+   "detail": "a/b"
+  },
+  {
+   "gate": "target-ab022-a-key",
+   "pass": true,
+   "detail": "1155384410787282944:0"
+  },
+  {
+   "gate": "target-ab022-a-legal",
+   "pass": true,
+   "detail": "79 vs 79"
+  },
+  {
+   "gate": "target-ab022-a-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-ab022-b-key",
+   "pass": true,
+   "detail": "1155384410787282944:0"
+  },
+  {
+   "gate": "target-ab022-b-legal",
+   "pass": true,
+   "detail": "79 vs 79"
+  },
+  {
+   "gate": "target-ab022-b-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-ab022-det-pair",
+   "pass": true,
+   "detail": "a=(2,5328274,clean) b=(2,5328274,clean)"
+  },
+  {
+   "gate": "target-ab022-verdict-agree",
+   "pass": true,
+   "detail": "third=2 replica=2"
+  },
+  {
+   "gate": "target-ab023-present",
+   "pass": true,
+   "detail": "a/b"
+  },
+  {
+   "gate": "target-ab023-a-key",
+   "pass": true,
+   "detail": "1155876991996526592:0"
+  },
+  {
+   "gate": "target-ab023-a-legal",
+   "pass": true,
+   "detail": "86 vs 86"
+  },
+  {
+   "gate": "target-ab023-a-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-ab023-b-key",
+   "pass": true,
+   "detail": "1155876991996526592:0"
+  },
+  {
+   "gate": "target-ab023-b-legal",
+   "pass": true,
+   "detail": "86 vs 86"
+  },
+  {
+   "gate": "target-ab023-b-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-ab023-det-pair",
+   "pass": true,
+   "detail": "a=(2,10104496,clean) b=(2,10104496,clean)"
+  },
+  {
+   "gate": "target-ab023-verdict-agree",
+   "pass": true,
+   "detail": "third=2 replica=2"
+  },
+  {
+   "gate": "target-ab024-present",
+   "pass": true,
+   "detail": "a/b"
+  },
+  {
+   "gate": "target-ab024-a-key",
+   "pass": true,
+   "detail": "1155314042043105280:32"
+  },
+  {
+   "gate": "target-ab024-a-legal",
+   "pass": true,
+   "detail": "90 vs 90"
+  },
+  {
+   "gate": "target-ab024-a-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-ab024-b-key",
+   "pass": true,
+   "detail": "1155314042043105280:32"
+  },
+  {
+   "gate": "target-ab024-b-legal",
+   "pass": true,
+   "detail": "90 vs 90"
+  },
+  {
+   "gate": "target-ab024-b-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-ab024-det-pair",
+   "pass": true,
+   "detail": "a=(2,4735823,clean) b=(2,4735823,clean)"
+  },
+  {
+   "gate": "target-ab024-verdict-agree",
+   "pass": true,
+   "detail": "third=2 replica=2"
+  },
+  {
+   "gate": "target-ab025-present",
+   "pass": true,
+   "detail": "a/b"
+  },
+  {
+   "gate": "target-ab025-a-key",
+   "pass": true,
+   "detail": "1155314042043105280:64"
+  },
+  {
+   "gate": "target-ab025-a-legal",
+   "pass": true,
+   "detail": "93 vs 93"
+  },
+  {
+   "gate": "target-ab025-a-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-ab025-b-key",
+   "pass": true,
+   "detail": "1155314042043105280:64"
+  },
+  {
+   "gate": "target-ab025-b-legal",
+   "pass": true,
+   "detail": "93 vs 93"
+  },
+  {
+   "gate": "target-ab025-b-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-ab025-det-pair",
+   "pass": true,
+   "detail": "a=(2,4390137,clean) b=(2,4390137,clean)"
+  },
+  {
+   "gate": "target-ab025-verdict-agree",
+   "pass": true,
+   "detail": "third=2 replica=2"
+  },
+  {
+   "gate": "target-ab026-present",
+   "pass": true,
+   "detail": "a/b"
+  },
+  {
+   "gate": "target-ab026-a-key",
+   "pass": true,
+   "detail": "5908722848549044224:131072"
+  },
+  {
+   "gate": "target-ab026-a-legal",
+   "pass": true,
+   "detail": "86 vs 86"
+  },
+  {
+   "gate": "target-ab026-a-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-ab026-b-key",
+   "pass": true,
+   "detail": "5908722848549044224:131072"
+  },
+  {
+   "gate": "target-ab026-b-legal",
+   "pass": true,
+   "detail": "86 vs 86"
+  },
+  {
+   "gate": "target-ab026-b-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-ab026-det-pair",
+   "pass": true,
+   "detail": "a=(2,2075693,clean) b=(2,2075693,clean)"
+  },
+  {
+   "gate": "target-ab026-verdict-agree",
+   "pass": true,
+   "detail": "third=2 replica=2"
+  },
+  {
+   "gate": "target-ab027-present",
+   "pass": true,
+   "detail": "a/b"
+  },
+  {
+   "gate": "target-ab027-a-key",
+   "pass": true,
+   "detail": "1297036830121656832:131072"
+  },
+  {
+   "gate": "target-ab027-a-legal",
+   "pass": true,
+   "detail": "101 vs 101"
+  },
+  {
+   "gate": "target-ab027-a-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-ab027-b-key",
+   "pass": true,
+   "detail": "1297036830121656832:131072"
+  },
+  {
+   "gate": "target-ab027-b-legal",
+   "pass": true,
+   "detail": "101 vs 101"
+  },
+  {
+   "gate": "target-ab027-b-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-ab027-det-pair",
+   "pass": true,
+   "detail": "a=(2,5060412,clean) b=(2,5060412,clean)"
+  },
+  {
+   "gate": "target-ab027-verdict-agree",
+   "pass": true,
+   "detail": "third=2 replica=2"
+  },
+  {
+   "gate": "target-ab029-present",
+   "pass": true,
+   "detail": "a/b"
+  },
+  {
+   "gate": "target-ab029-a-key",
+   "pass": true,
+   "detail": "1155314042043105280:16"
+  },
+  {
+   "gate": "target-ab029-a-legal",
+   "pass": true,
+   "detail": "97 vs 97"
+  },
+  {
+   "gate": "target-ab029-a-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-ab029-b-key",
+   "pass": true,
+   "detail": "1155314042043105280:16"
+  },
+  {
+   "gate": "target-ab029-b-legal",
+   "pass": true,
+   "detail": "97 vs 97"
+  },
+  {
+   "gate": "target-ab029-b-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-ab029-det-pair",
+   "pass": true,
+   "detail": "a=(2,2953931,clean) b=(2,2953931,clean)"
+  },
+  {
+   "gate": "target-ab029-verdict-agree",
+   "pass": true,
+   "detail": "third=2 replica=2"
+  },
+  {
+   "gate": "target-ab030-present",
+   "pass": true,
+   "detail": "a/b"
+  },
+  {
+   "gate": "target-ab030-a-key",
+   "pass": true,
+   "detail": "1191342839062069248:0"
+  },
+  {
+   "gate": "target-ab030-a-legal",
+   "pass": true,
+   "detail": "88 vs 88"
+  },
+  {
+   "gate": "target-ab030-a-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-ab030-b-key",
+   "pass": true,
+   "detail": "1191342839062069248:0"
+  },
+  {
+   "gate": "target-ab030-b-legal",
+   "pass": true,
+   "detail": "88 vs 88"
+  },
+  {
+   "gate": "target-ab030-b-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-ab030-det-pair",
+   "pass": true,
+   "detail": "a=(2,8871916,clean) b=(2,8871916,clean)"
+  },
+  {
+   "gate": "target-ab030-verdict-agree",
+   "pass": true,
+   "detail": "third=2 replica=2"
+  },
+  {
+   "gate": "target-ab031-present",
+   "pass": true,
+   "detail": "a/b"
+  },
+  {
+   "gate": "target-ab031-a-key",
+   "pass": true,
+   "detail": "1227371636081033216:0"
+  },
+  {
+   "gate": "target-ab031-a-legal",
+   "pass": true,
+   "detail": "94 vs 94"
+  },
+  {
+   "gate": "target-ab031-a-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-ab031-b-key",
+   "pass": true,
+   "detail": "1227371636081033216:0"
+  },
+  {
+   "gate": "target-ab031-b-legal",
+   "pass": true,
+   "detail": "94 vs 94"
+  },
+  {
+   "gate": "target-ab031-b-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-ab031-det-pair",
+   "pass": true,
+   "detail": "a=(2,3399875,clean) b=(2,3399875,clean)"
+  },
+  {
+   "gate": "target-ab031-verdict-agree",
+   "pass": true,
+   "detail": "third=2 replica=2"
+  },
+  {
+   "gate": "target-ab032-present",
+   "pass": true,
+   "detail": "a/b"
+  },
+  {
+   "gate": "target-ab032-a-key",
+   "pass": true,
+   "detail": "1443544418194817024:0"
+  },
+  {
+   "gate": "target-ab032-a-legal",
+   "pass": true,
+   "detail": "93 vs 93"
+  },
+  {
+   "gate": "target-ab032-a-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-ab032-b-key",
+   "pass": true,
+   "detail": "1443544418194817024:0"
+  },
+  {
+   "gate": "target-ab032-b-legal",
+   "pass": true,
+   "detail": "93 vs 93"
+  },
+  {
+   "gate": "target-ab032-b-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-ab032-det-pair",
+   "pass": true,
+   "detail": "a=(2,3779917,clean) b=(2,3779917,clean)"
+  },
+  {
+   "gate": "target-ab032-verdict-agree",
+   "pass": true,
+   "detail": "third=2 replica=2"
+  },
+  {
+   "gate": "unadopted-pin-raw-ab017-p1",
+   "pass": true,
+   "detail": "b7108ab9821bf4860e88709f596a4f010489b3566c61575e86027392381a3139"
+  },
+  {
+   "gate": "unadopted-pin-raw-ab017-p2",
+   "pass": true,
+   "detail": "b55868ef43edbd3280ae61b9d40803ac94baec6e678f15efb6a39983f646e498"
+  },
+  {
+   "gate": "unadopted-pin-merged-cache-ab017",
+   "pass": true,
+   "detail": "30ddad9dc0add7e21698e864b5c202b8e6ebd3e396c4eb6156a85ff2d34005c4"
+  },
+  {
+   "gate": "unadopted-merged-cache-rowcount-ab017",
+   "pass": true,
+   "detail": "6317 s5verdict rows"
+  },
+  {
+   "gate": "unadopted-merged-cache-row-absent-ab017",
+   "pass": true,
+   "detail": "s5verdict,1155314076402843648,0,5,2,3366331 occurs 0 times (expect 0: the drive-2 LOSS row was never adopted)"
+  },
+  {
+   "gate": "unadopted-merged-cache-no-key-row-ab017",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "gate": "unadopted-pin-raw-ab018-p1",
+   "pass": true,
+   "detail": "7e34a52f843b92181f45e390b790b8bd622494b3077dcc00c49f37cc48262567"
+  },
+  {
+   "gate": "unadopted-pin-raw-ab018-p2",
+   "pass": true,
+   "detail": "c46881d89f978a6c00f50959f0302b985c95856c612ff781a9810e3c61d115cb"
+  },
+  {
+   "gate": "unadopted-pin-merged-cache-ab018",
+   "pass": true,
+   "detail": "30ddad9dc0add7e21698e864b5c202b8e6ebd3e396c4eb6156a85ff2d34005c4"
+  },
+  {
+   "gate": "unadopted-merged-cache-rowcount-ab018",
+   "pass": true,
+   "detail": "6317 s5verdict rows"
+  },
+  {
+   "gate": "unadopted-merged-cache-row-absent-ab018",
+   "pass": true,
+   "detail": "s5verdict,1299429230118961152,0,5,2,6998686 occurs 0 times (expect 0: the drive-2 LOSS row was never adopted)"
+  },
+  {
+   "gate": "unadopted-merged-cache-no-key-row-ab018",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "gate": "unadopted-pin-raw-ab019-p1",
+   "pass": true,
+   "detail": "14dbc39a9fc16ba2c9abdd2dcd3d1d94da33f1cdf8cd66a9e1eddd8ed70a46ec"
+  },
+  {
+   "gate": "unadopted-pin-raw-ab019-p2",
+   "pass": true,
+   "detail": "cc1ec3ba70938cda46bcf96d3a7181924691a4e7346b7c1cc1c3b4194ed17cca"
+  },
+  {
+   "gate": "unadopted-pin-merged-cache-ab019",
+   "pass": true,
+   "detail": "30ddad9dc0add7e21698e864b5c202b8e6ebd3e396c4eb6156a85ff2d34005c4"
+  },
+  {
+   "gate": "unadopted-merged-cache-rowcount-ab019",
+   "pass": true,
+   "detail": "6317 s5verdict rows"
+  },
+  {
+   "gate": "unadopted-merged-cache-row-absent-ab019",
+   "pass": true,
+   "detail": "s5verdict,1155314316921012224,0,5,2,2623573 occurs 0 times (expect 0: the drive-2 LOSS row was never adopted)"
+  },
+  {
+   "gate": "unadopted-merged-cache-no-key-row-ab019",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "gate": "unadopted-pin-raw-ab020-p1",
+   "pass": true,
+   "detail": "e6270e0445a30ede388b8578913fe8d494ae2a1d77f6fd67907c3d93428b6fc9"
+  },
+  {
+   "gate": "unadopted-pin-raw-ab020-p2",
+   "pass": true,
+   "detail": "a4e31b033cd5aebab2644da1ae4b652ffb277c66f3ef7c9e29d7e43f16249a9f"
+  },
+  {
+   "gate": "unadopted-pin-merged-cache-ab020",
+   "pass": true,
+   "detail": "30ddad9dc0add7e21698e864b5c202b8e6ebd3e396c4eb6156a85ff2d34005c4"
+  },
+  {
+   "gate": "unadopted-merged-cache-rowcount-ab020",
+   "pass": true,
+   "detail": "6317 s5verdict rows"
+  },
+  {
+   "gate": "unadopted-merged-cache-row-absent-ab020",
+   "pass": true,
+   "detail": "s5verdict,1155331634229149696,0,5,2,3020397 occurs 0 times (expect 0: the drive-2 LOSS row was never adopted)"
+  },
+  {
+   "gate": "unadopted-merged-cache-no-key-row-ab020",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "gate": "unadopted-pin-raw-ab021-p1",
+   "pass": true,
+   "detail": "d5d70ac9f6ac1efcfccbfc92c09069651f4ecd42a988f4c11136ff9d7a6331c4"
+  },
+  {
+   "gate": "unadopted-pin-raw-ab021-p2",
+   "pass": true,
+   "detail": "86a687ab86e55e6ef8064fa6f5cff8fb095933a1a971204eb016ac67b670046d"
+  },
+  {
+   "gate": "unadopted-pin-merged-cache-ab021",
+   "pass": true,
+   "detail": "30ddad9dc0add7e21698e864b5c202b8e6ebd3e396c4eb6156a85ff2d34005c4"
+  },
+  {
+   "gate": "unadopted-merged-cache-rowcount-ab021",
+   "pass": true,
+   "detail": "6317 s5verdict rows"
+  },
+  {
+   "gate": "unadopted-merged-cache-row-absent-ab021",
+   "pass": true,
+   "detail": "s5verdict,1155349226415194112,0,5,2,3748592 occurs 0 times (expect 0: the drive-2 LOSS row was never adopted)"
+  },
+  {
+   "gate": "unadopted-merged-cache-no-key-row-ab021",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "gate": "unadopted-pin-raw-ab022-p1",
+   "pass": true,
+   "detail": "0031f53a57a398b0d84f224fabf70aa57180e79f8cc6df1283bfd217c3b148e7"
+  },
+  {
+   "gate": "unadopted-pin-raw-ab022-p2",
+   "pass": true,
+   "detail": "6cbeb82320cdecdc23879a069202922f9e9e96e939530eec9224d04c35e76742"
+  },
+  {
+   "gate": "unadopted-pin-merged-cache-ab022",
+   "pass": true,
+   "detail": "30ddad9dc0add7e21698e864b5c202b8e6ebd3e396c4eb6156a85ff2d34005c4"
+  },
+  {
+   "gate": "unadopted-merged-cache-rowcount-ab022",
+   "pass": true,
+   "detail": "6317 s5verdict rows"
+  },
+  {
+   "gate": "unadopted-merged-cache-row-absent-ab022",
+   "pass": true,
+   "detail": "s5verdict,1155384410787282944,0,5,2,4620753 occurs 0 times (expect 0: the drive-2 LOSS row was never adopted)"
+  },
+  {
+   "gate": "unadopted-merged-cache-no-key-row-ab022",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "gate": "unadopted-pin-raw-ab023-p1",
+   "pass": true,
+   "detail": "aa31b6f2187d6ba469ec090f98eda756f16ebdb88bd05dbc68037ef1dd3d90c7"
+  },
+  {
+   "gate": "unadopted-pin-raw-ab023-p2",
+   "pass": true,
+   "detail": "b1c1fef0d391cab353df49cffb056385acf790d29d299f20632ad73161a7e442"
+  },
+  {
+   "gate": "unadopted-pin-merged-cache-ab023",
+   "pass": true,
+   "detail": "30ddad9dc0add7e21698e864b5c202b8e6ebd3e396c4eb6156a85ff2d34005c4"
+  },
+  {
+   "gate": "unadopted-merged-cache-rowcount-ab023",
+   "pass": true,
+   "detail": "6317 s5verdict rows"
+  },
+  {
+   "gate": "unadopted-merged-cache-row-absent-ab023",
+   "pass": true,
+   "detail": "s5verdict,1155876991996526592,0,5,2,8695465 occurs 0 times (expect 0: the drive-2 LOSS row was never adopted)"
+  },
+  {
+   "gate": "unadopted-merged-cache-no-key-row-ab023",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "gate": "unadopted-pin-raw-ab024-p1",
+   "pass": true,
+   "detail": "3e406145cf99fb0548377b0c7b68f22cd98b4fe3bb98487b7ba613dab17f3b0d"
+  },
+  {
+   "gate": "unadopted-pin-raw-ab024-p2",
+   "pass": true,
+   "detail": "b0ac4311852f43b495b61409be0b020922febc8751cda96f964e302dc8f72490"
+  },
+  {
+   "gate": "unadopted-pin-merged-cache-ab024",
+   "pass": true,
+   "detail": "30ddad9dc0add7e21698e864b5c202b8e6ebd3e396c4eb6156a85ff2d34005c4"
+  },
+  {
+   "gate": "unadopted-merged-cache-rowcount-ab024",
+   "pass": true,
+   "detail": "6317 s5verdict rows"
+  },
+  {
+   "gate": "unadopted-merged-cache-row-absent-ab024",
+   "pass": true,
+   "detail": "s5verdict,1155314042043105280,32,5,2,4131850 occurs 0 times (expect 0: the drive-2 LOSS row was never adopted)"
+  },
+  {
+   "gate": "unadopted-merged-cache-no-key-row-ab024",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "gate": "unadopted-pin-raw-ab025-p1",
+   "pass": true,
+   "detail": "d5d28a193c9ec77fef7041d0727c3f0fb8a659f9d3ec9fddab5533b1853aa60a"
+  },
+  {
+   "gate": "unadopted-pin-raw-ab025-p2",
+   "pass": true,
+   "detail": "15e999fc829019b921a9dc1a719b6bd5a0362a99eb0005e6899b41f026ef082b"
+  },
+  {
+   "gate": "unadopted-pin-merged-cache-ab025",
+   "pass": true,
+   "detail": "30ddad9dc0add7e21698e864b5c202b8e6ebd3e396c4eb6156a85ff2d34005c4"
+  },
+  {
+   "gate": "unadopted-merged-cache-rowcount-ab025",
+   "pass": true,
+   "detail": "6317 s5verdict rows"
+  },
+  {
+   "gate": "unadopted-merged-cache-row-absent-ab025",
+   "pass": true,
+   "detail": "s5verdict,1155314042043105280,64,5,2,3832650 occurs 0 times (expect 0: the drive-2 LOSS row was never adopted)"
+  },
+  {
+   "gate": "unadopted-merged-cache-no-key-row-ab025",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "gate": "unadopted-pin-raw-ab026-p1",
+   "pass": true,
+   "detail": "2487e5c61381f9defbcccc1b2940e40536ee2d2d0ce8ef36526a87960ab3e23a"
+  },
+  {
+   "gate": "unadopted-pin-raw-ab026-p2",
+   "pass": true,
+   "detail": "f69b2601ca71e70bf037fa2c810c6a116300389d1b731bdff8ca931e0ab1d81e"
+  },
+  {
+   "gate": "unadopted-pin-merged-cache-ab026",
+   "pass": true,
+   "detail": "30ddad9dc0add7e21698e864b5c202b8e6ebd3e396c4eb6156a85ff2d34005c4"
+  },
+  {
+   "gate": "unadopted-merged-cache-rowcount-ab026",
+   "pass": true,
+   "detail": "6317 s5verdict rows"
+  },
+  {
+   "gate": "unadopted-merged-cache-row-absent-ab026",
+   "pass": true,
+   "detail": "s5verdict,5908722848549044224,131072,5,2,1835150 occurs 0 times (expect 0: the drive-2 LOSS row was never adopted)"
+  },
+  {
+   "gate": "unadopted-merged-cache-no-key-row-ab026",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "gate": "unadopted-pin-raw-ab027-p1",
+   "pass": true,
+   "detail": "0bf2f82660e5f4416e7cdae9a0b5e4e1b2dcb79b460520fdffc1b06854c12623"
+  },
+  {
+   "gate": "unadopted-pin-raw-ab027-p2",
+   "pass": true,
+   "detail": "a72430274ae1862c35864dde4fc0da8d72285b962f0ba461d09f6445caad3bfb"
+  },
+  {
+   "gate": "unadopted-pin-merged-cache-ab027",
+   "pass": true,
+   "detail": "30ddad9dc0add7e21698e864b5c202b8e6ebd3e396c4eb6156a85ff2d34005c4"
+  },
+  {
+   "gate": "unadopted-merged-cache-rowcount-ab027",
+   "pass": true,
+   "detail": "6317 s5verdict rows"
+  },
+  {
+   "gate": "unadopted-merged-cache-row-absent-ab027",
+   "pass": true,
+   "detail": "s5verdict,1297036830121656832,131072,5,2,4364868 occurs 0 times (expect 0: the drive-2 LOSS row was never adopted)"
+  },
+  {
+   "gate": "unadopted-merged-cache-no-key-row-ab027",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "gate": "unadopted-pin-raw-ab029-p1",
+   "pass": true,
+   "detail": "10e39ea0985ce4821769b15bd72d4a6f5fe448de590515f7e93348050695a19e"
+  },
+  {
+   "gate": "unadopted-pin-raw-ab029-p2",
+   "pass": true,
+   "detail": "10e39ea0985ce4821769b15bd72d4a6f5fe448de590515f7e93348050695a19e"
+  },
+  {
+   "gate": "unadopted-pin-merged-cache-ab029",
+   "pass": true,
+   "detail": "30ddad9dc0add7e21698e864b5c202b8e6ebd3e396c4eb6156a85ff2d34005c4"
+  },
+  {
+   "gate": "unadopted-merged-cache-rowcount-ab029",
+   "pass": true,
+   "detail": "6317 s5verdict rows"
+  },
+  {
+   "gate": "unadopted-merged-cache-row-absent-ab029",
+   "pass": true,
+   "detail": "s5verdict,1155314042043105280,16,5,2,2583183 occurs 0 times (expect 0: the drive-2 LOSS row was never adopted)"
+  },
+  {
+   "gate": "unadopted-merged-cache-no-key-row-ab029",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "gate": "unadopted-pin-raw-ab030-p1",
+   "pass": true,
+   "detail": "ece3185b6ce744b061f23a0d7d025314c3c3467eadd8ed06e99db1f6d55d13b3"
+  },
+  {
+   "gate": "unadopted-pin-raw-ab030-p2",
+   "pass": true,
+   "detail": "f4a75fc2adb99925e4b356bc0d9d52eab9f65a497fa70d17f26d6c4c25ba6f3b"
+  },
+  {
+   "gate": "unadopted-pin-merged-cache-ab030",
+   "pass": true,
+   "detail": "30ddad9dc0add7e21698e864b5c202b8e6ebd3e396c4eb6156a85ff2d34005c4"
+  },
+  {
+   "gate": "unadopted-merged-cache-rowcount-ab030",
+   "pass": true,
+   "detail": "6317 s5verdict rows"
+  },
+  {
+   "gate": "unadopted-merged-cache-row-absent-ab030",
+   "pass": true,
+   "detail": "s5verdict,1191342839062069248,0,5,2,7694235 occurs 0 times (expect 0: the drive-2 LOSS row was never adopted)"
+  },
+  {
+   "gate": "unadopted-merged-cache-no-key-row-ab030",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "gate": "unadopted-pin-raw-ab031-p1",
+   "pass": true,
+   "detail": "41473a4fb9c92ba0a317bc12730b75ae7e13dbb1a0858bdc53c215021eb0e737"
+  },
+  {
+   "gate": "unadopted-pin-raw-ab031-p2",
+   "pass": true,
+   "detail": "41473a4fb9c92ba0a317bc12730b75ae7e13dbb1a0858bdc53c215021eb0e737"
+  },
+  {
+   "gate": "unadopted-pin-merged-cache-ab031",
+   "pass": true,
+   "detail": "30ddad9dc0add7e21698e864b5c202b8e6ebd3e396c4eb6156a85ff2d34005c4"
+  },
+  {
+   "gate": "unadopted-merged-cache-rowcount-ab031",
+   "pass": true,
+   "detail": "6317 s5verdict rows"
+  },
+  {
+   "gate": "unadopted-merged-cache-row-absent-ab031",
+   "pass": true,
+   "detail": "s5verdict,1227371636081033216,0,5,2,2973520 occurs 0 times (expect 0: the drive-2 LOSS row was never adopted)"
+  },
+  {
+   "gate": "unadopted-merged-cache-no-key-row-ab031",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "gate": "unadopted-pin-raw-ab032-p1",
+   "pass": true,
+   "detail": "959048d1798be17c5097554d5aa2664f6da2f7258e2b99e47f0a0e7ec0608702"
+  },
+  {
+   "gate": "unadopted-pin-raw-ab032-p2",
+   "pass": true,
+   "detail": "989632651a430a09bec326b2cb6cac44fb09e8d588f6559b1185760a696497ad"
+  },
+  {
+   "gate": "unadopted-pin-merged-cache-ab032",
+   "pass": true,
+   "detail": "30ddad9dc0add7e21698e864b5c202b8e6ebd3e396c4eb6156a85ff2d34005c4"
+  },
+  {
+   "gate": "unadopted-merged-cache-rowcount-ab032",
+   "pass": true,
+   "detail": "6317 s5verdict rows"
+  },
+  {
+   "gate": "unadopted-merged-cache-row-absent-ab032",
+   "pass": true,
+   "detail": "s5verdict,1443544418194817024,0,5,2,3320290 occurs 0 times (expect 0: the drive-2 LOSS row was never adopted)"
+  },
+  {
+   "gate": "unadopted-merged-cache-no-key-row-ab032",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "gate": "unadopted-pin-merged-cache-shared",
+   "pass": true,
+   "detail": "30ddad9dc0add7e21698e864b5c202b8e6ebd3e396c4eb6156a85ff2d34005c4"
+  },
+  {
+   "gate": "unadopted-pin-increment-shared",
+   "pass": true,
+   "detail": "bab011e376090f9f4732d63f0084f326ba72dada5cf699d5aabc7e014c29ae24"
+  },
+  {
+   "gate": "unadopted-increment-exact-16-rows",
+   "pass": true,
+   "detail": "16 rows"
+  },
+  {
+   "gate": "unadopted-increment-adopted-set-header",
+   "pass": true,
+   "detail": "Part CU increment ADOPTED set statement"
+  },
+  {
+   "gate": "unadopted-pin-increments-manifest-shared",
+   "pass": true,
+   "detail": "f9f58ee101d53f0598ee01c5c54d5b277797a9e882cfb478ab7f7b3010e191e0"
+  },
+  {
+   "gate": "unadopted-manifest-schema",
+   "pass": true,
+   "detail": "b29loss16-increments-manifest-v1"
+  },
+  {
+   "gate": "unadopted-manifest-loss-ids",
+   "pass": true,
+   "detail": "['ab001', 'ab002', 'ab003', 'ab004', 'ab005', 'ab006', 'ab007', 'ab008', 'ab009'"
+  },
+  {
+   "gate": "unadopted-manifest-flags",
+   "pass": true,
+   "detail": "full_eq_loss=True base=6301 quarantine=0"
+  },
+  {
+   "gate": "unadopted-manifest-row-counts",
+   "pass": true,
+   "detail": "row_counts={'probed_rows': 16, 'adopted_loss_rows': 16, 'wins': 0, 'exhausted_excluded': 0, 'fragments_unprobed': 0, 'fileless_unprobed': 38}"
+  },
+  {
+   "gate": "unadopted-manifest-status-prefix-pin",
+   "pass": true,
+   "detail": "6b877344b9abea348a9b221f"
+  },
+  {
+   "gate": "unadopted-manifest-fileless-roster",
+   "pass": true,
+   "detail": "fileless roster size 38"
+  },
+  {
+   "gate": "unadopted-manifest-target-not-in-adopted-lists-ab017",
+   "pass": true,
+   "detail": "ab017 must not appear in any adopted/win/probed id list of the increments-manifest"
+  },
+  {
+   "gate": "unadopted-manifest-target-in-fileless-roster-ab017",
+   "pass": true,
+   "detail": "ab017 must appear in the CU-time fileless UNPROBED roster (batches[0].fileless_unprobed_ids)"
+  },
+  {
+   "gate": "unadopted-manifest-target-not-in-adopted-lists-ab018",
+   "pass": true,
+   "detail": "ab018 must not appear in any adopted/win/probed id list of the increments-manifest"
+  },
+  {
+   "gate": "unadopted-manifest-target-in-fileless-roster-ab018",
+   "pass": true,
+   "detail": "ab018 must appear in the CU-time fileless UNPROBED roster (batches[0].fileless_unprobed_ids)"
+  },
+  {
+   "gate": "unadopted-manifest-target-not-in-adopted-lists-ab019",
+   "pass": true,
+   "detail": "ab019 must not appear in any adopted/win/probed id list of the increments-manifest"
+  },
+  {
+   "gate": "unadopted-manifest-target-in-fileless-roster-ab019",
+   "pass": true,
+   "detail": "ab019 must appear in the CU-time fileless UNPROBED roster (batches[0].fileless_unprobed_ids)"
+  },
+  {
+   "gate": "unadopted-manifest-target-not-in-adopted-lists-ab020",
+   "pass": true,
+   "detail": "ab020 must not appear in any adopted/win/probed id list of the increments-manifest"
+  },
+  {
+   "gate": "unadopted-manifest-target-in-fileless-roster-ab020",
+   "pass": true,
+   "detail": "ab020 must appear in the CU-time fileless UNPROBED roster (batches[0].fileless_unprobed_ids)"
+  },
+  {
+   "gate": "unadopted-manifest-target-not-in-adopted-lists-ab021",
+   "pass": true,
+   "detail": "ab021 must not appear in any adopted/win/probed id list of the increments-manifest"
+  },
+  {
+   "gate": "unadopted-manifest-target-in-fileless-roster-ab021",
+   "pass": true,
+   "detail": "ab021 must appear in the CU-time fileless UNPROBED roster (batches[0].fileless_unprobed_ids)"
+  },
+  {
+   "gate": "unadopted-manifest-target-not-in-adopted-lists-ab022",
+   "pass": true,
+   "detail": "ab022 must not appear in any adopted/win/probed id list of the increments-manifest"
+  },
+  {
+   "gate": "unadopted-manifest-target-in-fileless-roster-ab022",
+   "pass": true,
+   "detail": "ab022 must appear in the CU-time fileless UNPROBED roster (batches[0].fileless_unprobed_ids)"
+  },
+  {
+   "gate": "unadopted-manifest-target-not-in-adopted-lists-ab023",
+   "pass": true,
+   "detail": "ab023 must not appear in any adopted/win/probed id list of the increments-manifest"
+  },
+  {
+   "gate": "unadopted-manifest-target-in-fileless-roster-ab023",
+   "pass": true,
+   "detail": "ab023 must appear in the CU-time fileless UNPROBED roster (batches[0].fileless_unprobed_ids)"
+  },
+  {
+   "gate": "unadopted-manifest-target-not-in-adopted-lists-ab024",
+   "pass": true,
+   "detail": "ab024 must not appear in any adopted/win/probed id list of the increments-manifest"
+  },
+  {
+   "gate": "unadopted-manifest-target-in-fileless-roster-ab024",
+   "pass": true,
+   "detail": "ab024 must appear in the CU-time fileless UNPROBED roster (batches[0].fileless_unprobed_ids)"
+  },
+  {
+   "gate": "unadopted-manifest-target-not-in-adopted-lists-ab025",
+   "pass": true,
+   "detail": "ab025 must not appear in any adopted/win/probed id list of the increments-manifest"
+  },
+  {
+   "gate": "unadopted-manifest-target-in-fileless-roster-ab025",
+   "pass": true,
+   "detail": "ab025 must appear in the CU-time fileless UNPROBED roster (batches[0].fileless_unprobed_ids)"
+  },
+  {
+   "gate": "unadopted-manifest-target-not-in-adopted-lists-ab026",
+   "pass": true,
+   "detail": "ab026 must not appear in any adopted/win/probed id list of the increments-manifest"
+  },
+  {
+   "gate": "unadopted-manifest-target-in-fileless-roster-ab026",
+   "pass": true,
+   "detail": "ab026 must appear in the CU-time fileless UNPROBED roster (batches[0].fileless_unprobed_ids)"
+  },
+  {
+   "gate": "unadopted-manifest-target-not-in-adopted-lists-ab027",
+   "pass": true,
+   "detail": "ab027 must not appear in any adopted/win/probed id list of the increments-manifest"
+  },
+  {
+   "gate": "unadopted-manifest-target-in-fileless-roster-ab027",
+   "pass": true,
+   "detail": "ab027 must appear in the CU-time fileless UNPROBED roster (batches[0].fileless_unprobed_ids)"
+  },
+  {
+   "gate": "unadopted-manifest-target-not-in-adopted-lists-ab029",
+   "pass": true,
+   "detail": "ab029 must not appear in any adopted/win/probed id list of the increments-manifest"
+  },
+  {
+   "gate": "unadopted-manifest-target-in-fileless-roster-ab029",
+   "pass": true,
+   "detail": "ab029 must appear in the CU-time fileless UNPROBED roster (batches[0].fileless_unprobed_ids)"
+  },
+  {
+   "gate": "unadopted-manifest-target-not-in-adopted-lists-ab030",
+   "pass": true,
+   "detail": "ab030 must not appear in any adopted/win/probed id list of the increments-manifest"
+  },
+  {
+   "gate": "unadopted-manifest-target-in-fileless-roster-ab030",
+   "pass": true,
+   "detail": "ab030 must appear in the CU-time fileless UNPROBED roster (batches[0].fileless_unprobed_ids)"
+  },
+  {
+   "gate": "unadopted-manifest-target-not-in-adopted-lists-ab031",
+   "pass": true,
+   "detail": "ab031 must not appear in any adopted/win/probed id list of the increments-manifest"
+  },
+  {
+   "gate": "unadopted-manifest-target-in-fileless-roster-ab031",
+   "pass": true,
+   "detail": "ab031 must appear in the CU-time fileless UNPROBED roster (batches[0].fileless_unprobed_ids)"
+  },
+  {
+   "gate": "unadopted-manifest-target-not-in-adopted-lists-ab032",
+   "pass": true,
+   "detail": "ab032 must not appear in any adopted/win/probed id list of the increments-manifest"
+  },
+  {
+   "gate": "unadopted-manifest-target-in-fileless-roster-ab032",
+   "pass": true,
+   "detail": "ab032 must appear in the CU-time fileless UNPROBED roster (batches[0].fileless_unprobed_ids)"
+  },
+  {
+   "gate": "valgate-at2m-s5-1152921504606851072-536870946-present",
+   "pass": true,
+   "detail": "baseline=True host=True"
+  },
+  {
+   "gate": "valgate-at2m-s5-1152921504606851072-536870946-node-exact",
+   "pass": true,
+   "detail": "host=['2000000', '0', '2000000'] baseline=['2000000', '0', '2000000']"
+  },
+  {
+   "gate": "valgate-at2m-s5-1188950301626860544-536870912-present",
+   "pass": true,
+   "detail": "baseline=True host=True"
+  },
+  {
+   "gate": "valgate-at2m-s5-1188950301626860544-536870912-node-exact",
+   "pass": true,
+   "detail": "host=['2000000', '0', '2000000'] baseline=['2000000', '0', '2000000']"
+  },
+  {
+   "gate": "valgate-first-15m-s5-1152921504606851072-536870946-present",
+   "pass": true,
+   "detail": "baseline=True host=True"
+  },
+  {
+   "gate": "valgate-first-15m-s5-1152921504606851072-536870946-node-exact",
+   "pass": true,
+   "detail": "host=['15000000', '2', '3651923'] baseline=['15000000', '2', '3651923']"
+  },
+  {
+   "gate": "valgate-second-15m-s5-1188950301626860544-536870912-present",
+   "pass": true,
+   "detail": "baseline=True host=True"
+  },
+  {
+   "gate": "valgate-second-15m-s5-1188950301626860544-536870912-node-exact",
+   "pass": true,
+   "detail": "host=['15000000', '2', '5040200'] baseline=['15000000', '2', '5040200']"
+  }
+ ]
+}
