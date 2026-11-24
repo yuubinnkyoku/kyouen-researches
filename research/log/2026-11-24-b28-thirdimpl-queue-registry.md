@@ -19,5 +19,5 @@ bookkeeping-only の queue registry を出版した (verdict不消費・solver�
 ## レジューム
 
 - CX (aa005/aa030/aa031/aa047/aa053) のoutputs出版確認 (宣言 2026-11-24T00:49:31Z・停滞ならtakeover規約で 2026-11-24T04:19:31Z以降)。
-- open33 の交叉検証は registry `views.packages` (P1が最安: aa046, aa016, aa025, aa033, aa027, aa038, aa012, aa022aa012…正確なlistはJSON参照) から選択し、publish-then-execute宣言を先行。
+- open33 の交叉検証は registry `views.packages` (P1が最安: aa046, aa016, aa025, aa033, aa027, aa038, aa012, aa042 — 正確なlistはJSON参照) から選択し、publish-then-execute宣言を先行。
 - CS/CT解決4行 (aa032/aa028/aa021/aa050) はP4内で最重量 (est計≈ 213,248,989 nodes)。
