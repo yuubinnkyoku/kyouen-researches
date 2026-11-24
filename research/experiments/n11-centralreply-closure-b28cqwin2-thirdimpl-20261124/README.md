@@ -74,9 +74,98 @@ BY→CC→CL→CM→CR→CW。
 
 ## 実行記録 (宣言protocol・逐次)
 
-(宣言出版後に追記)
+1. **宣言 push**: commit `ba08e1cf` (observed HEAD `f6635144` Part CU D)・
+   fetch-back byte一致 `4be7b5a3…`。対抗宣言なし・batch-28 aa004/aa035未カバー
+   をpublished rows.json対象一覧で機械確認済み。
+2. **A scaffold push**: 40 files — commit `ae00894d`。fetch-back検証で
+   **1 files (sources/canonical-cache-co-merged-b28loss7.cache) が不一致**:
+   読み取り側toolが1回あたり64KBで打ち切るpagination仕様のため、259,886 bytes
+   中64,000 bytesのみ配置されていた (他39 filesはbyte一致)。**A-fix**
+   commit `d56968e` で行offset paginationにより全文再取得・上書きし、
+   fetch-back sha `854800f3…` byte一致で確定 (教訓: 64KB超fileは
+   pagination必須・push後にapi contents size欄でsize検査)。
+3. **環境リセット事故 (誠実開示)**: D1 (rules gate 1回目 PASS) と
+   D2 (at2m 2件の実行) を終えた時点 (~00:27Z) で実行環境が同期失敗で
+   リセットされ、ローカルscratch (kit一式+D1/D2出力) を喪失した
+   (Part CRの同一事象と同型)。kitはpublished commits `ae00894d` + `d56968e`
+   から全40 fileを再取得し、scripts/inputの全pin sha + source pin (maker
+   再実行で全battery gate PASS・rows.json再生成 byte-identical
+   `4a69c73f…`) で復元検証したうえで、**D1..D7を最初から全再実行した**
+   (決定的項目は再実行でも同一値: rules gate出力・val-gate全field・
+   anchors/targets/replicaのnodes数すべて1回目の実行観察と同一)。
+   以下の実行記録・published outputsは再実行版。判定への影響なし
+   (auditはoutputsの実行値のみ機械検査)。
+4. **D1 rules gate PASS** (`verify_tbl.js` `c8c52528…`): replica quads
+   95,670 == third-impl quads 95,670・triples checked 195,044・mismatches 0
+   (CRと同一の決定的出力) → `output/rules-gate.txt`。
+5. **D2 val-gate fresh 4/4 node-exact** (本host・wall_s比較外): at2m×2
+   budget 2,000,000 → exhaustion (result 0, nodes 2,000,000; wall 9s/9s)・
+   15m×2 budget 15,000,000 → (result 2, nodes 3,651,923; wall 17s) /
+   (result 2, nodes 5,040,200; wall 26s)。published baselinesと全決定
+   field一致。注記: at2m 2本目のhost出力はwall_s=9がpublished baselineと
+   同じ整数秒だったためfile byte自体が一致 (sha同一・正当な一致)。
+   `.cw-host.out` 4件をval-gate/に出版。
+6. **D3 negatives 2/2 GATE_FAIL設計どおり**: ng1 "legal count mismatch:
+   derived=87 declared=88"・ng2 "stone count mismatch: bits=5 declared=6"
+   (CRと同一文言・fail-closed)。
+7. **D4 anchors 4/4 published値とnode-exact・a/b det-pair PASS**:
+   k02a clean result 1・expansions 9,106,337・ttHits 4,991,527 (wall
+   26.37/26.68s)・l1a clean result 2・7,660,602・3,951,175 (22.67/22.75s)。
+8. **D5 本host pinned-replica 2-pass fresh-cold ×2 keys PASS**
+   (`run_replica_cw.sh`・budget 20M): aa004 p1/p2 = result 1・nodes
+   **15,616,012** (wall 86/85s)・aa035 p1/p2 = result 1・nodes
+   **15,424,243** (wall 85/85s)。**published CQ raw fields
+   (result/nodes/key/legal) とnode-exact一致** (audit G2bで機械検査)。
+   EXHAUSTED 0・mismatch 0・TRUNCATED-RETRY 0。誠実注記: runnerの
+   外側終了コードが成功時もrc=1になる (`[ "$RC" -ne 0 ] && exit "$RC"` の
+   短絡評価が最終ループ文になるbash仕様・CR版から不変)。per-passの
+   正しいrc=0はstatus.logに記録済みで、実行成否の判定はaudit G2bが機械検査。
+9. **D6 targets clean verdict一致 (agreement 2/2・WIN=2・LOSS=0)**:
+   aa004 a/b det-pair PASS・result **1 (clean)**・expansions **18,707,043**・
+   ttHits 9,558,720 (wall 53.31/51.77s)・aa035 a/b det-pair PASS・result
+   **1 (clean)**・expansions **18,461,728**・ttHits 9,389,275 (52.45/52.10s)。
+   cap 300,000,000・wallcap 240・memo-power=22・WALL-INCONCLUSIVE 0・
+   DIVERGENCE 0。pass-one第三実装拡張数合計 **37,168,771**。
+   **両行のthree-implementation corroboration成立** (published CQ replica
+   2-pass + 本host pinned-replica 2-pass + 第三実装 minimax 2-run、すべて
+   verdict WIN一致)。
+10. **D7 audit (`audit_cw.py`)**: **ALL 103 GATES PASS** (CR 148 gateの
+    2-target版)・3回実行 byte-identical (stdout `72b07e76…` ×3・
+    audit-summary.json `684acf45…`)・verdict agreements 2/2 (WIN=2
+    LOSS=0)・wall_inconclusive 0・決定的 (タイムスタンプ不読)。
+    gate内訳: G0 input CSV×rows.json一致・G1 pinned script bytes×3 +
+    rows-schema + target-count 2 + verdict-kinds [1,1]・G2 rules gate×2・
+    G2b replica×2 targets (present/done/quads/det-pair/schema(20M)/key/
+    verdict-vs-published)・G3 anchors×2・G4 negatives×2 fail-closed・
+    G5 targets×2 (key/legal/quads/det-pair/verdict-agree)・**G6 unadopted
+    補強** (raw pin aa004/aa035 p1/p2×4・merged cache pin 6,301行・対象row
+    不在・同key競合rowゼロ・increment 7 rows byte一致・manifest全pin +
+    **宣言済みbatch-28適合**: 対象idがadopted/win系id list全不在
+    (target-not-in-adopted-lists) かつexhausted_excluded_ids/probed_ids/
+    resolved_ids member bookkeepingに所在 (target-in-member-books)・
+    exhausted roster 11行機械照合)・**G7 val-gate 4/4 node-exact**。
+    - **audit tamper電池 4/4検出 + clean control PASS** (scratch copy上:
+      A1 PIN_THIRD末尾反転 → `pin-third_impl.js` fail・A2 aa004.b
+      expansions+1 → `target-aa004-det-pair` fail・A3 input aa004 legal
+      91→90 → `input-aa004-matches-rows` fail・A4 PIN_MERGED_CANONICAL
+      末尾反転 → `rows-schema` fail。efficacy-asserted sed・電池後の
+      実験dir bytes不変・clean controlはaudit-summary.jsonが実験dir版と
+      byte-identical)。
+    - **maker tamper電池 8/8検出** (A push前に実施、宣言に記載): 初回
+      T3/T5はsed不適合で無効果だったためefficacy-assertedで再実行し検出
+      (clean control rows.json byte-identical・実験dir bytes不変)。
+11. **補助確認 (宣言どおり・pinned kit gateとは別の記録)**: Part CU出版の
+    最新canonical merged chain cache (6,317行・sha256 `30ddad9d…`
+    fetch照合) に、aa004 key (1171516445255794689,0) と aa035 key
+    (1152921504606846978,4228) のs5verdict rowは **0行** (機械検査)。
+    verdict不消費を最新snapshotに対しても確認。本Partはcanonical cacheに
+    一切書込んでいない (read-only不変 `854800f3…`)。
+12. **B outputs push**: 24 files (rules-gate + status.log 14行 +
+    audit-summary + audit-run×3 + targets 4 + anchors 4 + negative 2 +
+    replica 4 + val-gate `.cw-host.out` 4) — commit `a892601e` (observed
+    HEAD-before-push `d56968e` 本A-fix)。fetch-back 24/24 byte-identical。
 
-### 結果の解釈 (interpretation guard・verdict不消費)
+### 結果の解釈 (interpretation guard)
 
 - 2 WIN行は **probe-level honest labels のまま**。canonical adoptionは別宣言の
   adoption Part (pinned fail-closed merger `90711961…` 経由) のみで、WIN行はさらに
