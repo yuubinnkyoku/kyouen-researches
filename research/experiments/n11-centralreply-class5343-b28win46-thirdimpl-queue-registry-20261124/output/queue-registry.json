@@ -130,6 +130,20 @@
     "declared_utc": "2026-11-24T00:49:31Z",
     "scaffold_a": "3185a672",
     "kind": "claimed (outputs unpublished at observed HEAD d2d60645d26b2eae88ffc87fdd5e6160cfcae8e1)"
+   },
+   "DE": {
+    "keys": [
+     "aa046",
+     "aa016",
+     "aa025",
+     "aa033",
+     "aa027",
+     "aa038",
+     "aa012",
+     "aa042"
+    ],
+    "completion": "1eead030",
+    "kind": "done (P1 package; audit 323 gates all PASS; verdict agreement 8/8; replica 16/16 node-exact; verdict unconsumed)"
    }
   },
   "loss_adoptions": {
@@ -1855,7 +1869,9 @@
     }
    ],
    "thirdimpl": {
-    "state": "open"
+    "state": "done",
+    "part": "DE",
+    "completion": "1eead030"
    },
    "est_crossimpl_2pass_nodes": 11786343
   },
@@ -2131,7 +2147,9 @@
     }
    ],
    "thirdimpl": {
-    "state": "open"
+    "state": "done",
+    "part": "DE",
+    "completion": "1eead030"
    },
    "est_crossimpl_2pass_nodes": 6187559
   },
@@ -2774,7 +2792,9 @@
     }
    ],
    "thirdimpl": {
-    "state": "open"
+    "state": "done",
+    "part": "DE",
+    "completion": "1eead030"
    },
    "est_crossimpl_2pass_nodes": 7214402
   },
@@ -2920,7 +2940,9 @@
     }
    ],
    "thirdimpl": {
-    "state": "open"
+    "state": "done",
+    "part": "DE",
+    "completion": "1eead030"
    },
    "est_crossimpl_2pass_nodes": 11470051
   },
@@ -3492,7 +3514,9 @@
     }
    ],
    "thirdimpl": {
-    "state": "open"
+    "state": "done",
+    "part": "DE",
+    "completion": "1eead030"
    },
    "est_crossimpl_2pass_nodes": 7899196
   },
@@ -3804,7 +3828,9 @@
     }
    ],
    "thirdimpl": {
-    "state": "open"
+    "state": "done",
+    "part": "DE",
+    "completion": "1eead030"
    },
    "est_crossimpl_2pass_nodes": 11592311
   },
@@ -3992,7 +4018,9 @@
     }
    ],
    "thirdimpl": {
-    "state": "open"
+    "state": "done",
+    "part": "DE",
+    "completion": "1eead030"
    },
    "est_crossimpl_2pass_nodes": 13689867
   },
@@ -4201,7 +4229,9 @@
     }
    ],
    "thirdimpl": {
-    "state": "open"
+    "state": "done",
+    "part": "DE",
+    "completion": "1eead030"
    },
    "est_crossimpl_2pass_nodes": 5156952
   },
@@ -4733,9 +4763,9 @@
  "views": {
   "queue_state_counts": {
    "win_total": 46,
-   "thirdimpl_done_win": 8,
+   "thirdimpl_done_win": 16,
    "thirdimpl_claimed_win": 5,
-   "thirdimpl_open_win": 33,
+   "thirdimpl_open_win": 25,
    "loss_total": 8,
    "loss_thirdimpl_done": 1,
    "loss_adoption_done": 8,
@@ -4791,7 +4821,10 @@
     ],
     "n_keys": 8,
     "pinned_nodes_total": 31778254,
-    "est_crossimpl_2pass_total": 74996681
+    "est_crossimpl_2pass_total": 74996681,
+    "status": "done",
+    "done_part": "DE",
+    "completion": "1eead030"
    },
    "P2": {
     "keys": [
@@ -4928,4 +4961,13 @@
   ]
  },
  "how_to_verify": "re-fetch the 7 pinned status.logs + batch-keys, verify sha256, parse (PASS b,rc,nodes / WIN-HALT / EXHAUSTED / *-TRUNCATED-RETRY), decisive = first chronological rc=1 (WIN) else rc=2 (LOSS)"
+,
+ "revision": {
+  "rev": 2,
+  "updated_utc": "2026-11-24T03:57Z",
+  "change": "P1 package 8 rows thirdimpl open->done (Part DE completion); thirdimpl_done_win 8->16, thirdimpl_open_win 33->25; P1 package marked done; open33_by_est_cost and P2-P4 views unchanged from rev1",
+  "rev1_registry_sha256": "8c4216c68366c6a63e426ee36234b68955ef6f3a873429b0baa207f6dfc66592",
+  "rev1_published": "69e391a3",
+  "provenance": "Part DE completion 1eead030, experiment n11-centralreply-closure-b28p1win8-thirdimpl-20261124, audit 323 gates all PASS, verdict agreements 8/8 (WIN=8), verdict unconsumed, 11x11 UNKNOWN"
+ }
 }
