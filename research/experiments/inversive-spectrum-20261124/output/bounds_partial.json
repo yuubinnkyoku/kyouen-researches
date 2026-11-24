@@ -9,13 +9,39 @@
    "lower": 14,
    "lower_witness": "research/experiments/inversive-spectrum-20261124/output/witness_q8_s4_n14.json",
    "lower_method": "randomised greedy, 20000 restarts, seed 20261124",
-   "upper": 17,
+   "upper": 15,
    "upper_proof": {
-    "n_refuted": 18,
+    "n_refuted": [
+     16,
+     17,
+     18
+    ],
     "encoding": "seq/subsets (one clause per (s+1)-subset of a circle) + cardinality >= n + 3-point symmetry breaking",
     "engines": [
-     {"name": "cadical195", "seconds": 128.59, "artifact": "probe stdout in session log (no file)"},
-     {"name": "glucose3", "seconds": 69.85, "artifact": "output/q8s4_second_engine.log"}
+     {
+      "name": "cadical195",
+      "n": 16,
+      "seconds": 481.36,
+      "artifact": "background job output (session transcript)"
+     },
+     {
+      "name": "cadical195",
+      "n": 17,
+      "seconds": 244.45,
+      "artifact": "background job output (session transcript)"
+     },
+     {
+      "name": "cadical195",
+      "n": 18,
+      "seconds": 128.59,
+      "artifact": "probe stdout (session transcript)"
+     },
+     {
+      "name": "glucose3",
+      "n": 18,
+      "seconds": 69.85,
+      "artifact": "output/q8s4_second_engine.log"
+     }
     ]
    },
    "bound_theorem": 20
@@ -36,12 +62,32 @@
   }
  ],
  "s_equals_q_lower_bounds": [
-  {"q": 7, "K_q_lower": 33, "witness": "research/experiments/inversive-spectrum-20261124/output/witness_q7_s7_n33.json", "tau_1_upper": 17},
-  {"q": 8, "K_q_lower": 45, "witness": "research/experiments/inversive-spectrum-20261124/output/witness_q8_s8_n45.json", "tau_1_upper": 20},
-  {"q": 9, "K_q_lower": 57, "witness": "research/experiments/inversive-spectrum-20261124/output/witness_q9_s9_n57.json", "tau_1_upper": 25}
+  {
+   "q": 7,
+   "K_q_lower": 33,
+   "witness": "research/experiments/inversive-spectrum-20261124/output/witness_q7_s7_n33.json",
+   "tau_1_upper": 17
+  },
+  {
+   "q": 8,
+   "K_q_lower": 45,
+   "witness": "research/experiments/inversive-spectrum-20261124/output/witness_q8_s8_n45.json",
+   "tau_1_upper": 20
+  },
+  {
+   "q": 9,
+   "K_q_lower": 57,
+   "witness": "research/experiments/inversive-spectrum-20261124/output/witness_q9_s9_n57.json",
+   "tau_1_upper": 25
+  }
  ],
  "blocking_upper": {
   "note": "tau_1 upper bounds from the same greedy sets (complement of a valid q-arc is a blocking set); q=3,4,5 values are exact because K_q is exact there.",
-  "q3": 5, "q4": 8, "q5": 10, "q7": 17, "q8": 20, "q9": 25
+  "q3": 5,
+  "q4": 8,
+  "q5": 10,
+  "q7": 17,
+  "q8": 20,
+  "q9": 25
  }
 }

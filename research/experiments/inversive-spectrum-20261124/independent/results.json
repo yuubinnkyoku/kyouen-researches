@@ -1,0 +1,205 @@
+{
+ "experiment": "inversive-spectrum-20261124/independent",
+ "cases": [
+  {
+   "q": 4,
+   "s": 4,
+   "published": 9,
+   "computed": 9,
+   "witness": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    9,
+    10
+   ],
+   "witness_size": 9,
+   "witness_search": {
+    "nodes": 17453,
+    "c_seconds": 0.000905
+   },
+   "witness_direct_verification": {
+    "size": 9,
+    "worst_circle_intersection": 4,
+    "ok": true,
+    "bad_circles": [],
+    "num_bad_circles": 0,
+    "circles_checked": 68
+   },
+   "upper_bound": {
+    "method": "complete enumeration of every subset of the relevant size (exhaust.c)",
+    "target_size": 10,
+    "num_valid": 0,
+    "nodes": 9318,
+    "c_seconds": 0.000506,
+    "wall_seconds": 0.03900620000058552
+   },
+   "design": {
+    "v": 17,
+    "b": 68,
+    "block_size": 5,
+    "degree": 20,
+    "pair_lambda": 5,
+    "triples": 680,
+    "triple_lambda": 1
+   },
+   "status": "confirmed"
+  },
+  {
+   "q": 5,
+   "s": 5,
+   "published": 16,
+   "computed": 16,
+   "witness": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    12,
+    15,
+    17,
+    20,
+    22
+   ],
+   "witness_size": 16,
+   "witness_search": {
+    "nodes": 1446839,
+    "c_seconds": 0.101009
+   },
+   "witness_direct_verification": {
+    "size": 16,
+    "worst_circle_intersection": 5,
+    "ok": true,
+    "bad_circles": [],
+    "num_bad_circles": 0,
+    "circles_checked": 130
+   },
+   "upper_bound": {
+    "method": "complete enumeration of every subset of the relevant size (exhaust.c)",
+    "target_size": 17,
+    "num_valid": 0,
+    "nodes": 646444,
+    "c_seconds": 0.043347,
+    "wall_seconds": 0.08118590000049153
+   },
+   "design": {
+    "v": 26,
+    "b": 130,
+    "block_size": 6,
+    "degree": 30,
+    "pair_lambda": 6,
+    "triples": 2600,
+    "triple_lambda": 1
+   },
+   "status": "confirmed"
+  },
+  {
+   "q": 7,
+   "s": 4,
+   "published": 13,
+   "computed": 13,
+   "witness": [
+    0,
+    1,
+    2,
+    7,
+    9,
+    14,
+    20,
+    30,
+    36,
+    43,
+    45,
+    47,
+    49
+   ],
+   "witness_size": 13,
+   "witness_search": {
+    "nodes": 3105,
+    "c_seconds": 0.002366
+   },
+   "witness_direct_verification": {
+    "size": 13,
+    "worst_circle_intersection": 4,
+    "ok": true,
+    "bad_circles": [],
+    "num_bad_circles": 0,
+    "circles_checked": 350
+   },
+   "upper_bound": {
+    "method": "branch-and-bound over all sets containing the fixed triple (0,7,49), which is WLOG by the verified 3-transitive Mobius symmetry (q7_bb.c); moment-identity upper bound at every node",
+    "fixed_triple": [
+     0,
+     7,
+     49
+    ],
+    "second_fixed_triple": [
+     0,
+     8,
+     49
+    ],
+    "target_size": 14,
+    "num_valid": 0,
+    "nodes": 2088623,
+    "second_nodes": 2082143,
+    "c_seconds": 1.727878,
+    "second_c_seconds": 1.708581,
+    "wall_seconds": 3.521469999999681
+   },
+   "design": {
+    "v": 50,
+    "b": 350,
+    "block_size": 8,
+    "degree": 56,
+    "pair_lambda": 8,
+    "triples": 19600,
+    "triple_lambda": 1
+   },
+   "status": "confirmed"
+  }
+ ],
+ "moments": {
+  "q4": {
+   "trials": 200,
+   "max_abs_diff_2": 0,
+   "max_abs_diff_3": 0,
+   "failures": 0
+  },
+  "q5": {
+   "trials": 200,
+   "max_abs_diff_2": 0,
+   "max_abs_diff_3": 0,
+   "failures": 0
+  },
+  "q7": {
+   "trials": 200,
+   "max_abs_diff_2": 0,
+   "max_abs_diff_3": 0,
+   "failures": 0
+  }
+ },
+ "symmetry_q7": {
+  "field_model": "alpha^2=6, label=b+7a for a+b*alpha, inf=49; 350/350 Baer sublines equal board blocks",
+  "generators": "x->x+1, x->lambda*x, x->1/x with lambda=(1,2)",
+  "ordered_triples_reached": 117600,
+  "ordered_triples_total": 117600,
+  "conclusion": "generated group is 3-transitive on the 50 points"
+ },
+ "summary": {
+  "all_confirmed": true,
+  "num_discrepancies": 0,
+  "total_case_seconds": 4.034991900000023,
+  "process_seconds": 5.497417700000369
+ }
+}
