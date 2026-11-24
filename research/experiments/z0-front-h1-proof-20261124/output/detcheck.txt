@@ -1,0 +1,20 @@
+K1282 official audit — determinism check (2026-11-24, kit verify_k1282.py sha256 7b70993aea68e80ef27dd4f059727427ea048c0e40015bd240f3841abc44354f)
+
+Run 1: same-cwd, PYTHONHASHSEED=random, rc=0, stdout sha256 b2600e453a2a78e0a92e47f7591d79379dd074a3f5c19a86538d6afc9a8f85c8
+Run 2: same-cwd, PYTHONHASHSEED=1,       rc=0, stdout sha256 b2600e453a2a78e0a92e47f7591d79379dd074a3f5c19a86538d6afc9a8f85c8
+Run 3: isolated tree, env -i, PYTHONHASHSEED=random, rc=0, stdout sha256 b2600e453a2a78e0a92e47f7591d79379dd074a3f5c19a86538d6afc9a8f85c8
+Run 4: isolated tree, env -i, PYTHONHASHSEED=99,      rc=0, stdout sha256 b2600e453a2a78e0a92e47f7591d79379dd074a3f5c19a86538d6afc9a8f85c8
+
+4/4 runs byte-identical on stdout; equals declared dry3/expected sha b2600e45...
+Counts [6348,2976,7686,4256,1599,916,2916,1134,12293,2601] total 42725, overall_bad 0, ii_hist {2:916}.
+
+Tamper battery (from the same isolated tree):
+  --tamper-engine : rc=2, sha-mismatch abort (0ea47a80... != bd5f22e4...)  [detected]
+  --tamper=h1    : rc=1, bad[0]=6348   [detected]
+  --tamper=q     : rc=1, bad[1]=2940   [detected]
+  --tamper=lawc  : rc=1, bad[2]=4746   [detected]
+  --tamper=lawc-arm2 : rc=1, bad[2]=2940 [detected]
+  --tamper=l3    : rc=1, bad[3]=4256   [detected]
+  --tamper=e     : rc=1, bad[6]=2916   [detected]
+  --tamper=ii    : rc=1, bad[5]=916    [detected]
+All 8 tamper modes fail-closed (engine gate rc2, expectation flips rc1).
