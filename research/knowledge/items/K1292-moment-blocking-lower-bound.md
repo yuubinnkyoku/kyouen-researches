@@ -25,6 +25,9 @@ artifacts:
 - path: research/experiments/inversive-moment-certificates-20261124/scripts/certificates.py
   role: verifier
   note: Q(r)≥0 と ΣQ(r)t_r=−2(q−8)(q−1) の厳密検査（112件）
+- path: research/experiments/inversive-moment-certificates-20261124/independent/output/verification.json
+  role: certificate
+  note: 独立実装による定理C 192件の再検査（failures 0）
 - path: research/experiments/inversive-blocking-equality-20261124/output/blocking_q4_n8.json
   role: certificate
   note: q=4 のサイズ8ブロッキング集合（SAT、2エンジン、独立検証済み）
@@ -32,7 +35,7 @@ artifacts:
   role: certificate
   note: q=5 のサイズ10ブロッキング集合（SAT、2エンジン、独立検証済み）
 scope: Miquelian 反転平面 M(q) のブロッキング集合（全円と交わる点集合）の最小サイズ τ_1(q)。定理は q≥9。q=4,5 の等号（τ_1=2q）は SAT 計算で確認。
-evidence: ブロッキング集合 X（m=|X|）は t_0=0。Q(r)=(r−1)(r−3)(r−4) は整数 r≥1 で非負で、{1,r,C(r,2),C(r,3)} 展開は (−12,12,−10,6)。3本のモーメント等式の Q による線形結合は m=2q−1 で ΣQ(r)t_r=−2(q−8)(q−1)<0（q≥9）。左辺は非負の和なので矛盾、τ_1≥2q。q=4..8 ではモーメントLPが m=2q−1 で実行可能なのでこの方法は届かない（Bruen–Rothschild の q≥9 の範囲と一致し、Kiss–Marcugini–Pambianco の q≥4 拡張はモーメント外）。厳密検査112件。
+evidence: ブロッキング集合 X（m=|X|）は t_0=0。Q(r)=(r−1)(r−3)(r−4) は整数 r≥1 で非負で、{1,r,C(r,2),C(r,3)} 展開は (−12,12,−10,6)。3本のモーメント等式の Q による線形結合は m=2q−1 で ΣQ(r)t_r=−2(q−8)(q−1)<0（q≥9）。左辺は非負の和なので矛盾、τ_1≥2q。q=4..8 ではモーメントLPが m=2q−1 で実行可能なのでこの方法は届かない（Bruen–Rothschild の q≥9 の範囲と一致し、Kiss–Marcugini–Pambianco の q≥4 拡張はモーメント外）。厳密検査112件。独立実装（サブエージェント）も定理C 192件を再検査し PASS（verification.json）。
 ---
 
 # モーメント多項式によるブロッキング下界 τ_1 ≥ 2q（q≥9）
