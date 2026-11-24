@@ -1,18 +1,19 @@
-# batch-33 (closure class 34908) 54-key probe drive-1 + drive-2 (Part DQ / Part DR) — 完了 (2026-11-24)
+# batch-33 (closure class 34908) 54-key probe drive-1 + drive-2 + drive-3 (Part DQ / DR / DS) — 54キー完走 (2026-11-24)
 
 Part DQ (宣言: `research/log/2026-11-24-part-dq-batch33-class34908-drive1-declaration.md`
 commit `c8388b719e`・observed HEAD `fb88a6a`・publish-then-execute・単一オーナー・
-verdict不消費) と Part DR (継続宣言:
+verdict不消費)・Part DR (継続宣言:
 `research/log/2026-11-24-part-dr-batch33-class34908-drive2-declaration.md`
-commit `e1b49e01`・observed HEAD `24c75cdd`・残7キー af048..af054)。closure
-class 34908 (rank 36・closure table 807行・unknown_now 54) の cost 54子
-(既知 {955954: LOSS, 958114: LOSS} 以外の全unknown子) を 2-pass fresh-cold
-budget 15M で probe した。**両driveとも事前登録済み WIN-HALT 設計どおり、
-鍵集合内 distinct WIN 2行の観測で wave halt (rc=45)** — drive-1 は af029
-(a) / af047 (b) で halt し残7キーを UNPROBED 保持、drive-2 は af050 (c) /
-af053 (d) で halt し **af054 の1キーのみ fileless UNPROBED のまま**。
-**閉鎖・被覆・secured・root勝敗の主張は一切しない**。nodes数は
-bookkeeping であり勝敗でも距離でもない。
+commit `e1b49e01`・残7キー af048..af054)・Part DS (継続宣言:
+`research/log/2026-11-24-part-ds-batch33-class34908-drive3-declaration.md`
+commit `2c4655b8`・残1キー af054)。closure class 34908 (rank 36・closure
+table 807行・unknown_now 54) の cost 54子 (既知 {955954: LOSS, 958114:
+LOSS} 以外の全unknown子) を 2-pass fresh-cold budget 15M で probe した。
+drive-1/drive-2 は事前登録済み WIN-HALT 設計どおり鍵集合内 distinct WIN
+2行観測で wave halt (rc=45) (af029+af047 / af050+af053)・drive-3 は
+1キー規則空虚 (vacuous) 登録どおり af054 を自然完了させ、**54キーすべてが
+honest label で完走**。**閉鎖・被覆・secured・root勝敗の主張は一切しない**。
+nodes数は bookkeeping であり勝敗でも距離でもない。
 
 ## kit (出版済み・sha pin)
 
@@ -78,13 +79,23 @@ inputs は Part DQ 出版物から byte 不変再利用 (小変更なし)。
 - **af052 (s5 962450)**: LOSS nodes 3,611,892
 - **af053 (s5 962470)**: **WIN** nodes 5,182,129 (WIN-HALT 2件目 →
   drive-2 wave halt rc=45)
-- **af054 (s5 962471)**: 一度も未実行 = **fileless UNPROBED 維持**
-  (宣言§4どおり)
 - MISMATCH 0・worker timeout 0。
 
-## 結果集計 (54キー・status.log正本から機械導出 — drive-1+drive-2合計)
+## drive-3 (Part DS・2026-11-24 完了・54キー完走)
 
-- **LOSS (result 2)**: 44キー (drive-1 41 + drive-2 af049/af051/af052)
+宣言 `2c4655b8` (observed HEAD `5af9b247`)。最小fork
+`drive3_local_step_b33.sh` (`7992af30…`・WIN計数regex 2箇所のみを af054
+に限定)。1キーwaveでは「distinct WIN 2行halt」規則は**空虚 (vacuous)
+として事前登録** (af054 はいずれの分岐でも自然完了)。
+
+- **af054 (s5 962471)**: **LOSS** nodes 4,283,588 (2-pass fresh-cold
+  node-exact)。
+- MISMATCH 0・worker timeout 0・ALL-DONE 確認 (empty-key guard 動作)。
+
+## 結果集計 (54キー・status.log正本から機械導出 — drive-1+2+3合計・54キー完走)
+
+- **LOSS (result 2)**: 45キー (drive-1 41 + drive-2 af049/af051/af052 +
+  drive-3 af054)
 - **WIN (result 1)**: 4キー — **af029 (s5 900646)** nodes 4,862,485・
   **af047 (s5 961976)** nodes 9,841,975 (drive-1)・**af050 (s5 962386)**
   nodes 7,311,834・**af053 (s5 962470)** nodes 5,182,129 (drive-2)。
@@ -92,9 +103,8 @@ inputs は Part DQ 出版物から byte 不変再利用 (小変更なし)。
 - **EXHAUSTED (result 0 = honest UNKNOWN)**: 5キー — af003 (s5 153030)・
   af023 (s5 810351)・af034 (s5 93060)・af039 (s5 950512) (drive-1)・
   **af048 (s5 962172)** (drive-2) (各 nodes 15,000,000 = Budget上限)
-- **UNPROBED**: 1キー — **af054 (s5 962471)** (drive-2 wave halt 時点の
-  残キー・fileless)
-- probe実行 nodes 総和 (53キー): 379,326,018 (参考値・bookkeeping)。
+- **UNPROBED**: 0キー — **54キーすべてに honest label**
+- probe実行 nodes 総和 (54キー): 383,609,606 (参考値・bookkeeping)。
   最大 LOSS nodes: af008 14,364,852。
 - membership内訳 (54キー全体): {2: 7, 3: 9, 4: 38} (宣言・batch-keys
   どおり)。s5 範囲 1176..962471 昇順。
@@ -156,7 +166,7 @@ inputs は Part DQ 出版物から byte 不変再利用 (小変更なし)。
 | af051 | 962410 | 96 | 4 | LOSS (drive-2) | 5475786 |
 | af052 | 962450 | 90 | 4 | LOSS (drive-2) | 3611892 |
 | af053 | 962470 | 90 | 2 | **WIN (WIN-HALT, drive-2)** | 5182129 |
-| af054 | 962471 | 88 | 2 | UNPROBED | — |
+| af054 | 962471 | 88 | 2 | LOSS (drive-3) | 4283588 |
 
 (verdict 文言は honest label。result 1 = df-pn proof値 WIN・2 = LOSS・
 0 = EXHAUSTED。**本Partはいかなる verdict も消費・採用しない**。)
@@ -172,5 +182,5 @@ inputs は Part DQ 出版物から byte 不変再利用 (小変更なし)。
   adoption Part のみ。WIN行の scrutiny (C++ `9193f5b6…`) は専権者のまま。
 - closure table membership 変動 (flips/newly_free) は probe 完了後の
   reaudit が機械導出する (本READMEはderiveしない)。
-- EXHAUSTED 5行の高budget再probe・残1キー (af054) の継続probeは
-  別宣言 (batch-33 drive-3 或いは再投入。いずれも新declaration必須)。
+- EXHAUSTED 5行の高budget再probeは別宣言条件を要する (batch-33の新規
+  probe対象キーは消滅・54キーすべてに honest label が付いたため)。
