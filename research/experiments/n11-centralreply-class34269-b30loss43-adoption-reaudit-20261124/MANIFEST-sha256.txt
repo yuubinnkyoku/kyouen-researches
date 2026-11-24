@@ -1,0 +1,20 @@
+d4f197c08210ead282fcf9a06905aae672e1a42d22108b7e446670f672db7802  scripts/make_increments_b30loss43.py
+907119610034fb2aebfde012550a4129dfa3b086c6de11194e856747ac74606a  scripts/s5_union_merge.py
+87cf04c255509c5c8599235bd30305dea94e8c435fe7dff6d10cb318f922d42e  scripts/compare_deltas_b30loss43_adoption.py
+d45832a6569267d7a8187cb9935acab177d73395af4485bf496ba2661ec29c5b  reaudit/scripts/refresh_adoption_b30loss43.py
+2dc3a15685c5df8a716a74729833cfb8cd1b19aba793213feebf53b32ea07740  output/increment-b30loss43-20261124.cache
+800d77e99680260fd89f7315ad6a4f19f1d5af98cae7693913f9c4eec5a39e6f  output/increments-manifest.json
+6c35b897262cc80b1374a7cf1e8fc0eb1ae7edfef1e1b2b92c48d9c613619041  output/merge-audit-run1.json
+6c35b897262cc80b1374a7cf1e8fc0eb1ae7edfef1e1b2b92c48d9c613619041  output/merge-audit-run2.json
+6c35b897262cc80b1374a7cf1e8fc0eb1ae7edfef1e1b2b92c48d9c613619041  output/merge-audit-run3.json
+7bdfa2366ef9c24b48a610d078104227555dd52ec18a566082cef2f906aab0f7  output/merged-exact-s5-chain-plus-b28loss1-plus-b28loss7-plus-b29loss16-plus-b29loss37-plus-b31loss51-plus-b30loss43-20261124.cache
+d89e49e81d4acc2d214609a276fbc01cfe7469c1a48906e6129066dfc05bb105  output/decomp-deltas-b30loss43-adoption.json
+8349371ca09556570f0f50f58eab4444d0e7e277a5a7e0900585f430aef3e756  reaudit/output/refresh-summary.json
+8f68f594834ba6aa85a09cea9c45ae86866f3fa18cfa97e79643b66976a4743c  reaudit/output/closure-classes.csv
+1bc7a5e58462427333bdca95adab7470d0d3ac28bfff49866ba6efde6fd4f367  reaudit/output/per-root-coverage.csv
+
+# README.md is committed in the same commit; its sha256 is pinned in the completion log
+# probe-worklist.csv NOT committed (volume); regenerate via reaudit/scripts/refresh_adoption_b30loss43.py (SCEN side, regeneration sha256 bac10aee9964bde0dbfa914e0d046b2f5380638ed20d3e3273823659f3abb708, byte-reproduced twice)
+#   BASE (Part DL) side worklist: refresh_adoption_b31loss51.py regeneration pin 006ccd78d061c22838b3cee7701a91649d35abf3c8d56cecbb05931b604846d5, byte-reproduced again by the delta extractor scratch rerun
+# three published probe kits (byte-pinned file-by-file inside make_increments_b30loss43.py): batch-30 kit 330128aa... (199 files), Part DJ exh6-20M reprobe kit bb88fba3... (34), Part DK exh1-25M reprobe kit e05c4259... (15)
+# 11x11 stays UNKNOWN; verdicts unconsumed; class 34269 NOT freed (11 unconsumed WIN children)
