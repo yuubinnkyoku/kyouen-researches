@@ -1,0 +1,97 @@
+{
+ "byte_identical_official_stdout": true,
+ "claim_note": "finite censuses and typed-mex machine checks of the hand proofs in the declaration note; proofs are not replaced; z11/z12 bands and L-BU11G/L-BU12G are OBS only",
+ "counts": [
+  8928,
+  360,
+  8928,
+  360,
+  1939,
+  114,
+  1939,
+  114,
+  49291,
+  1516,
+  17046
+ ],
+ "declared_stdout_sha256": "e9b3784a3323b1e9cbf4a48bb0b4f6c7df979aa909e25c4c5b23526fea515185",
+ "engine_pin": "bd5f22e415a78368c9b798296bc84948d5637decbf3c21a92404d45fb12e3a92",
+ "kit": "verify_k1299",
+ "official_runs": [
+  {
+   "cwd": "fb/kit",
+   "elapsed_s": 12.3,
+   "env": "inherited+PYTHONHASHSEED=random",
+   "hashseed": "random",
+   "rc": 0,
+   "run": 1,
+   "stdout_sha256": "e9b3784a3323b1e9cbf4a48bb0b4f6c7df979aa909e25c4c5b23526fea515185"
+  },
+  {
+   "cwd": "fb/kit",
+   "elapsed_s": 12.2,
+   "env": "inherited+PYTHONHASHSEED=1",
+   "hashseed": "1",
+   "rc": 0,
+   "run": 2,
+   "stdout_sha256": "e9b3784a3323b1e9cbf4a48bb0b4f6c7df979aa909e25c4c5b23526fea515185"
+  },
+  {
+   "cwd": "fb/isoA",
+   "elapsed_s": 12.7,
+   "env": "env -i PYTHONHASHSEED=99",
+   "hashseed": "99",
+   "rc": 0,
+   "run": 3,
+   "stdout_sha256": "e9b3784a3323b1e9cbf4a48bb0b4f6c7df979aa909e25c4c5b23526fea515185"
+  },
+  {
+   "cwd": "fb/isoB",
+   "elapsed_s": 12.8,
+   "env": "env -i PYTHONHASHSEED=7",
+   "hashseed": "7",
+   "rc": 0,
+   "run": 4,
+   "stdout_sha256": "e9b3784a3323b1e9cbf4a48bb0b4f6c7df979aa909e25c4c5b23526fea515185"
+  }
+ ],
+ "overall_bad": 0,
+ "predry_stdout_sha256": "e9b3784a3323b1e9cbf4a48bb0b4f6c7df979aa909e25c4c5b23526fea515185",
+ "status": "OFFICIAL-PASS",
+ "tamper": [
+  {
+   "mode": "engine",
+   "mutated_sha": "0ea47a80761d2b20bf414cd52b1535fba56829c3a4c232d1b2f5da3f81441882",
+   "note": "engine sha256 startup gate fail-closed (identical mutation to K1282..K1294)",
+   "rc": 2
+  },
+  {
+   "D1_bad": 8928,
+   "mode": "z9s",
+   "rc": 1
+  },
+  {
+   "D2_bad": 360,
+   "mode": "z9b",
+   "rc": 1
+  },
+  {
+   "D3_bad": 8928,
+   "mode": "z10s",
+   "rc": 1
+  },
+  {
+   "D4_bad": 360,
+   "mode": "z10b",
+   "rc": 1
+  }
+ ],
+ "total_comparisons": 90535,
+ "unknowns_untouched": [
+  "11x11 empty board",
+  "roots {49,60}/{59,60}",
+  "S2 {59,60}",
+  "class 1/2/4"
+ ],
+ "verify_k1299_sha256": "0fa5355917788ce8b35fdafaa381657e960783f579a758f5b00d8dc5b734cd03"
+}
