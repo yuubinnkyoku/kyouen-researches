@@ -1,0 +1,129 @@
+=== X1: T-WC window-congruent pair census z3..16, m1..8, g1..24 ===
+  z=3: points=192 bad=0
+  z=4: points=192 bad=0
+  z=5: points=384 bad=0
+  z=6: points=384 bad=0
+  z=7: points=576 bad=0
+  z=8: points=576 bad=0
+  z=9: points=768 bad=0
+  z=10: points=768 bad=0
+  z=11: points=960 bad=0
+  z=12: points=960 bad=0
+  z=13: points=1152 bad=0
+  z=14: points=1152 bad=0
+  z=15: points=1344 bad=0
+  z=16: points=1344 bad=0
+X1 total=10752 bad=0
+
+=== X1b: T-WC far stress z in {18,20,22}, m1..4, g1..32 ===
+  z=18: points=1024 bad=0
+  z=20: points=1152 bad=0
+  z=22: points=1280 bad=0
+X1b total=3456 bad=0
+
+=== X1c: T-WC m-distance stress z in {5,8,11,14}, m1..20, g1..12 ===
+  z=5: points=480 bad=0
+  z=8: points=720 bad=0
+  z=11: points=1200 bad=0
+  z=14: points=1440 bad=0
+X1c total=3840 bad=0
+
+=== X2: T-WBC window-congruent bed census z3..16, a1..12 ===
+  z=3: points=12 bad=0
+  z=4: points=12 bad=0
+  z=5: points=24 bad=0
+  z=6: points=24 bad=0
+  z=7: points=36 bad=0
+  z=8: points=36 bad=0
+  z=9: points=48 bad=0
+  z=10: points=48 bad=0
+  z=11: points=60 bad=0
+  z=12: points=60 bad=0
+  z=13: points=72 bad=0
+  z=14: points=72 bad=0
+  z=15: points=84 bad=0
+  z=16: points=84 bad=0
+X2 total=672 bad=0
+
+=== X2b: T-WBC far stress z in {18,20,22}, a1..8 ===
+  z=18: points=64 bad=0
+  z=20: points=72 bad=0
+  z=22: points=80 bad=0
+X2b total=216 bad=0
+
+=== X3: L-BE B-exit regime table check (closed form vs K1303-transcribed single_token)
+    over z3..16, g1..24, all window k ===
+X3 total=1344 bad=0
+
+=== X4: typed packet self-check (children built ONLY from claims +
+    published laws, mex must equal claim AND engine) ===
+    z3..16, m1..6, g1..24, all window k ===
+  z=3: points=156 bad_typed_mex=0 bad_typed_vs_engine=0
+  z=4: points=156 bad_typed_mex=0 bad_typed_vs_engine=0
+  z=5: points=312 bad_typed_mex=0 bad_typed_vs_engine=0
+  z=6: points=312 bad_typed_mex=0 bad_typed_vs_engine=0
+  z=7: points=468 bad_typed_mex=0 bad_typed_vs_engine=0
+  z=8: points=468 bad_typed_mex=0 bad_typed_vs_engine=0
+  z=9: points=624 bad_typed_mex=0 bad_typed_vs_engine=0
+  z=10: points=624 bad_typed_mex=0 bad_typed_vs_engine=0
+  z=11: points=780 bad_typed_mex=0 bad_typed_vs_engine=0
+  z=12: points=780 bad_typed_mex=0 bad_typed_vs_engine=0
+  z=13: points=936 bad_typed_mex=0 bad_typed_vs_engine=0
+  z=14: points=936 bad_typed_mex=0 bad_typed_vs_engine=0
+  z=15: points=1092 bad_typed_mex=0 bad_typed_vs_engine=0
+  z=16: points=1092 bad_typed_mex=0 bad_typed_vs_engine=0
+X4 total=8736 bad_typed_mex=0 bad_typed_vs_engine=0
+
+=== X5: cross-engine canonical vs ordered, window samples ===
+  z=3: 31 bad=0
+  z=5: 93 bad=0
+  z=8: 186 bad=0
+  z=11: 341 bad=0
+X5 total=341 bad=0
+
+=== X6: E4b replication (K1308 box): z3..13, m1..3, g1..12, engine ===
+X6 total=1296 mismatches=0
+
+=== X7: band-split census for k=1 C-children (informational) ===
+X7 small-band cells (2m+g < L(z-1), k=1 rows, z3..16 odd): 91
+
+=== X8: non-congruent window rows census (NO claim, obs only) ===
+    z3..12, m1..3, g1..12: distribution of values by (z,k) row ===
+  z=3 k=2: {1: 18, 0: 18}
+  z=4 k=1: {1: 16, 2: 3, 0: 17}
+  z=4 k=3: {1: 18, 0: 18}
+  z=5 k=2: {1: 16, 0: 18, 2: 2}
+  z=5 k=4: {1: 18, 0: 18}
+  z=6 k=1: {1: 16, 0: 16, 2: 4}
+  z=6 k=3: {1: 18, 0: 18}
+  z=6 k=5: {1: 18, 0: 18}
+  z=7 k=2: {1: 16, 0: 17, 2: 3}
+  z=7 k=4: {1: 18, 0: 18}
+  z=7 k=6: {1: 18, 0: 18}
+  z=8 k=1: {1: 16, 0: 15, 2: 5}
+  z=8 k=3: {1: 18, 0: 17, 2: 1}
+  z=8 k=5: {1: 18, 0: 18}
+  z=8 k=7: {1: 18, 0: 18}
+  z=9 k=2: {1: 16, 0: 17, 2: 3}
+  z=9 k=4: {1: 18, 0: 18}
+  z=9 k=6: {1: 18, 0: 18}
+  z=9 k=8: {1: 18, 0: 18}
+  z=10 k=1: {1: 16, 0: 15, 2: 5}
+  z=10 k=3: {1: 18, 0: 17, 2: 1}
+  z=10 k=5: {1: 18, 0: 18}
+  z=10 k=7: {1: 18, 0: 18}
+  z=10 k=9: {1: 18, 0: 18}
+  z=11 k=2: {1: 16, 0: 17, 2: 3}
+  z=11 k=4: {1: 18, 0: 18}
+  z=11 k=6: {1: 18, 0: 18}
+  z=11 k=8: {1: 18, 0: 18}
+  z=11 k=10: {1: 18, 0: 18}
+  z=12 k=1: {1: 16, 0: 15, 2: 5}
+  z=12 k=3: {1: 18, 0: 17, 2: 1}
+  z=12 k=5: {1: 18, 0: 18}
+  z=12 k=7: {1: 18, 0: 18}
+  z=12 k=9: {1: 18, 0: 18}
+  z=12 k=11: {1: 18, 0: 18}
+X8 done
+
+ALL STAGES COMPLETE
