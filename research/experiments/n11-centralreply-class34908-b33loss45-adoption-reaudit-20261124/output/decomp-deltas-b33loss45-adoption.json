@@ -1,0 +1,272 @@
+{
+ "batch": {
+  "adopted_loss_ids": [
+   "af001",
+   "af002",
+   "af004",
+   "af005",
+   "af006",
+   "af007",
+   "af008",
+   "af009",
+   "af010",
+   "af011",
+   "af012",
+   "af013",
+   "af014",
+   "af015",
+   "af016",
+   "af017",
+   "af018",
+   "af019",
+   "af020",
+   "af021",
+   "af022",
+   "af024",
+   "af025",
+   "af026",
+   "af027",
+   "af028",
+   "af030",
+   "af031",
+   "af032",
+   "af033",
+   "af035",
+   "af036",
+   "af037",
+   "af038",
+   "af040",
+   "af041",
+   "af042",
+   "af043",
+   "af044",
+   "af045",
+   "af046",
+   "af049",
+   "af051",
+   "af052",
+   "af054"
+  ],
+  "adopted_loss_rows": 45,
+  "adopted_total_nodes_per_pass": 281411183,
+  "all54_total_nodes": 383609606,
+  "batch": 33,
+  "class_index": 34908,
+  "decisive_labels": "45 LOSS @15M adopted + 4 probe-level WIN @15M (unconsumed) + 5 EXHAUSTED @15M (honest UNKNOWN) + MISMATCH 0 + 3 resolved P2-TRUNCATED-RETRY markers (Part DQ/DR/DS drive-1+2+3 kit raws, 2-pass fresh-cold)",
+  "exhausted_excluded_ids": [
+   "af003",
+   "af023",
+   "af034",
+   "af039",
+   "af048"
+  ],
+  "exhausted_excluded_rows": 5,
+  "exhausted_s5": [
+   153030,
+   810351,
+   930660,
+   950512,
+   962172
+  ],
+  "probed_rows": 54,
+  "unadopted_win_ids": [
+   "af029",
+   "af047",
+   "af050",
+   "af053"
+  ],
+  "unadopted_win_rows": 4,
+  "unadopted_win_s5": [
+   900646,
+   961976,
+   962386,
+   962470
+  ]
+ },
+ "cache": {
+  "base_rows": 6502,
+  "base_sha256": "1ded9a083feabc095dd998c92002b47efc05b8666adf030501bcffc2873a9dd6",
+  "increment_rows": 45,
+  "merge_audit_runs": 3,
+  "merge_audit_sha256_each": "13c9739517d1f36f112de09c1a52009a4d6f68e37566fd3fe4dd61465711379b",
+  "relation": "scenario == base rows + the 45 increment rows verbatim (no other row changed)",
+  "scenario_rows": 6547,
+  "scenario_sha256": "973bcd19309eae1d73b26c40c3d6839a2f35baa74658e0794f19da6f9412ca5b",
+  "verdict_counts": {
+   "LOSS": 6389,
+   "WIN": 158
+  }
+ },
+ "class_34908": {
+  "adopted_own": 45,
+  "base_known_loss_s5": [
+   955954,
+   958114
+  ],
+  "children_total": 56,
+  "class_rank": [
+   36,
+   5
+  ],
+  "exhausted_children": 5,
+  "groups_served_count": [
+   4,
+   5
+  ],
+  "not_a_root_verdict": "the loss-only adoption of a mixed packet frees nothing and excludes nothing; free_now/coverage quantities are Board-derived scheduling bookkeeping; no root verdict and no coverage claim is made",
+  "status_after": "unknown (NOT freed, NOT excluded: 9 verdict-pending/unknown children remain; Board-verified by the reaudit refresh free_now 39 -> 39, board_verified 39/39, unknown 34,497 static)",
+  "status_before": "unknown",
+  "unconsumed_win_children": 4,
+  "unknown_after": 9,
+  "unknown_before": 54
+ },
+ "class_status_counts_after": {
+  "excluded": 390,
+  "excluded_now": 23,
+  "free_now": 39,
+  "unknown": 34497
+ },
+ "class_status_counts_before": {
+  "excluded": 390,
+  "excluded_now": 23,
+  "free_now": 39,
+  "unknown": 34497
+ },
+ "closure_table": {
+  "entered": [],
+  "fully_stable_rows": 775,
+  "groups_served_decrease_churn": [
+   {
+    "class_index": 34269,
+    "class_rank": [
+     5,
+     6
+    ],
+    "groups_served_count": [
+     5,
+     4
+    ],
+    "unknown_now": [
+     11,
+     11
+    ]
+   }
+  ],
+  "left": [],
+  "left_reason": "no class left the closure table (class 34908 is not freed)",
+  "rank_churn_only_rows": 30,
+  "rows_after": 807,
+  "rows_before": 807,
+  "unknown_changed_classes": []
+ },
+ "interpretation_guard": "only the 45 fresh LOSS rows are consumed into the canonical cache by this Part; batch-33 is a MIXED packet: the 4 probe-level WIN rows (af029/af047/af050/af053) are consumed NOWHERE and belong to the scrutiny-owner C++ second-implementation gate (pin 9193f5b6...), and the 5 EXHAUSTED rows stay honest UNKNOWN (high-budget reprobe is a separate declaration condition); class 34908 is NOT freed and NOT excluded (9 verdict-pending/unknown children remain; class status stays unknown, free_now 39 static, closure table 807 rows static); no root verdict and no coverage claim is made anywhere; the per-root/greedy/worklist quantities quoted here are bookkeeping, never verdicts; no update8 resolution was lost; 11x11 stays UNKNOWN",
+ "metrics": {
+  "cache_rows_in_universe": [
+   658,
+   703
+  ],
+  "joint_greedy_union_size": [
+   36968,
+   36849
+  ],
+  "known_universe_indices": [
+   681,
+   726
+  ],
+  "note": "greedy/worklist deltas are frozen-scheduler bookkeeping after class-34908's frontier cost drops 54 -> 9: the joint greedy union DECREASES (36,968 -> 36,849) and the worklist shrinks by exactly 45; per-root free/uncovered thirds are IDENTICAL at every root (nothing was freed); per-root remaining decreases only at roots 0 (-3) and 12 (-2) whose groups class 34908 serves; root 27 stays 119/119",
+  "per_root_coverage_delta": {
+   "0": {
+    "free": [
+     7,
+     7
+    ],
+    "greedy": [
+     3054,
+     3009
+    ],
+    "uncovered": [
+     112,
+     112
+    ]
+   },
+   "1": {
+    "free": [
+     4,
+     4
+    ],
+    "greedy": [
+     6353,
+     6352
+    ],
+    "uncovered": [
+     115,
+     115
+    ]
+   },
+   "12": {
+    "free": [
+     6,
+     6
+    ],
+    "greedy": [
+     2986,
+     2984
+    ],
+    "uncovered": [
+     113,
+     113
+    ]
+   },
+   "13": {
+    "free": [
+     6,
+     6
+    ],
+    "greedy": [
+     6175,
+     6174
+    ],
+    "uncovered": [
+     113,
+     113
+    ]
+   }
+  },
+  "per_root_remaining_delta": {
+   "0": -3,
+   "12": -2
+  },
+  "unique_groups": [
+   2115,
+   2115
+  ],
+  "worklist_total": [
+   64609,
+   64564
+  ]
+ },
+ "scenario": "ADOPTED-CANONICAL",
+ "schema": "b33loss45-adoption-decomp-deltas-v1",
+ "update8": {
+  "groups_free_now_static": 131,
+  "newly_resolved_s5": [
+   962471
+  ],
+  "newly_resolved_within_adopted": true,
+  "remaining_after": 31671,
+  "remaining_before": 31672,
+  "resolved_after": 188,
+  "resolved_before": 187
+ },
+ "verification": {
+  "board_child_regeneration": "class-34908 canonical 56-child 5-stone boundary regenerated via Board(11).children (2 base-known LOSS {955954, 958114} + 54 batch keys)",
+  "kit_files_verified": {
+   "kit1": 186
+  },
+  "refresh_outputs_byte_identical": true,
+  "refresh_scripts_reexecuted": [
+   "41bf706fd0e2d0eb831ecfdf35eb52bf448dece8107b792856fb2d65fe93a366",
+   "5533b3f908cff069c6d86c5b96f32c6f978fda6b7ec5e8d32a3302a344363dee"
+  ]
+ }
+}
