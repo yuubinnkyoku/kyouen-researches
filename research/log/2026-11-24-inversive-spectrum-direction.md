@@ -73,11 +73,15 @@ K_7 >= 33, K_8 >= 45, K_9 >= 57   (s=q 行、明示的証人)
 - `s = q+1` の 1 段だけが全点集合に到達する相転移。
 - K1252 の tight 例 q=9 は `e_{q−2} = 3` を達成する。
 
-## コミット
+## コミット（すべて origin/main に push 済み）
 
-- `a941b541b`（ローカル作成）→ origin/main の前進 (37f512830) に
-  plumbing で再適用し `93eb9b8e6` として push（実験一式）。
-- 本ログと K1274/K1275、docs の更新は次のコミット。
+- `93eb9b8e6`（origin/main 37f512830 の上に plumbing で再適用）— 実験一式
+  （スクリプト・盤面・SAT 結果・証人・report）。
+- `ba04d40c2`（30084b795 の上）— K1274/K1275、本ログ、docs 更新、
+  独立検証 `independent/`（別実装 C + results.json）。
+- `c6f4aeb15`（721f2f9a3 の上）— `K_4(8)=14` の確定（n=15..18 UNSAT、
+  n=15 は cadical195/glucose3 の 2 エンジン）と表・status の更新。
+- `03e9b6c2b` — summary 表の再生成。
 
 ## 未解決・次の一手
 
