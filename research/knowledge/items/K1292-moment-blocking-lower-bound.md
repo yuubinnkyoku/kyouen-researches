@@ -1,13 +1,13 @@
 ---
 id: K1292
-title: モーメント多項式によるブロッキング下界 τ_1 ≥ 2q（q≥9）
+title: τ_1 ≥ 2q（q≥9）のモーメント多項式による初等再証明（Bruen–Rothschild 1985）
 kind: proposition
 status: proved
 topics: [geometry, maximum-safe, statistics]
 aliases:
 - moment proof of the blocking bound 2q
 - tau_1(q) >= 2q for q>=9
-- Bruen-Rothschild via moments
+- elementary moment proof of the Bruen-Rothschild blocking bound
 relations:
 - type: related
   target: K1274
@@ -34,8 +34,11 @@ artifacts:
 - path: research/experiments/inversive-blocking-equality-20261124/output/blocking_q5_n10.json
   role: certificate
   note: q=5 のサイズ10ブロッキング集合（SAT、2エンジン、独立検証済み）
-scope: Miquelian 反転平面 M(q) のブロッキング集合（全円と交わる点集合）の最小サイズ τ_1(q)。定理は q≥9。q=4,5 の等号（τ_1=2q）は SAT 計算で確認。
-evidence: ブロッキング集合 X（m=|X|）は t_0=0。Q(r)=(r−1)(r−3)(r−4) は整数 r≥1 で非負で、{1,r,C(r,2),C(r,3)} 展開は (−12,12,−10,6)。3本のモーメント等式の Q による線形結合は m=2q−1 で ΣQ(r)t_r=−2(q−8)(q−1)<0（q≥9）。左辺は非負の和なので矛盾、τ_1≥2q。q=4..8 ではモーメントLPが m=2q−1 で実行可能なのでこの方法は届かない（Bruen–Rothschild の q≥9 の範囲と一致し、Kiss–Marcugini–Pambianco の q≥4 拡張はモーメント外）。厳密検査112件。独立実装（サブエージェント）も定理C 192件を再検査し PASS（verification.json）。
+- path: research/experiments/inversive-moment-certificates-20261124/independent/LITERATURE.md
+  role: log
+  note: 先行研究調査の verdict（定理Cは既知、A/Bは unclear、方法は標準 LP/Farkas）
+scope: Miquelian 反転平面 M(q) のブロッキング集合（全円と交わる点集合）の最小サイズ τ_1(q)。定理 τ_1≥2q は q≥9 で Bruen–Rothschild (1985) が既に証明済みであり、本項はその明示的な3次多項式（モーメント）証明を与える。q=4,5 の等号（τ_1=2q）は SAT 計算で確認。
+evidence: ブロッキング集合 X（m=|X|）は t_0=0。Q(r)=(r−1)(r−3)(r−4) は整数 r≥1 で非負で、{1,r,C(r,2),C(r,3)} 展開は (−12,12,−10,6)。3本のモーメント等式の Q による線形結合は m=2q−1 で ΣQ(r)t_r=−2(q−8)(q−1)<0（q≥9）。左辺は非負の和なので矛盾、τ_1≥2q。q=4..8 ではモーメントLPが m=2q−1 で実行可能なのでこの方法は届かない（Bruen–Rothschild の q≥9 の範囲と一致し、Kiss–Marcugini–Pambianco (2005) は BR の q≥9 を引用し、q 大での等号近傍の構造定理を与える（q≥4 への拡張ではない）。なお定理C自体は新結果ではなく、本項の新規性は明示的な証明書と範囲の鋭さの解析にある）。厳密検査112件。独立検証で q=9, m=17 の臨界値 `ΣQ(r)t_r = −16` を確認し、論理監査も VALID（t_r≥0 と Q≥0 のみ使用、t_0=0 が本質）。独立実装（サブエージェント）も定理C 192件を再検査し PASS（verification.json）。
 ---
 
 # モーメント多項式によるブロッキング下界 τ_1 ≥ 2q（q≥9）
@@ -48,8 +51,10 @@ evidence: ブロッキング集合 X（m=|X|）は t_0=0。Q(r)=(r−1)(r−3)(r
 τ_1(q) ≥ 2q      (q ≥ 9).
 ```
 
-これは Bruen–Rothschild (1985) の下界を、**3 本のモーメント等式 + 3 次多項式**で
-初等的に再証明する。双対 `K_q = q²+1−τ_1` より `K_q ≤ (q−1)²`。
+**注意（先行性）**: 定理 C 自体は Bruen–Rothschild (1985) が証明済みである（q ≥ 9）。
+本項の貢献は、その**明示的な3次多項式乗数による初等的再証明**と、
+モーメント線形計画が q=4..8 でちょうど 1 足りないことの解明にある。
+新しい定理として主張しない。双対 `K_q = q²+1−τ_1` より `K_q ≤ (q−1)²`。
 
 ## 証明
 

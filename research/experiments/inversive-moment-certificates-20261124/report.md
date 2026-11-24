@@ -28,7 +28,8 @@
 
 すなわち **加法的な `s` が完全に消える**（s=4 のみ 3 の改善）。
 定理 C は Bruen–Rothschild (1985) の `τ_1 ≥ 2q`（q≥9）を
-初等的なモーメント計算で再証明する。
+初等的なモーメント計算で再証明する（**定理自体は既知**であり、
+本項の寄与は明示的な証明書と範囲の鋭さの解析）。
 
 ## 1. モーメント等式
 
@@ -133,8 +134,10 @@ Q(r) = −12 + 12r − 10C(r,2) + 6C(r,3)      （a = (−12,12,−10,6)）
 
 **鋭さ**: モーメント緩和は `q = 4..8` では `m = 2q−1` が実行可能で、
 この方法では `2q` に届かない（線形計画の下限が `2q−1`）。
-Bruen–Rothschild の `2q` は q≥9 の範囲で本証明と一致し、
-q=4..8 の拡張（Kiss–Marcugini–Pambianco 2005）はモーメント外の議論を要する。
+Bruen–Rothschild の `2q` は q≥9 の範囲で本証明と一致する。
+Kiss–Marcugini–Pambianco (2005) は q 大での等号近傍の構造定理を与えるもので、
+q=4..8 への `2q` 拡張ではない（今回の調査では確認できない）。
+q=4,5 の等号は本リポジトリの SAT 計算（K1275）による。
 
 ## 5. 帰結
 
@@ -165,11 +168,17 @@ q=4..8 の拡張（Kiss–Marcugini–Pambianco 2005）はモーメント外の�
 
 - ブロッキング下界 `2q`: A. A. Bruen, B. L. Rothschild,
   *Pacific J. Math.* 118 (1985) 303–311（q≥9）;
-  G. Kiss, S. Marcugini, F. Pambianco, *J. Combin. Des.* 13 (2005) 268–275（q≥4）。
-- (α,n)-arc の枠組み: S. S. Sane, S. S. Shrikhande, N. M. Singhi,
-  *Graphs Combin.* 1 (1985) 97–106; S. Ball, *J. London Math. Soc.* (2) 54 (1996) 581–593。
-- 3 本のモーメント等式 + 3 次乗数という Farkas 証明書の形は、
-  今回の調査では見つからない（サブエージェント調査の結果は §8 に追記）。
+  G. Kiss, S. Marcugini, F. Pambianco, *J. Combin. Des.* 13 (2005) 268–275 は
+  BR の q≥9 を引用し、q 大での等号近傍の**構造定理**を与える（q≥4 拡張ではない）。
+  **定理Cは既知**。
+- (α,n)-arc の語: S. S. Sane, S. S. Shrikhande, N. M. Singhi,
+  *Graphs Combin.* 1 (1985) 97–106（対称2-設計の極大弧が主題）;
+  S. Ball, *J. London Math. Soc.* (2) 54 (1996) 581–593。
+  いずれも定理A/Bの先行主張ではない。
+- 3 本のモーメント等式 + 3 次乗数という Farkas 証明書の**手法自体は標準的**
+  （LP/Farkas/Delsarte 型）。明示的な `P_s`/`Q` と得られた閉形式・数値上界が
+  今回の寄与で、定理Cは既知（BR 1985）。A/B は accessible 文献に見つからず
+  「unclear」（`independent/LITERATURE.md`）。
 
 ## 8. 限界・未解決
 

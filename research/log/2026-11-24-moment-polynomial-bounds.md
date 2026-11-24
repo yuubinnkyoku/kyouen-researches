@@ -71,9 +71,18 @@ Q(r)   = (r−1)(r−3)(r−4)               （整数 r≥1 で非負、ブロ�
 
 ## 文献
 
-- Bruen–Rothschild (1985) q≥9、Kiss–Marcugini–Pambianco (2005) q≥4。
-- (α,n)-arc: Sane–Shrikhande–Singhi (1985)、Ball (1996)。
-- 「3 モーメント + 3 次乗数」の Farkas 証明書は今回の調査では見つからない。
+- Bruen–Rothschild (1985) q≥9（**定理Cは既知**）。Kiss–Marcugini–Pambianco (2005)
+  は q 大の構造定理で、q≥4 拡張ではない。
+- (α,n)-arc の語: Sane–Shrikhande–Singhi (1985)（対称2-設計の極大弧）、Ball (1996)。
+- 手法（3 モーメント + 3 次乗数）は標準的な LP/Farkas/Delsarte。
+  定理Cは既知、A/B は accessible 文献に見つからず unclear。
+- 独立検証サブエージェントの文献調査（`independent/LITERATURE.md`）:
+  定理C は Bruen–Rothschild 1985 で既知、Kiss ら 2005 は q 大の構造定理で
+  q≥4 拡張ではない。Sane ら 1985 は対称2-設計の極大弧が主題。
+  よって A/B の新規性主張は「accessible 文献では未確認」に留める。
+- 独立検証の具体値: q=9 で A n=20 → Y=−136、
+  B (5,28,−36),(6,37,−144),(7,46,−180),(8,55,−90)、C m=17 → −16。
+  論理監査は VALID（整数性不要、単調性で臨界サイズに帰着）。
 
 ## コミットと後片付け
 

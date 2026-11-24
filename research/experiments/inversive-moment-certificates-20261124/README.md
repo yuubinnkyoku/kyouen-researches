@@ -62,7 +62,9 @@
 
 ## 文献メモ
 
-- ブロッキング下界 2q: Bruen–Rothschild (1985, q≥9)、
-  Kiss–Marcugini–Pambianco (2005, q≥4)。
-- (α,n)-arc の枠組み: Sane–Shrikhande–Singhi (1985)、Ball (1996)。
-- 「モーメント 3 本 + 3 次多項式」による上界は今回の調査では見つからない。
+- ブロッキング下界 2q: Bruen–Rothschild (1985, q≥9) で**既知**。
+  Kiss–Marcugini–Pambianco (2005) は q 大の構造定理（q≥4 拡張ではない）。
+- (α,n)-arc の語: Sane–Shrikhande–Singhi (1985)（対称2-設計の極大弧）、Ball (1996)。
+  定理A/Bの先行主張ではない。
+- 手法（3 モーメント + 3 次乗数）は標準的な LP/Farkas/Delsarte 証明書。
+  明示的な閉形式・数値上界は accessible 文献に見つからない（A/B は unclear）。

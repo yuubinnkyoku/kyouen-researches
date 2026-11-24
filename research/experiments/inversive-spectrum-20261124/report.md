@@ -242,7 +242,8 @@ python .../scripts/summary.py
 - **ブロッキング集合**: A. A. Bruen, B. L. Rothschild, "Lower bounds on blocking
   sets", *Pacific J. Math.* 118 (1985) 303–311（反転平面で `|S| ≥ 2q`、q ≥ 9）。
   G. Kiss, S. Marcugini, F. Pambianco, "On blocking sets of inversive planes",
-  *J. Combin. Des.* 13 (2005) 268–275（q ≥ 4 に拡張、極小集合の分類）。
+  *J. Combin. Des.* 13 (2005) 268–275（BR の q≥9 を引用し、q 大での等号近傍の構造定理。
+  q≥4 への拡張は今回の調査では確認できない）。
 - **分類定理**: B. Segre, *Canad. J. Math.* 7 (1955) 414–416（q 奇数の oval は円錐曲線）;
   B. Segre, *Ann. Mat. Pura Appl.* (4) 39 (1955) 357–379（PG(3,q) の (q+1)-arc は NRC）;
   L. R. A. Casse, D. G. Glynn, *Geom. Dedicata* 13 (1982) 157–163

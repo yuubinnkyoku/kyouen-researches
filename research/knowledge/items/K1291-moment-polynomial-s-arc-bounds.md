@@ -37,8 +37,11 @@ artifacts:
 - path: research/experiments/inversive-moment-certificates-20261124/independent/output/design_spot_check.json
   role: data
   note: 実ボード上で ΣP(r)t_r = Y を136 subsetで数値一致（恒等式の直接的確認）
+- path: research/experiments/inversive-moment-certificates-20261124/independent/LITERATURE.md
+  role: log
+  note: 文献 verdict（A/B は accessible 文献に見つからず unclear、方法自体は標準的な LP/Farkas/Delsarte）
 scope: Miqueian 反転平面 M(q)（q 素数冪）。K_s は各円と高々 s 点で交わる集合の最大サイズ。定理Aは s=4, q≥6。定理Bは 5≤s≤q−1, q≥9。
-evidence: 3-(q²+1,q+1,1) 設計の3本のモーメント等式 (M1)-(M4) と、多項式 P_s(r)=−(r−(s−3))(r−(s−2))(r−s)（整数 0≤r≤s で非負）を使う。P_s を {1,r,C(r,2),C(r,3)} で展開し n=(s−2)q+1 を代入すると ΣP_s(r)t_r = −qW(s,q), W=q(s−1)(s−4)−s(s−2)(s−3)−2。主張範囲で W>0（s=5..7 は q=9 で正、s≥8 は q=s+1 で s²−7s+2>0 かつ q について増加）。s=4 は P_4=−(r−1)(r−2)(r−4), n=2q+2 で ΣP_4 t_r = −4(q²−5q−2)<0（q≥6）。いずれも矛盾により上界。整数/Fraction の厳密検査で 6,664+115 件を確認（certificates.json）。独立実装（サブエージェント、自前多項式演算）も係数展開196件・P の非負性20,090点・定理A 195件・定理B 19,104件・定理C 192件・設計パラメータ199件を検査し PASS（failures 0、verification.json）。実ボード上でも ΣP(r)t_r = Y が136 subset で一致（design_spot_check.json）。
+evidence: 3-(q²+1,q+1,1) 設計の3本のモーメント等式 (M1)-(M4) と、多項式 P_s(r)=−(r−(s−3))(r−(s−2))(r−s)（整数 0≤r≤s で非負）を使う。P_s を {1,r,C(r,2),C(r,3)} で展開し n=(s−2)q+1 を代入すると ΣP_s(r)t_r = −qW(s,q), W=q(s−1)(s−4)−s(s−2)(s−3)−2。主張範囲で W>0（s=5..7 は q=9 で正、s≥8 は q=s+1 で s²−7s+2>0 かつ q について増加）。s=4 は P_4=−(r−1)(r−2)(r−4), n=2q+2 で ΣP_4 t_r = −4(q²−5q−2)<0（q≥6）。いずれも矛盾により上界。整数/Fraction の厳密検査で 6,664+115 件を確認（certificates.json）。文献調査では定理A/Bの同型の主張は見つからず「unclear」だが、**手法（3モーメント + 3次乗数）は標準的な LP/Farkas/Delsarte 証明書**であり、新規性は明示的な閉形式と得られた数値上界に限定される（LITERATURE.md）。独立検証は q=9 の臨界値も確認した（A n=20 → Y=−136、B (s,n,Y)=(5,28,−36),(6,37,−144),(7,46,−180),(8,55,−90)）。論理監査（t_r≥0 と P≥0 のみ使用、整数性不要、臨界サイズへの部分集合で単調性処理）も VALID。独立実装（サブエージェント、自前多項式演算）も係数展開196件・P の非負性20,090点・定理A 195件・定理B 19,104件・定理C 192件・設計パラメータ199件を検査し PASS（failures 0、verification.json）。実ボード上でも ΣP(r)t_r = Y が136 subset で一致（design_spot_check.json）。
 ---
 
 # 3次モーメント多項式による s-弧上界
