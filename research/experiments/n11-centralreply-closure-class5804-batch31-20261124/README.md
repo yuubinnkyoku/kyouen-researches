@@ -52,11 +52,29 @@ root勝敗の主張はしない。batch-30宣言後最初の新規closure class 
 - `output/`: raw 2-pass solver出力 (adNNN.p1.out / adNNN.p2.out) + append-only
   `status.log`。
 
-## 結果
+## 結果 (drive-1・2026-11-24T01:42:23Z..02:05:32Z UTC)
 
-drive-1 (WIN-HALT 2行 wave) 実行後に本READMEへ追記する。EXHAUSTED行はhonest
-UNKNOWN (same-condition再probeなし)。**標準11×11空盤・19 central-reply roots・
-二石root・S2・class 5804 (本batchの55キーすべて・EXHAUSTED行を含む) は本実験の
-実行・出版のどの時点でもUNKNOWNのまま。** nodes数・wall秒数を勝敗として読まない。
+**WIN-HALT wave-end at 2 distinct WIN行 (pre-registered drive-1 stop)。**
+対象 ad001..ad028 (28/56キー・残28キー ad029..ad055 は未probeのまま停止)。
+
+- **WIN 2行** (result=1・15M budget内で解決): **ad024** (key_lo
+  6053401124017274880・legal 86・nodes 4,360,661) と **ad028** (key_lo
+  6053682324116078592・legal 82・nodes 12,803,283)。両行とも p1/p2 2-pass
+  fresh-cold で node数完全一致 (MISMATCH 0)。
+- **LOSS(2) 26行** (ad001..ad023 ad025..ad027・result=2・15M budget内で解決)。
+- **EXHAUSTED 0行・TRUNCATED 0行・MISMATCH 0**。全28キー (56 raw出力) の
+  p1/p2 は `replay,` 行 f1-8 (含む budget/result/nodes) 完全一致を機械確認。
+- 合計 nodes (status.log PASS 28行の和): 138,729,770 (WIN 2行 17,163,944 +
+  LOSS 26行 121,565,826)。nodes数は勝敗ではなく計測値。
+- WIN行の解釈規約: 上記2行は「15M budget内での solver result=1 (WIN)」という
+  honest実行記録のみ。**WIN採用は scrutiny owner C++第二実装 gate (`9193f5b6…`)
+  通過後の別adoption Part (pinned fail-closed merger `90711961…` 経由) のみ**
+  (本レーンは代行しない)。status.log は append-only・raw出力は出版時点のまま。
+- 次wave (ad029..ad055・drive-2/3) は後続Part。EXHAUSTEDが出た場合のみ
+  same-condition再probeの対象となり、それも honest UNKNOWN。
+
+**標準11×11空盤・19 central-reply roots・二石root・S2・class 5804 (本batchの
+55キーすべて・WIN/LOSS行を含む) は本実験の実行・出版のどの時点でもUNKNOWNの
+まま。** nodes数・wall秒数を勝敗として読まない。
 WIN採用は scrutiny owner C++第二実装 gate (`9193f5b6…`) 通過後の別adoption Part
 (pinned fail-closed merger `90711961…` 経由) のみ (本レーンは代行しない)。
