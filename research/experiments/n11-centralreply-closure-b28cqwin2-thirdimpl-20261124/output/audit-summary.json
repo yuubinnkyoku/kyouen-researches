@@ -1,0 +1,547 @@
+{
+ "schema": "n11-centralreply-closure-b28cqwin2-thirdimpl-audit-v1",
+ "experiment": "n11-centralreply-closure-b28cqwin2-thirdimpl-20261124",
+ "all_pass": true,
+ "gate_count": 103,
+ "targets_pass_one_total_third_expansions": 37168771,
+ "verdict_agreements": [
+  {
+   "key_id": "aa004",
+   "source": "part-cq-b28exhausted-reprobe20m",
+   "replica_result": 1,
+   "replica_nodes": 15616012,
+   "third_result": 1,
+   "third_expansion": 18707043,
+   "third_ttHits": 9558720,
+   "agree": true
+  },
+  {
+   "key_id": "aa035",
+   "source": "part-cq-b28exhausted-reprobe20m",
+   "replica_result": 1,
+   "replica_nodes": 15424243,
+   "third_result": 1,
+   "third_expansion": 18461728,
+   "third_ttHits": 9389275,
+   "agree": true
+  }
+ ],
+ "wall_inconclusive": [],
+ "gates": [
+  {
+   "gate": "input-aa004-matches-rows",
+   "pass": true,
+   "detail": "5,1171516445255794689,0,91 vs 5,1171516445255794689,0,91"
+  },
+  {
+   "gate": "input-aa035-matches-rows",
+   "pass": true,
+   "detail": "5,1152921504606846978,4228,96 vs 5,1152921504606846978,4228,96"
+  },
+  {
+   "gate": "input-k02a-matches-rows",
+   "pass": true,
+   "detail": "5,1297036692683751424,68157440,87 vs 5,1297036692683751424,68157440,87"
+  },
+  {
+   "gate": "input-l1a-matches-rows",
+   "pass": true,
+   "detail": "5,13019119616,16448,116 vs 5,13019119616,16448,116"
+  },
+  {
+   "gate": "input-ng1-matches-rows",
+   "pass": true,
+   "detail": "5,1297036692683751424,68157440,88 vs 5,1297036692683751424,68157440,88"
+  },
+  {
+   "gate": "input-ng2-matches-rows",
+   "pass": true,
+   "detail": "6,1297036692683751424,68157440,87 vs 6,1297036692683751424,68157440,87"
+  },
+  {
+   "gate": "pin-third_impl.js",
+   "pass": true,
+   "detail": "08ea958ff59c3234ec5ac55c5c40689bd0999a34e101a88ea0546800cc4a1998"
+  },
+  {
+   "gate": "pin-verify_tbl.js",
+   "pass": true,
+   "detail": "c8c52528f70b3a9b438edc3feb4e432fbe705d6be21650383d3955efc6790251"
+  },
+  {
+   "gate": "pin-jsreplay.js",
+   "pass": true,
+   "detail": "845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df"
+  },
+  {
+   "gate": "rows-schema",
+   "pass": true,
+   "detail": "n11-centralreply-closure-b28cqwin2-thirdimpl-input-v1"
+  },
+  {
+   "gate": "target-count",
+   "pass": true,
+   "detail": "2 (2 b28 CQ-WIN rows)"
+  },
+  {
+   "gate": "target-verdict-kinds",
+   "pass": true,
+   "detail": "[1, 1]"
+  },
+  {
+   "gate": "rules-gate-quads",
+   "pass": true,
+   "detail": "replica quads 95670 mine quads 95670"
+  },
+  {
+   "gate": "rules-gate-tbl-mismatch0",
+   "pass": true,
+   "detail": "['triples checked 195044 mismatches 0']"
+  },
+  {
+   "gate": "replica-aa004-present",
+   "pass": true,
+   "detail": "p1/p2"
+  },
+  {
+   "gate": "replica-aa004-done",
+   "pass": true,
+   "detail": "replay_done p1=True p2=True"
+  },
+  {
+   "gate": "replica-aa004-quads",
+   "pass": true,
+   "detail": "quads-header p1=True p2=True"
+  },
+  {
+   "gate": "replica-aa004-det-pair",
+   "pass": true,
+   "detail": "p1=['91', '0', '20000000', '1', '15616012'] p2=['91', '0', '20000000', '1', '15616012']"
+  },
+  {
+   "gate": "replica-aa004-schema",
+   "pass": true,
+   "detail": "schema ['replay', '0', '5', '91', '0', '20000000']"
+  },
+  {
+   "gate": "replica-aa004-key",
+   "pass": true,
+   "detail": "1171516445255794689,0,91 vs 1171516445255794689,0,91"
+  },
+  {
+   "gate": "replica-aa004-verdict-vs-published",
+   "pass": true,
+   "detail": "this-host result=1 nodes=15616012 vs published result=1 nodes=15616012"
+  },
+  {
+   "gate": "replica-aa035-present",
+   "pass": true,
+   "detail": "p1/p2"
+  },
+  {
+   "gate": "replica-aa035-done",
+   "pass": true,
+   "detail": "replay_done p1=True p2=True"
+  },
+  {
+   "gate": "replica-aa035-quads",
+   "pass": true,
+   "detail": "quads-header p1=True p2=True"
+  },
+  {
+   "gate": "replica-aa035-det-pair",
+   "pass": true,
+   "detail": "p1=['96', '0', '20000000', '1', '15424243'] p2=['96', '0', '20000000', '1', '15424243']"
+  },
+  {
+   "gate": "replica-aa035-schema",
+   "pass": true,
+   "detail": "schema ['replay', '0', '5', '96', '0', '20000000']"
+  },
+  {
+   "gate": "replica-aa035-key",
+   "pass": true,
+   "detail": "1152921504606846978,4228,96 vs 1152921504606846978,4228,96"
+  },
+  {
+   "gate": "replica-aa035-verdict-vs-published",
+   "pass": true,
+   "detail": "this-host result=1 nodes=15424243 vs published result=1 nodes=15424243"
+  },
+  {
+   "gate": "anchor-k02a-present",
+   "pass": true,
+   "detail": "a/b"
+  },
+  {
+   "gate": "anchor-k02a-a-clean",
+   "pass": true,
+   "detail": "result=1 reason=clean"
+  },
+  {
+   "gate": "anchor-k02a-a-expansions",
+   "pass": true,
+   "detail": "exp=9106337 vs 9106337, ttH=4991527 vs 4991527"
+  },
+  {
+   "gate": "anchor-k02a-a-legal",
+   "pass": true,
+   "detail": "87 vs 87"
+  },
+  {
+   "gate": "anchor-k02a-a-key",
+   "pass": true,
+   "detail": "1297036692683751424:68157440"
+  },
+  {
+   "gate": "anchor-k02a-b-clean",
+   "pass": true,
+   "detail": "result=1 reason=clean"
+  },
+  {
+   "gate": "anchor-k02a-b-expansions",
+   "pass": true,
+   "detail": "exp=9106337 vs 9106337, ttH=4991527 vs 4991527"
+  },
+  {
+   "gate": "anchor-k02a-b-legal",
+   "pass": true,
+   "detail": "87 vs 87"
+  },
+  {
+   "gate": "anchor-k02a-b-key",
+   "pass": true,
+   "detail": "1297036692683751424:68157440"
+  },
+  {
+   "gate": "anchor-k02a-det-pair",
+   "pass": true,
+   "detail": "9106337 vs 9106337"
+  },
+  {
+   "gate": "anchor-l1a-present",
+   "pass": true,
+   "detail": "a/b"
+  },
+  {
+   "gate": "anchor-l1a-a-clean",
+   "pass": true,
+   "detail": "result=2 reason=clean"
+  },
+  {
+   "gate": "anchor-l1a-a-expansions",
+   "pass": true,
+   "detail": "exp=7660602 vs 7660602, ttH=3951175 vs 3951175"
+  },
+  {
+   "gate": "anchor-l1a-a-legal",
+   "pass": true,
+   "detail": "116 vs 116"
+  },
+  {
+   "gate": "anchor-l1a-a-key",
+   "pass": true,
+   "detail": "13019119616:16448"
+  },
+  {
+   "gate": "anchor-l1a-b-clean",
+   "pass": true,
+   "detail": "result=2 reason=clean"
+  },
+  {
+   "gate": "anchor-l1a-b-expansions",
+   "pass": true,
+   "detail": "exp=7660602 vs 7660602, ttH=3951175 vs 3951175"
+  },
+  {
+   "gate": "anchor-l1a-b-legal",
+   "pass": true,
+   "detail": "116 vs 116"
+  },
+  {
+   "gate": "anchor-l1a-b-key",
+   "pass": true,
+   "detail": "13019119616:16448"
+  },
+  {
+   "gate": "anchor-l1a-det-pair",
+   "pass": true,
+   "detail": "7660602 vs 7660602"
+  },
+  {
+   "gate": "neg-ng1-failclosed",
+   "pass": true,
+   "detail": "{'raw': 'third,ng1a,5,88,,GATE_FAIL,\"legal count mismatch: derived=87 declared=88\"', 'stub': 'third', 'gate_fail': 'GATE_FAIL,\"legal count mismatch: derived=87 declared=88'}"
+  },
+  {
+   "gate": "neg-ng2-failclosed",
+   "pass": true,
+   "detail": "{'raw': 'third,ng2a,6,87,,GATE_FAIL,\"stone count mismatch: bits=5 declared=6\"', 'stub': 'third', 'gate_fail': 'GATE_FAIL,\"stone count mismatch: bits=5 declared=6'}"
+  },
+  {
+   "gate": "target-aa004-present",
+   "pass": true,
+   "detail": "a/b"
+  },
+  {
+   "gate": "target-aa004-a-key",
+   "pass": true,
+   "detail": "1171516445255794689:0"
+  },
+  {
+   "gate": "target-aa004-a-legal",
+   "pass": true,
+   "detail": "91 vs 91"
+  },
+  {
+   "gate": "target-aa004-a-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-aa004-b-key",
+   "pass": true,
+   "detail": "1171516445255794689:0"
+  },
+  {
+   "gate": "target-aa004-b-legal",
+   "pass": true,
+   "detail": "91 vs 91"
+  },
+  {
+   "gate": "target-aa004-b-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-aa004-det-pair",
+   "pass": true,
+   "detail": "a=(1,18707043,clean) b=(1,18707043,clean)"
+  },
+  {
+   "gate": "target-aa004-verdict-agree",
+   "pass": true,
+   "detail": "third=1 replica=1"
+  },
+  {
+   "gate": "target-aa035-present",
+   "pass": true,
+   "detail": "a/b"
+  },
+  {
+   "gate": "target-aa035-a-key",
+   "pass": true,
+   "detail": "1152921504606846978:4228"
+  },
+  {
+   "gate": "target-aa035-a-legal",
+   "pass": true,
+   "detail": "96 vs 96"
+  },
+  {
+   "gate": "target-aa035-a-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-aa035-b-key",
+   "pass": true,
+   "detail": "1152921504606846978:4228"
+  },
+  {
+   "gate": "target-aa035-b-legal",
+   "pass": true,
+   "detail": "96 vs 96"
+  },
+  {
+   "gate": "target-aa035-b-quads",
+   "pass": true,
+   "detail": "95670"
+  },
+  {
+   "gate": "target-aa035-det-pair",
+   "pass": true,
+   "detail": "a=(1,18461728,clean) b=(1,18461728,clean)"
+  },
+  {
+   "gate": "target-aa035-verdict-agree",
+   "pass": true,
+   "detail": "third=1 replica=1"
+  },
+  {
+   "gate": "unadopted-pin-raw-aa004-p1",
+   "pass": true,
+   "detail": "82ebc402cc83cf463e4921d2ebecd9ed63f6567a505444ee0cad5f5a49e02f48"
+  },
+  {
+   "gate": "unadopted-pin-raw-aa004-p2",
+   "pass": true,
+   "detail": "ec10d92b696a6144656db2d5bbcae764b7ebf529c1dd42926e5d258bb3c87701"
+  },
+  {
+   "gate": "unadopted-pin-merged-cache-aa004",
+   "pass": true,
+   "detail": "854800f38349277924bc77c50d92a6d5252f11bdb2b2cdb54a14ca2b4f6b087d"
+  },
+  {
+   "gate": "unadopted-merged-cache-rowcount-aa004",
+   "pass": true,
+   "detail": "6301 s5verdict rows"
+  },
+  {
+   "gate": "unadopted-merged-cache-row-absent-aa004",
+   "pass": true,
+   "detail": "s5verdict,1171516445255794689,0,5,1,15616012 occurs 0 times (expect 0: CQ-WIN rows never adopted)"
+  },
+  {
+   "gate": "unadopted-merged-cache-no-key-row-aa004",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "gate": "unadopted-pin-raw-aa035-p1",
+   "pass": true,
+   "detail": "32fc69c35dd00c5d9cec03ca76c516aede7e1922b95f65fd0e6aa3d6fb95420f"
+  },
+  {
+   "gate": "unadopted-pin-raw-aa035-p2",
+   "pass": true,
+   "detail": "bb30106af46d532a15641ca27ef2df0a33258146595e3078c21e5ff069711d63"
+  },
+  {
+   "gate": "unadopted-pin-merged-cache-aa035",
+   "pass": true,
+   "detail": "854800f38349277924bc77c50d92a6d5252f11bdb2b2cdb54a14ca2b4f6b087d"
+  },
+  {
+   "gate": "unadopted-merged-cache-rowcount-aa035",
+   "pass": true,
+   "detail": "6301 s5verdict rows"
+  },
+  {
+   "gate": "unadopted-merged-cache-row-absent-aa035",
+   "pass": true,
+   "detail": "s5verdict,1152921504606846978,4228,5,1,15424243 occurs 0 times (expect 0: CQ-WIN rows never adopted)"
+  },
+  {
+   "gate": "unadopted-merged-cache-no-key-row-aa035",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "gate": "unadopted-pin-merged-cache-shared",
+   "pass": true,
+   "detail": "854800f38349277924bc77c50d92a6d5252f11bdb2b2cdb54a14ca2b4f6b087d"
+  },
+  {
+   "gate": "unadopted-pin-increment-shared",
+   "pass": true,
+   "detail": "bd5ef7d7632816006bd5a74349bf703a8dd3251e3a550a33e7ae7a0253abe382"
+  },
+  {
+   "gate": "unadopted-increment-exact-7-rows",
+   "pass": true,
+   "detail": "['s5verdict,1152921504606912512,4228,5,2,955659', 's5verdict,1171516445255794688,16,5,2,10010789']"
+  },
+  {
+   "gate": "unadopted-increment-adopted-set-header",
+   "pass": true,
+   "detail": "Part CO increment ADOPTED set statement"
+  },
+  {
+   "gate": "unadopted-pin-increments-manifest-shared",
+   "pass": true,
+   "detail": "b47e07ca90b0166d22c681a3136a60500d7a4f8671b1e77b656a1b34c7c02192"
+  },
+  {
+   "gate": "unadopted-manifest-schema",
+   "pass": true,
+   "detail": "b28loss7-increments-manifest-v1"
+  },
+  {
+   "gate": "unadopted-manifest-loss-ids",
+   "pass": true,
+   "detail": "['aa015', 'aa017', 'aa018', 'aa023', 'aa024', 'aa029', 'aa036']"
+  },
+  {
+   "gate": "unadopted-manifest-flags",
+   "pass": true,
+   "detail": "full_eq_loss=False base=6294 quarantine=0"
+  },
+  {
+   "gate": "unadopted-manifest-row-counts",
+   "pass": true,
+   "detail": "row_counts={'probed_rows': 54, 'adopted_loss_rows': 7, 'wins': 35, 'exhausted_excluded': 11, 'fragments_unprobed': 0, 'fileless_unprobed': 0}"
+  },
+  {
+   "gate": "unadopted-manifest-aa003-not-reemitted",
+   "pass": true,
+   "detail": "False"
+  },
+  {
+   "gate": "unadopted-manifest-exhausted-roster",
+   "pass": true,
+   "detail": "CO-time exhausted_excluded_ids roster (11)"
+  },
+  {
+   "gate": "unadopted-manifest-target-not-in-adopted-lists-aa004",
+   "pass": true,
+   "detail": "aa004 must not appear in any adopted/win id list of the increments-manifest"
+  },
+  {
+   "gate": "unadopted-manifest-target-in-member-books-aa004",
+   "pass": true,
+   "detail": "aa004 must appear in exhausted_excluded_ids/probed_ids member bookkeeping (CO-time EXHAUSTED, batch-28 member)"
+  },
+  {
+   "gate": "unadopted-manifest-target-not-in-adopted-lists-aa035",
+   "pass": true,
+   "detail": "aa035 must not appear in any adopted/win id list of the increments-manifest"
+  },
+  {
+   "gate": "unadopted-manifest-target-in-member-books-aa035",
+   "pass": true,
+   "detail": "aa035 must appear in exhausted_excluded_ids/probed_ids member bookkeeping (CO-time EXHAUSTED, batch-28 member)"
+  },
+  {
+   "gate": "valgate-at2m-s5-1152921504606851072-536870946-present",
+   "pass": true,
+   "detail": "baseline=True host=True"
+  },
+  {
+   "gate": "valgate-at2m-s5-1152921504606851072-536870946-node-exact",
+   "pass": true,
+   "detail": "host=['2000000', '0', '2000000'] baseline=['2000000', '0', '2000000']"
+  },
+  {
+   "gate": "valgate-at2m-s5-1188950301626860544-536870912-present",
+   "pass": true,
+   "detail": "baseline=True host=True"
+  },
+  {
+   "gate": "valgate-at2m-s5-1188950301626860544-536870912-node-exact",
+   "pass": true,
+   "detail": "host=['2000000', '0', '2000000'] baseline=['2000000', '0', '2000000']"
+  },
+  {
+   "gate": "valgate-first-15m-s5-1152921504606851072-536870946-present",
+   "pass": true,
+   "detail": "baseline=True host=True"
+  },
+  {
+   "gate": "valgate-first-15m-s5-1152921504606851072-536870946-node-exact",
+   "pass": true,
+   "detail": "host=['15000000', '2', '3651923'] baseline=['15000000', '2', '3651923']"
+  },
+  {
+   "gate": "valgate-second-15m-s5-1188950301626860544-536870912-present",
+   "pass": true,
+   "detail": "baseline=True host=True"
+  },
+  {
+   "gate": "valgate-second-15m-s5-1188950301626860544-536870912-node-exact",
+   "pass": true,
+   "detail": "host=['15000000', '2', '5040200'] baseline=['15000000', '2', '5040200']"
+  }
+ ]
+}
