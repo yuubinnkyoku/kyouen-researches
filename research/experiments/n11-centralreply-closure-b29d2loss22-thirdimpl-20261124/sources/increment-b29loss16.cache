@@ -1,0 +1,43 @@
+# n11 central-reply closure batch-29 (class 2251) 16-LOSS
+#   canonical-adoption increment (Part CU, 2026-11-23)
+# published batch-29 kit (Part CI scaffold + takeover drive-1 checkpoint 1/3):
+#   16 of 54 keys probed 2-pass fresh-cold at budget 15M, ALL 16 resolved
+#   LOSS; the remaining 38 keys ab017..ab054 are fileless UNPROBED (they
+#   may hold WIN or EXHAUSTED rows in future drives; the batch is NOT
+#   claimed complete).  No WIN row and no EXHAUSTED row is observed so
+#   far in this batch; the adopted packet is the whole probed packet.
+# 2-pass node-exact exact-S5 verdict at budget 15M, fresh cold, pinned
+#   jsreplay.js sha256 845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df
+# gates: kit MANIFEST sha-verified file-by-file (71 files); the 4
+#   published takeover-host val-gate files pinned and verified double-
+#   host node-exact against the kit batch29-host outputs and the
+#   published baselines; all 16 probed keys two-pass node-exact with
+#   '# replay_done' on both passes; status.log (16 lines, sha-pinned,
+#   clean PASS-only picture) each-once agreement on (b,r,n); raw
+#   inventory exactly ab001..ab016 x {p1,p2} (no sidecars, no
+#   fragments); batch-keys legal/(lo,hi)/s5/membership agreement;
+#   adopted-row per-pass node total 57,463,971; adopted keys distinct
+#   and absent from BASE and from the quarantine registry.
+# ADOPTED set = ab001..ab016 (16 keys, s5 indices 3964..76023,
+#   membership 4 except ab010 (3)).  full == loss ON THE PROBED SET
+#   only (16/16 LOSS so far); the 38 fileless keys stay UNPROBED and
+#   NO completeness claim is made for the batch as a whole.
+# The 16 LOSS rows ARE consumed into the canonical cache by the Part
+#   CT fail-closed union merger; 11x11 stays UNKNOWN; nodes are
+#   bookkeeping, never verdicts.
+s5verdict,1155314042043105281,0,5,2,4265342
+s5verdict,1155314042043105282,0,5,2,3662776
+s5verdict,1155314042043105284,0,5,2,4447441
+s5verdict,1155314042043105288,0,5,2,2687012
+s5verdict,1155314042043105296,0,5,2,3714648
+s5verdict,1155314042043107328,0,5,2,3855756
+s5verdict,1155314042043109376,0,5,2,3763776
+s5verdict,1155314042043113472,0,5,2,2890562
+s5verdict,1155314042043138048,0,5,2,1786048
+s5verdict,1155314042043170816,0,5,2,4242063
+s5verdict,1155314042047299584,0,5,2,4806135
+s5verdict,1155314042051493888,0,5,2,2606954
+s5verdict,1155314042059882496,0,5,2,2284195
+s5verdict,1155314042076659712,0,5,2,4280600
+s5verdict,1155314050633039872,0,5,2,3912106
+s5verdict,1155314059222974464,0,5,2,4258557
