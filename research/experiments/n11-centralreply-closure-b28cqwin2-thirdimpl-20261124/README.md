@@ -171,9 +171,12 @@ BY→CC→CL→CM→CR→CW。
   adoption Part (pinned fail-closed merger `90711961…` 経由) のみで、WIN行はさらに
   scrutiny owner C++第二実装 gate `9193f5b6…` を通るまで採用されない。本Partは
   いかなる adoption も行わない。
-- batch-28のEXHAUSTED残は Part CT後 3行 (aa021/aa028/aa032・20M条件でも未解決・
-  別条件候補としてopen) — 本Partは EXHAUSTED 行に触及しない (対象はCQ解決済み
-  WIN行のみ)。
+- batch-28のEXHAUSTED残は Part CT後 **0行** — aa021/aa028/aa032はPart CS 25M再probe
+  (WIN 22,942,323 / 21,563,925 / 20,312,294)・aa050はPart CT 30M再probe
+  (WIN 25,541,199) で解決済み。本Partは EXHAUSTED 行に触及しない趣旨は不変
+  (対象はCQ解決済みWIN行のみ)。〔本行は訂正版: 初出版版の「Part CT後 3行残
+  (aa021/aa028/aa032・別条件候補としてopen)」は事実誤記 (aa021/aa028/aa032は
+  Part CS 25Mで・aa050はPart CT 30MでWIN解決済み)〕
 - class 5343 のclosure構成・secured coverage・root勝敗には一切触及しない。
 - **標準11×11空盤・19 central-reply roots・class 5343・全バッチキー (batch-28 54キー
   を含む) はこの時点で UNKNOWN**。nodes数・expansions数・ttHits数・wall秒数を
