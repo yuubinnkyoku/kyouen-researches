@@ -55,7 +55,7 @@ root勝敗の主張はしない。batch-30宣言後最初の新規closure class 
 ## 結果 (drive-1・2026-11-24T01:42:23Z..02:05:32Z UTC)
 
 **WIN-HALT wave-end at 2 distinct WIN行 (pre-registered drive-1 stop)。**
-対象 ad001..ad028 (28/56キー・残28キー ad029..ad055 は未probeのまま停止)。
+対象 ad001..ad028 (probe 28/55キー・残27キー ad029..ad055 は未probeのまま停止)。
 
 - **WIN 2行** (result=1・15M budget内で解決): **ad024** (key_lo
   6053401124017274880・legal 86・nodes 4,360,661) と **ad028** (key_lo
