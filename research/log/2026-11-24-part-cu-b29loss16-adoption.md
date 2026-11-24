@@ -31,7 +31,7 @@ batch-29 (class 2251) takeover drive-1 checkpoint 1/3 の採用可能証拠の�
    - C `2c2487f7`: merged chain cache (260,590B)
    - D `f6635144`: reaudit outputs 3つ + decomp-deltas (probe-worklistは体積のためsha宣言のみ)
    - E `5b2ad169`: README + MANIFEST-sha256 (14ファイル機械sha列入れ)
-   - **各commit fetch-back検証**: GitHub上の各file blob sha1 (計15 file) とローカル公式rerun tree の blob sha1 が全件一致。
+   - **各commit fetch-back検証**: GitHub上の各file blob sha1 (計16 file = A4+B5+C1+D4+E2) とローカル公式rerun tree の blob sha1 が全件一致。
 
 ## 採用効果 (機械観察・勝敗と誤読なし)
 
@@ -51,6 +51,6 @@ batch-29 (class 2251) takeover drive-1 checkpoint 1/3 の採用可能証拠の�
 
 - 前sessionで extractor雛形の jsreplay pin を手転写した際に無効文字を混入し maker が fail-closed ABORT したことがある。修正は機械抽出・機械置換で行い、本Part成果物に手転写pinは残っていない (全pinは filler script `sup/fill_extractor_b29loss16.py` 系の機械抽出による; filler自体はsession産物で実験ではない)。
 - batch-29 残38キー (ab017..ab054) の解決は別drive・別宣言が必須 (class 2251解放の必要条件)。
-- 今回の出版では push_files の chunked read (file_system.read_file offset/limit) を使い、手転写を全工程で排除した (計 260KB超のファイルも含む15ファイル全てbyte一致検証済み)。
+- 今回の出版では push_files の chunked read (file_system.read_file offset/limit) を使い、手転写を全工程で排除した (計 260KB超のファイルも含む16ファイル全てbyte一致検証済み (出版A-E 合計16ファイル))。
 
 **11×11 空盤の勝敗は UNKNOWN のままである。**
