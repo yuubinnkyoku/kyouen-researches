@@ -29,9 +29,39 @@ WIN-CONTINUE。EXHAUSTED-at-20M は honest UNKNOWN (25M段は別宣言)。
 
 budget cap 20M が in-budget resolve の値に影響しないことを機械担保。
 
-## 実行記録
+## 実行記録 (2026-11-24T07:5x-08:1xZ ・10 wave invocations + ALL-DONE)
 
-(本セクションはB outputs/C工程後に更新)
+**結果: 6/6キー 2-pass fresh-cold PASS (p1==p2 node-exact・real_mismatch=0)**:
+
+| key | 15M (published) | 20M再probe (本Part) |
+|---|---|---|
+| ac006 | EXHAUSTED | **WIN 18,182,847** (WIN-HALT・WIN-CONTINUE) |
+| ac013 | EXHAUSTED | EXHAUSTED 20,000,000 (honest UNKNOWN・同条件再probeなし・残EXHはこの1行のみ) |
+| ac032 | EXHAUSTED | **LOSS 19,707,272** |
+| ac036 | EXHAUSTED | **LOSS 16,605,302** |
+| ac044 | EXHAUSTED | **LOSS 16,323,488** |
+| ac047 | EXHAUSTED | **LOSS 17,394,041** |
+
+- batch-30全体: EXHAUSTED 6→1 (ac013のみ)・**WIN 11 / LOSS 42 / EXHAUSTED 1**
+  (probe-level label・verdict不消費)。
+- waves: 各キー p1 が175-229sを要するため260s内側timeoutでp2が打到ち切られ
+  (TRUNCATED-RETRY 6行・truncated file 6件保存)、次invocationでp2のみfresh-cold
+  再実行して完了 (rc=124 retryable設計どおり・値レベルdivergenceなし)。
+
+## 誠実記録・incident (env reset 1件・pre-wipe観測との一致)
+
+1. **環境リセット1件** (~07:33Z): wave 2 (ac032+ac036) invocationがKoyeb infra
+   failure ("artifact files could not be saved・変更は破棄") で環境ごと棄却され、
+   ローカル作業tree全損 (その時点でac006/ac013のwave 1分raw file・status.logは
+   未出版で喪失)。**published A scaffold `81ae89f1` (fetch-back 15/15 byte一致) から
+   kit再構成** (全pin sha一致) し、6キーを最初からfresh実行した。
+   **決定性をCPU間で機械確認: pre-wipe観測** (ac006 p1: result=1, nodes=18,182,847
+   205s / ac013 p1: result=0, nodes=20,000,000 222s) **とリセット後再実行**
+   (ac006: nodes=18,182,847 217s / ac013: 20,000,000 229s) が完全一致。
+2. drive-2 (batch-30) のKoyeb zombie-raceと異なり、本Partはguard群
+   (flock・orphan-liveness・replay_done) で競合なし-MISMATCH未発生
+   (real 0・空p2 0)。
+
 
 ## UNKNOWN担保
 
