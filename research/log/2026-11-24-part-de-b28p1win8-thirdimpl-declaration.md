@@ -45,7 +45,7 @@ input 13: rows.json (maker 2回実行byte-stable)
 (schema `n11-centralreply-closure-b28p1win8-thirdimpl-input-v1`) + 8 targets + anchors k02a/l1a +
 negatives ng1/ng2 の input CSV (publishedとbyte一致をmakerが機械検証)。
 
-sources 41 (commit-pinned raw fetch・全sha本宣言のpin群と同一):
+sources 39 (commit-pinned raw fetch・全sha本宣言のpin群と同一・raw 16 + published-input 8 + published-input-bf 4 + top-level 11):
 raw 16 (8キー×p1/p2: 決定ドライブ側の正本) / published-input 8 /
 published-input-bf 4 (k02a/l1a/ng1/ng2・Part BF chain byte-clone) / status-drive4.log
 `598174447fa878c2e0a6d6db6f892c5c279063174d763746456476e3051633f8` (61行) /
