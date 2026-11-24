@@ -1,0 +1,10 @@
+RUN key=ng1 tag=a kind=negative rc=1 out=output/negative/ng1.a.out third,ng1a,5,88,,GATE_FAIL,"legal count mismatch: derived=87 declared=88"
+RUN key=ng2 tag=a kind=negative rc=1 out=output/negative/ng2.a.out third,ng2a,6,87,,GATE_FAIL,"stone count mismatch: bits=5 declared=6"
+RUN key=k02a tag=a kind=anchor rc=0 out=output/anchors/k02a.a.out third,k02aa,5,87,87,1,9106337,4991527,26.81,1297036692683751424,68157440,clean,quads=95670,ttOverwrites=4912053,memoPower=22
+RUN key=k02a tag=b kind=anchor rc=0 out=output/anchors/k02a.b.out third,k02ab,5,87,87,1,9106337,4991527,27.23,1297036692683751424,68157440,clean,quads=95670,ttOverwrites=4912053,memoPower=22
+RUN key=l1a tag=a kind=anchor rc=0 out=output/anchors/l1a.a.out third,l1aa,5,116,116,2,7660602,3951175,22.52,13019119616,16448,clean,quads=95670,ttOverwrites=3466722,memoPower=22
+RUN key=l1a tag=b kind=anchor rc=0 out=output/anchors/l1a.b.out third,l1ab,5,116,116,2,7660602,3951175,22.82,13019119616,16448,clean,quads=95670,ttOverwrites=3466722,memoPower=22
+REPLICA key=ab028 pass=p1 rc=0 out=output/replica/ab028.p1.out replay,0,5,80,0,15000000,1,3167121,15,1297036830121656320,131074
+REPLICA key=ab028 pass=p2 rc=0 out=output/replica/ab028.p2.out replay,0,5,80,0,15000000,1,3167121,16,1297036830121656320,131074
+RUN key=ab028 tag=a kind=target rc=0 out=output/targets/ab028.a.out third,ab028a,5,80,80,1,3595562,2114848,10.54,1297036830121656320,131074,clean,quads=95670,ttOverwrites=153013,memoPower=22
+RUN key=ab028 tag=b kind=target rc=0 out=output/targets/ab028.b.out third,ab028b,5,80,80,1,3595562,2114848,10.90,1297036830121656320,131074,clean,quads=95670,ttOverwrites=153013,memoPower=22
