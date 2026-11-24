@@ -69,10 +69,11 @@ K(inversive q) ≤ q + 2      （すべての奇数 q）
 |---|---|
 | 一般上界 | Steiner 3-(v,k,1) 設計で `K_s ≤ (s−2)λ₂+2`, `τ_d ≥ dλ₂`（`λ₂=(v−2)/(k−2)`） |
 | 反転平面 | `K_s(q) ≤ (s−2)(q+1)+2`（`2≤s≤q+1`）、`τ_d(q) ≥ d(q+1)`（`1≤d≤q−1`） |
+| **改善上界（新）** | **`K_4 ≤ 2q+1`（q≥6）、`K_s ≤ (s−2)q`（5≤s≤q−1, q≥9）、`τ_1 ≥ 2q`（q≥9）**（K1291/K1292、モーメント多項式証明） |
 | 双対 | `K_s = q²+1 − τ_{q+1−s}`。K1252 は `τ_{q−2} ≥ (q−2)(q+1)+3`（excess 3） |
 | 厳密値 | `K_4(4)=9`, `K_4(5)=10`, `K_4(7)=13`, `K_4(8)=14`, `K_5(5)=16`（SAT 二重実装） |
 | 部分 | `K_4(9)` は `16 ≤ · ≤ 22`、`K_7≥33, K_8≥45, K_9≥57` |
-| 実験 | [inversive-spectrum-20261124](../research/experiments/inversive-spectrum-20261124/report.md) |
+| 実験 | [inversive-spectrum-20261124](../research/experiments/inversive-spectrum-20261124/report.md)・[inversive-moment-certificates-20261124](../research/experiments/inversive-moment-certificates-20261124/report.md) |
 
 `s=q+1` の 1 段だけが全点集合に到達する相転移があり、`e_d = τ_d − d(q+1)` が
 線形設計上界からの超過を測る新しい不変量になる（`e_{q−1}=0`, `e_{q−2}≥3`,

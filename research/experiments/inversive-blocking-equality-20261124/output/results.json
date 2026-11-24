@@ -1,0 +1,71 @@
+{
+ "experiment": "inversive-blocking-equality-20261124",
+ "results": [
+  {
+   "q": 4,
+   "v": 17,
+   "tau_lower_known": 8,
+   "searches": [
+    {
+     "m": 8,
+     "sat": true,
+     "seconds": 0.004,
+     "witness_size": 8
+    }
+   ],
+   "solver": "cadical195",
+   "second_solver": "glucose3",
+   "second_engine_confirm": true,
+   "second_engine_seconds": 0.0,
+   "tau_upper": 8,
+   "tau_exact": true,
+   "K_q": 9,
+   "K_q_equals_qm1_sq": true,
+   "witness": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    8,
+    10
+   ],
+   "witness_path": "research\\experiments\\inversive-blocking-equality-20261124\\output\\blocking_q4_n8.json"
+  },
+  {
+   "q": 5,
+   "v": 26,
+   "tau_lower_known": 10,
+   "searches": [
+    {
+     "m": 10,
+     "sat": true,
+     "seconds": 0.003,
+     "witness_size": 10
+    }
+   ],
+   "solver": "cadical195",
+   "second_solver": "glucose3",
+   "second_engine_confirm": true,
+   "second_engine_seconds": 0.001,
+   "tau_upper": 10,
+   "tau_exact": true,
+   "K_q": 16,
+   "K_q_equals_qm1_sq": true,
+   "witness": [
+    11,
+    13,
+    14,
+    16,
+    18,
+    19,
+    21,
+    23,
+    24,
+    25
+   ],
+   "witness_path": "research\\experiments\\inversive-blocking-equality-20261124\\output\\blocking_q5_n10.json"
+  }
+ ]
+}
