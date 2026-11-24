@@ -1,5 +1,5 @@
 ---
-id: K1295
+id: K1297
 title: "第2乗数族による s-弧上界の改善 — K_s(q) ≤ min((s−2)q, n₂(s,q)) と漸近定数 s−2−d*(s)"
 kind: proposition
 status: proved
