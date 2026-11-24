@@ -65,10 +65,34 @@ root勝敗の主張はしない。batch-31 (Part DL) 採用後最初の新規clo
 - `output/`: raw 2-pass solver出力 (aeNNN.p1.out / aeNNN.p2.out) + append-only
   `status.log` (drive実行後に出版)。
 
-## 結果 (drive-1)
+## 結果 (drive-1・2026-11-24T13:34:29Z..14:48:51Z UTC・ALL-DONE)
 
-(実行中 — 完了後に追記される。追記までは本batchの54キーすべてがUNPROBED
-である。)
+**54/54キーすべて probe-complete (ALL-DONE・session scriptのempty-key guard
+により runbatch空起動なし)。**
+
+- **PASS 54行・すべて honest-label result=2 (LOSS)。WIN 0行・EXHAUSTED
+  0行・TRUNCATED 0行・MISMATCH 0。** 全108 raw出力 (54キー × p1/p2) は
+  `replay,` 行 f1-8 (budget/result/nodes含む) 完全一致を機械確認
+  (2-pass fresh-cold・budget 15M)。
+- 合計 nodes (status.log PASS 54行の和): **223,769,637/pass** (2-pass
+  node-exact・計447,539,274 expansions)。最小 1,706,977 (ae042)・最大
+  8,966,840 (ae034)・平均 4,143,882。nodes数は勝敗ではなく計測値。
+- 実行host構成 (honest): **host2** (`.b32-host2.out` val-gate 4/4) が
+  ae001..ae008 (increment 1 `1e1578a2`)・**host3** (`.b32-host3.out` 4/4)
+  が ae009..ae034 (increments 2-3 `37f51283`/`9c8cd171`)・**host4**
+  (`.b32-host4.out` 4/4・host3の外側timeoutによる環境reset後にcommit pin
+  `9c8cd171` からkit再建) が ae035..ae054 (increments 4-5)。host3の
+  環境resetで未出版の ae035..ae046 ローカル成果 (PASS 12行) は破棄され
+  fileless UNPROBED に戻ったのち host4 が再driveし**同一 nodes 12/12 を
+  再現** (破棄前host3計算値との一致で、host間の追加の決定性検証になった・
+  interim 3 note commit `25f71289` 参照)。
+- **verdict不消費 (honest label)。** class 8730 の54 unknown cost children
+  はこれで probe-level label がすべて LOSS になったが、**canonical adoption
+  は別adoption Part (pinned fail-closed merger `90711961…` 経由) の専権**
+  であり、本batchの成果はhonest labelのみ (閉鎖・被覆・secured・root勝敗の
+  主張はしない)。本batchにWIN行・EXHAUSTED行が存在しないため、scrutiny
+  owner C++第二実装 gate を要する行は本batchにはない (adoption規約自体は
+  別Partの宣言が定める)。
 
 **標準11×11空盤・19 central-reply roots・二石root・S2・class 5804 (55キー
 すべて)・class 8730 (本batchの54キーすべて・WIN/LOSS/EXHAUSTED行を含む) は
