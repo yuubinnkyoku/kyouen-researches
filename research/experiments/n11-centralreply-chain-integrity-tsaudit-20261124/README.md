@@ -47,3 +47,23 @@ experiment dir and pin, and re-check the CO->DB->... subset/delta chain the same
 
 Interpretation guard: this audit strengthens chain-trust (independent cross-language, cross-channel
 verification of the BASE artifacts); it does not advance or consume any verdict. 11x11 UNKNOWN.
+
+## Drive-2 (2026-11-24): extension to the DB waypoint (CU -> DB)
+
+After the Part DB batch-29 37-LOSS canonical adoption landed (merged cache 6,354 rows,
+sha256 04b0a239...), drive-2 extends this audit by one waypoint: CU (6,317 rows) -> DB
+(6,354 rows), i.e. the CU->DB subset/delta check against increment-b29loss37-20261124.
+All gates PASS: strict subset (0 mismatches, 0 lost keys), delta exactly the 37 increment
+keys (all LOSS; the probe-level WIN ab028 stays unconsumed and absent from the cache),
+row values identical, nodes sum 159,325,566 == manifest total, quarantine keys absent,
+DB cache sha256 matches the DB MANIFEST-sha256.txt register and the DB manifest's
+base_cache_sha256 equals the CU pin 30ddad9d..., merger pin 90711961... confirmed,
+git-blob channel verified. Files:
+
+- scripts/audit_chain_integrity_drive2.ts: the executed drive-2 program (header added for publication).
+- output/audit-report-drive2.json: full machine-generated drive-2 report.
+- output/audit-summary-drive2.txt: human-readable summary.
+- MANIFEST-sha256-drive2.txt: sha256 pins of the drive-2 files (drive-1 files unchanged, still pinned by MANIFEST-sha256.txt).
+
+Same interpretation guard as drive-1: no game-search rerun, no coverage/class claim, no
+verdict consumption. 11x11 and all roots stay UNKNOWN.
