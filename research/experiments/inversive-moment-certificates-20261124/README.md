@@ -50,6 +50,11 @@
 (iii) 各 (q,s) で `Y < 0`、(iv) ブロッキングの `Y < 0`、
 (v) `W > 0` を主張範囲で検査する。SAT は使わない。
 
+さらに `independent/`（独立実装）が自前の多項式演算で
+係数展開 196 件・P の非負性 20,090 点・定理A 195 件・定理B 19,104 件・
+定理C 192 件・設計パラメータ 199 件を再検査し、failures 0。
+実ボード上で `ΣP(r)t_r = Y` を 136 subset で直接確認。
+
 ## 成果物
 
 - `scripts/certificates.py`, `output/certificates.json`, `report.md`
