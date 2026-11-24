@@ -1,0 +1,510 @@
+{
+  "batch": "batch-35",
+  "canonical_cache_s5verdict_rows": 6547,
+  "consumed_into_canonical_cache": false,
+  "description": "n11 central-reply closure batch-35: clean (never-probed) 28 unknown cost-children of closure class 16757 (rank 7), derived from the published batch-1 packet not_probed set, post-b33loss45 reaudit",
+  "excluded_unconsumed_win": {
+    "key_id": "b018",
+    "note": "batch-1 (2026-11-22) 2-pass node-exact WIN 15000000,1,3549602, verdict not consumed, scrutiny owner C++ gate pending",
+    "probe_order": 28
+  },
+  "gates": [
+    "G1-source-sha-pins",
+    "G2-batch1-packet-integrity",
+    "G3-closure-rank-anchor-and-accounting",
+    "G4-exact-pair-absent-in-canonical-cache",
+    "G5-not-quarantined",
+    "G6-worklist-first-field-match"
+  ],
+  "keys": [
+    {
+      "batch1_key_id": "b021",
+      "canonical_cache_same_lo_rows_context": 0,
+      "class_mask": [
+        1153204079095185408,
+        65536
+      ],
+      "class_unknown_now_at_selection": 29,
+      "hi": 65536,
+      "key_id": "b021",
+      "legal": 83,
+      "lo": 1153204079095218176,
+      "membership_class_count": 4,
+      "probe_order": "b021",
+      "s5_index": 535179,
+      "serving_class": 16757
+    },
+    {
+      "batch1_key_id": "b022",
+      "canonical_cache_same_lo_rows_context": 0,
+      "class_mask": [
+        1153204079095185408,
+        65536
+      ],
+      "class_unknown_now_at_selection": 29,
+      "hi": 65536,
+      "key_id": "b022",
+      "legal": 79,
+      "lo": 1153204079095316480,
+      "membership_class_count": 4,
+      "probe_order": "b022",
+      "s5_index": 537545,
+      "serving_class": 16757
+    },
+    {
+      "batch1_key_id": "b023",
+      "canonical_cache_same_lo_rows_context": 0,
+      "class_mask": [
+        1153204079095185408,
+        65536
+      ],
+      "class_unknown_now_at_selection": 29,
+      "hi": 65536,
+      "key_id": "b023",
+      "legal": 76,
+      "lo": 1153204079095447552,
+      "membership_class_count": 4,
+      "probe_order": "b023",
+      "s5_index": 539592,
+      "serving_class": 16757
+    },
+    {
+      "batch1_key_id": "b024",
+      "canonical_cache_same_lo_rows_context": 0,
+      "class_mask": [
+        1153204079095185408,
+        65536
+      ],
+      "class_unknown_now_at_selection": 29,
+      "hi": 65536,
+      "key_id": "b024",
+      "legal": 83,
+      "lo": 1153204079095709696,
+      "membership_class_count": 4,
+      "probe_order": "b024",
+      "s5_index": 541610,
+      "serving_class": 16757
+    },
+    {
+      "batch1_key_id": "b025",
+      "canonical_cache_same_lo_rows_context": 0,
+      "class_mask": [
+        1153204079095185408,
+        65536
+      ],
+      "class_unknown_now_at_selection": 29,
+      "hi": 65536,
+      "key_id": "b025",
+      "legal": 87,
+      "lo": 1153204079097282560,
+      "membership_class_count": 4,
+      "probe_order": "b025",
+      "s5_index": 545364,
+      "serving_class": 16757
+    },
+    {
+      "batch1_key_id": "b026",
+      "canonical_cache_same_lo_rows_context": 0,
+      "class_mask": [
+        1153204079095185408,
+        65536
+      ],
+      "class_unknown_now_at_selection": 29,
+      "hi": 65536,
+      "key_id": "b026",
+      "legal": 72,
+      "lo": 1153204079111962624,
+      "membership_class_count": 3,
+      "probe_order": "b026",
+      "s5_index": 546902,
+      "serving_class": 16757
+    },
+    {
+      "batch1_key_id": "b027",
+      "canonical_cache_same_lo_rows_context": 0,
+      "class_mask": [
+        1153204079095185408,
+        65536
+      ],
+      "class_unknown_now_at_selection": 29,
+      "hi": 65536,
+      "key_id": "b027",
+      "legal": 75,
+      "lo": 1153204079128739840,
+      "membership_class_count": 4,
+      "probe_order": "b027",
+      "s5_index": 548070,
+      "serving_class": 16757
+    },
+    {
+      "batch1_key_id": "b028",
+      "canonical_cache_same_lo_rows_context": 0,
+      "class_mask": [
+        1153204079095185408,
+        65536
+      ],
+      "class_unknown_now_at_selection": 29,
+      "hi": 65536,
+      "key_id": "b028",
+      "legal": 83,
+      "lo": 1153204079162294272,
+      "membership_class_count": 4,
+      "probe_order": "b028",
+      "s5_index": 549153,
+      "serving_class": 16757
+    },
+    {
+      "batch1_key_id": "b029",
+      "canonical_cache_same_lo_rows_context": 0,
+      "class_mask": [
+        1153204079095185408,
+        65536
+      ],
+      "class_unknown_now_at_selection": 29,
+      "hi": 65536,
+      "key_id": "b029",
+      "legal": 81,
+      "lo": 1153204079632056320,
+      "membership_class_count": 4,
+      "probe_order": "b029",
+      "s5_index": 551777,
+      "serving_class": 16757
+    },
+    {
+      "batch1_key_id": "b030",
+      "canonical_cache_same_lo_rows_context": 0,
+      "class_mask": [
+        1153204079095185408,
+        65536
+      ],
+      "class_unknown_now_at_selection": 29,
+      "hi": 65536,
+      "key_id": "b030",
+      "legal": 87,
+      "lo": 1153204081242669056,
+      "membership_class_count": 4,
+      "probe_order": "b030",
+      "s5_index": 554104,
+      "serving_class": 16757
+    },
+    {
+      "batch1_key_id": "b031",
+      "canonical_cache_same_lo_rows_context": 0,
+      "class_mask": [
+        1153204079095185408,
+        65536
+      ],
+      "class_unknown_now_at_selection": 29,
+      "hi": 65536,
+      "key_id": "b031",
+      "legal": 86,
+      "lo": 1153204083390152704,
+      "membership_class_count": 4,
+      "probe_order": "b031",
+      "s5_index": 555161,
+      "serving_class": 16757
+    },
+    {
+      "batch1_key_id": "b032",
+      "canonical_cache_same_lo_rows_context": 0,
+      "class_mask": [
+        1153204079095185408,
+        65536
+      ],
+      "class_unknown_now_at_selection": 29,
+      "hi": 65536,
+      "key_id": "b032",
+      "legal": 72,
+      "lo": 1153204147814662144,
+      "membership_class_count": 3,
+      "probe_order": "b032",
+      "s5_index": 556117,
+      "serving_class": 16757
+    },
+    {
+      "batch1_key_id": "b033",
+      "canonical_cache_same_lo_rows_context": 0,
+      "class_mask": [
+        1153204079095185408,
+        65536
+      ],
+      "class_unknown_now_at_selection": 29,
+      "hi": 65536,
+      "key_id": "b033",
+      "legal": 83,
+      "lo": 1153206278118440960,
+      "membership_class_count": 4,
+      "probe_order": null,
+      "s5_index": 558018,
+      "serving_class": 16757
+    },
+    {
+      "batch1_key_id": "b034",
+      "canonical_cache_same_lo_rows_context": 0,
+      "class_mask": [
+        1153204079095185408,
+        65536
+      ],
+      "class_unknown_now_at_selection": 29,
+      "hi": 65536,
+      "key_id": "b034",
+      "legal": 84,
+      "lo": 1153208477141696512,
+      "membership_class_count": 4,
+      "probe_order": null,
+      "s5_index": 558054,
+      "serving_class": 16757
+    },
+    {
+      "batch1_key_id": "b035",
+      "canonical_cache_same_lo_rows_context": 0,
+      "class_mask": [
+        1153204079095185408,
+        65536
+      ],
+      "class_unknown_now_at_selection": 29,
+      "hi": 65536,
+      "key_id": "b035",
+      "legal": 83,
+      "lo": 1153212875188207616,
+      "membership_class_count": 4,
+      "probe_order": null,
+      "s5_index": 558079,
+      "serving_class": 16757
+    },
+    {
+      "batch1_key_id": "b036",
+      "canonical_cache_same_lo_rows_context": 0,
+      "class_mask": [
+        1153204079095185408,
+        65536
+      ],
+      "class_unknown_now_at_selection": 29,
+      "hi": 65536,
+      "key_id": "b036",
+      "legal": 84,
+      "lo": 1171218477604667392,
+      "membership_class_count": 4,
+      "probe_order": null,
+      "s5_index": 558120,
+      "serving_class": 16757
+    },
+    {
+      "batch1_key_id": "b037",
+      "canonical_cache_same_lo_rows_context": 0,
+      "class_mask": [
+        1153204079095185408,
+        65536
+      ],
+      "class_unknown_now_at_selection": 29,
+      "hi": 65536,
+      "key_id": "b037",
+      "legal": 72,
+      "lo": 1157707678722555904,
+      "membership_class_count": 4,
+      "probe_order": null,
+      "s5_index": 558183,
+      "serving_class": 16757
+    },
+    {
+      "batch1_key_id": "b038",
+      "canonical_cache_same_lo_rows_context": 0,
+      "class_mask": [
+        1153204079095185408,
+        65536
+      ],
+      "class_unknown_now_at_selection": 29,
+      "hi": 65792,
+      "key_id": "b038",
+      "legal": 86,
+      "lo": 1152922604118507520,
+      "membership_class_count": 4,
+      "probe_order": null,
+      "s5_index": 558228,
+      "serving_class": 16757
+    },
+    {
+      "batch1_key_id": "b039",
+      "canonical_cache_same_lo_rows_context": 0,
+      "class_mask": [
+        1153204079095185408,
+        65536
+      ],
+      "class_unknown_now_at_selection": 29,
+      "hi": 65792,
+      "key_id": "b039",
+      "legal": 82,
+      "lo": 1152922604185583616,
+      "membership_class_count": 4,
+      "probe_order": null,
+      "s5_index": 558261,
+      "serving_class": 16757
+    },
+    {
+      "batch1_key_id": "b040",
+      "canonical_cache_same_lo_rows_context": 0,
+      "class_mask": [
+        1153204079095185408,
+        65536
+      ],
+      "class_unknown_now_at_selection": 29,
+      "hi": 65792,
+      "key_id": "b040",
+      "legal": 81,
+      "lo": 1152922741557428224,
+      "membership_class_count": 4,
+      "probe_order": null,
+      "s5_index": 558283,
+      "serving_class": 16757
+    },
+    {
+      "batch1_key_id": "b041",
+      "canonical_cache_same_lo_rows_context": 0,
+      "class_mask": [
+        1153204079095185408,
+        65536
+      ],
+      "class_unknown_now_at_selection": 29,
+      "hi": 65792,
+      "key_id": "b041",
+      "legal": 88,
+      "lo": 1152922604118474756,
+      "membership_class_count": 4,
+      "probe_order": null,
+      "s5_index": 558334,
+      "serving_class": 16757
+    },
+    {
+      "batch1_key_id": "b042",
+      "canonical_cache_same_lo_rows_context": 0,
+      "class_mask": [
+        1153204079095185408,
+        65536
+      ],
+      "class_unknown_now_at_selection": 29,
+      "hi": 65792,
+      "key_id": "b042",
+      "legal": 88,
+      "lo": 1152922604118474754,
+      "membership_class_count": 4,
+      "probe_order": null,
+      "s5_index": 558367,
+      "serving_class": 16757
+    },
+    {
+      "batch1_key_id": "b043",
+      "canonical_cache_same_lo_rows_context": 0,
+      "class_mask": [
+        1153204079095185408,
+        65536
+      ],
+      "class_unknown_now_at_selection": 29,
+      "hi": 65792,
+      "key_id": "b043",
+      "legal": 78,
+      "lo": 1152922604118474753,
+      "membership_class_count": 3,
+      "probe_order": null,
+      "s5_index": 558393,
+      "serving_class": 16757
+    },
+    {
+      "batch1_key_id": "b044",
+      "canonical_cache_same_lo_rows_context": 0,
+      "class_mask": [
+        1153204079095185408,
+        65536
+      ],
+      "class_unknown_now_at_selection": 29,
+      "hi": 65792,
+      "key_id": "b044",
+      "legal": 80,
+      "lo": 1152922604118491136,
+      "membership_class_count": 4,
+      "probe_order": null,
+      "s5_index": 558410,
+      "serving_class": 16757
+    },
+    {
+      "batch1_key_id": "b045",
+      "canonical_cache_same_lo_rows_context": 0,
+      "class_mask": [
+        1153204079095185408,
+        65536
+      ],
+      "class_unknown_now_at_selection": 29,
+      "hi": 65792,
+      "key_id": "b045",
+      "legal": 87,
+      "lo": 1152922604118482944,
+      "membership_class_count": 4,
+      "probe_order": null,
+      "s5_index": 558443,
+      "serving_class": 16757
+    },
+    {
+      "batch1_key_id": "b046",
+      "canonical_cache_same_lo_rows_context": 0,
+      "class_mask": [
+        1153204079095185408,
+        65536
+      ],
+      "class_unknown_now_at_selection": 29,
+      "hi": 65792,
+      "key_id": "b046",
+      "legal": 81,
+      "lo": 1152922604152029184,
+      "membership_class_count": 4,
+      "probe_order": null,
+      "s5_index": 558486,
+      "serving_class": 16757
+    },
+    {
+      "batch1_key_id": "b047",
+      "canonical_cache_same_lo_rows_context": 0,
+      "class_mask": [
+        1153204079095185408,
+        65536
+      ],
+      "class_unknown_now_at_selection": 29,
+      "hi": 65792,
+      "key_id": "b047",
+      "legal": 74,
+      "lo": 1152922604135251968,
+      "membership_class_count": 3,
+      "probe_order": null,
+      "s5_index": 558506,
+      "serving_class": 16757
+    },
+    {
+      "batch1_key_id": "b048",
+      "canonical_cache_same_lo_rows_context": 0,
+      "class_mask": [
+        1153204079095185408,
+        65536
+      ],
+      "class_unknown_now_at_selection": 29,
+      "hi": 65792,
+      "key_id": "b048",
+      "legal": 72,
+      "lo": 1152922672837951488,
+      "membership_class_count": 3,
+      "probe_order": null,
+      "s5_index": 558553,
+      "serving_class": 16757
+    }
+  ],
+  "pins": {
+    "batch1_audit": "9929bd9f83a1774f00a3791a340b6084a3109b565f482556c7d1f90f88b68abd",
+    "batch1_batch_keys": "2aaccc941d7aec35c416b27d5cdd10f7fbb82c9801bcf560b61e20be88c331f8",
+    "batch1_status": "559a0884d4c728c05a992bcf144661fbd8212bc09d2c8b56341aebe7b94348b1",
+    "canonical_cache": "973bcd19309eae1d73b26c40c3d6839a2f35baa74658e0794f19da6f9412ca5b",
+    "closure_classes": "6cc33dd731c5d2237291552a91c3f7d60947bba875867fcab10394b533f1a68d",
+    "jsreplay": "845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df",
+    "quarantine": "81d231604d3a095c115135e05ca393d6be83e1aadde4f614d3b5a9cc67d17fe9",
+    "refresh_summary": "38fc4e193cf08cf4efb7830a8bad3d2245bc732380f44c4ee2913e05d5644732",
+    "runbatch": "f591f8c2b67326e53873f8ea70f8d04d18423e7c8ef8359838cbafe8264f3b84"
+  },
+  "schema": "n11-centralreply-closure-batch35-keys-v1",
+  "target_key_count": 28
+}
