@@ -1,0 +1,109 @@
+{
+ "bad": [
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0
+ ],
+ "counts": [
+  8928,
+  360,
+  8928,
+  360,
+  1939,
+  114,
+  1939,
+  114,
+  20431,
+  1516,
+  10530
+ ],
+ "engine_gate": "PASS",
+ "engine_sha": "bd5f22e415a78368c9b798296bc84948d5637decbf3c21a92404d45fb12e3a92",
+ "examples": [
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  []
+ ],
+ "hists": {
+  "D1_class": {
+   "R0": 206,
+   "R1": 218,
+   "R2": 229,
+   "R3": 240,
+   "dl": 4171,
+   "hi": 3864
+  }
+ },
+ "kit": "verify_k1289",
+ "obs": {
+  "z5_lowR_hist": {
+   "R": "0..5",
+   "claim": "finite observation only",
+   "hist": {
+    "0": 215,
+    "2": 214
+   }
+  },
+  "z5band": {
+   "box": "m<=10, g<=20, k in [max(-50,-2m-g),0]",
+   "claim": "finite observation only; NOT universal.",
+   "points": 4500
+  },
+  "z5bed": {
+   "box": "m<=10, j in [-24..0]",
+   "claim": "finite observation only; NOT universal.",
+   "points": 120
+  },
+  "z5far": {
+   "claim": "finite far-row observation only; NOT universal.",
+   "g": "1..18",
+   "k": "-12..-1",
+   "m": "12",
+   "points": 216
+  },
+  "z6_lowR_hist": {
+   "R": "0..5",
+   "claim": "finite observation only",
+   "hist": {
+    "0": 215,
+    "2": 214
+   }
+  },
+  "z6band": {
+   "box": "m<=10, g<=20, k in [max(-50,-2m-g),0]",
+   "claim": "finite observation only; NOT universal.",
+   "points": 4500
+  },
+  "z6bed": {
+   "box": "m<=10, j in [-24..0]",
+   "claim": "finite observation only; NOT universal.",
+   "points": 120
+  },
+  "z6far": {
+   "claim": "finite far-row observation only; NOT universal.",
+   "g": "1..18",
+   "k": "-12..-1",
+   "m": "12",
+   "points": 216
+  }
+ },
+ "overall_bad": 0,
+ "tamper": null,
+ "total_comparisons": 55159
+}
