@@ -186,6 +186,8 @@ K(13)≥10（K1058 訂正）、s(13)=7 はランダム測定値。
   完全 6/7/8/10-アークはそれぞれ **PGL(3,9) の単一軌道**（固定群 60/21/8/720、K1303）。
   3-キャップ（110,565）・4-キャップ（1,769,040）も単一軌道で、
   **全 3-キャップが Grundy 1、全 4-キャップが Grundy 0**（K1304）。
+  5-キャップは 3 個の PGL(3,9) 軌道に分かれ（8,491,392 / 4,245,696 / 2,122,848）、
+  **すべて Grundy 1**（K1305）。
 - 実験: [s-parameter-kyouen-20261125](../research/experiments/s-parameter-kyouen-20261125/report.md)・[parity-characterization-20261125](../research/experiments/parity-characterization-20261125/report.md)
 
 ## 0c. 高速な反転平面構成（新）
