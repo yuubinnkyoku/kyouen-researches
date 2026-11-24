@@ -1,0 +1,16 @@
+K1282 dryrun honest record (chronological):
+dry0 (unrecorded, FAIL): ENGINE_SHA pin constant typo in verify_k1282.py
+ ('...c9b79829bc...' vs correct '...c9b798296bc...') -> AssertionError
+ 'engine sha256 gate FAILED' at startup, rc=1, no stdout. The sha gate
+ correctly detected an altered pin. Fixed the constant.
+dryrun1 (rc=1, bad=1087 in D9): floor lemma beta3z1 expectation bug in
+ the machine: expected '2 if max>=2' but the proved classification is
+ BETA3C: min>=2 multi @3 z1 -> 0 (published K1269-consistent). The
+ machine correctly flagged it fail-closed. Fixed per note F4
+ (min>=2 -> 0; 1s&>=2 -> 2; (1,1) -> 0; (1^t>=3) -> 2).
+dryrun2 (rc=1, bad=601 in D9): singles-v-ord tuple construction bug:
+ H_ordered(R, (x,)[:1] + (x,), z) == (x,x) was being compared against
+ single-token v(x,z,R). Fixed to (x,).
+dryrun3 (rc=0, all green): 42,725 comparisons bad 0,
+ stdout sha256 b2600e453a2a78e0a92e47f7591d79379dd074a3f5c19a86538d6afc9a8f85c8
+ (matches the declaration note), PYTHONHASHSEED=1/99 byte-identical.
