@@ -26,7 +26,35 @@ PASS要件: p1==p2 node-exact。stop rules: WIN rc=45・MISMATCH rc=42・p1/p2 f
 
 ## 実行記録
 
-(本セクションはB outputs/C工程後に更新)
+**原lane (Part DK)**: 宣言 `e411045b` (08:11:41Z) → A scaffold `890e6186` (08:12:48Z) →
+invocation A (P1 完走: result=2 nodes=21,954,135 wall_s=126) → invocation B (P2) 発行時の
+実行環境outage (interim `2117ea737` = `output/INTERIM-P1-NOTE-20261124.md`) でP1 rawを
+含むローカル作業状態が失われ、以降 3.5h 停滞。
+
+**takeover lane** (takeover宣言 `6c92d945ca`・2026-11-24T11:43:17Z・原宣言の
+earliest_takeover 11:41:41Z 経過後・対抗なし機械確認済み): published kit
+(fetch-back sha pin 6/6 一致) から全工程を本host fresh で再実行:
+
+- VG1 re-run (budget 25M): result=2 nodes=3,651,923 — published baseline
+  `first-25m.dkvvg1-host.out` と node-exact (budget字段のみ25M) — PASS
+  (`val-gate/first-25m.dkt-vg1-host.out`・wall_s=19)
+- VG2 re-run (budget 25M): result=2 nodes=5,040,200 — baseline と node-exact — PASS
+  (`val-gate/second-25m.dkt-vg2-host.out`・wall_s=27)
+- invocation A: p1 fresh-cold (budget 25M): **result=2 (honest label)** nodes=21,954,135
+  wall_s=126 (`output/raw/ac013.p1.out`・replay_done付)
+- invocation B: p2 fresh-cold (同条件): result=2 nodes=21,954,135 wall_s=129
+  (`output/raw/ac013.p2.out`・replay_done付)
+- invocation C: runner_dk.sh ac013 (pinned byte-clone): **PASS 25000000,2,21954135
+  (p1==p2 node-exact)** rc=0・`output/status.log` append (2026-11-24T11:49:57Z)
+- 原host pre-wipe P1 観測 (nodes=21,954,135) と本host fresh 両pass が nodes 完全一致
+  (3-way一致・wall_s は非比較字段)。
+
+**ac013 の honest label は budget 25M 2-pass fresh-cold node-exact で result=2
+(15M EXHAUSTED → 20M EXHAUSTED → 25M: 解決)。verdict不消費** (adoption は
+scrutiny owner C++第二実装 gate `9193f5b6…` 通過後の別 adoption Part・pinned
+merger `90711961…` 経由のみ)。batch-30 (class 34269) 54キーに EXHAUSTED 行は
+残っていない (honest label bookkeeping・閉鎖・被覆・root勝敗の主張ではない)。
+nodes数・wall秒数を勝敗や距離として読まない。
 
 ## UNKNOWN担保
 
