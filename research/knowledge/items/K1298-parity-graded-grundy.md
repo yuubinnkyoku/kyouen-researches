@@ -1,5 +1,5 @@
 ---
-id: K1294
+id: K1298
 title: parity-graded 共演ゲーム — 極大安全集合の偶奇が一様なら Grundy は {0,1}
 kind: proposition
 status: proved
