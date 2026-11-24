@@ -147,7 +147,21 @@
     ],
     "completion": "1eead030",
     "kind": "done (P1 package; audit 323 gates all PASS; verdict agreement 8/8; replica 16/16 node-exact; verdict unconsumed)"
-   }
+   },
+  "DF": {
+   "keys": [
+    "aa014",
+    "aa049",
+    "aa051",
+    "aa019",
+    "aa013",
+    "aa020",
+    "aa010",
+    "aa040"
+   ],
+   "completion": "622ad460",
+   "kind": "done (P2 package; takeover 255d43a4 of declaration 59b6540f + amendment 4afac03b; audit 323 gates all PASS; verdict agreements 8/8 (WIN=8); replica 16/16 node-exact; verdict unconsumed)"
+  }
   },
   "loss_adoptions": {
    "aa003": {
@@ -1729,7 +1743,9 @@
     }
    ],
    "thirdimpl": {
-    "state": "open"
+    "state": "done",
+    "part": "DF",
+    "completion": "622ad460"
    },
    "est_crossimpl_2pass_nodes": 20961950
   },
@@ -1950,7 +1966,9 @@
     }
    ],
    "thirdimpl": {
-    "state": "open"
+    "state": "done",
+    "part": "DF",
+    "completion": "622ad460"
    },
    "est_crossimpl_2pass_nodes": 19628288
   },
@@ -2023,7 +2041,9 @@
     }
    ],
    "thirdimpl": {
-    "state": "open"
+    "state": "done",
+    "part": "DF",
+    "completion": "622ad460"
    },
    "est_crossimpl_2pass_nodes": 17141553
   },
@@ -2342,7 +2362,9 @@
     }
    ],
    "thirdimpl": {
-    "state": "open"
+    "state": "done",
+    "part": "DF",
+    "completion": "622ad460"
    },
    "est_crossimpl_2pass_nodes": 18802191
   },
@@ -2415,7 +2437,9 @@
     }
    ],
    "thirdimpl": {
-    "state": "open"
+    "state": "done",
+    "part": "DF",
+    "completion": "622ad460"
    },
    "est_crossimpl_2pass_nodes": 19900117
   },
@@ -3936,7 +3960,9 @@
     }
    ],
    "thirdimpl": {
-    "state": "open"
+    "state": "done",
+    "part": "DF",
+    "completion": "622ad460"
    },
    "est_crossimpl_2pass_nodes": 21043273
   },
@@ -4415,7 +4441,9 @@
     }
    ],
    "thirdimpl": {
-    "state": "open"
+    "state": "done",
+    "part": "DF",
+    "completion": "622ad460"
    },
    "est_crossimpl_2pass_nodes": 17163579
   },
@@ -4601,7 +4629,9 @@
     }
    ],
    "thirdimpl": {
-    "state": "open"
+    "state": "done",
+    "part": "DF",
+    "completion": "622ad460"
    },
    "est_crossimpl_2pass_nodes": 18083236
   },
@@ -4781,9 +4811,9 @@
  "views": {
   "queue_state_counts": {
    "win_total": 46,
-   "thirdimpl_done_win": 21,
+   "thirdimpl_done_win": 29,
    "thirdimpl_claimed_win": 0,
-   "thirdimpl_open_win": 25,
+   "thirdimpl_open_win": 17,
    "loss_total": 8,
    "loss_thirdimpl_done": 1,
    "loss_adoption_done": 8,
@@ -4857,7 +4887,10 @@
     ],
     "n_keys": 8,
     "pinned_nodes_total": 64713638,
-    "est_crossimpl_2pass_total": 152724187
+    "est_crossimpl_2pass_total": 152724187,
+    "status": "done",
+    "done_part": "DF",
+    "completion": "622ad460"
    },
    "P3": {
     "keys": [
@@ -4982,13 +5015,15 @@
  "how_to_verify": "re-fetch the 7 pinned status.logs + batch-keys, verify sha256, parse (PASS b,rc,nodes / WIN-HALT / EXHAUSTED / *-TRUNCATED-RETRY), decisive = first chronological rc=1 (WIN) else rc=2 (LOSS)"
 ,
  "revision": {
-  "rev": 3,
-  "updated_utc": "2026-11-24T05:15Z",
-  "change": "P5 (claimed-5) rows thirdimpl claimed->done (Part CX completion after takeover c48aa56b); thirdimpl_done_win 16->21, thirdimpl_claimed_win 5->0; claimed5 rule marked resolved; thirdimpl_publications CX updated to done; open25 / P2-P4 package views unchanged",
+  "rev": 4,
+  "updated_utc": "2026-11-24T09:12Z",
+  "change": "P2-package 8 rows thirdimpl open->done (Part DF completion 622ad460 after takeover 255d43a4 + amendment 4afac03b of declaration 59b6540f); thirdimpl_done_win 21->29, thirdimpl_open_win 25->17, claimed 0 unchanged; packages.P2 status done; thirdimpl_publications DF appended; open33_by_est_cost snapshot unchanged (rev2/rev3 practice); bookkeeping-only, no solver run, verdict unconsumed",
   "rev1_registry_sha256": "8c4216c68366c6a63e426ee36234b68955ef6f3a873429b0baa207f6dfc66592",
   "rev1_published": "69e391a3",
   "rev2_registry_sha256": "e437af3745fa129734cc1edc76808b49b84d23036109bad6ff93c03c29602483",
   "rev2_published": "fc537f3b",
-  "provenance": "Part CX completion 46687096 (takeover c48aa56b of declaration 1300c10d), experiment n11-centralreply-closure-b28cqwin5-thirdimpl-20261124, audit 178 gates all PASS, verdict agreements 5/5 (WIN=5), replica 10/10 node-exact, verdict unconsumed, 11x11 UNKNOWN"
+  "rev3_registry_sha256": "334f6209d0628cdf8f5c997e92bc5e5e63ae7f450345dc1a8393488941f1f6e9",
+  "rev3_published": "43932d74",
+  "provenance": "Part DF completion 622ad460 (takeover 255d43a4 + amendment 4afac03b of declaration 59b6540f), experiment n11-centralreply-closure-b28p2win8-thirdimpl-20261124, audit 323 gates all PASS (3x byte-identical stdout 96e59f21), replica 16/16 node-exact vs published PIN_RAW_DF, third-impl verdict agreements 8/8 (WIN), tamper battery 4/4 captured + restore green, verdict unconsumed, 11x11 UNKNOWN"
  }
 }
