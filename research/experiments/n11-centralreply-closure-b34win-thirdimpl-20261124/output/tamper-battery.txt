@@ -1,0 +1,12 @@
+TAMPER t1: rc=1 gate=replica-ag001-det-pair (as pre-registered)
+TAMPER t2: rc=1 gate=target-ag002-det-pair (as pre-registered)
+TAMPER t3: rc=1 gate=target-ag001-verdict-agree (as pre-registered)
+TAMPER t4: rc=1 gate=replica-ag001-done (as pre-registered)
+TAMPER t5: rc=1 gate=published-ag002-det-pair (as pre-registered)
+TAMPER t6: rc=1 gate=unadopted-pin-canonical-cache (as pre-registered)
+TAMPER t7: rc=1 gate=anchor-l1a-a-expansions (as pre-registered)
+TAMPER t8: rc=1 gate=neg-ng1-failclosed (as pre-registered)
+TAMPER t9: rc=1 gate=rules-gate-tbl-mismatch0 (as pre-registered)
+TAMPER t10: rc=1 gate=valgate-at2m-s5-1152921504606851072-536870946-node-exact (as pre-registered)
+TAMPER control: CONTROL rc=0 ALL-PASS (as pre-registered)
+TAMPER-BATTERY 10/10 pre-registered gates + control rc=0: PASS

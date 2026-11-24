@@ -1,0 +1,20 @@
+VALGATE key=at2m-s5-1152921504606851072-536870946 budget=2000000 rc=0 out=val-gate/at2m-s5-1152921504606851072-536870946.dv-host.out replay,0,5,98,0,2000000,0,2000000,9,1152921504606851072,536870946
+VALGATE key=at2m-s5-1188950301626860544-536870912 budget=2000000 rc=0 out=val-gate/at2m-s5-1188950301626860544-536870912.dv-host.out replay,0,5,99,0,2000000,0,2000000,9,1188950301626860544,536870912
+VALGATE key=first-15m-s5-1152921504606851072-536870946 budget=15000000 rc=0 out=val-gate/first-15m-s5-1152921504606851072-536870946.dv-host.out replay,0,5,98,0,15000000,2,3651923,18,1152921504606851072,536870946
+VALGATE key=second-15m-s5-1188950301626860544-536870912 budget=15000000 rc=0 out=val-gate/second-15m-s5-1188950301626860544-536870912.dv-host.out replay,0,5,99,0,15000000,2,5040200,26,1188950301626860544,536870912
+P1-FAIL ag001
+P1-FAIL ag002
+2026-11-24T21:17:41Z ag001 PASS 15000000,1,9149084
+2026-11-24T21:17:41Z ag001 WIN-HALT
+2026-11-24T21:18:31Z ag002 PASS 15000000,1,4893014
+2026-11-24T21:18:31Z ag002 WIN-HALT
+RUN key=ag002 tag=a kind=target rc=0 out=output/targets/ag002.a.out third,ag002a,5,88,88,1,5646148,3187475,16.69,1153485622925590528,0,clean,quads=95670,ttOverwrites=1493715,memoPower=22
+RUN key=ag002 tag=b kind=target rc=0 out=output/targets/ag002.b.out third,ag002b,5,88,88,1,5646148,3187475,16.57,1153485622925590528,0,clean,quads=95670,ttOverwrites=1493715,memoPower=22
+RUN key=ag001 tag=a kind=target rc=0 out=output/targets/ag001.a.out third,ag001a,5,85,85,1,10728035,5758042,30.56,1152921505747697664,1032,clean,quads=95670,ttOverwrites=6533731,memoPower=22
+RUN key=ag001 tag=b kind=target rc=0 out=output/targets/ag001.b.out third,ag001b,5,85,85,1,10728035,5758042,30.80,1152921505747697664,1032,clean,quads=95670,ttOverwrites=6533731,memoPower=22
+RUN key=k02a tag=a kind=anchor rc=0 out=output/anchors/k02a.a.out third,k02aa,5,87,87,1,9106337,4991527,26.34,1297036692683751424,68157440,clean,quads=95670,ttOverwrites=4912053,memoPower=22
+RUN key=k02a tag=b kind=anchor rc=0 out=output/anchors/k02a.b.out third,k02ab,5,87,87,1,9106337,4991527,26.06,1297036692683751424,68157440,clean,quads=95670,ttOverwrites=4912053,memoPower=22
+RUN key=l1a tag=a kind=anchor rc=0 out=output/anchors/l1a.a.out third,l1aa,5,116,116,2,7660602,3951175,22.30,13019119616,16448,clean,quads=95670,ttOverwrites=3466722,memoPower=22
+RUN key=l1a tag=b kind=anchor rc=0 out=output/anchors/l1a.b.out third,l1ab,5,116,116,2,7660602,3951175,22.19,13019119616,16448,clean,quads=95670,ttOverwrites=3466722,memoPower=22
+RUN key=ng1 tag=a kind=negative rc=1 out=output/negative/ng1.a.out third,ng1a,5,88,,GATE_FAIL,"legal count mismatch: derived=87 declared=88"
+RUN key=ng2 tag=a kind=negative rc=1 out=output/negative/ng2.a.out third,ng2a,6,87,,GATE_FAIL,"stone count mismatch: bits=5 declared=6"

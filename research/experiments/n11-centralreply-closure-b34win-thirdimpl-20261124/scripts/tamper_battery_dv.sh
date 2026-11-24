@@ -55,8 +55,13 @@ fail=0
 # T1
 root=$(frozen t1); sed -i 's/replay,0,5,85,0,15000000,1,9149084/replay,0,5,85,0,15000000,1,9149085/' "$root/output/raw/ag001.p1.out" || fail=1
 run_case t1 replica-ag001-det-pair || fail=1
-# T2
-root=$(frozen t2); sed -i 's/,1,7777000,/,1,7777001,/' "$root/output/targets/ag002.b.out" || fail=1
+# T2 (generic: increment the b-line expansions field by 1, whatever its value;
+#     first run used a synthetic-kit placeholder constant 7777000 and detected
+#     no drift on the real kit -> buggy record preserved in
+#     output/tamper-battery-t2-buggy-record.txt, corrected to a generic
+#     mutation, disclosed in the B-commit message)
+root=$(frozen t2)
+python3 -c "import sys; p=sys.argv[1]; l=open(p).read().rstrip('\n').split(','); assert l[5]=='1' and l[11]=='clean', 'unexpected shape'; l[6]=str(int(l[6])+1); open(p,'w').write(','.join(l)+'\n')" "$root/output/targets/ag002.b.out" || fail=1
 run_case t2 target-ag002-det-pair || fail=1
 # T3
 root=$(frozen t3); sed -i 's/third,ag001a,5,85,85,1,/third,ag001a,5,85,85,2,/;s/third,ag001b,5,85,85,1,/third,ag001b,5,85,85,2,/' "$root/output/targets/ag001.a.out" "$root/output/targets/ag001.b.out" || fail=1
