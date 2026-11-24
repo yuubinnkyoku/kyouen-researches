@@ -122,3 +122,57 @@ Part CG (batch-28 drive2win thirdimpl・`d5e9acc2`) のdir・outputs・進行、
 batch 1..29各published dir (不変)、BASE caches (`3124461b…`・
 `854800f3…`) read-only不変、fast lane・finite-field・inversive・19root計画、
 EXHAUSTED行の高budget再probe (別宣言条件)・scrutiny owner C++ gate専権事項。
+
+## drive-2 (Part CP takeover・2026-11-24): 25/50キーで誠実打ち切り — インフラ二重故障と事前登録stop rulesによるhard-stop
+
+Part CP drive-2 (`7aaa0525` 21:56Z宣言) の宣言sessionが3.5h無音のため、
+takeover宣言 `87e19b5a` (observed HEAD `4d70d1d1`・2026-11-24) により本hostが
+引き継いだ (Part U/Z/CG/CI takeover基準・publish-then-execute)。実行:
+val-gate fresh 4/4 node-exact (`.d2t-host.out`) → drive-2 waves
+(session script `drive2_local_step.sh` `466f475f…`・runner pinned `f591f8c2…`
+不変・WIN-CONTINUE)。**verdict不消費**。閉鎖・被覆・secured・root勝敗の主張はしない。
+
+- **成果 (drive-2新規・ac005..ac029 25キー・うち23キーは単一writerの
+  clean 2-pass fresh-cold node-exact)**: WIN 3 (ac020 9,765,071 /
+  ac026 3,036,572 / ac027 2,593,751)・LOSS 18・EXHAUSTED 2 (ac006/ac013・
+  nodes=15M both passes・honest UNKNOWN)・incident area 2 (ac028/ac029・
+  下記)。batch-30全体では29/54キーprobed (WIN 5 = 新規3 + drive-1の
+  ac002/ac003・LOSS 22・EXHAUSTED 2)。
+- **ac028/ac029 (racing incident対象キー)**: 最終pass文件は両キーとも
+  complete pair (p1/p2 node-exact・`# replay_done`付き: ac028 5,087,946 /
+  ac029 9,204,933) だが、下記インフラ二重故障により二重実行環境下で書かれた
+  (sidecar 2件も同一値のcomplete pass)。**本キー2つのrowはverdict不消費のまま
+  「incident area」として次drive/監査に委ねる**。
+- **残25キー ac030..ac054 はfileless UNPROBEDのまま** (drive-3は別宣言)。
+
+### インシデント記録 (誠実開示・全文は完了log `research/log/2026-11-24-part-cp-takeover-batch30-drive2.md`)
+
+1. **実行環境リセット1回** (wave 3-key loopが外側300s制限超過): ローカル作業dir全損。
+   published宣言 (`87e19b5a`) からkit復元・sha再検証 (MANIFEST fail=0)・
+   val-gate fresh 4再実施 (4/4 node-exact)・drive-2をac005からやり直し。
+2. **Koyeb remote command失敗 → 孤児プロセス競合**: wave invocation中にインフラ
+   応答失敗。remote側stepプロセスとworkerは存続し、retryInvocationと同一
+   pass file (ac028/ac029) へ競合書込み。status.logに `MISMATCH p1=<値> p2=`
+   (p2空) 2行・TRUNCATED-RETRY 2行・PASS 2行が時系列混在。機械判定:
+   3独立書き込みすべて節点数完全一致 (real determinism divergenceは不在・
+   p2空欄はmid-write読取)。
+3. **事前登録stop rules (`MISMATCH rc=42 hard-stop`) の発火**: pinned
+   orchestration (`drive2_local_step.sh`の `grep MISMATCH` pre-check) が
+   状態として本driveを継続不能にした。「同時書き込みは無理に押し進げず
+   記録して次回へ」規約により、本drive-2は25/50キーで誠実打ち切り。
+   MISMATCH行2件の意味論付与とac028/ac029の扱いはdrive-3宣言が行う。
+
+### kit・出版 (全fetch-back byte一致)
+
+- A′ `1edab9ed`: `drive2_local_step.sh` (sha宣言済) + val-gate 4 sidecar。
+- B checkpoint1 `dd660ce7`: ac005..ac021 34 pass + truncated sidecar 1 + status.log。
+- B checkpoint2 (本commit群): ac022..ac029 16 pass + racing sidecar 2 + status.log (44行)。
+- C (本commit): README追記 + MANIFEST-sha256拡張 (72→139行)。
+- 完了log: research/log/2026-11-24-part-cp-takeover-batch30-drive2.md。
+
+**UNKNOWN担保**: 標準11×11空盤・19 central-reply roots・二石root {49,60}/{59,60}・
+S2 {59,60}・class 1/2/4・class 10968・class 23964・class 5343・class 2251・
+**class 34269 (本batch-30の54キーすべて・EXHAUSTED行・incident対象キーを含む)**・
+class 34948 は本driveの実行・出版のどの時点でもUNKNOWNのまま。nodes数・wall秒数を
+勝敗として読まない。WIN採用は scrutiny owner C++第二実装 gate `9193f5b6…` 通過後の
+別adoption Part (pinned merger `90711961…` 経由) のみ。row-auditは別セッション。
