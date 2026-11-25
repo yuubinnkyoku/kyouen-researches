@@ -1,0 +1,378 @@
+{
+ "input_pins": {
+  "geometry_sha256": "146be80b5794462c2444e983fc4c4a6e76d3b464bfd5e86fac14509024100b54",
+  "cache_sha256": "60e0dc3476920d4e99043dd4f132398ea72e4dfdcd9f3dbb8fc686ba65bc28c6",
+  "supply_sha256": "31f0d29b820a69508af0c352c22f09b244bff5b9ae79476679047cdb160ea954",
+  "candidate_ledger_sha256": "2a4c2382d812102f8132339c871b07ee998e933c80da876759e51e84f64fda80",
+  "profile_sha256": "6b2971e53059ac36af7bf161a61d90d65f85e604e27b93d013e7a2853fdceddc",
+  "quarantine_sha256": "81d231604d3a095c115135e05ca393d6be83e1aadde4f614d3b5a9cc67d17fe9"
+ },
+ "class_key": "1297036830122704896:0",
+ "coverage": [
+  47,
+  51,
+  100,
+  108
+ ],
+ "s5_children": 107,
+ "s5_unknown": 100,
+ "unknown_exclusive": 39,
+ "unknown_shared": 61,
+ "proxy_exclusive_sum": 204900633,
+ "proxy_total": 549330115,
+ "gates": "3384 classes; 115 candidates; 62 UNKNOWN/53 WIN/0 LOSS; supply 4562 (1:2688 2:1874); my class 107 children, 100 unknown (39 exclusive / 61 shared); ledger cross-check OK; quarantine/content/focus/sbd disjointness OK",
+ "exclusive_probe_order": [
+  {
+   "order": 1,
+   "key": "1153062242230468608:68719476736",
+   "legal": 84,
+   "live_parents": 1,
+   "truncated_cost_proxy_nodes": 5041585,
+   "bin_win_count": 55,
+   "bin_sample_size": 765
+  },
+  {
+   "order": 2,
+   "key": "1297036830122835968:0",
+   "legal": 87,
+   "live_parents": 1,
+   "truncated_cost_proxy_nodes": 5041585,
+   "bin_win_count": 55,
+   "bin_sample_size": 765
+  },
+  {
+   "order": 3,
+   "key": "1297036830139482112:0",
+   "legal": 89,
+   "live_parents": 1,
+   "truncated_cost_proxy_nodes": 5041585,
+   "bin_win_count": 55,
+   "bin_sample_size": 765
+  },
+  {
+   "order": 4,
+   "key": "1297037929634332672:0",
+   "legal": 89,
+   "live_parents": 1,
+   "truncated_cost_proxy_nodes": 5041585,
+   "bin_win_count": 55,
+   "bin_sample_size": 765
+  },
+  {
+   "order": 5,
+   "key": "1297177567611060224:0",
+   "legal": 87,
+   "live_parents": 1,
+   "truncated_cost_proxy_nodes": 5041585,
+   "bin_win_count": 55,
+   "bin_sample_size": 765
+  },
+  {
+   "order": 6,
+   "key": "3602879839336398848:0",
+   "legal": 87,
+   "live_parents": 1,
+   "truncated_cost_proxy_nodes": 5041585,
+   "bin_win_count": 55,
+   "bin_sample_size": 765
+  },
+  {
+   "order": 7,
+   "key": "10412322888236404736:0",
+   "legal": 85,
+   "live_parents": 1,
+   "truncated_cost_proxy_nodes": 5041585,
+   "bin_win_count": 55,
+   "bin_sample_size": 765
+  },
+  {
+   "order": 8,
+   "key": "1152921504607895552:553648640",
+   "legal": 99,
+   "live_parents": 1,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 9,
+   "key": "1152930300699873280:536870944",
+   "legal": 99,
+   "live_parents": 1,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 10,
+   "key": "1161928703861592064:536870944",
+   "legal": 95,
+   "live_parents": 1,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 11,
+   "key": "1297036830122704896:8",
+   "legal": 96,
+   "live_parents": 1,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 12,
+   "key": "1297036830122704896:16",
+   "legal": 95,
+   "live_parents": 1,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 13,
+   "key": "1297036830122704896:128",
+   "legal": 93,
+   "live_parents": 1,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 14,
+   "key": "1297036830122704896:16384",
+   "legal": 98,
+   "live_parents": 1,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 15,
+   "key": "1297036830122704896:65536",
+   "legal": 91,
+   "live_parents": 1,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 16,
+   "key": "1297036830122704896:67108864",
+   "legal": 91,
+   "live_parents": 1,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 17,
+   "key": "1297036830122704897:0",
+   "legal": 99,
+   "live_parents": 1,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 18,
+   "key": "1297036830122704900:0",
+   "legal": 97,
+   "live_parents": 1,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 19,
+   "key": "1297036830122704928:0",
+   "legal": 91,
+   "live_parents": 1,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 20,
+   "key": "1297036830122705152:0",
+   "legal": 99,
+   "live_parents": 1,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 21,
+   "key": "1297036830122708992:0",
+   "legal": 95,
+   "live_parents": 1,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 22,
+   "key": "1297036830122713088:0",
+   "legal": 91,
+   "live_parents": 1,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 23,
+   "key": "1297036830122737664:0",
+   "legal": 96,
+   "live_parents": 1,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 24,
+   "key": "1297036830122770432:0",
+   "legal": 97,
+   "live_parents": 1,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 25,
+   "key": "1297036830256922624:0",
+   "legal": 91,
+   "live_parents": 1,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 26,
+   "key": "1297036830391140352:0",
+   "legal": 94,
+   "live_parents": 1,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 27,
+   "key": "1297036831196446720:0",
+   "legal": 97,
+   "live_parents": 1,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 28,
+   "key": "1297037105000611840:0",
+   "legal": 95,
+   "live_parents": 1,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 29,
+   "key": "1369094424160632832:0",
+   "legal": 94,
+   "live_parents": 1,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 30,
+   "key": "1585267206274416640:0",
+   "legal": 93,
+   "live_parents": 1,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 31,
+   "key": "1873497582426128384:0",
+   "legal": 92,
+   "live_parents": 1,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 32,
+   "key": "5908722848550092800:0",
+   "legal": 90,
+   "live_parents": 1,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 33,
+   "key": "10376294091217440768:8",
+   "legal": 98,
+   "live_parents": 1,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 34,
+   "key": "10376294091217440768:131072",
+   "legal": 94,
+   "live_parents": 1,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 35,
+   "key": "10376294091217440768:33554432",
+   "legal": 94,
+   "live_parents": 1,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 36,
+   "key": "10376294091217440768:67108864",
+   "legal": 98,
+   "live_parents": 1,
+   "truncated_cost_proxy_nodes": 5234938,
+   "bin_win_count": 5,
+   "bin_sample_size": 1241
+  },
+  {
+   "order": 37,
+   "key": "1152921504606851072:536870945",
+   "legal": 100,
+   "live_parents": 1,
+   "truncated_cost_proxy_nodes": 5932112,
+   "bin_win_count": 0,
+   "bin_sample_size": 535
+  },
+  {
+   "order": 38,
+   "key": "1297036830122704896:16777216",
+   "legal": 101,
+   "live_parents": 1,
+   "truncated_cost_proxy_nodes": 5932112,
+   "bin_win_count": 0,
+   "bin_sample_size": 535
+  },
+  {
+   "order": 39,
+   "key": "10376294091217440768:268435456",
+   "legal": 102,
+   "live_parents": 1,
+   "truncated_cost_proxy_nodes": 5932112,
+   "bin_win_count": 0,
+   "bin_sample_size": 535
+  }
+ ],
+ "status_guard": "selection only; no verdict read or written; the 11x11 empty board, the two-stone root {60,27}, and third moves 100/108 remain UNKNOWN"
+}

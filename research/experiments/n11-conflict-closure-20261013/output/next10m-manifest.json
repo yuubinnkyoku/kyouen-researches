@@ -1,0 +1,124 @@
+{
+  "budget": 10000000,
+  "capture": true,
+  "completed_candidates": 6,
+  "counts": {
+    "LOSS": 4,
+    "UNKNOWN": 1,
+    "WIN": 1
+  },
+  "memo_power": 20,
+  "order": "count",
+  "residual_header_sha256": "5976935dcfccb9b5a26fa68f8de20868ce45363dd8c372dcd67d9b841167e7f5",
+  "rows": [
+    {
+      "canonical_children": 41,
+      "input_sha256": "2648c0249bbad472d8084b555214c9a8489725edbe75b5d27fca8dd9c8c22d1f",
+      "legal": 82,
+      "mask": [
+        1153484454560268580,
+        0
+      ],
+      "nodes": 3184967,
+      "output_sha256": "b004ad95c9541443688da5e7336982e49fe7be53a884c88f7fb04dbcadac9ce5",
+      "s5_index": 126899,
+      "status": "SOLVED",
+      "trace_path": "build/n11-conflict-native-traces/next10m-126899.csv",
+      "trace_sha256": "1597e9c7a8d455e951938e7919114a6375be8964795284c3007fab2259083a40",
+      "verdict": 2,
+      "wall_seconds": 39.387
+    },
+    {
+      "canonical_children": 43,
+      "input_sha256": "3f29876f84895b443c3563367838dfb6bf9141c73229c7110e9fbf27abeba0d3",
+      "legal": 86,
+      "mask": [
+        1153484454560268400,
+        0
+      ],
+      "nodes": 3550700,
+      "output_sha256": "5133592ff36114becb47f723af564de9b5d9d9764f7fabf8a05e89c100383fc8",
+      "s5_index": 137694,
+      "status": "SOLVED",
+      "trace_path": "build/n11-conflict-native-traces/next10m-137694.csv",
+      "trace_sha256": "7722b1f9879196057091120a4ccaf7afc7364a1f919d80cd68c47f3bda43f182",
+      "verdict": 2,
+      "wall_seconds": 50.178
+    },
+    {
+      "canonical_children": 42,
+      "input_sha256": "e90d36745a2e94ec1c51e07db8b5c64db856908be7a2abb8cee2cd2735e9d979",
+      "legal": 84,
+      "mask": [
+        1153484454560432160,
+        0
+      ],
+      "nodes": 4774013,
+      "output_sha256": "735506d4c6b1064ceacb89391653ab65c6d8d3af58fec23b29db3bcc95ec7cae",
+      "s5_index": 143240,
+      "status": "SOLVED",
+      "trace_path": "build/n11-conflict-native-traces/next10m-143240.csv",
+      "trace_sha256": "d460d3defb2745f4702aa064f16dda0b662148293da126941276e6b3600d1158",
+      "verdict": 2,
+      "wall_seconds": 68.925
+    },
+    {
+      "canonical_children": 43,
+      "input_sha256": "f095f51b5974407f9df79dd4fc7803be9e7fc5a4f81e411d86a99da7298ed152",
+      "legal": 86,
+      "mask": [
+        1171516445255794720,
+        0
+      ],
+      "nodes": 10000000,
+      "output_sha256": "092439e19a5e374d4b4057c3824fb40ca99a88004de55b7e283d594017f3c865",
+      "s5_index": 144019,
+      "status": "NODE_LIMIT",
+      "trace_path": null,
+      "trace_sha256": null,
+      "verdict": 0,
+      "wall_seconds": 76.344
+    },
+    {
+      "canonical_children": 44,
+      "input_sha256": "78470e356dbad16908b1620ee7355bab4853535cd47ae1fa8ffb5e64112fb092",
+      "legal": 88,
+      "mask": [
+        1162526838187098144,
+        0
+      ],
+      "nodes": 4152553,
+      "output_sha256": "96a96d934a9c241eefc0d058260d64d35a5bb398a3915a879f5be71ec6474845",
+      "s5_index": 144095,
+      "status": "SOLVED",
+      "trace_path": "build/n11-conflict-native-traces/next10m-144095.csv",
+      "trace_sha256": "4f68c5794552084f26d0b0dafcbe09d3666a0a6513b8a81b88a510da6f81374c",
+      "verdict": 1,
+      "wall_seconds": 25.001
+    },
+    {
+      "canonical_children": 44,
+      "input_sha256": "c6ac62860ad949b44da00aba6e1ad76a9f5d3480c0d37a35bbad5c73af859f7c",
+      "legal": 88,
+      "mask": [
+        1152924012867747840,
+        128
+      ],
+      "nodes": 3570981,
+      "output_sha256": "ba31b8118556844ed37ddcadfdf3303df394aa6383a5e613eb5658f63494d5ba",
+      "s5_index": 220231,
+      "status": "SOLVED",
+      "trace_path": "build/n11-conflict-native-traces/next10m-220231.csv",
+      "trace_sha256": "a039058d06a0eb26642190160ee1e8e57e517033bdf68a59ec612e36b76a8bce",
+      "verdict": 2,
+      "wall_seconds": 26.963
+    }
+  ],
+  "schema": "n11-conflict-probes-v1",
+  "solver_binary_sha256": "5ce15397e5c3e77e70cee19bfb0038e4f050e10cde86e418f915276eaa6867b2",
+  "solver_source_sha256": "48e51bb56288e090f51996eb4d9a208ca0458d11f73ba61bf5f08dade25db446",
+  "source": "research/experiments/n11-s5-s6-quotient-20261013/output/pilots.json",
+  "source_sha256": "771df57ea88bcd7311c20752db706c0d6b00cba3391fd1a1b9d53ddce5e88f70",
+  "trust": "completed labels solver-trusted until independent terminal-only verification; UNKNOWN is not evidence",
+  "workers": 2
+}

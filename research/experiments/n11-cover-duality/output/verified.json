@@ -1,0 +1,81 @@
+{
+  "cases": [
+    {
+      "n": 3,
+      "safe_edges": 20,
+      "all_classes": 8,
+      "dual_total": "2/2",
+      "max_dual_load": "2/2",
+      "lower_bound": 2,
+      "upper_bound": 2,
+      "independent_status": "VERIFIED"
+    },
+    {
+      "n": 5,
+      "safe_edges": 237,
+      "all_classes": 110,
+      "dual_total": "11/2",
+      "max_dual_load": "2/2",
+      "lower_bound": 6,
+      "upper_bound": 6,
+      "independent_status": "VERIFIED"
+    },
+    {
+      "n": 7,
+      "safe_edges": 1040,
+      "all_classes": 501,
+      "dual_total": "24/2",
+      "max_dual_load": "2/2",
+      "lower_bound": 12,
+      "upper_bound": 12,
+      "independent_status": "VERIFIED"
+    },
+    {
+      "n": 9,
+      "safe_edges": 2999,
+      "all_classes": 1466,
+      "dual_total": "41/2",
+      "max_dual_load": "2/2",
+      "lower_bound": 21,
+      "upper_bound": 21,
+      "independent_status": "VERIFIED"
+    },
+    {
+      "n": 11,
+      "safe_edges": 6894,
+      "all_classes": 3396,
+      "dual_total": "62/2",
+      "max_dual_load": "2/2",
+      "lower_bound": 31,
+      "upper_bound": 31,
+      "independent_status": "VERIFIED"
+    },
+    {
+      "n": 13,
+      "safe_edges": 13707,
+      "all_classes": 6779,
+      "dual_total": "87/2",
+      "max_dual_load": "2/2",
+      "lower_bound": 44,
+      "upper_bound": 44,
+      "independent_status": "VERIFIED"
+    },
+    {
+      "n": 15,
+      "safe_edges": 24468,
+      "all_classes": 12133,
+      "dual_total": "116/2",
+      "max_dual_load": "2/2",
+      "lower_bound": 58,
+      "upper_bound": 58,
+      "independent_status": "VERIFIED"
+    }
+  ],
+  "n11_empty_root_outcome": "UNKNOWN",
+  "rejected_mutations": [
+    "removed_class",
+    "false_coverage",
+    "infeasible_dual",
+    "duplicate_class"
+  ]
+}

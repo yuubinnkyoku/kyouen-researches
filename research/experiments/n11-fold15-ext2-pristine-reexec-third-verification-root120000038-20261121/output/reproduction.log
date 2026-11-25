@@ -1,0 +1,94 @@
+n11-fold15-ext2-pristine-reexec-third-verification-root120000038-20261121 - reproduction.log
+(all times UTC 2026-11-21; third-verification harness battery record)
+
+04:01-04:03  Environment: third-lane sandbox (fourth lane of the fold12-16
+             ext2 third-verification series, after K1184/K1185/K1186).
+             Latest main re-fetched before any action (codeload tarball,
+             HEAD b619261ae0243573031c4314582d580c51b7712f, K1186 part 3).
+             Commit listing, experiment-dir listing and log listing showed
+             no prior third-verification of K1179; the finished third
+             verifications of the ext2 lattice are fold20 (K1174) / fold21
+             (K1168) / fold29 cert-extract (K1172) / fold22 (K1170) /
+             fold24 (K1165) / fold12 (K1184) / fold13 (K1185) / fold14
+             (K1186).  Single-owner declaration note published as commit
+             04b4ed9d7f279b299d71eb2749728aa741116fe5; fetch-back byte-OK
+             (7,022 bytes; cmp clean vs local draft).
+04:03-04:04  Manual pin trial: 5 published files fetched from pinned commit
+             2e1bc1eab0fa7f66810d839ca91dd2fae3a50962 (K1179 part 1, all 5
+             subject files in one commit); all five SHA-256 == published
+             values (README 20a2d104..., recon 7757cb51..., verifier
+             ade19de2..., audit 6800759e..., reproduction 579f178a...).
+04:04        Recon trial at ref_b 04b4ed9d (declaration commit): rc=0, W15
+             tree 39 files (12 Git blob pins + 22 SHA-256 pins + fold11/
+             fold12/fold13/fold14/fold15 chain machines), four subset-check
+             lines "subset-check fold11 pins 12 pin256 10 subset of fold15
+             12+22 OK" ... "... fold14 pins 12 pin256 19 subset of fold15
+             12+22 OK", final line "RECONSTRUCTED W at ... PINS 12 PIN256
+             22", about 10 s wall.
+04:05        Verifier trial: rc=0, 105.9 s wall, first line
+             "ALL 981 GATES PASS; audit written to ..."; output audit
+             sha256 6800759ea5e8... and byte-identical to published
+             external-audit.json (101,443 bytes); gate count 981,
+             all_gates_pass true.  Verifier scratch is the absolute pinned
+             path /home/user/work/f13ext/runs15 (sequential use only).
+04:05-04:06  Manual tamper probes on isolated copytree copies (1-byte
+             XOR 0x20 at the third-lane-chosen offsets):
+             worklist inputs/worklist.csv @277555 -> "GATE FAILED [i]:
+             W blob pin inputs/worklist.csv", no audit write (I-section
+             legacy blob pin gate); K1114 certificate
+             k1114/certs/win8-root-00000000012000003800080009000000-
+             20261120.n11 @877666 -> "GATE FAILED [i]: W sha256 pin
+             k1114/certs/...", no audit write (I-section sha256 pin
+             gate).  Tamper offsets are distinct from the publisher-
+             tested @208888/@919191 and from every other third/second
+             lane's offset groups @{7777,500000}/{253,17522}/{1234,
+             17522,4096}/{150000,654321}/(fold12 third)/{222999,1111444}
+             (fold13 third)/{333444,999111} (fold14 third)/{117777,
+             777777}/{300111,740321}.  worklist 360,834 bytes (same
+             series file as fold12/13/14 third lanes, sha 6d8a449e...);
+             K1114 certificate 1,171,958 bytes (sha 5a135903...).
+             Production W re-checked unchanged in both cases.
+04:06        Third-verification harness written
+             (verify_k1179_fold15ext2_third_20261121.py, 19,208 bytes,
+             stages pin/recon/rerun/tampers/finalize, stdlib only,
+             fail-closed; built from the published K1186 fold14 harness
+             by a byte-asserted surgical replacement of the fold15
+             constants).
+04:07-04:14  Battery 1 (fresh base) full pipeline: pin 10 gates,
+             recon 16 gates (two pinned refs, 39 files each, diff -r
+             clean, about 7.7 s per ref), rerun 19 gates (04:07:16-
+             04:14:21; 4 pristine verifier runs ALL 981 GATES PASS at
+             105.6-106.0 s each, audit byte-identical to published and
+             to run1), tampers 8 gates (XOR 0x01 @277555/@877666 on
+             isolated copies, fail-closed, production W re-checked
+             unchanged).  Finalize audit: 53 gates, 6,858 bytes, sha256
+             cfb6879a8f2d97d478942c33973bcd87eb774abc15fe94f591ff537747185b7f.
+04:14-04:21  Battery 2 (same base, every stage re-run incl. republication
+             fetch): rerun 04:14:38-04:21:42; finalize audit
+             byte-identical to battery 1 (same sha256, cmp clean).
+04:21-04:29  Battery 3 (isolated base + isolated cwd/HOME/TMPDIR +
+             PYTHONHASHSEED=random): rerun 04:21:59-04:29:03; finalize
+             audit byte-identical to battery 1 (same sha256, cmp clean).
+04:29        Acceptance items (declaration note, 5 items):
+             (1) 5-file pin 10/10 gates PASS; (2) recon two refs both
+             rc=0, subset chain fold11(12+10) subset fold12(12+13)
+             subset fold13(12+16) subset fold14(12+19) subset fold15
+             (12+22) machine-checked in every battery, W15 trees 39
+             files, diff -r byte-identical, in every battery; (3) 4
+             pristine verifier reruns per battery x 3 batteries (12
+             total, plus 1 manual trial = 13) all rc=0, ALL 981 GATES
+             PASS, audit byte-identical to the published
+             external-audit.json; (4) 2 fail-closed tampers at
+             third-lane offsets per battery (6 total, plus 2 manual
+             XOR-0x20 probes) all rc!=0 with the correct GATE FAILED
+             [i] message and no audit write, production W unchanged
+             after; (5) harness audit byte-deterministic across 3
+             executions (fresh base / same base re-run / isolated +
+             PYTHONHASHSEED=random).  All five acceptance items PASS.
+             Rows closed: none.  11x11 empty board / two-stone roots /
+             S2 / class 1-2-4 verdicts: UNKNOWN, unchanged.
+04:30+       Publication part 1/3 (next commit): experiment dir 4 files
+             (README.md, scripts/verify_k1179_fold15ext2_third_20261121.py,
+             output/harness-audit.json, output/reproduction.log) pushed to
+             main as a single push_files commit; fetch-back byte
+             verification at the pinned commit follows before parts 2-3.

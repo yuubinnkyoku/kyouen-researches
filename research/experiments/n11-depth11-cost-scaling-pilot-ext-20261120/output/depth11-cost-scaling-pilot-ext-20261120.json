@@ -1,0 +1,452 @@
+{
+ "cap": 30000000,
+ "cost_scaling": [
+  {
+   "d10": {
+    "capped": false,
+    "loss": false,
+    "ms": 1611,
+    "nodes": 671421,
+    "wall_s": 1.8
+   },
+   "d11": {
+    "capped": false,
+    "loss": false,
+    "ms": 1566,
+    "nodes": 684989,
+    "wall_s": 1.7
+   },
+   "label": "K1069-REFUTED-D10-idx0",
+   "ordering": "andclose1",
+   "ratio_nodes_d11_over_d10": 1.0202,
+   "root": "00000000000000003800000008001220"
+  },
+  {
+   "d10": {
+    "capped": false,
+    "loss": false,
+    "ms": 1718,
+    "nodes": 815057,
+    "wall_s": 1.9
+   },
+   "d11": {
+    "capped": false,
+    "loss": false,
+    "ms": 1776,
+    "nodes": 837946,
+    "wall_s": 1.9
+   },
+   "label": "K1069-REFUTED-D10-idx0",
+   "ordering": "andclose0",
+   "ratio_nodes_d11_over_d10": 1.0281,
+   "root": "00000000000000003800000008001220"
+  },
+  {
+   "d10": {
+    "capped": false,
+    "loss": false,
+    "ms": 719,
+    "nodes": 331659,
+    "wall_s": 0.9
+   },
+   "d11": {
+    "capped": false,
+    "loss": false,
+    "ms": 720,
+    "nodes": 333456,
+    "wall_s": 0.9
+   },
+   "label": "K1069-REFUTED-D10-idx12",
+   "ordering": "andclose1",
+   "ratio_nodes_d11_over_d10": 1.0054,
+   "root": "00000000000000801202000000880100"
+  },
+  {
+   "d10": {
+    "capped": false,
+    "loss": false,
+    "ms": 900,
+    "nodes": 443007,
+    "wall_s": 1.1
+   },
+   "d11": {
+    "capped": false,
+    "loss": false,
+    "ms": 921,
+    "nodes": 445323,
+    "wall_s": 1.1
+   },
+   "label": "K1069-REFUTED-D10-idx12",
+   "ordering": "andclose0",
+   "ratio_nodes_d11_over_d10": 1.0052,
+   "root": "00000000000000801202000000880100"
+  },
+  {
+   "d10": {
+    "capped": false,
+    "loss": false,
+    "ms": 6171,
+    "nodes": 2950904,
+    "wall_s": 6.3
+   },
+   "d11": {
+    "capped": false,
+    "loss": false,
+    "ms": 6541,
+    "nodes": 3087215,
+    "wall_s": 6.7
+   },
+   "label": "K1069-REFUTED-D10-idx24",
+   "ordering": "andclose1",
+   "ratio_nodes_d11_over_d10": 1.0462,
+   "root": "00000000000000889042000080000000"
+  },
+  {
+   "d10": {
+    "capped": false,
+    "loss": false,
+    "ms": 1281,
+    "nodes": 638671,
+    "wall_s": 1.4
+   },
+   "d11": {
+    "capped": false,
+    "loss": false,
+    "ms": 1340,
+    "nodes": 643518,
+    "wall_s": 1.5
+   },
+   "label": "K1069-REFUTED-D10-idx24",
+   "ordering": "andclose0",
+   "ratio_nodes_d11_over_d10": 1.0076,
+   "root": "00000000000000889042000080000000"
+  },
+  {
+   "d10": {
+    "capped": false,
+    "loss": false,
+    "ms": 14519,
+    "nodes": 5720576,
+    "wall_s": 14.7
+   },
+   "d11": {
+    "capped": false,
+    "loss": false,
+    "ms": 15372,
+    "nodes": 6056617,
+    "wall_s": 15.5
+   },
+   "label": "K1069-REFUTED-D10-idx36",
+   "ordering": "andclose1",
+   "ratio_nodes_d11_over_d10": 1.0587,
+   "root": "00000010000000801202000000400400"
+  },
+  {
+   "d10": {
+    "capped": false,
+    "loss": false,
+    "ms": 1456,
+    "nodes": 687760,
+    "wall_s": 1.6
+   },
+   "d11": {
+    "capped": false,
+    "loss": false,
+    "ms": 1488,
+    "nodes": 702056,
+    "wall_s": 1.7
+   },
+   "label": "K1069-REFUTED-D10-idx36",
+   "ordering": "andclose0",
+   "ratio_nodes_d11_over_d10": 1.0208,
+   "root": "00000010000000801202000000400400"
+  }
+ ],
+ "d10_label_check": [
+  {
+   "observed": {
+    "capped": false,
+    "loss": false,
+    "ms": 1611,
+    "nodes": 671421,
+    "wall_s": 1.8
+   },
+   "ordering": "andclose1",
+   "root": "00000000000000003800000008001220",
+   "status": "consistent-with-REFUTED-D10"
+  },
+  {
+   "observed": {
+    "capped": false,
+    "loss": false,
+    "ms": 1718,
+    "nodes": 815057,
+    "wall_s": 1.9
+   },
+   "ordering": "andclose0",
+   "root": "00000000000000003800000008001220",
+   "status": "consistent-with-REFUTED-D10"
+  },
+  {
+   "observed": {
+    "capped": false,
+    "loss": false,
+    "ms": 719,
+    "nodes": 331659,
+    "wall_s": 0.9
+   },
+   "ordering": "andclose1",
+   "root": "00000000000000801202000000880100",
+   "status": "consistent-with-REFUTED-D10"
+  },
+  {
+   "observed": {
+    "capped": false,
+    "loss": false,
+    "ms": 900,
+    "nodes": 443007,
+    "wall_s": 1.1
+   },
+   "ordering": "andclose0",
+   "root": "00000000000000801202000000880100",
+   "status": "consistent-with-REFUTED-D10"
+  },
+  {
+   "observed": {
+    "capped": false,
+    "loss": false,
+    "ms": 6171,
+    "nodes": 2950904,
+    "wall_s": 6.3
+   },
+   "ordering": "andclose1",
+   "root": "00000000000000889042000080000000",
+   "status": "consistent-with-REFUTED-D10"
+  },
+  {
+   "observed": {
+    "capped": false,
+    "loss": false,
+    "ms": 1281,
+    "nodes": 638671,
+    "wall_s": 1.4
+   },
+   "ordering": "andclose0",
+   "root": "00000000000000889042000080000000",
+   "status": "consistent-with-REFUTED-D10"
+  },
+  {
+   "observed": {
+    "capped": false,
+    "loss": false,
+    "ms": 14519,
+    "nodes": 5720576,
+    "wall_s": 14.7
+   },
+   "ordering": "andclose1",
+   "root": "00000010000000801202000000400400",
+   "status": "consistent-with-REFUTED-D10"
+  },
+  {
+   "observed": {
+    "capped": false,
+    "loss": false,
+    "ms": 1456,
+    "nodes": 687760,
+    "wall_s": 1.6
+   },
+   "ordering": "andclose0",
+   "root": "00000010000000801202000000400400",
+   "status": "consistent-with-REFUTED-D10"
+  }
+ ],
+ "date": "2026-11-20",
+ "gates": [
+  {
+   "detail": {
+    "git_blob": "c132cc6425eee3feaeef1d697dd74f968cfedb59"
+   },
+   "name": "runner-blob-pin",
+   "pass": true
+  },
+  {
+   "detail": {
+    "00000000000000003800000008001220": "00000000000000003800000008001200",
+    "00000000000000801202000000880100": "00000000000000801202000000880000",
+    "00000000000000889042000080000000": "00000000000000889042000000000000",
+    "00000010000000801202000000400400": "00000010000000801202000000400000"
+   },
+   "name": "raw-child-rebuild",
+   "pass": true
+  },
+  {
+   "detail": {
+    "refuted_n": 38,
+    "selected": [
+     "00000000000000003800000008001220",
+     "00000000000000801202000000880100",
+     "00000000000000889042000080000000",
+     "00000010000000801202000000400400"
+    ],
+    "sha256": "22953ae16a6002d87638531f2ca9fd286f6736b834fa296e5648505ada9074dc"
+   },
+   "name": "k1069-classification-pin",
+   "pass": true
+  },
+  {
+   "detail": {
+    "missing": [],
+    "planned": 16,
+    "present": 16
+   },
+   "name": "all-probes-present",
+   "pass": true
+  },
+  {
+   "detail": {
+    "bad": []
+   },
+   "name": "pilot-d6-control-all-probes",
+   "pass": true
+  },
+  {
+   "detail": [
+    {
+     "observed": {
+      "capped": false,
+      "loss": false,
+      "ms": 1611,
+      "nodes": 671421,
+      "wall_s": 1.8
+     },
+     "ordering": "andclose1",
+     "root": "00000000000000003800000008001220",
+     "status": "consistent-with-REFUTED-D10"
+    },
+    {
+     "observed": {
+      "capped": false,
+      "loss": false,
+      "ms": 1718,
+      "nodes": 815057,
+      "wall_s": 1.9
+     },
+     "ordering": "andclose0",
+     "root": "00000000000000003800000008001220",
+     "status": "consistent-with-REFUTED-D10"
+    },
+    {
+     "observed": {
+      "capped": false,
+      "loss": false,
+      "ms": 719,
+      "nodes": 331659,
+      "wall_s": 0.9
+     },
+     "ordering": "andclose1",
+     "root": "00000000000000801202000000880100",
+     "status": "consistent-with-REFUTED-D10"
+    },
+    {
+     "observed": {
+      "capped": false,
+      "loss": false,
+      "ms": 900,
+      "nodes": 443007,
+      "wall_s": 1.1
+     },
+     "ordering": "andclose0",
+     "root": "00000000000000801202000000880100",
+     "status": "consistent-with-REFUTED-D10"
+    },
+    {
+     "observed": {
+      "capped": false,
+      "loss": false,
+      "ms": 6171,
+      "nodes": 2950904,
+      "wall_s": 6.3
+     },
+     "ordering": "andclose1",
+     "root": "00000000000000889042000080000000",
+     "status": "consistent-with-REFUTED-D10"
+    },
+    {
+     "observed": {
+      "capped": false,
+      "loss": false,
+      "ms": 1281,
+      "nodes": 638671,
+      "wall_s": 1.4
+     },
+     "ordering": "andclose0",
+     "root": "00000000000000889042000080000000",
+     "status": "consistent-with-REFUTED-D10"
+    },
+    {
+     "observed": {
+      "capped": false,
+      "loss": false,
+      "ms": 14519,
+      "nodes": 5720576,
+      "wall_s": 14.7
+     },
+     "ordering": "andclose1",
+     "root": "00000010000000801202000000400400",
+     "status": "consistent-with-REFUTED-D10"
+    },
+    {
+     "observed": {
+      "capped": false,
+      "loss": false,
+      "ms": 1456,
+      "nodes": 687760,
+      "wall_s": 1.6
+     },
+     "ordering": "andclose0",
+     "root": "00000010000000801202000000400400",
+     "status": "consistent-with-REFUTED-D10"
+    }
+   ],
+   "name": "d10-label-consistency",
+   "pass": true
+  }
+ ],
+ "inputs": {
+  "k1069_classification": {
+   "path": "research/experiments/n11-residual78-39livewitness-depth10-sweep-20261120/output/witness-39live-root-depth10-sweep-20261120.json",
+   "selection": [
+    0,
+    12,
+    24,
+    36
+   ],
+   "selection_rule": "sorted 38 REFUTED-D10 roots of the K1069 classification, indices {0,12,24,36}",
+   "sha256": "22953ae16a6002d87638531f2ca9fd286f6736b834fa296e5648505ada9074dc"
+  },
+  "targets": {
+   "00000000000000003800000008001220": {
+    "bit": 5,
+    "label": "K1069-REFUTED-D10-idx0"
+   },
+   "00000000000000801202000000880100": {
+    "bit": 8,
+    "label": "K1069-REFUTED-D10-idx12"
+   },
+   "00000000000000889042000080000000": {
+    "bit": 31,
+    "label": "K1069-REFUTED-D10-idx24"
+   },
+   "00000010000000801202000000400400": {
+    "bit": 10,
+    "label": "K1069-REFUTED-D10-idx36"
+   }
+  }
+ },
+ "interpretation_guard": "Node counts under cap are deterministic and machine-independent cost units. Capped/timeout probes are lower bounds of cost and evidence in NO direction. This extension changes no verdict: REFUTED-D10 is not a LOSS proof, a depth-11 loss=false is not a depth-11 closure proof nor a REFUTED-D11 classification, and this is not a depth-11 sweep undertaking. The standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60} and classes 1/2/4 all remain UNKNOWN.",
+ "parallelism": 1,
+ "protocol": "cost measurement only; sequential single probe per invocation; same runner/argv form as the K1075 sweep driver with depth in {10,11}; pilot_d6 control required on every probe; K1069 REFUTED-D10 label consistency gated at depth 10; environmental timeout recorded as unverified-on-this-hardware, never as evidence",
+ "runner_git_blob": "c132cc6425eee3feaeef1d697dd74f968cfedb59",
+ "schema": "n11-depth11-cost-scaling-pilot-ext-20261120-v1",
+ "timeout_s": 280
+}

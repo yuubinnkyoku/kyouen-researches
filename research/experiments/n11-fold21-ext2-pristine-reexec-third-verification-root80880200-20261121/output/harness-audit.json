@@ -1,0 +1,109 @@
+{
+  "all_gates_pass": true,
+  "gate_count": 1394,
+  "interpretation_guard": [
+    "This is a third reproduction of K1168's external verification, not a new receipt fold.",
+    "No S6 row is newly closed and no WIN/LOSS verdict is added.",
+    "WIN8-D10 applies only to its eight-stone root; REFUTED-D10 is not a LOSS proof.",
+    "The standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+  ],
+  "publication_files": {
+    "README.md": {
+      "bytes": 11812,
+      "git_blob_sha1": "eab04922b4d3371c51fe0c7e40ef728a3d74ae0b",
+      "sha256": "5c4f121fbd2c1479decfe35994695c65ed73c5a01b8690fc1316c6b3c9790e66"
+    },
+    "external-audit.json": {
+      "bytes": 135723,
+      "git_blob_sha1": "563050eb2b708153cc92788e6215938e9fa104f4",
+      "sha256": "80f004403e2538914605a22c0df8d9a86bf575d896eadfc70d14531b92767a63"
+    },
+    "reconstruct_inputs.py": {
+      "bytes": 10765,
+      "git_blob_sha1": "4678b43fbd82d127390b604bef9f83e1ef7d3887",
+      "sha256": "a70b79834bb38fa3b02a563b75ae5cdf528a789e4f65150a5a9bcce775230095"
+    },
+    "reproduction.log": {
+      "bytes": 5430,
+      "git_blob_sha1": "1570b53a5281e3270425ab315f7fbfd306d71d5b",
+      "sha256": "1058c67b7f99b0d5dcf4aae74fe50683d01e2d8668ca72d36ff30429d29619f5"
+    },
+    "verify_fold21_external_20261120.py": {
+      "bytes": 50946,
+      "git_blob_sha1": "6ba29c30655aecb9d1ac06eef621483095f1b874",
+      "sha256": "322ad6ca93676ad3bdebcaae23eb91a2f12a17ababc14f430b5029529332482d"
+    }
+  },
+  "published_audit_bytes": 135723,
+  "published_audit_sha256": "80f004403e2538914605a22c0df8d9a86bf575d896eadfc70d14531b92767a63",
+  "reconstruction": {
+    "pins": {
+      "fold20_chain_subset": true,
+      "git_blob": 12,
+      "sha256": 40
+    },
+    "pub": {
+      "byte_identical": true,
+      "file_count": 4,
+      "total_bytes": 137719,
+      "tree_sha256": "c3e01b925db1677535cfcd28c293e549dc7ebbc935655b05473941a9ffc2a783"
+    },
+    "publication_pins_sha256": "1501dfabc47b2fdfc9a7fd21a12e2b2182ef44bfe9d6f12e90945a68b137076d",
+    "schema": "n11-k1168-third-reconstruction-v1",
+    "source_ref": "429232fd7e8322f5ca11af567c8e9f4ca6d303ad",
+    "w": {
+      "byte_identical": true,
+      "file_count": 57,
+      "total_bytes": 13574816,
+      "tree_sha256": "c3b4f7cbbe09baa74b4a39dbb9e9c1fde1927d3b882c665c5f564a53d91c54c6"
+    }
+  },
+  "schema": "n11-k1168-fold21-ext2-pristine-third-verification-v1",
+  "source_main_ref": "429232fd7e8322f5ca11af567c8e9f4ca6d303ad",
+  "subject": {
+    "knowledge_item": "K1168",
+    "receipt": "K1130/fold21",
+    "root_hex": "00000000000000801202000800880200"
+  },
+  "tamper_probes": {
+    "all_fail_closed": true,
+    "per_run": 2,
+    "total": 6
+  },
+  "three_runs_byte_identical": true,
+  "verifier_runs": [
+    {
+      "all_gates_pass": true,
+      "audit_bytes": 135723,
+      "audit_sha256": "80f004403e2538914605a22c0df8d9a86bf575d896eadfc70d14531b92767a63",
+      "cwd": "same",
+      "embedded_tamper_probes": 2,
+      "environment": "default",
+      "gate_count": 1394,
+      "returncode": 0,
+      "run": 1
+    },
+    {
+      "all_gates_pass": true,
+      "audit_bytes": 135723,
+      "audit_sha256": "80f004403e2538914605a22c0df8d9a86bf575d896eadfc70d14531b92767a63",
+      "cwd": "same",
+      "embedded_tamper_probes": 2,
+      "environment": "default",
+      "gate_count": 1394,
+      "returncode": 0,
+      "run": 2
+    },
+    {
+      "all_gates_pass": true,
+      "audit_bytes": 135723,
+      "audit_sha256": "80f004403e2538914605a22c0df8d9a86bf575d896eadfc70d14531b92767a63",
+      "cwd": "isolated",
+      "embedded_tamper_probes": 2,
+      "environment": "isolated HOME + PYTHONHASHSEED=random",
+      "gate_count": 1394,
+      "returncode": 0,
+      "run": 3
+    }
+  ]
+}

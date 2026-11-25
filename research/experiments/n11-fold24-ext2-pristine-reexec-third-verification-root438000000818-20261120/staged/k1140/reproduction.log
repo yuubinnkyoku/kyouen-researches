@@ -1,0 +1,47 @@
+all 61 input pins verified
+frontier chain verified: 6259/495507 -> ... -> 6222/492688
+post-fold10 frontier verified: 6206/491497, solved_s6 1642, incidence 11810, residual 72
+post-fold11 frontier verified: 6201/491110, solved_s6 1647, incidence 11803, residual 68
+post-fold12 frontier verified: 6193/490526, solved_s6 1655, incidence 11790, residual 65
+post-fold13 frontier verified: 6184/489813, solved_s6 1664, incidence 11775, residual 62
+post-fold14 frontier verified: 6179/489440, solved_s6 1669, incidence 11765, residual 58
+post-fold15 frontier verified: 6173/488954, solved_s6 1675, incidence 11753, residual 55
+post-fold16 frontier verified: 6168/488575, solved_s6 1680, incidence 11743, residual 51
+post-fold17 frontier verified: 6161/488094, solved_s6 1687, incidence 11729, residual 48
+post-fold18 frontier verified: 6157/487800, solved_s6 1691, incidence 11721, residual 45
+post-fold19 frontier verified: 6152/487418, solved_s6 1696, incidence 11711, residual 41
+post-fold20 frontier verified: 6144/486819, solved_s6 1704, incidence 11701, residual 38
+post-fold21 frontier verified: 6136/486243, solved_s6 1712, incidence 11683, residual 35
+post-fold22 frontier verified: 6130/485759, solved_s6 1718, incidence 11671, residual 32
+post-fold23 frontier verified: 6126/485438, solved_s6 1722, incidence 11666, residual 29
+fold23 machine pristine rerun verified: stdout ends }
+k1136 certificate record verified: 19/19 gates, sha, header, geometry, mobility 50
+K1097 refsolve record crosscheck verified: 27 gates, footprint partition, plan untouched
+WIN8 receipt geometry verified: method A (224 ops) == method B (28 subsets), 28 canonical rows
+{
+ "status": "fold-complete",
+ "frontier_after": {
+  "solved_s6_in_manifest": 1725,
+  "remaining_s5_orbits": 173,
+  "unique_remaining_s6": 6123,
+  "sum_remaining_cost": 485213,
+  "s6_needed_by_open_classes": 4431,
+  "cost_needed_by_open_classes": 351661,
+  "parent_row_incidence": 11660
+ },
+ "closed_target_rows_total": 86,
+ "residual_target_rows": 26,
+ "rederived_rows": [
+  "00000000000000003800000008002040",
+  "00000000000000043800000008080000",
+  "00000000000000043800000008100000"
+ ],
+ "target_rows": [
+  "00000000000000003800000008002040",
+  "00000000000000043800000008080000",
+  "00000000000000043800000008100000"
+ ],
+ "extra_rows": [],
+ "output": "fold24/output/win8-root438000000818-receipt-fold-20261120.json",
+ "sha256": "c4ab76d3cb7eba5c1ab8e1830c43d17bf9a771f511b66e7e8573864f3f2402c7"
+}

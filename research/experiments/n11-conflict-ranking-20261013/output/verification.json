@@ -1,0 +1,28 @@
+{
+  "candidate_count": 28,
+  "changed_legal_count_rejected": true,
+  "concrete_win_branch_count": 7519,
+  "cpp_binary_sha256": "026068843e7dfcbe7e3323cd57bb00dc2a33d5787842915784548a281bef3508",
+  "cpp_census": {
+    "canonical_child_incidence": 1960,
+    "child_parent_multiplicity": {
+      "1": 1774,
+      "2": 93
+    },
+    "cross_parent_duplicate_incidence": 93,
+    "distinct_children": 1867,
+    "extra_merges": 0,
+    "legal_edges": 2532,
+    "parent_extra_merge_count": 0,
+    "parents": 28,
+    "passed": true,
+    "shared_children": 93,
+    "stabilizer_orbits": 1960
+  },
+  "cpp_source_sha256": "5fb97c584de3c82ab47fd7b4a481ee3ea72b822a804c86d223e89f0ea15136ed",
+  "geometry": "translated integer determinant C++; direct D4-image containment Python; no Board or solver imports",
+  "passed": true,
+  "ranking_sha256": "690bd26a4b21dd61cd146da7d37b6e989fcc0227a987754587297f046cf969e3",
+  "separately_verified_replacement_choices": 116,
+  "verifier_sha256": "080a6d6d6b56837b88bfd08533ac8ed83030d08a2d7547bd82c022d6ccf9ee07"
+}

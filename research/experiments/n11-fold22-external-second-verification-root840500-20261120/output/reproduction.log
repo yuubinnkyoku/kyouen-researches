@@ -1,0 +1,39 @@
+fold22 (K1132) external second verification: reproduction log
+==============================================================
+
+single process, stdlib only, deterministic audit JSON (no clock fields).
+W rebuilt from pinned Git refs by scripts/reconstruct_inputs.py; verified
+byte-identical at the declaration-head ref and at the fast-forwarded main:
+
+  ref A (declaration-time HEAD): 9a1c7a98f39103013a0221f4f63fc10eba6a9061
+  ref B (verification-time main): 34c29854c64286bbb1792ff28dc1973aef341e20
+
+$ python3 scripts/reconstruct_inputs.py <W_A> <pub_A> 9a1c7a98f39103013a0221f4f63fc10eba6a9061
+  publication pins re-fetched: 4/4 byte-identical
+  RECONSTRUCTED W: PINS 12 PIN256 43 (55 input pins), chain machines placed
+  diff <pub_A> <pub_B> and diff <W_A> <W_B>: byte-identical
+
+$ python3 scripts/verify_fold22_external_20261120.py <W> <pub> out.json
+  run 1 (ref-B W, verifier cwd):                ALL 1463 GATES PASS,
+      audit sha256 b4b082f8cb0aa943aad7458ae0c6eb179a27704c5ea781eb18907d869c97522c
+  run 2 (ref-B W, same cwd, repeat):            ALL 1463 GATES PASS, audit byte-identical
+  run 3 (ref-B W, isolated HOME + PYTHONHASHSEED=random): ALL 1463 GATES PASS, audit byte-identical
+  run 4 (ref-A W, fresh):                       ALL 1463 GATES PASS, audit byte-identical
+
+per-run internals, recorded fail-closed by the verifier's own execution matrix:
+  x1 pristine fold22 machine (same cwd):      receipt sha f6e011f4a16e6fe257694c3cd3ed90490623f84e1c24113c3f55df68ba3e3488
+  x2 pristine (same cwd, repeat):            receipt byte-identical (f6e011f4...)
+  x3 pristine (isolated tree/cwd/HOME):       receipt byte-identical (f6e011f4...)
+  x4 pristine (isolated + PYTHONHASHSEED=random): receipt byte-identical (f6e011f4...)
+  t1 worklist.csv XOR@1099 (copytree-isolated W): rc!=0, 'input blob mismatch', no output write
+  t2 K1125 certificate XOR@21212 (copytree-isolated W): rc!=0, 'input sha256 mismatch', no output write
+  all pristine machine runs with FOLD_PREVERIFIED_CHAIN unset; each nests the fold21 machine
+  pristine rerun gate (which transitively re-runs fold20/fold19/fold18 machine checks);
+  a full fold22 machine run measures ~7.9 s
+
+gate sections in the audit: P 13 / I 63 / C 1358 / X 15 / T 14 (total 1463), all PASS.
+verifier runtime: ~34.4 s wall, ~28.5 s user per execution (6 fold22 machine launches incl. tamper).
+
+11x11 empty board / two-stone roots {49,60}/{59,60} / S2 {59,60} / classes 1/2/4: UNKNOWN
+(no game value is asserted by this verification; rows closed by the receipt are bookkeeping,
+not LOSS verdicts)

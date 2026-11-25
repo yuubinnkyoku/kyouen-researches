@@ -1,0 +1,384 @@
+{
+  "agreement": "PASS",
+  "audit": {
+    "alignments": {
+      "cost64a": {
+        "added_bit_over_common_s5": 55,
+        "d4_transform": 0,
+        "deleted_bit_in_source": 55,
+        "legal_moves": 64
+      },
+      "cost71d": {
+        "added_bit_over_common_s5": 10,
+        "d4_transform": 0,
+        "deleted_bit_in_source": 10,
+        "legal_moves": 71
+      },
+      "cost75e": {
+        "added_bit_over_common_s5": 119,
+        "d4_transform": 2,
+        "deleted_bit_in_source": 1,
+        "legal_moves": 75
+      },
+      "cost76c": {
+        "added_bit_over_common_s5": 98,
+        "d4_transform": 4,
+        "deleted_bit_in_source": 88,
+        "legal_moves": 76
+      },
+      "cost76d": {
+        "added_bit_over_common_s5": 113,
+        "d4_transform": 7,
+        "deleted_bit_in_source": 43,
+        "legal_moves": 76
+      },
+      "cost77e": {
+        "added_bit_over_common_s5": 106,
+        "d4_transform": 2,
+        "deleted_bit_in_source": 14,
+        "legal_moves": 77
+      }
+    },
+    "candidate_root_visit_multiplicity_histogram_before_root_dedup": {
+      "2": 11510,
+      "4": 918,
+      "6": 20
+    },
+    "duplicate_s7_roots": [
+      {
+        "legal_first_replies": 55,
+        "occurrences": [
+          {
+            "candidate_bit": 10,
+            "s6_group": "cost64a"
+          },
+          {
+            "candidate_bit": 55,
+            "s6_group": "cost71d"
+          }
+        ],
+        "root_hex": "00000000000000801282000040000400"
+      },
+      {
+        "legal_first_replies": 64,
+        "occurrences": [
+          {
+            "candidate_bit": 98,
+            "s6_group": "cost71d"
+          },
+          {
+            "candidate_bit": 10,
+            "s6_group": "cost76c"
+          }
+        ],
+        "root_hex": "00000004000000801202000040000400"
+      },
+      {
+        "legal_first_replies": 60,
+        "occurrences": [
+          {
+            "candidate_bit": 98,
+            "s6_group": "cost64a"
+          },
+          {
+            "candidate_bit": 55,
+            "s6_group": "cost76c"
+          }
+        ],
+        "root_hex": "00000004000000801282000040000000"
+      },
+      {
+        "legal_first_replies": 66,
+        "occurrences": [
+          {
+            "candidate_bit": 106,
+            "s6_group": "cost71d"
+          },
+          {
+            "candidate_bit": 10,
+            "s6_group": "cost77e"
+          }
+        ],
+        "root_hex": "00000400000000801202000040000400"
+      },
+      {
+        "legal_first_replies": 60,
+        "occurrences": [
+          {
+            "candidate_bit": 106,
+            "s6_group": "cost64a"
+          },
+          {
+            "candidate_bit": 55,
+            "s6_group": "cost77e"
+          }
+        ],
+        "root_hex": "00000400000000801282000040000000"
+      },
+      {
+        "legal_first_replies": 72,
+        "occurrences": [
+          {
+            "candidate_bit": 106,
+            "s6_group": "cost76c"
+          },
+          {
+            "candidate_bit": 98,
+            "s6_group": "cost77e"
+          }
+        ],
+        "root_hex": "00000404000000801202000040000000"
+      },
+      {
+        "legal_first_replies": 67,
+        "occurrences": [
+          {
+            "candidate_bit": 113,
+            "s6_group": "cost71d"
+          },
+          {
+            "candidate_bit": 10,
+            "s6_group": "cost76d"
+          }
+        ],
+        "root_hex": "00020000000000801202000040000400"
+      },
+      {
+        "legal_first_replies": 59,
+        "occurrences": [
+          {
+            "candidate_bit": 113,
+            "s6_group": "cost64a"
+          },
+          {
+            "candidate_bit": 55,
+            "s6_group": "cost76d"
+          }
+        ],
+        "root_hex": "00020000000000801282000040000000"
+      },
+      {
+        "legal_first_replies": 72,
+        "occurrences": [
+          {
+            "candidate_bit": 113,
+            "s6_group": "cost76c"
+          },
+          {
+            "candidate_bit": 98,
+            "s6_group": "cost76d"
+          }
+        ],
+        "root_hex": "00020004000000801202000040000000"
+      },
+      {
+        "legal_first_replies": 73,
+        "occurrences": [
+          {
+            "candidate_bit": 106,
+            "s6_group": "cost76d"
+          },
+          {
+            "candidate_bit": 113,
+            "s6_group": "cost77e"
+          }
+        ],
+        "root_hex": "00020400000000801202000040000000"
+      },
+      {
+        "legal_first_replies": 68,
+        "occurrences": [
+          {
+            "candidate_bit": 119,
+            "s6_group": "cost71d"
+          },
+          {
+            "candidate_bit": 10,
+            "s6_group": "cost75e"
+          }
+        ],
+        "root_hex": "00800000000000801202000040000400"
+      },
+      {
+        "legal_first_replies": 59,
+        "occurrences": [
+          {
+            "candidate_bit": 119,
+            "s6_group": "cost64a"
+          },
+          {
+            "candidate_bit": 55,
+            "s6_group": "cost75e"
+          }
+        ],
+        "root_hex": "00800000000000801282000040000000"
+      },
+      {
+        "legal_first_replies": 67,
+        "occurrences": [
+          {
+            "candidate_bit": 98,
+            "s6_group": "cost75e"
+          },
+          {
+            "candidate_bit": 119,
+            "s6_group": "cost76c"
+          }
+        ],
+        "root_hex": "00800004000000801202000040000000"
+      },
+      {
+        "legal_first_replies": 70,
+        "occurrences": [
+          {
+            "candidate_bit": 106,
+            "s6_group": "cost75e"
+          },
+          {
+            "candidate_bit": 119,
+            "s6_group": "cost77e"
+          }
+        ],
+        "root_hex": "00800400000000801202000040000000"
+      },
+      {
+        "legal_first_replies": 66,
+        "occurrences": [
+          {
+            "candidate_bit": 113,
+            "s6_group": "cost75e"
+          },
+          {
+            "candidate_bit": 119,
+            "s6_group": "cost76d"
+          }
+        ],
+        "root_hex": "00820000000000801202000040000000"
+      }
+    ],
+    "method": "lifted 3x3 determinant",
+    "pairwise_raw_intersections": {
+      "cost64a__cost71d": 55,
+      "cost64a__cost75e": 59,
+      "cost64a__cost76c": 60,
+      "cost64a__cost76d": 59,
+      "cost64a__cost77e": 60,
+      "cost71d__cost75e": 68,
+      "cost71d__cost76c": 64,
+      "cost71d__cost76d": 67,
+      "cost71d__cost77e": 66,
+      "cost75e__cost76c": 67,
+      "cost75e__cost76d": 66,
+      "cost75e__cost77e": 70,
+      "cost76c__cost76d": 72,
+      "cost76c__cost77e": 72,
+      "cost76d__cost77e": 73
+    },
+    "parent_stabilizer": [0],
+    "per_group": {
+      "cost64a": {
+        "all_unordered_second_move_pairs": 2016,
+        "directed_first_reply_edges_reenumerated": 3472,
+        "distinct_raw_8stone_states": 1736,
+        "legal_first_moves": 64,
+        "safe_unordered_pairs": 1736
+      },
+      "cost71d": {
+        "all_unordered_second_move_pairs": 2485,
+        "directed_first_reply_edges_reenumerated": 4252,
+        "distinct_raw_8stone_states": 2126,
+        "legal_first_moves": 71,
+        "safe_unordered_pairs": 2126
+      },
+      "cost75e": {
+        "all_unordered_second_move_pairs": 2775,
+        "directed_first_reply_edges_reenumerated": 4638,
+        "distinct_raw_8stone_states": 2319,
+        "legal_first_moves": 75,
+        "safe_unordered_pairs": 2319
+      },
+      "cost76c": {
+        "all_unordered_second_move_pairs": 2850,
+        "directed_first_reply_edges_reenumerated": 4812,
+        "distinct_raw_8stone_states": 2406,
+        "legal_first_moves": 76,
+        "safe_unordered_pairs": 2406
+      },
+      "cost76d": {
+        "all_unordered_second_move_pairs": 2850,
+        "directed_first_reply_edges_reenumerated": 4710,
+        "distinct_raw_8stone_states": 2355,
+        "legal_first_moves": 76,
+        "safe_unordered_pairs": 2355
+      },
+      "cost77e": {
+        "all_unordered_second_move_pairs": 2926,
+        "directed_first_reply_edges_reenumerated": 4928,
+        "distinct_raw_8stone_states": 2464,
+        "legal_first_moves": 77,
+        "safe_unordered_pairs": 2464
+      }
+    },
+    "s6_group_multiplicity_histogram": {
+      "1": 11510,
+      "2": 918,
+      "3": 20
+    },
+    "totals": {
+      "candidate_s7_root_occurrences": 439,
+      "directed_first_reply_edges_after_root_dedup": 25834,
+      "directed_first_reply_edges_before_root_dedup": 26812,
+      "distinct_d4_8stone_orbits": 12448,
+      "distinct_raw_8stone_states": 12448,
+      "distinct_states_reached_from_multiple_s6_groups": 938,
+      "duplicate_raw_s7_root_masks": 15,
+      "explicit_four_point_checks_all_candidate_pairs_early_exit": 1030080,
+      "explicit_four_point_checks_distinct_safe_states": 871360,
+      "explicit_four_point_checks_safe_pair_visits": 938420,
+      "first_reply_edges_removed_by_root_dedup": 978,
+      "potential_duplicate_first_reply_fraction_after_root_dedup": 0.518154370209801,
+      "potential_duplicate_first_reply_fraction_before_root_dedup": 0.5357302700283455,
+      "potential_duplicate_first_reply_visits_after_root_dedup": 13386,
+      "potential_duplicate_first_reply_visits_before_root_dedup": 14364,
+      "safe_unordered_move_pairs": 13406,
+      "states_reached_from_exactly_three_s6_groups": 20,
+      "states_reached_from_exactly_two_s6_groups": 918,
+      "unique_d4_s7_root_orbits": 424,
+      "unique_raw_s7_roots": 424
+    },
+    "unique_s7_root_visit_multiplicity_histogram_after_root_dedup": {
+      "2": 11510,
+      "3": 938
+    }
+  },
+  "baseline": {
+    "canonical_class2_head": "1405/6443/509457/4713/373180",
+    "main_head": "1dde798765b4b63c9e225cfd7599c68322b4c595",
+    "runner_blob_sha1": "0a4a86f6828dc010c89ff17596054336a6b6091f",
+    "runner_cache_lifetime": "freshEngine() per candidate; no cross-candidate memo/forbidden-triple cache reuse",
+    "runner_forbidden_triple_entries": 131072,
+    "runner_forbidden_triple_probe_limit": 48,
+    "runner_memo_entries": 262144,
+    "runner_memo_key": "raw four-word occupancy; no D4 canonicalization",
+    "runner_memo_probe_limit": 64,
+    "runner_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/class4_child1_runner_v16.ts",
+    "s5_hex": "00000000000000801202000040000000"
+  },
+  "independent_verification": {
+    "agreement": "PASS",
+    "compared": [
+      "all six D4 alignments and legal-move counts",
+      "all per-group safe-pair and directed-edge counts",
+      "all 15 pairwise raw intersections",
+      "all 15 duplicate S7 root masks and source incidences",
+      "all multiplicity histograms and aggregate totals"
+    ],
+    "method": "full 4x4 Bareiss determinant"
+  },
+  "interpretation": "15 duplicate raw S7 roots can be removed before search. After that, 13,386 first-reply visits are combinatorially redundant across the 424 unique roots if every legal reply is reached. This is only a structural upper bound, not measured TT hits or node savings. Early cutoffs, table saturation and search order can reduce actual reuse. No game verdict is inferred.",
+  "methods": [
+    "lifted 3x3 determinant",
+    "full 4x4 Bareiss determinant"
+  ],
+  "schema": "n11-class2-shared-s6-overlap-independent-audit-v1"
+}

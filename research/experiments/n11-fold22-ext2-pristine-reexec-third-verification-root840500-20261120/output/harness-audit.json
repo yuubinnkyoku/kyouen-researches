@@ -1,0 +1,140 @@
+{
+ "all_gates_pass": true,
+ "date": "2026-11-20",
+ "finalize_gate_count": 9,
+ "interpretation_guard": [
+  "This record re-verifies bookkeeping, byte reproducibility, input pins and fail-closed defense of the published K1167 external second verification only.",
+  "No row is closed by this record and no game value is claimed: fold22 receipt closures are frontier bookkeeping, not LOSS verdicts.",
+  "WIN8-D10 certificates prove only the game tree of their eight-stone roots; REFUTED-D10 is not a LOSS proof.",
+  "Node counts, solved counts and coverage counts are not win/loss readings.",
+  "The standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, and classes 1/2/4 remain UNKNOWN."
+ ],
+ "rerun_outcomes": [
+  {
+   "audit_sha256": "b4b082f8cb0aa943aad7458ae0c6eb179a27704c5ea781eb18907d869c97522c",
+   "byte_identical_to_published_audit": true,
+   "run": "r1"
+  },
+  {
+   "audit_sha256": "b4b082f8cb0aa943aad7458ae0c6eb179a27704c5ea781eb18907d869c97522c",
+   "byte_identical_to_published_audit": true,
+   "run": "r2"
+  },
+  {
+   "audit_sha256": "b4b082f8cb0aa943aad7458ae0c6eb179a27704c5ea781eb18907d869c97522c",
+   "byte_identical_to_published_audit": true,
+   "run": "r3"
+  },
+  {
+   "audit_sha256": "b4b082f8cb0aa943aad7458ae0c6eb179a27704c5ea781eb18907d869c97522c",
+   "byte_identical_to_published_audit": true,
+   "run": "r4"
+  }
+ ],
+ "schema": "n11-k1167-fold22-ext2-pristine-reexec-third-verification-audit-20261120-v1",
+ "stage_records": {
+  "pin": {
+   "files_pinned": 5,
+   "gates": 6
+  },
+  "reconstruct_w1": {
+   "blob_lines": 12,
+   "pub_lines": 4,
+   "ref": "34c29854c64286bbb1792ff28dc1973aef341e20",
+   "sha256_lines": 48
+  },
+  "reconstruct_w2": {
+   "blob_lines": 12,
+   "pub_lines": 4,
+   "ref": "34c29854c64286bbb1792ff28dc1973aef341e20",
+   "sha256_lines": 48
+  },
+  "reruns": [
+   {
+    "cwd": "stage root",
+    "pub": "pub1",
+    "run": "r1",
+    "w": "W1"
+   },
+   {
+    "cwd": "stage root (repeat)",
+    "pub": "pub1",
+    "run": "r2",
+    "w": "W1"
+   },
+   {
+    "cwd": "isolated",
+    "env": "isolated HOME",
+    "pub": "pub2",
+    "run": "r3",
+    "w": "W2"
+   },
+   {
+    "cwd": "isolated",
+    "env": "isolated HOME + PYTHONHASHSEED=random",
+    "pub": "pub2",
+    "run": "r4",
+    "w": "W4 (fresh copytree of W2)"
+   }
+  ],
+  "tampers": [
+   {
+    "expected": "W blob pin fail-closed",
+    "mutation": "XOR 0x01",
+    "observed": "returncode=1, no audit write",
+    "offset": 1234,
+    "probe": "t1",
+    "target": "inputs/worklist.csv (copytree W1)"
+   },
+   {
+    "expected": "W sha256 pin fail-closed",
+    "mutation": "XOR 0x01",
+    "observed": "returncode=1, no audit write",
+    "offset": 17522,
+    "probe": "t2",
+    "target": "k1125/certs/win8-root-00000000000000801202000000840500-20261120.n11 (copytree W1)"
+   },
+   {
+    "expected": "harness experiment pin gate fail-closed",
+    "mutation": "XOR 0x01",
+    "observed": "pin gate rejected: pin mismatch output/external-audit.json",
+    "offset": 4096,
+    "probe": "t3",
+    "target": "output/external-audit.json (copy of experiment dir)"
+   }
+  ],
+  "wcmp": {
+   "w_file_count": 60,
+   "w_total_bytes": 14673721
+  }
+ },
+ "subject": {
+  "fixed_reconstruct_ref": "34c29854c64286bbb1792ff28dc1973aef341e20",
+  "published_audit_sha256": "b4b082f8cb0aa943aad7458ae0c6eb179a27704c5ea781eb18907d869c97522c",
+  "published_files_sha256": {
+   "README.md": "6b32ce997aa160cbb82bed10e89c11e9eba31d77dccf2c94cbe46e2694206d88",
+   "output/external-audit.json": "b4b082f8cb0aa943aad7458ae0c6eb179a27704c5ea781eb18907d869c97522c",
+   "output/reproduction.log": "5059c458ec08e046a74356bfb7fb6a796865b0c0fb97f12ca983093991c53a90",
+   "scripts/reconstruct_inputs.py": "dfa50996463fe31000e2bc3b03e37dabe33981bf00708a29ae7634d4a6594a27",
+   "scripts/verify_fold22_external_20261120.py": "ca11cbbc4b9d5ce3b1569d0af67060d20ec2873efdf3bd22720b3ba50b683792"
+  },
+  "published_part1_commit": "4eb6cbf05",
+  "upstream_fold22_publication_sha256": {
+   "README.md": "0e6861bf2970bead67ce77de9361e11a435cb27ee668e066a565a6fe808c29da",
+   "output/win8-root840500-receipt-fold-20261120.json": "f6e011f4a16e6fe257694c3cd3ed90490623f84e1c24113c3f55df68ba3e3488",
+   "scripts/build_fold22.py": "a73995be2ac448f2e56f804b3263330513c5bcb8a9e4042661c56e1deb4d7085",
+   "scripts/fold_win8_root840500.py": "d5721408e7fb41e794175f3f3bb8b9d43fae13d18c244a831b81532aa9f1db1d"
+  },
+  "verification": "K1167 (fold22 / K1132 external second verification)"
+ },
+ "summary": {
+  "all_rerun_audits_byte_identical": true,
+  "gates_in_published_audit_reexecuted": 1463,
+  "pristine_verifier_reruns": 4,
+  "published_experiment_files_repinned": 5,
+  "reconstructions_byte_identical": true,
+  "tamper_probes_fail_closed": 3,
+  "w_files_compared": 60
+ },
+ "verifier": "verify_k1167_fold22ext2_third_20261120.py (third verification; re-executes the published second-verification machine)"
+}

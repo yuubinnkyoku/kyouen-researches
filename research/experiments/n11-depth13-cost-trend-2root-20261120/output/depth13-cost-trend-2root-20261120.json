@@ -1,0 +1,443 @@
+{
+ "cap": 30000000,
+ "cost_trend": [
+  {
+   "d10": {
+    "capped": false,
+    "loss": false,
+    "ms": 1517,
+    "nodes": 671421,
+    "wall_s": 1.7
+   },
+   "d11": {
+    "capped": false,
+    "loss": false,
+    "ms": 1618,
+    "nodes": 684989,
+    "wall_s": 1.8
+   },
+   "d12": {
+    "capped": false,
+    "loss": false,
+    "ms": 1689,
+    "nodes": 728062,
+    "wall_s": 1.8
+   },
+   "d13": {
+    "capped": false,
+    "loss": false,
+    "ms": 1661,
+    "nodes": 728062,
+    "wall_s": 1.9
+   },
+   "label": "K1069-REFUTED-D10-idx0",
+   "ordering": "andclose1",
+   "ratio_d11_d10": 1.0202,
+   "ratio_d12_d10": 1.0844,
+   "ratio_d12_d11": 1.0629,
+   "ratio_d13_d10": 1.0844,
+   "ratio_d13_d12": 1.0,
+   "root": "00000000000000003800000008001220"
+  },
+  {
+   "d10": {
+    "capped": false,
+    "loss": false,
+    "ms": 1695,
+    "nodes": 815057,
+    "wall_s": 1.9
+   },
+   "d11": {
+    "capped": false,
+    "loss": false,
+    "ms": 1752,
+    "nodes": 837946,
+    "wall_s": 1.9
+   },
+   "d12": {
+    "capped": false,
+    "loss": false,
+    "ms": 1903,
+    "nodes": 905121,
+    "wall_s": 2.1
+   },
+   "d13": {
+    "capped": false,
+    "loss": false,
+    "ms": 1863,
+    "nodes": 905121,
+    "wall_s": 2.0
+   },
+   "label": "K1069-REFUTED-D10-idx0",
+   "ordering": "andclose0",
+   "ratio_d11_d10": 1.0281,
+   "ratio_d12_d10": 1.1105,
+   "ratio_d12_d11": 1.0802,
+   "ratio_d13_d10": 1.1105,
+   "ratio_d13_d12": 1.0,
+   "root": "00000000000000003800000008001220"
+  },
+  {
+   "d10": {
+    "capped": false,
+    "loss": false,
+    "ms": 773,
+    "nodes": 331659,
+    "wall_s": 0.9
+   },
+   "d11": {
+    "capped": false,
+    "loss": false,
+    "ms": 768,
+    "nodes": 333456,
+    "wall_s": 0.9
+   },
+   "d12": {
+    "capped": false,
+    "loss": false,
+    "ms": 745,
+    "nodes": 333456,
+    "wall_s": 0.9
+   },
+   "d13": {
+    "capped": false,
+    "loss": false,
+    "ms": 724,
+    "nodes": 333456,
+    "wall_s": 0.9
+   },
+   "label": "K1069-REFUTED-D10-idx12",
+   "ordering": "andclose1",
+   "ratio_d11_d10": 1.0054,
+   "ratio_d12_d10": 1.0054,
+   "ratio_d12_d11": 1.0,
+   "ratio_d13_d10": 1.0054,
+   "ratio_d13_d12": 1.0,
+   "root": "00000000000000801202000000880100"
+  },
+  {
+   "d10": {
+    "capped": false,
+    "loss": false,
+    "ms": 878,
+    "nodes": 443007,
+    "wall_s": 1.0
+   },
+   "d11": {
+    "capped": false,
+    "loss": false,
+    "ms": 914,
+    "nodes": 445323,
+    "wall_s": 1.1
+   },
+   "d12": {
+    "capped": false,
+    "loss": false,
+    "ms": 878,
+    "nodes": 445323,
+    "wall_s": 1.1
+   },
+   "d13": {
+    "capped": false,
+    "loss": false,
+    "ms": 927,
+    "nodes": 445323,
+    "wall_s": 1.1
+   },
+   "label": "K1069-REFUTED-D10-idx12",
+   "ordering": "andclose0",
+   "ratio_d11_d10": 1.0052,
+   "ratio_d12_d10": 1.0052,
+   "ratio_d12_d11": 1.0,
+   "ratio_d13_d10": 1.0052,
+   "ratio_d13_d12": 1.0,
+   "root": "00000000000000801202000000880100"
+  }
+ ],
+ "d10_label_check": [
+  {
+   "observed": {
+    "capped": false,
+    "loss": false,
+    "ms": 1517,
+    "nodes": 671421,
+    "wall_s": 1.7
+   },
+   "ordering": "andclose1",
+   "root": "00000000000000003800000008001220",
+   "status": "consistent-with-REFUTED-D10"
+  },
+  {
+   "observed": {
+    "capped": false,
+    "loss": false,
+    "ms": 1695,
+    "nodes": 815057,
+    "wall_s": 1.9
+   },
+   "ordering": "andclose0",
+   "root": "00000000000000003800000008001220",
+   "status": "consistent-with-REFUTED-D10"
+  },
+  {
+   "observed": {
+    "capped": false,
+    "loss": false,
+    "ms": 773,
+    "nodes": 331659,
+    "wall_s": 0.9
+   },
+   "ordering": "andclose1",
+   "root": "00000000000000801202000000880100",
+   "status": "consistent-with-REFUTED-D10"
+  },
+  {
+   "observed": {
+    "capped": false,
+    "loss": false,
+    "ms": 878,
+    "nodes": 443007,
+    "wall_s": 1.0
+   },
+   "ordering": "andclose0",
+   "root": "00000000000000801202000000880100",
+   "status": "consistent-with-REFUTED-D10"
+  }
+ ],
+ "date": "2026-11-20",
+ "gates": [
+  {
+   "detail": {
+    "git_blob": "c132cc6425eee3feaeef1d697dd74f968cfedb59"
+   },
+   "name": "runner-blob-pin",
+   "pass": true
+  },
+  {
+   "detail": {
+    "00000000000000003800000008001220": "00000000000000003800000008001200",
+    "00000000000000801202000000880100": "00000000000000801202000000880000"
+   },
+   "name": "raw-child-rebuild",
+   "pass": true
+  },
+  {
+   "detail": {
+    "refuted_n": 38,
+    "selected": [
+     "00000000000000003800000008001220",
+     "00000000000000801202000000880100"
+    ],
+    "sha256": "22953ae16a6002d87638531f2ca9fd286f6736b834fa296e5648505ada9074dc"
+   },
+   "name": "k1069-classification-pin",
+   "pass": true
+  },
+  {
+   "detail": {
+    "checks": [
+     {
+      "d12trend_nodes": 671421,
+      "depth": 10,
+      "observed_nodes": 671421,
+      "ordering": "andclose1",
+      "root": "00000000000000003800000008001220",
+      "status": "exact"
+     },
+     {
+      "d12trend_nodes": 684989,
+      "depth": 11,
+      "observed_nodes": 684989,
+      "ordering": "andclose1",
+      "root": "00000000000000003800000008001220",
+      "status": "exact"
+     },
+     {
+      "d12trend_nodes": 728062,
+      "depth": 12,
+      "observed_nodes": 728062,
+      "ordering": "andclose1",
+      "root": "00000000000000003800000008001220",
+      "status": "exact"
+     },
+     {
+      "d12trend_nodes": 815057,
+      "depth": 10,
+      "observed_nodes": 815057,
+      "ordering": "andclose0",
+      "root": "00000000000000003800000008001220",
+      "status": "exact"
+     },
+     {
+      "d12trend_nodes": 837946,
+      "depth": 11,
+      "observed_nodes": 837946,
+      "ordering": "andclose0",
+      "root": "00000000000000003800000008001220",
+      "status": "exact"
+     },
+     {
+      "d12trend_nodes": 905121,
+      "depth": 12,
+      "observed_nodes": 905121,
+      "ordering": "andclose0",
+      "root": "00000000000000003800000008001220",
+      "status": "exact"
+     },
+     {
+      "d12trend_nodes": 331659,
+      "depth": 10,
+      "observed_nodes": 331659,
+      "ordering": "andclose1",
+      "root": "00000000000000801202000000880100",
+      "status": "exact"
+     },
+     {
+      "d12trend_nodes": 333456,
+      "depth": 11,
+      "observed_nodes": 333456,
+      "ordering": "andclose1",
+      "root": "00000000000000801202000000880100",
+      "status": "exact"
+     },
+     {
+      "d12trend_nodes": 333456,
+      "depth": 12,
+      "observed_nodes": 333456,
+      "ordering": "andclose1",
+      "root": "00000000000000801202000000880100",
+      "status": "exact"
+     },
+     {
+      "d12trend_nodes": 443007,
+      "depth": 10,
+      "observed_nodes": 443007,
+      "ordering": "andclose0",
+      "root": "00000000000000801202000000880100",
+      "status": "exact"
+     },
+     {
+      "d12trend_nodes": 445323,
+      "depth": 11,
+      "observed_nodes": 445323,
+      "ordering": "andclose0",
+      "root": "00000000000000801202000000880100",
+      "status": "exact"
+     },
+     {
+      "d12trend_nodes": 445323,
+      "depth": 12,
+      "observed_nodes": 445323,
+      "ordering": "andclose0",
+      "root": "00000000000000801202000000880100",
+      "status": "exact"
+     }
+    ],
+    "d12trend_sha256": "10082aef033a34054b02c14eede10c2cd602466287750a05c2347f4852cbbd0a"
+   },
+   "name": "d12trend-determinism-crosscheck",
+   "pass": true
+  },
+  {
+   "detail": {
+    "missing": [],
+    "planned": 16,
+    "present": 16
+   },
+   "name": "all-probes-present",
+   "pass": true
+  },
+  {
+   "detail": {
+    "bad": []
+   },
+   "name": "pilot-d6-control-all-probes",
+   "pass": true
+  },
+  {
+   "detail": [
+    {
+     "observed": {
+      "capped": false,
+      "loss": false,
+      "ms": 1517,
+      "nodes": 671421,
+      "wall_s": 1.7
+     },
+     "ordering": "andclose1",
+     "root": "00000000000000003800000008001220",
+     "status": "consistent-with-REFUTED-D10"
+    },
+    {
+     "observed": {
+      "capped": false,
+      "loss": false,
+      "ms": 1695,
+      "nodes": 815057,
+      "wall_s": 1.9
+     },
+     "ordering": "andclose0",
+     "root": "00000000000000003800000008001220",
+     "status": "consistent-with-REFUTED-D10"
+    },
+    {
+     "observed": {
+      "capped": false,
+      "loss": false,
+      "ms": 773,
+      "nodes": 331659,
+      "wall_s": 0.9
+     },
+     "ordering": "andclose1",
+     "root": "00000000000000801202000000880100",
+     "status": "consistent-with-REFUTED-D10"
+    },
+    {
+     "observed": {
+      "capped": false,
+      "loss": false,
+      "ms": 878,
+      "nodes": 443007,
+      "wall_s": 1.0
+     },
+     "ordering": "andclose0",
+     "root": "00000000000000801202000000880100",
+     "status": "consistent-with-REFUTED-D10"
+    }
+   ],
+   "name": "d10-label-consistency",
+   "pass": true
+  }
+ ],
+ "inputs": {
+  "d12trend_output": {
+   "path": "research/experiments/n11-depth12-cost-trend-2root-20261120/output/depth12-cost-trend-2root-20261120.json",
+   "sha256": "10082aef033a34054b02c14eede10c2cd602466287750a05c2347f4852cbbd0a"
+  },
+  "k1069_classification": {
+   "path": "research/experiments/n11-residual78-39livewitness-depth10-sweep-20261120/output/witness-39live-root-depth10-sweep-20261120.json",
+   "selection": [
+    0,
+    12
+   ],
+   "selection_rule": "sorted 38 REFUTED-D10 roots of the K1069 classification, indices {0,12} = the two cheapest roots of the landed ext measurement",
+   "sha256": "22953ae16a6002d87638531f2ca9fd286f6736b834fa296e5648505ada9074dc"
+  },
+  "targets": {
+   "00000000000000003800000008001220": {
+    "bit": 5,
+    "label": "K1069-REFUTED-D10-idx0"
+   },
+   "00000000000000801202000000880100": {
+    "bit": 8,
+    "label": "K1069-REFUTED-D10-idx12"
+   }
+  }
+ },
+ "interpretation_guard": "Node counts under cap are deterministic and machine-independent cost units. Capped/timeout probes are lower bounds of cost and evidence in NO direction. This measurement changes no verdict: REFUTED-D10 is not a LOSS proof, a depth-11, depth-12 or depth-13 loss=false is not a closure proof nor a REFUTED-D11/D12/D13 classification, and this is not a sweep undertaking. The standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60} and classes 1/2/4 all remain UNKNOWN.",
+ "parallelism": 1,
+ "protocol": "cost measurement only; depths {10,11,12,13} per (root, ordering); same runner/argv form as the K1075 sweep driver; pilot_d6 control required on every probe; K1069 REFUTED-D10 label consistency gated at depth 10; depths 10/11/12 re-measured here must equal the landed depth-12 trend measurement (determinism triple-measurement); environmental timeout recorded as unverified-on-this-hardware, never as evidence",
+ "runner_git_blob": "c132cc6425eee3feaeef1d697dd74f968cfedb59",
+ "schema": "n11-depth13-cost-trend-2root-20261120-v1",
+ "timeout_s": 280
+}

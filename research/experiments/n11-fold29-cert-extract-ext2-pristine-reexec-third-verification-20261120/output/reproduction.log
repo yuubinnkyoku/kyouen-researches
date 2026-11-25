@@ -1,0 +1,78 @@
+K1166 (fold29 certificate-extraction external second verification)
+pristine re-execution third verification - reproduction record
+Execution environment: 2-core sandbox, python3.12.14, node v22.20.0
+(--experimental-strip-types), harness-internal parallelism fixed at 2.
+
+Single-owner declaration:
+  research/log/2026-11-20-n11-k1166-fold29-cert-extract-ext2-pristine-reexec-third-single-owner-note.md
+  (commit ec24b235f806822086680fee4075820679c78acf, fetch-back byte-identical,
+   SHA-256 5777a519cb2ab861ab084e716268e93a57bebd128f624db8523ee4df05366328)
+Declared HEAD at declaration: 1c42dcf25c78540033c5ec08c00952e4a939a8ee
+
+Published bytes fetched at pinned main commit 1c42dcf25c... and SHA-256 pinned:
+  README.md                                     6605abff82a8e47556ccf9688bf7b253c34c4d64e9178ae7a1d143adf3f85908 (8,488 B)
+  fetch_master.py                               c3c4c9ffef5132e1657470d84b296b499ecd421b0342404ae32b0fd3ee64a114 (2,656 B)
+  pin-manifest.json                             949868e21fdc124058c608925c101468622acca17702e159f99fb03df09d3ae8 (12,701 B)
+  verify_cert_extract_ext_second_20261120.py    ca662e57053f504684c8dcc44f66c182d338978a3b9b70369a40754d9c59b276 (30,141 B)
+  output/harness-audit.json (oracle)            cf6a26abf0a459bcfb42bbb2d649ace5d3d1f1a5aee63a01af1de8b79d6a145f (15,549 B, gate 43, PASS)
+
+BATTERY 1 (working cwd/HOME, default hash seed)
+  fetch_master.py: fetched 61 files from pin commit 28d223a2dd254b8a85cc342dff3f4bd801d1b31f,
+                   all_blob_pins_ok true [wall 13.9 s]
+  --stage pin:        PASS g_pin_published_61_files (checked 61, mismatch_or_missing 0) [0.17 s]
+  --stage root k1136: PASS 13 gates (probe both orderings, ext A1/A2/B, cert assembly
+                      byte-identical dbcb0bae..., BigInt, Bareiss root+subroots,
+                      audit machine r1/r2/isolated r3 + fresh records, 19/19 each) [91.1 s]
+  --stage root k1137: PASS 13 gates [52.1 s]
+  --stage root k1139: PASS 13 gates [111.8 s]
+  --stage tampers:    PASS 3 gates, all fail-closed, audit returncode 1 each
+                      t1 cert body offset 300007 XOR 0x01 -> g16/g17 fail
+                         (secondary: bareiss --root-check returned 0; defense in depth)
+                      t2 pin input offset 1111 XOR 0x01 -> g01 pin fail
+                      t3 fresh A1 nodes 2757->2758 -> g11 fail [9.3 s]
+  --stage finalize:   status PASS, gate_count 43
+  run/harness-audit.json = cf6a26abf0a459bcfb42bbb2d649ace5d3d1f1a5aee63a01af1de8b79d6a145f
+                      (15,549 B) - byte-identical with published oracle (cmp OK)
+
+BATTERY 2 (isolated cwd, isolated HOME, PYTHONHASHSEED=random for all stages)
+  fetch_master.py: fetched 61, all_blob_pins_ok true [11.4 s]
+  --stage pin:        PASS (61, 0) [0.11 s]
+  --stage root k1136: PASS 13 gates [89.3 s]
+  --stage root k1137: PASS 13 gates [51.7 s]
+  --stage root k1139: PASS 13 gates [111.3 s]
+  --stage tampers:    PASS 3 gates [8.9 s]
+  --stage finalize:   status PASS, gate_count 43
+  run/harness-audit.json = cf6a26ab... same as battery 1, byte-identical cross-battery (cmp OK)
+  parts/pin,k1136,k1137,k1139,tampers.json all byte-identical with battery 1 counterparts
+
+THIRD-VERIFICATION RECORD (scripts/assemble_third_record.py, deterministic,
+sorted keys, no timing fields, no absolute paths):
+  3 executions byte-identical (default seed twice + PYTHONHASHSEED=random once)
+  output/third-verification.json SHA-256 a6a3e0489411cd7f48fa53c2679505344f06389b8458b64c2b34e21fdf1fb18c
+  (4,363 B, gate_count 20, status PASS)
+
+NEGATIVE CONTROL (this lane's own offset, publisher-untested):
+  published/harness-audit.json oracle byte offset 8888 XOR 0x01
+  -> assembler returncode 1, status FAIL on stdout, record output not written
+  (previous record byte untouched); oracle restored, record regenerated with
+  identical SHA-256 a6a3e048....
+
+Wall times above are evidence observations, not reproduction targets
+(same convention as the published harness: no ms/wall fields in any
+deterministic record).
+
+ACCEPTANCE CONDITIONS FROM THE DECLARATION NOTE - ALL MET
+  1. published byte 5-point pin against SHA-256 - DONE (see above)
+  2. fetch_master.py unmodified, 61/61 git blob pins - DONE (both batteries)
+  3. unmodified published harness, stage-split battery, audit byte-identical
+     with oracle - DONE (battery 1)
+  4. built-in 3 tampers fail-closed - DONE (both batteries)
+  5. second battery in isolated cwd/HOME + PYTHONHASHSEED=random, mutually
+     byte-identical and identical with oracle - DONE; record assembler
+     published, deterministic across 3 executions
+
+INTERPRETATION GUARD: this third verification closes no rows. WIN8-D10
+certificates apply only to the stated 8-stone roots. REFUTED-D10 is not a
+LOSS proof. Nodes/solved counts are never win/loss. The standard 11x11
+emptied board, two-stone roots {49,60}/{59,60}, S2 {59,60} and classes
+1/2/4 remain UNKNOWN.

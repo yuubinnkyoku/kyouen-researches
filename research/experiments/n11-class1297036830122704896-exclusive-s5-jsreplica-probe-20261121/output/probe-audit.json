@@ -1,0 +1,997 @@
+{
+ "schema": "n11-class-exclusive-s5-js-replica-probe-audit-v1",
+ "all_gates_pass": true,
+ "title": "third-cost class 1297036830122704896:0 exclusive single-live-parent S5 probe (JS replica): 37 LOSS / 2 UNKNOWN@15M / 0 WIN of 39 claimed keys",
+ "gates_passed_count": 641,
+ "pins": {
+  "pinned_cpp_kyouen_dfpn_root_sha256": "9193f5b6065e0fbcad2ef7c65f386187701cafa1f5b718cc35a5cbb0d138f92e",
+  "replica_jsreplay_sha256": "845856175d3c793a7eb4306f5902ecda3f1c046a8a53e8f34ed375e51febc3df",
+  "independent_geometry_python_sha256": "954d3a104c1723ebb15b8c9bae63a4494f07f9eb73446a6d067c4fd6a4ba189f",
+  "geometry_sha256": "146be80b5794462c2444e983fc4c4a6e76d3b464bfd5e86fac14509024100b54",
+  "base_merged_cache_sha256": "60e0dc3476920d4e99043dd4f132398ea72e4dfdcd9f3dbb8fc686ba65bc28c6",
+  "quarantine_sha256": "81d231604d3a095c115135e05ca393d6be83e1aadde4f614d3b5a9cc67d17fe9",
+  "supply_sha256": "31f0d29b820a69508af0c352c22f09b244bff5b9ae79476679047cdb160ea954",
+  "policy_sha256": "78655e94480920de48a6fe8792e02e611513ddee7f685b422bbb2b08af5c95e2"
+ },
+ "validation": {
+  "published_raw_rows_reproduced": [
+   {
+    "tag": "val-at2m-first",
+    "row": {
+     "stones": 5,
+     "legal": 98,
+     "is_or": 0,
+     "budget": 2000000,
+     "result": 0,
+     "nodes": 2000000
+    }
+   },
+   {
+    "tag": "val-at2m-second",
+    "row": {
+     "stones": 5,
+     "legal": 99,
+     "is_or": 0,
+     "budget": 2000000,
+     "result": 0,
+     "nodes": 2000000
+    }
+   },
+   {
+    "tag": "val-first-15m",
+    "row": {
+     "stones": 5,
+     "legal": 98,
+     "is_or": 0,
+     "budget": 15000000,
+     "result": 2,
+     "nodes": 3651923
+    }
+   },
+   {
+    "tag": "val-second-15m",
+    "row": {
+     "stones": 5,
+     "legal": 99,
+     "is_or": 0,
+     "budget": 15000000,
+     "result": 2,
+     "nodes": 5040200
+    }
+   }
+  ],
+  "rule": "stones/legal/is_or/budget/result/nodes must match the published C++ raw rows; wall_s may differ"
+ },
+ "probe": {
+  "class": "1297036830122704896:0",
+  "claimed_keys": 39,
+  "resolved_loss": [
+   "10376294091217440768:131072",
+   "10376294091217440768:268435456",
+   "10376294091217440768:67108864",
+   "10376294091217440768:8",
+   "10412322888236404736:0",
+   "1152921504606851072:536870945",
+   "1152921504607895552:553648640",
+   "1152930300699873280:536870944",
+   "1153062242230468608:68719476736",
+   "1161928703861592064:536870944",
+   "1297036830122704896:128",
+   "1297036830122704896:16",
+   "1297036830122704896:16384",
+   "1297036830122704896:16777216",
+   "1297036830122704896:65536",
+   "1297036830122704896:8",
+   "1297036830122704897:0",
+   "1297036830122704900:0",
+   "1297036830122704928:0",
+   "1297036830122705152:0",
+   "1297036830122708992:0",
+   "1297036830122713088:0",
+   "1297036830122737664:0",
+   "1297036830122770432:0",
+   "1297036830122835968:0",
+   "1297036830139482112:0",
+   "1297036830256922624:0",
+   "1297036830391140352:0",
+   "1297036831196446720:0",
+   "1297037105000611840:0",
+   "1297037929634332672:0",
+   "1297177567611060224:0",
+   "1369094424160632832:0",
+   "1585267206274416640:0",
+   "1873497582426128384:0",
+   "3602879839336398848:0",
+   "5908722848550092800:0"
+  ],
+  "parked_unknown_15m": [
+   "10376294091217440768:33554432",
+   "1297036830122704896:67108864"
+  ],
+  "win": null,
+  "pinned_semantics": "exact_replay: 0 UNKNOWN (budget exhausted), 1 WIN, 2 LOSS (fixed first player)",
+  "evidence_class": "replica solver-trusted exact, node-exact against all four published C++ raw rows; NOT terminal-only minimax",
+  "per_key": {
+   "1153062242230468608:68719476736": {
+    "stages": {
+     "at2m": {
+      "result": 0,
+      "nodes": 2000000,
+      "budget": 2000000
+     },
+     "at15m": {
+      "result": 2,
+      "nodes": 2175728,
+      "budget": 15000000
+     },
+     "at15m_run2": {
+      "result": 2,
+      "nodes": 2175728,
+      "budget": 15000000
+     }
+    },
+    "verdict": "LOSS",
+    "legal": 84
+   },
+   "1297036830122835968:0": {
+    "stages": {
+     "at2m": {
+      "result": 0,
+      "nodes": 2000000,
+      "budget": 2000000
+     },
+     "at15m": {
+      "result": 2,
+      "nodes": 2225163,
+      "budget": 15000000
+     },
+     "at15m_run2": {
+      "result": 2,
+      "nodes": 2225163,
+      "budget": 15000000
+     }
+    },
+    "verdict": "LOSS",
+    "legal": 87
+   },
+   "1297036830139482112:0": {
+    "stages": {
+     "at2m": {
+      "result": 0,
+      "nodes": 2000000,
+      "budget": 2000000
+     },
+     "at15m": {
+      "result": 2,
+      "nodes": 5033042,
+      "budget": 15000000
+     },
+     "at15m_run2": {
+      "result": 2,
+      "nodes": 5033042,
+      "budget": 15000000
+     }
+    },
+    "verdict": "LOSS",
+    "legal": 89
+   },
+   "1297037929634332672:0": {
+    "stages": {
+     "at2m": {
+      "result": 0,
+      "nodes": 2000000,
+      "budget": 2000000
+     },
+     "at15m": {
+      "result": 2,
+      "nodes": 4164441,
+      "budget": 15000000
+     },
+     "at15m_run2": {
+      "result": 2,
+      "nodes": 4164441,
+      "budget": 15000000
+     }
+    },
+    "verdict": "LOSS",
+    "legal": 89
+   },
+   "1297177567611060224:0": {
+    "stages": {
+     "at2m": {
+      "result": 0,
+      "nodes": 2000000,
+      "budget": 2000000
+     },
+     "at15m": {
+      "result": 2,
+      "nodes": 7286302,
+      "budget": 15000000
+     },
+     "at15m_run2": {
+      "result": 2,
+      "nodes": 7286302,
+      "budget": 15000000
+     }
+    },
+    "verdict": "LOSS",
+    "legal": 87
+   },
+   "3602879839336398848:0": {
+    "stages": {
+     "at2m": {
+      "result": 0,
+      "nodes": 2000000,
+      "budget": 2000000
+     },
+     "at15m": {
+      "result": 2,
+      "nodes": 8359625,
+      "budget": 15000000
+     },
+     "at15m_run2": {
+      "result": 2,
+      "nodes": 8359625,
+      "budget": 15000000
+     }
+    },
+    "verdict": "LOSS",
+    "legal": 87
+   },
+   "10412322888236404736:0": {
+    "stages": {
+     "at2m": {
+      "result": 0,
+      "nodes": 2000000,
+      "budget": 2000000
+     },
+     "at15m": {
+      "result": 2,
+      "nodes": 8448535,
+      "budget": 15000000
+     },
+     "at15m_run2": {
+      "result": 2,
+      "nodes": 8448535,
+      "budget": 15000000
+     }
+    },
+    "verdict": "LOSS",
+    "legal": 85
+   },
+   "1152921504607895552:553648640": {
+    "stages": {
+     "at2m": {
+      "result": 0,
+      "nodes": 2000000,
+      "budget": 2000000
+     },
+     "at15m": {
+      "result": 2,
+      "nodes": 9602039,
+      "budget": 15000000
+     },
+     "at15m_run2": {
+      "result": 2,
+      "nodes": 9602039,
+      "budget": 15000000
+     }
+    },
+    "verdict": "LOSS",
+    "legal": 99
+   },
+   "1152930300699873280:536870944": {
+    "stages": {
+     "at2m": {
+      "result": 0,
+      "nodes": 2000000,
+      "budget": 2000000
+     },
+     "at15m": {
+      "result": 2,
+      "nodes": 3563705,
+      "budget": 15000000
+     },
+     "at15m_run2": {
+      "result": 2,
+      "nodes": 3563705,
+      "budget": 15000000
+     }
+    },
+    "verdict": "LOSS",
+    "legal": 99
+   },
+   "1161928703861592064:536870944": {
+    "stages": {
+     "at2m": {
+      "result": 0,
+      "nodes": 2000000,
+      "budget": 2000000
+     },
+     "at15m": {
+      "result": 2,
+      "nodes": 7538664,
+      "budget": 15000000
+     },
+     "at15m_run2": {
+      "result": 2,
+      "nodes": 7538664,
+      "budget": 15000000
+     }
+    },
+    "verdict": "LOSS",
+    "legal": 95
+   },
+   "1297036830122704896:8": {
+    "stages": {
+     "at2m": {
+      "result": 0,
+      "nodes": 2000000,
+      "budget": 2000000
+     },
+     "at15m": {
+      "result": 2,
+      "nodes": 5316815,
+      "budget": 15000000
+     },
+     "at15m_run2": {
+      "result": 2,
+      "nodes": 5316815,
+      "budget": 15000000
+     }
+    },
+    "verdict": "LOSS",
+    "legal": 96
+   },
+   "1297036830122704896:16": {
+    "stages": {
+     "at2m": {
+      "result": 0,
+      "nodes": 2000000,
+      "budget": 2000000
+     },
+     "at15m": {
+      "result": 2,
+      "nodes": 4996706,
+      "budget": 15000000
+     },
+     "at15m_run2": {
+      "result": 2,
+      "nodes": 4996706,
+      "budget": 15000000
+     }
+    },
+    "verdict": "LOSS",
+    "legal": 95
+   },
+   "1297036830122704896:128": {
+    "stages": {
+     "at2m": {
+      "result": 0,
+      "nodes": 2000000,
+      "budget": 2000000
+     },
+     "at15m": {
+      "result": 2,
+      "nodes": 3143405,
+      "budget": 15000000
+     },
+     "at15m_run2": {
+      "result": 2,
+      "nodes": 3143405,
+      "budget": 15000000
+     }
+    },
+    "verdict": "LOSS",
+    "legal": 93
+   },
+   "1297036830122704896:16384": {
+    "stages": {
+     "at2m": {
+      "result": 0,
+      "nodes": 2000000,
+      "budget": 2000000
+     },
+     "at15m": {
+      "result": 2,
+      "nodes": 3330225,
+      "budget": 15000000
+     },
+     "at15m_run2": {
+      "result": 2,
+      "nodes": 3330225,
+      "budget": 15000000
+     }
+    },
+    "verdict": "LOSS",
+    "legal": 98
+   },
+   "1297036830122704896:65536": {
+    "stages": {
+     "at2m": {
+      "result": 0,
+      "nodes": 2000000,
+      "budget": 2000000
+     },
+     "at15m": {
+      "result": 2,
+      "nodes": 2142384,
+      "budget": 15000000
+     },
+     "at15m_run2": {
+      "result": 2,
+      "nodes": 2142384,
+      "budget": 15000000
+     }
+    },
+    "verdict": "LOSS",
+    "legal": 91
+   },
+   "1297036830122704896:67108864": {
+    "stages": {
+     "at2m": {
+      "result": 0,
+      "nodes": 2000000,
+      "budget": 2000000
+     },
+     "at15m": {
+      "result": 0,
+      "nodes": 15000000,
+      "budget": 15000000
+     },
+     "at15m_run2": {
+      "result": 0,
+      "nodes": 15000000,
+      "budget": 15000000
+     }
+    },
+    "verdict": "UNKNOWN@15M",
+    "legal": 91
+   },
+   "1297036830122704897:0": {
+    "stages": {
+     "at2m": {
+      "result": 0,
+      "nodes": 2000000,
+      "budget": 2000000
+     },
+     "at15m": {
+      "result": 2,
+      "nodes": 2710182,
+      "budget": 15000000
+     },
+     "at15m_run2": {
+      "result": 2,
+      "nodes": 2710182,
+      "budget": 15000000
+     }
+    },
+    "verdict": "LOSS",
+    "legal": 99
+   },
+   "1297036830122704900:0": {
+    "stages": {
+     "at2m": {
+      "result": 0,
+      "nodes": 2000000,
+      "budget": 2000000
+     },
+     "at15m": {
+      "result": 2,
+      "nodes": 6731612,
+      "budget": 15000000
+     },
+     "at15m_run2": {
+      "result": 2,
+      "nodes": 6731612,
+      "budget": 15000000
+     }
+    },
+    "verdict": "LOSS",
+    "legal": 97
+   },
+   "1297036830122704928:0": {
+    "stages": {
+     "at2m": {
+      "result": 0,
+      "nodes": 2000000,
+      "budget": 2000000
+     },
+     "at15m": {
+      "result": 2,
+      "nodes": 4817580,
+      "budget": 15000000
+     },
+     "at15m_run2": {
+      "result": 2,
+      "nodes": 4817580,
+      "budget": 15000000
+     }
+    },
+    "verdict": "LOSS",
+    "legal": 91
+   },
+   "1297036830122705152:0": {
+    "stages": {
+     "at2m": {
+      "result": 0,
+      "nodes": 2000000,
+      "budget": 2000000
+     },
+     "at15m": {
+      "result": 2,
+      "nodes": 3268565,
+      "budget": 15000000
+     },
+     "at15m_run2": {
+      "result": 2,
+      "nodes": 3268565,
+      "budget": 15000000
+     }
+    },
+    "verdict": "LOSS",
+    "legal": 99
+   },
+   "1297036830122708992:0": {
+    "stages": {
+     "at2m": {
+      "result": 0,
+      "nodes": 2000000,
+      "budget": 2000000
+     },
+     "at15m": {
+      "result": 2,
+      "nodes": 9839826,
+      "budget": 15000000
+     },
+     "at15m_run2": {
+      "result": 2,
+      "nodes": 9839826,
+      "budget": 15000000
+     }
+    },
+    "verdict": "LOSS",
+    "legal": 95
+   },
+   "1297036830122713088:0": {
+    "stages": {
+     "at2m": {
+      "result": 0,
+      "nodes": 2000000,
+      "budget": 2000000
+     },
+     "at15m": {
+      "result": 2,
+      "nodes": 13746466,
+      "budget": 15000000
+     },
+     "at15m_run2": {
+      "result": 2,
+      "nodes": 13746466,
+      "budget": 15000000
+     }
+    },
+    "verdict": "LOSS",
+    "legal": 91
+   },
+   "1297036830122737664:0": {
+    "stages": {
+     "at2m": {
+      "result": 0,
+      "nodes": 2000000,
+      "budget": 2000000
+     },
+     "at15m": {
+      "result": 2,
+      "nodes": 5032468,
+      "budget": 15000000
+     },
+     "at15m_run2": {
+      "result": 2,
+      "nodes": 5032468,
+      "budget": 15000000
+     }
+    },
+    "verdict": "LOSS",
+    "legal": 96
+   },
+   "1297036830122770432:0": {
+    "stages": {
+     "at2m": {
+      "result": 2,
+      "nodes": 1679568,
+      "budget": 2000000
+     }
+    },
+    "verdict": "LOSS@2M",
+    "legal": 97
+   },
+   "1297036830256922624:0": {
+    "stages": {
+     "at2m": {
+      "result": 0,
+      "nodes": 2000000,
+      "budget": 2000000
+     },
+     "at15m": {
+      "result": 2,
+      "nodes": 6228307,
+      "budget": 15000000
+     },
+     "at15m_run2": {
+      "result": 2,
+      "nodes": 6228307,
+      "budget": 15000000
+     }
+    },
+    "verdict": "LOSS",
+    "legal": 91
+   },
+   "1297036830391140352:0": {
+    "stages": {
+     "at2m": {
+      "result": 2,
+      "nodes": 1908222,
+      "budget": 2000000
+     }
+    },
+    "verdict": "LOSS@2M",
+    "legal": 94
+   },
+   "1297036831196446720:0": {
+    "stages": {
+     "at2m": {
+      "result": 0,
+      "nodes": 2000000,
+      "budget": 2000000
+     },
+     "at15m": {
+      "result": 2,
+      "nodes": 3012125,
+      "budget": 15000000
+     },
+     "at15m_run2": {
+      "result": 2,
+      "nodes": 3012125,
+      "budget": 15000000
+     }
+    },
+    "verdict": "LOSS",
+    "legal": 97
+   },
+   "1297037105000611840:0": {
+    "stages": {
+     "at2m": {
+      "result": 0,
+      "nodes": 2000000,
+      "budget": 2000000
+     },
+     "at15m": {
+      "result": 2,
+      "nodes": 6848181,
+      "budget": 15000000
+     },
+     "at15m_run2": {
+      "result": 2,
+      "nodes": 6848181,
+      "budget": 15000000
+     }
+    },
+    "verdict": "LOSS",
+    "legal": 95
+   },
+   "1369094424160632832:0": {
+    "stages": {
+     "at2m": {
+      "result": 0,
+      "nodes": 2000000,
+      "budget": 2000000
+     },
+     "at15m": {
+      "result": 2,
+      "nodes": 6566432,
+      "budget": 15000000
+     },
+     "at15m_run2": {
+      "result": 2,
+      "nodes": 6566432,
+      "budget": 15000000
+     }
+    },
+    "verdict": "LOSS",
+    "legal": 94
+   },
+   "1585267206274416640:0": {
+    "stages": {
+     "at2m": {
+      "result": 0,
+      "nodes": 2000000,
+      "budget": 2000000
+     },
+     "at15m": {
+      "result": 2,
+      "nodes": 2753133,
+      "budget": 15000000
+     },
+     "at15m_run2": {
+      "result": 2,
+      "nodes": 2753133,
+      "budget": 15000000
+     }
+    },
+    "verdict": "LOSS",
+    "legal": 93
+   },
+   "1873497582426128384:0": {
+    "stages": {
+     "at2m": {
+      "result": 0,
+      "nodes": 2000000,
+      "budget": 2000000
+     },
+     "at15m": {
+      "result": 2,
+      "nodes": 2238626,
+      "budget": 15000000
+     },
+     "at15m_run2": {
+      "result": 2,
+      "nodes": 2238626,
+      "budget": 15000000
+     }
+    },
+    "verdict": "LOSS",
+    "legal": 92
+   },
+   "5908722848550092800:0": {
+    "stages": {
+     "at2m": {
+      "result": 0,
+      "nodes": 2000000,
+      "budget": 2000000
+     },
+     "at15m": {
+      "result": 2,
+      "nodes": 3125274,
+      "budget": 15000000
+     },
+     "at15m_run2": {
+      "result": 2,
+      "nodes": 3125274,
+      "budget": 15000000
+     }
+    },
+    "verdict": "LOSS",
+    "legal": 90
+   },
+   "10376294091217440768:8": {
+    "stages": {
+     "at2m": {
+      "result": 0,
+      "nodes": 2000000,
+      "budget": 2000000
+     },
+     "at15m": {
+      "result": 2,
+      "nodes": 3129702,
+      "budget": 15000000
+     },
+     "at15m_run2": {
+      "result": 2,
+      "nodes": 3129702,
+      "budget": 15000000
+     }
+    },
+    "verdict": "LOSS",
+    "legal": 98
+   },
+   "10376294091217440768:131072": {
+    "stages": {
+     "at2m": {
+      "result": 0,
+      "nodes": 2000000,
+      "budget": 2000000
+     },
+     "at15m": {
+      "result": 2,
+      "nodes": 2328134,
+      "budget": 15000000
+     },
+     "at15m_run2": {
+      "result": 2,
+      "nodes": 2328134,
+      "budget": 15000000
+     }
+    },
+    "verdict": "LOSS",
+    "legal": 94
+   },
+   "10376294091217440768:33554432": {
+    "stages": {
+     "at2m": {
+      "result": 0,
+      "nodes": 2000000,
+      "budget": 2000000
+     },
+     "at15m": {
+      "result": 0,
+      "nodes": 15000000,
+      "budget": 15000000
+     },
+     "at15m_run2": {
+      "result": 0,
+      "nodes": 15000000,
+      "budget": 15000000
+     }
+    },
+    "verdict": "UNKNOWN@15M",
+    "legal": 94
+   },
+   "10376294091217440768:67108864": {
+    "stages": {
+     "at2m": {
+      "result": 0,
+      "nodes": 2000000,
+      "budget": 2000000
+     },
+     "at15m": {
+      "result": 2,
+      "nodes": 2858488,
+      "budget": 15000000
+     },
+     "at15m_run2": {
+      "result": 2,
+      "nodes": 2858488,
+      "budget": 15000000
+     }
+    },
+    "verdict": "LOSS",
+    "legal": 98
+   },
+   "1152921504606851072:536870945": {
+    "stages": {
+     "at2m": {
+      "result": 0,
+      "nodes": 2000000,
+      "budget": 2000000
+     },
+     "at15m": {
+      "result": 2,
+      "nodes": 3157454,
+      "budget": 15000000
+     },
+     "at15m_run2": {
+      "result": 2,
+      "nodes": 3157454,
+      "budget": 15000000
+     }
+    },
+    "verdict": "LOSS",
+    "legal": 100
+   },
+   "1297036830122704896:16777216": {
+    "stages": {
+     "at2m": {
+      "result": 0,
+      "nodes": 2000000,
+      "budget": 2000000
+     },
+     "at15m": {
+      "result": 2,
+      "nodes": 4495174,
+      "budget": 15000000
+     },
+     "at15m_run2": {
+      "result": 2,
+      "nodes": 4495174,
+      "budget": 15000000
+     }
+    },
+    "verdict": "LOSS",
+    "legal": 101
+   },
+   "10376294091217440768:268435456": {
+    "stages": {
+     "at2m": {
+      "result": 0,
+      "nodes": 2000000,
+      "budget": 2000000
+     },
+     "at15m": {
+      "result": 2,
+      "nodes": 5004083,
+      "budget": 15000000
+     },
+     "at15m_run2": {
+      "result": 2,
+      "nodes": 5004083,
+      "budget": 15000000
+     }
+    },
+    "verdict": "LOSS",
+    "legal": 102
+   }
+  },
+  "determinism": "every resolved stage executed twice with identical (result, nodes); parked keys exhausted the 15M budget identically twice"
+ },
+ "class_recomputation": {
+  "before": {
+   "status": "UNKNOWN",
+   "win": 0,
+   "loss": 7,
+   "unknown": 100,
+   "coverage": [
+    47,
+    51,
+    100,
+    108
+   ],
+   "total": 107
+  },
+  "after": {
+   "status": "UNKNOWN",
+   "win": 0,
+   "loss": 44,
+   "unknown": 63,
+   "coverage": [
+    47,
+    51,
+    100,
+    108
+   ],
+   "total": 107
+  },
+  "candidate_classes_changed": [
+   "1152921504607895552:553648128",
+   "1152921504742113280:68719476736",
+   "1152921513197830144:536870912",
+   "1152956688979984384:536870912",
+   "1224979098645823488:536870912",
+   "1297036692683751424:8",
+   "1297036692683751424:16",
+   "1297036692683751424:128",
+   "1297036692683751424:16384",
+   "1297036692683751424:65536",
+   "1297036692683751424:16777216",
+   "1297036692683751425:0",
+   "1297036692683751428:0",
+   "1297036692683751456:0",
+   "1297036692683751680:0",
+   "1297036692683755520:0",
+   "1297036692683759616:0",
+   "1297036692683784192:0",
+   "1297036692683816960:0",
+   "1297036692683882496:0",
+   "1297036692700528640:0",
+   "1297036692817969152:0",
+   "1297036692952186880:0",
+   "1297036693757493248:0",
+   "1297036830122704896:0",
+   "1297036967561658368:0",
+   "1297037792195379200:0",
+   "1297177430172106752:0",
+   "1369094286721679360:0",
+   "1585267068835463168:0",
+   "1873497444987174912:0",
+   "3602879701897445376:0",
+   "5908722711111139328:0",
+   "10376293541461626880:8",
+   "10376293541461626880:131072",
+   "10376293541461626880:67108864",
+   "10376293541461626880:268435456",
+   "10412322338480590848:0"
+  ],
+  "global_status_changes": [],
+  "status_counts_before": {
+   "UNKNOWN": 3081,
+   "WIN": 272,
+   "LOSS": 31
+  },
+  "status_counts_after": {
+   "UNKNOWN": 3081,
+   "WIN": 272,
+   "LOSS": 31
+  }
+ },
+ "status_guard": "evidence increment only; the 11x11 empty board, the two-stone root {60,27}, and third moves 100/108 remain UNKNOWN; nodes and proxy values are never verdicts; the class reaches 44 LOSS / 63 UNKNOWN of 107 children and is NOT closed"
+}

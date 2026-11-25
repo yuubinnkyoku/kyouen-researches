@@ -1,0 +1,30 @@
+{
+  "s5_hex": "00000000000000003802000008000000",
+  "legal_s5_moves": 82,
+  "distinct_s6_orbits": 41,
+  "s6_source_counts": {
+    "class2-batch1-certificates-verified.json": 2,
+    "class2-batch1b-certificates-verified.json": 2,
+    "class2-lane-cost60-win7-certificates-20261114.json": 15,
+    "class2-lane-cost61-win7-certificates-20261114.json": 4,
+    "class2-lane-cost61b-win7-certificates-20261114.json": 3,
+    "class2-lane-cost64-win7-certificates-20261114.json": 6,
+    "class2-lane-cost65-win7-certificates-20261114.json": 2,
+    "class2-lane-cost68-win7-certificates-20261114.json": 2,
+    "s6sweep/sweep_results.json": 1,
+    "win7-reuse-hits.csv.gz": 4
+  },
+  "local_certificate_roots_hashed": 33,
+  "blocker_moves": [
+    {
+      "s4_move": 27,
+      "s5_move": 49
+    },
+    {
+      "s4_move": 93,
+      "s5_move": 71
+    }
+  ],
+  "result": "FIRST_WIN for this S5 and S4 blockers 27,93, conditional on cited verifier receipts",
+  "scope": "class 2 only; class 4, S2 and empty board remain unresolved; certificate strategies not replayed"
+}

@@ -1,0 +1,93 @@
+Third verification of K1167 (fold22 external second verification) - execution record
+Harness: scripts/verify_k1167_fold22ext2_third_20261120.py (stdlib only, fail-closed, staged)
+Host: Vibe upgraded sandbox, python3.12, single process per stage
+All times UTC (wall-clock notes only; the harness audit JSON contains no clock fields).
+
+[stage pin] 2026-11-20 ~21:19Z
+  fetched 5 published K1167 experiment files from pinned commit 4eb6cbf05
+  (raw.githubusercontent.com), SHA-256 fail-closed compare, 5/5 match:
+    README.md 6b32ce99.. (10,287 bytes)
+    scripts/reconstruct_inputs.py dfa50996.. (10,102 bytes)
+    scripts/verify_fold22_external_20261120.py ca11cbbc.. (48,949 bytes)
+    output/external-audit.json b4b082f8.. (141,752 bytes)
+    output/reproduction.log 5059c458.. (2,559 bytes)
+  6 gates PASS (5 byte pins + 1 dir self-check).
+
+[stage reconstruct-w1 attempt 1] 2026-11-20 21:20Z - EXPERIMENTAL FACT (failure)
+  published reconstruct_inputs.py fetched the 4 fold22 publication bytes (all
+  pinned OK) and then hit api.github.com HTTP 403 rate limit on the first tree
+  call. Shared-IP unauthenticated core quota observed at 0 remaining
+  (reset 21:45:19Z). Fail-closed: no partial W written; stage record
+  stages/reconstruct-w1-attempt1-ratelimited.json kept the fact; retried after
+  the quota reset instead of working around the published script.
+
+[stage reconstruct-w1 attempt 2] 2026-11-20 ~21:45:5xZ
+  published reconstruct run 1 at fixed ref 34c29854c64286bbb1792ff28dc1973aef341e20:
+  pub 4 files pinned; 12 blob + 48 sha256 write_checked lines (43 PIN256 + 5
+  chain machines); fold22 publication byte pins 4/4 OK. returncode 0.
+
+[stage reconstruct-w2] 2026-11-20 ~21:46Z
+  second independent reconstruct, same fixed ref, fresh W2/pub2:
+  identical stdout summary (pub 4, blob 12, sha256 48), returncode 0.
+
+[stage wcmp]
+  W1 vs W2: identical file sets (60 files, 5 manifest-excluded copy excluded by
+  name; 14,673,721 bytes), byte-identical over all 60 files; both fold22 pub
+  copies pinned and mutually identical; manifests agree on ref, pin counts
+  (12 blob + 43 sha256) and machine lists. PASS.
+
+[stage rerun-r1] 2026-11-20 21:47Z, measured wall 35.0s (user 28.7s, sys 2.0s)
+  published K1167 verifier on W1/pub1 at stage root: returncode 0, stderr
+  empty, stdout 'ALL 1463 GATES PASS; ...' + UNKNOWN guard line, output audit
+  SHA-256 b4b082f8.. byte-identical to the published audit. PASS.
+
+[stage rerun-r2] same cwd, same W1 (in-place repeat, mirroring the published
+  verifier's own x1/x2 in-place pattern): returncode 0, byte-identical audit. PASS.
+
+[stage rerun-r3] fresh independently reconstructed W2/pub2, isolated cwd +
+  isolated HOME: returncode 0, byte-identical audit. PASS.
+
+[stage rerun-r4] fresh copytree of W2, isolated cwd/HOME +
+  PYTHONHASHSEED=random: returncode 0, byte-identical audit. PASS.
+
+[stage tampers] 3/3 fail-closed probes caught (this lane's own offsets,
+  untested by both the fold22 publisher and the K1167 second-verification lane):
+  t1 copytree W1, inputs/worklist.csv byte offset 1234 XOR 0x01
+    -> published verifier W blob-pin gate: returncode 1, 'W blob pin
+       inputs/worklist.csv', no audit write.
+  t2 copytree W1, k1125/certs/win8-root-...840500-20261120.n11 byte offset
+    17522 XOR 0x01 -> verifier W sha256-pin gate: returncode 1,
+    'W sha256 pin k1125/certs/...', no audit write.
+  t3 copy of the K1167 experiment dir, published audit byte offset 4096
+    XOR 0x01 -> this harness's own experiment-dir pin gate rejected it
+    ('pin mismatch output/external-audit.json'); original dirs still pinned
+    clean afterwards.
+  Production W1/W2/W4 and both pub copies untouched (post-battery re-check
+  below).
+
+[stage finalize x3]
+  finalize run 1 (stage root), run 2 (same cwd repeat), run 3 (isolated
+  cwd/HOME + PYTHONHASHSEED=random): harness audit output byte-identical
+  across all three (cmp), 4,853 bytes, SHA-256
+  fdb72c4072e983a109bd1e8713a084a77154a9b7bddf2420548a421714226ca3,
+  9 finalize gates. PASS.
+
+[post-battery re-check]
+  W1, W2, W4: all 55 fold22-machine input pins re-verified clean after the
+  battery (12 Git-blob + 43 SHA-256); only the expected fold22/output receipt
+  from pristine machine reruns was added (61 files per tree), no pinned input
+  mutated. Both fold22 pub copies and the K1167 pinned dir still match.
+
+Summary: acceptance conditions 6/6 of the single-owner declaration met:
+(1) 5 published bytes re-pinned; (2) W reconstructed twice, byte-identical
+(60 files); (3) published verifier pristine re-execution x4, all audits
+byte-identical to the published audit b4b082f8.. (1,463 gates re-passed each
+run); (4) 3 fresh tamper offsets all fail-closed; (5) harness audit
+deterministic across 3 finalize runs including PYTHONHASHSEED=random;
+(6) staged design, each stage well under the session command cap.
+
+Interpretation guard: bookkeeping/byte-reproducibility verification only.
+No row is closed, no game value is claimed. WIN8-D10 certificates cover only
+their eight-stone roots; REFUTED-D10 is not a LOSS proof. The standard 11x11
+empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, classes 1/2/4
+remain UNKNOWN.
