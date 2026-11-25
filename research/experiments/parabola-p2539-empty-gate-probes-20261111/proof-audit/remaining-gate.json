@@ -1,0 +1,31 @@
+{
+  "remaining_gate": [
+    60,
+    106,
+    262,
+    269,
+    647,
+    692,
+    916,
+    992,
+    1021,
+    1027,
+    1172,
+    1197,
+    1342,
+    1512,
+    1847,
+    1927,
+    2270,
+    2433
+  ],
+  "verified_derivation": true,
+  "parent_unsat_claimed": false,
+  "reduced_input_sha256": "69c68dc178ef2406ab621b2f1b887cf25c3c974da3d68918540e80072250f62e",
+  "proof_sha256": "26290c5f186d9e3d1d9837541e97db8c903bc0eb1a84773dc697926dfcf4cf7f",
+  "returncode": 1,
+  "stdout": "\nc parsing input formula with 51570 variables and 144670 clauses\n\nc finished parsing\n\nc start forward verification\n\nc 2390 of 144670 clauses in core                            \n\nc 1 of 2 lemmas in core using 2390 resolution steps\n\nc 0 RAT lemmas in core; 0 redundant literals in core lemmas\n\nc optimized proofs are not supported for forward checking\n\nc VERIFIED derivation: all lemmas preserve satisfiability\n\nc WARNING: no empty clause detected, this is not a refutation\n\ns DERIVATION\n\nc verification time: 0.713 seconds\n",
+  "stderr": "",
+  "timed_out": false,
+  "elapsed_seconds": 0.790272400000049
+}

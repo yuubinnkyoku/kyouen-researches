@@ -1,0 +1,153 @@
+{
+  "tool": "independent PG(2,5) s=2 cap-game verifier (task 3)",
+  "python": "3.12.13 (main, Mar 24 2026, 14:54:28) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "board_file": "research/experiments/projective-blocking-kyouen-20261125/output/board_pg2q5.txt",
+  "board": {
+    "n": 31,
+    "num_blocks": 31,
+    "block_sizes": [
+      6
+    ]
+  },
+  "design_check": {
+    "ok": true,
+    "problems": [],
+    "n_points": 31,
+    "n_lines": 31,
+    "point_degrees": [
+      6
+    ],
+    "pair_coverage": {
+      "covered": 465,
+      "multiplicities": [
+        1
+      ]
+    },
+    "line_intersection_multiplicities": {
+      "1": 465
+    }
+  },
+  "standard_pg2_model": {
+    "points": 31,
+    "lines": 31,
+    "line_sizes": [
+      6
+    ],
+    "ok": true
+  },
+  "caps": {
+    "total": 41572,
+    "dfs_by_size": {
+      "0": 1,
+      "1": 31,
+      "2": 465,
+      "3": 3875,
+      "4": 15500,
+      "5": 18600,
+      "6": 3100
+    },
+    "bruteforce_by_size_0_to_6": {
+      "0": 1,
+      "1": 31,
+      "2": 465,
+      "3": 3875,
+      "4": 15500,
+      "5": 18600,
+      "6": 3100
+    },
+    "dfs_matches_bruteforce": true,
+    "downward_closure_of_maximal": 41572,
+    "downward_closure_matches_dfs": true
+  },
+  "maximal": {
+    "count": 3100,
+    "sizes": {
+      "6": 3100
+    },
+    "uniform_parity": true,
+    "common_parity": 0
+  },
+  "grundy": {
+    "distribution": {
+      "0": 19066,
+      "1": 22506
+    },
+    "G_empty": 0,
+    "normal_win_empty": false
+  },
+  "misere": {
+    "misere_win_empty": true
+  },
+  "formula": {
+    "grundy_violations": 0,
+    "misere_violations": 0
+  },
+  "claims": {
+    "cap_count": {
+      "claimed": 41572,
+      "observed": 41572,
+      "match": true
+    },
+    "size_distribution": {
+      "claimed": {
+        "0": 1,
+        "1": 31,
+        "2": 465,
+        "3": 3875,
+        "4": 15500,
+        "5": 18600,
+        "6": 3100
+      },
+      "observed": {
+        "0": 1,
+        "1": 31,
+        "2": 465,
+        "3": 3875,
+        "4": 15500,
+        "5": 18600,
+        "6": 3100
+      },
+      "match": true
+    },
+    "maximal": {
+      "claimed": {
+        "6": 3100
+      },
+      "observed": {
+        "6": 3100
+      },
+      "match": true
+    },
+    "grundy_distribution": {
+      "claimed": {
+        "0": 19066,
+        "1": 22506
+      },
+      "observed": {
+        "0": 19066,
+        "1": 22506
+      },
+      "match": true
+    },
+    "G_empty": {
+      "claimed": 0,
+      "observed": 0,
+      "match": true
+    },
+    "misere_empty": {
+      "claimed": true,
+      "observed": true,
+      "match": true
+    },
+    "parity_formula": {
+      "violations": 0,
+      "match": true
+    },
+    "misere_formula": {
+      "violations": 0,
+      "match": true
+    }
+  },
+  "all_claims_match": true
+}

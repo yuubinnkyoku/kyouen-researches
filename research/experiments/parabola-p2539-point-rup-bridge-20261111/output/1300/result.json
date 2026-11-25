@@ -1,0 +1,22 @@
+{
+  "point": 1300,
+  "assumption": 37812,
+  "parent_input_sha256": "64496e29f631e4f4090c103e571490f7959a30558462d9b4992ec668633f561b",
+  "child_input_sha256": "982f441f0b0599fc6f84598dff16bdf9c0cf3e8f95dec33e5f067b56429f8b32",
+  "conflict_budget": 10000,
+  "proof_enabled": true,
+  "source_sha256": "0e94b2d508e769dccfb6b02eeb7abfb0d605e8ef225c89bb7c676a53b52e8ebe",
+  "python_sat": "1.9.dev21",
+  "scope": "Solver refutation under one positive point unit. Not yet a parent-only derivation of its negative.",
+  "status": "SOLVER_UNSAT",
+  "proof_complete": true,
+  "statistics": {
+    "restarts": 2,
+    "conflicts": 44,
+    "decisions": 2079,
+    "propagations": 440191
+  },
+  "solve_seconds": 0.354197300002852,
+  "proof_sha256": "3c269e6a90f0192831880a418c117c6c796426d1ff28878d6517a1929be9ff04",
+  "proof_lines": 12466
+}

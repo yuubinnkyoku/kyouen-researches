@@ -1,0 +1,27 @@
+{
+  "status": "UNKNOWN",
+  "verified_safe": false,
+  "independent_unsat_proof": false,
+  "input_sha256": "ea0b35e2e934035cea98abc6f491f9312c11830d60347b8097e9eebe62fd8656",
+  "seed_sha256": "454f0e293fd846aa6616dd45500dbaf9b325834408ec7f69234852e3e35e22fb",
+  "geometry_checks": [
+    {
+      "kind": "parent",
+      "quadruples": 38868,
+      "returncode": 0,
+      "stdout": "VERIFIED_EDGES 2539 38868\n",
+      "input_sha256": "30e5d500f658a7a245fdff3e5c7830dc62b376632f2a6c1e75dea08552671dff"
+    },
+    {
+      "kind": "hitting-obstructions",
+      "quadruples": 2507,
+      "returncode": 0,
+      "stdout": "VERIFIED_EDGES 2539 2507\n",
+      "input_sha256": "671ae2a711630a11fd204a95cea595ca5e4537a4165ea22452a412eccfb8fd3a"
+    }
+  ],
+  "generic_source_sha256": "c817e7808e5d853a6ca0b897e5a0f454944f38069c8c32b5a10ef7f97b32261c",
+  "wrapper_source_sha256": "9db79269574eee6d5f897aa446bb661686b67a93f8e6f25d612d1584e1d0f401",
+  "source_sha256": "0866079f602cbfa108fb173730fe207fac5be9f631b63ec8a188c926ab58fdf0",
+  "scope": "Parent and60 independent geometric units checked. UNKNOWN remains unresolved; negative solver status is not independently certified here."
+}

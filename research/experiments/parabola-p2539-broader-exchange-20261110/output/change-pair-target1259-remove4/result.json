@@ -1,0 +1,31 @@
+{
+  "p": 2539,
+  "origin": 1,
+  "complete_pairs": 1,
+  "excluded_complete_pair": 6,
+  "target": 1259,
+  "max_removed": 4,
+  "seed_path": "research/experiments/parabola-p2539-exchange-20261110/output/target1258-remove3/candidate.txt",
+  "seed_sha256": "454f0e293fd846aa6616dd45500dbaf9b325834408ec7f69234852e3e35e22fb",
+  "edge_input_sha256": "30e5d500f658a7a245fdff3e5c7830dc62b376632f2a6c1e75dea08552671dff",
+  "input_sha256": "d9c986210993b9d63202a9b714686049f68a2c597ca4170ed279bb7c26e24169",
+  "variables": 44062,
+  "clauses": 130779,
+  "point_base": 36512,
+  "base_nv": 39050,
+  "geometric_clauses": 38868,
+  "conflict_budget": 100000,
+  "source_sha256": "7a6f86202648ed065d12dcf07cc4715ca56c063ff119e9bb4f38bcb277d9ef09",
+  "frozen_source_sha256": "52de6fd038e3f9a452f38d5ea12abb0086c305fdfc8c0a5b51877bd69009543e",
+  "python_sat": "1.9.dev21",
+  "proof_enabled": false,
+  "scope": "Origin fixed; exactly one complete pair different from the seed pair. Exact target size, bounded seed deletion. Negative results are solver-only.",
+  "status": "SOLVER_UNSAT",
+  "solve_seconds": 14.123591300000044,
+  "statistics": {
+    "restarts": 182,
+    "conflicts": 16536,
+    "decisions": 33446,
+    "propagations": 76396166
+  }
+}

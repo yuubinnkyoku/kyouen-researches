@@ -1,0 +1,20 @@
+{
+  "checker": "drat-trim",
+  "returncode": 0,
+  "stdout": "\nc parsing input formula with 7926 variables and 68404 clauses\n\nc finished parsing\n\nc detected empty clause; start verification via backward checking\n\nc 1210 of 68404 clauses in core                            \n\nc 555 of 3376 lemmas in core using 26057 resolution steps\n\nc 0 RAT lemmas in core; 136 redundant literals in core lemmas\n\ns VERIFIED\n\nc verification time: 0.235 seconds\n",
+  "stderr": "",
+  "seconds": 0.24235228999987157,
+  "timed_out": false,
+  "verified": true,
+  "p": 2647,
+  "target_size": 1322,
+  "d": 1292,
+  "conflict_budget": 3000000,
+  "checker_source": "https://github.com/marijnheule/drat-trim",
+  "checker_source_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+  "checker_build": "gcc drat-trim.c -std=c99 -O2 -o drat-trim",
+  "checker_binary_sha256": "92f0aa9575ed519d66a99b8b1b3dde6ece4618ae4c202a3a4b200265dda0aa7a",
+  "input_sha256": "f144e4dcf1a358b159641989879815b39b59e57da99a40a4fa0dc52ce82937e8",
+  "proof_sha256": "95dafdaa570519452db5bce806452b6a3d53d384c3ba49993b41aba63c529538",
+  "proof_lines": 3514
+}

@@ -1,0 +1,22 @@
+{
+  "case": "x0-B0",
+  "origin": 0,
+  "complete_pairs": 0,
+  "input_sha256": "5670862f38ba42535dd907cc131c022e197aea32d02f785ec6a145a550269ea8",
+  "seed_sha256": "454f0e293fd846aa6616dd45500dbaf9b325834408ec7f69234852e3e35e22fb",
+  "conflict_budget": 100000,
+  "source_sha256": "d1a2e3d668e42f98824f4a46f0d3359d48a085b66467b36b94392dd00b002396",
+  "python_sat": "1.9.dev21",
+  "scope": "Proof generation for a frozen solver-UNSAT input; not an independent audit. The x1-B1 UNKNOWN case is not rerun.",
+  "status": "SOLVER_UNSAT",
+  "proof_complete": true,
+  "elapsed_seconds": 19.480206699998234,
+  "statistics": {
+    "restarts": 206,
+    "conflicts": 10616,
+    "decisions": 23374,
+    "propagations": 41061449
+  },
+  "proof_sha256": "3c23be5fe2d08379f93a58ae70ff08b1880be23777e059678e1a5eb9449c9184",
+  "proof_lines": 318386
+}

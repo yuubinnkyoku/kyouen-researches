@@ -1,0 +1,130 @@
+{
+  "ag2q7": {
+    "all_points_covered": true,
+    "all_points_in_range": true,
+    "b": 56,
+    "class_sizes": [
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7
+    ],
+    "classes": [
+      {
+        "covers_all_points": true,
+        "pairwise_disjoint": true,
+        "size": 7
+      },
+      {
+        "covers_all_points": true,
+        "pairwise_disjoint": true,
+        "size": 7
+      },
+      {
+        "covers_all_points": true,
+        "pairwise_disjoint": true,
+        "size": 7
+      },
+      {
+        "covers_all_points": true,
+        "pairwise_disjoint": true,
+        "size": 7
+      },
+      {
+        "covers_all_points": true,
+        "pairwise_disjoint": true,
+        "size": 7
+      },
+      {
+        "covers_all_points": true,
+        "pairwise_disjoint": true,
+        "size": 7
+      },
+      {
+        "covers_all_points": true,
+        "pairwise_disjoint": true,
+        "size": 7
+      },
+      {
+        "covers_all_points": true,
+        "pairwise_disjoint": true,
+        "size": 7
+      }
+    ],
+    "cross_class_intersection_distribution": {
+      "1": 1372
+    },
+    "cross_class_violations": [],
+    "duplicate_lines": 0,
+    "duplicate_pair_count": 0,
+    "duplicate_pair_examples": [],
+    "each_line_has_6_parallel_partners": true,
+    "expected_b": 56,
+    "expected_line_size": 7,
+    "expected_n": 49,
+    "is_affine_plane_order_7": true,
+    "line_size_ok": true,
+    "line_sizes": [
+      7
+    ],
+    "n": 49,
+    "noncollinear_witness": [
+      0,
+      1,
+      7
+    ],
+    "num_classes": 8,
+    "pair_unique": true,
+    "pairs_expected": 1176,
+    "pairs_seen": 1176,
+    "point_degree_set": [
+      8
+    ],
+    "point_degrees_all_8": true,
+    "points_covered": 49,
+    "points_distinct_within_line": true,
+    "three_noncollinear_points": true
+  },
+  "pg2q7": {
+    "all_points_covered": true,
+    "all_points_in_range": true,
+    "b": 57,
+    "duplicate_lines": 0,
+    "duplicate_pair_count": 0,
+    "duplicate_pair_examples": [],
+    "expected_b": 57,
+    "expected_line_size": 8,
+    "expected_n": 57,
+    "has_quadrangle": true,
+    "is_projective_plane_order_7": true,
+    "line_intersection_distribution": {
+      "1": 1596
+    },
+    "line_pair_violations": [],
+    "line_pairs_meet_unique_point": true,
+    "line_size_ok": true,
+    "line_sizes": [
+      8
+    ],
+    "n": 57,
+    "pair_unique": true,
+    "pairs_expected": 1596,
+    "pairs_seen": 1596,
+    "point_degree_set": [
+      8
+    ],
+    "point_degrees_all_8": true,
+    "points_covered": 57,
+    "points_distinct_within_line": true,
+    "quadrangle_witness": [
+      0,
+      1,
+      8,
+      16
+    ]
+  }
+}

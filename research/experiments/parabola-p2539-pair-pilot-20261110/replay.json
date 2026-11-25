@@ -1,0 +1,41 @@
+{
+  "p": 2539,
+  "size": 1254,
+  "verified_safe": true,
+  "verified_inclusion_maximal": true,
+  "stdout": "2539 1254 102541343751 40481957\r\n",
+  "returncode": 0,
+  "blocker_bareiss_zero_count": 1285,
+  "candidate_sha256": "36205b39cc3826c010156db5e52623668e48029968971dd72455419f28f4914b",
+  "blockers_sha256": "2d171c7dd68827c9300ee9d81fc03619d278a7a7250205a5d817782cabd5541f",
+  "generic_source_sha256": "c817e7808e5d853a6ca0b897e5a0f454944f38069c8c32b5a10ef7f97b32261c",
+  "replay_source_sha256": "a395568f54fd0c2e634627294eee0df4523d73ecfaad91bb2a84575f9572afed",
+  "controls": [
+    {
+      "name": "safe-three",
+      "returncode": 0,
+      "expected": 0
+    },
+    {
+      "name": "forbidden-two-pairs",
+      "returncode": 4,
+      "expected": 4
+    },
+    {
+      "name": "duplicate",
+      "returncode": 3,
+      "expected": 3
+    },
+    {
+      "name": "truncated",
+      "returncode": 2,
+      "expected": 2
+    },
+    {
+      "name": "composite",
+      "returncode": 2,
+      "expected": 2
+    }
+  ],
+  "scope": "Fixed subset safety and all missing-point blockers; maximal, not maximum. No search edge cache or solver model is read."
+}

@@ -1,0 +1,24 @@
+{
+  "arguments": [
+    "C:\\Users\\yuubi\\AppData\\Local\\uv\\cache\\builds-v0\\.tmp9kYYHX\\Scripts\\python.exe",
+    "research\\experiments\\parabola-p2539-without-origin-20261111\\search.py",
+    "--seed",
+    "research/experiments/parabola-p2539-exchange-20261110/output/target1258-remove3/candidate.txt",
+    "--edges",
+    "research/experiments/parabola-p2539-pair-pilot-20261110/output/edges.txt.gz",
+    "--target",
+    "1259",
+    "--complete-pairs",
+    "0",
+    "--max-removed",
+    "4",
+    "--budget",
+    "100000",
+    "--output",
+    "research\\experiments\\parabola-p2539-without-origin-20261111\\output\\B0-target1259-remove4"
+  ],
+  "returncode": 0,
+  "stdout": "READY no-origin B 0 target 1259 total removed 4 nonzero cap 3 vars 36556 clauses 115767\nSOLVER_UNSAT size None proof lines 23072 seconds 3.551859200000763\n",
+  "stderr": "",
+  "elapsed_seconds": 9.000715900001524
+}

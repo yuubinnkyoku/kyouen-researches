@@ -1,0 +1,54 @@
+{
+  "excluded_pairs": [
+    [
+      106,
+      2433
+    ],
+    [
+      269,
+      2270
+    ],
+    [
+      692,
+      1847
+    ],
+    [
+      1027,
+      1197
+    ],
+    [
+      1027,
+      1512
+    ],
+    [
+      1197,
+      1342
+    ],
+    [
+      1927,
+      2433
+    ]
+  ],
+  "nonmirror_excluded_pairs": [
+    [
+      1027,
+      1197
+    ],
+    [
+      1927,
+      2433
+    ]
+  ],
+  "hitting_witness_pairs": 146,
+  "refutation_nodes": {
+    "empty": 5,
+    "packing": 2
+  },
+  "covered_pairs": 153,
+  "geometric_quadruples": 45,
+  "certificate_sha256": "87fbe4e4876d4fafbf14225b5ff82c84c7182297385add36b936a79fa91677bd",
+  "geometry_input_sha256": "2c58e1b51c774a88f73105fc83e088c58816f6ae746d9c9e28892c102fe8f26c",
+  "source_sha256": "b6f99c1f23e248ee5bf59ac9eb2512559e29d8d6853b2a31b12a62945ad482f9",
+  "hitting_verifier_source_sha256": "9283c482daa43e3b29e1a44aad4eb7f9ed62f496cb9614b13dc6437f1e6234c5",
+  "scope": "Verified necessary pair exclusions for any safe T retaining {0,6,2533} and losing at most5 points of the fixed seed. Other pairs only have witnesses for the provided obstruction families."
+}

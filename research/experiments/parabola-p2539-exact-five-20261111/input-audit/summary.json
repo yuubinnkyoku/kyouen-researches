@@ -1,0 +1,47 @@
+{
+  "rows": [
+    {
+      "case": "x0-B0-target1259-remove5",
+      "status": "SOLVER_UNSAT",
+      "input_byte_rebuild": true,
+      "input_sha256": "5670862f38ba42535dd907cc131c022e197aea32d02f785ec6a145a550269ea8",
+      "verified_safe": false,
+      "origin": 0,
+      "complete_pairs": 0,
+      "independent_negative_proof": "NOT_RUN"
+    },
+    {
+      "case": "x0-B1-target1259-remove5",
+      "status": "SOLVER_UNSAT",
+      "input_byte_rebuild": true,
+      "input_sha256": "acd90c01dbf5de752bfb5b9fa296c8ade23d75cad9b5189fb1880bd36563c4cd",
+      "verified_safe": false,
+      "origin": 0,
+      "complete_pairs": 1,
+      "independent_negative_proof": "NOT_RUN"
+    },
+    {
+      "case": "x1-B0-target1259-remove5",
+      "status": "SOLVER_UNSAT",
+      "input_byte_rebuild": true,
+      "input_sha256": "e0adb23802c5a880586cce589a7023d1168c25f26327bddfd0a1f012d317fe40",
+      "verified_safe": false,
+      "origin": 1,
+      "complete_pairs": 0,
+      "independent_negative_proof": "NOT_RUN"
+    },
+    {
+      "case": "x1-B1-target1259-remove5",
+      "status": "UNKNOWN",
+      "input_byte_rebuild": true,
+      "input_sha256": "d23890f881d73064f41719de379346d80193fea8ec507a9f7fe0050edf73f40a",
+      "verified_safe": false,
+      "origin": 1,
+      "complete_pairs": 1,
+      "independent_negative_proof": "NOT_RUN"
+    }
+  ],
+  "verified_best_size": null,
+  "source_sha256": "3065c235eec8adb7cc762c66bd2abc95e1f1f056181f7f968f8b5221c062c492",
+  "scope": "Only saved positive witnesses passing independent integer geometry establish safe lower bounds. Negative statuses remain solver-only; exact seed loss is checked separately."
+}

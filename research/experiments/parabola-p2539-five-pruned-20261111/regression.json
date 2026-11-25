@@ -1,0 +1,18 @@
+{
+  "corruptions_rejected": [
+    "wrong-unit-sign",
+    "wrong-point-index",
+    "selector-instead-of-point",
+    "duplicate-unit",
+    "wrong-unit-order",
+    "missing-unit",
+    "extra-unit",
+    "changed-parent-pair",
+    "changed-parent-onehot",
+    "wrong-variable-count"
+  ],
+  "point_unit_truth_assignments": 120,
+  "schema_source_sha256": "e3dcc87decf1bf3a2820b084ba8678fe8024e9089c7f12d21d09587cbdb14ba2",
+  "source_sha256": "d1d22bb6b2e0755044f75f571a061b780781be9c4528a47822b7b45a27e31e86",
+  "scope": "Actual pruned CNF parent preservation and60 negative point mappings checked; parent and hitting-tree regressions are separately preserved. Not a new soundness proof or search result."
+}

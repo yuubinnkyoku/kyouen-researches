@@ -1,0 +1,14 @@
+{
+  "assumption_refutations_checked": 561,
+  "lifted_steps_checked": 574,
+  "rejected": [
+    "missing-empty",
+    "out-of-range",
+    "missing-zero",
+    "invalid-assumption"
+  ],
+  "missing_guard_rejected": true,
+  "verifier_source_sha256": "491076a5e2175094229f1d62d01a4b8c734e37ec1ce1586f7f217d332babcbaa",
+  "source_sha256": "e5bcb482fb1a21c9163b1158317c46c715011646de8d736581412ae86ebe4ff0",
+  "scope": "Finite parent entailment and RUP checks using independent tiny propagation/brute force, plus malformed lifting controls. General assumption-discharge argument is separate."
+}

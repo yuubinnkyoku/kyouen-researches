@@ -1,0 +1,44 @@
+{
+  "p": 2539,
+  "d": 6,
+  "seed_path": "research/experiments/parabola-p2539-pair-pilot-20261110/augmented-output/candidate.txt",
+  "seed_size": 1254,
+  "seed_sha256": "36205b39cc3826c010156db5e52623668e48029968971dd72455419f28f4914b",
+  "target": 1255,
+  "max_removed": 3,
+  "conflict_budget": 100000,
+  "variables": 27583,
+  "clauses": 93973,
+  "prior_top": 23839,
+  "seed_literals": 1251,
+  "input_sha256": "2dc10274f4cf81f3096cb238fc6e5ed39c444d2dbe7d46c83f6134236bf28d72",
+  "edge_input_sha256": "30e5d500f658a7a245fdff3e5c7830dc62b376632f2a6c1e75dea08552671dff",
+  "source_sha256": "acdc5883d25595e56166059d8485a4dd962155e764135922a3982300e10958fc",
+  "ternary_source_sha256": "9b96e84cc63ceaa31b317e5db1eec86552cf8b9ed8e9f01b62fc7332fe9f3681",
+  "projection_source_sha256": "1c535d52c9e5841bbbb448e2a75a3fe3067b87a44620ebd37b4666cc0a46e070",
+  "python_sat": "1.9.dev21",
+  "scope": "Fixed origin and complete pair; bounded deletions. Negative solver results give no global upper bound. Positive geometry is checked separately.",
+  "status": "SAT",
+  "solve_seconds": 0.23763770000005024,
+  "statistics": {
+    "restarts": 1,
+    "conflicts": 78,
+    "decisions": 3675,
+    "propagations": 286739
+  },
+  "size": 1255,
+  "removed": [
+    647,
+    666,
+    992
+  ],
+  "added": [
+    446,
+    500,
+    807,
+    1124
+  ],
+  "candidate_sha256": "b6aa4d709747bb4f185517178c5e3ac1ba54e3a5cbe3ea52ec2dd2282c0acdf9",
+  "all_clauses_checked": true,
+  "geometry": "NOT_CHECKED"
+}

@@ -1,0 +1,25 @@
+{
+  "bruteforce_cases": 2224,
+  "satisfiable": 827,
+  "unsatisfiable": 1397,
+  "corruptions_rejected": [
+    "short-packing",
+    "repeated-packing",
+    "wrong-edge-index",
+    "bool-edge-index",
+    "false-empty",
+    "extra-field",
+    "missing-branch-child",
+    "unknown-node",
+    "missed-edge",
+    "exceeds-budget",
+    "outside-allowed",
+    "duplicates",
+    "bool-point",
+    "actual-branch-omission"
+  ],
+  "producer_source_sha256": "79f8c75086fc3e4e461ed283ff756f55c013bb45dd53591b9bd3dc46aeaf353c",
+  "verifier_source_sha256": "9283c482daa43e3b29e1a44aad4eb7f9ed62f496cb9614b13dc6437f1e6234c5",
+  "source_sha256": "1b8c54b95736a68034e62e8bd05fda4eeb5b24384ee1141a6999bc1a5864bd3e",
+  "scope": "Finite exhaustive n3 families and deterministic n5 samples, both outcomes replayed against brute force, malformed proof/witness controls. General hitting-tree soundness is a separate inductive argument."
+}

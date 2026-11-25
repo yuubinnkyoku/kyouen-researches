@@ -1,0 +1,43 @@
+{
+  "rows": [
+    {
+      "case": "change-pair-target1259-remove3",
+      "mode": "changed-pair",
+      "status": "SOLVER_UNSAT",
+      "input_byte_rebuild": true,
+      "input_sha256": "342650bf984d1482862eac50dfe4ebece0bea495c87648ce61bcff7f53c426a4",
+      "verified_safe": false,
+      "independent_negative_proof": "NOT_RUN"
+    },
+    {
+      "case": "change-pair-target1259-remove4",
+      "mode": "changed-pair",
+      "status": "SOLVER_UNSAT",
+      "input_byte_rebuild": true,
+      "input_sha256": "d9c986210993b9d63202a9b714686049f68a2c597ca4170ed279bb7c26e24169",
+      "verified_safe": false,
+      "independent_negative_proof": "NOT_RUN"
+    },
+    {
+      "case": "no-pair-target1259-remove4",
+      "mode": "no-pair",
+      "status": "SOLVER_UNSAT",
+      "input_byte_rebuild": true,
+      "input_sha256": "984f103da5304d0719d4df8efb4280274898f86468087530a373cf9db9fc1486",
+      "verified_safe": false,
+      "independent_negative_proof": "NOT_RUN"
+    },
+    {
+      "case": "target1259-remove5",
+      "mode": "fixed-pair",
+      "status": "UNKNOWN",
+      "input_byte_rebuild": true,
+      "input_sha256": "628c81cf417bb34a717a3a5297fcc9f422c152d59a44c322d24656554bc2df2f",
+      "verified_safe": false,
+      "independent_negative_proof": "NOT_RUN"
+    }
+  ],
+  "verified_best_size": null,
+  "source_sha256": "da7f19e0df0a3d8cfa6dc3f0b932572f8bce0338a9fc75f47ed4a931fd5f1471",
+  "scope": "Frozen input and result provenance; negative solver results remain unaudited. Only positive witnesses passing integer geometry can strengthen a safe lower bound."
+}

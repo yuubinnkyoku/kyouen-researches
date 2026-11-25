@@ -1,0 +1,15 @@
+{
+  "corruptions_rejected": [
+    "negative-unit-sign",
+    "wrong-point",
+    "point-selector-alias",
+    "repeated-exclusion",
+    "omitted-exclusion",
+    "changed-parent-pair"
+  ],
+  "positive_assumption_truth_assignments": 52,
+  "base_clause_count": 144662,
+  "audit_source_sha256": "597f83b9a71eee0598bc5fbe8e54aa0267fcafb3a6518c695b4526586d078db7",
+  "source_sha256": "ed888fe1fc1a35884187020513800e255f7d56b33280a737f13143b79e59211c",
+  "scope": "Actual116-unit augmentation corruption controls and26 positive point mappings; parent and hitting-tree regressions remain separately pinned."
+}

@@ -1,0 +1,16 @@
+{
+  "returncode": 0,
+  "stdout": "c parsed a formula with 8854 variables and 59662 clauses\nc VERIFIED\nc allocated 1024 402718 88540\nc Added clauses = 92491.  Deleted clauses = 91268.  Max live clauses = 59662\nc verification time = 0.96 secs\n",
+  "stderr": "",
+  "elapsed_seconds": 1.0668366999998398,
+  "timed_out": false,
+  "p": 2531,
+  "independent_upper_bound": 1266,
+  "input_sha256": "f0e49c374c3dbc4a1d68aa20ae0653a811a3dfba22601e5db6d8bb90c2be75f0",
+  "lrat_raw_sha256": "163cbba45efad34aaee67564f596e0ca4e8fdab2c506203165111ea272b40758",
+  "checker_source_sha256": "ca64680b89dde26ff2ea96b05c0fb926972eb307b74ffa18453e89a5da2988c8",
+  "checker_binary_sha256": "86658500ff65a7fe6465cd3a83782f9fec78dff7fb748590a060ee14b5382069",
+  "source_sha256": "fa905e084a00e82a8084beda7f6828b53e14a78266387c85df383b66e9e8c783",
+  "schema_geometry_source_proof_bindings": true,
+  "scope": "Actual replay of distributed gzip CNF/LRAT. No new SAT search, exact maximum or general verifier soundness claim."
+}

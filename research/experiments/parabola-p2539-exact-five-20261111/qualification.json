@@ -1,0 +1,35 @@
+{
+  "seed_sha256": "454f0e293fd846aa6616dd45500dbaf9b325834408ec7f69234852e3e35e22fb",
+  "improvement_size_at_least": 1259,
+  "max_removed": 5,
+  "necessary_removed_exactly": 5,
+  "necessary_origin": 1,
+  "necessary_complete_pairs": 1,
+  "radius_four_qualification_sha256": "47feccf4eb29924b04393b2c86554ed45d2fec0845e577ffafa0c31c9b775759",
+  "excluded_exact_five_cases": [
+    {
+      "case": "x0-B0",
+      "manifest_sha256": "112ce9e3bfe0131b7bd96ad1f7e7f4b1e4f0c03c3607e03a06c57476d81627fb",
+      "input_sha256": "5670862f38ba42535dd907cc131c022e197aea32d02f785ec6a145a550269ea8",
+      "proof_sha256": "3c23be5fe2d08379f93a58ae70ff08b1880be23777e059678e1a5eb9449c9184"
+    },
+    {
+      "case": "x0-B1",
+      "manifest_sha256": "f39af4ff2484e7a9549d6810187c59c3ab3547f2f64887dfde170b6cade06025",
+      "input_sha256": "acd90c01dbf5de752bfb5b9fa296c8ade23d75cad9b5189fb1880bd36563c4cd",
+      "proof_sha256": "9d680bb2d69818d7e3bea7c1d4d5623ad71641a3c2610340d08cffec3bbe1b22"
+    },
+    {
+      "case": "x1-B0",
+      "manifest_sha256": "8f34ca2b591cf8d571365626af83d358d780a4875a46e45c8013a34df3f222c1",
+      "input_sha256": "e0adb23802c5a880586cce589a7023d1168c25f26327bddfd0a1f012d317fe40",
+      "proof_sha256": "09fc47aa0148a3bb1c7f23be3e46958aa4a6f8cec8acb40caba992cad85c3671"
+    }
+  ],
+  "unresolved_status": "UNKNOWN",
+  "unresolved_result_sha256": "f39f3f3ead09b96b0c29ca1501873169b0807c9a366da8e3ca47b6003a482f42",
+  "replay_sha256": "0088367a0f1fd279f69036ffd19dfec261d20da75a820afeed91b7c4ace4ac7b",
+  "subset_argument_sha256": "dcb0e25dd34688b78a1183cbde96f21d8f1efd4a1e27454dde26775fc5116187",
+  "source_sha256": "9e9c98dd916fab59c6af614e5796b0b3f5e2566cf05b04061090bfea3cd17e11",
+  "scope": "Necessary shape of a safe improvement losing at most5 points from this fixed1258 seed. The surviving shape is UNKNOWN, not known feasible or infeasible."
+}

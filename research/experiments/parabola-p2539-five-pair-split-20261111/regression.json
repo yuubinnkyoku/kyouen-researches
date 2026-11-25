@@ -1,0 +1,39 @@
+{
+  "cases": [
+    {
+      "case": "retained",
+      "point_and_split_truth_assignments": 64,
+      "rejected": [
+        "opposite-split",
+        "wrong-selector",
+        "missing-split",
+        "extra-unit",
+        "broken-onehot",
+        "wrong-point-definition",
+        "lower-loss-sign",
+        "upper-loss-sign"
+      ]
+    },
+    {
+      "case": "changed",
+      "point_and_split_truth_assignments": 64,
+      "rejected": [
+        "opposite-split",
+        "wrong-selector",
+        "missing-split",
+        "extra-unit",
+        "broken-onehot",
+        "wrong-point-definition",
+        "lower-loss-sign",
+        "upper-loss-sign"
+      ]
+    }
+  ],
+  "truth_assignments": 128,
+  "corruptions_rejected": 16,
+  "parent_reconstruction_verified": true,
+  "schema_source_sha256": "878940fe30e6c71ddf48065b6e55480b33474c36436d744e7a45e4251e5dc050",
+  "prefix_source_sha256": "54e2d15ff11f35ba1e7b9a7323a3f5b9dc2bab8b729232bbd8ff6e3dcdf4d1a8",
+  "source_sha256": "a86b281919981ac0e01446026b831786ef92eb9782d4ddc6d087086393e05101",
+  "scope": "Actual B6 units, exact shared parent, local truth tables and rejection controls. Existing parent exact-loss regressions retained; no universal proof inferred from finite samples."
+}

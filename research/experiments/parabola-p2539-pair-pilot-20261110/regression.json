@@ -1,0 +1,33 @@
+{
+  "projection_checks": [
+    {
+      "p": 5,
+      "forbidden_edges": 1,
+      "reduced_edges": 0,
+      "assignments": 8
+    },
+    {
+      "p": 7,
+      "forbidden_edges": 3,
+      "reduced_edges": 0,
+      "assignments": 24
+    },
+    {
+      "p": 11,
+      "forbidden_edges": 10,
+      "reduced_edges": 0,
+      "assignments": 160
+    }
+  ],
+  "total_assignments": 192,
+  "repair_control": true,
+  "rejected_blocker_controls": [
+    "missing-row",
+    "duplicate-target",
+    "duplicate-vertex",
+    "selected-target",
+    "nonzero-determinant"
+  ],
+  "source_sha256": "5ba85aaa1a440f0a993cf95ddd85de864d82f6f832cf7e1d374c8c44dd330224",
+  "scope": "Small-prime exhaustive equivalence and five corrupt blocker controls; no general proof of implementation correctness."
+}

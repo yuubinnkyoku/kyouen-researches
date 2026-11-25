@@ -1,0 +1,17 @@
+{
+  "command": [
+    "uv",
+    "run",
+    "--locked",
+    "--with",
+    "python-sat==1.9.dev21",
+    "python",
+    "research\\experiments\\binary-cube-coplanar-midpoint-theorem-20261109\\audit_saturation_sat.py"
+  ],
+  "source_sha256": "c0964a5caa83c074490dc60c46faa6435c7aa8ff0fec807efc7bed11bfb71d78",
+  "returncode": 0,
+  "seconds": 2.6863862000000154,
+  "stderr": "",
+  "stdout": "[\n  {\n    \"vertices\": 4,\n    \"graphs_checked\": 31,\n    \"saturated\": 8\n  },\n  {\n    \"vertices\": 5,\n    \"graphs_checked\": 511,\n    \"saturated\": 45\n  },\n  {\n    \"vertices\": 6,\n    \"graphs_checked\": 16383,\n    \"saturated\": 468\n  }\n]\n",
+  "scope": "Small regression only; no large unresolved search was rerun."
+}

@@ -1,0 +1,85 @@
+{
+  "trials": [
+    {
+      "name": "d1-ascending",
+      "size": 1251,
+      "added": [],
+      "start_sha256": "d0e1117cef69b28d979034dd325e453ed3eb3aa4457e11caaf9df4624ebef850",
+      "candidate_sha256": "d0e1117cef69b28d979034dd325e453ed3eb3aa4457e11caaf9df4624ebef850"
+    },
+    {
+      "name": "d1-descending",
+      "size": 1251,
+      "added": [],
+      "start_sha256": "d0e1117cef69b28d979034dd325e453ed3eb3aa4457e11caaf9df4624ebef850",
+      "candidate_sha256": "d0e1117cef69b28d979034dd325e453ed3eb3aa4457e11caaf9df4624ebef850"
+    },
+    {
+      "name": "d1-blocking-degree",
+      "size": 1251,
+      "added": [],
+      "start_sha256": "d0e1117cef69b28d979034dd325e453ed3eb3aa4457e11caaf9df4624ebef850",
+      "candidate_sha256": "d0e1117cef69b28d979034dd325e453ed3eb3aa4457e11caaf9df4624ebef850"
+    },
+    {
+      "name": "d1237-ascending",
+      "size": 1254,
+      "added": [
+        13
+      ],
+      "start_sha256": "319e6676de8c3a97a03593fb732c999c2e1521c99208406571274b3f0329e98b",
+      "candidate_sha256": "78d2a4127e8868848ac776e2df7633c82da80ce90d47e1540903109db13be400"
+    },
+    {
+      "name": "d1237-descending",
+      "size": 1254,
+      "added": [
+        2533
+      ],
+      "start_sha256": "319e6676de8c3a97a03593fb732c999c2e1521c99208406571274b3f0329e98b",
+      "candidate_sha256": "36205b39cc3826c010156db5e52623668e48029968971dd72455419f28f4914b"
+    },
+    {
+      "name": "d1237-blocking-degree",
+      "size": 1254,
+      "added": [
+        369
+      ],
+      "start_sha256": "319e6676de8c3a97a03593fb732c999c2e1521c99208406571274b3f0329e98b",
+      "candidate_sha256": "afbf4571c2a39f6102c602c9903ca0a03473c27ef65b974fea9cc7d117cdf2f7"
+    },
+    {
+      "name": "d631-ascending",
+      "size": 1251,
+      "added": [],
+      "start_sha256": "4da4cd4da08b623de626db7c600867f0384176dc39fe9f5b914b222cc9096777",
+      "candidate_sha256": "4da4cd4da08b623de626db7c600867f0384176dc39fe9f5b914b222cc9096777"
+    },
+    {
+      "name": "d631-descending",
+      "size": 1251,
+      "added": [],
+      "start_sha256": "4da4cd4da08b623de626db7c600867f0384176dc39fe9f5b914b222cc9096777",
+      "candidate_sha256": "4da4cd4da08b623de626db7c600867f0384176dc39fe9f5b914b222cc9096777"
+    },
+    {
+      "name": "d631-blocking-degree",
+      "size": 1251,
+      "added": [],
+      "start_sha256": "4da4cd4da08b623de626db7c600867f0384176dc39fe9f5b914b222cc9096777",
+      "candidate_sha256": "4da4cd4da08b623de626db7c600867f0384176dc39fe9f5b914b222cc9096777"
+    }
+  ],
+  "best": {
+    "name": "d1237-descending",
+    "size": 1254,
+    "added": [
+      2533
+    ],
+    "start_sha256": "319e6676de8c3a97a03593fb732c999c2e1521c99208406571274b3f0329e98b",
+    "candidate_sha256": "36205b39cc3826c010156db5e52623668e48029968971dd72455419f28f4914b"
+  },
+  "lower_bound": 1254,
+  "upper_bound": 1271,
+  "scope": "Greedy extension trials against provided edges; only the final candidate and its complete blocker list are independently geometrically certified."
+}

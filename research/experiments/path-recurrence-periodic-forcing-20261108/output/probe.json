@@ -1,0 +1,815 @@
+{
+  "recurrence": "g(L)=mex(B(L) u {g(L-2)} u {g(i)^p[L-3-i]:i=0..L-3})",
+  "bare_path_period": 34,
+  "horizon": 2000,
+  "tail_window": 600,
+  "baseline_empty_forcing": {
+    "onset34": 53,
+    "min_tail_period": 34,
+    "max_grundy": 9,
+    "eventually_34_periodic": true
+  },
+  "baseline_equals_shifted_path": false,
+  "configs_per_family": 25,
+  "eventually_34_by_family": {
+    "arbitrary": 25,
+    "structured": 25
+  },
+  "min_tail_period_histogram": {
+    "arbitrary:34": 25,
+    "structured:34": 25
+  },
+  "exceptions": [],
+  "records": [
+    {
+      "family": "arbitrary",
+      "trial": 0,
+      "onset": 385,
+      "onset34": 524,
+      "min_tail_period": 34,
+      "max_grundy": 21,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "arbitrary",
+      "trial": 1,
+      "onset": 248,
+      "onset34": 266,
+      "min_tail_period": 34,
+      "max_grundy": 21,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "arbitrary",
+      "trial": 2,
+      "onset": 407,
+      "onset34": 407,
+      "min_tail_period": 34,
+      "max_grundy": 21,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "arbitrary",
+      "trial": 3,
+      "onset": 222,
+      "onset34": 273,
+      "min_tail_period": 34,
+      "max_grundy": 16,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "arbitrary",
+      "trial": 4,
+      "onset": 716,
+      "onset34": 714,
+      "min_tail_period": 34,
+      "max_grundy": 27,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "arbitrary",
+      "trial": 5,
+      "onset": 57,
+      "onset34": 147,
+      "min_tail_period": 34,
+      "max_grundy": 16,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "arbitrary",
+      "trial": 6,
+      "onset": 322,
+      "onset34": 322,
+      "min_tail_period": 34,
+      "max_grundy": 18,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "arbitrary",
+      "trial": 7,
+      "onset": 403,
+      "onset34": 402,
+      "min_tail_period": 34,
+      "max_grundy": 18,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "arbitrary",
+      "trial": 8,
+      "onset": 592,
+      "onset34": 600,
+      "min_tail_period": 34,
+      "max_grundy": 24,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "arbitrary",
+      "trial": 9,
+      "onset": 719,
+      "onset34": 752,
+      "min_tail_period": 34,
+      "max_grundy": 24,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "arbitrary",
+      "trial": 10,
+      "onset": 143,
+      "onset34": 223,
+      "min_tail_period": 34,
+      "max_grundy": 17,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "arbitrary",
+      "trial": 11,
+      "onset": 513,
+      "onset34": 533,
+      "min_tail_period": 34,
+      "max_grundy": 26,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "arbitrary",
+      "trial": 12,
+      "onset": 227,
+      "onset34": 285,
+      "min_tail_period": 34,
+      "max_grundy": 16,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "arbitrary",
+      "trial": 13,
+      "onset": 129,
+      "onset34": 294,
+      "min_tail_period": 34,
+      "max_grundy": 19,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "arbitrary",
+      "trial": 14,
+      "onset": 495,
+      "onset34": 592,
+      "min_tail_period": 34,
+      "max_grundy": 23,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "arbitrary",
+      "trial": 15,
+      "onset": 474,
+      "onset34": 473,
+      "min_tail_period": 34,
+      "max_grundy": 27,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "arbitrary",
+      "trial": 16,
+      "onset": 502,
+      "onset34": 501,
+      "min_tail_period": 34,
+      "max_grundy": 30,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "arbitrary",
+      "trial": 17,
+      "onset": 770,
+      "onset34": 768,
+      "min_tail_period": 34,
+      "max_grundy": 26,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "arbitrary",
+      "trial": 18,
+      "onset": 349,
+      "onset34": 540,
+      "min_tail_period": 34,
+      "max_grundy": 24,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "arbitrary",
+      "trial": 19,
+      "onset": 195,
+      "onset34": 247,
+      "min_tail_period": 34,
+      "max_grundy": 20,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "arbitrary",
+      "trial": 20,
+      "onset": 658,
+      "onset34": 650,
+      "min_tail_period": 34,
+      "max_grundy": 25,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "arbitrary",
+      "trial": 21,
+      "onset": 756,
+      "onset34": 751,
+      "min_tail_period": 34,
+      "max_grundy": 26,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "arbitrary",
+      "trial": 22,
+      "onset": 113,
+      "onset34": 151,
+      "min_tail_period": 34,
+      "max_grundy": 19,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "arbitrary",
+      "trial": 23,
+      "onset": 727,
+      "onset34": 723,
+      "min_tail_period": 34,
+      "max_grundy": 24,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "arbitrary",
+      "trial": 24,
+      "onset": 602,
+      "onset34": 601,
+      "min_tail_period": 34,
+      "max_grundy": 25,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "structured",
+      "trial": 0,
+      "constant_shift_terms": [
+        [
+          11,
+          0
+        ],
+        [
+          12,
+          -1
+        ]
+      ],
+      "child_onsets": [
+        676,
+        152
+      ],
+      "onset34": 649,
+      "min_tail_period": 34,
+      "max_grundy": 20,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "structured",
+      "trial": 1,
+      "constant_shift_terms": [
+        [
+          1,
+          -2
+        ],
+        [
+          10,
+          -1
+        ],
+        [
+          7,
+          -1
+        ],
+        [
+          5,
+          0
+        ]
+      ],
+      "child_onsets": [],
+      "onset34": 227,
+      "min_tail_period": 34,
+      "max_grundy": 17,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "structured",
+      "trial": 2,
+      "constant_shift_terms": [
+        [
+          0,
+          1
+        ],
+        [
+          12,
+          -2
+        ]
+      ],
+      "child_onsets": [
+        476,
+        269
+      ],
+      "onset34": 475,
+      "min_tail_period": 34,
+      "max_grundy": 19,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "structured",
+      "trial": 3,
+      "constant_shift_terms": [
+        [
+          5,
+          -2
+        ],
+        [
+          14,
+          0
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          11,
+          -1
+        ]
+      ],
+      "child_onsets": [
+        181,
+        680,
+        94
+      ],
+      "onset34": 669,
+      "min_tail_period": 34,
+      "max_grundy": 24,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "structured",
+      "trial": 4,
+      "constant_shift_terms": [
+        [
+          8,
+          1
+        ]
+      ],
+      "child_onsets": [
+        438
+      ],
+      "onset34": 592,
+      "min_tail_period": 34,
+      "max_grundy": 13,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "structured",
+      "trial": 5,
+      "constant_shift_terms": [
+        [
+          12,
+          -1
+        ],
+        [
+          13,
+          0
+        ],
+        [
+          5,
+          0
+        ]
+      ],
+      "child_onsets": [],
+      "onset34": 53,
+      "min_tail_period": 34,
+      "max_grundy": 9,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "structured",
+      "trial": 6,
+      "constant_shift_terms": [
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          -1
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          7,
+          -2
+        ]
+      ],
+      "child_onsets": [],
+      "onset34": 169,
+      "min_tail_period": 34,
+      "max_grundy": 18,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "structured",
+      "trial": 7,
+      "constant_shift_terms": [
+        [
+          3,
+          0
+        ]
+      ],
+      "child_onsets": [
+        315,
+        431,
+        268
+      ],
+      "onset34": 426,
+      "min_tail_period": 34,
+      "max_grundy": 28,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "structured",
+      "trial": 8,
+      "constant_shift_terms": [
+        [
+          7,
+          -1
+        ]
+      ],
+      "child_onsets": [],
+      "onset34": 53,
+      "min_tail_period": 34,
+      "max_grundy": 9,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "structured",
+      "trial": 9,
+      "constant_shift_terms": [
+        [
+          13,
+          -1
+        ],
+        [
+          10,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "child_onsets": [
+        651,
+        102
+      ],
+      "onset34": 644,
+      "min_tail_period": 34,
+      "max_grundy": 27,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "structured",
+      "trial": 10,
+      "constant_shift_terms": [
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "child_onsets": [
+        676,
+        630,
+        651
+      ],
+      "onset34": 659,
+      "min_tail_period": 34,
+      "max_grundy": 32,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "structured",
+      "trial": 11,
+      "constant_shift_terms": [
+        [
+          1,
+          0
+        ]
+      ],
+      "child_onsets": [],
+      "onset34": 52,
+      "min_tail_period": 34,
+      "max_grundy": 9,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "structured",
+      "trial": 12,
+      "constant_shift_terms": [
+        [
+          11,
+          -2
+        ],
+        [
+          10,
+          1
+        ],
+        [
+          0,
+          -2
+        ]
+      ],
+      "child_onsets": [],
+      "onset34": 369,
+      "min_tail_period": 34,
+      "max_grundy": 14,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "structured",
+      "trial": 13,
+      "constant_shift_terms": [
+        [
+          9,
+          -2
+        ],
+        [
+          4,
+          -2
+        ]
+      ],
+      "child_onsets": [
+        644
+      ],
+      "onset34": 642,
+      "min_tail_period": 34,
+      "max_grundy": 22,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "structured",
+      "trial": 14,
+      "constant_shift_terms": [
+        [
+          5,
+          0
+        ]
+      ],
+      "child_onsets": [
+        98,
+        393
+      ],
+      "onset34": 390,
+      "min_tail_period": 34,
+      "max_grundy": 20,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "structured",
+      "trial": 15,
+      "constant_shift_terms": [
+        [
+          12,
+          -1
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          15,
+          0
+        ],
+        [
+          14,
+          1
+        ]
+      ],
+      "child_onsets": [
+        462,
+        266,
+        693
+      ],
+      "onset34": 688,
+      "min_tail_period": 34,
+      "max_grundy": 26,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "structured",
+      "trial": 16,
+      "constant_shift_terms": [
+        [
+          13,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "child_onsets": [
+        498,
+        415
+      ],
+      "onset34": 460,
+      "min_tail_period": 34,
+      "max_grundy": 20,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "structured",
+      "trial": 17,
+      "constant_shift_terms": [
+        [
+          4,
+          -1
+        ]
+      ],
+      "child_onsets": [
+        474
+      ],
+      "onset34": 474,
+      "min_tail_period": 34,
+      "max_grundy": 22,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "structured",
+      "trial": 18,
+      "constant_shift_terms": [
+        [
+          12,
+          -2
+        ]
+      ],
+      "child_onsets": [
+        454,
+        286,
+        286
+      ],
+      "onset34": 444,
+      "min_tail_period": 34,
+      "max_grundy": 24,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "structured",
+      "trial": 19,
+      "constant_shift_terms": [
+        [
+          5,
+          -2
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "child_onsets": [],
+      "onset34": 191,
+      "min_tail_period": 34,
+      "max_grundy": 17,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "structured",
+      "trial": 20,
+      "constant_shift_terms": [
+        [
+          10,
+          1
+        ],
+        [
+          14,
+          -2
+        ],
+        [
+          12,
+          -2
+        ]
+      ],
+      "child_onsets": [
+        401,
+        278,
+        665
+      ],
+      "onset34": 626,
+      "min_tail_period": 34,
+      "max_grundy": 25,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "structured",
+      "trial": 21,
+      "constant_shift_terms": [
+        [
+          14,
+          -1
+        ],
+        [
+          10,
+          0
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "child_onsets": [
+        389,
+        406,
+        559
+      ],
+      "onset34": 611,
+      "min_tail_period": 34,
+      "max_grundy": 24,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "structured",
+      "trial": 22,
+      "constant_shift_terms": [
+        [
+          14,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          9,
+          -1
+        ]
+      ],
+      "child_onsets": [],
+      "onset34": 53,
+      "min_tail_period": 34,
+      "max_grundy": 9,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "structured",
+      "trial": 23,
+      "constant_shift_terms": [
+        [
+          13,
+          0
+        ]
+      ],
+      "child_onsets": [
+        234,
+        502
+      ],
+      "onset34": 490,
+      "min_tail_period": 34,
+      "max_grundy": 25,
+      "eventually_34_periodic": true
+    },
+    {
+      "family": "structured",
+      "trial": 24,
+      "constant_shift_terms": [
+        [
+          2,
+          0
+        ],
+        [
+          6,
+          -2
+        ],
+        [
+          1,
+          -2
+        ]
+      ],
+      "child_onsets": [
+        476
+      ],
+      "onset34": 463,
+      "min_tail_period": 34,
+      "max_grundy": 22,
+      "eventually_34_periodic": true
+    }
+  ]
+}

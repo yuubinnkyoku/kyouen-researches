@@ -1,0 +1,24 @@
+{
+  "case": "no-pair",
+  "input_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/parabola-p2539-broader-exchange-20261110/output/no-pair-target1259-remove4/input.cnf.gz",
+  "input_sha256": "984f103da5304d0719d4df8efb4280274898f86468087530a373cf9db9fc1486",
+  "seed_sha256": "454f0e293fd846aa6616dd45500dbaf9b325834408ec7f69234852e3e35e22fb",
+  "variables": 40302,
+  "clauses": 123259,
+  "conflict_budget": 100000,
+  "phases_sha256": "8c14cb72b2e415ea8c5fc7851987c284675518234c4031b93b1a435aaa4b6781",
+  "source_sha256": "8c31f139cf72350156219b33495835fb16e1bc6d2f5b5e02c50a4220202ab4a1",
+  "python_sat": "1.9.dev21",
+  "scope": "Proof production from a frozen previously solved CNF. Solver status alone does not establish a geometric exclusion.",
+  "status": "SOLVER_UNSAT",
+  "elapsed_seconds": 18.617943999997806,
+  "statistics": {
+    "restarts": 244,
+    "conflicts": 12582,
+    "decisions": 26483,
+    "propagations": 50863913
+  },
+  "proof_complete": true,
+  "proof_sha256": "8ca7193413313a4f97858da2f2b0b7d8370c4d550848b848c1fee5cb8db0deb1",
+  "proof_lines": 298208
+}

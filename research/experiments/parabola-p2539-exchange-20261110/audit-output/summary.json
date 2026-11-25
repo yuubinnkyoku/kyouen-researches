@@ -1,0 +1,165 @@
+{
+  "rows": [
+    {
+      "case": "target1255-remove3",
+      "p": 2539,
+      "d": 6,
+      "status": "SAT",
+      "input_sha256": "2dc10274f4cf81f3096cb238fc6e5ed39c444d2dbe7d46c83f6134236bf28d72",
+      "input_byte_rebuild": true,
+      "geometry_verified": true,
+      "size": 1255,
+      "geometry_stdout": "2539 1255 102869213755 40611060\r\n",
+      "candidate_sha256": "b6aa4d709747bb4f185517178c5e3ac1ba54e3a5cbe3ea52ec2dd2282c0acdf9",
+      "model_sha256": "c27eec50bb8e9acce4ea60d5fa704c85f16b2d244cdb91cdfe31d1e1090346bb",
+      "all_clauses_checked": true,
+      "removed": [
+        647,
+        666,
+        992
+      ],
+      "added": [
+        446,
+        500,
+        807,
+        1124
+      ]
+    },
+    {
+      "case": "target1256-remove3",
+      "p": 2539,
+      "d": 6,
+      "status": "SAT",
+      "input_sha256": "066984e4ce7c40bf30ae4c7c25ece597f766bc90c5d2e1cbf92647b461167de0",
+      "input_byte_rebuild": true,
+      "geometry_verified": true,
+      "size": 1256,
+      "geometry_stdout": "2539 1256 103197869390 40740333\r\n",
+      "candidate_sha256": "7da535988363b5e930b312f799099442e6a00f7659a5ac2565f72f1ce0aa76e3",
+      "model_sha256": "83933b059688006bbde9c3c7f203ee9fdcc9c076dae0a8b14f17991a56bb3637",
+      "all_clauses_checked": true,
+      "removed": [
+        1927
+      ],
+      "added": [
+        717,
+        1199
+      ]
+    },
+    {
+      "case": "target1257-remove3",
+      "p": 2539,
+      "d": 6,
+      "status": "SAT",
+      "input_sha256": "d3dd1430046b6a24751c9f08e0f44e1294da7a62f990c780e4797235e4abfc0e",
+      "input_byte_rebuild": true,
+      "geometry_verified": true,
+      "size": 1257,
+      "geometry_stdout": "2539 1257 103527311910 40869854\r\n",
+      "candidate_sha256": "4261d7e03901278dee2a6238647e08b42d9ec55a65db77b2ec36546d00578d8e",
+      "model_sha256": "f91d69091aa6629aee7c06346694565afec737819c595843f9fe378e2f6fc725",
+      "all_clauses_checked": true,
+      "removed": [
+        1172,
+        1752
+      ],
+      "added": [
+        787,
+        1578,
+        2537
+      ]
+    },
+    {
+      "case": "target1258-remove3",
+      "p": 2539,
+      "d": 6,
+      "status": "SAT",
+      "input_sha256": "511e687778559d383857b05408a6157646f1125c3a101fa40d160a1a6df206aa",
+      "input_byte_rebuild": true,
+      "geometry_verified": true,
+      "size": 1258,
+      "geometry_stdout": "2539 1258 103857542570 40996021\r\n",
+      "candidate_sha256": "454f0e293fd846aa6616dd45500dbaf9b325834408ec7f69234852e3e35e22fb",
+      "model_sha256": "581d76025a8432052bba0a7b5ecf573800dd84b206972901bd8792c382b00627",
+      "all_clauses_checked": true,
+      "removed": [
+        662,
+        851,
+        917
+      ],
+      "added": [
+        666,
+        1622,
+        1688,
+        1877
+      ]
+    },
+    {
+      "case": "target1259-remove3",
+      "p": 2539,
+      "d": 6,
+      "status": "SOLVER_UNSAT",
+      "input_sha256": "61f145beba3e16e47a42dfd87e0969c15920c91bb7c5b1c74a61563ecb12726e",
+      "input_byte_rebuild": true,
+      "geometry_verified": false,
+      "independent_proof_audit": "NOT_RUN"
+    },
+    {
+      "case": "target1259-remove4",
+      "p": 2539,
+      "d": 6,
+      "status": "SOLVER_UNSAT",
+      "input_sha256": "162e2736ff52378d6d0bbbee1eef1f2f4e252df189496dd30276203b9d7b416e",
+      "input_byte_rebuild": true,
+      "geometry_verified": false,
+      "independent_proof_audit": "NOT_RUN"
+    }
+  ],
+  "best": {
+    "case": "target1258-remove3",
+    "p": 2539,
+    "d": 6,
+    "status": "SAT",
+    "input_sha256": "511e687778559d383857b05408a6157646f1125c3a101fa40d160a1a6df206aa",
+    "input_byte_rebuild": true,
+    "geometry_verified": true,
+    "size": 1258,
+    "geometry_stdout": "2539 1258 103857542570 40996021\r\n",
+    "candidate_sha256": "454f0e293fd846aa6616dd45500dbaf9b325834408ec7f69234852e3e35e22fb",
+    "model_sha256": "581d76025a8432052bba0a7b5ecf573800dd84b206972901bd8792c382b00627",
+    "all_clauses_checked": true,
+    "removed": [
+      662,
+      851,
+      917
+    ],
+    "added": [
+      666,
+      1622,
+      1688,
+      1877
+    ]
+  },
+  "upper_bound": 1271,
+  "generic_source_sha256": "c817e7808e5d853a6ca0b897e5a0f454944f38069c8c32b5a10ef7f97b32261c",
+  "audit_source_sha256": "9e190c3bec5810f66f8935931ebe95711e8ce1052bf159fb224eb80d0b9d9522",
+  "search_source_sha256": "acdc5883d25595e56166059d8485a4dd962155e764135922a3982300e10958fc",
+  "controls": [
+    {
+      "name": "safe-three",
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "name": "forbidden",
+      "expected": 4,
+      "actual": 4
+    },
+    {
+      "name": "duplicate",
+      "expected": 3,
+      "actual": 3
+    }
+  ],
+  "scope": "Independently geometrically verified fixed positive witnesses; negative results are solver-only and restricted. No maximality or maximum is inferred."
+}

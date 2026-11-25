@@ -1,0 +1,39 @@
+{
+  "p": 2647,
+  "d": 820,
+  "target": 1322,
+  "empty_bound": 3,
+  "conflict_budget": 20000000,
+  "variables": 7926,
+  "clauses": 68404,
+  "base_clauses": 53886,
+  "encoded_cnf_sha256": "1c2dece33115f9d0c41625c3c0611a79525fb157ed42398ddfe63a0fe7c990e7",
+  "solver": "cadical-native",
+  "solver_version": "3.0.1",
+  "solver_source_commit": "c60730422e758ef1cebe7aeddf2dda31c996bf04",
+  "solver_binary_sha256": "26a5daca4f95b2fc4970e735e91fd18031d74e1dcef0f9435ce01c3f8d2fde41",
+  "solver_shim_source_sha256": "5d3fc38ec92435032bd24ee0c068cc486bc2b898a3a9fab465aeda916dfa67c7",
+  "solver_shim_binary_sha256": "e5afb8d5b47c161be312dca0258e57b265ee08cbbce647e06ba27afa7ac874e0",
+  "solver_exit_code": 20,
+  "solver_status": "SOLVER_UNSAT",
+  "wall_seconds": 4820.895,
+  "phase_hints": 3966,
+  "solve_seconds": 4820.636161,
+  "statistics": {
+    "conflicts": 19442067,
+    "decisions": 26858859,
+    "propagations": 6735662235,
+    "ticks": 138086220311
+  },
+  "max_rss_kb": 98272,
+  "proof_format": "binary-drat",
+  "proof_bytes": 2367583553,
+  "proof_sha256": "0e92b79f8960c0830967994d0c518be0d9a0a2c49a8ed1c43dc9dc420a734d30",
+  "proof_steps": {
+    "added": 19610968,
+    "deleted": 19564515,
+    "bytes": 2367583553
+  },
+  "proof_lines": null,
+  "scope": "0 and complete pair d fixed; all other pairs low/high/empty. Re-run of the decided ladder stage with a DRAT proof; UNSAT restricted to this d."
+}

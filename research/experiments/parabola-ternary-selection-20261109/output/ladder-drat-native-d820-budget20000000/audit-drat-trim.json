@@ -1,0 +1,30 @@
+{
+  "checker": "drat-trim",
+  "returncode": 0,
+  "stdout": "\nc turning on binary mode checking\n\nc parsing input formula with 7926 variables and 68404 clauses\n\nc finished parsing, read 2367583553 bytes from proof file\n\nc detected empty clause; start verification via backward checking\n\nc 44610 of 68404 clauses in core                            \n\nc 12992212 of 19610969 lemmas in core using 5299520466 resolution steps\n\nc 0 RAT lemmas in core; 23105323 redundant literals in core lemmas\n\ns VERIFIED\n\nc verification time: 8204.407 seconds\n",
+  "stderr": "",
+  "seconds": 8204.671140457001,
+  "timed_out": false,
+  "verified": true,
+  "not_verified": [],
+  "p": 2647,
+  "target_size": 1322,
+  "d": 820,
+  "conflict_budget": 20000000,
+  "checker_source": "https://github.com/marijnheule/drat-trim",
+  "checker_source_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+  "checker_build": "gcc drat-trim.c -std=c99 -O2 -o drat-trim",
+  "checker_binary_sha256": "92f0aa9575ed519d66a99b8b1b3dde6ece4618ae4c202a3a4b200265dda0aa7a",
+  "input_sha256": "1c2dece33115f9d0c41625c3c0611a79525fb157ed42398ddfe63a0fe7c990e7",
+  "proof_sha256": "0e92b79f8960c0830967994d0c518be0d9a0a2c49a8ed1c43dc9dc420a734d30",
+  "proof_gz_sha256": "1e37e59cad022cb939f666e14617144f0c6b1e04a1e57e92bb5d7e647d350154",
+  "proof_bytes": 2367583553,
+  "proof_format": "binary-drat",
+  "proof_steps": {
+    "added": 19610968,
+    "deleted": 19564515,
+    "bytes": 2367583553
+  },
+  "proof_lines": null,
+  "log": "drat-trim.log"
+}
