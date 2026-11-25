@@ -151,6 +151,13 @@ Total 679 rows, 0 mismatches.
 - This kit's engine bytes are the same pinned chain engine as all
   census kits (bd5f22e4...); the verification is same-engine-class
   cross-referencing, not third-party hardware verification.
+- Fetch-back verification (post-push, same procedure as the crossrun
+  addendum 659658ac): the six published files of commit `a80477fc`
+  (item, log, kit README / verify_k1334.py / verify_k1334.out /
+  engine_block.py) were re-fetched from main at that sha and compared
+  byte-for-byte against the local payloads: 6/6 byte-identical PASS
+  (10752/8508/4652/19311/36176/2540 bytes). Head of main at
+  verification time remained `a80477fc` (no overtaking commit).
 
 ## 8. Handoff
 
